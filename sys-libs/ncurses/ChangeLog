@@ -1,6 +1,12 @@
 # ChangeLog for sys-libs/ncurses
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ChangeLog,v 1.86 2004/10/21 19:48:00 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ChangeLog,v 1.87 2004/12/07 14:11:07 solar Exp $
+
+  07 Dec 2004; <solar@gentoo.org> ncurses-5.4-r5.ebuild:
+  - Stopped abusing uclibc for cxx handling, the ebuild now uses nocxx bug
+  #73633 - enable work around --program-prefix= as ncurses will pick up the arch
+  tuple and put it in the program prefix incorrectly as
+  arch-vendor-linux-<libc>-<app>
 
   17 Oct 2004; Dylan Carlson <absinthe@gentoo.org> ncurses-5.4-r5.ebuild:
   stable on amd64.

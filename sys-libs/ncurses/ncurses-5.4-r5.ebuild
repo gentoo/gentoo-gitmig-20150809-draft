@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.4-r5.ebuild,v 1.15 2004/11/12 14:27:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.4-r5.ebuild,v 1.16 2004/12/07 14:11:07 solar Exp $
 
 inherit eutils flag-o-matic gnuconfig
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://gnu/ncurses/${P}.tar.gz"
 LICENSE="MIT"
 SLOT="5"
 KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sh sparc x86"
-IUSE="build bootstrap debug doc uclibc unicode"
+IUSE="build bootstrap debug doc uclibc unicode nocxx"
 
 DEPEND="virtual/libc"
 # This doesn't fix the problem. bootstrap builds ncurses again with
@@ -47,7 +47,7 @@ src_compile() {
 	# building it.  We will rebuild ncurses after gcc's second
 	# build in bootstrap.sh.
 	# <azarah@gentoo.org> (23 Oct 2002)
-	( use build || use bootstrap || use uclibc ) \
+	( use build || use bootstrap || use nocxx ) \
 		&& myconf="${myconf} --without-cxx --without-cxx-binding --without-ada"
 
 	# see note about DEPEND above -- avenj@gentoo.org  2 Apr 04
@@ -67,6 +67,7 @@ src_compile() {
 		--with-rcs-ids \
 		--without-ada \
 		--enable-symlinks \
+		--program-prefix="" \
 		${myconf} \
 		|| die "configure failed"
 
