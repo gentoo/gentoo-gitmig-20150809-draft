@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/fwbuilder/fwbuilder-2.0.0.ebuild,v 1.2 2004/08/06 19:11:30 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/fwbuilder/fwbuilder-2.0.0.ebuild,v 1.3 2004/09/01 10:13:25 aliz Exp $
 
 DESCRIPTION="A firewall GUI"
 HOMEPAGE="http://www.fwbuilder.org/"
@@ -13,7 +13,6 @@ IUSE="nls"
 
 DEPEND="~net-libs/libfwbuilder-2.0.0
 	nls? ( >=sys-devel/gettext-0.11.4 )"
-RDEPEND=${DEPEND}
 
 src_compile() {
 	econf `use_enable nls` || die "./configure failed"
