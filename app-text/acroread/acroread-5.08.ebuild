@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-5.08.ebuild,v 1.3 2003/09/05 22:37:21 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-5.08.ebuild,v 1.4 2003/09/12 06:16:58 usata Exp $
 
 inherit nsplugins eutils
 
@@ -13,7 +13,7 @@ IUSE="cjk"
 
 SLOT="0"
 LICENSE="Adobe"
-KEYWORDS="-* ~x86"
+KEYWORDS="-* x86"
 
 RESTRICT="nostrip"
 DEPEND="virtual/glibc
