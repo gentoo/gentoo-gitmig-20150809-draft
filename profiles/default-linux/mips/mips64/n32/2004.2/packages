@@ -1,14 +1,8 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/mips64/n32/2004.2/packages,v 1.4 2005/01/21 06:10:20 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/mips64/n32/2004.2/packages,v 1.5 2005/04/02 01:03:48 kumba Exp $
 
 # mips64 n32 packages
-
-# We want 2.6.6+ headers for n32.  2.6.6 headers are not ready for
-# general consumption, though, so we lock all other mips profiles
-# to 2.4, and unlock 2.6 only for n32.
--*<sys-kernel/mips-headers-2.6.6
-*>=sys-kernel/mips-headers-2.6.6
 
 # binutils-2.15* is broken for n32.  No idea why, but it won't
 # build glibc correctly, so lets mask it for now.
@@ -18,7 +12,3 @@
 # Something related to GOT (global offset table).  Have to figure 
 # this out eventually. UPDATE: gcc-3.4.3 seems to work, unmasking
 #*<sys-devel/gcc-3.4.2
-
-# n32 needs a relatively modern glibc - Portage Atoms Broke?
-#-~sys-libs/glibc-2.3.4.20040808
-#*>=sys-libs/glibc-2.3.4.20040808

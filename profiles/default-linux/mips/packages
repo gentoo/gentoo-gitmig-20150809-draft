@@ -1,13 +1,7 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/packages,v 1.9 2005/02/27 18:24:30 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/packages,v 1.10 2005/04/02 01:03:48 kumba Exp $
 
 # Top-level mips profile
 
-# Not ready for general consumption (except n32)
-*<sys-kernel/mips-headers-2.6.6
-
-# Doesn't build/work on o32 mips - Portage Atoms Broke?
-# Masked by -* instead
-#sys-libs/glibc-2.3.4.20040808-r1
-#sys-libs/glibc-2.3.4.20041021
+# Nothing here!
