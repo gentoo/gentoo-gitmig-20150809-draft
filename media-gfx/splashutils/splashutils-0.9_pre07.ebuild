@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-0.9_pre07.ebuild,v 1.4 2004/08/22 15:00:52 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-0.9_pre07.ebuild,v 1.5 2004/08/30 14:55:23 spock Exp $
 
 MISCSPLASH="miscsplashutils-0.1.1"
 GENTOOSPLASH="splashutils-gentoo-0.1"
@@ -37,7 +37,7 @@ src_unpack() {
 
 	if [ ! -e /usr/src/linux/include/asm ]; then
 		eerror "It appears that your kernel has not been configured. Please run at least"
-		eerror "`make prepare` before merging splashutils."
+		eerror "\`make prepare\` before merging splashutils."
 		die "Kernel not configured"
 	fi
 }
