@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.2-r10.ebuild,v 1.1 2004/04/18 16:24:33 randy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.2-r10.ebuild,v 1.2 2004/04/18 20:59:17 randy Exp $
 
 IUSE="nls pic build nptl"
 
@@ -400,7 +400,7 @@ src_unpack() {
 		patch -p 1 < ${FILESDIR}/2.3.1/glibc23-07-hppa-atomicity.dpatch
 	fi
 
-	if ["${ARCH}" = "s390" ]
+	if [ "${ARCH}" = "s390" ]
 	then
 		# The deprecated ustat.h causes problems on s390
 		#
