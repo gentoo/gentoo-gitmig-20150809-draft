@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/auctex/auctex-11.14.ebuild,v 1.2 2003/05/15 13:41:29 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/auctex/auctex-11.14.ebuild,v 1.3 2003/06/10 00:51:49 msterret Exp $
 
-inherit elisp 
+inherit elisp
 
 IUSE=""
 
@@ -14,6 +14,7 @@ SLOT="0"
 KEYWORDS="~x86"
 
 DEPEND="virtual/emacs
+	>=sys-apps/sed-4
 	app-text/tetex"
 
 S="${WORKDIR}/${P}"
@@ -37,7 +38,7 @@ src_install() {
 	for i in ${D}/usr/share/info/* ; do mv $i $i.info ; done
 	popd
  	elisp-site-file-install ${FILESDIR}/50auctex-gentoo.el
- 	dodoc ChangeLog CHANGES COPYING INSTALLATION PROBLEMS README 
+ 	dodoc ChangeLog CHANGES COPYING INSTALLATION PROBLEMS README
 }
 
 pkg_postinst() {

@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/auctex
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/auctex/ChangeLog,v 1.5 2003/05/15 13:41:29 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/auctex/ChangeLog,v 1.6 2003/06/10 00:51:49 msterret Exp $
+
+  09 Jun 2003; <msterret@gentoo.org> auctex-11.14.ebuild:
+  DEPEND on sed >= 4
 
   15 May 2003; Patrick Kursawe <phosphan@gentoo.org> auctex-10.0g.ebuild,
   auctex-11.13.ebuild, auctex-11.14.ebuild:
