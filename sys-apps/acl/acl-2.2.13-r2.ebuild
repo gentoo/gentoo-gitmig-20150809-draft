@@ -1,44 +1,43 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/acl/acl-2.2.13-r2.ebuild,v 1.10 2004/04/17 08:01:55 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/acl/acl-2.2.13-r2.ebuild,v 1.11 2004/05/01 21:58:51 vapier Exp $
 
-S=${WORKDIR}/${P}
 DESCRIPTION="Access control list utilities, libraries and headers"
 HOMEPAGE="http://oss.sgi.com/projects/xfs"
 SRC_URI="ftp://oss.sgi.com/projects/xfs/download/cmd_tars/${P}.src.tar.gz"
 
-SLOT="0"
 LICENSE="LGPL-2.1"
-KEYWORDS="~x86 amd64 ppc sparc alpha ~hppa ~mips ia64 ppc64 s390"
+SLOT="0"
+KEYWORDS="~x86 ppc sparc ~mips alpha arm ~hppa amd64 ia64 ppc64 s390"
+IUSE=""
 
 RDEPEND=">=sys-apps/attr-2.4
 		 nls? ( sys-devel/gettext )"
-
-DEPEND="${RDEPEND} sys-devel/autoconf"
+DEPEND="${RDEPEND}
+	sys-devel/autoconf"
 
 src_compile() {
 	OPTIMIZER="${CFLAGS}"
 	DEBUG=-DNDEBUG
-	[ `use sparc` ] && unset PLATFORM
-	[ `use ppc` ] && unset PLATFORM
-	[ `use ppc64` ] && unset PLATFORM
+	use sparc && unset PLATFORM
+	use ppc && unset PLATFORM
+	use ppc64 && unset PLATFORM
 	autoconf || die
 
-	local myconf
-	use nls && myconf="${myconf} --enable-gettext" || myconf="${myconf} --disable-gettext"
-
 	./configure \
+		`use_enable nls gettext` \
 		--mandir=/usr/share/man \
 		--prefix=/usr \
 		--libexecdir=/usr/lib \
 		--libdir=/lib \
-		${myconf}
+		|| die
 
-	sed -e 's:^PKG_\(.*\)_DIR = \(.*\)$:PKG_\1_DIR = ${DESTDIR}\2:' \
-	-e 's:-O1::' -i include/builddefs || die "failed to update builddefs"
+	sed -i \
+		-e 's:^PKG_\(.*\)_DIR = \(.*\)$:PKG_\1_DIR = ${DESTDIR}\2:' \
+		-e 's:-O1::' \
+		include/builddefs || die "failed to update builddefs"
 
 	emake || die
-
 }
 
 src_install() {
