@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/actionpack
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionpack/ChangeLog,v 1.5 2005/03/11 02:30:30 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionpack/ChangeLog,v 1.6 2005/03/22 19:57:32 caleb Exp $
+
+*actionpack-1.6.0 (22 Mar 2005)
+
+  22 Mar 2005; Caleb Tennis <caleb@gentoo.org> +actionpack-1.6.0.ebuild:
+  version bump
 
 *actionpack-1.5.1 (10 Mar 2005)
 

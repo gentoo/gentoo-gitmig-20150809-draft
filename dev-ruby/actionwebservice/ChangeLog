@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/actionwebservice
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionwebservice/ChangeLog,v 1.3 2005/03/11 02:34:37 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionwebservice/ChangeLog,v 1.4 2005/03/22 19:59:59 caleb Exp $
+
+*actionwebservice-0.6.1 (22 Mar 2005)
+
+  22 Mar 2005; Caleb Tennis <caleb@gentoo.org> +actionwebservice-0.6.1.ebuild:
+  version bump
 
 *actionwebservice-0.6.0 (10 Mar 2005)
 
