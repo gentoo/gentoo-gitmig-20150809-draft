@@ -1,9 +1,6 @@
 # ChangeLog for media-sound/madplay
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/madplay/ChangeLog,v 1.24 2004/07/12 19:38:12 eradicator Exp $
-
-  12 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> :
-  Version bump.  ~sparc -amd64.
+# $Header: /var/cvsroot/gentoo-x86/media-sound/madplay/ChangeLog,v 1.25 2004/07/12 19:43:43 eradicator Exp $
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   madplay-0.15.0b-r1.ebuild, madplay-0.15.0b.ebuild, madplay-0.15.1b.ebuild:
