@@ -1,5 +1,5 @@
-MD5 35129189324c05cbdce910c939bbc1e6 ChangeLog 1810
+MD5 d51d1fa9d45b0d4983c98dedce4700ab ChangeLog 2011
 MD5 8ec5a35f85264d13711de14f5003bdad kgpg-0.9.5.ebuild 475
-MD5 1bba2e5d271c7dfe222a36dc5b816eff kgpg-1.0.0.ebuild 475
+MD5 b0e0f5d0dedc54d07aa3841120601e92 kgpg-1.0.0.ebuild 475
 MD5 e0ed1e42731fee2489c6db69a6d8acf9 files/digest-kgpg-0.9.5 62
 MD5 7ef232c6b76d458defca7fe3da2e2e2a files/digest-kgpg-1.0.0 62
