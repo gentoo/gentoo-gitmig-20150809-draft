@@ -1,3 +1,5 @@
 MD5 6f6cdee407dee0f71cd2c911c52f6621 hardware-monitor-0.5.ebuild 781
-MD5 4196480012266927f9375166dcfbf62d ChangeLog 393
+MD5 3043548e6d20bd2a3c4e8134e036a87e ChangeLog 530
+MD5 ae755b6f1284a0e4dc97e044aeb1bcfd hardware-monitor-0.5.1.ebuild 783
 MD5 477ab5b60e6506e214a358754e2b0c1d files/digest-hardware-monitor-0.5 72
+MD5 289f2ddef7ec1ca2de46fa36378dee7d files/digest-hardware-monitor-0.5.1 74
