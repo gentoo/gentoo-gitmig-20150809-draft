@@ -1,6 +1,6 @@
-# ChangeLog for app-sci/lapack-reference
+# ChangeLog for sci-libs/lapack-reference
 # Copyright 2004-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-reference/ChangeLog,v 1.1 2004/12/29 18:28:46 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-reference/ChangeLog,v 1.2 2004/12/29 21:57:15 swegener Exp $
 
 *lapack-reference-3.0 (29 Dec 2004)
 
