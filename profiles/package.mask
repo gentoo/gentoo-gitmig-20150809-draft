@@ -21,11 +21,6 @@
 ##   End example
 ##
 
-# <aliz@gentoo.org> (25 Aug 2002)
-# Testing xosd 1.0.2
-=media-sound/xmms-xosd-1.0.2
-=x11-libs/xosd-1.0.2
-
 # <woodchip@gentoo.org> (25 Aug 2002)
 # Latest stable release, test.
 =dev-db/mysql-3.23.52
@@ -251,10 +246,6 @@ app-editors/kvim
 # Masked for testing
 =sys-apps/util-linux-2.11t
 =sys-apps/util-linux-2.11u
-
-# <carpaski@gentoo.org) (05 Aug 2002)
-# Testing
-=media-sound/xmms-xosd-0.7.0-r1
 
 # Leonardo Boshell <leonardop@gentoo.org> (04 Aug 2002)
 # These packages have been replaced with the new gtk-engines-* form
@@ -611,9 +602,6 @@ media-gfx/k3studio
 # X driver renaming *dont* work.
 # Azarah - 5 June 2002
 =media-video/ati-gatos-4.2.0.11-r1
-
-#the XMMS crash when activate the osd plugin, but osd_cat work's well
-#x11-libs/xosd
 
 # unreproducable weird problems that seem fixed with new ximian and
 # redhat patches -- blocke, 6/1/02
