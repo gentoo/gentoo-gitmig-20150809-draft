@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/bestcrypt/bestcrypt-1.2_p6.ebuild,v 1.1 2003/09/10 22:45:23 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/bestcrypt/bestcrypt-1.2_p6.ebuild,v 1.2 2003/10/01 09:39:25 aliz Exp $
 
 MY_PN="bcrypt"
 KEYWORDS="~x86"
@@ -16,11 +16,10 @@ DEPEND="virtual/linux-sources"
 src_unpack() {
 	unpack ${A}
 	for file in `find . -type f -iname Makefile*`;do
-		mv ${file} ${file}.orig
-		sed -e "s:-O[0-9]:${CFLAGS}:"	\
+		sed -i -e "s:-O[0-9]:${CFLAGS}:"	\
 		    -e 's%KVER =.*%KVER = $(shell readlink /usr/src/linux|sed -e "s:linux-\\([0-9]\\+\.[0-9]\\+\\)\..*:\\1:")%' \
 		    -e "s%uname -r%readlink /usr/src/linux|sed -e 's:linux-::'%" \
-			${file}.orig > ${file}
+			 ${file}
 
 	done
 }

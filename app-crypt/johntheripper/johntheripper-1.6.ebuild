@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/johntheripper-1.6.ebuild,v 1.17 2003/09/21 09:44:08 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/johntheripper-1.6.ebuild,v 1.18 2003/10/01 09:39:25 aliz Exp $
 
 inherit eutils
 
@@ -26,9 +26,8 @@ src_unpack() {
 
 src_compile() {
 	cd src
-	mv Makefile Makefile.orig
-	sed -e "s:-m486::" -e "s:-Wall -O2:${CFLAGS}:" \
-		Makefile.orig > Makefile
+	sed -i -e "s:-m486::" -e "s:-Wall -O2:${CFLAGS}:" \
+		Makefile
 	if [ `use mmx` ] ; then
 		emake linux-x86-mmx-elf || die
 	else

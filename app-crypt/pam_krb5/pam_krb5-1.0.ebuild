@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/pam_krb5/pam_krb5-1.0.ebuild,v 1.14 2003/06/06 23:58:21 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/pam_krb5/pam_krb5-1.0.ebuild,v 1.15 2003/10/01 09:39:25 aliz Exp $
 
 DESCRIPTION="Pam module for MIT Kerberos V"
 SRC_URI="http://www.fcusack.com/soft/${P}.tar.gz"
@@ -16,7 +16,7 @@ DEPEND="app-crypt/mit-krb5
 S=${WORKDIR}/${PN}
 
 src_compile() {
-	patch -p0 < ${FILESDIR}/${P}-gentoo.diff || die
+	epatch ${FILESDIR}/${P}-gentoo.diff
 	make CFLAGS="$CFLAGS" || die
 }
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/heimdal-0.5.ebuild,v 1.6 2003/09/21 09:44:08 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/heimdal-0.5.ebuild,v 1.7 2003/10/01 09:39:25 aliz Exp $
 
 DESCRIPTION="Kerberos 5 implementation from KTH"
 SRC_URI="ftp://ftp.pdc.kth.se/pub/heimdal/src/${P}.tar.gz"
@@ -20,8 +20,7 @@ src_unpack() {
 	unpack ${A}
 
 	cd ${S}/lib/krb5
-	mv Makefile.in Makefile.in.bak
-	sed "s:LIB_crypt = @LIB_crypt@:LIB_crypt = -lssl @LIB_crypt@:g" Makefile.in.bak >Makefile.in
+	sed -i "s:LIB_crypt = @LIB_crypt@:LIB_crypt = -lssl @LIB_crypt@:g" Makefile.in
 }
 
 src_compile() {
