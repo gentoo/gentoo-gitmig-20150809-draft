@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/eog
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/ChangeLog,v 1.49 2003/12/13 00:47:48 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/ChangeLog,v 1.50 2004/01/14 12:03:07 obz Exp $
+
+  14 Jan 2004; Mike Gardiner <obz@gentoo.org> eog-2.4.1.ebuild:
+  Stable on x86 as part of GNOME-2.4.1
 
   13 Dec 2003; Guy Martin <gmsoft@gentoo.org> eog-2.4.0.ebuild:
   Marked stable on hppa.
