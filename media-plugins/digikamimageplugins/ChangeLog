@@ -1,10 +1,14 @@
 # ChangeLog for media-plugins/digikamimageplugins
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/digikamimageplugins/ChangeLog,v 1.5 2004/12/03 17:26:04 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/digikamimageplugins/ChangeLog,v 1.6 2004/12/04 20:09:14 kingtaco Exp $
 
   03 Dec 2004; David Holm <dholm@gentoo.org>
   digikamimageplugins-0.7.0.ebuild:
   Added to ~ppc.
+
+  04 Dec 2004; Mike Doty <kingtaco@gentoo.org>
+  digikamimageplugins-0.7.0.ebuild:
+  ~amd64 keyword added
 
 *digikamimageplugins-0.7.0 (08 Nov 2004)
 
