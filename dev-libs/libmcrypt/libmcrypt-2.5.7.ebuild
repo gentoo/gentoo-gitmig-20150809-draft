@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmcrypt/libmcrypt-2.5.7.ebuild,v 1.10 2004/03/16 17:26:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmcrypt/libmcrypt-2.5.7.ebuild,v 1.11 2004/04/01 20:59:01 randy Exp $
 
 inherit libtool
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/mcrypt/${P}.tar.gz"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="x86 sparc ppc hppa alpha amd64 ia64"
+KEYWORDS="x86 sparc ppc hppa alpha amd64 ia64 s390"
 
 DEPEND=">=sys-devel/automake-1.6.1
 	>=sys-devel/libtool-1.4.1-r8"
