@@ -1,0 +1,8 @@
+# ChangeLog for x11-misc/Xeasyconf
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+
+*Xeasyconf-0.1.2-(May 30 2002)
+
+  30 May 2002; M. Guertin <gerk@imaclinux.net> ChangeLog :
+
+  Initial ebuild for xeasyconf
