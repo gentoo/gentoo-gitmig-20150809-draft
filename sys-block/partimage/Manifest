@@ -1,28 +1,28 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 8db55352096833425dddab75dfdf9031 partimage-0.6.4-r2.ebuild 3912
-MD5 0823991ecf05c5fb37561fc3996200a5 partimage-0.6.2.ebuild 1682
-MD5 d86d932f33956374c79b9ce3524c118d partimage-0.6.4.ebuild 4163
-MD5 3274833ce702b2312325db17559d9ff1 partimage-0.6.4-r1.ebuild 4498
-MD5 ae9b02c189ccbd9f53ef21a4a458b478 ChangeLog 3860
+MD5 0cbb714fa9afc67c20611677cc1b36cb ChangeLog 3985
 MD5 6b4c83400b7b7a44afb53e1a7ac388af metadata.xml 300
-MD5 eb53aad37dc8ae6ed131a1502989446a files/partimage-0.6.4-fixserverargs.diff 366
-MD5 938ecb802f7e26ff8df88404f0648c7c files/partimagedusers.5 1263
+MD5 0823991ecf05c5fb37561fc3996200a5 partimage-0.6.2.ebuild 1682
+MD5 3274833ce702b2312325db17559d9ff1 partimage-0.6.4-r1.ebuild 4498
+MD5 3515c96d82862b7f88ba7c0c19e4b503 partimage-0.6.4-r2.ebuild 3912
+MD5 d86d932f33956374c79b9ce3524c118d partimage-0.6.4.ebuild 4163
+MD5 6fd04332b7f640a2aa71f208d2bd2dc8 files/digest-partimage-0.6.2 68
+MD5 3bbd1e2fc0dd50034c600d01d08e8997 files/digest-partimage-0.6.4 68
 MD5 3bbd1e2fc0dd50034c600d01d08e8997 files/digest-partimage-0.6.4-r1 68
 MD5 3bbd1e2fc0dd50034c600d01d08e8997 files/digest-partimage-0.6.4-r2 68
 MD5 8fea14f38734fb0bbf6239671f5fff4b files/partimage-0.6.4-chown.patch 1660
-MD5 b854c74900be1967b69b5997a434897c files/servercert.cnf 1096
-MD5 58c44cd013afb15de340039a5de24b60 files/partimage-0.6.4-not_install_info.patch 1200
+MD5 eb53aad37dc8ae6ed131a1502989446a files/partimage-0.6.4-fixserverargs.diff 366
 MD5 7954fdb6067557fdd593a66ecae93ab3 files/partimage-0.6.4-nodumbpermchecks.diff 817
-MD5 6fd04332b7f640a2aa71f208d2bd2dc8 files/digest-partimage-0.6.2 68
-MD5 3bbd1e2fc0dd50034c600d01d08e8997 files/digest-partimage-0.6.4 68
+MD5 58c44cd013afb15de340039a5de24b60 files/partimage-0.6.4-not_install_info.patch 1200
 MD5 724ac3895dc01f277b34dab251ec47bb files/partimaged.conf 424
 MD5 86ccd8a7d116f22182ae60e01da1bfff files/partimaged.init 756
+MD5 938ecb802f7e26ff8df88404f0648c7c files/partimagedusers.5 1263
+MD5 b854c74900be1967b69b5997a434897c files/servercert.cnf 1096
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFCK5SsI1lqEGTUzyQRAtHhAKC8xyBgg9ZPRUFuyPFW+HQSJ/HXSACgiziK
-3MlE6aFxxyFKyzSLFnHEm7c=
-=oEak
+iD8DBQFCMFbXgMUyd/cdjWsRAltWAJ43I1cIEiLySSqtHtNsfr1U7yNyBwCbBxhz
+SZ5QwluP8Ftymb7d03SzRE4=
+=hXRb
 -----END PGP SIGNATURE-----
