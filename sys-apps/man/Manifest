@@ -1,16 +1,17 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 e2f1142fa676706a9eae956f9b1c0b20 ChangeLog 9393
+MD5 8ea9dc1513a2048d1125518dd045b9df ChangeLog 9496
 MD5 f7dab9ad0480c91649fa31517fbe300c man-1.5m-r2.ebuild 4277
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 73fd5978afaa01ad5f69c1cdb0afde71 man-1.5o_p2.ebuild 3924
+MD5 e7327fedbe8071ba4ff5cf6393bcbe4e man-1.5o_p2.ebuild 3809
 MD5 e3918eca44e629c29e3f5adb66299d14 files/digest-man-1.5o_p2 61
 MD5 7e4bd368680d1c95bdaa6c6d5ee556f1 files/man-1.5m-locale-order.patch 454
 MD5 a1fe892ffb27e5e044ed342b611d2db1 files/makewhatis.cron 126
 MD5 9feb57fe5fbc4c123a42c7cf0314e628 files/digest-man-1.5m-r2 61
 MD5 932c883a826094eb89ed6683b6f61338 files/man-1.5m-cross-compile.patch 1043
 MD5 43a67f127cf7051e3399773c5e8d56f6 files/man-1.5o_p1-man2html-CFLAGS.patch 343
+MD5 c5d1c89a45091b6f6dacac697d7ce2e7 files/man-1.5o_p2-defmanpath-symlinks.patch 633
 MD5 963a9363ab4bdb32e5fccaf0edc48d19 files/man-1.5m-LL-linelength.patch 475
 MD5 fc750a4d956da7cb889e89722fe8f4e2 files/man-1.5m-defmanpath-symlinks.patch 750
 MD5 80f2a25fb0b5692f39a1990527a93271 files/man-1.5m-groff-1.18.patch 923
@@ -23,7 +24,7 @@ MD5 de02d99d60fb0e923c37e9130989b324 files/man-1.5m-wrong-quotes-v2.patch 328
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.14 (GNU/Linux)
 
-iD8DBQFB30EZroRuSHgZdywRAssCAJ48GU3+3/TJozjnkVrKrA8aphdfvQCdHOoG
-iDAnQjj+953xf9nyv5lOlrQ=
-=mpMz
+iD8DBQFB30REroRuSHgZdywRAiOsAJ4gtns7wSbKtFBwcHl95Ee6m75OXACeMbea
+p9kToyH2qJDspLCZQg4EtSM=
+=Ghzw
 -----END PGP SIGNATURE-----

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/man-1.5o_p2.ebuild,v 1.1 2005/01/08 02:10:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/man-1.5o_p2.ebuild,v 1.2 2005/01/08 02:23:44 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -44,9 +44,6 @@ src_unpack() {
 	# For groff-1.18 or later we need to call nroff with '-c'
 	epatch ${FILESDIR}/man-1.5m-groff-1.18.patch
 
-	# Various fixes from Redhat
-	epatch ${FILESDIR}/man-1.5m-redhat-patches.patch
-
 	# Do not print the 'man: No such file or directory' error if
 	# 'man -d' was called and the NLS catalogue was not found, as
 	# it confuses people, and be more informative  ... (bug #6360)
@@ -60,9 +57,7 @@ src_unpack() {
 
 	# makewhatis traverses manpages twice, as default manpath
 	# contains two directories that are symlinked together
-	# (bug 23848)
-	#  -taviso@gentoo.org
-	epatch ${FILESDIR}/man-1.5m-defmanpath-symlinks.patch
+	epatch ${FILESDIR}/man-1.5o_p2-defmanpath-symlinks.patch
 
 	# Make sure the locale is searched in the right order #37778
 	epatch ${FILESDIR}/man-1.5m-locale-order.patch
