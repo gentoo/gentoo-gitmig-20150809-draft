@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/gnu-classpath-inetlib
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath-inetlib/ChangeLog,v 1.8 2004/10/16 17:13:58 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath-inetlib/ChangeLog,v 1.9 2004/10/20 07:01:40 absinthe Exp $
+
+*gnu-classpath-inetlib-1.1 (20 Oct 2004)
+
+  20 Oct 2004; Dylan Carlson <absinthe@gentoo.org>
+  +gnu-classpath-inetlib-1.1.ebuild:
+  Version bump. Added ~amd64 keywords.
 
   16 Oct 2004; Thomas Matthijs <axxo@gentoo.org>
   gnu-classpath-inetlib-1.0.ebuild:

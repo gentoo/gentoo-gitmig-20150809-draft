@@ -1,14 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 0f6b58a9f288caa20120697e21fbc83d gnu-classpath-inetlib-1.0.ebuild 1442
-MD5 a0fd80e9770071405bbf6f1787cc501b ChangeLog 940
+MD5 b5292cee82ce93145d64b251708a77a1 ChangeLog 1114
 MD5 cae9047aa616f454f13653091a077f60 metadata.xml 430
+MD5 0f6b58a9f288caa20120697e21fbc83d gnu-classpath-inetlib-1.0.ebuild 1442
+MD5 6a2746820c480bfa89def9866f739d82 gnu-classpath-inetlib-1.1.ebuild 1282
 MD5 a2a578355c1f554d3ae84752aaab1c19 files/digest-gnu-classpath-inetlib-1.0 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBcVbf/rLF9B432nYRAvtwAJ0RfGo2jU5u7iPM3RF3H09+vhyrTwCgj2uy
-6lT2MDYWwt1gy5HCOPOiFq8=
-=FBLV
------END PGP SIGNATURE-----
+MD5 d8e4542d02c3180ee42b1c87c424c968 files/digest-gnu-classpath-inetlib-1.1 63
