@@ -1,6 +1,11 @@
 # ChangeLog for net-wireless/kwifimanager
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kwifimanager/ChangeLog,v 1.4 2003/02/15 08:11:24 gerk Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kwifimanager/ChangeLog,v 1.5 2004/03/13 11:28:49 lanius Exp $
+
+*kwifimanager-1.0.2 (13 Mar 2004)
+
+  13 Mar 2004; Heinrich Wendel <lanius@gentoo.org> kwifimanager-1.0.2.ebuild:
+  version bump, bug #25197
 
 *kwifimanager-1.0.1 (10 Jan 2003)
 
