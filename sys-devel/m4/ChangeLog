@@ -1,6 +1,12 @@
 # ChangeLog for sys-devel/m4
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/m4/ChangeLog,v 1.5 2002/12/13 11:00:39 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/m4/ChangeLog,v 1.6 2003/01/07 20:17:44 azarah Exp $
+
+*m4-1.4p-r1 (07 Jan 2003)
+
+  07 Jan 2003; Martin Schlemmer <azarah@gentoo.org> m4-1.4p-r1.ebuild
+
+  Add perl depend, as its needed for docs.  Should close bug #13231.
 
   12 Dec 2002; Jan Seidel <tuxus@gentoo.org> m4-1.4p.ebuild :
   Added mips to keywords.
