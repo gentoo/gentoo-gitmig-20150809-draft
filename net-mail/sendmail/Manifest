@@ -1,7 +1,7 @@
-MD5 33ded6ca8c121890b74e5a8a6e17dc3e sendmail-8.12.11-r1.ebuild 5499
+MD5 bde4378ef82c234b36af06da9cf22aa9 sendmail-8.12.11-r1.ebuild 5481
 MD5 a358bb35f98aa2d7ba3712daedd08621 sendmail-8.12.11.ebuild 5446
 MD5 7be45ed7ccd3bcede41ca6ca58ae025d sendmail-8.12.10.ebuild 5458
-MD5 e82377d4ea989547db6dd385a2efa3d4 ChangeLog 6154
+MD5 4973847ca25cfe8b7ec7cd3a402a9c70 ChangeLog 6338
 MD5 07aa1897fda73805b9d68a2b82090e5f metadata.xml 218
 MD5 5476fde164f12162d60ed3cffb0a41e3 files/sendmail.cf 39325
 MD5 57c515d75ee6bcb32fc673141ebc41fa files/sendmail.mc 930
@@ -15,5 +15,5 @@ MD5 95d58f15432e44c91f8018839f65327c files/sendmail-8.12.6-r1-gentoo.diff 1701
 MD5 6faca1941f582ad8a893b0e4fa4dd757 files/sendmail-procmail.cf 39867
 MD5 03494c29693bd3ceb921bbc398be4cda files/sendmail-procmail.mc 985
 MD5 66e8128c1f0dd987c0a78f1ca61ec79d files/sendmail 606
-MD5 850d860f4e5b4e11781c25de9378f736 files/mailer.conf 996
+MD5 bddac02de95e12dcef98e718ddb5151b files/mailer.conf 999
 MD5 4b37f61de2fd8de372a4bd8ab6f92edf files/sendmail-8.12.2-smrsh-paths.patch 5625
