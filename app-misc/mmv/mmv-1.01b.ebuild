@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mmv/mmv-1.01b.ebuild,v 1.10 2004/09/17 03:34:54 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mmv/mmv-1.01b.ebuild,v 1.11 2004/10/26 13:40:41 ka0ttic Exp $
 
-inherit eutils gcc
+inherit eutils gcc toolchain-funcs
 
 DESCRIPTION="Move/copy/append/link multiple files according to a set of wildcard patterns."
 HOMEPAGE="http://packages.debian.org/unstable/utils/mmv.html"
@@ -35,7 +35,7 @@ src_unpack() {
 src_compile() {
 	mmv_CFLAGS=" -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64"
 
-	emake CC="gcc " CFLAGS="${mmv_CFLAGS} ${CFLAGS} " LDFLAGS=" -s " || die
+	emake CC="$(tc-getCC)" CFLAGS="${mmv_CFLAGS} ${CFLAGS} " LDFLAGS=" -s " || die
 }
 
 src_install() {
