@@ -1,6 +1,15 @@
 # ChangeLog for sys-apps/busybox
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.17 2003/11/06 17:51:42 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.18 2003/12/19 00:00:24 solar Exp $
+
+*busybox-1.00_pre4 (18 Dec 2003)
+
+  18 Dec 2003; <solar@gentoo.org> busybox-1.00_pre4.ebuild:
+  version bump of the _pre series.. This release includes major rework to sed,
+  lots of rework on tar, a new tiny implementation of bunzip2, a new devfsd
+  applet, support for 2.6.x kernel modules, updates to the ash shell, sha1sum
+  and md5sum have been merged into a common applet, the dpkg applets has been
+  cleaned up.
 
 *busybox-1.00_pre3 (06 Nov 2003)
 
