@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/subversion
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/ChangeLog,v 1.62 2004/03/17 08:57:13 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/ChangeLog,v 1.63 2004/03/23 14:30:36 pauldv Exp $
+
+*subversion-1.0.1 (23 Mar 2004)
+
+  23 Mar 2004; Paul de Vrieze <pauldv@gentoo.org> subversion-1.0.1.ebuild:
+  New upstream version. Also re-enabled the svnversion.txt hack as there are
+  still cases (like changing db version) where svnversion.txt cannot be created
+  in the normal way
 
   17 Mar 2004; Seemant Kulleen <seemant@gentoo.org> subversion-0.28.0.ebuild:
   fix for bug #44712 by Michael Sterret <mr_bones_@gentoo.org>
