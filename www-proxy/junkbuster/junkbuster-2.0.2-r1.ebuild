@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-proxy/junkbuster/junkbuster-2.0.2.ebuild,v 1.2 2005/02/16 22:18:32 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-proxy/junkbuster/junkbuster-2.0.2-r1.ebuild,v 1.1 2005/02/23 21:05:31 mrness Exp $
 
 DESCRIPTION="Filtering HTTP proxy"
 HOMEPAGE="http://internet.junkbuster.com"
@@ -15,10 +15,10 @@ DEPEND="virtual/libc"
 
 S=${WORKDIR}/ijb20
 
-src_compile() {
-	unset CXXFLAGS
-	unset CFLAGS
-	make || die
+src_unpack() {
+	unpack ${A}
+
+	sed -i -e 's:^CFLAGS *=:CFLAGS +=:' ${S}/Makefile
 }
 
 src_install () {
