@@ -1,8 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/tar/tar-1.13.25-r3.ebuild,v 1.6 2002/12/09 22:13:19 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/tar/tar-1.13.25-r3.ebuild,v 1.7 2002/12/10 20:19:09 avenj Exp $
 
-IUSE="nls static build icc"
+IUSE="nls static build"
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Use this to try make tarballs :)"
@@ -15,8 +15,7 @@ KEYWORDS="x86 alpha"
 
 DEPEND="sys-apps/gzip
 	sys-apps/bzip2
-	app-arch/ncompress
-	icc? ( >=dev-lang/icc-7.0 )"
+	app-arch/ncompress"
 
 RDEPEND="nls? ( >=sys-devel/gettext-0.10.35 )"
 
@@ -27,7 +26,6 @@ src_unpack() {
 }
 
 src_compile() {
-	use icc && CC="iccbin" LD="iccbin"
 	local myconf
 	[ -z "`use nls`" ] && myconf="--disable-nls"
 	econf \
