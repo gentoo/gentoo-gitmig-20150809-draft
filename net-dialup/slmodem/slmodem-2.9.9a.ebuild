@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/slmodem-2.9.10-r4.ebuild,v 1.1 2005/01/06 23:12:23 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/slmodem-2.9.9a.ebuild,v 1.1 2005/01/12 20:53:14 dsd Exp $
 
 inherit eutils linux-mod
 
 DESCRIPTION="Driver for Smart Link modem"
-HOMEPAGE="http://www.smlink.com/"
-SRC_URI="http://www.smlink.com/main/down/${P}.tar.gz"
+HOMEPAGE="http://linmodems.technion.ac.il/packages/smartlink/"
+SRC_URI="http://linmodems.technion.ac.il/packages/smartlink/${P}.tar.gz"
 LICENSE="Smart-Link"
 SLOT="0"
 KEYWORDS="~x86 -*"
@@ -14,7 +14,6 @@ IUSE="alsa usb"
 
 DEPEND="virtual/libc
 	alsa? ( media-libs/alsa-lib )
-	virtual/os-headers
 	>=sys-apps/sed-4"
 
 RDEPEND="virtual/libc
@@ -34,19 +33,16 @@ pkg_setup() {
 	fi
 
 	linux-mod_pkg_setup
+	BUILD_PARAMS="KERNEL_DIR=${KV_DIR}"
 }
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/${P}-usb_endpoint_halted-gentoo.patch || die "failed to apply usb_endpoint patch"
-	epatch ${FILESDIR}/${P}-pci-workaround.patch || die "failed to apply pci workaround patch"
+
+	epatch ${FILESDIR}/${PN}-usb_endpoint_halted-gentoo.patch || die "failed to apply usb_endpoint patch"
 
 	convert_to_m drivers/Makefile
-
-	if kernel_is ge 2 6 10; then
-		epatch ${FILESDIR}/${P}-fix-for-2.6.10.patch || die "failed to apply fix for kernels >= 2.6.10"
-	fi
 }
 
 src_compile() {

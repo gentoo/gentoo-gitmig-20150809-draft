@@ -2,23 +2,21 @@
 Hash: SHA1
 
 MD5 d8a103e82447a32a2c636c188b407f65 slmodem-2.9.10-r1.ebuild 3964
-MD5 ab42ccef7b4effd4cea1880ffa1d0f94 ChangeLog 8607
+MD5 795ba6491e3187ef1e3398571a5d3d94 slmodem-2.9.9a.ebuild 3865
+MD5 a81922c40e53894ddc7b982634fc45ae ChangeLog 9078
 MD5 93dd8a9d0c0f815e8445d9f0c1fc0910 metadata.xml 578
-MD5 d6c8d01c1a46cc2860dbf07fc734044c slmodem-2.9.10-r4.ebuild 4029
 MD5 a5c2c40e3a6c4665033c97bb9088f03d files/slusb.hotplug 262
-MD5 026f2e2fae1fbd999455b36630164a88 files/slmodem-2.9.10-usb_endpoint_halted-gentoo.patch 830
 MD5 8834a62c67909059cef10887bfbcc853 files/slmodem-2.9.modules 494
-MD5 66761da676b75588b6070bb128104c13 files/slmodem-2.9.10-pci-workaround.patch 872
 MD5 67543ad2e41e6dbc2150057340bb82b1 files/slmodem-2.9.conf 752
 MD5 64d03a3c87a5330faa6b8dd9d344b6a3 files/slmodem-2.9.init 2657
+MD5 ef9ad53b66480e01974b9f183e4edbc8 files/digest-slmodem-2.9.9a 66
 MD5 ccc7e1460f0678c4e3e8b8c3747834a5 files/digest-slmodem-2.9.10-r1 66
-MD5 ccc7e1460f0678c4e3e8b8c3747834a5 files/digest-slmodem-2.9.10-r4 66
 MD5 c80ecf5c3d5605220e4b0055850260a5 files/slmodem-2.9.devfs 786
-MD5 190cd2721bad42e351959ae4c90fa812 files/slmodem-2.9.10-fix-for-2.6.10.patch 521
+MD5 026f2e2fae1fbd999455b36630164a88 files/slmodem-usb_endpoint_halted-gentoo.patch 830
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFB3cXhjiC39V7gKu0RAnPEAJ9/4P08njN3vUk1BX2JhyKDgiINngCg2uk/
-taKIXSY+t3qe6xUeZO/RPfs=
-=NsBP
+iD8DBQFB5alhiJcSIUGNthERAuG/AJ9wZ2I1nrIF1bXxcX8QJtLWrYqH2gCfUVxB
+L5ePvZv/VwERSPqH9+X4Zn8=
+=DY5X
 -----END PGP SIGNATURE-----

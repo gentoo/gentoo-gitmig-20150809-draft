@@ -1,6 +1,17 @@
 # ChangeLog for net-dialup/slmodem
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/ChangeLog,v 1.35 2005/01/06 23:12:23 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/ChangeLog,v 1.36 2005/01/12 20:53:14 dsd Exp $
+
+*slmodem-2.9.9a (12 Jan 2005)
+
+  12 Jan 2005; Daniel Drake <dsd@gentoo.org>
+  -files/slmodem-2.9.10-fix-for-2.6.10.patch,
+  -files/slmodem-2.9.10-pci-workaround.patch,
+  -files/slmodem-2.9.10-usb_endpoint_halted-gentoo.patch,
+  +files/slmodem-usb_endpoint_halted-gentoo.patch, slmodem-2.9.10-r3.ebuild,
+  -slmodem-2.9.10-r4.ebuild, +slmodem-2.9.9a.ebuild:
+  Revert to 2.9.9 due to licensing issues. This is the linmodems release with
+  some ALSA and 2.6.10 fixes included.
 
 *slmodem-2.9.10-r4 (07 Jan 2005)
 
