@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/PEAR-DB
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-DB/ChangeLog,v 1.7 2004/04/17 15:02:28 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-DB/ChangeLog,v 1.8 2004/04/19 01:14:02 weeve Exp $
+
+  18 Apr 2004; Jason Wever <weeve@gentoo.org> PEAR-DB-1.5.0_rc2.ebuild:
+  Stable on sparc.
 
   17 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> PEAR-DB-1.6.1.ebuild:
   Added IUSE=
