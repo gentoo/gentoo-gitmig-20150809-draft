@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/jircii/jircii-16.ebuild,v 1.1 2004/10/17 01:37:12 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/jircii/jircii-18.ebuild,v 1.1 2004/10/31 17:27:57 swegener Exp $
 
 DESCRIPTION="jIRCii - IRC client written in Java"
 HOMEPAGE="http://jirc.hick.org/"
-SRC_URI="http://jirc.hick.org/download/jerkb${PV}.tgz"
+SRC_URI="http://jirc.hick.org/download/jerkr${PV}.tgz"
 LICENSE="Artistic"
 SLOT="0"
 KEYWORDS="~x86 ~ppc"
@@ -21,13 +21,13 @@ src_compile() {
 
 src_install() {
 	insinto /usr/share/jircii
-	doins jerk.jar
+	doins jerk.jar || die "doins failed"
 
 	cat >${T}/jircii <<EOF
 #!/bin/bash
 exec java -jar /usr/share/jircii/jerk.jar
 EOF
-	dobin ${T}/jircii
+	dobin ${T}/jircii || die "dobin failed"
 
-	dodoc readme.txt whatsnew.txt docs/*.pdf extra/*.irc
+	dodoc readme.txt whatsnew.txt docs/*.pdf extra/*.irc || die "dodoc failed"
 }

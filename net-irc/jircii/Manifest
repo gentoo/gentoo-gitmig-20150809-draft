@@ -1,20 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 cc0708d75a28354c69c567ed8251e770 ChangeLog 1461
-MD5 080a0b8fcd407ea1ac7e42ca0a236733 jircii-14.ebuild 708
+MD5 95f0bbb34aea72516b8a44c57ce08c48 ChangeLog 1678
+MD5 8de033a55c4c6f54e4e1b7d00ae25bb3 jircii-14.ebuild 774
 MD5 44c39c6ad372a8e5a5e7ee3311f703a7 metadata.xml 160
-MD5 bb11c27c3c877043f41febfb458ee0f6 jircii-15.ebuild 709
-MD5 99f8cf28f01ff74f1c2dad1a9977ce6c jircii-16.ebuild 709
-MD5 c8e8090b94e19d181bfaffa05cf0c51c jircii-17.ebuild 709
+MD5 ce1010244071224c91d2ecdb9f200730 jircii-18.ebuild 775
 MD5 523190a36c92165b4e69bf83e9790b3d files/digest-jircii-14 57
-MD5 aa5023045570a50298114f628ec1fd0e files/digest-jircii-15 57
-MD5 fcb13e3347397d584c05c17f51eb24ff files/digest-jircii-16 57
-MD5 67d8ba5e365301890480c67f025c4805 files/digest-jircii-17 57
+MD5 759ed8285cb5620bf127e23a39314892 files/digest-jircii-18 57
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBfBfqI1lqEGTUzyQRAtT3AJ42GaLEtz4EpIXIwlmfB2hGuXMn2wCgwYvh
-uBue0cFA9Ocu8d5ub/l8aT8=
-=DRoq
+iD8DBQFBhSCpI1lqEGTUzyQRAtCBAKCpPOh3uvAR/JZU2ZEpRqIxTzmbxQCcC6zT
+T+2bYBKsNub0Euup2hdg4LU=
+=ohUs
 -----END PGP SIGNATURE-----

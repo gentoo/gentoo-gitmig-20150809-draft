@@ -1,6 +1,13 @@
 # ChangeLog for net-irc/jircii
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/jircii/ChangeLog,v 1.10 2004/10/24 21:00:15 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/jircii/ChangeLog,v 1.11 2004/10/31 17:27:57 swegener Exp $
+
+*jircii-18 (31 Oct 2004)
+
+  31 Oct 2004; Sven Wegener <swegener@gentoo.org> jircii-14.ebuild,
+  -jircii-15.ebuild, -jircii-16.ebuild, -jircii-17.ebuild,
+  +jircii-18.ebuild:
+  Version bump. Removed old beta ebuilds.
 
 *jircii-17 (24 Oct 2004)
 
