@@ -1,12 +1,13 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ssh/ssh-3.2.9.1.ebuild,v 1.1 2004/02/22 15:46:37 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ssh/ssh-3.2.9.1.ebuild,v 1.2 2004/02/25 00:17:19 humpback Exp $
 
 inherit gnuconfig
 
 DESCRIPTION="Ssh.com Non-Comercial Use ssh version"
 HOMEPAGE="http://www.ssh.com/"
 SRC_URI="ftp://ftp.ssh.com/pub/ssh/${P}.tar.gz"
+RESTRICT="nomirror"
 
 LICENSE="ssh"
 SLOT="0"
