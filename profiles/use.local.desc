@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.519 2004/08/02 08:49:03 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.520 2004/08/02 08:53:03 lanius Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -338,7 +338,7 @@ net-dialup/gnokii:bluetooth - Enable Bluetooth Support
 net-dialup/gnokii:irda - Enable Infrared Support
 net-dialup/freeradius:frascend - Enable ascend binary mode
 net-dialup/freeradius:frlargefiles - Enable large file support
-net-dialup/freeradius:frnothreads - Disable thread support
+net-dialup/freeradius:frnothreds - Disable thread support
 net-dialup/freeradius:frxp - enable experimental modules
 net-dialup/ppp:activefilter - enable activefilter support
 net-dialup/ppp:atm - enable support for pppoatm
