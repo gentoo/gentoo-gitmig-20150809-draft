@@ -1,8 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/maude/maude-2.1.1-r2.ebuild,v 1.2 2004/12/28 19:58:15 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/maude/maude-2.1.1-r2.ebuild,v 1.3 2005/01/17 12:32:50 phosphan Exp $
 
-inherit eutils
+inherit toolchain-funcs eutils
 
 DESCRIPTION="Maude - A high-level specification language"
 HOMEPAGE="http://maude.cs.uiuc.edu/"
@@ -18,12 +18,22 @@ IUSE="doc"
 RDEPEND="virtual/libc
 	sci-libs/buddy
 	dev-libs/libtecla
-	>=dev-libs/gmp-4.1.3
-	>=sys-devel/gcc-3.4.3"
+	>=dev-libs/gmp-4.1.3"
 
 DEPEND="${RDEPEND}
 	sys-devel/bison
-	sys-devel/flex"
+	sys-devel/flex
+	|| ( >=sys-devel/gcc-3.4.3
+		=sys-devel/gcc-3.3* )"
+
+pkg_setup() {
+	if [ "$(gcc-version)" = "3.4" ]; then
+		if [ "$(gcc-micro-version)" -lt 3 ]; then
+			eerror "Need gcc 3.3.x or >= 3.4.3"
+			die "Wrong gcc version"
+		fi
+	fi
+}
 
 src_unpack() {
 	unpack ${A}
