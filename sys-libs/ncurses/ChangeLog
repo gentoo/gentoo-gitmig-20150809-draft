@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/ncurses
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ChangeLog,v 1.76 2004/08/19 21:46:59 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ChangeLog,v 1.77 2004/08/30 10:33:50 gmsoft Exp $
+
+*ncurses-5.4-r5 (30 Aug 2004)
+
+  30 Aug 2004; Guy Martin <gmsoft@gentoo.org> +ncurses-5.4-r5.ebuild:
+  Unconditonal use of -fPIC (#55238).
 
   19 Aug 2004; Travis Tilley <lv@gentoo.org> ncurses-5.4-r4.ebuild:
   fix utf-8 support so that it doesnt totally bork installs with a /lib64
