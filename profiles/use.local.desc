@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.513 2004/07/27 02:42:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.514 2004/07/27 07:28:46 chriswhite Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -289,6 +289,7 @@ media-tv/mythtv:lcd - Enable LCD display support using lcdproc
 media-tv/mythtv:nvidia - Enable nVidia XvMC decoding support
 media-tv/xawdecode:ffmpeg - Enable ffmpeg support
 media-tv/xawtv:zvbi - Enable VBI Decoding Library for Zapping
+media-video/emovix:codecs - Enables use of the win32 dll codecs for playback
 media-video/ffmpeg:faac - Enables faac support
 media-video/ffmpeg:faad - Enables faad2 support
 media-video/mjpegtools:dv - Enables support for a codec used by many camcorders
