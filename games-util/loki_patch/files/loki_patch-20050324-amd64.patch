@@ -1,0 +1,12 @@
+diff -urN loki_patch.orig/configure.in loki_patch/configure.in
+--- loki_patch-20050324.orig/configure.in	2005-03-24 15:20:27.000000000 -0500
++++ loki_patch-20050324/configure.in	2005-03-24 15:21:11.000000000 -0500
+@@ -21,6 +21,8 @@
+ case "$target" in
+     *i?86*)
+         ARCH=x86 ;;
++	*x86_64*)
++		ARCH=amd64 ;;
+     *alpha*)
+         CFLAGS="$CFLAGS -mcpu=ev4 -Wa,-mall"
+         ARCH=alpha ;; 
