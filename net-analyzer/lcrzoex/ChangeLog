@@ -1,6 +1,8 @@
 # ChangeLog for net-analyzer/lcrzoex
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/lcrzoex/ChangeLog,v 1.9 2002/06/06 19:17:03 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/lcrzoex/ChangeLog,v 1.10 2002/10/24 11:01:11 woodchip Exp $
+
+*lcrzoex-4.16.0 (24 Oct 2002)
 
 *lcrzoex-4.10 (6 Jun 2002)
 
