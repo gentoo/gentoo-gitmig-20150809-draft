@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/slmodem-2.9.9-r2.ebuild,v 1.2 2004/08/13 20:06:12 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/slmodem-2.9.9-r2.ebuild,v 1.3 2004/08/15 02:47:00 dragonheart Exp $
 
 inherit kmod eutils
 
@@ -136,7 +136,7 @@ src_install() {
 	#fi
 
 	dodir /etc/hotplug/blacklist.d
-	echo -e "slusb\nslamr" >> ${D}/etc/hotplug/blacklist.d/55-${PN}
+	echo -e "slusb\nslamr\nsnd-intel8x0m" >> ${D}/etc/hotplug/blacklist.d/55-${PN}
 }
 
 pkg_postinst() {
