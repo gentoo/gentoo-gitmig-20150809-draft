@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ghostscript-7.05.6-r4.ebuild,v 1.3 2003/12/09 16:36:08 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ghostscript-7.05.6-r4.ebuild,v 1.4 2003/12/09 16:37:14 lanius Exp $
 
 inherit eutils
 
@@ -28,6 +28,8 @@ DEPEND="virtual/glibc
 	cups? ( net-print/cups )"
 
 S=${WORKDIR}/espgs-${PV}
+
+PROVIDE="virtual/ghostscript"
 
 src_unpack() {
 	unpack espgs-${PV}-source.tar.bz2
