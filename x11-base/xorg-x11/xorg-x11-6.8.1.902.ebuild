@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.1.902.ebuild,v 1.10 2005/01/21 07:33:21 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.1.902.ebuild,v 1.11 2005/01/21 07:42:27 spyderous Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -1667,12 +1667,9 @@ print_info() {
 	ewarn "Old locations for anything in /usr/X11R6/$(get_libdir)"
 	ewarn "are deprecated."
 	echo
-	ewarn "The configuration file has changed from that in XFree86."
-	ewarn "It is xorg.conf instead of XF86Config."
-	einfo "You may use xorgcfg, X -configure, or xorgconfig"
-	einfo "to create xorg.conf."
-	einfo "If XF86Config exists and xorg.conf does not, it will still"
-	einfo "read XF86Config."
+	# (#76985)
+	einfo "Visit http://www.gentoo.org/doc/en/index.xml?catid=desktop"
+	einfo "for more information on configuring X."
 
 	# Try to get people to read /usr/X11R6/libdir move
 	ebeep 5
