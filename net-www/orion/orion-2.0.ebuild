@@ -1,6 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/orion/orion-1.5.2b-r1.ebuild,v 1.1 2003/03/13 22:27:40 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/orion/orion-2.0.ebuild,v 1.1 2003/03/22 03:28:35 absinthe Exp $
+
+inherit eutils
 
 S=${WORKDIR}/${PN}
 
@@ -18,29 +20,31 @@ DEPEND=">=virtual/jdk-1.3
 
 src_unpack() {
 	if [ ! -f ${DISTDIR}/${At} ] ; then
-		die "Please download ${At} from ${HOMEPAGE} and place into ${DISTDIR}."
+		einfo "Due to licensing restrictions, you must:"
+		einfo " "
+		einfo "1. Download ${At} from ${HOMEPAGE}."
+		einfo "2. Place ${At} into ${DISTDIR}."
+		einfo "3. Run 'emerge' on this ebuild again to continue."
+		die "Missing ${DISTDIR}/${At}; aborting."
 	fi
 	unzip -q ${DISTDIR}/${At} || die
 	cd ${S}
-	patch -p0 < ${FILESDIR}/${PV}/${PV}-gentoo.patch
+	epatch ${FILESDIR}/${PV}/${PV}-gentoo.patch
 }
 
 
 pkg_setup() {
-
-	if ! groupmod orion ; then
-		groupadd -g 260 orion || die "problem adding group orion"
-        fi
-
-        if ! id orion; then
-                useradd -g orion -s /bin/bash -d /opt/orion -c "orion" orion
-                assert "problem adding user orion"
-        fi
+	enewgroup orion 260
+	enewuser orion 260 /bin/bash /opt/orion orion
+	echo -ne "\a" ; sleep 1 ; echo -ne "\a" ; sleep 1 ; echo -ne "\a" ; sleep 1
+        sleep 10
 }
 
 
 src_install() {
-
+	local INSTALLING
+	INSTALLING="yes"
+	
 	# CREATE DIRECTORIES
 	DIROPTIONS="--mode=0775 --owner=orion --group=orion"
 	dodir /opt/${PN}
@@ -98,39 +102,61 @@ src_install() {
 	ln -s ${JAVA_HOME}/lib/tools.jar ${D}/usr/share/${PN}/lib/tools.jar
 	
 	# INSTALL DOCS
-	dodoc Copyright.txt Readme.txt changes.txt
+	dodoc Readme.txt changes.txt
 }
 
 pkg_postinst() {
 	einfo " "
-	einfo " NOTICE!  User account created:  orion"
-	einfo " Please set a password for this account!"
+	einfo " NOTICE!"
+	einfo " Please set a password for the user account 'orion'"
+	einfo " if you have not done so already."
 	einfo " "
-	einfo " Orion's home directory is: /opt/orion"
-	einfo " In this directory you will have all of your application data,"
-	einfo " settings and configurations."
 	einfo " "
-	einfo " Runtime settings, such as CLASSPATH and desired JDK are set"
-	einfo " in /etc/conf.d/orion"
+	einfo " FILE LOCATIONS:"
+	einfo " 1.  Orion home directory: /opt/orion"
+	einfo "     Contains application data, configuration files."
+	einfo " 2.  Runtime settings: /etc/conf.d/orion"
+	einfo "     Contains CLASSPATH and JDK settings."
+	einfo " 3.  Logs:  /var/log/orion/"
+	einfo " 4.  Executables, libraries:  /usr/share/${PN}/"
 	einfo " "
-	einfo " Logs can be found in /var/log/orion/"
 	einfo " "
-	einfo " Executables and libraries are in /usr/share/${PN}/"
+	einfo " STARTING AND STOPPING ORION:"
+	einfo "   /etc/init.d/orion start"
+	einfo "   /etc/init.d/orion stop"
+	einfo "   /etc/init.d/orion restart"
 	einfo " "
-	einfo " To set an administrative password, execute the following"
-	einfo " commands as user 'orion':"
-	einfo " \$ java -jar /usr/share/${PN}/lib/orion.jar -install"
 	einfo " "
-	einfo " To start/stop orion, use '/etc/init.d/orion' as root."
-	einfo " "
+	einfo " NETWORK CONFIGURATION:"
 	einfo " By default, Orion runs on port 8080.  You can change this"
 	einfo " value by editing /opt/orion/config/default-web-site.xml."
 	einfo " "
 	einfo " To test Orion while it's running, point your web browser to:"
 	einfo " http://localhost:8080/"
 	einfo " "
+	einfo " "
+	einfo " APPLICATION DEPLOYMENT:"
+	einfo " To set an administrative password, execute the following"
+	einfo " commands as user 'orion':"
+	einfo " \$ java -jar /usr/share/${PN}/lib/orion.jar -install"
+	einfo " "
+	einfo " "
+	einfo " BUGS:"
+	einfo " Please file any bugs at http://bugs.gentoo.org/ or else it"
+	einfo " may not get seen.  Thank you."
+	einfo " "
 	echo -ne "\a" ; sleep 1 ; echo -ne "\a" ; sleep 1 ; echo -ne "\a" ; sleep 1
         sleep 10
 
 }
 
+pkg_postrm() {
+	if [ -z "${INSTALLING}" ] ; then
+		einfo ">>> Removing user for Orion"
+		userdel orion || die "Error removing Orion user"
+		einfo ">>> Removing group for Orion"
+		groupdel orion || die "Error removing Orion group"
+	else
+		einfo ">>> Orion user and group preserved"
+	fi
+}

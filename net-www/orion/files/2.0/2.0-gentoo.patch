@@ -1,6 +1,6 @@
-diff -u -r config/application.xml.orig config/application.xml
---- config/application.xml.orig	2002-11-28 11:14:48.000000000 -0500
-+++ config/application.xml	2002-11-28 18:36:20.000000000 -0500
+diff -ur config/application.xml config.new/application.xml
+--- config/application.xml	2002-03-14 07:52:08.000000000 -0500
++++ config.new/application.xml	2003-03-21 20:06:16.000000000 -0500
 @@ -4,16 +4,16 @@
  <!-- The global application config that is the parent of all the other
  	applications in this server. -->
@@ -22,21 +22,22 @@ diff -u -r config/application.xml.orig config/application.xml
  	</log>
  
  	<data-sources path="data-sources.xml" />
-diff -u -r config/data-sources.xml.orig config/data-sources.xml
---- config/data-sources.xml.orig	2002-11-28 11:14:48.000000000 -0500
-+++ config/data-sources.xml	2002-11-28 18:36:36.000000000 -0500
+diff -ur config/data-sources.xml config.new/data-sources.xml
+--- config/data-sources.xml	2003-02-25 17:31:38.000000000 -0500
++++ config.new/data-sources.xml	2003-03-21 19:58:51.000000000 -0500
 @@ -19,7 +19,7 @@
- 		connection-driver="org.hsql.jdbcDriver"
+ 		connection-driver="org.hsqldb.jdbcDriver"
  		username="sa"
  		password=""
--		url="jdbc:HypersonicSQL:./database/defaultdb"
-+		url="jdbc:HypersonicSQL:/opt/orion/database/defaultdb"
+-		url="jdbc:hsqldb:./database/defaultdb"
++		url="jdbc:hsqldb:/opt/orion/database/defaultdb"
  		inactivity-timeout="30"
  	/>
  </data-sources>
-diff -u -r config/default-web-site.xml.orig config/default-web-site.xml
---- config/default-web-site.xml.orig	2002-11-28 18:41:30.000000000 -0500
-+++ config/default-web-site.xml	2002-11-28 18:37:20.000000000 -0500
+Only in config: database-schemas
+diff -ur config/default-web-site.xml config.new/default-web-site.xml
+--- config/default-web-site.xml	2002-03-14 07:52:10.000000000 -0500
++++ config.new/default-web-site.xml	2003-03-21 19:59:35.000000000 -0500
 @@ -1,12 +1,12 @@
  <?xml version="1.0"?>
  <!DOCTYPE web-site PUBLIC "Orion Web-site" "http://www.orionserver.com/dtds/web-site.dtd">
@@ -52,9 +53,9 @@ diff -u -r config/default-web-site.xml.orig config/default-web-site.xml
 -	<access-log path="../log/default-web-access.log" />
 +	<access-log path="/var/log/orion/default-web-access.log" />
  </web-site>
-diff -u -r config/global-web-application.xml.orig config/global-web-application.xml
---- config/global-web-application.xml.orig	2002-11-28 11:14:48.000000000 -0500
-+++ config/global-web-application.xml	2002-11-28 18:38:20.000000000 -0500
+diff -ur config/global-web-application.xml config.new/global-web-application.xml
+--- config/global-web-application.xml	2003-03-17 21:04:44.000000000 -0500
++++ config.new/global-web-application.xml	2003-03-21 20:01:11.000000000 -0500
 @@ -5,13 +5,13 @@
  want to debug JSP sources etc -->
  
@@ -69,23 +70,23 @@ diff -u -r config/global-web-application.xml.orig config/global-web-application.
  	<!-- The mime-mappings for this server -->
 -	<mime-mappings path="./mime.types" />
 +	<mime-mappings path="/opt/orion/config/mime.types" />
- 	<servlet-chaining servlet-name="xsl" mime-type="text/xml" />
+ <!-- Enable the below entry for automatic XSLT processing of XML docs (docs without an XSLT tag will pass through untouched but access will be slower -->
+ <!--	<servlet-chaining servlet-name="xsl" mime-type="text/xml" /> -->
  
- 	<web-app>
-diff -u -r config/jms.xml.orig config/jms.xml
---- config/jms.xml.orig	2002-11-28 11:14:48.000000000 -0500
-+++ config/jms.xml	2002-11-28 18:38:35.000000000 -0500
+diff -ur config/jms.xml config.new/jms.xml
+--- config/jms.xml	2002-03-14 07:52:12.000000000 -0500
++++ config.new/jms.xml	2003-03-21 20:01:27.000000000 -0500
 @@ -16,6 +16,6 @@
  
  	<!-- path to the log-file where JMS-events/errors are stored -->
  	<log>
 -		<file path="../log/jms.log" />
-+		<file path="/var/log/orion/jms.log" />
++		<file path="/opt/orion/log/jms.log" />
  	</log>
  </jms-server>
-diff -u -r config/rmi.xml.orig config/rmi.xml
---- config/rmi.xml.orig	2002-11-28 11:14:48.000000000 -0500
-+++ config/rmi.xml	2002-11-28 18:38:58.000000000 -0500
+diff -ur config/rmi.xml config.new/rmi.xml
+--- config/rmi.xml	2002-03-14 07:52:12.000000000 -0500
++++ config.new/rmi.xml	2003-03-21 20:04:36.000000000 -0500
 @@ -7,6 +7,6 @@
  
  	<!-- path to the log-file where RMI-events/errors are stored -->
@@ -94,9 +95,9 @@ diff -u -r config/rmi.xml.orig config/rmi.xml
 +		<file path="/var/log/orion/rmi.log" />
  	</log>
  </rmi-server>
-diff -u -r config/server.xml.orig config/server.xml
---- config/server.xml.orig	2002-11-28 11:14:48.000000000 -0500
-+++ config/server.xml	2002-11-28 18:40:46.000000000 -0500
+diff -ur config/server.xml config.new/server.xml
+--- config/server.xml	2002-03-14 07:52:14.000000000 -0500
++++ config.new/server.xml	2003-03-21 20:05:52.000000000 -0500
 @@ -2,20 +2,20 @@
  <!DOCTYPE application-server PUBLIC "Orion Application Server Config" "http://www.orionserver.com/dtds/application-server.dtd">
  
