@@ -129,7 +129,6 @@
 *>=sys-libs/pam-0.75-r10
 *sys-libs/pwdb      
 *sys-libs/readline  
-*sys-libs/slang
 *sys-libs/zlib
 *net-misc/openssh
 *virtual/dev-manager
