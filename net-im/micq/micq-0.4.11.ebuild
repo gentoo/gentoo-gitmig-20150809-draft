@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/micq/micq-0.4.11.ebuild,v 1.2 2004/02/29 18:26:54 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/micq/micq-0.4.11.ebuild,v 1.3 2004/03/27 16:20:36 usata Exp $
 
 IUSE="tcltk ssl"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.micq.org/"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="~x86 ~alpha ~sparc"
+KEYWORDS="x86 alpha ~sparc"
 DEPEND="virtual/glibc
 	ssl? ( >=net-libs/gnutls-0.8.10
 		dev-libs/openssl )"
