@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/riece
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/riece/ChangeLog,v 1.27 2004/07/19 12:16:30 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/riece/ChangeLog,v 1.28 2004/08/06 22:34:37 malc Exp $
+
+  06 Aug 2004; Malcolm Lashley <malc@gentoo.org> riece-1.0.1.ebuild:
+  ~amd64 - closes bug #58407
 
   19 Jul 2004; Mamoru KOMACHI <usata@gentoo.org> riece-1.0.1.ebuild:
   Added to macos
