@@ -1,4 +1,6 @@
 MD5 ee0e668877533b2857fd278a0454a4ee ChangeLog 564
 MD5 63bc16ea0856f0786fa351d13e8ccde4 Term-ANSIScreen-1.40.ebuild 529
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 63bc16ea0856f0786fa351d13e8ccde4 Term-ANSIScreen-1.42.ebuild 529
 MD5 ef04bfd463bd68c90e7df7a9efb0c212 files/digest-Term-ANSIScreen-1.40 70
+MD5 93c8610c89c766b8f6c22afd3e3f7df4 files/digest-Term-ANSIScreen-1.42 71

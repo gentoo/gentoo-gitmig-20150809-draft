@@ -1,4 +1,7 @@
 MD5 f2b940f5eff37e2706f4d0f57fac0de6 ChangeLog 649
 MD5 bb9d7a3493715f911ef1e3743a514df0 Test-Pod-1.08.ebuild 613
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 bb9d7a3493715f911ef1e3743a514df0 Test-Pod-1.16.ebuild 613
+MD5 429ee9b5c7646bf87c9f513063f89d91 .Test-Pod-1.16.ebuild.swp 4096
 MD5 ceeef07981b290a6fd1d79264b6680d9 files/digest-Test-Pod-1.08 63
+MD5 3bb95cb8a17d7aec1e10b47a2a5e254e files/digest-Test-Pod-1.16 63
