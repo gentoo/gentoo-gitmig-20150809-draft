@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.3.3.ebuild,v 1.9 2004/01/26 12:04:53 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.3.3.ebuild,v 1.10 2004/01/27 19:10:52 liquidx Exp $
 
 inherit flag-o-matic python
 
@@ -43,7 +43,10 @@ PROVIDE="virtual/python"
 # add portage to DEPENDS otherwise it'll create a circular dependency
 # NOTE: we don't need this any more as sys-apps/portage-2.0.49-r18 is 
 #       already stable
-pkg_setup() {
+# NOTE2: OK, the reason this is _now_ disabled is because Gentoo 1.4
+#        stage2 should upgrade fine to 2.3.3 even with the presence of
+#        an old portage
+pkg_setup_disabled() {
 	if ! has_version ">=sys-apps/portage-2.0.49-r16"; then
 		eerror "Dependency Failed! Requires >=sys-apps/portage-2.0.49-r16"
 		eerror "Please run: emerge portage"
