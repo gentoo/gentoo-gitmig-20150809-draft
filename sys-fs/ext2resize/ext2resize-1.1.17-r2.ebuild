@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ext2resize/ext2resize-1.1.17-r2.ebuild,v 1.2 2004/06/25 03:17:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ext2resize/ext2resize-1.1.17-r2.ebuild,v 1.3 2004/06/30 17:09:30 vapier Exp $
 
 inherit flag-o-matic eutils
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="x86 ppc sparc alpha arm amd64"
 IUSE="static"
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 
 src_unpack() {
 	unpack ${A}

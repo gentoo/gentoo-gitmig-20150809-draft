@@ -1,18 +1,19 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/linux-ntfs/linux-ntfs-1.6.0.ebuild,v 1.4 2004/06/24 22:51:57 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/linux-ntfs/linux-ntfs-1.6.0.ebuild,v 1.5 2004/06/30 17:11:18 vapier Exp $
 
 inherit eutils
 
-DESCRIPTION="Old userland utilities for NTFS filesystems.  Better to use
-ntfsprogs instead"
+DESCRIPTION="Old userland utilities for NTFS filesystems (you should use ntfsprogs instead)"
 HOMEPAGE="http://linux-ntfs.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${PN}-${PV}.tar.gz"
 
-DEPEND=">=sys-devel/gcc-2.95"
-SLOT="0"
 LICENSE="GPL-2"
+SLOT="0"
 KEYWORDS="x86 amd64"
+IUSE=""
+
+DEPEND=">=sys-devel/gcc-2.95"
 
 src_unpack() {
 	unpack ${A}

@@ -1,26 +1,25 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/e2fsprogs-1.33.ebuild,v 1.7 2004/06/24 22:50:41 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/e2fsprogs-1.33.ebuild,v 1.8 2004/06/30 17:08:25 vapier Exp $
 
 inherit eutils
-
-IUSE="nls static"
 
 DESCRIPTION="Standard EXT2 and EXT3 filesystem utilities"
 HOMEPAGE="http://e2fsprogs.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
-SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 amd64 hppa ppc"
+SLOT="0"
+KEYWORDS="x86 ppc hppa amd64"
+IUSE="nls static"
 
 #debianutils is for 'readlink'
 DEPEND="${DEPEND}
-	virtual/glibc
+	virtual/libc
 	nls? ( sys-devel/gettext )
 	sys-apps/debianutils
 	sys-apps/texinfo"
-RDEPEND="virtual/glibc"
+RDEPEND="virtual/libc"
 
 src_unpack() {
 	unpack ${A}
@@ -40,7 +39,7 @@ src_compile() {
 		${myconf} || die
 
 	# Parallel make sometimes fails
-	MAKEOPTS="-j1" emake || die
+	emake -j1 || die
 }
 
 src_install() {

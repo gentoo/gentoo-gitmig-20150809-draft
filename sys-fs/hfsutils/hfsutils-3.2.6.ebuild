@@ -1,23 +1,22 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/hfsutils/hfsutils-3.2.6.ebuild,v 1.3 2004/06/24 22:51:25 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/hfsutils/hfsutils-3.2.6.ebuild,v 1.4 2004/06/30 17:10:12 vapier Exp $
 
 DESCRIPTION="HFS FS Access utils"
-SRC_URI="ftp://ftp.mars.org/pub/hfs/${P}.tar.gz"
 HOMEPAGE="http://www.mars.org/home/rob/proj/hfs/"
+SRC_URI="ftp://ftp.mars.org/pub/hfs/${P}.tar.gz"
 
-KEYWORDS="ppc ~x86"
-SLOT="0"
 LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="~x86 ppc"
+IUSE=""
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 RDEPEND=""
-
-MAKEOPTS='PREFIX=/usr MANDIR=/usr/share/man'
 
 src_compile() {
 	econf || die
-	emake || die
+	emake PREFIX=/usr MANDIR=/usr/share/man || die
 }
 
 src_install() {

@@ -1,23 +1,22 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/devfsd/devfsd-1.3.25-r7.ebuild,v 1.4 2004/06/24 22:50:19 agriffis Exp $
-
-IUSE=""
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/devfsd/devfsd-1.3.25-r7.ebuild,v 1.5 2004/06/30 17:07:34 vapier Exp $
 
 inherit eutils flag-o-matic
 
-S="${WORKDIR}/${PN}"
 DESCRIPTION="Daemon for the Linux Device Filesystem"
 HOMEPAGE="http://www.atnf.csiro.au/~rgooch/linux/"
 SRC_URI="ftp://ftp.atnf.csiro.au/pub/people/rgooch/linux/daemons/devfsd/devfsd-v${PV}.tar.gz"
 
-SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~amd64 ~ppc ~sparc ~alpha ~mips ~hppa ia64"
+SLOT="0"
+KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha ~hppa ~amd64 ia64"
+IUSE=""
 
-DEPEND="virtual/glibc"
-
+DEPEND="virtual/libc"
 PROVIDE="virtual/dev-manager"
+
+S="${WORKDIR}/${PN}"
 
 src_unpack() {
 	unpack ${A}
@@ -25,6 +24,7 @@ src_unpack() {
 	cd ${S}
 	epatch ${FILESDIR}/${P}-kernel-2.5.patch.bz2
 
+	filter-flags -fPIC
 	sed -e "s:-O2:${CFLAGS}:g" \
 		-e 's:/usr/man:/usr/share/man:' \
 		-e '32,34d;11,16d' -e '6c\' \
@@ -33,9 +33,6 @@ src_unpack() {
 }
 
 src_compile() {
-
-	filter-flags -fPIC
-
 	make || die
 }
 
@@ -46,5 +43,5 @@ src_install() {
 	#config file is handled in baselayout
 	rm -f ${D}/etc/devfsd.conf
 
-	dodoc devfsd.conf COPYING* INSTALL
+	dodoc devfsd.conf INSTALL
 }

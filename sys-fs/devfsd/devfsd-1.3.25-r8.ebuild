@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/devfsd/devfsd-1.3.25-r8.ebuild,v 1.5 2004/06/30 13:20:47 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/devfsd/devfsd-1.3.25-r8.ebuild,v 1.6 2004/06/30 17:07:34 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -10,9 +10,10 @@ SRC_URI="ftp://ftp.atnf.csiro.au/pub/people/rgooch/linux/daemons/devfsd/devfsd-v
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc alpha ~mips hppa ~amd64 ia64 ppc64 s390"
+KEYWORDS="~x86 ~ppc ~sparc ~mips alpha hppa ~amd64 ia64 ppc64 s390"
 IUSE="uclibc"
-DEPEND="virtual/glibc"
+
+DEPEND="virtual/libc"
 PROVIDE="virtual/dev-manager"
 
 S=${WORKDIR}/${PN}

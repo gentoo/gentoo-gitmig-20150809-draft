@@ -1,21 +1,22 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lufs/lufs-0.9.7-r1.ebuild,v 1.6 2004/06/24 22:52:08 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lufs/lufs-0.9.7-r1.ebuild,v 1.7 2004/06/30 17:11:45 vapier Exp $
 
 inherit kmod eutils
 
-S="${WORKDIR}/${P}"
-DESCRIPTION="User-mode filesystem implementation"
-SRC_URI="mirror://sourceforge/lufs/${P}.tar.gz"
 KMOD_SOURCES="${P}.tar.gz"
+DESCRIPTION="User-mode filesystem implementation"
 HOMEPAGE="http://lufs.sourceforge.net/lufs/"
+SRC_URI="mirror://sourceforge/lufs/${P}.tar.gz"
+
 LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="~x86 ~amd64"
+IUSE="lufsusermount"
+
 DEPEND="virtual/linux-sources
 	sys-kernel/config-kernel"
 RDEPEND=""
-KEYWORDS="~x86 ~amd64"
-SLOT="0"
-IUSE="lufsusermount"
 
 src_unpack() {
 	kmod_src_unpack

@@ -1,22 +1,20 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/evms-2.3.2-r1.ebuild,v 1.4 2004/06/28 01:53:12 agriffis Exp $
-
-IUSE="ncurses gtk"
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/evms-2.3.2-r1.ebuild,v 1.5 2004/06/30 17:09:09 vapier Exp $
 
 inherit eutils
 
 DESCRIPTION="Utilities for the IBM Enterprise Volume Management System"
-SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
-RESTRICT="nomirror"
 HOMEPAGE="http://www.sourceforge.net/projects/evms"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
-SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 amd64 -ppc -sparc -alpha -hppa -mips"
+SLOT="0"
+KEYWORDS="x86 amd64"
+IUSE="ncurses gtk"
 
 #EVMS uses libuuid from e2fsprogs
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	sys-fs/e2fsprogs
 	gtk? ( =x11-libs/gtk+-1* )
 	ncurses? ( sys-libs/ncurses )"

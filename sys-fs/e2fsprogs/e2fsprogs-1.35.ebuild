@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/e2fsprogs-1.35.ebuild,v 1.11 2004/06/30 13:23:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/e2fsprogs-1.35.ebuild,v 1.12 2004/06/30 17:08:26 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -10,13 +10,13 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc sparc mips arm ~hppa amd64 -ia64 ~ppc64 s390 alpha"
+KEYWORDS="x86 ~ppc sparc mips alpha arm ~hppa amd64 -ia64 ~ppc64 s390"
 IUSE="nls static"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	nls? ( sys-devel/gettext )
 	sys-apps/texinfo"
-RDEPEND="virtual/glibc"
+RDEPEND="virtual/libc"
 
 src_unpack() {
 	unpack ${A}
