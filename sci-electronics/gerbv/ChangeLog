@@ -1,0 +1,32 @@
+# ChangeLog for app-sci/gerbv
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gerbv/ChangeLog,v 1.1 2004/12/27 19:18:02 ribosome Exp $
+
+*gerbv-0.16 (27 Dec 2004)
+
+  27 Dec 2004; Olivier Fisette <ribosome@gentoo.org> +metadata.xml,
+  +gerbv-0.15.ebuild, +gerbv-0.16.ebuild:
+  Moved from app-sci/gerbv to sci-electronics/gerbv.
+
+  23 Oct 2004; <plasmaroo@gentoo.org> gerbv-0.15.ebuild:
+  Added "media-libs/gdk-pixbuf" dependency; bug #67304.
+
+*gerbv-0.16 (24 Jun 2004)
+
+  24 Jun 2004; <plasmaroo@gentoo.org> +gerbv-0.16.ebuild:
+  Version bump.
+
+  05 Jun 2004; David Holm <dholm@gentoo.org> gerbv-0.15.ebuild:
+  Added to ~ppc.
+
+  19 Apr 2004; Patrick Kursawe <phosphan@gentoo.org> gerbv-0.15.ebuild:
+  Removed S, added IUSE
+
+  30 Mar 2004; Donnie Berkholz <spyderous@gentoo.org>; gerbv-0.15.ebuild:
+  Change x11-base/xfree dependency to virtual/x11.
+
+*gerbv-0.15 (27 Nov 2003)
+
+  27 Nov 2003; <plasmaroo@gentoo.org> gerbv-0.15.ebuild:
+  Initial import.
+
