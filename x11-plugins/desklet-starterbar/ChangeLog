@@ -1,6 +1,12 @@
 # ChangeLog for x11-plugins/desklet-starterbar
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-starterbar/ChangeLog,v 1.9 2004/06/24 22:50:59 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-starterbar/ChangeLog,v 1.10 2004/07/15 08:01:14 obz Exp $
+
+*desklet-starterbar-0.30 (15 Jul 2004)
+
+  15 Jul 2004; Mike Gardiner <obz@gentoo.org> +desklet-starterbar-0.30.ebuild:
+  New version. Removed alpha and sparc keywords, as the dependency pyxdg isn't
+  available for those archs yet
 
   12 Apr 2004; Daniel Ahlberg <aliz@gentoo.org>
   desklet-starterbar-0.22.1.ebuild:
