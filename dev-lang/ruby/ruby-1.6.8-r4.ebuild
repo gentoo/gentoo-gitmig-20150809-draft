@@ -1,19 +1,22 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.6.8-r3.ebuild,v 1.3 2003/12/10 23:03:05 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.6.8-r4.ebuild,v 1.1 2003/12/10 23:03:05 usata Exp $
 
-IUSE="ruby16"
+IUSE="ruby16 cjk"
+
+ONIGURUMA="onigd20031112"
 
 inherit flag-o-matic alternatives eutils
 filter-flags -fomit-frame-pointer
 
 DESCRIPTION="An object-oriented scripting language"
 HOMEPAGE="http://www.ruby-lang.org/"
-SRC_URI="mirror://ruby/${PV%.*}/${P/_pre/-preview}.tar.gz"
+SRC_URI="mirror://ruby/${PV%.*}/${P/_pre/-preview}.tar.gz
+	cjk? ( ftp://ftp.ruby-lang.org/pub/ruby/contrib/${ONIGURUMA}.tar.gz )"
 
 LICENSE="Ruby"
 SLOT="1.6"
-KEYWORDS="x86 alpha ppc sparc hppa amd64 -ia64"
+KEYWORDS="~x86 ~alpha ~ppc ~sparc ~hppa ~amd64 -ia64"
 
 DEPEND=">=sys-libs/glibc-2.1.3
 	>=sys-libs/gdbm-1.8.0
@@ -31,6 +34,14 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
+	if [ -n "`use cjk`" ] ; then
+		pushd oniguruma
+		econf --with-rubydir=${S}
+		make 16
+		cd ${S}/lib
+		epatch ${FILESDIR}/${P}-oniguruma-gentoo.diff
+		popd
+	fi
 	cd ${S}
 	use amd64 && epatch ${FILESDIR}/${P}-fix-x86_64.patch
 }
