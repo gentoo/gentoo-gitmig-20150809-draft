@@ -1,6 +1,12 @@
 # ChangeLog for sys-devel/distcc
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.79 2003/10/23 18:45:41 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.80 2003/10/23 20:17:21 lisa Exp $
+
+*distcc-2.11.2 (23 Oct 2003)
+
+  23 Oct 2003; Lisa Seelye <lisa@gentoo.org> distcc-2.11.1.ebuild,
+  distcc-2.11.2.ebuild:
+  Version bump, using the new distcc-config
 
   23 Oct 2003; Jason Wever <weeve@gentoo.org> distcc-2.10-r3.ebuild:
   Marked stable on sparc.
@@ -28,6 +34,9 @@
   -m Fix bug 29511.  Seems as if the depends were silently changed.
 
 *distcc-2.11 (23 Sep 2003)
+
+  23 Oct 2003; Lisa Seelye <lisa@gentoo.org> distcc-2.11.1.ebuild:
+  Move 2.11.1 to stable on a few arches, going to move the rest ASAP.
 
   23 Sep 2003; Lisa Seelye <lisa@gentoo.org> distcc-2.11.ebuild,
   files/2.11/conf, files/2.11/distcc-config, files/2.11/init:
