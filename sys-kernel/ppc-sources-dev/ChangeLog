@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/ppc-sources-dev
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-sources-dev/ChangeLog,v 1.8 2003/06/12 22:15:02 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-sources-dev/ChangeLog,v 1.9 2003/09/01 13:12:28 dholm Exp $
+
+*ppc-sources-dev-2.4.21 (01 Sep 2003)
+
+  01 Sep 2003; David Holm <dholm@gentoo.org> ppc-sources-dev-2.4.21.ebuild:
+  Added ppc-sources-dev-2.4.21. It contains a bucketload of patches including
+  the required patches for Pegasos. Please report bugs to bugzilla #27703.
 
 *ppc-sources-dev-2.4.20 (12 Jun 2003)
 
