@@ -1,11 +1,13 @@
 # ChangeLog for sys-apps/iproute
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute/ChangeLog,v 1.6 2002/08/30 11:18:30 cybersystem Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute/ChangeLog,v 1.7 2002/10/04 23:39:58 jmorgan Exp $
 
 *iproute-20010824-r1 (30 Aug 2002)
 
-  30 Aug 2002; Sascha Schwabbauer <cybersystem@gentoo.org> :
+  05 Oct 2002; Jack Morgan <jmorgan@gentoo.org> :
+  Added sparc/sparc64 to keywords.
 
+  30 Aug 2002; Sascha Schwabbauer <cybersystem@gentoo.org> :
   Added ppc to keywords.
 
 *iproute-20010824-r1 (04 Aug 2002)
