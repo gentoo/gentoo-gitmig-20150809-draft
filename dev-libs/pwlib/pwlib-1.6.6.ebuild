@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/pwlib-1.6.6.ebuild,v 1.4 2004/06/24 23:32:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/pwlib-1.6.6.ebuild,v 1.5 2004/08/13 22:24:10 kugelfang Exp $
 
 IUSE="ssl sdl ieee1394 alsa esd"
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/openh323/${MY_P}-src.tar.gz"
 
 LICENSE="MPL-1.1"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ~ppc ~amd64"
 
 DEPEND=">=sys-devel/bison-1.28
 	>=sys-devel/flex-2.5.4a
