@@ -1,8 +1,7 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/x2vnc/x2vnc-1.5.1-r1.ebuild,v 1.4 2004/01/05 13:01:55 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/x2vnc/x2vnc-1.5.1-r1.ebuild,v 1.5 2004/04/11 17:28:38 pyrania Exp $
 
-S=${WORKDIR}/${P}
 DESCRIPTION="Control a remote computer running VNC from X"
 SRC_URI="http://www.hubbe.net/~hubbe/${P}.tar.gz"
 HOMEPAGE="http://www.hubbe.net/~hubbe/x2vnc.html"

@@ -1,5 +1,5 @@
-MD5 8747120d44dfd9615dac4bf15ff14970 xcalendar-4.0.ebuild 1004
-MD5 9ace1d8ef42e55e2dcad58ecd3be68ad ChangeLog 999
+MD5 a607cb56e9290c22322a3154f745c061 xcalendar-4.0.ebuild 991
+MD5 a1c9e31dd092b37780ae697770d740f6 ChangeLog 1084
 MD5 cdb11033a3fa6525334cecf938961c07 metadata.xml 166
 MD5 b0dec6ead29d9994bcc47ad702aa16f8 files/xcalendar-4.0-motif-gentoo.diff 1104
 MD5 2ee59797b69df684e9303f8d171c0f86 files/digest-xcalendar-4.0 69
