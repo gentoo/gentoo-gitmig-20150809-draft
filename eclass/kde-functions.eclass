@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.42 2002/11/12 19:52:44 hannes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.43 2002/11/19 12:16:46 danarmak Exp $
 # This contains everything except things that modify ebuild variables and functions (e.g. $P, src_compile() etc.)
 
 ECLASS=kde-functions
@@ -99,22 +99,17 @@ set-kdedir() {
 			need-autoconf 2.1
 			need-automake 1.4
 			;;
-		3.0*)
-			if [ -n "$KDEBASE" ]; then
-				# used by 3.0.x kdebase stuff, not by 3rd party apps
-				need-autoconf 2.1
-			else
-				need-autoconf 2.5
-			fi
-			need-automake 1.4
+		3.1*)	# actually, newer 3.0.x stuff uses this too, but i want to make a clean switch
+			need-automake 1.6
+			need-autoconf 2.5
 			;;
-		3*)	
+		3*)	# a generic call for need-kde 3 - automake 1.4 works most often
 			need-autoconf 2.5
 			need-automake 1.4
 			;;
 		5*)
 			need-autoconf 2.5
-			need-automake 1.4
+			need-automake 1.6
 			;;
 	esac
 	
@@ -200,8 +195,6 @@ set-kdedir() {
 
 	# check that we've set everything
 	[ -z "$PREFIX" ] && debug-print "$FUNCNAME: ERROR: could not set install prefix"
-	# it used to be like this. any idea why???
-	#[ "${INHERITED//kde-dist}" != "${INHERITED}" -a -z "$KDEDIR" ] && die "$ECLASS: Error: couldn't set kdelibs location, consult log"
 	[ -z "$KDEDIR" ] && debug-print "$FUNCNAME: ERROR: couldn't set kdelibs location"
 
 	debug-print "$FUNCNAME: Will use the kdelibs installed in $KDEDIR, and install into $PREFIX."
@@ -254,9 +247,10 @@ qtver-from-kdever() {
 	case $1 in
 		2*)	ver=2.3.1;;
 		3.1_rc2)	ver=3.1_pre20021104;;
-		3.1*)	ver=3.1_pre20021024;;
+		3.1_*)	ver=3.1_pre20021024;; # kde 3.1 prereleases
+		3.1*)	ver=3.1;;
 		3*)	ver=3.0.5;;
-		5)	ver=3.1_pre20021024;; # cvs version
+		5)	ver=3.1;; # cvs version
 		*)	echo "!!! error: $FUNCNAME called with invalid parameter: \"$1\", please report bug" && exit 1;;
 	esac
 
@@ -264,7 +258,8 @@ qtver-from-kdever() {
 
 }
 
-# compat
+# compat - not used anymore, but old ebuilds that once used this fail if it's not present
+# when they are unmerged
 need-kdelibs() {
 	echo "WARNING: need-kdelibs() called, where need-kde() is correct.
 If this happens at the unmerging of an old ebuild, disregard; otherwise report."
