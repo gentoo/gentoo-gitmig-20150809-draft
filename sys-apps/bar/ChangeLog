@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/bar
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/bar/ChangeLog,v 1.6 2004/06/24 21:58:59 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/bar/ChangeLog,v 1.7 2004/06/30 14:29:36 agriffis Exp $
+
+  30 Jun 2004; Aron Griffis <agriffis@gentoo.org> bar-1.06.ebuild,
+  bar-1.07.ebuild, bar-1.08.ebuild:
+  sync IUSE (missing), add sed-4 dep
 
   02 Feb 2004; Heinrich Wendel <lanius@gentoo.org> bar-1.07.ebuild:
   mark 1.07 x86
