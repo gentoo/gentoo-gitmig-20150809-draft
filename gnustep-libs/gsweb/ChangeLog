@@ -1,6 +1,13 @@
 # ChangeLog for gnustep-libs/gsweb
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/gsweb/ChangeLog,v 1.2 2004/12/04 20:20:48 fafhrd Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/gsweb/ChangeLog,v 1.3 2005/01/10 16:24:19 fafhrd Exp $
+
+*gsweb-1.1.1_pre20050106 (10 Jan 2005)
+
+  10 Jan 2005; Armando Di Cianno <fafhrd@gentoo.org>
+  -gsweb-1.1.1_pre20041119.ebuild, +gsweb-1.1.1_pre20050106.ebuild:
+  cvs snapshot version bumps; cleaned out old cvs versioned ebuilds; fixed
+  date spec on ebuild headers as repoman was complaining
 
 *gsweb-1.1.1_pre20041203 (03 Dec 2004)
 

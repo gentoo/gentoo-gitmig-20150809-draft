@@ -1,6 +1,13 @@
 # ChangeLog for gnustep-libs/steptalk
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/steptalk/ChangeLog,v 1.4 2004/12/04 20:21:04 fafhrd Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/steptalk/ChangeLog,v 1.5 2005/01/10 16:26:02 fafhrd Exp $
+
+*steptalk-0.8.3_pre20050106 (10 Jan 2005)
+
+  10 Jan 2005; Armando Di Cianno <fafhrd@gentoo.org>
+  -steptalk-0.8.3_pre20040927.ebuild, +steptalk-0.8.3_pre20050106.ebuild:
+  cvs snapshot version bumps; cleaned out old cvs versioned ebuilds; fixed
+  date spec on ebuild headers as repoman was complaining
 
 *steptalk-0.8.3_pre20041203 (03 Dec 2004)
 

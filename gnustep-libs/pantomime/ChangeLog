@@ -1,6 +1,14 @@
 # ChangeLog for gnustep-libs/pantomime
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/pantomime/ChangeLog,v 1.10 2004/12/29 21:45:53 ciaranm Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/pantomime/ChangeLog,v 1.11 2005/01/10 16:23:31 fafhrd Exp $
+
+*pantomime-1.2.0_pre20050106 (10 Jan 2005)
+
+  10 Jan 2005; Armando Di Cianno <fafhrd@gentoo.org>
+  -pantomime-1.2.0_pre20041030.ebuild, -pantomime-1.2.0_pre20041108.ebuild,
+  +pantomime-1.2.0_pre20050106.ebuild:
+  cvs snapshot version bumps; cleaned out old cvs versioned ebuilds; fixed
+  date spec on ebuild headers as repoman was complaining
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance

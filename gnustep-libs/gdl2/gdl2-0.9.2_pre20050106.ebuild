@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/gdl2/gdl2-0.9.2_pre20041119.ebuild,v 1.1 2004/11/21 20:30:26 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/gdl2/gdl2-0.9.2_pre20050106.ebuild,v 1.1 2005/01/10 16:24:03 fafhrd Exp $
 
 ECVS_CVS_COMMAND="cvs -q"
 ECVS_SERVER="savannah.gnu.org:/cvsroot/gnustep"
@@ -23,8 +23,10 @@ SLOT="0"
 
 IUSE="${IUSE}"
 DEPEND="${GS_DEPEND}
+	!gnustep-apps/sope
 	dev-db/postgresql"
 RDEPEND="${GS_RDEPEND}
+	!gnustep-apps/sope
 	dev-db/postgresql"
 
 egnustep_install_domain "System"
