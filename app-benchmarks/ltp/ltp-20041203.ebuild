@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/ltp/ltp-20041203.ebuild,v 1.1 2004/12/04 05:02:55 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/ltp/ltp-20041203.ebuild,v 1.2 2005/01/01 12:05:01 eradicator Exp $
 
 inherit eutils
 

@@ -1,6 +1,6 @@
 # ChangeLog for app-benchmarks/iozone
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/iozone/ChangeLog,v 1.13 2004/11/25 11:03:40 dragonheart Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/iozone/ChangeLog,v 1.14 2005/01/01 12:04:20 eradicator Exp $
 
 *iozone-3.226 (25 Nov 2004)
 

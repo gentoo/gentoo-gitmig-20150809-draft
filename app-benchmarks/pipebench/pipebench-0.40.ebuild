@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/pipebench/pipebench-0.40.ebuild,v 1.5 2004/09/03 01:19:16 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/pipebench/pipebench-0.40.ebuild,v 1.6 2005/01/01 12:05:47 eradicator Exp $
 
 DESCRIPTION="Measures the speed of stdin/stdout communication"
 HOMEPAGE="http://www.habets.pp.se/synscan/programs.php?prog=pipebench"

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/stress/stress-0.18.1.ebuild,v 1.9 2004/12/16 10:53:02 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/stress/stress-0.18.1.ebuild,v 1.10 2005/01/01 12:06:13 eradicator Exp $
 
 MY_P=${PN}-${PV/_/}
 S="${WORKDIR}/${MY_P}"
