@@ -1,0 +1,88 @@
+--- drivers/common/unixdsp.c	2003-06-20 12:37:26.000000000 -0500
++++ drivers/common/unixdsp.c	2003-07-06 21:58:21.000000000 -0500
+@@ -36,6 +36,7 @@
+ 
+ static int format;
+ static int dspfd;
++static int fakestereo;
+ 
+ // fsize is in samples, not bytes(gets translated before ioctl())
+ int InitUNIXDSPSound(int *rate, int bits, int fsize, int nfrags, int dev)
+@@ -89,9 +90,20 @@
+ 
+  if(ioctl(dspfd,SNDCTL_DSP_SETFRAGMENT,&x)==-1)
+   printf("ERROR (continuing anyway)\n");
+- x=0;
++
++ // Set mono sound.
++ // Some sound cards can only do stereo, so simulate stereo for these cards.
++ x=1;
++ fakestereo=0;
+  printf("\n   Setting mono sound...");  
+- if(ioctl(dspfd,SNDCTL_DSP_STEREO,&x)==-1) goto __disperror;
++ if(ioctl(dspfd,SNDCTL_DSP_CHANNELS,&x)==-1) goto __disperror;
++ if(x == 2)
++ {
++  printf("\n   Couldn't set mono, faking stereo...\n");
++  fakestereo = 1;
++ }
++ else goto __disperror;
++ 
+  printf("\n   Setting playback rate of %d hz...",*rate);
+  if(ioctl(dspfd,SNDCTL_DSP_SPEED,rate)==-1) goto __disperror;
+  printf("Set to %d hz\n",*rate);
+@@ -107,9 +119,10 @@
+ }
+ 
+ static int16 MBuffer[2048];
++static int16 fakebuffer[4098];
+ void WriteUNIXDSPSound(int32 *Buffer, int Count, int noblocking)
+ {
+- int P,c;
++ int P,c,i;
+  int32 *src=Buffer;
+ 
+  if(format)
+@@ -127,13 +140,35 @@
+   c=Count<<1;
+  }
+ 
+-//  noblocking=!noblocking; // speed testing
+- if(noblocking)
++ // If a device can only support stereo, fake stereo by duplicating each item in the buffer.
++ if(fakestereo)
++ {
++  for (i=0; i <= c; i++ )
++  {
++   fakebuffer[2*i] = MBuffer[i];
++   fakebuffer[2*i+1] = MBuffer[i];
++  }
++  c = c * 2;
++  //  noblocking=!noblocking; // speed testing
++  if(noblocking)
++   {
++     struct audio_buf_info ai;
++     if(!ioctl(dspfd,SNDCTL_DSP_GETOSPACE,&ai))
++     if(ai.bytes<c)
++     return;
++   }
++  write(dspfd,(uint8 *)fakebuffer,c);
++ }
++ else
+  {
+-  struct audio_buf_info ai;
+-  if(!ioctl(dspfd,SNDCTL_DSP_GETOSPACE,&ai))
+-   if(ai.bytes<c)
+-    return;
++  // noblocking=!noblocking; // speed testing
++  if(noblocking)
++  {
++    struct audio_buf_info ai;
++    if(!ioctl(dspfd,SNDCTL_DSP_GETOSPACE,&ai))
++    if(ai.bytes<c)
++     return;
++  }
++   write(dspfd,(uint8 *)MBuffer,c);
+  }
+- write(dspfd,(uint8 *)MBuffer,c);
+ }

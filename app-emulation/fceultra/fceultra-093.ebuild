@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/fceultra/fceultra-096.ebuild,v 1.3 2003/07/19 00:03:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/fceultra/fceultra-093.ebuild,v 1.3 2003/07/19 00:04:09 vapier Exp $
 
 inherit games gcc
 
@@ -10,7 +10,7 @@ SRC_URI="http://fceultra.sourceforge.net/files/fceu${PV}src.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="-* ~x86"
+KEYWORDS="-* x86"
 IUSE="sdl svga"
 
 # Because of code generation bugs, FCEUltra now depends on a version
@@ -29,8 +29,6 @@ src_unpack() {
 	unpack ${A}
 
 	cd ${S}
-	epatch ${FILESDIR}/${PV}-stereo.patch
-	epatch ${FILESDIR}/${PV}-joystick.patch
 	sed -i \
 		-e "s:\${TFLAGS}:\${TFLAGS} ${CFLAGS}:" \
 		Makefile.base
