@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
 # /home/cvsroot/gentoo-x86/gnome-office/gnumeric/gnumeric-0.66.ebuild,v 1.1 2001/06/28 09:47:57 hallski Exp
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-0.75.ebuild,v 1.1 2001/11/05 22:34:48 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-0.75.ebuild,v 1.2 2001/11/10 03:03:57 hallski Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Gnumeric, the GNOME Spreadsheet"
@@ -70,6 +70,8 @@ src_compile() {
 	if [ "`use evo`" ]; then
 		myconf="${myconf} --with-evolution"
 	fi
+
+	CFLAGS="$CFLAGS `gdk-pixbuf-config --cflags`"
 
   	./configure --host=${CHOST}					\
 		    --prefix=/usr					\
