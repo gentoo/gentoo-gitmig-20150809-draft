@@ -1,6 +1,6 @@
 # ChangeLog for net-www/apache
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.46 2003/03/12 19:27:00 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.47 2003/03/15 21:36:52 tuxus Exp $
 
   25 Feb 2003; Donny Davies <woodchip@gentoo.org> apache.rc6, apache2.initd :
   Send USR1 signal only to parent in reload(); #16326.
@@ -28,6 +28,9 @@
   Fix #14561, #14589, #14724, #14818, #15592, #15806, #16158.
 
 *apache-2.0.44 (21 Jan 2003)
+
+  15 Mar 2003; Jan Seidel <tuxus@gentoo.org> :
+  Added ~mips to KEYWORDS
 
   18 Feb 2003;  <seemant@gentoo.org> apache-2.0.44.ebuild :
   added yacc as a DEPEND
