@@ -1,6 +1,11 @@
 # ChangeLog for app-vim/greputils
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/greputils/ChangeLog,v 1.4 2005/01/01 16:50:50 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/greputils/ChangeLog,v 1.5 2005/01/21 17:15:26 ciaranm Exp $
+
+*greputils-2.4 (21 Jan 2005)
+
+  21 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> +greputils-2.4.ebuild:
+  New version, bug #78708
 
   31 Oct 2004; Ciaran McCreesh <ciaranm@gentoo.org> greputils-2.3.ebuild:
   Stable on x86, sparc, mips
