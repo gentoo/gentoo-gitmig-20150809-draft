@@ -1,6 +1,11 @@
 # ChangeLog for net-dns/ddclient
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/ddclient/ChangeLog,v 1.14 2005/04/02 16:34:29 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/ddclient/ChangeLog,v 1.15 2005/04/04 13:44:05 seemant Exp $
+
+  04 Apr 2005; Seemant Kulleen <seemant@gentoo.org> ddclient-3.6.6.ebuild:
+  more fixes (this time from flameeyes) for running ddclient daemon as
+  non-root user. Fixes were in bug #76625, which was opened by: Giacomo
+  Graziosi <darkssj@email.it> for the version bump
 
   02 Apr 2005; Jason Wever <weeve@gentoo.org> ddclient-3.6.3.ebuild:
   Stable on SPARC wrt bug #76625.

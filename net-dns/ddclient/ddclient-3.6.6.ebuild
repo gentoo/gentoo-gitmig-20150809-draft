@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/ddclient/ddclient-3.6.6.ebuild,v 1.1 2005/04/01 22:20:38 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/ddclient/ddclient-3.6.6.ebuild,v 1.2 2005/04/04 13:44:05 seemant Exp $
 
 inherit eutils
 
@@ -16,29 +16,32 @@ IUSE=""
 RDEPEND="dev-lang/perl"
 
 pkg_setup() {
-	enewgroup ddclient 460
-	enewuser  ddclient 460 /bin/false /dev/null ddclient
+	enewgroup ddclient -1
+	enewuser  ddclient -1 /bin/false /dev/null ddclient
 }
 
 src_unpack() {
 	unpack ${A}; cd ${S}
 	epatch ${FILESDIR}/${PN}-mss1.diff
 	epatch ${FILESDIR}/${PN}-daemon0inconfig.diff
+
+	sed -i 's:/var/run/ddclient.pid:/var/run/ddclient/ddclient.pid:' \
+		sample-etc_ddclient.conf
 }
 
 src_install() {
 	dosbin ddclient || die "dosbin"
+	dodoc README* Change* COPYRIGHT
+	dodoc sample-etc_[c-p]*
+
+	newinitd ${FILESDIR}/ddclient.init ddclient
+	
 	insinto /etc/ddclient
-	doins sample-etc_[c-p]*
+	insopts -m 0640 -g ddclient -o root
 	newins sample-etc_ddclient.conf ddclient.conf
 
-	dodoc README* Change* COPYRIGHT
-
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/ddclient.init ddclient
-
-	chown root:ddclient ${D}/etc/ddclient/*
-	chmod 640 /etc/ddclient/*
+	diropts -m 0755 -g ddclient -o ddclient
+	keepdir /var/run/ddclient
 }
 
 pkg_postinst() {
@@ -56,7 +59,4 @@ pkg_postinst() {
 	einfo
 	ebeep
 	epause
-
-	chown root:ddclient ${ROOT}/etc/ddclient/*
-	chmod 640 ${ROOT}/etc/ddclient/*
 }
