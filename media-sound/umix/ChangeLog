@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/umix
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/umix/ChangeLog,v 1.10 2004/04/08 09:40:50 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/umix/ChangeLog,v 1.11 2004/05/31 06:49:09 eradicator Exp $
+
+  30 May 2004; Jeremy Huddleston <eradicator@gentoo.org> umix-1.0.2.ebuild:
+  Stable x86.
 
 *umix-1.0.2 (08 Apr 2004)
 

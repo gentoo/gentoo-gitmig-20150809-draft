@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/muse
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/muse/ChangeLog,v 1.8 2004/04/26 03:58:33 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/muse/ChangeLog,v 1.9 2004/05/31 06:45:02 eradicator Exp $
+
+  30 May 2004; Jeremy Huddleston <eradicator@gentoo.org> muse-0.9.ebuild:
+  Stable x86.
 
   25 Apr 2004; Aron Griffis <agriffis@gentoo.org> muse-0.7.2.ebuild:
   Add die following econf for bug 48950
