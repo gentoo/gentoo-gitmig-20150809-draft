@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/musepack-tools/musepack-tools-1.15r.ebuild,v 1.3 2004/06/15 05:05:57 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/musepack-tools/musepack-tools-1.15r.ebuild,v 1.4 2004/06/16 09:18:40 eradicator Exp $
 
 inherit eutils flag-o-matic
 
@@ -13,7 +13,7 @@ KEYWORDS="~x86 ~amd64"
 SLOT="0"
 LICENSE="GPL-2 LGPL-2.1"
 IUSE="static esd oss"
-SRC_URI="http://corecodec.org/download.php/196/mpcsv7-src-${PV}.tar.gz"
+SRC_URI="http://xmixahlx.dyndns.org/audio/files/linux/musepack/mpcsv7-src-${PV}.tar.gz"
 
 RDEPEND="media-sound/esound
 	 media-libs/id3lib"
