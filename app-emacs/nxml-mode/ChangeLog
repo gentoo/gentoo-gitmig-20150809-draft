@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/nxml-mode
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/nxml-mode/ChangeLog,v 1.6 2004/10/02 09:41:16 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/nxml-mode/ChangeLog,v 1.7 2004/10/06 07:19:49 usata Exp $
+
+  06 Oct 2004; Mamoru KOMACHI <usata@gentoo.org>
+  files/80nxml-mode-gentoo.el:
+  Added .xsd to auto-mode-alist; bug #65836.
 
 *nxml-mode-20040910 (02 Oct 2004)
 
