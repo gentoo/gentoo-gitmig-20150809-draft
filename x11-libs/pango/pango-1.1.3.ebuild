@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/pango-1.1.3.ebuild,v 1.9 2002/12/06 23:11:11 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/pango-1.1.3.ebuild,v 1.10 2002/12/15 02:14:03 agriffis Exp $
 
 IUSE="doc"
 
@@ -32,7 +32,7 @@ src_unpack() {
 	cd ${S}
 	# Some enhancements from Redhat
 	epatch ${FILESDIR}/pango-1.0.99.020606-xfonts.patch
-	epatch ${FILESDIR}/pango-1.1.0-slighthint.patch
+	#epatch ${FILESDIR}/pango-1.1.0-slighthint.patch
 }
 
 src_compile() {
