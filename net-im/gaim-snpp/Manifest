@@ -1,4 +1,6 @@
 MD5 162a8990fbfc70885c9628b5fe946181 gaim-snpp-0.1.0.ebuild 822
-MD5 347ec0408fe7f0fd67ee04171530fdf9 ChangeLog 578
+MD5 b355cc1ceda8a2389696cf47f181642c gaim-snpp-0.2.0.ebuild 823
+MD5 74b9bb05ae272bf675e592e53660ac9c ChangeLog 696
 MD5 a2cde0bdf1d687c8cfcafe500daa018e metadata.xml 473
 MD5 0423b8a50679000f27417e7cc10aca44 files/digest-gaim-snpp-0.1.0 67
+MD5 f85abb65316e62a53899464c18bb6445 files/digest-gaim-snpp-0.2.0 67
