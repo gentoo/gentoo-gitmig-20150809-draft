@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex2html/latex2html-2002.1.ebuild,v 1.4 2003/12/08 07:55:19 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex2html/latex2html-2002.2.1.ebuild,v 1.1 2003/12/08 07:55:19 usata Exp $
 
-MY_P=${P/./-}
+MY_P=${P//./-}
 S=${WORKDIR}/${MY_P}
 DESCRIPTION="LATEX2HTML is a convertor written in Perl that converts LATEX documents to HTML."
 SRC_URI="http://saftsack.fs.uni-bayreuth.de/~latex2ht/current/${MY_P}.tar.gz"
@@ -10,11 +10,10 @@ HOMEPAGE="http://www.latex2html.org/"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="x86 ppc sparc"
+KEYWORDS="~x86 ~alpha"
 IUSE="gif png"
 
-DEPEND="=sys-apps/sed-4*"
-RDEPEND="app-text/ghostscript
+DEPEND="app-text/ghostscript
 	virtual/tetex
 	media-libs/netpbm
 	dev-lang/perl
@@ -25,22 +24,19 @@ RDEPEND="app-text/ghostscript
 src_compile() {
 	local myconf
 
-	use gif && myconf="${myconf} --enable-gif"
-	use png && myconf="${myconf} --enable-png"
-
 	use gif || use png || myconf="${myconf} --disable-images"
 
-	myconf="${myconf} \
-		--libdir=/usr/lib/latex2html \
+	econf --libdir=/usr/lib/latex2html \
 		--shlibdir=/usr/lib/latex2html \
 		--enable-pk \
 		--enable-eps \
 		--enable-reverse \
 		--enable-pipes \
 		--enable-paths \
-		--enable-wrapper"
-
-	econf ${myconf}
+		--enable-wrapper \
+		`use_enable gif` \
+		`use_enable png` \
+		${myconf} || die "econf failed"
 	make || die
 	make check || die
 }
@@ -57,7 +53,8 @@ src_install() {
 		cfgcache.pm.bak > cfgcache.pm
 
 	make install || die
-	cp cfgcache.pm.bak ${D}/usr/lib/latex2html/cfgcache.pm
+	insinto /usr/lib/latex2html
+	newins cfgcache.pm.bak cfgcache.pm
 
 	dodoc BUGS Changes FAQ INSTALL LICENSE MANIFEST README TODO
 
@@ -65,10 +62,12 @@ src_install() {
 	keepdir /usr/share/latex2html
 
 	# clean the perl scripts up to remove references to the sandbox
-	sed -i "s:${T}::g" ${D}/usr/lib/latex2html/pstoimg.pl
-	sed -i "s:${T}::g" ${D}/usr/lib/latex2html/latex2html.pl
-	sed -i "s:${T}::g" ${D}/usr/lib/latex2html/cfgcache.pm
-	sed -i "s:${T}::g" ${D}/usr/lib/latex2html/l2hconf.pm
+	einfo "fixing sandbox references"
+	einfo ${T}
+	dosed "s:${T}:/tmp:g" /usr/lib/latex2html/pstoimg.pl
+	dosed "s:${S}::g" /usr/lib/latex2html/latex2html.pl
+	dosed "s:${T}:/tmp:g" /usr/lib/latex2html/cfgcache.pm
+	dosed "s:${T}:/tmp:g" /usr/lib/latex2html/l2hconf.pm
 }
 
 pkg_postinst() {
