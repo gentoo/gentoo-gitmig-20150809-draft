@@ -1,8 +1,11 @@
 # ChangeLog for dev-php/mod_php
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/ChangeLog,v 1.84 2003/06/21 10:45:27 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/ChangeLog,v 1.85 2003/06/24 22:27:18 robbat2 Exp $
 
 *mod_php-4.3.2-r2 (10 June 2003)
+
+  24 June 2003; Robin H. Johnson <robbat2@gentoo.org> mod_php-4.3.2-r2.ebuild:
+  Fix bug #23200
 
   21 June 2003; Robin H. Johnson <robbat2@gentoo.org> mod_php-4.3.2-r2.ebuild:
   Cleanup some of the magic, hopefully make it work better.
