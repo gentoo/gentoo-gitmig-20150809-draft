@@ -1,6 +1,10 @@
 # ChangeLog for app-cdr/disc-cover
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/disc-cover/ChangeLog,v 1.10 2004/02/25 13:43:25 bazik Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/disc-cover/ChangeLog,v 1.11 2004/04/26 05:16:40 dragonheart Exp $
+
+  26 Apr 2004; Daniel Black <dragonheart@gentoo.org> disc-cover-1.5.4.ebuild:
+  version bump thanks to Carlo <current@myrealbox.com> (bug #33087).
+  Restructured for GLEP 11 - Web Applications (as yet untested)
 
   25 Feb 2004; Sven Blumenstein <bazik@gentoo.org> disc-cover-1.5.2.ebuild:
   All your stable keywords are belong to sparc!
