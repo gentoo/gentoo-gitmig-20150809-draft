@@ -1,6 +1,12 @@
 # ChangeLog for dev-db/pgadmin3
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pgadmin3/ChangeLog,v 1.9 2005/01/01 17:40:05 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pgadmin3/ChangeLog,v 1.10 2005/03/25 20:15:44 nakano Exp $
+
+*pgadmin3-1.2.0 (25 Mar 2005)
+
+  25 Mar 2005; Masatomo Nakano <nakano@gentoo.org> +pgadmin3-1.2.0.ebuild:
+  Version bumped. But this version is masked due to dependency masked
+  wxGTK-2.5.*.
 
   29 Jun 2004; Aron Griffis <agriffis@gentoo.org> pgadmin3-1.0.2.ebuild:
   add sed-4 dep
