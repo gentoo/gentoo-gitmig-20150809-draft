@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/afterstep
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/afterstep/ChangeLog,v 1.25 2005/01/17 17:40:55 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/afterstep/ChangeLog,v 1.26 2005/01/21 00:54:14 ka0ttic Exp $
+
+*afterstep-2.00.02 (20 Jan 2005)
+
+  20 Jan 2005; Aaron Walker <ka0ttic@gentoo.org> +afterstep-2.00.02.ebuild:
+  Version bump.
 
 *afterstep-2.00.01 (17 Jan 2005)
 
