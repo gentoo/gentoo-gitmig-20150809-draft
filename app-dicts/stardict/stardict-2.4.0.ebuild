@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/stardict/stardict-2.4.0.ebuild,v 1.3 2004/04/22 22:47:31 khai Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/stardict/stardict-2.4.0.ebuild,v 1.4 2004/06/15 08:03:47 kloeri Exp $
 
 inherit gnome2
 
@@ -9,7 +9,6 @@ inherit gnome2
 #       seperate for now.
 
 IUSE=""
-S=${WORKDIR}/${P}
 DESCRIPTION="A GNOME2 international dictionary supporting fuzzy and glob style matching"
 HOMEPAGE="http://stardict.sourceforge.net/ http://cosoft.org.cn/projects/stardict/"
 SRC_URI="mirror://sourceforge/stardict/${P}.tar.bz2"
