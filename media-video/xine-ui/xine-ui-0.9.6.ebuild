@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/xine-ui-0.9.4-r1.ebuild,v 1.1 2001/11/18 14:06:56 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/xine-ui-0.9.6.ebuild,v 1.1 2001/12/07 19:49:27 azarah Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Xine is a free gpl-licensed video player for unix-like systems"
@@ -10,9 +10,10 @@ HOMEPAGE="http://xine.sourceforge.net/"
 
 DEPEND="virtual/glibc
 	media-libs/libpng
-	>=media-libs/xine-lib-0.9.4
-	X? ( virtual/x11 )
-	aalib? ( media-libs/aalib )"
+	media-libs/aalib
+	>=media-libs/xine-lib-${PV}
+	X? ( virtual/x11 )"
+#	aalib? ( media-libs/aalib )"
 
 
 src_unpack() {
@@ -28,7 +29,7 @@ src_compile() {
 	# Most of these are not working currently, but are here for completeness
 	local myconf
 	use X      || myconf="${myconf} --disable-x11 --disable-xv"
-	use aalib  || myconf="${myconf} --disable-aalib --disable-aalibtest"
+#	use aalib  || myconf="${myconf} --disable-aalib --disable-aalibtest"
   
 	./configure --host=${CHOST}					\
 		    --prefix=/usr					\
