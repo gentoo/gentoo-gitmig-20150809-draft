@@ -1,0 +1,10 @@
+# ChangeLog for gnustep-apps/preview
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/preview/ChangeLog,v 1.1 2004/10/13 01:29:27 fafhrd Exp $
+
+*preview-0.7 (12 Oct 2004)
+
+  12 Oct 2004; Armando Di Cianno <fafhrd@gentoo.org> +metadata.xml,
+  +preview-0.7.ebuild:
+  Orginal package import; keyworded for ~x86
+
