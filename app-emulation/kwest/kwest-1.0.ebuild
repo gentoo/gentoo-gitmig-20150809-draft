@@ -8,5 +8,5 @@ need-kde 3
 DESCRIPTION="An Inform interactive fiction interpreter for KDE"
 SRC_URI="http://users.pandora.be/peter.bienstman/kwest/${P}.tar.gz"
 HOMEPAGE="http://users.pandora.be/peter.bienstman/kwest/"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 LICENSE="GPL-2"
