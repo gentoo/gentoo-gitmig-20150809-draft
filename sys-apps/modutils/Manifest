@@ -1,4 +1,5 @@
 MD5 5d1cc1b27f8dc84eac472702a019417b ChangeLog 5752
+MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 27f1830cbfbfd53ff74f8df6f9336bf6 modutils-2.4.16-r2.ebuild 1482
 MD5 fcb8ee0f07eb7e0a9633bb793ecd17d6 modutils-2.4.16-r3.ebuild 1212
 MD5 2572f5b64a3e355104f273149d6f4ab5 modutils-2.4.19.ebuild 1130
@@ -7,8 +8,7 @@ MD5 ce0e6982cc253407860a7fe718e8f576 modutils-2.4.22.ebuild 1378
 MD5 f683cb65d54e458ec9a41dee415e2451 modutils-2.4.23.ebuild 1389
 MD5 897ae3bac0047b1b6af9144045d45788 modutils-2.4.24.ebuild 1329
 MD5 0e5977838074a3cc780d260b7a43b7fc modutils-2.4.25.ebuild 1333
-MD5 88cc66ce3c4b12b7b70a7923db0009ca modutils-2.4.26.ebuild 1372
-MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+MD5 662497254b643d362d204eebae8dffa9 modutils-2.4.26.ebuild 1374
 MD5 15611447c25c4be74563a4808c96aa9e files/alias.h.diff 255
 MD5 2a538675787b2c0d36e17a54b7205ada files/digest-modutils-2.4.16-r2 68
 MD5 2a538675787b2c0d36e17a54b7205ada files/digest-modutils-2.4.16-r3 68
