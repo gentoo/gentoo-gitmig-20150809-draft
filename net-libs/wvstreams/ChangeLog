@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/wvstreams
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/ChangeLog,v 1.32 2004/12/27 19:48:03 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/ChangeLog,v 1.33 2004/12/29 19:47:25 ciaranm Exp $
+
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   27 Dec 2004; Bryan Østergaard <kloeri@gentoo.org>
   wvstreams-4.0-r1.ebuild:
@@ -30,7 +33,7 @@
   wvstreams-4.0.ebuild:
   Add metadata.xml and correct dependencies.
 
-  20 Nov 2004; Bryan �stergaard,,, <kloeri@gentoo.org> wvstreams-4.0.ebuild:
+  20 Nov 2004; Bryan Østergaard,,, <kloeri@gentoo.org> wvstreams-4.0.ebuild:
   ~alpha keyword.
 
 *wvstreams-3.75-r1 (16 Nov 2004)
