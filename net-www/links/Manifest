@@ -1,14 +1,11 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 509238c91dbda943087c4b4c80a0b40c ChangeLog 9773
+MD5 5bfc29a3473c60f57730783320905e94 links-0.96-r2.ebuild 1191
 MD5 d61693f2015f36e89c7b134447dd56a4 links-2.1_pre11.ebuild 3344
 MD5 578ad33339b078fd579b6e78735ccded links-2.1_pre13.ebuild 3345
 MD5 30247b15d8b10318ed7e02f5f4b5e76c links-2.1_pre14.ebuild 3352
-MD5 f0f540b77dfbe19c11f30603fba27632 links-2.1_pre15.ebuild 3711
+MD5 130a7cca0eb0ace9590b7cef602a6d46 links-2.1_pre15.ebuild 3713
 MD5 07a5060c0243866428fffe28696027f6 links-2.1_pre9.ebuild 3158
-MD5 85368098662a0ada9ca81efcb01b4d5c ChangeLog 9678
 MD5 56d78ea6a5d49e31ea36cdc98b0b48ad metadata.xml 352
-MD5 5bfc29a3473c60f57730783320905e94 links-0.96-r2.ebuild 1191
 MD5 eceb1d1aff64bd73e335f5dad2a71f42 files/digest-links-0.96-r2 62
 MD5 71861032c7ce183e3427e4e205748323 files/digest-links-2.1_pre11 68
 MD5 046ddc5a1ffa8dbcb33de3941a26a854 files/digest-links-2.1_pre13 68
@@ -17,10 +14,3 @@ MD5 c41fc5981244d82657e4a2dac584b264 files/digest-links-2.1_pre15 68
 MD5 e8eedeca8d9b94ce7cc0e5f919500740 files/digest-links-2.1_pre9 67
 MD5 52bed2c64a669feed86577cb52f8cbb5 files/links-0.96-r2-gentoo.patch 1400
 MD5 de31f407e5d2303f42c527efdc8712de files/links-2.1pre15-utf8.diff.bz2 4093
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (Darwin)
-
-iD8DBQFBX9HTVWNWqTUmv+0RAvIGAJ9vrqLETZueTDe90ZD5VJal1TbuHgCePzul
-/R9myqCBbOT/2uTBYRYLbjI=
-=Iikm
------END PGP SIGNATURE-----
