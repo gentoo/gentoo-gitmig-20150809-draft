@@ -1,24 +1,14 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 4d0e47ff4fd8686df3589a2158949564 ChangeLog 6815
+MD5 8fe8dd908667c19b1d8a9a57e5716cdd ChangeLog 6905
+MD5 9e405b23fd786d03dc7bb10f0da6321f gpgme-0.3.14-r1.ebuild 2396
 MD5 de8949bc858c0729e2e8df0ea8a91f34 gpgme-0.3.14.ebuild 1021
 MD5 44dcb84da565f66966fc2967567c41f8 gpgme-0.3.16.ebuild 832
 MD5 c60aa07c58226f4a164ab89cff2616a1 gpgme-0.4.0.ebuild 1564
 MD5 8954a02f766eaee7c9dc015c96d1bd12 gpgme-0.4.7.ebuild 1552
+MD5 73e4c27f16864460a3fde4b9a484e392 gpgme-0.9.0-r1.ebuild 1263
 MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
-MD5 9e405b23fd786d03dc7bb10f0da6321f gpgme-0.3.14-r1.ebuild 2396
-MD5 a1d61ffabe68944481a2b55d71a1f5e5 gpgme-0.9.0-r1.ebuild 1263
 MD5 438d865640f00b860f2c3f88b21e621e files/digest-gpgme-0.3.14 64
+MD5 438d865640f00b860f2c3f88b21e621e files/digest-gpgme-0.3.14-r1 64
 MD5 f8d60472ee71707fd01798c5677b15ae files/digest-gpgme-0.3.16 64
 MD5 1e195068762b5aafd2f260d76b108a70 files/digest-gpgme-0.4.0 63
 MD5 f61d73bc505b5a542662b75aa0fa219f files/digest-gpgme-0.4.7 63
-MD5 438d865640f00b860f2c3f88b21e621e files/digest-gpgme-0.3.14-r1 64
 MD5 260bf91983886d989efa3e54792c921d files/digest-gpgme-0.9.0-r1 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
-
-iD8DBQFBIJ6AmdTrptrqvGERAo+WAJ9TcsDclhv3Oxz6Mqlq8ClQ0uhKUQCcD0EQ
-77CONq6jXirBunUIqD4KuBE=
-=rS/e
------END PGP SIGNATURE-----
