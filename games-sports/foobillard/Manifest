@@ -1,9 +1,15 @@
-MD5 bc7c41c841840fa7229f58ab6506f99c foobillard-2.9.ebuild 1171
-MD5 207c8c2a548589591ff0c32564ce5399 foobillard-2.8.ebuild 1118
-MD5 6587eed72952c290be58ce861fd4b799 foobillard-3.0a.ebuild 1221
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 bc8b22fed3e37c1cd4597e480d87069b ChangeLog 2200
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 4827c3043c229b4ec77086d4554e7a7a files/digest-foobillard-2.9 67
-MD5 7e9ec0cee63a42f327ed7d5de7127028 files/digest-foobillard-2.8 67
-MD5 8eaf137a771395b81cfdbe6796fc612c files/foobillard-3.0a-no_nvidia.patch 770
+MD5 3add3889f7af472f0e374e626533974d foobillard-3.0a.ebuild 1336
 MD5 11223d31662deec372e491cf27384d31 files/digest-foobillard-3.0a 68
+MD5 8eaf137a771395b81cfdbe6796fc612c files/foobillard-3.0a-no_nvidia.patch 770
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFB21V7roRuSHgZdywRAsX+AJ4vckrK7cosd95faiI+J067dQkYCgCgj1pd
+bjwyU9Z1l7avMQesjoLXP00=
+=6FhW
+-----END PGP SIGNATURE-----
