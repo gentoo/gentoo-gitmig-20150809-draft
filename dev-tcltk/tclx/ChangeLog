@@ -1,11 +1,16 @@
 # ChangeLog for dev-tcltk/tclx
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclx/ChangeLog,v 1.5 2003/03/31 18:18:43 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclx/ChangeLog,v 1.6 2003/04/23 17:23:35 utx Exp $
+
+*tclx-8.3-r1 (23 Apr 2003)
+
+  23 Apr 2003; Stanislav Brabec <utx@gentoo.org> tclx-8.3-r1.ebuild:
+  Added new ebuild, which builds tclx against tcl/tk 8.4.2 (bug #19555).
+
+*tclx-8.3 (15 Aug 2002)
 
   13 Feb 2003; Mark Guertin <gerk@gentoo.org> tclx-8.3.ebuild :
   added ~ppc to keywords
-
-*tclx-8.3 (15 Aug 2002)
 
   31 Mar 2003; Aron Griffis <agriffis@gentoo.org> tclx-8.3.ebuild:
   Add -fPIC on alpha to close bug 10921
