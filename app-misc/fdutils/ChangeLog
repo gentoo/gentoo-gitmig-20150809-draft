@@ -2,6 +2,14 @@
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
 # /space/gentoo/cvsroot/gentoo-x86/skel.ChangeLog,v 1.4 2002/05/30 01:54:49 sandymac Exp
 
+*fdutils-5.4.20020222-r1 (03 Oct 2002)
+
+  02 Oct 2002; Seemant Kulleen <seemant@gentoo.org>
+  fdutils-5.4.20020222-r1.ebuild files/digest-fdutils-5.4.20020222 :
+
+  Convert to using einstall instead, so now superformat gets installed as
+  well.  Thanks to: luke@trolltech.com (Luke Graham) in bug #8676
+
 *fdutils-5.4.20020222 (18 Jul 2002)
 
   13 Aug 2002; Matthew Turk <satai@gentoo.org> fdutils-5.4.20020222.ebuild:
