@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/udev
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.57 2004/07/10 22:51:42 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.58 2004/07/22 22:04:15 tgall Exp $
+
+  22 Jul 2004; Tom Gall <tgall@gentoo.org> udev-030.ebuild:
+  stable, ppc64, let the brave new world start!
 
   10 Jul 2004; Ciaran McCreesh <ciaranm@gentoo.org> udev-029.ebuild:
   -sparc, see bug #55959
