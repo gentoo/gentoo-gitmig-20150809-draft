@@ -1,6 +1,6 @@
 # Copyright 2004-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/eclass/depend.apache.eclass,v 1.9 2005/01/21 07:52:12 vericgar Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/depend.apache.eclass,v 1.10 2005/02/12 21:29:08 vericgar Exp $
 ECLASS=depend.apache
 INHERITED="$INHERITED $ECLASS"
 
@@ -115,6 +115,7 @@ need_apache1() {
 	debug-print-function need_apache1
 
 	DEPEND="${DEPEND} ${APACHE1_DEPEND}"
+	RDEPEND="${RDEPEND} ${APACHE1_DEPEND}"
 	APACHE_VERSION='1'
 }
 
@@ -131,6 +132,7 @@ need_apache2() {
 	debug-print-function need_apache2
 
 	DEPEND="${DEPEND} ${APACHE2_DEPEND}"
+	RDEPEND="${RDEPEND} ${APACHE2_DEPEND}"
 	APACHE_VERSION='2'
 }
 
@@ -145,6 +147,7 @@ need_apache() {
 
 	IUSE="${IUSE} apache2"
 	DEPEND="${DEPEND} ${APACHE_DEPEND}"
+	RDEPEND="${RDEPEND} ${APACHE_DEPEND}"
 	if useq apache2; then
 		APACHE_VERSION='2'
 	else
