@@ -1,6 +1,11 @@
 # ChangeLog for xfce-base/xffm
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xffm/ChangeLog,v 1.4 2003/09/03 23:26:21 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xffm/ChangeLog,v 1.5 2003/09/12 04:35:52 bcowan Exp $
+
+*xffm-3.99.4 (12 Sep 2003)
+
+  12 Sep 2003; Brad Cowan <bcowan@gentoo.org> xffm-3.99.4.ebuild:
+  Version bump.
 
 *xffm-3.99.3 (03 Sep 2003)
 
