@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/bsd-games/bsd-games-2.13.ebuild,v 1.2 2003/11/06 07:03:22 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/bsd-games/bsd-games-2.13.ebuild,v 1.3 2003/12/31 21:23:53 vapier Exp $
 
 inherit games eutils
 
@@ -32,8 +32,8 @@ src_unpack() {
 	epatch ${FILESDIR}/bsdgames-${PV}-gentoo.diff
 
 	sed -i \
-		-e "s:/usr/games:${GAMES_BINDIR}:" wargames/wargames || \
-			die "sed wargames failed"
+		-e "s:/usr/games:${GAMES_BINDIR}:" wargames/wargames \
+		|| die "sed wargames failed"
 
 	cp ${FILESDIR}/config.params-gentoo config.params
 	echo bsd_games_cfg_build_dirs=\"${GAMES_TO_BUILD}\" >> ./config.params

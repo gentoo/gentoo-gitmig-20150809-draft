@@ -17,7 +17,7 @@ bsd_games_cfg_no_build_dirs="dm banner fortune factor"
 bsd_games_cfg_gamesdir=${GAMES_BINDIR}
 bsd_games_cfg_sbindir=${GAMES_BINDIR}
 bsd_games_cfg_usrlibdir=${GAMES_LIBDIR}
-bsd_games_cfg_sharedir=${GAMES_DATADIR}
+bsd_games_cfg_sharedir=${GAMES_DATADIR}/${PN}
 bsd_games_cfg_varlibdir=${GAMES_STATEDIR}
 
 # We'll control all the permissions during install (via games eclass) 
@@ -36,5 +36,5 @@ bsd_games_cfg_pager=/usr/bin/less
 bsd_games_cfg_dictionary_src=/usr/share/dict/words
 
 # Acronym file for "wft"
-bsd_games_cfg_wtf_acronymfile=${GAMES_DATADIR}/acronyms
+bsd_games_cfg_wtf_acronymfile=${GAMES_DATADIR}/${PN}/acronyms
 
