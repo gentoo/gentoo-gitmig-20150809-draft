@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/seahorse
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/ChangeLog,v 1.20 2004/10/02 18:25:17 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/ChangeLog,v 1.21 2004/10/16 10:37:37 dragonheart Exp $
+
+  16 Oct 2004; Daniel Black <dragonheart@gentoo.org> seahorse-0.6.3-r1.ebuild:
+  x86 stable. bug #64485
 
   02 Oct 2004; Bryan Østergaard <kloeri@gentoo.org> seahorse-0.6.3-r1.ebuild:
   Keyword ~alpha, requested in bug 64485.
