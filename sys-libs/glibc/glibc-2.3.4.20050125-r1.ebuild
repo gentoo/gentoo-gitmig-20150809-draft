@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20050125-r1.ebuild,v 1.12 2005/03/05 23:24:04 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20050125-r1.ebuild,v 1.13 2005/03/05 23:33:28 eradicator Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -733,7 +733,9 @@ want_nptl() {
 }
 
 want_linuxthreads() {
-	! use nptlonly
+	! use nptlonly && return 0
+	want_nptl || return 0
+	return 1
 }
 
 want_tls() {
