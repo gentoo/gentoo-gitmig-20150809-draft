@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/nagios-core
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/ChangeLog,v 1.45 2004/11/22 19:53:06 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/ChangeLog,v 1.46 2004/11/28 18:21:02 eldad Exp $
+
+  28 Nov 2004; Eldad Zack <eldad@gentoo.org> files/nagios:
+  Removed -o option from start-stop-daemon, as it was causing errors to start or
+  stop slip by unnoticed.
 
   22 Nov 2004; Eldad Zack <eldad@gentoo.org> nagios-core-1.2-r3.ebuild:
   Fixed nagios.cmd permission problem, as suggested by Shawn Kovalchick
