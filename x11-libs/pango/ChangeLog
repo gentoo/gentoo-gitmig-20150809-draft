@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/pango
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/ChangeLog,v 1.58 2004/06/01 21:50:10 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/ChangeLog,v 1.59 2004/06/15 23:25:43 kloeri Exp $
+
+  16 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> pango-1.4.0.ebuild:
+  Stable on alpha.
 
   01 Jun 2004; Travis Tilley <lv@gentoo.org> pango-1.4.0.ebuild:
   stable on amd64
