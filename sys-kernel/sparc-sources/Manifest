@@ -1,6 +1,6 @@
 MD5 7e30d832a84aff8dd86b198f9a772ba9 ChangeLog 10749
 MD5 6706a601c155869440dcb544e3759a04 metadata.xml 381
-MD5 d45d83aa7376ea20ea69ab384a449068 sparc-sources-2.4.27-r1.ebuild 2325
+MD5 4cc47f39aea73c1cab1cb654d18388fd sparc-sources-2.4.27-r1.ebuild 2326
 MD5 b9282567aca4fa6e33b416a61b7b39e5 sparc-sources-2.4.27.ebuild 2193
 MD5 258fd76f2e16645d1b67490aa7ca05ae files/digest-sparc-sources-2.4.27-r1 143
 MD5 31df0f3fd794f3491bc4d33353e9d310 files/use-pte_alloc_one_fast-r1.patch 633
