@@ -1,8 +1,13 @@
 # ChangeLog for media-video/cinelerra-cvs
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra-cvs/ChangeLog,v 1.5 2005/01/28 10:26:36 zypher Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra-cvs/ChangeLog,v 1.6 2005/03/18 13:24:56 zypher Exp $
 
-*cinelerra-cvs-20050127 (27 Jan 2004)
+*cinelerra-cvs-20050315 (15 Mar 2005)
+
+  18 Mar 2005; Marc Hildebrand <zypher@gentoo.org> cinelerra-cvs-20050315.ebuild:
+  Version bump plus needed mjpegtools-dependency.
+
+*cinelerra-cvs-20050127 (27 Jan 2005)
 
   28 Jan 2005; Marc Hildebrand <zypher@gentoo.org> cinelerra-cvs-20050127.ebuild:
   Version bump.

@@ -2,18 +2,20 @@
 Hash: SHA1
 
 MD5 3f38c89a58447d4d6a2fc0dbf16b5a76 cinelerra-cvs-20050102.ebuild 1799
+MD5 449297141d6e0ab4068bb4216551e769 cinelerra-cvs-20050315.ebuild 1693
 MD5 c5a1dc1c8aa6a69f4d857051deed8f4b cinelerra-cvs-20050127.ebuild 1656
-MD5 70b12ed1cff9341349f3b748f2d9255d ChangeLog 967
+MD5 f67d3a12f3855c0f1c92bbe18fce6b7e ChangeLog 1139
 MD5 955f56e990f8c32d705708b4cc4db089 metadata.xml 251
 MD5 e06d71de0a01bcda83f64454a1bcb5f7 cinelerra-cvs-20040917.ebuild 1659
 MD5 6a608309dd1406724b18475452d2e410 files/libmpeg3-20050102-gcc3.4.patch 6060
 MD5 c1cbd9da3d0a404c1106af9bf1c31073 files/digest-cinelerra-cvs-20050127 77
 MD5 7405c9ce7abe2c26ad273a6da17789d2 files/digest-cinelerra-cvs-20050102 77
 MD5 a56da7b2ea792c89025790c53a2ed2c0 files/digest-cinelerra-cvs-20040917 77
+MD5 3c7352138ef1f1d1af89814652cf6649 files/digest-cinelerra-cvs-20050315 77
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFB+hNvRPjscZbntocRAqXGAJ9GgkmykwM7EC88pc+wmBRmtxuE+ACfTDzk
-xLbPgTn17Xk3LIQBpuIZtWo=
-=EbMi
+iD8DBQFCOta6RPjscZbntocRAgKZAJ0VmK06U8wbXrtZVQjkXz4sJlO+VgCffAUR
+4lp4QQ7NOIeK5Z4BXNN4InQ=
+=66lQ
 -----END PGP SIGNATURE-----
