@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/ufo-ai/ufo-ai-0.10.040218.ebuild,v 1.10 2004/06/24 23:29:50 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/ufo-ai/ufo-ai-0.10.040218.ebuild,v 1.11 2004/06/25 06:05:04 mr_bones_ Exp $
 
 inherit eutils games flag-o-matic
 
@@ -20,34 +20,34 @@ DEPEND="virtual/glibc
 	media-libs/libvorbis
 	media-libs/libogg"
 
-S=${WORKDIR}
+S="${WORKDIR}"
 
 src_unpack() {
 	unpack ${A}
 	cd source/linux
-	epatch ${FILESDIR}/${PV}-Makefile.patch
+	epatch "${FILESDIR}/${PV}-Makefile.patch"
 }
 
 src_compile() {
 	filter-flags -fstack-protector #51116
-	cd ${S}/source/linux
+	cd "${S}/source/linux"
 	make build_release \
 		OPTCFLAGS="${CFLAGS}" \
 		|| die "make failed"
 }
 
 src_install() {
-	dodir ${GAMES_DATADIR}/${PN}
-	cp -rf ${S}/ufo/* ${D}${GAMES_DATADIR}/${PN} || die "copying data"
-	if [ ${ARCH} == x86 ]; then
+	dodir "${GAMES_DATADIR}/${PN}"
+	cp -rf "${S}/ufo/"* "${D}${GAMES_DATADIR}/${PN}" || die "copying data"
+	if use x86 ; then
 		ARCH=i386
 	fi
-	exeinto ${GAMES_DATADIR}/${PN}
-	doexe ${S}/source/linux/release${ARCH}-glibc/{ref_gl.so,ref_glx.so,ufo} \
-		|| "doexe ufo"
-	exeinto ${GAMES_DATADIR}/${PN}/base
-	doexe ${S}/source/linux/release${ARCH}-glibc/game${ARCH}.so \
+	exeinto "${GAMES_DATADIR}/${PN}"
+	doexe "${S}/source/linux/release${ARCH}-glibc/"{ref_gl.so,ref_glx.so,ufo} \
+		|| die "doexe ufo"
+	exeinto "${GAMES_DATADIR}/${PN}/base"
+	doexe "${S}/source/linux/release${ARCH}-glibc/game${ARCH}.so" \
 		|| die "doexe game${ARCH}.so"
-	games_make_wrapper ufo-ai ./ufo ${GAMES_DATADIR}/${PN}
+	games_make_wrapper ufo-ai ./ufo "${GAMES_DATADIR}/${PN}"
 	prepgamesdirs
 }
