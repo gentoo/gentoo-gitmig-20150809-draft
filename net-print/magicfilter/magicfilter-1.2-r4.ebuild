@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/magicfilter/magicfilter-1.2-r4.ebuild,v 1.4 2003/11/14 20:09:39 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/magicfilter/magicfilter-1.2-r4.ebuild,v 1.5 2003/11/14 21:26:36 seemant Exp $
 
 inherit eutils
 
@@ -21,7 +21,7 @@ KEYWORDS="x86"
 DEPEND=">=app-text/ghostscript-6.50-r2
 	>=sys-apps/groff-1.16.1-r1
 	>=app-arch/bzip2-1.0.1-r4
-	>=sys-apps/gzip-1.2.4a-r6"
+	>=app-arch/gzip-1.2.4a-r6"
 
 src_unpack() {
 
