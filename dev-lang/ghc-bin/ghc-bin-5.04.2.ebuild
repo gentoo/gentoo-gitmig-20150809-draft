@@ -1,16 +1,17 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc-bin/ghc-bin-5.04.2.ebuild,v 1.1 2002/12/15 06:52:54 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc-bin/ghc-bin-5.04.2.ebuild,v 1.2 2003/02/11 09:07:42 george Exp $
 
 IUSE="opengl"
 
 S="${WORKDIR}/ghc-5.04.2"
 DESCRIPTION="Glasgow Haskell Compiler"
-SRC_URI="http://www.haskell.org/ghc/dist/5.04.2/ghc-5.04.2-i386-unknown-linux.tar.bz2"
+SRC_URI="x86? ( http://www.haskell.org/ghc/dist/${PV}/ghc-${PV}-i386-unknown-linux.tar.bz2 )
+	sparc? ( http://www.haskell.org/ghc/dist/${PV}/ghc-${PV}-sparc-sun-solaris2.tar.bz2 )"
 HOMEPAGE="http://www.haskell.org"
 
 LICENSE="as-is"
-KEYWORDS="~x86 -ppc -sparc -alpha"
+KEYWORDS="~x86 -ppc ~sparc -alpha"
 SLOT="0"
 
 DEPEND="virtual/glibc"
@@ -38,4 +39,16 @@ src_install () {
 
 	cd ${D}/usr/share
 	mv hslibs.ps users_guide.ps html/ ${D}/usr/share/doc/${PF}
+
+	#ghc seems to set locations in wrapper scripts from make install
+	#need to strip the ${D} part out
+	cd ${D}/usr/bin
+	mv ghc-5.04.2 ghc-5.04.2-orig
+	sed -e "s:${D}::" ghc-5.04.2-orig > ghc-5.04.2
+	mv ghci-5.04.2 ghci-5.04.2-orig
+	sed -e "s:${D}::" ghci-5.04.2-orig > ghci-5.04.2
+	mv ghc-pkg-5.04.2 ghc-pkg-5.04.2-orig
+	sed -e "s:${D}::" ghc-pkg-5.04.2-orig > ghc-pkg-5.04.2
+	rm ghc-5.04.2-orig ghci-5.04.2-orig ghc-pkg-5.04.2-orig
+	chmod a+x ghc-5.04.2 ghci-5.04.2 ghc-pkg-5.04.2
 }
