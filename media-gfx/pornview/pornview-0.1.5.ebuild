@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pornview/pornview-0.1.5.ebuild,v 1.1 2002/12/29 22:18:58 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pornview/pornview-0.1.5.ebuild,v 1.2 2003/02/01 22:34:01 gerk Exp $
 
 DESCRIPTION="Image viewer/manager with optional support for MPEG movies."
 HOMEPAGE="http://pornview.sourceforge.net"
@@ -15,7 +15,7 @@ DEPEND="media-libs/libpng
 #	avi? ( media-video/mplayer )"
 
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ppc"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 IUSE="mpeg"
 

@@ -1,8 +1,11 @@
 # ChangeLog for media-gfx/pornview
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pornview/ChangeLog,v 1.8 2002/12/29 22:18:58 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pornview/ChangeLog,v 1.9 2003/02/01 22:34:01 gerk Exp $
 
 *pornview-0.1.5 (29 Dec 2002)
+
+  01 Feb 2003; Mark Guertin <gerk@gentoo.org> pornview-0.1.5.ebuild :
+  Set ppc stable in keywords.
 
   29 Dec 2002; Martin Holzer <mholzer@gentoo.org> pornview-0.1.5.ebuild files/digest-pornview-0.1.5 ChangeLog :
   Version pumped. Sorry still no mplayer support
