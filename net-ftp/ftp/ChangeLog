@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/ftp
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/ftp/ChangeLog,v 1.14 2003/09/18 18:12:26 avenj Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/ftp/ChangeLog,v 1.15 2004/02/20 17:00:56 agriffis Exp $
+
+  20 Feb 2004; Aron Griffis <agriffis@gentoo.org> ftp-0.17-r3.ebuild:
+  stable on alpha
 
   18 Sep 2003; Jon Portnoy <avenj@gentoo.org> ftp-0.17-r3.ebuild :
   ia64 keywords.
