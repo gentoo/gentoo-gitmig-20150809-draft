@@ -8,8 +8,8 @@ This page contains information about Keychain, an OpenSSH-compatible RSA/DSA key
 application for bash.
 </abstract>
 
-<version>1.0</version>
-<date>21 Aug 2001</date>
+<version>1.1</version>
+<date>07 Sep 2001</date>
 
 <chapter>
 <title>Keychain Intro</title>
@@ -55,6 +55,18 @@ time you really need to reinitialize the long-running <c>ssh-agent</c> process.
 </section>
 </chapter>
 <chapter>
+<title>The source</title>
+<section>
+<body>
+
+<p>
+The most recent release of <c>keychain</c> can be found here:<br/><br/>
+<uri>http://www.ibiblio.org/gentoo/distfiles/keychain-1.1.tar.bz2</uri>
+</p>
+</body>
+</section>
+</chapter>
+<chapter>
 <title>The IBM developerWorks articles</title>
 <section>
 <body>
@@ -74,14 +86,31 @@ unencrypted private keys.
 </section>
 </chapter>
 <chapter>
-<title>The source</title>
+<title>ChangeLog</title>
 <section>
 <body>
+<pre caption="ChangeLog for KeyChain">
+# ChangeLog for KeyChain; http://www.gentoo.org/projects/keychain
+# Copyright 2001 Gentoo Technologies, Inc.; Distributed under the GPL
 
-<p>
-The most recent release of <c>keychain</c> can be found here:<br/><br/>
-<uri>http://www.ibiblio.org/gentoo/distfiles/keychain-1.0.tar.bz2</uri>
-</p>
+*keychain 1.0.1; fixes for calling "pidof"; README; ChangeLog
+
+  07 Sep 2001;
+  Addition of README stating that keychain requires bash 2.0 or greater,
+  as well as quick install directions and web URL.
+
+  07 Sep 2001;
+  Explicitly added /sbin and /usr/sbin to path, and then called "pidof".
+  I think that this is a bit more robust.
+  
+  06 Sep 2001; from John Ellson &gt;ellson@lucent.com&lt;: 
+  "pidof" changed to "/sbin/pidof", since it's probably not in $PATH
+ 
+  06 Sep 2001;
+  New ChangeLog! :)
+
+*keychain 1.0; initial release (Aug 2001)
+</pre>
 </body>
 </section>
 </chapter>
