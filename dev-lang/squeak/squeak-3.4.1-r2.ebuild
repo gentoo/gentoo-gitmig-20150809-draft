@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/squeak/squeak-3.4.1-r2.ebuild,v 1.2 2004/01/04 07:10:42 jhhudso Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/squeak/squeak-3.4.1-r2.ebuild,v 1.3 2004/02/15 07:59:09 dholm Exp $
 
 inherit libtool flag-o-matic eutils
 strip-flags
@@ -17,7 +17,7 @@ HOMEPAGE="http://www.squeak.org/"
 SRC_URI="ftp://st.cs.uiuc.edu/Smalltalk/Squeak/${MV}/unix-linux/Squeak-${NV}.src.tar.gz"
 LICENSE="Apple"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 IUSE="X oss mmx mozilla"
 # a ffi flag would be nice
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/squeak-vm/squeak-vm-3.6.5424.ebuild,v 1.1 2003/10/11 09:38:19 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/squeak-vm/squeak-vm-3.6.5424.ebuild,v 1.2 2004/02/15 07:55:42 dholm Exp $
 
 MAJOR=3
 MINOR=6
@@ -21,7 +21,7 @@ LICENSE="Apple"
 
 SLOT="${MM}"
 
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 
 IUSE="mozilla"
 

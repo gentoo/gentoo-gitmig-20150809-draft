@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/squeak-vm
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/squeak-vm/ChangeLog,v 1.5 2003/10/11 09:38:19 tantive Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/squeak-vm/ChangeLog,v 1.6 2004/02/15 07:55:42 dholm Exp $
+
+  15 Feb 2004; David Holm <dholm@gentoo.org> squeak-vm-3.6.5424.ebuild:
+  Added to ~ppc.
 
 *squeak-vm-3.6.5424 (11 Oct 2003)
 
