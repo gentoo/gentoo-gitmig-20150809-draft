@@ -1,8 +1,13 @@
 # ChangeLog for dev-util/cppunit
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cppunit/ChangeLog,v 1.1 2002/10/30 01:10:20 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cppunit/ChangeLog,v 1.2 2002/11/02 01:26:38 george Exp $
 
 *cppunit-1.8.0 (29 Oct 2002)
+
+  01 Nov 2002; George Shapovalov <george@gentoo.org> cppunit-1.8.0.ebuild :
+
+  incorporated a reworked src_install by Jeffrey Palmer <jeffrey.palmer@acm.org>
+  see #5603 for details
 
   29 Oct 2002; George Shapovalov <george@gentoo.org> cppunit-1.8.0.ebuild :
 
