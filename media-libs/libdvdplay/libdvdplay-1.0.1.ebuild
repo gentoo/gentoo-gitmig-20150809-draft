@@ -1,10 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdplay/libdvdplay-1.0.1.ebuild,v 1.11 2004/07/01 07:57:30 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdplay/libdvdplay-1.0.1.ebuild,v 1.12 2004/07/14 20:04:44 agriffis Exp $
 
 IUSE=""
-
-S="${WORKDIR}/${P}"
 
 DESCRIPTION="A simple library designed for DVD-menu navigation"
 SRC_URI="http://www.videolan.org/pub/${PN}/${PV}/${P}.tar.bz2"

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libwmf/libwmf-0.2.8.ebuild,v 1.12 2004/06/24 23:16:05 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libwmf/libwmf-0.2.8.ebuild,v 1.13 2004/07/14 20:18:09 agriffis Exp $
 
 inherit libtool
 
@@ -10,7 +10,6 @@ IUSE="jpeg X"
 #This will probably work, especially since the real one (6.50) in this case
 #is empty. However beware in case there is any trouble
 
-S=${WORKDIR}/${P}
 DESCRIPTION="library for converting WMF files"
 SRC_URI="mirror://sourceforge/wvware/${P}.tar.gz"
 HOMEPAGE="http://www.wvware.com/libwmf.html"

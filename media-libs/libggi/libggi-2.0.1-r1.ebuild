@@ -1,12 +1,11 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libggi/libggi-2.0.1-r1.ebuild,v 1.9 2004/06/24 23:09:41 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libggi/libggi-2.0.1-r1.ebuild,v 1.10 2004/07/14 20:08:07 agriffis Exp $
 
 IUSE="X aalib svga fbcon directfb"
 
 inherit eutils libtool
 
-S="${WORKDIR}/${P}"
 DESCRIPTION="Fast and safe graphics and drivers for about any graphics card to the Linux kernel (sometimes)"
 SRC_URI="http://www.ggi-project.org/ftp/ggi/v2.0/${P}.tar.bz2"
 HOMEPAGE="http://www.ggi-project.org/"
