@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre5-r4.ebuild,v 1.28 2005/01/09 06:35:03 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre5-r4.ebuild,v 1.29 2005/01/22 17:37:15 chriswhite Exp $
 
 inherit eutils flag-o-matic kernel-mod
 
@@ -172,7 +172,7 @@ linguas_warn() {
 	ewarn "bg - Bulgarian"
 	ewarn "cz - Czech"
 	ewarn "de - German"
-	ewarn "dk - Swedish"
+	ewarn "dk - Danish"
 	ewarn "el - Greek"
 	ewarn "en - English"
 	ewarn "es - Spanish"
