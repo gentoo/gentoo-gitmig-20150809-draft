@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kde
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde/ChangeLog,v 1.99 2005/02/02 11:56:31 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde/ChangeLog,v 1.100 2005/02/09 16:22:53 greg_g Exp $
+
+*kde-3.4.0_beta2 (09 Feb 2005)
+
+  09 Feb 2005; Gregorio Guidi <greg_g@gentoo.org> +kde-3.4.0_beta2.ebuild:
+  Version bump. Make kdeaccessibility optional.
 
   02 Feb 2005; Heinrich Wendel <lanius@gentoo.org> kde-3.4.0_beta1.ebuild:
   mark ~amd64

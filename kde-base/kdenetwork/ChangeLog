@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kdenetwork
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/ChangeLog,v 1.128 2005/02/02 11:46:26 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/ChangeLog,v 1.129 2005/02/09 16:20:12 greg_g Exp $
+
+*kdenetwork-3.4.0_beta2 (09 Feb 2005)
+
+  09 Feb 2005; Gregorio Guidi <greg_g@gentoo.org>
+  +kdenetwork-3.4.0_beta2.ebuild:
+  Version bump.
 
   02 Feb 2005; Heinrich Wendel <lanius@gentoo.org>
   kdenetwork-3.4.0_beta1.ebuild:

@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdeedu
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu/ChangeLog,v 1.111 2005/02/02 11:41:47 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu/ChangeLog,v 1.112 2005/02/09 16:17:09 greg_g Exp $
+
+*kdeedu-3.4.0_beta2 (09 Feb 2005)
+
+  09 Feb 2005; Gregorio Guidi <greg_g@gentoo.org> +kdeedu-3.4.0_beta2.ebuild:
+  Version bump.
 
   02 Feb 2005; Heinrich Wendel <lanius@gentoo.org> kdeedu-3.4.0_beta1.ebuild:
   mark ~amd64
