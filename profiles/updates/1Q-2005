@@ -43,3 +43,4 @@ move net-im/kopete kde-base/kdenetwork
 move app-editors/quanta kde-base/kdewebdev
 move app-text/kfilereplace kde-base/kdewebdev
 move media-gfx/kimagemapeditor kde-base/kdewebdev
+move net-libs/aqhbci-qt-wizard net-libs/aqhbci-qt-tools
