@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/a52dec/a52dec-0.7.4-r3.ebuild,v 1.1 2004/11/05 09:29:17 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/a52dec/a52dec-0.7.4-r3.ebuild,v 1.2 2004/11/05 09:30:47 eradicator Exp $
+
+IUSE="oss static djbfft"
 
 inherit eutils flag-o-matic libtool gnuconfig
 
@@ -11,7 +13,6 @@ SRC_URI="http://liba52.sourceforge.net/files/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~ppc-macos ~sparc ~x86"
-IUSE="oss static djbfft"
 
 DEPEND=">=sys-devel/autoconf-2.5
 	>=sys-devel/automake-1.8
