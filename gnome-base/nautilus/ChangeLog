@@ -1,6 +1,11 @@
 # ChangeLog for gnome-base/nautilus
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/ChangeLog,v 1.47 2003/05/08 14:27:43 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/ChangeLog,v 1.48 2003/05/25 08:57:18 liquidx Exp $
+
+  25 May 2003; Alastair Tse <liquidx@gentoo.org> nautilus-1.0.6-r9.ebuild,
+  nautilus-2.0.7.ebuild, nautilus-2.2.1.ebuild, nautilus-2.2.3.ebuild,
+  nautilus-2.2.4.ebuild:
+  new HOMEPAGE for nautilus (#21654)
 
 *nautilus-2.2.4 (08 May 2003)
 

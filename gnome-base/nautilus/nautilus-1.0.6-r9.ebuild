@@ -1,7 +1,7 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Updated by Sebastian Werner <sebastian@werner-productions.de>
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-1.0.6-r9.ebuild,v 1.14 2003/02/13 12:14:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-1.0.6-r9.ebuild,v 1.15 2003/05/25 08:57:18 liquidx Exp $
 
 IUSE="nls mozilla"
 
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="x86 ppc sparc "
 
 
-HOMEPAGE="http://www.gnome.org/"
+HOMEPAGE="http://www.gnome.org/projects/nautilus/"
 
 # =gnome-base/gnome-core-1.4*
 RDEPEND="mozilla? ( >=net-www/mozilla-1.0_rc3 )
