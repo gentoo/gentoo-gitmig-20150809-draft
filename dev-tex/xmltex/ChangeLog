@@ -1,6 +1,10 @@
 # ChangeLog for dev-tex/xmltex
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/xmltex/ChangeLog,v 1.4 2004/02/29 14:44:15 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/xmltex/ChangeLog,v 1.5 2004/05/08 09:32:45 usata Exp $
+
+  08 May 2004; Mamoru KOMACHI <usata@gentoo.org> xmltex-0.14-r1.ebuild,
+  xmltex-1.9.ebuild:
+  Stable on x86
 
   15 Feb 2004; Jason Wever <weeve@gentoo.org> xmltex-1.9.ebuild:
   Added ~sparc keyword to fix broken deps of app-text/passivetex

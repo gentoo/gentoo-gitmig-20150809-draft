@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/xmltex/xmltex-0.14-r1.ebuild,v 1.2 2004/02/29 14:44:15 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/xmltex/xmltex-0.14-r1.ebuild,v 1.3 2004/05/08 09:32:45 usata Exp $
 
 inherit latex-package
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://debian/pool/main/x/xmltex/${P/-/_}.orig.tar.gz"
 
 LICENSE="LPPL-1.2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 DEPEND="virtual/tetex"
 
