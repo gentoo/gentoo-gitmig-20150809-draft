@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/multisync/multisync-0.81.ebuild,v 1.11 2004/07/13 18:20:47 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/multisync/multisync-0.81.ebuild,v 1.12 2004/08/17 13:35:06 agriffis Exp $
 
 inherit eutils
 
@@ -26,7 +26,7 @@ DEPEND="virtual/libc
 		gtk2? (
 			=mail-client/evolution-1.4*
 			=x11-libs/gtk+-2* )
-	    !gtk2 (
+	    !gtk2? (
 			=mail-client/evolution-1.2*
 			=x11-libs/gtk+-1* )
 	)
