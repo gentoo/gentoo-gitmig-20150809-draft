@@ -1,6 +1,13 @@
 # ChangeLog for app-i18n/jfbterm
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/jfbterm/ChangeLog,v 1.10 2003/09/27 08:07:11 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/jfbterm/ChangeLog,v 1.11 2003/10/02 16:35:42 usata Exp $
+
+*jfbterm-0.4.4 (30 Sep 2003)
+
+  30 Sep 2003; Mamoru KOMACHI <usata@gentoo.org> jfbterm-0.3.16.ebuild,
+  jfbterm-0.4.0.ebuild, jfbterm-0.4.1.ebuild, jfbterm-0.4.2.ebuild,
+  jfbterm-0.4.3.ebuild:
+  Version bumped. Install terminfo entry by default.
 
 *jfbterm-0.4.3 (16 Sep 2003)
 
