@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/aewm
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/aewm/ChangeLog,v 1.9 2004/06/28 22:57:12 agriffis Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/aewm/ChangeLog,v 1.10 2005/01/07 04:50:19 josejx Exp $
+
+  07 Jan 2005; Joseph Jezak <josejx@gentoo.org> aewm-1.2.3.ebuild:
+  Marked ~ppc for bug #76860.
 
   28 Jun 2004; Aron Griffis <agriffis@gentoo.org> aewm-1.2.3.ebuild:
   add sed-4 dep
