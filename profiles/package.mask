@@ -806,7 +806,6 @@ sys-apps/texinfo
 
 # ashmodai@gentoo.org 22 May 2002
 # Masked until I can get the 'support' packages/patches merged.
-=net-dialup/pptpd-1.1.2
 =net-dialup/ppp-2.4.1-r9
 
 
