@@ -8,32 +8,38 @@ depend() {
 
 start() {
 	ebegin "Starting mldonkey"
-	if [ ! -d ${MLHOME}/${MLDIR} ]
+	if [ ! -d ${BASEDIR}/${SUBDIR} ]
 	then
-		einfo "Directory ${MLHOME}/${MLDIR} not existing, trying to create..."
-		su ${MLUSER} -c "mkdir ${MLHOME}/${MLDIR}" 
-		if [ ! -d ${MLHOME}/${MLDIR} ]
+		einfo "Directory ${BASEDIR}/${SUBDIR} not existing, trying to create..."
+		su ${MLUSER} -c "mkdir ${BASEDIR}/${SUBDIR}"
+		if [ ! -d ${BASEDIR}/${DIR} ]
 		then
-			eerror "Directory ${MLHOME}/${MLDIR} could not be created!"
+			eerror "Directory ${BASEDIR}/${SUBDIR} could not be created!"
 			return 1
 		fi
 		einfo "...ok!"
 	fi
-	cd ${MLHOME}/${MLDIR}/
-	start-stop-daemon --quiet --start -c ${MLUSER}  \
-	-x /usr/bin/mlnet &>${MLLOG} &
+	cd ${BASEDIR}/${SUBDIR}/
+	start-stop-daemon --quiet --start -c ${USER}  \
+	-x /usr/bin/mlnet &>${LOG} &
 	sleep 5
-	renice ${MLNICE} -u ${MLUSER} >/dev/null
+	renice ${NICE} -u ${USER} >/dev/null
 	eend $?
 }
 
 stop() {
+	BASE="http://"
+	if [[ -n ${USERNAME} && -n ${PASSWORD} ]]
+	then
+		BASE=${BASE}${USERNAME}:${PASSWORD}@
+	fi
+	BASE=${BASE}${SERVER}:${PORT}
 	ebegin "Stopping mldonkey - please wait"
-	wget --spider http://$DONKSRV:4080/submit?q=close_fds -q 
-	wget --spider http://$DONKSRV:4080/submit?q=save -q 
-	wget --spider http://$DONKSRV:4080/submit?q=kill -q 
+	wget --spider ${BASE}/submit?q=close_fds -q
+	wget --spider ${BASE}/submit?q=save -q
+	wget --spider ${BASE}/submit?q=kill -q
 	sleep 10
-	start-stop-daemon --oknodo --stop -x /usr/bin/mlnet 
+	start-stop-daemon --oknodo --stop -x /usr/bin/mlnet
 	eend $?
 }
 
@@ -44,21 +50,35 @@ restart() {
 }
 
 slow() {
-	ebegin "Reducing bandwidth to ${MLLOWDOWN}k/${MLLOWUP}k"
+	ebegin "Reducing bandwidth to ${LOW_DOWN}k/${LOW_UP}k"
 
-	wget --spider http://localhost:${MLPORT}/submit?q=set+max_hard_download_rate+${MLLOWDOWN} -q 
+	BASE="http://"
+	if [[ -n ${USERNAME} && -n ${PASSWORD} ]]
+	then
+		BASE=${BASE}${USERNAME}:${PASSWORD}@
+	fi
+	BASE=${BASE}${SERVER}:${PORT}
 
-	wget --spider http://localhost:${MLPORT}/submit?q=set+max_hard_upload_rate+${MLLOWUP} -q 
+	wget --spider ${BASE}/submit?q=set+max_hard_download_rate+${LOW_DOWN} -q
+
+	wget --spider ${BASE}/submit?q=set+max_hard_upload_rate+${LOW_UP} -q
 
 	eend $?
 }
 
 fast() {
-	ebegin "Increasing bandwidth to ${MLHIGHDOWN}k/${MLHIGHUP}k"
+	ebegin "Increasing bandwidth to ${HIGH_DOWN}k/${HIGH_UP}k"
 
-	wget --spider http://localhost:${MLPORT}/submit?q=set+max_hard_download_rate+${MLHIGHDOWN} -q 
+	BASE="http://"
+	if [[ -n ${USERNAME} && -n ${PASSWORD} ]]
+	then
+		BASE=${BASE}${USERNAME}:${PASSWORD}@
+	fi
+	BASE=${BASE}${SERVER}:${PORT}
 
-	wget --spider http://localhost:${MLPORT}/submit?q=set+max_hard_upload_rate+${MLHIGHUP} -q 
+	wget --spider ${BASE}/submit?q=set+max_hard_download_rate+${HIGH_DOWN} -q
+
+	wget --spider ${BASE}/submit?q=set+max_hard_upload_rate+${HIGH_UP} -q
 
 	eend $?
 }

@@ -1,25 +1,38 @@
-# Config file for /etc/init.d/mldonkey
+# /etc/conf.d/mldonkey
+# Config file for mldonkey control script
+
+# Change the following vars only if you know
+# what you're doing, there's no checking for
+# invalid data yet!
 
 # owner of mlnet process (don't change, must be existing)
-MLUSER="p2p"
+USER="p2p"
 
 # home dir of owner (don't change, must be existing)
-MLHOME="/home/p2p"
+BASEDIR="/home/p2p"
 
 # subdir if any (will be created, if not existing)
-MLDIR=".mldonkey"
+SUBDIR=".mldonkey"
 
 # logfile (/dev/null for nowhere)
-MLLOG="/var/log/mldonkey.log"
+LOG="/var/log/mldonkey.log"
 
 # bandwidth control, values in kb/s
-MLLOWDOWN="6"
-MLLOWUP="2"
-MLHIGHDOWN="30"
-MLHIGHUP="10"
+LOW_DOWN="6"
+LOW_UP="2"
+HIGH_DOWN="30"
+HIGH_UP="10"
 
 # nice level, 0<x<19, more nice -> less cpuspeed consumed
-MLNICE="19"
+NICE="19"
+
+# mldonkey server ip, usually localhost
+SERVER="localhost"
 
 # port for webinterface, usually 4080
-MLPORT="4080"
+PORT="4080"
+
+# to enable password restricted access,
+# uncomment and set BOTH following vars:
+#USERNAME="admin"
+#PASSWORD=""

@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/mldonkey
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/ChangeLog,v 1.17 2003/08/17 14:19:44 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/ChangeLog,v 1.18 2003/09/11 02:53:02 caleb Exp $
+
+  10 Sep 2003; Caleb Tennis <caleb@gentoo.org> mldonkey-2.5.3-r1.ebuild:
+  Rethink the config files - bug #27005
 
   17 Aug 2003; Martin Holzer <mholzer@gentoo.org> mldonkey-2.5.3-r1.ebuild:
   Marked x86 stable.
