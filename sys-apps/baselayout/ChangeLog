@@ -1,9 +1,40 @@
 # ChangeLog for sys-apps/baselayout
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.163 2004/07/28 00:04:27 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.164 2004/08/02 20:05:44 agriffis Exp $
 
 # See the gentoo-src rc-scripts ChangeLog for up-to-date release information:
 # http://www.gentoo.org/cgi-bin/viewcvs.cgi/rc-scripts/ChangeLog?rev=HEAD&cvsroot=gentoo-src&content-type=text/vnd.viewcvs-markup
+
+*baselayout-1.10.2 (02 Aug 2004)
+
+  02 Aug 2004; Aron Griffis <agriffis@gentoo.org>
+  -baselayout-1.10.1-r1.ebuild, -baselayout-1.10.1.ebuild,
+  +baselayout-1.10.2.ebuild, -baselayout-1.9.4-r2.ebuild:
+  Update to rc-scripts-1.5.2
+  - Related to bug 38955, don't set INPUTRC.  Instead patch bash so
+    that it looks for /etc/inputrc automatically if ~/.inputrc is
+    missing.  This is better than using INPUTRC since that will
+    override even after the user creates ~/.inputrc.
+  - Fix bug 54275: Don't set INFODIR.  The correct variable used by
+    texinfo is INFOPATH, which is already set in 00basic.  Setting
+    INFODIR is useless, and breaks a NetBSD cross compile from Gentoo
+  - Fix bug 58805: net.eth0 should use bridge so that bridge
+    interfaces are configured prior to net.br0 running
+  - Fix bug 56856: Get rid of net.rej and integrate missing stuff to
+    conf.d/net
+  - Apply half of spock's patch in bug 45784: Check for
+    conf.d/bootsplash instead of conf.d/bootsplash.conf
+  - Fix bug 51351: Quote parsed output of /proc/filesystems to handle
+    octal sequences in mountpoint such as encoded spaces (\040)
+  - Fix bug 46680: Add cifs support to localmount and netmount.
+    Thanks to Ronald Moesbergen for the patches
+  - Fix bug 26952: Use /etc/bash/bashrc to setup PS1, testing $- to
+    determine if shell is interactive.  The new system-wide bashrc is
+    installed by bash-2.05b-r10
+  - Fix bug 38743: strip leading and trailing spaces from variable
+    values in genenviron.awk.  Thanks to Marius Mauch for the patch.
+  - Fix bug 55576: swap words "start" and "stop" in runscript.sh error
+    message
 
   27 Jul 2004; <agriffis@gentoo.org> baselayout-1.10.1-r1.ebuild,
   baselayout-1.10.1-r2.ebuild:
