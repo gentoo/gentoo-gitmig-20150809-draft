@@ -1,8 +1,14 @@
 # ChangeLog for app-crypt/cryptoapi
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/cryptoapi/ChangeLog,v 1.5 2002/05/08 08:57:36 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/cryptoapi/ChangeLog,v 1.6 2002/07/23 01:12:09 cselkirk Exp $
 
 *cryptoapi-2.4.7.0 (7 May 2002)
+
+  22 Jul 2002; cselkrik <cselkirk@gentoo.org> cryptoapi-2.4.7.0.ebuild :
+   
+  Added KEYWORDS="x86 -ppc". Not building right now on ppc
+  Added SLOT and RDEPEND (for repoman complience)
+     
   7 May 2002; Spider <spider@gentoo.org> cryptoapi-2.4.7.0.ebuild :
   fix sourceforge mirroring.
       
