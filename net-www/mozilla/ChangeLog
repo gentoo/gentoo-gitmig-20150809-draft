@@ -1,6 +1,17 @@
 # ChangeLog for net-www/mozilla
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.164 2004/04/26 22:35:10 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.165 2004/04/29 18:02:34 agriffis Exp $
+
+*mozilla-1.7_rc1-r1 (29 Apr 2004)
+
+  29 Apr 2004; Aron Griffis <agriffis@gentoo.org> +mozilla-1.7_rc1-r1.ebuild:
+  - Fixed bug 31581 (xprint disabled in mozilla ebuild)
+  - Fixed bug 24522 (re-enable SVG support on mozilla)
+  - Fixed bug 25322 (pentium4 should be fixed in gcc-3.2.3)
+  - Re-organized src_compile into sections and cleaned up
+    ENABLE_OPTIMIZE handling using flag-o-matic functions; no more
+	finagling CFLAGS with bash substitutions in the ebuild
+  - Move all CFLAGS and arch handling into src_compile to correct QA errors
 
   26 Apr 2004; Aron Griffis <agriffis@gentoo.org> mozilla-1.7_rc1.ebuild:
   - Fix bug 21667 (replacing -march=pentium4 in mozilla ebuilds
