@@ -1,6 +1,10 @@
 # ChangeLog for net-www/mozilla-launcher
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-launcher/ChangeLog,v 1.19 2004/06/25 01:06:04 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-launcher/ChangeLog,v 1.20 2004/07/26 23:38:58 agriffis Exp $
+
+  26 Jul 2004; Aron Griffis <agriffis@gentoo.org>
+  -mozilla-launcher-1.10.ebuild, mozilla-launcher-1.15.ebuild:
+  Mark 1.15 stable on all arches, trim 1.10
 
 *mozilla-launcher-1.15 (20 Jun 2004)
 
