@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/scorched3d/scorched3d-38.1.ebuild,v 1.2 2005/03/03 20:57:08 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/scorched3d/scorched3d-38.1.ebuild,v 1.3 2005/03/18 16:29:25 mr_bones_ Exp $
 
 inherit wxwidgets games
 
@@ -13,7 +13,8 @@ SLOT="0"
 KEYWORDS="~amd64 ppc x86"
 IUSE="gtk2 mysql"
 
-DEPEND=">=media-libs/libsdl-1.2.4
+DEPEND="virtual/opengl
+	>=media-libs/libsdl-1.2.4
 	>=media-libs/sdl-net-1.2.5
 	>=media-libs/sdl-mixer-1.2.4
 	=x11-libs/wxGTK-2.4*
@@ -21,7 +22,7 @@ DEPEND=">=media-libs/libsdl-1.2.4
 	>=sys-libs/zlib-1.1.4
 	mysql? ( dev-db/mysql )"
 
-S="${WORKDIR}/scorched"
+S=${WORKDIR}/scorched
 
 pkg_setup() {
 	if use gtk2; then
