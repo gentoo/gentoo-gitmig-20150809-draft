@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3111 2004/08/27 12:21:04 dragonheart Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3112 2004/08/27 13:07:20 mattam Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -285,19 +285,10 @@ app-accessibility/speechd-up
 =media-gfx/gimp-print-5.0.0_beta1
 =media-gfx/gimp-print-5.0.0_beta2
 
-<<<<<<< package.mask
-<<<<<<< package.mask
-# <carpaski@gentoo.org> (11 Apr 2004)
-# Internal testing phase
-
-=======
->>>>>>> 1.3089
-=======
 # <carpaski@gentoo.org> (11 Apr 2004)
 # Internal testing phase
 >=sys-apps/portage-2.0.51_pre1
 
->>>>>>> 1.3092
 # <klasikahl@gentoo.org> (09 Apr 2004)
 # Still in the testing phase.
 # Just changed the package name, so I'm fixing the line up.
