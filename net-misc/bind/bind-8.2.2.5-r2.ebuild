@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bind/bind-8.2.2.5-r2.ebuild,v 1.1 2000/11/15 21:40:44 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bind/bind-8.2.2.5-r2.ebuild,v 1.2 2000/11/15 22:57:41 achim Exp $
 
 A=bind-src.tar.gz
 S=${WORKDIR}/src
@@ -22,7 +22,7 @@ src_unpack() {
 
     unpack ${A}
     cd ${S}
-    patch -p1 < ${FILESDIR}/bind-8.2-glibc21.patch
+    patch -p2 < ${FILESDIR}/bind-8.2-glibc21.patch
     cd ${S}/port/linux
     cp Makefile.set Makefile.set.orig
     sed -e 's/CDEBUG=-O -g/CDEBUG=${CFLAGS}/' Makefile.set.orig > Makefile.set
