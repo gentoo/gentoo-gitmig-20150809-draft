@@ -1,9 +1,15 @@
 #!/bin/bash
 # Copyright 2004 The Gentoo Foundation, Pieter Van den Abeele
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap-macos.sh,v 1.3 2004/07/13 03:19:42 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap-macos.sh,v 1.4 2004/07/13 16:32:23 pvdabeel Exp $
 
-source /usr/lib/portage/bin/functions.sh
+# Make sure sudo passwd is asked for
+
+sudo true
+
+# Source functions to have colors and nice output
+
+source /usr/lib/portage/bin/functions.sh 
 
 # This is currently a Mac OS only script. But it could easily be reused
 # for Operating systems such as Solaris, ... If your interested in doing
@@ -18,26 +24,43 @@ echo -e "${GOOD}Gentoo Mac OS ; \e[34;01mhttp://www.gentoo.org/${NORMAL}"
 echo -e "Copyright 2004 The Gentoo Foundation ; Distributed under the GPL v2"
 echo
 
-BEAST=`uname -r | grep 7 | echo "Panther" || echo "Tiger"`
-RELEASE=`uname -r | grep 7 | echo "10.3" || echo "10.4"`
+NAME="Mac OS X"
+RELEASE="10"
 
-sudo uname -r > /etc/gentoo-release
+case "`uname -r`" in
+        6*)
+		NAME="Jaguar"
+		RELEASE="10.2"
+		;;
+	7*)
+		NAME="Panther"
+		RELEASE="10.3"
+		;;
+        8*)
+        	NAME="Tiger"
+		RELEASE="10.4"
+		;;
+esac
 
-ebegin "Portage will attempt taming the ${BEAST} it found"
+sudo ln -sf /usr/portage/profiles/default-macos-${RELEASE} /etc/make.profile
 
-function eaten {
+ebegin "Portage will attempt taming your ${NAME}"
+
+function missing_devtools {
 	ewend 1 
-	echo -e "Please install the Mac OS X developer tools"
+	echo -e "Please install the ${NAME} developer tools"
 	echo
 	exit 1
 }
 
-gcc -v 2> /dev/null || eaten
-echo 
+gcc -v 2> /dev/null || missing_devtools
+
+echo
+ 
 for package in `cat /usr/portage/profiles/default-macos-${RELEASE}/packages.build`; do
 	ebegin " >>> Injecting ${package} " && ewend $?
-	emerge inject ${package} > /dev/null 2> /dev/null 
+	sudo emerge inject ${package} > /dev/null 2> /dev/null 
 done
 
 echo
-echo -e "Portage successfully tamed your ${BEAST}"
+echo -e "Portage successfully tamed your ${NAME}"
