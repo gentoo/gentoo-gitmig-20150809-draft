@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xdirectfb/xdirectfb-1.0_rc5.ebuild,v 1.2 2003/09/06 22:07:08 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xdirectfb/xdirectfb-1.0_rc5.ebuild,v 1.3 2003/11/17 09:24:17 spyderous Exp $
 
 inherit eutils
 
@@ -15,10 +15,6 @@ DESCRIPTION="XDirectFB is a rootless XServer on top of DirectFB"
 SRC_URI="mirror://gentoo/${MY_V}-1.tgz
 	mirror://gentoo/${MY_V}-2.tgz
 	mirror://gentoo/${MY_V}-3.tgz
-	mirror://gentoo/${MY_V}-4.tgz
-	mirror://gentoo/${MY_V}-5.tgz
-	mirror://gentoo/${MY_V}-6.tgz
-	mirror://gentoo/${MY_V}-7.tgz
 	mirror://gentoo/truetype.tar.gz
 	http://www.directfb.org/download/${MY_PN}/${MY_P}.tar.gz"
 HOMEPAGE="http://www.directfb.org"
@@ -82,7 +78,7 @@ src_install() {
 	dohtml ${S}/programs/Xserver/hw/directfb/XDirectFB.1x.html
 
 	cd ${X}
-	dodoc AUTHORS ChangeLog INSTALL README TODO
+	dodoc AUTHORS ChangeLog README TODO
 }
 
 pkg_postinst() {
