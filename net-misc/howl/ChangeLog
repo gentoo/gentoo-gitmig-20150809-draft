@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/howl
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/howl/ChangeLog,v 1.7 2004/07/10 19:02:33 lisa Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/howl/ChangeLog,v 1.8 2004/08/04 04:01:08 latexer Exp $
+
+*howl-0.9.6 (03 Aug 2004)
+
+  03 Aug 2004; Peter Johanson <latexer@gentoo.org> howl-0.9.2.ebuild,
+  howl-0.9.5.ebuild, +howl-0.9.6.ebuild:
+  Bump to newest version, fix a epatch problem, and move the inherit line to the
+  top of a few of the older ebuilds.
 
 *howl-0.9.5 (10 Jul 2004)
 

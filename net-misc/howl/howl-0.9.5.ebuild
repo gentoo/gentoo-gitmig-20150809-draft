@@ -1,8 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/howl/howl-0.9.5.ebuild,v 1.1 2004/07/10 19:02:33 lisa Exp $
-
-IUSE=""
+# $Header: /var/cvsroot/gentoo-x86/net-misc/howl/howl-0.9.5.ebuild,v 1.2 2004/08/04 04:01:08 latexer Exp $
 
 inherit eutils
 
@@ -11,6 +9,8 @@ HOMEPAGE="http://www.porchdogsoft.com/products/howl/"
 SRC_URI="http://www.porchdogsoft.com/download/${P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
+IUSE=""
+
 # -amd64: Even after patching like ppc for correct ENDIANNESS, we have various size problems... hopefully a later version will solve this...
 KEYWORDS="~x86 ~ppc ~sparc -amd64"
 DEPEND="sys-libs/glibc" # sys-devel/automake - needed if we remove the html docs from /usr/share
@@ -26,7 +26,7 @@ src_compile() {
 
 	case "${ARCH}" in
 	ppc)
-		epatch ${FILESDIR}/${PV}-ppc.patch
+		epatch ${FILESDIR}/0.9.2-ppc.patch
 		;;
 	esac
 	econf || die "econf failed"
