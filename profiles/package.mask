@@ -33,7 +33,7 @@
 # robbat2@gentoo.org (05 Aug 2003)
 # Work in progress, some limited testing going on before rolling out to
 # unstable. BIG WARNING: this may break your qmail at the moment!
-=net-mail/qmail-1.03-r11
+>=net-mail/qmail-1.03-r11
 
 # <g2boojum@gentoo.org> 28 May 2003 	 
 # Masking >=openldap-2.1 until db4 stuff gets settled 	 
