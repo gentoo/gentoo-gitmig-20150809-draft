@@ -1,4 +1,6 @@
 MD5 1fb0cef8c20e31d8fee121ebb2205588 metadata.xml 221
 MD5 e303830f1e3ffe6d10edd165ae70913a files/digest-edox-data-0.16.7_pre1 74
+MD5 10e05e29fbd8b90845bc663b76291cb5 files/digest-edox-data-0.16.7_pre3 83
 MD5 af5b2ec68944dbc93ccad26fe5a09910 edox-data-0.16.7_pre1.ebuild 769
-MD5 ad5bbdfa2428f3fa89a3ba345bddf0e5 ChangeLog 362
+MD5 0582f5bc58a688d6c1cd61c8b8f14493 ChangeLog 500
+MD5 d95e3a58b9084ce21f9cf9fe4bb21671 edox-data-0.16.7_pre3.ebuild 787
