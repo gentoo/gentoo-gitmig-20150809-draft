@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.99.3.ebuild,v 1.13 2002/12/21 06:59:59 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.99.3.ebuild,v 1.14 2002/12/21 09:33:44 seemant Exp $
 
 IUSE="nls 3dfx pam truetype 3dnow sse mmx"
 
@@ -145,7 +145,7 @@ src_unpack () {
 	#
 	#  http://people.mandrakesoft.com/~flepied/projects/wacom/
 	#
-	if [ "`uname -r | cut -d. -f1.2`" != "2.2" ]
+	if [ "`uname -r | cut -d. -f1,2`" != "2.2" ]
 	then
 		ebegin "Updating Wacom USB Driver"
 		gzip -dc ${DISTDIR}/xf86Wacom.c.gz > \
