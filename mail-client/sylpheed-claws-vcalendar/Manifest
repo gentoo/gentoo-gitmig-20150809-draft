@@ -2,14 +2,14 @@
 Hash: SHA1
 
 MD5 5d0a878a0318c6d261424c0f55af1345 metadata.xml 392
-MD5 a2b71268afefbb76674c764f71d0e4b1 sylpheed-claws-vcalendar-0.4.ebuild 892
 MD5 47d301914d484c265ca0ba672578f65d ChangeLog 874
+MD5 1c33addd6fefb3dc94b42bfaf5d13d9b sylpheed-claws-vcalendar-0.4.ebuild 892
 MD5 b37803e0c16b331a3c49b1e252491791 files/digest-sylpheed-claws-vcalendar-0.4 65
 MD5 613d1581a8bff15e6aa7e083ae3cca37 files/vcalendar-0.4-ical.patch 2308
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBvoq76J2i8a8J4okRAkfgAJ9XFWhWUrp0P4jRc+KhbIeOinsXDwCfXOyq
-GkcYccXW7U5/md1dVn0YbPw=
-=vRYX
+iD8DBQFBvot86J2i8a8J4okRAncJAJ9lVyszOo6xnpgXR0hqug7FKpX3jQCeIeAV
+gihSJ9ex7P6+MO9ao3kbDpQ=
+=W/tC
 -----END PGP SIGNATURE-----

@@ -4,9 +4,9 @@ Hash: SHA1
 MD5 5d0a878a0318c6d261424c0f55af1345 metadata.xml 392
 MD5 c403b75cf16546b72fd4ab913e73c6a3 sylpheed-claws-0.9.12a-r1.ebuild 6468
 MD5 395d56deab43b42263b67936078d52f9 sylpheed-claws-0.9.12b-r1.ebuild 3258
-MD5 da3190d494363ad920e06758dd0f38c9 ChangeLog 18068
+MD5 ba602ead1e830ab161a3a74f8bbac1f0 sylpheed-claws-0.9.13.ebuild 3514
 MD5 7d53f68ad688777f8fb5cf09a81a9108 sylpheed-claws-0.9.12a.ebuild 4242
-MD5 4c9826245caa2100c336bee008c5db64 sylpheed-claws-0.9.13.ebuild 3518
+MD5 0441d29f446ce2ad0a0399019bf38713 ChangeLog 18068
 MD5 82d3d3968bf15e87b2fc7b5b53c42277 files/gv-procmime-Makefile.in.patch 930
 MD5 bf4c9cd9cb7cdc6ece7d4d327910f0cf files/procmime.patch 977
 MD5 db15d20129837459a3b58fc654301b7c files/digest-sylpheed-claws-0.9.12a 279
@@ -17,7 +17,7 @@ MD5 6647f03568da3cd649c64549db6177c6 files/digest-sylpheed-claws-0.9.13 75
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBvorE6J2i8a8J4okRAo/7AKDLcIq3AFohE5VP/7OHqD7r3S5iAQCfVO9I
-e6LaLOhl1ZLycMGWfBS/tDQ=
-=Omof
+iD8DBQFBvouF6J2i8a8J4okRAkapAKDSwn44HyDw7EPLcmiB51QjqbzjPACgtxqJ
+qBZTcQqacLD/9CGOSx6PSc4=
+=pB3j
 -----END PGP SIGNATURE-----
