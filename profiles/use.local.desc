@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.861 2005/01/13 20:57:46 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.862 2005/01/13 22:13:53 ciaranm Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -31,6 +31,7 @@ app-editors/emacs-cvs:aqua - Build Carbon Emacs
 app-editors/emacs:aqua - Build Carbon Emacs
 app-editors/emacs:multi-tty - Add multi-tty support
 app-editors/emacs:nosendmail - If you do not want to install any MTA
+app-editors/gvim:aqua - Include support for the Aqua / Carbon GUI
 app-editors/gvim:mzscheme - Include support for the mzscheme interpreter
 app-editors/gvim:netbeans - Include netbeans integration support
 app-editors/gvim:nextaw - Include support for the neXtaw GUI
