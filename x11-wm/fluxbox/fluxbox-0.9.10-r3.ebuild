@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-0.9.10-r3.ebuild,v 1.1 2004/09/15 14:28:10 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-0.9.10-r3.ebuild,v 1.2 2004/09/15 20:02:24 ciaranm Exp $
 
 inherit eutils
 
@@ -113,6 +113,9 @@ pkg_postinst() {
 	einfo " "
 	einfo "If you use fluxbox-generate_menu or the default global fluxbox"
 	einfo "menu file, this will already be present."
-	einfo " "
+	ewarn " "
+	ewarn "You must restart fluxbox before using the [include] /directory/"
+	ewarn "feature!"
+	ewarn " "
 	epause
 }
