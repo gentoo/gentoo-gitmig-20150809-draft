@@ -1,0 +1,10 @@
+# ChangeLog for app-misc/mencal
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mencal/ChangeLog,v 1.1 2003/11/15 09:26:39 seemant Exp $
+
+*mencal-2.3 (15 Nov 2003)
+
+  15 Nov 2003; Seemant Kulleen <seemant@gentoo.org> mencal-2.3.ebuild:
+  Calendar tool to easily track menstrual and other cycles. Thanks to: Roman
+  Valls <brainstorm@menta.net> in bug #24012
+
