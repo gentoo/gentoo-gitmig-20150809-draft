@@ -1,6 +1,6 @@
 # Copyright 2002, Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/webmin-0.992.ebuild,v 1.6 2002/08/16 02:21:27 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/webmin-0.992.ebuild,v 1.7 2002/08/23 08:25:28 seemant Exp $
 
 DESCRIPTION="Webmin, a web-based system administration interface"
 SRC_URI="http://www.webmin.com/download/${P}.tar.gz"
@@ -29,7 +29,7 @@ src_install() {
 	cp webmin-pam ${D}/etc/pam.d/webmin
 	echo gentoo > ${D}/usr/libexec/webmin/install-type
 
-	exeino /etc/webmin
+	exeinto /etc/webmin
 	doexe ${FILESDIR}/uninstall.sh
 
 }
