@@ -1,9 +1,14 @@
 # ChangeLog for net-analyzer/midas-nms
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/midas-nms/ChangeLog,v 1.1 2004/10/20 14:17:46 bass Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/midas-nms/ChangeLog,v 1.2 2004/10/20 15:17:45 bass Exp $
+
 
 *midas-nms-2.2f (20 Oct 2004)
 
-  20 Oct 2004; ,,, <bass@gentoo.org> +midas-nms-2.2f.ebuild:
+  20 Oct 2004; Jose Alberto Suarez Lopez <bass@gentoo.org> +files/midas-nms.conf,
+  +files/midas-nms.init, midas-nms-2.2f.ebuild:
+  Added init scripts
+
+  20 Oct 2004; Jose Alberto Suarez Lopez <bass@gentoo.org> +midas-nms-2.2f.ebuild:
   New ebuild
 

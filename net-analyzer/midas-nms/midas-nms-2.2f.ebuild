@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/midas-nms/midas-nms-2.2f.ebuild,v 1.1 2004/10/20 14:17:46 bass Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/midas-nms/midas-nms-2.2f.ebuild,v 1.2 2004/10/20 15:17:45 bass Exp $
 
 inherit webapp
 
@@ -47,6 +47,10 @@ src_install () {
 	dodoc COPYING
 	dodoc docs/CHANGELOG
 	dodoc docs/INSTALL.txt
+
+	# Init files
+	doconfd ${FILESDIR}/midas-nms.conf
+	doinits ${FILESDIR}/midas-nms.init
 }
 
 pkg_postinst() {
@@ -61,5 +65,7 @@ pkg_postinst() {
 	einfo
 	einfo "The conf files are located in /usr/etc/MIDAS*.cf.dist"
 	einfo "Please read INSTALL.txt for more info."
+	einfo
+	einfo "To use the sniffer and IDS you need install snort too."
 	einfo
 }
