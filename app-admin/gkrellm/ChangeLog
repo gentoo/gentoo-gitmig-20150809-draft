@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/gkrellm
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/ChangeLog,v 1.96 2004/10/05 02:58:10 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/ChangeLog,v 1.97 2004/11/06 14:36:37 pylon Exp $
+
+  06 Nov 2004; Lars Weiler <pylon@gentoo.org> gkrellm-2.2.4.ebuild:
+  Stable on ppc.
 
   05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   gkrellm-2.1.25.ebuild:
