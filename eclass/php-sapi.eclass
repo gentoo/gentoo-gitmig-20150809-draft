@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-sapi.eclass,v 1.52 2004/12/14 09:15:02 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-sapi.eclass,v 1.53 2005/01/13 12:08:39 trapni Exp $
 # Author: Robin H. Johnson <robbat2@gentoo.org>
 
 inherit eutils flag-o-matic
@@ -493,11 +493,14 @@ php-sapi_src_compile() {
 
 	php-sapi_is_providerbuild || myconf="${myconf} --without-pear"
 
-	#fixes bug #24373 
-	filter-flags "-D_FILE_OFFSET_BITS=64"
-	filter-flags "-D_FILE_OFFSET_BITS=32"
-	filter-flags "-D_LARGEFILE_SOURCE=1"
-	filter-flags "-D_LARGEFILE_SOURCE"
+# 	# DISABLED filter-flags below, since now we activiely intend to support LFS
+# 	# on Apache httpd and related modules (trapni@gentoo.org), Jan 13 2005
+#	#fixes bug #24373 
+#	filter-flags "-D_FILE_OFFSET_BITS=64"
+#	filter-flags "-D_FILE_OFFSET_BITS=32"
+#	filter-flags "-D_LARGEFILE_SOURCE=1"
+#	filter-flags "-D_LARGEFILE_SOURCE"
+
 	#fixes bug #14067
 	# changed order to run it in reverse for bug #32022 and #12021 
 	replace-flags "-march=k6-3" "-march=i586"
