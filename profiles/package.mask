@@ -446,10 +446,6 @@ x11-libs/qt-embedded
 # masked since there doesn't seem to be a download location
 =net-misc/netstat-nat-1.3
 
-# <nitro@gentoo.org> (05 Aug 2002)
-# masked for testing -- new features
-=net-dns/bind-9.2.1-r2
-
 # <mcummings@gentoo.org> (05 Aug 2002)
 # made workable in cross perl version
 # masked for testing
@@ -533,10 +529,6 @@ sys-apps/mkisofs
 # functions correctly.  Masking while incompatible pointers are figured out
 =x11-libs/libwmfun-0.0.4
 
-# Remote DoS
-# http://online.securityfocus.com/bid/5055
-=net-irc/irssi-0.8.4
-
 # sunflare@gentoo.org (09 Jul 2002)
 # Masked because readline-4.2 is masked in default-1.0.
 # typo fix by drobbins:
@@ -558,8 +550,6 @@ net-mail/exmh
 
 #waiting for the unmasking of gnomelibs (gnome2) BaSS 20 Jun 02
 dev-utils/vdkbuilder
-
-=sys-devel/binutils-2.12.90.0.9
 
 # blizzy@gentoo.org (11 Jul 2002)
 # masked due to b0rkenness
@@ -635,9 +625,6 @@ dev-libs/libiconv
 #previous versions had a security hole (bug #212)
 <net-misc/stunnel-3.22
 
-# Causes slow DVD auth, and do not work with MPlayer
-=media-libs/libdvdcss-1.0.0
-
 #we no longer use sysvinit (rolled into baselayout)
 sys-apps/sysvinit
 
@@ -650,15 +637,11 @@ sys-apps/sysvinit
 #untested, author mentions an error
 media-libs/id3lib-docs
 
-# conflict with linux-sources, to be resolved soon
-sys-kernel/linux-sources-vanilla
-
 # Unmask these two, as the latest (automake-1.6-r1 and autoconf-2.53)
 # should do some autodetection magic.
 #
 # Azarah (26/03/2002)
 #
-<sys-devel/automake-1.6.1-r4
 <sys-devel/autoconf-2.53a
 
 # broken
@@ -668,7 +651,6 @@ app-text/sgml2x
 # unfinished
 app-admin/va-systemimager-server
 app-admin/va-systemimager-client
-<media-video/avifile-0.6.0
 >=berlin-base/berlin-0.2.2
 
 # broken
@@ -684,72 +666,6 @@ app-admin/va-systemimager-client
 
 # have to fix the patches and dependencies
 =app-editors/fte-20010819
-
-# Moved in the big GNOME move
-gnome-office/abiword
-gnome-office/gnumeric
-gnome-office/mrproject
-gnome-office/eog
-gnome-office/sodipodi
-gnome-office/gnome-pim
-gnome-office/gnome-db
-gnome-office/dia
-gnome-libs/libxml2
-gnome-libs/libxslt
-gnome-base/libxml
-gnome-libs/libole2
-gnome-libs/eel
-gnome-base/gal
-gnome-libs/gb
-gnome-libs/gnomemm
-gnome-base/gtkhtml
-gnome-libs/libgda
-gnome-libs/libole2
-gnome-libs/librsvg
-gnome-base/libunicode
-gnome-libs/medusa
-gnome-apps/nautilus
-gnome-base/scrollkeeper
-gnome-office/guppi
-gnome-apps/gnome-pilot-conduits
-gnome-apps/gnome-pilot
-gnome-apps/gnome-audio
-gnome-apps/gnome-games
-gnome-apps/gnome-media
-gnome-apps/gnome-utils
-gnome-apps/bug-buddy
-gnome-apps/mc
-gnome-apps/gthumb
-gnome-apps/gtktalog
-gnome-apps/memprof
-gnome-apps/ee
-gnome-apps/gtop
-gnome-apps/seahorse
-gnome-apps/gnome-iconedit
-gnome-apps/gedit
-gnome-apps/gtkdiff
-gnome-apps/battstat
-gnome-apps/ggv
-gnome-libs/bonobo-conf
-gnome-apps/evolution
-gnome-apps/glade
-gnome-apps/glademm
-gnome-apps/anjuta
-gnome-base/gdk-pixbuf
-gnome-base/glibwww
-gnome-apps/gphoto
-gnome-apps/pan
-gnome-apps/powershell
-gnome-apps/gnucash
-gnome-apps/gnorpm
-gnome-apps/gnofin
-gnome-apps/gabber
-gnome-apps/users-guide
-gnome-apps/gentoo
-gnome-apps/gupsc
-gnome-apps/gwcc
-gnome-apps/netleds_applet
-gnome-apps/gnapster
 
 # seems to be incompatible with autoconf 2.13, / Hallski
 # (seems ok to me, as i build a whole system with 1.4.2-r1,
@@ -769,13 +685,6 @@ gnome-apps/gnapster
 
 #security update
 <sys-libs/zlib-1.1.4
-
-#seemant@gentoo.org 19 Mar 2002
-# Masking avi-xmms because it will not compile against avifile-0.6, instead
-# xmms has a hacked native support in it now for avi playing against avifile-0.6
-# 30 Aug 2002; Seemant Kulleen: avi-xmms is now statically compiled against
-# avifile, so it has been restored to portage.
-<media-video/avifile-0.6
 
 #seemant@gentoo.org 20 Mar 2002
 # Masking medusa-0.5.1-r4 because it requires libtool-1.4.2 which is also masked
@@ -801,18 +710,6 @@ gnome-extra/gal2
 # mkennedy@gentoo.org 19 Apr 2002
 # not fit for release (working on it though)
 app-cdr/cddump
-
-# spider@gentoo.org 9 May 2002
-# Security update see:
-# http://online.securityfocus.com/bid/4339
-# http://online.securityfocus.com/bid/4336
-<media-libs/imlib-1.9.13
-
-# spider@gentoo.org 9 May 2002
-# Security update see:
-# http://bugzilla.redhat.com/bugzilla/show_bug.cgi?id=49294
-# ftp://ftp.freebsd.org/pub/FreeBSD/CERT/advisories/FreeBSD-SA-01%3A48.tcpdump.asc
-<net-analyzer/tcpdump-3.6.2-r1
 
 # spider@gentoo.org 18 May 2002
 # Why did this get installed by profiles? its broken.
