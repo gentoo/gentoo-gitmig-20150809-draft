@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgsf/libgsf-1.9.0.ebuild,v 1.1 2004/05/05 12:13:13 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgsf/libgsf-1.9.0.ebuild,v 1.2 2004/05/21 06:57:01 leonardop Exp $
 
 inherit eutils gnome2
 
@@ -25,12 +25,11 @@ DEPEND="${RDEPEND}
 	doc? ( >=dev-util/gtk-doc-0.9 )"
 
 src_unpack() {
-
 	unpack ${A}
-
 	cd ${S}
-	epatch ${FILESDIR}/${PN}-1.8.2-gtkdoc_fix.patch
 
+	# Fix doc building and destination folder
+	epatch ${FILESDIR}/${P}-gtkdoc_fixes.patch
 }
 
 G2CONF="${G2CONF} $(use_with gnome)"
