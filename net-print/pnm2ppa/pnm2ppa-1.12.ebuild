@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/pnm2ppa/pnm2ppa-1.12.ebuild,v 1.10 2004/06/25 00:41:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/pnm2ppa/pnm2ppa-1.12.ebuild,v 1.11 2004/07/15 03:59:09 agriffis Exp $
 
 # Note: this also d/ls the hp-ppa-howto and installs it under /usr/share/doc/${P}
 
@@ -12,7 +12,7 @@ KEYWORDS="x86 ~amd64"
 SLOT="0"
 DESCRIPTION="Print driver for Hp Deskjet 710, 712, 720, 722, 820, 1000 series"
 LICENSE="GPL-2"
-IUSE=""
+IUSE="gtk ncurses"
 
 # note: this doesn't depend on virtual/lpr, because it can work on its own,
 # just without queueing etc. since it's not just a driver but a standalone
@@ -109,4 +109,3 @@ pkg_postinst() {
 	einfo ""
 	einfo "Note: lpr has been configured for default papersize letter"
 }
-
