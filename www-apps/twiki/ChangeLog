@@ -1,0 +1,31 @@
+# ChangeLog for net-www/twiki
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/twiki/ChangeLog,v 1.1 2004/08/15 15:49:56 stuart Exp $
+
+*twiki-20030201 (15 Aug 2004)
+
+  15 Aug 2004; Stuart Herbert <stuart@gentoo.org>
+  +.#twiki-20030201.ebuild.1.4, +.#twiki-20030201.ebuild.1.6,
+  +.#twiki-20030201.ebuild.1.8, +metadata.xml, +files/twiki.conf,
+  +twiki-20030201.ebuild:
+  Moved from net-www/twiki to www-apps/twiki.
+
+  25 Jun 2004; Aron Griffis <agriffis@gentoo.org> twiki-20030201.ebuild:
+  QA - fix use invocation
+
+  02 Jun 2004; Martin Holzer <mholzer@gentoo.org> twiki-20030201.ebuild:
+  adding S
+
+  10 Mar 2004; Martin Holzer <mholzer@gentoo.org> twiki-20030201.ebuild:
+  fixing verbose. closes 44083
+
+  23 Jan 2004; Martin Holzer <mholzer@gentoo.org> twiki-20030201.ebuild,
+  files/twiki.conf:
+  running outside of apache
+
+*twiki-20030201 (30 Dec 2003)
+
+  30 Dec 2003; Martin Holzer <mholzer@gentoo.org> metadata.xml,
+  twiki-20030201.ebuild:
+  Initial ebuild by myself. Closes 25969
+
