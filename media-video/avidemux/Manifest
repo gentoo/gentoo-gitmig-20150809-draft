@@ -1,7 +1,8 @@
 MD5 4c24428398acd26c384e724f5e2cd71a avidemux-2.0.24.ebuild 2482
 MD5 93a16b7e11776631ce07d332a22fbffc avidemux-2.0.26.ebuild 2197
+MD5 85ddfb424ae59c53341d5cac1ecd4170 avidemux-2.0.28.ebuild 2180
 MD5 7256a686e0dbef20b41142c8741b56e8 avidemux-2.0.20.ebuild 2294
-MD5 6010b02dcc32a45fe3627110a1bf572c ChangeLog 9310
+MD5 480502ee709e4e96e761a93e8365f105 ChangeLog 9536
 MD5 eba326432d26a3e8eb926c52124bbb9c metadata.xml 257
 MD5 0a839c0d95bd12ca890310c77e6eb5b7 avidemux-2.0.22.ebuild 2321
 MD5 a4e7880f69cf02398a2dc82d928a6584 avidemux-2.0.18.ebuild 2445
@@ -13,6 +14,7 @@ MD5 41d1cf2e682c0023c0c445822c13c7ad files/digest-avidemux-2.0.20 68
 MD5 fabe25010e336c02fff55054b90bde1b files/digest-avidemux-2.0.22 68
 MD5 03b785183df3226642178240a15f5a25 files/digest-avidemux-2.0.24 68
 MD5 ed8344c0d166e56f3f15948d7488abbb files/digest-avidemux-2.0.26 68
+MD5 612882d7351307d06e2ba0ff8a1e6c90 files/digest-avidemux-2.0.28 68
 MD5 c8b0002f8b446ffe1d4ae7e2440caf7f files/resize_crash.patch 618
 MD5 17fbb9e32a12d47d86a3f135c74da118 files/patch_jpeg.diff 1819
 MD5 bc99c120921cdbc84402a1ac014f0786 files/gcc2.patch 1044

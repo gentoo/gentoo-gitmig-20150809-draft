@@ -1,7 +1,13 @@
 # ChangeLog for media-video/avidemux
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.49 2004/07/23 21:26:12 zypher Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.50 2004/08/24 20:26:12 zypher Exp $
 
+*avidemux-2.0.24 (12 Aug 2004)
+
+  24 Aug 2004; Marc Hildebrand <zypher@gentoo.org> avidemux-2.0.28.ebuild:
+  Version bump, closes bug #60254.Introducing xvid-1.0 as a dependency.
+  Thanks to Ken Garland for his submission.
+  
   23 Jul 2004; Marc Hildebrand <zypher@gentoo.org> avidemux-2.0.26.ebuild:
   Cleaned up filter-flags, closes bug #58112.
 
