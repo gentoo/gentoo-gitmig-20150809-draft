@@ -1,15 +1,17 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mythweb/mythweb-0.16.ebuild,v 1.7 2005/01/18 20:19:44 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mythweb/mythweb-0.16.20050115.ebuild,v 1.1 2005/01/18 20:19:44 cardoe Exp $
 
 inherit webapp
 
 DESCRIPTION="PHP scripts intended to manage MythTV from a web browser."
 HOMEPAGE="http://www.mythtv.org/"
-SRC_URI="http://www.mythtv.org/mc/${P}.tar.bz2"
+SRC_URI="mirror://gentoo/${P}.tar.bz2"
 IUSE=""
 LICENSE="GPL-2"
-KEYWORDS="x86 ~amd64"
+KEYWORDS="~x86 ~amd64"
+
+S=${WORKDIR}/mythweb
 
 RDEPEND=">=dev-php/mod_php-4.2"
 
