@@ -1,6 +1,9 @@
 # ChangeLog for net-www/apache
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.207 2004/06/19 15:08:24 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.208 2004/06/21 13:34:04 lu_zero Exp $
+
+  21 Jun 2004; Luca Barbato <lu_zero@gentoo.org> apache-1.3.31-r2.ebuild:
+  Marked ppc
 
   19 Jun 2004; Chuck Short <zul@gentoo.org> apache-2.0.49-r2.ebuild,
   files/patches/2.0.49-r2/00_gentoo_base.patch,
