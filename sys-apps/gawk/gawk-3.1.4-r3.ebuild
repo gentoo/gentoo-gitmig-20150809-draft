@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/gawk-3.1.4-r2.ebuild,v 1.1 2005/02/12 04:16:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/gawk-3.1.4-r3.ebuild,v 1.1 2005/02/15 03:39:59 vapier Exp $
 
 inherit eutils toolchain-funcs
 
@@ -15,7 +15,8 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="nls build xml"
 
-RDEPEND="virtual/libc"
+RDEPEND="virtual/libc
+	xml? ( dev-libs/expat )"
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
 
@@ -31,14 +32,26 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-flonum.patch #fedora
 	epatch "${FILESDIR}"/${P}-nextc.patch #fedora
 	epatch "${FILESDIR}"/${P}-uplow.patch #fedora
-	use xml && epatch "${DISTDIR}"/${XML_PATCH} #57857
 	# support for dec compiler.
 	[[ $(tc-getCC) == "ccc" ]] && epatch ${FILESDIR}/${PN}-3.1.2-dec-alpha-compiler.diff
+
+	if use xml ; then
+		mkdir xmlgawk
+		cd xmlgawk
+		unpack ${P}.tar.gz
+		epatch "${DISTDIR}"/${XML_PATCH} #57857
+	fi
 }
 
 src_compile() {
 	econf --bindir=/bin $(use_enable nls) || die
 	emake || die "emake failed"
+	if use xml ; then
+		cd xmlgawk/${P}
+		econf $(use_enable nls) || die
+		emake || die "xmlgawk make failed"
+		cd ../..
+	fi
 
 	cd ../filefuncs
 	emake AWKINCDIR="${S}" CC=$(tc-getCC) || die "filefuncs emake failed"
@@ -46,6 +59,11 @@ src_compile() {
 
 src_install() {
 	make install DESTDIR="${D}" || die "install failed"
+	if use xml ; then
+		newbin xmlgawk/${P}/gawk xmlgawk || die "xmlgawk failed"
+		insinto /usr/include/awk
+		doins xmlgawk/${P}/xml_puller.h || die "xml inc failed"
+	fi
 	cd ../filefuncs
 	make \
 		DESTDIR="${D}" \
@@ -60,22 +78,16 @@ src_install() {
 	# to /bin/(p)gawk-${PV}.
 	local x=
 	for x in gawk pgawk igawk ; do
-		local binpath="/bin"
+		local binpath
+		[[ ${x} == "gawk" ]] \
+			&& binpath="/bin" \
+			|| binpath="/usr/bin"
 
-		case ${x} in
-			igawk|pgawk)
-				binpath="/usr/bin"
-				;;
-		esac
-
-		if [ -f "${D}/bin/${x}" -a ! -f "${D}/bin/${x}-${PV}" ]
-		then
+		if [[ -f ${D}/bin/${x} && ! -f ${D}/bin/${x}-${PV} ]] ; then
 			mv -f ${D}/bin/${x} ${D}/${binpath}/${x}-${PV}
-		elif [ -f "${D}/bin/${x}-" -a ! -f "${D}/bin/${x}-${PV}" ]
-		then
+		elif [[ -f ${D}/bin/${x}- && ! -f ${D}/bin/${x}-${PV} ]] ; then
 			mv -f ${D}/bin/${x}- ${D}/${binpath}/${x}-${PV}
-		elif [ "${binpath}" = "/usr/bin" -a -f "${D}/bin/${x}-${PV}" ]
-		then
+		elif [[ ${binpath} == "/usr/bin" && -f ${D}/bin/${x}-${PV} ]] ; then
 			mv -f ${D}/bin/${x}-${PV} ${D}/${binpath}/${x}-${PV}
 		fi
 
@@ -93,10 +105,9 @@ src_install() {
 
 	# Install headers
 	insinto /usr/include/awk
-	for x in ${S}/*.h ; do
-		# We do not want 'acconfig.h' in there ...
-		[[ -f ${x} && ${x/acconfig.h/} == ${x} ]] && doins ${x}
-	done
+	doins "${S}"/*.h || die "ins headers failed"
+	# We do not want 'acconfig.h' in there ...
+	rm -f "${D}"/usr/include/awk/acconfig.h
 
 	if ! use build ; then
 		cd "${S}"

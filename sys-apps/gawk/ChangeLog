@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/gawk
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/ChangeLog,v 1.51 2005/02/12 04:16:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/ChangeLog,v 1.52 2005/02/15 03:39:59 vapier Exp $
+
+*gawk-3.1.4-r3 (14 Feb 2005)
+
+  14 Feb 2005; Mike Frysinger <vapier@gentoo.org> -gawk-3.1.4-r2.ebuild,
+  +gawk-3.1.4-r3.ebuild:
+  Build xmlgawk separately from the normal gawk so we dont link against
+  libexpat (which is in /usr/lib) #81793.
 
 *gawk-3.1.4-r2 (11 Feb 2005)
 
