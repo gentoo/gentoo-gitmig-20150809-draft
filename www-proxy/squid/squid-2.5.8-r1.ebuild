@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-proxy/squid/squid-2.5.8-r1.ebuild,v 1.1 2005/02/23 20:06:05 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-proxy/squid/squid-2.5.8-r1.ebuild,v 1.2 2005/02/28 11:18:21 eradicator Exp $
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 #lame archive versioning scheme..
 S_PV=${PV%.*}
@@ -94,6 +94,8 @@ src_compile() {
 		myconf="${myconf} --enable-storeio='ufs,diskd,coss,aufs,null' "
 		myconf="${myconf} --enable-async-io "
 	fi
+
+	export CC=$(tc-getCC)
 
 	./configure \
 		--prefix=/usr \
