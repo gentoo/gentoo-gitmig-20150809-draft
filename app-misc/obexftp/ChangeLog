@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/obexftp
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/obexftp/ChangeLog,v 1.4 2003/03/15 10:25:15 jje Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/obexftp/ChangeLog,v 1.5 2003/10/01 06:57:49 george Exp $
+
+*obexftp-0.10.3 (30 Sep 2003)
+
+  30 Sep 2003; George Shapovalov <george@gentoo.org> obexftp-0.10.3 :
+  new version, openobex is still at 1.0.0.
 
 *obexftp-0.10.2 (12 Mar 2003)
 
