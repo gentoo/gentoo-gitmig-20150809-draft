@@ -1,17 +1,19 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/elinks/elinks-0.4.2.ebuild,v 1.8 2004/02/01 10:52:57 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/elinks/elinks-0.9.1.ebuild,v 1.1 2004/02/01 10:52:57 spock Exp $
 
-IUSE="gpm zlib ssl ipv6 X nls lua"
+IUSE="gpm zlib ssl ipv6 X nls lua guile"
 
+MY_P=${P/_/}
+S=${WORKDIR}/${MY_P}
 DESCRIPTION="Advanced and well-established text-mode web browser"
 HOMEPAGE="http://elinks.or.cz"
-SRC_URI="http://elinks.or.cz/download/${P}.tar.bz2
-	mirror://gentoo/${P}.conf.bz2"
+SRC_URI="http://elinks.or.cz/download/${MY_P}.tar.bz2
+	http://dev.gentoo.org/~spock/portage/distfiles/${P}.conf.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc sparc"
+KEYWORDS="~x86 ~ppc ~sparc"
 
 DEPEND="virtual/glibc
 	>=app-arch/bzip2-1.0.2*
@@ -21,7 +23,8 @@ DEPEND="virtual/glibc
 	X? ( >=x11-base/xfree-4.2.1* )
 	zlib? ( >=sys-libs/zlib-1.1.4 )
 	lua? ( =dev-lang/lua-4.0* )
-	gpm? ( >=sys-libs/ncurses-5.2* >=sys-libs/gpm-1.20.0-r5 )"
+	gpm? ( >=sys-libs/ncurses-5.2* >=sys-libs/gpm-1.20.0-r5 )
+	guile? ( >=dev-util/guile-1.6.4-r1 )"
 
 RDEPEND="virtual/glibc
 	>=app-arch/bzip2-1.0.2*
@@ -31,18 +34,14 @@ RDEPEND="virtual/glibc
 	zlib? ( >=sys-libs/zlib-1.1.4 )
 	lua? ( =dev-lang/lua-4.0* )
 	gpm? ( >=sys-libs/ncurses-5.2* >=sys-libs/gpm-1.20.0-r5 )
-	X? ( >=x11-base/xfree-4.2.1* )"
+	X? ( >=x11-base/xfree-4.2.1* )
+	guile? ( >=dev-util/guile-1.6.4-r1 )"
 
 src_unpack() {
 	unpack ${A}
 	cd ${WORKDIR}
 
 	mv ${P}.conf ${PN}.conf
-	if ! use nls; then
-		# Build with only english support
-		echo 'english' > ${S}/intl/index.txt
-		cd ${S}/intl && ./gen-intl
-	fi
 }
 
 src_compile() {
@@ -57,14 +56,15 @@ src_compile() {
 		`use_with ssl openssl` \
 		`use_with X x` \
 		`use_enable ipv6` \
-		`use_with lua`
+		`use_with lua` \
+		`use_with guile`	|| die
 
 	emake || die "compile problem"
 }
 
 src_install() {
-	dobin src/elinks
-	doman elinks.1 elinks.conf.5 elinkskeys.5
+
+	einstall || die
 
 	insopts -m 644 ; insinto /etc/elinks
 	doins ${WORKDIR}/elinks.conf
@@ -72,9 +72,10 @@ src_install() {
 	newins contrib/keybind.conf keybind.conf.sample
 
 	dodoc AUTHORS BUGS ChangeLog INSTALL NEWS README SITES THANKS TODO doc/*.*
-	docinto contrib ; dodoc contrib/{README,completion.tcsh,colws.diff,elinks[-.]vim*}
-	docinto contrib/lua ; dodoc contrib/lua/{*.lua,elinks-remote}
-	docinto contrib/conv ; dodoc contrib/conv/*.*
+	docinto contrib ; dodoc contrib/{README,colws.diff,elinks[-.]vim*}
+	insinto /usr/share/doc/${PF}/contrib/lua ; doins contrib/lua/{*.lua,elinks-remote}
+	insinto /usr/share/doc/${PF}/contrib/conv ; doins contrib/conv/*.*
+	insinto /usr/share/doc/${PF}/contrib/guile ; doins contrib/guile/*.scm
 }
 
 pkg_postinst() {
@@ -86,5 +87,9 @@ pkg_postinst() {
 	einfo
 	einfo "Please have a look at /etc/elinks/keybind-full.sample and"
 	einfo "/etc/elinks/keybind.conf.sample for some bindings examples."
+	einfo
+	einfo "If you have compiled ELinks with Guile support, you will have to"
+	einfo "copy internal-hooks.scm and user-hooks.scm from /usr/share/doc/${PF}/contrib/guile/"
+	einfo "to ~/.elinks/"
 	echo
 }
