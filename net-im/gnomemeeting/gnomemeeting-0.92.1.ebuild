@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author Fabrice Alphonso <fabrice@alphonso.dyndns.org>
-# $Header: /var/cvsroot/gentoo-x86/net-im/gnomemeeting/gnomemeeting-0.92.1.ebuild,v 1.1 2002/07/03 21:57:23 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gnomemeeting/gnomemeeting-0.92.1.ebuild,v 1.2 2002/07/03 23:08:57 raker Exp $
 
 S="${WORKDIR}/GnomeMeeting-${PV}"
 SRC_URI="http://www.gnomemeeting.org/downloads/latest/sources/GnomeMeeting-${PV}.tar.gz"
@@ -10,14 +10,15 @@ DESCRIPTION="Gnome NetMeeting client"
 SLOT="0"
 
 DEPEND="virtual/glibc
-	>=gnome-base/gnome-libs-1.4.1.4
-	>=dev-libs/pwlib-1.2.12-r3
-	>=net-libs/openh323-1.8.0-r1
-	>=media-libs/gdk-pixbuf-0.16.0
-	>=dev-libs/openssl-0.9.6c
-	>=gnome-base/gconf-1.0.8
+	>=sys-devel/autoconf-2.52
+	>=dev-libs/pwlib-1.2.19
+	>=net-libs/openh323-1.8.8
 	>=net-nds/openldap-2.0.21
-	=x11-libs/gtk+-1.2*"
+	>=dev-libs/libIDL-0.7.4
+	>=net-libs/linc-0.5.0
+	>=gnome-base/gnome-common-1.2.4-r3
+	>=gnome-base/gnome-vfs-2.0.0
+	>=gnome-base/libgnomeui-2.0.0
 
 src_compile() {
 
