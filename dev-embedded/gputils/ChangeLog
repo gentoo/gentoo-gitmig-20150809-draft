@@ -1,0 +1,30 @@
+# ChangeLog for dev-util/gputils
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gputils/ChangeLog,v 1.1 2003/10/20 06:44:06 robbat2 Exp $
+
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
+
+*gputils-0.11.6 (22 Sep 2003)
+
+  22 Sep 2003; Stefan Jones <cretin@gentoo.org> :
+  New unstable version
+	
+*gputils-0.11.4 (27 Jun 2003)
+
+  27 Jun 2003; Stefan Jones <cretin@gentoo.org> :
+  New unstable version
+	
+*gputils-0.10.6 (27 Jun 2003)
+  
+  27 Jun 2003; Stefan Jones <cretin@gentoo.org> :
+  New stable version
+
+*gputils-0.10.2 (24 Apr 2002)
+
+  24 Apr 2002; Karl Trygve Kalleberg <karltk@gentoo.org> gputils-0.10.2.ebuild files/digest-gputils-0.10.2 :
+  
+  GPUTILS is a collection of tools for the Microchip  (TM) PIC 
+  microcontrollers. It includes gpasm, gplink, and gplib. It's distributed 
+  under the terms of the GNU Public License. See the gnupic page 
+  (http://www.gnupic.org) for other GNU PIC tools such as gpsim, a gputils 
+  compatible simulator.
