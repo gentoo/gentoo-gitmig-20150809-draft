@@ -1,6 +1,11 @@
 # ChangeLog for gnome-base/gnome-volume-manager
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-volume-manager/ChangeLog,v 1.4 2004/09/20 01:08:29 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-volume-manager/ChangeLog,v 1.5 2004/09/23 14:42:49 foser Exp $
+
+*gnome-volume-manager-1.0.2-r1 (23 Sep 2004)
+
+  23 Sep 2004; foser <foser@gentoo.org> gnome-volume-manager-1.0.2-r1.ebuild :
+  Add a few patches that should make g-v-m work with hal 0.2.98 (#64855)
 
   19 Sep 2004; Travis Tilley <lv@gentoo.org>
   gnome-volume-manager-1.0.2.ebuild:
