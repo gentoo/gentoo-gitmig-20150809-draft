@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg2-movie/mpeg2-movie-1.5.ebuild,v 1.1 2001/04/30 11:25:45 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg2-movie/mpeg2-movie-1.5.ebuild,v 1.2 2001/05/09 10:21:22 achim Exp $
 
 P=mpeg2-movie-${PV}
 A=mpeg2_movie-${PV}.tar.gz
@@ -20,10 +20,9 @@ src_unpack() {
 }
 src_compile() {
 
-    cd ${S}
-    export CFLAGS="${CFLAGS} -I/usr/X11R6/include"
+    export CFLAGS="${CFLAGS} `gtk-config --cflags`"
     try ./configure
-    try make
+    try make -e CFLAGS=\"${CFLAGS}\"
 
 }
 

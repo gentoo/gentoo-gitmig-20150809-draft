@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Your Name <your email>
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/DirectFB-0.9.0.ebuild,v 1.1 2001/05/02 16:46:35 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/DirectFB-0.9.0.ebuild,v 1.2 2001/05/09 10:21:22 achim Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -9,7 +9,7 @@ DESCRIPTION="DirectFB is a thin library on top of the Linux fb devices"
 SRC_URI="http://www.directfb.org/download/${A}"
 HOMEPAGE="http://www.directfb.org"
 
-DEPEND="virtual/glibc >=media-libs/freetype-2.0.1"
+DEPEND="virtual/glibc >=media-libs/freetype-2.0.1 >=media-libs/jpeg-6"
 
 src_compile() {
 
