@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/DirectFB-0.9.20.ebuild,v 1.1 2003/10/28 19:52:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/DirectFB-0.9.20.ebuild,v 1.2 2003/10/29 20:48:19 vapier Exp $
 
 IUSE_VIDEO_CARDS="ati128 cle266 cyber5k i810 matrox neomagic nsc nvidia radeon savage tdfx"
 
@@ -64,4 +64,11 @@ src_install() {
 
 	dodoc AUTHORS COPYING ChangeLog NEWS README* TODO
 	dohtml -r docs/html
+}
+
+pkg_postinst() {
+	ewarn "Each DirectFB update in the 0.9.xx series"
+	ewarn "breaks DirectFB related applications."
+	ewarn "Please run \`revdep-rebuild\` which can be"
+	ewarn "found by emerging the package 'gentoolkit'."
 }
