@@ -1,0 +1,8 @@
+# ChangeLog for <CATEGORY>/<PACKAGE_NAME>
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/streamripper/ChangeLog,v 1.1 2002/07/23 18:39:19 aliz Exp $
+
+*streamripper-1.32 (23 Jul 2002)
+
+  28 Jul 2002; Daniel Ahlberg <aliz@gentoo.org> streamripper-1.32.ebuild : 
+  Initial import. Ebuild submitted by Chris Bainbridge <chrb@dcs.ed.ac.uk>.  
