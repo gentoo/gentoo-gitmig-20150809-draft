@@ -1,6 +1,12 @@
 # ChangeLog for net-www/mplayerplug-in
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mplayerplug-in/ChangeLog,v 1.26 2004/07/22 01:33:02 jbms Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mplayerplug-in/ChangeLog,v 1.27 2004/10/27 06:56:11 josejx Exp $
+
+*mplayerplug-in-2.70 (27 Oct 2004)
+
+  27 Oct 2004; Joseph Jezak <josejx@gentoo.org> +mplayerplug-in-2.70.ebuild:
+  Added gecko-sdk requirement, should build cross platform now. Also, various
+  QA issues fixed. See bug #50822.
 
   18 Jul 2004; Jeremy Maitin-Shepard <jbms@gentoo.org>
   mplayerplug-in-2.66.ebuild:
