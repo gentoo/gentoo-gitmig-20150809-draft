@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/multisync/multisync-0.81-r1.ebuild,v 1.3 2004/02/29 00:20:26 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/multisync/multisync-0.81-r1.ebuild,v 1.4 2004/03/06 16:28:18 liquidx Exp $
 
 DESCRIPTION="Client to sync apps with WinCE or mobile devices"
 
@@ -21,18 +21,24 @@ KEYWORDS="x86"
 # opie  - opie plugin                ( local )
 # ldap  - ldap plugin - experimental
 
-IUSE="evo irmc opie ldap"
+IUSE="evo irmc opie ldap bluetooth"
 
 DEPEND="virtual/glibc
 		>=gnome-base/libbonobo-2.2
+		>=gnome-base/libgnomeui-2.2
 		>=gnome-base/libgnome-2.2
+		>=dev-libs/glib-2
+		>=gnome-base/gconf-2
 		>=gnome-base/gnome-vfs-2.2
 		>=gnome-base/ORBit2-2.8.2
 		>=dev-libs/openssl-0.9.6j
 		evo?  ( =net-mail/evolution-1.4* )
 		irmc? ( >=sys-apps/irda-utils-0.9.15
-		         >=net-wireless/bluez-utils-2.3
-		         >=dev-libs/openobex-1.0.0 )
+				>=dev-libs/openobex-1
+				bluetooth? ( >=net-wireless/bluez-libs-2.3
+							 >=net-wireless/bluez-sdp-1.0
+					         >=net-wireless/bluez-utils-2.3 )
+				)
 		opie? ( >=net-ftp/curl-7.10.5 )
 		ldap? ( >=net-nds/openldap-2.0.27
 				>=dev-libs/cyrus-sasl-2.1.4 )"
