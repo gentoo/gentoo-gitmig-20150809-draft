@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/modlogan
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/modlogan/ChangeLog,v 1.10 2003/12/18 00:54:03 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/modlogan/ChangeLog,v 1.11 2004/01/04 17:01:46 weeve Exp $
+
+  04 Jan 2004; Jason Wever <weeve@gentoo.org> modlogan-0.7.18.ebuild,
+  modlogan-0.7.4-r1.ebuild, modlogan-0.8.10-r1.ebuild, modlogan-0.8.10.ebuild:
+  Marked 0.8.10-r1 stable on sparc and updated copyright dates on all ebuilds.
 
 *modlogan-0.8.10-r1 (18 Dec 2003)
 
