@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/DBD-mysql
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-mysql/ChangeLog,v 1.28 2004/12/29 23:23:13 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-mysql/ChangeLog,v 1.29 2005/01/20 22:32:07 gustavoz Exp $
+
+  20 Jan 2005; Gustavo Zacarias <gustavoz@gentoo.org> DBD-mysql-2.9004.ebuild:
+  Keyworded ~sparc
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
