@@ -1,6 +1,6 @@
 # ChangeLog for app-office/koffice
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/ChangeLog,v 1.19 2003/03/13 19:03:24 doctomoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/ChangeLog,v 1.20 2003/03/18 16:07:33 weeve Exp $
 
   13 Mar 2003; Olivier Reisch <doctomoe@gentoo.org> koffice-1.2.1.ebuild :
   Marked ppc stable
@@ -12,6 +12,9 @@
   rfom the 'languageChange undeclared' bug, which it fixes.
 
 *koffice-1.2.1-r1 (28 Jan 2003)
+
+  18 Mar 2003; Jason Wever <weeve@gentoo.org> koffice-1.2.1-r1.ebuild:
+  Added ~sparc to keywords.
 
   28 Jan 2003; Dan Armak <danarmak@gentoo.org> ChangeLog  :
 
