@@ -1,16 +1,17 @@
 <?xml version='1.0'?>
-<!-- $Id: gentoo-howto.xml,v 1.17 2001/08/09 23:19:08 danarmak Exp $ -->
+<!-- $Id: gentoo-howto.xml,v 1.18 2001/08/12 19:33:40 drobbins Exp $ -->
 
 <guide link="/doc/gentoo-howto.html">
 <title>Gentoo Linux Developers HOWTO</title>
 <author title="Author"><mail link="pete@gentoo.org">Peter Gavin</mail></author>
+<author title="Author"><mail link="drobbins@gentoo.org">Daniel Robbins</mail></author>
 <abstract>This document describes the Gentoo Linux Portage system, how
 to create new packages for Gentoo, and is also meant to be somewhat of
 a standard for the Gentoo Developers. It is a work in progress, and is
 constantly being updated and changed. It is by no means
 complete.</abstract>
-<version>0.55</version>
-<date>20 May 2001</date>
+<version>1.0</version>
+<date>11 Aug 2001</date>
 
 <!--
 
@@ -41,22 +42,44 @@ VI. Package Dependencies
 
 <section>
 <title>Introduction</title>
-<body><p>The portage tree is a heirarchy, in which the first level is the category,
-and the second is the name of the package.
+<body><p>The Portage tree is typically found at <path>/usr/portage</path>
+and is organized in a heirarchical structure consisting of category directories,
+followed by specific package directories.  Here's an example; you can find
+the <path>util-linux-2.11g.ebuild</path> file in the <path>/usr/portage/sys-apps/util-linux</path>
+directory.  There may be several other versions of <c>util-linux</c> ebuilds alongside
+<path>util-linux-2.11g.ebuild</path>.  This is because <e>all ebuilds for a particular
+package (irregardless of version)</e>, share the same <path>mycat/mypkg</path> directory in 
+<path>/usr/portage</path>.
 </p></body>
 </section>
 
 <section>
 <title> What (not) to put in the Portage tree</title>
-<body><p>The Portage tree should only include ebuild files, and other
-files in the <path>files</path> directory for each package. Generally, no binary
-files should be placed in the portage tree. No files that can
-be downloaded from other sources (such as patches written by
-other people) should be put here. No patches you write
-yourself should be compressed.
-</p></body>
-</section>
 
+<body><p>In general, the Portage tree should only be used for storing
+<path>.ebuild</path> files, as well as any relatively small companion files,
+such as patches or sample configuration files.  These types of files should be
+placed in the <path>/usr/portage/mycat/mypkg/files</path> directory to keep the
+main <path>mycat/mypkg</path> directory uncluttered.  Also, in general, it's
+not a good idea for developers to add binary (non-ASCII) files to CVS.
+However, if this is necessary (for example, if you need to add a small PNG
+graphic for whatever reason, be sure to add it to CVS by using the <c>-kb</c>
+option, like so: </p>
+
+<pre>
+# <i>cvs add -kb myphoto.png</i>
+</pre>
+
+<p>The <c>-kb</c> option tells CVS that <path>myphoto.png</path> is a binary
+file and should be treated specially.  For example, merging the differences
+between two different versions of this file should not be allowed to happen,
+for obvious reasons.  Also, speaking of merging changes, any patches you add to
+Portage should generally <e>not</e> be compressed.  This will allow CVS to
+merge changes and inform developers of conflicts correctly.  </p>
+
+</body>
+</section>
+<!--
 <section>
 <title>Categories</title>
 <body><p>The categories are defined as follows:</p>
@@ -120,81 +143,136 @@ then the category needs to be added to
 </note>
 </body>
 </section>
-
+-->
 <section>
 <title>The files Directory</title>
-<body><p>Under each package subdirectory is a <path>files</path> directory. You
-should place any patches, configuration files, and other
-auxillary files your package might require in this
-directory. Patches you create yourself just to get your
-package to build should be called <path>${PF}-gentoo.diff</path>. You
-should not compress these diffs, since they should not be big
-enough to require compressing, and cvs does not play well
-with binary files.
-</p><p>Please add a suffix or prefix such as <path>${PVR}</path> to the tail of every file you put into
-the <path>files</path> directory, so that the files used for each
-individual version of your ebuild scripts are distinguishable
-from one another, and so that the changes between different
-revisions are visible.
-</p><p>If you have many files that should go into the files
-directory, you should create a subdirectory <path>files/${PVR}</path>, and put all these files
-in there. If you use this method, you do not need to suffix
-the names of the files in this directory with the ebuild version.
-</p></body>
+<body>
+
+<p>As noted earlier, under each package subdirectory is a <path>files</path>
+directory.  Any  patches, configuration files, or other ancillary files your
+package might require should be added to this directory. You may want to
+consider naming patches you create yourself just to get your package to build
+with a version-specific name, such as <path>mypkg-1.0-gentoo.diff</path>.  Also
+note that the <path>gentoo</path> extension informs people that this patch was
+created by us, the Gentoo Linux developers, rather than having been grabbed
+from a mailing list or somewhere else.  Again, you should not compress these
+diffs because cvs does not play well with binary files.  </p>
+
+<p>Consider adding a suffix such as <path>mypkg-1.0</path> to the tail of every
+file you put into the <path>files</path> directory, so that the files used for
+each individual version of your ebuild scripts are distinguishable from one
+another, and so that the changes between different revisions are visible.  This
+is generally a really good idea. :)  You may want to use a different suffix if
+coarser or finer granularity is required.</p>
+
+<p>If you have many files that should go into the files directory, consider
+creating subdirectories such as <path>files/mypkg-1.0</path> and putting the
+relevant files in the appropriate subdirectory.  If you use this method, you do
+not need to add suffix the names of the files in this directory, which is often
+more convenient.</p>
+
+</body>
 </section>
 </chapter>
 	
 <chapter>
-<title>ebuild files</title>
+<title>ebuild scripts</title>
 <section>
 <title>Introduction</title>
-<body><p>ebuild files are the basis for the entire portage
-system. They contain all the information required to build a
-package, and every installed package requires one of these
-files. ebuild files are essentially just bash scripts that
-contain a few functions and environment variable settings. The
-<c>ebuild</c> command takes care of the rest of the details, such as
-merging the package into the filesystem and recording the
-package into the package database.
-</p></body>
+<body>
+
+<p>ebuild scripts are the basis for the entire portage system. They contain all
+the information required to download, unpack, compile and install a set of
+sources, as well as how to perform any optional pre/post install/removal or
+configuration functions.  While most of Portage is written in Python, the ebuild
+scripts themselves are written in bash, since using bash allows us to call commands
+as we would from the command-line.  One of the important design principles behind
+ebuild scripts is to have the commands therein be analogs of those one would type
+on the command-line if installing the package manually.  For this purpose, having
+bash syntax is a good thing.</p>
+
+<p>
+Ebuild scripts are interpreted by the <c>ebuild</c> and <c>emerge</c> commands.
+Think of the <c>ebuild</c> command as a low-level building tool.  It can build
+and install a single ebuild, but no more.  It will check to see if dependencies
+are satisfied, but it will not attempt to auto-resolve them.  On the other hand
+<c>emerge</c> is a high level engine for <c>ebuild</c>, and has the ability to
+auto-merge dependencies if needed, perform "pretend" merges so that user can see
+what ebuilds <e>would</e> be merged, and more.  Generally, <c>emerge</c> blows
+<c>ebuild</c> out of the water except in one area.  With <c>ebuild</c>, you can
+incrementally step through the various parts of a package installation (fetching,
+unpacking, compiling, installing and merging) one at a time.  For developers,
+this is an invaluable debugging tool, because it allows you to isolate ebuild
+problems to a specific portion of the build process.
+</p>
+
+</body>
 </section>
 
 <section>
 <title>Naming ebuild Files</title>
-<body><p>ebuild file names are in four sections:</p>
-<p>The first section is the package name, which should only
-contain lowercase letters, the digits 0-9, and hyphen ('-')
-characters.
-</p><p>The second section is the version of the package, which should
-normally be the same as the version on the main source
-tarball. The version is normally made up of two or three numbers
-separated by periods, such as <c>1.2</c> or <c>4.5.2</c> (although very long period-separated number sequences <e>are</e> supported), and may have a
-single letter immediately following the last digit, e.g., <c>1.4b</c>
-or <c>2.6h</c>. This letter should <e>not</e> be used to signify alpha or
-beta status for the package. There are four special suffixes that
-may be used for these packages: <c>_alpha</c>, <c>_beta</c>, <c>_pre</c> and <c>_rc</c>. Each
-of these suffixes may be immediately followed my a number,
-e.g., <c>linux-2.4.0_pre10</c>.  Assuming identical version parts, an <c>_alpha</c> package is
-older than <c>_beta</c>, <c>_beta</c> older than <c>_pre</c>, and <c>_pre</c> older than <c>_rc</c>.
-An <c>_rc</c> package is older than a package without an underscore prefix (i.e. <c>linux-2.4.0</c>),
-and <c>linux-2.4.0</c> is older than a package with a single letter prefix, i.e. <c>linux-2.4.0b</c>.
-As you would expect, the <c>linux-2.4.0b</c> package is considered older than <c>linux-2.4.0c</c>.
-All this versioning information is important, as Portage uses it internally to determine whether one package
-or ebuild is newer than another with the same category and name.
+<body>
+
+<p>Ebuild file names consist of four logical sections:</p>
+
+<p>The first section is the package name, which should only contain lowercase
+letters, the digits 0-9, and any number of single hyphen ('-') characters.
+Some examples are <c>util-linux</c>, <c>sysklogd</c> and <c>glibc</c>.  </p>
+
+<p>The second section is the version of the package, which should normally be
+same as the version on the main source tarball. The version is normally made up
+of two or three numbers separated by periods, such as <c>1.2</c> or
+<c>4.5.2</c> (although very long period-separated number sequences <e>are</e>
+supported), and may have a single letter immediately following the last digit,
+e.g., <c>1.4b</c> or <c>2.6h</c>. The package version is joined to the package
+name with a hyphen; for example: <c>foo-1.0</c>, <c>bar-2.4.6</c>, etc.</p>
+
+<impo>If you're thinking of using a trailing letter in your version string,
+note that the trailing letter should <e>not</e> be used to signify alpha or beta
+status for the package, since alphas and betas are <e>prereleases</e> and 
+letter revisions are <e>newer versions</e>.  This is an important distinction
+because Portage uses an ebuild's version number to determine if it is newer
+or older than other packages with the same category and name.  It's very
+important that version numbers faithfully represent the version of the 
+package so that Portage properly performs its dependency checking duties.</impo>
+
+<p>The third (optional) section contains a special suffix; either
+<c>_alpha</c>, <c>_beta</c>, <c>_pre</c> or <c>_rc</c>. Any of these suffixes
+may be immediately followed my a number, e.g., <c>linux-2.4.0_pre10</c>;
+Assuming identical version parts, an <c>_alpha</c> package is older than
+<c>_beta</c>, <c>_beta</c> older than <c>_pre</c>, and <c>_pre</c> older than
+<c>_rc</c>.  
 </p>
 
-<p>The third section of the package name is the Gentoo Linux-specific <e>revision</e> number,
-which is specified by <c>-r#</c>, where <c>#</c> is a number,
-e.g. <c>package-4.5.3-r3</c>. This revision number is independent of
-the version of the source tarball, but if you need to make
-non-trivial changes to your ebuild file, you should copy the
-ebuild file to a new file with the revision number
-incremented by 1. Initial releases normally have no revision
-number, e.g. <c>package-4.5.3</c> and default to a revision of zero.
+<note>An <c>_rc</c> package is older than a package without an underscore
+prefix (i.e. <c>linux-2.4.0</c>), and <c>linux-2.4.0</c> is older than a
+package with a single letter prefix, i.e. <c>linux-2.4.0b</c>.  As you would
+expect, the <c>linux-2.4.0b</c> package is considered older than
+<c>linux-2.4.0c</c>.  Again this versioning information is important, as
+Portage uses it internally to determine whether one package or ebuild is newer
+than another with the same category and name.</note>
 
-</p><p>The fourth section of the ebuild file name is always the
-<c>.ebuild</c> extension.
-</p></body>
+<p>The fourth (optional) section of the package name is the Gentoo Linux-specific <e>revision</e> number,
+which is specified by <c>-r#</c>, where <c>#</c> is an integer,
+e.g. <c>package-4.5.3-r3</c>. This revision number is independent of
+the version of the source tarball and is used to inform people that 
+a new and improved Gentoo Linux rev of a particular package is available.
+</p>
+
+<p>
+If you make non-trivial improvements to an existing ebuild file, you should
+copy the ebuild file to a new file with the revision number incremented by 1.
+Initial releases normally have no revision number, e.g.
+<path>package-4.5.3</path> and are considered by Portage to have a a revision
+number of zero.  This means that counting goes as follows: <c>1.0</c> (initial
+version), <c>1.0-r1</c>, <c>1.0-r2</c>, etc.
+</p>
+
+<p>And I suppose that we actually have a <e>fifth</e> section of the ebuild name -- the
+<c>.ebuild</c> extension itself.
+</p>
+
+</body>
 </section>
 
 <section>
@@ -237,24 +315,99 @@ no spaces. Make sure you set up your editor to put tabstops at 4 spaces. Always 
 <section>
 <title><c>USE</c> Variables</title>
 
-<body><p>The USE variable is set in <path>/etc/make.conf</path>. It
-contains several keywords, normally called &quot;USE variables&quot;
-by the developers, separated by spaces, that when present, enable and
-disable certain features of packages that you install. You can check
-for the presence of a USE variable in an <c>ebuild</c> that you create
-using the <c>use &lt;variable&gt;</c> command. The <c>use</c> command
-prints out the name of every variable that is present in both
-<c>USE</c> and its command line. You would normally use this like
-so:</p>
+<body>
+
+<p>The purpose of USE variables is to allow you to configure Portage to gobally
+and automatically enable or disable certain <e>optional build-time</e>
+features.  Here's an example.  Let's say you're a GNOME fan, and you'd like any
+ebuild that has the option of compiling-in optional GNOME support to do
+so.  In this case, you'd add <c>gnome</c> to the <c>USE</c> variable in
+<path>/etc/make.conf</path>, and then Portage will automatically add optional
+GNOME functionality to packages if it is available.  Likewise, if you don't
+want optional GNOME features to be added to your ebuilds if they are available,
+simply edit <path>/etc/make.conf</path> and make sure that <c>gnome</c> is
+<e>not</e> set in the <c>USE</c> variable.  Gentoo Linux has an almost
+overwhelming number of USE options, allowing you to have your system configured
+exactly the way you want it.
+
+<note> If you unset a USE variable (for example, removing <c>gnome</c> from
+<c>USE</c>), this will only instruct Portage to disable <e>optional</e>
+build-time support for GNOME.  However, if you <c>emerge</c> an ebuild that
+<e>requires</e> GNOME, the package will obviously have GNOME support enabled, as you
+would expect.  This also means taht
+GNOME will be automatically installed (as a dependency) if it hasn't been already.  That's why
+it's always a good idea to do an <c>emerge --pretend</c> before doing the
+"real" <c>emerge</c>; that way, you'll always know that you're going to get!
+</note>
+
+In your own ebuilds, you can check whether a USE variable is set by using the
+<c>use &lt;variable&gt;</c> command. The <c>use</c> command prints out the name
+of every variable that is present in both <c>USE</c> and its command line. You
+would normally use this command as follows:</p>
+
 <p><c>if [ &quot;`use X`&quot; ]; then commands; fi</c></p>
-<p>USE variables can also be used to set dependencies. For example,
-you may only want to require a package if a certain USE variable is set. This is done by using the syntax <c>variable? (package-1.0-r1)</c> in the DEPEND variable for your ebuild. In this example, <c>package-1.0-r1</c> will only be required if <c>variable</c> is present in your <c>USE</c> setting.</p>
+
+
+<p>USE variables can also be used to set dependencies. For example, you may
+only want to require a package if a certain USE variable is set. This is done
+by using the syntax <c>variable? ( mycat/mypackage-1.0-r1 )</c> in the DEPEND
+variable for your ebuild. In this example, <c>mycat/mypackage-1.0-r1</c> will
+only be required if <c>variable</c> is present in <c>USE</c></p>
+
+<p>Here's an important tip about how to use <c>USE</c>.  Most of the time,
+a package will have a <c>./configure</c> script used to perform configuration
+steps.  Generally, if your ebuild uses <c>./configure</c>, any optional build-time
+functionality will be enabled or disabled by passing the appropriate arguments to
+the <c>./configure</c> command.  Here's the best way to handle this.  First, 
+find out whether the particular <c>./configure</c> option that you want to add
+<c>USE</c> support for is is <e>enabled</e> or <e>disabled</e> by default.  If 
+it's <e>enabled</e> by default, then do things as follows:</p>
+<pre>
+DEPEND="gnome? ( &gt;=gnome-base/gnome-1.4 )"
+
+src_compile() {
+	local myvar
+	myvar=""
+	if [ -z "`use gnome`" ]
+	then
+		myvar="--disable-gnome"
+	fi
+	try ./configure ${myvar} --prefix=/usr --host=${CHOST}
+	try emake
+}
+</pre>
+<p>
+Above, we only check to see if the <c>gnome</c> USE variable is disabled (<c>-z</c>
+is <c>bash</c>'s way of saying "if empty string").  There's no need to explicitly
+enable GNOME, since for this package, GNOME is enabled by default.  However, if a
+particular feature is <e>disabled</e> by default, you can use this approach:</p>
+<pre>
+DEPEND="gnome? ( &gt;=gnome-base/gnome-1.4 )"
+
+src_compile() {
+	local myvar
+	myvar=""
+	if [ -n "`use gnome`" ]
+	then
+		myvar="--enable-gnome"
+	fi
+	try ./configure ${myvar} --prefix=/usr --host=${CHOST}
+	try emake
+}
+</pre>
+<p>This time, we only explicitly enable GNOME if the <c>GNOME</c> USE variable is set.
+Note that in bash, <c>[ -n "`use gnome`" ]</c> is equivalent to <c>[ "`use gnome`" ]</c>,
+and will be true only if the <c>gnome</c> USE variable is set.</p>
+
 <p>The following USE variables are currently used in Gentoo Linux:</p>
+
 <table>
-<tr><th>Variable</th><th>Description</th><th>Used By</th></tr>
-<tr><ti>X</ti><ti>enable X11 features</ti><ti></ti></tr>
-<tr><ti>alsa</ti><ti>enable the Advanced Linux Sound Architecture</ti><ti><c>sys-kernel</c> packages and others</ti></tr>
-<tr><ti>berkdb</ti><ti>use the Berkeley DB libraries</ti><ti></ti></tr>
+<tr><th>Variable</th><th>Description</th></tr>
+<tr><ti>X</ti><ti>enable use of X.  Often used to enable "token X app" included in a mostly console-based ebuild.</ti></tr>
+<tr><ti>alsa</ti><ti>enable built-in support for the Advanced Linux Sound Architecture.</ti></tr>
+<tr><ti>berkdb</ti><ti>enable built-in support for the Berkeley DB library (any version, as needed)</ti></tr>
+
+
 <tr><ti>bonobo</ti><ti>enable Bonobo</ti><ti><c>gnome</c> packages and others</ti></tr>
 <tr><ti>esd</ti><ti>enable ESound</ti><ti><c>gnome</c> packages and others</ti></tr>
 <tr><ti>gdbm</ti><ti>use GNU dbm</ti><ti></ti></tr>
@@ -290,21 +443,39 @@ you may only want to require a package if a certain USE variable is set. This is
 <section>
 <title>Introduction to the FHS</title>
 <body>
-<p>The filesystem standard used in Gentoo Linux is the FHS,
-short for Filesystem Heirarchy Standard, version 2.0. A simplified
+<p>The filesystem layout standards used in Gentoo Linux closely follow the  FHS,
+short for <e>Filesystem Heirarchy Standard</e>. A simplified
 description of the standard is given here; for a complete
-specification go to <uri>http://www.ibiblio.org/pub/Linux/docs/fhs/</uri>.</p>
+specification go to <uri>http://www.pathname.com/fhs/</uri>.</p>
 </body>
 </section>
 
 <section>
 <title>How to fit your packages into the filesystem</title>
 <body><p>Usually, if the package uses autoconf and automake, the
-default installation destinations are fine, with a few exceptions:</p>
+default installation destinations are mostly correct, with a few exceptions:</p>
 <ul>
-<li>most packages go into prefix <path>/usr</path>; X11 specific programs and libraries can go into prefix <path>/usr/X11R6</path>; GNOME packages go into <path>/opt/gnome</path>; and KDE packages go into <path>/opt/kde</path></li>
-<li>man pages always go into <path>${prefix}/share/man</path>, not <path>${prefix}/man</path>; you can set this with <c>./configure --mandir=${prefix}/share/man</c></li>
-<li>info pages always go into <path>${prefix}/share/info</path>, not <path>${prefix}/info</path>; you can set this with <c>./configure --mandir=${prefix}/share/info</c></li>
+
+<li>If you're installing a program into <path>/bin</path>, <path>/sbin</path>,
+<path>/usr/bin</path> or <path>/usr/sbin</path>, then the program's
+corresponding man page should be installed into the <path>/usr/share/man</path>
+tree.  This can often be accomplished by specifying a  <c>./configure
+--mandir=${prefix}/share/man</c> in the ebuild.</li>
+
+<li>In general, you should have ebuilds install their files into the
+<path>/usr</path> tree.  X11-specific programs and libraries should use
+<path>/usr/X11R6</path>, GNOME packages should be placed in
+<path>/opt/gnome</path> and KDE packages should be placed in
+<path>/opt/kde[vers]</path>.</li>
+
+
+<li>GNU info files should always be installed to <path>/usr/share/info</path>,
+<e>even if the info files are about X11, GNOME or KDE-specific programs or
+tools</e>.  Make a note: <path>/usr/share/info</path> is the <e>only</e>
+official location for GNU info files.  Since most <c>./configure</c> scripts
+default to installing GNU info files in <c>/usr/info</c>, it's often necessary
+to call <c>./configure</c> with the <c>--infodir=/usr/share/info</c> argument.
+</li>
 </ul>
 </body>
 </section>

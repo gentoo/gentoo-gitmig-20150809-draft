@@ -274,7 +274,7 @@
 <a href="http://www.qksrv.net/click-477620-5033206" target="_top" >
 <img src="http://www.qksrv.net/image-477620-5033206" width="88" height="31" alt="Factory-direct memory upgrades" border="0"/></a><br/><br/>
 User Docs:<br/>
-						<a class="altlink" href="/doc/faq.html">FAQ</a><br/>
+						<font color="#ff0000">Updated!</font> <a class="altlink" href="/doc/faq.html">FAQ</a><br/>
 						<a class="altlink" href="/doc/desktop.html">Desktop Guide</a><br/>
 						<a class="altlink" href="/doc/portage-user.html">Portage User Guide</a><br/>
 						<a class="altlink" href="/doc/build.html">Build CD Install Guide</a><br/>
@@ -286,7 +286,7 @@ User Docs:<br/>
 						Developer Docs:<br/>
 						<!-- <font color="#ff0000">New!</font> <a class="altlink" href="/doc/cvs-tutorial.html">CVS Tutorial</a><br/> -->
 						<!-- can enable line above on Sep 13 2001 --> 
-						<a class="altlink" href="/doc/gentoo-howto.html">Development HOWTO</a><br/>
+						<font color="#ff0000">Updated 11 August, 2001:</font> <a class="altlink" href="/doc/gentoo-howto.html">Development HOWTO</a><br/>
 						<a class="altlink" href="/doc/xml-guide.html">XML Documentation Guide</a><br/>
 						<br/>
 	

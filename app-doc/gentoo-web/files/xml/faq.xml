@@ -6,8 +6,8 @@
 
 <abstract>This FAQ is a collection of questions and answers collected from the gentoo-dev mailing list and from IRC -- if you have any questions (or answers!) to add, please contact an author.</abstract>
 
-<version>1.0.2</version>
-<date>31 May 2001</date>
+<version>1.0.3</version>
+<date>11 Aug 2001</date>
 
 <chapter>
 	<title>Getting Started</title>
@@ -43,6 +43,18 @@ information.</p>
 	</section>
 
 	<section>
+		<title>I'm finding things to be really unstable and I'm using "-O9 -ffast-math -fomit-frame-pointer" optimizations.  What gives?</title>
+		<body>
+		<p>When you use any optimizations beyond <c>-O3</c>, you're really taking the risk of having broken packages.
+		Very aggressive optimizations sometimes cause the compiler to streamline the assembly code to the point where
+		it doesn't quite do the same thing anymore.  <e>Loc-Dog</e> (on IRC) uses <c>-O3 -mcpu=1686 -march=i686 -fforce-addr -fomit-frame-pointer -funroll-loops -frerun-cse-after-loop -frerun-loop-opt -malign-functions=4</c>, which is about
+		as much as I'd want to push global optimization settings.  Beyond this, it's best to use ultra-high optimizations
+		only with specific packages where you really need that extra 2%, and where you can easily test the package 
+		to ensure that it hasn't been optimized into oblivion.</p>
+		</body>
+	</section>
+
+	<section>
 		<title>What's the default root password after installation?</title>
 		<body><p>The default password is blank; hit enter.</p></body>
 	</section>
@@ -57,10 +69,8 @@ information.</p>
 		<title>How do I enable devfs?</title>
 		<body>
 <p>
-<e>devfs</e> support is compiled-in to our standard kernels.  To enable it, add a <c>devfs=mount</c> to your <c>GRUB</c> kernel boot options so that the line looks something like <c>kernel /boot/boot/bzImage devfs=mount foo=bar</c>  The kernel will then mount the <path>/dev</path> <e>devfs</e> filesystem automatically at boot-time.
+<e>devfs</e> support is compiled-in to our standard kernels, and is enabled by default on Gentoo Linux 1.0_rc5 and above.  If you're using 1.0_rc5 or greater, you don't need to do anything special to get devfs working; it's already active.  However, if you are using a version of Gentoo Linux <e>prior</e> to version 1.0_rc5, add <c>devfs=mount</c> to your <c>GRUB</c> kernel boot options so that the line looks something like <c>kernel /boot/boot/bzImage devfs=mount foo=bar</c>  The kernel will then mount the <path>/dev</path> <e>devfs</e> filesystem automatically at boot-time.
 </p>
-<note>As of Gentoo Linux 1.0-rc5, <e>devfs</e> is automatically enabled
-at boot-time; <c>devfs=mount</c> is no longer needed.</note>
 	</body>
 	</section>
 	<section>
@@ -85,9 +95,8 @@ at boot-time; <c>devfs=mount</c> is no longer needed.</note>
 		<c>emerge --usepkg system</c>, or (c) forgetting the
 		<c>notail</c> option when mounting <path>/boot</path>.
 		You can get more information on grub, including how to
-		debug grub from the grub prompt, by reading the grub
-		tutorial at 
-		<uri>http://www-105.ibm.com/developerworks/education.nsf/linux-onlinecourse-bytitle/0F1731DC664023B7862569D0005C44AF?OpenDocument</uri>.
+		debug grub from the grub prompt, by reading the 
+		<uri link="http://www-105.ibm.com/developerworks/education.nsf/linux-onlinecourse-bytitle/0F1731DC664023B7862569D0005C44AF?OpenDocument">IBM developerWorks Grub tutorial</uri>.
 		</p>
                 </body>
 	</section>
@@ -176,7 +185,7 @@ Portage is designed to allow you to interact with it at all levels.</p>
 		<title>What happened to <path>/etc/make.defaults</path>?</title>
 		<body>
 
-<p>As of portage 1.5 onwards, <path>/etc/make.defaults</path> is antiquated; 
+<p>As of Portage 1.5 onwards, <path>/etc/make.defaults</path> is antiquated; 
 if you have portage-1.5-r1 or above installed then you can safely delete it.
 This file has been replaced by <path>/etc/make.profile/make.defaults</path> (<path>/etc/make.profile</path> should actually be a symlink to <path>/usr/portage/profiles/default</path>),
 which contains system profile-specific default settings. The priority order of
@@ -199,7 +208,8 @@ the various configuration files is as follows (highest first):
 		<c>emerge --pretend update</c> to list upgradable
 		packages, but the actual upgrading has to be done
 		package by package (using <c>ebuild</c> or 
-		<c>emerge</c>).</p></body>
+		<c>emerge</c>).  Otherwise, things may get merged in
+		a slightly non-optimal order.</p></body>
 	</section>
 
 	<section>
@@ -239,6 +249,7 @@ the various configuration files is as follows (highest first):
 		<title>Why is KDE not reading <path>/etc/profile</path>?</title>
 		<body><p>You need to add <c>--login</c> to the first line in <path>/opt/kde2.1/bin/startkde</path>, so that it reads as follows:</p>
 		<pre>#!/bin/sh --login</pre>
+		<p>This fix has been added to recent versions of KDE.</p>
 		</body>
 	</section>
 </chapter>
@@ -250,17 +261,17 @@ the various configuration files is as follows (highest first):
 		<body>
 
 
-		<p>If you have been using ReiserFS since before kernel 2.4.4, then it's
-		recommended that you back up all your important data and recreate your
-		ReiserFS filesystems with a 2.4.4+ kernel and a recent version of
-		<path>reiserfsutils</path>.  If this isn't possible, try using a recent
-		Gentoo Linux <uri
+		<p>Since kernel 2.4.4, ReiserFS has been very stable and ready for
+		production environments.  However, if you have been using ReiserFS
+		since before kernel 2.4.4, then it's recommended that you back up all
+		your important data and recreate your ReiserFS filesystems with a
+		2.4.4+ kernel and a recent version of <path>reiserfsutils</path>.  If
+		this isn't possible, try using a recent Gentoo Linux <uri
 		path="http://www.ibiblio.org/gentoo/snapshots/disks/">boot/rootdisk</uri>
 		to boot your system, and then run <c>reiserfsck --rebuild-tree</c> on
 		the corrupted filesystem.  This should make the filesystem consistent
 		again, although you may have lost some files or directories due to
-		corruption.  Since kernel 2.4.4, ReiserFS has been very stable and
-		ready for production environments.</p>
+		corruption.</p>
 
 
 		</body>
@@ -296,12 +307,12 @@ command:</p>
 
 	<section>
 		<title>How oftern are new releases made?</title>
-		<body><p>New releases are announced on the <uri link="http://cvs.gentoo.org/mailman/listinfo/gentoo-announce">gentoo-announce</uri> mailing lists<!-- TODO: approximatley every X months -->.</p></body>
+		<body><p>New releases are announced on the <uri link="http://cvs.gentoo.org/mailman/listinfo/gentoo-announce">gentoo-announce</uri> mailing list<!-- TODO: approximatley every X months -->.</p></body>
 	</section>
 
 	<section>
-		<title>I would like a package to be added to portage; how would I go about this?</title>
-		<body><p>Send an email containing your ebuild to the <uri link="http://cvs.gentoo.org/mailman/listinfo/gentoo-dev">Developer Discussion</uri> mailing list, and it will be comitted to cvs. If you are making regular packages, contact <mail link="drobbins@gentoo.org">Daniel Robbins</mail> for write access to the Portage CVS tree.</p></body>
+		<title>I would like a package to be added to Portage; how would I go about this?</title>
+		<body><p>Send an email containing your ebuild to the <uri link="http://cvs.gentoo.org/mailman/listinfo/gentoo-ebuild">gentoo-ebuild</uri> mailing list, and it will be committed to cvs. </p></body>
 	</section>
 
 	<section>
@@ -324,7 +335,7 @@ command:</p>
 
 	<section>
 		<title>Can I buy a CD of Gentoo Linux?</title>
-		<body><p>Not currently, although we will most likely be selling CDs in the future. 
+		<body><p>Not currently, although we will most likely be selling CDs in the future.  Stay tuned!
 		</p></body>
 	</section>
 </chapter>
