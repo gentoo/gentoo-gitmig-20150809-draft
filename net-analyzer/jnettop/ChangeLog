@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/jnettop
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/jnettop/ChangeLog,v 1.6 2004/11/20 03:39:04 weeve Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/jnettop/ChangeLog,v 1.7 2005/01/09 07:34:40 dragonheart Exp $
+
+*jnettop-0.10.1 (09 Jan 2005)
+
+  09 Jan 2005; Daniel Black <dragonheart@gentoo.org> +jnettop-0.10.1.ebuild:
+  Version bump as per bug #75190. Thanks Vanquirius <marcelogoes@gmail.com>
 
   19 Nov 2004; Jason Wever <weeve@gentoo.org> jnettop-0.9.ebuild:
   Added ~sparc keyword.
