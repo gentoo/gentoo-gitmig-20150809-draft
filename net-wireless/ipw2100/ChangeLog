@@ -1,0 +1,14 @@
+# ChangeLog for net-wireless/ipw2100
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw2100/ChangeLog,v 1.1 2004/03/10 06:18:07 latexer Exp $
+
+*ipw2100-0.29 (10 Mar 2004)
+
+  10 Mar 2004; Peter Johanson <latexer@gentoo.org> ipw2100-0.29.ebuild,
+  metadata.xml:
+  Initial commitebuild ipw2100-0.29.ebuild digest! Great thanks to Intel for
+  finally stepping up and delivering this. Ebuild by me, will be submitting
+  better makefiles upstream soon to make life easier. This driver is still in
+  development, and does not support WEP or ad-hoc mode yet, but should work for
+  basic functionality. Consider yourself warned.
+
