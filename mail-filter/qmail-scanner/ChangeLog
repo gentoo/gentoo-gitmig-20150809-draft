@@ -1,6 +1,11 @@
 # ChangeLog for mail-filter/qmail-scanner
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/qmail-scanner/ChangeLog,v 1.8 2004/08/17 13:33:02 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/qmail-scanner/ChangeLog,v 1.9 2004/08/18 14:34:21 st_lim Exp $
+
+*qmail-scanner-1.23-r2 (18 Aug 2004)
+
+  18 Aug 2004; Lim Swee Tat <st_lim@gentoo.org> +qmail-scanner-1.23-r2.ebuild:
+  Version bumped the q-s patch. Using new system for using that patch.
 
   17 Aug 2004; Aron Griffis <agriffis@gentoo.org>
   qmail-scanner-1.22-r1.ebuild, qmail-scanner-1.23-r1.ebuild:

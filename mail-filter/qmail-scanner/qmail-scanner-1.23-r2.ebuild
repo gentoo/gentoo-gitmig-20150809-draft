@@ -1,15 +1,16 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/qmail-scanner/qmail-scanner-1.23.ebuild,v 1.1 2004/08/14 21:53:44 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/qmail-scanner/qmail-scanner-1.23-r2.ebuild,v 1.1 2004/08/18 14:34:21 st_lim Exp $
 
 inherit fixheadtails gcc eutils
 
+Q_S_DATE=20040817
 DESCRIPTION="E-Mail virus scanner for qmail."
 HOMEPAGE="http://qmail-scanner.sourceforge.net/"
-SRC_URI="mirror://sourceforge/qmail-scanner/${P}.tgz"
-	#spamassassin? (http://xoomer.virgilio.it/j.toribio/qmail-scanner/download/q-s-1.22st-20040606.patch.gz)"
+SRC_URI="mirror://sourceforge/qmail-scanner/${P}.tgz
+		http://xoomer.virgilio.it/j.toribio/qmail-scanner/download/q-s-${PV}st-${Q_S_DATE}.patch.gz"
 
-IUSE="" #spamassassin
+IUSE="spamassassin"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -26,8 +27,8 @@ DEPEND=">=dev-lang/perl-5.6.1-r1
 	  mail-mta/qmail-mysql
 	)
 	>=app-arch/unzip-5.42-r1
-	virtual/antivirus"
-	#spamassassin ( >=mail-filter/spamassassin-2.63 )
+	virtual/antivirus
+	spamassassin? ( >=mail-filter/spamassassin-2.64 )"
 
 pkg_setup() {
 	enewgroup qscand 210
@@ -47,7 +48,7 @@ pkg_preinst() {
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	#use spamassassin && epatch ${DISTDIR}/q-s-1.22st-20040606.patch.gz
+	epatch ${DISTDIR}/q-s-${PV}st-${Q_S_DATE}.patch.gz
 	ht_fix_file autoupdaters/* configure
 
 	EXTRA_VIRII="bagle,beagle,mydoom,sco,maldal,mimail,novarg,shimg,bugler,cissi,cissy,dloade,netsky,qizy"
@@ -57,7 +58,7 @@ src_unpack() {
 
 src_compile () {
 	local myconf
-	#use spamassassin && myconf="--virus-to-delete yes --sa-quarantine 2.1 --sa-delete 4.2 --sa-reject yes --sa-subject SPAM: --sa-delta 0.5 --sa-alt yes"
+	use spamassassin && myconf="--virus-to-delete yes --sa-quarantine 2.1 --sa-delete 4.2 --sa-reject yes --sa-subject SPAM: --sa-delta 0.5 --sa-alt yes"
 
 	PATH=${PATH}:/opt/f-prot:/opt/vlnx ./configure \
 	--domain localhost \
