@@ -1,6 +1,12 @@
 # ChangeLog for net-firewall/iptables
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/ChangeLog,v 1.40 2004/07/14 23:30:37 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/ChangeLog,v 1.41 2004/08/18 22:08:21 aliz Exp $
+
+  18 Aug 2004; Daniel Ahlberg <aliz@gentoo.org> iptables-1.2.11-r2.ebuild,
+  files/ip6tables-1.2.9-r1.confd, files/ip6tables-1.2.9-r1.init,
+  files/iptables-1.2.9-r1.confd, files/iptables-1.2.9-r1.init:
+  Enable saving state when stopping service, closing #60680.
+  Unmasking on x86 and amd64.
 
   10 Jul 2004; Daniel Ahlberg <aliz@gentoo.org> files/ip6tables.init:
   Fix typo in init file, closing #56537.

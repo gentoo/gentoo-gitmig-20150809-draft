@@ -4,3 +4,6 @@ IP6TABLES_SAVE="/var/lib/ip6tables/rules-save"
 
 #Options to pass to iptables-save and iptables-restore 
 SAVE_RESTORE_OPTIONS="-c"
+
+#Save state on stopping iptables
+SAVE_ON_STOP="yes"
