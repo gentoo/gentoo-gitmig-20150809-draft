@@ -1,6 +1,18 @@
 # ChangeLog for sys-kernel/linux-sources
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-sources/ChangeLog,v 1.1 2002/02/01 21:53:38 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-sources/ChangeLog,v 1.2 2002/02/14 05:08:01 drobbins Exp $
+
+*linux-sources-2.4.17-r4 (13 Feb 2002)
+
+  13 Feb 2002; Daniel Robbins <drobbins@gentoo.org>: XFS was updated from "26
+  Jan 2002" to "13 Feb 2002"; IDE patch updated from "01192002" to "02072002";
+  RML preempt patch was updated from 2.4.17-1 to 2.4.17-3; irqrate-a1 was
+  removed (closing bug #396 and possibly others); acpi-20020208-2.4.17 was
+  added but then removed.  It conflicts with stock aic7xxx SCSI driver and a
+  bunch of other stuff; bug report sent "upstream" to their bug tracker at
+  http://www.sourceforge.net/projects/acpi and also recorded in our bug tracker
+  at http://bugs.gentoo.org/show_bug.cgi?id=689.  We will add this patch back
+  once these various issues have been resolved.
 
 *linux-sources-2.4.17-r3 (1 Feb 2002)
 
