@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 251de8bf23a54466d0507c90b08c2e25 Chart-Math-Axis-0.2.ebuild 636
-MD5 5862224e341668091d1570adacf632f8 ChangeLog 1423
-MD5 0e7aaf7a2cd5057b668b472186643826 Chart-Math-Axis-0.3.ebuild 672
-MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 d7ef27ea4cd1d4e046483090ee4b0b1c ChangeLog 1614
 MD5 51e1aed9a7c49141275e414a36cb5e02 Chart-Math-Axis-0.1.ebuild 637
-MD5 2a7e71f307cddad9738628a3d6a7bc98 files/digest-Chart-Math-Axis-0.3 70
-MD5 66da962d11aa969bc67b277f4a67e8a6 files/digest-Chart-Math-Axis-0.2 70
+MD5 251de8bf23a54466d0507c90b08c2e25 Chart-Math-Axis-0.2.ebuild 636
+MD5 1de5cde309bb99869e28e0d87e3bb723 Chart-Math-Axis-0.3.ebuild 670
+MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 f28471872eafa67b8683a6b3f1a494d9 files/digest-Chart-Math-Axis-0.1 70
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFB8aM/ugEuf3OQ0akRAivWAKCNzcYQ/ffvTSVDZHFMFeMilsDYnwCeLqZG
-FNLWodZMCjKd3k9W73KWlrc=
-=ZtNW
------END PGP SIGNATURE-----
+MD5 66da962d11aa969bc67b277f4a67e8a6 files/digest-Chart-Math-Axis-0.2 70
+MD5 2a7e71f307cddad9738628a3d6a7bc98 files/digest-Chart-Math-Axis-0.3 70

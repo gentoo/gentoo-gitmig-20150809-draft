@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 5ec8ff5e10731c4f865d51821b0f01b9 Cgi-Simple-0.06.ebuild 514
 MD5 03cce0c123015d9d1f22c4837b7638d5 Cgi-Simple-0.075.ebuild 534
-MD5 dcbaf2c36a758e895e9836c053ffcede ChangeLog 1381
+MD5 7a97be00fbceda55821f8cf07abdff27 Cgi-Simple-0.077.ebuild 516
+MD5 26358454866d01ef3d30a2acc8e03733 ChangeLog 1471
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 3a3a4bbd08f141e36a0c81bbc3b9fb46 Cgi-Simple-0.077.ebuild 520
 MD5 60825ecec90e5b15b6e2a3b15646d435 files/digest-Cgi-Simple-0.06 67
 MD5 d18cb181078892142788055992f3a09b files/digest-Cgi-Simple-0.075 68
 MD5 c35cce0f59f2b47d8d59b5b605ba0f86 files/digest-Cgi-Simple-0.077 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFB8k1AKRy60XGEcJIRAh4+AJ48ci5KLI2G0s0/CLrqeZPLzevL8wCdFKLH
-vKAX2LqnmmSEfgQ1rHvfSn8=
-=BIYI
------END PGP SIGNATURE-----

@@ -1,22 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 bd814da4690094b21a32c0d490f6e9cc ChangeLog 2166
-MD5 63b1372e46bfe45fa5bb12fde4c5d56e Class-MakeMethods-1.008.ebuild 704
-MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 8e63e18880d75807b1aae351806a7309 Class-MakeMethods-1.009.ebuild 711
+MD5 7ac57d97e6e4376034bdeeee623a0a40 ChangeLog 2267
 MD5 86312ca6c4e44bef37c936f7f607a5d4 Class-MakeMethods-1.005-r1.ebuild 707
 MD5 8a93053bb8c91ceca0cf786ee82006d7 Class-MakeMethods-1.005.ebuild 704
 MD5 dae4658cddf51a8ed5bd4bbdfffc62fd Class-MakeMethods-1.006.ebuild 706
-MD5 5df222d237d1a388a47630abf07276cb files/digest-Class-MakeMethods-1.005-r1 74
+MD5 63b1372e46bfe45fa5bb12fde4c5d56e Class-MakeMethods-1.008.ebuild 704
+MD5 6ad89e5bcaecf857f2ae8d72c205f109 Class-MakeMethods-1.009.ebuild 709
+MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 5df222d237d1a388a47630abf07276cb files/digest-Class-MakeMethods-1.005 74
-MD5 71396e578ffcfa6be6464b548159bc0d files/digest-Class-MakeMethods-1.009 75
+MD5 5df222d237d1a388a47630abf07276cb files/digest-Class-MakeMethods-1.005-r1 74
 MD5 96da3ff7cfe7d7e926a9e2d265f8218c files/digest-Class-MakeMethods-1.006 75
 MD5 ad380599067cb0c2ed982da169ce03ff files/digest-Class-MakeMethods-1.008 75
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFB8aACugEuf3OQ0akRAnSUAJ46zpA2q2azi5mknAHDXZt6BcoVMwCfYTZH
-LhMckHe8v+Ik+TJus9EIfys=
-=DMmF
------END PGP SIGNATURE-----
+MD5 71396e578ffcfa6be6464b548159bc0d files/digest-Class-MakeMethods-1.009 75
