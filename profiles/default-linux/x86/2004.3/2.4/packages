@@ -1,6 +1,6 @@
 # Copyright 2001-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/2004.3/2.4/packages,v 1.1 2004/11/27 15:36:10 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/2004.3/2.4/packages,v 1.2 2004/12/01 23:44:39 johnm Exp $
 
 # For instructions on how this file works (as an inclusion mask, primarily),
 # please refer to ${PORTDIR}/profiles/base/packages
@@ -16,6 +16,7 @@
 <gentoo-sources-2.5
 <grsec-sources-2.5
 <hardened-sources-2.5
+<openmosix-sources-2.5
 <rsbac-sources-2.5
 <uclinux-sources-2.5
 <usermode-sources-2.5
