@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jasmin-sable/jasmin-sable-1.2.7.ebuild,v 1.5 2004/10/16 17:18:47 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jasmin-sable/jasmin-sable-1.2.7.ebuild,v 1.6 2004/10/20 08:37:31 absinthe Exp $
 
 inherit java-pkg
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.sable.mcgill.ca/software/"
 SRC_URI="http://www.sable.mcgill.ca/software/jasmin-sable-1.2.7.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="x86 ~ppc ~amd64"
 IUSE="doc"
 DEPEND=">=virtual/jdk-1.3"
 RDEPEND=">=virtual/jre-1.3"

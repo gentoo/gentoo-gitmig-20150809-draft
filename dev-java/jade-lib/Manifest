@@ -1,14 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 cc4c82e59a1c80fc6a35e1fab710d5a7 jade-lib-7.0.6.ebuild 869
 MD5 a14abf9fae1d34005de33ed43add80ee ChangeLog 890
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
+MD5 13a71f54bac598ac916a7c64c962a5be jade-lib-7.0.6.ebuild 876
+MD5 13a71f54bac598ac916a7c64c962a5be jade-lib-7.0.8.ebuild 876
 MD5 22d07af5bf5a1d1a747820cf86906367 files/digest-jade-lib-7.0.6 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBcVfZ/rLF9B432nYRAmz4AKCbyIFInOT+yIjN5gTOiKjI4xaDuwCdEy9/
-zt6RpjNc91Fyeec6uwcsq18=
-=6h72
------END PGP SIGNATURE-----
+MD5 77e5a5c2abe0588ec02aa2f769aa3bc8 files/digest-jade-lib-7.0.8 63

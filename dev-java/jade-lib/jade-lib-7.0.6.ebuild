@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jade-lib/jade-lib-7.0.6.ebuild,v 1.2 2004/10/16 17:18:08 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jade-lib/jade-lib-7.0.6.ebuild,v 1.3 2004/10/20 08:35:23 absinthe Exp $
 
 inherit java-pkg
 
@@ -9,7 +9,7 @@ SRC_URI="http://jade.dautelle.com/jade-${PV}-src.zip"
 HOMEPAGE="http://jade.dautelle.com/"
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ~ppc ~amd64"
 DEPEND=">=virtual/jdk-1.4
 	>=dev-java/java-config-1.2
 	dev-java/ant
