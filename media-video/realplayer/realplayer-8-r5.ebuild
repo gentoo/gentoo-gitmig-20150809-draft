@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/realplayer/realplayer-8-r5.ebuild,v 1.2 2003/02/10 03:04:04 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/realplayer/realplayer-8-r5.ebuild,v 1.3 2003/02/10 03:04:49 seemant Exp $
 
 inherit nsplugins kde
 
@@ -33,7 +33,7 @@ SRC_URI="x86? http://docs.real.com/docs/playerpatch/unix/rv9_libc6_i386_cs2.tgz"
 
 LICENSE="realplayer8"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha"
+KEYWORDS="x86 ~ppc ~sparc ~alpha"
 
 DEPEND="virtual/glibc"
 RDEPEND="virtual/x11"
