@@ -1,42 +1,35 @@
 # ChangeLog for app-admin/metalog
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-admin/metalog/ChangeLog,v 1.5 2002/07/26 22:59:16 cselkirk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/metalog/ChangeLog,v 1.6 2002/10/12 06:09:16 woodchip Exp $
 
 *metalog-0.6-r10 (15 Jul 2002)
 
-  26 Jul 2002; Calum Selkirk <cselkirk@gentoo.org metalog-0.6-r10.ebuild :
+  12 Oct 2002; Donny Davies <woodchip@gentoo.org> :
+  Small fix for #8885.
 
-  Added ppc to KEYWORDS
-  Added RDEPEND
+  26 Jul 2002; Calum Selkirk <cselkirk@gentoo.org metalog-0.6-r10.ebuild :
+  Added ppc to KEYWORDS. Added RDEPEND
 
   15 Jul 2002; Grant Goodyear <g2boojum@gentoo.org> ChangeLog  :
-
   Hack man page to point to /etc/metalog/metalog.conf
 
   24 Apr 2002; Thilo Bangert <bangert@gentoo.org> files/metalog.conf :
-
-  initial release - added examples on how to use the consolelog.sh script
-  from LFS  
+  initial release - added examples on how to use the consolelog.sh script from LFS  
 
   24 Apr 2002; Thilo Bangert <bangert@gentoo.org> files/consolelog.sh :
-  
   initial release
 
-  24 Apr 2002; Thilo Bangert <bangert@gentoo.org> matalog-0.6-r9.ebuild :
-  
+  24 Apr 2002; Thilo Bangert <bangert@gentoo.org> matalog-0.6-r9.ebuild :  
   added consolelog.sh - script to be able to log to a console - from LFS
   
-
 *metalog-0.6-r9 (11 March 2002)
 
   11 March 2002; M.Schlemmer <azarah@gentoo.org> :
-
   Update rc-script to provide "logger".
 
 *metalog-0.6-r8 (1 Feb 2002)
 
-  1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
-  
+  1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :  
   Added initial ChangeLog which should be updated whenever the package is
   updated in any way. This changelog is targetted to users. This means that the
   comments should well explained and written in clean English. The details about

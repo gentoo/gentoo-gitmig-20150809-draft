@@ -1,3 +1,7 @@
+# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/metalog/files/metalog.confd,v 1.2 2002/10/12 06:09:16 woodchip Exp $
+
 # Config file for /etc/init.d/metalog
 
 # Add '-s' if you dont want buffering.  (See things realtime)

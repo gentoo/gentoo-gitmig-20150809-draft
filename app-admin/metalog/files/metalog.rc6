@@ -1,10 +1,9 @@
 #!/sbin/runscript
 # Copyright 1999-2002 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-admin/metalog/files/metalog.rc6,v 1.7 2002/03/11 22:42:07 azarah Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/metalog/files/metalog.rc6,v 1.8 2002/10/12 06:09:16 woodchip Exp $
 
 # NB: Config is in /etc/conf.d/metalog
-
 
 depend() {
 	need clock
@@ -14,7 +13,7 @@ depend() {
 start() {
 	ebegin "Starting metalog"
 	start-stop-daemon --start --quiet --exec /usr/sbin/metalog \
-		-- -p /var/run/metalog.pid ${METALOG_OPTS}
+		-- -p /var/run/metalog.pid --daemonize ${METALOG_OPTS}
 	eend $? "Failed to start metalog"
 }
 
@@ -23,4 +22,3 @@ stop() {
 	start-stop-daemon --stop --quiet --pidfile /var/run/metalog.pid
 	eend $? "Failed to stop metalog"
 }
-
