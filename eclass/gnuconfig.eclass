@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnuconfig.eclass,v 1.9 2003/06/05 22:42:24 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnuconfig.eclass,v 1.10 2003/07/02 08:33:17 woodchip Exp $
 #
 # Author: Will Woods <wwoods@gentoo.org>
 #
@@ -65,5 +65,5 @@ gnuconfig_findnewest() {
                          /usr/share/automake-1.5/config.sub \
                          /usr/share/automake-1.4/config.sub \
                          /usr/share/libtool/config.sub"
-    grep -s '^timestamp' ${locations} | sort -n -t\' -k2 | tail -1 | sed 's,/config.sub:.*$,,'
+    grep -s '^timestamp' ${locations} | sort -n -t\' -k2 | tail -n 1 | sed 's,/config.sub:.*$,,'
 }
