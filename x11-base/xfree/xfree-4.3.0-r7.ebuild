@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r7.ebuild,v 1.12 2004/10/11 13:38:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r7.ebuild,v 1.13 2004/10/21 01:04:37 spyderous Exp $
 
-inherit eutils flag-o-matic gcc xfree
+inherit eutils flag-o-matic toolchain-funcs x11
 
 # Make sure Portage does _NOT_ strip symbols.  We will do it later and make sure
 # that only we only strip stuff that are safe to strip ...
@@ -118,7 +118,7 @@ SRC_URI="${SRC_URI}
 LICENSE="Adobe-X CID DEC DEC-2 IBM-X NVIDIA-X NetBSD SGI UCB-LBL XC-2
 	bigelow-holmes-urw-gmbh-luxi christopher-g-demetriou national-semiconductor
 	nokia tektronix the-open-group todd-c-miller x-truetype xfree86-1.0
-	MIT SGI-B BSD FTL | GPL-2 MSttfEULA"
+	MIT SGI-B BSD || ( FTL GPL-2 ) MSttfEULA"
 SLOT="0"
 KEYWORDS="x86 alpha"
 
@@ -584,7 +584,7 @@ src_compile() {
 	# Compile ucs2any C implementation (patch #9142)
 	ebegin "Compiling ucs2any C implementation"
 		cd ${S}/fonts/util
-		gcc -Wall -o ucs2any ucs2any.c
+		$(tc-getCC) -Wall -o ucs2any ucs2any.c
 		[ ! -d ../../exports/bin/ ] && mkdir -p ../../exports/bin/
 		mv ucs2any ../../exports/bin/
 		ls ${S}/exports/bin/
