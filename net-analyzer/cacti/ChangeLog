@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/cacti
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/ChangeLog,v 1.27 2004/08/07 23:52:22 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/ChangeLog,v 1.28 2004/08/17 09:55:11 eldad Exp $
+
+*cacti-0.8.5a-r1 (17 Aug 2004)
+
+  17 Aug 2004; Eldad Zack <eldad@gentoo.org>
+  +files/cacti-0.8.5a-sql-injection.patch, +cacti-0.8.5a-r1.ebuild:
+  Security patch (SQL Injection): bumping to -r1 with x86 stable.
 
   08 Aug 2004; Tom Martin <slarti@gentoo.org> cacti-0.8.5a.ebuild:
   Typo in DESCRIPTION: frondend -> frontend. Bug 59717.
