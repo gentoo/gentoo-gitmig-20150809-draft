@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/mldonkey
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/ChangeLog,v 1.32 2004/03/12 12:18:29 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/ChangeLog,v 1.33 2004/03/18 07:37:40 eradicator Exp $
+
+  17 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org> files/mldonkey,
+  files/mldonkey.initd:
+  updated init script for small fix.  See bug #44563
 
   12 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org>
   mldonkey-2.5.11.ebuild, mldonkey-2.5.12.ebuild, mldonkey-2.5.16.ebuild:

@@ -1,5 +1,7 @@
 #!/bin/sh
 
+. /etc/conf.d/mldonkey
+
 if [ ! -d ${HOME}/.mldonkey ] ; then
 	echo "Creating subdirectory \".mldonkey\" in your home"
 	echo "to store config files and downloaded files..."

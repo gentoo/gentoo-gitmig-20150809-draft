@@ -20,7 +20,7 @@ start() {
 		einfo "...ok!"
 	fi
 	cd ${BASEDIR}/${SUBDIR}/
-	env HOME=/home/${USER} start-stop-daemon --quiet --start -c ${USER}  \
+	env HOME=${BASEDIR} start-stop-daemon --quiet --start -c ${USER}  \
 		-x /usr/bin/mlnet &>${LOG} &
 	sleep 5
 	if ! pgrep -u ${USER} mlnet >/dev/null
