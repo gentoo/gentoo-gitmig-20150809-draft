@@ -1,8 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmad/libmad-0.15.1b.ebuild,v 1.18 2005/01/01 03:42:40 eradicator Exp $
-
-IUSE="debug"
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmad/libmad-0.15.1b.ebuild,v 1.19 2005/01/12 03:49:52 vapier Exp $
 
 inherit eutils
 
@@ -13,8 +11,15 @@ SRC_URI="mirror://sourceforge/mad/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ~ppc ppc64 ppc-macos sparc x86"
+IUSE="debug"
 
 DEPEND="virtual/libc"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epunt_cxx #74490
+}
 
 src_compile() {
 	local myconf="--enable-accuracy"
@@ -34,7 +39,7 @@ src_compile() {
 }
 
 src_install() {
-	einstall || die "make install failed"
+	make install DESTDIR="${D}" || die "make install failed"
 
 	dodoc CHANGES CREDITS README TODO VERSION
 

@@ -1,17 +1,17 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 a92015f0bcb027ee27d44fc95d2ee416 libmad-0.15.0b-r1.ebuild 1347
-MD5 062383cb5c8aee5b36486472778fd8cc libmad-0.15.1b.ebuild 1340
+MD5 9ce64506004fb91d1238273a1b79bc3e ChangeLog 3345
+MD5 e27c6c220e45ccae74e36b073e492ec5 libmad-0.15.0b-r1.ebuild 1343
+MD5 30fc0aee63b33cadfa428731b742854c libmad-0.15.1b.ebuild 1412
 MD5 527dcfe3ce0f0b53c6b6aa8b82eb930c metadata.xml 252
-MD5 1604f88850f523fd8ee4b63aa5d9744c ChangeLog 3246
-MD5 905a86a6acbc90a60d520e923afcdc07 files/digest-libmad-0.15.0b-r1 138
 MD5 c1a4593204aded75376de13dcd311f36 files/digest-libmad-0.15.1b 66
+MD5 905a86a6acbc90a60d520e923afcdc07 files/digest-libmad-0.15.0b-r1 138
 MD5 89806934195402446d21d1a83f523b11 files/mad.pc 211
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.9.14 (GNU/Linux)
 
-iD8DBQFB1hw8ArHZZzCEUG0RAqXBAJ4zz9v1Ub14hbVvMx4hDmKDGtg81QCeOuM1
-8SByK0nyng3CYYA7ydteBo8=
-=u3E2
+iD8DBQFB5J57roRuSHgZdywRAgH1AJ4zYIm32HlY6cLXLSD8pMr3UI/oFwCghkk9
+Q66SPh3ym5h+0+m3ajy+YAs=
+=wJHb
 -----END PGP SIGNATURE-----
