@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono/mono-1.0.6.ebuild,v 1.1 2005/02/18 19:12:33 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono/mono-1.0.6.ebuild,v 1.2 2005/02/19 22:17:55 latexer Exp $
 
 inherit eutils mono flag-o-matic debug
 
@@ -129,6 +129,8 @@ src_install() {
 	cd ${D}/usr/bin
 	rm {CorCompare,EnumCheck,GenerateDelegate,ictool,IFaceDisco}.exe
 	rm nunit-console.exe
+	# Remove gmcs script, as we don't install gmcs for mono-1.0.x
+	rm gmcs
 
 	# init script
 	exeinto /etc/init.d ; newexe ${FILESDIR}/dotnet.init dotnet
