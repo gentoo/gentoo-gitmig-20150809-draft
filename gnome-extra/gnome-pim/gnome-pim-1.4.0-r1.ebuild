@@ -1,12 +1,11 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-pim/gnome-pim-1.4.0-r1.ebuild,v 1.2 2001/10/07 11:11:08 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-pim/gnome-pim-1.4.0-r1.ebuild,v 1.3 2001/10/19 21:55:57 hallski Exp $
 
-A=${P}.tar.gz
 S=${WORKDIR}/${P}
 DESCRIPTION="gnome-pim"
-SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/gnome-pim/"${A}
+SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/${PN}/${P}.tar.gz"
 HOMEPGAE="http://www.gnome.org/gnome-office/gnome-pim.shtml"
 
 RDEPEND=">=gnome-base/gnome-libs-1.4.1.2-r1"
@@ -24,13 +23,18 @@ src_compile() {
 
 	./configure --host=${CHOST}					\
 		    --prefix=/usr					\
-		    --sysconfdir=/etc $myconf || die
+		    --sysconfdir=/etc					\
+		    --localstatedir=/var/lib				\
+		    $myconf || die
 
 	emake || die
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	make prefix=${D}/usr						\
+	     sysconfdir=${D}/etc					\
+	     localstatedir=${D}/var/lib					\
+	     install || die
 
 	dodoc AUTHORS COPYING* ChangeLog NEWS README*
 }
