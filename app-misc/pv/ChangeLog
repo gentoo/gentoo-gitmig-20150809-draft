@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/pv
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/pv/ChangeLog,v 1.1 2004/04/20 00:53:03 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/pv/ChangeLog,v 1.2 2004/04/20 07:35:29 dholm Exp $
+
+  20 Apr 2004; David Holm <dholm@gentoo.org> pv-0.8.1.ebuild:
+  Added to ~ppc.
 
 *pv-0.8.1 (19 Apr 2004)
 
