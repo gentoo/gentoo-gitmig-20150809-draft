@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/obexftp
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/obexftp/ChangeLog,v 1.10 2004/06/24 22:27:24 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/obexftp/ChangeLog,v 1.11 2004/09/27 16:50:21 ticho Exp $
+
+*obexftp-0.10.4 (27 Sep 2004)
+
+  27 Sep 2004; Andrej Kacian <ticho@gentoo.org> metadata.xml,
+  +obexftp-0.10.4.ebuild:
+  Version bump, closes #65439, reported by Christian Zuckschwerdt
+  <zany@triq.net>. Take on maintainership of the package.
 
   07 Jun 2004; Daniel Black <dragonheart@gentoo.org> +metadata.xml,
   obexftp-0.10.3.ebuild:
