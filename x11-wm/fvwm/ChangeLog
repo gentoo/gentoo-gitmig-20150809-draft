@@ -1,6 +1,14 @@
 # ChangeLog for x11-wm/fvwm
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/ChangeLog,v 1.7 2002/12/09 04:42:02 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/ChangeLog,v 1.8 2002/12/11 00:41:33 mkeadle Exp $
+
+*fvwm-2.4.14 (10 Dec 2002)
+
+  10 Dec 2002; Matt Keadle <mkeadle@gentoo.org> fvwm-2.4.14.ebuild
+  files/digest-fvwm-2.4.14 :
+
+  Bump to latest stable. Thanks to Thomas Preissler for providing the ebuild
+  in bug #11768
 
 \* Autoupdate keywords (12-6-02)
   06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
