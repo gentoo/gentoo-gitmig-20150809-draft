@@ -1,6 +1,9 @@
-# ChangeLog for net-www/cvsweb
+# ChangeLog for dev-util/cvsweb
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cvsweb/ChangeLog,v 1.3 2004/08/25 09:10:04 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cvsweb/ChangeLog,v 1.4 2004/09/05 07:46:41 swegener Exp $
+
+  05 Sep 2004; Sven Wegener <swegener@gentoo.org> :
+  Fixed ChangeLog header.
 
 *cvsweb-3.0.1 (25 Aug 2004)
 
