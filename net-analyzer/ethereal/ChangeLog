@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/ethereal
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ChangeLog,v 1.83 2004/09/03 21:52:59 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ChangeLog,v 1.84 2004/10/14 15:03:24 eldad Exp $
+
+  14 Oct 2004; Eldad Zack <eldad@gentoo.org> ethereal-0.10.6.ebuild:
+  Fixed myconf overwriting. Closes bug #66747.
 
   16 Aug 2004; Eldad Zack <eldad@gentoo.org> -files/0.10.3-gcc34.patch,
   -files/0.10.6-gcc34.patch, ethereal-0.10.6.ebuild:

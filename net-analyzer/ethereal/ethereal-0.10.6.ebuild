@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ethereal-0.10.6.ebuild,v 1.3 2004/08/16 07:35:32 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ethereal-0.10.6.ebuild,v 1.4 2004/10/14 15:03:24 eldad Exp $
 
 inherit libtool flag-o-matic gcc eutils
 
@@ -47,9 +47,9 @@ src_compile() {
 		$(use_with adns)"
 
 	if use gtk; then
-		myconf="$(use_enable gtk2)"
+		myconf="${myconf} $(use_enable gtk2)"
 	else
-		myconf="--disable-gtk2"
+		myconf="${myconf} --disable-gtk2"
 
 		# --disable-ethereal do not have an influence
 		#myconf="${myconf} --disable-ethereal"
