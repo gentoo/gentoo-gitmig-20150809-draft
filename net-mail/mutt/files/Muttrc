@@ -23,4 +23,4 @@ bind pager <up> previous-line
 bind pager <down> next-line
 set pager_index_lines=6
 
-my_hdr Organization: Gentoo Technologies, Inc.
+
