@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/mpg123
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/ChangeLog,v 1.39 2004/04/13 05:52:25 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/ChangeLog,v 1.40 2004/04/26 22:21:42 geoman Exp $
+
+  26 Apr 2004; Stephen P. Becker <geoman@gentoo.org> mpg123-0.59s-r3.ebuild:
+  Added ~mips keyword.
 
   12 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org>
   mpg123-0.59s-r3.ebuild:
