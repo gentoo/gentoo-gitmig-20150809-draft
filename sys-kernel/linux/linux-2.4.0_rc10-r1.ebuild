@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org> 
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux/linux-2.4.0_rc10-r1.ebuild,v 1.2 2000/11/23 03:40:12 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux/linux-2.4.0_rc10-r1.ebuild,v 1.3 2000/11/23 04:27:02 drobbins Exp $
 
 BA="linux-2.4.0-test8.tar.bz2 linux-2.4.0-test9-reiserfs-3.6.18-patch.gz
 	patch-2.4.0-test9.bz2 patch-2.4.0-test10.bz2
@@ -10,16 +10,17 @@ BA="linux-2.4.0-test8.tar.bz2 linux-2.4.0-test9-reiserfs-3.6.18-patch.gz
 
 S=${WORKDIR}/linux
 DESCRIPTION="Linux kernel sources package.  Everything you need to build a kernel (no kernel included, just sources)"
-SRC_URI="http://www.kernel.org/pub/linux/kernel/v2.4/linux-2.4.0-test8.tar.bz2
-		http://www.kernel.org/pub/linux/kernel/v2.4/patch-2.4.0-test9.bz2
-		http://www.kernel.org/pub/linux/kernel/v2.4/patch-2.4.0-test10.bz2
-	 	http://devlinux.com/pub/namesys/2.4-beta/linux-2.4.0-test9-reiserfs-3.6.18-patch.gz
-  	 	http://www.netroedge.com/~lm78/archive/lm_sensors-2.5.4.tar.gz
-	 	http://www.netroedge.com/~lm78/archive/i2c-2.5.4.tar.gz
-	 	http://oss.software.ibm.com/developerworks/opensource/jfs/project/pub/jfs-0.0.18-patch.tar.gz
-		ftp://ftp.alsa-project.org/pub/driver/alsa-driver-0.5.9d.tar.bz2
-		ftp://ftp1.detonator.nvidia.com/pub/drivers/english/XFree86_40/0.9-5/NVIDIA_kernel-0.9-5.tar.gz
-		ftp://ftp.sistina.com/pub/LVM/0.9/lvm_0.9.tar.gz"
+SRC_URI="
+http://www.kernel.org/pub/linux/kernel/v2.4/linux-2.4.0-test8.tar.bz2 
+http://www.kernel.org/pub/linux/kernel/v2.4/patch-2.4.0-test9.bz2 
+http://www.kernel.org/pub/linux/kernel/v2.4/patch-2.4.0-test10.bz2 
+http://devlinux.com/pub/namesys/2.4-beta/linux-2.4.0-test9-reiserfs-3.6.18-patch.gz
+http://www.netroedge.com/~lm78/archive/lm_sensors-2.5.4.tar.gz 
+http://www.netroedge.com/~lm78/archive/i2c-2.5.4.tar.gz 
+http://oss.software.ibm.com/developerworks/opensource/jfs/project/pub/jfs-0.0.18-patch.tar.gz 
+ftp://ftp.alsa-project.org/pub/driver/alsa-driver-0.5.9d.tar.bz2 
+ftp://ftp1.detonator.nvidia.com/pub/drivers/english/XFree86_40/0.9-5/NVIDIA_kernel-0.9-5.tar.gz 
+ftp://ftp.sistina.com/pub/LVM/0.9/lvm_0.9.tar.gz"
 
 HOMEPAGE="http://www.kernel.org/
 	  http://www.netroedge.com/~lm78/
