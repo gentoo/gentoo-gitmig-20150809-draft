@@ -38,7 +38,7 @@ ANT_HOME=/usr/share/ant
 # set ANT_LIB location
 ANT_LIB=${ANT_HOME}/lib
 
-JAVACMD="${JAVA_HOME}/bin/java"
+JAVACMD="`java-config --java`"
  
 if [ ! -x "$JAVACMD" ] ; then
   echo "Error: We cannot execute $JAVACMD "
