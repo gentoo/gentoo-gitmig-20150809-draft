@@ -1,3 +1,7 @@
+# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.13 2004/01/23 18:08:48 johnm Exp $
+
 # kernel.eclass rewrite for a clean base regarding the 2.6 series of kernel
 # with back-compatibility for 2.4
 #
@@ -26,7 +30,7 @@
 # UNIPATCH_DOCS		- space delimemeted list of docs to be installed to the doc dir
 
 ECLASS="kernel-2"
-EXPORT_FUNCTIONS src_unpack src_compile src_install pkg_preinst pkg_postinst
+EXPORT_FUNCTIONS pkg_setup src_unpack src_compile src_install pkg_preinst pkg_postinst
 
 HOMEPAGE="http://www.kernel.org/ http://www.gentoo.org/" 
 LICENSE="GPL-2"
@@ -135,11 +139,13 @@ install_universal() {
 install_headers() {
 	[ $(kernel_is_2_4) $? == 0 ] && unpack_2_4
 	[ $(kernel_is_2_6) $? == 0 ] && ln -sf ${S}/include/asm-${ARCH} ${S}/include/asm
-
+	
+	
 	cd ${S}
 	dodir /usr/include/linux
 	cp -ax ${S}/include/linux/* ${D}/usr/include/linux
 	rm -rf ${D}/usr/include/linux/modules
+	
 	dodir /usr/include/asm
 	cp -ax ${S}/include/asm/* ${D}/usr/include/asm
 	
@@ -511,4 +517,7 @@ pkg_postinst() {
 
 pkg_setup() {
 	[ "${ETYPE}" == "headers" ] && setup_headers
+
+	# this is to fix some weird portage bug? in stable versions of portage.
+	[ "${ETYPE}" == "sources" ] && echo ">>> Preparing to unpack..."
 }
