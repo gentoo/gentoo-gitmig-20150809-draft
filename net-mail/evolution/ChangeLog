@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/evolution
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/ChangeLog,v 1.98 2004/04/29 14:44:37 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/ChangeLog,v 1.99 2004/05/14 00:08:40 pylon Exp $
+
+  14 May 2004; Lars Weiler <pylon@gentoo.org> evolution-1.4.6.ebuild:
+  Stable on ppc
 
   29 Apr 2004; Gustavo Zacarias <gustavoz@gentoo.org> evolution-1.4.6.ebuild:
   Stable on sparc in preparation for gtk 2.4
