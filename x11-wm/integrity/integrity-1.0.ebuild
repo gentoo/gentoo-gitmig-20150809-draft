@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/integrity/integrity-1.0.ebuild,v 1.1 2004/09/07 14:06:24 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/integrity/integrity-1.0.ebuild,v 1.2 2004/10/15 16:12:36 dholm Exp $
 
 IUSE=""
 
@@ -12,7 +12,7 @@ S=${WORKDIR}/${PN}
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 
 DEPEND="virtual/x11
 	>=x11-libs/qt-3.2.3"
