@@ -1,0 +1,10 @@
+# ChangeLog for dev-lisp/cl-org-davep-dict
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-org-davep-dict/ChangeLog,v 1.1 2004/06/23 15:06:31 mkennedy Exp $
+
+*cl-org-davep-dict-2.3 (23 Jun 2004)
+
+  23 Jun 2004; <mkennedy@gentoo.org> +metadata.xml,
+  +cl-org-davep-dict-2.3.ebuild:
+  New port.  Ebuild contributed by Matthew Kennedy <mkennedy@gentoo.org>
+
