@@ -1,0 +1,14 @@
+diff -urp thinkpad-5.8/2.6/drivers/thinkpadpm.c thinkpad-5.8-cpu_ptr/2.6/drivers/thinkpadpm.c
+--- thinkpad-5.8/2.6/drivers/thinkpadpm.c	2004-09-19 11:32:57.000000000 +0200
++++ thinkpad-5.8-cpu_ptr/2.6/drivers/thinkpadpm.c	2005-01-08 21:50:29.136392080 +0100
+@@ -171,8 +171,8 @@ static inline void apm_restore_cpus(cpum
+ #define get_gdt_table()	(cpu_gdt_table[get_cpu()])
+ #define put_gdt_table()	put_cpu()
+ #else
+-#define get_gdt_table()	(get_cpu_ptr(cpu_gdt_table))
+-#define put_gdt_table()	put_cpu_ptr(cpu_gdt_table)
++#define get_gdt_table()	(per_cpu_ptr(cpu_gdt_table, get_cpu()))
++#define put_gdt_table()	put_cpu()
+ #endif
+ 
+ /**
