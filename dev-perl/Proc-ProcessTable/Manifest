@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 6a2295325b521422a0fabf17aacbd165 ChangeLog 732
 MD5 b90e6a21275939263e9cddc5d1638354 Proc-ProcessTable-0.38.ebuild 637
 MD5 099e28f79ee9a25c1a2be60a953a3255 Proc-ProcessTable-0.39.ebuild 584
+MD5 68727afd7aa003dde010313cb7f2954b ChangeLog 839
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 8f3a80eceaad6648f9376d3018a1ff57 files/digest-Proc-ProcessTable-0.38 73
 MD5 61788da53bd4f64bcb1c7a6ba1bb3d10 files/digest-Proc-ProcessTable-0.39 73
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFByvQC60LfUIagIAkRAlkLAJ94EfyVviwXMsnGw13DMfqDgnvZBACfZ+5K
-/+BCj0zyb5Y+7MDhFduc+8o=
-=3wIV
------END PGP SIGNATURE-----
