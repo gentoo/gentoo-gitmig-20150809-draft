@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.5.2-r1.ebuild,v 1.1 2003/03/28 23:00:23 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.5.2-r1.ebuild,v 1.2 2003/03/29 17:32:15 mholzer Exp $
 
 IUSE="arts qt ncurses dvd gtk nls 3dfx esd kde X alsa ggi oggvorbis gnome xv oss sdl fbcon aalib"
 
@@ -153,6 +153,9 @@ src_compile(){
 	# and forcing custom ones generally fails building
 	export CXXFLAGS=""
 	export CFLAGS=""
+	export WANT_AUTOCONF_2_5=1
+	export WANT_AUTOMAKE_1_6=1
+
 	
 	autoconf || die
 	
