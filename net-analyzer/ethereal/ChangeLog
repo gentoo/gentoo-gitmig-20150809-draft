@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/ethereal
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ChangeLog,v 1.9 2002/06/30 03:06:55 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ChangeLog,v 1.10 2002/08/30 07:36:06 aliz Exp $
+
+*ethereal-0.9.6 (30 Aug 2002)
+  
+  30 Aug 2002; Daniel Ahlberg <aliz@gentoo.org> ethereal-0.9.6.ebuild:
+  Security update.
 
 *ethereal-0.9.5-r2 (29 Jun 2002)
 
