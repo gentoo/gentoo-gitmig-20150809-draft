@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/openafs-1.2.9.ebuild,v 1.1 2003/08/02 20:48:48 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/openafs-1.2.9.ebuild,v 1.2 2003/08/02 20:51:32 seemant Exp $
 
 inherit check-kernel
 
@@ -12,7 +12,7 @@ SRC_URI="http://openafs.org/dl/openafs/${PV}/${P}-src.tar.bz2"
 
 SLOT="0"
 LICENSE="IPL-1"
-KEYWORDS="-* x86"
+KEYWORDS="-* ~x86"
 
 SANDBOX_DISABLED="1"
 
