@@ -2,18 +2,18 @@
 Hash: SHA1
 
 MD5 95e045dedc0127d04b800130b736ccaf ChangeLog 1368
-MD5 a9b89985e0d85191f067be6a33870ac7 milo-2.4.18.ebuild 8055
 MD5 b7633291733994d07f4bf0685443b96f metadata.xml 727
+MD5 be62c580b645eeec7f2f01e8fa6f5ab6 milo-2.4.18.ebuild 8055
+MD5 e26e3e1424b5b2dfc48ffac79558e9ec files/README-gentoo 3500
+MD5 50c0136152336ca93b808adb1e49a98d files/digest-milo-2.4.18 389
 MD5 f6830f117d7528a50b53e85150040d73 files/linux-2.2.25-gcc3-milo.diff 3542
 MD5 0d52b7b08a86538142aa8652017f15e9 files/milo-2.2-18-gcc3-gentoo.diff 5619
 MD5 987873fb766bc62dcb7336015388e4e3 files/mkserial_no.c 1264
-MD5 e26e3e1424b5b2dfc48ffac79558e9ec files/README-gentoo 3500
 MD5 4f7cadb7dd636d407b0477e5302fbbe1 files/objstrip.c 6126
-MD5 50c0136152336ca93b808adb1e49a98d files/digest-milo-2.4.18 389
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
+Version: GnuPG v1.9.14 (GNU/Linux)
 
-iD8DBQFBPKnXLLFUmVNQ7rkRAsGjAKCJHJGHJFS1WBaY97sGLJ5tvS/ICACgrA3N
-SEXFwPCI8yy2qE/DeGfURSE=
-=5IIP
+iD8DBQFB3yQnroRuSHgZdywRAuEXAJ9JpjskfXv/S6f6TKxGbjCRPEd6sgCfW3J6
+6ctF9Dv46qR5ZhRLEycEnkA=
+=hKhG
 -----END PGP SIGNATURE-----

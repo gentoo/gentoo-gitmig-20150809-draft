@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/milo/milo-2.4.18.ebuild,v 1.4 2004/09/06 18:20:47 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/milo/milo-2.4.18.ebuild,v 1.5 2005/01/08 00:06:48 vapier Exp $
 
 inherit flag-o-matic eutils ccc
 
@@ -10,7 +10,7 @@ inherit flag-o-matic eutils ccc
 #
 
 DESCRIPTION="The Alpha MIniLOader, for Alpha Machines without SRM"
-HOMEPAGE="http://www.suse.de/~stepan/"
+HOMEPAGE="http://milo.core-systems.de/"
 
 # ive tested this, and it seems to make little difference
 # which kernel version you use, so it makes sense to use the
