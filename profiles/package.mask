@@ -22,9 +22,9 @@
 ##
 
 
-# <fava@gentoo.org> (24 Apr 2003)
+# <fava@gentoo.org>, <robbat2@gentoo.org> (24 Apr 2003)
 # work in progress, broken ebuild
->=app-admin/ufed-0.3
+>=app-admin/ufed-0.4
 
 # <robbat2@gentoo.org> (23 Apr 2003)
 # PHP ebuilds using new PHP eclass
