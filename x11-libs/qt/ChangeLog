@@ -1,9 +1,12 @@
 # ChangeLog for x11-libs/qt
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.59 2003/04/12 23:20:25 brain Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.60 2003/04/13 06:52:35 seemant Exp $
 
 *qt-3.1.2-r1 (13 Apr 2003)
-  
+
+  12 Apr 2003; Seemant Kulleen <seemant@gentoo.org> qt-3.1.2-r1.ebuild:
+  masked because the third patch fails -- please test this before releasing.
+
   13 Apr 2003; Michele Balistreri <brain@gentoo.org> qt-3.1.2-r1.ebuild:
   Fix bug #19005
   
