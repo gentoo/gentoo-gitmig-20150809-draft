@@ -1,5 +1,9 @@
 # ChangeLog for media-libs/allegromp3
 
+  23 Feb 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  allegromp3-2.0.2.ebuild:
+  mp3dep changed to virtual
+
 *allegromp3-2.0.2 (30 Jun 2003)
  
   12 Jul 2003; Daniel Ahlberg <aliz@gentoo.org> :
