@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/mailx
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mailx/ChangeLog,v 1.10 2004/07/12 23:22:17 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mailx/ChangeLog,v 1.11 2004/07/13 04:43:31 langthang Exp $
+
+  12 Jul 2004; Tuan Van <langthang@gentoo.org> mailx-8.1.2.20021129-r2.ebuild,
+  mailx-8.1.2.20021129-r3.ebuild:
+  add Gentoo mirror for the SRC_URI that I`ve removed.
 
   12 Jul 2004; Tuan Van <langthang@gentoo.org> mailx-8.1.2.20021129-r2.ebuild:
   removed dead SRC_URI.

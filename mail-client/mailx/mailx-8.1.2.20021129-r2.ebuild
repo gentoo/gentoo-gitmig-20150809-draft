@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mailx/mailx-8.1.2.20021129-r2.ebuild,v 1.6 2004/07/12 23:22:17 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mailx/mailx-8.1.2.20021129-r2.ebuild,v 1.7 2004/07/13 04:43:31 langthang Exp $
 
 inherit ccc eutils
 
@@ -8,7 +8,8 @@ MX_VER="8.1.1"
 S=${WORKDIR}/mailx-${MX_VER}.orig
 
 DESCRIPTION="The /bin/mail program, which is used to send mail via shell scripts."
-SRC_URI="mirror://gentoo/multifix.diff.gz
+SRC_URI="mirror://gentoo/mailx_${MX_VER}.orig.tar.gz
+	mirror://gentoo/multifix.diff.gz
 	mirror://gentoo/20021129-cvs.diff.bz2"
 HOMEPAGE="http://www.debian.org"
 
