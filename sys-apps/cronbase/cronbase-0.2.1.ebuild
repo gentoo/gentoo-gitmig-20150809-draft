@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/cronbase/cronbase-0.2.1.ebuild,v 1.6 2002/09/14 15:51:24 bjb Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/cronbase/cronbase-0.2.1.ebuild,v 1.7 2002/10/04 21:28:36 vapier Exp $
 
 DESCRIPTION="The is the base for all cron ebuilds."
 HOMEPAGE="http://www.gentoo.org/"
