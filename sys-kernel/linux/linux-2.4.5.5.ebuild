@@ -170,7 +170,7 @@ src_unpack() {
 #	try bzip2 -dc ${DISTDIR}/bigpatch-${OKV}.diff.bz2 | patch -p1
 	
 	echo "Applying ac5-reiserfs-quota patch..."
-	try patch -p1 < ${FILESDIR}/linux-${KV}-ac5-reiserfs-quota-gentoo.diff
+	try patch -p1 < ${FILESDIR}/${PVR}/linux-${KV}-ac5-reiserfs-quota-gentoo.diff
 	
 	if [ "`use lvm`" ] || [ "`use alsa`" ] || [ "`use i2c`" ] || [ "`use lm_sensors`" ] || [ "`use pcmcia-cs`" ]
 	then
