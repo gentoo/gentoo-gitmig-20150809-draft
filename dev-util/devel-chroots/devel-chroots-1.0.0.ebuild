@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/devel-chroots/devel-chroots-0.0.1.ebuild,v 1.4 2004/08/14 23:46:03 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/devel-chroots/devel-chroots-1.0.0.ebuild,v 1.1 2004/08/23 01:48:21 pappy Exp $
 
 DESCRIPTION="Gentoo Developer chroots installation/configuration launcher"
 HOMEPAGE="http://dev.gentoo.org/~pappy"
@@ -11,11 +11,11 @@ LICENSE="GPL-2"
 SLOT="0"
 
 # for testing purposes only
-KEYWORDS="-*"
+# KEYWORDS="-*"
 # expected first scope, will be expanded to amd64 and/or ia64 when test machines available
-# KEYWORDS="~x86 ~sparc ~hppa"
+KEYWORDS="~x86 ~sparc ~hppa"
 
-IUSE="hardened static debug"
+IUSE=""
 
 DEPEND="app-misc/screen net-misc/wget sys-apps/sed"
 
@@ -24,6 +24,6 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die
 }
 
