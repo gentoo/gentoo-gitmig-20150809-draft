@@ -1,9 +1,11 @@
 # ChangeLog for media-video/piave
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/piave/ChangeLog,v 1.5 2004/04/27 21:01:53 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/piave/ChangeLog,v 1.6 2004/04/29 10:19:48 aliz Exp $
 
   27 Apr 2004; Aron Griffis <agriffis@gentoo.org> piave-0.2.4-r1.ebuild:
   Add inherit eutils
+
+*piave-0.2.4-r1 (25 Mar 2004)
 
   25 Mar 2004; Marc Hildebrand <zypher@gentoo.org> piave-0.2.4-r1.ebuild:
   fixes bug #45202. Thanks to Dominik Stadler for the fix.

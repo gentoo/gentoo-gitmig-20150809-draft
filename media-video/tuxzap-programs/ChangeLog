@@ -1,6 +1,6 @@
 # ChangeLog for media-video/tuxzap-programs
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/tuxzap-programs/ChangeLog,v 1.3 2004/04/26 04:21:48 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/tuxzap-programs/ChangeLog,v 1.4 2004/04/29 10:19:49 aliz Exp $
 
   26 Apr 2004; Aron Griffis <agriffis@gentoo.org>
   tuxzap-programs-0.2.3.ebuild:
@@ -12,7 +12,7 @@
   tuxzap-programs-0.2.3.ebuild, tuxzap-programs-0.2.5.ebuild:
   renamed to comply with naming policy
 
-*tuxzap_programs-0.2.3 (21 Mar 2003)
+*tuxzap-programs-0.2.3 (21 Mar 2003)
 
   05 Apr 2003; Martin Holzer <mholzer@gentoo.org>
   tuxzap_programs-0.2.3.ebuild, tuxzap_programs-0.2.5.ebuild:

@@ -1,6 +1,6 @@
 # ChangeLog for media-video/kyro-drivers
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kyro-drivers/ChangeLog,v 1.3 2004/04/27 20:56:01 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kyro-drivers/ChangeLog,v 1.4 2004/04/29 10:19:48 aliz Exp $
 
   27 Apr 2004; Aron Griffis <agriffis@gentoo.org>
   kyro-drivers-2.00.20.516.ebuild:
@@ -23,7 +23,7 @@
   kyro-kernel-2.01.21.7.ebuild, metadata.xml:
   Version bump.
 
-*kyro-kernel-2.00.20.516 (02 Jun 2003)
+*kyro-drivers-2.00.20.516 (02 Jun 2003)
 
   02 Jun 2003; Seemant Kulleen <seemant@gentoo.org>
   kyro-kernel-2.00.20.0427.ebuild, kyro-kernel-2.00.20.516.ebuild:
