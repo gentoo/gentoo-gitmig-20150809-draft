@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/nxserver-1.4.eclass,v 1.2 2004/09/01 20:21:52 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/nxserver-1.4.eclass,v 1.3 2005/01/02 09:53:22 stuart Exp $
 #
 # eclass for handling the different nxserver binaries available
 # from nomachine's website
@@ -39,7 +39,12 @@ S="${WORKDIR}"
 
 DESCRIPTION="an X11/RDP/VNC proxy server especially well suited to low bandwidth links such as wireless, WANS, and worse"
 
-EXPORT_FUNCTIONS src_compile src_install pkg_postinst
+EXPORT_FUNCTIONS pkg_setup src_compile src_install pkg_postinst
+
+nxserver_pkg_setup() {
+	einfo "Adding user 'nx' for the NX server"
+	enewuser nx -1 /usr/NX/bin/nxserver /usr/NX/home/nx
+}
 
 nxserver_src_compile() {
 	return;
@@ -57,11 +62,17 @@ nxserver_src_install() {
 		fi
 	done
 
+	# remove binaries installed by other packages
+	for x in nxagent nxdesktop nxpasswd nxviewer ; do
+		if [ -f usr/NX/bin/$x ]; then
+			rm -f usr/NX/bin/$x
+		fi
+	done
+
 	tar -cf - * | ( cd ${D} ; tar -xf - )
 
 	dodir /usr/NX/var
-	dodir /usr/NX/var/sessions
-	touch ${D}/usr/NX/var/sessions/NOT_EMPTY
+	keepdir /usr/NX/var/sessions
 
 	insinto /etc/env.d
 	doins ${FILESDIR}/1.3.0/50nxserver
@@ -88,8 +99,6 @@ nxserver_pkg_postinst() {
 
 	# end of upgrade support
 
-	einfo "Adding user 'nx' for the NX server"
-	enewuser nx -1 /usr/NX/bin/nxserver /usr/NX/home/nx
 	
 	# we do this to move the home directory of older installs
 
@@ -99,8 +108,8 @@ nxserver_pkg_postinst() {
 	einfo "Changing permissions for files under /usr/NX"
 	chown nx:root /usr/NX/etc/$l_szPasswd
 	chmod 0600 /usr/NX/etc/$l_szPasswd
-	chown -R nx:root /usr/NX/home/nx
-	chown -R nx:root /usr/NX/var
+	chown -R nx:root /usr/NX
+	chmod u+x /usr/NX/var/db/*
 	chmod 755 /usr/NX/etc
 
 	einfo "Generating SSH keys for the 'nx' user"
