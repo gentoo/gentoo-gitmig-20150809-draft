@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.92 2005/01/21 01:24:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.93 2005/01/25 11:12:48 eradicator Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
 
 #---->> eclass stuff <<----
-inherit eutils versionator libtool toolchain-funcs flag-o-matic gnuconfig
+inherit eutils versionator libtool toolchain-funcs flag-o-matic gnuconfig multilib
 
 ECLASS=toolchain
 INHERITED="$INHERITED $ECLASS"
@@ -607,7 +607,7 @@ create_gcc_env_entry() {
 
 	if has_multilib_profile; then
 		local abi=
-		for abi in ${MULTILIB_ABIS}; do
+		for abi in $(get_multilib_abis); do
 			local MULTIDIR=$(${XGCC} $(get_abi_CFLAGS ${abi}) --print-multi-directory)
 			[ "${MULTIDIR}" != "." -a -d "${LIBPATH}/${MULTIDIR}" ] && LDPATH="${LDPATH}:${LIBPATH}/${MULTIDIR}"
 		done
@@ -895,7 +895,7 @@ gcc_do_configure() {
 	if [[ ${GCC_VAR_TYPE} == "versioned" ]] ; then
 		confgcc="--enable-version-specific-runtime-libs"
 	elif [[ ${GCC_VAR_TYPE} == "non-versioned" ]] ; then
-		confgcc="--libdir=/${LIBPATH}"
+		confgcc="--libdir=${LIBPATH}"
 	else
 		die "bad GCC_VAR_TYPE"
 	fi
@@ -1685,10 +1685,6 @@ should_we_gcc_config() {
 		return $([[ ! -e ${ROOT}/etc/env.d/gcc/config-${CTARGET} ]])
 	fi
 
-	# multislot pretty much means we want to save all our compilers
-	# ... lets not screw with gcc in that case
-	use multislot && return 1
-
 	# if the current config is invalid, we definitely want a new one
 	env -i gcc-config -c >&/dev/null || return 0
 
@@ -1697,6 +1693,11 @@ should_we_gcc_config() {
 	# for being in the same SLOT, make sure we run gcc-config.
 	local curr_config_ver=$(env -i gcc-config -c | awk -F - '{ print $5 }')
 	local curr_branch_ver=$(get_version_component_range 1-2 ${curr_config_ver})
+
+	# If we're using multislot, just run gcc-config if we're installing
+	# to the same profile as the current one.
+	use multislot && return $([[ ${curr_config_ver} == ${GCC_CONFIG_VER} ]])
+
 	if [[ ${curr_branch_ver} == ${GCC_BRANCH_VER} ]] ; then
 		return 0
 	else
