@@ -1,12 +1,22 @@
-MD5 a72a06a37ca4e5905085ebff07fe9e9e metadata.xml 217
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 b76e8b30764c01187a3e8748afb32222 ChangeLog 2360
 MD5 143425b5322a9cbe9625a081f13c0cd3 libsidplay-1.36.54.ebuild 696
 MD5 a31be084936a6c5fab74449c8978dbb1 libsidplay-1.36.57.ebuild 737
-MD5 b76e8b30764c01187a3e8748afb32222 ChangeLog 2360
-MD5 806d61bfe68a17782b545393734d7e18 libsidplay-2.1.1.ebuild 1023
 MD5 a11cc7f095c129b7a58d8dc2f835a841 libsidplay-2.1.0-r1.ebuild 1025
+MD5 c763dedf332b53b6a6d47595a5a7a7ab libsidplay-2.1.1.ebuild 1002
+MD5 a72a06a37ca4e5905085ebff07fe9e9e metadata.xml 217
 MD5 fdd6f8c52d3a1c27f89ca988e013a116 files/digest-libsidplay-1.36.54 67
 MD5 4e2a41563a14e632e37d162203ef4d45 files/digest-libsidplay-1.36.57 67
+MD5 8e6d42fd52a00be55bfda2932cab402e files/digest-libsidplay-2.1.0-r1 71
+MD5 c22ab29986ab10f688530269ab08efc3 files/digest-libsidplay-2.1.1 71
 MD5 58d9cec13cbd5be46ae7a38497e141f6 files/libsidplay-gcc34.patch 907
 MD5 8f2488b49345cd06d6271c657ea79666 files/libsidplay2-gcc34.patch 874
-MD5 c22ab29986ab10f688530269ab08efc3 files/digest-libsidplay-2.1.1 71
-MD5 8e6d42fd52a00be55bfda2932cab402e files/digest-libsidplay-2.1.0-r1 71
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFA6CfVHTu7gpaalycRAj4KAKCIMy4oS5wrbPam2UfDKtCBqgPl8wCgiP0X
+f6ibyxvddzCY2Y18R9BghuU=
+=yo5H
+-----END PGP SIGNATURE-----
