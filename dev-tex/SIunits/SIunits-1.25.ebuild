@@ -1,7 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# Maintainer: Felix Kurth <felix@fkurth.de>
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/SIunits/SIunits-1.25.ebuild,v 1.8 2004/06/25 02:17:24 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/SIunits/SIunits-1.25.ebuild,v 1.9 2004/10/03 21:24:21 swegener Exp $
 
 inherit latex-package
 S=${WORKDIR}/SIunits

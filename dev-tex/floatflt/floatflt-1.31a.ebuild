@@ -1,7 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# Maintainer: Felix Kurth <felix@fkurth.de>
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/floatflt/floatflt-1.31a.ebuild,v 1.5 2004/06/25 02:13:22 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/floatflt/floatflt-1.31a.ebuild,v 1.6 2004/10/03 21:25:16 swegener Exp $
 
 inherit latex-package
 
