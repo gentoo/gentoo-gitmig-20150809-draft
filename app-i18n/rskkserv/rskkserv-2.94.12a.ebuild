@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/rskkserv/rskkserv-2.94.12a.ebuild,v 1.6 2004/06/24 21:53:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/rskkserv/rskkserv-2.94.12a.ebuild,v 1.7 2004/07/14 01:11:21 agriffis Exp $
 
 inherit eutils
 
@@ -19,7 +19,6 @@ RDEPEND="${DEPEND}
 	app-i18n/skk-jisyo"
 PROVIDE="virtual/skkserv"
 
-S=${WORKDIR}/${P}
 
 src_unpack() {
 
