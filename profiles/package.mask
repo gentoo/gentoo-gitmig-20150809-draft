@@ -160,6 +160,7 @@ sys-apps/sysvinit
 
 #incomplete and very dangerous < Danarmak >
 >=app-office/openoffice-641b
+>=app-office/openoffice-bin-641d
 
 #apparently has an fs unmount corruption bug
 =sys-kernel/linux-sources-2.4.15
