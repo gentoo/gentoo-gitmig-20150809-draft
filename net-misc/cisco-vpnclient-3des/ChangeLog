@@ -1,6 +1,15 @@
 # ChangeLog for net-misc/cisco-vpnclient-3des
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cisco-vpnclient-3des/ChangeLog,v 1.20 2004/11/04 01:18:27 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cisco-vpnclient-3des/ChangeLog,v 1.21 2004/11/09 20:24:13 wolf31o2 Exp $
+
+*cisco-vpnclient-3des-4.6.00.0045-r1 (09 Nov 2004)
+
+  09 Nov 2004; Chris Gianelloni <wolf31o2@gentoo.org>
+  +files/supported_device.patch,
+  +cisco-vpnclient-3des-4.6.00.0045-r1.ebuild,
+  -cisco-vpnclient-3des-4.6.00.0045.ebuild:
+  Added supported device patch from James Ward <jennyandjamesward@yahoo.com>
+  and closing bugs #68738, #70365, and #70374.
 
 *cisco-vpnclient-3des-4.6.00.0045 (03 Nov 2004)
 

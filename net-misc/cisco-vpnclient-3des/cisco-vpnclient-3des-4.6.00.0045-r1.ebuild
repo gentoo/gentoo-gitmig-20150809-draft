@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cisco-vpnclient-3des/cisco-vpnclient-3des-4.6.00.0045.ebuild,v 1.1 2004/11/04 01:18:27 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cisco-vpnclient-3des/cisco-vpnclient-3des-4.6.00.0045-r1.ebuild,v 1.1 2004/11/09 20:24:13 wolf31o2 Exp $
 
 inherit eutils kernel-mod
 
@@ -11,7 +11,7 @@ SRC_URI="vpnclient-linux-${MY_PV}.tar.gz"
 
 LICENSE="cisco-vpn-client"
 SLOT="${KV}"
-KEYWORDS="-* ~x86"
+KEYWORDS="-* ~x86 ~amd64"
 IUSE=""
 RESTRICT="fetch"
 
@@ -36,6 +36,8 @@ src_unpack() {
 	# Patch to allow use of alternate CC.  Patch submitted to bug #33488 by
 	# Jesse Becker <jbecker@speakeasy.net>
 	epatch ${FILESDIR}/driver_build_CC.patch
+	# Patch submitted to bug #69870 by James Ward <jennyandjamesward@yahoo.com>
+	epatch ${FILESDIR}/supported_device.patch
 }
 
 src_compile () {
@@ -59,10 +61,10 @@ src_install() {
 	into /opt/cisco-vpnclient/
 	dobin ipseclog cisco_cert_mgr
 	dolib.so libvpnapi.so
+	insinto /opt/cisco-vpnclient/include
 	doins vpnapi.h
 	dodir /usr/bin
 	dosym /opt/cisco-vpnclient/bin/vpnclient /usr/bin/vpnclient
-
 
 	insinto /lib/modules/${KV}/CiscoVPN
 	if kernel-mod_is_2_6_kernel; then
