@@ -16,7 +16,7 @@ src_unpack() {
 }
 
 src_compile() {
-	make OPTFLAGS="${CFLAGS}" || die
+	make || die
 }
 
 src_install () {
