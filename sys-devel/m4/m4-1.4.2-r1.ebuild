@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/m4/m4-1.4.2-r1.ebuild,v 1.5 2005/03/28 21:45:21 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/m4/m4-1.4.2-r1.ebuild,v 1.6 2005/03/31 14:28:26 kumba Exp $
 
 inherit toolchain-funcs
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://gnu/${PN}/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ~ppc64 s390 sh sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ~ppc64 s390 sh sparc x86"
 IUSE="nls"
 
 DEPEND="nls? ( sys-devel/gettext )"
