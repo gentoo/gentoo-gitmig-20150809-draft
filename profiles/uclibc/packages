@@ -1,0 +1,39 @@
+# core
+*>=sys-apps/portage-2.0.50-r8
+*>=sys-apps/baselayout-1.9.4-r2
+
+# toolchain
+*>=sys-devel/binutils-2.15.91.0.1-r2
+*>=sys-devel/gcc-3.3.3-r6
+
+# minimal versions
+*>=net-misc/iputils-021109-r3
+*>=sys-devel/automake-1.8.5-r1
+*>=sys-devel/bison-1.875
+*>=sys-devel/libtool-1.5.2
+>=sys-libs/db-4.1.25_p1-r4
+
+# remove stuff not needed on uclibc
+# c++ stuff disabled
+-*sys-apps/groff
+# man pages disabled (noman)
+-*sys-apps/man
+-*sys-apps/man-pages
+# no support for pam
+-*sys-apps/pam-login
+# why is this in?
+-*sys-devel/bc
+# this will be added by nls
+-*sys-devel/gettext
+# this will be added by berkdb
+-*sys-libs/db
+# no support for pam
+-*sys-libs/pam
+# added by readline
+-*sys-libs/readline
+# added by zlib
+-*sys-libs/zlib
+#
+# busybox/uclibc w/o shadow support
+#-*sys-apps/shadow
+#-*sys-libs/cracklib

@@ -1,0 +1,13 @@
+# This subdir contains the cascading profiles for native uclibc environments
+
+###############################################################################
+# This profile is *not* production ready and may damage your systems
+# integrity if used. It is therefore recomened to wait before trying to
+# use this.
+#
+# In case you want try anyway.. 
+# ACCEPT_KEYWORDS="~x86" emerge -pve system
+# unmask anything portage is yelling at you about 
+# You will need to unmask binutils as well. Bug #54059
+# echo '=sys-devel/binutils-2.15.91.0.1-r2 -* x86 ~x86' >> /etc/portage/packge.unmask
+###############################################################################
