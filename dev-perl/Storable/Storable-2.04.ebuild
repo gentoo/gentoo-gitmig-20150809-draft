@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Storable/Storable-2.04.ebuild,v 1.9 2004/07/14 20:29:44 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Storable/Storable-2.04.ebuild,v 1.10 2005/04/03 01:42:58 mcummings Exp $
 
 inherit perl-module
 
