@@ -7,42 +7,43 @@ opts="start stop status"
 VPNCLIENT="/usr/bin/vpnclient"
 VPNDEV="cipsec0"
 VPNMOD="cisco_ipsec"
-if [ -x /usr/bin/id ]; then
-    ID="/usr/bin/id"
-elif [ -x /bin/id ]; then
-    ID="/bin/id"
-else
-    echo "Unable to determine access level"
+
+ID="`which id`"
+if [ "$?" != "0" ]; then
+    eerror "Failed: Unable to determine access level (can't find $HILITE id $NORMAL in \$PATH)."
+    unset ID
     exit 1
 fi
-WHOAMI=`$ID|sed -e 's/(.*//'`
+WHOAMI="`$ID -u`"
 
 depend() {
 	need net
 }
 
 start() {
-	ebegin "Starting Cisco VPN Client: "
+	ebegin "Starting Cisco VPN Client"
 
 	if [ -f /etc/resolv.conf.vpnbackup ]; then
-		echo "restoring /etc/resolv.conf"
+		einfo "restoring /etc/resolv.conf"
 		mv /etc/resolv.conf.vpnbackup /etc/resolv.conf
 	fi
-	if [ -d /lib/modules/preferred ]; then
-		PC=/lib/modules/preferred/CiscoVPN
-	else
-		PC=/lib/modules/`uname -r`/CiscoVPN
-	fi
-	if [ -d $PC ] ; then
-		/sbin/modprobe -q ${PC}/${VPNMOD}
-		if [ "$?" != "0" ] ; then
-			echo "Failed to load module ${VPNMOD}"
-			exit 1
-		fi
-	else
-		echo "module directory $PC not found."
-		exit 1
-	fi
+
+        if [ -d /lib/modules/preferred ]; then
+                PC=/lib/modules/preferred/CiscoVPN
+        else
+                PC=/lib/modules/`uname -r`/CiscoVPN
+        fi
+
+        if [ -d $PC ] ; then
+                /sbin/insmod -qs ${PC}/${VPNMOD}
+                if [ "$?" != "0" ] ; then
+                        eerror "Failed to load module ${VPNMOD}"
+                        exit 1
+                fi
+        else
+                eerror "module directory $PC not found."
+                exit 1
+        fi
 	case "`uname -r`" in
 		2.6.*)
 		;;
@@ -59,14 +60,14 @@ start() {
 			#
 			ifconfig $VPNDEV 222.222.222.222 ;
 			if [ "$?" != "0" ] ; then
-				echo "Failed (ifconfig)"
-				/sbin/modprobe -qr ${VPNMOD}
+				eerror "Failed (ifconfig)."
+				/sbin/rmmod ${VPNMOD}
 				exit 1
 			fi
 		;;
 		*)
-			echo "Failed (unsupported Linux version)"
-			/sbin/modprobe -qr ${VPNMOD}
+			eerror "Failed (unsupported Linux version)."
+			/sbin/rmmod -q ${VPNMOD}
 			exit 1
 		;;
 	esac
@@ -74,23 +75,23 @@ start() {
 }
 
 stop() {
-	ebegin "Stopping Cisco VPN Client: "
+	ebegin "Stopping Cisco VPN Client"
 	if [ -x $VPNCLIENT ]; then
 		$VPNCLIENT disconnect > /dev/null 2>&1
 	fi
 	/sbin/lsmod | grep -q "${VPNMOD}"
 	if [ "$?" != "0" ] ; then 
-		echo "module ${VPNMOD} is not running."
+		eerror "Failed: module ${VPNMOD} is not running."
 		exit 1
 	fi
 	/sbin/ifconfig $VPNDEV down
 	if [ "$?" != "0" ] ; then
-		echo "Failed (ifconfig)"
+		eerror "Failed (ifconfig)."
 		exit 1
 	fi
-	/sbin/modprobe -qr ${VPNMOD}
+	/sbin/rmmod ${VPNMOD}
 	if [ "$?" != "0" ] ; then
-		echo "Failed (rmmod)"
+		eerror "Failed (rmmod)."
 		exit 1
 	fi
 	eend $?
@@ -101,13 +102,14 @@ status() {
 	/sbin/lsmod | egrep "${VPNMOD}"
 	if [ "$?" != "0" ] ; then
 		echo
-		echo "Status Failed (lsmod ${VPNMOD}) - The VPN module is not loaded."
+		eerror "Failed (lsmod ${VPNMOD}): the VPN module is not loaded."
+		exit 1
 	fi
 	echo
 	/sbin/ifconfig $VPNDEV
 	if [ "$?" != "0" ] ; then
 		echo
-		echo "Status Failed (ifconfig ${VPNDEV}) - The virtual interface is not present."
+		eerror "Failed (ifconfig ${VPNDEV}): the virtual interface is not present."
 		exit 1
 	fi
 }

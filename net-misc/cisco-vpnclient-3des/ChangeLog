@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/cisco-vpnclient-3des
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cisco-vpnclient-3des/ChangeLog,v 1.6 2004/01/08 19:53:24 wolf31o2 Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cisco-vpnclient-3des/ChangeLog,v 1.7 2004/01/13 19:02:47 wolf31o2 Exp $
+
+*cisco-vpnclient-3des-4.0.3b-r2 (13 Jan 2004)
+
+  13 Jan 2004; Chris Gianelloni <wolf31o2@gentoo.org>
+  cisco-vpnclient-3des-4.0.3b-r2.ebuild, files/vpnclient.rc:
+  Updated vpnclient init script for proper 2.6 kernel handling and also to
+  remove console messages at boot. Closing Bug #37678.
 
 *cisco-vpnclient-3des-4.0.3b-r1 (08 Jan 2004)
 
