@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/qmail
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/ChangeLog,v 1.62 2004/02/28 23:13:12 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/ChangeLog,v 1.63 2004/03/08 21:03:58 avenj Exp $
+
+  08 Mar 2004; Jon Portnoy <avenj@gentoo.org> qmail-1.03-r15.ebuild :
+  Stable on AMD64.
 
   28 Feb 2004; Robin Johnson,,604-339-5621,604-298-8414 <robbat2@gentoo.org>
   qmail-1.03-r13.ebuild, files/1.03-r13/qmail-control:
