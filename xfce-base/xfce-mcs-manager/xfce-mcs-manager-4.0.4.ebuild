@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce-mcs-manager/xfce-mcs-manager-4.0.4.ebuild,v 1.9 2004/04/27 15:48:37 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce-mcs-manager/xfce-mcs-manager-4.0.4.ebuild,v 1.10 2004/06/24 21:58:17 agriffis Exp $
 
 IUSE=""
 DESCRIPTION="Libraries for XFCE4"

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfwm4/xfwm4-4.0.4.ebuild,v 1.9 2004/04/27 15:55:52 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfwm4/xfwm4-4.0.4.ebuild,v 1.10 2004/06/24 21:59:36 agriffis Exp $
 
 IUSE="X"
 DESCRIPTION="Xfce4 windowmanager"

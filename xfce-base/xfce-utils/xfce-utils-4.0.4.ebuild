@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce-utils/xfce-utils-4.0.4.ebuild,v 1.9 2004/04/27 15:49:55 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce-utils/xfce-utils-4.0.4.ebuild,v 1.10 2004/06/24 21:58:40 agriffis Exp $
 
 IUSE="X gtkhtml gnome"
 DESCRIPTION="Xfce4 utilities"
