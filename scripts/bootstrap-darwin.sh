@@ -1,10 +1,7 @@
 #!/bin/bash
 # Copyright 2005 The Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap-darwin.sh,v 1.2 2005/02/15 01:04:30 kito Exp $
-
-# Make sure sudo passwd is asked for
-sudo true
+# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap-darwin.sh,v 1.3 2005/02/26 18:47:34 kito Exp $
 
 trap 'exit 1' TERM KILL INT QUIT ABRT
 
@@ -14,6 +11,9 @@ if [ "`uname`" != Darwin ]; then
 	echo "You need to be running a mach kernel to proceed."
 	exit 1
 fi
+
+# Make sure sudo passwd is asked for
+sudo true
 
 ## some vars
 
@@ -32,6 +32,9 @@ PYTHONVERSION=2.3.4
 DMGURL="http://www.metadistribution.org/gentoo/macos"
 DMGVERSION=20041118
 BOOTSTRAPSCRIPT="`pwd`/${0##*/}"
+
+sudo mkdir -p ${DISTDIR} ${PORTAGE_TMPDIR}
+
 echo ${BOOTSTRAPSCRIPT}
 
 if [ -z "${CHOST}" ] ; then
@@ -188,9 +191,7 @@ bootstrap_progressive() {
 }
 
 bootstrap_python() {
-
-	TARGET=$1
-
+		TARGET=$1
 		PV=${PYTHONVERSION}
 		A=Python-${PV}.tar.bz2
 		if [ ! -e ${DISTDIR}/${A} ] ; then
@@ -202,8 +203,8 @@ bootstrap_python() {
 		export PYTHON_DISABLE_SSL=1
 		export OPT="${CFLAGS}"
 		
-		rm -rf ${S}
-		mkdir -p ${S}
+		sudo rm -rf ${S}
+		sudo mkdir -p ${S}
 		cd ${S}
 		echo "Unpacking Python..."
 		sudo tar -jxf ${DISTDIR}/${A} || exit 1
@@ -211,7 +212,7 @@ bootstrap_python() {
 		echo "Configuring Python..."
 		cd ${S}
 
-		./configure \
+		sudo ./configure \
 			--enable-unicode=ucs4 \
 			--prefix=${TARGET}/usr \
 			--host=${CHOST} \
@@ -393,6 +394,9 @@ create_dmg() {
 		[ -d "${TARGET}/.vol" ] || sudo mkdir -p "${TARGET}/.vol"
 		## If the directory is empty, assume volfs is not mounted
 		[ "$(echo ${TARGET}/.vol/*)" == "${TARGET}/.vol/*" ] && sudo /sbin/mount_volfs "${TARGET}/.vol"
+		echo
+		echo -e "To finish the bootstrap: cd /sbin && ./bootstrap-darwin.sh {standard,progressive}"
+		echo
 		sudo chroot ${TARGET} /bin/bash
 		echo
 		echo -e "Buh bye."
