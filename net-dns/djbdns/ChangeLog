@@ -1,6 +1,11 @@
 # ChangeLog for net-dns/djbdns
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/ChangeLog,v 1.40 2004/10/08 00:55:03 jhhudso Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/ChangeLog,v 1.41 2004/11/01 01:26:10 kloeri Exp $
+
+*djbdns-1.05-r14 (01 Nov 2004)
+
+  01 Nov 2004; Bryan Østergaard <kloeri@gentoo.org> djbdns-1.05-r14.ebuild:
+  ~alpha keyword.
 
   07 Oct 2004; Jared Hudson <jhhudso@gentoo.org> : In reponse to bug #66645,
   I have updated the patch for dnsroots to include the 2nd root server IP
