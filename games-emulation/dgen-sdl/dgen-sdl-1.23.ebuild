@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/dgen-sdl/dgen-sdl-1.23.ebuild,v 1.7 2004/07/18 14:50:08 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/dgen-sdl/dgen-sdl-1.23.ebuild,v 1.8 2005/01/09 10:50:14 swegener Exp $
 
 inherit games gnuconfig
 
@@ -15,7 +15,7 @@ IUSE="X mmx opengl"
 
 RDEPEND="media-libs/libsdl
 	X? ( virtual/x11 )
-	opengl? virtual/opengl"
+	opengl? ( virtual/opengl )"
 DEPEND="${DEPEND}
 	dev-lang/nasm"
 
