@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/ktoblzcheck
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ktoblzcheck/ChangeLog,v 1.3 2004/06/07 06:30:38 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ktoblzcheck/ChangeLog,v 1.4 2004/06/07 13:08:42 dragonheart Exp $
+
+  07 Jun 2004; Daniel Black <dragonheart@gentoo.org> ktoblzcheck-0.7.ebuild:
+  no 0.7 yet - access violation - bug #53211
 
   07 Jun 2004; Daniel Black <dragonheart@gentoo.org> +metadata.xml,
   ktoblzcheck-0.6.ebuild, +ktoblzcheck-0.7.ebuild:
