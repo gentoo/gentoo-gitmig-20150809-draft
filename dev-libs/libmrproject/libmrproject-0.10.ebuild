@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmrproject/libmrproject-0.10.ebuild,v 1.3 2003/11/18 20:17:17 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmrproject/libmrproject-0.10.ebuild,v 1.4 2004/01/09 16:59:00 agriffis Exp $
 
 inherit gnome.org
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://mrproject.codefactory.se/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~sparc ~ppc ~alpha"
+KEYWORDS="x86 ~sparc ~ppc alpha"
 
 RDEPEND=">=dev-libs/glib-2.0.4
 	>=dev-libs/libxml2-2.4.7
