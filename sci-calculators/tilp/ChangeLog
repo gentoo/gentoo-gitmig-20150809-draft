@@ -1,6 +1,9 @@
 # ChangeLog for sci-calculators/tilp
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/tilp/ChangeLog,v 1.5 2004/12/28 21:42:07 ribosome Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/tilp/ChangeLog,v 1.6 2005/01/09 11:40:22 swegener Exp $
+
+  09 Jan 2005; Sven Wegener <swegener@gentoo.org> tilp-6.76.ebuild:
+  Added missing parentheses in SRC_URI/*DEPEND/LICENSE.
 
   28 Dec 2004; Olivier Fisette <ribosome@gentoo.org> tilp-6.76.ebuild:
   Dependency update: dev-libs/libticalcs -> sci-libs/libticalcs.

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/tilp/tilp-6.76.ebuild,v 1.4 2004/12/28 21:42:07 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/tilp/tilp-6.76.ebuild,v 1.5 2005/01/09 11:40:22 swegener Exp $
 
 inherit eutils
 
@@ -20,7 +20,7 @@ DEPEND=">=sci-libs/libticables-3.8.6
 		app-text/dos2unix
 		>=x11-libs/gtk+-2
 		>=gnome-base/libglade-2
-		nls? sys-devel/gettext"
+		nls? ( sys-devel/gettext )"
 
 src_unpack() {
 	unpack ${A}

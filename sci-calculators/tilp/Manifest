@@ -1,7 +1,17 @@
-MD5 cb218ace01fd45ef38d59163e38c4139 tilp-6.76.ebuild 1409
-MD5 12d899b5c94aea2c2cd01c37f32ef770 ChangeLog 3219
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 81798b869afd00ddbbc8fd60ff7f4133 tilp-6.76.ebuild 1413
+MD5 6b2a6103eff5acd2861c0be940138cd7 ChangeLog 3344
 MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
 MD5 19f22f6cd7f216bca36431149033c082 files/6.76-makefile.patch 2495
 MD5 06d7047c0e38a61469e836701cd8e0e4 files/keepdir.patch 384
 MD5 bc48a68d03eb437fcd76f7bd8993fac8 files/6.76-makefile-desktop.patch 706
 MD5 708836f6ae250add32825e8e7595d9b1 files/digest-tilp-6.76 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFB4RgsI1lqEGTUzyQRAgsLAJwOU4IfL8u92e0GobpMmqqsaN/2eACgg8Xx
+LSP3xhX1rXsehiekoZgLmis=
+=5vnD
+-----END PGP SIGNATURE-----
