@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/libxml2-2.5.8.ebuild,v 1.12 2003/09/23 15:48:27 darkspecter Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/libxml2-2.5.8.ebuild,v 1.13 2004/02/17 10:45:09 kumba Exp $
 
 inherit eutils libtool gnome.org flag-o-matic
 
