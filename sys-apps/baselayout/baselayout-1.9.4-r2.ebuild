@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.9.4-r2.ebuild,v 1.3 2004/06/13 05:04:21 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.9.4-r2.ebuild,v 1.4 2004/06/15 06:57:59 solar Exp $
 
 inherit flag-o-matic eutils
 
@@ -19,7 +19,7 @@ SRC_URI="ftp://ftp.cistron.nl/pub/people/miquels/software/sysvinit-${SVIV}.tar.g
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64 ppc64 s390"
-IUSE="bootstrap build livecd static selinux"
+IUSE="bootstrap build livecd static selinux uclibc"
 
 DEPEND="virtual/os-headers
 	selinux? ( sys-libs/libselinux )"
@@ -425,6 +425,8 @@ src_install() {
 		docinto sysvinit-${SVIV}
 		dodoc COPYRIGHT README doc/*
 	fi
+
+	use uclibc && rm -f ${D}/etc/nsswitch.conf
 
 	# Hack to fix bug 9849, continued in pkg_postinst
 	unkdir

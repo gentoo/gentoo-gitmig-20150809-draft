@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout-lite/baselayout-lite-1.0_pre1.ebuild,v 1.2 2004/02/27 20:21:45 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout-lite/baselayout-lite-1.0_pre1.ebuild,v 1.3 2004/06/15 07:00:26 solar Exp $
 
-IUSE=""
+IUSE="build bootstrap uclibc"
 
 DESCRIPTION="Baselayout for embedded systems"
 HOMEPAGE="http://www.gentoo.org/proj/en/base/embedded/"
@@ -19,6 +19,7 @@ src_install() {
 	insinto /etc
 	doins ${S}/{fstab,group,nsswitch.conf,passwd,profile.env,protocols,shells}
 	doins ${S}/init/inittab
+	use uclibc && rm -f ${D}/etc/nsswitch.conf
 
 	exeinto /etc/init.d
 	doexe ${S}/init/rc[SK]
@@ -46,7 +47,7 @@ pkg_postinst() {
 	# Touching /etc/passwd and /etc/shadow after install can be fatal, as many
 	# new users do not update them properly.  thus remove all ._cfg files if
 	# we are not busy with a build.
-	if [ -z "`use build`" -a -z "`use bootstrap`" ]
+	if ! ( use build || use bootstrap )
 	then
 		ewarn "Removing invalid backup copies of critical config files..."
 		rm -f ${ROOT}/etc/._cfg????_{passwd,shadow}

@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/baselayout-lite
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout-lite/ChangeLog,v 1.1 2004/02/23 03:19:56 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout-lite/ChangeLog,v 1.2 2004/06/15 07:00:26 solar Exp $
+
+  15 Jun 2004; <solar@gentoo.org> baselayout-lite-1.0_pre1.ebuild:
+  remove unneeded /etc/nsswitch.conf with USE=uclibc
 
 *baselayout-lite-1.0_pre1 (22 Feb 2004)
 
