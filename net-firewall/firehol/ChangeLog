@@ -1,6 +1,21 @@
 # ChangeLog for net-firewall/firehol
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/firehol/ChangeLog,v 1.15 2005/02/02 20:34:54 centic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/firehol/ChangeLog,v 1.16 2005/02/12 20:40:35 centic Exp $
+
+*firehol-1.226-r1 (12 Feb 2005)
+
+  12 Feb 2005; Dominik Stadler <centic@gentoo.org>
+  files/firehol.initrd:
+  Fix firehol.initrd with try-action. Fixes Bug 81313
+
+*firehol-1.226-r1 (12 Feb 2005)
+
+  12 Feb 2005; Dominik Stadler <centic@gentoo.org>
+  +files/firehol-1.226-to-228.patch, +firehol-1.226-r1.ebuild:
+  Add patch to include changes from 1.228 for embedded Gentoo-GNAP.
+  Also add check to make sure that iproute2 is not installed with 
+  USE="minimal", fixes Bug 81600.
+  
 
   02 Feb 2005; Dominik Stadler <centic@gentoo.org> -firehol-1.191-r2.ebuild,
   -firehol-1.214.ebuild:

@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/firehol/files/firehol.initrd,v 1.4 2004/11/09 13:59:59 centic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/firehol/files/firehol.initrd,v 1.5 2005/02/12 20:40:35 centic Exp $
 
 
 opts="start stop restart try status panic save"
@@ -43,7 +43,7 @@ restart() {
 
 try() {
 	ebegin "Trying FireHOL configuration"
-	/usr/sbin/firehol try
+	/usr/sbin/firehol ${FIREHOL_CONF} try
 	eend $?
 }
 

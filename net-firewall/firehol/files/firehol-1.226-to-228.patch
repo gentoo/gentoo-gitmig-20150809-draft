@@ -1,0 +1,92 @@
+===================================================================
+RCS file: /cvsroot/firehol/firehol/firehol.sh,v
+retrieving revision 1.226
+retrieving revision 1.228
+diff -u -r1.226 -r1.228
+--- firehol/firehol/firehol.sh	2005/01/25 21:28:19	1.226
++++ firehol/firehol/firehol.sh	2005/02/09 22:36:24	1.228
+@@ -74,6 +74,27 @@
+ 	return 0
+ }
+ 
++# Check for a command during runtime.
++# Currently the following commands are required only when needed:
++#
++# wget or curl (either is fine)
++# gzcat
++#
++require_cmd() {
++	for x in $1
++	do
++		eval var=`echo ${x} | tr 'a-z' 'A-Z'`_CMD
++		eval val=\$\{${var}\}
++		if [ -z "${val}" ]
++		then
++			which_cmd -n "${var}" "${x}"
++			test $? -eq 0 && return 0
++		fi
++	done
++	
++	return 1
++}
++
+ which_cmd CAT_CMD cat
+ which_cmd CUT_CMD cut
+ which_cmd CHOWN_CMD chown
+@@ -103,7 +124,6 @@
+ which_cmd TR_CMD tr
+ which_cmd UNAME_CMD uname
+ which_cmd UNIQ_CMD uniq
+-which_cmd -n WGET_CMD wget || which_cmd CURL_CMD curl
+ 
+ # Make sure our generated files cannot be accessed by anyone else.
+ umask 077
+@@ -1778,6 +1798,8 @@
+ firehol_wget() {
+ 	local url="${1}"
+ 	
++	require_cmd wget curl || error "Cannot find 'wget' or 'curl' in the path."
++	
+ 	if [ ! -z "${WGET_CMD}" ]
+ 	then
+ 		${WGET_CMD} -O - "${url}" 2>/dev/null
+@@ -1828,6 +1850,9 @@
+ 		done
+ 		
+ 		test ${count} -eq 0 && softwarning "No ECN SHAME IPs found." && return 1
++	else
++		softwarning "TCP_ECN is not enabled in the kernel. ECN_SHAME helper is ignored."
++		return 0
+ 	fi
+ 	return 0
+ }
+@@ -2563,12 +2588,21 @@
+ # new firewall has been activated. Here we just keep a list of the required
+ # kernel modules.
+ 
++# optionaly require command gzcat
++require_cmd gzcat
++
+ KERNEL_CONFIG=
+ if [ -f "/proc/config" ]
+ then
+ 	KERNEL_CONFIG="/proc/config"
+ 	${CAT_CMD} /proc/config >${FIREHOL_DIR}/kcfg
+ 	source ${FIREHOL_DIR}/kcfg
++	${RM_CMD} -f ${FIREHOL_DIR}/kcfg	
++elif [ -f "/proc/config.gz" -a ! -z "${GZCAT_CMD}" ]
++then
++	KERNEL_CONFIG="/proc/config.gz"
++	${GZCAT_CMD} /proc/config.gz >${FIREHOL_DIR}/kcfg
++	source ${FIREHOL_DIR}/kcfg
+ 	${RM_CMD} -f ${FIREHOL_DIR}/kcfg
+ 	
+ elif [ -f "/lib/modules/`${UNAME_CMD} -r`/build/.config" ]
+@@ -2600,7 +2634,6 @@
+ 	echo >&2 " "
+ fi
+ 
+-
+ # activation-phase command to check for the existance of
+ # a kernel configuration directive. It returns:
+ # 0 = module is already in the kernel
