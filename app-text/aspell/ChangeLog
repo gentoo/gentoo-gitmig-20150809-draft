@@ -1,11 +1,16 @@
 # ChangeLog for app-text/aspell
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/ChangeLog,v 1.21 2003/02/12 05:22:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/ChangeLog,v 1.22 2003/02/12 13:32:45 seemant Exp $
 
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
- 
 *aspell-0.50.3 (03 Dec 2002)
 
+  12 Feb 2003; Seemant Kulleen <seemant@gentoo.org> aspell-0.50.3.ebuild :
+
+  Added ~alpha ~mips ~hppa
+
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : 
+  changed sparc ~sparc keywords
+ 
   03 Dec 2002; Seemant Kulleen <seemant@gentoo.org> aspell-0.50.3.ebuild
   files/digest-aspell-0.50.3 :
 
