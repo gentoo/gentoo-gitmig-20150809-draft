@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/alsa-tools-1.0.3.ebuild,v 1.2 2004/03/10 02:43:00 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/alsa-tools-1.0.3.ebuild,v 1.3 2004/03/14 23:38:31 eradicator Exp $
 
 IUSE=""
 
@@ -44,6 +44,11 @@ ALSA_TOOLS="ac3dec as10k1 envy24control hdspconf hdsploader hdspmixer \
 #
 # hdsploader
 # sscape_ctl
+
+src_unpack() {
+	unpack ${A}
+	epatch ${FILESDIR}/${P}-kernel-2.6.patch
+}
 
 src_compile() {
 	# hdspmixer requires fltk

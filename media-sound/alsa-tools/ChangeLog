@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/alsa-tools
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/ChangeLog,v 1.40 2004/03/10 02:43:00 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/ChangeLog,v 1.41 2004/03/14 23:38:31 eradicator Exp $
+
+  14 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  alsa-tools-1.0.3.ebuild, files/alsa-tools-1.0.3-kernel-2.6.patch:
+  Patch closes bug #42087.
 
   09 Mar 2004; Tom Gall <tgall@gentoo.org> 
   alsa-tools-1.0.0_rc2-r1.ebuild, alsa-tools-1.0.1.ebuild, 
