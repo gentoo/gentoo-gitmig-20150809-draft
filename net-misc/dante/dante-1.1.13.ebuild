@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dante/dante-1.1.13.ebuild,v 1.7 2002/12/09 04:33:15 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dante/dante-1.1.13.ebuild,v 1.8 2003/01/26 23:31:30 nall Exp $
 
 IUSE="tcpd"
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.inet.no/pub/socks/${P}.tar.gz"
 HOMEPAGE="http://www.inet.no/dante/"
 
 LICENSE="BSD"
-KEYWORDS="~x86 ~sparc "
+KEYWORDS="~x86 ~sparc ~ppc"
 SLOT="0"
 
 RDEPEND="virtual/glibc
