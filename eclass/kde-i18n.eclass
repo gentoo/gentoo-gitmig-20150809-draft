@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-i18n.eclass,v 1.12 2002/02/18 18:29:19 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-i18n.eclass,v 1.13 2002/04/02 23:00:18 danarmak Exp $
 inherit kde kde.org 
 ECLASS=kde-i18n
 
@@ -10,8 +10,6 @@ DESCRIPTION="KDE ${PV} - i18n: ${PN}"
 HOMEPAGE="http://www.kde.org/"
 
 need-kde ${PV}
-
-myconf="$myconf --enable-final"
 
 SRC_URI="$SRC_URI http://www.ibiblio.org/gentoo/distfiles/kde-i18n-gentoo.patch"
 

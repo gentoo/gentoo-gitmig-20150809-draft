@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.46 2002/03/28 22:20:13 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.47 2002/04/02 23:00:18 danarmak Exp $
 # The kde eclass is inherited by all kde-* eclasses. Few ebuilds inherit straight from here.
 inherit base kde-functions
 ECLASS=kde
@@ -23,14 +23,14 @@ kde_src_compile() {
 	case $1 in
 		myconf)
 			debug-print-section myconf
-			myconf="$myconf --host=${CHOST} --with-x --enable-mitshm --with-xinerama --with-qt-dir=${QTDIR}"
+			myconf="$myconf --host=${CHOST} --with-x --enable-mitshm --with-xinerama --with-qt-dir=${QTDIR} --enable-final"
 			case $KDEMAJORVER in
 			    2) myconf="$myconf --prefix=${KDE2DIR}";;
 			    3) myconf="$myconf --prefix=${KDE3DIR}";;
 			    *) echo "!!! $ECLASS: $FUNCNAME: myconf: could not set --prefix based on \$KDEMAJOVER=\"$KDEMAJORVER\"" && exit 1;;
 			esac
 			use qtmt 	&& myconf="$myconf --enable-mt"
-			[ -n "$DEBUG" ] && myconf="$myconf --enable-debug --with-debug"	|| myconf="$myconf --disable-debug --without-debug"
+			[ -n "$DEBUG" ] && myconf="$myconf --enable-debug=full --with-debug"	|| myconf="$myconf --disable-debug --without-debug"
 			debug-print "$FUNCNAME: myconf: set to ${myconf}"
 			;;
 		configure)
