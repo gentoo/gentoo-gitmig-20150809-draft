@@ -1,0 +1,39 @@
+diff -Nru a/src/cddbp.c b/src/cddbp.c
+--- a/src/cddbp.c	2004-09-19 10:16:44.332597832 -0600
++++ b/src/cddbp.c	2004-09-19 10:17:43.771561736 -0600
+@@ -9,7 +9,7 @@
+ #include "misc_utils.h"
+ 
+ int cddbp_query_proxy( FILE*, const char *disk_id, int tracknum,
+-                       long int offsets[ tracknum ], int duration, int *matches,
++                       long int offsets[ MAX_NUM_TRACK ], int duration, int *matches,
+                        char ***category_buffer, char ***title_buffer,
+                        char ***id_buffer );
+ int cddbp_stat( FILE*, char **result );
+@@ -67,7 +67,7 @@
+ 
+ 
+ int cddbp_query( FILE *socket, const char *disk_id, int tracknum,
+-                 long int offset[ tracknum ], int duration, int *matches,
++                 long int offset[ MAX_NUM_TRACK ], int duration, int *matches,
+                  char ***category_buffer, char ***title_buffer,
+                  char ***id_buffer )
+ {
+@@ -255,7 +255,7 @@
+ 
+ 
+ int http_query( const char *server, int port, const char *URL,
+-                const char *cd_id, int tracknum, long int offset[ tracknum ],
++                const char *cd_id, int tracknum, long int offset[ MAX_NUM_TRACK ],
+                 int duration, int *matches,
+                 char ***category_buffer, char ***title_buffer,
+                 char ***id_buffer, const char *client, const char *version )
+@@ -365,7 +365,7 @@
+ }
+ 
+ int http_query_proxy( const char *server, int port, const char *proxy_server, int proxy_port, const char *URL,
+-                      const char *cd_id, int tracknum, long int offset[ tracknum ],
++                      const char *cd_id, int tracknum, long int offset[ MAX_NUM_TRACK ],
+                       int duration, int *matches,
+                       char ***category_buffer, char ***title_buffer,
+                       char ***id_buffer, const char *client, const char *version )
