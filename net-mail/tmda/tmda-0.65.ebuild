@@ -1,6 +1,6 @@
 # Copyright 2002 Arcady Genkin <agenkin@thpoon.com>
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/tmda/tmda-0.65.ebuild,v 1.1 2002/11/17 01:51:52 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/tmda/tmda-0.65.ebuild,v 1.2 2002/11/18 03:15:07 agenkin Exp $
 
 DESCRIPTION="Python-based SPAM reduction system"
 HOMEPAGE="http://www.tmda.net/"
@@ -40,7 +40,7 @@ src_install () {
 	doins templates/*.txt
 	
 	# Documentation
-	dodoc COPYING ChangeLog README THANKS UPGRADE CRYPTO
+	dodoc COPYING ChangeLog README THANKS UPGRADE CRYPTO CODENAMES INSTALL
 	dodoc contrib/tmda.spec contrib/sample.tmdarc
 	dohtml -r htdocs/*.html
 
