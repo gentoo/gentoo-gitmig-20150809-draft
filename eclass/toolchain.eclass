@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.93 2005/01/25 11:12:48 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.94 2005/01/27 20:26:08 eradicator Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -60,6 +60,8 @@ GCCMAJOR=$(get_version_component_range 1)
 GCCMINOR=$(get_version_component_range 2)
 GCCMICRO=$(get_version_component_range 3)
 [[ -z ${BRANCH_UPDATE} ]] && BRANCH_UPDATE=$(get_version_component_range 4)
+
+GCC_MANPAGE_VERSION=${GCC_MANPAGE_VERSION:-${GCC_RELEASE_VER}}
 
 # Pre-release support
 if [ ${PV} != ${PV/_pre/-} ] ; then
@@ -237,8 +239,6 @@ get_gcc_src_uri() {
 	if [[ -n ${PIE_VER} ]] ; then
 		PIE_CORE=${PIE_CORE:-gcc-${GCC_RELEASE_VER}-piepatches-v${PIE_VER}.tar.bz2}
 	fi
-
-	GCC_MANPAGE_VERSION=${GCC_MANPAGE_VERSION:-${GCC_RELEASE_VER}}
 
 	# Set where to download gcc itself depending on whether we're using a
 	# prerelease, snapshot, or release tarball.
