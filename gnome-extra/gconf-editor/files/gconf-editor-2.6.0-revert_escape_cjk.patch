@@ -1,0 +1,118 @@
+Index: gconf-editor-window.c
+===================================================================
+RCS file: /cvs/gnome/gconf-editor/src/gconf-editor-window.c,v
+retrieving revision 1.35
+diff -u -p -r1.35 gconf-editor-window.c
+--- gconf-editor-window.c	22 Aug 2002 13:05:30 -0000	1.35
++++ gconf-editor-window.c	7 Nov 2002 00:55:52 -0000
+@@ -455,7 +455,7 @@ gconf_editor_window_selection_changed (G
+ 	if (selection == NULL)
+ 		gtk_window_set_title (GTK_WINDOW (window), _("GConf editor"));
+ 	else {
+-		gchar *name, *title, *path;
++	  	gchar *name, *title, *path, *escape_path;
+ 		GtkTreeIter child_iter;
+ 
+ 		if (!gtk_tree_selection_get_selected (selection, NULL, &iter)) {
+@@ -478,8 +478,11 @@ gconf_editor_window_selection_changed (G
+ 		gtk_statusbar_pop (GTK_STATUSBAR (window->statusbar), 0);
+ 		gtk_statusbar_push (GTK_STATUSBAR (window->statusbar), 0, path);
+ 
+-		gconf_list_model_set_root_path (GCONF_LIST_MODEL (window->list_model), path);
++		escape_path = gconf_tree_model_get_gconf_escape_path (path);
++		
++		gconf_list_model_set_root_path (GCONF_LIST_MODEL (window->list_model), escape_path);
+ 
++		g_free (escape_path);
+ 		g_free (path);
+ 
+ 	}
+Index: gconf-tree-model.c
+===================================================================
+RCS file: /cvs/gnome/gconf-editor/src/gconf-tree-model.c,v
+retrieving revision 1.12
+diff -u -p -r1.12 gconf-tree-model.c
+--- gconf-tree-model.c	9 Sep 2002 07:11:46 -0000	1.12
++++ gconf-tree-model.c	7 Nov 2002 00:55:52 -0000
+@@ -104,17 +104,43 @@ gconf_tree_model_get_gconf_name (GConfTr
+ 	return g_strdup (ptr);
+ }
+ 
++gchar *
++gconf_tree_model_get_gconf_escape_path (gchar *node_path)
++{
++	gchar *ptr;
++	gchar *escape_key;
++	gchar *escape_node_path;
++	gchar *node_dir;
++
++	ptr = node_path + strlen (node_path);
++
++	while (ptr[-1] != '/')
++		ptr--;
++
++	escape_key = gconf_escape_key (ptr, -1);
++
++	node_dir = g_strndup (node_path, ptr - node_path);
++	escape_node_path = g_strconcat (node_dir, escape_key, NULL);
++	g_free (node_dir);
++	g_free (escape_key);
++
++	return escape_node_path;
++
++}
+ static gboolean
+ gconf_tree_model_build_level (GConfTreeModel *model, Node *parent_node, gboolean emit_signals)
+ {
+ 	GSList *list, *tmp;
+ 	Node *tmp_node = NULL;
+ 	gint i = 0;
++	gchar *escape_key;
+ 
+ 	if (parent_node->children)
+ 		return FALSE;
+ 
+-	list = gconf_client_all_dirs (model->client, parent_node->path, NULL);
++	escape_key = gconf_tree_model_get_gconf_escape_path (parent_node->path);
++	list = gconf_client_all_dirs (model->client, escape_key, NULL);
++	g_free (escape_key);
+ 
+ 	if (!list)
+ 		return FALSE;
+@@ -125,7 +151,8 @@ gconf_tree_model_build_level (GConfTreeM
+ 		node = g_new0 (Node, 1);
+ 		node->offset = i;
+ 		node->parent = parent_node;
+-		node->path = tmp->data;
++		node->path = gconf_unescape_key (tmp->data, -1);
++		g_free (tmp->data);
+ 
+ 		if (tmp_node) {
+ 			tmp_node->next = node;
+@@ -402,8 +429,11 @@ gconf_tree_model_iter_has_child (GtkTree
+ 	GConfTreeModel *model = (GConfTreeModel *)tree_model;
+ 	Node *node = iter->user_data;
+ 	GSList *list;
++	gchar *escape_key;
+ 
+-	list = gconf_client_all_dirs (model->client, node->path, NULL);
++	escape_key = gconf_tree_model_get_gconf_escape_path (node->path);
++	list = gconf_client_all_dirs (model->client, escape_key, NULL);
++	g_free (escape_key);
+ 
+ 	if (list == NULL)
+ 		return FALSE;
+Index: gconf-tree-model.h
+===================================================================
+RCS file: /cvs/gnome/gconf-editor/src/gconf-tree-model.h,v
+retrieving revision 1.2
+diff -u -p -r1.2 gconf-tree-model.h
+--- gconf-tree-model.h	14 Jan 2002 18:13:05 -0000	1.2
++++ gconf-tree-model.h	7 Nov 2002 00:55:52 -0000
+@@ -62,4 +62,6 @@ gchar *gconf_tree_model_get_gconf_path (
+ 
+ GtkTreePath *gconf_tree_model_get_tree_path_from_gconf_path (GConfTreeModel *tree_model, const char *path);
+ 
++gchar *gconf_tree_model_get_gconf_escape_path (gchar *node_path);
++
+ #endif /* __GCONF_TREE_MODEL_H__ */
