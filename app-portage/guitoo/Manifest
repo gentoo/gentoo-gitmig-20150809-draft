@@ -1,6 +1,16 @@
-MD5 852dda4f4aadbe9e172ed3ef0cc9160b ChangeLog 712
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 d2d96a92d03dd1e68cb5f57db7668709 ChangeLog 808
 MD5 bde95c9bbf14b1c6839368d1cf462a91 guitoo-0.47.0.ebuild 443
+MD5 cb28b24a265ab91628dddc2c0f1d2152 guitoo-0.50.01.ebuild 496
 MD5 1b6808bbd78c9161f8b7efb090d966f8 metadata.xml 162
-MD5 be7f972c6422f2bd5bae3be9859d9029 guitoo-0.50.01.ebuild 494
 MD5 7ab0cdf38df848bd6745c008e5eb6ed6 files/digest-guitoo-0.47.0 66
 MD5 3c9af3de5a8bcd19180bafe77af6428d files/digest-guitoo-0.50.01 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFB27FontT9W3vfTuoRAkQvAJ9WSd5o6AyAkCrpDXElzXWahOIceQCfSOv8
+dosbqWUjrPnUwslV9e16zHU=
+=+hiX
+-----END PGP SIGNATURE-----

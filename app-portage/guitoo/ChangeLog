@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/guitoo
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/guitoo/ChangeLog,v 1.5 2005/01/01 15:53:35 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/guitoo/ChangeLog,v 1.6 2005/01/05 09:15:37 cryos Exp $
+
+  05 Jan 2005; Marcus Hanwell <cryos@gentoo.org> guitoo-0.50.01.ebuild:
+  Marked ~amd64, bug 70039.
 
   23 Dec 2004; Jason Wever <weeve@gentoo.org> guitoo-0.50.01.ebuild:
   Added ~sparc keyword.
