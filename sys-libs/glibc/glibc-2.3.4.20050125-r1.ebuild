@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20050125-r1.ebuild,v 1.32 2005/03/25 06:17:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20050125-r1.ebuild,v 1.33 2005/03/31 12:57:23 kugelfang Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -228,17 +228,20 @@ toolchain-glibc_src_unpack() {
 }
 
 toolchain-glibc_src_compile() {
+	# Set gconvdir to /usr/$(get_libdir)/gconv on archs with multiple ABIs
+	has_multilib_profile && MAKEFLAGS="gconvdir=$(alt_usrlibdir)/gconv"
+
 	if want_linuxthreads ; then
 		glibc_do_configure linuxthreads
 		einfo "Building GLIBC with linuxthreads..."
-		make PARALLELMFLAGS="${MAKEOPTS}" || die
+		make PARALLELMFLAGS="${MAKEOPTS}" ${MAKEFLAGS} || die
 	fi
 	if want_nptl ; then
 		# ... and then do the optional nptl build
 		unset LD_ASSUME_KERNEL || :
 		glibc_do_configure nptl
 		einfo "Building GLIBC with NPTL..."
-		make PARALLELMFLAGS="${MAKEOPTS}" || die
+		make PARALLELMFLAGS="${MAKEOPTS}" ${MAKEFLAGS} || die
 	fi
 }
 

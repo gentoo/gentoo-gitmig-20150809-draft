@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.330 2005/03/23 21:18:24 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.331 2005/03/31 12:57:23 kugelfang Exp $
+
+  31 Mar 2005; Danny van Dyk <kugelfang@gentoo.org>
+  glibc-2.3.4.20050125-r1.ebuild:
+  Fixed gconvdir on multilib arches, BUG #86861.
 
   23 Mar 2005; Martin Schlemmer <azarah@gentoo.org>
   glibc-2.3.4.20041102-r1.ebuild, glibc-2.3.4.20050125-r1.ebuild:
