@@ -1,6 +1,10 @@
 # ChangeLog for app-sci/blas-atlas
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-sci/blas-atlas/ChangeLog,v 1.6 2004/06/06 16:18:58 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/blas-atlas/ChangeLog,v 1.7 2004/06/19 06:52:29 mr_bones_ Exp $
+
+  18 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  blas-atlas-3.6.0.ebuild:
+  fix typo in error message (bug #54290)
 
   06 Jun 2004; Danny van Dyk <kugelfang@gentoo.org> blas-atlas-3.6.0.ebuild:
   Marked stable on amd64.

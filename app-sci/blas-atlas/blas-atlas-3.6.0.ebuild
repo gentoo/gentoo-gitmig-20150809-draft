@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/blas-atlas/blas-atlas-3.6.0.ebuild,v 1.5 2004/06/06 16:18:58 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/blas-atlas/blas-atlas-3.6.0.ebuild,v 1.6 2004/06/19 06:52:29 mr_bones_ Exp $
 
 inherit eutils
 
@@ -28,11 +28,10 @@ pkg_setup() {
 	use ifc || if [ -z `which g77` ]; then
 		#if ifc is defined then the dep was already checked
 		eerror "No fortran compiler found on the system!"
-		eerror "Please add g77 to your USE flags and reemerge gcc!"
+		eerror "Please add f77 to your USE flags and reemerge gcc!"
 		die
 	fi
 }
-
 
 src_unpack() {
 	unpack ${A}
