@@ -1,0 +1,16 @@
+# ChangeLog for app-i18n/uim-kdehelper
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim-kdehelper/ChangeLog,v 1.1 2004/11/03 08:35:03 usata Exp $
+
+*uim-kdehelper-0.1.0 (03 Nov 2004)
+
+  03 Nov 2004; Mamoru KOMACHI <usata@gentoo.org> +metadata.xml,
+  +uim-kdehelper-0.1.0.ebuild:
+  Renamed from uim-qtkde-helper.
+
+*uim-qtkde-helper-0.1.0_beta3 (20 Oct 2004)
+
+  20 Oct 2004; Mamoru KOMACHI <usata@gentoo.org> +metadata.xml,
+  +uim-qtkde-helper-0.1.0_beta3.ebuild:
+  Initial import.
+
