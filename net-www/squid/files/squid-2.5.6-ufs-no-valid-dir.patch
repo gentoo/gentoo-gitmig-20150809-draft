@@ -1,0 +1,14 @@
+Index: squid/src/fs/ufs/store_dir_ufs.c
+diff -c squid/src/fs/ufs/store_dir_ufs.c:1.39.2.8 squid/src/fs/ufs/store_dir_ufs.c:1.39.2.9
+*** squid/src/fs/ufs/store_dir_ufs.c:1.39.2.8	Mon May 31 16:03:31 2004
+--- squid/src/fs/ufs/store_dir_ufs.c	Wed Jul 14 10:26:12 2004
+***************
+*** 1636,1641 ****
+--- 1636,1642 ----
+      ufsinfo->swaplog_fd = -1;
+      ufsinfo->map = NULL;	/* Debugging purposes */
+      ufsinfo->suggest = 0;
++     ufsinfo->open_files = 0;
+      sd->init = storeUfsDirInit;
+      sd->newfs = storeUfsDirNewfs;
+      sd->dump = storeUfsDirDump;
