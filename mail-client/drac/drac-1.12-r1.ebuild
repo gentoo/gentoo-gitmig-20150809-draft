@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/drac/drac-1.12-r1.ebuild,v 1.5 2004/07/01 19:48:10 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/drac/drac-1.12-r1.ebuild,v 1.6 2004/10/15 22:31:46 gmsoft Exp $
 
 DESCRIPTION="A robust implementation of POP-before-SMTP."
 HOMEPAGE="http://mail.cc.umanitoba.ca/drac/"
@@ -8,7 +8,7 @@ SRC_URI="ftp://ftp.cc.umanitoba.ca/src/${PN}.tar.Z"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86 ~sparc ~ppc"
+KEYWORDS="x86 ~sparc ~ppc hppa"
 IUSE="debug"
 
 DEPEND="virtual/libc
