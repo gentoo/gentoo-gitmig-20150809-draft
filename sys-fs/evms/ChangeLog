@@ -1,6 +1,14 @@
 # ChangeLog for sys-fs/evms
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/ChangeLog,v 1.27 2005/02/26 11:17:35 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/ChangeLog,v 1.28 2005/03/04 23:48:07 eradicator Exp $
+
+*evms-2.5.2 (04 Mar 2005)
+
+  04 Mar 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  evms-2.3.4-r1.ebuild, -evms-2.4.1.ebuild, evms-2.5.1.ebuild,
+  +evms-2.5.2.ebuild:
+  Version bump for a bugfix release. Removing old version. Added glib-1
+  dependency when USE=ncurses -gtk. Closes bug #83503.
 
   26 Feb 2005; Jeremy Huddleston <eradicator@gentoo.org> evms-2.5.1.ebuild:
   Stable amd64, x86.

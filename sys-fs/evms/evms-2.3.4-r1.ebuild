@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/evms-2.3.4-r1.ebuild,v 1.9 2005/03/01 23:16:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/evms-2.3.4-r1.ebuild,v 1.10 2005/03/04 23:48:07 eradicator Exp $
 
 inherit eutils flag-o-matic
 
@@ -18,7 +18,8 @@ DEPEND="virtual/libc
 	sys-fs/e2fsprogs
 	sys-fs/device-mapper
 	gtk? ( =x11-libs/gtk+-1* )
-	ncurses? ( sys-libs/ncurses )"
+	ncurses? ( sys-libs/ncurses
+	           =dev-libs/glib-1* )"
 
 src_compile() {
 	# Bug #54856
