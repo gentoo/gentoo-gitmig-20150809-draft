@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 95cade374d405bf8697fc1b9e681b7a8 ChangeLog 1317
-MD5 425c500698407599ccb409fb6ce25dbe eblook-1.5.1.ebuild 863
+MD5 6de5a46230bce976392094139fb660be ChangeLog 1323
+MD5 29ec513138087b170ad47e72003bfb3d eblook-1.5.1.ebuild 869
+MD5 d91905bfe79bbaaee78f098927a5c696 eblook-1.6.ebuild 733
 MD5 043e2d431237aeec1769801a5b0214df metadata.xml 251
-MD5 0e8515a9006c2d07f1cdac3ef4ef4d56 eblook-1.6.ebuild 728
-MD5 9b14d2f46958a8f3c7d80dec4bf8f36e eblook-1.6.1.ebuild 710
+MD5 02f3ea601067ec2a721a293d4e64181e eblook-1.6.1.ebuild 715
 MD5 1475d7679421c071476945659472b1d8 files/digest-eblook-1.5.1 64
 MD5 258d6e2b8b03a8f42ed8f03b8cf973da files/digest-eblook-1.6 62
 MD5 adb0e4ea729994eb4069e0a2eef68470 files/eblook-1.5.1-eb4-gentoo.diff 393
 MD5 165f5f34a317615b2eb5fa80ebc84da2 files/digest-eblook-1.6.1 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBod3iVWNWqTUmv+0RAuBqAJ0d/KvhFXX++UsXbeTxTJaaLN0AQQCePt6Z
-+AvfOjRXM+jXqSyA6DrkJZw=
-=ZDnh
------END PGP SIGNATURE-----

@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 4798f551f1ef25c8b0c5d64afd6d33a7 babytrans-0.9.2-r2.ebuild 973
-MD5 577cb2fe4afe37f4c8338add2249534e babytrans-0.9.2-r3.ebuild 1173
-MD5 621adc55f8f1625c00effdd84e898f30 ChangeLog 2460
+MD5 1cc9e9342d1f34eab0d79f611b864ca2 ChangeLog 2462
+MD5 fe31b97f91b91f3d96afe01ea3f09327 babytrans-0.9.2-r3.ebuild 1175
 MD5 d378a890367f8f48c801b0ead6464e2f metadata.xml 264
+MD5 afce3ff63188d3543ca6ccc26a311344 babytrans-0.9.2-r2.ebuild 975
+MD5 f113d0b6d519f81f3993cd526820045d files/dictionary 450
 MD5 8d33578864907eca17d1fb89d605dfc2 files/babytrans-0.9.2-nls.patch 414
+MD5 bafd18d9e8a5779740e82b469a235fcc files/babytrans-0.9.2-gcc.patch 241
 MD5 f678700249988dcfab3b3b2a777727ef files/digest-babytrans-0.9.2-r2 67
 MD5 f678700249988dcfab3b3b2a777727ef files/digest-babytrans-0.9.2-r3 67
-MD5 bafd18d9e8a5779740e82b469a235fcc files/babytrans-0.9.2-gcc.patch 241
-MD5 f113d0b6d519f81f3993cd526820045d files/dictionary 450
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBrN8oI1lqEGTUzyQRAkpFAJsFbv4LnnxwO5yeR0sH6wAinPKPggCfaY1a
-JQcAzhLxIZk5vEY2QEu8p4M=
-=HcyQ
------END PGP SIGNATURE-----

@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 7310b24e61ec6e56295fafcdafaaea94 ChangeLog 2984
+MD5 252661ab3b7d54cfd6ae1bb3a32ef905 ChangeLog 2989
 MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
-MD5 d176f552d53b7381d7a58471ed7e380e prime-dict-0.8.4.ebuild 548
-MD5 ac56aad4bc2d3c10859d9c1d3971a711 prime-dict-0.8.3.ebuild 549
-MD5 c75bd3f214760aa9bcb07d1a42719ef0 prime-dict-0.8.5.ebuild 528
+MD5 6e62de43b25fd866eefe3accc7795a80 prime-dict-0.8.4.ebuild 553
+MD5 2a9bd89bece67349a7c31e023c9774d2 prime-dict-0.8.3.ebuild 553
+MD5 613593fd9abd818dc9aed0feb3e9c5f5 prime-dict-0.8.5.ebuild 533
 MD5 47284973bc0fe947fab0a94c0e6d1437 files/digest-prime-dict-0.8.4 69
-MD5 e825a3fc411c06a197d0e158804baa31 files/digest-prime-dict-0.8.3 69
 MD5 8b087882c9c87a13968d9ac89703b9e8 files/digest-prime-dict-0.8.5 69
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBusykVWNWqTUmv+0RAr/gAJ9G9x4FBMwv/QoThwtAgV13ojEaOgCgmNPj
-PZnh8W/P8gxorWpAajqZeJw=
-=CAM6
------END PGP SIGNATURE-----
+MD5 e825a3fc411c06a197d0e158804baa31 files/digest-prime-dict-0.8.3 69

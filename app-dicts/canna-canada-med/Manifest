@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 6b8ec1e87653562611900b9c6332ba65 canna-canada-med-20030309.ebuild 736
-MD5 e8f6257d68b741deb20f36921cb9f865 ChangeLog 737
+MD5 de4a5f510ea53bc8a946aba088e0fdf6 ChangeLog 739
+MD5 8e4e4b4f2a6d55bdd074ca957085f787 canna-canada-med-20030309.ebuild 738
 MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
 MD5 09495497804719bcafa203f41a993401 files/30canada-med.dics.dir 433
 MD5 ed68c40c294d66af30458702fc235d33 files/digest-canna-canada-med-20030309 78
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBrN/GI1lqEGTUzyQRAmjwAJ9nMkFzmCV8WIl1zvt8dujEZ5FM4gCeOUrh
-ichPPfRrCg5fuCXPhdAsH2c=
-=TQqA
------END PGP SIGNATURE-----

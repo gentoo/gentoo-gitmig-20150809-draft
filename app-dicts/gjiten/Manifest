@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 cc085fab328b0aa82fcc5b064f72e1e4 ChangeLog 1262
+MD5 0d2e3e7b7bc21f82ffe207e9368e3a7a ChangeLog 1268
 MD5 f2fc5e05a51ba163bb49deed0254effe metadata.xml 456
-MD5 079603d00d58ba93613886c0bd257dad gjiten-2.3.ebuild 1393
+MD5 03bce43d97140856bce89e09588d51db gjiten-2.3.ebuild 1398
 MD5 7f70f34e92d0d83ae21bf688299aa33e files/digest-gjiten-2.3 62
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBihN7VWNWqTUmv+0RAtuXAKCCwzVPxncYvE5Jh2rjgdOYDHq/6QCgrHdZ
-T0+4XNC/rpCDPhWlTBPoMq8=
-=lQJl
------END PGP SIGNATURE-----
