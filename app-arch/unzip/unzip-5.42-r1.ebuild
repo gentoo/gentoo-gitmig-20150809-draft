@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/unzip/unzip-5.42-r1.ebuild,v 1.11 2002/10/04 03:52:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unzip/unzip-5.42-r1.ebuild,v 1.12 2002/10/24 15:30:13 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Unzipper for pkzip-compressed files"
@@ -14,7 +14,6 @@ KEYWORDS="x86 ppc sparc sparc64 alpha"
 DEPEND="virtual/glibc"
 
 src_compile() {
-
 	cp unix/Makefile unix/Makefile.orig
 	sed -e "s:-O3:${CFLAGS}:" unix/Makefile.orig > unix/Makefile
 
@@ -26,8 +25,8 @@ src_compile() {
 }
 
 src_install() {
-
 	dobin unzip funzip unzipsfx unix/zipgrep
+	dosym /usr/bin/unzip /usr/bin/zipinfo
 	doman man/*.1
 	dodoc BUGS COPYING History* LICENSE README ToDo WHERE
 }
