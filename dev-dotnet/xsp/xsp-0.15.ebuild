@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/xsp/xsp-0.15.ebuild,v 1.3 2004/06/29 14:39:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/xsp/xsp-0.15.ebuild,v 1.4 2004/06/29 18:06:56 agriffis Exp $
 
-inherit mono
+inherit mono eutils
 
 DESCRIPTION="XSP ASP.NET host"
 HOMEPAGE="http://www.go-mono.com/"
