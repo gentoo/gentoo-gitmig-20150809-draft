@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/bsd-games/bsd-games-2.13.ebuild,v 1.4 2004/01/08 02:44:18 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/bsd-games/bsd-games-2.13.ebuild,v 1.5 2004/03/24 07:19:04 mr_bones_ Exp $
 
-inherit games eutils
+inherit eutils games
 
 DESCRIPTION="collection of games from NetBSD"
 HOMEPAGE="http://www.advogato.org/proj/bsd-games/"
@@ -12,12 +12,13 @@ LICENSE="BSD"
 SLOT="0"
 KEYWORDS="x86 ppc amd64"
 
-DEPEND="sys-libs/ncurses
+RDEPEND="sys-libs/ncurses
 	sys-apps/miscfiles
 	sys-apps/less
-	sys-devel/bison
 	sys-devel/flex
 	>=sys-apps/sed-4"
+DEPEND="${RDEPEND}
+	sys-devel/bison"
 
 # Set GAMES_TO_BUILD variable to whatever you want
 export GAMES_TO_BUILD=${GAMES_TO_BUILD:="adventure arithmetic atc
@@ -33,7 +34,7 @@ src_unpack() {
 
 	sed -i \
 		-e "s:/usr/games:${GAMES_BINDIR}:" wargames/wargames \
-		|| die "sed wargames failed"
+			|| die "sed wargames failed"
 
 	cp ${FILESDIR}/config.params-gentoo config.params
 	echo bsd_games_cfg_build_dirs=\"${GAMES_TO_BUILD}\" >> ./config.params
@@ -51,9 +52,9 @@ do_statefile() {
 }
 src_install() {
 	dodir ${GAMES_BINDIR} ${GAMES_STATEDIR} /usr/share/man/man{1,6}
-	make DESTDIR=${D} install-strip || die
+	make DESTDIR=${D} install-strip || die "make install-strip failed"
 
-	dodoc AUTHORS BUGS COPYING ChangeLog ChangeLog.0 INSTALL \
+	dodoc AUTHORS BUGS ChangeLog ChangeLog.0 INSTALL \
 		README PACKAGING SECURITY THANKS TODO YEAR2000
 
 	# special subdirs
