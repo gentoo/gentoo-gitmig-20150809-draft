@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/dosemu/dosemu-1.1.5.ebuild,v 1.1 2003/06/07 16:23:28 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/dosemu/dosemu-1.1.5.ebuild,v 1.2 2003/06/18 14:23:36 hanno Exp $
 
 IUSE="X svga"
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/dosemu/${P_FD}.tgz
 	mirror://sourceforge/dosemu/${P}.tgz"
 HOMEPAGE="http://www.dosemu.org/"
 LICENSE="GPL-2 | LGPL-2.1"
-KEYWORDS="~x86 -ppc"
+KEYWORDS="x86 -ppc"
 SLOT="0"
 DEPEND="X? ( virtual/x11 )
 	svga? ( media-libs/svgalib )

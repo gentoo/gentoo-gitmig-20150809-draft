@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/dosemu
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/dosemu/ChangeLog,v 1.10 2003/06/07 16:23:28 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/dosemu/ChangeLog,v 1.11 2003/06/18 14:23:36 hanno Exp $
+
+  18 Jun 2003; Hanno Boeck <hanno@gentoo.org> dosemu-1.1.5.ebuild:
+  Change ~x86 to x86.
 
 *dosemu-1.1.5 (07 Jun 2003)
 
