@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/leafnode/leafnode-2.0.0_alpha20041007.ebuild,v 1.1 2004/10/17 01:58:34 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/leafnode/leafnode-2.0.0_alpha20041007.ebuild,v 1.2 2004/10/23 01:19:02 weeve Exp $
 
 MY_P=${P/_/.}a
 
@@ -9,7 +9,7 @@ SRC_URI="http://www-dt.e-technik.uni-dortmund.de/~ma/leafnode/beta/${MY_P}.tar.b
 HOMEPAGE="http://www-dt.e-technik.uni-dortmund.de/~ma/leafnode/beta/"
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ~ppc ~sparc"
 IUSE="ipv6"
 
 DEPEND=">=dev-libs/libpcre-3.9"
