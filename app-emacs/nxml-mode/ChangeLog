@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/nxml-mode
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/nxml-mode/ChangeLog,v 1.4 2004/06/30 02:41:47 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/nxml-mode/ChangeLog,v 1.5 2004/09/03 21:26:05 slarti Exp $
+
+  03 Sep 2004; Tom Martin <slarti@gentoo.org> nxml-mode-20031031.ebuild:
+  Marked ~amd64; resolves #58260. Thanks to Gabriel Ebner <ge@gabrielebner.at>
+  for reporting.
 
   29 Jun 2004; Aron Griffis <agriffis@gentoo.org> nxml-mode-20031031.ebuild:
   sync IUSE (missing)

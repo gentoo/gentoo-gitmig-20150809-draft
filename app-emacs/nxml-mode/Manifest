@@ -1,6 +1,16 @@
-MD5 266ac4db355b071fd09b7807246d569b ChangeLog 660
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 94a616d3e39efb57720069bd98858ccf ChangeLog 828
 MD5 951aede53d8394e2ff9fe9f5a6300987 metadata.xml 391
-MD5 fbb838660765de1e714367db1639a2eb nxml-mode-20031031.ebuild 982
+MD5 da2d269fd0c96e6e208623962b54a654 nxml-mode-20031031.ebuild 987
 MD5 eda0e96afdd42cd079edb9e4fd1e863a files/80nxml-mode-gentoo.el 229
 MD5 b6c0ed2561e83b43a58c2bd8cae88b55 files/20031031-info-gentoo.patch 412
 MD5 01cabe3620c0754d28c746f3ba6c0f10 files/digest-nxml-mode-20031031 70
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBOOGqCHk4+ZoBpvsRAku5AJ9nc9zjqgQqQ8UB4CbOorkIgjabNwCgme/J
+xXv4PYeypY3IQ8B3FB0moCs=
+=7rJ1
+-----END PGP SIGNATURE-----
