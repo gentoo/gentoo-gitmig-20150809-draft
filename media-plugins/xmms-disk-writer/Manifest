@@ -3,14 +3,14 @@ Hash: SHA1
 
 MD5 5a8290e44006ccff0dff3094555d6366 metadata.xml 257
 MD5 b248dc21c78f9bcfec18e86bd30f66cd xmms-disk-writer-1.2.10.ebuild 442
-MD5 d947ac5e4e64f985f3030794fa420e23 xmms-disk-writer-1.2.10-r1.ebuild 463
-MD5 774e29887d7297f6b2d75dc1f4b680c1 ChangeLog 477
+MD5 47634c376d1878ac0ae63373871addfe xmms-disk-writer-1.2.10-r1.ebuild 460
+MD5 5ac7e5abc1dabc2dbbbe892f035d17ec ChangeLog 600
 MD5 af2d409c36e9f3caee63715699f1ce44 files/digest-xmms-disk-writer-1.2.10 142
 MD5 ee4c50bc643c29df08e03dffa42613b8 files/digest-xmms-disk-writer-1.2.10-r1 227
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFCDXm3ArHZZzCEUG0RApjFAJwLusiSB+bRFIHEPDwYqsYXQxyRowCdF5ac
-H+3fD2XWxpkKhIR1ZHbJVc4=
-=UNvf
+iD8DBQFCIvbNArHZZzCEUG0RAul5AJ92Kbqts24V0fwX7xMcR0hv8tMrVACgiAar
+hSw9ocFWEw65yYM3ncsVU6M=
+=Ttyo
 -----END PGP SIGNATURE-----
