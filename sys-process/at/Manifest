@@ -1,77 +1,17 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-- -----BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-- - -----BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-- - - -----BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-- - - - -----BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-- - - - - -----BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-- - - - - - -----BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 2360473cc8d9fe8aaa5613982f67f2d8 ChangeLog 3617
 MD5 e6a46158555034795587efcab4983132 at-3.1.8-r11.ebuild 1833
+MD5 c85e0fa1c1a41295151ab48b7d4d4383 ChangeLog 3621
 MD5 9c8fdf815ce980c230d763b496d4d088 metadata.xml 158
-MD5 c4648d2bce7767367a4a02076981ea34 files/atd.rc6 507
 MD5 f189f039555f37eb1a0792837d33ea04 files/at-3.1.8-longuser.patch 723
 MD5 342e834e06fdf58c877f1fc237f984de files/at.deny 121
+MD5 c4648d2bce7767367a4a02076981ea34 files/atd.rc6 507
 MD5 b1f01b7f45cd50b24b40694c623ecc53 files/digest-at-3.1.8-r11 63
-- - - - - - -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFCJ0wWLLFUmVNQ7rkRAs+fAKC0lkyux7SUVoKa5PqwCcGh7nnzVgCeP421
-YWWcg+hJFTXplYk4RfXpzkk=
-=/pwp
-- - - - - - -----END PGP SIGNATURE-----
-- - - - - -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFCJ01QLLFUmVNQ7rkRAoItAJ9GlY8Hy+JMiihUDKob0aso+1U1zACg0wS4
-kpNcZEacQp8uO/aR6dA4NBk=
-=QVx0
-- - - - - -----END PGP SIGNATURE-----
-- - - - -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFCJ02LLLFUmVNQ7rkRAoVSAJ9Zkw+7LONE9CTDDGuL0ACm50+GAwCcDu7J
-xoihBWx7VjSl2IJqCAhOYhQ=
-=OTPJ
-- - - - -----END PGP SIGNATURE-----
-- - - -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFCJ03RLLFUmVNQ7rkRAv0EAJ9/2EC9JoCVXPTqMrECld+aHT64cACgkPWq
-Fh7XCCE5154I/QLI2/wqCeY=
-=AQ0x
-- - - -----END PGP SIGNATURE-----
-- - -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFCJ04ULLFUmVNQ7rkRAvWsAKDDkDaRHhoxjr8XSPEoW76Y8ZiLLACfejt6
-us0dyEkG6/T/JzDWl48YrDQ=
-=znpt
-- - -----END PGP SIGNATURE-----
-- -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFCJ05uLLFUmVNQ7rkRApF4AJ9kmXtIoM1CCFkuORIxQcOQShYgZQCffA/Z
-alJY7MnSYuVSnbX25TENXHU=
-=GuZV
-- -----END PGP SIGNATURE-----
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFCJ067LLFUmVNQ7rkRApGfAJ9NYnR6yacF/lPvUvDOOXxE1B9dbACeO/Fl
-HPlcrsVotKczz8XFWcSQTHc=
-=0e9+
+iD8DBQFCJ2l6I1lqEGTUzyQRAtPMAJ43hHekkr8nui1bMZ6sQVePK0AyNgCgsZo4
+YRqFAu+6HzoZwrqC4yQxnrU=
+=NOs8
 -----END PGP SIGNATURE-----

@@ -1,15 +1,15 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 94a9f3c6b44d09881bf44532a2309096 ChangeLog 631
 MD5 86e45f8c10b3c86e3fc91ba3502e416d minit-0.9.1.ebuild 639
+MD5 db906df0de9d6f6b709e95f16165b3a2 ChangeLog 635
 MD5 4e33e3743e1248b860b74722c4a3f18c metadata.xml 1039
-MD5 3a89b9f95fc635cb93140ba98b960068 files/digest-minit-0.9.1 63
 MD5 d5149bbafb2a189d9e66474604665c57 files/0.9.1-destdir.patch 622
+MD5 3a89b9f95fc635cb93140ba98b960068 files/digest-minit-0.9.1 63
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFCJzUSLLFUmVNQ7rkRAjAiAJ0cCaVz+vsizJwouX343eevQfRM8ACgpEL8
-ntVL5nkR/DftC6XeKyvYDJU=
-=PxXB
+iD8DBQFCJ2naI1lqEGTUzyQRAjd7AKC+3zGvVnhBraxQdjhYOmH5kV3nCACgjLAr
+NKdiWAD7Iz3RlNFE+Knm85I=
+=Nl4l
 -----END PGP SIGNATURE-----

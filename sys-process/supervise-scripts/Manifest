@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 5f2438e3e64c03c178a3565b1c4e00e9 ChangeLog 2656
-MD5 4b2bbce7806cb93e1c1e7486d4869f01 supervise-scripts-3.5.ebuild 1291
 MD5 bbcf6ba426fad94f85800888605ac523 supervise-scripts-3.4.ebuild 851
+MD5 4b2bbce7806cb93e1c1e7486d4869f01 supervise-scripts-3.5.ebuild 1291
+MD5 ba82c3922146151a1a66123e21d3c689 ChangeLog 2660
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 b395db3b33c2a089329b5cbe3cc524a8 files/digest-supervise-scripts-3.5 72
 MD5 072f48fc3c8c9a942e1aa433c27ac5c9 files/digest-supervise-scripts-3.4 72
+MD5 b395db3b33c2a089329b5cbe3cc524a8 files/digest-supervise-scripts-3.5 72
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFCJ1nRLLFUmVNQ7rkRAhZTAJ9vLCEl59g7sJVBmQ2K/iwGx2xB4QCgsURf
-KZuiZhq7yxQkskQ2jZ9P5mM=
-=tBC6
+iD8DBQFCJ2pDI1lqEGTUzyQRAv3eAJ9KG+f2UeWC7ruKZCBie0q0ZLauSACgvPuZ
+segk3o5hM65d2CY9E4dLZFU=
+=HnR6
 -----END PGP SIGNATURE-----

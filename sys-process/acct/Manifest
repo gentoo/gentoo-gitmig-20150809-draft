@@ -1,36 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-- -----BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-- - -----BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 53ab340418be4397b9b4a7fe632c757b ChangeLog 1205
 MD5 3f6a76a69bde0754a05f4a2f09c2f71c acct-6.3.5.ebuild 868
+MD5 5d9976dff3e10ab8578eb55b2cf5e7e0 ChangeLog 1209
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 296bdfcb1fa7634f32846c4f1caee788 files/digest-acct-6.3.5 67
 MD5 1e626acad5540fee59e05067baccf551 files/acct.rc6 232
+MD5 296bdfcb1fa7634f32846c4f1caee788 files/digest-acct-6.3.5 67
 MD5 2dbe3e38c54e479bccb31fa6c30f28b6 files/acct-6.3.5-gentoo.diff 371
-- - -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFCJyt6LLFUmVNQ7rkRAi0UAJ9tXXkfybZqPxx+ZF9lzipgZxKvWwCfe0+O
-ox06KEWdCIrkP4ihlTN3JRQ=
-=oj17
-- - -----END PGP SIGNATURE-----
-- -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFCJyuiLLFUmVNQ7rkRAtJWAKClry+Ssi310iHpefwRn8mYessIDACg0BQG
-z1zWQ0OBXccBde2muu8j674=
-=c4mS
-- -----END PGP SIGNATURE-----
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFCJyvBLLFUmVNQ7rkRAh+6AJ9zxeXfu2piaZlWcOofTUHgwfKDwQCfRLHY
-gRC+lqQ1gn//Ld0PoBNaKlM=
-=d3nK
+iD8DBQFCJ2lMI1lqEGTUzyQRAjctAKC8Zb397QM/pCD8S2toIDgNqWjlnwCdHn8/
+f4XgjBFA2iDGRXqkkx6ppgU=
+=4y6U
 -----END PGP SIGNATURE-----

@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 0bef4e41ac13606186d20d032c9d2222 ChangeLog 1238
-MD5 c41932536fd14eafa11d0172da5f6b8c schedtool-1.2.3.ebuild 712
 MD5 c177ba066d95e0489fe5229a7adceb9a schedtool-1.2.4.ebuild 715
+MD5 c41932536fd14eafa11d0172da5f6b8c schedtool-1.2.3.ebuild 712
+MD5 06405e9bd4b0cb552824856c1871d5c0 ChangeLog 1242
 MD5 d2c936ae77f347e911c6a82ab55c1b68 metadata.xml 281
-MD5 8db7677670cb9180c1651c61a209417a files/digest-schedtool-1.2.4 67
 MD5 26c1c6d6526cc7215ea4b6c810c974e4 files/digest-schedtool-1.2.3 67
+MD5 8db7677670cb9180c1651c61a209417a files/digest-schedtool-1.2.4 67
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFCJzeNLLFUmVNQ7rkRAnyiAKDSMUFJW/XUqa9tORB94JTpzdZP+wCfcr9O
-wCrLvsymvxctbXC18HLpg/c=
-=RuN3
+iD8DBQFCJ2oiI1lqEGTUzyQRAp1XAKCycvG+WXDLZxeWULsLGzE/PRHcUwCgo84/
+sCKSqu3n8DuyLJ11LMvN8iA=
+=x/ET
 -----END PGP SIGNATURE-----
