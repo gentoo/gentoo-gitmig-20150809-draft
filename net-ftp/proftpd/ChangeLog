@@ -1,6 +1,10 @@
 # ChangeLog for net-ftp/proftpd
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/ChangeLog,v 1.69 2004/09/07 18:09:56 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/ChangeLog,v 1.70 2004/09/16 18:16:04 humpback Exp $
+
+  16 Sep 2004; Gustavo Felisberto <humpback@gentoo.org>;
+  proftpd-1.2.10.ebuild:
+  Mod shaper causes problems again :( . Marking stable as the rest is rock solid.
 
 *proftpd-1.2.10 (07 Sep 2004)
 
