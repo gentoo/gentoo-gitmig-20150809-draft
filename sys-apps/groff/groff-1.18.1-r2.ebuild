@@ -1,14 +1,16 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/groff-1.18.1-r2.ebuild,v 1.2 2003/05/09 01:57:54 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/groff-1.18.1-r2.ebuild,v 1.3 2003/06/19 01:10:25 nakano Exp $
 
-IUSE=""
+IUSE="X cjk"
 
 inherit eutils
 
 S="${WORKDIR}/${P}"
 DESCRIPTION="Text formatter used for man pages"
-SRC_URI="ftp://gatekeeper.dec.com/pub/GNU/groff/${P}.tar.gz"
+MB_PATCH="${P/-/_}-7"
+SRC_URI="ftp://gatekeeper.dec.com/pub/GNU/groff/${P}.tar.gz
+	cjk? ( http://people.debian.org/~ukai/groff/${MB_PATCH}.diff.gz )"
 HOMEPAGE="http://www.gnu.org/software/groff/groff.html"
 
 KEYWORDS="~x86 ~ppc ~sparc ~alpha ~mips hppa ~arm"
@@ -23,6 +25,17 @@ PDEPEND=">=sys-apps/man-1.5k-r1"
 src_unpack() {
 	unpack ${A}
 	cd ${S}
+
+	if [ "`use cjk`" ]; then
+		# multibyte patch contains no-color-segfault
+		epatch ${WORKDIR}/${MB_PATCH}.diff
+		epatch ${FILESDIR}/${MB_PATCH}-fix.patch
+	else
+		# Do not segfault if no color is defined in input, bug #14329
+		# <azarah@gentoo.org> (08 Feb 2003)
+		epatch ${FILESDIR}/${P}-no-color-segfault.patch
+	fi
+
 	# Fix the info pages to have .info extensions,
 	# else they do not get gzipped.
 	epatch ${FILESDIR}/groff-1.18-infoext.patch
@@ -31,10 +44,6 @@ src_unpack() {
 	# depend on netpbm.
 	epatch ${FILESDIR}/groff-1.18-no-netpbm-depend.patch
 
-	# Do not segfault if no color is defined in input, bug #14329
-	# <azarah@gentoo.org> (08 Feb 2003)
-	epatch ${FILESDIR}/${P}-no-color-segfault.patch
-
 	# Make dashes the same as minus on the keyboard so that you
 	# can search for it. Fixes #17580 and #16108
 	# Thanks to James Cloos <cloos@jhcloos.com>
@@ -42,6 +51,8 @@ src_unpack() {
 }
 
 src_compile() {
+	local myconf=""
+
 	# Fix problems with not finding g++
 	[ -z "${CC}" ] && export CC="gcc"
 	[ -z "${CXX}" ] && export CXX="g++"
@@ -51,12 +62,16 @@ src_compile() {
 		export CFLAGS="${CFLAGS/-march=2.0/}"
 		export CXXFLAGS="${CXXFLAGS/-march=2.0/}"
 	fi
-						
+
+	if [ "`use cjk`" ]; then
+		myconf="${myconf} --enable-multibyte"
+	fi
 
 	./configure --host=${CHOST} \
 		--prefix=/usr \
 		--mandir=/usr/share/man \
-		--infodir=\${inforoot} || die
+		--infodir=\${inforoot} \
+		${myconf} || die
 		
 	# emake doesn't work
 	make || die
