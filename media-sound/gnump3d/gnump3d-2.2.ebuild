@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gnump3d/gnump3d-2.2.ebuild,v 1.4 2003/07/12 20:30:52 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gnump3d/gnump3d-2.2.ebuild,v 1.5 2003/09/11 01:21:31 msterret Exp $
 
 inherit eutils
 
@@ -18,7 +18,7 @@ RDEPEND=">=dev-lang/perl-5.6.1"
 
 src_install() {
 	eval `perl '-V:installarchlib'`
-        ARCH_LIB=${installarchlib}
+	ARCH_LIB=${installarchlib}
 
 	insinto ${ARCH_LIB}/gnump3d
 	doins lib/gnump3d/*.pm

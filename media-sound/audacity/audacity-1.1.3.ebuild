@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/audacity-1.1.3.ebuild,v 1.3 2003/09/07 00:06:04 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/audacity-1.1.3.ebuild,v 1.4 2003/09/11 01:21:31 msterret Exp $
 
 inherit eutils
 
@@ -18,11 +18,11 @@ DEPEND=">=x11-libs/wxGTK-2.2.9
 	>=media-sound/mad-0.14
 	>=media-libs/id3lib-3.8.0
 	>=media-libs/libsndfile-1.0.0
-        >=media-libs/libsamplerate-0.0.14
+	>=media-libs/libsamplerate-0.0.14
 	>=dev-libs/fftw-2.1.3
-        >=media-libs/ladspa-sdk-1.12
+	>=media-libs/ladspa-sdk-1.12
 	oggvorbis? ( >=media-libs/libvorbis-1.0 )
-        encode? ( >=media-sound/lame-3.92 )"
+	encode? ( >=media-sound/lame-3.92 )"
 
 S="${WORKDIR}/${PN}-src-${PV}"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/teamspeak2-client-bin/teamspeak2-client-bin-2.0.29_rc2.ebuild,v 1.2 2003/09/07 00:06:06 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/teamspeak2-client-bin/teamspeak2-client-bin-2.0.29_rc2.ebuild,v 1.3 2003/09/11 01:21:32 msterret Exp $
 
 DESCRIPTION="The Teamspeak Voice Communication Tool"
 HOMEPAGE="http://www.teamspeak.org"
@@ -40,14 +40,14 @@ src_install() {
 	dosym /usr/share/teamspeak2-client/TeamSpeak /usr/bin/TeamSpeak
 
 }
-pkg_postinst() {
 
-        einfo
-		einfo "Please Note: The new Teamspeak2 Release Candidate 2 Client"
-		einfo "will not be able to connect to any of the *old* rc1 servers."
-		einfo "if you get 'Bad response' from your server check if your"
-		einfo "server is running rc2, which is a version >= 2.0.19.16."
-		einfo "Also note this release supports the new speex codec, "
-		einfo "so if you get unsupported codec messages, you need this :D"
-		einfo
+pkg_postinst() {
+	einfo
+	einfo "Please Note: The new Teamspeak2 Release Candidate 2 Client"
+	einfo "will not be able to connect to any of the *old* rc1 servers."
+	einfo "if you get 'Bad response' from your server check if your"
+	einfo "server is running rc2, which is a version >= 2.0.19.16."
+	einfo "Also note this release supports the new speex codec, "
+	einfo "so if you get unsupported codec messages, you need this :D"
+	einfo
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/krecord/krecord-1.11.ebuild,v 1.3 2003/02/13 13:14:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/krecord/krecord-1.11.ebuild,v 1.4 2003/09/11 01:21:31 msterret Exp $
 inherit kde-base
 
 DESCRIPTION="KDE sound recorder app"
@@ -15,7 +15,7 @@ need-kde 3
 
 src_install() {
 
-    cd ${S}
-    make prefix=${D}/${PREFIX} install
+	cd ${S}
+	make prefix=${D}/${PREFIX} install
 
 }

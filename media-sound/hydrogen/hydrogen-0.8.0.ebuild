@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/hydrogen/hydrogen-0.8.0.ebuild,v 1.3 2003/09/08 07:09:44 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/hydrogen/hydrogen-0.8.0.ebuild,v 1.4 2003/09/11 01:21:31 msterret Exp $
 
 DESCRIPTION="Linux Drum Machine"
 HOMEPAGE="http://hydrogen.sourceforge.net"
@@ -21,9 +21,7 @@ src_compile() {
 	emake || die
 }
 
- src_install() {
+src_install() {
 	make DESTDIR=${D} install || die
 	dodoc AUTHORS BUGS ChangeLog FAQ README TODO
 }
-
-

@@ -1,5 +1,5 @@
-MD5 e767a01a4bc61cf29bdc46d98d1de679 krecord-1.14.ebuild 553
-MD5 66deb2556510929019b6f1a3ea7815c7 krecord-1.11.ebuild 528
 MD5 348ef0246c115e5d3b86b737ac6c51ed ChangeLog 531
+MD5 b881a3dbaa88728ec1c513e3f6191416 krecord-1.11.ebuild 524
+MD5 e767a01a4bc61cf29bdc46d98d1de679 krecord-1.14.ebuild 553
 MD5 07564d4bdbf6e12686435a10cbc91d72 files/digest-krecord-1.11 64
 MD5 2fab5ef6807980c4614875cc700cac45 files/digest-krecord-1.14 63

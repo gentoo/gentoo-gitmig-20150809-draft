@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sfc/sfc-0.012.ebuild,v 1.1 2003/06/13 10:21:48 robh Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sfc/sfc-0.012.ebuild,v 1.2 2003/09/11 01:21:32 msterret Exp $
 
 
 DESCRIPTION="SoundFontCombi is a opensource software pseudo synthesizer."
@@ -19,20 +19,17 @@ DEPEND=">=x11-libs/fltk-1.1.2
 S="${WORKDIR}/${P}"
 
 src_compile() {
-        emake || die "compile failed"
+	emake || die "compile failed"
 }
 
 src_install() {
-
-        cp Makefile Makefile~
-        sed -e "/^PREFIX/s:.*:PREFIX = /usr:
+	cp Makefile Makefile~
+	sed -e "/^PREFIX/s:.*:PREFIX = /usr:
 		/^DOC_DIR/s:.*:DOC_DIR = /usr/share/doc/${P}:" Makefile~ > Makefile
 
-        dodir /usr/bin
+	dodir /usr/bin
 
-        einstall DESTDIR=${D}
+	einstall DESTDIR=${D}
 
-        prepalldocs
+	prepalldocs
 }
-
-

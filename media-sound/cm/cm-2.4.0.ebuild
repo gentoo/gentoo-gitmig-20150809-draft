@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cm/cm-2.4.0.ebuild,v 1.4 2003/09/08 07:09:44 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cm/cm-2.4.0.ebuild,v 1.5 2003/09/11 01:21:31 msterret Exp $
 
 DESCRIPTION="Common Music: An object oriented music composition environment in LISP/scheme"
 HOMEPAGE="http://www-ccrma.stanford.edu/software/cm/doc/cm.html"
@@ -36,8 +36,8 @@ src_install() {
 }
 
 pkg_postinst() {
-        # when the package is first run it generates the cm script
-        # that will load the necessary source files into guile when run
+	# when the package is first run it generates the cm script
+	# that will load the necessary source files into guile when run
 	guile -c "(load \"/usr/share/cm/src/cm.scm\")"
 	ln /usr/share/cm/bin/cm /usr/bin/cm
 	chmod +x /usr/bin/cm
@@ -47,7 +47,7 @@ pkg_prerm() {
 	if [ -e /usr/bin/cm ]; then
 	    rm /usr/bin/cm
 	fi
-        if [ -e /usr/share/cm/bin ]; then
-            rm -rf /usr/share/cm/bin
-        fi
+	if [ -e /usr/share/cm/bin ]; then
+		rm -rf /usr/share/cm/bin
+	fi
 }

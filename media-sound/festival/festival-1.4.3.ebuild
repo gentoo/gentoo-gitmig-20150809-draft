@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/festival/festival-1.4.3.ebuild,v 1.2 2003/09/07 00:06:04 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/festival/festival-1.4.3.ebuild,v 1.3 2003/09/11 01:21:31 msterret Exp $
 
 S=${WORKDIR}/${PN}
 DESCRIPTION="Festival Text to Speech engine"
@@ -39,7 +39,7 @@ DEPEND=">=media-sound/speech-tools-1.2.3"
 src_unpack() {
 	unpack ${P}-release.tar.gz
 	unpack festlex_CMU.tar.gz
-    unpack festlex_OALD.tar.gz
+	unpack festlex_OALD.tar.gz
 	unpack festlex_POSLEX.tar.gz
 	unpack festvox_don.tar.gz
 	unpack festvox_ellpc11k.tar.gz

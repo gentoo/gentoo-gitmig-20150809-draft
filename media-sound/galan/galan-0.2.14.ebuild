@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/galan/galan-0.2.14.ebuild,v 1.5 2003/09/08 07:09:44 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/galan/galan-0.2.14.ebuild,v 1.6 2003/09/11 01:21:31 msterret Exp $
 
 DESCRIPTION="gAlan - Graphical Audio Language"
 SRC_URI="mirror://sourceforge/galan/${P}.tar.gz"
@@ -15,16 +15,15 @@ IUSE="oggvorbis alsa opengl esd"
 
 S=${WORKDIR}/${P}
 DEPEND=">=x11-libs/gtk+-1.2*
-        media-libs/gdk-pixbuf
+	media-libs/gdk-pixbuf
 	oggvorbis? ( >=media-sound/vorbis-tools-1.0 )
 	alsa? ( >=media-libs/alsa-lib-0.9.0_rc1 )
 	opengl? ( >=x11-libs/gtkglarea-1.2* )
 	esd? ( media-sound/esound )
-        media-libs/liblrdf
-        media-libs/ladspa-sdk
-        media-libs/audiofile
-        media-libs/libsndfile"
-
+	media-libs/liblrdf
+	media-libs/ladspa-sdk
+	media-libs/audiofile
+	media-libs/libsndfile"
 
 src_unpack() {
 	unpack ${A}
@@ -36,7 +35,7 @@ src_compile() {
 }
 
 src_install() {
-    einstall || dies "install failed"
+	einstall || dies "install failed"
 }
 
 DOC="AUTHORS COPYING ChangeLog INSTALL NEWS README TODO doc/"

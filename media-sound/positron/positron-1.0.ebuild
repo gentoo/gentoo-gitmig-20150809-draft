@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/positron/positron-1.0.ebuild,v 1.4 2003/08/01 20:14:09 tberman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/positron/positron-1.0.ebuild,v 1.5 2003/09/11 01:21:32 msterret Exp $
 
 DESCRIPTION="Synchronization manager for the Neuros Audio Computer (www.neurosaudio.com) portable music player."
 HOMEPAGE="http://www.xiph.org/positron"
@@ -17,6 +17,6 @@ src_compile() {
 }
 
 src_install() {
-        chmod +x setup.py
-        ./setup.py install --root ${D} || die
+	chmod +x setup.py
+	./setup.py install --root ${D} || die
 }

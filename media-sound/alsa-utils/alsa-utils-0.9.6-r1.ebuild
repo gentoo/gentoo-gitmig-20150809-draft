@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/alsa-utils-0.9.6-r1.ebuild,v 1.2 2003/09/07 00:06:04 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/alsa-utils-0.9.6-r1.ebuild,v 1.3 2003/09/11 01:21:31 msterret Exp $
 
 DESCRIPTION="Advanced Linux Sound Architecture Utils (alsactl, alsamixer, etc.)"
 HOMEPAGE="http://www.alsa-project.org/"
@@ -31,10 +31,10 @@ src_install() {
 	newdoc alsamixer/README README.alsamixer
 
 	dodir /etc/init.d
-        insinto /etc/modules.d
-        newins ${FILESDIR}/alsa-modules.conf-rc alsa
-        exeinto /etc/init.d
-        doexe ${FILESDIR}/alsasound
+	insinto /etc/modules.d
+	newins ${FILESDIR}/alsa-modules.conf-rc alsa
+	exeinto /etc/init.d
+	doexe ${FILESDIR}/alsasound
 }
 
 pkg_postinst() {

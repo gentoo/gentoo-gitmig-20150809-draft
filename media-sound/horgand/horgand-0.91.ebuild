@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/horgand/horgand-0.91.ebuild,v 1.3 2003/09/07 00:06:05 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/horgand/horgand-0.91.ebuild,v 1.4 2003/09/11 01:21:31 msterret Exp $
 
 DESCRIPTION="horgand is an opensource software organ."
 HOMEPAGE="http://personal.telefonica.terra.es/web/soudfontcombi/"
@@ -18,12 +18,12 @@ DEPEND=">=x11-libs/fltk-1.1.2
 S="${WORKDIR}/${P}"
 
 src_compile() {
-        emake || die "compile failed"
+	emake || die "compile failed"
 }
 
 src_install() {
-        cp Makefile Makefile~
-        sed -e "s:PREFIX = /usr/local:PREFIX = /usr:" Makefile~ > Makefile
+	cp Makefile Makefile~
+	sed -e "s:PREFIX = /usr/local:PREFIX = /usr:" Makefile~ > Makefile
 
 	dodir /usr/bin
 

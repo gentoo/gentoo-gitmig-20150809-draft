@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour-cvs/ardour-cvs-0.6.4.ebuild,v 1.9 2003/09/07 00:06:04 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour-cvs/ardour-cvs-0.6.4.ebuild,v 1.10 2003/09/11 01:21:31 msterret Exp $
 
 IUSE="nls"
 
@@ -19,7 +19,7 @@ SLOT="0"
 KEYWORDS="~x86"
 
 DEPEND="$DEPEND
-        dev-util/pkgconfig
+	dev-util/pkgconfig
 	>=media-libs/alsa-lib-0.9.0_rc7
 	media-sound/jack-cvs
 	=dev-libs/glib-1.2*
@@ -41,14 +41,14 @@ src_compile() {
 	local myconf="--disable-dependency-tracking"
 	export WANT_AUTOCONF_2_5=1
 	sh autogen.sh
-        # nasty little hack to create version.h, will remove when this
-        # is fixed upstream...
-        cd gtk_ardour
-        sh version.sh remake || die "failed to create version.h"
-        cd ..
+	# nasty little hack to create version.h, will remove when this
+	# is fixed upstream...
+	cd gtk_ardour
+	sh version.sh remake || die "failed to create version.h"
+	cd ..
 	use nls || myconf="${myconf} --disable-nls"
-        # diable ksi for now, not currently compiling...
-        myconf="${myconf} --disable-ksi"
+	# diable ksi for now, not currently compiling...
+	myconf="${myconf} --disable-ksi"
 	econf ${myconf} || die "configure failed"
 
 	# while troubleshooting upgrades to ardour-cvs-0.6 i changed from
@@ -71,7 +71,7 @@ src_install() {
 
 	insinto /usr/share/ardour
 
-        cp ardour.rc ardour.rc~
+	cp ardour.rc ardour.rc~
 	sed -e 's/\/usr\/local\/music\/src\/ardour\//\/usr\/local\/share\/ardour\//' \
 	    -e 's/\/home\/paul\//\/usr\/local\/share\/ardour\//' ardour.rc~ > ardour.rc
 	cp ardour.rc sample_ardour.rc

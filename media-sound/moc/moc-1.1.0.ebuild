@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 HOMEPAGE="http://moc.daper.net/"
 
 DEPEND="media-libs/libao
-        sys-libs/ncurses"
+	sys-libs/ncurses"
 
 SLOT="0"
 LICENSE="GPL-2"

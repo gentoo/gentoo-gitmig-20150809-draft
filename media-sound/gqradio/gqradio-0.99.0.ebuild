@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gqradio/gqradio-0.99.0.ebuild,v 1.3 2003/09/07 00:06:05 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gqradio/gqradio-0.99.0.ebuild,v 1.4 2003/09/11 01:21:31 msterret Exp $
 
 IUSE="nls gnome"
 
@@ -13,16 +13,16 @@ SLOT="0"
 KEYWORDS="x86"
 
 DEPEND="=x11-libs/gtk+-1.2*
-        >=media-libs/gdk-pixbuf-0.13.0"
+	>=media-libs/gdk-pixbuf-0.13.0"
 
 RDEPEND="nls? ( sys-devel/gettext )"
 
 src_compile() {
-        local myconf
-        use nls || myconf="--disable-nls"
+	local myconf
+	use nls || myconf="--disable-nls"
 
-        econf ${myconf} || die
-        emake || die
+	econf ${myconf} || die
+	emake || die
 }
 
 src_install() {
@@ -30,9 +30,9 @@ src_install() {
 
 	dodoc ABOUT-NLS AUTHORS COPYING ChangeLog INSTALL NEWS README SKIN-SPECS TODO
 
-        use gnome && ( \
-                insinto /usr/share/gnome/apps/Multimedia
-                doins ${FILESDIR}/gqmpeg.desktop
-        )
+	use gnome && ( \
+		insinto /usr/share/gnome/apps/Multimedia
+		doins ${FILESDIR}/gqmpeg.desktop
+	)
 
 }

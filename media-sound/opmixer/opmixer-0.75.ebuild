@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/opmixer/opmixer-0.75.ebuild,v 1.10 2003/07/12 23:41:04 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/opmixer/opmixer-0.75.ebuild,v 1.11 2003/09/11 01:21:32 msterret Exp $
 
 MY_P=${P/opm/opM}
 S=${WORKDIR}/${MY_P}
@@ -29,6 +29,6 @@ src_compile() {
 }
 
 src_install() {
-    make DESTDIR=${D} install || die
-    dodoc AUTHORS COPYING ChangeLog INSTALL NEWS README
+	make DESTDIR=${D} install || die
+	dodoc AUTHORS COPYING ChangeLog INSTALL NEWS README
 }

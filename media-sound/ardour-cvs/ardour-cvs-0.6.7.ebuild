@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour-cvs/ardour-cvs-0.6.7.ebuild,v 1.2 2003/09/07 00:06:04 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour-cvs/ardour-cvs-0.6.7.ebuild,v 1.3 2003/09/11 01:21:31 msterret Exp $
 
 IUSE="nls ardour-ksi"
 
@@ -19,7 +19,7 @@ SLOT="0"
 KEYWORDS="~x86"
 
 DEPEND="$DEPEND
-        dev-util/pkgconfig
+	dev-util/pkgconfig
 	>=media-libs/alsa-lib-0.9.0_rc7
 	media-sound/jack-cvs
 	=dev-libs/glib-1.2*
@@ -62,7 +62,7 @@ src_install() {
 
 	insinto /usr/share/ardour
 
-        cp ardour.rc ardour.rc~
+	cp ardour.rc ardour.rc~
 	sed -e 's:/usr/local/music/src/ardour/:/usr/share/ardour/:' \
 	    -e 's:/home/paul/:/usr/share/ardour/:' ardour.rc~ > ardour.rc
 	cp ardour.rc sample_ardour.rc

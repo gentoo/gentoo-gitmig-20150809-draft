@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/spiralmodular/spiralmodular-0.2.1.ebuild,v 1.4 2003/09/08 07:09:44 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/spiralmodular/spiralmodular-0.2.1.ebuild,v 1.5 2003/09/11 01:21:32 msterret Exp $
 
 DESCRIPTION="SSM is a object oriented modular softsynth/ sequencer/ sampler."
 HOMEPAGE="http://www.pawfal.org/Software/SSM/"
@@ -24,7 +24,7 @@ src_compile () {
 		mv $i.new $i
 		rm $i.old
 	done
-        myconf="--enable-shared  --enable-jack"
+	myconf="--enable-shared  --enable-jack"
 	econf ${myconf} || die "configure failed"
 	emake || die
 }
@@ -37,8 +37,7 @@ src_install() {
 
 pkg_postinst() {
 
-        einfo ""
-        einfo "Remember to remove any old ~/.sprialmodular files"
-        einfo ""
+	einfo ""
+	einfo "Remember to remove any old ~/.sprialmodular files"
+	einfo ""
 }
-

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/alsa-tools-0.9.4.ebuild,v 1.5 2003/07/04 08:11:14 jje Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/alsa-tools-0.9.4.ebuild,v 1.6 2003/09/11 01:21:31 msterret Exp $
 
 DESCRIPTION="Advanced Linux Sound Architecture tools"
 HOMEPAGE="http://www.alsa-project.org"
@@ -26,35 +26,35 @@ src_unpack() {
 }
 
 src_compile() {
-    # Some of the tools don't make proper use of CFLAGS, even though
-    # all of them seem to use autoconf.  This needs to be fixed.
-    local f
-    for f in ${ALSA_TOOLS}
-    do
-	cd "${S}/${f}"
+	# Some of the tools don't make proper use of CFLAGS, even though
+	# all of them seem to use autoconf.  This needs to be fixed.
+	local f
+	for f in ${ALSA_TOOLS}
+	do
+		cd "${S}/${f}"
 
-	econf || die "./configure failed"
-	emake || die "Parallel Make Failed"
-    done
+		econf || die "./configure failed"
+		emake || die "Parallel Make Failed"
+	done
 }
 
 src_install() {
-    local f
-    for f in ${ALSA_TOOLS}
-    do
-	# Install the main stuff
-	cd "${S}/${f}"
-	make DESTDIR="${D}" install || die
-
-	# Install the text documentation
-	local doc
-	for doc in README TODO ChangeLog COPYING AUTHORS
+	local f
+	for f in ${ALSA_TOOLS}
 	do
-	    if [ -f "${doc}" ]
-	    then
-		mv "${doc}" "${doc}.`basename ${f}`"
-		dodoc "${doc}.`basename ${f}`"
-	    fi
+		# Install the main stuff
+		cd "${S}/${f}"
+		make DESTDIR="${D}" install || die
+
+		# Install the text documentation
+		local doc
+		for doc in README TODO ChangeLog COPYING AUTHORS
+		do
+			if [ -f "${doc}" ]
+			then
+			mv "${doc}" "${doc}.`basename ${f}`"
+			dodoc "${doc}.`basename ${f}`"
+			fi
+		done
 	done
-    done
 }

@@ -6,7 +6,7 @@ MD5 e6680e624126367a971065c1507240c6 alsa-utils-0.9.5.ebuild 899
 MD5 140f4dd3c22323f5e9f671306f048d4d alsa-utils-0.9.2.ebuild 907
 MD5 c30dcee5dffaa966b7aa15c9bd10374e alsa-utils-0.9.3.ebuild 902
 MD5 a7b579dbc473137239d11d3044a960c4 alsa-utils-0.9.6.ebuild 892
-MD5 d67106ec4dee8b723bb23e811c4426fa alsa-utils-0.9.6-r1.ebuild 1855
+MD5 8d8a738c55cb1b609acd49712b71566e alsa-utils-0.9.6-r1.ebuild 1827
 MD5 dcc66ee6a9db24006a4158e2be0da3f2 files/alsa-0.5.10 392
 MD5 f20045fc395596290d5a6d807ba311fc files/alsa-utils-0.5.10-aplay-destdir.diff 626
 MD5 332df836790d7158bf4bbcf3b1a650c1 files/alsa.rc5 444

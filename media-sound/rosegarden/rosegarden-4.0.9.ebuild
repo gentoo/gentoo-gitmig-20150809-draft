@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rosegarden/rosegarden-4.0.9.ebuild,v 1.4 2003/09/07 00:06:06 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rosegarden/rosegarden-4.0.9.ebuild,v 1.5 2003/09/11 01:21:32 msterret Exp $
 
 MY_P=${P/\./-}
 DESCRIPTION="MIDI and audio sequencer and notation editor."
@@ -13,13 +13,13 @@ KEYWORDS="x86"
 IUSE=""
 
 DEPEND=">=gcc-2.9
-        >=kdelibs-3.0
+	>=kdelibs-3.0
 	kdemultimedia
-        >=qt-3.0
-        >=alsa-driver-0.9.2
-        virtual/jack
-        >=ladspa-sdk-1.0
-        >=ladspa-cmt-1.14"
+	>=qt-3.0
+	>=alsa-driver-0.9.2
+	virtual/jack
+	>=ladspa-sdk-1.0
+	>=ladspa-cmt-1.14"
 
 S=${WORKDIR}/${MY_P}
 
@@ -27,10 +27,10 @@ src_compile() {
 	./configure \
 		--host=${CHOST} \
 		--prefix=/usr \
-                --infodir=/usr/share/info \
-                --mandir=/usr/share/man \
-                --with-jack \
-                --with-ladspa || die "./configure failed"
+		--infodir=/usr/share/info \
+		--mandir=/usr/share/man \
+		--with-jack \
+		--with-ladspa || die "./configure failed"
 	emake || die
 }
 
