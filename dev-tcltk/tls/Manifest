@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 85f8dd69ea4d6011ec12c84df38ba0e4 ChangeLog 730
+MD5 3e119dfd714fa32b0f6617213a4f28eb ChangeLog 795
 MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
 MD5 09f0584052904918b6905b1c0cc64c44 tls-1.4.1.ebuild 666
-MD5 0194d6ecbb9ff44ba727d8acbba2d929 tls-1.5.0.ebuild 644
+MD5 09948f6ca73704e1e15d00fb5f2a6930 tls-1.5.0.ebuild 673
 MD5 1c07643ab842dea6ce9602daedf21e31 files/digest-tls-1.5.0 64
 MD5 15e02650704160bb58ef6ab9d6a557fb files/digest-tls-1.4.1 63
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBuhxWQlM6RnzZP+IRAiNxAJ41YgrSDuz0Q1BEs0ZUAardHM4lnQCgwd3e
-Abm0i6mrTRPNdBADiC4bADk=
-=0NXC
+iD8DBQFBuh0mQlM6RnzZP+IRAtE2AJ99JM8wI4suzxnkSJ/Iq2fBz9uAlQCfQYGf
+5Z+f/lNdqBMsyGB+xmrOgi8=
+=aawV
 -----END PGP SIGNATURE-----
