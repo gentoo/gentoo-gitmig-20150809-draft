@@ -1,6 +1,9 @@
 # ChangeLog for dev-ada/florist
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/florist/ChangeLog,v 1.1 2003/07/25 05:46:05 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/florist/ChangeLog,v 1.2 2003/08/17 21:05:59 dholm Exp $
+
+  17 Aug 2003; David Holm <dholm@gentoo.org> metadata.xml:
+  Added metadata.xml.
 
 *florist-3.15p (24 Jul 2003)
 
