@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Parser/HTML-Parser-3.36-r1.ebuild,v 1.1 2004/09/21 13:15:58 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Parser/HTML-Parser-3.36-r1.ebuild,v 1.2 2004/09/22 10:38:02 mcummings Exp $
 
 inherit perl-module
 
@@ -17,10 +17,10 @@ mydoc="ANNOUNCEMENT TODO"
 src_compile() {
 	use unicode && answer='y' || answer='n'
 	if [ "${MMSIXELEVEN}" ]; then
-		echo '$answer' | perl Makefile.PL ${myconf} \
+		echo "${answer}" | perl Makefile.PL ${myconf} \
 		PREFIX=/usr INSTALLDIRS=vendor DESTDIR=${D}
 	else
-		echo '$answer' | perl Makefile.PL ${myconf} \
+		echo "${answer}" | perl Makefile.PL ${myconf} \
 		PREFIX=${D}/usr INSTALLDIRS=vendor
 	fi
 	perl-module_src_test
