@@ -1,0 +1,9 @@
+# ChangeLog for x11-themes/xfce4-themes
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/xfce4-themes/ChangeLog,v 1.1 2003/06/25 06:23:43 bcowan Exp $
+
+*xfce4-themes-3.91.0 (25 Jun 2003)
+
+  25 Jun 2003; Brad Cowan <bcowan@gentoo.org> xfce4-themes-3.91.0.ebuild:
+  Initial import.
+
