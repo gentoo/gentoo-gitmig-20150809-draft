@@ -34,7 +34,7 @@
 *>=sys-devel/binutils-2.14.90.0.2
 *>=sys-devel/gcc-3.2.2
 *>=sys-libs/glibc-2.3.2-r1
-*>=sys-kernel/mips-headers-2.4.21
+*<sys-kernel/mips-headers-2.6.6
 *>=sys-devel/gnuconfig-20030708
 
 # We want this to mimic mips32 environments sometimes
