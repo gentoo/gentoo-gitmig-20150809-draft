@@ -1,5 +1,5 @@
 #!/bin/bash
-# $Id: courier-imap-4.0.0-gentoo-imapd.rc,v 1.1 2005/01/02 05:24:56 langthang Exp $
+# $Id: courier-imap-4.0.1-gentoo-imapd-ssl.rc,v 1.1 2005/01/05 15:46:55 langthang Exp $
 #
 # Copyright 1998 - 2000 Double Precision, Inc.
 # See COPYING for distribution information.
@@ -9,10 +9,10 @@ exec_prefix=/usr
 bindir=/usr/sbin
 libexecdir=/usr/lib/courier-imap
 
-source /etc/courier-imap/imapd-ssl
 source /etc/courier-imap/imapd
+source /etc/courier-imap/imapd-ssl
 
-# The new courier-authlib doesn't use these settings.
+# the new courier-authlib doesn't usee these settings.
 #LIBAUTHMODULES=""
 #for f in `echo $AUTHMODULES`
 #do
@@ -20,19 +20,18 @@ source /etc/courier-imap/imapd
 #done
 
 ulimit -d $IMAP_ULIMITD
-IMAP_STARTTLS="$IMAPDSTARTTLS"
-export IMAPDSTARTTLS IMAP_STARTTLS
-TLS_PROTOCOL=$TLS_STARTTLS_PROTOCOL
+export IMAP_TLS=1
 eval `sed -n '/^#/d;/=/p' </etc/courier-imap/imapd | \
 	sed 's/=.*//;s/^/export /;s/$/;/'`
 eval `sed -n '/^#/d;/=/p' </etc/courier-imap/imapd-ssl | \
 	sed 's/=.*//;s/^/export /;s/$/;/'`
 
 eval $PRERUN \
-/usr/lib/courier-imap/couriertcpd -address=$ADDRESS \
+/usr/lib/courier-imap/couriertcpd -address=$SSLADDRESS \
 	-stderrlogger=/usr/lib/courier-imap/courierlogger \
-	-stderrloggername=imapd \
+	-stderrloggername=imapd-ssl \
 	-maxprocs=$MAXDAEMONS -maxperip=$MAXPERIP \
-	-pid=$PIDFILE $TCPDOPTS \
-	$PORT ${exec_prefix}/sbin/imaplogin \
+	-pid=$SSLPIDFILE $TCPDOPTS \
+	$SSLPORT $COURIERTLS -server -tcpd \
+	${exec_prefix}/sbin/imaplogin \
 		/usr/sbin/courier-imapd ${MAILDIR}

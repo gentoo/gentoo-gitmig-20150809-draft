@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/files/courier-imap-4.0.0-courier-pop3d-ssl.rc6,v 1.1 2005/01/02 05:24:56 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/files/courier-imap-4.0.1-courier-pop3d-ssl.rc6,v 1.1 2005/01/05 15:46:55 langthang Exp $
 
 depend() {
 	need net courier-authlib
