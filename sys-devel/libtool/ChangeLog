@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/libtool
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/ChangeLog,v 1.31 2004/02/06 20:47:12 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/ChangeLog,v 1.32 2004/02/07 05:45:14 azarah Exp $
+
+  07 Feb 2004; Martin Schlemmer <azarah@gentoo.org> libtool-1.5.2.ebuild:
+  Mask again as it have some issues.
 
   06 Feb 2004; Martin Schlemmer <azarah@gentoo.org> libtool-1.5.2.ebuild:
   Add to testing.

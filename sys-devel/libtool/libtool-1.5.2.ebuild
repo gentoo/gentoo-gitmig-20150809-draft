@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/libtool-1.5.2.ebuild,v 1.2 2004/02/06 20:47:12 azarah Exp ${P}-r1.ebuild,v 1.8 2002/10/04 06:34:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/libtool-1.5.2.ebuild,v 1.3 2004/02/07 05:45:14 azarah Exp ${P}-r1.ebuild,v 1.8 2002/10/04 06:34:42 vapier Exp $
 
 IUSE=
 
@@ -18,7 +18,8 @@ HOMEPAGE="http://www.gnu.org/software/libtool/libtool.html"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~ppc ~sparc ~alpha ~mips ~hppa ~arm ~ia64 ppc64"
+#KEYWORDS="~amd64 ~x86 ~ppc ~sparc ~alpha ~mips ~hppa ~arm ~ia64 ppc64"
+KEYWORDS="-*"
 
 DEPEND="virtual/glibc"
 
