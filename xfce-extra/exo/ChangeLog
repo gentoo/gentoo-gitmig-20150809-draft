@@ -1,6 +1,11 @@
 # ChangeLog for xfce-extra/exo
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/exo/ChangeLog,v 1.1 2004/12/02 00:33:50 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/exo/ChangeLog,v 1.2 2004/12/02 18:19:18 bcowan Exp $
+
+*exo-0.2.0 (02 Dec 2004)
+
+  02 Dec 2004; Brad Cowan <bcowan@gentoo.org> +exo-0.2.0.ebuild:
+  Version bump.
 
 *exo-0.2.0_pre2 (01 Dec 2004)
 
