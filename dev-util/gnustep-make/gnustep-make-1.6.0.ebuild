@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gnustep-make/gnustep-make-1.6.0.ebuild,v 1.4 2003/07/11 10:22:19 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gnustep-make/gnustep-make-1.6.0.ebuild,v 1.5 2003/07/14 02:48:55 raker Exp $
 
 DESCRIPTION="GNUstep makefile package"
 HOMEPAGE="http://www.gnustep.org"
@@ -8,7 +8,7 @@ SRC_URI="ftp://ftp.gnustep.org/pub/gnustep/core/${P}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="x86"
-IUSE=""
+IUSE="X"
 DEPEND="virtual/glibc
 	>=sys-devel/gcc-3.2
 	>=dev-libs/ffcall-1.8d
@@ -18,7 +18,7 @@ DEPEND="virtual/glibc
 	>=media-libs/tiff-3.5.7-r1
 	>=dev-libs/libxml2-2.4.24
 	>=media-libs/audiofile-0.2.3
-	x11-wm/windowmaker"
+	X? ( >=x11-wm/windowmaker-0.80.1 )"
 
 src_compile() {
 	./configure \
