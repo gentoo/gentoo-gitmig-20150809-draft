@@ -1,0 +1,10 @@
+# ChangeLog for games-emulation/dboxfe
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/dboxfe/ChangeLog,v 1.1 2004/09/12 04:43:12 mr_bones_ Exp $
+
+*dboxfe-0.0.3 (11 Sep 2004)
+
+  11 Sep 2004; Michael Sterrett <mr_bones_@gentoo.org> +metadata.xml,
+  +dboxfe-0.0.3.ebuild:
+  initial commit - ebuild provided by Adrian Fruehwirth via bug #62517
+
