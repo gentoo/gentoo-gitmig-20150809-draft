@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/mpg123-0.59s-r6.ebuild,v 1.11 2004/11/03 22:25:06 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/mpg123-0.59s-r6.ebuild,v 1.12 2005/01/06 09:38:25 eradicator Exp $
 
 IUSE="mmx 3dnow esd nas oss"
 
