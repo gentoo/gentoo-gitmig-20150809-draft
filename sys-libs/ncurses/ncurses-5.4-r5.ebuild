@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.4-r5.ebuild,v 1.18 2005/01/03 00:24:18 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.4-r5.ebuild,v 1.19 2005/01/30 11:42:01 vapier Exp $
 
 inherit eutils flag-o-matic gnuconfig toolchain-funcs
 
@@ -11,13 +11,10 @@ SRC_URI="mirror://gnu/ncurses/${P}.tar.gz"
 LICENSE="MIT"
 SLOT="5"
 KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sh sparc x86"
-IUSE="build bootstrap debug doc uclibc unicode nocxx"
+IUSE="gpm build bootstrap debug doc uclibc unicode nocxx"
 
-DEPEND="virtual/libc"
-# This doesn't fix the problem. bootstrap builds ncurses again with
-# normal USE flags while bootstrap is unset, which apparently causes
-# things to break -- avenj  2 Apr 04
-#	!bootstrap? ( gpm? ( sys-libs/gpm ) )"
+DEPEND="virtual/libc
+	gpm? ( sys-libs/gpm )"
 
 src_unpack() {
 	unpack ${A}
@@ -50,8 +47,8 @@ src_compile() {
 	( use build || use bootstrap || use nocxx ) \
 		&& myconf="${myconf} --without-cxx --without-cxx-binding --without-ada"
 
-	# see note about DEPEND above -- avenj@gentoo.org  2 Apr 04
-#	use gpm && myconf="${myconf} --with-gpm"
+	# whee gpm !
+	use gpm && myconf="${myconf} --with-gpm"
 
 	# enable utf-8 support
 	use unicode && myconf="${myconf} --enable-widec"
@@ -84,7 +81,7 @@ src_compile() {
 src_install() {
 	local x=
 
-	make DESTDIR=${D} install || die "make install failed"
+	make DESTDIR="${D}" install || die "make install failed"
 
 	# Move static and extraneous ncurses libraries out of /lib
 	cd ${D}/$(get_libdir)
@@ -94,11 +91,11 @@ src_install() {
 	if use unicode ; then
 		gen_usr_ldscript libncursesw.so || die "gen_usr_ldscript failed"
 		gen_usr_ldscript libcursesw.so || die "gen_usr_ldscript failed"
-		for i in ${D}/usr/$(get_libdir)/*w.*; do
+		for i in ${D}/usr/$(get_libdir)/*w.* ; do
 			local libncurses=${i/${D}/}
 			dosym ${libncurses} ${libncurses/w./.}
 		done
-		for i in ${D}/$(get_libdir)/libncursesw.so*; do
+		for i in ${D}/$(get_libdir)/libncursesw.so* ; do
 			local libncurses=${i/${D}}
 			dosym ${libncurses} ${libncurses/w./.}
 		done
@@ -114,11 +111,10 @@ src_install() {
 	#for x in dumb linux rxvt screen sun vt{52,100,102,220} xterm
 	for x in ansi console dumb linux rxvt screen sun vt{52,100,102,200,220} xterm xterm-color xterm-xfree86
 	do
-		local termfile="$(find "${D}/usr/share/terminfo/" -name "${x}" 2>/dev/null)"
-		local basedir="$(basename $(dirname "${termfile}"))"
+		local termfile=$(find "${D}"/usr/share/terminfo/ -name "${x}" 2>/dev/null)
+		local basedir=$(basename $(dirname "${termfile}"))
 
-		if [ -n "${termfile}" ]
-		then
+		if [[ -n ${termfile} ]] ; then
 			dodir /etc/terminfo/${basedir}
 			mv ${termfile} ${D}/etc/terminfo/${basedir}/
 			dosym ../../../../etc/terminfo/${basedir}/${x} \
@@ -132,8 +128,7 @@ src_install() {
 	dodir /etc/env.d
 	echo "CONFIG_PROTECT_MASK=\"/etc/terminfo\"" > ${D}/etc/env.d/50ncurses
 
-	if use build
-	then
+	if use build ; then
 		cd ${D}
 		rm -rf usr/share/man
 		cd usr/share/terminfo
@@ -172,11 +167,10 @@ src_install() {
 }
 
 pkg_preinst() {
-	if [ ! -f "${ROOT}/etc/env.d/50ncurses" ]
-	then
-		mkdir -p "${ROOT}/etc/env.d"
+	if [[ ! -f ${ROOT}/etc/env.d/50ncurses ]] ; then
+		mkdir -p "${ROOT}"/etc/env.d
 		echo "CONFIG_PROTECT_MASK=\"/etc/terminfo\"" > \
-			${ROOT}/etc/env.d/50ncurses
+			"${ROOT}"/etc/env.d/50ncurses
 	fi
 }
 
