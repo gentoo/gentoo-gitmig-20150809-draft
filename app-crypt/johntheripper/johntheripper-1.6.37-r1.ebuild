@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/johntheripper-1.6.37-r1.ebuild,v 1.1 2004/05/24 00:21:54 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/johntheripper-1.6.37-r1.ebuild,v 1.2 2004/05/24 22:57:51 dragonheart Exp $
 
 inherit eutils flag-o-matic
 
@@ -24,8 +24,9 @@ SRC_URI="http://www.openwall.com/john/b/${MY_P}.tar.gz
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~sparc ~ppc ~alpha ~mips ~hppa"
-IUSE="mmx ntlm skey mysql"
+KEYWORDS="~x86 ~sparc ~ppc ~alpha"
+#KEYWORDS removed until "generic" target is fixed - "~mips ~hppa"
+IUSE="mmx ntlm skey mysql kerberos"
 
 # use debug && RESTRICT="${RESTRICT} nostrip"
 
@@ -35,7 +36,8 @@ RDEPEND="virtual/glibc
 
 DEPEND="${RDEPEND}
 	sys-devel/binutils
-	sys-devel/gcc"
+	sys-devel/gcc
+	>=sys-apps/sed-4"
 
 src_unpack() {
 	unpack ${A}
@@ -64,7 +66,7 @@ src_compile() {
 			|| is-flag "-march=k6"; then
 			emake ${OPTIONS} linux-x86-k6-elf || die "Make failed"
 		else
-			emake ${OPTIONS} generic || die "Make failed"
+			emake ${OPTIONS} linux-x86-any-elf || die "Make failed"
 		fi
 	elif use alpha ; then
 		emake ${OPTIONS} linux-alpha || die "Make failed"
