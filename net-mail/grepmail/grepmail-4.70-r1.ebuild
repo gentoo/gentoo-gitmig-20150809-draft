@@ -1,6 +1,6 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-mail/grepmail/grepmail-4.70-r1.ebuild,v 1.1 2002/07/17 04:20:40 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/grepmail/grepmail-4.70-r1.ebuild,v 1.2 2002/07/17 06:38:03 seemant Exp $
 
 inherit perl-module
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://grepmail.sourceforge.net/"
 SRC_URI="mirror://sourceforge/grepmail/${P}.tar.gz"
 
 SLOT="0"
-LICENSE=""
+LICENSE="Artistic"
 KEYWORDS="x86"
 
 DEPEND="${DEPEND}

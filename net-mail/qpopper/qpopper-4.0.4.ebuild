@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qpopper/qpopper-4.0.4.ebuild,v 1.1 2002/06/21 16:28:54 bass Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qpopper/qpopper-4.0.4.ebuild,v 1.2 2002/07/17 06:38:03 seemant Exp $
 
 PN0=qpopper
 S=${WORKDIR}/${PN0}4.0.4
@@ -15,8 +15,10 @@ DEPEND="virtual/glibc \
 	  pam? ( >=sys-libs/pam-0.72 ) \
 	  ssl? ( dev-libs/openssl )"
 RDEPEND="${DEPEND}"
-LICENSE="GPL"
+
 SLOT="0"
+LICENSE="GPL"
+KEYWORDS="x86"
 
 src_unpack() {
 	
