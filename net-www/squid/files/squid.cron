@@ -1,2 +1,2 @@
 #!/bin/sh
-/usr/sbin/squid -k rotate
+exec /usr/sbin/squid -k rotate
