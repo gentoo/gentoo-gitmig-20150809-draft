@@ -1,6 +1,11 @@
 # ChangeLog for net-www/apache
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.255 2004/09/15 14:02:24 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.256 2004/09/15 22:24:27 stuart Exp $
+
+*apache-2.0.51 (15 Sep 2004)
+
+  15 Sep 2004; Stuart Herbert <stuart@gentoo.org> +apache-2.0.51.ebuild:
+  Version bump
 
   15 Sep 2004; Danny van Dyk <kugelfang@gentoo.org> apache-2.0.50-r3.ebuild:
   Stable on amd64. BUG #62626.
