@@ -1,5 +1,5 @@
 # Distributed under the terms of the GNU General Public License v2 
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.46-r11.ebuild,v 1.1 2003/02/04 10:16:26 carpaski Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.46-r11.ebuild,v 1.2 2003/02/04 22:19:49 carpaski Exp $
 
 IUSE="build"
 
@@ -31,6 +31,8 @@ src_unpack() {
 	cd ${WORKDIR}
 	echo tar xjf ${DISTDIR}/${PF}.tar.bz2
 	tar xjf ${DISTDIR}/${PF}.tar.bz2 || die "No portage tarball in distfiles."
+	cp ${PF}/bin/ebuild.sh ${PF}/bin/ebuild.sh.orig
+	sed 's:-n "$ECLASS":-z "$ECLASS":' < ${PF}/bin/ebuild.sh.orig > ${PF}/bin/ebuild.sh
 	get_portver > ${WORKDIR}/previous-version
 }
 
