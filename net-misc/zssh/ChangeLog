@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/zssh
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zssh/ChangeLog,v 1.4 2004/03/01 21:34:08 aliz Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zssh/ChangeLog,v 1.5 2004/03/04 01:30:25 seemant Exp $
+
+  03 Mar 2004; Seemant Kulleen <seemant@gentoo.org> zssh-1.5a.ebuild:
+  moved to stable x86, at the behest of: Petter <tt@linux.nu> in bug #43451, and
+  he thinks he's rough around the edges, but he's not
 
 *zssh-1.5a (20 Sep 2002)
 

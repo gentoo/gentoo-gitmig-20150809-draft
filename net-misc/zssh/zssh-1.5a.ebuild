@@ -1,20 +1,22 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zssh/zssh-1.5a.ebuild,v 1.5 2003/09/05 22:13:37 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zssh/zssh-1.5a.ebuild,v 1.6 2004/03/04 01:30:25 seemant Exp $
 
 inherit eutils
 
-IUSE=""
+IUSE="readline nls"
+
 S=${WORKDIR}/${P}
 DESCRIPTION="A ssh wrapper enabling zmodem up/download in ssh"
-SRC_URI="ftp://ftp.sourceforge.net/pub/sourceforge/zssh/zssh-1.5a.tgz"
 HOMEPAGE="http://zssh.sourceforge.net/"
-KEYWORDS="~x86 sparc"
-LICENSE="GPL-2"
+SRC_URI="mirror://sourceforge/zssh/${P}.tgz"
+
 SLOT="0"
+LICENSE="GPL-2"
+KEYWORDS="x86 sparc"
 
 DEPEND="virtual/glibc"
-RDEPEND="virtual/glibc
+RDEPEND="${DEPEND}
 	 net-misc/openssh
 	 net-misc/lrzsz"
 
@@ -26,15 +28,12 @@ src_unpack() {
 }
 
 src_compile() {
-	local options
-
-	use nls || options="${options} --disable-nls"
-	use readline || options="${options} --disable-readline"
-
-	./configure	\
-		--prefix=/usr	\
-		--host=${CHOST}	\
-		${options} || die
+#	./configure	\
+#		--prefix=/usr	\
+#		--host=${CHOST}	\
+	econf \
+		`use_enable nls` \
+		`use_enable readline` || die
 
 	emake || die
 }
