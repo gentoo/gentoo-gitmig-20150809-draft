@@ -1,6 +1,11 @@
 # ChangeLog for net-im/msnlib
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/msnlib/ChangeLog,v 1.4 2003/08/28 13:35:47 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/msnlib/ChangeLog,v 1.5 2003/10/02 08:49:03 liquidx Exp $
+
+*msnlib-3.2 (02 Oct 2003)
+
+  02 Oct 2003; Alastair Tse <liquidx@gentoo.org> msnlib-3.2.ebuild:
+  new version. required to connect after 15 October 2003 due to protocol changes.
 
   28 Aug 2003; Alastair Tse <liquidx@gentoo.org> msnlib-2.0.ebuild,
   msnlib-4.ebuild:
