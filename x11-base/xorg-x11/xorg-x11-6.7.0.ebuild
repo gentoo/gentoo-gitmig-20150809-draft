@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.7.0.ebuild,v 1.36 2004/04/21 16:06:24 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.7.0.ebuild,v 1.37 2004/04/25 22:44:13 spyderous Exp $
 
 # This is a snapshot of the XORG-RELEASE-1 branch.
 
@@ -438,8 +438,9 @@ fi
 		then
 			# Should fix bug #4189.  gcc 3.x have problems with -march=pentium4
 			# and -march=athlon-tbird
+			# Seems fixed on 3.3 and higher
 
-			if [ "`gcc-version`" != "3.3" ]
+			if [ "`gcc-major-version`" -eq "3" -a "`gcc-minor-version`" -le "2" ]
 			then
 				replace-flags "-march=pentium4" "-march=pentium3"
 				replace-flags "-march=athlon-tbird" "-march=athlon"

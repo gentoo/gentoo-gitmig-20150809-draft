@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r6.ebuild,v 1.28 2004/04/25 21:13:49 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r6.ebuild,v 1.29 2004/04/25 22:46:35 spyderous Exp $
 
 # TODO
 # 14 Mar. 2004 <spyderous@gentoo.org>
@@ -404,8 +404,13 @@ src_unpack() {
 	then
 		# Should fix bug #4189.  gcc-3.x have problems with -march=pentium4
 		# and -march=athlon-tbird
-		replace-flags "-march=pentium4" "-march=pentium3"
-		replace-flags "-march=athlon-tbird" "-march=athlon"
+		# Seems fixed on 3.3 and higher
+
+		if [ "`gcc-major-version`" -eq "3" -a "`gcc-minor-version`" -le "2" ]
+		then
+			replace-flags "-march=pentium4" "-march=pentium3"
+			replace-flags "-march=athlon-tbird" "-march=athlon"
+		fi
 
 		# Without this, modules breaks with gcc3
 		if [ "`gcc-version`" = "3.1" ]
