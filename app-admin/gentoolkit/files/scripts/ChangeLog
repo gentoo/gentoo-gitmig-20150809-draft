@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/gentoolkit/lintool/scripts
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/files/scripts/ChangeLog,v 1.11 2003/03/21 14:45:30 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/files/scripts/ChangeLog,v 1.12 2003/04/22 20:04:57 agriffis Exp $
+
+22 Apr 2003 Aron Griffis <agriffis@gentoo.org>
+	* ignore Manifests in file listing
 
 21 Mar 2003 Aron Griffis <agriffis@gentoo.org>
 	* disallow "root" as a valid user for creating ChangeLog entries
