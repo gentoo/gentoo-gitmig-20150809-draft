@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Parag Mehta <pm@gentoo.org>
-#$HEADER$
+#$HEADER:$
 
 S=${WORKDIR}/qmail-1.03
 DESCRIPTION="A modern replacement for sendmail which uses maildirs"
@@ -211,7 +211,7 @@ src_install() {
     mkdir ${D}/usr/local/bin
     cp ${FILESDIR}/tcp.smtp ${D}/etc/tcp.smtp
     cp ${FILESDIR}/tcp.smtp.cdb ${D}/etc/tcp.smtp.cdb
-    cp ${FILESDIR}/tcprulesedit.sh ${D}/usr/bin/tcprulesedit.sh	
+    cp ${FILESDIR}/tcprulesedit.sh ${D}/usr/bin/
     echo -e "\033[1;42m\033[1;33m Please do not forget to run, the following syntax : \033[0m"
     echo -e "\033[1;42m\033[1;33m ebuild qmail-1.03-r4.ebuild config \033[0m"
     echo -e "\033[1;42m\033[1;33m This will add the necessary post install config to your system. \033[0m"

@@ -6,5 +6,5 @@
 #
 
 vi /etc/tcp.smtp
-/usr/bin/tcprules /etc/tcp.smtp.cdb /etc/tcp.smtp.tmp < /etc/tcp/smtp
+/usr/bin/tcprules /etc/tcp.smtp.cdb /etc/tcp.smtp.tmp < /etc/tcp.smtp
 
