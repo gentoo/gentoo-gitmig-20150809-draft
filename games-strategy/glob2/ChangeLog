@@ -1,6 +1,11 @@
 # ChangeLog for games-strategy/glob2
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/glob2/ChangeLog,v 1.13 2004/09/18 03:14:03 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/glob2/ChangeLog,v 1.14 2004/10/15 06:32:44 mr_bones_ Exp $
+
+*glob2-0.8.9 (14 Oct 2004)
+
+  14 Oct 2004; Michael Sterrett <mr_bones_@gentoo.org> +glob2-0.8.9.ebuild:
+  version bump (bug #66791)
 
 *glob2-0.8.8 (17 Sep 2004)
 
