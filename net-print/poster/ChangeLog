@@ -1,0 +1,9 @@
+# ChangeLog for net-print/poster
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-print/poster/ChangeLog,v 1.1 2004/01/08 14:46:40 lanius Exp $
+
+*poster-0.1 (08 Jan 2004)
+
+  08 Jan 2004; Heinrich Wendel <lanius@gentoo.org> poster-0.1.ebuild:
+  initial ebuild, contributed by Jan Schubert <Jan.Schubert@GMX.li>
+
