@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/gnat
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat/ChangeLog,v 1.18 2003/10/06 11:38:28 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat/ChangeLog,v 1.19 2003/12/29 21:49:41 dholm Exp $
+
+  29 Dec 2003; David Holm <dholm@gentoo.org> gnat-3.15p-r3.ebuild:
+  Fixed bug #34021 (some symlinks were pointing to /var/tmp).
 
 *gnat-5.0_pre20031005 (06 Oct 2003)
 

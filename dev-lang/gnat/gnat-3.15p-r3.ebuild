@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat/gnat-3.15p-r3.ebuild,v 1.6 2003/10/06 00:00:45 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat/gnat-3.15p-r3.ebuild,v 1.7 2003/12/29 21:49:41 dholm Exp $
 
 inherit gnat
 
@@ -150,6 +150,13 @@ src_install() {
 		cp "${GNATBOOTINST}/gnathtml.pl" "${D}/usr/bin"
 		chmod +x "${D}/usr/bin"
 	fi
+
+	# Fix broken symlinks
+	cd ${D}/usr/lib/ada/gcc-lib/powerpc-unknown-linux-gnu/2.8.1/adalib
+	rm -f libgnarl.so
+	rm -f liblibgnat.so
+	ln -sf libgnarl-3.15.so libgnarl.so
+	ln -sf libgnat-3.15p.so libgnat.so
 
 	# Install documentation and examples
 	cd ${WORKDIR}/${P}-src
