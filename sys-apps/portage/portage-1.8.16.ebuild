@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc. Distributed under the terms
 # of the GNU General Public License, v2 or later 
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-1.8.16.ebuild,v 1.2 2002/04/04 19:57:08 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-1.8.16.ebuild,v 1.3 2002/04/07 01:36:03 drobbins Exp $
  
 S=${WORKDIR}/${P}
 SLOT="0"
@@ -122,7 +122,10 @@ pkg_postinst() {
 		rm -rf ${ROOT}/usr/lib/sandbox
 	fi
 
-	#upgrade /var/db/pkg library
-	cd ${ROOT}/var/db/pkg
-	python2.2 ${ROOT}/usr/lib/portage/bin/db-update.py `find -name VIRTUAL`
+	#upgrade /var/db/pkg library; conditional required for build image creation
+	if [ -d ${ROOT}var/db/pkg ]
+	then
+		cd ${ROOT}var/db/pkg
+		python2.2 ${ROOT}usr/lib/portage/bin/db-update.py `find -name VIRTUAL`
+	fi
 }
