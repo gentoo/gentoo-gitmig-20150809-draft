@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/psad/psad-1.2.3-r1.ebuild,v 1.1 2003/10/07 06:22:33 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/psad/psad-1.3.ebuild,v 1.1 2003/12/01 19:28:32 seemant Exp $
 
 inherit eutils
 inherit perl-module
@@ -9,7 +9,7 @@ IUSE=""
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Port Scannning Attack Detection daemon"
-SRC_URI="http://www.cipherdyne.org/psad/download/psad-${PV}.tar.gz"
+SRC_URI="http://www.cipherdyne.org/psad/download/psad-${PV}.tar.bz2"
 HOMEPAGE="http://www.cipherdyne.org/psad"
 
 SLOT="0"
@@ -42,11 +42,14 @@ src_compile() {
 	emake || die
 
 	cd ${S}
-	# We'll use the C binaries until we see them break
+	# We'll use the C binaries
 	emake || die
 }
 
 src_install() {
+	local myhostname=
+	local mydomain=
+
 	keepdir /var/lib/psad /var/log/psad /var/run/psad /var/lock/subsys/${PN}
 	dodir /etc/psad
 	cd ${S}/Psad
@@ -54,11 +57,11 @@ src_install() {
 	doins Psad.pm
 
 	cd ${S}/Net-IPv4Addr
-	insinto /usr/lib/psad
+	insinto /usr/lib/psad/Net
 	doins IPv4Addr.pm
 
 	cd ${S}/IPTables/Parse
-	insinto /usr/lib/psad
+	insinto /usr/lib/psad/IPTables
 	doins Parse.pm
 
 	cd ${S}/whois
@@ -69,18 +72,30 @@ src_install() {
 
 	cd ${S}
 	insinto /usr
-	dosbin diskmond kmsgsd psad psadwatchd
+	dosbin kmsgsd psad psadwatchd
 	dobin pscan
 
 	cd ${S}
+
+	# Ditch the _CHANGEME_ for hostname, substituting in our real hostname
+	myhostname="$(< /etc/hostname)"
+	[ -e /etc/dnsdomainname ] && mydomain=".$(< /etc/dnsdomainname)"
+	cp psad.conf psad.conf.orig
+	sed -i "s:HOSTNAME\(.\+\)\_CHANGEME\_;:HOSTNAME\1${myhostname}${mydomain};:" psad.conf || die "Sed failed."
+
 	insinto /etc/psad
 	doins *.conf
+	doins psad_*
+
+	insinto /etc/init.d
+	newins psad-init.gentoo psad
 
 	cd ${S}/snort_rules
 	dodir /etc/psad/snort_rules
 	insinto /etc/psad/snort_rules
 	doins *.rules
 
+	cd ${S}
 	dodoc BENCHMARK CREDITS Change* FW_EXAMPLE_RULES README LICENSE SCAN_LOG
 }
 
@@ -91,11 +106,10 @@ pkg_postinst() {
 		mknod -m 600 ${ROOT}/var/lib/psad/psadfifo p
 		eend $?
 	fi
+
 	echo
-	einfo "Several programs in the PSAD package are in the process of being converted to"
-	einfo "compiled C from PERL. If you have any problems, please notify the PSAD"
-	einfo "maintainers. Please do not take PSAD issues to the Bastille-Linux team."
-	echo
-	ewarn "Please be sure to edit /etc/psad/psad.conf to reflect your system's configuration"
-	ewarn "or it may not work correctly or start up."
+	einfo "Please be sure to edit /etc/psad/psad.conf to reflect your system's"
+	einfo "configuration or it may not work correctly or start up. Specifically, check"
+	einfo "the validity of the HOSTNAME setting and replace the EMAIL_ADDRESSES and"
+	einfo "HOME_NET settings at the least."
 }
