@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ttcp/ttcp-1.12.ebuild,v 1.4 2004/05/26 19:21:19 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ttcp/ttcp-1.12.ebuild,v 1.5 2004/06/17 10:42:15 kloeri Exp $
 
-inherit gcc
+inherit gcc eutils
 
 DESCRIPTION="Tool to test TCP and UDP throughput"
 HOMEPAGE="http://ftp.arl.mil/~mike/ttcp.html"
