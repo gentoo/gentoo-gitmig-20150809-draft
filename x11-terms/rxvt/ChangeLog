@@ -1,8 +1,12 @@
 # ChangeLog for x11-terms/rxvt
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt/ChangeLog,v 1.15 2003/03/31 19:47:25 dragon Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt/ChangeLog,v 1.16 2003/08/02 21:16:26 usata Exp $
 
 *rxvt-2.7.10 (31 Mar 2003)
+
+  03 Aug 2003; Mamoru KOMACHI <usata@gentoo.org> rxvt-2.7.10.ebuild:
+  Changed master source site to sourceforge mirror.  Added cjk IUSE flag
+  and JISX 0201 support patch.  This closes bug #23716.
 
   31 Mar 2003; Nicholas Wourms <dragon@gentoo.org> rxvt-2.7.10.ebuild,
   files/digest-rxvt-2.7.10, files/rxvt-2.7.10-azz4.diff:
@@ -14,6 +18,10 @@
   This fixes bug #16742, as well.
 
 *rxvt-2.7.8-r6 (20 Mar 2003)
+
+  03 Aug 2003; Mamoru KOMACHI <usata@gentoo.org> rxvt-2.7.8.ebuild:
+  Changed master source site to sourceforge mirror.  Added cjk IUSE flag
+  and JISX 0201 support patch.  This closes bug #23716.
 
   21 Mar 2003; Seemant Kulleen <seemant@gentoo.org> rxvt-2.7.8-r6.ebuild:
   added support for all 3 types of scrollbars. Thanks to: Kurt V. Hindenburg
