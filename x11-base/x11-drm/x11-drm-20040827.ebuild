@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/x11-drm-20040827.ebuild,v 1.1 2004/08/29 08:11:06 battousai Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/x11-drm-20040827.ebuild,v 1.2 2004/08/31 05:23:51 spyderous Exp $
 
 inherit eutils xfree kmod
 
@@ -47,7 +47,7 @@ pkg_setup() {
 #			die "Non-koutput and non-M 2.6 kernel tree"
 #	fi
 
-	if [ "${ARCH}" != "sparc" -a "`use video_cards_ffb`" ]
+	if [ "${ARCH}" != "sparc" ] && use video_cards_ffb
 	then
 		die "The ffb driver is for sparc-specific hardware. Please remove it from your VIDEO_CARDS."
 	fi
@@ -55,7 +55,7 @@ pkg_setup() {
 	# GATOS only works with radeon, rage128. mach64 is provided by drm trunk.
 	if use gatos
 	then
-		if [ ! "`use video_cards_radeon`" -a ! "`use video_cards_rage128`" ]
+		if ! use video_cards_radeon && ! use video_cards_rage128
 		then
 			die "Remove gatos from your USE flags. It does not work with cards other than radeon and rage128."
 		fi

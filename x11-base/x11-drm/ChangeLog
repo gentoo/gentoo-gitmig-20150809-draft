@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/x11-drm
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/ChangeLog,v 1.1 2004/08/29 08:11:06 battousai Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/ChangeLog,v 1.2 2004/08/31 05:23:51 spyderous Exp $
+
+  31 Aug 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  x11-drm-20040827.ebuild:
+  Fix use() invocation, thanks to Michael Sterrett <mr_bones_@gentoo.org>.
 
 *x11-drm-4.3.0-r6 (29 Aug 2004)
 
