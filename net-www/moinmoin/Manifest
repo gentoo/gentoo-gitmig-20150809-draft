@@ -1,3 +1,5 @@
-MD5 83004b173ac067a6e3b0896cb273eeb4 ChangeLog 979
 MD5 8fa713aaca431ea83e888d4b745d689f moinmoin-1.0.ebuild 1356
+MD5 83004b173ac067a6e3b0896cb273eeb4 ChangeLog 979
+MD5 d40b34b99e782f35024f4dc924de1818 moinmoin-1.2.1.ebuild 1351
 MD5 147a676c8160b5ab61a8ca43e32fe971 files/digest-moinmoin-1.0 60
+MD5 2ef337e0a59414cd5b5422097b8f825e files/digest-moinmoin-1.2.1 63
