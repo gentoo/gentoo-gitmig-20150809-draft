@@ -1,0 +1,9 @@
+# ChangeLog for net-news/gnewspost
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-news/gnewspost/ChangeLog,v 1.1 2002/12/07 06:32:56 leonardop Exp $
+
+*gnewspost-0.6 (07 Dec 2002)
+
+  07 Dec 2002; L. Boshell <leonardop@gentoo.org> ChangeLog,
+  gnewspost-0.6.ebuild : Initial import. Thanks to Philip Walls for his
+  work on bug #11343.
