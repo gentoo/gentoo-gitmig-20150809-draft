@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/webalizer-2.01.10-r5.ebuild,v 1.8 2004/06/30 17:08:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/webalizer-2.01.10-r5.ebuild,v 1.9 2004/07/06 23:17:12 arj Exp $
 
 inherit eutils
 
@@ -35,6 +35,9 @@ src_unpack() {
 		( cd ${WORKDIR} && unpack geolizer_${MY_PV}-patch.20040216.tar.bz2 )
 		epatch ${WORKDIR}/geolizer_${MY_PV}-patch/geolizer.patch || die
 	fi
+
+	# pretty printer for numbers
+	epatch ${FILESDIR}/output.c.patch || die
 }
 
 src_compile() {
