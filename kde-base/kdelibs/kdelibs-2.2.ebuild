@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-2.2.ebuild,v 1.8 2001/08/22 11:57:19 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-2.2.ebuild,v 1.9 2001/08/24 07:46:15 danarmak Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="KDE ${PV} - Libraries"
@@ -73,7 +73,7 @@ src_compile() {
       myopts="$myopts --with-ipv6-lookup=no"
     fi
 
-	use onjprelink && myopts="$myopts --enable-objprelink"
+	use objprelink && myopts="$myopts --enable-objprelink"
 
     try ./configure --prefix=/opt/kde${PV} --host=${CHOST} \
 		--with-qt-dir=$QTBASE $myopts --with-xinerama \
