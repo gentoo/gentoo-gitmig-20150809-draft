@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/mkxf86config/mkxf86config-0.8-r2.ebuild,v 1.4 2004/06/26 00:36:44 jhuebel Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/mkxf86config/mkxf86config-0.8-r2.ebuild,v 1.5 2004/06/28 20:06:12 agriffis Exp $
 
 inherit eutils
 
@@ -22,7 +22,7 @@ LICENSE="GPL-2"
 DEPEND=""
 RDEPEND="sys-apps/hwsetup
 	sys-apps/ddcxinfo-knoppix
-	virtual/glibc"
+	virtual/libc"
 
 src_unpack() {
 	unpack ${A}

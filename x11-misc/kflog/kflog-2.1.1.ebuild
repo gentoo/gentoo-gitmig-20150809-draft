@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/kflog/kflog-2.1.1.ebuild,v 1.6 2004/06/24 22:26:05 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/kflog/kflog-2.1.1.ebuild,v 1.7 2004/06/28 20:00:16 agriffis Exp $
 
 inherit kde
 need-kde 3
@@ -18,7 +18,7 @@ DEPEND="${DEPEND}
 	sys-devel/gettext
 	sys-apps/grep
 	sys-devel/gcc
-	virtual/glibc
+	virtual/libc
 	sys-libs/zlib"
 
 RDEPEND="${RDEPEND}
@@ -31,7 +31,7 @@ RDEPEND="${RDEPEND}
 	media-libs/libpng
 	media-libs/nas
 	sys-devel/gcc
-	virtual/glibc
+	virtual/libc
 	sys-libs/zlib
 	x11-libs/qt"
 

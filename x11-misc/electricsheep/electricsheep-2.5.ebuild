@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/electricsheep/electricsheep-2.5.ebuild,v 1.4 2004/06/24 22:16:55 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/electricsheep/electricsheep-2.5.ebuild,v 1.5 2004/06/28 19:54:05 agriffis Exp $
 
 inherit eutils flag-o-matic
 
@@ -24,7 +24,7 @@ DEPEND="virtual/x11
 	media-libs/jpeg
 	media-libs/libpng
 	media-libs/libsdl
-	virtual/glibc
+	virtual/libc
 	sys-libs/zlib
 	!sparc? ( media-libs/svgalib )
 	!sparc? ( media-libs/alsa-lib )
@@ -50,7 +50,7 @@ RDEPEND="virtual/x11
 	media-libs/libsdl
 	!sparc? ( media-libs/svgalib )
 	!sparc? ( media-libs/alsa-lib )
-	virtual/glibc
+	virtual/libc
 	sys-libs/zlib"
 
 # Also detects and ties in sys-libs/slang, media-libs/aalib
