@@ -1,8 +1,18 @@
 # ChangeLog for sys-apps/usermode-utilities
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/usermode-utilities/ChangeLog,v 1.6 2002/12/17 19:47:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usermode-utilities/ChangeLog,v 1.7 2003/01/27 13:21:55 tantive Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
+
+*usermode-utilities-20030122 (27 Jan 2003)
+
+  27 Jan 2003; Michael Imhof <tantive@gentoo.org>
+  Version bumped.
+
+*usermode-utilities-20030118 (27 Jan 2003)
+
+  27 Jan 2003; Michael Imhof <tantive@gentoo.org>
+  Version bumped.
  
 *usermode-utilities-20021103 (06 Nov 2002)
 
