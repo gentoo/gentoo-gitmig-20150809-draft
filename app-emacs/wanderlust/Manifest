@@ -1,23 +1,25 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
+MD5 701aa97e8d57d9eaacf9e314deb89669 ChangeLog 8128
 MD5 42cbdeef12abd31687396ae303321803 metadata.xml 271
-MD5 d119c0787a44b51692e5fb7a8416d9d7 wanderlust-2.10.1-r2.ebuild 1502
-MD5 fdbf2cbcb9c6f5f847c3f89f25c0a0a1 ChangeLog 8002
+MD5 fc777189839aa1b5ba8a44210039ffc0 wanderlust-2.12.0.ebuild 1120
 MD5 2a2781c29d6e25ed6cda84e37b6a7231 wanderlust-2.8.1.ebuild 1262
 MD5 ab270d74700cf2b20197e0e6deb4c301 wanderlust-2.14.0_pre.ebuild 1173
 MD5 f6e5300aca1a04cde802cc4a9d993615 wanderlust-2.12.2.ebuild 1169
-MD5 fc777189839aa1b5ba8a44210039ffc0 wanderlust-2.12.0.ebuild 1120
-MD5 44642f0fb41a990b0451d247cfb33033 files/digest-wanderlust-2.8.1 61
-MD5 a8f86382da45e4a1136e478ad781477e files/digest-wanderlust-2.10.1-r2 131
+MD5 d119c0787a44b51692e5fb7a8416d9d7 wanderlust-2.10.1-r2.ebuild 1502
+MD5 7d1d5174d4878a01fb0f0a9446b8e3e5 wanderlust-2.14.0.ebuild 1169
 MD5 c633c96cff2fe04a6aec8ba3a96440d7 files/70wl-gentoo.el 298
-MD5 6194b064539980fc1c14ccfbfeb51f61 files/digest-wanderlust-2.14.0_pre 65
 MD5 01f9c519559c27879bd188640893f740 files/digest-wanderlust-2.12.0 62
+MD5 44642f0fb41a990b0451d247cfb33033 files/digest-wanderlust-2.8.1 61
+MD5 6194b064539980fc1c14ccfbfeb51f61 files/digest-wanderlust-2.14.0_pre 65
 MD5 cea1369dfbb86aa565214ecc4d43f3a3 files/digest-wanderlust-2.12.2 62
+MD5 a8f86382da45e4a1136e478ad781477e files/digest-wanderlust-2.10.1-r2 131
+MD5 4ea60e396d16cae6b59732e00f7bcd91 files/digest-wanderlust-2.14.0 62
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCQakKKRy60XGEcJIRAlkCAJ9pxnEWoqSclRR7i7T+iNR1NZsgUgCfa0CW
-PZiFLjcWebFx5cwjW4tbxFI=
-=GKc7
+iD8DBQFCRkLyVWNWqTUmv+0RAqhpAJ4xofSnmdi5IqVp238RchnquThALwCdGSgr
+n/V+JF8o9jdI9Nj8bsZ+w8Q=
+=boEj
 -----END PGP SIGNATURE-----
