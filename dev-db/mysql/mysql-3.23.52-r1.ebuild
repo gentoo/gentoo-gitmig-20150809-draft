@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-3.23.52-r1.ebuild,v 1.22 2005/01/30 00:18:18 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-3.23.52-r1.ebuild,v 1.23 2005/03/03 17:08:35 ciaranm Exp $
 
 SVER=${PV%.*}
 #normal releases:
@@ -22,7 +22,7 @@ DEPEND="readline? ( >=sys-libs/readline-4.1 )
 	tcpd? ( >=sys-apps/tcp-wrappers-7.6 )
 	>=sys-libs/zlib-1.1.3
 	dev-lang/perl
-	sys-apps/procps"
+	sys-process/procps"
 RDEPEND=""
 
 # HEY!

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-3.23.57.ebuild,v 1.12 2005/01/30 00:18:18 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-3.23.57.ebuild,v 1.13 2005/03/03 17:08:35 ciaranm Exp $
 
 # bug #11681; get b0rked code when using -march=k6 with this package.
 inherit flag-o-matic
@@ -29,7 +29,7 @@ DEPEND="readline? ( >=sys-libs/readline-4.1 )
 	ssl? ( >=dev-libs/openssl-0.9.6d )
 	>=sys-libs/zlib-1.1.3
 	dev-lang/perl
-	sys-apps/procps"
+	sys-process/procps"
 
 PDEPEND="perl? ( dev-perl/DBI dev-perl/DBD-mysql )"
 
