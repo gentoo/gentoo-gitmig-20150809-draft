@@ -4,7 +4,7 @@
 # You can copy this file to .dir_colors in your $HOME directory to override
 # the system defaults.
 #
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/files/DIR_COLORS,v 1.8 2004/10/15 20:54:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/files/DIR_COLORS,v 1.9 2004/10/18 17:32:42 vapier Exp $
 
 # COLOR needs one of these arguments: 'tty' colorizes output to ttys, but not
 # pipes. 'all' adds color characters to all output. 'none' shuts colorization
@@ -87,7 +87,7 @@ EXEC 01;32
 .sh  01;32
 .csh 01;32
 
-.tar 01;31 # archives or compressed (bright red)
+.tar 01;31 # archives / compressed (bright red)
 .tgz 01;31
 .arj 01;31
 .taz 01;31
@@ -102,10 +102,12 @@ EXEC 01;32
 .tz  01;31
 .deb 01;31
 .rpm 01;31
-.rar 01;31
-.ace 01;31
-.zoo 01;31
-.cpio 01;31
+.rar 01;31		# app-arch/rar
+.ace 01;31		# app-arch/unace
+.zoo 01;31		# app-arch/zoo
+.cpio 01;31		# app-arch/cpio
+.7z  01;31		# app-arch/p7zip
+.rz  01;31		# app-arch/rzip
 
 .jpg 01;35 # image formats
 .jpeg 01;35
