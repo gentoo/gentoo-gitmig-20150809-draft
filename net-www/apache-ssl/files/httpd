@@ -79,7 +79,7 @@ start() {
 	    echo "$0 $ARG: httpd (pid $PID) already running"
 	    break
 	fi
-	ebegin "Starting service $SERVICE..."
+	ebegin "Starting service $SERVICE"
 	start-stop-daemon --quiet --start --exec $HTTPD -- $HTTPD_OPTS 1>&2
 	eend $? "Error starting $SERVICE"
 }
@@ -89,7 +89,7 @@ stop() {
 	if [ $RUNNING -eq 0 ]; then
 	    echo "$0 $ARG: $STATUS"
 	fi
-	ebegin "Stopping service $SERVICE..."
+	ebegin "Stopping service $SERVICE"
 	start-stop-daemon --quiet --stop --pid $PIDFILE 1>&2
 	eend $? "Error stopping $SERVICE"
 }
