@@ -819,12 +819,6 @@ app-arch/gnorpm
 #   Slots do not work with the new 2.0_pre4-r1 ebuild
 >=net-www/links-2.0_pre3
 
-# seemant@gentoo.org 26 May 2002
-# masked because there are two ebuilds in two different categories
-=app-crypt/vtun-2.5
-=net-misc/vtun-2.5
-
-
 # spider@gentoo.org 27 May 2002
 # Masked because it doesnt work properly
 # and because I'm not inclined to break that many users systems. see bug #3065
