@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/courier-0.47.20041129.ebuild,v 1.4 2004/12/06 01:48:12 swtaylor Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/courier-0.47.20041129.ebuild,v 1.5 2004/12/06 04:11:03 swtaylor Exp $
 
 inherit eutils
 
@@ -124,8 +124,10 @@ src_install() {
 	diropts -m 755 -o root -g root
 	keepdir /etc/skel
 	${D}/usr/bin/maildirmake ${D}/etc/skel/.maildir
+	keepdir /etc/skel/.maildir
 	keepdir /var/spool/mail
 	${D}/usr/bin/maildirmake ${D}/var/spool/mail/.maildir
+	keepdir /var/spool/mail/.maildir
 
 	exeinto /etc/init.d
 	newexe ${FILESDIR}/courier-init courier
