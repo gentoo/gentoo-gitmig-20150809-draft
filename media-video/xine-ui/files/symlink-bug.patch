@@ -1,5 +1,5 @@
 --- misc/xine-bugreport	2004-02-17 20:56:16.000000000 +0000
-+++ misc/xine-bugreport	2004-03-27 00:16:27.764287750 +0000
++++ misc/xine-bugreport	2004-02-17 20:56:16.000000000 +0000
 @@ -567,6 +567,7 @@
      short=
      description=
@@ -95,7 +95,7 @@
  echo "What kind of trouble does xine cause for you?"
  echo
 --- misc/xine-check	2004-02-17 20:56:16.000000000 +0000
-+++ misc/xine-check	2004-03-27 00:16:27.764287750 +0000
++++ misc/xine-check	2004-02-17 20:56:16.000000000 +0000
 @@ -567,6 +567,7 @@
      short=
      description=
@@ -191,7 +191,7 @@
  echo "What kind of trouble does xine cause for you?"
  echo
 --- misc/xine-check.sh.in	2004-02-17 20:56:16.000000000 +0000
-+++ misc/xine-check.sh.in	2004-03-27 00:16:27.764287750 +0000
++++ misc/xine-check.sh.in	2004-02-17 20:56:16.000000000 +0000
 @@ -567,6 +567,7 @@
      short=
      description=
