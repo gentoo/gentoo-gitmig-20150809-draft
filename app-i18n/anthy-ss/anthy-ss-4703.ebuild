@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/anthy-ss/anthy-ss-4609.ebuild,v 1.1 2003/10/10 18:00:37 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/anthy-ss/anthy-ss-4703.ebuild,v 1.1 2003/11/09 19:24:30 usata Exp $
 
 inherit elisp-common
 
@@ -10,7 +10,7 @@ MY_P="${P/-ss/}"
 
 DESCRIPTION="Anthy -- free and secure Japanese input system"
 HOMEPAGE="http://anthy.sourceforge.jp/"
-SRC_URI="mirror://sourceforge.jp/anthy/6297/${MY_P}.tar.gz"
+SRC_URI="mirror://sourceforge.jp/anthy/6665/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~alpha ~sparc ~ppc"
