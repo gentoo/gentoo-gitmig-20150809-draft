@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/gthumb-2.1.3.ebuild,v 1.1 2003/07/31 15:20:43 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/gthumb-2.1.4.ebuild,v 1.1 2003/08/09 18:59:22 foser Exp $
 
 inherit gnome2
 
@@ -33,8 +33,3 @@ DEPEND=">=dev-util/pkgconfig-0.9.0
 	${RDEPEND}"
 
 DOCS="AUTHORS COPYING ChangeLog NEWS README TODO"
-
-src_unpack() {
-	unpack ${A}
-	gnome2_omf_fix
-}
