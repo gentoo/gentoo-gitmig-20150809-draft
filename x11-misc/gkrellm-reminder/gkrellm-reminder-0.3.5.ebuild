@@ -6,7 +6,7 @@
 MY_P=${P/gkrellm-/}
 S=${WORKDIR}/${MY_P}
 DESCRIPTION="a Reminder Plugin for Gkrellm"
-SRC_URI="http://www.engr.orst.edu/~simonsen/${PN}/${MY_P}.tar.gz"
+SRC_URI="http://engr.oregonstate.edu/~simonsen/reminder/${MY_P}.tar.gz"
 HOMEPAGE="http://www.engr.orst.edu/~simonsen/reminder"
 
 DEPEND=">=app-admin/gkrellm-1.2.1"
