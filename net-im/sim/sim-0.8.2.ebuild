@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/sim/sim-0.8.2.ebuild,v 1.1 2003/05/20 06:20:49 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/sim/sim-0.8.2.ebuild,v 1.2 2003/05/20 09:46:26 aliz Exp $
 
 IUSE="ssl kde"
 [ -n "`use kde`" ] && inherit kde-base
@@ -30,14 +30,20 @@ else
 	myconf="$myconf --disable-kde"
 fi
 
+need-automake 1.5
+need-autoconf 2.5
+
 PATCHES="${FILESDIR}/${P}-nostl.diff"
 
 src_compile() {
-	[ -n "`use kde`" ] && kde_src_compile myconf
+	make -f admin/Makefile.common
+
+	myconf="$myconf --without-gkrellm_plugin"
+	[ -n "`use kde`" ] && kde_src_compile myconf 
 	myconf="$myconf --prefix=/usr"
 
-	econf $myconf || die
-	emake || die
+	econf $myconf --without-gkrellm || die
+	make || die
 }
 
 src_install() {
