@@ -1,6 +1,10 @@
 # ChangeLog for app-shells/pdksh
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/pdksh/ChangeLog,v 1.10 2003/03/19 18:09:56 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/pdksh/ChangeLog,v 1.11 2003/05/29 09:54:44 scandium Exp $
+
+  29 May 2003; Rainer Groesslinger <scandium@gentoo.org>
+  pdksh-5.2.14-r4.ebuild:
+  fixed a typo in the homepage field
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
