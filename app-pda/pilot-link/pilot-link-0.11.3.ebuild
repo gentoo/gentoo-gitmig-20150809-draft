@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/pilot-link/pilot-link-0.11.3.ebuild,v 1.9 2004/07/14 01:43:26 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/pilot-link/pilot-link-0.11.3.ebuild,v 1.10 2004/11/07 09:23:36 mr_bones_ Exp $
 
 DESCRIPTION="A suite of tools contains a series of conduits for moving
 information to and from your Palm device and your desktop or workstation
@@ -10,8 +10,8 @@ SRC_URI="http://pilot-link.org/source/${P}.tar.bz2"
 HOMEPAGE="http://www.pilot-link.org/"
 DEPEND="virtual/libc"
 
+LICENSE="|| ( GPL-2 LGPL-2 )"
 SLOT="0"
-LICENSE="GPL-2 | LGPL-2"
 KEYWORDS="x86 ppc sparc"
 IUSE="java perl tcltk"
 

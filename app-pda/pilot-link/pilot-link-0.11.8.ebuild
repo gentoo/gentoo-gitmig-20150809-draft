@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/pilot-link/pilot-link-0.11.8.ebuild,v 1.11 2004/10/19 18:20:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/pilot-link/pilot-link-0.11.8.ebuild,v 1.12 2004/11/07 09:23:36 mr_bones_ Exp $
 
 inherit perl-module eutils
 
@@ -8,7 +8,7 @@ DESCRIPTION="suite of tools for moving data between a Palm device and a desktop"
 HOMEPAGE="http://www.pilot-link.org/"
 SRC_URI="http://pilot-link.org/source/${P}.tar.bz2"
 
-LICENSE="GPL-2 | LGPL-2"
+LICENSE="|| ( GPL-2 LGPL-2 )"
 SLOT="0"
 KEYWORDS="alpha amd64 ia64 ppc sparc x86"
 IUSE="perl java tcltk python png readline"
