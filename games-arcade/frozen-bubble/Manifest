@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 906b84c5350739f7614f4337fd3c6891 ChangeLog 4362
+MD5 7e2d12d02d2284e1d88e91f4e6511e3a frozen-bubble-1.0.0-r3.ebuild 2345
 MD5 ed81470e0a1698d713b04ecb69d5a9e0 metadata.xml 449
-MD5 9535d7363dd4804815b4d280d5e9e607 frozen-bubble-1.0.0-r3.ebuild 2348
 MD5 9a77f057ee51c039f467c20fa822159d files/digest-frozen-bubble-1.0.0-r3 228
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFA91DeHTu7gpaalycRAg49AKCkBe4/rzduZuSivEi0w332Zb5hewCcDTR6
+nXyd5wmNamKAzl5VnakH7kI=
+=Eraw
+-----END PGP SIGNATURE-----

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/frozen-bubble/frozen-bubble-1.0.0-r3.ebuild,v 1.15 2004/07/01 03:08:07 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/frozen-bubble/frozen-bubble-1.0.0-r3.ebuild,v 1.16 2004/07/16 03:51:19 vapier Exp $
 
 inherit perl-module games
 
@@ -38,7 +38,7 @@ src_unpack() {
 		|| die "sed configure.in failed"
 	libtoolize -c -f || die "libtoolize failed"
 	env \
-		WANT_AUTOMAKE=1.8 \
+		WANT_AUTOMAKE=1.4 \
 		WANT_AUTOCONF=2.5 \
 		./bootstrap.sh || die "bootstrap failed"
 	echo '#include "config.h"' >> fb_serv.h
