@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/fam/fam-2.7.0-r2.ebuild,v 1.6 2004/12/11 15:02:46 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/fam/fam-2.7.0-r2.ebuild,v 1.7 2004/12/29 20:25:36 morfic Exp $
 
 inherit libtool eutils gnuconfig
 
@@ -32,6 +32,7 @@ src_unpack() {
 	cd ${S}; elibtoolize
 
 	gnuconfig_update
+	libtoolize --copy --force
 }
 
 src_install() {
