@@ -1,9 +1,8 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/recode/recode-3.6.ebuild,v 1.17 2003/09/05 22:37:22 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/recode/recode-3.6.ebuild,v 1.18 2004/03/12 08:27:11 mr_bones_ Exp $
 
 inherit flag-o-matic gcc
-replace-flags "-march=pentium4" "-march=pentium3"
 
 DESCRIPTION="Convert files between various character sets."
 HOMEPAGE="http://www.gnu.org/software/recode/"
@@ -21,6 +20,7 @@ src_compile() {
 	local myconf=""
 	use nls || myconf="--disable-nls"
 
+	replace-flags "-march=pentium4" "-march=pentium3"
 	# gcc-3.2 crashes if we don't remove any -O?
 	if [ ! -z "`gcc-version`" == "3.2" ] && [ ${ARCH} == "x86" ] ; then
 		filter-flags -O?
