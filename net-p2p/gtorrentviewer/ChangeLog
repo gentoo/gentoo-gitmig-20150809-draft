@@ -1,0 +1,11 @@
+# ChangeLog for net-p2p/gtorrentviewer
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtorrentviewer/ChangeLog,v 1.1 2004/10/20 03:28:43 squinky86 Exp $
+
+*gtorrentviewer-0.2a (19 Oct 2004)
+
+  19 Oct 2004; Jon Hood <squinky86@gentoo.org> +metadata.xml,
+  +gtorrentviewer-0.2a.ebuild:
+  Initial import. Thanks to Dionysius Wilson Almeida <dwilson@technolunatic.com>
+  for the ebuild, #67795.
+
