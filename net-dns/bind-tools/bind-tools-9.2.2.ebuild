@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind-tools/bind-tools-9.2.2.ebuild,v 1.1 2003/03/04 17:51:41 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind-tools/bind-tools-9.2.2.ebuild,v 1.2 2003/03/04 18:03:13 lostlogic Exp $
 
 MY_P=${P//-tools}
 MY_P=${MY_P/_}
@@ -18,14 +18,16 @@ DEPEND="virtual/glibc"
 src_compile() {
 	econf || die "configure failed"
 
+	export MAKEOPTS="${MAKEOPTS} -j1"
+
 	cd ${S}/lib/isc
-	make || die "make failed in /lib/isc"
+	emake || die "make failed in /lib/isc"
 
 	cd ${S}/lib/dns
-	make || die "make failed in /lib/dns"
+	emake || die "make failed in /lib/dns"
 
 	cd ${S}/bin/dig
-	make || die "make failed in /bin/dig"
+	emake || die "make failed in /bin/dig"
 }
  
 src_install() {
