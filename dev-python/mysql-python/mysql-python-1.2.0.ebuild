@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mysql-python/mysql-python-1.1.7.ebuild,v 1.2 2005/01/25 14:31:50 fserb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mysql-python/mysql-python-1.2.0.ebuild,v 1.1 2005/02/12 02:15:03 fserb Exp $
 
 inherit distutils
 
@@ -12,15 +12,14 @@ SRC_URI="mirror://sourceforge/mysql-python/MySQL-python-${PV}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~ppc ~x86 ~sparc ~amd64"
+
 IUSE=""
 
 DEPEND="virtual/python
 	>=dev-db/mysql-3.22.19"
 
 src_compile() {
-	if has_version '>=dev-db/mysql-4.0.10' >& /dev/null ; then
-		sed -i 's/thread_safe_library = YES/thread_safe_library = NO/' setup.py
-	fi
+	export mysqlclient="mysqlclient_r"
 	distutils_src_compile
 }
 
