@@ -1,10 +1,11 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsprogs/xfsprogs-2.3.9.ebuild,v 1.3 2003/09/28 14:50:11 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsprogs/xfsprogs-2.3.9.ebuild,v 1.4 2004/01/31 11:11:14 ferringb Exp $
 
 inherit flag-o-matic
 
-SRC_URI="ftp://oss.sgi.com/projects/xfs/download/cmd_tars/${P}.src.tar.gz"
+#SRC_URI="ftp://oss.sgi.com/projects/xfs/download/cmd_tars/${P}.src.tar.gz"
+SRC_URI="mirror://gentoo/${P}.src.tar.gz"
 HOMEPAGE="http://oss.sgi.com/projects/xfs"
 DESCRIPTION="xfs filesystem utilities"
 

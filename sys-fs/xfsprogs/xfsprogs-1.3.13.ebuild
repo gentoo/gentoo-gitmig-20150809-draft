@@ -1,10 +1,11 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsprogs/xfsprogs-1.3.13.ebuild,v 1.1 2003/09/15 17:46:25 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsprogs/xfsprogs-1.3.13.ebuild,v 1.2 2004/01/31 11:11:14 ferringb Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="xfs filesystem utilities"
-SRC_URI="ftp://oss.sgi.com/projects/xfs/download/latest/cmd_tars/${P}.src.tar.gz"
+#SRC_URI="ftp://oss.sgi.com/projects/xfs/download/latest/cmd_tars/${P}.src.tar.gz"
+SRC_URI="mirror://gentoo/${P}.src.tar.gz"
 HOMEPAGE="http://oss.sgi.com/projects/xfs"
 
 SLOT="0"
