@@ -1,4 +1,4 @@
-#When you add an entry to this file, add your name, the date, and an
+5#When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 
 # Masing Azarah's new baselayout until several problems are confirmed fixed.
@@ -6,10 +6,6 @@
 =sys-apps/baselayout-1.7.2
 #this should fix most/all problem, but needs field testing first.
 =sys-apps/baselayout-1.7.3
-
-# 1 march 2002, danarmak
-# masking new wine ebuild until testing is finished
->=app-emulation/wine-20020122
 
 # 18 Feb 2002, azarah.
 # Gnumeric needs 0.0.17, and most other stuff should work with this version
