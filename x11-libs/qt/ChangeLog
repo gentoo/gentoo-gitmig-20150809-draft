@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/qt
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.43 2002/12/18 19:07:34 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.44 2002/12/18 20:45:55 hannes Exp $
+
+  18 Dec 2002; Hannes Mehnert <hannes@gentoo.org> qt-3.1.1.ebuild,
+  qt-3.0.5-r2.ebuild, qt-3.1.0.ebuild, qt-3.1.0-r1.ebuild: fixed typo
+  in myconf from use opengl line. Thanks to overvolting@hotmail.com (dan)
+  (bug #12371)
 
   18 Dec 2002; Dan Armak <danarmak@gentoo.org> ChangeLog  :
 
