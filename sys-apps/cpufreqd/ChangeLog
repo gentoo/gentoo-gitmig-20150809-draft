@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/cpufreqd
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/cpufreqd/ChangeLog,v 1.14 2004/07/23 12:51:27 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/cpufreqd/ChangeLog,v 1.15 2004/07/28 00:11:12 vapier Exp $
+
+*cpufreqd-1.1.2-r1 (27 Jul 2004)
+
+  27 Jul 2004; Mike Frysinger <vapier@gentoo.org>
+  +files/1.1.2-prefer-sysfs.patch, -cpufreqd-1.1.1.ebuild,
+  +cpufreqd-1.1.2-r1.ebuild, -cpufreqd-1.1.2.ebuild, -cpufreqd-1.1.ebuild:
+  Verison bump to fix init.d script bug #46959 et al, add patch to use sysfs
+  over procfs #43567 by Dennis Nienhüser, and add amd64 #58127 by James Couzens.
 
   23 Jul 2004; Alexander Gabert <pappy@gentoo.org> cpufreqd-1.1.1.ebuild,
   cpufreqd-1.1.2.ebuild, cpufreqd-1.1.ebuild:
