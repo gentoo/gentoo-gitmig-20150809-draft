@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cantus/cantus-1.07.ebuild,v 1.6 2004/03/01 05:37:12 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cantus/cantus-1.07.ebuild,v 1.7 2004/03/27 02:37:39 eradicator Exp $
 
 DESCRIPTION="easy to use tool for tagging and renaming MP3 and OGG/Vorbis files"
 HOMEPAGE="http://software.manicsadness.com/?site=project&project=1"
@@ -8,12 +8,12 @@ SRC_URI="http://sam.homeunix.com/software.manicsadness.com-step3/releases/cantus
 
 LICENSE="GPL-2"
 SLOT="1"
-KEYWORDS="~x86 amd64"
+KEYWORDS="x86 amd64"
+
+IUSE=""
 
 DEPEND="vorbis? ( media-libs/libvorbis
 		media-libs/libogg )"
-
-S="${WORKDIR}/${P}"
 
 src_compile() {
 	econf || die "configure failed"

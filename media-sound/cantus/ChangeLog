@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/cantus
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cantus/ChangeLog,v 1.5 2003/10/28 11:05:25 hanno Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cantus/ChangeLog,v 1.6 2004/03/27 02:37:39 eradicator Exp $
+
+  26 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org> cantus-1.0.3.ebuild,
+  cantus-1.07.ebuild, cantus-1.99.9.ebuild:
+  Fixed USE flags.  Stable in x86.
 
 *cantus-1.99.9 (28 Oct 2003)
 
