@@ -1,6 +1,9 @@
 # ChangeLog for app-text/html-xml-utils
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/html-xml-utils/ChangeLog,v 1.15 2004/07/01 19:28:49 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/html-xml-utils/ChangeLog,v 1.16 2004/10/18 12:29:33 dholm Exp $
+
+  18 Oct 2004; David Holm <dholm@gentoo.org> html-xml-utils-2.8-r1.ebuild:
+  Added to ~ppc.
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   html-xml-utils-2.3-r1.ebuild, html-xml-utils-2.8-r1.ebuild:
