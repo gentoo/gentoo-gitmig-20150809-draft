@@ -17,6 +17,7 @@ virtual/imapd           net-mail/courier-imap
 sys-apps/console-tools  sys-apps/kbd
 virtual/blackbox        x11-wm/blackbox
 virtual/emacs           app-editors/emacs
+virtual/xemacs		app-editors/xemacs
 virtual/cron            sys-apps/dcron
 sys-apps/reiserfs-utils sys-fs/reiserfsprogs
 virtual/sylpheed        net-mail/sylpheed
@@ -31,8 +32,8 @@ virtual/editor		app-editors/nano
 virtual/os-headers	sys-kernel/hppa-headers
 virtual/modutils 	sys-apps/modutils
 virtual/inetd		sys-apps/xinetd
-virtual/antivirus		net-mail/clamav
-virtual/aspell-dict           app-dicts/aspell-en
+virtual/antivirus	net-mail/clamav
+virtual/aspell-dict	app-dicts/aspell-en
 virtual/skkserv		app-i18n/skkserv
 virtual/ghc		dev-lang/ghc-bin
 virtual/snmp		net-analyzer/net-snmp
@@ -44,5 +45,5 @@ virtual/bittorrent	net-p2p/bittorrent
 virtual/logger		app-admin/sysklogd
 virtual/tftp		net-misc/tftp-hpa
 virtual/gzip		app-arch/gzip
-virtual/ghostscript		app-text/ghostscript
-virtual/w3m			net-www/w3m
+virtual/ghostscript	app-text/ghostscript
+virtual/w3m		net-www/w3m
