@@ -1,8 +1,20 @@
 # ChangeLog for app-i18n/jless-iso254
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/jless-iso254/ChangeLog,v 1.4 2003/07/30 17:33:46 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/jless-iso254/ChangeLog,v 1.5 2003/09/08 11:56:39 usata Exp $
 
 *jless-iso254-358 (09 Jul 2002)
+
+  08 Sep 2003; Mamoru KOMACHI <usata@gentoo.org> jless-iso254-358.ebuild,
+  metadata.xml:
+  Changed DESCRIPTION (jless is not Japanese less but Jam less).
+  Removed ${A} redefinition (reported in Bug #28161). Use mirror://gnu/
+  instead of GNU master site. Added original less HOMEPAGE. Changed
+  LICENSE because Jam less is distributed under BSD license. Read
+  ${EDITOR} from /etc/profile rather than hardcode it to /usr/bin/nano.
+  Install lesspipe.sh as jlesspipe.sh and make a symlink to lesspipe.sh
+  if original less is not installed (try epm -qf /usr/bin/lesspipe.sh !).
+  Added pkg_postinst() to make sure /usr/bin/lesspipe.sh is present.
+  Added <longdescription> to metadata.xml.
 
   31 Jul 2003; Mamoru KOMACHI <usata@gentoo.org> jless-iso254-358.ebuild:
   Added ~alpha, ~sparc and ~ppc keywords
