@@ -13,6 +13,7 @@ DEPEND="virtual/glibc virtual/x11
 	>=media-libs/libpng-1.0.12
 	>=media-libs/giflib-4.1.0-r3
 	>=media-libs/jpeg-6b-r2
+	x11-wm/gnustep-env
 # Replaced by WINGS
 #	>=x11-libs/libPropList-0.10.1"
 
@@ -32,9 +33,10 @@ src_compile() {
 		    --mandir=/usr/share/man				\
 		    --infodir=/usr/share/info				\
 		    --sysconfdir=/etc/X11				\
-		    --with-x --enable-newstyle				\
+		    --with-x						\
+		    --enable-newstyle					\
 		    --enable-superfluous				\
-		    GNUSTEP_LOCAL_ROOT="/usr/lib/GNUstep"		\
+		    --enable-usermenu					\
 		    $myconf || die
 		    
 	make || die
@@ -44,8 +46,7 @@ src_compile() {
 	./configure --host=${CHOST}					\
 		    --prefix=/usr					\
 		    --mandir=/usr/share/man				\
-		    --infodir=/usr/share/info				\
-		    GNUSTEP_LOCAL_ROOT="/usr/lib/GNUstep" || die
+		    --infodir=/usr/share/info || die
 		    
 	make || die
 }
@@ -56,16 +57,11 @@ src_install() {
 	     mandir=${D}/usr/share/man					\
 	     infodir=${D}/usr/share/info				\
 	     sysconfdir=${D}/etc/X11					\
-	     GNUSTEP_LOCAL_ROOT=${D}/usr/lib/GNUstep			\
+	     GNUSTEP_LOCAL_ROOT=${D}${GNUSTEP_LOCAL_ROOT}		\
 	     install || die
 
 	cp -f WindowMaker/plmenu ${D}/etc/X11/WindowMaker/WMRootMenu
 
-	# Does anyone use GNUstep ?  Hopefully this will be fixed when
-	# someone package GNUstep, otherwise should work just fine.
-	insinto /etc/env.d
-	doins ${FILESDIR}/25gnustep
-	
 	dodoc AUTHORS BUGFORUM BUGS ChangeLog COPYING* INSTALL* FAQ*	\
 	      MIRRORS README* NEWS TODO
 
