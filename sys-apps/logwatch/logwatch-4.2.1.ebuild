@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/logwatch/logwatch-4.2.1.ebuild,v 1.5 2003/03/11 21:11:46 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/logwatch/logwatch-4.2.1.ebuild,v 1.6 2003/04/11 06:23:45 jhhudso Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="LogWatch, a customizable log analysis system"
@@ -16,6 +16,8 @@ DEPEND="virtual/glibc
 SLOT="0"
 KEYWORDS="x86"
 LICENSE="as-is"
+IUSE=""
+RDEPEND=""
 
 src_install() {
 	dodir /usr/share/logwatch
@@ -36,11 +38,10 @@ src_install() {
 		if [ $(ls $i | wc -l) -ne 0 ] ; then
 			file="`echo $i | awk -F/ '{ print $3 }'`"
 			dodir /usr/share/logwatch/scripts/logfiles/$file
-			
 			exeinto /usr/share/logwatch/scripts/logfiles/$file
 			for l in scripts/logfiles/$file/* ; do
 				subfile="`echo $l | awk -F/ '{ print $4 }'`"
-				newexe $l $subfile 
+				newexe $l $subfile
 			done
 		fi
 	done
@@ -64,7 +65,7 @@ src_install() {
 	for i in conf/logfiles/* ; do
 			doins $i
 	done
-	
+
 	insinto /usr/share/logwatch/conf/services
 	for i in conf/services/* ; do
 			doins $i
@@ -81,12 +82,24 @@ pkg_postinst() {
 	einfo "adding executable to path..."
 	ln -sf ${ROOT}usr/share/logwatch/scripts/logwatch.pl ${ROOT}usr/bin/logwatch
 
-	einfo "adding to cron..."
-	echo "0 0 * * * ${ROOT}usr/share/logwatch/scripts/logwatch.pl 2>&1 > /dev/null" >> ${ROOT}var/spool/cron/crontabs/root
-	}
-
-pkg_postrm() {
-	sed "/^0.*\/usr\/share\/logwatch\/scripts\/logwatch.*null$/d" ${ROOT}var/spool/cron/crontabs/root > ${ROOT}var/spool/cron/crontabs/root.new
-	mv --force ${ROOT}var/spool/cron/crontabs/root.new ${ROOT}var/spool/cron/crontabs/root
+	# this will avoid duplicate entries in the crontab
+	if [ "`grep logwatch.pl ${ROOT}var/spool/cron/crontabs/root`" == "" ];
+	then
+		einfo "adding to cron..."
+		echo "0 0 * * * ${ROOT}usr/sbin/logwatch.pl 2>&1 > /dev/null" \
+			>> ${ROOT}var/spool/cron/crontabs/root
+	fi
 }
 
+pkg_postrm() {
+	# this fixes a bug when logwatch package gets updated
+	if [ "`ls -d ${ROOT}var/db/pkg/sys-apps/logwatch* \
+		| wc -l | tail -c 2`" -lt 2 ];
+	then
+		sed "/^0.*\/usr\/sbin\/logwatch.*null$/d" \
+			${ROOT}var/spool/cron/crontabs/root \
+			> ${ROOT}var/spool/cron/crontabs/root.new
+		mv --force ${ROOT}var/spool/cron/crontabs/root.new \
+			${ROOT}var/spool/cron/crontabs/root
+	fi
+}
