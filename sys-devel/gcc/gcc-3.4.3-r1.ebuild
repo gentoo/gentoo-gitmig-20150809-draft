@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.3-r1.ebuild,v 1.7 2004/12/05 17:19:04 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.3-r1.ebuild,v 1.8 2004/12/09 05:57:03 vapier Exp $
 
 DESCRIPTION="The GNU Compiler Collection.  Includes C/C++, java compilers, pie+ssp extensions, Haj Ten Brugge runtime bounds checking"
 
@@ -179,6 +179,9 @@ src_unpack() {
 	# hack around some ugly 32bit sse2 wrong-code bugs
 	epatch ${FILESDIR}/3.4.2/gcc34-m32-no-sse2.patch
 	epatch ${FILESDIR}/3.4.2/gcc34-fix-sse2_pinsrw.patch
+
+	# Fix cross-compiling
+	epatch ${FILESDIR}/3.4.3/gcc-3.4.3-cross-compile.patch
 
 	if use amd64 && use multilib ; then
 		# this should hack around the GCC_NO_EXECUTABLES bug
