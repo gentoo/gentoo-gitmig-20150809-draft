@@ -1,19 +1,46 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-office/siag/siag-3.4.7.ebuild,v 1.1 2001/04/28 06:27:32 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/siag/siag-3.4.7.ebuild,v 1.2 2001/04/28 08:04:32 achim Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A free Office package for Linux"
 SRC_URI="ftp://siag.nu/pub/siag/${P}.tar.gz"
 HOMEPAGE="http://siag.nu/"
 
+DEPEND="virtual/x11
+	>=dev-libs/gmp-3.1.1
+	>=media-libs/t1lib-1.0.1
+	mysql? ( dev-db/mysql )
+	guile? ( dev-util/guile )"
+
+RDEPEND="virtual/x11
+	>=media-libs/t1lib-1.0.1"
 
 src_compile() {
 
+    local myconf
+    if [ "`use mysql`" ]
+    then
+      myconf="--with-mysql"
+    else
+      myconf="--without-mysql"
+    fi
+    if [ "`use guile`" ]
+    then
+      myconf="$myconf --with-guile"
+    else
+      myconf="$myconf --without-guile"
+    fi
+# siag only supports python1.5
+#    if [ "`use python`" ]
+#    then
+#      myconf="$myconf --with-python"
+#    else
+#      myconf="$myconf --without-python"
+#    fi
     try ./configure --prefix=/opt/siag --mandir=/opt/siag/share/man --host=${CHOST} \
-	--with-guile --with-gmp \
-	--with-mysql --with-t1lib
+	--with-gmp --with-t1lib $myconf
     try make
 
 }
