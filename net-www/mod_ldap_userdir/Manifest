@@ -1,10 +1,20 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 e33c05e4d235260908ea91bbd68f3d3a ChangeLog 1351
 MD5 0d18f0fe5d603b41b988373892caf195 metadata.xml 226
 MD5 43234743c77c311d56dc31df3394210c mod_ldap_userdir-1.1.1.ebuild 1760
 MD5 9ca5c3a8b167b6754f5c444e42919b6a mod_ldap_userdir-1.1.4.ebuild 1764
-MD5 45e191f3344ed3c58b9d53e1c43f7166 mod_ldap_userdir-1.1.4-r1.ebuild 968
+MD5 90c6fe6afb2c881164f2ef7324c3a2f2 mod_ldap_userdir-1.1.4-r1.ebuild 1186
 MD5 650877f5bf9738cca23bbbeeb5bf87d9 files/47_mod_ldap_userdir.conf 375
 MD5 7c29da41475b54ecba7e1ca97c9d9bea files/digest-mod_ldap_userdir-1.1.1 73
 MD5 9d191153d39cdfc62b5be04e66ec88c4 files/digest-mod_ldap_userdir-1.1.4 73
 MD5 9d191153d39cdfc62b5be04e66ec88c4 files/digest-mod_ldap_userdir-1.1.4-r1 73
 MD5 d74d45e0b376cedc4cddc7ada0efe685 files/1.1.4-r1/47_mod_ldap_userdir.conf 370
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFB8TFjmPFBzbX68WERAnZdAJ9cWXIeBzrCZWU2OUbwPu/47jTBJgCfWQbM
+NuJ5LCo8vsKFLhNGTczjctk=
+=nvIe
+-----END PGP SIGNATURE-----
