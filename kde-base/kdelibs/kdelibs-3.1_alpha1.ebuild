@@ -1,6 +1,6 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.1_alpha1.ebuild,v 1.3 2002/07/13 21:03:28 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.1_alpha1.ebuild,v 1.4 2002/07/16 20:37:01 danarmak Exp $
 inherit kde kde.org
 #don't inherit  kde-base or kde-dist! it calls need-kde which adds kdelibs to depend!
 
@@ -11,6 +11,8 @@ HOMEPAGE="http//www.kde.org/"
 S=${WORKDIR}/kdelibs-3.0.6
 SLOT="3"
 LICENSE="GPL-2 LGPL-2"
+
+PATCHES="${FILESDIR}/${P}-menushadows.diff"
 
 # kde.eclass has kdelibs in DEPEND, and we can't have that in here. so we recreate the entire
 # DEPEND from scratch.
