@@ -4,5 +4,8 @@
 
 *fdutils-5.4.20020222 (18 Jul 2002)
 
+  13 Aug 2002; Matthew Turk <satai@gentoo.org> fdutils-5.4.20020222.ebuild:
+  Added dependency on teTeX to fix bug 6410.
+
   18 Jul 2002; Daniel Ahlberg <aliz@gentoo.org> fdutils-5.4.20020222.ebuild: 
   Initial release. 
