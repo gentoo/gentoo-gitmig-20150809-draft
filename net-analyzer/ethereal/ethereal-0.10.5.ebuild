@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ethereal-0.10.5.ebuild,v 1.6 2004/07/09 19:56:45 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ethereal-0.10.5.ebuild,v 1.7 2004/07/14 19:14:13 eldad Exp $
 
 inherit libtool flag-o-matic gcc eutils
 
@@ -13,15 +13,14 @@ SLOT="0"
 KEYWORDS="x86 sparc ppc alpha amd64 ~ia64"
 IUSE="adns gtk ipv6 snmp ssl gtk2"
 
-# since if --disable-gtk2 is not passed to configure it will try to build with glib-2.0,
-# the logic is reversed. if gtk2 USE flag is on, gtk2 will be built, even if gtk is not in USE.
+# if --disable-gtk2 is not passed to configure it will try to build with glib-2.0.
 # --disable-ethereal do not have an influence.
 
 RDEPEND=">=sys-libs/zlib-1.1.4
 	snmp? ( virtual/snmp )
 	>=dev-util/pkgconfig-0.15.0
-	gtk2? ( >=dev-libs/glib-2.0.4 =x11-libs/gtk+-2* )
-	gtk? ( !gtk2? ( =x11-libs/gtk+-1.2* ) )
+	gtk? (  gtk2? ( >=dev-libs/glib-2.0.4 =x11-libs/gtk+-2* )
+		!gtk2? ( =x11-libs/gtk+-1.2* ) )
 	!gtk? ( =dev-libs/glib-1.2* )
 	ssl? ( >=dev-libs/openssl-0.9.6e )
 	>=net-libs/libpcap-0.7.1
@@ -50,10 +49,13 @@ src_compile() {
 	local myconf="
 		$(use_with ssl)
 		$(use_enable ipv6)
-		$(use_with adns)
-		$(use_enable gtk2)"
+		$(use_with adns)"
 
-	if ! use gtk; then
+	if use gtk; then
+		myconf="$(use_enable gtk2)"
+	else
+		myconf="--disable-gtk2"
+
 		# --disable-ethereal do not have an influence
 		#myconf="${myconf} --disable-ethereal"
 		# the asn1 plugin needs gtk

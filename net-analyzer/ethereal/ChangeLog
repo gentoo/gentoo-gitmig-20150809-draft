@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/ethereal
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ChangeLog,v 1.77 2004/07/09 21:51:57 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ChangeLog,v 1.78 2004/07/14 19:14:13 eldad Exp $
+
+  14 Jul 2004; Eldad Zack <eldad@gentoo.org> ethereal-0.10.5-r1.ebuild,
+  ethereal-0.10.5.ebuild:
+  Fixed -gtk +gtk2 dependency issue. Closes #57022.
 
   09 Jul 2004; Lars Weiler <pylon@gentoo.org> ethereal-0.10.5-r1.ebuild:
   Stable on ppc.
