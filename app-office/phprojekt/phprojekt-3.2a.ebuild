@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/phprojekt/phprojekt-3.2a.ebuild,v 1.1 2002/08/02 10:03:05 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/phprojekt/phprojekt-3.2a.ebuild,v 1.2 2002/08/06 18:17:31 gerk Exp $
 
 # lid of download link
 MY_DOWNLOAD_ID=14
@@ -14,7 +14,7 @@ HOMEPAGE="http://www.phprojekt.com"
 SRC_URI="http://www.phprojekt.de/download/${PN}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ppc"
 
 RDEPEND="virtual/php"
 DEPEND=""
