@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
-MD5 6bc1cfd7874cba0f9d726fe50544a91b xfce4-showdesktop-0.4.0-r1.ebuild 428
-MD5 a591863127dab21392f064e5cb3de814 xfce4-showdesktop-0.4.0.ebuild 747
 MD5 1e49183aaf65b246db4380a2cca89e06 ChangeLog 2407
+MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
 MD5 d6b6ede7f5c8a39c5fb7a78266cf68f7 xfce4-showdesktop-0.3.0.ebuild 740
+MD5 a591863127dab21392f064e5cb3de814 xfce4-showdesktop-0.4.0.ebuild 747
+MD5 871bd3d03962e20b0ecf0699fa8a3986 xfce4-showdesktop-0.4.0-r1.ebuild 427
 MD5 44a536ceee4dc07cb0a8ab04d1b7ce57 files/digest-xfce4-showdesktop-0.3.0 82
-MD5 357a04cf01b83e869c015c8be2e161ca files/digest-xfce4-showdesktop-0.4.0-r1 82
 MD5 357a04cf01b83e869c015c8be2e161ca files/digest-xfce4-showdesktop-0.4.0 82
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCDz5UugEuf3OQ0akRAh6pAJ4rO3Vkw4QBj5nYeX26bkYEuMx3+QCgk218
-HVRkB27Rsa/500HhdagbYX8=
-=4M2N
------END PGP SIGNATURE-----
+MD5 357a04cf01b83e869c015c8be2e161ca files/digest-xfce4-showdesktop-0.4.0-r1 82

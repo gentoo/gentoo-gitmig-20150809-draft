@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 c3453f2032d6543df16f6a8fba5490c8 ChangeLog 2341
 MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
 MD5 6053f70e611b747597a6dd2f0f8bb016 xfce4-systemload-0.3.4.ebuild 718
-MD5 34c46e357fd74d03e54d0a8838defb43 xfce4-systemload-0.3.6.ebuild 377
-MD5 c3453f2032d6543df16f6a8fba5490c8 ChangeLog 2341
 MD5 541ab726829411251e0411d71647b83c xfce4-systemload-0.3.4-r1.ebuild 386
-MD5 dfcfaa61f1dcb4d4cb35472a00634f72 files/digest-xfce4-systemload-0.3.6 81
-MD5 640f6545d16ee55ffa3a3809d0031a89 files/digest-xfce4-systemload-0.3.4-r1 81
+MD5 506fc3034224f6af35302b8c80d51488 xfce4-systemload-0.3.6.ebuild 376
 MD5 640f6545d16ee55ffa3a3809d0031a89 files/digest-xfce4-systemload-0.3.4 81
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCDz44ugEuf3OQ0akRAnuVAJ92RFM5PAHyYef0gGRoipJgd7SNiQCfejqJ
-tB74VWdde9+BT4Utn3M95ZI=
-=STac
------END PGP SIGNATURE-----
+MD5 640f6545d16ee55ffa3a3809d0031a89 files/digest-xfce4-systemload-0.3.4-r1 81
+MD5 dfcfaa61f1dcb4d4cb35472a00634f72 files/digest-xfce4-systemload-0.3.6 81

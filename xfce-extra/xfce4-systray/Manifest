@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 b5c086f8cd8716eb7a071a9c76d7e884 xfce4-systray-4.2.0.ebuild 398
 MD5 06f5ee280c1d0fd3d0ac1bd8d06e69bd ChangeLog 5853
-MD5 51d08ab5c96bfe33da5c521f4f941954 xfce4-systray-4.0.6.ebuild 878
 MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
+MD5 51d08ab5c96bfe33da5c521f4f941954 xfce4-systray-4.0.6.ebuild 878
+MD5 430e5a8de72842b765d5dee477dc0dcd xfce4-systray-4.2.0.ebuild 397
 MD5 f4e5b4968d8a9aa9bf0990bc82674656 files/digest-xfce4-systray-4.0.6 71
 MD5 e85fda8f975f52b28b8a6db70e898b21 files/digest-xfce4-systray-4.2.0 72
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCCVBRugEuf3OQ0akRAvBWAJ4hS2ORXOycmv8/sHT+D3g+hFjMkQCfWs4d
-mje+I7h9T9YnG1+D57hX+rs=
-=PJXR
------END PGP SIGNATURE-----

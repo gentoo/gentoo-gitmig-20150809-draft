@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
 MD5 26f18eac77b27b9986f93b4dcbd1212b ChangeLog 1957
-MD5 f3e082ee39e83d85fd87708cc1cce7c1 xfce4-minicmd-0.3.0-r1.ebuild 381
+MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
 MD5 14ae83256036e8668761bd23b9755603 xfce4-minicmd-0.2.0.ebuild 719
+MD5 f1ad6cfc766cb5e1ca5d9297ed3524db xfce4-minicmd-0.3.0-r1.ebuild 380
 MD5 ad7bafe1be6b5607e06a5174e7913b99 files/digest-xfce4-minicmd-0.2.0 78
 MD5 0087842189b5cc0731ef9cdad52307df files/digest-xfce4-minicmd-0.3.0-r1 78
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCDz3YugEuf3OQ0akRAh6LAJ4lxE/a3REBYygWoL0O0vDvv/mrDACeMuUN
-qXJG4xGMSnyciMMO4okgB5s=
-=btHN
------END PGP SIGNATURE-----

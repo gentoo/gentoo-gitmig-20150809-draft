@@ -1,22 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
-MD5 723415976fbf3ffd1471b0de57c55459 xfce4-netload-0.3.1.ebuild 403
-MD5 bb281f3962c6476fd7f75d4b25186432 xfce4-netload-0.2.4.ebuild 387
-MD5 0224c87896f3e6f6a038f882cde32ec1 xfce4-netload-0.2.3-r1.ebuild 396
-MD5 413bbd37387b4bd3dfbc0fe3a8b67181 xfce4-netload-0.2.2.ebuild 727
 MD5 49166ab01cd41a040a317abb06040238 ChangeLog 2589
+MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
+MD5 413bbd37387b4bd3dfbc0fe3a8b67181 xfce4-netload-0.2.2.ebuild 727
 MD5 d7a4b1a0b530884bc66a11f5ca6b139d xfce4-netload-0.2.3.ebuild 735
-MD5 a477599ba752f810601381daeab01e56 files/digest-xfce4-netload-0.3.1 79
-MD5 19335b87c54a1cf33825330c46903f87 files/digest-xfce4-netload-0.2.3-r1 78
-MD5 19335b87c54a1cf33825330c46903f87 files/digest-xfce4-netload-0.2.3 78
-MD5 2c91dfa041ede312bf559f62213dffdc files/digest-xfce4-netload-0.2.4 78
+MD5 0224c87896f3e6f6a038f882cde32ec1 xfce4-netload-0.2.3-r1.ebuild 396
+MD5 f1b4b041f87f04c10670d89660cb9393 xfce4-netload-0.2.4.ebuild 385
+MD5 723415976fbf3ffd1471b0de57c55459 xfce4-netload-0.3.1.ebuild 403
 MD5 d2470816e607bf5bceabe2df4ff303b7 files/digest-xfce4-netload-0.2.2 78
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCDz6VugEuf3OQ0akRAgKpAJwKdCTIZho36MGGelUgsVCcpvxvAwCglkOF
-VthYzjBJHhD62a/igJMYbn4=
-=ti74
------END PGP SIGNATURE-----
+MD5 19335b87c54a1cf33825330c46903f87 files/digest-xfce4-netload-0.2.3 78
+MD5 19335b87c54a1cf33825330c46903f87 files/digest-xfce4-netload-0.2.3-r1 78
+MD5 2c91dfa041ede312bf559f62213dffdc files/digest-xfce4-netload-0.2.4 78
+MD5 a477599ba752f810601381daeab01e56 files/digest-xfce4-netload-0.3.1 79

@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 0ffe353bb3155614454e4b50af216145 ChangeLog 1680
 MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
 MD5 2ca25226a7ce94cce521eb4b821c194e xfce4-battery-0.2.0.ebuild 722
-MD5 0ffe353bb3155614454e4b50af216145 ChangeLog 1680
-MD5 2ffae75959ffee531c32d3209377bb26 xfce4-battery-0.2.0-r1.ebuild 396
-MD5 62b116cba4726ccaafa617391576b91e files/digest-xfce4-battery-0.2.0-r1 78
+MD5 19d8f50f9eb4bfdf782fd1ccba03b69d xfce4-battery-0.2.0-r1.ebuild 395
 MD5 62b116cba4726ccaafa617391576b91e files/digest-xfce4-battery-0.2.0 78
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCDz5yugEuf3OQ0akRArdjAKCSAJcpe9m3Ipj+MNfM0oZqRlWIsQCgm/CF
-oxwemUmSNV3i0yzkEjhH6ls=
-=Ub5t
------END PGP SIGNATURE-----
+MD5 62b116cba4726ccaafa617391576b91e files/digest-xfce4-battery-0.2.0-r1 78
