@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmdf
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmdf/ChangeLog,v 1.4 2004/06/24 23:08:05 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmdf/ChangeLog,v 1.5 2004/09/03 02:58:22 tgall Exp $
+
+  02 Sep 2004; Tom Gall <tgall@gentoo.org> wmdf-0.1.6.ebuild:
+  stable on ppc64, bug #62255
 
   11 Apr 2004; Markus Nigbur <pyrania@gentoo.org> wmdf-0.1.6.ebuild:
   Marked stable.
