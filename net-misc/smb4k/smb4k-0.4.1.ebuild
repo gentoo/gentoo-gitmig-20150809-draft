@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/smb4k/smb4k-0.4.1.ebuild,v 1.1 2004/09/02 15:18:58 mglauche Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/smb4k/smb4k-0.4.1.ebuild,v 1.2 2004/09/04 23:17:59 dholm Exp $
 
 inherit kde
 
@@ -11,7 +11,7 @@ IUSE=""
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~x86 ~amd64 ~ppc"
 
 RDEPEND="$RDEPEND
 	sys-libs/zlib
