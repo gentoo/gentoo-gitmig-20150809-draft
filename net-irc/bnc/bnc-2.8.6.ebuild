@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/bnc/bnc-2.8.6.ebuild,v 1.13 2004/05/28 02:57:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/bnc/bnc-2.8.6.ebuild,v 1.14 2004/06/21 21:56:34 kloeri Exp $
+
+inherit eutils
 
 MY_P=${P/-/}
 DESCRIPTION="BNC (BouNCe) is used as a gateway to an IRC Server"
@@ -19,6 +21,8 @@ DEPEND="virtual/glibc"
 S=${WORKDIR}/${MY_P}
 
 src_compile() {
+	# fix gcc-3.4 compilation, bug #54689.
+	epatch ${FILESDIR}/bnc-2.8.6-gotofail-labelfix.patch
 	econf || die
 	emake || die
 	mv mkpasswd bncmkpasswd

@@ -1,0 +1,26 @@
+diff -Naur bnc2.8.6.orig/cmds.c bnc2.8.6/cmds.c
+--- bnc2.8.6.orig/cmds.c	2002-07-13 04:48:13.000000000 +0200
++++ bnc2.8.6/cmds.c	2004-06-21 23:32:49.057908144 +0200
+@@ -503,8 +503,8 @@
+ 					tprintf(&cptr->loc, "NOTICE AUTH :Docked session %i\n", dptr->srv.fd);
+ 				}
+ 			}
+-			tprintf(&cptr->loc, "NOTICE AUTH :End of dock list\n");
+ nodock:
++			tprintf(&cptr->loc, "NOTICE AUTH :End of dock list\n");
+ 		}
+ 		tprintf(&cptr->loc, "NOTICE AUTH :type /quote help for basic list of commands and usage\n");			        
+ 	}
+@@ -1066,10 +1066,9 @@
+ 					vhost = vhost_ptr->vhost;
+ 					break;
+ 				}
+-			}
+-vfast_fail:				
++			}		
+ 		}
+-
++vfast_fail:
+ 		res = inet_aton(vhost, &addr);
+ 		if(res == 1)
+ 		{
