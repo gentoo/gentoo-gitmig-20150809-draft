@@ -1,0 +1,8 @@
+# ChangeLog for net-misc/hashcash
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hashcash/ChangeLog,v 1.1 2003/09/12 00:42:23 zul Exp $
+
+  11 Sep 2003; Chuck Short <zul@gentoo.org> :
+  Initial version, ebuild submitted by <bdonlan@bd-home-comp.no-ip.org> with
+  modifications by me, closes bug #22588.
+
