@@ -125,13 +125,6 @@ global $uid, $dbusername, $show_privates, $list; ?>
 					<li><a href="single.php?action=new_todo">Create a new todo</a>
 					<li><a href="profileedit.php">Edit user profile</a>
 					<?php
-					// are we a team leader?
-					$query = mysql_query( "select leader,gid from teams" );
-					while ( $row = mysql_fetch_array($query) ) {
-						if ( $row['leader'] == $uid ) {
-							$leaderof[] = team_num_name( $row['gid'] );
-						}
-					}
 					// are we an admin?
 					$query = mysql_query( "select admin from users where uid=$uid" );
 					list( $admin ) = mysql_fetch_row( $query );
@@ -140,14 +133,7 @@ global $uid, $dbusername, $show_privates, $list; ?>
 						<li><a href="useredit.php">Edit Users</a>
 					<?php } ?>
 			</ul>
-					<?php if ( $leaderof ) { ?>
-			<ul>
-						<?php while ( $each = each($leaderof) ) { ?>
-				<li><a href="teamedit.php">Edit Team <?=$each['value'];?></a>
-						<?php } ?>
-			</ul>
-					<?php }
-				} ?>
+				<?php } ?>
 
 			<p style="font-size:x-small;font-weight:bold;">Teams</p>
 			<ul>

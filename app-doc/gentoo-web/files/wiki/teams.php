@@ -21,32 +21,43 @@
 		exit;
 	}
 
-	$result = mysql_query( "select summary,status from teams where gid=$team_num" );
-	list( $summary, $status ) = mysql_fetch_array( $result );
+	$result = mysql_query( "select summary,status,leader from teams where gid=$team_num" );
+	list( $summary, $status, $leader ) = mysql_fetch_array( $result );
 
-	$unassigned = mysql_query( "select tid from todos where public=1 and team=$team_num" );
+	// are we a leader?
+	$leaders = explode( ',', $leader );
+	$leader = 0;
+	while ( $each = each($leaders) ) {
+		if ( $each['value'] == $uid ) {
+			$leader = 1;
+			break;
+		}
+	}
+
+	// query for stats
+	$unassigned = mysql_query( "select tid from todos where public=1 and team=$team_num and priority!= 0" );
 	$unassigned = mysql_num_rows( $unassigned );
 
-	$outstanding = mysql_query( "select tid from todos where priority!=0 and team=$team_num" );
+	$outstanding = mysql_query( "select tid from todos where priority!=0 and team=$team_num and priority!= 0" );
 	$outstanding = mysql_num_rows( $outstanding );
 
 	if ( $team_num != 6 ) {
-	   $us = mysql_query( "select tid from todos where public=1 and branch=2 and team=$team_num" );
+	   $us = mysql_query( "select tid from todos where public=1 and branch=2 and team=$team_num and priority!= 0" );
 	   $us = mysql_num_rows( $us );
 
-	   $os = mysql_query( "select tid from todos where priority!=0 and branch=2 and team=$team_num" );
+	   $os = mysql_query( "select tid from todos where priority!=0 and branch=2 and team=$team_num and priority!= 0" );
 	   $os = mysql_num_rows( $os );
 
-	   $uu = mysql_query( "select tid from todos where public=1 and branch=3 and team=$team_num" );
+	   $uu = mysql_query( "select tid from todos where public=1 and branch=3 and team=$team_num and priority!= 0" );
 	   $uu = mysql_num_rows( $uu );
       
-	   $ou = mysql_query( "select tid from todos where priority!=1 and branch=3 and team=$team_num" );
+	   $ou = mysql_query( "select tid from todos where priority!=1 and branch=3 and team=$team_num and priority!= 0" );
 	   $ou = mysql_num_rows( $ou );
 
-	   $un = mysql_query( "select tid from todos where public=1 and branch=0 and team=$team_num" );
+	   $un = mysql_query( "select tid from todos where public=1 and branch=0 and team=$team_num and priority!= 0" );
 	   $un = mysql_num_rows( $un );
 
-	   $on = mysql_query( "select tid from todos where priority!=1 and branch=0 and team=$team_num" );
+	   $on = mysql_query( "select tid from todos where priority!=1 and branch=0 and team=$team_num and priority!= 0" );
 	   $on = mysql_num_rows( $on );
 	}
 ?>
@@ -105,15 +116,48 @@
 	<?php } ?>
 	</table>
 	</td></tr></table>
+	<br>
+	<table border=0 cellpadding=1 cellspacing=0 width=175 bgcolor="black"><tr><td>
+	<table border=0 cellpadding=3 cellspacing=0 width="100%" bgcolor="white">
+	<tr>
+		<td colspan=2 bgcolor="black"><p style="font-weight:bold;color:white">Group Leaders</p></td>
+	</tr>
+	<tr>
+		<td>
+	<?php
+	reset( $leaders );
+	$tmp = 0;
+	while ( $each = each($leaders) ) {
+		if (!$each['value']) break; //seems to want to always loop at least once. *shrug*
+		$handle = mysql_query( 'select username from users where uid='.$each['value'] );
+		list( $handle ) = mysql_fetch_row( $handle );
+		if (!$tmp) {
+			print '<ul style="margin:0;">';
+			$tmp = 1;
+		}
+		print "<li> $handle\n";
+	}
+	if ($tmp) print '</ul>';
+	else print "<p>Team $team is unleaded!</p>";
+	?>
+		</td>
+	</tr>
+	</table>
+	</td></tr></table>
+
+	<?php if ( $leader ) { ?>
+	<br>
+	<table border=0 cellpadding=1 cellspacing=0 width=175 bgcolor="black"><tr><td>
+	<table border=0 cellpadding=3 cellspacing=0 width="100%" bgcolor="white">
+	<tr>
+		<td><p>You are a leader of <?=$team;?>! Click <a href="teamedit.php?gid=<?=$team_num;?>">here</a> to edit the team info.</p></td>
+	</tr>
+	</table>
+	</td></tr></table>
+	<?php } ?>
 </div>
 
-<?php
-	$leader = mysql_query( "select leader from teams where gid=$team_num" );
-	list( $leader ) = mysql_fetch_row( $leader );
-	$leader = mysql_query( "select username from users where uid=$leader" );
-	list( $leader ) = mysql_fetch_row( $leader );
-?>
-<p style="font-size:medium;font-weight:bold;"><?=$team;?> Team<?php if ($leader) print " - Leaded by $leader"; else print " - no leader"; ?></p>
+<p style="font-size:medium;font-weight:bold;">Team <?=$team;?></p>
 <p><b>Summary</b></p>
 <p style="margin:0 5px 10px 10px;"><?=$summary;?></p>
 <p><b>Status</b></p>

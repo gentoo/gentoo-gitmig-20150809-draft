@@ -34,15 +34,36 @@ if ( $submitted ) {
 		// grant leaderships
 		if ( $leads ) {
 			while ( $cur = each($leads) ) {
-				mysql_query( "update teams set leader=$xuid where gid=".$cur['value'] );
+				if (!$cur['value']) break;
+				$leaders = mysql_query( 'select leader from teams where gid='.$cur['value'] );
+				list( $leaders ) = mysql_fetch_row( $leaders );
+				$leaders = explode( ',', $leaders );
+				$tmp = 0;
+
+				// make sure they're not already a leader; skip this group if so.
+				unset( $newlead );
+				while ( $each = each($leaders) ) {
+					if ( $each['value'] == $xuid ) {
+						// whoops! this guy's already a lead of the group
+						$tmp = 1;
+						break;
+					}
+					if ( $each['value'] != '0' ) $newlead[] = $each['value'];
+				}
+				if ($tmp) continue; // next group
+
+				// add 'em
+				$newlead[] = $xuid;
+				$newlead = implode( ',', $newlead );
+				mysql_query( "update teams set leader='$newlead' where gid=".$cur['value'] );
 			}
 		}
-
 
 		// revoke leaderships
 		$oldleads = explode( ',', $oldleads );
 		if ($leads) reset( $leads );
 		while ( $ol = each($oldleads) ) {
+			if (!$ol['value']) break;
 			$tmp = 1;
 			if ( $leads ) {
 				reset( $leads );
@@ -51,10 +72,23 @@ if ( $submitted ) {
 				}
 			}
 			if ( $tmp ) {
-				mysql_query( 'update teams set leader=0 where gid='.$ol['value'] );
+				// kill 'em. :(
+				$leaders = mysql_query( 'select leader from teams where gid='.$ol['value'] );
+				list( $leaders ) = mysql_fetch_row( $leaders );
+				$leaders = explode( ',', $leaders );
+				while ( $each = each($leaders) ) {
+					// we're removing the user. if we hit the xuid, skip 'em,
+					// otherwise, pile 'em onto the new array
+					if ( $each['value'] == $xuid ) continue;
+					$newl[] = $each['value'];
+				}
+
+				$newl = implode( ',', $newl ); // compile the new var
+				mysql_query( "update teams set leader='$newl' where gid=".$ol['value'] );
 			}
 		}
 
+		// whew - now changing simple user info seems like a breeze :)
 		if ( $xuid == 'new' ) {
 			// new user
 			mysql_query( "insert into users set username='$username',password='$pass1',admin=$admin,title='$title',email='$email',realname='$realname',location='$location',team='$team'" );
@@ -156,7 +190,14 @@ if ( !$xuid ) {
 				// are they the team LEADER?!?! :)
 				$ldr = mysql_query( 'select leader from teams where gid='.$each['key'] );
 				list( $ldr ) = mysql_fetch_row( $ldr );
-				if ( $ldr == $xuid ) { $tm = 'l'; $oldlead[] = $each['key']; }
+				$ldr = explode( ',', $ldr );
+				while ( $pair = each($ldr) ) {
+					if ( $pair['value'] == $xuid ) {
+						$tm = 'l';
+						$oldlead[] = $pair['key'];
+						break;
+					}
+				}
 			}
 			?>
 		<tr>

@@ -2,16 +2,25 @@
 include "functions.php";
 main_header( 'Edit Team' );
 
-$query = mysql_query( "select leader,gid from teams" );
-while ( $row = mysql_fetch_array($query) ) {
-	if ( $row['leader'] == $uid ) {
+if ( !$gid || !$uid ) {
+	print '<p style="color:red;">You aren\'t logged in or you didn\t come to this page from the right link.</p>';
+	main_footer();
+	exit;
+}
+
+// check to make sure they're a leader.
+$query = mysql_query( "select leader,gid from teams where gid=$gid" );
+$row = mysql_fetch_array($query);
+$leaders = explode( ',', $row['leader'] );
+while ( $each = each($leaders) ) {
+	if ( $each['value'] == $uid ) {
 		$num = $row['gid'];
 		$name = team_num_name( $row['gid'] );
 		break;
 	}
 }
 if ( !$name ) {
-	print '<p color="red">You aren\'t the leader of any teams!</p>';
+	print '<p style="color:red;">You aren\'t the leader of that team!</p>';
 	main_footer();
 	exit;
 }
@@ -19,7 +28,7 @@ if ( !$name ) {
 if ( $summary || $status ) {
 	// they submitted
 	$result = mysql_query( "update teams set summary='$summary',status='$status' where gid=$num" );
-	print '<p color="red">Change(s) committed.</p>';
+	print '<p style="color:red;">Change(s) committed.</p>';
 }
 
 $info = mysql_query( "select summary,status from teams where gid=$num" );
