@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+source /etc/make.conf
+for x in `find /usr/portage/ -iname *.ebuild`
+do
+	/usr/bin/ebuild ${x} touch
+done
