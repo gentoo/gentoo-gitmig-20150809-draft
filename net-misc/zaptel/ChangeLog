@@ -1,0 +1,11 @@
+# ChangeLog for net-misc/zaptel
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/ChangeLog,v 1.1 2004/01/04 00:16:17 stkn Exp $
+
+*zaptel-0.7.0 (04 Jan 2004)
+
+  04 Jan 2004; Stefan Knoblich <stkn@gentoo.org> zaptel-0.7.0.ebuild,
+  files/zaptel-install_prefix-typo.patch,
+  files/zaptel-mkdir-usrincludelinux.patch, files/zaptel-modulesd.patch:
+  initial import. ebuild created by Ray Russell Reese III <anti@gentoo.org>
+

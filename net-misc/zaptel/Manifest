@@ -1,0 +1,7 @@
+MD5 dd4c9bb100476bab9a1b54cff3d646d0 zaptel-0.7.0.ebuild 1324
+MD5 44cf247f04cc83413fcb40ed59d0847a metadata.xml 248
+MD5 511a1dd9ff3181a0bb53ed07100835d0 ChangeLog 501
+MD5 fea918445512e51f2019ff20d78a7926 files/zaptel-install_prefix-typo.patch 486
+MD5 e6a38926132312059bd3a8a712d8d88e files/zaptel-mkdir-usrincludelinux.patch 469
+MD5 48c7eb4a7726cb0ce920784778ad2efb files/zaptel-modulesd.patch 1601
+MD5 4f38ae7d0fb20dee726303a35ca85eda files/digest-zaptel-0.7.0 64

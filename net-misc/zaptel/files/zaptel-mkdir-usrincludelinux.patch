@@ -1,0 +1,11 @@
+--- zaptel/Makefile.orig	2003-10-10 11:42:59.000000000 -0400
++++ zaptel/Makefile	2003-10-10 11:48:33.000000000 -0400
+@@ -255,6 +255,8 @@
+ 	fi
+ 	mkdir -p $(INSTALL_PREFIX)/usr/lib
+ 	install -m 755 $(LIBTONEZONE) $(INSTALL_PREFIX)/usr/lib
++	
++	mkdir -p $(INSTALL_PREFIX)/usr/include/linux
+ 	install -m 644 zaptel.h $(INSTALL_PREFIX)/usr/include/linux
+ 	install -m 644 torisa.h $(INSTALL_PREFIX)/usr/include/linux
+ 	install -m 644 tonezone.h $(INSTALL_PREFIX)/usr/include

@@ -1,0 +1,37 @@
+--- zaptel/Makefile.orig	2003-10-10 13:30:43.000000000 -0400
++++ zaptel/Makefile	2003-10-10 13:30:09.000000000 -0400
+@@ -80,7 +80,9 @@
+ 
+ INSTALL_PREFIX=
+ 
+-MODCONF=$(shell if [ -d $(INSTALL_PREFIX)/etc/modutils ]; then echo "$(INSTALL_PREFIX)/etc/modutils/zaptel"; elif [ -f $(INSTALL_PREFIX)/etc/modules.conf ]; then echo $(INSTALL_PREFIX)/etc/modules.conf; else echo $(INSTALL_PREFIX)/etc/conf.modules ; fi)
++#MODCONF=$(shell if [ -d $(INSTALL_PREFIX)/etc/modutils ]; then echo "$(INSTALL_PREFIX)/etc/modutils/zaptel"; elif [ -f $(INSTALL_PREFIX)/etc/modules.conf ]; then echo $(INSTALL_PREFIX)/etc/modules.conf; else echo $(INSTALL_PREFIX)/etc/conf.modules ; fi)
++# Patch for Gentoo, uses modules.d
++MODCONF=$(INSTALL_PREFIX)/etc/modules.d/zaptel
+ 
+ DEVFS=$(shell ps ax | grep -v grep | grep devfsd)
+ 
+@@ -263,6 +265,8 @@
+ 	( cd $(INSTALL_PREFIX)/usr/lib ; rm -f libtonezone.so ; ln -sf $(LIBTONEZONE) libtonezone.so )
+ 	/sbin/ldconfig
+ 
++	mkdir -p $(INSTALL_PREFIX)/etc/modules.d
++
+ 	if [ -f $(MODCONF) ]; then mv -f $(MODCONF) $(MODCONF).bak ; fi
+ 	cat $(MODCONF).bak | grep -v "alias char-major-250" | \
+ 	grep -v "post-install torisa /sbin/ztcfg" | \
+@@ -295,10 +299,10 @@
+ 	if ! grep "post-install wct4xxp" $(MODCONF); then \
+ 		echo "post-install wct4xxp /sbin/ztcfg" >> $(MODCONF); \
+ 	fi
+-	if [ -d /etc/modutils ]; then \
+-		/sbin/update-modules ; \
+-	fi
+-	-/sbin/depmod -a
++	#if [ -d /etc/modutils ]; then \
++	#	/sbin/update-modules ; \
++	#fi
++	#-/sbin/depmod -a
+ 	[ -f $(INSTALL_PREFIX)/etc/zaptel.conf ] || install -m 644 zaptel.conf.sample $(INSTALL_PREFIX)/etc/zaptel.conf
+ 
+ config:
