@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/xterm
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.55 2004/12/28 17:27:44 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.56 2004/12/28 22:21:10 ciaranm Exp $
+
+  28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   28 Dec 2004; Seemant Kulleen <seemant@gentoo.org> -xterm-179.ebuild,
   -xterm-184.ebuild, -xterm-191.ebuild, -xterm-194.ebuild:
@@ -22,7 +25,7 @@
   at install time, and they could be old ones from when it was suid (for
   unix98 pty) or sgid (for without utempter) (#69510).
 
-  23 Oct 2004; Bryan Østergaard <kloeri@gentoo.org> xterm-196.ebuild:
+  23 Oct 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> xterm-196.ebuild:
   Stable on alpha.
 
   18 Oct 2004; Stephen P. Becker <geoman@gentoo.org> xterm-196.ebuild:
@@ -107,7 +110,7 @@
   13 Jun 2004; Donnie Berkholz <spyderous@gentoo.org>; xterm-191.ebuild:
   Change virtual/x11 dep because of #8810.
 
-  12 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> xterm-184.ebuild:
+  12 Jun 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> xterm-184.ebuild:
   Stable on alpha.
 
   10 Jun 2004; Seemant Kulleen <seemant@gentoo.org> xterm-191.ebuild:

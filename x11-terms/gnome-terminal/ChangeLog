@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/gnome-terminal
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/ChangeLog,v 1.80 2004/12/23 23:42:54 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/ChangeLog,v 1.81 2004/12/28 22:20:29 ciaranm Exp $
+
+  28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   24 Dec 2004; Bryan Ã˜stergaard <kloeri@gentoo.org>
   gnome-terminal-2.8.0.ebuild:
@@ -47,7 +50,7 @@
   16 Sep 2004; foser <foser@gentoo.org> gnome-terminal-2.7.3.ebuild :
   Gnome 2.8 release
 
-  23 Aug 2004; Bryan Østergaard <kloeri@gentoo.org>
+  23 Aug 2004; Bryan Ã˜stergaard <kloeri@gentoo.org>
   gnome-terminal-2.6.1.ebuild:
   Stable on alpha.
 
@@ -66,7 +69,7 @@
   31 Jul 2004; <spider@gentoo.org> gnome-terminal-2.6.1.ebuild:
   stable on x86 for gnome 2.6.2
 
-  04 Jul 2004; Bryan Østergaard <kloeri@gentoo.org>
+  04 Jul 2004; Bryan Ã˜stergaard <kloeri@gentoo.org>
   gnome-terminal-2.6.0.ebuild:
   Stable on alpha.
 

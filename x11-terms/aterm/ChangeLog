@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/aterm
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/aterm/ChangeLog,v 1.51 2004/12/23 16:07:05 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/aterm/ChangeLog,v 1.52 2004/12/28 22:19:42 ciaranm Exp $
+
+  28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   23 Dec 2004; Michal Januszewski <spock@gentoo.org> aterm-0.4.2-r11.ebuild,
   aterm-0.4.2-r7.ebuild, aterm-0.4.2-r9.ebuild:
@@ -89,7 +92,7 @@
   13 Jun 2004; Michal Januszewski <spock@gentoo.org> aterm-0.4.2-r9.ebuild:
   Added a fix for bug #52770.
 
-  12 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> aterm-0.4.2-r9.ebuild:
+  12 Jun 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> aterm-0.4.2-r9.ebuild:
   Stable on alpha.
 
   09 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org> aterm-0.4.2-r7.ebuild,
