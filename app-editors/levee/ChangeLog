@@ -1,8 +1,11 @@
 # ChangeLog for app-editors/levee
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-editors/levee/ChangeLog,v 1.1 2002/04/28 18:49:26 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/levee/ChangeLog,v 1.2 2002/08/06 16:43:37 gerk Exp $
 
 *levee-3.4o (28 Apr, 2002)
+
+  06 Aug 2002; Mark Guertin <gerk@gentoo.org> :
+  Added ppc to keywords
 
   28 Apr 2002; Arcady Genkin <agenkin@thpoon.com> levee-3.4o.ebuild :
   

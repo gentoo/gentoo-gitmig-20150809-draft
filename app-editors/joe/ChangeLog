@@ -1,8 +1,11 @@
 # ChangeLog for app-editors/joe
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-editors/joe/ChangeLog,v 1.1 2002/02/01 21:53:01 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/joe/ChangeLog,v 1.2 2002/08/06 16:41:08 gerk Exp $
 
 *joe-2.9.5 (1 Feb 2002)
+
+  06 Aug 2002; Mark Guertin <gerk@gentoo.org> :
+  Added ppc to keywords
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
   

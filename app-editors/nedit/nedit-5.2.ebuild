@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nedit/nedit-5.2.ebuild,v 1.4 2002/08/01 11:58:57 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nedit/nedit-5.2.ebuild,v 1.5 2002/08/06 16:32:08 gerk Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="NEdit is a multi-purpose text editor for the X Window System"
@@ -15,7 +15,7 @@ RDEPEND="virtual/glibc
 	>=x11-libs/openmotif-2.1.30"
 
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ppc"
 LICENSE="GPL-2"
 
 src_unpack() {
