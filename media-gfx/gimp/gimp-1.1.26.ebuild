@@ -1,13 +1,12 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-1.1.25.ebuild,v 1.6 2000/09/15 20:09:00 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-1.1.26.ebuild,v 1.1 2000/09/26 17:48:37 achim Exp $
 
-P=gimp-1.1.25
 A=${P}.tar.bz2
 S=${WORKDIR}/${P}
 DESCRIPTION="GIMP"
-SRC_URI="ftp://ftp.insync.net/pub/mirrors/ftp.gimp.org/gimp/v1.1/v1.1.25/"${A}
+SRC_URI="ftp://ftp.insync.net/pub/mirrors/ftp.gimp.org/gimp/v1.1/v${PV}/"${A}
 HOMEPAGE="http://www.gimp.org"
 
 src_unpack() {
