@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.123 2004/02/28 17:08:31 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.124 2004/03/03 15:30:18 agriffis Exp $
+
+  03 Mar 2004; <agriffis@gentoo.org> kdelibs-3.2.0.ebuild:
+  stable on alpha and ia64
 
   28 Feb 2004; Jason Wever <weeve@gentoo.org> kdelibs-3.1.5.ebuild:
   Marked stable on sparc.
