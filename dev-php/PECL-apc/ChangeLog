@@ -1,0 +1,9 @@
+# ChangeLog for dev-php/PECL-apc
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PECL-apc/ChangeLog,v 1.1 2003/10/10 09:40:29 stuart Exp $
+
+*PECL-apc-2.0 (10 Oct 2003)
+
+  10 Oct 2003; Stuart Herbert <stuart@gentoo.org> PECL-apc-2.0.ebuild,
+  metadata.xml:
+  Initial import; based on an ebuild created by coredumb
