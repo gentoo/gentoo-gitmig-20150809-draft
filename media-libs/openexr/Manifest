@@ -1,6 +1,6 @@
 MD5 6ebd4429f63eeb907ccfaaaeeddb4979 ChangeLog 1113
 MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
-MD5 2c4c51c8f24634c280e93a56e338dbc3 openexr-1.0.6.ebuild 965
+MD5 7cae6a17cd1812935d72c66a6c673dc5 openexr-1.0.6.ebuild 968
 MD5 ea133cb41fddd71c1b368c0a9930dbd0 openexr-1.0.7.ebuild 935
 MD5 5c15fc8183a5c726df8c76d20689bfb6 files/digest-openexr-1.0.6 66
 MD5 1b4be24d1142935a598e5ce3580ad8af files/openexr-1.0.6-gentoo.patch 954
