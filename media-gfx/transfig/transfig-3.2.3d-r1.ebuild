@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Michael Conrad Tilstra <michael@gentoo.org> <tadpol@tadpol.org>
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/transfig/transfig-3.2.3d-r1.ebuild,v 1.1 2002/04/13 00:29:37 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/transfig/transfig-3.2.3d-r1.ebuild,v 1.2 2002/04/13 00:46:17 seemant Exp $
 
 
 MY_P=${P/transfig-/transfig.}
@@ -10,7 +10,7 @@ DESCRIPTION="A set of tools for creating TeX documents with graphics which can b
 SRC_URI="http://www.xfig.org/xfigdist/${MY_P}.tar.gz"
 HOMEPAGE="http://www.xfig.org"
 
-DEPEND="virtual/xfree
+DEPEND="virtual/x11
     >=media-libs/jpeg-6
 	media-libs/libpng"
 
