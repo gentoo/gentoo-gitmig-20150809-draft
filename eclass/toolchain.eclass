@@ -1,9 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.114 2005/03/01 03:06:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.115 2005/03/02 17:03:44 vapier Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
+RESTRICT="nostrip"
 
 #---->> eclass stuff <<----
 inherit eutils versionator libtool toolchain-funcs flag-o-matic gnuconfig multilib
@@ -1260,6 +1261,9 @@ gcc-compiler_src_install() {
 	cd ${WORKDIR}/build
 	S=${WORKDIR}/build \
 	make DESTDIR="${D}" install || die
+	# Now do the fun stripping stuff
+	env -uRESTRICT STRIP=${CHOST}-strip prepstrip "${D}/${BINPATH}" "${D}/usr/libexec"
+	env -uRESTRICT STRIP=${CTARGET}-strip prepstrip "${D}/${LIBPATH}"
 
 	is_crosscompile || [[ -r ${D}${BINPATH}/gcc ]] || die "gcc not found in ${D}"
 
@@ -1354,8 +1358,8 @@ gcc-compiler_src_install() {
 
 	cd ${S}
 	if use build || is_crosscompile; then
-		rm -r "${D}"/usr/share/{man,info}
-		rm -r "${D}"${DATAPATH}/{man,info}
+		rm -rf "${D}"/usr/share/{man,info}
+		rm -rf "${D}"${DATAPATH}/{man,info}
 	else
 		prepman ${DATAPATH}
 		prepinfo ${DATAPATH}
