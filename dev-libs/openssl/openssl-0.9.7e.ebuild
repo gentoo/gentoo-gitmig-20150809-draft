@@ -1,8 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.7e.ebuild,v 1.5 2004/12/26 19:25:44 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.7e.ebuild,v 1.6 2005/02/06 08:39:12 vapier Exp $
 
-inherit eutils flag-o-matic gcc
+inherit eutils flag-o-matic toolchain-funcs
 
 OLD_096_P="${PN}-0.9.6m"
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://openssl/source/${P}.tar.gz
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+KEYWORDS="~alpha amd64 arm hppa ia64 ~mips ~ppc ~ppc64 s390 sh ~sparc x86"
 IUSE="emacs uclibc"
 
 RDEPEND="virtual/libc"
@@ -32,7 +32,7 @@ src_unpack() {
 	cd ${WORKDIR}/${P}
 
 	epatch ${FILESDIR}/${PN}-0.9.7c-tempfile.patch
-	epatch ${FILESDIR}/addppc64support.diff
+	[[ $(tc-arch) == "ppc64" ]] && epatch ${FILESDIR}/addppc64support.diff
 	epatch ${FILESDIR}/${PN}-0.9.7e-gentoo.patch
 	epatch ${FILESDIR}/${PN}-0.9.7-arm-big-endian.patch
 	epatch ${FILESDIR}/${PN}-0.9.7-hppa-fix-detection.patch
@@ -44,7 +44,7 @@ src_unpack() {
 		;;
 		3.4 | 3.3 )
 			filter-flags -fprefetch-loop-arrays -freduce-all-givs -funroll-loops
-			if [ "${ARCH}" = "ppc" -o  "${ARCH}" = "ppc64" ] ; then
+			if [[ ${ARCH} == "ppc" ||  ${ARCH} == "ppc64" ]] ; then
 				append-flags -fno-strict-aliasing
 			fi
 		;;
@@ -56,16 +56,15 @@ src_unpack() {
 	for a in $( grep -n -e "^\"linux-" Configure ); do
 		LINE=$( echo $a | awk -F: '{print $1}' )
 		CUR_CFLAGS=$( echo $a | awk -F: '{print $3}' )
-		# for ppc64 I have to be careful given current
-		# toolchain issues
-		if [ "${ARCH}" != "ppc64" ]; then
-			NEW_CFLAGS="$( echo $CUR_CFLAGS | sed -r -e "s|-O[23]||" -e "s/-fomit-frame-pointer//" -e "s/-mcpu=[-a-z0-9]+//" -e "s/-m486//" ) $CFLAGS"
+		# for ppc64 I have to be careful given current toolchain issues
+		if [[ ${ARCH} != "ppc64" ]]; then
+			NEW_CFLAGS="$( echo $CUR_CFLAGS | sed -r -e "s|-O[23]||" -e "s:-fomit-frame-pointer::" -e "s:-mcpu=[-a-z0-9]+::" -e "s:-m486::" ) $CFLAGS"
 		else
-			NEW_CFLAGS="$( echo $CUR_CFLAGS | sed -r -e "s|-O[23]||" -e "s/-fomit-frame-pointer//" -e "s/-mcpu=[-a-z0-9]+//" -e "s/-m486//" ) "
+			NEW_CFLAGS="$( echo $CUR_CFLAGS | sed -r -e "s|-O[23]||" -e "s:-fomit-frame-pointer::" -e "s:-mcpu=[-a-z0-9]+::" -e "s:-m486::" ) "
 
 		fi
 
-		sed -i "${LINE}s/$CUR_CFLAGS/$NEW_CFLAGS/" Configure \
+		sed -i "${LINE}s:$CUR_CFLAGS:$NEW_CFLAGS:" Configure \
 		|| die "sed failed"
 	done
 	IFS=$OLDIFS
@@ -144,11 +143,11 @@ src_compile() {
 		./Configure linux64-sparcv9 --prefix=/usr --openssldir=/etc/ssl \
 			shared threads || die
 	else
-		./config --prefix=/usr --openssldir=/etc/ssl shared threads || die
+		./config --prefix=/usr --openssldir=/etc/ssl shared threads || die "config failed"
 	fi
 
 	einfo "Compiling ${P}"
-	make all || die
+	make all || die "make all failed"
 
 	# openssl-0.9.6
 	test -f ${ROOT}/usr/lib/libssl.so.0.9.6 && {
@@ -190,7 +189,7 @@ src_compile() {
 
 src_test() {
 	cd ${WORKDIR}/${P}
-	make test || die
+	make test || die "make test failed"
 
 	# openssl-0.9.6
 	test -f ${ROOT}/usr/lib/libssl.so.0.9.6 && {
