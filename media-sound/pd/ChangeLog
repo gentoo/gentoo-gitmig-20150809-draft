@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/pd
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pd/ChangeLog,v 1.13 2004/04/03 23:50:06 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pd/ChangeLog,v 1.14 2004/04/05 01:28:42 eradicator Exp $
+
+  04 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org> pd-0.37.1.ebuild:
+  Add manual where pd expects it for bug #45690.
 
   03 Apr 2004; Donnie Berkholz <spyderous@gentoo.org>; pd-0.35.0-r2.ebuild,
   pd-0.36.0.ebuild, pd-0.37.0.ebuild, pd-0.37.1.ebuild:

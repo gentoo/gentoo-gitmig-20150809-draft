@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pd/pd-0.37.1.ebuild,v 1.4 2004/04/03 23:50:06 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pd/pd-0.37.1.ebuild,v 1.5 2004/04/05 01:28:42 eradicator Exp $
 
 inherit eutils
 
 # Miller Puckette uses nonstandard versioning scheme that we have to crunch
 MY_P=`echo ${P} | sed 's/\.\([0-9]\+\)$/-\1/'`
-S=${WORKDIR}/${MY_P}
+S=${WORKDIR}/${MY_P}/src
 
 DESCRIPTION="real-time music and multimedia environment"
 HOMEPAGE="http://www-crca.ucsd.edu/~msp/software.html"
@@ -29,12 +29,12 @@ src_unpack() {
 	unpack ${A}
 	epatch ${FILESDIR}/${P}-exp.patch
 
-	# Fix install borkage
+	# Fix install borkage... this errors in sandbox, but it still performs the copy,
+	# so we remove it from the makefile and just do it ourselves ignoring the error
 	sed -i 's:\(cp -pr ../doc ../extra $(INSTDIR)/lib/pd/\):# \1:' ${S}/src/makefile.in
 }
 
 src_compile() {
-	cd src
 	econf \
 		`use_enable alsa` \
 		`use_with X x` \
@@ -45,7 +45,9 @@ src_compile() {
 }
 
 src_install() {
-	cd src
 	# -k to bypass the errors about doc missing, etc...
 	make DESTDIR=${D} install || die "install failed"
+
+	cd ..
+	cp -pr doc extra ${D}/usr/lib/pd
 }
