@@ -3,14 +3,14 @@ Hash: SHA1
 
 MD5 7079afeec86c57ced10b0d7a9dfd4a62 ChangeLog 6914
 MD5 4130b55a81d2aa0c33620bbe65c274b1 whois-4.6.13-r1.ebuild 1068
-MD5 65a5a2e91d2530588394d00c9d375655 whois-4.6.22.ebuild 1006
+MD5 24db40eb711eb538f57bd558254beaf1 whois-4.6.22.ebuild 1011
 MD5 27f0bd22f881041e341aa5cb7b938c28 files/digest-whois-4.6.22 63
 MD5 fbeb270cb2d2f8fbd313166116740f8b files/whois-4.6.13-gentoo-security.patch 4065
 MD5 405e144ea2a2c14c0b066e42461ee8f4 files/digest-whois-4.6.13-r1 63
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBcWk0HTu7gpaalycRAv1FAJ4mnQMG2QWtT5rvgqtq+CEcgPx+kgCfZo0x
-rsobJr9kL7RekYmFY8olbW8=
-=dbhq
+iD8DBQFBiCU2HTu7gpaalycRAkL5AJ4qW2oFIEqjiwv00t1LRckso5595gCgobGK
+1I2Cy/OBMDoQkiAjfSP+b9A=
+=c3U6
 -----END PGP SIGNATURE-----

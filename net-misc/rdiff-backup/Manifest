@@ -1,11 +1,21 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 45937b4e92adfa22cd19463d4b1637e7 ChangeLog 4100
 MD5 e8d4b4b7e3d3202f8bc4bf95ee68e67f rdiff-backup-0.12.6.ebuild 615
-MD5 00761fce286d1b3c85e46c51f4f32c3e rdiff-backup-0.13.4.ebuild 554
 MD5 da1448a59ab7897e753cf89c880197d1 rdiff-backup-0.8.0.ebuild 672
+MD5 beb3a292b4256ddd987bd72e215e2e20 rdiff-backup-0.13.4.ebuild 550
 MD5 de35d8f600d3d75d8075a8d848787013 metadata.xml 223
 MD5 ddcb8465de7798071f68b7163601cfe5 rdiff-backup-0.12.7.ebuild 612
-MD5 50fc2d46905cdf8e7e7c1c2cf3fbcd34 files/digest-rdiff-backup-0.12.6 71
 MD5 f67141785c971069a7d3663d1175a87f files/digest-rdiff-backup-0.13.4 71
+MD5 50fc2d46905cdf8e7e7c1c2cf3fbcd34 files/digest-rdiff-backup-0.12.6 71
 MD5 27a4b1877434caf96bb409b5f6a1f511 files/digest-rdiff-backup-0.8.0 69
-MD5 5c6ac6488726f62288dc006e078d7507 files/rpath.patch 692
 MD5 4ba9005b3a1cd4ab65557faec4af5eaf files/digest-rdiff-backup-0.12.7 71
+MD5 5c6ac6488726f62288dc006e078d7507 files/rpath.patch 692
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBiCTVHTu7gpaalycRAmT0AJ9o8vcaZzo+zyVmTGevug/TEfZawgCeOmUg
+0ooVw9E8S4uOwtEiPnTpfyY=
+=fgXA
+-----END PGP SIGNATURE-----
