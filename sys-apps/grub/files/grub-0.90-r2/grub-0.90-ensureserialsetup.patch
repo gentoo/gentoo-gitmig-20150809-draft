@@ -1,0 +1,103 @@
+--- grub-0.90/ChangeLog	Thu Aug  2 20:03:08 2001
++++ grub/ChangeLog	Thu Aug  2 20:05:31 2001
+@@ -1,3 +1,13 @@
++2001-08-02  Jeremy Katz  <katzj@redhat.com>
++
++	* grub/asmstub.c, stage2/serial.c, stage2/serial.h:
++	add serial_exists() function to ensure that serial port is set up
++	prior to use
++
++	* stage2/builtins.c:
++	use serial_exists when serial terminal is selected or fallback to
++	previous terminal definition
++
+ 2001-07-16  Jeremy Katz  <katzj@redhat.com>
+ 
+ 	* grub/asmstub.c, stage2/asm.S, stage2/builtins.c:
+--- grub-0.90/grub/asmstub.c	Thu Aug  2 20:03:08 2001
++++ grub/grub/asmstub.c	Thu Aug  2 20:10:11 2001
+@@ -1026,6 +1026,21 @@
+   return 0;
+ }
+ 
++/* Do we have a serial port set up?  In the grub shell, we should check
++   if the fd is open */
++int serial_exists(void) 
++{
++  grub_printf("serial_fd is %d\n", serial_fd);
++  if (serial_fd >= 0) 
++    {
++      return 1;
++    }
++  else
++    {
++      return 0;
++    }
++}
++
+ /* Initialize a serial device. In the grub shell, PORT is unused.  */
+ int
+ serial_init (unsigned short port, unsigned int speed,
+--- grub-0.90/stage2/serial.h	Sat Aug 26 13:36:07 2000
++++ grub/stage2/serial.h	Thu Aug  2 19:47:02 2001
+@@ -93,6 +93,9 @@
+ int serial_init (unsigned short port, unsigned int speed,
+ 		 int word_len, int parity, int stop_bit_len);
+ 
++/* Do we have a serial port set up? */
++int serial_exists (void);
++
+ #ifdef GRUB_UTIL
+ /* Set the file name of a serial device (or a pty device). This is a
+    function specific to the grub shell.  */
+--- grub-0.90/stage2/serial.c	Sat Aug 26 13:36:07 2000
++++ grub/stage2/serial.c	Thu Aug  2 20:10:56 2001
+@@ -31,7 +31,7 @@
+ };
+ 
+ /* Store the port number of a serial unit.  */
+-static unsigned short serial_port;
++static unsigned short serial_port = -1;
+ 
+ /* The table which lists common configurations.  */
+ static struct divisor divisor_tab[] =
+@@ -102,6 +102,15 @@
+   outb (serial_port + UART_TX, c);
+ }
+ 
++/* do we have a serial port set up? */
++int
++serial_exists (void)
++{
++  if (serial_port == -1)
++    return 0;
++  return 1;
++}
++
+ /* Return the port number for the UNITth serial device.  */
+ unsigned short
+ serial_get_port (int unit)
+--- grub-0.90/stage2/builtins.c	Thu Aug  2 20:03:08 2001
++++ grub/stage2/builtins.c	Thu Aug  2 20:09:24 2001
+@@ -4118,9 +4118,18 @@
+ #ifdef SUPPORT_SERIAL
+       else if (grub_memcmp (arg, "serial", sizeof ("serial") - 1) == 0)
+ 	{
+-	  terminal |= TERMINAL_SERIAL;
+-	  if (! default_terminal)
+-	    default_terminal = TERMINAL_SERIAL;
++	  if (serial_exists())
++	    {
++	      terminal |= TERMINAL_SERIAL;
++	      if (! default_terminal)
++		default_terminal = TERMINAL_SERIAL;
++	    }
++	  else 
++	    {
++	      terminal = saved_terminal;
++	      grub_printf("No serial device configured.\n");
++	      grub_printf("Resetting to previous terminal configuration.\n");
++	    }
+ 	}
+ #endif /* SUPPORT_SERIAL */
+       else

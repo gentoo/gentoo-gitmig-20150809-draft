@@ -1,0 +1,32 @@
+diff -ur grub-0.90/ChangeLog grub/ChangeLog
+--- grub-0.90/ChangeLog	Fri Aug 24 00:44:46 2001
++++ grub/ChangeLog	Fri Aug 24 00:34:59 2001
+@@ -1,3 +1,7 @@
++2001-08-24  Jeremy Katz  <katzj@redhat.com>
++	
++	* util/grub-install.in: use mktemp to generate log filename
++	
+ 2001-08-02  Jeremy Katz  <katzj@redhat.com>
+ 	* configure.in:
+ 	link ncurses statically
+diff -ur grub-0.90/util/grub-install.in grub/util/grub-install.in
+--- grub-0.90/util/grub-install.in	Fri Aug 24 00:44:45 2001
++++ grub/util/grub-install.in	Fri Aug 24 00:46:00 2001
+@@ -256,7 +256,7 @@
+     :
+ else
+     # Create a safe temporary file.
+-    test -x /bin/tempfile && log_file=`tempfile --prefix=grub`
++    test -x /bin/mktemp && log_file=`/bin/mktemp /tmp/grub-install.log.XXXXXX`
+ 
+     $grub_shell --batch --device-map=$device_map <<EOF >$log_file
+ quit
+@@ -321,7 +321,7 @@
+ fi
+ 
+ # Create a safe temporary file.
+-test -x /bin/tempfile && log_file=`tempfile --prefix=grub`
++test -x /bin/mktemp && log_file=`/bin/mktemp /tmp/grub-install.log.XXXXXX`
+ 
+ # Now perform the installation.
+ $grub_shell --batch --device-map=$device_map <<EOF >$log_file

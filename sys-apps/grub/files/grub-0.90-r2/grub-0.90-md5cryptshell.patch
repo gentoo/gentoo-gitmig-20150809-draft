@@ -1,0 +1,24 @@
+Index: grub/stage2/Makefile.am
+diff -u grub/stage2/Makefile.am:1.35 grub/stage2/Makefile.am:1.36
+--- grub/stage2/Makefile.am:1.35	Wed Jul  4 00:33:48 2001
++++ grub/stage2/Makefile.am	Thu Jul 26 06:24:15 2001
+@@ -20,6 +20,7 @@
+ libgrub_a_CFLAGS = $(GRUB_CFLAGS) -I$(top_srcdir)/lib \
+ 	-DGRUB_UTIL=1 -DFSYS_EXT2FS=1 -DFSYS_FAT=1 -DFSYS_FFS=1 \
+ 	-DFSYS_MINIX=1 -DFSYS_REISERFS=1 -DFSYS_VSTAFS=1 \
++	-DUSE_MD5_PASSWORDS=1 \
+ 	-DSUPPORT_SERIAL=1 -DSUPPORT_HERCULES=1 -fwritable-strings
+ 
+ # Stage 2 and Stage 1.5's.
+Index: grub/stage2/Makefile.in
+diff -u grub/stage2/Makefile.in:1.51 grub/stage2/Makefile.in:1.52
+--- grub/stage2/Makefile.in:1.51	Wed Jul  4 00:33:48 2001
++++ grub/stage2/Makefile.in	Thu Jul 26 06:24:15 2001
+@@ -111,6 +111,7 @@
+ libgrub_a_CFLAGS = $(GRUB_CFLAGS) -I$(top_srcdir)/lib \
+ 	-DGRUB_UTIL=1 -DFSYS_EXT2FS=1 -DFSYS_FAT=1 -DFSYS_FFS=1 \
+ 	-DFSYS_MINIX=1 -DFSYS_REISERFS=1 -DFSYS_VSTAFS=1 \
++	-DUSE_MD5_PASSWORDS=1 \
+ 	-DSUPPORT_SERIAL=1 -DSUPPORT_HERCULES=1 -fwritable-strings
+ 
+ 
