@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 04c42643ccba81156c260b30845479ec doxygen-syntax-1.9.ebuild 941
-MD5 45694f0bb2ec191ba4bb936301fb817d ChangeLog 719
+MD5 57b470b4b4881bf54ab2e17588bfd9c5 ChangeLog 809
 MD5 95f794e23584f508d4bfe821f4b824e1 doxygen-syntax-1.8.ebuild 1048
 MD5 8886b7d7a5037909f7ad8bc2c955e9bf metadata.xml 429
-MD5 334c4bab69544a7dc354ed192de3c87b files/digest-doxygen-syntax-1.9 69
+MD5 6caf52281c88c03bb48033917e0eb08c doxygen-syntax-1.9.ebuild 947
 MD5 fed73c9f93212a6cc8b372aceea48690 files/digest-doxygen-syntax-1.8 69
+MD5 334c4bab69544a7dc354ed192de3c87b files/digest-doxygen-syntax-1.9 69
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFCFjmvLLFUmVNQ7rkRAvzfAJ9g/xe35n1Rvaae7wLtq4rHbyoQ5gCgotU6
-xVNHOIq1j0IKA2sTod/RlI0=
-=v0qn
+iD8DBQFCFlUtCHk4+ZoBpvsRAv+MAKCrKxz23nj8iJD5hq9SYG7RskX6MACgnO3p
+ZNrSTlgSMYmIUyfixp9t+8Y=
+=5V3N
 -----END PGP SIGNATURE-----

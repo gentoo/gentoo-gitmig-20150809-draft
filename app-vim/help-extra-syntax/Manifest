@@ -1,4 +1,14 @@
-MD5 5b427643aeb02f3575f0b8b58256e153 ChangeLog 631
-MD5 c8205b882078d52635f92281d061ae8c help-extra-syntax-20050106.ebuild 542
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 467d76d5d79db9f9249fabac9bc6924f ChangeLog 731
+MD5 aeb28b7a09aeec05aa3c5d8039f6bb03 help-extra-syntax-20050106.ebuild 548
 MD5 d0eb2058f77d01492f62b14ad7b76759 metadata.xml 379
 MD5 4ef9160eb80a2282eb54f3bf47c4d816 files/digest-help-extra-syntax-20050106 76
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCFlVbCHk4+ZoBpvsRAr00AJ9BkoLf1XHKl4p90S91MvR6f7PlmgCfflX+
+wc0jU9vYwHOwY+KcZLjOzWY=
+=xSbL
+-----END PGP SIGNATURE-----

@@ -1,4 +1,14 @@
-MD5 432f3cb2179f8dd1ba012dade8ae5f9d ChangeLog 497
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 97a6fe3fa79d877524f0eaed5215ca15 ChangeLog 596
+MD5 a4648fd92d22bab2078fe91bd3c9d9ed wikipedia-syntax-20050212.ebuild 630
 MD5 c4fc00b2f1ad98ca54b3ae2e337d4b0d metadata.xml 445
-MD5 b58232c84a864363f56e40373a96b574 wikipedia-syntax-20050212.ebuild 624
 MD5 81b3b42446b768c3d06f57d1a65d1e6f files/digest-wikipedia-syntax-20050212 76
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCFlWXCHk4+ZoBpvsRAs9qAKCOoM/Ayp8BzJEA1OFyL9TS0oVHoACfaw/A
+ckahJ3xtKvPk2SCsw7H+rBg=
+=qepS
+-----END PGP SIGNATURE-----
