@@ -1,6 +1,12 @@
 # ChangeLog for net-mail/sylpheed
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed/ChangeLog,v 1.45 2003/12/12 18:32:46 seemant Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed/ChangeLog,v 1.46 2004/02/06 05:10:52 spider Exp $
+
+*sylpheed-0.9.8-r2 (06 Feb 2004)
+
+  06 Feb 2004; <spider@gentoo.org> sylpheed-0.9.8-r2.ebuild:
+  New gtk2 version. ugliest ebuild ever. This build requires some DEPEND
+  attention.
 
 *sylpheed-0.9.8-r1 (12 Dec 2003)
 
