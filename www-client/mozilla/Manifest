@@ -1,21 +1,31 @@
-MD5 bd988dd0d443f3f991e80586e32ebcfb ChangeLog 41141
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 8adafba88ad7121d8c24b45212b3d818 mozilla-1.7.5.ebuild 10571
+MD5 e2e8c83fc18f70b892f6d80623f63887 mozilla-1.7.6-r1.ebuild 11499
+MD5 003fd9a8ac4f985476cfe5c01c6e43e4 mozilla-1.7.5-r1.ebuild 11182
+MD5 8c8ebd4f9f63bece59b916e7803c8158 ChangeLog 41317
 MD5 ce23390351fe8020387d93ee29e09a3d metadata.xml 160
-MD5 fd3ea2353612d3f2621bc24442c45ae9 mozilla-1.7.5-r1.ebuild 11156
-MD5 f4cfd3036c600006c95306a4be697e51 mozilla-1.7.5.ebuild 10545
-MD5 01efd8c7449085fb6578acc1d2ac92e7 mozilla-1.7.6-r1.ebuild 11470
-MD5 b99dabe3c40cfafe2e63bdef95815596 files/10mozilla 105
 MD5 b19c38da8865b9ee5555aeb826d1d360 files/digest-mozilla-1.7.5 203
+MD5 e79634ee1e611182b6c227daa362b20d files/mozilla-1.7.3-4ft2.patch 22360
+MD5 d0e52abf109fe61c4195f0cbf002ae18 files/google.src 706
+MD5 5496222980a6faf8261066f43cd4c6a5 files/mozilla-hppa.patch 7785
+MD5 278524216669b594ea5b6468a180ed73 files/mozilla-1.7.5-stackgrowth.patch 931
+MD5 e4adf41536cf80df5f8f5f6ff9bd88a7 files/mozilla-rebuild-databases.pl 2310
+MD5 23d6b685fd5e49a07cc4a1786871bf47 files/mozilla-alpha-xpcom-subs-fix.patch 4953
+MD5 b99dabe3c40cfafe2e63bdef95815596 files/10mozilla 105
+MD5 f48be110754a5106f06cd313c22c4337 files/svg-cairo-0.3.0-fix.patch 1063
+MD5 278524216669b594ea5b6468a180ed73 files/mozilla-stackgrowth.patch 931
+MD5 7d244b888dbd302c14414cbfc1f62501 files/xft.js 135
 MD5 b19c38da8865b9ee5555aeb826d1d360 files/digest-mozilla-1.7.5-r1 203
 MD5 0172084e349ca0f03d8cbe294054223e files/digest-mozilla-1.7.6-r1 203
-MD5 d0e52abf109fe61c4195f0cbf002ae18 files/google.src 706
-MD5 e79634ee1e611182b6c227daa362b20d files/mozilla-1.7.3-4ft2.patch 22360
-MD5 278524216669b594ea5b6468a180ed73 files/mozilla-1.7.5-stackgrowth.patch 931
-MD5 23d6b685fd5e49a07cc4a1786871bf47 files/mozilla-alpha-xpcom-subs-fix.patch 4953
-MD5 5496222980a6faf8261066f43cd4c6a5 files/mozilla-hppa.patch 7785
-MD5 e4adf41536cf80df5f8f5f6ff9bd88a7 files/mozilla-rebuild-databases.pl 2310
-MD5 278524216669b594ea5b6468a180ed73 files/mozilla-stackgrowth.patch 931
-MD5 f48be110754a5106f06cd313c22c4337 files/svg-cairo-0.3.0-fix.patch 1063
-MD5 7d244b888dbd302c14414cbfc1f62501 files/xft.js 135
 MD5 068edb8c46e34027f9c3febc19656c70 files/1.3/mozilla-1.3-fix-RAW-target.patch 328
 MD5 6d52ff4ce4567db1cad08ea40157a65d files/icon/mozilla-icon.png 2350
 MD5 e3c488f3226f61adbb11d6a73ae84209 files/icon/mozilla.desktop 153
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCQkNYBXaUFmZvwyMRAkd1AJ9gzBq86C4FKPK3/bh2XTtFH2blMgCfcpqK
+GLiIiPmRpHMpb96aYQzqaXY=
+=2BYO
+-----END PGP SIGNATURE-----

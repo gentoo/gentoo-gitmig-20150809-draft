@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla/mozilla-1.7.5.ebuild,v 1.2 2005/03/23 21:42:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla/mozilla-1.7.5.ebuild,v 1.3 2005/03/24 04:35:46 agriffis Exp $
 
 unset ALLOWED_FLAGS  # stupid extra-functions.sh ... bug 49179
 inherit flag-o-matic gcc eutils nsplugins mozilla-launcher mozconfig makeedit
@@ -37,6 +37,7 @@ RDEPEND="java? ( virtual/jre )
 	crypt? ( !moznomail? ( >=app-crypt/gnupg-1.2.1 ) )"
 
 DEPEND="${RDEPEND}
+	~sys-devel/autoconf-2.13
 	java? ( >=dev-java/java-config-0.2.0 )
 	dev-lang/perl"
 

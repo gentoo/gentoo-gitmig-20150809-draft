@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla/mozilla-1.7.6-r1.ebuild,v 1.6 2005/03/24 04:33:10 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla/mozilla-1.7.6-r1.ebuild,v 1.7 2005/03/24 04:35:46 agriffis Exp $
 
 unset ALLOWED_FLAGS  # stupid extra-functions.sh ... bug 49179
 inherit flag-o-matic gcc eutils nsplugins mozilla-launcher mozconfig makeedit multilib
@@ -38,6 +38,7 @@ RDEPEND="java? ( virtual/jre )
 	>=www-client/mozilla-launcher-1.28"
 
 DEPEND="${RDEPEND}
+	~sys-devel/autoconf-2.13
 	java? ( >=dev-java/java-config-0.2.0 )
 	dev-lang/perl
 	pgsql? ( >=dev-db/postgresql-7.2.0 )"
