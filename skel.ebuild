@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: First Last <your email>
-# $Header: /home/cvsroot/gentoo-x86/skel.ebuild,v 1.3 2002/02/04 15:46:51 gbevin Exp $
+# $Header: /home/cvsroot/gentoo-x86/skel.ebuild,v 1.4 2002/03/12 16:05:09 tod Exp $
 
 # NOTE: The comments in this file are for instruction and
 # documentation.  They're not meant to appear with your final,
@@ -29,6 +29,11 @@ SRC_URI="ftp://foo.bar.com/${P}.tar.gz"
 
 # Homepage, not used by Portage directly but handy for developer reference
 HOMEPAGE="http://"
+
+# License of the package. This must match the name of file(s) in
+# /usr/portage/licenses/. For complex license combination see the developer
+# docs on gentoo.org for details.
+LICENSE=""
 
 # Build-time dependencies, such as
 #    ssl? ( >=openssl-0.9.6b )
