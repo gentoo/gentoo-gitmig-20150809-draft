@@ -1,17 +1,16 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/neverball/neverball-1.1.0.ebuild,v 1.3 2004/02/22 15:44:33 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/neverball/neverball-1.2.0-r1.ebuild,v 1.1 2004/04/10 17:55:28 vapier Exp $
 
 inherit games eutils
 
-DATA="${GAMES_DATADIR}/${PN}/data"
 DESCRIPTION="Clone of Super Monkey Ball using SDL/OpenGL"
 HOMEPAGE="http://icculus.org/neverball/"
-SRC_URI="http://icculus.org/neverball/${P}.tar.bz2"
+SRC_URI="http://icculus.org/neverball/${P}.tar.gz"
 
-KEYWORDS="x86 amd64"
 LICENSE="GPL-2"
 SLOT="0"
+KEYWORDS="x86 amd64 ~ppc"
 IUSE=""
 
 RDEPEND=">=media-libs/libsdl-1.2
@@ -25,21 +24,24 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/${PV}-gcc2.patch
-	sed -i "/CONFIG_PATH/s:\"\./data\":\"${DATA}\":g" config.h \
+	sed -i '/CONFIG_PATH/s:"\./data":"'${GAMES_DATADIR}/${PN}'":g' \
+		share/config.h \
 		|| die "sed config.h failed"
+	# the $(MAPC_TARG) is just a temp fix ... should be in
+	# future releases ... parallel builds fail w/out it
 	sed -i \
 		-e "s:-Wall -O3:${CFLAGS}:" \
-		-e "s:^include:-include:" Makefile \
+		-e '/^data\/sol-/s:$: $(MAPC_TARG):' \
+		Makefile \
 		|| die "sed Makefile failed"
 }
 
 src_install() {
-	dogamesbin neverball
+	dogamesbin neverball neverputt || die
 
 	rm -f data/Makefile*
-	dodir ${DATA}
-	cp -R ${S}/data/* ${D}/${DATA}/
+	dodir ${GAMES_DATADIR}/${PN}
+	cp -R ${S}/data/* ${D}/${GAMES_DATADIR}/${PN}/ || die
 
 	dodoc CHANGES MAPPING README
 	prepgamesdirs
