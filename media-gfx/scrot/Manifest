@@ -1,3 +1,5 @@
-MD5 cd73fefdd875cf4959d80cd8004c5bb6 ChangeLog 1018
-MD5 329a35573f5233eb5246ebe190d083ea scrot-0.6.ebuild 633
+MD5 264f723eb1fa1c7a0a9cf42c3fcacc6d scrot-0.6.ebuild 634
+MD5 bba96cd3f3163d3e89aa41c270b2847f scrot-0.8.ebuild 569
+MD5 d86f0190558102969281c33b4100fa32 ChangeLog 1129
 MD5 7aa823591ab0f758723f630317c82da8 files/digest-scrot-0.6 60
+MD5 f7254c66a5852d7a6e48a39da63d5fe3 files/digest-scrot-0.8 60
