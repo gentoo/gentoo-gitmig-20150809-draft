@@ -1,0 +1,8 @@
+# ChangeLog for games-fps/quake3-defrag
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-defrag/ChangeLog,v 1.1 2003/11/30 06:30:12 vapier Exp $
+
+*quake3-defrag-1.9 (30 Nov 2003)
+
+  30 Nov 2003; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by Simon Hastie <zyklon@gmx.net> #33885.
