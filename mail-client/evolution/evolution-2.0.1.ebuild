@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.0.1.ebuild,v 1.1 2004/10/01 10:23:28 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.0.1.ebuild,v 1.2 2004/10/02 23:07:46 liquidx Exp $
 
-inherit eutils virtualx gnome2 flag-o-matic
+inherit eutils virtualx gnome2 flag-o-matic alternatives
 
 # problems with -O3 on gcc-3.3.1
 replace-flags -O3 -O2
@@ -66,9 +66,7 @@ ELTCONF="--reverse-deps"
 
 src_unpack() {
 	unpack ${A}
-
-	cd ${S}
-	epatch ${FILESDIR}/evolution-1.5.93-addressbooklibs.patch
+	cd ${S}/camel; epatch ${FILESDIR}/evolution-2.0.1-camel.patch
 }
 
 src_compile() {
@@ -124,6 +122,7 @@ src_compile() {
 
 pkg_postinst() {
 
+	alternatives_auto_makesym "/usr/bin/evolution" "/usr/bin/evolution-[0-9].[0-9]"
 	gnome2_gconf_install ${GCONFFILEPATH}
 	einfo "To change the default browser if you are not using GNOME, do:"
 	einfo "gconftool-2 --set /desktop/gnome/url-handlers/http/command -t string 'mozilla %s'"

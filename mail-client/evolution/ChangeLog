@@ -1,6 +1,12 @@
 # ChangeLog for mail-client/evolution
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.19 2004/10/01 10:23:28 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.20 2004/10/02 23:07:46 liquidx Exp $
+
+  03 Oct 2004; Alastair Tse <liquidx@gentoo.org>
+  +files/evolution-2.0.1-camel.patch, evolution-1.4.6.ebuild,
+  evolution-2.0.1.ebuild:
+  add camel patch (#66024) for newer gcc's, removed addressbook camel.la
+  workaround, added alternatives support to make /usr/bin/evolution symlink
 
 *evolution-2.0.1 (01 Oct 2004)
 

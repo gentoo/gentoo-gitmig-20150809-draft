@@ -1,0 +1,16 @@
+===================================================================
+RCS file: /cvs/gnome/evolution/camel/camel-service.c,v
+retrieving revision 1.92
+retrieving revision 1.93
+diff -u -r1.92 -r1.93
+--- camel-service.c	2004/09/24 02:50:45	1.92
++++ camel-service.c	2004/10/01 18:08:30	1.93
+@@ -897,7 +897,7 @@
+ 		hints = &myhints;
+ 	}
+ 
+-	hints->ai_family = AF_INET;
++	((struct addrinfo *) hints)->ai_family = AF_INET;
+ #endif
+ 
+ 	msg = g_malloc0(sizeof(*msg));

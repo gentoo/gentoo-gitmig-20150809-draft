@@ -1,9 +1,9 @@
-MD5 a55b1ad90c600ab2a23a824eca33c8fd ChangeLog 18763
+MD5 52f97869a6cb676307ab5c4fd467dac3 ChangeLog 19050
 MD5 dad6657ce9376178fb561002aa40f5e0 evolution-1.2.4.ebuild 6251
-MD5 695fe06900b7d3d3cfacb97437cd3b7b evolution-1.4.6.ebuild 5465
+MD5 dba924dd85421a68a5192906dfd03e80 evolution-1.4.6.ebuild 5562
 MD5 80850151bae2bd61c4ac796f83656ef6 metadata.xml 217
 MD5 272168a9a99d09e3b8fa2a5c7d0f5ed2 evolution-2.0.0.ebuild 3697
-MD5 69b25d7895aabf3403b52556690ea824 evolution-2.0.1.ebuild 3702
+MD5 4e6fa462d762cffccec93b5dc004a361 evolution-2.0.1.ebuild 3790
 MD5 3137288dd17e357d0972dab00e4f6b6d files/digest-evolution-1.2.4 1230
 MD5 fe0cafc4040da525377526f4a1fa297f files/digest-evolution-1.4.6 132
 MD5 c837abd50d990dea46fcea32b8a1b001 files/evolution-1.1.90-kde.patch 689
@@ -14,3 +14,4 @@ MD5 6e58f5e7a4195267cc545d8c9eba07a3 files/evolution-1.5.93-addressbooklibs.patc
 MD5 4df81c3442025403034c53975ba663b1 files/evolution-gcc34.patch 3044
 MD5 c99745f20c250a825bdda526f4209210 files/digest-evolution-2.0.0 70
 MD5 9c8bfa9074473718f6dd06a73417eed2 files/digest-evolution-2.0.1 70
+MD5 dc2deff6647a30a151572ec5d6e11c77 files/evolution-2.0.1-camel.patch 457
