@@ -1,0 +1,40 @@
+# ChangeLog for app-sci/elem
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/elem/ChangeLog,v 1.1 2004/12/24 16:34:18 ribosome Exp $
+
+*elem-1.0.3-r1 (24 Dec 2004)
+
+  24 Dec 2004; Olivier Fisette <ribosome@gentoo.org> +metadata.xml,
+  +elem-1.0.3-r1.ebuild:
+  Moved from app-sci/elem to sci-chemistry/elem.
+
+  13 Dec 2004; Patrick Kursawe <phosphan@gentoo.org> elem-1.0.3-r1.ebuild,
+  -elem-1.0.3.ebuild:
+  Stable for x86; cleanup
+
+*elem-1.0.3-r1 (08 Nov 2004)
+
+  08 Nov 2004; Patrick Kursawe <phosphan@gentoo.org> -elem-1.0.1.ebuild,
+  +elem-1.0.3-r1.ebuild:
+  Now explicitly links with libXpm (bug #70057), uses user-defined CFLAGS and
+  gets the compiler name via toolchain-funcs.
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> elem-1.0.1.ebuild,
+  elem-1.0.3.ebuild:
+  virtual/glibc -> virtual/libc
+
+*elem-1.0.3 (26 May 2004)
+
+  26 May 2004; Patrick Kursawe <phosphan@gentoo.org> elem-1.0.3.ebuild:
+  Version bump, sed hack no longer necessary.
+
+  24 Apr 2003; Patrick Kursawe <phosphan@gentoo.org> elem-1.0.1.ebuild :
+  considered stable
+
+*elem-1.0.1 (13 Feb 2003)
+
+  02 apr 2003; <spider@gentoo.org> elem-1.0.1.ebuild:
+  Fixing bug 1446, removed xpm dep.
+
+  13 Feb 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Initial import. Ebuild submitted by Patrick Kursawe <patrick.kursawe@web.de> in #13825.
