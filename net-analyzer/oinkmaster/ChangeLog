@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/oinkmaster
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/oinkmaster/ChangeLog,v 1.5 2004/07/10 11:45:46 eldad Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/oinkmaster/ChangeLog,v 1.6 2005/01/13 10:08:13 dragonheart Exp $
+
+*oinkmaster-1.1 (13 Jan 2005)
+
+  13 Jan 2005; Daniel Black <dragonheart@gentoo.org> +oinkmaster-1.1.ebuild:
+  Version bump as per bug 73009. Thanks to Benjamin Smee <ben@disciplina.net>
 
   10 Jul 2004; Eldad Zack <eldad@gentoo.org> metadata.xml,
   oinkmaster-0.9.ebuild, oinkmaster-1.0.ebuild:

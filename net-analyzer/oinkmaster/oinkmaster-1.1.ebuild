@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/oinkmaster/oinkmaster-1.0.ebuild,v 1.5 2005/01/13 10:08:13 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/oinkmaster/oinkmaster-1.1.ebuild,v 1.1 2005/01/13 10:08:13 dragonheart Exp $
 
 inherit eutils
 
@@ -19,7 +19,7 @@ RDEPEND=">=dev-lang/perl-5.6.1
 SLOT="0"
 LICENSE="BSD"
 
-KEYWORDS="x86"
+KEYWORDS="~x86"
 
 src_install() {
 	dobin oinkmaster.pl contrib/create-sidmap.pl contrib/addsid.pl contrib/makesidex.pl contrib/addmsg.pl
