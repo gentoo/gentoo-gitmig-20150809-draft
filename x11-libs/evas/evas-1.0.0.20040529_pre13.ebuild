@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/evas/evas-1.0.0.20040529_pre13.ebuild,v 1.2 2004/06/24 22:00:03 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/evas/evas-1.0.0.20040529_pre13.ebuild,v 1.3 2004/06/28 17:28:08 agriffis Exp $
 
 inherit enlightenment flag-o-matic
 
 DESCRIPTION="hardware-accelerated canvas API"
 HOMEPAGE="http://www.enlightenment.org/pages/evas.html"
 
-IUSE="${IUSE} X mmx opengl jpeg png directfb fbcon"
+IUSE="X directfb fbcon jpeg mmx opengl png sse"
 
 DEPEND="virtual/x11
 	>=media-libs/imlib2-1.1.0
