@@ -1,0 +1,2 @@
+virtual/bootloader	sys-boot/silo
+virtual/linux-sources	sys-kernel/sparc-dev-sources

@@ -1,0 +1,13 @@
+##############################################################################
+# SELinux required versionings
+
+# Core Packages
+*>=sys-apps/baselayout-1.8.6.13-r1
+
+# Base SELinux packages
+*>=sys-libs/libselinux-1.6
+*>=sys-apps/checkpolicy-1.6
+*>=sys-apps/policycoreutils-1.6
+*>=sec-policy/selinux-base-policy-20040225
+*>=dev-python/python-selinux-2.11
+##############################################################################

@@ -1,0 +1,16 @@
+##############################################################################
+# SELinux required versionings
+
+# Critical xattr fixes:
+>=sys-boot/grub-0.94
+
+# New API SELinux kernels
+>=sys-kernel/selinux-sources-2.4.21-r2
+>=sys-kernel/hardened-sources-2.4.22
+>=sys-kernel/gentoo-dev-sources-2.6.0
+##############################################################################
+
+*sys-devel/bin86
+
+-*>=sys-fs/e2fsprogs-1.34-r1
+*>=sys-fs/e2fsprogs-1.34

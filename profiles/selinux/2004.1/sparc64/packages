@@ -1,0 +1,11 @@
+##############################################################################
+# SELinux required versionings
+
+# New API SELinux kernels
+>=sys-kernel/sparc-dev-sources-2.6.0
+>=sys-kernel/sparc-sources-2.6.0
+##############################################################################
+
+*sys-apps/sparc-utils
+*sys-devel/gcc-sparc64
+*sys-devel/sparc32

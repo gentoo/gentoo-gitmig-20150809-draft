@@ -1,0 +1,14 @@
+###########################################################
+# SELinux required versionings
+
+# New API SELinux kernels:
+>=sys-kernel/ppc-development-sources-2.6.0
+>=sys-kernel/ppc-sources-2.6.0
+>=sys-kernel/ppc-sources-benh-2.6.0
+>=sys-kernel/ppc-sources-crypto-2.6.0
+>=sys-kernel/ppc-sources-dev-2.6.0
+###########################################################
+
+*sys-apps/eject
+*sys-apps/mac-fdisk
+*sys-fs/hfsutils

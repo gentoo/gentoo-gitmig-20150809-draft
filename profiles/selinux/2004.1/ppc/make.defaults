@@ -1,0 +1,18 @@
+# Copyright 2000 Daniel Robbins, Gentoo Technologies, Inc.
+# System-wide defaults for the Portage system
+
+ARCH="ppc"
+CHOST=powerpc-unknown-linux-gnu
+PLATFORM=$CHOST
+MAKEOPTS="-j2"
+
+COMPILER="gcc3"
+CFLAGS="-O2 -pipe"
+CXXFLAGS=${CFLAGS}
+
+USE="ppc berkdb crypt ncurses pam python readline selinux ssl tcpd zlib"
+GRP_STAGE23_USE="ppc berkdb crypt ncurses pam python readline selinux ssl tcpd zlib"
+
+ACCEPT_KEYWORDS="ppc"
+POLICYDIR="/etc/security/selinux/src/policy"
+FEATURES="strict sfperms"

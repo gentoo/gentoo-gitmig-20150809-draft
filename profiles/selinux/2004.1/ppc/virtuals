@@ -1,0 +1,2 @@
+virtual/bootloader	sys-boot/yaboot
+virtual/linux-sources	sys-kernel/ppc-development-sources

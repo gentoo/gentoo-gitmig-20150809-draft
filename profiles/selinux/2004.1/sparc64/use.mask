@@ -1,0 +1,12 @@
+# This file contains a list of USE
+# flags that cannot be used on SPARC.
+
+3dfx
+3dnow
+afs
+alsa
+mmx
+pic
+sse
+svga
+voodoo3
