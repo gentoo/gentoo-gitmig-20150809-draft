@@ -4,10 +4,10 @@ MD5 5a82dc04429fe73bebe1c286125d31ef baselayout-1.10.4.ebuild 15557
 MD5 686a5afef559894f75402fb6cb1df3e5 baselayout-1.9.4-r3.ebuild 17771
 MD5 19d4e3deefb0759db897632625e869e5 baselayout-1.9.4-r4.ebuild 16556
 MD5 2d858926cc45dafb070e01636521da3b baselayout-1.9.4-r5.ebuild 16779
-MD5 2e5cabed327a82da39f1d21c74f6f2dc baselayout-1.9.4-r6.ebuild 16830
+MD5 5a6e60d4a0e6baf8f051488786595d0c baselayout-1.9.4-r6.ebuild 16833
 MD5 e02bb32cac91dad28d3c05b731b37b04 metadata.xml 385
 MD5 d8a976d600ec13746edc697941c49452 baselayout-1.11.5.ebuild 16300
-MD5 3801ccbc3e829348cf80200cab2e2f26 baselayout-1.11.6-r1.ebuild 16449
+MD5 0b538c59295398a0726db9113bbe3104 baselayout-1.11.6-r1.ebuild 16453
 MD5 7c0cd50e4ac1dc062f5e6ab578e95659 files/copyright 2099
 MD5 d69d18485e6cfc948d9f39b2b766a406 files/digest-baselayout-1.9.4-r3 134
 MD5 ab3b5bbd5ce8a8b1386c834ff4a118b4 files/digest-baselayout-1.10.3 69
