@@ -1,0 +1,54 @@
+#!/sbin/runscript
+# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License, v2 or later
+
+HA_DIR=/etc/ha.d
+
+depend() {
+	use logger
+	need net
+}
+
+checkconfig() {
+	[ ! -f /etc/ha.d/ha.cf ] && \
+		eerror "You need a heartbeat config file" && return 1
+
+	if [  -f $HA_DIR/ipresources -a ! -f $HA_DIR/haresources ] ; then
+		cat $HA_DIR/ipresources >> $HA_DIR/haresources
+	fi
+}
+
+# Run pre-startup script if it exists
+RunStartStop() {
+
+	[  -f $HA_DIR/resource.d/startstop ] && $HA_DIR/resource.d/startstop  "$@"
+
+}
+
+start() {
+	checkconfig
+	ebegin "Starting Heartbeat"
+
+	RunStartStop pre-start
+
+	/usr/bin/heartbeat 2>&1
+	/usr/bin/ResourceManager verifyallidle
+
+	RunStartStop post-start
+
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping Heartbeat"
+	/usr/bin/heartbeat -k &> /dev/null
+	eend $?
+}
+
+restart() {
+	heartbeat -r
+}
+
+status() {
+	heartbeat -s
+}

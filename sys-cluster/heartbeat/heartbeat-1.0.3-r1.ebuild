@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/heartbeat-1.0.3.ebuild,v 1.3 2003/07/22 14:09:23 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/heartbeat-1.0.3-r1.ebuild,v 1.1 2003/07/22 14:09:23 iggy Exp $
 
 DESCRIPTION="Heartbeat high availability cluster manager"
 HOMEPAGE="http://www.linux-ha.org"
@@ -29,5 +29,7 @@ src_compile() {
 src_install() {
 
 	make DESTDIR=${D} install || die
+	exeinto /etc/init.d
+	newexe ${FILESDIR}/heartbeat-init heartbeat
 
 }
