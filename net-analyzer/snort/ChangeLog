@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/snort
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/ChangeLog,v 1.37 2004/04/01 13:29:02 mboman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/ChangeLog,v 1.38 2004/04/06 11:00:31 method Exp $
+
+  06 Apr 2004; Joshua Brindle <method@gentoo.org> snort-2.1.1.ebuild,
+  snort-2.1.2.ebuild:
+  added selinux policy to rdepend
 
   01 Apr 2004; Michael Boman <mboman@gentoo.org> snort-2.1.1.ebuild:
   Marked stable on x86

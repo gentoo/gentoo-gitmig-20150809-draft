@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.1.1.ebuild,v 1.3 2004/04/01 13:29:02 mboman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.1.1.ebuild,v 1.4 2004/04/06 11:00:31 method Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.snort.org/dl/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ~sparc -alpha ~amd64"
-IUSE="ssl postgres mysql flexresp"
+IUSE="ssl postgres mysql flexresp selinux"
 # snort 2.1.x does not have prelude patches yet
 # IUSE="${IUSE} prelude"
 # snort 2.1.x has discontinued smb alert output, and no 3rd party have done them yet
@@ -37,7 +37,8 @@ RDEPEND="virtual/glibc
 	>=net-libs/libpcap-0.6.2-r1
 	postgres? ( >=dev-db/postgresql-7.2 )
 	mysql? ( >=dev-db/mysql-3.23.26 )
-	ssl? ( >=dev-libs/openssl-0.9.6b )"
+	ssl? ( >=dev-libs/openssl-0.9.6b )
+	selinux? ( sec-policy/selinux-snort )"
 #	samba? ( net-fs/samba )
 #	prelude? ( >=dev-libs/libprelude-0.8 )
 
