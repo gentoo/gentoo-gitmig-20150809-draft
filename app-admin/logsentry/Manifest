@@ -1,13 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 35fc2916ec20a32a0aaf29393a6eabfc ChangeLog 1160
-MD5 2b7b450b520c52df01db35c727f97886 logsentry-1.1.1.ebuild 1585
+MD5 1f65b431d97e73097549f21ab5810a42 ChangeLog 1247
+MD5 452bf858635d27be8cca4f9e272501af logsentry-1.1.1.ebuild 1590
 MD5 03f9002c435a60fa69ed010578e34fd7 files/digest-logsentry-1.1.1 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBbmo7EZCkKN40op4RAuu4AKCgv2nIMDnuo9feFrwz9TiNlpcrdACgm4uz
-vEO4dffNlchvVFz2wc9+dJM=
-=QDqX
------END PGP SIGNATURE-----
