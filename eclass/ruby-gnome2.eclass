@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ruby-gnome2.eclass,v 1.4 2003/12/05 09:47:15 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ruby-gnome2.eclass,v 1.5 2003/12/29 16:21:49 usata Exp $
 #
 # This eclass simplifies installation of the various pieces of
 # ruby-gnome2 since they share a very common installation procedure.
@@ -27,13 +27,13 @@ LICENSE="Ruby"
 SLOT="0"
 
 if [[ ${PV} == 0.5.0 ]]; then
-	DEPEND="${DEPEND} >=dev-lang/ruby-1.6"
-	RDEPEND="${RDEPEND} >=dev-lang/ruby-1.6"
+	newdepend ">=dev-lang/ruby-1.6"
+	newrdepend ">=dev-lang/ruby-1.6"
 else
 	# Not necessarily true, but nobody's testing the newer ruby-gnome2
 	# with the older ruby...
-	DEPEND="${DEPEND} >=dev-lang/ruby-1.8"
-	RDEPEND="${RDEPEND} >=dev-lang/ruby-1.8"
+	newdepend ">=dev-lang/ruby-1.8"
+	newrdepend ">=dev-lang/ruby-1.8"
 fi
 
 ruby-gnome2_src_compile() {
