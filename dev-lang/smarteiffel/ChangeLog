@@ -1,0 +1,22 @@
+# ChangeLog for dev-lang/smarteiffel
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/smarteiffel/ChangeLog,v 1.1 2002/11/22 08:46:34 george Exp $
+
+*smarteiffel-1.00beta5 (16 Nov 2002)
+
+  22 Nov 2002; George Shapovalov <george@gentoo.org> smarteiffel-1.0_beta5.ebuild, files/digest-smarteiffel-1.0_beta5 :
+  cleaned up and committed to portage.
+
+  22 Nov 2002; Steven Wong <wongs15@tartarus.uwa.edu.au> :
+  - Fixed empty loadpath.UNIX being generated.
+  - lib/ and tools/ directories are installed now.
+  - Fixed links in html documentation; they don't reference to "../man"
+    anymore.
+
+  16 Nov 2002; Steven Wong <wongs15@tartarus.uwa.edu.au> :
+  Ebuild submitted by me. There is still some murky places
+  standard-wise, but I think it's better to leave this mostly for the
+  SmartEiffel developers to clean out. Big thanks to George Shapovalov
+  <george@gentoo.org> who did all the researching to find how other
+  distributions packaged this strange beast. :)
+
