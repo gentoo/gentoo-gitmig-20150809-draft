@@ -1,12 +1,12 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/TermReadKey/TermReadKey-2.19-r1.ebuild,v 1.10 2004/07/14 20:37:00 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/TermReadKey/TermReadKey-2.19-r1.ebuild,v 1.11 2005/01/04 13:53:44 mcummings Exp $
 
 inherit perl-module
 
 DESCRIPTION="Change terminal modes, and perform non-blocking reads."
-HOMEPAGE="http://cpan.valueclick.com/authors/id/J/JS/JSTOWE/${P}.readme"
-SRC_URI="http://cpan.valueclick.com/authors/id/J/JS/JSTOWE/${P}.tar.gz"
+HOMEPAGE="http://search.cpan.org/~jstowe/${P}/"
+SRC_URI="mirror://cpan/authors/id/J/JS/JSTOWE/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="Artistic"

@@ -1,8 +1,18 @@
-MD5 f886deb05018eecf9eb4b76c7f717cb5 TermReadKey-2.19.ebuild 559
-MD5 2b5c449dec22fa6d27691e2063a57202 ChangeLog 1214
-MD5 92f56dd9807cabac11e381e739db3521 TermReadKey-2.19-r1.ebuild 562
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 54cc3ee970040a787f8f0d626cbaf487 ChangeLog 1365
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 e81b91447bab3d70c522b1ed58de630f TermReadKey-2.21.ebuild 577
+MD5 932a74c28b4e772db8cc3d6d0efdce5f TermReadKey-2.19-r1.ebuild 525
+MD5 b18b4f9094d1485a81f6cd0d4f9ecfd1 TermReadKey-2.19.ebuild 522
+MD5 5989feb6fb23f289e24bcc5219dfa445 TermReadKey-2.21.ebuild 540
 MD5 c672103fcfdb5ed3554780864ed00fa4 files/digest-TermReadKey-2.19-r1 67
 MD5 c672103fcfdb5ed3554780864ed00fa4 files/digest-TermReadKey-2.19 67
 MD5 c7e25064a98d9f185a66cfe7e11019a4 files/digest-TermReadKey-2.21 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFB2p9ktG5z4I8BtQoRAiyAAJ4iyi7jUr0xlir2kE/icvH5HwiDnQCfZbKR
+/jY0YYXBHmKpsjM1jf0SMbg=
+=v4gf
+-----END PGP SIGNATURE-----
