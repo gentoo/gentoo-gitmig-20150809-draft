@@ -1,5 +1,17 @@
-MD5 ea5a3891da56ac4a1c27ec902000e52f ChangeLog 653
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 420df847a3db1c4969aff20243f656dd metadata.xml 165
 MD5 debeb1287c40e5295252ea3e0e219d45 tigcc-0.95_beta19-r1.ebuild 6460
-MD5 627b7e86641edb82ffa0702ff65de4c1 files/a68k-fix.patch 625
+MD5 adb4de247a168cd11cdf8031a2c783ad ChangeLog 781
+MD5 1904a56aa03ea5122ddae890881dd802 tigcc-0.95-r2.ebuild 6460
+MD5 75b1dd6ba9dd67df855f5d0a3165fd06 files/digest-tigcc-0.95-r2 315
 MD5 a10a653d920682c632466905a53be915 files/digest-tigcc-0.95_beta19-r1 322
+MD5 627b7e86641edb82ffa0702ff65de4c1 files/a68k-fix.patch 625
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBha05mdTrptrqvGERAptGAJ959OzIYGEJJJyVmQK8FI4RbSRIVgCfX0zC
+0fs+0p/7kyY0V4/7rFZ62fI=
+=BcxG
+-----END PGP SIGNATURE-----
