@@ -1,15 +1,15 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 2a3ec05744bd2738b1b797d54db1e025 selinux-sources-2.4.26-r2.ebuild 720
-MD5 362a65b7071bf595061388795e8c2ac3 ChangeLog 6502
+MD5 ab4163941a92cd06ac21aacdf577fc56 selinux-sources-2.4.26-r3.ebuild 722
+MD5 01286978f703fd502d3cfcdc40e8a0df ChangeLog 6722
 MD5 f455fbb5d96167058282b93599457a4f metadata.xml 470
 MD5 3bdf00d5f80fe9dfbfe8220e076cd04c files/openmosix-sources.CAN-2004-0497.patch 707
-MD5 f126f17ae2035e3de8de69488bb75ae6 files/digest-selinux-sources-2.4.26-r2 145
+MD5 ba33174c7497db366b8d63cfa05c5937 files/digest-selinux-sources-2.4.26-r3 145
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.4 (GNU/Linux)
 
-iD8DBQFA8a0JI9RrrOsOLvcRAqRIAJwLbAZJk2lRVn/8nZhbvgBgwz6IyACglOSl
-og318DUOUTl0OCxcqjkxfao=
-=S48w
+iD8DBQFBHYJ3GFJQsIJWJy4RArnYAJkBF6QOiCNnUWbfWijJianVwZU4iQCfaJgu
+28eNCAGxb0/79HOsUF3Oi44=
+=FCYf
 -----END PGP SIGNATURE-----
