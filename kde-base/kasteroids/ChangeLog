@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kasteroids
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kasteroids/ChangeLog,v 1.4 2005/03/13 21:18:59 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kasteroids/ChangeLog,v 1.5 2005/03/14 18:58:36 cryos Exp $
+
+  14 Mar 2005; Marcus D. Hanwell <cryos@gentoo.org> kasteroids-3.4.0.ebuild:
+  Should not have been keyworded, when tested I found that pressing L to launch
+  causes a crash every time. Marking -amd64 until a fix can be found.
 
   13 Mar 2005; Dan Armak <danarmak@gentoo.org> kasteroids-3.4.0.ebuild:
   KDE 3.4.0 ebuilds. Note that the tarballs won't be officially released for a
