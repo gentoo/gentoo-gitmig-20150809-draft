@@ -50,7 +50,7 @@
 *app-editors/nano
 #no real cost for nano, since we already have ncurses
 *net-ftp/ftp
-net-misc/dhcpcd
+*net-misc/dhcpcd
 *net-misc/netkit-telnetd
 *net-misc/rsync
 *net-misc/wget
@@ -82,7 +82,7 @@ net-misc/dhcpcd
 *sys-apps/netkit-base
 *sys-apps/procps
 *sys-apps/psmisc
-sys-apps/raidtools
+*sys-apps/raidtools
 *sys-apps/reiserfsprogs
 *sys-apps/sed
 *sys-apps/setserial
