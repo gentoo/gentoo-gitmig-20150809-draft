@@ -2,5 +2,8 @@ MD5 c687cffb1d1c4d53dda052dc1da23ead ChangeLog 1374
 MD5 fe0c4b649fc135e8fe6cf95c9868dda4 hping-2.0.0_rc1.ebuild 961
 MD5 50a1dde3fc4fc3a55cf50cbd1904e59b hping-2.0.0_rc2.ebuild 839
 MD5 75ed528e33e83ac57ce987793d740b5c metadata.xml 245
+MD5 728455a0304cca4a7c868012ef9cf95b hping-2.0.0_rc2-r1.ebuild 885
 MD5 704f5fd266e6ab22f0eed2acb3aa621b files/digest-hping-2.0.0_rc1 65
 MD5 eef05cbe61a0adf5b65aced19f629085 files/digest-hping-2.0.0_rc2 66
+MD5 cca06082ed7613b5803b6c7ff62a31bf files/wlan-header-fix.patch 848
+MD5 eef05cbe61a0adf5b65aced19f629085 files/digest-hping-2.0.0_rc2-r1 66
