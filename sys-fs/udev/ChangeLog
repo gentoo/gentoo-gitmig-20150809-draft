@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/udev
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.39 2004/03/21 00:13:33 gregkh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.40 2004/03/23 02:10:18 kumba Exp $
+
+  22 Mar 2004; Joshua Kinard <kumba@gentoo.org> udev-022-r1.ebuild:
+  Added ~mips to KEYWORDS.
 
 *udev-022-r1 (20 Mar 2004)
 
