@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <aliz@gentoo.org> (16 Aug 2002)
+# Masked for testing
+=app-admin/fam-oss-2.6.9
+
 # <mcummings@gentoo.org> (16 Aug 2002)
 # Masked for testing
 dev-perl/ExtUtils-MakeMaker
