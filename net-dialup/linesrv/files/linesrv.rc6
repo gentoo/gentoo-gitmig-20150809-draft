@@ -1,0 +1,30 @@
+#!/sbin/runscript
+# Copyright 1999-2004 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/linesrv/files/linesrv.rc6,v 1.1 2004/12/05 15:56:10 mrness Exp $
+
+depend() {
+	need net logger
+	use mysql dns
+}
+
+checkconfig() {
+	if [ ! -e /etc/linesrv.conf ] ; then
+		eerror "You  need  an  /etc/linesrv.conf file first"
+		eerror "There is a sample in /usr/share/doc/linesrv"
+		return 1
+	fi
+}
+
+start() {
+	checkconfig || return 1
+	ebegin "Starting linesrv"
+	start-stop-daemon --start --quiet --exec /usr/sbin/linesrv -- ${LINESRV_OPTS}
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping linesrv"
+	start-stop-daemon --stop --signal 3 --quiet --pidfile /var/run/linesrv.pid
+	eend $?
+}
