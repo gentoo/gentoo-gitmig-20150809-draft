@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Donny Davies <woodchip@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/syslog-ng-1.4.12-r7.ebuild,v 1.1 2001/09/10 03:04:22 blocke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/syslog-ng-1.4.12-r7.ebuild,v 1.2 2001/09/10 06:19:41 woodchip Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -29,10 +29,9 @@ src_install() {
   cd ${S}/doc/sgml
   dodoc syslog-ng.dvi syslog-ng.html.tar.gz syslog-ng.ps syslog-ng.sgml syslog-ng.txt
 
-  cd ${S}
   dodir /etc/syslog-ng
   insinto /etc/syslog-ng
-  cp ${FILESDIR}/syslog-ng.conf.sample ${D}/etc/syslog-ng
+  doins ${FILESDIR}/syslog-ng.conf.sample
 
   exeinto /etc/init.d
   newexe ${FILESDIR}/syslog-ng.rc6 syslog-ng
