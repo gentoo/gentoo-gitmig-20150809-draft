@@ -1,6 +1,6 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/sylpheed-theme/sylpheed-theme-2.ebuild,v 1.1 2002/06/29 09:48:50 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/sylpheed-theme/sylpheed-theme-2.ebuild,v 1.2 2002/06/29 10:11:34 seemant Exp $
 
 DESCRIPTION="Theme packs for sylpheed and sylpheed-claws and sylpheed-claws-nc"
 
@@ -27,7 +27,7 @@ src_install () {
 
 	cp -a * ${D}/${THEMEDIR}
 
-	rm ${THEMEDIR}/README
+	rm ${D}/${THEMEDIR}/README
 
 	dodoc README
 }
