@@ -1,5 +1,6 @@
 MD5 b424d2740a1f93cdc3f306461b4cf778 xchat-2.0.1.ebuild 1946
 MD5 8f063703554a529702fa2c9f1d760b86 xchat-1.8.11.ebuild 2220
+MD5 de90aae6823c06e16c5fcd14b1a09d72 xchat-2.0.5.ebuild 2008
 MD5 fb630b61d2521058014180c601016cd0 xchat-2.0.0.ebuild 1874
 MD5 0310ac6bab4159a21ebb7f4cc6bf11c1 xchat-2.0.2-r2.ebuild 2095
 MD5 680fe1b0bcd700954a758802313688fe xchat-1.8.10-r1.ebuild 2296
@@ -10,6 +11,7 @@ MD5 785881948431e9b5cc0fd90ccbd997e9 xchat-2.0.3-r1.ebuild 1915
 MD5 acbd4afdd7d00bceb3816147eb508e4b files/digest-xchat-2.0.0 64
 MD5 1ee812a2b3e28e3866413e75a80ff983 files/digest-xchat-2.0.1 64
 MD5 73e096b33cdb2fff840d34ecc8d7c3bb files/digest-xchat-2.0.4 64
+MD5 dc4dfe00cc6b978d3d8f8bd7bc70643e files/digest-xchat-2.0.5 64
 MD5 a8f607d224408d4a27777d2ffce8beac files/xc1811fixststint.diff 422
 MD5 e470c6b909112da5b80be6880e56c8c3 files/xchat-2.0.3-fix_cps.patch 438
 MD5 579cf7b7098f443691fcd6e3e41acba2 files/xc202-fixurlg.diff 510
