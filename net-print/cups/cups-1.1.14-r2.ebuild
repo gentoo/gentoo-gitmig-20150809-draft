@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author: Donny Davies <woodchip@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.1.14-r1.ebuild,v 1.2 2002/03/07 14:47:53 gbevin Exp $
+# Maintainer: Donny Davies <woodchip@gentoo.org>
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.1.14-r2.ebuild,v 1.1 2002/03/29 18:39:16 woodchip Exp $
 
 DESCRIPTION="The Common Unix Printing System"
 HOMEPAGE="http://www.cups.org"
@@ -40,10 +40,7 @@ src_compile() {
 }
 
 src_install() {
-	# set these up now or make install will.. and that aint pretty!
-	diropts -m 755 ; dodir /var/spool
-	diropts -m 755 ; dodir /var/log/cups
-	diropts -m 755 ; dodir /etc/cups
+	dodir /var/spool /var/log/cups /etc/cups
 
 	make \
 	LOCALEDIR=${D}/usr/share/locale \
@@ -68,44 +65,40 @@ src_install() {
 	install || die "install problem"
 
 	dodoc {CHANGES,CREDITS,ENCRYPTION,LICENSE,README}.txt LICENSE.html
+	dosym /usr/share/cups/docs /usr/share/doc/${PF}/html
 
-	# cleanups and fixups
+	fowners lp.root /usr/bin/lppasswd
+	fperms 4755 /usr/bin/lppasswd
+
+	# cleanups
 	rm -rf ${D}/etc/init.d
 	rm -rf ${D}/etc/pam.d
 	rm -rf ${D}/etc/rc*
 	rm -rf ${D}/usr/share/man/cat*
-	dosed "s:#DocumentRoot /usr/share/doc/cups:DocumentRoot /usr/share/cups/docs:" /etc/cups/cupsd.conf
-	dosed "s:#SystemGroup sys:SystemGroup lp:" /etc/cups/cupsd.conf
-	dosed "s:#User lp:User lp:" /etc/cups/cupsd.conf
-	dosed "s:#Group sys:Group lp:" /etc/cups/cupsd.conf
+	rm -rf ${D}/etc/cups/{certs,interfaces,ppd}
+	rm -rf ${D}/var
 
-	# sanity checks
-	chown lp.root ${D}/usr/bin/lppasswd ; chmod 4755 ${D}/usr/bin/lppasswd
-	chown lp.root ${D}/etc/cups/certs ; chmod 711 ${D}/etc/cups/certs
-	chown lp.root ${D}/var/spool/cups ; chmod 0700 ${D}/var/spool/cups
-	chown lp.root ${D}/var/spool/cups/tmp ; chmod 01700 ${D}/var/spool/cups/tmp
+	mv ${D}/etc/cups/cupsd.conf ${D}/etc/cups/cupsd.conf.orig
+	sed -e "s:^#\(DocumentRoot\).*:\1 /usr/share/cups/docs:" \
+		-e "s:^#\(SystemGroup\).*:\1 lp:" \
+		-e "s:^#\(User\).*:\1 lp:" \
+		-e "s:^#\(Group\).*:\1 lp:" \
+		${D}/etc/cups/cupsd.conf.orig > ${D}/etc/cups/cupsd.conf
+	rm -f ${D}/etc/cups/cupsd.conf.orig
 
 	# foomatic cups filters
-	insinto /usr/lib/cups/filter
-	doins ${FILESDIR}/cupsomatic
-	fperms 755 /usr/lib/cups/filter/cupsomatic
-	doins ${FILESDIR}/foomatic-gswrapper
-	fperms 755 /usr/lib/cups/filter/foomatic-gswrapper
+	exeinto /usr/lib/cups/filter
+	doexe ${FILESDIR}/cupsomatic
+	doexe ${FILESDIR}/foomatic-gswrapper
 
-	# gentoo config stuff
 	insinto /etc/pam.d ; newins ${FILESDIR}/cups.pam cups
 	exeinto /etc/init.d ; newexe ${FILESDIR}/cupsd.rc6 cupsd
 	insinto /etc/xinetd.d ; newins ${FILESDIR}/cups.xinetd cups-lpd
-
-	# we need to recreate these dirs outside in pkg_postinst() since they're
-	# empty and will get zapped on upgrade otherwise.
-	rm -rf ${D}/etc/cups/{certs,interfaces,ppd}
-	rm -rf ${D}/var
 }
 
 pkg_postinst() {
-	install -d ${ROOT}/var/log/cups
-	install -d ${ROOT}/var/spool
+	install -d -m0755 ${ROOT}/var/log/cups
+	install -d -m0755 ${ROOT}/var/spool
 	install -m0700 -o lp -d ${ROOT}/var/spool/cups
 	install -m1700 -o lp -d ${ROOT}/var/spool/cups/tmp
 	install -m0711 -o lp -d ${ROOT}/etc/cups/certs
