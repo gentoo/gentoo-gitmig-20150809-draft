@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/lbdb
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/lbdb/ChangeLog,v 1.10 2004/06/24 23:23:38 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/lbdb/ChangeLog,v 1.11 2004/09/04 08:30:55 ticho Exp $
+
+  04 Sep 2004; Andrej Kacian <ticho@gentoo.org> lbdb-0.26-r1.ebuild:
+  Corrected HOMEPAGE. Reported by Daniel Webert <rockoo@rockoo.homelinux.org>,
+  closes #49781.
 
 *lbdb-0.28 (14 Dec 2003)
 

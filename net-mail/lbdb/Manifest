@@ -1,6 +1,16 @@
-MD5 7b97ab5cc4e3c4b5a6cb4ea0a9ac8ee0 lbdb-0.26-r1.ebuild 688
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 103aea3eebf49746de801298d4863bb9 lbdb-0.28.ebuild 733
-MD5 56fa8c7860657f09b9ec42bf0f39be8a ChangeLog 1313
+MD5 aa8e213952e0a07ec4b53364f97d2fe9 ChangeLog 1476
+MD5 009e3bb66b0710e04308e7fa86b336e6 lbdb-0.26-r1.ebuild 678
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
 MD5 c334778f6ea0e5023fe9dd5173e2a301 files/digest-lbdb-0.26-r1 60
 MD5 487756084c182610cd6175884cf8eb13 files/digest-lbdb-0.28 60
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBOX1I10xuJSrg3/sRAq6uAJwOQXNIzU9d6kcCk84YwpoHDmDk+gCaAxhi
+cLM340+8D+6Fwt6i09mhWsg=
+=oosE
+-----END PGP SIGNATURE-----
