@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdetoys
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdetoys/ChangeLog,v 1.63 2004/04/21 01:33:39 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdetoys/ChangeLog,v 1.64 2004/05/15 15:27:20 weeve Exp $
+
+  15 May 2004; Jason Wever <weeve@gentoo.org> kdetoys-3.2.2.ebuild:
+  Stable on sparc.
 
   20 Apr 2004; Caleb Tennis <caleb@gentoo.org> -kdetoys-3.0.5b.ebuild:
   Remove old version

@@ -1,9 +1,9 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaccessibility/kdeaccessibility-3.2.2.ebuild,v 1.2 2004/05/12 15:44:39 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaccessibility/kdeaccessibility-3.2.2.ebuild,v 1.3 2004/05/15 15:27:20 weeve Exp $
 
 inherit kde-dist
 
 DESCRIPTION="KDE accessibility module"
 
-KEYWORDS="x86 ~ppc ~sparc ~alpha ~hppa ~amd64 ~ia64"
+KEYWORDS="x86 ~ppc sparc ~alpha ~hppa ~amd64 ~ia64"
