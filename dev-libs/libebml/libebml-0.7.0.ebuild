@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libebml/libebml-0.7.0.ebuild,v 1.9 2004/12/11 22:24:53 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libebml/libebml-0.7.0.ebuild,v 1.10 2004/12/15 21:20:26 kloeri Exp $
 
 inherit flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.bunkus.org/videotools/mkvtoolnix/sources/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc sparc ~mips ~alpha hppa amd64 ~ia64"
+KEYWORDS="x86 ~ppc sparc ~mips alpha hppa amd64 ~ia64"
 IUSE=""
 
 DEPEND="virtual/libc"
