@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.3.2-r5.ebuild,v 1.2 2003/08/11 07:46:07 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.3.2-r5.ebuild,v 1.3 2003/08/11 07:49:39 robbat2 Exp $
 
 IUSE="${IUSE} apache2"
 
@@ -58,7 +58,6 @@ DEPEND="${DEPEND}
 	apache2? ( >=net-www/apache-2.0.43-r1 )"
 
 src_unpack() {
-	php_securityupgrade
 	multiinstwarn
 	detectapache domsg
 	php_src_unpack
@@ -146,7 +145,6 @@ pkg_preinst() {
 
 pkg_postinst() {
 	php_pkg_postinst
-	php_securityupgrade
 	multiinstwarn
 	einfo "To have Apache run php programs, please do the following:"
 	if [ "`use apache2`" ] ; then
