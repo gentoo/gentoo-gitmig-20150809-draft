@@ -7,3 +7,9 @@ selinux
 # There is no java in this profile (if there is it must be available). Without
 # this repoman will fail on apps like sys-libs/db
 java
+
+# Aron Griffis <agriffis@gentoo.org>
+# acl doesn't build on mips atm.  Mask it so that vim quits
+# complaining
+acl
+
