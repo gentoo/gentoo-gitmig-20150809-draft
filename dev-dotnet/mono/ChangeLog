@@ -1,6 +1,16 @@
 # ChangeLog for dev-dotnet/mono
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono/ChangeLog,v 1.49 2005/02/19 22:31:49 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono/ChangeLog,v 1.50 2005/02/21 18:07:57 latexer Exp $
+
+*mono-1.0.5-r4 (21 Feb 2005)
+
+  21 Feb 2005; Peter Johanson <latexer@gentoo.org> -mono-1.0.1-r1.ebuild,
+  -mono-1.0.1-r2.ebuild, -mono-1.0.1.ebuild, -mono-1.0.5-r1.ebuild,
+  +mono-1.0.5-r4.ebuild, -mono-1.0.5.ebuild, +mono-1.1.4.ebuild:
+  Add 1.0.5-r4, which now works for NPTL glibc using only gcc-3.3.5. This is
+  hopefully the new target for stabalization. Also add in new mono-1.1.4, which
+  will remain p.masked but in portage for amd64 folks. Removed some older
+  ebuilds as well.
 
   19 Feb 2005; Peter Johanson <latexer@gentoo.org> mono-1.0.6.ebuild:
   Remove the gmcs wrapper script, as on mono-1.0.x, we don't install gmcs
