@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/gnokii/gnokii-0.5.2-r1.ebuild,v 1.1 2003/10/01 00:04:33 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/gnokii/gnokii-0.5.5.ebuild,v 1.1 2003/11/25 17:59:21 lanius Exp $
 
 DESCRIPTION="a client that plugs into your handphone"
 SRC_URI="http://freesoftware.fsf.org/download/${PN}/${P}.tar.bz2"
@@ -22,7 +22,7 @@ MAKEOPTS="${MAKEOPTS} -j1"
 
 src_unpack() {
 	unpack ${A}
-	epatch ${FILESDIR}/${P}-nounix98pty.patch
+	EPATCH_OPTS="-d ${S}" epatch ${FILESDIR}/${PN}-0.5.4-nounix98pty.patch
 }
 
 src_compile() {
@@ -40,20 +40,25 @@ src_install () {
 	make DESTDIR=${D} install || die "install failed"
 
 	dodoc Docs/*
-	docinto /usr/share/doc/${PF}/protocol
-	dodoc Docs/protocol/*
 	cp -r Docs/sample ${D}/usr/share/doc/${PF}/sample
+	cp -r Docs/protocol ${D}/usr/share/doc/${PF}/protocol
 
 	doman Docs/man/*
 
 	dodir /etc
 	sed -e 's:/usr/local/sbin:/usr/sbin:' ${S}/Docs/sample/gnokiirc > ${D}/etc/gnokiirc
+
+	# only one file needs suid root to make a psuedo device
+	fperms 4755 /usr/sbin/mgnokiidev
 }
 
 pkg_postinst() {
 	einfo "gnokii does not need it's own group anymore."
 	einfo "Make sure the user that runs gnokii has read/write access to the device"
 	einfo "which your phone is connected to. eg. chown <user> /dev/ttyS0"
+
+	# clean up old gnokii group perms
+	groupdel gnokii
 }
 
 pkg_postrm () {
