@@ -132,7 +132,6 @@ sys-kernel/linux-sources-vanilla
 app-admin/powertweak
 media-video/avi-xmms
 app-text/sgml2x
->=sys-apps/procps-2.0.7
 >=app-admin/modlogan-0.7.4 (achim)
 
 # unfinished
