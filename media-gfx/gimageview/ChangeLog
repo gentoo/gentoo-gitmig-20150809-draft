@@ -1,11 +1,11 @@
 # ChangeLog for media-gfx/gimageview
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimageview/ChangeLog,v 1.1 2004/05/22 20:19:33 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimageview/ChangeLog,v 1.2 2004/05/22 20:24:03 usata Exp $
 
 *gimageview-0.2.25 (23 May 2004)
 
   23 May 2004; Mamoru KOMACHI <usata@gentoo.org> gimageview-0.2.25.ebuild:
   Initial import. Thanks to Sadayuki Kobayashi <desperado@s17.xrea.com>,
   MATSUU Takuto <matsuu@gentoo.org> and Lindsay Holmwood
-  <holmwoodl@iinet.net.au>. Bug # 31683
+  <holmwoodl@iinet.net.au>. Bug #21066
 
