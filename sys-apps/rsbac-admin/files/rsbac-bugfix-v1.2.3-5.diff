@@ -1,0 +1,15 @@
+Index: rsbac-admin-v1.2.3/src/attr_set_fd.c
+===================================================================
+--- rsbac-admin-v1.2.3/src/attr_set_fd.c	(revision 19)
++++ rsbac-admin-v1.2.3/src/attr_set_fd.c	(working copy)
+@@ -202,6 +202,10 @@
+           case A_res_max:
+             fprintf(stderr, gettext("%s: Attribute %s not supported\n"), progname, argv[3]);
+             exit(1);
++          case A_pax_flags:
++            value.pax_flags = pax_strtoflags(argv[3], RSBAC_PAX_DEF_FLAGS);
++            break;
++
+           case A_log_array_low:
+           case A_log_array_high:
+             if(strlen(argv[3]) != R_NONE)

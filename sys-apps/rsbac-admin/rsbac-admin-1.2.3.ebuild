@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/rsbac-admin/rsbac-admin-1.2.3.ebuild,v 1.5 2005/01/19 13:58:00 kang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/rsbac-admin/rsbac-admin-1.2.3.ebuild,v 1.6 2005/01/24 10:29:36 kang Exp $
 
 inherit eutils
 
@@ -18,8 +18,8 @@ LICENSE="GPL-2"
 KEYWORDS="x86 ~ppc"
 
 DEPEND="dev-util/dialog
-	|| ( >=sys-kernel/rsbac-sources-2.4.26
-	>=sys-kernel/rsbac-dev-sources-2.6.7 )"
+	|| ( sys-kernel/rsbac-sources
+	sys-kernel/rsbac-dev-sources )"
 
 
 RDEPEND=">=sys-libs/ncurses-5.2"
@@ -27,6 +27,8 @@ RDEPEND=">=sys-libs/ncurses-5.2"
 src_unpack() {
 	cd ${WORKDIR}
 	unpack ${ADMIN}.tar.bz2 || die "cannot unpack rsbac-admin tool"
+	cd ${WORKDIR}/${ADMIN}
+	epatch "${FILESDIR}/rsbac-bugfix-v1.2.3-5.diff"
 }
 
 src_compile() {
