@@ -1,17 +1,17 @@
 # ChangeLog for dev-java/gnu-classpath
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/ChangeLog,v 1.22 2004/12/19 00:35:44 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/ChangeLog,v 1.23 2004/12/21 18:51:58 karltk Exp $
 
-  19 Dec 2004; <karltk@gentoo.org> gnu-classpath-0.10-r1.ebuild,
+  19 Dec 2004; Karl Trygve Kalleberg <karltk@gentoo.org> gnu-classpath-0.10-r1.ebuild,
   gnu-classpath-0.11.ebuild, gnu-classpath-0.12.ebuild:
   Added app-arch/zip to DEPEND. Fixes #71791.
 
 *gnu-classpath-0.12 (19 Dec 2004)
 
-  19 Dec 2004; <karltk@gentoo.org> +gnu-classpath-0.12.ebuild:
+  19 Dec 2004; Karl Trygve Kalleberg <karltk@gentoo.org> +gnu-classpath-0.12.ebuild:
   New upstream release.
 
-  18 Dec 2004; <karltk@gentoo.org> gnu-classpath-0.10-r1.ebuild,
+  18 Dec 2004; Karl Trygve Kalleberg <karltk@gentoo.org> gnu-classpath-0.10-r1.ebuild,
   gnu-classpath-0.11.ebuild:
   Changed license to GPL 2 with linking exception. Fixes #69732.
 
