@@ -13,9 +13,9 @@
 >=sys-kernel/linux-headers-2.4.21
 
 # Base SELinux packages
-*sys-libs/libselinux
-*sys-apps/checkpolicy
-*sys-apps/policycoreutils
+*<sys-libs/libselinux-1.6
+*<sys-apps/checkpolicy-1.6
+*<sys-apps/policycoreutils-1.6
 *>=sec-policy/selinux-base-policy-20030817
 *>=dev-python/python-selinux-2.0
 
