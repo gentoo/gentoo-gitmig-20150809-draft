@@ -1,6 +1,6 @@
 # ChangeLog for sys-apps/psmisc
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/psmisc/ChangeLog,v 1.23 2004/02/03 01:58:40 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/psmisc/ChangeLog,v 1.24 2004/02/03 14:58:27 gmsoft Exp $
 
   02 Feb 2004; Chris PeBenito <pebenito@gentoo.org> psmisc-21.2-r4.ebuild:
   Mark x86 stable.
@@ -9,6 +9,9 @@
   set ppc in keywords
 
 *psmisc-21.2-r4 (28 Oct 2003)
+
+  03 Feb 2003; Guy Martin <gmsoft@gentoo.org> psmisc-21.2-r4.ebuild :
+  Marked stable on hppa.
 
   28 Oct 2003; Chris PeBenito <pebenito@gentoo.org> psmisc-21.2-r3.ebuild,
   psmisc-21.2-r4.ebuild, files/psmisc-21.2-selinux.diff.bz2:
