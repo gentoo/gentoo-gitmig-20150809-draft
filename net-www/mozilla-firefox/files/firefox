@@ -2,21 +2,31 @@
 #
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/files/firefox,v 1.4 2004/02/16 05:47:56 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/files/firefox,v 1.5 2004/02/26 04:13:41 agriffis Exp $
 
 # Set MOZILLA_NEWTYPE to "window" in your environment if you prefer
 # new Firefox windows instead of new tabs
 newtype=${MOZILLA_NEWTYPE:-"window"}
 
-# Point this to your Firefox installation if not using the default
-export MOZILLA_FIVE_HOME="/usr/lib/MozillaFirefox"
-ffpath=${MOZILLA_FIVE_HOME}
+# Support both firefox and mozilla
+case "$0" in
+  *fox*)
+    export MOZILLA_FIVE_HOME="/usr/lib/MozillaFirefox"
+    remote=$MOZILLA_FIVE_HOME/mozilla-xremote-client
+    mozbin=$MOZILLA_FIVE_HOME/firefox
+    grepfor=firefox-bin
+    ;;
 
-# Sanity check
-if [[ -z $DISPLAY ]]; then
-  echo "DISPLAY is unset!" >&2
-  exit 1
-fi
+  *mozilla*)
+    export MOZILLA_FIVE_HOME="/usr/lib/mozilla"
+    remote=$MOZILLA_FIVE_HOME/mozilla-xremote-client
+    # This is the old mozilla.sh which used to be installed as /usr/bin/mozilla.
+    # I have no idea what parts of it should be kept/dropped so I'm just calling
+    # it for now.
+    mozbin=$MOZILLA_FIVE_HOME/mozilla.sh
+    grepfor=mozilla-bin
+    ;;
+esac
 
 # Validate the args and extract the urls
 args=()
@@ -58,8 +68,8 @@ declare -a screens=(
 # openURL request appropriately.
 declare -a candidates=()
 for s in $DISPLAY "${screens[@]}"; do 
-  if DISPLAY=${s} xwininfo -root -tree | grep -q 'firefox-bin'; then
-    candidates=("${candidates[@]}" ${s})
+  if DISPLAY=$s xwininfo -root -tree | grep -q "$grepfor"; then
+    candidates=("${candidates[@]}" $s)
   fi
 done
 
@@ -69,15 +79,12 @@ done
 # Handle multiple URLs by looping over the xremote call
 for u in "${urls[@]}"; do
 
-  # prepend http:// if needed
-  [[ $u == ? && $u != *:* ]] && u=http://$u
-
-  # try mozila-xremote-client on each candidate screen
-  if [[ ${#candidates[@]} > 0 ]]; then
+  # Try mozilla-xremote-client on each candidate screen.
+  # Only use mozilla-xremote-client if we have no other args (which
+  # must be passed to the browser binary).
+  if [[ ${#candidates[@]} > 0 && ${#args[*]} == 0 ]]; then
     for s in "${candidates[@]}"; do 
-      DISPLAY=${s} \
-        ${ffpath}/mozilla-xremote-client "openURL($u, new-$newtype)" \
-        && break
+      DISPLAY=$s $remote "openURL($u, new-$newtype)" && break
     done
     retval=$?
   else
@@ -86,24 +93,25 @@ for u in "${urls[@]}"; do
   fi
 
   # 2 = No running windows found, so start a new instance
-  # 3 = Thunderbird is running, but doesn't handle openURL command
-  #     (or it might be an unresponsive Firefox)
+  # 3 = Browser is running, but doesn't handle openURL command
+  #     (or it might be unresponsive)
   if [[ $retval -eq 2 || $retval -eq 3 ]] ; then
 
     # Handle case of multiple URLs
     if [[ ${#urls[@]} > 1 ]]; then
-      ${ffpath}/firefox "${args[@]}" "$u" &
+      $mozbin "${args[@]}" "$u" &
       if [[ -x /usr/bin/xtoolwait ]]; then
         xtoolwait sleep 10
       else
-        sleep 10   # totally arbitrary! :-(
+        sleep 10   # totally arbitrary without xtoolwait! :-(
       fi
-      candidates=$DISPLAY
+      candidates=$DISPLAY       # next time through, use $remote
+      args=()                   # and drop the args
       continue
     fi
 
     # Handle case of single URL
-    ${ffpath}/firefox "${args[@]}" "$u" &
+    $mozbin "${args[@]}" "$u" &
     break
 
   elif [[ $retval -eq 1 ]]; then
@@ -117,7 +125,7 @@ done
 # Will only wait here if firefox was started by this script
 if ! wait; then
   retval=$?
-  echo "firefox exited with non-zero status ($?)" >&2
+  echo "${mozbin##*/} exited with non-zero status ($?)" >&2
 fi
 
 exit $retval
