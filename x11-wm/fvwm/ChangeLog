@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/fvwm
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/ChangeLog,v 1.26 2003/09/01 13:29:23 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/ChangeLog,v 1.27 2003/09/01 20:58:55 taviso Exp $
+
+  01 Sep 2003; Tavis Ormandy <taviso@gentoo.org> fvwm-2.5.7-r2.ebuild:
+  changed the postinst blurb.
 
 *fvwm-2.5.7-r2 (01 Sep 2003)
 

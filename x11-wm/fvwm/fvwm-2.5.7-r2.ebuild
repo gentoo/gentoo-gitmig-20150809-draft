@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.7-r2.ebuild,v 1.2 2003/09/01 14:26:58 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.7-r2.ebuild,v 1.3 2003/09/01 20:58:55 taviso Exp $
 
 inherit gnuconfig
 
@@ -61,9 +61,10 @@ src_unpack() {
 }
 
 src_compile() {
-	local myconf="--libexecdir=/usr/lib --with-imagepath=/usr/share/icons/fvwm:/usr/include/X11/bitmaps:/usr/include/X11/pixmaps"
+	local myconf="--libexecdir=/usr/lib --with-imagepath=/usr/include/X11/bitmaps:/usr/include/X11/pixmaps:/usr/share/icons/fvwm:/usr/share/icons/wm-icons"
 
-	# ImagePath should include /usr/share/icons/fvwm by default.
+	# ImagePath should include /usr/share/icons/fvwm (x11-themes/fvwm_icons) 
+	# and /usr/share/icons/wm-icons (x11-themes/wm-icons) by default.
 
 	# use readline in FvwmConsole.
 	if ! use readline; then
@@ -251,35 +252,36 @@ src_install() {
 }
 
 pkg_postinst() {
-	# FIXME: remove this blurb in a future release..
-	ewarn
-	ewarn "The following features that you did not request are now"
-	ewarn "controlled via USE flags:"
-	use readline	|| ewarn "	Readline support in FvwmConsole [readline]"
-	use ncurses		|| ewarn "	Ncurses support in FvwmConsole [ncurses]"
-	use stroke		|| ewarn "	Mouse Gestures [stroke]"
-	use xinerama	|| ewarn "	Xinerama Support [xinerama]"
-	use cjk			|| ewarn "	Multibyte Character Support [cjk]"
-	use perl 		|| ewarn "	FVWM Perl bindings [perl]"
-	use tcltk		|| ewarn "	FVWM Perl-tk support, including FvwmTabs [perl tcltk]"
-	use nls			|| ewarn "	Native Language Support [nls]"
-	use png			|| ewarn "	PNG Support [png]"
-	use bidi		|| ewarn "	Bidirectional Language Support [bidi]"
-	use rplay		|| ewarn "	RPlay Support in FvwmEvent [rplay]"
-	use gtk			|| ewarn "	FvwmGTK (gtk+ support) [gtk]"
-	use imlib		|| ewarn "	FvwmGTK (GDK image support) [imlib]"
-	use truetype	|| ewarn "	Xft Anti Aliased text support [truetype]"
-	ewarn
-	ewarn "If you require any of the features listed above, you should remerge"
-	ewarn "FVWM with the appropriate USE flags. Use this command to see the flags"
-	ewarn "available:"
-	ewarn "	$ emerge -pv fvwm"
-	ewarn
+	einfo
+	einfo "FVWM has numerous optional features that are configurable at"
+	einfo "compile time via USE flags, you can read more about USE flags"
+	einfo "here"
+	einfo
+	einfo "	http://www.gentoo.org/doc/en/use-howto.xml"
+	einfo
+	einfo "To see the USE flags available with FVWM, use this command"
+	einfo
+	einfo "	$ emerge -pv fvwm"
+	einfo
+	echo
+	einfo
+	einfo "If you would like a simple icon set or sound theme for use in your"
+	einfo "theme, you can try these:"
+	einfo
+	einfo "	x11-themes/wm-icons (a collection of themed iconsets, designed for fvwm)"
+	einfo "	x11-themes/fvwm_icons (a simple icon set)"
+	einfo "	x11-themes/fvwm_sounds (example sounds for playing on events)"
+	einfo
+	echo
 	use perl && use tcltk && {
-		einfo "The FvwmTabs module has been installed (USE=\"perl tcltk\")."
-		einfo "For more information, visit"
-		einfo "http://users.tpg.com.au/users/scottie7/fvwmtabs.html"
 		einfo
-		einfo "The fvwmtabrc has been installed into /usr/share/doc/${PF}"
+		einfo "By setting the perl and tcltk USE flags, you have elected to"
+		einfo "install the FvwmTabs module, a configurable tabbing system for"
+		einfo "FVWM, you can read more about it here"
+		einfo
+		einfo "	http://users.tpg.com.au/users/scottie7/fvwmtabs.html"
+		einfo
+		einfo "The example fvwmtabrc has been installed into /usr/share/doc/${PF}"
+		einfo
 	}
 }
