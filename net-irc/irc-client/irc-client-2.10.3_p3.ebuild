@@ -1,7 +1,7 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irc-client/irc-client-2.10.3_p3.ebuild,v 1.1 2003/09/10 23:56:26 zul Exp $
-			   
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irc-client/irc-client-2.10.3_p3.ebuild,v 1.2 2003/09/11 02:26:49 msterret Exp $
+
 MY_P=irc
 MY_PV=2.10.3p3
 DESCRIPTION="A simplistic RFC compliant IRC client"
@@ -25,7 +25,7 @@ S=${WORKDIR}/${MY_P}${MY_PV}
 src_compile () {
 
 	use ipv6 && myconf="--with-ip6" || myconf="--without-ip6"
-	
+
 	./configure \
 		--prefix=/usr \
 		--host=${CHOST} \
@@ -34,9 +34,9 @@ src_compile () {
 		--localstatedir=/var/run/ircd \
 		$myconf || die "Configure failed"
 
-	# irc doesnt recognize the proper CHOST properly in some cases. 
+	# irc doesnt recognize the proper CHOST properly in some cases.
 	# Cheap hack to get it working properly. - zul
-	cd `support/config.guess` 
+	cd `support/config.guess`
 	emake client || die "client build failed"
 }
 
