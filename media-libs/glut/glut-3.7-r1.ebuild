@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-libs/glut/glut-3.7-r1.ebuild,v 1.3 2001/01/22 05:36:16 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/glut/glut-3.7-r1.ebuild,v 1.4 2001/02/05 02:46:21 achim Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -29,6 +29,8 @@ src_install () {
     into /usr/X11R6
     dolib lib/glut/libglut.so.3.7
     preplib /usr/X11R6
+    cd ${D}/usr/X11R6/lib
+    ln -s libglut.so.3.7 libglut.so
 }
 
 pkg_postinst() {
