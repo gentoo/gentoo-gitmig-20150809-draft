@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cheetah-docs/cheetah-docs-0.9.15_alpha1.ebuild,v 1.1 2004/01/18 13:01:53 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cheetah-docs/cheetah-docs-0.9.15_alpha1.ebuild,v 1.2 2004/04/18 08:31:35 dholm Exp $
 
 DESCRIPTION="Documentation for Cheetah templates."
 HOMEPAGE="http://www.cheetahtemplate.org/"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/cheetahtemplate/CheetahDocs-${PV/_alpha/a}.tgz"
 
 IUSE=""
 LICENSE="PSF-2.2"
-KEYWORDS="x86"
+KEYWORDS="x86 ~ppc"
 SLOT="0"
 
 DEPEND=""
