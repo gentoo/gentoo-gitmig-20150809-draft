@@ -1,30 +1,20 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 dad9f0e605d6de3bf68252140b61009c ChangeLog 6355
-MD5 559721fdaa4660ca40f22c217f7da739 file-3.41.ebuild 1019
-MD5 da5298f15b5267a578c17faaf71f5b15 file-4.02.ebuild 1021
-MD5 502acf330e5ff291809b74f6232fa192 file-4.06.ebuild 1563
-MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 0e4d6ce9ebf5f48d4373a7f775725d18 file-4.07-r1.ebuild 1630
 MD5 cd75d319ed64f97b080e5286b7d51e98 file-4.07.ebuild 1578
+MD5 e09b8ceb70212c1594acb3036e0ac2f1 file-4.09.ebuild 1738
+MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+MD5 da5298f15b5267a578c17faaf71f5b15 file-4.02.ebuild 1021
+MD5 43dbcfc8f3a2da721517b74f2305a17e ChangeLog 6448
+MD5 559721fdaa4660ca40f22c217f7da739 file-3.41.ebuild 1019
+MD5 0e4d6ce9ebf5f48d4373a7f775725d18 file-4.07-r1.ebuild 1630
 MD5 f01c4ecef11aed488539c726c53b89f4 file-4.08.ebuild 1438
-MD5 0101265c4bb2ce0dda9257e82d80ee5a file-4.09.ebuild 1736
-MD5 eabc698678353b52ea7d9bfb724d4e1e files/digest-file-3.41 268
-MD5 fd38ae2f761ce496f7caedf3226166ae files/digest-file-4.02 61
-MD5 50700bf6bff49778fd8c6083466a0813 files/digest-file-4.06 61
-MD5 aff834708f034a4995abba4192e79583 files/file-3.39-gentoo.diff 4673
-MD5 aff834708f034a4995abba4192e79583 files/file-3.41-mips-gentoo.diff 4673
-MD5 8f6cec8c0754678a2817139182637eac files/file-4.xx-mips-gentoo.diff 13035
+MD5 502acf330e5ff291809b74f6232fa192 file-4.06.ebuild 1563
 MD5 ea5caf65874cda8c3f3d5baace9c73f8 files/digest-file-4.07 61
-MD5 ea5caf65874cda8c3f3d5baace9c73f8 files/digest-file-4.07-r1 61
-MD5 8153e3726c4dad50b53c76eaf32b4833 files/file-4.07-gentoo.diff 648
-MD5 9ab14ea35a2db2864bb6e92d1ca87f17 files/digest-file-4.08 61
+MD5 aff834708f034a4995abba4192e79583 files/file-3.41-mips-gentoo.diff 4673
 MD5 655e5c463709e244970b23b64aaf8bf7 files/digest-file-4.09 61
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFAyKzlHTu7gpaalycRArqwAJ94J+EEeQwtIo0Aq90OiLmp1rjy8wCcDZG+
-7C1AHqg5F10RT8+d5pjdX38=
-=AfV0
------END PGP SIGNATURE-----
+MD5 9ab14ea35a2db2864bb6e92d1ca87f17 files/digest-file-4.08 61
+MD5 8f6cec8c0754678a2817139182637eac files/file-4.xx-mips-gentoo.diff 13035
+MD5 aff834708f034a4995abba4192e79583 files/file-3.39-gentoo.diff 4673
+MD5 eabc698678353b52ea7d9bfb724d4e1e files/digest-file-3.41 268
+MD5 50700bf6bff49778fd8c6083466a0813 files/digest-file-4.06 61
+MD5 ea5caf65874cda8c3f3d5baace9c73f8 files/digest-file-4.07-r1 61
+MD5 fd38ae2f761ce496f7caedf3226166ae files/digest-file-4.02 61
+MD5 8153e3726c4dad50b53c76eaf32b4833 files/file-4.07-gentoo.diff 648
