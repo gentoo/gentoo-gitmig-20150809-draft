@@ -1,0 +1,15 @@
+# ChangeLog for sys-devel/gnuconfig
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gnuconfig/ChangeLog,v 1.1 2003/07/12 09:28:32 kumba Exp $
+
+
+*gnuconfig-20030708 (12 Jul 2003)
+
+  12 Jul 2003; Joshua Kinard <kumba@gentoo.org> gnuconfig-20030708.ebuild:
+  First version.  This package contains config.sub and config.guess files from
+  ftp://ftp.gnu.org/pub/gnu/config.  Some packages from GNU apparently cannot
+  recognize certain system types, so these files are a neccessity.
+  This package will start in stable, since it's just a few files called only
+  if gnuconfig_update is called.  Starting keywords are "mips sparc x86 alpha hppa".
+  This snapshot is from 2003 Jul 08.
+
