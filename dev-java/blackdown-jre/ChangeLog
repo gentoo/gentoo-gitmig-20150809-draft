@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/blackdown-jre
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/ChangeLog,v 1.34 2004/06/10 23:43:32 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/ChangeLog,v 1.35 2004/06/18 08:05:12 karltk Exp $
+
+  18 Jun 2004; Karl Trygve Kalleberg <karltk@gentoo.org>
+  blackdown-jre-1.4.1.ebuild: Regen'ed digest for 2.95.bin, fixes #53657.
 
   10 Jun 2004; Jeremy Huddleston <eradicator@gentoo.org>
   blackdown-jre-1.4.2_rc1.ebuild:
