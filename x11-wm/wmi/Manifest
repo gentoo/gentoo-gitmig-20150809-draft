@@ -1,17 +1,17 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
+MD5 cd40a616328ede18523b5af11b42d462 ChangeLog 1842
 MD5 3113eb62900633d059d2bcbad0ef8f7e metadata.xml 343
-MD5 0d06712f50fcbf407f023ab1e7e919c2 ChangeLog 1752
-MD5 f766df30c53b3e1634dd3a877494f21c wmi-10.ebuild 1060
 MD5 52dfd2f30501eecf59fb99dac167c5db wmi-9.ebuild 1045
-MD5 607f0418f6681898ac8da1fbe4e8b6e7 files/wmi.desktop 112
+MD5 e0cd9b9b7a7f55f0d289f74467454e9b wmi-10.ebuild 1060
 MD5 f7f19525d1f04d7c2f698e824bca26b8 files/digest-wmi-9 57
+MD5 607f0418f6681898ac8da1fbe4e8b6e7 files/wmi.desktop 112
 MD5 1bc69f6a689f8553a641ce0309ac1311 files/digest-wmi-10 58
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (Darwin)
+Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBeiJLVWNWqTUmv+0RAgA5AJ4r3svXwaKYUiMdymhGOmyScw8gpACgr97r
-ysKHMSudRgjhkJd9rp71obQ=
-=Ts4t
+iD8DBQFBilKDVWNWqTUmv+0RAs71AJwIwpkgsrZas9ZwXcuWcgvshSSFaQCeLlwk
+S3a3rpoetg3kK9oHJnMEdN0=
+=Lqc2
 -----END PGP SIGNATURE-----
