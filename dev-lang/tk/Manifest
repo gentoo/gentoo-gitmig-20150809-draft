@@ -1,4 +1,4 @@
-MD5 240ef130e954df8d4a38cb0e2aee56c5 ChangeLog 4240
+MD5 13e981029b787bc664a53749205f6654 ChangeLog 4357
 MD5 098de096482870bc8ecffca187559dc0 tk-8.3.3-r2.ebuild 2071
 MD5 61d31eae58b26d692008b24421c03ace tk-8.3.3-r3.ebuild 2180
 MD5 f7dbd8e2b7c55301ca80d9563f4219ad tk-8.3.3.ebuild 2013
@@ -6,9 +6,8 @@ MD5 97720cf062d7a3712f1141dc2d3b740f tk-8.3.4-r1.ebuild 2003
 MD5 e3f270bd3fbacaaaa13fb610cf92bad8 tk-8.3.4.ebuild 2182
 MD5 80b15185cab15f88b32990314cc48ef7 tk-8.4.3.ebuild 2001
 MD5 accb38e44818ec38b058f5fb2d3401e5 tk-8.4.4.ebuild 2014
-MD5 e281a527b328aa3ab11855feae783222 tk-8.4.5.ebuild 2005
-MD5 eb71fb15bb8ea2b01a9c87bdc1174a94 tk-8.4.6.ebuild 2008
-MD5 f64532dbe89c04cefe0e16a9743f5f57 files/digest-tk-8.4.6 64
+MD5 7515590f595aa0a3eb1be7551aa5926d tk-8.4.5.ebuild 1998
+MD5 1cc81b8a5b2fcc8ce0ccaa6b60fdb487 tk-8.4.6.ebuild 1999
 MD5 2ba3335fd9167fef8f3f99be70675257 files/digest-tk-8.3.3 60
 MD5 2ba3335fd9167fef8f3f99be70675257 files/digest-tk-8.3.3-r2 60
 MD5 2ba3335fd9167fef8f3f99be70675257 files/digest-tk-8.3.3-r3 60
@@ -17,5 +16,6 @@ MD5 0321d3bb5b70142a415de40ae2d5e3d4 files/digest-tk-8.3.4-r1 192
 MD5 b3e7fb189b73f361f1fa7abddd3ee14a files/digest-tk-8.4.3 64
 MD5 6c77ba125cd08c001ee834d9c2256db2 files/digest-tk-8.4.4 64
 MD5 e6c32456220f2503da65035680c4d3ca files/digest-tk-8.4.5 64
+MD5 f64532dbe89c04cefe0e16a9743f5f57 files/digest-tk-8.4.6 64
 MD5 e662e61449ea86b439ceb41463762cdc files/remove-control-v-8.4.diff 449
 MD5 3e8db8239fe4e68f5107a7a1d4f2f85b files/remove-control-v.diff 400
