@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/librsvg-1.0.3.ebuild,v 1.7 2003/02/13 12:14:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/librsvg-1.0.3.ebuild,v 1.8 2003/05/30 09:59:20 lu_zero Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="librsvg"
@@ -8,7 +8,7 @@ SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/${PN}/${P}.tar.gz"
 HOMEPAGE="http://www.gnome.org/"
 SLOT="1"
 LICENSE="LGPL-2.1"
-KEYWORDS="x86 sparc "
+KEYWORDS="x86 ppc sparc "
 
 DEPEND="virtual/glibc
 	>=gnome-base/gnome-libs-1.4.1.2-r1
