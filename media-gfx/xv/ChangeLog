@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/xv
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/ChangeLog,v 1.27 2004/02/17 23:02:05 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/ChangeLog,v 1.28 2004/04/17 18:53:41 lv Exp $
+
+  17 Apr 2004; Travis Tilley <lv@gentoo.org> +files/xv-use-getcwd.patch,
+  xv-3.10a-r6.ebuild:
+  fix for segfaults on amd64
 
   17 Feb 2004; Aron Griffis <agriffis@gentoo.org> xv-3.10a-r6.ebuild:
   stable on alpha and ia64

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/xv-3.10a-r6.ebuild,v 1.6 2004/02/17 23:02:05 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/xv-3.10a-r6.ebuild,v 1.7 2004/04/17 18:53:41 lv Exp $
 
 inherit ccc flag-o-matic eutils
 
@@ -25,6 +25,8 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-enhanced-Nu.patch || die
 	epatch ${FILESDIR}/${P}-gentoo-Nu.patch || die
 	[ `use ppc` ] && epatch ${FILESDIR}/${P}-ppc.patch
+	# This patch is needed to get xv to stop segfaulting on amd64
+	use amd64 && epatch ${FILESDIR}/xv-use-getcwd.patch
 }
 
 src_compile() {
