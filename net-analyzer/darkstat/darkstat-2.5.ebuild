@@ -1,12 +1,12 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/darkstat/darkstat-2.5.ebuild,v 1.1 2003/10/18 16:59:12 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/darkstat/darkstat-2.5.ebuild,v 1.2 2004/01/03 02:18:56 zul Exp $
 
 DESCRIPTION="darkstat is a network traffic analyzer"
 HOMEPAGE="http://members.optushome.com.au/emikulic/net/darkstat/"
 SRC_URI="http://members.optushome.com.au/emikulic/net/darkstat/${P}.tar.gz"
 
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE=""
 LICENSE="GPL-2"
 SLOT="0"

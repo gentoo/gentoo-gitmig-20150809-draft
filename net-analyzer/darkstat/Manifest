@@ -1,5 +1,5 @@
-MD5 3facd340b95bc50d706e2d811bbfe9ce darkstat-2.5.ebuild 1000
-MD5 a9c413370a92402d5a4d2bc0c1a97bf7 ChangeLog 427
+MD5 3d9e3ecc1ef91f54e7aedd15133759a6 darkstat-2.5.ebuild 999
+MD5 d65fba7a9463c5abcd277c45f955d3ac ChangeLog 510
 MD5 7e285f080272b311b0eb8b0028928e07 metadata.xml 219
 MD5 11a0d835bd33988a1e21544896d0374e files/digest-darkstat-2.5 64
 MD5 76c4f5b5b07f68a1dc51298b0de8cba3 files/darkstat-confd 207
