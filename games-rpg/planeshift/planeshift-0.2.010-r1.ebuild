@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/planeshift/planeshift-0.2.010-r1.ebuild,v 1.9 2004/06/24 23:16:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/planeshift/planeshift-0.2.010-r1.ebuild,v 1.10 2004/11/05 20:06:18 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -8,7 +8,7 @@ DESCRIPTION="virtual fantasy world MMORPG"
 HOMEPAGE="http://www.planeshift.it/"
 SRC_URI="mirror://gentoo/distfiles/${P}.tar.bz2"
 
-LICENSE="GPL-2 | Planeshift"
+LICENSE="|| ( GPL-2 Planeshift )"
 SLOT="0"
 KEYWORDS="x86 ppc"
 IUSE=""
