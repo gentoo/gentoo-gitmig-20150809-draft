@@ -823,3 +823,7 @@ x11-libs/gdkxft
 # Includes GCC3.1 support -- masked until tested for GCC2.95.3
 # compatibility.
 =sys-apps/pciutils-2.1.9-r2
+
+# lostlogic@gentoo.org 3 Jun 2002
+# GCC3.1 support, new version masked for testing
+=dev-db/edb-1.0.3

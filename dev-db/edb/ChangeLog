@@ -1,6 +1,13 @@
 # ChangeLog for dev-db/edb
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-db/edb/ChangeLog,v 1.1 2002/02/01 21:53:11 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/edb/ChangeLog,v 1.2 2002/06/03 21:35:13 lostlogic Exp $
+
+*edb-1.0.3 (3 Jun 2002)
+
+  3 Jun 2002; Brandon Low <lostlogic@gentoo.org> ChangeLog :
+
+  Updated to 1.0.3, and added scripts to ensure correct compilation on all
+  compiler versions
 
 *edb-1.0.2-r1 (1 Feb 2002)
 
