@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.3.1-r2.ebuild,v 1.4 2003/04/24 13:35:10 coredumb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.3.1-r2.ebuild,v 1.5 2003/05/08 05:15:38 heim Exp $
 
 inherit flag-o-matic 
 
@@ -252,8 +252,8 @@ src_install() {
 
     #revert Pear patch
     rm ${D}/usr/lib/php/PEAR/Registry.php
-    mv ${S}/pear/PEAR/Registry.old ${D}/usr/lib/php/PEAR/Registry.php
-
+#    mv ${S}/pear/PEAR/Registry.old ${D}/usr/lib/php/PEAR/Registry.php
+    cat ${S}/pear/PEAR/Registry.old | sed -e 's:${PORTAGE_TMPDIR}/${PF}::' > ${D}/usr/lib/php/PEAR/Registry.php
 	if [ "`use apache2`" ] ; then
 		exeinto /usr/lib/apache2-extramodules
 		doexe .libs/libphp4.so
