@@ -1,7 +1,34 @@
 # ChangeLog for sys-kernel/xfs-sources
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xfs-sources/ChangeLog,v 1.9 2002/12/18 00:12:48 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xfs-sources/ChangeLog,v 1.10 2002/12/23 00:42:06 viz Exp $
 
+*xfs-sources-2.4.20_pre1 (22 Dec 2002)
+
+  22 Dec 2002; Tobias Eichert <viz@gentoo.org> xfs-sources-2.4.20_pre1.ebuild:
+
+  Version bump.
+  
+  This is the first xfs-sources release I did by myself;
+  it aims for having a lot of nice and stable features
+  in the near future. Please test it and report bugs
+  since it's going to become the next Live CD kernel.
+  
+  Features:
+  
+  - Update 3.5 GB address space patch
+  - Update to latest XFS (full features)
+  - Update ACPI snapshot (12 Dec 2002)
+  - Update EVMS
+  - Add Win4Lin (including mki adapter patch)
+  - Add dc395x (Driver for older Tekram SCSI host adapters, fixes bug #12218)
+  - Add imon support (SGI's Inode Monitor)
+  - Update patch-int (aka CryptoAPI)
+  - Update loop-jari (for encrypted loopback devices)
+  - Add openwall (security related things 
+    like non-executable user stack area,etc.)
+  - Miscellaneous little patches
+
+  
   17 Dec 2002; Brandon Low <lostlogic@gentoo.org>:
   Make all kernel-sources SLOT="${KV}"
 
