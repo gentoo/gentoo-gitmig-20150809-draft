@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Update: Roman Weber <gentoo@gonzo.ch>
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php/php-4.2.1-r1.ebuild,v 1.3 2002/07/16 03:56:18 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php/php-4.2.1-r3.ebuild,v 1.1 2002/07/16 03:56:18 rphillips Exp $
 
 A=php-${PV}.tar.gz
 S=${WORKDIR}/php-${PV}
@@ -12,7 +12,7 @@ LICENSE="PHP"
 SLOT="0"
 
 DEPEND=">=dev-libs/gmp-3.1.1
-        freetype? ( ~media-libs/freetype-1.3.1 >=media-libs/t1lib-1.3.1 )
+	freetype? ( ~media-libs/freetype-1.3.1 >=media-libs/t1lib-1.3.1 )
 	jpeg? ( >=media-libs/jpeg-6b )
 	tiff? ( >=media-libs/tiff-3.5.5 )
 	png? ( >=media-libs/libpng-1.2.1 )
@@ -21,7 +21,7 @@ DEPEND=">=dev-libs/gmp-3.1.1
 	qt? ( =x11-libs/qt-2.3* )
 	nls? ( sys-devel/gettext )
 	pam? ( >=sys-libs/pam-0.75 )
-	xml? ( >=app-text/sablotron-0.44 )
+	xml? ( >=app-text/sablotron-0.95-r1 )
 	ssl? ( >=dev-libs/openssl-0.9.5 )
 	curl? ( >=net-ftp/curl-7.8.1 )
 	snmp? ( >=net-analyzer/ucd-snmp-4.2.3 )
@@ -40,16 +40,20 @@ DEPEND=">=dev-libs/gmp-3.1.1
 	pdflib? ( >=media-libs/pdflib-4.0.1-r2 )
 	postgres? ( >=dev-db/postgresql-7.1 )
 	readline? ( >=sys-libs/ncurses-5.1
-		>=sys-libs/readline-4.1 )"
+	>=sys-libs/readline-4.1 )"
 
 RDEPEND="${DEPEND}
 	qt? ( >=x11-libs/qt-2.3.0 )
-	xml? ( >=app-text/sablotron-0.44 )"
+	xml? ( >=app-text/sablotron-0.95-r1 )"
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}
 
+	# Configure Patch for wired uname -a
+	mv configure configure.old
+	cat configure.old | sed "s/PHP_UNAME=\`uname -a\`/PHP_UNAME=\`uname -s -n -r -v\`/g" > configure
+	chmod 755 configure
 }
 
 src_compile() {
@@ -70,18 +74,18 @@ src_compile() {
 	use ldap &&  myconf="${myconf} --with-ldap" 
 	use pdflib && myconf="${myconf} --with-pdflib=/usr"
 	use firebird && myconf="${myconf} --with-interbase=/opt/interbase"
-        use gd && myconf="${myconf} --with-gd"
+	use gd && myconf="${myconf} --with-gd"
 	use freetype && myconf="${myconf} --with-ttf --with-t1lib"
 	use jpeg && myconf="${myconf} --with-jpeg-dir=/usr/lib"
 	use png && myconf="${myconf} --with-png-dir=/usr"
 	use tiff && myconf="${myconf} --with-tiff-dir=/usr"
 
-        # optional support for oracle oci8 
-        if [ "`use oci8`" ] ; then 
-                if [ "$ORACLE_HOME" ] ; then 
-                        myconf="${myconf} --with-oci8=${ORACLE_HOME}" 
-                fi 
-        fi 
+	# optional support for oracle oci8 
+	if [ "`use oci8`" ] ; then 
+			if [ "$ORACLE_HOME" ] ; then 
+					myconf="${myconf} --with-oci8=${ORACLE_HOME}" 
+			fi 
+	fi 
 					
 	use qt && ( \
 		export QTDIR=/usr/qt/2 #hope this helps - danarmak
@@ -117,11 +121,11 @@ src_compile() {
 		myconf="${myconf} --with-xpm-dir=/usr/X11R6"
 		LDFLAGS="$LDFLAGS -L/usr/X11R6/lib"
 	fi
-    
+
 	./configure \
 		--prefix=/usr \
 		--with-gmp \
-                --with-bz2 \
+		--with-bz2 \
 		--enable-ftp \
 		--enable-dbase \
 		--with-zlib=yes \
@@ -141,7 +145,7 @@ src_compile() {
 
 
 src_install() {
- 	make INSTALL_ROOT=${D} install-pear || die
+	make INSTALL_ROOT=${D} install-pear || die
 
 	dodoc CODING_STANDARDS LICENSE EXTENSIONS 
 	dodoc RELEASE_PROCESS README.* TODO NEWS
@@ -158,7 +162,7 @@ src_install() {
 
 pkg_postinst() {
 	einfo
-        einfo "Please don't use this package on a webserver."
+	einfo "Please don't use this package on a webserver."
 	einfo "There is no security compiled in."	
 	einfo
 }
