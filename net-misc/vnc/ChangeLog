@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/vnc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/ChangeLog,v 1.19 2003/05/04 14:58:45 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/ChangeLog,v 1.20 2003/06/09 11:51:43 weeve Exp $
+
+  09 Jun 2003; Jason Wever <weeve@gentoo.org> vnc-3.3.3-r2.ebuild,
+  vnc-3.3.3-r3.ebuild, vnc-3.3.4.ebuild, vnc-3.3.5-r1.ebuild,
+  vnc-3.3.5.ebuild, vnc-3.3.6-r1.ebuild, vnc-3.3.6.ebuild, vnc-3.3.7.ebuild,
+  files/vnc-3.3.3-10-xdm-auth-support.patch,
+  files/vnc-3.3.3r2-getline-fix.patch, files/vnc-3.3.4-platform-fixes.patch:
+  Added a couple patches from debian to make vnc-3.3.7 build and display
+  correctly on sparc. Marked all other vnc ebuilds as -sparc.
 
   04 May 2003; Daniel Ahlberg <aliz@gentoo.org> vnc-3.3.7.ebuild :
   Do not allow tightvnc and vnc to be installed at the same time as they

@@ -1,0 +1,2298 @@
+
++ * Permuted-choice 2, to pick out the bits from
++ * the CD array that generate the key schedule.
++ */
++static char    PC2_C[] = {
++       14,17,11,24, 1, 5,
++        3,28,15, 6,21,10,
++       23,19,12, 4,26, 8,
++       16, 7,27,20,13, 2,
++};
++
++static char    PC2_D[] = {
++       41,52,31,37,47,55,
++       30,40,51,45,33,48,
++       44,49,39,56,34,53,
++       46,42,50,36,29,32,
++};
++
++/*
++ * The C and D arrays used to calculate the key schedule.
++ */
++
++static char    C[28];
++static char    D[28];
++
++/*
++ * The key schedule.
++ * Generated from the key.
++ */
++static char    KS[16][48];
++
++/*
++ * The E bit-selection table.
++ */
++static char    E[48];
++static char    e[] = {
++       32, 1, 2, 3, 4, 5,
++        4, 5, 6, 7, 8, 9,
++        8, 9,10,11,12,13,
++       12,13,14,15,16,17,
++       16,17,18,19,20,21,
++       20,21,22,23,24,25,
++       24,25,26,27,28,29,
++       28,29,30,31,32, 1,
++};
++
++/*
++ * Set up the key schedule from the key.
++ */
++
++static
++setkey(key)
++char *key;
++{
++       int     i, j, k;
++       int     t;
++       char    *ptr;
++
++       /*
++        * First, generate C and D by permuting
++        * the key.  The low order bit of each
++        * 8-bit char is not used, so C and D are only 28
++        * bits apiece.
++        */
++       for (i=0; i<28; i++) {
++               C[i] = key[PC1_C[i]-1];
++               D[i] = key[PC1_D[i]-1];
++       }
++       /*
++        * To generate Ki, rotate C and D according
++        * to schedule and pick up a permutation
++        * using PC2.
++        */
++       for (i=0; i<16; i++) {
++               /*
++                * rotate.
++                */
++               for (k=0; k<shifts[i]; k++) {
++                       t = C[0];
++                       ptr = C;
++                       for (j=0; j<28-1; j++)
++                       {
++                               *ptr = ptr[1];
++                               ptr++;
++                       }
++                       C[27] = t;
++                       t = D[0];
++                       ptr = D;
++                       for (j=0; j<28-1; j++)
++                       {
++                               *ptr = ptr[1];
++                               ptr++;
++                       }
++                       D[27] = t;
++               }
++               /*
++                * get Ki. Note C and D are concatenated.
++                */
++               ptr = &KS[i][0];
++               for (j=0; j<24; j++) {
++                       ptr[j] = C[PC2_C[j]-1];
++                       ptr[j+24] = D[PC2_D[j]-28-1];
++               }
++       }
++
++       for(i=0;i<48;i++)
++               E[i] = e[i];
++}
++
++/*
++ * The 8 selection functions.
++ * For some reason, they give a 0-origin
++ * index, unlike everything else.
++ */
++static char    S[8][64] = {
++       14, 4,13, 1, 2,15,11, 8, 3,10, 6,12, 5, 9, 0, 7,
++        0,15, 7, 4,14, 2,13, 1,10, 6,12,11, 9, 5, 3, 8,
++        4, 1,14, 8,13, 6, 2,11,15,12, 9, 7, 3,10, 5, 0,
++       15,12, 8, 2, 4, 9, 1, 7, 5,11, 3,14,10, 0, 6,13,
++
++       15, 1, 8,14, 6,11, 3, 4, 9, 7, 2,13,12, 0, 5,10,
++        3,13, 4, 7,15, 2, 8,14,12, 0, 1,10, 6, 9,11, 5,
++        0,14, 7,11,10, 4,13, 1, 5, 8,12, 6, 9, 3, 2,15,
++       13, 8,10, 1, 3,15, 4, 2,11, 6, 7,12, 0, 5,14, 9,
++
++       10, 0, 9,14, 6, 3,15, 5, 1,13,12, 7,11, 4, 2, 8,
++       13, 7, 0, 9, 3, 4, 6,10, 2, 8, 5,14,12,11,15, 1,
++       13, 6, 4, 9, 8,15, 3, 0,11, 1, 2,12, 5,10,14, 7,
++        1,10,13, 0, 6, 9, 8, 7, 4,15,14, 3,11, 5, 2,12,
++
++        7,13,14, 3, 0, 6, 9,10, 1, 2, 8, 5,11,12, 4,15,
++       13, 8,11, 5, 6,15, 0, 3, 4, 7, 2,12, 1,10,14, 9,
++       10, 6, 9, 0,12,11, 7,13,15, 1, 3,14, 5, 2, 8, 4,
++        3,15, 0, 6,10, 1,13, 8, 9, 4, 5,11,12, 7, 2,14,
++
++        2,12, 4, 1, 7,10,11, 6, 8, 5, 3,15,13, 0,14, 9,
++       14,11, 2,12, 4, 7,13, 1, 5, 0,15,10, 3, 9, 8, 6,
++        4, 2, 1,11,10,13, 7, 8,15, 9,12, 5, 6, 3, 0,14,
++       11, 8,12, 7, 1,14, 2,13, 6,15, 0, 9,10, 4, 5, 3,
++
++       12, 1,10,15, 9, 2, 6, 8, 0,13, 3, 4,14, 7, 5,11,
++       10,15, 4, 2, 7,12, 9, 5, 6, 1,13,14, 0,11, 3, 8,
++        9,14,15, 5, 2, 8,12, 3, 7, 0, 4,10, 1,13,11, 6,
++        4, 3, 2,12, 9, 5,15,10,11,14, 1, 7, 6, 0, 8,13,
++
++        4,11, 2,14,15, 0, 8,13, 3,12, 9, 7, 5,10, 6, 1,
++       13, 0,11, 7, 4, 9, 1,10,14, 3, 5,12, 2,15, 8, 6,
++        1, 4,11,13,12, 3, 7,14,10,15, 6, 8, 0, 5, 9, 2,
++        6,11,13, 8, 1, 4,10, 7, 9, 5, 0,15,14, 2, 3,12,
++
++       13, 2, 8, 4, 6,15,11, 1,10, 9, 3,14, 5, 0,12, 7,
++        1,15,13, 8,10, 3, 7, 4,12, 5, 6,11, 0,14, 9, 2,
++        7,11, 4, 1, 9,12,14, 2, 0, 6,10,13,15, 3, 5, 8,
++        2, 1,14, 7, 4,10, 8,13,15,12, 9, 0, 3, 5, 6,11,
++};
++
++/*
++ * P is a permutation on the selected combination
++ * of the current L and key.
++ */
++static char    P[] = {
++       16, 7,20,21,
++       29,12,28,17,
++        1,15,23,26,
++        5,18,31,10,
++        2, 8,24,14,
++       32,27, 3, 9,
++       19,13,30, 6,
++       22,11, 4,25,
++};
++
++/*
++ * The current block, divided into 2 halves.
++ */
++
++static char    L[64];
++#define R   (L + 32)
++static char    tempL[32];
++static char    f[32];
++
++/*
++ * The combination of the key and the input, before selection.
++ */
++static char    preS[48];
++
++/*
++ * The payoff: encrypt a block.
++ */
++
++static
++encrypt (block, edflag)
++char *block;
++{
++       int i, ii;
++       register t, j, k;
++
++       /*
++        * First, permute the bits in the input
++        */
++       for (j=0; j<64; j++)
++               L[j] = block[IP[j]-1];
++       /*
++        * Perform an encryption operation 16 times.
++        */
++       for (ii=0; ii<16; ii++) {
++/*             print_bits ("L R", L); */
++               /*
++                * Set direction
++                */
++               if (edflag)
++                       i = 15-ii;
++               else
++                       i = ii;
++               /*
++                * Save the R array,
++                * which will be the new L.
++                */
++               for (j=0; j<32; j++)
++                       tempL[j] = R[j];
++               /*
++                * Expand R to 48 bits using the E selector;
++                * exclusive-or with the current key bits.
++                */
++               for (j=0; j<48; j++)
++                       preS[j] = R[E[j]-1] ^ KS[i][j];
++               /*
++                * The pre-select bits are now considered
++                * in 8 groups of 6 bits each.
++                * The 8 selection functions map these
++                * 6-bit quantities into 4-bit quantities
++                * and the results permuted
++                * to make an f(R, K).
++                * The indexing into the selection functions
++                * is peculiar; it could be simplified by
++                * rewriting the tables.
++                */
++               for (j=0; j<8; j++) {
++                       t = 6*j;
++                       k = S[j][(preS[t+0]<<5)+
++                               (preS[t+1]<<3)+
++                               (preS[t+2]<<2)+
++                               (preS[t+3]<<1)+
++                               (preS[t+4]<<0)+
++                               (preS[t+5]<<4)];
++                       t = 4*j;
++                       f[t+0] = (k>>3)&01;
++                       f[t+1] = (k>>2)&01;
++                       f[t+2] = (k>>1)&01;
++                       f[t+3] = (k>>0)&01;
++               }
++               /*
++                * The new R is L ^ f(R, K).
++                * The f here has to be permuted first, though.
++                */
++               for (j=0; j<32; j++)
++                       R[j] = L[j] ^ f[P[j]-1];
++               /*
++                * Finally, the new L (the original R)
++                * is copied back.
++                */
++               for (j=0; j<32; j++)
++                       L[j] = tempL[j];
++       }
++       /*
+--- vnc-3.3.3r2.orig/Xvnc/Makefile
++++ vnc-3.3.3r2/Xvnc/Makefile
+@@ -18,7 +18,7 @@
+ DEPENDTOP = ../..
+ IMAKETOP = ../..
+ IRULESRC = $(CONFIGSRC)/cf
+-IMAKE = $(IMAKESRC)/imake
++IMAKE = imake
+ IMAKE_CMD = $(IMAKE) -I$(IRULESRC) $(IMAKE_DEFINES)
+ MAKE_OPTS = -f xmakefile
+ MAKE_CMD = $(MAKE) $(MAKE_OPTS)
+--- vnc-3.3.3r2.orig/Xvnc/config/cf/Imake.cf
++++ vnc-3.3.3r2/Xvnc/config/cf/Imake.cf
+@@ -1,5 +1,4 @@
+-XCOMM $TOG: Imake.cf /main/28 1997/06/25 08:31:36 barstow $
+-XCOMM $XFree86: xc/config/cf/Imake.cf,v 3.34.2.3 1997/07/27 02:41:02 dawes Exp $
++XCOMM $Xorg: Imake.cf,v 1.4 2000/08/17 19:41:45 cpqbld Exp $
+ /*
+  * To add support for another platform:
+  * 
+@@ -18,6 +17,22 @@
+  *
+  *     4.  Create a .cf file with the name given by MacroFile.
+  */
++XCOMM $XFree86: xc/config/cf/Imake.cf,v 3.66 2001/04/18 16:13:17 dawes Exp $
++
++#if defined(__APPLE__)
++# undef __APPLE__
++# define MacroIncludeFile <darwin.cf>
++# define MacroFile darwin.cf
++# define DarwinArchitecture
++# ifdef __ppc__
++#  define PpcDarwinArchitecture
++#  undef __ppc__
++# endif
++# ifdef __i386__
++#  define i386DarwinArchitecture
++#  undef __i386__
++# endif
++#endif
+ 
+ #if defined(clipper) || defined(__clipper__)
+ # undef clipper
+@@ -26,6 +41,17 @@
+ # define IngrArchitecture
+ #endif /* clipper */
+ 
++#ifdef __CYGWIN__
++#define MacroIncludeFile <cygwin.cf>
++#define MacroFile cygwin.cf
++#define cygwinArchitecture
++#define i386Architecture
++#undef i386
++#undef __i386__
++#undef _X86_
++#undef __CYGWIN__
++#endif /* CYGWIN */
++
+ #ifdef ultrix
+ # define MacroIncludeFile <ultrix.cf>
+ # define MacroFile ultrix.cf
+@@ -36,6 +62,7 @@
+ # ifdef mips
+ #  undef mips
+ #  define MipsArchitecture
++#  define MipselArchitecture
+ # endif
+ # undef ultrix
+ # define UltrixArchitecture
+@@ -53,10 +80,19 @@
+ # define MacroIncludeFile <bsdi.cf>
+ # define MacroFile bsdi.cf
+ # undef bsdi
+-# define BSD386Architecture
+-# define i386BsdArchitecture
+-# define i386Architecture
+-# undef i386
++# define BSDOSArchitecture
++# if defined(__i386__) || defined(i386)
++#  define i386BsdArchitecture
++#  define i386Architecture
++#  undef i386
++#  undef __i386__
++# endif
++# if defined(__sparc__) || defined(__sparc_v9__) || defined(sparc)
++#  define SparcArchitecture
++#  undef sparc
++#  undef __sparc__
++#  undef __sparc_v9__
++# endif
+ #endif /* bsdi */
+ 
+ #ifdef __OpenBSD__
+@@ -114,6 +150,10 @@
+ #  endif
+ #  undef mc68000
+ # endif
++# ifdef __powerpc__
++#  define PpcArchitecture
++#  undef __powerpc__
++# endif
+ #endif /* OpenBSD */
+ 
+ #ifdef __NetBSD__
+@@ -142,6 +182,18 @@
+ # ifdef mc68000
+ #   define Mc68020Architecture
+ # endif
++# ifdef __arm32__
++#   define Arm32Architecture
++#   undef __arm32__
++# endif
++# ifdef __vax__
++#   define VaxArchitecture
++#   undef __vax__
++# endif
++# ifdef __powerpc__
++#   define PpcArchitecture
++#   undef __powerpc__
++# endif
+ #endif /* NetBSD */
+ 
+ #ifdef __FreeBSD__
+@@ -154,6 +206,11 @@
+ #  define i386Architecture
+ #  undef i386
+ # endif
++# ifdef __alpha__
++#  define AlphaBsdArchitecture
++#  define AlphaArchitecture
++#  undef __alpha__
++# endif
+ #endif /* __FreeBSD__ */
+ 
+ #ifdef AMOEBA
+@@ -319,6 +376,7 @@
+ # undef sgi
+ # define SGIArchitecture
+ # undef mips
++# undef __mips
+ # define MipsArchitecture
+ # ifdef _SVR4
+ #  undef _SVR4
+@@ -400,7 +458,7 @@
+ # endif
+ #endif /* MOTOROLA */
+ 
+-#ifdef SVR4
++#if defined(SVR4) && !defined(DGUX)
+ # ifdef i386
+ #  define i386Architecture
+ #  undef i386
+@@ -494,6 +552,8 @@
+ #endif /* SYSV386 */
+ 
+ #ifdef DGUX
++# define i386Architecture
++# define SVR4Architecture
+ # define MacroIncludeFile <DGUX.cf>
+ # define MacroFile DGUX.cf
+ # undef DGUX
+@@ -517,6 +577,7 @@
+ # ifdef __mips__
+ #  undef __mips__
+ #  define MipsArchitecture
++#  define MipselArchitecture
+ # endif
+ # ifdef __alpha
+ #  undef __alpha
+@@ -545,17 +606,201 @@
+ # undef linux
+ # define LinuxArchitecture
+ # ifdef i386
+-#  define i386Architecture
++#  ifndef i386Architecture
++#   define i386Architecture
++#  endif
+ #  undef i386
+-# endif /* i386 */
++XCOMM Keep cpp from replacing path elements containing i486/i586/i686
++#  ifdef i486
++#  ifndef i386Architecture
++#   define i386Architecture
++#  endif
++#   undef i486
++#  endif
++#  ifdef i586
++#  ifndef i386Architecture
++#   define i386Architecture
++#  endif
++#   undef i586
++#  endif
++#  ifdef i686
++#  ifndef i386Architecture
++#   define i386Architecture
++#  endif
++#   undef i686
++#  endif
++#  ifdef k6
++#  ifndef i386Architecture
++#   define i386Architecture
++#  endif
++#   undef k6
++#  endif
++# endif /* k6 */
++# ifdef __i386__
++#  ifndef i386Architecture
++#   define i386Architecture
++#  endif
++#  undef __i386__
++# endif /* __i386__ */
++# ifdef __i486__
++#  ifndef i386Architecture
++#   define i386Architecture
++#  endif
++#  undef __i486__
++# endif /* __i486__ */
++# ifdef __i586__
++#  ifndef i386Architecture
++#   define i386Architecture
++#  endif
++#  undef __i586__
++# endif /* __i586__ */
++# ifdef __i686__
++#  ifndef i386Architecture
++#   define i386Architecture
++#  endif
++#  undef __i686__
++# endif /* __i686__ */
++# ifdef __k6__
++#  ifndef i386Architecture
++#   define i386Architecture
++#  endif
++#  undef __k6__
++# endif /* __k6__ */
++# ifdef __i386
++#  ifndef i386Architecture
++#   define i386Architecture
++#  endif
++#  undef __i386
++# endif /* __i386 */
++# ifdef __i486
++#  ifndef i386Architecture
++#   define i386Architecture
++#  endif
++#  undef __i486
++# endif /* __i486 */
++# ifdef __i586
++#  ifndef i386Architecture
++#   define i386Architecture
++#  endif
++#  undef __i586
++# endif /* __i586 */
++# ifdef __i686
++#  ifndef i386Architecture
++#   define i386Architecture
++#  endif
++#  undef __i686
++# endif /* __i686 */
++# ifdef __k6
++#  ifndef i386Architecture
++#   define i386Architecture
++#  endif
++#  undef __k6
++# endif /* __k6 */
++# ifdef __s390__
++#   define s390Architecture
++#  undef __s390__
++# endif /* s390 */
+ # ifdef __alpha
+ #  define AlphaArchitecture
+ #  undef __alpha
+ # endif /* __alpha */
++# ifdef __alpha__
++#  ifndef AlphaArchitecture
++#   define AlphaArchitecture
++#  endif
++#  undef __alpha__
++# endif /* __alpha__ */
++# ifdef __arm__
++#  define Arm32Architecture
++#  undef arm
++#  undef __arm
++#  undef __arm__
++# endif
+ # ifdef mc68000
+ #  define Mc68020Architecture
+ #  undef mc68000
+ # endif /* mc68000 */
++# ifdef powerpc
++#  define PpcArchitecture
++#  undef powerpc
++# endif
++# ifdef __powerpc__
++#  ifndef PpcArchitecture
++#   define PpcArchitecture
++#  endif
++#  undef __powerpc__
++# endif
++# ifdef sparc
++#  define SparcArchitecture
++#  undef sparc
++# endif
++# ifdef __sparc__
++#  ifndef SparcArchitecture
++#   define SparcArchitecture
++#  endif
++#  undef __sparc__
++# endif
++# ifdef ia64 
++#  define ia64Architecture
++#  undef ia64 
++# endif
++# ifdef __ia64__
++#  ifndef ia64Architecture
++#   define ia64Architecture
++#  endif
++#  undef __ia64__
++# endif
++# if defined(mips) || defined(__mips__)
++#  define MipsArchitecture
++#  undef mips
++#  undef __mips__
++#  if defined(MIPSEL) || defined(_MIPSEL)
++#   define MipselArchitecture
++#  endif
++#  undef MIPSEL
++#  undef _MIPSEL
++# endif
++# ifdef __hppa__
++#  ifndef HPArchitecture
++#   define HPArchitecture
++#  endif
++#  undef __hppa__
++# endif /* __hppa__ */
++# ifdef __sh__
++#  ifndef SuperHArchitecture
++#   define SuperHArchitecture
++#  endif
++#  ifdef __BIG_ENDIAN__
++#   ifndef SuperHebArchitecture
++#    define SuperHebArchitecture
++#   endif
++#  endif
++#  undef __sh__
++# endif /* __sh__ */
++# if defined(__SH3__) || defined(__sh3__)
++#  ifndef SuperH3Architecture
++#   define SuperH3Architecture
++#  endif
++#  undef __SH3__
++#  undef __sh3__
++# endif /* __SH3__ or __sh3__ */
++# ifdef __SH4__
++#  ifdef __SH4_NOFPU__
++#   ifndef SuperH4NOFPUArchitecture
++#    define SuperH4NOFPUArchitecture
++#   endif
++#   undef __SH4_NOFPU__
++#  else
++#   ifndef SuperH4Architecture
++#    define SuperH4Architecture
++#   endif
++#  endif
++#  undef __SH4__
++# endif /* __SH4__ */
++XCOMM  for compatibility with 3.3.x 
++# ifdef PpcArchitecture
++#  define PowerPCArchitecture
++# endif
+ #endif /* linux */
+ 
+ #if (defined(__Lynx__) || defined(Lynx)) && (defined(i386) || defined(__i386__) || defined(__x86__) || defined(__powerpc__) || defined(__sparc__) || defined(sparc))
+@@ -572,7 +817,7 @@
+ #  undef __x86__
+ # endif
+ # ifdef __powerpc__
+-#  define ppcArchitecture
++#  define PpcArchitecture
+ #  undef __powerpc__
+ # endif
+ # if defined(sparc) || defined(__sparc__)
+@@ -580,6 +825,10 @@
+ #  undef sparc
+ #  undef __sparc__
+ # endif
++/* for compatibility with 3.3.x */
++# ifdef PpcArchitecture
++#  define PowerPCArchitecture
++# endif
+ #endif /* LynxOS AT/PPC/microSPARC */
+ 
+ #ifdef __uxp__
+@@ -603,17 +852,14 @@
+ # define mc68000Architecture
+ #endif /* __sxg__ */
+ 
+-#if defined(sequent) || defined(_SEQUENT_)
++#ifdef _SEQUENT_
++/* undefine assignments resulting from -DSVR4 */
++# undef MacroIncludeFile
+ # define MacroIncludeFile <sequent.cf>
++# undef MacroFile
+ # define MacroFile sequent.cf
+-# ifdef sequent
+-#  undef sequent
+-#  define Dynix3Architecture
+-# endif
+-# ifdef _SEQUENT_
+-#  undef _SEQUENT_
+-#  define DynixPtxArchitecture
+-# endif
++# undef _SEQUENT_
++# define DynixPtxArchitecture
+ # define SequentArchitecture
+ #endif
+ 
+@@ -635,8 +881,14 @@
+ #endif /* minix */
+ 
+ #ifdef MACH
++#ifdef __GNU__
++#define MacroIncludeFile <gnu.cf>
++#define MacroFile gnu.cf
++#define GNUMachArchitecture
++#else
+ #define MacroIncludeFile <mach.cf>
+ #define MacroFile mach.cf
++#endif
+ #undef MACH
+ #ifdef	i386
+ #define i386MachArchitecture
+@@ -645,6 +897,14 @@
+ #undef i386
+ #endif /* MACH */
+ 
++/* On NetBSD, `unix' is not defined, and cpp emits a warning every time
++ * it sees a test using the `unix' symbol */
++#if !defined(NetBSDArchitecture) || (defined(NetBSDArchitecture) && DefaultOSMajorVersion == 1 && DefaultOSMinorVersion <= 3)
++#ifdef unix
++#undef unix
++#endif
++#endif
++
+ #ifdef emxos2
+ #define MacroIncludeFile <os2.cf>
+ #define MacroFile os2.cf
+@@ -652,6 +912,39 @@
+ #define i386Architecture
+ #endif /* emxos2 */
+ 
++#if defined(__QNX__) && !defined(__QNXNTO__)
++#define MacroIncludeFile <QNX4.cf>
++#define MacroFile QNX4.cf
++#define QNX4Architecture
++#define i386Architecture
++#endif /* QNX4 */
++
++#ifdef __QNXNTO__
++#define MacroIncludeFile <nto.cf>
++#define MacroFile nto.cf
++#define NTOArchitecture
++#ifdef PPC
++# define PPCArchitecture
++# undef PPC
++#else
++#ifdef MIPS
++# define mipsArchitecture
++# undef MIPS
++#else
++#ifdef i386
++# define i386Architecture
++# undef i386
++#endif
++#endif
++#endif
++#endif /* QNX/Neutrino */
++
++#ifdef SparcArchitecture
++# if defined(__sparc_v9) || defined(__arch64__)
++#  define Sparc64Architecture
++# endif
++#endif
++
+ #ifndef MacroIncludeFile
+ XCOMM WARNING:  Imake.cf not configured; guessing at definitions!!!
+ XCOMM This might mean that BOOTSTRAPCFLAGS was not set when building imake.
+--- vnc-3.3.3r2.orig/Xvnc/config/cf/xfree86.cf
++++ vnc-3.3.3r2/Xvnc/config/cf/xfree86.cf
+@@ -73,6 +73,14 @@
+ #ifndef XF86I128Server
+ #define XF86I128Server		YES
+ #endif
++#ifndef XF86GLINTServer
++#define XF86GLINTServer		YES
++#endif
++#if defined(LinuxArchitecture)
++#ifndef XF86FBDevServer
++#define XF86FBDevServer		YES
++#endif
++#endif
+ #endif
+ 
+ /*
+@@ -101,12 +109,26 @@
+ #ifndef XF86SVGAServer
+ #define XF86SVGAServer		YES
+ #endif
++#ifndef XF86VGA16Server
++#define XF86VGA16Server		YES
++#endif
+ #ifndef XF86MonoServer
+ #define XF86MonoServer		YES
+ #endif
++#ifndef XF86GLINTServer
++#define XF86GLINTServer		YES
++#endif
++#if defined(LinuxArchitecture)
++#ifndef XF86FBDevServer
++#define XF86FBDevServer		YES
++#endif
++#endif
+ #ifndef XF86SvgaDrivers
+ #define XF86SvgaDrivers		mga s3v
+ #endif
++#ifndef XF86Vga16Drivers
++#define XF86Vga16Drivers	generic
++#endif
+ #ifndef XF86Vga2Drivers
+ #define XF86Vga2Drivers		generic
+ #endif
+@@ -119,16 +141,104 @@
+ #ifdef Mc68020Architecture
+ #ifndef XF68FBDevServer
+ #define XF68FBDevServer		YES
++#define XF68FBDev77C32		NO
++#define XF68FBDevIMSTT		NO
++#define XF68FBDevMach64		NO
++#define XF68FBDevPermedia2	NO
++#endif
++#ifndef BuildXF86Setup
++#define BuildXF86Setup		NO
+ #endif
+ #endif
+ 
+-/* 
++/*
++ * For ARM platforms, the default is to build all X servers which
++ * are supported on this platform.
++ */
++#ifdef ArmArchitecture
++#ifndef XF68FBDevServer
++#define XF68FBDevServer		YES
++#define XF68FBDevCFB8		YES
++#define XF68FBDevCFB16		YES
++#define XF68FBDevCFB24		YES
++#define XF68FBDevCFB32		YES
++#define XF68FBDevIPLAN2p2	NO
++#define XF68FBDevIPLAN2p4	NO
++#define XF68FBDevIPLAN2p8	NO
++#define XF68FBDevILBM		NO
++#define XF68FBDevAFB		NO
++#define XF68FBDev77C32		NO
++#define XF68FBDevMach64		NO
++#define XF68FBDevIMSTT		NO
++#define XF68FBDevPermedia2	NO
++#endif
++#ifndef BuildXF86Setup
++#define BuildXF86Setup		NO
++#endif
++#endif
++
++/*
+  * For Mips/Arc platforms, the default is to build all X servers which
+- * are supported on this platform. 
++ * are supported on this platform.
+  */
+ #ifdef ArcArchitecture
+ #ifndef XF86S3Server
+-#define XF86S3Server          YES
++#define XF86S3Server		YES
++#endif
++#if defined(LinuxArchitecture)
++#ifndef XF86FBDevServer
++#define XF86FBDevServer		YES
++#endif
++#endif
++#ifndef BuildXF86Setup
++#define BuildXF86Setup		NO
++#endif
++#endif
++
++/*
++ * For PowerPC platforms, the default is to build all X servers which
++ * are supported on this platform.
++ */
++#ifdef PowerPCArchitecture
++#ifndef XF86SVGAServer
++#define XF86SVGAServer		NO
++#endif
++#ifndef XF86VGA16Server
++#define XF86VGA16Server		NO
++#endif
++#ifndef XF86S3Server
++#define XF86S3Server		NO
++#endif
++#ifndef XF68FBDevServer
++#define XF68FBDevServer		YES
++#define XF68FBDevCFB8		YES
++#define XF68FBDevCFB16		YES
++#define XF68FBDevCFB24		NO
++#define XF68FBDevCFB32		YES
++#define XF68FBDevIPLAN2p2	NO
++#define XF68FBDevIPLAN2p4	NO
++#define XF68FBDevIPLAN2p8	NO
++#define XF68FBDevILBM		NO
++#define XF68FBDevAFB		YES
++#define XF68FBDev77C32		YES
++#define XF68FBDevIMSTT		YES
++#define XF68FBDevMach64		YES
++#define XF68FBDevPermedia2	YES
++#endif
++#ifndef BuildXF86Setup
++#define BuildXF86Setup		NO
++#endif
++#endif
++
++/* For SPARC PCI platforms, the default is to build all X servers which are
++ * supported on this platform.
++ */
++#ifdef SparcArchitecture
++#ifndef XF86Mach64Server
++#define XF86Mach64Server	YES
++#endif
++#ifndef BuildXF86Setup
++#define BuildXF86Setup		NO
+ #endif
+ #endif
+ 
+@@ -189,6 +299,10 @@
+ # define XF86I128Server		NO
+ #endif
+ 
++#ifndef XF86GLINTServer
++# define XF86GLINTServer	NO
++#endif
++
+ #ifndef XF86TGAServer
+ # define XF86TGAServer		NO
+ #endif
+@@ -253,6 +367,12 @@
+ # define XF86I128Dir		/**/
+ #endif
+ 
++#if XF86GLINTServer
++# define XF86GLINTDir		glint
++#else
++# define XF86GLINTDir		/**/
++#endif
++
+ #if XF86TGAServer
+ # define XF86TGADir		tga
+ #else
+@@ -347,12 +467,13 @@
+ #define XF86AccelServerDirs	XF86S3Dir XF86S3VDir XF86I8514Dir \
+ 				XF86Mach8Dir XF86Mach32Dir XF86Mach64Dir \
+ 				XF86P9000Dir XF86AGXDir XF86W32Dir \
+-				XF86I128Dir XF86TGADir
++				XF86I128Dir XF86GLINTDir XF86TGADir
+ 
+ #undef XF86AccelServer
+ #if XF86S3Server || XF86S3VServer || XF86I8514Server || XF86Mach8Server || \
+     XF86Mach32Server || XF86Mach64Server || XF86P9000Server || \
+-    XF86AGXServer || XF86W32Server || XF86I128Server || XF86TGAServer
++    XF86AGXServer || XF86W32Server || XF86I128Server || XF86TGAServer || \
++    XF86GLINTServer
+ # define XF86AccelServer	YES
+ #else
+ # define XF86AccelServer	NO
+@@ -373,12 +494,21 @@
+  */
+ #ifndef XF86SvgaDrivers
+ # ifdef AlphaArchitecture
+-#  define XF86SvgaDrivers	mga tvga8900 s3v
++#  define XF86SvgaDrivers	mga tvga8900 s3v nv
+ # else
+-#  define XF86SvgaDrivers	nv et4000 et3000 pvga1 gvga ati sis tvga8900 \
++#  if defined(LinuxArchitecture)
++#   define XF86SvgaDrivers	nv et4000 et3000 pvga1 gvga r128 ati sis tvga8900 \
++				cirrus ncr77c22 compaq mga oak al2101 \
++				ali cl64xx video7 ark mx realtek s3_savage s3v apm \
++				s3_svga neo chips cyrix rendition p9x00 \
++				spc8110 i740 i810 tdfx smi generic
++#  else
++#   define XF86SvgaDrivers	nv et4000 et3000 pvga1 gvga r128 ati sis tvga8900 \
+ 				cirrus ncr77c22 compaq mga oak al2101 \
+-				ali cl64xx video7 ark mx realtek apm \
+-				s3v s3_svga chips generic
++				ali cl64xx video7 ark mx realtek s3v apm \
++				s3_svga neo chips cyrix rendition p9x00 \
++				spc8110 i740 i810 tdfx smi generic
++#  endif
+ # endif
+ #endif
+ 
+@@ -429,7 +559,7 @@
+ # define XF86W32Drivers		et4000w32
+ #endif
+ 
+-#if XF68FBDevServer
++#if XF68FBDevServer || XF86FBDevServer
+ # ifndef XF68FBDevIPLAN2p2
+ #  define XF68FBDevIPLAN2p2	YES
+ # endif
+@@ -449,10 +579,30 @@
+ #  define XF68FBDevCFB8		YES
+ # endif
+ # ifndef XF68FBDevCFB16
+-#  define XF68FBDevCFB16	NO
++#  define XF68FBDevCFB16	YES
++# endif
++# ifndef XF68FBDevCFB24
++#  if defined(i386Architecture) || defined(AlphaArchitecture)
++#   define XF68FBDevCFB24	YES
++#  else
++#   define XF68FBDevCFB24	NO
++#  endif
+ # endif
+ # ifndef XF68FBDevCFB32
+-#  define XF68FBDevCFB32	NO
++#  define XF68FBDevCFB32	YES
++# endif
++/* Accelerated stuff */
++# ifndef XF68FBDev77C32
++#  define XF68FBDev77C32	YES
++# endif
++# ifndef XF68FBDevIMSTT
++#  define XF68FBDevIMSTT	YES
++# endif
++# ifndef XF68FBDevMach64
++#  define XF68FBDevMach64	YES
++# endif
++# ifndef XF68FBDevPermedia2
++#  define XF68FBDevPermedia2	YES
+ # endif
+ #else
+ # ifndef XF68FBDevIPLAN2p2
+@@ -476,9 +626,24 @@
+ # ifndef XF68FBDevCFB16
+ #  define XF68FBDevCFB16	NO
+ # endif
++# ifndef XF68FBDevCFB24
++#  define XF68FBDevCFB24	NO
++# endif
+ # ifndef XF68FBDevCFB32
+ #  define XF68FBDevCFB32	NO
+ # endif
++# ifndef XF68FBDev77C32
++#  define XF68FBDev77C32	NO
++# endif
++# ifndef XF68FBDevIMSTT
++#  define XF68FBDevIMSTT	NO
++# endif
++# ifndef XF68FBDevMach64
++#  define XF68FBDevMach64	NO
++# endif
++# ifndef XF68FBDevPermedia2
++#  define XF68FBDevPermedia2	NO
++# endif
+ #endif
+ 
+ #ifndef XnestServer
+@@ -519,7 +684,7 @@
+ #if XF86AccelServer || XF86SVGAServer || XF98AccelServer || \
+     XF98GANBWAPServer || XF98NEC480Server || XF98NKVNECServer || \
+     XF98WABSServer || XF98WABEPServer || XF98WSNAServer || XF98TGUIServer || \
+-    XF98MGAServer || XF98SVGAServer
++    XF98MGAServer || XF98SVGAServer || XF68FBDevServer || XF86FBDevServer
+ #define BuildPexExt		YES
+ #else
+ #define BuildPexExt		NO
+@@ -535,7 +700,7 @@
+ #  if XF86AccelServer || XF86SVGAServer || XF98AccelServer || \
+       XF98GANBWAPServer || XF98NEC480Server || XF98NKVNECServer || \
+       XF98WABSServer || XF98WABEPServer || XF98WSNAServer || XF98TGUIServer || \
+-      XF98MGAServer || XF98SVGAServer
++      XF98MGAServer || XF98SVGAServer || XF68FBDevServer || XF86FBDevServer
+ #    define BuildGlxExt             YES
+ #  else
+ #    define BuildGlxExt             NO
+@@ -550,7 +715,7 @@
+ #if XF86AccelServer || XF86SVGAServer || XF98AccelServer || \
+     XF98GANBWAPServer || XF98NEC480Server || XF98NKVNECServer || \
+     XF98WABSServer || XF98WABEPServer || XF98WSNAServer || XF98TGUIServer || \
+-    XF98MGAServer || XF98SVGAServer
++    XF98MGAServer || XF98SVGAServer || XF68FBDevServer || XF86FBDevServer
+ #define BuildXIE		YES
+ #else
+ #define BuildXIE		NO
+@@ -591,14 +756,33 @@
+ #define WacomSupport		YES
+ #endif
+ #ifndef ElographicsSupport
+-#define ElographicsSupport	YES 
++#define ElographicsSupport	YES
++#endif
++#ifndef DynaproSupport
++#define DynaproSupport		YES
++#endif
++#ifndef MicroTouchSupport
++#define MicroTouchSupport	YES
+ #endif
+ #ifndef SummaSketchSupport
+ #define SummaSketchSupport	YES
+ #endif
++#ifndef AceCadSupport
++#define AceCadSupport		YES
++#endif
++#ifndef DialBoxSupport
++#if SystemV || SystemV4
++#define DialBoxSupport		NO
++#else
++#define DialBoxSupport		YES
++#endif
++#endif
+ #ifndef JoystickSupport
+ #define JoystickSupport		NO
+ #endif
++#ifndef CalcompSupport
++#define CalcompSupport		YES
++#endif
+ 
+ /*
+  * Build the extra extension libs even when not including the extra extensions
+@@ -645,6 +829,17 @@
+ #endif
+ #endif
+ 
++/*
++ * Build Japanese versions of XF86Setup -- needs Japanised Tk and Tcl
++ */
++#ifndef BuildJpXF86Setup
++#if HasJpTk && HasJpTcl && BuildXF86VidModeLibrary && BuildXF86MiscLibrary && BuildXKBlib
++#define BuildJpXF86Setup		YES
++#else
++#define BuildJpXF86Setup		NO
++#endif
++#endif
++
+ #ifndef XF86SetupUsesStaticTk
+ #define XF86SetupUsesStaticTk		YES
+ #endif
+@@ -653,13 +848,6 @@
+ #endif
+ 
+ /*
+- * Build the XKBui lib if building XF86Setup
+- */
+-#ifndef BuildXKBuilib
+-#define BuildXKBuilib			BuildXF86Setup
+-#endif
+-
+-/*
+  * Build the XFree86 DGA support
+  */
+ #ifndef BuildXF86DGA
+@@ -728,10 +916,17 @@
+ #endif
+ 
+ /*
++ * By default, create the local font directory
++ */
++#ifndef MakeLocalFontDir
++#define MakeLocalFontDir	YES
++#endif
++
++/*
+  * Build scanpci?
+  */
+ #ifndef BuildScanpci
+-#if SystemV || SystemV4 || (defined(LinuxArchitecture) && !defined(Mc68020Architecture)) || defined(i386BsdArchitecture) || defined(LynxOSArchitecture) || defined(OS2Architecture)
++#if SystemV || SystemV4 || (defined(LinuxArchitecture) && !defined(Mc68020Architecture) && !defined(PowerPCArchitecture) && !defined(ArmArchitecture)) || defined(i386BsdArchitecture) || defined(LynxOSArchitecture) || defined(OS2Architecture)
+ #define BuildScanpci		YES
+ #else
+ #define BuildScanpci		NO
+@@ -789,6 +984,15 @@
+ #endif
+ #endif
+ 
++/* Support for USB mouse */
++#ifndef UsbMouseSupport
++#define UsbMouseSupport	NO
++#endif
++/* Does this OS has libusb ? */
++#ifndef HasLibUsb
++#define HasLibUsb	NO
++#endif
++
+ #ifndef UseServerLock
+ #define UseServerLock	YES
+ #endif
+@@ -1017,4 +1221,8 @@
+ #define XF86Contrib
+ #endif
+ 
++#ifndef HasMktemp
++#define HasMktemp	YES
++#endif
++
+ #include <xf86.rules>
+--- vnc-3.3.3r2.orig/Xvnc/config/imake/imakemdep.h
++++ vnc-3.3.3r2/Xvnc/config/imake/imakemdep.h
+@@ -465,6 +465,9 @@
+ # ifdef __i386__
+ 	"-D__i386__",
+ # endif
++# ifdef __s390__
++	"-D__s390__",
++# endif
+ # ifdef __GNUC__
+ 	"-traditional",
+ # endif
+--- vnc-3.3.3r2.orig/Xvnc/programs/Xserver/os/xalloc.c
++++ vnc-3.3.3r2/Xvnc/programs/Xserver/os/xalloc.c
+@@ -172,7 +172,7 @@
+ #define SIZE_STEPS		(sizeof(double))
+ #define SIZE_HEADER		(2*sizeof(long)) /* = sizeof(double) for 32bit */
+ #ifdef XALLOC_DEBUG
+-#if defined(__sparc__)
++#if defined(__sparc__) || defined(__hppa__)
+ #define SIZE_TAIL		(2*sizeof(long)) /* = sizeof(double) for 32bit */
+ #else
+ #define SIZE_TAIL		(sizeof(long))
+@@ -309,7 +309,7 @@
+     }
+ 
+     /* alignment check */
+-#if defined(__alpha__) || defined(__sparc__) || defined(__mips__)
++#if defined(__alpha__) || defined(__sparc__) || defined(__mips__) || defined(__hppa__)
+     amount = (amount + (sizeof(long)-1)) & ~(sizeof(long)-1);
+ #endif
+ 
+@@ -390,7 +390,13 @@
+ 		ptr[1] = MAGIC;
+ #endif /* XALLOC_DEBUG */
+ #ifdef SIZE_TAIL
++# ifdef __hppa__
++		/* reserved space for 2 * sizeof(long), so use correct one */
++		/* see SIZE_TAIL macro */
++		((unsigned long *)((char *)ptr + amount))[-2] = MAGIC2;
++# else
+ 		((unsigned long *)((char *)ptr + amount))[-1] = MAGIC2;
++# endif /* __hppa__ */
+ #endif /* SIZE_TAIL */
+ 		ptr = (unsigned long *)((char *)ptr + SIZE_HEADER);
+ 		LOG_ALLOC("Xalloc-L", amount, ptr);
+--- vnc-3.3.3r2.orig/Xvnc/programs/Xserver/os/rpcauth.c
++++ vnc-3.3.3r2/Xvnc/programs/Xserver/os/rpcauth.c
+@@ -38,6 +38,7 @@
+ 
+ #ifdef SECURE_RPC
+ 
++#include <stdlib.h>
+ #include "X.h"
+ #include "Xauth.h"
+ #include "misc.h"
+--- vnc-3.3.3r2.orig/Xvnc/programs/Xserver/cfb/stipsparc.s
++++ vnc-3.3.3r2/Xvnc/programs/Xserver/cfb/stipsparc.s
+@@ -85,7 +85,7 @@
+ #define ForEachBits	LY4
+ #define NextBits	LY5
+ 
+-#ifdef SVR4
++#if defined(SVR4) || (defined(linux) && (defined(sparc) || defined(__sparc__)))
+ #ifdef TETEXT
+ #define	_cfbStippleStack	cfbStippleStackTE
+ #else
+--- vnc-3.3.3r2.orig/Xvnc/programs/Xserver/cfb/stipsprc32.s
++++ vnc-3.3.3r2/Xvnc/programs/Xserver/cfb/stipsprc32.s
+@@ -81,7 +81,7 @@
+ #define ForEachBits	LY4
+ #define NextBits	LY5
+ 
+-#ifdef SVR4
++#if defined(SVR4) || (defined(linux) && (defined(sparc) || defined(__sparc__)))
+ #ifdef TETEXT
+ #define	_cfb32StippleStack	cfb32StippleStackTE
+ #else
+--- vnc-3.3.3r2.orig/Xvnc/programs/Xserver/include/servermd.h
++++ vnc-3.3.3r2/Xvnc/programs/Xserver/include/servermd.h
+@@ -336,7 +336,7 @@
+ 
+ #endif /* luna */
+ 
+-#if (defined(i386) && (defined(SVR4) || defined(SYSV) || (defined(sun) && defined(SVR4))) || defined(__bsdi__) || (defined(__NetBSD__) && defined(__i386__)) || (defined(__OpenBSD__) && defined(__i386__)) || defined(__FreeBSD__) || defined(MACH386) || (defined(linux) && !defined(__mc68000__)) || (defined(AMOEBA) && defined(i80386)) || defined(MINIX) || defined(__EMX__) || (defined(Lynx) && defined(__i386__)))
++#if (defined(i386) && (defined(SVR4) || defined(SYSV) || (defined(sun) && defined(SVR4))) || defined(__bsdi__) || (defined(__NetBSD__) && defined(__i386__)) || (defined(__OpenBSD__) && defined(__i386__)) || defined(__FreeBSD__) || defined(MACH386) || (defined(linux) && !(defined(__mc68000__) || defined(PPC) || defined(__sparc__) || defined(__s390__))) || (defined(AMOEBA) && defined(i80386)) || defined(MINIX) || defined(__EMX__) || (defined(Lynx) && defined(__i386__)))
+ 
+ #ifndef IMAGE_BYTE_ORDER
+ #define IMAGE_BYTE_ORDER	LSBFirst
+@@ -381,6 +381,48 @@
+ 
+ #endif /* linux/m68k */
+ 
++#if defined (linux) && defined (PPC)
++
++#define IMAGE_BYTE_ORDER       MSBFirst
++#define BITMAP_BIT_ORDER       MSBFirst
++#define GLYPHPADBYTES          4
++#define GETLEFTBITS_ALIGNMENT  1
++
++#define LARGE_INSTRUCTION_CACHE
++#define FAST_CONSTANT_OFFSET_MODE
++
++#endif /* linux/PPC */
++
++#if defined (linux) && defined (__sparc__)
++
++#define IMAGE_BYTE_ORDER       MSBFirst
++#define BITMAP_BIT_ORDER       MSBFirst
++#define GLYPHPADBYTES          4
++#define GETLEFTBITS_ALIGNMENT  1
++
++#endif /* linux/__sparc__ */
++
++#if defined (linux) && defined (__s390__)
++
++#define IMAGE_BYTE_ORDER       MSBFirst
++#define BITMAP_BIT_ORDER       MSBFirst
++#define GLYPHPADBYTES          4
++#define GETLEFTBITS_ALIGNMENT  1
++
++#endif /* linux/__s390__ */
++
++#if defined (linux) && defined (PPC)
++
++#define IMAGE_BYTE_ORDER       MSBFirst
++#define BITMAP_BIT_ORDER       MSBFirst
++#define GLYPHPADBYTES          4
++#define GETLEFTBITS_ALIGNMENT  1
++
++#define LARGE_INSTRUCTION_CACHE
++#define FAST_CONSTANT_OFFSET_MODE
++
++#endif /* linux/PPC */
++
+ #ifdef sgi
+ 
+ #define IMAGE_BYTE_ORDER	MSBFirst
+--- vnc-3.3.4/Xvnc/config/cf/linux.cf	2002-08-08 13:14:31.000000000 +0200
++++ vnc-3.3.4-unixsrc/Xvnc/config/cf/linux.cf	2002-10-28 20:05:35.000000000 +0100
+@@ -1,80 +1,179 @@
+-XCOMM platform:  $TOG: linux.cf /main/36 1997/06/16 22:21:03 kaleb $
+-XCOMM platform:  $XFree86: xc/config/cf/linux.cf,v 3.57.2.12 1998/03/01 01:57:10 dawes Exp $
++XCOMM platform:  $Xorg: linux.cf,v 1.3 2000/08/17 19:41:47 cpqbld Exp $
++
++
++
++
++
++XCOMM platform:  $XFree86: xc/config/cf/linux.cf,v 3.165 2001/04/19 19:54:43 dawes Exp $
+ 
+ #ifndef LinuxElfDefault
+-#define LinuxElfDefault		YES
++# define LinuxElfDefault	YES
+ #endif
+ 
+ #ifndef UseElfFormat
+-#define UseElfFormat		LinuxElfDefault
++# define UseElfFormat		LinuxElfDefault
+ #endif
+ 
+ #ifndef OSBinaryType
+-#if UseElfFormat
+-#define OSBinaryType		[ELF]
+-#else
+-#ifdef AlphaArchitecture
+-#define OSBinaryType		[ECOFF]
+-#else
+-#define OSBinaryType		[a.out]
+-#endif
+-#endif
++# if UseElfFormat
++#  define OSBinaryType		[ELF]
++# else
++#  ifdef AlphaArchitecture
++#   define OSBinaryType		[ECOFF]
++#  else
++#   define OSBinaryType		[a.out]
++#  endif
++# endif
+ #endif
+ 
+ #ifndef OSName
+-#define OSName			DefaultOSName OSBinaryType
++# define OSName			DefaultOSName OSBinaryType
+ #endif
+ 
+ #ifndef OSVendor
+-#define OSVendor		/**/
++# define OSVendor		/**/
+ #endif
+ #ifndef OSMajorVersion
+-#define OSMajorVersion		DefaultOSMajorVersion
++# define OSMajorVersion		DefaultOSMajorVersion
+ #endif
+ #ifndef OSMinorVersion
+-#define OSMinorVersion		DefaultOSMinorVersion
++# define OSMinorVersion		DefaultOSMinorVersion
+ #endif
+ #ifndef OSTeenyVersion
+-#define OSTeenyVersion		DefaultOSTeenyVersion
++# define OSTeenyVersion		DefaultOSTeenyVersion
+ #endif
+ 
+-/* Set some defaults for the Default* values in case imake doesn't find them */
+-#ifndef DefaultLinuxCLibMajorVersion
+-#ifdef AlphaArchitecture
+-#define DefaultLinuxCLibMajorVersion	6
+-#else
+-#define DefaultLinuxCLibMajorVersion	5
+-#endif
+-#endif
+-#ifndef DefaultLinuxCLibMinorVersion
+-#if DefaultLinuxCLibMajorVersion > 5
+-#define DefaultLinuxCLibMinorVersion	0
+-#else
+-#define DefaultLinuxCLibMinorVersion	4
+-#endif
++#ifndef LinuxDistribution
++# define LinuxDistribution	DefaultLinuxDistribution
++/*
++  Add "#define LinuxDistribution Linux<mumble>" to your site.def or host.def.
++  Currently only LinuxSuSE, LinuxRedHat and LinuxDebian will be figured out
++  automatically.
++  Valid values are (from the list at www.linux.org in Oct. '97):
++    LinuxUnknown    (0)
++    LinuxSuSE       (1)
++    LinuxCaldera    (2)
++    LinuxCraftworks (3)
++    LinuxDebian     (4)
++    LinuxInfoMagic  (5)
++    LinuxKheops     (6)
++    LinuxPro        (7)
++    LinuxRedHat     (8)
++    LinuxSlackware  (9)
++    LinuxTurbo      (10)
++    LinuxWare       (11)
++    LinuxYggdrasil  (12)
++*/
+ #endif
+-#ifndef DefaultLinuxCLibTeenyVersion
+-#define DefaultLinuxCLibTeenyVersion	0
++#ifndef LinuxDistName
++# define LinuxDistName		DefaultLinuxDistName
+ #endif
+-
+ #ifndef LinuxCLibMajorVersion
+-#define LinuxCLibMajorVersion	DefaultLinuxCLibMajorVersion
++# define LinuxCLibMajorVersion	DefaultLinuxCLibMajorVersion
+ #endif
+ #ifndef LinuxCLibMinorVersion
+-#define LinuxCLibMinorVersion	DefaultLinuxCLibMinorVersion
++# define LinuxCLibMinorVersion	DefaultLinuxCLibMinorVersion
+ #endif
+ #ifndef LinuxCLibTeenyVersion
+-#define LinuxCLibTeenyVersion	DefaultLinuxCLibTeenyVersion
++# define LinuxCLibTeenyVersion	DefaultLinuxCLibTeenyVersion
+ #endif
+ 
+ #ifndef LinuxBinUtilsMajorVersion
+-#define LinuxBinUtilsMajorVersion	DefaultLinuxBinUtilsMajorVersion
++# define LinuxBinUtilsMajorVersion	DefaultLinuxBinUtilsMajorVersion
+ #endif
+ 
+ XCOMM operating system:  OSName (OSMajorVersion./**/OSMinorVersion./**/OSTeenyVersion)
+ XCOMM libc:	(LinuxCLibMajorVersion./**/LinuxCLibMinorVersion./**/LinuxCLibTeenyVersion)
+ XCOMM binutils:	(LinuxBinUtilsMajorVersion)
+ 
++#if LinuxDistribution == LinuxDebian
++# define SystemManDirectory	/usr/share/man
++# define HasPam			YES
++# define HasTk			YES
++# define TkLibDir		/usr/lib
++# define TkIncDir		/usr/include
++# define TkLibName		tk8.3
++# define XF86SetupUsesStaticTk	NO
++# define HasTcl			YES
++# define TclLibDir		/usr/lib
++# define TclIncDir		/usr/include
++# define TclLibName		tcl8.3
++# define XF86SetupUsesStaticTcl	NO
++/* un-comment this when it is un-broken */
++/* # define JoystickSupport YES */
++# define InstallXinitConfig	YES
++# define InstallXdmConfig	YES
++# define InstallFSConfig	YES
++# define DebuggableLibraries	YES
++# define ForceNormalLib		YES
++# define BuildSpecsDocs		YES
++# define SpecsDocDirs		CTEXT GL ICCCM X11 Xext Xv i18n xterm
++# define XAppLoadDir		EtcX11Directory/app-defaults
++# define XFileSearchPathDefault	Concat4(EtcX11Directory/%L/%T/%N%C,%S:EtcX11Directory/%l/%T/%N%C,%S:EtcX11Directory/%T/%N%C,%S:EtcX11Directory/%L/%T/%N%S:EtcX11Directory/%l/%T/%N%S:EtcX11Directory/%T/%N%S):Concat4($(LIBDIR)/%L/%T/%N%C,%S:$(LIBDIR)/%l/%T/%N%C,%S:$(LIBDIR)/%T/%N%C,%S:$(LIBDIR)/%L/%T/%N%S:$(LIBDIR)/%l/%T/%N%S:$(LIBDIR)/%T/%N%S)
++/* the relative symlink created by this rule causes problems for us */
++# if InstallAppDefFiles
++#  define InstallAppDefaultsLong(file,class)				@@\
++InstallNamedTarget(install,file.ad,$(INSTAPPFLAGS),$(XAPPLOADDIR),class)
++# else
++#  define InstallAppDefaultsLong(file,class)				@@\
++InstallNamedTargetNoClobber(install,file.ad,$(INSTAPPFLAGS),$(XAPPLOADDIR),class)
++# endif /* InstallAppDefFiles */
++# define SharedLibXdmGreet	NO
++# define LinkGLToUsrInclude	NO
++# define LinkGLToUsrLib		NO
++# define SharedLibFont		NO
++# define HasZlib		YES
++# define BuildGLXLibrary	YES
++# define BuildGLULibrary	YES
++# define BuildRman		NO
++# define BuildHtmlManPages	NO
++# define FSUseSyslog		YES
++
++/*
++ *
++ */
++# define DebianMaintainer	"xfree86@packages.debian.org"
++/*
++ *
++ */
++
++# ifdef DebianMaintainer
++#  define BuilderEMailAddr	"submit@bugs.debian.org"
++#  define XFree86Devel		YES
++#  define BuildAllSpecsDocs	YES
++/* we build-depend on libfreetype6-dev (FreeType 2.x) */
++#  define BuildFreetype2Library	NO
++#  define HasFreetype2		YES
++/* m68k has no 2.4 kernel yet */
++#  ifndef Mc68020Architecture
++#   define HasLinuxInput		YES
++#  endif
++#  define HasXdmAuth		YES
++#  define HasLatex		YES
++/* at present, glide2 only works on i386 */
++#  ifdef i386Architecture
++#   define HasGlide2		YES
++#   define Glide2IncDir		/usr/include/glide
++#  endif /* i386Architecture */
++/* at present, glide3 only works on alpha and i386 */
++#  if defined(i386Architecture) || defined(AlphaArchitecture)
++#   define HasGlide3		YES
++#   define Glide3IncDir		/usr/include/glide3
++#  endif /* i386Architecture || AlphaArchitecture */
++/* extended instruction set support */
++#  ifdef i386Architecture
++#   define HasMMXSupport	YES
++#   define Has3DNowSupport	YES
++/* 2.4 is not yet the official (or predominant) kernel in unstable */
++#   define HasKatmaiSupport	NO
++#  endif /* i386Architecture */
++# endif /* DebianMaintainer */
++#endif /* LinuxDebian */
++
++#if LinuxDistribution == LinuxRedHat
++#define FSUseSyslog		YES
++#endif
++
+ /*
+  * The Linux BinUtils major version.  25 => 2.5.x, which is what is included
+  * with Slackware 3.0
+@@ -83,45 +182,249 @@
+  *
+  */
+ #ifndef BinUtilsMajorVersion
+-#define BinUtilsMajorVersion	LinuxBinUtilsMajorVersion
++# define BinUtilsMajorVersion	LinuxBinUtilsMajorVersion
+ #endif
+ 
+-#if LinuxCLibMajorVersion >= 6 || \
+-	(LinuxCLibMajorVersion == 5 && LinuxCLibMinorVersion == 99)
+-#define LinuxSourceDefines	-D_POSIX_C_SOURCE=199309L \
+-				-D_POSIX_SOURCE -D_XOPEN_SOURCE=500L \
+-				-D_BSD_SOURCE -D_SVID_SOURCE
+-#define XawI18nDefines		-DHAS_WCHAR_H -DHAS_WCTYPE_H -DNO_WIDEC_H
+-#if !defined(AlphaArchitecture)
+-#define HasPosixThreads		YES
+-#define ThreadedX		YES
+-#define HasThreadSafeAPI	YES
+-#define ThreadsLibraries	-lpthread
+-#define SystemMTDefines		-D_REENTRANT
++#if (LinuxCLibMajorVersion >= 6 || LinuxDistribution == LinuxSuSE)
++# define LinuxLocaleDefines	/**/
++#else
++# define LinuxLocaleDefines	-DX_LOCALE
+ #endif
+-#ifndef HasLibCrypt
+-#define HasLibCrypt		YES
++
++#ifndef  LinuxAdditionalIncludes
++# define LinuxAdditionalIncludes	/**/
+ #endif
++
++#ifndef LinuxGnuSourceDefines
++# ifdef UseInstalled
++#  define LinuxGnuSourceDefines	/**/
++# else
++#  define LinuxGnuSourceDefines	-D_GNU_SOURCE
++# endif
++#endif
++
++#if LinuxCLibMajorVersion >= 6
++# define LinuxSourceDefines	-D_POSIX_C_SOURCE=199309L \
++				-D_POSIX_SOURCE -D_XOPEN_SOURCE \
++				-D_BSD_SOURCE -D_SVID_SOURCE \
++				LinuxAdditionalIncludes LinuxGnuSourceDefines \
++				LinuxLocaleDefines
++# define XawI18nDefines		-DHAS_WCHAR_H -DHAS_WCTYPE_H -DNO_WIDEC_H
++# define HasPosixThreads	YES
++# define ThreadedX		YES
++# define HasThreadSafeAPI	YES
++# define ThreadsLibraries	-lpthread
++# define SystemMTDefines	-D_REENTRANT
++# ifndef HasLibCrypt
++#  define HasLibCrypt		YES
++# endif
++/* netscape wraps select but not poll as of communicator 4.72 */
++# ifndef HasPoll
++#  define HasPoll		NO
++# endif
+ #else
+-#define LinuxSourceDefines	-D_POSIX_SOURCE \
+-				-D_BSD_SOURCE -D_SVID_SOURCE -DX_LOCALE
+-#define XawI18nDefines		-DUSE_XWCHAR_STRING -DUSE_XMBTOWC
+-#ifndef HasLibCrypt
+-#define HasLibCrypt		NO
++# define LinuxSourceDefines	-D_POSIX_SOURCE -D_POSIX_C_SOURCE=2 \
++				-D_BSD_SOURCE -D_SVID_SOURCE \
++				LinuxGnuSourceDefines LinuxLocaleDefines
++# define XawI18nDefines		-DUSE_XWCHAR_STRING -DUSE_XMBTOWC
++# ifndef HasLibCrypt
++#  define HasLibCrypt		NO
++# endif
+ #endif
++
++#ifndef InstallXloadSetGID
++#define InstallXloadSetGID	NO
++#endif
++
++/* <linux/input.h> support mainly for USB support */
++#ifndef HasLinuxInput
++# if OSMajorVersion > 2 || (OSMajorVersion == 2 && OSMinorVersion >= 4)
++#  define HasLinuxInput YES
++# endif
++#endif
++
++/* On x86, determine whether to build with MTRR support */
++#ifndef HasMTRRSupport
++# ifdef i386Architecture
++/* There is no certain way to know if <asm/mtrr.h> is available,
++   but it made it into kernel 2.2, so... */
++#  if OSMajorVersion > 2 || (OSMajorVersion == 2 && OSMinorVersion >= 2)
++#   define HasMTRRSupport	YES
++#  else
++#   define HasMTRRSupport	NO
++#  endif
++# else
++#  define HasMTRRSupport	NO	/* no for non-ix86 */
++# endif
++#endif
++
++#ifndef XF86INT10_BUILD
++# ifdef i386Architecture
++#  define XF86INT10_BUILD	X86VM
++# else
++#  define XF86INT10_BUILD	X86EMU_GENERIC
++# endif
++#endif
++
++/* The DRM module requires kernel services that appeared in late 2.1.x
++   kernels and are known to be present in 2.2.x kernels. */
++#ifndef BuildXF86DRI
++#  if defined(i386Architecture)
++#    if OSMajorVersion > 2 || (OSMajorVersion == 2 && OSMinorVersion >= 2)
++#      define BuildXF86DRI	YES
++#    else
++#      define BuildXF86DRI	NO
++#    endif
++#  elif defined(AlphaArchitecture)
++#    define BuildXF86DRI	YES
++#  elif defined(Arm32Architecture)
++#    define BuildXF86DRI	NO
++#  elif defined(HPArchitecture)
++#    define BuildXF86DRI	NO
++#  elif defined(ia64Architecture)
++#    define BuildXF86DRI	YES
++#  elif defined(Mc68020Architecture)
++#    define BuildXF86DRI	NO
++#  elif defined(MipsArchitecture)
++#    define BuildXF86DRI	NO
++#  elif defined(PpcArchitecture)
++#    define BuildXF86DRI	YES
++#  elif defined(s390Architecture)
++#    define BuildXF86DRI	NO
++#  elif defined(SparcArchitecture)
++#    define BuildXF86DRI	YES
++#  else
++#    define BuildXF86DRI	NO
++#  endif
++#endif
++
++/*
++ * Build shared libGL and the DRI modules without -fPIC.  This improves
++ * performance.  Do this only on architectures that can handle missing PIC
++ * symbols in shared libraries.
++ */
++#if BuildXF86DRI
++#  if defined(AlphaArchitecture) || defined(Arm32Architecture) || defined(i386Architecture) || defined(SparcArchitecture)
++#   define BuildLibGlxWithoutPIC	YES
++#  endif
++#endif
++
++/* The DRM module requires kernel services that appeared in late 2.1.x
++   kernels and are known to be present in 2.2.x kernels.  Unfortunately,
++   the kernel API is a moving target and the module may break with new
++   kernel revisions.  So, we'll only build the module for kernels that are
++   known to be supported by the module. */
++#ifndef BuildXF86DRM
++#  if defined(i386Architecture) || defined(ia64Architecture) || defined(SparcArchitecture) || defined(AlphaArchitecture)
++#    if OSMajorVersion == 2
++       /* Only tested for Linux 2.2.0 through 2.2.12 */
++#      if OSMinorVersion == 2 && OSTeenyVersion <= 12
++#        define BuildXF86DRM	YES
++#      else
++         /* Only tested for Linux 2.3.0 through 2.3.18 */
++#        if OSMinorVersion == 3 && OSTeenyVersion <= 18
++#          define BuildXF86DRM	YES
++#        else
++           /* Note: add more conditions when 2.4.x and 2.5.x are released */
++#          define BuildXF86DRM	NO
++#        endif
++#      endif
++#    else
++       /* Note: add more conditions when 3.0.x and 3.1.x are released */
++#      define BuildXF86DRM	NO
++#    endif
++#  else
++#    define BuildXF86DRM	NO
++#  endif
++#endif
++
++#ifndef HasAgpGart
++#  if defined(i386Architecture) || defined(ia64Architecture)
++     /* The AGPGART header file is included in os-support/linux, which
++        allows all drivers that depend on AGP to build properly. */
++#    define HasAgpGart	YES
++#  else
++#    define HasAgpGart	NO
++#  endif
++#endif
++
++/* Support for Intel's Katmai Native Instructions, also known as the
++ * Streaming SIMD Extensions, was introduced in the 2.4.x kernels.
++ */
++#ifndef HasKatmaiSupport
++#  ifdef i386Architecture
++#    if OSMajorVersion > 2 || (OSMajorVersion == 2 && OSMinorVersion >= 4)
++#      define HasKatmaiSupport		YES
++#    else
++#      define HasKatmaiSupport		NO
++#    endif
++#  else
++#    define HasKatmaiSupport		NO
++#  endif
++#endif
++
++/*
++ * Support for MMX isn't present in the Assembler used in Red Hat 4.2, so
++ * don't enable it for libc5 as a reasonable default.
++ */
++#ifndef HasMMXSupport
++#  ifdef i386Architecture
++#    if (LinuxCLibMajorVersion > 5)
++#      define HasMMXSupport		YES
++#    else
++#      define HasMMXSupport		NO
++#    endif
++#  else
++#    define HasMMXSupport		NO
++#  endif
++#endif
++
++/*
++ * Support for 3DNow isn't present in the Assembler used in Red Hat 4.2, so
++ * don't enable it for libc5 as a reasonable default.
++ *
++ * XXX This is preliminary.
++ */
++#ifndef Has3DNowSupport
++#  ifdef i386Architecture
++#    if (LinuxCLibMajorVersion > 5)
++#      define Has3DNowSupport		YES
++#    else
++#      define Has3DNowSupport		NO
++#    endif
++#  else
++#    define Has3DNowSupport		NO
++#  endif
++#endif
++
++/*
++ * libGLU doesn't build correctly on a libc5 system.
++ */
++#if !defined(BuildGLULibrary) && (LinuxCLibMajorVersion < 6)
++# define BuildGLULibrary		NO
++#endif
++
++/*
++ * The Rush extension support.
++ */
++#ifndef BuildXF86RushExt
++# define BuildXF86RushExt	YES
++#endif
++
++#ifndef LinuxFBDevSupport
++# define LinuxFBDevSupport	YES
+ #endif
+ 
+ /* For compatibility */
+ #define SourceDefines		LinuxSourceDefines
+ 
+-#define HasGcc			YES
+-#define HasGcc2			YES
+-#ifndef HasGcc2ForCplusplus
+-# define HasGcc2ForCplusplus	YES
+-#endif
++#define BuildLibPathVar		LD_LIBRARY_PATH
+ #define GccUsesGas		YES
+ #define UseGas			YES
+ #define GnuCpp			YES
++#if UseElfFormat
++# define HasDlopen		YES
++#endif
+ #ifndef HasShadowPasswd
+ # if UseElfFormat
+ #  define HasShadowPasswd	YES
+@@ -136,9 +439,21 @@
+ #define HasSnprintf		YES
+ #define HasMkstemp		YES
+ #endif
++#if OSMajorVersion >= 2
++#define HasUsableFileMmap	YES
++#endif
++#ifndef HasNCurses
++#define HasNCurses		YES
++#endif
++
++#ifndef HasGroff
++#define HasGroff		YES
++#endif
+ 
+ #define AvoidNullMakeCommand	YES
+-#define StripInstalledPrograms	YES
++#ifndef DebuggableLibraries
++#define DebuggableLibraries	NO
++#endif
+ #define CompressAllFonts	YES
+ #define Malloc0ReturnsNull	YES
+ #define NeedConstPrototypes	YES
+@@ -154,125 +469,336 @@
+ #define UseStaticTermcapLib	NO
+ #endif
+ 
+-#define MkdirHierCmd		mkdir -p
+-#if LinuxElfDefault
+-#if UseElfFormat
+-#define CcCmd			gcc
+-#define AsCmd			as
+-#define LdCmd			ld
+-#define AsmDefines		-D__ELF__
+-#define CplusplusCmd		c++
+-#if UseStaticTermcapLib
+-#define TermcapLibrary		StaticLibrary(/usr/lib/termcap,termcap)
++#ifndef HasCookieMaker
++#define HasCookieMaker		YES
++#define MkCookieCmd		mcookie
+ #endif
+-#else
+-#ifdef AlphaArchitecture
+-#define CcCmd			gcc -b alpha-linuxecoff
+-#define CplusplusCmd		g++ -b alpha-linuxecoff
+-#define AsCmd			/usr/alpha-linuxecoff/bin/as
+-#define LdCmd			/usr/alpha-linuxecoff/bin/ld -m alpha
+-#define AsmDefines		-DUSE_GAS -U__ELF__
+-#endif /* AlphaArchitecture */
+-#ifdef i386Architecture
+-#define CcCmd			gcc -b i486-linuxaout
+-#define CplusplusCmd		g++ -b i486-linuxaout
+-#define AsCmd			/usr/i486-linuxaout/bin/as
+-#define LdCmd			/usr/i486-linuxaout/bin/ld -m i386linux
+-#define AsmDefines		-DUSE_GAS -U__ELF__
+-#endif /* i386Architecture */
+-#ifdef Mc68020Architecture
+-#define CcCmd			gcc -b m68k-linuxaout
+-#define CplusplusCmd		g++ -b m68k-linuxaout
+-#define AsCmd			/usr/m68k-linuxaout/bin/as
+-#define LdCmd			/usr/m68k-linuxaout/bin/ld -m m68klinux
+-#define AsmDefines		-DUSE_GAS -U__ELF__
+-#endif /* Mc68020Architecture */
++
++#ifndef BourneShell
++/*
++ * This will cause builds/installs to terminate on errors, as on other
++ * platforms.
++ */
++#define BourneShell		/bin/sh -e
+ #endif
++
++#define MkdirHierCmd		mkdir -p
++
++#if LinuxElfDefault
++# if UseElfFormat
++#  ifdef MipsArchitecture
++#   ifndef AsCmd
++#     define AsCmd		gcc -c -x assembler-with-cpp
++#   endif
++#   ifndef DoLoadableServer
++#     define DoLoadableServer	NO
++#   endif
++#  endif /* MipsArchitecure */
++#  ifndef CcCmd
++#   define CcCmd		gcc
++#  endif
++#  ifndef AsCmd
++#   define AsCmd		as
++#  endif
++#  ifndef LdCmd
++#   define LdCmd		ld
++#  endif
++#  define AsmDefines		-D__ELF__
++#  define CplusplusCmd		c++
++#  ifndef LinuxUsesNcurses
++#   if LinuxCLibMajorVersion >= 6 || (LinuxDistribution == LinuxSuSE)
++#    define LinuxUsesNcurses	YES
++#   else
++#    define LinuxUsesNcurses	NO
++#   endif
++#  endif
++#  ifndef TermcapLibrary
++#   if UseStaticTermcapLib
++#    if LinuxUsesNcurses
++#     define TermcapLibrary	StaticLibrary(/usr/lib,ncurses)
++#    else
++#     define TermcapLibrary	StaticLibrary(/usr/lib/termcap,termcap)
++#    endif
++#   else
++#    if LinuxUsesNcurses
++#     define TermcapLibrary	-lncurses
++#    else
++#     define TermcapLibrary	-ltermcap
++#    endif
++#   endif
++#  endif
++# else
++#  ifdef AlphaArchitecture
++#   define CcCmd		gcc -b alpha-linuxecoff
++#   define CplusplusCmd		g++ -b alpha-linuxecoff
++#   define AsCmd		/usr/alpha-linuxecoff/bin/as
++#   define LdCmd		/usr/alpha-linuxecoff/bin/ld -m alpha
++#   define AsmDefines		-DUSE_GAS -U__ELF__
++#  endif /* AlphaArchitecture */
++#  ifdef HPArchitecture
++#   define CcCmd		gcc
++#   define CplusplusCmd		g++
++#   define AsCmd		as
++#   define LdCmd		ld
++#   define AsmDefines		-DUSE_GAS -U__ELF__
++#  endif /* HPArchitecture */
++#  ifdef ia64Architecture
++#   define CcCmd		gcc
++#   define CplusplusCmd		g++
++#   define AsCmd		as
++#   define LdCmd		ld
++#   define AsmDefines		-DUSE_GAS -U__ELF__
++#  endif /* ia64Architecture */
++#  ifdef i386Architecture
++#   define CcCmd		gcc -b i486-linuxaout
++#   define CplusplusCmd		g++ -b i486-linuxaout
++#   define AsCmd		/usr/i486-linuxaout/bin/as
++#   define LdCmd		/usr/i486-linuxaout/bin/ld -m i386linux
++#   define AsmDefines		-DUSE_GAS -U__ELF__
++#  endif /* i386Architecture */
++#  ifdef Mc68020Architecture
++#   define CcCmd		gcc -b m68k-linuxaout
++#   define CplusplusCmd		g++ -b m68k-linuxaout
++#   define AsCmd		/usr/m68k-linuxaout/bin/as
++#   define LdCmd		/usr/m68k-linuxaout/bin/ld -m m68klinux
++#   define AsmDefines		-DUSE_GAS -U__ELF__
++#  endif /* Mc68020Architecture */
++# endif
+ #else
+-#if UseElfFormat
+-#ifdef AlphaArchitecture
+-#define CcCmd			gcc -b alpha-linux
+-#define AsCmd			/usr/alpha-linux/bin/as
+-#define LdCmd			ld -m elf64alpha
+-#define AsmDefines		-D__ELF__
+-#define CplusplusCmd		c++ -b alpha-linux
+-#endif /* AlphaArchitecture */
+-#ifdef i386Architecture
+-#define CcCmd			gcc -b i486-linux
+-#define AsCmd			/usr/i486-linux/bin/as
+-#define LdCmd			ld -m elf_i386
+-#define AsmDefines		-D__ELF__
+-#define CplusplusCmd		c++ -b i486-linux
+-#endif /* i386Architecture */
+-#ifdef Mc68020Architecture
+-#define CcCmd			gcc -b m68k-linux
+-#define AsCmd			/usr/m68k-linux/bin/as
+-#define LdCmd			ld -m m68kelf
+-#define AsmDefines		-D__ELF__
+-#define CplusplusCmd		c++ -b m68k-linux
+-#endif /* Mc68020Architecture */
+-#else
+-#define CcCmd			gcc
+-#define AsCmd			as
+-#define LdCmd			ld
+-#define AsmDefines		-DUSE_GAS
+-#endif
++# if UseElfFormat
++#  ifdef AlphaArchitecture
++#   define CcCmd		gcc -b alpha-linux
++#   define AsCmd		/usr/alpha-linux/bin/as
++#   define LdCmd		ld -m elf64alpha
++#   define AsmDefines		-D__ELF__
++#   define CplusplusCmd		c++ -b alpha-linux
++#  endif /* AlphaArchitecture */
++#  ifdef ia64Architecture
++#   define CcCmd		gcc
++#   define CplusplusCmd		g++
++#   define AsCmd		as
++#   define LdCmd		ld
++#   define AsmDefines		-D__ELF__
++#  endif /* ia64Architecture */
++#  ifdef HPArchitecture
++#   define CcCmd		gcc
++#   define CplusplusCmd		g++
++#   define AsCmd		as
++#   define LdCmd		ld
++#   define AsmDefines		-D__ELF__
++#   define SharedLibXau		YES
++#  endif /* HPArchitecture */
++#  ifdef i386Architecture
++#   define CcCmd		gcc -b i486-linux
++#   define AsCmd		/usr/i486-linux/bin/as
++#   define LdCmd		ld -m elf_i386
++#   define AsmDefines		-D__ELF__
++#   define CplusplusCmd		c++ -b i486-linux
++#  endif /* i386Architecture */
++#  ifdef Mc68020Architecture
++#   define CcCmd		gcc -b m68k-linux
++#   define AsCmd		/usr/m68k-linux/bin/as
++#   define LdCmd		ld -m m68kelf
++#   define AsmDefines		-D__ELF__
++#   define CplusplusCmd		c++ -b m68k-linux
++#  endif /* Mc68020Architecture */
++# else
++#  define CcCmd			gcc
++#  define AsCmd			as
++#  define LdCmd			ld
++#  define AsmDefines		-DUSE_GAS
++# endif
+ #endif
+ #if UseElfFormat
+-#ifndef BuildDynamicLoading
+-#define BuildDynamicLoading	YES
++# ifndef DoLoadableServer
++# ifdef HPArchitecture
++#  define DoLoadableServer	NO
++# else
++#  define DoLoadableServer	YES
++# endif
++# endif
+ #endif
++#ifndef CppCmd
++# define CppCmd			/lib/cpp
+ #endif
+-#define CppCmd			/lib/cpp
+-#ifdef USE_BYACC
+-#define YaccCmd			byacc
+-#else
++/* Some Linux distributions have yacc, some don't. All have bison. */
+ #define YaccCmd			bison -y
+-#endif
+ #define LexCmd			flex -l
++#define HasFlex			YES
+ #define LexLib			-lfl
+ #define PreProcessCmd		CcCmd -E
+ #define PostIncDir		DefaultGccIncludeDir
+ #define LdCombineFlags		-r
+-#define LdPostLib		/* Never needed */
++#ifndef LdPostLib
++# define LdPostLib		/* Never needed */
++#endif
+ #define HasWChar32		YES
+-#define StandardCppDefines	-traditional StandardDefines
++#define StandardCppOptions	-traditional
++#define StandardCppDefines	StandardDefines
++
++#define HasVarRun		YES
++#define VarDbDirectory		$(VARDIR)/lib
++
++#ifndef XF86OSCardDrivers
++# define XF86OSCardDrivers	v4l
++#endif
++
++#if UseElfFormat
++# define HasPlugin			YES
++# define VendorHasX11R6_3libXext	YES	/* XC or XFree86 >= 3.3.1 */
++#endif
+ 
+ #ifdef i386Architecture
+-#define OptimizedCDebugFlags	DefaultGcc2i386Opt
+-#define LinuxMachineDefines	-D__i386__
+-#define ServerOSDefines		XFree86ServerOSDefines -DDDXTIME -DPART_NET
+-#define ServerExtraDefines	-DGCCUSESGAS XFree86ServerDefines
++# ifndef OptimizedCDebugFlags
++#  define OptimizedCDebugFlags	-O
++# endif
++# define LinuxMachineDefines	-D__i386__
++# define ServerOSDefines	XFree86ServerOSDefines -DDDXTIME -DPART_NET
++# define ServerExtraDefines	-DGCCUSESGAS XFree86ServerDefines
+ #endif /* i386Architecture */
+ 
++#ifdef s390Architecture
++# define DefaultCCOptions	-fsigned-char
++# ifndef OptimizedCDebugFlags
++#  define OptimizedCDebugFlags	-O2
++# endif
++# define LinuxMachineDefines	-D__s390__
++# define ServerOSDefines	XFree86ServerOSDefines -DDDXTIME -DPART_NET
++# define ServerExtraDefines	-DGCCUSESGAS XFree86ServerDefines
++#endif /* s390Architecture */
++
+ #ifdef AlphaArchitecture
+-#define OptimizedCDebugFlags	-O2
+-#define LinuxMachineDefines	-D__alpha__
+-#define ServerOSDefines		XFree86ServerOSDefines -DDDXTIME -DPART_NET
+-#define ServerExtraDefines	-DGCCUSESGAS XFree86ServerDefines -D_XSERVER64
++# ifndef OptimizedCDebugFlags
++#  define OptimizedCDebugFlags	-O
++# endif
++# define LinuxMachineDefines	-D__alpha__
++# define ServerOSDefines	XFree86ServerOSDefines -DDDXTIME -DPART_NET
++# define ServerExtraDefines	-DGCCUSESGAS XFree86ServerDefines -D_XSERVER64 -DJENSEN_SUPPORT
++# ifdef UseCompaqMathLibrary
++#  define MathLibrary		-lcpml -lm
++# endif
+ #endif /* AlphaArchitecture */
+ 
++#ifdef Arm32Architecture
++# define DefaultCCOptions	-fsigned-char
++# ifndef OptimizedCDebugFlags
++#  define OptimizedCDebugFlags	-O3
++# endif
++# define LinuxMachineDefines	-D__arm__ -D__arm32__ -U__arm -Uarm
++# define ServerOSDefines	XFree86ServerOSDefines -DDDXTIME -DPART_NET
++# define ServerExtraDefines	-DGCCUSESGAS XFree86ServerDefines
++#endif /* Arm32Achitecture */
++
++#ifdef ia64Architecture
++# ifndef OptimizedCDebugFlags
++#  define OptimizedCDebugFlags	-O2
++# endif
++# define LinuxMachineDefines	-D__ia64__
++# define ServerOSDefines	XFree86ServerOSDefines -DDDXTIME -DPART_NET
++# define ServerExtraDefines	-DGCCUSESGAS XFree86ServerDefines -D_XSERVER64
++#endif /* ia64Architecture */
++
+ #ifdef Mc68020Architecture
+-#define OptimizedCDebugFlags	-O2
+-#define LinuxMachineDefines 	-D__mc68000__
+-#define ServerOSDefines		XFree86ServerOSDefines -DDDXTIME -DPART_NET
+-#define ServerExtraDefines	-DGCCUSESGAS XFree86ServerDefines
++# ifndef OptimizedCDebugFlags
++#  define OptimizedCDebugFlags	-O2
++# endif
++# define LinuxMachineDefines	-D__mc68000__
++# define ServerOSDefines	XFree86ServerOSDefines -DDDXTIME -DPART_NET
++# define ServerExtraDefines	-DGCCUSESGAS XFree86ServerDefines
+ #endif /* Mc68020Architecture */
+ 
+-#define StandardDefines		-Dlinux LinuxMachineDefines LinuxSourceDefines
++#ifdef PpcArchitecture
++# define DefaultCCOptions	-fsigned-char
++# ifndef OptimizedCDebugFlags
++#  define OptimizedCDebugFlags	-O
++# endif
++# define LinuxMachineDefines	-D__powerpc__
++# define ServerOSDefines	XFree86ServerOSDefines -DDDXTIME -DPART_NET
++# define ServerExtraDefines	-DGCCUSESGAS XFree86ServerDefines
++#endif /* PpcArchitecture */
++
++#ifdef SparcArchitecture
++# ifndef OptimizedCDebugFlags
++#  define OptimizedCDebugFlags	-O2
++# endif
++# define LinuxMachineDefines	-D__sparc__
++# define ServerOSDefines	XFree86ServerOSDefines -DDDXTIME -DPART_NET
++# define ServerExtraDefines	-DHAVE_DOMAINS -DGCCUSESGAS XFree86ServerDefines
++# define AsVISOption		-Av9a
++# ifdef Sparc64Architecture
++#  define AsOutputArchSize	64
++# else
++#  define AsOutputArchSize	32
++# endif
++#endif
++
++#ifdef MipsArchitecture
++# ifndef OptimizedCDebugFlags
++#  define OptimizedCDebugFlags	-O2
++# endif
++# define LinuxMachineDefines	-D__mips__
++# define ServerOSDefines	XFree86ServerOSDefines -DDDXTIME -DPART_NET
++# define ServerExtraDefines	-DGCCUSESGAS XFree86ServerDefines
++#endif
++
++#ifdef HPArchitecture
++# define OptimizedCDebugFlags	-O2
++# define LinuxMachineDefines	-D__hppa__
++# define ServerOSDefines	XFree86ServerOSDefines -DDDXTIME -DPART_NET
++# define ServerExtraDefines	-DGCCUSESGAS XFree86ServerDefines
++#endif
++
++#ifdef SuperHArchitecture
++# ifndef SuperHArchOptFlags
++#  ifdef SuperH4Architecture
++#   define SuperHArchOptFlags   -m4
++#  elif defined(SuperH4NOFPUArchitecture)
++#   define SuperHArchOptFlags   -m4-nofpu
++#  else
++#   define SuperHArchOptFlags   -m3
++#  endif
++# endif 
++# ifndef SuperHebArchitecture
++#  ifdef SuperHebArchitecture
++#   define SuperHEndianFlags    -mb
++#  else
++#   define SuperHEndianFlags    -ml
++#  endif
++# endif
++# ifndef OptimizedCDebugFlags
++#  define OptimizedCDebugFlags  -O2 SuperHArchOptFlags SuperHEndianFlags
++# endif
++# define LinuxMachineDefines    -D__sh__
++# define ServerOSDefines        XFree86ServerOSDefines -DDDXTIME -DPART_NET
++# define ServerExtraDefines     -DGCCUSESGAS XFree86ServerDefines
++#endif
++
++#ifndef StandardDefines
++# define StandardDefines	-Dlinux LinuxMachineDefines LinuxSourceDefines
++#endif
+ 
+ #if UseElfFormat
+-#define DlLibrary		-rdynamic -ldl
++# define DlLibrary		-rdynamic -ldl
+ #else
+-#define DlLibrary		/**/
++# define DlLibrary		/**/
+ #endif
+ 
+-#if BuildDynamicLoading
+-#define ServerExtraSysLibs	DlLibrary
+-#else
+ #define ServerExtraSysLibs	/**/
++
++#ifndef PamLibraries
++#define PamLibraries		-lpam DlLibrary
++#endif
++
++#ifndef PamMiscLibraries
++#define PamMiscLibraries	-lpam_misc
++#endif
++
++#if HasDECnet
++# define ConnectionFlags	-DUNIXCONN -DTCPCONN -DDNETCONN
++# define ExtraLibraries		-ldnet
++#else
++# define ConnectionFlags	-DUNIXCONN -DTCPCONN
+ #endif
+-#define ConnectionFlags		-DUNIXCONN -DTCPCONN
+ 
+ /* Some of these man page defaults are overriden in the above OS sections */
+ #ifndef ManSuffix
+@@ -295,13 +821,38 @@
+ #endif
+ 
+ #ifndef StaticLibrary
+-#define StaticLibrary(libpath,libname) -Wl,-Bstatic Concat(-L,libpath) Concat(-l,libname) -Wl,-Bdynamic
++# define StaticLibrary(libpath,libname) -Wl,-Bstatic Concat(-L,libpath) Concat(-l,libname) -Wl,-Bdynamic
++#endif
++
++#ifndef LinkGLToUsrLib
++# define LinkGLToUsrLib		YES
++#endif
++# ifndef LinkGLToUsrInclude
++# define LinkGLToUsrInclude	YES
+ #endif
+ 
+-#define HasGnuMake	YES
++
++#define HasGnuMake		YES
+ 
+ #define MakeNamedTargetSubdir(dir,flags,subname)\
+ 	$(MAKE) -C dir $(MFLAGS) $(PARALLELMFLAGS) flags subname
+ 
++#define ArchitectureDefines	-DLINUX_ARCHITECTURE
++
++#define TtClientLibs $(TTLIB) $(XTOOLLIB) $(XLIB)
++#define TtClientDepLibs $(DEPTTLIB) $(DEPXTOOLLIB) $(DEPXLIB)
++
++#ifdef s390Architecture
++# define HasXServer	NO
++#endif
++
+ #include <lnxLib.rules>
+-#include <xfree86.cf>
++#ifdef KDriveXServer
++# include <kdrive.cf>
++#else
++# include <xfree86.cf>
++#endif
++
++#ifndef XFree86ServerOSDefines
++# define XFree86ServerOSDefines
++#endif

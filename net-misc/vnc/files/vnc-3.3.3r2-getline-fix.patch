@@ -1,0 +1,42 @@
+--- vnc-3.3.3r2.orig/Xvnc/config/makedepend/def.h
++++ vnc-3.3.3r2/Xvnc/config/makedepend/def.h
+@@ -137,7 +137,7 @@
+ 
+ char			*copy();
+ char			*base_name();
+-char			*getline();
++char			*x_getline();
+ struct symtab		**slookup();
+ struct symtab		**isdefined();
+ struct symtab		**fdefined();
+--- vnc-3.3.3r2.orig/Xvnc/config/makedepend/main.c
++++ vnc-3.3.3r2/Xvnc/config/makedepend/main.c
+@@ -548,7 +548,7 @@
+  * Get the next line.  We only return lines beginning with '#' since that
+  * is all this program is ever interested in.
+  */
+-char *getline(filep)
++char *x_getline(filep)
+ 	register struct filepointer	*filep;
+ {
+ 	register char	*p,	/* walking pointer */
+--- vnc-3.3.3r2.orig/Xvnc/config/makedepend/parse.c
++++ vnc-3.3.3r2/Xvnc/config/makedepend/parse.c
+@@ -40,7 +40,7 @@
+ 	register char	*line;
+ 	register int	type;
+ 
+-	while (line = getline(filep)) {
++	while (line = x_getline(filep)) {
+ 		switch(type = deftype(line, filep, file_red, file, FALSE)) {
+ 		case IF:
+ 		case IFFALSE:
+@@ -529,7 +529,7 @@
+ 	register int	type;
+ 	boolean recfailOK;
+ 
+-	while (line = getline(filep)) {
++	while (line = x_getline(filep)) {
+ 		switch(type = deftype(line, filep, file_red, file, TRUE)) {
+ 		case IF:
+ 		doif:
