@@ -3,12 +3,12 @@ Hash: SHA1
 
 MD5 17c545bc25855f4b356bd83c16864f89 ChangeLog 408
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
-MD5 b2bfa27b66d6b8a01ca2007213de5d7b mapson-3.0.ebuild 943
+MD5 6241f2ee6d734420f41fc26167e7a784 mapson-3.0.ebuild 942
 MD5 cac715815f8f0186f774802fe05b0d7a files/digest-mapson-3.0 62
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBPOut10xuJSrg3/sRAss7AJ9VTsRfIFXmUEp6JVcul4WKxO+RIACffT9A
-/BIHbdVJdrxMhdO/dnvhN2s=
-=BR+u
+iD8DBQFBPO2q10xuJSrg3/sRAjYOAJ4gH/g388Ai7k2rpK/oBW5cp6J9RwCfcJ5m
+FE/j3qJ2ko6tYsDGF9FOuv8=
+=YSOx
 -----END PGP SIGNATURE-----
