@@ -1,6 +1,9 @@
 # ChangeLog for app-text/txt2tags
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/txt2tags/ChangeLog,v 1.9 2004/08/18 00:18:54 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/txt2tags/ChangeLog,v 1.10 2004/09/24 14:54:19 blubb Exp $
+
+  24 Sep 2004; <blubb@gentoo.org> txt2tags-2.0.ebuild:
+  added ~amd64
 
 *txt2tags-2.0 (18 Aug 2004)
 
