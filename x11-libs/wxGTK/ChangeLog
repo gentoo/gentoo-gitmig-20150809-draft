@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/wxGTK
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.56 2004/07/22 17:57:05 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.57 2004/07/22 18:00:18 pythonhead Exp $
+
+  22 Jul 2004; Rob Cakebread <pythonhead@gentoo.org> wxGTK-2.4.1-r1.ebuild:
+  Changed name from wxwindows to wxwidgets bug# 45061
 
   22 Jul 2004; Rob Cakebread <pythonhead@gentoo.org> wxGTK-2.4.0.ebuild:
   Changed all wxwindows to wxwidgets bug# 45061
