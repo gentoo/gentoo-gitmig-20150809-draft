@@ -1,3 +1,14 @@
-MD5 64c125b1fbe60a607af38575a5044608 ChangeLog 1612
-MD5 24a8ff09ee33bd604d710a0c87e82929 cadaver-0.22.2.ebuild 678
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 841cea2a9a37f4bb3f478dd483ff74ad cadaver-0.22.2.ebuild 695
+MD5 b9216490a70211e019e96b0afb4b83a1 ChangeLog 1764
 MD5 25df207628326afd1425d1364434fa46 files/digest-cadaver-0.22.2 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+Comment: Robbat2 @ Orbis-Terrarum Networks
+
+iD8DBQFCIE4usnuUTjSIToURAh4hAKCC+VVGqibj0QdeadEQEUByez3GkQCgp8m1
+Ob/rQoCNBiuZRN0NXXkTsXY=
+=gkyP
+-----END PGP SIGNATURE-----
