@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/powertweak
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/powertweak/ChangeLog,v 1.10 2003/02/12 02:26:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/powertweak/ChangeLog,v 1.11 2003/08/16 06:33:09 vapier Exp $
+
+*powertweak-0.99.5 (16 Aug 2003)
+
+  16 Aug 2003; Mike Frysinger <vapier@gentoo.org>:
+  Add real 0.99.5 version and add fix to init script #18655.
 
 *powertweak-0.99.5_pre20021029 (Oct 29 2002)
 
