@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/pcmcia-cs-3.2.7.ebuild,v 1.2 2004/02/08 02:45:41 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/pcmcia-cs-3.2.7.ebuild,v 1.3 2004/02/10 23:25:18 latexer Exp $
 
 inherit eutils
 
@@ -152,7 +152,7 @@ src_install () {
 
 pkg_postinst() {
 	okvminor="${KV#*.}" ; okvminor="${okvminor%%.*}"
-	if [ "${okvminor}" -lt "5" ]
+	if [ "${okvminor}" -lt 5 ]
 	then
 		depmod -a
 
