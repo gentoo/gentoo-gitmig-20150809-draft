@@ -1,0 +1,22 @@
+--- sbcl-0.8.7/debian/install-clc.lisp.original	2004-01-15 10:50:15.000000000 -0600
++++ sbcl-0.8.7/debian/install-clc.lisp	2004-01-15 10:51:39.346695144 -0600
+@@ -18,7 +18,9 @@
+   (format t "~%Error during init of common-lisp-controller~%")
+   (sb-unix:unix-exit 1))
+ 
+-(defun common-lisp-controller:send-clc-command (command package)
++(in-package :common-lisp-controller)
++
++(defun send-clc-command (command package)
+   (let ((process
+ 	 (sb-ext:run-program "/usr/bin/clc-send-command"
+ 			     (list
+@@ -38,6 +40,8 @@
+ 	       package
+ 	       "sbcl"))))
+ 
++(in-package :common-lisp-user)
++
+ (ignore-errors
+  (format t "~%Saving to sbcl-new.core...")
+  (sb-ext:gc :full t)

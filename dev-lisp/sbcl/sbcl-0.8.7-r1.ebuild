@@ -1,17 +1,19 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-0.8.5-r1.ebuild,v 1.3 2003/12/27 17:28:16 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-0.8.7-r1.ebuild,v 1.1 2004/01/29 03:54:31 mkennedy Exp $
 
 inherit common-lisp-common
 
-DESCRIPTION="Steel Bank Common Lisp (SBCL) is a Open Source development system for ANSI Common Lisp. It provides an interactive environment including an integrated native compiler, interpreter, and debugger. (And it, and its generated code, can also play nicely with Unix when running noninteractively.)"
+DESCRIPTION="Steel Bank Common Lisp (SBCL) is an implementation of ANSI Common Lisp."
 HOMEPAGE="http://sbcl.sourceforge.net/"
+IUSE="threads"
 BV_X86=0.8.1
 BV_PPC=0.7.13
 BV_SPARC=0.7.13
 BV_MIPS=0.7.10
 DEB_PV=1
 SRC_URI="http://ftp.debian.org/debian/pool/main/s/sbcl/sbcl_${PV}.orig.tar.gz
+	mirror://sourceforge/sbcl/${P}-html.tar.bz2
 	http://ftp.debian.org/debian/pool/main/s/sbcl/sbcl_${PV}-${DEB_PV}.diff.gz
 	x86? ( mirror://sourceforge/sbcl/${PN}-${BV_X86}-x86-linux-binary.tar.bz2 )
 	ppc? ( mirror://sourceforge/sbcl/${PN}-${BV_PPC}-binary-linux-ppc.tar.bz2 )
@@ -21,10 +23,7 @@ LICENSE="MIT"
 SLOT="0"
 KEYWORDS="x86 ~ppc ~sparc ~mips"
 PROVIDE="virtual/commonlisp"
-# the SRC_URI trickery needs this
-DEPEND=">=sys-apps/portage-2.0.27
-	dev-lisp/common-lisp-controller
-	doc? ( app-text/openjade )"
+DEPEND="dev-lisp/common-lisp-controller"
 
 S=${WORKDIR}/${P}
 
@@ -46,6 +45,19 @@ src_unpack() {
 	unpack sbcl_${PV}.orig.tar.gz
 	unpack sbcl_${PV}-${DEB_PV}.diff.gz
 	epatch sbcl_${PV}-${DEB_PV}.diff
+
+	epatch ${FILESDIR}/${PV}/posix-tests.lisp-sandbox-gentoo.patch
+	epatch ${FILESDIR}/${PV}/install-clc.lisp-gentoo.patch
+
+	# Currently, thread support is only available for x86.	These
+	# features expressions also disable :sb-test.
+	if use x86 && use threads; then
+		cp ${FILESDIR}/${PV}/customize-target-features.lisp \
+			${S}/customize-target-features.lisp
+	else
+		cp ${FILESDIR}/${PV}/customize-target-features.lisp.no-threads \
+			${S}/customize-target-features.lisp
+	fi
 }
 
 src_compile() {
@@ -55,38 +67,34 @@ src_compile() {
 	use sparc && bindir=../sparc-binary
 	use mips && bindir=../mips-binary
 	# TODO: allow the user to chose between SBCL, CMUCL and CLISP for bootstrapping
+	# build with previous SBCL
 	PATH=${bindir}/src/runtime:${PATH} SBCL_HOME=${bindir}/output GNUMAKE=make \
 		./make.sh 'sbcl --sysinit /dev/null --userinit /dev/null --noprogrammer --core ${bindir}/output/sbcl.core'
-	if use doc; then
-		cd doc && chmod +x make-doc.sh
-		./make-doc.sh
-	fi
+	# build with CMUCL
+#	GNUMAKE=make ./make.sh 'lisp -batch'
 }
 
 src_install() {
 	unset SBCL_HOME
 
 	insinto /etc/
-	doins ${FILESDIR}/sbcl.rc
+	doins ${FILESDIR}/sbcl.rc	# Gentoo specific messages, hence ${FILESDIR}
 
 	exeinto /usr/lib/common-lisp/bin
-	doexe ${FILESDIR}/sbcl.sh
+	doexe debian/sbcl.sh
 
+	dodir /usr/share/man
 	INSTALL_ROOT=${D}/usr sh install.sh
-	dosym /usr/lib/sbcl/asdf-install/asdf-install /usr/bin/sbcl-asdf-install
 	mv ${D}/usr/lib/sbcl/sbcl.core ${D}/usr/lib/sbcl/sbcl-dist.core
 
 	insinto /usr/lib/sbcl
-	doins ${FILESDIR}/install-clc.lisp
+	doins debian/install-clc.lisp
 
-	dodir /usr/share
-	mv ${D}/usr/man ${D}/usr/share/
 	doman debian/sbcl-asdf-install.1
-
-	use doc && dohtml doc/html/*
-	dodoc BUGS COPYING CREDITS INSTALL NEWS OPTIMIZATIONS PRINCIPLES README STYLE TLA TODO
-
+	dodoc BUGS COPYING CREDITS INSTALL NEWS OPTIMIZATIONS PRINCIPLES README STYLE SUPPORT TLA TODO
 	do-debian-credits
+	dodoc ${FILESDIR}/${PV}/README.Gentoo
+	dohtml doc/html/*
 
 	find ${D} -type f -name .cvsignore -exec rm -f '{}' \;
 	find ${D} -type f -name \*.c -exec chmod 644 '{}' \;
@@ -100,15 +108,16 @@ src_install() {
 	# recent than their .lisp source.
 
 	dodir /usr/share/${PN}
-	tar cpvzf ${D}/usr/share/${PN}/portage-timestamp-compensate -C ${D}/usr/lib/${PN} .
+	tar cpjf ${D}/usr/share/${PN}/portage-timestamp-compensate -C ${D}/usr/lib/${PN} .
 }
 
 pkg_postinst() {
 	chown cl-builder:cl-builder /usr/lib/common-lisp/sbcl
-	tar xvpzf /usr/share/sbcl/portage-timestamp-compensate -C /usr/lib/sbcl
+	tar xvjpfo /usr/share/sbcl/portage-timestamp-compensate -C /usr/lib/sbcl
+	chown -R root:root /usr/lib/sbcl
 	rm -rf /usr/lib/common-lisp/sbcl/* || true
 	/usr/bin/clc-autobuild-impl sbcl yes
-	/usr/sbin/register-common-lisp-implementation sbcl
+	register-common-lisp-implementation sbcl
 }
 
 pkg_postrm() {

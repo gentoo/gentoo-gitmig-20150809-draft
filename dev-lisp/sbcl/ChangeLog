@@ -1,6 +1,22 @@
 # ChangeLog for dev-lisp/sbcl
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/ChangeLog,v 1.25 2004/01/12 09:41:24 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/ChangeLog,v 1.26 2004/01/29 03:54:31 mkennedy Exp $
+
+*sbcl-0.8.7-r1 (28 Jan 2004)
+
+  28 Jan 2004; <mkennedy@gentoo.org> sbcl-0.8.7-r1.ebuild,
+  files/0.8.7/customize-target-features.lisp,
+  files/0.8.7/customize-target-features.lisp.no-threads,
+  files/0.8.7/install-clc.lisp-gentoo.patch:
+  Move to stable for x86; metadata improvements; common lisp controller clean
+  up; inherit common-lisp-common for register-common-lisp-implementation; no 
+  longer enable :sb-doc in the features expression
+
+*sbcl-0.8.7-r1 (16 Jan 2004)
+
+  16 Jan 2004; <mkennedy@gentoo.org> sbcl-0.8.7-r1.ebuild:
+  Enhanced Common Lisp Controller support (install-clc.lisp); Fix ownership on
+  portage-timestamp-compensate unpack to be root
 
 *sbcl-0.8.7 (12 Jan 2004)
 
