@@ -10,6 +10,8 @@
 #             in src_install() ... Ill implement auto-version detection
 #             later on.
 
+inherit libtool
+
 GCC_SUFFIX=-3.1
 LOC=/usr
 # dont install in /usr/include/g++-v3/, as it will nuke gcc-3.0.x installs
@@ -59,12 +61,10 @@ FAKE_ROOT=""
 src_unpack() {
 	unpack ${P}.tar.bz2
 	
-	#now we integrate texinfo-${TV} into gcc.  It comes with texinfo-3.12.
 	cd ${S}
-	#fixes the build system to properly do the transformation
-	#of the binaries (thanks to Mandrake)
-	#fixup libtool to correctly generate .la files with portage
-	patch <${FILESDIR}/libtool-1.4.1-portage.patch-v3 || die
+	# Fixup libtool to correctly generate .la files with portage
+	# Only apply the portage patch, and only to ltmain.sh in ${S}/
+	elibtoolize --portage --shallow
 
 	# Red Hat patches
 	for x in gcc31-boehm-gc-libs.patch.bz2 \

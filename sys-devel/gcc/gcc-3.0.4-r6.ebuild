@@ -1,10 +1,12 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Grant Goodyear <g2boojum@gentoo.org>, Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.0.4-r6.ebuild,v 1.1 2002/05/03 00:54:58 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.0.4-r6.ebuild,v 1.2 2002/06/10 20:29:31 azarah Exp $
 
 # NOTE TO MAINTAINER:  Info pages get nuked for multiple version installs.
 #                      Ill fix it later if i get a chance.
+
+inherit libtool
 
 TV=4.0
 GCC_SUFFIX=-3.0
@@ -31,7 +33,7 @@ build_multiple() {
 	profile="`readlink /etc/make.profile`"
 	if [ -z "`use build`" ] && \
 	   [ -z "`use bootstrap`" ] && \
-	   [ "`gcc --version | cut -f1 -d.`" -ne 3 ] && \
+	   [ "`gcc -dumpversion | cut -d. -f1,2`" != "`echo ${PV} | cut -d. -f1,2`" ] && \
 	   [ "${profile/gcc3}" = "${profile}" ] && \
 	   [ "${GCCBUILD}" != "default" ]
 	then
@@ -66,7 +68,7 @@ src_unpack() {
 	fi
 
 	#fixup libtool to correctly generate .la files with portage
-	patch <${FILESDIR}/libtool-1.4.1-portage.patch-v3 || die
+	elibtoolize
 }
 
 src_compile() {
