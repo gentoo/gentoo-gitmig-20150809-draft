@@ -1,11 +1,11 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/super-freeswan/super-freeswan-1.99_p4.ebuild,v 1.4 2003/09/05 22:01:49 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/super-freeswan/super-freeswan-1.99_p4.ebuild,v 1.5 2004/01/07 08:04:40 mr_bones_ Exp $
 
 MY_P=${P/_p/_kb}
 S=${WORKDIR}/${MY_P}
 DESCRIPTION="Super FreeS/WAN IPSec Userspace Utilities"
-SRC_URI="gentoo://${MY_P}.tar.gz"
+SRC_URI="mirror://gentoo/${MY_P}.tar.gz"
 
 HOMEPAGE="http://www.freeswan.ca/code/super-freeswan/"
 DEPEND="virtual/glibc
