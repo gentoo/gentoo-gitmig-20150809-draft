@@ -1,6 +1,12 @@
 # ChangeLog for dev-tex/pgf
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/pgf/ChangeLog,v 1.9 2004/08/19 01:58:46 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/pgf/ChangeLog,v 1.10 2004/10/05 07:03:08 usata Exp $
+
+*pgf-0.63 (05 Oct 2004)
+
+  05 Oct 2004; Mamoru KOMACHI <usata@gentoo.org> pgf-0.62.ebuild,
+  +pgf-0.63.ebuild:
+  Version bumped. Marked 0.62 stable on x86, alpha and ppc.
 
 *pgf-0.62 (19 Aug 2004)
 
