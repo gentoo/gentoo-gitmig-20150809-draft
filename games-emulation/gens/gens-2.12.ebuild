@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/gens/gens-2.12.ebuild,v 1.1 2003/09/09 16:26:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/gens/gens-2.12.ebuild,v 1.2 2003/09/14 08:55:37 msterret Exp $
 
 inherit games
 
@@ -13,11 +13,13 @@ KEYWORDS="x86"
 SLOT="0"
 IUSE=""
 
-DEPEND=">=media-libs/libsdl-1.2
-	app-arch/unzip
-	>=dev-lang/nasm-0.98
-	>=sys-apps/sed-4
+RDEPEND=">=media-libs/libsdl-1.2
 	>=x11-libs/gtk+-2.0*"
+
+DEPEND="${RDEPEND}
+	>=sys-apps/sed-4
+	app-arch/unzip
+	>=dev-lang/nasm-0.98"
 
 src_unpack() {
 	unpack ${A}
@@ -30,6 +32,15 @@ src_unpack() {
 	sed -i \
 		-e "s:\./resource:${GAMES_DATADIR}/${P}:" g_main_dummy.cpp || \
 			die "sed g_main_dummy.cpp failed"
+
+	# Starting with nasm-0.98.37, -O3 is no longer an alias for -O15
+	# the nasm devs recommend either not using -O or using -O999 since
+	# nasm will stop after no more optimizations are possible.
+	#
+	# This fix is for the asm files in gens that need more than 3 passes
+	# and fail with the new releases of nasm.
+	sed -i \
+		-e '/^NASMFLAGS=/ s:-O3:-O999:' Makefile
 }
 
 src_install () {
