@@ -1,14 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 8ead40a27137cee90798df794e6862f6 ChangeLog 659
-MD5 9422bf35dfa42fd10f6ce6fb93a4d6ea epplets-0.7.ebuild 734
+MD5 da8e54800bf03660841176d5d83ecf5e ChangeLog 862
 MD5 03bdbcabbe6a151da9ce0e537e916b2c metadata.xml 618
-MD5 106830bd4b3cfc951a50a5498e925346 files/digest-epplets-0.7 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA9LQkHTu7gpaalycRAmIOAKDJ2T9ajeu8N4G56HXsNwSGYaYOQgCfezcn
-isv+f4bGoT44+gJzCG5BIqU=
-=iFKU
------END PGP SIGNATURE-----
+MD5 f1e7be9943f76be4ab45412aeff284ae epplets-0.7-r1.ebuild 843
+MD5 106830bd4b3cfc951a50a5498e925346 files/digest-epplets-0.7-r1 64
+MD5 5b32a2cbac5456c47ed90d9f55ab0a1c files/0.7-compmgr-fix.patch 1134

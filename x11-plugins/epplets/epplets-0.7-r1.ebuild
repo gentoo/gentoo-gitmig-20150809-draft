@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/epplets/epplets-0.7.ebuild,v 1.10 2004/07/14 04:18:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/epplets/epplets-0.7-r1.ebuild,v 1.1 2004/11/08 05:24:53 vapier Exp $
+
+inherit eutils
 
 DESCRIPTION="Base files for Enlightenment epplets and some epplets"
 HOMEPAGE="http://www.enlightenment.org/"
@@ -8,7 +10,7 @@ SRC_URI="mirror://sourceforge/enlightenment/epplets-${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc amd64"
+KEYWORDS="amd64 ppc sparc x86"
 IUSE=""
 
 DEPEND="virtual/x11
@@ -16,6 +18,12 @@ DEPEND="virtual/x11
 	>=media-libs/imlib-1.9.10
 	>=x11-wm/enlightenment-0.16.6
 	media-sound/esound"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${PV}-compmgr-fix.patch #68057
+}
 
 src_compile() {
 	export EROOT=/usr
