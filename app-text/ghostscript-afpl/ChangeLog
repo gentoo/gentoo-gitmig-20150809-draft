@@ -1,6 +1,10 @@
 # ChangeLog for app-text/ghostscript-afpl
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-afpl/ChangeLog,v 1.10 2004/02/29 18:10:25 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-afpl/ChangeLog,v 1.11 2004/04/25 23:00:24 agriffis Exp $
+
+  25 Apr 2004; Aron Griffis <agriffis@gentoo.org>
+  ghostscript-afpl-8.13.ebuild, ghostscript-afpl-8.14.ebuild:
+  Add die following econf for bug 48950
 
   27 Feb 2004; Heinrich Wendel <lanius@gentoo.org>
   ghostscript-afpl-8.13.ebuild, ghostscript-afpl-8.14.ebuild:

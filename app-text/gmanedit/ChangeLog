@@ -1,6 +1,10 @@
 # ChangeLog for app-text/gmanedit
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gmanedit/ChangeLog,v 1.10 2004/03/05 15:04:38 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gmanedit/ChangeLog,v 1.11 2004/04/25 23:01:18 agriffis Exp $
+
+  25 Apr 2004; Aron Griffis <agriffis@gentoo.org> gmanedit-0.3.3-r2.ebuild,
+  gmanedit-0.3.3-r3.ebuild:
+  Add die following econf for bug 48950
 
   05 Mar 2004; Gustavo Zacarias <gustavoz@gentoo.org>
   gmanedit-0.3.3-r3.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mftrace/mftrace-1.0.10.ebuild,v 1.5 2004/03/12 09:18:44 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mftrace/mftrace-1.0.10.ebuild,v 1.6 2004/04/25 23:03:56 agriffis Exp $
 
 IUSE="truetype"
 
@@ -24,7 +24,7 @@ RDEPEND=">=dev-lang/python-2.2.1-r2
 	truetype? ( >=media-gfx/pfaedit-020910 )"
 
 src_compile() {
-	econf --datadir=/usr/lib/python${PYVER}/site-packages
+	econf --datadir=/usr/lib/python${PYVER}/site-packages || die "econf failed"
 	emake || die "emake failed"
 }
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ptex/ptex-3.1.2.ebuild,v 1.9 2004/02/23 17:59:02 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ptex/ptex-3.1.2.ebuild,v 1.10 2004/04/25 23:10:31 agriffis Exp $
 
 inherit eutils flag-o-matic
 
@@ -108,7 +108,7 @@ src_compile() {
 		--with-etex \
 		--without-xdvik \
 		--without-dvipdfm \
-		${myconf}
+		${myconf} || die "econf failed"
 
 	# emake sometimes b0rks on SPARC
 	make texmf=/usr/share/texmf || die "make teTeX failed"

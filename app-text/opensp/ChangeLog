@@ -1,6 +1,10 @@
 # ChangeLog for app-text/opensp
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/opensp/ChangeLog,v 1.14 2004/04/22 21:10:28 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/opensp/ChangeLog,v 1.15 2004/04/25 23:04:52 agriffis Exp $
+
+  25 Apr 2004; Aron Griffis <agriffis@gentoo.org> opensp-1.5-r1.ebuild,
+  opensp-1.5.ebuild:
+  Add die following econf for bug 48950
 
   22 Apr 2004; Martin Holzer <mholzer@gentoo.org> opensp-1.5-r1.ebuild,
   files/opensp-1.5-gcc34.patch:

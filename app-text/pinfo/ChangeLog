@@ -1,6 +1,10 @@
 # ChangeLog for app-text/pinfo
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pinfo/ChangeLog,v 1.14 2004/03/30 12:17:46 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pinfo/ChangeLog,v 1.15 2004/04/25 23:06:17 agriffis Exp $
+
+  25 Apr 2004; Aron Griffis <agriffis@gentoo.org> pinfo-0.6.5_p2-r1.ebuild,
+  pinfo-0.6.7.ebuild, pinfo-0.6.8.ebuild:
+  Add die following econf for bug 48950
 
   30 Mar 2004; Daniel Ahlberg <aliz@gentoo.org> pinfo-0.6.8.ebuild:
   Adding amd64 keyword. Closing #45583.

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-afpl/ghostscript-afpl-8.13.ebuild,v 1.5 2004/02/29 18:10:25 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-afpl/ghostscript-afpl-8.13.ebuild,v 1.6 2004/04/25 23:00:24 agriffis Exp $
 
 inherit eutils
 
@@ -72,7 +72,7 @@ src_compile() {
 	use gtk || sed -i -e 's:$(INSTALL_PROGRAM) $(GSSOX):#:' src/unix-dll.mak \
 		-e 's:$(GSSOX)::' src/unix-dll.mak
 
-	econf ${myconf}
+	econf ${myconf} || die "econf failed"
 
 	# build cups driver with cups
 	if [ `use cups` ]; then
@@ -91,7 +91,7 @@ src_compile() {
 
 	# build ijs
 	cd ijs
-	econf --prefix=${D}/usr
+	econf --prefix=${D}/usr || die "econf failed"
 	make || die "make failed"
 	cd ..
 }

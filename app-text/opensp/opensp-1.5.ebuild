@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/opensp/opensp-1.5.ebuild,v 1.6 2004/03/04 17:53:22 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/opensp/opensp-1.5.ebuild,v 1.7 2004/04/25 23:04:52 agriffis Exp $
 
 MY_P=${P/opensp/OpenSP}
 S=${WORKDIR}/${MY_P}
@@ -27,7 +27,7 @@ src_compile() {
 	myconf="${myconf} --enable-default-catalog=/etc/sgml/catalog"
 	myconf="${myconf} --enable-default-search-path=/usr/share/sgml"
 	myconf="${myconf} --datadir=/usr/share/sgml/${P}"
-	econf ${myconf}
+	econf ${myconf} || die "econf failed"
 	emake || die "parallel make failed"
 }
 

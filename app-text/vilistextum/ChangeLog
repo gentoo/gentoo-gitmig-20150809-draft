@@ -1,6 +1,9 @@
 # ChangeLog for app-text/vilistextum
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/vilistextum/ChangeLog,v 1.7 2004/03/12 08:51:04 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/vilistextum/ChangeLog,v 1.8 2004/04/25 23:14:25 agriffis Exp $
+
+  25 Apr 2004; Aron Griffis <agriffis@gentoo.org> vilistextum-2.6.2.ebuild:
+  Add die following econf for bug 48950
 
   12 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org>
   vilistextum-2.6.1.ebuild, vilistextum-2.6.2.ebuild:

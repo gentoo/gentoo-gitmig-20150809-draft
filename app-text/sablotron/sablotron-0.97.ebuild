@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sablotron/sablotron-0.97.ebuild,v 1.15 2004/02/23 16:41:08 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sablotron/sablotron-0.97.ebuild,v 1.16 2004/04/25 23:12:15 agriffis Exp $
 
 inherit libtool
 
@@ -29,7 +29,7 @@ src_compile() {
 	# fixes bug #3876
 	export LDFLAGS="-lstdc++"
 
-	econf ${myconf}
+	econf ${myconf} || die "econf failed"
 	make || die
 }
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/htmldoc/htmldoc-1.8.20-r1.ebuild,v 1.6 2004/04/08 17:28:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/htmldoc/htmldoc-1.8.20-r1.ebuild,v 1.7 2004/04/25 23:02:43 agriffis Exp $
 
 inherit eutils
 
@@ -30,7 +30,7 @@ src_compile() {
 		--with-x \
 		--with-gui \
 		--with-openssl-libs=/usr/lib \
-		--with-openssl-includes=/usr/include/openssl
+		--with-openssl-includes=/usr/include/openssl || die "econf failed"
 
 	# Add missing -lfltk_images to LIBS
 	mv Makedefs Makedefs.orig

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gmanedit/gmanedit-0.3.3-r3.ebuild,v 1.3 2004/03/05 15:04:38 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gmanedit/gmanedit-0.3.3-r3.ebuild,v 1.4 2004/04/25 23:01:18 agriffis Exp $
 
 inherit eutils
 
@@ -20,7 +20,7 @@ S=${WORKDIR}/${P}.orig
 
 src_compile() {
 	epatch ${FILESDIR}/${P}-xterm.patch
-	econf --disable-nls
+	econf --disable-nls || die "econf failed"
 	make || die
 }
 

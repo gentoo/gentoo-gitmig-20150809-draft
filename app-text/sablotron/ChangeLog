@@ -1,6 +1,10 @@
 # ChangeLog for app-text/sablotron
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sablotron/ChangeLog,v 1.26 2004/04/01 20:54:17 randy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sablotron/ChangeLog,v 1.27 2004/04/25 23:12:15 agriffis Exp $
+
+  25 Apr 2004; Aron Griffis <agriffis@gentoo.org> sablotron-0.96.ebuild,
+  sablotron-0.97.ebuild:
+  Add die following econf for bug 48950
 
   01 Apr 2004; <randy@gentoo.org> sablotron-1.0.1.ebuild:
   adding s390 keywords
