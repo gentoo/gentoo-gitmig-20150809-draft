@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/flim
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/flim/ChangeLog,v 1.7 2003/12/22 11:52:50 usata Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/flim/ChangeLog,v 1.8 2004/01/31 13:19:08 usata Exp $
+
+  31 Jan 2004; Mamoru KOMACHI <usata@gentoo.org> flim-1.14.6.ebuild:
+  Marked stable on x86 and alpha
 
 *flim-1.14.6 (22 Dec 2003)
 
