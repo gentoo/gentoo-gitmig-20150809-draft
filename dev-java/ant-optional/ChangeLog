@@ -1,6 +1,8 @@
 # ChangeLog for dev-java/ant-optional
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-optional/ChangeLog,v 1.9 2004/03/11 20:43:15 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-optional/ChangeLog,v 1.10 2004/03/18 20:21:59 aliz Exp $
+
+*ant-optional-1.6.1-r1 (17 Mar 2004)
 
   11 Mar 2004; Chris Aniszczyk <zx@gentoo.org> ant-optional-1.6.1.ebuild:
   Some small dep fixes courtesy of Pavel <hlobil@sympatico.ca>. Closes #42626
