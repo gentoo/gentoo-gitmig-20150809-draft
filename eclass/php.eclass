@@ -1,7 +1,7 @@
 # Copyright 2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author: Robin H. Johnson <robbat2@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.56 2003/06/21 10:24:22 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.57 2003/06/26 20:02:29 robbat2 Exp $
 
 # This EBUILD is totally masked presently. Use it at your own risk.  I know it
 # is severely broken, but I needed to get a copy into CVS to pass around and
@@ -95,6 +95,8 @@ DEPEND="${RDEPEND} ${DEPEND}
 	mcal? ( dev-libs/libmcal )"
 #9libs causes a configure error
 DEPEND="${DEPEND} !dev-libs/9libs"
+#dev-libs/libiconv causes a compile failure
+DEPEND="${DEPEND} "!dev-libs/libiconv"
 
 
 #Waiting for somebody to want this:
