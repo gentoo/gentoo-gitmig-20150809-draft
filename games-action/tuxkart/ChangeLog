@@ -1,6 +1,9 @@
 # ChangeLog for games-action/tuxkart
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/tuxkart/ChangeLog,v 1.5 2003/12/15 04:53:16 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/tuxkart/ChangeLog,v 1.6 2003/12/31 08:48:47 mr_bones_ Exp $
+
+  31 Dec 2003; Michael Sterrett <mr_bones_@gentoo.org> tuxkart-0.2.0.ebuild:
+  fix hard-coded CFLAGS; more error checking/messages
 
   14 Dec 2003; Michael Sterrett <mr_bones_@gentoo.org> tuxkart-0.2.0.ebuild:
   more error checking/messages

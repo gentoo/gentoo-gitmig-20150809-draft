@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/tuxkart/tuxkart-0.2.0.ebuild,v 1.4 2003/12/15 04:53:16 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/tuxkart/tuxkart-0.2.0.ebuild,v 1.5 2003/12/31 08:48:47 mr_bones_ Exp $
 
 inherit games eutils
 
@@ -13,6 +13,7 @@ LICENSE="GPL-2"
 KEYWORDS="x86 alpha amd64"
 
 DEPEND=">=media-libs/plib-1.6.0
+	>=sys-apps/sed-4
 	virtual/x11
 	virtual/glut
 	virtual/opengl"
@@ -25,6 +26,10 @@ src_unpack() {
 	if use alpha; then
 		epatch ${FILESDIR}/tuxkart-0.2.0-alpha.patch
 	fi
+
+	sed -i \
+		-e "s/-malign-double//; s/-O6//" ${S}/configure || \
+			die "sed configure failed"
 }
 
 src_compile() {
@@ -33,10 +38,10 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install         || die "make install failed"
-	dodoc AUTHORS CHANGES NEWS README || die "dodoc failed"
-	dohtml doc/*.html                 || die "dohtml failed"
-	rm -rf ${D}/usr/share/tuxkart/
+	make DESTDIR="${D}" install  || die "make install failed"
+	dodoc AUTHORS CHANGES README || die "dodoc failed"
+	dohtml doc/*.html            || die "dohtml failed"
+	rm -rf "${D}/usr/share/tuxkart/"
 
 	prepgamesdirs
 }
