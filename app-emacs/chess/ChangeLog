@@ -1,0 +1,11 @@
+# ChangeLog for app-emacs/chess
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/chess/ChangeLog,v 1.1 2002/11/01 02:52:00 mkennedy Exp $
+
+*chess-2.0_beta3 (31 Oct 2002)
+
+  31 Oct 2002; Matthew Kennedy <mkennedy@gentoo.org> ChangeLog,
+  chess-2.0_beta3.ebuild, files/50chess-gentoo.el,
+  files/digest-chess-2.0_beta3 :
+
+  Initial import.

@@ -1,0 +1,11 @@
+# ChangeLog for app-emacs/table
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/table/ChangeLog,v 1.1 2002/11/01 02:52:02 mkennedy Exp $
+
+*table-1.5.53 (31 Oct 2002)
+
+  31 Oct 2002; Matthew Kennedy <mkennedy@gentoo.org> ChangeLog,
+  table-1.5.53.ebuild, files/50table-gentoo.el, 
+  files/digest-table-1.5.53 :
+
+  Initial import.

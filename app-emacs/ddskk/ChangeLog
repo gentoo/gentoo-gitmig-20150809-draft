@@ -1,0 +1,11 @@
+# ChangeLog for app-emacs/ddskk
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ddskk/ChangeLog,v 1.1 2002/11/01 02:52:01 mkennedy Exp $
+
+*ddskk-20020901 (31 Oct 2002)
+
+  31 Oct 2002; Matthew Kennedy <mkennedy@gentoo.org> ChangeLog,
+  ddskk-20020901.ebuild, files/50ddskk-gentoo.el, files/ddskk-gentoo.patch,
+  files/digest-ddskk-20020901 :
+
+  Initial import.

@@ -1,0 +1,11 @@
+# ChangeLog for app-emacs/u-vm-color
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/u-vm-color/ChangeLog,v 1.1 2002/11/01 02:52:02 mkennedy Exp $
+
+*u-vm-color-1.7 (31 Oct 2002)
+
+  31 Oct 2002; Matthew Kennedy <mkennedy@gentoo.org> ChangeLog,
+  u-vm-color-1.7.ebuild, files/50u-vm-color-gentoo.el, 
+  files/digest-u-vm-color-1.7 :
+
+  Initial import.

@@ -1,0 +1,11 @@
+# ChangeLog for app-emacs/flim
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/flim/ChangeLog,v 1.1 2002/11/01 02:52:01 mkennedy Exp $
+
+*flim-1.14.4 (31 Oct 2002)
+
+  31 Oct 2002; Matthew Kennedy <mkennedy@gentoo.org> ChangeLog,
+  flim-1.14.4.ebuild, files/60flim-gentoo.el, 
+  files/digest-flim-1.14.4 :
+
+  Initial import.

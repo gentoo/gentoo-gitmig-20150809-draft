@@ -1,0 +1,11 @@
+# ChangeLog for app-emacs/binclock
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/binclock/ChangeLog,v 1.1 2002/11/01 02:52:00 mkennedy Exp $
+
+*binclock-1.7 (31 Oct 2002)
+
+  31 Oct 2002; Matthew Kennedy <mkennedy@gentoo.org> ChangeLog,
+  binclock-1.7.ebuild, files/50binclock-gentoo.el,
+  files/digest-binclock-1.7 :
+
+  Initial import.

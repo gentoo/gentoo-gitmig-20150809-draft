@@ -1,0 +1,11 @@
+# ChangeLog for app-emacs/eperiodic
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/eperiodic/ChangeLog,v 1.1 2002/11/01 02:52:01 mkennedy Exp $
+
+*eperiodic-1.26 (31 Oct 2002)
+
+  31 Oct 2002; Matthew Kennedy <mkennedy@gentoo.org> ChangeLog,
+  eperiodic-1.26.ebuild, files/50eperiodic-gentoo.el, 
+  files/digest-eperiodic-1.26 :
+
+  Initial import.

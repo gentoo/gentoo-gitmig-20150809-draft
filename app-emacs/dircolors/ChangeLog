@@ -1,0 +1,11 @@
+# ChangeLog for app-emacs/dircolors
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/dircolors/ChangeLog,v 1.1 2002/11/01 02:52:01 mkennedy Exp $
+
+*dircolors-1.0 (31 Oct 2002)
+
+  31 Oct 2002; Matthew Kennedy <mkennedy@gentoo.org> ChangeLog,
+  dircolors-1.0.ebuild, files/50dircolors-gentoo.el, 
+  files/digest-dircolors-1.0 :
+
+  Initial import.

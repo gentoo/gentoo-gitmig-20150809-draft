@@ -1,0 +1,11 @@
+# ChangeLog for app-emacs/matlab
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/matlab/ChangeLog,v 1.1 2002/11/01 02:52:01 mkennedy Exp $
+
+*matlab-2.2.3 (31 Oct 2002)
+
+  31 Oct 2002; Matthew Kennedy <mkennedy@gentoo.org> ChangeLog,
+  matlab-2.2.3.ebuild, files/50matlab-gentoo.el, 
+  files/digest-matlab-2.2.3 :
+
+  Initial import.

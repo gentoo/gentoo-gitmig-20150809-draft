@@ -1,0 +1,11 @@
+# ChangeLog for app-emacs/uboat
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/uboat/ChangeLog,v 1.1 2002/11/01 02:52:02 mkennedy Exp $
+
+*uboat-1.2 (31 Oct 2002)
+
+  31 Oct 2002; Matthew Kennedy <mkennedy@gentoo.org> ChangeLog,
+  uboat-1.2.ebuild, files/50uboat-gentoo.el, 
+  files/digest-uboat-1.2 :
+
+  Initial import.

@@ -1,0 +1,11 @@
+# ChangeLog for app-emacs/psgml
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/psgml/ChangeLog,v 1.1 2002/11/01 02:52:01 mkennedy Exp $
+
+*psgml-1.2.5 (31 Oct 2002)
+
+  31 Oct 2002; Matthew Kennedy <mkennedy@gentoo.org> ChangeLog,
+  psgml-1.2.5.ebuild, files/50psgml-gentoo.el, 
+  files/digest-psgml-1.2.5 :
+
+  Initial import.

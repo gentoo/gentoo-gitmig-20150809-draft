@@ -1,0 +1,11 @@
+# ChangeLog for app-emacs/boxquote
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/boxquote/ChangeLog,v 1.1 2002/11/01 02:52:00 mkennedy Exp $
+
+*boxquote-1.14 (31 Oct 2002)
+
+  31 Oct 2002; Matthew Kennedy <mkennedy@gentoo.org> ChangeLog,
+  boxquote-1.14.ebuild, files/50boxquote-gentoo.el,
+  files/digest-boxquote-1.14 :
+
+  Initial import.
