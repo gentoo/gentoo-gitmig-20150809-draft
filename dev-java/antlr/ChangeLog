@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/antlr
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/antlr/ChangeLog,v 1.11 2003/08/15 06:00:29 strider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/antlr/ChangeLog,v 1.12 2003/12/16 15:22:22 weeve Exp $
+
+  16 Dec 2003; Jason Wever <weeve@gentoo.org> antlr-2.7.2.ebuild:
+  Added ~sparc keyword to fix broken dependencies in dev-java/makeme.
 
   15 Aug 2003; Adrian Almenar <strider@gentoo.org> antlr-2.7.1-r3.ebuild,
   antlr-2.7.2.ebuild, antlr-2.7.2_alpha2-r1.ebuild, antlr-2.7.2_alpha2.ebuild:
