@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/joe
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/joe/ChangeLog,v 1.15 2004/03/25 03:09:10 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/joe/ChangeLog,v 1.16 2004/04/23 22:18:54 joker Exp $
+
+*joe-3.0 (24 Apr 2004)
+
+  24 Apr 2004; Christian Birchinger <joker@gentoo.org> joe-3.0.ebuild:
+  Version bump
 
   24 Mar 2004; Joshua Kinard <kumba@gentoo.org> joe-2.9.8.ebuild:
   Marked stable on mips.
