@@ -1,6 +1,7 @@
 MD5 2e7b27c98b9b611a7bb8e68123fd5968 abook-0.5.0.ebuild 736
 MD5 61e211b88ff8f06434807145ff8bd6a9 abook-0.5.2.ebuild 788
-MD5 ad34826cb3480796eccbbbf81f9229d9 ChangeLog 1233
+MD5 51c7de685e801b721adb2c81f7e9a18a abook-0.5.2-r1.ebuild 872
+MD5 c790bc58e1de4c5a0ca2c988dc0db56c ChangeLog 1408
 MD5 838ab371973d52a741378b9dced70f87 metadata.xml 434
 MD5 a9a20e478e3323d05eaa11cbfeb0334d abook-0.5.1-r1.ebuild 955
 MD5 4ee2d4d21ad4b060cfa2a4451edcebf3 abook-0.5.1.ebuild 853
@@ -8,4 +9,6 @@ MD5 e6c4d56c01bce9e8a8512ca3ec50ee79 files/digest-abook-0.5.0 63
 MD5 6dc9d5e8a060c78c1b1943b27296b7af files/digest-abook-0.5.1 63
 MD5 882e53be58a3a05f24a7c29f49e998cb files/digest-abook-0.5.2 63
 MD5 6dc9d5e8a060c78c1b1943b27296b7af files/digest-abook-0.5.1-r1 63
+MD5 882e53be58a3a05f24a7c29f49e998cb files/digest-abook-0.5.2-r1 63
+MD5 57683803307c12852566a0373212ba6d files/abook-0.5.2-filter.diff 1155
 MD5 3b62ad1d9ad437a4dfc2c8ad9c96a2e4 files/0.5.1-01_mutt-filter 281
