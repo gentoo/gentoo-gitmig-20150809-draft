@@ -14,9 +14,6 @@
   set -ppc in keywords, this provides an x86 binary that
   is not executable.
 
-  14 Aug 2002; Pieter Van den Abeele <pvdabeel@gentoo.org> :
-  Added ppc keyword
-
   20 Jul 2002; Doug Goldstein <cardoe@gentoo.org> rar-3.0.ebuild
   Added missing KEYWORDS
 
