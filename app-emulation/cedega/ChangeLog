@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/cedega
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/cedega/ChangeLog,v 1.7 2004/11/10 05:28:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/cedega/ChangeLog,v 1.8 2004/12/08 01:35:18 vapier Exp $
+
+*cedega-4.2 (07 Dec 2004)
+
+  07 Dec 2004; Mike Frysinger <vapier@gentoo.org> +cedega-4.2.ebuild:
+  Version bump #73637 by Alex Handy.
 
 *cedega-4.1.1 (10 Nov 2004)
 
