@@ -1,6 +1,13 @@
 # ChangeLog for www-servers/cherokee
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/ChangeLog,v 1.4 2004/10/06 18:23:45 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/ChangeLog,v 1.5 2004/10/30 17:12:15 stuart Exp $
+
+*cherokee-0.4.17.1 (30 Oct 2004)
+
+  30 Oct 2004; Stuart Herbert <stuart@gentoo.org>
+  +files/cherokee-0.4.17-cherokee.conf, +cherokee-0.4.17.1.ebuild:
+  Version bump; addresses security bug #67667; thanks to Florian Schihabel
+  <florian.schihabel@gmx.net> for the report
 
   06 Oct 2004; Olivier Crete <tester@gentoo.org> cherokee-0.4.17.ebuild:
   Marked stable on x86 wrt security bug #66543
