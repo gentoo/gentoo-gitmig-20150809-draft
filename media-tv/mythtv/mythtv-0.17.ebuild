@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.17.ebuild,v 1.1 2005/02/11 06:57:29 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.17.ebuild,v 1.2 2005/02/11 16:08:23 cardoe Exp $
 
 inherit myth flag-o-matic eutils
 
@@ -32,7 +32,7 @@ RDEPEND="${DEPEND}
 
 pkg_setup() {
 
-	local qt_use="$(</var/db/pkg/`best_version qt`/USE)"
+	local qt_use="$(</var/db/pkg/`best_version x11-libs/qt`/USE)"
 	if ! has mysql ${qt_use} ; then
 		eerror "Qt is missing MySQL support. Please add"
 		eerror "'mysql' to your USE flags, and re-emerge Qt."
