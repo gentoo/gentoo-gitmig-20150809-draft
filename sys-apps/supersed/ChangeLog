@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/supersed
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/supersed/ChangeLog,v 1.2 2002/08/23 11:12:31 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/supersed/ChangeLog,v 1.3 2002/08/28 11:00:25 seemant Exp $
+
+*supersed-3.58-r2 (28 Aug 2002)
+
+  28 Aug 2002; Seemant Kulleen <seemant@gentoo.org> supersed-3.58-r2.ebuild
+  files/digest-supersed-3.58-r2 :
+
+  Installs documentation.  Thanks to: thompson@pobox.com (Paul Thompson) in
+  bug #6941 for pointing it out.
 
 *supersed-3.58-r1 (23 Aug 2002)
 
