@@ -3,7 +3,7 @@ virtual/lpr			net-print/cups
 virtual/python			dev-lang/python
 virtual/mta			mail-mta/ssmtp
 virtual/alsa			media-sound/alsa-driver
-virtual/kernel			sys-kernel/linux26-headers
+virtual/kernel			sys-kernel/linux-headers
 virtual/linux-sources		sys-kernel/gentoo-sources
 virtual/glibc			sys-libs/glibc
 virtual/libc			sys-libs/glibc
@@ -29,7 +29,7 @@ virtual/bootloader		sys-boot/grub
 virtual/editor			app-editors/nano
 virtual/jack			media-sound/jack-audio-connection-kit
 virtual/quicktime		media-libs/libquicktime
-virtual/os-headers		sys-kernel/linux26-headers
+virtual/os-headers		sys-kernel/linux-headers
 virtual/ghc			dev-lang/ghc-bin
 virtual/modutils		sys-apps/module-init-tools
 virtual/inetd			sys-apps/xinetd
