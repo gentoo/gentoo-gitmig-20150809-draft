@@ -6,7 +6,7 @@ simply
 # echo "Options ExecCGI" > ${MY_INSTALLDIR}/.htaccess
 
 2. Add the following lines to your Apache configs:
-Alias /moinmoin "${MY_INSTALLDIR}"
+Alias /wiki "${MY_INSTALLDIR}"
 ScriptAlias /mymoin "${MY_INSTALLDIR}/moin.cgi"
 
 3. Restart Apache
