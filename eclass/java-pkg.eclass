@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-pkg.eclass,v 1.21 2004/11/29 21:46:16 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-pkg.eclass,v 1.22 2005/03/16 16:50:37 luckyduck Exp $
 
 ECLASS=java-pkg
 INHERITED="${INHERITED} ${ECLASS}"
@@ -334,4 +334,24 @@ java-pkg_jarinto()
 java-pkg_sointo()
 {
 	sodest=$1
+}
+
+java-pkg_dosrc() {
+	java-pkg_do_init_
+
+	[ $# -lt 1 ] && die "${FUNCNAME[0]}: at least one argument needed" 
+
+	local target="${shareroot}/source/"
+
+	local files
+	local startdir=$(pwd)
+	for x in ${@}; do
+		cd $(dirname ${x})
+		zip -q -r ${T}/${PN}-src.zip $(basename ${x}) || die "zip failed"
+		cd ${startdir}
+	done
+
+	dodir ${target}
+	install ${INSOPTIONS} "${T}/${PN}-src.zip" "${D}${target}" \
+		|| die "failed to install sources"
 }
