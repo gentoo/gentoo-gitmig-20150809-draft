@@ -1,8 +1,12 @@
 # ChangeLog for net-mail/mailx
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailx/ChangeLog,v 1.11 2003/06/09 19:03:12 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailx/ChangeLog,v 1.12 2003/06/10 23:53:24 kumba Exp $
+
 
 *mailx-8.1.2.20021129-r2 (09 Jun 2003)
+
+  10 Jun 2003; Joshua Kinard <kumba@gentoo.org> :
+  Fixed bad digest and added ~mips to KEYWORDS
 
   09 Jun 2003; Nick Hadaway <raker@gentoo.org> 
   mailx-8.1.2.20021129-r2.ebuild, files/digest-mailx-20021129-r2:
