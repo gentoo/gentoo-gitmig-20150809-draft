@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/xfce4-sensors
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-sensors/ChangeLog,v 1.1 2005/01/08 06:29:42 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-sensors/ChangeLog,v 1.2 2005/02/27 12:26:14 brix Exp $
+
+  27 Feb 2005; Henrik Brix Andersen <brix@gentoo.org>
+  xfce4-sensors-0.3.0.ebuild:
+  Dependency update: sys-apps/lm-sensors -> sys-apps/lm_sensors.
 
 *xfce4-sensors-0.3.0 (08 Jan 2005)
 
