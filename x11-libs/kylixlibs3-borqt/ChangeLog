@@ -1,0 +1,8 @@
+# ChangeLog for app-emulation/win4lin
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/kylixlibs3-borqt/ChangeLog,v 1.1 2003/03/04 22:07:21 bass Exp $
+
+*kylixlibs3-borqt-3.0-2 (04 Mar 2003)
+
+ 04 Mar 2003; J.Alberto Suárez L. <bass@gentoo.org> kylixlibs3-borqt-3.0-2.ebuild:
+ First relase
