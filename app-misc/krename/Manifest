@@ -2,7 +2,9 @@ MD5 13b8e57cd37ff5cb47264db98bb2ddb4 krename-2.8.2.ebuild 443
 MD5 443b521d7e1fc5ba748c7e1662aeb2ed krename-2.8.4.ebuild 438
 MD5 dddc4064af56eb7e56462e1e190dce50 krename-2.8.3.ebuild 438
 MD5 f656f39a9859c9e362fb1f393128fb4e ChangeLog 2437
+MD5 a8ec5a0a43d745493079aa3b7ece1943 krename-2.8.5.ebuild 439
 MD5 1b6808bbd78c9161f8b7efb090d966f8 metadata.xml 162
 MD5 d6026cb12deb696cdf3a7b48fe3e5129 files/digest-krename-2.8.2 66
 MD5 96e553337195192a075d03c909e77abc files/digest-krename-2.8.3 66
 MD5 db554b9a7f5650781413ce5a83a82ab3 files/digest-krename-2.8.4 66
+MD5 7372bce6a0f5a08335a2b91a138b0d5a files/digest-krename-2.8.5 66
