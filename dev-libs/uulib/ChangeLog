@@ -1,0 +1,10 @@
+# ChangeLog for dev-libs/uulib
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/uulib/ChangeLog,v 1.1 2004/06/17 02:45:32 swegener Exp $
+
+*uulib-0.5.20 (17 Jun 2004)
+
+  17 Jun 2004; Sven Wegener <swegener@gentoo.org> +uulib-0.5.20.ebuild:
+  Initial import, ebuild written by me. Needed as a dependency for the to be
+  added net-news/nzbget.
+
