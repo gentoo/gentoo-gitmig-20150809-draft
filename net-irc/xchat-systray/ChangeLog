@@ -1,6 +1,11 @@
 # ChangeLog for net-irc/xchat-systray
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-systray/ChangeLog,v 1.7 2004/07/20 23:18:10 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-systray/ChangeLog,v 1.8 2004/07/20 23:44:11 swegener Exp $
+
+  21 Jul 2004; Sven Wegener <swegener@gentoo.org> xchat-systray-2.3.1.ebuild,
+  xchat-systray-2.4.0.ebuild:
+  Don't override "MAKEOPTS". Moved net-irc/xchat into "RDEPEND" and "DEPEND".
+  Made CFLAGS aware.
 
   21 Jul 2004; Sven Wegener <swegener@gentoo.org> metadata.xml:
   Moved package to the net-irc herd.
