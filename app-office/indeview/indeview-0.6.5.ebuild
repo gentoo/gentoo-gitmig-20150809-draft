@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/indeview/indeview-0.6.5.ebuild,v 1.3 2004/04/22 17:27:28 kanaka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/indeview/indeview-0.6.5.ebuild,v 1.4 2004/04/22 21:59:28 dholm Exp $
 
 DESCRIPTION="Convert OpenOffice/KOffice to run independently on Linux, OSX, or Windows"
 HOMEPAGE="http://www.indeview.org/"
@@ -8,7 +8,7 @@ SRC_URI="http://www.${PN}.org/download/${P}.tgz"
 LICENSE="LGPL-2.1"
 SLOT="0"
 
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 IUSE=""
 RDEPEND="x11-libs/qt"
 
