@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/bacula/bacula-1.31.ebuild,v 1.6 2004/01/28 22:39:01 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/bacula/bacula-1.31.ebuild,v 1.7 2004/01/29 23:42:35 zul Exp $
 
 NEWP=${P}-04Jun03
 S=${WORKDIR}/${NEWP}
@@ -58,6 +58,11 @@ src_compile() {
 	if use sqlite
 	then
 		myconf="${myconf} --with-sqlite=/usr"
+	fi
+
+	if use sqlite && use mysql
+	then
+		myconf="${myconf/--with-sqlite/}"
 	fi
 
 	./configure \
