@@ -44,6 +44,7 @@ net-www/netscape-plugger
 sys-apps/lilo
 sys-apps/grub 
 
+*app-arch/ncompress
 *sys-apps/baselayout
 *sys-apps/portage
 *sys-devel/binutils
