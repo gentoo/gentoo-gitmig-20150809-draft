@@ -2,8 +2,8 @@ MD5 4bf70f21528928c670477f76bd375237 qmail-1.03-r11.ebuild 11431
 MD5 3bdf6864e9399d20c8d786be23d7d34f qmail-1.03-r9.ebuild 9990
 MD5 d1d239c08fb007430de3a84e0a5de524 qmail-1.03-r10.ebuild 11180
 MD5 173fcf74cb0fb3fd6df5a3c842cd6d41 qmail-1.03-r8.ebuild 8142
-MD5 a2ba01c115d2f3043634727dc354c5e6 qmail-1.03-r12.ebuild 10612
-MD5 33677a21306d8fd1435655163e7731d8 ChangeLog 7481
+MD5 9fa3f6faf31d1a36ffae1166e1634068 qmail-1.03-r12.ebuild 10612
+MD5 da54a07f2cbf5466aa124bb29d4eda5f ChangeLog 7529
 MD5 ff596e74b015e067a180fc78855aa87a metadata.xml 360
 MD5 5897cb300c3233c91c7e221c8b4b8501 files/digest-qmail-1.03-r8 245
 MD5 48a1e168db29ab4e6c57f1ac135ee2bf files/digest-qmail-1.03-r9 323
@@ -79,11 +79,11 @@ MD5 249138d56492deb0f856849bc002e46a files/1.03-r12/run-qmailqmqpdlog 97
 MD5 795f633858c0919b6e201cf2b845779e files/1.03-r12/run-qmailqmtpdlog 97
 MD5 b24f4dbd450d2d4eddc75ba19cebb915 files/1.03-r12/dot_qmail 34
 MD5 f43900d79a0aacb5e0d71b0bb6c06fea files/1.03-r12/run-qmailsmtpdlog 97
-MD5 7f5c5cca4dc2919c28147ddc9ab5f758 files/1.03-r12/conf-qmqpd 482
-MD5 981e6ffcf382b11a313d6f598c5f18d2 files/1.03-r12/conf-qmtpd 574
+MD5 d681d112e063797dbc0c0308430b25ee files/1.03-r12/conf-qmqpd 482
+MD5 f3225c7d82abd16d5f4c4fa7e40aa3d4 files/1.03-r12/conf-qmtpd 574
 MD5 41b856bb1938974f4fd9c9320706e832 files/1.03-r12/conf-smtpd 1054
 MD5 834dad5113515d0f00981fdc1d07fa84 files/1.03-r12/run-qmailsendlog 96
-MD5 76af15d5058316eee26c7dd8e53d7acf files/1.03-r12/qmail-control 858
-MD5 c4dfed6db3b0b96b84bc7eb6c22aec08 files/1.03-r12/conf-common 836
+MD5 fc7391f02934a9c75a92dce36229d590 files/1.03-r12/qmail-control 858
+MD5 fdb3ebabfa3e830c405f72f945819c83 files/1.03-r12/conf-common 836
 MD5 23a2babf3049fe012de21c17e550b3e5 files/1.03-r12/run-qmailsend 29
 MD5 0e97c0b031776f40cacdfbf3114af574 files/1.03-r12/run-qmailpop3dlog 97

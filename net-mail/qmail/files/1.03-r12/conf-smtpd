@@ -1,0 +1,27 @@
+#!/bin/sh
+
+# Stuff to run before tcpserver
+QMAIL_TCPSERVER_PRE=""
+# Stuff to run qmail-smtpd
+QMAIL_SMTP_PRE=""
+# Stuff to after qmail-smtpd
+QMAIL_SMTP_POST=""
+
+# You might want to use rblsmtpd with this, but you need to fill in a RBL server here first
+# see http://cr.yp.to/ucspi-tcp/rblsmtpd.html for more details
+#QMAIL_SMTP_PRE="${QMAIL_SMTP_PRE} rblsmtpd -r RBL-SERVER"
+
+# If you are interested in providing limited relaying, emerge relay-ctrl, then uncomment the next 2 lines
+#QMAIL_TCPSERVER_PRE="${QMAIL_TCPSERVER_PRE} envdir /etc/relay-ctrl relay-ctrl-chdir"
+#QMAIL_SMTP_POST="${QMAIL_SMTP_POST} relay-ctrl-check"
+# In /etc/courier-imap/authdaemonrc add the next line to the end:
+#authmodulelist="${authmodulelist} relay-ctrl-allow"
+# Then in /etc/courier-imap/{imapd,imapd-ssl,pop3d,pop3d-ssl}
+# Add this at the end
+#PRERUN="${PRERUN} envdir /etc/relay-ctrl relay-ctrl-chdir"
+
+# We don't have anything to set QMAILQUEUE to at the moment, so we leave it alone
+#QMAILQUEUE=""
+
+# I don't trust /etc/services to have everything...
+TCPSERVER_PORT=25

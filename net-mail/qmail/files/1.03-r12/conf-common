@@ -1,0 +1,25 @@
+#!/bin/sh
+# Configuration file for all qmail daemons
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/files/1.03-r12/conf-common,v 1.1 2003/08/11 07:35:15 robbat2 Exp $
+
+# Qmail User IDS to run daemons as
+QMAILDUID=`id -u qmaild`
+NOFILESGID=`id -g qmaild`
+
+# Qmail Control Dir (this is actually set in /etc/env.d/99qmail
+#QMAIL_CONTROLDIR=/var/qmail/control
+
+# Host and port to listen on
+# We listen on the IPv4 local ip by default
+TCPSERVER_HOST=0.0.0.0
+TCPSERVER_PORT=${SERVICE}
+
+# tcpserver maximum concurrency, defaults to 40 in tcpserver
+[ -e ${QMAIL_CONTROLDIR}/concurrencyincoming ] && MAXCONN=$(<${QMAIL_CONTROLDIR}/concurrencyincoming) || MAXCONN=40
+
+# A quick sanity check
+if [ -z "${QMAILDUID}" -o -z "${NOFILESGID}" -o -z "${SERVICE}" ]; then
+    echo SERVICE, QMAILDUID or NOFILESGID is unset in
+    echo $0
+    exit 1
+fi
