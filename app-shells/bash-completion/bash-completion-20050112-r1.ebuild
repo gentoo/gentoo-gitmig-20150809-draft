@@ -1,16 +1,15 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/bash-completion-20050103-r2.ebuild,v 1.1 2005/01/12 11:34:36 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/bash-completion-20050112-r1.ebuild,v 1.1 2005/01/18 00:42:27 ka0ttic Exp $
 
 inherit eutils
 
-GENCOMP_VERS="1.0_beta4"
-GENCOMP_PATCHVERS="20050112"
+GENCOMP_VERS="20050117"
 
 DESCRIPTION="Programmable Completion for bash (includes emerge and ebuild commands)"
 HOMEPAGE="http://www.caliban.org/bash/index.shtml#completion"
 SRC_URI="http://www.caliban.org/files/bash/${P}.tar.bz2
-	mirror://sourceforge/gentoo-bashcomp/gentoo-bashcomp-${GENCOMP_VERS}.tar.gz"
+	http://download.berlios.de/gentoo-bashcomp/gentoo-bashcomp-${GENCOMP_VERS}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -31,7 +30,6 @@ src_unpack() {
 	cd ${S}
 	epatch ${FILESDIR}/${PV}-gentoo.diff
 	cd ${WORKDIR}/gentoo-bashcomp-${GENCOMP_VERS}
-	epatch ${FILESDIR}/gentoo-bashcomp-${GENCOMP_PATCHVERS}.diff
 }
 
 src_install() {
@@ -49,7 +47,7 @@ src_install() {
 
 	# gentoo-bashcomp
 	cd ${WORKDIR}/gentoo-bashcomp-${GENCOMP_VERS}
-	doins src/gentoo || die "failed to install gentoo completions"
+	doins gentoo || die "failed to install gentoo completions"
 	dodir /etc/bash_completion.d
 	dosym ../../usr/share/bash-completion/gentoo /etc/bash_completion.d/gentoo \
 		|| die "dosym gentoo-bashcomp failed"
