@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-geramik/gtk-engines-geramik-0.24-r3.ebuild,v 1.2 2003/06/26 10:06:53 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-geramik/gtk-engines-geramik-0.24-r3.ebuild,v 1.3 2003/07/09 17:01:08 liquidx Exp $
 
 inherit gtk-engines2 eutils
 
@@ -13,6 +13,8 @@ SRC_URI="http://www.kde-look.org/content/files/3952-${MY_PN}-${PV}.tar.gz"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha"
 LICENSE="GPL-2"
 SLOT="2"
+
+DEPEND="${DEPEND} dev-util/pkgconfig"
 
 S=${WORKDIR}/${MY_PN}-${PV}
 
