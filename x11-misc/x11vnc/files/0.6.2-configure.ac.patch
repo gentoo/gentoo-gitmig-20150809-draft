@@ -1,0 +1,22 @@
+diff -Nur x11vnc-0.6.2.orig/configure.ac x11vnc-0.6.2/configure.ac
+--- x11vnc-0.6.2.orig/configure.ac	2004-11-16 17:39:24.860061978 +0100
++++ x11vnc-0.6.2/configure.ac	2004-11-16 17:39:39.745018698 +0100
+@@ -14,6 +14,10 @@
+ AC_PROG_MAKE_SET
+ AC_PROG_RANLIB
+ 
++# Checks for header files.
++AC_HEADER_STDC
++AC_CHECK_HEADERS([arpa/inet.h fcntl.h netdb.h netinet/in.h stdlib.h string.h sys/socket.h sys/time.h sys/timeb.h syslog.h unistd.h])
++
+ # Options
+ AH_TEMPLATE(BACKCHANNEL, [Enable BackChannel communication])
+ AC_ARG_WITH(backchannel,
+@@ -108,7 +112,3 @@
+ AC_SUBST(SDL_LIBS)
+-
+-# Checks for header files.
+-AC_HEADER_STDC
+-AC_CHECK_HEADERS([arpa/inet.h fcntl.h netdb.h netinet/in.h stdlib.h string.h sys/socket.h sys/time.h sys/timeb.h syslog.h unistd.h])
+ 
+ # Checks for typedefs, structures, and compiler characteristics.
