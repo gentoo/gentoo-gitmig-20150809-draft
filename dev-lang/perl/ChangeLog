@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/perl
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.111 2005/03/11 15:10:30 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.112 2005/03/11 15:13:49 mcummings Exp $
+
+  11 Mar 2005; Michael Cummings <mcummings@gentoo.org> -perl-5.8.2-r2.ebuild,
+  -perl-5.8.2-r3.ebuild, -perl-5.8.4-r2.ebuild, -perl-5.8.4-r3.ebuild,
+  -perl-5.8.5-r3.ebuild, -perl-5.8.5-r4.ebuild, -perl-5.8.6-r2.ebuild,
+  -perl-5.8.6-r3.ebuild:
+  Cleaning out old ebuilds - no keyword changes :)
 
 *perl-5.8.6-r4 (11 Mar 2005)
 

@@ -1,25 +1,13 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 cf2496d8465d150eb03c8a17ae2bd8a1 perl-5.8.2-r3.ebuild 11040
-MD5 d97fab13c7588da3b1d43d8a0f08df10 ChangeLog 34326
+MD5 f8abada81ae0fe4e35e8e677576adebd ChangeLog 34623
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 8cd8b26e45e7ceb3f409ed4c9864d512 perl-5.8.2-r2.ebuild 11040
-MD5 34fb50c7a59c5f23a51eca60318725fe perl-5.8.4-r3.ebuild 13178
-MD5 aa1f0d94a71a17d5b7dfb2c8d62efc00 perl-5.8.5-r4.ebuild 12818
-MD5 fa41c7475961d31a7dcac823a1dce30f perl-5.8.6-r3.ebuild 12897
 MD5 3f6092a22f80bf856229b133ef3d5e9b perl-5.8.2-r4.ebuild 11040
 MD5 0b4061d0f0c326074b93297f3e771c2e perl-5.8.4-r4.ebuild 13178
-MD5 ea0a048440a1958ece404f87444d866b perl-5.8.4-r2.ebuild 13178
-MD5 b95117e574104a8aaf24d8d5dac3aec5 perl-5.8.5-r3.ebuild 12818
-MD5 2546394e3958875975243c4963bda5c1 perl-5.8.6-r2.ebuild 12834
 MD5 993c307bbc2b2bca79d11f7382d9f9d7 perl-5.8.5-r5.ebuild 12818
 MD5 257082dd280f2ba254331ac9fbcbc8bc perl-5.8.6-r4.ebuild 12897
 MD5 319b56a7ce715fb7a494fe4d5cb9474c files/perl-5.8.2-picdl.patch 250
-MD5 8381e239056a7895edf8f3c6c05c835c files/digest-perl-5.8.2-r3 64
-MD5 93155b02a7e9d3cdc6d6934ce78d9f11 files/digest-perl-5.8.4-r3 64
-MD5 c354e2fbf8141a769c20032e94f45fd3 files/digest-perl-5.8.5-r4 64
-MD5 0a07934d74ccb1133cf0f3650cb94efc files/digest-perl-5.8.6-r3 64
 MD5 7d524860f97d7a73cb497f34b6c32099 files/CAN-2005-0448-rmtree.patch 7670
 MD5 8381e239056a7895edf8f3c6c05c835c files/digest-perl-5.8.2-r4 64
 MD5 93155b02a7e9d3cdc6d6934ce78d9f11 files/digest-perl-5.8.4-r4 64
@@ -52,17 +40,13 @@ MD5 4e99f7529e149661372283c981cf17ff files/perl-5.8.6-prelink-lpthread.patch 476
 MD5 d9412dab085f22309997c8f08ea1ac85 files/perl-5.8.6-reorder-INC.patch 2211
 MD5 c5cc36940b2488a37c3dc2287f6e672c files/perl-5.8.6-tempfiles.patch 2115
 MD5 154013a841cbb251d7b63fb006b4006f files/file_path_rmtree.patch 1068
-MD5 8381e239056a7895edf8f3c6c05c835c files/digest-perl-5.8.2-r2 64
-MD5 93155b02a7e9d3cdc6d6934ce78d9f11 files/digest-perl-5.8.4-r2 64
-MD5 c354e2fbf8141a769c20032e94f45fd3 files/digest-perl-5.8.5-r3 64
-MD5 0a07934d74ccb1133cf0f3650cb94efc files/digest-perl-5.8.6-r2 64
 MD5 bd75f0242e3b7791803d089c38a3f920 files/CAN-2005-0156-suid.patch 703
 MD5 c354e2fbf8141a769c20032e94f45fd3 files/digest-perl-5.8.5-r5 64
 MD5 0a07934d74ccb1133cf0f3650cb94efc files/digest-perl-5.8.6-r4 64
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFCMbTwtG5z4I8BtQoRAnj9AJ0ciu3k3JRIJer3Bd1lulD1f4kRRQCcCHDw
-dce0RGrQcCwYsL3Fu5AffMo=
-=8HxU
+iD8DBQFCMbW2tG5z4I8BtQoRAvVdAJ9uGLfycWhHodGFx+n7lpgx1UxfjgCeLDhn
+UAsYoUq0oafA97bKRMNMdqA=
+=U6+u
 -----END PGP SIGNATURE-----
