@@ -8,7 +8,7 @@
 # This script developed by Zachary T Welch at Superlucidity Services, LLC
 #  based on ideas from irc discussion and the clear need for this support
 # 
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/files/2.8/distcc-config,v 1.2 2003/07/21 19:06:34 lisa Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/files/2.8/distcc-config,v 1.3 2004/01/05 23:23:10 robbat2 Exp $
 # Changelog
 # 
 # 21 Jul 2003 - Changed install environment to EXCLUDE DISTCC_HOSTS from /etc/env.d/02distcc.
@@ -135,7 +135,7 @@ dccc_show_env() {
 }
 
 dccc_test_env() {
-	dccc_show_env | grep "$1" | tail -1 | sed -e "s,${1}=,,"
+	dccc_show_env | grep "$1" | tail -n1 | sed -e "s,${1}=,,"
 }
 
 dccc_load_defaults() {
@@ -175,7 +175,7 @@ dccc_regen_env() {
 dccc_get_env() {
 	if [ -f ${DCCC_ENV_FILE} ]; then
 		local xxENV="$(grep ${1} ${DCCC_ENV_FILE} | \
-			grep -v '^#' | tail -1)"
+			grep -v '^#' | tail -n1)"
 		echo ${xxENV#*=} | sed -e 's,^",,;s,"$,,'
 	elif [ -n "${2}" ]; then
 		echo "${2}"

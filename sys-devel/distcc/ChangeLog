@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/distcc
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.87 2003/12/25 04:37:00 lisa Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.88 2004/01/05 23:23:10 robbat2 Exp $
+
+  05 Jan 2004; Robin H. Johnson <robbat2@gentoo.org> files/2.10/distcc-config,
+  files/2.11/distcc-config, files/2.8/distcc-config, files/2.9/distcc-config:
+  fix tail -1 stuff in distcc-config files
 
 *distcc-2.12 (24 Dec 2003)
 
