@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-2.6.1.1.ebuild,v 1.14 2004/11/08 15:06:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-2.6.1.1.ebuild,v 1.15 2004/11/21 18:43:55 foser Exp $
 
 inherit gnome2 eutils
 
@@ -21,7 +21,7 @@ RDEPEND=">=dev-libs/glib-2
 	gnome-base/gnome-mime-data
 	>=x11-misc/shared-mime-info-0.14
 
-	app-admin/fam
+	virtual/fam
 
 	ssl? ( >=dev-libs/openssl-0.9.5
 		!gnome-extra/gnome-vfs-sftp )

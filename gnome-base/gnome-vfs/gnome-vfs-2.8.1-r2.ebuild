@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-2.8.1-r2.ebuild,v 1.5 2004/11/12 02:19:22 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-2.8.1-r2.ebuild,v 1.6 2004/11/21 18:43:55 foser Exp $
 
 inherit gnome2 eutils
 
@@ -19,7 +19,7 @@ RDEPEND=">=dev-libs/glib-2
 	>=dev-libs/libxml2-2.6
 	app-arch/bzip2
 
-	app-admin/fam
+	virtual/fam
 
 	gnome-base/gnome-mime-data
 	>=x11-misc/shared-mime-info-0.14
@@ -33,8 +33,6 @@ RDEPEND=">=dev-libs/glib-2
 	hal? ( >=sys-apps/hal-0.2.92
 		>=sys-apps/dbus-0.22 )
 	howl? ( >=net-misc/howl-0.9.6-r1 )"
-
-# FIXME : make the fam dep a virtual
 
 # ssl/gnutls USE deps : if both are enabled choose openssl
 # foser <foser@gentoo.org> 19 Apr 2004
