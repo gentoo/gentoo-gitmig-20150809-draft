@@ -1,8 +1,11 @@
 # ChangeLog for gnome-extra/gal
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gal/ChangeLog,v 1.7 2002/07/28 22:44:46 stroke Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gal/ChangeLog,v 1.8 2002/08/19 06:01:32 spider Exp $
 
 *gal-0.19.3 (29 Jul 2002)
+  19 Aug 2002; Spider <spider@gentoo.org> gal-0.19.3.ebuild :
+  tracked down and changed the missing gnome2 deps
+  
   29 Jul 2002; Gabriele Giorgetti <stroke@gentoo.org> gal-0.19.3.ebuild:
   New version.
 
