@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.0.10-r1.ebuild,v 1.2 2003/07/19 17:25:04 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.0.10-r1.ebuild,v 1.3 2003/07/19 17:52:02 raker Exp $
 
 IUSE="debug nls oggvorbis arts truetype alsa"
 
@@ -18,8 +18,7 @@ SLOT="2"
 KEYWORDS="~x86"
 
 DEPEND="virtual/x11
-   >=media-libs/libmad-0.15.0b
-   >=media-libs/libid3tag-0.15.0b
+   media-sound/mad
    >=media-libs/a52dec-0.7.4
    >=media-sound/lame-3.93
    >=media-video/mjpegtools-1.6
