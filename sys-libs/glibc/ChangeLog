@@ -1,6 +1,6 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.327 2005/03/16 06:12:26 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.328 2005/03/16 10:34:43 azarah Exp $
 
   15 Mar 2005; Jeremy Huddleston <eradicator@gentoo.org>
   glibc-2.3.4.20050125-r1.ebuild:
@@ -8,6 +8,13 @@
   #52374. Fix building a crosscompiled glibc with nptl when no libc is
   present. Use --no-archive when creating locales as some apps don't like
   locale-archive, bug #82106.
+
+*glibc-2.3.4.20041102-r1 (15 Mar 2005)
+
+  15 Mar 2005; Martin Schlemmer <azarah@gentoo.org>
+  +glibc-2.3.4.20041102-r1.ebuild:
+  Fix assert in _dl_next_tls_modid-assert (sysdeps/generic/dl-tls.c), bug
+  #52374. Bump x86 stable.
 
   15 Mar 2005; Martin Schlemmer <azarah@gentoo.org>
   +files/2.3.4/glibc-2.3.4-fix-_dl_next_tls_modid-assert.patch,
@@ -501,7 +508,7 @@
   glibc-2.3.3.20040420-r1.ebuild:
   Stable on ppc.
 
-  11 Aug 2004; Bryan Østergaard <kloeri@gentoo.org> glibc-2.3.2-r11.ebuild:
+  11 Aug 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> glibc-2.3.2-r11.ebuild:
   Stable on alpha, bug 59526.
 
   09 Aug 2004; Guy Martin <gmsoft@gentoo.org> glibc-2.3.2-r11.ebuild:
@@ -903,7 +910,7 @@
   12 May 2004; Alexander Gabert <pappy@gentoo.org> :
   removing hardened-gcc vintage from some ebuilds
 
-  08 May 2004; Bryan Østergaard <kloeri@gentoo.org>
+  08 May 2004; Bryan Ã˜stergaard <kloeri@gentoo.org>
   glibc-2.3.3_pre20040420.ebuild:
   Removed ~alpha, see bug #50301.
 
@@ -1418,7 +1425,7 @@
   change sys-kernel/linux-headers to new virtual/os-headers
 
   05 March 2003; Martin Schlemmer <azarah@gentoo.org> glibc-2.3.2.ebuild :
-  Update version.  Thanks to Georg Müller <georgmueller@gmx.net> for notifying
+  Update version.  Thanks to Georg MÃ¼ller <georgmueller@gmx.net> for notifying
   me.
 
 *glibc-2.3.2_pre1 (24 Feb 2003)
