@@ -1,6 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/eggdrop/eggdrop-1.6.15-r1.ebuild,v 1.1 2003/11/05 02:53:50 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/eggdrop/eggdrop-1.6.15-r1.ebuild,v 1.2 2003/11/24 23:49:20 zul Exp $
+
+inherit fixheadtails
 
 DESCRIPTION="An IRC bot extensible with C or Tcl."
 HOMEPAGE="http://www.eggheads.org/"
@@ -31,7 +33,10 @@ src_unpack()  {
 	epatch ${FILESDIR}/${P}-potential-undef-tm-struct.patch
 	epatch ${P}-STEALER.net.patch
 
-	cd ${WORKDIR}/${P} && autoconf || die "autoconf failed?!"
+	cd ${WORKDIR}/${P}
+	ht_fix_file configure aclocal.m4
+
+	autoconf || die "autoconf failed?!"
 
 }
 
