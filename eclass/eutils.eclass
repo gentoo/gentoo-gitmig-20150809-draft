@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author: Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.2 2002/11/10 19:45:51 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.3 2002/11/11 19:51:20 azarah Exp $
 # This eclass is for general purpose functions that most ebuilds
 # have to implement themselfs.
 #
@@ -54,8 +54,6 @@ END_LDSCRIPT
 
 # Default directory where patches are located
 EPATCH_SOURCE="${WORKDIR}/patch"
-# Default directory in which patches should be applied
-EPATCH_WORKDIR="${S}"
 # Default extension for patches
 EPATCH_SUFFIX="patch.bz2"
 # Default options for patch
@@ -74,7 +72,9 @@ EPATCH_OPTS=""
 # bug they should be left as is to ensure an ebuild can rely on
 # them for.
 #
-# Patch/Patches should preferibly have the form of:
+# Patches are applied in current directory.
+#
+# Bulk Patches should preferibly have the form of:
 #
 #   ??_${ARCH}_foo.${EPATCH_SUFFIX}
 #
@@ -86,11 +86,36 @@ EPATCH_OPTS=""
 # This ensures that there are a set order, and you can have ARCH
 # specific patches.
 #
+# If you however give an argument to epatch(), it will treat it as a
+# single patch that need to be applied if its a file.  If on the other
+# hand its a directory, it will set EPATCH_SOURCE to this.
+#
 # <azarah@gentoo.org> (10 Nov 2002)
 #
 epatch() {
 	local PIPE_CMD=""
 	local STDERR_TARGET="${T}/$$.out"
+	local SINGLE_PATCH="no"
+
+	if [ "$#" -gt 1 ]
+	then
+		eerror "Invalid arguments to epatch()"
+		die "Invalid arguments to epatch()"
+	fi
+
+	if [ -n "$1" -a -f "$1" ]
+	then
+		SINGLE_PATCH="yes"
+		
+		EPATCH_SOURCE="$1"
+		EPATCH_SUFFIX="${1##*\.}"
+		
+	elif [ -n "$1" -a -d "$1" ]
+	then
+		EPATCH_SOURCE="$1/*.${EPATCH_SUFFIX}"
+	else
+		EPATCH_SOURCE="${EPATCH_SOURCE}/*.${EPATCH_SUFFIX}"
+	fi
 
 	case ${EPATCH_SUFFIX##*\.} in
 		bz2)
@@ -107,23 +132,30 @@ epatch() {
 			;;
 	esac
 
-	cd ${EPATCH_WORKDIR}
-	einfo "Applying various patches (bugfixes/updates)..."
-	for x in ${EPATCH_SOURCE}/*.${EPATCH_SUFFIX}
+	if [ "${SINGLE_PATCH}" = "no" ]
+	then
+		einfo "Applying various patches (bugfixes/updates)..."
+	fi
+	for x in ${EPATCH_SOURCE}
 	do
 		# New ARCH dependant patch naming scheme...
 		#
 		#   ???_arch_foo.patch
 		#
 		if [ -f ${x} ] && \
-		   [ "${x/_all_}" != "${x}" -o "`eval echo \$\{x/_${ARCH}_\}`" != "${x}" ]
+		   [ -n "$1" -o "${x/_all_}" != "${x}" -o "`eval echo \$\{x/_${ARCH}_\}`" != "${x}" ]
 		then
 			local count=0
 			local popts="${EPATCH_OPTS}"
+			
+			if [ "${SINGLE_PATCH}" = "yes" ]
+			then
+				einfo "Applying ${x##*/}..."
+			else
+				einfo "  ${x##*/}..."
+			fi
 
-			einfo "  ${x##*/}..."
-
-			> ${STDERR_TARGET}
+			echo "*** Patch ${x##*/} ***" > ${STDERR_TARGET}
 
 			# Allow for prefix to differ ... im lazy, so shoot me :/
 			while [ "${count}" -lt 5 ]
@@ -147,8 +179,13 @@ epatch() {
 				eerror
 				die "Failed Patch: ${x##*/}!"
 			fi
+
+			eend 0
 		fi
 	done
-	eend 0 "Done with patching"
+	if [ "${SINGLE_PATCH}" = "no" ]
+	then
+		einfo "Done with patching"
+	fi
 }
 
