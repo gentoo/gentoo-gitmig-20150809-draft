@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/mm-sources
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/ChangeLog,v 1.52 2003/07/16 12:14:53 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/ChangeLog,v 1.53 2003/07/18 00:24:48 sindian Exp $
+
+  17 Jul 2003; <sindian@gentoo.org> mm-sources-2.6.0_beta1-r1.ebuild,
+  files/wpadded.patch:
+  Reversed the wpadded patch. This patch spits out tons of warnings about
+  compiler-generated padding that we don't care about. Reversing this patch
+  doesn't hurt anything. It just makes the gcc output much less terrifying.
 
 *mm-sources-2.6.0_beta1-r1 (16 Jul 2003)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/mm-sources-2.6.0_beta1-r1.ebuild,v 1.2 2003/07/16 17:40:44 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/mm-sources-2.6.0_beta1-r1.ebuild,v 1.3 2003/07/18 00:24:48 sindian Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 ETYPE="sources"
@@ -33,6 +33,11 @@ src_unpack() {
 	cd ${S}
 	bzcat ${DISTDIR}/${KV}.bz2 | patch -p1 || die "mm patch failed"
 
+	#Take out the wpadded patch.
+	#It spits out tons of warnings about compiler-generated padding
+	#We don't care.
+	patch -p1 -R < ${FILESDIR}/wpadded.patch
+	
 	unset ARCH
 	kernel_universal_unpack
 
