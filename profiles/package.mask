@@ -1240,3 +1240,7 @@ app-cdr/eroaster
 # masking gramps-0.8.0 due to freeze
 =app-misc/gramps-0.8.0
 
+# jnelson@gentoo.org 9 Sep 2002
+# masking PyXML-0.8 due to freeze
+=dev-python/PyXML-0.8
+
