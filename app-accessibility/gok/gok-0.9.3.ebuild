@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gok/gok-0.9.3.ebuild,v 1.5 2004/05/29 03:26:43 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gok/gok-0.9.3.ebuild,v 1.6 2004/05/31 18:45:21 vapier Exp $
 
 inherit eutils gnome2
 
@@ -9,8 +9,7 @@ HOMEPAGE="http://www.gok.ca/"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="x86 -sparc hppa ~alpha ~ia64 ppc amd64 mips"
-
+KEYWORDS="x86 ppc -sparc mips ~alpha hppa amd64 ~ia64"
 IUSE=""
 
 RDEPEND=">=x11-libs/gtk+-2
@@ -23,19 +22,15 @@ RDEPEND=">=x11-libs/gtk+-2
 	>=x11-libs/libwnck-1
 	>=gnome-extra/at-spi-1.3.4
 	virtual/x11"
-
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	app-text/scrollkeeper"
 
-DOCS="AUTHORS ChangeLog COPYING NEWS README"
+DOCS="AUTHORS ChangeLog NEWS README"
 
-src_unpack()
-{
+src_unpack() {
 	unpack ${A}
 	cd ${S}
-
 	epatch ${FILESDIR}/${PN}-${PV}-ansi_C.patch
 	sed -i 's:$pkgdatadir:/usr/share/gok:' gok-with-references.schemas.m4
 }
-

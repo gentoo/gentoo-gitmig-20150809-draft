@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gok/gok-0.10.2.ebuild,v 1.4 2004/05/30 22:29:40 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gok/gok-0.10.2.ebuild,v 1.5 2004/05/31 18:45:21 vapier Exp $
 
 inherit gnome2
 
@@ -9,8 +9,7 @@ HOMEPAGE="http://www.gok.ca/"
 
 LICENSE="LGPL-2"
 SLOT="1"
-KEYWORDS="x86 ~sparc ~hppa ~alpha ~ia64 ~ppc ~amd64"
-
+KEYWORDS="x86 ~ppc ~sparc ~alpha ~hppa ~amd64 ~ia64"
 IUSE=""
 
 RDEPEND=">=x11-libs/gtk+-2.3.1
@@ -24,22 +23,19 @@ RDEPEND=">=x11-libs/gtk+-2.3.1
 	>=gnome-extra/at-spi-1.3.4
 	gnome-base/ORBit2
 	virtual/x11"
-
 DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.27.3
 	dev-util/pkgconfig
 	app-text/scrollkeeper"
 
-DOCS="AUTHORS ChangeLog COPYING NEWS README"
+DOCS="AUTHORS ChangeLog NEWS README"
 
 # Problems when creating .kbd files
 MAKEOPTS="${MAKEOPTS} -j1"
 
-src_unpack()
-{
+src_unpack() {
 	unpack ${A}
 	cd ${S}
-
 	sed -i \
 		-e "s:\$pkgdatadir:${ROOT}/usr/share/${PN}:" \
 		gok-with-references.schemas.m4

@@ -1,15 +1,12 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival/festival-1.4.3.ebuild,v 1.7 2004/04/25 20:57:15 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival/festival-1.4.3.ebuild,v 1.8 2004/05/31 18:45:21 vapier Exp $
 
 inherit eutils
 
-S=${WORKDIR}/${PN}
 DESCRIPTION="Festival Text to Speech engine"
-IUSE="asterisk doc"
 HOMEPAGE="http://www.cstr.ed.ac.uk/"
 SITE="http://www.speech.cs.cmu.edu/${PN}/cstr/${PN}/${PV}"
-
 SRC_URI="${SITE}/${P}-release.tar.gz
 	${SITE}/festlex_CMU.tar.gz
 	${SITE}/festlex_OALD.tar.gz
@@ -24,13 +21,16 @@ SRC_URI="${SITE}/${P}-release.tar.gz
 	${SITE}/festvox_us3.tar.gz
 	doc? ( ${SITE}/festdoc-1.4.2.tar.gz )"
 
-SLOT="0"
 LICENSE="FESTIVAL BSD as-is"
+SLOT="0"
 KEYWORDS="x86 ~ppc ~sparc amd64"
+IUSE="asterisk doc"
 
 RDEPEND=">=app-accessibility/speech-tools-1.2.3"
 DEPEND="${RDEPEND}
 	sys-apps/sed"
+
+S=${WORKDIR}/${PN}
 
 src_unpack() {
 	unpack ${P}-release.tar.gz

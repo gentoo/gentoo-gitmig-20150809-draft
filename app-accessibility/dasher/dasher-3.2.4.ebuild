@@ -1,16 +1,16 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/dasher/dasher-3.2.4.ebuild,v 1.5 2004/05/29 03:24:12 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/dasher/dasher-3.2.4.ebuild,v 1.6 2004/05/31 18:45:21 vapier Exp $
 
 inherit gnome2
 
 DESCRIPTION="A text entry interface, driven by continuous pointing gestures"
 HOMEPAGE="http://www.inference.phy.cam.ac.uk/dasher/"
 
-IUSE="accessibility gnome nls"
+LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ppc"
-LICENSE="GPL-2"
+IUSE="accessibility gnome nls"
 
 # The archive claims 'qte' support, but wont compile with QT
 # Need to wait for upstream <obz@gentoo.org>
@@ -26,7 +26,6 @@ RDEPEND="dev-libs/expat
 		>=gnome-base/libgnomeui-2
 		app-accessibility/gnome-speech
 		>=gnome-extra/at-spi-1 )"
-
 DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.18
 	dev-util/pkgconfig
@@ -36,4 +35,4 @@ G2CONF="${G2CONF} $(use_enable nls) $(use_enable gnome)"
 G2CONF="${G2CONF} $(use_enable accessibility a11y)"
 G2CONF="${G2CONF} $(use_enable accessibility speech)"
 
-DOCS="ABOUT-NLS AUTHORS ChangeLog COPYING MAINTAINERS NEWS README"
+DOCS="AUTHORS ChangeLog MAINTAINERS NEWS README"

@@ -1,19 +1,16 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-speech/gnome-speech-0.3.2-r1.ebuild,v 1.8 2004/05/29 03:29:10 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-speech/gnome-speech-0.3.2-r1.ebuild,v 1.9 2004/05/31 18:45:21 vapier Exp $
 
 inherit java-pkg gnome2
-
-IUSE="java"
 
 DESCRIPTION="Simple general API for producing text-to-speech output"
 HOMEPAGE="http://www.gnome.org/"
 
-SLOT="1"
-
-KEYWORDS="x86 ppc hppa ~alpha ~ia64 sparc ~amd64"
 LICENSE="LGPL-2"
-
+SLOT="1"
+KEYWORDS="x86 ppc sparc ~alpha hppa ~amd64 ~ia64"
+IUSE="java"
 
 RDEPEND=">=gnome-base/libbonobo-1.97
 	>=gnome-base/ORBit2-2.3.94
@@ -25,15 +22,13 @@ RDEPEND=">=gnome-base/libbonobo-1.97
 #	freetts? ( app-accessibility/freetts
 #		!java? ( virtual/jdk
 #			app-accessibility/java-access-bridge ) )"
-
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
-DOCS="AUTHORS ChangeLog COPYING NEWS README"
-
+DOCS="AUTHORS ChangeLog NEWS README"
 
 src_compile() {
-	if [ `use java` ]
+	if use java
 	then
 		if [ -z "${JDK_HOME}" ] || [ ! -d "${JDK_HOME}" ]
 		then
@@ -54,11 +49,10 @@ src_compile() {
 	gnome2_src_compile
 }
 
-
 src_install() {
 	gnome2_src_install
 
-	if [ `use java` ]
+	if use java
 	then
 		java-pkg_dojar ${D}/usr/share/jar/*.jar
 		rm -rf ${D}/usr/share/jar

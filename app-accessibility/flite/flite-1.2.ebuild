@@ -1,17 +1,16 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/flite/flite-1.2.ebuild,v 1.5 2004/04/22 17:54:06 eradicator Exp $
-
-IUSE="static"
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/flite/flite-1.2.ebuild,v 1.6 2004/05/31 18:45:21 vapier Exp $
 
 DESCRIPTION="Flite text to speech engine"
 HOMEPAGE="http://www.speech.cs.cmu.edu/flite/index.html"
 SRC_URI="http://www.speech.cs.cmu.edu/flite/packed/${P}/${P}-release.tar.bz2
 	 http://www.speech.cs.cmu.edu/flite/packed/${P}/${PN}_lexfix.tar.gz"
 
-SLOT="0"
 LICENSE="BSD as-is"
+SLOT="0"
 KEYWORDS="x86 ~ppc ~amd64"
+IUSE="static"
 
 RDEPEND="virtual/glibc"
 
@@ -39,7 +38,7 @@ src_compile() {
 
 src_install () {
 	dobin bin/*
-	dodoc ACKNOWLEDGEMENTS README COPYING
+	dodoc ACKNOWLEDGEMENTS README
 
 	if use static; then
 		dolib.a lib/*.a

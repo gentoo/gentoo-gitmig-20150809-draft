@@ -1,19 +1,18 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnopernicus/gnopernicus-0.7.1-r1.ebuild,v 1.2 2004/04/19 18:44:33 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnopernicus/gnopernicus-0.7.1-r1.ebuild,v 1.3 2004/05/31 18:45:21 vapier Exp $
 
 inherit gnome2
 
 DESCRIPTION="Software tools for blind and visually impaired in Gnome 2"
 HOMEPAGE="http://www.baum.ro/gnopernicus.html"
 
-IUSE="ipv6"
-SLOT="0"
-KEYWORDS="x86 sparc hppa alpha ia64 ppc ~amd64"
 LICENSE="LGPL-2"
+SLOT="0"
+KEYWORDS="x86 ppc sparc alpha hppa ~amd64 ia64"
+IUSE="ipv6"
 
 # libgail-gnome is only required during runtime
-
 RDEPEND=">=gnome-base/gconf-2
 	>=dev-libs/popt-1.5
 	>=gnome-base/libgnome-2
@@ -26,11 +25,10 @@ RDEPEND=">=gnome-base/gconf-2
 	>=app-accessibility/gnome-speech-0.2.4
 	>=app-accessibility/gnome-mag-0.9
 	>=gnome-extra/libgail-gnome-1.0"
-
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
-DOCS="AUTHORS ChangeLog COPYING NEWS README"
+DOCS="AUTHORS ChangeLog NEWS README"
 
 src_compile() {
 	local myconf="--with-default-fonts-path=${D}/usr/share/fonts/default/Type1"
@@ -41,4 +39,3 @@ src_compile() {
 	gnome2_src_configure
 	emake || die "compilation failure"
 }
-
