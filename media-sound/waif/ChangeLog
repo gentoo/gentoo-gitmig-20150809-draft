@@ -1,8 +1,11 @@
 # ChangeLog for media-sound/waif
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/waif/ChangeLog,v 1.8 2003/03/16 20:00:38 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/waif/ChangeLog,v 1.9 2003/04/13 07:18:30 vladimir Exp $
 
 *waif-0.59.7 (16 Mar 2003)
+
+  12 Apr 2003; Graham Forest <vladimir@gentoo.org> waif-0.59.7.ebuild:
+  Set ~ppc, fixed missing dep
 
   16 Mar 2003; Seemant Kulleen <seemant@gentoo.org> waif-0.59.5.ebuild,
   waif-0.59.5.ebuild, waif-0.59.7.ebuild:

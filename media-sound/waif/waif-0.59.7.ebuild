@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/waif/waif-0.59.7.ebuild,v 1.1 2003/03/16 20:00:38 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/waif/waif-0.59.7.ebuild,v 1.2 2003/04/13 07:18:30 vladimir Exp $
 
 IUSE="X gnome"
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.eds.org/~straycat/${P}.tar.gz
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="~x86"
+KEYWORDS="~ppc ~x86"
 
 DEPEND="dev-lang/tcl
 	dev-tcltk/expect"
@@ -23,6 +23,7 @@ RDEPEND="dev-tcltk/expect
 	media-sound/aumix
 	media-libs/id3lib
 	media-sound/id3v2
+	media-sound/id3ed
 	xmms? ( media-sound/xmms )
 	oggvorbis? ( media-sound/vorbis-tools )"
 
