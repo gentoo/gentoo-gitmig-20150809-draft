@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Karl Trygve Kalleberg <karltk@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-sound/apollo/apollo-1.1.1-r1.ebuild,v 1.6 2002/07/01 21:33:31 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/apollo/apollo-1.1.1-r1.ebuild,v 1.7 2002/07/08 04:05:36 drobbins Exp $
  
 use kde && inherit kde-base
 
@@ -10,6 +10,7 @@ LICENSE="GPL-2"
 DESCRIPTION="A Qt-based front-end to mpg123"
 SRC_URI="mirror://sourceforge/apolloplayer/apollo-src-1.1.1-1.tar.bz2"
 HOMEPAGE="http://www.apolloplayer.org"
+KEYWORDS="*"
 
 use kde && need-kde 2.2 && need-qt 2.3
 
