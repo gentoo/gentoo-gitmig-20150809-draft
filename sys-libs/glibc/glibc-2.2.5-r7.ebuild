@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2.5-r7.ebuild,v 1.11 2002/10/12 06:19:59 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2.5-r7.ebuild,v 1.12 2002/10/12 06:41:21 seemant Exp $
 
 IUSE="nls pic build"
 inherit flag-o-matic
@@ -107,16 +107,17 @@ src_unpack() {
 		patch -p1 < ${FILESDIR}/glibc-2.2.5-alpha-pcdyn-fix.diff || die
 	fi
 
-	# A patch for miscellaenous sparc fixes
-	if [ "${ARCH}" = "sparc" -o "${ARCH} = "sparc64" ] ; then
-		einfo "applying sparc miscellaneous fixes patch"
+	# Some patches to fixup build on sparc and sparc64
+	if use sparc64 || use sparc
+	then
+		einfo "sparc patch"
 		cd ${S}
 		patch -p1 < ${FILESDIR}/${P}-sparc-misc.diff || die
 	fi
 
-	# A patch for the notorious sparc64 issues
-	if [ "${ARCH} = "sparc64" ] ; then
-		einfo "applying sparc64 fixups patch"
+	if use sparc64
+	then
+		einfo "seemant sparc64 patch"
 		cd ${S}
 		patch -p1 < ${FILESDIR}/${P}-sparc64-fixups.diff || die
 	fi
