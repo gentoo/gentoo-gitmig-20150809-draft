@@ -16,6 +16,7 @@ SRC_URI="ftp://ftp.gnome.org/pub/GNOME/pre-gnome2/sources/${PN}/${P}.tar.bz2"
 HOMEPAGE="http://www.gnome.org/"
 LICENSE="GPL-2"
 SLOT="0"
+KEYWORDS="x86"
 
 RDEPEND=">=dev-libs/glib-2.0.0"
 
