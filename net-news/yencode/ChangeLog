@@ -1,6 +1,6 @@
 # ChangeLog for net-news/yencode
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/yencode/ChangeLog,v 1.5 2003/02/12 08:38:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/yencode/ChangeLog,v 1.6 2003/04/25 22:09:34 mholzer Exp $
 
   11 Feb 2003; Rajiv Manglani <rajiv@gentoo.org> yencode-0.46.ebuild :
 
@@ -11,6 +11,9 @@
   tested on ppc, added ~ppc to KEYWORDS.
 
 *yencode-0.46 (1 May 2002)
+
+  25 Apr 2003; Martin Holzer <mholzer@gentoo.org> yencode-0.46.ebuild:
+  Changed SRC_URI to use mirror://sf.
 
   1 May 2002; Ryan Phillips <rphillips@gentoo.org> ChangeLog :
   
