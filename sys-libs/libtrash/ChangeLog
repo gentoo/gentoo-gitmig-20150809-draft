@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/libtrash
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libtrash/ChangeLog,v 1.4 2004/07/02 08:48:48 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libtrash/ChangeLog,v 1.5 2004/09/03 18:24:08 pvdabeel Exp $
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  libtrash-2.2.ebuild:
+  Masked libtrash-2.2.ebuild stable for ppc
 
   02 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> libtrash-2.2.ebuild:
   virtual/glibc -> virtual/libc

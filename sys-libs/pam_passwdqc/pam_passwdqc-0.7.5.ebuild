@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam_passwdqc/pam_passwdqc-0.7.5.ebuild,v 1.3 2004/06/24 23:08:33 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam_passwdqc/pam_passwdqc-0.7.5.ebuild,v 1.4 2004/09/03 18:24:08 pvdabeel Exp $
 
 
 DESCRIPTION="Password strength checking for PAM aware password changing programs"
@@ -9,7 +9,7 @@ SRC_URI="http://www.openwall.com/pam/modules/pam_passwdqc/${P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc ~alpha ~hppa ~mips"
+KEYWORDS="x86 ppc ~sparc ~alpha ~hppa ~mips"
 
 DEPEND=">=sys-libs/pam-0.72"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/nss-mysql/nss-mysql-0.43-r1.ebuild,v 1.9 2004/07/02 08:50:04 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/nss-mysql/nss-mysql-0.43-r1.ebuild,v 1.10 2004/09/03 18:24:08 pvdabeel Exp $
 
 DESCRIPTION="NSS MySQL Module"
 HOMEPAGE="http://savannah.gnu.org/projects/${PN}"
@@ -8,7 +8,7 @@ SRC_URI="http://savannah.gnu.org/download/${PN}/${PN}.pkg/${PV}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~alpha ~amd64 hppa ~mips ~ppc sparc"
+KEYWORDS="x86 ~alpha ~amd64 hppa ~mips ppc sparc"
 IUSE="static"
 
 DEPEND="virtual/libc

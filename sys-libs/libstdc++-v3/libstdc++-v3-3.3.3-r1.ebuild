@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstdc++-v3/libstdc++-v3-3.3.3-r1.ebuild,v 1.25 2004/09/01 10:03:04 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstdc++-v3/libstdc++-v3-3.3.3-r1.ebuild,v 1.26 2004/09/03 18:24:08 pvdabeel Exp $
 
 inherit eutils flag-o-matic libtool gnuconfig
 
@@ -75,7 +75,7 @@ HOMEPAGE="http://gcc.gnu.org/libstdc++/"
 
 LICENSE="GPL-2 LGPL-2.1"
 
-KEYWORDS="-* ~x86 ~mips amd64 ppc64 ~ppc"
+KEYWORDS="-* ~x86 ~mips amd64 ppc64 ppc"
 IUSE="nls"
 
 if [ "${CHOST}" == "${CCHOST}" ]

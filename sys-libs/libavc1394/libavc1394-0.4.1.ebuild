@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libavc1394/libavc1394-0.4.1.ebuild,v 1.10 2004/06/24 23:04:55 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libavc1394/libavc1394-0.4.1.ebuild,v 1.11 2004/09/03 18:24:07 pvdabeel Exp $
 
 DESCRIPTION="library for the 1394 Trade Association AV/C (Audio/Video Control) Digital Interface Command Set"
 HOMEPAGE="http://sourceforge.net/projects/libavc1394/"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/libavc1394/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="x86 ~ppc sparc amd64"
+KEYWORDS="x86 ppc sparc amd64"
 
 DEPEND=">=sys-libs/libraw1394-0.8"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-3.2.9-r10.ebuild,v 1.12 2004/08/23 11:54:09 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-3.2.9-r10.ebuild,v 1.13 2004/09/03 18:24:07 pvdabeel Exp $
 
 inherit gnuconfig libtool eutils db
 
@@ -12,7 +12,7 @@ LICENSE="DB"
 SLOT="3"
 # This ebuild is to be the compatibility ebuild for when db4 is put
 # in the tree.
-KEYWORDS="x86 ~ppc ~sparc ~mips alpha arm ~hppa ia64 ppc64 s390"
+KEYWORDS="x86 ppc ~sparc ~mips alpha arm ~hppa ia64 ppc64 s390"
 IUSE="doc java"
 
 RDEPEND="virtual/libc"

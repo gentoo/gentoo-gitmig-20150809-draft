@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/libstdc++-v3
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstdc++-v3/ChangeLog,v 1.22 2004/09/01 10:03:04 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstdc++-v3/ChangeLog,v 1.23 2004/09/03 18:24:08 pvdabeel Exp $
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  libstdc++-v3-3.3.3-r1.ebuild:
+  Masked libstdc++-v3-3.3.3-r1.ebuild stable for ppc
 
   01 Sep 2004; Travis Tilley <lv@gentoo.org> libstdc++-v3-3.3.3-r1.ebuild,
   libstdc++-v3-3.3.4.ebuild:

@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/pam_mysql
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam_mysql/ChangeLog,v 1.8 2004/08/24 04:38:41 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam_mysql/ChangeLog,v 1.9 2004/09/03 18:24:08 pvdabeel Exp $
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  pam_mysql-0.5.ebuild:
+  Masked pam_mysql-0.5.ebuild stable for ppc
 
   24 Aug 2004; Sven Wegener <swegener@gentoo.org> pam_mysql-0.4.7.ebuild,
   pam_mysql-0.5.ebuild:

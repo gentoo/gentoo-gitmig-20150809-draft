@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/nss-mysql
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/nss-mysql/ChangeLog,v 1.10 2004/07/02 08:50:04 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/nss-mysql/ChangeLog,v 1.11 2004/09/03 18:24:08 pvdabeel Exp $
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  nss-mysql-0.43-r1.ebuild:
+  Masked nss-mysql-0.43-r1.ebuild stable for ppc
 
   02 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   nss-mysql-0.43-r1.ebuild, nss-mysql-0.43.ebuild:

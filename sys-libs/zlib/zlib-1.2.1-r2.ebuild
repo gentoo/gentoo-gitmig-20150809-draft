@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/zlib/zlib-1.2.1-r2.ebuild,v 1.13 2004/08/15 01:30:39 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/zlib/zlib-1.2.1-r2.ebuild,v 1.14 2004/09/03 18:24:08 pvdabeel Exp $
 
 inherit eutils flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.gzip.org/zlib/${P}.tar.bz2"
 
 LICENSE="ZLIB"
 SLOT="0"
-KEYWORDS="x86 ~ppc sparc mips alpha arm hppa amd64 ~ia64 ~ppc64 s390"
+KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ~ia64 ~ppc64 s390"
 IUSE="build"
 
 DEPEND="virtual/libc"

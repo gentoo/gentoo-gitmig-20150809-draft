@@ -1,6 +1,14 @@
 # ChangeLog for sys-libs/zlib
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/zlib/ChangeLog,v 1.37 2004/08/29 03:07:07 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/zlib/ChangeLog,v 1.38 2004/09/03 18:24:08 pvdabeel Exp $
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  zlib-1.1.4-r4.ebuild, zlib-1.2.1-r2.ebuild:
+  Masked zlib-1.2.1-r2.ebuild stable for ppc
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  zlib-1.1.4-r4.ebuild:
+  Masked zlib-1.1.4-r4.ebuild stable for ppc
 
   28 Aug 2004; Travis Tilley <lv@gentoo.org> +files/zlib-1.2.1-fPIC.patch,
   zlib-1.2.1-r3.ebuild:
