@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.631 2004/09/19 12:38:04 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.632 2004/09/19 21:42:30 tantive Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -526,6 +526,7 @@ sys-apps/pcmcia-cs:wavelan - Use the wavelan and not the orinoco wireless driver
 sys-apps/tcng:tcsim - enable traffic simulator
 sys-boot/lilo:devmap - Compile with support for device-mapper
 sys-cluster/heartbeat:ldirectord - Adds support for ldiretord, use enabled because it has a lot of deps
+sys-cluster/lam-mpi:f77 - Adds support for f77
 sys-devel/binutils:multitarget - Adds support to binutils for canadian cross compiling. (does not work with gas)
 sys-devel/gcc:f77 - Build support for the f77 language
 sys-devel/gcc:gcj - Build gcj (java compiler included with gcc package)
