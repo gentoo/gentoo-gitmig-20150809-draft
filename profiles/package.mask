@@ -22,6 +22,10 @@
 ##
 
 
+# <woodchip@gentoo.org> (14 Sep 2002)
+# Chase latest stable release; added libreiserfs support.
+=sys-apps/parted-1.6.3
+
 # <lostlogic@gentoo.org> (13 Sep 2002)
 # Masking gaim-0.59.2 because it segfaults all the time
 =net-im/gaim-0.59.2
@@ -295,10 +299,6 @@ dev-perl/CDDB-File
 # <aliz@gentoo.org> (26 Aug 2002)
 # Masked to force lynx-2.8.4.1c
 =net-www/lynx-2.8.4a-r4
-
-# <woodchip@gentoo.org> (25 Aug 2002)
-# Latest stable release, test.
-=dev-db/mysql-3.23.52
 
 # <azarah@gentoo.org> (25 Aug 2002)
 # Contains the hacked sandbox.  Needs testing.
