@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/usermin
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/ChangeLog,v 1.26 2004/06/15 23:16:30 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/ChangeLog,v 1.27 2004/06/16 16:05:28 lu_zero Exp $
+
+  16 Jun 2004; Luca Barbato <lu_zero@gentoo.org> usermin-1.080.ebuild:
+  Marked ppc
 
   15 Jun 2004; Jeremy Huddleston <eradicator@gentoo.org> usermin-1.080.ebuild:
   Fixed for people without /usr/local/bin/perl.
