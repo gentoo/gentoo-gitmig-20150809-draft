@@ -9,7 +9,7 @@ SRC_URI="http://www.kensden.pwp.blueyonder.co.uk/Oroborus/files/deskmenu-1.3.0.t
 HOMEPAGE="http://www.kensden.pwp.blueyonder.co.uk/Oroborus/"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 sparc "
+KEYWORDS="x86 sparc ~ppc"
 
 DEPEND="x11-wm/oroborus
 		=x11-libs/gtk+-1.2*"
