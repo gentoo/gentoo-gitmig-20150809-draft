@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/xdrawchem/xdrawchem-1.7.5.ebuild,v 1.1 2003/09/26 14:24:07 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/xdrawchem/xdrawchem-1.7.5.ebuild,v 1.2 2003/09/29 08:29:36 phosphan Exp $
 
 inherit kde-functions
 inherit flag-o-matic
@@ -25,7 +25,7 @@ DEPEND="${DEPEND}
 
 src_compile() {
 	# make sure we use moc from Qt, not from eg media-sound/moc
-	PATH="${QDIR}/bin:${PATH}"
+	PATH="${QTDIR}/bin:${PATH}"
 	econf || die
 	emake || die
 }
