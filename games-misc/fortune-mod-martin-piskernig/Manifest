@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ae9f2be465084efc79b5f1b7998c961f fortune-mod-martin-piskernig-20030120.ebuild 675
+MD5 aa547b4ef67af21ad4fc87c6e88b1f83 ChangeLog 870
+MD5 ab849afe4031f1903c06794051a8d80e fortune-mod-martin-piskernig-20030120.ebuild 674
 MD5 959fc7abb397bb88b9eeb99c8553e5ba metadata.xml 257
-MD5 3e595f139bf1686847f9be4056c1ab30 ChangeLog 752
 MD5 0d2a4acc18e84c4f09d7d45d1788e71f files/digest-fortune-mod-martin-piskernig-20030120 88
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBdEOBugEuf3OQ0akRAnsqAJ9bOyEAVRxQ7wII7SCj+OcUeqtguACgofzM
-OuO8r+3U9O+xeXj6BgGXn/E=
-=Obu/
------END PGP SIGNATURE-----
