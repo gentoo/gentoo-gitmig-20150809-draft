@@ -1,0 +1,23 @@
+# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2         
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/files/ntpd.confd,v 1.8 2003/01/01 01:27:45 vapier Exp $
+
+# Comment this out if you dont want the init script to warn
+# about not having ntpdate setup
+NTPDATE_WARN="y"
+
+# Command to run to set the clock initially
+# if you want to use ntpd to set the clock, change this to 'ntpd'
+#NTPDATE_CMD="ntpdate"
+
+# Options to pass to the above command
+# you might want to change 'someserver' to a valid
+# hostname which you can aquire below
+#NTPDATE_OPTS="-b someserver"
+
+##
+# A list of available servers is available here:
+# * http://www.eecis.udel.edu/~mills/ntp/clock1.html
+# and
+# * http://www.eecis.udel.edu/~mills/ntp/clock2.html
+##

@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2         
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/files/ntpd.rc,v 1.8 2002/12/29 18:38:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/files/ntpd.rc,v 1.9 2003/01/01 01:27:45 vapier Exp $
 
 depend() {
 	need net
@@ -10,22 +10,21 @@ depend() {
 checkconfig() {
 	if [ ! -f /etc/ntp.conf ] ; then
 		eerror "Please create /etc/ntp.conf"
+		eerror "Sample conf: /usr/share/ntp/ntp.conf"
 		return 1
 	fi
-
 	return 0
 }
 
 start() {
 	checkconfig || return $?
 
-	NTPDATESERVERS=`egrep '^(server|peer)[[:space:]]+' /etc/ntp.conf | awk '{print $2}'`
-	if [ -n "${NTPDATESERVERS}" ] ; then
-		ebegin "Running ntpdate"
-		ntpdate -b ${NTPDATESERVERS} > /dev/null
-		eend $? "Failed to run ntpdate"
-	else
-		ewarn "Please set a valid server line in /etc/ntp.conf"
+	if [ -n "${NTPDATE_CMD}" ] ; then
+		ebegin "Initializing clock via ${NTPDATE_CMD}"
+		${NTPDATE_CMD} ${NTPDATE_OPTS} > /dev/null
+		eend $? "Failed to run ${NTPDATE_CMD}"
+	elif [ "${NTPDATE_WARN}" == "y" ] ; then
+		ewarn "Please setup ntpd via /etc/conf.d/ntpd"
 	fi
 
 	ebegin "Starting ntpd"

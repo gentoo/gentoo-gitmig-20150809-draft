@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ntp-4.1.1b-r1.ebuild,v 1.2 2002/12/29 18:38:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ntp-4.1.1b-r3.ebuild,v 1.1 2003/01/01 01:27:45 vapier Exp $
 
 inherit eutils
 
@@ -28,20 +28,19 @@ src_compile() {
 	cp configure configure.orig
 	sed -e "s:-Wpointer-arith::" configure.orig > configure
 
-	econf --build=${CHOST}
+	econf --build=${CHOST} || die
 	emake || die
 }
 
 src_install() {
-	einstall
+	einstall || die
 
 	dodoc ChangeLog INSTALL NEWS README TODO WHERE-TO-START
-	insinto /usr/share/doc/${PF}/html ; doins html/*.htm
-	insinto /usr/share/doc/${PF}/html/hints ; doins html/hints/*
-	insinto /usr/share/doc/${PF}/html/pic ; doins html/pic/*
+	dohtml -r html/*
 
-	insinto /usr/share/ntp ; doins scripts/*
+	insinto /usr/share/ntp
+	doins scripts/* ${FILESDIR}/ntp.conf
 
 	exeinto /etc/init.d ; newexe ${FILESDIR}/ntpd.rc ntpd
-	insinto /etc ; newins ${FILESDIR}/ntp.conf ntp.conf
+	insinto /etc/conf.d ; newins ${FILESDIR}/ntpd.confd ntpd
 }
