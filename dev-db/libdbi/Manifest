@@ -1,3 +1,13 @@
-MD5 2d448325894a83cd99f9c589cc0c34ad libdbi-0.7.2.ebuild 691
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 b977a3b06aca920ac35e70f01017992a ChangeLog 566
+MD5 d9b3d527ad7cbe2d10038e3907955afd libdbi-0.7.2.ebuild 801
 MD5 4134032b5381a34b9be39bb9bbd17ef8 files/digest-libdbi-0.7.2 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBYGuSI1lqEGTUzyQRAvTfAKCkox/6mbZEeOEHJWHKAguYCaNLRgCdEHa5
+N4v5MjnkTgVIPYJMyOiY7Ik=
+=U+S2
+-----END PGP SIGNATURE-----
