@@ -1,6 +1,9 @@
 # ChangeLog for media-video/xiron
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xiron/ChangeLog,v 1.1 2004/07/28 16:41:48 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xiron/ChangeLog,v 1.2 2004/08/03 12:09:04 dholm Exp $
+
+  03 Aug 2004; David Holm <dholm@gentoo.org> xiron-0.1.1.ebuild:
+  Added to ~ppc.
 
 *xiron-0.1.1 (28 Jul 2004)
 

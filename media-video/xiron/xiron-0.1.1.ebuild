@@ -13,7 +13,7 @@ DEPEND=">=media-libs/xine-lib-1_beta8
 IUSE=" lirc"
 
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 
 SRC_URI="mirror://sourceforge/xiron/${P}.tar.gz"
 
