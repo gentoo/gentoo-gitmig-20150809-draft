@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libextractor
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libextractor/ChangeLog,v 1.12 2004/10/03 23:06:37 weeve Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libextractor/ChangeLog,v 1.13 2005/02/28 05:01:33 squinky86 Exp $
+
+*libextractor-0.4.2 (27 Feb 2005)
+
+  27 Feb 2005; Jon Hood <squinky86@gentoo.org> +libextractor-0.4.2.ebuild:
+  Security fix, #79704; version bump, #79543.
 
   03 Oct 2004; Jason Wever <weeve@gentoo.org> libextractor-0.3.5.ebuild:
   Stable on sparc.
