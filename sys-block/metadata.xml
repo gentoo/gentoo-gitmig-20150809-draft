@@ -8,5 +8,9 @@
 		La categoría sys-block contiene paquetes que trabajan con dispositivos
 		de bloque.
 	</longdescription>
+	<longdescription lang="de">
+		Die Kategorie sys-block enthält Pakete für die Arbeit mit Blockgeräten
+		(Festplatten, Disketten, CD-ROMs etc.).
+	</longdescription>
 </catmetadata>
 
