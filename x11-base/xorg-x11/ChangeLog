@@ -1,6 +1,15 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.325 2005/02/05 17:43:32 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.326 2005/02/08 06:25:02 spyderous Exp $
+
+  07 Feb 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  xorg-x11-6.8.1.904.ebuild:
+  PATCH_VER 0.1.3. Add
+  9250_all_6.8.1.904-respect-xfree86configtools-setting.patch -- respect
+  whether configuration tools are desired. Also some other USE=minimal
+  enhancements: Stop building unneeded static libraries, the DPS libraries,
+  the config tools and xf8* (unneeded for these drivers). The install size is
+  now 22MB.
 
   05 Feb 2005; Marcus D. Hanwell <cryos@gentoo.org> xorg-x11-6.8.0-r4.ebuild:
   Marked stable on amd64.

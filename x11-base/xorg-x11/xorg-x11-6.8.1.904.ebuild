@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.1.904.ebuild,v 1.13 2005/02/07 00:33:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.1.904.ebuild,v 1.14 2005/02/08 06:25:02 spyderous Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -51,7 +51,7 @@ IUSE="3dfx 3dnow bitmap-fonts cjk debug dlloader dmx doc font-server hardened
 # IUSE_INPUT_DEVICES="synaptics wacom"
 
 FILES_VER="0.2"
-PATCH_VER="0.1.2"
+PATCH_VER="0.1.3"
 XCUR_VER="0.3.1"
 XFSFT_ENC_VER="0.1"
 
@@ -810,8 +810,24 @@ host_def_setup() {
 		use_build ipv6 BuildIPv6
 
 		if use minimal; then
+			# Don't build static libs
+			echo "#define ForceNormalLib NO" >> ${HOSTCONF}
+			# Turn back on needed ones
+			echo "#define NormalLibXau YES" >> ${HOSTCONF}
+
+			echo "#define BuildDPSLibraries NO" >> ${HOSTCONF}
 			echo "#define BuildClients NO" >> ${HOSTCONF}
+			# BuildClients doesn't catch things in xc/programs/Xserver
+			# Also had to add
+			# 9250_all_6.8.1.904-respect-xfree86configtools-setting.patch
+			echo "#define BuildXFree86ConfigTools NO" >> ${HOSTCONF}
 			echo "#define BuildLBX NO" >> ${HOSTCONF}
+
+			# Weird crap we don't need
+			echo "#define XF8_32Wid NO" >> ${HOSTCONF}
+			echo "#define XF8_32Bpp NO" >> ${HOSTCONF}
+			echo "#define XF8_16Bpp NO" >> ${HOSTCONF}
+			echo "#define XF24_32Bpp NO" >> ${HOSTCONF}
 
 			# Without nls, truetype-fonts, type1-fonts, we only build misc
 			# Now let's try to reduce what gets built in misc
