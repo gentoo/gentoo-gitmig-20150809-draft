@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/ochusha/ochusha-0.5.4.6.ebuild,v 1.2 2004/06/14 07:16:56 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/ochusha/ochusha-0.5.4.5.ebuild,v 1.1 2004/06/14 07:16:56 usata Exp $
 
 inherit flag-o-matic
 
@@ -9,7 +9,7 @@ use debug && FEATURES="nostrip"
 
 DESCRIPTION="Ochusha - 2ch viewer for GTK+"
 HOMEPAGE="http://ochusha.sourceforge.jp/"
-SRC_URI="mirror://sourceforge.jp/${PN}/9894/${P}.tar.bz2"
+SRC_URI="mirror://sourceforge.jp/${PN}/9873/${P}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
