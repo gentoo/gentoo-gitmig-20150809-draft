@@ -1,14 +1,12 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.1.8.ebuild,v 1.5 2002/12/11 18:01:11 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.1.8.ebuild,v 1.6 2002/12/12 00:14:07 foser Exp $
 
 #provide Xmake and Xemake
-inherit virtualx libtool
+inherit virtualx libtool gnome2
 
 DESCRIPTION="Gnumeric, the GNOME Spreadsheet"
-SRC_URI="ftp://ftp.gnome.org/pub/gnome/unstable/sources/${PN}/${P}.tar.bz2"
 HOMEPAGE="http://www.gnome.org/gnome-office/gnumeric.shtml"
-
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86"
@@ -24,7 +22,7 @@ RDEPEND=">=x11-libs/gtk+-2
 	>=gnome-base/libgnomeprint-1.115.0
 	>=gnome-base/libgnomeprintui-1.115.0
 	>=gnome-extra/gal2-0.0.3
-	>=gnome-extra/libgsf-1.3.0
+	=gnome-extra/libgsf-1.3.0
 	>=gnome-base/libglade-2.0.0
 	dev-libs/libxml2
 	perl?   ( >=sys-devel/perl-5.6 )
@@ -33,17 +31,10 @@ RDEPEND=">=x11-libs/gtk+-2
 	libgda? ( >=gnome-extra/libgda-0.2.91
 	          >=gnome-base/bonobo-1.0.17 )
 	evo?    ( >=net-mail/evolution-1.0.8 )"
+
 DEPEND="${RDEPEND}
 	 nls? ( sys-devel/gettext
 	 >=dev-util/intltool-0.11 )"
-
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-
-	# fix the relink bug, and invalid paths in .ls files.
-	elibtoolize
-}
 
 src_compile() {
 	local myconf
@@ -80,15 +71,6 @@ src_install() {
 	make DESTDIR=${D} install || die "install failed" 
 
 	unset GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL
-	dodoc AUTHORS COPYING *ChangeLog HACKING NEWS README TODO
 }
 
-pkg_postinst() {
-	export GCONF_CONFIG_SOURCE=`gconftool-2 --get-default-source`
-	echo ">>> updating GConf2 (modemlights)"
-	for SCHEMA in gnumeric-dialogs.schemas gnumeric-general.schemas ; do
-		echo $SCHEMA
-		/usr/bin/gconftool-2  --makefile-install-rule \
-			/etc/gconf/schemas/${SCHEMA}
-	done
-}
+DOCS="AUTHORS COPYING* ChangeLog HACKING NEWS README TODO"
