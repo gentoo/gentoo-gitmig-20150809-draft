@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/horde-kronolith/horde-kronolith-1.1.ebuild,v 1.2 2003/09/11 19:34:51 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/horde-kronolith/horde-kronolith-1.1.ebuild,v 1.3 2003/10/18 18:59:28 mholzer Exp $
 
 DESCRIPTION="Kronolith ${PV} is the Horde calendar application"
 HOMEPAGE="http://www.horde.org"
@@ -8,7 +8,7 @@ MY_P=${P/horde-/}
 SRC_URI="ftp://ftp.horde.org/pub/kronolith/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="1"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha"
+KEYWORDS="x86 ~ppc ~sparc ~alpha"
 DEPEND=""
 RDEPEND=">=net-www/horde-2.2.1"
 IUSE=""
@@ -39,10 +39,6 @@ pkg_setup() {
 	[ -f ${REGISTRY} ] || die "${REGISTRY} not found"
 }
 
-src_compile() {
-	echo "Nothing to compile"
-}
-
 src_install () {
 
 	# detecting apache usergroup
@@ -53,6 +49,8 @@ src_install () {
 	fi
 
 	find_http_root
+	dodoc COPYING README docs/*
+	rm -rf COPYING README docs
 	dodir ${HTTPD_ROOT}/horde/kronolith
 	cp -r . ${D}/${HTTPD_ROOT}/horde/kronolith
 
@@ -64,5 +62,5 @@ src_install () {
 
 pkg_postinst() {
 	find_http_root
-	einfo "Please read ${HTTPD_ROOT}/horde/kronolith/docs/INSTALL !"
+	einfo "Please read /usr/share/doc/${PF}/INSTALL.gz"
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/horde-chora/horde-chora-1.2-r1.ebuild,v 1.4 2003/10/18 18:54:59 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/horde-chora/horde-chora-1.2-r1.ebuild,v 1.5 2003/10/18 19:00:23 mholzer Exp $
 
 DESCRIPTION="Chora ${PV} is the Horde CVS viewer."
 HOMEPAGE="http://www.horde.org"
@@ -50,5 +50,5 @@ src_install () {
 }
 pkg_postinst() {
 	find_http_root
-	einfo "Please read ${HTTPD_ROOT}/horde/chora/docs/INSTALL !"
+	einfo "Please read /usr/share/doc/${PF}/INSTALL.gz"
 }
