@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Karl Trygve Kalleberg <karltk@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/java.eclass,v 1.4 2002/10/19 23:44:12 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java.eclass,v 1.5 2002/10/20 13:44:03 lostlogic Exp $
 
 ECLASS=java
 INHERITED="$INHERITED $ECLASS"
@@ -86,6 +86,6 @@ install_mozilla_plugin() {
 	if [ "`use mozilla`" ] ; then
 		dodir /usr/lib/mozilla/plugins
 		dosym $1 /usr/lib/mozilla/plugins/${bn}
-	if
+	fi
 }
 
