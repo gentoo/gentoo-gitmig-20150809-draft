@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3342 2004/11/22 17:42:36 solar Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3343 2004/11/23 02:14:06 vapier Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -454,10 +454,6 @@ games-arcade/mtp-target-bin
 # <swegener@gentoo.org> (20 June 2004)
 # alpha software, which is very buggy
 net-irc/epic5
-
-# <mr_bones_@gentoo.org> (15 June 2004)
-# http://bugs.gentoo.org/show_bug.cgi?id=54059
-=sys-devel/binutils-2.15.91.0.1-r2
 
 # <rizzo@gentoo.org> (11 Jun 2004)
 # I think this is only for php 5 anyway
