@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/opendx/opendx-4.3.2.ebuild,v 1.2 2004/03/16 12:02:38 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/opendx/opendx-4.3.2.ebuild,v 1.3 2004/03/21 20:48:52 dholm Exp $
 
 # Set SMP="no" to force disable of SMP compilation.
 # Set SMP="yes" to force enable of SMP compilation.
@@ -24,7 +24,7 @@ SRC_URI="http://opendx.npaci.edu/source/${P/open}.tar.gz"
 LICENSE="IPL-1"
 SLOT="0"
 # Should work on x86, ppc, alpha at least
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 
 IUSE="hdf cdf netcdf tiff imagemagick" # java doc"
 
