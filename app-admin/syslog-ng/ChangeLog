@@ -1,10 +1,16 @@
 # ChangeLog for app-admin/syslog-ng
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/ChangeLog,v 1.16 2002/12/13 10:55:54 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/ChangeLog,v 1.17 2002/12/26 23:12:05 mholzer Exp $
 
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
+*syslog-ng-1.5.24 (26 Dec 2002)
+
+  26 Dec 2002 Martin Holzer <mholzer@gentoo.org> syslog-ng-1.5.24.ebuild files/digest-syslog-ng-1.5.24 ChangeLog : 
+  Version Pumped. Closes #12714.
+
  
 *syslog-ng-1.4.17 (05 Nov 2002)
+
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
 
   05 Nov 2002; Daniel Ahlberg <aliz@gentoo.org> :
   Version bump.
