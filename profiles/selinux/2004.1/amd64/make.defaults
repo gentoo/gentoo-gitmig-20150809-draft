@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/2004.1/amd64/make.defaults,v 1.5 2004/12/11 16:06:20 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/2004.1/amd64/make.defaults,v 1.6 2005/01/17 22:07:42 pebenito Exp $
 
-USE="amd64 multilib"
+USE="amd64 emul-linux-x86 multilib"
 STAGE1_USE="amd64 multilib"
 GRP_STAGE23_USE="amd64 multilib"
 
