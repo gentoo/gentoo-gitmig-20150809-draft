@@ -587,27 +587,6 @@ x11-themes/gtk-xfce-engine
 # Kismet package is new please test
 =net-analyzer/kismet-2.4.6
 
-# Dan Armak <danarmak@gentoo.org> (04 Aug 2002)
-# remask kde 3.1_alpha1 because people who don't emerge rsync --clean
-# see it as unmasked even though i removed the ebuilds from cvs
-=kde-base/arts-1.0.6
-=kde-base/kdelibs-3.1_alpha1
-=kde-base/kde-3.1_alpha1
-=kde-base/kdeaddons-3.1_alpha1
-=kde-base/kdeadmin-3.1_alpha1
-=kde-base/kdeartwork-3.1_alpha1
-=kde-base/kdebase-3.1_alpha1
-=kde-base/kdebindings-3.1_alpha1
-=kde-base/kdeedu-3.1_alpha1
-=kde-base/kdegames-3.1_alpha1
-=kde-base/kdegraphics-3.1_alpha1
-=kde-base/kdemultimedia-3.1_alpha1
-=kde-base/kdenetwork-3.1_alpha1
-=kde-base/kdepim-3.1_alpha1
-=kde-base/kdesdk-3.1_alpha1
-=kde-base/kdetoys-3.1_alpha1
-=kde-base/kdeutils-3.1_alpha1
-
 # <carpaski@gentoo.org> (04 Aug 2002)
 # Testing...
 =net-ftp/kbear-2.0_beta1
