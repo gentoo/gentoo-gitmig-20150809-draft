@@ -1,14 +1,14 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author: Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/libtool.eclass,v 1.17 2002/11/08 22:03:45 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/libtool.eclass,v 1.18 2002/12/16 02:36:05 azarah Exp $
 # This eclass patches ltmain.sh distributed with libtoolized packages with the
 # relink and portage patch
 
 ECLASS=libtool
 INHERITED="$INHERITED $ECLASS"
 
-newdepend sys-devel/libtool
+newdepend "!bootstrap? ( sys-devel/libtool )"
 
 DESCRIPTION="Based on the ${ECLASS} eclass"
 
