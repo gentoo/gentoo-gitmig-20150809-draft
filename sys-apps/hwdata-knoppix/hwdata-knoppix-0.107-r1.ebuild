@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwdata-knoppix/hwdata-knoppix-0.107-r1.ebuild,v 1.1 2004/12/10 19:55:55 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwdata-knoppix/hwdata-knoppix-0.107-r1.ebuild,v 1.2 2004/12/27 17:12:29 corsair Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://developer.linuxtag.net/knoppix/sources/${PN}_${MY_PV}.tar.gz"
 HOMEPAGE="http://www.knopper.net"
 
 IUSE="opengl livecd"
-KEYWORDS="x86 ppc amd64 alpha"
+KEYWORDS="x86 ppc amd64 alpha ~ppc64"
 SLOT="0"
 LICENSE="GPL-2"
 
