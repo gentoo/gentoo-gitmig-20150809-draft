@@ -1,6 +1,12 @@
 # ChangeLog for app-sci/gimps
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/gimps/ChangeLog,v 1.7 2004/11/04 19:51:34 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/gimps/ChangeLog,v 1.8 2004/11/04 21:34:59 spock Exp $
+
+*gimps-23.9-r1 (04 Nov 2004)
+
+  04 Nov 2004; Michal Januszewski <spock@gentoo.org> gimps-23.5.ebuild,
+  +gimps-23.9-r1.ebuild:
+  Changed ownership of mprime to root:root. Marked 23.9-r1 stable.
 
   04 Nov 2004; Michal Januszewski <spock@gentoo.org> gimps-23.5.ebuild,
   gimps-23.9.ebuild:
