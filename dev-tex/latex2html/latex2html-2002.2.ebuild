@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex2html/latex2html-2002.2.ebuild,v 1.1 2003/06/09 13:11:26 satai Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex2html/latex2html-2002.2.ebuild,v 1.2 2003/09/06 23:50:05 msterret Exp $
 
 MY_P=${P/./-}
 S=${WORKDIR}/${MY_P}
@@ -45,11 +45,11 @@ src_compile() {
 }
 
 src_install() {
-	dodir /usr/bin /usr/lib/latex2html /usr/share/latex2html 
+	dodir /usr/bin /usr/lib/latex2html /usr/share/latex2html
 	dodir /usr/share/texmf/tex/latex/html
 	cp cfgcache.pm cfgcache.pm.bak
 
-	# mktexlsr is run later to avoid a sandbox violation 
+	# mktexlsr is run later to avoid a sandbox violation
 	sed \
 		-e "/BINDIR\|LIBDIR\|SHLIBDIR\|TEXPATH/s#q'/#q'"${D}"#" \
 		-e "/MKTEXLSR/s:q'.*':q'':" \

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/prosper/prosper-1.00.4.ebuild,v 1.1 2003/07/14 02:53:10 satai Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/prosper/prosper-1.00.4.ebuild,v 1.2 2003/09/06 23:50:05 msterret Exp $
 
 inherit latex-package
 
@@ -31,11 +31,11 @@ src_install(){
             doins $i
         done
 	insinto ${TEXMF}/tex/latex/${PN}/contrib/img/
-	doins ./contrib/img/*.ps 
+	doins ./contrib/img/*.ps
 	dodoc README TODO TROUBLESHOOTINGS INSTALL NEWS FAQ AUTHORS ChangeLog
 	dodoc doc/*.eps doc/*.fig doc/*.pdf doc/*.tex doc/*.ps
 	docinto doc-examples/
-	dodoc doc/doc-examples/*.ps doc/doc-examples/*.tex 
+	dodoc doc/doc-examples/*.ps doc/doc-examples/*.tex
 	docinto contrib/
 	dodoc contrib/*.ps contrib/*.tex
 }
