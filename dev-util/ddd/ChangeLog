@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/ddd
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ddd/ChangeLog,v 1.16 2004/02/23 16:59:14 bazik Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ddd/ChangeLog,v 1.17 2004/04/05 03:10:48 agriffis Exp $
+
+  04 Apr 2004; Aron Griffis <agriffis@gentoo.org> ddd-3.3.7.ebuild,
+  ddd-3.3.8.ebuild:
+  Add ia64 keywords for bug 46560
 
   23 Feb 2004; Sven Blumenstein <bazik@gentoo.org> ddd-3.3.7.ebuild,
   ddd-3.3.8.ebuild:
