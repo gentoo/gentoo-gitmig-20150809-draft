@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.2.1-r2.ebuild,v 1.1 2002/12/14 17:26:07 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.2.1-r2.ebuild,v 1.2 2002/12/14 17:34:43 azarah Exp $
 
 IUSE="java crypt ipv6 gtk2 ssl ldap gnome"
 # Internal USE flags that I do not really want to advertise ...
@@ -610,6 +610,9 @@ pkg_preinst() {
 	then
 		rm -f ${ROOT}/usr/lib/component.reg
 	fi
+
+	# Make sure these are removed.
+	rm -f ${ROOT}/usr/lib/mozilla/lib{Xft,Xrender}.so*
 
 	# Move old plugins dir
 	pkg_mv_plugins /usr/lib/mozilla/plugins
