@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/sendmail
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/sendmail/ChangeLog,v 1.6 2004/06/24 13:03:37 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/sendmail/ChangeLog,v 1.7 2004/06/24 13:42:11 joker Exp $
+
+  24 Jun 2004; Christian Birchinger <joker@gentoo.org>
+  sendmail-8.12.11-r3.ebuild:
+  Added sparc stable keyword
 
   24 Jun 2004; Gustavo Zacarias <gustavoz@gentoo.org>
   sendmail-8.12.11-r3.ebuild:
