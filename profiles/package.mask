@@ -156,10 +156,6 @@ app-office/openoffice-ximian
 # Breaks dependencies with things compiled against the previous versions
 >=sys-libs/gdbm-1.8.3
 
-# <usata@gentoo.org> (1 Nov 2003)
-# Ruby 1.8.1 Preview release.
-=dev-lang/ruby-1.8.1_pre*
-
 # <max@gentoo.org> (30 Oct 2003)
 # Cyrus-imapd beta. Version 2.2.2_beta is planned to be the last release
 # before going final/stable.
