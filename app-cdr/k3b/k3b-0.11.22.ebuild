@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-0.11.22.ebuild,v 1.1 2005/03/16 17:44:58 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-0.11.22.ebuild,v 1.2 2005/03/17 14:26:51 greg_g Exp $
 
 inherit kde eutils
 
@@ -59,7 +59,7 @@ src_unpack() {
 src_compile() {
 	local _S=${S}
 	local myconf="--enable-libsuffix= $(use_with kde k3bsetup)
-		      --with-external-libsamplerate
+		      --with-external-libsamplerate --without-resmgr
 		      $(use_with oggvorbis) $(use_with mad libmad)
 		      $(use_with flac)"
 
