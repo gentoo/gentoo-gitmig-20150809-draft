@@ -1,6 +1,12 @@
 # ChangeLog for app-accessibility/gnome-speech
 # Copyright 1999-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-speech/ChangeLog,v 1.10 2004/05/25 22:39:39 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-speech/ChangeLog,v 1.11 2004/06/11 13:06:05 leonardop Exp $
+
+*gnome-speech-0.3.3 (11 Jun 2004)
+
+  11 Jun 2004; L. Boshell <leonardop@gentoo.org> gnome-speech-0.3.3.ebuild:
+  New release. Adds support for the freetts driver through the local
+  `freetts' USE flag.
 
   25 May 2004; Guy Martin <gmsoft@gentoo.org> gnome-speech-0.3.2-r1.ebuild:
   Marked stable on hppa.
@@ -32,14 +38,14 @@
 
   22 Mar 2004; L. Boshell <leonardop@gentoo.org> gnome-speech-0.3.2-r1.ebuild:
   Added java support via the `java' USE flag.
-  
+
   17 Mar 2004; Gustavo Zacarias <gustavoz@gentoo.org>
   gnome-speech-0.3.1.ebuild:
   sparc keyword again
 
   16 Mar 2004; L. Boshell <leonardop@gentoo.org> gnome-speech-0.3.1.ebuild:
   Marking stable on x86.
-  
+
   13 Mar 2004; foser <foser@gentoo.org> metadata.xml :
   Maintainership to gnome-accessibility
 
