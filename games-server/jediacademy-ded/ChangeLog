@@ -1,8 +1,0 @@
-# ChangeLog for games-server/jediacademy-ded
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/jediacademy-ded/ChangeLog,v 1.2 2004/06/24 23:20:35 agriffis Exp $
-
-*jediacademy-ded-1.01 (26 Sep 2003)
-
-  26 Sep 2003; Mike Frysinger <vapier@gentoo.org> :
-  Initial import.  Ebuild submitted by Bryan Hoover <malketh@malkethius.net> #29466.

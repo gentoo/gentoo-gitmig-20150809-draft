@@ -1,4 +1,0 @@
-#!/bin/sh
-cd GENTOO_DIR
-export LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:GENTOO_DIR"
-exec ./linuxjampded "$@"
