@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/opera/opera-7.50.ebuild,v 1.3 2004/05/23 00:46:28 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/opera/opera-7.50-r1.ebuild,v 1.1 2004/05/24 13:32:23 lanius Exp $
 
 IUSE="static"
 
@@ -31,15 +31,14 @@ RDEPEND="virtual/x11
 	>=media-libs/fontconfig-2.1.94-r1
 	media-libs/libexif
 	x11-libs/openmotif
-	static? (
-		amd64? ( app-emulation/emul-linux-x86-xlibs ) )
 	!static? (
 		amd64? ( =app-emulation/emul-linux-x86-qtlibs-1* )
-		!amd64? ( =x11-libs/qt-3* ) )"
+		!amd64? ( =x11-libs/qt-3* ) )
+	app-text/aspell"
 
 SLOT="0"
 LICENSE="OPERA"
-KEYWORDS="x86 ~ppc ~sparc"
+KEYWORDS="x86 ~ppc ~sparc ~amd64"
 
 src_unpack() {
 	unpack ${A}
@@ -77,8 +76,6 @@ src_install() {
 	dosed /opt/opera/bin/opera
 	dosed /opt/opera/share/opera/java/opera.policy
 
-	sed -i -e "s:/usr/lib/opera/plugins:/opt/opera/lib/opera/plugins" ${D}/opt/opera/bin/opera
-
 	# Install the icons
 	insinto /usr/share/pixmaps
 	doins images/opera.xpm
@@ -90,9 +87,24 @@ src_install() {
 	# Install a symlink /usr/bin/opera
 	dodir /usr/bin
 	dosym /opt/opera/bin/opera /usr/bin/opera
+
+	# fix plugin path
+	echo "Plugin Path=/opt/opera/lib/opera/plugins" >> ${D}/etc/opera6rc
+
+	# enable spellcheck
+	if [ `use static` ]; then
+		DIR=$OPERAVER.1
+	else
+		use sparc && DIR=$OPERAVER.2 || DIR=$OPERAVER.5
+	fi
+	echo "Spell Check Engine=/opt/opera/lib/opera/${DIR}/spellcheck.so" >> ${D}/opt/opera/share/opera/ini/spellcheck.ini
+
 }
 
 pkg_postinst() {
 	einfo "For localized language files take a look at:"
 	einfo "http://www.opera.com/download/languagefiles/index.dml?platform=linux"
+	einfo
+	einfo "To change the spellcheck language edit /opt/opera/share/opera/ini/spellcheck.ini"
+	einfo "and emerge app-text/aspell-language."
 }
