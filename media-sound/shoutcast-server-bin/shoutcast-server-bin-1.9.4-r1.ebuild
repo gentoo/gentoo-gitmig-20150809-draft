@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/shoutcast-server-bin/shoutcast-server-bin-1.9.4.ebuild,v 1.3 2004/09/03 22:42:01 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/shoutcast-server-bin/shoutcast-server-bin-1.9.4-r1.ebuild,v 1.1 2004/09/16 16:12:18 eradicator Exp $
+
+IUSE=""
 
 inherit eutils
 
@@ -11,13 +13,13 @@ HOMEPAGE="http://www.shoutcast.com/download/license.phtml"
 SRC_URI="shoutcast-${SVER}-linux-glibc6.tar.gz"
 LICENSE="shoutcast"
 SLOT="0"
-KEYWORDS="x86"
-IUSE=""
-DEPEND=">=virtual/libc-2.0.0"
+KEYWORDS="-* x86 ~amd64"
+DEPEND="amd64? ( emul-linux-x86-glibc )"
+
 S="${WORKDIR}/shoutcast-${SVER}-linux-glibc6"
 
-src_unpack() {
-	unpack shoutcast-${SVER}-linux-glibc6.tar.gz
+src_compile() {
+	einfo "Nothing to compile."
 }
 
 src_install() {
@@ -48,11 +50,14 @@ src_install() {
 	dodir /etc/shoutcast
 	insinto /etc/shoutcast
 	doins sc_serv.conf
-
+	
 	# install documentation
 	dodoc README
 	cp sc_serv.conf sc_serv.conf.example
 	dodoc sc_serv.conf.example
+
+	# Fix permissions - security bug #63551
+	fperms 600 /etc/shoutcast/sc_serv.conf
 }
 
 pkg_postinst() {
