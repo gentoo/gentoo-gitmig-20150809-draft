@@ -1,6 +1,10 @@
 # ChangeLog for net-print/apsfilter
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/apsfilter/ChangeLog,v 1.10 2004/06/25 00:37:39 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/apsfilter/ChangeLog,v 1.11 2004/07/16 20:34:05 mr_bones_ Exp $
+
+  16 Jul 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  -apsfilter-7.2.2.ebuild:
+  clean older ebuild
 
   09 Dec 2003; Heinrich Wendel <lanius@gentoo.org> apsfilter-7.2.2.ebuild,
   apsfilter-7.2.5.ebuild:
