@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/honeyd
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/honeyd/ChangeLog,v 1.16 2005/01/29 05:12:51 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/honeyd/ChangeLog,v 1.17 2005/02/25 12:58:03 ka0ttic Exp $
+
+  25 Feb 2005; Aaron Walker <ka0ttic@gentoo.org> honeyd-1.0.ebuild:
+  Marked stable on x86.
 
   29 Jan 2005; Daniel Black <dragonheart@gentoo.org> honeyd-0.8.ebuild,
   honeyd-1.0.ebuild:
