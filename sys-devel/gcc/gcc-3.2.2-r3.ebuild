@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.2.2-r3.ebuild,v 1.17 2003/04/25 05:25:00 frogger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.2.2-r3.ebuild,v 1.18 2003/05/16 06:01:38 frogger Exp $
 
 IUSE="static nls bootstrap java build"
 
@@ -55,6 +55,10 @@ DATAPATH="${LOC}/share/gcc-data/${CCHOST}/${MY_PV}"
 # We will handle /usr/include/g++-v3/ with gcc-config ...
 STDCXX_INCDIR="${LIBPATH}/include/g++-v${MY_PV/\.*/}"
 
+# ProPolice version
+PP_VER1="3_2_2"
+PP_VER2="3.2.2-7"
+
 # Patch tarball support ...
 #PATCH_VER="1.0"
 PATCH_VER=""
@@ -89,7 +93,9 @@ else
 	SRC_URI="ftp://sources.redhat.com/pub/gcc/snapshots/${SNAPSHOT}/gcc-${SNAPSHOT//-}.tar.bz2"
 fi
 #SRC_URI="${SRC_URI} mirror://gentoo/${P}-manpages.tar.bz2"
-SRC_URI="${SRC_URI} mirror://gentoo/${P}-tls-update2.patch.bz2"
+SRC_URI="${SRC_URI} 
+	http://www.trl.ibm.com/projects/security/ssp/gcc${PP_VER1}/protector-${PP_VER2}.tar.gz
+	mirror://gentoo/${P}-tls-update2.patch.bz2"
 
 DESCRIPTION="The GNU Compiler Collection.  Includes C/C++ and java compilers"
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
@@ -152,6 +158,8 @@ src_unpack() {
 		unpack gcc-${SNAPSHOT//-}.tar.bz2
 	fi
 
+	unpack protector-${PP_VER2}.tar.gz
+
 	cd ${S}
 	# Fixup libtool to correctly generate .la files with portage
 	elibtoolize --portage --shallow
@@ -183,11 +191,10 @@ src_unpack() {
 	epatch ${FILESDIR}/3.2.1/gcc32-strip-dotdot.patch
 	epatch ${FILESDIR}/3.2.1/gcc32-athlon-alignment.patch
 
-	# ProPolice Stack Smashing protection - protector-3.2.2-6
-	epatch ${FILESDIR}/3.2.2/protector.patch 
-	epatch ${FILESDIR}/3.2.2/protector_parallel_make.patch
-	cp ${FILESDIR}/3.2.2/protector.c ${WORKDIR}/${P}/gcc/ || die "protector.c not found"
-	cp ${FILESDIR}/3.2.2/protector.h ${WORKDIR}/${P}/gcc/ || die "protector.h not found"
+	# ProPolice Stack Smashing protection - protector-3.2.2-7
+	epatch ${WORKDIR}/protector.dif
+	cp ${WORKDIR}/protector.c ${WORKDIR}/${P}/gcc/ || die "protector.c not found"
+	cp ${WORKDIR}/protector.h ${WORKDIR}/${P}/gcc/ || die "protector.h not found"
 	epatch ${FILESDIR}/3.2.2/gcc-322-r3-propolice-version.patch 
 
 	# GCC bugfixes ...
