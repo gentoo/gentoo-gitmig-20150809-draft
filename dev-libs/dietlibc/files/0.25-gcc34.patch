@@ -1,0 +1,93 @@
+diff -r -u dietlibc-0.24.orig/include/sys/cdefs.h dietlibc-0.24/include/sys/cdefs.h
+--- dietlibc-0.24.orig/include/sys/cdefs.h	2003-10-08 02:44:25.000000000 +0300
++++ dietlibc-0.24/include/sys/cdefs.h	2004-05-14 16:54:00.315533488 +0300
+@@ -62,5 +62,10 @@
+ #define __attribute_dontuse__
+ #define __deprecated__
+ #endif
+-
++#ifdef __i386__
++/* regparm exists only on i386 */
++#define FASTCALL(n) __attribute__((regparm(n)))
++#else
++#define FASTCALL(n)
++#endif
+ #endif
+diff -r -u dietlibc-0.24.orig/lib/alloc.c dietlibc-0.24/lib/alloc.c
+--- dietlibc-0.24.orig/lib/alloc.c	2003-11-07 19:22:33.000000000 +0200
++++ dietlibc-0.24/lib/alloc.c	2004-05-14 16:56:57.104657456 +0300
+@@ -44,14 +44,8 @@
+ 
+ /* a simple mmap :) */
+ 
+-#ifdef __i386__
+-/* regparm exists only on i386 */
+-static void *do_mmap(size_t size) __attribute__((regparm(1)));
+-static size_t get_index(size_t _size) __attribute__((regparm(1)));
+-static void* __small_malloc(size_t _size) __attribute__((regparm(1)));
+-#endif
+ 
+-static void *do_mmap(size_t size) {
++static FASTCALL(1) void *do_mmap(size_t size) {
+   return mmap(0, size, PROT_READ|PROT_WRITE, MAP_ANONYMOUS|MAP_PRIVATE, -1, (size_t)0);
+ }
+ 
+@@ -70,7 +64,7 @@
+ 
+ static inline int __ind_shift() { return (MEM_BLOCK_SIZE==4096)?4:5; }
+ 
+-static size_t get_index(size_t _size) {
++static FASTCALL(1) size_t get_index(size_t _size) {
+   register size_t idx=0;
+   if (_size) {
+     register size_t size=((_size-1)&(MEM_BLOCK_SIZE-1))>>__ind_shift();
+@@ -80,9 +74,7 @@
+ }
+ 
+ /* small mem */
+-static void __small_free(void*_ptr,size_t _size) __attribute__((regparm(2)));
+-
+-static void __small_free(void*_ptr,size_t _size) {
++static FASTCALL(2) void __small_free(void*_ptr,size_t _size) {
+   __alloc_t* ptr=BLOCK_START(_ptr);
+   size_t size=_size;
+   size_t idx=get_index(size);
+@@ -93,7 +85,7 @@
+   __small_mem[idx]=ptr;
+ }
+ 
+-static void* __small_malloc(size_t _size) {
++static FASTCALL(1) void* __small_malloc(size_t _size) {
+   __alloc_t *ptr;
+   size_t size=_size;
+   size_t idx;
+diff -r -u dietlibc-0.24.orig/libpthread/pthread_internal.c dietlibc-0.24/libpthread/pthread_internal.c
+--- dietlibc-0.24.orig/libpthread/pthread_internal.c	2003-11-04 18:06:58.000000000 +0200
++++ dietlibc-0.24/libpthread/pthread_internal.c	2004-05-14 16:59:44.030280904 +0300
+@@ -49,10 +49,7 @@
+ static inline unsigned long hash_tid(int tid) { return (tid&(NR_BUCKETS-1)); }
+ 
+ /* O(1) */
+-#if defined(__i386__)
+-static void __thread_add_tid_(_pthread_descr*root,_pthread_descr thread) __attribute__((regparm(2)));
+-#endif
+-static void __thread_add_tid_(_pthread_descr*root,_pthread_descr thread) {
++static FASTCALL(2) void __thread_add_tid_(_pthread_descr*root,_pthread_descr thread) {
+   _pthread_descr tmp=*root;
+   thread->prev=root;
+   thread->next=tmp;
+@@ -76,12 +73,12 @@
+ /* find thread by thread-id O(n) (LOCK struct if found) */
+ /* O(n*) linear to the number of thread in the same bucket */
+ #if defined(__i386__)
+-static _pthread_descr __thread_find_(int pid) __attribute__((regparm(1)));
++static FASTCALL(1) _pthread_descr __thread_find_(int pid);
+ _pthread_descr __thread_find(int pid) { return __thread_find_(pid); }
+ #else
+ _pthread_descr __thread_find(int pid) __attribute__((alias("__thread_find_")));
+ #endif
+-static _pthread_descr __thread_find_(int pid) {
++static FASTCALL(1) _pthread_descr __thread_find_(int pid) {
+   _pthread_descr cur;
+   if (__thread_started==PTHREAD_ONCE_INIT) { /* uninitialised */
+     LOCK(&_main_thread);

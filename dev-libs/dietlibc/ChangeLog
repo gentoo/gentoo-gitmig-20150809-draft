@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/dietlibc
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dietlibc/ChangeLog,v 1.29 2004/05/29 22:06:44 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dietlibc/ChangeLog,v 1.30 2004/06/01 04:12:35 vapier Exp $
+
+  01 Jun 2004; Mike Frysinger <vapier@gentoo.org> +files/0.25-gcc34.patch,
+  dietlibc-0.25.ebuild:
+  Add gcc-3.4 patch #51053 by Imad R. Faiad.
 
 *dietlibc-0.25 (29 May 2004)
 
