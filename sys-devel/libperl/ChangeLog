@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/libperl
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/ChangeLog,v 1.55 2004/12/07 20:31:35 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/ChangeLog,v 1.56 2004/12/14 01:56:33 vapier Exp $
+
+  13 Dec 2004; Mike Frysinger <vapier@gentoo.org> libperl-5.8.5-r1.ebuild,
+  libperl-5.8.5.ebuild, libperl-5.8.6.ebuild:
+  Use toolchain-funcs to get $CC.
 
   07 Dec 2004; Hardave Riar <hardave@gentoo.org> libperl-5.8.5.ebuild:
   Stable on mips, dep for bug #66360

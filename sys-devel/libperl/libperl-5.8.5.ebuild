@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/libperl-5.8.5.ebuild,v 1.11 2004/12/07 20:31:35 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/libperl-5.8.5.ebuild,v 1.12 2004/12/14 01:56:33 vapier Exp $
 
 # The basic theory based on comments from Daniel Robbins <drobbins@gentoo.org>.
 #
@@ -54,7 +54,7 @@
 
 IUSE="berkdb debug gdbm ithreads uclibc"
 
-inherit eutils flag-o-matic
+inherit eutils flag-o-matic toolchain-funcs
 
 # Perl has problems compiling with -Os in your flags
 use uclibc || replace-flags "-Os" "-O2"
@@ -197,7 +197,7 @@ src_compile() {
 		-Darchname="${myarch}" \
 		-Dcccdlflags='-fPIC' \
 		-Dccdlflags='-rdynamic' \
-		-Dcc="${CC:-gcc}" \
+		-Dcc="$(tc-getCC)" \
 		-Dprefix='/usr' \
 		-Dvendorprefix='/usr' \
 		-Dsiteprefix='/usr' \
