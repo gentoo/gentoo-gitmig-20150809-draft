@@ -4,8 +4,8 @@
 	* parsestream.h (class parsebuf::pos_at_line_start): Change type
 	to _IO_off_t.
 
-*** /usr/include/g++/streambuf.h.jj	Sun Aug  8 20:07:01 1999
---- /usr/include/g++/streambuf.h	Mon May 15 16:04:27 2000
+*** include/g++/streambuf.h.jj	Sun Aug  8 20:07:01 1999
+--- include/g++/streambuf.h	Mon May 15 16:04:27 2000
 ***************
 *** 72,81 ****
   
@@ -29,8 +29,8 @@
   #endif
   typedef _IO_ssize_t streamsize;
   
-*** /usr/include/g++/parsestream.h.jj	Thu Aug 21 18:58:20 1997
---- /usr/include/g++/parsestream.h	Mon May 15 16:04:27 2000
+*** include/g++/parsestream.h.jj	Thu Aug 21 18:58:20 1997
+--- include/g++/parsestream.h	Mon May 15 16:04:27 2000
 ***************
 *** 42,48 ****
   
