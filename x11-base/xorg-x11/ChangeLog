@@ -1,6 +1,9 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.1 2004/04/07 08:56:25 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.2 2004/04/07 17:50:14 spyderous Exp $
+
+  07 Apr 2004; Donnie Berkholz <spyderous@gentoo.org>; :
+  Looks like repoman doesn't auto-add Manifests.
 
 *xorg-x11-6.7.0 (07 Apr 2004)
 
