@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kget
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kget/ChangeLog,v 1.3 2005/02/27 20:21:35 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kget/ChangeLog,v 1.4 2005/03/07 11:03:57 cryos Exp $
+
+  07 Mar 2005; Marcus D. Hanwell <cryos@gentoo.org> kget-3.4.0_rc1.ebuild:
+  Marked ~amd64, keywording KDE split ebuilds, bug 80944.
 
 *kget-3.4.0_rc1 (27 Feb 2005)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/lisa/lisa-3.4.0_rc1.ebuild,v 1.1 2005/02/27 20:21:43 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/lisa/lisa-3.4.0_rc1.ebuild,v 1.2 2005/03/07 11:11:29 cryos Exp $
 
 KMNAME=kdenetwork
 KMMODULE=lanbrowsing
@@ -9,7 +9,7 @@ KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta eutils
 
 DESCRIPTION="KDE Lan Information Server - allows KDE desktops to share information over a network"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 IUSE=""
 KMEXTRA="doc/kcontrol/lanbrowser"
 
