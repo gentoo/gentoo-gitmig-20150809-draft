@@ -1,8 +1,12 @@
 # ChangeLog for app-office/dia
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-office/dia/ChangeLog,v 1.7 2002/10/22 12:06:52 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/dia/ChangeLog,v 1.8 2002/10/23 15:21:31 foser Exp $
 
 *dia-0.90-r2 (22 Oct 2002)
+
+  23 Oct 2002; foser <foser@gentoo.org> dia-0.90-r2.ebuild :
+  Added libart_lgpl dep for png USE
+  Thanks go to Ryan Tolboom <rxt1077@njit.edu> for notifying
 
   22 Oct 2002; foser <foser@gentoo.org> dia-0.90-r2.ebuild :
   Added truetype and png USE flags (bug #8916)
