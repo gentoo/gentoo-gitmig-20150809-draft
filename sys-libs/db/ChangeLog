@@ -1,6 +1,17 @@
 # ChangeLog for sys-libs/db
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.60 2003/10/15 17:50:39 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.61 2003/10/18 10:29:17 robbat2 Exp $
+
+*db-4.1.25_p1-r2 (18 Oct 2003)
+*db-4.0.14-r3 (18 Oct 2003)
+*db-3.2.9-r10 (18 Oct 2003)
+
+  18 Oct 2003; Robin H. Johnson <robbat2@gentoo.org> db-3.2.9-r10.ebuild,
+  db-4.0.14-r3.ebuild, db-4.1.25_p1-r2.ebuild,
+  files/db-3.2.9-jarlocation.patch, files/db-4.0.14-jarlocation.patch,
+  files/db-4.1.25_p1-jarlocation.patch:
+  new revision of db-3 and db-4.[01] packages adding patch to avoid db.jar
+  overwriting, adds java support to db-3.2.9-r10, and rpc support in db-4.[01]
 
   15 Oct 2003; Brad House <brad_mssw@gentoo.org> db-1.85-r1.ebuild,
   db-3.2.9-r7.ebuild:
