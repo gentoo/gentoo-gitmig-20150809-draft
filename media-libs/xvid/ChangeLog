@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/xvid
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xvid/ChangeLog,v 1.21 2004/04/26 22:47:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xvid/ChangeLog,v 1.22 2004/06/11 11:01:05 phosphan Exp $
+
+*xvid-1.0.1 (11 Jun 2004)
+
+  11 Jun 2004; Patrick Kursawe <phosphan@gentoo.org> xvid-1.0.1.ebuild,
+  files/1.0.1-DESTDIR.patch:
+  Version bump, see bug #53221
 
 *xvid-1.0.0_rc4 (26 Apr 2004)
 
