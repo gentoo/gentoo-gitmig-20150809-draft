@@ -2,6 +2,6 @@ MD5 63a797f388320a3702567346e9cac6b2 policycoreutils-1.8.ebuild 1744
 MD5 3e9b89948d1450cbb255f31178b894ba policycoreutils-1.4-r1.ebuild 1574
 MD5 a035ef6a55b7151a354265c64fda03b6 ChangeLog 3377
 MD5 2eeb1df30e87ba2861eddbdc34a48bb8 metadata.xml 836
-MD5 3196fb6c7b9efffe0e0af534b57e5aaa files/digest-policycoreutils-1.8 144
+MD5 4be45e68d831caed22c82a9745d9e994 files/digest-policycoreutils-1.8 143
 MD5 b9c41decc251443bb9535f415b9b1896 files/digest-policycoreutils-1.4-r1 143
 MD5 b3e5bece06545088b90e09a70b01aa42 files/selinux-init 916
