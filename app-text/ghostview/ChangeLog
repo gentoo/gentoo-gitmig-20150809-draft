@@ -1,10 +1,6 @@
 # ChangeLog for app-text/ghostview
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostview/ChangeLog,v 1.13 2004/07/01 11:58:06 eradicator Exp $
-
-  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
-  ghostview-1.5-r1.ebuild, ghostview-1.5.ebuild:
-  virtual/glibc -> virtual/libc
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostview/ChangeLog,v 1.14 2004/07/01 19:28:49 eradicator Exp $
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   ghostview-1.5-r1.ebuild, ghostview-1.5.ebuild:

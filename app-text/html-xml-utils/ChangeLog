@@ -1,10 +1,6 @@
 # ChangeLog for app-text/html-xml-utils
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/html-xml-utils/ChangeLog,v 1.14 2004/07/01 11:58:19 eradicator Exp $
-
-  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
-  html-xml-utils-2.3-r1.ebuild, html-xml-utils-2.8-r1.ebuild:
-  virtual/glibc -> virtual/libc
+# $Header: /var/cvsroot/gentoo-x86/app-text/html-xml-utils/ChangeLog,v 1.15 2004/07/01 19:28:49 eradicator Exp $
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   html-xml-utils-2.3-r1.ebuild, html-xml-utils-2.8-r1.ebuild:

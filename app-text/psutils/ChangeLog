@@ -1,9 +1,6 @@
 # ChangeLog for app-text/psutils
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/psutils/ChangeLog,v 1.11 2004/07/01 12:02:11 eradicator Exp $
-
-  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> psutils-1.17.ebuild:
-  virtual/glibc -> virtual/libc
+# $Header: /var/cvsroot/gentoo-x86/app-text/psutils/ChangeLog,v 1.12 2004/07/01 19:28:49 eradicator Exp $
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> psutils-1.17.ebuild:
   virtual/glibc -> virtual/libc

@@ -1,9 +1,6 @@
 # ChangeLog for app-text/bow
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/bow/ChangeLog,v 1.4 2004/07/01 11:56:13 eradicator Exp $
-
-  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> bow-20020213.ebuild:
-  virtual/glibc -> virtual/libc
+# $Header: /var/cvsroot/gentoo-x86/app-text/bow/ChangeLog,v 1.5 2004/07/01 19:28:48 eradicator Exp $
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> bow-20020213.ebuild:
   virtual/glibc -> virtual/libc

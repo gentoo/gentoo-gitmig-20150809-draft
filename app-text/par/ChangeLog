@@ -1,9 +1,6 @@
 # ChangeLog for app-text/par
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/par/ChangeLog,v 1.5 2004/07/01 12:00:50 eradicator Exp $
-
-  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> par-1.52.ebuild:
-  virtual/glibc -> virtual/libc
+# $Header: /var/cvsroot/gentoo-x86/app-text/par/ChangeLog,v 1.6 2004/07/01 19:28:49 eradicator Exp $
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> par-1.52.ebuild:
   virtual/glibc -> virtual/libc

@@ -1,10 +1,6 @@
 # ChangeLog for app-text/lv
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/lv/ChangeLog,v 1.15 2004/07/01 11:59:13 eradicator Exp $
-
-  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> lv-4.50.ebuild,
-  lv-4.51.ebuild:
-  virtual/glibc -> virtual/libc
+# $Header: /var/cvsroot/gentoo-x86/app-text/lv/ChangeLog,v 1.16 2004/07/01 19:28:49 eradicator Exp $
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> lv-4.50.ebuild,
   lv-4.51.ebuild:
