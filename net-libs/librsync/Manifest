@@ -1,20 +1,20 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 d87672e7bfaa16141d3810368fe83578 librsync-0.9.5.ebuild 701
-MD5 bf7d4ecb7108edc65f64ba5859eae1e0 librsync-0.9.7.ebuild 634
-MD5 d5c08c8545495c93a776d6d2c0577372 librsync-0.9.5.1.ebuild 686
 MD5 c1ee73d6634599c29c5e013eacf60881 ChangeLog 1385
+MD5 d5c08c8545495c93a776d6d2c0577372 librsync-0.9.5.1.ebuild 686
+MD5 d87672e7bfaa16141d3810368fe83578 librsync-0.9.5.ebuild 701
 MD5 a2e699d81f4d39f9beef307ff78d9b41 librsync-0.9.6.ebuild 707
+MD5 707514e5c85e49cdd722e00d1eef9f16 librsync-0.9.7.ebuild 672
 MD5 f8d10f350e91f30316ea4e1bd1e76470 metadata.xml 254
-MD5 1ec3cfeaf5b7008219c1acffbdf940fc files/digest-librsync-0.9.5.1 68
 MD5 52f787dffd6d0e8d1f04f3ffe8a7da34 files/digest-librsync-0.9.5 66
+MD5 1ec3cfeaf5b7008219c1acffbdf940fc files/digest-librsync-0.9.5.1 68
 MD5 d0c1f5fb5a02f40c16491c2c003dadf5 files/digest-librsync-0.9.6 66
 MD5 3271b117997d294c547e95009ef7070d files/digest-librsync-0.9.7 66
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBfO/REZCkKN40op4RAh6ZAKCwQ6F3WEEPS8jMH2PiDTZqoK+YPQCeOkDe
-w+//9crBcyZ6bZyBLKflvDA=
-=ysy5
+iD8DBQFBh6dGHTu7gpaalycRAj9tAJ90ymqlLKG2EJ8DwqykdptoREBNCACdESoH
+wSQ8ip9EreI90lAUZ4Lne74=
+=8aOD
 -----END PGP SIGNATURE-----
