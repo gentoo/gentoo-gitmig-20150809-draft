@@ -1,13 +1,12 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/files/unrealircd.rc,v 1.6 2004/08/15 15:57:50 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/files/unrealircd.rc,v 1.7 2004/10/09 20:36:31 swegener Exp $
 
 opts="reload start stop"
 
 depend() {
-	need net
-	use dns
+	use dns net
 	provide ircd
 }
 

@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/ultimate
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ultimate/ChangeLog,v 1.9 2004/07/17 12:27:10 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ultimate/ChangeLog,v 1.10 2004/10/09 20:39:09 swegener Exp $
+
+  09 Oct 2004; Sven Wegener <swegener@gentoo.org> files/ultimateircd.rc:
+  Modified to 'use net' not 'need net' in init script. Closes bug #66467.
 
 *ultimate-2.8.8 (17 Jul 2004)
 

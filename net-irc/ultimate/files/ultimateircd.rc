@@ -1,11 +1,10 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ultimate/files/ultimateircd.rc,v 1.5 2004/07/17 12:27:10 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ultimate/files/ultimateircd.rc,v 1.6 2004/10/09 20:39:09 swegener Exp $
 
 depend() {
-	need net
-	use dns
+	use dns net
 }
 
 start() {

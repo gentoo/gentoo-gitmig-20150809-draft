@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/dancer-ircd
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/dancer-ircd/ChangeLog,v 1.11 2004/07/12 22:17:18 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/dancer-ircd/ChangeLog,v 1.12 2004/10/09 20:34:57 swegener Exp $
+
+  09 Oct 2004; Sven Wegener <swegener@gentoo.org> files/dancer-ircd:
+  Modified to 'use net' not 'need net' in init script. Closes bug #66467.
 
   13 Jul 2004; Sven Wegener <swegener@gentoo.org>
   -dancer-ircd-1.0.31_p8.ebuild:
