@@ -1,0 +1,11 @@
+# ChangeLog for dev-java/dbunit
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/dbunit/ChangeLog,v 1.7 2005/01/04 23:45:14 luckyduck Exp $
+
+*dbunit-2.1 (05 Jan 2005)
+
+  05 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org> +metadata.xml,
+  +files/build.xml, +dbunit-2.1.ebuild:
+  Initial import. Builds dbunit from source and removes packed jars. Fixes
+  #63290.
+
