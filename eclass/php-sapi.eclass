@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-sapi.eclass,v 1.25 2004/05/18 23:04:45 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-sapi.eclass,v 1.26 2004/05/26 15:28:37 stuart Exp $
 # Author: Robin H. Johnson <robbat2@gentoo.org>
 
 inherit eutils flag-o-matic
@@ -41,7 +41,7 @@ fi
 # Where we work
 S=${WORKDIR}/${MY_P}
 
-IUSE="${IUSE} X crypt curl firebird flash freetds gd gd-external gdbm imap informix ipv6 java jpeg ldap mcal memlimit mysql nls oci8 odbc pam pdflib png postgres qt snmp spell ssl tiff truetype xml2 yaz fdftk doc gmp kerberos hardenedphp"
+IUSE="${IUSE} X crypt curl firebird flash freetds gd gd-external gdbm imap informix ipv6 java jpeg ldap mcal memlimit mysql nls oci8 odbc pam pdflib png postgres qt snmp spell ssl tiff truetype xml2 yaz fdftk doc gmp kerberos hardenedphp mssql"
 
 # Hardened-PHP support
 
@@ -102,7 +102,8 @@ RDEPEND="${RDEPEND}
    >=sys-apps/file-4.02
    yaz? ( dev-libs/yaz )
    doc? ( app-doc/php-docs )
-   gmp? ( dev-libs/gmp )"
+   gmp? ( dev-libs/gmp )
+   mssql? ( >=dev-db/freetds-0.62.3 )"
 
 
 # USE structure doesn't support ~x86
@@ -300,6 +301,7 @@ php-sapi_src_compile() {
 	use snmp && myconf="${myconf} --enable-ucd-snmp-hack"
 	use X && myconf="${myconf} --with-xpm-dir=/usr/X11R6" LDFLAGS="${LDFLAGS} -L/usr/X11R6/lib"
 	use gmp && myconf="${myconf} --with-gmp"
+	use mssql && myconf="${myconf} --with-mssql"
 	
 	# This chunk is intended for png/tiff/jpg, as there are several things that need them, indepentandly!
 	REQUIREPNG=
