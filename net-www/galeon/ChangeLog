@@ -1,7 +1,13 @@
 # ChangeLog for net-www/galeon
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/galeon/ChangeLog,v 1.12 2002/05/26 08:45:24 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/galeon/ChangeLog,v 1.13 2002/06/05 17:10:10 spider Exp $
 
+
+
+*galeon-1.2.3-r1 (05 Jun 2002)
+  05 Jun 2002; Spider <spider@gentoo.org> galeon-1.2.3-r1.ebuild :
+  New release that fixes the dependency bugs on gnome
+  
 *galeon-1.2.3 (26 May 2002)
 
   26 May 2002; Ryan Phillips <rphillips@gentoo.org>
