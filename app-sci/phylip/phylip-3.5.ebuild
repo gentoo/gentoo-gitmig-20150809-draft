@@ -1,9 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/phylip/phylip-3.5.ebuild,v 1.5 2004/06/24 22:14:56 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/phylip/phylip-3.5.ebuild,v 1.6 2004/09/23 23:57:07 vapier Exp $
 
 DESCRIPTION="PHYLIP (the PHYLogeny Inference Package) is a package of programs for inferring phylogenies (evolutionary trees)"
-
 HOMEPAGE="http://evolution.genetics.washington.edu/phylip.html"
 SRC_URI="ftp://evolution.genetics.washington.edu/pub/phylip/${PN}.tar.Z"
 
@@ -11,17 +10,16 @@ LICENSE="freedist"
 SLOT="0"
 KEYWORDS="x86"
 IUSE=""
+
 DEPEND=""
 
+S=${WORKDIR}
+
 src_compile() {
-	cd ${WORKDIR}
-	# uses only makefile.
-	EXTRA_EMAKE="-e ${CFLAGS}"
-	emake || die
+	emake -e ${CFLAGS} || die
 }
-src_install()
-{
-	cd ${WORKDIR}
+
+src_install() {
 	dobin clique consense contml contrast dnacomp dnadist dnainvar
 	dobin dnaml dnamlk dnamove dnapars dnapenny dollop dolmove dolpenny
 	dobin drawgram drawtree factor fitch gendist kitsch mix move neighbor
