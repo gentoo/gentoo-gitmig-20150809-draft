@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/shadow
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.12 2002/04/28 14:40:55 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.13 2002/06/28 23:53:59 azarah Exp $
+
+  29 Jun 2002; M.Schlemmer <azarah@gentoo.org>
+  Update to use libtool.eclass.  This fix the compile problems without
+  having custom $LIBS and $LDFLAGS.
 
 *shadow-4.0.2-r5 (28 Apr 2002)
 
