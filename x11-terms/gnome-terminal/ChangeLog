@@ -1,6 +1,11 @@
 # ChangeLog for x11-terms/gnome-terminal
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/ChangeLog,v 1.6 2002/06/11 17:49:09 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/ChangeLog,v 1.7 2002/06/11 21:13:36 azarah Exp $
+
+  11 Jun 2002; Martin Schlemmer <azarah@gentoo.org> gnome-terminal-1.9.7-r1.ebuild :
+
+  Add "!gnome-base/gnome-core" to DEPEND, as gnome-core overwrite
+  /usr/bin/gnome-terminal.
 
 *gnome-terminal-1.9.7-r1 (11 Jun 2002)
   11 Jun 2002; Spider <spider@gentoo.org> gnome-terminal-1.9.7-r1.ebuild :
