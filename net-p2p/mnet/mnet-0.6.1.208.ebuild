@@ -1,11 +1,12 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/mnet/mnet-0.6.1.208.ebuild,v 1.2 2003/04/27 11:06:17 hannes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/mnet/mnet-0.6.1.208.ebuild,v 1.3 2004/02/11 21:17:15 mholzer Exp $
 
 IUSE="gtk"
 S=${WORKDIR}/${PN}
 DESCRIPTION="Mnet is a universal file space. It is formed by an emergent network of autonomous nodes which self-organize to make the network robust and efficient."
 SRC_URI="mirror://sourceforge/${PN}/${P/m/M}-STABLE-src.tar.bz2"
+RESTRICT="nomirror"
 HOMEPAGE="http://mnet.sourceforge.net/"
 
 DEPEND="dev-lang/python"
