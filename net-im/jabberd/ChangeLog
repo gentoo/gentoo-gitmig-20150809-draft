@@ -1,6 +1,10 @@
 # ChangeLog for net-im/jabberd
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/ChangeLog,v 1.36 2004/08/11 23:58:51 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/ChangeLog,v 1.37 2004/09/01 13:38:06 humpback Exp $
+
+  01 Sep 2004; Gustavo Felisberto <humpback@gentoo.org>;
+  jabberd-2.0-r1.ebuild:
+  Fixing new away that configure receives parameters, closes bug 61896
 
 *jabberd-2.0-r1 (12 Aug 2004)
 

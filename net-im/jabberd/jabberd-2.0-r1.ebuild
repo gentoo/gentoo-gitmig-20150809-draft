@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/jabberd-2.0-r1.ebuild,v 1.2 2004/08/13 11:42:34 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/jabberd-2.0-r1.ebuild,v 1.3 2004/09/01 13:38:06 humpback Exp $
 
 inherit eutils
 
@@ -40,26 +40,22 @@ src_unpack() {
 }
 
 src_compile() {
-	storage="fs"
-	authreg="anon"
+	enables="--enable-fs"
 
 	if use berkdb; then
-		storage="${storage} db"
-		authreg="${authreg} db"
+		enables="${enables} --enable-db"
 	fi
 	if use mysql; then
-		storage="${storage} mysql"
-		authreg="${authreg} mysql"
+		enables="${enables} --enable-mysql"
 	fi
 	if use postgres; then
-		storage="${myconf} pgsql"
-		authreg="${authreg} pgsql"
+		enables="${enables} --enable-pgsql"
 	fi
 	if use pam; then
-		authreg="${authreg} pam"
+		enables="${enables} --enable-pam"
 	fi
 	if use ldap; then
-		authreg="${authreg} ldap"
+		enables="${enables} --enable-ldap"
 	fi
 
 	if use ipv6; then
@@ -75,8 +71,6 @@ src_compile() {
 		--infodir=/usr/share/info \
 		--mandir=/usr/share/man \
 		--enable-debug \
-		--enable-storage="${storage}" \
-		--enable-authreg="${authreg}" \
 		${enables} || die
 	make || die
 

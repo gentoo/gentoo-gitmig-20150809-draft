@@ -1,5 +1,8 @@
-MD5 a3d56caf786ae277c386e7580eb80d36 ChangeLog 5712
-MD5 a9bf766aad7b5f0853218bb0650b325e jabberd-2.0-r1.ebuild 4958
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 b33f80b5508a780a359739bfcf9f0d0b ChangeLog 5866
+MD5 dc6c6a998ae507cbfdf00a40e4805ef7 jabberd-2.0-r1.ebuild 4845
 MD5 609148cca96d0710152b6b09cb438184 jabberd-1.4.3-r3.ebuild 5389
 MD5 3722bebc05427c4b5f7df97ffc8b1563 jabberd-2.0.ebuild 4914
 MD5 073710b6dd1869d3930f8f2e857341e8 metadata.xml 411
@@ -17,3 +20,10 @@ MD5 6ec1c588cf732d89e8bc7b5864842ab9 files/self-cert.sh 494
 MD5 92ba69168d2fb8c1384e8e13e03dcbc2 files/xdb-ldap.xml 985
 MD5 a8408aaabc3453cfd3cbe3df1a65f67e files/xml-stream-patch-00 726
 MD5 feebb4b71e7f3e5a30adf1234cd9b1d4 files/digest-jabberd-2.0-r1 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFBNd7GKSoOBZY9iUIRAkbcAKCDpoGnQdlNaDkOrt/8LiPU4lmMjACfdgPh
+ea+rB5jvAUyI7/gZ9DcqX/s=
+=3cku
+-----END PGP SIGNATURE-----
