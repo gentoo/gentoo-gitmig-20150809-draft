@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/freenet6/freenet6-0.9.7.ebuild,v 1.1 2003/05/28 18:36:41 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/freenet6/freenet6-0.9.7.ebuild,v 1.2 2003/06/10 15:24:54 latexer Exp $
 
 DESCRIPTION="Client to configure an IPv6 tunnel to freenet6"
 HOMEPAGE="http://www.freenet6.net/"
@@ -34,6 +34,7 @@ src_install() {
 	doins ${FILESDIR}/tspc.conf
 	exeinto /etc/freenet6/template
 	doexe template/{linux,checktunnel}.sh
+	doexe ${FILESDIR}/gentoo.sh
 
 	dodoc CONTRIB.txt LEGAL LEGAL.html README
 	doman man/{man5/tspc.conf.5,man8/tspc.8}
