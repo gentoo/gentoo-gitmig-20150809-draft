@@ -1,0 +1,10 @@
+# These lines below will start the TeaPOP - POP Server
+service pop3
+{
+        socket_type     = stream
+        protocol        = tcp
+        wait            = no
+        user            = root
+        server          = /usr/libexec/teapop
+        server_args     = teapop
+}
