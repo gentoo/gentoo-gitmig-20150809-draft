@@ -1,25 +1,27 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 52f389ed0b8e83a2a05e664ea3586781 ChangeLog 8036
-MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+MD5 4bd76fdf498f73f383ff25d7aa630d34 librsvg-1.0.3.ebuild 925
 MD5 62862626e0141a94877b2316316786c9 librsvg-2.4.0-r1.ebuild 1021
 MD5 b64f9893ef38a233736163fddb30a743 librsvg-2.6.4.ebuild 1351
 MD5 1577b32e1bc3e6dd0b61e6f556175811 librsvg-2.6.5.ebuild 1209
-MD5 4bd76fdf498f73f383ff25d7aa630d34 librsvg-1.0.3.ebuild 925
-MD5 0cf92d778a58c1f08995d7659d18cb43 librsvg-2.8.1-r1.ebuild 1558
 MD5 bc3e3401ea4d027902f2ea596ec8e6f8 librsvg-2.8.1.ebuild 1313
-MD5 d74e975dc13fe71bdb6a66a6e021b3d7 files/digest-librsvg-2.8.1-r1 66
-MD5 34c42ed742cb02509b40848042cbc522 files/digest-librsvg-2.4.0-r1 66
+MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+MD5 0cf92d778a58c1f08995d7659d18cb43 librsvg-2.8.1-r1.ebuild 1558
+MD5 10174f6c315ccb64948653a41ce2c373 librsvg-2.9.5.ebuild 1311
+MD5 b8196a40d7dc2d5f5166f689400b861a ChangeLog 8153
 MD5 70f6afa0baffe29c6c4ab43dccbd0435 files/digest-librsvg-1.0.3 65
-MD5 4da0dc642eed645fd4dcbbfa8c7f4989 files/librsvg-2.6.4-gcc2_fix.patch 653
+MD5 34c42ed742cb02509b40848042cbc522 files/digest-librsvg-2.4.0-r1 66
 MD5 a8d8e664929769b2cb10ba5dbeccb0d6 files/digest-librsvg-2.6.4 66
-MD5 d74e975dc13fe71bdb6a66a6e021b3d7 files/digest-librsvg-2.8.1 66
 MD5 46efdcbccab8e3618356a4b79cdf7a6a files/digest-librsvg-2.6.5 66
+MD5 d74e975dc13fe71bdb6a66a6e021b3d7 files/digest-librsvg-2.8.1 66
+MD5 4da0dc642eed645fd4dcbbfa8c7f4989 files/librsvg-2.6.4-gcc2_fix.patch 653
+MD5 d74e975dc13fe71bdb6a66a6e021b3d7 files/digest-librsvg-2.8.1-r1 66
+MD5 254740116b1b3ccf3e4013c37c610459 files/digest-librsvg-2.9.5 66
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFCPb4cugEuf3OQ0akRAtzxAJ9X5EupXONRT7Nk0ohH71+an//bCgCePJbe
-1BXLv/1+t/3l1purICVcb4s=
-=F8nq
+iD8DBQFCPgE1XjcVihsel0ERAlcbAKDutyVY7EWPcwDANcv0f/PcyikokgCg1hx0
+pQr+zJTh+cwoWaX04FHN6nU=
+=mi6+
 -----END PGP SIGNATURE-----
