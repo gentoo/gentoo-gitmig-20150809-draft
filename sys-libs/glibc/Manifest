@@ -59,24 +59,15 @@ MD5 e6dc1e4d7839d2bb08c6865466791183 files/2.2.5/glibc-2.2.5-sunrpc-overflow.dif
 MD5 993732f56fdecf36f672198112fc5d5c files/2.2.5/glibc-2.2.5-threadsig.diff 636
 MD5 a50da56218f9aabc347d7e1130961cec files/2.2.5/glibc-2.2.5.divbyzero.patch 1694
 MD5 e9d9d086e8ed29ed49252d4cd0050f66 files/2.2.5/glibc-2.2.5.restrict_arr.patch 762
-MD5 21506827cc2094c80d3c0c0e8ef3569c files/2.3.1/glibc-2.3.1-ctype-compat-v2.patch 1468
 MD5 941f13d27badc76c1e3704c59acaff26 files/2.3.1/glibc-2.3.1-ctype-compat-v3.patch 2823
-MD5 66d8b78875e17e2d385a4d52af9698c4 files/2.3.1/glibc-2.3.1-ctype-compat.patch 728
 MD5 4f8ecd70003c5ca153ff7c204c54c1cf files/2.3.1/glibc-2.3.1-elf-machine-rela-mips.patch 1246
 MD5 afaf2540d2803ac066eb2555f2019a6f files/2.3.1/glibc-2.3.1-exit-syscall-mips.patch 633
 MD5 67b125cec4f1f0d26ce4df706451fee6 files/2.3.1/glibc-2.3.1-fpu-cw-mips.patch 433
-MD5 4123a64b0004d505d22d811ba4aae451 files/2.3.1/glibc-2.3.1-ftw.patch 4622
-MD5 0da8ef4341ed31232e1c9e0da96f9c79 files/2.3.1/glibc-2.3.1-getgrouplist.patch 1680
 MD5 235976914abfab3408d8d63cb4ffebe2 files/2.3.1/glibc-2.3.1-inline-syscall-mips.patch 7753
 MD5 1c4e567ed001f9489e11ee06c1ced0b7 files/2.3.1/glibc-2.3.1-libc_wait-compat.patch 1053
 MD5 23bbb51d1008f3009e6f1867b284c9bc files/2.3.1/glibc-2.3.1-libgcc-compat-mips.patch 5222
 MD5 f15c6dec40cefa86dae48a7dcb3b779a files/2.3.1/glibc-2.3.1-librt-mips.patch 396
-MD5 1968bc39ae8224c1dee9534781203d2e files/2.3.1/glibc-2.3.1-locale.patch 8666
-MD5 cdbf2aacfaae7737f89ae733f148169c files/2.3.1/glibc-2.3.1-prelinkfix.patch 5005
-MD5 1f715052e230f60a1e5c5f72b193f0bf files/2.3.1/glibc-2.3.1-sscanf.patch 392
 MD5 d84791059f1b4e7b157b3bbefe783208 files/2.3.1/glibc-2.3.1-stack_end-compat.patch 751
-MD5 2474bda0015ede78a23190c3051a599b files/2.3.1/glibc-2.3.1-tst-rndseek-mips.patch 446
-MD5 75983ceba061c090373c14394d08d32c files/2.3.1/glibc-2.3.1-typeo_dl-runtime_c.patch 848
 MD5 dc18731db5bd28b8bd2074fc9177fd35 files/2.3.1/glibc23-07-hppa-atomicity.dpatch 2519
 MD5 080146d608b878d517b5cf4c29f0ef08 files/2.3.2/glibc-2.3.2-alpha-crti.patch 378
 MD5 9ef93639d5016677d41e5ec986fcb7f5 files/2.3.2/glibc-2.3.2-alpha-pwrite.patch 918
@@ -137,7 +128,7 @@ MD5 1185022e9a50560d1bf9116a0461e011 files/2.3.4/mips-sysdep-cancel.diff 2402
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.8 (GNU/Linux)
 
-iD8DBQFBEp4pHTu7gpaalycRAnxCAKDuKFGk1X9RsAPG0p7eVIH/J+1ragCg69yY
-Okl+Xw3i7IqM+1j7UQ3pX/Y=
-=G0VV
+iD8DBQFBEqCmHTu7gpaalycRApHwAKCcuSiySwz1zM+qPHc+QzAJlrq6TQCfZT4m
+D/C2qRqKOkcko3WwPGcVWIE=
+=FKt/
 -----END PGP SIGNATURE-----
