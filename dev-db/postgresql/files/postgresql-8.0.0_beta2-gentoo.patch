@@ -1,0 +1,16 @@
+diff -Naru postgresql-8.0.0beta2.org/src/bin/initdb/initdb.c postgresql-8.0.0beta2/src/bin/initdb/initdb.c
+--- postgresql-8.0.0beta2.org/src/bin/initdb/initdb.c	2004-08-29 06:06:52.000000000 +0100
++++ postgresql-8.0.0beta2/src/bin/initdb/initdb.c	2004-09-02 09:18:00.634625577 +0100
+@@ -2499,11 +2499,7 @@
+ 		fprintf(stderr, authwarning);
+ 
+ 	printf(_("\nSuccess. You can now start the database server using:\n\n"
+-			 "    %s%s%s/postmaster -D %s%s%s\n"
+-			 "or\n"
+-			 "    %s%s%s/pg_ctl -D %s%s%s -l logfile start\n\n"),
+-	   QUOTE_PATH, bin_path, QUOTE_PATH, QUOTE_PATH, pg_data, QUOTE_PATH,
+-	  QUOTE_PATH, bin_path, QUOTE_PATH, QUOTE_PATH, pg_data, QUOTE_PATH);
++		   "/etc/init.d/postgresql start\n\n"));
+ 
+ 	return 0;
+ }
