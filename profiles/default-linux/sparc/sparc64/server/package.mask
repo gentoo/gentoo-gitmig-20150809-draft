@@ -1,0 +1,18 @@
+# Copyright 1999-2005 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64/server/package.mask,v 1.1 2005/03/30 19:38:57 gustavoz Exp $
+
+# Jeremy Huddleston <eradicator@gentoo.org>
+# Mask alsa-lib and alsa-utils so people don't accidently emerge them on a
+# system with unsafe alsa drivers.
+media-sound/alsa-utils
+media-libs/alsa-lib
+
+# Jeremy Huddleston <eradicator@gentoo.org>
+# Something between 2.3.3.20040420 and 2.3.4.20040619 breaks blackdown-jdk
+>=sys-libs/glibc-2.3.4            
+
+# Jason Wever <weeve@gentoo.org>
+# gradm requires 64 bit support, which doesn't exist in this profile
+>sys-apps/gradm-2.0.1-r1
+

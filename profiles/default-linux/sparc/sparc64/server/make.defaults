@@ -1,0 +1,9 @@
+# Copyright 1999-2005 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64/server/make.defaults,v 1.1 2005/03/30 19:38:57 gustavoz Exp $
+
+# USE settings
+USE="acl apache2 berkdb crypt gdbm gcc64 ncurses nls pam perl python readline spell ssl tcpd xml xml2 zlib"
+
+# Catalyst stage/grp USE
+GRP_STAGE23_USE="acl apache2 berkdb crypt gdbm gcc64 ncurses nls pam perl python readline ssl tcpd xml xml2 zlib"

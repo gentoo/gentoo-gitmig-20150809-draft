@@ -1,0 +1,7 @@
+# Copyright 1999-2005 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License, v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64/server/parent,v 1.1 2005/03/30 19:38:57 gustavoz Exp $
+
+# This file describes the parent profile to this.  In most cases this will
+# just be the name of the parent directory
+..
