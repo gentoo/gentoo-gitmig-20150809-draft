@@ -1,6 +1,9 @@
 # ChangeLog for media-video/ogle-gui
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ogle-gui/ChangeLog,v 1.13 2003/12/13 21:28:58 seemant Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/ogle-gui/ChangeLog,v 1.14 2004/05/12 06:37:53 phosphan Exp $
+
+  12 May 2004; Patrick Kursawe <phosphan@gentoo.org> ogle-gui-0.9.2.ebuild:
+  -gtk2 didn't work correctly
 
 *ogle-gui-0.9.2 (13 Dec 2003)
 
