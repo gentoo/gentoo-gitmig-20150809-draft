@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-xmls/cl-xmls-0.5.ebuild,v 1.1 2003/10/06 10:18:00 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-xmls/cl-xmls-0.5.ebuild,v 1.2 2003/10/17 20:25:44 mkennedy Exp $
 
 inherit common-lisp
 
@@ -22,8 +22,16 @@ S=${WORKDIR}/xmls-${PV}
 src_install() {
 	common-lisp-install *.lisp *.asd
 	common-lisp-system-symlink
-	dodoc ChangeLog COPYING
+	dodoc Changelog COPYING
 	dohtml README.html
 	cp -r tests ${D}/usr/share/doc/${P}/
 	dodoc run-tests.sh
+}
+
+pkg_preinst() {
+	rm -rf /usr/lib/common-lisp/*/${CLPACKAGE} || true
+}
+
+pkg_postrm() {
+	rm -rf /usr/lib/common-lisp/*/${CLPACKAGE} || true
 }
