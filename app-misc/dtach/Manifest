@@ -1,4 +1,16 @@
-MD5 1f9eecbd1be02da1d6ad649bb0c59c1d ChangeLog 437
-MD5 f90895247527f0e87d58427e4342cde4 dtach-0.6.ebuild 519
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 c89738e9f2f052bf49d23127d7f39f9b dtach-0.6.ebuild 584
 MD5 02109223759d25b09c6323838d23c76a metadata.xml 255
+MD5 f648c4d5522ea96653645a85c0d82b4e dtach-0.7.ebuild 585
+MD5 4e174a8a605bcff29e4f6b8a2921d60a ChangeLog 614
 MD5 2480bd05b3b9bb4a75a84fde966e530c files/digest-dtach-0.6 60
+MD5 3b63052b1c7fe43fcceaf63410a47229 files/digest-dtach-0.7 60
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFBCUcvAXomK8S72HoRAj5fAJ9eb0FHTl72Tt/EMUgxs3CEGimuqACeIHrd
+rV+jHsZS/1Vdc/z1cFD55AA=
+=Vxsz
+-----END PGP SIGNATURE-----
