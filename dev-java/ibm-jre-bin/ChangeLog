@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/ibm-jre-bin
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre-bin/ChangeLog,v 1.12 2004/09/29 20:59:12 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre-bin/ChangeLog,v 1.13 2004/10/15 09:28:40 sejo Exp $
+
+  15 Oct 2004; <SeJo@gentoo.org> ibm-jre-bin-1.4.2.ebuild:
+  added ppc check to plugin install on ppc the plugin does not exist
 
   29 Sep 2004; Thomas Matthijs <axxo@gentoo.org>
   ibm-jre-bin-1.4.1-r1.ebuild, ibm-jre-bin-1.4.2.ebuild:

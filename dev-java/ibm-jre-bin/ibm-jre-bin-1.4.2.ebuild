@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre-bin/ibm-jre-bin-1.4.2.ebuild,v 1.3 2004/09/29 20:59:12 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre-bin/ibm-jre-bin-1.4.2.ebuild,v 1.4 2004/10/15 09:28:40 sejo Exp $
 
 inherit java
 
@@ -48,7 +48,7 @@ src_install() {
 		> ${D}/etc/env.d/java/20${P} \
 		|| die "unable to install environment file"
 
-	if use mozilla; then
+	if useq mozilla && !useq ppc; then
 		local plugin="libjavaplugin_oji.so"
 		if has_version '>=gcc-3*' ; then
 			plugin="libjavaplugin_ojigcc3.so"
