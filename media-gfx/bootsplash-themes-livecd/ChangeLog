@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/bootsplash-themes-livecd
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/bootsplash-themes-livecd/ChangeLog,v 1.4 2004/06/03 22:40:04 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/bootsplash-themes-livecd/ChangeLog,v 1.5 2004/06/03 22:42:23 wolf31o2 Exp $
+
+  03 Jun 2004; Chris Gianelloni <wolf31o2@gentoo.org>
+  -bootsplash-themes-livecd-2004.2.ebuild:
+  Removing 2004.2 ebuild with improper fonts. I also had added SLOTs to the
+  ebuilds on the last update, so closing bug #52433.
 
 *bootsplash-themes-livecd-2004.2-r1 (03 Jun 2004)
 
