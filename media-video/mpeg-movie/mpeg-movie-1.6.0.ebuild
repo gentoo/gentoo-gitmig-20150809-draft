@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg-movie/mpeg-movie-1.6.0.ebuild,v 1.5 2000/09/15 20:09:05 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg-movie/mpeg-movie-1.6.0.ebuild,v 1.6 2000/09/21 04:28:07 achim Exp $
 
 P=mpeg-movie-1.6.0
 A=mpeg_movie-1.6.0.tar.gz
@@ -40,6 +40,7 @@ src_unpack() {
 	-e "s:sigaction\.h:bits/sigaction\.h:" \
 	-e "s:asm/sigcontext\.h:bits/sigcontext\.h:" \
 	-e "s:include/sigcontext\.h:include/bits/sigcontext\.h:" \
+	-e "s:/usr/lib/X11:/usr/X11R6/lib:" \
 	Makefile.orig > Makefile
 
   done
