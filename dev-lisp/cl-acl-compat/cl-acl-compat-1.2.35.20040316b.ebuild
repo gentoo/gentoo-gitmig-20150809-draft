@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-acl-compat/cl-acl-compat-1.2.35.20040316b.ebuild,v 1.1 2004/03/29 20:11:34 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-acl-compat/cl-acl-compat-1.2.35.20040316b.ebuild,v 1.2 2004/03/31 01:06:03 mkennedy Exp $
 
 inherit common-lisp
 
@@ -15,7 +15,9 @@ SLOT="0"
 KEYWORDS="x86"
 DEPEND="dev-lisp/common-lisp-controller
 	dev-lisp/cmucl-source
-	virtual/commonlisp"
+	virtual/commonlisp
+	dev-lisp/cl-puri
+	dev-lisp/cl-ppcre"
 
 CLPACKAGE=acl-compat
 
