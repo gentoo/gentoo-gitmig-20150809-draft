@@ -7,10 +7,11 @@ MD5 8b34b6adc07e98376b1e301b8c8b2bd6 ChangeLog 2821
 MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
 MD5 880f1fc88e78283a8665b8b0e45b95de files/digest-4suite-1.0_alpha4 66
 MD5 0724d222f5540595a368fb7acd27c1f9 files/digest-4suite-1.0_alpha3 65
+MD5 4814d18b806331ba9c6ef9340ed67f74 files/4S-1.0_a4.addrootopt-gentoo.diff 464
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFB7yw0z2gxt1z4IGYRAneVAJ9c5R6EaA8k6rww7j1ccT0kOF+hzQCgmv5b
-eVhGI8R6QU3TYC88S/p/3gc=
-=waOG
+iD4DBQFB7zpYz2gxt1z4IGYRAv8gAJUVAUfCr6OSe/zaefYjQccZwL41AJ0fjwta
+24epidTeMCWd0Z++6lvilQ==
+=LMZ/
 -----END PGP SIGNATURE-----
