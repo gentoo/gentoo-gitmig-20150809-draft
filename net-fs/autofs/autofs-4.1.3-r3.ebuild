@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/autofs-4.1.3-r3.ebuild,v 1.1 2005/02/05 10:39:42 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/autofs-4.1.3-r3.ebuild,v 1.2 2005/02/05 12:46:30 griffon26 Exp $
 
 inherit eutils
 
@@ -28,6 +28,9 @@ src_unpack() {
 	for i in ${PATCH_LIST}; do
 		EPATCH_OPTS="-p1 -d ${S}" epatch ${DISTDIR}/${i}
 	done
+
+	# Upstream version of this patch is incorrect
+	epatch ${FILESDIR}/${P}-signal-race-fix.patch
 
 	cd ${S}
 	autoconf || die "Autoconf failed"

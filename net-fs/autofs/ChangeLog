@@ -1,6 +1,10 @@
 # ChangeLog for net-fs/autofs
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/ChangeLog,v 1.38 2005/02/05 10:39:42 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/ChangeLog,v 1.39 2005/02/05 12:46:30 griffon26 Exp $
+
+  05 Feb 2005; Maurice van der Pot <griffon26@gentoo.org>
+  +files/autofs-4.1.3-signal-race-fix.patch, autofs-4.1.3-r3.ebuild:
+  Added hopefully corrected version of signal-race-fix patch for bug #77077.
 
 *autofs-4.1.3-r3 (05 Feb 2005)
 
