@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer System Team <system@gentoo.org>
 # Author Donny Davies <woodchip@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.1.11-r6.ebuild,v 1.1 2001/11/13 16:24:44 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.1.11-r6.ebuild,v 1.2 2001/12/12 17:01:53 gbevin Exp $
 
 DESCRIPTION="The Common Unix Printing System"
 HOMEPAGE="http://www.cups.org"
@@ -59,6 +59,7 @@ src_install() {
 	INCLUDEDIR=${D}/usr/include \
 	AMANDIR=${D}/usr/share/man \
 	MANDIR=${D}/usr/share/man \
+	PMANDIR=${D}/usr/share/man \
 	SERVERROOT=${D}/etc/cups \
 	LOGDIR=${D}/var/log/cups \
 	SBINDIR=${D}/usr/sbin \
@@ -66,6 +67,7 @@ src_install() {
 	EXEC_PREFIX=${D}/usr \
 	LIBDIR=${D}/usr/lib \
 	BINDIR=${D}/usr/bin \
+	bindir=${D}/usr/bin \
 	INITDIR=${D}/etc \
 	PREFIX=${D} \
 	install || die "install problem"
