@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/flexlm/flexlm-9.5.ebuild,v 1.1 2005/01/02 16:00:30 chrb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/flexlm/flexlm-9.5.ebuild,v 1.2 2005/03/10 11:35:51 chrb Exp $
 
 DESCRIPTION="Macrovision FLEXlm license manager and utils"
 HOMEPAGE="http://www.macrovision.com/services/support/flexlm/lmgrd.shtml"
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.globes.com/flexlm/unix/v${PV}/i86_s8/lmgrd.Z
 
 LICENSE="Macromedia"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE=""
 RESTRICT="nostrip nomirror"
 

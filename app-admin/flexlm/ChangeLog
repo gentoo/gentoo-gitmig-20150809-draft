@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/flexlm
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/flexlm/ChangeLog,v 1.5 2005/01/02 16:00:30 chrb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/flexlm/ChangeLog,v 1.6 2005/03/10 11:35:51 chrb Exp $
+
+  10 Mar 2005; Chris Bainbridge <chrb@gentoo.org> flexlm-9.5.ebuild:
+  Stable on x86
 
 *flexlm-9.5 (02 Jan 2005)
 
