@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-2.0.0-r1.ebuild,v 1.2 2002/06/15 14:43:11 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-2.0.0-r3.ebuild,v 1.1 2002/06/30 00:28:45 azarah Exp $
 
 inherit gnome2
 
@@ -37,6 +37,12 @@ DEPEND="${RDEPEND} >=dev-util/pkgconfig-0.12.0"
 G2CONF="${G2CONF} --enable-platform-gnome-2"
 DOCS="AUTHORS COPYIN* ChangeLo* HACKING INSTALL MAINTAINERS NEWS README THANKS TODO"
 
-SCHEMAS="nautilus.schemas apps_nautilus_preferences.schemas"
-
+src_compile () {
+    # Also apply the "reverse deps" patch.
+    #
+    # http://bugzilla.gnome.org/show_bug.cgi?id=75635
+	ELTCONF="${ELTCONF} --reverse-deps"
+	gnome2_src_configure ${1}
+	make || die "compile dislikes me"
+}
 
