@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20050125-r1.ebuild,v 1.14 2005/03/05 23:45:05 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20050125-r1.ebuild,v 1.15 2005/03/06 00:34:09 eradicator Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -712,21 +712,16 @@ check_nptl_support() {
 	echo
 }
 
-
 want_nptl() {
-	if use nptl || use nptlonly ; then
-		# Archs that can use NPTL
-		case $(tc-arch) in
-			amd64|ia64|ppc|ppc64|s390|sparc)
-				return 0;
-			;;
-			x86)
-				case ${CTARGET/-*} in
-					i486|i586|i686)	return 0 ;;
-				esac
-			;;
-		esac
-	fi
+	want_tls || return 1
+	use nptl || return 1
+
+	# Archs that can use NPTL
+	case $(tc-arch) in
+		amd64|ia64|ppc|ppc64|s390|sparc|x86)
+			return 0;
+		;;
+	esac
 
 	return 1
 }
@@ -740,8 +735,19 @@ want_linuxthreads() {
 want_tls() {
 	# Archs that can use TLS (Thread Local Storage)
 	case $(tc-arch) in
-		alpha|amd64|ia64|ppc|ppc64|s390|sparc)
+		alpha|amd64|ia64|ppc|ppc64|s390)
 			return 0;
+		;;
+		sparc)
+			case ${CTARGET/-*} in
+				sparc64*)
+					[[ ${ABI} == "sparc32" ]] && return 0
+					return 1
+				;;
+				*)
+					return 0
+				;;
+			esac
 		;;
 		x86)
 			case ${CHOST/-*} in
