@@ -2,19 +2,13 @@
 Hash: SHA1
 
 MD5 80587473f80de0cd7cf939b80821faa2 aterm-0.4.2-r11.ebuild 2712
-MD5 ccfab9b05eb75a882aa6f3986659daf8 aterm-0.4.2-r8.ebuild 2122
-MD5 99caa415300778cdf6508ac2f6f4431d aterm-0.4.2-r10.ebuild 2592
 MD5 d13b9e9786a17f9a10f66c59e8a49920 aterm-0.4.2-r7.ebuild 1916
-MD5 ee84d2212960941394bc24c7e7a7d01a ChangeLog 8251
+MD5 0434a062f13b549ae8c193c1b9169ebd ChangeLog 8403
 MD5 2e0e268ba28c1dcc592df7923ed90b94 aterm-0.4.2-r9.ebuild 2218
 MD5 d94d306da3804e41296e1bf04c7c9cae metadata.xml 255
-MD5 3905692f76a98d4b1f97c906758d56ff aterm-0.4.2-r4.ebuild 1681
 MD5 c2aedeeb3e7cc1dcc9361a021a570973 files/aterm-0.4.2-paste.patch 2160
-MD5 4f1a0f3cc352be6439ac5810085e1be0 files/digest-aterm-0.4.2-r4 128
 MD5 4f1a0f3cc352be6439ac5810085e1be0 files/digest-aterm-0.4.2-r7 128
-MD5 4f1a0f3cc352be6439ac5810085e1be0 files/digest-aterm-0.4.2-r8 128
 MD5 4f1a0f3cc352be6439ac5810085e1be0 files/digest-aterm-0.4.2-r9 128
-MD5 4f1a0f3cc352be6439ac5810085e1be0 files/digest-aterm-0.4.2-r10 128
 MD5 4f1a0f3cc352be6439ac5810085e1be0 files/digest-aterm-0.4.2-r11 128
 MD5 1ddbe9b625c32cb9e67d8ee23af57110 files/aterm-0.4.2-patch-pack000.patch 4124
 MD5 df2652026f1f4f3e4444db9cddc145b6 files/aterm-0.4.2-qtpaste.patch 2510
@@ -29,7 +23,7 @@ MD5 8faf173b6f8032958f1bc48d7877353c files/aterm-0.4.2-savelines.patch 4081
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBObmXchej4aZK9/cRAk2rAJ9qhdIi+rgF1K5uMqPVTW9q6ybiBgCePV8h
-aoGuP3kouu0JPNYfsBnhBsw=
-=Af+f
+iD8DBQFBOizOchej4aZK9/cRAi3LAJ0eY04W9NkGwIyyhWYVc2AVmT+C0ACePdw8
+yRE1xiFMZY4TPzPPzd69dbo=
+=Iab6
 -----END PGP SIGNATURE-----
