@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/perlmagick
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/perlmagick/ChangeLog,v 1.61 2005/03/15 19:36:39 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/perlmagick/ChangeLog,v 1.62 2005/03/27 14:32:12 kloeri Exp $
+
+  27 Mar 2005; Bryan Østergaard <kloeri@gentoo.org>
+  perlmagick-6.2.0.4-r1.ebuild:
+  Stable on alpha.
 
   15 Mar 2005; Karol Wojtaszek <sekretarz@gentoo.org>
   perlmagick-6.2.0.6.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/perlmagick/perlmagick-6.2.0.4-r1.ebuild,v 1.1 2005/03/13 22:24:43 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/perlmagick/perlmagick-6.2.0.4-r1.ebuild,v 1.2 2005/03/27 14:32:12 kloeri Exp $
 
 inherit perl-module eutils flag-o-matic libtool
 
@@ -19,7 +19,7 @@ SRC_URI="mirror://sourceforge/imagemagick/${MY_P2}.tar.gz"
 # website says "an apache-style license".
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86 ppc sparc ~alpha ~hppa amd64 ~mips ppc64 ~ia64"
+KEYWORDS="x86 ppc sparc alpha ~hppa amd64 ~mips ppc64 ~ia64"
 IUSE="X cups jpeg lcms mpeg png truetype tiff xml2 wmf jbig perl graphviz fpx"
 
 DEPEND="=media-gfx/imagemagick-${PV}*

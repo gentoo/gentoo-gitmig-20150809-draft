@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/PDL
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/ChangeLog,v 1.34 2005/03/08 18:22:42 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/ChangeLog,v 1.35 2005/03/27 14:25:33 kloeri Exp $
+
+  27 Mar 2005; Bryan Østergaard <kloeri@gentoo.org> PDL-2.4.2.ebuild:
+  Stable on alpha.
 
   08 Mar 2005; Michael Cummings <mcummings@gentoo.org> PDL-2.4.2.ebuild:
   Changed CHOST-linux to use the actual archversion from perl - relevant if you
