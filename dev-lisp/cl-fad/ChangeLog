@@ -1,6 +1,11 @@
 # ChangeLog for dev-lisp/cl-fad
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-fad/ChangeLog,v 1.1 2005/02/02 23:16:27 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-fad/ChangeLog,v 1.2 2005/03/19 21:25:40 mkennedy Exp $
+
+*cl-fad-0.1.2 (19 Mar 2005)
+
+  19 Mar 2005; Matthew Kennedy <mkennedy@gentoo.org> +cl-fad-0.1.2.ebuild:
+  New upstream version.
 
 *cl-fad-0.1.1 (02 Feb 2005)
 
