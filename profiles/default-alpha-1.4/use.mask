@@ -1,14 +1,22 @@
-# this is a list of USE flags that should not be used on alpha, ever
-3dnow
+# This is a list of USE flags that should not be used on alpha.
+
+# These will probably never be supported, for obvious reasons (wrong arch)
+svga
 icc
 icc-pgo
 mmx
-svga
 sse
-# these are debatable, since technically an alpha could support this hardware
+x86
+3dnow
+
+# These are debatable, since technically an alpha could support this hardware
 pcmcia
 3dfx
-# these are masked for the moment, since they're untested and causing
-# dependency hell. test and unmask!
-pda
+
+# The rest should work in theory. Feel free to test and remove.
+# doesn't compile
 alsa
+# No hardware to test
+pda
+# Can't get USB working to test
+gphoto2
