@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Seemant Kulleen <seemant@rocketmail.com>
-# $header$
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gkrellsun/gkrellsun-0.2.ebuild,v 1.2 2002/02/20 02:41:39 agriffis Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A Gkrellm plugin that shows sunrise and sunset times."
