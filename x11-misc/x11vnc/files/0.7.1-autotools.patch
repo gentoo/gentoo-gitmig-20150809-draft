@@ -1,0 +1,49 @@
+diff -Nur x11vnc-0.7.1/Makefile.am x11vnc-0.7.1-gentoo/Makefile.am
+--- x11vnc-0.7.1/Makefile.am	2005-02-24 20:59:50.533338639 +0100
++++ x11vnc-0.7.1-gentoo/Makefile.am	2005-02-24 21:00:06.460146019 +0100
+@@ -1,8 +1,8 @@
+ EXTRA_DIST=tightvnc-1.3dev5-vncviewer-alpha-cursor.patch README.LibVNCServer
+ CFLAGS=-g -Wall
+ 
+-SUBDIRS=libvncserver x11vnc classes
+-DIST_SUBDIRS=libvncserver x11vnc classes
++SUBDIRS=x11vnc classes
++DIST_SUBDIRS=x11vnc classes
+ 
+ 
+ includedir=$(prefix)/include/rfb
+diff -Nur x11vnc-0.7.1/configure.ac x11vnc-0.7.1-gentoo/configure.ac
+--- x11vnc-0.7.1/configure.ac	2005-02-24 20:59:50.544337124 +0100
++++ x11vnc-0.7.1-gentoo/configure.ac	2005-02-24 21:00:56.679232972 +0100
+@@ -14,6 +14,10 @@
+ AC_PROG_MAKE_SET
+ AC_PROG_RANLIB
+ 
++# Checks for header files.
++AC_HEADER_STDC
++AC_CHECK_HEADERS([arpa/inet.h fcntl.h netdb.h netinet/in.h stdlib.h string.h sys/socket.h sys/time.h sys/timeb.h syslog.h unistd.h pwd.h sys/wait.h utmpx.h])
++
+ # Options
+ AH_TEMPLATE(BACKCHANNEL, [Enable BackChannel communication])
+ AC_ARG_WITH(backchannel,
+@@ -211,10 +215,6 @@
+ fi
+ AC_SUBST(WSOCKLIB)
+ 
+-# Checks for header files.
+-AC_HEADER_STDC
+-AC_CHECK_HEADERS([arpa/inet.h fcntl.h netdb.h netinet/in.h stdlib.h string.h sys/socket.h sys/time.h sys/timeb.h syslog.h unistd.h pwd.h sys/wait.h utmpx.h])
+-
+ # Checks for typedefs, structures, and compiler characteristics.
+ AC_C_CONST
+ AC_C_INLINE
+diff -Nur x11vnc-0.7.1/x11vnc/Makefile.am x11vnc-0.7.1-gentoo/x11vnc/Makefile.am
+--- x11vnc-0.7.1/x11vnc/Makefile.am	2005-02-24 20:59:50.586331343 +0100
++++ x11vnc-0.7.1-gentoo/x11vnc/Makefile.am	2005-02-24 21:00:16.754728825 +0100
+@@ -1,5 +1,5 @@
+ DEFINES = -I ..
+-LDADD = ../libvncserver/libvncserver.a @WSOCKLIB@
++LDADD = -lvncserver @WSOCKLIB@
+ 
+ man_MANS=x11vnc.1
+ EXTRA_DIST=ChangeLog README tkx11vnc $(man_MANS)
