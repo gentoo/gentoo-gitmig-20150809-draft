@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeadmin/kdeadmin-3.0.5a.ebuild,v 1.6 2003/02/13 12:25:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeadmin/kdeadmin-3.0.5a.ebuild,v 1.7 2003/03/18 11:51:08 danarmak Exp $
 inherit kde-dist
 
 IUSE="pam"
@@ -8,10 +8,15 @@ DESCRIPTION="KDE $PV - administration tools"
 KEYWORDS="x86 ~ppc ~alpha sparc"
 PATCHES="${FILESDIR}/${PN}-qt311-gentoo.diff"
 
-newdepend ">=app-arch/rpm-4.0.4-r1
-	dev-libs/popt
+newdepend "dev-libs/popt
 	pam? ( >=sys-libs/pam-0.72 )"
+	# >=app-arch/rpm-4.0.4-r1"
 
 use pam		&& myconf="$myconf --with-pam"	|| myconf="$myconf --without-pam --with-shadow"
-myconf="$myconf --with-rpm"
+
+# Doesn't compile with the new rpm 4.2. I don't suppose this'll ever be fixed in the 3.0.x tree,
+# and it's not for gentoo ppl to fix rpm problems really :-) so disabling this. --danarmak 20030315
+myconf="$myconf --without-rpm"
+
+
 
