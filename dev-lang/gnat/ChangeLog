@@ -1,6 +1,14 @@
 # ChangeLog for dev-lang/gnat
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat/ChangeLog,v 1.9 2003/09/20 20:14:41 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat/ChangeLog,v 1.10 2003/09/28 10:25:17 dholm Exp $
+
+*gnat-3.15p-r3 (28 Sep 2003)
+
+  28 Sep 2003; David Holm <david@realityrift.com> <avatar@gentoo.org>
+  gnat-3.15p-r3.ebuild, files/gnat-3.15p-gentoo.patch.bz2,
+  files/gnat-3.15p-noaddr2line.patch.bz2:
+  Added gnat-3.15p-r3 which has now passed 26/26 of ACATS tests on x86 and 24/26
+  on ppc (because ppc does not provide a threading system yet).
 
   20 Sep 2003; David Holm <dholm@gentoo.org> gnat-3.15p-r2.ebuild:
   Placed the powerpc bootstrap compiler on dev.gentoo.org while rsync is being
