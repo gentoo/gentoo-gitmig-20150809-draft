@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-fare-matcher/cl-fare-matcher-1.1-r1.ebuild,v 1.4 2004/06/24 23:43:04 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-fare-matcher/cl-fare-matcher-1.1-r1.ebuild,v 1.5 2005/03/18 08:01:38 mkennedy Exp $
 
 inherit common-lisp eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://mapcar.org/~mrd/utilities/fare-matcher-ext-${PV}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 IUSE=""
 
 DEPEND="dev-lisp/common-lisp-controller

@@ -1,6 +1,10 @@
 # ChangeLog for dev-lisp/cl-fare-matcher
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-fare-matcher/ChangeLog,v 1.3 2004/06/24 23:43:04 agriffis Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-fare-matcher/ChangeLog,v 1.4 2005/03/18 08:01:38 mkennedy Exp $
+
+  18 Mar 2005; Matthew Kennedy <mkennedy@gentoo.org>
+  cl-fare-matcher-1.1-r1.ebuild:
+  Keywording for ~amd64
 
 *cl-fare-matcher-1.1-r1 (12 Feb 2004)
 
