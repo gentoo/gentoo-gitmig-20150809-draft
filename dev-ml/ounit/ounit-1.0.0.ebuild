@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ounit/ounit-1.0.0.ebuild,v 1.1 2004/08/18 12:17:33 mattam Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ounit/ounit-1.0.0.ebuild,v 1.2 2004/08/18 17:48:42 mr_bones_ Exp $
 
 DESCRIPTION="Unit testing framework for OCaml"
 HOMEPAGE="http://home.wanadoo.nl/maas/ocaml/"
@@ -9,7 +9,7 @@ LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~x86 ~ppc"
 DEPEND="dev-lang/ocaml
-        dev-ml/findlib"
+	dev-ml/findlib"
 
 src_compile() {
 	emake all allopt || die "emake failed"
