@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/hardened-sources
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.43 2005/01/14 12:48:10 tocharian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.44 2005/01/18 00:21:14 tocharian Exp $
+
+*hardened-sources-2.4.28-r3 (17 Jan 2005)
+
+  17 Jan 2005; Adam Mondl <tocharian@gentoo.org>
+  +hardened-sources-2.4.28-r3.ebuild:
+  Fix SMP page fault handler vuln, and update device-mapper and evms patches.
 
   14 Jan 2005; Adam Mondl <tocharian@gentoo.org>
   hardened-sources-2.4.28.ebuild:
