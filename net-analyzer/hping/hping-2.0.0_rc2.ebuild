@@ -1,24 +1,27 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hping/hping-2.0.0_rc2.ebuild,v 1.6 2003/09/05 23:44:49 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hping/hping-2.0.0_rc2.ebuild,v 1.7 2003/11/20 19:49:00 avenj Exp $
 
-# NOTE: author couldn't make up mind over tarball names, directory names,
-# etc... hense the need to hardcode S and SRC_URI :(
 S=${WORKDIR}/hping2-rc2
-DESCRIPTION="hping is a command-line oriented TCP/IP packet assembler/analyzer whose interface is inspired by the unix ping command"
+DESCRIPTION="A ping-like TCP/IP packet assembler/analyzer."
 SRC_URI="http://www.hping.org/hping2.0.0-rc2.tar.gz"
 HOMEPAGE="http://www.hping.org"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~sparc hppa"
+KEYWORDS="x86 ~sparc hppa ia64 ~amd64"
 
 DEPEND="net-libs/libpcap"
 
 src_compile() {
 	./configure || die
-	make CCOPT="$CFLAGS" || die
-	make strip
+
+	if [ `use debug` ]
+	then
+		make CCOPT="${CFLAGS}" || die
+	else
+		make CCOPT="${CFLAGS}" || die
+	fi
 }
 
 src_install () {
@@ -29,6 +32,5 @@ src_install () {
 	dosym /usr/sbin/hping2 /usr/sbin/hping
 
 	doman docs/hping2.8
-	dodoc INSTALL KNOWN-BUGS MIRRORS NEWS README TODO AUTHORS BUGS CHANGES COPYING
-
+	dodoc INSTALL KNOWN-BUGS NEWS README TODO AUTHORS BUGS CHANGES COPYING
 }
