@@ -80,3 +80,6 @@ eds
 aqua
 
 gnustep
+
+# dev-lisp/mzscheme won't build
+mzscheme
