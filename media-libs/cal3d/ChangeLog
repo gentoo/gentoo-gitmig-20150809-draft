@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/cal3d
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/cal3d/ChangeLog,v 1.3 2004/03/01 13:01:51 aliz Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/cal3d/ChangeLog,v 1.4 2004/03/31 22:57:15 kloeri Exp $
+
+  01 Apr 2004; Bryan Østergaard <kloeri@gentoo.org> cal3d-0.9.1.ebuild:
+  Stable on x86.
 
 *cal3d-0.9.1 (14 Dec 2003)
 
