@@ -1,6 +1,13 @@
 # ChangeLog for app-office/openoffice-bin
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/ChangeLog,v 1.18 2003/06/08 12:03:44 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/ChangeLog,v 1.19 2003/06/19 20:50:18 pauldv Exp $
+
+*openoffice-bin-1.1_beta2 (19 Jun 2003)
+
+  19 Jun 2003; Paul de Vrieze <pauldv@gentoo.org>
+  openoffice-bin-1.1_beta2.ebuild:
+  Add openoffice 1.1beta2 and fix the scripts (taken from the source version).
+  This fixes a number of bugs: #19797 #22872
 
 *openoffice-bin-1.0.3.1 (08 Jun 2003)
 
