@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.206 2004/12/08 00:37:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.207 2004/12/14 12:18:41 eradicator Exp $
 
 # keep them sorted (excluding the special arch flags near the end).
 
@@ -8,6 +8,7 @@
 3dnow - Adds support for 3dnow multimedia processor instructions
 X - Adds support for X11
 Xaw3d - Adds support of the 3d athena widget set
+aac - Enables support for MPEG-4 AAC Audio
 aalib - Adds support for media-libs/aalib (ASCII-Graphics Library)
 accessibility - Adds support for accessibility (eg 'at-spi' library)
 acl - Adds support for Access Control Lists
