@@ -1,6 +1,9 @@
 # ChangeLog for app-forensics/examiner
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/examiner/ChangeLog,v 1.3 2004/09/18 21:51:46 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/examiner/ChangeLog,v 1.4 2004/12/14 12:23:38 dragonheart Exp $
+
+  14 Dec 2004; Daniel Black <dragonheart@gentoo.org> examiner-0.5.ebuild:
+  ppc stable
 
   18 Sep 2004; Sven Wegener <swegener@gentoo.org> :
   Fixed ChangeLog header.
