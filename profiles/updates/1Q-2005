@@ -162,3 +162,4 @@ move sys-apps/time sys-process/time
 move sys-apps/minit sys-process/minit
 move sys-apps/runit sys-process/runit
 move sys-apps/schedtool sys-process/schedtool
+move sys-apps/schedutils sys-process/schedutils
