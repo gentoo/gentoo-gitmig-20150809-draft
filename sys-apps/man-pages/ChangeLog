@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/man-pages
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-pages/ChangeLog,v 1.7 2002/12/13 11:00:32 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-pages/ChangeLog,v 1.8 2002/12/30 05:57:00 drobbins Exp $
+
+*man-pages-1.53 (29 Dec 2002)
+
+  29 Dec 2002; Daniel Robbins <drobbins@gentoo.org> man-pages-1.53.ebuild: new
+  release, version bump.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
