@@ -1,6 +1,11 @@
 # ChangeLog for x11-plugins/i8krellm
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/i8krellm/ChangeLog,v 1.1 2003/02/12 10:56:18 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/i8krellm/ChangeLog,v 1.2 2003/02/13 13:54:58 seemant Exp $
+
+*i8krellm-2.3 (13 Feb 2003)
+
+  13 Feb 2003; Seemant Kulleen <seemant@gentoo.org> i8krellm-2.3.ebuild files/digest-i8krellm-2.3 :
+  version bump thanks to Christoph Hornung <hornung@cs.tu-berlin.de> in bug #15627
 
 *i8krellm-2.2 (12 Feb 2003)
 
