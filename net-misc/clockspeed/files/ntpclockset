@@ -7,8 +7,9 @@ else
     NTPSERVER="${1}"
 fi
 
+tmpfile=`mktemp`
 #display how much your clock is off by
-sntpclock $NTPSERVER > /tmp/sntpclock
+sntpclock $NTPSERVER > ${tmpfile}
 
 if [ "${?}" != "0" ]
 then
@@ -17,10 +18,10 @@ then
 fi
 
 echo ">>> Current clock sync:"
-cat /tmp/sntpclock | clockview
+cat ${tmpfile} | clockview
 echo
 echo -n ">>> Now setting clock..."
-cat /tmp/sntpclock | clockadd
+cat ${tmpfile} | clockadd
 echo " done."
 #wite data to the hardware clock so it survives a reboot
 echo -n ">>> Writing time to hardware clock..."
@@ -29,3 +30,4 @@ echo " done."
 echo
 echo ">>> New clock sync:"
 sntpclock $NTPSERVER | clockview
+rm ${tmpfile}
