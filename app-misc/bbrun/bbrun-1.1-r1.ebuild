@@ -26,7 +26,7 @@ src_compile() {
 src_install () {
 
 	dodoc README COPYING
-	dointo /usr/X11R6/bin
+	into /usr/X11R6
 	dobin bbrun/bbrun
 	cd /usr/X11R6/bin/wm
 	cp blackbox blackbox.bak
