@@ -1,0 +1,24 @@
+#!/bin/sh
+#RCUPDATE:2 3 4:75:This line is required for script management
+
+. /etc/rc.d/config/functions
+
+SERVICE="fakeident"
+opts="start stop"
+
+PIDFILE=/var/run/identd.pid
+EXE=/usr/sbin/fakeidentd
+
+start() {
+	ebegin "Starting $SERVICE"
+	start-stop-daemon --start --quiet --exec $EXE
+	eend $? 
+}
+
+stop() {
+	ebegin "Stopping $SERVICE"
+	start-stop-daemon --stop --quiet --pidfile $PIDFILE --exec $EXE
+	eend $? 
+}
+
+doservice ${@}

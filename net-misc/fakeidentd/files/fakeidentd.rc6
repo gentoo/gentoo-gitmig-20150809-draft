@@ -1,0 +1,17 @@
+#!/sbin/runscript
+
+depend() {
+    need net
+}
+
+start() {
+    ebegin "Starting fakeidentd"
+    start-stop-daemon --start --quiet --exec /usr/sbin/fakeidentd
+    eend $?
+}
+
+stop() {
+    ebegin "Stopping fakeidentd"
+    start-stop-daemon --stop --quiet --pidfile /var/run/identd.pid
+    eend $?
+}
