@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/svgalib-1.9.18-r1.ebuild,v 1.5 2004/05/30 06:11:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/svgalib-1.9.18-r1.ebuild,v 1.6 2004/06/18 15:33:22 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -20,7 +20,7 @@ kernel_supports_modules() {
 }
 
 pkg_setup() {
-	use !build && kernel_supports_modules && check_KV
+	! use build && kernel_supports_modules && check_KV
 }
 
 src_unpack() {
@@ -78,7 +78,7 @@ src_compile() {
 	make OPTIMIZE="${CFLAGS} -I../gl" LDFLAGS='-L../sharedlib' \
 		demoprogs || die "Failed to build demoprogs!"
 
-	if use !build && kernel_supports_modules
+	if ! use build && kernel_supports_modules
 	then
 		cd ${S}/kernel/svgalib_helper
 		if [[ `KV_to_int ${KV}` -lt `KV_to_int 2.6.6` ]] ; then
@@ -103,7 +103,7 @@ src_install() {
 
 	make TOPDIR=${D} OPTIMIZE="${CFLAGS}" \
 		install || die "Failed to install svgalib!"
-	if use !build && kernel_supports_modules
+	if ! use build && kernel_supports_modules
 	then
 		cd ${S}/kernel/svgalib_helper
 		if [[ `KV_to_int ${KV}` -lt `KV_to_int 2.6.6` ]] ; then
