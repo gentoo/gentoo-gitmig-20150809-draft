@@ -31,10 +31,7 @@ src_compile() {
     then
       myconf="--enable-mt"
     fi
-    if [ "`use mitshm`" ]
-    then
       myconf="$myconf --enable-mitshm"
-    fi
 	if [ "`use objprelink`" ] ; then
 	  myconf="$myconf --enable-objprelink"
 	fi

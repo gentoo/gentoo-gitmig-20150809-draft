@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-misc/krusader/krusader-0.91.ebuild,v 1.3 2001/06/08 01:08:06 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/krusader/krusader-0.91.ebuild,v 1.4 2001/09/29 21:03:25 danarmak Exp $
 
 A=${PN}-0.91-1.tar.gz
 S=${WORKDIR}/${P}
@@ -18,10 +18,7 @@ src_compile() {
     then
       myconf="--enable-mt"
     fi
-    if [ "`use mitshm`" ]
-    then
       myconf="$myconf --enable-mitshm"
-    fi
     try ./configure --prefix=${KDEDIR} --host=${CHOST} $myconf
     try make
 }

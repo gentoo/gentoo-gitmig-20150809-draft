@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Your Name <your email>
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdbg/kdbg-1.2.1.ebuild,v 1.2 2001/06/07 01:45:52 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdbg/kdbg-1.2.1.ebuild,v 1.3 2001/09/29 21:03:25 danarmak Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -17,10 +17,7 @@ src_compile() {
     then
       myconf="--enable-mt"
     fi
-    if [ "`use mitshm`" ]
-    then
       myconf="$myconf --enable-mitshm"
-    fi
     try ./configure --prefix=${KDEDIR} --with-kde-version=2 --host=${CHOST} $myconf
     try make
 

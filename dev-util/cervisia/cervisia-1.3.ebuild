@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Philippe Namias <pnamias@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cervisia/cervisia-1.3.ebuild,v 1.4 2001/08/11 12:05:50 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cervisia/cervisia-1.3.ebuild,v 1.5 2001/09/29 21:03:25 danarmak Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -18,10 +18,7 @@ src_compile() {
     then
       myconf="--enable-mt"
     fi
-    if [ "`use mitshm`" ]
-    then
       myconf="$myconf --enable-mitshm"
-    fi
     try ./configure --prefix=${KDEDIR} --host=${CHOST} \
 		--with-kde-version=2 $myconf
     try make

@@ -28,10 +28,7 @@ src_compile() {
     then
       myconf="--enable-mt"
     fi
-    if [ "`use mitshm`" ]
-    then
       myconf="$myconf --enable-mitshm"
-    fi
     ./configure --host=${CHOST} \
                 --with-xinerama $myconf || die
     make || die

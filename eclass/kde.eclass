@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.6 2001/09/29 14:57:23 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.7 2001/09/29 21:03:25 danarmak Exp $
 # This is the kde ebuild for std. kde-dependant apps which follow configure/make/make install
 # procedures and have std. configure options. That includes kdevelop, koffice etc.
 . /usr/portage/eclass/inherit.eclass || die
@@ -29,9 +29,8 @@ kde_src_compile() {
 	case $1 in
 	    myconf)
 			echo "in kde_src_compile, action is myconf"
-			use qtmt 		&& myconf="$myconf --enable-mt"
-			use mitshm		&& myconf="$myconf --enable-mitshm"
-	        use objprelink	&& myconf="$myconf --enable-objprelink"
+			use qtmt 	&& myconf="$myconf --enable-mt"
+	    		use objprelink	&& myconf="$myconf --enable-objprelink" || myconf="$myconf --disable-objprelink"
 			;;
 	    configure)
 			echo "in kde_src_compile, action is configure"
