@@ -1,14 +1,17 @@
 # ChangeLog for app-office/gnucash
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/ChangeLog,v 1.64 2005/01/21 21:59:52 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/ChangeLog,v 1.65 2005/02/14 19:14:02 blubb Exp $
 
-  21 Jan 2005; Bryan Østergaard <kloeri@gentoo.org> gnucash-1.8.9.ebuild:
+  14 Feb 2005; Simon Stelling <blubb@gentoo.org> gnucash-1.8.10.ebuild:
+  added ~amd64
+
+  21 Jan 2005; Bryan ÃÂstergaard <kloeri@gentoo.org> gnucash-1.8.9.ebuild:
   Stable on alpha.
 
   13 Jan 2005; Hanno Boeck <hanno@gentoo.org> gnucash-1.8.10.ebuild:
   Change dep from aqhbci-wizard-kde to aqhbci-qt-wizard.
 
-  02 Jan 2005; Bryan Østergaard <kloeri@gentoo.org> gnucash-1.8.10.ebuild:
+  02 Jan 2005; Bryan ÃÂstergaard <kloeri@gentoo.org> gnucash-1.8.10.ebuild:
   ~alpha keyword, bug 73702.
 
   03 Jan 2005; Chris White <chriswhite@gentoo.org> gnucash-1.8.10.ebuild:
@@ -28,7 +31,7 @@
   dependency for gnucash, so be aware. Remove alpha and sparc keywords
   again.
 
-  27 Dec 2004; Bryan Ãstergaard <kloeri@gentoo.org> gnucash-1.8.10.ebuild:
+  27 Dec 2004; Bryan ÃÂÃÂstergaard <kloeri@gentoo.org> gnucash-1.8.10.ebuild:
   Add back ~alpha keyword, bug 73702.
 
   26 Dec 2004; Jason Wever <weeve@gentoo.org> gnucash-1.8.10.ebuild:
