@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3737 2005/03/17 17:13:14 chriswhite Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3738 2005/03/17 20:50:41 fafhrd Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,16 @@
 ##
 ##   End example
 ##
+
+# Armando Di Cianno <fafhrd@gentoo.org> (15 Mar 2005)
+# clipbook - Upstream down-bumped the version, and real package is diff now
+# desktop - has been antiquated, and this is now broken
+# recycler - has been antiquated, and this is now broken
+# gworkspace - testing version that depended on above is unusable now
+=gnustep-apps/clipbook-0.94_pre20050106
+=gnustep-apps/desktop-0.7_pre20050106
+=gnustep-apps/recycler-0.7_pre20050106
+=gnustep-apps/gworkspace-0.6.6_pre20050106
 
 # Chris White <chriswhite@gentoo.org> (17 Mar 2005)
 # Security mask bug #82631
