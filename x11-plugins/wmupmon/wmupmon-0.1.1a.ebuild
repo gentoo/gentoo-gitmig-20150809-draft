@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmupmon/wmupmon-0.1.1a.ebuild,v 1.3 2003/09/06 05:45:18 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmupmon/wmupmon-0.1.1a.ebuild,v 1.4 2003/09/24 18:55:01 weeve Exp $
 
 S=${WORKDIR}/${P}
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://jzs.mine.nu/projects/index.php?project=wmupmon"
 SRC_URI="http://jzs.mine.nu/projects/downloads/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~sparc"
 
 IUSE=""
 
