@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/dosbox-cvs
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/dosbox-cvs/ChangeLog,v 1.5 2004/03/05 19:48:57 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/dosbox-cvs/ChangeLog,v 1.6 2004/06/04 22:05:07 mr_bones_ Exp $
+
+  04 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  dosbox-cvs-20030809.ebuild:
+  keyword for ~amd64 (bug #53017)
 
   05 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org>
   dosbox-cvs-20030809.ebuild:

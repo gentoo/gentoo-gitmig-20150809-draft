@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/dosbox-cvs/dosbox-cvs-20030809.ebuild,v 1.6 2004/03/05 19:48:57 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/dosbox-cvs/dosbox-cvs-20030809.ebuild,v 1.7 2004/06/04 22:05:07 mr_bones_ Exp $
 
 inherit games cvs
 
 DESCRIPTION="DOS Emulator"
 HOMEPAGE="http://dosbox.sourceforge.net/"
 
-KEYWORDS="x86 ppc"
+KEYWORDS="x86 ppc ~amd64"
 LICENSE="GPL-2"
 IUSE="alsa opengl"
 SLOT="0"
@@ -35,7 +35,7 @@ src_compile() {
 	egamesconf \
 		--disable-dependency-tracking \
 		${myconf} \
-		`use_enable opengl` \
+		$(use_enable opengl) \
 			|| die
 	emake || die "emake failed"
 }
