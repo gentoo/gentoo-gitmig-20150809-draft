@@ -1,6 +1,3 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License v2
-
 DESCRIPTION="Camsource grabs images from a video4linux device and makes them available
 			to various plugins for processing or handling. Camsource can also be used 
 			as a streaming webcam server."
