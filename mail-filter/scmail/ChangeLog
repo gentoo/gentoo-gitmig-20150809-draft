@@ -1,6 +1,10 @@
 # ChangeLog for mail-filter/scmail
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/scmail/ChangeLog,v 1.4 2004/08/19 08:28:13 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/scmail/ChangeLog,v 1.5 2004/08/19 08:34:19 hattya Exp $
+
+  19 Aug 2004; Akinori Hattori <hattya@gentoo.org>
+  -files/scmail-0.2-gentoo.diff, -scmail-0.2.ebuild:
+  cleaned out old ebuild.
 
 *scmail-1.3 (19 Aug 2004)
 
