@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/atanks/atanks-1.1.0.ebuild,v 1.4 2004/09/04 09:11:53 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/atanks/atanks-1.1.0.ebuild,v 1.5 2004/09/04 20:40:00 morfic Exp $
 
-inherit games
+inherit games gcc
 
 DATA_DIR="${GAMES_DATADIR}/${PN}"
 DESCRIPTION="Worms and Scorched Earth-like game"
@@ -25,6 +25,11 @@ S="${WORKDIR}/${PN}"
 src_unpack() {
 	unpack ${A}
 	cd ${S}
+	#apply both patches to compile with gcc-3.4.0 closing bug #49457
+	if [ "`gcc-major-version`" -ge "3" -a "`gcc-minor-version`" -ge "4" ]
+	then
+		epatch ${FILESDIR}/atanks-gcc34.patch
+	fi
 
 	sed -i \
 		-e "s:DATA_DIR=.*:DATA_DIR=\\\\\"${DATA_DIR}\\\\\":" src/Makefile || \
