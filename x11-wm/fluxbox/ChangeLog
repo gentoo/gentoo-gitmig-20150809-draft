@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/fluxbox
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.120 2004/09/15 14:28:10 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.121 2004/09/25 15:26:55 ciaranm Exp $
+
+  25 Sep 2004; Ciaran McCreesh <ciaranm@gentoo.org> fluxbox-0.9.10-r3.ebuild:
+  Stable on x86, sparc after discussion with upstream. There may be an -r4
+  shortly with some experimental extra xcomposite options, reduced CPU patches
+  and font changes.
 
 *fluxbox-0.9.10-r3 (15 Sep 2004)
 
