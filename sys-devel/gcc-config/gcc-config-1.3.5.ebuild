@@ -1,28 +1,24 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/gcc-config-1.3.5.ebuild,v 1.3 2004/03/02 16:39:42 iggy Exp $
-
-IUSE=
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/gcc-config-1.3.5.ebuild,v 1.4 2004/04/24 07:56:31 vapier Exp $
 
 W_VER="1.4.2"
 
 DISABLE_GEN_GCC_WRAPPERS="yes"
 
-S="${WORKDIR}/${P}"
 DESCRIPTION="Utility to change the gcc compiler being used."
-SRC_URI=""
 HOMEPAGE="http://www.gentoo.org/"
+SRC_URI=""
 
-KEYWORDS="~amd64 ~x86 ~ppc ~sparc ~alpha ~mips ~hppa ~ia64 ~ppc64 s390"
-SLOT="0"
 LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="~x86 ~ppc ~ppc64 ~sparc ~mips ~alpha arm ~hppa ~amd64 ~ia64 s390"
+IUSE=""
 
 DEPEND="virtual/glibc
 	>=sys-apps/portage-2.0.47-r10" # We need portageq ...
 
-
 src_install() {
-
 	# Setup PATH just in case ...
 	if /usr/bin/gcc-config --get-current-profile &> /dev/null
 	then
@@ -89,4 +85,3 @@ pkg_postinst() {
 		fi
 	fi
 }
-

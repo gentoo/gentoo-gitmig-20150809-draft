@@ -1,0 +1,20 @@
+--- ld/scripttempl/elf.sc.array-sects-compat~	2003-01-03 22:21:16.000000000 -0200
++++ ld/scripttempl/elf.sc	2003-01-03 22:27:42.000000000 -0200
+@@ -288,6 +288,17 @@
+   ${CREATE_SHLIB-${RELOCATING+. = ${DATA_ADDR-${DATA_SEGMENT_ALIGN}};}}
+   ${CREATE_SHLIB+${RELOCATING+. = ${SHLIB_DATA_ADDR-${DATA_SEGMENT_ALIGN}};}}
+ 
++  /* For backward-compatibility with tools that don't support the
++     *_array_* sections below, our glibc's crt files contain weak
++     definitions of symbols that they reference.  We don't want to use
++     them, though, unless they're strictly necessary, because they'd
++     bring us empty sections, unlike PROVIDE below, so we drop the
++     sections from the crt files here.  */
++  /DISCARD/ : {
++      */crti.o(.init_array .fini_array .preinit_array)
++      */crtn.o(.init_array .fini_array .preinit_array)
++  }
++
+   /* Ensure the __preinit_array_start label is properly aligned.  We
+      could instead move the label definition inside the section, but
+      the linker would then create the section even if it turns out to

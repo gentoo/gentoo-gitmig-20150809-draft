@@ -1,8 +1,13 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3-r1.ebuild,v 1.10 2004/04/24 00:40:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3-r1.ebuild,v 1.11 2004/04/24 07:55:03 vapier Exp $
+
+IUSE="static nls bootstrap java build X f77 objc"
 
 inherit eutils flag-o-matic libtool
+
+# Compile problems with these (bug #6641 among others)...
+#filter-flags "-fno-exceptions -fomit-frame-pointer -fforce-addr"
 
 # Recently there has been a lot of stability problem in Gentoo-land.  Many
 # things can be the cause to this, but I believe that it is due to gcc3
@@ -24,16 +29,7 @@ inherit eutils flag-o-matic libtool
 # problems.
 #
 # <azarah@gentoo.org> (13 Oct 2002)
-do_filter_flags() {
-	strip-flags
-
-	# In general gcc does not like optimization, and add -O2 where
-	# it is safe.
-	filter-flags -O?
-
-	# Compile problems with these (bug #6641 among others)...
-	filter-flags -fno-exceptions -fomit-frame-pointer -ggdb
-}
+strip-flags
 
 # Theoretical cross compiler support
 [ ! -n "${CCHOST}" ] && export CCHOST="${CHOST}"
@@ -99,8 +95,7 @@ DESCRIPTION="The GNU Compiler Collection.  Includes C/C++ and java compilers"
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 
 LICENSE="GPL-2 LGPL-2.1"
-KEYWORDS="-*"
-IUSE="static nls bootstrap java build X"
+KEYWORDS="-* arm"
 
 # Ok, this is a hairy one again, but lets assume that we
 # are not cross compiling, than we want SLOT to only contain
@@ -123,11 +118,13 @@ DEPEND="virtual/glibc
 	>=sys-devel/gcc-config-1.3.1
 	!build? ( >=sys-libs/ncurses-5.2-r2
 	          nls? ( sys-devel/gettext ) )"
+
 RDEPEND="virtual/glibc
 	>=sys-devel/gcc-config-1.3.1
 	>=sys-libs/zlib-1.1.4
 	>=sys-apps/texinfo-4.2-r4
 	!build? ( >=sys-libs/ncurses-5.2-r2 )"
+
 PDEPEND="sys-devel/gcc-config"
 
 
@@ -259,20 +256,22 @@ src_compile() {
 	local myconf=
 	local gcc_lang=
 
-	if ! use build
+	if [ -z "`use build`" ]
 	then
 		myconf="${myconf} --enable-shared"
-		gcc_lang="c,c++,f77,objc"
+		gcc_lang="c,c++"
+		use f77 && gcc_lang="${gcc_lang},f77"
+		use objc && gcc_lang="${gcc_lang},objc"
 	else
 		gcc_lang="c"
 	fi
-	if ! use nls || use build
+	if [ -z "`use nls`" -o "`use build`" ]
 	then
 		myconf="${myconf} --disable-nls"
 	else
 		myconf="${myconf} --enable-nls --without-included-gettext"
 	fi
-	if use java && ! use build
+	if [ -n "`use java`" -a -z "`use build`" ]
 	then
 		gcc_lang="${gcc_lang},java"
 	fi
@@ -291,6 +290,9 @@ src_compile() {
 
 	# Multilib not yet supported
 	myconf="${myconf} --disable-multilib"
+
+	# In general gcc does not like optimization, and add -O2 where
+	# it is safe.  This is especially true for gcc-3.3 ...
 
 	# Build in a separate build tree
 	mkdir -p ${WORKDIR}/build
@@ -591,3 +593,4 @@ pkg_postinst() {
 		[ "${ROOT}" = "/" ] && hardened-gcc -A
 	fi
 }
+

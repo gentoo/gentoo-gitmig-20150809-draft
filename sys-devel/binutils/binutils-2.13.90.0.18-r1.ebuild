@@ -1,8 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.13.90.0.18-r1.ebuild,v 1.11 2004/04/16 03:33:04 kumba Exp $
-
-IUSE="nls bootstrap build"
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.13.90.0.18-r1.ebuild,v 1.12 2004/04/24 07:54:56 vapier Exp $
 
 # NOTE to Maintainer:  ChangeLog states that it no longer use perl to build
 #                      the manpages, but seems this is incorrect ....
@@ -12,16 +10,16 @@ inherit eutils libtool flag-o-matic
 # Generate borked binaries.  Bug #6730
 filter-flags "-fomit-frame-pointer -fssa"
 
-S="${WORKDIR}/${P}"
 DESCRIPTION="Tools necessary to build programs"
+HOMEPAGE="http://sources.redhat.com/binutils/"
 SRC_URI="mirror://kernel/linux/devel/binutils/${P}.tar.bz2
 	mirror://kernel/linux/devel/binutils/test/${P}.tar.bz2
 	mirror://gentoo/${PN}-2.13.90.0.18-20030206.patch.bz2"
-HOMEPAGE="http://sources.redhat.com/binutils/"
 
-SLOT="0"
 LICENSE="GPL-2 | LGPL-2"
-KEYWORDS="~x86 ~ppc ~alpha ~sparc ~mips ~hppa "
+SLOT="0"
+KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha arm ~hppa"
+IUSE="nls bootstrap build"
 
 DEPEND="virtual/glibc
 	nls? ( sys-devel/gettext )
@@ -64,6 +62,8 @@ src_unpack() {
 	epatch ${FILESDIR}/2.13/${PN}-2.13.90.0.18-s390-file-loc.patch
 	epatch ${FILESDIR}/2.13/${PN}-2.13.90.0.18-sub-same.patch
 	epatch ${FILESDIR}/2.13/${PN}-2.13.90.0.10-x86_64-gotpcrel.patch
+	epatch ${FILESDIR}/2.13/${PN}-2.13.90.0.18-ld-r.patch
+	epatch ${FILESDIR}/2.13/${PN}-2.13.90.0.18-array-sects-compat.patch
 
 	# Add patches for mips
 	if [ "${ARCH}" = "mips" ]
