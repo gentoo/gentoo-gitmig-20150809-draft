@@ -1,8 +1,11 @@
 # ChangeLog for net-misc/ltsp
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ltsp/ChangeLog,v 1.5 2004/11/11 21:52:53 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ltsp/ChangeLog,v 1.6 2004/12/05 11:17:14 lanius Exp $
 
-  11 Nov 2004; <heino@gentoo.org> -files/INSTALL.Gentoo, -files/Xaccess,
+  05 Dec 2004; lanius@gentoo.org ltsp-4.1-r1.ebuild:
+  fix handling of src_uri
+
+  11 Nov 2004; <lanius@gentoo.org> -files/INSTALL.Gentoo, -files/Xaccess,
   -files/Xsetup_workstation, -files/dhcpd.conf, -files/gdm.conf.pl,
   -files/install.sh, -files/kdmrc.pl, -files/ltsp.conf, -files/ltsp.gif,
   -files/tftp, -ltsp-3.0.9-r3.ebuild, -ltsp-4.0.ebuild:
