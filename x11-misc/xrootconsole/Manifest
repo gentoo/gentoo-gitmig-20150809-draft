@@ -1,7 +1,17 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 ce4eef4854d332fb36be7ae97a26066d xrootconsole-0.4.ebuild 631
-MD5 7f05e578378a26a47c1d184118545766 xrootconsole-0.4-r1.ebuild 696
-MD5 d38d3df9636a9833378f89a9eb50c48d ChangeLog 1726
+MD5 78b8ce35b14e95c0cf012fddf5b11e3e xrootconsole-0.4-r1.ebuild 707
+MD5 953cb31d2e2d90a1dcc01bbe3ba0da2f ChangeLog 1854
 MD5 cdb11033a3fa6525334cecf938961c07 metadata.xml 166
 MD5 9130183d87016da6b4a53355f5c130d9 files/xrootconsole-0.4.parse-color.patch 840
 MD5 33a1c8a9645fbd7f65d7d85a8fb207cd files/digest-xrootconsole-0.4-r1 67
 MD5 33a1c8a9645fbd7f65d7d85a8fb207cd files/digest-xrootconsole-0.4 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFCLdnS06ebR+OMO78RAk3XAJ90OgHds+tr4kc9bPu3HrqZRETaqQCfUhkn
+jradUKf4uS2NpysGD8+CF2E=
+=+GYq
+-----END PGP SIGNATURE-----

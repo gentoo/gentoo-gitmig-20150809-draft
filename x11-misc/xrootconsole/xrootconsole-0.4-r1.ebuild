@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xrootconsole/xrootconsole-0.4-r1.ebuild,v 1.10 2005/01/21 22:08:01 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xrootconsole/xrootconsole-0.4-r1.ebuild,v 1.11 2005/03/08 16:58:46 luckyduck Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://de-fac.to/bob/xrootconsole/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 sparc ppc"
+KEYWORDS="x86 sparc ppc ~amd64"
 IUSE=""
 
 DEPEND="virtual/x11"
