@@ -1,0 +1,15 @@
+--- OffsetManager.java	2004-08-30 19:34:45.056963472 +0200
++++ org/gjt/sp/jedit/buffer/OffsetManager.java	2004-08-30 19:35:14.387504552 +0200
+@@ -672,10 +672,10 @@
+ 	//{{{ PosTopHalf class
+ 	static class PosTopHalf implements Position
+ 	{
+-		PosBottomHalf bh;
++		org.gjt.sp.jedit.buffer.OffsetManager.PosBottomHalf bh;
+ 
+ 		//{{{ PosTopHalf constructor
+-		PosTopHalf(PosBottomHalf bh)
++		PosTopHalf(org.gjt.sp.jedit.buffer.OffsetManager.PosBottomHalf bh)
+ 		{
+ 			this.bh = bh;
+ 			bh.ref();

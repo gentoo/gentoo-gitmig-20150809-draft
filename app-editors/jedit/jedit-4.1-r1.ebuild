@@ -1,8 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jedit/jedit-4.1-r1.ebuild,v 1.1 2004/07/31 18:33:34 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jedit/jedit-4.1-r1.ebuild,v 1.2 2004/08/30 17:42:19 axxo Exp $
 
 MY_PV="41"
+
+inherit eutils
 
 DESCRIPTION="Programmer's editor written in Java"
 HOMEPAGE="http://www.jedit.org"
@@ -19,6 +21,12 @@ DEPEND="${RDEPEND}
 	doc? ( app-text/docbook-xsl-stylesheets dev-libs/libxslt )"
 
 S="${WORKDIR}/jEdit"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	use jikes && epatch ${FILESDIR}/${PN}-${PV}-jikes-fix.patch
+}
 
 src_compile() {
 	local antflags="dist"
