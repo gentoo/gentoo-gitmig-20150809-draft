@@ -1,3 +1,5 @@
+# $Header: /var/cvsroot/gentoo-x86/profiles/uclibc/README,v 1.4 2004/06/28 05:13:32 solar Exp $
+#
 # This subdir contains the cascading profiles for native uclibc environments
 
 ###############################################################################
