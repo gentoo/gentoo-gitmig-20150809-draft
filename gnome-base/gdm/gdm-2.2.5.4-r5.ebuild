@@ -1,18 +1,17 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.2.5.4-r5.ebuild,v 1.12 2002/11/02 10:12:09 azarah Exp $
-
-IUSE="nls gnome"
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.2.5.4-r5.ebuild,v 1.13 2002/11/17 09:38:29 vapier Exp $
 
 DESCRIPTION="GNOME Display Manager"
 HOMEPAGE="http://www.gnome.org/"
+SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/${PN}/${P}.tar.bz2"
+
+SLOT="0"
 KEYWORDS="x86 ppc sparc sparc64"
 LICENSE="GPL-2"
+IUSE="nls gnome"
 
 MY_V="`echo ${PV} |cut -b -5`"
-S=${WORKDIR}/${P}
-SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/${PN}/${P}.tar.bz2"
-SLOT="0"
 
 DEPEND=">=sys-libs/pam-0.72
 	>=sys-apps/tcp-wrappers-7.6
@@ -24,9 +23,7 @@ RDEPEND="${DEPEND}
 	>=x11-base/xfree-4.2.0-r3
 	gnome? ( >=gnome-base/gnome-core-1.4.0.6 )"
 
-
 src_unpack() {
-
 	unpack ${A}
 
 	cd ${S}/daemon
@@ -45,7 +42,7 @@ src_unpack() {
 src_compile() {
 	local myconf=""
 	use nls || myconf="${myconf} --disable-nls"
-	
+
 	./configure --host=${CHOST} \
 		--prefix=/usr \
 		--sysconfdir=/etc/X11 \
@@ -71,7 +68,7 @@ src_install() {
 	rm -f ${D}/etc/pam.d/gdm
 
 	# log
-	mkdir -p ${D}/var/lib/gdm
+	dodir /var/lib/gdm
 	chown gdm.gdm ${D}/var/lib/gdm
 	chmod 750 ${D}/var/lib/gdm
   
@@ -177,4 +174,3 @@ pkg_postrm() {
 	einfo "To remove GDM from startup please execute"
 	einfo "'rc-update del xdm default'"
 }
-

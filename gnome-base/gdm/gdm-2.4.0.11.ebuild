@@ -1,16 +1,17 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.4.0.11.ebuild,v 1.6 2002/11/02 10:12:09 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.4.0.11.ebuild,v 1.7 2002/11/17 09:40:33 vapier Exp $
 
 DESCRIPTION="GNOME2 Display Manager"
 HOMEPAGE="http://www.gnome.org/"
+SRC_URI="mirror://gnome/2.0.1/sources/${PN}/${P}.tar.bz2"
+
+SLOT="0"
 KEYWORDS="x86 ppc sparc sparc64 alpha"
+LICENSE="GPL-2"
+IUSE="nls"
 
 MY_V="`echo ${PV} |cut -b -5`"
-S=${WORKDIR}/${P}
-SRC_URI="mirror://gnome/2.0.1/sources/${PN}/${P}.tar.bz2"
-LICENSE="GPL-2"
-SLOT="0"
 
 RDEPEND=">=sys-libs/pam-0.72
 	>=sys-apps/tcp-wrappers-7.6
@@ -26,9 +27,7 @@ RDEPEND=">=sys-libs/pam-0.72
 DEPEND="${RDEPEND}
 	>=x11-base/xfree-4.2.0-r3"
 
-
 src_unpack() {
-
 	unpack ${A}
 
 	cd ${S}/daemon
@@ -80,7 +79,7 @@ src_install() {
 	rm -f ${D}/etc/pam.d/gdm
 
 	# log
-	mkdir -p ${D}/var/lib/gdm
+	dodir /var/lib/gdm
 	chown gdm:gdm ${D}/var/lib/gdm
 	chmod 0750 ${D}/var/lib/gdm
   
@@ -192,4 +191,3 @@ pkg_postrm() {
 	einfo "To remove GDM from startup please execute"
 	einfo "'rc-update del xdm default'"
 }
-
