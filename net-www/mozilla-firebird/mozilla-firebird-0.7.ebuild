@@ -1,18 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firebird/mozilla-firebird-0.7.ebuild,v 1.8 2003/11/18 01:15:56 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firebird/mozilla-firebird-0.7.ebuild,v 1.9 2003/11/21 21:31:20 agriffis Exp $
 
 inherit makeedit flag-o-matic gcc nsplugins eutils
-
-# Added to get MozillaFirebird to compile on sparc.
-replace-sparc64-flags
-if [ "`use ppc`" -a "$(gcc-major-version)" -eq "3" -a "$(gcc-minor-version)" -eq "3" ]
-then
-
-append-flags -fno-strict-aliasing
-
-fi
-
 
 S=${WORKDIR}/mozilla
 
@@ -63,6 +53,7 @@ src_unpack() {
 }
 
 src_compile() {
+	local enable_optimize=''
 	local myconf="--disable-composer \
 		--with-x \
 		--with-system-jpeg \
@@ -98,16 +89,6 @@ src_compile() {
 		--disable-toolkit-qt \
 		--disable-toolkit-xlib \
 		--enable-extensions=default,-inspector,-irc,-venkman,-content-packs,-help"
-
-	# On amd64 we statically set 'safe' CFLAGS. Use those only.
-	# using the standard -O2 will cause segfaults on startup for amd64
-	if [ "${ARCH}" = "amd64" ]
-	then
-		myconf="${myconf} --enable-optimize=-O"
-	else
-		myconf="${myconf} --enable-optimize=-O2"
-	fi
-
 
 	if [ -n "`use gtk2`" ] ; then
 		myconf="${myconf} --enable-toolkit-gtk2 \
@@ -159,6 +140,41 @@ src_compile() {
 		myconf="${myconf} --enable-ipv6"
 	fi
 
+	# Per-architecture flags
+	case "${ARCH}" in
+		alpha|amd64|ia64)
+			# 64-bit needs -fPIC
+			append-flags -fPIC
+			;;
+		sparc)
+			# Added to get MozillaFirebird to compile on sparc
+			replace-sparc64-flags
+			;;
+		ppc)
+			# Fix to avoid gcc-3.3.x miscompilation issues.
+			if [ "$(gcc-major-version).$(gcc-minor-version)" = "3.3" ]; then
+				append-flags -fno-strict-aliasing
+			fi
+			;;
+	esac
+
+	# 32-bit vs. 64-bit optimization
+	case "${ARCH}" in
+		alpha|amd64|ia64)
+			# Allow -O0 or -O1: Anything more than this causes
+			# segfaults on startup on 64-bit (bug 33767)
+			enable_optimize=$(echo "$CFLAGS" | sed 's/.*\(-O[01]\?\).*/\1/p')
+			enable_optimize=${enable_optimize:--O1}
+			filter-flags -O -O?
+			;;
+		*)
+			# -O2 and below allowed on 32-bit
+			enable_optimize=$(echo "$CFLAGS" | sed 's/.*\(-O[012]\?\).*/\1/p')
+			enable_optimize=${enable_optimize:--O2}
+			filter-flags -O -O?
+			;;
+	esac
+
 	# Crashes on start when compiled with -fomit-frame-pointer
 	filter-flags -fomit-frame-pointer -mpowerpc-gfxopt
 	filter-flags -ffast-math
@@ -178,7 +194,7 @@ src_compile() {
 		fi
 	fi
 
-	econf ${myconf} || die
+	econf --enable-optimize="${enable_optimize}" ${myconf} || die
 
 	edit_makefiles
 	emake MOZ_PHOENIX=1 || die

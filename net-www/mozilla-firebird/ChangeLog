@@ -1,6 +1,9 @@
 # ChangeLog for net-www/mozilla-firebird
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firebird/ChangeLog,v 1.25 2003/11/18 01:15:56 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firebird/ChangeLog,v 1.26 2003/11/21 21:31:20 agriffis Exp $
+
+  21 Nov 2003; Aron Griffis <agriffis@gentoo.org> mozilla-firebird-0.7.ebuild:
+  Change architecture-specific stuff again, trying to clean it up
 
   18 Nov 2003; Luca Barbato <lu_zero@gentoo.org> mozilla-firebird-0.7.ebuild:
   Filtered another problematic flag
