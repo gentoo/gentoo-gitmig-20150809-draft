@@ -1,0 +1,11 @@
+# ChangeLog for app-misc/bfm
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/bfm/ChangeLog,v 1.1 2005/03/29 10:25:24 luckyduck Exp $
+
+*bfm-1.2 (29 Mar 2005)
+
+  29 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org> +metadata.xml,
+  +files/1.2-build.xml, +bfm-1.2.ebuild:
+  Initial import, ebuild for this funny file manager based on the contribution
+  by Henrik Johansson <henrik_johansson@home.se>. Fixes #82904
+
