@@ -1,8 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/bogofilter/bogofilter-0.17.5.ebuild,v 1.1 2004/05/14 16:18:01 lostlogic Exp $
-
-IUSE="doc"
+# $Header: /var/cvsroot/gentoo-x86/net-mail/bogofilter/bogofilter-0.17.5.ebuild,v 1.2 2004/05/28 03:13:43 vapier Exp $
 
 DESCRIPTION="Bayesian spam filter designed with fast algorithms, and tuned for speed."
 HOMEPAGE="http://bogofilter.sourceforge.net/"
@@ -10,12 +8,12 @@ SRC_URI="mirror://sourceforge/bogofilter/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~ia64 ~hppa ~amd64 ~mips ~ppc64"
+KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha arm ~hppa ~amd64 ~ia64 ~ppc64"
+IUSE="doc"
 
 DEPEND="virtual/glibc
 	!ppc64? ( doc? ( app-text/xmlto ) )
 	>=sys-libs/db-3.2"
-
 RDEPEND="virtual/glibc
 	>=sys-libs/db-3.2"
 
