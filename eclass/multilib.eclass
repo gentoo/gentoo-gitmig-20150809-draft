@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/multilib.eclass,v 1.7 2005/01/13 00:48:39 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/multilib.eclass,v 1.8 2005/01/13 19:30:41 vapier Exp $
 #
 # Author: Jeremy Huddleston <eradicator@gentoo.org>
 #
@@ -11,8 +11,6 @@ ECLASS=multilib
 INHERITED="$INHERITED $ECLASS"
 
 DESCRIPTION="Based on the ${ECLASS} eclass"
-
-DEPEND="!build? ( sys-apps/sed sys-apps/findutils sys-apps/coreutils )"
 
 # This function simply returns the desired lib directory. With portage
 # 2.0.51, we now have support for installing libraries to lib32/lib64
