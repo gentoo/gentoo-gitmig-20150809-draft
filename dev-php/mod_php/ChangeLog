@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/mod_php
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/ChangeLog,v 1.148 2004/06/06 00:19:04 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/ChangeLog,v 1.149 2004/06/07 03:30:58 agriffis Exp $
+
+  06 Jun 2004; Aron Griffis <agriffis@gentoo.org> mod_php-4.3.7.ebuild:
+  Fix use invocation
 
 *mod_php-4.3.7 (05 Jun 2004)
 
