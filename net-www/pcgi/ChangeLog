@@ -1,0 +1,10 @@
+# ChangeLog for net-www/pcgi
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/pcgi/ChangeLog,v 1.1 2003/08/15 06:13:59 robbat2 Exp $
+
+*pcgi-2.0_alpha5 (14 Aug 2003)
+
+  14 Aug 2003; Robin H. Johnson <robbat2@gentoo.org> metadata.xml,
+  pcgi-2.0_alpha5.ebuild:
+  initial commit
+
