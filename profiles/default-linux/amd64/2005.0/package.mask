@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2005.0/package.mask,v 1.15 2005/01/23 11:57:34 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2005.0/package.mask,v 1.16 2005/04/01 19:49:41 blubb Exp $
 
 # Jeremy Huddleston <eradicator@gentoo.org>
 # gcc ebuilds that haven't been updated to use the src_install in
@@ -17,8 +17,8 @@
 # These are provided by non-emul packages now
 -=app-emulation/emul-linux-x86-glibc-1000
 <app-emulation/emul-linux-x86-glibc-1000
-#app-emulation/emul-linux-x86-nvidia
-#<media-video/nvidia-glx-1.0.6629-r3
+app-emulation/emul-linux-x86-nvidia
+<media-video/nvidia-glx-1.0.6629-r3
 
 # Jeremy Huddleston <eradicator@gentoo.org>
 # Make sure we have a correct /etc/env.d entry
