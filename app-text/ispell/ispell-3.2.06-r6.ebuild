@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ispell/ispell-3.2.06-r6.ebuild,v 1.6 2004/03/14 02:25:12 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ispell/ispell-3.2.06-r6.ebuild,v 1.7 2004/03/27 17:03:29 gmsoft Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://fmg-www.cs.ucla.edu/geoff/tars/${P}.tar.gz
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="x86 sparc ~ppc ~alpha ~mips ~hppa amd64"
+KEYWORDS="x86 sparc ~ppc ~alpha ~mips hppa amd64"
 
 DEPEND="sys-apps/sed
 	sys-devel/bison
