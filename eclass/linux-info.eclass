@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/linux-info.eclass,v 1.7 2004/12/05 12:46:58 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/linux-info.eclass,v 1.8 2004/12/06 18:33:10 johnm Exp $
 #
 # This eclass provides functions for querying the installed kernel
 # source version, selected kernel options etc.
@@ -8,6 +8,7 @@
 
 ECLASS=linux-info
 INHERITED="$INHERITED $ECLASS"
+EXPORT_FUNCTIONS pkg_setup
 
 # Overwritable environment Var's
 # ---------------------------------------
@@ -379,4 +380,12 @@ local	DEFLATE
 	eerror "into your new kernel before attempting to load this kernel module."
 
 	die "Kernel doesn't include zlib support"
+}
+
+################################
+# Default pkg_setup
+# Also used when inheriting linux-mod to force a get_version call
+
+linux-info_pkg_setup() {
+	get_version;
 }
