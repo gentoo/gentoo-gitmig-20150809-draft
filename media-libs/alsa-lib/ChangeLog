@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/alsa-lib
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/ChangeLog,v 1.83 2004/08/17 23:25:36 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/ChangeLog,v 1.84 2004/08/23 21:56:08 eradicator Exp $
+
+*alsa-lib-1.0.6 (23 Aug 2004)
+
+  23 Aug 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  +alsa-lib-1.0.6.ebuild:
+  Version bump.
 
   17 Aug 2004; Guy Martin <gmsoft@gentoo.org> alsa-lib-1.0.5-r3.ebuild:
   Forced CFLAGS=-O1 on hppa. Marked stable.
