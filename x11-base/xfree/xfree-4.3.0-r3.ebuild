@@ -1,13 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r3.ebuild,v 1.8 2003/05/30 01:30:55 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r3.ebuild,v 1.9 2003/05/30 09:03:53 seemant Exp $
 
 # Make sure Portage does _NOT_ strip symbols.  We will do it later and make sure
 # that only we only strip stuff that are safe to strip ...
 DEBUG="yes"
 RESTRICT="nostrip"
 
-IUSE="3dfx sse mmx 3dnow xml truetype nls cjk doc"
+IUSE="3dfx sse mmx 3dnow xml2 truetype nls cjk doc"
 
 
 filter-flags "-funroll-loops"
@@ -67,27 +67,12 @@ X_DRIVERS="http://people.mandrakesoft.com/~flepied/projects/wacom/xf86Wacom.c.gz
 # Latest SIS drivers:  http://www.winischhofer.net/
 # Glide headers for compiling the tdfx modules
 
-# For the MS Core fonts ..
-MS_COREFONTS="./andale32.exe ./arial32.exe
-	./arialb32.exe ./comic32.exe
-	./courie32.exe ./georgi32.exe
-	./impact32.exe ./times32.exe
-	./trebuc32.exe ./verdan32.exe
-	./webdin32.exe"
-#	./IELPKTH.CAB"
-# Need windows license to use this one
-MS_FONT_URLS="${MS_COREFONTS//\.\//mirror://sourceforge/corefonts/}"
-
 SRC_URI="${SRC_PATH0}/X${MY_SV}src-1.tgz
 	${SRC_PATH0}/X${MY_SV}src-2.tgz
 	${SRC_PATH0}/X${MY_SV}src-3.tgz
-	${SRC_PATH0}/X${MY_SV}src-4.tgz
-	${SRC_PATH0}/X${MY_SV}src-5.tgz
 	${SRC_PATH1}/X${MY_SV}src-1.tgz
 	${SRC_PATH1}/X${MY_SV}src-2.tgz
 	${SRC_PATH1}/X${MY_SV}src-3.tgz
-	${SRC_PATH1}/X${MY_SV}src-4.tgz
-	${SRC_PATH1}/X${MY_SV}src-5.tgz
 	doc? ( ${SRC_PATH0}/X${MY_SV}src-6.tgz
 		${SRC_PATH0}/X${MY_SV}src-7.tgz
 		${SRC_PATH1}/X${MY_SV}src-6.tgz
@@ -96,19 +81,15 @@ SRC_URI="${SRC_PATH0}/X${MY_SV}src-1.tgz
 SRC_URI="${SRC_URI}
 	${X_PATCHES}
 	${X_DRIVERS}
-	nls? ( mirror://gentoo/gemini-koi8-u.tar.bz2 )
-	mirror://gentoo/eurofonts-X11.tar.bz2
-	mirror://gentoo/xfsft-encodings.tar.bz2
 	mirror://gentoo/XFree86-compose.dir.bz2
 	mirror://gentoo/XFree86-en_US.UTF-8.old.bz2
 	mirror://gentoo/XFree86-locale.alias.bz2
 	mirror://gentoo/XFree86-locale.dir.bz2
-	mirror://gentoo/gentoo-cursors-tad-${XCUR_VER}.tar.bz2
-	truetype? ( ${MS_FONT_URLS} )"
+	mirror://gentoo/gentoo-cursors-tad-${XCUR_VER}.tar.bz2"
 
-LICENSE="X11 MSttfEULA"
 SLOT="0"
-KEYWORDS="x86 ppc sparc ~alpha ~mips ~hppa arm"
+LICENSE="X11"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~mips ~hppa arm"
 
 DEPEND=">=sys-apps/baselayout-1.8.3
 	>=sys-libs/ncurses-5.1
@@ -120,9 +101,7 @@ DEPEND=">=sys-apps/baselayout-1.8.3
 	>=media-libs/fontconfig-2.1-r1
 	media-libs/libpng
 	>=x11-base/opengl-update-1.4
-	>=x11-misc/ttmkfdir-3.0.4
 	pam? ( >=sys-libs/pam-0.75 )
-	truetype? ( app-arch/cabextract )
 	app-arch/unzip
 	!virtual/xft" 
 #RDEPEND="$DEPEND"
@@ -145,7 +124,7 @@ DESCRIPTION="Xfree86: famous and free X server"
 src_unpack() {
 
 	# Unpack source and patches
-	unpack X${MY_SV}src-{1,2,3,4,5}.tgz
+	unpack X${MY_SV}src-{1,2,3}.tgz
 	if [ -n "`use doc`" ]
 	then
 		unpack X${MY_SV}src-{6,7}.tgz
@@ -155,17 +134,6 @@ src_unpack() {
 	# Unpack TaD's gentoo cursors
 	unpack gentoo-cursors-tad-${XCUR_VER}.tar.bz2
 
-	# Unpack extra fonts stuff from Mandrake
-	if [ -n "`use nls`" ]
-	then
-		unpack gemini-koi8-u.tar.bz2
-	fi
-	unpack eurofonts-X11.tar.bz2
-	unpack xfsft-encodings.tar.bz2
-	
-	# Remove bum encoding
-	rm -f ${WORKDIR}/usr/X11R6/lib/X11/fonts/encodings/urdunaqsh-0.enc
-	
 	# Update the Savage Driver
 	# savage driver 1.1.27t is a .zip and contains a savage directory
 	# (that's why we have to be in drivers, not in savage subdir).
@@ -365,7 +333,7 @@ src_unpack() {
 			XF86ExtraCardDrivers" >> config/cf/host.def
 	fi
 
-	if [ -n "`use xml`" ]
+	if [ -n "`use xml2`" ]
 	then
 		echo "#define HasLibxml2 YES" >> config/cf/host.def
 	fi
