@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/gnome-session-2.0.7.ebuild,v 1.7 2003/02/13 12:09:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/gnome-session-2.0.7.ebuild,v 1.8 2003/07/09 16:29:03 liquidx Exp $
 
 inherit gnome2
 
@@ -19,7 +19,8 @@ RDEPEND=">=dev-libs/glib-2.0.6-r1
 	>=gnome-base/libgnomecanvas-2.0.4
 	>=sys-devel/gettext-0.10.40
 	>=sys-apps/tcp-wrappers-7.6
-	>=gnome-base/gconf-1.2.1"
+	>=gnome-base/gconf-1.2.1
+	app-text/scrollkeeper"
 
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.12.0

@@ -1,6 +1,11 @@
 # ChangeLog for gnome-base/gnome-session
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/ChangeLog,v 1.35 2003/07/04 21:52:54 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/ChangeLog,v 1.36 2003/07/09 16:29:03 liquidx Exp $
+
+  09 Jul 2003; Alastair Tse <liquidx@gentoo.org> gnome-session-2.0.7.ebuild,
+  gnome-session-2.2.0.2.ebuild, gnome-session-2.2.1.ebuild,
+  gnome-session-2.2.2.ebuild:
+  added scrollkeeper deps
 
   17 May 2003; Alastair Tse <liquidx@gentoo.org> gnome-session-2.2.2.ebuild:
   added scrollkeeper/omf fix

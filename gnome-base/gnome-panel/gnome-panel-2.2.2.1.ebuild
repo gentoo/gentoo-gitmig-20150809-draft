@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/gnome-panel-2.2.2.1.ebuild,v 1.2 2003/07/04 21:08:06 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/gnome-panel-2.2.2.1.ebuild,v 1.3 2003/07/09 16:25:49 liquidx Exp $
 
 inherit gnome2 eutils
 
@@ -23,10 +23,10 @@ RDEPEND=">=x11-libs/gtk+-2.1
 	>=gnome-base/libglade-2
 	>=gnome-base/libgnome-2.1.1
 	>=gnome-base/libgnomeui-2.1
+	>=app-text/scrollkeeper-0.3.11	
 	!gnome-extra/system-tray-applet"
 
 DEPEND="${RDEPEND}
-	>=app-text/scrollkeeper-0.3.11
 	>=dev-util/pkgconfig-0.12.0
 	>=dev-util/intltool-0.21
 	doc? ( >=dev-util/gtk-doc-0.9 )"
