@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/egroupware/egroupware-0.9.99.005.ebuild,v 1.3 2003/10/10 16:23:21 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/egroupware/egroupware-0.9.99.005.ebuild,v 1.4 2003/10/21 15:49:43 mholzer Exp $
 
 MY_P=eGroupWare-${PV}
 S=${WORKDIR}/${PN}
@@ -11,6 +11,7 @@ HTTPD_GROUP="apache"
 DESCRIPTION="Web-based GroupWare suite. It contains many modules"
 HOMEPAGE="http://www.eGroupWare.org/"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}-0.tar.bz2"
+RESTRICT="nomirror"
 
 LICENSE="GPL-2"
 SLOT="0"
