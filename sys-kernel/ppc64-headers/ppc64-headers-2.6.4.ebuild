@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc64-headers/ppc64-headers-2.6.4.ebuild,v 1.5 2004/06/24 23:00:25 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc64-headers/ppc64-headers-2.6.4.ebuild,v 1.6 2004/07/09 21:44:59 lv Exp $
 
 IUSE="build crypt"
 
@@ -39,6 +39,8 @@ PROVIDE="virtual/kernel virtual/os-headers"
 LICENSE="GPL-2"
 KEYWORDS="-x86 -ppc -sparc -alpha -hppa -mips -arm ppc64"
 SLOT="${KV}"
+
+DEPEND="!virtual/os-headers"
 
 
 src_unpack() {
