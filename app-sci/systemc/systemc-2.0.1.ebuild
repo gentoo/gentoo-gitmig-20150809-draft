@@ -1,14 +1,16 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/systemc/systemc-2.0.1.ebuild,v 1.2 2002/12/18 14:43:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/systemc/systemc-2.0.1.ebuild,v 1.3 2003/01/08 05:37:37 george Exp $
+
+IUSE=""
 
 DESCRIPTION="A C++ based modeling platform for VLSI and system-level co-design"
 HOMEPAGE="http://www.systemc.org/"
 SRC_URI="systemc-2.0.1.tgz"
 
 SLOT="0"
-LICENSE="IBM"
-KEYWORDS="~x86"
+LICENSE="SOPLA-2.4"
+KEYWORDS="x86"
 
 DEPEND="virtual/glibc"
 RESTRICT="fetch"
