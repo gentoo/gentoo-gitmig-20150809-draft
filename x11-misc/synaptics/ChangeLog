@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/synaptics
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/synaptics/ChangeLog,v 1.30 2004/10/04 06:05:12 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/synaptics/ChangeLog,v 1.31 2004/10/04 06:07:42 spyderous Exp $
+
+  03 Oct 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  synaptics-0.13.4.ebuild, synaptics-0.13.5.ebuild:
+  Update dep from temporary hack to virtual/x11.
 
   03 Oct 2004; Donnie Berkholz <spyderous@gentoo.org>;
   -files/synaptics-0.13.3-amd64.patch:
