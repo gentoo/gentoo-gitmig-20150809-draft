@@ -1,0 +1,10 @@
+# ChangeLog for x11-misc/wmdf
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/wmdf/ChangeLog,v 1.1 2003/12/16 04:52:46 port001 Exp $
+
+*wmdf-0.1.6 (16 Dec 2003)
+
+  16 Dec 2003; Ian Leitch <port001@gentoo.org> wmdf-0.1.6.ebuild:
+  Initial commit, thanks to Jeff Stuart <jstuart@computer-city.net> for the
+  original ebuild - bumped and corrected. #21286
+
