@@ -1,4 +1,3 @@
-MD5 6cb6cf10f91b17f78321fb45c86ce635 cpufreqd-1.1_rc1.ebuild 811
 MD5 0413dad71004905165de80ac225fdd60 metadata.xml 366
 MD5 6ad983f2092deb4378bafd567030c607 cpufreqd-1.1_rc1-r1.ebuild 925
 MD5 adebbd3652db98772086b91a41fc422f ChangeLog 974
@@ -7,7 +6,6 @@ MD5 b3bdb5c51c0d63dc4eb017fed17697ff cpufreqd-1.0.ebuild 868
 MD5 33c3e248d1ab83a99fc4e21b55b789ac cpufreqd-1.0.1-r1.ebuild 912
 MD5 ff050e12cd3641d6e967eeb8fd472865 files/digest-cpufreqd-1.0.1 66
 MD5 4e400409f756a772ff5caba5549261d6 files/digest-cpufreqd-1.1_rc1-r1 68
-MD5 4e400409f756a772ff5caba5549261d6 files/digest-cpufreqd-1.1_rc1 68
 MD5 ff050e12cd3641d6e967eeb8fd472865 files/digest-cpufreqd-1.0.1-r1 66
 MD5 38564e062a23f984a5b70fee3c2f27c3 files/digest-cpufreqd-1.0 64
 MD5 823074606ab9025af1210226fd2a626a files/sysfs.diff 403
