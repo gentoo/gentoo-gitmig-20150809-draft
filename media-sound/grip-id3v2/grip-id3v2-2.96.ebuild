@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Joe Bormolini
-# $Header: /var/cvsroot/gentoo-x86/media-sound/grip-id3v2/grip-id3v2-2.96.ebuild,v 1.3 2001/10/26 01:59:21 lordjoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/grip-id3v2/grip-id3v2-2.96.ebuild,v 1.4 2001/10/26 02:01:48 lordjoe Exp $
 
 P=grip-${PV}
 S=${WORKDIR}/${P}
@@ -35,7 +35,7 @@ src_compile() {
 
 	# apply CFLAGS
 	mv Makefile Makefile.old
-	sed -e "s:^LIBS+=:LIBS+= -lid3 -lz:" Makefile.old > Makefile
+	sed -e "s:^LIBS+=:LIBS+= -lid3 -lz:" -e "s:-Wall:-Wall ${CFLAGS}:" Makefile.old > Makefile
 	emake || die
 
 }
