@@ -1,4 +1,14 @@
-MD5 3057bed0f062b8777f9feef849b854bd 3dfm-1.0.ebuild 586
-MD5 c770e6262b87b14ca4b642b7fbb555cc ChangeLog 549
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 8acc46169e112628a3cd13efe95e3555 3dfm-1.0.ebuild 585
+MD5 1effe58b83b2226d3b73831e3f9f67e3 ChangeLog 641
 MD5 809fdbb24c1177ba34d056255c235003 metadata.xml 385
 MD5 092c917c92d060156d89ac456b8bae5e files/digest-3dfm-1.0 60
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBPkFrI1lqEGTUzyQRAvHtAJ0c+sKSREB6SbHkzt7p+sKCue/cVwCeNwwX
+mN7ZCV9Yoa4O0eOhoB1jI9Q=
+=hFsK
+-----END PGP SIGNATURE-----
