@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/nvtv/nvtv-0.4.5.ebuild,v 1.2 2003/09/01 19:38:06 blauwers Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/nvtv/nvtv-0.4.5.ebuild,v 1.3 2003/12/04 17:57:09 seemant Exp $
 
 IUSE="X gtk gtk2"
 
@@ -13,24 +13,32 @@ LICENSE="GPL-2"
 KEYWORDS="x86"
 
 DEPEND="sys-apps/pciutils
-	gtk? ( =x11-libs/gtk+-1.2* )
-	gtk2? ( =x11-libs/gtk+-2* )
+	gtk? (
+		gtk2? ( =x11-libs/gtk+-2* )
+		!gtk2? ( =x11-libs/gtk+-1.2* )
+	)
 	X? ( >=x11-base/xfree-4.0 )"
 
 src_compile() {
 	local myconf
 
-	if use gtk2; then
-		myconf="${myconf} --with-gtk=gtk2"
-	elif use gtk; then
-		myconf="${myconf} --with-gtk=gtk1"
+	if use gtk
+	then
+		if use gtk2
+			then
+				myconf="${myconf} --with-gtk=gtk2"
+			else
+				myconf="${myconf} --with-gtk=gtk1"
+			fi
 	else
-		myconf="${myconf} --without-gtk";
+		myconf="${myconf} --without-gtk"
 	fi
 
-	use X && myconf="${myconf} --with-x" || myconf="${myconf} --without-x"
+	use X \
+		&& myconf="${myconf} --with-x" \
+		|| myconf="${myconf} --without-x"
 
-	econf ${myconf}
+	econf ${myconf} || die
 
 	# The CFLAGS don't seem to make it into the Makefile.
 	cd src

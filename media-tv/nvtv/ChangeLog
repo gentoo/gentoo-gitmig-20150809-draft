@@ -1,6 +1,11 @@
 # ChangeLog for media-tv/nvtv
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/nvtv/ChangeLog,v 1.2 2003/06/18 18:35:13 blauwers Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/nvtv/ChangeLog,v 1.3 2003/12/04 17:57:09 seemant Exp $
+
+  04 Dec 2003; Seemant Kulleen <seemant@gentoo.org> nvtv-0.4.4.ebuild,
+  nvtv-0.4.5.ebuild:
+  fix up the gtk/gtk2 USE flag use according to bug #34566 by Spider
+  <spider@gentoo.org>
 
 *nvtv-0.4.5 (18 Jun 2003)
 
