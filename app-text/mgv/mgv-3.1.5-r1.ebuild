@@ -1,7 +1,7 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # /home/cvsroot/gentoo-x86/skel.build,v 1.2 2001/02/15 18:17:31 achim Exp
-# $Header: /var/cvsroot/gentoo-x86/app-text/mgv/mgv-3.1.5-r1.ebuild,v 1.1 2004/02/11 11:19:51 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mgv/mgv-3.1.5-r1.ebuild,v 1.2 2004/02/11 11:21:04 lanius Exp $
 
 inherit eutils
 
@@ -15,8 +15,9 @@ KEYWORDS="~x86 ~sparc"
 LICENSE="GPL-2"
 SLOT="0"
 
-DEPEND="virtual/ghostscript
-	x11-libs/openmotif"
+DEPEND="x11-libs/openmotif"
+RDEPEND="${DEPEND}
+	virtual/ghostscript"
 
 src_unpack() {
 	unpack ${A}
