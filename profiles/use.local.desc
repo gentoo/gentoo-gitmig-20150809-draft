@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.759 2004/11/24 20:05:30 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.760 2004/11/25 03:01:22 usata Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -27,6 +27,7 @@ app-crypt/johntheripper:skey - Enable S/Key (Single use password) authentication
 app-editors/emacs:aqua - Build Carbon Emacs
 app-editors/emacs:multi-tty - Add multi-tty support
 app-editors/emacs:nosendmail - If you do not want to install any MTA
+app-editors/emacs-cvs:aqua - Build Carbon Emacs
 app-editors/gvim:mzscheme - Include support for the mzscheme interpreter
 app-editors/gvim:netbeans - Include netbeans integration support
 app-editors/nano:justify - Toggle the justify option ...
