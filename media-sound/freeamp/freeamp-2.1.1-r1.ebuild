@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/freeamp/freeamp-2.1.1-r1.ebuild,v 1.16 2003/09/11 01:21:31 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/freeamp/freeamp-2.1.1-r1.ebuild,v 1.17 2003/09/11 02:26:16 msterret Exp $
 
 IUSE="arts esd gnome X gtk oggvorbis alsa"
 
@@ -46,7 +46,7 @@ src_unpack() {
 		cd ${S}/io/arts/src
 		cp artspmo.cpp 1
 		sed -e 's:artsc/artsc.h:artsc.h:g' 1 > artspmo.cpp
-    fi
+	fi
 
 }
 
