@@ -1,6 +1,14 @@
 # ChangeLog for dev-db/postgresql
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.69 2003/11/21 15:58:21 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.70 2003/11/25 20:55:45 nakano Exp $
+
+*postgresql-7.4-r1 (25 Nov 2003)
+
+  25 Nov 2003; Masatomo Nakano <nakano@gentoo.org> postgresql-7.4-r1.ebuild,
+  files/postgresql.init-7.4:
+  Added hier patch(#34163). 
+  Changed download files to base/opt tar balls(#14258).
+  Modified init file from 'need net' to 'use net'(#33161).
 
 *postgresql-7.4 (20 Nov 2003)
 
