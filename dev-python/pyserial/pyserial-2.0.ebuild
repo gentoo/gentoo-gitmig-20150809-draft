@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyserial/pyserial-2.0.ebuild,v 1.8 2004/06/25 01:43:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyserial/pyserial-2.0.ebuild,v 1.9 2004/10/23 15:40:41 weeve Exp $
 
 inherit distutils
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.zip"
 IUSE=""
 SLOT="0"
 LICENSE="PYTHON"
-KEYWORDS="x86 amd64 ~ppc alpha"
+KEYWORDS="x86 amd64 ~ppc alpha ~sparc"
 
 PYTHON_MODNAME="serial"
 DEPEND="app-arch/unzip"

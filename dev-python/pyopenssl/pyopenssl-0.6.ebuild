@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopenssl/pyopenssl-0.6.ebuild,v 1.2 2004/08/20 00:28:21 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopenssl/pyopenssl-0.6.ebuild,v 1.3 2004/10/23 15:41:33 weeve Exp $
 
 inherit distutils
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/pyopenssl/${MY_P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~x86 ~amd64 ~ppc ~alpha"
+KEYWORDS="~x86 ~amd64 ~ppc ~alpha ~sparc"
 IUSE="tetex"
 
 RDEPEND="virtual/python
