@@ -1,6 +1,10 @@
 # ChangeLog for net-zope/zope
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/ChangeLog,v 1.61 2005/02/18 21:55:11 radek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/ChangeLog,v 1.62 2005/02/22 19:56:08 radek Exp $
+
+  22 Feb 2005; Radoslaw Stachowiak <radek@gentoo.org> zope-2.7.4.ebuild:
+  fixed bug #82707 regarding python-2.3.5 and zope-2.7.4.
+  added --with-python=/usr/bin/python2.3 to configure cmd.
 
   18 Feb 2005; Radoslaw Stachowiak <radek@gentoo.org> zope-2.7.4.ebuild:
   marked stable on x86.

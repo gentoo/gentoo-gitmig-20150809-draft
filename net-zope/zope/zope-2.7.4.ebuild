@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/zope-2.7.4.ebuild,v 1.2 2005/02/18 21:55:11 radek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/zope-2.7.4.ebuild,v 1.3 2005/02/22 19:56:08 radek Exp $
 
 inherit eutils
 
@@ -44,7 +44,7 @@ src_unpack() {
 }
 
 src_compile() {
-	./configure --ignore-largefile --prefix=. || die "Failed to configure."
+	./configure --ignore-largefile --prefix=. --with-python=/usr/bin/python2.3 || die "Failed to configure."
 	emake || die "Failed to compile."
 }
 
