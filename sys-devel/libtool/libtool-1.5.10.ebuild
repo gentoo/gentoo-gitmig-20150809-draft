@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/libtool-1.5.6.ebuild,v 1.6 2004/11/01 01:20:48 vapier Exp ${P}-r1.ebuild,v 1.8 2002/10/04 06:34:42 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/libtool-1.5.10.ebuild,v 1.1 2004/11/01 15:20:46 vapier Exp ${P}-r1.ebuild,v 1.8 2002/10/04 06:34:42 kloeri Exp $
 
 inherit eutils gnuconfig
 
@@ -98,7 +98,8 @@ src_unpack() {
 
 	epatch ${FILESDIR}/1.4.3/${PN}-1.4.2-multilib.patch
 	epatch ${FILESDIR}/1.4.3/${PN}-1.4.2-demo.patch
-	epatch ${FILESDIR}/1.5.2/${PN}-1.5-libtool.m4-x86_64.patch
+# Seems to be included in shipped tarball ...
+#	epatch ${FILESDIR}/1.5.2/${PN}-1.5-libtool.m4-x86_64.patch
 	epatch ${FILESDIR}/1.5.2/${PN}-1.5-testfailure.patch
 	# Mandrake patches
 	epatch ${FILESDIR}/1.4.3/${PN}-1.4.3-lib64.patch
