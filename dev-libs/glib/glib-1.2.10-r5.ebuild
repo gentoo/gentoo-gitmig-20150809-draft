@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-1.2.10-r5.ebuild,v 1.20 2004/04/24 03:28:24 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-1.2.10-r5.ebuild,v 1.21 2004/04/26 05:46:03 vapier Exp $
 
-inherit libtool gnuconfig flag-o-matic
+inherit libtool gnuconfig flag-o-matic eutils
 
 DESCRIPTION="The GLib library of C routines"
 HOMEPAGE="http://www.gtk.org/"
@@ -11,7 +11,8 @@ SRC_URI="ftp://ftp.gtk.org/pub/gtk/v1.2/${P}.tar.gz
 
 LICENSE="LGPL-2.1"
 SLOT="1"
-KEYWORDS="x86 ppc sparc alpha mips hppa amd64 ia64 ppc64 s390"
+KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64 ppc64 s390"
+IUSE=""
 
 DEPEND="virtual/glibc"
 
@@ -63,6 +64,6 @@ src_install() {
 
 	( cd ${D}/usr/lib ; chmod 755 libgmodule-1.2.so.* )
 
-	dodoc AUTHORS ChangeLog COPYING README* INSTALL NEWS
+	dodoc AUTHORS ChangeLog README* INSTALL NEWS
 	dohtml -r docs
 }
