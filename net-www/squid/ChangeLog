@@ -1,6 +1,9 @@
 # ChangeLog for net-www/squid
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/squid/ChangeLog,v 1.39 2004/03/31 21:48:06 method Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/squid/ChangeLog,v 1.40 2004/04/27 20:51:28 agriffis Exp $
+
+  27 Apr 2004; Aron Griffis <agriffis@gentoo.org> squid-2.4.7.ebuild:
+  Add inherit eutils
 
   31 Mar 2004; Joshua Brindle <method@gentoo.org> :
   Added selinux policy deps, removed ppc64 as it had badindev and no changelog

@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/lynx/lynx-2.8.4.1d-r1.ebuild,v 1.8 2004/03/15 09:56:43 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/lynx/lynx-2.8.4.1d-r1.ebuild,v 1.9 2004/04/27 20:39:57 agriffis Exp $
+
+inherit eutils
 
 IUSE="ssl nls ipv6"
 

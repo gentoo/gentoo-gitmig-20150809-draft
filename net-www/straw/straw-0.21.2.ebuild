@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/straw/straw-0.21.2.ebuild,v 1.3 2004/02/14 12:43:35 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/straw/straw-0.21.2.ebuild,v 1.4 2004/04/27 20:53:42 agriffis Exp $
 
-inherit gnome2 python distutils
+inherit gnome2 python distutils eutils
 
 DESCRIPTION="RSS/RDF News Aggregator"
 HOMEPAGE="http://www.nongnu.org/straw/"

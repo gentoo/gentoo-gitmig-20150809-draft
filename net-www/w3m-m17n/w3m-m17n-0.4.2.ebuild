@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/w3m-m17n/w3m-m17n-0.4.2.ebuild,v 1.9 2004/04/07 17:34:44 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/w3m-m17n/w3m-m17n-0.4.2.ebuild,v 1.10 2004/04/27 20:56:42 agriffis Exp $
+
+inherit eutils
 
 W3M_CVS_PV="1.862"
 W3M_P="${P/-m17n/}+cvs-${W3M_CVS_PV}"

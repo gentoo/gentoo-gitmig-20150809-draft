@@ -1,6 +1,9 @@
 # ChangeLog for net-www/screem
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/screem/ChangeLog,v 1.15 2004/04/24 02:22:34 khai Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/screem/ChangeLog,v 1.16 2004/04/27 20:50:28 agriffis Exp $
+
+  27 Apr 2004; Aron Griffis <agriffis@gentoo.org> screem-0.8.1.ebuild:
+  Add inherit eutils
 
 *screem-0.10.2 (23 Apr 2004)
 

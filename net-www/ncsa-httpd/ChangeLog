@@ -1,6 +1,9 @@
 # ChangeLog for net-www/ncsa-httpd
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/ncsa-httpd/ChangeLog,v 1.1 2003/10/04 19:19:40 stuart Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/ncsa-httpd/ChangeLog,v 1.2 2004/04/27 20:42:55 agriffis Exp $
+
+  27 Apr 2004; Aron Griffis <agriffis@gentoo.org> ncsa-httpd-1.5.2a.ebuild:
+  Add inherit eutils
 
 *ncsa-httpd-1.5.2a (04 Oct 2003)
 

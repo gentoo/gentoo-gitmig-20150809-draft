@@ -1,6 +1,8 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/squidguard/squidguard-1.2.0-r1.ebuild,v 1.1 2003/08/04 19:22:24 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/squidguard/squidguard-1.2.0-r1.ebuild,v 1.2 2004/04/27 20:52:40 agriffis Exp $
+
+inherit eutils
 
 MY_P=squidGuard-${PV}
 DESCRIPTION="Combined filter, redirector and access controller plugin for Squid."

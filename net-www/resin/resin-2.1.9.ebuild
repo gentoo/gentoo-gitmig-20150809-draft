@@ -1,8 +1,8 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/resin/resin-2.1.9.ebuild,v 1.6 2003/12/14 23:29:24 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/resin/resin-2.1.9.ebuild,v 1.7 2004/04/27 20:48:25 agriffis Exp $
 
-inherit java-pkg
+inherit java-pkg eutils
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A fast Servlet 2.3 and JSP 1.2 engine with EJB and distributed session load balancing."

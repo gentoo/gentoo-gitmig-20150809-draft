@@ -1,6 +1,9 @@
 # ChangeLog for net-www/zoneminder
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/zoneminder/ChangeLog,v 1.1 2003/06/20 20:14:08 mkeadle Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/zoneminder/ChangeLog,v 1.2 2004/04/27 20:57:40 agriffis Exp $
+
+  27 Apr 2004; Aron Griffis <agriffis@gentoo.org> zoneminder-0.9.12.ebuild:
+  Add inherit eutils
 
 *zoneminder-0.9.12 (20 Jun 2003)
 

@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/phpBB/phpBB-2.0.6-r1.ebuild,v 1.7 2004/02/05 03:56:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/phpBB/phpBB-2.0.6-r1.ebuild,v 1.8 2004/04/27 20:45:39 agriffis Exp $
 
-inherit webapp-apache
+inherit webapp-apache eutils
 
 DESCRIPTION="phpBB is a high powered, fully scalable, and highly customisable open-source bulletin board package."
 HOMEPAGE="http://www.phpbb.com/"

@@ -1,6 +1,8 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/prozgui/prozgui-2.0.5.ebuild,v 1.1 2003/10/10 17:33:59 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/prozgui/prozgui-2.0.5.ebuild,v 1.2 2004/04/27 20:46:59 agriffis Exp $
+
+inherit eutils
 
 S="${WORKDIR}/${P}beta"
 DESCRIPTION="A Graphical download manager"
