@@ -1,6 +1,5 @@
-# $Header: /var/cvsroot/gentoo-x86/net-misc/suite3270/Manifest,v 1.6 2003/12/23 02:48:07 robbat2 Exp $
-MD5 a97b8498167efd5e3a948cae86dbadbb suite3270-3.2.20.ebuild 2221
-MD5 7293706d4fa16381f4b340b05915f6db suite3270-3.3.2_p1.ebuild 3088
-MD5 a179c518744ab89f1b0cf3b08b1983b1 ChangeLog 595
 MD5 f31ad988d81aec389a7ad99360ad9b98 files/digest-suite3270-3.3.2_p1 65
 MD5 35f92984c78401de3fdbc722e61d0e73 files/digest-suite3270-3.2.20 64
+MD5 daf17e56a49a13eac0c0fd83c26b82eb suite3270-3.2.20.ebuild 2222
+MD5 8605dcc57800d0447e50725104e02ec4 suite3270-3.3.2_p1.ebuild 3089
+MD5 325c75a14f92e5473350a58d02e455cd ChangeLog 596

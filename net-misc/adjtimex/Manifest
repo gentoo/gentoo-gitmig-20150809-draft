@@ -1,4 +1,4 @@
-MD5 4289edf5f232a575ae8829693e6a3c58 adjtimex-1.16.ebuild 1305
-MD5 210dc25ec554bab6b58d87f749d41666 ChangeLog 410
 MD5 f740d2ecd7c08cc4dee2578c3c0c2557 files/digest-adjtimex-1.16 136
-MD5 d9cc297a58379d5d4e85335343958f51 files/adjtimex.init 694
+MD5 27bf823728fd43c6aa4f92be50604f6b files/adjtimex.init 695
+MD5 a2ab33174445e62317885d7b991b52c3 adjtimex-1.16.ebuild 1306
+MD5 aab58f78d1eff3a6be713876bd80eb47 ChangeLog 411

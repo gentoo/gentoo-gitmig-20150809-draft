@@ -1,3 +1,5 @@
 MD5 5b6622e745bc7470594f616f7442f867 files/digest-dropbear-0.38 66
+MD5 f61f19aac803cc63f96dead0897fb848 files/digest-dropbear-0.39 66
 MD5 25ca6a8ebd7291f99446d0cbc4828596 dropbear-0.38.ebuild 646
-MD5 63cfade22ed22174c203f328a884fddb ChangeLog 809
+MD5 c58f71946ddf82066cd9b4f5c66b7080 dropbear-0.39.ebuild 646
+MD5 6f9d712af55f643052c19deef0210794 ChangeLog 915
