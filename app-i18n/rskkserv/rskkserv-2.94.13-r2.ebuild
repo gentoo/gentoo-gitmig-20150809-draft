@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/rskkserv/rskkserv-2.94.13-r2.ebuild,v 1.2 2004/04/11 16:34:45 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/rskkserv/rskkserv-2.94.13-r2.ebuild,v 1.3 2004/04/27 19:58:27 agriffis Exp $
 
 IUSE=""
 
-inherit ruby
+inherit ruby eutils
 
 DESCRIPTION="rskkserv is an alternative version of skkserv implemented by Ruby"
 HOMEPAGE="http://raa.ruby-lang.org/list.rhtml?name=rskkserv"
