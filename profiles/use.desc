@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.133 2004/01/11 14:10:29 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.134 2004/01/23 17:06:21 azarah Exp $
 
 3dfx - Adds support for 3dfx video cards to XFree86. See: voodoo3
 3dnow - Adds support for 3dnow multimedia processor instructions
@@ -94,6 +94,7 @@ libg++ - Adds C++ modules in dev-db/postgresql (libpq++)
 libgda - Adds GNU Data Access (CORBA wrapper) support for gnumeric 
 libwww - Adds libwww support (General purpose WEB API)
 lirc - Adds support for lirc (Linux's Infra-Red Remote Control)
+livecd - !!internal use only!! DO NOT SET THIS FLAG YOURSELF!, used during livecd building.
 mad - Adds support for mad (high-quality mp3 decoder library and cli frontend)
 maildir - Adds support for maildir (~/.maildir) style mail spools
 matrox - Adds Matrox MGA support to mplayer
