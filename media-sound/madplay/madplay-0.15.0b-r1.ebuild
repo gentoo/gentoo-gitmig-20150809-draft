@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/madplay/madplay-0.15.0b-r1.ebuild,v 1.1 2003/08/18 10:57:45 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/madplay/madplay-0.15.0b-r1.ebuild,v 1.2 2003/11/04 08:32:08 kumba Exp $
 
 IUSE="debug nls"
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/mad/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~alpha ~sparc ~hppa"
+KEYWORDS="~x86 ~ppc ~alpha ~sparc ~hppa ~mips"
 
 DEPEND="virtual/glibc
 	~media-libs/libmad-${PV}
