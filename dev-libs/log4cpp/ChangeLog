@@ -1,12 +1,16 @@
 # ChangeLog for dev-libs/log4cpp
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4cpp/ChangeLog,v 1.1 2002/11/28 05:51:33 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4cpp/ChangeLog,v 1.2 2002/12/12 05:31:49 george Exp $
 
 *log4cpp-0.3.4b (27 Nov 2002)
 
+  11 Dec 2002; George Shapovalov <george@gentoo.org> log4cpp-0.3.4b.ebuild :
+
+  some cleanups to src_install by Michael and me.
+
   27 Nov 2002; George Shapovalov <george@gentoo.org> log4cpp-0.3.4b.ebuild, files/digest-log4cpp-0.3.4b :
  
-  New ebuild.
+  New ebuild. See #10408.
   Log4cpp is library of C++ classes for flexible logging to files, syslog, IDSA and other destinations. 
   It is modeled after the Log4j Java library, staying as close to their API as is reasonable.
 

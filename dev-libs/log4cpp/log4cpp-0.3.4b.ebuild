@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4cpp/log4cpp-0.3.4b.ebuild,v 1.1 2002/11/28 05:51:33 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4cpp/log4cpp-0.3.4b.ebuild,v 1.2 2002/12/12 05:31:49 george Exp $
 
 IUSE=""
 
@@ -22,6 +22,11 @@ src_compile() {
 }
 
 src_install () {
-	make DESTDIR=${D} install || die
+#	make DESTDIR=${D} install || die
+	make prefix=${D}/usr \
+		datadir=${D}/usr/share \
+		mandir=${D}/usr/share/man \
+		docdir=${D}/usr/share/doc/${PF}/html \
+		sysconfdir=${D}/etc install || die
 	dodoc AUTHORS ChangeLog COPYING INSTALL NEWS README THANKS TODO
 }
