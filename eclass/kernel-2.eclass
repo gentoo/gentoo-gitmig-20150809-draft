@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.38 2004/07/08 02:03:41 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.39 2004/07/11 19:05:59 spock Exp $
 
 # kernel.eclass rewrite for a clean base regarding the 2.6 series of kernel
 # with back-compatibility for 2.4
@@ -92,7 +92,8 @@ if [ "${ETYPE}" == "sources" ]
 then
 	#console-tools is needed to solve the loadkeys fiasco; binutils version needed to avoid Athlon/PIII/SSE assembler bugs.
 	DEPEND="!build? ( sys-apps/sed
-		>=sys-devel/binutils-2.11.90.0.31 )"
+		>=sys-devel/binutils-2.11.90.0.31 )
+		doc? ( app-text/docbook-sgml-utils )"
 
 	RDEPEND="${DEPEND}
 		 !build? ( >=sys-libs/ncurses-5.2
@@ -251,7 +252,7 @@ install_sources() {
 install_manpages() {
 	local MY_ARCH
 
-	ebegin "Installing mapages"
+	ebegin "Installing manpages"
 	MY_ARCH=${ARCH}
 	unset ARCH
 	sed -i -e "s#/usr/local/man#${D}/usr/man#g" scripts/makeman
