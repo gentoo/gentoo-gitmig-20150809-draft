@@ -1,6 +1,15 @@
 # ChangeLog for media-sound/jack-audio-connection-kit
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-audio-connection-kit/ChangeLog,v 1.14 2003/07/23 04:32:03 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-audio-connection-kit/ChangeLog,v 1.15 2003/07/24 12:21:51 torbenh Exp $
+
+*jack-audio-connection-kit-0.74.1-r1 (24 Jul 2003)
+
+  24 Jul 2003; torbenh <torbenh@gentoo.org> Manifest jack-audio-connection-kit-0.74.1-r1.ebuild jack-audio-connection-kit-0.74.1.ebuild files/digest-jack-audio-connection-kit-0.74.1-r1 :
+  Added some flag-o-matic and sed to specify -march=xxx for the build.
+  Fixed missing jack-tmpfs.
+  this file is a merge between jack-audio-connection-kit-0.71.2-r1.ebuild
+  and jack-audio-connection-kit-0.74.1.ebuild
+
 
 *jack-audio-connection-kit-0.74.1 (22 Jul 2003)
 
