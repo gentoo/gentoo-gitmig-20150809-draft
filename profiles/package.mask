@@ -158,10 +158,6 @@ media-libs/gst-plugins-cdparanoia
 # Beta version, and testing needed
 >=app-office/openoffice-1.1_beta2
 
-# <malverian@gentoo.org> 08 Jun 2003
-# Masked for testing
-=net-p2p/lmule-1.3.1
-
 # <malverian@gentoo.org> 07 Jun 2003
 # Development version of Anjuta for Gnome2
 # Masked for testing
