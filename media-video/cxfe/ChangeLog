@@ -1,6 +1,11 @@
 # ChangeLog for media-video/cxfe
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cxfe/ChangeLog,v 1.5 2004/11/28 15:51:03 arj Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cxfe/ChangeLog,v 1.6 2005/01/13 03:17:28 arj Exp $
+
+  13 Jan 2005; Anders Rune Jensen <arj@gentoo.org> cxfe-0.9.1.ebuild:
+  Tested and works on amd64. 3 Patches, one to fix OSD, another to 
+  make it compile on gcc 2.95 and the last to make xv the default output 
+  device.
 
 *cxfe-0.9.1 (28 Nov 2004)
 

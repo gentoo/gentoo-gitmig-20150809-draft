@@ -1,0 +1,20 @@
+--- ../cxfe/cxfe.c	2004-11-27 03:07:59.000000000 +0100
++++ cxfe.c	2005-01-13 11:52:28.346389672 +0100
+@@ -938,7 +938,7 @@
+   char              configfile[2048];
+   x11_visual_t      vis;
+   double            res_h, res_v;
+-  char             *vo_driver = "auto";
++  char             *vo_driver = "xv";
+   char             *ao_driver = "auto";
+   char             *mrl[1000];
+   char             *cda_param = "input.cdda_device";
+@@ -960,7 +960,7 @@
+   
+   
+   if(argc <= 1) {
+-    printf("Please specify at minimum a video driver and an mrl\n");
++    printf("Please specify a mrl\n");
+     printf("For help enter cxfe --help\n");
+     return 1;
+   }

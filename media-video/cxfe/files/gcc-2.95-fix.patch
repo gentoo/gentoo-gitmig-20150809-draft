@@ -1,0 +1,23 @@
+--- cxfe/cxfe.c	2004-11-27 03:07:59.000000000 +0100
++++ cxfe-0.91/cxfe.c	2004-11-30 11:32:48.230792288 +0100
+@@ -955,6 +955,9 @@
+   static            pthread_t lirc_thread;
+   static	    pthread_t osd_thread;
+   int               err;
++  int dvd_mrl = 0;
++  int vcd_mrl = 0;
++  int cd_mrl = 0;
+   /* default values */
+   fullscreen = 0;
+   
+@@ -1075,10 +1078,6 @@
+   xine_init(cxfe.xine);
+   
+     // check which mrl types was specified:
+-  int dvd_mrl = 0;
+-  int vcd_mrl = 0;
+-  int cd_mrl = 0;
+-  
+   for(i = 0; i < m; i++){
+      if (strstr(mrl[i], "dvd:"))
+        dvd_mrl = 1;
