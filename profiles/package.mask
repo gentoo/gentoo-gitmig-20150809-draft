@@ -21,6 +21,25 @@
 ##   End example
 ##
 
+# <hannes@gentoo.org> (08 Apr 2003)
+# mask until released
+=kde-base/arts-1.0.5b
+=kde-base/kdeaddons-3.0.5b
+=kde-base/kdeadmin-3.0.5b
+=kde-base/kdeartwork-3.0.5b
+=kde-base/kdebase-3.0.5b
+=kde-base/kdebindings-3.0.5b
+=kde-base/kdeedu-3.0.5b
+=kde-base/kdegmaes-3.0.5b
+=kde-base/kdegraphics-3.0.5b
+=kde-base/kdelibs-3.0.5b
+=kde-base/kdemultimedia-3.0.5b
+=kde-base/kdenetwork-3.0.5b
+=kde-base/kdepim-3.0.5b
+=kde-base/kdesdk-3.0.5b
+=kde-base/kdetoys-3.0.5b
+=kde-base/kdeutils-3.0.5b
+
 # <danarmak@gentoo.org> (08 Apr 2003)
 # mask until released. see -core message(s).
 =kde-base/kdelibs-3.1.1a
