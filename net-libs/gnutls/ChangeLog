@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/gnutls
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.37 2004/09/26 05:19:57 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.38 2004/12/23 13:39:10 dsd Exp $
+
+  23 Dec 2004; Daniel Drake <dsd@gentoo.org> gnutls-1.0.17.ebuild:
+  Fix compilation with included minilzo, bug 64622
 
   26 Sep 2004; Tom Gall <tgall@gentoo.org> gnutls-1.0.17.ebuild:
   stable on ppc64, bug #59231

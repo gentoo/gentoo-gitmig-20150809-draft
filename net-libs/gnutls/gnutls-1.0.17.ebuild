@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-1.0.17.ebuild,v 1.14 2004/11/09 22:26:53 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-1.0.17.ebuild,v 1.15 2004/12/23 13:39:10 dsd Exp $
 
 inherit eutils gnuconfig
 
@@ -51,7 +51,7 @@ src_compile() {
 
 	econf  \
 		`use_with zlib` \
-		--with-included-minilzo \
+		--with-included-lzo \
 		--with-included-libtasn1 \
 		${myconf} || die
 	emake || die
