@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Prakash Shetty <crux@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.4.0-r1.ebuild,v 1.2 2001/10/07 11:11:08 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.4.0-r1.ebuild,v 1.3 2001/10/12 01:07:55 hallski Exp $
 
 
 S=${WORKDIR}/${P}
@@ -29,9 +29,5 @@ src_compile() {
 }
 
 src_install () {
-
     try make DESTDIR=${D} install
-    exeinto /usr/bin/wm
-    doexe ${FILESDIR}/fvwm
-
 }
