@@ -1,3 +1,4 @@
+move dev-util/eclipse-sdk-bin dev-util/eclipse-sdk
 move app-emacs/wl app-emacs/wanderlust
 move app-misc/bluej dev-java/bluej
 move x11-themes/gtk-engines-mgicchikn x11-themes/gtk-engines-magicchicken
