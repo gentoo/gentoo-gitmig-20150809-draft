@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.834 2005/01/04 06:53:40 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.835 2005/01/04 18:43:20 luckyduck Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -156,6 +156,7 @@ dev-java/libgtk-java:gcj - Enable building with gcj
 dev-java/log4j:javamail - Build the SMTPAppender
 dev-java/log4j:jms - Build the JMSAppender
 dev-java/log4j:jmx - Build org.apace.log4j.jmx
+dev-java/mockobjects:source - Zip the sources and install them 
 dev-java/quartz:dbcp - Enable dbcp support
 dev-java/quartz:jboss - Enable jboss support
 dev-java/quartz:jmx - Enable jmx support
