@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws/sylpheed-claws-0.9.12-r1.ebuild,v 1.1 2004/08/09 10:57:16 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws/sylpheed-claws-0.9.12-r1.ebuild,v 1.2 2004/08/16 11:50:01 dragonheart Exp $
 
 IUSE="nls gnome xface dillo crypt spell imlib ssl ldap ipv6 pda clamav pdflib"
 
@@ -18,9 +18,9 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~amd64"
 
-COMMONDEPENDS="=x11-libs/gtk+-1.2*
+COMMONDEPEND="=x11-libs/gtk+-1.2*
 	pda? ( >=app-pda/jpilot-0.99 )
 	ssl? ( >=dev-libs/openssl-0.9.6b )
 	ldap? ( >=net-nds/openldap-2.0.7 )
@@ -33,10 +33,11 @@ COMMONDEPENDS="=x11-libs/gtk+-1.2*
 	pdflib? ( virtual/ghostscript )
 	nls? ( >=sys-devel/gettext-0.12 )"
 
-DEPEND="${COMMONDEPENDS}
+
+DEPEND="${COMMONDEPEND}
 	>=sys-apps/sed-4"
 
-RDEPEND="${COMMONDEPENDS}
+RDEPEND="${COMMONDEPEND}
 	app-misc/mime-types
 	net-mail/metamail
 	x11-misc/shared-mime-info"
@@ -75,13 +76,6 @@ src_compile() {
 	myconf="${myconf} `use_enable dillo dillo-viewer-plugin`"
 	myconf="${myconf} `use_enable clamav clamav-plugin`"
 	myconf="${myconf} `use_enable xface compface`"
-
-	echo config=${myconf}
-
-	sed -i -e 's:<gpgme\.h:<gpgme3.h:' ./src/passphrase.h ./src/rfc2015.c \
-		./src/pgpmime.c ./src/select-keys.h ./src/main.c ./src/sgpgme.c \
-		./src/sgpgme.h
-
 
 	export GPGME_CONFIG=${ROOT}/usr/bin/gpgme3-config
 	econf \

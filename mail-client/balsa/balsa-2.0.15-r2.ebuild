@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/balsa/balsa-2.0.15-r2.ebuild,v 1.1 2004/08/08 03:16:07 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/balsa/balsa-2.0.15-r2.ebuild,v 1.2 2004/08/16 11:47:19 dragonheart Exp $
 
 inherit gnome2 eutils
 
@@ -40,25 +40,24 @@ src_unpack()
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/balsa-gtk+-2.4-deprecation-fix.patch
-
-	if use crypt;
-	then
-		epatch ${FILESDIR}/gpgme3-autoconf.patch
-		sed -i -e s:gpgme\.h:gpgme3.h: libbalsa/rfc3156.c \
-			libbalsa/rfc3156.h src/main.c
-	fi
 }
 
 src_compile() {
 	local myconf
 
-	use crypt && autoconf
+	export GPGME_CONFIG=${ROOT}/usr/bin/gpgme3-config
+	if [ -x ${ROOT}/usr/bin/gpg ];
+	then
+		export GPG_PATH=${ROOT}/usr/bin/gpg
+	elif [ -x ${ROOT}/usr/bin/gpg2 ];
+	then
+		export GPG_PATH=${ROOT}/usr/bin/gpg2
+	fi
 
 	libmutt/configure \
 		--prefix=/usr \
 		--host=${CHOST} \
 		--with-mailpath=/var/mail || die "configure libmutt failed"
-
 
 	# threads diabled because of 17079
 	econf \

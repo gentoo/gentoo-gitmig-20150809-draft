@@ -1,6 +1,11 @@
 # ChangeLog for mail-client/balsa
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/balsa/ChangeLog,v 1.7 2004/08/09 20:25:16 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/balsa/ChangeLog,v 1.8 2004/08/16 11:47:19 dragonheart Exp $
+
+  16 Aug 2004; Daniel Black <dragonheart@gentoo.org>
+  -files/gpgme3-autoconf.patch, balsa-2.0.15-r2.ebuild:
+  Have modified gpgme-0.3.14-r1 a bit to make it easier. As a result this needed
+  to changed
 
 *balsa-1.4.3 (10 Aug 2004)
 
