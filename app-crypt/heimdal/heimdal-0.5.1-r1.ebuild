@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/heimdal-0.5.1-r1.ebuild,v 1.1 2002/12/06 06:13:41 kain Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/heimdal-0.5.1-r1.ebuild,v 1.2 2002/12/06 20:07:08 kain Exp $
 
 DESCRIPTION="Kerberos 5 implementation from KTH"
 SRC_URI="ftp://ftp.pdc.kth.se/pub/${PN}/src/${P}.tar.gz"
@@ -9,13 +9,19 @@ HOMEPAGE="http://www.pdc.kth.se/heimdal/"
 SLOT="0"
 LICENSE="as-is"
 KEYWORDS="~x86 ~sparc ~sparc64 ~ppc"
-IUSE="ssl ldap berkdb ipv6"
+IUSE="ssl ldap berkdb ipv6 krb4"
 PROVIDES="virtual/krb5"
 
-DEPEND=">=app-crypt/kth-krb-1.2.1
+inherit libtool
+
+DEPEND="
+	krb4? ( >=app-crypt/kth-krb-1.2.1 )
 	ssl? ( dev-libs/openssl )
-	ldap? ( net-nds/openldap )
 	berkdb? ( sys-libs/db )"
+	# ldap? ( net-nds/openldap )
+	# With this enabled, we create a multiple stage
+	# circular dependency with USE="ldap kerberos"
+	# -- Kain <kain@kain.org> 05 Dec 2002
 
 src_unpack() {
 	unpack ${A}
@@ -26,18 +32,27 @@ src_unpack() {
 }
 
 src_compile() {
+
+	elibtoolize
+	
+	aclocal -I cf || die "configure problem"
+	autoheader || die "configure problem"
+	automake -a || die "configure problem"
+	autoconf || die "configure problem"
+
 	local myconf
 
 	use ssl && myconf="--with-openssl=/usr" || myconf="--without-openssl"
 
-	use ldap && myconf="${myconf} --with-open-ldap=/usr"
+	#use ldap && myconf="${myconf} --with-open-ldap=/usr"
 
 	use ipv6 || myconf="${myconf} --without-ipv6"
 
 	use berkdb || myconf="${myconf} --without-berkely-db"
+	use krb4 && myconf="${myconf} --with-krb4=/usr/athena --disable-shared" \
+		|| myconf="${myconf} --enable-shared"
 
-	econf --with-krb4=/usr/athena \
-		${myconf}
+	econf ${myconf}
 
 	emake || die
 }
@@ -51,8 +66,8 @@ src_install() {
 		localstatedir=${D}/var/lib \
 		install || die
 
-	dodir /etc/env.d
-	cp ${FILESDIR}/01heimdal ${D}/etc/env.d
+	#dodir /etc/env.d
+	#cp ${FILESDIR}/01heimdal ${D}/etc/env.d
 
 	dodoc COPYRIGHT ChangeLog README NEWS PROBLEMS TODO
 

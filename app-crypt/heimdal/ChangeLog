@@ -1,11 +1,13 @@
 # ChangeLog for app-crypt/heimdal
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/ChangeLog,v 1.5 2002/12/06 06:13:41 kain Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/ChangeLog,v 1.6 2002/12/06 20:07:08 kain Exp $
 
-*heimdal-0.5.1-r1 (05 Dec 2002)
+*heimdal-0.5.1-r1 (06 Dec 2002)
 
-  05 Dec 2002; Kain X <kain@kain.org> heimdal-0.5.1-r1.ebuild :
-  Initial setup for new virtual/krb5 structure
+  06 Dec 2002; Kain X <kain@kain.org> heimdal-0.5.1-r1.ebuild :
+  Initial setup for new virtual/krb5 structure.  Shared libraries are also now
+  built, but krb4 is not linked in in this case.  If you really want krb4, you
+  can say USE="krb4" emerge heimdal.  This will be improved in later releases.
 
 *heimdal-0.5.1 (26 Oct 2002)
 
