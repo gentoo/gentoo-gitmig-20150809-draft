@@ -1,0 +1,10 @@
+# ChangeLog for app-vim/cmdalias
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/cmdalias/ChangeLog,v 1.1 2004/07/16 00:31:37 ciaranm Exp $
+
+*cmdalias-1.0 (16 Jul 2004)
+
+  16 Jul 2004; Ciaran McCreesh <ciaranm@gentoo.org> +metadata.xml,
+  +cmdalias-1.0.ebuild:
+  New ebuild. We'll be needing this for a few other app-vim plugins shortly.
+
