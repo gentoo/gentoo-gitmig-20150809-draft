@@ -1,0 +1,13 @@
+# ChangeLog for dev-tex/g-brief
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/g-brief/ChangeLog,v 1.1 2003/07/24 04:48:38 pylon Exp $
+
+*g-brief-4.0.1 (24 Jul 2003)
+
+  24 Jul 2003; Lars Weiler <pylon@gentoo.org> g-brief-4.0.1.ebuild:
+  Initial creation.
+  
+  g-brief will help you writing formless letters in German and English. It
+  accepts a lot of additional commands for address, phone, internet-availability
+  etc.
+
