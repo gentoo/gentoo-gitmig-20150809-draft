@@ -1,6 +1,10 @@
 # ChangeLog for app-cdr/cdrdao
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/ChangeLog,v 1.21 2003/11/19 18:50:01 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/ChangeLog,v 1.22 2003/11/21 19:13:23 mholzer Exp $
+
+  21 Nov 2003; Martin Holzer <mholzer@gentoo.org> cdrdao-1.1.5-r1.ebuild,
+  cdrdao-1.1.7-r1.ebuild, cdrdao-1.1.7-r2.ebuild, cdrdao-1.1.7.ebuild:
+  Fixing Dep. Closes #34036.
 
   19 Nov 2003; Martin Holzer <mholzer@gentoo.org> cdrdao-1.1.5-r1.ebuild,
   cdrdao-1.1.7-r1.ebuild, cdrdao-1.1.7-r2.ebuild, cdrdao-1.1.7.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/cdrdao-1.1.5-r1.ebuild,v 1.26 2003/11/20 16:10:34 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/cdrdao-1.1.5-r1.ebuild,v 1.27 2003/11/21 19:13:23 mholzer Exp $
 
 inherit flag-o-matic eutils
 strip-flags -funroll-loops
@@ -13,12 +13,12 @@ RESTRICT="nomirror"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ppc sparc "
-IUSE="gnome perl"
+IUSE="gnome perl oggvorbis"
 
 RDEPEND="gnome? ( >=gnome-base/gnome-libs-1.4.1.2-r1
 	<dev-cpp/gtkmm-1.3.0
 	>=dev-cpp/gnomemm-1.1.17 )
-	x86? ( perl? ( dev-perl/libvorbis-perl ) )"
+	x86? ( perl? ( oggvorbis? ( dev-perl/libvorbis-perl ) ) )"
 
 DEPEND=">=dev-util/pccts-1.33.24-r1
 	${RDEPEND}"
