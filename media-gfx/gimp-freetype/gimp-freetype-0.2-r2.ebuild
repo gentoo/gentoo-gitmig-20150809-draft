@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-freetype/gimp-freetype-0.2-r2.ebuild,v 1.5 2002/10/05 05:39:15 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-freetype/gimp-freetype-0.2-r2.ebuild,v 1.6 2002/10/18 20:34:09 vapier Exp $
 
 IUSE="nls"
 
@@ -15,18 +15,15 @@ KEYWORDS="x86"
 
 DEPEND=">=media-gfx/gimp-1.2.3-r1 
 	>=media-libs/freetype-2.0.1"
-	
 RDEPEND="nls? ( sys-devel/gettext )"
 
-
 src_compile() {
-	
 	local myconf
 	use nls || myconf="${myconf} --disable-nls"
 
 	econf \
-	--sysconfdir=/etc/gimp/1.2/	\
-	--with-gimp-exec-prefix=/usr \
+		--sysconfdir=/etc/gimp/1.2/ \
+		--with-gimp-exec-prefix=/usr \
 	${myconf} || die
 
 	emake || die

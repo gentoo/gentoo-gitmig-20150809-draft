@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gliv/gliv-1.6.ebuild,v 1.1 2002/10/17 14:17:21 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gliv/gliv-1.6.ebuild,v 1.2 2002/10/18 20:34:09 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="An image viewer that uses OpenGL"
@@ -30,10 +30,9 @@ DEPEND="x11-libs/gtk+
 	x11-libs/gtkglarea
 	virtual/opengl
 	>=dev-util/pkgconfig-0.12.0"
-
+RDEPEND="${DEPEND}"
 
 src_compile() {
-
 	local myconf=""
 
 	# Dont use gtk+-2.0 if ! gtkglarea >= 1.99.0
@@ -51,9 +50,7 @@ src_compile() {
 }
 
 src_install() {
-
 	einstall || die
     
-    dodoc COPYING README NEWS THANKS
+	dodoc COPYING README NEWS THANKS
 }
-
