@@ -1,12 +1,13 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/openglad/openglad-0.98.ebuild,v 1.6 2004/06/24 23:16:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/openglad/openglad-0.98.ebuild,v 1.7 2005/03/15 20:39:51 wolf31o2 Exp $
 
 inherit eutils games
 
 DESCRIPTION="An SDL clone of Gladiator, a classic RPG game"
 HOMEPAGE="http://snowstorm.sourceforge.net/"
-SRC_URI="mirror://sourceforge/snowstorm/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/snowstorm/${P}.tar.gz
+	mirror://gentoo/${PN}.png"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -39,4 +40,7 @@ src_install() {
 		|| die "make install failed"
 	prepalldocs
 	prepgamesdirs
+
+	doicon ${DISTDIR}/${PN}.png
+	make_desktop_entry openglad "OpenGladiator" ${PN}.png
 }
