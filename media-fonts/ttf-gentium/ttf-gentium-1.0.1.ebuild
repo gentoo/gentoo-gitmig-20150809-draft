@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/ttf-gentium/ttf-gentium-1.0.1.ebuild,v 1.1 2004/07/05 06:51:09 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/ttf-gentium/ttf-gentium-1.0.1.ebuild,v 1.2 2004/07/29 19:20:51 kugelfang Exp $
 
 inherit font
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://gentoo/${MY_P}.tar.bz2"
 #SRC_URI="http://scripts.sil.org/cms/scripts/render_download.php?site_id=nrsi&format=file&media_id=Gentium_101_LT&_sc=1"
 
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~alpha"
+KEYWORDS="~x86 ~ppc ~alpha ~amd64"
 IUSE="X"
 
 DEPEND="X? ( virtual/x11 )"
