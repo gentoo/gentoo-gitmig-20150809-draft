@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/flac-1.1.0.ebuild,v 1.9 2003/06/20 17:10:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/flac-1.1.0.ebuild,v 1.10 2003/07/22 23:03:27 gmsoft Exp $
 
 inherit libtool
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://flac.sourceforge.net/"
 
 SLOT="0"
 LICENSE="GPL-2 LGPL-2"
-KEYWORDS="x86 ppc ~sparc alpha"
+KEYWORDS="x86 ppc ~sparc alpha hppa"
 IUSE="sse xmms X"
 
 RDEPEND="virtual/glibc
