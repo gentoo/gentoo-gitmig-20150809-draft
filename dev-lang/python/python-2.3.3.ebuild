@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.3.3.ebuild,v 1.12 2004/02/06 20:49:36 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.3.3.ebuild,v 1.13 2004/02/07 20:42:34 vapier Exp $
 
 inherit flag-o-matic python
 
@@ -18,7 +18,7 @@ IUSE="ncurses gdbm ssl readline tcltk berkdb bootstrap ipv6 build ucs2 doc"
 LICENSE="PSF-2.2"
 SLOT="2.3"
 
-KEYWORDS="x86 ~ppc sparc hppa"
+KEYWORDS="x86 ~ppc sparc hppa ~amd64"
 # "~alpha ~mips ~arm"
 
 DEPEND="virtual/glibc
