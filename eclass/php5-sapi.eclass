@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php5-sapi.eclass,v 1.38 2005/02/03 21:16:52 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php5-sapi.eclass,v 1.39 2005/02/21 07:31:25 vapier Exp $
 #
 # eclass/php5-sapi.eclass
 #		Eclass for building different php5 SAPI instances
@@ -59,7 +59,7 @@ DEPEND="$DEPEND
 	recode? ( app-text/recode )
 	sharedmem? ( dev-libs/mm )
 	simplexml? ( dev-libs/libxml2 )
-	snmp? ( virtual/snmp )
+	snmp? ( net-analyzer/net-snmp )
 	soap? ( dev-libs/libxml2 )
 	spell? ( app-text/aspell )
 	sqlite? ( =dev-db/sqlite-2* )
