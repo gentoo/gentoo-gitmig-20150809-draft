@@ -1,20 +1,36 @@
-Index: Kinput2.conf
-===================================================================
-RCS file: /var/lib/cvs/kinput2/Kinput2.conf,v
-retrieving revision 1.1.1.1
-diff -u -r1.1.1.1 Kinput2.conf
---- Kinput2.conf	18 May 2002 03:23:46 -0000	1.1.1.1
-+++ Kinput2.conf	18 May 2002 03:27:57 -0000
-@@ -18,7 +18,7 @@
+--- Kinput2.conf.orig	Sun Jun 30 01:28:48 2002
++++ Kinput2.conf	Sun Jun 30 17:26:40 2002
+@@ -17,8 +17,8 @@
+ 
  /* #define UseWnn */	/* define if you are going to use Wnn (v4, v6 or v7) */
  /* #define UseWnn6 */	/* define if you are going to use Wnn6 or above */
- #define UseCanna	/* define if you are going to use Canna */
+-#define UseCanna	/* define if you are going to use Canna */
 -#define UseSj3		/* define if you are going to use Sj3 */
++/* #define UseCanna */	/* define if you are going to use Canna */
 +/* #define UseSj3 */	/* define if you are going to use Sj3 */
  /* #define UseAtok */	/* define if you are going to use Atok */
  
  
-@@ -60,9 +60,9 @@
+@@ -34,7 +34,7 @@
+  * You have to define WnnLibDir if Wnn4 configuration files
+  * are not installed in /usr/local/lib/wnn (which is the default).
+  */
+-/* #define WnnLibDir /some/peculiar/directory/wnn */
++#define WnnLibDir /usr/lib/wnn 
+ 
+ /* for convenience.. */
+ #if defined(UseWnn6) && !defined(UseWnn)
+@@ -52,17 +52,17 @@
+  * WnnLibDir above.
+  */
+ XCOMM use installed header files
+-XCOMM WNNINCDIR = /usr/X11R6/include/wnn
++WNNINCDIR = /usr/include/wnn
+ XCOMM use installed library
+-XCOMM WNNLIB = -lwnn
++WNNLIB = -lwnn
+ 
+ /*
   * Or, use library in the source tree..
   */
  XCOMM use library in the source tree
@@ -27,13 +43,15 @@ diff -u -r1.1.1.1 Kinput2.conf
  
  
  XCOMM Canna configuration
-@@ -79,16 +79,16 @@
+@@ -78,17 +78,17 @@
+  * If you have already installed Canna header files and libraries..
   */
  XCOMM use installed headers/libraries
- XCOMM CANNAINSTDIR = /usr/local/canna
+-XCOMM CANNAINSTDIR = /usr/local/canna
 -XCOMM CANNASRC = $(CANNAINSTDIR)/include
 -XCOMM CANNALIB = -lcanna16
-+CANNASRC = /usr/include
++CANNAINSTDIR = /usr
++CANNASRC = $(CANNAINSTDIR)/include
 +CANNALIB = -lcanna16
  
  /*

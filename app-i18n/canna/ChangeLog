@@ -1,6 +1,12 @@
 # ChangeLog for <CATEGORY>/<PACKAGE_NAME>
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/canna/ChangeLog,v 1.1 2002/06/25 16:01:22 stubear Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/canna/ChangeLog,v 1.2 2002/07/01 15:19:14 stubear Exp $
+
+*canna-3.5_beta-r2 (01 Jul 2002)
+
+  01 Jul 2002; Stuart Bouyer <stubear@gentoo.org> canna-3.5_beta-r2.ebuild:
+  Changed from emake to make as the emake failed to build the libs on my
+  system. make is a little slower, but safer.
 
 *canna-3.5_beta2-r1 (02 Jun 2002)
 

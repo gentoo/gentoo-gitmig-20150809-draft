@@ -1,0 +1,19 @@
+#!/sbin/runscript
+# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License, v2 or later
+# /space/gentoo/cvsroot/gentoo-x86/app-misc/canna/files/3.5_beta2/canna
+
+# CANNASERVER_OPTS is defined in /etc/conf.d/canna
+
+start() {
+	ebegin "Starting canna"
+	/usr/sbin/cannaserver
+	eend $? "Failed to start canna"
+}
+
+stop() {
+	ebegin "Stopping canna"
+	/usr/bin/cannakill
+	eend $? "Failed to stop canna"
+}
+
