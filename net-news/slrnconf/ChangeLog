@@ -1,6 +1,9 @@
 # ChangeLog for net-news/slrnconf
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/slrnconf/ChangeLog,v 1.5 2004/08/08 00:28:52 slarti Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-news/slrnconf/ChangeLog,v 1.6 2005/01/17 20:12:31 swegener Exp $
+
+  17 Jan 2005; Sven Wegener <swegener@gentoo.org> slrnconf-0.8.4.ebuild:
+  Dependency update. Moved net-news/slrn to net-nntp/slrn.
 
   08 Aug 2004; Tom Martin <slarti@gentoo.org> slrnconf-0.8.4.ebuild:
   Typo in DESCRIPTION: configuation -> configuration. Bug 59717.

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/slrnconf/slrnconf-0.8.4.ebuild,v 1.4 2004/08/08 00:28:52 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/slrnconf/slrnconf-0.8.4.ebuild,v 1.5 2005/01/17 20:12:31 swegener Exp $
 
 DESCRIPTION="slrnconf is a graphical configuration utility for the newsreader slrn"
 HOMEPAGE="http://home.arcor.de/kaffeetisch/slrnconf.html"
@@ -14,7 +14,7 @@ IUSE=""
 RDEPEND="dev-lang/perl
 	dev-perl/gtk2-perl
 	dev-perl/Parse-RecDescent
-	net-news/slrn"
+	net-nntp/slrn"
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4"
 
