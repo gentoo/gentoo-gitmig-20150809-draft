@@ -1,8 +1,13 @@
 # ChangeLog for sys-kernel/sparc-sources
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/sparc-sources/ChangeLog,v 1.12 2003/02/02 23:28:25 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/sparc-sources/ChangeLog,v 1.13 2003/02/11 01:34:05 joker Exp $
 
-*sparc-sources-2.4.20-r2 (03 Feb 2003)
+  11 Feb 2003; Christian Birchinger <joker@gentoo.org>:
+  sparc-sources-2.4.20-r3.ebuild :
+
+  Changed KEYWORDS from ~sparc to sparc
+
+*sparc-sources-2.4.20-r3 (03 Feb 2003)
 
   03 Feb 2003; Christian Birchinger <joker@gentoo.org>:
   sparc-sources-2.4.20-r3.ebuild files/digest-sparc-sources-2.4.20-r3 :
