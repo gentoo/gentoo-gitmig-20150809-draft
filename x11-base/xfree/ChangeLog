@@ -1,6 +1,15 @@
 # ChangeLog for x11-base/xfree
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.283 2004/02/10 17:30:02 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.284 2004/02/14 13:06:06 seemant Exp $
+
+*xfree-4.2.1-r4 (14 Feb 2004)
+
+  14 Feb 2004; Seemant Kulleen <seemant@gentoo.org> xfree-4.2.1-r4.ebuild,
+  xfree-4.3.0-r5.ebuild:
+  Buffer overflow fix for 4.3.0 and 4.2.1. See:
+  http://www.securityfocus.com/archive/1/353692/2004-02-10/2004-02-16/0 Font
+  Information File Buffer Overflow *PART 2* Thanks to everyone who tested
+  this.
 
   10 Feb 2004; Donnie Berkholz <spyderous@gentoo.org>; :
   The buffer overflow prompting the last version bump was CAN-2004-0083.
