@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/groff
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/ChangeLog,v 1.12 2003/01/08 17:53:25 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/ChangeLog,v 1.13 2003/02/07 20:40:26 gmsoft Exp $
+
+  07 Feb 2003; Guy Martin <gmsoft@gentoo.org> groff-1.18.1.ebuild :
+  Added hppa to keywords.
 
   08 Jan 2003; Martin Schlemmer <azarah@gentoo.org> groff-1.18-r3.ebuild :
   Mark stable for x86.

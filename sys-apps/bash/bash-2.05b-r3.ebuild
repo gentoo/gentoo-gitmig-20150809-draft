@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/bash/bash-2.05b-r3.ebuild,v 1.16 2003/01/19 16:13:04 bjb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/bash/bash-2.05b-r3.ebuild,v 1.17 2003/02/07 20:38:08 gmsoft Exp $
 
 inherit eutils flag-o-matic
 
@@ -15,7 +15,7 @@ HOMEPAGE="http://www.gnu.org/software/bash/bash.html"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc ~sparc alpha ~mips"
+KEYWORDS="x86 ~ppc ~sparc alpha ~mips hppa"
 IUSE="nls build"
 
 DEPEND=">=sys-libs/ncurses-5.2-r2"
