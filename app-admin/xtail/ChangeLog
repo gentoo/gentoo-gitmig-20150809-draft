@@ -1,0 +1,13 @@
+# ChangeLog for app-admin/xtail
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/app-admin/xtail/ChangeLog,v 1.1 2002/04/21 22:37:00 mkennedy Exp $
+
+*xtail-2.1 (21 Apr 2002)
+
+  21 Apr 2002; Matthew Kennedy <mkennedy@gentoo.org> ChangeLog,
+  xtail-2.1.ebuild, files/digest-xtail-2.1 :
+
+  New ebuild.
+  
+  xtail watches the growth of files. It's like running a "tail -f" on
+  a bunch of files at once.
