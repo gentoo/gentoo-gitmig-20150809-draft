@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/aide/aide-0.9.ebuild,v 1.10 2003/06/29 15:24:07 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/aide/aide-0.9.ebuild,v 1.11 2003/07/12 21:33:20 aliz Exp $
 
 inherit eutils
 
@@ -53,6 +53,6 @@ src_install() {
 	insinto /etc/aide
 	doins doc/aide.conf
 
-	dodoc AUTHORS NEWS README 
+	dodoc AUTHORS NEWS README
 	dohtml doc/manual.html
 }

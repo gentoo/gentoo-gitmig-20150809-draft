@@ -1,8 +1,9 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/amanda/amanda-2.4.4-r1.ebuild,v 1.3 2003/07/10 21:23:38 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/amanda/amanda-2.4.4-r1.ebuild,v 1.4 2003/07/12 21:33:20 aliz Exp $
 
-inherit eutils 
+inherit eutils
+
 DESCRIPTION="The Advanced Maryland Automatic Network Disk Archiver"
 HOMEPAGE="http://www.amanda.org/"
 SRC_URI="mirror://sourceforge/amanda/${P}.tar.gz"
@@ -40,8 +41,8 @@ TMPENVFILE="${MYTMPDIR}/${ENVDFILE}"
 amanda_variable_setup() {
 
 	# Setting vars
-	local currentamanda 
-	
+	local currentamanda
+
 	# Grab the current settings
 	currentamanda="$(set | egrep "^AMANDA_" | xargs)"
 	use debug && einfo "Current settings: ${currentamanda}"
@@ -117,9 +118,9 @@ src_compile() {
 	einfo "Using '${AMANDA_DBMODE}' style database"
 	myconf="${myconf} --with-db=${AMANDA_DBMODE}"
 	
-    einfo "Using ${AMANDA_SERVER_TAPE} for tape server."
+	einfo "Using ${AMANDA_SERVER_TAPE} for tape server."
 	myconf="${myconf} --with-tape-server=${AMANDA_SERVER_TAPE}"
-    einfo "Using ${AMANDA_SERVER_INDEX} for index server."
+	einfo "Using ${AMANDA_SERVER_INDEX} for index server."
 	myconf="${myconf} --with-index-server=${AMANDA_SERVER_TAPE}"
 	einfo "Using ${AMANDA_USER_NAME} for amanda user."
 	myconf="${myconf} --with-user=${AMANDA_USER_NAME}"
@@ -138,17 +139,17 @@ src_compile() {
 		eerror "AMANDA_PORTS_BOTH."
 		die "Bad port setup!"
 	fi
-	if [ -n "${AMANDA_PORTS_UDP}" ]; then 
-		einfo "Using UDP ports ${AMANDA_PORTS_UDP/,/-}" 
-		myconf="${myconf} --with-udpportrange=${AMANDA_PORTS_UDP}" 
+	if [ -n "${AMANDA_PORTS_UDP}" ]; then
+		einfo "Using UDP ports ${AMANDA_PORTS_UDP/,/-}"
+		myconf="${myconf} --with-udpportrange=${AMANDA_PORTS_UDP}"
 	fi
-	if [ -n "${AMANDA_PORTS_TCP}" ]; then 
-		einfo "Using TCP ports ${AMANDA_PORTS_TCP/,/-}" 
-		myconf="${myconf} --with-tcpportrange=${AMANDA_PORTS_TCP}" 
+	if [ -n "${AMANDA_PORTS_TCP}" ]; then
+		einfo "Using TCP ports ${AMANDA_PORTS_TCP/,/-}"
+		myconf="${myconf} --with-tcpportrange=${AMANDA_PORTS_TCP}"
 	fi
-	if [ -n "${AMANDA_PORTS}" ]; then 
-		einfo "Using ports ${AMANDA_PORTS/,/-}" 
-		myconf="${myconf} --with-portrange=${AMANDA_PORTS}" 
+	if [ -n "${AMANDA_PORTS}" ]; then
+		einfo "Using ports ${AMANDA_PORTS/,/-}"
+		myconf="${myconf} --with-portrange=${AMANDA_PORTS}"
 	fi
 
 	# Extras
@@ -184,8 +185,8 @@ src_install() {
 	source ${TMPENVFILE}
 	
 	einfo "Doing stock install"
-    make DESTDIR=${D} install || die
-	
+	make DESTDIR=${D} install || die
+
 	# Prepare our custom files
 	einfo "Building custom configuration files"
 	cp ${FILESDIR}/amanda-* ${MYFILESDIR}
@@ -239,45 +240,45 @@ src_install() {
 	# Labels
 	einfo "Installing labels"
 	docinto labels
-	dodoc ${S}/example/3hole.ps 
+	dodoc ${S}/example/3hole.ps
 	dodoc ${S}/example/8.5x11.ps
 	dodoc ${S}/example/DIN-A4.ps
-	dodoc ${S}/example/DLT.ps 
-	dodoc ${S}/example/EXB-8500.ps 
-	dodoc ${S}/example/HP-DAT.ps 
+	dodoc ${S}/example/DLT.ps
+	dodoc ${S}/example/EXB-8500.ps
+	dodoc ${S}/example/HP-DAT.ps
 	# Amanda example configs
 	einfo "Installing example configurations"
 	docinto example
-    dodoc ${S}/example/*
+	dodoc ${S}/example/*
 	docinto example1
 	newdoc ${FILESDIR}/example_amanda.conf amanda.conf
 	newdoc ${FILESDIR}/example_disklist disklist
 	newdoc ${FILESDIR}/example_global.conf global.conf
 	docinto example2
-    newdoc ${S}/example/amanda.conf amanda.conf
-    newdoc ${S}/example/disklist disklist
+	newdoc ${S}/example/amanda.conf amanda.conf
+	newdoc ${S}/example/disklist disklist
 	# Compress it all
 	prepalldocs
 
 	# Just make sure it exists for XFS to work...
 	use xfs && keepdir ${D}/var/xfsdump/inventory
 
-    insinto /etc/amanda
+	insinto /etc/amanda
 	einfo "Installing .amandahosts File for ${AMANDA_USER_NAME} user"
-    newins ${MYFILESDIR}/amanda-amandahosts amandahosts
+	newins ${MYFILESDIR}/amanda-amandahosts amandahosts
 	dosym /etc/amanda/amandahosts ${AMANDA_USER_HOMEDIR}/.amandahosts
 	insinto ${AMANDA_USER_HOMEDIR}
-    einfo "Installing .profile for ${AMANDA_USER_NAME} user"
+	einfo "Installing .profile for ${AMANDA_USER_NAME} user"
 	newins ${MYFILESDIR}/amanda-profile .profile
 
-    einfo "Installing Sample Daily Cron Job for Amanda"
+	einfo "Installing Sample Daily Cron Job for Amanda"
 	CRONDIR=/etc/cron.daily/
-    exeinto ${CRONDIR}
-    newexe ${MYFILESDIR}/amanda-cron amanda
+	exeinto ${CRONDIR}
+	newexe ${MYFILESDIR}/amanda-cron amanda
 	# Not excetuable by default
 	fperms 644 ${CRONDIR}/amanda
 	
-    insinto /etc/amanda/${AMANDA_CONFIG_NAME}
+	insinto /etc/amanda/${AMANDA_CONFIG_NAME}
 	keepdir /etc/amanda
 	keepdir /etc/amanda/${AMANDA_CONFIG_NAME}
 

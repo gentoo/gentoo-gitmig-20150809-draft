@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/amanda/amanda-2.4.4.ebuild,v 1.3 2003/06/26 22:04:32 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/amanda/amanda-2.4.4.ebuild,v 1.4 2003/07/12 21:33:20 aliz Exp $
 
 inherit eutils 
 DESCRIPTION="The Advanced Maryland Automatic Network Disk Archiver"
@@ -64,9 +64,9 @@ src_compile() {
 	einfo "Using '${AMANDA_DBMODE}' style database"
 	myconf="${myconf} --with-db=${AMANDA_DBMODE}"
 	
-    einfo "Using ${AMANDA_SERVER_TAPE} for tape server."
+	einfo "Using ${AMANDA_SERVER_TAPE} for tape server."
 	myconf="${myconf} --with-tape-server=${AMANDA_SERVER_TAPE}"
-    einfo "Using ${AMANDA_SERVER_INDEX} for index server."
+	einfo "Using ${AMANDA_SERVER_INDEX} for index server."
 	myconf="${myconf} --with-index-server=${AMANDA_SERVER_TAPE}"
 	einfo "Using ${AMANDA_USER_NAME} for amanda user."
 	myconf="${myconf} --with-user=${AMANDA_USER_NAME}"
@@ -112,9 +112,9 @@ src_compile() {
 	econf ${myconf} || die "econf failed!"
 	emake || die "emake failed!"
 
-    # Compile the tapetype program too
-    cd tape-src
-    emake tapetype || "emake tapetype failed!"
+	# Compile the tapetype program too
+	cd tape-src
+	emake tapetype || "emake tapetype failed!"
 
 	dosed "s,/usr/local/bin/perl,/usr/bin/perl," ${S}/contrib/set_prod_link.pl
 	perl ${S}/contrib/set_prod_link.pl
@@ -123,15 +123,14 @@ src_compile() {
 
 
 src_install() {
-
-    make DESTDIR=${D} install || die
+	make DESTDIR=${D} install || die
 
 	into /usr
-    newsbin tape-src/tapetype tapetype
+	newsbin tape-src/tapetype tapetype
 
-    dodoc AUTHORS C* INSTALL NEWS README
+	dodoc AUTHORS C* INSTALL NEWS README
 	docinto example
-    dodoc ${S}/example/*
+	dodoc ${S}/example/*
 	docinto docs
 	dodoc ${S}/docs/*
 	prepalldocs
@@ -141,20 +140,20 @@ src_install() {
 		mkdir -p ${D}/var/xfsdump/inventory
 	fi
 
-    # einfo "Installing Amandahosts File for ${AMANDA_SERVER}"
-    insinto ${AMANDA_USER_HOMEDIR}
-    newins ${FILESDIR}/amanda-amandahosts .amandahosts
-    dosed "s/__AMANDA_SERVER__/${AMANDA_SERVER}/" ${AMANDA_USER_HOMEDIR}/.amandahosts
+	# einfo "Installing Amandahosts File for ${AMANDA_SERVER}"
+	insinto ${AMANDA_USER_HOMEDIR}
+	newins ${FILESDIR}/amanda-amandahosts .amandahosts
+	dosed "s/__AMANDA_SERVER__/${AMANDA_SERVER}/" ${AMANDA_USER_HOMEDIR}/.amandahosts
 	newins ${FILESDIR}/amanda-profile .profile
 
-    # einfo "Installing Sample Daily Cron Job for Amanda"
+	# einfo "Installing Sample Daily Cron Job for Amanda"
 	CRONDIR=/etc/cron.daily/
-    exeinto ${CDRONDIR}
-    newexe ${FILESDIR}/amanda-cron amanda
+	exeinto ${CDRONDIR}
+	newexe ${FILESDIR}/amanda-cron amanda
 	dosed "s,__AMANDA_CONFIG_NAME__,${AMANDA_CONFIG_NAME},g" ${CRONDIR}/amanda
 	fperms 644 ${CRONDIR}/amanda
 
-    insinto /etc/amanda/lbl
+	insinto /etc/amanda/lbl
 	newins ${S}/example/3hole.ps 3hole.ps
 	newins ${S}/example/8.5x11.ps 8.5x11.ps
 	newins ${S}/example/DIN-A4.ps DIN-A4.ps
@@ -168,16 +167,16 @@ src_install() {
 	newins ${FILESDIR}/example_disklist disklist
 	newins ${FILESDIR}/example_global.conf global.conf
 	insinto /etc/amanda/example2
-    newins ${S}/example/amanda.conf amanda.conf
-    newins ${S}/example/disklist disklist
+	newins ${S}/example/amanda.conf amanda.conf
+	newins ${S}/example/disklist disklist
 	
 	# einfo "Installing Sample Daily Backup Configuration"
-    insinto /etc/amanda/${AMANDA_CONFIG_NAME}
-    fowners ${AMANDA_USER_NAME}.${AMANDA_GROUP_NAME} /etc/amanda
-    fowners ${AMANDA_USER_NAME}.${AMANDA_GROUP_NAME} /etc/amanda/${AMANDA_CONFIG_NAME}
-    fowners ${AMANDA_USER_NAME}.${AMANDA_GROUP_NAME} /etc/amanda/${AMANDA_CONFIG_NAME}/*
-    fperms 700 /etc/amanda
-    fperms 700 /etc/amanda/${AMANDA_CONFIG_NAME}
+	insinto /etc/amanda/${AMANDA_CONFIG_NAME}
+	fowners ${AMANDA_USER_NAME}.${AMANDA_GROUP_NAME} /etc/amanda
+	fowners ${AMANDA_USER_NAME}.${AMANDA_GROUP_NAME} /etc/amanda/${AMANDA_CONFIG_NAME}
+	fowners ${AMANDA_USER_NAME}.${AMANDA_GROUP_NAME} /etc/amanda/${AMANDA_CONFIG_NAME}/*
+	fperms 700 /etc/amanda
+	fperms 700 /etc/amanda/${AMANDA_CONFIG_NAME}
 
 	local i
 	for i in amandates dumpdates; do
@@ -186,16 +185,16 @@ src_install() {
 		fperms 600 /etc/${i}
 	done
 
-    dodir ${AMANDA_TAR_LISTDIR}
+	dodir ${AMANDA_TAR_LISTDIR}
 	dodir ${AMANDA_TMPDIR}
 	dodir ${AMANDA_TMPDIR}/dumps
-    dodir ${AMANDA_USER_HOMEDIR}/${AMANDA_CONFIG_NAME}
-    fowners ${AMANDA_USER_NAME}.${AMANDA_GROUP_NAME} ${AMANDA_USER_HOMEDIR}
-    fowners ${AMANDA_USER_NAME}.${AMANDA_GROUP_NAME} ${AMANDA_TAR_LISTDIR}
-    fowners ${AMANDA_USER_NAME}.${AMANDA_GROUP_NAME} ${AMANDA_TMPDIR}
-    fowners ${AMANDA_USER_NAME}.${AMANDA_GROUP_NAME} ${AMANDA_TMPDIR}/dumps
-    fowners ${AMANDA_USER_NAME}.${AMANDA_GROUP_NAME} ${AMANDA_USER_HOMEDIR}/${AMANDA_CONFIG_NAME}
-    fperms 700 ${AMANDA_USER_HOMEDIR}
+	dodir ${AMANDA_USER_HOMEDIR}/${AMANDA_CONFIG_NAME}
+	fowners ${AMANDA_USER_NAME}.${AMANDA_GROUP_NAME} ${AMANDA_USER_HOMEDIR}
+	fowners ${AMANDA_USER_NAME}.${AMANDA_GROUP_NAME} ${AMANDA_TAR_LISTDIR}
+	fowners ${AMANDA_USER_NAME}.${AMANDA_GROUP_NAME} ${AMANDA_TMPDIR}
+	fowners ${AMANDA_USER_NAME}.${AMANDA_GROUP_NAME} ${AMANDA_TMPDIR}/dumps
+	fowners ${AMANDA_USER_NAME}.${AMANDA_GROUP_NAME} ${AMANDA_USER_HOMEDIR}/${AMANDA_CONFIG_NAME}
+	fperms 700 ${AMANDA_USER_HOMEDIR}
 
 	# DevFS
 	insinto /etc/devfs.d
