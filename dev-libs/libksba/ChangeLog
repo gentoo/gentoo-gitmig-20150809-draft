@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libksba
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libksba/ChangeLog,v 1.6 2003/04/07 19:44:40 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libksba/ChangeLog,v 1.7 2004/02/28 07:59:06 vapier Exp $
+
+*libksba-0.9.4 (28 Feb 2004)
+
+  28 Feb 2004; Mike Frysinger <vapier@gentoo.org> :
+  Version bumpage.
 
 *libksba-0.4.7 (07 Apr 2003)
 
