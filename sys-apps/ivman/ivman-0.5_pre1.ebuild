@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ivman/ivman-0.4_rc2.ebuild,v 1.2 2005/01/20 20:13:04 genstef Exp $
+# $Header $
 
 DESCRIPTION="Daemon to mount/unmount devices, based on info from HAL"
 HOMEPAGE="http://ivman.sf.net"
@@ -15,8 +15,7 @@ RDEPEND=">=dev-libs/glib-2.2
 	 >=sys-apps/hal-0.2.98"
 DEPEND="${RDEPEND}
 	>=sys-devel/libtool-1.5
-	dev-util/pkgconfig
-	app-admin/sudo"
+	dev-util/pkgconfig"
 
 src_compile() {
 	econf $(use_enable debug) || die "econf failed"
@@ -28,4 +27,14 @@ src_install() {
 
 	exeinto /etc/init.d/
 	newexe ${FILESDIR}/ivman-0.3.init ivman
+}
+
+pkg_postinst() {
+	einfo "Note that the configuration syntax has changed slightly from"
+	einfo "previous versions.  If you are only using the default options,"
+	einfo "just merge the new files with etc-update.  Otherwise, in your"
+	einfo "existing rules, replace %m with \$hal.volume.mount_point\$ and"
+	einfo "replace %d with \$hal.block.device\$.  Individual users may also"
+	einfo "wish to remove their \${HOME}/.ivman directories and have default"
+	einfo "files re-created with the new syntax."
 }

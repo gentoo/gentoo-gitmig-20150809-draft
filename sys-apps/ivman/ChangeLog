@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/ivman
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ivman/ChangeLog,v 1.9 2004/12/29 21:43:21 genstef Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ivman/ChangeLog,v 1.10 2005/01/20 20:13:04 genstef Exp $
+
+*ivman-0.5_pre1 (20 Jan 2005)
+
+  20 Jan 2005; Stefan Schweizer <genstef@gentoo.org> +ivman-0.5_pre1.ebuild:
+  Version Bump thanks to Rohan <rohan@mizzenblog.com> in bug 78775
 
 *ivman-0.4_rc2 (29 Dec 2004)
 
