@@ -1,17 +1,17 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/glade-0.6.4.ebuild,v 1.10 2003/03/15 18:04:46 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/glade-0.6.4.ebuild,v 1.11 2003/04/12 18:06:03 foser Exp $
 
 IUSE="nls gnome bonobo"
 
 inherit eutils
 
 S=${WORKDIR}/${P}
-DESCRIPTION="glade"
+DESCRIPTION="glade - GUI designer for GTK+/GNOME-1"
 SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/glade/${P}.tar.gz"
 HOMEPAGE="http://glade.gnome.org/"
 
-SLOT="0"
+SLOT="1"
 LICENSE="GPL-2"
 KEYWORDS="x86 sparc  ppc"
 
