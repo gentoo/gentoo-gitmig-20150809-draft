@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.102 2005/02/07 00:30:29 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.103 2005/02/14 10:35:23 robbat2 Exp $
+
+*openssl-0.9.7e-r1 (14 Feb 2005)
+
+  14 Feb 2005; Robin H. Johnson <robbat2@gentoo.org>
+  +openssl-0.9.7e-r1.ebuild:
+  Bug #69550, make sure openssl is built correctly to work with unstripped
+  /lib/ld.so.
 
   07 Feb 2005; Bryan Østergaard <kloeri@gentoo.org> openssl-0.9.7e.ebuild:
   Stable on alpha.
