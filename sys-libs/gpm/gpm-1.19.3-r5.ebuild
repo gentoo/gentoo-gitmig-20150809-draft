@@ -2,12 +2,12 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
 # Author: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gpm/gpm-1.19.3-r4.ebuild,v 1.2 2001/09/08 09:19:39 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gpm/gpm-1.19.3-r5.ebuild,v 1.1 2001/09/08 09:19:39 woodchip Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Console-based mouse driver"
 SRC_URI="ftp://metalab.unc.edu/pub/Linux/system/mouse/${P}.tar.gz ftp://ftp.prosa.it/pub/gpm/patches/devfs.patch"
-DEPEND="virtual/glibc >=sys-libs/ncurses-5.2 tex? ( app-text/tetex ) sys-devel/autoconf"
+DEPEND="virtual/glibc >=sys-libs/ncurses-5.2 sys-devel/autoconf"
 RDEPEND="virtual/glibc"
 
 src_unpack() {
@@ -24,13 +24,12 @@ src_unpack() {
 src_compile() {
 	./configure --prefix=/usr --sysconfdir=/etc/gpm || die
 	# without-curses is required to avoid cyclic dependencies to ncurses
+
 	cp Makefile Makefile.orig
-	if [ -z "`use tex`" ]
-	then
-		#The emacs stuff turns off auto byte-"complication"
-		sed -e "s/doc//" Makefile.orig > Makefile
-		#-e '/$(EMACS)/c\' -e '	echo' 
-	fi
+	#The emacs stuff turns off auto byte-"complication"
+	sed -e "s/doc//" Makefile.orig > Makefile
+	#-e '/$(EMACS)/c\' -e '	echo' 
+
 	emake || die
 }
 
@@ -40,12 +39,6 @@ src_install() {
 	dodoc Announce COPYING ChangeLog FAQ MANIFEST README.*
 	docinto txt
 	dodoc doc/gpmdoc.txt
-
-	if [ "`use tex`" ]
-	then
-		docinto ps
-		dodoc doc/*.ps
-	fi
 
 	insinto /etc/gpm
 	doins gpm-root.conf

@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
 # Author: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gpm/gpm-1.19.3-r3.ebuild,v 1.2 2001/08/23 19:26:06 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gpm/gpm-1.19.3-r3.ebuild,v 1.3 2001/09/08 09:19:39 woodchip Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Console-based mouse driver"
@@ -51,8 +51,5 @@ src_install() {
 	doins gpm-root.conf
 
 	exeinto /etc/rc.d/init.d
-	newexe ${FILESDIR}/${PN}-${PVR} ${PN}
-	newexe ${FILESDIR}/svc-${PN}-${PVR} svc-${PN}
-	exeinto /var/lib/supervise/services/${PN}
-	newexe ${FILESDIR}/${PN}-run-${PVR} run
+	newexe ${FILESDIR}/gpm.rc5 gpm
 }

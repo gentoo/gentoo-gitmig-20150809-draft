@@ -1,0 +1,13 @@
+#!/sbin/runscript
+
+start() {
+    ebegin "Starting gpm"
+    start-stop-daemon --start --quiet --exec /usr/sbin/gpm -- -m ${MOUSEDEV} -t ${MOUSE}
+    eend ${?}
+}
+
+stop() {
+    ebegin "Stopping gpm"
+    start-stop-daemon --stop --quiet --pidfile /var/run/gpm.pid
+    eend ${?}
+}
