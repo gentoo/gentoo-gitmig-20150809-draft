@@ -1,7 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre-bin/ibm-jre-bin-1.4.1.ebuild,v 1.5 2004/06/02 22:51:43 agriffis Exp $
-IUSE="doc"
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre-bin/ibm-jre-bin-1.4.1.ebuild,v 1.6 2004/06/03 17:07:58 karltk Exp $
 
 inherit java nsplugins
 
@@ -11,11 +10,10 @@ SRC_URI="ppc?(mirror://IBMJava2-JRE-141.ppc.tgz)
 	x86?(mirror://IBMJava2-JRE-141.tgz)"
 PROVIDE="virtual/jre-1.4.1
 	virtual/java-scheme-2"
+IUSE="doc"
 SLOT="1.4"
 LICENSE="IBM-J1.4"
 KEYWORDS="ppc ~x86"
-
-
 DEPEND="virtual/glibc
 	>=dev-java/java-config-0.2.5"
 RDEPEND="${DEPEND}"
@@ -27,8 +25,9 @@ else
 	S=${WORKDIR}/IBMJava2-141
 fi;
 
-# No compilation needed!
-src_compile() { :; }
+src_compile() {
+	einfo "${PF} is a binary package, no compilation required"
+}
 
 src_install() {
 	# Copy all the files to the designated directory 
@@ -46,7 +45,15 @@ src_install() {
 		< ${FILESDIR}/ibm-jre-${PV} \
 		> ${D}/etc/env.d/java/20ibm-jre-${PV}
 }
+
 src_postinst(){
 	inst_plugin /opt/${P}/bin/javaplugin.so
 	true
+}
+
+pkg_postrm() {
+	if [ ! -z "$(java-config -J) | grep ${PV}" ] ; then
+		ewarn "It appears you are removing your default system VM!"
+		ewarn "Please run java-config -L then java-config-S to set a new system VM!"
+	fi
 }
