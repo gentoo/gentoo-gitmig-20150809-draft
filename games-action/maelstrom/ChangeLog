@@ -1,6 +1,10 @@
 # ChangeLog for games-action/maelstrom
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/maelstrom/ChangeLog,v 1.10 2004/06/24 21:56:48 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/maelstrom/ChangeLog,v 1.11 2004/08/31 19:52:05 sekretarz Exp $
+
+  31 Aug 2004; Karol Wojtaszek <sekretarz@gentoo.org>
+  maelstrom-3.0.6-r1.ebuild:
+  Fixed gcc-3.4 compile problems
 
   19 Apr 2004; Chris Gianelloni <wolf31o2@gentoo.org> maelstrom-3.0.5.ebuild,
   maelstrom-3.0.6-r1.ebuild, maelstrom-3.0.6.ebuild:
