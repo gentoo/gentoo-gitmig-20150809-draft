@@ -1,18 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 324b38a18705f083071a3c32d03ad4cd ChangeLog 924
-MD5 a0a323a985409a2dc673266a051cee75 gaim-rhythmbox-0.81.3.ebuild 666
+MD5 7fd6538c80046ecd4932b05c06c12e9e ChangeLog 1099
 MD5 c1a2d7f113e28668f770c363bd5e761f metadata.xml 224
-MD5 0a577cd9230f19543e5d69ea9b9040f3 gaim-rhythmbox-0.82.1.ebuild 668
-MD5 cec22855713f24fc76974fc133b29068 gaim-rhythmbox-1.0.0.1.ebuild 679
-MD5 51106dd3e9f0ce3cfffe1d4c56b454b2 files/digest-gaim-rhythmbox-0.81.3 73
-MD5 d15ee6708f862d3c72a71f9a1614a942 files/digest-gaim-rhythmbox-0.82.1 73
+MD5 41ebed2bed596cfa9604b7bdff3ae5b6 gaim-rhythmbox-1.0.0.1.ebuild 679
 MD5 138fc7668a6717f9cc9d44d9c167897b files/digest-gaim-rhythmbox-1.0.0.1 74
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBcwBDI1lqEGTUzyQRAv3sAKDHxSWF+YdzURNVw6xLyo2hYQ6TnQCdFN8q
-NCJnx+szAVynaptw5V1nDVU=
-=Uefh
------END PGP SIGNATURE-----
