@@ -1,6 +1,14 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.117 2004/08/22 08:46:26 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.118 2004/08/23 20:31:28 robbat2 Exp $
+
+*mysql-4.0.20-r1 (23 Aug 2004)
+*mysql-3.23.58-r1 (23 Aug 2004)
+
+  23 Aug 2004; Robin H. Johnson <robbat2@gentoo.org>
+  +files/mysql-4.0-mysqlhotcopy-security.patch, +mysql-3.23.58-r1.ebuild,
+  +mysql-4.0.20-r1.ebuild:
+  Bug #60744, security.
 
   22 Aug 2004; Joshua Kinard <kumba@gentoo.org> mysql-4.0.20.ebuild:
   Marked stable on mips.
