@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-2.0.4.ebuild,v 1.1 2003/07/31 10:01:56 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-2.0.4.ebuild,v 1.2 2003/08/06 02:02:13 liquidx Exp $
 
 inherit eutils
 
@@ -25,6 +25,10 @@ DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.7"
 
 src_compile() {
+	# xchat's configure script uses sys.path to find library path
+	# instead of python-config (#25943)
+	unset PYTHONPATH
+	
 	econf \
 		`use_enable gtk gtkfe` \
 		`use_enable ssl openssl` \

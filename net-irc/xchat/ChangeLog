@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/xchat
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.62 2003/07/31 10:01:56 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.63 2003/08/06 02:02:13 liquidx Exp $
+
+  06 Aug 2003; Alastair Tse <liquidx@gentoo.org> xchat-2.0.3-r1.ebuild,
+  xchat-2.0.4.ebuild:
+  added workaround for PYTHONPATH problems (#25943)
 
 *xchat-2.0.4 (31 Jul 2003)
 
