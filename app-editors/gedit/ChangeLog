@@ -1,8 +1,17 @@
 # ChangeLog for app-editors/gedit
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.9 2002/06/26 23:11:03 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.10 2002/07/15 16:10:09 stroke Exp $
 
-gedit-2.0.0-r1 (27 Jun 2002)
+*gedit-2.0.1 (15 Jul 2002)
+  15 Jul 2002; Gabriele Giorgetti <stroke@gentoo.org> gedit-2.0.1.ebuild:
+  Version bump. Added KEYOWRDS="x86" 
+
+*gedit-0.9.6-r1 (15 Jul 2002)
+  15 Jul 2002; Gabriele Giorgetti <stroke@gentoo.org> gedit-0.9.6-r1.ebuild;
+  Fixed libglade dep. to match with the gnome1 version, added LICENSE, SLOT
+  and KEYWORDS.
+
+*gedit-2.0.0-r1 (27 Jun 2002)
   27 Jun 2002; Spider <spider@gentoo.org> gedit-2.0.0-r1.ebuild:
   update to mirror:// remove SCHEMAS
   
