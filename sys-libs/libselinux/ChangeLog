@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/libselinux
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libselinux/ChangeLog,v 1.24 2004/11/14 18:45:50 pebenito Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libselinux/ChangeLog,v 1.25 2005/01/04 00:55:39 pebenito Exp $
+
+  03 Jan 2005; Chris PeBenito <pebenito@gentoo.org> libselinux-1.16.ebuild,
+  libselinux-1.18.ebuild:
+  Switch to libc virtual for DEP since uclibc now has xattr support.
 
 *libselinux-1.18 (14 Nov 2004)
 

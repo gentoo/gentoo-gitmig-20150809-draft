@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libselinux/libselinux-1.16.ebuild,v 1.3 2004/10/07 23:16:43 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libselinux/libselinux-1.16.ebuild,v 1.4 2005/01/04 00:55:39 pebenito Exp $
 
 IUSE=""
 
@@ -11,7 +11,7 @@ LICENSE="public-domain"
 SLOT="0"
 KEYWORDS="x86 ppc sparc amd64"
 
-DEPEND="sys-libs/glibc"
+DEPEND="virtual/libc"
 
 src_unpack() {
 	unpack ${A}
