@@ -1,8 +1,10 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono/mono-0.26-r1.ebuild,v 1.3 2004/02/07 20:27:50 scandium Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono/mono-0.30.ebuild,v 1.1 2004/02/13 20:11:07 tberman Exp $
 
-inherit mono
+inherit mono flag-o-matic
+
+strip-flags
 
 MCS_P="mcs-${PV}"
 MCS_S=${WORKDIR}/${MCS_P}
@@ -13,19 +15,19 @@ SRC_URI="http://www.go-mono.com/archive/${P}.tar.gz
 	http://www.go-mono.com/archive/${MCS_P}.tar.gz"
 HOMEPAGE="http://www.go-mono.com/"
 
-LICENSE="GPL-2 LGPL-2 X11"
+LICENSE="GPL-2 | LGPL-2 | X11"
 SLOT="0"
 
-KEYWORDS="x86 -ppc"
+KEYWORDS="~x86 -ppc"
 
 DEPEND="virtual/glibc
 	>=dev-libs/glib-2.0
+	>=dev-libs/icu-2.6
 	!dev-dotnet/pnet"
 
 RDEPEND="${DEPEND}
 	dev-util/pkgconfig
-	dev-libs/libxml2
-	dev-libs/libxslt"
+	dev-libs/libxml2"
 
 src_unpack() {
 	unpack ${A}
@@ -33,6 +35,12 @@ src_unpack() {
 	# add our own little in-place mcs script
 	echo "${S}/mono/mini/mono ${S}/runtime/mcs.exe \"\$@\" " > ${S}/runtime/mcs
 	chmod +x ${S}/runtime/mcs
+
+	echo "${S}/mono/mini/mono ${S}/runtime/monoresgen.exe \"\$@\" " > ${S}/runtime/monoresgen
+	chmod +x ${S}/runtime/monoresgen
+
+	PATH="${PATH}:${S}/runtime"
+	export PATH
 }
 
 src_compile() {
@@ -45,6 +53,8 @@ src_compile() {
 	echo "MONO_PATH=${S}/runtime" >> build/config.make
 	echo "BOOTSTRAP_MCS=${S}/runtime/mcs" >> build/config.make
 	echo "RUNTIME=${S}/mono/mini/mono \${RUNTIME_FLAGS}" >> build/config.make
+	echo "PATH=${PATH}:${S}/runtime" >> build/config.make
+	echo "export PATH" >> build/config.make
 	echo "export MONO_PATH" >> build/config.make
 	make || die "MCS compilation failure"
 	echo "prefix=/usr" >> build/config.make
