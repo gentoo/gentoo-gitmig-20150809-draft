@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d5cb10a4dd1024178f1dc382f9e0925f ChangeLog 516
+MD5 8e90b3440fbbe19a2dd02ca857a87e6f ChangeLog 631
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 cea2f031ff52acfd031b2daf37ae053d psemu-gpupetexgl2-2.0.5-r2.ebuild 1016
+MD5 3b0dd39a49336abc92a04b5266bf1be2 psemu-gpupetexgl2-2.0.5-r2.ebuild 1088
 MD5 69a07a880a5feaf74d068eef433ca1f4 files/digest-psemu-gpupetexgl2-2.0.5-r2 213
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBiCQFHTu7gpaalycRApJjAJ4uv2ZRGtJuJ04x7S7yk3pVe0e1zACg2NX4
-Y6gdKrK6P7ZwW+TemI/Gjec=
-=4Ac5
------END PGP SIGNATURE-----
