@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.7.14.20020802.ebuild,v 1.9 2002/10/05 18:10:30 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.7.14.20020802.ebuild,v 1.10 2002/12/09 04:26:14 manson Exp $
 
 IUSE="nas avi sdl kde oggvorbis 3dnow qt"
 
@@ -24,7 +24,7 @@ DEPEND=">=media-libs/divx4linux-20020418
 
 SLOT="0.7"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc sparc64"
+KEYWORDS="x86 sparc "
 
 src_compile() {
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/nvidia-glx-1.0.3123.ebuild,v 1.3 2002/10/04 05:56:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/nvidia-glx-1.0.3123.ebuild,v 1.4 2002/12/09 04:26:14 manson Exp $
 
 # Make sure Portage does _NOT_ strip symbols.  Need both lines for
 # Portage 1.8.9+
@@ -16,7 +16,7 @@ HOMEPAGE="http://www.nvidia.com/"
 
 LICENSE="NVIDIA"
 SLOT="0"
-KEYWORDS="x86 -ppc -sparc -sparc64"
+KEYWORDS="x86 -ppc -sparc "
 
 # We need xfree-4.2.0-r9 to support the dynamic libGL* stuff
 DEPEND="virtual/glibc

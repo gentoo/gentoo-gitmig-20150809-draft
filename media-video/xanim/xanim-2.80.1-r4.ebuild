@@ -1,10 +1,10 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xanim/xanim-2.80.1-r4.ebuild,v 1.8 2002/12/04 22:10:57 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xanim/xanim-2.80.1-r4.ebuild,v 1.9 2002/12/09 04:26:15 manson Exp $
 
 LICENSE="XAnim"
 SLOT="0"
-KEYWORDS="x86 ppc sparc sparc64 alpha"
+KEYWORDS="x86 ppc sparc  alpha"
 
 _XA_CYUV_SPARC=xa1.0_cyuv_sparcELF.o
 _XA_CVID_SPARC=xa2.0_cvid_sparcELF.o
@@ -87,7 +87,7 @@ DEPEND="virtual/x11
 	>=sys-libs/zlib-1.1.3
 	ppc? ( app-arch/ncompress )
 	sparc? ( app-arch/ncompress )
-	sparc64? ( app-arch/ncompress )"
+	? ( app-arch/ncompress )"
 
   	
 src_unpack() {
