@@ -1,0 +1,11 @@
+--- part/dlgxmlattribute.cpp	Thu Jul 18 13:53:37 2002
++++ part/dlgxmlattribute.cpp	Mon Aug 19 22:05:23 2002
+@@ -22,7 +22,7 @@
+ 
+ #include <qpushbutton.h>
+ 
+-DlgXMLAttribute::DlgXMLAttribute( QWidget * pParent = 0, const char * pszName = 0, bool fModal = true, WFlags fl = 0 )
++DlgXMLAttribute::DlgXMLAttribute( QWidget * pParent, const char * pszName, bool fModal, WFlags fl )
+ 	: DlgXMLAttributeBase( pParent, pszName, fModal, fl )
+ {
+ 	connect( m_pEditQName, SIGNAL(textChanged(const QString &)), this, SLOT(slotDataChanged()) );
