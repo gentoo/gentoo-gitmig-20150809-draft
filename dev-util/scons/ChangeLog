@@ -1,8 +1,12 @@
 # ChangeLog for dev-util/scons
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-util/scons/ChangeLog,v 1.1 2002/02/01 21:53:29 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/scons/ChangeLog,v 1.2 2002/02/03 17:57:13 karltk Exp $
 
-*scons-0.0.2 (1 Feb 2002)
+*scons-0.0.3 (3 Feb 2002)
+
+  3 Feb 2002; Karl Trygve Kalleberg <karltk@gentoo.org> scons-0.0.3.ebuild files/digest-scons-0.0.3
+
+  Added new revision. This one supports proper piping in the commands.
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
   
