@@ -102,6 +102,12 @@ src_install() {
 	     mandir=${D}/usr/share/man					\
 	     infodir=${D}/usr/share/info				\
 	     PREFIX=${D}/usr						\
+		 INSTALLPRIVLIB=${D}/usr/lib/perl5 \
+		 INSTALLSCRIPT=${D}/usr/bin \
+   		 INSTALLSITELIB=${D}/usr/lib/perl5/site_perl \
+		 INSTALLBIN=${D}/usr/bin \
+   		 INSTALLMAN1DIR=${D}/usr/share/man/man1  \
+ 		 INSTALLMAN3DIR=${D}/usr/share/man/man3 \
 	     ${mymake}							\
 	     install || die
 	     
