@@ -1,12 +1,15 @@
 # ChangeLog for app-text/opensp
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/opensp/ChangeLog,v 1.3 2003/06/02 11:06:28 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/opensp/ChangeLog,v 1.4 2003/07/23 18:54:56 gmsoft Exp $
 
   02 Jun 2003; Alastair Tse <liquidx@gentoo.org> opensp-1.5-r1.ebuild,
   files/opensp-1.5-gcc33.patch:
   added gcc3.3 patch. thanks to Andreas Wege <awege@cs.tu-berlin.de>. (#21631)
 
 *opensp-1.5-r1 (07 May 2003)
+
+  23 Jul 2003; Guy Martin <gmsoft@gentoo.org> opensp-1.5-r1.ebuild :
+  Added hppa to KEYWORDS.
 
   07 May 2003; Alastair Tse <liquidx@gentoo.org> opensp-1.5-r1.ebuild,
   opensp-1.5.ebuild:
