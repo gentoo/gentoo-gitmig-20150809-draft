@@ -1,6 +1,11 @@
 # ChangeLog for x11-plugins/wmnd
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmnd/ChangeLog,v 1.14 2004/06/30 11:51:43 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmnd/ChangeLog,v 1.15 2004/07/16 21:52:59 s4t4n Exp $
+
+
+  16 Jul 2004; Michele Noberasco <s4t4n@gentoo.org>
+  wmnd-0.4.9.ebuild, wmnd-0.4.7.ebuild:
+  No longer depend on x11-wm/windowmaker.
 
   30 Jun 2004; Michele Noberasco <s4t4n@gentoo.org> wmnd-0.4.9.ebuild:
   Stable on x86.

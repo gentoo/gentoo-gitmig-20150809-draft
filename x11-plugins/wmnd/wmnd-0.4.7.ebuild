@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmnd/wmnd-0.4.7.ebuild,v 1.8 2004/06/24 23:14:38 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmnd/wmnd-0.4.7.ebuild,v 1.9 2004/07/16 21:52:59 s4t4n Exp $
 
 IUSE=""
 DESCRIPTION="WindowMaker Network Devices (dockapp)"
@@ -11,8 +11,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ppc sparc amd64"
 
-DEPEND="virtual/x11
-	x11-wm/windowmaker"
+DEPEND="virtual/x11"
 
 src_compile() {
 	econf || die "configure failed"
