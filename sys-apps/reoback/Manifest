@@ -1,4 +1,14 @@
-MD5 67159d11d221a3e249da6428f574f54e reoback-1.0-r3.ebuild 977
-MD5 b99d1942057b5a524d4fd8bba4952a7e ChangeLog 556
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 bdff96154ca602b0bdcdb8da23de141b ChangeLog 707
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 0e715624919f174c31e9a2a777d48f99 files/digest-reoback-1.0-r3 65
+MD5 0f6c4466fc772ec246272589cd34aadf reoback-1.0_rc3.ebuild 768
+MD5 0e715624919f174c31e9a2a777d48f99 files/digest-reoback-1.0_rc3 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.14 (GNU/Linux)
+
+iD8DBQFB5xbzroRuSHgZdywRAvNAAJ9XWHQ2bIK6eQswTdIviqozBwnaigCeLZUO
+0HwGmsEv+ucegExBa5LxwSY=
+=pq63
+-----END PGP SIGNATURE-----
