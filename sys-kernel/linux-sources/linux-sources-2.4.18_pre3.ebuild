@@ -1,17 +1,17 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-sources/linux-sources-2.4.18_pre4.ebuild,v 1.1 2002/01/17 05:20:31 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-sources/linux-sources-2.4.18_pre3.ebuild,v 1.1 2002/01/18 09:15:00 drobbins Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 #we use this next variable to avoid duplicating stuff on cvs
 GFILESDIR=${PORTDIR}/sys-kernel/linux-sources/files
 OKV=2.4.17
-KV=2.4.18-pre4
+KV=2.4.18-pre3
 S=${WORKDIR}/linux-${KV}
 S2=${WORKDIR}/linux-${KV}-extras
 
-#This kernel includes XFS (CVS 16 Jan 2002), ACPI (05 Dec 2001), preempt (2.4.18-pre4-1) lock-break (2.4.18-pre1-1)
+#This kernel includes XFS (CVS 16 Jan 2002) and mjb-2.4.18-r3 (which includes *lots* of good stuff))
 
 DESCRIPTION="Linux kernel version ${KV} - full sources"
 SRC_URI="http://www.de.kernel.org/pub/linux/kernel/v2.4/linux-${OKV}.tar.bz2  http://www.ibiblio.org/gentoo/distfiles/linux-gentoo-${KV}.patch.bz2"
