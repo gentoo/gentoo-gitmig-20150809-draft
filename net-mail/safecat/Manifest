@@ -1,4 +1,4 @@
-MD5 b2bfd84104ecade925628f9b49c26d87 ChangeLog 422
-MD5 a1766a24a6c6d381156ece4c0f023fd0 safecat-1.11.ebuild 1125
-MD5 b8802a01bb6d1194118da7bb8f98d3f4 files/digest-safecat-1.11 63
+MD5 4080d7fe1fb7a5de937d153e1b6fd4ed safecat-1.11.ebuild 1233
+MD5 e980ffd72b13d62c5f9bf9f6c302ed61 ChangeLog 530
 MD5 f1a0de11ad74ec86a89591c3d4de8d85 files/safecat-1.11-gentoo.patch 355
+MD5 b8802a01bb6d1194118da7bb8f98d3f4 files/digest-safecat-1.11 63

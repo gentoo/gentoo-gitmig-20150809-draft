@@ -1,8 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/safecat/safecat-1.11.ebuild,v 1.2 2003/09/05 09:13:50 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/safecat/safecat-1.11.ebuild,v 1.3 2003/09/21 19:35:11 robbat2 Exp $
 
 IUSE=""
+
+inherit fixheadtails
 
 S=${WORKDIR}/${P}
 
@@ -16,7 +18,7 @@ DEPEND="virtual/glibc
 RDEPEND="virtual/glibc"
 SLOT="0"
 LICENSE="BSD"
-KEYWORDS="~x86 ~ppc ~sparc"
+KEYWORDS="~x86 ~ppc ~sparc ~arm ~alpha ~hppa ~amd64 ~mips"
 
 src_unpack() {
 	unpack ${P}.tar.gz
@@ -29,10 +31,12 @@ src_unpack() {
 	echo "${CC} ${CFLAGS}" > conf-cc
 	echo "${CC} ${LDFLAGS}" > conf-ld
 
+	ht_fix_file Makefile make-compile.sh
 }
 
 src_compile() {
-	grep -v man hier.c | grep -v doc > hier.c
+	egrep -v 'man|doc' hier.c > hier.c.new
+	mv hier.c.new hier.c
 	make it man || die
 }
 
