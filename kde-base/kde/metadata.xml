@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>kde-core</herd>
+<herd>kde</herd>
 <longdescription>
 Kde is a broadly used desktop environment. This package installs all 
 non-development parts of the kde desktop environment. 
