@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/skey
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/skey/ChangeLog,v 1.11 2004/02/25 10:23:34 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/skey/ChangeLog,v 1.12 2004/03/24 23:21:39 mholzer Exp $
+
+  25 Mar 2004; Martin Holzer <mholzer@gentoo.org> skey-1.1.5-r1.ebuild,
+  skey-1.1.5.ebuild:
+  fixing depend. see 45343
 
   25 Feb 2004; Daniel Ahlberg <aliz@gentoo.org> skey-1.1.5-r1.ebuild:
   Fix fPIC issues.

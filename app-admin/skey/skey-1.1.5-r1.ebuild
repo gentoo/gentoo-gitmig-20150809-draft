@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/skey/skey-1.1.5-r1.ebuild,v 1.10 2004/02/25 10:23:34 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/skey/skey-1.1.5-r1.ebuild,v 1.11 2004/03/24 23:21:39 mholzer Exp $
 
 inherit flag-o-matic ccc eutils
 
@@ -14,11 +14,10 @@ SLOT="0"
 KEYWORDS="x86 ppc sparc alpha mips hppa amd64 ia64"
 
 IUSE="doc"
-RDEPEND="virtual/glibc
-		sys-apps/shadow
-		sys-libs/cracklib
-		>=dev-lang/perl-5.8.0"
-DEPEND="${RDEPEND}"
+DEPEND="virtual/glibc
+	sys-apps/shadow
+	sys-libs/cracklib
+	>=dev-lang/perl-5.8.0"
 # XXX: skeyaudit requires mailx.
 
 S=${WORKDIR}/${P}

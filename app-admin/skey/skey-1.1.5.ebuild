@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/skey/skey-1.1.5.ebuild,v 1.6 2004/02/22 05:40:48 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/skey/skey-1.1.5.ebuild,v 1.7 2004/03/24 23:21:39 mholzer Exp $
 
 inherit flag-o-matic ccc
 
@@ -14,10 +14,9 @@ SLOT="0"
 KEYWORDS="x86 ppc sparc alpha mips hppa amd64"
 
 IUSE="doc"
-RDEPEND=">=dev-lang/perl-5.8.0
-		virtual/mta
-		virtual/glibc"
-DEPEND="${RDEPEND}"
+DEPEND=">=dev-lang/perl-5.8.0
+	virtual/mta
+	virtual/glibc"
 
 S=${WORKDIR}/${P}
 
