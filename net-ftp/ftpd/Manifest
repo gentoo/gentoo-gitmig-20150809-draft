@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 cb49f5e4809ca88189740b43b6746ba1 ChangeLog 1911
-MD5 84a06b66044e358b7c473cd801487b54 ftpd-0.17-r1.ebuild 1452
+MD5 ff7512b90d39daadc6cbdc6505d9e7a8 ChangeLog 2003
+MD5 8e8bc2c37df91fd15a786a0dcbc6449d ftpd-0.17-r1.ebuild 1458
 MD5 a49ca8164b73a5b126e5d4403ec0e6ef ftpd-0.17.ebuild 1410
 MD5 1185c6db5ae646d809d0c757f02d8e35 files/digest-ftpd-0.17 66
 MD5 1185c6db5ae646d809d0c757f02d8e35 files/digest-ftpd-0.17-r1 66
 MD5 c77f5bcf2f56d61c7e8845d94df88164 files/ftp.xinetd 313
 MD5 7e1217f2de231dda2c8e842a7d7dfb7b files/ftpd-0.17-shadowfix.patch 895
 MD5 0630d5a4a420220cc8b912bdad705f6c files/ssl.diff.gz 10444
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
-
-iD8DBQFBHhbPI1lqEGTUzyQRAvBHAJ0bGYP+Ko7uzg+3blfeKyd5QqZI9ACgklDk
-f3adDuf1yKa8j7UErvHvsRw=
-=1v0k
------END PGP SIGNATURE-----
