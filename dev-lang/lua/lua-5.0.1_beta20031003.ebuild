@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/lua-5.0.1_beta20031003.ebuild,v 1.2 2003/12/20 00:12:53 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/lua-5.0.1_beta20031003.ebuild,v 1.3 2003/12/22 18:25:18 twp Exp $
 
 DESCRIPTION="A powerful light-weight programming language designed for extending applications"
 HOMEPAGE="http://www.lua.org/"
@@ -19,9 +19,9 @@ src_unpack() {
 	unpack lua-5.0-update.tar.gz || die
 
 	cd "${S}"
-	
+
 	epatch "${FILESDIR}/lua-5.0.1-pic.patch"
-	
+
 	sed -i \
 		-e 's:^#POPEN= -DUSE_POPEN$:POPEN= -DUSE_POPEN:' \
 		-e "s:^MYCFLAGS= -O2:MYCFLAGS= ${CFLAGS}:" \
@@ -34,7 +34,7 @@ src_unpack() {
 src_compile() {
 
 	export PICFLAGS=-fPIC
-	
+
 	emake || die "emake failed"
 	emake so || die "emake so failed"
 }
