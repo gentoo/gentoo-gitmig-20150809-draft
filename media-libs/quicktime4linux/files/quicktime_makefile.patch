@@ -1,0 +1,11 @@
+diff -u -r quicktime/Makefile quicktime.new/Makefile
+--- quicktime/Makefile	2001-12-26 14:34:52.000000000 +0100
++++ quicktime.new/Makefile	2002-07-26 00:16:50.000000000 +0200
+@@ -219,7 +219,9 @@
+ 	$(OBJDIR)/libraw1394/src/fcp.o \
+ 	$(OBJDIR)/libraw1394/src/iso.o \
+ 	$(OBJDIR)/libraw1394/src/main.o \
+-	$(OBJDIR)/libraw1394/src/readwrite.o
++	$(OBJDIR)/libraw1394/src/readwrite.o \
++	$(OBJDIR)/libraw1394/src/errors.o 
++
