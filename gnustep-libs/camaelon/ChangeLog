@@ -1,6 +1,9 @@
 # ChangeLog for gnustep-libs/camaelon
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/camaelon/ChangeLog,v 1.1 2004/09/27 00:15:55 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/camaelon/ChangeLog,v 1.2 2004/10/04 01:18:15 fafhrd Exp $
+
+  03 Oct 2004; Armando Di Cianno <fafhrd@gentoo.org> files/config-camaelon.sh:
+  Updated to use GENTOO_GNUSTEP_ROOT variable from gnustep.eclass
 
 *camaelon-0.1 (26 Sep 2004)
 

@@ -1,5 +1,5 @@
 MD5 e6dc77099dcad765400ca0c870dc6e65 camaelon-0.1.ebuild 546
-MD5 67420c1eb72253b81eb43573ee6d913a ChangeLog 501
+MD5 ff371e75c49779a4061f144d350520c4 ChangeLog 647
 MD5 8fb26c3c7a8476fae488cee92d2764ea metadata.xml 328
-MD5 c6ab1b20f791e3837855680d92811a92 files/config-camaelon.sh 260
+MD5 eea6367d10b988e0e0ba8f1b666bdc10 files/config-camaelon.sh 268
 MD5 ee1eb9dac9216738249c854e7e6bfd3b files/digest-camaelon-0.1 60
