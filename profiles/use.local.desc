@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.269 2004/03/10 06:53:09 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.270 2004/03/12 20:18:32 usata Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -48,6 +48,7 @@ app-sci/opendx:hdf - Adds support for the Hierarchical Data Format to app-sci/op
 app-sci/orsa:cln - Use the Class Library for Numbers for calculations
 app-sci/orsa:gsl - Use the GNU scientific library for calculations
 app-shells/zsh:pcre - Adds PCRE (Perl-compatible regular expressions) support
+app-shells/zsh:cap - Adds POSIX.1e (formerly POSIX 6) capabilities for zsh
 app-text/namazu:chasen - Enable chasen support for namazu
 app-text/namazu:kakasi - Enable kakasi support for namazu
 dev-db/postgresql:pg-hier - Enables recursive queries like Oracle's 'CONNECT BY' feature.
