@@ -4,8 +4,9 @@
 
 *ebook-libgnome-1.2 (09 May 2002)
 
+  06 May 2003; Martin Holzer <mholzer@gentoo.org> ebook-libgnome-1.2.ebuild:
+  Updated digest.
+
   09 May 2002; Francisco Gimeno <kikov@fco-gimeno.com> 
     ebook-libgnome-1.2.ebuild: 
-  
   Initial Release of the ebook to the devhelp tool.
-  
