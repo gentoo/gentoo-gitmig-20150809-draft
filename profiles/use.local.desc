@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.963 2005/02/22 16:06:24 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.964 2005/02/23 03:26:34 vapier Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -655,7 +655,7 @@ sci-mathematics/octave:blas - Adds dependency for virtual/blas.
 sci-mathematics/octave:hdf5 - Adds support for the Hierarchical Data Format v5 to sci-mathematics/octave (may be merged with hdf when opendx is completed)
 sci-mathematics/scilab:atlas - Add support for the atlas library
 sys-apps/busybox:floppyboot - builds a busybox binary for use on floppy drives.
-sys-apps/busybox:make-busybox-symlinks - Create all the appropriate symlinks in /bin and /sbin
+sys-apps/busybox:make-symlinks - Create all the appropriate symlinks in /bin and /sbin
 sys-apps/busybox:savedconfig - Adds support to user defined configs
 sys-apps/checkpolicy:mls - Add experimental multi level security policy support
 sys-apps/daemontools-scripts:withsamplescripts - Installs sample supervise scripts
@@ -668,6 +668,7 @@ sys-apps/parted:noreiserfs - Do not include reiserfs support
 sys-apps/partimage:nologin - Do not include login support
 sys-apps/pcmcia-cs:wavelan - Use the wavelan and not the orinoco wireless drivers
 sys-apps/tcng:tcsim - enable traffic simulator
+sys-apps/tinylogin:make-symlinks - Create all the appropriate symlinks in /bin and /sbin
 sys-apps/util-linux:old-crypt - build support for the older cryptoapi that earlier util-linux's included
 sys-boot/arcboot:cobalt - Disables support for Cobalt Microserver hardware (Qube2/RaQ2)
 sys-boot/lilo:devmap - Compile with support for device-mapper
