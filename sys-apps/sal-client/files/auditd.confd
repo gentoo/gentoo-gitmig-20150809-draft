@@ -1,0 +1,7 @@
+# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sal-client/files/auditd.confd,v 1.1 2003/06/08 18:06:20 zhen Exp $
+
+TMP_DIR="/var/lib/auditd"
+FILE="audit"
+
