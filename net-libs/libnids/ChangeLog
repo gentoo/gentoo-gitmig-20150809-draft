@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libnids
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnids/ChangeLog,v 1.5 2003/03/07 23:16:27 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnids/ChangeLog,v 1.6 2003/07/23 15:42:12 taviso Exp $
+
+  23 Jul 2003; Tavis Ormandy <taviso@gentoo.org> libnids-1.16.ebuild:
+  marking ~alpha
 
 *libnids-1.16 (1 Feb 2002)
 
