@@ -1,14 +1,18 @@
 # ChangeLog for x11-themes/redhat-artwork 
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/ChangeLog,v 1.5 2002/12/05 21:55:27 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/ChangeLog,v 1.6 2002/12/09 02:46:39 leonardop Exp $
 
-*redhat-artwork-0.49 (05 Dez 2002)
+*redhat-artwork-0.49 (05 Dec 2002)
 
-  05 Dez 2002; Hanno Boeck <hanno@gentoo.org> redhat-artwork-0.49.ebuild :
+  05 Dec 2002; Hanno Boeck <hanno@gentoo.org> redhat-artwork-0.49.ebuild :
   Version bump.
 
 *redhat-artwork-0.48 (18 Nov 2002)
 
+  08 Dec 2002; L. Boshell <leonardop@gentoo.org>
+  redhat-artwork-0.48.ebuild, files/digest-redhat-artwork-0.48 : Files
+  removed. See bug #11102.
+  
   21 Nov 2002; Bruce A. Locke <blocke@shivan.org> redhat-artwork-0.48.ebuild:
   Version bump (plus possible qt 3.1.0 fix)
 
@@ -19,7 +23,7 @@
 
 *redhat-artwork-0.39 (31 Aug 2002)
 
-  5 Sept 2002; Calum Selkirk <cselkirk@gentoo.org> redhat-artwork-0.39.ebuild :
+  05 Sep 2002; Calum Selkirk <cselkirk@gentoo.org> redhat-artwork-0.39.ebuild :
 
   Added ppc to KEYWORDS.
 
