@@ -21,16 +21,21 @@
 ##   End example
 ##
 
-# <rendhalver@gentoo.org> (03 Jan 2002)
+# <mjc@gentoo.org> (10 Jan 2003)
+# fixed others silly dates
+# masked, I just copied the old ebuild
+>=net-www/mozilla-1.3a
+
+# <rendhalver@gentoo.org> (03 Jan 2003)
 # new XEmacs version masking for testing xemacs without sandbox disable
 >=app-editors/xemacs-21.4.11
 
-# <azarah@gentoo.org> (07 Jan 2002)
+# <azarah@gentoo.org> (07 Jan 2003)
 # new alpha release.  do not use tmpfs by default for dep cache, and
 # move dep cache dir to /var/state/init.d.  also some raid updates.
 >=sys-apps/baselayout-1.8.6.0
 
-# <rendhalver@gentoo.org> (02 Jan 2002)
+# <rendhalver@gentoo.org> (02 Jan 2003)
 # new release candidate for XEmacs
 >=app-editors/xemacs-21.4.11_rc1
 
