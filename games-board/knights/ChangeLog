@@ -1,6 +1,6 @@
-# ChangeLog for app-games/knights
+# ChangeLog for games-board/knights
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/knights/ChangeLog,v 1.1 2003/09/10 17:46:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/knights/ChangeLog,v 1.2 2003/09/10 20:21:50 vapier Exp $
 
   31 Aug 2003; Michael Sterrett <msterret@gentoo.org> knights-0.6.ebuild:
   inherit kde-base -> inherit kde
