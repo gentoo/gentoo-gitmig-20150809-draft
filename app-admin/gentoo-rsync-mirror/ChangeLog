@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/gentoo-rsync-mirror
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoo-rsync-mirror/ChangeLog,v 1.10 2003/12/06 13:11:07 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoo-rsync-mirror/ChangeLog,v 1.11 2003/12/10 21:39:13 tantive Exp $
+
+  10 Dec 2003; Michael Imhof <tantive@gentoo.org> :
+  Some fixes to improve logging when called with absolute paths.
+  Closes #35527.
 
   06 Dec 2003; Michael Imhof <tantive@gentoo.org> :
   Changed the script to log to /var/log.

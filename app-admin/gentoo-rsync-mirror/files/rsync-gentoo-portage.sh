@@ -8,9 +8,9 @@ OPTS="--quiet --recursive --links --perms --times --devices --compress --delete 
 SRC="rsync://rsync.gentoo.org/gentoo-portage"
 DST="/opt/gentoo-rsync/portage/"
 
-echo "Started update at" `date` >> /var/log/$0.log 2>&1
+echo "Started update at" `date` >> /var/log/`basename $0`.log 2>&1
 logger -t rsync "re-rsyncing the gentoo-portage tree"
-${RSYNC} ${OPTS} ${SRC} ${DST} >> /var/log/$0.log 2>&1
+${RSYNC} ${OPTS} ${SRC} ${DST} >> /var/log/`basename $0`.log 2>&1
 
-echo "End: "`date` >> /var/log/$0.log 2>&1 
+echo "End: "`date` >> /var/log/`basename $0`.log 2>&1 
 
