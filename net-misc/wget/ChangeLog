@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/wget
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/ChangeLog,v 1.45 2005/01/09 11:31:48 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/ChangeLog,v 1.46 2005/03/02 15:00:45 solar Exp $
+
+*wget-1.9.1-r3 (02 Mar 2005)
+
+  02 Mar 2005; <solar@gentoo.org> +files/wget-CAN-2004-1487.patch,
+  +wget-1.9.1-r3.ebuild:
+  - security bump for bug 74008. CAN-2004-1487 - overwrite files via ".." in
+  path component
 
   09 Jan 2005; Sven Wegener <swegener@gentoo.org> wget-1.8.2-r3.ebuild,
   wget-1.9-r2.ebuild, wget-1.9.1-r2.ebuild:
