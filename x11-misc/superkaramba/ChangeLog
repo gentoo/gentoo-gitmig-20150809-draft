@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/superkaramba
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/superkaramba/ChangeLog,v 1.25 2004/11/25 10:02:19 motaboy Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/superkaramba/ChangeLog,v 1.26 2005/03/25 15:37:33 kugelfang Exp $
+
+  25 Mar 2005; Danny van Dyk <kugelfang@gentoo.org>
+  superkaramba-0.34.ebuild:
+  Marked stable on amd64.
 
   25 Nov 2004; Simone Gotti <motaboy@gentoo.org>
   +files/superkaramba-0.35-configure-arts.patch:
