@@ -1,0 +1,10 @@
+# ChangeLog for app-text/pstotext
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# /space/gentoo/cvsroot/gentoo-x86/app-text/pstotext/ChangeLog,v 1.0
+2002/07/16 17:53:00 cybersystem
+
+*pstotext-1.8g (16 July 2002)
+
+  16 July 2002; Sascha Schwabbauer <cybersystem@gentoo.org> ChangeLog, pstotext-1.8g.ebuild, files/digest-pstotext-1.8g  :
+  
+  Intial version in Portage.. Enjoy!
