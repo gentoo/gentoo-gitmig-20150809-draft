@@ -2,10 +2,9 @@ MD5 b9c69b3e0aa74aecfbcf9af1c86afb05 xine-ui-0.9.21-r1.ebuild 1603
 MD5 62eac430fc740d93f6e46d95daf4399b xine-ui-0.99.1.ebuild 1484
 MD5 506ec69dfb05fc3715635bcf8d4bf8a1 xine-ui-0.9.23-r2.ebuild 1582
 MD5 40bf93d7f70f5e67b422294d30121212 xine-ui-0.9.22-r2.ebuild 1456
-MD5 5be1dc1db97fa4e321c8bc33f87542a8 xine-ui-0.9.13-r1.ebuild 1625
 MD5 b2b2c14d937ea8da26f59637b9d7ab5d xine-ui-0.9.23-r1.ebuild 1421
 MD5 242af4c5181a7bbc3f2f510fc73923fd xine-ui-0.99.2.ebuild 1490
-MD5 d2b4dde3889ff903c45da3e9502d7a54 ChangeLog 10154
+MD5 84b7ffdd357bfe5b0796fd9bcc1d3f13 ChangeLog 10289
 MD5 31018765c8c65a239dba78a98c405543 metadata.xml 224
 MD5 dfb15028ebc406e84b5a35d9d6936f56 xine-ui-0.9.22-r1.ebuild 1442
 MD5 f474df8e81130d6b495663ed56763180 files/preserve-CFLAGS-0.9.23.diff 5470
@@ -16,7 +15,6 @@ MD5 b517eaaa6a9cbd78f22a48fc55ba2940 files/preserve-CFLAGS-0.99.2.diff 7923
 MD5 daacb70d49e7ee5ca3c1593f10eea0bc files/true-false.patch 298
 MD5 2d9954f609edaa8124eb990dddd259e4 files/implicit-config.patch 1820
 MD5 eae093d61629b0d42b806e9e84814e79 files/xine-ui-gentoo.diff 5216
-MD5 507406ba270ef32d0ed30da3e932ef01 files/digest-xine-ui-0.9.13-r1 67
 MD5 32aa0f3c22f337999efc35a1eff3cd94 files/digest-xine-ui-0.9.21-r1 67
 MD5 a40013de7a4c30965b9adb242f6d9203 files/digest-xine-ui-0.9.22-r1 67
 MD5 a40013de7a4c30965b9adb242f6d9203 files/digest-xine-ui-0.9.22-r2 67

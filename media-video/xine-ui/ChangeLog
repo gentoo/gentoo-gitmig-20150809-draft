@@ -1,6 +1,10 @@
 # ChangeLog for media-video/xine-ui
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/ChangeLog,v 1.63 2004/07/29 04:26:05 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/ChangeLog,v 1.64 2004/10/01 11:37:26 phosphan Exp $
+
+  01 Oct 2004; Patrick Kursawe <phosphan@gentoo.org>
+  -xine-ui-0.9.13-r1.ebuild:
+  Removing because xline-lib-0.9.13 is outdated.
 
   28 Jul 2004; Tom Gall <tgall@gentoo.org> xine-ui-0.99.2.ebuild:
   stable (ish) on ppc64, bug #55076
