@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/mp3blaster
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3blaster/ChangeLog,v 1.1 2002/02/01 21:53:31 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3blaster/ChangeLog,v 1.2 2002/03/28 23:00:28 seemant Exp $
+
+*mp3blaster-3.0_p8 (28 Mar 2002)
+
+  28 Mar 2002; Seemant Kulleen <seemant@gentoo.org> mp3blaster-3.0_p8.ebuild :
+
+  the vorbis USE flag is now called oggvorbis
 
 *mp3blaster-3.0_p8 (1 Feb 2002)
 
