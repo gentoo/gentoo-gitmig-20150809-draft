@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/prelink
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/prelink/ChangeLog,v 1.34 2004/10/14 17:51:54 cretin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/prelink/ChangeLog,v 1.35 2004/10/24 00:40:28 cretin Exp $
+
+  23 Oct 2004; Stefan Jones <cretin@gentoo.org> :
+  Mark Stable on x86
 
   14 Oct 2004; Stefan Jones <cretin@gentoo.org> :
   Run env-update after install and do not install prelink.conf
