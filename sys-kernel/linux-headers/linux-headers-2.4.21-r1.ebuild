@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.4.22.ebuild,v 1.6 2003/11/16 18:26:58 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.4.21-r1.ebuild,v 1.1 2003/11/16 18:26:58 kumba Exp $
 
 
 OKV=${PV/_/-}
@@ -22,7 +22,7 @@ HOMEPAGE="http://www.kernel.org/ http://www.gentoo.org/"
 LICENSE="GPL-2"
 SLOT="0"
 PROVIDE="virtual/kernel virtual/os-headers"
-KEYWORDS="-*"
+KEYWORDS="-* amd64 ~sparc ~x86 -mips"
 
 
 # Figure out what architecture we are, and set ARCH appropriately

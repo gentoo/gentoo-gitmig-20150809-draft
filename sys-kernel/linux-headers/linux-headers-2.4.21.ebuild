@@ -1,13 +1,14 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.4.21.ebuild,v 1.12 2003/10/30 23:17:54 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.4.21.ebuild,v 1.13 2003/11/16 18:26:58 kumba Exp $
 
 
+OKV=${PV/_/-}
+KV="${OKV}"
+S=${WORKDIR}/linux-${OKV}
+EXTRAVERSION=" "
 ETYPE="headers"
 inherit kernel
-OKV=${PV/_/-}
-S=${WORKDIR}/linux-${OKV}
-EXTRAVERSION=""
 
 # What's in this kernel?
 
