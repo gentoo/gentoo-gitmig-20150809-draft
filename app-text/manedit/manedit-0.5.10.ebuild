@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/manedit/manedit-0.5.10.ebuild,v 1.3 2003/11/14 20:05:48 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/manedit/manedit-0.5.10.ebuild,v 1.4 2004/03/12 09:18:44 mr_bones_ Exp $
 
 DESCRIPTION="Man page editor using XML tags"
 SRC_URI="ftp://wolfpack.twu.net/users/wolfpack/${P}.tar.bz2"

@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/uudeview/uudeview-0.5.13.ebuild,v 1.13 2003/08/01 20:48:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/uudeview/uudeview-0.5.13.ebuild,v 1.14 2004/03/12 09:18:44 mr_bones_ Exp $
 
 DESCRIPTION="uu, xx, base64, binhex decoder"
 HOMEPAGE="http://www.fpx.de/fp/Software/UUDeview/"

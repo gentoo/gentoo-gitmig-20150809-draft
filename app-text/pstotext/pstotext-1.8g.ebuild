@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pstotext/pstotext-1.8g.ebuild,v 1.6 2004/02/22 20:05:25 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pstotext/pstotext-1.8g.ebuild,v 1.7 2004/03/12 09:18:44 mr_bones_ Exp $
 
 DESCRIPTION="extract ASCII text from a PostScript or PDF file"
 HOMEPAGE="http://research.compaq.com/SRC/virtualpaper/pstotext.html"

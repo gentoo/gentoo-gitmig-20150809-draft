@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ding/ding-1.2.ebuild,v 1.6 2003/08/06 08:01:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ding/ding-1.2.ebuild,v 1.7 2004/03/12 09:18:43 mr_bones_ Exp $
 
 DESCRIPTION="Tk based dictionary (German-English) (incl. dictionary itself)"
 HOMEPAGE="http://www-user.tu-chemnitz.de/~fri/ding/"
