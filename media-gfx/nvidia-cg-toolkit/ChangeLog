@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/nvidia-cg-toolkit
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/nvidia-cg-toolkit/ChangeLog,v 1.6 2004/03/28 16:13:46 blauwers Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/nvidia-cg-toolkit/ChangeLog,v 1.7 2004/03/29 20:24:25 blauwers Exp $
+
+*nvidia-cg-toolkit-1.1.0303.0400 (29 Mar 2004)
+
+ 29 Mar 2004; Bart Lauwers <blauwers@gentoo.org> nvidia-cg-toolkit-1.1.0303.0400.ebuild:
+ Rename of nvidia-cg-toolkit-2.1-r7.ebuild to match vendor versioning scheme
 
 *nvidia-cg-toolkit-1.2.0402.1900 (28 Mar 2004)
 
