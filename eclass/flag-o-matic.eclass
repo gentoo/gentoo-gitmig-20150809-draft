@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.84 2005/03/18 03:48:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.85 2005/04/06 23:29:23 vapier Exp $
 
 ECLASS=flag-o-matic
 INHERITED="$INHERITED $ECLASS"
@@ -442,27 +442,18 @@ fstack-flags() {
 #
 # Export CFLAGS and CXXFLAGS that are compadible with gcc-2.95.3
 gcc2-flags() {
-	CFLAGS=${CFLAGS//pentium-mmx/i586}
-	CFLAGS=${CFLAGS//pentium[234]/i686}
-	CFLAGS=${CFLAGS//k6-[23]/k6}
-	CFLAGS=${CFLAGS//athlon-tbird/i686}
-	CFLAGS=${CFLAGS//athlon-4/i686}
-	CFLAGS=${CFLAGS//athlon-[xm]p/i686}
-	CFLAGS=${CFLAGS//athlon/i686}
-
-	CXXFLAGS=${CXXFLAGS//pentium-mmx/i586}
-	CXXFLAGS=${CXXFLAGS//pentium[234]/i686}
-	CXXFLAGS=${CXXFLAGS//k6-[23]/k6}
-	CXXFLAGS=${CXXFLAGS//athlon-tbird/i686}
-	CXXFLAGS=${CXXFLAGS//athlon-4/i686}
-	CXXFLAGS=${CXXFLAGS//athlon-[xm]p/i686}
-	CXXFLAGS=${CXXFLAGS//athlon/i686}
-
-	if [[ $(tc-arch) == "alpha" ]] ; then
-		CHOST=${CHOST/#alphaev6[78]/alphaev6}
-		CFLAGS=${CFLAGS//ev6[78]/ev6}
-		CXXFLAGS=${CXXFLAGS//ev6[78]/ev6}
+	if [[ $(tc-arch) == "x86" || $(tc-arch) == "amd64" ]] ; then
+		CFLAGS=${CFLAGS//-mtune=/-mcpu=}
+		CXXFLAGS=${CXXFLAGS//-mtune=/-mcpu=}
 	fi
+
+	replace-cpu-flags k6-{2,3} k6
+	replace-cpu-flags athlon{,-{tbird,4,xp,mp}} i686
+
+	replace-cpu-flags pentium-mmx i586
+	replace-cpu-flags pentium{2,3,4} i686
+
+	replace-cpu-flags ev6{7,8} ev6
 
 	export CFLAGS CXXFLAGS
 }
