@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.70 2004/09/25 07:37:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.71 2004/10/01 10:00:36 robbat2 Exp $
 #
 # Author Bart Verwilst <verwilst@gentoo.org>
 
@@ -75,7 +75,7 @@ setup-allowed-flags() {
 	if [ -z "${ALLOWED_FLAGS}" ] ; then
 		export ALLOWED_FLAGS="-O -O1 -O2 -mcpu -march -mtune -fstack-protector -fno-stack-protector -fno-pie -fno-unit-at-a-time -pipe -g"
 		case "${ARCH}" in
-			mips)	ALLOWED_FLAGS="${ALLOWED_FLAGS} -mips1 -mips2 -mips3 -mips4 -mabi" ;;
+			mips)	ALLOWED_FLAGS="${ALLOWED_FLAGS} -mips1 -mips2 -mips3 -mips4 -mips32 -mips64 -mips16 -EL -EB -mabi" ;;
 			amd64)	ALLOWED_FLAGS="${ALLOWED_FLAGS} -fPIC -m64" ;;
 			x86)	ALLOWED_FLAGS="${ALLOWED_FLAGS} -m32" ;;
 			alpha)	ALLOWED_FLAGS="${ALLOWED_FLAGS} -fPIC" ;;
