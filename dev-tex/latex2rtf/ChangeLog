@@ -1,6 +1,10 @@
 # ChangeLog for dev-tex/latex2rtf
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex2rtf/ChangeLog,v 1.10 2004/09/28 05:32:26 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex2rtf/ChangeLog,v 1.11 2004/11/06 08:11:08 usata Exp $
+
+  06 Nov 2004; Mamoru KOMACHI <usata@gentoo.org>
+  -latex2rtf-1.9.15-r1.ebuild, latex2rtf-1.9.15-r2.ebuild:
+  Changed gcc.eclass to toolchain-funcs.eclass and fixed bug #70010.
 
 *latex2rtf-1.9.15-r2 (28 Sep 2004)
 

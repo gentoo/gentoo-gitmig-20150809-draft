@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex2rtf/latex2rtf-1.9.15-r2.ebuild,v 1.1 2004/09/28 05:32:26 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex2rtf/latex2rtf-1.9.15-r2.ebuild,v 1.2 2004/11/06 08:11:08 usata Exp $
 
-inherit eutils gcc
+inherit eutils toolchain-funcs
 
 DESCRIPTION="LaTeX to RTF converter"
 HOMEPAGE="http://latex2rtf.sourceforge.net/"
@@ -26,11 +26,11 @@ src_unpack() {
 }
 
 src_compile() {
-	emake CC=$(gcc-getCC) || die
+	emake CC=$(tc-getCC) || die
 }
 
 src_install() {
-	PREFIX=${D}/usr make -e install || die
+	make PREFIX=${D}/usr CC=$(tc-getCC) install || die
 	dodoc README doc/latex2rtf.txt
 	# if doc is not used, only the text version is intalled.
 	if use doc; then
