@@ -64,3 +64,4 @@ xemacs
 Xaw3d
 neXt
 lesstif
+motif
