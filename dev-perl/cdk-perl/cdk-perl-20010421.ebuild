@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/cdk-perl/cdk-perl-20010421.ebuild,v 1.3 2002/07/25 05:23:26 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/cdk-perl/cdk-perl-20010421.ebuild,v 1.4 2002/08/16 02:49:00 murphy Exp $
 
 inherit perl-module
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://dickey.his.com/cdk/cdk.html"
 
 SLOT="0"
 LICENSE="BSD"
-KEYWORDS="x86"
+KEYWORDS="x86 sparc sparc64"
 
 DEPEND="${DEPEND}
 	>=dev-libs/cdk-4.9.10.20020430"
