@@ -1,6 +1,9 @@
 # ChangeLog for app-sci/kemistry
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/kemistry/ChangeLog,v 1.1 2002/10/23 15:06:03 hannes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/kemistry/ChangeLog,v 1.2 2002/10/23 16:18:43 hannes Exp $
+
+  23 Oct 2002; Hannes Mehnert <hannes@gentoo.org> kemistry-0.6.ebuild,
+  files/kemistry-0.6-gcc3.2.patch: patched source to compile with gcc-3.2
 
 *kemistry-0.6 (23 Oct 2002)
 
