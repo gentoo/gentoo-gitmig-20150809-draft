@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/netwib
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/netwib/ChangeLog,v 1.5 2004/02/28 05:28:54 mboman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/netwib/ChangeLog,v 1.6 2004/03/21 13:14:10 mboman Exp $
+
+  21 Mar 2004; Michael Boman <mboman@gentoo.org> netwib-5.6.0.ebuild,
+  netwib-5.9.0.ebuild:
+  QA: IUSE variable was missing.
 
 *netwib-5.9.0 (28 Feb 2004)
 
