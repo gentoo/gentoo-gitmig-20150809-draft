@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.260 2004/06/02 21:21:02 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.261 2004/06/02 21:28:46 pvdabeel Exp $
+
+  02 Jun 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> gcc-3.3.3_pre20040408-r1.ebuild:
+  Masked stable on ppc
 
   02 Jun 2004; Travis Tilley <lv@gentoo.org> gcc-3.4.0-r6.ebuild:
   lib64 fix for libgcc_s on ppc64

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.3_pre20040408-r1.ebuild,v 1.3 2004/05/28 18:48:18 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.3_pre20040408-r1.ebuild,v 1.4 2004/06/02 21:28:46 pvdabeel Exp $
 
 IUSE="static nls bootstrap java build X multilib"
 
@@ -108,7 +108,7 @@ LICENSE="GPL-2 LGPL-2.1"
 # It is working fine on ppc too
 #
 
-KEYWORDS="-* ppc64 "
+KEYWORDS="-* ppc64 ppc"
 #KEYWORDS="-*  ~x86 ~mips ~sparc ~amd64 -hppa ~alpha ~ia64"
 
 # Ok, this is a hairy one again, but lets assume that we
