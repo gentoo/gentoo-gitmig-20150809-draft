@@ -1,3 +1,4 @@
+MD5 abf5f97a49422c509b77b8077d714153 php-5.0.1.ebuild 540
 MD5 48aa6f4b37fb2c3cc4fa6ad0527f4378 php-5.0.0.ebuild 521
 MD5 159ad5dc930e19ed38c8377ef7a8eb06 php-4.3.9_rc1.ebuild 1137
 MD5 b2d0db4a25a518bc74e470b79905112b ChangeLog 16848
@@ -11,3 +12,4 @@ MD5 11f305b98b753ee023da8503a360762a files/digest-php-5.0.0-r1 63
 MD5 273799e60d5a41a1e6f5ac53781a152f files/php5_soap_persistence_session.diff 1976
 MD5 ae48d9701424c6ba150e00304b5d84b1 files/digest-php-4.3.8 208
 MD5 11f305b98b753ee023da8503a360762a files/digest-php-5.0.0 63
+MD5 14d868f33e29b3c9a70b118e9da58dd0 files/digest-php-5.0.1 63
