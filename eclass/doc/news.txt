@@ -1,3 +1,9 @@
+5/10
+v3.3
+Removal of kde-objprelink. You now inherit from it no longer :-)
+It has been merged into kde. You will get the dependency and the configure parameter
+automatically, and can call kde-objprelink-patch() (which is now in kde.eclass) if needed.
+
 3/10
 v3.2
 Addition of kde-objprelink, further minor changes and fixes.

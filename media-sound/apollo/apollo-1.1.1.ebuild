@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Karl Trygve Kalleberg <karltk@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-sound/apollo/apollo-1.1.1.ebuild,v 1.2 2001/09/19 19:37:48 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/apollo/apollo-1.1.1.ebuild,v 1.3 2001/10/05 11:46:29 danarmak Exp $
 
 S=${WORKDIR}/${P}-1
 
@@ -35,9 +35,11 @@ src_install () {
     if [ "`use kde`" ]
     then
         # FIXME: won't work when multiple versions of KDE is installed
-    	foo=`/opt/kde*/bin/kde-config --prefix`
-        myconf="--with-kde=${D}$foo"
-        dodir opt/kde/share/applnk/Multimedia
+	# IFIXEDYOU: danarmak: kde dir must *always* be determined via
+	# $KDEDIR. If $KDEDIR doesn't do the job, fix it, don't work
+	# around it.
+        myconf="--with-kde=${KDEDIR}"
+        dodir ${KDEDIR}/share/applnk/Multimedia
     fi
     
     dodir usr/bin

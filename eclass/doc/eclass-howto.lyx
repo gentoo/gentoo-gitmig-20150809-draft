@@ -30,7 +30,7 @@ eclass howto
 Dan Armak
 \layout Date
 
-Updated for eclasses v3.2
+Updated for eclasses v3.3
 \layout Section
 
 Introduction
@@ -487,6 +487,12 @@ Note: some kde apps, like widget styles and i18n packages, do not need to
  which also inherits from here).
  All other packages, which need to compile c code and link against qt, should
  inherit from kde-base.eclass.
+\layout Standard
+
+As of v3.3, kde-objprelink was merged with kde, which now provides the objprelink
+ deps (>=objprelink-0-r1), the options passed to configure and a function
+ kde-objprelink-patch() that applies the kde-admin-acinclude patch.
+ Call it at the end of your src_unpack if you need it.
 \layout Subsection
 
 kde-base.eclass
@@ -673,37 +679,7 @@ Note that all debugging output is off by default.
 kde-objprelink.eclass
 \layout Standard
 
-Provides objprelink deps (>=objprelink-0-r1).
- Also provides a function kde-objprelink-patch() that applies the kde-admin-acin
-clude patch.
- Call it and the end of your src_unpack if you need it.
-\layout Standard
-
-Known issue: the actual --enable-objprelink option is passed to configure
- from kde.eclass, regardless of the inheritance of objprelink.
- Therefore if:
-\layout Enumerate
-
-A package has builtin objprelink capability which can be activated from
- configure with --enable-objprelink
-\layout Enumerate
-
-The package does not inherit from kde-objprelink (or kde-dist etc.)
-\layout Enumerate
-
-USE objprelink is set
-\layout Enumerate
-
->=objprelink-0-r1 is, incidentally, not installed
-\layout Standard
-
-Then, the make process will try to use objprelink, but won't find it and
- will (may?) fail and abort.
-\layout Standard
-
-However, because the package will depend on kdelibs, which inherits kde-objpreli
-nk through kde-dist, the chances of this happening are practically nil.
- In any case, I'll try to think of a better solution.
+This eclass has been removed in v3.3 Its contents were merged into kde.eclass.
 \layout Section
 
 The inheriting ebuilds

@@ -10,7 +10,7 @@
    Dan Armak
   </author>
   <date>
-   Updated for eclasses v3.2
+   Updated for eclasses v3.3
   </date>
   <sect1>
    <title>
@@ -251,6 +251,9 @@
    <para>
     Note: some kde apps, like widget styles and i18n packages, do not need to compile anything. Therefore kde.eclass does not inherit c and does not depend on qt. These packages can then inherit straight from here (or from kde-i18n.eclass, which also inherits from here). All other packages, which need to compile c code and link against qt, should inherit from kde-base.eclass.
    </para>
+   <para>
+    As of v3.3, kde-objprelink was merged with kde, which now provides the objprelink deps (&gt;=objprelink-0-r1), the options passed to configure and a function kde-objprelink-patch() that applies the kde-admin-acinclude patch. Call it at the end of your src_unpack if you need it.
+   </para>
    </sect2>
    <sect2>
     <title>
@@ -356,38 +359,7 @@
     kde-objprelink.eclass
    </title>
    <para>
-    Provides objprelink deps (&gt;=objprelink-0-r1). Also provides a function kde-objprelink-patch() that applies the kde-admin-acinclude patch. Call it and the end of your src_unpack if you need it.
-   </para>
-   <para>
-    Known issue: the actual --enable-objprelink option is passed to configure from kde.eclass, regardless of the inheritance of objprelink. Therefore if:
-   </para>
-   <orderedlist>
-    <listitem>
-    <para>
-    A package has builtin objprelink capability which can be activated from configure with --enable-objprelink
-    </para>
-   </listitem>
-    <listitem>
-    <para>
-    The package does not inherit from kde-objprelink (or kde-dist etc.)
-    </para>
-   </listitem>
-    <listitem>
-    <para>
-    USE objprelink is set
-    </para>
-   </listitem>
-    <listitem>
-    <para>
-    &gt;=objprelink-0-r1 is, incidentally, not installed
-    </para>
-   </listitem>
-   </orderedlist>
-   <para>
-    Then, the make process will try to use objprelink, but won't find it and will (may?) fail and abort.
-   </para>
-   <para>
-    However, because the package will depend on kdelibs, which inherits kde-objprelink through kde-dist, the chances of this happening are practically nil. In any case, I'll try to think of a better solution.
+    This eclass has been removed in v3.3 Its contents were merged into kde.eclass.
    </para>
    </sect2>
   </sect1>

@@ -4,7 +4,7 @@ eclass howto
 
 Dan Armak
 
-Updated for eclasses v3.2
+Updated for eclasses v3.3
 
 1 Introduction
 
@@ -296,6 +296,12 @@ which also inherits from here). All other packages, which
 need to compile c code and link against qt, should inherit
 from kde-base.eclass.
 
+As of v3.3, kde-objprelink was merged with kde, which now
+provides the objprelink deps (>=objprelink-0-r1), the options
+passed to configure and a function kde-objprelink-patch()
+that applies the kde-admin-acinclude patch. Call it at the
+end of your src_unpack if you need it.
+
 2.5 kde-base.eclass
 
 Meant for standard kde apps, of both 2.1 and 2.2 architectures.
@@ -405,32 +411,8 @@ the appropriate lines.
 
 2.11 kde-objprelink.eclass
 
-Provides objprelink deps (>=objprelink-0-r1). Also provides
-a function kde-objprelink-patch() that applies the kde-admin-acinclude
-patch. Call it and the end of your src_unpack if you need
-it.
-
-Known issue: the actual --enable-objprelink option is passed
-to configure from kde.eclass, regardless of the inheritance
-of objprelink. Therefore if:
-
-1. A package has builtin objprelink capability which can be
-  activated from configure with --enable-objprelink
-
-2. The package does not inherit from kde-objprelink (or kde-dist
-  etc.)
-
-3. USE objprelink is set
-
-4. >=objprelink-0-r1 is, incidentally, not installed
-
-Then, the make process will try to use objprelink, but won't
-find it and will (may?) fail and abort.
-
-However, because the package will depend on kdelibs, which
-inherits kde-objprelink through kde-dist, the chances of
-this happening are practically nil. In any case, I'll try
-to think of a better solution.
+This eclass has been removed in v3.3 Its contents were merged
+into kde.eclass.
 
 3 The inheriting ebuilds
 
