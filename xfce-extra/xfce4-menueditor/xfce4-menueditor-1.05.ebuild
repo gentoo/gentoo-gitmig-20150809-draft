@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-menueditor/xfce4-menueditor-1.0.ebuild,v 1.2 2004/02/11 06:01:04 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-menueditor/xfce4-menueditor-1.05.ebuild,v 1.1 2004/02/11 06:01:04 bcowan Exp $
 
 IUSE=""
 S=${WORKDIR}/${PN}
