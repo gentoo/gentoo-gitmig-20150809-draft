@@ -1,9 +1,4 @@
-MD5 ff807499928379c4274a307855b9eeeb alsa-driver-0.5.11.tar.bz2
 MD5 1f75500dc9f98e638e08cbd607317cd1 linux-2.4.4-knfsd-6.g.patch.gz
 MD5 417725f5cf01266a93a3927fcd370545 linux-2.4.4-procinfo-1.d.patch.gz
-MD5 2c5489784ea737e95537780fe2ba5321 linux-2.4.4-xfs-20010523-gentoo.diff.gz
 MD5 b2cb01dfca76829c31ddc61445e4bbb9 linux-2.4.4.tar.bz2
-MD5 53740608812efa82532da2f980e6f974 lm_sensors-2.5.5.tar.gz
-MD5 1ce6fb607f26dc20d4c77461057acb3c lvm_0.9.1_beta7.tar.gz
-MD5 4ec7264c95d17bb86c3a94f0a12ed11d pcmcia-cs-3.1.25.tar.gz
 MD5 e2c8f8769e698202e273498749c40186 reiserfs-quota-2.4.4.dif.bz2
