@@ -1,8 +1,13 @@
 # ChangeLog for dev-libs/pwlib
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/ChangeLog,v 1.18 2003/02/12 06:09:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/ChangeLog,v 1.19 2003/02/13 08:35:33 raker Exp $
 
 *pwlib-1.4.7 (Jan 28 2003)
+
+  13 Feb 2003; Nick Hadaway <raker@gentoo.org> pwlib-1.4.7.ebuild :
+  Added a warning so people realize that during a pwlib upgrade,
+  the build will fail and to unmerge previous versions before
+  continuing.
 
   01 Feb 2003; Nick Hadaway <raker@gentoo.org> pwlib-1.4.7.ebuild :
   Marked stable
