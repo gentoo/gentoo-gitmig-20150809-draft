@@ -1,6 +1,12 @@
 # ChangeLog for gnome-extra/libgtkhtml
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgtkhtml/ChangeLog,v 1.63 2004/03/16 23:35:46 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgtkhtml/ChangeLog,v 1.64 2004/03/21 15:06:24 foser Exp $
+
+*libgtkhtml-2.5.6 (21 Mar 2004)
+
+  21 Mar 2004; foser <foser@gentoo.org> libgtkhtml-2.5.6.ebuild :
+  Gnome 2.6 commit
+  Add accessibility USE
 
   16 Mar 2004; Stephen P. Becker <geoman@gentoo.org> libgtkhtml-2.4.1.ebuild:
   Added ~mips keyword.
