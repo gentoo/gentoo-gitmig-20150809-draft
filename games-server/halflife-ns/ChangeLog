@@ -1,6 +1,11 @@
 # ChangeLog for games-server/halflife-ns
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/halflife-ns/ChangeLog,v 1.3 2004/04/16 17:47:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/halflife-ns/ChangeLog,v 1.4 2004/04/16 18:21:34 vapier Exp $
+
+*halflife-ns-3.0_beta3 (16 Aug 2004)
+
+  16 Aug 2004; Mike Frysinger <vapier@gentoo.org> :
+  Version bump #46535 by Daniel Fullmer.
 
 *halflife-ns-2.01 (16 Aug 2004)
 
