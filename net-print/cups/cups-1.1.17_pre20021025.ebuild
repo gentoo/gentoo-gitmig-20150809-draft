@@ -1,14 +1,18 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.1.17_pre20021025.ebuild,v 1.1 2002/10/25 18:51:32 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.1.17_pre20021025.ebuild,v 1.2 2002/10/25 19:49:08 woodchip Exp $
 
 IUSE="ssl slp pam"
 
 DESCRIPTION="The Common Unix Printing System"
 HOMEPAGE="http://www.cups.org"
 
-S=${WORKDIR}/${PN}
-SRC_URI="http://www.ibiblio.org/gentoo/distfiles/${P}.tbz2"
+PORIG="cups-1.1.16"
+PPATCH="cups-1.1.17_pre20021025"
+
+S=${WORKDIR}/${PORIG}
+SRC_URI="ftp://ftp.easysw.com/pub/cups/1.1.16/${PORIG}-source.tar.bz2
+	mirror://gentoo/${PPATCH}.diff.bz2"
 PROVIDE="virtual/lpr"
 
 DEPEND="virtual/glibc
@@ -24,18 +28,22 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~sparc64"
 
 src_unpack() {
-	unpack ${A} || die
+	unpack ${PORIG}-source.tar.bz2 || die
 	cd ${S} || die
-	WANT_AUTOCONF_2_5=1 autoconf || die
 	#make sure libcupsimage gets linked with libjpeg 
-	patch -p0 < ${FILESDIR}/configure-jpeg-buildfix-1.1.15.diff || die
-	patch -p1 < ${FILESDIR}/disable-strip.patch || die
+#	patch -p0 < ${FILESDIR}/configure-jpeg-buildfix-1.1.15.diff || die
+#	patch -p1 < ${FILESDIR}/disable-strip.patch || die
+
+	bzip2 -dc ${DISTDIR}/${PPATCH}.diff.bz2 | patch -p1 || die
+	WANT_AUTOCONF_2_5=1 autoconf || die
+
 	#known problem, probably will be fixed next release //woodchip; #9188
-	cd pdftops && cp Makefile Makefile.orig
-	sed -e 's|FTFont.o||' \
-		-e 's|SFont.o||' \
-		-e 's|T1Font.o||' \
-		-e 's|TTFont.o||' Makefile.orig > Makefile
+	#covered by above patch...
+#	cd pdftops && cp Makefile Makefile.orig
+#	sed -e 's|FTFont.o||' \
+#		-e 's|SFont.o||' \
+#		-e 's|T1Font.o||' \
+#		-e 's|TTFont.o||' Makefile.orig > Makefile
 }
 
 src_compile() {
