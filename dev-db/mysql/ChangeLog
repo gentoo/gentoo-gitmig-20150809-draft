@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.184 2005/03/13 15:48:20 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.185 2005/03/13 19:50:57 weeve Exp $
+
+  13 Mar 2005; Jason Wever <weeve@gentoo.org> mysql-4.0.24.ebuild:
+  Stable on SPARC wrt security bug #84819.
 
   13 Mar 2005; Michael Hanselmann <hansmi@gentoo.org> mysql-4.0.24.ebuild:
   Stable on ppc.
