@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/scmail/scmail-1.2.ebuild,v 1.1 2004/03/14 11:18:15 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/scmail/scmail-1.2.ebuild,v 1.2 2004/03/28 10:48:03 hattya Exp $
 
 IUSE=""
 
@@ -9,9 +9,8 @@ DESCRIPTION="a mail filter written in Scheme"
 SRC_URI="http://namazu.org/~satoru/scmail/${P}.tar.gz"
 
 LICENSE="BSD"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 SLOT="0"
-S="${WORKDIR}/${P}"
 
 DEPEND=">=dev-lisp/gauche-0.7.4.1"
 
