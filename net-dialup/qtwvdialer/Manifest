@@ -1,17 +1,17 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 75a82e77d90e48d4c39f7dbb8443d19a ChangeLog 1192
+MD5 31714f5ff4d69093fb7f4b57bea87fea ChangeLog 1326
 MD5 ec2f84816306825d125d0c01bd86758d metadata.xml 163
 MD5 de85c0b8557969972889bab6a78c0731 qtwvdialer-0.3.1-r2.ebuild 946
-MD5 25dc819bfadefabd3feb413570180fd4 qtwvdialer-0.4.2.ebuild 820
+MD5 13cc77a50e87493ad5e905eb4f327fa0 qtwvdialer-0.4.2.ebuild 887
 MD5 68e1854e46d8b4a9bbd052098dc1b61e files/digest-qtwvdialer-0.3.1-r2 64
 MD5 93e6d23d60dfd3c9067ab0d9043c693a files/digest-qtwvdialer-0.4.2 64
 MD5 59c8d2a2966240cc4246a6c295c7fb95 files/g++configure.patch 450
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
+Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBWAi1mdTrptrqvGERAoNqAJ9aA1nx+zRIUbRTQpmNIZAJg0ptyACePlTM
-IfSvxQVcHWvsjNIqSq+AdGU=
-=PB6H
+iD8DBQFBnxbejtv59x0+BrURAlV3AKDsBf0thxn7h5GPUbbj9Oog5VxhIwCdEund
+gHcqdlQsGwzBS3SCBrEjkJM=
+=jgcN
 -----END PGP SIGNATURE-----
