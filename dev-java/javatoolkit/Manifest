@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 58039ab5851aea0be6300fb1e5923549 ChangeLog 480
-MD5 b7f0b7eb91317ea271f913a6d034198b javatoolkit-0.1.0.ebuild 553
+MD5 840bd090af0cf42528e9a837e396ac1c ChangeLog 577
+MD5 7a88a33e58bd368ef5f52b083bb78770 javatoolkit-0.1.0.ebuild 559
 MD5 0637a933ecb6e8cedfc4ddfcf3491728 metadata.xml 310
 MD5 52615c22a50526070b4235235b87734e files/digest-javatoolkit-0.1.0 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBW0zqI1lqEGTUzyQRAo4aAJ9lXfnKjyiqNCDjVblivUw5wZxVRwCfVzsF
-kbWUpFexaETYWXM/CHCZ7jc=
-=ec9e
------END PGP SIGNATURE-----

@@ -1,5 +1,5 @@
-MD5 a55d05427c475716bb8bbf69f7ce7900 ChangeLog 661
-MD5 0b5e3bed2da72fd8bba1b6b7f044223c jclasslib-2.0.ebuild 1110
+MD5 e65589cbc7e9bc7293f84d0785fb774a ChangeLog 757
+MD5 f116ea281c666125626b258f3a5baedd jclasslib-2.0.ebuild 1120
 MD5 4dad079a28768d183022cff420f01281 metadata.xml 220
 MD5 be1d000b16835290b454e72c2ba1eacf files/build.xml.patch 857
 MD5 3cfd3f6d617f048986d0291ea854bcac files/digest-jclasslib-2.0 71
