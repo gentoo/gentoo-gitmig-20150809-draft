@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap/libcap-1.10-r3.ebuild,v 1.2 2003/10/17 02:23:45 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap/libcap-1.10-r3.ebuild,v 1.3 2003/11/05 01:22:31 brad_mssw Exp $
 
 inherit base flag-o-matic
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.kernel.org/pub/linux/libs/security/linux-privs/kernel-2.4/${
 
 LICENSE="GPL-2 BSD"
 SLOT="0"
-KEYWORDS="~x86 ~arm ~mips ~hppa ~sparc ~ppc ~alpha ~amd64"
+KEYWORDS="~x86 ~arm ~mips ~hppa ~sparc ~ppc ~alpha amd64"
 IUSE="python"
 
 #patch is in recent 2.2 kernels so it works there
@@ -40,6 +40,7 @@ src_compile() {
 	fi
 
 	use alpha && append-flags -fPIC
+	use amd64 && append-flags -fPIC
 
 	emake COPTFLAG="${CFLAGS}" DEBUG="" ${myflags} || die
 }
