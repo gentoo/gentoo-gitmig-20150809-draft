@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/acroread-asianfonts/acroread-asianfonts-20020815.ebuild,v 1.1 2003/07/22 07:13:27 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/acroread-asianfonts/acroread-asianfonts-20020815.ebuild,v 1.2 2003/07/27 20:37:41 matsuu Exp $
 
 DESCRIPTION="Asian Font Packs for Acrobat Reader 5.0"
 HOMEPAGE="http://www.adobe.com/prodindex/acrobat/readstep.html"
@@ -16,7 +16,8 @@ LICENSE="Adobe"
 KEYWORDS="~x86"
 IUSE=""
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/glibc
+	app-text/acroread"
 S="${WORKDIR}"
 
 INSTALLDIR="/opt/Acrobat5/Resource/Font"

@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/acroread-asianfonts
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/acroread-asianfonts/ChangeLog,v 1.1 2003/07/22 07:13:27 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/acroread-asianfonts/ChangeLog,v 1.2 2003/07/27 20:37:41 matsuu Exp $
+
+  28 Jul 2003; MATSUU Takuto <matsuu@gentoo.org> acroread-asianfonts-20020815.ebuild:
+  Add app-text/acroread in DEPEND.
 
 *acroread-asianfonts-20020815 (22 Jul 2003)
 
