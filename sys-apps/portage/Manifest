@@ -2,7 +2,7 @@ MD5 13a9a043d9566ec34b484254f5792fde portage-2.0.48-r6.ebuild 8788
 MD5 5fcbc3de6bcdc83b48ac01bb1d1d58cf portage-2.0.48-r1.ebuild 9132
 MD5 7e17a036929ca8c6029aa3a7a0e6feb8 portage-2.0.49_pre14.ebuild 9030
 MD5 a55daa51391355473232f275ea01c9a2 portage-2.0.48-r5.ebuild 8732
-MD5 ef57b7d5a75ffadb1196201db34fde4f portage-2.0.48-r7.ebuild 8723
+MD5 8fabbb90a0b5c412db20f4c1e4c742cc portage-2.0.48-r7.ebuild 8724
 MD5 7a709e31673be10e62970bf71982b8e0 portage-2.0.49_pre13.ebuild 9040
 MD5 4b443b79502a2b4789b217c120b9e71a ChangeLog 618
 MD5 b8d108fa8fc779df69eca42d2634437b files/digest-portage-2.0.49_pre13 73

@@ -1,10 +1,10 @@
 # Distributed under the terms of the GNU General Public License v2 
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.48-r7.ebuild,v 1.2 2003/07/25 04:24:34 carpaski Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.48-r7.ebuild,v 1.3 2003/07/25 04:25:20 carpaski Exp $
 
 IUSE="build"
 
 # If the old /lib/sandbox.so is in /etc/ld.so.preload, it can
-# cause everything to segfault !!
+# cause everything to segfault !!!
 export SANDBOX_DISABLED="1"
 
 S=${WORKDIR}/${PF}
