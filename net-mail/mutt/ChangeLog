@@ -1,6 +1,6 @@
 # ChangeLog for net-mail/mutt
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mutt/ChangeLog,v 1.32 2003/07/15 09:27:54 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mutt/ChangeLog,v 1.33 2003/08/04 22:27:12 gmsoft Exp $
 
   15 Jul 2003; Christian Birchinger <joker@gentoo.org> mutt-1.5.4-r1.ebuild:
   Added sparc stable keyword
@@ -9,6 +9,9 @@
   unset WANT_AUTOMAKE_2_5 to fix compilation. bug #22787
 
 *mutt-1.5.4-r1 (29 May 2003)
+
+  05 Aug 2003; Guy Martin <gmsoft@gentoo.org> mutt-1.5.4-r1.ebuild :
+  Marked stable on hppa.
 
   29 May 2003; Stanislav Brabec <utx@gentoo.org> mutt-1.4.1-r1.ebuild,
   mutt-1.5.4-r1.ebuild: Fixed mbox build (from mutt-1.4-r3). Added message
