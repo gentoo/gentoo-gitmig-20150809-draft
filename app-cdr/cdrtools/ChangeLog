@@ -1,6 +1,6 @@
 # ChangeLog for app-cdr/cdrtools
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/ChangeLog,v 1.43 2003/04/11 16:22:42 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/ChangeLog,v 1.44 2003/04/14 15:28:05 agenkin Exp $
 
   04 Mar 2003; Arcady Genkin <agenkin@gentoo.org> :
   Providing virtual/cdrtools.
@@ -10,6 +10,11 @@
 
   05 Feb 2003; Martin Schlemmer <azarah@gentoo.org> :
   Add support for 2.5 kernel.
+
+*cdrtools-2.01_alpha10 (14 Apr 2003)
+
+  14 Apr 2003; Arcady Genkin <agenkin@getoo.org> :
+  Version bump.
 
 *cdrtools-2.01_alpha09 (11 Apr 2003)
 
