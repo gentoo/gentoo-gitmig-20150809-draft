@@ -1,26 +1,25 @@
 # ChangeLog for media-libs/allegro
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/ChangeLog,v 1.9 2003/02/12 07:05:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/ChangeLog,v 1.10 2003/04/25 13:42:25 vapier Exp $
+
+*allegro-4.0.3 (25 Apr 2003)
+
+  25 Apr 2003; Mike Frysinger <vapier@gentoo.org> :
+  Version bump.
 
 *allegro-4.0.2 (06 Jul 2002)
 
   11 Jan 2003; Seemant Kulleen <seemant@gentoo.org> allegro-4.0.3.ebuild :
-
   filtered out the -fPIC flag.
 
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
- 
   06 Jul 2002; Seemant Kulleen <seemant@gentoo.org> allegro-4.0.2.ebuild
   files/digest-allegro-4.0.2 :
-
   Version bump.
 
 *allegro-4.0.1 (30 Apr 2002)
 
   13 May 2002; Matthew Kennedy <mkennedy@gentoo.org>
-  allegro-4.0.1-r2.ebuild
-  files/digest-allegro-4.0.1-r2, ChangeLog :
-
+  allegro-4.0.1-r2.ebuild, files/digest-allegro-4.0.1-r2, ChangeLog :
   Fixed dependencies. Fixed tetex sandbox violations. Fixed build
   flags.
 
@@ -28,7 +27,6 @@
 
   30 Apr 2002; Seemant Kulleen <seemant@gentoo.org> allegro-4.0.1-r1.ebuild
   files/digest-allegro-4.0.1-r1 :
-
   Added tetex USE flag dependent dvi documentation compilation.  This fixes 
   bug # 2266 by rparker@ntlworld.com (Robin Parker)
 
@@ -36,13 +34,11 @@
 
   14 Apr 2002; Seemant Kulleen <seemant@gentoo.org> allegro-4.0.1.ebuild
   files/digest-allegro-4.0.1 :
-
   Version bump, and changed the fbcon USE flag to just fb
 
 *allegro-3.9.37 (1 Feb 2002)
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
-  
   Added initial ChangeLog which should be updated whenever the package is
   updated in any way. This changelog is targetted to users. This means that the
   comments should well explained and written in clean English. The details about
