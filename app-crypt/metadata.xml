@@ -9,5 +9,9 @@
 		La categoría app-crypt contiene programas para criptografía
 		(cifrado, des-cifrado, estenografía y firmas). 
 	</longdescription>
+	<longdescription lang="de">
+		Die Kategorie app-crypt enhält kryptographische (Ver- und Entschlüsselung,
+		Steganographie, Signierung) Software.
+	</longdescription>
 </catmetadata>
 
