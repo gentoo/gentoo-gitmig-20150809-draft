@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/timidity++
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/ChangeLog,v 1.22 2004/04/16 09:40:02 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/ChangeLog,v 1.23 2004/04/23 00:31:34 eradicator Exp $
+
+*timidity++-2.13.0 (22 Apr 2004)
+
+  22 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  timidity++-2.13.0.ebuild:
+  Version bump closes bug #48701.
 
   16 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org>
   timidity++-2.13.0_rc1.ebuild, timidity++-2.13.0_rc2.ebuild:
