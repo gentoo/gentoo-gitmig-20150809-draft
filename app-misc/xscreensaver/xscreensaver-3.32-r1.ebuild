@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Peter Gavin <pete@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-misc/xscreensaver/xscreensaver-3.32-r1.ebuild,v 1.2 2001/06/08 01:08:06 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/xscreensaver/xscreensaver-3.32-r1.ebuild,v 1.3 2001/06/08 01:58:12 achim Exp $
 
 #P=
 A=${P}.tar.gz
@@ -11,21 +11,19 @@ SRC_URI="http://www.jwz.org/xscreensaver/${A}"
 HOMEPAGE="http://www.jwz.org/xscreensaver/"
 
 DEPEND="virtual/x11 sys-devel/bc
-	>=sys-apps/shadow-20001016
 	gtk? ( >=x11-libs/gtk+-1.2.8 )
 	motif? ( >=x11-libs/openmotif-2.1.30 )
 	opengl? ( virtual/opengl >=media-libs/gle-3.0.1 )
-	gnome? ( >=gnome-base/gnome-core-1.2.0 )
-	pam? ( >=sys-libs/pam-0.75 )
+	gnome? ( >=gnome-base/control-center-1.4.0.1 )
+        pam? ( >=sys-libs/pam-0.75 )
         kde? ( kde-base/kde-env )"
 
 RDEPEND="virtual/x11
-	>=sys-apps/shadow-20001016
 	gtk? ( >=x11-libs/gtk+-1.2.8 )
 	motif? ( >=x11-libs/openmotif-2.1.30 )
 	opengl? ( virtual/opengl >=media-libs/gle-3.0.1 )
-	gnome? ( >=gnome-base/gnome-core-1.2.0 )
-	pam? ( >=sys-libs/pam-0.75 )
+	gnome? ( >=gnome-base/control-center-1.4.0.1 )
+        pam? ( >=sys-libs/pam-0.75 )
         kde? ( kde-base/kde-env )"
 
 src_compile() {
