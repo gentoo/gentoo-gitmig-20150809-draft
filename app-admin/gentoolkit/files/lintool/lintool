@@ -433,7 +433,7 @@ def parse_opts(argv):
       options['showSeparate'] = 1
     elif option in [ '--no-summary']:
       options['showTotal'] = 0
-    elif option in [ '--ebuilds' ]:
+    elif option in [ '--from-file' ]:
       lines = open(value, 'r').readlines()
       lines = [o.strip() for o in lines]
       args = lines + args
@@ -441,6 +441,10 @@ def parse_opts(argv):
       options['desiredTests'] = value.split(",")
     elif option in [ '--list-tests' ]:
       options['listTests'] = 1
+    elif option in [ '--ebuild' ]:
+      options['testmode'] = 'ebuild'
+    elif option in [ '--changelog' ]:
+      options['testmode'] = 'changelog'
     elif option in [ '-h', '-?', '--help' ]:
       usage(opts)
       sys.exit(0)
@@ -523,7 +527,10 @@ def main():
             " (" + str(totalErrors*100/numFiles) + "%)"
       print "Total number of ebuilds with warnings                             : " + str(totalWarnings) + \
             " (" + str(totalWarnings*100/numFiles) + "%)"
-        
+
+      if totalErrors:
+        sys.exit(1)
+
 if __name__ == "__main__":
   main()
 
