@@ -1,26 +1,27 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/uw-imap-2002e-r1.ebuild,v 1.7 2004/02/05 07:18:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/uw-imap-2002e-r1.ebuild,v 1.8 2004/04/06 03:13:14 vapier Exp $
+
+inherit flag-o-matic
 
 MY_P=imap-${PV}
 S=${WORKDIR}/${MY_P}
 
 DESCRIPTION="UW server daemons for IMAP and POP network mail protocols."
-SRC_URI="ftp://ftp.cac.washington.edu/imap/${MY_P}.tar.Z"
 HOMEPAGE="http://www.washington.edu/imap/"
+SRC_URI="ftp://ftp.cac.washington.edu/imap/${MY_P}.tar.Z"
 
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="x86 sparc ppc hppa alpha amd64"
 IUSE="ssl mbox pic"
 
-PROVIDE="virtual/imapd"
-PROVIDE="${PROVIDE} virtual/imap-c-client"
 DEPEND="!net-mail/vimap
 	!virtual/imap-c-client
 	virtual/glibc
 	>=sys-libs/pam-0.72
 	ssl? ( dev-libs/openssl )"
+PROVIDE="virtual/imapd virtual/imap-c-client"
 
 src_unpack() {
 	unpack ${A}
