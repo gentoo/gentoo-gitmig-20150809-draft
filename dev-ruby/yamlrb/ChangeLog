@@ -1,14 +1,22 @@
 # ChangeLog for dev-ruby/yamlrb
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/yamlrb/ChangeLog,v 1.3 2003/04/10 12:28:17 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/yamlrb/ChangeLog,v 1.4 2003/04/11 08:30:47 twp Exp $
 
 *yamlrb-0.49.2 (10 Apr 2003)
+
+  11 Apr 2003; Tom Payne <twp@gentoo.org> yamlrb-0.49.2-r1.ebuild :
+
+  Fix pkg_install to install okay/* properly. Thanks hannes.
 
   10 Apr 2003; Tom Payne <twp@gentoo.org> yamlrb-0.49.2.ebuild :
 
   Version bump.
 
 *yamlrb-0.49.1 (10 Apr 2003)
+
+  11 Apr 2003; Tom Payne <twp@gentoo.org> yamlrb-0.49.1-r1.ebuild :
+
+  Fix pkg_install to install okay/* properly. Thanks hannes.
 
   10 Apr 2003; Tom Payne <twp@gentoo.org> yamlrb-0.49.1.ebuild :
 
