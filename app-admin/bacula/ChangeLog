@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/bacula
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/bacula/ChangeLog,v 1.40 2004/10/16 20:08:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/bacula/ChangeLog,v 1.41 2004/10/17 13:34:41 weeve Exp $
+
+  17 Oct 2004; Jason Wever <weeve@gentoo.org> bacula-1.34.4.ebuild:
+  Stable on sparc.
 
   16 Oct 2004; Mike Frysinger <vapier@gentoo.org> bacula-1.32f-r5.ebuild,
   bacula-1.32f.ebuild, bacula-1.34.1.ebuild, bacula-1.34.4.ebuild,
