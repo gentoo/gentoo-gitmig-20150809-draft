@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 2035fe82c0c25a6d76683baae1097a01 ChangeLog 1583
-MD5 927e3adab7072066350d0f6a1955c402 libgsasl-0.2.3.ebuild 1045
+MD5 b7275cc153a4b46a32aac1cd4cb822e6 ChangeLog 1687
+MD5 21618625f69e9445dbe965279db9b226 libgsasl-0.1.4.ebuild 1114
 MD5 9a3024665c04c1eb6ef0f20c66b451dc metadata.xml 252
-MD5 4b70306c442af5a99481645dacd31683 libgsasl-0.2.0.ebuild 1049
-MD5 3bcaf6e6b657d1ec364475e7e7d10c27 libgsasl-0.1.4.ebuild 1112
-MD5 1bd701f1053d1243cb785b696d3b50a7 files/digest-libgsasl-0.2.0 66
-MD5 17882049058e34b91e9b32c1e6e7886e files/digest-libgsasl-0.1.4 66
+MD5 9355c194b4e28f3ad55882c6e40f44ad libgsasl-0.2.0.ebuild 1050
+MD5 c8e5dab7e327da5d352c5d50b995edd5 libgsasl-0.2.3.ebuild 1053
 MD5 4d2845818e9cc61826d46c6e42fa316d files/digest-libgsasl-0.2.3 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBzXYGQlM6RnzZP+IRAmZQAKCCxt5F3T4LoQesQC2di86HfHhXbACgvZNW
-AJxTNKq5LOINSz7xIRBPXMM=
-=+JM2
------END PGP SIGNATURE-----
+MD5 17882049058e34b91e9b32c1e6e7886e files/digest-libgsasl-0.1.4 66
+MD5 1bd701f1053d1243cb785b696d3b50a7 files/digest-libgsasl-0.2.0 66
