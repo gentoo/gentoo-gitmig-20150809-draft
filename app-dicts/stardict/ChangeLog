@@ -1,6 +1,13 @@
 # ChangeLog for app-dicts/stardict
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/stardict/ChangeLog,v 1.12 2003/10/30 10:02:38 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/stardict/ChangeLog,v 1.13 2004/01/07 16:53:15 liquidx Exp $
+
+*stardict-2.4.2 (07 Jan 2004)
+
+  07 Jan 2004; Alastair Tse <liquidx@gentoo.org> stardict-2.4.1.ebuild,
+  stardict-2.4.2.ebuild:
+  version bump. 2.4.2 requires a new modified dictionary format. you'll have to
+  remerge your dictionaries to the same version 2.4.2
 
 *stardict-2.4.1 (30 Oct 2003)
 
