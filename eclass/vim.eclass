@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.84 2004/12/18 22:13:13 spb Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.85 2004/12/18 22:25:29 spb Exp $
 
 # Authors:
 # 	Ryan Phillips <rphillips@gentoo.org>
@@ -497,7 +497,14 @@ src_install() {
 # of these links are "owned" by the vim ebuild when it is installed,
 # but they might be good for gvim as well (see bug 45828)
 update_vim_symlinks() {
-	local f syms="vi vimdiff rvim ex view rview"
+	local f syms
+
+	# Some of these are provided already on x86-fbsd, bug 69535.
+	if use x86-fbsd ; then
+		syms="vimdiff rvim rview"
+	else
+		syms="vi vimdiff rvim ex view rview"
+	fi
 
 	# Make or remove convenience symlink, vim -> gvim
 	if [[ -f /usr/bin/gvim ]]; then
