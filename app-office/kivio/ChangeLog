@@ -1,0 +1,10 @@
+# ChangeLog for app-office/kivio
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/kivio/ChangeLog,v 1.1 2005/01/29 13:22:50 motaboy Exp $
+
+*kivio-1.3.5 (29 Jan 2005)
+
+  29 Jan 2005; Simone Gotti <motaboy@gentoo.org> +metadata.xml,
+  +kivio-1.3.5.ebuild:
+  Adding koffice's splitted ebuilds to portage.
+
