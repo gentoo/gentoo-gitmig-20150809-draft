@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/libtool-1.5.2-r5.ebuild,v 1.7 2004/05/30 02:30:54 vapier Exp ${P}-r1.ebuild,v 1.8 2002/10/04 06:34:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/libtool-1.5.2-r5.ebuild,v 1.8 2004/05/30 09:05:00 vapier Exp ${P}-r1.ebuild,v 1.8 2002/10/04 06:34:42 vapier Exp $
 
 inherit eutils gnuconfig
 
@@ -20,7 +20,7 @@ KEYWORDS="~x86 ~ppc ppc64 sparc ~mips ~alpha arm ~hppa amd64 ~ia64 s390"
 IUSE=""
 
 DEPEND="virtual/glibc
-	>=sys-devel/autoconf-2.58
+	>=sys-devel/autoconf-2.59-r3
 	>=sys-devel/automake-1.8.3"
 # the autoconf dep is due to it complaining 'configure.ac:55: error: Autoconf version 2.58 or higher is required'
 # the automake dep is due to Bug #46037
