@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/udev
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.3 2003/10/21 01:02:58 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.4 2003/10/21 01:12:50 azarah Exp $
+
+*udev-003 (21 Oct 2003)
+
+  21 Oct 2003; Martin Schlemmer <azarah@gentoo.org> udev-003.ebuild,
+  files/udev-003-fix-partition-support.patch:
+  Ok, according to Greg KH 003, 004, etc is going to be the new versioning
+  scheme, so revert my version fix.
 
   21 Oct 2003; Martin Schlemmer <azarah@gentoo.org> udev-0.3.ebuild:
   Update DEPEND with hotplug, as we should be able to start using udev without
