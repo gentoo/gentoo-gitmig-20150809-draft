@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/cracklib-2.7-r9.ebuild,v 1.3 2004/04/27 02:48:21 randy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/cracklib-2.7-r9.ebuild,v 1.4 2004/05/12 13:18:31 pappy Exp $
 
 inherit flag-o-matic eutils
 
@@ -30,17 +30,10 @@ src_unpack() {
 
 	[ "${ARCH}" = "alpha" -a "${CC}" = "ccc" ] && \
 		sed -i -e 's:CFLAGS += -g :CFLAGS += -g3 :' ${S}/cracklib/Makefile
-
-	# this is only needed for the transparent hgcc
-	if has_version 'sys-devel/hardened-gcc' && [ ${CC} == "gcc" ]
-	then
-		einfo "hardened-gcc: adding libgcc for propolice __guard symbol to cracklib"
-		sed -i "s:= ld:= ld $(gcc-config -L)/libgcc_s.so:" ${S}/cracklib/Makefile
-	fi
 }
 
 src_compile() {
-	filter-flags -fstack-protector
+	# filter-flags -fstack-protector
 	# Parallel make does not work for 2.7
 	make all || die
 }
