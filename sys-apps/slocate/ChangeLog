@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/slocate
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/slocate/ChangeLog,v 1.30 2004/01/09 16:19:19 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/slocate/ChangeLog,v 1.31 2004/01/11 02:53:11 robbat2 Exp $
+
+*slocate-2.7-r5 (10 Jan 2004)
+
+  10 Jan 2004; Robin H. Johnson <robbat2@gentoo.org> slocate-2.7-r5.ebuild,
+  files/updatedb.conf:
+  Add devpts and usbfs to the list of pruned filesystems. Bump revision as this
+  is a runtime change.
 
   09 Jan 2004; Aron Griffis <agriffis@gentoo.org> slocate-2.7-r4.ebuild:
   stable on x86, alpha, ia64
