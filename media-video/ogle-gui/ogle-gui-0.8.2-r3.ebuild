@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Bruce A. Locke <blocke@shivan.org>
-# $Header: /var/cvsroot/gentoo-x86/media-video/ogle-gui/ogle-gui-0.8.2.ebuild,v 1.2 2002/01/19 10:32:54 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ogle-gui/ogle-gui-0.8.2-r3.ebuild,v 1.1 2002/03/27 04:52:53 blocke Exp $
 
 P="ogle_gui-0.8.2"
 S=${WORKDIR}/${P}
@@ -14,19 +14,24 @@ RDEPEND=$DEPEND
 
 src_compile() {
 
-  local myconf
+	local myconf
   
-  use nls || myconf="--disable-nls"
+	use nls || myconf="--disable-nls"
 
-  ./configure --prefix=/usr --host=${CHOST} $myconf  || die
-  make || die	
+	libtoolize --copy --force
+	
+	# libxml2 hack
+	CFLAGS="${CFLAGS} -I/usr/include/libxml2/libxml"
+
+	./configure --prefix=/usr --host=${CHOST} $myconf  || die
+  	emake || die	
 
 }
 
 src_install() {
 	
-  make prefix=${D}/usr mandir=${D}/usr/share/man infodir=${D}/usr/share/info docdir=${D}/usr/share/doc/${PF}/html sysconfdir=${D}/etc install || die
+	make prefix=${D}/usr mandir=${D}/usr/share/man infodir=${D}/usr/share/info docdir=${D}/usr/share/doc/${PF}/html sysconfdir=${D}/etc install || die
 
-  dodoc ABOUT-NLS AUTHORS COPYING INSTALL NEWS README
+	dodoc ABOUT-NLS AUTHORS COPYING INSTALL NEWS README
 }
 
