@@ -1,8 +1,11 @@
 # ChangeLog for x11-terms/root-tail
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/root-tail/ChangeLog,v 1.3 2003/02/12 09:45:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/root-tail/ChangeLog,v 1.4 2003/03/27 05:28:19 vladimir Exp $
 
 *root-tail-0.0.10 (1 Feb 2002)
+
+  26 Mar 2003; Graham Forest <vladimir@gentoo.org> root-tail-0.0.10.ebuild:
+  Automated cleanup of LICENSE
 
   21 Oct 2002; Calum Selkirk <cselkirk@gentoo.org> root-tail-0.0.10.ebuild :
 

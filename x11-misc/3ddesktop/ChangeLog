@@ -3,7 +3,10 @@
 # $Header
 
 *3ddesktop-0.2.4 (01 Dec 2002)
-  
+
+  26 Mar 2003; Graham Forest <vladimir@gentoo.org> 3ddesktop-0.2.4.ebuild:
+  Automated cleanup of LICENSE
+
   01 Dec 2002; Matt Keadle <mkeadle@gentoo.org> 3ddesktop-0.2.4.ebuild
   files/digest-3ddesktop-0.2.4:
 

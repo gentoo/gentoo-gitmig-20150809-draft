@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xrootconsole/xrootconsole-0.4.ebuild,v 1.5 2003/02/13 17:21:12 vapier Exp $ 
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xrootconsole/xrootconsole-0.4.ebuild,v 1.6 2003/03/27 05:28:19 vladimir Exp $ 
 
 S=${WORKDIR}/${P}
 
@@ -9,7 +9,7 @@ SRC_URI="http://de-fac.to/bob/xrootconsole/${P}.tar.gz"
 
 HOMEPAGE="http://de-fac.to/bob/xrootconsole/"
 
-LICENSE="GPL"
+LICENSE="GPL-2"
 
 DEPEND="x11-base/xfree"
 RDEPEMD="${DEPEND}"

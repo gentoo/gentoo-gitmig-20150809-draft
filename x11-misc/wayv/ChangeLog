@@ -1,3 +1,9 @@
 2/16/03 19:23 zhen@gentoo.org/ZhEN
 Initial package ebuild. This package is a nice little utility 
 that enables mouse gesturing for X.
+
+*wayv-0.2 (26 Mar 2003)
+
+  26 Mar 2003; Graham Forest <vladimir@gentoo.org> wayv-0.2.ebuild:
+  Automated cleanup of LICENSE
+

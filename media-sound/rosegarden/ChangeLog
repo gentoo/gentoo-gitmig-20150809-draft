@@ -1,8 +1,11 @@
 # ChangeLog for media-sound/rosegarden
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rosegarden/ChangeLog,v 1.1 2003/03/01 14:39:16 jje Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rosegarden/ChangeLog,v 1.2 2003/03/27 05:28:19 vladimir Exp $
 
 *rosegarden-4.0.8.5 (01 Mar 2003)
+
+  26 Mar 2003; Graham Forest <vladimir@gentoo.org> rosegarden-4.0.8.5.ebuild:
+  Automated cleanup of LICENSE
 
   01 Mar 2003; jje <jje@gentoo.org> rosegarden-4.0.8.5.ebuild files/digest-rosegarden-4.0.8.5 :
   Initial revision, unable to fully test as i don't have the midi hardware.

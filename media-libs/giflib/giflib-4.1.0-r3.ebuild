@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/giflib/giflib-4.1.0-r3.ebuild,v 1.16 2003/03/11 11:36:34 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/giflib/giflib-4.1.0-r3.ebuild,v 1.17 2003/03/27 05:28:19 vladimir Exp $
 
 inherit gnuconfig
 
@@ -15,7 +15,7 @@ SRC_URI="ftp://metalab.unc.edu/pub/Linux/libs/giflib/${P}.tar.gz
 DEPEND="X? ( virtual/x11 )"
 
 SLOT="0"
-LICENSE="as-is|BSD"
+LICENSE="as-is | BSD"
 KEYWORDS="x86 ppc sparc alpha hppa"
 
 src_unpack() {

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmtimer/wmtimer-2.4.ebuild,v 1.6 2003/02/13 17:32:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmtimer/wmtimer-2.4.ebuild,v 1.7 2003/03/27 05:28:19 vladimir Exp $
 
 S=${WORKDIR}/${P}
 S2=${S}/wmtimer
@@ -10,7 +10,7 @@ SRC_URI="http://home.dwave.net/~jking/wmtimer/${P}.tar.gz"
 HOMEPAGE="http://home.dwave.net/~jking/wmtimer/"
 
 SLOT="0"
-LICENSE="GPL"
+LICENSE="GPL-2"
 KEYWORDS="x86"
 
 DEPEND="virtual/glibc

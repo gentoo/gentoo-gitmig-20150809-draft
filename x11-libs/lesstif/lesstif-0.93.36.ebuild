@@ -1,12 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/lesstif/lesstif-0.93.36.ebuild,v 1.5 2003/02/14 23:32:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/lesstif/lesstif-0.93.36.ebuild,v 1.6 2003/03/27 05:28:19 vladimir Exp $
 
 DESCRIPTION="An OSF/Motif(R) clone"
 HOMEPAGE="http://www.lesstif.org/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
-LICENSE="LGPL"
+LICENSE="LGPL-2"
 KEYWORDS="x86 sparc"
 SLOT="0"
 

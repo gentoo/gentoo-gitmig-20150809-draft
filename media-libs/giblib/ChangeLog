@@ -1,10 +1,14 @@
 # ChangeLog for media-libs/giblib
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/giblib/ChangeLog,v 1.7 2003/03/25 05:20:11 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/giblib/ChangeLog,v 1.8 2003/03/27 05:28:19 vladimir Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *giblib-1.2.2 (13 Aug 2002)
+
+  26 Mar 2003; Graham Forest <vladimir@gentoo.org> giblib-1.2.1.ebuild,
+  giblib-1.2.2.ebuild:
+  Automated cleanup of LICENSE
 
   25 Mar 2003; Aron Griffis <agriffis@gentoo.org> giblib-1.2.2.ebuild:
   Add ~alpha to KEYWORDS

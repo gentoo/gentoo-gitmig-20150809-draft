@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/i8krellm/i8krellm-2.3.ebuild,v 1.2 2003/02/13 20:18:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/i8krellm/i8krellm-2.3.ebuild,v 1.3 2003/03/27 05:28:19 vladimir Exp $
 
 IUSE="gtk2"
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.coding-zone.com/${P}.tar.gz"
 HOMEPAGE="http://www.coding-zone.com/i8krellm.phtml"
 
 SLOT="0"
-LICENSE="GPL"
+LICENSE="GPL-2"
 KEYWORDS="~x86 -ppc -sparc -alpha -mips -hppa"
 
 DEPEND="app-admin/gkrellm

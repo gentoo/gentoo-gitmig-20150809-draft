@@ -1,8 +1,11 @@
 # ChangeLog for net-zope/localfs
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/localfs/ChangeLog,v 1.1 2003/03/26 04:43:45 kutsuya Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/localfs/ChangeLog,v 1.2 2003/03/27 05:28:19 vladimir Exp $
 
 *localfs-1.0.0 (25 Mar 2003)
+
+  26 Mar 2003; Graham Forest <vladimir@gentoo.org> localfs-1.0.0.ebuild:
+  Automated cleanup of LICENSE
 
   25 Mar 2003; Jason Shoemaker <kutsuya@gentoo.org> localfs-1.0.0.ebuild:
   Initial import. Based on ebuild submitted in #15420.

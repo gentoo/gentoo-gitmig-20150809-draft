@@ -1,6 +1,6 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.47 2003/03/23 22:05:42 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.48 2003/03/27 05:28:19 vladimir Exp $
 
 *xine-lib-1_beta9 (23 Mar 2003)
 
@@ -165,6 +165,10 @@
   purpose.
 
 *xine-lib-0.9.13 (06 Aug 2002)
+
+  26 Mar 2003; Graham Forest <vladimir@gentoo.org> xine-lib-0.9.12-r2.ebuild,
+  xine-lib-0.9.13.ebuild:
+  Automated cleanup of LICENSE
 
   01 Dec 2002; Martin Holzer <mholzer@gentoo.org> xine-0.9.13.ebuild : 
   Updated SRC_URI to pull from SF mirrors.

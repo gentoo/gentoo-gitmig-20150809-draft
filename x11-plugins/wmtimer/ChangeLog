@@ -1,8 +1,11 @@
 # ChangeLog for x11-plugins/wmtimer
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmtimer/ChangeLog,v 1.4 2003/02/12 15:47:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmtimer/ChangeLog,v 1.5 2003/03/27 05:28:19 vladimir Exp $
 
 * wmtimer-2.4 (12 August 2002)
+
+  26 Mar 2003; Graham Forest <vladimir@gentoo.org> wmtimer-2.4.ebuild :
+  Automated cleanup of LICENSE
 
   07 Oct 2002; Nick Hadaway <raker@gentoo.org> wmtimer-2.4.ebuild :
   Adding missing dependancy on x11-libs/gtk+-1.2*

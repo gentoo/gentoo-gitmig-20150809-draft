@@ -1,13 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rosegarden/rosegarden-4.0.8.5.ebuild,v 1.1 2003/03/01 14:39:16 jje Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rosegarden/rosegarden-4.0.8.5.ebuild,v 1.2 2003/03/27 05:28:19 vladimir Exp $
 
 
 DESCRIPTION="MIDI and audio sequencer and notation editor."
 HOMEPAGE="http://www.all-day-breakfast.com/rosegarden/"
 SRC_URI="http://belnet.dl.sourceforge.net/sourceforge/rosegarden/rosegarden-4-0.8.5.tar.gz"
 
-LICENSE="GPL"
+LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
 
