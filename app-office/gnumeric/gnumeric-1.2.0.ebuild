@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.2.0.ebuild,v 1.5 2003/11/13 02:06:01 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.2.0.ebuild,v 1.6 2004/01/04 14:00:05 weeve Exp $
 
 #provide Xmake and Xemake
 inherit virtualx libtool gnome2 eutils debug
