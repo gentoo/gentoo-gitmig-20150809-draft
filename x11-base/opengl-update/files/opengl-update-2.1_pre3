@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/files/opengl-update-2.1_pre2,v 1.1 2005/01/26 05:38:40 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/files/opengl-update-2.1_pre3,v 1.1 2005/01/26 05:59:52 eradicator Exp $
 # Author:  Martin Schlemmer <azarah@gentoo.org>
 # Further modifications by Donnie Berkholz <spyderous@gentoo.org>
 # Further modifications based off submissions to bug #54984 <cyfred@gentoo.org>
@@ -200,7 +200,7 @@ ebegin "Switching to ${GL_IMPLEM} OpenGL interface"
 		pushd /usr/${LIBDIR}
 			# First remove old symlinks
 			for file in libGL.so* libGLcore.so* libnvidia-tls.so*  tls/libnvidia-tls.so*; do
-				rm -f ${file}
+				[ -h ${file} ] && rm -f ${file}
 			done
 
 			# Note that we don't do .so*, just .so on purpose.  The
@@ -235,10 +235,15 @@ ebegin "Switching to ${GL_IMPLEM} OpenGL interface"
 			popd
 		fi
 
-		if [ -e "/usr/${LIBDIR}/opengl/${GL_LOCAL}/modules/extensions" ]; then
+		if [ -e "/usr/${LIBDIR}/opengl/${GL_LOCAL}/extensions" ]; then
 			mkdir -p /usr/${LIBDIR}/modules/extensions
 			pushd /usr/${LIBDIR}/modules/extensions
-				for file in ../../opengl/${GL_LOCAL}/lib/extensions/*.{so,a,la}; do
+				# First remove old symlinks
+				for file in libglx.so libglx.a; do
+					[ -h ${file} ] && rm -f ${file}
+				done
+
+				for file in ../../opengl/${GL_LOCAL}/extensions/*.{so,a,la}; do
 					[ -f "${file}" ] || continue
 					rm -f $(basename ${file})
 
