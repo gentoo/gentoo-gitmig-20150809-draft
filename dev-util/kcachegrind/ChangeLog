@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/kcachegrind
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kcachegrind/ChangeLog,v 1.5 2003/07/06 07:47:10 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kcachegrind/ChangeLog,v 1.6 2003/08/28 01:59:52 caleb Exp $
+
+*kcachegrind-0.4.1 (27 Aug 2003)
+  
+  27 Aug 2003; Caleb Tennis <caleb@gentoo.org> kcachegrind-0.4.1.ebuild:
+  Version bump
 
   06 Jul 2003; Paul de Vrieze <pauldv@gentoo.org> kcachegrind-0.3b.ebuild:
   Mark stable
