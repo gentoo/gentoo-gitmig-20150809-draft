@@ -126,10 +126,6 @@ media-video/lives
 # are prepared for a non-working portage.
 =dev-lang/python-2.3*
 
-# <dholm@gentoo.org> (27 Aug 2003)
-# CVS snapshot of the coming gnat 5.0
-=dev-lang/gnat-5.0*
-
 # msterret@gentoo.org (20 Aug 2003)
 # New versioning scheme so hid the old one from portage
 =games-puzzle/neverball-0805a
