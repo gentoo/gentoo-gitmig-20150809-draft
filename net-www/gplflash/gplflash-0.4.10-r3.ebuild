@@ -1,30 +1,28 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/gplflash/gplflash-0.4.10-r3.ebuild,v 1.2 2003/10/04 01:11:15 hillster Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/gplflash/gplflash-0.4.10-r3.ebuild,v 1.3 2004/02/07 20:25:44 vapier Exp $
 
-inherit nsplugins
+inherit nsplugins eutils
 
-S=${WORKDIR}/flash-0.4.10
 DESCRIPTION="GPL Shockwave Flash Player/Plugin, Supports Older Ver <=4 Only"
+HOMEPAGE="http://www.swift-tools.net/Flash/"
 SRC_URI="http://www.swift-tools.net/Flash/flash-0.4.10.tgz"
-HOMEPAGE="http://www.swift-tools.net/Flash"
 
-SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc"
+SLOT="0"
+KEYWORDS="x86 ppc sparc amd64"
 
 DEPEND="media-libs/libflash"
 RDEPEND="!net-www/netscape-flash"
 
-src_unpack() {
-	cd ${WORKDIR}
-	unpack flash-0.4.10.tgz
-	cd ${S}
-	epatch ${FILESDIR}/${P}-gcc3-gentoo.diff || die
+S=${WORKDIR}/flash-${PV}
 
-	if [ "${ARCH}" = "ppc" ]; then
-		epatch ${FILESDIR}/${P}-ppc.diff || die
-	fi
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${P}-gcc3-gentoo.diff
+	use amd64 && epatch ${FILESDIR}/${P}-fPIC.patch
+	use ppc && epatch ${FILESDIR}/${P}-ppc.diff
 }
 
 src_compile() {

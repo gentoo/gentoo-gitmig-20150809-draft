@@ -1,0 +1,47 @@
+diff -urN flash-0.4.10/Jpeg/Makefile flash-0.4.10/Jpeg/Makefile
+--- flash-0.4.10/Jpeg/Makefile	1999-01-27 18:10:51.000000000 -0500
++++ flash-0.4.10/Jpeg/Makefile	2004-02-07 15:04:08.009581920 -0500
+@@ -20,7 +20,7 @@
+ mandir = $(prefix)/man/man$(manext)
+ 
+ # You may need to adjust these cc options:
+-CFLAGS= -O2  -I$(srcdir)
++CFLAGS= -O2  -I$(srcdir) -fPIC
+ # Generally, we recommend defining any configuration symbols in jconfig.h,
+ # NOT via -D switches here.
+ # However, any special defines for ansi2knr.c may be included here:
+diff -urN flash-0.4.10/Lib/Makefile flash-0.4.10/Lib/Makefile
+--- flash-0.4.10/Lib/Makefile	2000-06-04 05:49:23.000000000 -0400
++++ flash-0.4.10/Lib/Makefile	2004-02-07 15:03:50.707212280 -0500
+@@ -1,6 +1,6 @@
+ CPPFLAGS=-I../Jpeg -I../Zlib
+ # Comment out the following line if you use egcs :
+-CXXFLAGS=-O3 -Wall -fno-rtti -fno-exceptions
++CXXFLAGS=-O3 -Wall -fno-rtti -fno-exceptions -fPIC
+ 
+ INCLUDES= adpcm.h        cxform.h       graphic.h      script.h       sqrt.h\
+ 	bitmap.h       displaylist.h  matrix.h       shape.h        swf.h\
+diff -urN flash-0.4.10/Plugin/Makefile flash-0.4.10/Plugin/Makefile
+--- flash-0.4.10/Plugin/Makefile	1999-09-28 08:13:38.000000000 -0400
++++ flash-0.4.10/Plugin/Makefile	2004-02-07 15:04:48.137481552 -0500
+@@ -35,7 +35,7 @@
+ # Linux
+ SHARED=-shared
+ 
+-CFLAGS=  $(OPTIMIZER) $(PLUGIN_DEFINES) -I$(FLASH) -I/usr/X11R6/include
++CFLAGS=  $(OPTIMIZER) $(PLUGIN_DEFINES) -I$(FLASH) -I/usr/X11R6/include -fPIC
+ LDFLAGS= $(FLASH)/libflash.a $(LIBCXX) ../Jpeg/libjpeg.a ../Zlib/libz.a
+ 
+ SRC= plugin.c npunix.c
+diff -urN flash-0.4.10/Zlib/Makefile flash-0.4.10/Zlib/Makefile
+--- flash-0.4.10/Zlib/Makefile	1999-01-27 18:11:10.000000000 -0500
++++ flash-0.4.10/Zlib/Makefile	2004-02-07 15:04:13.985673416 -0500
+@@ -2,7 +2,7 @@
+ # Copyright (C) 1995-1998 Jean-loup Gailly.
+ # For conditions of distribution and use, see copyright notice in zlib.h 
+ 
+-CFLAGS=-O3 -DHAVE_UNISTD_H -DUSE_MMAP
++CFLAGS=-O3 -DHAVE_UNISTD_H -DUSE_MMAP -fPIC
+ 
+ CPP=$(CC) -E
+ 
