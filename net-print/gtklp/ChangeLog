@@ -1,6 +1,8 @@
 # ChangeLog for net-print/gtklp
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/gtklp/ChangeLog,v 1.9 2003/10/04 20:11:16 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/gtklp/ChangeLog,v 1.10 2004/03/02 08:14:43 aliz Exp $
+
+*gtklp-0.9p (04 Oct 2003)
 
   04 Oct 2003; Heinrich Wendel <lanius@gentoo.org> :
   version bump, fixed nls issue

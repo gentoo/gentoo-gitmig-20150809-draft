@@ -1,6 +1,6 @@
 # ChangeLog for net-print/cups
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.62 2004/02/28 02:01:44 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.63 2004/03/02 08:14:43 aliz Exp $
 
   27 Feb 2004; Joshua Kinard <kumba@gentoo.org> cups-1.1.20.ebuild:
   Added ~mips to KEYWORDS to satisfy repoman deps.
@@ -33,6 +33,8 @@
 
   29 Nov 2003; Brad House <brad_mssw@gentoo.org> cups-1.1.20.ebuild:
   mark stable on amd64
+
+*cups-1.1.20 (25 Nov 2003)
 
   25 Nov 2003; Heinrich Wendel <lanius@gentoo.org>  cups-1.1.20.ebuild:
   version bump, removed libjpeg patch
