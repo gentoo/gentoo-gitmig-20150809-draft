@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/pcmcia.eclass,v 1.1 2004/02/07 21:22:49 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/pcmcia.eclass,v 1.2 2004/02/07 23:44:23 latexer Exp $
 
 # pcmcia.eclass - This eclass facilities writing ebuilds for driver packages 
 # that may need to build against the pcmcia-cs drivers, depending on kernel
@@ -20,6 +20,8 @@
 # sources in ${WORKDIR}/${PCMCIA_SOURCE_DIR} and set the two variables.
 
 # pcmcia_configure will configure the pcmcia-cs sources if that is needed
+
+inherit eutils
 
 ECLASS="pcmcia"
 INHERITED="$INHERITED $ECLASS"
@@ -94,10 +96,10 @@ pcmcia_src_unpack()
 # Call this if you need the package configured for building to work
 pcmcia_configure()
 {
-	cd ${PCMCIA_SOURCE_DIR}
 	if [ -n "`use pcmcia`" ]; then
 		if ! egrep '^CONFIG_PCMCIA=[ym]' /usr/src/linux/.config >&/dev/null
 		then
+			cd ${PCMCIA_SOURCE_DIR}
 			local myarch
 
 			# pcmcia-cs expects "i386" not "x86"
