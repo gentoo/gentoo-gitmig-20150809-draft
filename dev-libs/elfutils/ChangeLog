@@ -1,8 +1,11 @@
 # ChangeLog for dev-libs/elfutils
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/ChangeLog,v 1.1 2003/01/02 02:52:46 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/ChangeLog,v 1.2 2003/01/07 18:34:32 cretin Exp $
 
 *elfutils-0.72 (02 Jan 2003)
+
+  07 Jan 2003: Stefan Jones <cretin@gentoo.org> elfutils-0.72.ebuild :
+  Requires sys-devel/gcc-3.2.1-r6 or higher
 
   02 Jan 2003; Martin Schlemmer <azarah@gentoo.org> elfutils-0.72.ebuild :
   Initial release.  Unfortunately there are no source tarballs for this
