@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/xmms-spc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-spc/ChangeLog,v 1.8 2004/06/24 23:46:08 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-spc/ChangeLog,v 1.9 2004/07/07 08:52:06 eradicator Exp $
+
+*xmms-spc-0.2.1-r1 (07 Jul 2004)
+
+  07 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  xmms-spc-0.2.1-r1.ebuild, files/xmms-spc-0.2.1-r1.patch:
+  -sparc.  auto* update so it builds shared library properly.
 
   17 Jun 2004; Jeremy Huddleston <eradicator@gentoo.org>
   xmms-spc-0.2.1.ebuild:

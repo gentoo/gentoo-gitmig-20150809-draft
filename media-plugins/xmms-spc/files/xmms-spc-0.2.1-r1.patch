@@ -1,0 +1,67 @@
+diff -Naur spcxmms-0.2.1.orig/libspc/Makefile.am spcxmms-0.2.1/libspc/Makefile.am
+--- spcxmms-0.2.1.orig/libspc/Makefile.am	2000-10-13 01:16:38.000000000 -0700
++++ spcxmms-0.2.1/libspc/Makefile.am	2004-07-07 01:21:44.933579000 -0700
+@@ -5,3 +5,6 @@
+ 	apu.cpp apu.h apumem.h globals.cpp soundux.cpp soundux.h \
+ 	spc700.cpp spc700.h port.h snes9x.h memmap.h
+ 
++CFLAGS = @CFLAGS@ -fPIC -DPIC
++CXXFLAGS = @CXXFLAGS@ -fPIC -DPIC
++
+diff -Naur spcxmms-0.2.1.orig/libspc/soundux.cpp spcxmms-0.2.1/libspc/soundux.cpp
+--- spcxmms-0.2.1.orig/libspc/soundux.cpp	2000-07-04 23:26:38.000000000 -0700
++++ spcxmms-0.2.1/libspc/soundux.cpp	2004-07-07 01:20:10.122594000 -0700
+@@ -414,7 +414,7 @@
+ 	if (SoundData.channels[channel].type == SOUND_NOISE)
+ 	    hertz = NoiseFreq [APU.DSP [APU_FLG] & 0x1f];
+ 	SoundData.channels[channel].frequency = (int)
+-	    (((int64) hertz * FIXED_POINT) / so.playback_rate);
++	    ((((int64) hertz * FIXED_POINT) / so.playback_rate) * .980);
+     }
+ }
+ 
+diff -Naur spcxmms-0.2.1.orig/spcplay/Makefile.in spcxmms-0.2.1/spcplay/Makefile.in
+--- spcxmms-0.2.1.orig/spcplay/Makefile.in	2000-10-28 12:10:04.000000000 -0700
++++ spcxmms-0.2.1/spcplay/Makefile.in	2004-07-07 01:16:35.311275000 -0700
+@@ -108,7 +108,7 @@
+ LIBS = @LIBS@
+ spcplay_OBJECTS =  getopt.o getopt1.o main.o
+ spcplay_DEPENDENCIES =  ../libspc/libspc.la
+-spcplay_LDFLAGS = 
++spcplay_LDFLAGS = -lstdc++
+ CFLAGS = @CFLAGS@
+ COMPILE = $(CC) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
+ LTCOMPILE = $(LIBTOOL) --mode=compile $(CC) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
+diff -Naur spcxmms-0.2.1.orig/xmms-plugin/Makefile.in spcxmms-0.2.1/xmms-plugin/Makefile.in
+--- spcxmms-0.2.1.orig/xmms-plugin/Makefile.in	2000-10-28 12:10:05.000000000 -0700
++++ spcxmms-0.2.1/xmms-plugin/Makefile.in	2004-07-07 01:16:35.322275000 -0700
+@@ -93,7 +93,7 @@
+ 
+ lib_LTLIBRARIES = libspc.la
+ libspc_la_LDFLAGS = -module -avoid-version
+-libspc_la_LIBADD = @GTK_LIBS@ @PTHREAD_LIBS@ ../libspc/libspc.la
++libspc_la_LIBADD = @GTK_LIBS@ -lstdc++ @PTHREAD_LIBS@ ../libspc/libspc.la
+ libspc_la_SOURCES = spcxmms.c spcxmms.h 	interface.c interface.h support.c support.h callbacks.h gui.c
+ 
+ 
+diff -Naur spcxmms-0.2.1.orig/xmms-plugin/spcxmms.c spcxmms-0.2.1/xmms-plugin/spcxmms.c
+--- spcxmms-0.2.1.orig/xmms-plugin/spcxmms.c	2000-10-13 01:11:05.000000000 -0700
++++ spcxmms-0.2.1/xmms-plugin/spcxmms.c	2004-07-07 01:16:34.900253000 -0700
+@@ -106,6 +106,7 @@
+ 
+ static void *play_loop(void *arg)
+ {
++	long int i = 0;
+     gint8 *mixbuf;
+     mixbuf = g_new(guint8, mixbuf_size);
+ 
+@@ -113,7 +114,9 @@
+         SPC_update(mixbuf);
+         spc_ip.add_vis_pcm(spc_ip.output->written_time(), FMT_S16_LE, 2,
+                            mixbuf_size, mixbuf);
++	i++;
+ 
++	if (i >= 18300) going = FALSE;
+         while (spc_ip.output->buffer_free() < mixbuf_size && going)
+             xmms_usleep(10000);
+ 
