@@ -1,6 +1,6 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.11.1.ebuild,v 1.2 2002/03/31 19:03:11 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.11.1.ebuild,v 1.3 2002/04/28 06:28:10 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GNU locale utilities"
@@ -17,13 +17,13 @@ src_unpack() {
 }
 
 src_compile() {
-    local myconf
-    if [  -z "`use nls`" ]
-    then
-        myconf="--disable-nls"
-    fi 
-    ./configure --prefix=/usr --infodir=/usr/share/info --mandir=/usr/share/man --with-included-gettext --disable-shared --host=${CHOST} ${myconf} || die
-    emake || die
+	local myconf
+	if [  -z "`use nls`" ]
+	then
+		myconf="--disable-nls"
+	fi 
+	./configure --prefix=/usr --infodir=/usr/share/info --mandir=/usr/share/man --with-included-gettext --disable-shared --host=${CHOST} ${myconf} || die
+	emake || die
 }
 
 src_install() {
@@ -45,5 +45,3 @@ src_install() {
 	exeinto /usr/bin
 	doexe misc/gettextize
 }
-
-
