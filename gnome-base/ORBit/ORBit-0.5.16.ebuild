@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/ORBit/ORBit-0.5.16.ebuild,v 1.3 2002/07/17 10:13:15 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/ORBit/ORBit-0.5.16.ebuild,v 1.4 2002/08/16 04:09:22 murphy Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A high-performance, lightweight CORBA ORB aiming for CORBA 2.2 compliance"
@@ -17,7 +17,7 @@ RDEPEND="virtual/glibc
 
 SLOT="0"
 LICENSE="GPL"
-KEYWORDS="x86 ppc"
+KEYWORDS="x86 ppc sparc sparc64"
 
 src_compile() {
 	if [ -z "`use nls`" ] ; then

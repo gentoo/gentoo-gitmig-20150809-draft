@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/eel/eel-2.0.3.ebuild,v 1.1 2002/08/06 09:25:17 stroke Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/eel/eel-2.0.3.ebuild,v 1.2 2002/08/16 04:09:22 murphy Exp $
 
 inherit gnome2
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gnome/sources/${PN}/${P}.tar.bz2"
 HOMEPAGE="http://www.gnome.org/"
 SLOT="2"
 LICENSE="GPL-2 LGPL-2.1" 
-KEYWORDS="x86 ppc"
+KEYWORDS="x86 ppc sparc sparc64"
 
 RDEPEND=">=dev-libs/glib-2.0.6-r1
 	>=gnome-base/gconf-1.2.1

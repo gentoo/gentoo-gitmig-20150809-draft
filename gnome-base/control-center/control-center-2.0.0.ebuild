@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/control-center/control-center-2.0.0.ebuild,v 1.4 2002/07/19 13:37:06 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/control-center/control-center-2.0.0.ebuild,v 1.5 2002/08/16 04:09:22 murphy Exp $
 
 inherit gnome2
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gnome/sources/${PN}/${P}.tar.bz2"
 HOMEPAGE="http://www.gnome.org/"
 SLOT="2"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc"
+KEYWORDS="x86 ppc sparc sparc64"
 
 RDEPEND=">=x11-libs/gtk+-2.0.5
 	>=dev-libs/glib-2.0.3

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libglade/libglade-2.0.0-r1.ebuild,v 1.1 2002/08/05 18:51:23 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libglade/libglade-2.0.0-r1.ebuild,v 1.2 2002/08/16 04:09:24 murphy Exp $
 
 
 inherit gnome2
@@ -11,7 +11,7 @@ S=${WORKDIR}/${P}
 DESCRIPTION="GLADE is a interface builder"
 SRC_URI="mirror://gnome/sources/${PN}/${P}.tar.bz2"
 HOMEPAGE="http://www.gnome.org/"
-KEYWORDS="x86 ppc"
+KEYWORDS="x86 ppc sparc sparc64"
 SLOT="2.0"
 
 RDEPEND=">=dev-libs/glib-2.0.3
