@@ -1,6 +1,14 @@
 # ChangeLog for app-crypt/bestcrypt
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/bestcrypt/ChangeLog,v 1.19 2004/10/07 17:11:23 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/bestcrypt/ChangeLog,v 1.20 2004/10/31 15:06:06 lostlogic Exp $
+
+*bestcrypt-1.5_p7-r1 (31 Oct 2004)
+
+  31 Oct 2004; Brandon Low <lostlogic@gentoo.org> +files/bcrypt3,
+  +bestcrypt-1.5_p7-r1.ebuild:
+  Add 2 additional encryption modules from
+  http://www.carceri.dk/index.php?redirect=other_bestcrypt, remove some
+  deprecated code in the ebuild.
 
 *bestcrypt-1.5_p7 (07 Oct 2004)
 

@@ -2,11 +2,13 @@ MD5 84d875011ca557b0ef037f38047bf330 bestcrypt-1.2_p6.ebuild 1539
 MD5 d420cae4702001db3c9d401bba45f917 bestcrypt-1.4_p2.ebuild 1516
 MD5 458b118ea3f626f7f6a245efa5366215 bestcrypt-1.5_p6.ebuild 1500
 MD5 ebdf18b78fd87efd486d7880203fb8ec bestcrypt-1.5_p1.ebuild 1665
+MD5 d44218a866c56617b39616874ede7ddc bestcrypt-1.5_p7-r1.ebuild 1684
 MD5 d5eb4d76e4ccea13d1ddc2f84326dc29 bestcrypt-1.5_p5.ebuild 1501
-MD5 c2114d73f5d2a906b12ba4484a49464a ChangeLog 3147
+MD5 42f2cb6580a2a65e95b613c2501c59d3 ChangeLog 3429
 MD5 566cf4f89e44670d0aba4a745913d748 metadata.xml 224
 MD5 01e9c2227bbb3fd5ce1ccc68c921b018 bestcrypt-1.5_p7.ebuild 1508
 MD5 40c01633137047f428dcc798ecdcf0fb bestcrypt-1.5_p2.ebuild 1650
+MD5 4b5ee352a3df35a5803d9013b763afec files/digest-bestcrypt-1.5_p7-r1 136
 MD5 612a37e4db226c3ff5e6f261c20085f1 files/bestcrypt-1.5_p2-makefile_fix.patch 2047
 MD5 c5fbab81816aa1d6f319f8434d2db2b2 files/bcrypt 3113
 MD5 b0b2c330ce5e18ccd0ad06aa6aff62a3 files/digest-bestcrypt-1.2_p6 67
@@ -20,4 +22,5 @@ MD5 9e28557b9e0d6e148ba9da712b789909 files/bestcrypt-1.5_p2-bdev_file_fix.patch 
 MD5 612a37e4db226c3ff5e6f261c20085f1 files/bestcrypt-1.5_p5-makefile_fix.patch 2047
 MD5 c77a72f4f64ecd2ff3f754543ca23aad files/bestcrypt-1.5_p6-makefile_fix.patch 2286
 MD5 5b4b4d2cf3a069dcc49e6803af149665 files/bcrypt2 3097
+MD5 0627a90c642911ade3f933e5b6ecd6c0 files/bcrypt3 3159
 MD5 ae0a806bcd924019822cdbfdc0dbcfec files/bestcrypt-1.5_p7-makefile_fix.patch 2519
