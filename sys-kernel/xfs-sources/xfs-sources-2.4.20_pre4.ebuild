@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xfs-sources/xfs-sources-2.4.20_pre4.ebuild,v 1.1 2003/01/12 06:43:06 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xfs-sources/xfs-sources-2.4.20_pre4.ebuild,v 1.2 2003/01/13 01:46:06 viz Exp $
 
 IUSE="build crypt"
 
@@ -62,6 +62,9 @@ src_unpack() {
 	else
 		einfo "Cryptographic support enabled..."
 	fi
+
+	# remove the 3c509 fix as it breaks our kernel build
+			rm -f *3c509_FIX
 
 	kernel_src_unpack
 }

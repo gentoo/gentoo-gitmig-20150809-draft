@@ -1,8 +1,11 @@
 # ChangeLog for sys-kernel/xfs-sources
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xfs-sources/ChangeLog,v 1.13 2003/01/12 06:43:06 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xfs-sources/ChangeLog,v 1.14 2003/01/13 01:46:06 viz Exp $
 
 *xfs-sources-2.4.20_pre4 (10 Jan 2003)
+  
+  12 Jan 2002; Tobias Eichert <viz@gentoo.org>:
+  Dropped the 3c509 fix because it breaks the kernel build.
 
   10 Jan 2003; Bob Johnson <livewire_@ameritech.net>:
   This is the first patchset under new management.  Thanks to viz
