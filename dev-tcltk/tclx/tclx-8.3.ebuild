@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclx/tclx-8.3.ebuild,v 1.4 2002/11/12 06:36:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclx/tclx-8.3.ebuild,v 1.5 2003/02/13 07:21:32 gerk Exp $
 
 DESCRIPTION="A set of extensions to TCL"
 HOMEPAGE="http://www.neosoft.com/TclX/"
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.slackware.com/pub/slackware/slackware-8.1/source/tcl/tclx/${P
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ~ppc"
 IUSE="X"
 
 DEPEND="=dev-lang/tcl-8.3*
