@@ -6,7 +6,7 @@ MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
 MD5 1b56ca832dfea1a2aba1ec0a397d85a9 pygame-1.5.3.ebuild 838
 MD5 67c05765aafe23c8e371e01c63d98462 pygame-1.5.5.ebuild 889
 MD5 4a000d1f4620ba2a4c2b13a277ab95f2 pygame-1.5.6.ebuild 895
-MD5 c0ad278fdd236cd7912a5dc18be77a25 pygame-1.6.ebuild 891
+MD5 571c181a2ebb0c8b4b739d83bbeb9186 pygame-1.6.ebuild 897
 MD5 bcc21545f0d3a09c4bf9beb344d39535 files/digest-pygame-1.5.3 64
 MD5 a0a1443e65c63b895d64a478953de7c7 files/digest-pygame-1.5.5 64
 MD5 cfc28c49f2b91b67623bee4ba4bdb54e files/digest-pygame-1.5.6 64
@@ -16,7 +16,7 @@ MD5 d46bdbdd81463a498d29a4a22bb14f81 files/music.c-pause.patch 800
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.8 (GNU/Linux)
 
-iD8DBQFA2O6cHTu7gpaalycRArBsAKDbIu8ieJYJRY8ZTztJAxoOXVfnkwCfQ5gK
-LCY4cV5W873VWYgK77FOV78=
-=GJnC
+iD8DBQFA2O6/HTu7gpaalycRAkLVAKCDKOTx8OkVoDsVK12huJl6RNnHSgCgmWfG
+dBvVU4ORbuk0binYf8zzk94=
+=TPen
 -----END PGP SIGNATURE-----
