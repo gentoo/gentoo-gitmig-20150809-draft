@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/openhbci/openhbci-0.9.9.ebuild,v 1.2 2003/04/29 10:16:12 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/openhbci/openhbci-0.9.9.ebuild,v 1.3 2003/07/13 12:58:34 aliz Exp $
 
 DESCRIPTION="Implementation of the HBCI protocol used by some banks"
 HOMEPAGE="http://openhbci.sourceforge.net/"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/openhbci/${P}.tar.gz"
 LICENSE="LGPL-2.1"
 
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE=""
 
 DEPEND=">=dev-libs/openssl-0.9.6
