@@ -3,6 +3,9 @@
 # /home/cvsroot/gentoo-x86/app-cdr/k3b/ChangeLog,v 1.46 2004/03/27 16:18:17
 # lanius Exp $
 
+  22 Jul 2004; Travis Tilley <lv@gentoo.org> k3b-0.11.12-r1.ebuild:
+  stable on amd64
+
   17 Jul 2004; Heinrich Wendel <lanius@gentoo.org> k3b-0.11.12-r1.ebuild:
   stable on x86
 
