@@ -22,6 +22,10 @@
 ##   End example
 ##
 
+# <blizzy@gentoo.org> (12 Aug 2002)
+# masked for testing
+=sys-apps/gradm-1.4
+
 # <cselkirk@gentoo.org> (12 Aug 2002)
 # masked for testing
 =app-shells/zsh-4.0.5
