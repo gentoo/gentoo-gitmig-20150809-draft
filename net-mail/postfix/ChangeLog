@@ -1,6 +1,15 @@
 # ChangeLog for net-mail/postfix
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/ChangeLog,v 1.26 2002/07/24 19:40:29 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/ChangeLog,v 1.27 2002/08/13 21:44:50 raker Exp $
+
+*postfix-1.1.11.200206013-r1 (13 Aug 2002)
+
+  13 Aug 2002; Nick Hadaway <raker@gentoo.org>
+  postfix-1.1.11.20020613-r1, files/digest-postfix-1.1.11.20020613-r1 :
+  Many changes have been made to the ebuild so I created a -r1.  This
+  ebuild should copy smtpd.conf into /etc/sasl2 to match the latest
+  cyrus-sasl ebuild.  This should hopefully fix some of the sasl problems
+  people have been having with postfix.
 
 *postfix-1.1.11-r5 (23 Jul 2002)
 
@@ -24,19 +33,16 @@
   separately.
 
   23 Jul 2002; Nick Hadaway <raker@gentoo.org> :
-
   Updated all ebuilds to include the pam dependancy.  Closes bug #5148.
 
   22 Jul 2002; Nick Hadaway <raker@gentoo.org>
   postfix-1.1.11.20020613.ebuild, files/digest-postfix-1.1.11.20020613,
   files/tls+ipv6.diff, files/saslv2.diff
-
   New ebuild with tls and ipv6 support.  Also added support for saslv2.
   Thanks to Philipp Morger for a start on the ebuilds and patches.
 
   21 Jul 2002; Maik Schreiber <blizzy@gentoo.org> postfix-1.1.11-r4.ebuild,
   ChangeLog:
-
   Cleaned up ebuild once again. Added post-installation note from
   bug #4652 once again. Also fixed ChangeLog since it appeared to
   really got broken.
@@ -44,13 +50,11 @@
 *postfix-1.1.8-r1 (19 Jul 2002)
 
   19 Jul 2002; Grant Goodyear <g2boojum@gentoo.org> :
-
   removed /usr/bin/mail symlink in postfix-1.1.8
 
 *postfix-1.1.11-r4 (19 Jul 2002)
 
   19 Jul 2002; Grant Goodyear <g2boojum@gentoo.org> :
-
   removed /usr/bin/mail symlink; that's what mailx and nail are for.
   Removed old versions.  Bumped -r since that symlink really should be yanked.
   Closes bug #5096
@@ -58,14 +62,12 @@
 *postfix-1.1.11-r1 (09 Jul 2002)
 
   09 Jul 2002; Maik Schreiber <blizzy@gentoo.org> postfix-1.1.11-r1.ebuild:
-
   Added post-installation note about /etc/mail/aliases. No need to update
   if your Postfix installation works correctly. This closes bug #4652.
 
 *postfix-1.1.11 (08 Jul 2002)
 
   08 Jul 2002; Maik Schreiber <blizzy@gentoo.org> :
-
   New version + TLS patch, closes bug #4215.
 
   20 May 2002; Daniel Robbins <drobbins@gentoo.org> postfix-1.1.8.ebuild:
@@ -76,80 +78,68 @@
 *postfix-1.1.8 (13 May 2002)
 
   13 May 2002; Donny Davies <woodchip@gentoo.org> :
-
   Updated to latest postfix + tls patch.
 
 *postfix-1.1.7-r4 (3 May 2002)
   
   3 May 2002; Donny Davies <woodchip@gentoo.org> :
-  
   Added LICENSE, SLOT, $Headers.
 
 *postfix-1.1.7-r3 (19 Apr 2002)
 
   19 Apr 2002; Ryan Phillips <rphillips@gentoo.org> postfix-1.1.7-r3.ebuild,
   files/digest-postfix-1.1.7-r3 :
-
   Added INSTALL to dodoc statement.  Closes #1923
   
 *postfix-1.1.7-r2 (15 Apr 2002)
 
   15 Apr 2002; Seemant Kulleen <seemant@gentoo.org> postfix-1.1.7-r2.ebuild,
   files/digest-postfix-1.1.7-r2 :
-
   Changed the USE flags from mta-ldap, mta-tls, and mta-mysql to ldap, ssl, and
   mysql respectively.  Also, changed the checks to the official use foo &&
   syntax.  This has the added advantage of showing the USE flags being used 
   during the emerge process.
 
   11 Apr 2002; Seemant Kulleen <seemant@gentoo.org> files/digest-postfix-1.1.7-r1 :
-
   digest contains the md5 sums for the postfix tarball and the alternate
   tarball.
 
 *postfix-1.1.7-r1 (8 Apr 2002)
 
   9 Apr 2002; Jon Nelson <jnelson@gentoo.org> postfix-1.1.7-r1.ebuild:  
-
   Clean up some tabbing and use official form of 'if use foo' constructs
 
 *postfix-1.1.7 (8 Apr 2002)
 
   9 Apr 2002; Jon Nelson <jnelson@gentoo.org> postfix-1.1.7.ebuild:  
-
   Updated to postfix 1.1.7, and altered how the 'if use foo' constructs
   are used. Closes #1612
 
 *postfix-1.1.6-r1 (1 Apr 2002)
 
   1 Apr 2002; Grant Goodyear <g2boojum@gentoo.org>  :
-
   Modified the ebuild to link in -lcrypt, -lpam (if pam is in USE),
   and -ldl.  Thanks to Jon Nelson.
 
 *postfix-1.1.6 (30 Mar 2002)
 
   30 Mar 2002; Seemant Kulleen <seemant@gentoo.org> postfix-1.1.6.ebuild :
-
   Version bump, using previous ebuild, and adjusting the mta-tls filename to
   fetch.
 
 *postfix-1.1.3-r3 (24 Mar 2002)
 
   24 Mar 2002; Donny Davies <woodchip@gentoo.org> postfix-1.1.3-r3.ebuild :
-
   Fix compile problem with USE mta-mysql.  Thanks to fkooman@zeelandnet.nl (F. Kooman)
   for the report.  Closes #1328.
 
   17 March 2002; Donny Davies <woodchip@gentoo.org> postfix-1.1.3-r2.ebuild :
-
   Clarify the pkg_postinst() message about updating master.cf.  Cosmetic fix only.
   Not bumping package revision.  Closes #1153.
 
 *postfix-1.1.3-r2 (20 Feb 2002)
 
   20 Feb 2002; Donny Davies <woodchip@gentoo.org> postfix-1.1.3-r2.ebuild :
-
   This update fixes the permissions and ownership on /usr/sbin/postdrop and
   /usr/sbin/postqueue, which were not set correctly last time.  Moved the
   postdrop group detection/creation into pkg_setup() to facilitate this.
@@ -159,7 +149,6 @@
 
   18 Feb 2002; Donny Davies <woodchip@gentoo.org> ChangeLog, postfix-1.1.3-r1.ebuild,
   files/postfix.rc6 files/smtp.pam files/smtpd.conf:
-
   Lots of changes, ok here we go:  First, we now compile with cyrus-sasl library
   support, which gives us smtp authentication.  Next, there is support for the mta-tls
   USE variable which gives you secure connection support.  There are sample files in
@@ -180,7 +169,6 @@
 *postfix-1.1.2-r1 (1 Feb 2002)
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
-  
   Added initial ChangeLog which should be updated whenever the package is
   updated in any way. This changelog is targetted to users. This means that the
   comments should well explained and written in clean English. The details about
