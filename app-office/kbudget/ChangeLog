@@ -1,6 +1,11 @@
 # ChangeLog for app-office/kbudget
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kbudget/ChangeLog,v 1.1 2003/11/14 14:54:59 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kbudget/ChangeLog,v 1.2 2003/12/24 20:55:45 caleb Exp $
+
+*kbudget-0.6_rc1 (24 Dec 2003)
+
+  24 Dec 2003; Caleb Tennis <caleb@gentoo.org> kbudget-0.6_rc1.ebuild:
+  New version
 
 *kbudget-0.5 (14 Nov 2003)
 
