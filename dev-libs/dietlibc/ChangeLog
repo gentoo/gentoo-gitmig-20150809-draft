@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/dietlibc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dietlibc/ChangeLog,v 1.20 2003/11/22 06:37:12 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dietlibc/ChangeLog,v 1.21 2003/11/22 21:13:23 mr_bones_ Exp $
+
+  22 Nov 2003; Michael Sterrett <mr_bones_@gentoo.org> dietlibc-0.24.ebuild:
+  inherit fixheadtails and do ht_fix_all (bug 34125)
 
 *dietlibc-0.24 (21 Nov 2003)
 

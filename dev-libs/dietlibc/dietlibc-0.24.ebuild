@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dietlibc/dietlibc-0.24.ebuild,v 1.1 2003/11/22 06:37:12 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dietlibc/dietlibc-0.24.ebuild,v 1.2 2003/11/22 21:13:23 mr_bones_ Exp $
 
-inherit eutils flag-o-matic
+inherit eutils flag-o-matic fixheadtails
 
 DESCRIPTION="A minimal libc"
 HOMEPAGE="http://www.fefe.de/dietlibc/"
@@ -24,6 +24,8 @@ src_unpack() {
 		-e "s:^prefix.*:prefix=/usr/diet:" \
 		-e "s:^#DESTDIR=.*:DESTDIR=${D}:" Makefile || \
 			die "sed Makefile failed"
+
+	ht_fix_all
 }
 
 src_compile() {
