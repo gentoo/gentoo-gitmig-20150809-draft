@@ -1,6 +1,13 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.143 2005/01/22 17:47:40 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.144 2005/02/03 06:54:11 joem Exp $
+
+*gtk+-2.6.1-r2 (03 Feb 2005)
+
+  03 Feb 2005; Joe McCann <joem@gentoo.org>
+  +files/gtk+-2.6.1-gtk_dialog.patch, +gtk+-2.6.1-r2.ebuild:
+  Adding upstream patch from bug 80262 as reported by compnerd. Should fix
+  gtk+ apps crashing when focus is called on lable widgets.
 
   22 Jan 2005; Markus Rothe <corsair@gentoo.org> gtk+-2.6.1-r1.ebuild:
   Added append-flags -mminimal-toc for ppc64 to let it compile
