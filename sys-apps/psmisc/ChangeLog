@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/psmisc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/psmisc/ChangeLog,v 1.19 2003/08/04 21:15:06 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/psmisc/ChangeLog,v 1.20 2003/09/14 16:18:03 azarah Exp $
+
+  14 Sep 2003; Martin Schlemmer <azarah@gentoo.org> :
+  Killall segfault if an command is longer than 128 bytes, as the realloc call
+  is not done in such an way to update the pointer that is used, thanks to bug
+  (bug #28234) submitted by Grant McDorman <grant.mcdorman@sympatico.ca>.
 
 *psmisc-21.2-r3 (04 Aug 2003)
 
