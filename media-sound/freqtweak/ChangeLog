@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/freqtweak
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/freqtweak/ChangeLog,v 1.9 2004/06/25 00:00:15 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/freqtweak/ChangeLog,v 1.10 2004/07/04 22:22:31 fvdpol Exp $
+
+  05 Jul 2004; Frank van de Pol <fvdpol@gentoo.org> :
+  Updated to new upstream release 0.6.0, added ~amd64 keyword, fixed gcc-3.4
+  issue. Closes bug #56034
 
   13 Jun 2004; Jeremy Huddleston <eradicator@gentoo.org>
   freqtweak-0.4.7.ebuild, freqtweak-0.5.0.ebuild, freqtweak-0.5.2.ebuild:
