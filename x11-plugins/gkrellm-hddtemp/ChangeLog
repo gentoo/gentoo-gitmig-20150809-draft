@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/gkrellm-hddtemp
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-hddtemp/ChangeLog,v 1.6 2003/10/06 06:57:18 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-hddtemp/ChangeLog,v 1.7 2003/11/10 19:27:38 mholzer Exp $
+
+  10 Nov 2003; Martin Holzer <mholzer@gentoo.org>
+  gkrellm-hddtemp-0.2_beta.ebuild:
+  fixed undef symbols. Closes #21686.
 
   07 Oct 2003; Martin Holzer <mholzer@gentoo.org>
   gkrellm-hddtemp-0.2_beta.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-hddtemp/gkrellm-hddtemp-0.2_beta.ebuild,v 1.4 2003/11/05 15:07:21 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-hddtemp/gkrellm-hddtemp-0.2_beta.ebuild,v 1.5 2003/11/10 19:27:38 mholzer Exp $
 
 MY_P=${P/_beta/-beta}
 S=${WORKDIR}/${MY_P}
@@ -12,7 +12,7 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~sparc"
 
-DEPEND="app-admin/gkrellm
+DEPEND="=app-admin/gkrellm-2*
 	>=sys-apps/sed-4"
 RDEPEND=">=app-admin/hddtemp-0.3_beta6"
 
@@ -29,8 +29,7 @@ src_compile() {
 		GKRELLM2=1
 		einfo "Building plugin for gkrellm-2.*"
 		make gkrellm2 || die
-	fi
-	if [ -f /usr/bin/gkrellm ]; then
+	elif [ -f /usr/bin/gkrellm ]; then
 		GKRELLM1=1
 		einfo "Building plugin for gkrellm-1.*"
 		make gkrellm1 || die
