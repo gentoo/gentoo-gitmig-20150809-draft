@@ -23,6 +23,10 @@
 ##
 
 # <george@gentoo.org> (06 Aug 2002)
+# new version, masked for testing
+=dev-libs/gsl-1.2
+
+# <george@gentoo.org> (06 Aug 2002)
 # new version, masked for testing.
 # supposedly fixes some ppc problems, ppc people, please test!
 =dev-lang/ocaml-3.05
