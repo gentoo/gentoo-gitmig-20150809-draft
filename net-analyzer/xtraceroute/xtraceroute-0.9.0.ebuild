@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/xtraceroute/xtraceroute-0.9.0.ebuild,v 1.9 2003/02/13 13:52:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/xtraceroute/xtraceroute-0.9.0.ebuild,v 1.10 2003/08/01 17:20:24 agriffis Exp $
 
 S="${WORKDIR}/${P}"
 DESCRIPTION="neat graphical traceroute displaying route on the globe"
@@ -22,6 +22,8 @@ DEPEND="x11-base/xfree
 
 
 src_compile() {
+	# specify --from-code to fix bug 25395 (01 Aug 2003 agriffis)
+	XGETTEXT='/usr/bin/xgettext --from-code=ISO-8859-1' \
 	./configure \
 		--host=${CHOST} \
 		--prefix=/usr \
