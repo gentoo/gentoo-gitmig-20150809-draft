@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/libgii
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgii/ChangeLog,v 1.1 2002/02/01 21:53:30 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgii/ChangeLog,v 1.2 2002/04/14 18:49:01 seemant Exp $
+
+*libgii-0.8.1 (14 Apr 2002)
+
+  14 Apr 2002; Seemant Kulleen <seemant@gentoo.org> libgii-0.8.1.ebuild
+  files/digest-libgii-0.8.1
+
+  Version bump
 
 *libgii-20010313 (1 Feb 2002)
 

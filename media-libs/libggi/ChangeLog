@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/libggi
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libggi/ChangeLog,v 1.1 2002/02/01 21:53:30 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libggi/ChangeLog,v 1.2 2002/04/14 18:44:21 seemant Exp $
+
+*libggi-2.0.1 (14 Apr 2002)
+
+  14 Apr 2002; Seemant Kulleen <seemant@gentoo.org> libggi-2.0.1.ebuild
+  files/digest-libggi-2.0.1
+
+  Version bump
 
 *libggi-20010313 (1 Feb 2002)
 
