@@ -1,6 +1,10 @@
 # ChangeLog for app-shells/bash-completion
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/ChangeLog,v 1.53 2004/01/25 15:27:06 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/ChangeLog,v 1.54 2004/02/10 19:36:36 joker Exp $
+
+  10 Feb 2004; Christian Birchinger <joker@gentoo.org>
+  bash-completion-20040101-r1.ebuild:
+  Marked stable
 
 *bash-completion-20040101-r1 (25 Jan 2004)
 
