@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/pyge
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/pyge/ChangeLog,v 1.4 2004/07/10 15:36:43 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/pyge/ChangeLog,v 1.5 2004/11/13 19:19:54 pythonhead Exp $
+
+  13 Nov 2004; Rob Cakebread <pythonhead@gentoo.org> pyge-0.6.1.2.ebuild:
+  Marked x86 stable
 
   10 Jul 2004; Tom Martin <slarti@gentoo.org> pyge-0.6.1.2.ebuild:
   Marked ~amd64.
