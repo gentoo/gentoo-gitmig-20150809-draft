@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/amaya/amaya-8.2.ebuild,v 1.1 2003/12/19 14:10:45 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/amaya/amaya-8.2.ebuild,v 1.2 2003/12/19 14:16:24 lu_zero Exp $
 
 inherit libtool
 
@@ -50,4 +50,3 @@ src_install () {
 	dosym /usr/Amaya/applis/bin/amaya /usr/bin/amaya
 	dosym /usr/Amaya/applis/bin/print /usr/bin/print
 }
-
