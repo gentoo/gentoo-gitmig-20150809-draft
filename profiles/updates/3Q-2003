@@ -59,3 +59,4 @@ move sys-apps/epm app-portage/epm
 move app-admin/rmerge2 app-portage/rmerge2
 move app-admin/splat app-portage/splat
 move app-admin/ufed app-portage/ufed
+move dev-util/ebuilder app-portage/ebuilder
