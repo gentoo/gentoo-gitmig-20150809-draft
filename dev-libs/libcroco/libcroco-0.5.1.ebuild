@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcroco/libcroco-0.5.1.ebuild,v 1.10 2004/08/05 20:37:20 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcroco/libcroco-0.5.1.ebuild,v 1.11 2004/11/04 22:26:21 vapier Exp $
 
 inherit gnome2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.freespiders.org/projects/libcroco/"
 
 LICENSE="LGPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="x86 ppc sparc alpha hppa ~ia64 amd64 mips ppc64"
+KEYWORDS="alpha amd64 hppa ia64 mips ppc ppc64 sparc x86"
 IUSE=""
 
 RDEPEND=">=dev-libs/glib-2
