@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/gnu-classpath
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/ChangeLog,v 1.16 2004/08/24 04:14:01 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/ChangeLog,v 1.17 2004/09/16 18:51:15 axxo Exp $
+
+*gnu-classpath-0.11 (16 Sep 2004)
+
+  16 Sep 2004; Thomas Matthijs <axxo@gentoo.org> +gnu-classpath-0.11.ebuild:
+  version bump, closes 63993
 
   24 Aug 2004; Chris Aniszczyk <zx@gentoo.org> gnu-classpath-0.10-r1.ebuild,
   -gnu-classpath-0.10.ebuild:
