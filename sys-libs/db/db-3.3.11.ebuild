@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-3.3.11.ebuild,v 1.9 2002/10/04 06:36:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-3.3.11.ebuild,v 1.10 2002/11/14 09:03:33 seemant Exp $
 
 S=${WORKDIR}/${P}
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.sleepycat.com/update/3.3.11/db-3.3.11.tar.gz"
 HOMEPAGE="http://www.sleepycat.com"
 SLOT="3"
 LICENSE="DB"
-KEYWORDS="x86 ppc sparc sparc64"
+KEYWORDS="-x86 -ppc -sparc -sparc64"
 
 DEPEND="virtual/glibc"
 
