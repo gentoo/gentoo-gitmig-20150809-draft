@@ -1,6 +1,6 @@
 MD5 a30c9d4ce8f9629d6d7323eaab258343 metadata.xml 241
 MD5 62b8b46461b20adf7b322888119916e9 ChangeLog 690
-MD5 989e45c3162992ffbea9f110de3cb38f drod-bin-1.6.3.ebuild 1036
+MD5 5d5a759b3e56ffccb66c5cc621772364 drod-bin-1.6.3.ebuild 1039
 MD5 cb64d359abb7a1a48986beb7c7c88ee4 drod-bin-1.6.5.ebuild 1050
 MD5 1d60558af7a36a55cb912df26fd8f3c4 files/digest-drod-bin-1.6.3 71
 MD5 da1e0cc0f61832593d45d38a7c04e852 files/install.patch 695
