@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/nss
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/ChangeLog,v 1.31 2004/11/11 13:38:55 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/ChangeLog,v 1.32 2004/11/12 10:40:11 obz Exp $
+
+  12 Nov 2004; Mike Gardiner <obz@gentoo.org> nss-3.9.2.ebuild:
+  Keyworded ppc
 
   11 Nov 2004; Gustavo Zacarias <gustavoz@gentoo.org> nss-3.9.2.ebuild:
   Stable on sparc
