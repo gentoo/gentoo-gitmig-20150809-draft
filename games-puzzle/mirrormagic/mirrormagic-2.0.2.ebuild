@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/mirrormagic/mirrormagic-2.0.2.ebuild,v 1.10 2004/07/01 05:24:56 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/mirrormagic/mirrormagic-2.0.2.ebuild,v 1.11 2004/11/05 05:08:02 josejx Exp $
 
 inherit flag-o-matic games
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.artsoft.org/RELEASES/unix/mirrormagic/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~amd64"
+KEYWORDS="x86 ~amd64 ~ppc"
 IUSE="X sdl"
 
 DEPEND="virtual/libc

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/xtris/xtris-1.15.ebuild,v 1.3 2004/06/24 23:11:32 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/xtris/xtris-1.15.ebuild,v 1.4 2004/11/05 05:18:10 josejx Exp $
 
 inherit games
 
@@ -9,7 +9,7 @@ DESCRIPTION="a networked Tetris-like game"
 HOMEPAGE="http://www.iagora.com/~espel/xtris/xtris.html"
 SRC_URI="http://www.iagora.com/~espel/xtris/${P}.tar.gz"
 
-KEYWORDS="x86 amd64"
+KEYWORDS="x86 amd64 ~ppc"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE=""
