@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/bootsplash 
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/bootsplash/ChangeLog,v 1.34 2004/04/07 15:53:20 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/bootsplash/ChangeLog,v 1.35 2004/04/13 10:13:28 spock Exp $
+
+  13 Apr 2004; Michal Januszewski <spock@gentoo.org>
+  bootsplash-0.6-r10.ebuild, bootsplash-0.6-r11.ebuild,
+  bootsplash-0.6-r12.ebuild, bootsplash-0.6-r13.ebuild,
+  bootsplash-0.6-r14.ebuild, bootsplash-0.6-r9.ebuild:
+  Added 'livecd' to IUSE.
 
 *bootsplash-0.6-r14 (07 Apr 2004)
 
