@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons-meta/kdeaddons-meta-3.4.0_beta2.ebuild,v 1.3 2005/02/11 01:12:27 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons-meta/kdeaddons-meta-3.4.0_beta2.ebuild,v 1.4 2005/02/11 01:33:25 caleb Exp $
 MAXKDEVER=$PV
 
 inherit kde-functions
@@ -35,13 +35,7 @@ $(deprange $PV $MAXKDEVER kde-base/kicker-kolourpicker)
 $(deprange $PV $MAXKDEVER kde-base/kicker-ktimemon)
 $(deprange $PV $MAXKDEVER kde-base/kicker-math)
 $(deprange $PV $MAXKDEVER kde-base/kicker-mediacontrol)
-$(deprange $PV $MAXKDEVER kde-base/kfile-cert)
-$(deprange $PV $MAXKDEVER kde-base/kfile-desktop)
-$(deprange $PV $MAXKDEVER kde-base/kfile-folder)
-$(deprange $PV $MAXKDEVER kde-base/kfile-html)
-$(deprange $PV $MAXKDEVER kde-base/kfile-lnk)
-$(deprange $PV $MAXKDEVER kde-base/kfile-mhtml)
-$(deprange $PV $MAXKDEVER kde-base/kfile-txt)
+$(deprange $PV $MAXKDEVER kde-base/kdeaddons-kfile-plugins)
 $(deprange $PV $MAXKDEVER kde-base/konqueror-akregator)
 $(deprange $PV $MAXKDEVER kde-base/konqueror-crashes)
 $(deprange $PV $MAXKDEVER kde-base/konqueror-khtmlsettingsplugin)
