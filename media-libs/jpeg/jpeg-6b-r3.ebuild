@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/jpeg-6b-r3.ebuild,v 1.16 2003/09/22 01:25:07 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/jpeg-6b-r3.ebuild,v 1.17 2003/11/16 14:42:04 mholzer Exp $
 
 inherit gnuconfig flag-o-matic
 
@@ -45,5 +45,7 @@ src_install() {
 		mandir=${D}/usr/share/man/man1 \
 		install || die
 
-	dodoc README change.log structure.doc
+	dodoc README install.doc usage.doc wizard.doc change.log \
+		libjpeg.doc example.c structure.doc filelist.doc \
+		coderules.doc
 }
