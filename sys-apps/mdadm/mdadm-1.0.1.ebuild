@@ -1,13 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mdadm/mdadm-1.0.1.ebuild,v 1.1 2002/10/29 15:30:20 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mdadm/mdadm-1.0.1.ebuild,v 1.2 2002/10/29 15:30:43 aliz Exp $
 
 DESCRIPTION="An extremely useful tool for running RAID systems - it can be used as a replacement for the raidtools, or as a supplement."
 HOMEPAGE="http://www.cse.unsw.edu.au/~neilb/source"
 SRC_URI="http://www.cse.unsw.edu.au/~neilb/source/mdadm/${P}.tgz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~x86"
 IUSE="static"
 DEPEND=""
 RDEPEND=""
