@@ -1,11 +1,12 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openmosix-sources/openmosix-sources-2.4.21-r2.ebuild,v 1.1 2004/01/06 22:42:38 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openmosix-sources/openmosix-sources-2.4.20-r8.ebuild,v 1.1 2004/02/18 23:09:16 plasmaroo Exp $
+
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 #we use this next variable to avoid duplicating stuff on cvs
 GFILESDIR=${PORTDIR}/sys-kernel/linux-sources/files
-OKV=2.4.21
+OKV=2.4.20
 [ "${PR}" == "r0" ] && KV=${OKV}-openmosix || KV=${OKV}-openmosix-${PR}
 EXTRAVERSION="`echo ${KV}|sed -e 's:[0-9]\+\.[0-9]\+\.[0-9]\+\(.*\):\1:'`"
 S=${WORKDIR}/linux-${KV}
@@ -14,12 +15,11 @@ ETYPE="sources"
 # What's in this kernel?
 
 # INCLUDED:
-#   2.4.21, plus:
-#   2.4.21  openmosix-2.4.21-1
-#	Experimental Migshm-1.4 threading/shared memory support patch
+#   2.4.20, plus:
+#   2.4.20  openmosix-2.4.20-3
 
 DESCRIPTION="Full sources for the Gentoo openMosix Linux kernel"
-SRC_URI="http://www.kernel.org/pub/linux/kernel/v2.4/linux-${OKV}.tar.bz2 mirror://sourceforge/openmosix/openMosix-2.4.21-1.bz2 http://mcaserta.com/maask/Migshm-1.4.tgz"
+SRC_URI="http://www.kernel.org/pub/linux/kernel/v2.4/linux-${OKV}.tar.bz2 mirror://sourceforge/openmosix/openMosix-2.4.20-3.gz"
 PROVIDE="virtual/linux-sources"
 HOMEPAGE="http://www.kernel.org/ http://www.gentoo.org/ http://www.openmosix.org/"
 LICENSE="GPL-2"
@@ -39,14 +39,14 @@ fi
 src_unpack() {
 	cd ${WORKDIR}
 	unpack linux-${OKV}.tar.bz2
-	unpack Migshm-1.4.tgz
 	mv linux-${OKV} linux-${KV} || die
 	cd ${S}
-	cat ${DISTDIR}/openMosix-2.4.21-1.bz2 | bzip2 -d | patch -p1 || die
+	cat ${DISTDIR}/openMosix-2.4.20-3.gz | gzip -d | patch -p1 || die
 
 	epatch ${FILESDIR}/do_brk_fix.patch || die "Failed to patch do_brk() vulnerability!"
 	epatch ${FILESDIR}/${PN}.CAN-2003-0985.patch || die "Failed to patch mremap() vulnerability!"
-	epatch ${FILESDIR}/${PN}-2.4.20.rtc_fix.patch || die "Failed to patch RTC vulnerabilities!"
+	epatch ${FILESDIR}/${P}.munmap.patch || die "Failed to apply munmap patch!"
+	epatch ${FILESDIR}/${P}.rtc_fix.patch || die "Failed to patch RTC vulnerabilities!"
 
 	# Gentoo Linux uses /boot, so fix 'make install' to work properly
 	cd ${S}
@@ -56,10 +56,6 @@ src_unpack() {
 		Makefile.orig > Makefile || die # test, remove me if Makefile ok
 	rm Makefile.orig
 #	rm Makefile~
-
-	# This is the experimental Migshm-1.4 patch...
-	cat ${WORKDIR}/Migshm-1.4/patch-Migshm-2.4.21.tgz | gzip -d | patch -p1 || die
-	rm -rf ${WORKDIR}/Migshm-1.4
 
 	#sometimes we have icky kernel symbols; this seems to get rid of them
 	make mrproper || die
@@ -73,41 +69,13 @@ src_unpack() {
 	chmod -R a+r-w+X,u+w *
 }
 
-src_compile() {
-	if [ "$ETYPE" = "headers" ]
-	then
-		yes "" | make oldconfig
-		echo "Ignore any errors from the yes command above."
-	fi
-}
-
 src_install() {
-	if [ "$ETYPE" = "sources" ]
-	then
-		dodir /usr/src
-		echo ">>> Copying sources..."
-		mv ${WORKDIR}/* ${D}/usr/src
-	else
-		#linux-headers
-		dodir /usr/include/linux
-		cp -ax ${S}/include/linux/* ${D}/usr/include/linux
-		rm -rf ${D}/usr/include/linux/modules
-		dodir /usr/include/asm
-		cp -ax ${S}/include/asm-i386/* ${D}/usr/include/asm
-	fi
-}
-
-pkg_preinst() {
-	if [ "$ETYPE" = "headers" ]
-	then
-		[ -L ${ROOT}usr/include/linux ] && rm ${ROOT}usr/include/linux
-		[ -L ${ROOT}usr/include/asm ] && rm ${ROOT}usr/include/asm
-		true
-	fi
+	dodir /usr/src
+	echo ">>> Copying sources..."
+	mv ${WORKDIR}/* ${D}/usr/src
 }
 
 pkg_postinst() {
-	[ "$ETYPE" = "headers" ] && return
 	if [ ! -e ${ROOT}usr/src/linux ]
 	then
 		rm -f ${ROOT}usr/src/linux
