@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi-cvs/irssi-cvs-0.1.ebuild,v 1.5 2003/11/21 19:53:56 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi-cvs/irssi-cvs-0.2.ebuild,v 1.1 2003/11/27 03:01:46 gregf Exp $
 
 IUSE="nls ipv6 perl ssl"
 
@@ -10,7 +10,7 @@ S=${WORKDIR}/${P}
 DESCRIPTION="A modular textUI IRC client with IPv6 support."
 HOMEPAGE="http://irssi.org/"
 
-DEPEND="	>=dev-libs/glib-1.2
+DEPEND=">=dev-libs/glib-2.2.1
 		sys-libs/ncurses
 		perl? ( dev-lang/perl )
 		!net-irc/irssi"
@@ -39,7 +39,7 @@ src_compile() {
 	# not used here.
 
 	# Edit these if you like
-	myconf="--without-servertest --with-bot --with-proxy --with-ncurses"
+	myconf="--with-glib2 --without-servertest --with-proxy --with-ncurses"
 
 	use nls || myconf="${myconf} --disable-nls"
 
@@ -68,25 +68,25 @@ src_compile() {
 }
 
 src_install() {
+
 	myflags=""
 
-	use perl && ( \
-		cd ${S}/src/perl/common
-		perl-module_src_prep
-		cd ${S}/src/perl/irc
-		perl-module_src_prep
-		cd ${S}/src/perl/textui
-		perl-module_src_prep
-		cd ${S}/src/perl/ui
-		perl-module_src_prep
+	if use perl; then
+		cd ${S}/src/perl/common; perl-module_src_prep
+		cd ${S}/src/perl/irc;    perl-module_src_prep
+		cd ${S}/src/perl/textui; perl-module_src_prep
+		cd ${S}/src/perl/ui;     perl-module_src_prep
 		cd ${S}
-	)
+	fi
 
 	make DESTDIR=${D} \
+		docdir=/usr/share/doc/${PF} \
 		gnulocaledir=${D}/usr/share/locale \
 		${myflags} \
 		install || die
 
 	prepalldocs
 	dodoc AUTHORS ChangeLog README TODO NEWS
+	cd ${S}/docs
+	dohtml -r . || die "dohtml failed"
 }
