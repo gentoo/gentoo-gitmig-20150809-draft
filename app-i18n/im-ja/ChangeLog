@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/im-ja
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/im-ja/ChangeLog,v 1.31 2004/10/06 23:31:28 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/im-ja/ChangeLog,v 1.32 2004/11/04 11:31:46 usata Exp $
+
+  04 Nov 2004; Mamoru KOMACHI <usata@gentoo.org> im-ja-1.2-r1.ebuild:
+  Stable on x86 and alpha.
 
   06 Oct 2004; Travis Tilley <lv@gentoo.org> im-ja-1.2-r1.ebuild:
   added eutils to the inherit line, and keyworded for ~amd64 now that it seems

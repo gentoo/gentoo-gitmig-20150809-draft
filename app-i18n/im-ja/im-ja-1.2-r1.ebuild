@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/im-ja/im-ja-1.2-r1.ebuild,v 1.2 2004/10/06 23:31:28 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/im-ja/im-ja-1.2-r1.ebuild,v 1.3 2004/11/04 11:31:46 usata Exp $
 
 inherit gnome2 eutils
 
@@ -8,12 +8,11 @@ DESCRIPTION="A Japanese input module for GTK2 and XIM"
 HOMEPAGE="http://im-ja.sourceforge.net/"
 SRC_URI="http://im-ja.sourceforge.net/${P}.tar.gz
 	http://im-ja.sourceforge.net/old/${P}.tar.gz
-	mirror://gentoo/${P}-20041001.diff.gz
-	http://dev.gentoo.org/~usata/distfiles/${P}-20041001.diff.gz"
+	mirror://gentoo/${P}-20041001.diff.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~amd64"
+KEYWORDS="x86 ~ppc ~sparc alpha ~amd64"
 IUSE="gnome canna freewnn skk anthy"
 # --enable-debug causes build failure with gtk+-2.4
 #IUSE="${IUSE} debug"
