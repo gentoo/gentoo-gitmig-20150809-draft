@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/preview/preview-0.7.5_pre20041021.ebuild,v 1.1 2004/10/22 20:01:56 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/preview/preview-0.7.5_pre20041021.ebuild,v 1.2 2004/10/22 20:06:42 fafhrd Exp $
 
 ECVS_CVS_COMMAND="cvs -q"
 ECVS_SERVER="cvs.gna.org:/cvs/gsimageapps"
@@ -20,7 +20,7 @@ HOMEPAGE="http://gna.org/projects/gsimageapps"
 #SRC_URI="http://download.gna.org/gsimageapps/${MY_PN}-${PV}.tar.bz2"
 
 LICENSE="GPL-2"
-KEYWORDS="~ppc"
+KEYWORDS="~ppc ~x86"
 SLOT="0"
 
 IUSE="${IUSE}"
