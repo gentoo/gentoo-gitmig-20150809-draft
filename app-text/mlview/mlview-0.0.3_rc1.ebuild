@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mlview/mlview-0.0.3_rc1.ebuild,v 1.4 2003/07/11 20:35:24 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mlview/mlview-0.0.3_rc1.ebuild,v 1.5 2004/01/25 12:13:46 obz Exp $
 
 MY_P=${P/_/}
 DESCRIPTION="XML Editor for Gnome"

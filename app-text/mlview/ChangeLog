@@ -1,6 +1,12 @@
 # ChangeLog for app-text/mlview
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mlview/ChangeLog,v 1.4 2003/11/24 13:42:58 obz Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/mlview/ChangeLog,v 1.5 2004/01/25 12:13:46 obz Exp $
+
+*mlview-0.6.2 (25 Jan 2004)
+
+  25 Jan 2004; Mike Gardiner <obz@gentoo.org> mlview-0.0.3_rc1.ebuild,
+  mlview-0.6.0.ebuild, mlview-0.6.1.ebuild, mlview-0.6.2.ebuild:
+  New version, thanks for the report on bug #35861 from <i386@sauceage.org>
 
 *mlview-0.6.1 (24 Nov 2003)
 
