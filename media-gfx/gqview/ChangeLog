@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/gqview
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gqview/ChangeLog,v 1.54 2005/02/15 18:00:35 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gqview/ChangeLog,v 1.55 2005/02/27 00:16:01 mr_bones_ Exp $
+
+*gqview-2.0.0 (26 Feb 2005)
+
+  26 Feb 2005; Michael Sterrett <mr_bones_@gentoo.org> +gqview-2.0.0.ebuild:
+  stable version bump
 
 *gqview-1.5.9 (15 Feb 2005)
 

@@ -1,4 +1,4 @@
-MD5 5b2405f94b5595c362e1d2c462fdeacd ChangeLog 7564
+MD5 6c09c7465b9032e00a46efa8fad7edd4 ChangeLog 7693
 MD5 9379d607bab32df0701c621337212f23 gqview-1.5.3.ebuild 923
 MD5 f91e27f0931388f9f1a3e0ab08f3c9be gqview-1.4.5.ebuild 906
 MD5 37a2424bb78e9a68b234afb1863d72e7 gqview-1.4.1.ebuild 829
@@ -7,6 +7,7 @@ MD5 e70c2edbfc61fdb7ed7bd1a29eb92c6c metadata.xml 339
 MD5 71dbcd0186ab8e1b2d242efd7c116399 gqview-1.5.1.ebuild 909
 MD5 697487f1722e444ee1c3f3b7577cd2a1 gqview-1.5.4.ebuild 925
 MD5 17b3d73a8c0aea8a2267d5706c0dfcd3 gqview-1.5.9.ebuild 726
+MD5 df7aed88d29b2f2a22972f2b3e87d6c7 gqview-2.0.0.ebuild 726
 MD5 e615b2f04ca0195d5773eed25b818856 gqview-1.5.8.ebuild 726
 MD5 b3d35cac796c66219b3690e6e5e7b4e8 files/digest-gqview-1.4.1 65
 MD5 c599a99b5155347123cabffb2fb09c0e files/digest-gqview-1.5.0 65
@@ -15,4 +16,5 @@ MD5 a8f2921f80df401bbff60c096bfb3de3 files/digest-gqview-1.5.4 65
 MD5 f3dbb4b641155bf181e599c4a8d5a098 files/digest-gqview-1.5.9 65
 MD5 811d1964d96b59b196bf78cade00efcb files/digest-gqview-1.5.3 65
 MD5 c11642efa01244db76fbaffb5b0aa3c4 files/digest-gqview-1.4.5 65
+MD5 0744ce64d1da1679ac4096f5833730b7 files/digest-gqview-2.0.0 65
 MD5 23d3c60cafd7ac53c20bbdba96a39a8e files/digest-gqview-1.5.8 65
