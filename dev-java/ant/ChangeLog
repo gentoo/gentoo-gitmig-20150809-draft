@@ -1,13 +1,16 @@
 # ChangeLog for dev-java/ant
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant/ChangeLog,v 1.20 2002/12/07 06:18:52 jmorgan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant/ChangeLog,v 1.21 2002/12/08 17:50:28 strider Exp $
 
 *ant-1.5.1-r3 (01 Dec 2002)
+
+  08 Dec 2002; Adrian Almenar <strider@gentoo.org> ant-1.5.1-r3.ebuild :
+  Added Sparc keyword "~sparc" after testing it.
 
   07 Dec 2002; Jack Morgan <jmorgan@gentoo.org> ant-1.5.1-r2.ebuild, ant-1.4.1-r3.ebuild :
   Changed sparc64 to sparc keyword
   
-  01 Dec 2002;  Adrian Almenar <strider@gentoo.org> ant-1.5.1-r3.ebuild
+  01 Dec 2002; Adrian Almenar <strider@gentoo.org> ant-1.5.1-r3.ebuild
   Doesnt need to download from a gentoo mirror.
 
   01 Dec 2002; Adrian Almenar <strider@gentoo.org> ant-1.5.1-r3.ebuild files/digest-ant-1.5.1-r3
