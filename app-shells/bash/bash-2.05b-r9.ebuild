@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-2.05b-r9.ebuild,v 1.12 2004/04/24 08:04:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-2.05b-r9.ebuild,v 1.13 2004/05/28 21:15:02 vapier Exp $
 
 inherit eutils flag-o-matic gnuconfig
 
@@ -72,6 +72,10 @@ src_compile() {
 	#
 	# Martin Schlemmer <azarah@gentoo.org> (1 Sep 2002)
 	#use readline && myconf="--with-installed-readline"
+
+	# Don't even think about building this statically without
+	# reading Bug 7714 first.  If you still build it statically,
+	# don't come crying to use with bugs ;).
 	#use static && export LDFLAGS="${LDFLAGS} -static"
 	use nls || myconf="${myconf} --disable-nls"
 
