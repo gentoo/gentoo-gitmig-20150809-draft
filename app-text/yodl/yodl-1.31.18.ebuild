@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/yodl/yodl-1.31.18.ebuild,v 1.8 2004/08/19 01:42:28 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/yodl/yodl-1.31.18.ebuild,v 1.9 2004/09/02 16:46:42 pvdabeel Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ LICENSE="GPL-2"
 
 SLOT="0"
 IUSE=""
-KEYWORDS="x86 ~ppc ~sparc alpha ~mips ~amd64"
+KEYWORDS="x86 ppc ~sparc alpha ~mips ~amd64"
 
 DEPEND="sys-devel/bison
 	sys-devel/flex
