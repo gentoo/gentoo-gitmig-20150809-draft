@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/evms
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/ChangeLog,v 1.10 2004/03/12 17:13:54 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/ChangeLog,v 1.11 2004/03/12 20:50:20 iggy Exp $
+
+  12 Mar 2004; Brian Jackson <iggy@gentoo.org> evms-2.3.0.ebuild:
+  some fixes from bug 43952, thanks to Andreas Simon <yuipxATgmx.net>
 
 *evms-2.3.0 (12 Mar 2004)
 

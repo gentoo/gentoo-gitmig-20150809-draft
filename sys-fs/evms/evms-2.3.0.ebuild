@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/evms-2.3.0.ebuild,v 1.1 2004/03/12 17:13:54 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/evms-2.3.0.ebuild,v 1.2 2004/03/12 20:50:20 iggy Exp $
 
 IUSE="ncurses gtk"
 
@@ -36,7 +36,17 @@ src_compile() {
 
 src_install() {
 	make DESTDIR=${D} install || die "Make install died"
-	dodoc ChangeLog COPYING TERMINOLOGY PLUGIN.IDS INSTALL*
+	dodoc ChangeLog COPYING INSTALL* PLUGIN.IDS README TERMINOLOGY doc/linuxrc
+
+	# install the sample configuration into the doc dir
+	dodoc ${D}/etc/evms.conf.sample
+	rm -f ${D}/etc/evms.conf.sample
+
+	# the kernel patches may come handy for people compiling their own kernel
+	docinto kernel/2.4
+	dodoc kernel/2.4/*
+	docinto kernel/2.6
+	dodoc kernel/2.6/*
 
 	# move static libraries to /usr/lib
 	dodir /usr/lib
