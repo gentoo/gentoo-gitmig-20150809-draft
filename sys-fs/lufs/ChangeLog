@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/lufs
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lufs/ChangeLog,v 1.12 2004/07/16 18:57:59 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lufs/ChangeLog,v 1.13 2004/07/16 18:59:36 mr_bones_ Exp $
+
+  16 Jul 2004; Michael Sterrett <mr_bones_@gentoo.org> -lufs-0.8.0.ebuild,
+  -lufs-0.9.3.ebuild, -lufs-0.9.4.ebuild, -lufs-0.9.6.ebuild,
+  -lufs-0.9.7-r1.ebuild, -lufs-0.9.7.ebuild:
+  prune older ebuilds
 
   16 Jul 2004; Michael Sterrett <mr_bones_@gentoo.org> lufs-0.9.7-r2.ebuild:
   Sync ebuild code with variables in IUSE
