@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gnomeicu/gnomeicu-0.98.2-r5.ebuild,v 1.1 2002/07/30 18:17:44 stroke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gnomeicu/gnomeicu-0.98.2-r5.ebuild,v 1.2 2002/08/04 21:48:24 spider Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Gnome ICQ Client"
@@ -9,7 +9,7 @@ HOMEPAGE="http://gnomeicu.sourceforge.net/"
 
 DEPEND=">=gnome-base/gnome-libs-1.4.1.2-r2
 	>=sys-libs/gdbm-1.8.0
-	>=gnome-base/libglade-0.17*
+	=gnome-base/libglade-0.17*
 	>=media-libs/gdk-pixbuf-0.9.0	
 	>=net-libs/gnet-1.1.0
 	gnome? ( =gnome-base/gnome-panel-1.4* )
