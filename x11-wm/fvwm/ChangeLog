@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/fvwm
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/ChangeLog,v 1.61 2004/03/02 14:50:52 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/ChangeLog,v 1.62 2004/03/16 20:20:36 taviso Exp $
+
+  16 Mar 2004; Tavis Ormandy <taviso@gentoo.org> fvwm-2.5.9.ebuild:
+  ensure FvwmGtk gets a man page.
+  clean up some old ebuilds.
 
 *fvwm-2.5.9 (02 Mar 2004)
 

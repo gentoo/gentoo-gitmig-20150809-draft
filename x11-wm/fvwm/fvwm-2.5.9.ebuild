@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.9.ebuild,v 1.1 2004/03/02 14:50:52 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.9.ebuild,v 1.2 2004/03/16 20:20:36 taviso Exp $
 
 inherit eutils flag-o-matic
 
@@ -275,6 +275,9 @@ src_install() {
 	utils/quantize_pixmaps utils/xselection.c
 
 	dodoc ${FILESDIR}/README.transluceny.gz
+
+	# make sure FvwmGtk man page is installed
+	use gtk && doman ${S}/modules/FvwmGtk/FvwmGtk.1
 
 	# fix a couple of symlinks.
 	prepallman
