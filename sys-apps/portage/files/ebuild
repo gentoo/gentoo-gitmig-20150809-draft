@@ -995,7 +995,7 @@ dyn_merge() {
     fi
     echo
     pkg_preinst
-    /usr/sbin/merge
+    /usr/sbin/portage-merge
     cd ${BUILDDIR}
     #zap it so that people don't look at a bad image and get confused
     rm -rf image
@@ -1007,7 +1007,7 @@ dyn_unmerge() {
     trap "" SIGINT SIGQUIT
     #stub unmerge function for now
     cd ${BUILDDIR}
-    /usr/sbin/unmerge ${PF}
+    /usr/sbin/portage-unmerge ${PF}
     if [ $? -ne 0 ]
     then
 	exit
