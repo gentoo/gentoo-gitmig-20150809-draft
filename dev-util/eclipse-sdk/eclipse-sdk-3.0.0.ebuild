@@ -1,6 +1,6 @@
 # Copyright 2003-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-3.0.0.ebuild,v 1.2 2004/07/04 20:57:58 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-3.0.0.ebuild,v 1.3 2004/07/06 23:24:45 karltk Exp $
 
 inherit eutils
 
@@ -51,6 +51,10 @@ pkg_setup() {
 		die "Detected JDK (${version}) is too old to compile Eclipse, need at least 1.4.2!"
 	fi
 
+	# Needed for the IBM JDK
+	addwrite "/proc/self/maps"
+	addwrite "/proc/cpuinfo"
+
 	set_dirs
 	use gtk && use_gtk='true' || use_gtk='false'
 	use motif && use_motif='true' || use_motif='false'
@@ -94,9 +98,7 @@ src_unpack() {
 	cd ${S}
 	unpack ${A}
 
-	# Needed for the IBM JDK
-	addwrite "/proc/self/maps"
-	addwrite "/proc/cpuinfo"
+	epatch ${FILESDIR}/03-motif-java1.5-build.patch
 
 	# Clean up all pre-built code
 	ant -q -DinstallWs=gtk -DinstallOs=linux clean
