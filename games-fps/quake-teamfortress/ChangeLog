@@ -1,0 +1,8 @@
+# ChangeLog for games-fps/quake-teamfortress
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake-teamfortress/ChangeLog,v 1.1 2005/01/16 22:14:03 vapier Exp $
+
+*quake-teamfortress-2.9 (16 Jan 2004)
+
+  16 Jan 2004; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by me.
