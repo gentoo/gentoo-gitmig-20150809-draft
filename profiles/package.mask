@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3661 2005/02/25 12:43:05 hollow Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3662 2005/02/25 16:38:17 beu Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ##
+
+# Elfyn McBratney <beu@gentoo.org> (25 Feb 2005)
+# Masked as it's broken with Apache 2.x and upstream appears to be
+# dead.
+dev-lang/bigwig
 
 # Benedikt Boehm <hollow@gentoo.org> (17 Feb 2005)
 # Apache herd package refresh
