@@ -1,6 +1,13 @@
 # ChangeLog for app-arch/cabextract
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/cabextract/ChangeLog,v 1.13 2004/06/24 21:28:34 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/cabextract/ChangeLog,v 1.14 2004/06/26 08:22:07 seemant Exp $
+
+  26 Jun 2004; Seemant Kulleen <seemant@gentoo.org> cabextract-0.5.ebuild,
+  cabextract-0.6.ebuild, cabextract-1.0.ebuild:
+  DEPENDs can NOT be changed to virtual/libc until a virtual/libc is actually
+  installed on user systems. That is not the case at present. On athe majority,
+  it's just virtual/glibc. It will take a little time, and upgrade cycles,
+  before we can be confident in the majority having virtual/libc installed
 
 *cabextract-1.0 (18 Jun 2004)
 

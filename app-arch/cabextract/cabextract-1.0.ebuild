@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/cabextract/cabextract-1.0.ebuild,v 1.3 2004/06/25 23:48:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/cabextract/cabextract-1.0.ebuild,v 1.4 2004/06/26 08:22:08 seemant Exp $
 
 DESCRIPTION="Extracts files from Microsoft .cab files"
 HOMEPAGE="http://www.kyz.uklinux.net/cabextract.php"
@@ -11,7 +11,7 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha ~arm ~hppa ~amd64 ~ia64 ~ppc64"
 IUSE=""
 
-DEPEND="virtual/libc"
+DEPEND="virtual/glibc"
 
 src_install() {
 	make DESTDIR=${D} install || die
