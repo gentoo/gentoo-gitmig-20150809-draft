@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/afterstep/afterstep-2.0_beta3.ebuild,v 1.1 2004/02/25 06:56:16 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/afterstep/afterstep-2.0_beta3.ebuild,v 1.2 2004/04/27 16:50:43 pvdabeel Exp $
 
 IUSE="png jpeg gif tiff truetype xinerama debug mmx"
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.afterstep.org/devel/AfterStep-2.00.beta3.tar.bz2"
 
 LICENSE="AFTERSTEP"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc "
 
 DEPEND="virtual/glibc
 	virtual/x11
@@ -18,7 +18,7 @@ DEPEND="virtual/glibc
 	jpeg? ( >=media-libs/jpeg-6b )
 	gif?  ( >=media-libs/giflib-4.1.0 )
 	tiff? ( >=media-libs/tiff-3.5.7 )
-	debug? ( >=dev-util/efence-2.2.2 )"
+	!ppc? ( debug? ( >=dev-util/efence-2.2.2 ) )"
 RDEPEND="${DEPEND}
 	>=media-sound/sox-12.17.3"
 
@@ -58,7 +58,9 @@ src_compile() {
 	use mmx && myconf="${myconf} --enable-mmx-optimization" \
 		|| myconf="${myconf} --enable-mmx-optimization=no"
 
-	use debug && myconf="${myconf} --with-libefence --enable-gdb --enable-warn --enable-gprof --enable-audit --enable-trace --enable-trace-x"
+	use debug && myconf="${myconf} --enable-gdb --enable-warn --enable-gprof --enable-audit --enable-trace --enable-trace-x"
+
+	use !ppc && use debug && myconf="${myconf} --with-libefence"
 
 	# Explanation of configure options
 	# ================================
