@@ -1,6 +1,14 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.226 2004/08/08 22:31:48 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.227 2004/08/08 23:44:39 lv Exp $
+
+  08 Aug 2004; Travis Tilley <lv@gentoo.org> glibc-2.3.4.20040605-r1.ebuild,
+  glibc-2.3.4.20040619-r1.ebuild, glibc-2.3.4.20040619.ebuild,
+  glibc-2.3.4.20040808.ebuild:
+  makecheck fails with sandbox enabled, so i've made the ebuilds die right away
+  if makecheck is in USE and sandbox is in FEATURES. this cannot be fixed by
+  disabling the sandbox from within the ebuild, as the bug occurs if sandbox is
+  loaded at all.
 
   08 Aug 2004; Travis Tilley <lv@gentoo.org> glibc-2.3.4.20040808.ebuild:
   made --enable-bind-now the default for all users instead of just hardened users

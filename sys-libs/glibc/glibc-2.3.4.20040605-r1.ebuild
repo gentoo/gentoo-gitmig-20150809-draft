@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040605-r1.ebuild,v 1.18 2004/08/05 23:59:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040605-r1.ebuild,v 1.19 2004/08/08 23:44:39 lv Exp $
 
 IUSE="nls pic build nptl erandom hardened makecheck multilib debug"
 
@@ -228,6 +228,8 @@ pkg_setup() {
 		die "GCC too old"
 	fi
 	echo
+
+	hasq sandbox $FEATURES && use makecheck && die "sandbox breaks make check. either take makecheck out of USE or set FEATURES=-sandbox"
 }
 
 
