@@ -1,0 +1,10 @@
+# ChangeLog for www-clients/planet
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-client/planet/ChangeLog,v 1.1 2004/08/08 18:36:03 stuart Exp $
+
+*planet-20040808 (08 Aug 2004)
+
+  08 Aug 2004; Stuart Herbert <stuart@gentoo.org> +metadata.xml,
+  +planet-20040808.ebuild:
+  Initial import
+
