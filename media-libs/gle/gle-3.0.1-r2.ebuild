@@ -1,29 +1,19 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gle/gle-3.0.1-r2.ebuild,v 1.25 2004/12/16 10:58:18 corsair Exp $
-
-IUSE=""
-
-inherit gnuconfig
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gle/gle-3.0.1-r2.ebuild,v 1.26 2005/02/13 05:54:24 vapier Exp $
 
 DESCRIPTION="GL extrusion library"
-SRC_URI="http://www.linas.org/gle/pub/gle-3.0.1.tar.gz"
 HOMEPAGE="http://www.linas.org/gle"
+SRC_URI="http://www.linas.org/gle/pub/gle-3.0.1.tar.gz"
 
-SLOT="0"
 LICENSE="Artistic GPL-2"
-KEYWORDS="x86 ppc sparc alpha amd64 ia64 hppa ppc64"
+SLOT="0"
+KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sparc x86"
+IUSE=""
 
 DEPEND="virtual/opengl
 	virtual/glu
 	virtual/glut"
-
-src_unpack() {
-	unpack ${A}
-
-	cd ${S}
-	gnuconfig_update
-}
 
 src_compile() {
 	econf --with-x || die
@@ -32,6 +22,6 @@ src_compile() {
 
 src_install() {
 	make DESTDIR="${D}" install || die
-	dodoc AUTHORS COPYING ChangeLog NEWS README
+	dodoc AUTHORS ChangeLog NEWS README
 	dohtml -r public_html
 }
