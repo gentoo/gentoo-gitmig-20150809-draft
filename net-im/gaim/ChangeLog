@@ -1,6 +1,9 @@
 # ChangeLog for net-im/gaim
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/ChangeLog,v 1.44 2003/04/25 01:55:04 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/ChangeLog,v 1.45 2003/04/30 04:08:39 lostlogic Exp $
+
+  29 Apr 2003; Brandon Low <lostlogic@gentoo.org> gaim-0.62.ebuild:
+  Add a message about gaim-encryption not being supported by gaim project
 
 *gaim-0.62 (24 Apr 2003)
 
