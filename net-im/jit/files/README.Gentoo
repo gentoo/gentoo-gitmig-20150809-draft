@@ -1,0 +1,44 @@
+This is a small help to get you started with the JIT, a ICQ jabber transport, in
+Gentoo.
+
+Edit /etc/jabber/jit.xml . This is the main JIT server config file.
+There change all references to localhost with the FQDN (Fully Qualified Domain 
+Name) for your server.
+
+In the icqlinker section enter the IP of your main jabber server (normally 
+127.0.0.1) and choose a port and secret (secret is the password the ICQ 
+transport will use to connect to the main jabber server).
+
+Now back to the multiple.xml to tell your main jabber server to listen to 
+connections from the ICQ transport.
+Search for "<vcard2jud/>" and after that, and before the </jsm> add:
+
+<browse>
+	<service type="icq" jid="icq.localhost" name="ICQ Link">
+		<ns>jabber:iq:gateway</ns>
+		<ns>jabber:iq:register</ns>
+		<ns>jabber:iq:search</ns>
+	</service>
+</browse>
+
+Again here change localhost for your FQDN.
+
+Scrool down to the bottom of the file, and just before the </jabber> add:
+
+<service id="icq">
+	<host>icq.localhost</host>
+	<accept>
+		<ip>127.0.0.1</ip>
+		<port>5555</port>
+		<secret>jitSecret</secret>
+		<timeout>30</timeout>
+	</accept>
+</service>
+
+(By know you know you have to change localhost for you FQDN).
+One very importante thing: even if it is the same machine the name's for the 
+various services must be diferent, that means that there must be valid aliases 
+for icq.FQDN. 
+
+If you need help with configuration you can try the Jabber Admin Mailling list:
+http://mailman.jabber.org/listinfo/jadmin
