@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-0.6.12-r2.ebuild,v 1.2 2004/10/07 02:26:12 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-0.6.12-r2.ebuild,v 1.3 2004/10/21 00:19:27 chriswhite Exp $
 
 inherit libtool flag-o-matic eutils gcc
 
@@ -78,7 +78,8 @@ src_compile() {
 
 	# Don't build with -mfpmath=sse (Bug #14920)
 	filter-mfpmath sse
-	filter-flags -maltivec -mabi=altivec -fforce-addr -momit-leaf-frame-pointer
+	filter-flags -maltivec -mabi=altivec -fforce-addr \
+	-momit-leaf-frame-pointer -msse2 -fstack-protector
 
 	# doesnt work correctly/fully
 	if use static; then
@@ -90,7 +91,7 @@ src_compile() {
 	# ---
 	# really ? no on amd64, and we need -fPIC.
 	# Danny van Dyk <kugelfang@gentoo.org> 2004/05/25
-	use !amd64 && filter-flags -fPIC
+	use !amd64 && filter-flags -fPIC -fPIE
 
 	# fix invalid paths in .la files of plugins
 	elibtoolize
