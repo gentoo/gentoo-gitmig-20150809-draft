@@ -1,15 +1,17 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/tkmoo/tkmoo-0.3.32.ebuild,v 1.3 2003/12/07 00:43:50 port001 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/tkmoo/tkmoo-0.3.32.ebuild,v 1.4 2003/12/07 03:52:19 luke-jr Exp $
 
 inherit games eutils
 
 MY_PN=${PN/moo/MOO-light}
-S=${WORKDIR}/${P/moo/MOO-light}
+MY_P=${P/moo/MOO-light}
+S=${WORKDIR}/${MY_P}
 
-DESCRIPTION="MOO Client written in TK"
-SRC_URI="http://www.awns.com/tkMOO-light/Source/${P/moo/MOO-light}.tar.gz"
+DESCRIPTION="MOO Client written in Tcl/Tk"
+SRC_URI="http://www.awns.com/tkMOO-light/Source/${MY_P}.tar.gz"
 HOMEPAGE="http://www.awns.com/tkMOO-light/"
+IUSE=""
 
 LICENSE="tkMOO"
 SLOT="0"
@@ -39,5 +41,6 @@ src_install() {
 		install \
 		|| die
 	dodoc README INSTALL.unix dot.tkmoolightrc bugsmail.txt
+	ln -s tkMOO-lite ${D}/${GAMES_BINDIR}/tkmoo
 	prepgamesdirs
 }
