@@ -2,13 +2,13 @@
 Hash: SHA1
 
 MD5 45b13925a7936fe1f4dc7acf162d98a8 ChangeLog 2416
-MD5 852af17878a3f6c5894fc3c4e6d29e3d progsreiserfs-0.3.1_rc8.ebuild 1384
+MD5 bc2431466ab9d930f1a74ae6f357ff8c progsreiserfs-0.3.1_rc8.ebuild 1413
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 6ca18ca1667c7309da8db59bcb268d5c files/digest-progsreiserfs-0.3.1_rc8 75
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.14 (GNU/Linux)
 
-iD8DBQFB4e1jroRuSHgZdywRAgLkAJ0cA6paeux1MA0bz7RL8KVxFd5QIgCgiPnj
-TuAGdnDTydrwSCAqzGIWV0I=
-=18gh
+iD8DBQFB5CAeroRuSHgZdywRAgJWAJ9XGrRAbfGk9BnpxnT4uxQIUVMz1QCfTl9U
+e8WJrwWYVaNOke6GEg6ybZE=
+=kk5T
 -----END PGP SIGNATURE-----
