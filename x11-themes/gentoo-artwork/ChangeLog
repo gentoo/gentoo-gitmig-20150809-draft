@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/gentoo-artwork
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gentoo-artwork/ChangeLog,v 1.4 2003/09/12 14:00:31 tad Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gentoo-artwork/ChangeLog,v 1.5 2003/11/04 02:03:04 weeve Exp $
+
+  03 Nov 2003; Jason Wever <weeve@gentoo.org> gentoo-artwork-0.3.ebuild:
+  Marked stable on sparc, resolves 32671.
 
 *gentoo-artwork-0.2 (12 Sep 2003)
   12 Sep 2003; Troy Dack <tad@gentoo.org> gentoo-artwork-0.3.ebuild:
