@@ -1,3 +1,10 @@
+#When you add an entry to this file, add your name, the date, and an
+#explanation of why something is getting masked
+
+# We are masking out the 4.x series shadow until we remove dependencies
+# on libshadow from other ebuilds.  (drobbins, 19 Jan 2002)
+<=sys-apps/shadow-5
+
 # 19 Jan 2002 -- until at has a security fix, we need this:
 sys-apps/at
 
