@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/files/master.cf,v 1.1 2004/05/30 09:38:31 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/files/master.cf,v 1.2 2004/07/18 03:26:56 dragonheart Exp $
 #
 # Postfix master process configuration file.  Each line describes how
 # a mailer component program should be run. The fields that make up
