@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ardour-0.9_beta3.ebuild,v 1.2 2003/09/16 13:43:17 tigger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ardour-0.9_beta3.ebuild,v 1.3 2003/09/16 13:55:51 tigger Exp $
 
 IUSE="nls ardour-ksi"
 
@@ -43,7 +43,7 @@ src_compile() {
 	find -name configure |xargs sed -i "s/\\(-O6 -fomit-frame-pointer -ffast-math -fstrength-reduce -funroll-loops -fmove-all-movables\\)/\\1 ${myarch}/"
 	sed -i "s/-D_REENTRANT -O6 -mcpu=i686 -march=i686 -fomit-frame-pointer -ffast-math -fstrength-reduce -fmove-all-movables/-D_REENTRANT -O6 ${myarch} -fomit-frame-pointer -ffast-math -fstrength-reduce -fmove-all-movables/" libs/ardour/configure
 	use nls || myconf="${myconf} --disable-nls"
-	use ksi || myconf="${myconf} --disable-ksi"
+	use ardour-ksi || myconf="${myconf} --disable-ksi"
 	econf ${myconf} || die "configure failed"
 
 	emake || die "parallel make failed"
