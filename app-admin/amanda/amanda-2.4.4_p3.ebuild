@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/amanda/amanda-2.4.4_p3.ebuild,v 1.4 2004/12/10 22:12:21 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/amanda/amanda-2.4.4_p3.ebuild,v 1.5 2004/12/18 17:17:33 blubb Exp $
 
 inherit eutils
 
@@ -164,8 +164,6 @@ src_compile() {
 	myconf="${myconf} --with-buffered-dump"
 	# Debug
 	myconf="${myconf} `use_with debug debugging`"
-	# PIC
-	myconf="${myconf} `use_with pic`"
 	# Where to put our files
 	myconf="${myconf} --localstatedir=${AMANDA_USER_HOMEDIR}"
 
