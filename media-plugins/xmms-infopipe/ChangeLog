@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/xmms-infopipe
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-infopipe/ChangeLog,v 1.3 2004/02/23 11:00:46 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-infopipe/ChangeLog,v 1.4 2004/03/23 17:46:04 augustus Exp $
+
+  23 Mar 2004; <augustus@gentoo.org> xmms-infopipe-1.3.ebuild:
+  Added ~amd64 keyword.
 
   23 Feb 2004; Tavis Ormandy <taviso@gentoo.org> xmms-infopipe-1.3.ebuild:
   marking ~alpha
