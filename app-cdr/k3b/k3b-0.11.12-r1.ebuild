@@ -1,17 +1,16 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-0.11.12-r1.ebuild,v 1.5 2004/08/21 06:05:32 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-0.11.12-r1.ebuild,v 1.6 2004/09/14 13:29:32 carlo Exp $
 
 inherit kde
 
 DESCRIPTION="K3b, KDE CD Writing Software"
 HOMEPAGE="http://www.k3b.org/"
-SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2
-	monkey? ( mirror://sourceforge/${PN}/k3bmonkeyaudioplugin.tar.bz2 )"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 KEYWORDS="x86 ~ppc ~sparc amd64"
-IUSE="arts debug dvdr kde oggvorbis mad flac encode monkey"
+IUSE="arts debug dvdr kde oggvorbis mad flac encode"
 
 DEPEND="kde? ( >=kde-base/kdebase-3.1 )
 	>=media-sound/cdparanoia-3.9.8
@@ -83,12 +82,6 @@ src_compile() {
 		kde_src_compile
 	fi
 	S=${_S}
-
-	if use monkey ; then
-		cd ../k3bmonkeyaudioplugin
-		econf || die "econf failed"
-		emake || die "emake failed"
-	fi
 }
 
 src_install() {
@@ -110,11 +103,6 @@ src_install() {
 	rm -fR ${D}/usr/share/applnk/
 	dodir /usr/share/pixmaps
 	cp ${D}/usr/share/icons/crystalsvg/32x32/apps/k3b.png ${D}/usr/share/pixmaps/
-
-	if use monkey; then
-		cd ../k3bmonkeyaudioplugin
-		make DESTDIR=${D} install || die
-	fi
 }
 
 pkg_postinst() {
