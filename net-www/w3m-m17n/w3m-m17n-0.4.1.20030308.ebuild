@@ -1,12 +1,11 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/w3m-m17n/w3m-m17n-20030308.ebuild,v 1.3 2003/08/12 16:38:05 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/w3m-m17n/w3m-m17n-0.4.1.20030308.ebuild,v 1.1 2003/08/12 16:38:05 usata Exp $
 
 IUSE="gpm imlib ssl"
 
-W3M_PV="0.4.1"
-GC_PV="6.3alpha1"
-MY_P=w3m-${W3M_PV}-m17n-${PV}
+GC_PV="6.2alpha5"
+MY_P=w3m-${PV%.*}-stable-m17n-${PV##*.}
 
 DESCRIPTION="Multilingual text based WWW browser"
 SRC_URI="http://www2u.biglobe.ne.jp/~hsaka/w3m/patch/${MY_P}.tar.gz
@@ -15,7 +14,7 @@ HOMEPAGE="http://www2u.biglobe.ne.jp/~hsaka/w3m/"
 
 SLOT="0"
 LICENSE="w3m"
-KEYWORDS="~x86 ~alpha ~ppc ~sparc"
+KEYWORDS="x86 alpha"
 
 DEPEND=">=sys-libs/ncurses-5.2-r3
 	>=sys-libs/zlib-1.1.3-r2
