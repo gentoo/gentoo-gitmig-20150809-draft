@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mixxx/mixxx-1.1-r1.ebuild,v 1.3 2004/04/20 17:28:03 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mixxx/mixxx-1.1-r1.ebuild,v 1.4 2004/05/04 02:10:47 eradicator Exp $
 
 IUSE=""
 
@@ -15,7 +15,7 @@ SLOT="0"
 
 DEPEND="virtual/glibc
 	>=x11-libs/qt-3.1.0
-	media-sound/mad
+	media-sound/madplay
 	=dev-libs/fftw-2.1.5
 	media-libs/libogg
 	media-libs/libvorbis

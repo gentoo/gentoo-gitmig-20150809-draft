@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/sox-12.17.4-r1.ebuild,v 1.8 2004/04/12 00:43:47 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/sox-12.17.4-r1.ebuild,v 1.9 2004/05/04 02:07:47 eradicator Exp $
 
 DESCRIPTION="The swiss army knife of sound processing programs"
 HOMEPAGE="http://sox.sourceforge.net"
@@ -13,7 +13,7 @@ LICENSE="LGPL-2.1"
 
 DEPEND="virtual/glibc
 	oggvorbis? media-libs/libvorbis
-	mad? media-sound/mad"
+	mad? media-sound/madplay"
 
 src_compile () {
 	# 12.17.4 has mp3 encoding/decoding if you have madlibs and lame

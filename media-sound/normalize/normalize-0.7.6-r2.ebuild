@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/normalize/normalize-0.7.6-r2.ebuild,v 1.2 2004/04/28 16:49:07 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/normalize/normalize-0.7.6-r2.ebuild,v 1.3 2004/05/04 02:10:14 eradicator Exp $
 
 DESCRIPTION="Audio file volume normalizer"
 HOMEPAGE="http://www.cs.columbia.edu/~cvaill/normalize"
@@ -12,7 +12,7 @@ KEYWORDS="x86 ~ppc sparc amd64"
 IUSE="xmms mad audiofile"
 
 DEPEND="xmms? ( >=media-sound/xmms-1.2.7-r6 )
-	mad? ( >=media-sound/mad-0.14.2b )
+	mad? ( >=media-sound/madplay-0.14.2b )
 	audiofile? ( >=media-libs/audiofile-0.2.3-r1 )"
 
 src_compile() {

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qmbtagger/qmbtagger-0.06.ebuild,v 1.1 2004/04/29 08:26:03 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qmbtagger/qmbtagger-0.06.ebuild,v 1.2 2004/05/04 02:14:04 eradicator Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ LICENSE="GPL-2"
 
 DEPEND=">=x11-libs/qt-3.1.2
 	media-libs/musicbrainz
-	media-sound/mad
+	media-sound/madplay
 	media-libs/flac
 	media-libs/id3lib
 	oggvorbis? ( media-sound/vorbis-tools )"

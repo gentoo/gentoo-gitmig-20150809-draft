@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/normalize/normalize-0.7.4.ebuild,v 1.9 2004/03/01 05:37:15 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/normalize/normalize-0.7.4.ebuild,v 1.10 2004/05/04 02:10:14 eradicator Exp $
 
 IUSE="xmms"
 
@@ -14,7 +14,7 @@ KEYWORDS="x86 ppc"
 
 RDEPEND="xmms? ( >=media-sound/xmms-1.2.7-r6 )
 	>=media-libs/audiofile-0.2.3-r1
-	>=media-sound/mad-0.14.2b-r1"
+	>=media-sound/madplay-0.14.2b-r1"
 
 # NOTE: the "audiofile" and "mad" dependencies are NOT
 # actually *required*, they are optional, but there are no

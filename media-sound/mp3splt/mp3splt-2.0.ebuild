@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3splt/mp3splt-2.0.ebuild,v 1.2 2004/04/01 07:45:04 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3splt/mp3splt-2.0.ebuild,v 1.3 2004/05/04 02:13:30 eradicator Exp $
 
 IUSE=""
 
@@ -14,7 +14,7 @@ KEYWORDS="x86 ~ppc ~sparc ~alpha ~hppa ~mips ~amd64"
 
 DEPEND="media-libs/libogg
 	media-libs/libvorbis
-	media-sound/mad"
+	media-sound/madplay"
 
 src_compile() {
 	econf || die

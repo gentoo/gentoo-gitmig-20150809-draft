@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/glame/glame-1.0.1.ebuild,v 1.7 2004/03/27 03:14:00 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/glame/glame-1.0.1.ebuild,v 1.8 2004/05/04 02:09:45 eradicator Exp $
 
 IUSE="nls gnome oggvorbis"
 
@@ -17,7 +17,7 @@ RDEPEND=">=dev-util/guile-1.4-r3
 	dev-libs/libxml2
 	>=media-sound/esound-0.2
 	media-libs/audiofile
-	media-sound/mad
+	media-sound/madplay
 	oggvorbis? ( media-sound/vorbis-tools )
 	gnome? ( <gnome-base/libglade-2 gnome-base/gnome-libs )"
 
