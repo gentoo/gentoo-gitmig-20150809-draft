@@ -1,12 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-mail/balsa/balsa-2.0.5.ebuild,v 1.3 2003/02/13 14:23:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/balsa/balsa-2.0.5.ebuild,v 1.4 2003/02/15 04:23:04 seo Exp $
 
 inherit gnome2 eutils
 
 S=${WORKDIR}/${P}
 
-IUSE="spell nls ssl gtkhtml perl ldap"
+IUSE="nls ssl gtkhtml perl ldap"
 DESCRIPTION="Email client for GNOME"
 SRC_URI="http://balsa.gnome.org/${P}.tar.bz2"
 HOMEPAGE="http://balsa.gnome.org"
@@ -24,7 +24,7 @@ RDEPEND="net-mail/mailbase
 	>=gnome-base/gnome-vfs-2
 	=gnome-base/libgnomeprint-1*
 	=gnome-base/libgnomeprintui-1*
-	spell? ( >=app-text/aspell-0.50 )
+	>=app-text/aspell-0.50
 	nls? ( sys-devel/gettext )
 	ssl? ( dev-libs/openssl )
 	perl? ( >=dev-libs/libpcre-3.4 )
@@ -49,10 +49,6 @@ src_compile() {
 	use perl \
 		&& myconf="${myconf} --enable-pcre" \
 		|| myconf="${myconf} --disable-pcre"
-
-	use spell \
-		&& myconf="${myconf} --with-aspell" \
-		|| myconf="${myconf} --without-aspell --without-spell"
 
 	libmutt/configure \
 		--prefix=/usr \
