@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/amanda/amanda-2.4.4.ebuild,v 1.8 2003/11/06 20:26:09 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/amanda/amanda-2.4.4.ebuild,v 1.9 2003/11/14 11:38:41 seemant Exp $
 
 inherit eutils
 DESCRIPTION="The Advanced Maryland Automatic Network Disk Archiver"
@@ -16,7 +16,7 @@ DEPEND="sys-libs/readline
 		net-mail/mailx
 		media-gfx/gnuplot
 		sys-apps/gawk
-		sys-apps/tar
+		app-arch/tar
 		sys-devel/autoconf
 		sys-devel/automake
 		dev-lang/perl

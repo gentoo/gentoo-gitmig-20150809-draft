@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/amanda/amanda-2.4.4-r2.ebuild,v 1.1 2003/11/13 15:51:57 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/amanda/amanda-2.4.4-r2.ebuild,v 1.2 2003/11/14 11:38:41 seemant Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ DEPEND="sys-libs/readline
 		app-arch/mt-st
 		media-gfx/gnuplot
 		sys-apps/gawk
-		sys-apps/tar
+		app-arch/tar
 		sys-devel/autoconf
 		sys-devel/automake
 		dev-lang/perl
