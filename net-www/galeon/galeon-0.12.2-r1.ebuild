@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-www/galeon/galeon-0.12.2-r1.ebuild,v 1.2 2001/10/07 09:04:01 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/galeon/galeon-0.12.2-r1.ebuild,v 1.3 2001/10/22 10:03:15 hallski Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -15,7 +15,7 @@ DEPEND=">=net-www/mozilla-0.9.4-r2
 	>=dev-libs/libxml-1.8.15
 	>=gnome-base/gnome-vfs-1.0.2-r1
 	>=gnome-base/gconf-1.0.4-r2
-        >=dev-util/xml-i18n-tools-0.8.4
+        >=dev-util/intltool-0.11
 	>=gnome-base/oaf-0.6.6-r1
 	nls? ( sys-devel/gettext )"
 
