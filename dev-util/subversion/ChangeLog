@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/subversion
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/ChangeLog,v 1.7 2003/03/15 14:54:54 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/ChangeLog,v 1.8 2003/04/25 11:36:33 pauldv Exp $
+
+*subversion-0.20.1 (25 Apr 2003)
+
+  25 Apr 2003; <pauldv@gentoo.org> subversion-0.20.1.ebuild:
+  Added || die to the make install parts
 
   15 Mar 2003; Martin Schlemmer <azarah@gentoo.org> subversion-0.10_pre1.ebuild :
   Fix m4 depend.
