@@ -1,6 +1,9 @@
 # ChangeLog for app-text/agrep
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/agrep/ChangeLog,v 1.9 2004/07/01 19:28:48 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/agrep/ChangeLog,v 1.10 2004/07/04 19:54:23 ciaranm Exp $
+
+  04 Jul 2004; Ciaran McCreesh <ciaranm@gentoo.org> agrep-2.04.ebuild:
+  Stable on mips
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> agrep-2.04.ebuild:
   virtual/glibc -> virtual/libc
