@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.49 2003/09/05 15:42:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.50 2003/09/05 16:42:45 vapier Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -840,10 +840,19 @@ unpack_makeself() {
 	local src=$1
 	local skip=$2
 
-	[ -z "${src}" ] && src=${A}
-	[ -e ./${src} ] \
-		&& src=${PWD}/${src} \
-		|| src=${DISTDIR}/${src}
+	if [ -z "${src}" ] ; then
+		src="${DISTDIR}/${A}"
+	else
+		if [ -e "${DISTDIR}/${src}" ] ; then
+			src="${DISTDIR}/${src}"
+		elif [ -e "${PWD}/${src}" ] ; then
+			src="${PWD}/${src}"
+		elif [ -e "${src}" ] ; then
+			src="${src}"
+		fi
+	fi
+	[ ! -e "${src}" ] && die "Could not find requested makeself archive ${src}"
+
 	local shrtsrc=`basename ${src}`
 	echo ">>> Unpacking ${shrtsrc} to ${PWD}"
 	if [ -z "${skip}" ] ; then
