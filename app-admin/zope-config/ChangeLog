@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/zope-config
 # Copyright 2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/zope-config/ChangeLog,v 1.5 2003/04/24 17:08:57 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/zope-config/ChangeLog,v 1.6 2003/11/16 01:01:58 robbat2 Exp $
+
+*zope-config-0.2 (15 Nov 2003)
+
+  15 Nov 2003; Robin H. Johnson <robbat2@gentoo.org> metadata.xml,
+  zope-config-0.2.ebuild, files/0.2/zope-config, files/0.2/zope-config.conf:
+  new 0.2 version with lots of changes, partially thanks to solutions2u.net gmbd
 
 *zope-config-0.1-r1 (25 Feb 2003)
 
