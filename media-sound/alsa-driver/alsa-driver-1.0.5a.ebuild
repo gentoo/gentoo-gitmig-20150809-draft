@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.5a.ebuild,v 1.2 2004/07/08 08:11:34 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.5a.ebuild,v 1.3 2004/07/19 19:14:33 eradicator Exp $
 
 inherit kernel-mod flag-o-matic eutils
 
@@ -19,7 +19,8 @@ LICENSE="GPL-2 LGPL-2.1"
 
 IUSE="oss"
 
-RDEPEND="virtual/modutils"
+RDEPEND="virtual/modutils
+	 ~media-sound/alsa-headers-${PV}"
 
 DEPEND="${RDEPEND}
 	virtual/linux-sources
@@ -42,9 +43,7 @@ src_unpack() {
 	cd ${S}
 	epatch ${FILESDIR}/${PN}-1.0.5-devfix.patch
 
-	# Uncomment to include the cs46xx patch.
-	# Sorry no revision bump because portage 2.0.50 does not allow 1.0.5a-r1 as a version string.  1.0.6 should be out soon...
-	#epatch ${FILESDIR}/${P}-cs46xx-passthrough.patch
+	epatch ${FILESDIR}/${P}-cs46xx-passthrough.patch
 
 	if kernel-mod_is_2_6_kernel || kernel-mod_is_2_5_kernel; then
 		FULL_KERNEL_PATH="${ROOT}/usr/src/${KV_DIR}"
@@ -93,6 +92,9 @@ src_compile() {
 src_install() {
 	dodir /usr/include/sound
 	make DESTDIR=${D} install || die
+
+	# Provided by alsa-headers now
+	rm -rf ${D}/usr/include/sound
 
 	# We have our own scripts in alsa-utils
 	test -e ${D}/etc/init.d/alsasound && rm ${D}/etc/init.d/alsasound
