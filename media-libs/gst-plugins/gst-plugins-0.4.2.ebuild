@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins/gst-plugins-0.4.2.ebuild,v 1.5 2002/12/18 13:12:53 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins/gst-plugins-0.4.2.ebuild,v 1.6 2002/12/24 00:25:32 seemant Exp $
 
 inherit libtool gnome2 flag-o-matic
 
@@ -106,7 +106,7 @@ src_compile() {
 	econf ${myconf} \
 		|| die "./configure failed"
 		
-	emake || die
+	emake || make || die
 }
 
 src_install () {
