@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/blender
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.40 2004/08/08 15:20:57 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.41 2004/08/08 23:39:45 lu_zero Exp $
+
+  09 Aug 2004; Luca Barbato <lu_zero@gentoo.org> blender-2.34.ebuild:
+  Forcing blender-game, otherwise blender won't build
 
 *blender-2.34 (07 Aug 2004)
 

@@ -1,11 +1,11 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.34.ebuild,v 1.1 2004/08/08 15:20:57 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.34.ebuild,v 1.2 2004/08/08 23:39:45 lu_zero Exp $
 
 inherit flag-o-matic eutils
 
 #IUSE="sdl jpeg png mozilla truetype static fmod"
-IUSE="blender-game" # blender-plugin"
+IUSE=""  #blender-game" # blender-plugin"
 
 S=${WORKDIR}/${P}
 DESCRIPTION="3D Creation/Animation/Publishing System"
@@ -66,15 +66,15 @@ src_compile() {
 	#use static && myconf="${myconf} --enable-blenderstatic"
 
 	# Build the game engine
-	use blender-game && \
-	( einfo "enabling game engine"
+#	use blender-game && \
+	einfo "enabling game engine"
 	sed -i -e "s:BUILD_GAMEENGINE = 'false':BUILD_GAMEENGINE = 'true':" \
-	config.opts )
+	config.opts
 
-	use blender-game || \
-	( einfo "disabling game engine"
-	sed -i -e "s:BUILD_GAMEENGINE = 'true':BUILD_GAMEENGINE = 'false':" \
-	${S}/config.opts )
+#	use blender-game || \
+#	( einfo "disabling game engine"
+#	sed -i -e "s:BUILD_GAMEENGINE = 'true':BUILD_GAMEENGINE = 'false':" \
+#	${S}/config.opts )
 
 	# Build the plugin
 #	use blender-plugin && \
@@ -97,7 +97,6 @@ src_compile() {
 src_install() {
 	exeinto /usr/bin/
 	doexe ${S}/blender
-	use blender-game && \
 	doexe ${S}/blenderplayer
 #	einstall || die
 
