@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/virtualx.eclass,v 1.16 2004/06/25 00:39:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/virtualx.eclass,v 1.17 2004/08/22 17:48:59 swegener Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -41,7 +41,13 @@ virtualmake() {
 		#
 		# Azarah - 5 May 2002
 		#
-		/usr/X11R6/bin/Xvfb :${XDISPLAY} -screen 0 800x600x32 &>/dev/null &
+		# Changed the mode from 800x600x32 to 800x600x24 because the mfb
+		# support has been dropped in Xvfb in the xorg-x11 pre-releases.
+		# For now only depths up to 24-bit are supported.
+		#
+		# Sven Wegener <swegener@gentoo.org> - 22 Aug 2004
+		#
+		/usr/X11R6/bin/Xvfb :${XDISPLAY} -screen 0 800x600x24 &>/dev/null &
 		sleep 2
 		
 		local start=${XDISPLAY}
@@ -53,9 +59,9 @@ virtualmake() {
 				eerror ""
 				eerror "Unable to start Xvfb."
 				eerror ""
-				eerror "'/usr/X11R6/bin/Xvfb :${XDISPLAY} -screen 0 800x600x32' returns:"
+				eerror "'/usr/X11R6/bin/Xvfb :${XDISPLAY} -screen 0 800x600x24' returns:"
 				eerror ""
-				/usr/X11R6/bin/Xvfb :${XDISPLAY} -screen 0 800x600x32
+				/usr/X11R6/bin/Xvfb :${XDISPLAY} -screen 0 800x600x24
 				eerror ""
 				eerror "If possible, correct the above error and try your emerge again."
 				eerror ""
@@ -63,7 +69,7 @@ virtualmake() {
 			fi
 
 			XDISPLAY=$((${XDISPLAY}+1))
-			/usr/X11R6/bin/Xvfb :${XDISPLAY} -screen 0 800x600x32 &>/dev/null &
+			/usr/X11R6/bin/Xvfb :${XDISPLAY} -screen 0 800x600x24 &>/dev/null &
 			sleep 2
 		done
 
