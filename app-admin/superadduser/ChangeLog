@@ -1,10 +1,13 @@
 # ChangeLog for app-admin/superadduser
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-admin/superadduser/ChangeLog,v 1.8 2002/12/13 10:55:54 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/superadduser/ChangeLog,v 1.9 2003/02/10 21:58:20 latexer Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *superadduser-1.0-r2 (18 Aug 2002)
+
+  10 Feb 2003; Peter Johanson <latexer@gentoo.org> superadduser-1.0-r2.ebuild :
+  Added ~alpha to KEYWORDS.
 
   04 Sep 2002; Karl Trygve Kalleberg <karltk@gentoo.org> superadduser-1.0-r2.ebuild files/digest-superadduser-1.0-r2:
   Fixed a bug when chowning home directories. Fixes #7464.
