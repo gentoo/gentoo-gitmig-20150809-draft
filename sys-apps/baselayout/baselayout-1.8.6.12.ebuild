@@ -1,16 +1,14 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.6.10-r1.ebuild,v 1.11 2003/11/11 22:33:31 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.6.12.ebuild,v 1.1 2003/11/11 22:33:31 azarah Exp $
 
 # This ebuild needs to be merged "live".  You can't simply make a package
 # of it and merge it later.
 
-# with hardened-gcc-2.4.2 we do not need the -lc and libs any more for fstack-protector when building static
-
 IUSE="bootstrap build static"
 
-SV="1.4.3.10"
-SVREV="p1"
+SV="1.4.3.12"
+SVREV=
 # SysvInit version
 SVIV="2.84"
 
@@ -24,7 +22,7 @@ HOMEPAGE="http://www.gentoo.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 amd64 ppc sparc alpha mips arm hppa ia64"
+KEYWORDS="~x86 ~amd64 ~ppc ~sparc ~alpha ~mips ~arm ~hppa ~ia64"
 
 DEPEND="virtual/os-headers
 	>=sys-apps/portage-2.0.23"
@@ -46,8 +44,6 @@ fi
 src_unpack() {
 
 	unpack ${A}
-
-	use static && export LDFLAGS="-static"
 
 	# Fix CFLAGS for sysvinit stuff
 	cd ${S2}
@@ -99,6 +95,8 @@ src_unpack() {
 
 src_compile() {
 
+	use static && export LDFLAGS="-static"
+
 	echo "${ROOT}" > ${T}/ROOT
 
 	cd ${S}/src
@@ -113,26 +111,6 @@ src_compile() {
 		einfo "Building sysvinit..."
 		emake CC="${CC:-gcc}" LD="${CC:-gcc}" \
 			LDFLAGS="${LDFLAGS}" || die "problem compiling sysvinit"
-
-		if [ -z "`use bootstrap`" ]
-		then
-			# We let gawk now install filefuncs.so, and that is as a symlink to a
-			# versioned .so ...
-			if [ -f /usr/include/awk/awk.h -a ! -L ${ROOT}/lib/rcscripts/filefuncs.so ]
-			then
-				# Build gawk module
-#				cd ${S}/src/filefuncs
-#				einfo "Building awk module..."
-#				make CC="${CC:-gcc}" LD="${CC:-gcc}" || {
-#					eerror "Failed to build gawk module.  Make sure you have"
-#					eerror "sys-apps/gawk-3.1.1-r1 or later installed"
-#					die "problem compiling gawk module"
-#				}
-
-				eerror "Please install sys-apps/gawk-3.1.1-r2 or later!"
-				die "gawk too old"
-			fi
-		fi
 	fi
 }
 
@@ -171,13 +149,50 @@ keepdir_mount() {
 			[ "${x}" = "${y}" ] && doit=1
 		done
 
-		if [ "${doit}" -eq 0 ]
+		if [ "${doit}" -ne 1 ]
 		then
 			keepdir "${y}"
 		fi
 	done
 
 	return 0
+}
+
+create_dev_nodes() {
+	export PATH="${D}/sbin:${PATH}"
+
+	case ${ARCH} in
+		x86)
+			einfo "Using generic-i386 to make device nodes..."
+			${D}/sbin/MAKEDEV generic-i386
+			;;
+		ppc)
+			einfo "Using generic-powerpc to make device nodes..."
+			${D}/sbin/MAKEDEV generic-powerpc
+			;;
+		sparc)
+			einfo "Using generic-sparc to make device nodes..."
+			${D}/sbin/MAKEDEV generic-sparc
+			;;
+		mips)
+			einfo "Using generic-mips to make device nodes..."
+			${D}/sbin/MAKEDEV generic-mips
+			;;
+		arm)
+			einfo "Using generic-arm to make device nodes..."
+			${D}/sbin/MAKEDEV generic-arm
+			;;
+		hppa)
+			einfo "Using generic-hppa to make device nodes..."
+			${D}/sbin/MAKEDEV generic-hppa
+			;;
+		*)
+			einfo "Using generic to make device nodes..."
+			${D}/sbin/MAKEDEV generic
+			;;
+	esac
+
+	${D}/sbin/MAKEDEV sg scd rtc hde hdf hdg hdh input audio video
 }
 
 src_install() {
@@ -272,27 +287,28 @@ src_install() {
 		[ -f ${foo} ] && doins ${foo}
 	done
 	chmod go-rwx ${D}/etc/shadow
-	# We do not want to overwrite the user's settings
+	# We do not want to overwrite the user's settings during bootstrap ...
 	[ -f "${ROOT}/etc/hosts" ] && rm -f ${D}/etc/hosts
 
+	keepdir /mnt
 	keepdir_mount /mnt/floppy /mnt/cdrom
 	chmod go-rwx ${D}/mnt/floppy ${D}/mnt/cdrom
 
 	into /
 	dosbin ${S}/sbin/MAKEDEV
 	dosym ../../sbin/MAKEDEV /usr/sbin/MAKEDEV
-	keepdir /lib/dev-state
+	keepdir /lib/dev-state /lib/udev-state
 	if [ "${altmerge}" -eq "1" ]
 	then
 		# rootfs and devfs
-		dosym ../../sbin/MAKEDEV /lib/dev-state/MAKEDEV
+		#dosym ../../sbin/MAKEDEV /lib/dev-state/MAKEDEV
 		# This is not needed anymore...
 		#keepdir /lib/dev-state/pts /lib/dev-state/shm
+		echo >/dev/null
 	else
 		# Normal
-		keepdir /dev
-		keepdir_mount /dev/pts /dev/shm
-		dosym ../sbin/MAKEDEV /dev/MAKEDEV
+		keepdir_mount /dev /dev/pts /dev/shm
+		#dosym ../sbin/MAKEDEV /dev/MAKEDEV
 	fi
 
 	cd ${S}/sbin
@@ -336,12 +352,6 @@ src_install() {
 		do
 			[ -f ${foo} ] && doins ${foo}
 		done
-
-#		if [ ! -L ${ROOT}/lib/rcscripts/filefuncs.so ]
-#		then
-#			exeinto /lib/rcscripts
-#			doexe ${S}/src/filefuncs/filefuncs.so
-#		fi
 	fi
 
 	# Compat symlinks (some stuff have hardcoded paths)
@@ -422,6 +432,21 @@ src_install() {
 
 	keepdir ${svcdir} >/dev/null 2>&1
 
+	if [ -n "$(use build)" -o -n "$(use bootstrap)" -o \
+	     ! -f "${ROOT}/lib/udev-state/devices.tar.bz2" ]
+	then
+		# Ok, create temp device nodes
+		mkdir -p "${T}/udev-$$"
+		cd "${T}/udev-$$"
+		echo
+		einfo "Making device nodes (this could take a minute or so...)"
+		create_dev_nodes
+		# Now create tarball that can also be used for udev
+		tar -jclpf "${T}/devices-$$.tar.bz2" *
+		insinto /lib/udev-state
+		newins "${T}/devices-$$.tar.bz2" devices.tar.bz2
+	fi
+
 	# Skip this if we are merging to ROOT
 	[ "${ROOT}" = "/" ] && return 0
 
@@ -492,63 +517,42 @@ pkg_preinst() {
 			cp -af "${ROOT}/etc/init.d" "${ROOT}/etc/init_d.old"
 		fi
 	fi
+
+	if [ -f "${ROOT}/lib/udev-state/devices.tar.bz2" -a -e "${ROOT}/dev/.udev" ]
+	then
+		mv -f "${ROOT}/lib/udev-state/devices.tar.bz2" \
+			"${ROOT}/lib/udev-state/devices.tar.bz2.old"
+	fi
 }
 
 pkg_postinst() {
+	if [ -f "${ROOT}/lib/udev-state/devices.tar.bz2.old" ]
+	then
+		# Rather use our current device tarball ...
+		mv -f "${ROOT}/lib/udev-state/devices.tar.bz2.old" \
+			"${ROOT}/lib/udev-state/devices.tar.bz2"
+	else
+		# Make sure our tarball do not get removed ...
+		touch -m "${ROOT}/lib/udev-state/devices.tar.bz2"
+	fi
 
-	echo
-	# Doing device node creation in pkg_postinst() now so they aren't recorded
-	# in CONTENTS.  Latest CVS-only version of Portage doesn't record device
-	# nodes in CONTENTS at all.
 	defaltmerge
 	# We dont want to create devices if this is not a bootstrap and devfs
 	# is used, as this was the cause for all the devfs problems we had
-	if [ "${altmerge}" -eq "0" -a ! -e ${ROOT}/dev/.devfsd ]
+	if [ "${altmerge}" -eq "0" -a ! -e "${ROOT}/dev/.udev" -a \
+	     -f "${ROOT}/lib/udev-state/devices.tar.bz2" ]
 	then
-		cd ${ROOT}/dev
-		# These devices are also needed by many people and should be included
-		einfo "Making device nodes (this could take a minute or so...)"
-
-		case ${ARCH} in
-			x86)
-				einfo "Using generic-i386 to make device nodes..."
-				${ROOT}/sbin/MAKEDEV generic-i386
-				;;
-			ppc)
-				einfo "Using generic-powerpc to make device nodes..."
-				${ROOT}/sbin/MAKEDEV generic-powerpc
-				;;
-			sparc)
-				einfo "Using generic-sparc to make device nodes..."
-				${ROOT}/sbin/MAKEDEV generic-sparc
-				;;
-			mips)
-				einfo "Using generic-mips to make device nodes..."
-				${ROOT}/sbin/MAKEDEV generic-mips
-				;;
-			arm)
-				einfo "Using generic-arm to make device nodes..."
-				${ROOT}/sbin/MAKEDEV generic-arm
-				;;
-			hppa)
-				einfo "Using generic-hppa to make device nodes..."
-				${ROOT}/sbin/MAKEDEV generic-hppa
-				;;
-			*)
-				einfo "Using generic to make device nodes..."
-				${ROOT}/sbin/MAKEDEV generic
-				;;
-		esac
-
-		${ROOT}/sbin/MAKEDEV sg
-		${ROOT}/sbin/MAKEDEV scd
-		${ROOT}/sbin/MAKEDEV rtc
-		${ROOT}/sbin/MAKEDEV audio
-		${ROOT}/sbin/MAKEDEV hde
-		${ROOT}/sbin/MAKEDEV hdf
-		${ROOT}/sbin/MAKEDEV hdg
-		${ROOT}/sbin/MAKEDEV hdh
+		if [ -z "$(use selinux)" -a \
+		     -z "$(use build)" -a -z "$(use bootstrap)" ]
+		then
+			einfo "Populating /dev with device nodes..."
+			tar -jxpf "${ROOT}/lib/udev-state/devices.tar.bz2" \
+				-C "${ROOT}/dev"
+		fi
 	fi
+
+	echo
+
 	# We create the /boot directory here so that /boot doesn't get deleted when a previous
 	# baselayout is unmerged with /boot unmounted.
 	install -d ${ROOT}/boot
@@ -556,6 +560,10 @@ pkg_postinst() {
 	if [ ! -L ${ROOT}/boot/boot ]
 	then
 		ln -snf . ${ROOT}/boot/boot
+	fi
+	if [ -d "${ROOT}/dev" ]
+	then
+		ln -snf ../sbin/MAKEDEV ${ROOT}/dev/MAKEDEV
 	fi
 	# We create this here so we don't overwrite an existing /etc/hosts during bootstrap
 	if [ ! -e ${ROOT}/etc/hosts ]
@@ -582,7 +590,7 @@ EOF
 		fi
 	fi
 	# We should only install empty files if these files don't already exist.
-	local x=""
+	local x=
 	for x in log/lastlog run/utmp log/wtmp
 	do
 		[ -e ${ROOT}/var/${x} ] || touch ${ROOT}/var/${x}
@@ -665,6 +673,7 @@ EOF
 	# not to quit properly on reboot, and causes a fsck of / on next reboot.
 	if [ "${ROOT}" = "/" -a -z "`use build`" -a -z "`use bootstrap`" ]
 	then
+		echo
 		# Do not return an error if this fails
 		/sbin/init U &>/dev/null || :
 
@@ -672,11 +681,20 @@ EOF
 
 		# We need to regenerate /etc/modules.conf, else it will fail at next
 		# boot.
+		einfo "Updating module dependencies..."
 		/sbin/modules-update force &> /dev/null
 
-	elif [ -f ${ROOT}/etc/modules.conf ]
+	elif [ -f "${ROOT}/etc/modules.conf" ]
 	then
 		rm -f ${ROOT}/etc/modules.conf
+	fi
+
+	# Enable shadow groups (we need ROOT=/ here, as grpconv only
+	# operate on / ...).
+	if [ "${ROOT}" = "/" -a \
+	     ! -f /etc/gshadow -a -x /usr/sbin/grpconv ]
+	then
+		/usr/sbin/grpconv
 	fi
 
 	# Simple Release version for testing of features that *should* be
@@ -701,16 +719,11 @@ EOF
 		echo
 
 		rm -f "${ROOT}/etc/env.d/99foo"
+
+		echo -ne "\a" ; sleep 1 ; echo -ne "\a" ; sleep 1 ; echo -ne "\a" ; sleep 1
+		echo -ne "\a" ; sleep 1 ; echo -ne "\a" ; sleep 1 ; echo -ne "\a" ; sleep 1
+		sleep 8
 	fi
-
-	echo
-	einfo "Please note that /sbin/update-modules moved to /sbin/modules-update"
-	einfo "for consistency reasons."
-	echo
-
-	echo -ne "\a" ; sleep 1 ; echo -ne "\a" ; sleep 1 ; echo -ne "\a" ; sleep 1
-	echo -ne "\a" ; sleep 1 ; echo -ne "\a" ; sleep 1 ; echo -ne "\a" ; sleep 1
-	sleep 8
 }
 
 pkg_postrm() {
