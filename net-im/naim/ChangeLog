@@ -1,6 +1,9 @@
 # ChangeLog for net-im/naim
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/naim/ChangeLog,v 1.36 2004/01/24 17:39:52 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/naim/ChangeLog,v 1.37 2004/03/09 23:31:27 agriffis Exp $
+
+  09 Mar 2004; <agriffis@gentoo.org> naim-0.11.6.4.ebuild:
+  stable on alpha and ia64
 
   24 Jan 2004; Nick Hadaway <raker@gentoo.org> naim-0.11.6.4.ebuild:
   Marked stabled on x86.  Gentoo gets a gold star! :)
