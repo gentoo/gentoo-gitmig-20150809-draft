@@ -9,5 +9,9 @@
 		La categoría www-misc contiene software misceláneo relacionado con la
 		world wide web (WWW).
 	</longdescription>
+	<longdescription lang="de">
+		Die Kategorie www-misc enthält verschiedene Programme für das World
+		Wide Web (z.B. htdig, squidanalyser)
+	</longdescription>
 </catmetadata>
 
