@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-demo/ut2004-demo-3120-r3.ebuild,v 1.1 2004/03/03 16:40:07 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-demo/ut2004-demo-3120-r3.ebuild,v 1.2 2004/03/14 00:30:33 wolf31o2 Exp $
 
 inherit games eutils
 
@@ -32,7 +32,7 @@ src_unpack() {
 	unpack_makeself ${RNAME}
 	rm ${RNAME}
 	# We unpack this one again so the right files are in the right places
-	unpack ${DISTDIR}/please_test_with_ut2004-2.tar.bz2
+	unpack please_test_with_ut2004-2.tar.bz2
 }
 
 src_install() {
