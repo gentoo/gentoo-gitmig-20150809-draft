@@ -1,16 +1,19 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 5371f9df6e973106e58e4cbc03959161 ChangeLog 75661
-MD5 c61398cd7a69bfd81d4708a134e84d29 gcc-2.95.3-r8.ebuild 8358
-MD5 7f9b754a51cab0f81a6372216f30e627 gcc-3.2.3-r4.ebuild 19705
-MD5 ab00b3f80328847eeb4ba8daa2e790a8 gcc-3.3.2-r2.ebuild 17834
-MD5 fc4d81ee4878245213a530ba55ca97b5 gcc-3.3.2-r5.ebuild 21158
-MD5 478fe83382de9735ede634cffa8bb798 gcc-3.3.2-r7.ebuild 21563
-MD5 0512bd1cfdbc2ff49d2bb43ed49e744a gcc-3.3.2.ebuild 16668
-MD5 458c46eb5a0f457e5e4f2e6bda089d27 gcc-3.3.3-r3.ebuild 23378
-MD5 4426b7a203c03bbebfd3ba411502aba4 gcc-3.3.3-r6.ebuild 24768
-MD5 07ec34c762eefc190df1bc777c59a4ad gcc-3.3.4-r1.ebuild 24659
-MD5 523f6433e3ff2f8ff9619f1b36dcbf7a gcc-3.3.4-r2.ebuild 24463
+MD5 40f450ed72bcc7f9118f2672005c614b gcc-2.95.3-r8.ebuild 8337
+MD5 fca75b940d8cf8b905941bb946b41948 gcc-3.2.3-r4.ebuild 19684
+MD5 9a179b9dedbc66ea4c6b9626a7d98cc0 gcc-3.3.2-r2.ebuild 17813
+MD5 a7c30a0cb5cb93b578391c3c09715794 gcc-3.3.2-r5.ebuild 21137
+MD5 32427e27fd51e370ab660bb081192a47 gcc-3.3.2-r7.ebuild 21542
+MD5 c460647d0a50c44501593aa25f2d9b3c gcc-3.3.2.ebuild 16647
+MD5 877fb8710dc5f028eaa8fb758584d357 gcc-3.3.3-r3.ebuild 23357
+MD5 f6ada092ddd839a6f5fbeb869e2b5840 gcc-3.3.3-r6.ebuild 24747
+MD5 059372688567373b356e45980f8d24d9 gcc-3.3.4-r1.ebuild 24638
+MD5 55b350f5c3f53c2aaf6b5907cdb7a55c gcc-3.3.4-r2.ebuild 24442
 MD5 cc2341f3a38875b9cd63c500dba7467e gcc-3.3.5-r1.ebuild 12280
-MD5 565ed94c99f2013271ada4c30e6ea954 gcc-3.4.1-r3.ebuild 31243
+MD5 db2b0922e4fc141e976c6b1712c26fd2 gcc-3.4.1-r3.ebuild 31223
 MD5 9241e3b0a55a6e6bde420c99a3d7ca38 gcc-3.4.2-r2.ebuild 13482
 MD5 a6994f9f4d6a6c212dabee49d0bed80c gcc-3.4.3-r1.ebuild 14416
 MD5 605d72bfc5aca7748ab63170c2707392 gcc-3.4.3.ebuild 13250
@@ -107,3 +110,10 @@ MD5 c919e0a2cd429d0121b6133c1b4e41a6 files/3.4.0/gcc34-ice-hack.patch 8605
 MD5 bae93db3186aa0fc25d659b7799ef499 files/3.4.0/gcc34-ppc64-m32-m64-multilib-only.patch 825
 MD5 17b3190d64e34ed7709d022b326d08ae files/3.4.0/gcc-3.4.0-cc1-no-stack-protector.patch 563
 MD5 4edccdf0b4f6dbbc9f7bc9370c255e0c files/3.4.0/gcc34-reiser4-fix.patch 587
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBtPX9roRuSHgZdywRAgSiAJ4pouQvY9SGPytk+YwrTlHPLVu0UgCfY0rr
+VqdRMabvDdbswS8GOFKe6do=
+=elkx
+-----END PGP SIGNATURE-----

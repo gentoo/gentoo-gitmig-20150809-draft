@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-2.95.3-r8.ebuild,v 1.34 2004/12/05 20:37:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-2.95.3-r8.ebuild,v 1.35 2004/12/07 00:14:39 vapier Exp $
 
 inherit eutils flag-o-matic gcc versionator
 
@@ -49,7 +49,7 @@ IUSE="static nls bootstrap java build"
 # are not cross compiling, than we want SLOT to only contain
 # $PV, as people upgrading to new gcc layout will not have
 # their old gcc unmerged ...
-SLOT="${CTARGET:-${CHOST}}-${MY_PV}"
+SLOT="${MY_PV}"
 
 DEPEND="virtual/libc
 	>=sys-devel/gcc-config-1.2

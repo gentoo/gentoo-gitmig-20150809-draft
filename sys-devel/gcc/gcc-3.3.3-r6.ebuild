@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.3-r6.ebuild,v 1.22 2004/12/05 20:37:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.3-r6.ebuild,v 1.23 2004/12/07 00:14:39 vapier Exp $
 
 inherit eutils flag-o-matic libtool gnuconfig versionator
 
@@ -104,7 +104,7 @@ IUSE="static nls bootstrap java build X multilib gcj fortran objc pic hardened u
 # are not cross compiling, than we want SLOT to only contain
 # $PV, as people upgrading to new gcc layout will not have
 # their old gcc unmerged ...
-SLOT="${CTARGET:-${CHOST}}-3.3"
+SLOT="3.3"
 
 # We need the later binutils for support of the new cleanup attribute.
 # 'make check' fails for about 10 tests (if I remember correctly) less
