@@ -2,11 +2,13 @@
 # System-wide defaults for the gcc 3.2.3 Portage system
 
 # <zhen@gentoo.org> these are left here for archival purposes
-#	please note that they are NOT used in our profile.
+#	please note that they are NOT used in our profile as they get overridden
+#	a few lines down.
+
 USE="x86 oss apm arts avi berkdb crypt cups encode foomaticdb gdbm gif gpm gtk imlib
-java jpeg kde gnome libg++ libwww mad mikmod mmx motif mpeg ncurses nls oggvorbis
-opengl pam pdflib png python qt quicktime readline sdl slang spell ssl
-svga tcpd truetype X xml2 xmms xv zlib"
+	java jpeg kde gnome libg++ libwww mad mikmod mmx motif mpeg ncurses nls oggvorbis
+	opengl pam pdflib png python qt quicktime readline sdl slang spell ssl
+	svga tcpd truetype X xml2 xmms xv zlib"
 
 # <zhen@gentoo.org> defaults for a hardened system
 USE="x86 berkdb crypt readline nls ssl tcpd zlib"
@@ -14,3 +16,24 @@ USE="x86 berkdb crypt readline nls ssl tcpd zlib"
 ARCH="x86"
 COMPILER="gcc3"
 ACCEPT_KEYWORDS="x86"
+
+# 
+# FEATURES are settings that affect the functionality of portage. Most of
+#     these settings are for developer use, but some are available to non-
+#     developers as well. 
+#
+#  'sandbox'     enable sandbox-ing when running emerge and ebuild
+#  'sfperms'     feature for security minded people that causes portage to 
+#                remove group+other readable bits on setuid files and
+#                remove the other readable bits on setgid files.
+#  'strict'      causes portage to react strongly to conditions that
+#                have the potential to be dangerous -- like missing or
+#                incorrect Manifest files.
+#  'userpriv'    allows portage to drop root privleges while it is compiling
+#                as a security measure, and as a side effect this can remove 
+#                sandbox access violations for users.
+#  'usersandbox' enables sandboxing while portage is running under userpriv.
+#                unpack -- for debugging purposes only.
+
+FEATURES="sandbox sfperms"
+#FEATURES="sandbox sfperms strict userpriv usersandbox"
