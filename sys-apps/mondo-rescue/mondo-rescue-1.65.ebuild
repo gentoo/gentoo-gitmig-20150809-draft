@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mondo-rescue/mondo-rescue-1.65.ebuild,v 1.1 2003/06/19 08:37:05 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mondo-rescue/mondo-rescue-1.65.ebuild,v 1.2 2003/06/21 18:28:27 johnm Exp $
 
 DESCRIPTION="a nice backup tool"
 SRC_URI="http://www.microwerks.net/~hugo/download/stable/final/${PN/-rescue/}-${PV}.tgz"
@@ -31,7 +31,7 @@ src_install() {
 	dodir /usr/share/mondo
 	dodir /usr/bin
 	
-	cp -f mondoarchive mondorestore mondo/mondo-makefilelist mondo/autorun mondo/restore-scripts.tgz ${D}/usr/share/mondo
+	cp -Rf mondoarchive mondorestore mondo/mondo-makefilelist mondo/autorun mondo/restore-scripts.tgz ${D}/usr/share/mondo
 	
 	dosym /usr/share/mondo/mondoarchive /usr/bin/mondoarchive
 	dosym /usr/share/mondo/mondorestore /usr/bin/mondorestore
