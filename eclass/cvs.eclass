@@ -1,13 +1,20 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/cvs.eclass,v 1.46 2003/08/07 02:58:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/cvs.eclass,v 1.47 2003/09/28 17:08:35 coredumb Exp $
 #
-# Author Dan Armak <danarmak@gentoo.org>
+# Current Maintainer: Tal Peer <coredumb@gentoo.org>
+# Original Author:    Dan Armak <danarmak@gentoo.org>
+#
+# SSH auth code by Danny <danny.milo@gmx.net>
 #
 # This eclass provides the generic cvs fetching functions.
 # to use from an ebuild, set the 'ebuild-configurable settings' below in your ebuild before inheriting.
 # then either leave the default src_unpack or extend over cvs_src_unpack.
 # if you find that you need to call the cvs_* functions directly, i'd be interested to hear about it.
+
+# TODO:
+# Implement more auth types (gserver?, kserver?)
+# Implement more 'ext' auth methods (do anyone actually use it with anything other than ssh?)
 
 ECLASS=cvs
 INHERITED="$INHERITED $ECLASS"
@@ -52,7 +59,6 @@ INHERITED="$INHERITED $ECLASS"
 # Authentication method to use - possible values are "pserver" and "ext"
 # WARNING ext is NOT supported! (never was, despite what earlier version of this file said)
 [ -z "$ECVS_AUTH" ] && ECVS_AUTH="pserver"
-[ "$ECVS_AUTH" == ext ] && die "ERROR: ext auth not supported. If you want it, please contact danarmak@gentoo.org."
 
 # Use su to run cvs as user
 # Currently b0rked and wouldn't work with portage userpriv anyway without special magic
@@ -81,7 +87,15 @@ INHERITED="$INHERITED $ECLASS"
 # ssh is used for ext auth
 # sudo is used to run as a specified user
 DEPEND="$DEPEND dev-util/cvs app-admin/sudo"
-#[ "$ECVS_AUTH" == "ext" ] && DEPEND="$DEPEND net-misc/openssh"
+
+if [ "$ECVS_AUTH" == "ext" ]; then
+	#default to ssh
+	[ -z "$CVS_RSH" ] && export SSH_RSH="ssh"
+	if [ "$CVS_RSH" != "ssh" ]; then
+		die "Support for ext auth with clients other than ssh has not been implemented yet"
+	fi
+	DEPEND="$DEPEND net-misc/openssh"
+fi
 
 # calls cvs_contorl, is called from cvs_src_unpack
 cvs_fetch() {
@@ -162,19 +176,21 @@ cvs_fetch() {
 		cd /$ECVS_TOP_DIR/$ECVS_LOCALNAME
 		oldserver="`$run cat CVS/Root`"
 		if [ "$server" != "$oldserver" ]; then
+
 			einfo "Changing CVS server from $oldserver to $server:"
 			debug-print "$FUNCNAME: Changing CVS server from $oldserver to $server:"
 
-			einfo "Searching for CVS dirs ..."
+			einfo "Searching for CVS dirs..."
 			cvsdirs="`$run find . -iname CVS -print`"
 			debug-print "$FUNCNAME: CVS dirs found:"
 			debug-print "$cvsdirs"
 
-			einfo "Modifying CVS dirs ..."
+			einfo "Modifying CVS dirs..."
 			for x in $cvsdirs; do
 				debug-print "In $x"
 				$run echo "$server" > "$x/Root"
 			done
+
 		fi
 	fi
 
@@ -192,60 +208,56 @@ cvs_fetch() {
 	cvsroot_nopass=":${ECVS_AUTH}:${ECVS_USER}@${ECVS_SERVER}"
 
 	# commands to run
-	cmdlogin="${run} ${ECVS_CVS_COMMAND} -d \"${cvsroot_pass}\""
-	cmdlogin_opts="login"
-	cmdupdate="${run} ${ECVS_CVS_COMMAND} -d \"${cvsroot_nopass}\""
-	cmdupdate_opts="update ${ECVS_UP_OPTS} ${ECVS_LOCALNAME}"
-	cmdcheckout="${run} ${ECVS_CVS_COMMAND} -d \"${cvsroot_nopass}\""
-	cmdcheckout_opts="checkout ${ECVS_CO_OPTS} ${ECVS_MODULE}"
+	cmdlogin="${run} ${ECVS_CVS_COMMAND} -d \"${cvsroot_pass}\" login"
+	cmdupdate="${run} ${ECVS_CVS_COMMAND} -d \"${cvsroot_nopass}\" update ${ECVS_UP_OPTS} ${ECVS_LOCALNAME}"
+	cmdcheckout="${run} ${ECVS_CVS_COMMAND} -d \"${cvsroot_nopass}\" checkout ${ECVS_CO_OPTS} ${ECVS_MODULE}"
 
 	cd "${ECVS_TOP_DIR}"
 	if [ "${ECVS_AUTH}" == "pserver" ]; then
-		debug-print "$FUNCNAME: logging into cvs ${cmdlogin} ${cmdlogin_opts}"
-		einfo "Logging in: ${cmdlogin}"
-		eval ${cmdlogin} ${cmdlogin_opts} >/dev/null || die "cvs login command failed"
+		einfo "Running $cmdlogin"
+		eval $cmdlogin || die "cvs login command failed"
 		if [ "${mode}" == "update" ]; then
-			debug-print "$FUNCNAME: updating cvs tree ${cmdupdate} ${cmdupdate_opts}"
-			einfo "Updating existing source tree: ${cmdupdate_opts}"
-			eval ${cmdupdate} ${cmdupdate_opts} || die "cvs update command failed"
+			einfo "Running $cmdupdate"
+			eval $cmdupdate || die "cvs update command failed"
 		elif [ "${mode}" == "checkout" ]; then
-			debug-print "$FUNCNAME: checking out from cvs tree ${cmdcheckout} ${cmdcheckout_opts}"
-			einfo "Checking out source tree (${cmdcheckout_opts})"
-			eval ${cmdcheckout} ${cmdcheckout_opts} || die "cvs checkout command failed"
+			einfo "Running $cmdcheckout" 
+			eval $cmdcheckout|| die "cvs checkout command failed"
 		fi
-#	elif [ "${ECVS_AUTH}" == "ext" ]; then
-#		# for ext there's also a possible ssh prompt, code not yet written
-#		echo "${ECVS_DELAY} continue connecting&yes" >> "$instruct"
-#		echo "${ECVS_DELAY} CVS password:&${ECVS_PASS}" >> "$instruct"
-#		if [ "$mode" == "update" ]; then
-#			expect "$cvsout" "$instruct" | $cmdupdate > "$cvsout"
-#		elif [ "$mode" == "checkout" ]; then
-#			expect "$cvsout" "$instruct" | $cmdcheckout > "$cvsout"
-#		fi
+	elif [ "${ECVS_AUTH}" == "ext" ]; then 
+	#no login needed for ext
+		if [ "${mode}" == "update" ]; then
+			einfo "Running $cmdupdate"
+			eval $cmdupdate || die "cvs update command failed"
+		elif [ "${mode}" == "checkout" ]; then
+			einfo "Running $cmdcheckout" 
+			eval $cmdcheckout|| die "cvs checkout command failed"
+		fi
 	fi
 
 	# restore ownership. not sure why this is needed, but someone added it in the orig ECVS_RUNAS stuff.
 	if [ -n "$ECVS_RUNAS" ]; then
 		chown `whoami` "${T}/cvspass"
 	fi
+
 }
 
 
 cvs_src_unpack() {
+
 	debug-print-function $FUNCNAME $*
 
 	debug-print "$FUNCNAME: init:
-ECVS_CVS_COMMAND=$ECVS_CVS_COMMAND
-ECVS_UP_OPTS=$ECVS_UP_OPTS
-ECVS_CO_OPTS=$ECVS_CO_OPTS
-ECVS_TOP_DIR=$ECVS_TOP_DIR
-ECVS_SERVER=$ECVS_SERVER
-ECVS_USER=$ECVS_USER
-ECVS_PASS=$ECVS_PASS
-ECVS_MODULE=$ECVS_MODULE
-ECVS_LOCAL=$ECVS_LOCAL
-ECVS_RUNAS=$ECVS_RUNAS
-ECVS_LOCALNAME=$ECVS_LOCALNAME"
+	ECVS_CVS_COMMAND=$ECVS_CVS_COMMAND
+	ECVS_UP_OPTS=$ECVS_UP_OPTS
+	ECVS_CO_OPTS=$ECVS_CO_OPTS
+	ECVS_TOP_DIR=$ECVS_TOP_DIR
+	ECVS_SERVER=$ECVS_SERVER
+	ECVS_USER=$ECVS_USER
+	ECVS_PASS=$ECVS_PASS
+	ECVS_MODULE=$ECVS_MODULE
+	ECVS_LOCAL=$ECVS_LOCAL
+	ECVS_RUNAS=$ECVS_RUNAS
+	ECVS_LOCALNAME=$ECVS_LOCALNAME"
 
 	[ -z "$ECVS_MODULE" ] && die "ERROR: CVS module not set, cannot continue."
 
@@ -255,9 +267,10 @@ ECVS_LOCALNAME=$ECVS_LOCALNAME"
 	# of course, we could instead always reference it with the bash syntax for 'take default
 	# value from this other variable if undefined', but i'm lazy.
 	if [ -z "$ECVS_LOCALNAME" ]; then
-		ECVS_LOCALNAME="$ECVS_MODULE"
-		ECVS_LOCALNAME_SETDEFAULT=true
+	    ECVS_LOCALNAME="$ECVS_MODULE"
+	    ECVS_LOCALNAME_SETDEFAULT=true
 	fi
+
 
 	if [ "$ECVS_SERVER" == "offline" ]; then
 		# we're not required to fetch anything, the module already exists and shouldn't be updated
@@ -268,14 +281,14 @@ ECVS_LOCALNAME=$ECVS_LOCALNAME"
 			die "ERROR: Offline mode specified, but dir ${ECVS_TOP_DIR}/${ECVS_LOCALNAME} not found. Aborting."
 		fi
 	elif [ -n "$ECVS_SERVER" ]; then # ECVS_SERVER!=offline --> real fetching mode
-		einfo "Fetching module '$ECVS_MODULE' and saving in $ECVS_TOP_DIR ..."
+		einfo "Fetching cvs module $ECVS_MODULE into $ECVS_TOP_DIR..."
 		cvs_fetch
 	else	# ECVS_SERVER not set
 		die "ERROR: CVS server not set, cannot continue."
 	fi
 
-	einfo "Copying $ECVS_MODULE from $ECVS_TOP_DIR ..."
-	debug-print "Copying module $ECVS_MODULE local_mode=$ECVS_LOCAL from $ECVS_TOP_DIR ..."
+	einfo "Copying $ECVS_MODULE from $ECVS_TOP_DIR..."
+	debug-print "Copying module $ECVS_MODULE local_mode=$ECVS_LOCAL from $ECVS_TOP_DIR..."
 
 	# probably redundant, but best to make sure
 	mkdir -p "$WORKDIR/$ECVS_LOCALNAME"
@@ -313,7 +326,8 @@ ECVS_LOCALNAME=$ECVS_LOCALNAME"
 	    unset ECVS_LOCALNAME_SETDEFAULT
 	fi
 
-	einfo "Module $ECVS_MODULE is now in ${WORKDIR}"
+	einfo "Module ${ECVS_MODULE} is now in ${WORKDIR}"
+
 }
 
 EXPORT_FUNCTIONS src_unpack
