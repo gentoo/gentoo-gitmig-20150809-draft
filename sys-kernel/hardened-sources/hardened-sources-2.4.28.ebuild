@@ -8,7 +8,7 @@ inherit kernel-2
 detect_version
 
 HGPV=28.0
-HGPV_SRC="http://tocharian.ath.cx/hardened/hardened-patches-${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}/hardened-patches-${KV_MAJOR}.${KV_MINOR}-${HGPV}.tar.bz2"
+HGPV_SRC="mirror://gentoo/hardened-patches-${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}/hardened-patches-${KV_MAJOR}.${KV_MINOR}-${HGPV}.tar.bz2"
 
 UNIPATCH_STRICTORDER="yes"
 
