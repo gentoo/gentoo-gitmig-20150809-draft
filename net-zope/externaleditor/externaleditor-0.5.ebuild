@@ -1,6 +1,6 @@
 # Copyright 2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public Form License v2
-# $Header $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/externaleditor/externaleditor-0.5.ebuild,v 1.3 2003/06/12 22:08:20 msterret Exp $
 
 inherit zproduct
 

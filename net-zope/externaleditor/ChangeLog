@@ -1,6 +1,9 @@
 # ChangeLog for net-zope/externaleditor
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/externaleditor/ChangeLog,v 1.2 2003/04/04 04:15:40 kutsuya Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/externaleditor/ChangeLog,v 1.3 2003/06/12 22:08:20 msterret Exp $
+
+  12 Jun 2003; <msterret@gentoo.org> externaleditor-0.5.ebuild:
+  fix Header
 
 *externaleditor-0.5 (29 Mar 2003)
 
