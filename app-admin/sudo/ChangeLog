@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/sudo
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.3 2002/03/10 11:49:24 blocke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.4 2002/04/25 23:41:50 bangert Exp $
+
+*sudo-1.6.6 (26 Apr 2002)
+
+  26 Apr 2002; Thilo Bangert <bangert@gentoo.org> : 
+  new security release
+  see http://online.securityfocus.com/advisories/4061
+
 
 *sudo-1.6.5_p2 (6 Mar 2002)
 
