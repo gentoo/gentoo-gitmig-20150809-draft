@@ -1,0 +1,44 @@
+# This is a BitKeeper generated diff -Nru style patch.
+#
+# ChangeSet
+#   2005/01/12 09:14:50-02:00 marcelo.tosatti@cyclades.com 
+#   [PATCH] Fix expand_stack() SMP race
+#   
+#   Description: Fix expand_stack() SMP race
+#   
+#   Two threads sharing the same VMA can race in expand_stack, resulting in incorrect VMA
+#   size accounting and possibly a "uncovered-by-VMA" pte leak.
+#   
+#   Fix is to check if the stack has already been expanded after acquiring a lock which
+#   guarantees exclusivity (page_table_lock in v2.4 and vma_anon lock in v2.6).
+# 
+# include/linux/mm.h
+#   2005/01/07 14:51:21-02:00 marcelo.tosatti@cyclades.com +10 -3
+#   Fix expand_stack() SMP race
+# 
+diff -Nru a/include/linux/mm.h b/include/linux/mm.h
+--- a/include/linux/mm.h	2005-01-13 04:59:30 -08:00
++++ b/include/linux/mm.h	2005-01-13 04:59:30 -08:00
+@@ -648,12 +648,19 @@
+ 	unsigned long grow;
+ 
+ 	/*
+-	 * vma->vm_start/vm_end cannot change under us because the caller is required
+-	 * to hold the mmap_sem in write mode. We need to get the spinlock only
+-	 * before relocating the vma range ourself.
++	 * vma->vm_start/vm_end cannot change under us because the caller
++	 * is required to hold the mmap_sem in read mode.  We need the
++	 * page_table_lock lock to serialize against concurrent expand_stacks.
+ 	 */
+ 	address &= PAGE_MASK;
+  	spin_lock(&vma->vm_mm->page_table_lock);
++
++	/* already expanded while we were spinning? */
++	if (vma->vm_start <= address) {
++		spin_unlock(&vma->vm_mm->page_table_lock);
++		return 0;
++	}
++
+ 	grow = (vma->vm_start - address) >> PAGE_SHIFT;
+ 	if (vma->vm_end - address > current->rlim[RLIMIT_STACK].rlim_cur ||
+ 	    ((vma->vm_mm->total_vm + grow) << PAGE_SHIFT) > current->rlim[RLIMIT_AS].rlim_cur) {
