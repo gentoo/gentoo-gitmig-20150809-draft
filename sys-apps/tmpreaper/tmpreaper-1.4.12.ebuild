@@ -13,7 +13,7 @@ DEPEND="virtual/glibc"
 
 src_compile() {
 
-   try make CFLAGS=\"${CFLAGS}\" all
+   try make CFLAGS="${CFLAGS}" all
 
 }
 

@@ -50,7 +50,7 @@ pkg_postrm()
 }
 
 try() {
-	eval $*
+	"$@"
 	if [ $? -ne 0 ]
 	then
 		echo 
