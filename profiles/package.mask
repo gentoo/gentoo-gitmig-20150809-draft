@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <phoenix@gentoo.org> (19 Aug 2002)
+# masked for testing
+=app-shells/zsh-4.0.6
+
 # <leonardop@gentoo.org> (19 Aug 2002)
 # Masked for, guess what... testing
 =dev-util/guile-1.4.1
