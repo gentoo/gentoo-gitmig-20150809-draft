@@ -1,25 +1,25 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 9fa28616e69e2ed595e896fff1c22bd4 xorg-x11-6.8.0-r1.ebuild 41341
-MD5 3218cfcb99517853fe80c90d7a2f83e2 xorg-x11-6.7.0-r2.ebuild 38092
-MD5 ac1137a20503dcb8f9ba2939a2a766f6 metadata.xml 230
-MD5 cbeb285718e1c2c3922471cd7c1350d3 xorg-x11-6.8.0-r3.ebuild 39938
-MD5 7915931e5d6788dc9e28f46e199e10e6 xorg-x11-6.7.0-r3.ebuild 38110
-MD5 49be2cc249c90b3c213158e16ed3b561 xorg-x11-6.8.0-r4.ebuild 50586
 MD5 24db51648e9dbece42066ff9680b1012 ChangeLog 62833
+MD5 ac1137a20503dcb8f9ba2939a2a766f6 metadata.xml 230
 MD5 3f84d789493dd6854e0238e0e9765b93 xorg-x11-6.8.1.901.ebuild 50577
-MD5 e5419ff1c0cff3236fb5673ef2263bea files/digest-xorg-x11-6.8.0-r4 911
+MD5 3218cfcb99517853fe80c90d7a2f83e2 xorg-x11-6.7.0-r2.ebuild 38092
+MD5 7915931e5d6788dc9e28f46e199e10e6 xorg-x11-6.7.0-r3.ebuild 38110
+MD5 cec0cbc2cc6f6350b15b8edd3763635f xorg-x11-6.8.0-r3.ebuild 39939
+MD5 49be2cc249c90b3c213158e16ed3b561 xorg-x11-6.8.0-r4.ebuild 50586
+MD5 9fa28616e69e2ed595e896fff1c22bd4 xorg-x11-6.8.0-r1.ebuild 41341
 MD5 a3314fbdc270d7d84ea14fd477b8d048 files/digest-xorg-x11-6.7.0-r2 904
-MD5 9a74da809b31adcfd00fd65af29ee55e files/digest-xorg-x11-6.8.1.901 517
-MD5 70facbdb85b7ef2bc9b9b702442eda7e files/digest-xorg-x11-6.8.0-r3 908
-MD5 70facbdb85b7ef2bc9b9b702442eda7e files/digest-xorg-x11-6.8.0-r1 908
 MD5 a3314fbdc270d7d84ea14fd477b8d048 files/digest-xorg-x11-6.7.0-r3 904
+MD5 70facbdb85b7ef2bc9b9b702442eda7e files/digest-xorg-x11-6.8.0-r3 908
+MD5 e5419ff1c0cff3236fb5673ef2263bea files/digest-xorg-x11-6.8.0-r4 911
 MD5 f14e22fa0891e99c1000c0d61d7e8a0c files/xpm-secfix-thomas.diff 55674
+MD5 9a74da809b31adcfd00fd65af29ee55e files/digest-xorg-x11-6.8.1.901 517
+MD5 70facbdb85b7ef2bc9b9b702442eda7e files/digest-xorg-x11-6.8.0-r1 908
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFB0eIiCHk4+ZoBpvsRAi/LAJ0dtVdKxUreLQZMT6tCQ8cB3sjn5gCcD+1A
-d2+a50IBGbtfDwK6sflI9UA=
-=8tbi
+iD8DBQFB1yCtroRuSHgZdywRAjZcAJ9g+ukFX+YHyWX3SZqvu3+824BjQwCfbiF3
+XlrEbEiFT1WyIPzKZVHIFwY=
+=gFMK
 -----END PGP SIGNATURE-----
