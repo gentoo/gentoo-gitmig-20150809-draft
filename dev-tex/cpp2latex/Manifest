@@ -1,4 +1,2 @@
-MD5 0af205cfaad4f5824a83b0d35c19e93f ChangeLog 495
-MD5 d288704f7ede0342d7a7496324e360c1 cpp2latex-2.2.ebuild 696
-MD5 8d070a7f0ef6e8e397177d4e6d1f5694 files/digest-cpp2latex-2.2 65
-MD5 10328506b7ce2bd8214880117f387093 files/main.cpp.patch 9876
+MD5 74df9918788bc0fca2784a1c17699293 ChangeLog 493
+MD5 a36edd35ae94e4bbf93d23ba937ec761 cpp2latex-2.2.ebuild 693
