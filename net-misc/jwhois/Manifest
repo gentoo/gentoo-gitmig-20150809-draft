@@ -1,17 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 ecbe9c4f0e5225c402de29cadd0b3f30 ChangeLog 2036
-MD5 f8db729e565dc77b7b6f9506c1213543 jwhois-3.2.0.ebuild 848
-MD5 ad98f7f26eb7b9ebd39d89418b769e3f jwhois-3.2.1.ebuild 798
-MD5 df9cebbd781b8642069a3295b31f5970 jwhois-3.2.2.ebuild 810
+MD5 b361040916833982b4b52ea28421325b ChangeLog 2296
+MD5 8650b911e7bd5abb5571edbc236a1c83 jwhois-3.2.0.ebuild 767
+MD5 232dc7d34a05a7c82704d6f92853d1b0 jwhois-3.2.1.ebuild 784
+MD5 578cb35c3b51121584a6436c56e5de63 jwhois-3.2.2.ebuild 854
+MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
 MD5 a3be5e722f33856d6bf281f4251e8b03 files/digest-jwhois-3.2.0 64
 MD5 8cbb8abe6a191a786d5b46109cda625d files/digest-jwhois-3.2.1 64
 MD5 7411f47db9ecd1d63caf18c87ef5c9db files/digest-jwhois-3.2.2 64
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
+Version: GnuPG v1.2.4 (GNU/Linux)
 
-iD8DBQFBCclKHTu7gpaalycRAsZRAKD9LA5o2uhNPooagY5whOwFzUzs1QCfaS0Q
-VffKiyL91i6IL+bpDn4knAI=
-=MRd0
+iD8DBQFBCtNZmdTrptrqvGERAn8kAJ48GjNoRzP94HArs2n0PTU3+jcgKwCeM/Cf
+FbW7Rj/LxHl+3W0FXFsJ+C4=
+=V3BB
 -----END PGP SIGNATURE-----

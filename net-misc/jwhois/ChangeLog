@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/jwhois
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/jwhois/ChangeLog,v 1.16 2004/07/17 16:54:05 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/jwhois/ChangeLog,v 1.17 2004/07/30 23:15:55 dragonheart Exp $
+
+  31 Jul 2004; Daniel Black <dragonheart@gentoo.org> jwhois-3.2.0.ebuild,
+  jwhois-3.2.1.ebuild, jwhois-3.2.2.ebuild, +metadata.xml:
+  Changed SRC_URI to mirror://gnu/ and RESTRICT=nomirror. ppc64 removed 
+  from jwhois-3.2.2 as no stable glibc exists.
 
   17 Jul 2004; Tom Gall <tgall@gentoo.org> jwhois-3.2.2.ebuild:
   stable on ppc64, bug #55521
