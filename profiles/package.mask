@@ -26,10 +26,6 @@
 # Also its not working very well
 =dev-java/sun-jdk-1.4.2
 
-# brad@gentoo.org 29 Jul 2003
-# Build testing
-=net-www/mozilla-firebird-0.6.1
-
 # <azarah@gentoo.org> (28 July 2003)
 # These are depriciated
 sys-apps/console-tools
