@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/GDGraph
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/GDGraph/ChangeLog,v 1.3 2003/11/04 02:23:06 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/GDGraph/ChangeLog,v 1.4 2003/12/25 20:02:43 mcummings Exp $
+
+*GDGraph-1.43 (25 Dec 2003)
+
+  25 Dec 2003; Michael Cummings,,, <mcummings@gentoo.org> GDGraph-1.43.ebuild:
+  New version on CPAN
 
   03 Nov 2003; Jason Wever <weeve@gentoo.org> GDGraph-1.35.ebuild:
   Added ~sparc keyword.
