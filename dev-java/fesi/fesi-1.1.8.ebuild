@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/fesi/fesi-1.1.8.ebuild,v 1.2 2005/01/01 18:24:21 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/fesi/fesi-1.1.8.ebuild,v 1.3 2005/03/29 14:36:19 luckyduck Exp $
 
 inherit eutils java-pkg
 
@@ -9,13 +9,13 @@ SRC_URI="http://dev.gentoo.org/~karltk/projects/java/distfiles/${P}.gentoo.tar.b
 HOMEPAGE="http://www.lugrin.ch/fesi"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86" #karltk: ~amd64 is missing bsf-2.3"
-IUSE="doc jikes"
+KEYWORDS="~amd64 ~x86"
+IUSE="doc examples jikes source"
 DEPEND=">=virtual/jdk-1.3
 	jikes? ( >=dev-java/jikes-1.21 )
 	>=dev-java/ant-core-1.4
 	=dev-java/bsf-2.3*
-	=dev-java/oro-2.0*
+	=dev-java/jakarta-oro-2.0*
 	>=dev-java/javacc-3.2"
 RDEPEND=">=virtual/jdk-1.3
 	=dev-java/gnu-regexp-1.1*"
@@ -29,7 +29,7 @@ src_unpack() {
 	bf=build.properties
 	cd ant/
 	echo "javaccdir=`java-config -p javacc`" > ${bf}
-	echo "ororegexp=`java-config -p oro`" >> ${bf}
+	echo "ororegexp=`java-config -p jakarta-oro-2.0`" >> ${bf}
 	echo "gnuregexp=`java-config -p gnu-regexp-1`" >> ${bf}
 	echo "bsfdir=`java-config -p bsf-2.3`" >> ${bf}
 }
@@ -38,20 +38,21 @@ src_compile() {
 	cd ant/
 
 	local antflags="jars"
-	if use doc; then
-		antflags="${antflags} docs"
-	fi
-	if use jikes; then
-		antflags="${antflags} -Dbuild.compiler=jikes"
-	fi
+	use doc && antflags="${antflags} docs"
+	use jikes && antflags="${antflags} -Dbuild.compiler=jikes"
 	ant ${antflags} || die "failed to build"
 }
 
 src_install() {
 	java-pkg_dojar lib/fesi.jar
 
-	dodoc License.txt Readme.txt
 	if use doc; then
+		dodoc License.txt Readme.txt
 		java-pkg_dohtml -r doc/html/*
 	fi
+	if use examples; then
+		dodir /usr/share/doc/${PF}/examples
+		cp -r examples/* ${D}/usr/share/doc/${PF}/examples
+	fi
+	use source && java-pkg_dosrc src/FESI/*
 }
