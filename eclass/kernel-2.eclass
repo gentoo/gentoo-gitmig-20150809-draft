@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.73 2005/01/11 15:26:03 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.74 2005/01/11 21:20:59 johnm Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -226,8 +226,9 @@ unpack_set_extraversion() {
 #==============================================================
 compile_headers() {
 	local extra_makeopts=
-	local HOSTCFLAGS=
-	unset ARCH
+	local HOSTCFLAGS=$(getfilevar HOSTCFLAGS ${S}/Makefile)
+	
+	set_arch_to_kernel;
 	
 	if kernel_is 2 4
 	then
@@ -248,14 +249,20 @@ compile_headers() {
 			extra_makeopts="CROSS_COMPILE=${CHOST}-"
 		fi
 		
+		# if we couldnt obtain HOSTCFLAGS from the Makefile, 
+		#then set it to something sane
+		[ -z "${HOSTCFLAGS}" ] && \
+			HOSTCFLAGS="-Wall -Wstrict-prototypes -O2 -fomit-frame-pointer -I${S}/include/"
+			
 		# if there arent any installed headers, then there also isnt an asm
 		# symlink in /usr/include/, and make defconfig will fail, so we have
 		# to force an include path with $S.
-		local HOSTCFLAGS="-Wall -Wstrict-prototypes -O2 -fomit-frame-pointer -I${S}/include/"
 		ln -sf ${S}/include/asm-${ARCH} ${S}/include/asm
 		make defconfig HOSTCFLAGS="${HOSTCFLAGS}" ${extra_makeopts} || die "defconfig failed"
 		make prepare HOSTCFLAGS="${HOSTCFLAGS}" ${extra_makeopts} || die "prepare failed"
 	fi
+	
+	set_arch_to_portage;
 }
 
 compile_manpages() {
@@ -636,6 +643,57 @@ unipatch() {
 
 # custom functions
 #==============================================================
+# Pulled from eutils as it might be more useful only being here since
+# very few ebuilds which dont use this eclass will ever ever use these functions
+set_arch_to_kernel() {
+	export PORTAGE_ARCH="${ARCH}"
+	case ${ARCH} in
+		x86)	export ARCH="i386";;
+		amd64)	export ARCH="x86_64";;
+		hppa)	export ARCH="parisc";;
+		mips)	export ARCH="mips";;
+		*)	export ARCH="${ARCH}";;
+	esac
+}
+
+# set's ARCH back to what portage expects
+set_arch_to_portage() {
+	export ARCH="${PORTAGE_ARCH}"
+}
+
+# getfilevar accepts 2 vars as follows:
+# getfilevar <VARIABLE> <CONFIGFILE>
+# pulled from linux-info
+
+getfilevar() {
+local	ERROR workingdir basefname basedname xarch
+	ERROR=0
+
+	[ -z "${1}" ] && ERROR=1
+	[ ! -f "${2}" ] && ERROR=1
+
+	if [ "${ERROR}" = 1 ]
+	then
+		ebeep
+		echo -e "\n"
+		eerror "getfilevar requires 2 variables, with the second a valid file."
+		eerror "   getfilevar <VARIABLE> <CONFIGFILE>"
+	else
+		workingdir=${PWD}
+		basefname=$(basename ${2})
+		basedname=$(dirname ${2})
+		xarch=${ARCH}
+		unset ARCH
+		
+		cd ${basedname}
+		echo -e "include ${basefname}\ne:\n\t@echo \$(${1})" | \
+			make ${BUILD_FIXES} -f - e 2>/dev/null
+		cd ${workingdir}
+		 
+		ARCH=${xarch}
+	fi
+}
+
 detect_version() {
 	# this function will detect and set
 	# - OKV: Original Kernel Version (2.6.0/2.6.0-test11)
