@@ -1,10 +1,17 @@
 # ChangeLog for app-editors/vim
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.2 2002/02/20 03:06:53 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.3 2002/03/27 00:20:09 agriffis Exp $
+
+*vim-6.1 (26 Mar 2002)
+
+	26 Mar 2002; Aron Griffis <agriffis@gentoo.org> vim-6.0-r6.ebuild, vim-6.1.ebuild:
+
+	Resolved bug 1335: vim 6.1 released
+	Resolved bug 1293: vim python support disabled
 
 *vim-6.0-r5 (19 Feb 2002)
 
-	19 Feb 2002; Aron Griffis <agriffis@gentoo.org>
+	19 Feb 2002; Aron Griffis <agriffis@gentoo.org> vim-6.0-r5.ebuild:
 
 	Resolved bug 583: "patch to vim-6.0-r4 to install a vimrc in
 	/usr/share/vim instead of /etc/skel/.vimrc".  Additionally install
