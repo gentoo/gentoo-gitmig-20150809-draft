@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/wget
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/ChangeLog,v 1.30 2003/11/20 23:53:33 gregf Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/ChangeLog,v 1.31 2003/11/27 15:19:49 brad_mssw Exp $
+
+  27 Nov 2003; Brad House <brad_mssw@gentoo.org> wget-1.9-r1.ebuild,
+  wget-1.9.1-r1.ebuild:
+  always require autoconf to be installed for this package
+
+  27 Nov 2003; Brad House <brad_mssw@gentoo.org> wget-1.9-r1.ebuild:
+  make autoconf a dep, as in a stage3 build it requires autoconf
 
   20 Nov 2003; Greg Fitzgerald <gregf@gentoo.org> wget-1.9.1-r1.ebuild:
   Enabled ipv6 support

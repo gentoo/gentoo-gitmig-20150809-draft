@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/wget-1.9.1-r1.ebuild,v 1.9 2003/11/20 23:53:33 gregf Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/wget-1.9.1-r1.ebuild,v 1.10 2003/11/27 15:19:49 brad_mssw Exp $
 
 inherit gnuconfig
 
@@ -17,7 +17,8 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~arm ~mips ~amd64 ~ia64"
 
 RDEPEND="ssl? ( >=dev-libs/openssl-0.9.6b )"
-DEPEND="nls? ( sys-devel/autoconf sys-devel/gettext )"
+DEPEND="nls? ( sys-devel/gettext )
+	sys-devel/autoconf"
 
 
 src_unpack() {
