@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/metacity
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/ChangeLog,v 1.54 2004/02/17 16:32:23 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/ChangeLog,v 1.55 2004/03/17 00:23:16 geoman Exp $
+
+  16 Mar 2004; Stephen P. Becker <geoman@gentoo.org> metacity-2.6.5.ebuild:
+  Added ~mips keyword.
 
 *metacity-2.6.5 (17 Feb 2004)
 
