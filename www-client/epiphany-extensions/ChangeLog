@@ -1,0 +1,24 @@
+# ChangeLog for net-www/epiphany-extensions
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany-extensions/ChangeLog,v 1.1 2005/03/18 18:18:21 seemant Exp $
+
+*epiphany-extensions-1.6.0 (18 Mar 2005)
+*epiphany-extensions-1.4.5 (18 Mar 2005)
+
+  18 Mar 2005; Seemant Kulleen <seemant@gentoo.org>
+  +files/epiphany-extensions-1.6.0-disable_bookmarks-tray_label.patch,
+  +files/epiphany-extensions-1.6.0-fix_includes.patch, +metadata.xml,
+  +epiphany-extensions-1.4.5.ebuild, +epiphany-extensions-1.6.0.ebuild:
+  Moved from net-www/epiphany-extensions to www-client/epiphany-extensions.
+
+  15 Mar 2005; Joe McCann <joem@gentoo.org> :
+  Also the label patch is from  Lars Strojny and closes bug 85009
+
+*epiphany-extensions-1.6.0 (15 Mar 2005)
+
+  15 Mar 2005; Joe McCann <joem@gentoo.org>
+  +files/epiphany-extensions-1.6.0-disable_bookmarks-tray_label.patch,
+  +files/epiphany-extensions-1.6.0-fix_includes.patch,
+  +epiphany-extensions-1.6.0.ebuild:
+  New version for epiphany-1.6
+
