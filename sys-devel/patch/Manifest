@@ -1,7 +1,17 @@
-MD5 205a259d782ac496e933054878b7cc4c ChangeLog 3624
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 3ae121823e24bc07192c23e1ba65d1eb patch-2.5.9.ebuild 1444
+MD5 9f3ed8b76e185aff0e4c22ef10cb30d7 ChangeLog 3723
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 b65b158dc35ff3457c1d22419a652f1e patch-2.5.9.ebuild 1445
-MD5 4d3cef8bc0d2335dec6b36093a1175a2 patch-2.5.9-r1.ebuild 1440
+MD5 5de8d46a2fdbcaa26ced2869fe6f8d65 patch-2.5.9-r1.ebuild 1438
 MD5 7113f2413944cb06cecdd0c57ab54078 files/digest-patch-2.5.9 63
 MD5 4d1e5f04f223836b5c65c0995abd16ff files/2.5.9-deb-cr.patch 866
 MD5 7113f2413944cb06cecdd0c57ab54078 files/digest-patch-2.5.9-r1 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFB8D2nntT9W3vfTuoRAlagAKCU9P3WQwBIs5HwJBaPlTM7LjwlWwCfRH46
++1K+SSeUG3TIrfpwct6MQyw=
+=5rQJ
+-----END PGP SIGNATURE-----
