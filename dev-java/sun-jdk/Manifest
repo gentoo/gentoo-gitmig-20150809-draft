@@ -3,7 +3,7 @@ MD5 ddf63ab506724620f31c5c0128f4d080 sun-jdk-1.3.1.08.ebuild 2252
 MD5 497bb12bcd594ebfe5f7237849a4d2db sun-jdk-1.4.1.02-r1.ebuild 1638
 MD5 74aa29cb477cc9b92b7a0b38547de4e3 ChangeLog 10349
 MD5 8a81df1198a6df40e3b76b671c047f56 files/sun-jdk-1.3.1.08 625
-MD5 8aecab67055fb9e0d652f5aa66162ad9 files/sun-jdk-1.4.1.02 602
+MD5 99a2cedb79eb346bcb0829f06628ed67 files/sun-jdk-1.4.1.02 601
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-sun-jdk-1.4.1.02-r1 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-sun-jdk-1.3.1.08 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-sun-jdk-1.4.1.02 0
