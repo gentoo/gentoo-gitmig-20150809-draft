@@ -1,11 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: George Shapovalov <georges@its.caltech.edu>
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gpc/gpc-20020410-r1.ebuild,v 1.2 2002/04/27 23:08:36 bangert Exp $
+# /space/gentoo/cvsroot/gentoo-x86/dev-lang/gpc/gpc-20020410-r1.ebuild,v 1.2 2002/04/27 23:08:36 bangert Exp
 
-# Source directory; the dir where the sources can be found
-# (automatically unpacked) inside ${WORKDIR}.	Usually you can just
-# leave this as-is.
 S="${WORKDIR}/gcc-2.95.3"
 
 DESCRIPTION="Gnu Pascal Compiler"
@@ -24,6 +21,10 @@ RDEPEND="${DEPEND}"
 src_unpack() {
 	unpack "${P}.tar.gz"
 	unpack "gcc-2.95.3.tar.gz"
+	
+	#the release is just a renamed 20020510 package
+	#thus need to reset ${P} at this point
+	P=gpc-20020510
 
 	cd "${WORKDIR}/${P}/p"
 
@@ -31,8 +32,12 @@ src_unpack() {
 	cp config-lang.in config-lang.in.orig
     sed -e "s:read:#read:" config-lang.in.orig > config-lang.in
 
-	#patch lang.c to handle "-pipe" option properly when built in parallel.
-	patch lang.c < ${FILESDIR}/${PF}_lang.c.patch
+	#this fix seems to be specific to gentoo glibc
+	#one of the patches to glibc-2.2.5-r4 was causing problems
+	#if emake and -pipe were used when building gpc
+	#looks like this patch in not in glibc-2.2.5-r5, but I'll keep this fix
+	#it does not seem to do any harm
+	patch lang.h < ${FILESDIR}/gpc-20020510_lang.h.patch
 
 	cd "${WORKDIR}/${P}"	
 	mv p "${S}/gcc/"
