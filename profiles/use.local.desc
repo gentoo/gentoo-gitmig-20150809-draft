@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1040 2005/03/25 02:30:30 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1041 2005/03/25 07:51:30 greg_g Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -292,11 +292,12 @@ gnustep-base/gnustep-make:non-flattened - do not flatten launch and library path
 kde-base/akode:libsamplerate - Enable support for converting sample rates using libsamplerate
 kde-base/arts:artswrappersuid - Set artswrapper suid for realtime playing, which is a security hazard
 kde-base/kbugbuster:kcal - Add support for kcal (calendar) format
-kde-base/kcontrol:ieee1394 - Enable firewire support in Info Center.
-kde-base/kdeartwork-kscreensaver:xscreensaver - Enables detection of xscreensavers
-kde-base/kdeartwork:xscreensaver - Enables detection of xscreensavers
-kde-base/kdebase:ieee1394 - Enable firewire support in Info Center.
-kde-base/kdebase:logitech-mouse - Builds module for configuring logitech mice.
+kde-base/kcontrol:ieee1394 - Enable firewire support in Info Center
+kde-base/kdeartwork-kscreensaver:xscreensaver - Enable detection of xscreensavers
+kde-base/kdeartwork:xscreensaver - Enable detection of xscreensavers
+kde-base/kdebase:ieee1394 - Enable firewire support in Info Center
+kde-base/kdebase:logitech-mouse - Enable Control Center module for configuring logitech mice
+kde-base/kcontrol:logitech-mouse - Enable Control Center module for configuring logitech mice
 kde-base/kdeedu:kig-scripting - Enable support for python scripting in kig
 kde-base/kdegraphics-kfile-plugins:openexr - Enable support for OpenEXR graphic file format (www.openexr.com)
 kde-base/kdegraphics-meta:povray - Enable povray dependency - needed for kpovmodeler
