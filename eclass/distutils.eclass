@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/distutils.eclass,v 1.15 2003/10/02 23:14:17 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/distutils.eclass,v 1.16 2003/10/09 08:41:41 liquidx Exp $
 #
 # Author: Jon Nelson <jnelson@gentoo.org>
 # Current Maintainer: Alastair Tse <liquidx@gentoo.org>
@@ -19,6 +19,8 @@
 # PYTHON_SLOT_VERSION     - for Zope support
 # DOCS                    - additional DOCS
 
+inherit python
+
 ECLASS=distutils
 INHERITED="$INHERITED $ECLASS"
 
@@ -33,10 +35,12 @@ else
 fi
 
 distutils_src_compile() {
+	python_disable_pyc
 	${python} setup.py build "$@" || die "compilation failed"
 }
 
 distutils_src_install() {
+	python_disable_pyc
 	${python} setup.py install --root=${D} "$@" || die
 	
 	dodoc CHANGELOG COPYRIGHT KNOWN_BUGS MAINTAINERS PKG-INFO

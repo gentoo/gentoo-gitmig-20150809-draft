@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.1 2003/10/08 14:07:38 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.2 2003/10/09 08:41:40 liquidx Exp $
 #
 # Author: Alastair Tse <liquidx@gentoo.org>
 #
@@ -21,6 +21,10 @@ inherit alternatives
 
 ECLASS="python"
 INHERITED="$INHERITED $ECLASS"
+
+python_disable_pyc() {
+	PYTHON_DONTCOMPILE=1
+}
 
 #
 # name:   python_version
