@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/udev
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.61 2004/08/21 21:35:15 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.62 2004/09/03 19:16:59 pvdabeel Exp $
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> udev-025-r1.ebuild,
+  udev-030.ebuild:
+  Masked udev-030.ebuild stable for ppc
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> udev-025-r1.ebuild:
+  Masked udev-025-r1.ebuild stable for ppc
 
   21 Aug 2004; Joshua Kinard <kumba@gentoo.org> udev-030.ebuild:
   Marked stable on mips.

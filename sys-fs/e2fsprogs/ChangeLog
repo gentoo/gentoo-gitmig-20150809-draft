@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/e2fsprogs
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/ChangeLog,v 1.30 2004/06/30 17:28:15 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/ChangeLog,v 1.31 2004/09/03 19:16:58 pvdabeel Exp $
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  e2fsprogs-1.35.ebuild:
+  Masked e2fsprogs-1.35.ebuild stable for ppc
 
   30 Jun 2004; Guy Martin <gmsoft@gentoo.org> e2fsprogs-1.35.ebuild:
   Marked stable on hppa.

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsprogs/xfsprogs-2.3.9.ebuild,v 1.8 2004/07/15 03:44:29 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsprogs/xfsprogs-2.3.9.ebuild,v 1.9 2004/09/03 19:16:59 pvdabeel Exp $
 
 inherit flag-o-matic
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://gentoo/${P}.src.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="x86 ~ppc alpha mips hppa ia64 amd64"
+KEYWORDS="x86 ppc alpha mips hppa ia64 amd64"
 IUSE=""
 
 RDEPEND="sys-fs/e2fsprogs"

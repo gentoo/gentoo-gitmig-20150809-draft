@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.00.15.ebuild,v 1.7 2004/08/17 20:05:30 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.00.15.ebuild,v 1.8 2004/09/03 19:16:59 pvdabeel Exp $
 
 DESCRIPTION="User-land utilities for LVM2 (device-mapper) software."
 HOMEPAGE="http://sources.redhat.com/lvm2/"
@@ -8,7 +8,7 @@ SRC_URI="ftp://sources.redhat.com/pub/lvm2/${PN/lvm/LVM}.${PV}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~amd64 ppc64 ~alpha"
+KEYWORDS="~x86 ppc ~sparc ~amd64 ppc64 ~alpha"
 IUSE=""
 
 DEPEND=">=sys-libs/device-mapper-1.00.17"

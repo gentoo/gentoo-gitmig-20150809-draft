@@ -1,6 +1,23 @@
 # ChangeLog for sys-fs/evms
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/ChangeLog,v 1.20 2004/09/01 08:11:40 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/ChangeLog,v 1.21 2004/09/03 19:16:58 pvdabeel Exp $
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  evms-1.2.1-r1.ebuild, evms-2.2.2.ebuild, evms-2.3.2-r1.ebuild,
+  evms-2.3.4-r1.ebuild:
+  Masked evms-2.3.4-r1.ebuild stable for ppc
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  evms-1.2.1-r1.ebuild, evms-2.2.2.ebuild, evms-2.3.2-r1.ebuild:
+  Masked evms-2.3.2-r1.ebuild stable for ppc
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  evms-1.2.1-r1.ebuild, evms-2.2.2.ebuild:
+  Masked evms-2.2.2.ebuild stable for ppc
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  evms-1.2.1-r1.ebuild:
+  Masked evms-1.2.1-r1.ebuild stable for ppc
 
   01 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org> evms-2.3.4-r1.ebuild:
   Changing flag filtering per bug #54856.

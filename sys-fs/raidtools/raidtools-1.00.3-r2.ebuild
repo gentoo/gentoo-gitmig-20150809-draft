@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/raidtools/raidtools-1.00.3-r2.ebuild,v 1.1 2004/09/01 20:59:58 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/raidtools/raidtools-1.00.3-r2.ebuild,v 1.2 2004/09/03 19:16:59 pvdabeel Exp $
 
 inherit flag-o-matic eutils
 
@@ -8,7 +8,7 @@ DESCRIPTION="Linux RAID 0/1/4/5 utilities"
 SRC_URI="http://people.redhat.com/mingo/raidtools/${P}.tar.gz"
 HOMEPAGE="http://people.redhat.com/mingo/raidtools/"
 
-KEYWORDS="~x86 ~amd64 ~ppc ~sparc ~hppa ~alpha ~ia64 ~ppc64"
+KEYWORDS="~x86 ~amd64 ppc ~sparc ~hppa ~alpha ~ia64 ~ppc64"
 IUSE="build"
 SLOT="0"
 LICENSE="GPL-2"

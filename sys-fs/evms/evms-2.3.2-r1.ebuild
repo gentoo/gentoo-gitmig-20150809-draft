@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/evms-2.3.2-r1.ebuild,v 1.7 2004/07/23 08:41:49 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/evms-2.3.2-r1.ebuild,v 1.8 2004/09/03 19:16:58 pvdabeel Exp $
 
 inherit eutils flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 amd64"
+KEYWORDS="x86 amd64 ppc"
 IUSE="ncurses gtk"
 
 #EVMS uses libuuid from e2fsprogs

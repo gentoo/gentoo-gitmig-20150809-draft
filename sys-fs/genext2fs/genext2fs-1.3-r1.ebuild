@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/genext2fs/genext2fs-1.3-r1.ebuild,v 1.2 2004/08/03 11:36:19 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/genext2fs/genext2fs-1.3-r1.ebuild,v 1.3 2004/09/03 19:16:58 pvdabeel Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://debian/pool/main/g/genext2fs/${PN}_${PV}.orig.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 arm mips ~ppc"
+KEYWORDS="x86 arm mips ppc"
 IUSE=""
 
 DEPEND=""

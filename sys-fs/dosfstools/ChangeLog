@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/dosfstools
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/dosfstools/ChangeLog,v 1.18 2004/08/21 00:52:17 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/dosfstools/ChangeLog,v 1.19 2004/09/03 19:16:58 pvdabeel Exp $
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  dosfstools-2.9.ebuild:
+  Masked dosfstools-2.9.ebuild stable for ppc
 
   20 Aug 2004; Seemant Kulleen <seemant@gentoo.org> dosfstools-2.10-r1.ebuild,
   dosfstools-2.10.ebuild, dosfstools-2.8-r3.ebuild, dosfstools-2.9.ebuild:

@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/ntfsprogs
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfsprogs/ChangeLog,v 1.13 2004/07/17 09:27:34 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfsprogs/ChangeLog,v 1.14 2004/09/03 19:16:59 pvdabeel Exp $
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  ntfsprogs-1.9.2.ebuild:
+  Masked ntfsprogs-1.9.2.ebuild stable for ppc
 
 *ntfsprogs-1.9.2 (17 Jul 2004)
 

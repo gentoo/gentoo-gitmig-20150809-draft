@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/convertfs
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/convertfs/ChangeLog,v 1.5 2004/06/28 21:33:49 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/convertfs/ChangeLog,v 1.6 2004/09/03 19:16:58 pvdabeel Exp $
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  convertfs-20020318-r1.ebuild:
+  Masked convertfs-20020318-r1.ebuild stable for ppc
 
   28 Jun 2004; David Holm <dholm@gentoo.org> convertfs-20020318-r1.ebuild:
   Added to ~ppc.

@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/lvm2
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.16 2004/08/17 20:05:30 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.17 2004/09/03 19:16:59 pvdabeel Exp $
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  lvm2-2.00.15.ebuild:
+  Masked lvm2-2.00.15.ebuild stable for ppc
 
   17 Aug 2004; <agriffis@gentoo.org> lvm2-2.00.15.ebuild:
   add ~alpha #60071
