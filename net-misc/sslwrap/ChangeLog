@@ -1,11 +1,17 @@
 # ChangeLog for net-misc/sslwrap
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-misc/sslwrap/ChangeLog,v 1.6 2002/12/13 11:00:14 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/sslwrap/ChangeLog,v 1.7 2003/02/10 10:32:00 seemant Exp $
+
+*sslwrap-2.0.6 (11 Jul 2002)
+
+  10 Feb 2003; Seemant Kulleen <seemant@gentoo.org> *.ebuild :
+
+  Changed sed expression delimiters from / to :, closing bug #15006 by Blu3
+  <david+gentoo.org@blue-labs.org>. Also moved the files/ subdir things to a
+  tarball on the mirrors.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
-*sslwrap-2.0.6 (11 Jul 2002)
-
   11 Jul 2002; Brandon Low <lostlogic@gentoo.org> sslwrap-2.0.6.ebuild :
 
   GCC-3.1 fix and updated version thanks to Robert Coie on bugzilla.

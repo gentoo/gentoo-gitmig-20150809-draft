@@ -1,29 +1,34 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-rsh/netkit-rsh-0.17-r2.ebuild,v 1.10 2002/12/09 04:33:17 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-rsh/netkit-rsh-0.17-r2.ebuild,v 1.11 2003/02/10 10:31:59 seemant Exp $
+
+inherit eutils
+
+IUSE=""
 
 S=${WORKDIR}/${P}
-DESCRIPTION="Netkit - rshd"
+DESCRIPTION="Netkit's Remote Shell Daemon"
 SRC_URI="http://ftp.debian.org/debian/pool/main/n/${PN}/${PN}_${PV}.orig.tar.gz"
 HOMEPAGE="ftp://ftp.uk.linux.org/pub/linux/Networking/netkit/"
-KEYWORDS="x86 sparc  ppc"
-LICENSE="bsd"
-SLOT="0"
 
-DEPEND="virtual/glibc
-	>=sys-libs/ncurses-5.2
+SLOT="0"
+LICENSE="BSD"
+KEYWORDS="x86 sparc ppc"
+
+DEPEND=">=sys-libs/ncurses-5.2
 	>=sys-libs/pam-0.72"
 
 src_unpack () {
 	unpack ${A}
 	cd ${S}
-	patch -p0 < ${O}/files/rlogind-auth.diff || die
+	epatch ${FILESDIR}/rlogind-auth.diff
 }
 
 src_compile() {
 	./configure || die
+
 	cp MCONFIG MCONFIG.orig
-	sed -e "s/-pipe -O2/${CFLAGS}/" \
+	sed -e "s:-pipe -O2:${CFLAGS}:" \
 		-e "s:-Wpointer-arith::" \
 		MCONFIG.orig > MCONFIG
 

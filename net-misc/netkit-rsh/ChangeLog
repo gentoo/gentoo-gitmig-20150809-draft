@@ -1,11 +1,17 @@
 # ChangeLog for net-misc/netkit-rsh
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-rsh/ChangeLog,v 1.7 2002/12/15 11:58:45 bjb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-rsh/ChangeLog,v 1.8 2003/02/10 10:31:59 seemant Exp $
+
+*netkit-rsh-0.17-r3 (25 Oct 2002)
+
+  10 Feb 2003; Seemant Kulleen <seemant@gentoo.org> *.ebuild :
+
+  Inherit eutils to use epatch instead.  Also, changed sed expression
+  delimiters to : from /, closing bug #15006 by Blu3
+  <david+gentoo.org@blue-labs.org>
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
-*netkit-rsh-0.17-r3 (25 Oct 2002)
-
   15 Dec 2002; Bjoern Brauel <bjb@gentoo.org> netkit-rsh-0.17-r3.ebuild :
   Add alpha to KEYWORDS
 

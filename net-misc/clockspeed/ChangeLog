@@ -1,8 +1,14 @@
 # ChangeLog for net-misc/clockspeed
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-misc/clockspeed/ChangeLog,v 1.8 2003/01/10 01:36:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/clockspeed/ChangeLog,v 1.9 2003/02/10 10:31:59 seemant Exp $
 
 *clockspeed-0.62-r2 (09 Jan 2003)
+
+  10 Feb 2003; Seemant Kulleen <seemant@gentoo.org> *.ebuild :
+
+  Inherit eutils to use epatch instead, and also changed sed expression
+  delimiters from / to :, closing bug #15006 by Blu3
+  <david+gentoo.org@blue-labs.org>
 
   09 Jan 2003; Mike Frysinger <vapier@gentoo.org> :
   Added a patch to support static in USE #12978

@@ -1,27 +1,32 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/clockspeed/clockspeed-0.62-r2.ebuild,v 1.1 2003/01/10 01:36:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/clockspeed/clockspeed-0.62-r2.ebuild,v 1.2 2003/02/10 10:31:59 seemant Exp $
 
-DESCRIPTION="a simple ntp client"
+inherit eutils
+
+IUSE="static"
+
+DESCRIPTION="A simple Network Time Protocol (NTP) client"
 SRC_URI="http://cr.yp.to/clockspeed/${P}.tar.gz"
 HOMEPAGE="http://cr.yp.to/"
 
-KEYWORDS="~x86 ~ppc ~sparc"
-LICENSE="freeware"
 SLOT="0"
-IUSE="static"
+LICENSE="freeware"
+KEYWORDS="~x86 ~ppc ~sparc"
 
-DEPEND="virtual/glibc
-	sys-apps/groff"
-RDEPEND="virtual/glibc"
+DEPEND="sys-apps/groff"
 
 src_compile() {
-	patch -p1 < ${FILESDIR}/${PF}-gentoo.diff || die
+	epatch ${FILESDIR}/${PF}-gentoo.diff
+
 	cp conf-cc{,.old}
 	sed -e "s/@CFLAGS@/${CFLAGS}/" conf-cc.old > conf-cc
+
 	use static && LDFLAGS="${LDFLAGS} -static"
+
 	cp conf-ld{,.old}
-	sed -e "s/@LDFLAGS@/${LDFLAGS}/" conf-ld.old > conf-ld
+	sed -e "s:@LDFLAGS@:${LDFLAGS}:" conf-ld.old > conf-ld
+
 	emake || die
 }
 

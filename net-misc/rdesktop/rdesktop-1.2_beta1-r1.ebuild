@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rdesktop/rdesktop-1.2_beta1-r1.ebuild,v 1.4 2003/02/05 19:34:26 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rdesktop/rdesktop-1.2_beta1-r1.ebuild,v 1.5 2003/02/10 10:32:00 seemant Exp $
 
 IUSE="ssl"
 
@@ -27,14 +27,16 @@ src_compile() {
 	    
 	[ "${DEBUG}" ] && myconf="${myconf} --with-debug"
 	
-	sed -e "s/-O2/${CFLAGS}/g" Makefile > Makefile.tmp && mv Makefile.tmp Makefile
+	sed -e "s:-O2:${CFLAGS}:g" Makefile > Makefile.tmp
+	mv Makefile.tmp Makefile
 	echo "CFLAGS += ${CXXFLAGS}" >> Makeconf
 	
 	./configure \
 		--prefix=/usr \
 		--mandir=/usr/share/man \
 		--sharedir=/usr/share/${PN} \
-		${myconf}
+		${myconf} || die
+
 	emake || die 
 }
 
