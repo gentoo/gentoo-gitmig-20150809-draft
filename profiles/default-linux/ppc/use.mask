@@ -18,6 +18,8 @@ tcc
 x86 
 fmod
 firebird
+i8x0
+xvmc
 
 # Unmask our instruction sets
 -altivec
