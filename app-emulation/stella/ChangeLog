@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/stella
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/stella/ChangeLog,v 1.1 2003/03/10 01:31:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/stella/ChangeLog,v 1.2 2003/04/14 22:33:02 mholzer Exp $
+
+*stella-1.3 (14 Apr 2003)
+
+  14 Apr 2003; Martin Holzer <mholzer@gentoo.org> Manifest, stella-1.3.ebuild:
+  Version bumped. Ebuild submitted by Chris Ripp (chris@ripp.net) in #18838.
 
 *stella-1.2 (09 Mar 2003)
 
