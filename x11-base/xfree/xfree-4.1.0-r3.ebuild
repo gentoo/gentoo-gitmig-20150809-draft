@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Desktop Team <desktop@gentoo.org>
 # Author: Achim Gottinger <achim@gentoo.org>, Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.1.0-r3.ebuild,v 1.1 2001/11/07 19:32:13 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.1.0-r3.ebuild,v 1.2 2001/11/09 16:41:17 agriffis Exp $
 
 MY_V="`echo ${PV} |sed -e 's:\.::g'`"
 S=${WORKDIR}/xc
@@ -64,6 +64,7 @@ src_install() {
 	cd ${D}/usr/X11R6/lib/X11/fonts
 	tar -xz --no-same-owner -f ${DISTDIR}/truetype.tar.gz
 	dosym /usr/X11R6/lib/libGL.so.1.2 /usr/X11R6/lib/libMesaGL.so
+	dosym /usr/X11R6/bin /usr/bin/X11
 	
 	#X installs some /usr/lib/libGL symlinks, pointing to the libGL's in /usr/X11R6/lib.
 	#I don't see the point in this.  Yes, according to LSB, the correct location for libGL is
