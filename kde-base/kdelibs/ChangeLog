@@ -1,6 +1,6 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.59 2003/02/28 12:10:33 hannes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.60 2003/02/28 20:44:52 wwoods Exp $
 
   28 Feb 2003; Hannes Mehnert <hannes@gentoo.org> kdelibs-3.1-r2.ebuild:
   added fix for >=libxml2-2.5.2. closes bug #15245
@@ -10,6 +10,10 @@
 
   15 Feb 2003; Jason Wever <weeve@gentoo.org> kdelibs-3.1.ebuild
   Changed ~sparc keyword to sparc.
+
+  28 Feb 2003; Will Woods <wwoods@gentoo.org> kdelibs-3.1-r2.ebuild:
+  Added workaround for gcc3 optimization bug on alpha, removed 
+  -mieee flag (old attempt to fix this bug), and added ~alpha keyword.
 
   13 Feb 2003; Dan Armak <danarmak@gentoo.org> kdelibs-3.1-r1.ebuild:
 

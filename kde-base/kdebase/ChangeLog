@@ -1,12 +1,15 @@
 # ChangeLog for kde-base/kdebase
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.61 2003/02/15 20:56:25 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.62 2003/02/28 20:44:52 wwoods Exp $
 
   15 Feb 2003; Jason Wever <weeve@gentoo.org> kdebase-3.1-r1.ebuild:
   Added ~sparc to keywords.
 
   15 Feb 2003; Jason Wever <weeve@gentoo.org> kdebase-3.1.ebuild:
   Changed ~sparc keyword to sparc.
+
+  28 Feb 2003; Will Woods <wwoods@gentoo.org> kdebase-3.1-r1.ebuild:
+  Added ~alpha keyword
 
   12 Feb 2003; Hannes Mehnert <hannes@gentoo.org> kdebase-2.2.2-r3.ebuild,
   kdebase-3.0.2.ebuild, kdebase-3.0.3.ebuild, kdebase-3.0.3-r1.ebuild,

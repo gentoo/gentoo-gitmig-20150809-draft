@@ -1,9 +1,14 @@
 # ChangeLog for kde-base/kdeaddons
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons/ChangeLog,v 1.29 2003/02/15 20:56:25 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons/ChangeLog,v 1.30 2003/02/28 20:44:51 wwoods Exp $
 
   15 Feb 2003; Jason Wever <weeve@gentoo.org> kdeaddons-3.1.ebuild:
   Changed ~sparc keyword to sparc.
+
+*kdeaddons-3.1 (01 Feb 2003)
+
+  28 Feb 2003; Will Woods <wwoods@gentoo.org> kdeaddons-3.1.ebuild :
+  Added ~alpha keyword
 
   12 Feb 2003; Hannes Mehnert <hannes@gentoo.org> kdeaddons-3.0.2.ebuild,
   kdeaddons-3.0.3.ebuild, kdeaddons-3.1_rc6.ebuild: removed old versions
@@ -11,10 +16,10 @@
   02 Feb 2003; Hannes Mehnert <hannes@gentoo.org> kdeaddons-3.0.2.ebuild:
   fixed typo, bug #14948
 
-*kdeaddons-3.1_rc6 (05 Jan 2003)
-
   01 Feb 2003; Jack Morgan <jmorgan@gentoo.org> kdeaddons-3.1.ebuild:
   added ~sparc to keywords
+
+*kdeaddons-3.1_rc6 (05 Jan 2003)
 
   08 Jan 2003; Mark Guertin <gerk@gentoo.org> kdeaddons-3.1_rc6.ebuild:
   added ~ppc to keywords

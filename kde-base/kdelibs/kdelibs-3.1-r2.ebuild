@@ -1,12 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.1-r2.ebuild,v 1.8 2003/02/28 12:10:33 hannes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.1-r2.ebuild,v 1.9 2003/02/28 20:44:52 wwoods Exp $
 inherit kde kde.org 
 #don't inherit  kde-base or kde-dist! it calls need-kde which adds kdelibs to depend!
 
 IUSE="alsa cups ipv6 ssl"
 DESCRIPTION="KDE libraries needed by all kde programs" 
-KEYWORDS="x86 ~ppc ~sparc"
+KEYWORDS="x86 ~ppc ~sparc ~alpha"
 HOMEPAGE="http//www.kde.org/"
 SLOT="3.1"
 LICENSE="GPL-2 LGPL-2"
@@ -49,7 +49,6 @@ use alsa	&& myconf="$myconf --with-alsa"			|| myconf="$myconf --without-alsa"
 use cups	&& myconf="$myconf --enable-cups"		|| myconf="$myconf --disable-cups"
 
 use x86 && myconf="$myconf --enable-fast-malloc=full"
-use alpha && append-flags -mieee
 
 qtver-from-kdever ${PV}
 need-qt $selected_version
@@ -59,6 +58,7 @@ set-kdedir $PV
 src_unpack() {
 	kde_src_unpack
 	kde_sandbox_patch ${S}/kio/misc/kpac
+	use alpha && cd ${S} && epatch ${FILESDIR}/${P}-kjs-alphaev6-gcc3-workaround.patch
 }
 
 src_install() {

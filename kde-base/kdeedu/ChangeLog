@@ -1,6 +1,6 @@
 # ChangeLog for kde-base/kdeedu
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu/ChangeLog,v 1.26 2003/02/15 20:56:25 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu/ChangeLog,v 1.27 2003/02/28 20:44:52 wwoods Exp $
 
   15 Feb 2003; Jason Wever <weeve@gentoo.org> kdeedu-3.1.ebuild:
   Changed ~sparc keyword to sparc.
@@ -12,6 +12,9 @@
   filter "-fomit-frame-pointer" if gcc-2.95.3 is used. fixes bug #14768
 
 *kdeedu-3.1-r1 (02 Feb 2003)
+
+  28 Feb 2003; Will Woods <wwoods@gentoo.org> kdeedu-3.1-r1.ebuild:
+  Added ~alpha keyword
 
   02 Feb 2003; Dan Armak <danarmak@gentoo.org> ChangeLog  :
 

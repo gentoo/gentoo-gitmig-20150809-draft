@@ -1,9 +1,14 @@
 # ChangeLog for kde-base/kdegraphics
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/ChangeLog,v 1.34 2003/02/15 20:56:25 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/ChangeLog,v 1.35 2003/02/28 20:44:52 wwoods Exp $
 
   15 Feb 2003; Jason Wever <weeve@gentoo.org> kdegraphics-3.1.ebuild:
   Changed ~sparc keyword to sparc.
+
+*kdegraphics-3.1 (01 Feb 2003)
+
+  28 Feb 2003; Will Woods <wwoods@gentoo.org> kdegraphics-3.1.ebuild:
+  Added ~alpha keyword
 
   12 Feb 2003; Hannes Mehnert <hannes@gentoo.org> kdegraphics-2.2.2.ebuild,
   kdegraphics-3.0.2.ebuild, kdegraphics-3.0.3.ebuild,
