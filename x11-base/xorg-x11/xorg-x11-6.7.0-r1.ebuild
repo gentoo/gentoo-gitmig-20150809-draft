@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.7.0-r1.ebuild,v 1.18 2004/06/24 21:57:58 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.7.0-r1.ebuild,v 1.19 2004/06/30 15:02:28 agriffis Exp $
 
 # Libraries which are now supplied in shared form that were not in the past
 # include:  libFS.so, libGLw.so, libI810XvMC.so, libXRes.so, libXfontcache.so,
@@ -99,7 +99,7 @@ LICENSE="Adobe-X CID DEC DEC-2 IBM-X NVIDIA-X NetBSD SGI UCB-LBL XC-2
 	nokia tektronix the-open-group todd-c-miller x-truetype xfree86-1.0
 	MIT SGI-B BSD FTL | GPL-2"
 SLOT="0"
-KEYWORDS="~x86 sparc alpha arm hppa ~mips ~ppc64 ppc amd64"
+KEYWORDS="~x86 sparc alpha arm hppa ~mips ~ppc64 ppc amd64 ia64"
 
 # Need portage-2.0.50_pre9 for `use !foo`
 DEPEND=">=sys-apps/baselayout-1.8.3
