@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/mythtv
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.45 2005/02/28 08:53:26 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.46 2005/03/02 08:52:23 eradicator Exp $
+
+  02 Mar 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  files/mythbackend.conf, files/mythbackend.rc6:
+  Use bash builtins for testing.  Added MYTH_NICE option.
 
   28 Feb 2005; Doug Goldstein <cardoe@gentoo.org> mythtv-0.17.ebuild:
   added some notices about ieee1394 and cle266 USE flags
