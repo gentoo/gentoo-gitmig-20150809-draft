@@ -1,6 +1,16 @@
 # ChangeLog for media-video/ati-drivers
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ChangeLog,v 1.44 2004/06/25 00:36:01 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ChangeLog,v 1.45 2004/07/26 20:34:40 spyderous Exp $
+
+  26 Jul 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  ati-drivers-2.9.13-r1.ebuild, ati-drivers-3.2.0.ebuild,
+  ati-drivers-3.2.4.ebuild, ati-drivers-3.2.5-r1.ebuild,
+  ati-drivers-3.2.5.ebuild, ati-drivers-3.2.8-r1.ebuild,
+  ati-drivers-3.2.8-r2.ebuild, ati-drivers-3.2.8.ebuild,
+  ati-drivers-3.7.0.ebuild, ati-drivers-3.7.6-r1.ebuild,
+  ati-drivers-3.7.6.ebuild, ati-drivers-3.9.0-r1.ebuild,
+  ati-drivers-3.9.0.ebuild:
+  /usr/src/linux needs ${ROOT}.
 
   19 Jun 2004; Luca Barbato <lu_zero@gentoo.org> ati-drivers-3.9.0-r1.ebuild:
   Marked stable

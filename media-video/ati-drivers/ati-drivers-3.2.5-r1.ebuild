@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-3.2.5-r1.ebuild,v 1.10 2004/07/14 21:22:00 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-3.2.5-r1.ebuild,v 1.11 2004/07/26 20:34:40 spyderous Exp $
 
 IUSE="qt"
 
@@ -71,7 +71,7 @@ src_compile() {
 	    addwrite "/usr/src/${FK}"
 		export _POSIX2_VERSION=199209
 		cp 2.6.x/Makefile .
-		make -C /usr/src/linux SUBDIRS="`pwd`" modules || \
+		make -C ${ROOT}/usr/src/linux SUBDIRS="`pwd`" modules || \
 	    ewarn "glx module not built"
 	    ARCH=${GENTOO_ARCH}
 	else

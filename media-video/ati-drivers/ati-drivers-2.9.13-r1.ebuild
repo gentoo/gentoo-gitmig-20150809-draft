@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-2.9.13-r1.ebuild,v 1.7 2004/07/14 21:22:00 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-2.9.13-r1.ebuild,v 1.8 2004/07/26 20:34:40 spyderous Exp $
 
 IUSE="qt"
 
@@ -62,7 +62,7 @@ src_compile() {
 		cd ${WORKDIR}/fglrx-$PV-2.6
 		GENTOO_ARCH=${ARCH} unset ARCH
 		addwrite "/usr/src/${FK}"
-		make -C /usr/src/linux SUBDIRS="`pwd`" modules || \
+		make -C ${ROOT}/usr/src/linux SUBDIRS="`pwd`" modules || \
 			ewarn "glx module not built"
 		ARCH=${GENTOO_ARCH}
 		else
