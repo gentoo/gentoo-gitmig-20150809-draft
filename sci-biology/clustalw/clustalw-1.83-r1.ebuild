@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/clustalw/clustalw-1.83-r1.ebuild,v 1.2 2005/01/02 22:27:42 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/clustalw/clustalw-1.83-r1.ebuild,v 1.3 2005/01/14 22:24:13 j4rg0n Exp $
 
 inherit toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.ebi.ac.uk/pub/software/unix/clustalw/${PN}${PV}.UNIX.tar.gz"
 
 LICENSE="clustalw"
 SLOT="0"
-KEYWORDS="alpha ppc sparc x86 ~ppc-macos ~amd64"
+KEYWORDS="alpha ppc sparc x86 ppc-macos ~amd64"
 IUSE=""
 
 DEPEND="virtual/libc"
