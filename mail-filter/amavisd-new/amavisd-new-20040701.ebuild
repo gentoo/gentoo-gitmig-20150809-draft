@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/amavisd-new-20040701.ebuild,v 1.6 2004/10/02 16:24:26 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/amavisd-new-20040701.ebuild,v 1.7 2004/12/22 20:04:34 langthang Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.ijs.si/software/amavisd/${PN}-${PV/_/-}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~amd64 ~sparc ~alpha"
+KEYWORDS="x86 ~ppc ~amd64 ~sparc ~alpha"
 IUSE="ldap mysql postgres milter"
 
 DEPEND=">=sys-apps/sed-4
@@ -21,6 +21,7 @@ RDEPEND="${DEPEND}
 	app-arch/gzip
 	app-arch/bzip2
 	app-arch/arc
+	app-arch/cabextract
 	app-arch/freeze
 	app-arch/lha
 	app-arch/unarj
@@ -52,6 +53,15 @@ RDEPEND="${DEPEND}
 S="${WORKDIR}/${PN}-${PV/_*/}"
 
 AMAVIS_ROOT=/var/amavis
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	if $(has_version mail-mta/courier) ; then
+		einfo "Patching with courier support."
+		epatch "amavisd-new-courier.patch" || die "patch failed"
+	fi
+}
 
 src_compile() {
 	if use milter ; then

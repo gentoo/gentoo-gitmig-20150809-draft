@@ -1,6 +1,11 @@
 # ChangeLog for mail-filter/amavisd-new
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/ChangeLog,v 1.13 2004/10/02 16:24:26 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/ChangeLog,v 1.14 2004/12/22 20:04:34 langthang Exp $
+
+  22 Dec 2004; Tuan Van <langthang@gentoo.org> amavisd-new-20040701.ebuild:
+  add app-arch/cabextract to RDEPEND. Bug #65248.
+  apply courier patch. Bug #52291.
+  stable on x86 in preparing to abandon date versioning scheme.
 
   02 Oct 2004; Bryan Østergaard <kloeri@gentoo.org>
   amavisd-new-20040701.ebuild:
