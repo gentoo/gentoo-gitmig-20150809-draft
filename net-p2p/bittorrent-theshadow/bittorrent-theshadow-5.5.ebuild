@@ -1,6 +1,7 @@
-# Copyright 2000-2003 Gentoo Technologies, Inc. Okrain Genady, and Luke-Jr
+# Copyright 2000-2003 Gentoo Technologies, Inc. Okrain Genady (^Mafteah),
+#						and Luke-Jr
 # Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent-theshadow/bittorrent-theshadow-5.5.ebuild,v 1.2 2003/08/21 13:43:21 luke-jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent-theshadow/bittorrent-theshadow-5.5.ebuild,v 1.3 2003/08/21 14:01:25 luke-jr Exp $
 inherit distutils
 
 S=${WORKDIR}/BitTorrent-CVS-shadowsclient
