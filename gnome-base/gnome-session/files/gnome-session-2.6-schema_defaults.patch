@@ -1,0 +1,29 @@
+--- gnome-session-2.5.92/gnome-session/gnome-session.schemas.in	2003-11-12 11:30:57.000000000 +0100
++++ gnome-session-2.5.92/gnome-session/gnome-session.schemas.in.patched	2004-03-20 09:59:55.497898160 +0100
+@@ -17,7 +17,7 @@
+          <applyto>/apps/gnome-session/options/auto_save_session</applyto>
+          <owner>gnome</owner>
+          <type>bool</type>
+-         <default>false</default>
++         <default>true</default>
+          <locale name="C">
+             <short>Save sessions</short>
+             <long>If enabled, gnome-session will save the session automatically.  Otherwise, the logout dialog will have an option to save the session.</long>
+@@ -28,7 +28,7 @@
+          <applyto>/apps/gnome-session/options/logout_prompt</applyto>
+          <owner>gnome</owner>
+          <type>bool</type>
+-         <default>true</default>
++         <default>false</default>
+          <locale name="C">
+             <short>Logout prompt</short>
+             <long>If enabled, gnome-session will prompt the user before ending a session.</long>
+@@ -50,7 +50,7 @@
+          <applyto>/apps/gnome-session/options/splash_image</applyto>
+          <owner>gnome</owner>
+          <type>string</type>
+-         <default>splash/gnome-splash.png</default>
++         <default>splash/gentoo-splash.png</default>
+          <locale name="C">
+             <short>Splash Screen Image</short>
+             <long>Preferred Image to use for the splash screen when logging in to the GNOME Desktop</long>
