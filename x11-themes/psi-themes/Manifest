@@ -1,3 +1,6 @@
 MD5 ab17aa5b8059b41d6747025a110e1c2b ChangeLog 326
 MD5 3a9a57d2af973249689fb87e203221be psi-themes-0.8.7.ebuild 985
+MD5 ea7a62f694e6372fe2a80475135485fd psi-themes-0.8.8.ebuild 1771
+MD5 421ce51bdddbc4a17fc9663ed2d9bb22 psi-themes-0.8.8.ebuild~ 1791
 MD5 7465f04b3b3ddce6675b52343bd15810 files/digest-psi-themes-0.8.7 363
+MD5 ccb33ae86f7eaa564cb6dc7ee9a7fbcc files/digest-psi-themes-0.8.8 815

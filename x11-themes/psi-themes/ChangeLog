@@ -1,6 +1,12 @@
 # ChangeLog for x11-themes/psi-themes
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/psi-themes/ChangeLog,v 1.4 2003/10/23 14:24:32 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/psi-themes/ChangeLog,v 1.5 2003/11/11 21:09:27 luke-jr Exp $
+
+*psi-themes-0.8.8 (7 Nov 2003) 
+
+  07 Nov 2003; Stephan <stephan-01@gmx.de> 
+
+  Added new / missing icon themes
 
 *psi-themes-0.8.7 (3 Nov 2002) 
 
