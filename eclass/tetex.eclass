@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/tetex.eclass,v 1.10 2004/06/04 18:29:08 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/tetex.eclass,v 1.11 2004/06/09 18:43:32 usata Exp $
 #
 # Author: Jaromir Malenko <malenko@email.cz>
 # Author: Mamoru KOMACHI <usata@gentoo.org>
@@ -131,6 +131,11 @@ tetex_src_install() {
 	# Install texmf files
 	einfo "Installing texmf..."
 	cp -Rv texmf ${D}/usr/share
+
+	# bug #47004
+	insinto /usr/share/texmf/tex/latex/a0poster
+	doins ${S}/texmf/source/latex/a0poster/a0poster.cls || die
+	doins ${S}/texmf/source/latex/a0poster/a0size.sty || die
 
 	# Install teTeX files
 	einfo "Installing teTeX..."
