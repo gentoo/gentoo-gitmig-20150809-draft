@@ -1,12 +1,12 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/tcsh/tcsh-6.12.ebuild,v 1.2 2002/12/09 04:17:43 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/tcsh/tcsh-6.12.ebuild,v 1.3 2002/12/18 14:51:39 vapier Exp $
 
 MY_P="${PN}-${PV}.00"
-
 DESCRIPTION="Enhanced version of the Berkeley C shell (csh)"
 SRC_URI="ftp://ftp.astron.com/pub/tcsh/${MY_P}.tar.gz"
-HOMEPAGE="http://www.tcsh.org"
+HOMEPAGE="http://www.tcsh.org/"
+
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc "
@@ -25,7 +25,7 @@ src_unpack() {
 }
 
 src_compile() {
-	econf --prefix=/ || die "configure problem"
+	econf --prefix=/
 	emake || die "compile problem"
 }
 
