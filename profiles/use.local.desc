@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.18 2003/04/29 00:05:54 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.19 2003/05/03 15:26:48 pfeifer Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -27,9 +27,10 @@ sys-devel/gdb:objc - If you want to be able to debug Objective C code.
 sys-devel/oskit:oskit-noassert - Disable assertions in debugging
 sys-devel/oskit:oskit-nobuild - Configure but don't build OSKit
 sys-devel/oskit:oskit-noconf - Unpack sources to /usr/src but don't configure OSKit
-sys-kernel/gentoo-sources:aavm - If you want aavm support
+sys-kernel/gentoo-sources:aavm - adds Andrea Arcangeli's vm support (removes rmap by Rik van Riel which is the default)
 sys-kernel/gentoo-sources:acpi4linux - If you want ACPI support
-sys-kernel/gentoo-sources:evms2 - If you want evms 2.0 support
+sys-kernel/gentoo-sources:evms2 - adds EVMS 2.0 support drop EVMS 1.2.1
+sys-kernel/gentoo-sources:usagi - adds USAGI (Linux IPv6 Development Project) support drops {superfreeswan/patch-int/loop-jari}
 sys-kernel/gentoo-sources:xfs - If you want XFS filesystem support
 sys-kernel/sparc-sources:ultra1 - If you have a SUN Ultra 1 with a HME interface
 sys-libs/glibc:nptl - If you want the Native POSIX Threading Library built into glibc.
