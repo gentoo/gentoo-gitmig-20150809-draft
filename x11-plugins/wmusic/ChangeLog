@@ -1,0 +1,9 @@
+# ChangeLog for x11-plugins/wmusic
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmusic/ChangeLog,v 1.1 2003/01/14 06:35:55 raker Exp $
+
+*wmusic-1.4.10 (14 Jan 2003)
+
+  14 Jan 2003; Nick Hadaway <raker@gentoo.org> wmusic-1.4.10.ebuild,
+  files/digest-wmusic-1.4.10 :
+  New ebuild.  xmms-controlling dockapp.
