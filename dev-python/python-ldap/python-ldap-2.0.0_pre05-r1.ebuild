@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-ldap/python-ldap-2.0.0_pre05-r1.ebuild,v 1.11 2003/11/23 02:23:13 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-ldap/python-ldap-2.0.0_pre05-r1.ebuild,v 1.12 2004/05/04 12:26:06 kloeri Exp $
 
 VERSION="2.0.0pre05"
 S=${WORKDIR}/${PN}-${VERSION}
@@ -13,6 +13,7 @@ DEPEND="virtual/python
 SLOT="0"
 LICENSE="PYTHON"
 KEYWORDS="x86 sparc alpha"
+IUSE=""
 
 inherit distutils
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-fchksum/python-fchksum-1.6.1-r1.ebuild,v 1.21 2004/04/26 18:51:07 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-fchksum/python-fchksum-1.6.1-r1.ebuild,v 1.22 2004/05/04 12:24:40 kloeri Exp $
 
 # DON'T inherit distutils because it will cause a circular dependency with python
 #inherit distutils
@@ -12,6 +12,7 @@ HOMEPAGE="http://www.dakotacom.net/~donut/programs/fchksum.html"
 KEYWORDS="amd64 x86 ppc sparc alpha hppa mips ia64"
 LICENSE="GPL-2"
 SLOT="0"
+IUSE=""
 
 DEPEND="sys-libs/zlib"
 

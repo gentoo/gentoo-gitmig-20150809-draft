@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/qscintilla
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla/ChangeLog,v 1.18 2004/04/21 12:05:08 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla/ChangeLog,v 1.19 2004/05/04 12:34:25 kloeri Exp $
+
+  04 May 2004; Bryan Østergaard <kloeri@gentoo.org> qscintilla-1.49-r1.ebuild,
+  qscintilla-1.49.ebuild, qscintilla-1.52.ebuild, qscintilla-1.53.ebuild:
+  Add missing IUSE.
 
   21 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> qscintilla-1.54.ebuild:
   Mark stable on amd64.

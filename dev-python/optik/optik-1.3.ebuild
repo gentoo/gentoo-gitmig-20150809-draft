@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/optik/optik-1.3.ebuild,v 1.13 2003/06/22 12:15:59 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/optik/optik-1.3.ebuild,v 1.14 2004/05/04 12:00:33 kloeri Exp $
 
 S="${WORKDIR}/Optik-${PV}"
 
@@ -13,7 +13,7 @@ DEPEND="virtual/python"
 SLOT="0"
 KEYWORDS="x86 sparc alpha"
 LICENSE="BSD"
-
+IUSE=""
 
 src_compile() {
 	python setup.py build || die

@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pyrex
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyrex/ChangeLog,v 1.10 2004/05/03 20:47:03 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyrex/ChangeLog,v 1.11 2004/05/04 12:19:45 kloeri Exp $
+
+  04 May 2004; Bryan Østergaard <kloeri@gentoo.org> pyrex-0.5.ebuild,
+  pyrex-0.7.1.ebuild, pyrex-0.8.2.ebuild, pyrex-0.9.ebuild:
+  Add missing IUSE.
 
 *pyrex-0.9.1.1 (03 May 2004)
 
