@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/yosucker
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/yosucker/ChangeLog,v 1.15 2004/09/06 00:49:26 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/yosucker/ChangeLog,v 1.16 2004/09/23 09:43:35 ticho Exp $
+
+  23 Sep 2004; Andrej Kacian <ticho@gentoo.org> yosucker-59.ebuild:
+  Stable on x86.
 
   06 Sep 2004; Ciaran McCreesh <ciaranm@gentoo.org> yosucker-55.ebuild,
   yosucker-59.ebuild:
