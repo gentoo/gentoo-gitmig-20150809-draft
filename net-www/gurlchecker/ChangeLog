@@ -1,6 +1,9 @@
 # ChangeLog for net-www/gurlchecker
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/gurlchecker/ChangeLog,v 1.9 2004/06/25 00:53:22 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/gurlchecker/ChangeLog,v 1.10 2004/08/02 19:17:58 leonardop Exp $
+
+  02 Aug 2004; L. Boshell <leonardop@gentoo.org> gurlchecker-0.6.7.ebuild:
+  Changed HOMEPAGE value to reflect current homepage. Resolves bug #59094.
 
   12 May 2004; L. Boshell <leonardop@gentoo.org> gurlchecker-0.6.7.ebuild:
   Marked stable on x86.
