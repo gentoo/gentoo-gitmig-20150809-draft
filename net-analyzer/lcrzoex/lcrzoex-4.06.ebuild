@@ -1,14 +1,14 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Donny Davies <woodchip@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/lcrzoex/lcrzoex-4.06.ebuild,v 1.1 2002/03/20 08:32:39 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/lcrzoex/lcrzoex-4.06.ebuild,v 1.2 2002/03/21 07:51:08 woodchip Exp $
 
 DESCRIPTION="Toolbox of over 200 utilities for testing Ethernet/IP networks"
 HOMEPAGE="http://www.laurentconstantin.com/en/lcrzoex/"
 SRC_URI="http://www.laurentconstantin.com/common/${PN}/download/v4/${P}-src.tgz"
 S=${WORKDIR}/${P}-src
 
-DEPEND="virtual/glibc net-libs/lcrzo"
+DEPEND="virtual/glibc =net-libs/lcrzo-4.06"
 
 src_unpack() {
 	unpack ${A} ; cd ${S}/src
