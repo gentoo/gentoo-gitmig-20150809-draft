@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/modutils
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/modutils/ChangeLog,v 1.45 2004/12/23 23:16:36 vapier Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/modutils/ChangeLog,v 1.46 2005/02/07 18:35:55 gustavoz Exp $
+
+  07 Feb 2005; Gustavo Zacarias <gustavoz@gentoo.org> modutils-2.4.27.ebuild:
+  Stable on sparc
 
   23 Dec 2004; Mike Frysinger <vapier@gentoo.org> +files/2.4.27-gcc34.patch,
   modutils-2.4.27.ebuild:
