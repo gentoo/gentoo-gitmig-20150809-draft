@@ -12,4 +12,3 @@ app-editors/gtk-xemacs
 >=app-text/aspell-0.33
 app-text/sgml2x
 >=net-nds/openldap-2.0
-net-www/galeon
