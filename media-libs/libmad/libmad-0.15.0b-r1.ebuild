@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmad/libmad-0.15.0b-r1.ebuild,v 1.9 2004/03/26 19:23:18 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmad/libmad-0.15.0b-r1.ebuild,v 1.10 2004/04/26 22:11:32 geoman Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/mad/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc alpha sparc hppa amd64 ~mips ia64"
+KEYWORDS="x86 ppc alpha sparc hppa amd64 mips ia64"
 
 DEPEND="virtual/glibc"
 
