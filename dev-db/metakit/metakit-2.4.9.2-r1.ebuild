@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/metakit/metakit-2.4.9.2-r1.ebuild,v 1.2 2003/08/20 04:37:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/metakit/metakit-2.4.9.2-r1.ebuild,v 1.3 2003/12/08 02:46:23 kloeri Exp $
 
 DESCRIPTION="Embedded database library"
 HOMEPAGE="http://www.equi4.com/metakit/"
@@ -18,6 +18,12 @@ DEPEND=">=sys-apps/sed-4
 src_unpack() {
 	unpack ${A} ; cd ${S}
 	sed -i "s:^\(CXXFLAGS = \).*:\1${CXXFLAGS}:" unix/Makefile.in
+	PY_VER="$(python -c 'import sys; print sys.version[0:3]')"
+	if [ ${PY_VER} == '2.3' ]; then
+		sed -i "s:/python2.2:/python${PY_VER}:" unix/configure
+		sed -i 's:LONG_LONG :PY_LONG_LONG :' python/scxx/PWONumber.h
+		sed -i 's:\(LONG_LONG\):\(PY_LONG_LONG\):' python/PyRowRef.cpp
+	fi
 }
 
 src_compile() {
