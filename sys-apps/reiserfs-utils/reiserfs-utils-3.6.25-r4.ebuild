@@ -1,9 +1,8 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Your Name <your email>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/reiserfs-utils/reiserfs-utils-3.6.25-r4.ebuild,v 1.1 2001/03/09 10:26:59 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/reiserfs-utils/reiserfs-utils-3.6.25-r4.ebuild,v 1.2 2001/03/10 00:22:17 drobbins Exp $
 
-A="${P}.tar.gz reiserfsprogs-3.x.0f.tar.gz"
 S=${WORKDIR}/${P}
 S0=${WORKDIR}/reiserfsprogs-3.x.0f
 DESCRIPTION="Reiserfs Utilities"
