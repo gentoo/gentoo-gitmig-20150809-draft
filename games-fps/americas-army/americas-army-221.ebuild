@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/americas-army/americas-army-221.ebuild,v 1.1 2004/12/14 22:45:41 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/americas-army/americas-army-221.ebuild,v 1.2 2005/01/27 04:25:32 eradicator Exp $
 
 inherit games
 
@@ -25,7 +25,8 @@ DEPEND="virtual/libc
 RDEPEND="virtual/libc
 	opengl? ( virtual/opengl )
 	amd64? ( app-emulation/emul-linux-x86-xlibs
-			 app-emulation/emul-linux-x86-nvidia )"
+	         || ( >=media-video/nvidia-glx-1.0.6629-r3
+                      app-emulation/emul-linux-x86-nvidia ) )"
 
 S=${WORKDIR}
 dir=${GAMES_PREFIX_OPT}/${PN}
