@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/mm-sources-2.6.2_rc1-r3.ebuild,v 1.1 2004/01/25 03:55:30 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/mm-sources-2.6.2_rc1-r3.ebuild,v 1.2 2004/01/26 18:13:28 lostlogic Exp $
 
 UNIPATCH_LIST="${DISTDIR}/${KV}.bz2"
 K_PREPATCHED="yes"
@@ -9,6 +9,7 @@ UNIPATCH_STRICTORDER="yes"
 ETYPE="sources"
 inherit kernel-2
 detect_version
+EXTRAVERSION="${KV/[0-9].[0-9].[0-9]/}"
 
 RESTRICT="nomirror"
 
