@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/libgnomeuimm
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libgnomeuimm/ChangeLog,v 1.5 2003/10/17 21:53:20 leonardop Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libgnomeuimm/ChangeLog,v 1.6 2004/02/15 18:41:53 weeve Exp $
+
+  15 Feb 2004; Jason Wever <weeve@gentoo.org> libgnomeuimm-2.0.0.ebuild:
+  Added ~sparc keyword to fix broken workrave dependencies.
 
   17 Oct 2003; L. Boshell <leonardop@gentoo.org> libgnomeuimm-2.0.0.ebuild :
   Marking stable on x86.
