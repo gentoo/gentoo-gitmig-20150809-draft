@@ -1,7 +1,7 @@
 # Copyright 2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author: Robin H. Johnson <robbat2@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.48 2003/06/16 22:25:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.49 2003/06/16 22:26:07 vapier Exp $
 
 # This EBUILD is totally masked presently. Use it at your own risk.  I know it
 # is severely broken, but I needed to get a copy into CVS to pass around and
@@ -252,10 +252,10 @@ php_src_compile() {
 	myconf="${myconf} `use_enable memlimit memory-limit`"
 	myconf="${myconf} `use_enable cjk mbstring` `use_enable cjk mbregex`"
 
-	if [ `use gd` ] ; then
-		myconf="${myconf} --with-gd=/usr"
-	elif [ `use gd-bundled` ] ; then
+	if [ `use gd-bundled` ] ; then
 		myconf="${myconf} --with-gd"
+	elif [ `use gd` ] ; then
+		myconf="${myconf} --with-gd=/usr"
 	else
 		myconf="${myconf} --without-gd"
 	fi
