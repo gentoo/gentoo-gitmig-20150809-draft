@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-2.01-r2.ebuild,v 1.6 2005/03/22 18:07:15 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-2.01-r2.ebuild,v 1.7 2005/03/31 20:27:21 blubb Exp $
 
 inherit eutils gcc gnuconfig versionator
 
@@ -13,7 +13,7 @@ SRC_URI="ftp://ftp.berlios.de/pub/cdrecord/${P}.tar.bz2
 
 LICENSE="GPL-2 freedist"
 SLOT="0"
-KEYWORDS="~amd64 arm hppa ia64 m68k ppc s390 sh ~sparc x86"
+KEYWORDS="amd64 arm hppa ia64 m68k ppc s390 sh ~sparc x86"
 IUSE="crypt unicode"
 
 DEPEND="!app-cdr/dvdrtools"
