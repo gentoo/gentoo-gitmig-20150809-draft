@@ -1,22 +1,22 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-4.3-r4.ebuild,v 1.20 2004/06/24 23:09:19 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-4.3-r4.ebuild,v 1.21 2004/07/29 02:11:42 vapier Exp $
 
 inherit eutils
 
 # Official patches
 PLEVEL="x001 x002"
 
-S="${WORKDIR}/${P}"
 DESCRIPTION="Another cute console display library"
-SRC_URI="ftp://ftp.gnu.org/gnu/readline/${P}.tar.gz
-	 ftp://gatekeeper.dec.com/pub/GNU/readline/${P}.tar.gz
-	 ${PLEVEL//x/ftp://ftp.gnu.org/gnu/${PN}/${PN}-${PV}-patches/${PN}${PV/\.}-}"
 HOMEPAGE="http://cnswww.cns.cwru.edu/php/chet/readline/rltop.html"
+SRC_URI="ftp://ftp.gnu.org/gnu/readline/${P}.tar.gz
+	ftp://gatekeeper.dec.com/pub/GNU/readline/${P}.tar.gz
+	${PLEVEL//x/ftp://ftp.gnu.org/gnu/${PN}/${PN}-${PV}-patches/${PN}${PV/\.}-}"
 
-SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="amd64 x86 ppc sparc alpha hppa mips ia64"
+SLOT="0"
+KEYWORDS="x86 ppc sparc mips alpha hppa amd64 ia64"
+IUSE=""
 
 # We must be sertain that we have a bash that is linked
 # to its internal readline, else we may get problems.
@@ -76,5 +76,18 @@ src_install() {
 	docinto ps
 	dodoc doc/*.ps
 	dohtml -r doc
+
+	# Backwards compatibility #29865
+	if [ -e ${ROOT}/lib/libreadline.so.4.1 ] ; then
+		cp -a ${ROOT}/lib/libreadline.so.4.1 ${D}/lib/
+		touch ${D}/lib/libreadline.so.4.1
+	fi
 }
 
+pkg_postinst() {
+	if [ -e ${ROOT}/lib/libreadline.so.4.1 ] ; then
+		ewarn "Your old readline libraries have been copied over."
+		ewarn "You should run 'revdep-rebuild --soname libreadline.so.4.1' asap."
+		ewarn "Once you have, you can safely delete /lib/libreadline.so.4.1"
+	fi
+}

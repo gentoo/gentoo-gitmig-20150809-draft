@@ -1,13 +1,15 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 2aef331e5a708cfe6214b06692fae8e3 ChangeLog 4228
+MD5 f19ba1438b0df6503e1ee5a84e8a8fb9 ChangeLog 4503
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 385f8424e1428cda9fee00ec0daba35b readline-4.1-r5.ebuild 1833
-MD5 d4ced46b66ec4e2f9d6947e718b01e9e readline-4.3-r4.ebuild 1988
-MD5 1b1537ddb6aa4a63288fef14b6c37929 readline-4.3-r5.ebuild 1882
-MD5 1319caf630bc7b6c785898bbb365dc2c readline-4.3-r6.ebuild 1985
+MD5 352d67b1ec9917cbbd245bda6f111065 readline-5.0.ebuild 1805
+MD5 ac164994b20c7bc74a5f8d09af7ff48a readline-4.3-r4.ebuild 2425
+MD5 98f278379fa07a891ecea1808517ae00 readline-4.3-r5.ebuild 2334
+MD5 bf6d10a86339034df6d4b89d92b42776 readline-4.3-r6.ebuild 2439
 MD5 f9e8af7cdcf7ac973c77fc6a712af5de files/digest-readline-4.1-r5 64
+MD5 630ead02f80504e86e85dc4957bd27cb files/digest-readline-5.0 65
 MD5 e9b856acd523c385a29d67cd3475885e files/digest-readline-4.3-r4 177
 MD5 cca21eb56279efff8356d028b1b39dd8 files/digest-readline-4.3-r5 348
 MD5 d0d23a9f000344da88a00a248d0af60c files/readline4.3-mbutil.patch 1678
@@ -16,7 +18,7 @@ MD5 9905e333ead392447a670e0f2374651a files/macos.patch 504
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.8 (GNU/Linux)
 
-iD8DBQFBCDi1HTu7gpaalycRAkumAJ4t3NHYPzK+nqTERlH+Zm8Y+2+7aACgnFXh
-hrm0OVIDjq/HvhFbtVpQHdw=
-=xvR9
+iD8DBQFBCFzwHTu7gpaalycRAjOlAKCJDdmwT6baTZaUdOu9fKUGUbUKkgCeOzyd
+0sV4K1PiqIrkw9O7Cax6G5M=
+=Rs4H
 -----END PGP SIGNATURE-----
