@@ -1,17 +1,21 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 8a5cb603bcb008d78aa30a51d03a6b98 mm-sources-2.6.9_rc1-r5.ebuild 1039
+MD5 f79b098d0446b438ff8224a3f6238c6a mm-sources-2.6.9_rc2-r4.ebuild 1037
 MD5 90e389dfabb2dcc99906d9ba975f2e63 mm-sources-2.6.8.1-r4.ebuild 1037
 MD5 c2f482cec29fb823f49b7c194eee73ef mm-sources-2.6.9_rc1-r2.ebuild 1032
 MD5 1fe7008fa500312e4cafd8b362217f85 mm-sources-2.6.9_rc2-r1.ebuild 1032
 MD5 11957950a39b91dc3be920deb9816ecb mm-sources-2.6.8.1-r1.ebuild 1030
 MD5 8580c8e38ef57992868506dcb2081b91 mm-sources-2.6.9_rc1-r4.ebuild 1032
+MD5 2d17fec734347a2ee066ebe50931eae3 mm-sources-2.6.9_rc2-r3.ebuild 1032
 MD5 5a21c80d4753a9c7adedbeb601f46f74 mm-sources-2.6.8.1-r3.ebuild 1030
 MD5 79a792248bcb3d1756f92b0dc7b383d6 mm-sources-2.6.9_rc1-r1.ebuild 1114
 MD5 0a280b8a41a1d41400733e4fdf98b9ec mm-sources-2.6.9_rc1-r3.ebuild 1039
-MD5 08b5eb074ff489a1f05aa742508bd476 ChangeLog 33987
+MD5 ca2c55a115269491f59c2b6409b59de4 ChangeLog 34143
 MD5 5e95fced23ea7c26d39274bc200dabd5 metadata.xml 351
-MD5 6819376ae97a1abdc6ef01fdff5cd0c0 mm-sources-2.6.8.1-r2.ebuild 1037
 MD5 4604236f411d9bdf08b5f6a28fdf534f mm-sources-2.6.9_rc2-r2.ebuild 1032
-MD5 2d17fec734347a2ee066ebe50931eae3 mm-sources-2.6.9_rc2-r3.ebuild 1032
+MD5 6819376ae97a1abdc6ef01fdff5cd0c0 mm-sources-2.6.8.1-r2.ebuild 1037
 MD5 8f7c509f134123a961b795d9dd04bb0c files/digest-mm-sources-2.6.8.1-r1 129
 MD5 68b1e3f61278657cf08bf16e49f9c86f files/digest-mm-sources-2.6.8.1-r2 129
 MD5 5634179d6b21d2206d22dc236d41111e files/digest-mm-sources-2.6.8.1-r3 129
@@ -25,3 +29,12 @@ MD5 15a3f3af1cf4ff9b6db43203746a7c2b files/digest-mm-sources-2.6.9_rc1-r5 193
 MD5 025820504992d4c9f1aa105739cc3bf6 files/digest-mm-sources-2.6.9_rc2-r1 194
 MD5 29528fcfb6309144009803ceed9a3319 files/digest-mm-sources-2.6.9_rc2-r2 194
 MD5 f9fec0c10d2ae802ab7e3c5a0cb398de files/digest-mm-sources-2.6.9_rc2-r3 194
+MD5 5ac8ff7e2de9b867e9f29f5b394d4fda files/digest-mm-sources-2.6.9_rc2-r4 194
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.5 (GNU/Linux)
+Comment: .//Manifest 1096256125
+
+iD8DBQFBV4qJPpIsIjIzwiwRAqkbAKCW6oWaCYXj+CzA6VuqGF6Jpi5oyACg0Olm
+4abcOIGeLMMgQ9GmlShgCXw=
+=dtvW
+-----END PGP SIGNATURE-----
