@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/gnome-games
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/ChangeLog,v 1.27 2003/03/01 14:45:23 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/ChangeLog,v 1.28 2003/06/29 22:25:28 darkspecter Exp $
+
+  30 Jun 2003; Bartosch Pixa <darkspecter@gentoo.org>
+  gnome-games-2.2.0.ebuild:
+  set ppc in keywords
 
 *gnome-games-2.2.0 (30 Jan 2003)
 
