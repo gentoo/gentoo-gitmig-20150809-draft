@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-gnustep/pantomime/pantomime-1.1.0.ebuild,v 1.4 2004/05/04 16:06:47 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-gnustep/pantomime/pantomime-1.1.0.ebuild,v 1.5 2004/06/02 01:53:51 agriffis Exp $
 
 IUSE="ssl"
 
@@ -16,7 +16,7 @@ S=${WORKDIR}/${PN/p/P}
 
 src_compile() {
 	egnustepmake
-	if [ "`use ssl`" ]; then
+	if use ssl; then
 		cd ${S}/Bundles/SSL
 		make
 		cd ${S}
@@ -26,7 +26,7 @@ src_compile() {
 src_install() {
 	egnustepinstall
 
-	if [ "`use ssl`" ]; then
+	if use ssl; then
 		mkdir -p ${D}usr/GNUstep/System/Library/Pantomime
 		cd ${S}/Bundles/SSL
 		tar cf - TCPSSLConnection.bundle | ( cd ${D}usr/GNUstep/System/Library/Pantomime; tar xf - )
