@@ -1,10 +1,9 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-2.7.ebuild,v 1.1 2003/06/17 00:30:00 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-2.7.ebuild,v 1.2 2003/06/18 13:52:59 vapier Exp $
 
-inherit eutils
-
-IUSE="gnome"
+inherit eutils gcc flag-o-matic
+[ `gcc-major-version` -eq 2 ] && filter-flags -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE
 
 HOMEPAGE="http://distcc.samba.org/"
 SRC_URI="http://distcc.samba.org/ftp/distcc/distcc-${PV}.tar.bz2"
@@ -13,6 +12,7 @@ DESCRIPTION="a program to distribute compilation of C code across several machin
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~mips ~arm"
+IUSE="gnome"
 
 OPV="1.2"
 LPV="2.3"
@@ -21,7 +21,6 @@ DEPEND=">=sys-apps/portage-2.0.46-r11
 	>=sys-devel/gcc-config-1.3.1
 	sys-apps/shadow
 	dev-libs/popt"
-
 RDEPEND="gnome? ( >=gnome-base/libgnomeui-2.2.0.1 )"
 
 src_compile() {
@@ -111,4 +110,3 @@ pkg_postinst() {
 #	distcc-config --remove-links "${CHOST}"
 #	distcc-config --remove-links
 #}
-

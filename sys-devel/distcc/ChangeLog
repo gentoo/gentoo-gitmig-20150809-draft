@@ -1,8 +1,11 @@
 # ChangeLog for sys-devel/distcc
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.47 2003/06/17 00:30:00 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.48 2003/06/18 13:52:59 vapier Exp $
 
 *distcc-2.7 (16 Jun 2003)
+
+  17 Jun 2003; Mike Frysinger <vapier@gentoo.org> distcc-2.7.ebuild:
+  Filter out large file flags on gcc-2.x machines.
 
   16 Jun 2003; Zach Welch <zwelch@gentoo.org> distcc-2.7.ebuild:
   bump version; add support provided by Lisa Marie in bug 22914
