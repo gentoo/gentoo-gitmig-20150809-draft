@@ -1,3 +1,3 @@
-MD5 a32fb9d9e8a9b91003f9b35a2def219d ChangeLog 545
-MD5 631b2115d23819bd54108360124d8e79 guile-pg-0.15.ebuild 641
+MD5 e1181dfcfc77fbb7a3387a717f7ca10f guile-pg-0.15.ebuild 631
+MD5 644ee2987f87a436e5ab8010077173f6 ChangeLog 535
 MD5 7cc5cd8bf84619467059d2a80fea35fc files/digest-guile-pg-0.15 65
