@@ -444,7 +444,7 @@ and will be true only if the <c>gnome</c> USE variable is set.</p>
 <title>Introduction to the FHS</title>
 <body>
 <p>The filesystem layout standards used in Gentoo Linux closely follow the FHS,
-short for <e>Filesystem Heirarchy Standard</e>. A simplified
+short for <e>Filesystem Hierarchy Standard</e>. A simplified
 description of the standard is given here; for a complete
 specification go to <uri>http://www.pathname.com/fhs/</uri>.</p>
 <note> The <path>/opt</path> hierarchy is addressed in section 3.12 of the FHS.
