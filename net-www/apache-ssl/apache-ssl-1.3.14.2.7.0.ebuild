@@ -1,20 +1,19 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache-ssl/apache-ssl-1.3.12.2.6.6.ebuild,v 1.4 2000/09/15 20:09:16 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache-ssl/apache-ssl-1.3.14.2.7.0.ebuild,v 1.1 2000/10/14 12:30:17 achim Exp $
 
-P=apache-ssl-1.3.12-2.6.6
-A="apache_1.3.12.tar.gz mod_ssl-2.6.6-1.3.12.tar.gz"
-S=${WORKDIR}/apache_1.3.12
-DESCRIPTION="The Apache Web Server v1.3.12 with mod_ssl"
-SRC_URI="http://www.apache.de/dist/apache_1.3.12.tar.gz
-	 ftp://ftp.modssl.org/source/mod_ssl-2.6.6-1.3.12.tar.gz"
+A="apache_1.3.14.tar.gz mod_ssl-2.7.0-1.3.14.tar.gz"
+S=${WORKDIR}/apache_1.3.14
+DESCRIPTION="The Apache Web Server v1.3.14 with mod_ssl"
+SRC_URI="http://httpd.apache.org/dist/apache_1.3.14.tar.gz
+	 ftp://ftp.modssl.org/source/mod_ssl-2.7.0-1.3.14.tar.gz"
 HOMEPAGE="http://www.apache.org http://www.modssl.org"
 
 
 src_compile() {                           
    export SSL_BASE=SYSTEM
-   cd ${S}/../mod_ssl-2.6.6-1.3.12
+   cd ${S}/../mod_ssl-2.7.0-1.3.14
     try ./configure --with-apache=${S} --with-ssl=SYSTEM
    cd ${S}
    try ./configure --prefix=/usr/local/httpd --bindir=/usr/bin \
@@ -36,7 +35,7 @@ src_install() {
 
     dodoc ABOUT_APACHE Announcement INSTALL* KEYS LICENSE* README* WARNING*
     docinto mod_ssl
-    cd ../mod_ssl-2.6.6-1.3.12
+    cd ../mod_ssl-2.7.0-1.3.14
     dodoc ANNOUNCE CHANGES CREDITS INSTALL* LICENSE NEWS README*
     dodir /etc/rc.d/init.d
     cp ${O}/files/httpd.conf ${D}/etc/httpd

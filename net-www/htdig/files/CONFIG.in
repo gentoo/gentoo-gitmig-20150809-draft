@@ -8,11 +8,11 @@
 # These variables are set by configure
 #
 # This specifies the root of the directory tree to be used by ht://Dig
-prefix=                 ${DESTDIR}/usr
+prefix=                 $(DESTDIR)@prefix@
 
 # This specifies the root of the directory tree to be used for programs
 # installed by ht://Dig
-exec_prefix=            ${prefix}
+exec_prefix=            $(DESTDIR)@exec_prefix@
 
 #
 # Please modify the variables below to reflect your preferences.
@@ -35,20 +35,20 @@ BIN_DIR=               $(exec_prefix)/bin
 # CONFIG_DIR
 # This is the directory that contains ht://Dig configuration files
 #
-CONFIG_DIR=            $(DESTDIR)/etc/httpd/htdig/
+CONFIG_DIR=            $(DESTDIR)/etc/httpd/
 
 #
 # COMMON_DIR
 # This is the directory for files that can be shared between different
 # databases.
 #
-COMMON_DIR=            $(DESTDIR)/var/htdig/common
+COMMON_DIR=            $(DESTDIR)/usr/lib/htdig/common
 
 #
 # DATABASE_DIR
 # The default directory where the search databases will reside.
 #
-DATABASE_DIR=          $(DESTDIR/var/htdig/db
+DATABASE_DIR=          $(DESTDIR)/var/htdig/db
 
 #
 # DEFAULT_CONFIG_FILE
@@ -62,14 +62,14 @@ DEFAULT_CONFIG_FILE=   $(CONFIG_DIR)/htdig.conf
 # The directory where your HTTP server looks for CGI programs.  This is where
 # htsearch will get installed.
 #
-CGIBIN_DIR=             ${ÐESTDIR}/usr/local/httpd/cgi-bin
+CGIBIN_DIR=             @CGIBIN_DIR@
 
 #
 # IMAGE_DIR
 # Define this to be a place that can be accessed by your web server.  This is
 # where a couple of images will be placed.
 #
-IMAGE_DIR=              ${DESTDIR}/usr/local/httpd/images/htdig
+IMAGE_DIR=              @IMAGE_DIR@
 
 #
 # IMAGE_URL_PREFIX
@@ -82,7 +82,7 @@ IMAGE_URL_PREFIX=        /images/htdig
 # Set this to the absolute path where you want the sample search form to
 # be installed.
 #
-SEARCH_DIR=		${DESTDIR}/usr/local/httpd/htdig/htdocs
+SEARCH_DIR=		@SEARCH_DIR@
 
 #
 # SEARCH_FORM
