@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/transfac
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/transfac/ChangeLog,v 1.3 2005/01/01 07:31:32 j4rg0n Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/transfac/ChangeLog,v 1.4 2005/01/01 12:48:50 corsair Exp $
+
+  01 Jan 2005; Markus Rothe <corsair@gentoo.org> transfac-3.2.ebuild:
+  Added ~ppc64 to KEYWORDS
 
   01 Jan 2005; Lina Pezzella <j4rg0n@gentoo.org> transface-3.2.ebuild:
   Unstable ppc-macos.
