@@ -1,18 +1,19 @@
-# Copyright 1999-2000 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigc++/libsigc++-1.0.4-r1.ebuild,v 1.1 2002/01/29 17:10:21 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigc++/libsigc++-1.0.4-r2.ebuild,v 1.1 2002/06/23 18:37:13 azarah Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="The GLib library of C routines"
 SRC_URI="http://download.sourceforge.net/libsigc/${P}.tar.gz"
 HOMEPAGE="http://libsigc.sourceforge.net/"
+SLOT="1.0"
 
 DEPEND="virtual/glibc"
 
 src_compile() {
 
-	local myconf
+	local myconf=""
     
 	if [ "${DEBUG}" ]
 	then
@@ -21,10 +22,10 @@ src_compile() {
 		myconf="--enable-debug=no"
 	fi
     
-	./configure --host=${CHOST}					\
-		    --prefix=/usr					\
-	  	    --infodir=/usr/share/info				\
-		    --mandir=/usr/share/man				\
+	./configure --host=${CHOST} \
+		    --prefix=/usr \
+	  	    --infodir=/usr/share/info \
+		    --mandir=/usr/share/man \
 		    ${myconf} || die
 	
 	# Fix sandbox violation when old libsig++ is already installed,
@@ -45,7 +46,7 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D}						\
+	make DESTDIR=${D} \
 	     install || die
     
 	dodoc AUTHORS ChangeLog COPYING README* INSTALL NEWS
@@ -61,3 +62,4 @@ pkg_postinst() {
 	einfo ""
 	einfo "**********************************************************"
 }
+
