@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-5.0.0-r1.ebuild,v 1.3 2004/08/13 20:48:14 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-5.0.0-r1.ebuild,v 1.4 2004/09/12 21:41:15 robbat2 Exp $
 
 IUSE="${IUSE} apache2"
 
@@ -98,7 +98,7 @@ src_install() {
 	php5-sapi_src_install
 
 	einfo "Adding extra symlink to Apache${USE_APACHE2} extramodules for PHP"
-	dosym /usr/lib/apache${USE_APACHE2}-extramodules ${PHPINIDIRECTORY}/lib
+	dosym /usr/lib/apache${USE_APACHE2}-extramodules ${PHP_INI_DIR}/lib
 
 	if [ -n "${USE_APACHE2}" ] ; then
 		einfo "Installing a Apache2 config for PHP (70_mod_php5.conf)"
@@ -108,7 +108,7 @@ src_install() {
 		einfo "Installing a Apache config for PHP (mod_php5.conf)"
 		insinto /etc/apache/conf/addon-modules
 		doins ${FILESDIR}/mod_php5.conf
-		dosym ${PHPINIDIRECTORY}/${PHPINIFILENAME} /etc/apache/conf/addon-modules/${PHPINIFILENAME}
+		dosym ${PHP_INI_DIR}/${PHP_INI_FILE} /etc/apache/conf/addon-modules/${PHP_INI_FILE}
 	fi
 }
 
