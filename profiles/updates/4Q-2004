@@ -244,3 +244,4 @@ move dev-libs/root sci-libs/root
 move dev-libs/shapelib sci-libs/shapelib
 move dev-libs/szip sci-libs/szip
 move dev-libs/torch sci-libs/torch
+move dev-libs/proj sci-libs/proj
