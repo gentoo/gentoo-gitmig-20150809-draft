@@ -1,12 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.1.2-r5.ebuild,v 1.2 2003/07/20 03:13:43 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.1.2-r5.ebuild,v 1.3 2003/07/21 21:26:31 azarah Exp $
 
 inherit eutils
 
 IUSE="cups nas postgres opengl mysql odbc gif cjk"
 
-S=${WORKDIR}/qt-x11-free-${PV}
+S="${WORKDIR}/qt-x11-free-${PV}"
 
 DESCRIPTION="QT version ${PV}"
 SLOT="3"
@@ -58,6 +58,8 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-qmlined.diff
 	epatch ${FILESDIR}/${P}-r3-qsocket.diff
 	epatch ${FILESDIR}/${P}-qlistview-dnd.diff
+	# Fix issues with coreutils's head and tail commands
+	epatch ${FILESDIR}/${P}-coreutils-fixup.patch
 
 	use cjk && epatch ${FILESDIR}/${P}-korean-xim.patch
 	

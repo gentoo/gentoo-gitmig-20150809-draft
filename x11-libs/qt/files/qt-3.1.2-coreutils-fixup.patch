@@ -1,0 +1,77 @@
+diff -urN qt-x11-free-3.1.2/config.tests/x11/xfreetype.test qt-x11-free-3.1.2.coreutils/config.tests/x11/xfreetype.test
+--- qt-x11-free-3.1.2/config.tests/x11/xfreetype.test	2002-12-24 10:11:13.000000000 +0200
++++ qt-x11-free-3.1.2.coreutils/config.tests/x11/xfreetype.test	2003-07-21 22:33:09.000000000 +0200
+@@ -84,8 +84,8 @@
+ 
+ # detect major version of Xft
+ if [ "$XFT" = "yes" ]; then
+-    XFT_MAJOR=`grep XFT_MAJOR $XFT_H | head -1 | awk '{ print \$3 }'`
+-    XFT_MINOR=`grep XFT_MINOR $XFT_H | head -1 | awk '{ print \$3 }'`
++    XFT_MAJOR=`grep XFT_MAJOR $XFT_H | head -n 1 | awk '{ print \$3 }'`
++    XFT_MINOR=`grep XFT_MINOR $XFT_H | head -n 1 | awk '{ print \$3 }'`
+     [ "$VERBOSE" = "yes" ] && echo "  Found Xft version $XFT_MAJOR.$XFT_MINOR"
+     if [ "$XFT_MAJOR" = "2" ]; then
+         XFT2=yes
+diff -urN qt-x11-free-3.1.2/src/3rdparty/libmng/aclocal.m4 qt-x11-free-3.1.2.coreutils/src/3rdparty/libmng/aclocal.m4
+--- qt-x11-free-3.1.2/src/3rdparty/libmng/aclocal.m4	2002-11-07 17:55:25.000000000 +0200
++++ qt-x11-free-3.1.2.coreutils/src/3rdparty/libmng/aclocal.m4	2003-07-21 22:33:09.000000000 +0200
+@@ -1607,7 +1607,7 @@
+     # If the export-symbols file already is a .def file (1st line
+     # is EXPORTS), use it as is.
+     # If DATA tags from a recent dlltool are present, honour them!
+-    archive_expsym_cmds='if test "x`head -1 $export_symbols`" = xEXPORTS; then
++    archive_expsym_cmds='if test "x`head -n 1 $export_symbols`" = xEXPORTS; then
+ 	cp $export_symbols $output_objdir/$soname-def;
+       else
+ 	echo EXPORTS > $output_objdir/$soname-def;
+@@ -3546,7 +3546,7 @@
+   lt_cv_file_magic_cmd='/usr/bin/file -L'
+   case "$host_os" in
+   rhapsody* | darwin1.[[012]])
+-    lt_cv_file_magic_test_file=`echo /System/Library/Frameworks/System.framework/Versions/*/System | head -1`
++    lt_cv_file_magic_test_file=`echo /System/Library/Frameworks/System.framework/Versions/*/System | head -n 1`
+     ;;
+   *) # Darwin 1.3 on
+     lt_cv_file_magic_test_file='/usr/lib/libSystem.dylib'
+diff -urN qt-x11-free-3.1.2/src/3rdparty/libmng/config.guess qt-x11-free-3.1.2.coreutils/src/3rdparty/libmng/config.guess
+--- qt-x11-free-3.1.2/src/3rdparty/libmng/config.guess	2002-11-07 17:55:25.000000000 +0200
++++ qt-x11-free-3.1.2.coreutils/src/3rdparty/libmng/config.guess	2003-07-21 22:33:09.000000000 +0200
+@@ -319,7 +319,7 @@
+ 	echo m68k-sun-sunos${UNAME_RELEASE}
+ 	exit 0 ;;
+     sun*:*:4.2BSD:*)
+-	UNAME_RELEASE=`(head -1 /etc/motd | awk '{print substr($5,1,3)}') 2>/dev/null`
++	UNAME_RELEASE=`(head -n 1 /etc/motd | awk '{print substr($5,1,3)}') 2>/dev/null`
+ 	test "x${UNAME_RELEASE}" = "x" && UNAME_RELEASE=3
+ 	case "`/bin/arch`" in
+ 	    sun3)
+@@ -506,7 +506,7 @@
+ 	fi
+ 	exit 0 ;;
+     *:AIX:*:[45])
+-	IBM_CPU_ID=`/usr/sbin/lsdev -C -c processor -S available | head -1 | awk '{ print $1 }'`
++	IBM_CPU_ID=`/usr/sbin/lsdev -C -c processor -S available | head -n 1 | awk '{ print $1 }'`
+ 	if /usr/sbin/lsattr -El ${IBM_CPU_ID} | grep ' POWER' >/dev/null 2>&1; then
+ 		IBM_ARCH=rs6000
+ 	else
+diff -urN qt-x11-free-3.1.2/src/3rdparty/libmng/configure qt-x11-free-3.1.2.coreutils/src/3rdparty/libmng/configure
+--- qt-x11-free-3.1.2/src/3rdparty/libmng/configure	2002-11-07 17:55:25.000000000 +0200
++++ qt-x11-free-3.1.2.coreutils/src/3rdparty/libmng/configure	2003-07-21 22:33:09.000000000 +0200
+@@ -1956,7 +1956,7 @@
+   lt_cv_file_magic_cmd='/usr/bin/file -L'
+   case "$host_os" in
+   rhapsody* | darwin1.[012])
+-    lt_cv_file_magic_test_file=`echo /System/Library/Frameworks/System.framework/Versions/*/System | head -1`
++    lt_cv_file_magic_test_file=`echo /System/Library/Frameworks/System.framework/Versions/*/System | head -n 1`
+     ;;
+   *) # Darwin 1.3 on
+     lt_cv_file_magic_test_file='/usr/lib/libSystem.dylib'
+@@ -3433,7 +3433,7 @@
+     # If the export-symbols file already is a .def file (1st line
+     # is EXPORTS), use it as is.
+     # If DATA tags from a recent dlltool are present, honour them!
+-    archive_expsym_cmds='if test "x`head -1 $export_symbols`" = xEXPORTS; then
++    archive_expsym_cmds='if test "x`head -n 1 $export_symbols`" = xEXPORTS; then
+ 	cp $export_symbols $output_objdir/$soname-def;
+       else
+ 	echo EXPORTS > $output_objdir/$soname-def;

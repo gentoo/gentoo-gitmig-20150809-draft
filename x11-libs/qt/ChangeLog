@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/qt
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.76 2003/07/20 03:13:43 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.77 2003/07/21 21:26:31 azarah Exp $
+
+  21 Jul 2003; Martin Schlemmer <azarah@gentoo.org> qt-3.1.2-r3.ebuild,
+  qt-3.1.2-r4.ebuild, qt-3.1.2-r5.ebuild,
+  files/qt-3.1.2-coreutils-fixup.patch:
+  Fix calls to head and tail to use -n and not -[0-9].
 
   19 Jul 2003; Seemant Kulleen <seemant@gentoo.org> qt-3.1.2-r5.ebuild:
   korean patch only needs to be applied on use cjk -- and this didn't need a
