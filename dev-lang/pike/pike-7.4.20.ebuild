@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/pike/pike-7.4.20.ebuild,v 1.6 2003/08/31 11:43:15 scandium Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/pike/pike-7.4.20.ebuild,v 1.7 2003/08/31 21:50:37 scandium Exp $
 
 inherit flag-o-matic
 
@@ -21,7 +21,8 @@ KEYWORDS="~x86"
 DEPEND="dev-libs/gmp
 	sys-devel/gcc
 	sys-devel/make
-	sys-apps/sed"
+	sys-apps/sed
+	sys-devel/bc"
 
 src_compile() {
 	local myconf
