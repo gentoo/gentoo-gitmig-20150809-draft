@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gdbm/gdbm-1.8.0-r2.ebuild,v 1.3 2001/03/06 05:27:28 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gdbm/gdbm-1.8.0-r2.ebuild,v 1.4 2001/08/05 22:03:09 blocke Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -19,7 +19,7 @@ RDEPEND="virtual/glibc"
 src_compile() {
 
     try ./configure --host=${CHOST} --prefix=/usr --mandir=/usr/share/man --infodir=/usr/share/info
-    try make CFLAGS=\"${CFLAGS} -fomit-frame-pointer\" ${MAKEOPTS}
+    try make CFLAGS="${CFLAGS} -fomit-frame-pointer" ${MAKEOPTS}
 }
 
 src_install() {

@@ -26,7 +26,7 @@ src_unpack() {
 src_compile() {
 
     try ./configure --host=${CHOST} --prefix=/usr --mandir=/usr/share/man --infodir=/usr/share/info
-    try make CFLAGS=\"${CFLAGS} -fomit-frame-pointer\" ${MAKEOPTS}
+    try make CFLAGS="${CFLAGS} -fomit-frame-pointer" ${MAKEOPTS}
 }
 
 src_install() {
