@@ -1,0 +1,9 @@
+# ChangeLog for app-admin/superadduser
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/app-admin/superadduser/ChangeLog,v 1.1 2002/04/09 22:39:28 karltk Exp $
+
+*superadduser-1.0 (09 Apr 2002)
+
+  09 Apr 2002; Karl Trygve Kalleberg <karltk@gentoo.org> superadduser-1.0.ebuild files/digest-superadduser-1.0 files/superadduser files/superadduser.8:
+
+  An interactive wrapper for shadow's useradd.
