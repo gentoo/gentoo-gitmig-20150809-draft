@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstdc++-v3/libstdc++-v3-3.3.3-r1.ebuild,v 1.1 2004/05/24 21:17:43 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstdc++-v3/libstdc++-v3-3.3.3-r1.ebuild,v 1.2 2004/05/25 17:00:46 lv Exp $
 
 IUSE="nls"
 
@@ -201,14 +201,19 @@ src_install() {
 		LIBPATH="${LIBPATH}" \
 		install-target-libstdc++-v3 || die
 
+	# we'll move this into a directory we can put at the end of ld.so.conf
+	# other than the normal versioned directory, so that it doesnt conflict
+	# with gcc 3.3.3
+	mkdir -p ${D}/${LOC}/lib/libstdc++-v3/
+	mv ${D}/${LIBPATH}/lib* ${D}/${LOC}/lib/libstdc++-v3/
 	# we dont want the headers...
-	rm -rf ${D}/${STDCXX_INCDIR}
+	rm -rf ${D}/${LOC}/lib/gcc*
 	# or locales...
 	rm -rf ${D}/${LOC}/share
 	# or anything other than the .so files, really.
 	find ${D} | grep -e c++.la$ -e c++.a$ | xargs rm -f
 
 	mkdir -p ${D}/etc/env.d/
-	echo "LDPATH=\"${LIBPATH}\"" >> ${D}/etc/env.d/99libstdc++
+	echo "LDPATH=\"${LOC}/lib/libstdc++-v3/\"" >> ${D}/etc/env.d/99libstdc++
 }
 
