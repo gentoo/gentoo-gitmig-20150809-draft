@@ -1,10 +1,12 @@
 # IMPORTANT: In order to parse this new format, you need Portage 1.6 or later!
+
 # OK; you're staring at this file and you have no idea what these stars are
 # for.  Here's the scoop.  An initial "*" marks a package that is part of the
 # official "base" system profile.  If there's a "*", then "emerge system" will
 # use the line in its calculations of what "should" be installed for this
 # profile.  Lines without a "*" prefix will be ignored for profile
 # calculations.
+
 # Now, this is new: *all* lines (star or no star) will be used as a special
 # package *inclusion* mask.  For example, the line *=sys-devel/gcc-2.95.3-r1
 # will cause Portage to totally ignore all gcc ebuilds other than
@@ -17,21 +19,25 @@
 # there is no entry, then all versions of an app are included.  The key thing
 # to note is that this file does not need to end up being an exhaustive list
 # of portage packages; just the ones critical to this profile.
+
 # So, what happens to /usr/portage/profiles/package.mask?  It's still around,
 # and still useful.  But it should mainly be used for broken ebuilds only.
 # package.mask continues to function as normal, masking out ebuilds from *all*
 # system profiles.
+
 # Which to use?  Use the profile-specific stuff to "lock down" specific
 # versions of ebuilds.  Gentoo Linux 1.0_rc6 uses certain known-compatible
 # versions of binutils, gcc and glibc, so we lock them down here.  This
 # prevents the user from shooting himself/herself in the foot by installing a
 # wacky version.
+
 !dev-lang/gpc
 *>=sys-apps/baselayout-1.8.3
 *>=sys-apps/portage-2.0.36
 *>=sys-devel/binutils-2.13.90.0.4
 *>=sys-devel/gcc-3.2
 *>=sys-libs/glibc-2.2.5-r7
+*virtual/modutils
 ~sys-kernel/linux-headers-2.4.19
 >=sys-apps/sysklogd-1.4.1
 *dev-lang/python
@@ -43,9 +49,8 @@
 *dev-lang/perl
 *dev-perl/ExtUtils-MakeMaker
 *virtual/editor
-#no real cost for nano, since we already have ncurses
-*net-ftp/ftp
 *net-misc/dhcpcd
+*net-misc/iputils
 *net-misc/rsync
 *net-misc/wget
 *app-shells/bash
@@ -60,6 +65,7 @@
 *sys-apps/file
 *sys-apps/fileutils
 *sys-apps/findutils
+*sys-apps/slocate
 *sys-apps/gawk
 *sys-apps/grep
 *sys-apps/groff
@@ -68,9 +74,7 @@
 *sys-apps/less
 *sys-apps/man
 *sys-apps/man-pages
-*sys-apps/modutils
 *sys-apps/net-tools
-*sys-apps/netkit-base
 *sys-apps/procps
 *sys-apps/psmisc
 *sys-apps/sed
@@ -89,21 +93,16 @@
 *sys-devel/bc
 *sys-devel/bison
 *sys-devel/flex
-*sys-devel/gettext
 *>=sys-devel/libtool-1.4.1-r9
 *sys-devel/m4
 *sys-devel/make
 *sys-devel/patch
 *sys-libs/cracklib  
 *<sys-libs/db-3.2.10
-*sys-libs/gdbm  
-*>=sys-libs/ncurses-5.2.20020511-r2
+*>=sys-libs/ncurses-5.2.20020112a
 *>=sys-libs/pam-0.75-r9
 *sys-libs/pwdb      
 *sys-libs/readline  
-*sys-libs/slang
 *sys-libs/zlib
 *net-misc/openssh
 *sys-apps/devfsd
-# not using supersed yet
-# *sys-apps/supersed
