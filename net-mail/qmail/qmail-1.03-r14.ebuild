@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/qmail-1.03-r14.ebuild,v 1.2 2003/11/30 11:33:15 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/qmail-1.03-r14.ebuild,v 1.3 2003/11/30 21:24:54 robbat2 Exp $
 
 inherit eutils fixheadtails
 
@@ -80,6 +80,8 @@ src_unpack() {
 	# i.e. - qmail-scanner
 	EPATCH_SINGLE_MSG="Adding QMAILQUEUE support" \
 	epatch ${DISTDIR}/qmailqueue-patch
+	EPATCH_SINGLE_MSG="Adding QMAILQUEUE info to documentation" \
+	epatch ${FILESDIR}/${PVR}/qmail-qmailqueue-docs.patch
 
 	# a patch for faster queue processing
 	EPATCH_SINGLE_MSG="Patching for large queues" \
@@ -181,6 +183,10 @@ src_unpack() {
 	# because of TLS
 	EPATCH_SINGLE_MSG="qmail-pop3d reports erroneous figures on STAT after a DELE" \
 	epatch ${FILESDIR}/${PVR}/qmail-pop3d-stat.tls.patch
+
+	EPATCH_SINGLE_MSG="Branding qmail with Gentoo identifier 'Gentoo Linux ${PF}'" \
+	epatch ${FILESDIR}/${PVR}/qmail-gentoo-branding.patch
+	sed -e "s/__PF__/${PF}/" -i ${S}/qmail-smtpd.c
 
 	echo -n "${CC} ${CFLAGS}" >${S}/conf-cc
 	if use ssl; then
