@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libsamplerate
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsamplerate/ChangeLog,v 1.22 2004/10/01 22:56:21 kito Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsamplerate/ChangeLog,v 1.23 2005/01/03 09:44:23 corsair Exp $
+
+  03 Jan 2005; Markus Rothe <corsair@gentoo.org> libsamplerate-0.1.2.ebuild:
+  Added ~ppc64 to KEYWORDS
 
 *libsamplerate-0.1.2 (01 Oct 2004)
 
