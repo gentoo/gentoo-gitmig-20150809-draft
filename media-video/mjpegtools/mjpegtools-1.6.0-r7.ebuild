@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.6.0-r7.ebuild,v 1.9 2003/03/01 14:48:32 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.6.0-r7.ebuild,v 1.10 2003/04/29 21:08:33 mholzer Exp $
 
 IUSE="sse arts gtk mmx sdl X quicktime 3dnow avi svga"
 
@@ -16,7 +16,7 @@ HOMEPAGE="http://mjpeg.sourceforge.net/"
 #			mirror://sourceforge/mjpeg/quicktime4linux-1.4-patched.tar.gz
 #		) )"
 SRC_URI="mirror://sourceforge/mjpeg/${P}.tar.gz
-	quicktime? ( 
+	quicktime? (
 		mirror://sourceforge/mjpeg/quicktime4linux-1.4-patched.tar.gz
 	)"
 
@@ -76,6 +76,7 @@ src_compile() {
 
 	replace-flags "-march=pentium4" "-march=i686"
 	replace-flags "-march=athlon*" "-march=i686"
+	filter-flags "-fprefetch-loop-arrays"
 
 	use gtk	\
 		&& myconf="${myconf} --with-gtk-prefix=/usr"
