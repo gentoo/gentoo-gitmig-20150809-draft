@@ -1,11 +1,14 @@
 # ChangeLog for x11-libs/qt
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.158 2004/08/06 00:34:08 arj Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.159 2004/08/16 13:52:54 usata Exp $
+
+  16 Aug 2004; Mamoru KOMACHI <usata@gentoo.org> qt-3.3.2.ebuild:
+  Updated immodule patch.
 
   05 Aug 2004; Anders Rune Jensen <arj@gentoo.org> qt-3.3.1-r2.ebuild, 
   qt-3.3.2.ebuild:
   Depend on version 2 of sqlite.
-	
+
   05 Aug 2004; Mamoru KOMACHI <usata@gentoo.org>
   +files/qt-x11-immodule-bc-qt3.3.2-20040623.diff, qt-3.3.2.ebuild:
   Added qt-immodule patch. Thanks to Ken Deeter

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.2.ebuild,v 1.14 2004/08/06 00:34:08 arj Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.2.ebuild,v 1.15 2004/08/16 13:52:54 usata Exp $
 
 inherit eutils
 
@@ -8,7 +8,12 @@ SRCTYPE="free"
 DESCRIPTION="QT version ${PV}"
 HOMEPAGE="http://www.trolltech.com/"
 
-SRC_URI="ftp://ftp.trolltech.com/qt/source/qt-x11-${SRCTYPE}-${PV}.tar.bz2"
+IMMQT_P="qt-x11-immodule-unified-qt3.3.2-20040814"
+# If you want to build qt-immodule against Qt 3.3.3, you will also need
+# qt-x11-free-3.3.3-complemental-patch-for-immodule-20040814.diff
+
+SRC_URI="ftp://ftp.trolltech.com/qt/source/qt-x11-${SRCTYPE}-${PV}.tar.bz2
+	cjk? ( http://freedesktop.org/Software/ImmoduleQtDownload/${IMMQT_P}.diff.gz )"
 
 LICENSE="QPL-1.0 | GPL-2"
 SLOT="3"
@@ -50,15 +55,8 @@ src_unpack() {
 	epatch ${FILESDIR}/qt-no-rpath-uic.patch
 
 	if use cjk ; then
-		epatch ${FILESDIR}/qt-x11-immodule-bc-qt3.3.2-20040623.diff
-		pushd include/
-		ln -s ../src/kernel/qinputcontext.h .
-		ln -s ../src/input/qinputcontextfactory.h .
-		ln -s ../src/input/qinputcontextplugin.h .
-		cd private/
-		ln -s ../../src/input/qinputcontextinterface_p.h .
-		ln -s ../../src/input/qximinputcontext_p.h .
-		popd
+		epatch ../${IMMQT_P}.diff
+		sh make-symlinks.sh || die "make symlinks failed"
 	fi
 
 	# mips requires this patch to pass a CFLAG to gcc/g++ (which passes it to the assembler).
@@ -91,6 +89,7 @@ src_compile() {
 	use xinerama    && myconf="${myconf} -xinerama" || myconf="${myconf} -no-xinerama"
 	use zlib	&& myconf="${myconf} -system-zlib" || myconf="${myconf} -qt-zlib"
 	use ipv6        && myconf="${myconf} -ipv6" || myconf="${myconf} -no-ipv6"
+	use cjk		&& myconf="${myconf} -im"
 
 	export YACC='byacc -d'
 
