@@ -1,0 +1,11 @@
+--- evolution-1.0.5.orig/camel/camel-lock-helper.c	2001-10-27 18:59:27.000000000 +0200
++++ evolution-1.0.5/camel/camel-lock-helper.c	2005-01-21 16:57:44.000000000 +0100
+@@ -360,6 +360,8 @@ int main(int argc, char **argv)
+ 			switch(msg.id) {
+ 			case CAMEL_LOCK_HELPER_LOCK:
+ 				res = CAMEL_LOCK_HELPER_STATUS_NOMEM;
++				if (msg.data+1 < msg.data)
++					break;
+ 				path = malloc(msg.data+1);
+ 				if (path != NULL) {
+ 					res = CAMEL_LOCK_HELPER_STATUS_PROTOCOL;
