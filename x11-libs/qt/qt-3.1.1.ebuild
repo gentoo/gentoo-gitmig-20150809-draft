@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.1.1.ebuild,v 1.1 2002/12/17 17:49:30 hannes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.1.1.ebuild,v 1.2 2002/12/18 19:07:35 danarmak Exp $
 
 IUSE="cups nas postgres opengl mysql odbc gif"
 
@@ -85,7 +85,7 @@ src_compile() {
 
 	export YACC='byacc -d'
 	
-	./configure -sm -thread -stl -system-zlib -system-libjpeg \
+	./configure -sm -thread -stl -system-zlib -system-libjpeg -verbose \
 		-qt-imgfmt-{jpeg,mng,png} -tablet -system-libmng \
 		-system-libpng -ldl -lpthread -xft -platform linux-g++ -xplatform \
 		linux-g++ -prefix ${QTBASE} -fast ${myconf} || die
@@ -151,5 +151,13 @@ src_install() {
 		insinto ${QTBASE}/`dirname $x`
 	doins $x
 	done
+
+}
+pkg_postinst() {
+
+    ewarn "If you upgraded from QT 3.0.x to 3.1.x, you should remerge any copies of kdelibs"
+    ewarn "you have installed. Otherwise, other kde packages may not compile properly."
+    ewarn "If you upgraded QT from 3.0.x to 3.1.x in the past but have not remerged kdelibs"
+    ewarn "since then, please do so now."
 
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.1.0.ebuild,v 1.5 2002/12/09 04:41:49 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.1.0.ebuild,v 1.6 2002/12/18 19:07:35 danarmak Exp $
 
 IUSE="cups nas postgres opengl mysql odbc gif"
 
@@ -158,3 +158,11 @@ will not work!"
 }
 
 
+pkg_postinst() {
+
+    ewarn "If you upgraded from QT 3.0.x to 3.1.x, you should remerge any copies of kdelibs"
+    ewarn "you have installed. Otherwise, other kde packages may not compile properly."
+    ewarn "If you upgraded QT from 3.0.x to 3.1.x in the past but have not remerged kdelibs"
+    ewarn "since then, please do so now."
+
+}
