@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/files/opengl-update-2.1.1,v 1.2 2005/02/10 01:37:59 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/files/opengl-update-2.1.1,v 1.3 2005/02/10 06:45:38 eradicator Exp $
 # Author:  Martin Schlemmer <azarah@gentoo.org>
 # Further modifications by Donnie Berkholz <spyderous@gentoo.org>
 # Further modifications based off submissions to bug #54984 <cyfred@gentoo.org>
@@ -275,13 +275,13 @@ set-new-implementation() {
 					# then it should be installed to ${GL_IMPLEM}/include
 
 					if [[ -e ${PREFIX}/${LIBDIR}/opengl/${GL_IMPLEM}/include/${file} ]]; then
-						[[ -f "${file}" ]] && rm -f ${file}
+						[[ -f "${file}" || ( -L "${file}" && ! -e "${file}" ) ]] && rm -f ${file}
 						ln -s ${PREFIX}/${LIBDIR}/opengl/${GL_IMPLEM}/include/${file}
 					elif [[ -e ${PREFIX}/${LIBDIR}/opengl/global/include/${file} ]]; then
-						[[ -f "${file}" ]] && rm -f ${file}
+						[[ -f "${file}" || ( -L "${file}" && ! -e "${file}" ) ]] && rm -f ${file}
 						ln -s ${PREFIX}/${LIBDIR}/opengl/global/include/${file}
 					elif [[ -e ${PREFIX}/${LIBDIR}/opengl/xorg-x11/include/${file} ]]; then
-						[[ -f "${file}" ]] && rm -f ${file}
+						[[ -f "${file}" || ( -L "${file}" && ! -e "${file}" ) ]] && rm -f ${file}
 						ln -s ${PREFIX}/${LIBDIR}/opengl/xorg-x11/include/${file}
 					fi
 				done

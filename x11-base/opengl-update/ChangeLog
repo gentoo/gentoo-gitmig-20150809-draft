@@ -1,6 +1,15 @@
 # ChangeLog for x11-base/opengl-update
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/ChangeLog,v 1.73 2005/02/10 00:03:27 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/ChangeLog,v 1.74 2005/02/10 06:45:38 eradicator Exp $
+
+*opengl-update-2.1.1 (09 Feb 2005)
+
+  09 Feb 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  -files/opengl-update-2.1.0, files/opengl-update-2.1.1,
+  -opengl-update-2.1.0-r1.ebuild, +opengl-update-2.1.1.ebuild:
+  Fix removal of broken symlinks in headers. Check for /usr/libdir/opengl
+  rather than /usr/libdir. Fix install of libglx to the correct place. Closes
+  all open bugs (again). This should be the stable candidate (again).
 
   09 Feb 2005; Jeremy Huddleston <eradicator@gentoo.org>
   +files/opengl-update-2.1.1:
