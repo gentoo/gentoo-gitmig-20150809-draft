@@ -1,10 +1,10 @@
 # ChangeLog for dev-java/commons-cli
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-cli/ChangeLog,v 1.4 2003/03/18 22:40:23 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-cli/ChangeLog,v 1.5 2003/03/18 22:41:17 absinthe Exp $
 
 *commons-cli-1.0-r2 (17 Mar 2003)
 
-  18 Mar 2003; root <root@gentoo.org> commons-cli-1.0-r2.ebuild:
+  18 Mar 2003; Dylan Carlson <absinthe@gentoo.org> commons-cli-1.0-r2.ebuild:
   java-commons eclass and functions were renamed to jakarta-commons.
 
   17 Mar 2003; Dylan Carlson <absinthe@gentoo.org> commons-cli-1.0-r2.ebuild:
