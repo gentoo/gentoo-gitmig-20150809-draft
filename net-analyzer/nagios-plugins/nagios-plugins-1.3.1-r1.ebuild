@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/nagios-plugins-1.3.1-r1.ebuild,v 1.4 2004/07/11 10:21:25 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/nagios-plugins-1.3.1-r1.ebuild,v 1.5 2004/07/24 15:52:29 eldad Exp $
 
 inherit eutils
 
@@ -53,6 +53,15 @@ src_compile() {
 src_install() {
 	dodoc AUTHORS CODING COPYING ChangeLog FAQ INSTALL LEGALNEWS README REQUIREMENTS ROADMAP Requirements
 	make DESTDIR=${D} install || die
+
+	if use mysql || use postgres; then
+		dodir /usr/nagios/libexec
+		exeinto /usr/nagios/libexec
+		doexe ${S}/contrib/check_nagios_db.pl
+	fi
+
+	dodir /usr/nagios/libexec/
+	mv ${S}/contrib ${D}/usr/nagios/libexec/contrib
 }
 
 pkg_preinst() {
@@ -63,4 +72,6 @@ pkg_postinst() {
 	einfo "This ebuild has a number of USE flags which determines what nagios is able to monitor."
 	einfo "Depending on what you want to monitor with nagios, some or all of these USE"
 	einfo "flags need to be set for nagios to function correctly."
+	echo ""
+	einfo "contrib plugins are installed into /usr/nagios/libexec/contrib"
 }
