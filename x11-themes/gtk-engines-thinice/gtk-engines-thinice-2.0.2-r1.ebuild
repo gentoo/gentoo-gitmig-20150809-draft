@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-thinice/gtk-engines-thinice-2.0.2-r1.ebuild,v 1.7 2003/12/12 23:52:09 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-thinice/gtk-engines-thinice-2.0.2-r1.ebuild,v 1.8 2004/01/08 18:37:27 gustavoz Exp $
 
 inherit gtk-engines2
 
@@ -14,7 +14,7 @@ DESCRIPTION="GTK+1 and GTK+2 ThinIce Theme Engine"
 SRC_URI="mirror://sourceforge/thinice/${GTK1_PN}-${GTK1_VER}.tar.gz
 	mirror://sourceforge/thinice/${GTK2_PN}-${GTK2_VER}.tar.gz"
 HOMEPAGE="http://thinice.sourceforge.net/"
-KEYWORDS="x86 amd64 hppa"
+KEYWORDS="x86 amd64 hppa sparc"
 LICENSE="GPL-2"
 SLOT="2"
 
