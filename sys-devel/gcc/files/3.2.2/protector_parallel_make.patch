@@ -1,0 +1,10 @@
+--- gcc/Makefile.in.old	2003-04-25 01:09:03.000000000 -0400
++++ gcc/Makefile.in	2003-04-25 01:09:57.000000000 -0400
+@@ -1592,6 +1592,7 @@
+    $(C_COMMON_H) flags.h varray.h $(EXPR_H)
+ params.o : params.c $(CONFIG_H) $(SYSTEM_H) $(PARAMS_H) toplev.h
+ hooks.o: hooks.c $(CONFIG_H) $(SYSTEM_H) $(HOOKS_H)
++protector.o : protector.c $(CONFIG_H)
+ 
+ $(out_object_file): $(out_file) $(CONFIG_H) $(TREE_H) $(GGC_H) \
+    $(RTL_H) $(REGS_H) hard-reg-set.h real.h insn-config.h conditions.h \
