@@ -1,6 +1,11 @@
 # ChangeLog for app-text/grutatxt
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/grutatxt/ChangeLog,v 1.5 2005/01/01 16:17:34 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/grutatxt/ChangeLog,v 1.6 2005/03/05 15:24:06 usata Exp $
+
+*grutatxt-2.0.11 (06 Mar 2005)
+
+  06 Mar 2005; Mamoru KOMACHI <usata@gentoo.org> +grutatxt-2.0.11.ebuild:
+  Version bumped. This closes bug #84087.
 
   04 Oct 2004; Tom Gall <tgall@gentoo.org> grutatxt-2.0.5.ebuild:
   stable on ppc64, bug #64271
