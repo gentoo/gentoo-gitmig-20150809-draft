@@ -1,6 +1,6 @@
 diff -Naur imms-1.0.1.orig/rules.mk imms-1.0.1/rules.mk
 --- imms-1.0.1.orig/rules.mk	2004-02-25 12:53:33.000000000 -0800
-+++ imms-1.0.1/rules.mk	2004-02-26 03:03:48.000000000 -0800
++++ imms-1.0.1/rules.mk	2004-02-26 23:14:22.000000000 -0800
 @@ -11,12 +11,12 @@
  	$(AR) $(ARFLAGS) $@ $(CORE_OBJ)
  
@@ -18,10 +18,47 @@ diff -Naur imms-1.0.1.orig/rules.mk imms-1.0.1/rules.mk
  
  .PHONY: clean distclean
  
+@@ -44,26 +44,8 @@
+ 	tar -C /tmp/ -cz imms-$(VERSION)/ -f imms-$(VERSION).tar.gz
+ 	rm -rf /tmp/imms-$(VERSION)/
+ 
+-.PHONY: install install-user install-system user-message system-message
++.PHONY: install
+ 
+-ifeq ($(shell id -u), 0)
+-    install: system-message install-system
+-else
+-    install: user-message install-user
+-endif
+-
+-system-message:
+-	$(warning Defaulting to installing for all users.)
+-	$(warning Use 'make install-user' to install for the current user only.)
+-
+-install-system: libimms.so
++install: all
++	mkdir -p ${DESTDIR}`xmms-config --visualization-plugin-dir`
+ 	${INSTALL_PROGRAM} libimms.so ${DESTDIR}`xmms-config --visualization-plugin-dir`
+-
+-user-message:
+-	$(warning Defaulting to installing for current user only.)
+-	$(warning Use 'make install-system' to install for all users.)
+-
+-install-user: libimms.so
+-	mkdir -p ${HOME}/.xmms/Plugins/Visualization/
+-	rm -f ${HOME}/.xmms/Plugins/General/libimms.so
+-	${INSTALL_PROGRAM} libimms.so ${HOME}/.xmms/Plugins/Visualization/
 diff -Naur imms-1.0.1.orig/vars.mk.in imms-1.0.1/vars.mk.in
 --- imms-1.0.1.orig/vars.mk.in	2004-02-25 12:53:33.000000000 -0800
-+++ imms-1.0.1/vars.mk.in	2004-02-26 03:04:54.000000000 -0800
-@@ -9,8 +9,9 @@
++++ imms-1.0.1/vars.mk.in	2004-02-26 23:14:22.000000000 -0800
+@@ -2,15 +2,15 @@
+ CXX = @CXX@
+ VERSION = @PACKAGE_VERSION@
+ INSTALL_PROGRAM = @INSTALL@
+-DESTDIR = @prefix@
+ 
+ SHELL = bash
+ XMMS_OBJ = plugin.o interface.o libimmscore.a 
  CORE_OBJ = imms.o immsdb.o fetcher.o picker.o spectrum.o sqldb.o \
  	   songinfo.o regexx.o strmanip.o levenshtein.o xidle.o md5.o
  
