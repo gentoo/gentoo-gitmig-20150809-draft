@@ -1,8 +1,13 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # System-wide defaults for the gcc 3.2 Portage system
 
+# PLEASE avoid enabling things by default in here if possible. Understand any 
+# implications with core packages. For example, if "java" is in USE and db 
+# has a conditional dependency on java (which it does,) then a JDK will be 
+# pulled in during *emerge system*!
+
 USE="x86 oss apm arts avi berkdb crypt cups encode foomaticdb gdbm gif gpm gtk imlib
-java jpeg kde gnome libg++ libwww mad mikmod mmx motif mpeg ncurses nls oggvorbis
+jpeg kde gnome libg++ libwww mad mikmod motif mpeg ncurses nls oggvorbis
 opengl pam pdflib png python qt quicktime readline sdl slang spell ssl
 svga tcpd truetype X xml2 xmms xv zlib"
 
