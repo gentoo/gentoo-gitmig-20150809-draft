@@ -1,0 +1,9 @@
+# ChangeLog for app-arch/dar
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dar/ChangeLog,v 1.1 2003/11/06 09:34:31 matsuu Exp $
+
+*dar-2.0.0 (06 Nov 2003)
+
+  06 Nov 2003; MATSUU Takuto <matsuu@gentoo.org> dar-2.0.0.ebuild:
+  Initial import. bugs #9785.
+
