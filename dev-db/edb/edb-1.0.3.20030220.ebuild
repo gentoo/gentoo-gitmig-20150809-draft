@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/edb/edb-1.0.3.20030220.ebuild,v 1.3 2003/03/11 17:01:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/edb/edb-1.0.3.20030220.ebuild,v 1.4 2003/03/26 10:16:38 seemant Exp $
 
 inherit flag-o-matic
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2
 SLOT="0"
 LICENSE="as-is"
 KEYWORDS="~x86 ~ppc ~alpha"
-IUSE="pic ncurses gtk"
+IUSE="ncurses gtk"
 
 DEPEND="gtk? ( =x11-libs/gtk+-1* )
 	ncurses? ( sys-libs/ncurses )"
@@ -28,7 +28,6 @@ src_compile() {
 	use alpha && append-flags -fPIC
 
 	econf \
-		`use_with pic` \
 		--enable-compat185 \
 		--enable-dump185 \
 		--enable-cxx \
