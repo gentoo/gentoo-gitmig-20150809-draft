@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/trickle
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/trickle/ChangeLog,v 1.4 2004/07/01 22:05:21 squinky86 Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/trickle/ChangeLog,v 1.5 2005/03/20 12:00:32 hansmi Exp $
+
+  20 Mar 2005; Michael Hanselmann <hansmi@gentoo.org> trickle-1.06.ebuild:
+  Added to ~sparc.
 
   01 Jul 2004; Jon Hood <squinky86@gentoo.org> trickle-1.06.ebuild:
   change virtual/glibc to virtual/libc
