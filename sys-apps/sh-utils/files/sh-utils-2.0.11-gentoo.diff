@@ -53,7 +53,7 @@ diff -ur ./doc/sh-utils.texi ./doc/sh-utils.texi.new
  @node Delaying
  @chapter Delaying
  
-diff -ur ./src/uname.c ./src/uname.c,new
+diff -ur ./src/uname.c ./src/uname.c.new
 --- ./src/uname.c	Sat May  6 07:17:53 2000
 +++ ./src/uname.c.new	Wed Mar 20 20:15:43 2002
 @@ -48,6 +48,7 @@
