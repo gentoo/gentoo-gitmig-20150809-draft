@@ -1,8 +1,13 @@
 # ChangeLog for app-misc/jpilot
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-misc/jpilot/ChangeLog,v 1.6 2002/11/18 05:35:36 blocke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/jpilot/ChangeLog,v 1.7 2003/02/10 07:15:07 seemant Exp $
 
 *jpilot-0.99.3 (18 Nov 2002)
+
+  09 Feb 2003; Seemant Kulleen <seemant@gentoo.org> *.ebuild :
+
+  Sed expression delimiter from / to :, closing bug #15006 by Blu3
+  <david+gentoo.org@blue-labs.org>
 
   18 Nov 2002; Bruce A. Locke <blocke@shivan.org> jpilot-0.99.3.ebuild:
   Version bump and pilot-link version dependency bump (see bug #9640)

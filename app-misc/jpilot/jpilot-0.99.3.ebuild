@@ -1,6 +1,8 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/jpilot/jpilot-0.99.3.ebuild,v 1.2 2002/11/30 21:00:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/jpilot/jpilot-0.99.3.ebuild,v 1.3 2003/02/10 07:15:07 seemant Exp $
+
+IUSE="nls"
 
 SYNCMAL="0.71"
 MALSYNC="2.0.7"
@@ -17,7 +19,6 @@ HOMEPAGE="http://jpilot.org/"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~x86"
-IUSE="nls"
 
 DEPEND="=x11-libs/gtk+-1.2*
 	>=dev-libs/pilot-link-0.11.5"
@@ -32,11 +33,11 @@ src_unpack() {
 
 src_compile() {
 	use nls || NLS_OPTION="--disable-nls"
-	econf ${NLS_OPTION}
+	econf ${NLS_OPTION} || die
 
 	# make sure we use $CFLAGS
 	mv Makefile Makefile.old
-	sed -e "s/-g -O2/${CFLAGS}/" Makefile.old > Makefile
+	sed -e "s:-g -O2:${CFLAGS}:" Makefile.old > Makefile
 	emake || die
 
 	# build malsync plugin
@@ -49,7 +50,7 @@ src_install() {
 	# work around for broken Makefile
 	dodir /usr/bin
 
-	einstall
+	einstall || die
 
 	insinto /usr/lib/jpilot/plugins
 	doins jpilot-syncmal_${SYNCMAL}/.libs/libsyncmal.so
