@@ -1,6 +1,11 @@
 # ChangeLog for net-ftp/kbear
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/kbear/ChangeLog,v 1.19 2004/07/14 14:43:59 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/kbear/ChangeLog,v 1.20 2004/11/02 21:56:19 motaboy Exp $
+
+  02 Nov 2004; Simone Gotti <motaboy@gentoo.org>
+  +files/kbear-2.1.1-configure.patch, kbear-2.1.1.ebuild:
+  Added a patch to the configure script to honor the arts USE flag. Fixes bug
+  #69790.
 
   14 Jul 2004; Travis Tilley <lv@gentoo.org> +files/kbear-2.1.1-gcc-3.4.patch,
   kbear-2.1.1.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/kbear/kbear-2.1.1.ebuild,v 1.5 2004/07/14 14:43:59 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/kbear/kbear-2.1.1.ebuild,v 1.6 2004/11/02 21:56:19 motaboy Exp $
 
 inherit kde flag-o-matic eutils
 
@@ -21,6 +21,7 @@ src_unpack() {
 	use amd64 && append-flags -fPIC
 	kde_src_unpack
 	cd ${S}
-	epatch ${FILESDIR}/kbear-2.1.1-gcc-3.4.patch
+	useq arts || epatch ${FILESDIR}/${P}-configure.patch
+	epatch ${FILESDIR}/${P}-gcc-3.4.patch
 }
 
