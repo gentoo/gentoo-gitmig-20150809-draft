@@ -1,6 +1,19 @@
 # ChangeLog for sys-devel/libtool
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/ChangeLog,v 1.9 2002/07/03 19:11:10 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/ChangeLog,v 1.10 2002/10/20 10:46:22 azarah Exp $
+
+*libtool-1.4.2-r2 (20 Oct 2002)
+
+  20 Oct 2002; Martin Schlemmer <azarah@gentoo.org> :
+
+  Spiced up version.
+
+*libtool-1.4.1-r10 (20 Oct 2002)
+
+  20 Oct 2002; Martin Schlemmer <azarah@gentoo.org> :
+
+  Remove the ltmain.sh-hack.patch, as it caused problems with linking
+  dependencies.
 
 *libtool-1.4.1-r9 (3 Jul 2002)
 
