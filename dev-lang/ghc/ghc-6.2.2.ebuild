@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.2.2.ebuild,v 1.4 2004/11/09 12:26:27 kosmikus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.2.2.ebuild,v 1.5 2004/11/10 18:32:41 kosmikus Exp $
 
 # Brief explanation of the bootstrap logic:
 #
@@ -20,13 +20,6 @@ IUSE="doc tetex opengl"
 
 DESCRIPTION="The Glasgow Haskell Compiler"
 HOMEPAGE="http://www.haskell.org/ghc/"
-
-# The RESTRICT is a temporary measure: upstream source tarball
-# has changed, and I want to prevent bug reports due to the fact
-# that the new sources have not been propagated to all the mirrors.
-# I'll upload the new sources soon, and once they are likely to
-# have propagated, the nomirror restriction will be removed again.
-RESTRICT="nomirror"
 
 SRC_URI="http://www.haskell.org/ghc/dist/${PV}/ghc-${PV}-src.tar.bz2"
 
