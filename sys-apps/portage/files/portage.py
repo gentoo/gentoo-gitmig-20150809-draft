@@ -133,6 +133,8 @@ def md5(x):
 	return string.upper(fchksum.fmd5t(x)[0])
 
 def prepare_db(myroot,mycategory,mypackage):
+    if not os.path.isdir(myroot+"var"):
+	os.mkdir(myroot+"var",0755)
     if not os.path.isdir(myroot+"var/db"):
 	os.mkdir(myroot+"var/db",0755)
     if not os.path.isdir(myroot+"var/db/pkg"):
