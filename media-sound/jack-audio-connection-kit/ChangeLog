@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/jack-audio-connection-kit
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-audio-connection-kit/ChangeLog,v 1.48 2004/12/04 21:09:31 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-audio-connection-kit/ChangeLog,v 1.49 2004/12/06 07:33:24 eradicator Exp $
+
+*jack-audio-connection-kit-0.99.0-r1 (05 Dec 2004)
+
+  05 Dec 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  +jack-audio-connection-kit-0.99.0-r1.ebuild,
+  -jack-audio-connection-kit-0.99.0.ebuild:
+  Don't assume optimized... let users set CFLAGS... --enable-optimize breaks
+  sometimes. Closes bug #73406.
 
   04 Dec 2004; Jeremy Huddleston <eradicator@gentoo.org>
   jack-audio-connection-kit-0.99.0.ebuild:
