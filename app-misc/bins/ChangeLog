@@ -2,6 +2,11 @@
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
 # $Header:
 
+*bins-1.1.26 (13 Jun 2004)
+
+  13 Jun 2004; Michael Cummings <mcummings@gentoo.org> bins-1.1.26.ebuild:
+  new version, closes bug 52088
+
   12 Jun 2004; Michael Cummings <mcummings@gentoo.org> :
   The r2 is a fix necessary to complete the functionality of the package. Alpha
   archs, my apologies - the change was a sed to remove the reference to the
