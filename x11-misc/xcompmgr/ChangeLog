@@ -1,6 +1,13 @@
 # ChangeLog for x11-misc/xcompmgr
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xcompmgr/ChangeLog,v 1.1 2004/08/21 10:31:51 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xcompmgr/ChangeLog,v 1.2 2004/08/21 18:29:01 seemant Exp $
+
+*xcompmgr-0.1_pre20040821 (21 Aug 2004)
+
+  21 Aug 2004; Seemant Kulleen <seemant@gentoo.org> -xcompmgr-0.1.ebuild,
+  +xcompmgr-0.1_pre20040821.ebuild:
+  Change the version to 0.1_pre20040821 to indicate its cvs state. Thanks
+  port001
 
 *xcompmgr-0.1 (21 Aug 2004)
 
