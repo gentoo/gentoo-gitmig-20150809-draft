@@ -1,6 +1,12 @@
 # ChangeLog for net-dialup/speedtouch
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/speedtouch/ChangeLog,v 1.5 2003/05/23 07:47:11 killian Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/speedtouch/ChangeLog,v 1.6 2003/05/26 01:21:35 lu_zero Exp $
+
+*speedtouch-1.2_beta1 (25 May 2003)
+
+  25 May 2003; Luca Barbato <lu_zero@gentoo.org> speedtouch-1.2_beta1.ebuild :
+  New Version, should support more models. Filtered some flags that break on 
+  ppc. Thanks to Alessandro Sappia <a.sappia@ngi.it>
 
 *speedtouch-1.1 (30 Aug 2002)
 
