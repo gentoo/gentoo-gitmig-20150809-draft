@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib/imlib-1.9.14.ebuild,v 1.1 2002/05/04 14:53:29 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib/imlib-1.9.14.ebuild,v 1.2 2002/05/23 06:50:13 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Imlib is a general Image loading and rendering library."
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/${PN}/${P}.tar.gz
 HOMEPAGE="http://www.gnome.org/"
 
 DEPEND="virtual/x11
-	>=x11-libs/gtk+-1.2.10-r4
+	=x11-libs/gtk+-1.2*
 	>=media-libs/tiff-3.5.5
 	>=media-libs/giflib-4.1.0
 	>=media-libs/libpng-1.2.1

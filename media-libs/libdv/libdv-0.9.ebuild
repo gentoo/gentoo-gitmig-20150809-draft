@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdv/libdv-0.9.ebuild,v 1.4 2002/04/12 18:57:21 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdv/libdv-0.9.ebuild,v 1.5 2002/05/23 06:50:13 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="software codec for dv-format video (camcorders etc)"
@@ -13,7 +13,7 @@ DEPEND="sys-devel/gcc
 	virtual/x11
 	sdl? ( media-libs/libsdl )
 	=dev-libs/glib-1.2*
-	>=x11-libs/gtk+-1.2.4
+	=x11-libs/gtk+-1.2*
 	dev-util/pkgconfig"
 
 src_compile() {
