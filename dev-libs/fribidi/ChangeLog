@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/fribidi
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/fribidi/ChangeLog,v 1.12 2004/07/02 04:41:23 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/fribidi/ChangeLog,v 1.13 2004/07/16 21:20:06 tgall Exp $
+
+  16 Jul 2004; Tom Gall <tgall@gentoo.org> fribidi-0.10.4.ebuild:
+  stable on ppc64
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   fribidi-0.10.4.ebuild:
