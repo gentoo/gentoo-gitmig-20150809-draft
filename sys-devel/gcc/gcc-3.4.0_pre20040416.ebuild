@@ -19,7 +19,7 @@ KEYWORDS="-*"
 PIE_VER="8.5.3"
 # forward port of the gcc 3.3 version, only with SSP disabled until
 # a port of propolice to 3.4 is completed.
-PIE_BASE_DIR="mirror://gentoo/"
+PIE_BASE_URI="mirror://gentoo/"
 PIE_SSP_PATCH="gcc-3.4.0-v${PIE_VER}-nodefault-pie-ssp.patch"
 PIE_EXCLUSION_PATCH="gcc-3.3.3-v${PIE_VER}-gcc-exclusion.patch"
 
