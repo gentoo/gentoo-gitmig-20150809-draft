@@ -2,15 +2,13 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
 # Author: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sysvinit/sysvinit-2.83-r1.ebuild,v 1.1 2001/12/17 20:19:50 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sysvinit/sysvinit-2.83-r1.ebuild,v 1.2 2001/12/22 06:29:37 azarah Exp $
 
 S=${WORKDIR}/${P}/src
 DESCRIPTION="System initialization stuff"
 SRC_URI="ftp://metalab.unc.edu/pub/Linux/system/daemons/init/${P}.tar.gz"
 DEPEND="virtual/glibc"
-RDEPEND="$DEPEND 
-	sys-apps/file
-	>=sys-apps/baselayout-1.6.8"
+RDEPEND="$DEPEND sys-apps/file"
 
 src_unpack() {
 
@@ -28,7 +26,8 @@ src_compile() {
 src_install() {
 
 	into /
-	dosbin init halt killall5 runlevel shutdown sulogin
+	newsbin init init.system
+	dosbin halt killall5 runlevel shutdown sulogin
 	dosym init /sbin/telinit
 	dobin last mesg utmpdump wall
 	dosym killall5 /sbin/pidof
