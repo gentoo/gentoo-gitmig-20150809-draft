@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/XWine/XWine-0.3.2.ebuild,v 1.1 2003/11/20 06:59:33 coronalvr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/XWine/XWine-0.3.2.ebuild,v 1.2 2003/11/20 21:54:49 coronalvr Exp $
 
 DESCRIPTION="GTK+ frontend for Wine"
 HOMEPAGE="http://darken.tuxfamily.org/pages/xwine_en.html"
@@ -26,7 +26,7 @@ src_compile() {
 }
 
 src_install() {
-	addwrite /usr/share/applnk/Applications
+	addwrite /usr/share/
 	einstall || die
 	# Don't need to install docs twice
 	rm -rf ${D}/usr/share/doc/xwine

@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/XWine
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/XWine/ChangeLog,v 1.9 2003/11/20 06:59:33 coronalvr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/XWine/ChangeLog,v 1.10 2003/11/20 21:54:49 coronalvr Exp $
+
+  20 Nov 2003; Alex Veber <coronalvr@gentoo.org> XWine-0.3.2.ebuild:
+  fix for
 
 *XWine-0.3.2 (20 Nov 2003)
 
