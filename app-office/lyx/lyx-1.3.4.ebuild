@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.3.4.ebuild,v 1.10 2004/10/22 02:29:16 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.3.4.ebuild,v 1.11 2004/10/25 08:25:12 usata Exp $
 
 inherit kde-functions eutils libtool
 
@@ -28,9 +28,9 @@ DEPEND="virtual/x11
 
 RDEPEND="${DEPEND}
 	virtual/ghostscript
-	app-text/xpdf
+	virtual/pdfviewer
+	virtual/psviewer
 	virtual/aspell-dict
-	app-text/gv
 	dev-tex/latex2html
 	media-gfx/imagemagick
 	cups? ( virtual/lpr )
