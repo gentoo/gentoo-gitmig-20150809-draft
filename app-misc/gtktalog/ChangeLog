@@ -1,10 +1,16 @@
 # ChangeLog for app-misc/gtktalog
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gtktalog/ChangeLog,v 1.2 2002/03/21 07:58:18 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gtktalog/ChangeLog,v 1.3 2002/03/27 21:39:34 seemant Exp $
+
+*gtktalog-0.99.16-r1 (27 Mar 2002)
+
+  27 Mar 2002; Seemant Kulleen <seemant@gentoo.org> gtktalog-0.99.16-r1.ebuild :
+
+  man page/LFH fix by Matthew Kennedy.
 
 *gtktalog-0.99.16 (20 Mar 2002)
 
-  12 Mar 2002; Seemant Kulleen <seemant@gentoo.org> gtktalog-0.99.16.ebuild :
+  20 Mar 2002; Seemant Kulleen <seemant@gentoo.org> gtktalog-0.99.16.ebuild :
 
   Matthew Kennedy sent in the upgrade.  Copied over the old one and updated the
   copyright info.

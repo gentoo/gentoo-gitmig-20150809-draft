@@ -1,7 +1,7 @@
-# Copyright 1999-2000 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Mikael Hallendal <hallski@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gtktalog/gtktalog-0.99.12.ebuild,v 1.2 2001/10/06 23:01:24 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gtktalog/gtktalog-0.99.16-r1.ebuild,v 1.1 2002/03/27 21:39:34 seemant Exp $
 
 A=${P}.tar.bz2
 S=${WORKDIR}/${P}
@@ -23,6 +23,7 @@ src_compile() {
     
 	./configure --host=${CHOST}					\
 		    --prefix=/usr					\
+		    --mandir=/usr/share/man				\
 		    --sysconfdir=/etc					\
 	            --enable-htmltitle					\
 		    --enable-mp3info					\
@@ -39,7 +40,10 @@ src_compile() {
 src_install () {
  	# DESTDIR does not work for mo-files
 
-	make prefix=${D}/usr sysconfdir=${D}/etc install || die
+	make prefix=${D}/usr \
+		mandir=${D}/usr/share/man \
+		sysconfdir=${D}/etc \
+		install || die
 
 	dodoc AUTHORS BUGS COPYING ChangeLog NEWS README TODO
 }
