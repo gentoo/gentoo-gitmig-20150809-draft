@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-0.9.8.ebuild,v 1.10 2004/03/20 09:21:40 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-0.9.8.ebuild,v 1.11 2004/03/27 07:48:01 eradicator Exp $
 
 inherit libtool
 
@@ -22,7 +22,6 @@ DEPEND="${RDEPEND}
 
 SRC_URI="mirror://alsaproject/lib/${P}.tar.bz2"
 RESTRICT="nomirror"
-S=${WORKDIR}/${P}
 
 src_compile() {
 	elibtoolize
