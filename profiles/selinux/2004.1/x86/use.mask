@@ -1,0 +1,6 @@
+# Copyright 1999-2004 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/2004.1/x86/use.mask,v 1.1 2004/11/05 02:59:25 pebenito Exp $
+
+# disallow posix acl since this is SELinux
+acl
