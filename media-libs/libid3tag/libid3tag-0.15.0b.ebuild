@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libid3tag/libid3tag-0.15.0b.ebuild,v 1.11 2004/01/11 02:22:56 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libid3tag/libid3tag-0.15.0b.ebuild,v 1.12 2004/01/16 18:51:32 gmsoft Exp $
 
 IUSE="debug"
 
@@ -13,7 +13,7 @@ RESTRICT="nomirror"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc alpha sparc ~hppa amd64 ~mips ia64"
+KEYWORDS="x86 ppc alpha sparc hppa amd64 ~mips ia64"
 
 DEPEND="virtual/glibc
 	>=sys-libs/zlib-1.1.3"
