@@ -1,8 +1,18 @@
-MD5 9639d5b19cb04af01e8c8a80a5f524c3 ChangeLog 1530
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 f1960ac9d9b6af6c29d5685c98974d1f ChangeLog 1633
 MD5 8f84fbb7a6c70bce37561a1f2f1c3c10 m17n-db-1.0.2.ebuild 627
-MD5 c33390859c365ef61f5ed251d23032de m17n-db-1.1.0.ebuild 614
-MD5 a3cd15db71184451e1c0670baeba7622 m17n-db-1.2.0.ebuild 625
 MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
+MD5 c33390859c365ef61f5ed251d23032de m17n-db-1.1.0.ebuild 614
+MD5 4217df4f6737094981894da38e3adab6 m17n-db-1.2.0.ebuild 621
 MD5 725519f1fcca0eaf1183d941fe5039da files/digest-m17n-db-1.0.2 65
 MD5 e82ced78997e50904210b5ad6be543c9 files/digest-m17n-db-1.1.0 65
 MD5 1a392872e80608720f5525cc6e7f628f files/digest-m17n-db-1.2.0 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFCCy+wVWNWqTUmv+0RAoZMAJ44v38vJsBIH2aGYD2ZlhYJVeFqJQCgixAS
+f16/seZElea1/z7d3ux33yI=
+=QkA0
+-----END PGP SIGNATURE-----
