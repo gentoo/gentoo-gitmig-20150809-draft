@@ -1,24 +1,24 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 1a5f5ede8391213439e454683970e559 ChangeLog 3185
-MD5 d10ab6588cd14fc1883a05ae855b72ae nbsmtp-0.98.ebuild 847
-MD5 75e6020925987bd1209aafa1b61ddda1 nbsmtp-0.92-r1.ebuild 622
-MD5 d4344117d42d54beaaec5999cb05c5f6 nbsmtp-0.8.ebuild 589
+MD5 4f1c6382adccbe6bf20a2fc11517ab47 ChangeLog 3281
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
-MD5 d1f5349c301e2d9bedf389d30d1d1e84 nbsmtp-0.97.ebuild 814
+MD5 d4344117d42d54beaaec5999cb05c5f6 nbsmtp-0.8.ebuild 589
+MD5 75e6020925987bd1209aafa1b61ddda1 nbsmtp-0.92-r1.ebuild 622
 MD5 6300b7bac595213cdfa914e4f8df3ffc nbsmtp-0.92.ebuild 630
 MD5 fc730062a49ab09c9226ef8b9620442d nbsmtp-0.96.ebuild 813
-MD5 200a5cc8c73df6a5a37a3cd5c34ab0b4 files/digest-nbsmtp-0.98 63
-MD5 e428ef7d3bc28b7f487c2eca0dbdf48e files/digest-nbsmtp-0.92-r1 63
+MD5 d1f5349c301e2d9bedf389d30d1d1e84 nbsmtp-0.97.ebuild 814
+MD5 62a08f03f2896feac3b7547606c7ddf4 nbsmtp-0.98.ebuild 849
 MD5 699b53b1a713d738aa1008c6cd0b4f29 files/digest-nbsmtp-0.8 57
-MD5 66023cfc32d7eb48b710b88fb2911df6 files/digest-nbsmtp-0.97 63
-MD5 96b4b06bf606b3d82f0c3121d55aad87 files/digest-nbsmtp-0.96 63
 MD5 e428ef7d3bc28b7f487c2eca0dbdf48e files/digest-nbsmtp-0.92 63
+MD5 e428ef7d3bc28b7f487c2eca0dbdf48e files/digest-nbsmtp-0.92-r1 63
+MD5 96b4b06bf606b3d82f0c3121d55aad87 files/digest-nbsmtp-0.96 63
+MD5 66023cfc32d7eb48b710b88fb2911df6 files/digest-nbsmtp-0.97 63
+MD5 200a5cc8c73df6a5a37a3cd5c34ab0b4 files/digest-nbsmtp-0.98 63
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFB6z0JQlM6RnzZP+IRAjJwAJ42DXZaDFdtV0xMYLP4rs/5Dk9IGQCfc9+J
-39Io8VDLZNrrcYcFAZZ7+4M=
-=Rty2
+iD8DBQFB7BE6KRy60XGEcJIRAir3AJ9vVrDoW0huOfBcdAElNFqX16VwgQCfWOFd
+mjp/MTY32aOfDhEqMdPo9sc=
+=ApAM
 -----END PGP SIGNATURE-----
