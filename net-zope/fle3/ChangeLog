@@ -1,6 +1,11 @@
 # ChangeLog for net-zope/fle3
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/fle3/ChangeLog,v 1.5 2004/10/23 22:36:22 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/fle3/ChangeLog,v 1.6 2004/10/23 22:57:58 lanius Exp $
+
+*fle3-1.4.5 (24 Oct 2004)
+
+  24 Oct 2004; Heinrich Wendel <lanius@gentoo.org> +fle3-1.4.5.ebuild:
+  version bump
 
   24 Oct 2004; Heinrich Wendel <lanius@gentoo.org> fle3-1.4.2.ebuild:
   fix -py21 dependencies

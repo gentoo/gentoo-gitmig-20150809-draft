@@ -1,6 +1,15 @@
 # ChangeLog for net-zope/zpsycopgda
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zpsycopgda/ChangeLog,v 1.3 2004/06/25 01:27:24 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zpsycopgda/ChangeLog,v 1.4 2004/10/23 23:01:03 lanius Exp $
+
+*zpsycopgda-1.1.15 (24 Oct 2004)
+
+  24 Oct 2004; Heinrich Wendel <lanius@gentoo.org> +zpsycopgda-1.1.15.ebuild,
+  zpsycopgda-1.1.2.ebuild:
+  version bump
+
+  24 Oct 2004; Heinrich Wendel <lanius@gentoo.org> zpsycopgda-1.1.2.ebuild:
+  fix -py21 dependency
 
 *zpsycopgda-1.1.2 (08 Mar 2003)
 
