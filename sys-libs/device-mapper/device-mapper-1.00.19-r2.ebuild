@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/device-mapper/device-mapper-1.00.19-r2.ebuild,v 1.1 2005/02/23 04:06:58 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/device-mapper/device-mapper-1.00.19-r2.ebuild,v 1.2 2005/03/01 22:42:01 vapier Exp $
 
 inherit eutils
 
@@ -10,24 +10,12 @@ SRC_URI="ftp://sources.redhat.com/pub/dm/${PN}.${PV}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ppc ~sparc ~amd64 ppc64 ~alpha hppa"
+KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 s390 sparc x86"
 IUSE=""
 
-DEPEND="virtual/linux-sources"
+DEPEND=""
 
-S="${WORKDIR}/${PN}.${PV}"
-
-pkg_setup() {
-	if [ ! -e "/usr/src/linux/include/linux/dm-ioctl.h" ] ; then
-		eerror
-		eerror "Your currently linked kernel (/usr/src/linux) hasn't"
-		eerror "been patched for device mapper support."
-		eerror
-		die "kernel not patched for device mapper support"
-	fi
-
-	return 0
-}
+S=${WORKDIR}/${PN}.${PV}
 
 src_compile() {
 	econf || die "econf failed"
