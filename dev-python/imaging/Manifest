@@ -1,14 +1,11 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 fb82a95d4025d74af5935c7f67f72dd4 ChangeLog 4297
+MD5 659d29fe8a5e1c0a0e61c9272b629ad2 ChangeLog 4464
 MD5 69c5686fa1e97347d96f58fd92a8dc24 imaging-1.1.2-r2.ebuild 2680
 MD5 4cd47ec1f934248633ed031a6533298a imaging-1.1.3-r1.ebuild 1285
 MD5 88ed9ffe0502885e7baf2036ed1baa51 imaging-1.1.3-r2.ebuild 1339
 MD5 064a48a5b8f5253081930cc5e04810fc imaging-1.1.3.ebuild 2677
-MD5 41fcfea870feb663eb6d5d31117d9d2e imaging-1.1.4.ebuild 1425
 MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
 MD5 725fbbea484920fb04a652e6b746f34c imaging-1.1.4-r1.ebuild 1429
+MD5 10601191be83fd818f24b810cc7be596 imaging-1.1.4.ebuild 1423
 MD5 7e1eafa229aad0303d6d04c88c1f89e6 files/digest-imaging-1.1.2-r2 65
 MD5 a7c02afc37ec55a40b4369ace30d8fdb files/digest-imaging-1.1.3 65
 MD5 a7c02afc37ec55a40b4369ace30d8fdb files/digest-imaging-1.1.3-r1 65
@@ -18,10 +15,3 @@ MD5 8f3dd92ea003765c3f18202e3ee6be14 files/imaging-1.1.4-fPIC.patch 373
 MD5 d0b3528fb0e74be99cf9ac5e9372e317 files/imaging-1.1.4-setup.py.patch 374
 MD5 e937d8e178744db225745000b4e42128 files/imaging-1.1.4-ft-2.1.9.patch 301
 MD5 171777970922938dc6a815dd2b6a85de files/digest-imaging-1.1.4-r1 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD4DBQFBosK2z2gxt1z4IGYRAuwKAJjoEctaUDEgNMUgrxJiBorsdy/XAKCEhDJy
-hM7qFhvurepy1mVcHznidQ==
-=SbpI
------END PGP SIGNATURE-----

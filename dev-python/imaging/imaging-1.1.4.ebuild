@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/imaging/imaging-1.1.4.ebuild,v 1.6 2004/11/23 04:55:01 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/imaging/imaging-1.1.4.ebuild,v 1.7 2004/11/29 08:51:32 mr_bones_ Exp $
 
 inherit distutils eutils
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.effbot.org/downloads/${MY_P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86 ~ppc sparc alpha ~amd64"
+KEYWORDS="x86 ~ppc sparc alpha amd64"
 IUSE="X tcltk"
 
 DEPEND="virtual/python
