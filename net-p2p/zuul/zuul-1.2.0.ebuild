@@ -1,7 +1,7 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Maintainer: Don Seiler <rizzo@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/zuul/zuul-1.2.0.ebuild,v 1.1 2003/11/19 00:24:22 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/zuul/zuul-1.2.0.ebuild,v 1.2 2003/12/09 01:37:26 rizzo Exp $
 
 inherit webapp-apache
 
@@ -29,7 +29,7 @@ src_install() {
 	cp -a * "${D}/${HTTPD_ROOT}/zuul"
 	dodoc ${S}/docs/*
 
-	chown -R "${HTTPD_USER}.${HTTPD_GROUP}" "${D}/${HTTPD_ROOT}/zuul"
+	chown -R "${HTTPD_USER}:${HTTPD_GROUP}" "${D}/${HTTPD_ROOT}/zuul"
 }
 
 pkg_postinst() {
