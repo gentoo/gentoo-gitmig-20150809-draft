@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/parted
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/ChangeLog,v 1.52 2004/06/27 03:45:18 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/ChangeLog,v 1.53 2004/08/18 13:22:22 agriffis Exp $
+
+  18 Aug 2004; <agriffis@gentoo.org> -parted-1.6.10-r1.ebuild,
+  parted-1.6.10-r2.ebuild, -parted-1.6.10.ebuild, -parted-1.6.5-r1.ebuild,
+  -parted-1.6.6-r1.ebuild, -parted-1.6.8-r1.ebuild, -parted-1.6.8.ebuild,
+  -parted-1.6.9.ebuild:
+  Add missing keywords ~x86 ~amd64 ~ia64 ~alpha to parted-1.6.10-r2.ebuild. Trim
+  old versions.
 
   26 Jun 2004; Tom Gall <tgall@gentoo.org> parted-1.6.10-r2.ebuild:
   stable on ppc64
