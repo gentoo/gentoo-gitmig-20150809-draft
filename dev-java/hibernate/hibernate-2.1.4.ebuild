@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/hibernate/hibernate-2.1.4.ebuild,v 1.1 2004/06/14 16:37:36 st_lim Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/hibernate/hibernate-2.1.4.ebuild,v 1.2 2004/06/16 00:56:57 st_lim Exp $
 
 inherit java-pkg
 
@@ -19,7 +19,7 @@ DEPEND=">=virtual/jdk-1.3
 		dev-java/commons-logging"
 IUSE="doc"
 
-S=${WORKDIR}/${PN}-${PV/.4}
+S=${WORKDIR}/${PN}-${PV:0:3}
 
 src_compile() {
 	ant jar
