@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kdesdk
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk/ChangeLog,v 1.40 2004/01/25 15:21:05 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk/ChangeLog,v 1.41 2004/02/02 14:29:08 caleb Exp $
+
+*kdesdk-3.2.0 (02 Feb 2004)
+
+  02 Feb 2004; Caleb Tennis <caleb@gentoo.org> kdesdk-3.2.0.ebuild,
+  kdesdk-3.2.0_rc1.ebuild:
+  New version, remove _rc
 
   25 Jan 2003; Caleb Tennis <caleb@gentoo.org> kdesdk-3.2.0_rc1:
   Make calltree dep an x86 only dep as it's for valgrind is which for x86 only.
