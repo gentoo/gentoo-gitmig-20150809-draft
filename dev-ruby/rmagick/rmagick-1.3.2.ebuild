@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rmagick/rmagick-1.3.2.ebuild,v 1.3 2004/03/25 08:40:09 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rmagick/rmagick-1.3.2.ebuild,v 1.4 2004/04/10 16:22:03 usata Exp $
 
 MY_P="RMagick-${PV}"
 DESCRIPTION="An interface between Ruby and the ImageMagick(TM) image processing library"
@@ -9,7 +9,7 @@ SRC_URI="http://rubyforge.org/download.php/243/${MY_P}.tar.bz2"
 LICENSE="Artistic"
 SLOT="0"
 KEYWORDS="alpha hppa ~mips ppc sparc x86"
-DEPEND=">=dev-lang/ruby-1.6.8
+DEPEND="virtual/ruby
 	>=media-gfx/imagemagick-5.5.1"
 S=${WORKDIR}/${MY_P}
 
