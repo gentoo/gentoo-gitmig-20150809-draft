@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/bookcase
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/bookcase/ChangeLog,v 1.12 2004/07/04 10:46:24 centic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/bookcase/ChangeLog,v 1.13 2004/09/13 19:11:43 carlo Exp $
+
+*bookcase-0.11 (13 Sep 2004)
+
+  13 Sep 2004; Carsten Lohrke <carlo@gentoo.org> +bookcase-0.11.ebuild:
+  version bump
 
   04 Jul 2004; Dominik Stadler <centic@gentoo.org> bookcase-0.9.3.ebuild:
   Add inherit eutils as we use epatch now.
