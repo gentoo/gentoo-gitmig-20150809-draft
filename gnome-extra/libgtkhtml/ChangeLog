@@ -1,27 +1,30 @@
 # ChangeLog for gnome-extra/libgtkhtml
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgtkhtml/ChangeLog,v 1.8 2002/09/06 03:55:38 spider Exp $
-
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgtkhtml/ChangeLog,v 1.9 2002/09/16 00:54:04 murphy Exp $
 
 *libgtkhtml-2.0.2 (06 Sep 2002)
-  06 Sep 2002; Spider <spider@gentoo.org> libgtkhtml-2.0.2.ebuild :
-  new version
 
+  16 Sep 2002; Maarten Thibaut <murphy@gentoo.org> libgtkhtml-2.0.2.ebuild, ChangeLog :
+  Adding sparc/sparc64 keywords. Revamping ChangeLog layout.
+
+  06 Sep 2002; Spider <spider@gentoo.org> libgtkhtml-2.0.2.ebuild : New version
 
 *libgtkhtml-2.0.1 (05 aug 2002)
-  05 Aug 2002; Spider <spider@gentoo.org> libgtkhtml-2.0.1.ebuild :
-  new version, changed to use MAKEOPTS instead of custom src_compile
-  
+
+  05 Aug 2002; Spider <spider@gentoo.org> libgtkhtml-2.0.1.ebuild : New version,
+  changed to use MAKEOPTS instead of custom src_compile
 
 libgtkhtml-2.0.0-r1 (18 Jul 2002)
-  18 Jul 2002; Spider <spider@gentoo.org> libgtkhtml-2.0.0-r1.ebuild
-  do a single make as to not break tests.
+
+  18 Jul 2002; Spider <spider@gentoo.org> libgtkhtml-2.0.0-r1.ebuild : Do a single
+  make as to not break tests.
   
 *libgtkhtml-2.0.0 (07 Jun 2002)
-  New version 
 
-  18 Jul 2002; Spider <spider@gentoo.org> 
-  KEYWORDS and mirror:// fixes
+  18 Jul 2002; Spider <spider@gentoo.org> libgtkhtml-2.0.0.ebuild : KEYWORDS and
+  mirror:// fixes
+
+  07 Jun 2002 Spider <spider@gentoo.org> libgtkhtml-2.0.0.ebuild : New version 
   
 *libgtkhtml-1.99.9 (05 Jun 2002)
   05 Jun 2002; Spider <spider@gentoo.org> libgtkhtml-1.99.9.ebuild:
