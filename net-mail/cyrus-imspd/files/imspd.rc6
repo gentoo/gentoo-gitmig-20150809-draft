@@ -1,7 +1,7 @@
 #!/sbin/runscript
-# Copyright 1999-2003 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imspd/files/imspd.rc6,v 1.1 2003/09/18 18:23:29 max Exp $
+# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imspd/files/imspd.rc6,v 1.2 2004/03/06 03:19:43 vapier Exp $
 
 depend() {
 	need net
@@ -21,13 +21,13 @@ use_ssl() {
 start() {
 	ebegin "Starting cyrus imspd"
 	start-stop-daemon --start --quiet --background --make-pidfile \
-                --pidfile /var/run/imspd.pid --exec /usr/sbin/imspd
+		--pidfile /var/run/imspd.pid --exec /usr/sbin/imspd
 	eend $?
 	
 	if [ -n "`use_ssl`" ] ; then
 		ebegin "Starting cyrus imspd ssl tunnel"
 		start-stop-daemon --start --quiet --exec /usr/sbin/stunnel \
-                        -- /etc/stunnel/imspd.conf
+			-- /etc/stunnel/imspd.conf
 		eend $?
 	fi
 }
@@ -36,7 +36,7 @@ stop() {
 	if [ -n "`use_ssl`" ] ; then
 		ebegin "Stopping cyrus imspd ssl tunnel"
 		start-stop-daemon --stop --quiet \
-                        --pidfile /var/run/stunnel.imspd.pid
+			--pidfile /var/run/stunnel.imspd.pid
 		eend $?
 	fi
 

@@ -1,7 +1,7 @@
 #!/sbin/runscript
-# Copyright 1999-2003 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-mail/exim/files/exim.rc6,v 1.8 2004/01/18 14:48:26 mholzer Exp $
+# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/exim/files/exim.rc6,v 1.9 2004/03/06 03:19:44 vapier Exp $
 
 depend() {
 	need logger net

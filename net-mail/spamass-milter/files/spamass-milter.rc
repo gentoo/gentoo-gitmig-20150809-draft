@@ -1,37 +1,30 @@
 #!/sbin/runscript
-# Copyright 1999-2003 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# Sample init script for Gentoo Linux
-# $Header: /var/cvsroot/gentoo-x86/net-mail/spamass-milter/files/spamass-milter.rc,v 1.2 2004/01/19 02:59:31 vapier Exp $
+# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/spamass-milter/files/spamass-milter.rc,v 1.3 2004/03/06 03:24:04 vapier Exp $
 
 # NB: Config is in /etc/conf.d/spamass-milter
-#DAEMON=/usr/sbin/spamass-milter
-#SOCKET=/var/run/spamass-milter.sock
-#PIDFILE=/var/run/spamass-milter.pid
-#DESC="Sendmail milter plugin for SpamAssassin"
 
 depend() {
-    need net spamd
-    use logger
-    before sendmail
+	need net spamd
+	use logger
+	before sendmail
 }
 
 start() {
-    ebegin "Starting $DESC"
-    start-stop-daemon --start --quiet --make-pidfile --pidfile ${PIDFILE}\
-    	--exec ${DAEMON} -- -p ${SOCKET} -f
-    eend $? "Failed to start ${DAEMON}"
+	ebegin "Starting $DESC"
+	start-stop-daemon --start --quiet --make-pidfile --pidfile ${PIDFILE}\
+		--exec ${DAEMON} -- -p ${SOCKET} -f
+	eend $? "Failed to start ${DAEMON}"
 }
 
 stop() {
-    ebegin "Stopping $DESC"
-    {
-	killall ${DAEMON}
-	/bin/sleep 5s
-	/bin/rm -f ${SOCKET}
-	/bin/rm -f ${PIDFILE}
-    } \
-    && kill -1 `head -n 1 /var/run/sendmail.pid`
-    eend $? "Failed to stop ${DAEMON}"
+	ebegin "Stopping $DESC"
+	{
+		killall ${DAEMON}
+		/bin/sleep 5s
+		/bin/rm -f ${SOCKET}
+		/bin/rm -f ${PIDFILE}
+	} && kill -1 `head -n 1 /var/run/sendmail.pid`
+	eend $? "Failed to stop ${DAEMON}"
 }
-

@@ -1,22 +1,23 @@
 #!/sbin/runscript
-# Copyright 1999-2003 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
+# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/files/mailman.rc,v 1.4 2004/03/06 03:19:44 vapier Exp $
 
 depend() {
-        need net
-        use logger
+	need net
+	use logger
 }
 
 start() {
-        ebegin "Starting mailman"
-        su - mailman -c 'bin/mailmanctl -s start' >/dev/null 2>&1
-        eend $?
+	ebegin "Starting mailman"
+	su - mailman -c 'bin/mailmanctl -s start' >/dev/null 2>&1
+	eend $?
 }
 
 stop() {
-        ebegin "Stopping mailman"
-        su - mailman -c 'bin/mailmanctl stop' >/dev/null 2>&1
-        eend $?
+	ebegin "Stopping mailman"
+	su - mailman -c 'bin/mailmanctl stop' >/dev/null 2>&1
+	eend $?
 }
 
 svc_restart() {
@@ -24,4 +25,3 @@ svc_restart() {
 	su - mailman -c 'bin/mailmanctl restart' >/dev/null 2>&1
 	eend $?
 }
-
