@@ -1,6 +1,12 @@
 # ChangeLog for net-mail/lbdb
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/lbdb/ChangeLog,v 1.1 2002/02/01 21:53:34 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/lbdb/ChangeLog,v 1.2 2002/07/11 02:36:26 raker Exp $
+
+*lbdb-0.26 (10 Jul 2002)
+
+  10 Jul 2002; Nick Hadaway <raker@gentoo.org> lbdb-0.26.ebuild
+
+  Version bump.
 
 *lbdb-0.24 (1 Feb 2002)
 
