@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64-riceplugin/mupen64-riceplugin-5.1.0.ebuild,v 1.5 2005/03/09 07:08:37 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64-riceplugin/mupen64-riceplugin-5.1.0.ebuild,v 1.6 2005/03/10 01:38:13 halcy0n Exp $
 
 inherit games gcc eutils libtool
 
@@ -41,6 +41,7 @@ src_unpack() {
 	fi
 
 	epatch ${FILESDIR}/${PN}-compile.patch || die "patch failed"
+	epatch ${FILESDIR}/${PN}-gcc4.patch || die "patch failed"
 
 	# the riceplugin requires sse support
 	#echo "#include <xmmintrin.h>" > ${T}/test.c

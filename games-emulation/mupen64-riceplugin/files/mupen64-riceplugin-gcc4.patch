@@ -1,0 +1,11 @@
+--- riceplugin/Profiler.cpp.old	2005-02-05 12:38:52.721617392 -0800
++++ riceplugin/Profiler.cpp	2005-02-05 12:39:16.467082794 -0800
+@@ -14,7 +14,7 @@
+ 
+ 
+ 
+-HRESULT CUnique< CProfiler >::Create()
++template <> HRESULT CUnique< CProfiler >::Create()
+ {
+ 	_ASSERTE(m_pInstance == NULL);
+ 	
