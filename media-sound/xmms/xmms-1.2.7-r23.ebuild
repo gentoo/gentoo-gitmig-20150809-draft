@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.7-r23.ebuild,v 1.17 2004/02/04 05:11:41 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.7-r23.ebuild,v 1.18 2004/02/04 07:50:39 eradicator Exp $
 
 inherit libtool flag-o-matic eutils
 filter-flags -fforce-addr -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE
@@ -33,7 +33,7 @@ RDEPEND="${DEPEND}
 #We want these things in DEPEND only
 DEPEND="$DEPEND
 	nls? ( dev-util/intltool )
-	>=sys-devel/automake-1.7.7
+	sys-devel/automake
 	>=sys-devel/autoconf-2.58"
 
 PATCHDIR=${WORKDIR}/patches
@@ -110,6 +110,7 @@ src_unpack() {
 		cd ${x}
 		aclocal
 		export WANT_AUTOCONF=2.5
+		export WANT_AUTOMAKE=1.4
 		automake --gnu --add-missing --include-deps Makefile || die
 		autoconf || die
 	done

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.8-r4.ebuild,v 1.4 2004/02/04 05:11:41 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.8-r4.ebuild,v 1.5 2004/02/04 07:50:39 eradicator Exp $
 
 IUSE="xml nls esd gnome opengl mmx oggvorbis 3dnow mikmod directfb ipv6 cjk gtk2"
 
@@ -34,7 +34,7 @@ RDEPEND="${DEPEND}
 #We want these things in DEPEND only
 DEPEND="$DEPEND
 	nls? ( dev-util/intltool )
-	>=sys-devel/automake-1.7.8
+	sys-devel/automake
 	>=sys-devel/autoconf-2.58"
 
 PATCHDIR=${WORKDIR}/patches
@@ -89,6 +89,7 @@ src_unpack() {
 	epatch ${PATCHDIR}/${P}-sid-songpos.patch
 
 	export WANT_AUTOCONF=2.5
+	export WANT_AUTOMAKE=1.4
 	for x in . libxmms ; do
 		cd ${S}/${x}
 		automake --gnu --add-missing --include-deps || die

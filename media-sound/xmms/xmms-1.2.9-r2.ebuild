@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.9-r1.ebuild,v 1.5 2004/02/04 07:50:39 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.9-r2.ebuild,v 1.1 2004/02/04 07:50:39 eradicator Exp $
 
 inherit flag-o-matic eutils
 
-PATCHVER="0.3"
+PATCHVER="0.4"
 
 MY_P=${P/_pre/-pre}
 S=${WORKDIR}/${MY_P}
@@ -59,13 +59,16 @@ src_unpack() {
 	#shadow Patch, bug #30420.
 	epatch ${PATCHDIR}/${P}-shadow.patch
 
+	# read_all patch, bug #39456
+	epatch ${PATCHDIR}/${P}-read_all_fix.patch
+
 	# Patch for mpg123 to convert Japanese character code of MP3 tag info
 	# the Japanese patch and the Russian one overlap, so its one or the other
 	if use cjk; then
 		epatch ${PATCHDIR}/${P}-mpg123j.patch
 	else
-		# add russian charset support
-		epatch ${PATCHDIR}/${P}-russian-charset-csa20.patch
+		# add recode patch http://sourceforge.net/projects/rusxmms/
+		epatch ${PATCHDIR}/${P}-recode-csa27.patch
 	fi
 
 	if [ ! -f ${S}/config.rpath ] ; then
