@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author:  Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.7.20020412.ebuild,v 1.2 2002/04/13 17:22:09 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.7.20020412.ebuild,v 1.3 2002/04/15 23:35:00 seemant Exp $
 
 MY_P=${PN}${PV}
 MY_P=${MY_P/.2/-2}
@@ -27,38 +27,38 @@ src_compile() {
 	use sse && myconf="--enable-x86opt"
 	use 3dnow && myconf="--enable-x86opt"
 
-	use X	\
-		&& myconf="${myconf} --with-x"	\
+	use X \
+		&& myconf="${myconf} --with-x" \
 		|| myconf="${myconf} --without-x"
 	
-	use qt	\
-		&& myconf="${myconf} --with-qt-dir=/usr/qt/2"	\
+	use qt \
+		&& myconf="${myconf} --with-qt-dir=/usr/qt/2" \
 		|| myconf="${myconf} --disable-qt"
 	
-	use kde	\
+	use kde \
 		&& myconf="${myconf} --enable-kde --with-extra-libraries=/usr/kde/2" \
-		&&  LDFLAGS="${LDFLAGS} -L/usr/kde/2/lib"	\
+		&&  LDFLAGS="${LDFLAGS} -L/usr/kde/2/lib" \
 		|| myconf="${myconf} --disable-kde"
 	
-	use sdl	\
-		&& myconf="${myconf} --enable-sdl"	\
+	use sdl \
+		&& myconf="${myconf} --enable-sdl" \
 		|| myconf="${myconf} --disable-sdl --disable-sdltest"
 	
 	use nas && LDFLAGS="-L/usr/X11R6/lib -lXt"
 
-	use oggvorbis	\
-		&& myconf="${myconf} --enable-vorbis"	\
+	use oggvorbis \
+		&& myconf="${myconf} --enable-vorbis" \
 		|| myconf="${myconf} --disable-vorbis --disable-oggtest --disable-vorbistest"
 	
-	use lame	\
-		&& myconf="${myconf} --enable-lame-bin"	\
+	use encode \
+		&& myconf="${myconf} --enable-lame-bin" \
 		|| myconf="${myconf} --disable-lame-bin"
 
 	export CFLAGS=${CFLAGS/-O?/-O2}
 	export LDFLAGS
 
 	./configure --prefix=/usr \
-		--enable-release	\
+		--enable-release \
 		--host=${CHOST} \
 		--enable-quiet \
 		--disable-tsc \
