@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-HTML_Common
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTML_Common/ChangeLog,v 1.14 2005/03/09 06:20:11 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTML_Common/ChangeLog,v 1.15 2005/03/09 18:00:25 corsair Exp $
+
+  09 Mar 2005; Markus Rothe <corsair@gentoo.org>
+  PEAR-HTML_Common-1.2.1.ebuild:
+  Added ~ppc64 to KEYWORDS; bug #84525
 
   09 Mar 2005; Sebastian Bergmann <sebastian@gentoo.org>
   PEAR-HTML_Common-1.2.1.ebuild:

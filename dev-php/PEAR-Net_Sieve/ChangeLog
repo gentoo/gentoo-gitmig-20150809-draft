@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/PEAR-Net_Sieve
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_Sieve/ChangeLog,v 1.18 2005/03/09 06:41:50 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_Sieve/ChangeLog,v 1.19 2005/03/09 18:02:22 corsair Exp $
+
+  09 Mar 2005; Markus Rothe <corsair@gentoo.org> PEAR-Net_Sieve-1.1.1.ebuild:
+  Added ~ppc64 to KEYWORDS; bug #84525
 
   09 Mar 2005; Sebastian Bergmann <sebastian@gentoo.org>
   PEAR-Net_Sieve-1.1.1.ebuild:

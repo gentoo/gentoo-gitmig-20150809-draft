@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Text_Wiki/PEAR-Text_Wiki-0.8.2.ebuild,v 1.9 2004/10/23 14:58:09 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Text_Wiki/PEAR-Text_Wiki-0.8.2.ebuild,v 1.10 2005/03/09 18:03:18 corsair Exp $
 
 inherit php-pear
 
