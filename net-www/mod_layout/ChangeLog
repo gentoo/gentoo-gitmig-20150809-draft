@@ -1,6 +1,12 @@
 # ChangeLog for net-www/mod_layout
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_layout/ChangeLog,v 1.4 2004/04/04 22:53:31 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_layout/ChangeLog,v 1.5 2004/05/07 12:41:09 zul Exp $
+
+*mod_layout-3.2.1 (08 May 2004)
+
+  08 May 2004; Chuck Short <zul@gentoo.org> mod_layout-3.2.1.ebuild,
+  files/15_mod_layout321.conf:
+  Added apache1 version for mod_layout. Helps close #48559.
 
   04 Apr 2004; Chuck Short <zul@gentoo.org> metadata.xml,
   mod_layout-4.0.1a.ebuild:
