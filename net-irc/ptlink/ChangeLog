@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/ptlink
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ptlink/ChangeLog,v 1.1 2003/10/12 02:47:08 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ptlink/ChangeLog,v 1.2 2003/10/25 01:26:41 zul Exp $
+
+  24 Oct 2003; Chuck Short <zul@gentoo.org> files/ptlinkircd.rc:
+  rc script fix up.
 
 *ptlink-6.14.2 (11 Oct 2003)
 
