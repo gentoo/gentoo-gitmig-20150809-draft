@@ -1,6 +1,10 @@
 # ChangeLog for net-news/pan
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/pan/ChangeLog,v 1.32 2003/09/17 23:04:02 liquidx Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-news/pan/ChangeLog,v 1.33 2004/01/09 21:43:37 weeve Exp $
+
+  09 Jan 2004; Jason Wever <weeve@gentoo.org> pan-0.14.0.ebuild,
+  pan-0.14.2.ebuild:
+  Added ~sparc keyword to 0.14.0 and 0.14.2
 
   18 Sep 2003; Alastair Tse <liquidx@gentoo.org> pan-0.14.2.ebuild:
   pan-0.14.2 can dep on gnet-1 or gnet-2 (#28888)
