@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift/gift-0.11.6-r1.ebuild,v 1.3 2004/07/27 17:26:35 kang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift/gift-0.11.6-r1.ebuild,v 1.4 2004/07/31 01:55:07 squinky86 Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ IUSE=""
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~sparc ~ppc ~alpha ~amd64"
+KEYWORDS="x86 ~sparc ~ppc ~alpha ~amd64"
 
 RDEPEND=">=sys-libs/zlib-1.1.4"
 
