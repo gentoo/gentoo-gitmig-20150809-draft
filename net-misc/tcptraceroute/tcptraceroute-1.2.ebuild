@@ -1,7 +1,7 @@
-# Copyright 1999-2000 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Bruce A. Locke <blocke@shivan.org>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tcptraceroute/tcptraceroute-1.2.ebuild,v 1.2 2001/11/20 01:42:18 blocke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tcptraceroute/tcptraceroute-1.2.ebuild,v 1.3 2002/03/27 12:19:27 seemant Exp $
 
 
 S=${WORKDIR}/${P}
@@ -23,5 +23,6 @@ src_install () {
     dosbin tcptraceroute
 
     doman tcptraceroute.8
-    dodoc tcptraceroute.8.html examples.txt COPYING README changelog
+    dodoc examples.txt COPYING README changelog
+	dohtml -r ./
 }
