@@ -1,7 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# Alexander Papaspyrou <alexander.papaspyrou@udo.edu
-# $Header: /var/cvsroot/gentoo-x86/net-misc/knetmonapplet/knetmonapplet-0.9.ebuild,v 1.6 2004/08/29 18:05:23 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/knetmonapplet/knetmonapplet-0.9.ebuild,v 1.7 2004/10/03 21:46:38 swegener Exp $
 
 inherit kde
 need-kde 3
