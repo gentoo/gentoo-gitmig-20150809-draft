@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.1.9-r1.ebuild,v 1.4 2002/10/11 14:51:49 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.1.9-r1.ebuild,v 1.5 2002/10/11 14:57:37 raker Exp $
 
 S=${WORKDIR}/${P}
 
@@ -25,8 +25,6 @@ DEPEND="virtual/glibc
 	net-mail/mailbase"
 RDEPEND="${DEPEND}"
 
-# recommended: flex, maybe: net-snmp, postfix, perl?, afs, inn, tcl (cyradm)
-	
 pkg_setup() {
 	
 	if ! grep -q ^cyrus: /etc/passwd ; then
@@ -67,8 +65,6 @@ src_compile() {
 		--without-perl \
 		--disable-cyradm \
 		${myconf} || die "bad ./configure"
-	# doesn't work
-		--sysconfdir=/etc/cyrusimapd
 
 	# make depends break with -f... in CFLAGS
 	make depend CFLAGS="" || die "make depend problem"

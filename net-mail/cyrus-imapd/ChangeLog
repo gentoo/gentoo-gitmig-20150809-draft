@@ -1,12 +1,13 @@
 # ChangeLog for net-mail/cyrus-imapd
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/ChangeLog,v 1.13 2002/10/11 14:51:49 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/ChangeLog,v 1.14 2002/10/11 14:57:37 raker Exp $
 
 *cyrus-imapd-2.1.9-r1 (01 Oct 2002)
 
   11 Oct 2002; Nick Hadaway <raker@gentoo.org>
   cyrus-imapd-2.1.9-r1.ebuild :
-  Added gssapi support based on the kerberos use flag.
+  Added gssapi support based on the kerberos use flag.  Beautified the
+  ebuild a bit more.
 
   01 Oct 2002; Alexander Holler <holler@ahsoftware.de>
   cyrus-imapd-2.1.9-r1.ebuild, files/cyrus_2.conf, files/gentestcrt.sh,
