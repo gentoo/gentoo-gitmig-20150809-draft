@@ -1,5 +1,5 @@
-MD5 b3fd32fab601e82f9b7a0d89a2c7e181 ChangeLog 884
-MD5 dfeaf7ff1668f9e649cbdf287def45e7 uglygs-0_rc11.ebuild 1374
+MD5 6ba7d5abb3c1504c4281ba5ae42bf268 uglygs-0_rc11.ebuild 1364
+MD5 2eb3add58368b82ede7df54dacade0aa ChangeLog 877
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 MD5 47fb887656b74fb149e80e56c258b346 files/0_rc11-uglygs.conf.patch 2213
 MD5 9740370abf89112b4187b9b4708ed76d files/0_rc11-uglygs.pl.patch 7040
