@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/dante
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dante/ChangeLog,v 1.41 2005/02/04 23:21:55 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dante/ChangeLog,v 1.42 2005/02/15 10:34:24 dragonheart Exp $
+
+  15 Feb 2005; Daniel Black <dragonheart@gentoo.org>
+  -files/dante-1.1.14-socksify.patch, -files/dante-sockd-conf-1.1.14-r2,
+  -files/dante-sockd-init, -dante-1.1.13.ebuild, -dante-1.1.14-r1.ebuild,
+  -dante-1.1.14-r2.ebuild, dante-1.1.15.ebuild, -dante-1.1.15_pre1.ebuild,
+  +files/dante-1.1.15-optionalpam.patch:
+  Pam now optional as per bug #81002. Prior version removed as they were
+  vulnerable. Thanks to Chetan Reddy <chetan13@gmail.com> for bug report
 
   05 Feb 2005; Jan Brinkmann <luckyduck@gentoo.org> dante-1.1.15.ebuild:
   stable on amd64, also see #80267

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dante/dante-1.1.15.ebuild,v 1.8 2005/02/06 10:46:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dante/dante-1.1.15.ebuild,v 1.9 2005/02/15 10:34:24 dragonheart Exp $
 
 inherit gcc fixheadtails eutils
 
@@ -16,7 +16,7 @@ KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sparc x86"
 IUSE="tcpd debug selinux"
 
 RDEPEND="virtual/libc
-	sys-libs/pam
+	pam? ( sys-libs/pam )
 	tcpd? ( sys-apps/tcp-wrappers )
 	selinux? ( sec-policy/selinux-dante )"
 DEPEND="${RDEPEND}
@@ -29,7 +29,9 @@ src_unpack() {
 	cd ${S}
 	epatch ${FILESDIR}/dante-1.1.15_pre1-socksify.patch
 	epatch ${FILESDIR}/dante-1.1.14-bindresvport.patch
-	ht_fix_file `find ${S} -name 'configure'`
+	epatch ${FILESDIR}/${P}-optionalpam.patch
+
+	ht_fix_file configure configure.ac
 	sed -i \
 		-e 's:/etc/socks\.conf:/etc/socks/socks.conf:' \
 		-e 's:/etc/sockd\.conf:/etc/socks/sockd.conf:' \
@@ -40,6 +42,7 @@ src_compile() {
 	econf \
 		`use_enable debug` \
 		`use_enable tcpd libwrap` \
+		`use_with pam` \
 		--with-socks-conf=/etc/socks/socks.conf \
 		--with-sockd-conf=/etc/socks/sockd.conf \
 		${myconf} \
