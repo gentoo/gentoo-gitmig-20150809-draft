@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift-cvs/gift-cvs-0.10.0.ebuild,v 1.5 2003/02/13 15:18:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift-cvs/gift-cvs-0.10.0.ebuild,v 1.6 2003/02/18 06:25:19 lostlogic Exp $
 
 DESCRIPTION="Lets you connect to OpenFT, a decentralised p2p network like FastTrack"
 HOMEPAGE="http://gift.sourceforge.net"
@@ -24,7 +24,7 @@ src_compile() {
 
         cd ${S}
         ./autogen.sh --prefix=/usr --host=${CHOST} || die
-        emake || die
+        emake CFLAGS="${CFLAGS}" CXXFLAGS="${CXXFLAGS}" || die
 
 }
 

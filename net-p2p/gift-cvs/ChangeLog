@@ -1,12 +1,16 @@
 # ChangeLog for net-p2p/gift-cvs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift-cvs/ChangeLog,v 1.6 2003/02/12 08:39:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift-cvs/ChangeLog,v 1.7 2003/02/18 06:25:19 lostlogic Exp $
 
   14 Jan 2003; Jon Nall <nall@gentoo.org> gift-cvs-0.10.0.ebuild :
   added ~ppc
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
-*gift-cvs--0.10.0 (30 Nov 2002) Bart Verwilst <verwilst@gentoo.org>
+*gift-cvs-0.10.0 (30 Nov 2002) Bart Verwilst <verwilst@gentoo.org>
 
+  18 Nov 2003; Brandon Low <lostlogic@gentoo.org>; gift-cvs-0.10.0.ebuild:
+  Make use CFLAGS
+
+  30 Nov 2002; Bart Verwilst <verwilst@gentoo.org>; gift-cvs-0.10.0.ebuild:
   Initial ebuild that uses the cvs eclass.. 
