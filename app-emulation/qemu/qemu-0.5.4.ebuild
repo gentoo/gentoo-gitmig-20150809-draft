@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-0.5.3.ebuild,v 1.3 2004/04/28 16:47:33 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-0.5.4.ebuild,v 1.1 2004/04/28 16:47:33 lu_zero Exp $
+
+inherit eutils
 
 DESCRIPTION="Multi-platform & multi-targets dynamic translator"
 SRC_URI="http://fabrice.bellard.free.fr/qemu/${P}.tar.gz"
@@ -20,6 +22,12 @@ RESTRICT="nostrip"
 TARGET_LIST="arm-user i386-user ppc-user sparc-user" #i386-softmmu
 
 #RUNTIME_PATH="/emul/gnemul/"
+src_unpack () {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${P}-jocelyn-mayer-ppc.patch
+}
+
 
 src_compile () {
 	./configure --prefix=/usr \
