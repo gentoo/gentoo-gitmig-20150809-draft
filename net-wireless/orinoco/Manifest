@@ -1,2 +1,14 @@
-MD5 78f6f433a2ac71fbb78ddfd4f02fbc14 orinoco-0.15_rc2.ebuild 2186
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 84346418cd8cd8c9ebaa801a84dd1c92 ChangeLog 358
+MD5 b280eebc74d70d85e664debf1adce2c3 metadata.xml 255
+MD5 61d858a2a357661944fe398b92f07f5b orinoco-0.15_rc2.ebuild 2290
 MD5 85bf652db8f2f4e7c10d071cbeb13aa4 files/digest-orinoco-0.15_rc2 436
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBhobwI1lqEGTUzyQRAu5vAJ9MTMqoDsJRs+RI5VtV+xo42sZ6VACgxW9U
+zsLwJe35Qw7AzBR0kNCrpIw=
+=U5p3
+-----END PGP SIGNATURE-----
