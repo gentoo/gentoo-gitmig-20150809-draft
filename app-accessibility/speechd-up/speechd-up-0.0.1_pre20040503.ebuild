@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speechd-up/speechd-up-0.0.1_pre20040503.ebuild,v 1.1 2004/05/03 18:27:09 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speechd-up/speechd-up-0.0.1_pre20040503.ebuild,v 1.2 2004/05/03 22:26:35 squinky86 Exp $
+
+inherit cvs eutils libtool
 
 DESCRIPTION="speechup screen reader with software synthesis"
 HOMEPAGE="http://www.freebsoft.org/speechd-up"
@@ -13,8 +15,6 @@ RDEPEND="virtual/glibc"
 DEPENDS="${RDEPEND}
 	>=sys-devel/automake-1.7.8
 	>=sys-devel/autoconf-2.58"
-
-inherit cvs eutils libtool
 
 ECVS_SERVER="cvs.freebsoft.org:/var/lib/cvs"
 ECVS_MODULE="speechd-up"
