@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/mldonkey-2.5.16-r2.ebuild,v 1.3 2004/04/13 15:34:42 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/mldonkey-2.5.16-r3.ebuild,v 1.1 2004/04/13 15:34:42 mholzer Exp $
 
 inherit eutils
 
@@ -8,7 +8,8 @@ IUSE="gtk"
 
 DESCRIPTION="mldonkey is a new client to access the eDonkey network. It is written in Objective-Caml, and comes with its own GTK GUI, an HTTP interface and a telnet interface."
 HOMEPAGE="http://www.nongnu.org/mldonkey/"
-SRC_URI="http://savannah.nongnu.org/download/${PN}/${P}.tar.gz"
+SRC_URI="http://savannah.nongnu.org/download/${PN}/${P}.tar.gz
+	http://www.8ung.at/spiralvoice/patches/patch_pack16k"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -24,12 +25,12 @@ RDEPEND="${DEPEND}
 MLUSER="p2p"
 
 src_unpack() {
-	unpack ${A}
+	unpack ${P}.tar.gz
 
 	cd ${S}
 	epatch ${FILESDIR}/${P}-configure.patch
 	#Don't change this, unless you know what you are doing
-	patch -p0 < ${FILESDIR}/${P}-16g.patch || die
+	patch -p0 < ${DISTDIR}/patch_pack16k || die
 }
 
 
@@ -43,7 +44,7 @@ src_compile() {
 		--localstatedir=/var/mldonkey \
 		--enable-batch \
 		--enable-checks \
-		--enable-pthread
+		--enable-pthread || die
 
 	emake || die
 }
