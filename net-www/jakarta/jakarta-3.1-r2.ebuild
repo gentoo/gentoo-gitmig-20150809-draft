@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Tools Team <tools@gentoo.org>
 # Author: Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-www/jakarta/jakarta-3.1-r2.ebuild,v 1.5 2002/01/23 20:06:16 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/jakarta/jakarta-3.1-r2.ebuild,v 1.6 2002/01/24 19:39:46 karltk Exp $
 
 P=jakarta-3.1
 A="jakarta-tomcat.tar.gz jakarta-ant.tar.gz"
@@ -48,7 +48,7 @@ src_install() {
 	insinto /usr/lib/apache
 	doins ${S}/jakarta-tomcat/src/native/apache/jserv/mod_jserv.so
 	insinto /etc/httpd
-	doins ${FILESDIR/httpd.tomcat
+	doins ${FILESDIR}/httpd.tomcat
 	insinto /etc/rc.d/init.d
 	insopts -m755
 	doins ${FILESDIR}/jakarta
@@ -65,7 +65,7 @@ src_install() {
 pkg_config() {
 
 	einfo "Activating Servlet Engine..."
-	 ${ROOT}/usr/sbin/rc-update add jakarta
+	${ROOT}/usr/sbin/rc-update add jakarta
 }
 
 
