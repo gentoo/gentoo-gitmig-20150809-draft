@@ -245,7 +245,13 @@ net-mail/sendmail
 
 # incompatible
 #added pspell-ispell till i sort out the *spells
->=app-text/pspell-ispell-0.12
+#
+#pspell-ispell works here, but it seems that with pspell, aspell
+#should be generally left alone
+#
+#Azarah - 03 April 2002
+#
+<app-text/pspell-ispell-0.12-r1
 <app-text/pspell-0.12
 <app-text/aspell-0.33
 >=sys-libs/readline-4.2
@@ -391,6 +397,7 @@ dev-lang/tcl-tk
 # or later .. masking 1.4.2 again and adding 1.4.1-r2 with the
 # "relink bug" fixed.
 >=sys-devel/libtool-1.4.2
+<sys-devel/libtool-1.4.1-r4
 
 # Failed to build for at least me and "wouzer" Bugzilla issue: #243
 =x11-base/xfree-4.2.0
