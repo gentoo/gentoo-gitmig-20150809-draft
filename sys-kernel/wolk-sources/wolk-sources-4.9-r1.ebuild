@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/wolk-sources/wolk-sources-4.9-r1.ebuild,v 1.2 2003/11/14 16:42:00 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/wolk-sources/wolk-sources-4.9-r1.ebuild,v 1.3 2003/11/14 20:26:09 nerdboy Exp $
 
 IUSE="build wolk-bootsplash wolk-supermount ipv6"
 
@@ -48,7 +48,8 @@ local PATCHEFILES="-wolk4.0s -wolk4.0s-to-4.1s -wolk4.1s-to-4.2s -wolk4.2s-to-4.
 		done
 
 	einfo "Applying nvidia patches"
-	# epatch ${FILESDIR}/wolk-4.9s-nvidia.patch || die
+	epatch ${FILESDIR}/wolk-4.9s-page.h.patch || die
+	epatch ${FILESDIR}/wolk-4.9s-setup.c.patch || die
 
 	einfo "Applying other needed patches"
 	epatch ${FILESDIR}/wolk-4.9s-speedstep.c.patch || die
