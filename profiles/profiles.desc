@@ -18,10 +18,7 @@ ppc-macos	default-darwin/macos/10.3			dev
 ppc-od		default-darwin/od/ppc				dev
 s390		default-linux/s390/2004.3			stable
 sh			default-linux/sh					dev
-sparc		default-sparc-2004.0				dev
-sparc		default-linux/sparc/sparc64/2004.2	stable
 sparc		default-linux/sparc/sparc64/2004.3	stable
-sparc		default-linux/sparc/sparc64/2004.3/alsa	dev
 x86			default-linux/x86/2004.3			stable
 x86-obsd	default-x86-obsd-2004				dev
 x86-fbsd	default-bsd/fbsd/x86				dev
