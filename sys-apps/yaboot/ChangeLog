@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/yaboot
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/yaboot/ChangeLog,v 1.16 2003/03/27 00:49:09 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/yaboot/ChangeLog,v 1.17 2003/04/13 03:06:02 lu_zero Exp $
+
+  13 Apr 2003; Luca Barbato <lu_zero@gentoo.org> yaboot-1.3.10-r2.ebuild:
+  fix ebuild to set CC if isn't already set (bug 18765)
 
 *yaboot-1.3.10-r2 (26 Mar 2003)
 
