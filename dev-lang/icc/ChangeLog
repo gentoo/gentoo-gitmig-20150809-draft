@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/icc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/ChangeLog,v 1.16 2003/09/18 18:46:13 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/ChangeLog,v 1.17 2003/09/18 19:47:56 avenj Exp $
+
+  18 Sep 2003; Jon Portnoy <avenj@gentoo.org> icc-7.1.006.ebuild,
+  icc-7.1.029.ebuild :
+  _Much_ faster unpacking thanks to rpm.eclass and Georgi Georgiev.
+  See bug 23179 for more information.
 
 *icc-7.1.029 (18 Sep 2003)
 
