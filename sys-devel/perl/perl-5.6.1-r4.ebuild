@@ -4,7 +4,7 @@
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Larry Wall's Practical Extraction and Reporting Language"
-SRC_URI="ftp://ftp.perl.org/pub/perl/CPAN/src/${P}.tar.gz"
+SRC_URI="ftp://ftp.perl.org/pub/CPAN/src/${P}.tar.gz"
 HOMEPAGE="http://www.perl.org"
 LICENSE="Artistic | GPL-2"
 SLOT="0"
