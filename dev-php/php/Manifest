@@ -3,9 +3,9 @@ MD5 b79d62ef2f1f57436feebcba1f8f115c php-4.3.5.ebuild 1301
 MD5 cb062070f8ab4292eee83cfd2c56e9e8 php-4.3.5-r1.ebuild 1054
 MD5 ca1f3482b0ecc4d25fae4c7c1bbecf00 php-4.3.4-r4.ebuild 1378
 MD5 2c4f329f8ef101fc4b4c2853d870b04f php-5.0_beta1.ebuild 1164
-MD5 f892c9a2f6cf0d5ec97e2d72c07b3d1d ChangeLog 12774
+MD5 b304c2c7b0a88e3205e548b025a9e0a9 ChangeLog 12917
 MD5 38fe937e954ab7109395cefa86fcd2d4 metadata.xml 384
-MD5 2a9a5bf61ce72411c9611d72edbe3898 php-4.3.6_rc2.ebuild 1100
+MD5 ebd2def4b6a8ede383108a231c213db7 php-4.3.6_rc2.ebuild 1101
 MD5 7515e9b1dc298a0fb1c12d35a58c265d files/php-4.3.4-amd64hack.diff 1028
 MD5 1083399b52247e8dc3a2276a114983f6 files/digest-php-4.3.6_rc2 66
 MD5 5547bf31e6a425747226d5984cff04e9 files/digest-php-4.3.4-r4 137
