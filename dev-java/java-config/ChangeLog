@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/java-config
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/ChangeLog,v 1.38 2004/01/10 23:12:39 aether Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/ChangeLog,v 1.39 2004/01/11 00:42:03 agriffis Exp $
+
+*java-config-1.1.8-r1 (10 Jan 2004)
+
+  10 Jan 2004; Aron Griffis <agriffis@gentoo.org> java-config-1.1.8-r1.ebuild,
+  java-config-1.2.2.ebuild:
+  mark 1.1.8-r1 stable on alpha and ia64; mark 1.2.2 testing on same. This is
+  for bug 37829
 
 *java-config-1.2.2 (10 Jan 2004)
 
