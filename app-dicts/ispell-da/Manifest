@@ -2,7 +2,9 @@ MD5 47d061bae85bf2fc628eae38c74cc23c ChangeLog 1633
 MD5 c29a38dffcead2773ea422fc7b949ff8 ispell-da-1.4.27.ebuild 629
 MD5 a3cad4b2de78a8cbf2028922092da04f ispell-da-1.4.28.ebuild 629
 MD5 00afe3314c68bd5232992037224e05b7 ispell-da-1.4.33.ebuild 629
+MD5 4b84bb602ae67d2fbcd0843f59bf4b05 ispell-da-1.4.35.ebuild 635
 MD5 eb03775ece62e57725480e782cd84ee8 metadata.xml 162
 MD5 bdef96dee0465e9968b7b3dd71f16120 files/digest-ispell-da-1.4.27 68
 MD5 a9519fc83c3cac37217a37937b3e03c3 files/digest-ispell-da-1.4.28 68
 MD5 7eb0c877911fc6702eab75be1f3c86fa files/digest-ispell-da-1.4.33 68
+MD5 f25d57bdc8ebb3fe9643845c94b75804 files/digest-ispell-da-1.4.35 68
