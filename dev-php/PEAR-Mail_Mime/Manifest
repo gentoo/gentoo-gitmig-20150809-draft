@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ae99b25a57501856e80bba3a9693204b ChangeLog 1789
-MD5 6f78c4d4ddbb6d7ea90157a5ea26510a PEAR-Mail_Mime-1.2.1.ebuild 720
-MD5 34b376f52ca199fffb4e52b83169574a metadata.xml 156
 MD5 e5bece55794c0c5e556e33ae97d243c3 PEAR-Mail_Mime-1.2.1-r1.ebuild 423
+MD5 7a1f6990c1514171aef523d8b159ad30 ChangeLog 1897
+MD5 34b376f52ca199fffb4e52b83169574a metadata.xml 156
+MD5 6f78c4d4ddbb6d7ea90157a5ea26510a PEAR-Mail_Mime-1.2.1.ebuild 720
 MD5 97d65d78c9962444a24de3e6c15003fd files/digest-PEAR-Mail_Mime-1.2.1 63
 MD5 97d65d78c9962444a24de3e6c15003fd files/digest-PEAR-Mail_Mime-1.2.1-r1 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFB0D5wroRuSHgZdywRAvjPAJ986NUfitKVixVnm1wwKPJ8ZB9oHwCfVvLh
-IPRQ77VxpwJklLMKfdC0+IY=
-=Mqxr
------END PGP SIGNATURE-----
