@@ -1,6 +1,15 @@
 # ChangeLog for dev-libs/libxml2
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/ChangeLog,v 1.37 2003/04/09 03:01:30 todd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/ChangeLog,v 1.38 2003/04/26 20:41:10 liquidx Exp $
+
+*libxml2-2.5.7 (26 Apr 2003)
+
+  26 Apr 2003; Alastair Tse <liquidx@gentoo.org> libxml2-2.4.23.ebuild,
+  libxml2-2.4.23.ebuild, libxml2-2.4.24.ebuild, libxml2-2.4.24.ebuild,
+  libxml2-2.4.28-r1.ebuild, libxml2-2.4.28-r1.ebuild, libxml2-2.4.28.ebuild,
+  libxml2-2.4.28.ebuild, libxml2-2.5.5.ebuild, libxml2-2.5.5.ebuild,
+  libxml2-2.5.7.ebuild:
+  version bump and cleanup
 
 *libxml2-2.5.6 (01 Apr 2003)
 

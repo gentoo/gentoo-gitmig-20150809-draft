@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/libxml2-2.4.28-r1.ebuild,v 1.3 2003/02/13 10:46:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/libxml2-2.5.7.ebuild,v 1.1 2003/04/26 20:41:10 liquidx Exp $
 
-inherit eutils libtool gnome2
+inherit eutils libtool gnome.org
 
 IUSE="python readline"
 
@@ -16,16 +16,7 @@ DEPEND="sys-libs/zlib
  
 SLOT="2"
 LICENSE="MIT"
-KEYWORDS="~x86 ~sparc ~ppc ~alpha ~hppa"
-
-src_unpack() {
-
-	unpack ${A}
-	cd ${S}
-	# fix from the libxml2 cvs. will be included in version .29
-	epatch ${FILESDIR}/parser.c.diff
-
-}
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa"
 
 src_compile() {
 	# Fix .la files of python site packages
@@ -36,6 +27,7 @@ src_compile() {
 	# This breaks gnome2 (libgnomeprint for instance fails to compile with
 	# fresh install, and existing) - <azarah@gentoo.org> (22 Dec 2002).
 	#use zlib && myconf="--with-zlib" || myconf="--without-zlib"
+
 	use python && myconf="${myconf} --with-python" \
 		|| myconf="${myconf} --without-python" 
 	use readline && myconf="${myconf} --with-readline" \
@@ -58,4 +50,3 @@ src_install() {
 	
 	dodoc AUTHORS COPYING* ChangeLog NEWS README
 }
-
