@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/vpopmail-5.2.1-r6.ebuild,v 1.6 2003/09/25 23:58:52 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/vpopmail-5.2.1-r6.ebuild,v 1.7 2003/09/26 05:41:00 msterret Exp $
 
 IUSE="mysql ipalias clearpasswd"
 
@@ -92,7 +92,7 @@ src_compile() {
 
 	# Bug 20127
 	use clearpasswd &&
-		myopts="${myconf} --enable-clear-passwd=y" || 
+		myopts="${myconf} --enable-clear-passwd=y" ||
 		myopts="${myconf} --enable-clear-passwd=n"
 
 	econf ${myopts} --sbindir=/usr/sbin \
