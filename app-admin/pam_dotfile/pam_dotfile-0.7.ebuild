@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/pam_dotfile/pam_dotfile-0.7.ebuild,v 1.9 2004/09/02 11:30:26 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/pam_dotfile/pam_dotfile-0.7.ebuild,v 1.10 2004/09/04 23:17:00 dholm Exp $
 
 MY_P="${P/_beta/beta}"
 S="${WORKDIR}/${MY_P}"
@@ -11,7 +11,7 @@ SRC_URI="http://www.stud.uni-hamburg.de/users/lennart/projects/pam_dotfile/${MY_
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 amd64"
+KEYWORDS="x86 amd64 ~ppc"
 IUSE="doc"
 DEPEND="doc? ( net-www/lynx )
 	>=sys-libs/pam-0.72"
