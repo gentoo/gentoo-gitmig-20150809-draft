@@ -1,6 +1,11 @@
 # ChangeLog for app-text/gpdf
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gpdf/ChangeLog,v 1.5 2003/09/07 22:29:18 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gpdf/ChangeLog,v 1.6 2003/09/10 23:48:56 foser Exp $
+
+*gpdf-0.110 (11 Sep 2003)
+
+  11 Sep 2003; foser <foser@gentoo.org> gpdf-0.110.ebuild :
+  New version
 
 *gpdf-0.106 (07 Sep 2003)
 
