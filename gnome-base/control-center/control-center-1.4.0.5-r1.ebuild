@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/control-center/control-center-1.4.0.5-r1.ebuild,v 1.2 2002/06/23 23:16:09 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/control-center/control-center-1.4.0.5-r1.ebuild,v 1.3 2002/07/17 10:13:15 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="The GNOME control-center"
@@ -8,6 +8,8 @@ SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/${PN}/${P}.tar.bz2"
 HOMEPAGE="http://www.gnome.org/"
 
 SLOT="1"
+LICENSE="GPL"
+KEYWORDS="x86 ppc"
 
 RDEPEND="
 	( >=gnome-base/gnome-vfs-1.0.4

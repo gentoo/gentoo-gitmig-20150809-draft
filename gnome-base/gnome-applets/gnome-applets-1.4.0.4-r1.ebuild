@@ -1,6 +1,6 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-1.4.0.4-r1.ebuild,v 1.4 2002/07/11 06:30:25 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-1.4.0.4-r1.ebuild,v 1.5 2002/07/17 10:13:15 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="gnome-applets"
@@ -16,27 +16,29 @@ DEPEND="${RDEPEND}
         >=app-text/scrollkeeper-0.2
         >=dev-util/intltool-0.11"
 
+SLOT="1"
+LICENSE="GPL"
+KEYWORDS="x86 ppc"
+
 src_compile() {
 	local myconf
 
-	if [ -z "`use nls`" ]
-	then
-		myconf="--disable-nls"
-	fi
+	use nls || myconf="--disable-nls"
 
-	./configure --host=${CHOST} 					\
-		    --prefix=/usr					\
-	            --sysconfdir=/etc					\
-		    --localstatedir=/var/lib				\
-		    ${myconf} || die
+	./configure \
+		--host=${CHOST} \
+	    --prefix=/usr \
+		--sysconfdir=/etc \
+		--localstatedir=/var/lib \
+		${myconf} || die
 
 	emake || die
 }
 
 src_install() {
-	make prefix=${D}/usr						\
-	     sysconfdir=${D}/etc					\
-	     localstatedir=${D}/var/lib					\
+	make prefix=${D}/usr \
+	     sysconfdir=${D}/etc \
+	     localstatedir=${D}/var/lib \
 	     install || die
 
 	dodoc AUTHORS COPYING* ChangeLog NEWS README
