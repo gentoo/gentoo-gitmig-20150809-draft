@@ -1,6 +1,10 @@
 # ChangeLog for x11-terms/gnome-terminal
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/ChangeLog,v 1.38 2003/10/14 03:43:29 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/ChangeLog,v 1.39 2003/10/17 14:40:04 agriffis Exp $
+
+  17 Oct 2003; Aron Griffis <agriffis@gentoo.org>
+  gnome-terminal-2.4.0.1.ebuild:
+  Stable on alpha
 
 *gnome-terminal-2.4.1 (14 Oct 2003)
 
