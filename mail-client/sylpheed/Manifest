@@ -1,26 +1,19 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 218682fdf3c96e0312c79cde11317c37 sylpheed-1.9.1.ebuild 1485
-MD5 3db6f13b344f39f67f90cd1bb4ef7bf1 ChangeLog 18407
+MD5 9d2155bf30d290840c8e7cb0d4fcb0b7 ChangeLog 18618
 MD5 126ca8f672f0296d2f1e6830e6729a91 metadata.xml 231
-MD5 7c55aa20c9e62cfdbef9a0f65a64a6db sylpheed-0.9.99.ebuild 1679
-MD5 1a3ae19da98478c2f2b156f45e333404 sylpheed-1.0.1.ebuild 1611
 MD5 3a6dcf54aaa913be4107d770d112f172 sylpheed-0.9.12-r3.ebuild 1686
+MD5 7c55aa20c9e62cfdbef9a0f65a64a6db sylpheed-0.9.99.ebuild 1679
 MD5 263018ffe58c91e9e1d5a61d922f51a7 sylpheed-1.0.0.ebuild 1677
-MD5 f847bb1651a5b85decf13e2d8d01afe2 files/shared-mime.patch 649
-MD5 a7aca32080e6fc10d7b2510e10e00912 files/digest-sylpheed-0.9.99 69
-MD5 be1f2c5362b7381526f481787259ce54 files/digest-sylpheed-1.0.1 68
-MD5 4cbec71671b7349c904f860a12fee5d9 files/sylpheed-namespace.diff 550
-MD5 70e31bfd2cf86fe96c8d2a7154a47863 files/digest-sylpheed-1.0.0 68
-MD5 f4242298cfab21456442bfe52505d2b8 files/sylpheed-procmime.diff 1119
-MD5 219134007596e48593213b08bccfd652 files/digest-sylpheed-1.9.1 68
-MD5 675221f844926806e120435f82df5fad files/sylpheed-0.9.12-64bit.patch 401
+MD5 1a3ae19da98478c2f2b156f45e333404 sylpheed-1.0.1.ebuild 1611
+MD5 218682fdf3c96e0312c79cde11317c37 sylpheed-1.9.1.ebuild 1485
+MD5 05a2f6c3fe625e6db9dbbce0237eee97 sylpheed-1.9.2.ebuild 1526
 MD5 54b7f8281a74665ddcd19c166763dda2 files/digest-sylpheed-0.9.12-r3 69
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCB9iDugEuf3OQ0akRAsi6AKCfOKTzMWT5zDHbaBqGnW9qC+bAIQCfYqG2
-YeKysP8OlMrhnir5dEWfJCg=
-=D67P
------END PGP SIGNATURE-----
+MD5 a7aca32080e6fc10d7b2510e10e00912 files/digest-sylpheed-0.9.99 69
+MD5 70e31bfd2cf86fe96c8d2a7154a47863 files/digest-sylpheed-1.0.0 68
+MD5 be1f2c5362b7381526f481787259ce54 files/digest-sylpheed-1.0.1 68
+MD5 219134007596e48593213b08bccfd652 files/digest-sylpheed-1.9.1 68
+MD5 ecfb17a01f93131ee28813066186582a files/digest-sylpheed-1.9.2 68
+MD5 f847bb1651a5b85decf13e2d8d01afe2 files/shared-mime.patch 649
+MD5 675221f844926806e120435f82df5fad files/sylpheed-0.9.12-64bit.patch 401
+MD5 28f6e562e3c547daedea86c235dd15a3 files/sylpheed-1.9.2-references.diff 6489
+MD5 4cbec71671b7349c904f860a12fee5d9 files/sylpheed-namespace.diff 550
+MD5 f4242298cfab21456442bfe52505d2b8 files/sylpheed-procmime.diff 1119
