@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/freetype
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.14 2002/12/14 17:35:44 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.15 2002/12/15 05:47:41 azarah Exp $
+
+*freetype-2.1.3-r2 (15 Dec 2002)
+
+  15 Dec 2002; Martin Schlemmer <azarah@gentoo.org> freetype-2.1.3-r2.ebuild :
+  Add back missing bits of the Slight Hint patch, closing bug #12098.
 
 *freetype-2.1.3-r1 (14 Dec 2002)
 
