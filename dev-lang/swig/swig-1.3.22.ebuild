@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swig/swig-1.3.22.ebuild,v 1.3 2004/09/29 11:57:28 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swig/swig-1.3.22.ebuild,v 1.4 2004/10/23 22:06:18 lanius Exp $
 
 inherit flag-o-matic mono #48511
 
@@ -18,7 +18,10 @@ DEPEND="virtual/libc
 	java? ( virtual/jdk )
 	ruby? ( virtual/ruby )
 	guile? ( >=dev-util/guile-1.4 )
-	tcltk? ( >=dev-lang/tk-8.3 )
+	tcltk? (
+		dev-lang/tcl
+		X? ( dev-lang/tk )
+	)
 	perl? ( >=dev-lang/perl-5.6.1 )
 	php? ( >=dev-php/php-4.0.0 )"
 
