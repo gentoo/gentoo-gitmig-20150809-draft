@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: system@gentoo.org
-# $Header: /var/cvsroot/gentoo-x86/app-misc/xlockmore/xlockmore-5.03-r5.ebuild,v 1.2 2002/04/26 03:54:08 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/xlockmore/xlockmore-5.03-r5.ebuild,v 1.3 2002/04/30 11:28:11 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Just another screensaver application for X"
@@ -74,5 +74,7 @@ src_install() {
 #	use gtk && doexe ${S}/xglock/xglock
 
 	dodoc docs/* README 
+	dohtml docs/*.html
+	rm ${D}/usr/share/doc/${PF}/*.html.gz
 #	use gtk && dodoc xglock/xglockrc xglock/README.xglock
 }
