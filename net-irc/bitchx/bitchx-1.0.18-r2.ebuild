@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/bitchx-1.0.18-r2.ebuild,v 1.4 2001/06/17 00:10:14 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/bitchx-1.0.18-r2.ebuild,v 1.5 2001/08/08 03:48:34 chadh Exp $
 
 A=ircii-pana-1.0c18.tar.gz
 S=${WORKDIR}/BitchX
@@ -33,6 +33,8 @@ src_install () {
 	try make prefix=${D}/usr install
 	cd ${D}/usr/bin
 	rm -f gtkBitchX
+	rm -f BitchX
+	dosym /usr/bin/BitchX-1.0c18 /usr/bin/BitchX
 	chmod -x ${D}/usr/lib/bx/plugins/BitchX.hints
 
     cd ${S}
