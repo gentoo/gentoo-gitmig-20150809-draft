@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/dansguardian/dansguardian-2.7.6.ebuild,v 1.2 2004/03/15 00:32:13 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/dansguardian/dansguardian-2.7.6.ebuild,v 1.3 2004/04/15 20:57:56 ciaranm Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://mirror.dansguardian.org/downloads/2/Alpha/${MY_P}-1.source.tar.g
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~sparc"
 IUSE=""
 DEPEND="virtual/glibc"
 
