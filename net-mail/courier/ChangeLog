@@ -1,13 +1,13 @@
 # ChangeLog for net-mail/courier
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier/ChangeLog,v 1.17 2003/06/14 17:02:53 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier/ChangeLog,v 1.18 2003/06/14 17:35:03 raker Exp $
 
 *courier-0.42.2 (14 Jun 2003)
 
   14 Jun 2003; Nick Hadaway <raker@gentoo.org> courier-0.42.2.ebuild,
   files/digest-courier-0.42.2, files/courier-0.42.2-gentoo.diff.bz2:
   New version.  Updated dependancies.  Added a fix for permissions
-  of /var/run/courier.
+  of /var/run/courier.  Changed unicode option code snippet.
 
   15 May 2003; Martin Holzer <mholzer@gentoo.org> courier-0.40.2.ebuild,
   courier-0.41.0.ebuild:

@@ -63,11 +63,18 @@ src_compile() {
         else
                 myconf="${myconf} --without-authvchkpw"
         fi
-
+	
+	#
+	# 1. If nls is enabled and ENABLE_UNICODE is not empty...
+	#    enable the specified unicode sets
+	# 2. If nls is enabled and no unicode sets are specified, 
+	#    enable them all
+	# 3. If nls is disabled, disable unicode sets
+	#
 	if use nls && [ ! -z "$ENABLE_UNICODE" ]; then
-                myconf="${myconf} --enable-unicode"
-        elif use nls; then
                 myconf="${myconf} --enable-unicode=$ENABLE_UNICODE"
+        elif use nls; then
+                myconf="${myconf} --enable-unicode"
         else
                 myconf="${myconf} --disable-unicode"
         fi
