@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/anacron
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/anacron/ChangeLog,v 1.4 2004/06/04 02:28:32 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/anacron/ChangeLog,v 1.5 2004/06/14 08:02:18 mr_bones_ Exp $
+
+  14 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org> anacron-2.3.ebuild:
+  inherit eutils for epatch; IUSE; tidy
 
   03 Jun 2004; Seemant Kulleen <seemant@gentoo.org>
   +files/anacron-2.3-compile-fix-from-debian.patch, anacron-2.3.ebuild:

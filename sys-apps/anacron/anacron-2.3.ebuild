@@ -1,16 +1,17 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/anacron/anacron-2.3.ebuild,v 1.6 2004/06/04 02:28:32 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/anacron/anacron-2.3.ebuild,v 1.7 2004/06/14 08:02:18 mr_bones_ Exp $
 
-#MY_P=${PN}-${PV}
-#S=${WORKDIR}/${MY_P}
-S=${WORKDIR}/${P}
+inherit eutils
+
 DESCRIPTION="Anacron -- a periodic command scheduler"
-SRC_URI=" http://umn.dl.sourceforge.net/sourceforge/anacron/${P}.tar.gz"
 HOMEPAGE="http://anacron.sourceforge.net/"
-KEYWORDS="x86 amd64 ppc"
-SLOT="0"
+SRC_URI=" http://umn.dl.sourceforge.net/sourceforge/anacron/${P}.tar.gz"
+
 LICENSE="as-is"
+SLOT="0"
+KEYWORDS="x86 amd64 ppc"
+IUSE=""
 
 DEPEND="virtual/glibc
 	>=sys-apps/sed-4"
@@ -48,7 +49,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "Schedule the command "anacron -s" as a daily cron-job (preferably"
+	einfo "Schedule the command \"anacron -s\" as a daily cron-job (preferably"
 	einfo "at some early morning hour).  This will make sure that jobs are run"
 	einfo "when the systems is left running for a night."
 	einfo ""
