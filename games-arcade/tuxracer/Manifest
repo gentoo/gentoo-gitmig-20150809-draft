@@ -1,5 +1,6 @@
 MD5 356c00c8d50bb839072dc3a177378c71 ChangeLog 2544
 MD5 87b58f9878ec7765b9d6af92b91197ec tuxracer-0.61-r3.ebuild 1441
+MD5 6ea6ecaf919071a9ea52b05688b5031d metadata.xml 327
 MD5 8d89a0df0da6219cac8499c181b9e987 files/0.61-configure.in.patch 1690
 MD5 23587bbd063a7f5f6dcb6979e0347e01 files/0.61-gcc3.patch 2027
 MD5 21d4db03916968fd60f797267fbd58c3 files/digest-tuxracer-0.61-r3 136
