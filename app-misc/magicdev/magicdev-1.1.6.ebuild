@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/magicdev/magicdev-1.1.6.ebuild,v 1.1 2004/03/10 02:32:57 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/magicdev/magicdev-1.1.6.ebuild,v 1.2 2004/04/12 19:31:52 leonardop Exp $
 
 inherit gnome2
 
@@ -10,7 +10,7 @@ LICENSE="GPL-2"
 
 SLOT="0"
 IUSE=""
-KEYWORDS="~x86"
+KEYWORDS="x86"
 RDEPEND=">=gnome-base/libgnomeui-2.1.5
 	>=gnome-base/libglade-2
 	>=x11-libs/gtk+-2

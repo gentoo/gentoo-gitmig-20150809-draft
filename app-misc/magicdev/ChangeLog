@@ -1,7 +1,10 @@
 # ChangeLog for app-misc/magicdev
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/magicdev/ChangeLog,v 1.5 2004/03/10 02:32:57 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/magicdev/ChangeLog,v 1.6 2004/04/12 19:31:52 leonardop Exp $
 
+  12 Apr 2004; L. Boshell <leonardop@gentoo.org> magicdev-1.1.6.ebuild:
+  Marking stable on x86.
+  
 *magicdev-1.1.6 (09 Mar 2004)
 
   09 Mar 2004; L. Boshell <leonardop@gentoo.org> magicdev-1.1.6.ebuild:
