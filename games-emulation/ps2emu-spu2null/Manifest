@@ -1,4 +1,4 @@
 MD5 bc72b18d9522e1e5ad87aa252cf852a3 files/0.2-makefile.patch 374
 MD5 2f1a22d92b7bb71d70a02fc6fca605a0 files/digest-ps2emu-spu2null-0.2 60
-MD5 95bbbed35ee86795ff956e4fd8e0779c ChangeLog 371
-MD5 cc8f944ec481e620f45c83ca8e9089e0 ps2emu-spu2null-0.2.ebuild 755
+MD5 711f58a54e1eada5c80d547c2536b5f2 ps2emu-spu2null-0.2.ebuild 757
+MD5 ae6b711c442543b48c12ffe4e249a662 ChangeLog 375

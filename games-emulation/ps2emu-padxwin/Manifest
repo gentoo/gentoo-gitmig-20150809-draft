@@ -1,4 +1,4 @@
-MD5 4c7deb53ac8737032938c4d8b4f10c40 files/0.3-makefile.patch 392
 MD5 adfc89c49540671897beb6b3d717f864 files/digest-ps2emu-padxwin-0.3 58
-MD5 82732d95096083772e125a5df02800e2 ChangeLog 368
-MD5 d2d71f3bb8ef52a76000a0c423558c85 ps2emu-padxwin-0.3.ebuild 789
+MD5 4c7deb53ac8737032938c4d8b4f10c40 files/0.3-makefile.patch 392
+MD5 83545eac00285346d64b01cf8903472e ChangeLog 372
+MD5 303ce2222d37b4595a8c4bd47cca10f5 ps2emu-padxwin-0.3.ebuild 791

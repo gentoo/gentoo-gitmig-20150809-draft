@@ -1,4 +1,4 @@
-MD5 e9a9bc32452d154ce443765e2334b5a2 ChangeLog 349
-MD5 505cd59d8b6b15afd3849f86b1545e4b fakenes-0.1.5.ebuild 872
-MD5 55bbaf2c59dbeac27e9979c3c7412e23 files/0.1.5-datadir.patch 523
 MD5 061dfec5022863f5828ae0ab94ea623a files/digest-fakenes-0.1.5 65
+MD5 55bbaf2c59dbeac27e9979c3c7412e23 files/0.1.5-datadir.patch 523
+MD5 6d37e05709914540f04ac9cdf70dad09 ChangeLog 353
+MD5 f237f616f1d1e4b0ba28b97b94e44be6 fakenes-0.1.5.ebuild 872
