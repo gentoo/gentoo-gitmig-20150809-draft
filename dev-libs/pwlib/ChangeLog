@@ -1,21 +1,24 @@
 # ChangeLog for dev-libs/pwlib
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/ChangeLog,v 1.3 2002/03/29 14:21:33 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/ChangeLog,v 1.4 2002/07/03 18:00:19 drobbins Exp $
+
+*pwlib-1.3.1 (03 Jul 2002)
+
+  03 Jul 2002; Daniel Robbins <drobbins@gentoo.org> New version of pwlib that
+  works with gcc 3.1.  Needs additional testing, so masking for now.
 
 *pwlib-1.2.13 (29 Mar 2002)
 
-  29 Mar 2002; Seemant Kulleen <seemant@gentoo.org> pwlib-1.2.13.ebuild :
-
-  I was careless and did not check the SRC_URI.  The package name in the .12
-  ebuild was hardcoded, so that's the one that got fetched anyway.  Thanks
-  to lostlogic for catching and reporting this.  And now, the ebuild can
-  simply be renamed for future version bumps.
+  29 Mar 2002; Seemant Kulleen <seemant@gentoo.org> pwlib-1.2.13.ebuild : I was
+  careless and did not check the SRC_URI.  The package name in the .12 ebuild
+  was hardcoded, so that's the one that got fetched anyway.  Thanks to
+  lostlogic for catching and reporting this.  And now, the ebuild can simply be
+  renamed for future version bumps.
 
 *pwlib-1.2.13 (28 Mar 2002)
 
   28 Mar 2002; Seemant Kulleen <seemant@gentoo.org> pwlib-1.2.13.ebuild :
-
-  Version bump, and the patch has been renamed to allow it to work with
-  both pacakge versions, and the patch has been augmented to include the 
-  <stdio.h> lib.  This fix, provided by vikingo <gabriel@elvikingo.com.ar>
-  on the gentoo-user list, allows for successful compilation of pwlib again.
+  Version bump, and the patch has been renamed to allow it to work with both
+  pacakge versions, and the patch has been augmented to include the <stdio.h>
+  lib.  This fix, provided by vikingo <gabriel@elvikingo.com.ar> on the
+  gentoo-user list, allows for successful compilation of pwlib again.
