@@ -1,0 +1,48 @@
+diff -U 1 -r fluxbox-0.1.8/src/Font.cc fluxbox-0.1.8-bugfix/src/Font.cc
+--- fluxbox-0.1.8/src/Font.cc	Wed Mar 27 19:47:44 2002
++++ fluxbox-0.1.8-bugfix/src/Font.cc	Fri Apr 26 19:27:47 2002
+@@ -27,2 +27,4 @@
+ #include "StringUtil.hh"
++#include "i18n.hh"
++
+ //use gnu extensions
+@@ -55,2 +57,3 @@
+ 	m_font.set = 0;
++	m_multibyte = I18n::instance()->multibyte();
+ 	if (name!=0) {
+diff -U 1 -r fluxbox-0.1.8/src/Theme.cc fluxbox-0.1.8-bugfix/src/Theme.cc
+--- fluxbox-0.1.8/src/Theme.cc	Thu Apr  4 13:28:19 2002
++++ fluxbox-0.1.8-bugfix/src/Theme.cc	Fri Apr 26 19:33:32 2002
+@@ -384,3 +384,3 @@
+ 	m_menustyle.framefont->loadFromDatabase(m_database, "menu.frame.font", "Menu.Frame.Font");
+-	m_menustyle.titlefont->loadFromDatabase(m_database, "menu.Title.font", "Menu.Title.Font");
++	m_menustyle.titlefont->loadFromDatabase(m_database, "menu.title.font", "Menu.Title.Font");
+ 	/*
+diff -U 1 -r fluxbox-0.1.8/src/Window.cc fluxbox-0.1.8-bugfix/src/Window.cc
+--- fluxbox-0.1.8/src/Window.cc	Wed Apr 17 09:24:59 2002
++++ fluxbox-0.1.8-bugfix/src/Window.cc	Fri Apr 26 19:57:18 2002
+@@ -3350,3 +3350,3 @@
+ 					const int warpPad = screen->getEdgeSnapThreshold();
+-					if (me->x_root >= int(screen->getWidth()) - warpPad &&
++					if (me->x_root >= int(screen->getWidth()) - warpPad - 1 &&
+ 							frame.x < int(me->x_root - frame.grab_x - screen->getBorderWidth())) {
+diff -U 1 -r fluxbox-0.1.8/src/i18n.hh fluxbox-0.1.8-bugfix/src/i18n.hh
+--- fluxbox-0.1.8/src/i18n.hh	Thu Apr  4 12:16:59 2002
++++ fluxbox-0.1.8-bugfix/src/i18n.hh	Fri Apr 26 19:40:46 2002
+@@ -31,2 +31,5 @@
+ 
++#ifdef    HAVE_CONFIG_H
++#  include "../config.h"
++#endif // HAVE_CONFIG_H
+ #ifdef		HAVE_LOCALE_H
+@@ -35,7 +38,8 @@
+ 
+-#ifdef		HAVE_NL_TYPES_H
++#ifdef	HAVE_NL_TYPES_H
+ // this is needed for linux libc5 systems
+ extern "C" {
+-#	include <nl_types.h>
++#       include <nl_types.h>
+ }
++
+ #endif // HAVE_NL_TYPES_H

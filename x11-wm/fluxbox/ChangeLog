@@ -1,6 +1,13 @@
 # ChangeLog for x11-wm/fluxbox
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.9 2002/04/19 18:42:52 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.10 2002/04/30 00:27:41 seemant Exp $
+
+*fluxbox-0.18-r1 (29 Apr 2002)
+
+  29 Apr 2002; Seemant Kulleen <seemant@gentoo.org> fluxbox-0.1.8-r1.ebuild.
+  files/fluxbox-0.18-bugfix1.patch, files/diges-fluxbox-0.1.8-r1 :
+
+  Upstream bugfix patch applied.
 
 *fluxbox-0.18 (19 Apr 2002)
 
