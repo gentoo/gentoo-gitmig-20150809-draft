@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/procmail/procmail-3.22-r6.ebuild,v 1.1 2004/06/03 07:23:54 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/procmail/procmail-3.22-r6.ebuild,v 1.2 2004/06/07 20:43:28 agriffis Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Mail delivery agent/filter"
@@ -27,7 +27,7 @@ src_compile() {
 		-e "s:#LOCKINGTEST=/tmp:LOCKINGTEST=/tmp:" \
 		-i Makefile
 
-	if [ -z "`use mbox`" ];
+	if ! use mbox;
 	then
 		echo "# Use maildir-style mailbox in user's home directory" > ${S}/procmailrc
 		echo 'DEFAULT=$HOME/.maildir/' >> ${S}/procmailrc
