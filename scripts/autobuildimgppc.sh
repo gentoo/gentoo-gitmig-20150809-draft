@@ -1,5 +1,8 @@
 #!/bin/bash
 
+#I'm not sure who wrote the original autobuildimg.sh script, but thanks for
+#the framework.
+
 cleanup() {
 	cp /etc/make.conf.build /etc/make.conf
 	exit $1
