@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/gramps-1.0.1.ebuild,v 1.1 2004/04/02 01:56:19 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/gramps-1.0.1.ebuild,v 1.2 2004/04/18 21:56:25 kugelfang Exp $
 
 inherit gnome2
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://gramps.sourceforge.net/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~sparc ~ppc"
+KEYWORDS="~x86 ~sparc ~ppc ~amd64"
 
 RDEPEND=">=dev-lang/python-2.2
 	>=dev-python/pygtk-1.99.14
