@@ -1,8 +1,21 @@
-MD5 f9d108b7d5f05599aac954da8d17d8a5 cryptplug-0.3.16.ebuild 725
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 58a7d19e7132523acddf25ded3e04d1f ChangeLog 1892
 MD5 3480064c38ab809449a962b5ea8608f9 cryptplug-0.3.15.ebuild 564
-MD5 ee0a072c0d2e96af2477b85ba58d685a ChangeLog 1715
 MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
+MD5 f9d108b7d5f05599aac954da8d17d8a5 cryptplug-0.3.16.ebuild 725
+MD5 18bbf6a38bbdd4a5e40b5f64caf2380d cryptplug-0.3.16-r1.ebuild 989
+MD5 3e28300706e883ea71b6426acb2f3040 files/gpgme3.patch 1169
 MD5 6881ee9859f4eed2fd6de2fa539260f1 files/digest-cryptplug-0.3.15 68
-MD5 fcd6801f3b4a1d686f007e21116d0068 files/digest-cryptplug-0.3.16 68
 MD5 cdccd69cf2aa5ae99581ec0f966ba4ed files/cryptplug-0.3.16-64bit.dif 452
 MD5 6768ce3b7b579632728e609be93e902c files/cryptplug-0.3.16-initialize-fix.diff 365
+MD5 fcd6801f3b4a1d686f007e21116d0068 files/digest-cryptplug-0.3.16 68
+MD5 fcd6801f3b4a1d686f007e21116d0068 files/digest-cryptplug-0.3.16-r1 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFBFZvLmdTrptrqvGERAnYVAKCGLFzDxjwRNycAVL09qT0ASqF6ewCfV2na
+Yy72dfcWNz9H7pXb66EHIB0=
+=+Iwj
+-----END PGP SIGNATURE-----
