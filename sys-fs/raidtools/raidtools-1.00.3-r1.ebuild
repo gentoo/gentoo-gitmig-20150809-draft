@@ -1,6 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/raidtools/raidtools-1.00.3-r1.ebuild,v 1.2 2003/09/18 23:01:25 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/raidtools/raidtools-1.00.3-r1.ebuild,v 1.3 2003/11/30 01:14:09 solar Exp $
+
+inherit flag-o-matic
 
 DESCRIPTION="Linux RAID 0/1/4/5 utilities"
 SRC_URI="http://people.redhat.com/mingo/raidtools/${P}.tar.gz"
@@ -21,6 +23,8 @@ src_unpack() {
 }
 
 src_compile() {
+	#Bug: 34712 (Nov 29 2003 -solar)
+	filter-flags -fPIC
 	econf || die
 	make CFLAGS="${CFLAGS} -DMD_VERSION=\\\"${P}\\\"" || die
 }
