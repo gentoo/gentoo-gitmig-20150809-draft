@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/cxterm/cxterm-5.2.2.ebuild,v 1.1 2002/10/23 14:31:13 stubear Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/cxterm/cxterm-5.2.2.ebuild,v 1.2 2003/02/13 17:34:01 vapier Exp $
 
 S="${WORKDIR}/${P}"
 SRC_URI="http://umn.dl.sourceforge.net/sourceforge/cxterm/cxterm-5.2.2.tgz"

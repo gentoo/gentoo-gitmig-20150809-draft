@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/wterm/wterm-6.2.9.ebuild,v 1.2 2002/11/17 22:52:39 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/wterm/wterm-6.2.9.ebuild,v 1.3 2003/02/13 17:36:41 vapier Exp $
 
 DESCRIPTION="A fork of rxvt patched for fast transparency and a NeXT scrollbar"
 HOMEPAGE="http://largo.windowmaker.org/files.php#wterm"

@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/gnome-terminal-2.0.0-r1.ebuild,v 1.5 2002/10/04 06:46:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/gnome-terminal-2.0.0-r1.ebuild,v 1.6 2003/02/13 17:34:37 vapier Exp $
 
 inherit gnome2
 S=${WORKDIR}/${P}
