@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pythonmagick/pythonmagick-0.5-r1.ebuild,v 1.1 2004/06/05 22:44:24 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pythonmagick/pythonmagick-0.5-r1.ebuild,v 1.2 2004/06/13 12:05:44 kloeri Exp $
 
 inherit distutils
 
@@ -17,6 +17,7 @@ HOMEPAGE="http://www.procoders.net/moinmoin/PythonMagick"
 SLOT="0"
 LICENSE="as-is"
 KEYWORDS="~x86"
+IUSE=""
 
 DEPEND=">=dev-lang/python-2.2
 	>=media-gfx/graphicsmagick-1.0.5
