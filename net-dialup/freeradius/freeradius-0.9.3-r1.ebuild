@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/freeradius-0.9.3-r1.ebuild,v 1.8 2004/09/20 12:08:38 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/freeradius-0.9.3-r1.ebuild,v 1.9 2004/09/20 12:12:27 lanius Exp $
 
 inherit eutils
 
@@ -23,7 +23,7 @@ DEPEND="virtual/libc
 	pam? ( sys-libs/pam )
 	ssl? ( dev-libs/openssl )
 	ldap? ( net-nds/openldap )
-	kerberos? ( app-crypt/mit-krb5 )
+	kerberos? ( virtual/krb5 )
 	frxp? ( dev-lang/python
 			dev-lang/perl )"
 
