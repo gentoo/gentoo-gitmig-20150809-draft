@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 0ee71dc564e9acb52cf49235de5a9ca7 ChangeLog 374
+MD5 d8d993f3d535d73ef8000f0c028c2059 urlgrabber-2.9.0.ebuild 477
+MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
+MD5 f93cceb8379e0d6edc42cb435bbcf24b files/digest-urlgrabber-2.9.0 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBuNyMugEuf3OQ0akRAoGwAKCJ8zy1HaSrYetmOXjqo42OQIWarACdHewd
+boobDmTYEZappeyniIu+Gyo=
+=bBwl
+-----END PGP SIGNATURE-----
