@@ -1,4 +1,4 @@
-MD5 9b09698892f36bf3949d62ea67bcf3ea x86info-1.11.ebuild 1826
-MD5 fe1041424b3a13236b73d4c15d83960e ChangeLog 330
+MD5 b247798cb1dabf05bcc9a47d781f15df x86info-1.11.ebuild 1961
+MD5 82ac8d0c63f41a38c11513f3fed67599 ChangeLog 422
 MD5 14514d85680a44ebe1a0625f76262b3a files/digest-x86info-1.11 60
-MD5 1d79be846b8d5d7a2242c91370584540 files/x86info-modules.conf-rc 215
+MD5 4291fa4d070c1d2efbabbb2e8cd3fd03 files/x86info-modules.conf-rc 327
