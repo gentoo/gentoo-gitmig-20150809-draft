@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.18.ebuild,v 1.8 2004/06/01 02:41:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.18.ebuild,v 1.9 2004/06/03 17:00:39 agriffis Exp $
 
 inherit eutils flag-o-matic gnuconfig
 
@@ -80,7 +80,7 @@ src_compile() {
 	else
 		myconf="${myconf} --disable-sql"
 	fi
-	if [ "`use gdbm`" ] ; then
+	if use gdbm ; then
 		myconf="${myconf} --with-dblib=gdbm"
 	else
 		myconf="${myconf} --with-dblib=berkeley"
@@ -127,7 +127,7 @@ src_install () {
 	docinto saslauthd
 	dodoc saslauthd/{AUTHORS,COPYING,ChangeLog,LDAP_SASLAUTHD,NEWS,README}
 
-	if [ "`use pam`" ] ; then
+	if use pam ; then
 		insinto /etc/pam.d
 		newins "${FILESDIR}/saslauthd.pam" saslauthd
 	fi

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.14.ebuild,v 1.14 2004/04/26 00:48:04 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.14.ebuild,v 1.15 2004/06/03 17:00:39 agriffis Exp $
 
 inherit eutils
 
@@ -80,7 +80,7 @@ src_compile() {
 	# If you want to test/fix for me, emerge kth-krb
 	# and have at it. :) -raker 02/07/2003
 	#
-	#if [ "`use krb4`" ]; then
+	#if use krb4; then
 	#	myconf="${myconf} --enable-krb4=/usr/athena"
 	#else
 		myconf="${myconf} --disable-krb4"
