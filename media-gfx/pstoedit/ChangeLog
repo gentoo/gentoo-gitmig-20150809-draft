@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/pstoedit
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pstoedit/ChangeLog,v 1.4 2003/02/12 07:04:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pstoedit/ChangeLog,v 1.5 2003/06/17 11:33:27 seemant Exp $
+
+*pstoedit-3.33 (17 Jun 2003)
+
+  17 Jun 2003; Seemant Kulleen <seemant@gentoo.org> pstoedit-3.33.ebuild:
+  version bump, thanks to: Sean P. Kane <spkane@genomatica.com> in bug #22962
 
 *pstoedit-3.32 (22 Oct 2002)
 
