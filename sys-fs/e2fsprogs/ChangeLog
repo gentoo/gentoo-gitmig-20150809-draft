@@ -1,6 +1,19 @@
 # ChangeLog for sys-fs/e2fsprogs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/ChangeLog,v 1.3 2003/09/23 16:12:07 darkspecter Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/ChangeLog,v 1.4 2003/09/30 20:20:20 kumba Exp $
+
+
+*e2fsprogs-1.34 (30 Jul 2003)
+
+  30 Sep 2003; Joshua Kinard <kumba@gentoo.org> e2fsprogs-1.34.ebuild:
+  Added ~sparc & ~mips to KEYWORDS
+
+  30 Jul 2003; Brandon Low <lostlogic@gentoo.org> e2fsprogs-1.34.ebuild:
+  Bump
+
+  31 May 2003; Daniel Robbins <drobbins@gentoo.org>: moving to x86 (stable.)
+
+*e2fsprogs-1.33 (21 Apr 2003)
 
   23 Sep 2003; Bartosch Pixa <darkspecter@gentoo.org> e2fsprogs-1.33.ebuild:
   set ppc in keywords
@@ -10,22 +23,11 @@
   add static support, thanks to: Sascha Silbe <sascha-gentoo-bugzilla@silbe.org>
   in bug #29166
 
-*e2fsprogs-1.33 (15 Sep 2003)
-
   15 Sep 2003; Seemant Kulleen <seemant@gentoo.org> e2fsprogs-1.32-r2.ebuild,
   e2fsprogs-1.33.ebuild, e2fsprogs-1.34.ebuild,
   files/e2fsprogs-1.27ea-0.8.21.diff,
   files/e2fsprogs-1.32-mk_cmds-cosmetic.patch:
   moved to sys-fs
-
-*e2fsprogs-1.34 (30 Jul 2003)
-
-  30 Jul 2003; Brandon Low <lostlogic@gentoo.org> e2fsprogs-1.34.ebuild:
-  Bump
-
-  31 May 2003; Daniel Robbins <drobbins@gentoo.org>: moving to x86 (stable.)
-
-*e2fsprogs-1.33 (21 Apr 2003)
 
   21 Apr 2003; Daniel Robbins <drobbins@gentoo.org>: New upstream release.
   Creation of locale stuff fails so commented out its creation in the ebuild.
