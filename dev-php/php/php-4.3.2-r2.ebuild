@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php/php-4.3.2-r2.ebuild,v 1.1 2003/07/21 07:28:35 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php/php-4.3.2-r2.ebuild,v 1.2 2003/09/08 04:45:56 msterret Exp $
 
 PHPSAPI="cli"
 inherit php eutils
@@ -12,14 +12,14 @@ SLOT="0"
 KEYWORDS="x86 ~ppc ~sparc ~alpha ~arm ~hppa ~mips"
 
 DEPEND="${DEPEND}
-	readline? ( >=sys-libs/ncurses-5.1 >=sys-libs/readline-4.1 ) 
+	readline? ( >=sys-libs/ncurses-5.1 >=sys-libs/readline-4.1 )
 	ncurses? ( >=sys-libs/ncurses-5.1 )"
 
 RDEPEND="${RDEPEND}"
 
 src_compile() {
 	php_securityupgrade
-	
+
 	# Readline and Ncurses are CLI PHP only
 	use ncurses || use readline && use_ncurses="--with-" || use_ncurses="--without-"
 	myconf="${myconf} `use_with readline`"
@@ -28,7 +28,7 @@ src_compile() {
 	myconf="${myconf} \
 		--disable-cgi \
 		--enable-cli"
-	
+
 	php_src_compile
 }
 

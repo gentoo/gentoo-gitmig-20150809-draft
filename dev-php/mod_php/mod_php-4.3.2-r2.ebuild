@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.3.2-r2.ebuild,v 1.7 2003/08/29 16:39:58 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.3.2-r2.ebuild,v 1.8 2003/09/08 04:45:56 msterret Exp $
 
 use apache2 && PHPSAPI="apache2" || PHPSAPI="apache1"
 inherit php eutils
@@ -32,7 +32,7 @@ detectapache() {
 	case "${APACHEVER}" in
 	1) [ -n "${domsg}" ] && einfo 'Apache1 only detected' ;;
 	2) [ -n "${domsg}" ] && einfo 'Apache2 only detected';;
-	both) 
+	both)
 		if [ "`use apache2`" ]; then
 			[ -n "${domsg}" ] && einfo "Multiple Apache versions detected, using Apache2 (USE=apache2)"
 			APACHEVER=2
@@ -51,7 +51,7 @@ detectapache() {
 detectapache
 
 SLOT="${APACHEVER}"
-[ "${APACHEVER}" -eq '2' ] && USE_APACHE2='2' || USE_APACHE2='' 
+[ "${APACHEVER}" -eq '2' ] && USE_APACHE2='2' || USE_APACHE2=''
 
 src_unpack() {
 	detectapache domsg
@@ -84,7 +84,7 @@ src_compile() {
 	php_src_compile
 }
 
- 
+
 src_install() {
 	php_src_install
 
@@ -132,7 +132,7 @@ pkg_config() {
 		${ROOT}/usr/sbin/apacheaddmod \
 			${ROOT}/etc/apache/conf/apache.conf \
 			extramodules/libphp4.so mod_php4.c php4_module \
-			before=perl define=PHP4 addconf=conf/addon-modules/mod_php.conf 
+			before=perl define=PHP4 addconf=conf/addon-modules/mod_php.conf
 			:;
 	fi
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/phpdbg/phpdbg-2.10-r1.ebuild,v 1.7 2003/02/13 11:31:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/phpdbg/phpdbg-2.10-r1.ebuild,v 1.8 2003/09/08 04:45:56 msterret Exp $
 
 PL="pl3"
 S="${WORKDIR}/dbg-${PV}${PL}"
@@ -21,7 +21,7 @@ src_unpack() {
 
 src_compile() {
 	phpize
-	./configure --enable-dbg=shared --with-dbg-profiler 
+	./configure --enable-dbg=shared --with-dbg-profiler
 	emake
 }
 
@@ -39,9 +39,9 @@ pkg_postinst() {
 	else
 			echo extension=/etc/php4/lib/dbg.so >> /etc/php4/php.ini
 	fi
-	
+
 	einfo Please reload Apache to activate the changes
-	
+
 }
 
 pkg_prerm() {
@@ -55,4 +55,4 @@ pkg_postrm() {
 	einfo Please reload Apache to activate the changes
 
 }
-				
+

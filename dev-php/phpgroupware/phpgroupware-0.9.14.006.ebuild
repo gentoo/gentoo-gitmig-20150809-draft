@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/phpgroupware/phpgroupware-0.9.14.006.ebuild,v 1.3 2003/08/10 22:24:37 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/phpgroupware/phpgroupware-0.9.14.006.ebuild,v 1.4 2003/09/08 04:45:56 msterret Exp $
 
 S=${WORKDIR}/${PN}
 HTTPD_ROOT="/home/httpd/htdocs"
@@ -34,7 +34,7 @@ src_compile() {
 
 src_install() {
 	dodir ${HTTPD_ROOT}/${PN}
-	cd ${WORKDIR} 
+	cd ${WORKDIR}
 	cp -r . ${D}/${HTTPD_ROOT}
 	cd ${D}/${HTTPD_ROOT}
 	chown -R ${HTTPD_USER}.${HTTPD_GROUP} phpgroupware

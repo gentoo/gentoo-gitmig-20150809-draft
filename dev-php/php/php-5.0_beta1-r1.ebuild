@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php/php-5.0_beta1-r1.ebuild,v 1.1 2003/08/30 09:02:58 coredumb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php/php-5.0_beta1-r1.ebuild,v 1.2 2003/09/08 04:45:56 msterret Exp $
 
 PHPSAPI="cli"
 MY_P="php-5.0.0b1"
@@ -24,14 +24,14 @@ EXCLUDE_DB4_FIX=1
 EXCLUDE_PEAR_FIX=1
 
 src_compile() {
-	
+
 	use readline && myconf="${myconf} --with-readline"
 
 	myconf="${myconf} \
 		--disable-cgi \
 		--enable-cli \
 		--enable-embed"
-	
+
 	php_src_compile
 
 }

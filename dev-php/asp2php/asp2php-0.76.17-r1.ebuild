@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/asp2php/asp2php-0.76.17-r1.ebuild,v 1.1 2003/08/02 22:30:35 coredumb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/asp2php/asp2php-0.76.17-r1.ebuild,v 1.2 2003/09/08 04:45:56 msterret Exp $
 
 S="${WORKDIR}/${P}"
 DESCRIPTION="ASP to PHP translator"
@@ -23,7 +23,7 @@ src_compile() {
 src_install() {
 	dodir /usr/bin
 	make DESTDIR="${D}" install || die
-	
+
 	dodoc LICENSE README
 	docinto sample
 	dodoc sample/class_test.asp sample/filesystem.asp sample/mailer-test.asp sample/testfile.asp

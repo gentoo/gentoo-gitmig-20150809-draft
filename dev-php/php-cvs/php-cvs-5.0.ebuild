@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php-cvs/php-cvs-5.0.ebuild,v 1.4 2003/06/30 18:59:32 coredumb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php-cvs/php-cvs-5.0.ebuild,v 1.5 2003/09/08 04:45:56 msterret Exp $
 
 ECVS_SERVER="cvs.php.net:/repository"
 ECVS_MODULE="php5"
@@ -19,7 +19,7 @@ DESCRIPTION="PHP Shell Interpreter - development version"
 SRC_URI=""
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc"
-DEPEND="${DEPEND} 
+DEPEND="${DEPEND}
 	>=dev-util/re2c-0.9.1"
 
 src_unpack() {
@@ -40,11 +40,11 @@ src_compile() {
 src_install() {
 	installtargets="${installtargets} install-cli"
 	php_src_install
-	
+
 	cp sapi/cli/php .
 	exeinto /usr/bin
 	doexe php
-			
+
 	#We'll keep that as php4 for the mean time, to avoid accidents
 	mv php.ini-dist php.ini
 	insinto /etc/php4
@@ -60,8 +60,8 @@ pkg_postinst() {
 	chmod 755 /usr/bin/pear
 
 	# This is more correct information.
-	einfo 
+	einfo
 	einfo "This is a CLI only build."
 	einfo "You can not use it on a webserver."
-	einfo 
+	einfo
 }
