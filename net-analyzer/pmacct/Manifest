@@ -1,22 +1,24 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 e29e5c39ac414b8e7cb7738797ca8b36 ChangeLog 1514
-MD5 808a9a788ae7955af0a3c442cafee866 metadata.xml 243
-MD5 bea9c5c5833724bd972905d4372d4a0b pmacct-0.8.1.ebuild 1357
-MD5 a775e9e953dbe618bb7671e7cab47fc9 pmacct-0.7.1.ebuild 1306
 MD5 4d9652ba3721cc693dee663c9766b9f8 pmacct-0.7.9.ebuild 1302
+MD5 a775e9e953dbe618bb7671e7cab47fc9 pmacct-0.7.1.ebuild 1306
+MD5 be5ecfa971bc928ee905a3faffb90fe0 pmacct-0.8.1_p1.ebuild 1499
+MD5 a34d6900f85eb93b9a115c50de044412 pmacct-0.8.1.ebuild 1455
+MD5 c8f07a15e726d8bedc009c2198f94d4f ChangeLog 1698
+MD5 808a9a788ae7955af0a3c442cafee866 metadata.xml 243
 MD5 234c31c3b2c88ae198ab321c9118c872 pmacct-0.8.0.ebuild 1379
-MD5 5dce1dbfd498a1d586456ba32323c298 files/digest-pmacct-0.8.1 64
 MD5 50333f1c79a80df31266ce7235cbf36c files/pmacctd-conf.d 313
 MD5 2afa8e97312b03f3e119c0befed9e7d3 files/pmacctd-init.d 869
+MD5 ce503fe95e4bfa2d9133e0ba2dffff14 files/digest-pmacct-0.8.1_p1 66
 MD5 44c1834789fa301914395bc47ea184bd files/digest-pmacct-0.7.1 64
 MD5 bd7b33db9dbc0b2f0d3e6d300f56fb4d files/digest-pmacct-0.7.9 64
 MD5 0a03e3d50b36a482ec7f849f34f9ea5d files/digest-pmacct-0.8.0 64
+MD5 5dce1dbfd498a1d586456ba32323c298 files/digest-pmacct-0.8.1 64
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFB+xtbmdTrptrqvGERApVVAJ9x2PcO4OyQAMm8v14p8I/gXP26jACghUJK
-su3Y5Q9T09QUkp/25LKmxCM=
-=WBIl
+iD8DBQFCHF4AEZCkKN40op4RApJgAJ0XNqZKNTuzWEdoXBnKD5PgfxFy+wCeLnkZ
+aCpQtlqdMhEl/gTWTTz4mHY=
+=txb4
 -----END PGP SIGNATURE-----
