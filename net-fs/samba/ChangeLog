@@ -1,6 +1,15 @@
 # ChangeLog for net-fs/samba
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.38 2003/07/07 00:17:11 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.39 2003/07/21 02:47:08 woodchip Exp $
+
+*samba-3.0.0_beta3-r1 (20 Jul 2003)
+
+  20 Jul 2003; Donny Davies <woodchip@gentoo.org> samba-3.0.0_beta1-r1.ebuild,
+  samba-3.0.0_beta3-r1.ebuild:
+  SAMBA_3_0 CVS snapshot from 20030720; basically the beta3 release with
+  added bug fixes.  Latest samba-vscan CVS snapshot HEAD-07-09-2003 is
+  included.  All USE flags should build ok.  See WHATSNEW.txt again for
+  important changes to idmap and winbindd.
 
 *samba-3.0.0_beta2-r1 (06 Jul 2003)
 
