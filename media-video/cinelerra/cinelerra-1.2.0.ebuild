@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra/cinelerra-1.2.0.ebuild,v 1.4 2004/06/10 12:26:09 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra/cinelerra-1.2.0.ebuild,v 1.5 2004/06/11 13:26:57 kugelfang Exp $
 
 inherit gcc eutils flag-o-matic
 export WANT_GCC_3="yes"
@@ -29,6 +29,7 @@ src_unpack() {
 	unpack ${A}
 #	epatch ${FILESDIR}/gcc-3.3.1-collate.patch
 #	epatch ${FILESDIR}/pthread_t_not_int.patch
+	epatch ${FILESDIR}/${P}-gcc34.patch
 	touch ${S}/hvirtual_config.h
 }
 
@@ -38,6 +39,8 @@ src_compile() {
 	econf ||die
 	cd ${S}/quicktime/ffmpeg-0.4.8
 	econf ||die
+
+	echo "#undef HAVE_V4L2" >> ${S}/hvirtual_config.h
 
 	cd ${S}
 	make || die "make failed"
