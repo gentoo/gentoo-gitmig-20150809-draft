@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/prime
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/prime/ChangeLog,v 1.51 2005/03/31 18:10:01 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/prime/ChangeLog,v 1.52 2005/04/03 15:19:36 nigoro Exp $
+
+  04 Apr 2005; Yuta SATOH <nigoro@gentoo.org> prime-1.0.0.1.ebuild:
+  added ~ppc64
 
   31 Mar 2005; Bryan Østergaard <kloeri@gentoo.org> prime-0.8.6.1.ebuild:
   Stable on alpha.
