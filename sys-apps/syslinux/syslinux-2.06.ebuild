@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/syslinux/syslinux-2.06.ebuild,v 1.2 2003/09/01 17:21:04 mholzer Exp $ 
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/syslinux/syslinux-2.06.ebuild,v 1.3 2003/09/03 04:16:12 vapier Exp $ 
 
 DESCRIPTION="SysLinux, IsoLinux and PXELinux bootloader"
 HOMEPAGE="http://syslinux.zytor.com/"
@@ -13,8 +13,14 @@ SLOT="0"
 DEPEND="dev-lang/nasm
 	app-admin/mtools"
 
-src_compile() {
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${PV}-nasm.patch
 	sed -i 's:$(MAKE) -C win32 all::' Makefile
+}
+
+src_compile() {
 	emake || die
 }
 
