@@ -8,7 +8,7 @@ inherit perl-module
 
 S=${WORKDIR}/${P}
 CATEGORY="dev-perl"
-DESCRIPTION="Heap - Perl extensions for keeping data partially sorted." 
+DESCRIPTION="Quick implimentation of readline utilities." 
 SRC_URI="http://search.cpan.org/CPAN/authors/id/I/IL/ILYAZ/modules/${P}.tar.gz"
 HOMEPAGE="http:/search.cpan.org/src/ILYAZ/Term-ReadLine-Perl-1.0203/README"
 
