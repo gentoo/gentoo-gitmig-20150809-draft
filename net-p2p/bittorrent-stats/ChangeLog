@@ -1,6 +1,6 @@
-# ChangeLog for net-p2p/bittorrent 
+# ChangeLog for net-p2p/bittorrent-stats
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent-stats/ChangeLog,v 1.1 2003/12/17 18:28:43 luke-jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent-stats/ChangeLog,v 1.2 2004/01/15 05:30:16 vapier Exp $
 
 *bittorrent-stats-3.2.1b-r4 (17 Dec 2003)
 
