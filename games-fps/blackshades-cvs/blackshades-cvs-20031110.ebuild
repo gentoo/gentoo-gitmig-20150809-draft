@@ -1,15 +1,17 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/blackshades-cvs/blackshades-cvs-20030712.ebuild,v 1.1 2003/09/09 18:10:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/blackshades-cvs/blackshades-cvs-20031110.ebuild,v 1.1 2003/11/10 15:26:35 vapier Exp $
 
-ECVS_PASS="anonymous"
-ECVS_SERVER="icculus.org:/cvs/cvsroot"
+#ECVS_PASS="anonymous"
+#ECVS_SERVER="icculus.org:/cvs/cvsroot"
 ECVS_MODULE="blackshades"
-inherit cvs games
+#inherit cvs
+inherit games
 
 DESCRIPTION="you control a psychic bodyguard, and try to protect the VIP"
 HOMEPAGE="http://www.wolfire.com/blackshades.html http://www.icculus.org/blackshades/"
-SRC_URI="http://filesingularity.timedoctor.org/Textures.tar.bz2"
+SRC_URI="http://filesingularity.timedoctor.org/Textures.tar.bz2
+	mirror://gentoo/blackshades-${PV}.tar.bz2"
 
 LICENSE="blackshades"
 SLOT="0"
@@ -25,9 +27,13 @@ DEPEND="virtual/x11
 S=${WORKDIR}/${ECVS_MODULE}
 
 src_unpack() {
-	cvs_src_unpack
+	if [ -z "${ECVS_SERVER}" ] ; then
+		unpack blackshades-${PV}.tar.bz2
+	else
+		cvs_src_unpack
+	fi
 	cd ${WORKDIR}
-	unpack ${A}
+	unpack Textures.tar.bz2
 	cd ${S}
 	sed -i "/^CFLAGS/s:$: ${CFLAGS}:" Makefile || die "sed Makefile failed"
 }
