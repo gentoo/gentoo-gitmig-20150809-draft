@@ -1,13 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ogdi/ogdi-3.1.1.ebuild,v 1.2 2003/02/13 10:48:37 vapier Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ogdi/ogdi-3.1.1.ebuild,v 1.3 2003/08/07 02:05:52 vapier Exp $
 
-IUSE=""
-
-S="${WORKDIR}/${P}"
 DESCRIPTION="open geographical datastore interface"
-SRC_URI="http://umn.dl.sourceforge.net/sourceforge/ogdi/${P}.tar.gz"
 HOMEPAGE="http://ogdi.sourceforge.net"
+SRC_URI="mirror://sourceforge/ogdi/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -18,7 +15,6 @@ DEPEND="dev-libs/proj
 	dev-libs/expat"
 
 src_compile() {
-
 	export TOPDIR="${S}"
 	export TARGET="linux"
 	export CFG="release"
@@ -41,7 +37,7 @@ src_compile() {
 	make || die
 }
 
-src_install () {
+src_install() {
 	make \
 		prefix=${D}/usr \
 		mandir=${D}/usr/share/man \
@@ -51,4 +47,3 @@ src_install () {
 
 	dodoc ChangeLog LICENSE NEWS README VERSION
 }
-
