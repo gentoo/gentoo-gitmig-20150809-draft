@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2862 2004/05/18 03:01:48 dragonheart Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2863 2004/05/18 18:12:12 kanaka Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -21,6 +21,12 @@
 ##
 ##   End example
 ##
+
+# <kanaka@gentoo.org> (18 May 2004)
+# these have fetch restrictions, since 0.3.0.123 doesn't have fetch
+# restrictions, I have masked these.
+=media-video/helixplayer-bin-0.3.0.71
+=media-video/helixplayer-bin-0.3.0.124
 
 # <phosphan@gentoo.org> (13 May 2004)
 # the change to the last version was no good idea, see bug #50856
