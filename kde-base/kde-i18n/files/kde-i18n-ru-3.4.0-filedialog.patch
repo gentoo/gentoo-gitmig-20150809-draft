@@ -1,0 +1,10 @@
+--- kde-i18n-ru-3.4.0/messages/kdelibs/kio.po	2005-03-04 13:10:33.000000000 +0200
+@@ -3735,7 +3735,7 @@
+ 
+ #: kfile/kfiledialog.cpp:1660 kfile/kfilefiltercombo.cpp:32
+ msgid "*|All Files"
+-msgstr "Все файлы"
++msgstr "*|Все файлы"
+ 
+ #: kfile/kfilefiltercombo.cpp:153
+ msgid "All Supported Files"

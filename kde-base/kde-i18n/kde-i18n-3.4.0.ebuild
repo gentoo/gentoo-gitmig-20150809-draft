@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-i18n/kde-i18n-3.4.0.ebuild,v 1.2 2005/03/18 17:17:52 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-i18n/kde-i18n-3.4.0.ebuild,v 1.3 2005/03/20 11:38:23 greg_g Exp $
 
 inherit kde eutils
 
@@ -34,6 +34,11 @@ src_unpack() {
 	fi
 
 	base_src_unpack unpack
+
+	if use linguas_ru; then
+		# fix kde bug 101768. Applied for 3.4.1.
+		epatch "${FILESDIR}/kde-i18n-ru-3.4.0-filedialog.patch"
+	fi
 }
 
 src_compile() {
