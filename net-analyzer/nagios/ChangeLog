@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/nagios
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios/ChangeLog,v 1.9 2003/06/10 21:18:09 alron Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios/ChangeLog,v 1.10 2003/07/12 09:47:01 robbat2 Exp $
+
+  12 Jul 2003; Robin H. Johnson <robbat2@gentoo.org> files/digest-nagios-1.0
+  files/digest-nagios-1.0-r1 files/digest-nagios-1.0_beta6
+  files/digest-nagios-1.1:
+  Add long forgotten digests. Portage needs them, even tho they are empty.
 
 *nagios-1.1		(10 Jun 2003)
   10 Jun 2003; Dean Bailey <alron@gentoo.org> nagios-1.1 :
