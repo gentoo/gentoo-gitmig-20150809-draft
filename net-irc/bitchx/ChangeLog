@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/bitchx
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/ChangeLog,v 1.21 2003/03/23 22:09:50 seo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/ChangeLog,v 1.22 2003/06/16 20:50:59 lu_zero Exp $
+
+  16 Jun 2003; Luca Barbato <lu_zero@gentoo.org> :
+  gtkBitchX fix, gcc-3.3 fix
 
 *bitchx-1.0.19-r5 (15 Mar 2003)
 

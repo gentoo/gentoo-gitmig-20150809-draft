@@ -1,0 +1,12 @@
+diff -ruN BitchX.orig/source/status.c BitchX/source/status.c
+--- BitchX.orig/source/status.c	2003-06-16 21:31:15.000000000 +0200
++++ BitchX/source/status.c	2003-06-16 21:31:44.000000000 +0200
+@@ -1213,7 +1213,7 @@
+  * current-type window, although i think they should go to all windows.
+  */
+ #define STATUS_VAR(x) \
+-static	char	*status_user ## x ## (Window *window)			\
++static	char	*status_user ## x  (Window *window)			\
+ {									\
+ 	char	*text;							\
+ 									\

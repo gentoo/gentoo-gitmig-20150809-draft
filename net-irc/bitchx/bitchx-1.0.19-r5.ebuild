@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/bitchx-1.0.19-r5.ebuild,v 1.3 2003/03/24 10:35:25 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/bitchx-1.0.19-r5.ebuild,v 1.4 2003/06/16 20:50:59 lu_zero Exp $
 
 inherit flag-o-matic eutils
 
@@ -28,19 +28,19 @@ replace-flags -O[3-9] -O2
 DEPEND=">=sys-libs/ncurses-5.1 
 	ssl? ( >=dev-libs/openssl-0.9.6 )
 	xmms? ( media-sound/xmms )
-	gnome? ( >=gnome-base/gnome-libs-1.4.1.2-r1 )
 	ncurses? ( sys-libs/ncurses )
 	esd? ( >=media-sound/esound-0.2.5
 		>=media-libs/audiofile-0.1.5 )
 	gtk? ( =x11-libs/gtk+-1.2*
-		>=media-libs/imlib-1.9.10-r1 )"
+		>=media-libs/imlib-1.9.10-r1 )
+	gnome? ( >=gnome-base/gnome-libs-1.4.1.2-r1 )"
 
 src_unpack() {
 	unpack ${MY_P}.tar.gz
 	cd ${S}
 
 	use cjk && epatch ${FILESDIR}/${P}-cjk.patch
-
+	epatch ${FILESDIR}/${P}-gcc-3.3.patch
 	epatch ${FILESDIR}/${P}-security.patch || die
 	epatch ${FILESDIR}/${P}-security2.patch || die
 }
@@ -62,8 +62,9 @@ src_compile() {
 		&& myconf="${myconf} --enable-sound" \
 		|| myconf="${myconf} --disable-sound"
 	
-	use gtk \
-	    || myconf="${myconf} --without-gtk"
+	use gtk && use gnome\
+	    && myconf="${myconf} --with-gtk" \
+		|| myconf="${myconf} --without-gtk"
 
 	use ipv6 \
 		&& myconf="${myconf} --enable-ipv6" \
@@ -85,12 +86,13 @@ src_compile() {
 	sed -e "s/#undef LATIN1/#define LATIN1 ON/;" \
 		${S}/include/config.h.orig > \
 		${S}/include/config.h 
-
-	econf \
+	#ugly workaround
+	use gtk && use gnome && CFLAGS="${CFLAGS} -I/usr/include/gnome-1.0"
+	
+	econf CFLAGS="${CFLAGS}" \
 		--enable-cdrom \
 		--with-plugins \
 		${myconf} || die
-
 	emake || die
 
 }
