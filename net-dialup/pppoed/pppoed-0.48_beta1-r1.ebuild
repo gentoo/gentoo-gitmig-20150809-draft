@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/pppoed/pppoed-0.48_beta1-r1.ebuild,v 1.15 2004/07/01 22:09:19 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/pppoed/pppoed-0.48_beta1-r1.ebuild,v 1.16 2004/07/14 23:05:27 agriffis Exp $
 
 inherit eutils
 
@@ -14,6 +14,7 @@ DEPEND="virtual/libc"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 ppc"
+IUSE=""
 
 src_unpack() {
 	unpack ${A}
