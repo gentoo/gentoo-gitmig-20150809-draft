@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/procps
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/procps/ChangeLog,v 1.58 2004/02/23 22:21:16 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/procps/ChangeLog,v 1.59 2004/02/24 15:37:04 pebenito Exp $
+
+  24 Feb 2004; Chris PeBenito <pebenito@gentoo.org> procps-3.2.0.ebuild,
+  files/procps-3.2.0-selinux-Z.diff:
+  Add patch for -Z ps option for SELinux.
 
 *procps-3.2.0 (23 Feb 2004)
 

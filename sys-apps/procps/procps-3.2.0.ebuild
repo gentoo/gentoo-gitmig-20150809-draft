@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/procps/procps-3.2.0.ebuild,v 1.1 2004/02/23 22:21:16 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/procps/procps-3.2.0.ebuild,v 1.2 2004/02/24 15:37:04 pebenito Exp $
 
 inherit flag-o-matic
 
@@ -17,6 +17,9 @@ RDEPEND=">=sys-libs/ncurses-5.2-r2"
 src_unpack() {
 	unpack ${A}
 	cd ${S}
+
+	# add -Z short option to ps for SELinux
+	epatch ${FILESDIR}/procps-3.2.0-selinux-Z.diff
 
 	# Use the CFLAGS from /etc/make.conf.
 	replace-flags "-O3" "-O2"
