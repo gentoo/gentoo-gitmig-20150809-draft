@@ -1,19 +1,29 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/quota/quota-3.06.ebuild,v 1.11 2003/10/28 12:55:56 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/quota/quota-3.06.ebuild,v 1.12 2003/12/10 10:18:57 seemant Exp $
 
 S=${WORKDIR}/quota-tools
 DESCRIPTION="Linux quota tools"
-SRC_URI="mirror://sourceforge/linuxquota/${P}.tar.gz"
-RESTRICT="nomirror"
 HOMEPAGE="http://sourceforge.net/projects/linuxquota/"
+SRC_URI="mirror://sourceforge/linuxquota/${P}.tar.gz"
+
+RESTRICT="nomirror"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 amd64 ppc sparc alpha"
+KEYWORDS="x86 amd64 ppc sparc alpha ~hppa ~mips ~arm ~ia64"
 
 DEPEND="virtual/glibc
 	sys-apps/tcp-wrappers"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+
+	# patch to prevent quotactl.2 manpage from being installed
+	# that page is provided by man-pages instead
+	epatch ${FILESDIR}/${PN}-no-quotactl-manpage.patch
+}
 
 src_compile() {
 	econf || die "./configure failed"
