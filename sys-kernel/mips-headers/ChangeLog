@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/mips-headers
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-headers/ChangeLog,v 1.15 2004/04/06 05:49:54 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-headers/ChangeLog,v 1.16 2004/04/11 23:56:10 kumba Exp $
+
+  11 Apr 2004; Joshua Kinard <kumba@gentoo.org> mips-headers-2.4.22-r1.ebuild,
+  mips-headers-2.4.23.ebuild:
+  Moving 2.4.23 back into mask because the defines for PAGE_{SIZE,MASK,SHIFT}
+  got moved into kernel space, and this will mean several userland packages will
+  need patching. Going to move 2.4.22 into ~mips until then.
 
 *mips-headers-2.4.23 (06 Apr 2004)
 
