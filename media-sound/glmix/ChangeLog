@@ -1,0 +1,9 @@
+# ChangeLog for media-sound/glmix
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/glmix/ChangeLog,v 1.1 2004/08/22 21:47:21 fvdpol Exp $
+
+*glmix-0.1 (22 Aug 2004)
+
+  22 Aug 2004; <frank@gentoo.org> +metadata.xml, +glmix-0.1.ebuild:
+  New ebuild submitted by Ron Widler <ron@einfach.org>. Closes #61105.
+
