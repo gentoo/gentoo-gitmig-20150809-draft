@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/schedtool
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/schedtool/ChangeLog,v 1.8 2005/01/02 05:38:48 marineam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/schedtool/ChangeLog,v 1.9 2005/01/02 05:44:02 marineam Exp $
+
+  02 Jan 2005; Michael Marineau <marineam@gentoo.org> -schedtool-0.99.ebuild:
+  Clean out 0.99
 
   02 Jan 2005; Michael Marineau <marineam@gentoo.org> schedtool-1.2.3.ebuild:
   Mark stable on x86, ppc, and amd64
