@@ -448,10 +448,10 @@ x11-libs/qt-embedded
 
 # <mcummings@gentoo.org> (18 Aug 2002)
 # The following are masked for testing
-=dev-perl/AxKit-1.6
-=dev-perl/XML-LibXML-1.52
-=dev-perl/XML-NamespaceSupport-1.07
-=dev-perl/XML-LibXSLT-1.50
+#=dev-perl/AxKit-1.6
+#=dev-perl/XML-LibXML-1.52
+#=dev-perl/XML-NamespaceSupport-1.07
+#=dev-perl/XML-LibXSLT-1.50
 
 # <bass@gentoo.org> (16 Aug 2002)
 # test it please
