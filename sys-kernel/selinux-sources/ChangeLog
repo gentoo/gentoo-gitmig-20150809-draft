@@ -1,6 +1,6 @@
 # ChangeLog for sys-kernel/selinux-sources
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/selinux-sources/ChangeLog,v 1.38 2004/06/15 20:57:12 pebenito Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/selinux-sources/ChangeLog,v 1.39 2004/06/25 03:01:43 agriffis Exp $
 
 *selinux-sources-2.4.26-r1 (15 Jun 2004)
 
