@@ -108,27 +108,17 @@
 ~sys-apps/lilo
 ~sys-apps/grub 
 
-# x86 and sparc only kernels (gerk)
-~sys-kernel/gentoo-sources
-~sys-kernel/crypto-sources
-~sys-kernel/openmosix-sources
-~sys-kernel/redhat-sources
-~sys-kernel/sparc-sources
-~sys-kernel/usermode-sources
-~sys-kernel/xfs-sources
-
-
 # Actual profiled pkgs start here
 *app-arch/ncompress
-*sys-apps/baselayout
-*sys-apps/portage
-*=sys-devel/binutils-2.12.90.0.7
-*=sys-devel/gcc-3.2_pre
-*=sys-libs/glibc-2.2.5-r5
+*>=sys-apps/baselayout-1.7.9-r1
+*>=sys-apps/portage-2.0.27
+*=sys-devel/binutils-2.13.90.0.4
+*=sys-devel/gcc-3.2
+*~sys-libs/glibc-2.2.5
 *sys-apps/texinfo
 sys-kernel/ppc-sources
 >=sys-kernel/linux-headers-2.4.18
-sys-apps/sysklogd
+>=sys-apps/sysklogd-1.4.1
 *>=dev-lang/python-2.2-r4
 >=x11-base/xfree-4.1.0-r2
 *app-editors/nano
