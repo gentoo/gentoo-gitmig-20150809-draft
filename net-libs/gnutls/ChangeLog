@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/gnutls
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.42 2005/01/06 20:35:38 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.43 2005/01/07 15:34:17 corsair Exp $
+
+  07 Jan 2005; Markus Rothe <corsair@gentoo.org> gnutls-1.0.23.ebuild:
+  Added ~ppc64 to KEYWORDS
 
   07 Jan 2005; Daniel Black <dragonheart@gentoo.org>
   +files/gnutls-1.0.14-extra.h.patch:

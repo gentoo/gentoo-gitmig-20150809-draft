@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-1.0.23.ebuild,v 1.2 2005/01/06 11:09:31 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-1.0.23.ebuild,v 1.3 2005/01/07 15:34:17 corsair Exp $
 
 inherit eutils gnuconfig
 
@@ -13,7 +13,7 @@ LICENSE="LGPL-2.1 GPL-2"
 # GPL-2 for the gnutls-extras library and LGPL for the gnutls library.
 
 SLOT="0"
-KEYWORDS="~x86 ~sparc ~ppc ~amd64 ~mips ~alpha"
+KEYWORDS="~x86 ~sparc ~ppc ~amd64 ~mips ~alpha ~ppc64"
 
 # Removed keywords awaiting >=dev-libs/libtasn1-0.2.10 keywords (bug #61944)
 # ~ppc64  ~ia64 ~hppa
