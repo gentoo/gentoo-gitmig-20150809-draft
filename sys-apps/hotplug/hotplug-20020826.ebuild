@@ -1,30 +1,31 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hotplug/hotplug-20020826.ebuild,v 1.3 2003/02/13 16:01:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hotplug/hotplug-20020826.ebuild,v 1.4 2003/03/11 07:38:06 seemant Exp $
+
+inherit eutils
 
 # source maintainers named it hotplug-YYYY_MM_DD instead of hotplug-YYYYMMDD
-MY_P=`echo ${P}|sed 's/-\(....\)\(..\)\(..\)/-\1_\2_\3/'`
+MY_P=${PN}-${PV:0:4}_${PV:4:2}_${PV:6:2}
 S=${WORKDIR}/${MY_P}
 DESCRIPTION="USB and PCI hotplug scripts"
-SRC_URI="http://unc.dl.sourceforge.net/sourceforge/linux-hotplug/${MY_P}.tar.gz"
 HOMEPAGE="http://linux-hotplug.sourceforge.net"
-KEYWORDS="~x86 ~ppc"
+SRC_URI="mirror://sourceforge/linux-hotplug/${MY_P}.tar.gz
+	mirror://gentoo/${PN}-gentoo-conf.tar.bz2
+	mirror://gentoo/${P}-gentoo-patches.tar.bz2"
+
 SLOT="0"
 LICENSE="GPL-2"
+KEYWORDS="~x86 ~ppc"
 
 # hotplug needs pcimodules utility provided by pcitutils-2.1.9-r1
-DEPEND="virtual/glibc
-        >=sys-apps/pciutils-2.1.9
-        >=sys-apps/usbutils-0.9"
+DEPEND=">=sys-apps/pciutils-2.1.9
+	>=sys-apps/usbutils-0.9"
 
 src_unpack() {
 	unpack ${A}
 
 	cd ${S}/etc/hotplug
-	patch -p0 < ${FILESDIR}/${P}-pci.rc-gentoo.diff
-	patch -p0 < ${FILESDIR}/${P}-usb.rc-gentoo.diff
-	patch -p3 < ${FILESDIR}/${P}-usb.agent-gentoo.diff
-	patch -p3 < ${FILESDIR}/${P}-net.agent-gentoo.diff
+	epatch ${WORKDIR}/hotplug-patches/
 }
 
 src_install() {
@@ -41,10 +42,10 @@ src_install() {
 	dodir /etc/hotplug/usb /etc/hotplug/pci
 
 	exeinto /etc/init.d
-	newexe ${FILESDIR}/hotplug.rc hotplug
+	newexe ${WORKDIR}/hotplug-conf/hotplug.rc hotplug
 	
 	insinto /etc/conf.d
-	newins ${FILESDIR}/usb.conf usb
+	newins ${WORKDIR}/hotplug-conf/usb.conf usb
 }
 
 pkg_postinst() {

@@ -1,30 +1,29 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hotplug/hotplug-20020114.ebuild,v 1.11 2003/02/13 16:00:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hotplug/hotplug-20020114.ebuild,v 1.12 2003/03/11 07:38:06 seemant Exp $
 
 # source maintainers named it hotplug-YYYY_MM_DD instead of hotplug-YYYYMMDD
-S=${WORKDIR}/${P}
+MY_P=${PN}-${PV:0:4}_${PV:4:2}_${PV:6:2}
+S=${WORKDIR}/${MY_P}
 DESCRIPTION="USB hotplug utilities"
-SRC_URI="mirror://sourceforge/linux-hotplug/hotplug-2002_01_14.tar.gz"
 HOMEPAGE="http://linux-hotplug.sourceforge.net"
-KEYWORDS="x86 ppc sparc "
+SRC_URI="mirror://sourceforge/linux-hotplug/${MY_P}.tar.gz
+	mirror://gentoo/${PN}-gentoo-conf.tar.bz2"
+
 SLOT="0"
 LICENSE="GPL-2"
+KEYWORDS="x86 ppc sparc"
 
 # hotplug needs pcimodules utility provided by pcitutils-2.1.9-r1
-DEPEND="virtual/glibc
-        >=sys-apps/pciutils-2.1.9
-        >=sys-apps/usbutils-0.9"
+DEPEND=">=sys-apps/pciutils-2.1.9
+	>=sys-apps/usbutils-0.9"
 
 src_unpack() {
 	unpack ${A}
 
-	# move it to dir which matches ebuild name
-	mv ${WORKDIR}/hotplug-2002_01_14 ${S}
-
 	# replace scripts which have redhat specific stuff
-	cp ${FILESDIR}/pci.rc ${S}/etc/hotplug/pci.rc
-	cp ${FILESDIR}/usb.rc ${S}/etc/hotplug/usb.rc
+	cp ${WORKDIR}/hotplug-conf/pci.rc ${S}/etc/hotplug/pci.rc
+	cp ${WORKDIR}/hotplug-conf/usb.rc ${S}/etc/hotplug/usb.rc
 }
 
 src_compile() {
@@ -50,8 +49,8 @@ src_install() {
 	exeinto /etc/hotplug
 	doexe *.agent
 
-	newexe ${FILESDIR}/pci.rc pci.rc
-	newexe ${FILESDIR}/usb.rc usb.rc
+	newexe ${WORKDIR}/hotplug-conf/pci.rc pci.rc
+	newexe ${WORKDIR}/hotplug-conf/usb.rc usb.rc
 	exeinto /etc/init.d
-	newexe ${FILESDIR}/hotplug.rc hotplug
+	newexe ${WORKDIR}/hotplug-conf/hotplug.rc hotplug
 }

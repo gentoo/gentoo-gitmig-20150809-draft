@@ -1,10 +1,26 @@
 # ChangeLog for sys-apps/hotplug
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hotplug/ChangeLog,v 1.9 2003/02/12 09:00:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hotplug/ChangeLog,v 1.10 2003/03/11 07:38:06 seemant Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *hotplug-20020826 (18 Oct 2002)
+
+  10 Mar 2003; Seemant Kulleen <seemant@gentoo.org> hotplug-20020114.ebuild,
+  hotplug-20020401-r1.ebuild, hotplug-20020401.ebuild,
+  hotplug-20020401.ebuild, hotplug-20020826.ebuild,
+  files/hotplug-20020401-net.agent-gentoo.diff,
+  files/hotplug-20020401-pci.rc-gentoo.diff,
+  files/hotplug-20020401-usb.agent-gentoo.diff,
+  files/hotplug-20020401-usb.rc-gentoo.diff,
+  files/hotplug-20020826-net.agent-gentoo.diff,
+  files/hotplug-20020826-pci.rc-gentoo.diff,
+  files/hotplug-20020826-usb.agent-gentoo.diff,
+  files/hotplug-20020826-usb.rc-gentoo.diff, files/hotplug.rc, files/pci.rc,
+  files/usb.conf, files/usb.rc:
+  moved patches out to mirrors, and better manipulation thanks to carpaski;
+  finally, use epatch instead
+
   18 Oct 2002; Zach Welch <zwelch@gentoo.org> hotplug-20020826.build :
   New version; includes gentoo agent fixes in hotplug-20020401-r1
 
