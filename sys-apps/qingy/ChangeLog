@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/qingy
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/qingy/ChangeLog,v 1.17 2004/08/19 06:50:11 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/qingy/ChangeLog,v 1.18 2005/01/11 08:32:08 s4t4n Exp $
+
+*qingy-0.5.3 (11 January 2005)
+
+  11 January 2005; Michele Noberasco <s4t4n@gentoo.org> qingy-0.5.3.ebuild:
+  Version bump. Also fixes bug #77016
+  qingy-0.5.2.ebuild:
+  Update Copyright header...
 
 *qingy-0.5.2 (19 August 2004)
 

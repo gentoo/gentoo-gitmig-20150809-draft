@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/qingy/qingy-0.5.2.ebuild,v 1.2 2005/01/11 08:32:08 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/qingy/qingy-0.5.3.ebuild,v 1.1 2005/01/11 08:32:08 s4t4n Exp $
 
 DESCRIPTION="a DirectFB getty replacement"
 HOMEPAGE="http://qingy.sourceforge.net/"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~amd64"
+KEYWORDS="~x86 ~ppc ~amd64"
 IUSE="emacs gpm pam static"
 
 DEPEND=">=dev-libs/DirectFB-0.9.18
@@ -34,23 +34,16 @@ src_install() {
 
 	# and finally install the program
 	make DESTDIR=${D} install || die "Installation failed"
+
+	# Set the settings file umask to 600, in case somebody
+	# wants to make use of the autologin feature
+	/bin/chmod 600 ${D}/etc/qingy/settings
 }
 
 pkg_postinst() {
 	einfo "In order to use qingy you must first edit your /etc/inittab"
 	einfo "Check files INSTALL and README in /usr/share/doc/${P}"
 	einfo "for instructions on how to do that. Or issue an 'info qingy'."
-	echo
-	ewarn "Please note that configuration and theme files syntax"
-	ewarn "has changed since version 0.2x: please remove all"
-	ewarn "old themes and update qingy configuration files!"
-	echo
-	einfo "Note that since version 0.4x themes are located in"
-	einfo "/usr/share/qingy/themes and screensavers in"
-	einfo "/usr/lib/qingy/screensavers"
-	echo
-	einfo "You can safely remove /etc/directfbrc.qingy"
-	einfo "as it is no longer needed to get framebuffer resolution"
 	echo
 	ewarn "Also note that qingy doesn't seem to work realiably with"
 	ewarn "2.6.7 kernels due to problems with the DirectFB library."
