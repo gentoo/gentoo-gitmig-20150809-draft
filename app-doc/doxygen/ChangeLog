@@ -1,6 +1,10 @@
 # ChangeLog for app-doc/doxygen
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/ChangeLog,v 1.57 2005/02/06 19:53:53 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/ChangeLog,v 1.58 2005/02/19 15:50:11 j4rg0n Exp $
+
+  19 Feb 2005; <burgundy@gentoo.org> +files/bsd-configure.patch,
+  doxygen-1.4.1.ebuild:
+  Patched to work on ppc-macos
 
   06 Feb 2005; Joshua Kinard <kumba@gentoo.org> doxygen-1.3.8.ebuild:
   Marked stable on mips.
