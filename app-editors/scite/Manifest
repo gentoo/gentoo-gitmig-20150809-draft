@@ -1,15 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 a42dcc76c132b5e89aff50b7381590ae ChangeLog 5528
 MD5 4eb1abff335478b86f5c65997e0148f2 metadata.xml 222
-MD5 18d5a21ca6fb6abcfaebc272f9a441ca scite-1.5.6.ebuild 1675
-MD5 8deeabe08715a4944a465f716f924a03 scite-1.5.7.ebuild 1860
-MD5 b4ec385f69cfb65de306b27a63f36d12 scite-1.5.8.ebuild 1860
-MD5 7343443b02e3bff422ab3616591f3440 scite-1.5.9.ebuild 1861
-MD5 c1dd705687cdff94c730fa8eb4221c31 scite-1.6.0.ebuild 1892
 MD5 3934feba047fa7c68b209fc9f2df589b scite-1.6.1.ebuild 1888
-MD5 80608721073d877a62ab114df64994fe files/digest-scite-1.5.6 57
-MD5 db1df48699c3abfa8938d151233eaefc files/digest-scite-1.5.7 57
-MD5 3c64c2bf7e3e5fc10e24e76b905dfdcb files/digest-scite-1.5.8 57
-MD5 8bdf42e755829d9b6a28c04b1a69c263 files/digest-scite-1.5.9 57
-MD5 ebe4ebc096f9615bebb39b9cb873694d files/digest-scite-1.6.0 58
-MD5 c022b3ac9b612f257e304f7f90eb7f98 files/digest-scite-1.6.1 58
 MD5 2561568c62ec3edc2b46be6638c80427 files/scite.desktop 169
+MD5 c022b3ac9b612f257e304f7f90eb7f98 files/digest-scite-1.6.1 58
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBhHGTHTu7gpaalycRAgYlAKCtLMVnLIdq6DeKlZW8HNmsRjJQKACgq3EA
+AZgzOS1m/bB4+Z7KqP0Dt74=
+=wvsw
+-----END PGP SIGNATURE-----
