@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/evolvotron/evolvotron-0.2.2.ebuild,v 1.1 2003/11/03 06:00:26 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/evolvotron/evolvotron-0.2.2.ebuild,v 1.2 2003/11/04 00:40:20 mr_bones_ Exp $
 
 S=${WORKDIR}/${PN}
 DESCRIPTION="An interactive generative art application"
@@ -26,7 +26,7 @@ src_unpack() {
 }
 
 src_compile() {
-	econf     || die
+	econf fs  || die
 	emake -j1 || die "emake failed"
 }
 
