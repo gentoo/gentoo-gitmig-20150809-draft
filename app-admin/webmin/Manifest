@@ -1,0 +1,6 @@
+MD5 704936bb4aa471393c5ab4141e64eb6b ChangeLog 3231
+MD5 6452e8ed1e611034cade4e97c5a10c04 webmin-1.070.ebuild 1764
+MD5 6452e8ed1e611034cade4e97c5a10c04 webmin-1.080.ebuild 1764
+MD5 35dc51d35fceeed5440486949eb268fe files/digest-webmin-1.070 65
+MD5 bc8eb1c9de103599fc00b140b0ed1f9f files/uninstall.sh 260
+MD5 c2e70e10958f50cd84c377b5963a8ced files/digest-webmin-1.080 65
