@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/files/syslog-ng.rc6,v 1.13 2004/07/14 21:20:06 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/files/syslog-ng.rc6,v 1.14 2004/08/05 01:05:13 mr_bones_ Exp $
 
 opts="depend checkconfig start stop reload"
 
@@ -20,6 +20,8 @@ checkconfig() {
 		eerror "An example can be found in /etc/syslog-ng/syslog-ng.conf.sample"
 		return 1
 	fi
+	syslog-ng -s /etc/syslog-ng/syslog-ng.conf
+	eend $? "Configuration error. Please fix your configfile (/etc/syslog-ng/syslog-ng.conf)"
 }
 
 start() {
@@ -41,6 +43,7 @@ reload() {
 		eerror "syslog-ng isn't running"
 		return 1
 	fi
+	checkconfig || return 1
 	ebegin "Reloading configuration and re-opening log files"
 	kill -HUP `cat /var/run/syslog-ng.pid` &>/dev/null
 	eend $?

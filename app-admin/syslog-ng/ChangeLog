@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/syslog-ng
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/ChangeLog,v 1.60 2004/07/05 07:25:02 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/ChangeLog,v 1.61 2004/08/05 01:05:13 mr_bones_ Exp $
+
+  04 Aug 2004; Michael Sterrett <mr_bones_@gentoo.org> files/syslog-ng.rc6:
+  checkconfig before reload to catch mis-config earlier.  Patch from Eldad
+  Zack via bug #58216
 
   05 Jul 2004; Joshua Kinard <kumba@gentoo.org> syslog-ng-1.6.4.ebuild:
   Marked stable on mips.
