@@ -1,6 +1,10 @@
 # ChangeLog for games-sports/foobillard
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/foobillard/ChangeLog,v 1.6 2004/06/02 07:33:35 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/foobillard/ChangeLog,v 1.7 2004/06/03 12:01:07 wolf31o2 Exp $
+
+  03 Jun 2004; Chris Gianelloni <wolf31o2@gentoo.org>
+  +files/foobillard-3.0a-no_nvidia.patch, foobillard-3.0a.ebuild:
+  Added to patch to fix compile on non-nvidia hardware and closing bug #52600.
 
   02 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org> foobillard-3.0a.ebuild:
   Attempt to address bug #52600
