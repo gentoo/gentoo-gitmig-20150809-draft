@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/data-buffer
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/data-buffer/ChangeLog,v 1.1 2003/06/23 16:01:28 mcummings Exp $
+
+*data-buffer-0.04 (23 Jun 2003)
+
+  23 Jun 2003; Michael Cummings <mcummings@gentoo.org>
+  data-buffer-0.04.ebuild:
+  Dep for Net-SSH
+
