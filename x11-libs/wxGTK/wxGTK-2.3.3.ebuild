@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.3.3.ebuild,v 1.5 2002/12/09 04:41:49 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.3.3.ebuild,v 1.6 2002/12/13 19:45:36 vapier Exp $
 
 IUSE="nls odbc jpeg png opengl motif gif tiff gtk X"
 
@@ -63,9 +63,11 @@ src_compile() {
 		&& myconf="${myconf} --with-libtiff" \
 		|| myconf="${myconf} --without-libtiff"
 
-	use zlib \
-		&& myconf="${myconf} --with-zlib" \
-		|| myconf="${myconf} --without-zlib"
+	# this doesnt work w/out zlib ... 2.3.3 was last ver checked
+#	use zlib \
+#		&& myconf="${myconf} --with-zlib" \
+#		|| myconf="${myconf} --without-zlib"
+	myconf="${myconf} --with-zlib"
 
 	use odbc \
 		&& myconf="${myconf} --with-odbc" \
