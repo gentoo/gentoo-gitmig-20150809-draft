@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: initial version by Ron Simpkin doobedoobedo@quake3world.com
+# $Header: /var/cvsroot/gentoo-x86/games-kids/gcompris/gcompris-4.2-r1.ebuild,v 1.3 2004/02/20 07:08:51 vapier Exp $
 
-inherit eutils games
+inherit games eutils
 
 DESCRIPTION="full featured educational application for children from 3 to 10"
 HOMEPAGE="http://ofset.sourceforge.net/gcompris/"
