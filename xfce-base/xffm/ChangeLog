@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/xffm
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xffm/ChangeLog,v 1.16 2004/03/03 14:56:32 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xffm/ChangeLog,v 1.17 2004/03/09 03:32:24 psi29a Exp $
+
+  08 Mar 2004; Bret Curtis <psi29a@gentoo.org> xffm-4.0.3.ebuild:
+  Added ~mips to KEYWORDS
 
   03 Mar 2004; Brad Cowan <bcowan@gentoo.org> xffm-4.0.1.ebuild,
   xffm-4.0.3.ebuild:
