@@ -57,7 +57,7 @@ src_install () {
     dobin frontend/.libs/lame
     dolib.a  libmp3lame/.libs/libmp3lame.a  libmp3lame/.libs/libmp3lame.la
     dolib.so  libmp3lame/.libs/libmp3lame.so*
-    insinto /usr/include
+    insinto /usr/include/lame
     doins include/lame.h
     doman doc/man/lame.1
     dodoc API COPYING HACKING PRESETS.draft LICENSE README* TODO USAGE
