@@ -1,8 +1,9 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
+# Distributed under the terms of the GNU General Public License v2
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-patch.eclass,v 1.3 2002/10/24 18:38:39 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-patch.eclass,v 1.4 2002/10/25 19:55:52 vapier Exp $
 # This applies homemade patches from the tarball to the date specified.
+
 ECLASS=kde-patch
 INHERITED="$INHERITED $ECLASS"
 

@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
+# Distributed under the terms of the GNU General Public License v2
 # Author: Karl Trygve Kalleberg <karltk@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/java.eclass,v 1.5 2002/10/20 13:44:03 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java.eclass,v 1.6 2002/10/25 19:55:52 vapier Exp $
 
 ECLASS=java
 INHERITED="$INHERITED $ECLASS"

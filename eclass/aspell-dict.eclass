@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
+# Distributed under the terms of the GNU General Public License v2
 # Author: Seemant Kulleen <seemant@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/aspell-dict.eclass,v 1.6 2002/10/18 10:42:01 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/aspell-dict.eclass,v 1.7 2002/10/25 19:55:52 vapier Exp $
 
 # The aspell-dict eclass is designed to streamline the construction of
 # ebuilds for the new aspell dictionaries (from gnu.org) which support

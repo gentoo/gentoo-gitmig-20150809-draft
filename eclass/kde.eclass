@@ -1,8 +1,9 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
+# Distributed under the terms of the GNU General Public License v2
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.61 2002/10/24 18:41:35 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.62 2002/10/25 19:55:52 vapier Exp $
 # The kde eclass is inherited by all kde-* eclasses. Few ebuilds inherit straight from here.
+
 inherit base kde-functions
 ECLASS=kde
 INHERITED="$INHERITED $ECLASS"

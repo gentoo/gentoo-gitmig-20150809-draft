@@ -1,7 +1,7 @@
 # Copyright 2002 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2
+# Distributed under the terms of the GNU General Public License v2
 # Author: Seemant Kulleen <seemant@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/commonbox.eclass,v 1.11 2002/10/15 02:33:55 mkeadle Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/commonbox.eclass,v 1.12 2002/10/25 19:55:52 vapier Exp $
 
 # The commonbox eclass is designed to allow easier installation of the box
 # window managers such as blackbox and fluxbox and commonbox

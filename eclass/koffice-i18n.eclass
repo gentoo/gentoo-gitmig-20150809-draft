@@ -1,7 +1,8 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
+# Distributed under the terms of the GNU General Public License v2
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/koffice-i18n.eclass,v 1.13 2002/09/17 07:05:16 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/koffice-i18n.eclass,v 1.14 2002/10/25 19:55:52 vapier Exp $
+
 inherit kde
 ECLASS=koffice-i18n
 INHERITED="$INHERITED $ECLASS"

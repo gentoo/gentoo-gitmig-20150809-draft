@@ -1,9 +1,10 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
+# Distributed under the terms of the GNU General Public License v2
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/base.eclass,v 1.17 2002/10/24 18:38:32 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/base.eclass,v 1.18 2002/10/25 19:55:52 vapier Exp $
 # The base eclass defines some default functions and variables. Nearly everything
 # else inherits from here.
+
 ECLASS=base
 INHERITED="$INHERITED $ECLASS"
 S=${WORKDIR}/${P}

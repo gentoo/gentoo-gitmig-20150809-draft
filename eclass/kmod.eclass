@@ -1,9 +1,10 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
+# Distributed under the terms of the GNU General Public License v2
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/kmod.eclass,v 1.4 2002/08/28 00:06:35 mjc Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kmod.eclass,v 1.5 2002/10/25 19:55:52 vapier Exp $
 # The base eclass defines some default functions and variables. Nearly everything
 # else inherits from here.
+
 ECLASS=kmod
 INHERITED="$INHERITED $ECLASS"
 S=${WORKDIR}/${P}

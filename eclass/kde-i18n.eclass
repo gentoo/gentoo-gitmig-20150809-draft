@@ -1,7 +1,8 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
+# Distributed under the terms of the GNU General Public License v2
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-i18n.eclass,v 1.25 2002/10/24 18:38:34 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-i18n.eclass,v 1.26 2002/10/25 19:55:52 vapier Exp $
+
 inherit kde
 ECLASS=kde-i18n
 INHERITED="$INHERITED $ECLASS"

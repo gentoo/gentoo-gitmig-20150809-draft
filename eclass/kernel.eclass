@@ -1,10 +1,11 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel.eclass,v 1.9 2002/10/01 12:59:36 lostlogic Exp $
-ECLASS=kernel
-EXPORT_FUNCTIONS src_unpack src_compile src_install pkg_preinst pkg_postinst
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel.eclass,v 1.10 2002/10/25 19:55:52 vapier Exp $
 # This eclass contains the common functions to be used by all lostlogic
 # based kernel ebuilds
+
+ECLASS=kernel
+EXPORT_FUNCTIONS src_unpack src_compile src_install pkg_preinst pkg_postinst
 
 # OKV=original kernel version, KV=patched kernel version.  They can be the same.
 OKV="`echo ${PV}|sed -e 's:^\([0-9]\+\.[0-9]\+\.[0-9]\+\).*:\1:'`"
