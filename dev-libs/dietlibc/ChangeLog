@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/dietlibc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dietlibc/ChangeLog,v 1.31 2004/06/24 23:04:56 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dietlibc/ChangeLog,v 1.32 2004/07/18 07:59:15 dragonheart Exp $
+
+*dietlibc-0.26 (18 Jul 2004)
+
+  18 Jul 2004; Daniel Black <dragonheart@gentoo.org> +dietlibc-0.26.ebuild
+  dietlibc-0.24.ebuild, dietlibc-0.25.ebuild:
+  version bump as per bug #54790. May not work properly. No 3.4 patch applied -
+  wasn't sure if necessary. x86 stable for 0.24 and 0.25
 
   01 Jun 2004; Mike Frysinger <vapier@gentoo.org> +files/0.25-gcc34.patch,
   dietlibc-0.25.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dietlibc/dietlibc-0.24.ebuild,v 1.10 2004/06/24 23:04:56 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dietlibc/dietlibc-0.24.ebuild,v 1.11 2004/07/18 07:59:15 dragonheart Exp $
 
 inherit eutils flag-o-matic fixheadtails gcc
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://kernel/linux/libs/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha arm ~hppa ~amd64"
+KEYWORDS="x86 ~ppc ~sparc ~alpha arm ~hppa ~amd64"
 IUSE=""
 
 DEPEND=">=sys-apps/sed-4"
