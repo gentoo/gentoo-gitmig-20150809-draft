@@ -1,24 +1,24 @@
 # ChangeLog for media-libs/hermes
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/hermes/ChangeLog,v 1.6 2003/02/12 07:08:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/hermes/ChangeLog,v 1.7 2003/06/20 02:43:53 kumba Exp $
+
+ 
+*hermes-1.3.2-r2 (14 Apr 2002)
+
+  19 Jun 2003; Joshua Kinard <kumba@gentoo.org> hermes-1.3.2-r2.ebuild:
+  Added ~mips to KEYWORDS
 
   10 Feb 2003; Aron Griffis <agriffis@gentoo.org> hermes-1.3.2-r2.ebuild :
   Add ~alpha to KEYWORDS.  Fixup gnuconfig to recognize alpha arches.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
- 
-*hermes-1.3.2-r2 (14 Apr 2002)
 
   14 Apr 2002; Seemant Kulleen <seemant@gentoo.org> all files
-
   This selection was moved to media-libs from app-games, since it is not
   a game, but a game/graphics library for use by games.  Artem from
   the previous ChangeLog entry brought this to my attention.
 
-*hermes-1.3.2-r2 (14 Apr 2002)
-
   14 Apr 2002; Seemant Kulleen <seemant@gentoo.org> hermes-1.3.2-r2.ebuild
-
   New revision to fix autogen errors.  The fix was submitted in bug #1720
   by artm@nerve.v2.nl (Artem Baguinski)
 
