@@ -9,8 +9,8 @@ DESCRIPTION="gda lib"
 SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/gnome-db/${A}"
 HOMEPAGE="http://www.gnome.org/gnome-db"
 
-DEPEND=">=gnome-base/gconf-0.10
-	>=gnome-base/gnome-libs-1.2.4
+DEPEND=">=gnome-base/gconf-0.11
+	>=gnome-base/gnome-libs-1.2.8
 	>=dev-db/mysql-3.23.26
 	>=dev-db/unixODBC-1.8.13
 	>=net-nds/openldap-1.2.11"
