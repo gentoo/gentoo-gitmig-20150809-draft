@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/libbtctl/libbtctl-0.4.1.ebuild,v 1.3 2004/07/04 15:22:32 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/libbtctl/libbtctl-0.4.1.ebuild,v 1.4 2004/07/20 23:10:18 liquidx Exp $
 
 inherit gnome2 mono
 
@@ -32,5 +32,7 @@ USE_DESTDIR="yes"
 
 src_compile() {
 	use sparc || G2CONF="`use_enable mono`"
-	gnome2_src_compile
+	gnome2_src_configure
+	sed -i -e "s/libext=\"a/& la/" libtool
+	emake || die "make failed"
 }
