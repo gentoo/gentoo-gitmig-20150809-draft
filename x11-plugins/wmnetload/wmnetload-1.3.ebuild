@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmnetload/wmnetload-1.3.ebuild,v 1.1 2004/03/13 23:08:04 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmnetload/wmnetload-1.3.ebuild,v 1.2 2004/03/16 15:51:19 pyrania Exp $
 
 IUSE=""
 
@@ -29,6 +29,6 @@ src_install() {
 
 	einstall || die "make install failed"
 
-	dodoc AUTHORS README NEWS TODO INSTALL COPYING
+	dodoc AUTHORS README NEWS INSTALL COPYING
 
 }
