@@ -1,0 +1,7 @@
+# ChangeLog for <CATEGORY>/<PACKAGE_NAME>
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/wampager/ChangeLog,v 1.1 2002/05/12 23:18:00 spider Exp $
+
+*wampager-0.9 (12 May 2002)
+  12 May 2002; Spider <spider@gentoo.org> ChangeLog wampager-0.9.ebuild :
+  First release of wampager, pager for waimea
