@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libclalsadrv
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libclalsadrv/ChangeLog,v 1.1 2004/10/09 22:25:00 trapni Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libclalsadrv/ChangeLog,v 1.2 2004/10/21 06:22:20 trapni Exp $
+
+  21 Oct 2004; Christian Parpart <trapni@gentoo.org>
+  libclalsadrv-1.0.1.ebuild:
+  some QA fixes
 
 *libclalsadrv-1.0.1 (10 Oct 2004)
 
