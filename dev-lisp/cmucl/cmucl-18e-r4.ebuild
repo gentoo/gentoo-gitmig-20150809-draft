@@ -1,28 +1,26 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cmucl/cmucl-18e-r4.ebuild,v 1.3 2004/03/14 23:02:32 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cmucl/cmucl-18e-r4.ebuild,v 1.4 2004/04/25 20:56:13 vapier Exp $
 
-inherit common-lisp-common
+inherit common-lisp-common eutils
 
 DEB_PV=8
 
 DESCRIPTION="CMU Common Lisp is an implementation of ANSI Common Lisp"
-HOMEPAGE="http://www.cons.org/cmucl/
-	http://packages.debian.org/unstable/devel/cmucl.html"
+HOMEPAGE="http://www.cons.org/cmucl/ http://packages.debian.org/unstable/devel/cmucl.html"
+SRC_URI="http://ftp.debian.org/debian/pool/main/c/cmucl/cmucl_${PV}-${DEB_PV}.tar.gz
+	http://cmucl.cons.org/ftp-area/cmucl/release/18e/cmucl-${PV}-x86-linux.tar.bz2"
+
 LICENSE="public-domain"
+SLOT="0"
+KEYWORDS="x86"
+IUSE="doc lesstif"
+
 DEPEND="dev-lisp/common-lisp-controller
 	doc? ( app-text/tetex )
 	lesstif? ( x11-libs/lesstif )
 	!lesstif? ( x11-libs/openmotif )"
-IUSE="doc lesstif"
-SLOT="0"
-KEYWORDS="x86"
-SRC_URI="http://ftp.debian.org/debian/pool/main/c/cmucl/cmucl_${PV}-${DEB_PV}.tar.gz
-	http://cmucl.cons.org/ftp-area/cmucl/release/18e/cmucl-${PV}-x86-linux.tar.bz2"
-
 PROVIDE="virtual/commonlisp"
-
-S=${WORKDIR}/${P}
 
 src_unpack() {
 	unpack ${A}

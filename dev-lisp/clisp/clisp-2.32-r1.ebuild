@@ -1,41 +1,18 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clisp/clisp-2.32-r1.ebuild,v 1.4 2004/03/30 20:58:13 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clisp/clisp-2.32-r1.ebuild,v 1.5 2004/04/25 20:53:13 vapier Exp $
 
-inherit flag-o-matic common-lisp-common
-
-IUSE="X threads fastcgi postgres ldap nls berkdb"
-
-# Handle the case where the user has some other -falign-functions
-# option set.  Bug 34630.
-
-if ! is-flag '-falign-functions=4' \
-	&& expr "$CFLAGS" : '.*\(-falign-functions=[[:digit:]]\+\)' >/dev/null; then
-	CFLAGS=${CFLAGS/\
-$(expr "$CFLAGS" : '.*\(-falign-functions=[[:digit:]]\+\)')/\
--falign-functions=4}
-fi
-
-# Fails to compile without -falign-functions=4 when -march=pentium4
-# (or -march=pentium3, sometimes??) is defined.	 Bugs 33425 and 34630.
-
-if (is-flag '-march=pentium4' || is-flag '-march=pentium3') \
-	&& ! is-flag '-falign-functions=4'; then
-	append-flags '-falign-functions=4'
-fi
-
-# Athlon XP users report problems with -O3 optimization.  In this
-# block, we remove any optimization flag.  Depending on bug 34497. we
-# may be able to reduce optimization to -O2.
-
-if is-flag '-march=athlon-xp'; then
-	filter-flags '-O*'
-fi
+inherit flag-o-matic common-lisp-common eutils
 
 DESCRIPTION="A portable, bytecode-compiled implementation of Common Lisp"
 HOMEPAGE="http://clisp.sourceforge.net/"
 SRC_URI="mirror://sourceforge/clisp/${P}.tar.bz2"
-S=${WORKDIR}/${P}
+
+LICENSE="GPL-2"
+SLOT="2"
+KEYWORDS="x86"
+IUSE="X threads fastcgi postgres ldap nls berkdb"
+
 DEPEND="dev-libs/libsigsegv
 	dev-lisp/common-lisp-controller
 	fastcgi? ( dev-libs/fcgi )
@@ -45,9 +22,6 @@ DEPEND="dev-libs/libsigsegv
 	readline? ( sys-libs/readline )
 	nls? ( sys-devel/gettext )
 	berkdb? ( =sys-libs/db-4* )"
-LICENSE="GPL-2"
-SLOT="2"
-KEYWORDS="x86"
 
 src_unpack() {
 	unpack ${A}
@@ -56,6 +30,29 @@ src_unpack() {
 }
 
 src_compile() {
+	# Handle the case where the user has some other -falign-functions
+	# option set.  Bug 34630.
+	if ! is-flag '-falign-functions=4' \
+		&& expr "$CFLAGS" : '.*\(-falign-functions=[[:digit:]]\+\)' >/dev/null; then
+		CFLAGS=${CFLAGS/\
+	$(expr "$CFLAGS" : '.*\(-falign-functions=[[:digit:]]\+\)')/\
+	-falign-functions=4}
+	fi
+
+	# Fails to compile without -falign-functions=4 when -march=pentium4
+	# (or -march=pentium3, sometimes??) is defined.	 Bugs 33425 and 34630.
+	if (is-flag '-march=pentium4' || is-flag '-march=pentium3') \
+		&& ! is-flag '-falign-functions=4'; then
+		append-flags '-falign-functions=4'
+	fi
+
+	# Athlon XP users report problems with -O3 optimization.  In this
+	# block, we remove any optimization flag.  Depending on bug 34497. we
+	# may be able to reduce optimization to -O2.
+	if is-flag '-march=athlon-xp'; then
+		filter-flags '-O*'
+	fi
+
 	einfo "Using CFLAGS: ${CFLAGS}"
 	export CC="${CC} ${CFLAGS}"
 	unset CFLAGS CXXFLAGS

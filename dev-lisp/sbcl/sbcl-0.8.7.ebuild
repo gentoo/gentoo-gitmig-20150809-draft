@@ -1,17 +1,16 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-0.8.7.ebuild,v 1.1 2004/01/12 09:41:24 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-0.8.7.ebuild,v 1.2 2004/04/25 21:00:23 vapier Exp $
 
-inherit common-lisp-common
+inherit common-lisp-common eutils
 
-DESCRIPTION="Steel Bank Common Lisp (SBCL) is a Open Source development system for ANSI Common Lisp. It provides an interactive environment including an integrated native compiler, interpreter, and debugger."
-HOMEPAGE="http://sbcl.sourceforge.net/"
-IUSE="threads"
 BV_X86=0.8.1
 BV_PPC=0.7.13
 BV_SPARC=0.7.13
 BV_MIPS=0.7.10
 DEB_PV=1
+DESCRIPTION="Steel Bank Common Lisp (SBCL) is a Open Source development system for ANSI Common Lisp. It provides an interactive environment including an integrated native compiler, interpreter, and debugger."
+HOMEPAGE="http://sbcl.sourceforge.net/"
 SRC_URI="http://ftp.debian.org/debian/pool/main/s/sbcl/sbcl_${PV}.orig.tar.gz
 	mirror://sourceforge/sbcl/${P}-html.tar.bz2
 	http://ftp.debian.org/debian/pool/main/s/sbcl/sbcl_${PV}-${DEB_PV}.diff.gz
@@ -19,13 +18,14 @@ SRC_URI="http://ftp.debian.org/debian/pool/main/s/sbcl/sbcl_${PV}.orig.tar.gz
 	ppc? ( mirror://sourceforge/sbcl/${PN}-${BV_PPC}-binary-linux-ppc.tar.bz2 )
 	sparc? ( mirror://sourceforge/sbcl/${PN}-${BV_SPARC}-sparc-linux-binary.tar.bz2 )
 	mips? ( mirror://sourceforge/sbcl/${PN}-${BV_MIPS}-mips-linux-binary.tar.gz )"
+
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~mips"
-PROVIDE="virtual/commonlisp"
-DEPEND="dev-lisp/common-lisp-controller"
+IUSE="threads"
 
-S=${WORKDIR}/${P}
+DEPEND="dev-lisp/common-lisp-controller"
+PROVIDE="virtual/commonlisp"
 
 src_unpack() {
 	if use x86; then
