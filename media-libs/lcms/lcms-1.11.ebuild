@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lcms/lcms-1.11.ebuild,v 1.3 2003/11/09 13:55:53 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lcms/lcms-1.11.ebuild,v 1.4 2003/11/09 13:57:47 mr_bones_ Exp $
 
 DESCRIPTION="A lightweight, speed optimized color management engine"
 HOMEPAGE="http://www.littlecms.com/"
@@ -27,8 +27,7 @@ src_compile() {
 	emake || die "emake failed"
 }
 
-src_install () {
-
+src_install() {
 	make \
 		DESTDIR=${D} \
 		BINDIR=${D}/usr/bin \
