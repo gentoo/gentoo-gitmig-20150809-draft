@@ -1,6 +1,13 @@
 # ChangeLog for net-www/middleman
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/middleman/ChangeLog,v 1.15 2004/07/01 22:45:06 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/middleman/ChangeLog,v 1.16 2004/07/28 20:35:15 solar Exp $
+
+*middleman-2.0.1-r2 (28 Jul 2004)
+
+  28 Jul 2004; <solar@gentoo.org> middleman-2.0.1-r2.ebuild,
+  files/middleman-2.0.1-putlog-fix.patch:
+  patched putlog() function which would cause segfaults on really long url's.
+  patch source comes from battousai@gentoo
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   middleman-1.9.1-r1.ebuild, middleman-2.0.1-r1.ebuild,
