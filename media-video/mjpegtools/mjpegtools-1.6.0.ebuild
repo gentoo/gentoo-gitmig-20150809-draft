@@ -2,24 +2,24 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
 # Heavily modified by Ryan Tolboom <ryan@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.5.20011611-r1.ebuild,v 1.3 2002/05/23 06:50:14 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.6.0.ebuild,v 1.1 2002/05/26 13:01:29 seemant Exp $
 
-A=${PN}-1.5-20011611.tar.gz
-S=${WORKDIR}/${PN}-1.5-20011611
+S=${WORKDIR}/${P}
 DESCRIPTION="Tools for MJPEG video"
-SRC_URI="http://download.sourceforge.net/mjpeg/${A}
+SRC_URI="http://download.sourceforge.net/mjpeg/${P}.tar.gz
 	 quicktime? ( http://download.sourceforge.net/mjpeg/quicktime4linux-1.4-patched.tar.gz )"
 HOMEPAGE="http://mjpeg.sourceforge.net/"
 
-RDEPEND=">=media-libs/jpeg-6b
-	X? ( >=x11-base/xfree-4.1.0 )
-	gtk? ( =x11-libs/gtk+-1.2* )
-	sdl? ( >=media-libs/libsdl-1.2.2 )
-	avi? ( >=media-video/avifile-0.6.0.20011130 )"
+RDEPEND="media-libs/jpeg-6b
+	media-libs/libpng
+	=x11-libs/gtk+-1.2*
+	X? ( x11-base/xfree )
+	sdl? ( media-libs/libsdl )
+	avi? ( media-video/avifile )"
 
 DEPEND="${RDEPEND}
-	quicktime? ( >=media-libs/libpng-1.0.12 )
-	libmovtar? ( >=media-libs/libmovtar-0.1.2 )
+	media-libs/libmovtar-0.1.2
+	quicktime? ( media-libs/quicktime4linux )
 	mmx? ( >=media-libs/jpeg-mmx-1.1.2 )"
 
 src_unpack() {
@@ -50,16 +50,15 @@ src_compile() {
 	use avi	\
 		&& myconf="${myconf} --without-aviplay"
 	
-	if [ "`use quicktime`" ] ; then
+	use quicktime && ( \
 		myconf="${myconf} --with-quicktime=${WORKDIR}/quicktime4linux-1.4-patch"
 		cd ${WORKDIR}/quicktime4linux-1.4-patch
 		./configure || die
 		make || die
-	fi
+	)
 
 	cd ${S}
-	./configure	\
-		${myconf} || die
+	econf ${myconf} || die
 
 	emake || die
 
