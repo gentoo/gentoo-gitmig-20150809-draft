@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.32 2005/01/28 13:53:38 chrb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.33 2005/01/28 15:59:20 chrb Exp $
+
+*asterisk-1.0.5 (28 Jan 2005)
+
+  28 Jan 2005; Chris Bainbridge <chrb@gentoo.org> +asterisk-1.0.5.ebuild:
+  Version bump and CFLAGS fixes.
 
 *asterisk-1.0.3-r1 (28 Jan 2005)
 
