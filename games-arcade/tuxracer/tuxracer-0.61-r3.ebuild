@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/tuxracer/tuxracer-0.61-r3.ebuild,v 1.2 2003/09/14 09:16:51 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/tuxracer/tuxracer-0.61-r3.ebuild,v 1.3 2003/10/27 15:29:17 mholzer Exp $
 
 inherit games eutils gcc
 
@@ -8,6 +8,7 @@ DESCRIPTION="take on the role of Tux, the Linux Penguin, as he races down steep,
 HOMEPAGE="http://tuxracer.sourceforge.net/"
 SRC_URI="mirror://sourceforge/tuxracer/${PN}-data-${PV}.tar.gz
 	mirror://sourceforge/tuxracer/${P}.tar.gz"
+RESTRICT="nomirror"
 
 LICENSE="GPL-2"
 SLOT="0"
