@@ -1,6 +1,12 @@
 # ChangeLog for sec-policy/selinux-apache
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-apache/ChangeLog,v 1.7 2004/11/23 16:59:37 kaiowas Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-apache/ChangeLog,v 1.8 2005/02/11 20:49:29 kaiowas Exp $
+
+*selinux-apache-20050211 (11 Feb 2005)
+
+  11 Feb 2005; petre rodan <kaiowas@gentoo.org>
+  -selinux-apache-20040704.ebuild, +selinux-apache-20050211.ebuild:
+  added contexts needed by >=apache-2.0.52-r3 - bug 81365
 
   23 Nov 2004; petre rodan <kaiowas@gentoo.org>
   selinux-apache-20040925.ebuild:
