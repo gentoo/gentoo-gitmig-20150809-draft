@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/pcmcia-cs
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/ChangeLog,v 1.4 2002/03/14 06:57:02 chadh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/ChangeLog,v 1.5 2002/03/17 00:06:47 karltk Exp $
+
+
+*pcmcia-cs-3.1.31-r5 (14 Mar 2002)
+
+  14 Mar 2002; Karl Trygve Kalleberg <karltk@gentoo.org>: pcmcia-cs-3.1.31-r5:
+
+  The test for the nocardbus USE flag was reversed. Fixed.
 
 *pcmcia-cs-3.1.31-r4 (14 Mar 2002)
 
@@ -19,6 +26,7 @@
      causes cardmgr to choose the orinoco_cs driver over wvlan_cs, which may not
      be what the user wants.  It is documented pretty well that it must be
      downloaded, so I think it is safe to leave it out.
+
 *pcmcia-cs-3.1.31-r3 (05 Mar 2002)
 
   05 Mar 2002; Daniel Robbins <drobbins@gentoo.org>: properly install the pcmcia
