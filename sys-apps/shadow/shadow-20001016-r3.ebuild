@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-20001016-r3.ebuild,v 1.1 2001/04/20 00:12:00 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-20001016-r3.ebuild,v 1.2 2001/04/20 01:06:22 achim Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -68,9 +68,9 @@ src_install() {
         cd pam.d
         insinto /etc/pam.d
         insopts -m0644
-        doins shadow
-        newins shadow groupadd
-        newins shadow userpadd
+        doins ${FILESDIR}/shadow
+        newins ${FILESDIR}/shadow groupadd
+        newins ${FILESDIR}/shadow userpadd
 
  	cd ${S}/doc
 	dodoc ANNOUNCE INSTALL LICENSE README WISHLIST
