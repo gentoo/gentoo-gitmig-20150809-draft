@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/gstreamer-0.8.3.ebuild,v 1.3 2004/07/01 20:03:41 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/gstreamer-0.8.3-r1.ebuild,v 1.1 2004/07/11 17:47:08 foser Exp $
 
 inherit eutils flag-o-matic libtool gnome2
 
@@ -33,6 +33,9 @@ src_unpack() {
 
 	# Fix doc generation with jade. See bug #55700.
 	epatch ${FILESDIR}/${P}-jade_fix.patch
+	# Fix plugin regging with reiser4 (#49081)
+	epatch ${FILESDIR}/${PN}-0.8-reiser4_register.patch
+
 }
 
 src_compile() {
