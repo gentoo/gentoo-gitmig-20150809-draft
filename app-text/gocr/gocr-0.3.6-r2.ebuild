@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-text/gocr/gocr-0.3.6-r1.ebuild,v 1.2 2002/07/01 20:13:48 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gocr/gocr-0.3.6-r2.ebuild,v 1.1 2002/07/07 02:08:11 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Converts PNM to ASCII"
@@ -13,8 +13,9 @@ DEPEND="${RDEPEND}
 	app-text/tetex
 	app-text/ghostscript"
 
-SLOT=""
+SLOT="0"
 LICENSE="GPL"
+KEYWORDS="x86"
 
 src_unpack() {
 
@@ -45,14 +46,16 @@ src_compile() {
 	make
 	make src frontend database
 	use tetex && ( \
-		addwrite "/usr/share/texmf"
 		make examples || die
 	)
 }
 
 src_install () {
 
-	einstall || die
+	addwrite "/usr/share/texmf"
+
+	make DESTDIR=${D} \
+		install || die
 #	dobin bin/gocr
 #	exeinto /usr/bin
 #	doexe bin/gocr.tcl
