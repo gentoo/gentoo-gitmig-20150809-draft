@@ -1,6 +1,12 @@
 # ChangeLog for app-sci/oregano
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/oregano/ChangeLog,v 1.8 2004/08/21 13:10:44 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/oregano/ChangeLog,v 1.9 2004/11/03 21:49:21 gustavoz Exp $
+
+*oregano-0.3.2 (03 Nov 2004)
+
+  03 Nov 2004; Gustavo Zacarias <gustavoz@gentoo.org> metadata.xml,
+  +oregano-0.3.2.ebuild:
+  New upstream release, taking over maintainership
 
   21 Aug 2004; David Holm <dholm@gentoo.org> oregano-0.23-r1.ebuild:
   Added to ~ppc.
