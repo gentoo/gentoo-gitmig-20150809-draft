@@ -1,10 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcdaudio/libcdaudio-0.99.6-r2.ebuild,v 1.5 2004/03/19 07:56:04 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcdaudio/libcdaudio-0.99.6-r2.ebuild,v 1.6 2004/04/24 17:39:14 max Exp $
 
 inherit flag-o-matic
-
-IUSE=""
 
 DESCRIPTION="a library of cd audio related routines"
 SRC_URI="mirror://sourceforge/libcdaudio/${P}.tar.gz"
