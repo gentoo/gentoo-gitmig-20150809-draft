@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/genkernel
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.44 2004/05/30 23:53:42 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.45 2004/06/12 21:56:41 plasmaroo Exp $
+
+*genkernel-3.0.2b (12 Jun 2004)
+
+  12 Jun 2004; <plasmaroo@gentoo.org> +genkernel-3.0.2b.ebuild:
+  Version bump. Fixes bugs #46167, #46278, #48219, #48308, #49728, #51395,
+  and #51948.
 
   31 May 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   genkernel-1.6.ebuild, genkernel-1.8.ebuild, genkernel-1.9.ebuild,
