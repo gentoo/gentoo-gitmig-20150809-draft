@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/linux26-headers
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux26-headers/ChangeLog,v 1.14 2004/07/22 18:29:23 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux26-headers/ChangeLog,v 1.15 2004/07/23 09:26:28 lv Exp $
+
+  23 Jul 2004; Travis Tilley <lv@gentoo.org> linux26-headers-2.6.7-r3.ebuild:
+  fixed a bug that would prevent merging linux26-headers-2.6.7-r3 when no system
+  headers are present. closes bug 57966
 
   22 Jul 2004; <plasmaroo@gentoo.org>
   files/linux26-headers-2.6.7-appCompat.patch:
