@@ -1,6 +1,6 @@
-
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/ORBit2/ChangeLog,v 1.12 2002/12/13 10:56:53 blizzy Exp $
-
+# ChangeLog for gnome-base/ORBit2
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/ORBit2/ChangeLog,v 1.13 2002/12/17 19:54:31 vapier Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
