@@ -2,13 +2,13 @@
 Hash: SHA1
 
 MD5 e96dcbe09e75ee685b43d66fb4227b0a ChangeLog 2278
-MD5 517a4193c5213fa2d90cc82ea028e31c metadata.xml 219
+MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
 MD5 4d828515e27938119242341226c2a695 pgcalc2-2.2.4.ebuild 960
 MD5 892d4db28f55ad11e4a2148940c7fc7f files/digest-pgcalc2-2.2.4 66
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBXsdhI1lqEGTUzyQRAtIaAKCSSpw9pAnMwSNpBocNUHLAaCyDQQCgtyle
-LWoz/+AoCq7fkRZRbzRYndo=
-=wOVZ
+iD8DBQFBhLDhHTu7gpaalycRAi4bAKDLNf0umWmKDlvPvzCB1sw+jmp/egCfVHFm
+1voPQRrF8yW1wgqXJyzp+R8=
+=NzIB
 -----END PGP SIGNATURE-----
