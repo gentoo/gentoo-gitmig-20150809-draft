@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/xfdesktop
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfdesktop/ChangeLog,v 1.9 2003/12/18 17:06:06 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfdesktop/ChangeLog,v 1.10 2003/12/19 01:17:41 weeve Exp $
+
+  18 Dec 2003; Jason Wever <weeve@gentoo.org> xfdesktop-4.0.1.ebuild:
+  Marked stable on sparc.
 
   18 Dec 2003; Guy Martin <gmsoft@gentoo.org> xfdesktop-4.0.1.ebuild:
   Marked stable on hppa.
