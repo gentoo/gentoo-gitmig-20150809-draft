@@ -1,0 +1,12 @@
+--- tuxlayerprivate/include/net/sock.h.~1~	Sat Apr 28 20:32:17 2001
++++ tuxlayerprivate/include/net/sock.h	Sun Apr 29 16:44:42 2001
+@@ -669,6 +669,9 @@
+ 	/* RPC layer private data */
+ 	void			*user_data;
+   
++	/* TUX application layer private data */
++	void			*tux_data;
++
+ 	/* Callbacks */
+ 	void			(*state_change)(struct sock *sk);
+ 	void			(*data_ready)(struct sock *sk,int bytes);

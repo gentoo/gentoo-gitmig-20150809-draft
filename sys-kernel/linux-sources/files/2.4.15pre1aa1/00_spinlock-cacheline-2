@@ -1,0 +1,136 @@
+diff -urN 2.4.14pre4/arch/i386/kernel/i386_ksyms.c spinlock/arch/i386/kernel/i386_ksyms.c
+--- 2.4.14pre4/arch/i386/kernel/i386_ksyms.c	Wed Oct 24 08:04:08 2001
++++ spinlock/arch/i386/kernel/i386_ksyms.c	Tue Oct 30 01:44:59 2001
+@@ -120,7 +120,7 @@
+ 
+ #ifdef CONFIG_SMP
+ EXPORT_SYMBOL(cpu_data);
+-EXPORT_SYMBOL(kernel_flag);
++EXPORT_SYMBOL(kernel_flag_cacheline);
+ EXPORT_SYMBOL(smp_num_cpus);
+ EXPORT_SYMBOL(cpu_online_map);
+ EXPORT_SYMBOL_NOVERS(__write_lock_failed);
+diff -urN 2.4.14pre4/arch/i386/kernel/smp.c spinlock/arch/i386/kernel/smp.c
+--- 2.4.14pre4/arch/i386/kernel/smp.c	Wed Oct 24 08:04:08 2001
++++ spinlock/arch/i386/kernel/smp.c	Tue Oct 30 01:44:59 2001
+@@ -102,7 +102,7 @@
+  */
+ 
+ /* The 'big kernel lock' */
+-spinlock_t kernel_flag = SPIN_LOCK_UNLOCKED;
++spinlock_cacheline_t kernel_flag_cacheline = {SPIN_LOCK_UNLOCKED};
+ 
+ struct tlb_state cpu_tlbstate[NR_CPUS] = {[0 ... NR_CPUS-1] = { &init_mm, 0 }};
+ 
+diff -urN 2.4.14pre4/fs/buffer.c spinlock/fs/buffer.c
+--- 2.4.14pre4/fs/buffer.c	Tue Oct 30 00:07:24 2001
++++ spinlock/fs/buffer.c	Tue Oct 30 01:44:59 2001
+@@ -72,7 +72,10 @@
+ static rwlock_t hash_table_lock = RW_LOCK_UNLOCKED;
+ 
+ static struct buffer_head *lru_list[NR_LIST];
+-static spinlock_t lru_list_lock = SPIN_LOCK_UNLOCKED;
++
++static spinlock_cacheline_t lru_list_lock_cacheline = {SPIN_LOCK_UNLOCKED};
++#define lru_list_lock  lru_list_lock_cacheline.lock
++
+ static int nr_buffers_type[NR_LIST];
+ static unsigned long size_buffers_type[NR_LIST];
+ 
+diff -urN 2.4.14pre4/include/asm-i386/smplock.h spinlock/include/asm-i386/smplock.h
+--- 2.4.14pre4/include/asm-i386/smplock.h	Mon Oct 29 01:49:56 2001
++++ spinlock/include/asm-i386/smplock.h	Tue Oct 30 01:44:59 2001
+@@ -8,7 +8,8 @@
+ #include <linux/sched.h>
+ #include <asm/current.h>
+ 
+-extern spinlock_t kernel_flag;
++extern spinlock_cacheline_t kernel_flag_cacheline;  
++#define kernel_flag kernel_flag_cacheline.lock      
+ 
+ #define kernel_locked()		spin_is_locked(&kernel_flag)
+ 
+diff -urN 2.4.14pre4/include/linux/spinlock.h spinlock/include/linux/spinlock.h
+--- 2.4.14pre4/include/linux/spinlock.h	Mon Oct 29 01:49:55 2001
++++ spinlock/include/linux/spinlock.h	Tue Oct 30 01:44:59 2001
+@@ -138,4 +138,20 @@
+ extern int atomic_dec_and_lock(atomic_t *atomic, spinlock_t *lock);
+ #endif
+ 
++#ifdef CONFIG_SMP
++#include <linux/cache.h>
++
++typedef union {
++    spinlock_t lock;
++    char fill_up[(SMP_CACHE_BYTES)];
++} spinlock_cacheline_t __attribute__ ((aligned(SMP_CACHE_BYTES)));
++
++#else	/* SMP */
++
++typedef struct {
++    spinlock_t lock;
++} spinlock_cacheline_t;
++
++
++#endif
+ #endif /* __LINUX_SPINLOCK_H */
+diff -urN 2.4.14pre4/include/linux/swap.h spinlock/include/linux/swap.h
+--- 2.4.14pre4/include/linux/swap.h	Tue Oct 30 00:07:29 2001
++++ spinlock/include/linux/swap.h	Tue Oct 30 01:44:59 2001
+@@ -86,7 +86,10 @@
+ extern atomic_t nr_async_pages;
+ extern atomic_t page_cache_size;
+ extern atomic_t buffermem_pages;
+-extern spinlock_t pagecache_lock;
++
++extern spinlock_cacheline_t pagecache_lock_cacheline;
++#define pagecache_lock (pagecache_lock_cacheline.lock)
++
+ extern void __remove_inode_page(struct page *);
+ 
+ /* Incomplete types for prototype declarations: */
+@@ -154,7 +157,8 @@
+ asmlinkage long sys_swapoff(const char *);
+ asmlinkage long sys_swapon(const char *, int);
+ 
+-extern spinlock_t pagemap_lru_lock;
++extern spinlock_cacheline_t pagemap_lru_lock_cacheline;
++#define pagemap_lru_lock pagemap_lru_lock_cacheline.lock
+ 
+ extern void FASTCALL(mark_page_accessed(struct page *));
+ 
+diff -urN 2.4.14pre4/mm/filemap.c spinlock/mm/filemap.c
+--- 2.4.14pre4/mm/filemap.c	Tue Oct 30 00:07:29 2001
++++ spinlock/mm/filemap.c	Tue Oct 30 01:45:32 2001
+@@ -47,7 +47,8 @@
+ unsigned int page_hash_bits;
+ struct page **page_hash_table;
+ 
+-spinlock_t pagecache_lock ____cacheline_aligned_in_smp = SPIN_LOCK_UNLOCKED;
++spinlock_cacheline_t pagecache_lock_cacheline  = {SPIN_LOCK_UNLOCKED};
++
+ /*
+  * NOTE: to avoid deadlocking you must never acquire the pagemap_lru_lock 
+  *	with the pagecache_lock held.
+@@ -57,7 +58,7 @@
+  *		pagemap_lru_lock ->
+  *			pagecache_lock
+  */
+-spinlock_t pagemap_lru_lock ____cacheline_aligned_in_smp = SPIN_LOCK_UNLOCKED;
++spinlock_cacheline_t pagemap_lru_lock_cacheline = {SPIN_LOCK_UNLOCKED};
+ 
+ #define CLUSTER_PAGES		(1 << page_cluster)
+ #define CLUSTER_OFFSET(x)	(((x) >> page_cluster) << page_cluster)
+diff -urN 2.4.14pre4/mm/highmem.c spinlock/mm/highmem.c
+--- 2.4.14pre4/mm/highmem.c	Wed Oct 24 08:04:27 2001
++++ spinlock/mm/highmem.c	Tue Oct 30 01:44:59 2001
+@@ -32,7 +32,8 @@
+  */
+ static int pkmap_count[LAST_PKMAP];
+ static unsigned int last_pkmap_nr;
+-static spinlock_t kmap_lock = SPIN_LOCK_UNLOCKED;
++static spinlock_cacheline_t kmap_lock_cacheline = {SPIN_LOCK_UNLOCKED};
++#define kmap_lock  kmap_lock_cacheline.lock
+ 
+ pte_t * pkmap_page_table;
+ 

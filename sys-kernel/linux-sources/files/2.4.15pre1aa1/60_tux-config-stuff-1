@@ -1,0 +1,22 @@
+diff -rNu linux-2.4.9-ac5/net/Config.in linux/net/Config.in
+--- linux-2.4.9-ac5/net/Config.in	Tue Aug 21 14:26:10 2001
++++ linux/net/Config.in	Fri Aug 31 17:36:42 2001
+@@ -20,6 +20,7 @@
+ tristate 'Unix domain sockets' CONFIG_UNIX
+ bool 'TCP/IP networking' CONFIG_INET
+ if [ "$CONFIG_INET" = "y" ]; then
++   source net/tux/Config.in
+    source net/ipv4/Config.in
+    if [ "$CONFIG_EXPERIMENTAL" = "y" ]; then
+ #   IPv6 as module will cause a CRASH if you try to unload it
+diff -rNu linux-2.4.9-ac5/net/Makefile linux/net/Makefile
+--- linux-2.4.9-ac5/net/Makefile	Tue Aug 21 14:26:19 2001
++++ linux/net/Makefile	Fri Aug 31 17:36:42 2001
+@@ -26,6 +26,7 @@
+ endif
+ endif
+ 
++subdir-$(CONFIG_TUX)		+= tux
+ subdir-$(CONFIG_KHTTPD)		+= khttpd
+ subdir-$(CONFIG_NETLINK)	+= netlink
+ subdir-$(CONFIG_PACKET)		+= packet

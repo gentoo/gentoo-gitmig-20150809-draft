@@ -1,0 +1,137 @@
+diff -urN 2.4.15pre1/fs/namei.c atomic-lookup/fs/namei.c
+--- 2.4.15pre1/fs/namei.c	Wed Oct 24 08:04:22 2001
++++ atomic-lookup/fs/namei.c	Fri Nov  9 04:34:12 2001
+@@ -448,9 +448,13 @@
+ {
+ 	struct dentry *dentry;
+ 	struct inode *inode;
+-	int err;
++	int err, atomic;
+ 	unsigned int lookup_flags = nd->flags;
+ 
++	atomic = 0;
++	if (lookup_flags & LOOKUP_ATOMIC)
++		atomic = 1;
++
+ 	while (*name=='/')
+ 		name++;
+ 	if (!*name)
+@@ -519,6 +523,9 @@
+ 		/* This does the actual lookups.. */
+ 		dentry = cached_lookup(nd->dentry, &this, LOOKUP_CONTINUE);
+ 		if (!dentry) {
++			err = -EWOULDBLOCKIO;
++			if (atomic)
++				break;
+ 			dentry = real_lookup(nd->dentry, &this, LOOKUP_CONTINUE);
+ 			err = PTR_ERR(dentry);
+ 			if (IS_ERR(dentry))
+@@ -582,6 +589,9 @@
+ 		}
+ 		dentry = cached_lookup(nd->dentry, &this, 0);
+ 		if (!dentry) {
++			err = -EWOULDBLOCKIO;
++			if (atomic)
++				break;
+ 			dentry = real_lookup(nd->dentry, &this, 0);
+ 			err = PTR_ERR(dentry);
+ 			if (IS_ERR(dentry))
+@@ -924,6 +934,8 @@
+ 	
+ 	if (f & O_DIRECTORY)
+ 		retval |= LOOKUP_DIRECTORY;
++	if (f & O_ATOMICLOOKUP)
++		retval |= LOOKUP_ATOMIC;
+ 
+ 	return retval;
+ }
+diff -urN 2.4.15pre1/include/asm-alpha/fcntl.h atomic-lookup/include/asm-alpha/fcntl.h
+--- 2.4.15pre1/include/asm-alpha/fcntl.h	Sun Sep 23 21:11:40 2001
++++ atomic-lookup/include/asm-alpha/fcntl.h	Fri Nov  9 04:34:12 2001
+@@ -20,6 +20,7 @@
+ #define O_DIRECTORY	0100000	/* must be a directory */
+ #define O_NOFOLLOW	0200000 /* don't follow links */
+ #define O_LARGEFILE	0400000 /* will be set by the kernel on every open */
++#define O_ATOMICLOOKUP  01000000 /* do atomic file lookup */
+ #define O_DIRECT	02000000 /* direct disk access - should check with OSF/1 */
+ 
+ #define F_DUPFD		0	/* dup */
+diff -urN 2.4.15pre1/include/asm-i386/fcntl.h atomic-lookup/include/asm-i386/fcntl.h
+--- 2.4.15pre1/include/asm-i386/fcntl.h	Sun Sep 23 21:11:40 2001
++++ atomic-lookup/include/asm-i386/fcntl.h	Fri Nov  9 04:34:12 2001
+@@ -20,6 +20,7 @@
+ #define O_LARGEFILE	0100000
+ #define O_DIRECTORY	0200000	/* must be a directory */
+ #define O_NOFOLLOW	0400000 /* don't follow links */
++#define O_ATOMICLOOKUP	01000000 /* do atomic file lookup */
+ 
+ #define F_DUPFD		0	/* dup */
+ #define F_GETFD		1	/* get close_on_exec */
+diff -urN 2.4.15pre1/include/asm-ia64/fcntl.h atomic-lookup/include/asm-ia64/fcntl.h
+--- 2.4.15pre1/include/asm-ia64/fcntl.h	Thu Nov 16 15:37:42 2000
++++ atomic-lookup/include/asm-ia64/fcntl.h	Fri Nov  9 04:34:12 2001
+@@ -28,6 +28,7 @@
+ #define O_LARGEFILE	0100000
+ #define O_DIRECTORY	0200000	/* must be a directory */
+ #define O_NOFOLLOW	0400000 /* don't follow links */
++#define O_ATOMICLOOKUP  01000000 /* do atomic file lookup */
+ 
+ #define F_DUPFD		0	/* dup */
+ #define F_GETFD		1	/* get close_on_exec */
+diff -urN 2.4.15pre1/include/asm-ppc/fcntl.h atomic-lookup/include/asm-ppc/fcntl.h
+--- 2.4.15pre1/include/asm-ppc/fcntl.h	Tue Nov  6 02:04:53 2001
++++ atomic-lookup/include/asm-ppc/fcntl.h	Fri Nov  9 04:34:42 2001
+@@ -23,6 +23,7 @@
+ #define O_NOFOLLOW      0100000	/* don't follow links */
+ #define O_LARGEFILE     0200000
+ #define O_DIRECT	0400000	/* direct disk access hint */
++#define O_ATOMICLOOKUP 01000000 /* do atomic file lookup */
+ 
+ #define F_DUPFD		0	/* dup */
+ #define F_GETFD		1	/* get close_on_exec */
+diff -urN 2.4.15pre1/include/asm-sparc/fcntl.h atomic-lookup/include/asm-sparc/fcntl.h
+--- 2.4.15pre1/include/asm-sparc/fcntl.h	Sun Sep 23 21:11:42 2001
++++ atomic-lookup/include/asm-sparc/fcntl.h	Fri Nov  9 04:34:12 2001
+@@ -20,6 +20,7 @@
+ #define O_DIRECTORY	0x10000	/* must be a directory */
+ #define O_NOFOLLOW	0x20000	/* don't follow links */
+ #define O_LARGEFILE	0x40000
++#define O_ATOMICLOOKUP  0x80000 /* do atomic file lookup */
+ #define O_DIRECT        0x100000 /* direct disk access hint */
+ 
+ #define F_DUPFD		0	/* dup */
+diff -urN 2.4.15pre1/include/asm-sparc64/fcntl.h atomic-lookup/include/asm-sparc64/fcntl.h
+--- 2.4.15pre1/include/asm-sparc64/fcntl.h	Sun Sep 23 21:11:42 2001
++++ atomic-lookup/include/asm-sparc64/fcntl.h	Fri Nov  9 04:34:12 2001
+@@ -20,6 +20,7 @@
+ #define O_DIRECTORY	0x10000	/* must be a directory */
+ #define O_NOFOLLOW	0x20000	/* don't follow links */
+ #define O_LARGEFILE	0x40000
++#define O_ATOMICLOOKUP  0x80000 /* do atomic file lookup */
+ #define O_DIRECT        0x100000 /* direct disk access hint */
+ 
+ 
+diff -urN 2.4.15pre1/include/linux/errno.h atomic-lookup/include/linux/errno.h
+--- 2.4.15pre1/include/linux/errno.h	Fri Aug 17 05:02:27 2001
++++ atomic-lookup/include/linux/errno.h	Fri Nov  9 04:34:12 2001
+@@ -21,6 +21,9 @@
+ #define EBADTYPE	527	/* Type not supported by server */
+ #define EJUKEBOX	528	/* Request initiated, but will not complete before timeout */
+ 
++/* Defined for TUX async IO */
++#define EWOULDBLOCKIO	530	/* Would block due to block-IO */
++
+ #endif
+ 
+ #endif
+diff -urN 2.4.15pre1/include/linux/fs.h atomic-lookup/include/linux/fs.h
+--- 2.4.15pre1/include/linux/fs.h	Tue Nov  6 02:04:53 2001
++++ atomic-lookup/include/linux/fs.h	Fri Nov  9 04:34:12 2001
+@@ -1260,6 +1260,7 @@
+ #define LOOKUP_POSITIVE		(8)
+ #define LOOKUP_PARENT		(16)
+ #define LOOKUP_NOALT		(32)
++#define LOOKUP_ATOMIC		(64)
+ /*
+  * Type of the last component on LOOKUP_PARENT
+  */

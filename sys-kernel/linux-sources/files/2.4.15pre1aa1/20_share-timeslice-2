@@ -1,0 +1,41 @@
+diff -urN parent-timeslice/include/linux/sched.h child-first/include/linux/sched.h
+--- parent-timeslice/include/linux/sched.h	Thu May  3 18:17:56 2001
++++ child-first/include/linux/sched.h	Thu May  3 18:19:44 2001
+@@ -301,7 +301,7 @@
+  * all fields in a single cacheline that are needed for
+  * the goodness() loop in schedule().
+  */
+-	int counter;
++	volatile int counter;
+ 	int nice;
+ 	unsigned int policy;
+ 	struct mm_struct *mm;
+diff -urN parent-timeslice/kernel/fork.c child-first/kernel/fork.c
+--- parent-timeslice/kernel/fork.c	Thu May  3 18:18:31 2001
++++ child-first/kernel/fork.c	Thu May  3 18:20:40 2001
+@@ -665,15 +665,18 @@
+ 	p->pdeath_signal = 0;
+ 
+ 	/*
+-	 * "share" dynamic priority between parent and child, thus the
+-	 * total amount of dynamic priorities in the system doesnt change,
+-	 * more scheduling fairness. This is only important in the first
+-	 * timeslice, on the long run the scheduling behaviour is unchanged.
++	 * Scheduling the child first is especially useful in avoiding a
++	 * lot of copy-on-write faults if the child for a fork() just wants
++	 * to do a few simple things and then exec().
+ 	 */
+-	p->counter = (current->counter + 1) >> 1;
+-	current->counter >>= 1;
+-	if (!current->counter)
++	{
++		int counter = current->counter;
++		p->counter = (counter + 1) >> 1;
++		current->counter = counter >> 1;
++		p->policy &= ~SCHED_YIELD;
++		current->policy |= SCHED_YIELD;
+ 		current->need_resched = 1;
++	}
+ 
+ 	/* Tell the parent if it can get back its timeslice when child exits */
+ 	p->get_child_timeslice = 1;

@@ -1,0 +1,52 @@
+Date: Mon, 24 Sep 2001 02:17:58 -0500
+From: Mark J Roberts <mjr@znex.org>
+To: andrea@suse.de
+Subject: [PATCH] Export lib/rbtree.c symbols so modules can use it too.
+Message-ID: <20010924021758.A202@znex>
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Disposition: inline
+
+Hi,
+
+I'd like to use your rbtree implementation in a module, but
+rb_insert_color and rb_erase aren't exported. This patch against
+2.4.10 exports them.
+
+diff -uX dontdiff linux-2.4.10/lib/Makefile linux/lib/Makefile
+--- linux-2.4.10/lib/Makefile	Mon Sep 17 22:31:15 2001
++++ linux/lib/Makefile	Sun Sep 23 23:21:56 2001
+@@ -8,7 +8,7 @@
+ 
+ L_TARGET := lib.a
+ 
+-export-objs := cmdline.o dec_and_lock.o rwsem-spinlock.o rwsem.o
++export-objs := cmdline.o dec_and_lock.o rwsem-spinlock.o rwsem.o rbtree.o
+ 
+ obj-y := errno.o ctype.o string.o vsprintf.o brlock.o cmdline.o bust_spinlocks.o rbtree.o
+ 
+diff -uX dontdiff linux-2.4.10/lib/rbtree.c linux/lib/rbtree.c
+--- linux-2.4.10/lib/rbtree.c	Mon Sep 17 22:30:23 2001
++++ linux/lib/rbtree.c	Sun Sep 23 23:23:13 2001
+@@ -20,6 +20,7 @@
+ */
+ 
+ #include <linux/rbtree.h>
++#include <linux/module.h>
+ 
+ static void __rb_rotate_left(rb_node_t * node, rb_root_t * root)
+ {
+@@ -125,6 +126,7 @@
+ 
+ 	root->rb_node->rb_color = RB_BLACK;
+ }
++EXPORT_SYMBOL(rb_insert_color);
+ 
+ static void __rb_erase_color(rb_node_t * node, rb_node_t * parent,
+ 			     rb_root_t * root)
+@@ -291,3 +293,4 @@
+ 	if (color == RB_BLACK)
+ 		__rb_erase_color(child, parent, root);
+ }
++EXPORT_SYMBOL(rb_erase);
+

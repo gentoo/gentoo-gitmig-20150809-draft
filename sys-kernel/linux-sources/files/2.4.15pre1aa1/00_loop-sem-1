@@ -1,0 +1,28 @@
+diff -urN 2.4.9ac13/drivers/block/loop.c 2.4.9ac14/drivers/block/loop.c
+--- 2.4.9ac13/drivers/block/loop.c	Fri Sep 21 22:09:16 2001
++++ 2.4.9ac14/drivers/block/loop.c	Sat Sep 22 06:09:39 2001
+@@ -177,6 +177,8 @@
+ 	unsigned size, offset;
+ 	int len;
+ 
++	down(&(file->f_dentry->d_inode->i_sem));
++
+ 	index = pos >> PAGE_CACHE_SHIFT;
+ 	offset = pos & (PAGE_CACHE_SIZE - 1);
+ 	len = bh->b_size;
+@@ -210,6 +212,7 @@
+ 		deactivate_page(page);
+ 		page_cache_release(page);
+ 	}
++	up(&(file->f_dentry->d_inode->i_sem));
+ 	return 0;
+ 
+ write_fail:
+@@ -221,6 +224,7 @@
+ 	deactivate_page(page);
+ 	page_cache_release(page);
+ fail:
++	up(&(file->f_dentry->d_inode->i_sem));
+ 	return -1;
+ }
+ 

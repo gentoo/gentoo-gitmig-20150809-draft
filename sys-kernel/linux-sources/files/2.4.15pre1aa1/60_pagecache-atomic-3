@@ -1,0 +1,69 @@
+diff -urN pagecache-atomic-ref/include/linux/fs.h pagecache-atomic/include/linux/fs.h
+--- pagecache-atomic-ref/include/linux/fs.h	Mon Aug 13 03:21:42 2001
++++ pagecache-atomic/include/linux/fs.h	Mon Aug 13 03:22:41 2001
+@@ -1370,7 +1370,9 @@
+ extern int file_read_actor(read_descriptor_t * desc, struct page *page, unsigned long offset, unsigned long size);
+ extern ssize_t generic_file_read(struct file *, char *, size_t, loff_t *);
+ extern ssize_t generic_file_write(struct file *, const char *, size_t, loff_t *);
+-extern void do_generic_file_read(struct file *, loff_t *, read_descriptor_t *, read_actor_t);
++extern void __do_generic_file_read(struct file *, loff_t *, read_descriptor_t *, read_actor_t, int);
++#define do_generic_file_read(filp, ppos, desc, actor) __do_generic_file_read(filp, ppos, desc, actor, 0)
++#define do_generic_file_read_atomic(filp, ppos, desc, actor) __do_generic_file_read(filp, ppos, desc, actor, 1)
+ extern loff_t no_llseek(struct file *file, loff_t offset, int origin);
+ extern loff_t generic_file_llseek(struct file *file, loff_t offset, int origin);
+ extern ssize_t generic_read_dir(struct file *, char *, size_t, loff_t *);
+diff -urN pagecache-atomic-ref/kernel/ksyms.c pagecache-atomic/kernel/ksyms.c
+--- pagecache-atomic-ref/kernel/ksyms.c	Mon Aug 13 03:21:42 2001
++++ pagecache-atomic/kernel/ksyms.c	Mon Aug 13 03:21:54 2001
+@@ -208,7 +208,7 @@
+ EXPORT_SYMBOL(generic_block_bmap);
+ EXPORT_SYMBOL(waitfor_one_page);
+ EXPORT_SYMBOL(generic_file_read);
+-EXPORT_SYMBOL(do_generic_file_read);
++EXPORT_SYMBOL(__do_generic_file_read);
+ EXPORT_SYMBOL(generic_file_write);
+ EXPORT_SYMBOL(generic_direct_IO);
+ EXPORT_SYMBOL(generic_file_mmap);
+diff -urN pagecache-atomic-ref/mm/filemap.c pagecache-atomic/mm/filemap.c
+--- pagecache-atomic-ref/mm/filemap.c	Mon Aug 13 03:21:42 2001
++++ pagecache-atomic/mm/filemap.c	Mon Aug 13 03:21:54 2001
+@@ -1128,7 +1128,7 @@
+  * This is really ugly. But the goto's actually try to clarify some
+  * of the logic when it comes to error handling etc.
+  */
+-void do_generic_file_read(struct file * filp, loff_t *ppos, read_descriptor_t * desc, read_actor_t actor)
++void __do_generic_file_read(struct file * filp, loff_t *ppos, read_descriptor_t * desc, read_actor_t actor, int nonblock)
+ {
+ 	struct inode *inode = filp->f_dentry->d_inode;
+ 	struct address_space *mapping = inode->i_mapping;
+@@ -1211,9 +1211,16 @@
+ 		page_cache_get(page);
+ 		spin_unlock(&pagecache_lock);
+ 
+-		if (!Page_Uptodate(page))
++		if (!Page_Uptodate(page)) {
++			if (nonblock) {
++				page_cache_release(page);
++				desc->error = -EWOULDBLOCKIO;
++				break;
++			}
+ 			goto page_not_up_to_date;
+-		generic_file_readahead(reada_ok, filp, inode, page);
++		}
++		if (!nonblock)
++			generic_file_readahead(reada_ok, filp, inode, page);
+ page_ok:
+ 		/* If users can be writing to this page using arbitrary
+ 		 * virtual addresses, take care about potential aliasing
+@@ -1290,6 +1297,11 @@
+ 		break;
+ 
+ no_cached_page:
++		if (nonblock) {
++			spin_unlock(&pagecache_lock);
++			desc->error = -EWOULDBLOCKIO;
++			break;
++		}
+ 		/*
+ 		 * Ok, it wasn't cached, so we need to create a new
+ 		 * page..

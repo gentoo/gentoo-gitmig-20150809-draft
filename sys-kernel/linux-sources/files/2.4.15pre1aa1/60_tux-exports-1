@@ -1,0 +1,122 @@
+diff -urN 2.4.4/arch/alpha/kernel/alpha_ksyms.c exports/arch/alpha/kernel/alpha_ksyms.c
+--- 2.4.4/arch/alpha/kernel/alpha_ksyms.c	Sat Apr 28 05:24:29 2001
++++ exports/arch/alpha/kernel/alpha_ksyms.c	Sun Apr 29 18:55:56 2001
+@@ -127,15 +127,11 @@
+ /* In-kernel system calls.  */
+ EXPORT_SYMBOL(kernel_thread);
+ EXPORT_SYMBOL(sys_open);
+-EXPORT_SYMBOL(sys_dup);
+ EXPORT_SYMBOL(sys_exit);
+-EXPORT_SYMBOL(sys_write);
+-EXPORT_SYMBOL(sys_read);
+ EXPORT_SYMBOL(sys_lseek);
+ EXPORT_SYMBOL(__kernel_execve);
+ EXPORT_SYMBOL(sys_setsid);
+ EXPORT_SYMBOL(sys_sync);
+-EXPORT_SYMBOL(sys_wait4);
+ 
+ /* Networking helper routines. */
+ EXPORT_SYMBOL(csum_tcpudp_magic);
+diff -urN 2.4.4/include/asm-alpha/unistd.h exports/include/asm-alpha/unistd.h
+--- 2.4.4/include/asm-alpha/unistd.h	Sun Apr  1 20:11:24 2001
++++ exports/include/asm-alpha/unistd.h	Sun Apr 29 18:55:53 2001
+@@ -515,7 +515,7 @@
+ 	return sys_open(name, mode, flags);
+ }
+ 
+-extern long sys_dup(int);
++extern long sys_dup(unsigned int);
+ static inline long dup(int fd)
+ {
+ 	return sys_dup(fd);
+@@ -540,13 +540,11 @@
+ 
+ #define exit(x) _exit(x)
+ 
+-extern long sys_write(int, const char *, int);
+ static inline long write(int fd, const char * buf, int nr)
+ {
+ 	return sys_write(fd, buf, nr);
+ }
+ 
+-extern long sys_read(int, char *, int);
+ static inline long read(int fd, char * buf, int nr)
+ {
+ 	return sys_read(fd, buf, nr);
+diff -urN 2.4.4/include/linux/fs.h exports/include/linux/fs.h
+--- 2.4.4/include/linux/fs.h	Sat Apr 28 05:24:47 2001
++++ exports/include/linux/fs.h	Sun Apr 29 18:55:53 2001
+@@ -554,6 +554,14 @@
+ 
+ extern int fcntl_getlk(unsigned int, struct flock *);
+ extern int fcntl_setlk(unsigned int, unsigned int, struct flock *);
++extern asmlinkage long sys_fcntl(unsigned int fd, unsigned int cmd, unsigned long arg);
++extern asmlinkage long sys_dup(unsigned int fildes);
++extern asmlinkage long sys_dup2(unsigned int oldfd, unsigned int newfd);
++extern asmlinkage ssize_t sys_read(unsigned int fd, char * buf, size_t count);
++extern asmlinkage ssize_t sys_write(unsigned int fd, const char * buf, size_t count);
++extern asmlinkage long sys_chroot(const char * filename);
++extern asmlinkage long sys_chdir(const char * filename);
++
+ 
+ extern int fcntl_getlk64(unsigned int, struct flock64 *);
+ extern int fcntl_setlk64(unsigned int, unsigned int, struct flock64 *);
+diff -urN 2.4.4/kernel/ksyms.c exports/kernel/ksyms.c
+--- 2.4.4/kernel/ksyms.c	Sat Apr 28 05:24:48 2001
++++ exports/kernel/ksyms.c	Sun Apr 29 18:55:53 2001
+@@ -9,6 +9,7 @@
+  *   by Bjorn Ekwall <bj0rn@blox.se>
+  */
+ 
++#define __KERNEL_SYSCALLS__
+ #include <linux/config.h>
+ #include <linux/slab.h>
+ #include <linux/module.h>
+@@ -48,6 +49,8 @@
+ #include <linux/tty.h>
+ #include <linux/in6.h>
+ #include <asm/checksum.h>
++#include <linux/unistd.h>
++
+ 
+ #if defined(CONFIG_PROC_FS)
+ #include <linux/proc_fs.h>
+@@ -149,6 +152,13 @@
+ EXPORT_SYMBOL(lookup_one);
+ EXPORT_SYMBOL(lookup_hash);
+ EXPORT_SYMBOL(sys_close);
++EXPORT_SYMBOL(sys_read);
++EXPORT_SYMBOL(sys_write);
++EXPORT_SYMBOL(sys_dup);
++EXPORT_SYMBOL(sys_chroot);
++EXPORT_SYMBOL(sys_chdir);
++EXPORT_SYMBOL(sys_fcntl);
++EXPORT_SYMBOL(do_pipe);
+ EXPORT_SYMBOL(dcache_lock);
+ EXPORT_SYMBOL(d_alloc_root);
+ EXPORT_SYMBOL(d_delete);
+@@ -176,6 +186,7 @@
+ EXPORT_SYMBOL(invalidate_inodes);
+ EXPORT_SYMBOL(invalidate_inode_pages);
+ EXPORT_SYMBOL(truncate_inode_pages);
++EXPORT_SYMBOL(invalidate_inode_pages2);
+ EXPORT_SYMBOL(fsync_dev);
+ EXPORT_SYMBOL(permission);
+ EXPORT_SYMBOL(vfs_permission);
+@@ -358,6 +369,8 @@
+ EXPORT_SYMBOL(add_wait_queue_exclusive);
+ EXPORT_SYMBOL(remove_wait_queue);
+ 
++EXPORT_SYMBOL(flush_signal_handlers);
++
+ /* The notion of irq probe/assignment is foreign to S/390 */
+ 
+ #if !defined(CONFIG_ARCH_S390)
+@@ -427,6 +440,7 @@
+ EXPORT_SYMBOL(interruptible_sleep_on_timeout);
+ EXPORT_SYMBOL(schedule);
+ EXPORT_SYMBOL(schedule_timeout);
++EXPORT_SYMBOL(sys_wait4);
+ EXPORT_SYMBOL(jiffies);
+ EXPORT_SYMBOL(xtime);
+ EXPORT_SYMBOL(do_gettimeofday);

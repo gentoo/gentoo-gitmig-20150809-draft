@@ -1,0 +1,183 @@
+diff -urN ref/include/linux/socket.h netexports/include/linux/socket.h
+--- ref/include/linux/socket.h	Sat Apr 28 20:29:47 2001
++++ netexports/include/linux/socket.h	Sun Apr 29 17:28:53 2001
+@@ -254,6 +254,11 @@
+ extern int move_addr_to_user(void *kaddr, int klen, void *uaddr, int *ulen);
+ extern int move_addr_to_kernel(void *uaddr, int ulen, void *kaddr);
+ extern int put_cmsg(struct msghdr*, int level, int type, int len, void *data);
++struct socket;
++struct file * sock_map_file(struct socket *sock);
++extern int sock_map_fd(struct socket *sock);
++extern struct socket *sockfd_lookup(int fd, int *err);
++
+ #endif
+ #endif /* not kernel and not glibc */
+ #endif /* _LINUX_SOCKET_H */
+diff -urN ref/include/net/tcp.h netexports/include/net/tcp.h
+--- ref/include/net/tcp.h	Sat Apr 28 20:34:59 2001
++++ netexports/include/net/tcp.h	Sun Apr 29 17:28:53 2001
+@@ -810,6 +810,7 @@
+ extern void tcp_push_one(struct sock *, unsigned mss_now);
+ extern void tcp_send_ack(struct sock *sk);
+ extern void tcp_send_delayed_ack(struct sock *sk);
++extern void cleanup_rbuf(struct sock *sk, int copied);
+ 
+ /* tcp_timer.c */
+ extern void tcp_init_xmit_timers(struct sock *);
+diff -urN ref/net/ipv4/tcp.c netexports/net/ipv4/tcp.c
+--- ref/net/ipv4/tcp.c	Sat Apr 28 05:24:49 2001
++++ netexports/net/ipv4/tcp.c	Sun Apr 29 17:28:53 2001
+@@ -1270,7 +1270,7 @@
+  * calculation of whether or not we must ACK for the sake of
+  * a window update.
+  */
+-static void cleanup_rbuf(struct sock *sk, int copied)
++void cleanup_rbuf(struct sock *sk, int copied)
+ {
+ 	struct tcp_opt *tp = &(sk->tp_pinfo.af_tcp);
+ 	int time_to_ack = 0;
+diff -urN ref/net/netsyms.c netexports/net/netsyms.c
+--- ref/net/netsyms.c	Sat Apr 28 05:24:49 2001
++++ netexports/net/netsyms.c	Sun Apr 29 17:28:53 2001
+@@ -106,6 +106,8 @@
+ EXPORT_SYMBOL(sock_create);
+ EXPORT_SYMBOL(sock_alloc);
+ EXPORT_SYMBOL(sock_release);
++EXPORT_SYMBOL(sock_map_fd);
++EXPORT_SYMBOL(sockfd_lookup);
+ EXPORT_SYMBOL(sock_setsockopt);
+ EXPORT_SYMBOL(sock_getsockopt);
+ EXPORT_SYMBOL(sock_sendmsg);
+@@ -307,6 +309,7 @@
+ EXPORT_SYMBOL(memcpy_fromiovecend);
+ EXPORT_SYMBOL(csum_partial_copy_fromiovecend);
+ EXPORT_SYMBOL(tcp_v4_lookup_listener);
++EXPORT_SYMBOL(cleanup_rbuf);
+ /* UDP/TCP exported functions for TCPv6 */
+ EXPORT_SYMBOL(udp_ioctl);
+ EXPORT_SYMBOL(udp_connect);
+@@ -324,6 +327,7 @@
+ EXPORT_SYMBOL(tcp_getsockopt);
+ EXPORT_SYMBOL(tcp_recvmsg);
+ EXPORT_SYMBOL(tcp_send_synack);
++EXPORT_SYMBOL(tcp_send_skb);
+ EXPORT_SYMBOL(tcp_check_req);
+ EXPORT_SYMBOL(tcp_child_process);
+ EXPORT_SYMBOL(tcp_parse_options);
+diff -urN ref/net/socket.c netexports/net/socket.c
+--- ref/net/socket.c	Sat Apr 28 05:24:50 2001
++++ netexports/net/socket.c	Sun Apr 29 17:28:53 2001
+@@ -114,7 +114,7 @@
+  *	in the operation structures but are done directly via the socketcall() multiplexor.
+  */
+ 
+-static struct file_operations socket_file_ops = {
++struct file_operations socket_file_ops = {
+ 	llseek:		sock_lseek,
+ 	read:		sock_read,
+ 	write:		sock_write,
+@@ -330,51 +330,62 @@
+  *	but we take care of internal coherence yet.
+  */
+ 
+-static int sock_map_fd(struct socket *sock)
++struct file * sock_map_file(struct socket *sock)
+ {
+-	int fd;
++	struct file *file;
+ 	struct qstr this;
+ 	char name[32];
+ 
++	file = get_empty_filp();
++
++	if (!file)
++		return ERR_PTR(-ENFILE);
++
++	sprintf(name, "[%lu]", sock->inode->i_ino);
++	this.name = name;
++	this.len = strlen(name);
++	this.hash = sock->inode->i_ino;
++
++	file->f_dentry = d_alloc(sock_mnt->mnt_sb->s_root, &this);
++	if (!file->f_dentry) {
++		put_filp(file);
++		return ERR_PTR(-ENOMEM);
++	}
++	file->f_dentry->d_op = &sockfs_dentry_operations;
++	d_add(file->f_dentry, sock->inode);
++	file->f_vfsmnt = mntget(sock_mnt);
++
++	if (sock->file)
++		BUG();
++	sock->file = file;
++	file->f_op = sock->inode->i_fop = &socket_file_ops;
++	file->f_mode = 3;
++	file->f_flags = O_RDWR;
++	file->f_pos = 0;
++
++	return file;
++}
++
++int sock_map_fd(struct socket *sock)
++{
++	int fd;
++	struct file *file;
++
+ 	/*
+ 	 *	Find a file descriptor suitable for return to the user. 
+ 	 */
+ 
+ 	fd = get_unused_fd();
+-	if (fd >= 0) {
+-		struct file *file = get_empty_filp();
+-
+-		if (!file) {
+-			put_unused_fd(fd);
+-			fd = -ENFILE;
+-			goto out;
+-		}
++	if (fd < 0)
++		return fd;
+ 
+-		sprintf(name, "[%lu]", sock->inode->i_ino);
+-		this.name = name;
+-		this.len = strlen(name);
+-		this.hash = sock->inode->i_ino;
+-
+-		file->f_dentry = d_alloc(sock_mnt->mnt_sb->s_root, &this);
+-		if (!file->f_dentry) {
+-			put_filp(file);
+-			put_unused_fd(fd);
+-			fd = -ENOMEM;
+-			goto out;
+-		}
+-		file->f_dentry->d_op = &sockfs_dentry_operations;
+-		d_add(file->f_dentry, sock->inode);
+-		file->f_vfsmnt = mntget(sock_mnt);
+-
+-		sock->file = file;
+-		file->f_op = sock->inode->i_fop = &socket_file_ops;
+-		file->f_mode = 3;
+-		file->f_flags = O_RDWR;
+-		file->f_pos = 0;
+-		fd_install(fd, file);
++	file = sock_map_file(sock);
++	if (IS_ERR(file)) {
++		put_unused_fd(fd);
++		return PTR_ERR(file);
+ 	}
++	fd_install(fd, file);
+ 
+-out:
+ 	return fd;
+ }
+ 
+@@ -801,6 +812,8 @@
+ 	}
+ 
+ out:
++	if (sock->sk != sk)
++		BUG();
+ 	release_sock(sock->sk);
+ 	return 0;
+ }

@@ -1,0 +1,10 @@
+--- 2.4.10pre11aa1/mm/mmap.c.~1~	Tue Sep 18 06:01:02 2001
++++ 2.4.10pre11aa1/mm/mmap.c	Tue Sep 18 06:02:45 2001
+@@ -479,7 +479,6 @@
+ 	}
+ 
+ 	/* Clear old maps */
+-	error = -ENOMEM;
+ munmap_back:
+ 	vma = find_vma_prepare(mm, addr, &prev, &rb_link, &rb_parent);
+ 	if (vma && vma->vm_start < addr + len) {

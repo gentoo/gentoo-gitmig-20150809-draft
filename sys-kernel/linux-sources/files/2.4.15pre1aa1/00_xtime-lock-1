@@ -1,0 +1,22 @@
+diff -urN 2.4.10/kernel/time.c xtime/kernel/time.c
+--- 2.4.10/kernel/time.c	Thu Nov 16 15:37:43 2000
++++ xtime/kernel/time.c	Sun Sep 23 22:20:29 2001
+@@ -38,7 +38,18 @@
+ 
+ static void do_normal_gettime(struct timeval * tm)
+ {
++	extern rwlock_t xtime_lock;
++	unsigned long flags;
++	/*
++	 * Inspired by arch/.../kernel/time.c in which do_gettimeofday also
++	 * locks xtime_lock, do_normal_gettime should do the same. After all
++	 * access to xtime isn't atomic. -rolf 20010923
++	 */
++	read_lock_irqsave(&xtime_lock, flags);
++
+         *tm=xtime;
++
++	read_unlock_irqrestore(&xtime_lock, flags);
+ }
+ 
+ void (*do_get_fast_time)(struct timeval *) = do_normal_gettime;

@@ -1,0 +1,457 @@
+diff -urN 2.4.14pre3/include/linux/rcupdate.h rcu/include/linux/rcupdate.h
+--- 2.4.14pre3/include/linux/rcupdate.h	Thu Jan  1 01:00:00 1970
++++ rcu/include/linux/rcupdate.h	Sun Oct 28 15:24:02 2001
+@@ -0,0 +1,59 @@
++/*
++ * Read-Copy Update mechanism for mutual exclusion 
++ *
++ * This program is free software; you can redistribute it and/or modify
++ * it under the terms of the GNU General Public License as published by
++ * the Free Software Foundation; either version 2 of the License, or
++ * (at your option) any later version.
++ *
++ * This program is distributed in the hope that it will be useful,
++ * but WITHOUT ANY WARRANTY; without even the implied warranty of
++ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
++ * GNU General Public License for more details.
++ *
++ * You should have received a copy of the GNU General Public License
++ * along with this program; if not, write to the Free Software
++ * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
++ *
++ * Copyright (c) International Business Machines Corp., 2001
++ *
++ * Author: Dipankar Sarma <dipankar@in.ibm.com>
++ * 
++ * Based on the original work by Paul McKenney <paul.mckenney@us.ibm.com>
++ * and inputs from Andrea Arcangeli, Rusty Russell, Andi Kleen etc.
++ * Papers:
++ * http://www.rdrop.com/users/paulmck/paper/rclockpdcsproof.pdf
++ * http://lse.sourceforge.net/locking/rclock_OLS.2001.05.01c.sc.pdf (OLS2001)
++ *
++ * For detailed explanation of Read-Copy Update mechanism see -
++ * 		http://lse.sourceforge.net/locking/rcupdate.html
++ *
++ */
++
++#ifndef __LINUX_RCUPDATE_H
++#define __LINUX_RCUPDATE_H
++
++#include <linux/list.h>
++
++/*
++ * Callback structure for use with call_rcu(). 
++ */
++struct rcu_head {
++	struct list_head list;
++	void (*func)(void *obj);
++	void *arg;
++};
++
++#define RCU_HEAD_INIT(head) { LIST_HEAD_INIT(head.list), NULL, NULL }
++#define RCU_HEAD(head) struct rcu_head head = RCU_HEAD_INIT(head)
++#define INIT_RCU_HEAD(ptr) do { \
++	INIT_LIST_HEAD(&(ptr)->list); (ptr)->func = NULL; (ptr)->arg = NULL; \
++} while (0)
++
++
++extern void FASTCALL(call_rcu(struct rcu_head *head, void (*func)(void *arg), void *arg));
++extern void synchronize_kernel(void);
++
++extern void rcu_init(void);
++
++#endif /* __LINUX_RCUPDATE_H */
+diff -urN 2.4.14pre3/include/linux/sched.h rcu/include/linux/sched.h
+--- 2.4.14pre3/include/linux/sched.h	Thu Oct 11 10:41:52 2001
++++ rcu/include/linux/sched.h	Sun Oct 28 15:24:37 2001
+@@ -159,6 +159,7 @@
+ extern void flush_scheduled_tasks(void);
+ extern int start_context_thread(void);
+ extern int current_is_keventd(void);
++extern void force_cpu_reschedule(int cpu);
+ 
+ /*
+  * The default fd array needs to be at least BITS_PER_LONG,
+@@ -547,6 +548,18 @@
+ extern unsigned long itimer_next;
+ extern struct timeval xtime;
+ extern void do_timer(struct pt_regs *);
++
++/* per-cpu schedule data */
++typedef struct schedule_data_s {
++	struct task_struct * curr;
++	cycles_t last_schedule;
++	long quiescent;
++} schedule_data_t ____cacheline_aligned;
++
++extern schedule_data_t schedule_data[NR_CPUS];
++#define cpu_curr(cpu)		(schedule_data[(cpu)].curr)
++#define last_schedule(cpu)	(schedule_data[(cpu)].last_schedule)
++#define RCU_quiescent(cpu)	(schedule_data[(cpu)].quiescent)
+ 
+ extern unsigned int * prof_buffer;
+ extern unsigned long prof_len;
+diff -urN 2.4.14pre3/init/main.c rcu/init/main.c
+--- 2.4.14pre3/init/main.c	Wed Oct 24 08:04:27 2001
++++ rcu/init/main.c	Sun Oct 28 15:26:58 2001
+@@ -27,6 +27,7 @@
+ #include <linux/iobuf.h>
+ #include <linux/bootmem.h>
+ #include <linux/tty.h>
++#include <linux/rcupdate.h>
+ 
+ #include <asm/io.h>
+ #include <asm/bugs.h>
+@@ -554,6 +555,7 @@
+ 	printk("Kernel command line: %s\n", saved_command_line);
+ 	parse_options(command_line);
+ 	trap_init();
++	rcu_init();
+ 	init_IRQ();
+ 	sched_init();
+ 	softirq_init();
+diff -urN 2.4.14pre3/kernel/Makefile rcu/kernel/Makefile
+--- 2.4.14pre3/kernel/Makefile	Sun Sep 23 21:11:42 2001
++++ rcu/kernel/Makefile	Sun Oct 28 15:23:48 2001
+@@ -9,12 +9,12 @@
+ 
+ O_TARGET := kernel.o
+ 
+-export-objs = signal.o sys.o kmod.o context.o ksyms.o pm.o exec_domain.o printk.o
++export-objs = signal.o sys.o kmod.o context.o ksyms.o pm.o exec_domain.o printk.o rcupdate.o
+ 
+ obj-y     = sched.o dma.o fork.o exec_domain.o panic.o printk.o \
+ 	    module.o exit.o itimer.o info.o time.o softirq.o resource.o \
+ 	    sysctl.o acct.o capability.o ptrace.o timer.o user.o \
+-	    signal.o sys.o kmod.o context.o
++	    signal.o sys.o kmod.o context.o rcupdate.o
+ 
+ obj-$(CONFIG_UID16) += uid16.o
+ obj-$(CONFIG_MODULES) += ksyms.o
+diff -urN 2.4.14pre3/kernel/rcupdate.c rcu/kernel/rcupdate.c
+--- 2.4.14pre3/kernel/rcupdate.c	Thu Jan  1 01:00:00 1970
++++ rcu/kernel/rcupdate.c	Sun Oct 28 15:26:37 2001
+@@ -0,0 +1,229 @@
++/*
++ * Read-Copy Update mechanism for mutual exclusion
++ *
++ * This program is free software; you can redistribute it and/or modify
++ * it under the terms of the GNU General Public License as published by
++ * the Free Software Foundation; either version 2 of the License, or
++ * (at your option) any later version.
++ *
++ * This program is distributed in the hope that it will be useful,
++ * but WITHOUT ANY WARRANTY; without even the implied warranty of
++ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
++ * GNU General Public License for more details.
++ *
++ * You should have received a copy of the GNU General Public License
++ * along with this program; if not, write to the Free Software
++ * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
++ *
++ * Copyright (c) International Business Machines Corp., 2001
++ * Copyright (C) Andrea Arcangeli <andrea@suse.de> SuSE, 2001
++ *
++ * Author: Dipankar Sarma <dipankar@in.ibm.com>,
++ *	   Andrea Arcangeli <andrea@suse.de>
++ * 
++ * Based on the original work by Paul McKenney <paul.mckenney@us.ibm.com>
++ * and inputs from Andrea Arcangeli, Rusty Russell, Andi Kleen etc.
++ * Papers:
++ * http://www.rdrop.com/users/paulmck/paper/rclockpdcsproof.pdf
++ * http://lse.sourceforge.net/locking/rclock_OLS.2001.05.01c.sc.pdf (OLS2001)
++ *
++ * For detailed explanation of Read-Copy Update mechanism see -
++ * 		http://lse.sourceforge.net/locking/rcupdate.html
++ *
++ */
++
++#include <linux/init.h>
++#include <linux/kernel.h>
++#include <linux/spinlock.h>
++#include <linux/sched.h>
++#include <linux/smp.h>
++#include <linux/interrupt.h>
++#include <linux/module.h>
++#include <linux/completion.h>
++#include <linux/rcupdate.h>
++
++#define DEBUG
++
++#ifdef CONFIG_SMP
++/* Definition for rcupdate control block. */
++static spinlock_t rcu_lock;
++static struct list_head rcu_nxtlist;
++static struct list_head rcu_curlist;
++static struct tasklet_struct rcu_tasklet;
++static unsigned long rcu_qsmask;
++static int rcu_polling_in_progress;
++static long rcu_quiescent_checkpoint[NR_CPUS];
++#endif
++
++/*
++ * Register a new rcu callback. This will be invoked as soon
++ * as all CPUs have performed a context switch or been seen in the
++ * idle loop or in a user process.
++ */
++void call_rcu(struct rcu_head *head, void (*func)(void *arg), void *arg)
++{
++#ifdef CONFIG_SMP
++	head->func = func;
++	head->arg = arg;
++
++	spin_lock_bh(&rcu_lock);
++	list_add(&head->list, &rcu_nxtlist);
++	spin_unlock_bh(&rcu_lock);
++
++	tasklet_hi_schedule(&rcu_tasklet);
++#else
++	local_bh_disable();
++	func(arg);
++	local_bh_enable();
++#endif
++}
++
++#ifdef CONFIG_SMP
++static int rcu_prepare_polling(void)
++{
++	int stop;
++	int i;
++
++#ifdef DEBUG
++	if (!list_empty(&rcu_curlist))
++		BUG();
++#endif
++
++	stop = 1;
++	if (!list_empty(&rcu_nxtlist)) {
++		list_splice(&rcu_nxtlist, &rcu_curlist);
++		INIT_LIST_HEAD(&rcu_nxtlist);
++
++		rcu_polling_in_progress = 1;
++
++		for (i = 0; i < smp_num_cpus; i++) {
++			int cpu = cpu_logical_map(i);
++
++			if (cpu != smp_processor_id()) {
++				rcu_qsmask |= 1UL << cpu;
++				rcu_quiescent_checkpoint[cpu] = RCU_quiescent(cpu);
++				force_cpu_reschedule(cpu);
++			}
++		}
++		stop = 0;
++	}
++
++	return stop;
++}
++
++/*
++ * Invoke the completed RCU callbacks.
++ */
++static void rcu_invoke_callbacks(void)
++{
++	struct list_head *entry;
++	struct rcu_head *head;
++
++#ifdef DEBUG
++	if (list_empty(&rcu_curlist))
++		BUG();
++#endif
++
++	entry = rcu_curlist.prev;
++	do {
++		head = list_entry(entry, struct rcu_head, list);
++		entry = entry->prev;
++
++		head->func(head->arg);
++	} while (entry != &rcu_curlist);
++
++	INIT_LIST_HEAD(&rcu_curlist);
++}
++
++static int rcu_completion(void)
++{
++	int stop;
++
++	rcu_polling_in_progress = 0;
++	rcu_invoke_callbacks();
++
++	stop = rcu_prepare_polling();
++
++	return stop;
++}
++
++static int rcu_polling(void)
++{
++	int i;
++	int stop;
++
++	for (i = 0; i < smp_num_cpus; i++) {
++		int cpu = cpu_logical_map(i);
++
++		if (rcu_qsmask & (1UL << cpu))
++			if (rcu_quiescent_checkpoint[cpu] != RCU_quiescent(cpu))
++				rcu_qsmask &= ~(1UL << cpu);
++	}
++
++	stop = 0;
++	if (!rcu_qsmask)
++		stop = rcu_completion();
++
++	return stop;
++}
++
++/*
++ * Look into the per-cpu callback information to see if there is
++ * any processing necessary - if so do it.
++ */
++static void rcu_process_callbacks(unsigned long data)
++{
++	int stop;
++
++	spin_lock(&rcu_lock);
++	if (!rcu_polling_in_progress)
++		stop = rcu_prepare_polling();
++	else
++		stop = rcu_polling();
++	spin_unlock(&rcu_lock);
++
++	if (!stop)
++		tasklet_hi_schedule(&rcu_tasklet);
++}
++
++/* Because of FASTCALL declaration of complete, we use this wrapper */
++static void wakeme_after_rcu(void *completion)
++{
++	complete(completion);
++}
++
++#endif /* CONFIG_SMP */
++
++/*
++ * Initializes rcu mechanism.  Assumed to be called early.
++ * That is before local timer(SMP) or jiffie timer (uniproc) is setup.
++ */
++void __init rcu_init(void)
++{
++#ifdef CONFIG_SMP
++	tasklet_init(&rcu_tasklet, rcu_process_callbacks, 0UL);
++	INIT_LIST_HEAD(&rcu_nxtlist);
++	INIT_LIST_HEAD(&rcu_curlist);
++	spin_lock_init(&rcu_lock);
++#endif
++}
++
++/*
++ * Wait until all the CPUs have gone through a "quiescent" state.
++ */
++void synchronize_kernel(void)
++{
++#ifdef CONFIG_SMP
++	struct rcu_head rcu;
++	DECLARE_COMPLETION(completion);
++
++	/* Will wake me after RCU finished */
++	call_rcu(&rcu, wakeme_after_rcu, &completion);
++
++	/* Wait for it */
++	wait_for_completion(&completion);
++#endif
++}
++
++EXPORT_SYMBOL(call_rcu);
++EXPORT_SYMBOL(synchronize_kernel);
+diff -urN 2.4.14pre3/kernel/sched.c rcu/kernel/sched.c
+--- 2.4.14pre3/kernel/sched.c	Wed Oct 24 08:04:27 2001
++++ rcu/kernel/sched.c	Sun Oct 28 15:27:24 2001
+@@ -28,6 +28,7 @@
+ #include <linux/kernel_stat.h>
+ #include <linux/completion.h>
+ #include <linux/prefetch.h>
++#include <linux/rcupdate.h>
+ 
+ #include <asm/uaccess.h>
+ #include <asm/mmu_context.h>
+@@ -97,16 +98,7 @@
+  * We align per-CPU scheduling data on cacheline boundaries,
+  * to prevent cacheline ping-pong.
+  */
+-static union {
+-	struct schedule_data {
+-		struct task_struct * curr;
+-		cycles_t last_schedule;
+-	} schedule_data;
+-	char __pad [SMP_CACHE_BYTES];
+-} aligned_data [NR_CPUS] __cacheline_aligned = { {{&init_task,0}}};
+-
+-#define cpu_curr(cpu) aligned_data[(cpu)].schedule_data.curr
+-#define last_schedule(cpu) aligned_data[(cpu)].schedule_data.last_schedule
++schedule_data_t schedule_data[NR_CPUS] __cacheline_aligned = {{&init_task,0}};
+ 
+ struct kernel_stat kstat;
+ extern struct task_struct *child_reaper;
+@@ -532,7 +524,7 @@
+  */
+ asmlinkage void schedule(void)
+ {
+-	struct schedule_data * sched_data;
++	schedule_data_t * sched_data;
+ 	struct task_struct *prev, *next, *p;
+ 	struct list_head *tmp;
+ 	int this_cpu, c;
+@@ -554,7 +546,7 @@
+ 	 * 'sched_data' is protected by the fact that we can run
+ 	 * only one process per CPU.
+ 	 */
+-	sched_data = & aligned_data[this_cpu].schedule_data;
++	sched_data = &schedule_data[this_cpu];
+ 
+ 	spin_lock_irq(&runqueue_lock);
+ 
+@@ -608,6 +600,8 @@
+ 	 */
+ 	sched_data->curr = next;
+ #ifdef CONFIG_SMP
++	RCU_quiescent(this_cpu)++;
++
+  	next->has_cpu = 1;
+ 	next->processor = this_cpu;
+ #endif
+@@ -861,6 +855,17 @@
+ 
+ void scheduling_functions_end_here(void) { }
+ 
++void force_cpu_reschedule(int cpu)
++{
++	spin_lock_irq(&runqueue_lock);
++	cpu_curr(cpu)->need_resched = 1;
++	spin_unlock_irq(&runqueue_lock);
++
++#ifdef CONFIG_SMP
++	smp_send_reschedule(cpu);
++#endif
++}
++
+ #ifndef __alpha__
+ 
+ /*
+@@ -1057,7 +1062,7 @@
+ 	// Subtract non-idle processes running on other CPUs.
+ 	for (i = 0; i < smp_num_cpus; i++) {
+ 		int cpu = cpu_logical_map(i);
+-		if (aligned_data[cpu].schedule_data.curr != idle_task(cpu))
++		if (cpu_curr(cpu) != idle_task(cpu))
+ 			nr_pending--;
+ 	}
+ #else
+@@ -1314,8 +1319,8 @@
+ 
+ void __init init_idle(void)
+ {
+-	struct schedule_data * sched_data;
+-	sched_data = &aligned_data[smp_processor_id()].schedule_data;
++	schedule_data_t * sched_data;
++	sched_data = &schedule_data[smp_processor_id()];
+ 
+ 	if (current != &init_task && task_on_runqueue(current)) {
+ 		printk("UGH! (%d:%d) was on the runqueue, removing.\n",

@@ -1,0 +1,18 @@
+--- 2.4.10pre2aa3/arch/um/kernel/irq.c.~1~	Sat Sep  1 02:40:55 2001
++++ 2.4.10pre2aa3/arch/um/kernel/irq.c	Sat Sep  1 02:59:47 2001
+@@ -141,10 +141,12 @@
+ 
+ 	status = 1;	/* Force the "do bottom halves" bit */
+ 
+-	if (!(action->flags & SA_INTERRUPT))
+-		__sti();
+-
+ 	do {
++		if (!(action->flags & SA_INTERRUPT))
++			__sti();
++		else
++			__cli();
++
+ 		status |= action->flags;
+ 		action->handler(irq, action->dev_id, regs);
+ 		action = action->next;

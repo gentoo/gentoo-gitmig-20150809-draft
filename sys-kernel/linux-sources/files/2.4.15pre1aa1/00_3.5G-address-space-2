@@ -1,0 +1,160 @@
+diff -urN 2.4.11pre6/arch/i386/Makefile 3.5G/arch/i386/Makefile
+--- 2.4.11pre6/arch/i386/Makefile	Tue May  1 19:35:18 2001
++++ 3.5G/arch/i386/Makefile	Tue Oct  9 04:45:22 2001
+@@ -106,6 +106,9 @@
+ 
+ MAKEBOOT = $(MAKE) -C arch/$(ARCH)/boot
+ 
++arch/i386/vmlinux.lds: arch/i386/vmlinux.lds.S FORCE
++	$(CPP) -C -P -I$(HPATH) -imacros $(HPATH)/asm-i386/page_offset.h -Ui386 arch/i386/vmlinux.lds.S >arch/i386/vmlinux.lds
++
+ vmlinux: arch/i386/vmlinux.lds
+ 
+ FORCE: ;
+diff -urN 2.4.11pre6/arch/i386/config.in 3.5G/arch/i386/config.in
+--- 2.4.11pre6/arch/i386/config.in	Tue Oct  9 00:10:11 2001
++++ 3.5G/arch/i386/config.in	Tue Oct  9 04:45:36 2001
+@@ -158,12 +158,15 @@
+ 	"off    CONFIG_NOHIGHMEM \
+ 	 4GB    CONFIG_HIGHMEM4G \
+ 	 64GB   CONFIG_HIGHMEM64G" off
+-if [ "$CONFIG_HIGHMEM4G" = "y" ]; then
++if [ "$CONFIG_HIGHMEM4G" = "y" -o "$CONFIG_HIGHMEM64G" = "y" ]; then
+    define_bool CONFIG_HIGHMEM y
++else
++   define_bool CONFIG_HIGHMEM n
+ fi
+ if [ "$CONFIG_HIGHMEM64G" = "y" ]; then
+-   define_bool CONFIG_HIGHMEM y
+    define_bool CONFIG_X86_PAE y
++else
++   bool '3.5GB user address space' CONFIG_05GB
+ fi
+ 
+ bool 'Math emulation' CONFIG_MATH_EMULATION
+diff -urN 2.4.11pre6/arch/i386/vmlinux.lds.S 3.5G/arch/i386/vmlinux.lds.S
+--- 2.4.11pre6/arch/i386/vmlinux.lds.S	Thu Jan  1 01:00:00 1970
++++ 3.5G/arch/i386/vmlinux.lds.S	Tue Oct  9 04:45:22 2001
+@@ -0,0 +1,83 @@
++/* ld script to make i386 Linux kernel
++ * Written by Martin Mares <mj@atrey.karlin.mff.cuni.cz>;
++ */
++OUTPUT_FORMAT("elf32-i386", "elf32-i386", "elf32-i386")
++OUTPUT_ARCH(i386)
++ENTRY(_start)
++SECTIONS
++{
++  . = PAGE_OFFSET_RAW + 0x100000;
++  _text = .;			/* Text and read-only data */
++  .text : {
++	*(.text)
++	*(.fixup)
++	*(.gnu.warning)
++	} = 0x9090
++  .text.lock : { *(.text.lock) }	/* out-of-line lock text */
++
++  _etext = .;			/* End of text section */
++
++  .rodata : { *(.rodata) *(.rodata.*) }
++  .kstrtab : { *(.kstrtab) }
++
++  . = ALIGN(16);		/* Exception table */
++  __start___ex_table = .;
++  __ex_table : { *(__ex_table) }
++  __stop___ex_table = .;
++
++  __start___ksymtab = .;	/* Kernel symbol table */
++  __ksymtab : { *(__ksymtab) }
++  __stop___ksymtab = .;
++
++  .data : {			/* Data */
++	*(.data)
++	CONSTRUCTORS
++	}
++
++  _edata = .;			/* End of data section */
++
++  . = ALIGN(8192);		/* init_task */
++  .data.init_task : { *(.data.init_task) }
++
++  . = ALIGN(4096);		/* Init code and data */
++  __init_begin = .;
++  .text.init : { *(.text.init) }
++  .data.init : { *(.data.init) }
++  . = ALIGN(16);
++  __setup_start = .;
++  .setup.init : { *(.setup.init) }
++  __setup_end = .;
++  __initcall_start = .;
++  .initcall.init : { *(.initcall.init) }
++  __initcall_end = .;
++  . = ALIGN(4096);
++  __init_end = .;
++
++  . = ALIGN(4096);
++  .data.page_aligned : { *(.data.idt) }
++
++  . = ALIGN(32);
++  .data.cacheline_aligned : { *(.data.cacheline_aligned) }
++
++  __bss_start = .;		/* BSS */
++  .bss : {
++	*(.bss)
++	}
++  _end = . ;
++
++  /* Sections to be discarded */
++  /DISCARD/ : {
++	*(.text.exit)
++	*(.data.exit)
++	*(.exitcall.exit)
++	}
++
++  /* Stabs debugging sections.  */
++  .stab 0 : { *(.stab) }
++  .stabstr 0 : { *(.stabstr) }
++  .stab.excl 0 : { *(.stab.excl) }
++  .stab.exclstr 0 : { *(.stab.exclstr) }
++  .stab.index 0 : { *(.stab.index) }
++  .stab.indexstr 0 : { *(.stab.indexstr) }
++  .comment 0 : { *(.comment) }
++}
+diff -urN 2.4.11pre6/include/asm-i386/page.h 3.5G/include/asm-i386/page.h
+--- 2.4.11pre6/include/asm-i386/page.h	Sun Sep 23 21:11:40 2001
++++ 3.5G/include/asm-i386/page.h	Tue Oct  9 04:45:22 2001
+@@ -78,7 +78,9 @@
+  * and CONFIG_HIGHMEM64G options in the kernel configuration.
+  */
+ 
+-#define __PAGE_OFFSET		(0xC0000000)
++#include <asm/page_offset.h>
++
++#define __PAGE_OFFSET		(PAGE_OFFSET_RAW)
+ 
+ #ifndef __ASSEMBLY__
+ 
+diff -urN 2.4.11pre6/include/asm-i386/page_offset.h 3.5G/include/asm-i386/page_offset.h
+--- 2.4.11pre6/include/asm-i386/page_offset.h	Thu Jan  1 01:00:00 1970
++++ 3.5G/include/asm-i386/page_offset.h	Tue Oct  9 04:45:22 2001
+@@ -0,0 +1,6 @@
++#include <linux/config.h>
++#ifndef CONFIG_05GB
++#define PAGE_OFFSET_RAW 0xC0000000
++#else
++#define PAGE_OFFSET_RAW 0xE0000000
++#endif
+diff -urN 2.4.11pre6/include/asm-i386/processor.h 3.5G/include/asm-i386/processor.h
+--- 2.4.11pre6/include/asm-i386/processor.h	Tue Oct  9 00:11:19 2001
++++ 3.5G/include/asm-i386/processor.h	Tue Oct  9 04:45:22 2001
+@@ -270,7 +270,11 @@
+ /* This decides where the kernel will search for a free chunk of vm
+  * space during mmap's.
+  */
++#ifndef CONFIG_05GB
+ #define TASK_UNMAPPED_BASE	(TASK_SIZE / 3)
++#else
++#define TASK_UNMAPPED_BASE	(TASK_SIZE / 16)
++#endif
+ 
+ /*
+  * Size of io_bitmap in longwords: 32 is ports 0-0x3ff.

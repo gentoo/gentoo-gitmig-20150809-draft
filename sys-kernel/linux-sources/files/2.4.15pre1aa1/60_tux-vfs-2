@@ -1,0 +1,79 @@
+diff -urN ref/fs/dcache.c new/fs/dcache.c
+--- ref/fs/dcache.c	Sat Jun  9 00:04:48 2001
++++ new/fs/dcache.c	Tue Jun 12 15:44:51 2001
+@@ -62,6 +62,10 @@
+ 		dentry->d_op->d_release(dentry);
+ 	if (dname_external(dentry)) 
+ 		kfree(dentry->d_name.name);
++	if (dentry->d_tux_data) {
++		kfree(dentry->d_tux_data);
++		dentry->d_tux_data = NULL;
++	}
+ 	kmem_cache_free(dentry_cache, dentry); 
+ 	dentry_stat.nr_dentry--;
+ }
+@@ -616,6 +620,7 @@
+ 	dentry->d_name.hash = name->hash;
+ 	dentry->d_op = NULL;
+ 	dentry->d_fsdata = NULL;
++	dentry->d_tux_data = NULL;
+ 	dentry->d_mounted = 0;
+ 	INIT_LIST_HEAD(&dentry->d_hash);
+ 	INIT_LIST_HEAD(&dentry->d_lru);
+@@ -1162,6 +1167,26 @@
+ 	}
+ out:
+ 	return ino;
++}
++
++void flush_dentry_tuxinfo (void)
++{
++	struct list_head *chain, *tmp;
++	struct dentry *dentry;
++	int i;
++
++	spin_lock(&dcache_lock);
++	for (i = 0; i <= d_hash_mask; i++) {
++		chain = dentry_hashtable + i;
++		tmp = chain->next;
++		while (tmp != chain) {
++			dentry = list_entry(tmp, struct dentry, d_hash);
++			kfree(dentry->d_tux_data);
++			dentry->d_tux_data = NULL;
++			tmp = tmp->next;
++		}
++	}
++	spin_unlock(&dcache_lock);
+ }
+ 
+ static void __init dcache_init(unsigned long mempages)
+diff -urN ref/include/linux/dcache.h new/include/linux/dcache.h
+--- ref/include/linux/dcache.h	Tue Jun 12 05:30:15 2001
++++ new/include/linux/dcache.h	Tue Jun 12 15:44:07 2001
+@@ -80,6 +80,7 @@
+ 	struct super_block * d_sb;	/* The root of the dentry tree */
+ 	unsigned long d_vfs_flags;
+ 	void * d_fsdata;		/* fs-specific data */
++	void *d_tux_data;		/* TUX-specific data */
+ 	unsigned char d_iname[DNAME_INLINE_LEN]; /* small names */
+ };
+ 
+@@ -167,6 +168,7 @@
+ extern void shrink_dcache_sb(struct super_block *);
+ extern void shrink_dcache_parent(struct dentry *);
+ extern int d_invalidate(struct dentry *);
++extern void flush_dentry_tuxinfo (void);
+ 
+ #define shrink_dcache() prune_dcache(0)
+ struct zone_struct;
+diff -urN ref/kernel/ksyms.c new/kernel/ksyms.c
+--- ref/kernel/ksyms.c	Tue Jun 12 15:43:46 2001
++++ new/kernel/ksyms.c	Tue Jun 12 15:44:07 2001
+@@ -229,6 +229,7 @@
+ EXPORT_SYMBOL(prune_dcache);
+ EXPORT_SYMBOL(shrink_dcache_sb);
+ EXPORT_SYMBOL(shrink_dcache_parent);
++EXPORT_SYMBOL(flush_dentry_tuxinfo);
+ EXPORT_SYMBOL(find_inode_number);
+ EXPORT_SYMBOL(is_subdir);
+ EXPORT_SYMBOL(get_unused_fd);

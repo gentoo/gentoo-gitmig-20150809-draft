@@ -1,0 +1,113 @@
+diff -urN 2.4.11pre2/arch/alpha/kernel/entry.S tux-syscall/arch/alpha/kernel/entry.S
+--- 2.4.11pre2/arch/alpha/kernel/entry.S	Sat Aug 11 08:03:53 2001
++++ tux-syscall/arch/alpha/kernel/entry.S	Tue Oct  2 23:58:24 2001
+@@ -988,7 +988,15 @@
+ 	.quad alpha_ni_syscall
+ 	.quad alpha_ni_syscall			/* 220 */
+ 	.quad alpha_ni_syscall
++#ifdef CONFIG_TUX
++	.quad __sys_tux
++#else
++# ifdef CONFIG_TUX_MODULE
++	.quad sys_tux
++# else
+ 	.quad alpha_ni_syscall
++# endif
++#endif
+ 	.quad alpha_ni_syscall
+ 	.quad alpha_ni_syscall
+ 	.quad alpha_ni_syscall			/* 225 */
+diff -urN 2.4.11pre2/arch/i386/kernel/entry.S tux-syscall/arch/i386/kernel/entry.S
+--- 2.4.11pre2/arch/i386/kernel/entry.S	Tue Oct  2 00:08:30 2001
++++ tux-syscall/arch/i386/kernel/entry.S	Tue Oct  2 23:58:56 2001
+@@ -619,7 +619,15 @@
+ 	.long SYMBOL_NAME(sys_madvise)
+ 	.long SYMBOL_NAME(sys_getdents64)	/* 220 */
+ 	.long SYMBOL_NAME(sys_fcntl64)
++#ifdef CONFIG_TUX
++	.long SYMBOL_NAME(__sys_tux)
++#else
++# ifdef CONFIG_TUX_MODULE
++	.long SYMBOL_NAME(sys_tux)
++# else
+ 	.long SYMBOL_NAME(sys_ni_syscall)	/* reserved for TUX */
++# endif
++#endif
+ 	.long SYMBOL_NAME(sys_ni_syscall)	/* Reserved for Security */
+ 
+ 	.rept NR_syscalls-(.-sys_call_table)/4
+diff -urN 2.4.11pre2/net/netsyms.c tux-syscall/net/netsyms.c
+--- 2.4.11pre2/net/netsyms.c	Sun Sep 23 21:11:43 2001
++++ tux-syscall/net/netsyms.c	Tue Oct  2 23:58:24 2001
+@@ -55,7 +55,7 @@
+ 
+ extern struct net_proto_family inet_family_ops;
+ 
+-#if defined(CONFIG_IPV6) || defined (CONFIG_IPV6_MODULE) || defined (CONFIG_KHTTPD) || defined (CONFIG_KHTTPD_MODULE)
++#if defined(CONFIG_IPV6) || defined (CONFIG_IPV6_MODULE) || defined (CONFIG_KHTTPD) || defined (CONFIG_KHTTPD_MODULE) || defined (CONFIG_TUX) || defined (CONFIG_TUX_MODULE)
+ #include <linux/in6.h>
+ #include <linux/icmpv6.h>
+ #include <net/ipv6.h>
+@@ -285,7 +285,7 @@
+ EXPORT_SYMBOL(register_inet6addr_notifier);
+ EXPORT_SYMBOL(unregister_inet6addr_notifier);
+ #endif
+-#if defined (CONFIG_IPV6_MODULE) || defined (CONFIG_KHTTPD) || defined (CONFIG_KHTTPD_MODULE)
++#if defined (CONFIG_IPV6_MODULE) || defined (CONFIG_KHTTPD) || defined (CONFIG_KHTTPD_MODULE) || defined (CONFIG_TUX) || defined (CONFIG_TUX_MODULE)
+ /* inet functions common to v4 and v6 */
+ EXPORT_SYMBOL(inet_release);
+ EXPORT_SYMBOL(inet_stream_connect);
+@@ -572,5 +572,11 @@
+ 
+ EXPORT_SYMBOL(net_call_rx_atomic);
+ EXPORT_SYMBOL(softnet_data);
++
++#ifdef CONFIG_TUX_MODULE
++EXPORT_SYMBOL(tux_module_lock);
++EXPORT_SYMBOL(tux_module);
++EXPORT_SYMBOL(sys_tux_ptr);
++#endif
+ 
+ #endif  /* CONFIG_NET */
+diff -urN 2.4.11pre2/net/socket.c tux-syscall/net/socket.c
+--- 2.4.11pre2/net/socket.c	Tue Oct  2 00:08:46 2001
++++ tux-syscall/net/socket.c	Tue Oct  2 23:58:24 2001
+@@ -1764,3 +1764,38 @@
+ 		len = 0;
+ 	return len;
+ }
++
++#ifdef CONFIG_TUX_MODULE
++
++int (*sys_tux_ptr) (unsigned int action, user_req_t *u_info) = NULL;
++
++struct module *tux_module = NULL;
++spinlock_t tux_module_lock = SPIN_LOCK_UNLOCKED;
++
++asmlinkage int sys_tux (unsigned int action, user_req_t *u_info)
++{
++	int ret;
++
++	if (current->tux_info)
++		return sys_tux_ptr(action, u_info);
++
++	ret = -ENOSYS;
++	spin_lock(&tux_module_lock);
++	if (!tux_module)
++		goto out_unlock;
++	__MOD_INC_USE_COUNT(tux_module);
++	spin_unlock(&tux_module_lock);
++
++	if (!sys_tux_ptr)
++		TUX_BUG();
++	ret = sys_tux_ptr(action, u_info);
++
++	spin_lock(&tux_module_lock);
++	__MOD_DEC_USE_COUNT(tux_module);
++out_unlock:
++	spin_unlock(&tux_module_lock);
++
++	return ret;
++}
++
++#endif

@@ -1,0 +1,24 @@
+diff -urN 2.4.10pre12/fs/inode.c inode-resched/fs/inode.c
+--- 2.4.10pre12/fs/inode.c	Thu Sep 20 01:44:07 2001
++++ inode-resched/fs/inode.c	Thu Sep 20 20:02:35 2001
+@@ -17,6 +17,7 @@
+ #include <linux/swapctl.h>
+ #include <linux/prefetch.h>
+ #include <linux/locks.h>
++#include <linux/compiler.h>
+ 
+ /*
+  * New inode.c implementation.
+@@ -295,6 +296,12 @@
+ 			 * so we have to start looking from the list head.
+ 			 */
+ 			tmp = head;
++
++			if (unlikely(current->need_resched)) {
++				spin_unlock(&inode_lock);
++				schedule();
++				spin_lock(&inode_lock);
++			}
+ 		}
+ 	}
+ 

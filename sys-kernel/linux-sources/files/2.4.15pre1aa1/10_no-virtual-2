@@ -1,0 +1,56 @@
+diff -urN 2.4.6pre5/arch/i386/config.in novirtual/arch/i386/config.in
+--- 2.4.6pre5/arch/i386/config.in	Thu Jun 21 08:03:30 2001
++++ novirtual/arch/i386/config.in	Thu Jun 21 16:02:11 2001
+@@ -165,6 +165,9 @@
+    define_bool CONFIG_HIGHMEM y
+    define_bool CONFIG_X86_PAE y
+ fi
++if [ "$CONFIG_NOHIGHMEM" = "y" ]; then
++   define_bool CONFIG_NO_PAGE_VIRTUAL y
++fi
+ 
+ bool 'Math emulation' CONFIG_MATH_EMULATION
+ bool 'MTRR (Memory Type Range Register) support' CONFIG_MTRR
+diff -urN 2.4.6pre5/include/asm-i386/pgtable.h novirtual/include/asm-i386/pgtable.h
+--- 2.4.6pre5/include/asm-i386/pgtable.h	Thu Jun 14 18:07:49 2001
++++ novirtual/include/asm-i386/pgtable.h	Thu Jun 21 16:02:11 2001
+@@ -255,7 +255,11 @@
+  * Permanent address of a page. Obviously must never be
+  * called on a highmem page.
+  */
++#ifdef CONFIG_NO_PAGE_VIRTUAL
++#define page_address(page) __va((page - mem_map) << PAGE_SHIFT)
++#else
+ #define page_address(page) ((page)->virtual)
++#endif
+ #define pages_to_mb(x) ((x) >> (20-PAGE_SHIFT))
+ 
+ /*
+diff -urN 2.4.6pre5/include/linux/mm.h novirtual/include/linux/mm.h
+--- 2.4.6pre5/include/linux/mm.h	Thu Jun 21 08:03:56 2001
++++ novirtual/include/linux/mm.h	Thu Jun 21 16:02:33 2001
+@@ -160,8 +160,10 @@
+ 	wait_queue_head_t wait;		/* Page locked?  Stand in line... */
+ 	struct page **pprev_hash;	/* Complement to *next_hash. */
+ 	struct buffer_head * buffers;	/* Buffer maps us to a disk block. */
++#ifndef CONFIG_NO_PAGE_VIRTUAL
+ 	void *virtual;			/* Kernel virtual address (NULL if
+ 					   not kmapped, ie. highmem) */
++#endif
+ 	struct zone_struct *zone;	/* Memory zone we are in. */
+ } mem_map_t;
+ 
+diff -urN 2.4.6pre5/mm/page_alloc.c novirtual/mm/page_alloc.c
+--- 2.4.6pre5/mm/page_alloc.c	Thu Jun 21 08:03:57 2001
++++ novirtual/mm/page_alloc.c	Thu Jun 21 16:02:11 2001
+@@ -851,8 +851,10 @@
+ 		for (i = 0; i < size; i++) {
+ 			struct page *page = mem_map + offset + i;
+ 			page->zone = zone;
++#ifndef CONFIG_NO_PAGE_VIRTUAL
+ 			if (j != ZONE_HIGHMEM)
+ 				page->virtual = __va(zone_start_paddr);
++#endif
+ 			zone_start_paddr += PAGE_SIZE;
+ 		}
+ 

@@ -1,0 +1,1595 @@
+diff -urN vm-ref/arch/i386/config.in vm/arch/i386/config.in
+--- vm-ref/arch/i386/config.in	Fri Nov  9 08:29:24 2001
++++ vm/arch/i386/config.in	Fri Nov  9 08:29:33 2001
+@@ -404,6 +404,7 @@
+    bool '  Magic SysRq key' CONFIG_MAGIC_SYSRQ
+    bool '  Spinlock debugging' CONFIG_DEBUG_SPINLOCK
+    bool '  Verbose BUG() reporting (adds 70K)' CONFIG_DEBUG_BUGVERBOSE
++   bool '  Debug allocation faliures' CONFIG_DEBUG_GFP
+ fi
+ 
+ endmenu
+diff -urN vm-ref/arch/sparc/kernel/sys_sunos.c vm/arch/sparc/kernel/sys_sunos.c
+--- vm-ref/arch/sparc/kernel/sys_sunos.c	Thu Aug 16 22:03:25 2001
++++ vm/arch/sparc/kernel/sys_sunos.c	Fri Nov  9 08:29:33 2001
+@@ -193,7 +193,7 @@
+ 	 * fool it, but this should catch most mistakes.
+ 	 */
+ 	freepages = atomic_read(&buffermem_pages) >> PAGE_SHIFT;
+-	freepages += atomic_read(&page_cache_size);
++	freepages += page_cache_size;
+ 	freepages >>= 1;
+ 	freepages += nr_free_pages();
+ 	freepages += nr_swap_pages;
+diff -urN vm-ref/arch/sparc64/kernel/sys_sunos32.c vm/arch/sparc64/kernel/sys_sunos32.c
+--- vm-ref/arch/sparc64/kernel/sys_sunos32.c	Thu Aug 16 22:03:26 2001
++++ vm/arch/sparc64/kernel/sys_sunos32.c	Fri Nov  9 08:29:33 2001
+@@ -157,7 +157,7 @@
+ 	 * fool it, but this should catch most mistakes.
+ 	 */
+ 	freepages = atomic_read(&buffermem_pages) >> PAGE_SHIFT;
+-	freepages += atomic_read(&page_cache_size);
++	freepages += page_cache_size;
+ 	freepages >>= 1;
+ 	freepages += nr_free_pages();
+ 	freepages += nr_swap_pages;
+diff -urN vm-ref/fs/buffer.c vm/fs/buffer.c
+--- vm-ref/fs/buffer.c	Fri Nov  9 08:29:25 2001
++++ vm/fs/buffer.c	Fri Nov  9 08:29:33 2001
+@@ -115,7 +115,7 @@
+ 		int dummy5;	/* unused */
+ 	} b_un;
+ 	unsigned int data[N_PARAM];
+-} bdf_prm = {{40, 0, 0, 0, 5*HZ, 30*HZ, 60, 0, 0}};
++} bdf_prm = {{20, 0, 0, 0, 5*HZ, 30*HZ, 40, 0, 0}};
+ 
+ /* These are the min and max parameter values that we will allow to be assigned */
+ int bdflush_min[N_PARAM] = {  0,  10,    5,   25,  0,   1*HZ,   0, 0, 0};
+@@ -124,7 +124,6 @@
+ void unlock_buffer(struct buffer_head *bh)
+ {
+ 	clear_bit(BH_Wait_IO, &bh->b_state);
+-	clear_bit(BH_launder, &bh->b_state);
+ 	clear_bit(BH_Lock, &bh->b_state);
+ 	smp_mb__after_clear_bit();
+ 	if (waitqueue_active(&bh->b_wait))
+@@ -179,6 +178,7 @@
+ 	do {
+ 		struct buffer_head * bh = *array++;
+ 		bh->b_end_io = end_buffer_io_sync;
++		clear_bit(BH_Pending_IO, &bh->b_state);
+ 		submit_bh(WRITE, bh);
+ 	} while (--count);
+ }
+@@ -211,6 +211,7 @@
+ 		if (atomic_set_buffer_clean(bh)) {
+ 			__refile_buffer(bh);
+ 			get_bh(bh);
++			set_bit(BH_Pending_IO, &bh->b_state);
+ 			array[count++] = bh;
+ 			if (count < NRSYNC)
+ 				continue;
+@@ -238,7 +239,6 @@
+ 		conditional_schedule();
+ 		spin_lock(&lru_list_lock);
+ 	} while (write_some_buffers(dev));
+-	run_task_queue(&tq_disk);
+ }
+ 
+ /*
+@@ -710,12 +710,8 @@
+ 
+ static void free_more_memory(void)
+ {
+-	zone_t * zone = contig_page_data.node_zonelists[GFP_NOFS & GFP_ZONEMASK].zones[0];
+-	
+-	balance_dirty();
+ 	wakeup_bdflush();
+-	try_to_free_pages(zone, GFP_NOFS, 0);
+-	run_task_queue(&tq_disk);
++	try_to_free_pages_nozone(GFP_NOIO);
+ 	current->policy |= SCHED_YIELD;
+ 	__set_current_state(TASK_RUNNING);
+ 	schedule();
+@@ -1057,19 +1053,17 @@
+ 	if (state < 0)
+ 		return;
+ 
+-	/* If we're getting into imbalance, start write-out */
+-	spin_lock(&lru_list_lock);
+-	write_some_buffers(NODEV);
++	wakeup_bdflush();
+ 
+ 	/*
+ 	 * And if we're _really_ out of balance, wait for
+-	 * some of the dirty/locked buffers ourselves and
+-	 * start bdflush.
++	 * some of the dirty/locked buffers ourselves.
+ 	 * This will throttle heavy writers.
+ 	 */
+ 	if (state > 0) {
++		spin_lock(&lru_list_lock);
++		write_some_buffers(NODEV);
+ 		wait_for_some_buffers(NODEV);
+-		wakeup_bdflush();
+ 	}
+ }
+ 
+@@ -2376,23 +2370,28 @@
+ 	return 1;
+ }
+ 
+-static int sync_page_buffers(struct buffer_head *head, unsigned int gfp_mask)
++static int sync_page_buffers(struct buffer_head *head)
+ {
+ 	struct buffer_head * bh = head;
+-	int tryagain = 0;
++	int tryagain = 1;
+ 
+ 	do {
+ 		if (!buffer_dirty(bh) && !buffer_locked(bh))
+ 			continue;
+ 
++		if (unlikely(buffer_pending_IO(bh))) {
++			tryagain = 0;
++			continue;
++		}
++
+ 		/* Don't start IO first time around.. */
+-		if (!test_and_set_bit(BH_Wait_IO, &bh->b_state))
++		if (!test_and_set_bit(BH_Wait_IO, &bh->b_state)) {
++			tryagain = 0;
+ 			continue;
++		}
+ 
+ 		/* Second time through we start actively writing out.. */
+ 		if (test_and_set_bit(BH_Lock, &bh->b_state)) {
+-			if (!test_bit(BH_launder, &bh->b_state))
+-				continue;
+ 			wait_on_buffer(bh);
+ 			tryagain = 1;
+ 			continue;
+@@ -2405,7 +2404,6 @@
+ 
+ 		__mark_buffer_clean(bh);
+ 		get_bh(bh);
+-		set_bit(BH_launder, &bh->b_state);
+ 		bh->b_end_io = end_buffer_io_sync;
+ 		submit_bh(WRITE, bh);
+ 		tryagain = 0;
+@@ -2479,7 +2477,7 @@
+ 	spin_unlock(&lru_list_lock);
+ 	if (gfp_mask & __GFP_IO) {
+ 		if ((gfp_mask & __GFP_HIGHIO) || !PageHighMem(page)) {
+-			if (sync_page_buffers(bh, gfp_mask)) {
++			if (sync_page_buffers(bh)) {
+ 				/* no IO or waiting next time */
+ 				gfp_mask = 0;
+ 				goto cleaned_buffers_try_again;
+@@ -2730,7 +2728,7 @@
+ 
+ 		spin_lock(&lru_list_lock);
+ 		if (!write_some_buffers(NODEV) || balance_dirty_state() < 0) {
+-			wait_for_some_buffers(NODEV);
++			run_task_queue(&tq_disk);
+ 			interruptible_sleep_on(&bdflush_wait);
+ 		}
+ 	}
+@@ -2761,8 +2759,6 @@
+ 	complete((struct completion *)startup);
+ 
+ 	for (;;) {
+-		wait_for_some_buffers(NODEV);
+-
+ 		/* update interval */
+ 		interval = bdf_prm.b_un.interval;
+ 		if (interval) {
+@@ -2790,6 +2786,7 @@
+ 		printk(KERN_DEBUG "kupdate() activated...\n");
+ #endif
+ 		sync_old_buffers();
++		run_task_queue(&tq_disk);
+ 	}
+ }
+ 
+diff -urN vm-ref/fs/proc/proc_misc.c vm/fs/proc/proc_misc.c
+--- vm-ref/fs/proc/proc_misc.c	Wed Oct 24 08:04:23 2001
++++ vm/fs/proc/proc_misc.c	Fri Nov  9 08:29:33 2001
+@@ -149,7 +149,7 @@
+ #define B(x) ((unsigned long long)(x) << PAGE_SHIFT)
+ 	si_meminfo(&i);
+ 	si_swapinfo(&i);
+-	pg_size = atomic_read(&page_cache_size) - i.bufferram ;
++	pg_size = page_cache_size - i.bufferram;
+ 
+ 	len = sprintf(page, "        total:    used:    free:  shared: buffers:  cached:\n"
+ 		"Mem:  %8Lu %8Lu %8Lu %8Lu %8Lu %8Lu\n"
+diff -urN vm-ref/include/linux/fs.h vm/include/linux/fs.h
+--- vm-ref/include/linux/fs.h	Fri Nov  9 08:29:24 2001
++++ vm/include/linux/fs.h	Fri Nov  9 08:29:33 2001
+@@ -215,7 +215,7 @@
+ 	BH_New,		/* 1 if the buffer is new and not yet written out */
+ 	BH_Async,	/* 1 if the buffer is under end_buffer_io_async I/O */
+ 	BH_Wait_IO,	/* 1 if we should write out this buffer */
+-	BH_launder,	/* 1 if we should throttle on this buffer */
++	BH_Pending_IO,	/* 1 if the buffer is locked but not in the I/O queue yet */
+ 
+ 	BH_PrivateStart,/* not a state bit, but the first bit available
+ 			 * for private allocation by other entities
+@@ -276,6 +276,7 @@
+ #define buffer_mapped(bh)	__buffer_state(bh,Mapped)
+ #define buffer_new(bh)		__buffer_state(bh,New)
+ #define buffer_async(bh)	__buffer_state(bh,Async)
++#define buffer_pending_IO(bh)	__buffer_state(bh,Pending_IO)
+ 
+ #define bh_offset(bh)		((unsigned long)(bh)->b_data & ~PAGE_MASK)
+ 
+diff -urN vm-ref/include/linux/mm.h vm/include/linux/mm.h
+--- vm-ref/include/linux/mm.h	Fri Nov  9 08:29:24 2001
++++ vm/include/linux/mm.h	Fri Nov  9 08:29:33 2001
+@@ -294,8 +294,10 @@
+ #define TryLockPage(page)	test_and_set_bit(PG_locked, &(page)->flags)
+ #define PageChecked(page)	test_bit(PG_checked, &(page)->flags)
+ #define SetPageChecked(page)	set_bit(PG_checked, &(page)->flags)
++
+ #define PageLaunder(page)	test_bit(PG_launder, &(page)->flags)
+ #define SetPageLaunder(page)	set_bit(PG_launder, &(page)->flags)
++#define ClearPageLaunder(page)	clear_bit(PG_launder, &(page)->flags)
+ 
+ extern void FASTCALL(set_page_dirty(struct page *));
+ 
+@@ -391,6 +393,8 @@
+ #define __free_page(page) __free_pages((page), 0)
+ #define free_page(addr) free_pages((addr),0)
+ 
++extern int start_aggressive_readahead(unsigned int);
++
+ extern void show_free_areas(void);
+ extern void show_free_areas_node(pg_data_t *pgdat);
+ 
+@@ -451,8 +455,8 @@
+ 	return page_count(page) - !!page->buffers == 1;
+ }
+ 
+-extern int can_share_swap_page(struct page *);
+-extern int remove_exclusive_swap_page(struct page *);
++extern int FASTCALL(make_exclusive_page(struct page *, int));
++extern int FASTCALL(remove_exclusive_swap_page(struct page *));
+ 
+ extern void __free_pte(pte_t);
+ 
+diff -urN vm-ref/include/linux/mmzone.h vm/include/linux/mmzone.h
+--- vm-ref/include/linux/mmzone.h	Mon Nov  5 05:26:23 2001
++++ vm/include/linux/mmzone.h	Fri Nov  9 08:29:33 2001
+@@ -40,7 +40,17 @@
+ 	spinlock_t		lock;
+ 	unsigned long		free_pages;
+ 	unsigned long		pages_min, pages_low, pages_high;
+-	int			need_balance;
++	/*
++	 * The below fields are protected by different locks (or by
++	 * no lock at all like need_balance), so they're longs to
++	 * provide an atomic granularity against each other on
++	 * all architectures.
++	 */
++	unsigned long		need_balance;
++	/* protected by the pagemap_lru_lock */
++	unsigned long		nr_active_pages, nr_inactive_pages;
++	/* protected by the pagecache_lock */
++	unsigned long		nr_cache_pages;
+ 
+ 	/*
+ 	 * free areas of different sizes
+@@ -113,8 +123,8 @@
+ extern int numnodes;
+ extern pg_data_t *pgdat_list;
+ 
+-#define memclass(pgzone, classzone)	(((pgzone)->zone_pgdat == (classzone)->zone_pgdat) \
+-			&& ((pgzone) <= (classzone)))
++#define memclass(pgzone, classzone) \
++	(((pgzone) - (pgzone)->zone_pgdat->node_zones) <= ((classzone) - (classzone)->zone_pgdat->node_zones))
+ 
+ /*
+  * The following two are not meant for general usage. They are here as
+diff -urN vm-ref/include/linux/pagemap.h vm/include/linux/pagemap.h
+--- vm-ref/include/linux/pagemap.h	Tue Nov  6 02:04:54 2001
++++ vm/include/linux/pagemap.h	Fri Nov  9 08:29:33 2001
+@@ -45,7 +45,7 @@
+ #define PAGE_HASH_BITS (page_hash_bits)
+ #define PAGE_HASH_SIZE (1 << PAGE_HASH_BITS)
+ 
+-extern atomic_t page_cache_size; /* # of pages currently in the hash table */
++extern unsigned long page_cache_size; /* # of pages currently in the hash table */
+ extern struct page **page_hash_table;
+ 
+ extern void page_cache_init(unsigned long);
+diff -urN vm-ref/include/linux/sched.h vm/include/linux/sched.h
+--- vm-ref/include/linux/sched.h	Fri Nov  9 08:29:24 2001
++++ vm/include/linux/sched.h	Fri Nov  9 08:29:33 2001
+@@ -280,6 +280,14 @@
+ extern struct user_struct root_user;
+ #define INIT_USER (&root_user)
+ 
++struct zone_struct;
++
++struct local_pages {
++	struct list_head list;
++	unsigned int order, nr;
++	struct zone_struct * classzone;
++};
++
+ struct task_struct {
+ 	/*
+ 	 * offsets of these are hardcoded elsewhere - touch with care
+@@ -318,8 +326,7 @@
+ 	struct task_struct *next_task, *prev_task;
+ 	struct mm_struct *active_mm;
+ 	struct rw_sem_recursor mm_recursor;
+-	struct list_head local_pages;
+-	unsigned int allocation_order, nr_local_pages;
++	struct local_pages local_pages;
+ 
+ /* task state */
+ 	struct linux_binfmt *binfmt;
+@@ -416,7 +423,6 @@
+ #define PF_DUMPCORE	0x00000200	/* dumped core */
+ #define PF_SIGNALED	0x00000400	/* killed by a signal */
+ #define PF_MEMALLOC	0x00000800	/* Allocating memory */
+-#define PF_MEMDIE	0x00001000	/* Killed for out-of-memory */
+ #define PF_FREE_PAGES	0x00002000	/* per process page freeing */
+ 
+ #define PF_USEDFPU	0x00100000	/* task used FPU this quantum (SMP) */
+diff -urN vm-ref/include/linux/swap.h vm/include/linux/swap.h
+--- vm-ref/include/linux/swap.h	Fri Nov  9 08:29:25 2001
++++ vm/include/linux/swap.h	Fri Nov  9 08:29:33 2001
+@@ -88,7 +88,7 @@
+ extern int nr_active_pages;
+ extern int nr_inactive_pages;
+ extern atomic_t nr_async_pages;
+-extern atomic_t page_cache_size;
++extern unsigned long page_cache_size;
+ extern atomic_t buffermem_pages;
+ 
+ extern spinlock_cacheline_t pagecache_lock_cacheline;
+@@ -115,6 +115,8 @@
+ /* linux/mm/vmscan.c */
+ extern wait_queue_head_t kswapd_wait;
+ extern int FASTCALL(try_to_free_pages(zone_t *, unsigned int, unsigned int));
++extern int FASTCALL(try_to_free_pages_nozone(unsigned int));
++extern int vm_scan_ratio, vm_balance_ratio, vm_mapped_ratio;
+ 
+ /* linux/mm/page_io.c */
+ extern void rw_swap_page(int, struct page *);
+@@ -178,32 +180,128 @@
+ 		BUG();				\
+ } while (0)
+ 
++#define inc_nr_active_pages(page)				\
++do {								\
++	pg_data_t * __pgdat;					\
++	zone_t * __classzone, * __overflow;			\
++								\
++	__classzone = (page)->zone;				\
++	__pgdat = __classzone->zone_pgdat;			\
++	__overflow = __pgdat->node_zones + __pgdat->nr_zones;	\
++								\
++	while (__classzone < __overflow) {			\
++		__classzone->nr_active_pages++;			\
++		__classzone++;					\
++	}							\
++	nr_active_pages++;					\
++} while (0)
++
++#define dec_nr_active_pages(page)				\
++do {								\
++	pg_data_t * __pgdat;					\
++	zone_t * __classzone, * __overflow;			\
++								\
++	__classzone = (page)->zone;				\
++	__pgdat = __classzone->zone_pgdat;			\
++	__overflow = __pgdat->node_zones + __pgdat->nr_zones;	\
++								\
++	while (__classzone < __overflow) {			\
++		__classzone->nr_active_pages--;			\
++		__classzone++;					\
++	}							\
++	nr_active_pages--;					\
++} while (0)
++
++#define inc_nr_inactive_pages(page)				\
++do {								\
++	pg_data_t * __pgdat;					\
++	zone_t * __classzone, * __overflow;			\
++								\
++	__classzone = (page)->zone;				\
++	__pgdat = __classzone->zone_pgdat;			\
++	__overflow = __pgdat->node_zones + __pgdat->nr_zones;	\
++								\
++	while (__classzone < __overflow) {			\
++		__classzone->nr_inactive_pages++;		\
++		__classzone++;					\
++	}							\
++	nr_inactive_pages++;					\
++} while (0)
++
++#define dec_nr_inactive_pages(page)				\
++do {								\
++	pg_data_t * __pgdat;					\
++	zone_t * __classzone, * __overflow;			\
++								\
++	__classzone = (page)->zone;				\
++	__pgdat = __classzone->zone_pgdat;			\
++	__overflow = __pgdat->node_zones + __pgdat->nr_zones;	\
++								\
++	while (__classzone < __overflow) {			\
++		__classzone->nr_inactive_pages--;		\
++		__classzone++;					\
++	}							\
++	nr_inactive_pages--;					\
++} while (0)
++
+ #define add_page_to_active_list(page)		\
+ do {						\
+ 	DEBUG_LRU_PAGE(page);			\
+ 	SetPageActive(page);			\
+ 	list_add(&(page)->lru, &active_list);	\
+-	nr_active_pages++;			\
++	inc_nr_active_pages(page);		\
+ } while (0)
+ 
+ #define add_page_to_inactive_list(page)		\
+ do {						\
+ 	DEBUG_LRU_PAGE(page);			\
+ 	list_add(&(page)->lru, &inactive_list);	\
+-	nr_inactive_pages++;			\
++	inc_nr_inactive_pages(page);		\
+ } while (0)
+ 
+ #define del_page_from_active_list(page)		\
+ do {						\
+ 	list_del(&(page)->lru);			\
+ 	ClearPageActive(page);			\
+-	nr_active_pages--;			\
++	dec_nr_active_pages(page);		\
+ } while (0)
+ 
+ #define del_page_from_inactive_list(page)	\
+ do {						\
+ 	list_del(&(page)->lru);			\
+-	nr_inactive_pages--;			\
++	dec_nr_inactive_pages(page);		\
++} while (0)
++
++#define inc_nr_cache_pages(page)				\
++do {								\
++	pg_data_t * __pgdat;					\
++	zone_t * __classzone, * __overflow;			\
++								\
++	__classzone = (page)->zone;				\
++	__pgdat = __classzone->zone_pgdat;			\
++	__overflow = __pgdat->node_zones + __pgdat->nr_zones;	\
++								\
++	while (__classzone < __overflow) {			\
++		__classzone->nr_cache_pages++;			\
++		__classzone++;					\
++	}							\
++	page_cache_size++;					\
++} while (0)
++
++#define dec_nr_cache_pages(page)				\
++do {								\
++	pg_data_t * __pgdat;					\
++	zone_t * __classzone, * __overflow;			\
++								\
++	__classzone = (page)->zone;				\
++	__pgdat = __classzone->zone_pgdat;			\
++	__overflow = __pgdat->node_zones + __pgdat->nr_zones;	\
++								\
++	while (__classzone < __overflow) {			\
++		__classzone->nr_cache_pages--;			\
++		__classzone++;					\
++	}							\
++	page_cache_size--;					\
+ } while (0)
+ 
+ /*
+diff -urN vm-ref/include/linux/sysctl.h vm/include/linux/sysctl.h
+--- vm-ref/include/linux/sysctl.h	Fri Nov  9 08:29:24 2001
++++ vm/include/linux/sysctl.h	Fri Nov  9 08:29:33 2001
+@@ -134,12 +134,13 @@
+ 	VM_FREEPG=3,		/* struct: Set free page thresholds */
+ 	VM_BDFLUSH=4,		/* struct: Control buffer cache flushing */
+ 	VM_OVERCOMMIT_MEMORY=5,	/* Turn off the virtual memory safety limit */
+-	VM_BUFFERMEM=6,		/* struct: Set buffer memory thresholds */
+-	VM_PAGECACHE=7,		/* struct: Set cache memory thresholds */
+ 	VM_PAGERDAEMON=8,	/* struct: Control kswapd behaviour */
+ 	VM_PGT_CACHE=9,		/* struct: Set page table cache parameters */
+ 	VM_PAGE_CLUSTER=10,	/* int: set number of pages to swap together */
+ 	VM_HEAP_STACK_GAP=11,	/* int: page gap between heap and stack */
++	VM_SCAN_RATIO=12,	/* part of the inactive list to scan */
++	VM_BALANCE_RATIO=13,	/* balance active and inactive caches */
++	VM_MAPPED_RATIO=14,	/* pageout when we find too many mapped pages */
+ };
+ 
+ 
+diff -urN vm-ref/kernel/fork.c vm/kernel/fork.c
+--- vm-ref/kernel/fork.c	Sun Sep 23 21:11:43 2001
++++ vm/kernel/fork.c	Fri Nov  9 08:29:33 2001
+@@ -649,7 +649,7 @@
+ 	p->lock_depth = -1;		/* -1 = no lock */
+ 	p->start_time = jiffies;
+ 
+-	INIT_LIST_HEAD(&p->local_pages);
++	INIT_LIST_HEAD(&p->local_pages.list);
+ 
+ 	retval = -ENOMEM;
+ 	/* copy all the process information */
+diff -urN vm-ref/kernel/ksyms.c vm/kernel/ksyms.c
+--- vm-ref/kernel/ksyms.c	Fri Nov  9 08:29:24 2001
++++ vm/kernel/ksyms.c	Fri Nov  9 08:29:33 2001
+@@ -89,6 +89,7 @@
+ EXPORT_SYMBOL(exit_sighand);
+ 
+ /* internal kernel memory management */
++EXPORT_SYMBOL(start_aggressive_readahead);
+ EXPORT_SYMBOL(_alloc_pages);
+ EXPORT_SYMBOL(__alloc_pages);
+ EXPORT_SYMBOL(alloc_pages_node);
+diff -urN vm-ref/kernel/sysctl.c vm/kernel/sysctl.c
+--- vm-ref/kernel/sysctl.c	Fri Nov  9 08:29:24 2001
++++ vm/kernel/sysctl.c	Fri Nov  9 08:29:33 2001
+@@ -30,6 +30,7 @@
+ #include <linux/init.h>
+ #include <linux/sysrq.h>
+ #include <linux/highuid.h>
++#include <linux/swap.h>
+ 
+ #include <asm/uaccess.h>
+ 
+@@ -259,6 +260,12 @@
+ };
+ 
+ static ctl_table vm_table[] = {
++	{VM_SCAN_RATIO, "vm_scan_ratio", 
++	 &vm_scan_ratio, sizeof(int), 0644, NULL, &proc_dointvec},
++	{VM_BALANCE_RATIO, "vm_balance_ratio", 
++	 &vm_balance_ratio, sizeof(int), 0644, NULL, &proc_dointvec},
++	{VM_MAPPED_RATIO, "vm_mapped_ratio", 
++	 &vm_mapped_ratio, sizeof(int), 0644, NULL, &proc_dointvec},
+ 	{VM_BDFLUSH, "bdflush", &bdf_prm, 9*sizeof(int), 0644, NULL,
+ 	 &proc_dointvec_minmax, &sysctl_intvec, NULL,
+ 	 &bdflush_min, &bdflush_max},
+diff -urN vm-ref/mm/filemap.c vm/mm/filemap.c
+--- vm-ref/mm/filemap.c	Fri Nov  9 08:29:25 2001
++++ vm/mm/filemap.c	Fri Nov  9 08:29:33 2001
+@@ -43,7 +43,7 @@
+  * SMP-threaded pagemap-LRU 1999, Andrea Arcangeli <andrea@suse.de>
+  */
+ 
+-atomic_t page_cache_size = ATOMIC_INIT(0);
++unsigned long page_cache_size;
+ unsigned int page_hash_bits;
+ struct page **page_hash_table;
+ 
+@@ -75,7 +75,7 @@
+ 		next->pprev_hash = &page->next_hash;
+ 	if (page->buffers)
+ 		PAGE_BUG(page);
+-	atomic_inc(&page_cache_size);
++	inc_nr_cache_pages(page);
+ }
+ 
+ static inline void add_page_to_inode_queue(struct address_space *mapping, struct page * page)
+@@ -105,7 +105,7 @@
+ 		next->pprev_hash = pprev;
+ 	*pprev = next;
+ 	page->pprev_hash = NULL;
+-	atomic_dec(&page_cache_size);
++	dec_nr_cache_pages(page);
+ }
+ 
+ /*
+@@ -781,7 +781,7 @@
+ 
+ void unlock_page(struct page *page)
+ {
+-	clear_bit(PG_launder, &(page)->flags);
++	ClearPageLaunder(page);
+ 	smp_mb__before_clear_bit();
+ 	if (!test_and_clear_bit(PG_locked, &(page)->flags))
+ 		BUG();
+@@ -1914,8 +1914,7 @@
+ 	 * Found the page and have a reference on it, need to check sharing
+ 	 * and possibly copy it over to another page..
+ 	 */
+-	mark_page_accessed(page);
+-	flush_page_to_ram(page);
++	activate_page(page);
+ 	return page;
+ 
+ no_cached_page:
+@@ -3017,8 +3016,15 @@
+ 		}
+ unlock:
+ 		kunmap(page);
++
++		/*
++		 * Mark the page accessed if we wrote the
++		 * beginning or we just did an lseek.
++		 */
++		if (!offset || !file->f_reada)
++			SetPageReferenced(page);
++
+ 		/* Mark it unlocked again and drop the page.. */
+-		SetPageReferenced(page);
+ 		UnlockPage(page);
+ 		page_cache_release(page);
+ 
+diff -urN vm-ref/mm/memory.c vm/mm/memory.c
+--- vm-ref/mm/memory.c	Fri Nov  9 08:29:24 2001
++++ vm/mm/memory.c	Fri Nov  9 08:29:33 2001
+@@ -913,15 +913,11 @@
+ 	if (!VALID_PAGE(old_page))
+ 		goto bad_wp_page;
+ 
+-	if (!TryLockPage(old_page)) {
+-		int reuse = can_share_swap_page(old_page);
+-		unlock_page(old_page);
+-		if (reuse) {
+-			flush_cache_page(vma, address);
+-			establish_pte(vma, address, page_table, pte_mkyoung(pte_mkdirty(pte_mkwrite(pte))));
+-			spin_unlock(&mm->page_table_lock);
+-			return 1;	/* Minor fault */
+-		}
++	if (make_exclusive_page(old_page, 1)) {	
++		flush_cache_page(vma, address);
++		establish_pte(vma, address, page_table, pte_mkyoung(pte_mkdirty(pte_mkwrite(pte))));
++		spin_unlock(&mm->page_table_lock);
++		return 1;	/* Minor fault */
+ 	}
+ 
+ 	/*
+@@ -939,6 +935,19 @@
+ 	 * Re-check the pte - we dropped the lock
+ 	 */
+ 	spin_lock(&mm->page_table_lock);
++	/*
++	 * keep the page pinned until we return runnable
++	 * to avoid another thread to skip the break_cow
++	 * path, so we're sure pte_same below check also implys
++	 * that the _contents_ of the old_page didn't changed
++	 * under us (not only that the pagetable is the same).
++	 *
++	 * Since we have the page_table_lock acquired here, if the
++	 * pte is the same it means we're still holding an additional
++	 * reference on the old_page so we can safely
++	 * page_cache_release(old_page) before the "pte_same == true" path.
++	 */
++	page_cache_release(old_page);
+ 	if (pte_same(*page_table, pte)) {
+ 		if (PageReserved(old_page))
+ 			++mm->rss;
+@@ -950,7 +959,6 @@
+ 	}
+ 	spin_unlock(&mm->page_table_lock);
+ 	page_cache_release(new_page);
+-	page_cache_release(old_page);
+ 	return 1;	/* Minor fault */
+ 
+ bad_wp_page:
+@@ -1106,7 +1114,8 @@
+ 		ret = 2;
+ 	}
+ 
+-	lock_page(page);
++	if (!Page_Uptodate(page))
++		wait_on_page(page);
+ 
+ 	/*
+ 	 * Back out if somebody else faulted in this pte while we
+@@ -1115,7 +1124,6 @@
+ 	spin_lock(&mm->page_table_lock);
+ 	if (!pte_same(*page_table, orig_pte)) {
+ 		spin_unlock(&mm->page_table_lock);
+-		unlock_page(page);
+ 		page_cache_release(page);
+ 		return 1;
+ 	}
+@@ -1123,14 +1131,14 @@
+ 	/* The page isn't present yet, go ahead with the fault. */
+ 		
+ 	swap_free(entry);
+-	if (vm_swap_full())
+-		remove_exclusive_swap_page(page);
+-
+ 	mm->rss++;
+ 	pte = mk_pte(page, vma->vm_page_prot);
+-	if (write_access && can_share_swap_page(page))
+-		pte = pte_mkdirty(pte_mkwrite(pte));
+-	unlock_page(page);
++	if (make_exclusive_page(page, write_access)) {
++		if (write_access)
++			pte = pte_mkdirty(pte);
++		if (vma->vm_flags & VM_WRITE)
++			pte = pte_mkwrite(pte);
++	}
+ 
+ 	flush_page_to_ram(page);
+ 	flush_icache_page(vma, page);
+@@ -1168,8 +1176,8 @@
+ 
+ 		spin_lock(&mm->page_table_lock);
+ 		if (!pte_none(*page_table)) {
+-			page_cache_release(page);
+ 			spin_unlock(&mm->page_table_lock);
++			page_cache_release(page);
+ 			return 1;
+ 		}
+ 		mm->rss++;
+@@ -1225,7 +1233,7 @@
+ 		struct page * page = alloc_page(GFP_HIGHUSER);
+ 		if (!page)
+ 			return -1;
+-		copy_highpage(page, new_page);
++		copy_user_highpage(page, new_page, address);
+ 		page_cache_release(new_page);
+ 		lru_cache_add(page);
+ 		new_page = page;
+@@ -1252,9 +1260,9 @@
+ 			entry = pte_mkwrite(pte_mkdirty(entry));
+ 		set_pte(page_table, entry);
+ 	} else {
++		spin_unlock(&mm->page_table_lock);
+ 		/* One of our sibling threads was faster, back out. */
+ 		page_cache_release(new_page);
+-		spin_unlock(&mm->page_table_lock);
+ 		return 1;
+ 	}
+ 
+diff -urN vm-ref/mm/mmap.c vm/mm/mmap.c
+--- vm-ref/mm/mmap.c	Fri Nov  9 08:29:24 2001
++++ vm/mm/mmap.c	Fri Nov  9 08:29:33 2001
+@@ -69,7 +69,7 @@
+ 	    return 1;
+ 
+ 	/* The page cache contains buffer pages these days.. */
+-	free = atomic_read(&page_cache_size);
++	free = page_cache_size;
+ 	free += nr_free_pages();
+ 	free += nr_swap_pages;
+ 
+diff -urN vm-ref/mm/oom_kill.c vm/mm/oom_kill.c
+--- vm-ref/mm/oom_kill.c	Tue Nov  6 02:04:54 2001
++++ vm/mm/oom_kill.c	Fri Nov  9 08:29:33 2001
+@@ -150,7 +150,6 @@
+ 	 * exit() and clear out its resources quickly...
+ 	 */
+ 	p->counter = 5 * HZ;
+-	p->flags |= PF_MEMALLOC | PF_MEMDIE;
+ 
+ 	/* This process has hardware access, be more careful. */
+ 	if (cap_t(p->cap_effective) & CAP_TO_MASK(CAP_SYS_RAWIO)) {
+diff -urN vm-ref/mm/page_alloc.c vm/mm/page_alloc.c
+--- vm-ref/mm/page_alloc.c	Fri Nov  9 08:29:24 2001
++++ vm/mm/page_alloc.c	Fri Nov  9 08:29:33 2001
+@@ -138,14 +138,14 @@
+ 	return;
+ 
+  local_freelist:
+-	if (current->nr_local_pages)
++	if ((current->local_pages.nr && !current->local_pages.order) ||
++	    !memclass(page->zone, current->local_pages.classzone) ||
++	    in_interrupt())
+ 		goto back_local_freelist;
+-	if (in_interrupt())
+-		goto back_local_freelist;		
+ 
+-	list_add(&page->list, &current->local_pages);
++	list_add(&page->list, &current->local_pages.list);
+ 	page->index = order;
+-	current->nr_local_pages++;
++	current->local_pages.nr++;
+ }
+ 
+ #define MARK_USED(index, order, area) \
+@@ -230,35 +230,36 @@
+ static struct page * balance_classzone(zone_t * classzone, unsigned int gfp_mask, unsigned int order, int * freed)
+ {
+ 	struct page * page = NULL;
+-	int __freed = 0;
++	int __freed;
+ 
+-	if (!(gfp_mask & __GFP_WAIT))
+-		goto out;
+ 	if (in_interrupt())
+ 		BUG();
+ 
+-	current->allocation_order = order;
++	current->local_pages.order = order;
++	current->local_pages.classzone = classzone;
+ 	current->flags |= PF_MEMALLOC | PF_FREE_PAGES;
+ 
+ 	__freed = try_to_free_pages(classzone, gfp_mask, order);
+ 
+ 	current->flags &= ~(PF_MEMALLOC | PF_FREE_PAGES);
+ 
+-	if (current->nr_local_pages) {
++	if (current->local_pages.nr) {
+ 		struct list_head * entry, * local_pages;
+ 		struct page * tmp;
+ 		int nr_pages;
+ 
+-		local_pages = &current->local_pages;
++		local_pages = &current->local_pages.list;
+ 
+ 		if (likely(__freed)) {
+ 			/* pick from the last inserted so we're lifo */
+ 			entry = local_pages->next;
+ 			do {
+ 				tmp = list_entry(entry, struct page, list);
+-				if (tmp->index == order && memclass(tmp->zone, classzone)) {
++				if (!memclass(tmp->zone, classzone))
++					BUG();
++				if (tmp->index == order) {
+ 					list_del(entry);
+-					current->nr_local_pages--;
++					current->local_pages.nr--;
+ 					set_page_count(tmp, 1);
+ 					page = tmp;
+ 
+@@ -284,7 +285,7 @@
+ 			} while ((entry = entry->next) != local_pages);
+ 		}
+ 
+-		nr_pages = current->nr_local_pages;
++		nr_pages = current->local_pages.nr;
+ 		/* free in reverse order so that the global order will be lifo */
+ 		while ((entry = local_pages->prev) != local_pages) {
+ 			list_del(entry);
+@@ -293,9 +294,8 @@
+ 			if (!nr_pages--)
+ 				BUG();
+ 		}
+-		current->nr_local_pages = 0;
++		current->local_pages.nr = 0;
+ 	}
+- out:
+ 	*freed = __freed;
+ 	return page;
+ }
+@@ -353,8 +353,7 @@
+ 
+ 	/* here we're in the low on memory slow path */
+ 
+-rebalance:
+-	if (current->flags & (PF_MEMALLOC | PF_MEMDIE)) {
++	if (current->flags & PF_MEMALLOC && !in_interrupt()) {
+ 		zone = zonelist->zones;
+ 		for (;;) {
+ 			zone_t *z = *(zone++);
+@@ -370,34 +369,52 @@
+ 
+ 	/* Atomic allocations - we can't balance anything */
+ 	if (!(gfp_mask & __GFP_WAIT))
+-		return NULL;
++		goto out;
+ 
++ rebalance:
+ 	page = balance_classzone(classzone, gfp_mask, order, &freed);
+ 	if (page)
+ 		return page;
+ 
+ 	zone = zonelist->zones;
+-	for (;;) {
+-		zone_t *z = *(zone++);
+-		if (!z)
+-			break;
++	if (likely(freed)) {
++		for (;;) {
++			zone_t *z = *(zone++);
++			if (!z)
++				break;
+ 
+-		if (zone_free_pages(z, order) > z->pages_min) {
+-			page = rmqueue(z, order);
+-			if (page)
+-				return page;
++			if (zone_free_pages(z, order) > z->pages_min) {
++				page = rmqueue(z, order);
++				if (page)
++					return page;
++			}
+ 		}
+-	}
++		goto rebalance;
++	} else {
++		/* 
++		 * Check that no other task is been killed meanwhile,
++		 * in such a case we can succeed the allocation.
++		 */
++		for (;;) {
++			zone_t *z = *(zone++);
++			if (!z)
++				break;
+ 
+-	/* Don't let big-order allocations loop */
+-	if (order > 3)
+-		return NULL;
++			if (zone_free_pages(z, order) > z->pages_high) {
++				page = rmqueue(z, order);
++				if (page)
++					return page;
++			}
++		}
++	}
+ 
+-	/* Yield for kswapd, and try again */
+-	current->policy |= SCHED_YIELD;
+-	__set_current_state(TASK_RUNNING);
+-	schedule();
+-	goto rebalance;
++ out:
++	printk(KERN_NOTICE "__alloc_pages: %u-order allocation failed (gfp=0x%x/%i)\n",
++	       order, gfp_mask, !!(current->flags & PF_MEMALLOC));
++#ifdef CONFIG_DEBUG_GFP
++	show_stack(NULL);
++#endif
++	return NULL;
+ }
+ 
+ /*
+@@ -520,17 +537,24 @@
+ {
+ 	pg_data_t *pgdat = pgdat_list;
+ 	unsigned int sum = 0;
++	zonelist_t *zonelist;
++	zone_t **zonep, *zone;
+ 
+ 	do {
+-		zonelist_t *zonelist = pgdat->node_zonelists + (GFP_USER & GFP_ZONEMASK);
+-		zone_t **zonep = zonelist->zones;
+-		zone_t *zone;
++		zonelist = pgdat->node_zonelists + (GFP_USER & GFP_ZONEMASK);
++		zonep = zonelist->zones;
+ 
+-		for (zone = *zonep++; zone; zone = *zonep++) {
+-			unsigned long size = zone->size;
+-			unsigned long high = zone->pages_high;
+-			if (size > high)
+-				sum += size - high;
++		zone = *zonep;
++		if (zone) {
++			sum += zone->nr_cache_pages;
++			do {
++				unsigned int free = zone->free_pages - zone->pages_high;
++				zonep++;
++				zone = *zonep;
++				if (free <= 0)
++					continue;
++				sum += free;
++			} while (zone);
+ 		}
+ 
+ 		pgdat = pgdat->node_next;
+@@ -553,6 +577,62 @@
+ }
+ #endif
+ 
++/*
++ * If it returns non zero it means there's lots of ram "free"
++ * (note: not in cache!) so any caller will know that
++ * he can allocate some memory to do some more aggressive
++ * (possibly wasteful) readahead. The state of the memory
++ * should be rechecked after every few pages allocated for
++ * doing this aggressive readahead.
++ *
++ * The gfp_mask parameter specifies in which kind of memory
++ * the readahead information will be applocated to.
++ */
++int start_aggressive_readahead(unsigned int gfp_mask)
++{
++	pg_data_t *pgdat = pgdat_list;
++	zonelist_t *zonelist;
++	zone_t **zonep, *zone;
++	int ret = 0;
++
++	do {
++		zonelist = pgdat->node_zonelists + (gfp_mask & GFP_ZONEMASK);
++		zonep = zonelist->zones;
++
++		for (zone = *zonep++; zone; zone = *zonep++)
++			if (zone->free_pages > zone->pages_high * 2)
++				ret = 1;
++
++		pgdat = pgdat->node_next;
++	} while (pgdat);
++
++	return ret;
++}
++
++int try_to_free_pages_nozone(unsigned int gfp_mask)
++{
++	pg_data_t *pgdat = pgdat_list;
++	zonelist_t *zonelist;
++	zone_t **zonep;
++	int ret = 0;
++	unsigned long pf_free_pages;
++
++	pf_free_pages = current->flags & PF_FREE_PAGES;
++	current->flags &= ~PF_FREE_PAGES;
++
++	do {
++		zonelist = pgdat->node_zonelists + (gfp_mask & GFP_ZONEMASK);
++		zonep = zonelist->zones;
++
++		ret |= try_to_free_pages(*zonep, gfp_mask, 0);
++
++		pgdat = pgdat->node_next;
++	} while (pgdat);
++
++	current->flags |= pf_free_pages;
++	return ret;
++}
++
+ #define K(x) ((x) << (PAGE_SHIFT-10))
+ 
+ /*
+@@ -758,6 +838,7 @@
+ 		zone->zone_pgdat = pgdat;
+ 		zone->free_pages = 0;
+ 		zone->need_balance = 0;
++		zone->nr_active_pages = zone->nr_inactive_pages = 0;
+ 		if (!size)
+ 			continue;
+ 
+diff -urN vm-ref/mm/page_io.c vm/mm/page_io.c
+--- vm-ref/mm/page_io.c	Tue Nov  6 02:04:54 2001
++++ vm/mm/page_io.c	Fri Nov  9 08:29:33 2001
+@@ -41,7 +41,6 @@
+ 	kdev_t dev = 0;
+ 	int block_size;
+ 	struct inode *swapf = 0;
+-	int wait = 0;
+ 
+ 	if (rw == READ) {
+ 		ClearPageUptodate(page);
+@@ -73,18 +72,6 @@
+ 
+  	/* block_size == PAGE_SIZE/zones_used */
+  	brw_page(rw, page, dev, zones, block_size);
+-
+- 	/* Note! For consistency we do all of the logic,
+- 	 * decrementing the page count, and unlocking the page in the
+- 	 * swap lock map - in the IO completion handler.
+- 	 */
+- 	if (!wait)
+- 		return 1;
+-
+- 	wait_on_page(page);
+-	/* This shouldn't happen, but check to be sure. */
+-	if (page_count(page) == 0)
+-		printk(KERN_ERR "rw_swap_page: page unused while waiting!\n");
+ 
+ 	return 1;
+ }
+diff -urN vm-ref/mm/slab.c vm/mm/slab.c
+--- vm-ref/mm/slab.c	Sun Sep 23 21:11:43 2001
++++ vm/mm/slab.c	Fri Nov  9 08:29:33 2001
+@@ -914,8 +914,6 @@
+ 	slab_t *slabp;
+ 	int ret;
+ 
+-	drain_cpu_caches(cachep);
+-
+ 	spin_lock_irq(&cachep->spinlock);
+ 
+ 	/* If the cache is growing, stop shrinking. */
+@@ -985,6 +983,8 @@
+ 						kmem_cache_t, next);
+ 	list_del(&cachep->next);
+ 	up(&cache_chain_sem);
++
++	drain_cpu_caches(cachep);
+ 
+ 	if (__kmem_cache_shrink(cachep)) {
+ 		printk(KERN_ERR "kmem_cache_destroy: Can't free all objects %p\n",
+diff -urN vm-ref/mm/swap.c vm/mm/swap.c
+--- vm-ref/mm/swap.c	Thu Nov  8 04:07:20 2001
++++ vm/mm/swap.c	Fri Nov  9 08:29:33 2001
+@@ -38,9 +38,13 @@
+  */
+ static inline void activate_page_nolock(struct page * page)
+ {
+-	if (PageLRU(page) && !PageActive(page)) {
+-		del_page_from_inactive_list(page);
+-		add_page_to_active_list(page);
++	if (PageLRU(page)) {
++		if  (!PageActive(page)) {
++			del_page_from_inactive_list(page);
++			add_page_to_active_list(page);
++			ClearPageReferenced(page);
++		} else
++			SetPageReferenced(page);
+ 	}
+ }
+ 
+diff -urN vm-ref/mm/swap_state.c vm/mm/swap_state.c
+--- vm-ref/mm/swap_state.c	Tue Nov  6 02:04:54 2001
++++ vm/mm/swap_state.c	Fri Nov  9 08:29:33 2001
+@@ -117,7 +117,9 @@
+ 	if (!PageLocked(page))
+ 		BUG();
+ 
+-	block_flushpage(page, 0);
++	if (!block_flushpage(page, 0))
++		/* an anonymous page cannot have page->buffers set */
++		BUG();
+ 
+ 	entry.val = page->index;
+ 
+diff -urN vm-ref/mm/swapfile.c vm/mm/swapfile.c
+--- vm-ref/mm/swapfile.c	Tue Nov  6 02:04:54 2001
++++ vm/mm/swapfile.c	Fri Nov  9 08:29:33 2001
+@@ -227,6 +227,7 @@
+  * Check if we're the only user of a swap page,
+  * when the page is locked.
+  */
++static int FASTCALL(exclusive_swap_page(struct page *page));
+ static int exclusive_swap_page(struct page *page)
+ {
+ 	int retval = 0;
+@@ -240,12 +241,13 @@
+ 		if (p->swap_map[SWP_OFFSET(entry)] == 1) {
+ 			/* Recheck the page count with the pagecache lock held.. */
+ 			spin_lock(&pagecache_lock);
+-			if (page_count(page) - !!page->buffers == 2)
++			if (PageSwapCache(page) && page_count(page) - !!page->buffers == 2)
+ 				retval = 1;
+ 			spin_unlock(&pagecache_lock);
+ 		}
+ 		swap_info_put(p);
+ 	}
++
+ 	return retval;
+ }
+ 
+@@ -257,21 +259,42 @@
+  * work, but we opportunistically check whether
+  * we need to get all the locks first..
+  */
+-int can_share_swap_page(struct page *page)
++int make_exclusive_page(struct page *page, int write)
+ {
+ 	int retval = 0;
+ 
+-	if (!PageLocked(page))
+-		BUG();
+ 	switch (page_count(page)) {
+ 	case 3:
+ 		if (!page->buffers)
+ 			break;
+ 		/* Fallthrough */
+ 	case 2:
++		/* racy fastpath check */
+ 		if (!PageSwapCache(page))
+ 			break;
+-		retval = exclusive_swap_page(page);
++
++		if ((!write && !vm_swap_full()) || TryLockPage(page)) {
++			/*
++			 * Don't remove the page from the swapcache if:
++			 * - it was a read fault and...
++			 * - the swap isn't full
++			 * or if
++			 * - we failed acquiring the page lock
++			 *
++			 * NOTE: if failed acquiring the lock we cannot remove the
++			 * page from the swapcache, but still we can safely takeover
++			 * the page if it's exclusive, see the swapcache check in
++			 * the innermost critical section of exclusive_swap_page().
++			 */
++			retval = exclusive_swap_page(page);
++		} else {
++			/*
++			 * Here we've the page lock acquired and we're asked
++			 * to try to drop this page from the swapcache.
++			 */
++			retval = remove_exclusive_swap_page(page);
++			unlock_page(page);
++		}
+ 		break;
+ 	case 1:
+ 		if (PageReserved(page))
+@@ -300,7 +323,7 @@
+ 
+ 	entry.val = page->index;
+ 	p = swap_info_get(entry);
+-	if (!p)
++	if (unlikely(!p))
+ 		return 0;
+ 
+ 	/* Is the only swap cache user the cache itself? */
+@@ -309,7 +332,11 @@
+ 		/* Recheck the page count with the pagecache lock held.. */
+ 		spin_lock(&pagecache_lock);
+ 		if (page_count(page) - !!page->buffers == 2) {
++			if (page->buffers && !try_to_free_buffers(page, 0))
++				/* an anonymous page cannot have page->buffers set */
++				BUG();
+ 			__delete_from_swap_cache(page);
++			swap_entry_free(p, SWP_OFFSET(entry));
+ 			SetPageDirty(page);
+ 			retval = 1;
+ 		}
+@@ -317,11 +344,8 @@
+ 	}
+ 	swap_info_put(p);
+ 
+-	if (retval) {
+-		block_flushpage(page, 0);
+-		swap_free(entry);
++	if (retval)
+ 		page_cache_release(page);
+-	}
+ 
+ 	return retval;
+ }
+@@ -343,11 +367,7 @@
+ 	}
+ 	if (page) {
+ 		page_cache_get(page);
+-		/* Only cache user (+us), or swap space full? Free it! */
+-		if (page_count(page) == 2 || vm_swap_full()) {
+-			delete_from_swap_cache(page);
+-			SetPageDirty(page);
+-		}
++		remove_exclusive_swap_page(page);
+ 		UnlockPage(page);
+ 		page_cache_release(page);
+ 	}
+diff -urN vm-ref/mm/vmscan.c vm/mm/vmscan.c
+--- vm-ref/mm/vmscan.c	Thu Nov  8 04:07:20 2001
++++ vm/mm/vmscan.c	Fri Nov  9 08:36:58 2001
+@@ -26,12 +26,28 @@
+ #include <asm/pgalloc.h>
+ 
+ /*
+- * The "priority" of VM scanning is how much of the queues we
+- * will scan in one go. A value of 6 for DEF_PRIORITY implies
+- * that we'll scan 1/64th of the queues ("queue_length >> 6")
+- * during a normal aging round.
++ * "vm_scan_ratio" is how much of the queues we will scan
++ * in one go. A value of 8 for vm_scan_ratio implies that we'll
++ * scan 1/8 of the inactive list during a normal aging round.
++ * So if 1/vm_scan_ratio of the inactive cache is unfreeable
++ * we'll start the background paging.
+  */
+-#define DEF_PRIORITY (6)
++int vm_scan_ratio = 8;
++
++/*
++ * "vm_scan_ratio" controls when we start to swapout, the lower,
++ * the earlier we'll start to swapout.
++ */
++int vm_mapped_ratio = 10;
++
++/*
++ * "vm_balance_ratio" controls the balance between active and
++ * inactive cache. The bigger vm_balance_ratio is, the easier the
++ * active cache will grow, because we'll rotate the active list
++ * slowly. A value of 3 means we'll go towards a balance of
++ * 1/4 of the cache being inactive.
++ */
++int vm_balance_ratio = 3;
+ 
+ /*
+  * The swap-out function returns 1 if it successfully
+@@ -50,13 +66,15 @@
+ 
+ 	/* Don't look at this pte if it's been accessed recently. */
+ 	if ((vma->vm_flags & VM_LOCKED) || ptep_test_and_clear_young(page_table)) {
+-		mark_page_accessed(page);
++		activate_page(page);
+ 		return 0;
+ 	}
+ 
++#if 0
+ 	/* Don't bother unmapping pages that are active */
+ 	if (PageActive(page))
+ 		return 0;
++#endif
+ 
+ 	/* Don't bother replenishing zones not under pressure.. */
+ 	if (!memclass(page->zone, classzone))
+@@ -113,6 +131,9 @@
+ 	 */
+ 	if (page->mapping)
+ 		goto drop_pte;
++	if (page->buffers)
++		/* can happen if there's a page fault during vmtruncate */
++		goto preserve;
+ 	if (!PageDirty(page))
+ 		goto drop_pte;
+ 
+@@ -139,6 +160,7 @@
+ 		swap_free(entry);
+ 	}
+ 
++ preserve:
+ 	/* No swap space left */
+ 	set_pte(page_table, pte);
+ 	UnlockPage(page);
+@@ -249,6 +271,7 @@
+ {
+ 	unsigned long address;
+ 	struct vm_area_struct* vma;
++	int tlb_flush = 0;
+ 
+ 	/*
+ 	 * Find the proper vm-area after freezing the vma chain 
+@@ -263,6 +286,7 @@
+ 	}
+ 	vma = find_vma(mm, address);
+ 	if (vma) {
++		tlb_flush = 1;
+ 		if (address < vma->vm_start)
+ 			address = vma->vm_start;
+ 
+@@ -281,16 +305,18 @@
+ 
+ out_unlock:
+ 	spin_unlock(&mm->page_table_lock);
++	if (tlb_flush)
++		flush_tlb_mm(mm);
+ 	return count;
+ }
+ 
+-static int FASTCALL(swap_out(unsigned int priority, unsigned int gfp_mask, zone_t * classzone));
+-static int swap_out(unsigned int priority, unsigned int gfp_mask, zone_t * classzone)
++static int FASTCALL(swap_out(zone_t * classzone));
++static int swap_out(zone_t * classzone)
+ {
+ 	int counter, nr_pages = SWAP_CLUSTER_MAX;
+ 	struct mm_struct *mm;
+ 
+-	counter = mmlist_nr;
++	counter = mmlist_nr << 1;
+ 	do {
+ 		if (unlikely(current->need_resched)) {
+ 			__set_current_state(TASK_RUNNING);
+@@ -326,15 +352,13 @@
+ 	return 0;
+ }
+ 
+-static int FASTCALL(shrink_cache(int nr_pages, zone_t * classzone, unsigned int gfp_mask, int priority));
+-static int shrink_cache(int nr_pages, zone_t * classzone, unsigned int gfp_mask, int priority)
++static int FASTCALL(shrink_cache(int nr_pages, int max_scan, zone_t * classzone, unsigned int gfp_mask, int * failed_swapout));
++static int shrink_cache(int nr_pages, int max_scan, zone_t * classzone, unsigned int gfp_mask, int * failed_swapout)
+ {
+ 	struct list_head * entry;
+-	int max_scan = nr_inactive_pages / priority;
+-	int max_mapped = nr_pages << (9 - priority);
++	int max_mapped = nr_pages * vm_mapped_ratio;
+ 
+-	spin_lock(&pagemap_lru_lock);
+-	while (--max_scan >= 0 && (entry = inactive_list.prev) != &inactive_list) {
++	while (max_scan && classzone->nr_inactive_pages && (entry = inactive_list.prev) != &inactive_list) {
+ 		struct page * page;
+ 
+ 		if (unlikely(current->need_resched)) {
+@@ -365,6 +389,8 @@
+ 		if (!memclass(page->zone, classzone))
+ 			continue;
+ 
++		max_scan--;
++
+ 		/* Racy check to avoid trylocking when not worthwhile */
+ 		if (!page->buffers && (page_count(page) != 1 || !page->mapping))
+ 			goto page_mapped;
+@@ -462,34 +488,43 @@
+ 		spin_lock(&pagecache_lock);
+ 
+ 		/*
+-		 * this is the non-racy check for busy page.
++		 * This is the non-racy check for busy page.
++		 * It is critical to check PageDirty _after_ we made sure
++		 * the page is freeable so not in use by anybody.
++		 * At this point we're guaranteed that page->buffers is NULL,
++		 * nobody can refill page->buffers under us because we still
++		 * hold the page lock.
+ 		 */
+-		if (!page->mapping || !is_page_cache_freeable(page)) {
++		if (!page->mapping || page_count(page) > 1) {
+ 			spin_unlock(&pagecache_lock);
+ 			UnlockPage(page);
+-page_mapped:
+-			if (--max_mapped >= 0)
+-				continue;
++		page_mapped:
++			if (--max_mapped < 0) {
++				spin_unlock(&pagemap_lru_lock);
+ 
+-			/*
+-			 * Alert! We've found too many mapped pages on the
+-			 * inactive list, so we start swapping out now!
+-			 */
+-			spin_unlock(&pagemap_lru_lock);
+-			swap_out(priority, gfp_mask, classzone);
+-			return nr_pages;
+-		}
++				shrink_dcache_memory(vm_scan_ratio, gfp_mask);
++				shrink_icache_memory(vm_scan_ratio, gfp_mask);
++#ifdef CONFIG_QUOTA
++				shrink_dqcache_memory(vm_scan_ratio, gfp_mask);
++#endif
+ 
+-		/*
+-		 * It is critical to check PageDirty _after_ we made sure
+-		 * the page is freeable* so not in use by anybody.
+-		 */
++				if (!*failed_swapout)
++					*failed_swapout = !swap_out(classzone);
++				max_mapped = nr_pages * vm_mapped_ratio;
++
++				spin_lock(&pagemap_lru_lock);
++			}
++			continue;
++			
++		}
+ 		if (PageDirty(page)) {
+ 			spin_unlock(&pagecache_lock);
+ 			UnlockPage(page);
+ 			continue;
+ 		}
+ 
++		__lru_cache_del(page);
++
+ 		/* point of no return */
+ 		if (likely(!PageSwapCache(page))) {
+ 			__remove_inode_page(page);
+@@ -502,7 +537,6 @@
+ 			swap_free(swap);
+ 		}
+ 
+-		__lru_cache_del(page);
+ 		UnlockPage(page);
+ 
+ 		/* effectively free the page here */
+@@ -524,74 +558,96 @@
+  * We move them the other way when we see the
+  * reference bit on the page.
+  */
+-static void refill_inactive(int nr_pages)
++static void FASTCALL(refill_inactive(int nr_pages, zone_t * classzone));
++static void refill_inactive(int nr_pages, zone_t * classzone)
+ {
+ 	struct list_head * entry;
+ 
+-	spin_lock(&pagemap_lru_lock);
+ 	entry = active_list.prev;
+-	while (nr_pages-- && entry != &active_list) {
++	while (nr_pages && entry != &active_list) {
+ 		struct page * page;
+ 
+ 		page = list_entry(entry, struct page, lru);
+ 		entry = entry->prev;
++
++		if (!memclass(page->zone, classzone))
++			continue;
++
+ 		if (PageTestandClearReferenced(page)) {
+ 			list_del(&page->lru);
+ 			list_add(&page->lru, &active_list);
+ 			continue;
+ 		}
+ 
++		nr_pages--;
++
+ 		del_page_from_active_list(page);
+ 		add_page_to_inactive_list(page);
+ 		SetPageReferenced(page);
+ 	}
+-	spin_unlock(&pagemap_lru_lock);
++	if (entry != &active_list) {
++		list_del(&active_list);
++		list_add(&active_list, entry);
++	}
+ }
+ 
+-static int FASTCALL(shrink_caches(zone_t * classzone, int priority, unsigned int gfp_mask, int nr_pages));
+-static int shrink_caches(zone_t * classzone, int priority, unsigned int gfp_mask, int nr_pages)
++static int FASTCALL(shrink_caches(zone_t * classzone, unsigned int gfp_mask, int nr_pages, int * failed_swapout));
++static int shrink_caches(zone_t * classzone, unsigned int gfp_mask, int nr_pages, int * failed_swapout)
+ {
+-	int chunk_size = nr_pages;
++	int max_scan, nr_pages_orig = nr_pages;
+ 	unsigned long ratio;
+ 
+ 	nr_pages -= kmem_cache_reap(gfp_mask);
+ 	if (nr_pages <= 0)
+ 		return 0;
+ 
+-	nr_pages = chunk_size;
+-	/* try to keep the active list 2/3 of the size of the cache */
+-	ratio = (unsigned long) nr_pages * nr_active_pages / ((nr_inactive_pages + 1) * 2);
+-	refill_inactive(ratio);
++	nr_pages = nr_pages_orig;
++	spin_lock(&pagemap_lru_lock);
++	ratio = (unsigned long) nr_pages * classzone->nr_active_pages / (((unsigned long) classzone->nr_inactive_pages * vm_balance_ratio) + 1);
++	if (ratio > nr_pages * 2)
++		ratio = nr_pages * 2;
++	refill_inactive(ratio, classzone);
+ 
+-	nr_pages = shrink_cache(nr_pages, classzone, gfp_mask, priority);
+-	if (nr_pages <= 0)
+-		return 0;
+-
+-	shrink_dcache_memory(priority, gfp_mask);
+-	shrink_icache_memory(priority, gfp_mask);
+-#ifdef CONFIG_QUOTA
+-	shrink_dqcache_memory(DEF_PRIORITY, gfp_mask);
+-#endif
++	max_scan = classzone->nr_inactive_pages / vm_scan_ratio;
++	nr_pages = shrink_cache(nr_pages, max_scan, classzone, gfp_mask, failed_swapout);
+ 
+ 	return nr_pages;
+ }
+ 
++static int check_classzone_need_balance(zone_t * classzone);
++
+ int try_to_free_pages(zone_t *classzone, unsigned int gfp_mask, unsigned int order)
+ {
+-	int priority = DEF_PRIORITY;
+-	int nr_pages = SWAP_CLUSTER_MAX;
++	for (;;) {
++		int tries = vm_scan_ratio << 2;
++		int failed_swapout = 0;
+ 
+-	do {
+-		nr_pages = shrink_caches(classzone, priority, gfp_mask, nr_pages);
+-		if (nr_pages <= 0)
+-			return 1;
+-	} while (--priority);
++		do {
++			int nr_pages = SWAP_CLUSTER_MAX;
++
++			nr_pages = shrink_caches(classzone, gfp_mask, nr_pages, &failed_swapout);
++			if (nr_pages <= 0)
++				return 1;
++
++			shrink_dcache_memory(vm_scan_ratio, gfp_mask);
++			shrink_icache_memory(vm_scan_ratio, gfp_mask);
++#ifdef CONFIG_QUOTA
++			shrink_dqcache_memory(vm_scan_ratio, gfp_mask);
++#endif
++
++			if (!failed_swapout)
++				failed_swapout = !swap_out(classzone);
++		} while (--tries);
++
++		if (likely(current->pid != 1))
++			break;
++		if (!check_classzone_need_balance(classzone))
++			break;
++		current->policy |= SCHED_YIELD;
++		__set_current_state(TASK_RUNNING);
++		schedule();
++	}
+ 
+-	/*
+-	 * Hmm.. Cache shrink failed - time to kill something?
+-	 * Mhwahahhaha! This is the part I really like. Giggle.
+-	 */
+-	out_of_memory();
+ 	return 0;
+ }
+ 
+@@ -624,7 +680,7 @@
+ 		if (!try_to_free_pages(zone, GFP_KSWAPD, 0)) {
+ 			zone->need_balance = 0;
+ 			__set_current_state(TASK_INTERRUPTIBLE);
+-			schedule_timeout(HZ);
++			schedule_timeout(HZ*5);
+ 			continue;
+ 		}
+ 		if (check_classzone_need_balance(zone))

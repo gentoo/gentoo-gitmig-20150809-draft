@@ -1,0 +1,77 @@
+diff -urN 2.4.10aa2/fs/inode.c compiler/fs/inode.c
+--- 2.4.10aa2/fs/inode.c	Fri Sep 28 02:45:57 2001
++++ compiler/fs/inode.c	Fri Sep 28 02:47:02 2001
+@@ -17,7 +17,6 @@
+ #include <linux/swapctl.h>
+ #include <linux/prefetch.h>
+ #include <linux/locks.h>
+-#include <linux/compiler.h>
+ 
+ /*
+  * New inode.c implementation.
+diff -urN 2.4.10aa2/include/linux/kernel.h compiler/include/linux/kernel.h
+--- 2.4.10aa2/include/linux/kernel.h	Fri Sep 28 02:46:24 2001
++++ compiler/include/linux/kernel.h	Fri Sep 28 02:46:35 2001
+@@ -11,6 +11,7 @@
+ #include <linux/linkage.h>
+ #include <linux/stddef.h>
+ #include <linux/types.h>
++#include <linux/compiler.h>
+ 
+ /* Optimization barrier */
+ /* The "volatile" is due to gcc bugs */
+diff -urN 2.4.10aa2/mm/page_alloc.c compiler/mm/page_alloc.c
+--- 2.4.10aa2/mm/page_alloc.c	Fri Sep 28 02:45:59 2001
++++ compiler/mm/page_alloc.c	Fri Sep 28 02:46:56 2001
+@@ -17,7 +17,6 @@
+ #include <linux/pagemap.h>
+ #include <linux/bootmem.h>
+ #include <linux/slab.h>
+-#include <linux/compiler.h>
+ #include <linux/vmalloc.h>
+ 
+ int nr_swap_pages;
+diff -urN 2.4.10aa2/mm/slab.c compiler/mm/slab.c
+--- 2.4.10aa2/mm/slab.c	Fri Sep 28 02:46:24 2001
++++ compiler/mm/slab.c	Fri Sep 28 02:46:35 2001
+@@ -72,7 +72,6 @@
+ #include	<linux/slab.h>
+ #include	<linux/interrupt.h>
+ #include	<linux/init.h>
+-#include	<linux/compiler.h>
+ #include	<asm/uaccess.h>
+ 
+ /*
+diff -urN 2.4.10aa2/mm/swapfile.c compiler/mm/swapfile.c
+--- 2.4.10aa2/mm/swapfile.c	Fri Sep 28 02:46:24 2001
++++ compiler/mm/swapfile.c	Fri Sep 28 02:46:35 2001
+@@ -14,7 +14,6 @@
+ #include <linux/vmalloc.h>
+ #include <linux/pagemap.h>
+ #include <linux/shm.h>
+-#include <linux/compiler.h>
+ 
+ #include <asm/pgtable.h>
+ 
+diff -urN 2.4.10aa2/mm/vmscan.c compiler/mm/vmscan.c
+--- 2.4.10aa2/mm/vmscan.c	Fri Sep 28 02:46:24 2001
++++ compiler/mm/vmscan.c	Fri Sep 28 02:46:35 2001
+@@ -21,7 +21,6 @@
+ #include <linux/init.h>
+ #include <linux/highmem.h>
+ #include <linux/file.h>
+-#include <linux/compiler.h>
+ 
+ #include <asm/pgalloc.h>
+ 
+diff -urN 2.4.13pre1/mm/filemap.c o_direct/mm/filemap.c
+--- 2.4.13pre1/mm/filemap.c	Fri Oct 12 06:15:14 2001
++++ o_direct/mm/filemap.c	Fri Oct 12 08:02:24 2001
+@@ -23,7 +23,6 @@
+ #include <linux/init.h>
+ #include <linux/mm.h>
+ #include <linux/iobuf.h>
+-#include <linux/compiler.h>
+ 
+ #include <asm/pgalloc.h>
+ #include <asm/uaccess.h>

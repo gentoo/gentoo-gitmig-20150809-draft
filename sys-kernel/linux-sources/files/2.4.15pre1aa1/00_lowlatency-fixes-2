@@ -1,0 +1,105 @@
+diff -urN 2.4.13pre3/fs/buffer.c sched/fs/buffer.c
+--- 2.4.13pre3/fs/buffer.c	Tue Oct 16 02:03:44 2001
++++ sched/fs/buffer.c	Wed Oct 17 23:40:56 2001
+@@ -231,6 +231,7 @@
+ static void write_unlocked_buffers(kdev_t dev)
+ {
+ 	do {
++		conditional_schedule();
+ 		spin_lock(&lru_list_lock);
+ 	} while (write_some_buffers(dev));
+ 	run_task_queue(&tq_disk);
+@@ -280,6 +281,7 @@
+ static int wait_for_locked_buffers(kdev_t dev, int index, int refile)
+ {
+ 	do {
++		conditional_schedule();
+ 		spin_lock(&lru_list_lock);
+ 	} while (wait_for_buffers(dev, index, refile));
+ 	return 0;
+diff -urN 2.4.13pre3/fs/proc/array.c sched/fs/proc/array.c
+--- 2.4.13pre3/fs/proc/array.c	Tue Oct 16 02:03:45 2001
++++ sched/fs/proc/array.c	Wed Oct 17 23:40:56 2001
+@@ -415,6 +415,8 @@
+ 		pte_t page = *pte;
+ 		struct page *ptpage;
+ 
++		conditional_schedule();
++
+ 		address += PAGE_SIZE;
+ 		pte++;
+ 		if (pte_none(page))
+diff -urN 2.4.13pre3/fs/proc/generic.c sched/fs/proc/generic.c
+--- 2.4.13pre3/fs/proc/generic.c	Sun Sep 23 21:11:40 2001
++++ sched/fs/proc/generic.c	Wed Oct 17 23:40:56 2001
+@@ -98,7 +98,9 @@
+ 				retval = n;
+ 			break;
+ 		}
+-		
++
++		conditional_schedule();
++
+ 		/* This is a hack to allow mangling of file pos independent
+  		 * of actual bytes read.  Simply place the data at page,
+  		 * return the bytes, and set `start' to the desired offset
+diff -urN 2.4.13pre3/include/linux/condsched.h sched/include/linux/condsched.h
+--- 2.4.13pre3/include/linux/condsched.h	Thu Jan  1 01:00:00 1970
++++ sched/include/linux/condsched.h	Wed Oct 17 23:40:56 2001
+@@ -0,0 +1,14 @@
++#ifndef _LINUX_CONDSCHED_H
++#define _LINUX_CONDSCHED_H
++
++#ifndef __ASSEMBLY__
++#define conditional_schedule() \
++do { \
++	if (unlikely(current->need_resched)) { \
++		__set_current_state(TASK_RUNNING); \
++		schedule(); \
++	} \
++} while(0)
++#endif
++
++#endif
+diff -urN 2.4.13pre3/include/linux/sched.h sched/include/linux/sched.h
+--- 2.4.13pre3/include/linux/sched.h	Thu Oct 11 10:41:52 2001
++++ sched/include/linux/sched.h	Wed Oct 17 23:40:56 2001
+@@ -13,6 +13,7 @@
+ #include <linux/times.h>
+ #include <linux/timex.h>
+ #include <linux/rbtree.h>
++#include <linux/condsched.h>
+ 
+ #include <asm/system.h>
+ #include <asm/semaphore.h>
+diff -urN 2.4.13pre3/mm/filemap.c sched/mm/filemap.c
+--- 2.4.13pre3/mm/filemap.c	Tue Oct 16 02:03:47 2001
++++ sched/mm/filemap.c	Wed Oct 17 23:55:51 2001
+@@ -671,6 +671,8 @@
+ 	struct page **hash = page_hash(mapping, offset);
+ 	struct page *page; 
+ 
++	conditional_schedule();
++
+ 	spin_lock(&pagecache_lock);
+ 	page = __find_page_nolock(mapping, offset, *hash);
+ 	spin_unlock(&pagecache_lock);
+@@ -1263,6 +1265,9 @@
+ 		offset &= ~PAGE_CACHE_MASK;
+ 
+ 		page_cache_release(page);
++
++		conditional_schedule();
++
+ 		if (ret == nr && desc->count)
+ 			continue;
+ 		break;
+@@ -2753,6 +2758,8 @@
+ 		SetPageReferenced(page);
+ 		UnlockPage(page);
+ 		page_cache_release(page);
++
++		conditional_schedule();
+ 
+ 		if (status < 0)
+ 			break;

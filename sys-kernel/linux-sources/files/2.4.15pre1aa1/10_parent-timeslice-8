@@ -1,0 +1,61 @@
+diff -urN parent-timeslice-ref/include/linux/sched.h parent-timeslice/include/linux/sched.h
+--- parent-timeslice-ref/include/linux/sched.h	Wed Oct 24 13:18:54 2001
++++ parent-timeslice/include/linux/sched.h	Wed Oct 24 13:19:00 2001
+@@ -317,6 +317,7 @@
+ #ifdef CONFIG_NUMA_SCHED
+ 	int nid;
+ #endif
++	int get_child_timeslice;
+ 	struct task_struct *next_task, *prev_task;
+ 	struct mm_struct *active_mm;
+ 	struct rw_sem_recursor mm_recursor;
+diff -urN parent-timeslice-ref/kernel/exit.c parent-timeslice/kernel/exit.c
+--- parent-timeslice-ref/kernel/exit.c	Wed Oct 24 08:04:27 2001
++++ parent-timeslice/kernel/exit.c	Wed Oct 24 13:19:35 2001
+@@ -61,9 +61,11 @@
+ 		 * timeslices, because any timeslice recovered here
+ 		 * was given away by the parent in the first place.)
+ 		 */
+-		current->counter += p->counter;
+-		if (current->counter >= MAX_COUNTER)
+-			current->counter = MAX_COUNTER;
++		if (p->get_child_timeslice) {
++			current->counter += p->counter;
++			if (current->counter >= MAX_COUNTER)
++				current->counter = MAX_COUNTER;
++		}
+ 		p->pid = 0;
+ 		free_task_struct(p);
+ 	} else {
+@@ -164,6 +166,7 @@
+ 			p->exit_signal = SIGCHLD;
+ 			p->self_exec_id++;
+ 			p->p_opptr = child_reaper;
++			p->get_child_timeslice = 0;
+ 			if (p->pdeath_signal) send_sig(p->pdeath_signal, p, 0);
+ 		}
+ 	}
+diff -urN parent-timeslice-ref/kernel/fork.c parent-timeslice/kernel/fork.c
+--- parent-timeslice-ref/kernel/fork.c	Wed Oct 24 13:18:54 2001
++++ parent-timeslice/kernel/fork.c	Wed Oct 24 13:19:00 2001
+@@ -682,6 +682,9 @@
+ 	if (!current->counter)
+ 		current->need_resched = 1;
+ 
++	/* Tell the parent if it can get back its timeslice when child exits */
++	p->get_child_timeslice = 1;
++
+ 	/*
+ 	 * Ok, add it to the run-queues and make it
+ 	 * visible to the rest of the system.
+diff -urN parent-timeslice-ref/kernel/sched.c parent-timeslice/kernel/sched.c
+--- parent-timeslice-ref/kernel/sched.c	Wed Oct 24 13:18:54 2001
++++ parent-timeslice/kernel/sched.c	Wed Oct 24 13:19:00 2001
+@@ -758,6 +758,7 @@
+ 				continue;
+ #endif
+ 			p->counter = (p->counter >> 1) + NICE_TO_TICKS(p->nice);
++			p->get_child_timeslice = 0;
+ 		}
+ 		read_unlock(&tasklist_lock);
+ 		spin_lock_irq(&runqueue_lock);

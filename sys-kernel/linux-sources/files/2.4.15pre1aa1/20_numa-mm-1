@@ -1,0 +1,327 @@
+diff -urN vm-ref/arch/sparc64/mm/init.c vm-numa/arch/sparc64/mm/init.c
+--- vm-ref/arch/sparc64/mm/init.c	Thu Nov  1 20:05:09 2001
++++ vm-numa/arch/sparc64/mm/init.c	Thu Nov  1 20:05:26 2001
+@@ -1591,7 +1591,7 @@
+ 	 * Set up the zero page, mark it reserved, so that page count
+ 	 * is not manipulated when freeing the page from user ptes.
+ 	 */
+-	mem_map_zero = _alloc_pages(GFP_KERNEL, 0);
++	mem_map_zero = alloc_pages(GFP_KERNEL, 0);
+ 	if (mem_map_zero == NULL) {
+ 		prom_printf("paging_init: Cannot alloc zero page.\n");
+ 		prom_halt();
+diff -urN vm-ref/include/asm-alpha/max_numnodes.h vm-numa/include/asm-alpha/max_numnodes.h
+--- vm-ref/include/asm-alpha/max_numnodes.h	Thu Jan  1 01:00:00 1970
++++ vm-numa/include/asm-alpha/max_numnodes.h	Thu Nov  1 20:05:26 2001
+@@ -0,0 +1,13 @@
++#ifndef _ASM_MAX_NUMNODES_H
++#define _ASM_MAX_NUMNODES_H
++
++#include <linux/config.h>
++
++#ifdef CONFIG_ALPHA_WILDFIRE
++#include <asm/core_wildfire.h>
++#define MAX_NUMNODES		WILDFIRE_MAX_QBB
++#else
++#define MAX_NUMNODES		1
++#endif
++
++#endif
+diff -urN vm-ref/include/asm-alpha/mmzone.h vm-numa/include/asm-alpha/mmzone.h
+--- vm-ref/include/asm-alpha/mmzone.h	Thu Nov  1 20:05:09 2001
++++ vm-numa/include/asm-alpha/mmzone.h	Thu Nov  1 20:05:26 2001
+@@ -37,11 +37,9 @@
+ #ifdef CONFIG_ALPHA_WILDFIRE
+ # define ALPHA_PA_TO_NID(pa)	((pa) >> 36)	/* 16 nodes max due 43bit kseg */
+ #define NODE_MAX_MEM_SIZE	(64L * 1024L * 1024L * 1024L) /* 64 GB */
+-#define MAX_NUMNODES		WILDFIRE_MAX_QBB
+ #else
+ # define ALPHA_PA_TO_NID(pa)	(0)
+ #define NODE_MAX_MEM_SIZE	(~0UL)
+-#define MAX_NUMNODES		1
+ #endif
+ 
+ #define PHYSADDR_TO_NID(pa)		ALPHA_PA_TO_NID(pa)
+@@ -63,8 +61,6 @@
+ }
+ #endif
+ 
+-#ifdef CONFIG_DISCONTIGMEM
+-
+ /*
+  * Following are macros that each numa implmentation must define.
+  */
+@@ -121,7 +117,5 @@
+ 
+ #define numa_node_id()	cputonode(smp_processor_id())
+ #endif /* CONFIG_NUMA */
+-
+-#endif /* CONFIG_DISCONTIGMEM */
+ 
+ #endif /* _ASM_MMZONE_H_ */
+diff -urN vm-ref/include/linux/mm.h vm-numa/include/linux/mm.h
+--- vm-ref/include/linux/mm.h	Thu Nov  1 20:05:09 2001
++++ vm-numa/include/linux/mm.h	Thu Nov  1 20:05:26 2001
+@@ -372,7 +372,6 @@
+  * can allocate highmem pages, the *get*page*() variants return
+  * virtual kernel addresses to the allocated page(s).
+  */
+-extern struct page * FASTCALL(_alloc_pages(unsigned int gfp_mask, unsigned int order));
+ extern struct page * FASTCALL(__alloc_pages(unsigned int gfp_mask, unsigned int order, zonelist_t *zonelist));
+ extern struct page * alloc_pages_node(int nid, unsigned int gfp_mask, unsigned int order);
+ 
+@@ -383,7 +382,13 @@
+ 	 */
+ 	if (order >= MAX_ORDER)
+ 		return NULL;
+-	return _alloc_pages(gfp_mask, order);
++	/*
++	 * we get the zone list from the current node and the gfp_mask.
++	 * This zone list contains a maximum of
++	 * MAXNODES*MAX_NR_ZONES zones.
++	 */
++	return __alloc_pages(gfp_mask, order,
++			     NODE_DATA(numa_node_id())->node_zonelists + (gfp_mask & GFP_ZONEMASK));
+ }
+ 
+ #define alloc_page(gfp_mask) alloc_pages(gfp_mask, 0)
+diff -urN vm-ref/include/linux/mmzone.h vm-numa/include/linux/mmzone.h
+--- vm-ref/include/linux/mmzone.h	Thu Nov  1 20:05:09 2001
++++ vm-numa/include/linux/mmzone.h	Thu Nov  1 20:05:26 2001
+@@ -79,8 +79,14 @@
+  * so despite the zonelist table being relatively big, the cache
+  * footprint of this construct is very small.
+  */
++#ifndef CONFIG_DISCONTIGMEM
++#define MAX_NUMNODES 1
++#else
++#include <asm/max_numnodes.h>
++#endif /* !CONFIG_DISCONTIGMEM */
++
+ typedef struct zonelist_struct {
+-	zone_t * zones [MAX_NR_ZONES+1]; // NULL delimited
++	zone_t * zones [MAX_NUMNODES * MAX_NR_ZONES+1]; // NULL delimited
+ } zonelist_t;
+ 
+ #define GFP_ZONEMASK	0x0f
+@@ -126,6 +132,7 @@
+ extern void free_area_init_core(int nid, pg_data_t *pgdat, struct page **gmap,
+   unsigned long *zones_size, unsigned long paddr, unsigned long *zholes_size,
+   struct page *pmap);
++extern void build_all_zonelists(void);
+ 
+ extern pg_data_t contig_page_data;
+ 
+diff -urN vm-ref/init/main.c vm-numa/init/main.c
+--- vm-ref/init/main.c	Thu Nov  1 20:05:09 2001
++++ vm-numa/init/main.c	Thu Nov  1 20:05:26 2001
+@@ -553,6 +553,7 @@
+ 	lock_kernel();
+ 	printk(linux_banner);
+ 	setup_arch(&command_line);
++	build_all_zonelists();
+ 	printk("Kernel command line: %s\n", saved_command_line);
+ 	parse_options(command_line);
+ 	trap_init();
+diff -urN vm-ref/kernel/ksyms.c vm-numa/kernel/ksyms.c
+--- vm-ref/kernel/ksyms.c	Thu Nov  1 20:05:09 2001
++++ vm-numa/kernel/ksyms.c	Thu Nov  1 20:05:35 2001
+@@ -93,7 +93,6 @@
+ 
+ /* internal kernel memory management */
+ EXPORT_SYMBOL(start_aggressive_readahead);
+-EXPORT_SYMBOL(_alloc_pages);
+ EXPORT_SYMBOL(__alloc_pages);
+ EXPORT_SYMBOL(alloc_pages_node);
+ EXPORT_SYMBOL(__get_free_pages);
+@@ -113,7 +112,10 @@
+ EXPORT_SYMBOL(kfree);
+ EXPORT_SYMBOL(vfree);
+ EXPORT_SYMBOL(__vmalloc);
++#ifndef CONFIG_DISCONTIGMEM
++EXPORT_SYMBOL(contig_page_data);
+ EXPORT_SYMBOL(mem_map);
++#endif
+ EXPORT_SYMBOL(remap_page_range);
+ EXPORT_SYMBOL(max_mapnr);
+ EXPORT_SYMBOL(high_memory);
+diff -urN vm-ref/mm/numa.c vm-numa/mm/numa.c
+--- vm-ref/mm/numa.c	Thu Nov  1 20:05:09 2001
++++ vm-numa/mm/numa.c	Thu Nov  1 20:05:26 2001
+@@ -82,49 +82,4 @@
+ 	memset(pgdat->valid_addr_bitmap, 0, size);
+ }
+ 
+-static struct page * alloc_pages_pgdat(pg_data_t *pgdat, unsigned int gfp_mask,
+-	unsigned int order)
+-{
+-	return __alloc_pages(gfp_mask, order, pgdat->node_zonelists + (gfp_mask & GFP_ZONEMASK));
+-}
+-
+-/*
+- * This can be refined. Currently, tries to do round robin, instead
+- * should do concentratic circle search, starting from current node.
+- */
+-struct page * _alloc_pages(unsigned int gfp_mask, unsigned int order)
+-{
+-	struct page *ret = 0;
+-	pg_data_t *start, *temp;
+-#ifndef CONFIG_NUMA
+-	unsigned long flags;
+-	static pg_data_t *next = 0;
+-#endif
+-
+-	if (order >= MAX_ORDER)
+-		return NULL;
+-#ifdef CONFIG_NUMA
+-	temp = NODE_DATA(numa_node_id());
+-#else
+-	spin_lock_irqsave(&node_lock, flags);
+-	if (!next) next = pgdat_list;
+-	temp = next;
+-	next = next->node_next;
+-	spin_unlock_irqrestore(&node_lock, flags);
+-#endif
+-	start = temp;
+-	while (temp) {
+-		if ((ret = alloc_pages_pgdat(temp, gfp_mask, order)))
+-			return(ret);
+-		temp = temp->node_next;
+-	}
+-	temp = pgdat_list;
+-	while (temp != start) {
+-		if ((ret = alloc_pages_pgdat(temp, gfp_mask, order)))
+-			return(ret);
+-		temp = temp->node_next;
+-	}
+-	return(0);
+-}
+-
+ #endif /* CONFIG_DISCONTIGMEM */
+diff -urN vm-ref/mm/page_alloc.c vm-numa/mm/page_alloc.c
+--- vm-ref/mm/page_alloc.c	Thu Nov  1 20:05:09 2001
++++ vm-numa/mm/page_alloc.c	Thu Nov  1 20:05:26 2001
+@@ -220,14 +220,6 @@
+ 	return NULL;
+ }
+ 
+-#ifndef CONFIG_DISCONTIGMEM
+-struct page *_alloc_pages(unsigned int gfp_mask, unsigned int order)
+-{
+-	return __alloc_pages(gfp_mask, order,
+-		contig_page_data.node_zonelists+(gfp_mask & GFP_ZONEMASK));
+-}
+-#endif
+-
+ static struct page * FASTCALL(balance_classzone(zone_t *, unsigned int, unsigned int, int *));
+ static struct page * balance_classzone(zone_t * classzone, unsigned int gfp_mask, unsigned int order, int * freed)
+ {
+@@ -710,13 +702,41 @@
+ /*
+  * Builds allocation fallback zone lists.
+  */
+-static inline void build_zonelists(pg_data_t *pgdat)
++static int __init build_zonelists_node(pg_data_t *pgdat, zonelist_t *zonelist, int j, int k)
++{
++	switch (k) {
++		zone_t *zone;
++	default:
++		BUG();
++	case ZONE_HIGHMEM:
++		zone = pgdat->node_zones + ZONE_HIGHMEM;
++		if (zone->size) {
++#ifndef CONFIG_HIGHMEM
++			BUG();
++#endif
++			zonelist->zones[j++] = zone;
++		}
++	case ZONE_NORMAL:
++		zone = pgdat->node_zones + ZONE_NORMAL;
++		if (zone->size)
++			zonelist->zones[j++] = zone;
++	case ZONE_DMA:
++		zone = pgdat->node_zones + ZONE_DMA;
++		if (zone->size)
++			zonelist->zones[j++] = zone;
++	}
++
++	return j;
++}
++
++static void __init build_zonelists(pg_data_t *pgdat)
+ {
+-	int i, j, k;
++	int i, j, k, node, local_node;
+ 
++	local_node = pgdat->node_id;
++	printk("Building zonelist for node : %d\n", local_node);
+ 	for (i = 0; i <= GFP_ZONEMASK; i++) {
+ 		zonelist_t *zonelist;
+-		zone_t *zone;
+ 
+ 		zonelist = pgdat->node_zonelists + i;
+ 		memset(zonelist, 0, sizeof(*zonelist));
+@@ -728,33 +748,32 @@
+ 		if (i & __GFP_DMA)
+ 			k = ZONE_DMA;
+ 
+-		switch (k) {
+-			default:
+-				BUG();
+-			/*
+-			 * fallthrough:
+-			 */
+-			case ZONE_HIGHMEM:
+-				zone = pgdat->node_zones + ZONE_HIGHMEM;
+-				if (zone->size) {
+-#ifndef CONFIG_HIGHMEM
+-					BUG();
+-#endif
+-					zonelist->zones[j++] = zone;
+-				}
+-			case ZONE_NORMAL:
+-				zone = pgdat->node_zones + ZONE_NORMAL;
+-				if (zone->size)
+-					zonelist->zones[j++] = zone;
+-			case ZONE_DMA:
+-				zone = pgdat->node_zones + ZONE_DMA;
+-				if (zone->size)
+-					zonelist->zones[j++] = zone;
+-		}
++		j = build_zonelists_node(pgdat, zonelist, j, k);
++		/*
++		 * Now we build the zonelist so that it contains the zones
++		 * of all the other nodes.
++		 * We don't want to pressure a particular node, so when
++		 * building the zones for node N, we make sure that the
++		 * zones coming right after the local ones are those from
++		 * node N+1 (modulo N)
++		 */
++		for (node = local_node + 1; node < numnodes; node++)
++			j = build_zonelists_node(NODE_DATA(node), zonelist, j, k);
++		for (node = 0; node < local_node; node++)
++			j = build_zonelists_node(NODE_DATA(node), zonelist, j, k);
++
+ 		zonelist->zones[j++] = NULL;
+ 	} 
+ }
+ 
++void __init build_all_zonelists(void)
++{
++	int i;
++
++	for(i = 0 ; i < numnodes ; i++)
++		build_zonelists(NODE_DATA(i));
++}
++
+ #define LONG_ALIGN(x) (((x)+(sizeof(long))-1)&~((sizeof(long))-1))
+ 
+ /*
+@@ -910,7 +929,6 @@
+ 			  (unsigned long *) alloc_bootmem_node(pgdat, bitmap_size);
+ 		}
+ 	}
+-	build_zonelists(pgdat);
+ }
+ 
+ void __init free_area_init(unsigned long *zones_size)
