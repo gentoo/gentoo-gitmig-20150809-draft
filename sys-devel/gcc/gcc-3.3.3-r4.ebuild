@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.3-r4.ebuild,v 1.7 2004/05/07 00:49:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.3-r4.ebuild,v 1.8 2004/05/08 23:09:05 solar Exp $
 
 IUSE="static nls bootstrap java build X multilib gcj f77 objc hardened uclibc debug"
 
@@ -49,7 +49,7 @@ DATAPATH="${LOC}/share/gcc-data/${CCHOST}/${MY_PV}"
 STDCXX_INCDIR="${LIBPATH}/include/g++-v${MY_PV/\.*/}"
 
 # PIE support
-PIE_VER="8.7.0"
+PIE_VER="8.7.3"
 
 # ProPolice version
 PP_VER="3_3"
@@ -99,10 +99,9 @@ SRC_URI="${SRC_URI}
 
 # bug #6148 - the bounds checking patch interferes with gcc.c
 PIE_BASE_URI="mirror://gentoo/"
-PIE_CORE_PATCH="gcc-3.3.3-v${PIE_VER}-pie-corrections.patch.bz2"
-PIE_SSP_PATCH="gcc-3.3.3-v${PIE_VER}-nodefault-pie-ssp.patch.bz2"
-SSP_EXCLUSION_PATCH="gcc-3.3.3-v${PIE_VER}-gcc-ssp-exclusion.patch.bz2"
-SRC_URI="${SRC_URI} ${PIE_BASE_URI}${PIE_CORE_PATCH} ${PIE_BASE_URI}${PIE_SSP_PATCH} ${PIE_BASE_URI}${SSP_EXCLUSION_PATCH}"
+PIE_CORE="gcc-3.3.3-piepatches-v${PIE_VER}.tar.bz2"
+SSP_EXCLUSION_PATCH="gcc-3.3.3-v8.7.0-gcc-ssp-exclusion.patch.bz2"
+SRC_URI="${SRC_URI} ${PIE_BASE_URI}${PIE_CORE} ${PIE_BASE_URI}${SSP_EXCLUSION_PATCH}"
 
 DESCRIPTION="The GNU Compiler Collection.  Includes C/C++, java compilers, pie and ssp extentions"
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
@@ -293,6 +292,11 @@ src_unpack() {
 		unpack protector-${PP_FVER}.tar.gz
 	fi
 
+	if [ -n "${PIE_VER}" ]
+	then
+		unpack ${PIE_CORE}
+	fi
+
 	cd ${S}
 	# Fixup libtool to correctly generate .la files with portage
 	elibtoolize --portage --shallow
@@ -310,8 +314,8 @@ src_unpack() {
 #		mv -f ${WORKDIR}/patch/{40,41}* ${WORKDIR}/patch/exclude/
 		mv -f ${WORKDIR}/patch/41* ${WORKDIR}/patch/exclude/
 
-		# conflicts with the pie-correction patch
-		use uclibc || mv -f ${WORKDIR}/patch/8?_* ${WORKDIR}/patch/exclude/
+		# do not enable it, the pie patches won't apply
+		#use uclibc || mv -f ${WORKDIR}/patch/8?_* ${WORKDIR}/patch/exclude/
 
 		if [ -n "`use multilib`" -a "${ARCH}" = "amd64" ]
 		then
@@ -322,6 +326,16 @@ src_unpack() {
 
 		epatch ${WORKDIR}/patch
 		use uclibc && epatch ${FILESDIR}/3.3.3/gcc-uclibc-3.3-loop.patch
+	fi
+
+	if [ -n "${PIE_VER}" ]
+	then
+		# corrects startfile/endfile selection and shared/static/pie flag usage
+		epatch ${WORKDIR}/piepatch/upstream
+		# adds non-default pie support (for now only rs6000)
+		epatch ${WORKDIR}/piepatch/nondef
+		# adds default pie support for all archs less rs6000 if DEFAULT_PIE[_SSP] is defined
+		epatch ${WORKDIR}/piepatch/def
 	fi
 
 	if [ "${ARCH}" = "ppc" -o "${ARCH}" = "ppc64" ]
@@ -335,7 +349,7 @@ src_unpack() {
 		epatch ${FILESDIR}/3.3.3/gcc333-debian-arm-ldm.patch
 	fi
 
-	# non-default SSP and PIE support.
+	# non-default SSP support.
 	if [ "${ARCH}" != "hppa" -a "${ARCH}" != "hppa64" -a -n "${PP_VER}" ]
 	then
 		# ProPolice Stack Smashing protection
@@ -350,24 +364,25 @@ src_unpack() {
 		cp ${WORKDIR}/protector.c ${WORKDIR}/${P}/gcc/ || die "protector.c not found"
 		cp ${WORKDIR}/protector.h ${WORKDIR}/${P}/gcc/ || die "protector.h not found"
 
+		use uclibc && epatch ${FILESDIR}/3.3.3/gcc-3.3.3-uclibc-add-ssp.patch
+
 		release_version="${release_version}, ssp-${PP_FVER}"
 
 		update_gcc_for_libc_ssp
 	fi
 
 	cd ${WORKDIR}/${P}
-	epatch ${DISTDIR}/${PIE_CORE_PATCH}
-	epatch ${DISTDIR}/${PIE_SSP_PATCH}
 
 	# ARM was having issues with static linking as the spec file
 	# calls for crtbeginT.o vs crtbeginS.o. SpanKY looked through
 	# the gcc/config/arm/t-* files, it's appears that it's not meant
 	# to build crtbeginT.o (May 2 2004)
 	# Testing arm again (May 3 2004)
+	# solved hopefully as of pie/ssp v8.7.1
 
-	use uclibc && epatch ${FILESDIR}/3.3.3/gcc-3.3.3-uclibc-add-ssp.patch
-	#use uclibc || epatch ${DISTDIR}/${PIE_EXCLUSION_PATCH}
-	use uclibc || epatch ${DISTDIR}/${SSP_EXCLUSION_PATCH}
+	# it is not really uclibc's dependency
+	# only for those having problems building gcc itself (known on P4)
+	#use uclibc || epatch ${DISTDIR}/${SSP_EXCLUSION_PATCH}
 
 	release_version="${release_version}, pie-${PIE_VER}"
 	if  ( use x86 && use hardened )
@@ -397,7 +412,7 @@ src_unpack() {
 	cp -a ${S}/libstdc++-v3/config/cpu/i{4,3}86/atomicity.h
 
 	# disable --as-needed from being compiled into gcc specs
-	# natively when using >=sys-devel/binutils-2.15.90.0.3 this is
+	# natively when using >=sys-devel/binutils-2.15.90.0.1 this is
 	# done to keep our gcc backwards compatible with binutils. 
 	# gcc 3.4.1 cvs has patches that need back porting.. 
 	# http://gcc.gnu.org/bugzilla/show_bug.cgi?id=14992 (May 3 2004)
