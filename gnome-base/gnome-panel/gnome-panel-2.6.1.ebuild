@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/gnome-panel-2.6.1.ebuild,v 1.1 2004/04/21 13:53:19 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/gnome-panel-2.6.1.ebuild,v 1.2 2004/04/26 17:14:33 foser Exp $
 
 inherit gnome2 eutils
 
@@ -21,7 +21,7 @@ RDEPEND=">=x11-libs/gtk+-2.3.2
 	>=gnome-base/libglade-2.3
 	>=gnome-base/libgnome-2.1.1
 	>=gnome-base/libgnomeui-2.5.4
-	>=gnome-base/gconf-2.3.3
+	>=gnome-base/gconf-2.6.1
 	media-libs/libpng
 	!gnome-extra/system-tray-applet"
 
@@ -40,7 +40,7 @@ src_unpack() {
 	cd ${S}
 
 	# should fix parallel install #45315
-	epatch ${FILESDIR}/${PN}-2.6-parallel_install.patch
+	epatch ${FILESDIR}/${PN}-2.6.1-parallel_install.patch
 
 }
 
