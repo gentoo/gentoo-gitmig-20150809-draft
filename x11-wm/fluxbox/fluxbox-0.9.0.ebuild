@@ -1,6 +1,6 @@
-# Copyright 1993-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-0.9.0.ebuild,v 1.3 2003/06/03 20:53:52 mkeadle Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-0.9.0.ebuild,v 1.4 2003/09/04 06:58:27 msterret Exp $
 
 IUSE="gnome kde nls xinerama truetype"
 
@@ -26,18 +26,18 @@ src_unpack() {
 
 	unpack ${A}
 	cd ${S}
-	
+
 }
 
 src_compile() {
 	commonbox_src_compile
-	
+
 	cd data make \
 		pkgdatadir=/usr/share/commonbox init
 }
 
 src_install() {
-	
+
 	commonbox_src_install
 	cd data
 	insinto /usr/share/commonbox

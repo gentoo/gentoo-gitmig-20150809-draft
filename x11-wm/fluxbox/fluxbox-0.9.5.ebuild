@@ -1,6 +1,6 @@
-# Copyright 1993-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-0.9.5.ebuild,v 1.1 2003/08/28 15:28:12 tseng Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-0.9.5.ebuild,v 1.2 2003/09/04 06:58:27 msterret Exp $
 
 IUSE="gnome kde nls xinerama truetype"
 
@@ -56,16 +56,16 @@ src_compile() {
 
 	sed -i -e 's:\$(datadir)/fluxbox:/usr/share/commonbox:' ${S}/Makefile
 	sed -i -e 's:\$(datadir)/fluxbox:/usr/share/commonbox:' ${S}/data/Makefile
-	
+
 	emake \
 		pkgdatadir=/usr/share/commonbox || die
-	
+
 	cd data make \
 		pkgdatadir=/usr/share/commonbox init
 }
 
 src_install() {
-	
+
 	dodir /usr/share/commonbox/${PN}
 	dodir /usr/share/commonbox/styles
 	make DESTDIR=${D} install || die
