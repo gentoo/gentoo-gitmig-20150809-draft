@@ -1,12 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ac-sources/ac-sources-2.6.10-r7.ebuild,v 1.1 2005/01/08 12:57:23 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ac-sources/ac-sources-2.6.10-r10.ebuild,v 1.1 2005/01/18 03:14:16 marineam Exp $
 
 UNIPATCH_LIST="
 	${DISTDIR}/patch-${KV}.bz2
 	${FILESDIR}/${P}.75963.patch
-	${FILESDIR}/${P}.77094.patch
-	${FILESDIR}/${P}.brk-locked.patch"
+	${FILESDIR}/${P}.77094.patch"
 K_PREPATCHED="yes"
 UNIPATCH_STRICTORDER="yes"
 
