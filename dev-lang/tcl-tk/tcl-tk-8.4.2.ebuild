@@ -33,10 +33,10 @@ src_unpack() {
 src_compile() {
 	cd ${S1}/unix
 	try ./configure --host=${CHOST} --prefix=/usr --mandir=/usr/share/man --enable-threads
-	try make CFLAGS=\""${CFLAGS}"\"
+	try make CFLAGS="${CFLAGS}"
 	cd ${S2}/unix
 	try ./configure --host=${CHOST} --prefix=/usr --mandir=/usr/share/man --with-tcl=${S1}/unix --enable-threads
-	try make CFLAGS=\""${CFLAGS}"\"
+	try make CFLAGS="${CFLAGS}"
 }
 
 src_install() {
