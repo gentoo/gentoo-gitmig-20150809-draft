@@ -1,6 +1,12 @@
 # ChangeLog for games-puzzle/ltris
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/ltris/ChangeLog,v 1.9 2004/12/28 23:13:38 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/ltris/ChangeLog,v 1.10 2005/03/18 17:16:51 mr_bones_ Exp $
+
+*ltris-1.0.10 (18 Mar 2005)
+
+  18 Mar 2005; Michael Sterrett <mr_bones_@gentoo.org> -ltris-1.0.5-r1.ebuild,
+  -ltris-1.0.6.ebuild, -ltris-1.0.7.ebuild, +ltris-1.0.10.ebuild:
+  security version bump (bug #85770); clean out old versions
 
   28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
@@ -44,7 +50,7 @@
   18 Oct 2002; Daniel Ahlberg <aliz@gentoo.org> ltris-1.0.1.ebuild :
   Updated to mirror://sourceforge in SRC_URI.
 
-  17 Jul 2002; Jose Alberto Suárez López <bass@gentoo.org> ltris-1.0.1.ebuild :
+  17 Jul 2002; Jose Alberto SuÃ¡rez LÃ³pez <bass@gentoo.org> ltris-1.0.1.ebuild :
   Added LICENSE, KEYWORDS.
 
   19 Feb 2002; Aron Griffis <agriffis@gentoo.org> ltris-1.0.1.ebuild:
