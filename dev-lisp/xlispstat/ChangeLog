@@ -1,0 +1,9 @@
+# ChangeLog for dev-lisp/xlispstat
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/xlispstat/ChangeLog,v 1.1 2003/12/21 06:02:30 mkennedy Exp $
+
+*xlispstat-3.52.20 (20 Dec 2003)
+
+  20 Dec 2003; <mkennedy@gentoo.org> metadata.xml, xlispstat-3.52.20.ebuild:
+  initial import.  ebuild contributed by Matthew Kennedy <mkennedy@gentoo.org>
+
