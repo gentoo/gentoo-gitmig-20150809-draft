@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/xine-ui-0.9.8-r1.ebuild,v 1.1 2002/02/19 19:52:02 azarah Exp $ 
+# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/xine-ui-0.9.8-r1.ebuild,v 1.2 2002/03/13 02:57:23 seemant Exp $ 
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Xine is a free gpl-licensed video player for unix-like systems"
@@ -49,6 +49,3 @@ src_install() {
 
 	dodoc AUTHORS COPYING ChangeLog INSTALL NEWS README
 }
-
-
-

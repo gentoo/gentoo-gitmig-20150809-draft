@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/xine-ui-0.9.8-r2.ebuild,v 1.2 2002/03/12 23:42:25 seemant Exp $ 
+# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/xine-ui-0.9.8-r2.ebuild,v 1.3 2002/03/13 02:57:23 seemant Exp $ 
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Xine is a free gpl-licensed video player for unix-like systems"
@@ -31,7 +31,7 @@ src_compile() {
 	local myconf
 	use X      || myconf="${myconf} --disable-x11 --disable-xv"
 	use nls    || myconf="${myconf} --disable-nls"
-	use gnome  && myconf="${myconf} --enable-orbit"
+#	use gnome  && myconf="${myconf} --enable-orbit"
 #	use aalib  || myconf="${myconf} --disable-aalib --disable-aalibtest"
   
 	./configure --host=${CHOST} \

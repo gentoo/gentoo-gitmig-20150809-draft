@@ -1,6 +1,6 @@
 # ChangeLog for media-video/xine-ui
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/ChangeLog,v 1.4 2002/03/12 23:42:25 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/ChangeLog,v 1.5 2002/03/13 02:57:23 seemant Exp $
 
 *xine-ui-0.9.7-r2 (12 Mar 2002)
   12 Mar 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog :
@@ -8,6 +8,9 @@
   Added checking of nls in USE toggles.  Also added checking of gnome in 
   USE toggles to have xine-ui use ORBit.  However, I had initially done
   use gnome || enable ORBit instead of &&.  Found it thanks to supox.
+  OK no this still does not work.  ORBit support in xine seems questionable, at
+  best.  I am commenting that stuff out in the ebuild until I can find some
+  answers about it.
 
   19 Feb 2002; M.Schlemmer <azarah@gentoo.org> xine-ui-0.9.8-r1.ebuild :
 
