@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/emboss/emboss-2.8.0-r2.ebuild,v 1.1 2004/05/11 11:47:04 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/emboss/emboss-2.8.0-r2.ebuild,v 1.2 2004/05/12 15:09:50 dholm Exp $
 
 
 S=${WORKDIR}/EMBOSS-${PV}
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.emboss.org/"
 SRC_URI="ftp://ftp.uk.embnet.org/pub/EMBOSS/EMBOSS-${PV}.tar.gz"
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 IUSE="X png"
 DEPEND="X? ( virtual/x11
 		png? ( >=sys-libs/zlib-1.1.4
