@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/pdns-2.9.12-r1.ebuild,v 1.1 2003/12/14 18:48:46 jhhudso Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/pdns-2.9.12-r1.ebuild,v 1.2 2004/01/03 19:04:01 plasmaroo Exp $
 
 DESCRIPTION="The PowerDNS Daemon."
 SRC_URI="http://downloads.powerdns.com/releases/${P}.tar.gz"
@@ -8,11 +8,12 @@ HOMEPAGE="http://www.powerdns.com/"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
-IUSE="mysql postgres static"
+IUSE="mysql postgres static ldap"
 
 DEPEND="virtual/glibc
 	mysql? ( >=dev-db/mysql-3.23.54a )
-	postgres? ( >=dev-libs/libpq++-4.0-r1 )"
+	postgres? ( >=dev-libs/libpq++-4.0-r1 )
+	ldap? ( >=net-nds/openldap-2.0.27-r4 )"
 
 RDEPEND="${DEPEND}"
 
@@ -23,18 +24,20 @@ src_compile() {
 	local modules=""
 
 	use static && myconf="$myconf --enable-static-binaries"
+	use postgres && myconf="$myconf --with-pgsql-includes=/usr/include"
+
 	use mysql && modules="gmysql $modules"
 	use postgres && modules="gpgsql $modules"
-	use postgres && myconf="$myconf --with-pgsql-includes=/usr/include"
-	myconf="$myconf --with-modules=$modules"
+	use ldap && modules="ldap $modules"
 
-	econf $myconf
-	emake || die "emake failed"
+	econf --with-modules="$modules" \
+		$myconf || die "Configuration failed"
+
+	emake || die "Make failed"
 }
 
 src_install () {
 	make DESTDIR=${D} install || die
-
 	dodoc ChangeLog HACKING INSTALL README TODO WARNING pdns/COPYING
 
 	exeinto /etc/init.d
