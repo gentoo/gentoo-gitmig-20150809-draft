@@ -1,0 +1,11 @@
+--- configure.orig	2004-03-28 11:32:08.000000000 -0700
++++ configure	2004-03-28 11:33:25.000000000 -0700
+@@ -49,7 +49,7 @@
+ hosttype=`uname -s`
+ case $hosttype in
+     Linux)
+-        CFLAGS="$CFLAGS -I/usr/include -fPIC"
++        CFLAGS="$CFLAGS -I/usr/include -fPIC -DSUNOS"
+         LIBS="$LIBS -ldl -lpthread";;
+     FreeBSD)
+ 	CFLAGS="$CFLAGS -I/usr/local/include -I/usr/src/contrib/libstdc++ -D_THREAD_SAFE -DSUNOS"
