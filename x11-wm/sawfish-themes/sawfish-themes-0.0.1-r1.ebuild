@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
 # /home/cvsroot/gentoo-x86/app-editors/gtk-xemacs/gtk-xemacs-21.1.12_p3.ebuild,v 1.3 2000/10/29 20:36:58 achim Exp
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish-themes/sawfish-themes-0.0.1-r1.ebuild,v 1.1 2001/10/14 07:39:53 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish-themes/sawfish-themes-0.0.1-r1.ebuild,v 1.2 2001/12/28 23:48:25 azarah Exp $
 
 
 S=${WORKDIR}/${P}
@@ -13,7 +13,7 @@ SRC_URI="http://ftp1.sourceforge.net/pub/mirrors/themes.org/sawmill/Adept-0.28.t
 	 
 HOMEPAGE="http://www.themes.org"
 
-DEPEND="~x11-wm/sawfish-1.0"
+DEPEND=">=x11-wm/sawfish-1.0"
 
 src_install() {
 
