@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pdftk/pdftk-0.93.ebuild,v 1.4 2004/07/01 12:01:05 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pdftk/pdftk-1.00.ebuild,v 1.1 2004/08/17 13:08:33 usata Exp $
 
 DESCRIPTION="A tool for manipulating PDF documents"
 HOMEPAGE="http://www.accesspdf.com/pdftk"
 SRC_URI="http://www.accesspdf.com/pdftk/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~x86"
 IUSE=""
 DEPEND="virtual/libc
 	>=sys-devel/gcc-3.3"
@@ -25,7 +25,7 @@ src_unpack() {
 	unpack ${A}
 	# force usage of custom CFLAGS.
 	mv ${S}/Makefile.Generic ${T}/Makefile.Generic.orig
-	sed 's:-O3:\$(CFLAGS):' \
+	sed 's:-O2:\$(CFLAGS):g' \
 		< ${T}/Makefile.Generic.orig > ${S}/Makefile.Generic
 }
 
@@ -38,5 +38,6 @@ src_compile() {
 
 src_install() {
 	dobin pdftk
-	newman ../pdftk.1.manpage.txt pdftk.1
+	newman ../pdftk.1.txt pdftk.1
+	dohtml ../pdftk.1.html
 }

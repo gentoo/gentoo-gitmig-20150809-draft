@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pdftk/pdftk-0.94.1.ebuild,v 1.3 2004/07/01 12:01:05 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pdftk/pdftk-0.94.1.ebuild,v 1.4 2004/08/17 13:08:33 usata Exp $
 
 MY_P="${PN}-${PV%.*}${PV##*.}"	# 0.94.1 -> 0.941
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.accesspdf.com/pdftk"
 SRC_URI="http://www.accesspdf.com/pdftk/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE=""
 DEPEND="virtual/libc
 	>=sys-devel/gcc-3.3"
