@@ -1,6 +1,10 @@
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 
+# masking nhc98, until strange module lookup behaviour is resolved
+# george - Jun 8, 2002
+dev-lang/nhc98
+
 # masking k3studio, somehow it escaped being masked before
 # ebuild incomplete
 media-gfx/k3studio
