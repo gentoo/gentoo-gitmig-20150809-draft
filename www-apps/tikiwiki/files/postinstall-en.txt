@@ -1,0 +1,54 @@
+Setup Completion
+---
+
+If there is no existing TikiWiki install and database you will need to
+create an empty database for TikiWiki before starting setup.  For
+example (MySQL):
+
+mysql -p -u root mysql <<__EOSQL
+  CREATE DATABASE tiki;
+  GRANT CREATE, DROP, INDEX, ALTER, SELECT, INSERT, UPDATE, DELETE
+    ON tiki.*
+    TO tikiuser@localhost
+    IDENTIFIED BY 'a_good_password';
+  FLUSH PRIVILEGES;
+__EOSQL
+
+
+TikiWiki likes to have a generous PHP environment.  Please edit
+/etc/php4/php.ini or arrange the settings through another mechanism such as
+Apache .htaccess files.
+
+Tiki requires PHP to have :
+    ==> 'memory_limit = 16M'
+    ==> 'max_execution_time = 60'
+Tiki likes PHP to have :
+    ==> 'default_charset = utf-8'
+    ==> 'file_uploads = On'
+
+
+Please read the files in:
+${G_HTDOCSDIR}${G_INSTALLDIR}doc 
+especially if you want clean URLS under Apache.
+
+You may find further information on the Tiki website
+    ==> http://tikiwiki.org/InstallGettingStarted
+
+Note: The equivalent of running setup.sh has already been completed.
+
+
+Now, point your browser to the location of tiki-install.php to complete the
+setup/upgrade.  For example:
+
+http://${G_HOSTNAME}/${G_INSTALLDIR}/tiki-install.php
+
+
+You may need to manually rename tiki-install.php to tiki-install.done to
+secure your system.  For example:
+
+cd ${G_HTDOCSDIR}${G_INSTALLDIR}
+mv tiki-install.php tiki-install.done
+
+
+Enjoy your TikiWiki site.
+
