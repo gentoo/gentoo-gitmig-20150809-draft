@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2004 Gento Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap-cascade.sh,v 1.12 2004/08/19 14:37:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap-cascade.sh,v 1.13 2004/08/19 14:38:25 vapier Exp $
 
 # drobbins optimized this script at some point which made a bootstrap
 # to complete 20 mins to 2 hours faster, depending on CPU. He did this
@@ -67,9 +67,9 @@ fi
 [ -e /etc/profile ] && source /etc/profile
 
 echo -e "\n${GOOD}Gentoo Linux${GENTOO_VERS}; ${BRACKET}http://www.gentoo.org/${NORMAL}"
-echo -e "Copyright 2001-2004 Gentoo Foundation.; Distributed under the GPL"
+echo -e "Copyright 2001-2004 Gentoo Foundation.; Distributed under the GPLv2"
 if [ "${STRAP_EMERGE_OPTS:0:2}" = "-f" ]; then
-	echo "Fetching all bootstrap-related archives..."
+	echo "Fetching all bootstrap-related archives ..."
 else
 	echo "Starting Bootstrap of base system ..."
 fi
@@ -189,7 +189,7 @@ einfo "Using texinfo    : ${myTEXINFO}"
 einfo "Using zlib       : ${myZLIB}"
 einfo "Using ncurses    : ${myNCURSES}"
 echo -------------------------------------------------------------------------------
-echo "Configuring environment..."
+echo "Configuring environment ..."
 
 # Get correct CFLAGS, CHOST, CXXFLAGS, MAKEOPTS since make.conf will be
 # overwritten.
