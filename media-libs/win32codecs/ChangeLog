@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/win32codecs
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/win32codecs/ChangeLog,v 1.10 2004/02/20 15:30:12 darkspecter Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/win32codecs/ChangeLog,v 1.11 2004/06/24 14:18:57 mholzer Exp $
+
+*win32codecs-20040427 (24 Jun 2004)
+
+  24 Jun 2004; Martin Holzer <mholzer@gentoo.org> win32codecs-20040427.ebuild:
+  Version bumped. Closes 50420
 
   20 Feb 2004; Bartosch Pixa <darkspecter@gentoo.org>
   win32codecs-0.90.1-r1.ebuild:
