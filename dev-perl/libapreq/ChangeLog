@@ -1,6 +1,6 @@
 # ChangeLog for dev-perllibapreqChangeLog/
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/libapreq/ChangeLog,v 1.6 2002/12/13 10:56:40 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/libapreq/ChangeLog,v 1.7 2002/12/17 06:13:09 lostlogic Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
@@ -10,6 +10,9 @@
 # ChangeLog for dev-perl/libapreq
 
 *libapreq-1.01-r1 (24 Jul 2002)
+
+  16 Dec 2002; Brandon Low <lostlogic@gentoo.org> libapreq-1.01-r1.ebuild :
+  Fix dep on mod-perl-1 not mod-perl-2.
 
   1 Aug 2002; Calum Selkirk <cselkirk@gentoo.org> libapreq-1.01-r1.ebuild: :
 
