@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/fltk
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/ChangeLog,v 1.13 2002/10/30 19:06:23 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/ChangeLog,v 1.14 2002/11/23 20:12:55 cybersystem Exp $
+
+*fltk-1.1.1 (23 Nov 2002)
+
+  23 Nov 2002; Sascha Schwabbauer <cybersystem@gentoo.org> fltk-1.1.1.ebuild :
+
+  Added ~ppc to keywords.  
 
 *fltk-1.1.1 (30 Oct 2002)
 
