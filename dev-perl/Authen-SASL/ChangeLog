@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Authen-SASL
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Authen-SASL/ChangeLog,v 1.11 2004/05/12 05:01:45 randy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Authen-SASL/ChangeLog,v 1.12 2004/06/06 10:09:05 gmsoft Exp $
+
+  06 Jun 2004; Guy Martin <gmsoft@gentoo.org> Authen-SASL-2.04.ebuild:
+  Marked stable on hppa.
 
   12 May 2004; Michael McCabe <randy@gentoo.org> Authen-SASL-2.04.ebuild:
   Added s390 keywords
