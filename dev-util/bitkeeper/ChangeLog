@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/bitkeeper
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bitkeeper/ChangeLog,v 1.15 2004/01/03 18:39:27 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bitkeeper/ChangeLog,v 1.16 2004/01/03 18:53:33 iggy Exp $
+
+# README: bitkeeper only offers the latest version of bitkeeper for download,
+# so we need to be all over marking new versions stable
 
 *bitkeeper-3.0.4 (03 Jan 2004)
 
