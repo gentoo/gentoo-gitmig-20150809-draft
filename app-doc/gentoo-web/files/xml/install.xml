@@ -352,7 +352,7 @@ of any hostnames that may not be in your nameservers.  Here's a template for thi
 <body>
 
 <p>Look in the <path>/etc/rc.d/config</path> directory; you'll see a file
-called OFF_inet.eth0.  Copy this file to inet.eth0, and edit the top part of it
+called <path>OFF_inet.eth0</path>.  Copy this file to <path>inet.eth0</path>, and edit the top part of it
 so that it contains the IP address settings you want to use on your first
 ethernet card.  Look in <path>/lib/modules</path> for the ethernet module
 specific to your particular ethernet card, and append it to the
