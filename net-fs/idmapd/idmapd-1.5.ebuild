@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/idmapd/idmapd-1.5.ebuild,v 1.1 2004/06/08 15:09:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/idmapd/idmapd-1.5.ebuild,v 1.2 2004/06/08 15:54:49 vapier Exp $
 
 inherit eutils
 
@@ -24,6 +24,13 @@ src_unpack() {
 	epatch ${FILESDIR}/${PV}-no-string.patch
 }
 
+src_compile() {
+	econf --bindir=/sbin || die
+	emake || die
+}
+
 src_install() {
 	make install DESTDIR=${D} || die
+	exeinto /etc/init.d ; newexe ${FILESDIR}/idmapd.rc idmapd || die
+	insinto /etc/conf.d ; newins ${FILESDIR}/idmapd.confd idmapd || die
 }

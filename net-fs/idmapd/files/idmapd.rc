@@ -1,0 +1,33 @@
+#!/sbin/runscript
+# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-fs/idmapd/files/idmapd.rc,v 1.1 2004/06/08 15:54:49 vapier Exp $
+
+depend() {
+	need net
+}
+
+start() {
+	if grep -q rpc_pipefs /proc/filesystems &>/dev/null; then
+		if ! grep -q "rpc_pipefs /var/lib/rpc_pipes" /proc/mounts &>/dev/null; then
+			ebegin "Mounting rpc_pipefs filesystem in /var/lib/rpc_pipes"
+			mkdir -p /var/lib/rpc_pipes
+			mount -t rpc_pipefs rpc_pipefs /var/lib/rpc_pipes
+			eend $? "Error mounting rpc_pipefs filesystem in /var/lib/rpc_pipes"
+		fi
+	fi
+
+	ebegin "Starting idmapd"
+	/sbin/idmapd -p /var/lib/rpc_pipes ${IDMAPD_OPTS}
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping idmapd"
+	start-stop-daemon --stop --quiet --exec /sbin/idmapd
+	eend $?
+
+	ebegin "Unmounting rpc_pipefs"
+	umount /var/lib/rpc_pipes
+	eend $? "Error unmounting rpc_pipefs"
+}
