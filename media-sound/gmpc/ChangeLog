@@ -1,0 +1,7 @@
+# ChangeLog for media-sound/gmpc
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gmpc/ChangeLog,v 1.1 2004/07/23 20:17:44 axxo Exp $
+
+  23 Jul 2004; Thomas Matthijs <axxo@gentoo.org> :
+  ebuild submitted by Bert Geens <theblackdragon@linux.be>
+
