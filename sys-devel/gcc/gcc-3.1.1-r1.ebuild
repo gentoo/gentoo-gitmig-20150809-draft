@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.1.1-r1.ebuild,v 1.14 2004/04/22 02:56:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.1.1-r1.ebuild,v 1.15 2004/06/07 23:29:10 vapier Exp $
 
 # NOTE TO MAINTAINER:  Info pages get nuked for multiple version installs.
 #                      Ill fix it later if i get a chance.
@@ -53,8 +53,7 @@ build_multiple() {
 	#
 	# Check the major and minor versions only, and drop the micro version.
 	# This is done, as compadibility only differ when major and minor differ.
-	if [ -z "`use build`" ] && \
-	   [ -z "`use bootstrap`" ] && \
+	if ! use build`" ] && ! use bootstrap && \
 	   [ "`gcc -dumpversion | cut -d. -f1,2`" != "${MY_PV}" ] && \
 	   [ "${profile/gcc3}" = "${profile}" ] && \
 	   [ "${GCCBUILD}" != "default" ]
@@ -141,6 +140,9 @@ src_compile() {
 	then
 		myconf="${myconf} --program-suffix=${GCC_SUFFIX}"
 	fi
+
+	# Make sure we have sane CFLAGS
+	do_filter_flags
 
 	#build in a separate build tree
 	mkdir -p ${WORKDIR}/build

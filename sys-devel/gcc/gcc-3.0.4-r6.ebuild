@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.0.4-r6.ebuild,v 1.19 2004/04/27 18:24:05 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.0.4-r6.ebuild,v 1.20 2004/06/07 23:29:10 vapier Exp $
 
 # NOTE TO MAINTAINER:  Info pages get nuked for multiple version installs.
 #                      Ill fix it later if i get a chance.
@@ -34,8 +34,7 @@ build_multiple() {
 	#try to make sure that we should build multiple
 	#versions of gcc (dual install of gcc2 and gcc3)
 	profile="`readlink /etc/make.profile`"
-	if [ -z "`use build`" ] && \
-	   [ -z "`use bootstrap`" ] && \
+	if ! use build && ! use bootstrap && \
 	   [ "`gcc -dumpversion | cut -d. -f1,2`" != "`echo ${PV} | cut -d. -f1,2`" ] && \
 	   [ "${profile/gcc3}" = "${profile}" ] && \
 	   [ "${GCCBUILD}" != "default" ]
@@ -120,7 +119,7 @@ src_compile() {
 		--with-local-prefix=${LOC}/local \
 		${myconf} || die
 
-	if [ -z "`use static`" ]
+	if ! use static
 	then
 		emake bootstrap-lean || die
 	else
@@ -260,7 +259,7 @@ src_install() {
 
 			cd ${S}/texinfo
 		   	docinto texinfo
-			dodoc AUTHORS ChangeLog COPYING INTRODUCTION NEWS README TODO
+			dodoc AUTHORS ChangeLog INTRODUCTION NEWS README TODO
 			docinto texinfo/info
 			dodoc info/README
 			docinto texinfo/makeinfo
@@ -271,7 +270,7 @@ src_install() {
 
 		cd ${S}
 		docinto /
-		dodoc BUGS COPYING COPYING.LIB ChangeLog GNATS README* FAQ MAINTAINERS
+		dodoc BUGS ChangeLog GNATS README* FAQ MAINTAINERS
 		docinto html
 		dodoc *.html
 		cd ${S}/boehm-gc
@@ -279,24 +278,24 @@ src_install() {
 		dodoc ChangeLog README*
 		cd ${S}/gcc
 		docinto gcc
-		dodoc ChangeLog* COPYING* FSFChangeLog* LANGUAGES NEWS ONEWS \
+		dodoc ChangeLog* FSFChangeLog* LANGUAGES NEWS ONEWS \
 			README* SERVICE
 	    cd ${S}/fastjar
 	    docinto fastjar
-	    dodoc AUTHORS CHANGES COPYING ChangeLog NEWS README
+	    dodoc AUTHORS CHANGES ChangeLog NEWS README
 		cd ${S}/libf2c
 	    docinto libf2c
 	    dodoc ChangeLog README TODO changes.netlib disclaimer.netlib \
 			permission.netlib readme.netlib
 		cd ${S}/libffi
 	    docinto libffi
-	    dodoc ChangeLog* LICENSE README
+	    dodoc ChangeLog* README
 		cd ${S}/libjava
 	    docinto libjava
-	    dodoc ChangeLog* COPYING HACKING LIBGCJ_LICENSE NEWS README THANKS
+	    dodoc ChangeLog* HACKING LIBGCJ_LICENSE NEWS README THANKS
 	    cd ${S}/libiberty
 	    docinto libiberty
-	    dodoc ChangeLog COPYING.LIB README
+	    dodoc ChangeLog README
 	    cd ${S}/libobjc
 	    docinto libobjc
 	    dodoc ChangeLog README* THREADS*
