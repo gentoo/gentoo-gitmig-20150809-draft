@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/mpd-svn
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd-svn/ChangeLog,v 1.1 2004/11/29 21:55:04 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd-svn/ChangeLog,v 1.2 2004/11/30 13:41:06 ticho Exp $
+
+*mpd-svn-20041129-r1 (30 Nov 2004)
+
+  30 Nov 2004; Andrej Kacian <ticho@gentoo.org> +mpd-svn-20041129-r1.ebuild:
+  Added gperf as a dependency, as pointed out by Warren Dukes.
 
 *mpd-svn-20041129 (29 Nov 2004)
 
