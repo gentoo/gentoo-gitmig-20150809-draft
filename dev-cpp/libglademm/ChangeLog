@@ -1,6 +1,10 @@
 # ChangeLog for dev-cpp/libglademm
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libglademm/ChangeLog,v 1.14 2004/10/05 12:21:56 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libglademm/ChangeLog,v 1.15 2004/11/07 17:11:25 sekretarz Exp $
+
+  07 Nov 2004; Karol Wojtaszek <sekretarz@gentoo.org>
+  +files/libglademm-2.2.0-configure.patch, libglademm-2.2.0.ebuild:
+  Fixed linking problems on amd64, bug #57987
 
   05 Oct 2004; Jason Wever <weeve@gentoo.org> libglademm-2.4.0.ebuild:
   Added ~sparc keyword.
