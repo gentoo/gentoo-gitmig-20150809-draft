@@ -1,10 +1,20 @@
-MD5 f92bb468b000c9ad13ccfd99841e31f8 ChangeLog 11440
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 13a18da5f8ea71516aac28003d0f4172 koffice-1.3.5.ebuild 919
+MD5 db8df81b850f866c4334950fb68ddbdc ChangeLog 11533
 MD5 1f16f48b7c9dfce42b1ecfb1d96c3ff9 koffice-1.3.3-r2.ebuild 1148
 MD5 1fd88e400d0cf26a16ea3397561568f9 koffice-1.3.4-r1.ebuild 989
-MD5 e251c844d5537c567e3db36056a63158 koffice-1.3.5.ebuild 922
 MD5 96a4184e1e3325923219a5f96a5511a5 metadata.xml 163
-MD5 e5a6ea2ef1815721c7773577378931a2 files/digest-koffice-1.3.3-r2 68
-MD5 d261da2eaab2f46cd2f06609e5f41885 files/digest-koffice-1.3.4-r1 68
-MD5 12452317cab5461eb911114062f2cce2 files/digest-koffice-1.3.5 68
 MD5 20d32402fa6f6883dccb63cf1826a15f files/koffice_1_3_4_xpdf_security_integer_overflow.diff 3393
+MD5 d261da2eaab2f46cd2f06609e5f41885 files/digest-koffice-1.3.4-r1 68
+MD5 e5a6ea2ef1815721c7773577378931a2 files/digest-koffice-1.3.3-r2 68
 MD5 4736559193af7398788799098e16c3c8 files/xpdf-CESA-2004-007-xpdf2-newer.diff 2828
+MD5 12452317cab5461eb911114062f2cce2 files/digest-koffice-1.3.5 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFByHfhugEuf3OQ0akRAlc5AJ9F+HvuyNFUj9Dfh0VcxUaaGgOiZwCdH4bp
+ul0APeL9OKcKROekFQgd6vY=
+=usUc
+-----END PGP SIGNATURE-----
