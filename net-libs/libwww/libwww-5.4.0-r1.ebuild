@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libwww/libwww-5.4.0-r1.ebuild,v 1.8 2003/02/25 18:18:21 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libwww/libwww-5.4.0-r1.ebuild,v 1.9 2003/03/07 21:00:59 mholzer Exp $
 
 IUSE="ssl mysql"
 
@@ -16,14 +16,12 @@ SLOT="0"
 LICENSE="W3C"
 KEYWORDS="x86 ppc sparc alpha hppa"
 
-
 DEPEND="sys-devel/perl
 	>=sys-libs/zlib-1.1.4
-	mysql? ( >=dev-db/mysql-3.23.26 !>=mysql-4 )
+	mysql? ( >=dev-db/mysql-3.23.26 <dev-db/mysql-4 )
 	ssl? ( >=dev-libs/openssl-0.9.6 )"
 
 src_compile() {
-
 	local myconf
 
 	use mysql \
@@ -44,13 +42,10 @@ src_compile() {
 		${myconf} || die
 
 	emake || die
-
 }
 
 src_install () {
-
 	make prefix=${D}/usr install || die
 	dodoc COPYRIGH ChangeLog 
 	dohtml -r .
-
 }
