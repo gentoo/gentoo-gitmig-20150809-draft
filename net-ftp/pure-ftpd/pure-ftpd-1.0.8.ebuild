@@ -1,10 +1,10 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Bart Verwilst <verwilst@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/pure-ftpd-1.0.8_beta-r2.ebuild,v 1.1 2002/01/31 17:47:12 verwilst Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/pure-ftpd-1.0.8.ebuild,v 1.1 2002/02/01 15:09:30 verwilst Exp $
 
 S="${WORKDIR}/pure-ftpd-1.0.8"
-SRC_URI="http://prdownloads.sourceforge.net/pureftpd/pure-ftpd-1.0.8-beta.tar.gz"
+SRC_URI="http://prdownloads.sourceforge.net/pureftpd/${P}.tar.gz"
 DESCRIPTION="Pure-FTPd is a fast, production-quality, standard-conformant FTP server"
 
 DEPEND="virtual/glibc
@@ -14,6 +14,7 @@ DEPEND="virtual/glibc
 	ldap? ( >=net-nds/openldap )"
 
 src_compile() {
+
 	local myconf
 	cd ${S}
 	use pam && myconf="${myconf} --with-pam"
@@ -22,7 +23,7 @@ src_compile() {
 	use ldap && myconf="${myconf} --with-ldap"
 	./configure --prefix=/usr --with-altlog --with-puredb		\
 		--with-extauth --with-throttling --with-ratios		\
-		--with-quotas --with-cookie		\
+		--with-quotas --with-cookie				\
 		--with-uploadscript --with-virtualhosts			\
 		--with-virtualchroot --with-diraliases --with-ftpwho	\
 		--host=${CHOST} ${myconf} || die
@@ -42,3 +43,4 @@ src_install() {
 	chmod 755 ${D}/etc/init.d/pure-ftpd
 	
 }
+
