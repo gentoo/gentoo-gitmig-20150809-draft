@@ -2,8 +2,8 @@ MD5 6535d4722395ab12b5260836c2da7cba mm-sources-2.6.0_beta3-r3.ebuild 2164
 MD5 7b439a42927baa362c0b48be04934342 mm-sources-2.6.0_beta6-r1.ebuild 2972
 MD5 5d5e3796a3dfec3f4674c455cad90422 mm-sources-2.6.0_beta5-r4.ebuild 2974
 MD5 989752e6e5c4dac06c24117e0e857c0e mm-sources-2.6.0_beta4-r6.ebuild 2967
-MD5 7b439a42927baa362c0b48be04934342 mm-sources-2.6.0_beta6-r2.ebuild 2972
-MD5 8660cc5ad2c0fde9ad2e73f2c5e59fdc ChangeLog 14825
+MD5 2f6ccf8e9fb9e71d202c7e3d070722fa mm-sources-2.6.0_beta6-r2.ebuild 2976
+MD5 56f1ace2cce6533be8837af7174bf178 ChangeLog 14964
 MD5 62587df4b49506468241ec3c9415b010 metadata.xml 435
 MD5 c2a85ee37f0ce1076159ec64b7c5a78d files/wpadded.patch 1751
 MD5 ed6f583c9a528322461a432cf8f0409c files/2.6.0-test5-mm4-devfsd-fix 594
