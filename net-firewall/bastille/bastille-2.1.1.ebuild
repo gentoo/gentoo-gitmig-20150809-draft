@@ -1,10 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/bastille/bastille-2.1.1.ebuild,v 1.6 2003/08/27 00:05:35 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/bastille/bastille-2.1.1.ebuild,v 1.7 2003/09/05 21:22:33 seemant Exp $
 
 inherit perl-module
 
-IUSE="tcltk"
+IUSE="X"
 
 MY_PN=${PN/b/B}
 MY_P=${MY_PN}-${PV}
@@ -22,7 +22,7 @@ KEYWORDS="~x86 ~ppc ~sparc ~alpha ~mips ~hppa"
 RDEPEND="net-firewall/iptables
 	app-admin/logrotate
 	dev-perl/Curses
-	tcltk? ( dev-perl/perl-tk )"
+	X? ( dev-perl/perl-tk )"
 
 src_unpack() {
 	unpack ${A}
@@ -78,7 +78,7 @@ src_install() {
 	perlinfo
 	insinto ${SITE_LIB}
 	doins Bastille_Curses.pm
-	use tcltk && doins Bastille_Tk.pm
+	use X && doins Bastille_Tk.pm
 	insinto ${SITE_LIB}/Curses
 	doins Curses/Widgets.pm
 
@@ -122,5 +122,5 @@ pkg_postinst() {
 		mknod -m 600 ${ROOT}/var/log/psadfifo p
 		eend $?
 	fi
-	use tcltk || einfo "When not using the Tk interface you will need to start use the -c flag when calling ${PN} from command line. example ${PN} -c --os GE1.4"
+	use X || einfo "When not using the Tk interface you will need to start use the -c flag when calling ${PN} from command line. example ${PN} -c --os GE1.4"
 }

@@ -1,6 +1,9 @@
 # ChangeLog for net-firewall/bastille
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/bastille/ChangeLog,v 1.5 2003/08/27 00:05:34 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/bastille/ChangeLog,v 1.6 2003/09/05 21:22:33 seemant Exp $
+
+  05 Sep 2003; Seemant Kulleen <seemant@gentoo.org> bastille-2.1.1.ebuild:
+  using the X flag instead of tcltk
 
   26 Aug 2003; Seemant Kulleen <seemant@gentoo.org> bastille-2.1.1.ebuild:
   updated patch from Battousai.  Fixes for program and config file
