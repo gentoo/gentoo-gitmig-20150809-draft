@@ -1,6 +1,9 @@
 # ChangeLog for net-im/jud
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jud/ChangeLog,v 1.1 2004/01/12 01:35:05 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jud/ChangeLog,v 1.2 2004/02/17 21:31:30 humpback Exp $
+
+  17 Feb 2004; Gustavo Felisberto <humpback@gentoo.org>; jud-0.5.ebuild:
+  Marking stable on x86
 
 *jud-0.5 (11 Jan 2004)
 

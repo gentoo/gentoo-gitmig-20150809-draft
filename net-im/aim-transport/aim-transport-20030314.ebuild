@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/aim-transport/aim-transport-20030314.ebuild,v 1.1 2004/01/24 01:47:14 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/aim-transport/aim-transport-20030314.ebuild,v 1.2 2004/02/17 21:39:02 humpback Exp $
 
 MY_PN="${PN}-stable"
 S="${WORKDIR}/${MY_PN}-${PV}"
@@ -14,7 +14,7 @@ LICENSE="GPL-2"
 
 SLOT="0"
 
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 IUSE=""
 
