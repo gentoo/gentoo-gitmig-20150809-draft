@@ -1,0 +1,18 @@
+--- elfutils-0.84/src/strip.c.jj	2003-09-01 21:26:01.969396280 +0100
++++ elfutils-0.84/src/strip.c	2003-09-01 21:26:11.984873696 +0100
+@@ -271,8 +271,15 @@
+ 	     format utimes() understands.  */
+ 	  struct timeval tv[2];
+ 
++/*
+ 	  TIMESPEC_TO_TIMEVAL (&tv[0], &st.st_atim);
+ 	  TIMESPEC_TO_TIMEVAL (&tv[1], &st.st_mtim);
++ */
++
++ 	  tv[0].tv_sec = st.st_atime;
++	  tv[0].tv_usec = 0;
++ 	  tv[1].tv_sec = st.st_mtime;
++	  tv[1].tv_usec = 0;
+ 
+ 	  int result = handle_elf (fd, elf, NULL, fname,
+ 				   st.st_mode & ACCESSPERMS,

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/elfutils-0.84.ebuild,v 1.3 2003/08/30 12:38:45 cretin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/elfutils-0.84.ebuild,v 1.4 2003/09/01 20:35:32 cretin Exp $
 
 inherit eutils
 
@@ -16,7 +16,7 @@ LICENSE="OpenSoftware"
 SLOT="0"
 KEYWORDS="~x86 ~sparc ~ppc ~alpha ~hppa"
 
-DEPEND="virtual/glibc
+DEPEND=">=sys-libs/glibc-2.3.2
 	>=sys-devel/gcc-3.2.1-r6
 	!dev-libs/libelf"
 
@@ -28,6 +28,8 @@ src_unpack() {
 		sed -e 's:-Werror::g' \
 		${x}.orig > ${x}
 	done
+
+	use alpha && epatch ${FILESDIR}/${P}-atime.diff
 }
 
 src_compile() {
