@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/k3b
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/ChangeLog,v 1.36 2004/01/27 14:52:57 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/ChangeLog,v 1.37 2004/01/27 16:16:02 lanius Exp $
+
+  27 Jan 2004; Heinrich Wendel <lanius@gentoo.org> k3b-0.11.1-r1.ebuild:
+  added docs; only info about k3bsetup if it is installed
 
 *k3b-0.11.1-r1 (27 Jan 2004)
 

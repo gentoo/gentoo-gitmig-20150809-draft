@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-0.11.1-r1.ebuild,v 1.1 2004/01/27 14:52:57 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-0.11.1-r1.ebuild,v 1.2 2004/01/27 16:16:02 lanius Exp $
 
 inherit kde
 need-kde 3.1
@@ -69,6 +69,8 @@ src_compile() {
 src_install() {
 	make DESTDIR=${D} install || die
 
+	dodoc AUTHORS COPYING ChangeLog FAQ README TODO
+
 #	if [ -n "${LINGUAS}" -a -d "${WORKDIR}/${I18N}" ]; then
 #		cd "${WORKDIR}/${I18N}"
 #		make DESTDIR=${D} install || die
@@ -77,12 +79,14 @@ src_install() {
 
 pkg_postinst()
 {
-	einfo "The k3b setup program will offer to change some permissions and"
-	einfo "create a user group.  These changes are not necessary.  We recommend"
-	einfo "that you clear the two check boxes that let k3b make changes for"
-	einfo "cdrecord and cdrdao and let k3b make changes for the devices when"
-	einfo "running k3b setup."
-	echo
+	if use kde; then
+		einfo "The k3b setup program will offer to change some permissions and"
+		einfo "create a user group.  These changes are not necessary.  We recommend"
+		einfo "that you clear the two check boxes that let k3b make changes for"
+		einfo "cdrecord and cdrdao and let k3b make changes for the devices when"
+		einfo "running k3b setup."
+		echo
+	fi
 	einfo "I18n tarballs are not evailable yet, due to kde 3.2 release plan."
 	einfo "LINGUAS is \"disabled\" therefore."
 }
