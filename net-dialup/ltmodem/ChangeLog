@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/ltmodem
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ltmodem/ChangeLog,v 1.11 2004/02/04 14:14:02 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ltmodem/ChangeLog,v 1.12 2004/02/04 19:17:05 lanius Exp $
+
+  04 Feb 2004; Heinrich Wendel <lanius@gentoo.org>
+  ltmodem-8.26_alpha9-r3.ebuild:
+  deactivate userpriv, otherwise it will fail on kernel 2.6
 
   04 Feb 2004; Heinrich Wendel <lanius@gentoo.org>
   ltmodem-8.26_alpha9-r3.ebuild:
