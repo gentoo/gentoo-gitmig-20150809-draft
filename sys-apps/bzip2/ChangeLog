@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/bzip2
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/bzip2/ChangeLog,v 1.12 2003/02/07 23:45:12 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/bzip2/ChangeLog,v 1.13 2003/02/09 00:01:41 gmsoft Exp $
+
+  09 Feb 2003; Guy Martin <gmsoft@gentoo.org> bzip2-1.0.2-r2.ebuild :
+  Added hppa to keywords.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  

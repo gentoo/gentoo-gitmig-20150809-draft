@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/kbd
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kbd/ChangeLog,v 1.6 2003/01/19 20:18:48 tuxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kbd/ChangeLog,v 1.7 2003/02/09 00:05:59 gmsoft Exp $
+
+  09 Feb 2003; Guy Martin <gmsoft@gentoo.org> kbd-1.06-r1.ebuild :
+  Added hppa to keywords.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
@@ -32,4 +35,4 @@
   Every new version or revision of the package has to be marked by a '*'
   seperator line as above. Changements since the last revision have to be
   added to the top of the file, underneath the initial copyright and cvs header
-  comments, in exactly the same format as this comment.
+  omments, in exactly the same format as this comment.
