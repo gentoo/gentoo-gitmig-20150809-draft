@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/vice-1.14.ebuild,v 1.4 2004/04/12 21:07:45 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/vice-1.14.ebuild,v 1.5 2004/04/14 20:02:28 wolf31o2 Exp $
 
-inherit games
+inherit games eutils
 
 DESCRIPTION="The Versatile Commodore 8-bit Emulator"
 HOMEPAGE="http://www.viceteam.org/"
