@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/dcraw
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/dcraw/ChangeLog,v 1.2 2004/10/24 19:56:41 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/dcraw/ChangeLog,v 1.3 2004/10/25 09:35:34 wschlich Exp $
+
+  25 Oct 2004; Wolfram Schlich <wschlich@gentoo.org> dcraw-6.09.ebuild:
+  Fixed wrong SRC_URI
 
 *dcraw-6.09 (24 Oct 2004)
 
