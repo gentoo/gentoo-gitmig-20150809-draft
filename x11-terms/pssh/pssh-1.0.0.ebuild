@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/pssh/pssh-1.0.0.ebuild,v 1.1 2004/08/21 16:59:34 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/pssh/pssh-1.0.0.ebuild,v 1.2 2004/08/21 17:03:02 voxus Exp $
 
 DESCRIPTION="This package provides parallel versions of the openssh tools."
 HOMEPAGE="http://www.theether.org/pssh/"
@@ -12,6 +12,7 @@ KEYWORDS="~x86"
 IUSE=""
 
 DEPEND=">=dev-lang/python-2.2"
+RDEPEND="net-misc/openssh"
 
 src_install() {
 	dodoc AUTHORS COPYING TODO COPYING
