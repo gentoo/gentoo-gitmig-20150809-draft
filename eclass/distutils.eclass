@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/distutils.eclass,v 1.12 2003/05/10 18:29:16 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/distutils.eclass,v 1.13 2003/09/09 17:18:27 liquidx Exp $
 #
 # Author: Jon Nelson <jnelson@gentoo.org>
 # Current Maintainer: Alastair Tse <liquidx@gentoo.org>
@@ -51,14 +51,13 @@ distutils_src_install() {
 
 # e.g. insinto ${ROOT}/usr/include/python${PYVER}
 
-distutils_python_version()
-{
+distutils_python_version() {
 	local tmpstr="$(${python} -V 2>&1 )"
-	tmpstr="${tmpstr#Python }"
-	tmpstr=${tmpstr%.*}
+	export PYVER_ALL="${tmpstr#Python }"
 
-	export PYVER_MAJOR="${tmpstr%.[0-9]*}"
-	export PYVER_MINOR="${tmpstr#[0-9]*.}"
+	export PYVER_MAJOR=$(echo ${PYVER_ALL} | cut -d. -f1)
+	export PYVER_MINOR=$(echo ${PYVER_ALL} | cut -d. -f2)
+	export PYVER_MICRO=$(echo ${PYVER_ALL} | cut -d. -f3-)
 	export PYVER="${PYVER_MAJOR}.${PYVER_MINOR}"
 }
 
@@ -72,6 +71,8 @@ distutils_python_tkinter() {
 	fi
 }
 
+# export PYVER as well
+distutils_python_version
 
 EXPORT_FUNCTIONS src_compile src_install
 
