@@ -1,13 +1,16 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.54 2002/12/23 17:49:58 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.55 2002/12/28 06:35:46 jmorgan Exp $
+
+*gcc-3.2.1-r6 (16 Dec 2002)
+
+  28 Dec 2002; Jack Morgan <jmorgan@gentoo.org> gcc-3.2.1.ebuild :
+  Changing ~sparc to sparc
 
   23 Dec 2002; Martin Schlemmer <azarah@gentoo.org> :
-
   Fix to use get_number_of_jobs to set -j.
-
+  
   16 Dec 2002; Martin Schlemmer <azarah@gentoo.org> gcc-3.2.1*.ebuild :
-
   Fix to set CC and CXX properly.
 
   16 Dec 2002; Martin Schlemmer <azarah@gentoo.org> gcc-3.2.1-r1.ebuild,
@@ -20,7 +23,6 @@
   Install the /lib/cpp and /usr/bin/cc wrappers for other common used gcc's.
 
 *gcc-3.2.1-r1 (16 Dec 2002)
-*gcc-3.2.1-r6 (16 Dec 2002)
 
   16 Dec 2002; Martin Schlemmer <azarah@gentoo.org> gcc-3.2.1-r1.ebuild,
   gcc-3.2.1-r6.ebuild :
