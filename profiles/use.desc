@@ -40,7 +40,7 @@ evo - Adds support for evolution in gnumeric
 fbcon - Adds framebuffer support for the console, via the kernel
 flash - Adds support for creating flash files using Ming
 gb - Adds support for Gnome Basic to gnumeric
-gd - Adds support for sys-libs/gdbm (GNU database libraries)
+gd - Adds support for media-libs/gd (A graphics library)
 gdbm - Adds support for sys-libs/gdbm (GNU database libraries)
 ggi - Adds support for media-libs/libggi (non-X video api/drivers)
 ggz - Adds support for the Gnu Gaming Zone - http://ggz.sf.net
