@@ -1,8 +1,9 @@
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/wmalms/wmalms-1.0.0a-r1.ebuild,v 1.2 2002/07/08 21:31:07 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/wmalms/wmalms-1.0.0a-r1.ebuild,v 1.3 2002/07/19 22:51:38 lostlogic Exp $
 
 DESCRIPTION="wmalms X-windows hardware sensors applet"
-DEPEND="x11-base/xfree"
+DEPEND="x11-base/xfree
+	sys-apps/lm_sensors"
 RDEPEND="${DEPEND}"
 LICENSE="GPL"
 SLOT="0"
