@@ -1,8 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-geoip/net-geoip-0.06.ebuild,v 1.3 2004/06/25 01:54:48 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-geoip/net-geoip-0.06.ebuild,v 1.4 2004/07/05 05:47:17 usata Exp $
 
 inherit ruby
+
+IUSE=""
 
 DESCRIPTION="Ruby bindings for the GeoIP library"
 HOMEPAGE="http://www.maxmind.com/app/ruby"
@@ -10,7 +12,7 @@ SRC_URI="http://www.rubynet.org/modules/net/geoip/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ppc"
 
 DEPEND="virtual/ruby
 	>=dev-libs/geoip-1.2.1"
