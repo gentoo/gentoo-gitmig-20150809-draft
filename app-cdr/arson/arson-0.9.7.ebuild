@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/arson/arson-0.9.7.ebuild,v 1.5 2003/09/05 22:57:43 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/arson/arson-0.9.7.ebuild,v 1.6 2003/12/05 13:59:05 weeve Exp $
 
 IUSE="oggvorbis"
 
@@ -13,7 +13,7 @@ DESCRIPTION="A KDE frontend to CD burning and CD ripping tools."
 SRC_URI="mirror://sourceforge/arson/${P}-kde3.tar.bz2"
 HOMEPAGE="http://arson.sourceforge.net/"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc "
+KEYWORDS="x86 ppc ~sparc "
 
 newdepend ">=media-sound/cdparanoia-3.9.8
 	   >=media-sound/bladeenc-0.94.2
