@@ -1,6 +1,9 @@
 # ChangeLog for app-sci/drgeo
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/drgeo/ChangeLog,v 1.1 2004/03/06 17:25:44 pbienst Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/drgeo/ChangeLog,v 1.2 2004/04/03 13:15:37 pbienst Exp $
+
+  03 Apr 2004; pbienst <pbienst@gentoo.org> drgeo-0.9.12.ebuild:
+  Marked stable on x86.
 
 *drgeo-0.9.12 (6 Mar 2004)
 
