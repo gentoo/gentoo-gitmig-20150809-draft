@@ -1,8 +1,11 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.104 2003/11/18 19:04:15 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.105 2003/11/18 22:32:28 gmsoft Exp $
 
 *glibc-2.3.2-r9 (18 Nov 2003)
+
+  18 Nov 2003; Guy Martin <gmsoft@gentoo.org> glibc-2.3.2-r9.ebuild :
+  Removed hppa stuff. New patching method should come shortly.
 
   18 Nov 2003; Martin Schlemmer <azarah@gentoo.org> glibc-2.3.2-r9.ebuild:
   - Update CVS branch to 20031115.
@@ -65,6 +68,9 @@
 
 *glibc-2.3.2-r8 (26 Oct 2003)
 
+  18 Nov 2003; Guy Martin <gmsoft@gentoo.org> glibc-2.3.2-r8.ebuild :
+  Marked -hppa and removed hppa stuff from it.
+
   26 Oct 2003; Martin Schlemmer <azarah@gentoo.org> glibc-2.3.2-r8.ebuild:
   Update snapshot.
 
@@ -87,6 +93,10 @@
   except for an occasional break, current CVS snapshots looks good.
 
 *glibc-2.3.2-r7 (14 Oct 2003)
+
+  18 Nov 2003; Guy Martin <gmsoft@gentoo.org> glibc-2.3.2-r7.ebuild :
+  Readded for hppa only. Added hppa patches and depend to correct
+  hppa-headers.
 
   14 Oct 2003; Martin Schlemmer <azarah@gentoo.org> glibc-2.3.2-r7.ebuild:
   Update CVS snapshot.  NPTL is now in official CVS.
