@@ -1,16 +1,15 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/flac-1.1.0.ebuild,v 1.18 2004/03/16 01:15:37 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/flac-1.1.0.ebuild,v 1.19 2004/04/15 18:59:19 vapier Exp $
 
 inherit libtool
 
 DESCRIPTION="free lossless audio encoder which includes an XMMS plugin"
-SRC_URI="mirror://sourceforge/flac/${P}.tar.gz"
-RESTRICT="nomirror"
 HOMEPAGE="http://flac.sourceforge.net/"
+SRC_URI="mirror://sourceforge/flac/${P}.tar.gz"
 
-SLOT="0"
 LICENSE="GPL-2 LGPL-2"
+SLOT="0"
 KEYWORDS="x86 ppc sparc alpha hppa amd64 ia64 ~mips"
 IUSE="sse xmms X"
 
@@ -32,11 +31,11 @@ src_unpack() {
 		cp src/Makefile.in src/Makefile.in.orig
 		sed -e '/^@FLaC__HAS_XMMS_TRUE/d' src/Makefile.in.orig > src/Makefile.in || die
 	fi
+
+	elibtoolize --reverse-deps
 }
 
 src_compile() {
-	elibtoolize --reverse-deps
-
 	# hppa need -fPIC for to compile when X and xmss are in USE
 	if use xmms && use X && [ "${ARCH}" = "hppa" ]
 	then
