@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/glunarclock/glunarclock-0.32.1.ebuild,v 1.3 2004/09/02 22:49:40 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/glunarclock/glunarclock-0.32.1.ebuild,v 1.4 2004/09/04 13:12:42 pyrania Exp $
 
 inherit gnome2
 
@@ -14,6 +14,21 @@ SLOT="0"
 KEYWORDS="~x86 ppc"
 IUSE=""
 
-DEPEND=">=gnome-base/gnome-2.6.0"
+
+
+RDEPEND=">=x11-libs/gtk+-2.1.0
+		>=gnome-base/libgnome-2.0.0
+		>=gnome-base/libgnomeui-2.0.0
+		>=gnome-vfs-1.9.16
+		>=gnome-base/gconf-1.1.11
+		>=gnome-base/libgtop-2.0.0
+		>=x11-libs/libwnck-0.13
+		>=gnome-base/libglade-2.0.0
+		>=gnome-base/gnome-panel-2.0.0"
+
+DEPEND="${RDEPEND}
+		>=dev-util/intltool-0.29
+		>=app-text/scrollkeeper-0.1.4
+		dev-util/pkgconfig"
 
 DOCS="AUTHORS ChangeLog COPYING* INSTALL MAINTAINERS TODO README"
