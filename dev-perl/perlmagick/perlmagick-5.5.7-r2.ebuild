@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/perlmagick/perlmagick-5.5.7-r2.ebuild,v 1.3 2004/04/25 21:06:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/perlmagick/perlmagick-5.5.7-r2.ebuild,v 1.4 2004/04/27 20:53:29 agriffis Exp $
 
-inherit perl-module flag-o-matic
+inherit perl-module flag-o-matic eutils
 
 # Left this the same as ImageMagick for the sake of simplicity
 MY_PN=ImageMagick
