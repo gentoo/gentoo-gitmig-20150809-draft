@@ -1,6 +1,12 @@
 # ChangeLog for net-wireless/airsnort
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/airsnort/ChangeLog,v 1.11 2004/01/26 19:30:13 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/airsnort/ChangeLog,v 1.12 2004/02/07 04:50:29 latexer Exp $
+
+*airsnort-0.2.3c (06 Feb 2004)
+
+  06 Feb 2004; Peter Johanson <latexer@gentoo.org> airsnort-0.2.3c.ebuild:
+  Version bump to new gtk2 version. Thanks to Florian Schilhabel
+  <fernsehleo@gmx.net> (bug #38914)
 
   26 Jan 2004; Jason Wever <weeve@gentoo.org> airsnort-0.2.1a.ebuild,
   airsnort-0.2.1b.ebuild, airsnort-0.2.2.ebuild:
