@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvd+rw-tools/dvd+rw-tools-5.17.4.8.6.ebuild,v 1.4 2004/02/10 14:33:22 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvd+rw-tools/dvd+rw-tools-5.17.4.8.6.ebuild,v 1.5 2004/03/10 16:31:33 agriffis Exp $
 
 DESCRIPTION="A set of tools for DVD+RW/-RW drives."
 HOMEPAGE="http://fy.chalmers.se/~appro/linux/DVD+RW/"
@@ -8,7 +8,7 @@ SRC_URI="http://fy.chalmers.se/~appro/linux/DVD+RW/tools/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ppc sparc hppa ~amd64 ~alpha ~ia64"
+KEYWORDS="~x86 ppc sparc hppa ~amd64 alpha ia64"
 
 IUSE=""
 
