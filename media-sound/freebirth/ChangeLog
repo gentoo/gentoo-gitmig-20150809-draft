@@ -1,0 +1,12 @@
+# ChangeLog for media-sound/freebirth
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/freebirth/ChangeLog,v 1.1 2003/06/21 00:41:11 jje Exp $
+
+*freebirth-0.3.2 (21 Jun 2003)
+
+  21 Jun 2003; jje <jje@gentoo.org> freebirth-0.3.2.ebuild,
+  files/freebirth-0.3.2-gentoo.patch:
+  Initial revision.
+  
+  Submitted by: MATSUU Takuto <matsuu@7501.net>
+
