@@ -1,8 +1,11 @@
 # ChangeLog for x11-libs/fltk
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/ChangeLog,v 1.19 2003/02/12 09:22:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/ChangeLog,v 1.20 2003/03/31 02:45:54 liquidx Exp $
 
 *fltk-1.1.2-r1 (09 Jan 2003)
+
+  31 Mar 2003; Alastair Tse <liquidx@gentoo.org> fltk-1.1.2-r1.ebuild:
+  fix linking problem with libs. fixes #15572, #17894.
 
   08 Jan 2003; Nick Hadaway <raker@gentoo.org> fltk-1.1.2-r1.ebuild,
   files/digest-fltk-1.1.2-r1 :

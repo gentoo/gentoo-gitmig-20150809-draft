@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/fltk-1.1.2-r1.ebuild,v 1.3 2003/02/14 21:38:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/fltk-1.1.2-r1.ebuild,v 1.4 2003/03/31 02:45:54 liquidx Exp $
 
 inherit eutils
 
@@ -41,8 +41,12 @@ src_compile() {
 
 	use opengl || myconf="${myconf} --disable-gl"
 
+	# needed for glibc-2.3.1 (as far as i can test)
+    # otherwise libstdc++ won't be linked. #17894 and #15572
+    # doesn't happen for glibc-2.3.2 - <liquidx@gentoo.org>
 	export CXX="g++"
-
+	export CC="g++"
+    
 	econf \
 		--includedir=/usr/include/fltk-1.1 \
 		--libdir=/usr/lib/fltk-1.1 \
