@@ -1,6 +1,16 @@
 # ChangeLog for net-im/skype
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/skype/ChangeLog,v 1.13 2004/08/23 18:10:50 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/skype/ChangeLog,v 1.14 2004/09/04 16:37:23 humpback Exp $
+
+*skype-0.91.0.12 (04 Sep 2004)
+
+  04 Sep 2004; Gustavo Felisberto <humpback@gentoo.org>;
+  +skype-0.91.0.12.ebuild:
+  Adding version 0.91.0.12, skype keeps changing the name of the directory where
+  it unpacks stuff. This closes bug 62807, thanks to Jurek Bartuszek for taking
+  this bump to our attention. On a side note, people have been asking when this
+  will be marked stable, my answer right now is that it will go stable when
+  skype stops making new versions every 15 days.
 
   23 Aug 2004; Gustavo Felisberto <humpback@gentoo.org>;
   skype-0.91.0.3.ebuild:
