@@ -1,0 +1,49 @@
+#!/sbin/runscript
+#
+# (c) 2003 Dennis Leeuw
+# License: GPL version 2 or any newer version
+#
+# Modifications, truncation, and gentoo-ification:
+# Copyright 2004 Gentoo Technologies, Inc.
+
+if [ -f /etc/conf.d/gnustep.env ]; then
+	. /etc/conf.d/gnustep.env
+else
+	GNUSTEP_SYSTEM_ROOT="/usr/GNUstep/System"
+fi
+. ${GNUSTEP_SYSTEM_ROOT}/Library/Makefiles/GNUstep.sh
+
+start() {
+	ebegin "Starting gnustep daemons..."
+
+	ebegin "\tgdomap "
+	GNUSTEP_USER_ROOT=/var/run/GNUstep \
+		GNUSTEP_DEFAULTS_ROOT=/var/run/GNUstep \
+		gdomap
+	ebegin "\tgdnc "
+	GNUSTEP_USER_ROOT=/var/run/GNUstep \
+		GNUSTEP_DEFAULTS_ROOT=/var/run/GNUstep \
+		gdnc
+#	ebegin "\tgnustep_sndd"
+#	GNUSTEP_USER_ROOT=/var/run/GNUstep \
+#	GNUSTEP_DEFAULTS_ROOT=/var/run/GNUstep \
+#		/gnustep_sndd
+
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping gnustep daemons..."
+
+	ebegin "\tgdomap "
+	killall gdomap
+	
+	ebegin "\tgdnc "
+	killall gdnc
+
+#	ebegin "\tgnustep_sndd"
+#	killall gnustep_sndd
+
+	eend $?
+}
+

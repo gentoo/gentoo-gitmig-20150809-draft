@@ -1,6 +1,22 @@
 # ChangeLog for gnustep-base/gnustep-gui
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-gui/ChangeLog,v 1.15 2004/11/02 17:31:00 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-gui/ChangeLog,v 1.16 2004/11/12 03:47:43 fafhrd Exp $
+
+*gnustep-gui-0.9.5_pre20041030-r1 (11 Nov 2004)
+
+  11 Nov 2004; Armando Di Cianno <fafhrd@gentoo.org>
+  -gnustep-gui-0.7.9.ebuild, -gnustep-gui-0.8.0.ebuild,
+  -gnustep-gui-0.8.3.ebuild, -gnustep-gui-0.8.5-r1.ebuild,
+  -gnustep-gui-0.8.5.ebuild, -gnustep-gui-0.8.7.ebuild,
+  -gnustep-gui-0.8.8.ebuild, gnustep-gui-0.9.4.ebuild,
+  -gnustep-gui-0.9.5_pre20040928.ebuild,
+  +gnustep-gui-0.9.5_pre20041030-r1.ebuild,
+  -gnustep-gui-0.9.5_pre20041030.ebuild:
+  Mass Update: gnustep.eclass revamped to allow configurable root install;
+  gnustep-base/libs/apps updated to utilize new gnustep.eclass (only versions
+  bumped where files would change); some KEYWORDS were accidentally dropped
+  between version bumps of packages -- this has been resolved; windowmaker
+  correctly supports gnustep now
 
   02 Nov 2004; Simon Stelling <blubb@gentoo.org> gnustep-gui-0.9.4.ebuild:
   added ~amd64

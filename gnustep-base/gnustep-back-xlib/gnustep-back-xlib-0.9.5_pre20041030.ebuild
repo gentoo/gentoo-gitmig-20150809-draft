@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-back-xlib/gnustep-back-xlib-0.9.5_pre20041030.ebuild,v 1.1 2004/10/31 05:40:32 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-back-xlib/gnustep-back-xlib-0.9.5_pre20041030.ebuild,v 1.2 2004/11/12 03:48:23 fafhrd Exp $
 
 ECVS_CVS_COMMAND="cvs -q"
 ECVS_SERVER="savannah.gnu.org:/cvsroot/gnustep"
@@ -17,7 +17,7 @@ S=${WORKDIR}/${ECVS_MODULE}
 DESCRIPTION="Default X11 back-end component for the GNUstep GUI Library."
 HOMEPAGE="http://www.gnustep.org"
 
-KEYWORDS="~ppc"
+KEYWORDS="~x86 ~ppc ~sparc"
 SLOT="0"
 LICENSE="LGPL-2.1"
 
@@ -25,12 +25,13 @@ PROVIDE="virtual/gnustep-back"
 
 IUSE="${IUSE} opengl xim doc"
 DEPEND="${GNUSTEP_GUI_DEPEND}
-	=gnustep-base/gnustep-gui-${PV}
-	opengl? ( virtual/opengl virtual/glu )
+	=gnustep-base/gnustep-gui-${PV}*
 	virtual/xft
-	=media-libs/freetype-2.1*"
+	opengl? ( virtual/opengl virtual/glu )"
 RDEPEND="${DEPEND}
 	${DOC_RDEPEND}"
+
+egnustep_install_domain "System"
 
 src_compile() {
 	egnustep_env

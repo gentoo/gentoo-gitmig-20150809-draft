@@ -1,6 +1,17 @@
 # ChangeLog for gnustep-base/gnustep-env
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-env/ChangeLog,v 1.8 2004/10/31 16:01:30 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-env/ChangeLog,v 1.9 2004/11/12 03:48:44 fafhrd Exp $
+
+*gnustep-env-0.1.5 (11 Nov 2004)
+
+  11 Nov 2004; Armando Di Cianno <fafhrd@gentoo.org> +files/gnustep.env-0.1.5,
+  +files/gnustep.runscript-0.1.5, gnustep-env-0.1.4.ebuild,
+  +gnustep-env-0.1.5.ebuild:
+  Mass Update: gnustep.eclass revamped to allow configurable root install;
+  gnustep-base/libs/apps updated to utilize new gnustep.eclass (only versions
+  bumped where files would change); some KEYWORDS were accidentally dropped
+  between version bumps of packages -- this has been resolved; windowmaker
+  correctly supports gnustep now
 
   31 Oct 2004; Jason Wever <weeve@gentoo.org> gnustep-env-0.1.4.ebuild:
   Added ~sparc keyword.

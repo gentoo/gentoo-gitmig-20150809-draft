@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-gui/gnustep-gui-0.9.4.ebuild,v 1.5 2004/11/02 17:31:00 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-gui/gnustep-gui-0.9.4.ebuild,v 1.6 2004/11/12 03:47:43 fafhrd Exp $
 
 inherit gnustep
 
@@ -8,32 +8,24 @@ DESCRIPTION="It is a library of graphical user interface classes written complet
 HOMEPAGE="http://www.gnustep.org"
 SRC_URI="ftp://ftp.gnustep.org/pub/gnustep/core/${P}.tar.gz"
 
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~ppc ~x86 ~amd64 ~sparc ~alpha"
 SLOT="0"
 LICENSE="LGPL-2.1"
 
-IUSE="${IUSE} jpeg gif png gsnd doc cups camaelon"
+IUSE="${IUSE} jpeg gif png gsnd doc cups"
 DEPEND="${GNUSTEP_BASE_DEPEND}
 	virtual/x11
-	=media-libs/tiff-3*
-	jpeg? =media-libs/jpeg-6b*
-	gif? =media-libs/libungif-4.1*
-	png? =media-libs/libpng-1.2*
-	gsnd? =media-libs/audiofile-0.2*
-	cups? =net-print/cups-1.1*
-	=app-text/aspell-0.50*"
+	>=media-libs/tiff-3*
+	jpeg? >=media-libs/jpeg-6b*
+	gif? >=media-libs/libungif-4.1*
+	png? >=media-libs/libpng-1.2*
+	gsnd? >=media-libs/audiofile-0.2*
+	cups? >=net-print/cups-1.1*
+	app-text/aspell"
 RDEPEND="${DEPEND}
 	${DOC_RDEPEND}"
-PDEPEND="camaelon? =gnustep-libs/camaelon-0.1"
 
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-	if use camaelon
-	then
-		epatch ${FILESDIR}/${P}-camaelon.patch
-	fi
-}
+egnustep_install_domain "System"
 
 src_compile() {
 	egnustep_env

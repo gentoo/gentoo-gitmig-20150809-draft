@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-back-art/gnustep-back-art-0.9.5_pre20041030.ebuild,v 1.1 2004/10/31 05:40:49 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-back-art/gnustep-back-art-0.9.5_pre20041030.ebuild,v 1.2 2004/11/12 03:48:04 fafhrd Exp $
 
 ECVS_CVS_COMMAND="cvs -q"
 ECVS_SERVER="savannah.gnu.org:/cvsroot/gnustep"
@@ -17,7 +17,7 @@ S=${WORKDIR}/${ECVS_MODULE}
 DESCRIPTION="libart_lgpl back-end component for the GNUstep GUI Library."
 HOMEPAGE="http://www.gnustep.org"
 
-KEYWORDS="~ppc"
+KEYWORDS="~ppc ~x86 ~amd64 ~sparc ~alpha"
 SLOT="0"
 LICENSE="LGPL-2.1"
 
@@ -25,15 +25,16 @@ PROVIDE="virtual/gnustep-back"
 
 IUSE="${IUSE} opengl xim doc"
 DEPEND="${GNUSTEP_GUI_DEPEND}
-	=gnustep-base/gnustep-gui-${PV}
+	virtual/xft
+	=gnustep-base/gnustep-gui-${PV}*
 	opengl? ( virtual/opengl virtual/glu )
 	gnustep-libs/artresources
-	=gnustep-base/mknfonts-0.5
-	virtual/xft
-	=media-libs/freetype-2.1*
-	=media-libs/libart_lgpl-2.3*"
+	>=gnustep-base/mknfonts-0.5
+	>=media-libs/libart_lgpl-2.3*"
 RDEPEND="${DEPEND}
 ${DOC_RDEPEND}"
+
+egnustep_install_domain "System"
 
 src_compile() {
 	egnustep_env
