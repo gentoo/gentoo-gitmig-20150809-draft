@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/jabref/jabref-1.5.ebuild,v 1.1 2004/08/15 18:15:23 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/jabref/jabref-1.5.ebuild,v 1.2 2004/08/24 01:57:26 zx Exp $
 
 inherit java-pkg
 
@@ -16,7 +16,7 @@ DEPEND=">=virtual/jdk-1.4
 	jikes? ( dev-java/jikes )"
 
 src_compile() {
-	local antflags="jars"
+	local antflags="compile unjarlib jars"
 	use jikes && antflags="${antflags} -Dbuild.compiler=jikes"
 	ant ${antflags} || die "compile problem"
 }
