@@ -1,8 +1,0 @@
-# ChangeLog for app-misc/gcolor
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gcolor/ChangeLog,v 1.2 2003/02/12 04:59:02 vapier Exp $
-
-*gcolor-0.4 (25 Dec 2002)
-
-  25 Dec 2002; Arcady Genkin <agenkin@gentoo.org> :
-  Initial version.
