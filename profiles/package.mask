@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3609 2005/02/12 02:38:58 kloeri Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3610 2005/02/12 06:29:20 solar Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -886,10 +886,6 @@ media-gfx/gphoto
 # Deprecated bluez modules
 net-wireless/bluez-sdp
 net-wireless/bluez-pan
-
-# <solar@gentoo.org> (11 Oct 2004)
-# Masking till I can fix/or remove from the tree.
-net-wireless/openwrt-cvs
 
 # <foser@gentoo.org> (13 Oct 2004)
 # 2 masks to make gnome 2.8 behave
