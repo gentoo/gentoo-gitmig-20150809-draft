@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/blas-atlas/blas-atlas-3.6.0.ebuild,v 1.10 2004/07/03 18:31:38 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/blas-atlas/blas-atlas-3.6.0.ebuild,v 1.11 2004/07/04 23:39:29 mr_bones_ Exp $
 
 inherit eutils
 
@@ -51,7 +51,7 @@ atlas_fail() {
 
 # Added to allow compilation on sparc architecture. The default CCFLAG0
 # and MMFLAGS are *bad*.
-# Danny van Dyk <kugelfang@gentoo.org> 2004/07/02 
+# Danny van Dyk <kugelfang@gentoo.org> 2004/07/02
 #
 reconfigure() {
 	case "`uname -p`" in
@@ -68,9 +68,9 @@ reconfigure() {
 			MY_MMFLAGS="${CFLAGS}"
 			;;
 	esac
-	
+
 	MY_FILE="`find -name Make.Linux*`"
-	
+
 	sed -i -e "s/CCFLAG0 =/CCFLAG0 = ${MY_CCFLAG0}\n#&/1" ${MY_FILE}
 	sed -i -e "s/MMFLAGS =/MMFLAGS = ${MY_MMFLAGS}\n#&/" ${MY_FILE}
 }
