@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.1.6.ebuild,v 1.1 2002/08/06 01:04:04 stroke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.1.6.ebuild,v 1.2 2002/08/30 06:20:25 seemant Exp $
 
 #provide Xmake and Xemake
 inherit virtualx
@@ -50,16 +50,24 @@ src_unpack() {
 src_compile() {
 	local myconf
 	use nls || myconf="--disable-nls"
-	use gb && myconf="${myconf} --with-gb" || myconf="${myconf} --without-gb"
 
-	use guile && myconf="${myconf} --with-guile" || myconf="${myconf} --without-guile"
-	use perl && myconf="${myconf} --with-perl" || myconf="${myconf} --without-perl"
-  	use python && yconf="${myconf} --with-python" || myconf="${myconf} --without-python"
+	use gb \
+		&& myconf="${myconf} --with-gb" \
+		|| myconf="${myconf} --without-gb"
 
-  	./configure --host=${CHOST} \
-		--prefix=/usr \
-		--sysconfdir=/etc \
-		${myconf} || die
+	use guile \
+		&& myconf="${myconf} --with-guile" \
+		|| myconf="${myconf} --without-guile"
+
+	use perl \
+		&& myconf="${myconf} --with-perl" \
+		|| myconf="${myconf} --without-perl"
+
+  	use python \
+		&& myconf="${myconf} --with-python" \
+		|| myconf="${myconf} --without-python"
+
+  	econf ${myconf} || die
 
 	#'gnumeric --dump-func-defs' needs to write to ${HOME}/.gnome/, or
 	#else the build fails.
@@ -71,9 +79,7 @@ src_compile() {
 
 src_install() {
 	export GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL="1"
-  	make prefix=${D}/usr \
-		sysconfdir=${D}/etc \
-		install || die
+	einstall || die
 	unset GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL
 	dodoc AUTHORS COPYING *ChangeLog HACKING NEWS README TODO
 }
