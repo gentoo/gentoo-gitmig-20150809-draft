@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/putty/putty-20030603.ebuild,v 1.4 2003/06/22 12:35:13 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/putty/putty-20030603.ebuild,v 1.5 2003/06/26 10:09:58 taviso Exp $
 
 cvs_update="20030603"
 DESCRIPTION="UNIX port of the famous Windows Telnet and SSH client"
@@ -18,12 +18,10 @@ IUSE="doc"
 DEPEND="dev-lang/perl
 	>=sys-apps/sed-4
 	virtual/x11
-	~dev-libs/glib-1.2.10
-	~x11-libs/gtk+-1.2.10"
+	=x11-libs/gtk+-1.2*"
 
 RDEPEND="virtual/x11
-	~dev-libs/glib-1.2.10
-	~x11-libs/gtk+-1.2.10"
+	=x11-libs/gtk+-1.2*"
 
 inherit ccc
 
