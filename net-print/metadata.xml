@@ -4,5 +4,8 @@
 	<longdescription lang="en">
 		The net-print category contains network printing packages.
 	</longdescription>
+	<longdescription lang="de">
+		Die Kategorie net-print enthält Software für das Drucken in Netzwerken.
+	</longdescription>
 </catmetadata>
 
