@@ -1,3 +1,5 @@
 MD5 db1948f6db3e586432d2afc5231985c9 dhcpv6-0.7.ebuild 864
+MD5 2e626969de87d4c99a4aeac4b4a5d314 dhcpv6-0.8.ebuild 872
 MD5 98128340145457f3f6f7ad3d214213a9 ChangeLog 377
 MD5 d464c5bf3482796ca4a459eea6c5d7ef files/digest-dhcpv6-0.7 58
+MD5 6801b43613971e5a4afed325ed34368e files/digest-dhcpv6-0.8 58
