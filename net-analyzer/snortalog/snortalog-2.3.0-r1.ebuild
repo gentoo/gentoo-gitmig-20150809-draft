@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snortalog/snortalog-2.3.0.ebuild,v 1.1 2005/03/07 10:43:53 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snortalog/snortalog-2.3.0-r1.ebuild,v 1.1 2005/03/08 14:06:01 ka0ttic Exp $
 
 inherit eutils
 
@@ -25,6 +25,7 @@ RDEPEND="dev-lang/perl
 src_unpack() {
 	unpack ${A} && cd ${S}
 	use tcltk || epatch ${FILESDIR}/${PN}-notcltk.diff
+	use tcltk && epatch ${FILESDIR}/${P}-fix-gui.diff
 	# fix paths
 	sed -i -e "s:\(modules/\):/usr/lib/snortalog/${PV}/\1:g" \
 		-e 's:\($domains_file = "\)\(domains\)\(".*\):\1/etc/snortalog/\2\3:' \
@@ -32,7 +33,6 @@ src_unpack() {
 		-e 's:\($hw_file = "\)\(hw\)\(".*\):\1/etc/snortalog/\2\3:' \
 		-e 's:\($lang_file = "\)\(lang\)\(".*\):\1/etc/snortalog/\2\3:' \
 		snortalog.pl || die "sed snortalog.pl failed"
-
 }
 
 src_install () {

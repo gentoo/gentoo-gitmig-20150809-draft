@@ -1,0 +1,223 @@
+--- modules/gui.snortalog.orig	2005-03-08 08:41:22.396167392 -0500
++++ modules/gui.snortalog	2005-03-08 08:50:09.702004720 -0500
+@@ -92,20 +92,20 @@
+ 	$pageresult = $note->add("pageresult", label => 'Result');
+ 	$pagedebug = $note->add("pagedebug", label => 'Debug');
+ 
+-	$label_file = $pagegen->Label(text => 'File :')->place(-x => 10, -y => 0);
+-	$entry_file = $pagegen->Entry(width => 33, background => 'gray')->place(-x => 10, -y => 20);
++	$label_file = $pagegen->Label(-text => 'File :')->place(-x => 10, -y => 0);
++	$entry_file = $pagegen->Entry(-width => 33, -background => 'gray')->place(-x => 10, -y => 20);
+ 
+-	$cadre_load_option = $pagegen->Label(width => 33, height => 30, relief => 'groove')->place(-x => 270 , -y => 20);
+-	$label_work = $pagegen->Label(text => 'Load Options :')->place(-x => 275, -y => 10);
++	$cadre_load_option = $pagegen->Label(-width => 33, -height => 30, -relief => 'groove')->place(-x => 270 , -y => 20);
++	$label_work = $pagegen->Label(-text => 'Load Options :')->place(-x => 275, -y => 10);
+ 
+ 
+-	$button_load = $pagegen->Button( text => 'Load File', width => 12, command => \&xload)->place(-x => 330, -y => 40);
+-	$button_unload = $pagegen->Button( text => 'Unload All', width => 12 , command => \&x_unload)->place(-x => 330, -y => 70);
++	$button_load = $pagegen->Button( -text => 'Load File', -width => 12, -command => \&xload)->place(-x => 330, -y => 40);
++	$button_unload = $pagegen->Button( -text => 'Unload All', -width => 12 , -command => \&x_unload)->place(-x => 330, -y => 70);
+ 	$optdbm = 0;                     # Starting value
+-	$opt_dbm = $pagegen->Checkbutton ( variable => \$optdbm, text => 'Use DBM')->place(-x => 340, -y => 110);
++	$opt_dbm = $pagegen->Checkbutton ( -variable => \$optdbm, -text => 'Use DBM')->place(-x => 340, -y => 110);
+ 	$optd = 0;                     # Starting value
+-	$opt_d = $pagegen->Checkbutton ( variable => \$optd, text => 'Debug Mode')->place(-x => 340, -y => 130);
+-	$listbox_load = $pagegen->Scrolled('Text', width => 30, height => 14, -bg => 'gray', -scrollbars => 'e', -wrap =>'word')->place(-x => 10, -y => 40);
++	$opt_d = $pagegen->Checkbutton ( -variable => \$optd, -text => 'Debug Mode')->place(-x => 340, -y => 130);
++	$listbox_load = $pagegen->Scrolled('Text', -width => 30, -height => 14, -bg => 'gray', -scrollbars => 'e', -wrap =>'word')->place(-x => 10, -y => 40);
+ 	$optall = 1;                   # Starting value
+ 	$opt1 = 0;                     # Starting value
+ 	$opt2 = 0;                     # Starting value
+@@ -115,22 +115,22 @@
+ 	$opt6 = 0;                     # Starting value
+ 	$opt7 = 0;                     # Starting value
+ 	$opt8 = 0;                     # Starting value
+-	$cadre_all = $pagegen->Label(width => 25, height => 17, relief => 'groove')->place(-x => 300 , -y => 180);
+-	$label_all = $pagegen->Label(text => 'Type of log')->place(-x => 305, -y => 170);
+-	$opt_all = $pagegen->Checkbutton ( variable => \$optall, text => 'All logs')->place(-x => 320, -y => 200);
+-	$opt_1 = $pagegen->Checkbutton ( variable => \$opt1, text => 'Snort fast')->place(-x => 320, -y => 220);
+-	$opt_2 = $pagegen->Checkbutton ( variable => \$opt2, text => 'Snort syslog')->place(-x => 320, -y => 240);
+-	$opt_3 = $pagegen->Checkbutton ( variable => \$opt3, text => 'Snort full')->place(-x => 320, -y => 260);
+-	$opt_4 = $pagegen->Checkbutton ( variable => \$opt4, text => 'Fw-1 export')->place(-x => 320, -y => 280);
+-	$opt_5 = $pagegen->Checkbutton ( variable => \$opt5, text => 'Fw-1 syslog')->place(-x => 320, -y => 300);
+-	$opt_6 = $pagegen->Checkbutton ( variable => \$opt6, text => 'Pix')->place(-x => 320, -y => 320);
+-	$opt_7 = $pagegen->Checkbutton ( variable => \$opt7, text => 'IPFilter')->place(-x => 320, -y => 340);
+-	$opt_8 = $pagegen->Checkbutton ( variable => \$opt8, text => 'NetFilter')->place(-x => 320, -y => 360);
+-
+-	$label4 = $pagegen->Label(width => 45, height => 15, relief => 'groove')->place(-x => 530, -y => 20);
+-	$label_result_option = $pagegen->Label(text => 'Result Options :')->place(-x => 535, -y => 10);
+-	$label5 = $pagegen->Label(width => 45, height => 14, relief => 'groove')->place(-x => 530, -y => 250);
+-	$label_html_option = $pagegen->Label(text => 'Output Options :')->place(-x => 535, -y => 240);
++	$cadre_all = $pagegen->Label(-width => 25, -height => 17, -relief => 'groove')->place(-x => 300 , -y => 180);
++	$label_all = $pagegen->Label(-text => 'Type of log')->place(-x => 305, -y => 170);
++	$opt_all = $pagegen->Checkbutton ( -variable => \$optall, -text => 'All logs')->place(-x => 320, -y => 200);
++	$opt_1 = $pagegen->Checkbutton ( -variable => \$opt1, -text => 'Snort fast')->place(-x => 320, -y => 220);
++	$opt_2 = $pagegen->Checkbutton ( -variable => \$opt2, -text => 'Snort syslog')->place(-x => 320, -y => 240);
++	$opt_3 = $pagegen->Checkbutton ( -variable => \$opt3, -text => 'Snort full')->place(-x => 320, -y => 260);
++	$opt_4 = $pagegen->Checkbutton ( -variable => \$opt4, -text => 'Fw-1 export')->place(-x => 320, -y => 280);
++	$opt_5 = $pagegen->Checkbutton ( -variable => \$opt5, -text => 'Fw-1 syslog')->place(-x => 320, -y => 300);
++	$opt_6 = $pagegen->Checkbutton ( -variable => \$opt6, -text => 'Pix')->place(-x => 320, -y => 320);
++	$opt_7 = $pagegen->Checkbutton ( -variable => \$opt7, -text => 'IPFilter')->place(-x => 320, -y => 340);
++	$opt_8 = $pagegen->Checkbutton ( -variable => \$opt8, -text => 'NetFilter')->place(-x => 320, -y => 360);
++
++	$label4 = $pagegen->Label(-width => 45, -height => 15, -relief => 'groove')->place(-x => 530, -y => 20);
++	$label_result_option = $pagegen->Label(-text => 'Result Options :')->place(-x => 535, -y => 10);
++	$label5 = $pagegen->Label(-width => 45, -height => 14, -relief => 'groove')->place(-x => 530, -y => 250);
++	$label_html_option = $pagegen->Label(-text => 'Output Options :')->place(-x => 535, -y => 240);
+ 
+ 	$optn = 0;                     # Starting value
+ 	$opth = 0;                     # Starting value
+@@ -142,85 +142,85 @@
+ 	$optr = 0;                     # Starting value
+ 	$optc = 0;                     # Starting value
+ 	$nb_files = 0;			# Initialize nb-files variables for index
+-	$opt_i = $pagegen->Checkbutton ( variable => \$opti, text => 'Ascending Order')->place(-x => 600, -y => 40);
+-	$opt_r = $pagegen->Checkbutton ( variable => \$optr, text => 'Resolve Addresses')->place(-x => 600, -y => 70);
+-	$opt_d = $pagegen->Checkbutton ( variable => \$optc, text => 'Resolve Domain')->place(-x => 600, -y => 100);
+-	$opt_n = $pagegen->Checkbutton ( variable => \$optw, text => 'Whois Database Informations')->place(-x => 600, -y => 130);
+-	$opt_n = $pagegen->Checkbutton ( variable => \$optn, text => 'Number of Occurences :')->place(-x => 600, -y => 160);
+-	$entry_option_n = $pagegen->Entry(width => 5, background => 'gray')->place(-x => 770, -y => 160);
+-	$label_option_l = $pagegen->Label(text => "     Output Language :")->place(-x => 600, -y => 190);
+-	$entry_option_l = $pagegen->Entry(width => 5, background => 'gray')->place(-x => 770, -y => 190);
++	$opt_i = $pagegen->Checkbutton ( -variable => \$opti, -text => 'Ascending Order')->place(-x => 600, -y => 40);
++	$opt_r = $pagegen->Checkbutton ( -variable => \$optr, -text => 'Resolve Addresses')->place(-x => 600, -y => 70);
++	$opt_d = $pagegen->Checkbutton ( -variable => \$optc, -text => 'Resolve Domain')->place(-x => 600, -y => 100);
++	$opt_n = $pagegen->Checkbutton ( -variable => \$optw, -text => 'Whois Database Informations')->place(-x => 600, -y => 130);
++	$opt_n = $pagegen->Checkbutton ( -variable => \$optn, -text => 'Number of Occurences :')->place(-x => 600, -y => 160);
++	$entry_option_n = $pagegen->Entry(-width => 5, -background => 'gray')->place(-x => 770, -y => 160);
++	$label_option_l = $pagegen->Label(-text => "     Output Language :")->place(-x => 600, -y => 190);
++	$entry_option_l = $pagegen->Entry(-width => 5, -background => 'gray')->place(-x => 770, -y => 190);
+ 	$entry_option_l->insert('end', 'en');
+-	$opt_h = $pagegen->Checkbutton ( variable => \$opth, text => 'HTML File :')->place(-x => 560, -y => 270);
+-	$entry_option_h = $pagegen->Entry(width => 15, background => 'gray')->place(-x => 700, -y => 270);
+-	$opt_p = $pagegen->Checkbutton ( variable => \$optp, text => 'PDF File :')->place(-x => 560, -y => 300);
+-	$entry_option_p = $pagegen->Entry(width => 15, background => 'gray')->place(-x => 700, -y => 300);
+-	$opt_g = $pagegen->Checkbutton ( variable => \$optg, text => 'Graph Format :')->place(-x => 560, -y => 330);
+- 	$listbox_option_g = $pagegen->Listbox(width => 15, height => 3, background => 'gray')->place(-x => 700, -y => 330);
++	$opt_h = $pagegen->Checkbutton ( -variable => \$opth, -text => 'HTML File :')->place(-x => 560, -y => 270);
++	$entry_option_h = $pagegen->Entry(-width => 15, -background => 'gray')->place(-x => 700, -y => 270);
++	$opt_p = $pagegen->Checkbutton ( -variable => \$optp, -text => 'PDF File :')->place(-x => 560, -y => 300);
++	$entry_option_p = $pagegen->Entry(-width => 15, -background => 'gray')->place(-x => 700, -y => 300);
++	$opt_g = $pagegen->Checkbutton ( -variable => \$optg, -text => 'Graph Format :')->place(-x => 560, -y => 330);
++ 	$listbox_option_g = $pagegen->Listbox(-width => 15, -height => 3, -background => 'gray')->place(-x => 700, -y => 330);
+ 	$listbox_option_g->insert('end', 'gif','png','jpg');
+ 	$listbox_option_g->selectionSet(0);
+ 
+-	$scrolled_result  = $pageresult->Scrolled('Text', width => 120, height => 35, -bg => 'gray', -scrollbars => 'e', -wrap =>'word')->pack;
+-	$scrolled_debug  = $pagedebug->Scrolled('Text', width => 120, height => 35, -bg => 'gray', -scrollbars => 'e', -wrap =>'word')->pack;
+-	$label_status = $pagegen->Label(text => 'Status :')->place(-x => 10, -y => 240);
+-	$scrolled_status  = $pagegen->Scrolled('Text', width => 30, height => 14, -bg => 'gray', -scrollbars => 'e', -wrap =>'word')->place(-x => 10, -y => 260);
+-
+-	$label21 = $pagefilter->Label(width => 55, height => 13, relief => 'groove')->place(-x => 30, -y => 20);
+-	$label22 = $pagefilter->Label(text => 'Time Filter')->place(-x => 35 , -y => 10);
+-	$label_fhour = $pagefilter->Label(text => 'Hour :')->place(-x => 50, -y => 40);
+-	$entry_fhour = $pagefilter->Entry(width => 10, background => 'gray')->place(-x => 120, -y => 40);
+-	$label_fday = $pagefilter->Label(text => 'Day :')->place(-x => 50, -y => 70);
+-	$entry_fday = $pagefilter->Entry(width => 10, background => 'gray')->place(-x => 120, -y => 70);
+-	$label_fmonth = $pagefilter->Label(text => 'Month :')->place(-x => 50, -y => 100);
+-	$entry_fmonth = $pagefilter->Entry(width => 10, background => 'gray')->place(-x => 120, -y => 100);
+-	$label23 = $pagefilter->Label(width => 55, height => 13, relief => 'groove')->place(-x => 450, -y => 20);
+-	$label24 = $pagefilter->Label(text => 'IP Filter')->place(-x => 455 , -y => 10);
+-	$label_fsrc = $pagefilter->Label(text => 'IP src :')->place(-x => 470, -y => 40);
+-	$entry_fsrc = $pagefilter->Entry(width => 10, background => 'gray')->place(-x => 540, -y => 40);
+-	$label_fdst = $pagefilter->Label(text => 'IP dst :')->place(-x => 470, -y => 70);
+-	$entry_fdst = $pagefilter->Entry(width => 10, background => 'gray')->place(-x => 540, -y => 70);
+-	$label_fhost = $pagefilter->Label(text => 'IP host :')->place(-x => 470, -y => 100);
+-	$entry_fhost = $pagefilter->Entry(width => 10, background => 'gray')->place(-x => 540, -y => 100);
+-	$label25 = $pagefilter->Label(width => 55, height => 13, relief => 'groove')->place(-x => 30, -y => 250);
+-	$label26 = $pagefilter->Label(text => 'Other Filter')->place(-x => 35 , -y => 240);
+-	$label_fproto = $pagefilter->Label(text => 'Protocol :')->place(-x => 50, -y => 270);
+-	$entry_fproto = $pagefilter->Entry(width => 10, background => 'gray')->place(-x => 120, -y => 270);
+-	$label_fdport = $pagefilter->Label(text => 'Dst port :')->place(-x => 50, -y => 300);
+-	$entry_fdport = $pagefilter->Entry(width => 10, background => 'gray')->place(-x => 120, -y => 300);
+-	$label_fether = $pagefilter->Label(text => 'Interface :')->place(-x => 50, -y => 330);
+-	$entry_fether = $pagefilter->Entry(width => 10, background => 'gray')->place(-x => 120, -y => 330);
+-	$label_fseverity = $pagefilter->Label(text => 'Severity :')->place(-x => 50, -y => 360);
+-	$entry_fseverity = $pagefilter->Entry(width => 10, background => 'gray')->place(-x => 120, -y => 360);
+-	$label_frule = $pagefilter->Label(text => 'Rule :')->place(-x => 50, -y => 390);
+-	$entry_frule = $pagefilter->Entry(width => 10, background => 'gray')->place(-x => 120, -y => 390);
+-	$label_faction = $pagefilter->Label(text => 'Action :')->place(-x => 230, -y => 270);
+-	$entry_faction = $pagefilter->Entry(width => 10, background => 'gray')->place(-x => 300, -y => 270);
+-	$label_ftype = $pagefilter->Label(text => 'Type :')->place(-x => 230, -y => 300);
+-	$entry_ftype = $pagefilter->Entry(width => 10, background => 'gray')->place(-x => 300, -y => 300);
++	$scrolled_result  = $pageresult->Scrolled('Text', -width => 120, -height => 35, -bg => 'gray', -scrollbars => 'e', -wrap =>'word')->pack;
++	$scrolled_debug  = $pagedebug->Scrolled('Text', -width => 120, -height => 35, -bg => 'gray', -scrollbars => 'e', -wrap =>'word')->pack;
++	$label_status = $pagegen->Label(-text => 'Status :')->place(-x => 10, -y => 240);
++	$scrolled_status  = $pagegen->Scrolled('Text', -width => 30, -height => 14, -bg => 'gray', -scrollbars => 'e', -wrap =>'word')->place(-x => 10, -y => 260);
++
++	$label21 = $pagefilter->Label(-width => 55, -height => 13, -relief => 'groove')->place(-x => 30, -y => 20);
++	$label22 = $pagefilter->Label(-text => 'Time Filter')->place(-x => 35 , -y => 10);
++	$label_fhour = $pagefilter->Label(-text => 'Hour :')->place(-x => 50, -y => 40);
++	$entry_fhour = $pagefilter->Entry(-width => 10, -background => 'gray')->place(-x => 120, -y => 40);
++	$label_fday = $pagefilter->Label(-text => 'Day :')->place(-x => 50, -y => 70);
++	$entry_fday = $pagefilter->Entry(-width => 10, -background => 'gray')->place(-x => 120, -y => 70);
++	$label_fmonth = $pagefilter->Label(-text => 'Month :')->place(-x => 50, -y => 100);
++	$entry_fmonth = $pagefilter->Entry(-width => 10, -background => 'gray')->place(-x => 120, -y => 100);
++	$label23 = $pagefilter->Label(-width => 55, -height => 13, -relief => 'groove')->place(-x => 450, -y => 20);
++	$label24 = $pagefilter->Label(-text => 'IP Filter')->place(-x => 455 , -y => 10);
++	$label_fsrc = $pagefilter->Label(-text => 'IP src :')->place(-x => 470, -y => 40);
++	$entry_fsrc = $pagefilter->Entry(-width => 10, -background => 'gray')->place(-x => 540, -y => 40);
++	$label_fdst = $pagefilter->Label(-text => 'IP dst :')->place(-x => 470, -y => 70);
++	$entry_fdst = $pagefilter->Entry(-width => 10, -background => 'gray')->place(-x => 540, -y => 70);
++	$label_fhost = $pagefilter->Label(-text => 'IP host :')->place(-x => 470, -y => 100);
++	$entry_fhost = $pagefilter->Entry(-width => 10, -background => 'gray')->place(-x => 540, -y => 100);
++	$label25 = $pagefilter->Label(-width => 55, -height => 13, -relief => 'groove')->place(-x => 30, -y => 250);
++	$label26 = $pagefilter->Label(-text => 'Other Filter')->place(-x => 35 , -y => 240);
++	$label_fproto = $pagefilter->Label(-text => 'Protocol :')->place(-x => 50, -y => 270);
++	$entry_fproto = $pagefilter->Entry(-width => 10, -background => 'gray')->place(-x => 120, -y => 270);
++	$label_fdport = $pagefilter->Label(-text => 'Dst port :')->place(-x => 50, -y => 300);
++	$entry_fdport = $pagefilter->Entry(-width => 10, -background => 'gray')->place(-x => 120, -y => 300);
++	$label_fether = $pagefilter->Label(-text => 'Interface :')->place(-x => 50, -y => 330);
++	$entry_fether = $pagefilter->Entry(-width => 10, -background => 'gray')->place(-x => 120, -y => 330);
++	$label_fseverity = $pagefilter->Label(-text => 'Severity :')->place(-x => 50, -y => 360);
++	$entry_fseverity = $pagefilter->Entry(-width => 10, -background => 'gray')->place(-x => 120, -y => 360);
++	$label_frule = $pagefilter->Label(-text => 'Rule :')->place(-x => 50, -y => 390);
++	$entry_frule = $pagefilter->Entry(-width => 10, -background => 'gray')->place(-x => 120, -y => 390);
++	$label_faction = $pagefilter->Label(-text => 'Action :')->place(-x => 230, -y => 270);
++	$entry_faction = $pagefilter->Entry(-width => 10, -background => 'gray')->place(-x => 300, -y => 270);
++	$label_ftype = $pagefilter->Label(-text => 'Type :')->place(-x => 230, -y => 300);
++	$entry_ftype = $pagefilter->Entry(-width => 10, -background => 'gray')->place(-x => 300, -y => 300);
+ 
+-	$label_domains_file = $pageconf->Label(text => 'Path to Domain File :')->place(-x => 30, -y => 40);
+-	$entry_domains_file = $pageconf->Entry(width => 30, background => 'gray')->place(-x => 250, -y => 40);
++	$label_domains_file = $pageconf->Label(-text => 'Path to Domain File :')->place(-x => 30, -y => 40);
++	$entry_domains_file = $pageconf->Entry(-width => 30, -background => 'gray')->place(-x => 250, -y => 40);
+ 	$entry_domains_file->insert('end', "$domains_file");
+-	$label_rules_file = $pageconf->Label(text => 'Path to Rules File :')->place(-x => 30, -y => 80);
+-	$entry_rules_file = $pageconf->Entry(width => 30, background => 'gray')->place(-x => 250, -y => 80);
++	$label_rules_file = $pageconf->Label(-text => 'Path to Rules File :')->place(-x => 30, -y => 80);
++	$entry_rules_file = $pageconf->Entry(-width => 30, -background => 'gray')->place(-x => 250, -y => 80);
+ 	$entry_rules_file->insert('end', "$rules_file");
+-	$label_hw_file = $pageconf->Label(text => 'Path to Hardware Related File :')->place(-x => 30, -y => 120);
+-	$entry_hw_file = $pageconf->Entry(width => 30, background => 'gray')->place(-x => 250, -y => 120);
++	$label_hw_file = $pageconf->Label(-text => 'Path to Hardware Related File :')->place(-x => 30, -y => 120);
++	$entry_hw_file = $pageconf->Entry(-width => 30, -background => 'gray')->place(-x => 250, -y => 120);
+ 	$entry_hw_file->insert('end', "$hw_file");
+-	$label_langfile_directory = $pageconf->Label(text => 'Path to Language File :')->place(-x => 30, -y => 160);
+-	$entry_langfile_directory = $pageconf->Entry(width => 30, background => 'gray')->place(-x => 250, -y => 160);
++	$label_langfile_directory = $pageconf->Label(-text => 'Path to Language File :')->place(-x => 30, -y => 160);
++	$entry_langfile_directory = $pageconf->Entry(-width => 30, -background => 'gray')->place(-x => 250, -y => 160);
+ 	$entry_langfile_directory->insert('end', "$lang_file");
+-	$label_html_directory = $pageconf->Label(text => 'Specify the Output directory :')->place(-x => 30, -y => 200);
+-	$entry_html_directory = $pageconf->Entry(width => 30, background => 'gray')->place(-x => 250, -y => 200);
++	$label_html_directory = $pageconf->Label(-text => 'Specify the Output directory :')->place(-x => 30, -y => 200);
++	$entry_html_directory = $pageconf->Entry(-width => 30, -background => 'gray')->place(-x => 250, -y => 200);
+ 	$entry_html_directory->insert('end', "$html_directory");
+-	$label_dbm_directory = $pageconf->Label(text => 'Specify the DBM directory :')->place(-x => 30, -y => 240);
+-	$entry_dbm_directory = $pageconf->Entry(width => 30, background => 'gray')->place(-x => 250, -y => 240);
++	$label_dbm_directory = $pageconf->Label(-text => 'Specify the DBM directory :')->place(-x => 30, -y => 240);
++	$entry_dbm_directory = $pageconf->Entry(-width => 30, -background => 'gray')->place(-x => 250, -y => 240);
+ 	$entry_dbm_directory->insert('end', "$dbm_directory");
+-	$label_tmpout_file = $pageconf->Label(text => 'Specify the Tempory File :')->place(-x => 30, -y => 280);
+-	$entry_tmpout_file = $pageconf->Entry(width => 30, background => 'gray')->place(-x => 250, -y => 280);
++	$label_tmpout_file = $pageconf->Label(-text => 'Specify the Tempory File :')->place(-x => 30, -y => 280);
++	$entry_tmpout_file = $pageconf->Entry(-width => 30, -background => 'gray')->place(-x => 250, -y => 280);
+ 	$entry_tmpout_file->insert('end', "$tmpout_file");
+ 
+-	$top->configure(title => "SnortALog v$version", menu => $menu);
++	$top->configure(-title => "SnortALog v$version", -menu => $menu);
+ 	$top->geometry("895x515");
+ 	MainLoop();
+ 	} else {
