@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-2.6.3.ebuild,v 1.1 2004/07/11 18:24:10 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-2.6.3.ebuild,v 1.2 2004/07/14 15:19:45 agriffis Exp $
 
 inherit gnome2 eutils
 
@@ -91,5 +91,3 @@ pkg_postinst() {
 	einfo "gconftool-2  -s /apps/nautilus/preferences/always_use_browser -t bool TRUE"
 
 }
-
-

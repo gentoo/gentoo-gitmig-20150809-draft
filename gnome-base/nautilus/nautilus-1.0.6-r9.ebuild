@@ -1,11 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-1.0.6-r9.ebuild,v 1.21 2004/06/24 22:01:16 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-1.0.6-r9.ebuild,v 1.22 2004/07/14 15:19:45 agriffis Exp $
 
 IUSE="nls mozilla"
 
 
-S=${WORKDIR}/${P}
 DESCRIPTION="nautilus"
 SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
@@ -135,4 +134,3 @@ src_install() {
 	# Fix permissions in order to resolve the mozilla-view issue
 	chmod -R g+r,o+r ${D}/*
 }
-
