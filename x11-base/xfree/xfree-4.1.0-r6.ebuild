@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.1.0-r6.ebuild,v 1.5 2002/08/01 11:40:16 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.1.0-r6.ebuild,v 1.6 2002/08/14 12:00:14 murphy Exp $
 
 MY_V="`echo ${PV} |sed -e 's:\.::g'`"
 S=${WORKDIR}/xc
@@ -19,7 +19,7 @@ SRC_URI="$SRC_PATH0/X${MY_V}src-1.tgz
 HOMEPAGE="http://www.xfree.org"
 LICENSE="X11"
 SLOT="0"
-KEYWORDS="x86 ppc"
+KEYWORDS="x86 ppc sparc sparc64"
 
 DEPEND=">=sys-libs/ncurses-5.1
         >=sys-libs/zlib-1.1.3-r2
