@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 2004 The Gentoo Foundation, Pieter Van den Abeele
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap-macos.sh,v 1.2 2004/07/13 00:18:49 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap-macos.sh,v 1.3 2004/07/13 03:19:42 pvdabeel Exp $
 
 source /usr/lib/portage/bin/functions.sh
 
@@ -20,6 +20,8 @@ echo
 
 BEAST=`uname -r | grep 7 | echo "Panther" || echo "Tiger"`
 RELEASE=`uname -r | grep 7 | echo "10.3" || echo "10.4"`
+
+sudo uname -r > /etc/gentoo-release
 
 ebegin "Portage will attempt taming the ${BEAST} it found"
 
