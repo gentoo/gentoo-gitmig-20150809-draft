@@ -1,6 +1,9 @@
 # ChangeLog for x11-base/xfree
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.278 2004/02/09 21:26:26 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.279 2004/02/09 21:53:24 spyderous Exp $
+
+  09 Feb 2004; Donnie Berkholz <spyderous@gentoo.org>; :
+  Fix ChangeLog entries.
 
   09 Feb 2004; Donnie Berkholz <spyderous@gentoo.org>; xfree-4.3.0-r4.ebuild:
   Stable on mips, report by psi29a.
@@ -19,7 +22,10 @@
   from XFree86 CVS; Update 0100_all_4.3.0-xf-4_3-branch-01-19.patch -- this
   includes security fixes for font library vulnerabilities (CAN-2003-0730) and
   PAM authentication (CAN-2003-0690); Update 2000_all_4.3.0-ipv6-server-v3.patch
-  since 0100 update broke it.
+  since 0100 update broke it. To clarify, CAN-2003-0690 and CAN-2003-0730 were
+  fixed in 4.3.0 PATCH_VER 2.1.15 on 6 Oct. 2003, but 4.3.0-r3 did not receive a
+  revision bump so early adopters of 4.3.0-r3 may need this update for those
+  fixes as well.
 
   09 Feb 2004; Donnie Berkholz <spyderous@gentoo.org>; xfree-4.3.99.16.ebuild,
   xfree-4.3.99.901.ebuild:
