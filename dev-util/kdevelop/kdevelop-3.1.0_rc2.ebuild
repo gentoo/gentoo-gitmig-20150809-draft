@@ -1,15 +1,15 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-3.1_beta2.ebuild,v 1.2 2004/07/24 21:52:55 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-3.1.0_rc2.ebuild,v 1.1 2004/08/10 20:46:24 carlo Exp $
 
 inherit python kde eutils
 
-MY_P=${PN}-3.0.92
-S=${WORKDIR}/${MY_P}
+MY_P=${PN}-${PV/_/-}
+S=${WORKDIR}/${MY_P%-*}
 
-IUSE="doc java python ruby"
+IUSE="arts doc java python ruby"
 DESCRIPTION="KDevelop is an easy to use C/C++ IDE for Unix. It supports KDE/Qt, GNOME, plain C and C++ projects."
-SRC_URI="mirror://kde/unstable/3.2.92/src/${MY_P}.tar.bz2"
+SRC_URI="mirror://kde/unstable/3.3.0rc2/src/${MY_P}.tar.bz2"
 HOMEPAGE="http://www.kdevelop.org"
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~sparc ~ppc ~amd64"
@@ -18,7 +18,7 @@ SLOT=3
 DEPEND="dev-lang/perl
 	sys-devel/flex
 	sys-devel/gdb
-	java? ( virtual/jdk dev-java/ant )
+	java? ( virtual/jdk dev-java/ant dev-java/java-config )
 	python? ( dev-lang/python )
 	doc? ( app-doc/doxygen )"
 RDEPEND="$DEPEND"
@@ -29,17 +29,17 @@ myconf="$myconf --with-kdelibsdoxy-dir=${KDEDIR}/share/doc/HTML/en/kdelibs-apido
 src_unpack() {
 	kde_src_unpack
 
-	epatch ${FILESDIR}/${P}-mutex.h.diff
 	if use amd64; then
-		epatch ${FILESDIR}/${P/beta?/beta1}-bdb-fPIC.patch
+		epatch ${FILESDIR}/${P/rc?/beta1}-bdb-fPIC.patch
 	fi
 }
 
 src_compile() {
 	python_version
-	use java && myconf="$myconf --enable-javasupport --with-java=`java-config --jdk-home`" || myconf="$myconf --disable-javasupport"
-	use python && myconf="$myconf --enable-scripting --with-pythondir=/usr/lib/python${PYVER}" || myconf="$myconf --disable-scripting"
-	use ruby || myconf="$myconf --disable-ruby"
+	myconf="$myconf $(use_enable java javasupport) $(use_with java java $(java-config --jdk-home))
+			$(use_enable python scripting) $(use_with python pythondir /usr/lib/python${PYVER})
+			$(use_enable ruby)
+			$(use_enable arts)"
 	kde_src_compile
 }
 
