@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/clamav/files/clamd.rc,v 1.4 2004/03/06 03:15:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/clamav/files/clamd.rc,v 1.5 2004/05/10 16:53:52 eradicator Exp $
 
 depend() {
 	need net
@@ -9,7 +9,7 @@ depend() {
 
 start() {
 	if [ "${START_CLAMD}" = "yes" ]; then
-		if [ -f "/tmp/clamd" ]; then
+		if [ -S "/tmp/clamd" ]; then
 			rm -f /tmp/clamd
 		fi
 		if [ -n "${CLAMD_LOG}" -a ! -f "${CLAMD_LOG}" ]; then
