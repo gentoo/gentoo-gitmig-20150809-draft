@@ -28,6 +28,7 @@ dev-libs/libiconv-1.9
 dev-libs/libxml2-2.6.7
 dev-libs/openssl-0.9.7b
 dev-php/mod_php-4.2
+dev-php/php-4.3.2
 dev-tcltk/expect-5.32
 dev-util/cscope-15.3
 dev-util/cvs-1.10
