@@ -1,6 +1,12 @@
 # ChangeLog for sci-electronics/iverilog
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/iverilog/ChangeLog,v 1.2 2004/12/27 20:59:33 swegener Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/iverilog/ChangeLog,v 1.3 2005/01/02 01:27:51 plasmaroo Exp $
+
+*iverilog-0.8 (02 Jan 2005)
+
+  02 Jan 2005; <plasmaroo@gentoo.org> +iverilog-0.8.ebuild,
+  -iverilog-20031009.ebuild, -iverilog-20040606.ebuild:
+  Version bump. Removing obsolete CVS snapshot versions.
 
 *iverilog-20031009 (27 Dec 2004)
 

@@ -1,20 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 ddd642409a85ceadbde43937d6ed896a ChangeLog 2158
+MD5 4bdad023eb9bd323cee7d292824af29a iverilog-0.8.ebuild 772
+MD5 e49bb02132d2cd74ad4e6ee291e102d9 metadata.xml 220
 MD5 45606d98396cd7154a9b8ce058832235 iverilog-0.7.ebuild 765
 MD5 f13c7081bb5de28dcc72657235c327a2 iverilog-0.6.1.ebuild 714
-MD5 e614af152a944686ba3327ccaf265e97 iverilog-20031009.ebuild 770
-MD5 b8f5e2b782c2029bdb45c2da5c601263 iverilog-20040606.ebuild 778
-MD5 beaff4bdfa3d3786457ecd9a2ee1cf1a ChangeLog 1954
-MD5 e49bb02132d2cd74ad4e6ee291e102d9 metadata.xml 220
-MD5 acc06de1262011b69620ea99b0d71b34 files/digest-iverilog-0.7 63
 MD5 021fc38fca78a6ad8992d9737f467805 files/digest-iverilog-0.6.1 65
-MD5 82630cd90af6e1957c6021b28c3e6699 files/digest-iverilog-20031009 69
-MD5 e494ce6654d6f418abe86a3c395e32d0 files/digest-iverilog-20040606 69
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFB0He7I1lqEGTUzyQRAiPzAJsGLkSCXpUUYQOLl77uHepGcbQOlQCcC6Tv
-/FIY091bZDs0jWnCzwTz2dY=
-=XoQb
------END PGP SIGNATURE-----
+MD5 2220d15d853a854183aabb9e1256cc9c files/digest-iverilog-0.8 64
+MD5 acc06de1262011b69620ea99b0d71b34 files/digest-iverilog-0.7 63

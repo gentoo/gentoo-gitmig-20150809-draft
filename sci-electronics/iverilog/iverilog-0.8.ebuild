@@ -1,29 +1,26 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/iverilog/iverilog-20031009.ebuild,v 1.1 2004/12/27 19:51:43 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/iverilog/iverilog-0.8.ebuild,v 1.1 2005/01/02 01:27:51 plasmaroo Exp $
 
 S="${WORKDIR}/verilog-${PV}"
 
 DESCRIPTION="A Verilog simulation and synthesis tool"
-SRC_URI="ftp://icarus.com/pub/eda/verilog/snapshots/verilog-${PV}.tar.gz"
+SRC_URI="ftp://icarus.com/pub/eda/verilog/v${PV}/verilog-${PV}.tar.gz"
 HOMEPAGE="http://www.icarus.com/eda/verilog/"
 
 DEPEND="dev-util/gperf"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~x86 ~ppc ~amd64"
 IUSE=""
 
 src_compile() {
-
 	econf || die "./configure failed"
 	emake -j1 || die "emake failed"
-
 }
 
 src_install() {
-
 	make \
 		prefix=${D}/usr \
 		mandir=${D}/usr/share/man \
@@ -31,5 +28,4 @@ src_install() {
 		install || die
 
 	dodoc *.txt COPYING INSTALL examples/*
-
 }
