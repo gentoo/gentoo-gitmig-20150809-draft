@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/beep-media-player
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/beep-media-player/ChangeLog,v 1.41 2005/02/12 18:18:22 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/beep-media-player/ChangeLog,v 1.42 2005/02/21 17:14:26 agriffis Exp $
+
+  20 Feb 2005; Aron Griffis <agriffis@gentoo.org>
+  beep-media-player-0.9.7-r3.ebuild:
+  add ~ia64 #68223
 
 *beep-media-player-0.9.7-r3 (12 Feb 2005)
 
