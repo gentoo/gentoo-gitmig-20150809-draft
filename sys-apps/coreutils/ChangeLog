@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/coreutils
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.55 2003/12/11 02:50:56 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.56 2003/12/14 16:56:51 pylon Exp $
+
+  14 Dec 2003; Lars Weiler <pylon@gentoo.org> coreutils-5.0.91-r2.ebuild:
+  Added dependency ppc? ( >=sys-devel/m4-1.4-r1 ).  See bug #35759
 
   10 Dec 2003; Seemant Kulleen <seemant@gentoo.org> coreutils-5.0-r5.ebuild,
   coreutils-5.0-r6.ebuild, coreutils-5.0.91-r2.ebuild:
