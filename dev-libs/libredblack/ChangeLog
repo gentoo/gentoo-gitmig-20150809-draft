@@ -1,0 +1,10 @@
+# ChangeLog for dev-libs/libredblack
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libredblack/ChangeLog,v 1.1 2003/05/16 07:30:55 george Exp $
+
+*libredblack-1.2.ebuild (16 May 2003)
+
+  16 May 2003; George Shapovalov <george@gentoo.org> libredblack-1.2.ebuild, Manifest, files/{digest-libredblack-1.2} :
+  initial release (#17994)
+  RedBlack Balanced Tree Searching and Sorting Library
+  ebuild submitted by Daniel Milne <daniel.milne@dynexco.com>
