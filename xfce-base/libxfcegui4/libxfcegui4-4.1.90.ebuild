@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: 
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/libxfcegui4/libxfcegui4-4.1.90.ebuild,v 1.2 2004/10/05 00:51:41 bcowan Exp $
 
 IUSE="xinerama"
 DESCRIPTION="Libraries for Xfce 4"
@@ -16,9 +16,9 @@ RDEPEND="virtual/x11
 	dev-libs/libxml2
 	x11-libs/startup-notification
 	=xfce-base/libxfce4util-4.1.90"
-DEPEND="${RDEPEND}                                                              
-        dev-util/pkgconfig
-	!<xfce-base/libxfcegui4-4.1.90"	
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig
+	!<xfce-base/libxfcegui4-4.1.90"
 
 src_compile() {
 	econf \

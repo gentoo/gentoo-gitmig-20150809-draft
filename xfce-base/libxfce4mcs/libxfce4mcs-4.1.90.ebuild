@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: 
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/libxfce4mcs/libxfce4mcs-4.1.90.ebuild,v 1.2 2004/10/05 00:54:07 bcowan Exp $
 
 IUSE=""
 DESCRIPTION="Libraries for Xfce 4"
@@ -16,9 +16,9 @@ RDEPEND="virtual/x11
 	dev-libs/libxml2
 	=xfce-base/libxfce4util-4.1.90
 	=xfce-base/libxfcegui4-4.1.90"
-DEPEND="${RDEPEND}                                                              
-        dev-util/pkgconfig
-	!<xfce-base/libxfce4mcs-4.1.90"	
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig
+	!<xfce-base/libxfce4mcs-4.1.90"
 
 src_install () {
 	make DESTDIR=${D} install || die
