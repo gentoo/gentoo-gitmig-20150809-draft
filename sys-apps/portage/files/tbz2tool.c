@@ -6,12 +6,12 @@
 #include <string.h>
 
 /*buffered reading/writing size*/
-#define BUFLEN 65536
+#define BUFLEN 262144 
 char *myname="tbz2tool";
 struct stat *mystat=NULL;
 void *mybuf;
 FILE *datafile, *dbfile, *outfile, *infile;
-char endbuf[8];
+unsigned char endbuf[8];
 long seekto,insize;
 
 int exists(const char *myfile) {
@@ -31,14 +31,20 @@ void writefile(FILE *src, FILE *dest) {
 }
 
 void writefileto(FILE *src, FILE *dest, int endpos) {
-	int count=0;
+	int pos=ftell(src);
 	int thiscount;
-	while (count<endpos) {
-		thiscount=endpos-count;
+	while (pos < endpos) {
+		//thiscount=how much to read
+		thiscount=endpos-pos;
 		if (thiscount>BUFLEN)
 			thiscount=BUFLEN;
 		thiscount=fread(mybuf, 1, thiscount , src);
-		count+=thiscount;
+		//thiscount=how much we actually did read
+		if (thiscount==0)
+			//eof -- shouldn't happen
+			break;
+		//update internal position counter
+		pos+=thiscount;
 		fwrite(mybuf, 1, thiscount, dest);
 	}
 }
@@ -75,6 +81,7 @@ int main(int argc, char **argv) {
 			goto error;
 		}
 		//create end buffer for later use
+		printf("insize: %i\n",mystat->st_size);
 		endbuf[0]=((mystat->st_size) & 0xff000000) >> 24;
 		endbuf[1]=((mystat->st_size) & 0x00ff0000) >> 16;
 		endbuf[2]=((mystat->st_size) & 0x0000ff00) >> 8;
@@ -154,7 +161,10 @@ int main(int argc, char **argv) {
 			printf("%s: Error opening %s\n",myname,argv[2]);
 			goto error;
 		}
-	
+		
+		//read in end buffer
+		fseek(infile,-8,SEEK_END);	
+		fread(endbuf,1,8,infile);
 		//quick end buffer read and verification
 		if ( (endbuf[4]!='S') || (endbuf[5]!='T') || (endbuf[6]!='O') || (endbuf[7]!='P') )	{
 			fclose(infile);
@@ -164,9 +174,11 @@ int main(int argc, char **argv) {
 			goto error;
 		}
 		
-		seekto=seekto+endbuf[0]<<24;
-		seekto=seekto+endbuf[1]<<16;
-		seekto=seekto+endbuf[2]<<8;
+		printf(" %i %i %i %i\n",endbuf[0],endbuf[1],endbuf[2],endbuf[3]);
+		seekto=0;
+		seekto=seekto+endbuf[0]*256*256*256;
+		seekto=seekto+endbuf[1]*256*256;
+		seekto=seekto+endbuf[2]*256;
 		seekto=seekto+endbuf[3];
 		
 		//open datafile for writing
@@ -189,6 +201,7 @@ int main(int argc, char **argv) {
 		}
 
 		rewind(infile);
+		printf("insize: %i seekto: %li\n",insize,seekto);
 		writefileto(infile,datafile,insize-(seekto+8));
 		fseek(infile,-(seekto+8),SEEK_END);
 		writefileto(infile,dbfile,insize-8);
