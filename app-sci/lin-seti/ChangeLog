@@ -1,8 +1,11 @@
 # ChangeLog for app-admin/gentoo-rsync-mirror
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/lin-seti/ChangeLog,v 1.1 2003/03/19 20:42:23 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/lin-seti/ChangeLog,v 1.2 2003/03/20 22:28:34 tantive Exp $
 
 *lin-seti-0.6.1 (19 Mar 2003)
+
+  20 Mar 2003; Michael Imhof <tantive@gentoo.org> :
+  Unmasked for x86 and sparc. Closes #17828
 
   19 Mar 2003; Michael Imhof <tantive@gentoo.org> :
   Initial release.
