@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/nvidia-kernel-1.0.6629.ebuild,v 1.5 2004/11/14 20:01:46 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/nvidia-kernel-1.0.6629.ebuild,v 1.6 2004/11/25 23:14:26 cyfred Exp $
 
-inherit eutils kernel-mod
+inherit eutils linux-mod
 
 X86_PKG_V="pkg1"
 AMD64_PKG_V="pkg2"
@@ -27,7 +27,7 @@ S="${WORKDIR}/${NV_PACKAGE}-${PKG_V}/usr/src/nv"
 
 # The slot needs to be set to $KV to prevent unmerges of modules for other kernels.
 LICENSE="NVIDIA"
-SLOT="${KV}"
+SLOT="0"
 KEYWORDS="-* ~x86 ~amd64"
 RESTRICT="nostrip"
 IUSE=""
@@ -35,10 +35,15 @@ IUSE=""
 DEPEND="virtual/linux-sources"
 export _POSIX2_VERSION="199209"
 
-KMOD_SOURCES="none"
+MODULE_NAMES="nvidia(video:${S})"
+BUILD_PARAMS="IGNORE_CC_MISMATCH=yes V=1 SYSSRC=${KV_DIR}"
 
 mtrr_check() {
-	if [ ! -f /proc/mtrr ]
+	ebegin "Checking for MTRR support"
+	getfilevar_isset CONFIG_MTRR ${KV_DIR}/.config
+	eend $?
+
+	if [ "$?" != 0 ]
 	then
 		eerror "This version needs MTRR support for most chipsets!"
 		eerror "Please enable MTRR support in your kernel config, found at:"
@@ -51,26 +56,18 @@ mtrr_check() {
 }
 
 pkg_setup() {
-	mtrr_check
+	linux-mod_pkg_setup
+	mtrr_check;
 }
 
 src_unpack() {
-	# Setup the environment
-	kernel-mod_getversion
-	if [ ${KV_MINOR} -ge 5 ]
-	then
-		KV_OBJ="ko"
-	else
-		KV_OBJ="o"
-	fi
-
 	# 2.6.10_rc1-mm{1,2,3} all EXPORT_SYMBOL_GPL the udev functions, this breaks loading
-	CS="$(grep -c EXPORT_SYMBOL\(class_simple_create\)\; ${KERNEL_DIR}/drivers/base/class_simple.c)"
+	CS="$(grep -c EXPORT_SYMBOL\(class_simple_create\)\; ${KV_DIR}/drivers/base/class_simple.c)"
 	if [ "${CS}" == "0" ]
 	then
-		ewarn "Your current kernel uses EXPORT_SYMBOL_GPL() on some methods required by nvidia-kernel"
-		ewarn "This probably means 2.6.10_rc1-mm*, please change away from mm-sources until this is"
-		ewarn "revised and a solution released in the mm branch, development-sources will work."
+		ewarn "Your current kernel uses EXPORT_SYMBOL_GPL() on some methods required by nvidia-kernel."
+		ewarn "This probably means you are using 2.6.10_rc1-mm*. Please change away from mm-sources until this is"
+		ewarn "revised and a solution released into the mm branch, development-sources will work."
 		die "Incompatible kernel export."
 	fi
 
@@ -87,6 +84,7 @@ src_unpack() {
 
 	cd ${WORKDIR}
 	bash ${DISTDIR}/${NV_PACKAGE}-${PKG_V}.run --extract-only
+	cd ${S}
 
 	# Add patches below, with a breif description.
 	cd ${S}
@@ -106,53 +104,14 @@ src_unpack() {
 	use amd64 && epatch ${FILESDIR}/${PV}/nv-amd64-shutup-warnings.patch
 
 	# if you set this then it's your own fault when stuff breaks :)
-	[ ! -z "${USE_CRAZY_OPTS}" ] && sed -i "s:-O:${CFLAGS}:" Makefile.*
-}
+	[ -n "${USE_CRAZY_OPTS}" ] && sed -i "s:-O:${CFLAGS}:" Makefile.*
 
-src_compile() {
-	# Right as kmod was deprecated there is little room for kbuild but lets
-	# at least have some sembalance of support for those who are forcing
-	# a non-standard build directory.
-	if [ ${KV_MINOR} -ge 6 -a ${KV_PATCH} -ge 7 ]
-	then
-		# Find the kbuild output
-		if [ -n "${KBUILD_OUTPUT_PREFIX}" ]
-		then
-			echo
-			einfo "Determining kernel output location"
-			OUTPUT="${KBUILD_OUTPUT_PREFIX}/${KV_VERSION_FULL}"
-		fi
-	fi
-	[ -z "${OUTPUT}" ] && OUTPUT=${KERNEL_DIR}
-	einfo "Using ${OUTPUT} as kernel output location"
-	echo
-	# Now its possible that we might be here without using a KBUILD kernel
-	# (ie the variable is set, but using non-kbuild kernel or different path)
-	if [ ! -d ${OUTPUT} ]
-	then
-		ewarn "Your system global KBUILD_OUTPUT is set to ${KBUILD_OUTPUT_PREFIX}"
-		ewarn "However your kernels output path ${OUTPUT} does not exist."
-		echo
-		ewarn "Using ${KERNEL_DIR} as your kernel output location."
-		echo
-		OUTPUT=${KERNEL_DIR}
-	fi
-
-	# IGNORE_CC_MISMATCH disables a sanity check that's needed when gcc has been
-	# updated but the running kernel is still compiled with an older gcc.  This is
-	# needed for chrooted building, where the sanity check detects the gcc of the
-	# kernel outside the chroot rather than within.
-	unset ARCH
-	make IGNORE_CC_MISMATCH="yes" SYSSRC="${KERNEL_DIR}" SYSOUT="${OUTPUT}"  \
-		clean module V=1 || die "Failed to build module"
+	# if greater than 2.6.5 use M= instead of SUBDIR=
+	convert_to_m ${S}/Makefile.kbuild
 }
 
 src_install() {
-	# The driver goes into the standard modules location
-	insinto /lib/modules/${KV}/video
-
-	# Insert the module 
-	doins nvidia.${KV_OBJ}
+	linux-mod_src_install
 
 	# Add the aliases
 	insinto /etc/modules.d
@@ -167,28 +126,13 @@ src_install() {
 }
 
 pkg_postinst() {
-	if [ "${ROOT}" = "/" ]
+	if [ "${ROOT}" = "/" ] && \
+		[ ! -e /dev/.devfsd ] && \
+		[ ! -e /dev/.udev ] && \
+		[ -x /sbin/NVmakedevices.sh ]
 	then
-		# Update module dependency
-		[ -x /usr/sbin/update-modules ] && /usr/sbin/update-modules
-		if [ ! -e /dev/.devfsd ] && [ ! -e /dev/.udev ] && [ -x /sbin/NVmakedevices.sh ]
-		then
-			/sbin/NVmakedevices.sh >/dev/null 2>&1
-		fi
+		/sbin/NVmakedevices.sh >/dev/null 2>&1
 	fi
 
-	echo
-	einfo "If you need to load the module automatically on boot up you need"
-	einfo "to add \"nvidia\" to /etc/modules.autoload.d/kernel-${KV_MAJOR}.${KV_MINOR}"
-	echo
-	einfo "This module will now work correctly under udev, you do not need to"
-	einfo "manually create the devices anymore."
-	echo
-	ewarn "If you are using 2.6.10-rc1-(bk|mm)[0-9]*, please note that you might have"
-	ewarn "to disable the kernel agp driver, and use NVAGP instead, as there are some"
-	ewarn "unresolved issues with some kernel agp drivers ..."
-	echo
-	einfo "Checking kernel module dependencies"
-	test -r "${ROOT}/usr/src/linux/System.map" && \
-		depmod -ae -F "${ROOT}/usr/src/linux/System.map" -b "${ROOT}" -r ${KV}
+	linux-mod_pkg_postinst
 }
