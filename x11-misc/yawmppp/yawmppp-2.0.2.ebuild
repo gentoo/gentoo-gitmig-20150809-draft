@@ -1,6 +1,6 @@
-# Copyright (c) Vitaly Kushneriuk
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/yawmppp/yawmppp-2.0.2.ebuild,v 1.8 2003/09/11 23:29:52 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/yawmppp/yawmppp-2.0.2.ebuild,v 1.9 2003/09/29 21:45:27 mholzer Exp $
 
 S=${WORKDIR}/${P}
 
@@ -11,7 +11,7 @@ DEPEND=">=net-dialup/ppp-2.3.11 =x11-libs/gtk+-1.2*"
 #RDEPEND=""
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 sparc "
+KEYWORDS="x86 sparc"
 
 src_compile() {
 	./configure \
@@ -20,11 +20,9 @@ src_compile() {
 		--infodir=/usr/share/info \
 		--mandir=/usr/share/man || die "./configure failed"
 	emake || die
-	#make || die
 }
 
 src_install () {
-
 	dodoc README COPYING CHANGELOG INSTALL FAQ
 
 	cd src

@@ -1,6 +1,6 @@
-# Copyright 2002 Kai Grossjohann <kai.grossjohann@uni-duisburg.de>
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/unclutter/unclutter-8.ebuild,v 1.3 2003/04/24 11:54:50 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/unclutter/unclutter-8.ebuild,v 1.4 2003/09/29 21:44:26 mholzer Exp $
 
 S=${WORKDIR}/${PN}
 DESCRIPTION="Hides mouse pointer while not in use."
