@@ -1,0 +1,20 @@
+--- plugins/opie_sync/src/Makefile.am.orig	2003-12-10 14:52:35.000000000 -0800
++++ plugins/opie_sync/src/Makefile.am	2003-12-10 14:53:12.000000000 -0800
+@@ -17,6 +17,7 @@
+ INCLUDES = \
+ 	-DPACKAGE_DATA_DIR=\""$(datadir)"\" \
+ 	-DPACKAGE_LOCALE_DIR=\""$(prefix)/$(DATADIRNAME)/locale"\" \
++	-I../../../include \
+ 	-I../../../src/libversit -I$(top_srcdir) -I$(top_srcdir)/intl \
+ 	-I$(MULTISYNC_HOME) \
+ 	@PACKAGE_CFLAGS@
+--- plugins/opie_sync/src/Makefile.in.orig	2003-12-10 15:05:04.000000000 -0800
++++ plugins/opie_sync/src/Makefile.in	2003-12-10 15:05:29.000000000 -0800
+@@ -102,6 +102,7 @@
+ INCLUDES = \
+ 	-DPACKAGE_DATA_DIR=\""$(datadir)"\" \
+ 	-DPACKAGE_LOCALE_DIR=\""$(prefix)/$(DATADIRNAME)/locale"\" \
++	-I../../../include \
+ 	-I../../../src/libversit -I$(top_srcdir) -I$(top_srcdir)/intl \
+ 	-I$(MULTISYNC_HOME) \
+ 	@PACKAGE_CFLAGS@

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/multisync/multisync-0.80-r1.ebuild,v 1.4 2004/01/10 12:24:05 tad Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/multisync/multisync-0.81.ebuild,v 1.1 2004/01/10 12:24:05 tad Exp $
 
 DESCRIPTION="Client to sync apps with WinCE or mobile devices"
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://multisync.sourceforge.net/"
 # Point to any required sources; these will be automatically downloaded by
 # Portage.
 MY_P="${PF/r1/1}"
-SRC_URI="mirror://sourceforge/multisync/${MY_P}.tar.gz"
+SRC_URI="mirror://sourceforge/multisync/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 
@@ -38,7 +38,8 @@ DEPEND="virtual/glibc
 		         >=net-wireless/bluez-utils-2.3
 		         >=dev-libs/openobex-1.0.0 )
 		opie? ( >=net-ftp/curl-7.10.5 )
-		ldap? ( >=net-nds/openldap-2.0.27 )"
+		ldap? ( >=net-nds/openldap-2.0.27
+				>=dev-libs/cyrus-sasl-2.1.4 )"
 
 # Run-time dependencies, same as DEPEND if RDEPEND isn't defined:
 
