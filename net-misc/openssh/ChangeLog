@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/openssh
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.26 2003/01/19 20:09:14 tuxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.27 2003/01/20 15:06:00 raker Exp $
+
+*openssh-3.5_p1-r1 (20 Jan 2003)
+
+  20 Jan 2003; Nick Hadaway <raker@gentoo.org> openssh-3.5_p1-r1.ebuild,
+  files/digest-openssh-3.5_p1-r1 :
+  Added kerberos use flag support.
 
   09 Dec 2002; Donny Davies <woodchip@gentoo.org> openssh-3.5_p1.ebuild,
   openssh-3.4_p1-r2.ebuild, openssh-3.4_p1-r3.ebuild : Add a shells reminder.
