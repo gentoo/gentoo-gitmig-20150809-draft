@@ -1,6 +1,8 @@
 # ChangeLog for app-cdr/koncd
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/koncd/ChangeLog,v 1.6 2003/02/12 03:06:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/koncd/ChangeLog,v 1.7 2003/03/28 12:00:48 pvdabeel Exp $
+
+  28 Mar 2003; Pieter Van den Abeele <pvdabeel@gentoo.org> : added ppc keyword
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
