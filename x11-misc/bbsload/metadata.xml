@@ -3,6 +3,6 @@
 <pkgmetadata>
   <herd>commonbox</herd>
   <longdescription>
-  Load manager for Blackbox.
+  Load monitor for Blackbox.
   </longdescription>
 </pkgmetadata>
