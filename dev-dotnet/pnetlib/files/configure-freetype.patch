@@ -1,0 +1,11 @@
+--- configure.in.orig	2005-01-16 10:43:47.259280528 +0100
++++ configure.in	2005-01-16 10:44:16.855781176 +0100
+@@ -76,7 +76,7 @@
+ 	XFT_INC=
+ else
+ 	X11_LIB=-lX11
+-	if test "x$xft" != "xfalse" && "x$FREETYPE_CONFIG" != "xno" ; then
++	if test "x$xft" != "xfalse" && test "$FREETYPE_CONFIG" != "no" ; then
+ 		XFT_LIB=-lXft
+ 		XFT_INC=`$FREETYPE_CONFIG --cflags`
+ 		AC_DEFINE(USE_XFT_EXTENSION)

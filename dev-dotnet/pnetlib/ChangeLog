@@ -1,6 +1,13 @@
 # ChangeLog for dev-dotnet/pnetlib
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/pnetlib/ChangeLog,v 1.20 2005/01/01 17:50:10 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/pnetlib/ChangeLog,v 1.21 2005/01/16 09:49:25 scandium Exp $
+
+*pnetlib-0.6.12 (16 Jan 2005)
+
+  16 Jan 2005; Rainer Groesslinger <scandium@gentoo.org>
+  +files/0.6.12-resgen.patch, +files/configure-freetype.patch,
+  +pnetlib-0.6.12.ebuild:
+  new version
 
   26 Nov 2004; Rainer Groesslinger <scandium@gentoo.org>
   pnetlib-0.6.10.ebuild:
