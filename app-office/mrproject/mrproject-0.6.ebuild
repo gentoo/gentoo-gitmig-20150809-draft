@@ -1,12 +1,10 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-office/mrproject/mrproject-0.5.94.ebuild,v 1.1 2002/08/07 18:45:06 stroke Exp $
-
-inherit debug
+# $Header: /var/cvsroot/gentoo-x86/app-office/mrproject/mrproject-0.6.ebuild,v 1.1 2002/08/18 23:35:54 spider Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Project manager for Gnome2"
-SRC_URI="ftp://ftp.codefactory.se/pub/software/mrproject/unstable/${P}.tar.gz"
+SRC_URI="ftp://ftp.codefactory.se/pub/software/mrproject/source/${P}.tar.gz"
 HOMEPAGE="http://mrproject.codefactory.se/"
 
 SLOT="2"
@@ -19,7 +17,7 @@ RDEPEND=">=x11-libs/gtk+-2.0.5
 	>=gnome-base/libgnomecanvas-2.0.1
 	>=gnome-base/libglade-2.0.0
 	>=gnome-base/libgnomeui-2.0.1
-	>=dev-libs/libmrproject-0.5
+	>=dev-libs/libmrproject-0.6
 	nls? ( sys-devel/gettext )"
 
 DEPEND="${RDEPEND}
@@ -32,25 +30,12 @@ src_compile() {
 	use doc && myconf="--enable-gtk-doc" || myconf="--disable-gtk-doc"
 	use nls && myconf="${myconf} --enable-nls" || myconf="${myconf} --disable-nls"
 		
-	./configure --host=${CHOST} \
-		--prefix=/usr \
-		--sysconfdir=/etc \
-		--infodir=/usr/share/info \
-		--mandir=/usr/share/man \
-		--localstatedir=/var/lib \
-		${myconf} --disable-maintainer-mode \
-		--enable-debug || die
+	econf ${myconf} --disable-maintainer-mode || die "compile failure" 
 	emake || die
 }
 
 src_install() {
-	make DESTDIR=${D} prefix=/usr \
-		sysconfdir=/etc \
-		infodir=/usr/share/info \
-		mandir=/usr/share/man \
-		localstatedir=/var/lib \
-		install || die
-    
+	einstall
 	dodoc AUTHORS COPYING ChangeL* INSTALL NEWS  README* 
 
 }
