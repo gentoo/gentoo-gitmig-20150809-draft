@@ -1,0 +1,10 @@
+# ChangeLog for media-gfx/iv
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# Maintainer: George Shapovalov <george@gentoo.org>
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/iv/ChangeLog,v 1.1 2002/05/16 04:46:37 george Exp $
+
+*iv-0.1.9 (15 May 2002)
+
+	15 May 2002; George Shapovalov <george@gentoo.org> iv-0.1.9.ebuild,Changelog,files/digest-iv-0.1.9 :
+
+	Initial release
