@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/jpilot/jpilot-0.99.5.ebuild,v 1.6 2003/09/09 17:41:01 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/jpilot/jpilot-0.99.5.ebuild,v 1.7 2003/09/24 20:36:05 mholzer Exp $
 
 SYNCMAL="0.71.2"
 MALSYNC="2.1.1"
@@ -17,9 +17,10 @@ HOMEPAGE="http://jpilot.org/"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 sparc alpha"
-IUSE="nls"
+IUSE="nls gtk gtk2"
 
-DEPEND=">=x11-libs/gtk+-2
+DEPEND="gtk2? ( >=x11-libs/gtk+-2 )
+	gtk? ( >=x11-libs/gtk+-1.2 )
 	>=app-pda/pilot-link-0.11.5"
 
 src_unpack() {
@@ -37,8 +38,7 @@ src_compile() {
 	econf ${myconf}
 
 	# make sure we use $CFLAGS
-	mv Makefile Makefile.old
-	sed -e "s/-g -O2/${CFLAGS}/" Makefile.old > Makefile
+	sed -i "s/-g -O2/${CFLAGS}/" Makefile
 	emake || die
 
 	# build malsync plugin
