@@ -1,8 +1,7 @@
 #!/sbin/runscript
 
-#you can move these into your rc.conf file if you wish
-#MOUSEDEV=/dev/psaux
-#MOUSE=ps2
+#NB:  Config options moved to /etc/conf.d/gpm
+
 
 depend() {
 	need localmount
@@ -10,7 +9,7 @@ depend() {
 
 checkconfig() {
 	if [ -z "$MOUSEDEV" ] || [ -z "$MOUSE" ] ; then
-		eerror "You need to setup MOUSEDEV and MOUSE first"
+		eerror "You need to setup MOUSEDEV and MOUSE in /etc/conf.d/gpm first"
 		return 1
 	fi
 }
