@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ethereal-0.9.16.ebuild,v 1.2 2003/11/14 15:52:03 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ethereal-0.9.16.ebuild,v 1.3 2003/11/24 07:22:08 phosphan Exp $
 
 IUSE="gtk ipv6 snmp ssl gtk2"
 inherit libtool
@@ -15,8 +15,10 @@ KEYWORDS="~x86 ~sparc ~ppc ~alpha amd64"
 
 RDEPEND=">=sys-libs/zlib-1.1.4
 	snmp? ( virtual/snmp )
-	gtk2? ( >=dev-libs/glib-2.0.4 =x11-libs/gtk+-2* )
-	!gtk2 ( gtk? ( =x11-libs/gtk+-1.2* ) )
+	gtk? (
+		gtk2? ( >=dev-libs/glib-2.0.4 =x11-libs/gtk+-2* )
+		!gtk2? ( =x11-libs/gtk+-1.2* )
+	)
 	=dev-libs/glib-1.2*
 	ssl? ( >=dev-libs/openssl-0.9.6e )
 	>=net-libs/libpcap-0.7.1"
