@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jed/jed-0.99.16-r1.ebuild,v 1.9 2003/09/18 22:28:57 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jed/jed-0.99.16-r1.ebuild,v 1.10 2003/10/01 11:39:33 aliz Exp $
 
 IUSE="X gpm truetype"
 
@@ -33,22 +33,19 @@ src_compile() {
 
 	if [ -n "`use gpm`" ] ; then
 		cd src
-		mv Makefile Makefile.orig
-		sed 	-e 's/#MOUSEFLAGS/MOUSEFLAGS/' \
+		sed -i	-e 's/#MOUSEFLAGS/MOUSEFLAGS/' \
 			-e 's/#MOUSELIB/MOUSELIB/' \
 			-e 's/#GPMMOUSEO/GPMMOUSEO/' \
 			-e 's/#OBJGPMMOUSEO/OBJGPMMOUSEO/' \
-			Makefile.orig > Makefile
+			Makefile
 		cd ${S}
 	fi
 
 	if [ -n "`use X`" -a -n "`use truetype`" ]; then
 	   cd src
-	   mv Makefile Makefile.orig
-	   sed -e 's/#XRENDERFONTLIBS/XRENDERFONTLIBS/' Makefile.orig > Makefile.new
-	   sed -e 's/^CONFIG_H = config.h/xterm_C_FLAGS = `freetype-config --cflags`\nCONFIG_H = config.h/' Makefile.new > Makefile
-	   mv jed-feat.h jed-feat.h.orig
-	   sed -e 's/#define XJED_HAS_XRENDERFONT 0/#define XJED_HAS_XRENDERFONT 1/' jed-feat.h.orig > jed-feat.h
+	   sed -i -e 's/#XRENDERFONTLIBS/XRENDERFONTLIBS/' Makefile
+	   sed -i -e 's/^CONFIG_H = config.h/xterm_C_FLAGS = `freetype-config --cflags`\nCONFIG_H = config.h/' Makefile
+	   sed -i -e 's/#define XJED_HAS_XRENDERFONT 0/#define XJED_HAS_XRENDERFONT 1/' jed-feat.h
 	   cd ${S}
 	fi
 

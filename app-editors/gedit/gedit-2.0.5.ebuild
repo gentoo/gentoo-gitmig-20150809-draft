@@ -1,12 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/gedit-2.0.5.ebuild,v 1.9 2003/09/05 23:05:05 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/gedit-2.0.5.ebuild,v 1.10 2003/10/01 11:39:33 aliz Exp $
 
 inherit gnome2
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A text editor for the Gnome2 desktop"
-SRC_URI="mirror://gnome/2.0.1/sources/${PN}/${P}.tar.bz2"
+SRC_URI="mirror://gnome/2.0.1/sources/gedit/${P}.tar.bz2"
 HOMEPAGE="http://www.gnome.org/"
 SLOT="0"
 LICENSE="GPL-2"

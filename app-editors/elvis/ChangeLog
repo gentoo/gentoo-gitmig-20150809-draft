@@ -1,6 +1,6 @@
 # ChangeLog for app-editors/elvis
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/elvis/ChangeLog,v 1.7 2003/06/12 14:34:57 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/elvis/ChangeLog,v 1.8 2003/10/01 11:39:33 aliz Exp $
 
   12 Jun 2003; Aron Griffis <agriffis@gentoo.org> elvis-2.1.4-r1.ebuild,
   files/elvis-2.1.4-keysym.patch:
@@ -24,3 +24,5 @@
   comments should well explained and written in clean English. The details about
   writing correct changelogs are explained in the skel.ChangeLog file which you
   can find in the root directory of the portage repository.
+
+*elvis-2.1.4 (15 May 2001)

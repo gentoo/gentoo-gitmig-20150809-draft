@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jed/jed-0.99.16.ebuild,v 1.5 2003/09/18 22:28:57 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jed/jed-0.99.16.ebuild,v 1.6 2003/10/01 11:39:33 aliz Exp $
 
 IUSE="X gpm"
 
@@ -30,12 +30,11 @@ src_compile() {
 
 	if [ -n "`use gpm`" ] ; then
 		cd src
-		mv Makefile Makefile.orig
-		sed 	-e 's/#MOUSEFLAGS/MOUSEFLAGS/' \
+		sed -i 	-e 's/#MOUSEFLAGS/MOUSEFLAGS/' \
 			-e 's/#MOUSELIB/MOUSELIB/' \
 			-e 's/#GPMMOUSEO/GPMMOUSEO/' \
 			-e 's/#OBJGPMMOUSEO/OBJGPMMOUSEO/' \
-			Makefile.orig > Makefile
+			Makefile
 		cd ${S}
 	fi
 
@@ -60,7 +59,7 @@ src_install () {
 
 	cd ${S}/info
 	rm info.info
-	patch < ${FILESDIR}/jed.info.diff || die
+	epatch${FILESDIR}/jed.info.diff
 	cd ${S}
 
 	insinto /usr/share/info

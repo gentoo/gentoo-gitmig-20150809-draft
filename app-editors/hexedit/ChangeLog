@@ -1,13 +1,13 @@
 # ChangeLog for app-editors/hexedit
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/hexedit/ChangeLog,v 1.6 2003/05/21 12:41:52 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/hexedit/ChangeLog,v 1.7 2003/10/01 11:39:33 aliz Exp $
 
   21 May 2003; Tavis Ormandy <taviso@gentoo.org> hexedit-1.2.2.ebuild:
   looks good on alpha.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
-*hexedit-1.2.2; (14 Feb 2002)
+*hexedit-1.2.2 (14 Feb 2002)
 
   06 Aug 2002; Mark Guertin <gerk@gentoo.org> :
   Added ppc to keywords

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/fte/fte-20010819-r3.ebuild,v 1.14 2003/09/05 01:56:28 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/fte/fte-20010819-r3.ebuild,v 1.15 2003/10/01 11:39:33 aliz Exp $
 
 inherit eutils
 
@@ -8,8 +8,8 @@ IUSE="gpm slang X"
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Lightweight text-mode editor"
-SRC_URI="mirror://sourceforge/${PN}/${P}-src.zip
-	mirror://sourceforge/${PN}/${P}-common.zip"
+SRC_URI="mirror://sourceforge/fte/${P}-src.zip
+	mirror://sourceforge/fte/${P}-common.zip"
 HOMEPAGE="http://fte.sourceforge.net"
 
 RDEPEND=">=sys-libs/ncurses-5.2
@@ -49,11 +49,9 @@ src_unpack() {
 	cd ${S}
 	epatch ${FILESDIR}/${P}-gentoo.diff
 
-	cp src/fte-unix.mak src/fte-unix.mak.orig
-
-	sed -e "s:@targets@:${TARGETS}:" \
+	sed -i -e "s:@targets@:${TARGETS}:" \
 		-e "s:@cflags@:${CFLAGS}:" \
-		src/fte-unix.mak.orig > src/fte-unix.mak
+		src/fte-unix.mak
 }
 
 src_compile() {
