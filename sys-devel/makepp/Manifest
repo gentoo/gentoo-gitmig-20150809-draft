@@ -1,5 +1,5 @@
-MD5 0d43b90dd95fcf9be909a6eb0efc6a7b makepp-1.18.ebuild 1011
-MD5 0a0b74d1d91189f989262d66c0bc221e ChangeLog 420
+MD5 0b17c722d6f6781e0ae685a67ca3a71d makepp-1.18.ebuild 1010
+MD5 48053e22463102ca19c5c2d77a402be2 ChangeLog 525
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 654d2795cdd9a6ae279129f7d191cae3 files/makepp-1.18-install.patch 2499
 MD5 083fda7b26387aa8eb168a509be56113 files/digest-makepp-1.18 63
