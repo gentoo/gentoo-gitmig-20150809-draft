@@ -1,6 +1,15 @@
 # ChangeLog for app-arch/dump
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-arch/dump/ChangeLog,v 1.3 2002/04/27 04:27:42 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dump/ChangeLog,v 1.4 2002/06/05 08:15:27 seemant Exp $
+
+*dump-0.4.28-r1 (5 Jun 2002)
+
+  5 Jun 2002; Seemant Kulleen <seemant@gentoo.org> dump-0.4.28-r1.ebuild
+  files/digest-dump-0.4.28-r1 :
+
+  Fixed the dumpdates directory to /etc/dumpdates instead of /etc, and also
+  made readline an optional dependency.  Closes bug #3403 by
+  shane@trontech.net (Shane Hyde)
 
 *dump-0.4.28 (26 Apr 2002)
 
