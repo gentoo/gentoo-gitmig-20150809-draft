@@ -1,6 +1,13 @@
 # ChangeLog for app-portage/genlop
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/genlop/ChangeLog,v 1.8 2004/03/21 02:50:07 avenj Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/genlop/ChangeLog,v 1.9 2004/03/28 01:55:18 genone Exp $
+
+*genlop-0.30.1 (28 Mar 2004)
+
+  28 Mar 2004; Marius Mauch <genone@gentoo.org> genlop-0.20.2.ebuild,
+  genlop-0.30.1.ebuild:
+  version bump + moving the bash-completion file from /usr/share/doc to
+  /usr/share/bash-completion (closing #45237 and #45840)
 
   20 Mar 2004; Jon Portnoy <avenj@gentoo.org> genlop-0.20.2.ebuild :
   AMD64 keywords.
