@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-mag/gnome-mag-0.10.3.ebuild,v 1.1 2003/10/10 11:07:25 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-mag/gnome-mag-0.10.3.ebuild,v 1.2 2003/11/10 20:22:56 leonardop Exp $
 
 inherit gnome2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnome.org/"
 
 LICENSE="LGPL-2"
 SLOT="1"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 IUSE="debug"
 
