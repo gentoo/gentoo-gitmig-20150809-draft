@@ -1,6 +1,9 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libirman/libirman-0.4.2.ebuild,v 1.12 2004/07/05 06:44:08 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libirman/libirman-0.4.2-r1.ebuild,v 1.1 2004/07/05 06:44:08 eradicator Exp $
+
+IUSE=""
+inherit eutils
 
 DESCRIPTION="library for Irman control of Unix software"
 SRC_URI="http://www.lirc.org/software/snapshots/${P}.tar.gz"
@@ -8,9 +11,16 @@ HOMEPAGE="http://www.evation.com/libirman/libirman.html"
 
 SLOT="0"
 LICENSE="GPL-2 LGPL-2"
-KEYWORDS="x86 sparc alpha ia64"
+KEYWORDS="~x86 ~sparc alpha ~ia64 ~amd64"
 
 DEPEND="virtual/libc"
+
+src_unpack() {
+	unpack ${A}
+
+	cd ${S}
+	epatch ${FILESDIR}/${P}-PICShared.patch
+}
 
 src_install() {
 	dodir /usr/include
