@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/multi-gnome-terminal/multi-gnome-terminal-1.3.6.ebuild,v 1.1 2001/12/21 04:18:05 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/multi-gnome-terminal/multi-gnome-terminal-1.3.8.ebuild,v 1.1 2002/01/09 01:08:07 hallski Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Extended version of the Gnome Terminal."
