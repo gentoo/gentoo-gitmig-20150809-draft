@@ -108,11 +108,6 @@ dev-libs/commoncpp2
 =kde-base/kdeutils-3.1_beta2
 
 
-# <spider@gentoo.org> (01 Oct 2002)
-# Masking since its a versionbump as well as fix.
-# hopefully this fixes the "cannot find gdk-poxbuf bugs
-=media-libs/gdk-pixbuf-0.20.0
-
 # <mkeadle@gentoo.org> (30 Sep 2002)
 # Masking pending BRRRR disfreeze
 media-video/SDLcam
@@ -152,10 +147,6 @@ app-admin/logsentry
 =net-mail/uw-imap-2001a-r3
 # new ipv6 patch.  squashes ssl patch though.
 =sys-apps/ucspi-tcp-0.88-r4
-
-# <mcummings@gentoo.org> (24 Sep 2002)
-# addresses bug 8299 - please test!
-#=media-gfx/imagemagick-5.4.7-r2
 
 # <raker@gentoo.org> (23 Sep 2002)
 # masking libsndfile-1.0.0 due to API changes
@@ -207,10 +198,6 @@ x11-terms/powershell
 =media-libs/libgd-2.0.1
 =dev-perl/GD-2.01
 
-# <murphy@gentoo.org> (14 Sep 2002)
-# Bugfix release, may resolve some issues on sparc64 but needs further testing
-# before full-scale deployment
-=sys-apps/silo-1.2.6
 
 # <lostlogic@gentoo.org> (13 Sep 2002)
 # Masking gaim-0.59.2 because it segfaults all the time
@@ -246,14 +233,6 @@ x11-terms/powershell
 # masked coz it is old and broken
 =app-games/quakeforge-0.5.0
 
-# <phoenix@gentoo.org> (09 Sep 2002)
-# Testing a workaround in emerge-webrsync
-# <mjc@gentoo.org> (14 Sep 2002)
-# it works for me behind a firewall, and 
-# emerge-webrsync is broken in previous
-# versions.. unmasking
-#=app-admin/gentoolkit-0.1.17-r1
-
 # <karltk@gentoo.org> (08 Sep 2002)
 # This fixes a few problems, but should not be unmasked 
 # before it's properly tested, probably not before 1.4
@@ -268,14 +247,9 @@ x11-terms/powershell
 # new ebuild. cvs checkout of galeon <head> (galeon2)
 net-www/galeon-cvs
 
-# <carpaski@gentoo.org> (08 Sep 2002)
-# Possible/likely fix for python compile issues
-# bug #7641
-#=dev-lang/python-2.2.1-r4
 
 # <azarah@gentoo.org> (08 Sep 2002)
 # Get things ready for new xfree release.
-#=sys-apps/baselayout-1.8.3
 =x11-base/xfree-4.2.1
 
 # <aliz@gentoo.org> (07 Sep 2002)
@@ -310,10 +284,6 @@ dev-python/pycrypto
 # This needs a lot of testing
 app-emulation/winex-cvs
 
-# <blizzy@gentoo.org> (01 Sep 2002)
-# masked because there is a freeze and for testing
-#net-misc/d4x
-# 
 # <azarah@gentoo.org> (01 Sep 2002)
 # we have a ebuild for this already with many more features.
 # havent moved it from net-misc/nt to net-misc/d4x until now,
@@ -424,10 +394,6 @@ dev-perl/CDDB-File
 # masked for extensive testing
 x11-libs/qt-embedded
 
-# <mjc@gentoo.org>    (20 Aug 2002)
-# masked for testing
-=sys-kernel/gentoo-sources-2.4.19-r8
-
 # <george@gentoo.org> (19 Aug 2002) 
 # masked for testing
 =dev-libs/korelib-1.0
@@ -531,10 +497,6 @@ dev-python/anygui
 # new package. needs testing
 app-office/ical
 
-# Daniel Robbins <drobbins@gentoo.org> (31 Jul 2002)
-# marked pre-release
-=sys-apps/evms-1.1.0_pre4
-
 # Daniel Robbins <drobbins@gentoo.org> (30 Jul 2002)
 # no corresponding PyQt on cvs to get this thing to compile
 dev-python/anygui
@@ -567,13 +529,8 @@ app-games/halflife-server
 app-games/cstrike-server
 app-misc/ldapbrowser
 
-# <seemant@gentoo.org> (25 Jul 2002)
-# masked for testing
-=app-admin/msyslog-1.08e
-
 # <cardoe@genoo.org> (25 Jul 2002)
 # Moz 1.1beta (don't kill me Azarah for putting this here!)
-=net-www/mozilla-1.1_beta
 >=net-www/mozilla-1.1
 
 # <azarah@gentoo.org> (25 Jul 2002)
@@ -599,13 +556,6 @@ net-misc/fakeidentd
 # waiting on copyright
 net-misc/radvd
 
-# <aliz@gentoo.org> (24 Jul 2002)
-# needs some testing first
-=app-text/aspell-0.33.7.1-r2
-
-# <aliz@gentoo.org> (24 Jul 2002)
-# masked for testing
-#
 # <azarah@gentoo.org> (29 Jul 2002)
 # I have major formatting problems with this one .. even
 # just viewing manpages it do not handle properly, so
@@ -633,25 +583,13 @@ net-misc/radvd
 # new version, please test
 >=net-ftp/proftpd-1.2.6_rc1
 
-# <chadh@gentoo.org> (19 Jul 2002)
-# new ebuild.  x86-only.  Should be good to go once it is masked for alt arch
-app-misc/lphdisk
 # new ebuild.  probably x86-only as well.
 app-misc/mwavem
-
-# <chadh@gentoo.org> (18 Jul 2002)
-# new ebuild.  Almost certainly an x86-only package.
-media-libs/libfame
 
 # <karltk@gentoo.org> (18 Jul 2002)
 # standard library does not compile
 =dev-lang/clean-2.0.1
 
-# azarah@gentoo.org (17 Jul 2002)
-# needs testing.
-# Added other deps that depend on baselayout
-=sys-apps/baselayout-1.8.0
-=sys-apps/baselayout-1.8.1
 app-emulation/zinc
 
 # phoenix@gentoo.org (17 Jul 2002)
@@ -754,11 +692,6 @@ media-gfx/k3studio
 # old version isn't available, new version doesn't compile - danarmak
 media-libs/nurbs++
 
-# Mask this one, as it seems users dont emerge --clean rsync
-#
-# Azarah (26 May 2002)
-=media-video/avifile-0.7.20020412
-
 # This is is _very_ experimental!
 # azarah - 19 Jun 2002
 >=x11-base/xfree-4.2.99
@@ -796,9 +729,6 @@ dev-libs/libiconv
 <sys-apps/shadow-4.0.2-r4
 <sys-apps/util-linux-2.11o
 
-# 23 Mar, m0rpheus: bind 8 keeps having serious problems.
-<net-misc/bind-9.0.0
-
 # bug #468
 net-www/zope
 
@@ -814,14 +744,6 @@ net-www/zope
 # Arcady Genkin <agenkin@gentoo.org> May 20, 2002.
 #
 net-www/opera
-
-# Arcady Genkin <agenkin@gentoo.org>
-# Jul 22, 2002
-# Masking this for a week, until the removed _beta10 packages
-# become a thing in the past.
-=media-sound/alsa-utils-0.9.0.1_beta10
-=media-libs/alsa-lib-0.9.0.1_beta10
-=media-libs/alsa-oss-0.9.0.1_beta10
 
 # Arcady Genkin <agenkin@gentoo.org>
 # Aug 15 2002
@@ -903,18 +825,6 @@ media-libs/id3lib-docs
 
 # conflict with linux-sources, to be resolved soon
 sys-kernel/linux-sources-vanilla
-
-# incompatible
-#added pspell-ispell till i sort out the *spells
-#
-#pspell-ispell works here, but it seems that with pspell, aspell
-#should be generally left alone
-#
-#Azarah - 03 April 2002
-#
-<app-text/pspell-ispell-0.12-r1
-<app-text/pspell-0.12
-<app-text/aspell-0.33
 
 # Unmask these two, as the latest (automake-1.6-r1 and autoconf-2.53)
 # should do some autodetection magic.
