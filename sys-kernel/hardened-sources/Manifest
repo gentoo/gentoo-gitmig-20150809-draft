@@ -2,8 +2,8 @@ MD5 e9c0aa77cea4cab0053913d6241e1a62 hardened-sources-2.4.20-r4.ebuild 2220
 MD5 8cb999656e1d3b855adb13a56f9e1d61 hardened-sources-2.4.22.ebuild 2274
 MD5 4e6ec0e040985b2bf3bd10c66e92eeda hardened-sources-2.4.20-r3.ebuild 2220
 MD5 5bd722c8fee20760ec3f679e0edc0053 hardened-sources-2.4.21.ebuild 2480
-MD5 09d46798446b3eb0f40cf70a257027e3 hardened-sources-2.4.22-r1.ebuild 2277
-MD5 e0a059b2a3a1fa1fe92e77af50b913d7 ChangeLog 4917
+MD5 e1fe735a0487bb61bb321dd3f0f9a230 hardened-sources-2.4.22-r1.ebuild 2287
+MD5 d261541850f7a90e36a921194abd9f3d ChangeLog 5040
 MD5 724c01628b1dd03c8bfe196f0ae31368 metadata.xml 558
 MD5 638b95442feba0a7c21a0088d4a65c14 hardened-sources-2.4.20-r2.ebuild 2302
 MD5 e637c6fa41097ea2c4693d0766f2e1c5 files/do_brk_fix.patch 242

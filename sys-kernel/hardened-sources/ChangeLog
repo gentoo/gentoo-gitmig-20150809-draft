@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/hardened-sources
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.16 2003/12/02 07:11:23 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.17 2003/12/02 23:14:31 iggy Exp $
+
+  02 Dec 2003; Brian Jackson <iggy@gentoo.org>
+  hardened-sources-2.4.22-r1.ebuild:
+  fix up a little booboo from earlier
 
 *hardened-sources-2.4.22-r1 (02 Dec 2003)
 
