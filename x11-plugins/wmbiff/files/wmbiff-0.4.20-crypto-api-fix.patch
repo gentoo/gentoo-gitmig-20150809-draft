@@ -1,0 +1,95 @@
+Common subdirectories: wmbiff/.deps and wmbiff.new/.deps
+diff -u wmbiff/gnutls-common.c wmbiff.new/gnutls-common.c
+--- wmbiff/gnutls-common.c	2002-10-10 20:25:58.000000000 +0200
++++ wmbiff.new/gnutls-common.c	2004-02-11 10:22:25.006385211 +0100
+@@ -1,6 +1,7 @@
+ #include <stdio.h>
+ #include <gnutls/gnutls.h>
+ #include <gnutls/extra.h>
++#include <gnutls/compat4.h>
+ #include <time.h>
+ 
+ #define PRINTX(x,y) if (y[0]!=0) printf(" #   %s %s\n", x, y)
+@@ -192,8 +193,6 @@
+ 		printf("- Peer's certificate is NOT trusted\n");
+ 	else
+ 		printf("- Peer's certificate is trusted\n");
+-	if (status & GNUTLS_CERT_CORRUPTED)
+-		printf("- Peer's certificate is corrupted\n");
+ 
+ }
+ 
+diff -u wmbiff/tlsComm.c wmbiff.new/tlsComm.c
+--- wmbiff/tlsComm.c	2003-11-09 00:43:50.000000000 +0100
++++ wmbiff.new/tlsComm.c	2004-02-11 10:21:33.246296874 +0100
+@@ -20,6 +20,7 @@
+ #include <stdlib.h>
+ #include <assert.h>
+ #ifdef HAVE_GNUTLS_GNUTLS_H
++#include <gnutls/compat4.h>
+ #define USE_GNUTLS
+ #include <gnutls/gnutls.h>
+ #endif
+@@ -325,8 +326,6 @@
+ 	certstat = gnutls_certificate_verify_peers(scs->tls_state);
+ 	if (certstat ==
+ 		(GNUTLS_CertificateStatus) GNUTLS_E_NO_CERTIFICATE_FOUND) {
+-	} else if (certstat & GNUTLS_CERT_CORRUPTED) {
+-		bad_certificate(scs, "server's certificate is corrupt.\n");
+ 	} else if (certstat & GNUTLS_CERT_REVOKED) {
+ 		bad_certificate(scs, "server's certificate has been revoked.\n");
+ 	} else if (certstat & GNUTLS_CERT_INVALID) {
+@@ -399,7 +398,7 @@
+ 		const int protocols[] = { GNUTLS_TLS1, GNUTLS_SSL3, 0 };
+ 		const int ciphers[] =
+ 			{ GNUTLS_CIPHER_RIJNDAEL_128_CBC, GNUTLS_CIPHER_3DES_CBC,
+-			GNUTLS_CIPHER_RIJNDAEL_256_CBC, GNUTLS_CIPHER_TWOFISH_128_CBC,
++			GNUTLS_CIPHER_RIJNDAEL_256_CBC, 
+ 			GNUTLS_CIPHER_ARCFOUR, 0
+ 		};
+ 		const int compress[] = { GNUTLS_COMP_ZLIB, GNUTLS_COMP_NULL, 0 };
+--- wmbiff/Pop3Client_orig.c	2003-11-08 18:43:50.000000000 -0500
++++ wmbiff/Pop3Client.c	2004-01-05 16:53:38.325787224 -0500
+@@ -281,7 +281,7 @@
+ 	strcat(buf, " ");
+ 
+ 
+-	gmh = gcry_md_open(GCRY_MD_MD5, GCRY_MD_FLAG_HMAC);
++	gcry_md_open(&gmh, GCRY_MD_MD5, GCRY_MD_FLAG_HMAC);
+ 	gcry_md_setkey(gmh, PCU.password, strlen(PCU.password));
+ 	gcry_md_write(gmh, (unsigned char *) buf2, strlen(buf2));
+ 	gcry_md_final(gmh);
+@@ -323,7 +323,7 @@
+ 	POP_DM(pc, DEBUG_INFO, "APOP challenge: %s\n", apop_str);
+ 	strcat(apop_str, PCU.password);
+ 
+-	gmh = gcry_md_open(GCRY_MD_MD5, 0);
++	gcry_md_open(&gmh, GCRY_MD_MD5, 0);
+ 	gcry_md_write(gmh, (unsigned char *) apop_str, strlen(apop_str));
+ 	gcry_md_final(gmh);
+ 	md5 = gcry_md_read(gmh, 0);
+--- wmbiff/Imap4Client_orig.c	2004-01-01 02:36:05.000000000 -0500
++++ wmbiff/Imap4Client.c	2004-01-05 16:53:58.763980086 -0500
+@@ -648,7 +648,7 @@
+ 	strcpy(buf, PCU.userName);
+ 	strcat(buf, " ");
+ 	ask_user_for_password(pc, 0);
+-	gmh = gcry_md_open(GCRY_MD_MD5, GCRY_MD_FLAG_HMAC);
++	gcry_md_open(&gmh, GCRY_MD_MD5, GCRY_MD_FLAG_HMAC);
+ 	DEFROB(PCU.password);
+ 	gcry_md_setkey(gmh, PCU.password, strlen(PCU.password));
+ 	ENFROB(PCU.password);
+--- wmbiff/wmbiff_orig.c	2004-01-05 16:59:49.000000000 -0500
++++ wmbiff/wmbiff.c	2004-01-05 17:00:07.692306621 -0500
+@@ -423,10 +423,9 @@
+ 	if ((zok = gcry_control(GCRYCTL_INIT_SECMEM, 16384, 0)) != 0) {
+ 		DMA(DEBUG_ERROR,
+ 			"Error: gcry_control() to initialize secure memory returned non-zero: %d\n"
+-			" Message: %s\n"
+ 			" libgcrypt version: %s\n"
+ 			" recovering: will fail later if using CRAM-MD5 or APOP authentication.\n",
+-			zok, gcry_strerror(gcry_errno()), gcry_check_version(NULL));
++			zok, gcry_check_version(NULL));
+ 	};
+ #endif
+ 
