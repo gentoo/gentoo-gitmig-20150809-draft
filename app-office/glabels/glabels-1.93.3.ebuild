@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/glabels/glabels-1.93.3.ebuild,v 1.1 2004/08/10 23:21:02 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/glabels/glabels-1.93.3.ebuild,v 1.2 2004/08/18 17:31:38 gustavoz Exp $
 
 inherit gnome2
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2 FDL-1.1 LGPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc"
+KEYWORDS="x86 ~ppc sparc"
 IUSE=""
 
 RDEPEND=">=dev-libs/glib-2.2
