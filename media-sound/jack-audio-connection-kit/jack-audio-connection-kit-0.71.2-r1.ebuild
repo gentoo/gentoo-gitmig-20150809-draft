@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-audio-connection-kit/jack-audio-connection-kit-0.71.2-r1.ebuild,v 1.2 2003/07/12 20:30:52 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-audio-connection-kit/jack-audio-connection-kit-0.71.2-r1.ebuild,v 1.3 2003/09/10 05:08:45 msterret Exp $
 
 IUSE="doc jack-tmpfs"
 
@@ -34,15 +34,15 @@ src_compile() {
 
 src_install() {
 
-        use doc && dodir /usr/share/doc/${PF}/html
+	use doc && dodir /usr/share/doc/${PF}/html
 
-        make \
-                DESTDIR=${D} \
-                datadir=${D}/usr/share \
-                install || die
+	make \
+		DESTDIR=${D} \
+		datadir=${D}/usr/share \
+		install || die
 
-        use doc && mv \
-                ${D}/usr/share/jack-audio-connection-kit/reference/html/* \
-                ${D}/usr/share/doc/${PF}/html
-        use doc && rm -rf ${D}/usr/share/jack-audio-connection-kit
+	use doc && mv \
+		${D}/usr/share/jack-audio-connection-kit/reference/html/* \
+		${D}/usr/share/doc/${PF}/html
+	use doc && rm -rf ${D}/usr/share/jack-audio-connection-kit
 }
