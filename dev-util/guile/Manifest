@@ -1,30 +1,16 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 053826517e06e74d6506f0eafc0f1479 ChangeLog 4875
+MD5 4191af0c559fe03a5d2e271f0011029b ChangeLog 4999
 MD5 f4a3bb08da3e9162271dee410addc833 guile-1.4-r3.ebuild 786
 MD5 6c96ba5979bf0f56d6d04c90de9e0208 guile-1.4.1.ebuild 818
 MD5 1a3926044f9c3c9407170caa1d716d58 guile-1.6.4-r1.ebuild 1857
-MD5 9f297c95a0afd01aa8b43f6637e87da1 guile-1.6.4.ebuild 1118
-MD5 327369d7f77a3211382c3d8f3cc2eba5 metadata.xml 313
-MD5 2cfd3a1bafae682dbdb4e427d6c93e23 guile-1.6.4-r2.ebuild 1818
 MD5 ef193af30b2a86d4b299dea03777fb93 guile-1.6.6.ebuild 2004
 MD5 9ef79a0b395436d3880e97559eb83812 guile-1.6.7.ebuild 2118
+MD5 327369d7f77a3211382c3d8f3cc2eba5 metadata.xml 313
 MD5 983ca0d7ff0dc5899a453df89e714538 files/digest-guile-1.4-r3 62
 MD5 c6e6b728591d901172031cc9a0997d31 files/digest-guile-1.4.1 64
-MD5 c8ef00401b82bbfae1fa78785341e8dc files/digest-guile-1.6.4 64
 MD5 c8ef00401b82bbfae1fa78785341e8dc files/digest-guile-1.6.4-r1 64
-MD5 979d4686f6e39379b33139182873dead files/guile-amd64.patch 439
-MD5 c8ef00401b82bbfae1fa78785341e8dc files/digest-guile-1.6.4-r2 64
-MD5 0cd979c8cd8e7667986b79db8ccae209 files/guile-macos-posix.patch 904
-MD5 d97c8dff01a8b6735f8bef03c72f52f3 files/guile-macos-relink.patch 1213
-MD5 421beec2399dd47b6cc14d5691d7dcc4 files/guile-1.4-inet_aton.patch 624
 MD5 30c55437dd6efe1474a4f4312228b2ca files/digest-guile-1.6.6 64
 MD5 cd2f121bfb660c3ae7ba916a07d086f7 files/digest-guile-1.6.7 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFB+hwZRkyva5PS18kRApovAJ0UqCF0X/yN0JkrvhN097qLAnRYlQCcCjMs
-WPLuY0mFUw9zXcmi4MEsIas=
-=p8Kl
------END PGP SIGNATURE-----
+MD5 421beec2399dd47b6cc14d5691d7dcc4 files/guile-1.4-inet_aton.patch 624
+MD5 979d4686f6e39379b33139182873dead files/guile-amd64.patch 439
+MD5 0cd979c8cd8e7667986b79db8ccae209 files/guile-macos-posix.patch 904
+MD5 d97c8dff01a8b6735f8bef03c72f52f3 files/guile-macos-relink.patch 1213

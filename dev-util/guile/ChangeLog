@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/guile
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/guile/ChangeLog,v 1.37 2005/01/28 11:03:43 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/guile/ChangeLog,v 1.38 2005/04/06 20:09:36 seemant Exp $
+
+  06 Apr 2005; Seemant Kulleen <seemant@gentoo.org> -guile-1.6.4.ebuild,
+  -guile-1.6.4-r2.ebuild:
+  remove crufty ebuilds
 
 *guile-1.6.7 (28 Jan 2005)
 
