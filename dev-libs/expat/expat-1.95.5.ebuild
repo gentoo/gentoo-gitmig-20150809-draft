@@ -1,6 +1,6 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/expat/expat-1.95.5.ebuild,v 1.1 2002/11/11 16:14:46 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/expat/expat-1.95.5.ebuild,v 1.2 2002/11/11 16:18:12 karltk Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="XML parsing libraries"
@@ -19,9 +19,6 @@ src_compile() {
 
 src_install() {
 	einstall
-#make prefix=${D}/usr \
-#		mandir=${D}/usr/share/man/man1 install || die "make install failed"
-
 	dodoc COPYING Changes MANIFEST README
 	dohtml doc/*
 }
