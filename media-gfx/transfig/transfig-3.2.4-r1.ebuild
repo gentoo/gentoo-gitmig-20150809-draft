@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/transfig/transfig-3.2.4-r1.ebuild,v 1.12 2004/10/04 23:22:49 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/transfig/transfig-3.2.4-r1.ebuild,v 1.13 2004/11/01 20:18:50 corsair Exp $
 
 inherit gcc eutils
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.xfig.org"
 
 SLOT="0"
 LICENSE="BSD"
-KEYWORDS="x86 ppc sparc alpha hppa amd64"
+KEYWORDS="x86 ppc sparc alpha hppa amd64 ~ppc64"
 IUSE=""
 
 DEPEND="virtual/x11
