@@ -3,7 +3,7 @@
 #   Copyright (c) 2001-2003 The Apache Software Foundation.  All rights
 #   reserved.
 #   Edited for Gentoo Linux
-#   $Header: /var/cvsroot/gentoo-x86/dev-java/ant/files/1.6.0-r3/ant,v 1.1 2004/02/10 18:18:51 strider Exp $
+#   $Header: /var/cvsroot/gentoo-x86/dev-java/ant/files/1.6.0-r3/ant,v 1.2 2004/07/18 02:50:14 dragonheart Exp $
 
 if [ -f $HOME/.gentoo/java-env ] ; then
   source $HOME/.gentoo/java-env
