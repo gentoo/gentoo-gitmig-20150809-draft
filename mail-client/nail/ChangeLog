@@ -1,6 +1,11 @@
 # ChangeLog for mail-client/nail
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/nail/ChangeLog,v 1.16 2004/12/15 12:14:58 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/nail/ChangeLog,v 1.17 2004/12/21 17:42:37 ticho Exp $
+
+*nail-11.18 (21 Dec 2004)
+
+  21 Dec 2004; Andrej Kacian <ticho@gentoo.org> +nail-11.18.ebuild:
+  Version bump. Bug #75206, reported by Vanquirius <marcelogoes@gmail.com>.
 
 *nail-11.1-r1 (15 Dec 2004)
 
