@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/kdepim-3.3.0.ebuild,v 1.11 2004/12/02 11:48:34 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/kdepim-3.3.0.ebuild,v 1.12 2004/12/02 12:21:22 dragonheart Exp $
 
 inherit kde-dist eutils
 
@@ -19,6 +19,5 @@ src_unpack() {
 }
 
 src_compile() {
-	use crypt && export GPGME_CONFIG="/usr/bin/gpgme4-config"
 	kde_src_compile
 }

@@ -1,22 +1,32 @@
-MD5 b94e9822234ab9cd1985465fc2c3cde0 kdepim-3.2.0-r2.ebuild 817
-MD5 20ad9e465bdba8ac154491af0bfce253 kdepim-3.1.5.ebuild 788
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 e54c96d4bad4d902c7b51e00db50ca91 ChangeLog 16059
 MD5 cd410f6f837aa51fd6049a4df0354905 kdepim-3.2.3.ebuild 817
-MD5 4588176653a49d1433d1b4eb9f8c4dbb kdepim-3.3.1.ebuild 660
-MD5 6da394d6e796fad70c53db75e86a5ba6 kdepim-3.2.2.ebuild 835
-MD5 fca38c0ee6df696f0f7e94ffcd503d78 kdepim-3.3.0.ebuild 698
-MD5 de6ce3137c2e97984b7ae78b70065716 kdepim-3.3.0-r1.ebuild 765
-MD5 2cb6fe0877999029dcd7c63a167f24ff ChangeLog 15903
+MD5 20ad9e465bdba8ac154491af0bfce253 kdepim-3.1.5.ebuild 788
+MD5 6d8bc5d49f42d2643c98308763f1a84b kdepim-3.3.0.ebuild 645
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
-MD5 f4d1f0db7f8d8af2a3a67ca332fcdaef files/kdepim-3.3.0-spam-assistant.patch 29970
-MD5 0658e29c8e0fa024884f165bf129e8e9 files/digest-kdepim-3.1.5 66
-MD5 037cd03c8e7281aec672e6e44c15e7e6 files/digest-kdepim-3.2.2 66
+MD5 6da394d6e796fad70c53db75e86a5ba6 kdepim-3.2.2.ebuild 835
+MD5 b94e9822234ab9cd1985465fc2c3cde0 kdepim-3.2.0-r2.ebuild 817
+MD5 4588176653a49d1433d1b4eb9f8c4dbb kdepim-3.3.1.ebuild 660
+MD5 de6ce3137c2e97984b7ae78b70065716 kdepim-3.3.0-r1.ebuild 765
 MD5 318e6b50444a5837fed2a5ea9ecc57e9 files/digest-kdepim-3.2.3 66
-MD5 b23510fd22323447768b483104d208b0 files/digest-kdepim-3.3.0 66
 MD5 2de4f94fe84a3a581cdcf16819fa8e30 files/digest-kdepim-3.3.1 67
-MD5 bf481282b9583a3e4095dcdef1aee22c files/KMail-inboxEater-BRANCH.diff 1619
-MD5 a177687427f7274f5370733d2f4ff16a files/kdepim-3.3.0-korganizer.patch 469
-MD5 6f3f2b21eacb5869a9cbb821ffcf48a6 files/kpilot-parallel-make-fix.patch 737
+MD5 0658e29c8e0fa024884f165bf129e8e9 files/digest-kdepim-3.1.5 66
 MD5 bafdafa3d2488fa1168ccbb4a981dd87 files/digest-kdepim-3.2.0-r2 66
-MD5 b23510fd22323447768b483104d208b0 files/digest-kdepim-3.3.0-r1 66
-MD5 678530a6c8baabd5d9cbe817b5c571f2 files/kdepim-3.2.3-cjk.diff 6957
 MD5 ee45bc53826f95bcf3a3367db4d3845e files/kmfilter.cpp.patch 1528
+MD5 bf481282b9583a3e4095dcdef1aee22c files/KMail-inboxEater-BRANCH.diff 1619
+MD5 6f3f2b21eacb5869a9cbb821ffcf48a6 files/kpilot-parallel-make-fix.patch 737
+MD5 037cd03c8e7281aec672e6e44c15e7e6 files/digest-kdepim-3.2.2 66
+MD5 678530a6c8baabd5d9cbe817b5c571f2 files/kdepim-3.2.3-cjk.diff 6957
+MD5 b23510fd22323447768b483104d208b0 files/digest-kdepim-3.3.0-r1 66
+MD5 f4d1f0db7f8d8af2a3a67ca332fcdaef files/kdepim-3.3.0-spam-assistant.patch 29970
+MD5 b23510fd22323447768b483104d208b0 files/digest-kdepim-3.3.0 66
+MD5 a177687427f7274f5370733d2f4ff16a files/kdepim-3.3.0-korganizer.patch 469
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBrwjImdTrptrqvGERAoYyAJ0Y0uQH1zSepIPJb/1gCqpHtcT+6ACdGRs+
+NUDSSVLXPJaAY63nrC2F3Gc=
+=CZmK
+-----END PGP SIGNATURE-----
