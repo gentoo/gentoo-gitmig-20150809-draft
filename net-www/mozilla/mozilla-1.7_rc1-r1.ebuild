@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.7_rc1-r1.ebuild,v 1.6 2004/05/08 23:20:24 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.7_rc1-r1.ebuild,v 1.7 2004/06/09 19:21:18 agriffis Exp $
 
 IUSE="java crypt ipv6 gtk2 ssl ldap gnome debug xinerama xprint"
 # Internal USE flags that I do not really want to advertise ...
@@ -61,7 +61,7 @@ DEPEND="${RDEPEND}
 
 S="${WORKDIR}/mozilla"
 
-moz_setup() {
+pkg_setup() {
 	# Set MAKEOPTS to have proper -j? option ..
 	get_number_of_jobs
 
@@ -76,8 +76,6 @@ moz_setup() {
 }
 
 src_unpack() {
-	moz_setup
-
 	unpack ${A} || die "unpack failed"
 	cd ${S} || die
 
@@ -98,10 +96,14 @@ src_unpack() {
 	epatch ${FILESDIR}/1.3/${PN}-1.3-fix-RAW-target.patch
 
 	# Fix incorrect version in milestone.txt (1.7rc1 claims 1.7b)
+	# If 1.7rc2 is anything to go by, then milestone.txt should report
+	# the upcoming version number, e.g. 1.7
 	local old_milestone=$(grep '^[0-9]' config/milestone.txt)
-	einfo "Updating milestone.txt from ${old_milestone} to ${MY_PV}"
-	sed -i -ne '/^#/p' config/milestone.txt   # maintain comments
-	echo "${MY_PV}" >> config/milestone.txt   # add version line
+	if [[ ${old_milestone} != ${PV%_*} ]]; then
+		einfo "Updating milestone.txt from ${old_milestone} to ${PV%_*}"
+		sed -i -ne '/^#/p' config/milestone.txt   # maintain comments
+		echo "${PV%_*}" >> config/milestone.txt   # add version line
+	fi
 
 	WANT_AUTOCONF_2_1=1 autoconf &> /dev/null
 
@@ -115,8 +117,6 @@ src_unpack() {
 }
 
 src_compile() {
-	moz_setup
-
 	####################################
 	#
 	# myconf setup
@@ -383,8 +383,6 @@ src_compile() {
 }
 
 src_install() {
-	moz_setup
-
 	# Install, don't create tarball
 	dodir /usr/lib
 	cd ${S}/xpinstall/packager
