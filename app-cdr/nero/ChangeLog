@@ -1,6 +1,10 @@
 # ChangeLog for app-cdr/nero
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/nero/ChangeLog,v 1.2 2005/03/25 00:05:37 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/nero/ChangeLog,v 1.3 2005/03/25 00:16:45 wschlich Exp $
+
+  25 Mar 2005; Wolfram Schlich <wschlich@gentoo.org> +files/nero.desktop,
+  nero-2.0.0.0_p6.ebuild:
+  add desktop entry
 
   25 Mar 2005; Wolfram Schlich <wschlich@gentoo.org> nero-2.0.0.0_p6.ebuild:
   add mp3, oggvorbis and shorten USE flags
