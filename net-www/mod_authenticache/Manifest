@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 40aeb104d0647f1ea1e2f319aa602e27 ChangeLog 1172
+MD5 e84564e9c51af83b07d89f2e622ae27a ChangeLog 1321
 MD5 d2da0e45d7e39184d1cb7abbe3879086 metadata.xml 159
 MD5 92c15123b76a9477a69f9573a75e21a6 mod_authenticache-2.0.6.ebuild 998
-MD5 83f993b279c7827758e441bbc97cd5fd mod_authenticache-2.0.8.ebuild 1043
+MD5 d85554b696d03d8f638ecb409955b54e mod_authenticache-2.0.8.ebuild 1042
 MD5 21bd6cd7eb4fbf068d9dd7d65a86a6e5 files/28_mod_authenticache.conf 697
 MD5 a10c55270ccdd21b842df6553f9f3dea files/digest-mod_authenticache-2.0.6 74
 MD5 eda02530989ea1eab8d65bc8aae4c2e3 files/digest-mod_authenticache-2.0.8 74
 MD5 55d24e495e8ecc0121bc0edb320b3f5d files/dot-htaccess 178
 MD5 4ac0c7c098e7958d84b232cc634a82f3 files/dot-htpasswd 19
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
-
-iD8DBQFBHifBI1lqEGTUzyQRAnD1AKDdT6rmCRgLZFzPqd1uYHV8Wy7F5ACfXUL+
-c7/Ty409nalkcmPEegN1aZc=
-=YE0/
------END PGP SIGNATURE-----

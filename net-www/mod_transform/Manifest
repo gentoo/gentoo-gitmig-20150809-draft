@@ -1,5 +1,5 @@
-MD5 e7add4aac4601f6872dce27c42a65dde ChangeLog 510
+MD5 a55bc3eb5c38262583de6925a8798295 ChangeLog 654
 MD5 5b6dd438f81019e56fa641841c0c13fe metadata.xml 501
-MD5 e7c7974e8cbda769cbabbc224c0ee4ea mod_transform-0.4.0.ebuild 907
+MD5 4ac29020a30536c6d0a83835144c1db8 mod_transform-0.4.0.ebuild 909
 MD5 b3e31c1680f2a0e219fed438a86ef676 files/digest-mod_transform-0.4.0 71
 MD5 4add2247f328f42a90844bf430bfbb06 files/mod_transform.conf 92
