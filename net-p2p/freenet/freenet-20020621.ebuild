@@ -1,5 +1,6 @@
 # Copyright (c) 2002, Per Wigren <wigren@home.se>
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/freenet-20020621.ebuild,v 1.4 2002/07/26 05:10:54 gerk Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/freenet-20020621.ebuild,v 1.5 2002/10/04 21:25:50 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Freenet server"
