@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Ryan Phillips <rphillips@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/easytag-0.18.ebuild,v 1.1 2002/04/17 08:24:59 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/easytag-0.18.ebuild,v 1.2 2002/04/26 21:02:32 rphillips Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="EasyTAG mp3/ogg tag editor"
@@ -17,9 +17,9 @@ DEPEND="${RDEPEND}"
 src_compile() {
 	local myconf
 	if [ "use oggvorbis" ] ; then
-		myconf = "--enable-ogg"
+		myconf="--enable-ogg"
 	else
-		myconf = "--disable-ogg"
+		myconf="--disable-ogg"
 	fi
 	
 	./configure --host=${CHOST} \

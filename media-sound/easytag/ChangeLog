@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/easytag
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/ChangeLog,v 1.1 2002/04/17 08:24:59 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/ChangeLog,v 1.2 2002/04/26 21:02:32 rphillips Exp $
+
+*easytag-0.18 (26 Apr 2002)
+
+  26 Apr 2002; Ryan Phillips <rphillips@gentoo.org> easytag-0.18.ebuild :
+
+  Error in setting the myconf variable when using use oggvorbin.
+  Fixes (#2125)
 
 *easytag-0.18 (17 Apr 2002)
 
