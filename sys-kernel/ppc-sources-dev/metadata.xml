@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<herd>ppc</herd>
+	<longdescription>
+		The experimental kernel-sources for machines with a PowerPC CPU.
+	</longdescription>
+	<maintainer><email>kain@gentoo.org</email></maintainer>
+	<description>quite old version!</description>
+</pkgmetadata>
