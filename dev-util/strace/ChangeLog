@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/strace
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/ChangeLog,v 1.51 2004/12/31 02:02:39 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/ChangeLog,v 1.52 2005/02/05 10:37:35 hansmi Exp $
+
+  05 Feb 2005; Michael Hanselmann <hansmi@gentoo.org> strace-4.5.7.ebuild:
+  Stable on ppc.
 
   31 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
