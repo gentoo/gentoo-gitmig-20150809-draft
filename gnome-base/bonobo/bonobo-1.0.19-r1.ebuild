@@ -1,6 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/bonobo/bonobo-1.0.19-r1.ebuild,v 1.9 2002/10/04 05:32:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/bonobo/bonobo-1.0.19-r1.ebuild,v 1.10 2002/10/05 05:39:12 drobbins Exp $
+
+IUSE="nls"
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A set of language and system independant CORBA interfaces"

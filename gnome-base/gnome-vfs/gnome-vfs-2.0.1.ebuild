@@ -2,6 +2,8 @@
 # Distributed under the terms of the GNU General Public License v2
 # /space/gentoo/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-2.0.0.ebuild,v 1.1 2002/06/12 11:29:38 spider Exp
 
+IUSE="doc"
+
 inherit gnome2
 
 S=${WORKDIR}/${P}

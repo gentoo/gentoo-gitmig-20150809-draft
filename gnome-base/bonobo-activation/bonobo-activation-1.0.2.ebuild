@@ -1,6 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/bonobo-activation/bonobo-activation-1.0.2.ebuild,v 1.6 2002/10/04 05:33:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/bonobo-activation/bonobo-activation-1.0.2.ebuild,v 1.7 2002/10/05 05:39:12 drobbins Exp $
+
+IUSE="doc"
 
 inherit gnome2
 
