@@ -1,44 +1,38 @@
 # ChangeLog for net-www/squid
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/squid/ChangeLog,v 1.7 2002/09/15 01:26:51 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/squid/ChangeLog,v 1.8 2002/11/07 12:23:56 woodchip Exp $
 
-  15 Sep 2002; Maik Schreiber <blizzy@gentoo.org> files/squid.rc6: Removed
+*squid-2.5.1 (07 Nov 2002)
+
+  07 Sep 2002; Donny Davies <woodchip@gentoo.org> : Chase latest release.
+  Major patch cleanup.  Added USE ssl and sasl support.  Fixed KEYWORDS.
+  Big authentication and helper modules reorganization.  Make dealing with
+  the lame archive versioning scheme easier.  Some general cleanups.
+
+  15 Sep 2002; Maik Schreiber <blizzy@gentoo.org> files/squid.rc6 : Removed
   hard dependency on /var/cache/squid.
 
 *squid-2.4.7 (12 Jul 2002)
 
-  12 Jul 2002; Bruce A. Locke <blocke@shivan.org> :
-
-  Version bump and added KEYWORDS
+  12 Jul 2002; Bruce A. Locke <blocke@shivan.org> : Version bump and added KEYWORDS.
   
 *squid-2.4.6-r1 (4 May 2002)
   
-  4 May 2002; Donny Davies <woodchip@gentoo.org> :
-
-  Added LICENSE, SLOT, $Headers, pam_stack aware pam.d/ file.
+  4 May 2002; Donny Davies <woodchip@gentoo.org> : Added LICENSE, SLOT, $Headers,
+  pam_stack aware pam.d/ file.
 
 *squid-2.4.6 (20 Mar 2002)
 
-  20 Mar 2002; Donny Davies <woodchip@gentoo.org> files/squid.rc6, files/squid.confd,
-  squid-2.4.6.ebuild, files/squid-2.4.6-debian.diff, squid-2.4.6-gentoo.diff,
-  files/squid.pam.new, files/digest-squid-2.4.6, squid-2.3.4s-r3.ebuild,
-  squid-2.3.4s-r4.ebuild, squid-2.4.2s.ebuild, files/digest-squid-2.3.4s-r3,
-  files/digest-squid-2.3.4s-r4, files/digest-squid-2.4.2s,
-  files/squid-2.4.2s-debian.diff, files/squid-2.4.2s-gentoo.diff
-  files/squid.conf, files/squid.rc5 :
-
-  Be sure to upgrade! This version fixes some security glitches in older squids!
-
-  Updated to latest available release; fixed permissions on /usr/lib/squid/*_auth
-  programs, made the initscript stop() function more robust, grabbed Debian's latest
-  patch which includes tweaking SQUID_MAXFD (works this time ;) plus other fixes.
-  We now install the error pages for all available languages, defaulting to English.
-  Simply change the errors symlink in /etc/squid to whichever you prefer. Changed
-  the cache location to /var/cache/squid; sorry if this bothers anybody but it fits
-  better here and matches /etc/passwd properly now. If you're upgrading you could
-  make /var/cache/squid a symlink to /var/spool/squid, or move the subdirectories
-  manually. Heads up :)
-
+  20 Mar 2002; Donny Davies <woodchip@gentoo.org> :  Be sure to upgrade! This
+  version fixes some security glitches in older squids! Updated to latest available
+  release; fixed permissions on /usr/lib/squid/*_auth programs, made the initscript
+  stop() function more robust, grabbed Debian's latest patch which includes tweaking
+  SQUID_MAXFD (works this time ;) plus other fixes. We now install the error pages
+  for all available languages, defaulting to English. Simply change the errors symlink
+  in /etc/squid to whichever you prefer. Changed the cache location to /var/cache/squid;
+  sorry if this bothers anybody but it fits better here and matches /etc/passwd
+  properly now. If you're upgrading you could make /var/cache/squid a symlink to
+  /var/spool/squid, or move the subdirectories manually.  Heads up :)
   Changed some ./configure options; enabled cache-digests, disabled the pinger
   and added two more auth-modules. Added ability to compile without debugging.
   Removed the stale config file and the old rc5 initscript. Also removed the older
@@ -46,16 +40,5 @@
   deployment.
 
   8 Feb 2002; Donny Davies <woodchip@gentoo.org> files/squid.rc6 :
-
   Squid can often take a long time to shutdown. Tried to make things a little more
   friendly in that situation.
-
-*squid-2.4.2s-r6 (1 Feb 2002)
-
-  1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
-  
-  Added initial ChangeLog which should be updated whenever the package is
-  updated in any way. This changelog is targetted to users. This means that the
-  comments should well explained and written in clean English. The details about
-  writing correct changelogs are explained in the skel.ChangeLog file which you
-  can find in the root directory of the portage repository.
