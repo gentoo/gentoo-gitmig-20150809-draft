@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/screen
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/ChangeLog,v 1.20 2002/12/20 16:15:30 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/ChangeLog,v 1.21 2002/12/20 16:48:35 blizzy Exp $
+
+*screen-3.9.13-r3 (20 Dec 2002)
+
+  20 Dec 2002; Maik Schreiber <blizzy@gentoo.org> : Revision bump to get
+  permissions right on all systems.
 
   20 Dec 2002; Maik Schreiber <blizzy@gentoo.org> screen-3.9.13-r1.ebuild,
   screen-3.9.13-r2.ebuild: Fixed sed calls to work with <sed-4.
