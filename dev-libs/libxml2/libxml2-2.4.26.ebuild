@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/libxml2-2.4.26.ebuild,v 1.3 2002/11/12 22:33:46 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/libxml2-2.4.26.ebuild,v 1.4 2002/11/14 17:24:44 foser Exp $
 
 inherit libtool gnome2
 
@@ -15,7 +15,7 @@ DEPEND="zlib? ( sys-libs/zlib )
  
 SLOT="2"
 LICENSE="MIT"
-KEYWORDS="x86 ~sparc ~sparc64 ~ppc ~alpha"
+KEYWORDS="~x86 ~sparc ~sparc64 ~ppc ~alpha"
 
 src_compile() {
 	# Fix .la files of python site packages
