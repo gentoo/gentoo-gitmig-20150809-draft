@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.0.17.ebuild,v 1.3 2004/02/04 10:14:27 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.0.17.ebuild,v 1.4 2004/02/07 17:12:43 brad_mssw Exp $
 
 inherit eutils
 #to accomodate -laadeedah releases
@@ -77,6 +77,9 @@ src_unpack() {
 	#for correct hardcoded sysconf directory
 	EPATCH_OPTS="-p1 -d ${S}" \
 	epatch ${FILESDIR}/${PN}-4.0-my-print-defaults.diff
+	#
+	unset EPATCH_OPTS
+	epatch ${FILESDIR}/${PN}-gentoo-nptl.diff
 
 	# attempt to get libmysqlclient_r linked against ssl if USE="ssl" enabled
 	# i would really prefer to fix this at the Makefile.am level, but can't
@@ -89,6 +92,10 @@ src_unpack() {
 		EPATCH_OPTS="-p1 -d ${S}" \
 		epatch ${FILESDIR}/${PN}-4.0.14-r1-tcpd-vars-fix.diff
 	fi
+
+	cd ${S}
+	autoconf
+	automake
 }
 
 src_compile() {
