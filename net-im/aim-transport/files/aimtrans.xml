@@ -22,4 +22,5 @@
 
     </aimtrans>
   </service>
+  <pidfile>/var/log/jabber/aim.pid</pidfile>
 </jabber>

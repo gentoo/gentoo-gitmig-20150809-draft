@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/jabberd-1.4.3-r2.ebuild,v 1.4 2004/04/08 02:00:51 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/jabberd-1.4.3-r3.ebuild,v 1.1 2004/04/08 02:00:51 humpback Exp $
 
 S="${WORKDIR}/jabberd-${PV}"
 DESCRIPTION="Open Source Jabber Server"
@@ -11,6 +11,7 @@ SRC_URI="http://jabberd.jabberstudio.org/1.4/dist/jabberd-${PV}.tar.gz
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~x86"
+IUSE="ssl ldap ipv6 msn oscar yahoo"
 
 DEPEND="!net-im/jabber-server
 	=dev-libs/pth-1.4.0
@@ -27,6 +28,7 @@ src_unpack() {
 	cd ${S}
 	use ldap	&& unpack xdb_ldap-1.0.tar.gz
 	epatch ${FILESDIR}/multiple-xml-patch-00
+	epatch ${FILESDIR}/multiple-xml-patch-01
 	mv jabber.xml multiple.xml
 }
 
@@ -53,7 +55,8 @@ src_compile() {
 }
 
 src_install() {
-	exeinto /etc/init.d ; newexe ${FILESDIR}/jabber.rc6-r6 jabber
+	insinto /etc/conf.d ; newins ${FILESDIR}/jabber-conf.d jabber
+	exeinto /etc/init.d ; newexe ${FILESDIR}/jabber.rc6-r7 jabber
 	dodir /usr/sbin /etc/jabber /usr/lib/jabberd /var/log/jabber /usr/include/jabberd
 	touch ${D}/var/log/jabber/error.log
 	touch ${D}/var/log/jabber/record.log

@@ -21,4 +21,5 @@
       <charmap>CP1252</charmap>
     </config>
   </service>
+  <pidfile>/var/log/jabber/yahootrans.pid</pidfile>
 </jabber>

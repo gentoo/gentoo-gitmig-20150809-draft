@@ -1,0 +1,11 @@
+--- jabber.xml	2004-03-28 17:41:06.867787280 +0100
++++ jabber2.xml	2004-03-28 17:40:49.470432080 +0100
+@@ -670,7 +670,7 @@
+   <!--
+   This specifies the file to store the pid of the process in.
+   -->
+-  <pidfile>./jabber.pid</pidfile>
++  <pidfile>/var/log/jabber/jabberd14.pid</pidfile>
+ 
+ 
+ </jabber>

@@ -31,7 +31,7 @@
     </conference>
   </service>
 
-  <pidfile>/var/run/mu-conference.pid</pidfile>
+  <pidfile>/var/log/jabber/muctrans.pid</pidfile>
 
 </jabber>
 

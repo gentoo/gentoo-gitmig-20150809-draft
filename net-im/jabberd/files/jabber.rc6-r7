@@ -1,0 +1,30 @@
+#!/sbin/runscript
+# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/files/jabber.rc6-r7,v 1.1 2004/04/08 02:00:51 humpback Exp $
+
+depend() {
+	need net
+	provide jabber-server
+}
+
+start() {
+	ebegin "Starting main Jabber Component"
+	if [ "${JABBERD}" = "jabberd14" ]
+	then
+		jabberd -B -c /etc/jabber/multiple.xml >/dev/null 2>&1
+	fi
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping main Jabber Component"
+	kill `/var/log/jabber/jabberd14.pid`
+	sleep 2
+        if ( -f /var/log/jabber/jabberd14.pid ); then
+		kill -9 `cat /var/log/jabber/jabberd14.pid`
+		rm -f /var/log/jabber/jabberd14.pid
+	fi
+						        fi
+	eend $?
+}
