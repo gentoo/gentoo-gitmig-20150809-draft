@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.2.3.ebuild,v 1.3 2003/11/29 22:52:50 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.2.3.ebuild,v 1.4 2003/12/05 14:08:27 caleb Exp $
 
 SRCTYPE="free"
 DESCRIPTION="QT version ${PV}"
@@ -9,7 +9,7 @@ SRC_URI="ftp://ftp.trolltech.com/qt/source/qt-x11-${SRCTYPE}-${PV}.tar.bz2"
 
 LICENSE="QPL-1.0 | GPL-2"
 SLOT="3"
-KEYWORDS="~x86 hppa amd64"
+KEYWORDS="x86 hppa amd64"
 IUSE="cups nas postgres opengl mysql odbc gif doc"
 
 DEPEND="virtual/x11
@@ -37,6 +37,10 @@ src_unpack() {
 
 	export QTDIR=${S}
 	cd ${S}
+
+	use cjk && epatch ${FILESDIR}/${P}-qfontdatabase-i18n-20031024.patch
+	use cjk && epatch ${FILESDIR}/${P}-qpsprinter-useFreeType2-20031128.patch
+	use cjk && epatch ${FILESDIR}/${P}-scriptForChar-20031128.patch
 
 	cp configure configure.orig
 	sed -e 's:read acceptance:acceptance=yes:' configure.orig > configure

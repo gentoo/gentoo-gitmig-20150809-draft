@@ -1,0 +1,374 @@
+diff -u qt-x11-free-3.2.2-patch/src-orig/kernel/qapplication_x11.cpp qt-x11-free-3.2.2-patch/src/kernel/qapplication_x11.cpp
+--- qt-x11-free-3.2.2-patch/src-orig/kernel/qapplication_x11.cpp	Fri Oct 10 10:47:25 2003
++++ qt-x11-free-3.2.2-patch/src/kernel/qapplication_x11.cpp	Fri Oct 24 02:52:58 2003
+@@ -999,7 +999,7 @@
+ 	QString fam, skey;
+ 	QStringList::Iterator it = fontsubs.begin();
+ 	while (it != fontsubs.end()) {
+-	    fam = (*it++).latin1();
++	    fam = *it++;
+ 	    skey = "/qt/Font Substitutions/" + fam;
+ 	    subs = settings.readListEntry(skey);
+ 	    QFont::insertSubstitutions(fam, subs);
+diff -u qt-x11-free-3.2.2-patch/src-orig/kernel/qfontdatabase.cpp qt-x11-free-3.2.2-patch/src/kernel/qfontdatabase.cpp
+--- qt-x11-free-3.2.2-patch/src-orig/kernel/qfontdatabase.cpp	Fri Oct 10 10:47:32 2003
++++ qt-x11-free-3.2.2-patch/src/kernel/qfontdatabase.cpp	Fri Oct 24 02:52:58 2003
+@@ -67,6 +67,11 @@
+ #  define for if(0){}else for
+ #endif
+ 
++#ifdef Q_WS_X11
++#include <qdict.h>
++QDict<QString>  *qt_FamilyDictXft = 0;
++#endif
++
+ static int ucstricmp( const QString &as, const QString &bs )
+ {
+     const QChar *a = as.unicode();
+@@ -205,6 +210,7 @@
+     {
+ #if defined(Q_WS_X11)
+ 	weightName = setwidthName = 0;
++	rawName = "";
+ #endif // Q_WS_X11
+     }
+ 
+@@ -228,6 +234,7 @@
+ #ifdef Q_WS_X11
+     const char *weightName;
+     const char *setwidthName;
++    QString rawName;
+ #endif // Q_WS_X11
+ 
+     QtFontSize *pixelSize( unsigned short size, bool = FALSE );
+@@ -2331,6 +2338,14 @@
+ 	foundry = QString::null;
+ 	family = name;
+     }
++
++#ifdef Q_WS_X11
++    if ( qt_FamilyDictXft && !family.isEmpty() ) {
++	QString* ptr = qt_FamilyDictXft->find( family );
++	if ( ptr )
++	    family = *ptr;
++    }
++#endif // Q_WS_X11
+ }
+ 
+ #endif // QT_NO_FONTDATABASE
+diff -u qt-x11-free-3.2.2-patch/src-orig/kernel/qfontdatabase_x11.cpp qt-x11-free-3.2.2-patch/src/kernel/qfontdatabase_x11.cpp
+--- qt-x11-free-3.2.2-patch/src-orig/kernel/qfontdatabase_x11.cpp	Fri Oct 10 10:47:29 2003
++++ qt-x11-free-3.2.2-patch/src/kernel/qfontdatabase_x11.cpp	Fri Oct 24 02:52:58 2003
+@@ -52,6 +52,9 @@
+ 
+ #ifndef QT_NO_XFTFREETYPE
+ #include <freetype/freetype.h>
++#include <qfile.h>
++#include <qdict.h>
++#include <qtextcodec.h>
+ #endif
+ 
+ #ifdef QFONTDATABASE_DEBUG
+@@ -783,11 +786,185 @@
+     return qtweight;
+ }
+ 
++
++static void getInfoFromSfntTables( const char *file, uint index,
++				   QByteArray &tmp_buffer,
++				   QTextCodec *locale, QTextCodec *utf16,
++				   QString &familyName, int &spacing )
++{
++#define Q_GET_ULONG( p )  ( ( (Q_UINT32)(((Q_UINT8*)(p))[0]) << 24 ) | \
++			    ( (Q_UINT32)(((Q_UINT8*)(p))[1]) << 16 ) | \
++			    ( (Q_UINT32)(((Q_UINT8*)(p))[2]) <<  8 ) | \
++			    ( (Q_UINT32)(((Q_UINT8*)(p))[3]) <<  0 ) )
++#define Q_GET_USHORT( p ) ( ( (Q_UINT16)(((Q_UINT8*)(p))[0]) << 8 ) | \
++			    ( (Q_UINT16)(((Q_UINT8*)(p))[1]) << 0 ) )
++
++    QFile  f( QFile::decodeName( QCString( file ) ) );
++    if ( !f.open( IO_ReadOnly ) )
++	return;
++
++    char*     buf = tmp_buffer.data();
++    char*     b   = buf;
++    Q_UINT16  i;
++
++    if ( f.readBlock( buf, 12 ) < 12 )
++	return;
++
++    if ( b[0] == 't' && b[1] == 't' && b[2] == 'c' && b[3] == 'f' ) {
++	Q_ULONG  numFonts = Q_GET_ULONG( b+8 );
++	if ( index + 1 > numFonts )
++	    return;
++	if ( !f.at( 12 + 4*index ) || f.readBlock( buf, 4 ) < 4 )
++	    return;
++	Q_ULONG  OffsetTable = Q_GET_ULONG( b );
++	if ( !f.at( OffsetTable ) || f.readBlock( buf, 12 ) < 12 )
++	    return;
++    }
++    else if ( index > 0 )
++	return;
++
++    // TrueType or CFF ?
++    if ( !( b[0] == 0   && b[1] == 1   && b[2] == 0   && b[3] == 0   ) &&
++	 !( b[0] == 'O' && b[1] == 'T' && b[2] == 'T' && b[3] == 'O' ) )
++	return;
++
++    Q_ULONG  numTables = Q_GET_USHORT( b+4 );
++    if ( numTables == 0 || numTables > 64 ||
++	 (Q_ULONG)f.readBlock( buf, 16 * numTables ) < 16 * numTables )
++	return;
++
++    if ( spacing == XFT_PROPORTIONAL ) {
++	for ( i = 0, b = buf; i < numTables; i++, b += 16 ) {
++	    if ( b[0] == 'O' && b[1] == 'S' && b[2] == '/' && b[3] == '2' ) {
++		Q_ULONG  offset = Q_GET_ULONG( b+8 );
++		Q_UINT8  panose[10];
++
++		if ( !f.at( offset + 16*2 ) ||
++		     f.readBlock( (char *)panose, 10 ) < 10 )
++		    break;
++
++		if ( panose[3] == 9 )
++		    spacing = XFT_MONO;
++		break;
++	    }
++	}
++    }
++
++
++    Q_ULONG  table_length = 0;
++    for ( i = 0, b = buf; i < numTables; i++, b += 16 ) {
++	if ( b[0] == 'n' && b[1] == 'a' && b[2] == 'm' && b[3] == 'e' ) {
++	    Q_ULONG  offset = Q_GET_ULONG( b+8 );
++	    Q_ULONG  length = Q_GET_ULONG( b+12 );
++
++	    if ( length < 12 )
++		return;
++	    if ( length > tmp_buffer.size() &&
++		 !tmp_buffer.resize( length, QGArray::SpeedOptim ) )
++		return;
++
++	    buf = tmp_buffer.data();
++	    if ( !f.at( offset ) || (Q_ULONG)f.readBlock( buf, length ) < length )
++		return;
++
++	    table_length = length;
++	    break;
++	}
++    }
++
++    if ( i == numTables )
++	return;
++
++    b = buf;
++    Q_UINT16  count        = Q_GET_USHORT( b+2 );
++    Q_UINT16  stringOffset = Q_GET_USHORT( b+4 );
++    if ( (Q_ULONG)( 12 + 12 * count ) > table_length )
++	return;
++
++    QStringList  nameList( familyName );
++    char*  strings    = buf + stringOffset;
++    char*  limit      = buf + table_length;
++    int    n_locNames = 0;
++    for ( i = 0, b = buf + 6; i < count; i++, b += 12 ) {
++	Q_UINT16  platformID = Q_GET_USHORT( b+0 );
++	Q_UINT16  encodingID = Q_GET_USHORT( b+2 );
++	// Q_UINT16  languageID = Q_GET_ULONG( b+4 );
++	Q_UINT16  nameID     = Q_GET_USHORT( b+6 );
++	Q_UINT16  length     = Q_GET_USHORT( b+8 );
++	Q_UINT16  offset     = Q_GET_USHORT( b+10 );
++
++	if ( platformID != 3 || // ! Microsoft
++	     encodingID != 1 || // ! UTF16
++	     nameID     != 1 || // ! family name
++	     strings + offset + length > limit ) // oversize
++	    continue;
++
++	QString  family = utf16->toUnicode( strings + offset, length );
++
++	family.replace('-', ' ');
++	family.replace("/", "");
++
++	if ( !nameList.contains( family ) ) {
++	    if ( locale && locale->canEncode( family ) ) {
++	        nameList.prepend( family );
++		n_locNames += 1;
++
++	    } else {
++		nameList.append( family );
++	    }
++	}
++    }
++
++    if ( n_locNames > 0 ) {
++	familyName = "";
++
++	QStringList::iterator  it = nameList.begin();
++	for ( ; n_locNames > 0; --n_locNames, ++it ) {
++	    const unsigned short*  ucs2 = (*it).ucs2();
++	    uint                   len  = (*it).length();
++
++	    for ( ; len > 0; len-- ) {
++		if ( *ucs2++ >= 128 ) {
++		    familyName = *it;
++		    nameList.remove( it );
++		    break;
++		}
++	    }
++
++	    if ( len > 0 )
++		break;
++	}
++
++	if ( familyName.isEmpty() ) {
++	    familyName = *nameList.begin();
++	    nameList.remove( nameList.begin() );
++	}
++
++    } else {
++	nameList.remove( nameList.begin() );
++    }
++
++    if ( nameList.count() > 0 ) {
++	QStringList::iterator  it  = nameList.begin();
++	QStringList::iterator  end = nameList.end();
++
++	for ( ; it != end; ++it ) {
++	    qt_FamilyDictXft->insert( *it, new QString( familyName ) );
++	}
++    }
++}
++
++
+ static void loadXft()
+ {
+     if (!qt_has_xft)
+ 	return;
+ 
++    if ( !qt_FamilyDictXft ) {
++	qt_FamilyDictXft = new QDict<QString>( 17, FALSE );
++	qt_FamilyDictXft->setAutoDelete( TRUE );
++    }
++
+     XftFontSet  *fonts;
+ 
+     QString familyName;
+@@ -798,13 +975,43 @@
+     int spacing_value;
+     char *file_value;
+     int index_value;
++    char *style_value;
++
++    QByteArray tmp_buffer( 4096 );
++    QTextCodec *utf16  = QTextCodec::codecForName( "ISO-10646-UCS-2" );
++    QTextCodec *locale = QTextCodec::codecForLocale();
++
++    int mib = locale ? locale->mibEnum() : 4;
++    switch ( mib ) {
++#if 1
++    case 4:   // Latin1
++    case 111: // Latin15
++	locale = 0;
++	break;
++#else
++    case 38:   // eucKR
++    case 2025: // GB2312
++    case 113:  // GBK
++    case 114:  // GB18030
++    case 2026: // Big5
++    case 2101: // Big5-HKSCS
++    case 16:   // JIS7
++    case 17:   // SJIS
++    case 18:   // eucJP
++	break;
++
++    default:
++	locale = 0;
++	break;
++#endif
++    }
+ 
+     fonts =
+ 	XftListFonts(QPaintDevice::x11AppDisplay(),
+ 		     QPaintDevice::x11AppScreen(),
+ 		     (const char *)0,
+ 		     XFT_FAMILY, XFT_WEIGHT, XFT_SLANT,
+-		     XFT_SPACING, XFT_FILE, XFT_INDEX,
++		     XFT_SPACING, XFT_FILE, XFT_INDEX, XFT_STYLE,
+ #ifdef QT_XFT2
+ 		     FC_CHARSET,
+ #endif // QT_XFT2
+@@ -828,6 +1035,10 @@
+ 	XftPatternGetString (fonts->fonts[i], XFT_FILE, 0, &file_value);
+ 	XftPatternGetInteger (fonts->fonts[i], XFT_INDEX, 0, &index_value);
+ 
++	getInfoFromSfntTables( file_value, index_value,
++			       tmp_buffer, locale, utf16,
++			       familyName, spacing_value );
++
+ 	QtFontFamily *family = db->family( familyName, TRUE );
+ 	family->rawName = rawName;
+ 	family->hasXft = TRUE;
+@@ -867,6 +1078,10 @@
+ 	style->smoothScalable = TRUE;
+ 	family->fixedPitch = ( spacing_value >= XFT_MONO );
+ 
++	if ( XftPatternGetString (fonts->fonts[i],
++				  XFT_STYLE, 0, &style_value) == XftResultMatch )
++	    style->rawName = QString::fromUtf8( style_value );
++
+ 	QtFontSize *size = style->pixelSize( SMOOTH_SCALABLE, TRUE );
+ 	QtFontEncoding *enc = size->encodingID( -1, 0, 0, 0, 0, TRUE );
+ 	enc->pitch = ( spacing_value >= XFT_CHARCELL ? 'c' :
+@@ -874,6 +1089,11 @@
+     }
+ 
+     XftFontSetDestroy (fonts);
++
++    if ( qt_FamilyDictXft->count() == 0 ) {
++	delete qt_FamilyDictXft;
++	qt_FamilyDictXft = 0;
++    }
+ }
+ 
+ #ifndef QT_XFT2
+@@ -1192,6 +1412,7 @@
+ 		equiv->fakeOblique = TRUE;
+ #endif // !QT_XFT2
+ 		equiv->smoothScalable = TRUE;
++		equiv->rawName = style->rawName;
+ 
+ 		QtFontSize *equiv_size = equiv->pixelSize( SMOOTH_SCALABLE, TRUE );
+ 		QtFontEncoding *equiv_enc = equiv_size->encodingID( -1, 0, 0, 0, 0, TRUE );
+@@ -1309,6 +1530,11 @@
+ 	    XftPatternAddString( pattern, XFT_FAMILY,
+ 				 family->rawName.utf8().data() );
+ 
++	if ( !style->rawName.isEmpty() )
++	    XftPatternAddString( pattern, XFT_STYLE,
++				 style->rawName.utf8().data() );
++  
++
+ 	const char *stylehint_value = 0;
+ 	switch ( request.styleHint ) {
+ 	case QFont::SansSerif:
+@@ -1396,6 +1622,17 @@
+ 	XftPattern *result =
+ 	    XftFontMatch( QPaintDevice::x11AppDisplay(), fp->screen, pattern, &res );
+ 	XftPatternDestroy(pattern);
++
++	for ( int s = QFont::Han; s <= QFont::Yi; s++ ) {
++	    if ( !( family->scripts[s] & QtFontFamily::UnSupported_Xft ) ) {
++		XftPatternDel( result, XFT_SPACING );
++#  ifdef QT_XFT2
++		FcPatternDel( result, FC_GLOBAL_ADVANCE );
++		FcPatternAddBool( result, FC_GLOBAL_ADVANCE, FcFalse );
++		break;
++#  endif
++	    }
++	}
+ 
+ 	// We pass a duplicate to XftFontOpenPattern because either xft font
+ 	// will own the pattern after the call or the pattern will be
