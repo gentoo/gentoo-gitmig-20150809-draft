@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/wolk-sources/wolk-sources-4.0_pre10.ebuild,v 1.2 2003/02/13 20:17:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/wolk-sources/wolk-sources-4.0_pre10.ebuild,v 1.3 2003/02/14 22:28:04 livewire Exp $
 
 IUSE="build"
 
@@ -38,10 +38,10 @@ pkg_postinst() {
 
 	einfo
 	einfo   "If you use Nvidia modules, you will need to use the supplied"
-	einfo   "rmap patch in /usr/src/linux-2.4.2-wolk4.0s-pre10/userspace-patches"
+	einfo   "rmap patch in /usr/src/linux-2.4.20-wolk4.0s-pre10/userspace-patches"
 	einfo   "against your nvidia kernel driver source"
 	einfo   "cd NVIDIA_kernel-1.0-XXXX " 
-	einfo	"patch -p1 </usr/src/linux-2.4.2-wolk4.0s-pre10/userspace-patches/"
+	einfo	"patch -p1 </usr/src/linux-2.4.20-wolk4.0s-pre10/userspace-patches/"
 	einfo   "NVIDIA_kernel-1.0-4191-2.4-rmap15b.patch"                
 	einfo   "This patch works fine with NVIDIA_kernel-1.0-3123 also"
 	einfo
