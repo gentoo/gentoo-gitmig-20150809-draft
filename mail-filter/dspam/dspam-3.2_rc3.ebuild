@@ -1,17 +1,17 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.2_rc2.ebuild,v 1.2 2004/10/09 14:45:12 st_lim Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.2_rc3.ebuild,v 1.1 2004/10/16 17:27:29 st_lim Exp $
 
 inherit eutils
 
-MY_PV=${PV/_rc/.rc}
+MY_PV=${PV/_rc3/.pr1}
 S=${WORKDIR}/${PN}-${MY_PV}
 DESCRIPTION="A statistical-algorithmic hybrid anti-spam filter"
 SRC_URI="http://www.nuclearelephant.com/projects/dspam/sources/${PN}-${MY_PV}.tar.gz"
 HOMEPAGE="http://www.nuclearelephant.com/projects/dspam/index.html"
 LICENSE="GPL-2"
 
-IUSE="cyrus debug exim mysql maildrop neural oci8 postgres procmail sqlite"
+IUSE="cyrus debug exim mysql mysql41 maildrop neural oci8 postgres procmail sqlite"
 DEPEND="exim? ( >=mail-mta/exim-4.34 )
 		mysql? ( >=dev-db/mysql-3.23 ) || ( >=sys-libs/db-4.0 )
 		sqlite? ( >=dev-db/sqlite-3.0.6 )
@@ -20,6 +20,7 @@ DEPEND="exim? ( >=mail-mta/exim-4.34 )
 		procmail? ( >=mail-filter/procmail-3.22 )
 		x86? ( cyrus? ( >=net-mail/cyrus-imapd-2.1.15 ) )
 		"
+		#mysql41? ( >=dev-db/mysql-4.1 ) # There is no mysql-4.1 in gentoo!!!  Ouch
 RDEPEND="virtual/cron
 		app-admin/logrotate"
 KEYWORDS="~x86 ~ppc"
@@ -29,7 +30,6 @@ SLOT="0"
 HOMEDIR="/etc/mail/dspam"
 DATADIR="/var/spool/dspam"
 LOGDIR="/var/log/dspam"
-CONFIGDIR="${HOMEDIR}/config"
 
 pkg_setup() {
 	if (use mysql && use postgres) || \
@@ -87,7 +87,7 @@ src_compile() {
 	use debug && myconf="${myconf} --enable-debug --enable-verbose-debug"
 
 	# select storage driver
-	if use mysql ; then
+	if use mysql || use mysql41; then
 		myconf="${myconf} --with-storage-driver=mysql_drv"
 		myconf="${myconf} --with-mysql-includes=/usr/include/mysql"
 		myconf="${myconf} --with-mysql-libraries=/usr/lib/mysql"
@@ -156,13 +156,13 @@ src_install () {
 	sed -e 's/rm -f ..mandir.\(.*\)/rm -f ${D}${mandir}\1/g' \
 		-e 's/ln -s ..mandir.\(.*\) ..mandir.\(.*3\)/ln -s ${mandir}\1.gz ${D}${mandir}\2.gz/g' \
 		-i Makefile
-	make DESTDIR=${D} etcdest=${D}${HOMEDIR} install || die
+	make DESTDIR=${D} etcdest=${D}${HOMEDIR} sysconfdir=${D}${HOMEDIR} install || die
 	chmod 4755 ${D}/usr/bin/dspam
 
 	# documentation
 	dodoc CHANGELOG LICENSE README RELEASE.NOTES
 	dodoc ${FILESDIR}/README.postfix ${FILESDIR}/README.qmail
-	if use mysql ; then
+	if use mysql || mysql41; then
 		newdoc tools.mysql_drv/README
 	elif use postgres ; then
 		newdoc tools.pgsql_drv/README
@@ -173,13 +173,6 @@ src_install () {
 	fi
 
 	# build some initial configuration data
-	(echo "trainingMode=TEFT"
-	echo "spamAction=deliver"
-	echo "spamSubject=[SPAM]"
-	echo "statisticalSedation=5"
-	echo "enableBNR=on"
-	echo "enableWhitelist=on") >${T}/default.prefs
-	echo "groupname:classification:*globaluser" >${T}/group
 	if use cyrus; then
 		echo "UntrustedDeliveryAgent /usr/lib/cyrus/deliver %u" >> ${D}${HOMEDIR}/dspam.conf
 		sed -e 's:/usr/bin/procmail:/usr/lib/cyrus/deliver %u:g' \
@@ -188,26 +181,23 @@ src_install () {
 		echo "UntrustedDeliveryAgent /usr/sbin/exim -oMr spam-scanned %u" >> ${D}${HOMEDIR}/dspam.conf
 		sed -e 's:/usr/bin/procmail:/usr/sbin/exim -oMr spam-scanned %u:g' \
 			-i ${D}${HOMEDIR}/dspam.conf
-	elif use courier; then
-		echo "/usr/bin/maildrop -d %u" > ${T}/untrusted.mailer_args
+	elif use maildrop; then
 		echo "UntrustedDeliveryAgent /usr/bin/maildrop -d %u" >> ${D}${HOMEDIR}/dspam.conf
 		sed -e 's:/usr/bin/procmail:/usr/bin/maildrop -d %u:g' \
 			-i ${D}${HOMEDIR}/dspam.conf
+	elif use procmail; then
+		echo "UntrustedDeliveryAgent /usr/bin/procmail" >> ${D}${HOMEDIR}/dspam.conf
+	else
+		echo "UntrustedDeliveryAgent /usr/sbin/sendmail" >> ${D}${HOMEDIR}/dspam.conf
+		sed -e 's:/usr/bin/procmail:/usr/sbin/sendmail:g' \
+			-i ${D}${HOMEDIR}/dspam.conf
 	fi
-
-	# install some initial configuration
-	insinto ${HOMEDIR}
-	insopts -m0640 -o dspam -g dspam
-	[ ! -f ${HOMEDIR}/trusted.users ] && doins ${FILESDIR}/trusted.users
-	doins ${T}/untrusted.mailer_args
-	doins ${T}/default.prefs
-	doins ${T}/group
 
 	local PASSWORD="${RANDOM}${RANDOM}${RANDOM}${RANDOM}"
 
 	# database related configuration and scripts
-	if use mysql ; then
-		insinto ${CONFIGDIR}
+	if use mysql || use mysql41; then
+		insinto ${HOMEDIR}
 		insopts -m644 -o dspam -g dspam
 
 		if [ -f ${HOMEDIR}/mysql.data ]; then
@@ -223,13 +213,16 @@ src_install () {
 			doins ${T}/mysql.data
 		fi
 
-		newins tools.mysql_drv/mysql_objects.sql.speed.optimized mysql_objects.sql.speed.optimized
-		newins tools.mysql_drv/mysql_objects.sql.space.optimized mysql_objects.sql.space.optimized
+		newins tools.mysql_drv/mysql_objects-space.sql mysql_objects-space.sql
+		newins tools.mysql_drv/mysql_objects-speed.sql mysql_objects-speed.sql
+		newins tools.mysql_drv/mysql_objects-4.1.sql mysql_objects-4.1.sql
 		newins tools.mysql_drv/virtual_users.sql mysql_virtual_users.sql
+		newins tools.mysql_drv/neural.sql mysql_neural.sql
 		newins tools.mysql_drv/purge.sql mysql_purge.sql
+		newins tools.mysql_drv/purge-4.1.sql mysql_purge-4.1.sql
 		newins ${FILESDIR}/upgrade.sql mysql_upgrade.sql
 	elif use postgres ; then
-		insinto ${CONFIGDIR}
+		insinto ${HOMEDIR}
 		insopts -m644 -o dspam -g dspam
 
 		if [ -f ${HOMEDIR}/mysql.data ]; then
@@ -250,7 +243,7 @@ src_install () {
 		newins tools.pgsql_drv/purge.sql pgsql_purge.sql
 
 	elif use oci8 ; then
-		insinto ${CONFIGDIR}
+		insinto ${HOMEDIR}
 		insopts -m644 -o dspam -g dspam
 
 		if [ -f ${HOMEDIR}/oracle.data ]; then
@@ -288,32 +281,13 @@ src_install () {
 	insopts -m0755 -o dspam -g dspam
 	newins ${FILESDIR}/logrotate.dspam dspam
 
-	# Symlinks data to HOMEDIR
-	dosym ${DATADIR} ${HOMEDIR}/data
-
-	# Log files for symlinks
-	diropts -m0755 -o dspam -g dspam
-	dodir ${LOGDIR}
-	keepdir ${LOGDIR}
-	touch ${T}/empty.file
-	newins ${T}/empty.file sql.errors
-	newins ${T}/empty.file system.log
-	newins ${T}/empty.file dspam.debug
-	newins ${T}/empty.file dspam.messages
-
-	# dspam still wants to write to a few files in it's home dir
-	dosym ${LOGDIR}/sql.errors ${HOMEDIR}/sql.errors
-	dosym ${LOGDIR}/system.log ${HOMEDIR}/system.log
-	dosym ${LOGDIR}/dspam.debug ${HOMEDIR}/dspam.debug
-	dosym ${LOGDIR}/dspam.messages ${HOMEDIR}/dspam.messages
-
 	# dspam enviroment
-	echo -ne "CONFIG_PROTECT_MASK=\"${HOMEDIR} ${CONFIGDIR}\"\n\n" > ${T}/40dspam
+	echo -ne "CONFIG_PROTECT_MASK=\"${HOMEDIR}\"\n\n" > ${T}/40dspam
 	doenvd ${T}/40dspam || die
 }
 
 pkg_postinst() {
-	if use mysql || use postgres; then
+	if use mysql || use mysql41 || use postgres; then
 		einfo "To setup dspam to run out-of-the-box on your system with a mysql or pgsql database, run:"
 		einfo "ebuild /var/db/pkg/${CATEGORY}/${PF}/${PF}.ebuild config"
 	fi
@@ -325,7 +299,7 @@ pkg_postinst() {
 
 pkg_config () {
 	if use mysql ; then
-		[[ -f ${CONFIGDIR}/mysql.data ]] && mv -f ${CONFIGDIR}/mysql.data ${HOMEDIR}
+		[[ -f ${HOMEDIR}/mysql.data ]] && mv -f ${HOMEDIR}/mysql.data ${HOMEDIR}
 		DSPAM_MySQL_USER="$(cat ${HOMEDIR}/mysql.data|head -n 3|tail -n 1)"
 		DSPAM_MySQL_PWD="$(cat ${HOMEDIR}/mysql.data|head -n 4|tail -n 1)"
 		DSPAM_MySQL_DB="$(cat ${HOMEDIR}/mysql.data|head -n 5|tail -n 1)"
@@ -336,31 +310,39 @@ pkg_config () {
 		einfo "Creating DSPAM MySQL database \"${DSPAM_MySQL_DB}\""
 		/usr/bin/mysqladmin -u root -p create ${DSPAM_MySQL_DB}
 
-		einfo "Creating DSPAM MySQL tables for data objects"
-		einfo "  Please select what kind of object database you like to use."
-		einfo "    [1] Space optimized database"
-		einfo "    [2] Speed optimized database"
-		einfo
-		while true
-		do
-			read -n 1 -s -p "  Press 1 or 2 on the keyboard to select database" DSPAM_MySQL_DB_Type
-			[[ "${DSPAM_MySQL_DB_Type}" == "1" || "${DSPAM_MySQL_DB_Type}" == "2" ]] && break
-		done
-
-		if [ "${DSPAM_MySQL_DB_Type}" == "1" ]
-		then
-			/usr/bin/mysql -u root -p ${DSPAM_MySQL_DB} < ${CONFIGDIR}/mysql_objects.sql.space.optimized
+		if use mysql41 ; then
+			/usr/bin/mysql -u root -p ${DSPAM_MySQL_DB} < ${HOMEDIR}/mysql_objects-4.1.sql
 		else
-			/usr/bin/mysql -u root -p ${DSPAM_MySQL_DB} < ${CONFIGDIR}/mysql_objects.sql.speed.optimized
+			einfo "Creating DSPAM MySQL tables for data objects"
+			einfo "  Please select what kind of object database you like to use."
+			einfo "    [1] Space optimized database"
+			einfo "    [2] Speed optimized database"
+			einfo
+			while true
+			do
+				read -n 1 -s -p "  Press 1 or 2 on the keyboard to select database" DSPAM_MySQL_DB_Type
+				[[ "${DSPAM_MySQL_DB_Type}" == "1" || "${DSPAM_MySQL_DB_Type}" == "2" ]] && break
+			done
+
+			if [ "${DSPAM_MySQL_DB_Type}" == "1" ]
+			then
+				/usr/bin/mysql -u root -p ${DSPAM_MySQL_DB} < ${HOMEDIR}/mysql_objects-space.sql
+			else
+				/usr/bin/mysql -u root -p ${DSPAM_MySQL_DB} < ${HOMEDIR}/mysql_objects-speed.sql
+			fi
 		fi
 
 		einfo "Creating DSPAM MySQL database for virtual users"
-		/usr/bin/mysql -u root -p ${DSPAM_MySQL_DB} < ${CONFIGDIR}/mysql_virtual_users.sql
+		/usr/bin/mysql -u root -p ${DSPAM_MySQL_DB} < ${HOMEDIR}/mysql_virtual_users.sql
+
+		if use neural ; then
+			/usr/bin/mysql -u root -p ${DSPAM_MySQL_DB} < ${HOMEDIR}/mysql_neural.sql
+		fi
 
 		einfo "Creating DSPAM MySQL user \"${DSPAM_MySQL_USER}\""
 		/usr/bin/mysql -u root -p -e "GRANT SELECT,INSERT,UPDATE,DELETE ON ${DSPAM_MySQL_DB}.* TO ${DSPAM_MySQL_USER}@localhost IDENTIFIED BY '${DSPAM_MySQL_PWD}';FLUSH PRIVILEGES;" -D mysql
 	elif use postgres ; then
-		[[ -f ${CONFIGDIR}/pgsql.data ]] && mv -f ${CONFIGDIR}/pgsql.data ${HOMEDIR}
+		[[ -f ${HOMEDIR}/pgsql.data ]] && mv -f ${HOMEDIR}/pgsql.data ${HOMEDIR}
 		DSPAM_PgSQL_USER="$(cat ${HOMEDIR}/pgsql.data|head -n 3|tail -n 1)"
 		DSPAM_PgSQL_PWD="$(cat ${HOMEDIR}/pgsql.data|head -n 4|tail -n 1)"
 		DSPAM_PgSQL_DB="$(cat ${HOMEDIR}/pgsql.data|head -n 5|tail -n 1)"
@@ -386,8 +368,8 @@ pkg_config () {
 		/usr/bin/psql -d ${DSPAM_PgSQL_DB} -U postgres -c "UPDATE pg_database SET datdba=${DSPAM_PgSQL_USERID} WHERE datname='${DSPAM_PgSQL_DB}';" 1>/dev/null 2>&1
 
 		einfo "Creating DSPAM PostgreSQL tables"
-		PGUSER=${DSPAM_PgSQL_USER} PGPASSWORD=${DSPAM_PgSQL_PWD} /usr/bin/psql -d ${DSPAM_PgSQL_DB} -U ${DSPAM_PgSQL_USER} -f ${CONFIGDIR}/pgsql_objects.sql 1>/dev/null 2>&1
-		PGUSER=${DSPAM_PgSQL_USER} PGPASSWORD=${DSPAM_PgSQL_PWD} /usr/bin/psql -d ${DSPAM_PgSQL_DB} -U ${DSPAM_PgSQL_USER} -f ${CONFIGDIR}/pgsql_virtual_users.sql 1>/dev/null 2>&1
+		PGUSER=${DSPAM_PgSQL_USER} PGPASSWORD=${DSPAM_PgSQL_PWD} /usr/bin/psql -d ${DSPAM_PgSQL_DB} -U ${DSPAM_PgSQL_USER} -f ${HOMEDIR}/pgsql_objects.sql 1>/dev/null 2>&1
+		PGUSER=${DSPAM_PgSQL_USER} PGPASSWORD=${DSPAM_PgSQL_PWD} /usr/bin/psql -d ${DSPAM_PgSQL_DB} -U ${DSPAM_PgSQL_USER} -f ${HOMEDIR}/pgsql_virtual_users.sql 1>/dev/null 2>&1
 
 		einfo "Grant privileges to DSPAM PostgreSQL objects to \"${DSPAM_PgSQL_USER}\""
 		for foo in $(/usr/bin/psql -t -d ${DSPAM_PgSQL_DB} -U postgres -c "SELECT tablename FROM pg_tables WHERE tablename LIKE 'dspam\%';")
@@ -397,7 +379,7 @@ pkg_config () {
 		/usr/bin/psql -d ${DSPAM_PgSQL_DB} -U postgres -c "GRANT ALL PRIVILEGES ON DATABASE ${DSPAM_PgSQL_DB} TO ${DSPAM_PgSQL_USER};" 1>/dev/null 2>&1
 		/usr/bin/psql -d ${DSPAM_PgSQL_DB} -U postgres -c "GRANT ALL PRIVILEGES ON SCHEMA public TO ${DSPAM_PgSQL_USER};" 1>/dev/null 2>&1
 	elif use oci8 ; then
-		[[ -f ${CONFIGDIR}/oracle.data ]] && mv -f ${CONFIGDIR}/oracle.data ${HOMEDIR}
+		[[ -f ${HOMEDIR}/oracle.data ]] && mv -f ${HOMEDIR}/oracle.data ${HOMEDIR}
 	elif use sqlite ; then
 		einfo "sqlite_drv will automatically create the necessary database"
 		einfo "objects for each user upon first use of DSPAM by that user."

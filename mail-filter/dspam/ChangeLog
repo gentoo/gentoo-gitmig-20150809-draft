@@ -1,6 +1,19 @@
 # ChangeLog for mail-filter/dspam
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/ChangeLog,v 1.18 2004/10/09 14:45:12 st_lim Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/ChangeLog,v 1.19 2004/10/16 17:27:29 st_lim Exp $
+
+  17 Oct 2004; Lim Swee Tat <st_lim@gentoo.org> dspam-3.0.0.ebuild,
+  dspam-3.1.0.ebuild, dspam-3.1.1.ebuild, dspam-3.1.2.ebuild,
+  dspam-3.2_beta1.ebuild, -dspam-3.2_rc2.ebuild:
+  Setting up rc3 as preview release 1
+  Updated to solve bug #65629
+  not using courier anymore. Using maildrop
+  Fixed issues with the 3.2 releases that use dspam.conf
+  Pls test rc3.!!!
+  Removing rc2 since that failed miserably. :(
+
+  09 Oct 2004; Lim Swee Tat <st_lim@gentoo.org> dspam-3.2_rc2.ebuild:
+  Changed the UntrustedMailerArgs
 
   09 Oct 2004; Lim Swee Tat <st_lim@gentoo.org> dspam-3.2_rc2.ebuild:
   Changed the UntrustedMailerArgs

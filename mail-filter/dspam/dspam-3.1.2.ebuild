@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.1.2.ebuild,v 1.2 2004/10/09 04:40:13 st_lim Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.1.2.ebuild,v 1.3 2004/10/16 17:27:29 st_lim Exp $
 
 inherit eutils
 
@@ -69,6 +69,8 @@ src_compile() {
 		agent="/usr/bin/maildrop -d %u"
 	elif use procmail; then
 		agent="/usr/bin/procmail"
+	else
+		agent="/usr/sbin/sendmail"
 	fi
 	myconf="${myconf} --enable-source-address-tracking"
 	myconf="${myconf} --enable-large-scale"
@@ -182,10 +184,12 @@ src_install () {
 		echo "/usr/lib/cyrus/deliver %u" > ${T}/untrusted.mailer_args
 	elif use exim; then
 		echo "/usr/sbin/exim -oMr spam-scanned" > ${T}/untrusted.mailer_args
-	elif use courier; then
+	elif use maildrop; then
 		echo "/usr/bin/maildrop -d %u" > ${T}/untrusted.mailer_args
 	elif use procmail; then
 		echo "/usr/bin/procmail -d %u" > ${T}/untrusted.mailer_args
+	else
+		echo "/usr/sbin/sendmail" >  ${T}/untrusted.mailer_args
 	fi
 
 	# install some initial configuration
