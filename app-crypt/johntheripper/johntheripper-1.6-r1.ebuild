@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/johntheripper-1.6-r1.ebuild,v 1.4 2003/09/05 01:33:49 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/johntheripper-1.6-r1.ebuild,v 1.5 2003/09/21 09:44:08 aliz Exp $
 
 inherit eutils
 
@@ -9,14 +9,13 @@ S=${WORKDIR}/${MY_P}
 DEBPATCH=${MY_P/-/_}-17.diff
 DESCRIPTION="fast password cracker"
 HOMEPAGE="http://www.openwall.com/${PN/theripper/}/"
-SRC_URI="${HOMEPAGE}/${MY_P}.tar.gz
-	http://ftp.debian.org/debian/pool/main/j/${PN/theripper/}/${DEBPATCH}.gz
-	mysql? ( http://www.openwall.com/john/contrib/john-1.6-mysql-1.diff )
-	samba? ( http://www.openwall.com/john/contrib/john-ntlm-patch-v02.tgz )
+SRC_URI="http://www.openwall.com/john/dl/${MY_P}.tar.gz
+	mirror://debian/pool/main/j/${PN/theripper/}/${DEBPATCH}.gz
+	mysql? ( ftp://ftp.openwall.com/pub/projects/john/contrib/john-1.6-mysql-1.diff )
+	samba? ( ftp://ftp.openwall.com/pub/projects/john/contrib/john-ntlm-patch-v02.tgz )
 	kerberos? ( http://www.monkey.org/~dugsong/john-1.6.krb4.patch-3 )
 	http://www.monkey.org/~dugsong/john-1.6.skey.patch-1
-	http://www.openwall.com/john/contrib/john-1.6.31-eggpatch-8.diff.gz"
-
+	ftp://ftp.openwall.com/pub/projects/john/contrib/john-1.6.31-eggpatch-8.diff.gz"
 
 SLOT="0"
 LICENSE="GPL-2"

@@ -1,9 +1,9 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/heimdal-0.5.1.ebuild,v 1.5 2003/02/13 06:15:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/heimdal-0.5.1.ebuild,v 1.6 2003/09/21 09:44:08 aliz Exp $
 
 DESCRIPTION="Kerberos 5 implementation from KTH"
-SRC_URI="ftp://ftp.pdc.kth.se/pub/${PN}/src/${P}.tar.gz"
+SRC_URI="ftp://ftp.pdc.kth.se/pub/heimdal/src/${P}.tar.gz"
 HOMEPAGE="http://www.pdc.kth.se/heimdal/"
 
 SLOT="0"

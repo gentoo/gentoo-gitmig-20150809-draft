@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/johntheripper-1.6.ebuild,v 1.16 2003/09/05 01:33:50 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/johntheripper-1.6.ebuild,v 1.17 2003/09/21 09:44:08 aliz Exp $
 
 inherit eutils
 
@@ -9,8 +9,8 @@ S=${WORKDIR}/${MY_P}
 DEBPATCH=${MY_P/-/_}-17.diff
 DESCRIPTION="fast password cracker"
 HOMEPAGE="http://www.openwall.com/${PN/theripper/}/"
-SRC_URI="${HOMEPAGE}/${MY_P}.tar.gz
-	 http://ftp.debian.org/debian/pool/main/j/${PN/theripper/}/${DEBPATCH}.gz"
+SRC_URI="http://www.openwall.com/john/dl/${MY_P}.tar.gz
+	 mirror://debian/pool/main/j/john/${DEBPATCH}.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
