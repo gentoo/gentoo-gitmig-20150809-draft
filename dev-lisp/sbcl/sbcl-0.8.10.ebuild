@@ -1,11 +1,11 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-0.8.10.ebuild,v 1.1 2004/05/07 17:34:27 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-0.8.10.ebuild,v 1.2 2004/05/13 15:58:52 mkennedy Exp $
 
 inherit common-lisp-common eutils
 
 BV_X86=0.8.1
-BV_PPC=0.7.13
+BV_PPC=0.8.8
 BV_SPARC=0.7.13
 BV_MIPS=0.7.10
 DESCRIPTION="Steel Bank Common Lisp (SBCL) is an implementation of ANSI Common Lisp."
@@ -13,7 +13,7 @@ HOMEPAGE="http://sbcl.sourceforge.net/"
 SRC_URI="mirror://sourceforge/sbcl/${P}-source.tar.bz2
 	mirror://sourceforge/sbcl/${P}-html.tar.bz2
 	x86? ( mirror://sourceforge/sbcl/${PN}-${BV_X86}-x86-linux-binary.tar.bz2 )
-	ppc? ( mirror://sourceforge/sbcl/${PN}-${BV_PPC}-binary-linux-ppc.tar.bz2 )
+	ppc? ( mirror://sourceforge/sbcl/${PN}-${BV_PPC}-ppc-linux-binary.tar.bz2 )
 	sparc? ( mirror://sourceforge/sbcl/${PN}-${BV_SPARC}-sparc-linux-binary.tar.bz2 )
 	mips? ( mirror://sourceforge/sbcl/${PN}-${BV_MIPS}-mips-linux-binary.tar.gz )"
 
@@ -33,7 +33,7 @@ src_unpack() {
 		unpack ${PN}-${BV_X86}-x86-linux-binary.tar.bz2
 		mv ${PN}-${BV_X86} x86-binary
 	elif use ppc; then
-		unpack ${PN}-${BV_PPC}-ppc-binary-linux.tar.bz2
+		unpack ${PN}-${BV_PPC}-ppc-linux-binary.tar.bz2
 		mv ${PN}-${BV_PPC}-ppc-linux ppc-binary
 	elif use sparc; then
 		unpack ${PN}-${BV_SPARC}-sparc-linux-binary.tar.bz2
