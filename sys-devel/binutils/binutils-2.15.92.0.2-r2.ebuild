@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.15.92.0.2-r2.ebuild,v 1.2 2004/10/23 00:23:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.15.92.0.2-r2.ebuild,v 1.3 2004/10/30 22:44:03 vapier Exp $
 
 inherit eutils libtool flag-o-matic gnuconfig
 
@@ -50,6 +50,8 @@ src_unpack() {
 }
 
 src_compile() {
+	strip-linguas -i */po #42033
+
 	filter-flags -fomit-frame-pointer -fssa #6730
 	strip-flags && replace-flags -O3 -O2 #47581
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.15.92.0.2.ebuild,v 1.4 2004/10/20 15:16:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.15.92.0.2.ebuild,v 1.5 2004/10/30 22:44:03 vapier Exp $
 
 inherit eutils libtool flag-o-matic gnuconfig
 
@@ -59,6 +59,8 @@ src_unpack() {
 }
 
 src_compile() {
+	strip-linguas -i */po #42033
+
 	# Generate borked binaries.  Bug #6730
 	filter-flags -fomit-frame-pointer -fssa
 	# Filter CFLAGS=".. -O2 .." on arm

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.14.90.0.7-r4.ebuild,v 1.12 2004/10/20 17:30:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.14.90.0.7-r4.ebuild,v 1.13 2004/10/30 22:44:03 vapier Exp $
 
 inherit eutils libtool flag-o-matic
 
@@ -83,6 +83,8 @@ src_unpack() {
 }
 
 src_compile() {
+	strip-linguas -i */po #42033
+
 	local myconf=
 
 	use nls && \
