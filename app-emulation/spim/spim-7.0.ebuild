@@ -1,14 +1,14 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/spim/spim-7.0.ebuild,v 1.1 2004/09/05 23:26:47 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/spim/spim-7.0.ebuild,v 1.2 2004/09/05 23:31:39 kloeri Exp $
 
 inherit eutils
 
 DESCRIPTION="MIPS Simulator"
 HOMEPAGE="http://www.cs.wisc.edu/~larus/spim.html"
 # No version upstream
-SRC_URI="http://www.cs.wisc.edu/~larus/SPIM/spim.tar.gz"
-#SRC_URI="mirror://gentoo//${P}.tar.gz"
+#SRC_URI="http://www.cs.wisc.edu/~larus/SPIM/spim.tar.gz"
+SRC_URI="mirror://gentoo//${P}.tar.gz"
 
 KEYWORDS="~x86 ~amd64 ~ppc"
 LICENSE="as-is"
