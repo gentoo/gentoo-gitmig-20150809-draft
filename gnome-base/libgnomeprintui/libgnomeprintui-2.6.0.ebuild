@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeprintui/libgnomeprintui-2.5.4.ebuild,v 1.1 2004/03/21 16:11:07 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeprintui/libgnomeprintui-2.6.0.ebuild,v 1.1 2004/03/23 14:00:01 foser Exp $
 
 inherit gnome2
 
@@ -12,9 +12,10 @@ SLOT="2.2"
 KEYWORDS="~x86 ~ppc ~alpha ~sparc ~hppa ~amd64 ~ia64 ~mips"
 IUSE="doc"
 
-RDEPEND=">=x11-libs/gtk+-2.3.1
+RDEPEND=">=x11-libs/gtk+-2.4
 	=gnome-base/libgnomeprint-${PV}*
-	>=gnome-base/libgnomecanvas-2"
+	>=gnome-base/libgnomecanvas-2
+	>=x11-themes/gnome-icon-theme-1.2.0"
 
 DEPEND="${RDEPEND}
 	sys-devel/gettext
