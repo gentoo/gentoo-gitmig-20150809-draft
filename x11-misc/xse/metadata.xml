@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>no-herd</herd>
+<maintainer>
+  <email>taviso@gentoo.org</email>
+	<description>
+  		package likely has no upstream maintainer, taviso will accept all
+		reported bugs.
+	</description>
+</maintainer>
+	<longdescription>
+	xse is basically a command line wrapper around the Xlib XSendEvent()
+	function, allowing you to send any kind of event to X11 applications,
+	such as input events, motion or configure notification, or any other.
+	
+	This can be useful for scripting interaction, debugging applications
+	and experimenting with events while developing X11 applications.
+	</longdescription>
+</pkgmetadata>
