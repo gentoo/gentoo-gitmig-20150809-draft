@@ -1,8 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/camstream/camstream-0.26.3.ebuild,v 1.1 2003/11/24 06:45:09 phosphan Exp $
-
-inherit kde-functions
+# $Header: /var/cvsroot/gentoo-x86/media-video/camstream/camstream-0.26.3.ebuild,v 1.2 2004/01/04 02:26:04 caleb Exp $
 
 DESCRIPTION="Collection of tools for webcams and other video devices"
 HOMEPAGE="http://www.smcc.demon.nl/camstream/"
@@ -12,11 +10,8 @@ KEYWORDS="~x86"
 SLOT="0"
 IUSE="doc"
 
-need-qt 3
-
 # camstream configure script gets it wrong, sometimes
-
-DEPEND="virtual/x11"
+DEPEND=">=x11-libs/qt-3"
 
 src_install () {
 	dobin camstream/camstream camstream/caminfo camstream/ftpput
