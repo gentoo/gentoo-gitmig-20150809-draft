@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnuconfig.eclass,v 1.12 2003/07/22 00:49:32 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnuconfig.eclass,v 1.13 2003/09/08 02:10:46 azarah Exp $
 #
 # Author: Will Woods <wwoods@gentoo.org>
 #
@@ -19,8 +19,8 @@
 ECLASS=gnuconfig
 INHERITED="$INHERITED $ECLASS"
 
-newdepend "sys-devel/libtool
-	sys-devel/gnuconfig"
+newdepend "sys-devel/gnuconfig
+	!bootstrap? ( sys-devel/libtool )"
 
 DESCRIPTION="Based on the ${ECLASS} eclass"
 
@@ -28,44 +28,48 @@ DESCRIPTION="Based on the ${ECLASS} eclass"
 # config.sub and config.guess (old default behavior), otherwise update the
 # named files.
 gnuconfig_update() {
-    if [ $# -gt 0 ] ; then
-	gnuconfig_do_update $*
-    else
-	gnuconfig_do_update config.sub config.guess
-    fi
+	if [ $# -gt 0 ] ; then
+		gnuconfig_do_update $*
+	else
+		gnuconfig_do_update config.sub config.guess
+	fi
 }
 
 # Copy the newest available version of specified files over any old ones in the
 # source dir. This function shouldn't be called directly - use gnuconfig_update
 gnuconfig_do_update() {
-    local configsubs_dir="$(gnuconfig_findnewest)"
-    local target targetlist file
-    einfo "Using GNU config files from ${configsubs_dir}"
-    for file in $* ; do
-	if [ ! -r ${configsubs_dir}/${file} ] ; then
-	    eerror "Can't read ${configsubs_dir}/${file}, skipping.."
-	    continue
-	fi
-	targetlist=`find ${S} -name "${file}"`
-	if [ -n "$targetlist" ] ; then
-	    for target in $targetlist; do
-		einfo "Updating ${target/$S\//}"
-		cp -f ${configsubs_dir}/${file} ${target}
-		eend $!
-	    done
-	else
-	    ewarn "No ${file} found in ${S}, skipping.."
-	fi
-    done
+	local configsubs_dir="$(gnuconfig_findnewest)"
+	local target targetlist file
+	einfo "Using GNU config files from ${configsubs_dir}"
+	for file in $* ; do
+		if [ ! -r ${configsubs_dir}/${file} ] ; then
+			eerror "Can't read ${configsubs_dir}/${file}, skipping.."
+			continue
+		fi
+		targetlist=`find ${S} -name "${file}"`
+		if [ -n "$targetlist" ] ; then
+			for target in $targetlist; do
+				einfo "Updating ${target/$S\//}"
+				cp -f ${configsubs_dir}/${file} ${target}
+				eend $!
+			done
+		else
+			ewarn "No ${file} found in ${S}, skipping.."
+		fi
+	done
 }
 
 # this searches the standard locations for the newest config.{sub|guess}, and
 # returns the directory where they can be found.
 gnuconfig_findnewest() {
-    local locations="/usr/share/gnuconfig/config.sub \
-                         /usr/share/automake-1.6/config.sub \
-                         /usr/share/automake-1.5/config.sub \
-                         /usr/share/automake-1.4/config.sub \
-                         /usr/share/libtool/config.sub"
-    grep -s '^timestamp' ${locations} | sort -n -t\' -k2 | tail -n 1 | sed 's,/config.sub:.*$,,'
+	local locations="/usr/share/gnuconfig/config.sub \
+	                 /usr/share/automake-1.6/config.sub \
+	                 /usr/share/automake-1.5/config.sub \
+	                 /usr/share/automake-1.4/config.sub"
+	local lt_location="/usr/share/libtool/config.sub"
+
+	[ -f "${lt_location}" ] && locations="${locations} ${lt_location}"
+	
+	grep -s '^timestamp' ${locations} | sort -n -t\' -k2 | tail -n 1 | sed 's,/config.sub:.*$,,'
 }
+
