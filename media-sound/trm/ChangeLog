@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/trm
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/trm/ChangeLog,v 1.5 2004/08/11 12:39:47 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/trm/ChangeLog,v 1.6 2004/08/12 15:03:04 fvdpol Exp $
+
+  12 Aug 2004; <frank@gentoo.org> trm-0.2.1.ebuild:
+  Added dependency to media-libs/id3lib. Closes bug #59261.
 
   11 Aug 2004; Caleb Tennis <caleb@gentoo.org> trm-0.2.1.ebuild:
   Block tunepimp as it is a replacement for this package
