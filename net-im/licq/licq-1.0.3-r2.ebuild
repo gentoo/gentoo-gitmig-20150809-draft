@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Donny Davies <woodchip@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-im/licq/licq-1.0.3-r2.ebuild,v 1.4 2001/08/30 06:54:39 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/licq/licq-1.0.3-r2.ebuild,v 1.5 2001/11/13 23:59:22 verwilst Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -34,8 +34,8 @@ src_compile() {
     myconf="${myconf} --enable-socks5"
   fi
 
-  try ./configure --host=${CHOST} --prefix=/usr ${myconf}
-  try make
+  ./configure --host=${CHOST} --prefix=/usr ${myconf} || die
+  make || die
 
   if [ "`use qt`" ]
   then
@@ -44,20 +44,20 @@ src_compile() {
       myconf2="--with-kde"
     fi
     cd ./plugins/qt-gui-1.0.3
-    try ./configure --host=${CHOST} --prefix=/usr ${myconf2}
-    try make
+    ./configure --host=${CHOST} --prefix=/usr ${myconf2} || die
+    make || die
     cd ../..
   fi
 }
 
 src_install() { 
-  try make prefix=${D}/usr install
+  make prefix=${D}/usr install || die
   dodoc README.OPENSSL doc/*
 
   if [ "`use qt`" ]
   then
     cd ./plugins/qt-gui-1.0.3
-    try make prefix=${D}/usr install
+    make prefix=${D}/usr install || die
     cd ../..
   fi
 }
