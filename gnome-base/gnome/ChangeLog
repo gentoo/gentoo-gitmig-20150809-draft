@@ -1,8 +1,12 @@
 # ChangeLog for gnome-base/gnome
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/ChangeLog,v 1.17 2002/06/06 00:23:10 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/ChangeLog,v 1.18 2002/06/06 23:12:12 spider Exp $
 
+*gnome-2.0.0_beta5-r16 (17 Jun 2002)
+  7 Jun 2002; Spider <spider@gentoo.org> gnome-2.0.0_beta5-r16.ebuild :
+  added libwnck, libglade-2.0.0 and the new libgnome-2.0.0 :)
 
+  
 *gnome-2.0.0_beta5-r15 (06 Jun 2002)
   6 Jun 2002; Spider <spider@gentoo.org> gnome-2.0.0_beta5-r15.ebuild :
   lets see how many new packages we can do in a day? x2
