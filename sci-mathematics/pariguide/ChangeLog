@@ -1,0 +1,27 @@
+# ChangeLog for app-sci/pariguide
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pariguide/ChangeLog,v 1.1 2004/12/28 21:51:31 ribosome Exp $
+
+*pariguide-0.43a (28 Dec 2004)
+
+  28 Dec 2004; Olivier Fisette <ribosome@gentoo.org> +metadata.xml,
+  +pariguide-0.43a.ebuild:
+  Moved from app-sci/pariguide to sci-mathematics/pariguide.
+
+  05 May 2004; Bryan Østergaard <kloeri@gentoo.org> pariguide-0.43a.ebuild:
+  Stable on alpha.
+
+  23 Mar 2004; Joshua Kinard <kumba@gentoo.org> pariguide-0.43a.ebuild:
+  This package has a qt dep, and for mips, qt needs some testing and issues
+  resolved first, removing keyword until then.
+
+*pariguide-0.43a (15 Feb 2002)
+
+  12 Feb 2003; Seemant Kulleen <seemant@gentoo.org> pariguide-0.43.ebuild :
+
+  Added other arches to testing.
+
+  15 Dec 2002; George Shapovalov <george@gentoo.org> ChangeLog, pariguide-0.43a.ebuild, files/digest-pariguide-0.43a :
+  initial release
+  PariGUIde, a GUI for the math. program Pari-GP
+  ebuild submitted by 
