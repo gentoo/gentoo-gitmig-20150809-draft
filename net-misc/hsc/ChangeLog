@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/hsc
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hsc/ChangeLog,v 1.6 2004/07/01 21:08:26 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hsc/ChangeLog,v 1.7 2004/08/18 11:42:58 mattam Exp $
+
+*hsc-0.935 (18 Aug 2004)
+
+  18 Aug 2004; Matthieu Sozeau <mattam@gentoo.org> hsc-0.935.ebuild:
+  Add hsc-0.935, thanks to Daniel Armyr <daniel.armyr@home.se> for the ebuild
+  (bug #59861)
 
   01 Jul 2004; Jon Hood <squinky86@gentoo.org> hsc-0.929.ebuild,
   hsc-0.931.ebuild:
