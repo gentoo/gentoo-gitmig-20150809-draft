@@ -1,12 +1,11 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook/docbook-3.0-r1.ebuild,v 1.1 2000/08/07 15:31:45 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook/docbook-3.0-r1.ebuild,v 1.2 2000/08/16 04:37:55 drobbins Exp $
 
 P=docbook-3.0
 A="docbk30.zip ISOEnts.zip"
 S=${WORKDIR}/${P}
-CATEGORY="app-text"
 DESCRIPTION="DocBook is an SGML DTD"
 SRC_URI="http://www.oasis-open.org/docbook/sgml/3.0/docbk30.zip
 	 http://www.oasis-open.org/cover/ISOEnts.zip"
