@@ -1,8 +1,15 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.21 2002/07/03 21:17:09 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.22 2002/07/03 22:18:43 azarah Exp $
 
-  3 Jun 2002; Martin Schlemmer <azarah@gentoo.org> :
+*gcc-3.1-r8 (03 Jul 2002)
+
+  3 Jul 2002; Martin Schlemmer <azarah@gentoo.org> gcc-3.1-r8 :
+
+  Move all the libs to the version specific directory.  Add a fix for
+  bug #4411, which should be considered *very* experimental.
+
+  3 Jul 2002; Martin Schlemmer <azarah@gentoo.org> :
   Add the /usr/bin/$CHOST-g++ symlink, as it is needed now for
   some weird reason.
 
