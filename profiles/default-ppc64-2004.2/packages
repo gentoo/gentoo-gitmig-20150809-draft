@@ -35,7 +35,7 @@
 *dev-perl/ExtUtils-MakeMaker
 
 >=sys-apps/apmd-3.0.1-r6
->=sys-apps/at-3.1.8-r6
+>=sys-process/at-3.1.8-r6
 *app-arch/bzip2
 *app-arch/cpio
 *sys-apps/debianutils
