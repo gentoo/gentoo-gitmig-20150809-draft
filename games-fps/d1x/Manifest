@@ -1,0 +1,6 @@
+MD5 a90f7f685aef0d74c5af0eba2e90bb45 ChangeLog 322
+MD5 59f9d079172d0164a366133f9ef2ae34 metadata.xml 551
+MD5 1ef300d0112de7b916d850bc0d42e27c d1x-20040118.ebuild 3238
+MD5 203a18187bcba9679a5b3102853fe7f4 files/digest-d1x-20040118 135
+MD5 fe21a7e67ef24de5864a502206052663 files/d1x-missiondir.patch 754
+MD5 951de74e67288963ee03c3719074f3fb files/d1x-makefile-linux.patch 1074
