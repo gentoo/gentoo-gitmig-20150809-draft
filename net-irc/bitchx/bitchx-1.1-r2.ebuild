@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/bitchx-1.1-r2.ebuild,v 1.1 2004/08/31 11:45:30 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/bitchx-1.1-r2.ebuild,v 1.2 2004/08/31 19:22:10 mr_bones_ Exp $
 
 inherit flag-o-matic eutils
 
@@ -85,7 +85,7 @@ src_compile() {
 		`use_with ssl` \
 		`use_enable ipv6` \
 		${myconf} || die
-	
+
 	emake || die make failed
 	cd contrib && make vh1
 }
