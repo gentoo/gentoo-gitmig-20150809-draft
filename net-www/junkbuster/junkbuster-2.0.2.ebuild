@@ -1,17 +1,19 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/junkbuster/junkbuster-2.0.2.ebuild,v 1.14 2004/07/01 22:43:31 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/junkbuster/junkbuster-2.0.2.ebuild,v 1.15 2004/07/21 20:38:50 mr_bones_ Exp $
 
-S=${WORKDIR}/ijb20
 DESCRIPTION="Filtering HTTP proxy"
-SRC_URI="http://www.waldherr.org/redhat/rpm/srpm/junkbuster-2.0.2-8.tar.gz"
 HOMEPAGE="http://internet.junkbuster.com"
-KEYWORDS="x86 sparc ppc"
-SLOT="0"
+SRC_URI="http://www.waldherr.org/redhat/rpm/srpm/junkbuster-2.0.2-8.tar.gz"
+
 LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="x86 sparc ppc"
+IUSE=""
 
 DEPEND="virtual/libc"
-RDEPEND="$DEPEND"
+
+S=${WORKDIR}/ijb20
 
 src_compile() {
 	unset CXXFLAGS
