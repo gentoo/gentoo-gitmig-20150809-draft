@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/whowatch/whowatch-1.5.2.ebuild,v 1.14 2003/02/13 05:33:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/whowatch/whowatch-1.5.2.ebuild,v 1.15 2003/09/26 20:45:47 aliz Exp $
 
 DESCRIPTION="interactive who-like program that displays information about users currently logged on in real time."
 SRC_URI="http://wizard.ae.krakow.pl/~mike/download/${P}.tar.gz"
@@ -15,7 +15,7 @@ DEPEND="sys-libs/ncurses"
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	patch -p1 < ${FILESDIR}/${PF}-gentoo.diff || die
+	epatch ${FILESDIR}/${PF}-gentoo.diff
 }
 
 src_compile() {

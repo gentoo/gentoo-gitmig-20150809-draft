@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/otpcalc/otpcalc-0.96.ebuild,v 1.5 2003/09/15 10:03:36 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/otpcalc/otpcalc-0.96.ebuild,v 1.6 2003/09/26 20:45:47 aliz Exp $
 
 DESCRIPTION="A One Time Password and S/Key calculator for X"
 HOMEPAGE="http://killa.net/infosec/otpCalc/"
@@ -20,12 +20,11 @@ S=${WORKDIR}/${P/c/C}
 
 src_unpack() {
 	unpack ${A}
-	sed -e "s/VERSION/${PV}/g" ${S}/otpCalc.man > ${S}/otpCalc.1
+	sed -i -e "s/VERSION/${PV}/g" ${S}/otpCalc.man
 	sed -i "s#-s -O3#${CFLAGS}#g" ${S}/Makefile.in
 }
 
 src_install() {
-	sed -e "s/VERSION/${PV}/g" ${S}/otpCalc.man > ${S}/otpCalc.1
-	doman otpCalc.1
+	newman otpCalc.man otpCalc.1
 	dobin otpCalc
 }

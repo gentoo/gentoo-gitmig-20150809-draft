@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/webalizer-2.01.10-r3.ebuild,v 1.3 2003/07/30 15:17:53 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/webalizer-2.01.10-r3.ebuild,v 1.4 2003/09/26 20:45:47 aliz Exp $
 
 MY_P=${P/.10/-10}
 S=${WORKDIR}/${MY_P}
@@ -42,9 +42,7 @@ src_install() {
 
 	if [ "`use apache2`" ]; then
 		# patch for apache2
-		cp ${D}/etc/webalizer.conf ${D}/etc/webalizer.conf.1;
-		sed -e "s/apache/apache2/g" ${D}/etc/webalizer.conf.1 > ${D}/etc/webalizer.conf;
-		rm ${D}/etc/webalizer.conf.1
+		sed -i -e "s/apache/apache2/g" ${D}/etc/webalizer.conf
 		insinto /etc/apache2/conf
 	else
 		insinto /etc/apache/conf

@@ -1,6 +1,6 @@
 # ChangeLog for app-admin/sysklogd
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysklogd/ChangeLog,v 1.18 2003/09/17 22:27:37 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysklogd/ChangeLog,v 1.19 2003/09/26 20:45:47 aliz Exp $
 
   17 Sep 2003; Jon Portnoy <avenj@gentoo.org> sysklog-1.4.1-r6.ebuild :
   ia64 keywords.
@@ -12,6 +12,10 @@
   sysklogd-1.4.1-r7.ebuild, sysklogd-1.4.1-r8.ebuild,
   sysklogd-1.4.1-r9.ebuild:
   version bump to register the virtual/logger provides
+
+*sysklogd-1.4.1-r8 (17 Sep 2003)
+
+*sysklogd-1.4.1-r7 (17 Sep 2003)
 
 *sysklogd-1.4.1-r6 (09 Sep 2003)
 

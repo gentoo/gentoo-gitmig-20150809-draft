@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/setools/setools-20030609.ebuild,v 1.3 2003/09/23 01:41:03 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/setools/setools-20030609.ebuild,v 1.4 2003/09/26 20:45:47 aliz Exp $
 
 DESCRIPTION="SELinux graphical policy tools"
 HOMEPAGE="http://www.tresys.com/selinux_policy_tools.html"
@@ -23,26 +23,20 @@ RDEPEND="dev-lang/tk
 src_compile() {
 	# fix stupid hard-coded paths
 	cd ${S}/libapol
-	sed -e 's:local/::g' < apol_tcl.h > apol_tcl.h.new
-	mv -f apol_tcl.h.new apol_tcl.h
+	sed -i -e 's:local/::g' apol_tcl.h
 	cd ${S}/apol
-	sed -e 's:local/selinux/::' < head.tcl > head.tcl.new
-	mv -f head.tcl.new head.tcl
+	sed -i -e 's:local/selinux/::' head.tcl
 	cd ${S}/sepct
-	sed -e 's:local/::g' < top.tcl > top.tcl.new
-	mv -f top.tcl.new top.tcl
+	sed -i -e 's:local/::g' top.tcl
 	cd ${S}/seuser
-	sed -e 's:local/selinux/::' < seuser_head.tcl > seuser_head.tcl.new
-	mv -f seuser_head.tcl.new seuser_head.tcl
-	sed -e "s:/etc/security/selinux/src/policy/users:${POLICYDIR}/users:" \
+	sed -i -e 's:local/selinux/::' seuser_head.tcl
+	sed -i -e "s:/etc/security/selinux/src/policy/users:${POLICYDIR}/users:" \
 		-e "s:/etc/security/selinux/src/policy$:${POLICYDIR}:" \
-			< seuser.conf > seuser.conf.new
-	mv -f seuser.conf.new seuser.conf
+		seuser.conf
 	cd ${S}
 
 	# fix the Makefile to listen to portage CFLAGS
-	sed -e 's:-g:$(EXTRA_CFLAGS):' < Makefile > Makefile.new
-	mv -f Makefile.new Makefile
+	sed -i -e 's:-g:$(EXTRA_CFLAGS):' Makefile
 
 	# adjust for tcl/tk versions
 	has_version '>=dev-lang/tk-8.4' && \
@@ -56,18 +50,14 @@ src_compile() {
 		# fix up the scripts we're going to install
 		cd ${S}/seuser
 
-		sed -e 's:local/selinux/::g' < seuseradd > seuseradd.new
-		sed -e 's:local/selinux/::g' < seuserdel > seuserdel.new
-		sed -e 's:local/selinux/::g' < seusermod > seusermod.new
-		mv -f seuseradd.new seuseradd
-		mv -f seuserdel.new seuserdel
-		mv -f seusermod.new seusermod
+		sed -i -e 's:local/selinux/::g' seuseradd
+		sed -i -e 's:local/selinux/::g' seuserdel
+		sed -i -e 's:local/selinux/::g' seusermod
 
 		# fix up the file contexts
 		cd ${S}/policy
-		sed -e 's:local/selinux/::' -e 's:local/::' \
-			< seuser.fc > seuser.fc.new
-		mv -f seuser.fc.new seuser.fc
+		sed -i -e 's:local/selinux/::' -e 's:local/::' \
+			seuser.fc
 	fi
 }
 
