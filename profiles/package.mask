@@ -25,6 +25,8 @@
 # <verwilst@gentoo.org> (15 Sep 2002)
 # Masked for testing
 =dev-python/sip-3.4
+=sys-libs/detect-0.9.72
+=sys-libs/gi-detect-0.1
 
 # <mkennedy@gentoo.org> (15 Sep 2002)
 # Upstream too buggy to use. Doesn't seem to be a stable or pre
