@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/neoengine/neoengine-0.8.1.ebuild,v 1.1 2004/04/14 09:57:03 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/neoengine/neoengine-0.8.1.ebuild,v 1.2 2004/06/02 20:53:51 agriffis Exp $
 
 inherit eutils
 
@@ -20,7 +20,7 @@ src_compile() {
 	econf || die "./configure failed"
 	emake || die "Compilation failed"
 
-	if [ -n "`use doc`" ]; then
+	if use doc; then
 		for i in "*.doxygen"; do
 			doxygen ${i};
 		done
@@ -32,7 +32,7 @@ src_install () {
 
 	dodoc AUTHORS ChangeLog COPYING INSTALL README TODO
 
-	if [ -n "`use doc`" ]; then
+	if use doc; then
 		mkdir -p ${D}/usr/share/doc/${P}
 		for i in "*-api"; do
 			cp -r ${i} ${D}/usr/share/doc/${P};

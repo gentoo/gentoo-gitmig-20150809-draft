@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ogre-0.13.1.ebuild,v 1.8 2004/05/25 07:27:18 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ogre-0.13.1.ebuild,v 1.9 2004/06/02 20:51:18 agriffis Exp $
 
 inherit eutils
 
@@ -48,7 +48,7 @@ src_unpack() {
 src_compile() {
 	local myconf="cli"
 
-	[ `use gtk` ] && myconf="gtk"
+	use gtk && myconf="gtk"
 
 	econf --with-cfgtk=${myconf} || die
 	emake || die "emake failed"
@@ -56,7 +56,7 @@ src_compile() {
 
 src_install() {
 	make DESTDIR=${D} install || die "make install failed"
-	if [ `use doc` ] ; then
+	if use doc ; then
 		dohtml -r Docs/* Docs/Tutorials/* || die "dohtml failed (doc)"
 	fi
 	insinto /usr/share/OGRE/Media

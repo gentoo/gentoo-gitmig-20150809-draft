@@ -1,6 +1,9 @@
 # ChangeLog for dev-games/kyra
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/kyra/ChangeLog,v 1.2 2003/10/27 14:48:49 vapier Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-games/kyra/ChangeLog,v 1.3 2004/06/02 20:46:18 agriffis Exp $
+
+  02 Jun 2004; Aron Griffis <agriffis@gentoo.org> kyra-2.0.7.ebuild:
+  Fix use invocation
 
 *kyra-2.0.7 (21 Oct 2003)
 

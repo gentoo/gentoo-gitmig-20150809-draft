@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc., 2004 Richard Garand <richard@garandnet.net>
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/hawknl/hawknl-1.66.ebuild,v 1.3 2004/02/20 07:44:01 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/hawknl/hawknl-1.66.ebuild,v 1.4 2004/06/02 20:52:18 agriffis Exp $
 
 DESCRIPTION="A cross-platform network library designed for games"
 HOMEPAGE="http://www.hawksoft.com/hawknl/"
@@ -28,7 +28,7 @@ src_compile () {
 src_install () {
 	dodir /usr/{include,lib}
 	make install LIBDIR=${D}/usr/lib INCDIR=${D}/usr/include || die
-	if [ `use doc` ] ; then
+	if use doc ; then
 		docinto samples
 		dodoc samples/*
 	fi
