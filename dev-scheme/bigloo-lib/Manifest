@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 dadc8bc48ca36babd8a29670a217b89f bigloo-lib-0.17.ebuild 2148
 MD5 2911289b1433277f07cb5f260108cc12 ChangeLog 1342
-MD5 249cf334b0070d69e71aeafa9c3cff37 bigloo-lib-0.17.ebuild 2158
 MD5 ca20ef8c9a89ce01047f567813d49954 metadata.xml 252
 MD5 596c454a257327703d728fe508bb58ca files/digest-bigloo-lib-0.17 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA4vbFHTu7gpaalycRAkOlAJ93WiKjjE6QBi4CF7UG724281GxNgCg1KvI
-I9uh8+6ZBwy2UN97Ob3VxmE=
-=zVON
------END PGP SIGNATURE-----

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/bigloo/bigloo-2.4c.ebuild,v 1.2 2004/06/25 02:06:04 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/bigloo/bigloo-2.4c.ebuild,v 1.3 2004/07/14 22:24:48 agriffis Exp $
 
 S=${WORKDIR}/${PN}${PV}
 DESCRIPTION="Bigloo Scheme compiler for x86, sparc, alpha, ppc and JVM"
@@ -11,6 +11,7 @@ DEPEND=""
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86"
+IUSE="java"
 
 src_compile() {
 	local myconf
