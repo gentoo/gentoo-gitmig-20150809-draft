@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/mt-st
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/mt-st/ChangeLog,v 1.15 2005/01/01 11:49:13 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/mt-st/ChangeLog,v 1.16 2005/04/01 02:13:39 agriffis Exp $
+
+  31 Mar 2005; Aron Griffis <agriffis@gentoo.org> mt-st-0.7-r1.ebuild:
+  stable on ia64
 
   12 Jul 2004; Tom Gall <tgall@gentoo.org> mt-st-0.7-r1.ebuild:
   stable on ppc64, bug #56284
