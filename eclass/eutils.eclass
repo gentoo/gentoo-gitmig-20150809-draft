@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.136 2005/01/07 11:13:38 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.137 2005/01/07 11:21:42 eradicator Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -1668,10 +1668,10 @@ epunt_cxx() {
 #
 # Jeremy Huddleston <eradicator@gentoo.org>
 get_abi_var() {
-	local flag=$1
+	local flag=${1}
 	local abi
 	if [ $# -gt 1 ]; then
-		abi=$1
+		abi=${2}
 	elif [ -n "${ABI}" ]; then
 		abi=${ABI}
 	elif [ -n "${DEFAULT_ABI}" ]; then
@@ -1684,8 +1684,7 @@ get_abi_var() {
 	echo ${!var}
 }
 
-get_abi_CFLAGS() { get_abi_var CFLAGS $1; }
-get_abi_CXXFLAGS() { get_abi_var CXXFLAGS $1; }
-get_abi_ASFLAGS() { get_abi_var ASFLAGS $1; }
-get_abi_LIBDIR() { get_abi_var LIBDIR $1; }
-
+get_abi_CFLAGS() { get_abi_var CFLAGS ${@}; }
+get_abi_CXXFLAGS() { get_abi_var CXXFLAGS ${@}; }
+get_abi_ASFLAGS() { get_abi_var ASFLAGS ${@}; }
+get_abi_LIBDIR() { get_abi_var LIBDIR ${@}; }
