@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/nabi/nabi-0.10.ebuild,v 1.3 2004/03/14 02:11:32 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/nabi/nabi-0.10.ebuild,v 1.4 2004/06/07 05:11:32 dragonheart Exp $
 
 DESCRIPTION="Simple Hanguk X Input Method"
 HOMEPAGE="http://nabi.kldp.net/"
@@ -8,6 +8,7 @@ SRC_URI="http://download.kldp.net/nabi/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
+IUSE=""
 KEYWORDS="x86"
 
 DEPEND=">=x11-libs/gtk+-2.2"

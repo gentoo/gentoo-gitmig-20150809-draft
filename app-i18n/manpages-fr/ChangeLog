@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/manpages-fr
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/manpages-fr/ChangeLog,v 1.5 2004/04/05 10:57:05 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/manpages-fr/ChangeLog,v 1.6 2004/06/07 05:08:20 dragonheart Exp $
+
+  07 Jun 2004; Daniel Black <dragonheart@gentoo.org> +metadata.xml,
+  manpages-fr-0.9.5.ebuild:
+  QA - IUSE fix
 
   05 Apr 2004; Guy Martin <gmsoft@gentoo.org> manpages-fr-0.9.5.ebuild:
   Marked stable on hppa.

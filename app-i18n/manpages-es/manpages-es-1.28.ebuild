@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/manpages-es/manpages-es-1.28.ebuild,v 1.5 2004/03/14 02:17:45 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/manpages-es/manpages-es-1.28.ebuild,v 1.6 2004/06/07 05:07:20 dragonheart Exp $
 
 S1=${WORKDIR}/man-pages-es-1.28
 S2=${WORKDIR}/man-pages-es-extra-0.8a
@@ -9,6 +9,7 @@ DESCRIPTION="A somewhat comprehensive collection of Linux spanish man page trans
 SRC_URI="http://ditec.um.es/~piernas/manpages-es/man-pages-es-1.28.tar.gz
 	http://ditec.um.es/~piernas/manpages-es/man-pages-es-extra-0.8a.tar.gz"
 HOMEPAGE="http://ditec.um.es/~piernas/manpages-es/index.html"
+IUSE=""
 KEYWORDS="x86"
 
 DEPEND=""
