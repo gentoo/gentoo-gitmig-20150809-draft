@@ -1,6 +1,13 @@
 # ChangeLog for app-emacs/ddskk
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ddskk/ChangeLog,v 1.9 2004/03/13 18:00:18 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ddskk/ChangeLog,v 1.10 2004/03/31 19:34:03 usata Exp $
+
+*ddskk-12.2.1_pre20040309-r1 (01 Apr 2004)
+*ddskk-12.2.0-r1 (01 Apr 2004)
+
+  01 Apr 2004; Mamoru KOMACHI <usata@gentoo.org> ddskk-12.2.0-r1.ebuild,
+  ddskk-12.2.1_pre20040309-r1.ebuild:
+  Fixed missing info files.
 
 *ddskk-12.2.1_pre20040309 (14 Mar 2004)
 
