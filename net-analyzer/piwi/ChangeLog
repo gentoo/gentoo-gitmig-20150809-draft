@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/piwi
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/piwi/ChangeLog,v 1.14 2004/06/24 22:15:12 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/piwi/ChangeLog,v 1.15 2004/06/25 19:59:24 agriffis Exp $
+
+  25 Jun 2004; Aron Griffis <agriffis@gentoo.org>
+  piwi-0.8.0.20031109-r2.ebuild:
+  QA - fix use invocation
 
   04 Jun 2004; Jon Hood <squinky86@gentoo.org> piwi-0.8.0.20031109-r2.ebuild:
   fixed USE typo, postgres instead of postgresql; thanks Aquila (#52988)

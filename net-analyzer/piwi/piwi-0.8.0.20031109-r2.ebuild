@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/piwi/piwi-0.8.0.20031109-r2.ebuild,v 1.4 2004/06/24 22:15:12 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/piwi/piwi-0.8.0.20031109-r2.ebuild,v 1.5 2004/06/25 19:59:24 agriffis Exp $
 
 DESCRIPTION="(Prelude|Perl) IDS Web Interface"
 HOMEPAGE="http://www.prelude-ids.org"
@@ -30,7 +30,7 @@ RDEPEND="
 S=${WORKDIR}/
 
 src_compile() {
-	if [ ! -n "`use mysql`" -a ! -n "`use postgres`" ]; then
+	if ! use mysql && ! use postgres; then
 		eerror "You must have either MySQL or PostgreSQL enabled to use this software."
 		eerror "You must put either 'mysql' or 'postgres' (or both) in your USE flags before emerging this."
 
