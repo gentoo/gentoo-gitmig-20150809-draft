@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 89542dfc9537d5af0a7e4b1394ba3e80 memdump-1.0.ebuild 889
-MD5 cbed3f4e9fb84a0ea8aa18ddc9b67e3a ChangeLog 412
+MD5 eeb9c6763eeba52349488d835ecb96a3 ChangeLog 489
+MD5 4842992aa7cb284890107fdb2456f8d3 memdump-1.0.ebuild 888
 MD5 20ee07270b7eadc3659cd96a982e460f metadata.xml 230
 MD5 230810f720581e671e10d2ab23fdfc0c files/digest-memdump-1.0 62
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
-
-iD8DBQFBTQS0mdTrptrqvGERAmDjAJ9HSmefUMoXffBnn9fn0h/uqZxdcgCeK27w
-swU3kJaF5anEh2qW+wMZP9E=
-=EzwH
------END PGP SIGNATURE-----
