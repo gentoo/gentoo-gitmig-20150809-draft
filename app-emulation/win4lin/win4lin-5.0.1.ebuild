@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/win4lin/win4lin-5.0.1.ebuild,v 1.5 2003/11/29 23:45:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/win4lin/win4lin-5.0.1.ebuild,v 1.6 2003/12/30 03:12:21 bazik Exp $
 
 IUSE="doc"
 
@@ -19,7 +19,7 @@ KEYWORDS="x86"
 
 DEPEND="app-arch/rpm2targz
 		virtual/winkernel"
-RDEPEND="!<=app/emulation/win4lin-4.0.22"
+RDEPEND="!<=app-emulation/win4lin-4.0.22"
 
 src_unpack() {
 	rpm2targz ${DISTDIR}/${MY_P}.rpm
