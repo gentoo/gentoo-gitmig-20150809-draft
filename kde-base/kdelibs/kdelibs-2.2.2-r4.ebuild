@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-2.2.2-r4.ebuild,v 1.15 2002/12/02 19:57:56 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-2.2.2-r4.ebuild,v 1.16 2002/12/05 20:57:03 danarmak Exp $
 
 IUSE="ssl cups ipv6 alsa"
 inherit kde kde.org
@@ -19,7 +19,6 @@ DEPEND=""
 RDEPEND=""
 newdepend ">=sys-devel/gcc-2.95.2
 		virtual/glibc
-		sys-devel/ld.so
 		sys-devel/perl
 		>=media-libs/audiofile-0.1.9
 		>=sys-apps/bzip2-1.0.1
