@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/less
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/less/ChangeLog,v 1.25 2004/06/11 13:41:10 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/less/ChangeLog,v 1.26 2004/06/15 20:01:47 agriffis Exp $
+
+*less-382-r1 (15 Jun 2004)
+
+  15 Jun 2004; Aron Griffis <agriffis@gentoo.org> +files/lesspipe.sh-r2,
+  +less-382-r1.ebuild:
+  Fix bugs 18823 (lesspipe.sh misdetects troff files) and 38854
+  (lesspipe enchancments + cannot see some files with spaces).  Thanks
+  to Niels Teglsbo and Glen for the suggestions.
 
   11 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> less-382.ebuild:
   Stable on alpha.
