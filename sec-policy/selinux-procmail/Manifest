@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 2399913bb6a13414600128b7d9c1fc2b ChangeLog 665
+MD5 d4dd1ee437b2e05912be8953201a9f1f ChangeLog 869
 MD5 df50b670def71c1790352df31ff8c44f metadata.xml 303
-MD5 4105ea4ee3e5b6d4fa901e08060100a1 selinux-procmail-20041119.ebuild 396
-MD5 4c9ebd8ffd97af2f4abd32ddca26a742 selinux-procmail-20041028.ebuild 396
+MD5 a4294ca58e54670518f8f060aa66d9f1 selinux-procmail-20050219.ebuild 452
+MD5 60f66632f4f11fbae47d815c9f480955 selinux-procmail-20041119.ebuild 396
+MD5 7016674e43e74e32bc7e8a1ec2ef8110 files/digest-selinux-procmail-20050219 76
 MD5 0e8d168c7687fc4d6f91e92c3c2fa64c files/digest-selinux-procmail-20041119 76
-MD5 c3b9b7fa9b6e7c9bb05020e7246e8396 files/digest-selinux-procmail-20041028 76
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBo235GSBEIeh4AEYRAuwSAJwLByvgiFfkxEIMO7Ki8ilGKLNH3ACfeA/j
-3Ab/vZp7yqB3nqlCyjkUsxY=
-=p0dn
+iD8DBQFCHv6JGSBEIeh4AEYRAtgWAJ9P4MdvXMuQ0H93ic1pLlZOg7qsBQCffafl
+tzS9ZB8qwzmKjjLkp4+d8xQ=
+=CvHX
 -----END PGP SIGNATURE-----
