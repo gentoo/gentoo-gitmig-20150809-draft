@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/python-xlib
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-xlib/ChangeLog,v 1.8 2004/06/25 01:46:45 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-xlib/ChangeLog,v 1.9 2004/12/17 14:26:51 slarti Exp $
+
+  17 Dec 2004; Tom Martin <slarti@gentoo.org> python-xlib-0.12-r1.ebuild:
+  Marked ~amd64.
 
   04 May 2004; Bryan Østergaard <kloeri@gentoo.org> python-xlib-0.12.ebuild:
   Remove default S.
