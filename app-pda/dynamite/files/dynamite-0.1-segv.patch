@@ -2,7 +2,7 @@ diff -ur dynamite-0.1/src/dynamite.c dynamite-0.1a/src/dynamite.c
 --- dynamite-0.1/src/dynamite.c	2003-08-22 04:55:42.000000000 -0400
 +++ dynamite-0.1a/src/dynamite.c	2004-06-26 21:23:39.474501584 -0400
 @@ -1,6 +1,7 @@
- /* $Id: dynamite-0.1-segv.patch,v 1.1 2004/06/26 22:37:50 liquidx Exp $ */
+ /* $Id: dynamite-0.1-segv.patch,v 1.2 2004/07/07 03:05:39 liquidx Exp $ */
  #include "libdynamite.h"
  #include <stdio.h>
 +#include <stdlib.h>
@@ -14,7 +14,7 @@ diff -ur dynamite-0.1/src/dynamite.c dynamite-0.1a/src/dynamite.c
    Cookie cookie;
  
 +  if (argc < 3) {
-+	fprintf("Missing filename: dynamite <source> <destination>\n");
++	printf("Missing filename: dynamite <source> <destination>\n");
 +	return 1;
 +  }
 +
