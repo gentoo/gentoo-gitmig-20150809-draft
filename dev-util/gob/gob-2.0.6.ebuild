@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gob/gob-2.0.6.ebuild,v 1.3 2003/07/24 17:12:39 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gob/gob-2.0.6.ebuild,v 1.4 2003/11/21 20:11:06 weeve Exp $
 
 inherit gnome2
 
@@ -14,7 +14,7 @@ IUSE=""
 
 SLOT="2"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~sparc hppa"
+KEYWORDS="x86 sparc hppa"
 
 RDEPEND=">=dev-libs/glib-2.0*"
 

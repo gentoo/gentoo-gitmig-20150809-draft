@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/gob
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gob/ChangeLog,v 1.17 2003/07/24 17:12:39 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gob/ChangeLog,v 1.18 2003/11/21 20:11:06 weeve Exp $
+
+  21 Nov 2003; Jason Wever <weeve@gentoo.org> gob-2.0.6.ebuild:
+  Marked stable on sparc.
 
 *gob-2.0.6 (22 May 2003)
 
