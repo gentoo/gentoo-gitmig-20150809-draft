@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.3-r9.ebuild,v 1.15 2004/06/27 20:11:46 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.3-r9.ebuild,v 1.16 2004/07/15 02:33:54 agriffis Exp $
 
 IUSE="pam selinux nls"
 
@@ -10,7 +10,6 @@ FORCE_SYSTEMAUTH_UPDATE="no"
 
 SELINUX_PATCH="shadow-4.0.3-selinux.diff"
 
-S="${WORKDIR}/${P}"
 HOMEPAGE="http://shadow.pld.org.pl/"
 DESCRIPTION="Utilities to deal with user accounts"
 SRC_URI="ftp://ftp.pld.org.pl/software/shadow/old/${P}.tar.gz"
@@ -207,4 +206,3 @@ pkg_postinst() {
 		rm -f ${ROOT}/etc/pam.d/system-auth.new
 	fi
 }
-
