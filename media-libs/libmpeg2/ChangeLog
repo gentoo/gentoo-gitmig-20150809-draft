@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libmpeg2
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg2/ChangeLog,v 1.15 2004/03/16 08:47:00 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg2/ChangeLog,v 1.16 2004/03/16 09:18:47 mr_bones_ Exp $
+
+*libmpeg2-0.4.0b (16 Mar 2004)
+
+  16 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> libmpeg2-0.4.0b.ebuild:
+  version bump to patched version (bug #40836)
 
   16 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> libmpeg2-0.4.0.ebuild:
   append-flags into src_unpack; use/depend on sed-4; use use_enable/use_with
