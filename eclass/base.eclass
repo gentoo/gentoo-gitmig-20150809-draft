@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/base.eclass,v 1.10 2002/02/06 20:38:10 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/base.eclass,v 1.11 2002/02/07 18:52:18 danarmak Exp $
 # The base eclass defines some default functions and variables. Nearly everything
 # else inherits from here.
 inherit functions
@@ -48,11 +48,11 @@ base_src_compile() {
 	case $1 in
 	    configure)
 		debug-print-section configure
-		./configure || die
+		./configure || die "died running ./configure, $FUNCNAME:configure"
 		;;
 	    make)
 		debug-print-section make
-		make || die
+		make || die "died running make, $FUNCNAME:make"
 		;;
 	    all)
 		debug-print-section all
@@ -75,10 +75,10 @@ base_src_install() {
 	case $1 in
 	    make)
 			debug-print-section make
-			make DESTDIR=${D} install || die
+			make DESTDIR=${D} install || die "died running make install, $FUNCNAME:make"
 			;;
 	    all)
-			debug-prnit-section all
+			debug-print-section all
 			base_src_install make
 			;;
 	esac

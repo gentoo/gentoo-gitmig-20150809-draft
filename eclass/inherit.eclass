@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/inherit.eclass,v 1.12 2002/02/06 20:38:10 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/inherit.eclass,v 1.13 2002/02/07 18:52:18 danarmak Exp $
 # This eclass provides the inherit() function. In the future it will be placed in ebuild.sh, but for now drobbins 
 # doesn't want to make a new portage just for my testing, so every eclass/ebuild will source this file manually and
 # then inherit(). This way when the time comes for this to move into ebuild.sh, we can just delete the source lines.
@@ -12,12 +12,19 @@ ECLASSDIR=/usr/portage/eclass
 inherit() {
     
     while [ "$1" ]; do
+    
+	# any future resolution code goes here
+	local location
 	location="${ECLASSDIR}/${1}.eclass"
+	
 	# for now, disable by deafult because it creates a lot extra sourcing. (get debug lvels there already!)
 	#. ${ECLASSDIR}/debug.eclass
 	#debug-print "inherit: $1 -> $location"
-	source "$location" || die
-    shift
+	
+	source "$location" || die "died sourcing $location in $FUNCNAME"
+	
+	shift
+	
     done
 
 }

@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/functions.eclass,v 1.1 2002/02/06 20:38:10 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/functions.eclass,v 1.2 2002/02/07 18:52:18 danarmak Exp $
 # This contains everything except things that modify ebuild variables and functions (e.g. $P, src_compile() etc.)
 ECLASS=functions
 
@@ -57,21 +57,18 @@ set-kdedir() {
 
 	debug-print-function $FUNCNAME $*
 	
-	# for older make.globals versions which don't include the default KDE?DIR settings
+	# default settings for older make.globals versions which don't include the default KDE?DIR settings
 	[ -z "$KDE2DIR" ] && export KDE2DIR="/usr/kde/2"
 	[ -z "$KDE3DIR" ] && export KDE3DIR="/usr/kde/3"
 	# not defined at all by default
 	[ -z "$KDE2LIBSDIR" ] && export KDE2LIBSDIR="$KDE2DIR" 
 	[ -z "$KDE3LIBSDIR" ] && export KDE3LIBSDIR="$KDE3DIR" 
 	
-	local KDEVER
-	KDEVER=$1
-
 	# select 1st element in dot-separated string
 	IFSBACKUP=$IFS
 	IFS="."
 	KDEMAJORVER=""
-	for x in $KDEVER; do
+	for x in $1; do
 		[ -z "$KDEMAJORVER" ] && KDEMAJORVER=$x
 	done
 	IFS=$IFSBACKUP
@@ -100,14 +97,11 @@ set-qtdir() {
 
 	debug-print-function $FUNCNAME $*
 
-	local QTVER
-	QTVER=$1
-
 	# select 1st element in dot-separated string
 	IFSBACKUP=$IFS
 	IFS="."
 	QTMAJORVER=""
-	for x in $QTVER; do
+	for x in $1; do
 		[ -z "$QTMAJORVER" ] && QTMAJORVER=$x
 	done
 	IFS=$IFSBACKUP

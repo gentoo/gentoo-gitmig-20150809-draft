@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.38 2002/02/06 20:38:10 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.39 2002/02/07 18:52:18 danarmak Exp $
 # The kde eclass is inherited by all kde-* eclasses. Few ebuilds inherit straight from here.
 inherit base
 ECLASS=kde
@@ -47,12 +47,12 @@ kde_src_compile() {
 			fi
 
 			export PATH="${KDEDIR}/bin:${PATH}"
-			./configure ${myconf} || die
+			./configure ${myconf} || die "died running ./configure, $FUNCNAME:configure"
 			;;
 		make)
 			export PATH="${KDEDIR}/bin:${PATH}"
 			debug-print-section make
-			make || die
+			make || die "died running make, $FUNCNAME:make"
 			;;
 		all)
 			debug-print-section all
@@ -67,7 +67,7 @@ kde_src_compile() {
 
 kde_src_install() {
 
-	debug-print-function $FUNCNAME $*
+    debug-print-function $FUNCNAME $*
     [ -z "$1" ] && kde_src_install all
 
     while [ "$1" ]; do
@@ -75,7 +75,7 @@ kde_src_install() {
 	case $1 in
 	    make)
 			debug-print-section make
-			make install DESTDIR=${D} destdir=${D} || die
+			make install DESTDIR=${D} destdir=${D} || die "died running make install, $FUNCNAME:make"
 			;;
 	    dodoc)
 			debug-print-section dodoc
