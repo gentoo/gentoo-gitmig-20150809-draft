@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt/rxvt-2.7.10.ebuild,v 1.13 2004/07/23 08:35:27 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt/rxvt-2.7.10.ebuild,v 1.14 2004/08/14 15:42:48 usata Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/rxvt/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc alpha sparc ~mips amd64 ~ppc64"
+KEYWORDS="x86 ppc alpha sparc ~mips amd64 ~ppc64"
 IUSE="motif cjk xgetdefault"
 
 DEPEND="virtual/libc
