@@ -1,0 +1,9 @@
+# ChangeLog for media-plugins/gst-plugins-ogg
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ogg/ChangeLog,v 1.1 2004/03/28 18:59:58 foser Exp $
+
+*gst-plugins-ogg-0.8.0 (28 Mar 2004)
+
+  28 Mar 2004; foser <foser@gentoo.org> gst-plugins-ogg-0.8.0.ebuild, ChangeLog, metadata.xml :
+  Initial commit of the ogg de-/encoder plugin for gst 0.8
+  Added the the gnome herd
