@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.62 2003/09/12 02:02:53 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.63 2003/09/12 02:22:46 caleb Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -63,13 +63,17 @@ need-kde() {
 			need-autoconf 2.1
 			need-automake 1.4
 			;;
-		3.1.[23])	# Newer 3.1.x versions are built with automake 1.7, and have errors when using 1.6
+		3.1.[234])	# Newer 3.1.x versions are built with automake 1.7, and have errors when using 1.6
 			need-automake 1.7
 			need-autoconf 2.5
 			;;
 		3.1*)	# actually, newer 3.0.x stuff uses this too, but i want to make a clean switch
 			need-automake 1.6
 			need-autoconf 2.5
+			;;
+		3.2*)
+			need-autoconf 2.5
+			need-automake 1.7
 			;;
 		3*)	# a generic call for need-kde 3 - automake 1.4 works most often
 			need-autoconf 2.5
