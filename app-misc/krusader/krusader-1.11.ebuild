@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/krusader/krusader-1.11.ebuild,v 1.1 2002/10/18 09:50:26 hannes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/krusader/krusader-1.11.ebuild,v 1.2 2002/10/23 16:51:02 hannes Exp $
 inherit kde-base
 
 need-kde 3
@@ -10,4 +10,4 @@ HOMEPAGE="http:/krusader.sourceforge.net/"
 SRC_URI="http://krusader.sourceforge.net/stable/${P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="x86"
