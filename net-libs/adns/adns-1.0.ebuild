@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/adns/adns-1.0.ebuild,v 1.8 2002/12/09 04:33:13 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/adns/adns-1.0.ebuild,v 1.9 2002/12/13 06:05:09 raker Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Advanced, easy to use, asynchronous-capable DNS client library and utilities"
@@ -26,5 +26,8 @@ src_install () {
 	make prefix=${D}/usr install || die
 	dodoc README GPL-vs-LGPL COPYING TODO
 	dohtml *.html
+
+	cd ${D}/usr/lib
+	dosym libadns.so.1 /usr/lib/libadns.so
 }
 
