@@ -1,6 +1,11 @@
 # ChangeLog for app-emacs/auctex
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/auctex/ChangeLog,v 1.9 2004/01/18 20:22:40 mattam Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/auctex/ChangeLog,v 1.10 2004/05/02 10:19:21 usata Exp $
+
+  02 May 2004; Mamoru KOMACHI <usata@gentoo.org> auctex-10.0g.ebuild,
+  auctex-11.13.ebuild, auctex-11.14.ebuild:
+  Moved Xaw3d warning to pkg_postinst. See bug #18518 and #49681.
+  Removed old ebuilds.
 
   18 Jan 2004; Matthieu Sozeau <mattam@gentoo.org> auctex-11.14.ebuild:
   Added ~ppc to keywords.

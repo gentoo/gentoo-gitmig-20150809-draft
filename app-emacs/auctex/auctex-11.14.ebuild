@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/auctex/auctex-11.14.ebuild,v 1.9 2004/03/04 05:00:55 jhuebel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/auctex/auctex-11.14.ebuild,v 1.10 2004/05/02 10:19:21 usata Exp $
 
 inherit elisp
 
@@ -16,19 +16,6 @@ KEYWORDS="x86 ~ppc ~amd64"
 DEPEND=">=sys-apps/sed-4
 	virtual/emacs
 	virtual/tetex"
-
-S="${WORKDIR}/${P}"
-
-pkg_setup() {
-
-	if ! grep ' Xaw3d' /var/db/pkg/app-editors/emacs*/USE >/dev/null 2>&1 ; then
-		ewarn
-		ewarn "Emacs needs to be compiled with Xaw3d support."
-		ewarn "Please emerge emacs with USE=\"Xaw3d\"."
-		ewarn
-		die "Emacs Xaw3d support must be enabled."
-	fi
-}
 
 src_unpack() {
 	unpack ${A}
@@ -55,6 +42,12 @@ src_install() {
 
 pkg_postinst() {
 	elisp-site-regen
+
+	if ! grep ' Xaw3d' /var/db/pkg/app-editors/emacs*/USE >/dev/null 2>&1 ; then
+		ewarn
+		ewarn "Emacs needs to be compiled with Xaw3d support to use the command menu."
+		ewarn
+	fi
 }
 
 pkg_postrm() {
