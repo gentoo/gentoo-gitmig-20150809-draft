@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/shfs/shfs-0.32.ebuild,v 1.5 2004/04/27 21:48:30 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/shfs/shfs-0.32.ebuild,v 1.6 2004/06/09 21:33:18 agriffis Exp $
 
 IUSE="amd doc"
 
@@ -73,7 +73,7 @@ src_install() {
 	use doc && dohtml -r ${S}/docs/html
 
 	# Install automount support (if desired)
-	if [ -n "`use amd`" ] ; then
+	if use amd ; then
 		einfo " Installing am-utils config files..."
 		insinto /etc/amd
 		doins ${FILESDIR}/amd.conf

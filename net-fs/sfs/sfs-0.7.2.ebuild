@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/sfs/sfs-0.7.2.ebuild,v 1.7 2004/04/27 21:47:48 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/sfs/sfs-0.7.2.ebuild,v 1.8 2004/06/09 21:31:22 agriffis Exp $
 
 inherit eutils
 
@@ -42,7 +42,7 @@ src_unpack() {
 }
 
 src_compile() {
-	if [ "`use ssl`" ]; then
+	if use ssl; then
 		EXTRA_ECONF="${EXTRA_ECONF} --with-openssl=/usr"
 	else
 		EXTRA_ECONF="${EXTRA_ECONF} --without-openssl"
