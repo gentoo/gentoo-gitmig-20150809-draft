@@ -26,10 +26,10 @@
 	</td><td valign="top">
 	<p class="info">
 	<xsl:apply-templates select="author"/>
-	Version <xsl:value-of select="version"/>, <xsl:value-of select="date"/></p>
+	Doc Revision <xsl:value-of select="version"/>, <xsl:value-of select="date"/></p>
 	</td></tr>		
 	<tr><td>
-	<p class="tochead">Summary</p>
+	<p class="tochead">Project Summary</p>
 	<p class="abstract">
 	<xsl:value-of select="abstract"/>
 	</p>
@@ -67,7 +67,7 @@
 
 <xsl:template match="chapter">
 	<xsl:variable name="chapid">doc_chap<xsl:number/></xsl:variable>
-	<a name="#{$chapid}"><p class="chaphead"><span class="chapnum"><xsl:number/>.</span> <xsl:value-of select="title"/></p></a>
+	<a name="#{$chapid}"><p class="chaphead"><xsl:value-of select="title"/></p></a>
 	<xsl:apply-templates select="section"/>
 </xsl:template>
 
