@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/lib-compat/lib-compat-1.4.ebuild,v 1.1 2004/10/09 23:04:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/lib-compat/lib-compat-1.4.ebuild,v 1.2 2004/10/21 00:04:26 vapier Exp $
 
 DESCRIPTION="Compatibility C++ and libc5 and libc6 libraries for programs new and old"
 HOMEPAGE="http://www.gentoo.org/"
@@ -11,7 +11,8 @@ SLOT="0"
 KEYWORDS="x86 ppc sparc alpha"
 IUSE="sdl"
 
-DEPEND="virtual/libc"
+RDEPEND="virtual/libc
+	sdl? ( media-libs/libsdl )"
 
 S=${WORKDIR}/${P}/${ARCH}
 
