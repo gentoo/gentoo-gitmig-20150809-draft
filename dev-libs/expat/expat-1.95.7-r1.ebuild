@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/expat/expat-1.95.7-r1.ebuild,v 1.5 2005/01/11 21:18:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/expat/expat-1.95.7-r1.ebuild,v 1.6 2005/01/16 22:34:36 vapier Exp $
 
 inherit gnuconfig libtool
 
@@ -17,7 +17,7 @@ DEPEND="virtual/libc
 	test? ( >=dev-libs/check-0.8 )"
 
 src_unpack() {
-	hasq "maketest" ${FEATURES} && ! use test  && die "You must put makecheck into your USE if you have FEATURES=maketest"
+	hasq "test" ${FEATURES} && ! use test  && die "You must put test into your USE if you have FEATURES=test"
 
 	unpack ${A}
 	cd "${S}"
