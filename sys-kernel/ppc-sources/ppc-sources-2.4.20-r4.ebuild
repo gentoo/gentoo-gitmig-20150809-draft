@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-sources/ppc-sources-2.4.20-r4.ebuild,v 1.7 2004/01/08 06:22:58 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-sources/ppc-sources-2.4.20-r4.ebuild,v 1.8 2004/02/19 09:44:38 plasmaroo Exp $
 
 IUSE="build crypt"
 
@@ -35,7 +35,7 @@ SRC_URI="mirror://kernel/linux/kernel/v2.4/linux-${OKV}.tar.bz2
 	 http://cvs.gentoo.org/~kain/ppc/patches-${KV}.tar.bz2"
 HOMEPAGE="http://www.gentoo.org/ http://www.kernel.org/"
 LICENSE="GPL-2"
-KEYWORDS="-x86 ~ppc -sparc -alpha"
+KEYWORDS="-x86 ppc -sparc -alpha"
 DEPEND=">=sys-devel/binutils-2.11.90.0.31 app-admin/addpatches"
 RDEPEND=">=sys-libs/ncurses-5.2 dev-lang/perl >=sys-apps/modutils-2.4.2 sys-devel/make"
 

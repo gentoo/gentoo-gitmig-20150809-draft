@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-sources/ppc-sources-2.4.24.ebuild,v 1.4 2004/02/19 09:44:38 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-sources/ppc-sources-2.4.24-r1.ebuild,v 1.1 2004/02/19 09:44:38 plasmaroo Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 ETYPE="sources"
@@ -8,11 +8,11 @@ inherit kernel
 
 OKV="2.4.24"
 
-EXTRAVERSION="`echo ${PV}-${PR/r/benh} | \
+EXTRAVERSION="`echo ${PV}-benh0-${PR} | \
 	sed -e 's/[0-9]\+\.[0-9]\+\.[0-9]\+\(.*\)/\1/'`"
 
-KV=${PV}-${PR/r/benh}
-
+KV=${PV}-benh0-${PR}
+AV=${PV}-benh0
 S=${WORKDIR}/linux-${KV}
 
 inherit eutils
@@ -20,8 +20,8 @@ inherit eutils
 
 DESCRIPTION="Full sources for the linux kernel 2.4.24 with benh's patchset"
 SRC_URI="mirror://kernel/linux/kernel/v2.4/linux-${OKV}.tar.bz2
-		mirror://gentoo/patch-${KV}.bz2
-		http://dev.gentoo.org/~trance/stuff/patch-${KV}.bz2"
+		mirror://gentoo/patch-${AV}.bz2
+		http://dev.gentoo.org/~trance/stuff/patch-${AV}.bz2"
 
 KEYWORDS="ppc -ppc64"
 DEPEND=">=sys-devel/binutils-2.11.90.0.31"
@@ -36,7 +36,8 @@ src_unpack() {
 
 	mv linux-${OKV} ${PF}
 	cd ${PF}
-	bzcat ${DISTDIR}/patch-${KV}.bz2 | patch -p1 || die "patch failed"
+	epatch ${FILESDIR}/${P}.munmap.patch || die "Failed to apply munmap patch!"
+	bzcat ${DISTDIR}/patch-${AV}.bz2 | patch -p1 || die "patch failed"
 	find . -iname "*~" | xargs rm 2> /dev/null
 
 	# Gentoo Linux uses /boot, so fix 'make install' to work properly
@@ -50,10 +51,10 @@ src_unpack() {
 	cd ${WORKDIR}/${PF}
 	MY_ARCH=${ARCH}
 	unset ARCH
-	#sometimes we have icky kernel symbols; this seems to get rid of them
+
+	# Sometimes we have icky kernel symbols; this seems to get rid of them
 	make mrproper || die "make mrproper died"
 	ARCH=${MY_ARCH}
-
 }
 
 src_install() {
