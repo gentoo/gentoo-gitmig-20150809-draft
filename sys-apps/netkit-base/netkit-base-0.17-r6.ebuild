@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/netkit-base/netkit-base-0.17-r6.ebuild,v 1.18 2003/03/11 06:08:13 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/netkit-base/netkit-base-0.17-r6.ebuild,v 1.19 2003/03/27 07:30:39 seemant Exp $
 
 inherit eutils
 
@@ -15,13 +15,13 @@ KEYWORDS="x86 ppc sparc alpha mips hppa"
 
 DEPEND="virtual/glibc"
 
+PROVIDE="virtual/inetd"
+
 src_unpack() {
 	unpack ${A}
 	cd ${S}
 
-	if [ ${ARCH} == "alpha" ]; then
-		epatch ${FILESDIR}/netkit-base-0.17-alpha-ping-fix.patch
-	fi
+	use alpha && epatch ${FILESDIR}/001_alpha_${P}-ping-fix.patch.bz2
 }
 
 src_compile() {

@@ -1,6 +1,6 @@
 # ChangeLog for sys-apps/netkit-base
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/netkit-base/ChangeLog,v 1.14 2003/03/11 06:08:13 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/netkit-base/ChangeLog,v 1.15 2003/03/27 07:30:39 seemant Exp $
 
   20 Feb 2003; Zach Welch <zwelch@gentoo.org> :
   Added arm to keywords.
@@ -9,6 +9,15 @@
   Added hppa to keywords.
 
 *netkit-base-0.17-r7 (22 Dec 2002)
+
+  26 Mar 2003; Seemant Kulleen <seemant@gentoo.org>
+  netkit-base-0.17-r6.ebuild, netkit-base-0.17-r7.ebuild,
+  files/001_alpha_netkit-base-0.17-ping-fix.patch.bz2,
+  files/002_all_netkit-base-0.17-wrong-byte-fix.patch.bz2,
+  files/netkit-base-0.17-alpha-ping-fix.patch,
+  files/netkit-base-0.17-wrong-byte-fix.patch:
+  compressed and renamed patches to allow epatch's intelligent patching to
+  happen. Also, provides virtual/inetd
 
   24 Feb 2003; Nicholas Wourms <dragon@gentoo.org> netkit-base-0.17-r7.ebuild :
   Marked as stable for mips.

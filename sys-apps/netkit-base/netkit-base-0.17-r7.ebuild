@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/netkit-base/netkit-base-0.17-r7.ebuild,v 1.7 2003/02/24 22:34:59 dragon Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/netkit-base/netkit-base-0.17-r7.ebuild,v 1.8 2003/03/27 07:30:39 seemant Exp $
 
 inherit eutils
 
@@ -14,14 +14,15 @@ LICENSE="BSD"
 
 DEPEND="virtual/glibc"
 
+PROVIDE="virtual/inetd"
+
 src_unpack() {
 	unpack ${A}
 	cd ${S}
 	
-	if [ ${ARCH} == "alpha" ]; then
-		epatch ${FILESDIR}/netkit-base-0.17-alpha-ping-fix.patch
-	fi
-	epatch ${FILESDIR}/netkit-base-0.17-wrong-byte-fix.patch
+	# Note that epatch will intelligently patch architecture specific
+	# patches as well
+	epatch ${FILESDIR}
 }
 
 src_compile() {
