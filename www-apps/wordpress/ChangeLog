@@ -1,6 +1,13 @@
 # ChangeLog for www-apps/wordpress
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/wordpress/ChangeLog,v 1.9 2004/12/19 00:30:03 weeve Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/wordpress/ChangeLog,v 1.10 2005/03/02 11:36:59 ka0ttic Exp $
+
+  02 Mar 2005; Aaron Walker <ka0ttic@gentoo.org>
+  -files/wordpress-1.0.2.gentoo.diff, -files/1.2/login-patch.diff,
+  -files/1.2/postinstall-en.txt, -files/1.2.1/login-patch.diff,
+  -files/1.2.1/postinstall-en.txt, -wordpress-1.0.2.ebuild,
+  -wordpress-1.2-r1.ebuild, -wordpress-1.2.1.ebuild, -wordpress-1.2.ebuild:
+  Tidy all vulnerable ebuilds <1.2.2.
 
   18 Dec 2004; Jason Wever <weeve@gentoo.org> wordpress-1.2.2.ebuild:
   Stable on sparc wrt security bug #74649.
