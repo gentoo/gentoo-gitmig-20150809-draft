@@ -1,0 +1,390 @@
+# ChangeLog for net-mail/sylpheed-claws
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws/ChangeLog,v 1.1 2004/05/30 03:05:56 seemant Exp $
+
+*sylpheed-claws-0.9.9 (29 May 2004)
+
+  29 May 2004; Seemant Kulleen <seemant@gentoo.org> +metadata.xml,
+  +files/gv-procmime-Makefile.in.patch, +files/procmime.patch,
+  +files/sylpheed-0.8.3claws32-dillo.patch, +sylpheed-claws-0.9.10.ebuild,
+  +sylpheed-claws-0.9.5-r1.ebuild, +sylpheed-claws-0.9.7.ebuild,
+  +sylpheed-claws-0.9.8.ebuild, +sylpheed-claws-0.9.9.ebuild:
+  Moved from net-mail/sylpheed-claws to mail-client/sylpheed-claws.
+
+  23 May 2004; Danny van Dyk <kugelfang@gentoo.org>
+  sylpheed-claws-0.9.10.ebuild:
+  Marked ~amd64.
+
+  17 Apr 2004; Jason Wever <weeve@gentoo.org> sylpheed-claws-0.9.10.ebuild:
+  Stable on sparc.
+
+  24 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  sylpheed-claws-0.9.5-r1.ebuild:
+  don't use deprecated ? : use syntax
+
+  11 Mar 2004; Jason Wever <weeve@gentoo.org> sylpheed-claws-0.9.9.ebuild:
+  Stable on sparc.
+
+*sylpheed-claws-0.9.10 (08 Mar 2004)
+
+  08 Mar 2004; Marius Mauch <genone@gentoo.org> sylpheed-claws-0.9.10.ebuild,
+  sylpheed-claws-0.9.5-r1.ebuild, sylpheed-claws-0.9.9.ebuild:
+  version bump, marking 0.9.9 stable on x86
+
+*sylpheed-claws-0.9.9 (09 Feb 2004)
+
+  09 Feb 2004; Marius Mauch <genone@gentoo.org> sylpheed-claws-0.9.9.ebuild:
+  version bump
+
+  16 Jan 2004; Marius Mauch <genone@gentoo.org>
+  sylpheed-claws-0.8.11.ebuild, sylpheed-claws-0.9.0-r1.ebuild, 
+  sylpheed-claws-0.9.5.ebuild, sylpheed-claws-0.9.6-r1.ebuild, 
+  sylpheed-claws-0.9.6.ebuild, sylpheed-claws-0.9.7.ebuild,
+  sylpheed-claws-0.9.8.ebuild:
+  adding metamail dependency, thanks to Keith Edmunds <keith@midnighthax.com>
+  for pointing that out (closing bug 37090). Removing old versions. Changing
+  some DEPENDs to RDEPEND in 0.9.8
+
+  16 Jan 2004; Bartosch Pixa <darkspecter@gentoo.org>
+  sylpheed-claws-0.9.7.ebuild:
+  set ppc in keywords
+
+  07 Jan 2004; Jason Wever <weeve@gentoo.org> sylpheed-claws-0.9.7.ebuild:
+  Marked stable on sparc, resolves #35970 for sparc.
+
+*sylpheed-claws-0.9.8 (20 Dec 2003)
+
+  20 Dec 2003; Marius Mauch <genone@gentoo.org> sylpheed-claws-0.9.8.ebuild:
+  version bump
+
+  16 Dec 2003; Marius Mauch <genone@gentoo.org> sylpheed-claws-0.8.11.ebuild,
+  sylpheed-claws-0.9.0-r1.ebuild, sylpheed-claws-0.9.5-r1.ebuild,
+  sylpheed-claws-0.9.5.ebuild, sylpheed-claws-0.9.6-r1.ebuild,
+  sylpheed-claws-0.9.6.ebuild, sylpheed-claws-0.9.7.ebuild:
+  marking 0.9.7 stable on x86, removing ~mips and ~hppa as dependencies are 
+  broken on these archs
+
+  09 Dec 2003; Heinrich Wendel <lanius@gentoo.org>
+  sylpheed-claws-0.9.5-r1.ebuild, sylpheed-claws-0.9.5.ebuild,
+  sylpheed-claws-0.9.6-r1.ebuild, sylpheed-claws-0.9.6.ebuild,
+  sylpheed-claws-0.9.7.ebuild:
+  changed app-text/ghostscript to virtual/ghostscript
+
+  29 Nov 2003; Marius Mauch <genone@gentoo.org> sylpheed-claws-0.9.7.ebuild,
+  files/gv-procmime-0.9.7.diff, files/gv-procmime-Makefile.in.patch:
+  changing order of include paths, closing bug 34519, thanks to ocastan@noos.fr
+  for the fix. Removing postinst message about plugins (it's old).
+
+*sylpheed-claws-0.9.7 (26 Nov 2003)
+
+  26 Nov 2003; Marius Mauch <genone@gentoo.org> sylpheed-claws-0.9.7.ebuild,
+  files/gv-procmime-0.9.7.diff:
+  - version bump 
+  - adding configure option for compface 
+  - re-enabling option for clamav plugin 
+  - replacing 
+  		use xxx && myconf="--enable-xxx" || myconf="--disable-xxx"
+	with 
+		myconf=`use_enable xxx`
+
+  12 Nov 2003; Marius Mauch <genone@gentoo.org> metadata.xml,
+  sylpheed-claws-0.9.5-r1.ebuild, sylpheed-claws-0.9.5.ebuild,
+  sylpheed-claws-0.9.6-r1.ebuild, sylpheed-claws-0.9.6.ebuild:
+  fixed SRC_URI, added maintainers to metadata.xml
+
+*sylpheed-claws-0.9.6-r2 (10 Nov 2003)
+
+  10 Nov 2003; Greg Fitzgerald <gregf@gentoo.org>
+  sylpheed-claws-0.9.6-r2.ebuild:
+  fixed gettext version
+
+  10 Nov 2003; Seemant Kulleen <seemant@gentoo.org>
+  sylpheed-claws-0.9.4-r1.ebuild, sylpheed-claws-0.9.4.ebuild,
+  sylpheed-claws-0.9.6-r1.ebuild:
+  Fix ghostviewer plugin compile process to compile against the unpacked sources
+  rather than an already installed instance of sylpheed-claws -- which will
+  break if compiling -claws for the first time. Closes bug #32503 by Steve
+  Arnold <nerdboy@gentoo.org>
+
+*sylpheed-claws-0.9.6-r1 (28 Oct 2003)
+  28 Oct 2003; Seemant Kulleen <seemant@gentoo.org> :
+  update the ghostviewer plugin to 0.5 and create a dillo local USE setting for
+  the dillo plugin. The latter closes bug #31963 by Dirk Salewski
+  <mail@dslinux.net>
+
+*sylpheed-claws-0.9.6 (02 Oct 2003)
+
+  02 Oct 2003; Seemant Kulleen <seemant@gentoo.org>
+  sylpheed-claws-0.9.6.ebuild:
+  version bump
+
+*sylpheed-claws-0.9.5-r1 (26 Sep 2003)
+
+  26 Sep 2003; Marius Mauch <genone@gentoo.org>
+  sylpheed-claws-0.9.5-r1.ebuild:
+  disabling some non-working options if USE=gtk2 is set
+
+  06 Sep 2003; Jason Wever <weeve@gentoo.org> sylpheed-claws-0.9.0-r1.ebuild:
+  Marked stable on sparc.
+
+  06 Sep 2003; Seemant Kulleen <seemant@gentoo.org>
+  sylpheed-claws-0.9.4-r1.ebuild, sylpheed-claws-0.9.4.ebuild:
+  gettext-0.12 is required
+
+  06 Sep 2003; Karl Trygve Kalleberg <karltk@gentoo.org>
+  sylpheed-claws-0.9.4-r1.ebuild:
+  Won't compile without gettext-0.12 or newer, added proper dep. Also, DEPEND
+  and RDEPEND were slightly off, so I merged them all.
+
+  06 Sep 2003; Karl Trygve Kalleberg <karltk@gentoo.org>
+  sylpheed-claws-0.9.4.ebuild:
+  Won't compile without gettext-0.12 or newer, added proper dep.
+
+*sylpheed-claws-0.9.4-r1 (06 Sep 2003)
+
+  06 Sep 2003; Seemant Kulleen <seemant@gentoo.org>
+  sylpheed-claws-0.9.4-r1.ebuild:
+  added the ghostviewer plugin. Should close bug #22827 by: Marius Mauch
+  <genone@genone.de>
+
+  30 Aug 2003; Alastair Tse <liquidx@gentoo.org> sylpheed-claws-0.8.11.ebuild,
+  sylpheed-claws-0.9.0-r1.ebuild, sylpheed-claws-0.9.0.ebuild,
+  sylpheed-claws-0.9.3.ebuild, sylpheed-claws-0.9.4.ebuild:
+  moving app-misc/jpilot to app-pda/jpilot
+
+*sylpheed-claws-0.9.4 (07 Aug 2003)
+
+  07 Aug 2003; Brad Cowan <bcowan@gentoo.org> sylpheed-claws-0.9.4.ebuild:
+  Version bump.
+
+*sylpheed-claws-0.9.3 (12 Jul 2003)
+
+  12 Jul 2003; Brad Cowan <bcowan@gentoo.org> sylpheed-claws-0.9.3.ebuild:
+  Version bump.
+
+  14 Jun 2003; Brad Cowan <bcowan@gentoo.org> sylpheed-claws-0.9.0-r1.ebuild:
+  Enabled tray icon plugin
+
+*sylpheed-claws-0.9.0-r1 (07 Jun 2003)
+
+  07 Jun 2003; Seemant Kulleen <seemant@gentoo.org>
+  sylpheed-claws-0.9.0-r1.ebuild:
+  Extra tools are now installed into /usr/lib/sylpheed-claws/tools. Closes bug
+  #22138 by Marius Mauch <genone@genone.de>
+
+*sylpheed-claws-0.9.0 (25 May 2003)
+
+  25 May 2003; Seemant Kulleen <seemant@gentoo.org>
+  sylpheed-claws-0.9.0.ebuild:
+  version bump
+
+  16 Apr 2003; Luca Barbato <lu_zero@gentoo.org> procmime.patch:
+  fixed the mime parser
+
+*sylpheed-claws-0.8.11 (12 Mar 2003)
+
+  22 Apr 2003; Graham Forest <vladimir@gentoo.org>
+  sylpheed-claws-0.8.10.ebuild, sylpheed-claws-0.8.11.ebuild,
+  sylpheed-claws-0.8.3.ebuild, sylpheed-claws-0.8.5.ebuild,
+  sylpheed-claws-0.8.9.ebuild:
+  app-text/aspell -> virtual/aspell-dict
+
+  31 Mar 2003; Jason Wever <weeve@gentoo.org> sylpheed-claws-0.8.11.ebuild:
+  Changed ~sparc keyword to sparc.
+
+  22 Mar 2003; Graham Forest <vladimir@gentoo.org>
+  sylpheed-claws-0.8.11.ebuild:
+  set ppc in keywords
+
+  12 Mar 2003; Brad Cowan <bcowan@gentoo.org> sylpheed-claws-0.8.11.ebuild, 
+  files/digest-sylpheed-claws-0.8.11 :
+  
+  Version bump.
+
+*sylpheed-claws-0.8.10 (13 Feb 2003)
+
+  13 Feb 2003; Seemant Kulleen <seemant@gentoo.org> sylpheed-claws-0.8.10.ebuild sylpheed-claws-0.8.9.ebuild files/digest-sylpheed-claws-0.8.10 :
+  Version bump thanks to Hanno
+
+*sylpheed-claws-0.8.9 (26 Jan 2003)
+
+  26 Jan 2003; Brad Cowan <bcowan@gentoo.org> sylpheed-claws-0.8.9.ebuild,
+  files/digest-sylpheed-claws-0.8.9:
+  
+  Version bump, with many bugfixes and feature enhancements including new plugin support,
+  with a built in spamassassin plugin :). To use the plugins you will need to load 
+  them Go to '/Configuration/Plugins' and click 'Load plugin', then select the 
+  plugin SpamAssassin usr/lib/sylpheed-claws/plugins/spamassassin.so, SpamAssassin GTK
+  usr/lib/sylpheed/plugins/spamassassin_gtk.so To configure the SpamAssassin 
+  plugin go to the new Preferences window, '/Configuration/Other Preferences', 
+  and select /Filtering/SpamAssassin.
+  
+  
+*sylpheed-claws-0.8.8-r1 (10 Jan 2003)
+
+  10 Jan 2003; Luca Barbato <lu_zero@gentoo.org> sylpheed-claws-0.8.8-r1.ebuild,
+  files/digest-sylpheed-claws-0.8.8-r1, files/procmime.patch:
+  
+  Make it use shared-mime-info
+
+*sylpheed-claws-0.8.8 (26 Dec 2002)
+  
+  08 Jan 2003; Brad Cowan <bcowan@gentoo.org>:
+  Added depend on mime-types, fixes bug #13412.
+
+
+  1 Jan 2003; Martin Schlemmer <azarah@gentoo.org> sylpheed-claws-0.8.8.ebuild :
+
+  Fix Gnome .desktop having no data; moved it to sylpheed-claws; Also change
+  menu entry name to sylpheed-claws.
+
+  26 Dec 2002; Brad Cowan <bcowan@gentoo.org> sylpheed-claws-0.8.8.ebuild,
+  files/digest-sylpheed-claws-0.8.8:
+
+  Version bump, fixes mime issue.
+
+*sylpheed-claws-0.8.7 (23 Dec 2002)
+
+  23 Dec 2002; Brad Cowan <bcowan@gentoo.org> sylpheed-claws-0.8.7.ebuild,
+  files/digest-sylpheed-claws-0.8.7:
+
+  Version bump.
+
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
+ 
+*sylpheed-claws-0.8.6 (26 Nov 2002)
+
+  26 Nov 2002; Brad Cowan <bcowan@gentoo.org> sylpheed-claws-0.8.6.ebuild,
+  files/digest-sylpheed-claws-0.8.6:
+
+  Version bump.
+
+*sylpheed-claws-0.8.5 (09 Oct 2002)
+
+  25 Oct 2002; Calum Selkirk <cselkirk@gentoo.org> sylpheed-claws-0.8.5.ebuild :
+
+  Added ppc to KEYWORDS.
+
+  12 Oct 2002; Bruce A. Locke <blocke@shivan.org> sylpheed-claws-0.8.5.ebuild:
+  Ebuild now installs README files, etc.
+
+  09 Oct 2002; Brad Cowan <bcowan@gentoo.org> sylpheed-claws-0.8.5.ebuild,
+  files/digest-sylpheed-claws-0.8.5:
+  
+  Version bump with minor bugfixes.
+
+*sylpheed-claws-0.8.3 (24 Sep 2002)
+  
+  24 Sep 2002; Seemant Kulleen <seemant@gentoo.org>
+  sylpheed-claws-0.8.3.ebuild files/digest-sylpheed-claws-0.8.3 :
+
+  Version bump which fixes more memory leaks and sorts out the aspell issue.
+  Thanks to: moixa@gmx.ch (Tobias Sager) in bug #8218 and
+  bradlyatc@cowancomputers.com (Brad Cowan) in bug #8249.
+
+*sylpheed-claws-0.8.2 (28 Aug 2002)
+
+  6 Sep 2002; Owen Stampflee <owen@gentoo.org> :
+  Added PPC to KEYWORDS.
+
+  28 Aug 2002; Seemant Kulleen <seemant@gentoo.org>
+  sylpheed-claws-0.8.2.ebuild files/digest-sylpheed-claws-0.8.2 :
+
+  Version bump which fixes many memory leaks.  The dillo and aspell patches
+  are still applied on this release as well.  Thanks to: hanno@gmx.de (Hanno
+  Boeck) in bug #7166
+
+*sylpheed-claws-0.8.1-r1 (17 Aug 2002)
+
+  17 Aug 2002; Seemant Kulleen <seemant@gentoo.org>
+  sylpheed-claws-0.8.1-r1.ebuild files/digest-sylpheed-claws-0.8.1-r1 :
+
+  Jared Hudson (jhhudso@gentoo.org) fixed up the
+  embeddable-dillo-within-sylpheed patch from
+  http://melvin.hadasht.free.fr/home/dillo/sylpheed/ so that it actually
+  works now.  In order to see HTML in e-mails, emerge sylpheed-claws with
+  the "gtkhtml" USE flag enabled.  Also, this release has a patch by me to
+  make it work with aspell-0.50*
+
+*sylpheed-claws-0.8.1 (30 Jul 2002)
+
+  30 Jul 2002; Seemant Kulleen <seemant@gentoo.org>
+  sylpheed-claws-0.8.1.ebuild files/digest-sylpheed-claws-0.8.1 :
+
+  Version bump.
+
+*sylpheed-claws-0.8.0 (24 Jul 2002)
+
+  24 Jul 2002; Seemant Kulleen <seemant@gentoo.org> sylpheed-claws-0.8.0 :
+
+  Version bump, thanks to: hanno@gmx.de (Hanno Boeck) in bug #5505
+
+*sylpheed-claws-0.7.8-r1 (29 Jun 2002)
+
+  29 Jun 2002; Seemant Kulleen <seemant@gentoo.org> sylpheed-claws-0.7.8-r1
+  files/digest-sylpheed-claws-0.7.8-r1 :
+
+  PROVIDEs virtual/sylpheed
+
+*sylpheed-claws-0.7.8 (16 Jun 2002)
+
+  16 Jun 2002; Seemant Kulleen <seemant@gentoo.org>
+  sylpheed-claws-0.7.8.ebuild files/digest-sylpheed-claws-0.7.8 :
+
+  Version bump thanks to hanno@gmx.de (Hanno Boeck) in bug #3781
+
+*sylpheed-claws-0.7.6 (19 May 2002)
+
+  19 May 2002; Seemant Kulleen <seemant@gentoo.org>
+  sylpheed-claws-0.7.6.ebuild files/digest-sylpheed-claws-0.7.6 :
+
+  Version bump.
+
+*sylpheed-claws-0.7.5 (28 Apr 2002)
+
+  28 Apr 2002; Seemant Kulleen <seemant@gentoo.org> sylpheed-claws-0.7.5.ebuild
+  files/digest-sylpheed-claws-0.7.5 :
+
+  Version bump.
+
+*sylpheed-claws-0.7.4-r2 (15 Apr 2002)
+
+  15 Apr 2002; Seemant Kulleen <seemant@gentoo.org> sylpheed-claws-0.7.4-r2.ebuild :
+
+  Changed the gpg USE flag to the USE flag crypt instead, which is more general.
+
+*sylpheed-claws-0.7.4-r2 (10 Apr 2002)
+
+  10 Apr 2002; Karl Trygve Kalleberg <karltk@gentoo.org> sylpheed-claws-0.7.4-r2.ebuild files/digest-sylpheed-claws-0.7.4-r2:
+
+  Can now coexist with normal sylpheed. Binary renamed to sylpheed-claws.
+
+  Removed sylpheed-claws-0.7.4-r1.ebuild files/digest-sylpheed-claws-0.7.4-r1
+
+*sylpheed-claws-0.7.4 ( 12 Mar 2002 )
+
+  12 Mar 2002; Seemant Kulleen <seemant@gentoo.org> sylpheed-claws-0.7.4-r1.ebuild
+
+  Uses gpg USE flag instead of gpgme.
+
+*sylpheed-claws-0.7.4 ( 12 Mar 2002 )
+
+  12 Mar 2002; Seemant Kulleen <seemant@gentoo.org> sylpheed-claws-0.7.4.ebuild
+
+  Simple copy of 0.7.4 ebuild but with the additional checks for nls in USE.
+
+*sylpheed-claws-0.7.2 ( 22 Feb 2002 )
+
+  22 Feb 2002; T.Neidt <tod@gentoo.org> ChangeLog files/digest-sylpheed-claws-0.7.2 sylpheed-claws-0.7.2:
+  
+  Updated version. Simple copy of Karl's 0.7.1 ebuild with Description added.
+
+*sylpheed-claws-0.7.1 ( 18 Feb 2002 )
+
+  22 Feb 2002; T.Neidt <tod@gentoo.org> ChangeLog,  sylpheed-claws-0.7.1:
+
+  Added Description to ebuild.
+  
+  18 Feb 2002; Karl Trygve Kalleberg <karltk@gentoo.org> ChangeLog files/digest-sylpheed-claws-0.7.1 sylpheed-claws-0.7.1:
+  
+  A bleeding-edge fork off the Sylpheed main branch.
