@@ -1,6 +1,26 @@
 # ChangeLog for net-mail/postfix
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/ChangeLog,v 1.2 2002/02/03 07:19:19 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/ChangeLog,v 1.3 2002/02/19 00:57:17 woodchip Exp $
+
+*postfix-1.1.3-r1 (18 Feb 2002)
+
+  18 Feb 2002; Donny Davies <woodchip@gentoo.org> ChangeLog, postfix-1.1.3-r1.ebuild,
+  files/postfix.rc6 files/smtp.pam files/smtpd.conf:
+
+  Lots of changes, ok here we go:  First, we now compile with cyrus-sasl library
+  support, which gives us smtp authentication.  Next, there is support for the mta-tls
+  USE variable which gives you secure connection support.  There are sample files in
+  the files directory for smtp authentication.  This version fixes a glitch with the
+  maildrop directory (we now let postfix create it itself, which it will do when you
+  run 'postfix check' for the first time after installing this.  We create the postdrop
+  group now, in pkg_postinst() if its not already on the user's system.  Some small
+  cosmetic changes in the initscript, changing spaces for tabs.  The /var/spool/postfix
+  directory is dropped into the system permanently now, which is good.  Fixed a small
+  bug with CCARGS getting nuked.  Special thanks goto Ingo Luetkebohle
+  <gentoo@blank.pages.de> for an *excellent* bug report.  Thanks Ingo!
+
+  NB: I have successfully tested *outbound* authentication, and leave inbound
+  authentication to those using it.  If you find bugs, please report them.  Enjoy.
 
 *postfix-1.1.3 (3 Feb 2002)
 

@@ -1,24 +1,23 @@
 #!/sbin/runscript
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/files/postfix.rc6,v 1.5 2001/12/29 00:20:25 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/files/postfix.rc6,v 1.6 2002/02/19 00:57:17 woodchip Exp $
 
 depend() {
-    need net
-    use logger
+	need net
+	use logger
 }
-
 
 PIDFILE=/var/spool/postfix/pid/master.pid
 
 start() {
-    ebegin "Starting postfix"
-    /usr/sbin/postfix start >/dev/null 2>&1
-    eend $?
+	ebegin "Starting postfix"
+	/usr/sbin/postfix start >/dev/null 2>&1
+	eend $?
 }
 
 stop() {
-    ebegin "Stopping postfix"
-    /usr/sbin/postfix stop >/dev/null 2>&1
-    eend $?
+	ebegin "Stopping postfix"
+	/usr/sbin/postfix stop >/dev/null 2>&1
+	eend $?
 }
