@@ -266,9 +266,6 @@ dev-perl/CDDB-File
 # also Masked for the freeze
 # Adding to portage because a rendering bug was fixed from 0.7.14
 =media-video/avifile-0.7.15.20020816
-# willing tester for the new version of exim
-# Masked for the freeze
-=net-mail/exim-4.05
 
 # <spider@gentoo.org> (26 Aug 2002)
 # Masked for testing -- tore out the broken id3lib included and
