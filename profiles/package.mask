@@ -21,6 +21,26 @@
 ##   End example
 ##
 
+# <danarmak@gentoo.org> (7 May 2003)
+# not yet released, ebuilds in testing
+=kde-base/arts-1.1.2
+=kde-base/kde-3.1.2
+=kde-base/kdeaddons-3.1.2
+=kde-base/kdeadmin-3.1.2
+=kde-base/kdeartwork-3.1.2
+=kde-base/kdebase-3.1.2
+=kde-base/kdebindings-3.1.2
+=kde-base/kdeedu-3.1.2
+=kde-base/kdegames-3.1.2
+=kde-base/kdegraphics-3.1.2
+=kde-base/kdelibs-3.1.2
+=kde-base/kdemultimedia-3.1.2
+=kde-base/kdenetwork-3.1.2
+=kde-base/kdepim-3.1.2
+=kde-base/kdesdk-3.1.2
+=kde-base/kdetoys-3.1.2
+=kde-base/kdeutils-3.1.2
+
 # <lu_zero@gentoo.org> (6 May 2003)
 # new binutils to be tested
 =sys-devel/binutils-2.14.90.0.1
