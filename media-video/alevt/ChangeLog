@@ -1,6 +1,13 @@
 # ChangeLog for media-video/alevt
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-video/alevt/ChangeLog,v 1.1 2002/04/23 15:52:01 verwilst Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/alevt/ChangeLog,v 1.2 2002/06/29 02:40:07 seemant Exp $
+
+*alevt-1.6.0-r1 (28 Jun 2002)
+
+  28 Jun 2002; Seemant Kulleen <seemant@gentoo.org> alevt-1.6.0-r1.ebuild
+  files/digest-alevt-1.6.0-r1 :
+
+  LFH/man page fixes and emake fixes (needs just make)
 
 *alevt-1.6.0 (23 Apr 2002)
 
