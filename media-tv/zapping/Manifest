@@ -1,5 +1,7 @@
 MD5 8d63481cf7f7f496841700e0573e1373 ChangeLog 1993
 MD5 f934e58d9e9dce4479c690016b9670cb zapping-0.6.4-r1.ebuild 1420
 MD5 9784ef8ead6006d86e15f397e9131589 zapping-0.6.6.ebuild 1581
+MD5 9784ef8ead6006d86e15f397e9131589 zapping-0.6.7.ebuild 1581
 MD5 9bcb1f489b8cdd2bc6720c3921f73360 files/digest-zapping-0.6.4-r1 67
 MD5 7e8ba0ca527255f8447bdc6257875a69 files/digest-zapping-0.6.6 67
+MD5 6efdc1415977230537c69acb97977a5b files/digest-zapping-0.6.7 67
