@@ -1,11 +1,14 @@
 # ChangeLog for dev-libs/elfutils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/ChangeLog,v 1.14 2003/08/23 20:33:34 cretin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/ChangeLog,v 1.15 2003/08/27 17:01:07 cretin Exp $
 
   23 Aug 2003; Luca Barbato <lu_zero@gentoo.org> :
   Setting ppc for elfutils-0.76-r2, fixes bug 27017.
 
 *elfutils-0.84 (23 Aug 2003)
+
+  27 Aug 2003; Stefan Jones <cretin@gentoo.org> :
+  Mark stable as fixes #19285
 
   23 Aug 2003; Stefan Jones <cretin@gentoo.org> :
   New version for testing.
