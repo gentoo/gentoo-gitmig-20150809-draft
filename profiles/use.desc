@@ -62,7 +62,7 @@ lcms - Adds lcms support to media-gfx/imagemagick (Color management)
 ldap - Adds LDAP support (Lightweight Directory Access Protocol)
 libg++ - Adds C++ modules in dev-db/postgresql (libpq++)
 libgda - Adds GNU Data Access (CORBA wrapper) support for gnumeric 
-libmpeg3 - Adds mpeg support to mplayer
+mpeg - Adds libmpeg3 support to various packages.
 libwww - Adds libwww support (General purpose WEB API)
 mga - Adds Matrox MGA support to mplayer
 mhash - Adds mhash library support to php (library of hash algorithms)

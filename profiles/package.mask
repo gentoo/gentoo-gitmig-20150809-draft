@@ -524,3 +524,11 @@ dev-lang/tcl-tk
 # these are lower versions not higher
 =media-libs/libgii-20010313
 =media-libs/libggi-20010313
+
+#seemant@gentoo.org, 15 Apr 2002
+# won't compile against Qt3, so it is under investigation
+=media-video/vlc-0.3.0
+
+#seemant@gentoo.org, 15 Apr 2002
+# has some problems with libmpeg3 for some reason
+>=dev-libs/DirectFB-0.9.9
