@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-db/db/db-3.1.17.ebuild,v 1.1 2000/11/16 02:08:13 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/db/db-3.1.17-r1.ebuild,v 1.1 2000/11/16 16:19:03 drobbins Exp $
 
 A=${P}-patched.tar.gz
 S=${WORKDIR}/${P}-patched
@@ -26,5 +26,13 @@ src_install () {
     cd ${S}
     dodoc README LICENSE
 	mv ${D}/usr/docs ${D}/usr/doc/${PF}/html
+	dodir usr/include/db3
+	cd ${D}/usr/include
+	local x 
+	for x in *.h
+	do
+		mv ${x} db3
+		ln -s db3/${x} ${x}
+	done
 }
 
