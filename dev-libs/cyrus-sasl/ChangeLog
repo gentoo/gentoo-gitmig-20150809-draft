@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/cyrus-sasl
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/ChangeLog,v 1.76 2004/07/02 10:03:53 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/ChangeLog,v 1.77 2004/07/07 02:59:32 merlin Exp $
+
+*cyrus-sasl-2.1.18-r1 (06 Jul 2004)
+
+  06 Jul 2004; Cory Visi <merlin@gentoo.org> cyrus-sasl-2.1.18-r1.ebuild,
+  files/cyrus-sasl-2.1.18-cvs-1.172.patch,
+  files/cyrus-sasl-2.1.18-sasl-path-fix.patch:
+  Add patches to: fix buffer overflow (bring plugins/digestmda5.c to cvs version
+  1.172) and fix SASL_PATH vulnerability - marked unstable on all archs
 
 *cyrus-sasl-2.1.17 (02 Jul 2004)
 

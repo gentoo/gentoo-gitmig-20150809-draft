@@ -1,0 +1,194 @@
+diff -Naur cyrus-sasl-2.1.18-orig/plugins/digestmd5.c cyrus-sasl-2.1.18/plugins/digestmd5.c
+--- cyrus-sasl-2.1.18-orig/plugins/digestmd5.c	2004-02-23 17:03:09.000000000 -0500
++++ cyrus-sasl-2.1.18/plugins/digestmd5.c	2004-07-06 22:08:23.159206640 -0400
+@@ -151,6 +151,10 @@
+ #define SP	(32)
+ #define DEL	(127)
+ 
++#define NEED_ESCAPING	"\"\\"	
++
++static char *quote (char *str);
++
+ struct context;
+ 
+ /* function definitions for cipher encode/decode */
+@@ -498,21 +502,42 @@
+     ret = _plug_buf_alloc(utils, str, buflen,
+ 			  *curlen + 1 + namesize + 2 + valuesize + 2);
+     if(ret != SASL_OK) return ret;
+-    
+-    *curlen = *curlen + 1 + namesize + 2 + valuesize + 2;
+-    
++
++	if (*curlen > 0) {
+     strcat(*str, ",");
+     strcat(*str, name);
+-    
++	} else {
++	strcpy(*str, name);
++	}
++
+     if (need_quotes) {
+-	strcat(*str, "=\"");
+-	strcat(*str, (char *) value);	/* XXX. What about quoting??? */
+-	strcat(*str, "\"");
+-    } else {
+-	strcat(*str, "=");
+-	strcat(*str, (char *) value);
+-    }
+-    
++		strcat(*str, "=\"");
++
++		/* Check if the value needs quoting */
++		if (strpbrk ((char *)value, NEED_ESCAPING) != NULL) {
++			char * quoted = quote ((char *) value);
++			valuesize = strlen(quoted);
++			/* As the quoted string is bigger, make sure we have enough
++			   space now */
++			ret = _plug_buf_alloc(utils, str, buflen,
++				*curlen + 1 + namesize + 2 + valuesize + 2);
++			if (ret == SASL_OK) {
++				strcat(*str, quoted);
++				free (quoted);
++			} else {
++				free (quoted);
++				return ret;
++			}
++		} else {
++			strcat(*str, (char *) value);
++		}
++		strcat(*str, "\"");
++	} else {
++		strcat(*str, "=");
++		strcat(*str, (char *) value);
++	}
++
++	*curlen = *curlen + 1 + namesize + 2 + valuesize + 2;  
+     return SASL_OK;
+ }
+ 
+@@ -622,7 +647,8 @@
+ }
+ 
+ /* NULL - error (unbalanced quotes), 
+-   otherwise pointer to the first character after value */
++   otherwise pointer to the first character after value
++   The function performs work in place. */
+ static char *unquote (char *qstr)
+ {
+     char *endvalue;
+@@ -663,12 +689,49 @@
+ 	endvalue++;
+     }
+     else { /* not qouted value (token) */
++	/* qstr already contains output */
+ 	endvalue = skip_token(qstr,0);
+     };
+     
+     return endvalue;  
+ } 
+ 
++/* Unlike unquote, this function returns an allocated quoted copy */
++static char *quote (char *str)
++{
++	char *p;
++	char *outp;
++	char *result;
++	int num_to_escape;		/* How many characters need escaping */
++
++	if (!str) return NULL;
++
++	num_to_escape = 0;
++	p = strpbrk (str, NEED_ESCAPING);
++	while (p != NULL) {
++		num_to_escape++;
++		p = strpbrk (p + 1, NEED_ESCAPING);
++	}
++
++	if (num_to_escape == 0) {
++		return (strdup (str));
++	}
++
++	result = malloc (strlen(str) + num_to_escape + 1);
++	for (p = str, outp = result; *p; p++) {
++		if (*p == '"' || *p == '\\') {
++			*outp = '\\';
++			outp++;
++		}
++		*outp = *p;
++		outp++;
++	}
++
++	*outp = '\0';
++
++	return (result);
++}
++
+ static void get_pair(char **in, char **name, char **value)
+ {
+     char  *endpair;
+@@ -1791,12 +1854,16 @@
+ 	return SASL_FAIL;
+     }
+     
+-    resplen = strlen(nonce) + strlen("nonce") + 5;
+-    result = _plug_buf_alloc(sparams->utils, &(text->out_buf),
+-			     &(text->out_buf_len), resplen);
+-    if(result != SASL_OK) return result;
+-    
+-    sprintf(text->out_buf, "nonce=\"%s\"", nonce);
++	resplen = 0;
++	text->out_buf = NULL;
++	text->out_buf_len = 0;
++	if (add_to_challenge(sparams->utils,
++						&text->out_buf, &text->out_buf_len, &resplen,
++						"nonce", (unsigned char *) nonce,
++						TRUE) != SASL_OK) {
++		SETERROR(sparams->utils, "internal error: add_to_challenge failed");
++		return SASL_FAIL;
++	}
+     
+     /* add to challenge; if we chose not to specify a realm, we won't
+      * send one to the client */
+@@ -2830,7 +2897,7 @@
+     char           maxbufstr[64];
+     char           *response = NULL;
+     unsigned        resplen = 0;
+-    int result;
++    int result = SASL_OK;
+ 
+     switch (ctext->protection) {
+     case DIGEST_PRIVACY:
+@@ -2892,13 +2959,16 @@
+ 			   &text->response_value);
+     
+     
+-    resplen = strlen(oparams->authid) + strlen("username") + 5;
+-    result =_plug_buf_alloc(params->utils, &(text->out_buf),
+-			    &(text->out_buf_len),
+-			    resplen);
+-    if (result != SASL_OK) goto FreeAllocatedMem;
+-    
+-    sprintf(text->out_buf, "username=\"%s\"", oparams->authid);
++	resplen = 0;
++	text->out_buf = NULL;
++	text->out_buf_len = 0;
++	if (add_to_challenge(params->utils,
++					&text->out_buf, &text->out_buf_len, &resplen,
++					"username", (unsigned char *) oparams->authid,
++					TRUE) != SASL_OK) {
++		result = SASL_FAIL;
++		goto FreeAllocatedMem;
++	}
+     
+     if (add_to_challenge(params->utils,
+ 			 &text->out_buf, &text->out_buf_len, &resplen,
+@@ -3733,7 +3803,7 @@
+ 	    if (strcmp(text->response_value, value) != 0) {
+ 		params->utils->seterror(params->utils->conn, 0,
+ 					"DIGEST-MD5: This server wants us to believe that he knows shared secret");
+-		result = SASL_FAIL;
++		result = SASL_BADSERV;
+ 	    } else {
+ 		oparams->doneflag = 1;
+ 		oparams->param_version = 0;
