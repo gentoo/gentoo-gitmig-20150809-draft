@@ -1,9 +1,12 @@
 # ChangeLog for media-gfx/gimp
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.12 2002/11/01 20:29:28 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.13 2002/11/06 09:29:38 leonardop Exp $
 
 *gimp-1.2.3-r3 (2 Nov 2002)
 
+  06 Nov 2002; L. Boshell <leonardop@gentoo.org> gimp-1.2.3-r3.ebuild :
+  Create a menu entry in Gnome if it makes sense (bug #10035).
+  
   28 Oct 2002; Martin Schlemmer <azarah@gentoo.org> gimp-1.2.3-r3.ebuild :
   Fix braindead use of autoconf-2.5 during reconf.  Do not run autoreconf,
   or even autoconf, as it (autoreconf at least) needs cvs installed, and
