@@ -2,15 +2,17 @@
 Hash: SHA1
 
 MD5 7f7bd91d43e44f30ec8d79ed335dc063 libaal-1.0.1.ebuild 969
-MD5 187eddc309cc92e39217cd0e0ee1803e ChangeLog 1975
+MD5 38ede5397d8d543993ba776772c8bb34 ChangeLog 2127
 MD5 e204859e37f5c66efadbae832356f236 metadata.xml 330
 MD5 2e8d38588050eea29737862562ab2cbf libaal-1.0.2.ebuild 1219
+MD5 e37cce5f8b2ac4fac1a7be3e8f8efffc libaal-1.0.3.ebuild 1216
 MD5 5f92b6db1570aa21c43ce59332557a8a files/digest-libaal-1.0.1 64
 MD5 42bf6b97f757a6ebbed83e2bf13da218 files/digest-libaal-1.0.2 64
+MD5 2f7e98a6252402e412e5118e2b6c5aec files/digest-libaal-1.0.3 64
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBhTw3HTu7gpaalycRAmj2AKDX0hChLZUhxEce9M72VbYdtOg6wgCgr2l7
-CybDA28dmAk8W1FSdpSxuE4=
-=uEUV
+iD8DBQFBwcQaroRuSHgZdywRAjWYAJwJe+DYrgZr0FgW62kc/X9OwhIATwCeOrH0
+ALKHyLP4qQNPtf7ozPR7Jc8=
+=Vq9/
 -----END PGP SIGNATURE-----
