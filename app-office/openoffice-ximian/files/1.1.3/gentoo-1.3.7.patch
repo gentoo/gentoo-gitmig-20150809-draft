@@ -1,0 +1,17 @@
+--- patches/OOO_1_1_3/apply.orig	2004-12-02 00:07:00.659646960 +0100
++++ patches/OOO_1_1_3/apply	2004-12-02 00:07:18.119992584 +0100
+@@ -1121,14 +1121,6 @@
+ 
+ ########################################################
+ 
+-[ GentooOnly ]
+-gcc34-gnome.diff
+-gcc34-main.diff
+-gcc34-nojava-fix.diff
+-gcc34-nptl-fix.diff
+-
+-########################################################
+-
+ [ TestLayout ]
+ # the beginnings of layout
+ gui-window-layout.diff
