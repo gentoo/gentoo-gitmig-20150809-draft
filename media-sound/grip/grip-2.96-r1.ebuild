@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Bruce A. Locke <blocke@shivan.org>
-# $Header: /var/cvsroot/gentoo-x86/media-sound/grip/grip-2.96.ebuild,v 1.3 2001/08/31 03:23:39 pm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/grip/grip-2.96-r1.ebuild,v 1.1 2001/09/14 23:01:59 lordjoe Exp $
 
 
 A=${P}.tgz
@@ -12,13 +12,14 @@ HOMEPAGE="http://www.nostatic.org/grip"
 
 DEPEND="media-sound/cdparanoia"
 
-src_unpack() {
-
-   # author forgot to gzip his tgz file... sigh
-   cd ${WORKDIR}
-   tar xvf ${DISTDIR}/${P}.tgz
-
-}
+# Seems to be fixed...
+#src_unpack() {
+#
+#   # author forgot to gzip his tgz file... sigh
+#   cd ${WORKDIR}
+#   tar xvf ${DISTDIR}/${P}.tgz
+#
+#}
 
 src_compile() {
 
