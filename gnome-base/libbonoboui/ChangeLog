@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/libbonoboui
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libbonoboui/ChangeLog,v 1.70 2004/10/01 07:04:23 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libbonoboui/ChangeLog,v 1.71 2004/11/11 15:50:41 obz Exp $
+
+  11 Nov 2004; Mike Gardiner <obz@gentoo.org> libbonoboui-2.8.0.ebuild:
+  Keyworded ppc for GNOME 2.8
 
   01 Oct 2004; Stephen P. Becker <geoman@gentoo.org> libbonoboui-2.6.1.ebuild:
   stable on mips

@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/libgnomeui
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeui/ChangeLog,v 1.61 2004/10/09 12:37:55 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeui/ChangeLog,v 1.62 2004/11/11 15:56:19 obz Exp $
+
+  11 Nov 2004; Mike Gardiner <obz@gentoo.org> libgnomeui-2.8.0.ebuild:
+  Keyworded ppc for GNOME 2.8
 
   09 Oct 2004; foser <foser@gentoo.org> libgnomeui-2.8.0.ebuild :
   Fix gnome-vfs dep (#66839)
