@@ -176,10 +176,6 @@ dev-perl/perl-ldap
 # Needed for lolo-sources-2.4.19.10_pre[1-5]
 =sys-apps/jfsutils-1.0.22
 
-# <bcowan@gentoo.org> (27 Sep 2002)
-# new version of jfsutils for gentoo-sources-2.4.19-r10
-=sys-apps/jfsutils-1.0.23
-
 # <satai@gentoo.org> (20 Sep 2002)
 # Too many problems.  Masking to fix.
 >app-text/tetex-1.0.7-r10
