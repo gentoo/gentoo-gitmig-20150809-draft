@@ -1,6 +1,12 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.388 2005/03/17 12:13:51 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.389 2005/03/19 00:46:46 vapier Exp $
+
+*gcc-3.3.5.20050130-r1 (19 Mar 2005)
+
+  19 Mar 2005; Mike Frysinger <vapier@gentoo.org>
+  +gcc-3.3.5.20050130-r1.ebuild:
+  Update uclibc patches and split them off into a sep tarball.
 
   17 Mar 2005; Luca Barbato <lu_zero@gentoo.org> gcc-3.4.3-r1.ebuild:
   Marked ppc
