@@ -1,6 +1,16 @@
-MD5 07b20735fe81388c7454389851fe9aab ChangeLog 1853
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 ba57788ac91ee0677c23d21a0297f0fc ChangeLog 1953
 MD5 e0d4aca410d17861a09d506d641fa1cd feh-1.2.6.ebuild 698
 MD5 6c9f94613437cd65762f7330c0b20ad1 metadata.xml 326
-MD5 ab499c1279392243afbe472e102069aa feh-1.2.9.ebuild 741
-MD5 d2ef582d2dc9a45d501fa022fe9c8907 files/digest-feh-1.2.6 61
+MD5 d882e1f4c8fd5b3ef686dd71919c25a9 feh-1.2.9.ebuild 747
 MD5 e154ee6156d1e139365a57801918a7d6 files/digest-feh-1.2.9 61
+MD5 d2ef582d2dc9a45d501fa022fe9c8907 files/digest-feh-1.2.6 61
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCBB7/ugEuf3OQ0akRAlMqAJ9HngBYsG5vS1Ihwbe4lSPbylwtFwCfdePP
+zD0qLN5iRso1a/6K9bwnaII=
+=DHl3
+-----END PGP SIGNATURE-----
