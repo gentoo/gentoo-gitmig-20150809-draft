@@ -1,0 +1,10 @@
+# ChangeLog for net-www/bk_edit
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/bk_edit/ChangeLog,v 1.1 2004/10/31 16:59:42 chriswhite Exp $
+
+*bk_edit-0.6.23 (31 Oct 2004)
+
+  31 Oct 2004; Chris White <chriswhite@gentoo.org> +metadata.xml,
+  +files/bk_edit-0.6.23-sandbox.patch, +bk_edit-0.6.23.ebuild:
+  Initial import into the tree. Closes bug #20933.
+

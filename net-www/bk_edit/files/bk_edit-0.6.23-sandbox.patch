@@ -1,0 +1,17 @@
+--- src/Makefile.old	2004-10-31 15:44:31.265766632 +0900
++++ src/Makefile	2004-10-31 15:45:22.477981192 +0900
+@@ -29,10 +29,10 @@
+ 	cd plugins && make
+ 
+ install:
+-	$(INSTALL) -d -m 755 /usr/bin/
+-	$(INSTALL) -m 755 $(PROG) /usr/bin/
+-	$(INSTALL) -d -m 755 /usr/share/bkedit/
+-	$(INSTALL) -m 755 ./plugins/*.so /usr/share/bkedit/
++	$(INSTALL) -d -m 755 $(DESTDIR)/usr/bin/
++	$(INSTALL) -m 755 $(PROG) $(DESTDIR)/usr/bin/
++	$(INSTALL) -d -m 755 $(DESTDIR)/usr/share/bkedit/
++	$(INSTALL) -m 755 ./plugins/*.so $(DESTDIR)/usr/share/bkedit/
+ 
+ uninstall:
+ 	$(RM) /usr/bin/$(PROG)
