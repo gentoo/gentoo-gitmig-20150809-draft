@@ -1,6 +1,12 @@
 # ChangeLog for x11-terms/mlterm
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/mlterm/ChangeLog,v 1.32 2004/07/30 03:11:15 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/mlterm/ChangeLog,v 1.33 2004/08/26 23:45:52 usata Exp $
+
+*mlterm-2.8.1_pre20040815 (27 Aug 2004)
+
+  27 Aug 2004; Mamoru KOMACHI <usata@gentoo.org>
+  -mlterm-2.8.1_pre20040423.ebuild, +mlterm-2.8.1_pre20040815.ebuild:
+  Updated CVS snapshot.
 
   29 Jul 2004; Tom Gall <tgall@gentoo.org> mlterm-2.8.0_p1-r1.ebuild:
   stable on ppc64, bug #55676

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/mlterm/mlterm-2.8.1_pre20040423.ebuild,v 1.3 2004/06/24 23:21:53 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/mlterm/mlterm-2.8.1_pre20040815.ebuild,v 1.1 2004/08/26 23:45:52 usata Exp $
 
 IUSE="truetype gtk imlib bidi nls uim"
 
@@ -8,7 +8,8 @@ S="${WORKDIR}/${PN}"
 
 DESCRIPTION="A multi-lingual terminal emulator"
 HOMEPAGE="http://mlterm.sourceforge.net/"
-SRC_URI="mirror://gentoo/${P/-*_pre/-}.tar.gz"
+SRC_URI="mirror://gentoo/${P/-*_pre/-}.tar.gz
+	http://dev.gentoo.org/~usata/distfiles/${P/-*_pre/-}.tar.gz"
 
 SLOT="0"
 KEYWORDS="~x86"
