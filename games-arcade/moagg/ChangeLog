@@ -1,6 +1,11 @@
 # ChangeLog for games-arcade/moagg
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/moagg/ChangeLog,v 1.6 2004/09/27 05:35:21 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/moagg/ChangeLog,v 1.7 2004/11/03 22:35:24 mr_bones_ Exp $
+
+*moagg-0.15 (03 Nov 2004)
+
+  03 Nov 2004; Michael Sterrett <mr_bones_@gentoo.org> +moagg-0.15.ebuild:
+  version bump
 
   26 Sep 2004; Michael Sterrett <mr_bones_@gentoo.org> moagg-0.14.ebuild:
   Remove the hardcoded CXXFLAGS (bug #65481)
