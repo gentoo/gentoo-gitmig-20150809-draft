@@ -1,9 +1,9 @@
 <?php
 	session_start();
-	#mysql_connect( 'localhost', '##USER##', '##PASS##' );
-	#mysql_select_db( '##DB##' );
-	mysql_connect( 'localhost', 'thread', 'superman' );
-	mysql_select_db( 'wiki' );
+	mysql_connect( 'localhost', '##USER##', '##PASS##' );
+	mysql_select_db( '##DB##' );
+	#mysql_connect( 'localhost', 'thread', 'superman' );
+	#mysql_select_db( 'wiki' );
 
 	// tags to allow for output
 	$allow_tags = "<a>,<br>,<b>,<u>";
