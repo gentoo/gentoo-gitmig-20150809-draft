@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.409 2004/06/02 16:54:22 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.410 2004/06/03 00:43:11 steel300 Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -377,6 +377,7 @@ sys-devel/uclibc-buildroot:propolice - Stack-Smashing Protection
 sys-devel/uclibc-buildroot:savedconfig - Adds support to user defined configs
 sys-devel/uclibc-buildroot:softfloat - software floating point calculations for FPU lacking processors
 sys-fs/lufs:lufsusermount - allow users to mount LUFS filesystems
+sys-fs/lufs:disablekernelsupport - If you already have a patched lufs kernel, skip the module building part
 sys-kernel/development-sources:ultra1 - If you have a SUN Ultra 1 with a HME interface
 sys-kernel/development-sources:vanilla - keep the kernel sources in a vanilla state and do not apply anything from genpatches.
 sys-kernel/gentoo-sources:aavm - adds Andrea Arcangeli's vm support (removes rmap by Rik van Riel which is the default)
@@ -421,3 +422,4 @@ x11-wm/fvwm:nosm - Disable support for Session Management (xsm protocol)
 x11-wm/fvwm:noxpm - Disable XPM image support (when no images, or just png images are to be used)
 x11-wm/fvwm:rplay - Enable rplay support
 x11-wm/fvwm:stroke - Mouse Gesture support
+
