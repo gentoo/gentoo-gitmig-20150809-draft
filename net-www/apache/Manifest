@@ -7,7 +7,7 @@ MD5 49e75f661e5197d265ea264a3100a734 apache-2.0.49-r3.ebuild 12818
 MD5 e0f991e03523c04fc281041e5a6c88c6 apache-1.3.29-r1.ebuild 7442
 MD5 393a81b82d3926a4118bc16e885c57f6 apache-2.0.49.ebuild 12811
 MD5 c57c6cdcf528ca5d01fa13e8e8436c5e apache-1.3.31-r1.ebuild 6703
-MD5 adf3ec9fe9b5df902820a0b59b70c429 ChangeLog 34054
+MD5 445f5b44f2bf56d8b4720cb84ec86040 ChangeLog 34265
 MD5 5b6dd438f81019e56fa641841c0c13fe metadata.xml 501
 MD5 d4b8a4908870107e15cc1edbd0ec6ebb files/apache-1.3.29_mod_auth_db.patch 729
 MD5 161245c7aa1eb785db53b34d6a10be43 files/suexec_pam_gentoo.patch 2149
@@ -41,7 +41,7 @@ MD5 d52999376f67a872ee48cbae72db0160 files/httpd-2.0.49-cgi.patch 10319
 MD5 c2866f70c91c7c7f718b89d92530d5f2 files/apache-1.3.29-usertrack_bug.patch 2588
 MD5 8cb4313e58d7bd5dc369eb92f75daa2b files/httpd-2.0.49-ipv6.patch 788
 MD5 a7f15bdba3786353deb7bfaf8de0efb9 files/conf/apache.conf 8115
-MD5 75e88ab5a3193fe8ff31c09f5bae2c09 files/conf/commonapache.conf 22175
+MD5 c70dc2c9a5e56660f3f120fcb822fadc files/conf/commonapache.conf 22216
 MD5 c774e0c7ddc6d55bddc164a9b5af0cb6 files/conf/VirtualHomePages.conf 907
 MD5 bb04f10b8e54f2ee95a8149fc50bb35b files/conf/Vhosts.conf 1903
 MD5 fd9b211c5078739d4aadbe6b3e53aead files/conf/DynamicVhosts.conf 963
@@ -78,7 +78,7 @@ MD5 a14d8565fd5ca2b5753799477a85b1af files/2.0.49/apache2splitlogfile 4844
 MD5 0fac1724d97d449d1cfb746275f7b32b files/2.0.49/apache2-builtin-mods 2211
 MD5 0e8867687279c44ddbf51375c537cd02 files/2.0.49/gentestcrt.sh 8800
 MD5 1d10cc98714a34ddc38525743c2989f9 files/2.0.49/41_mod_ssl.default-vhost.conf 8053
-MD5 65f0d13e644e1dba96e3f0470488c75e files/2.0.49/commonapache2.conf 32101
+MD5 51551378f38d8bf3b8389d70e51ccdea files/2.0.49/commonapache2.conf 32231
 MD5 bf4f5fef094c57eeef892940ea689da9 files/2.0.49/apache2.confd 1951
 MD5 6d56b77cb2230dd123b6a22ce71ef1f4 files/2.0.49/apache2.initd 2498
 MD5 77785d5ff6e5a7a21425dc69a6162779 files/2.0.49/apache2.conf 7652

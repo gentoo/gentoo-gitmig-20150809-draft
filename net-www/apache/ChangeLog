@@ -1,6 +1,11 @@
 # ChangeLog for net-www/apache
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.186 2004/06/03 14:20:39 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.187 2004/06/03 16:25:51 zul Exp $
+
+  03 Jun 2004; Chuck Short <zul@gentoo.org> files/2.0.49/commonapache2.conf,
+  files/conf/commonapache.conf:
+  Added option to execute perl scripts in subdirs. Closes #38130. Option is
+  turned off by default.
 
   03 Jun 2004; Chuck Short <zul@gentoo.org> apache-1.3.31-r1.ebuild,
   apache-2.0.49-r3.ebuild:
