@@ -1,38 +1,28 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/uudeview/uudeview-0.5.13.ebuild,v 1.12 2003/02/13 09:47:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/uudeview/uudeview-0.5.13.ebuild,v 1.13 2003/08/01 20:48:14 vapier Exp $
 
-IUSE="tcltk"
-
-
-S="${WORKDIR}/${P}"
 DESCRIPTION="uu, xx, base64, binhex decoder"
-SRC_URI="http://ibiblio.org/pub/Linux/utils/text/${P}.tar.gz"
 HOMEPAGE="http://www.fpx.de/fp/Software/UUDeview/"
-KEYWORDS="x86 sparc "
-SLOT="0"
+SRC_URI="http://ibiblio.org/pub/Linux/utils/text/${P}.tar.gz"
+
 LICENSE="GPL-2"
-DEPEND="tcltk?  ( dev-lang/tcl dev-lang/tk )"
+SLOT="0"
+KEYWORDS="x86 ~sparc"
+IUSE="tcltk debug"
+
+DEPEND="tcltk? ( dev-lang/tcl dev-lang/tk )"
 
 src_compile() {
-	local myconf
-	use tcltk || myconf="--disable-tcl --disable-tk"
-
-	./configure \
-		--host=${CHOST} \
-		--prefix=/usr \
-		--infodir=/usr/share/info \
-		${myconf} \
-		--mandir=${D}/usr/share/man || die "./configure failed"
-	emake || die
+	econf \
+		`use_enable tcltk tcl` \
+		`use_enable tcltk tk` \
+		`use_enable debug optimize` \
+		|| die
+	make || die
 }
 
-src_install () {
-	make \
-		prefix=${D}/usr \
-		infodir=${D}/usr/share/info \
-		install || die
-
-	# Install documentation.
+src_install() {
+	einstall MANDIR=${D}/usr/share/man/ || die
 	dodoc COPYING INSTALL README
 }

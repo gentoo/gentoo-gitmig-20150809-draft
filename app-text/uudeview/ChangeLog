@@ -1,10 +1,11 @@
 # ChangeLog for app-text/uudeview
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/uudeview/ChangeLog,v 1.8 2003/02/12 05:35:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/uudeview/ChangeLog,v 1.9 2003/08/01 20:48:14 vapier Exp $
 
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
- 
 *uudeview-0.5.18.ebuild (08 Nov 2002)
+
+  01 Aug 2003; Mike Frysinger <vapier@gentoo.org> :
+  Cleanup ... use econf, use_enable, and debug USE flag
 
   13 Jan 2003; Nick Hadaway <raker@gentoo.org> uudeview-0.5.18.ebuild :
   Added DEBUGBUILD support so those with -g options in their make.conf
@@ -17,6 +18,9 @@
   New version.
 
 *uudeview-0.5.13.ebuild (04 Jun 2002)
+
+  01 Aug 2003; Mike Frysinger <vapier@gentoo.org> :
+  Cleanup ... use econf, use_enable, and debug USE flag
 
   2 Aug 2002; phoen][x <phoenix@gentoo.org> uudeview-0.5.13.ebuild :
   Added KEYWORDS, SLOT.
