@@ -6,23 +6,6 @@ retrieving revision 1.1.1.12.2.1
 diff -c -3 -p -r1.1.1.12 -r1.1.1.12.2.1
 *** gcc/Makefile.in	2003/02/19 07:11:06	1.1.1.12
 --- gcc/Makefile.in	2003/02/26 08:01:00	1.1.1.12.2.1
-*************** INSTALL_LIBGCC = install-libgcc
-*** 358,364 ****
-  # Options to use when compiling libgcc2.a.
-  #
-  LIBGCC2_DEBUG_CFLAGS = -g
-! LIBGCC2_CFLAGS = -O2 $(LIBGCC2_INCLUDES) $(GCC_CFLAGS) $(TARGET_LIBGCC2_CFLAGS) $(LIBGCC2_DEBUG_CFLAGS) $(GTHREAD_FLAGS) -DIN_LIBGCC2 -D__GCC_FLOAT_NOT_NEEDED @inhibit_libc@
-  
-  # Additional options to use when compiling libgcc2.a.
-  # Some targets override this to -isystem include
---- 358,364 ----
-  # Options to use when compiling libgcc2.a.
-  #
-  LIBGCC2_DEBUG_CFLAGS = -g
-! LIBGCC2_CFLAGS = -O2 $(LIBGCC2_INCLUDES) $(GCC_CFLAGS) $(TARGET_LIBGCC2_CFLAGS) $(LIBGCC2_DEBUG_CFLAGS) $(GTHREAD_FLAGS) -DIN_LIBGCC2 -D__GCC_FLOAT_NOT_NEEDED @inhibit_libc@ -fno-stack-protector
-  
-  # Additional options to use when compiling libgcc2.a.
-  # Some targets override this to -isystem include
 *************** OBJS = alias.o bb-reorder.o bitmap.o bui
 *** 728,734 ****
    sibcall.o simplify-rtx.o ssa.o ssa-ccp.o ssa-dce.o stmt.o	\
@@ -57,23 +40,6 @@ diff -c -3 -p -r1.1.1.12 -r1.1.1.12.2.1
   
   # Defined in libgcc2.c, included only in the static library.
   LIB2FUNCS_ST = _eprintf _bb __gcc_bcmp
-*************** toplev.o : toplev.c $(CONFIG_H) $(SYSTEM
-*** 1360,1366 ****
-     ssa.h $(PARAMS_H) $(TM_P_H) reload.h dwarf2asm.h $(TARGET_H) halfpic.h \
-     langhooks.h insn-flags.h options.h
-  	$(CC) $(ALL_CFLAGS) $(ALL_CPPFLAGS) $(INCLUDES) \
-! 	  -DTARGET_NAME=\"$(target_alias)\" \
-  	  -c $(srcdir)/toplev.c $(OUTPUT_OPTION)
-  main.o : main.c $(CONFIG_H) $(SYSTEM_H) toplev.h
-  
---- 1360,1366 ----
-     ssa.h $(PARAMS_H) $(TM_P_H) reload.h dwarf2asm.h $(TARGET_H) halfpic.h \
-     langhooks.h insn-flags.h options.h
-  	$(CC) $(ALL_CFLAGS) $(ALL_CPPFLAGS) $(INCLUDES) \
-! 	  -DSTACK_PROTECTOR -DTARGET_NAME=\"$(target_alias)\" \
-  	  -c $(srcdir)/toplev.c $(OUTPUT_OPTION)
-  main.o : main.c $(CONFIG_H) $(SYSTEM_H) toplev.h
-  
 Index: gcc/calls.c
 ===================================================================
 RCS file: /home/cvsroot/gcc/gcc/calls.c,v
@@ -268,10 +234,10 @@ Index: gcc/expr.c
 ===================================================================
 RCS file: /home/cvsroot/gcc/gcc/expr.c,v
 retrieving revision 1.1.1.11
-retrieving revision 1.1.1.11.2.2
-diff -c -3 -p -r1.1.1.11 -r1.1.1.11.2.2
+retrieving revision 1.1.1.11.2.1
+diff -c -3 -p -r1.1.1.11 -r1.1.1.11.2.1
 *** gcc/expr.c	2003/02/19 07:11:13	1.1.1.11
---- gcc/expr.c	2003/04/07 02:36:16	1.1.1.11.2.2
+--- gcc/expr.c	2003/02/26 08:01:01	1.1.1.11.2.1
 *************** Software Foundation, 59 Temple Place - S
 *** 45,50 ****
 --- 45,51 ----
@@ -380,25 +346,6 @@ diff -c -3 -p -r1.1.1.11 -r1.1.1.11.2.2
   
         cst = (*data->constfun) (data->constfundata, data->offset, mode);
         emit_insn ((*genfun) (to1, cst));
-*************** force_operand (value, target)
-*** 5474,5480 ****
-  	  && GET_CODE (XEXP (value, 0)) == PLUS
-  	  && GET_CODE (XEXP (XEXP (value, 0), 0)) == REG
-  	  && REGNO (XEXP (XEXP (value, 0), 0)) >= FIRST_VIRTUAL_REGISTER
-! 	  && REGNO (XEXP (XEXP (value, 0), 0)) <= LAST_VIRTUAL_REGISTER)
-  	{
-  	  rtx temp = expand_simple_binop (GET_MODE (value), code,
-  					  XEXP (XEXP (value, 0), 0), op2,
---- 5478,5486 ----
-  	  && GET_CODE (XEXP (value, 0)) == PLUS
-  	  && GET_CODE (XEXP (XEXP (value, 0), 0)) == REG
-  	  && REGNO (XEXP (XEXP (value, 0), 0)) >= FIRST_VIRTUAL_REGISTER
-! 	  && REGNO (XEXP (XEXP (value, 0), 0)) <= LAST_VIRTUAL_REGISTER
-! 	  && (!flag_propolice_protection
-! 	      || XEXP (XEXP (value, 0), 0) != virtual_stack_vars_rtx))
-  	{
-  	  rtx temp = expand_simple_binop (GET_MODE (value), code,
-  					  XEXP (XEXP (value, 0), 0), op2,
 *************** expand_expr (exp, target, tmode, modifie
 *** 7614,7620 ****
         /* If adding to a sum including a constant,
@@ -408,7 +355,7 @@ diff -c -3 -p -r1.1.1.11 -r1.1.1.11.2.2
   	{
   	  rtx constant_term = const0_rtx;
   
---- 7620,7627 ----
+--- 7618,7625 ----
         /* If adding to a sum including a constant,
   	 associate it to put the constant outside.  */
         if (GET_CODE (op1) == PLUS
@@ -693,10 +640,10 @@ Index: gcc/libgcc2.c
 ===================================================================
 RCS file: /home/cvsroot/gcc/gcc/libgcc2.c,v
 retrieving revision 1.1.1.7
-retrieving revision 1.1.1.7.4.3
-diff -c -3 -p -r1.1.1.7 -r1.1.1.7.4.3
+retrieving revision 1.1.1.7.4.2
+diff -c -3 -p -r1.1.1.7 -r1.1.1.7.4.2
 *** gcc/libgcc2.c	2002/12/18 00:55:44	1.1.1.7
---- gcc/libgcc2.c	2003/04/07 02:03:19	1.1.1.7.4.3
+--- gcc/libgcc2.c	2003/03/17 13:22:49	1.1.1.7.4.2
 *************** atexit (func_ptr func)
 *** 2050,2052 ****
 --- 2050,2151 ----
@@ -768,7 +715,7 @@ diff -c -3 -p -r1.1.1.7 -r1.1.1.7.4.3
 +   strncat(buf, __progname, bufsz-len-1); len = strlen(buf);
 + #endif
 +   if (bufsz>len) {strncat(buf, message, bufsz-len-1); len = strlen(buf);}
-+   if (bufsz>len) {strncat(buf, func, bufsz-len-1); len = strlen(buf);}
++   if (bufsz>len) strncat(buf, func, bufsz-len-1);
 + 
 +   /* print error message */
 +   write (STDERR_FILENO, buf+3, len-3);
@@ -782,7 +729,7 @@ diff -c -3 -p -r1.1.1.7 -r1.1.1.7.4.3
 +     (void)strncpy(SyslogAddr.sun_path, _PATH_LOG,
 + 		  sizeof(SyslogAddr.sun_path) - 1);
 +     SyslogAddr.sun_path[sizeof(SyslogAddr.sun_path) - 1] = '\0';
-+     sendto(LogFile, buf, len, 0, (struct sockaddr *)&SyslogAddr,
++     sendto(LogFile, buf, strlen(buf), 0, (struct sockaddr *)&SyslogAddr,
 + 	   sizeof(SyslogAddr));
 +   }
 + #endif
