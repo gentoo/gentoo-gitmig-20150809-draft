@@ -2,11 +2,10 @@ MD5 631635f4c13cfaa7d56339412463f099 kdegames-3.2.1.ebuild 347
 MD5 0caf3e099dec809b190aa0c8774d030d kdegames-3.3.0_rc2.ebuild 321
 MD5 ee48d95fd06319306c7a79f119d5c469 kdegames-3.1.5.ebuild 933
 MD5 fcbbe0fcf355c073f0b4775c2cf4157f kdegames-3.2.3.ebuild 339
-MD5 60b10c5bb53c16c6920096089833d806 kdegames-3.3.0_beta2.ebuild 323
 MD5 3f2c708c7db4694c4945ee559104b58f kdegames-3.2.0.ebuild 448
 MD5 a2ff62f825e8e0622c793be7d9582c27 kdegames-3.2.2.ebuild 345
-MD5 0caf3e099dec809b190aa0c8774d030d kdegames-3.3.0.ebuild 321
-MD5 767fff2097f9765c053dc7477fca3e47 ChangeLog 10219
+MD5 6783d3b74b6981de3208cae658fc8583 kdegames-3.3.0.ebuild 317
+MD5 ea874c3b1d18959323c4f1973db149de ChangeLog 10366
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
 MD5 5ab4efd4e815e8257d53a92a2a8eac4a files/digest-kdegames-3.1.5 68
 MD5 8dee289265c813122c9c3a55db255487 files/digest-kdegames-3.2.0 68
@@ -17,4 +16,3 @@ MD5 efd56c6f807f499080e754df0cb4298b files/digest-kdegames-3.3.0 68
 MD5 c44cfa7482d22fa260c49360755ba3ab files/libksirtet.patch 6905
 MD5 1f4625d82be65dde85a6e9adcdda7e60 files/digest-kdegames-3.3.0_rc2 72
 MD5 7d6fbdf1de6bf3f31317d3548f79451a files/ktron.patch 16022
-MD5 6589e237c75b9a809363ea8374c7ee5c files/digest-kdegames-3.3.0_beta2 69
