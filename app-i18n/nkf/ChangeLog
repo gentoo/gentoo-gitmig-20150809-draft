@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/nkf
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/nkf/ChangeLog,v 1.10 2003/09/30 13:43:00 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/nkf/ChangeLog,v 1.11 2003/10/11 03:38:59 nakano Exp $
+
+*nkf-2.0.3 (11 Oct 2003)
+
+  11 Oct 2003; Masatomo Nakano <nakano@gentoo.org> nkf-2.0.3.ebuild:
+  Version bump.
 
 *nkf-2.0.2-r1 (01 Jul 2003)
 
