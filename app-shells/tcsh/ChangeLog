@@ -1,6 +1,19 @@
 # ChangeLog for app-shells/tcsh
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/tcsh/ChangeLog,v 1.30 2005/01/02 21:49:13 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/tcsh/ChangeLog,v 1.31 2005/03/02 08:54:49 dragonheart Exp $
+
+*tcsh-6.13-r1 (02 Mar 2005)
+
+  02 Mar 2005; Daniel Black <dragonheart@gentoo.org>
+  +files/tcsh-6.11.00-termcap.patch, +files/tcsh-6.12.00-setpgrp.patch,
+  +files/tcsh-6.13.00-arch.patch, +files/tcsh-6.13.00-charset.patch,
+  +files/tcsh-6.13.00-closem.patch, +files/tcsh-6.13.00-codeset.patch,
+  +files/tcsh-6.13.00-cstr.patch, +files/tcsh-6.13.00-dspmbyte.patch,
+  +files/tcsh-6.13.00-fcntl.patch, +files/tcsh-6.13.00-glob.patch,
+  +files/tcsh-6.13.00-iconv.patch, +files/tcsh-6.13.00-utmp.patch,
+  +files/tcsh-6.13.00-winchg.patch, +tcsh-6.13-r1.ebuild:
+  russian characters problems as per bug #83732. Thanks to Yuri Karaban
+  <ykar@list.ru> for the bug and finding and testing all the patches
 
   02 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
