@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ck-sources-2.6.7-r5.ebuild,v 1.1 2004/07/09 13:39:01 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ck-sources-2.6.7-r5.ebuild,v 1.2 2004/07/21 10:28:49 plasmaroo Exp $
 
-UNIPATCH_LIST="${DISTDIR}/patch-${KV}.bz2"
+UNIPATCH_LIST="${DISTDIR}/patch-${KV}.bz2 ${FILESDIR}/${P}.CAN-2004-0596.patch"
 K_PREPATCHED="yes"
 UNIPATCH_STRICTORDER="yes"
 
