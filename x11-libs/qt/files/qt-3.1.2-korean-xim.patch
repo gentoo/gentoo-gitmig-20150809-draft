@@ -1,0 +1,114 @@
+diff -uNr qt-x11-free-3.1.2.orig/src/kernel/qapplication_x11.cpp qt-x11-free-3.1.2/src/kernel/qapplication_x11.cpp
+--- qt-x11-free-3.1.2.orig/src/kernel/qapplication_x11.cpp	2003-02-24 08:30:07.000000000 +0000
++++ qt-x11-free-3.1.2/src/kernel/qapplication_x11.cpp	2003-06-11 11:12:48.000000000 +0100
+@@ -3135,7 +3135,7 @@
+ 		if ( inPopupMode() ) // no focus widget, see if we have a popup
+ 		    keywidget = (QETWidget*) activePopupWidget();
+ 		else if ( widget )
+-		    keywidget = (QETWidget*)widget->topLevelWidget();
++		    keywidget = widget->focusWidget()?(QETWidget*)widget->focusWidget():widget;
+ 	    }
+ 	}
+     }
+@@ -3166,11 +3166,12 @@
+ 		    if ( inPopupMode() ) // no focus widget, see if we have a popup
+ 		        keywidget = (QETWidget*) activePopupWidget();
+ 		    else if ( widget )
+-		        keywidget = (QETWidget*)widget->topLevelWidget();
++		        keywidget = widget->focusWidget()?(QETWidget*)widget->focusWidget():widget;
+ 	        }
+ 	    }
+         }
+ 
++#if 0
+ 	/*
+ 	  if the composition string has been emptied, we need to send
+ 	  an IMEnd event.  however, we have no way to tell if the user
+@@ -3208,6 +3209,7 @@
+ 
+ 	    qt_compose_emptied = FALSE;
+ 	}
++#endif // remove
+ #endif // QT_NO_XIM
+ 
+ 	return 1;
+@@ -3454,6 +3456,7 @@
+     case XKeyRelease:
+ 	{
+ 	    if ( keywidget && keywidget->isEnabled() ) { // should always exist
++#if 0
+ #ifndef QT_NO_XIM
+ 		if ( (qt_xim_style & XIMPreeditCallbacks) && event->xkey.keycode == 0 ) {
+ 		    // input method has sent us a commit string
+@@ -3481,6 +3484,7 @@
+ 		    }
+ 		} else
+ #endif // !QT_NO_XIM
++#endif // remove
+ 		    {
+ 			// qDebug( "sending key event" );
+ 			keywidget->translateKeyEvent( event, grabbed );
+@@ -4913,6 +4917,12 @@
+ 	    if ( qic ) {
+ 		mb=TRUE;
+ 		count = qic->lookupString(&xkeyevent, chars, &key, &status);
++		if ( qic->composing && qic->focusWidget ) {
++		    QIMEvent event(QEvent::IMEnd, QString::null, -1);
++		    QApplication::sendEvent(qic->focusWidget, &event);
++		    qic->composing = FALSE;
++		    qic->focusWidget = 0;
++		}
+ 	    }
+ 	}
+ 	if ( !mb ) {
+diff -uNr qt-x11-free-3.1.2.orig/src/kernel/qfont_x11.cpp qt-x11-free-3.1.2/src/kernel/qfont_x11.cpp
+--- qt-x11-free-3.1.2.orig/src/kernel/qfont_x11.cpp	2003-02-24 08:30:15.000000000 +0000
++++ qt-x11-free-3.1.2/src/kernel/qfont_x11.cpp	2003-06-11 11:17:51.000000000 +0100
+@@ -1557,7 +1557,8 @@
+ 	*scale = 1.;
+     }
+ 
+-    mono_value = request.fixedPitch ? XFT_MONO : XFT_PROPORTIONAL;
++    mono_value = !request.fixedPitch || familyName == "monospace" || familyName == "gulimche"
++    	 ? XFT_PROPORTIONAL : XFT_MONO;
+ 
+     switch (request.styleHint) {
+     case QFont::SansSerif:
+@@ -1569,7 +1570,7 @@
+ 	break;
+     case QFont::TypeWriter:
+ 	generic_value = "mono";
+-	mono_value = XFT_MONO;
++	mono_value = XFT_PROPORTIONAL;
+ 	break;
+     }
+ 
+diff -uNr qt-x11-free-3.1.2.orig/src/kernel/qinputcontext_x11.cpp qt-x11-free-3.1.2/src/kernel/qinputcontext_x11.cpp
+--- qt-x11-free-3.1.2.orig/src/kernel/qinputcontext_x11.cpp	2003-02-24 08:30:17.000000000 +0000
++++ qt-x11-free-3.1.2/src/kernel/qinputcontext_x11.cpp	2003-06-11 11:12:48.000000000 +0100
+@@ -154,6 +154,13 @@
+ 	    }
+ 	}
+ 
++	if (! qic->composing ) {
++	    qic->composing = TRUE;
++	    qic->focusWidget = qApp->focusWidget();
++	    QIMEvent startevent(QEvent::IMStart, QString::null, -1);
++	    QApplication::sendEvent(qic->focusWidget, &startevent);
++	}
++
+ 	if (! qic->composing || ! qic->focusWidget) {
+ 	    // qDebug("compose event: invalid compose event %d %p",
+ 	    // qic->composing, qic->focusWidget);
+diff -uNr qt-x11-free-3.1.2.orig/src/kernel/qrichtext.cpp qt-x11-free-3.1.2/src/kernel/qrichtext.cpp
+--- qt-x11-free-3.1.2.orig/src/kernel/qrichtext.cpp	2003-02-24 08:30:11.000000000 +0000
++++ qt-x11-free-3.1.2/src/kernel/qrichtext.cpp	2003-06-11 11:12:56.000000000 +0100
+@@ -4645,7 +4645,7 @@
+ 	color.setHsv( h1, s1, ( v1 + v2 ) / 2 );
+ 	painter.setPen( cg.color( QColorGroup::Text ) );
+     } else if ( selection == QTextDocument::IMSelectionText ) {
+-	color = cg.color( QColorGroup::Foreground );
++	color = cg.color( QColorGroup::Highlight );
+ 	painter.setPen( cg.color( QColorGroup::HighlightedText ) );
+     } else if ( !hasdoc || document()->invertSelectionText( selection ) ) {
+ 	painter.setPen( cg.color( QColorGroup::HighlightedText ) );

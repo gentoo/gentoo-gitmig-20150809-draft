@@ -8,6 +8,7 @@ MD5 e81d2182a929c891d3c3b0b465e7ac3c qt-3.1.2-r3.ebuild 5027
 MD5 703ba8038e5b2979c00d10ffffb3313d qt-3.1.2-r4.ebuild 5072
 MD5 c31bb1b07af43f08f17f8c9ad1470cce qt-3.2.0_beta1.ebuild 4497
 MD5 d8f9c7d8ddb12f1a412670d497215015 qt-3.2.0_beta2.ebuild 4497
+MD5 cc61e94fa529d606e4475f9735966f93 qt-3.1.2-r5.ebuild 5114
 MD5 08cdd879d3418837cf4bad594dc0f91f files/45qtdir2 16
 MD5 2d5b68b38185a30a28ffb2b652258cb8 files/45qt3 83
 MD5 7dc4f78d52452c28ba797ffc7db34f23 files/50qtdir3 16
@@ -27,3 +28,5 @@ MD5 bf7aed227565288222ea889c81b1e363 files/qt-3.1.2-qlistview-dnd.diff 469
 MD5 e9b2e2fbde862abb62cdfa78e62a35b6 files/qt-3.1.2-qmlined.diff 320
 MD5 c6dc1b6fadcb4897d4c7b0a768c2d196 files/qt-3.1.2-r3-qsocket.diff 447
 MD5 e4b92fbf81b7fc94c5d337e1675476d7 files/qt-x11-free-3.0.5-ko_input.patch 12682
+MD5 953be971128fb1a5ad7d9893f657e13c files/qt-3.1.2-korean-xim.patch 4285
+MD5 f197d87f2b33685cadba08c9cf2d08ee files/digest-qt-3.1.2-r5 72
