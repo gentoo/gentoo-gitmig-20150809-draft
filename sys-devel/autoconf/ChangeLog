@@ -1,6 +1,12 @@
 # ChangeLog for sys-devel/autoconf
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/ChangeLog,v 1.6 2002/05/22 22:51:59 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/ChangeLog,v 1.7 2002/09/23 18:28:10 azarah Exp $
+
+  23 Sep 2002; Martin Schlemmer <azarah@gentoo.org> ac-wrapper.pl :
+
+  Firstly i should mention that the perl wrapper 'ac-wrapper.pl', is
+  based on great work by Guillaume Cottenceau (gc@mandrakesoft.com).
+  This updates it to correctly detect if automake-1.6 was used.
 
 autoconf-2.53a (22 May 2002)
 

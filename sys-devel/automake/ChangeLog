@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/automake
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/ChangeLog,v 1.12 2002/06/28 23:03:08 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/ChangeLog,v 1.13 2002/09/23 18:28:25 azarah Exp $
+
+  23 Sep 2002; Martin Schlemmer <azarah@gentoo.org> am-wrapper.pl-1.6 :
+  Firstly, 'am-wrapper.pl' is based on 'ac-wrapper.pl'.  This is a nifty
+  script by Guillaume Cottenceau (gc@mandrakesoft.com).  This release
+  adds updates for automake-1.6 detection.
 
 automake-1.6.1-r6 (28 Jun 2002)
 

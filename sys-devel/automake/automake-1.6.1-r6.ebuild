@@ -76,9 +76,8 @@ src_compile() {
 	
 	cd ${S}
 
-	cp automake.texi automake.texi.orig
-	sed -e "s:setfilename automake.info:setfilename automake-1.6.info:" \
-		automake.texi.orig >automake.texi
+	perl -pi -e "s:setfilename automake.info:setfilename automake-1.6.info:" \
+		automake.texi
 	
 	./configure --prefix=/usr \
 		--infodir=/usr/share/info \
@@ -93,9 +92,8 @@ src_compile() {
 
 	cd ${OLD15_S}
 
-	cp automake.texi automake.texi.orig
-	sed -e "s:setfilename automake.info:setfilename automake-1.5.info:" \
-		automake.texi.orig >automake.texi
+	perl -pi -e "s:setfilename automake.info:setfilename automake-1.5.info:" \
+		automake.texi
 	
 	./configure --prefix=/usr \
 		--infodir=/usr/share/info \
@@ -124,24 +122,22 @@ fix_bins() {
 	
 	for x in aclocal automake
 	do
-		cp ${x} ${x}.orig
-		sed -e "s:share/automake\":share/automake-${1}\":g" \
-			-e "s:share/aclocal\":share/aclocal-${1}\":g" \
-			${x}.orig >${x}
+		perl -pi -e "s:share/automake\":share/automake-${1}\":g" ${x}
+		perl -pi -e "s:share/aclocal\":share/aclocal-${1}\":g" ${x}
 	done
 	
 	# add "/usr/share/aclocal" to m4 search patch
 	cp aclocal aclocal.orig
 	sed -e '/&scan_m4_files (@dirlist);/i \push (@dirlist, \"/usr/share/aclocal\");' \
-		aclocal.orig >aclocal
+		aclocal.orig > aclocal
 	# same as above, but 1.4 looks a bit differently
 	cp aclocal aclocal.orig
 	sed -e '/&scan_m4_files ($acdir, @dirlist);/i \push (@dirlist, \"/usr/share/aclocal\");' \
-		aclocal.orig >aclocal
-	cp aclocal aclocal.orig
+		aclocal.orig > aclocal
 	# "aclocal --print-ac-dir" should return "/usr/share/aclocal"
+	cp aclocal aclocal.orig
 	sed -e 's:print $acdir:print "/usr/share/aclocal":' \
-		aclocal.orig >aclocal
+		aclocal.orig > aclocal
 }
 
 src_install() {
