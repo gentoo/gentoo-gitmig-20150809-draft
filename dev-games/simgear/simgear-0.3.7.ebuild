@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/simgear/simgear-0.3.7.ebuild,v 1.2 2004/10/22 11:57:24 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/simgear/simgear-0.3.7.ebuild,v 1.3 2005/01/01 18:03:07 eradicator Exp $
 
 MY_P="SimGear-${PV}"
 DESCRIPTION="Development library for simulation games"

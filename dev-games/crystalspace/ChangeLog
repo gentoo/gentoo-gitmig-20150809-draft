@@ -1,6 +1,6 @@
 # ChangeLog for dev-games/crystalspace
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/crystalspace/ChangeLog,v 1.10 2004/12/28 01:52:02 vapier Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-games/crystalspace/ChangeLog,v 1.11 2005/01/01 17:58:40 eradicator Exp $
 
   27 Dec 2004; Mike Frysinger <vapier@gentoo.org> +files/0.98.4-gl.patch,
   crystalspace-0.98.4.ebuild:

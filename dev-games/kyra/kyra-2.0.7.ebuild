@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/kyra/kyra-2.0.7.ebuild,v 1.8 2004/06/24 22:12:17 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/kyra/kyra-2.0.7.ebuild,v 1.9 2005/01/01 18:00:54 eradicator Exp $
 
 DESCRIPTION="Kyra Sprite Engine"
 HOMEPAGE="http://www.grinninglizard.com/kyra/"

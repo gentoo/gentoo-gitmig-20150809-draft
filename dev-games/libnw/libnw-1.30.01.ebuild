@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/libnw/libnw-1.30.01.ebuild,v 1.6 2004/06/29 15:06:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/libnw/libnw-1.30.01.ebuild,v 1.7 2005/01/01 18:01:45 eradicator Exp $
 
 DESCRIPTION="Tools and libraries for NWN file manipulation"
 HOMEPAGE="http://openknights.sourceforge.net/"

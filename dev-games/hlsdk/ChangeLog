@@ -1,6 +1,6 @@
 # ChangeLog for dev-games/hlsdk
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/hlsdk/ChangeLog,v 1.4 2004/06/24 22:11:45 agriffis Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-games/hlsdk/ChangeLog,v 1.5 2005/01/01 18:00:16 eradicator Exp $
 
   19 Apr 2004; Chris Gianelloni <wolf31o2@gentoo.org> hlsdk-2.3.ebuild:
   Adding IUSE.

@@ -1,6 +1,6 @@
 # ChangeLog for dev-games/libmt_client
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/libmt_client/ChangeLog,v 1.3 2004/06/24 22:13:00 agriffis Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-games/libmt_client/ChangeLog,v 1.4 2005/01/01 18:01:32 eradicator Exp $
 
   19 Apr 2004; Chris Gianelloni <wolf31o2@gentoo.org>
   libmt_client-0.1.98.ebuild:

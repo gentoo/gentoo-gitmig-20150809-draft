@@ -1,6 +1,6 @@
 # ChangeLog for dev-games/KXL
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/KXL/ChangeLog,v 1.4 2004/06/24 22:12:06 agriffis Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-games/KXL/ChangeLog,v 1.5 2005/01/01 18:00:41 eradicator Exp $
 
   26 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> KXL-1.1.7.ebuild:
   use standard src_compile; IUSE

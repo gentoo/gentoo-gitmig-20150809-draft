@@ -1,6 +1,6 @@
 # ChangeLog for dev-games/neotools
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/neotools/ChangeLog,v 1.6 2004/08/13 08:44:03 mr_bones_ Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-games/neotools/ChangeLog,v 1.7 2005/01/01 18:02:10 eradicator Exp $
 
   13 Aug 2004; Michael Sterrett <mr_bones_@gentoo.org> -neotools-0.7.0.ebuild,
   -neotools-0.8.0.ebuild, neotools-0.8.1.ebuild:

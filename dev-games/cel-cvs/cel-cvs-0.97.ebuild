@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/cel-cvs/cel-cvs-0.97.ebuild,v 1.9 2004/12/25 08:59:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/cel-cvs/cel-cvs-0.97.ebuild,v 1.10 2005/01/01 17:58:08 eradicator Exp $
 
 ECVS_SERVER="cvs.cel.sourceforge.net:/cvsroot/cel"
 ECVS_MODULE="cel"

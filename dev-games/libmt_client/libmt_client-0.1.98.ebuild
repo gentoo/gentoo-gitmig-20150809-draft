@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/libmt_client/libmt_client-0.1.98.ebuild,v 1.6 2004/06/29 15:05:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/libmt_client/libmt_client-0.1.98.ebuild,v 1.7 2005/01/01 18:01:32 eradicator Exp $
 
 DESCRIPTION="backend library for the maitretarot clients"
 HOMEPAGE="http://www.nongnu.org/maitretarot/"

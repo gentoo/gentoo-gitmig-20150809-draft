@@ -1,6 +1,6 @@
 # ChangeLog for dev-games/neoengine
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/neoengine/ChangeLog,v 1.6 2004/08/13 09:06:37 mr_bones_ Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-games/neoengine/ChangeLog,v 1.7 2005/01/01 18:01:57 eradicator Exp $
 
   13 Aug 2004; Michael Sterrett <mr_bones_@gentoo.org>
   -neoengine-0.7.0.ebuild, -neoengine-0.8.0.ebuild, neoengine-0.8.1.ebuild:

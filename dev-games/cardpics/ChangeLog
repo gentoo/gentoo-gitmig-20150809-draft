@@ -1,6 +1,6 @@
 # ChangeLog for dev-games/cardpics
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/cardpics/ChangeLog,v 1.3 2004/06/24 22:09:27 agriffis Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-games/cardpics/ChangeLog,v 1.4 2005/01/01 17:57:42 eradicator Exp $
 
   26 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> cardpics-0.4.ebuild:
   IUSE

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation, 2004 Richard Garand <richard@garandnet.net>
+# Copyright 1999-2005 Gentoo Foundation, 2004 Richard Garand <richard@garandnet.net>
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/hawknl/hawknl-1.68.ebuild,v 1.10 2004/06/29 15:04:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/hawknl/hawknl-1.68.ebuild,v 1.11 2005/01/01 18:00:03 eradicator Exp $
 
 inherit gcc
 

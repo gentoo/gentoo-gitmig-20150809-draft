@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/flatzebra/flatzebra-0.1.1.ebuild,v 1.5 2004/12/21 13:06:11 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/flatzebra/flatzebra-0.1.1.ebuild,v 1.6 2005/01/01 17:59:08 eradicator Exp $
 
 DESCRIPTION="A generic game engine for 2D double-buffering animation"
 HOMEPAGE="http://www3.sympatico.ca/sarrazip/en/"
