@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xdialog
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdialog/ChangeLog,v 1.7 2004/09/07 16:25:59 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdialog/ChangeLog,v 1.8 2004/09/09 06:39:47 mr_bones_ Exp $
+
+  08 Sep 2004; Michael Sterrett <mr_bones_@gentoo.org> -xdialog-2.0.6.ebuild:
+  clean older ebuild
 
   07 Sep 2004; <blubb@gentoo.org> xdialog-2.1.1.ebuild:
   added ~amd64 keyword
