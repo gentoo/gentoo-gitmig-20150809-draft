@@ -1,11 +1,14 @@
 # ChangeLog for dev-libs/DirectFB
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/ChangeLog,v 1.5 2002/04/16 03:15:43 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/ChangeLog,v 1.6 2002/04/16 03:26:37 seemant Exp $
 
 
 *DirectFB-0.9.9-r2 (15 Apr 2002)
 
   15 Apr 2002; Seemant Kulleen <seemant@gentoo.org> DirectFB-0.9.9-r2.ebuild :
+
+  Update: blah, this needs the unpacked libmpeg3 tarball itself.  It seems to 
+  completely vomit on an installed libmpeg3. Sigh.
 
   avi support is broken, and libmpeg3 support is broken as well.  Upstream
   has been made aware of the libmpeg3 issue, so that will hopefully get
