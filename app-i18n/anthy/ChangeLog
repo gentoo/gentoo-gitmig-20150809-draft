@@ -1,6 +1,12 @@
 # ChangeLog for app-i18n/anthy
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/anthy/ChangeLog,v 1.41 2005/01/02 21:01:54 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/anthy/ChangeLog,v 1.42 2005/02/05 07:19:04 usata Exp $
+
+*anthy-5900-r1 (05 Feb 2005)
+
+  05 Feb 2005; Mamoru KOMACHI <usata@gentoo.org>
+  +files/anthy-mkdic-gcc34.patch, +anthy-5900-r1.ebuild:
+  Fixed incorrect conversion problem; bug #73977.
 
   02 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
