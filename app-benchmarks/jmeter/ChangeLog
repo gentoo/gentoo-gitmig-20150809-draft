@@ -1,6 +1,9 @@
 # ChangeLog for app-benchmarks/jmeter
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/jmeter/ChangeLog,v 1.7 2004/03/16 07:08:32 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/jmeter/ChangeLog,v 1.8 2004/04/06 03:22:22 zx Exp $
+
+  05 Apr 2004; Chris Aniszczyk <zx@gentoo.org> jmeter-1.8.1.ebuild:
+  inherit eutils due to epatch
 
   15 Mar 2004; Seemant Kulleen <seemant@gentoo.org> jmeter-1.8.1.ebuild:
   fix bug #47712 by Michael Sterret <mr_bones_@gentoo.org>
