@@ -1,6 +1,17 @@
 # ChangeLog for net-www/mozilla-firefox
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/ChangeLog,v 1.43 2004/06/17 13:32:08 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/ChangeLog,v 1.44 2004/06/18 14:24:44 agriffis Exp $
+
+  18 Jun 2004; Aron Griffis <agriffis@gentoo.org>
+  +files/icon/mozillafirefox.desktop, mozilla-firefox-0.9-r1.ebuild:
+  - Fix bug 54179: Install mozillafirefox.desktop to
+    /usr/share/applications instead of /usr/share/gnome/apps/Internet.
+    This also necessitated some changes to the .desktop file which I
+    based on epiphany.desktop
+  - Fix bug 54295: Move init file unpacking from pkg_postinst to
+    src_install
+  - Get rid of the stupid perl dependency; it was only being used to
+    edit the .desktop file, and sed would have sufficed in any case
 
   17 Jun 2004; Aron Griffis <agriffis@gentoo.org>
   mozilla-firefox-0.9-r1.ebuild:

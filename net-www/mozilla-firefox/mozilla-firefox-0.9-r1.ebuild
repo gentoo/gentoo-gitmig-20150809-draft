@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/mozilla-firefox-0.9-r1.ebuild,v 1.5 2004/06/17 13:32:08 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/mozilla-firefox-0.9-r1.ebuild,v 1.6 2004/06/18 14:24:44 agriffis Exp $
 
 inherit makeedit flag-o-matic gcc nsplugins eutils mozilla-launcher
 
@@ -37,7 +37,6 @@ RDEPEND="virtual/x11
 DEPEND="${RDEPEND}
 	virtual/glibc
 	dev-util/pkgconfig
-	dev-lang/perl
 	java? ( >=dev-java/java-config-0.2.0 )"
 
 # needed by src_compile() and src_install()
@@ -232,17 +231,17 @@ src_install() {
 	if use gnome; then
 		insinto /usr/share/pixmaps
 		doins ${FILESDIR}/icon/firefox-icon.png
-		# Fix comment of menu entry
-		cd ${S}/build/package/rpm/SOURCES
-		cp mozilla.desktop mozillafirefox.desktop
-		perl -pi -e 's:Name=Mozilla:Name=Mozilla Firefox:' mozillafirefox.desktop
-		perl -pi -e 's:Comment=Mozilla:Comment=Mozilla Firefox Web Browser:' mozillafirefox.desktop
-		perl -pi -e 's:Exec=/usr/bin/mozilla:Exec=/usr/bin/firefox:' mozillafirefox.desktop
-		perl -pi -e 's:Icon=mozilla-icon.png:Icon=firefox-icon.png:' mozillafirefox.desktop
-		cd ${S}
-		insinto /usr/share/gnome/apps/Internet
-		doins ${S}/build/package/rpm/SOURCES/mozillafirefox.desktop
+		# Fix bug 54179: Install .desktop file into /usr/share/applications
+		# instead of /usr/share/gnome/apps/Internet (18 Jun 2004 agriffis)
+		insinto /usr/share/applications
+		doins ${FILESDIR}/icon/mozillafirefox.desktop
 	fi
+
+	# Normally firefox-0.9 must be run as root once before it can be
+	# run as a normal user.  Drop in some initialized files to avoid
+	# this.
+	einfo "Extracting firefox-${PV} initialization files"
+	tar xjpf ${FILESDIR}/firefox-${PV}-init.tar.bz2 -C ${D}/usr/lib/MozillaFirefox
 }
 
 pkg_preinst() {
@@ -258,12 +257,6 @@ pkg_preinst() {
 
 pkg_postinst() {
 	export MOZILLA_FIVE_HOME="${ROOT}/usr/lib/MozillaFirefox"
-
-	# Normally firefox-0.9 must be run as root once before it can be
-	# run as a normal user.  Drop in some initialized files to avoid
-	# this.
-	einfo "Extracting firefox-${PV} initialization files"
-	cd ${MOZILLA_FIVE_HOME} && tar xjpf ${FILESDIR}/firefox-${PV}-init.tar.bz2
 
 	# Needed to update the run time bindings for REGXPCOM
 	# (do not remove next line!)
