@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3053 2004/08/11 11:06:43 foser Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3054 2004/08/11 11:57:36 genone Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -21,6 +21,11 @@
 ##
 ##   End example
 ##
+
+# <genone@gentoo.org> (Aug 11 2004)
+# This version wasn't tested and not authorized, masking until the 
+# gpgme dependency works actually.
+=mail-client/sylpheed-claws-0.9.12-r1
 
 # <foser@gentoo.org> (Aug 11 2004)
 # Unmaintained pack, up for removal (#50375)
