@@ -1,6 +1,9 @@
 # ChangeLog for net-nds/gq
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/gq/ChangeLog,v 1.4 2003/06/16 19:37:58 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/gq/ChangeLog,v 1.5 2003/09/03 02:02:21 woodchip Exp $
+
+  02 Sep 2003; Donny Davies <woodchip@gentoo.org> gq-0.7.0_beta2.ebuild:
+  Close #27358.
 
 *gq-0.7.0_beta2 (16 Jun 2003)
 

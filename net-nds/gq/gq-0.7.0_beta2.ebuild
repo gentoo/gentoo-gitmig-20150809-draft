@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/gq/gq-0.7.0_beta2.ebuild,v 1.1 2003/06/16 19:37:58 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/gq/gq-0.7.0_beta2.ebuild,v 1.2 2003/09/03 02:02:21 woodchip Exp $
 
 S=${WORKDIR}/${PN}-${PV/_/}
 DESCRIPTION="GTK-based LDAP client"
@@ -18,6 +18,13 @@ DEPEND="=x11-libs/gtk+-1.2*
 	kerberos? ( app-crypt/mit-krb5 )
 	jpeg? ( media-libs/gdk-pixbuf )
 	ssl? ( dev-libs/openssl )"
+
+src_unpack() {
+	unpack ${A} || die
+	cd ${S}  || die
+	# Fix timestamp skews
+	touch aclocal.m4 configure `find . -name Makefile.in`
+}
 
 src_compile() {
 	local myconf="--enable-browser-dnd --enable-cache"
