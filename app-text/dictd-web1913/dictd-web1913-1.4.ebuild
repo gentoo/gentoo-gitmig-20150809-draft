@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Michael Conrad Tilstra <michael@gentoo.org> <tadpol@tadpol.org>
-# $Header: /var/cvsroot/gentoo-x86/app-text/dictd-web1913/dictd-web1913-1.4.ebuild,v 1.1 2001/04/24 22:07:29 michael Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dictd-web1913/dictd-web1913-1.4.ebuild,v 1.2 2001/04/24 22:58:35 michael Exp $
 
 #P=
 A=dict-web1913-1.4-pre.tar.gz
@@ -25,6 +25,13 @@ cat >> /etc/dict/dictd.conf << __EOF__
 database web1913  { data "/usr/lib/dict/web1913.dict.dz"
                     index "/usr/lib/dict/web1913.index" }
 __EOF__
+fi
+}
+
+pkg_postrm() {
+if [ -f /etc/dict/dictd.conf ]; then
+  cat /etc/dict/dictd.conf | sed -e '/web1913/d' > /etc/dict/dictd.conf.$$
+  mv /etc/dict/dictd.conf.$$ /etc/dict/dictd.conf
 fi
 }
 

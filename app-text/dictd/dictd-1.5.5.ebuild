@@ -1,21 +1,13 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Michael Conrad Tilstra <michael@gentoo.org> <tadpol@tadpol.org>
-# $header$
+# $Header: /var/cvsroot/gentoo-x86/app-text/dictd/dictd-1.5.5.ebuild,v 1.2 2001/04/24 22:58:35 michael Exp $
 
 #P=
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
 DESCRIPTION="Dictionary Client/Server for the DICT protocol"
 SRC_URI="ftp://ftp.dict.org/pub/dict/${A}"
-#         ftp://ftp.dict.org/pub/dict/dict-web1913-1.4-pre.tar.gz
-#         ftp://ftp.dict.org/pub/dict/dict-wn-1.5-pre.tar.gz
-#         ftp://ftp.dict.org/pub/dict/jargon_4.2.3.tar.gz
-#         ftp://ftp.dict.org/pub/dict/devils-dict-pre.tar.gz
-#         ftp://ftp.dict.org/pub/dict/dict-gazetteer-1.2-pre.tar.gz
-#         ftp://ftp.dict.org/pub/dict/dict-misc-1.5b-pre.tar.gz
-#         ftp://ftp.dict.org/pub/dict/elements-20001107-pre.tar.gz
-#         ftp://ftp.dict.org/pub/dict/vera_1.7.tar.gz"
 HOMEPAGE="http://www.dict.org"
 
 DEPEND="virtual/glibc
