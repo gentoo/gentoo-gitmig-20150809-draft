@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.89 2003/08/18 13:17:00 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.90 2003/08/18 17:01:03 max Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -51,11 +51,14 @@ kde-base/kdeadmin:foreign-sysvinit - Enable building of ksysv, which manages Sys
 media-gfx/autotrace:imagemagick - Enables Imagemagick
 media-libs/dumb:dumb-allegro - Compile in support for allegro sound cards
 media-libs/libgd:freetype-version-1 - if for some reason you want to use freetype v1 instead of v2
+media-plugins/mythdvd:transcode - Enable DVD ripping and transcoding
 media-sound/alsa-patch-bay:fltk - Compile with fltk interface and not with gtkmm2 interface
 media-sound/ardour-cvs:ardour-ksi - Build ksi interface for ardour
 media-sound/jack-cvs:jack-tmpfs - Compile in a tmpf path
 media-sound/museseq:fluidsynth - compile with support for fluidsynth
 media-sound/terminatorX:sox - Enable sox support
+media-tv/mythfrontend:lcd - Enable LCD display support using lcdproc
+media-tv/mythtv:lcd - Enable LCD display support using lcdproc
 media-video/ffmpeg:faad - Enables faad2 support
 media-video/transcode:altivec - Enable Altivec code portions
 media-video/vlc:matroska - Enables support for the matroska video format
