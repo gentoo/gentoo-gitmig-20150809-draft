@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-apps/gdm/gdm-2.0_beta4-r2.ebuild,v 1.1 2001/05/07 20:39:54 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-apps/gdm/gdm-2.0_beta4-r2.ebuild,v 1.2 2001/06/05 19:43:20 achim Exp $
 
 P=gdm-2.0beta4
 A=${P}.tar.gz
@@ -12,6 +12,9 @@ HOMEPAGE="http://www.gnome.org/"
 
 DEPEND=">=sys-libs/pam-0.72
 	>=sys-apps/tcp-wrappers-7.6
+	>=gnome-base/gnome-libs-1.2.4"
+
+RDEPEND=">=sys-libs/pam-0.72
 	>=gnome-base/gnome-libs-1.2.4"
 
 src_unpack() {
@@ -46,6 +49,13 @@ src_install() {
   doexe ${FILESDIR}/wm/{afterstep,blackbox,enlightenment,fvwm,gnome,icewm,kde,pwm,windowmaker,xfce}
   cd ${S}
   dodoc AUTHORS COPYING ChangeLog NEWS README* RELEASENOTES TODO
+  docinto sgml
+  dodoc docs/C/gdm.sgml
+  docinto html
+  dodoc docs/C/gdm.html
+  docinto html/gdm
+  dodoc docs/C/gdm/*.html
+
 }
 
 

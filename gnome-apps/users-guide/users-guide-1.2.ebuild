@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-apps/users-guide/users-guide-1.2.ebuild,v 1.4 2000/11/04 16:14:54 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-apps/users-guide/users-guide-1.2.ebuild,v 1.5 2001/06/05 19:43:20 achim Exp $
 
 P=users-guide-1.2
 A=${P}.tar.gz
@@ -10,18 +10,14 @@ DESCRIPTION="gnome-users-guide"
 SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/users-guide/"${A}
 HOMEPAGE="http://www.gnome.org/"
 
-DEPEND=">=sys-devel/automake-1.4
-	>=sys-devel/autoconf-2.13
-	>=sys-apps/texinfo-4.0"
+DEPEND=""
 
-src_compile() {                           
-  cd ${S}
+src_compile() {
   try ./configure --host=${CHOST} --prefix=/opt/gnome
   try make
 }
 
-src_install() {                               
-  cd ${S}
+src_install() {
   try make prefix=${D}/opt/gnome install
   dodoc AUTHORS COPYING* ChangeLog NEWS
   dodoc README* TODO

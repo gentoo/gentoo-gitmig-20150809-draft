@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author AJ Lewis <aj@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-apps/gphoto/gphoto-0.4.3.ebuild,v 1.5 2001/06/04 10:34:15 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-apps/gphoto/gphoto-0.4.3.ebuild,v 1.6 2001/06/05 19:43:20 achim Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -23,7 +23,7 @@ src_compile() {
 }
 
 src_install() {
-    try make prefix=${D}/opt/gnome --sysconfdir=${D}/etc/opd/gnome  install
+    try make prefix=${D}/opt/gnome sysconfdir=${D}/etc/opt/gnome  install
     dodoc AUTHORS CONTACTS COPYING ChangeLog FAQ MANUAL NEWS* PROGRAMMERS \
 	 README THANKS THEMES TODO
 }

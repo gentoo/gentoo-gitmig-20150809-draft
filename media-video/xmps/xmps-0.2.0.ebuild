@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-video/xmps/xmps-0.2.0.ebuild,v 1.1 2001/04/29 22:50:16 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xmps/xmps-0.2.0.ebuild,v 1.2 2001/06/05 19:43:20 achim Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -9,11 +9,15 @@ DESCRIPTION="X Movie Player System"
 SRC_URI="http://xmps.sourceforge.net/sources/${A}"
 HOMEPAGE="http://xmps.sourceforge.net"
 
-DEPEND=">=media-libs/smpeg-0.4.1
+DEPEND=">=media-libs/smpeg-0.4.1 nls? ( sys-devel/gettext )
 	>=dev-lang/nasm-0.98
+        >=app-arch/rpm-3.0.6
+        >=x11-libs/gtk+-1.2.10
 	gnome? ( >=gnome-base/gnome-libs-1.2.4 )"
 
 RDEPEND=">=media-libs/smpeg-0.4.1
+        >=x11-libs/gtk+-1.2.10
+        >=app-arch/rpm-3.0.6
 	gnome? ( >=gnome-base/gnome-libs-1.2.4 )"
 
 src_compile() {
@@ -25,8 +29,10 @@ src_compile() {
     else
 	myopts="--disable-gnome --prefix=/usr/X11R6"
     fi
-    try ./configure ${myopts} --host=${CHOST} \
-	--with-catgets
+    if [ -z "`use nls`" ] ; then
+        myopts="$myopts --disable-nls"
+    fi
+    try ./configure ${myopts} --host=${CHOST}
     cp Makefile Makefile.orig
     sed -e "s:\$(bindir)/xmps-config:\$(DESTDIR)\$(bindir)/xmps-config:" \
 	Makefile.orig > Makefile
@@ -36,7 +42,6 @@ src_compile() {
 
 src_install () {
 
-    cd ${S}
     if [ -n "`use gnome`" ]
     then
       try make prefix=${D}/opt/gnome install

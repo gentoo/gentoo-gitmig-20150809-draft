@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libglade/libglade-0.16-r1.ebuild,v 1.1 2001/04/15 18:57:14 pete Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libglade/libglade-0.16-r1.ebuild,v 1.2 2001/06/05 19:43:20 achim Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -13,12 +13,12 @@ HOMEPAGE="http://www.gnome.org/"
 DEPEND="nls? ( sys-devel/gettext )
         >=gnome-base/gnome-libs-1.2.12
 	>=gnome-base/libxml-1.8.11
-	bonobo? ( >=gnome-base/bonobo-0.37 )"
+	bonobo2? ( >=gnome-base/bonobo-0.37 )"
 
 src_compile() {
 
   local myopts
-  if [ "`use bonobo`" ]
+  if [ "`use bonobo2`" ]
   then
      # I had to add --disable-bonobotest, because, for some reason,
      # the conftest in configure segfaults, but libglade still

@@ -9,10 +9,12 @@ DESCRIPTION="Gnome Ghostview"
 SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/${PN}/"${A}
 HOMEPAGE="http://www.gnome.org/"
 
-DEPEND=">=app-text/ghostscript-6.23
-	>=gnome-base/gnome-libs-1.2.4
+DEPEND=">=gnome-base/gnome-libs-1.2.4
         bonobo? ( >=gnome-base/bonobo-1.0 )
         nls? ( sys-devel/gettext )"
+
+RDEPEND=">=gnome-base/gnome-libs-1.2.4
+        bonobo? ( >=gnome-base/bonobo-1.0 )"
 
 src_compile() {
   local myconf
