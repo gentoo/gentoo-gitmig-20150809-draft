@@ -15,6 +15,7 @@ MD5 42009ab1ca8da78b30d2fcd15150f202 files/digest-openmosix-sources-2.4.27-r4 29
 MD5 21f3a4f186017d925067335e24db36a1 files/openmosix-sources.CAN-2004-0109.patch 1877
 MD5 ac42024b6e6ee1e2165914db4b22a61c files/openmosix-sources.CAN-2004-0178.patch 424
 MD5 60d25ff310fc6abfdce39ec9e47345af files/openmosix-sources.CAN-2004-0685.patch 2809
+MD5 24c53f49954dab29cfc172d4a3ba1a31 files/openmosix-sources-binfmt_elf.patch 1928
 MD5 bf2b609e8cab6460d220b1267db09826 files/openmosix-sources.CAN-2004-0001.patch 982
 MD5 0f66013f643c79c97fda489618a4e2fd files/openmosix-sources.CAN-2004-0535.patch 476
 MD5 dc18e982f8149588a291956481885a8c files/openmosix-sources.CAN-2004-0495.patch 17549
