@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-UP-2.2.17/linux-UP-2.2.17p13-r6.ebuild,v 1.1 2000/08/08 18:57:05 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-UP-2.2.17/linux-UP-2.2.17_pre13-r6.ebuild,v 1.1 2000/08/13 03:07:01 drobbins Exp $
 
 P=linux-UP-2.2.17p13
 A="linux-2.2.16.tar.bz2 i2c-2.5.2.tar.gz lm_sensors-2.5.2.tar.gz
@@ -140,6 +140,7 @@ src_install() {
     cd ${S}
     doins arch/i386/boot/bzImage
     make INSTALL_MOD_PATH=${D} modules_install
+    dosym /lib/modules/2.2.17pre13-RAID current
     into /
     cd ${S}/fs/reiserfs/utils/bin
     dosbin mkreiserfs resize_reiserfs reiserfsck dumpreiserfs
