@@ -1,0 +1,10 @@
+# ChangeLog for net-www/amphetadesk
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/amphetadesk/ChangeLog,v 1.1 2003/05/23 18:14:22 tberman Exp $
+
+*amphetadesk-0.93.1 (23 May 2003)
+
+  23 May 2003; Todd Berman <tberman@gentoo.org> amphetadesk-0.93.1.ebuild,
+  files/amphetadesk.initd:
+  Initial Import.
+
