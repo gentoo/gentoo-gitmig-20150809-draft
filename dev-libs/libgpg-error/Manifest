@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 84dda6a388c01a829b431e7552f02a2c ChangeLog 2089
 MD5 c1784906f80f5c9beefa83016ff0460e libgpg-error-0.6.ebuild 682
 MD5 7bf51966a3144c2d808c4d3c14401c5a libgpg-error-0.7.ebuild 769
-MD5 48786c47937ed1683ad603b9325b066f libgpg-error-1.0.ebuild 821
+MD5 d3032ae8f665c0d7f0d253fbb3f95660 libgpg-error-1.0.ebuild 829
 MD5 2a0413caa56a5072d7da6e76fa995239 files/digest-libgpg-error-0.6 68
 MD5 79ccf482189a756d86e48ae6519bae82 files/digest-libgpg-error-0.7 68
 MD5 302b903544cdc360228540b136ca4826 files/digest-libgpg-error-1.0 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFBHslwHTu7gpaalycRAvvAAJ9NnXw62fI1H8Y+qfR7zJKrRAQp9wCgqcsg
-7h6wIIqtbiDJVJQ6TSjtzkM=
-=oGpy
------END PGP SIGNATURE-----
