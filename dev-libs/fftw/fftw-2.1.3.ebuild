@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: George Shapovalov <george@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/fftw/fftw-2.1.3.ebuild,v 1.2 2002/04/27 23:08:36 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/fftw/fftw-2.1.3.ebuild,v 1.3 2002/06/21 01:51:02 george Exp $
 
 S="${WORKDIR}/${P}"
 
@@ -71,13 +71,22 @@ src_install () {
 	#both builds are installed in the same place
 	#libs are distinguished by preffix (s or d), see docs for details
 	cd "${S}-single"
+
 	make DESTDIR=${D} install || die
 	
 	cd "${S}-double"
+
+	# fix info file
+	echo "INFO-DIR-SECTION Libraries" >>$fftw.info
+	echo "START-INFO-DIR-ENTRY" >>doc/fftw.info
+	echo "* fftw: (fftw).                  C subroutine library for computing the Discrete Fourier Transform (DFT)" >>doc/fftw.info
+	echo "END-INFO-DIR-ENTRY" >>doc/fftw.info
+
 	make DESTDIR=${D} install || die
 
 	# Install documentation.
 	cd "${S}-single"
+
 	dodoc AUTHORS ChangeLog COPYING INSTALL NEWS  TODO
 	dohtml doc/fftw*.html
 }
