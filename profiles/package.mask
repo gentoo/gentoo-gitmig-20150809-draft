@@ -76,11 +76,11 @@ sys-devel/spython
 # <liquidx@gentoo.org> (19 Jun 2003)
 # re-write and porting of all gtk-themes.
 # masking for testing
->=x11-themes/gnome-themes-2.2.2-r1
->=x11-themes/gtk-engines-2.2.0
->=x11-themes/gtk-engines-mist-0.10
->=x11-themes/gtk-engines-crux-1.9.5-r1
->=x11-themes/gtk-engines-lighthouseblue-0.7.0
+#>=x11-themes/gnome-themes-2.2.2-r1
+#>=x11-themes/gtk-engines-2.2.0
+#>=x11-themes/gtk-engines-mist-0.10
+#>=x11-themes/gtk-engines-crux-1.9.5-r1
+#>=x11-themes/gtk-engines-lighthouseblue-0.7.0
 
 # <liquidx@gentoo.org> (19 Jun 2003)
 # double protection for alpha quality gpdf
