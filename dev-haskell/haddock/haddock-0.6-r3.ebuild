@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haddock/haddock-0.6-r3.ebuild,v 1.1 2004/10/21 14:09:36 kosmikus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haddock/haddock-0.6-r3.ebuild,v 1.2 2004/11/18 22:00:22 kosmikus Exp $
 #
 # USE variable summary:
 #   doc    - Build extra documenation from DocBook sources,
@@ -16,7 +16,7 @@ SRC_URI="http://www.haskell.org/haddock/${P}-src.tar.gz"
 HOMEPAGE="http://www.haskell.org/haddock"
 
 SLOT="0"
-KEYWORDS="x86 ~sparc ~ppc"
+KEYWORDS="x86 ~sparc ~ppc ~amd64"
 LICENSE="as-is"
 
 DEPEND="virtual/ghc
@@ -41,8 +41,8 @@ src_compile() {
 	# unset SGML_CATALOG_FILES because documentation installation
 	# breaks otherwise ...
 	PATH="${GHCPATH}" SGML_CATALOG_FILES="" econf || die "econf failed"
-	# using make because emake behaved strangely on my machine
-	make || die "make failed"
+	# using -j1 because -j2 behaved strangely on my machine
+	emake -j1 || die "make failed"
 
 	# if documentation has been requested, build documentation ...
 	if use doc; then
@@ -61,22 +61,26 @@ src_compile() {
 src_install() {
 	local mydoc
 
+	# the libdir0 setting is needed for amd64, and does not
+	# harm for other arches
 	make install \
 		prefix="${D}/usr" \
 		datadir="${D}/usr/share/${P}" \
 		infodir="${D}/usr/share/info" \
-		mandir="${D}/usr/share/man" || die "make install failed"
+		mandir="${D}/usr/share/man" \
+		libdir0="${D}/usr/$(get_libdir)" \
+		|| die "make install failed"
 
 	cd ${S}/haddock
 	dodoc CHANGES LICENSE README TODO
 
 	if use doc; then
 		cd ${S}/haddock/doc
-		dohtml -r haddock/* || die
+		dohtml -r haddock/* || die "html docs couldn't be installed"
 		dosym haddock.html /usr/share/doc/${PF}/html/index.html
 		if use tetex; then
 			docinto ps
-			dodoc haddock.ps || die
+			dodoc haddock.ps || die "ps docs couldn't be installed"
 		fi
 	fi
 }

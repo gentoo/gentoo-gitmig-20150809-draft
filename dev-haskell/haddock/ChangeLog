@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/haddock
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haddock/ChangeLog,v 1.16 2004/10/21 14:09:36 kosmikus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haddock/ChangeLog,v 1.17 2004/11/18 22:00:22 kosmikus Exp $
+
+  18 Nov 2004; Andres Loeh <kosmikus@gentoo.org> haddock-0.6-r3.ebuild:
+  Can now be built on amd64 (bug #69830). Moved to ~amd64.
 
 *haddock-0.6-r3 (21 Oct 2004)
 
