@@ -1,8 +1,13 @@
 # ChangeLog for dev-libs/glib
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.16 2002/06/30 00:40:57 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.17 2002/07/24 03:44:56 cselkirk Exp $
 
 *glib-2.0.4-r1 (30 Jun 2002)
+  23 Jul 2002; Calum Selkrik <cselkirk@gentoo.org> glib-2.0.4.ebuild-r1
+  glib-2.0.4.ebuild glib-1.2.10-r4.ebuild glib-2.0.1-r6.ebuild :
+  Added KEYWORDS="x86 ppc"
+  Added RDEPEND to glib-1.2.10-r4.ebuild
+
   30 Jun 2002; Martin Schlemmer <azarah@gentoo.org> glib-2.0.4.ebuild-r1 :
   Try to fix bug #4190 with a fix for nautilus. Seems we have
   another libtool bug to recon with.

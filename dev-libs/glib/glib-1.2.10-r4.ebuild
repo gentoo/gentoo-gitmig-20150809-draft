@@ -1,14 +1,16 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-1.2.10-r4.ebuild,v 1.2 2002/07/11 06:30:20 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-1.2.10-r4.ebuild,v 1.3 2002/07/24 03:44:56 cselkirk Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="The GLib library of C routines"
 SRC_URI="ftp://ftp.gtk.org/pub/gtk/v1.2/${P}.tar.gz
 	 ftp://ftp.gnome.org/pub/GNOME/stable/sources/glib/${P}.tar.gz"
 HOMEPAGE="http://www.gtk.org/"
-
+KEYWORDS="x86 ppc" 
 DEPEND="virtual/glibc"
+RDEPEND="virtual/glibc"
+LICENSE="LGPL-2.1"
 SLOT="1"
 
 src_compile() {
