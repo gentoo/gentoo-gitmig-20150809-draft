@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.1.ebuild,v 1.3 2005/01/08 05:04:17 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.1.ebuild,v 1.4 2005/01/08 14:41:56 chriswhite Exp $
 
 # Missing support for...
 #	tarkin - package not in portage yet - experimental
@@ -54,6 +54,7 @@ DEPEND="hal? ( >=sys-apps/hal-0.2.97 )
 		3dfx? ( !amd64? ( media-libs/glide-v3 ) )
 		bidi? ( >=dev-libs/fribidi-0.10.4 )
 		gnutls? ( >=net-libs/gnutls-1.0.0 )
+		opengl? ( virtual/opengl )
 		sys-libs/zlib
 		media-libs/libpng
 		media-libs/libdvbpsi
@@ -97,7 +98,7 @@ src_compile () {
 	if use cdio && use cddb && use cdda ; then
 		myconf="${myconf} --enable-cddax"
 	else
-		myconf-"${myconf} --disable-cddax"
+		myconf="${myconf} --disable-cddax"
 	fi
 
 	# reason why:
@@ -135,7 +136,7 @@ src_compile () {
 	$(use_enable bidi fribidi) \
 	$(use_enable dvd dvdread) \
 	$(use_enable dvd dvdplay) \
-	$(use_eanble dvd dvdnav) \
+	$(use_enable dvd dvdnav) \
 	$(use_enable fbcon fb) \
 	$(use_enable svga svgalib) \
 	$(use_enable 3dfx glide) \
