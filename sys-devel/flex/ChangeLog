@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/flex
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/flex/ChangeLog,v 1.20 2004/07/19 08:29:55 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/flex/ChangeLog,v 1.21 2004/07/27 14:10:45 pappy Exp $
+
+  27 Jul 2004; Alexander Gabert <pappy@gentoo.org> flex-2.5.4a-r5.ebuild:
+  flex breaks when MAKEOPTS is set aggressively
 
   19 Jul 2004; Michael Sterrett <mr_bones_@gentoo.org> flex-2.5.4a-r5.ebuild:
   take out the emake || make bit.  Works for me with -j and no verified

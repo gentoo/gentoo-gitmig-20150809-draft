@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/flex/flex-2.5.4a-r5.ebuild,v 1.22 2004/07/19 08:29:55 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/flex/flex-2.5.4a-r5.ebuild,v 1.23 2004/07/27 14:10:45 pappy Exp $
 
 inherit eutils
 
@@ -29,6 +29,7 @@ src_unpack() {
 }
 
 src_compile() {
+
 	./configure \
 		--prefix=/usr \
 		--host=${CHOST} \
@@ -36,14 +37,14 @@ src_compile() {
 
 	if use static
 	then
-		emake LDFLAGS=-static || die "emake failed"
+		emake -j1 LDFLAGS=-static || die "emake failed"
 	else
-		emake || die "emake failed"
+		emake -j1 || die "emake failed"
 	fi
 }
 
 src_install() {
-	make prefix=${D}/usr \
+	make -j1 prefix=${D}/usr \
 		mandir=${D}/usr/share/man/man1 \
 		install || die "make install failed"
 
