@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1036 2005/03/24 02:07:21 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1037 2005/03/24 17:52:25 greg_g Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -296,6 +296,7 @@ kde-base/kdeartwork-kscreensaver:xscreensaver - Enables detection of xscreensave
 kde-base/kdeartwork:xscreensaver - Enables detection of xscreensavers
 kde-base/kdebase:ieee1394 - Enable firewire support in Info Center.
 kde-base/kdebase:logitech-mouse - Builds module for configuring logitech mice.
+kde-base/kdeedu:kig-scripting - Enable support for python scripting in kig
 kde-base/kdegraphics-kfile-plugins:openexr - Enable support for OpenEXR graphic file format (www.openexr.com)
 kde-base/kdegraphics-meta:povray - Enable povray dependency - needed for kpovmodeler
 kde-base/kdegraphics:jpeg2k - Enable support for jpeg2k (jasper)
@@ -306,6 +307,7 @@ kde-base/kdelibs:openexr - Enable support for OpenEXR graphic file format (www.o
 kde-base/kdelibs:zeroconf - Enable support for DNS Service Discovery (DNS-SD)
 kde-base/kdenetwork:rdesktop - Enable remote desktop functionality
 kde-base/kdepim:gnokii - Enable address synchronization with mobile phones with gnokii
+kde-base/kig:kig-scripting - Enable support for python scripting
 kde-base/kpdf:nodrm - Disable DRM support in kpdf
 kde-base/krdc:rdesktop - Enable remote desktop functionality
 mail-client/evolution:nntp - Enable evolution nntp (news) functionality
