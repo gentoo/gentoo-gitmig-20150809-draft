@@ -1,6 +1,11 @@
 # ChangeLog for gnome-extra/at-spi
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/at-spi/ChangeLog,v 1.16 2003/07/04 21:47:09 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/at-spi/ChangeLog,v 1.17 2003/07/05 10:51:16 liquidx Exp $
+
+*at-spi-1.1.9 (05 Jul 2003)
+
+  05 Jul 2003; Alastair Tse <liquidx@gentoo.org> at-spi-1.1.9.ebuild:
+  version bump
 
   09 Jun 2003; Alastair Tse <liquidx@gentoo.org> at-spi-1.1.8.ebuild:
   restrict MAKEOPTS to non-parallel building
