@@ -1,0 +1,52 @@
+diff -Naur ion-2-20040207/configure.ac ion-2/configure.ac
+--- ion-2-20040207/configure.ac	2004-02-07 16:37:01.000000000 +0100
++++ ion-2/configure.ac	2004-04-04 17:41:00.751390576 +0200
+@@ -5,7 +5,7 @@
+ AC_INIT([Ion Window Manager],
+ 		[2-20040207],
+ 		[tuomov@iki.fi],
+-		[ion])
++		[ion2])
+ AC_PREREQ([2.58])
+ AC_REVISION([$Revision: 1.1 $])
+ 
+diff -Naur ion-2-20040207/man/ion.1.in ion-2/man/ion.1.in
+--- ion-2-20040207/man/ion.1.in	2004-02-01 12:54:55.000000000 +0100
++++ ion-2/man/ion.1.in	2004-04-04 17:11:54.000000000 +0200
+@@ -2,7 +2,7 @@
+ .SH NAME
+ Ion - an X11 window manager
+ .SH SYNOPSIS
+-.B ion
++.B ion2
+ .I "[options]"
+ .SH "DESCRIPTION"
+ 
+@@ -429,7 +429,7 @@
+ .PP
+ .I DOCDIR/
+ .PP
+-\fIX(7x)\fP, \fIpwm(1)\fP
++\fIX(7x)\fP, \fIpwm2(1)\fP
+ 
+ .SH AUTHOR
+ Ion was written by Tuomo Valkonen <tuomov at iki.fi>.
+diff -Naur ion-2-20040207/man/pwm.1.in ion-2/man/pwm.1.in
+--- ion-2-20040207/man/pwm.1.in	2004-01-25 19:05:05.000000000 +0100
++++ ion-2/man/pwm.1.in	2004-04-04 17:12:50.000000000 +0200
+@@ -2,7 +2,7 @@
+ .SH NAME
+ PWM - An X11 window manager
+ .SH SYNOPSIS
+-.B pwm
++.B pwm2
+ .I "[options]"
+ .SH "DESCRIPTION"
+ 
+@@ -75,5 +75,5 @@
+ .SH SEE ALSO
+ 
+ For more information, see
+-\fIion(1)\fP.
++\fIion2(1)\fP.
+ 
