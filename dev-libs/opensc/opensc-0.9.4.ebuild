@@ -1,13 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/opensc/opensc-0.9.4.ebuild,v 1.3 2005/01/23 22:31:20 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/opensc/opensc-0.9.4.ebuild,v 1.4 2005/01/26 00:45:36 dragonheart Exp $
 
 inherit eutils
 
-MY_P=${P/_/-}
 DESCRIPTION="SmartCard library and applications"
 HOMEPAGE="http://www.opensc.org/"
-SRC_URI="http://www.opensc.org/files/${MY_P}.tar.gz"
+SRC_URI="http://www.opensc.org/files/${P}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="0"
@@ -20,8 +19,6 @@ RDEPEND="ldap? ( net-nds/openldap )
 	X? ( virtual/x11 )
 	pcsc-lite? ( sys-apps/pcsc-lite )
 	!pcsc-lite? ( >=dev-libs/openct-0.5.0 )"
-
-S=${WORKDIR}/${MY_P}
 
 src_unpack() {
 	unpack ${A}
