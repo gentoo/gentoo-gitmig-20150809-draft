@@ -1,19 +1,18 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-1.0.8-r5.ebuild,v 1.13 2004/08/21 16:29:51 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-1.0.8-r5.ebuild,v 1.14 2004/11/08 14:33:03 vapier Exp $
 
 inherit libtool eutils
 
-IUSE="nls"
-
 S=${WORKDIR}/GConf-${PV}
 DESCRIPTION="Gconf"
-SRC_URI="ftp://ftp.gnome.org/pub/GNOME/sources/GConf/1.0/GConf-${PV}.tar.gz"
 HOMEPAGE="http://www.gnome.org/"
+SRC_URI="ftp://ftp.gnome.org/pub/GNOME/sources/GConf/1.0/GConf-${PV}.tar.gz"
 
-SLOT="1"
 LICENSE="LGPL-2.1"
-KEYWORDS="x86 ppc ~sparc alpha hppa amd64 ia64"
+SLOT="1"
+KEYWORDS="alpha amd64 hppa ia64 ppc ~sparc x86"
+IUSE="nls"
 
 DEPEND="dev-util/indent
 	=dev-libs/glib-1.2*
