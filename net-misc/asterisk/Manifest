@@ -1,22 +1,32 @@
-MD5 e32714325d4d0cff0fa55ee21c770262 ChangeLog 5486
-MD5 59c5df3bcdb1203968dcfdb99663a2b4 asterisk-1.0.3-r1.ebuild 5854
-MD5 b551ce4bb8eb4a03cb0e551c279ab02c asterisk-0.9.0.ebuild 3161
-MD5 6201814863e121c6cae9a8209b0b9a27 asterisk-1.0.0.ebuild 3394
-MD5 44cf247f04cc83413fcb40ed59d0847a metadata.xml 248
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 c870e11d5cfc72f46a1290e769a491cc asterisk-1.0.1.ebuild 5576
-MD5 465f444622b40abb34bbb311b571ed24 asterisk-1.0.2.ebuild 5585
-MD5 f8f67a69a71f0aae7b7a663746efef29 asterisk-1.0.3.ebuild 5834
+MD5 44cf247f04cc83413fcb40ed59d0847a metadata.xml 248
+MD5 6201814863e121c6cae9a8209b0b9a27 asterisk-1.0.0.ebuild 3394
+MD5 dfc646b2edbdff6c684c4f3d53bc8448 ChangeLog 5637
 MD5 b724faa72660e83a70f8e3bdd2e669dc asterisk-1.0.5.ebuild 6303
+MD5 0a9506b97103f05fdd15df48db9b3506 asterisk-1.0.3-r1.ebuild 5865
+MD5 b551ce4bb8eb4a03cb0e551c279ab02c asterisk-0.9.0.ebuild 3161
+MD5 465f444622b40abb34bbb311b571ed24 asterisk-1.0.2.ebuild 5585
+MD5 9af7f719e9db949d2d7870e01cd6faa1 asterisk-1.0.3.ebuild 5845
+MD5 b97c969a083704e6f8c8c9b07d56db3b files/digest-asterisk-1.0.1 213
 MD5 4fa7ca8f47238dee3484dae5fb8f294c files/digest-asterisk-1.0.3 213
+MD5 4fa7ca8f47238dee3484dae5fb8f294c files/digest-asterisk-1.0.3-r1 213
 MD5 0243bdde80a5b8433cf93c306458dfd8 files/digest-asterisk-0.9.0 67
 MD5 1bb1cf45f134eeae6adcc7dc17b6b5db files/digest-asterisk-1.0.0 141
-MD5 b97c969a083704e6f8c8c9b07d56db3b files/digest-asterisk-1.0.1 213
 MD5 5474694f8ec88752718f88d84e587468 files/digest-asterisk-1.0.2 213
-MD5 4fa7ca8f47238dee3484dae5fb8f294c files/digest-asterisk-1.0.3-r1 213
 MD5 08f910cf85384f1d08c01a439cb3634e files/digest-asterisk-1.0.5 213
-MD5 5b7ebf09c4c7988bd16cadaaad08d8f6 files/0.9.0/asterisk.confd 290
 MD5 5109a8a08fdf97bb040710d8d54bce41 files/0.9.0/asterisk.rc6 455
-MD5 85e291d6eb70a24fdc82469ed53bfe54 files/1.0.0/asterisk.confd 283
+MD5 5b7ebf09c4c7988bd16cadaaad08d8f6 files/0.9.0/asterisk.confd 290
 MD5 86b4d8f884079c798034a39256a24040 files/1.0.0/asterisk.rc6 503
-MD5 f0fe0308b464c71f83cf2483388c8058 files/1.0.0/asterisk-1.0.1-linux26.diff 474
 MD5 6a50db2ee46d4139128d0c4225ac071f files/1.0.0/asterisk-uclibc-dns.diff 433
+MD5 f0fe0308b464c71f83cf2483388c8058 files/1.0.0/asterisk-1.0.1-linux26.diff 474
+MD5 85e291d6eb70a24fdc82469ed53bfe54 files/1.0.0/asterisk.confd 283
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFB/n1XKRy60XGEcJIRAj+QAJ4xn5qvtc4d+9xuHoahg3pXzEhI2wCfW+J8
+l2JxY8mC4dHK6ccJ7JZ7/Ig=
+=HNWv
+-----END PGP SIGNATURE-----
