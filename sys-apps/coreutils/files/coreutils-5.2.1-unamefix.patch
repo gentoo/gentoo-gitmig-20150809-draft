@@ -1,0 +1,15 @@
+--- src/uname.c.orig	2004-08-26 07:08:06.064972152 -0500
++++ src/uname.c	2004-08-26 07:08:44.153906792 -0500
+@@ -177,9 +177,11 @@
+ 					"cpu model", "system type"
+ 				#elif defined(PPC)
+ 					"cpu", "machine"
++				#elif defined(__powerpc64__)
++					"cpu", "machine"
+ 				#elif defined(__arm__)
+ 					"Processor", "Hardware"
+-				#elif defined(__s390__) || defined(__s390x__
++				#elif defined(__s390__) || defined(__s390x__)
+ 					"Type", "Manufacturer"
+ 				#else
+ 					"???", "???"
