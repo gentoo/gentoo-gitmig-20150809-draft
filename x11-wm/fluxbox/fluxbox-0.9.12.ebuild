@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-0.9.12.ebuild,v 1.2 2005/01/19 10:06:12 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-0.9.12.ebuild,v 1.3 2005/01/19 10:33:43 ciaranm Exp $
 
 inherit eutils
 
@@ -20,7 +20,7 @@ HOMEPAGE="http://www.fluxbox.org"
 RDEPEND="virtual/x11
 	truetype? ( media-libs/freetype )
 	nls? ( sys-devel/gettext )
-	imlib? ( >=media-libs/imlib-1.9.14 )
+	imlib? ( >=media-libs/imlib2-1.2.0 )
 	!<x11-themes/fluxbox-styles-fluxmod-20040809-r1"
 DEPEND=">=sys-devel/autoconf-2.52
 		${RDEPEND}"
