@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/jabberd-1.4.3-r3.ebuild,v 1.11 2004/07/07 19:18:03 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/jabberd-1.4.3-r3.ebuild,v 1.12 2004/07/08 01:29:16 humpback Exp $
 
 inherit eutils
 
@@ -171,4 +171,6 @@ pkg_postinst() {
 	einfo
 	einfo "Please read /usr/share/doc/${PF}/README.Gentoo.gz"
 	einfo
+	ewarn "If upgrading from older version please stop jabberd BEFORE updating the init.d"
+	ewarn "script, or you will end with a \"dead\" server."
 }
