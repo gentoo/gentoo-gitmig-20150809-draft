@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/pth
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pth/ChangeLog,v 1.27 2005/01/22 22:14:05 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pth/ChangeLog,v 1.28 2005/02/09 10:19:15 dragonheart Exp $
+
+  09 Feb 2005; Daniel Black <dragonheart@gentoo.org> pth-2.0.3.ebuild:
+  gawk problem fixed enabling full locale
 
   23 Jan 2005; Daniel Black <dragonheart@gentoo.org> pth-2.0.3.ebuild:
   Added LC_ALL=C to pth_p.h compile as per bug #78749. Thanks to Fabio Coatti
