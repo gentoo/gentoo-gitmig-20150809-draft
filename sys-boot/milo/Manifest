@@ -5,5 +5,5 @@ MD5 987873fb766bc62dcb7336015388e4e3 files/mkserial_no.c 1264
 MD5 0d52b7b08a86538142aa8652017f15e9 files/milo-2.2-18-gcc3-gentoo.diff 5619
 MD5 f6830f117d7528a50b53e85150040d73 files/linux-2.2.25-gcc3-milo.diff 3542
 MD5 4f7cadb7dd636d407b0477e5302fbbe1 files/objstrip.c 6126
-MD5 b4fb8c3fe3b584e0d4e56add2b52252a files/README-gentoo 3507
+MD5 e26e3e1424b5b2dfc48ffac79558e9ec files/README-gentoo 3500
 MD5 50c0136152336ca93b808adb1e49a98d files/digest-milo-2.4.18 389
