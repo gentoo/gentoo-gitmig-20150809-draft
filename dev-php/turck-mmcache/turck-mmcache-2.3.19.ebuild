@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/turck-mmcache/turck-mmcache-2.3.19.ebuild,v 1.1 2003/07/19 07:33:17 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/turck-mmcache/turck-mmcache-2.3.19.ebuild,v 1.2 2003/07/19 07:52:51 stuart Exp $
 
 DESCRIPTION="Turck MMCache is a free open source PHP accelerator, optimizer, encoder and dynamic content cache for PHP. It increases performance of PHP scripts by caching them in compiled state, so that the overhead of compiling is almost completely eliminated. Also it uses some optimizations to speed up execution of PHP scripts. Turck MMCache typically reduces server load and increases the speed of your PHP code by 1-10 times."
 SRC_URI="mirror://sourceforge/turck-mmcache/${P}.tar.gz"
@@ -25,13 +25,20 @@ src_install() {
 	
 	php-ext_src_install
 
-	#create Cache dir if it does not exist
-	if [ ! -d /tmp/mmcache ] 
+	# create Cache dir if it does not exist
+	#
+	# settings should ensure that cached files are secure,
+	# *but* this may break php-cli
+	#
+	# please file a bug in http://bugs.gentoo.org if this happens
+	# for you
+
+	if [ ! -d /var/cache/mmcache ] 
 	then
-  		mkdir /tmp/mmcache
+  		mkdir /var/cache/mmcache
 	fi
-	# doesn't hurt :)
-	chmod 0777 /tmp/mmcache
+	chown root.root /var/cache/mmcache
+	chmod 1777 /var/cache/mmcache
 
     insinto /usr/share/${PN}
 	doins encoder.php mmcache.php mmcache.gif
@@ -43,7 +50,7 @@ pkg_postinst () {
 	php-ext_pkg_postinst
 
 	php-ext_addtoinifiles "mmcache.shm_size" '"16"'
-	php-ext_addtoinifiles "mmcache.cache_dir" '"/tmp/mmcache"'
+	php-ext_addtoinifiles "mmcache.cache_dir" '"/var/cache/mmcache"'
 	php-ext_addtoinifiles "mmcache.enable" '"1"'
 	php-ext_addtoinifiles "mmcache.optimizer" '"1"'
 	php-ext_addtoinifiles "mmcache.check_mtime" '"1"'

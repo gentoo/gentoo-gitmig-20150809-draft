@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/ipv6tools
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/turck-mmcache/ChangeLog,v 1.1 2003/07/19 07:33:17 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/turck-mmcache/ChangeLog,v 1.2 2003/07/19 07:52:51 stuart Exp $
+
+*turck-mmcache-2.3.19 (19 07 2003)
+
+  19 07 2003: Stuart Herbert <stuart@gentoo.org> turck-mmcache-2.3.19.ebuild
+  Moved cache dir from /tmp/mmcache to /var/cache/mmcache, and changed
+  permissions to make sure (on multi-user machines) that cache files can't
+  be replaced to inject other code
 
 *turck-mmcache-2.3.19 (11 07 2003)
 
