@@ -1,3 +1,7 @@
+# 21 Jul 2003 Guy Martin <gmsoft@gentoo.org>
+# Rpm is not working and foreign-package make kdeadmin depend on it
+foreign-package
+
 # 17 Jul 2003 Guy Martin <gmsoft@gentoo.org>
 # Avi support is far from 'supported'
 avi
