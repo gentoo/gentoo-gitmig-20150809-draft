@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/curl/curl-7.10.3-r1.ebuild,v 1.5 2003/11/15 03:17:13 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/curl/curl-7.10.3-r1.ebuild,v 1.6 2003/12/09 23:38:57 liquidx Exp $
 
 DESCRIPTION="A Client that groks URLs"
 SRC_URI="http://curl.haxx.se/download/${P}.tar.bz2"
@@ -11,8 +11,8 @@ LICENSE="MIT X11"
 KEYWORDS="x86 ppc ~sparc alpha ia64"
 IUSE="ssl ipv6 ldap"
 
-DEPEND=">=sys-libs/pam-0.75
-	ssl? ( >=dev-libs/openssl-0.9.6a )"
+DEPEND="ssl? ( >=dev-libs/openssl-0.9.6a )
+	ldap? ( net-nds/openldap )"
 
 src_compile() {
 	local myconf="--with-gnu-ld --enable-http --enable-ftp --enable-gopher --enable-file \

@@ -1,6 +1,11 @@
 # ChangeLog for net-ftp/curl
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/curl/ChangeLog,v 1.21 2003/11/15 03:17:13 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/curl/ChangeLog,v 1.22 2003/12/09 23:38:56 liquidx Exp $
+
+  09 Dec 2003; Alastair Tse <liquidx@gentoo.org> curl-7.10.2.ebuild,
+  curl-7.10.3-r1.ebuild, curl-7.10.5-r1.ebuild, curl-7.10.7.ebuild,
+  curl-7.10.8.ebuild:
+  removed pam dependency, added openldap dep for older versions (#35343)
 
   14 Nov 2003; Aron Griffis <agriffis@gentoo.org> curl-7.10.3-r1.ebuild:
   Stable on ia64
