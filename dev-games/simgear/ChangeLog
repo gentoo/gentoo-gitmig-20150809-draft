@@ -1,6 +1,9 @@
 # ChangeLog for dev-games/simgear
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/simgear/ChangeLog,v 1.8 2004/06/24 22:14:21 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/simgear/ChangeLog,v 1.9 2004/10/18 15:50:26 lu_zero Exp $
+
+  18 Oct 2004; Luca Barbato <lu_zero@gentoo.org> simgear-0.3.5.ebuild:
+  Marked ppc, this version works with gcc-3.4.1
 
   11 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org> simgear-0.3.5.ebuild:
   ~amd64 for bug #52454; tidy

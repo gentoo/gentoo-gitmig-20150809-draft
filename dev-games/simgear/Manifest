@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 5cf4c9e853deaa8783e8896d214940ae ChangeLog 1704
-MD5 d1a4776c70e916317e93f7b34e541be5 metadata.xml 538
+MD5 2b5c99ad583761f2b4a6a861192cc845 ChangeLog 1823
 MD5 f9f0ad5ace187c5dcbd55c49c3757c24 simgear-0.3.4.ebuild 665
-MD5 d6d6ad20460e82b29d78551e8ec1575d simgear-0.3.5.ebuild 720
-MD5 1466e4168220fd2aa4051b2406b37674 files/digest-simgear-0.3.5 65
+MD5 d1a4776c70e916317e93f7b34e541be5 metadata.xml 538
+MD5 01048d689f8a0d7bcb3af1f9abd7b022 simgear-0.3.5.ebuild 720
 MD5 ae3200b92f93ae7649555a397ce09e2b files/digest-simgear-0.3.4 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA4YXTHTu7gpaalycRAofpAKCVxn0IxLLial0W75A7Vx+ej55nnQCgn9l0
-o+zP+ZeZ4BArz/KnmqPY6tw=
-=aXdf
------END PGP SIGNATURE-----
+MD5 1466e4168220fd2aa4051b2406b37674 files/digest-simgear-0.3.5 65
