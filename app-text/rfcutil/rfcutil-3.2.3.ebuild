@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/rfcutil/rfcutil-3.2.3.ebuild,v 1.2 2002/08/16 02:42:02 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/rfcutil/rfcutil-3.2.3.ebuild,v 1.3 2002/11/04 17:34:02 seemant Exp $
 
 MY_PN="rfc"
 MY_P="${MY_PN}-${PV}"
@@ -26,7 +26,10 @@ src_install () {
 	newbin ${MY_P} ${MY_PN}
 	doman ${MY_PN}.1
 	dodoc CHANGELOG INSTALL KNOWN_BUGS README
-	mkdir -p ${D}/var/cache/rfc/
+
+	touch ${S}/.keep
+	insinto /var/cache/rfc
+	doins .keep
 }
 
 pkg_postinst () {
