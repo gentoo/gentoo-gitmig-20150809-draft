@@ -1,0 +1,40 @@
+# Copyright 1999-2004 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/hppa/2004.3/make.defaults,v 1.1 2004/10/14 14:40:56 gmsoft Exp $
+#
+# System-wide defaults for the Portage system
+# See portage(5) manpage
+
+# System-wide defaults for the Portage system
+
+USE="
+berkdb
+crypt
+cups
+foomaticdb
+f77
+gdbm
+gpm
+imlib
+ipv6
+libwww
+ncurses
+nls
+pam
+perl
+pic
+python
+readline
+spell
+ssl
+tcpd
+xml2
+zlib
+"
+
+GRP_STAGE23_USE="${USE}"
+
+ARCH="hppa"
+ACCEPT_KEYWORDS="hppa"
+
+FEATURES="sandbox sfperms strict"
