@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/urlview
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/urlview/ChangeLog,v 1.13 2004/09/04 15:10:35 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/urlview/ChangeLog,v 1.14 2004/12/15 18:50:03 corsair Exp $
+
+  15 Dec 2004; Markus Rothe <corsair@gentoo.org> urlview-0.9.ebuild:
+  Added ~ppc64 to KEYWORDS; bug #74231
 
   04 Sep 2004; Tom Martin <slarti@gentoo.org> urlview-0.9.ebuild:
   Added einfo with regard to bug 42907.
