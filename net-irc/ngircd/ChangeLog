@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/ngircd
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ngircd/ChangeLog,v 1.14 2005/02/04 14:46:50 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ngircd/ChangeLog,v 1.15 2005/02/14 17:34:50 swegener Exp $
+
+  14 Feb 2005; Sven Wegener <swegener@gentoo.org> ngircd-0.8.3.ebuild:
+  Added missing inherit eutils, bug #82006.
 
   04 Feb 2005; Sven Wegener <swegener@gentoo.org> -ngircd-0.8.2.ebuild:
   Removed old ebuild.
