@@ -1,6 +1,13 @@
 # ChangeLog for x11-wm/plwm
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/plwm/ChangeLog,v 1.3 2003/11/04 20:24:43 tseng Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/plwm/ChangeLog,v 1.4 2004/06/03 20:25:32 lordvan Exp $
+
+*plwm-2.6_alpha (03 Jun 2004)
+
+  03 Jun 2004; Thomas Raschbacher <lordvan@gentoo.org> +plwm-2.6_alpha.ebuild:
+  version bump
+  now using distutils
+  installing all docs now (with subdirectories)
 
   04 Nov 2003; Brandon Hale <tseng@gentoo.org> metadata.xml, plwm-2.5.ebuild:
   Mark as stable on x86, add metadata
