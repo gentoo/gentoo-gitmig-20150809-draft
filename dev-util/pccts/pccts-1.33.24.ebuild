@@ -1,6 +1,6 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Frédéric Brin <duckx@libertysurf.fr>, Jonas Berlin <jonas@berlin.vg>
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pccts/pccts-1.33.24.ebuild,v 1.2 2001/08/08 09:19:17 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pccts/pccts-1.33.24.ebuild,v 1.3 2001/08/08 13:16:21 hallski Exp $
 
 A="pccts133mr24.zip"
 S=${WORKDIR}/pccts
@@ -19,8 +19,7 @@ src_unpack() {
 }
 
 src_compile() {
-        # Doesn't work with $CFLAGS.
-	try emake COPT="-O2" 
+	try emake COPT="$CFLAGS"
 }
 
 src_install() {
