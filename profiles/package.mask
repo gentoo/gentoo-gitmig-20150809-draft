@@ -22,6 +22,10 @@
 ##   End example
 ##
 
+# George Shapovalov <george@gentoo.org> (01 Aug 2002)
+# sandbox violation
+=dev-lang/stratego-0.7.ebuild
+
 # Karl Trygve Kalleberg <karltk@gentool.org> (01 Aug 2002)
 # Has non-ratified use flags.
 =dev-lisp/bigloo-lib-0.17
@@ -52,7 +56,7 @@ app-office/ical
 =app-i18n/xcin-2.5.2.3
 
 # Seemant Kulleen <seemant@gentoo.org> (31 Jul 2002)
-# invalid RDEPEND, invalid LICENSE, no $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.1154 2002/08/02 19:00:38 rphillips Exp $
+# invalid RDEPEND, invalid LICENSE, no $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.1155 2002/08/02 19:18:17 george Exp $
 # repoman had a field day
 sys-apps/discover
 sys-apps/discover-data
