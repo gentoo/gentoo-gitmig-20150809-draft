@@ -58,3 +58,4 @@ virtual/m3		dev-lang/cm3
 virtual/mailx          	mail-client/mailx
 virtual/xemacs		app-editors/xemacs
 virtual/w3m		www-client/w3m
+virtual/mailx           mail-client/mailx
