@@ -1,8 +1,8 @@
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 
-# Wait for Daniel's approval
-=sys-apps/portage-1.8.6-r2
+#per jnelson's request (30 Jan 2002, drobbins)
+=net-www/boa-0.94.12_pre3
 
 #mesa 3.5 apparently breaks source compatibilty with 3.4.2 and we should
 #stay with 3.4.2 'cause so many apps depend on it.  (drobbins, 26 Jan 2002)
