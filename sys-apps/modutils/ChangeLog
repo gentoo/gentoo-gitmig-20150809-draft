@@ -1,11 +1,15 @@
 # ChangeLog for sys-apps/modutils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/modutils/ChangeLog,v 1.27 2003/06/24 14:33:35 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/modutils/ChangeLog,v 1.28 2003/07/06 09:17:58 kumba Exp $
+
+
+*modutils-2.4.25 (31 Mar 2003)
+
+  06 Jul 2003; Joshua Kinard <kumba@gentoo.org> modutils-2.4.25.ebuild:
+  Changed ~mips to mips in KEYWORDS
 
   24 Jun 2003; Aron Griffis <agriffis@gentoo.org> modutils-2.4.25.ebuild:
   Mark stable on alpha
-
-*modutils-2.4.25 (31 Mar 2003)
 
   20 May 2003; Joshua Kinard <kumba@gentoo.org> modutils-2.4.23.ebuild,
   modutils-2.4.24.ebuild, modutils-2.4.25.ebuild:
