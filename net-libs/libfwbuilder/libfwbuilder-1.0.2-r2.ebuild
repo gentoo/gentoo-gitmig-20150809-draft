@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libfwbuilder/libfwbuilder-1.0.2-r2.ebuild,v 1.4 2004/06/24 23:12:22 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libfwbuilder/libfwbuilder-1.0.2-r2.ebuild,v 1.5 2004/10/04 22:26:16 pvdabeel Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://gentoo/${P}-2.tar.gz
 	gentoo.tamperd.net/distfiles/${P}-2.tar.gz"
 HOMEPAGE="http://www.fwbuilder.org/"
 
-KEYWORDS="x86 sparc amd64 ~ppc"
+KEYWORDS="x86 sparc amd64 ppc"
 LICENSE="GPL-2"
 SLOT="0"
 

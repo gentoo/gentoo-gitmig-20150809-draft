@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libesmtp/libesmtp-1.0-r1.ebuild,v 1.11 2004/09/03 01:14:59 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libesmtp/libesmtp-1.0-r1.ebuild,v 1.12 2004/10/04 22:27:02 pvdabeel Exp $
 
 inherit gcc eutils gnuconfig libtool
 
@@ -18,7 +18,7 @@ RDEPEND=""
 
 SLOT="0"
 LICENSE="LGPL-2.1 GPL-2"
-KEYWORDS="x86 sparc ~ppc alpha"
+KEYWORDS="x86 sparc ppc alpha"
 
 src_unpack() {
 	unpack ${A} ; cd ${S}
