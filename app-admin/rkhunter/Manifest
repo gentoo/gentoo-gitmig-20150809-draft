@@ -1,9 +1,19 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 7a051f6bf6c49fa77c097262416f55c5 rkhunter-1.1.5.ebuild 1332
 MD5 11e12ce76cc62d534b2a1676c54599d1 rkhunter-1.1.7.ebuild 1333
 MD5 14705fc0a0b9a58e3b62a4f8bf3d6781 rkhunter-1.1.6.ebuild 1333
-MD5 c58fc3673125a5ab07460da7b7e755a7 ChangeLog 2420
-MD5 e412a91eab0edc866384121b20ab8793 metadata.xml 230
+MD5 e84c2dba1fb2eb31b48468c010e1291a ChangeLog 2511
+MD5 99d3c59f680729e17f4576a845aaa6a0 metadata.xml 262
 MD5 bbe8224c46ee3ddd8cea79ed4b817ae4 files/rkhunter.cron 1035
 MD5 2d65b1e87551b85f4cec0a1743734469 files/digest-rkhunter-1.1.5 66
 MD5 c183749d28050849a426ebbbbb2523a5 files/digest-rkhunter-1.1.6 66
 MD5 011c5df2094bff6d80ce80a90e530bb6 files/digest-rkhunter-1.1.7 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBQz6AEZCkKN40op4RAsEFAKC9p9+nr6ta0VgtI+zrKwgH4CaMFACgoV7V
+wllDZYAYm0Ya+8NatUSU3Qs=
+=PnS3
+-----END PGP SIGNATURE-----
