@@ -1,7 +1,9 @@
 # ChangeLog for media-libs/freetype
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.34 2003/11/04 09:40:41 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.35 2003/11/13 14:00:06 tuxus Exp $
 
+  13 Nov 2003; <tuxus@gentoo.org> freetype-2.1.4.ebuild:
+  added mips to KEYWORDS
 
 *freetype-2.1.4-r1 (10 Aug 2003)
 
