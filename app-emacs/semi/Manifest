@@ -1,6 +1,7 @@
 MD5 8502423888d50bfe8a9b7bbc456edc64 ChangeLog 1423
 MD5 a6b611137a3f715aeb124a061a2e27b9 semi-1.14.4.ebuild 1233
 MD5 086d14f24d54abc410bb31572cb95c24 semi-1.14.5.ebuild 1226
+MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
 MD5 863ded151547d2b487d29bbd4567c548 semi-1.14.5-r1.ebuild 1280
 MD5 781c5cb096bb939976cd2ae5cce4bb3e files/65semi-gentoo.el 104
 MD5 aab1dec0e3e2df3425df8cdba5422544 files/digest-semi-1.14.4 63

@@ -4,6 +4,7 @@ MD5 5c434a84b6599f1e420275232ad0a0d3 mew-3.1.ebuild 1117
 MD5 7731db99fe4880cba99cefd8678ee8ce mew-3.2-r1.ebuild 1118
 MD5 9ec3eb304051362bdb10bdef77a12330 mew-3.2.ebuild 1080
 MD5 b29af46831dd3586bab82213931d4e3c mew-3.3.ebuild 1177
+MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
 MD5 b01c67ed2c3e6adf6f0895d1c0097b27 files/50mew-gentoo.el 187
 MD5 f5a3017ddbd11f99a0077fad12d7ab69 files/digest-mew-2.2 59
 MD5 d61b7b73e39d967857b0d7a72505117e files/digest-mew-3.1 59

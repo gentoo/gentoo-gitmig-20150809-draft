@@ -5,6 +5,7 @@ MD5 bbecdc3e3163ef04d43c50b837f1dcdb wl-2.10.1-r1.ebuild 1461
 MD5 74f5fb69c12588c2ea72f8baf1c1091f wl-2.10.1.ebuild 1462
 MD5 a74545efb23ae006d89a69ead03f8313 wl-2.8.1.ebuild 1262
 MD5 e3d1c5ba27118c1ee007851d1c5cf8f7 wl-2.11.4.20030728.ebuild 1443
+MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
 MD5 c633c96cff2fe04a6aec8ba3a96440d7 files/70wl-gentoo.el 298
 MD5 3ad7747decc89ea13c0b23de355b79bb files/digest-wl-2.10.0 61
 MD5 3ad7747decc89ea13c0b23de355b79bb files/digest-wl-2.10.0-r1 61
