@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/alltray
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/alltray/ChangeLog,v 1.2 2005/01/28 14:32:22 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/alltray/ChangeLog,v 1.3 2005/01/30 20:45:08 luckyduck Exp $
+
+  30 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org> alltray-0.3.5.ebuild:
+  added ~amd64 to KEYWORDS. fixes #79873
 
 *alltray-0.3.5 (28 Jan 2005)
 
