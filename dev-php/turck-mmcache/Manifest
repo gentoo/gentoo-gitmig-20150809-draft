@@ -1,3 +1,5 @@
-MD5 73606cb81a8ce6f7b1b300724ecf7307 files/digest-turck-mmcache-2.3.19 71
-MD5 93d9d389ba5af0818694e0249a88cd60 ChangeLog 1175
 MD5 77112d52bb3fd03ddad8c11491a9f073 turck-mmcache-2.3.19.ebuild 2150
+MD5 8e8ccd80709d67ff8ee56e06e9f6d1a7 ChangeLog 1418
+MD5 fd38ebe7f12c5cdbca35a64eeaca11f1 turck-mmcache-2.3.20.ebuild 2252
+MD5 73606cb81a8ce6f7b1b300724ecf7307 files/digest-turck-mmcache-2.3.19 71
+MD5 a8528f36796c4b81c6e1a52a1d949876 files/digest-turck-mmcache-2.3.20 72
