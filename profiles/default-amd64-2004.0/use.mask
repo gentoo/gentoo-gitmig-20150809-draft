@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-amd64-2004.0/use.mask,v 1.11 2004/10/07 02:29:34 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-amd64-2004.0/use.mask,v 1.12 2004/10/07 21:51:00 george Exp $
 
 #unknowns
 afs
@@ -20,6 +20,10 @@ mmx
 sse
 sse2
 3dnow
+
+# 2004/10/07 - George Shapovalov <george@gentoo.org>
+# dev-lang/tcc won't build
+tcc
 
 # 2004/10/06 - Jeremy Huddleston <eradicator@gentoo.org>
 # sys-cluster/pvm won't build

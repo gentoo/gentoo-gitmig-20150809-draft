@@ -1,10 +1,14 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/gcc34-amd64-2004.1/use.mask,v 1.9 2004/10/07 02:29:34 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/gcc34-amd64-2004.1/use.mask,v 1.10 2004/10/07 21:51:00 george Exp $
 
 #unknowns
 afs
 drac
 
 # WON'T BUILD - SECTION
+
+# 2004/10/07 - George Shapovalov <george@gentoo.org>
+# dev-lang/tcc won't build
+tcc
 
 # 2004/10/06 - Jeremy Huddleston <eradicator@gentoo.org>
 # sys-cluster/pvm won't build

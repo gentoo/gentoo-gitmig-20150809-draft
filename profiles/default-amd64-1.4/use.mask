@@ -7,6 +7,10 @@ svga
 #jikes
 #junit
 
+# 2004/10/07 - George Shapovalov <george@gentoo.org>
+# dev-lang/tcc won't build
+tcc
+
 # Update 10/02/03 Brad House <brad_mssw@gentoo.org> 
 #    arts patches are in, it builds now
 # KDE doesnt build
