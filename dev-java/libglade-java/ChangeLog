@@ -1,10 +1,10 @@
 # ChangeLog for dev-java/libglade-java
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/libglade-java/ChangeLog,v 1.2 2004/12/04 20:06:32 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/libglade-java/ChangeLog,v 1.3 2004/12/21 20:15:30 karltk Exp $
 
 * libglade-java-2.8.2 (04 Dec 2004)
 
-  04 Dec 2004; <karltk@gentoo.org> :
+  04 Dec 2004; Karl Trygve Kalleberg <karltk@gentoo.org> :
   Initial import. Fixes #70561.
 
   08 Nov 2004; Andrew Cowie <andrew@operationaldynamics.com> 
