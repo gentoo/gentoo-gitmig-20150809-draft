@@ -1,10 +1,13 @@
 # ChangeLog for net-misc/rdiff-backup
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rdiff-backup/ChangeLog,v 1.6 2002/12/13 11:00:14 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rdiff-backup/ChangeLog,v 1.7 2002/12/17 19:47:37 blauwers Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *rdiff-backup-0.10.1 (25 Sep 2002)
+
+  17 dec 2002, B.Lauwers <blauwers@gentoo.org> rdiff-backup-0.10.1-r1.ebuild :
+  Added patch to fix Bug #9945, changed ebuild to use disutils eclass
 
   25 Sep 2002; Maik Schreiber <blizzy@gentoo.org> : New version,
   contains quite a few security and other fixes (see
