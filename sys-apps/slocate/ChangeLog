@@ -1,8 +1,11 @@
 # ChangeLog for sys-apps/slocate
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/slocate/ChangeLog,v 1.19 2003/04/19 16:04:34 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/slocate/ChangeLog,v 1.20 2003/05/06 14:25:19 gmsoft Exp $
 
 *slocate-2.7-r2 (17 Apr 2003)
+
+  06 May 2003; Guy Martin <gmsoft@gentoo.org> slocate-2.7-r2.ebuild :
+  Added sys-apps/shadow to DEPEND since pkg_postinst() use groupmod and groupadd.
 
   19 Apr 2003; Brandon Low <lostlogic@gentoo.org> slocate-2.7-r2.ebuild:
   Make the group existance checking smarter
