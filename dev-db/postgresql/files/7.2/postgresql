@@ -16,6 +16,6 @@ start()	{
 
 stop ()	{
 	ebegin "Stopping postgres"
-	start-stop-daemon --stop --quiet --pidfile=/var/lib/postgresql/postmaster.pid
+	start-stop-daemon --stop --quiet --pidfile=/var/lib/postgresql/data/postmaster.pid
 	eend $?
 }

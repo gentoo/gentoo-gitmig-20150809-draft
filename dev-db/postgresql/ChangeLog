@@ -1,6 +1,15 @@
 # ChangeLog for dev-db/postgresql
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.12 2002/06/20 14:25:45 prez Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.13 2002/07/02 17:03:55 rphillips Exp $
+
+*postgresql-7.2-r3 (02 Jul 2002)
+
+  02 Jul 2002; Ryan Phillips <rphillips@gentoo.org> files/7.2/postgresql,
+  postgresql-7.2-r3.ebuild
+
+  Fixes to the path of the postmaster pidfile.
+  Fixes to the ebuild to disable java version checking if java
+  is not in the use vars.
 
 *postgresql-7.2.1-r1 (20 Jun 2002)
 
