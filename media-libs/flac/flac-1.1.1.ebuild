@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/flac-1.1.1.ebuild,v 1.4 2004/10/05 18:33:30 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/flac-1.1.1.ebuild,v 1.5 2004/10/19 23:27:26 kito Exp $
 
 IUSE="sse xmms"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/flac/${P}.tar.gz"
 
 LICENSE="GPL-2 LGPL-2 "
 SLOT="0"
-KEYWORDS="~x86 -ppc ~sparc ~mips ~alpha ~hppa ~amd64 ~ia64 ~ppc64"
+KEYWORDS="~x86 -ppc ~sparc ~mips ~alpha ~hppa ~amd64 ~ia64 ~ppc64 ~ppc-macos"
 
 RDEPEND=">=media-libs/libogg-1.0_rc2
 	xmms? ( media-sound/xmms )"
@@ -62,4 +62,3 @@ pkg_postinst() {
 	preserve_old_lib_notify /usr/$(get_libdir)/libFLAC.so.4
 	preserve_old_lib_notify /usr/$(get_libdir)/libFLAC++.so.2
 }
-
