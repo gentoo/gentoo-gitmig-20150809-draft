@@ -1,6 +1,10 @@
 # ChangeLog for net-zope/portaltransforms
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/portaltransforms/ChangeLog,v 1.5 2004/03/26 23:37:02 batlogg Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/portaltransforms/ChangeLog,v 1.6 2004/03/26 23:38:55 batlogg Exp $
+
+  27 Mar 2004; Jodok Batlogg <batlogg@gentoo.org>;
+  portaltransforms-1.0_alpha3.ebuild:
+  corrected copyright (repoman)
 
 *portaltransforms-1.0.3 (27 Mar 2004)
 
