@@ -1,7 +1,0 @@
-MD5 7d081c98d5991c00d1e087649629c2b4 ChangeLog 3125
-MD5 f2dc0f18552f00f1465550683379c66e ORBit-0.5.16.ebuild 1466
-MD5 82ecfb41465bb699cbe33df76e9fc45a ORBit-0.5.17.ebuild 1467
-MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 32d8c91c3a81fc3081891cb85734aad9 files/digest-ORBit-0.5.16 66
-MD5 51bfc1efb763de186ee1b1f1e594891a files/digest-ORBit-0.5.17 66
-MD5 54d4643035be77ed8362225823cd7b60 files/libIDLConf.sh-gentoo.diff 462
