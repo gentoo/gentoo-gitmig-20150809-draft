@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/kdirstat
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/kdirstat/ChangeLog,v 1.9 2004/03/23 17:40:20 augustus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/kdirstat/ChangeLog,v 1.10 2004/05/01 12:15:41 centic Exp $
+
+  01 May 2004; Dominik Stadler <centic@gentoo.org> kdirstat-2.2.0.ebuild,
+  kdirstat-2.3.7.ebuild, kdirstat-2.4.0.ebuild:
+  Add missing IUSE and SLOT
 
   23 Mar 2004; <augustus@gentoo.org> kdirstat-2.4.0.ebuild:
   Added ~amd64 keyword.
