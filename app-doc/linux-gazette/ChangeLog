@@ -1,58 +1,6 @@
 # ChangeLog for app-doc/linux-gazette
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/linux-gazette/ChangeLog,v 1.9 2004/09/19 01:41:57 dragonheart Exp $
-
-  19 Sep 2004; Daniel Black <dragonheart@gentoo.org> :
-  Bad fix according to bug #64576. Reverted bad to old md5sum for #67. Thanks
-  Daniel Webert <rockoo@rockoo.homelinux.org>
-
-  11 Sep 2004; Daniel Black <dragonheart@gentoo.org> :
-  digest fix - linux-gazette-67. bug #63629 thanks to
-  <pascal.tempier@laposte.net>
-
-  09 Aug 2004; Tom Martin <slarti@gentoo.org> linux-gazette-*.ebuild:
-  Marked stable on amd64
-
-  14 Jul 2004; Tom Martin <slarti@gentoo.org> linux-gazette-*.ebuild:
-  Marked ~amd64.
-
-*linux-gazette-83 (29 Jun 2004)
-
-  29 Jun 2004; Aron Griffis <agriffis@gentoo.org> linux-gazette-01.ebuild,
-  linux-gazette-02.ebuild, linux-gazette-03.ebuild, linux-gazette-04.ebuild,
-  linux-gazette-05.ebuild, linux-gazette-06.ebuild, linux-gazette-07.ebuild,
-  linux-gazette-08.ebuild, linux-gazette-09.ebuild, linux-gazette-10.ebuild,
-  linux-gazette-11.ebuild, linux-gazette-12.ebuild, linux-gazette-13.ebuild,
-  linux-gazette-14.ebuild, linux-gazette-15.ebuild, linux-gazette-16.ebuild,
-  linux-gazette-17.ebuild, linux-gazette-18.ebuild, linux-gazette-19.ebuild,
-  linux-gazette-20.ebuild, linux-gazette-21.ebuild, linux-gazette-22.ebuild,
-  linux-gazette-23.ebuild, linux-gazette-24.ebuild, linux-gazette-25.ebuild,
-  linux-gazette-26.ebuild, linux-gazette-27.ebuild, linux-gazette-28.ebuild,
-  linux-gazette-29.ebuild, linux-gazette-30.ebuild, linux-gazette-31.ebuild,
-  linux-gazette-32.ebuild, linux-gazette-33.ebuild, linux-gazette-34.ebuild,
-  linux-gazette-35.ebuild, linux-gazette-36.ebuild, linux-gazette-37.ebuild,
-  linux-gazette-38.ebuild, linux-gazette-39.ebuild, linux-gazette-40.ebuild,
-  linux-gazette-41.ebuild, linux-gazette-42.ebuild, linux-gazette-43.ebuild,
-  linux-gazette-44.ebuild, linux-gazette-45.ebuild, linux-gazette-46.ebuild,
-  linux-gazette-47.ebuild, linux-gazette-48.ebuild, linux-gazette-49.ebuild,
-  linux-gazette-50.ebuild, linux-gazette-51.ebuild, linux-gazette-52.ebuild,
-  linux-gazette-53.ebuild, linux-gazette-54.ebuild, linux-gazette-55.ebuild,
-  linux-gazette-56.ebuild, linux-gazette-57.ebuild, linux-gazette-58.ebuild,
-  linux-gazette-59.ebuild, linux-gazette-60.ebuild, linux-gazette-61.ebuild,
-  linux-gazette-62.ebuild, linux-gazette-63.ebuild, linux-gazette-64.ebuild,
-  linux-gazette-65.ebuild, linux-gazette-66.ebuild, linux-gazette-67.ebuild,
-  linux-gazette-68.ebuild, linux-gazette-69.ebuild, linux-gazette-70.ebuild,
-  linux-gazette-71.ebuild, linux-gazette-72.ebuild, linux-gazette-73.ebuild,
-  linux-gazette-74.ebuild, linux-gazette-75.ebuild, linux-gazette-76.ebuild,
-  linux-gazette-77.ebuild, linux-gazette-78.ebuild, linux-gazette-79.ebuild,
-  linux-gazette-80.ebuild, linux-gazette-81.ebuild, linux-gazette-82.ebuild,
-  linux-gazette-83.ebuild, linux-gazette-84.ebuild, linux-gazette-85.ebuild,
-  linux-gazette-86.ebuild, linux-gazette-87.ebuild, linux-gazette-88.ebuild,
-  linux-gazette-89.ebuild, linux-gazette-90.ebuild, linux-gazette-91.ebuild,
-  linux-gazette-92.ebuild, linux-gazette-93.ebuild, linux-gazette-94.ebuild,
-  linux-gazette-95.ebuild, linux-gazette-96.ebuild, linux-gazette-97.ebuild,
-  linux-gazette-98.ebuild, linux-gazette-99.ebuild:
-  sync IUSE (missing)
+# $Header: /var/cvsroot/gentoo-x86/app-doc/linux-gazette/ChangeLog,v 1.10 2004/09/23 14:34:42 vapier Exp $
 
 *linux-gazette-* (21 Aug 2003)
 
