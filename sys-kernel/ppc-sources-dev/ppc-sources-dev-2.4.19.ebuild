@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-sources-dev/ppc-sources-dev-2.4.19.ebuild,v 1.17 2003/09/16 16:09:45 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-sources-dev/ppc-sources-dev-2.4.19.ebuild,v 1.18 2003/09/16 19:28:38 dholm Exp $
 
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
@@ -26,7 +26,7 @@ PROVIDE="virtual/linux-sources"
 HOMEPAGE="http://www.kernel.org/ http://www.gentoo.org/"
 LICENSE="GPL-2"
 SLOT="${KV}"
-KEYWORDS="ppc -x86 -sparc "
+KEYWORDS="~ppc -x86 -sparc "
 
 if [ $ETYPE = "sources" ] && [ -z "`use build`" ]
 then
