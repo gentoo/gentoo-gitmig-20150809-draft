@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-alsa/gst-plugins-alsa-0.8.2-r1.ebuild,v 1.7 2004/09/02 17:59:58 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-alsa/gst-plugins-alsa-0.8.2-r1.ebuild,v 1.8 2004/10/01 06:14:12 geoman Exp $
 
 inherit gst-plugins eutils
 
-KEYWORDS="x86 ppc amd64 ~ia64 ~mips hppa ppc64"
+KEYWORDS="x86 ppc amd64 ~ia64 mips hppa ppc64"
 
 IUSE=""
 # should we depend on a kernel (?)
