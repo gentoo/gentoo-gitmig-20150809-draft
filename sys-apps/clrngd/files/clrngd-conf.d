@@ -1,7 +1,6 @@
-#!/bin/sh
-# Copyright 1999-2003 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/clrngd/files/clrngd-conf.d,v 1.1 2004/01/04 23:20:13 robbat2 Exp $
+# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/clrngd/files/clrngd-conf.d,v 1.2 2004/03/06 04:06:01 vapier Exp $
 
 # This is the interval between runs of the clrngd main loop. It should NOT be
 # less than 60 seconds (the daemon will exit with an error) as the main loop

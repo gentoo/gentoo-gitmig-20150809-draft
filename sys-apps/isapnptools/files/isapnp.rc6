@@ -1,25 +1,25 @@
 #!/sbin/runscript
-# Copyright 1999-2003 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/isapnptools/files/isapnp.rc6,v 1.7 2003/02/14 23:26:09 vapier Exp $
+# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/isapnptools/files/isapnp.rc6,v 1.8 2004/03/06 04:09:07 vapier Exp $
 
 depend() {
 	need localmount
 }
 
 start() {
-if [ -e /etc/isapnp.conf ]; then
-	if [ -e /usr/sbin/isapnp ] ; then
-		ebegin "Configuring ISA PnP devices"
-		/usr/sbin/isapnp /etc/isapnp.conf 1>&2
-		eend $?
+	if [ -e /etc/isapnp.conf ]; then
+		if [ -e /usr/sbin/isapnp ] ; then
+			ebegin "Configuring ISA PnP devices"
+			/usr/sbin/isapnp /etc/isapnp.conf 1>&2
+			eend $?
+		else
+			eerror "You're missing /usr/sbin/isapnp. Do emerge sys-apps/isapnptools"
+			return 1
+		fi
 	else
-		eerror "You're missing /usr/sbin/isapnp. Do emerge sys-apps/isapnptools"
+		eerror "You need an /etc/isapnp.conf file first"
+		eerror "Theres a sample in docs/isapnptools/txt"
 		return 1
 	fi
-else
-	eerror "You need an /etc/isapnp.conf file first"
-	eerror "Theres a sample in docs/isapnptools/txt"
-	return 1
-fi
 }

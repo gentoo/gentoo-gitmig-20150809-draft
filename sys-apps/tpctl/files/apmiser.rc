@@ -1,13 +1,12 @@
 #!/sbin/runscript
-# Copyright 1999-2003 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/tpctl/files/apmiser.rc,v 1.2 2003/02/14 23:27:00 vapier Exp $
-
+# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/tpctl/files/apmiser.rc,v 1.3 2004/03/06 04:09:34 vapier Exp $
 
 start() {
 	ebegin "Starting Thinkpad Battery Maximiser"
 	start-stop-daemon --start --background --quiet --make-pidfile \
-            --pidfile /var/run/apmiser.pid --exec /usr/sbin/apmiser
+		--pidfile /var/run/apmiser.pid --exec /usr/sbin/apmiser
 	eend $?
 }
 
