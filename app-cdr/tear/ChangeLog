@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/tear
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/tear/ChangeLog,v 1.5 2003/03/28 12:12:31 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/tear/ChangeLog,v 1.6 2003/10/20 11:24:19 lanius Exp $
+
+  20 Oct 2003; Heinrich Wendel <lanius@gentoo.org> tear-1.0_rc1.ebuild:
+  bug #24566
 
 *tear-1.0_rc1 (26 Oct 2002)
 
