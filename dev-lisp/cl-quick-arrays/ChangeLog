@@ -1,6 +1,10 @@
 # ChangeLog for dev-lisp/cl-quick-arrays
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-quick-arrays/ChangeLog,v 1.4 2004/06/24 23:50:54 agriffis Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-quick-arrays/ChangeLog,v 1.5 2005/02/03 03:42:26 mkennedy Exp $
+
+  02 Feb 2005; Matthew Kennedy <mkennedy@gentoo.org>
+  cl-quick-arrays-1.0-r1.ebuild:
+  Override src_compile()
 
 *cl-quick-arrays-1.0-r1 (12 Feb 2004)
 
