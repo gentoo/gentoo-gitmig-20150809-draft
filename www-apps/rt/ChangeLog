@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/rt
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/ChangeLog,v 1.1 2004/08/25 13:01:01 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/ChangeLog,v 1.2 2004/08/26 10:35:22 rl03 Exp $
+
+  26 Aug 2004; Renat Lumpau <rl03@gentoo.org> files/reconfig:
+  Fixed db upgrade instructions.
 
 *rt-3.2.1 (25 Aug 2004)
 
