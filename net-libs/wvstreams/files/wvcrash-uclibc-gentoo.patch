@@ -1,0 +1,13 @@
+--- utils/wvcrash.cc.orig	2004-11-12 10:32:07 -0600
++++ utils/wvcrash.cc	2004-11-12 10:34:34 -0600
+@@ -10,8 +10,8 @@
+ #include <fcntl.h>
+ #include <string.h>
+ 
+-// FIXME: this file mostly only works in Linux
+-#ifdef __linux
++// FIXME: this file mostly only works in Linux and without uclibc
++#if defined(__linux) && !defined(__UCLIBC__)
+ 
+ # include <execinfo.h>
+ #include <unistd.h>

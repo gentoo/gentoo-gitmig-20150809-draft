@@ -1,6 +1,15 @@
 # ChangeLog for net-libs/wvstreams
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/ChangeLog,v 1.23 2004/11/02 09:07:22 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/ChangeLog,v 1.24 2004/11/16 13:07:26 dragonheart Exp $
+
+*wvstreams-3.75-r1 (16 Nov 2004)
+*wvstreams-4.0 (16 Nov 2004)
+
+  16 Nov 2004; Daniel Black <dragonheart@gentoo.org>
+  +files/wvcrash-uclibc-gentoo.patch, +files/wvstreams-4.0-tcl_8_4.patch,
+  +wvstreams-3.75-r1.ebuild, +wvstreams-4.0.ebuild:
+  version bump and uclibc patch from bug #70974. Thanks to Yuri Vasilevski
+  <yvasilev@duke.math.cinvestav.mx> for the patch
 
   02 Nov 2004; Daniel Black <dragonheart@gentoo.org> wvstreams-3.75.ebuild:
   Dependancy change of speex to speex? (media-libs/speex
