@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/hanterm/hanterm-3.1.6-r2.ebuild,v 1.2 2002/10/04 06:46:33 vapier Exp $ 
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/hanterm/hanterm-3.1.6-r2.ebuild,v 1.3 2002/10/17 15:33:58 aliz Exp $ 
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Hanterm -- Korean terminal"
@@ -17,10 +17,10 @@ DEPEND="virtual/glibc
 	x11-misc/baekmuk-fonts"
 
 src_compile() {
-	./configure 	\
-		--host=${CHOST}	\
+	./configure \
+		--host=${CHOST} \
 		--prefix=/usr \
-		--mandir=/usr/share/man	\
+		--mandir=/usr/share/man \
 		--with-Xaw3d \
 		--with-utempter
 
@@ -28,9 +28,9 @@ src_compile() {
 }
 
 src_install() {
-	make 	\
-		prefix=${D}/usr	\
-		mandir=${D}/usr/share/man	\
+	make \
+		prefix=${D}/usr \
+		mandir=${D}/usr/share/man \
 		install || die
 	install -d ${D}/usr/X11R6/lib/X11/app-defaults/
 	install -m 644 Hanterm.ad ${D}/usr/X11R6/lib/X11/app-defaults/Hanterm.orig

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/eterm/eterm-0.9.1-r4.ebuild,v 1.6 2002/10/05 05:39:28 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/eterm/eterm-0.9.1-r4.ebuild,v 1.7 2002/10/17 15:33:57 aliz Exp $
 
 IUSE="imlib"
 
@@ -36,27 +36,27 @@ src_compile() {
 		&& myconf="${myconf} --with-imlib --enable-trans" \
 		|| myconf="${myconf} --without-imlib --disable-trans"
 
-    econf \
+	econf \
 		--with-x \
 		--enable-multi-charset \
 		--with-delete=execute \
 		${myconf} || die
 		
-    emake || die
+	emake || die
 
 }
 
 src_install () {
 
-    cd ${S}
+	cd ${S}
 	dodir /usr/share/terminfo
-    make 	\
-		DESTDIR=${D}	\
-		TIC="tic -o ${D}/usr/share/terminfo"	\
+	make \
+		DESTDIR=${D} \
+		TIC="tic -o ${D}/usr/share/terminfo" \
 		install || die
 
-    dodoc COPYING ChangeLog README ReleaseNotes
-    dodoc bg/README.backgrounds
+	dodoc COPYING ChangeLog README ReleaseNotes
+	dodoc bg/README.backgrounds
 	cd ${D}/usr/share/Eterm/themes
 	unpack glass-Eterm-theme.tar.gz
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt/rxvt-2.7.8-r2.ebuild,v 1.5 2002/10/04 06:46:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt/rxvt-2.7.8-r2.ebuild,v 1.6 2002/10/17 15:33:58 aliz Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="rxvt -- nice small x11 terminal"
@@ -17,9 +17,9 @@ DEPEND="virtual/glibc
 
 src_compile() {
 	./configure \
-		--host=${CHOST}	\
+		--host=${CHOST} \
 		--prefix=/usr \
-		--mandir=/usr/share/man	\
+		--mandir=/usr/share/man \
 		--enable-rxvt-scroll \
 		--enable-transparency \
 		--enable-xpm-background \
@@ -36,7 +36,7 @@ src_compile() {
 }
 
 src_install() {
-	make 	\
+	make \
 		prefix=${D}/usr \
 		mandir=${D}/usr/share/man/man1 \
 		install || die
