@@ -1,8 +1,11 @@
 # ChangeLog for dev-libs/libxslt
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/ChangeLog,v 1.25 2003/03/09 21:39:59 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/ChangeLog,v 1.26 2003/03/19 19:38:40 gmsoft Exp $
 
 *libxslt-1.0.27 (03 Mar 2003)
+
+  19 Mar 2003; Guy Martin <gmsoft@gentoo.org> libxslt-1.0.27.ebuild :
+  Added ~hppa to keywords.
 
   09 Mar 2003; Aron Griffis <agriffis@gentoo.org> libxslt-1.0.27.ebuild:
   Mark stable on alpha
@@ -11,6 +14,9 @@
   New version
 
 *libxslt-1.0.25 (05 Feb 2003)
+
+  19 Mar 2003; Guy Martin <gmsoft@gentoo.org> libxslt-1.0.25.ebuild :
+  Added hppa to keywords.
 
   05 Feb 2003; foser <foser@gentoo.org> libxslt-1.0.25.ebuild :
   New version
