@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/nictools
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/nictools/ChangeLog,v 1.3 2003/09/25 19:00:45 robbat2 Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/nictools/ChangeLog,v 1.4 2004/01/05 11:32:04 robbat2 Exp $
+
+  05 Jan 2004; Robin H. Johnson <robbat2@gentoo.org> metadata.xml,
+  nictools-20030719.ebuild:
+  update metadata.xml. correct bug #37284.
 
   25 Sep 2003; Robin H. Johnson <robbat2@gentoo.org> nictools-20030719.ebuild:
   forgot to add patch to distfiles list

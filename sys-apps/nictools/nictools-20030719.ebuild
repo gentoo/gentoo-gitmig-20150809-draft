@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/nictools/nictools-20030719.ebuild,v 1.4 2003/10/17 19:23:22 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/nictools/nictools-20030719.ebuild,v 1.5 2004/01/05 11:32:04 robbat2 Exp $
 
 DESCRIPTION="nictools - diagnostic tools for a variety of ISA and PCI network cards"
 HOMEPAGE="http://www.scyld.com/diag/index.html"
@@ -8,8 +8,8 @@ HOMEPAGE="http://www.scyld.com/diag/index.html"
 # of the files from all of the debian package, and the entirely of the Scyld
 # website.
 # It has a vastly modified Makefile to make it easy to build on Gentoo
-SRC_URI="mirrors://gentoo/${P}.tbz2
-		 mirrors://gentoo/${P}-gcc33-multilinestring.patch"
+SRC_URI="mirror://gentoo/${P}.tbz2
+		 mirror://gentoo/${P}-gcc33-multilinestring.patch"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86"
