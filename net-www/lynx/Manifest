@@ -2,7 +2,7 @@ MD5 2d1f2e70a12611a190ae7173860c0fa7 ChangeLog 5425
 MD5 fb0407b936f3cfc98f9eaa08f69d35cf lynx-2.8.4.1c.ebuild 2162
 MD5 a54f22a6ba1b2bf08f6820e57fb855e3 lynx-2.8.4.1d-r1.ebuild 2395
 MD5 399ce834ff1764c06b0d94f6bfecaa2b lynx-2.8.4.1d.ebuild 2296
-MD5 920e1c4a3481d375932c6e96a9e25e61 lynx-2.8.5.ebuild 1770
+MD5 98e363d89c84ff4a0169597e2f8341ee lynx-2.8.5.ebuild 1780
 MD5 acaa86fdf4e340e1180ce324110007cd metadata.xml 224
 MD5 a5a3cf665f0451dfebbbdc90b2d23a89 files/digest-lynx-2.8.4.1c 260
 MD5 a48ecda8afc164dc0252e8d0ed579d49 files/digest-lynx-2.8.4.1d 324
