@@ -1,6 +1,10 @@
 # ChangeLog for net-www/mozilla
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.130 2003/11/18 15:40:08 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.131 2003/11/18 23:19:59 agriffis Exp $
+
+  18 Nov 2003; Aron Griffis <agriffis@gentoo.org> mozilla-1.5-r1.ebuild:
+  Merge arch-specific CFLAGS into a single case statement. Make it work for ia64
+  and alpha
 
   18 Nov 2003; Brad Laue <brad@gentoo.org> mozilla-1.5-r1.ebuild:
   At long last, move 1.5 into stable.

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.5-r1.ebuild,v 1.2 2003/11/18 15:40:08 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.5-r1.ebuild,v 1.3 2003/11/18 23:19:59 agriffis Exp $
 
 IUSE="java crypt ipv6 gtk2 ssl ldap gnome debug"
 # Internal USE flags that I do not really want to advertise ...
@@ -17,28 +17,39 @@ filter-flags "-fomit-frame-pointer"
 filter-flags -ffast-math
 append-flags -s -fforce-addr
 
-# Sparc support ...
-replace-sparc64-flags
-
-#fix to avoid gcc-3.3.x micompilation issues.
-if [ "`use ppc`" -a "$(gcc-major-version)" -eq "3" -a "$(gcc-minor-version)" -eq "3" ]
-then
-
-append-flags -fno-strict-aliasing
-
-fi
-
-# We set -O in ./configure to -O1, as -O2 cause crashes on startup ... (bug #13287)
-
-if [ "${ARCH}" = "amd64" ]
-then
-	# Anything more than this causes segfaults on startup on amd64
-	export CFLAGS="-Wall -O -fPIC -pipe"
-	export CXXFLAGS=${CFLAGS}
-else
-	export CFLAGS="${CFLAGS//-O?}"
-	export CXXFLAGS="${CFLAGS//-O?}"
-fi
+# Merged ARCH stuff into a single case statement.  But shouldn't this
+# stuff go in src_compile? (18 Nov 2003 agriffis)
+case "${ARCH}" in
+	alpha|ia64)
+		# Anything more than this causes segfaults on startup on 64-bit
+		# (but 33767)
+		export CFLAGS="${CFLAGS//-O?/-O} -Wall -fPIC -pipe"
+		export CXXFLAGS="${CXXFLAGS//-O?/-O} -Wall -fPIC -pipe"
+		;;
+	amd64)
+		# Anything more than this causes segfaults on startup on amd64
+		# [Note: I think amd64 could use the same as above in the
+		# alpha/ia64 section, but I'll let the amd64 devs choose. -agriffis]
+		export CFLAGS="-O -Wall -fPIC -pipe"
+		export CXXFLAGS="${CFLAGS}"
+		;;
+	ppc)
+		# Fix to avoid gcc-3.3.x micompilation issues.
+		if [ "$(gcc-major-version).$(gcc-minor-version)" = "3.3" ]; then
+			append-flags -fno-strict-aliasing
+		fi
+		;;
+	sparc)
+		# Sparc support ...
+		replace-sparc64-flags
+		;;
+	*)
+		# We set -O in ./configure to -O1, as -O2 cause crashes on
+		# startup (bug 13287)
+		export CFLAGS="${CFLAGS//-O?}"
+		export CXXFLAGS="${CFLAGS//-O?}"
+		;;
+esac
 
 EMVER="0.82.2"
 IPCVER="1.0.4"
@@ -56,7 +67,7 @@ SRC_URI="http://ftp.mozilla.org/pub/mozilla.org/mozilla/releases/${PN}${MY_PV2}/
 #	mirror://gentoo/${P}-patches-${PATCH_VER}.tar.bz2"
 HOMEPAGE="http://www.mozilla.org"
 
-KEYWORDS="x86 ~ppc ~sparc ~alpha amd64"
+KEYWORDS="x86 ~ppc ~sparc ~alpha amd64 ia64"
 SLOT="0"
 LICENSE="MPL-1.1 NPL-1.1"
 
