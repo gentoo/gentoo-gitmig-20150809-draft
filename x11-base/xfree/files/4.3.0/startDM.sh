@@ -1,7 +1,7 @@
 #!/bin/bash
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/files/4.3.0/startDM.sh,v 1.3 2004/03/06 04:20:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/files/4.3.0/startDM.sh,v 1.4 2004/07/15 01:03:31 agriffis Exp $
 # Author: Martin Schlemmer <azarah@gentoo.org>
 
 source /etc/init.d/functions.sh
