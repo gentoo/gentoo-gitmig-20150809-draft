@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gpc/gpc-20030209.ebuild,v 1.1 2003/02/15 04:37:05 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gpc/gpc-20030209.ebuild,v 1.2 2003/02/15 04:38:20 george Exp $
 
 #inherit flag-o-matic libtool
 inherit flag-o-matic
@@ -19,7 +19,7 @@ SRC_URI="http://gnu-pascal.de/alpha/${P}.tar.gz
 HOMEPAGE="http://gnu-pascal.de"
 
 SLOT="0"
-KEYWORDS="~x86 ~sparc ~sparc64"
+KEYWORDS="~x86 ~sparc"
 LICENSE="GPL-2"
 
 DEPEND="virtual/glibc
