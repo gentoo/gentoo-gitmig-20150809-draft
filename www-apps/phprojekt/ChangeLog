@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/phprojekt
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/phprojekt/ChangeLog,v 1.8 2004/12/08 08:34:18 sejo Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/phprojekt/ChangeLog,v 1.9 2004/12/10 17:24:59 tester Exp $
+
+  08 Dec 2004; Olivier Crete <tester@gentoo.org> phprojekt-4.2-r1.ebuild:
+  Stable on x86 wrt security bug 73021
 
   08 Dec 2004; <SeJo@gentoo.org> phprojekt-4.2-r1.ebuild:
   stable on ppc gsla: 73021

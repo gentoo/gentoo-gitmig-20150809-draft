@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/phprojekt/phprojekt-4.2-r1.ebuild,v 1.2 2004/12/08 08:34:18 sejo Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/phprojekt/phprojekt-4.2-r1.ebuild,v 1.3 2004/12/10 17:24:59 tester Exp $
 
 inherit webapp
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.phprojekt.com/"
 IUSE="postgres mysql"
 SRC_URI="mirror://gentoo/${P}.tar.gz http://phprojekt.com/files/4.2/setup.zip"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ppc"
+KEYWORDS="x86 ppc"
 
 RDEPEND="net-www/apache
 		postgres? ( dev-db/postgresql )
