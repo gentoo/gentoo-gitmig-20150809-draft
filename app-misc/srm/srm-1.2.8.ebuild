@@ -1,17 +1,21 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/srm/srm-1.2.7.ebuild,v 1.3 2004/06/07 08:51:54 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/srm/srm-1.2.8.ebuild,v 1.1 2004/06/07 08:51:54 dragonheart Exp $
 
 DESCRIPTION="A command-line compatible rm which destroys file contents before unlinking."
 HOMEPAGE="http://sourceforge.net/projects/srm"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 RESTRICT="nomirror"
-KEYWORDS="x86 amd64"
+KEYWORDS="~x86 ~amd64"
 LICENSE="X11"
 SLOT="0"
 IUSE=""
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/glibc
+	sys-apps/gawk
+	sys-apps/grep"
+
+RDEPEND="virtual/glibc"
 
 src_install () {
 	make DESTDIR="${D}" install || die "make install failed"
