@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/development-sources
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/ChangeLog,v 1.147 2004/10/29 10:56:45 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/ChangeLog,v 1.148 2004/11/02 16:43:30 plasmaroo Exp $
+
+  02 Nov 2004; <plasmaroo@gentoo.org> development-sources-2.6.8.1.ebuild:
+  Marking IA64 stable.
 
   29 Oct 2004; Daniel Drake <dsd@gentoo.org>
   development-sources-2.6.10_rc1.ebuild:
