@@ -112,7 +112,6 @@
 # SPARC specific packages
 *sys-apps/sparc-utils
 *sys-apps/silo
-*>=app-editors/nvi-1.81.4
 *dev-util/dialog
 # Kernel compiler
 *sys-devel/egcs64-sparc
