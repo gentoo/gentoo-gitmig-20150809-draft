@@ -1,10 +1,10 @@
 # ChangeLog for app-dicts/ispell-da
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-da/ChangeLog,v 1.38 2005/01/13 04:03:51 arj Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-da/ChangeLog,v 1.39 2005/01/13 04:11:00 arj Exp $
 
-*ispell-da-1.4.46 (13 Jan 2004)
+*ispell-da-1.4.46 (13 Jan 2005)
 
-  13 Jan 2004; Anders Rune Jensen <arj@gentoo.org> +ispell-da-1.4.46.ebuild:
+  13 Jan 2005; Anders Rune Jensen <arj@gentoo.org> +ispell-da-1.4.46.ebuild:
   Version bump.
 
   02 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> :
