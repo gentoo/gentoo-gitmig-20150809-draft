@@ -1,11 +1,12 @@
 # ChangeLog for net-mail/courier-imap
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.33 2003/05/20 18:28:21 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.34 2003/05/20 19:22:05 robbat2 Exp $
 
 *courier-imap-1.7.3 (20 May 2003)
 
   20 May 2003; Robin Johnson <robbat2@gentoo.org> courier-imap-1.7.3.ebuild: 
   Version bump and move warning message. Removed extraneous cflag filtering.
+  Fixed bug #21330 as well.
 
 *courier-imap-1.7.2 (19 May 2003)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-1.7.3.ebuild,v 1.2 2003/05/20 18:57:56 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-1.7.3.ebuild,v 1.3 2003/05/20 19:22:05 robbat2 Exp $
 
 DESCRIPTION="An IMAP daemon designed specifically for maildirs"
 SRC_URI="mirror://sourceforge/courier/${P}.tar.bz2"
@@ -32,6 +32,7 @@ if [ -n "${VPOPMAIL_DIR}" ]; then
 		VPOPMAIL_ERROR=1
 	fi
 fi
+
 
 src_unpack() {
 	unpack ${A}
@@ -86,6 +87,12 @@ src_compile() {
 	cachefile=${WORKDIR}/config.cache
 	rm -f ${cachefile}
 
+	# fix for bug #21330
+	CFLAGS=`echo ${CFLAGS} | xargs`
+	CXXFLAGS=`echo ${CXXFLAGS} | xargs`
+	LDFLAGS=`echo ${LDFLAGS} | xargs`
+	
+	# Do the actual build now
 	LDFLAGS="${LDFLAGS}" econf \
 		--disable-root-check \
 		--bindir=/usr/sbin \
