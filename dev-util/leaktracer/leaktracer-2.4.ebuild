@@ -1,12 +1,12 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/leaktracer/leaktracer-2.3.ebuild,v 1.1 2003/09/08 18:06:29 sergey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/leaktracer/leaktracer-2.4.ebuild,v 1.1 2004/01/06 10:17:57 sergey Exp $
 
 DESCRIPTION="LeakTracer - trace and analyze memory leaks in C++ programs."
 
-S=${WORKDIR}/${PN}
+S=${WORKDIR}/${P}
 HOMEPAGE="http://www.andreasen.org/LeakTracer/"
-SRC_URI="http://www.andreasen.org/${PN}/${PN}.tar.gz"
+SRC_URI="mirror://gentoo/${P}.tbz2"
 
 LICENSE="as-is"
 SLOT="0"
@@ -33,5 +33,5 @@ src_install() {
 
 pkg_postinst() {
 	einfo "To use LeakTracer, run LeakCheck my_prog and then leak-analyze my_prog leak.out"
-	einfo "Please refferto README file for more info."
+	einfo "Please reffer to README file for more info."
 }
