@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyds/pyds-0.6.5.ebuild,v 1.3 2004/02/14 12:57:15 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyds/pyds-0.7.0.ebuild,v 1.1 2004/02/14 12:57:15 liquidx Exp $
 
 inherit distutils
 
@@ -28,10 +28,3 @@ RDEPEND="media-libs/jpeg
 	>=dev-python/soappy-0.10.1"
 
 S=${WORKDIR}/${MY_P}
-
-src_unpack() {
-	unpack ${A}
-	cd ${S}/PyDS
-	epatch ${FILESDIR}/${P}-py2.3.patch
-}
-	
