@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpslice/tcpslice-1.1_alpha3.ebuild,v 1.1 2003/12/17 09:57:52 mboman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpslice/tcpslice-1.1_alpha3.ebuild,v 1.2 2003/12/20 15:55:57 mboman Exp $
 
 # Note: this ebuild is not of the best quality as it is entirely
 # static. However I belive that I will get away with it as the software
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.debian.org/debian/pool/main/t/tcpslice/tcpslice_1.1a3.orig.ta
 	ftp://ftp.debian.org/debian/pool/main/t/tcpslice/tcpslice_1.1a3-1.1.diff.gz"
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE=""
 DEPEND="virtual/glibc
 	>=net-libs/libpcap-0.6.2-r1"
