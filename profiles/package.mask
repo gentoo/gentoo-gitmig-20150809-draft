@@ -282,6 +282,7 @@ gnome-extra/gcalctool
 >=gnome-extra/gnome-media-2.1
 >=gnome-extra/gnome-utils-2.1
 >=gnome-extra/at-spi-1.1
+>=x11-wm/metacity-2.4.3
 >=x11-libs/startup-notification
 
 
