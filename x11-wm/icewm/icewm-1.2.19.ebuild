@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/icewm-1.2.19.ebuild,v 1.5 2005/03/06 14:14:50 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/icewm-1.2.19.ebuild,v 1.6 2005/03/19 01:48:48 morfic Exp $
 
 inherit eutils
 
@@ -28,7 +28,7 @@ RDEPEND="virtual/x11
 	nls? ( sys-devel/gettext )
 	truetype? ( >=media-libs/freetype-2.0.9 )
 	media-fonts/artwiz-fonts
-	media-libs/libungif"
+	media-libs/giflib"
 
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4"
