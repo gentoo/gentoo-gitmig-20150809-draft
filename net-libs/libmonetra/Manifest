@@ -1,5 +1,19 @@
-MD5 e02217eef841c21e0f1e0257e5641ea6 ChangeLog 1013
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 7cddef6964c59112a01887da562160b3 libmonetra-4.1.ebuild 718
 MD5 cdc2e7b276b7dee1b2f45ed66d503213 libmonetra-4.0.ebuild 960
-MD5 e2250a35ee899e1eee48222b04c8ee74 libmonetra-4.1.ebuild 720
+MD5 b24a90a3d4b49dcf56cba0caf805a6eb libmonetra-4.2.ebuild 719
+MD5 23e5fac6f2fdbaa988b610afdf02c370 ChangeLog 1223
+MD5 b0d485ea1a51fb83c70daedef2599272 metadata.xml 279
 MD5 216bca1622db024e6224bc0a9a4e2f09 files/digest-libmonetra-4.0 151
 MD5 712e09b1b696c860918a9f094c669cc2 files/digest-libmonetra-4.1 66
+MD5 1daa2406cd02e4d97c7a5ad0ce3a73ae files/digest-libmonetra-4.2 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+Comment: Robbat2 @ Orbis-Terrarum Networks
+
+iD8DBQFBqst4PpIsIjIzwiwRAv3LAKCE2Bl61a8zO9xo7pw2gUHCH/8fFACgrva3
+/AtiaOFjjGZD8fDSRWZLHyM=
+=0oyi
+-----END PGP SIGNATURE-----
