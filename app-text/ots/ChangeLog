@@ -1,10 +1,12 @@
 # ChangeLog for app-text/ots
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ots/ChangeLog,v 1.1 2003/07/09 08:16:53 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ots/ChangeLog,v 1.2 2003/07/09 14:06:58 seemant Exp $
 
 *ots-0.2.0 (09 Jul 2003)
 
   09 Jul 2003; Seemant Kulleen <seemant@gentoo.org> ots-0.2.0.ebuild:
   Open source text summariser -- package author: Nadav Rotem
-  <nadav256@hotmail.com> requested this to be added in IRC, to me.
+  <nadav256@hotmail.com> requested this to be added in IRC, to me.  I didn't
+  see bug #24079 by MG <markgilbert@hotpop.com> where he had submitted the
+  ebuild for this. Apologies to him nd foser.
 
