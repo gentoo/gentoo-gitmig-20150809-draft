@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xxe/xxe-2.5_p2.ebuild,v 1.1 2004/02/26 14:47:16 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xxe/xxe-2.5_p3.ebuild,v 1.1 2004/03/15 02:02:07 rizzo Exp $
 
 MY_PV="${PV/./}"
 MY_PV="${MY_PV/_/}"
