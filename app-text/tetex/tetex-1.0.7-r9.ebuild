@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-1.0.7-r9.ebuild,v 1.11 2003/01/18 17:06:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-1.0.7-r9.ebuild,v 1.12 2003/02/13 09:46:34 vapier Exp $
 
 IUSE="X ncurse libwww png"
 

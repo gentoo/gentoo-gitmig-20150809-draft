@@ -1,4 +1,4 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # $Header:
 # /home/cvsroot/gentoo-x86/app-text/sgmltools-lite/sgmltools-lite-3.0.3-r4.ebuild,v 1.7 2002/08/16 02:42:02 murphy Exp $

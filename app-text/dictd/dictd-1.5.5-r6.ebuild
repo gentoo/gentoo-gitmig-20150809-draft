@@ -1,7 +1,7 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Michael Conrad Tilstra <michael@gentoo.org> <tadpol@tadpol.org>
-# $Header: /var/cvsroot/gentoo-x86/app-text/dictd/dictd-1.5.5-r6.ebuild,v 1.8 2002/12/09 04:17:43 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dictd/dictd-1.5.5-r6.ebuild,v 1.9 2003/02/13 09:33:41 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Dictionary Client/Server for the DICT protocol"

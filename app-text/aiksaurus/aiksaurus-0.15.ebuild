@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/aiksaurus/aiksaurus-0.15.ebuild,v 1.5 2002/12/09 04:17:43 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/aiksaurus/aiksaurus-0.15.ebuild,v 1.6 2003/02/13 09:32:27 vapier Exp $
 
 S=${WORKDIR}/Aiksaurus-${PV}
 DESCRIPTION="A thesaurus lib, tool and database"

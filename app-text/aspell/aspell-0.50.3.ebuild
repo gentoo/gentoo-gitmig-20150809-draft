@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/aspell-0.50.3.ebuild,v 1.3 2003/02/12 13:32:45 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/aspell-0.50.3.ebuild,v 1.4 2003/02/13 09:32:40 vapier Exp $
 
 inherit libtool
 

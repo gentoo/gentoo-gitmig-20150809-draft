@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/lv/lv-4.49.4.ebuild,v 1.3 2002/12/11 15:41:40 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/lv/lv-4.49.4.ebuild,v 1.4 2003/02/13 09:41:01 vapier Exp $
 
 MY_P=${PN}${PV//./}
 DESCRIPTION="Powerful Multilingual File Viewer"

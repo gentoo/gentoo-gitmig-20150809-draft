@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf-japanese/xpdf-japanese-1.ebuild,v 1.4 2002/12/09 04:17:45 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf-japanese/xpdf-japanese-1.ebuild,v 1.5 2003/02/13 09:49:38 vapier Exp $
 
 DESCRIPTION="Japanese support for xpdf"
 SRC_URI="ftp://ftp.foolabs.com/pub/xpdf/${PN}.tar.gz"

@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/uudeview/uudeview-0.5.13.ebuild,v 1.11 2003/01/08 23:16:48 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/uudeview/uudeview-0.5.13.ebuild,v 1.12 2003/02/13 09:47:34 vapier Exp $
 
 IUSE="tcltk"
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/jadetex/jadetex-3.12.ebuild,v 1.12 2003/02/07 17:25:02 satai Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/jadetex/jadetex-3.12.ebuild,v 1.13 2003/02/13 09:39:26 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="TeX macros used by Jade TeX output."

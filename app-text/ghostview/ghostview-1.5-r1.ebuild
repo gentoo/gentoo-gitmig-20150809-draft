@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostview/ghostview-1.5-r1.ebuild,v 1.2 2002/12/09 04:17:44 manson Exp $ 
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostview/ghostview-1.5-r1.ebuild,v 1.3 2003/02/13 09:37:19 vapier Exp $ 
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A PostScript viewer for X11"

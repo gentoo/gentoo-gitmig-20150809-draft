@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gv/gv-3.5.8-r1.ebuild,v 1.10 2002/10/04 05:05:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gv/gv-3.5.8-r1.ebuild,v 1.11 2003/02/13 09:38:18 vapier Exp $
 
 # this r1 is a major change. it uses sed instead of patches.
 # hopefully this will enable everyone to compile gv on widely

@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/t1utils/t1utils-1.25.ebuild,v 1.8 2002/12/09 04:17:45 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/t1utils/t1utils-1.25.ebuild,v 1.9 2003/02/13 09:46:11 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Type 1 Font utilities"
