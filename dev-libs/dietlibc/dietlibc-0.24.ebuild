@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dietlibc/dietlibc-0.24.ebuild,v 1.2 2003/11/22 21:13:23 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dietlibc/dietlibc-0.24.ebuild,v 1.3 2003/12/06 15:55:40 weeve Exp $
 
 inherit eutils flag-o-matic fixheadtails
 
@@ -46,7 +46,7 @@ src_compile() {
 src_install() {
 	if [ "${ARCH}" = "sparc" -a "${PROFILE_ARCH}" = "sparc64" ]; then
 		cd ${S}
-		/bin/sparc32 make install || die "make install failed"
+		/usr/bin/sparc32 make install || die "make install failed"
 	else
 		make install || die "make install failed"
 	fi
