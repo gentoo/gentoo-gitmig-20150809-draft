@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/fontconfig
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/ChangeLog,v 1.41 2003/10/23 00:20:47 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/ChangeLog,v 1.42 2003/11/01 09:42:06 seemant Exp $
+
+  01 Nov 2003; Seemant Kulleen <seemant@gentoo.org> fontconfig-2.2.1.ebuild:
+  SRC_URI and HOMEPAGE update, thanks to: Stony Yakovac <stonyy@tek.com> in bug
+  #32423
 
   22 Oct 2003; Aron Griffis <agriffis@gentoo.org> fontconfig-2.2.1.ebuild:
   Stable on alpha
