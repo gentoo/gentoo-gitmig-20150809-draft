@@ -1,5 +1,6 @@
 MD5 e79bd2fa2e46e650aabaa16754e25583 fvwm-2.5.7-r5.ebuild 8757
 MD5 50d28dc5e95e4c595d28698c95b2e035 fvwm-2.5.8.ebuild 9137
+MD5 bd1e9d6bb3e47dbe00a78450c4babec7 fvwm-2.5.8-r1.ebuild 9134
 MD5 b893f78193652b275ce5d276ac38af29 fvwm-2.4.17.ebuild 3961
 MD5 8fa93269e89c39d61e797e46a91b2872 fvwm-2.5.7-r3.ebuild 8726
 MD5 a3663b67114af0af40f4bd9fb2cfe69c ChangeLog 9092
@@ -14,3 +15,4 @@ MD5 df03a10a40a620ce8f1fab75f9758884 files/disable-debug-statements.diff 419
 MD5 719ab11e70adb34bdf0a3fa0541b3ca6 files/digest-fvwm-2.5.8 127
 MD5 c8242a4b3b74d0643d5040c1c06cf4b0 files/digest-fvwm-2.5.7-r3 127
 MD5 e52e1c9212c856d5de29c603678dc52e files/digest-fvwm-2.5.7-r5 127
+MD5 230e24714511e554a998978a8706734d files/digest-fvwm-2.5.8-r1 127

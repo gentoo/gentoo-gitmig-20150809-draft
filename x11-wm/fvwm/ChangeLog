@@ -1,6 +1,13 @@
 # ChangeLog for x11-wm/fvwm
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/ChangeLog,v 1.45 2003/11/11 21:26:50 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/ChangeLog,v 1.46 2003/11/13 13:19:48 taviso Exp $
+
+*fvwm-2.5.8-r1 (13 Nov 2003)
+
+  13 Nov 2003; Tavis Ormandy <taviso@gentoo.org> fvwm-2.5.8-r1.ebuild,
+  files/mini.happy.xpm:
+  new release of FvwmTabs, including a default dnd icon.
+  version bump.
 
   11 Nov 2003; Tavis Ormandy <taviso@gentoo.org> fvwm-2.5.8.ebuild:
   --enable-multibyte is no longer optional, removed cjk from IUSE.
