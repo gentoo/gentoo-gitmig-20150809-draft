@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.7.2.ebuild,v 1.3 2004/08/09 01:34:44 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.7.2.ebuild,v 1.4 2004/08/09 03:29:19 agriffis Exp $
 
 unset ALLOWED_FLAGS  # stupid extra-functions.sh ... bug 49179
 inherit flag-o-matic gcc eutils nsplugins mozilla-launcher mozilla makeedit
@@ -19,7 +19,7 @@ MY_PV=${MY_PV/_rc/rc}	# handle rc
 
 DESCRIPTION="Mozilla Application Suite - web browser, email, HTML editor, IRC"
 HOMEPAGE="http://www.mozilla.org"
-SRC_URI="mirror://gentoo/${PN}-source2-${MY_PV}.tar.bz2
+SRC_URI="mirror://gentoo/${PN}-source3-${MY_PV}.tar.bz2
 	crypt? ( !moznomail? (
 		http://downloads.mozdev.org/enigmail/src/ipc-${IPCVER}.tar.gz
 		http://downloads.mozdev.org/enigmail/src/enigmail-${EMVER}.tar.gz
