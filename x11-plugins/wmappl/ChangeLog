@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmappl
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmappl/ChangeLog,v 1.10 2004/10/19 08:50:46 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmappl/ChangeLog,v 1.11 2004/11/01 20:36:38 gustavoz Exp $
+
+  01 Nov 2004; Gustavo Zacarias <gustavoz@gentoo.org> wmappl-0.71.ebuild:
+  Stable on sparc
 
   19 Oct 2004; Dylan Carlson <absinthe@gentoo.org> wmappl-0.71.ebuild:
   Stable on amd64.
