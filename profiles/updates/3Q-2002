@@ -1,2 +1,5 @@
 move x11-base/xfree86 x11-base/xfree
 move net-mail/revolution net-mail/evolution
+move x11-libs/xforms-x86 x11-libs/xforms
+move x11-libs/xforms-ppc x11-libs/xforms
+move x11-libs/xforms-sparc x11-libs/xforms
