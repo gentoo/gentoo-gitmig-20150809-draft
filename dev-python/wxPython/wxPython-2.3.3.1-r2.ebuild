@@ -1,8 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wxPython/wxPython-2.3.3.1-r2.ebuild,v 1.3 2002/12/09 04:21:13 manson Exp $
-
-IUSE="opengl"
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxPython/wxPython-2.3.3.1-r2.ebuild,v 1.4 2002/12/13 19:54:38 vapier Exp $
 
 MY_P="${P/-/Src-}"
 S="${WORKDIR}/${MY_P}/${PN}"
@@ -10,15 +8,16 @@ DESCRIPTION="A blending of the wxWindows C++ class library with Python."
 SRC_URI="mirror://sourceforge/wxpython/${MY_P}.tar.gz"
 HOMEPAGE="http://www.wxpython.org/"
 
+SLOT="0"
+LICENSE="LGPL-2"
+KEYWORDS="x86 ppc sparc alpha"
+IUSE="opengl"
+
 DEPEND=">=dev-lang/python-2.1
         =dev-libs/glib-1.2*
         =x11-libs/gtk+-1.2*
         =x11-libs/wxGTK-2.3.3*
         opengl? ( >=dev-python/PyOpenGL-2.0.0.44 )"
-
-SLOT="0"
-LICENSE="LGPL-2"
-KEYWORDS="~x86 ~ppc ~sparc  ~alpha"
 
 pkg_setup() {
 	# xfree should not install these, remove until the fixed
