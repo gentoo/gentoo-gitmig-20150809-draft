@@ -1,7 +1,12 @@
 #!/bin/bash
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/files/crossdev,v 1.13 2005/03/18 03:28:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/files/crossdev,v 1.14 2005/03/21 04:50:55 vapier Exp $
+
+if [[ ${ROOT:-/} != "/" ]] ; then
+	echo "Sorry, but crossdev does not support ROOT."
+	exit 2
+fi
 
 source /sbin/functions.sh || exit 1
 die() {
@@ -102,8 +107,10 @@ setup_portage_vars() {
 uninstall() {
 	setup_portage_vars
 
+	ewarn "Uninstalling target '${CTARGET}' ..."
+
 	[[ -d ${PORTDIR_OVERLAY}/cross-${CTARGET} ]] \
-		&& rm -ri ${PORTDIR_OVERLAY}/cross-${CTARGET}
+		&& rm -r ${PORTDIR_OVERLAY}/cross-${CTARGET}
 	for f in mask keywords use ; do
 		f="/etc/portage/package.${f}"
 		[[ ! -e ${f} ]] && continue
@@ -119,6 +126,10 @@ uninstall() {
 	for p in cross-${CTARGET}/* ; do
 		emerge -C =${p}
 	done
+	for b in addr2line ar as c++filt ld nm objcopy objdump ranlib readelf size strings strip ; do
+		rm -f /usr/bin/${CTARGET}-${b} /usr/${CTARGET}/bin/${b}
+	done
+	rm -f /usr/bin/${CTARGET}-{gcc,{c,g}++}
 	[[ -d /usr/${CTARGET} ]] && rm -ri /usr/${CTARGET}
 	rm -f /etc/env.d/{binutils,gcc}/config-${CTARGET}
 
