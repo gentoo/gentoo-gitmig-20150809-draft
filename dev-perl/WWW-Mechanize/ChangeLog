@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/WWW-Mechanize
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/WWW-Mechanize/ChangeLog,v 1.6 2004/05/24 22:58:43 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/WWW-Mechanize/ChangeLog,v 1.7 2004/06/04 09:21:45 dholm Exp $
+
+  04 Jun 2004; David Holm <dholm@gentoo.org> WWW-Mechanize-1.02.ebuild:
+  Added to ~ppc.
 
 *WWW-Mechanize-1.02 (24 May 2004)
 
