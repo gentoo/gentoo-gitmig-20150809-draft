@@ -1,0 +1,40 @@
+# ChangeLog for media-tv/nvtv
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-tv/nvtv/ChangeLog,v 1.1 2003/06/18 11:59:23 seemant Exp $
+
+*nvtv-0.4.4 (18 Jun 2003)
+
+  18 Jun 2003; Seemant Kulleen <seemant@gentoo.org> nvtv-0.4.4.ebuild,
+  files/nvtv.start:
+  moved to media-tv
+
+*nvtv-0.4.4 (16 Mar 2003)
+
+  16 Mar 2003; phoen][x <phoenix@gentoo.org> nvtv-0.4.4.ebuild :
+  Version bump.
+
+*nvtv-0.4.3-0 (10 Feb 2003)
+
+  10 Feb 2003; B.Lauwers <blauwers@gentoo.org> nvtv-0.4.3.ebuild :
+  New version from prior ebuild
+
+*nvtv-4.2.0-0 (09 Dec 2002)
+
+  17 Dec 2002; B.Lauwers <blauwers@gentoo.org> nvtv-0.4.2r1.ebuild :
+  Depency bug fixed per Bug#12067
+
+  9 Dec 2002; B.Lauwers <blauwers@gentoo.org> nvtv-0.4.2.ebuild :
+  New version from prior ebuild plus various cleanups
+
+*nvtv-0.4.0-0 (04 Jun 2002)
+
+  4 Jun 2002; B.Lauwers <blauwers@gentoo.org> nvtv-0.4.0.ebuild :
+  New version from prior ebuild plus various cleanups
+
+*nvtv-0.3.0-0 (03 May 2002)
+
+  3 May 2002; Arcady Genkin <agenkin@thpoon.com> nvtv-0.3.0.ebuild :
+  Cleaned up a few things.
+
+  3 May 2002; B.Lauwers <blauwers@gentoo.com> ChangeLog, nvtv-0.3.0.ebuild :
+  Intial ebuild for nvtv from http://sourceforge.net/projects/nv-tv-out
