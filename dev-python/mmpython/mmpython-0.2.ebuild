@@ -11,4 +11,6 @@ KEYWORDS="~x86 ~ppc ~sparc"
 
 DEPEND=">=media-libs/libdvdread-0.9.3"
 
+S=${WORKDIR}/${PN}
+
 inherit distutils
