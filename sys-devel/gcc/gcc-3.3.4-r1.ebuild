@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.4-r1.ebuild,v 1.9 2004/08/12 00:28:46 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.4-r1.ebuild,v 1.10 2004/08/20 19:52:47 gustavoz Exp $
 
 inherit eutils flag-o-matic libtool gnuconfig
 
@@ -12,6 +12,9 @@ do_filter_flags() {
 
 	# In general gcc does not like optimization ... we'll add -O2 where safe
 	filter-flags -O?
+
+	# -O2 is safe and good for sparc
+	[ "${ARCH}" = "sparc" ] && append-flags -O2
 
 	# Compile problems with these (bug #6641 among others)...
 	#filter-flags -fno-exceptions -fomit-frame-pointer -fforce-addr

@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.308 2004/08/18 03:55:12 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.309 2004/08/20 19:52:47 gustavoz Exp $
+
+  20 Aug 2004; Gustavo Zacarias <gustavoz@gentoo.org> gcc-3.3.4-r1.ebuild:
+  Enabled -O2 for sparc: safe and good
 
   17 Aug 2004; Travis Tilley <lv@gentoo.org> gcc-3.4.1-r2.ebuild,
   gcc-3.4.1.ebuild:
