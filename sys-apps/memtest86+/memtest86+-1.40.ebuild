@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtest86+/memtest86+-1.40.ebuild,v 1.2 2005/01/22 15:16:13 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtest86+/memtest86+-1.40.ebuild,v 1.3 2005/01/24 10:37:47 spock Exp $
 
-inherit mount-boot
+inherit mount-boot eutils
 
 DESCRIPTION="Memory tester based on memtest86"
 HOMEPAGE="http://www.memtest.org/"
@@ -17,6 +17,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 
+	epatch "${FILESDIR}"/${PN}-1.50-hardened.patch
 	if use serial ; then
 		sed -e 's/#define SERIAL_CONSOLE_DEFAULT 0/#define SERIAL_CONSOLE_DEFAULT 1/' -i config.h
 	fi

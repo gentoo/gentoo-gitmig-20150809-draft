@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/memtest86+
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtest86+/ChangeLog,v 1.16 2005/01/22 15:16:13 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtest86+/ChangeLog,v 1.17 2005/01/24 10:37:47 spock Exp $
+
+  24 Jan 2005; Michał Januszewski <spock@gentoo.org>
+  +files/memtest86+-1.50-hardened.patch, memtest86+-1.40.ebuild,
+  memtest86+-1.50.ebuild:
+  Added a patch that fixes compilation on hardened systems. Closes bug #73383.
 
 *memtest86+-1.50 (22 Jan 2005)
 
