@@ -1,36 +1,28 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 2e4394db8599629967dd0cb8f5322556 dspam-3.2_beta1.ebuild 15331
-MD5 e5b2ea6a74dee0e549e16465c3140223 ChangeLog 3243
-MD5 ae3a688715ae77f8c9acfa862adbb8e8 dspam-3.0.0.ebuild 6928
+MD5 bc8ccbc4cf14222a942b0b906fdbbbf0 ChangeLog 3508
+MD5 36789bb9f994a8cf598460b9f1d6c38d dspam-3.0.0.ebuild 6928
+MD5 618c4611325b3d26857fa015512ea3dd dspam-3.1.0.ebuild 9316
+MD5 7b1aab580ea90c0fba27ee37375d4f45 dspam-3.1.1.ebuild 15331
+MD5 faea987ffc4a18b91cbd42a8a12fa875 dspam-3.1.2.ebuild 15331
+MD5 5c3bfe2ca9051384c5e14e6ce3ff22f4 dspam-3.2_beta1.ebuild 15334
+MD5 d0c180f5cb5b9569f3cb062286f8a267 dspam-3.2_rc2.ebuild 15816
 MD5 dbfbe5a3bbe3347938107f5f5bd2197e metadata.xml 308
-MD5 be845fc1444406bd24e54ceb0fe2620a dspam-3.1.2.ebuild 15328
-MD5 029098e21997b6e38bbd2e328a30ab6a dspam-3.1.0.ebuild 9314
-MD5 1bece1fdd8f24a173dc5410578d7756e dspam-3.1.1.ebuild 15329
-MD5 7f1185a1a89bc7c74aafba93afc2b0cf files/digest-dspam-3.1.0 63
-MD5 1abffcec9dd1aad2db3d68918b4aec05 files/digest-dspam-3.1.1 63
-MD5 a6fc685d30abb83a1ab5ac0181ad1f7c files/pgsql.data 51
-MD5 cd1bdb75fd86304f9453741a910cb8a2 files/crontab.db4 196
-MD5 84ec40b77696359ae49560588db9b948 files/mysql.data 52
-MD5 9fed58b73e35e02ecc3f9a08dcd94eaa files/mysql_purge_db 73
-MD5 f2f86e8f7ab440c8537f40fa18a0ee43 files/crontab.mysql 118
-MD5 a8c089a75fb1ee3c2b4f32ffc04c638e files/digest-dspam-3.1.2 63
 MD5 c12a54112c6fec3530a7b1a368d04ac8 files/README.postfix 309
+MD5 e0469b961385fda4305602dc2519d319 files/README.qmail 2317
+MD5 cd1bdb75fd86304f9453741a910cb8a2 files/crontab.db4 196
+MD5 f2f86e8f7ab440c8537f40fa18a0ee43 files/crontab.mysql 118
+MD5 98667f3553df911cd92818a1162a95ed files/digest-dspam-3.2_beta1 68
+MD5 1c0bdc13fb97e5dd3d3bf0efa9205b8c files/digest-dspam-3.2_rc2 65
 MD5 9a2fda6789f0db17b6a32ca84e9e3884 files/dspam.cron 2501
 MD5 2163ca41de383f09f4d754e2d35cb158 files/logrotate.dspam 156
-MD5 e0469b961385fda4305602dc2519d319 files/README.qmail 2317
-MD5 2cd345708a9889a04c472a9e5be7400e files/untrusted.mailer_args 24
+MD5 84ec40b77696359ae49560588db9b948 files/mysql.data 52
+MD5 5bcf982f468f4843ef3aa51213cc0023 files/mysql_create_user.sql 194
+MD5 2a79c945ef6c7e7bd45aa1d46ae99e69 files/mysql_install_db 114
+MD5 9fed58b73e35e02ecc3f9a08dcd94eaa files/mysql_purge_db 73
+MD5 a6fc685d30abb83a1ab5ac0181ad1f7c files/pgsql.data 51
 MD5 e6d1b8232199f288fe75501251ade317 files/trusted.users 19
+MD5 2cd345708a9889a04c472a9e5be7400e files/untrusted.mailer_args 24
 MD5 8b68501138fbe92e10bbd93a03c9f2ab files/upgrade.sql 807
 MD5 05dce5dc8cf516655657aa2a4cc5f1da files/digest-dspam-3.0.0 63
-MD5 2a79c945ef6c7e7bd45aa1d46ae99e69 files/mysql_install_db 114
-MD5 5bcf982f468f4843ef3aa51213cc0023 files/mysql_create_user.sql 194
-MD5 98667f3553df911cd92818a1162a95ed files/digest-dspam-3.2_beta1 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBWJL710xuJSrg3/sRAq5OAJ0cW7yPCbEvthy39BFMWhQJBgKvkwCdHUCx
-GjzehE3q3nYoVgz7+GdirHw=
-=K+bj
------END PGP SIGNATURE-----
+MD5 7f1185a1a89bc7c74aafba93afc2b0cf files/digest-dspam-3.1.0 63
+MD5 1abffcec9dd1aad2db3d68918b4aec05 files/digest-dspam-3.1.1 63
+MD5 a8c089a75fb1ee3c2b4f32ffc04c638e files/digest-dspam-3.1.2 63

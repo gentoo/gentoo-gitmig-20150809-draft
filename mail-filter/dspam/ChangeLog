@@ -1,6 +1,14 @@
 # ChangeLog for mail-filter/dspam
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/ChangeLog,v 1.16 2004/09/27 22:23:44 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/ChangeLog,v 1.17 2004/10/09 04:40:13 st_lim Exp $
+
+*dspam-3.2_rc2 (09 Oct 2004)
+
+  09 Oct 2004; Lim Swee Tat <st_lim@gentoo.org> dspam-3.0.0.ebuild,
+  dspam-3.1.0.ebuild, dspam-3.1.1.ebuild, dspam-3.1.2.ebuild,
+  dspam-3.2_beta1.ebuild, +dspam-3.2_rc2.ebuild:
+  Version bump to 3.2 rc2
+  exim fixed for everything
 
   28 Sep 2004; Andrej Kacian <ticho@gentoo.org> metadata.xml:
   Fixed herd name in metadata.xml.

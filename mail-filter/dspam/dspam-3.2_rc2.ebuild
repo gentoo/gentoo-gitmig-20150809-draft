@@ -1,19 +1,20 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.1.1.ebuild,v 1.6 2004/10/09 04:40:13 st_lim Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.2_rc2.ebuild,v 1.1 2004/10/09 04:40:13 st_lim Exp $
 
 inherit eutils
 
-MY_PV=${PV/_beta20/.beta.2}
+MY_PV=${PV/_rc/.rc}
 S=${WORKDIR}/${PN}-${MY_PV}
 DESCRIPTION="A statistical-algorithmic hybrid anti-spam filter"
 SRC_URI="http://www.nuclearelephant.com/projects/dspam/sources/${PN}-${MY_PV}.tar.gz"
 HOMEPAGE="http://www.nuclearelephant.com/projects/dspam/index.html"
 LICENSE="GPL-2"
 
-IUSE="cyrus debug exim mysql maildrop neural oci8 postgres procmail"
+IUSE="cyrus debug exim mysql maildrop neural oci8 postgres procmail sqlite"
 DEPEND="exim? ( >=mail-mta/exim-4.34 )
 		mysql? ( >=dev-db/mysql-3.23 ) || ( >=sys-libs/db-4.0 )
+		sqlite? ( >=dev-db/sqlite-3.0.6 )
 		maildrop? ( >=mail-filter/maildrop-1.5.3 )
 		postgres? ( >=dev-db/postgresql-7.4.3 )
 		procmail? ( >=mail-filter/procmail-3.22 )
@@ -33,17 +34,20 @@ CONFIGDIR="${HOMEDIR}/config"
 pkg_setup() {
 	if (use mysql && use postgres) || \
 		(use mysql && use oci8) || \
-		(use postgres && use oci8); then
+		(use mysql && use sqlite) || \
+		(use postgres && use oci8) || \
+		(use postgres && use sqlite) || \
+		(use sqlite && use oci8); then
 		echo
-		ewarn "You have two of either \"mysql\", \"postgres\" or \"oci\" in your USE flags."
+		ewarn "You have two of either \"mysql\", \"postgres\", \"oci8\" or \"sqlite\" in your USE flags."
 		ewarn "Will default to MySQL as your dspam database backend."
-		ewarn "If you want to build with Postgres support; hit Control-C now."
+		ewarn "If you want to build with Postgres/Oracle/SQLite support; hit Control-C now."
 		ewarn "Change your USE flag -mysql and emerge again."
 		echo
 		has_version ">=sys-apps/portage-2.0.50" && (
 		einfo "It would be best practice to add the set of USE flags that you use for this"
 		einfo "package to the file: /etc/portage/package.use. Example:"
-		einfo "\`echo \"net-mail/dspam -mysql postgres\" >> /etc/portage/package.use\`"
+		einfo "\`echo \"net-mail/dspam -mysql postgres -oci8 -sqlite\" >> /etc/portage/package.use\`"
 		einfo "to build dspam with Postgres database as your dspam backend."
 		)
 		echo
@@ -57,37 +61,26 @@ pkg_setup() {
 
 src_compile() {
 	local myconf
-	local agent
 
 	# these are the default settings
 	myconf="${myconf} --with-signature-life=14"
-	if use cyrus; then
-		agent="/usr/lib/cyrus/deliver %u"
-	elif use exim; then
-		agent="/usr/sbin/exim -oMr spam-scanned %u"
-	elif use maildrop; then
-		agent="/usr/bin/maildrop -d %u"
-	elif use procmail; then
-		agent="/usr/bin/procmail"
-	fi
-	myconf="${myconf} --enable-source-address-tracking"
-	myconf="${myconf} --enable-large-scale"
+	myconf="${myconf} --enable-broken-return-codes"
+	myconf="${myconf} --enable-preferences-extension"
+	myconf="${myconf} --enable-experimental"
 	myconf="${myconf} --enable-long-username"
-	myconf="${myconf} --enable-spam-subject"
-	myconf="${myconf} --enable-signature-headers"
-	myconf="${myconf} --enable-whitelist"
+	myconf="${myconf} --enable-robinson"
 	#myconf="${myconf} --enable-chi-square"
-	#myconf="${myconf} --enable-robinson"
-	#myconf="${myconf} --enable-robinson-pvalues"
+	myconf="${myconf} --enable-robinson-pvalues"
+	#myconf="${myconf} --enable-broken-mta"
+	myconf="${myconf} --enable-large-scale"
+	#myconf="${myconf} --enable-domain-scale"
 
 	# ${HOMEDIR}/data is a symlink to ${DATADIR}
-	myconf="${myconf} --with-dspam-home=${HOMEDIR}"
 	myconf="${myconf} --with-dspam-mode=4755"
 	myconf="${myconf} --with-dspam-owner=dspam"
 	myconf="${myconf} --with-dspam-group=dspam"
-	myconf="${myconf} --with-dspam-home-owner=dspam"
-	myconf="${myconf} --with-dspam-home-group=dspam"
-	myconf="${myconf} --with-dspam-home-mode=4755"
+	myconf="${myconf} --enable-homedir --with-dspam-home=${HOMEDIR} --sysconfdir=${HOMEDIR}"
+	myconf="${myconf} --with-logdir=/var/log/dspam"
 
 	# enables support for debugging (touch /etc/dspam/.debug to turn on)
 	# optional: even MORE debugging output, use with extreme caution!
@@ -127,6 +120,10 @@ src_compile() {
 			--with-oracle-version=MAJOR
 			myconf="${myconf} --with-oracle-version=10"
 		fi
+	elif use sqlite ; then
+		myconf="${myconf} --with-storage-driver=sqlite_drv"
+		myconf="${myconf} --enable-virtual-users"
+
 	else
 		myconf="${myconf} --with-storage-driver=libdb4_drv"
 		myconf="${myconf} --with-db4-includes=/usr/include"
@@ -156,18 +153,23 @@ src_install () {
 	keepdir ${LOGDIR}
 
 	# make install
-	make DESTDIR=${D} install || die
+	sed -e 's/rm -f ..mandir.\(.*\)/rm -f ${D}${mandir}\1/g' \
+		-e 's/ln -s ..mandir.\(.*\) ..mandir.\(.*3\)/ln -s ${mandir}\1.gz ${D}${mandir}\2.gz/g' \
+		-i Makefile
+	make DESTDIR=${D} etcdest=${D}${HOMEDIR} install || die
 	chmod 4755 ${D}/usr/bin/dspam
 
 	# documentation
 	dodoc CHANGELOG LICENSE README RELEASE.NOTES
 	dodoc ${FILESDIR}/README.postfix ${FILESDIR}/README.qmail
 	if use mysql ; then
-		newdoc tools.mysql_drv/README README.MYSQL
+		newdoc tools.mysql_drv/README
 	elif use postgres ; then
-		newdoc tools.pgsql_drv/README README.PGSQL
+		newdoc tools.pgsql_drv/README
 	elif use oci8 ; then
-		newdoc tools.ora_drv/README README.ORACLE
+		newdoc tools.ora_drv/README
+	elif use sqlite ; then
+		newdoc tools.sqlite_drv/README
 	fi
 
 	# build some initial configuration data
@@ -181,7 +183,7 @@ src_install () {
 	if use cyrus; then
 		echo "/usr/lib/cyrus/deliver %u" > ${T}/untrusted.mailer_args
 	elif use exim; then
-		echo "/usr/sbin/exim -oMr spam-scanned" > ${T}/untrusted.mailer_args
+		echo "/usr/sbin/exim -oMr spam-scanned %u" > ${T}/untrusted.mailer_args
 	elif use courier; then
 		echo "/usr/bin/maildrop -d %u" > ${T}/untrusted.mailer_args
 	elif use procmail; then
@@ -261,6 +263,8 @@ src_install () {
 		newins tools.ora_drv/oral_objects.sql ora_objects.sql
 		newins tools.ora_drv/virtual_users.sql ora_virtual_users.sql
 		newins tools.ora_drv/purge.sql ora_purge.sql
+	elif use sqlite ; then
+		newins tools.sqlite_drv/purge.sql sqlite_purge.sql
 	fi
 
 	# installs the cron job to the cron directory
@@ -389,6 +393,9 @@ pkg_config () {
 		/usr/bin/psql -d ${DSPAM_PgSQL_DB} -U postgres -c "GRANT ALL PRIVILEGES ON SCHEMA public TO ${DSPAM_PgSQL_USER};" 1>/dev/null 2>&1
 	elif use oci8 ; then
 		[[ -f ${CONFIGDIR}/oracle.data ]] && mv -f ${CONFIGDIR}/oracle.data ${HOMEDIR}
+	elif use sqlite ; then
+		einfo "sqlite_drv will automatically create the necessary database"
+		einfo "objects for each user upon first use of DSPAM by that user."
 	fi
 
 	echo -ne "\n\n\n\n"

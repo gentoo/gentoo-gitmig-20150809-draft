@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.0.0.ebuild,v 1.7 2004/07/21 17:34:21 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.0.0.ebuild,v 1.8 2004/10/09 04:40:13 st_lim Exp $
 
 inherit eutils
 
@@ -43,7 +43,7 @@ src_compile() {
 	if use cyrus; then
 		agent="/usr/lib/cyrus/deliver %u"
 	elif use exim; then
-		agent="/usr/sbin/exim -oMr spam-scanned"
+		agent="/usr/sbin/exim -oMr spam-scanned %u"
 	elif use maildrop; then
 		agent="/usr/bin/maildrop -d %u"
 	elif use procmail; then
