@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kio-locate/kio-locate-0.2.4.ebuild,v 1.1 2004/10/28 21:22:42 motaboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kio-locate/kio-locate-0.2.4.ebuild,v 1.2 2004/10/28 21:51:10 motaboy Exp $
 
-inherit kde-base
+inherit kde
 
 S="${WORKDIR}/${PN}"
 
