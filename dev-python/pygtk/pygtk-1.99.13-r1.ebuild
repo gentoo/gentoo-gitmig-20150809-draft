@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/pygtk-1.99.13-r1.ebuild,v 1.16 2004/07/10 16:37:55 lucass Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/pygtk-1.99.13-r1.ebuild,v 1.17 2004/07/14 21:51:00 agriffis Exp $
 
 # since its a development version
 inherit debug
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.gtk.org/pub/gtk/python/v2.0/${P}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="2"
 KEYWORDS="x86 ~ppc sparc alpha ia64"
-IUSE=""
+IUSE="opengl"
 
 DEPEND=">=dev-lang/python-2.2
 	>=x11-libs/pango-1.0.0
