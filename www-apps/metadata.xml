@@ -8,5 +8,9 @@
 		La categoría www-apps contiene paquetes relacionados con la world wide
 		web (WWW).
 	</longdescription>
+	<longdescription lang="de">
+		Die Kategorie www-apps enthält verschiedene WWW-Applikationen wie
+		beispielsweise Wikis, CMS- oder Blogging-Software.
+	</longdescription>
 </catmetadata>
 
