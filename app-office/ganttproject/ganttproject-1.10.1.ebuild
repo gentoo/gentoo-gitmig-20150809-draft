@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/ganttproject/ganttproject-1.10.1.ebuild,v 1.2 2004/10/16 18:15:00 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/ganttproject/ganttproject-1.10.1.ebuild,v 1.3 2004/11/03 11:51:47 axxo Exp $
 
 inherit eutils java-pkg
 
@@ -15,6 +15,7 @@ SLOT="0"
 KEYWORDS="~x86 ~amd64 ~ppc"
 
 DEPEND=">=virtual/jdk-1.4
+	app-arch/unzip
 	>=dev-java/ant-1.5.4"
 
 src_compile() {
