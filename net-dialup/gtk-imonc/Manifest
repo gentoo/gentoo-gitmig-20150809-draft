@@ -1,8 +1,18 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 03c52a908edc1c3fb23d24e8d2752347 gtk-imonc-0.6.2.ebuild 601
 MD5 610695edfc9be330689358a97f629088 gtk-imonc-0.6.4.1.ebuild 689
 MD5 8db26716218a1ebe5577ed37fccf1e84 gtk-imonc-0.6.3.ebuild 607
-MD5 348db9189d64b68649b1411eae0afaca ChangeLog 1616
+MD5 be101eb27285a622d734d380dd0d86f2 ChangeLog 1619
 MD5 9e373e92a5e96e23fab1563291037800 metadata.xml 330
 MD5 e15865ac571878d6e490e8d4f10b4612 files/digest-gtk-imonc-0.6.2 67
 MD5 44964e52980adbf8ae240975e0efdc35 files/digest-gtk-imonc-0.6.3 67
 MD5 c6305f4a9a4537c8d6734bd93495a5cf files/digest-gtk-imonc-0.6.4.1 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCQDasI1lqEGTUzyQRAq35AJ46qCSW7ensZ37tKXOomzyvqtMMDwCeNprR
+xdieQz6tvPin96Qz9yvmWFc=
+=JDoN
+-----END PGP SIGNATURE-----
