@@ -1,16 +1,26 @@
-MD5 afcecb1b239a329a912a20e9906756b0 rsync-2.6.2-r4.ebuild 2085
-MD5 27b9220f1ec7a946af29c50481e2538c rsync-2.6.0-r2.ebuild 2503
-MD5 42cc3e5d0fd0890c3183790bde1df6d7 rsync-2.6.2-r3.ebuild 1987
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 8d7e8ed84320c5bcc7152b566f3c70a6 ChangeLog 9147
+MD5 3e94bef4f67895c0a7df54232b707392 rsync-2.6.0-r3.ebuild 2585
+MD5 afcecb1b239a329a912a20e9906756b0 rsync-2.6.2-r4.ebuild 2085
+MD5 42cc3e5d0fd0890c3183790bde1df6d7 rsync-2.6.2-r3.ebuild 1987
 MD5 32c330f99aeedd4c391e279e88039e5f rsync-2.6.1.ebuild 1939
-MD5 cad7fbb7e9daa565a1d4de2d8258e1cf rsync-2.6.0-r3.ebuild 2586
+MD5 27b9220f1ec7a946af29c50481e2538c rsync-2.6.0-r2.ebuild 2503
 MD5 9118ed78f07b5bae1f8daa09226771b0 files/2.6.0-sanitize.patch 5842
-MD5 93a1334931329a901f4aa47d63a7ce70 files/rsync-pathsanitize.patch 262
+MD5 c27421f44de2c0fa58f6d01a9cbdeeb5 files/rsyncd.conf 405
 MD5 39b5aab74752c74d7d600265dd32de05 files/rsyncd.conf.d 348
 MD5 f7c02cef440a3407d84edd23fff2d379 files/rsyncd.init.d 416
-MD5 1b3c307f2cb9db6757a7b7a4aa8f345a files/digest-rsync-2.6.1 131
-MD5 c27421f44de2c0fa58f6d01a9cbdeeb5 files/rsyncd.conf 405
-MD5 e04533ca371c57d742250cc0622c005e files/digest-rsync-2.6.0-r2 204
 MD5 e04533ca371c57d742250cc0622c005e files/digest-rsync-2.6.0-r3 204
-MD5 23ad40bb15faf7e2d3846ffb6d6eaee9 files/digest-rsync-2.6.2-r3 131
 MD5 23ad40bb15faf7e2d3846ffb6d6eaee9 files/digest-rsync-2.6.2-r4 131
+MD5 23ad40bb15faf7e2d3846ffb6d6eaee9 files/digest-rsync-2.6.2-r3 131
+MD5 1b3c307f2cb9db6757a7b7a4aa8f345a files/digest-rsync-2.6.1 131
+MD5 93a1334931329a901f4aa47d63a7ce70 files/rsync-pathsanitize.patch 262
+MD5 e04533ca371c57d742250cc0622c005e files/digest-rsync-2.6.0-r2 204
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBUkaHHTu7gpaalycRAub0AJoCmr/cyoOiSK2rfqAybO0as5ntzgCgxdK0
+2IyHS0xpcbf19lNv3C9C+2A=
+=N69u
+-----END PGP SIGNATURE-----
