@@ -1,8 +1,11 @@
 # ChangeLog for app-text/manedit
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/manedit/ChangeLog,v 1.7 2003/02/12 05:32:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/manedit/ChangeLog,v 1.8 2003/03/15 03:06:37 liquidx Exp $
 
 *manedit-0.5.8 (27 Jan 2003)
+
+  15 Mar 2003; Alastair Tse <liquidx@gentoo.org> manedit-0.5.8.ebuild:
+  Marking as stable for x86. 0.5.6 breaks with newer gcc.
 
   27 Jan 2003; Mike Frysinger <vapier@gentoo.org> :
   Version bump + FHS fix (/usr/man)
