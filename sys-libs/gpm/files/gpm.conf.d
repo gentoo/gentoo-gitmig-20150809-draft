@@ -11,5 +11,13 @@
 
 #RESPONSIVENESS=
 #REPEAT_TYPE=raw
-#APPEND="-g 1 -A 60"
 
+# Please uncomment this line if you want gpm to understand charsets used
+# in URLs and names with ~ or : in them, etc. This is a good idea to turn on!
+
+#APPEND="-l \"a-zA-Z0-9_.:~/\300-\326\330-\366\370-\377\""
+
+# Various other options
+
+#APPEND="-g 1 -A 60"
+#APPEND="-l \"a-zA-Z0-9_.:~/\300-\326\330-\366\370-\377\" -g 1 -A 60"
