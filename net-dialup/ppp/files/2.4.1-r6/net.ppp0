@@ -185,9 +185,9 @@ setup_cfg_files() {
 
 		# Setup the secrets files
 		echo "${USERNAME} ${PEER} \"${PASSWORD}\"" >/etc/ppp/chap-secrets
-		chmod 660 /etc/ppp/chap-secrets
+		chmod 600 /etc/ppp/chap-secrets
 		echo "${USERNAME} ${PEER} \"${PASSWORD}\"" >/etc/ppp/pap-secrets
-		chmod 660 /etc/ppp/pap-secrets
+		chmod 600 /etc/ppp/pap-secrets
 
 		# Setup the chat file
 		if [ -n "${INITSTRING}" ] ; then
