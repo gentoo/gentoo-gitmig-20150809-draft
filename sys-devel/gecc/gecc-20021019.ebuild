@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gecc/gecc-20021019.ebuild,v 1.7 2004/06/24 22:46:37 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gecc/gecc-20021019.ebuild,v 1.8 2004/07/15 03:26:00 agriffis Exp $
 
-# comprehensive list of any and all USE flags leveraged in the build, 
+# comprehensive list of any and all USE flags leveraged in the build,
 # with the exception of any ARCH specific flags, i.e. ppc sparc sparc64
 # x86 alpha - this is a required variable
 IUSE=""
@@ -14,7 +14,6 @@ SLOT="0"
 KEYWORDS="~x86"
 DEPEND="sys-devel/gcc"
 RDEPEND="$DEPEND"
-S="${WORKDIR}/${P}"
 
 src_compile() {
 	rm -rf test

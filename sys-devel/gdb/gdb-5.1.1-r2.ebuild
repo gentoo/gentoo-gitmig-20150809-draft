@@ -1,10 +1,9 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-5.1.1-r2.ebuild,v 1.13 2004/07/02 08:39:18 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-5.1.1-r2.ebuild,v 1.14 2004/07/15 03:25:41 agriffis Exp $
 
 IUSE="nls"
 
-S=${WORKDIR}/${P}
 DESCRIPTION="GNU debugger"
 HOMEPAGE="http://www.gnu.org/software/gdb/gdb.html"
 SRC_URI="ftp://sourceware.cygnus.com/pub/gdb/releases/${P}.tar.gz
