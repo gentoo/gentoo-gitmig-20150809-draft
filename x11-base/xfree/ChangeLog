@@ -1,6 +1,18 @@
 # ChangeLog for x11-base/xfree
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.216 2003/10/14 02:09:48 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.217 2003/10/17 07:48:03 spyderous Exp $
+
+  17 Oct 2003; Donnie Berkholz <spyderous@gentoo.org>; xfree-4.3.0-r3.ebuild:
+  New PATCH_VER 2.1.16. Added patch 0192_all_4.3.0-missing-lib-sharedreqs.patch
+  (obsoleted 0191), 5118_all_4.3.0-radeon-autodetect-pci-or-agp-cards.patch,
+  5117_all_4.3.0-radeon-support-backport-from-CVS-v2.patch,
+  1109_all_4.3.0-ati-driver-message-cleanups.patch,
+  1101_all_4.3.0-ati-generic-shared-chip-data.patch (atichip.h unified patch),
+  0900_all_4.3.0-Xserver-xf86PciInfo-updates.patch (xf86PciInfo.h unified
+  patch), updated 5116_all_4.3.0-radeon-rh-forcelegacycrt-alan.patch,
+  5100_all_4.3.0-radeon-support-from-ATI-backport-from-CVS-v2.patch, updated a
+  few others to comply with 0900 and 1101. Updated xf-4_3-branch patch to 10-17
+  (obsoleted 5112, 5113, 5775).
 
   13 Oct 2003; Donnie Berkholz <spyderous@gentoo.org>; xfree-4.3.0-r2.ebuild,
   xfree-4.3.0-r3.ebuild, xfree-4.3.99.14.ebuild:
