@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-5.08.ebuild,v 1.5 2003/10/07 20:44:25 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-5.08.ebuild,v 1.6 2004/02/15 18:03:22 usata Exp $
 
 inherit nsplugins eutils
 
@@ -21,6 +21,14 @@ DEPEND="virtual/glibc
 RDEPEND="cjk? ( media-fonts/acroread-asianfonts )"
 
 INSTALLDIR=/opt/Acrobat5
+
+pkg_setup() {
+
+	einfo
+	einfo "gtk2 USE flag can cause a slowdown in Mozilla's performance"
+	einfo "especially when using the acroread plugin to view a PDF file."
+	einfo
+}
 
 src_compile() {
 
