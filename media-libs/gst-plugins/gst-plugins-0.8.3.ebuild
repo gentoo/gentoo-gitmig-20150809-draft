@@ -1,24 +1,22 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins/gst-plugins-0.8.3.ebuild,v 1.2 2004/08/18 19:39:29 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins/gst-plugins-0.8.3.ebuild,v 1.3 2004/10/11 13:13:22 vapier Exp $
 
 # order is important, gnome2 after gst-plugins
 inherit gst-plugins gnome2 eutils flag-o-matic
 
 DESCRIPTION="Basepack of plugins for gstreamer"
 HOMEPAGE="http://gstreamer.net/"
-LICENSE="GPL-2"
 
+LICENSE="GPL-2"
 IUSE="esd alsa oss"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~amd64 ~ia64 ~mips"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha hppa ~amd64 ~ia64 ~mips"
 
 RDEPEND=">=media-libs/gstreamer-0.8.4
 	>=gnome-base/gconf-1.2"
-
 DEPEND="${RDEPEND}
 	>=sys-devel/gettext-0.11.5
 	>=dev-util/pkgconfig-0.9"
-
 PDEPEND="oss? ( >=media-plugins/gst-plugins-oss-${PV} )
 	alsa? ( >=media-plugins/gst-plugins-alsa-${PV} )
 	esd? ( >=media-plugins/gst-plugins-esd-${PV} )"
