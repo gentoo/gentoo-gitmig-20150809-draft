@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/bash
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.28 2004/01/14 03:21:45 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.29 2004/02/08 14:43:10 azarah Exp $
+
+  08 Feb 2004; Martin Schlemmer <azarah@gentoo.org> bash-2.05b-r9.ebuild:
+  Bump to stable for x86.
 
   13 Jan 2004; Jon Portnoy <avenj@gentoo.org> bash-2.05b-r7.ebuild :
   Stable on AMD64.
