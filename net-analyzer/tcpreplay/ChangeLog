@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/tcpreplay
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpreplay/ChangeLog,v 1.1 2003/09/22 14:53:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpreplay/ChangeLog,v 1.2 2003/12/11 23:52:03 vapier Exp $
+
+*tcpreplay-1.4.6 (11 Dec 2003)
+
+  11 Dec 2003; Mike Frysinger <vapier@gentoo.org> :
+  Version bump #35373.
 
 *tcpreplay-1.4.5 (22 Sep 2003)
 
