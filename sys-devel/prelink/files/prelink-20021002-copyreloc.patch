@@ -1,0 +1,10 @@
+--- prelink/src/get.c.jj	2003-04-13 11:27:03.000000000 +0100
++++ prelink/src/get.c	2003-04-13 11:27:24.000000000 +0100
+@@ -273,6 +273,7 @@
+ 		       adjust the value so that it is relative to library
+ 		       base.  */
+ 		    value[0] -= deps[i].start - deps[i].l_addr;
++			value[0] = (unsigned long)value[0];
+ 		  }
+ 		break;
+ 	      }

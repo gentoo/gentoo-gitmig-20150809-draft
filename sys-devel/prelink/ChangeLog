@@ -1,6 +1,6 @@
 # ChangeLog for sys-devel/prelink
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/prelink/ChangeLog,v 1.12 2003/03/09 13:18:51 cretin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/prelink/ChangeLog,v 1.13 2003/04/13 10:35:30 cretin Exp $
 
   07 Mar 2003; Peter Johanson <latexer@gentoo.org> prelink-20021213.ebuild :
   Remasked til Cretin deals with deps on elfutils.
@@ -22,6 +22,9 @@
   Update version.
 
 *prelink-20021002-r1 (05 Dec 2002):
+
+  13 Apr 2003: Stefan Jones <cretin@gentoo.org> :
+  Added prelink-20021002-copyreloc.patch from bug #14924
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> :
   Changed sparc ~sparc keywords.
