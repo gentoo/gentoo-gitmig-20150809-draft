@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zenity/zenity-1.6.ebuild,v 1.2 2003/09/13 04:58:40 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zenity/zenity-1.6.ebuild,v 1.3 2003/09/13 15:17:26 lu_zero Exp $
 
 inherit gnome2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnome.org/"
 LICENSE="LGPL-2"
 
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 IUSE=""
 
 RDEPEND=">=x11-libs/gtk+-2
