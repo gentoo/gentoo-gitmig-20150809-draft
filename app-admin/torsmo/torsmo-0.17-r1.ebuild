@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/torsmo/torsmo-0.17-r1.ebuild,v 1.2 2004/12/04 04:16:47 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/torsmo/torsmo-0.17-r1.ebuild,v 1.3 2004/12/05 20:39:36 dragonheart Exp $
 
-inherit eutils kernel-mod
+inherit eutils linux-info
 
 DESCRIPTION="system monitor that sits in the corner of your desktop"
 HOMEPAGE="http://torsmo.sourceforge.net/"
@@ -26,15 +26,10 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	use mozilla && epatch ${FILESDIR}/${P}-mozilla.patch
-	if kernel-mod_is_2_4_kernel
+	if kernel_is 2 4
 	then
 		epatch ${FILESDIR}/${P}-kernel2.4.patch
 	fi
-}
-
-src_compile() {
-	econf || die "failed to configure"
-	emake || die "failed to compile"
 }
 
 src_install() {
