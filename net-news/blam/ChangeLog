@@ -1,6 +1,10 @@
 # ChangeLog for net-news/blam
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/blam/ChangeLog,v 1.1 2004/08/03 02:00:26 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/blam/ChangeLog,v 1.2 2004/08/03 02:05:46 latexer Exp $
+
+  02 Aug 2004; Peter Johanson <latexer@gentoo.org> blam-1.0.54.ebuild:
+  On second though, we really should make sure gtkhtml-sharp had been built by
+  the gtk-sharp package.
 
 *blam-1.0.54 (02 Aug 2004)
 

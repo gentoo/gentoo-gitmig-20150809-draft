@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/blam/blam-1.0.54.ebuild,v 1.1 2004/08/03 02:00:26 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/blam/blam-1.0.54.ebuild,v 1.2 2004/08/03 02:05:46 latexer Exp $
 
 inherit mono
 
@@ -16,6 +16,19 @@ IUSE=""
 DEPEND=">=dev-dotnet/mono-1.0
 		>=x11-libs/gtk-sharp-1.0
 		>=gnome-base/gconf-2.4"
+
+src_unpack() {
+	if [ ! -f ${ROOT}/usr/share/gapi/gtkhtml-api.xml ]
+	then
+		echo
+		eerror "No gtkhtml-sharp support found. Please re-emerge"
+		eerror "gtk-sharp with 'gtkhtml' in your USE flags, and then"
+		eerror "emerge blam."
+		die "gtkhtml-sharp support missing."
+	fi
+
+	unpack ${A}
+}
 
 src_compile() {
 	econf || die
