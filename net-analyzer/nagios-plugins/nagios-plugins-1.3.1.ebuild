@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/nagios-plugins-1.3.1.ebuild,v 1.6 2004/08/04 22:04:13 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/nagios-plugins-1.3.1.ebuild,v 1.7 2004/08/04 22:18:17 squinky86 Exp $
 
 inherit eutils
 
@@ -29,6 +29,7 @@ DEPEND=">=net-dns/bind-tools-9.2.2_rc1
 pkg_preinst() {
 	enewgroup nagios
 	enewuser nagios -1 /bin/bash /dev/null nagios
+	chown -R nagios:nagios ${D}/usr/nagios/libexec || die "Failed Chown of ${D}/usr/nagios/libexec"
 }
 
 src_compile() {
@@ -50,7 +51,4 @@ src_compile() {
 src_install() {
 	dodoc AUTHORS CODING COPYING ChangeLog FAQ INSTALL LEGALNEWS README REQUIREMENTS ROADMAP Requirements
 	make DESTDIR=${D} install || die
-}
-pkg_preinst() {
-	chown -R nagios:nagios ${D}/usr/nagios/libexec || die "Failed Chown of ${D}/usr/nagios/libexec"
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-1.1-r6.ebuild,v 1.14 2004/08/04 21:54:01 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-1.1-r6.ebuild,v 1.15 2004/08/04 22:21:10 squinky86 Exp $
 
 inherit eutils
 
@@ -29,11 +29,6 @@ DEPEND=">=mail-client/mailx-8.1
 	postgres? ( >=dev-db/postgresql-7.3.2 )"
 
 S="${WORKDIR}/${MY_P}"
-
-pkg_preinst() {
-	enewgroup nagios
-	enewuser nagios -1 /bin/bash /dev/null nagios
-}
 
 pkg_setup() {
 	# If there's a gd lib on the system, it will try to build with it.
@@ -171,6 +166,8 @@ pkg_preinst() {
 	else
 		chown nagios:apache ${D}/var/nagios/rw || die "Failed Chown of ${D}/var/nagios/rw"
 	fi
+	enewgroup nagios
+	enewuser nagios -1 /bin/bash /dev/null nagios
 }
 
 pkg_postinst() {
