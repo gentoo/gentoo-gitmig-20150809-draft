@@ -1483,16 +1483,20 @@ class dblink:
 		self.cat=cat
 		self.pkg=pkg
 		self.dbdir=root+"/var/db/pkg/"+cat+"/"+pkg
+	
 	def getpath(self):
 		"return path to location of db information (for >>> informational display)"
 		return self.dbdir
+	
 	def exists(self):
 		"does the db entry exist?  boolean."
 		return os.path.exists(self.dbdir)
+	
 	def create(self):
 		"create the skeleton db directory structure.  No contents, virtuals, provides or anything.  Also will create /var/db/pkg if necessary."
 		if not os.path.exists(self.dbdir):
 			os.makedirs(self.dbdir)
+	
 	def delete(self):
 		"erase this db entry completely"
 		if not os.path.exists(self.dbdir):
@@ -1500,9 +1504,11 @@ class dblink:
 		for x in os.listdir(self.dbdir):
 			os.unlink(self.dbdir+"/"+x)
 		os.rmdir(self.dbdir)
+	
 	def clearcontents(self):
 		if os.path.exists(self.dbdir+"/CONTENTS"):
 			os.unlink(self.dbdir+"/CONTENTS")
+	
 	def getcontents(self):
 		if not os.path.exists(self.dbdir+"/CONTENTS"):
 			return None
@@ -1619,6 +1625,27 @@ class dblink:
 				os.unlink(obj)
 				print "<<<       ","dev",obj
 
+		#remove provides
+		for mycatpkg in self.getelements("PROVIDE"):
+			mycat,mypkg=string.split(mycatpkg,"/")
+			tcatpkg=self.cat+"/"+self.pkg
+			mylink=dblink(mycat,mypkg)
+			if not mylink.exists():
+				continue
+			myvirts=mylink.getelements("VIRTUAL")
+			while tcatpkg in myvirts:
+				myvirts.remove(tcatpkg)
+			if not myvirts:
+				#no more virtuals; cleanup time
+				if mylink.isregular():
+					#just zap the VIRTUAL file, this is also a normal package
+					os.unlink(mylink.dbdir+"/VIRTUAL")
+				else:
+					#this is a pure virtual package, remove the entire db entry
+					mylink.delete()
+			else:
+				mylink.setelements(myvirts,"VIRTUAL")
+		
 		#do original postrm
 		a=doebuild(self.dbdir+"/"+self.pkg+".ebuild","postrm")
 		if a:
@@ -1729,12 +1756,20 @@ class dblink:
 				print ">>> original instance of package unmerged safely."	
 
 			os.chdir(inforoot)
-			#get original provides settings for later updating, all other variables are overwritten
-			oldprovides=self.getprovides()
 			for x in os.listdir("."):
 				self.copyfile(x)
-			#this will update the virtual links that are different between the current and old provides settings
-			self.setprovides(None,oldprovides)
+			
+			#create virtual links
+			for mycatpkg in self.getelements("PROVIDE"):
+				mycat,mypkg=string.split(mycatpkg,"/")
+				mylink=dblink(mycat,mypkg)
+				#this will create the link if it doesn't exist
+				mylink.create()
+				myvirts=mylink.getelements("VIRTUAL")
+				if not mycat+"/"+mypkg in myvirts:
+					myvirts.append(self.cat+"/"+self.pkg)
+					mylink.setelements(myvirts,"VIRTUAL")
+
 			#do postinst script
 			a=doebuild(self.dbdir+"/"+self.pkg+".ebuild","postinst")
 			if a:
@@ -1793,64 +1828,9 @@ class dblink:
 			myelement.write(x+"\n")
 		myelement.close()
 	
-	def haselement(self,mycat,mypkg,ename):
-		"boolean -- is the specified cat/pkg listed in this package's elements file?"
-		mycmp=mycat+"/"+mypkg
-		for x in self.getelements(ename):
-			if x == mycmp:
-				return 1
-		return 0
-	
-	def hasprovide(self,mycat,mypkg):
-		return self.haselement(mycat,mypkg,"PROVIDE")
-	
-	def getprovides(self):
-		"get a list of virtual packages provided by this package."
-		return self.getelements("PROVIDE")
-	
-	def setprovides(self,mylist=None,oldprovides=None):
-		"set virtual packages provided by this package, and also update virtual links"
-		if not mylist:
-			mylist=self.getelements("PROVIDE")
-		if not oldprovides:
-			oldprovides=self.getelements("PROVIDE")
-		for x in mylist:
-			if x not in oldprovides:
-				#remove old virtual link
-				mypsplit=string.split(x,"/")
-				mylink=dblink(mypsplit[0],mypsplit[1])
-				myvirts=plink.getvirtuals()
-				if self.cat+"/"+self.pkg in myvirts:
-					myvirts.remove(self.cat+"/"+self.pkg)
-					mylink.setvirtuals(myvirts)
-		for x in oldprovides:
-			if x not in mylist:
-				#add new virtual link
-				mypsplit=string.split(x,"/")
-				mylink=dblink(mypsplit[0],mypsplit[1])
-				myvirts=plink.getvirtuals()
-				if not self.cat+"/"+self.pkg in myvirts:
-					myvirts.append(self.cat+"/"+self.pkg)
-					mylink.setvirtuals(myvirts)
-		return self.setelements(mylist,"PROVIDE")
-	
-	def isprovide(self):
-		return os.path.exists(self.dbdir+"/PROVIDE")
-
-	def hasvirtual(self,mycat,mypkg):
-		return self.haselement(mycat,mypkg,"VIRTUAL")
-	
-	def getvirtuals(self):
-		"get a list of packages providing this virtual package."
-		return self.getelements("VIRTUAL")
-	
-	def setvirtuals(self,mylist):
-		"set a list of packages providing this virtual package."
-		return self.setelements(mylist,"VIRTUAL")
-	
-	def isvirtual(self):
-		"is this a virtual package?  boolean."
-		return os.path.exists(self.dbdir+"/VIRTUAL")
+	def isregular(self):
+		"Is this a regular package (does it have a CATEGORY file?  A dblink can be virtual *and* regular)"
+		return os.path.exists(self.dbdir+"/CATEGORY")
 
 def depgrab(myfilename,depmark):
 	"""
@@ -1968,3 +1948,5 @@ if root != "/":
 		sys.exit(1)
 settings=config()
 ebuild_initialized=0
+
+
