@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmtimer
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmtimer/ChangeLog,v 1.12 2004/10/24 06:17:20 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmtimer/ChangeLog,v 1.13 2004/11/25 15:21:13 weeve Exp $
+
+  25 Nov 2004; Jason Wever <weeve@gentoo.org> wmtimer-2.4.ebuild:
+  Added ~sparc keyword.
 
   23 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org> wmtimer-2.4.ebuild:
   Removing unneccessary dodoc docs.

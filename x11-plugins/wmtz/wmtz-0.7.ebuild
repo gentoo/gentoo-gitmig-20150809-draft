@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmtz/wmtz-0.7.ebuild,v 1.10 2004/09/19 01:51:40 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmtz/wmtz-0.7.ebuild,v 1.11 2004/11/25 15:22:41 weeve Exp $
 
 inherit eutils gcc
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.geocities.com/jl1n/wmtz/wmtz.html"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 amd64 ppc"
+KEYWORDS="x86 amd64 ppc ~sparc"
 
 DEPEND="virtual/x11"
 

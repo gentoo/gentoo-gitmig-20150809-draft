@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmsystray
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmsystray/ChangeLog,v 1.4 2004/09/02 18:22:40 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmsystray/ChangeLog,v 1.5 2004/11/25 15:18:26 weeve Exp $
+
+  25 Nov 2004; Jason Wever <weeve@gentoo.org> wmsystray-0.1.1.ebuild:
+  Added ~sparc keyword.
 
   02 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   wmsystray-0.1.1.ebuild:

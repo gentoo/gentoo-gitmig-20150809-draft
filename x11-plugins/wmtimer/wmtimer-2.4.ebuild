@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmtimer/wmtimer-2.4.ebuild,v 1.16 2004/10/24 06:17:20 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmtimer/wmtimer-2.4.ebuild,v 1.17 2004/11/25 15:21:13 weeve Exp $
 
 IUSE=""
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://home.dwave.net/~jking/wmtimer/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 amd64 ppc64 ppc"
+KEYWORDS="x86 amd64 ppc64 ppc ~sparc"
 
 RDEPEND="=x11-libs/gtk+-1.2*
 	virtual/x11"
