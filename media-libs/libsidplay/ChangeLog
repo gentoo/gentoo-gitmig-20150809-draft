@@ -1,6 +1,18 @@
 # ChangeLog for media-libs/libsidplay
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsidplay/ChangeLog,v 1.14 2004/07/03 07:17:00 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsidplay/ChangeLog,v 1.15 2004/07/03 08:23:29 eradicator Exp $
+
+*libsidplay-2.1.0-r1 (03 Jul 2004)
+*libsidplay-2.1.1 (03 Jul 2004)
+
+  03 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> +metadata.xml,
+  files/libsidplay-gcc34.patch, +files/libsidplay2-gcc34.patch,
+  +libsidplay-2.1.0-r1.ebuild, +libsidplay-2.1.1.ebuild:
+  Moving sidplay-libs here under SLOT=2.  Added ~amd64.  Version bump.
+
+  03 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  libsidplay-1.36.57.ebuild:
+  ~amd64.
 
   03 Jul 2004; Jon Hood <squinky86@gentoo.org> +files/libsidplay-gcc34.patch,
   libsidplay-1.36.57.ebuild:

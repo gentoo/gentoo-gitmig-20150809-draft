@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsidplay/libsidplay-1.36.57.ebuild,v 1.11 2004/07/03 07:17:00 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsidplay/libsidplay-1.36.57.ebuild,v 1.12 2004/07/03 08:23:29 eradicator Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.geocities.com/SiliconValley/Lakes/5147/sidplay/packages/${P}
 
 LICENSE="GPL-2"
 SLOT="1"
-KEYWORDS="x86 sparc alpha hppa ia64 ~ppc"
+KEYWORDS="x86 sparc alpha hppa ia64 ~ppc ~amd64"
 
 DEPEND="virtual/libc"
 
