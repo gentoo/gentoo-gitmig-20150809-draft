@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/skkserv
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/skkserv/ChangeLog,v 1.5 2003/02/12 04:56:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/skkserv/ChangeLog,v 1.6 2003/05/05 07:59:09 phosphan Exp $
+
+*skkserv-9.6-r1 (05 May 2003)
+
+  05 May 2003; Patrick Kursawe <phosphan@gentoo.org> skkserv-9.6-r1.ebuild:
+  PROVIDEs virtual/skkserv now
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  

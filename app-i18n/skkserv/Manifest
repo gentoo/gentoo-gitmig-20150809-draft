@@ -1,0 +1,6 @@
+MD5 6aede81c7ac09368832a62e814c30eb3 skkserv-9.6.ebuild 908
+MD5 00c945fbed0c75b6458b0f3b8f9e3703 skkserv-9.6-r1.ebuild 935
+MD5 0e6bb07f2813f31ad9b3439e1ffacf58 ChangeLog 599
+MD5 e024045d7d565a14129a2eaf6dc17b75 files/digest-skkserv-9.6-r1 60
+MD5 e024045d7d565a14129a2eaf6dc17b75 files/digest-skkserv-9.6 60
+MD5 84c01638b93574c557637a227ba3fbe1 files/skkserv-9.6/skkserv.initd 473
