@@ -1,7 +1,7 @@
-# Copyright 1999-2000 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/ORBit/ORBit-0.5.13.ebuild,v 1.1 2002/02/13 16:52:53 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/ORBit/ORBit-0.5.14.ebuild,v 1.1 2002/03/21 10:47:40 azarah Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A high-performance, lightweight CORBA ORB aiming for CORBA 2.2 compliance"
@@ -22,20 +22,26 @@ src_compile() {
 		myconf="--disable-nls"
 	fi
 
-	./configure --host=${CHOST} 					\
-		    --prefix=/usr					\
-        	    --sysconfdir=/etc					\
-		    --localstatedir=/var/lib				\
-		    $myconf || die
+	# Libtoolize to fix "relink bug" in older libtool's distributed
+	# with packages.
+	libtoolize --copy --force
+	aclocal
+	autoconf
+
+	./configure --host=${CHOST} \
+		--prefix=/usr \
+		--sysconfdir=/etc \
+		--localstatedir=/var/lib \
+		$myconf || die
 
 	make || die # Doesn't work with -j 4 (hallski)
 }
 
 src_install() {
-	make prefix=${D}/usr						\
-	     sysconfdir=${D}/etc					\
-	     localstatedir=${D}/var/lib					\
-    	     install || die
+	make prefix=${D}/usr \
+		sysconfdir=${D}/etc \
+		localstatedir=${D}/var/lib \
+		install || die
 
 	dodoc AUTHORS COPYING* ChangeLog README NEWS TODO
 	dodoc docs/*.txt docs/IDEA1
@@ -51,6 +57,4 @@ src_install() {
 	cd ${D}/usr/lib
 	patch -p0 < ${FILESDIR}/libIDLConf.sh-gentoo.diff
 }
-
-
 
