@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.849 2005/01/08 17:54:47 peitolm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.850 2005/01/09 00:25:09 stkn Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -534,6 +534,7 @@ net-im/ekg2:nogg - Disable Gadu-Gadu plugin
 net-im/gaim:eds - Enable Evolution Data Server (EDS) support
 net-im/gaim:gnutls - Use GnuTLS for SSL support
 net-im/gaim:silc - Enable SILC protocol support
+net-im/gnomemeeting:howl - Enable howl (Zeroconf) support
 net-im/gnugadu:tlen - Enable Tlen.pl protocol support
 net-im/kadu:kadu-modules - Enables modules in kadu
 net-im/kadu:kadu-voice - Enables voice chat in kadu
