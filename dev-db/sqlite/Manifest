@@ -1,5 +1,7 @@
 MD5 a50aeaa6a21b8791b313f27ef9e075e2 sqlite-2.8.0.ebuild 733
+MD5 a50aeaa6a21b8791b313f27ef9e075e2 sqlite-2.8.2.ebuild 733
 MD5 c368bbd9770a4e52b33fb10fdfa8da8f sqlite-2.7.3.ebuild 964
 MD5 095ddd9df08894c4f70e48b26db78174 ChangeLog 1835
 MD5 4f5e39f9c072788907392d423c0d1afe files/digest-sqlite-2.7.3 64
 MD5 b6d0c4a26df2632d5d158e7563de60c0 files/digest-sqlite-2.8.0 64
+MD5 c55873f2693b6412be071fbdd774bea7 files/digest-sqlite-2.8.2 64
