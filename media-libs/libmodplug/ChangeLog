@@ -1,0 +1,9 @@
+# ChangeLog for media-libs/libmodplug
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmodplug/ChangeLog,v 1.1 2004/11/10 18:56:54 chainsaw Exp $
+
+*libmodplug-0.7 (10 Nov 2004)
+
+  10 Nov 2004; Tony Vroon <chainsaw@gentoo.org> +libmodplug-0.7.ebuild:
+  Initial import, ebuild submitted by Bruce Guenter <bruceg@em.ca> in bug #70470.
+
