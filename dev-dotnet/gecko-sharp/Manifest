@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 1816b3e844f90c8fea4174128de27a4a ChangeLog 2621
+MD5 62dd42de00108f7df180c4d48d409d10 ChangeLog 2703
 MD5 76b314cc7b7b79b298dd4889dff8c9cd metadata.xml 159
-MD5 502f47aecdf64c65c9179b02a47bcc84 gecko-sharp-0.6.ebuild 755
 MD5 db1be19a20595a792f034d0588335373 gecko-sharp-0.5-r2.ebuild 750
-MD5 9aa313387703e02ad1bcddcde0729a66 files/digest-gecko-sharp-0.6 67
+MD5 9ac22ac762c975cc0109846b6d050ff3 gecko-sharp-0.6.ebuild 750
 MD5 41db66016dd18480802fc0e658a04746 files/digest-gecko-sharp-0.5-r2 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFCEOxD5mJXAu5GbtIRAoJKAJwJzDZOuaMUZLBKVWqivtlEm1qBFQCfayAG
-cGLAz4Ut+p4j9mlCxCOB5yU=
-=n4WU
------END PGP SIGNATURE-----
+MD5 9aa313387703e02ad1bcddcde0729a66 files/digest-gecko-sharp-0.6 67
