@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/sashxb/sashxb-1.0.2.ebuild,v 1.9 2004/07/15 00:05:41 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/sashxb/sashxb-1.0.2.ebuild,v 1.10 2004/08/21 16:19:57 foser Exp $
 
 DESCRIPTION="Application environment for HTML and JS developers."
 HOMEPAGE="http://oss.software.ibm.com/developerworks/opensource/sashxb/"
@@ -15,7 +15,7 @@ RDEPEND=">=net-www/mozilla-1.0
 	>=dev-libs/gdome2-0.7
 	dev-libs/libxml2
 	gnome-base/libglade
-	gnome-base/ORBit
+	=gnome-base/orbit-0*
 	sys-fs/e2fsprogs
 	media-libs/gdk-pixbuf
 	gnome-base/gnome-core

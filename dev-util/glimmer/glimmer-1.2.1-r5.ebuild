@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/glimmer/glimmer-1.2.1-r5.ebuild,v 1.6 2004/06/25 02:33:33 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/glimmer/glimmer-1.2.1-r5.ebuild,v 1.7 2004/08/21 16:18:12 foser Exp $
 
 inherit flag-o-matic
 
@@ -17,7 +17,7 @@ KEYWORDS="x86 sparc "
 DEPEND="=x11-libs/gtk+-1.2*
 	=gnome-base/gnome-vfs-1*
 	>=gnome-base/gnome-libs-1.4.1.7
-	>=gnome-base/ORBit-0.5.16
+	=gnome-base/orbit-0*
 	>=gnome-base/gnome-print-0.35
 	python? ( virtual/python
 		<dev-python/gnome-python-1.99 )"
