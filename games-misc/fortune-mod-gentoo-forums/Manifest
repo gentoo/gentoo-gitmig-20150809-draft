@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 8801942a1bfd935df0f7f2d3e415d8e4 fortune-mod-gentoo-forums-20040922.ebuild 880
+MD5 2e983da3bb210f231b31bbd6cea4cc87 fortune-mod-gentoo-forums-20040922.ebuild 879
 MD5 128003fbd8d32dacdbc896f08f3a2c6b ChangeLog 456
 MD5 0b4015ed1ca4f4631caa755db0d1f30b metadata.xml 246
 MD5 91dcd0a0a5de4ba3ff2ac2fd72f14ff3 files/digest-fortune-mod-gentoo-forums-20040922 146
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBUgIBcAgAdbxYsnERAvGUAKCcWbbrzq9BdWVphAk92qhX5FN58QCeI4n1
-9eXXX8QNEth8IviqejVwXlg=
-=ShSQ
+iD8DBQFBUgKhcAgAdbxYsnERAqaTAJ0QeAyl8FYl+9q7iPYjlx7YWTNcWQCggCkS
++QYguo1yPYI1ND9+W6qijeQ=
+=HKbM
 -----END PGP SIGNATURE-----

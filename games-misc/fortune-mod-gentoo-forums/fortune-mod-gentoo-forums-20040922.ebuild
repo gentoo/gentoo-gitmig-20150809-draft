@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-gentoo-forums/fortune-mod-gentoo-forums-20040922.ebuild,v 1.1 2004/09/22 22:51:35 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-gentoo-forums/fortune-mod-gentoo-forums-20040922.ebuild,v 1.2 2004/09/22 22:54:20 squinky86 Exp $
 
 IUSE="offensive"
 
@@ -13,7 +13,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~amd64"
 
-RDEPEND="games-misc/fortune-mod"
+DEPEND="games-misc/fortune-mod"
 
 S="${WORKDIR}"
 
