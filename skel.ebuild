@@ -77,8 +77,9 @@ DEPEND=""
 #RDEPEND=""
 
 # Source directory; the dir where the sources can be found (automatically
-# unpacked) inside ${WORKDIR}.  S will get a default setting of ${WORKDIR}/${P}
-# if you omit this line.
+# unpacked) inside ${WORKDIR}.  The default value for S is ${WORKDIR}/${P}
+# If you don't need to change it, leave the S= line out of the ebuild
+# to keep it tidy.
 S=${WORKDIR}/${P}
 
 src_compile() {
@@ -102,16 +103,17 @@ src_compile() {
 	# portage shortcut to the above ./configure statement:
 	#
 	# econf || die
-	# Note that econf will die on failure, but plase use econf || die
+	# Note that econf will die on failure, but please use econf || die
 	# for consistency.
 
 	# emake (previously known as pmake) is a script that calls the
 	# standard GNU make with parallel building options for speedier
 	# builds (especially on SMP systems).  Try emake first.  It might
-	# not work for some packages, in which case you'll have to resort
-	# to normal "make".
-	emake || die
-	#make || die
+	# not work for some packages, because some makefiles have bugs
+	# related to parallelism, in these cases, use emake -j1 to limit
+	# make to a single process.  The -j1 is a visual clue to others
+	# that the makefiles have bugs that have been worked around.
+	emake || die "emake failed"
 }
 
 src_install() {
