@@ -1,6 +1,10 @@
 # ChangeLog for x11-terms/aterm
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/aterm/ChangeLog,v 1.56 2005/01/18 13:51:57 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/aterm/ChangeLog,v 1.57 2005/02/05 11:10:03 hansmi Exp $
+
+  05 Feb 2005; Michael Hanselmann <hansmi@gentoo.org>
+  aterm-0.4.2-r11.ebuild:
+  Stable on ppc.
 
   18 Jan 2005; Michał Januszewski <spock@gentoo.org>
   files/aterm-0.4.2-internal-border.patch:
