@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.135 2004/02/02 16:33:42 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.136 2004/02/11 15:37:40 tester Exp $
 
 3dfx - Adds support for 3dfx video cards to XFree86. See: voodoo3
 3dnow - Adds support for 3dnow multimedia processor instructions
@@ -190,3 +190,4 @@ alpha - indicates that architecture is 64-bit Alpha
 mips - indicates that architecture is MIPS based
 hppa - indicates that architecture is HP PA-Risc
 arm - indicates that architecture is ARM
+amd64 - indicates that architecture is AMD64
