@@ -1,0 +1,9 @@
+# ChangeLog for net-zope/cmfphoto
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/cmfphoto/ChangeLog,v 1.1 2003/03/08 11:12:44 kutsuya Exp $
+
+*cmfphoto-0.1 (08 Mar 2003)
+
+  08 Mar 2003; Jason Shoemaker <kutsuya@gentoo.org> cmfphoto-0.1.ebuild:
+  Inital import.
+
