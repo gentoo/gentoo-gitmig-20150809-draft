@@ -1,0 +1,334 @@
+--- WindowMaker-0.80.2/WPrefs.app/Appearance.c	Tue Jan  8 08:44:38 2002
++++ WindowMaker-0.80.2-trance/WPrefs.app/Appearance.c	Tue Feb  4 20:45:34 2003
+@@ -82,6 +82,11 @@
+     WMFrame *taliF;
+     WMButton *taliB[3];
+ 
++	WMFrame *tranceF;
++	WMButton *tranceB;
++	WMSlider *tranceSl;
++	WMLabel *tranceL;
++
+     /* root bg */
+     WMFrame *bgF;
+     
+@@ -1683,6 +1688,23 @@
+     }
+ }
+ 
++static void 
++tranceCallback(WMWidget *self, void *data)
++{
++	_Panel *panel = (_Panel*)data;
++	char buffer[5];
++	int i;
++
++	i = WMGetSliderValue(panel->tranceSl);
++	i = 10*(10-i);
++
++	if (i == 0) {
++	WMSetLabelText(panel->tranceL, "OFF");
++	} else {
++	sprintf(buffer, "%i%%", i);
++	WMSetLabelText(panel->tranceL, buffer);
++	}
++}
+ 
+ static void
+ createPanel(Panel *p)
+@@ -1974,7 +1996,7 @@
+ 
+ 
+     panel->taliF = WMCreateFrame(panel->optF);
+-    WMResizeWidget(panel->taliF, 110, 80);
++    WMResizeWidget(panel->taliF, 105, 80);
+     WMMoveWidget(panel->taliF, 15, 100);
+     WMSetFrameTitle(panel->taliF, _("Title Alignment"));
+ 
+@@ -1992,7 +2014,7 @@
+ 	    WMSetButtonText(panel->taliB[i], _("Right"));
+ 	    break;
+ 	}
+-	WMResizeWidget(panel->taliB[i], 90, 18);
++	WMResizeWidget(panel->taliB[i], 85, 18);
+ 	WMMoveWidget(panel->taliB[i], 10, 15 + 20*i);
+     }
+     WMGroupButtons(panel->taliB[0], panel->taliB[1]);
+@@ -2000,6 +2022,38 @@
+ 
+     WMMapSubwidgets(panel->taliF);
+     
++	
++
++	panel->tranceF = WMCreateFrame(panel->optF);
++	WMResizeWidget(panel->tranceF, 105,80);
++	WMMoveWidget(panel->tranceF, 125, 100);
++	WMSetFrameTitle(panel->tranceF,_("Transparency"));
++
++	WMSetBalloonTextForView(_("<yermom> i love windowmaker\n"
++						  "<tarzeau> get some fresh sand-wich-es\n"
++						  "<flip-> heh\n"
++						  "<flip-> transparency\n"
++						  "<flip-> moo\n"
++						  "<flip-> :P\n"), WMWidgetView(panel->tranceF));
++
++	panel->tranceB = WMCreateSwitchButton(panel->tranceF);
++	WMSetButtonText(panel->tranceB, _("Menu"));
++	WMResizeWidget(panel->tranceB,85,18);
++	WMMoveWidget(panel->tranceB, 10, 15);
++    
++	panel->tranceSl = WMCreateSlider(panel->tranceF);
++	WMResizeWidget(panel->tranceSl, 70, 18);
++	WMMoveWidget(panel->tranceSl, 17, 15 + 20*2);
++	WMSetSliderMinValue(panel->tranceSl, 0);
++	WMSetSliderMaxValue(panel->tranceSl, 10);
++	WMSetSliderAction(panel->tranceSl, tranceCallback, panel);
++
++	panel->tranceL = WMCreateLabel(panel->tranceF);
++	WMResizeWidget(panel->tranceL, 27, 18);
++	WMMoveWidget(panel->tranceL, 40, 35);
++
++	WMMapSubwidgets(panel->tranceF);
++
+     WMMapSubwidgets(panel->optF);
+ 
+     /**/
+@@ -2058,6 +2112,7 @@
+ static void
+ showData(_Panel *panel)
+ {
++	int x;
+     int i;
+     char *str;
+ 
+@@ -2103,6 +2158,13 @@
+ 
+     WMSetButtonSelected(panel->mstyB[panel->menuStyle], True);
+     WMSetButtonSelected(panel->taliB[panel->titleAlignment], True);
++
++
++	WMSetButtonSelected(panel->tranceB, GetBoolForKey("MenuTrance"));
++
++	x = GetIntegerForKey("TranceAmount");
++	WMSetSliderValue(panel->tranceSl, x);
++	tranceCallback(NULL, panel);
+ }
+ 
+ 
+@@ -2154,6 +2216,9 @@
+ 	SetStringForKey("center", "TitleJustify");
+ 	break;
+     }
++
++	SetBoolForKey(WMGetButtonSelected(panel->tranceB), "MenuTrance");
++	SetIntegerForKey(WMGetSliderValue(panel->tranceSl), "TranceAmount");
+ }
+ 
+ 
+--- WindowMaker-0.80.2/src/WindowMaker.h	Thu Feb 21 06:28:48 2002
++++ WindowMaker-0.80.2-trance/src/WindowMaker.h	Tue Feb  4 19:13:20 2003
+@@ -337,6 +337,8 @@
+     char opaque_move;		       /* update window position during */
+ 				       /* move */
+ 
++	char menu_trance;		/* whether menu should be translucent */
++	int trance_amount;		/* percentage of translucency */
+     char wrap_menus;		       /* wrap menus at edge of screen */
+     char scrollable_menus;	       /* let them be scrolled */
+     char align_menus;		       /* align menu with their parents */
+--- WindowMaker-0.80.2/src/defaults.c	Tue Jan  8 08:45:07 2002
++++ WindowMaker-0.80.2-trance/src/defaults.c	Tue Feb  4 19:13:07 2003
+@@ -494,6 +494,12 @@
+     {"UseSaveUnders",	"NO",			NULL,
+ 	  &wPreferences.use_saveunders,	getBool,	NULL
+     },
++	{"MenuTrance",	"NO",			NULL,
++	  &wPreferences.menu_trance,	getBool,	NULL
++	},
++	{"TranceAmount",	"30",		NULL,
++	  &wPreferences.trance_amount,	getInt,		NULL
++	},
+     {"OpaqueMove",	"NO",			NULL,
+ 	  &wPreferences.opaque_move,	getBool,	NULL
+     },
+--- WindowMaker-0.80.2/src/menu.c	Thu Feb 21 06:28:48 2002
++++ WindowMaker-0.80.2-trance/src/menu.c	Tue Feb  4 18:50:02 2003
+@@ -85,6 +85,7 @@
+ static void menuCloseClick(WCoreWindow *sender, void *data, XEvent *event);
+ 
+ static void updateTexture(WMenu *menu);
++static void clipDimensionsToScreen(WMenu *menu, int *x, int *y, int *width, int *height);
+ 
+ #ifndef LITE
+ static int saveMenuRecurs(WMPropList *menus, WScreen *scr, WMenu *menu);
+@@ -480,16 +481,129 @@
+ 			 menu->menu->width-1, i*menu->entry_height, 
+ 			 &light);
+ 	}
+-    }
+-    if (!RConvertImage(scr->rcontext, img, &pix)) {
+-	wwarning(_("error rendering image:%s"), RMessageForError(RErrorCode));
+-    }
++	} 
++    	if (!RConvertImage(scr->rcontext, img, &pix)) {
++		wwarning(_("error rendering image:%s"), RMessageForError(RErrorCode));
++    	}
+     RReleaseImage(img);
+ 
+     return pix;
+ }
+ 
+ 
++ static void
++clipDimensionsToScreen(WMenu *menu, int *x, int *y, int *width, int *height)
++{
++    int sw, sh;
++    int fx, fy;
++    
++    sw = menu->menu->screen_ptr->scr_width;
++    sh = menu->menu->screen_ptr->scr_height;
++        
++    fx = *x + *width;
++    fy = *y + *height;
++    
++    /* CLAMP everything */
++    if (*x > sw) { *x = sw; } else if (*x < 0) { *x = 0; }
++    if (*y > sh) { *y = sh; } else if (*y < 0) { *y = 0; }
++    if (fx > sw) { fx = sw; } else if (fx < 0) { fx = 0; }
++    if (fy > sh) { fy = sh; } else if (fy < 0) { fy = 0; } 
++    
++    /* Make sure that height and width are positive */
++    if (fx < *x) { *width = 0; } else { *width = fx - *x; }
++    if (fy < *y) { *height = 0; } else { *height = fy - *y; } 
++}
++
++static Pixmap
++tranceMenu(WMenu *menu)
++{
++    WScreen *scr = menu->menu->screen_ptr;
++	
++	XImage *back, *front;
++	RImage *trance, *menu_image, *msnormal;
++	Pixmap original, result;
++
++	int mw, mh, dx, dy; /* these correspond to the menu proper */
++	int gx, gy, gw, gh; /* these correspond to what we grab from the root window */
++	int tamount;
++	unsigned long red_mask, green_mask, blue_mask; 
++
++	unsigned int w, h, bar;
++	int foo; 
++	Window baz;
++	
++	mw = gw = menu->menu->width;
++	mh = gh = menu->menu->height;
++	dx = gx = menu->frame_x + 1;
++	dy = gy = menu->frame_y + menu->frame->top_width + 1;
++
++	tamount = wPreferences.trance_amount;
++   	clipDimensionsToScreen(menu, &gx, &gy, &gw, &gh);
++	back = XGetImage(dpy, scr->root_win, gx, gy, gw, gh,
++					AllPlanes, ZPixmap);
++	if (!back) {
++	wwarning(_("error capturing \"back\" image"),RMessageForError(RErrorCode));
++	return None;
++	} else {
++		red_mask = back->red_mask;
++		green_mask = back->green_mask;
++		blue_mask = back->blue_mask;
++
++		trance = RCreateImageFromXImage(scr->rcontext, back, NULL);
++		XDestroyImage(back);
++		if (!trance) {
++		wwarning(_("error rendering \"trance\" image"),
++						RMessageForError(RErrorCode));
++		return None;
++		} else {
++		/************************************************************/
++			original = renderTexture(menu);
++
++   		    XGetGeometry(dpy, original, &baz, &foo, 
++						&foo, &w, &h, &bar, &bar);
++       		front = XGetImage(dpy, original, 0, 0, w, h,
++								AllPlanes, ZPixmap);
++			if (!front) {
++			wwarning(_("error capturing \"front\" image"),
++							RMessageForError(RErrorCode));
++			return None;
++			} 
++			front->red_mask = red_mask;
++			front->green_mask = green_mask;
++			front->blue_mask = blue_mask;
++
++			menu_image=RCreateImageFromXImage(scr->rcontext,front,NULL);
++
++			XDestroyImage(front);
++		/************************************************************/
++			if (original) {
++				FREE_PIXMAP(original);
++			}
++			if (!menu_image) {
++			wwarning(_("error rendering \"menu_image\""),
++							RMessageForError(RErrorCode));
++			return None;
++			} else {
++				if (wPreferences.menu_style == MS_NORMAL) {
++					msnormal = RMakeTiledImage(menu_image, mw, mh);
++					RCombineAreaWithOpaqueness(trance, msnormal,0,0,gw,gh,
++											gx - dx,gy - dy,256*tamount/10);
++					RReleaseImage(menu_image);
++					RReleaseImage(msnormal);
++				} else {
++           			RCombineAreaWithOpaqueness(trance, menu_image,0,0,gw,gh,
++                	              			gx - dx,gy - dy,256*tamount/10);
++					RReleaseImage(menu_image);
++				}
++				RConvertImage(scr->rcontext, trance,
++							&result);
++			}
++			RReleaseImage(trance);
++		}
++	}
++	return result;
++}
++
+ static void
+ updateTexture(WMenu *menu)
+ {
+@@ -500,7 +614,11 @@
+ 	if (!menu->flags.brother) {
+ 	    FREE_PIXMAP(menu->menu_texture_data);
+ 
+-	    menu->menu_texture_data = renderTexture(menu);
++		if (wPreferences.menu_trance) {
++			menu->menu_texture_data = tranceMenu(menu);
++		} else {
++	    	menu->menu_texture_data = renderTexture(menu);
++		}
+ 
+ 	    XSetWindowBackgroundPixmap(dpy, menu->menu->window,
+ 				       menu->menu_texture_data);
+@@ -1154,6 +1272,11 @@
+         XMoveWindow(dpy, menu->frame->core->window, x, y);
+         menu->frame_x = x;
+         menu->frame_y = y;
++		/* FIXME: needs an if */
++		if (wPreferences.menu_trance) {
++			updateTexture(menu);
++		}
++		/*	*/
+         XMapWindow(dpy, menu->frame->core->window);
+         wRaiseFrame(menu->frame->core);
+         menu->flags.mapped = 1;
+@@ -1178,6 +1301,11 @@
+ 	menu->frame_y = menu->frame->screen_ptr->app_menu_y;
+ 	XMoveWindow(dpy, menu->frame->core->window, menu->frame_x, menu->frame_y);
+     }
++	/* FIXME: needs an if */
++	if (wPreferences.menu_trance) {
++		updateTexture(menu);
++	}
++	/*	*/
+     XMapWindow(dpy, menu->frame->core->window);
+     wRaiseFrame(menu->frame->core);
+     menu->flags.mapped = 1;
