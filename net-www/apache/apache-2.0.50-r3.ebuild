@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.50-r3.ebuild,v 1.3 2004/09/15 00:03:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.50-r3.ebuild,v 1.4 2004/09/15 00:21:43 pvdabeel Exp $
 
 inherit flag-o-matic eutils fixheadtails gnuconfig
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.apache.org/dist/httpd/httpd-${PV}.tar.gz
 
 LICENSE="Apache-2.0"
 SLOT="2"
-KEYWORDS="~alpha ~amd64 arm hppa ia64 ~mips ~ppc ~ppc64 sparc ~x86"
+KEYWORDS="~alpha ~amd64 arm hppa ia64 ~mips ppc ~ppc64 sparc ~x86"
 IUSE="berkdb gdbm ldap threads ipv6 doc static ssl"
 
 #Standard location for Gentoo Linux
