@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/m4
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/m4/ChangeLog,v 1.18 2003/12/09 04:57:54 seemant Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/m4/ChangeLog,v 1.19 2004/01/17 14:37:36 joker Exp $
+
+  17 Jan 2004; Christian Birchinger <joker@gentoo.org> m4-1.4-r1.ebuild:
+  Added sparc stable keyword
 
   08 Dec 2003; Seemant Kulleen <seemant@gentoo.org> m4-1.4-r1.ebuild:
   coreutils-5.0.91 seems to require this version of m4, so updating to stable
