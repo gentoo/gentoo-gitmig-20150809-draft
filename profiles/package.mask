@@ -698,7 +698,7 @@ dev-libs/libmrproject
 >=dev-util/glade-1.1.0
 >=gnome-base/gdm-2.3.90.3
 >=dev-util/gob-1.99.3
-
+>=media-gfx/gthumb-1.100
 
 # at-spi doesn't install all headers so libgail-gnome doesn't build ok.
 # therefore at-poke isn't in portage since it can't be tested
