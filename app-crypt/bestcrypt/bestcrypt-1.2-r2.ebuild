@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/bestcrypt/bestcrypt-1.2-r2.ebuild,v 1.2 2002/11/14 02:10:24 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/bestcrypt/bestcrypt-1.2-r2.ebuild,v 1.3 2002/12/24 16:35:58 lostlogic Exp $
 
 MY_PN="bcrypt"
 MY_PV="`echo ${PVR}|sed -e s:-r:-:`"
@@ -26,7 +26,7 @@ src_unpack() {
 }
 
 src_compile() {
-	emake
+	MAKEOPTS="-j1" emake
 }
 
 src_install() {
