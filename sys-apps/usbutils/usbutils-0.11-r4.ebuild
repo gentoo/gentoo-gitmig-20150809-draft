@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/usbutils-0.11-r4.ebuild,v 1.1 2004/09/22 12:21:53 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/usbutils-0.11-r4.ebuild,v 1.2 2005/03/14 14:49:59 gustavoz Exp $
 
 inherit eutils gnuconfig
 
