@@ -299,10 +299,6 @@ net-p2p/lmule
 # xmms-aalsa package is permanently removed (bug #6797)
 media-plugins/xmms-aalsa
 
-# <brain@gentoo.org> (03 Jul 2003)
-# beta version
-=app-office/koffice-1.3_beta2
-
 # <iggy@gentoo.org> (01 Jul 2003)
 # testing, it works for me, but I want more testers
 =net-mail/courier-0.42.2-r1
@@ -405,10 +401,6 @@ dev-php/php-cvs
 # the package is unmainteained and dead upstream. it will die in portage
 # accordingly.
 media-plugins/avi-xmms
-
-# <danarmak@gentoo.org> (16 Apr 2003)
-# beta, so masked
-=app-office/koffice-1.3_beta1
 
 # <zwelch@gentoo.org> (06 Apr 2003)
 # New versions of packages that have new cross-compiling support
@@ -585,10 +577,6 @@ app-office/ical
 # no corresponding PyQt on cvs to get this thing to compile
 dev-python/anygui
 
-# Dan Armak <danarmak@gentoo.org> (30 Jul 2002)
-# masked for testing
-media-video/kxine
-
 # <seemant@gentoo.org> (25 Jul 2002)
 # masked because of unhealthy groupadd operation in postinst
 # needs sorting out on the policy
@@ -631,16 +619,9 @@ dev-utils/vdkbuilder
 # george - Jun 8, 2002
 =dev-lang/nhc98-1.12
 
-# masking k3studio, somehow it escaped being masked before
-# ebuild incomplete
-media-gfx/k3studio
-
 # X driver renaming *dont* work.
 # Azarah - 5 June 2002
 =media-video/ati-gatos-4.2.0.11-r1
-
-# old version isn't available, new version doesn't compile - danarmak
-media-libs/nurbs++
 
 # According to spider this breaks gnome-vfs (sandymac, 03 May 2002):
 # and evolution (azarah, 05 May 2002)
