@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/ifd-gempc
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ifd-gempc/ChangeLog,v 1.4 2004/06/24 22:11:29 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ifd-gempc/ChangeLog,v 1.5 2004/06/27 10:47:34 dholm Exp $
+
+  27 Jun 2004; David Holm <dholm@gentoo.org> ifd-gempc-0.9.1.ebuild:
+  Added to ~ppc.
 
   07 May 2004; Daniel Black <dragonheart@gentoo.org>
   -files/ifd-gempc-0.9.1a.gentoo.diff, ifd-gempc-0.9.1.ebuild:
