@@ -1,17 +1,17 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 92f0cef104b7eb685e99e56a3c12f0f1 ChangeLog 3905
+MD5 ebd8f6e2e6ffcba4410032d9a910c5ac ChangeLog 4015
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 fe3ede691d74d6ac3a48616c79ccf50b nwn-1.65.ebuild 2953
+MD5 4272538ddc2c60d8ccf98e7a190f8f02 nwn-1.65.ebuild 3517
 MD5 d05b3b73edd2b4beadbce95837e2ab20 files/nwn.png 4296
 MD5 3eddaf5e88a92951762058756003c855 files/nwn 44
-MD5 3c3ee68ba5d420d9b4ad0ee3b03ef958 files/digest-nwn-1.65 286
+MD5 3952e8e76ebdde92fe0bf84facaaea38 files/digest-nwn-1.65 892
 MD5 63ee32535dec4f3743d16f8fe03689c9 files/nwn-1.65-fixinstall 2300
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFB08UproRuSHgZdywRAqMfAKCQXbzxOm6F7ubwl8x9LHBZE2LWtACfe86N
-SKgiUx/fWRnQKVVm7CjzBIw=
-=te8I
+iD8DBQFB08z9roRuSHgZdywRAhvfAJ4v41MuBpZG7NyALRIdIJyRXQtpBgCfT9Mw
+bfnURYrmydtPm14OBPa1pbw=
+=nJXW
 -----END PGP SIGNATURE-----

@@ -1,16 +1,24 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn/nwn-1.65.ebuild,v 1.1 2004/12/30 09:06:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn/nwn-1.65.ebuild,v 1.2 2004/12/30 09:39:47 vapier Exp $
 
 inherit games
 
 UPDATEVER=${PV//.}
+PATCH_URL_BASE=http://content.bioware.com/neverwinternights/linux/${UPDATEVER}/linuxclientupdate1xxto${UPDATEVER}
+DIALOG_URL_BASE=http://nwdownloads.bioware.com/neverwinternights/patch/dialog/
+
 DESCRIPTION="Neverwinter Nights"
 HOMEPAGE="http://nwn.bioware.com/downloads/linuxclient.html"
 SRC_URI="http://nwdownloads.bioware.com/neverwinternights/linux/129/nwclient129.tar.gz
-	nowin? ( http://www.tucows.iinet.net/pub/games/neverwinter/linux/nwresources129.tar.gz )
-	http://content.bioware.com/neverwinternights/linux/${UPDATEVER}/linuxclientupdate1xxto${UPDATEVER}eng.tar.gz
-	http://nwdownloads.bioware.com/neverwinternights/patch/dialog/english/NWNEnglish${PV}dialog.zip"
+	linguas_fr? ( ${PATCH_URL_BASE}fre.tar.gz ${DIALOG_URL_BASE}/french/NWNFrench${PV}dialog.zip )
+	linguas_de? ( ${PATCH_URL_BASE}ger.tar.gz ${DIALOG_URL_BASE}/german/NWNGerman${PV}dialog.zip )
+	linguas_it? ( ${PATCH_URL_BASE}ita.tar.gz ${DIALOG_URL_BASE}/italian/NWNItalian${PV}dialog.zip )
+	linguas_es? ( ${PATCH_URL_BASE}spa.tar.gz ${DIALOG_URL_BASE}/spanish/NWNSpanish${PV}dialog.zip )
+	!linguas_de? ( !linguas_fr? ( !linguas_es? ( !linguas_it? (
+		${PATCH_URL_BASE}eng.tar.gz ${DIALOG_URL_BASE}/english/NWNEnglish${PV}dialog.zip
+	) ) ) )
+	nowin? ( http://www.tucows.iinet.net/pub/games/neverwinter/linux/nwresources129.tar.gz )"
 
 LICENSE="NWN-EULA"
 SLOT="0"
@@ -33,8 +41,10 @@ src_unpack() {
 	use nowin && unpack nwresources129.tar.gz
 	cd ${S}
 	rm -rf override/*
-	unpack linuxclientupdate1xxto${UPDATEVER}eng.tar.gz
-	unpack NWNEnglish${PV}dialog.zip
+	# the following is so ugly, please pretend it doesnt exist
+	local Aarray=(${A})
+	unpack ${Aarray[1]}
+	unpack ${Aarray[2]}
 }
 
 src_install() {
