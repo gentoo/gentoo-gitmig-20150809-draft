@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/heimdal-0.6.ebuild,v 1.18 2004/05/10 11:15:33 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/heimdal-0.6.1-r1.ebuild,v 1.1 2004/05/10 11:15:33 aliz Exp $
 
 inherit libtool eutils
 
@@ -10,13 +10,14 @@ HOMEPAGE="http://www.pdc.kth.se/heimdal/"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="x86 sparc ppc alpha ia64 amd64 hppa mips"
+KEYWORDS="x86 sparc ppc alpha ~ia64 amd64 hppa mips"
 IUSE="ssl berkdb ipv6"
 PROVIDE="virtual/krb5"
 
-RDEPEND="ssl? ( dev-libs/openssl )
+RDEPEND="
+	ssl? ( dev-libs/openssl )
 	berkdb? ( sys-libs/db )
-	!app-crypt/kth-krb"
+	!virtual/krb5"
 	# ldap? ( net-nds/openldap )
 	# With this enabled, we create a multiple stage
 	# circular dependency with USE="ldap kerberos"
@@ -31,9 +32,9 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A} ; cd ${S}
 
-	epatch ${FILESDIR}/${P}-gcc3.patch
-	epatch ${FILESDIR}/${P}-rxapps.patch
-	epatch ${FILESDIR}/${P}-berkdb.patch
+	epatch ${FILESDIR}/${PN}-${PV:0:3}-rxapps.patch
+	epatch ${FILESDIR}/${PN}-${PV:0:3}-berkdb.patch
+	epatch ${FILESDIR}/${P}-fPIC.patch
 
 	# Um, I don't think the below is doing anything since automake is
 	# run in src_compile(), but I'll leave it alone since this ebuild
@@ -55,21 +56,21 @@ src_compile() {
 	local myconf="
 		$(use_with ipv6)
 		$(use_with berkdb berkely-db)
+		$(use_with ssl openssl)
 		--enable-shared"
-
-	use ssl \
-		&& myconf="${myconf} --with-openssl=/usr" \
-		|| myconf="${myconf} --without-openssl"
 
 	#use ldap && myconf="${myconf} --with-open-ldap=/usr"
 
 	econf ${myconf} || die "econf failed"
 
-	# editline archive is linked into shared objects, needs to be
-	# built with -fPIC (16 Feb 2004 agriffis)
-	sed -i -e '/^CFLAGS\>/s/$/ -fPIC/' lib/editline/Makefile || die
-
-	emake || die
+	emake prefix=/usr \
+		sysconfdir=/etc \
+		mandir=/usr/share/man \
+		infodir=/usr/share/info \
+		datadir=/usr/share \
+		localstatedir=/var/lib \
+		includedir=/usr/include/heimdal \
+		|| die
 }
 
 src_install() {
