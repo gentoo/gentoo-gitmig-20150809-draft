@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-tcp/ucspi-tcp-0.88-r4.ebuild,v 1.11 2003/02/14 21:37:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-tcp/ucspi-tcp-0.88-r5.ebuild,v 1.1 2003/03/05 20:41:47 vapier Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://cr.yp.to/${PN}/${P}.tar.gz
 HOMEPAGE="http://cr.yp.to/ucspi-tcp.html"
 
 SLOT="0"
-KEYWORDS="x86 sparc "
+KEYWORDS="x86 sparc"
 LICENSE="as-is"
 IUSE="ssl ipv6"
 
@@ -27,6 +27,7 @@ src_unpack() {
 	elif use ssl; then
 		epatch ${WORKDIR}/ucspi-tcp-ssl-20020705.patch
 	fi
+	epatch ${FILESDIR}/${PV}-errno.patch
 
 	echo "gcc ${CFLAGS}" > conf-cc
 	echo "gcc" > conf-ld
