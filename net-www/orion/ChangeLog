@@ -1,6 +1,12 @@
 # ChangeLog for net-www/orion
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/orion/ChangeLog,v 1.1 2003/03/11 11:54:15 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/orion/ChangeLog,v 1.2 2003/03/11 11:58:01 absinthe Exp $
+
+  11 Mar 2003; Dylan Carlson <absinthe@gentoo.org> ChangeLog  :
+
+  This package needs testers!  If you encounter problems, please report
+  them to http://bugs.gentoo.org/.   Also note that this ebuild creates a
+  new user and group on your system.
 
   11 Mar 2003; Dylan Carlson <absinthe@gentoo.org> ChangeLog  :
 
