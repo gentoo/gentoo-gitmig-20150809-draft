@@ -22,8 +22,9 @@
 ##
 
 # <spider@gentoo.org> (16 Aug 2002 )
-# Masking for testing, new gnome2.eclass mungling use
+# Masking for testing, new gnome2.eclass mungling with schemas
 =gnome-base/gnome-applets-2.0.1-r1
+=media-libs/gst-plugins-0.4.0-r1
 
 # <stubear@gentoo.org> (16 Aug 2002)
 # masked for testing
