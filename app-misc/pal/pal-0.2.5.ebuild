@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/pal/pal-0.2.5.ebuild,v 1.1 2003/10/02 22:18:50 port001 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/pal/pal-0.2.5.ebuild,v 1.2 2003/10/03 16:34:18 port001 Exp $
 
 IUSE=""
 DESCRIPTION="pal command-line calendar program"
@@ -20,6 +20,7 @@ DEPEND=">=dev-libs/glib-2.0
 src_unpack() {
 	unpack ${P}.tgz
 	cd ${S}
+	sed -i -e "s/^include/-include/" Makefile
 	sed -i -e "s/-O2 -Wall/${CFLAGS}/" Makefile
 }
 
