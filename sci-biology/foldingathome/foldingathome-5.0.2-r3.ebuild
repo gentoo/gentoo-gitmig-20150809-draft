@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/foldingathome/foldingathome-5.0.2-r3.ebuild,v 1.1 2005/02/06 01:02:39 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/foldingathome/foldingathome-5.0.2-r3.ebuild,v 1.2 2005/02/08 16:06:00 lostlogic Exp $
 
 # no version number on this install dir since upgrades will be using same dir
 # (data will be stored here too)
@@ -16,7 +16,7 @@ RESTRICT="nomirror"
 SLOT="0"
 IUSE=""
 LICENSE="as-is"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="x86 ~amd64"
 
 DEPEND=">=sys-apps/baselayout-1.8.0
 	>=sys-libs/glibc-2.3.0
