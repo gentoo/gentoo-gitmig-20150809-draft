@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ircd-hybrid/ircd-hybrid-7.0.3.ebuild,v 1.3 2004/09/28 01:08:31 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ircd-hybrid/ircd-hybrid-7.0.3.ebuild,v 1.4 2004/10/16 18:54:24 vapier Exp $
 
 inherit eutils fixheadtails
 
@@ -242,6 +242,7 @@ src_install()
 		includedir=${D}/usr/include/ircd-hybrid-7 \
 		mandir=${D}/usr/share/man/man8/ \
 		install || die "ipv4 install failed"
+	mv ${D}/usr/sbin/{,ircd-}mkpasswd #6428
 
 	# Rename the binary according to config-ipv4.diff.
 	mv ${D}/usr/sbin/ircd ${D}/usr/sbin/ircd-ipv4
