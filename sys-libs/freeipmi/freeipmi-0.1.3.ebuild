@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/freeipmi/freeipmi-0.1.3.ebuild,v 1.1 2005/03/25 09:36:43 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/freeipmi/freeipmi-0.1.3.ebuild,v 1.2 2005/03/28 08:35:48 robbat2 Exp $
 
 inherit flag-o-matic
 
@@ -14,6 +14,7 @@ IUSE=""
 RDEPEND="virtual/libc"
 DEPEND="${RDEPEND}
 		virtual/os-headers
+		sys-apps/sed
 		doc? ( virtual/tetex )"
 
 src_unpack() {
