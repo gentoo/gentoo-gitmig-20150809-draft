@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.0.2.ebuild,v 1.2 2003/10/08 22:04:41 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.0.2.ebuild,v 1.3 2003/10/28 14:44:27 mholzer Exp $
 
 inherit eutils
 
@@ -41,9 +41,7 @@ src_unpack() {
 	#epatch ${FILESDIR}/${P}-configure.patch
 	epatch ${FILESDIR}/${PV}-libnet-1.0.patch
 
-	# Following patch contributed in bug #18258
-	#is this needed in 2.0? -Method
-	#use alpha && epatch ${FILESDIR}/${P}-alpha.patch
+	epatch ${FILESDIR}/${P}-gcc3.patch
 
 	sed "s:var RULE_PATH ../rules:var RULE_PATH /etc/snort:" < etc/snort.conf > etc/snort.conf.distrib
 
