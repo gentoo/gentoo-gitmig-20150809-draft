@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 5ee34a063f9eae51dfd1b518792a776e radvd-0.7.2-r1.ebuild 1365
-MD5 9fae1dc55cd55dcd8af7baaa91984390 ChangeLog 1457
-MD5 fa53a0e062f5ca3ff6f7ceee7dcd0e61 files/radvd 606
+MD5 9edddbee2704538e2f8e209ec1a6cf20 ChangeLog 1566
+MD5 0ca4ccfc328425605f35f592b8a92c1b radvd-0.7.2-r1.ebuild 1381
 MD5 48df423b3b993bec69b27f5bc4026415 files/digest-radvd-0.7.2-r1 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFB2FdjiJcSIUGNthERAujJAJ9SoUvIsTBkryxeePhGxR9HSpNKFwCfXwzI
-zyfur7+06Me+4Bg9KqTuqQs=
-=/5Eq
------END PGP SIGNATURE-----
+MD5 fa53a0e062f5ca3ff6f7ceee7dcd0e61 files/radvd 606

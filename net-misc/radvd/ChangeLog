@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/radvd
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/radvd/ChangeLog,v 1.12 2005/01/02 19:49:13 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/radvd/ChangeLog,v 1.13 2005/02/14 18:52:34 hansmi Exp $
+
+  14 Feb 2005; Michael Hanselmann <hansmi@gentoo.org> radvd-0.7.2-r1.ebuild:
+  Added to ~sparc and ~ppc.
 
   02 Jan 2005; Daniel Drake <dsd@gentoo.org> radvd-0.7.2-r1.ebuild:
   Change virtual/kernel to virtual/linux-sources
