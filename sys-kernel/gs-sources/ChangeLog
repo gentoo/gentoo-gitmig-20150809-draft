@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/gs-sources
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gs-sources/ChangeLog,v 1.36 2004/04/15 18:51:00 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gs-sources/ChangeLog,v 1.37 2004/04/17 11:17:42 plasmaroo Exp $
+
+*gs-sources-2.4.25_pre7-r4 (17 Apr 2004)
+
+  17 Apr 2004; <plasmaroo@gentoo.org> +files/gs-sources.CAN-2004-0177.patch,
+  +files/gs-sources.CAN-2004-0178.patch, +gs-sources-2.4.25_pre7-r4.ebuild:
+  Added patches for the CAN-2004-0177 and CAN-2004-0178 vulnerabilities.
+  Stale versions removed.
 
 *gs-sources-2.4.25_pre7-r3 (15 Apr 2004)
 
