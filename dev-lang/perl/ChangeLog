@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/perl
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.91 2004/10/25 11:41:36 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.92 2004/11/13 01:04:02 rac Exp $
+
+*perl-5.8.5-r1 (12 Nov 2004)
+
+  12 Nov 2004; Robert Coie <rac@gentoo.org> -perl-5.8.3.ebuild,
+  +perl-5.8.5-r1.ebuild:
+  Allow the maketest FEATURE to determine whether tests are run. Guide
+  Configure to attempt to pick up old 5.8.2 and 5.8.4 directories in @INC
 
   25 Oct 2004; Michael Cummings <mcummings@gentoo.org> perl-5.8.2-r1.ebuild,
   perl-5.8.3.ebuild, perl-5.8.4-r1.ebuild, perl-5.8.4.ebuild,
