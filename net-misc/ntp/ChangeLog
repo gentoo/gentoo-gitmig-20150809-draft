@@ -1,8 +1,11 @@
 # ChangeLog for net-misc/ntp
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ChangeLog,v 1.26 2003/03/18 07:19:42 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ChangeLog,v 1.27 2003/03/20 21:07:44 zwelch Exp $
 
 *ntp-4.1.1b-r5 (26 Feb 2003)
+
+  20 Mar 2003; Zach Welch <zwelch@gentoo.org> ntp-4.1.1b-r5.ebuild:
+  add arm keyword
 
   17 Mar 2003; Seemant Kulleen <seemant@gentoo.org> ntp-4.1.1b-r5.ebuild,
   files/ntp.conf:
