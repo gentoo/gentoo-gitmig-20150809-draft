@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-0.90.ebuild,v 1.2 2003/04/16 01:49:48 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-0.90.ebuild,v 1.3 2003/04/20 08:40:04 seemant Exp $
 
 IUSE="dga oss jpeg 3dfx sse matrox sdl X svga ggi oggvorbis 3dnow aalib gnome xv opengl truetype dvd gtk gif esd fbcon encode alsa directfb arts dvb"
 
@@ -56,6 +56,7 @@ RDEPEND="ppc? ( >=media-libs/xvid-0.9.0 )
 	oggvorbis? ( media-libs/libvorbis )
 	nls? ( sys-devel/gettext )
 	media-sound/cdparanoia
+	media-libs/faad2
 	>=sys-apps/portage-2.0.36"
 #	dvd? ( media-libs/libdvdnav )
 # Hardcode paranoia support for now, as there is no
@@ -247,6 +248,7 @@ src_compile() {
 		--enable-menu \
 		--enable-dynamic-plugins \
 		--enable-real \
+		--enable-faad \
 		--with-reallibdir=${REALLIBDIR} \
 		--with-x11incdir=/usr/X11R6/include \
 		${myconf} || die

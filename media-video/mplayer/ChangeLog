@@ -1,8 +1,12 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.58 2003/04/16 11:03:35 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.59 2003/04/20 08:40:04 seemant Exp $
 
 *mplayer-0.90 (09 Apr 2003)
+
+  20 Apr 2003; Seemant Kulleen <seemant@gentoo.org> mplayer-0.90.ebuild:
+  Added faad2 and enabling faad in econf -- satisies many requests to be able to
+  play the Matrix trailers.
 
   16 Apr 2003; Lars Weiler <pylon@gentoo.org> mplayer-0.90.ebuild,
   files/mplayer-0.90-ppc-benh.patch:
