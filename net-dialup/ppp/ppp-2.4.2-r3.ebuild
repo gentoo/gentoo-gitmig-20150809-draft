@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.2-r3.ebuild,v 1.5 2004/09/27 10:41:29 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.2-r3.ebuild,v 1.6 2004/09/27 10:55:11 lanius Exp $
 
 inherit eutils gnuconfig flag-o-matic
 
@@ -132,11 +132,13 @@ src_install() {
 
 	# install radius
 	cd pppd/plugins/radius
-	dolib.so radius.so
-	dolib.so radattr.so
-	dolib.so radrealms.so
+	exeinto /usr/$(get_libdir)/ppp/2.4.2
+	doexe radius.so
+	doexe radattr.so
+	doexe radrealms.so
 	doman pppd-radius.8
 	doman pppd-radattr.8
+
 	cd radiusclient
 	make DESTDIR=${D} install || die
 }
