@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.77.ebuild,v 1.5 2003/12/09 06:21:04 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.77.ebuild,v 1.6 2003/12/09 06:47:33 pebenito Exp $
 
 PATCH_LEVEL="1.1"
 BDB_VER="4.1.25"
@@ -50,7 +50,7 @@ LICENSE="PAM"
 #KEYWORDS="~amd64 ~x86 ~ppc ~sparc ~alpha ~mips ~hppa ~arm ~ia64"
 KEYWORDS="-*"
 SLOT="0"
-IUSE="berkdb pwdb"
+IUSE="berkdb pwdb selinux"
 
 apply_pam_patches() {
 	local x=
