@@ -29,6 +29,8 @@ def isfifo(x):
 	return S_ISFIFO(mymode)
 
 def movefile(src,dest):
+    if os.path.exists(dest):
+	unlink(dest)
     mystat=os.stat(src)
     mymode=mystat[ST_MODE]
     myperms=S_IMODE(mymode)
