@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/gtkhtml-1.0.4.ebuild,v 1.7 2002/12/16 01:55:15 nall Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/gtkhtml-1.0.4.ebuild,v 1.8 2002/12/31 14:07:36 nall Exp $
 
 IUSE="nls gnome"
 
@@ -12,7 +12,7 @@ inherit flag-o-matic || die "I lost my inheritance"
 if [ "${ARCH}" = "ppc" ]
 then
 	einfo "Changing optimization to -O2 for PPC"
-	replace-flags -O[3-9] -O2
+	replace-flags -O[3-9s] -O2
 fi
 
 S=${WORKDIR}/${P}
