@@ -1,6 +1,14 @@
 # ChangeLog for media-video/mjpegtools
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/ChangeLog,v 1.1 2002/02/01 21:53:31 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/ChangeLog,v 1.2 2002/04/12 14:46:56 seemant Exp $
+
+*mjpegtools-1.5.20011611-r1 (12 Apr 2002)
+
+  12 Apr 2002; Seemant Kulleen <seemant@gentoo.org> 
+  mjpegtools-1.5.20011611-r1.ebuild :
+
+  Changed avifile USE flag to avi USE flag instead and cleaned up ebuild
+  a little.
 
 *mjpegtools-1.5.20011611-r1 (1 Feb 2002)
 
