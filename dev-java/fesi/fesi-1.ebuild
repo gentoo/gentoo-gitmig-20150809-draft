@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-java/fesi/fesi-1.ebuild,v 1.3 2000/11/01 06:27:07 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/fesi/fesi-1.ebuild,v 1.4 2000/11/02 08:31:50 achim Exp $
 
 P=fesi
 A="fesikit.zip"
@@ -22,7 +22,7 @@ src_compile() {
 
 src_install() {                               
   cd ${S}
-  insinto /opt/java/lib
+  insinto /usr/lib/java
   doins fesi.jar
   into /usr
   dodoc COPYRIGHT.TXT Readme.txt 

@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-0.7.11.ebuild,v 1.1 2000/09/19 00:56:17 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-0.7.11.ebuild,v 1.2 2000/11/02 08:31:51 achim Exp $
 
 A="abi-${PV}.tar.gz abidistfiles-${PV}.tar.gz expat-${PV}.tar.gz 
    unixfonts-${PV}.tar.gz wv-${PV}.tar.gz"
@@ -15,6 +15,15 @@ SRC_URI="http://download.abisource.com/releases/${PV}/src/lf/abi-${PV}.tar.gz
 
 	
 HOMEPAGE="http://www.gnome.org/gnome-office/abiword.shtml/"
+
+DEPEND=">=sys-libs/glibc-2.1.3
+	>=sys-devel/gcc-2.95.2
+	>=media-libs/freetype-1.3.1
+	>=media-libs/libpng-1.0.7
+	>=dev-libs/glib-1.2.8
+	>=x11-libs/gtk+-1.2.8
+	>=x11-base/xfree-4.0.1"
+	
 
 src_unpack() {
   unpack ${A}

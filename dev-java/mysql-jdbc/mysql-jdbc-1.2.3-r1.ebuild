@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-java/mysql-jdbc/mysql-jdbc-1.2.3-r1.ebuild,v 1.2 2000/11/01 06:27:08 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/mysql-jdbc/mysql-jdbc-1.2.3-r1.ebuild,v 1.3 2000/11/02 08:31:50 achim Exp $
 
 P=mysql-jdbc-1.2c
 A=mm.mysql.jdbc-1.2c.tar.gz
@@ -23,8 +23,8 @@ src_compile() {
 
 src_install() {                               
   cd ${S}
-  dodir /opt/java/lib/
-  cp -a mysql-jdbc.jar ${D}/opt/java/lib
+  insinto /usr/lib/java
+  doins  mysql-jdbc.jar
   cd doc
   docinto html
   dodoc *.html *.gif
