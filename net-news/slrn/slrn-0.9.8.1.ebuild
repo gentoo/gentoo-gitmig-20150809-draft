@@ -1,8 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/slrn/slrn-0.9.8.1.ebuild,v 1.1 2004/10/09 21:14:10 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/slrn/slrn-0.9.8.1.ebuild,v 1.2 2004/10/17 01:51:11 swegener Exp $
 
 inherit eutils
+
+# Upstream patches from http://slrn.sourceforge.net/patches/
+# ${FILESDIR}/${PV}/${P}-<name>.diff
+SLRN_PATCHES="fetch lastchar"
 
 DESCRIPTION="s-lang Newsreader"
 HOMEPAGE="http://slrn.sourceforge.net/"
@@ -24,6 +28,10 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	cd ${S}
+
+	for i in ${SLRN_PATCHES} ; do
+		epatch ${FILESDIR}/${PV}/${P}-${i}.diff
+	done
 
 	use unicode && epatch ${FILESDIR}/0.9.8.0/slrn-0.9.8.0-utf8.patch
 }
