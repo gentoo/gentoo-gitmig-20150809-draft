@@ -1,6 +1,11 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.347 2005/03/06 18:58:01 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.348 2005/03/06 23:23:06 spyderous Exp $
+
+  06 Mar 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  xorg-x11-6.8.2-r1.ebuild, xorg-x11-6.8.2.ebuild:
+  Make freetype dep versions in DEPEND and RDEPEND match. Reported by Park
+  Ji-In <mithrandir@tisphie.net>.
 
   06 Mar 2005; Danny van Dyk <kugelfang@gentoo.org>
   xorg-x11-6.8.0-r5.ebuild:
