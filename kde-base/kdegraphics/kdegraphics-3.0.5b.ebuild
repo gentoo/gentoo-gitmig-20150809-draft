@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/kdegraphics-3.0.5b.ebuild,v 1.5 2003/09/09 00:48:34 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/kdegraphics-3.0.5b.ebuild,v 1.6 2003/12/09 17:47:53 lanius Exp $
 inherit kde-dist
 
 IUSE="scanner gphoto2 tetex"
@@ -13,7 +13,7 @@ newdepend "gphoto2? ( >=media-gfx/gphoto2-2.0_beta1 )
 	scanner? ( media-gfx/sane-backends  )
 	tetex? ( virtual/tetex )
 	media-libs/imlib
-	app-text/ghostscript"
+	virtual/ghostscript"
 #	x86? ( scanner? sys-libs/libieee1284 )
 
 use gphoto2	&& myconf="$myconf --with-kamera --with-gphoto2-includes=/usr/include/gphoto2 \

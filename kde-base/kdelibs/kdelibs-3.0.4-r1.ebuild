@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.0.4-r1.ebuild,v 1.14 2003/12/08 00:02:11 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.0.4-r1.ebuild,v 1.15 2003/12/09 17:46:38 lanius Exp $
 inherit kde eutils
 #don't inherit  kde-base or kde-dist! it calls need-kde which adds kdelibs to depend!
 
@@ -31,7 +31,7 @@ newdepend "dev-lang/perl
 	>=media-libs/tiff-3.5.5
 	app-admin/fam
 	~kde-base/arts-1.0.4
-	app-text/ghostscript
+	virtual/ghostscript
 	sys-devel/gettext"
 
 newdepend "/autotools"
