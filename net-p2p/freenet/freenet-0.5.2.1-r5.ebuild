@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/freenet-0.5.2.1-r5.ebuild,v 1.1 2003/08/03 16:26:01 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/freenet-0.5.2.1-r5.ebuild,v 1.2 2003/08/04 01:26:35 lostlogic Exp $
 
 IUSE=""
 
@@ -37,7 +37,7 @@ src_install() {
 }
 
 pkg_preinst() {
-        if ! groupmod freenet > dev/null 2>&1; then
+        if ! groupmod freenet > /dev/null 2>&1; then
                 groupadd freenet 2> /dev/null || \
                         die "Failed to create freenet group"
         fi
