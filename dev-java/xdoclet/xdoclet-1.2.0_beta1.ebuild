@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xdoclet/xdoclet-1.2.0_beta1.ebuild,v 1.8 2004/06/24 22:45:43 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xdoclet/xdoclet-1.2.0_beta1.ebuild,v 1.9 2004/10/16 08:58:37 absinthe Exp $
 
 DESCRIPTION="A code-generation engine primarily for EJB"
 HOMEPAGE="http://xdoclet.sf.net/"
 SRC_URI="mirror://sourceforge/${PN}/${PN}-src-${PV/_/-}.tgz"
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="x86 ~amd64"
+KEYWORDS="x86 amd64"
 IUSE="jikes"
 
 RDEPEND=">=virtual/jdk-1.3"
