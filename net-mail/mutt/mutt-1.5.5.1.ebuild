@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mutt/mutt-1.5.5.1.ebuild,v 1.6 2004/02/23 04:51:33 gregf Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mutt/mutt-1.5.5.1.ebuild,v 1.7 2004/02/26 10:32:40 gmsoft Exp $
 
 IUSE="ssl nls slang crypt imap mbox"
 
@@ -24,7 +24,7 @@ DEPEND="${RDEPEND}
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc ~sparc ~alpha ~hppa ~ia64 ~amd64"
+KEYWORDS="x86 ~ppc ~sparc ~alpha hppa ~ia64 ~amd64"
 
 inherit flag-o-matic
 
