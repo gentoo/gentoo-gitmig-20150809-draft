@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/xv
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/ChangeLog,v 1.36 2004/09/07 16:20:08 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/ChangeLog,v 1.37 2004/10/13 14:04:04 solar Exp $
+
+  13 Oct 2004; <solar@gentoo.org> -xv-3.10a-r7.ebuild:
+  security bump. -r7 -> -r8 no changes except for depending on a newer version
+  of libtiff
 
   07 Sep 2004; <blubb@gentoo.org> xv-3.10a-r7.ebuild:
   added ~amd64 keyword

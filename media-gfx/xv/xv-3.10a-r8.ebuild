@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/xv-3.10a-r7.ebuild,v 1.4 2004/09/07 16:20:08 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/xv-3.10a-r8.ebuild,v 1.1 2004/10/13 14:04:04 solar Exp $
 
 inherit ccc flag-o-matic eutils
 
@@ -16,7 +16,7 @@ IUSE="jpeg tiff png"
 
 DEPEND="virtual/x11
 	jpeg? ( >=media-libs/jpeg-6b )
-	tiff? ( >=media-libs/tiff-3.5 )
+	tiff? ( >=media-libs/tiff-3.6.1-r2 )
 	png? ( >=media-libs/libpng-1.2 >=sys-libs/zlib-1.1.4 )"
 
 src_unpack() {
@@ -53,6 +53,7 @@ src_compile() {
 	sed -i 's:CCOPTS = -O:CCOPTS = $(E_CFLAGS):' Makefile || die "sed Makefile failed"
 	sed -i 's:COPTS=\t-O:COPTS= $(E_CFLAGS):' tiff/Makefile || die "sed tiff/Makefile failed"
 	is-ccc && replace-cc-hardcode
+	echo make E_CFLAGS="${CFLAGS}" > go.sh
 	make E_CFLAGS="${CFLAGS}" || die
 }
 
