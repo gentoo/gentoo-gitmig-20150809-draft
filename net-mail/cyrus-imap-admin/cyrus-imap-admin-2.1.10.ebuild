@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imap-admin/cyrus-imap-admin-2.1.9.ebuild,v 1.4 2002/12/04 02:38:30 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imap-admin/cyrus-imap-admin-2.1.10.ebuild,v 1.1 2002/12/04 02:38:30 raker Exp $
 
 inherit perl-module
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/cyrus-imapd-${PV}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86 -ppc -sparc -sparc64"
+KEYWORDS="~x86 -ppc -sparc -sparc64"
 
 PROVIDE="virtual/imapd"
 DEPEND="virtual/glibc
@@ -31,7 +31,19 @@ src_unpack() {
 
 	unpack ${A}
 	cd ${S}
+
 	patch < ${FILESDIR}/config.diff || die "patch failed"
+
+        # Kerberos libraries have changed
+        cp configure configure.orig
+        sed -e "s:-ldes:-ldes425:" \
+                < configure.orig > configure || die "patch failed"
+
+        # libsieve buffer overflow fix - bug #11537
+        patch -p1 < ${FILESDIR}/libsieve-overflow.diff || die "patch failed"
+
+        # imap buffer overflow fix - bug #11537
+        patch -p1 < ${FILESDIR}/imap-overflow.diff || die "patch failed"
 
 }
 
@@ -56,7 +68,7 @@ src_compile() {
 		--with-cyrus-group=mail \
 		--enable-netscapehack \
 		--with-com_err=yes \
-		--with-perl \
+		--with-perl=/usr/bin/perl \
 		--enable-cyradm \
 		${myconf} || die "bad ./configure"
 
