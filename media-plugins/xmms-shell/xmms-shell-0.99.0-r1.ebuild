@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-shell/xmms-shell-0.99.0-r1.ebuild,v 1.1 2002/08/30 08:35:31 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-shell/xmms-shell-0.99.0-r1.ebuild,v 1.2 2002/09/16 16:40:26 owen Exp $
 
 
 S=${WORKDIR}/${P}
@@ -12,7 +12,7 @@ DEPEND=">=media-sound/xmms-1.2.7
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="x86 ppc"
 
 src_unpack() {
 	unpack ${A}
