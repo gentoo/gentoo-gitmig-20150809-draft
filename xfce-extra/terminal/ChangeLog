@@ -1,6 +1,11 @@
 # ChangeLog for xfce-extra/terminal
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/terminal/ChangeLog,v 1.3 2005/01/02 17:39:27 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/terminal/ChangeLog,v 1.4 2005/01/07 06:29:27 bcowan Exp $
+
+*terminal-0.2.2-r1 (07 Jan 2005)
+
+  07 Jan 2005; Brad Cowan <bcowan@gentoo.org> +terminal-0.2.2-r1.ebuild:
+  Updates for Xfce4 eclass.
 
 *terminal-0.2.2 (02 Jan 2005)
 
