@@ -1,0 +1,39 @@
+Index: ntp.c
+===================================================================
+RCS file: /usr/local/cvs/openntpd-portable/ntp.c,v
+retrieving revision 1.25
+diff -u -p -r1.25 ntp.c
+--- ntp.c	4 Dec 2004 00:06:34 -0000	1.25
++++ ntp.c	12 Dec 2004 00:55:51 -0000
+@@ -228,27 +228,27 @@ ntp_main(int pipe_prnt[2], struct ntpd_c
+ 				ntp_quit = 1;
+ 			}
+ 
+-		if (nfds > 0 && (pfd[PFD_PIPE_MAIN].revents & POLLOUT))
++		if (nfds > 0 && (pfd[PFD_PIPE_MAIN].revents & (POLLOUT|POLLERR)))
+ 			if (msgbuf_write(&ibuf_main->w) < 0) {
+ 				log_warn("pipe write error (to parent)");
+ 				ntp_quit = 1;
+ 			}
+ 
+-		if (nfds > 0 && pfd[PFD_PIPE_MAIN].revents & POLLIN) {
++		if (nfds > 0 && pfd[PFD_PIPE_MAIN].revents & (POLLIN|POLLERR)) {
+ 			nfds--;
+ 			if (ntp_dispatch_imsg() == -1)
+ 				ntp_quit = 1;
+ 		}
+ 
+ 		for (j = 1; nfds > 0 && j < idx_peers; j++)
+-			if (pfd[j].revents & POLLIN) {
++			if (pfd[j].revents & (POLLIN|POLLERR)) {
+ 				nfds--;
+ 				if (server_dispatch(pfd[j].fd, conf) == -1)
+ 					ntp_quit = 1;
+ 			}
+ 
+ 		for (; nfds > 0 && j < i; j++)
+-			if (pfd[j].revents & POLLIN) {
++			if (pfd[j].revents & (POLLIN|POLLERR)) {
+ 				nfds--;
+ 				if (client_dispatch(idx2peer[j - idx_peers],
+ 				    conf->settime) == -1)
