@@ -1,6 +1,16 @@
-MD5 0bb4e685eda55e73699e7b5f7668bb76 Class-Container-0.10.ebuild 602
-MD5 c60b80e5ebc8dc36e77150ec37384ff0 ChangeLog 1320
-MD5 4d6daac5017a8b9d8203ebd39e70f945 Class-Container-0.11.ebuild 606
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 d227bf8a7ce30f54e90d2cc88a77ddea ChangeLog 1429
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 f6c49e699bed17a9a7d8ddb3dbc5bcae Class-Container-0.10.ebuild 608
+MD5 5dc6d9242847f18af5d3970e168b6c3a Class-Container-0.11.ebuild 605
 MD5 0cebfbcfc4e362a94be2a31c92c34ae1 files/digest-Class-Container-0.10 71
 MD5 99ac75eeb4629dc1969d2804286758a2 files/digest-Class-Container-0.11 71
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFB8WnGtG5z4I8BtQoRAmTqAJ4l8sro9X2Rnmnt/TYRMvQrnN08dgCeIGvK
+Vvj3yhmr5x4WMx1OvwMJIdM=
+=zvEb
+-----END PGP SIGNATURE-----
