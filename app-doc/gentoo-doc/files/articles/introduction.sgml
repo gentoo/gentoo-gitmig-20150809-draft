@@ -1,0 +1,19 @@
+<chapter id="introduction">
+
+    <title>Introduction</title>
+
+    <sect1 id="wigl">
+        
+        <title>What is Gentoo Linux?</title>
+
+        <para>
+        Gentoo Linux is designed for the developer, power user and enthusiast.
+        Incorporating the latest sources and technologies (such as ReiserFS and the
+        Portage system), Gentoo Linux was created to provide the ultimate Linux
+        experience. If you've tried all the other distros and you're still not satisfied,
+        then you need to experience Gentoo.
+        </para>
+
+     </sect1>
+
+</chapter>

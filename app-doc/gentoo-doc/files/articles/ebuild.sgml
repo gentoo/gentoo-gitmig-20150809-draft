@@ -1,0 +1,126 @@
+<!--DOCTYPE book PUBLIC "-//OASIS//DTD DocBook V4.1//EN">
+
+<book//-->
+
+<chapter id="ebuild">
+
+     <title>The Ebuild System</title>
+
+
+     <sect1>
+
+        <title>Naming .ebuild Files</title>
+
+        <para>
+	The first section is the package name, which should only
+	contain lowercase letters, the digits 0-9, and hyphen ('-')
+	characters.
+	</para><para>
+	The second section is the version of the package, which should
+	normally be the same as the version on the main source
+	tarball. The version is normally made up of 2 or 3 numbers
+	separated by periods, such as 1.2 or 4.5.2, and may have a
+	single letter immidiately following the last digit, e.g., 1.4b
+	or 2.6h. This letter should *not* be used to signify alpha or
+	beta status for the package. There are 3 special suffixes that
+	may be used for these packages: _alpha, _beta, and _pre. Each
+	of these suffixes may be immediately followed my a number,
+	e.g., 'linux-2.4.0_pre10'.
+	</para><para>
+	The third section of the package name is the revision number,
+	which is specified by -r#, where '#' is a number,
+	e.g. 'package-4.5.3-r3'. This revision number is independent of
+	the version of the source tarball, but if you need to make
+	non-trivial changes to your .ebuild file, you should copy the
+	.ebuild file to a new file with the revision number
+	incremented by 1. Initial releases normally have no revision
+	number, e.g. 'package-4.5.3'.
+        </para><para>
+	The fourth section of the .ebuild file name is always the
+	.ebuild extension.
+        </para>
+
+    </sect1>
+
+    <sect1>
+
+        <title>Contents of an .ebuild File</title>
+
+        <simplesect><title>Variable Settings</title>
+        <para>
+        The first part of every ebuild file is made up of a number of
+        variable settings. The variables you can set are 
+        </para>
+        </simplesect>
+
+    </sect1>
+
+    <sect1>
+
+        <title>Rules for writing an .ebuild file</title>
+        <para>ToDo</para>
+
+        <sect2 id="wtpitpt">
+
+        <title>What (Not) to Put in the Portage Tree</title>
+
+        <para>
+        The portage tree should only include ebuild files, and other
+	files in the 'files' directory for each package. No binary
+	files should be placed in the portage tree. No files that can
+	be downloaded from other sources (such as patches written by
+	other people) should be put here. No patches you write
+	yourself should be compressed.
+        </para>
+
+        </sect2>
+ 
+        <sect2 id="files">
+
+        <title>The files directory</title>
+
+        <para>
+	Under each package subdirectory is a 'files' directory. You
+	should place any patches, configuration files, and other
+	auxillary files your package might require in this
+	directory. Patches you create yourself just to get your
+	package to build should be called '${PF}-gentoo.diff'. You
+	should not compress these diffs, since 1) they should not be big
+	enough to require compressing, and 2) cvs does not play well
+	with binary files.
+
+	Please add a suffix or prefix such as ${PV}-r${PR} (or just
+	${PV} if ${PR} is 0) to the tail of every file you put into
+	the files directory, so that the files used for each
+	individual version of your ebuild scripts are distinguishable
+	from one another, and so that the changes between different
+	revisions are visible.
+
+	If you have many files that should go into the files
+	directory, you should create a subdirectory files/${PV}-${PR}
+	(or just files/${PV} if ${PR} is 0), and put all these files
+	in there. If you use this method, you do not need to suffix
+	the names of the files in this directory with the ebuild
+	version.
+        </para>
+
+        </sect2>
+
+    </sect1>
+
+    <sect1 id="filesystem">
+        <title>Filesystem Locations</title>
+        <sect2 id="fhs">
+            <title>Introduction to the FHS</title>
+            <para>ToDo</para>
+        </sect2>
+        <sect2 id="htfypitf">
+            <title>How to Fit Your Packages into the Filesystem</title>
+            <para>ToDo</para>
+        </sect2>
+    </sect1>
+
+</chapter>
+
+
+<!--/book//-->
