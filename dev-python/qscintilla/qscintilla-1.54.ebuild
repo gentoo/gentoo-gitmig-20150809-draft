@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla/qscintilla-1.54.ebuild,v 1.1 2003/10/14 18:06:06 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla/qscintilla-1.54.ebuild,v 1.2 2003/12/16 23:45:25 weeve Exp $
 
 
 inherit eutils
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.riverbankcomputing.co.uk/qscintilla/"
 SRC_URI="http://www.river-bank.demon.co.uk/download/QScintilla/${P}-x11-gpl-1.2.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="x86 ~ppc ~sparc"
 IUSE=""
 DEPEND="virtual/glibc
 	x11-libs/qt"
