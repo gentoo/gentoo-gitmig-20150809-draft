@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.18 2004/09/21 22:46:11 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.19 2004/09/23 20:13:38 vapier Exp $
 #
 # This eclass should contain general toolchain-related functions that are
 # expected to not change, or change much.
@@ -59,27 +59,27 @@ gcc_setup_path_vars() {
 	PREFIX="${PREFIX:="/usr"}"
 
 	if [ "$1" == "versioned" ] ; then
-	  # GCC 3.4 no longer uses gcc-lib.
-	  LIBPATH="${LIBPATH:="${PREFIX}/lib/gcc/${CCHOST}/${MY_PV_FULL}"}"
-	  INCLUDEPATH="${INCLUDEPATH:="${LIBPATH}/include"}"
-	  BINPATH="${BINPATH:="${PREFIX}/${CCHOST}/gcc-bin/${MY_PV}"}"
-	  DATAPATH="${DATAPATH:="${PREFIX}/share/gcc-data/${CCHOST}/${MY_PV}"}"
-	  # Dont install in /usr/include/g++-v3/, but in gcc internal directory.
-	  # We will handle /usr/include/g++-v3/ with gcc-config ...
-	  STDCXX_INCDIR="${STDCXX_INCDIR:="${LIBPATH}/include/g++-v${MY_PV/\.*/}"}"
+		# GCC 3.4 no longer uses gcc-lib.
+		LIBPATH="${LIBPATH:="${PREFIX}/lib/gcc/${CCHOST}/${MY_PV_FULL}"}"
+		INCLUDEPATH="${INCLUDEPATH:="${LIBPATH}/include"}"
+		BINPATH="${BINPATH:="${PREFIX}/${CCHOST}/gcc-bin/${MY_PV}"}"
+		DATAPATH="${DATAPATH:="${PREFIX}/share/gcc-data/${CCHOST}/${MY_PV}"}"
+		# Dont install in /usr/include/g++-v3/, but in gcc internal directory.
+		# We will handle /usr/include/g++-v3/ with gcc-config ...
+		STDCXX_INCDIR="${STDCXX_INCDIR:="${LIBPATH}/include/g++-v${MY_PV/\.*/}"}"
 	elif [ "$1" == "non-versioned" ] ; then
-	  # using non-versioned directories to install gcc, like what is currently
-	  # done for ppc64 and 3.3.3_pre, is a BAD IDEA. DO NOT do it!! However...
-	  # setting up variables for non-versioned directories might be useful for
-	  # specific gcc targets, like libffi. Note that we dont override the value
-	  # returned by get_libdir here.
-	  LIBPATH="${LIBPATH:="${PREFIX}/$(get_libdir)"}"
-	  INCLUDEPATH="${INCLUDEPATH:="${PREFIX}/include"}"
-	  BINPATH="${BINPATH:="${PREFIX}/bin/"}"
-	  DATAPATH="${DATAPATH:="${PREFIX}/share/"}"
-	  STDCXX_INCDIR="${STDCXX_INCDIR:="${PREFIX}/include/g++-v3/"}"
+		# using non-versioned directories to install gcc, like what is currently
+		# done for ppc64 and 3.3.3_pre, is a BAD IDEA. DO NOT do it!! However...
+		# setting up variables for non-versioned directories might be useful for
+		# specific gcc targets, like libffi. Note that we dont override the value
+		# returned by get_libdir here.
+		LIBPATH="${LIBPATH:="${PREFIX}/$(get_libdir)"}"
+		INCLUDEPATH="${INCLUDEPATH:="${PREFIX}/include"}"
+		BINPATH="${BINPATH:="${PREFIX}/bin/"}"
+		DATAPATH="${DATAPATH:="${PREFIX}/share/"}"
+		STDCXX_INCDIR="${STDCXX_INCDIR:="${PREFIX}/include/g++-v3/"}"
 	else
-	  die "this function needs to be called with versioned of non-versioned"
+		die "this function needs to be called with versioned of non-versioned"
 	fi
 }
 
@@ -105,13 +105,12 @@ gcc_setup_variables() {
 gcc-compiler-pkg_setup() {
 	# Must compile for mips64-linux target if we want n32/n64 support
 	case "${CCHOST}" in
-		mips64-*)
-		;;
+		mips64-*) ;;
 		*)
-		    if use n32 || use n64; then
-		     eerror "n32/n64 can only be used when target host is mips64-*-linux-*";
-		     die "Invalid USE flags for CCHOST ($CCHOST)";
-		    fi
+			if use n32 || use n64; then
+				eerror "n32/n64 can only be used when target host is mips64-*-linux-*";
+				die "Invalid USE flags for CCHOST ($CCHOST)";
+			fi
 		;;
 	esac
 
@@ -689,11 +688,11 @@ gcc-compiler-configure() {
 
 	# Add --with-abi flags to enable respective MIPS ABIs
 	case "${CCHOST}" in
-	    mips*)
+		mips*)
 		use !nomultilib && myconf="${myconf} --with-abi=32"
 		use n64 && myconf="${myconf} --with-abi=n64"
 		use n32 && myconf="${myconf} --with-abi=n32"
-	    ;;
+		;;
 	esac
 
 	if use !build ; then
@@ -826,7 +825,7 @@ gcc_do_configure() {
 	einfo "DATAPATH:        ${DATAPATH}"
 	einfo "STDCXX_INCDIR:   ${STDCXX_INCDIR}"
 	echo
-	einfo "Configuring GCC with: ${confgcc} ${@} ${GCC_EXTRA_CONF}"
+	einfo "Configuring GCC with: ${confgcc} ${@} ${EXTRA_ECONF}"
 	echo
 
 	# Build in a separate build tree
@@ -835,7 +834,7 @@ gcc_do_configure() {
 
 	# and now to do the actual configuration
 	addwrite "/dev/zero"
-	${S}/configure ${confgcc} ${@} ${GCC_EXTRA_CONF} || \
+	${S}/configure ${confgcc} ${@} ${EXTRA_ECONF} || \
 		die "failed to run configure"
 
 	# return to whatever directory we were in before
@@ -1086,4 +1085,3 @@ toolchain_src_unpack() {
 toolchain_pkg_setup() {
 	gcc_pkg_setup
 }
-
