@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/debianutils
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/debianutils/ChangeLog,v 1.37 2004/09/12 19:24:05 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/debianutils/ChangeLog,v 1.38 2004/11/28 12:47:07 josejx Exp $
+
+  28 Nov 2004; Joseph Jezak <josejx@gentoo.org>
+  debianutils-1.16.7-r4.ebuild:
+  Had to remove coreutils from the ppc-macos dependancy list because we
+  still don't have a coreutils virtual and it got added back in.
 
   12 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   debianutils-1.16.7-r4.ebuild:
