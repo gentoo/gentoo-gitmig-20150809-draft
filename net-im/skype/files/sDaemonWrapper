@@ -8,7 +8,8 @@ progopts="--resources-path ${progpath}"
 shellcheck1=` which artsshell 2> /dev/null `
 shellcheck2=` which esd 2> /dev/null `
 artsdcheck=` ps x | grep artsd | grep -v grep `
-esdcheck=` ps x | grep "esd ." | grep -v grep `
+## We use ps ax for esd as esd can be used globaly for all users.
+esdcheck=` ps ax | grep "esd ." | grep -v grep `
 skypecmd="${progpath}${progname}.bin"
 wrapsound="yes"
 
