@@ -1,24 +1,27 @@
 #!/sbin/runscript
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/files/dhcp.rc6,v 1.3 2003/02/14 23:05:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/files/dhcp.rc6,v 1.4 2003/07/23 17:18:30 max Exp $
 
 depend() {
-    need net
+	need net
+	use logger
 }
 
 checkconfig() {
-    if [ ! -e /etc/dhcp/dhcpd.conf ] ; then
-	eerror "You need an /etc/dhcp/dhcpd.conf file to run dhcpd"
-	eerror "There is a sample conf file in /usr/share/doc/dhcp"
-	return 1
-    fi
+	if [ ! -f "${CHROOT}/etc/dhcp/dhcpd.conf" ] ; then
+		eerror "No ${CHROOT}/etc/dhcp/dhcpd.conf file exists!"
+		return 1
+	fi
 }
 
 start() {
     checkconfig || return 1
-    ebegin "Starting dhcpd"
-    start-stop-daemon --start --quiet --exec /usr/sbin/dhcpd -- eth0
+
+    ebegin "Starting ${CHROOT:+chrooted }dhcpd"
+    start-stop-daemon --start --quiet --exec /usr/sbin/dhcpd \
+    	-- -user dhcp -group dhcp ${DHCPD_OPTS} \
+	${CHROOT:+-chroot ${CHROOT}} ${IFACE}
     eend $?
 }
 

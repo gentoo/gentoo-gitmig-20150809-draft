@@ -1,6 +1,15 @@
 # ChangeLog for net-misc/dhcp
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.16 2003/03/01 19:38:54 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.17 2003/07/23 17:18:30 max Exp $
+
+*dhcp-3.0_p2-r1 (23 Jul 2003)
+
+  23 Jul 2003; Max Kalika <max@gentoo.org> dhcp-3.0_p2-r1.ebuild,
+  files/dhcp.conf, files/dhcp.rc5, files/dhcp.rc6:
+  Add support for the dhcp-paranoia patch which allows to run the server
+  chrooted and under a different user/group id. Remove unused dhcp.rc5 file.
+  Create a new startup script and dub it dhcp.rc6 as that file isn't currently
+  used by anything. Other various cleanups.
 
   17 Jan 2003; Daniel Ahlberg <aliz@gentoo.org> dhcp-3.0_p2.ebuild :
   Unmasked, security update.
