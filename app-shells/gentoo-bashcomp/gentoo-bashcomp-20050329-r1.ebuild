@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/gentoo-bashcomp/gentoo-bashcomp-20050329-r1.ebuild,v 1.1 2005/04/02 03:05:29 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/gentoo-bashcomp/gentoo-bashcomp-20050329-r1.ebuild,v 1.2 2005/04/02 06:06:09 ka0ttic Exp $
 
 inherit eutils
 
@@ -18,7 +18,7 @@ RDEPEND=">=app-shells/bash-completion-20050121-r3"
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/${P}-fix-actionre.diff
+	epatch ${FILESDIR}/${PV}-fix-actionre.diff
 }
 
 src_install() {

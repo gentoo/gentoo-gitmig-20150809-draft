@@ -4,14 +4,14 @@ Hash: SHA1
 MD5 faaa1919cdbb2161df7b1a99b5f2c45b gentoo-bashcomp-20050316.ebuild 1036
 MD5 b062d4cb75b0f54aa93623de68c5d652 ChangeLog 1004
 MD5 99ce5509db4b50f28a1f6675f8c09b2b metadata.xml 258
-MD5 b695f7125f1e6f302170505980897269 gentoo-bashcomp-20050329-r1.ebuild 1138
+MD5 7626d122c33a855369e2852f2b931a07 gentoo-bashcomp-20050329-r1.ebuild 1139
 MD5 d43bd783050ae3fff7f64a93181fe15f files/digest-gentoo-bashcomp-20050316 76
 MD5 062bd4231ac362ed01d81442019db5f3 files/digest-gentoo-bashcomp-20050329-r1 76
 MD5 7fe42dd6df2d2cc4b18d191ee0aba931 files/20050329-fix-actionre.diff 596
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCTgwhEZCkKN40op4RAgkeAJ4udfSToIIqcveq4WNvTifXqC5P1ACgknZy
-lm4qzqE8Jv7+iTV5Iqiw2fI=
-=T20K
+iD8DBQFCTjZiEZCkKN40op4RAjGIAJ9txrkUWxFOc8v733l7r2hnelIHPwCfdFY7
+PP9ZB22OqcfXSSo7wDQODVk=
+=qBuc
 -----END PGP SIGNATURE-----
