@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/mdadm
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mdadm/ChangeLog,v 1.8 2004/01/30 04:35:24 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mdadm/ChangeLog,v 1.9 2004/05/11 00:23:28 mr_bones_ Exp $
+
+  10 May 2004; Michael Sterrett <mr_bones_@gentoo.org> mdadm-1.5.0.ebuild:
+  don't assign default to S; use sed -i; use flag fixup; use emake; tidy
 
 *mdadm-1.5.0 (29 Jan 2004)
 
