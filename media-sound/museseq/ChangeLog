@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/museseq
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/museseq/ChangeLog,v 1.6 2004/02/19 18:39:37 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/museseq/ChangeLog,v 1.7 2004/03/18 07:29:31 eradicator Exp $
+
+  17 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org> museseq-0.6.0.ebuild,
+  museseq-0.6.2.ebuild:
+  Allow access to /dev/dri/card* to close bug #43134
 
   19 Feb 2004; Jeremy Huddleston <eradicator@gentoo.org> museseq-0.6.0.ebuild,
   museseq-0.6.2.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/museseq/museseq-0.6.0.ebuild,v 1.3 2004/02/19 18:39:37 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/museseq/museseq-0.6.0.ebuild,v 1.4 2004/03/18 07:29:31 eradicator Exp $
 
 inherit virtualx
 
@@ -30,6 +30,10 @@ src_compile() {
 	use jack || myconf="${myconf} --disable-jack"
 	use fluidsynth || myconf="${myconf} --disable-fluidsynth"
 	Xeconf ${myconf} || die "configure failed"
+
+	# Allow access to /dev/dri/card*          
+	addpredict /dev/dri/card*
+
 	emake || die
 }
 
