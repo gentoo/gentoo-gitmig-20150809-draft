@@ -1,6 +1,16 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.282 2004/07/07 08:53:08 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.283 2004/07/10 06:19:30 lv Exp $
+
+*gcc-3.4.1-r1 (10 Jul 2004)
+
+  10 Jul 2004; Travis Tilley <lv@gentoo.org> +gcc-3.4.1-r1.ebuild:
+  now that i've tested it a bit locally, i'm committing a -* masked ebuild with
+  the GCC symbol visibility patch
+  (http://www.nedprod.com/programs/gccvisibility.html) for further testing by
+  hardened + uclibc devs. it should eventually lead to speed increases for
+  hardened, smaller libs for uclibc, and improved load times for everybody. this
+  ebuild also has a few readability cleanups for my own personal sanity.
 
   07 Jul 2004; Joshua Kinard <kumba@gentoo.org> gcc-3.3.3-r6.ebuild:
   Marked stable on mips.
