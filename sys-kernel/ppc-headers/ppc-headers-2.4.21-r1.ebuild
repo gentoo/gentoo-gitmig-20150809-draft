@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-headers/ppc-headers-2.4.21-r1.ebuild,v 1.1 2003/05/30 01:56:10 kain Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-headers/ppc-headers-2.4.21-r1.ebuild,v 1.2 2003/07/19 03:27:05 lu_zero Exp $
 
 IUSE="build crypt"
 
@@ -26,6 +26,7 @@ DESCRIPTION="Full sources for the Gentoo Kernel."
 SRC_URI="http://www.kernel.org/pub/linux/kernel/v2.4/linux-${OKV}.tar.bz2
 	mirror://gentoo/patches-${KV}.tar.bz2"
 HOMEPAGE="http://www.gentoo.org/ http://www.kernel.org/"
+PROVIDE="virtual/kernel virtual/os-headers"
 LICENSE="GPL-2"
 KEYWORDS="-x86 ~ppc -sparc -alpha -hppa -mips -arm"
 SLOT="${KV}"
