@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/modutils/modutils-2.4.20.ebuild,v 1.12 2004/06/30 02:55:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/modutils/modutils-2.4.20.ebuild,v 1.13 2004/06/30 21:22:05 agriffis Exp $
 
 S=${WORKDIR}/${P}
 SLOT="0"
@@ -9,6 +9,7 @@ SRC_URI="mirror://kernel/linux/utils/kernel/${PN}/v2.4/${P}.tar.bz2"
 HOMEPAGE="http://www.kernel.org/pub/linux/utils/kernel/modutils/"
 
 KEYWORDS="x86 -amd64 ~ppc ~sparc ~alpha"
+IUSE=""
 LICENSE="GPL-2"
 DEPEND="virtual/libc"
 
