@@ -1,8 +1,12 @@
 # ChangeLog for net-misc/keychain
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-misc/keychain/ChangeLog,v 1.4 2002/08/03 16:17:25 cselkirk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/keychain/ChangeLog,v 1.5 2002/08/28 15:41:24 cselkirk Exp $
 
 *keychain-1.9 (23 Feb 2002)
+
+  28 Aug 2002; Calum Selkirk <cselkirk@gentoo.org> keychain-2.0.2.ebuild :
+
+  New ebuild
   
   3 Aug 2002; Calum Selkirk <cselkirk@gentoo.org> keychain-1.9.ebuild
 
