@@ -1,3 +1,6 @@
-MD5 539317ea1b8b27e5afcc00093d7e6679 ChangeLog 373
 MD5 48896561059b037c4f7179c89fafd49b vorbisgain-0.32.ebuild 984
+MD5 539317ea1b8b27e5afcc00093d7e6679 ChangeLog 373
+MD5 6000225eafd6d74de03f10606262f9b1 vorbisgain-0.32-r1.ebuild 1020
 MD5 51222418c1cb37080f305b280ce98bc9 files/digest-vorbisgain-0.32 64
+MD5 6309832f36831b1908999dea9e3b63cc files/vorbisgain-0.32-48k.patch 765
+MD5 51222418c1cb37080f305b280ce98bc9 files/digest-vorbisgain-0.32-r1 64
