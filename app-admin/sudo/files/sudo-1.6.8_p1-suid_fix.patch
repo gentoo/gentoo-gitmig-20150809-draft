@@ -1,0 +1,11 @@
+--- Makefile.in	2004-09-17 15:26:12.578416939 +0000
++++ Makefile.in	2004-09-17 15:26:28.361587463 +0000
+@@ -172,7 +172,7 @@
+ 	$(NROFF) -man $< > $(srcdir)/$@
+ 
+ sudo: $(SUDOBJS) $(LIBOBJS)
+-	$(CC) -o $@ $(SUDOBJS) $(LIBOBJS) $(SUDO_LDFLAGS) $(SUDO_LIBS)
++	$(CC) -o $@ $(SUDOBJS) $(LIBOBJS) $(SUDO_LDFLAGS) $(SUDO_LIBS) -Wl,-z,now
+ 
+ visudo: $(VISUDOBJS) $(LIBOBJS)
+ 	$(CC) -o $@ $(VISUDOBJS) $(LIBOBJS) $(LDFLAGS) $(LIBS) $(NET_LIBS)
