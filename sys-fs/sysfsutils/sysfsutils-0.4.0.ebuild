@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/sysfsutils/sysfsutils-0.4.0.ebuild,v 1.5 2004/02/13 19:47:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/sysfsutils/sysfsutils-0.4.0.ebuild,v 1.6 2004/02/26 19:35:45 ciaranm Exp $
 
 inherit libtool
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/linux-diag/${P}.tar.gz"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="x86 ppc hppa amd64"
+KEYWORDS="x86 ppc hppa amd64 ~sparc"
 
 DEPEND="virtual/glibc"
 
