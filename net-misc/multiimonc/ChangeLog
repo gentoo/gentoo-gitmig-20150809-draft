@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/multiimonc
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/multiimonc/ChangeLog,v 1.12 2004/11/14 22:44:03 hansmi Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/multiimonc/ChangeLog,v 1.13 2005/03/06 16:12:15 hansmi Exp $
+
+  06 Mar 2005; Michael Hanselmann <hansmi@gentoo.org>
+  -files/UsagePlot-0.3.2.diff, -multiimonc-0.3.2.ebuild,
+  -multiimonc-0.3.3.ebuild, multiimonc-0.3.4.ebuild,
+  multiimonc-0.3.5.ebuild:
+  Cleanup, DEPEND fixed (bug 84007), stable on sparc and amd64.
 
   14 Nov 2004; Michael Hanselmann <hansmi@gentoo.org> multiimonc-0.3.5.ebuild:
   Added to ~sparc.
