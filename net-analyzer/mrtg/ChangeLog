@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/mrtg
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mrtg/ChangeLog,v 1.32 2005/01/05 23:25:01 swtaylor Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mrtg/ChangeLog,v 1.33 2005/01/26 10:35:05 ka0ttic Exp $
+
+  26 Jan 2005; Aaron Walker <ka0ttic@gentoo.org> +files/mrtg.confd,
+  files/mrtg.rc, mrtg-2.10.14.ebuild, mrtg-2.10.15.ebuild,
+  mrtg-2.11.0.ebuild, mrtg-2.11.1.ebuild:
+  New and improved init script with conf.d config.
 
 *mrtg-2.11.1 (05 Jan 2005)
 

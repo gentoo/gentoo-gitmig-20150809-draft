@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mrtg/mrtg-2.11.0.ebuild,v 1.2 2005/01/05 23:25:01 swtaylor Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mrtg/mrtg-2.11.0.ebuild,v 1.3 2005/01/26 10:35:05 ka0ttic Exp $
 
 DESCRIPTION="A tool to monitor the traffic load on network-links"
 HOMEPAGE="http://ee-staff.ethz.ch/~oetiker/webtools/mrtg/"
@@ -30,5 +30,6 @@ src_install () {
 	cp -a contrib ${D}/usr/share/doc/${PF}/contrib
 	prepalldocs
 	docinto html ; dohtml -r doc/*.html images/*
-	exeinto /etc/init.d ; newexe ${FILESDIR}/mrtg.rc mrtg
+	newinitd ${FILESDIR}/mrtg.rc ${PN}
+	newconfd ${FILESDIR}/mrtg.confd ${PN}
 }
