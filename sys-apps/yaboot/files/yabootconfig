@@ -268,11 +268,11 @@ dualboot()
 		for h in $HFS
 		do
 			if [ !-x `hpmount -r $h` > /dev/null 2>&1 ] ; then
-				if [ !-x `command hpls mach_kernel 2>/dev/null` > /dev/null 2>&1 ] ; then
+				if [ `hpls mach_kernel 2>/dev/null` ] ; then
 					[ "$QUIET" = 0 ] && echo "Found possible OS X partition at $h"
 					OSX=$h
 				fi
-				if [ !-x `command hpls "System Folder" 2>/dev/null` > /dev/null 2>&1 ] ; then
+				if [ "`hpls "System Folder" 2>/dev/null`" ] ; then
 					[ "$QUIET" = 0 ] && echo "Found possible Mac OS partition at $h"
 					MACOS=$h
 				fi		
