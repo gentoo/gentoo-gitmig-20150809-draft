@@ -1,6 +1,6 @@
 MD5 27a9f7cb52f9231cf58c18b7bcd86fb3 files/digest-vmware-workstation-3.2.1.2237-r1 158
 MD5 6355bce57bbb7997ac6c14f7cb2f785d files/digest-vmware-workstation-3.2.1.2237 83
-MD5 89b17c422f51ea8f65d1e03fc03d7640 files/digest-vmware-workstation-4.0.0.4460-r1 158
+MD5 f9f95cc2f9ffb785373b238010638654 files/digest-vmware-workstation-4.0.0.4460-r1 158
 MD5 48c1667773503fee21a1068da07440b9 files/90vmware 70
 MD5 7ca1ec14670b51d8cf824a58bc8d6621 files/vmware.png 470
 MD5 48c1667773503fee21a1068da07440b9 files/3.2.1.2237/90vmware 70
@@ -17,4 +17,4 @@ MD5 33e594e0baf61729129bf896c4f79506 vmware-workstation-3.2.1.2237-r1.ebuild 655
 MD5 68c4a02ed8d38427f6e3b855595a6f66 ChangeLog 5674
 MD5 927ba7f7ee2ad8e17feda7c21f864111 vmware-workstation-3.2.1.2237.ebuild 5558
 MD5 5438ca46386c22881024cb7363ce8ad2 vmware-workstation-4.0.1.5289.ebuild 6454
-MD5 d1a9c91d6fc21ce0f19d3f87ceea2a74 vmware-workstation-4.0.0.4460-r1.ebuild 6456
+MD5 8d384433385cd05403636c4dc9bdff22 vmware-workstation-4.0.0.4460-r1.ebuild 6456
