@@ -1,5 +1,15 @@
-MD5 9002145dd7f3aa914953f5ff5e424bb1 memprof-0.5.1.ebuild 598
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 4b42a872d99d362152133301b431a6ff ChangeLog 1475
 MD5 1cd9cfb0eb4bf2dc2c6a207f3df6d6b8 memprof-0.4.1-r1.ebuild 847
-MD5 507f9565684a1eb61bd4c3e37aa9a72b ChangeLog 1264
-MD5 ee00fab2d0e5589ad99a99326f00f691 files/digest-memprof-0.5.1 66
+MD5 1e027fe712eb9b471f8669094e484e95 memprof-0.5.1.ebuild 709
+MD5 637f2799fbdea71569e2f16dd20d304e files/digest-memprof-0.5.1 118
 MD5 76ca5c8cf016f199393f0b6ccb19f336 files/digest-memprof-0.4.1-r1 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBiLCJ10xuJSrg3/sRAnu+AJ4jM/3DJSpO/q8AM9DSEFrQvjFZhgCeKEJm
+wQn48/dfTvGCtx0E5CJXSp8=
+=K2P5
+-----END PGP SIGNATURE-----

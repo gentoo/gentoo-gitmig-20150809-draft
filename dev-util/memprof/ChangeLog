@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/memprof
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/memprof/ChangeLog,v 1.9 2004/06/25 02:40:26 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/memprof/ChangeLog,v 1.10 2004/11/03 10:18:40 ticho Exp $
+
+  03 Nov 2004; Andrej Kacian <ticho@gentoo.org> memprof-0.5.1.ebuild:
+  Workaround, include own compatible bfd.h header file, from older binutils.
+  Someone really should find a real solution, this is just ugly.
 
   05 Apr 2004; Michael Sterrett <mr_bones_@gentoo.org> memprof-0.5.1.ebuild:
   IUSE; doc cleanup
