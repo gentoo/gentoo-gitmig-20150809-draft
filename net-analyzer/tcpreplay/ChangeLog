@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/tcpreplay
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpreplay/ChangeLog,v 1.9 2005/03/07 08:46:26 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpreplay/ChangeLog,v 1.10 2005/03/16 12:55:44 ka0ttic Exp $
+
+*tcpreplay-2.3.3-r1 (16 Mar 2005)
+
+  16 Mar 2005; Aaron Walker <ka0ttic@gentoo.org> +tcpreplay-2.3.3-r1.ebuild:
+  Revision bump; added new optional dep on libpcapnav. Thanks to soulse in bug
+  84895.
 
 *tcpreplay-2.3.3 (07 Mar 2005)
 
