@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.32 2002/11/15 15:12:16 hannes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.33 2002/11/17 15:04:20 karltk Exp $
+
+  17 Nov 2002; Karl Trygve Kalleberg <karltk@gentoo.org> qt-3.1.0.ebuild:
+  Added opengl useflag.
 
   15 Nov 2002; Hannes Mehnert <hannes@gentoo.org> qt-3.1.0.ebuild:
   Added patch for QWidget::showMinimized() that didn't make it into the final
