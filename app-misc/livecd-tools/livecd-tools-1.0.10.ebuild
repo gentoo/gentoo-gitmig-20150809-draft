@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/livecd-tools/livecd-tools-1.0.10.ebuild,v 1.1 2004/11/18 23:46:38 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/livecd-tools/livecd-tools-1.0.10.ebuild,v 1.2 2004/12/11 16:35:27 kloeri Exp $
 
 IUSE="opengl X"
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc amd64 ppc ~hppa ~alpha"
+KEYWORDS="x86 sparc amd64 ppc ~hppa alpha"
 
 DEPEND=""
 
