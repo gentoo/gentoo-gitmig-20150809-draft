@@ -1,0 +1,22 @@
+--- Makefile.am.old	2003-09-10 13:29:00.194074192 +0800
++++ Makefile.am	2003-09-10 13:29:19.210183304 +0800
+@@ -25,7 +25,7 @@
+ xml_DATA = glade-2.0.dtd
+ 
+ install-data-local:
+-	-xmlcatalog --noout --add "system" "http://glade.gnome.org/glade-2.0.dtd" $(xmldir)/glade-2.0.dtd $(XMLCATALOG)
++#	-xmlcatalog --noout --add "system" "http://glade.gnome.org/glade-2.0.dtd" $(xmldir)/glade-2.0.dtd $(XMLCATALOG)
+ uninstall-local:
+ 	-xmlcatalog --noout --del $(xmldir)/glade-2.0.dtd $(XMLCATALOG)
+ 
+--- Makefile.in.old	2003-09-10 13:29:04.892359944 +0800
++++ Makefile.in	2003-09-10 13:29:27.490924440 +0800
+@@ -636,7 +636,7 @@
+ 
+ 
+ install-data-local:
+-	-xmlcatalog --noout --add "system" "http://glade.gnome.org/glade-2.0.dtd" $(xmldir)/glade-2.0.dtd $(XMLCATALOG)
++#	-xmlcatalog --noout --add "system" "http://glade.gnome.org/glade-2.0.dtd" $(xmldir)/glade-2.0.dtd $(XMLCATALOG)
+ uninstall-local:
+ 	-xmlcatalog --noout --del $(xmldir)/glade-2.0.dtd $(XMLCATALOG)
+ 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libglade/libglade-2.0.1.ebuild,v 1.13 2003/09/06 23:51:37 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libglade/libglade-2.0.1.ebuild,v 1.14 2003/09/10 05:40:02 obz Exp $
 
 IUSE="doc nls"
 
@@ -32,7 +32,7 @@ DEPEND=">=dev-util/pkgconfig-0.12.0
 
 src_compile() {
 	## patch for xml stuff
-	patch -p0 < ${FILESDIR}/Makefile.in-0.patch
+	patch -p0 < ${FILESDIR}/Makefile.in.am-xmlcatalog.patch
 	gnome2_src_configure
 	emake || die "die a horrible death"
 }
