@@ -1,8 +1,14 @@
 # ChangeLog for dev-util/ddd
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ddd/ChangeLog,v 1.8 2003/03/30 00:36:40 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ddd/ChangeLog,v 1.9 2003/10/02 08:07:56 kumba Exp $
 
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
+
+*ddd-3.3.7 (02 Oct 2003)
+
+  02 Oct 2003; Joshua Kinard <kumba@gentoo.org> ddd-3.3.7.ebuild:
+  Made a new ebuild for ddd-3.3.7, which according to the GNU homepage, requires gcc-3.x,
+  so this ebuild will not compile with gcc-2.95.x.
+  Closes Bug #28468
  
 *ddd-3.3.1-r3 (05 Dec 2002)
 
@@ -10,8 +16,10 @@
   ddd-3.3.1-r2.ebuild, ddd-3.3.1-r3.ebuild:
   change deps to virtual/motif
 
-  05 Dec 2002; Martin Schlemmer <azarah@gentoo.org> :
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : 
+  changed sparc ~sparc keywords
 
+  05 Dec 2002; Martin Schlemmer <azarah@gentoo.org> :
   Fix detection of double hipot(double, double), added
   ddd-3.3.1-detect-hipot.patch.  Fix not linking to libstdc++,
   ddd-3.3.1-link-libstdc++.patch.  Fix sandbox errors (need to
