@@ -1,5 +1,8 @@
 #define HasZlib YES
 #define HasGcc2ForCplusplus YES
+#define LocalThreads YES
+#define HasPosixThreads YES
+#define HasThreadSafeAPI YES
 #define ForceNormalLib YES
 #define BuildXinerama YES
 #define SharedLibXau YES

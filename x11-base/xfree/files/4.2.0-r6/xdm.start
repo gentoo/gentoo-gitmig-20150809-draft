@@ -44,6 +44,7 @@ start() {
 }
 
 stop() {
+	setup_dm
 	ebegin "Stopping ${SERVICE}"
 	killall X
 	start-stop-daemon --stop --quiet --exe $EXE 1>&2
