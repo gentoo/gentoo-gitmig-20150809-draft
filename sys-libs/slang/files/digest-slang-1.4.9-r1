@@ -1,7 +1,1 @@
 MD5 4fbb1a7f1257e065ca830deefe13d350 slang-1.4.9.tar.bz2 631079
-MD5 5617c722a455c1aa405c699ff361bd58 slang-1.4.9.dif 1808
-MD5 007cb225c11034b59197bdb5d507aa84 slang-1.4.9-fsuid.dif 808
-MD5 11daf6d137e1d6ec0e3475e55522cd06 slang-1.4.9-autoconf.dif 4143
-MD5 e2ddc20bfbb1ac10becb53e1707b067c slang-debian-utf8.patch 21377
-MD5 3531d8ba2b07b43cf6d758815200bfa9 slang-utf8-acs.patch 14366
-MD5 4be647282e8c01060db9d1707098bd1d slang-utf8-fix.patch 855
