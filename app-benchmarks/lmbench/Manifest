@@ -1,0 +1,6 @@
+MD5 601781268123d935c134158b457a12b1 ChangeLog 437
+MD5 d3ed32d91716a7ef5f1465d7f152ab5e lmbench-3.0_alpha3.ebuild 1119
+MD5 1067597d6549e1545b84a9d379901ae4 metadata.xml 412
+MD5 1cddbfe67828e96db956b8b6535f44c0 files/bc-config 646
+MD5 25a33fad490151f7d1e8522b7795da7f files/bc_lm.pl 3196
+MD5 79c7cffe8649099fd090204cd546db39 files/digest-lmbench-3.0_alpha3 64
