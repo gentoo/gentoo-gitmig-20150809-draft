@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/koffice-i18n/koffice-i18n-1.2.1-r1.ebuild,v 1.2 2003/09/25 19:50:29 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/koffice-i18n/koffice-i18n-1.2.1-r1.ebuild,v 1.3 2004/01/24 04:01:00 vapier Exp $
 
 inherit kde
 need-kde 3
@@ -32,10 +32,6 @@ USE="${USE} ${LINGUAS}"
 # this ebuild after your LINGUAS changes.
 
 if [ -z "${LINGUAS}" ]; then
-	ewarn "Using the LINGUAS environment variable, you can download only"
-	ewarn "language packages you are interested in.  Currently you are"
-	ewarn "downloading all languages available."
-
 	SRC_URI="$BASEDIR/koffice-i18n-${MY_PV}.tar.bz2"
 else
 	for pkg in $LANGS
