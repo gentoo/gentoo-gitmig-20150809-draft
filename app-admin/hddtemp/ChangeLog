@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/hddtemp
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/ChangeLog,v 1.9 2003/08/31 18:31:56 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/ChangeLog,v 1.10 2003/09/01 10:22:11 aliz Exp $
+
+  01 Sep 2003; Daniel Ahlberg <aliz@gentoo.org> hddtemp-0.3_beta8.ebuild :
+  I was working on this update too, but Martin commited his bump before me. 
+  My new version uses the new configuration script and tries to download the latest hddtemp.db file.
 
 *hddtemp-0.3_beta8 (31 Aug 2003)
 
