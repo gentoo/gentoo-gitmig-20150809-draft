@@ -1,6 +1,12 @@
 # ChangeLog for net-dialup/ppp
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.66 2004/09/24 00:23:07 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.67 2004/09/25 07:02:56 vapier Exp $
+
+  25 Sep 2004; Mike Frysinger <vapier@gentoo.org> ppp-2.4.1-r14.ebuild,
+  ppp-2.4.2-r1.ebuild, ppp-2.4.2-r2.ebuild, ppp-2.4.2-r3.ebuild,
+  ppp-2.4.2.ebuild:
+  Do not install the pap/chap secrets files because if a user makes a binary
+  package, they could include their passwords without realizing it.
 
 *ppp-2.4.2-r3 (24 Sep 2004)
 

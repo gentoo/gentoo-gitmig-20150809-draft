@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.2-r1.ebuild,v 1.9 2004/07/01 22:09:06 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.2-r1.ebuild,v 1.10 2004/09/25 07:02:56 vapier Exp $
 
 inherit eutils
 
@@ -65,6 +65,7 @@ src_compile() {
 }
 
 src_install() {
+	local y
 	for y in chat pppd pppdump pppstats
 	do
 		doman ${y}/${y}.8
@@ -75,7 +76,8 @@ src_install() {
 	dodir /etc/ppp/peers
 	insinto /etc/ppp
 	insopts -m0600
-	doins etc.ppp/pap-secrets etc.ppp/chap-secrets
+	newins etc.ppp/pap-secrets pap-secrets.example
+	newins etc.ppp/chap-secrets chap-secrets.example
 
 	insopts -m0644
 	doins etc.ppp/options
