@@ -1,0 +1,14 @@
+--- LinCVS.orig/lincvs	2003-03-13 04:08:16.000000000 -0500
++++ LinCVS/lincvs	2003-03-13 04:08:38.000000000 -0500
+@@ -1,9 +1,2 @@
+ #!/bin/sh
+-
+-echo Adapt the absolute path to LinCVS/lincvs.bin
+-echo and copy this startscript into a directory 
+-echo of your PATH!
+-
+-#exec "/absolute_path_to_LinCVS/AppRun" "$@"
+-#for instance
+-#exec "/usr/local/apps/LinCVS/AppRun" "$@"
+\ No newline at end of file
++exec /usr/share/LinCVS/AppRun
