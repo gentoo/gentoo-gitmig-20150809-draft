@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gradm/gradm-2.0.ebuild,v 1.2 2004/05/07 16:31:08 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gradm/gradm-2.0.ebuild,v 1.3 2004/05/08 13:18:12 solar Exp $
 
 inherit flag-o-matic gcc
 
@@ -18,8 +18,7 @@ IUSE=""
 DEPEND="virtual/glibc
 	sys-devel/bison
 	sys-devel/flex
-	sys-apps/chpax
-	sys-apps/paxctl"
+	sys-apps/chpax"
 
 S="${WORKDIR}/${PN}2"
 
