@@ -22,15 +22,13 @@ sse
 scanner 
 firebird
 mzscheme
+chasen
 
 # Chris PeBenito <pebenito@gentoo.org>
 # must use a SELinux profile
 selinux
 
-# technically there is fine but there are dependancy issues
-java
-#
-# for now tgall@gentoo.org
+# should be ok
 jikes
 junit
 
