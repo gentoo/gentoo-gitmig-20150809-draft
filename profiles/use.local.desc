@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1021 2005/03/18 20:03:43 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1022 2005/03/18 21:17:24 chriswhite Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -441,7 +441,7 @@ media-video/mplayer:edl - Enables usage of Edit Decision Lists
 media-video/mplayer:i8x0 - Enables support for the i8x0 xvmc video driver
 media-video/mplayer:live - Enables live.com streaming media support
 media-video/mplayer:lzo - Enables support for lzo compression
-media-video/mplayer:mmx2 - enables mmx2 support
+media-video/mplayer:mmxext - enables mmx2 support
 media-video/mplayer:mythtv - Enables mythtv support in mplayer
 media-video/mplayer:network - Enables network streaming support
 media-video/mplayer:nvidia - Enables support for the nvidia xvmc video driver
