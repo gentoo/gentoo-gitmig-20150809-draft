@@ -1,0 +1,22 @@
+-- cpputools/source/registercomponent/makefile.mk.bak  2004-07-16 13:06:39.000000000 +0800
++++ cpputools/source/registercomponent/makefile.mk      2004-07-16 13:06:49.000000000 +0800
+@@ -75,7 +75,7 @@
+
+ UNOUCROUT = $(OUT)$/inc$/$(TARGET)
+ INCPRE += $(UNOUCROUT)
+-CPPUMAKERFLAGS += -C
++CPPUMAKERFLAGS =
+
+ UNOTYPES=\
+                        com.sun.star.uno.TypeClass \
+--- cpputools/source/regsingleton/makefile.mk.bak       2004-07-16 13:07:04.000000000 +0800
++++ cpputools/source/regsingleton/makefile.mk   2004-07-16 13:07:11.000000000 +0800
+@@ -76,7 +76,7 @@
+
+ UNOUCROUT = $(OUT)$/inc$/$(TARGET)
+ INCPRE += $(UNOUCROUT)
+-CPPUMAKERFLAGS+= -C
++CPPUMAKERFLAGS=
+
+ UNOTYPES= \
+        com.sun.star.uno.TypeClass \
