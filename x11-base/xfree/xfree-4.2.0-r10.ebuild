@@ -119,7 +119,9 @@ src_install() {
 	fi
 
 	#we zap the host.def file which gets hard-coded with our CFLAGS, messing up other things that use xmkmf
-#	echo > ${D}/usr/X11R6/lib/X11/config/host.def
+	if [ ${ARCH} != ppc ] ; then
+		echo > ${D}/usr/X11R6/lib/X11/config/host.def
+	fi
 	#theoretically, /usr/X11R6/lib/X11/config is a possible candidate for config file management.
 	#If we find that people really worry about imake stuff, we may add it.  But for now, we leave
 	#the dir unprotected.
