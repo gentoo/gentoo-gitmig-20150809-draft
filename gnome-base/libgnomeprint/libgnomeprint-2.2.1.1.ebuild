@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeprint/libgnomeprint-2.2.1.1.ebuild,v 1.6 2003/03/01 14:45:10 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeprint/libgnomeprint-2.2.1.1.ebuild,v 1.7 2003/05/30 00:46:24 lu_zero Exp $
 
 inherit gnome2
 
@@ -8,7 +8,7 @@ S=${WORKDIR}/${P}
 DESCRIPTION="Printer handling for Gnome"
 HOMEPAGE="http://www.gnome.org/"
 SLOT="2.2"
-KEYWORDS="x86 ~ppc alpha ~sparc"
+KEYWORDS="x86 ppc alpha ~sparc"
 LICENSE="GPL-2 LGPL-2.1"
 
 RDEPEND=">=dev-libs/glib-2
