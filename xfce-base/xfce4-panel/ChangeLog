@@ -1,6 +1,10 @@
 # ChangeLog for xfce-base/xfce4-panel
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-panel/ChangeLog,v 1.39 2004/12/18 18:57:24 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-panel/ChangeLog,v 1.40 2004/12/18 19:00:34 morfic Exp $
+
+  18 Dec 2004; Daniel Goller <morfic@gentoo.org>
+  xfce4-panel-4.1.99.2.ebuild:
+  Applying patch unconditionally
 
   18 Dec 2004; Daniel Goller <morfic@gentoo.org> +files/getc.patch,
   xfce4-panel-4.1.99.2.ebuild:
