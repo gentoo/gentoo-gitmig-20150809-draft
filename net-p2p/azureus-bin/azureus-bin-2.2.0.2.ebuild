@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus-bin/azureus-bin-2.2.0.2.ebuild,v 1.2 2005/02/02 03:09:53 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus-bin/azureus-bin-2.2.0.2.ebuild,v 1.3 2005/02/22 07:06:11 morfic Exp $
 
 inherit eutils
 
@@ -21,7 +21,7 @@ LICENSE="GPL-2 BSD"
 SLOT="0"
 
 # Still in progress... trying to get most external classes in through DEPENDs rather than 
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~x86 ~amd64 ~ppc"
 IUSE="kde gtk"
 
 DEPEND="virtual/libc
@@ -44,18 +44,22 @@ src_unpack() {
 	if use amd64 ; then
 		unpack Azureus_${MY_PV}_linux.AMD64.tar.bz2
 	else
-		if use gtk ; then
-			unpack Azureus_${MY_PV}_linux.GTK.tar.bz2
-			echo
-			einfo "Using the GTK Azureus package, to use the Motif package"
-			einfo "  set USE=\"-gtk\" in /etc/make.conf."
-			echo
+		if use ppc ; then
+		unpack Azureus_${MY_PV}_linux.PPC.tar.bz2
 		else
-			unpack Azureus_${MY_PV}_linux.Motif.tar.bz2
-			echo
-			einfo "Using the Motif Azureus package, to use the GTK package"
-			einfo "  set USE=\"gtk\" in /etc/make.conf."
-			echo
+			if use gtk ; then
+				unpack Azureus_${MY_PV}_linux.GTK.tar.bz2
+				echo
+				einfo "Using the GTK Azureus package, to use the Motif package"
+				einfo "  set USE=\"-gtk\" in /etc/make.conf."
+				echo
+			else
+				unpack Azureus_${MY_PV}_linux.Motif.tar.bz2
+				echo
+				einfo "Using the Motif Azureus package, to use the GTK package"
+				einfo "  set USE=\"gtk\" in /etc/make.conf."
+				echo
+			fi
 		fi
 	fi
 

@@ -5,9 +5,9 @@ MD5 5e41ec83ee64c65fbd9d60892c46dd8d azureus-bin-2.1.0.0-r1.ebuild 3616
 MD5 a2b436bdc543534f5f98da94e6d4701d azureus-bin-2.2.0.0.ebuild 3049
 MD5 85dc1d7360f8b602dc82edefc573dbc7 azureus-bin-2.1.0.2.ebuild 3612
 MD5 c665d1f24f0983da684d5324e5c22296 azureus-bin-2.2.0.0-r1.ebuild 3495
-MD5 7d39cca970ef7f5161d5c72033156e49 azureus-bin-2.2.0.2.ebuild 3492
+MD5 94d29d33aa5576b2d1115abe1be36a00 azureus-bin-2.2.0.2.ebuild 3583
 MD5 d2c866c163dd505217c5178c35e64d4b azureus-bin-2.1.0.4.ebuild 4144
-MD5 8aacc97620d2cfecf1897ae237c8b356 ChangeLog 4332
+MD5 6f98798bb5bac17a1be5ba22ce7dead7 ChangeLog 4444
 MD5 8aefbc0e49db723ca1ad02d0c409cd49 metadata.xml 160
 MD5 520976b4596a7467299ff872cb678f06 files/digest-azureus-bin-2.1.0.0-r1 224
 MD5 6ee24e85255f98df2eab6ecc0f37394a files/digest-azureus-bin-2.1.0.2 222
@@ -20,9 +20,9 @@ MD5 b77c306407d22961d757267d4b5c8d98 files/digest-azureus-bin-2.2.0.0-r1 303
 MD5 2d3136c60488dd51bef012cbcb59201b files/azureus.png 743
 MD5 17762081fd25f6928b7bd085fa61d9ee files/azureus-bin-Makefile.patch 402
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFCAESJcAgAdbxYsnERAh0nAJwLsfSPlEayidVnFvoS/vjI3mX0KwCeNmIX
-v6Jw+2GGHyPL8g6DquYiMfY=
-=Kqk5
+iD8DBQFCGthqUpKYMelfdYERAlzLAJ9kAsCZfkBQUKFUxti5Z/YS5hi7zgCfczVP
+kSpLDJD1oI6NC0ngluXSm5Q=
+=OwKe
 -----END PGP SIGNATURE-----
