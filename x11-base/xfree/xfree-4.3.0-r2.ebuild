@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r2.ebuild,v 1.4 2003/04/09 01:23:37 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r2.ebuild,v 1.5 2003/04/11 01:56:59 seemant Exp $
 
 # Make sure Portage does _NOT_ strip symbols.  We will do it later and make sure
 # that only we only strip stuff that are safe to strip ...
@@ -40,7 +40,7 @@ strip-flags
 # Are we using a snapshot ?
 USE_SNAPSHOT="no"
 
-PATCH_VER="1.0.1"
+PATCH_VER="1.0.2"
 FT2_VER="2.1.3"
 SISDRV_VER="060403-1"
 SAVDRV_VER="1.1.27t"
@@ -123,17 +123,6 @@ DEPEND=">=sys-apps/baselayout-1.8.3
 	truetype? ( app-arch/cabextract )
 	app-arch/unzip" # needed for savage driver (version 1.1.27t)
 	
-RDEPEND=">=sys-apps/baselayout-1.8.3
-	>=sys-libs/ncurses-5.1
-	>=sys-libs/zlib-1.1.3-r2
-	>=dev-libs/expat-1.95.3
-	>=media-libs/freetype-${FT2_VER}-r2
-	>=media-libs/fontconfig-2.1-r1
-	media-libs/libpng
-	>=x11-base/opengl-update-1.4
-	>=x11-misc/ttmkfdir-3.0.4
-	pam? ( >=sys-libs/pam-0.75 )"
-
 PDEPEND=">=x11-libs/xft-2.0.1-r1
 	3dfx? ( >=media-libs/glide-v3-3.10 )"
 
@@ -198,7 +187,7 @@ src_unpack() {
 	fi
 
 	# Various Patches from all over
-	epatch ${WORKDIR}/patch/
+	EPATCH_SUFFIX="patch" epatch ${WORKDIR}/patch/
 	
 	unset EPATCH_EXCLUDE
 	
@@ -392,34 +381,6 @@ src_compile() {
 		make || die
 		cd ${S}
 	fi
-
-	ebegin "Fixing documentation..."
-	find xc/doc/hardcopy -name '*.PS.Z' | xargs gzip -df
-	find xc/doc/hardcopy -name '*.PS' | xargs gzip -f
-
-	groff -Tascii -ms xc/doc/misc/RELNOTES.ms > xc/doc/hardcopy/RELNOTES.txt
-	groff -Tascii -ms xc/doc/specs/BDF/bdf.ms > xc/doc/hardcopy/BDF/bdf.txt
-	groff -Tascii -ms xc/doc/specs/CTEXT/ctext.tbl.ms >xc/doc/hardcopy/CTEXT/ctext.tbl.txt
-	groff -Tascii -ms xc/doc/specs/FSProtocol/protocol.ms >xc/doc/hardcopy/FSProtocol/protocol.txt
-	groff -Tascii -ms xc/doc/specs/ICCCM/icccm.ms >xc/doc/hardcopy/ICCCM/icccm.txt
-	groff -Tascii -ms xc/doc/specs/ICE/ICElib.ms >xc/doc/hardcopy/ICE/ICElib.txt
-	groff -Tascii -ms xc/doc/specs/ICE/ice.ms > xc/doc/hardcopy/ICE/ice.txt
-	cp xc/doc/specs/PM/PM_spec xc/doc/hardcopy/ICE
-	groff -Tascii -ms xc/doc/specs/SM/SMlib.ms > xc/doc/hardcopy/SM/SMlib.txt
-	groff -Tascii -ms xc/doc/specs/XDMCP/xdmcp.ms >xc/doc/hardcopy/XDMCP/xdmcp.txt
-	groff -Tascii -ms xc/doc/specs/XIM/xim.ms > xc/doc/hardcopy/XIM/xim.txt
-	groff -Tascii -ms xc/doc/specs/XLFD/xlfd.tbl.ms >xc/doc/hardcopy/XLFD/xlfd.tbl.txt
-
-	rm -rf xc/doc/hardcopy/BSD/*
-	rm -rf xc/doc/hardcopy/CTEXT/*
-	rm -rf xc/doc/hardcopy/FSProtocol/*
-	rm -rf xc/doc/hardcopy/ICCCM/*
-	rm -rf xc/doc/hardcopy/ICE/*
-	rm -rf xc/doc/hardcopy/SM/*
-	rm -rf xc/doc/hardcopy/XDMCP/*
-	rm -rf xc/doc/hardcopy/XIM/*
-	rm -rf xc/doc/hardcopy/XLFD/*
-	eend 0
 }
 
 src_install() {
@@ -994,4 +955,3 @@ pkg_postrm() {
 		ln -snf ../X11R6/lib/X11 ${ROOT}/usr/lib/X11
 	fi
 }
-
