@@ -2,10 +2,8 @@ MD5 97d6b3b7ad04c64d6f9b552be86d9779 ChangeLog 3306
 MD5 718f3ef13364ce5d9a7828ffc5b662d9 gkrellmms-0.5.6.ebuild 674
 MD5 d4448f0e991a3c332d15184feae52810 gkrellmms-0.5.8.ebuild 665
 MD5 834a5c5c5f18ee67681eaeb3e11c1f52 gkrellmms-2.1.2.ebuild 679
-MD5 582d8b887a02621601eccc7a864a958e gkrellmms-2.1.6.ebuild 681
 MD5 9b1f6b2faff556b8687be4e29cca73eb gkrellmms-2.1.12.ebuild 689
 MD5 ac569c5ef1a94fe768b2a043f1d5c7c6 files/digest-gkrellmms-0.5.6 66
 MD5 2203c7d24807bc259901a86ab9c5b4c8 files/digest-gkrellmms-0.5.8 133
 MD5 a8f112436da5a68b0d5a1559bea956c8 files/digest-gkrellmms-2.1.2 66
-MD5 df84c31fea30c94276c5e37f46803148 files/digest-gkrellmms-2.1.6 66
 MD5 8390924f8f663a134a7b7f0bab086d2b files/digest-gkrellmms-2.1.12 67
