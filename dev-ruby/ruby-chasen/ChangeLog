@@ -1,0 +1,9 @@
+# ChangeLog for dev-ruby/ruby-chasen
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-chasen/ChangeLog,v 1.1 2004/07/23 15:43:24 matsuu Exp $
+
+*ruby-chasen-1.6 (24 Jul 2004)
+
+  24 Jul 2004; MATSUU Takuto <matsuu@gentoo.org> +ruby-chasen-1.6.ebuild:
+  Initial import.
+
