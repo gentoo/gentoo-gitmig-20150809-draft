@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.95 2005/01/30 02:08:01 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.96 2005/01/30 07:45:35 eradicator Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -1120,9 +1120,12 @@ gcc_do_filter_flags() {
 	# filter *common* flags that will make other gcc's angry
 	if [[ ${GCC_BRANCH_VER} == "3.3" ]] ; then
 		case $(tc-arch) in
-			x86) filter-flags '-mtune=*';;
+			x86|amd64) filter-flags '-mtune=*';;
 		esac
 	fi
+
+	# Compile problems with these (bug #6641 among others)...
+	#filter-flags "-fno-exceptions -fomit-frame-pointer -fforce-addr"
 
 	export GCJFLAGS=${GCJFLAGS:-CFLAGS}
 }
@@ -1471,34 +1474,6 @@ fix_freaky_non_versioned_library_paths_that_dont_ever_get_used() {
 		mv ${D}/${LIBPATH}/../lib$1/* ${D}/${LIBPATH}/
 		rm -rf ${D}/${LIBPATH}/../lib$1
 	fi
-}
-
-gcc_do_filter_flags() {
-	strip-flags
-
-	# In general gcc does not like optimization, and add -O2 where
-	# it is safe.  This is especially true for gcc 3.3 + 3.4
-	replace-flags -O? -O2
-
-	# -mcpu is deprecated on these archs, and possibly others
-	if use amd64 || use x86 ; then
-		setting="`get-flag mcpu`"
-		[ ! -z "${setting}" ] && \
-			replace-flags -mcpu="${setting}" -mtune="${setting}" && \
-			ewarn "-mcpu is deprecated on your arch\a\a\a" && \
-			epause 5
-	fi
-
-	strip-unsupported-flags
-
-	# If we use multilib on mips, we shouldn't pass -mabi flag - it breaks
-	# build of non-default-abi libraries.
-	use mips && use_multilib && filter-flags "-mabi*"
-
-	# Compile problems with these (bug #6641 among others)...
-	#filter-flags "-fno-exceptions -fomit-frame-pointer -fforce-addr"
-
-	export GCJFLAGS="${CFLAGS}"
 }
 
 # gcc_quick_unpack will unpack the gcc tarball and patches in a way that is
