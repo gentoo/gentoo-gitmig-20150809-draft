@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gnocatan/gnocatan-0.8.1.16-r1.ebuild,v 1.4 2004/04/03 01:03:49 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnocatan/gnocatan-0.8.1.16-r1.ebuild,v 1.5 2004/06/24 22:17:12 agriffis Exp $
 
 inherit eutils gnome2
 

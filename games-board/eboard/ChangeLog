@@ -1,6 +1,6 @@
 # ChangeLog for games-board/eboard
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/eboard/ChangeLog,v 1.7 2004/04/19 21:31:32 wolf31o2 Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/eboard/ChangeLog,v 1.8 2004/06/24 22:16:29 agriffis Exp $
 
   19 Apr 2004; Chris Gianelloni <wolf31o2@gentoo.org> eboard-0.9.5.ebuild:
   Marking stable on amd64 (no bugs in 474 days).
