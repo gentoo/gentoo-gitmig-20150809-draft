@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.1-r1.ebuild,v 1.8 2002/10/15 13:24:31 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.1-r1.ebuild,v 1.9 2002/10/17 19:16:16 azarah Exp $
 
 IUSE="moznomail java mozp3p crypt ldap gtk2 mozinterfaceinfo ssl mozaccess mozxmlterm mozctl gnome mozsvg"
 
@@ -95,6 +95,11 @@ src_unpack() {
 	if [ -n "`use gtk2`" ]; then
 		patch -p0 <${FILESDIR}/gtk2mozilla_head_patch || die "the gtk2 patch failed"
 	fi
+
+	# Fix bug #7656
+	cd ${S}/other-licenses/Xft/Xrender
+	ln -s /usr/X11R6/include/X11/extensions/Xext.h Xext.h
+	ln -s /usr/X11R6/include/X11/extensions/renderproto.h renderproto.h
 }
 
 src_compile() {
