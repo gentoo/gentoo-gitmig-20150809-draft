@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmail
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmail/ChangeLog,v 1.10 2004/10/23 16:38:28 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmail/ChangeLog,v 1.11 2004/12/29 06:06:53 mr_bones_ Exp $
+
+  28 Dec 2004; Michael Sterrett <mr_bones_@gentoo.org> -wmail-2.0.ebuild:
+  clean old broken ebuild
 
   23 Oct 2004; Jason Wever <weeve@gentoo.org> wmail-2.0-r1.ebuild:
   Added ~sparc keyword.
