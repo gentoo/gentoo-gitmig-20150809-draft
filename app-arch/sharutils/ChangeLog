@@ -1,6 +1,12 @@
 # ChangeLog for app-arch/sharutils
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/sharutils/ChangeLog,v 1.16 2004/06/24 21:36:05 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/sharutils/ChangeLog,v 1.17 2004/09/29 14:19:29 vapier Exp $
+
+*sharutils-4.2.1-r10 (29 Sep 2004)
+
+  29 Sep 2004; Mike Frysinger <vapier@gentoo.org>
+  +files/sharutils-4.2.1-buffer-limits.patch, +sharutils-4.2.1-r10.ebuild:
+  Add patch from Debian/Florian Schilhabel to fix some buffer overflows #65773.
 
   16 May 2004; Luca Barbato <lu_zero@gentoo.org> sharutils-4.2.1-r9.ebuild:
   Marked ppc
