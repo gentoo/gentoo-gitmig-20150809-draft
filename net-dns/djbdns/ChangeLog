@@ -1,6 +1,12 @@
 # ChangeLog for net-dns/djbdns
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/ChangeLog,v 1.43 2005/01/09 11:13:57 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/ChangeLog,v 1.44 2005/01/26 21:01:10 kaiowas Exp $
+
+  26 Jan 2005; petre rodan <kaiowas@gentoo.org> djbdns-1.05-r10.ebuild,
+  djbdns-1.05-r11.ebuild, djbdns-1.05-r12.ebuild, djbdns-1.05-r13.ebuild,
+  djbdns-1.05-r14.ebuild, djbdns-1.05-r3.ebuild, djbdns-1.05-r7.ebuild,
+  djbdns-1.05-r8.ebuild, djbdns-1.05-r9.ebuild:
+  added selinux RDEPEND
 
   09 Jan 2005; Sven Wegener <swegener@gentoo.org> djbdns-1.05-r3.ebuild:
   Added missing parentheses in SRC_URI/*DEPEND/LICENSE.

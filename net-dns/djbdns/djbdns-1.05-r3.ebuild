@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/djbdns-1.05-r3.ebuild,v 1.18 2005/01/09 11:13:57 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/djbdns-1.05-r3.ebuild,v 1.19 2005/01/26 21:01:10 kaiowas Exp $
 
 DESCRIPTION="Excellent high-performance DNS services"
 SRC_URI="http://cr.yp.to/djbdns/${P}.tar.gz
@@ -9,12 +9,13 @@ HOMEPAGE="http://cr.yp.to/djbdns.html"
 LICENSE="as-is"
 KEYWORDS="x86 sparc "
 SLOT="0"
-IUSE="ipv6"
+IUSE="ipv6 selinux"
 
 DEPEND="virtual/libc"
 RDEPEND="${DEPEND}
 	>=sys-apps/daemontools-0.70
-	sys-apps/ucspi-tcp"
+	sys-apps/ucspi-tcp
+	selinux? ( sec-policy/selinux-djbdns )"
 
 src_unpack() {
 	unpack ${P}.tar.gz

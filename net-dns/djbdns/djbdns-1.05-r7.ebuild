@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/djbdns-1.05-r7.ebuild,v 1.6 2005/01/09 11:13:57 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/djbdns-1.05-r7.ebuild,v 1.7 2005/01/26 21:01:10 kaiowas Exp $
 
 inherit eutils
 
@@ -10,10 +10,11 @@ HOMEPAGE="http://cr.yp.to/djbdns.html"
 SLOT="0"
 LICENSE="as-is"
 KEYWORDS="x86 ~sparc ~ppc ~alpha ~mips ~hppa"
-IUSE="ipv6 static"
+IUSE="ipv6 static selinux"
 
 RDEPEND=">=sys-apps/daemontools-0.70
-	sys-apps/ucspi-tcp"
+	sys-apps/ucspi-tcp
+	selinux? ( sec-policy/selinux-djbdns )"
 
 SRC_URI="http://cr.yp.to/djbdns/${P}.tar.gz
 	http://www.skarnet.org/software/djbdns-fwdzone/djbdns-1.04-fwdzone.patch

@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/djbdns-1.05-r11.ebuild,v 1.4 2005/01/09 11:13:57 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/djbdns-1.05-r11.ebuild,v 1.5 2005/01/26 21:01:10 kaiowas Exp $
 
-IUSE="ipv6 ipv6arpa static fwdzone roundrobin multipleip"
+IUSE="ipv6 ipv6arpa static fwdzone roundrobin multipleip selinux"
 
 inherit eutils
 
@@ -20,7 +20,8 @@ LICENSE="as-is"
 KEYWORDS="~x86"
 
 RDEPEND=">=sys-apps/daemontools-0.70
-	sys-apps/ucspi-tcp"
+	sys-apps/ucspi-tcp
+	selinux? ( sec-policy/selinux-djbdns )"
 
 src_unpack() {
 	unpack ${A}
