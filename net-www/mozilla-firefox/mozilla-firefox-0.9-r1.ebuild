@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/mozilla-firefox-0.9-r1.ebuild,v 1.3 2004/06/16 22:30:39 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/mozilla-firefox-0.9-r1.ebuild,v 1.4 2004/06/17 00:47:56 agriffis Exp $
 
 inherit makeedit flag-o-matic gcc nsplugins eutils mozilla-launcher
 
@@ -284,7 +284,7 @@ pkg_postinst() {
 	# Fix permissions on chrome files
 	find ${MOZILLA_FIVE_HOME}/chrome/ -name '*.rdf' -exec chmod 0644 {} \; || :
 
-	# This should be called in the postinst and postun of all the
+	# This should be called in the postinst and postrm of all the
 	# mozilla, mozilla-bin, firefox, firefox-bin, thunderbird and
 	# thunderbird-bin ebuilds.
 	update_mozilla_launcher_symlinks
