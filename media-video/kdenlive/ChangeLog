@@ -1,6 +1,9 @@
 # ChangeLog for media-video/kdenlive
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kdenlive/ChangeLog,v 1.8 2005/01/15 00:04:17 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kdenlive/ChangeLog,v 1.9 2005/01/23 21:27:09 centic Exp $
+
+  23 Jan 2005; Dominik Stadler <centic@gentoo.org> kdenlive-0.2.4.ebuild:
+  Update homepage
 
   15 Jan 2005; Dan Armak <danarmak@gentoo.org> kdenlive-0.2.4.ebuild:
   Changed dep on a kde-base monolithic package to accept the equivalent split

@@ -1,11 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kdenlive/kdenlive-0.2.4.ebuild,v 1.10 2005/01/15 00:04:17 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kdenlive/kdenlive-0.2.4.ebuild,v 1.11 2005/01/23 21:27:09 centic Exp $
 
 inherit eutils gcc kde
 
 DESCRIPTION="Kdenlive! (pronounced Kay-den-live) is a Non Linear Video Editing Suite for KDE."
-HOMEPAGE="http://www.uchian.pwp.blueyonder.co.uk/kdenlive.html"
+HOMEPAGE="http://kdenlive.sourceforge.net/"
 SRC_URI="mirror://sourceforge/kdenlive/${P}.tar.gz"
 
 SLOT="0"
