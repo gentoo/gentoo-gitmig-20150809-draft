@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-1.1.4.ebuild,v 1.1 2003/09/12 02:08:20 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-1.1.4.ebuild,v 1.2 2003/09/19 14:59:14 caleb Exp $
 inherit kde-base flag-o-matic
 
 IUSE="alsa oggvorbis artswrappersuid mad"
@@ -40,6 +40,13 @@ use mad || myconf="$myconf --disable-libmad"
 # has no version number in its filename because it's the same for all
 # arts versions - the patched file hasn't changed in a year's time
 PATCHES="$FILESDIR/optional-deps.diff"
+
+src_compile() {
+	kde_src_compile myconf
+	kde_fix_head_instances acinclude.m4 aclocal.m4 admin/cvs.sh admin/libtool.m4 debian/rules
+	kde_src_compile configure
+	kde_src_compile make
+}
 
 src_unpack() {
 	kde_src_unpack
