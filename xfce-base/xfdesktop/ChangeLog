@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/xfdesktop
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfdesktop/ChangeLog,v 1.43 2005/01/24 19:47:19 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfdesktop/ChangeLog,v 1.44 2005/01/29 19:57:26 pylon Exp $
+
+  29 Jan 2005; Lars Weiler <pylon@gentoo.org> xfdesktop-4.2.0.ebuild:
+  Stable on ppc.
 
   24 Jan 2005; Guy Martin <gmsoft@gentoo.org> xfdesktop-4.2.0.ebuild:
   Stable on hppa.

@@ -1,6 +1,11 @@
 # ChangeLog for xfce-base/xfce4-extras
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-extras/ChangeLog,v 1.3 2005/01/02 16:17:08 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-extras/ChangeLog,v 1.4 2005/01/29 19:57:26 pylon Exp $
+
+*xfce4-extras-4.2.0 (29 Jan 2005)
+
+  29 Jan 2005; Lars Weiler <pylon@gentoo.org> xfce4-extras-4.2.0.ebuild:
+  Stable on ppc.
 
 *xfce4-extras-4.1.99.3 (02 Jan 2005)
 
