@@ -85,7 +85,11 @@ then
     RDEPEND=""
     if [ "`use xfs`" ]
     then
-	DEPEND="${DEPEND} >=sys-devel/autoconf-2.13 >=sys-devel/automake-1.4"
+	DEPEND="${DEPEND} >=sys-devel/autoconf-2.13"
+    fi
+    if [ "`use alsa`" ]
+    then
+	PROVIDE="virtual/alsa"
     fi
 elif [ "${PN}" = "linux" ]
 then
@@ -98,11 +102,6 @@ then
     DEPEND=">=sys-apps/modutils-2.4.2
 	    >=sys-devel/flex-2.5.4a-r3
 	    >=dev-util/yacc-1.9.1-r1"
-else
-    if [ "`use alsa`" ]
-    then
-	PROVIDE="${PROVIDE} virtual/alsa"
-    fi
 fi
 
 HOMEPAGE="http://www.kernel.org/
@@ -216,14 +215,7 @@ src_unpack() {
 	cd ${S}
 	#sometimes we have icky kernel symbols; this seems to get rid of them
 	try make mrproper
-	if [ "${PN}" = "linux" ]
-	then
-	    #this is the configuration for the default kernel
-	    try cp ${FILESDIR}/${PVR}/config.bootcomp .config
-	    try yes \"\" \| make oldconfig
-	    echo "Ignore any errors from the yes command above."
-	    try make include/linux/version.h
-	fi
+	
 	#fix silly permissions in tarball
 	cd ${WORKDIR}
 	chown -R 0.0 ${S}
@@ -235,6 +227,15 @@ src_compile() {
 
     if [ "${PN}" != "linux-sources" ]
     then
+	if [ "${PN}" = "linux" ]
+	then
+	    #this is the configuration for the default kernel
+	    try cp ${FILESDIR}/${PVR}/config.bootcomp .config
+	    try yes \"\" \| make oldconfig
+	    echo "Ignore any errors from the yes command above."
+	    try make include/linux/version.h
+	fi
+	
 	if [ "$PN" = "linux" ]
 	then
 	    try make symlinks
@@ -248,7 +249,7 @@ src_compile() {
 	    # This is needed for linux-extras
 	    if [ -f "Makefile" ]
 	    then
-		try make clean
+		try make distclean
 	    fi
 	    # I had to hack this in so that LVM will look in the current linux
 	    # source directory instead of /usr/src/linux for stuff - pete
@@ -268,12 +269,15 @@ src_compile() {
 		-e \''s#^MANDIR.*#MANDIR := /usr/share/man#'\' \
 		Makefile.orig > Makefile
 	    
+	    try make clean
+	    
 	    try make
 	fi
 	
 	if [ "`use xfs`" ]
 	then
 	    cd ${S}/extras/xfs-${XFSV}/acl
+	    try make distclean
 	    try make \
 		CPPFLAGS=\""-I${S}/include"\" \
 		configure
@@ -287,6 +291,7 @@ src_compile() {
 		DEBUG=\"\"
 	    
 	    cd ${S}/extras/xfs-${XFSV}/attr
+	    try make distclean
 	    try make \
 		CPPFLAGS=\""-I${S}/include"\" \
 		configure
@@ -300,6 +305,7 @@ src_compile() {
 		DEBUG=\"\"
 	    
 	    cd ${S}/extras/xfs-${XFSV}/xfsprogs
+	    try make distclean
 	    try make \
 		CPPFLAGS=\""-I${S}/include"\" \
 		configure
@@ -316,6 +322,7 @@ src_compile() {
 	    # dmapi and xfsdump must be built last, cuz they depend on libattr (in attr) and libxfs (in xfsprogs)
 	    cd ${S}/extras/xfs-${XFSV}/dmapi
 	    ln -sf ../../xfsprogs/include include/xfs
+	    try make distclean
 	    try make \
 		CPPFLAGS=\""-I${S}/include -I${S}/extras/xfs-${XFSV}/dmapi/include"\" \
 		configure
@@ -330,6 +337,7 @@ src_compile() {
 	    cd ${S}/extras/xfs-${XFSV}/xfsdump
 	    ln -sf ../../xfsprogs/include include/xfs
 	    ln -sf ../../attr/include include/attr
+	    try make distclean
 	    try make \
 		CPPFLAGS=\""-I${S}/include -I${S}/extras/xfs-${XFSV}/xfsdump/include -I${S}/extras/xfs-${XFSV}/xfsprogs/include -I${S}/extras/xfs-${XFSV}/attr/include"\" \
 		LDFLAGS=\""-L${S}/extras/xfs-${XFSV}/attr/libattr -L${S}/extras/xfs-${XFSV}/xfsprogs/libxfs -L${S}/extras/xfs-${XFSV}/xfsprogs/libhandle -lhandle"\" \
@@ -356,16 +364,16 @@ src_compile() {
 		#LEX=\""flex -l"\" bzImage
 	    try make HOSTCFLAGS=\""${LINUX_HOSTCFLAGS}"\" LEX=\""flex -l"\" modules
 		#LEX=\""flex -l"\" modules
+	    
 	fi
-	
 	# This must come after the kernel compilation in linux
-        if [ "`use alsa`" ]
-        then
-   	    cd ${S}/extras/alsa-driver-${AV}
+	if [ "`use alsa`" ]
+	then
+	    cd ${S}/extras/alsa-driver-${AV}
 	    # This is needed for linux-extras
 	    if [ -f "Makefile.conf" ]
 	    then
-		try make clean
+		try make distclean
 	    fi
 	    try ./configure --with-kernel=\"${S}\" --with-isapnp=yes --with-sequencer=yes --with-oss=yes --with-cards=all
 	    try make
@@ -409,6 +417,10 @@ src_install() {
 		sbindir=${D}/sbin libdir=${D}/lib
 	    #no need for a static library in /lib
 	    mv ${D}/lib/*.a ${D}/usr/lib
+	    
+	    docinto LVM-${LVMV}
+	    dodoc ABSTRACT CHANGELOG CONTRIBUTORS COPYING COPYING.LIB FAQ KNOWN_BUGS LVM-HOWTO
+	    dodoc README TODO WHATSNEW
 	fi
 	
 	if [ "`use lm_sensors`" ]
@@ -417,6 +429,8 @@ src_install() {
 	    #install sensors tools
 	    cd ${S}/extras/lm_sensors-${SENV}
 	    make install
+	    docinto lm_sensors-${SENV}
+	    dodoc BACKGROUND BUGS CHANGES CONTRIBUTORS COPYING INSTALL QUICKSTART README
 	fi
 	
 	if [ "`use xfs`" ]
@@ -477,7 +491,7 @@ src_install() {
 		PKG_MAN_DIR=${D}/usr/share/man \
 		install install-dev
 	    rm -rf ${D}/usr/share/doc/xfsprogs
-	    docinto xfs-${XFSV}/xfsprogs
+	    docinto xfs-${XFSV}/xfsdump
 	    dodoc README doc/CHANGES doc/COPYING doc/PORTING doc/README.xfsdump
 	fi
 	
@@ -515,10 +529,11 @@ src_install() {
 	
         if [ "`use alsa`" ]
         then
-            #install ALSA modules
             cd ${S}/extras/alsa-driver-${AV}
-	    dodoc INSTALL FAQ
-	    dodir /lib/modules/${KV}/misc
+	    docinto alsa-${AV}
+	    dodoc COPYING INSTALL FAQ README WARNING
+	    docinto alsa-${AV}/doc
+	    dodoc doc/README.1st doc/SOUNDCARDS
 	    cp modules/*.o ${D}/lib/modules/${KV}/misc
         fi
 	if [ "`use pcmcia-cs`" ]
@@ -529,13 +544,32 @@ src_install() {
 	    rm -rf ${D}/etc/rc.d
 	    exeinto /etc/rc.d/init.d
 	    doexe ${FILESDIR}/${PVR}/pcmcia
-	fi	    
-	
+	    docinto pcmcia-cs-${PCV}
+	    dodoc BUGS CHANGES COPYING LICENSE MAINTAINERS README README-2.4 SUPPORTED.CARDS
+	    cd doc ; docinto pcmcia-cs-${PCV}/doc
+	    dodoc PCMCIA-HOWTO PCMCIA-HOWTO.ps PCMCIA-PROG PCMCIA-PROG.ps
+	fi
     else
 	dodir /usr/src
     	
 	cd ${S}
 	make mrproper
+	
+	if [ "`use lvm`" ]
+	then
+	    cd ${S}/extras/LVM/${LVMV}
+	    if [ -f Makefile ]
+	    then
+		make distclean
+	    fi
+	fi
+	if [ "`use lm_sensors`" ]
+	then
+	    cd ${S}/extras/lm_sensors-${SENV}
+	    make clean
+	fi
+	
+	rm -f ${S}/lm_sensors-patch
 	
 	echo ">>> Copying sources..."
 	cp -ax ${S} ${D}/usr/src
