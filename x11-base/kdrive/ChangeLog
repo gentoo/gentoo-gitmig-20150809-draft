@@ -1,6 +1,9 @@
 # ChangeLog for x11-base/kdrive
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/kdrive/ChangeLog,v 1.19 2004/06/12 07:47:37 cyfred Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/kdrive/ChangeLog,v 1.20 2004/06/23 07:33:25 cyfred Exp $
+
+  23 Jun 2004; Andrew Bevitt <cyfred@gentoo.org>; kdrive-4.3.0-r5.ebuild:
+  Reverting old kernel detection method for livecd, integrating koutput
 
   12 Jun 2004; Andrew Bevitt <cyfred@gentoo.org>; kdrive-4.3.0-r5.ebuild:
   Adding support for koutput in kernel tree
