@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/gnome-themes
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes/ChangeLog,v 1.20 2003/09/10 08:06:05 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes/ChangeLog,v 1.21 2003/09/10 12:55:22 obz Exp $
+
+  10 Sep 2003; Mike Gardiner <obz@gentoo.org> gnome-themes-2.3.4.ebuild:
+  Removed in favour of 2.4.0
 
 *gnome-themes-2.4.0 (10 Sep 2003)
 
