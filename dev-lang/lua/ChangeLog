@@ -1,8 +1,12 @@
 # ChangeLog for dev-lang/lua
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/ChangeLog,v 1.11 2003/11/21 20:40:15 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/ChangeLog,v 1.12 2003/12/20 00:12:53 gmsoft Exp $
 
 *lua-5.0.1_beta20031003 (21 Nov 2003)
+
+  20 Dec 2003; Guy Martin <gmsoft@gentoo.org> lua-5.0.1_beta20031003.ebuild,
+  files/lua-5.0.1-pic.patch :
+  Added a pic patch to use -fPIC flag correctly. This fix hppa compilation.
 
   21 Nov 2003; Tom Payne <twp@gentoo.org> lua-5.0.1_beta20031003.ebuild :
   Version bump using patches from http://lua-users.org/lists/lua-l/2003-10/msg00039.html.
