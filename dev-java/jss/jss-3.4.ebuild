@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jss/jss-3.4.ebuild,v 1.2 2005/02/04 16:53:18 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jss/jss-3.4.ebuild,v 1.3 2005/03/23 14:28:03 gustavoz Exp $
 
 inherit eutils java-pkg
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.mozilla.org/pub/mozilla.org/security/${PN}/releases/${RTM_NAM
 
 LICENSE="MPL-1.1"
 SLOT="3.4"
-KEYWORDS="x86 amd64"
+KEYWORDS="x86 amd64 ~sparc"
 IUSE=""
 
 S=${WORKDIR}/${P}-src
@@ -37,6 +37,9 @@ src_unpack() {
 			-i ${S}/mozilla/security/jss/lib/config.mk
 	elif use amd64; then
 		sed -e 's:-L$(DIST)/lib:-L/usr/lib/nspr -L/usr/lib/nss -L$(JAVA_HOME)/jre/lib/amd64 -L$(JAVA_HOME)/jre/lib/amd64/server -L$(DIST)/lib:' \
+			-i ${S}/mozilla/security/jss/lib/config.mk
+	elif use sparc; then
+		sed -e 's:-L$(DIST)/lib:-L/usr/lib/nspr -L/usr/lib/nss -L$(JAVA_HOME)/jre/lib/sparc -L$(JAVA_HOME)/jre/lib/sparc/server -L$(DIST)/lib:' \
 			-i ${S}/mozilla/security/jss/lib/config.mk
 	fi
 }
