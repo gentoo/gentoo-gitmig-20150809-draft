@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/gtk-engines-xfce
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-xfce/ChangeLog,v 1.24 2005/01/24 19:28:10 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-xfce/ChangeLog,v 1.25 2005/01/29 19:17:26 pylon Exp $
+
+  29 Jan 2005; Lars Weiler <pylon@gentoo.org> gtk-engines-xfce-2.2.5.ebuild:
+  Stable on ppc.
 
   24 Jan 2005; Guy Martin <gmsoft@gentoo.org> gtk-engines-xfce-2.2.5.ebuild:
   Stable on hppa.
