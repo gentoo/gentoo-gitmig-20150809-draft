@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/orion/orion-2.0.5.ebuild,v 1.1 2005/01/08 01:59:21 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/orion/orion-2.0.5.ebuild,v 1.2 2005/01/08 02:27:13 luckyduck Exp $
 
 inherit eutils java-pkg
 
@@ -11,7 +11,7 @@ At=${PN}${PV}.zip
 DESCRIPTION="Orion EJB/J2EE application webserver"
 SRC_URI="http://www.orionserver.com/distributions/${At}"
 HOMEPAGE="http://www.orionserver.com/"
-KEYWORDS="~x86 ~ppc ~sparc"
+KEYWORDS="~x86 ~ppc ~sparc ~amd64"
 LICENSE="ORIONSERVER"
 SLOT="0"
 DEPEND=">=virtual/jdk-1.3
