@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/startup-notification
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/startup-notification/ChangeLog,v 1.37 2004/12/28 22:03:35 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/startup-notification/ChangeLog,v 1.38 2005/02/04 04:59:56 joem Exp $
+
+*startup-notification-0.8 (03 Feb 2005)
+
+  03 Feb 2005; Joe McCann <joem@gentoo.org>
+  +startup-notification-0.8.ebuild:
+  Version bump
 
   28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance

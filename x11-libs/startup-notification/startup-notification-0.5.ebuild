@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/startup-notification/startup-notification-0.5.ebuild,v 1.16 2004/06/24 22:08:06 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/startup-notification/startup-notification-0.5.ebuild,v 1.17 2005/02/04 04:59:56 joem Exp $
 
 DESCRIPTION="Application startup notification and feedback library"
 HOMEPAGE="http://www.freedesktop.org/software/startup-notification/"
