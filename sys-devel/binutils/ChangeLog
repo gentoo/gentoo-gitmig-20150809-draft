@@ -1,6 +1,13 @@
 # ChangeLog for sys-devel/binutils
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.121 2004/05/14 01:05:44 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.122 2004/05/17 00:59:17 solar Exp $
+
+  16 May 2004; <solar@gentoo.org> binutils-2.14.90.0.8-r1.ebuild,
+  binutils-2.15.90.0.1.1-r1.ebuild, binutils-2.15.90.0.1.1-r2.ebuild,
+  binutils-2.15.90.0.1.1.ebuild, binutils-2.15.90.0.3-r3.ebuild:
+  added gprof/bbconv.pl install phase of >=binutils-2.14.90.0.8-r1, added
+  multitarget USE flag for canadian cross compiling bug #49934 also
+  >=binutils-2.14.90.0.8-r1. marked 2.14.90.0.8-r1 stable on x86
 
   13 May 2004; <solar@gentoo.org> binutils-2.15.90.0.3-r3.ebuild:
   bbconv.pl script is needed to convert profiling information in bb.out files to
