@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-4.16.ebuild,v 1.13 2004/12/16 11:11:57 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-4.16.ebuild,v 1.14 2004/12/17 06:38:18 lu_zero Exp $
 
-inherit eutils
+inherit eutils flag-o-matic
 
 IUSE="pam kerberos krb4 gtk gtk2 gnome opengl jpeg xinerama offensive icc kde nls"
 
@@ -57,6 +57,11 @@ DEPEND="${RDEPEND}
 	dev-lang/perl
 	gtk2? ( dev-util/pkgconfig )
 	nls? ( sys-devel/gettext )"
+
+# simple workaround for the flurry screensaver
+filter-flags -mabi=altivec
+filter-flags -maltivec
+append-flags -U__VEC__
 
 pkg_setup() {
 	if use kerberos && ! use krb4 ; then
