@@ -1,0 +1,4 @@
+# Config file for /etc/init.d/metalog
+
+# Add '-s' if you dont want buffering.  (See things realtime)
+METALOG_OPTS="-B"

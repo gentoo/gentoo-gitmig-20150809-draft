@@ -1,32 +1,21 @@
 #!/sbin/runscript
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-admin/metalog/files/metalog.rc6,v 1.4 2002/01/26 15:22:56 aeoo Exp $
-
-METALOG_PID="/var/run/metalog.pid"
+# $Header: /var/cvsroot/gentoo-x86/app-admin/metalog/files/metalog.rc6,v 1.5 2002/01/26 22:43:51 woodchip Exp $
 
 depend() {
-    need clock
-}
-
-checkconfig() {
-    if [ ! -e /etc/metalog/metalog.conf ] ; then
-	eerror "You need an /etc/metalog/metalog.conf file to run metalog"
-	eerror "There is a sample config  file in /usr/share/docs/metalog"
-	return 1
-    fi
+	need clock
 }
 
 start() {
-    checkconfig || return 1
-    ebegin "Starting metalog"
-    start-stop-daemon --start --quiet --exec /usr/sbin/metalog -- -B \
-			-p ${METALOG_PID}
-    eend $?
+	ebegin "Starting metalog"
+	start-stop-daemon --start --quiet --exec /usr/sbin/metalog \
+		-- -p /var/run/metalog.pid ${METALOG_OPTS}
+	eend $?
 }
 
 stop() {
-    ebegin "Stopping metalog"
-    start-stop-daemon --stop --quiet --pidfile ${METALOG_PID}
-    eend $?
+	ebegin "Stopping metalog"
+	start-stop-daemon --stop --quiet --pidfile /var/run/metalog.pid
+	eend $?
 }
