@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-4.6.0-r11.ebuild,v 1.5 2004/09/25 15:14:15 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-4.6.0-r11.ebuild,v 1.6 2004/09/25 17:03:10 lanius Exp $
 
 inherit flag-o-matic eutils
 
@@ -43,6 +43,7 @@ src_unpack() {
 }
 
 src_compile() {
+	append-flags -I/usr/include/heimdal
 	filter-flags -malign-double
 
 	local myconf=""
