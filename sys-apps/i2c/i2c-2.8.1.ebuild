@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/i2c/i2c-2.8.1.ebuild,v 1.1 2003/10/30 21:55:11 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/i2c/i2c-2.8.1.ebuild,v 1.2 2003/12/13 19:15:26 plasmaroo Exp $
 
 DESCRIPTION="I2C Bus support for 2.4.x kernels"
 HOMEPAGE="http://www2.lm-sensors.nu/~lm78/"
@@ -36,7 +36,7 @@ pkg_setup() {
 	eerror
 	eerror "http://www2.lm-sensors.nu/~lm78/cvs/browse.cgi/lm_sensors2/README"
 	eerror
-	eerror "35 ADDITIONALLY, i2c-2.8.0 is not API compatible to earlier i2c"
+	eerror "35 ADDITIONALLY, i2c-2.8.1 is not API compatible to earlier i2c"
 	eerror "36 releases due to struct changes; therefore you must NOT ENABLE"
 	eerror "37 any other i2c drivers (e.g. bttv) in the kernel."
 	eerror "38 Do NOT use lm-sensors 2.8.0 or i2c-2.8.0 if you require bttv."
@@ -52,26 +52,27 @@ pkg_setup() {
 }
 
 src_compile ()  {
+	echo
 	if [ "$LINUX" != "" ]; then
-		einfo "Cross-compiling using:- $LINUX"
-		einfo "Using headers from:- `echo $LINUX/include/linux | sed 's/\/\//\//'`"
+		echo -n ' '; einfo "Cross-compiling using:- $LINUX"
+		echo -n ' '; einfo "Using headers from:- `echo $LINUX/include/linux | sed 's/\/\//\//'`"
 		LINUX=`echo $LINUX | sed 's/build\//build/'`
 	else
-		einfo "You are running:- `uname -r`"
+		echo -n ' '; einfo "You are running:- `uname -r`"
 		check_KV || die "Cannot find kernel in /usr/src/linux"
-		einfo "Using kernel in /usr/src/linux/:- ${KV}"
+		echo -n ' '; einfo "Using kernel in /usr/src/linux:- ${KV}"
 
 		echo ${KV} | grep 2.4. > /dev/null
 		if [ $? == 1 ]; then
-			eerror "Kernel version in /usr/src/linux is not 2.4.x"
-			eerror "Please specify a 2.4.x kernel!"
+			echo -n ' '; eerror "Kernel version in /usr/src/linux is not 2.4.x"
+			echo -n ' '; eerror "Please specify a 2.4.x kernel!"
 			die "Incompatible Kernel"
 		else
 			LINUX='/usr/src/linux'
 		fi
 
 		if [ "${KV}" != "`uname -r`" ]; then
-			ewarn "WARNING:- kernels do not match!"
+			echo -n ' '; ewarn "WARNING:- kernels do not match!"
 		fi
 	fi
 
@@ -79,13 +80,19 @@ src_compile ()  {
 	epatch ${FILESDIR}/i2c-2.8.0-alphaCompile.patch > /dev/null;
 	cd ..;
 
-	if [ ! `emake LINUX=$LINUX clean all` ] ; then
-		eerror "i2c requires the source of a compatible kernel"
+	echo; echo -n ' '; einfo "You may safely ignore any errors from compilation"
+	echo -n ' '; einfo "that contain 'No such file' references."
+	echo; echo '>>> Compiling...'
+
+	emake LINUX=$LINUX clean all
+	if [ $? != 0 ]; then
+		eerror "I2C requires the source of a compatible kernel"
 		eerror "version installed in /usr/src/linux"
 		eerror "(or the environmental variable \$LINUX)"
-		eerror "and kernel i2c *disabled* or *enabled as a module*"
-		die "make failed"
+		eerror "and kernel I2C *disabled* or *enabled as a module*"
+		die "Error: compilation failed!"
 	fi
+
 }
 
 src_install() {

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/i2c/i2c-2.8.0.ebuild,v 1.9 2003/12/13 19:15:26 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/i2c/i2c-2.8.2.ebuild,v 1.1 2003/12/13 19:15:26 plasmaroo Exp $
 
 DESCRIPTION="I2C Bus support for 2.4.x kernels"
 HOMEPAGE="http://www2.lm-sensors.nu/~lm78/"
@@ -36,7 +36,7 @@ pkg_setup() {
 	eerror
 	eerror "http://www2.lm-sensors.nu/~lm78/cvs/browse.cgi/lm_sensors2/README"
 	eerror
-	eerror "35 ADDITIONALLY, i2c-2.8.0 is not API compatible to earlier i2c"
+	eerror "35 ADDITIONALLY, i2c-2.8.1 is not API compatible to earlier i2c"
 	eerror "36 releases due to struct changes; therefore you must NOT ENABLE"
 	eerror "37 any other i2c drivers (e.g. bttv) in the kernel."
 	eerror "38 Do NOT use lm-sensors 2.8.0 or i2c-2.8.0 if you require bttv."
