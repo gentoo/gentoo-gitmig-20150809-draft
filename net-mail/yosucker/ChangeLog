@@ -1,0 +1,9 @@
+# ChangeLog for net-mail/yosucker
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/yosucker/ChangeLog,v 1.1 2003/06/29 07:20:37 andrd Exp $
+
+*yosucker-29 (29 Jun 2003)
+
+  29 Jun 2003; Abhishek Amit <andrd@gentoo.org> yosucker-29.ebuild:
+  Initial import.
+
