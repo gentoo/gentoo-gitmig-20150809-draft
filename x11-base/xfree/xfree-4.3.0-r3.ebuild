@@ -1,13 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r3.ebuild,v 1.29 2003/06/27 17:04:38 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r3.ebuild,v 1.30 2003/07/08 02:48:11 seemant Exp $
 
 # Make sure Portage does _NOT_ strip symbols.  We will do it later and make sure
 # that only we only strip stuff that are safe to strip ...
 DEBUG="yes"
 RESTRICT="nostrip"
 
-IUSE="3dfx sse mmx 3dnow xml2 truetype nls cjk doc ipv6"
+IUSE="3dfx sse mmx 3dnow xml2 truetype nls cjk doc ipv6 debug static"
 
 filter-flags "-funroll-loops"
 
@@ -38,7 +38,7 @@ strip-flags
 # Are we using a snapshot ?
 USE_SNAPSHOT="no"
 
-PATCH_VER="2.1.4"
+PATCH_VER="2.1.5"
 FT2_VER="2.1.3"
 XCUR_VER="0.3.1"
 SISDRV_VER="180403-1"
@@ -150,7 +150,7 @@ src_unpack() {
 
 	# Unpack source and patches
 	unpack X${MY_SV}src-{1,2,3,4,5}.tgz
-	if [ -n "`use doc`" ]
+	if use doc
 	then
 		unpack X${MY_SV}src-{6,7}.tgz
 	fi
@@ -160,7 +160,7 @@ src_unpack() {
 	unpack gentoo-cursors-tad-${XCUR_VER}.tar.bz2
 
 	# Unpack extra fonts stuff from Mandrake
-	if [ -n "`use nls`" ]
+	if use nls
 	then
 		unpack gemini-koi8-u.tar.bz2
 	fi
@@ -215,7 +215,7 @@ src_unpack() {
 			${PATCH_DIR}/excluded
 	fi
 
-	if [ -z "`use debug`" ]
+	if use debug
 	then
 		mv -f ${PATCH_DIR}/5901* ${PATCH_DIR}/excluded
 	else
@@ -265,7 +265,7 @@ src_unpack() {
 	fi
 	
 	# Unpack the MS fonts
-	if [ -n "`use truetype`" ]
+	if use truetype
 	then
 		einfo "Unpacking MS Core Fonts..."
 		mkdir -p ${WORKDIR}/truetype; cd ${WORKDIR}/truetype
@@ -318,10 +318,15 @@ src_unpack() {
 
 	echo "#define OptimizedCDebugFlags ${CFLAGS}" >> config/cf/host.def
 	echo "#define OptimizedCplusplusDebugFlags ${CXXFLAGS}" >> config/cf/host.def
-	if [ -n "`use debug`" ]
+
+	if [ -n "`use debug`" -o -n "`use static`" ]
+	then
+		echo "#define DoLoadableServer	NO" >>config/cf/host.def
+	fi
+
+	if use debug
 	then
 		echo "#define XFree86Devel	YES" >> config/cf/host.def
-		echo "#define DoLoadableServer	NO" >>config/cf/host.def
 	else
 		echo "#define ExtraXInputDrivers acecad" >> config/cf/host.def
 		# use less ram .. got this from Spider's makeedit.eclass :)
@@ -329,7 +334,7 @@ src_unpack() {
 			>> config/cf/host.def
 	fi
 
-	if [ -n "`use pam`" ]
+	if use pam
 	then
 		# If you want to have optional pam support, do it properly ...
 		echo "#define HasPam YES" >> config/cf/host.def
@@ -339,7 +344,7 @@ src_unpack() {
 		echo "#define HasPamMisc NO" >> config/cf/host.def
 	fi
 
-	if [ -n "`use nls`" ]
+	if use nls
 	then
 		echo "#define XtermWithI18N YES" >> config/cf/host.def
 	fi
@@ -347,7 +352,7 @@ src_unpack() {
 	if [ "${ARCH}" = "x86" ]
 	then
 		# optimize Mesa for architecture
-		if [ -n "`use mmx`" ]
+		if use mmx
 		then
 			echo "#define HasMMXSupport	YES" >> config/cf/host.def
 			echo "#define MesaUseMMX YES" >> config/cf/host.def
@@ -355,7 +360,8 @@ src_unpack() {
 			echo "#define HasMMXSupport	NO" >> config/cf/host.def
 			echo "#define MesaUseMMX NO" >> config/cf/host.def
 		fi
-		if [ -n "`use 3dnow`" ]
+
+		if use 3dnow
 		then
 			echo "#define Has3DNowSupport YES" >> config/cf/host.def
 			echo "#define MesaUse3DNow YES" >> config/cf/host.def
@@ -363,7 +369,7 @@ src_unpack() {
 			echo "#define Has3DNowSupport NO" >> config/cf/host.def
 			echo "#define MesaUse3DNow NO" >> config/cf/host.def
 		fi
-		if [ -n "`use sse`" ]
+		if use sse
 		then
 			echo "#define HasKatmaiSupport YES" >> config/cf/host.def
 			echo "#define MesaUseKatmai YES" >> config/cf/host.def
@@ -373,7 +379,7 @@ src_unpack() {
 		fi
 
 		# build with glide3 support? (build the tdfx_dri.o module)
-		if [ -n "`use 3dfx`" ]
+		if use 3dfx
 		then
 			echo "#define HasGlide3 YES" >> config/cf/host.def
 		fi
@@ -409,7 +415,7 @@ src_unpack() {
 		DevelDrivers" >> config/cf/host.def
 	fi
 
-	if [ -n "`use xml2`" ]
+	if use xml2
 	then
 		echo "#define HasLibxml2 YES" >> config/cf/host.def
 	fi
@@ -431,7 +437,7 @@ src_unpack() {
 	fi
 
 	# enable Japanese docs, optionally
-	if [ -n "`use cjk`" -a -n "`use doc`" ]
+	if use cjk && use doc
 	then
 		echo "#define InstallJapaneseDocs YES" >> config/cf/host.def
 	fi
@@ -454,7 +460,7 @@ src_unpack() {
 		fi
 	fi
 
-	if [ "`use ipv6`" ]
+	if use ipv6
 	then
 		echo "#define HasIPv6 YES" >> config/cf/host.def
 	fi
@@ -511,7 +517,7 @@ src_compile() {
 	einfo "Building XFree86..."
 	FAST=1 emake World || die
 
-	if [ -n "`use nls`" ]
+	if use nls
 	then
 		cd ${S}/nls
 		make || die
@@ -554,7 +560,7 @@ src_install() {
 	einfo "Compressing man pages..."
 	prepman /usr/X11R6
 
-	if [ -n "`use nls`" ]
+	if use nls
 	then
 		cd ${S}/nls
 		make DESTDIR=${D} install || die
@@ -606,7 +612,7 @@ src_install() {
 	newins ${S}/programs/Xserver/hw/xfree86/XF86Config XF86Config.example
 	
 	# Install MS fonts.
-	if [ -n "`use truetype`" ]
+	if use truetype
 	then
 		ebegin "Installing MS Core Fonts"
 		dodir /usr/X11R6/lib/X11/fonts/truetype
@@ -708,7 +714,7 @@ src_install() {
 	done
 	eend 0
 
-	if [ -n "`use nls`" ]
+	if use nls
 	then
 		ebegin "gemini-koi8 fonts..."
 		cd ${WORKDIR}/ukr
@@ -737,13 +743,15 @@ src_install() {
 	doexe ${FILESDIR}/${PV}/Xsession ${FILESDIR}/${PV}/Xsetup_0
 	insinto /etc/X11/fs
 	newins ${FILESDIR}/${PV}/xfs.config config
-	if [ -n "`use pam`" ]
+
+	if use pam
 	then
 		insinto /etc/pam.d
 		newins ${FILESDIR}/${PV}/xdm.pamd xdm
 		# Need to fix console permissions first
 		newins ${FILESDIR}/${PV}/xserver.pamd xserver
 	fi
+
 	exeinto /etc/init.d
 	newexe ${FILESDIR}/${PV}/xdm.start xdm
 	newexe ${FILESDIR}/${PV}/xfs.start xfs
@@ -1064,7 +1072,7 @@ pkg_postinst() {
 		chmod 1777 ${x}
 	done
 
-	if [ "`use 3dfx`" ]
+	if use 3dfx
 	then
 		echo
 		einfo "If using a 3DFX card, and you had \"3dfx\" in your USE flags,"
