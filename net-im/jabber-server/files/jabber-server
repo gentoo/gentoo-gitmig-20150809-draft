@@ -1,0 +1,4 @@
+#!/bin/sh
+
+cd /usr/jabber
+su - jabber -c "./jabberd/jabberd &"

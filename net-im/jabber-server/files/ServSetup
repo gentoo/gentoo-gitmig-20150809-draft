@@ -1,0 +1,32 @@
+#!/usr/bin/env python
+
+#####################################################
+##                                                 ##
+## Written By Bart Verwilst <verwilst@gentoo.org>  ##
+##                                                 ##
+#####################################################
+
+from SetupEngine import *
+
+print " "
+print "Gentoo Jabber Server 1.4.1 Configuration Utility (version 0.2)"
+print " "
+ShowIntro()
+
+Init = 1
+while Init == 1:
+	CmdInput = raw_input("Enter your choice: ")
+	if CmdInput == "1":
+		SetupGeneral()
+	elif CmdInput == "2":
+		JUDConfig()
+	elif CmdInput == "3":
+		AIMConfig()
+        elif CmdInput == "4":
+		ICQConfig()
+        elif CmdInput == "5":
+		MSNConfig()
+        elif CmdInput == "6":
+		WriteConfig()
+        elif CmdInput == "7":
+		Init = 0
