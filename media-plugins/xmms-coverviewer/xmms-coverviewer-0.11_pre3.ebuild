@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-coverviewer/xmms-coverviewer-0.11_pre3.ebuild,v 1.3 2004/03/31 17:41:10 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-coverviewer/xmms-coverviewer-0.11_pre3.ebuild,v 1.4 2004/04/26 03:48:08 agriffis Exp $
 
 IUSE=""
 
@@ -20,7 +20,7 @@ DEPEND="=x11-libs/gtk+-1.2*
 	media-sound/xmms"
 
 src_compile() {
-	econf
+	econf || die "econf failed"
 	emake || die "make failed"
 }
 
