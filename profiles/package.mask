@@ -437,10 +437,6 @@ sys-apps/mkisofs
 # verify.
 =net-mail/fetchmail-5.9.11-r1
 
-# cardoe@gentoo.org (16 Jul 2002)
-# pcmcia-cs-3.1.34-r8 is messed up.. -r7 should be used
-=sys-apps/pcmcia-cs-3.1.34-r8
-
 # owen@gentoo.org (15 Jul 2002)
 # The CVS snapshot of Lyx should have been masked in the first place!
 # It simply does not compile. Please Devs, mask all new ebuilds!
