@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/basc
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/basc/ChangeLog,v 1.10 2004/12/31 12:37:48 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/basc/ChangeLog,v 1.11 2004/12/31 13:43:51 fmccor Exp $
+
+  31 Dec 2004; Ferris McCormick <fmccor@gentoo.org> basc-1.5.2.ebuild:
+  Stable for sparc, Bug 76123.
 
 * basc-1.5.2 (31 Dec 2004) 
 
