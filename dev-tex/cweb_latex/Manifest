@@ -1,4 +1,4 @@
-MD5 5efb7f129dbf4185bd4e4f4cde6e18e8 ChangeLog 385
-MD5 4bee7ab8d25a04634b48b252926bca5c cweb_latex-1.1.1.ebuild 466
 MD5 6c82be26f774748d06ec48e63c66fead files/cweb.cls.patch 1156
 MD5 2451da3da690a5163fc7ffd7cc8c302a files/digest-cweb_latex-1.1.1 66
+MD5 4bee7ab8d25a04634b48b252926bca5c cweb_latex-1.1.1.ebuild 466
+MD5 874367ff453a4886832394ce3f62d14b ChangeLog 379
