@@ -1,10 +1,13 @@
 # ChangeLog for sys-libs/pam
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.21 2003/01/07 22:25:09 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.22 2003/01/08 18:46:53 azarah Exp $
+
+  08 Jan 2003; Martin Schlemmer <azarah@gentoo.org> pam-0.75-r11.ebuild :
+  Mark stable.
 
 *pam-0.75-r11 (25 Dec 2002)
 
-  07 Jan 2002; Martin Holzer <mholzer@gentoo.org> pam-0.75-r11.ebuild :
+  07 Jan 2003; Martin Holzer <mholzer@gentoo.org> pam-0.75-r11.ebuild :
   Corrected Homepage.
 
   25 Dec 2002; Martin Schlemmer <azarah@gentoo.org> pam-0.75-r11.ebuild :
