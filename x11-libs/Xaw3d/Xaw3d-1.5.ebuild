@@ -65,12 +65,20 @@ src_install () {
     # There is no install target in the Makefile.
     # We have to copy everything by hand.
     # Update: usage of ebuild installation functions added by achim, thanks
+    # 2nd update: achim's addition did not install library symlinks
+    # correctly. I could not find the documentation of the prepdir helper
+    # function so I switched back to manual installation for now.
     
     into /usr/X11R6
-    dolib.so libXaw3d.so.[0-9].[0-9]
-    preplib /usr/X11R6
-
+    dolib.so libXaw3d.so.6.1
+    dolib.a libXaw3d.a
+    
+    cd ${D}/usr/X11R6/lib
+    ln -s libXaw3d.so.6.1 libXaw3d.so.6
+    ln -s libXaw3d.so.6 libXaw3d.so
+    
     # headers
+    cd ${S}
     insinto /usr/X11R6/include/X11/Xaw3d
     doins *.h
 
