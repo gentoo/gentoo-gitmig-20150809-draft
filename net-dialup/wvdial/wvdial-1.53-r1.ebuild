@@ -1,10 +1,9 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/wvdial/wvdial-1.53-r1.ebuild,v 1.8 2003/09/12 22:43:01 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/wvdial/wvdial-1.53-r1.ebuild,v 1.9 2003/09/12 22:44:57 msterret Exp $
 
 inherit eutils
 
-S=${WORKDIR}/${P}
 DESCRIPTION="Excellent program which automatically configures your PPP session"
 SRC_URI="http://open.nit.ca/download/${P}.tar.gz"
 HOMEPAGE="http://open.nit.ca/"
@@ -20,31 +19,29 @@ LICENSE="LGPL-2"
 KEYWORDS="x86 sparc amd64 hppa alpha"
 
 src_unpack() {
-
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/${P}-crypt.patch
-
 }
 
 src_compile() {
-
-	sed -i "s:PREFIX=/usr/local:PREFIX=/usr:" Makefile
+	sed -i "s:PREFIX=/usr/local:PREFIX=/usr:" Makefile || \
+		die "sed Makefile failed"
 }
 
 src_install() {
-	sed -i "s:PPPDIR=/etc/ppp/peers:PPPDIR=${D}/etc/ppp/peers:" Makefile
+	sed -i "s:PPPDIR=/etc/ppp/peers:PPPDIR=${D}/etc/ppp/peers:" Makefile || \
+		die "sed Makefile failed"
 
 	make \
 		PREFIX=${D}/usr \
-		install || die
+		install || die "make install failed"
 
 	dodoc ANNOUNCE CHANGES COPYING.LIB README
 	dodoc debian/copyright debian/changelog
 }
 
 pkg_postinst() {
-
 	einfo
 	einfo "Use wvdialconf to automagically generate a configuration-file."
 	einfo
