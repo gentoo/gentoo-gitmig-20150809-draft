@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/sox-12.17.4-r1.ebuild,v 1.9 2004/05/04 02:07:47 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/sox-12.17.4-r1.ebuild,v 1.10 2004/06/19 21:25:55 eradicator Exp $
 
 DESCRIPTION="The swiss army knife of sound processing programs"
 HOMEPAGE="http://sox.sourceforge.net"
@@ -12,6 +12,7 @@ KEYWORDS="x86 ppc sparc amd64"
 LICENSE="LGPL-2.1"
 
 DEPEND="virtual/glibc
+	alsa? ( media-libs/alsa-lib )
 	oggvorbis? media-libs/libvorbis
 	mad? media-sound/madplay"
 
