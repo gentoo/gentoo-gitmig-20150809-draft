@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/ac-sources
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ac-sources/ChangeLog,v 1.51 2005/01/18 03:14:16 marineam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ac-sources/ChangeLog,v 1.52 2005/02/05 19:01:05 marineam Exp $
+
+*ac-sources-2.6.10-r11 (05 Feb 2005)
+
+  05 Feb 2005; Michael Marineau <marineam@gentoo.org>
+  -ac-sources-2.6.10-r10.ebuild, +ac-sources-2.6.10-r11.ebuild:
+  Version bump :-)
 
 *ac-sources-2.6.10-r10 (18 Jan 2005)
 
