@@ -1,6 +1,15 @@
 # ChangeLog for net-wireless/kdebluetooth
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kdebluetooth/ChangeLog,v 1.21 2005/01/24 21:30:34 motaboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kdebluetooth/ChangeLog,v 1.22 2005/01/30 17:50:50 motaboy Exp $
+
+*kdebluetooth-0.0.20050122-r3 (30 Jan 2005)
+
+  30 Jan 2005; Simone Gotti <motaboy@gentoo.org>
+  kdebluetooth-0.0.20041107.ebuild, -kdebluetooth-0.0.20050122-r1.ebuild,
+  +kdebluetooth-0.0.20050122-r2.ebuild,
+  +kdebluetooth-0.0.20050122-r3.ebuild, -kdebluetooth-0.0.20050122.ebuild:
+  Add runtime deps on kdialog or kdebase (splitted or monolithic ebuilds).
+  Fixes bug #79453. Also fix wrong RDEPEND that should be a DEPEND.
 
   24 Jan 2005; Simone Gotti <motaboy@gentoo.org>
   kdebluetooth-0.0.20050122.ebuild:

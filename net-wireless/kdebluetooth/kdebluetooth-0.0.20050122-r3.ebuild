@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kdebluetooth/kdebluetooth-0.0.20050122.ebuild,v 1.2 2005/01/24 21:30:34 motaboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kdebluetooth/kdebluetooth-0.0.20050122-r3.ebuild,v 1.1 2005/01/30 17:50:50 motaboy Exp $
 
 inherit kde
 
@@ -11,18 +11,21 @@ SRC_URI="http://dev.gentoo.org/~motaboy/files/${P}.tar.bz2"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~ppc"
-IUSE="xmms"
+IUSE="xmms irmc"
 
-RDEPEND=">=dev-libs/openobex-1
+DEPEND=">=dev-libs/openobex-1
 	>=net-wireless/bluez-libs-2.7
 	>=media-libs/libvorbis-1.0
-	xmms? ( >=media-sound/xmms-1.2.10 )"
+	xmms? ( >=media-sound/xmms-1.2.10 )
+	irmc? ( || ( >=kde-base/kitchensync-3.4_beta1 >=kde-base/kdepim-3.4_beta1 ) )"
+
+RDEPEND="|| ( kde-base/kdialog kde-base/kdebase )"
 
 need-kde 3
 
 src_compile() {
 	kde_src_compile myconf
-	myconf="$myconf `use_with xmms` --disable-irmcsynckonnector"
+	myconf="$myconf `use_with xmms` `use_enable irmc irmcsynckonnector`"
 	kde_src_compile configure make
 }
 
