@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.1.3.ebuild,v 1.10 2005/01/01 10:19:26 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.1.3.ebuild,v 1.11 2005/01/29 12:15:47 suka Exp $
 
 # Notes:
 #
@@ -66,6 +66,8 @@ DEPEND="${RDEPEND}
 	!dev-util/dmake
 	java? ( >=virtual/jdk-1.4.1 )
 	!java? ( dev-libs/libxslt )"
+
+PROVIDE="virtual/ooo"
 
 pkg_setup() {
 

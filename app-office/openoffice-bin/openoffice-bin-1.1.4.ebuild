@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-1.1.4.ebuild,v 1.11 2005/01/21 22:04:04 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-1.1.4.ebuild,v 1.12 2005/01/29 12:13:39 suka Exp $
 
 # NOTE:  There are two big issues that should be addressed.
 #
@@ -35,6 +35,8 @@ RDEPEND="!app-office/openoffice
 
 DEPEND="${RDEPEND}
 	sys-apps/findutils"
+
+PROVIDE="virtual/ooo"
 
 src_install() {
 	# Sandbox issues; bug #8587

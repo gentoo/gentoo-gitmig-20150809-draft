@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian-bin/openoffice-ximian-bin-1.1.53.ebuild,v 1.5 2005/01/01 15:39:36 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian-bin/openoffice-ximian-bin-1.1.53.ebuild,v 1.6 2005/01/29 12:17:36 suka Exp $
 
 inherit rpm
 
@@ -45,6 +45,8 @@ RDEPEND="virtual/libc
 	>=media-libs/freetype-2.1.4"
 DEPEND="${RDEPEND}
 	dev-util/intltool"
+
+PROVIDE="virtual/ooo"
 
 src_unpack() {
 	rpm_src_unpack

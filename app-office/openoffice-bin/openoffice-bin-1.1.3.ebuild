@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-1.1.3.ebuild,v 1.7 2005/01/14 15:10:37 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-1.1.3.ebuild,v 1.8 2005/01/29 12:13:39 suka Exp $
 
 # NOTE:  There are two big issues that should be addressed.
 #
@@ -41,6 +41,8 @@ RDEPEND="virtual/libc
 	|| ( >=virtual/jdk-1.3.1 >=virtual/jre-1.3.1 )
 	!app-office/openoffice
 	amd64? ( >=app-emulation/emul-linux-x86-xlibs-1.0 )"
+
+PROVIDE="virtual/ooo"
 
 src_install() {
 	# Sandbox issues; bug #8587
