@@ -1,13 +1,14 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/blas-atlas/blas-atlas-3.6.0.ebuild,v 1.2 2004/05/11 05:31:54 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/blas-atlas/blas-atlas-3.6.0.ebuild,v 1.3 2004/05/13 01:48:32 george Exp $
 
 inherit eutils
 
 DESCRIPTION="Automatically Tuned Linear Algebra Software BLAS implementation"
 HOMEPAGE="http://math-atlas.sourceforge.net/"
 MY_PN=${PN/blas-/}
-SRC_URI="mirror://sourceforge/math-atlas/${MY_PN}${PV}.tar.bz2"
+SRC_URI="mirror://sourceforge/math-atlas/${MY_PN}${PV}.tar.bz2
+	mirror://gentoo/atlas${PV}-shared-libs.patch.bz2"
 
 LICENSE="BSD"
 SLOT="0"
@@ -23,11 +24,21 @@ PROVIDE="virtual/blas"
 
 S=${WORKDIR}/ATLAS
 
+pkg_setup() {
+	use ifc || if [ -z `which g77` ]; then
+		#if ifc is defined then the dep was already checked
+		eerror "No fortran compiler found on the system!"
+		eerror "Please add g77 to your USE flags and reemerge gcc!"
+		die
+	fi
+}
+
+
 src_unpack() {
 	unpack ${A}
 
 	cd ${S}
-	epatch ${FILESDIR}/atlas3.6.0-shared-libs.patch.bz2
+	epatch ${DISTDIR}/atlas3.6.0-shared-libs.patch.bz2
 	cp ${FILESDIR}/war ${S}
 	chmod a+x ${S}/war
 }
