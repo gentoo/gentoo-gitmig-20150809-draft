@@ -1,10 +1,15 @@
 # ChangeLog for app-text/gocr
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/gocr/ChangeLog,v 1.7 2002/12/13 10:56:19 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gocr/ChangeLog,v 1.8 2003/01/19 16:51:17 mholzer Exp $
+
+*gocr-0.3.6-r2 (06 Jul 2002)
+
+  19 Jan 2003; Martin Holzer <mholzer@gentoo.org> gocr-0.3.6-r2.ebuild
+  ChangeLog :
+  gocr breaks with netpbm 10.11.4 so depending on 9.12*
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
- 
-*gocr-0.3.6-r2 (06 Jul 2002)
+
   20 Oct 2002; Matthew Turk <satai@gentoo.org> gocr-0.3.6-r2.ebuild
 
   Really really real this time.  Fixed dependencies (on transfig) and sandbox.
