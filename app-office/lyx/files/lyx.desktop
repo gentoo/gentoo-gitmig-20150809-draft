@@ -6,4 +6,5 @@ Exec=lyx
 Terminal=false
 Type=Application
 StartupNotify=false
+Categories=GNOME;Application;Office;
 
