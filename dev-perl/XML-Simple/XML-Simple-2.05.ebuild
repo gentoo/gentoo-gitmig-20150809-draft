@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Simple/XML-Simple-2.05.ebuild,v 1.4 2004/06/25 01:14:01 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Simple/XML-Simple-2.05.ebuild,v 1.5 2004/09/02 22:31:23 pvdabeel Exp $
 
 inherit perl-module
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.cpan.org/modules/by-module/XML/${P}.tar.gz"
 HOMEPAGE="http://www.cpan.org/modules/by-module/XML/${P}.readme"
 SLOT="0"
 LICENSE="Artistic | GPL-2"
-KEYWORDS="x86 amd64 ~ppc ~sparc ~alpha"
+KEYWORDS="x86 amd64 ppc ~sparc ~alpha"
 
 DEPEND="${DEPEND}
 	>=dev-perl/XML-Parser-2.30"

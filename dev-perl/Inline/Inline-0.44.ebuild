@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Inline/Inline-0.44.ebuild,v 1.7 2004/07/14 18:29:30 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Inline/Inline-0.44.ebuild,v 1.8 2004/09/02 22:36:05 pvdabeel Exp $
 
 inherit perl-module
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://search.cpan.org/doc/INGY/Inline-0.43/Inline.pod"
 
 SLOT="0"
 LICENSE="Artistic"
-KEYWORDS="x86 amd64 ~ppc ~sparc alpha"
+KEYWORDS="x86 amd64 ppc ~sparc alpha"
 IUSE=""
 
 DEPEND="${DEPEND}
