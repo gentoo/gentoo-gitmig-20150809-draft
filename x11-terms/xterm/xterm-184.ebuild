@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/xterm-184.ebuild,v 1.13 2004/04/11 03:38:04 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/xterm-184.ebuild,v 1.14 2004/04/11 17:08:35 spyderous Exp $
 
 inherit eutils
 
@@ -37,7 +37,7 @@ src_compile() {
 
 	econf \
 		`use_enable truetype freetype` \
-		`use_enable Xaw3d` \
+		`use_with Xaw3d` \
 		--libdir=/etc \
 		--with-utempter \
 		--enable-88-color \

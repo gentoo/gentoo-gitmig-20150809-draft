@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/xterm
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.13 2004/04/11 03:38:04 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.14 2004/04/11 17:08:35 spyderous Exp $
+
+  11 Apr 2004; Donnie Berkholz <spyderous@gentoo.org>; xterm-184.ebuild:
+  Revert Xaw3d change after further investigation.
 
   10 Apr 2004; Jason Wever <weeve@gentoo.org> xterm-184.ebuild:
   Added ~sparc keyword.
