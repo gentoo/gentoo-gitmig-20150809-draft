@@ -1,22 +1,12 @@
 # ChangeLog for dev-perl/XML-Grove
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Grove/ChangeLog,v 1.6 2003/02/13 07:13:09 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Grove/ChangeLog,v 1.7 2003/04/03 23:40:56 gmsoft Exp $
 
   13 Feb 2003; Mark Guertin <gerk@gentoo.org> XML-Grove-0.46_alpha-r1.ebuild XML-Grove-0.46_alpha.ebuild :
   set ppc in keywords
 
   29 Oct 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog  :
-
-  29 Oct 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog  : :
-
-  29 Oct 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog  : : :
-
-  29 Oct 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog  : : : :
-
-  29 Oct 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog  : : : : :
-
   forced version bump to install into correct locations
-# ChangeLog for dev-perl/XML-Grove
 
 *XML-Grove-0.46_alpha (24 Oct 2002)
 

@@ -1,6 +1,6 @@
 # ChangeLog for dev-perl/Test-Simple
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Simple/ChangeLog,v 1.8 2003/03/20 18:22:53 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Simple/ChangeLog,v 1.9 2003/04/03 23:40:56 gmsoft Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
@@ -18,15 +18,7 @@
 *Test-Simple-0.42-r1 (14 Jun 2002)
 
   29 Oct 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog  :
-
-  29 Oct 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog  : :
-
-  29 Oct 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog  : : :
-
-  29 Oct 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog  : : : :
-
   forced version bump to install into correct locations
-# ChangeLog for dev-perl/Test-Simple
 
 *Test-Simple-0.42 (14 Jun 2002)
 

@@ -1,6 +1,6 @@
 # ChangeLog for dev-perl/perl-ldap
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/perl-ldap/ChangeLog,v 1.5 2003/03/27 23:22:25 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/perl-ldap/ChangeLog,v 1.6 2003/04/03 23:40:56 gmsoft Exp $
 
 *perl-ldap-0.25-r1 (27 Mar 2003)
 
@@ -9,11 +9,7 @@
   <hamiltonc@via-rs.net>, fixes bug #18227
 
   29 Oct 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog  :
-
-  29 Oct 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog  : :
-
   forced version bump to install into correct locations
-# ChangeLog for dev-perl/perl-ldap
 
 *perl-ldap-0.25 (22 Sep 2002)
 

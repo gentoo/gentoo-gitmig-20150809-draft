@@ -1,6 +1,6 @@
 # ChangeLog for dev-perl/Storable
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Storable/ChangeLog,v 1.11 2003/03/20 18:24:31 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Storable/ChangeLog,v 1.12 2003/04/03 23:40:56 gmsoft Exp $
 
   20 Mar 2003; Guy Martin <gmsoft@gentoo.org> Storable-2.04-r1.ebuild :
   Added hppa to KEYWORDS.
@@ -8,17 +8,7 @@
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
   29 Oct 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog  :
-
-  29 Oct 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog  : :
-
-  29 Oct 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog  : : :
-
-  29 Oct 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog  : : : :
-
-  29 Oct 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog  : : : : :
-
   forced version bump to install into correct locations
-# ChangeLog for dev-perl/Storable
 
 *Storable-2.04 (9 Sep 2002)
 

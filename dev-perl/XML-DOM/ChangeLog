@@ -1,6 +1,6 @@
 # ChangeLog for dev-perl/XML-DOM
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-DOM/ChangeLog,v 1.11 2003/02/12 06:25:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-DOM/ChangeLog,v 1.12 2003/04/03 23:40:56 gmsoft Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
@@ -20,11 +20,7 @@
   Missing major dep on libxml-perl
 
   29 Oct 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog  :
-
-  29 Oct 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog  : :
-
   forced version bump to install into correct locations
-# ChangeLog for dev-perl/XML-DOM
 
 *XML-DOM-1.39-r1 (03 Jul 2002)
 

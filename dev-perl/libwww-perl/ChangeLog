@@ -1,6 +1,6 @@
 # ChangeLog for dev-perl/libwww-perl
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/libwww-perl/ChangeLog,v 1.12 2003/04/03 22:28:15 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/libwww-perl/ChangeLog,v 1.13 2003/04/03 23:40:56 gmsoft Exp $
 
 *libwww-perl-5.68 (15 Jan 2003)
 
@@ -15,9 +15,7 @@
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
   29 Oct 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog  :
-
   forced version bump to install into correct locations
-# ChangeLog for dev-perl/libwww-perl
 
 *libwww-perl-5.64 (6 May 2002)
 

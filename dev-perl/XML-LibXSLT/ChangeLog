@@ -1,6 +1,6 @@
 # ChangeLog for dev-perl/XML-LibXSLT
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-LibXSLT/ChangeLog,v 1.13 2003/02/13 07:35:34 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-LibXSLT/ChangeLog,v 1.14 2003/04/03 23:40:56 gmsoft Exp $
 
   13 Feb 2003; Mark Guertin <gerk@gentoo.org> XML-LibXSLT-1.50-r1.ebuild XML-LibXSLT-1.50.ebuild :
   set keywords to ppc
@@ -8,23 +8,7 @@
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
   29 Oct 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog  :
-
-  29 Oct 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog  : :
-
-  29 Oct 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog  : : :
-
-  29 Oct 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog  : : : :
-
-  29 Oct 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog  : : : : :
-
-  29 Oct 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog  : : : : : :
-
-  29 Oct 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog  : : : : : : :
-
-  29 Oct 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog  : : : : : : : :
-
   forced version bump to install into correct locations
-# ChangeLog for dev-perl/XML-LibXSLT
 
 *XML-LibXSLT-1.50 (18 Aug 2002)
 
