@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-proxy/ntlmaps/ntlmaps-0.9.8-r1.ebuild,v 1.1 2005/01/05 12:54:03 satya Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-proxy/ntlmaps/ntlmaps-0.9.8-r1.ebuild,v 1.2 2005/01/09 09:12:01 corsair Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/ntlmaps/${MY_P_URL}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~arm ~hppa ~ia64 ~ppc ~s390 ~x86"
+KEYWORDS="~alpha ~arm ~hppa ~ia64 ~ppc ~s390 ~x86 ~ppc64"
 IUSE=""
 
 RDEPEND=">=dev-lang/python-1.5"
