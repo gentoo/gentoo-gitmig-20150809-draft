@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/zapata
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/zapata/ChangeLog,v 1.8 2004/07/01 22:28:13 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/zapata/ChangeLog,v 1.9 2004/07/26 22:35:59 stkn Exp $
+
+  26 Jul 2004; Stefan Knoblich <stkn@gentoo.org> zapata-0.9.1.ebuild:
+  stable on x86
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> zapata-0.7.0.ebuild,
   zapata-0.8.1.ebuild, zapata-0.9.1.ebuild:
