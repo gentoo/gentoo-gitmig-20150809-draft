@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfractint/xfractint-20.3.01.ebuild,v 1.11 2004/07/15 14:59:12 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfractint/xfractint-20.3.01.ebuild,v 1.12 2004/07/20 14:46:40 spock Exp $
 
 inherit eutils flag-o-matic
 
@@ -19,8 +19,6 @@ IUSE=""
 DEPEND="virtual/libc
 	>=sys-libs/ncurses-5.1
 	virtual/x11"
-
-RDEPEND=$DEPEND
 
 src_unpack() {
 	unpack ${A}
