@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtomcrypt/libtomcrypt-0.97a.ebuild,v 1.2 2004/06/25 03:15:03 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtomcrypt/libtomcrypt-0.97a.ebuild,v 1.3 2004/07/18 00:03:46 vapier Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="x86 ppc"
 IUSE="doc"
 
-DEPEND="doc? ( app-text/tetex app-text/ghostscript )"
+DEPEND="doc? ( virtual/tetex app-text/ghostscript )"
 
 src_unpack() {
 	unpack ${A}

@@ -1,8 +1,16 @@
-MD5 080813e6cb837cb67f1325cb7e74a745 libtomcrypt-0.97.ebuild 839
-MD5 15f6d7929471058261aef78816912912 libtomcrypt-0.97a.ebuild 840
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 52545fa2d4f28c080b12b17d247e761a ChangeLog 2025
 MD5 8e170189f60a2ed2879b9deb471f2e07 metadata.xml 2276
-MD5 99994efcad208852e941de49e9a11891 files/digest-libtomcrypt-0.97a 64
-MD5 def65b83db5acc5c42dd6b6d1764e999 files/ocb.c.patch 6288
-MD5 131ba8ace7f5d4302475936999bd343a files/digest-libtomcrypt-0.97 63
+MD5 906e1b89a7080c4e96de61406c15c670 libtomcrypt-0.97a.ebuild 837
 MD5 fcfac66b6043358fb9a1f272f25de48f files/0.93-doc-fix.patch 791
+MD5 def65b83db5acc5c42dd6b6d1764e999 files/ocb.c.patch 6288
+MD5 99994efcad208852e941de49e9a11891 files/digest-libtomcrypt-0.97a 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFA+b54HTu7gpaalycRAsk3AJ4gMC0MJD+XXSOHExNxtD5LxjLvuwCdH6e2
+BRX2cHWVD+tb8YGogX42QIo=
+=qi76
+-----END PGP SIGNATURE-----
