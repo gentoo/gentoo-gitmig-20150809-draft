@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/iiimgcf/iiimgcf-11.4.1467.ebuild,v 1.2 2003/09/14 01:50:49 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/iiimgcf/iiimgcf-11.4.1467.ebuild,v 1.3 2004/03/10 20:26:27 usata Exp $
 
 inherit iiimf
 
@@ -8,6 +8,7 @@ DESCRIPTION="IIIMGCF is a GTK+ client framework for IIIMF"
 
 LICENSE="LGPL-2.1"
 
+KEYWORDS="~x86"
 DEPEND="dev-libs/libiiimp
 	dev-libs/libiiimcf
 	gtk? ( =x11-libs/gtk+-2* )"

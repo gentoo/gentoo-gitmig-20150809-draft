@@ -1,8 +1,11 @@
 # ChangeLog for app-i18n/iiimsf
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/iiimsf/ChangeLog,v 1.2 2003/09/14 01:52:07 usata Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/iiimsf/ChangeLog,v 1.3 2004/03/10 20:24:59 usata Exp $
 
 *iiimsf-11.4.1467 (14 Sep 2003)
+
+  11 Mar 2004; Mamoru KOMACHI <usata@gentoo.org> iiimsf-11.4.1467.ebuild:
+  Added ~x86 keyword
 
   14 Sep 2003; Mamoru KOMACHI <usata@gentoo.org> iiimsf-11.4.1467.ebuild,
   files/htt.conf, files/iiim.initd, files/iiimsf-11.4.1467-gentoo.diff:
