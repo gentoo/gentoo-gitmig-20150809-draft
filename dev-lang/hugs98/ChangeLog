@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/hugs98
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/hugs98/ChangeLog,v 1.19 2004/12/08 22:57:55 hansmi Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/hugs98/ChangeLog,v 1.20 2005/03/18 18:06:34 kosmikus Exp $
+
+*hugs98-2005.3 (18 Mar 2005)
+
+  18 Mar 2005; Andres Loeh <kosmikus@gentoo.org> +hugs98-2005.3.ebuild:
+  Added an ebuild for the March 2005 interim release.
 
   08 Dec 2004; Michael Hanselmann <hansmi@gentoo.org> hugs98-2003.11.ebuild:
   Fixed bug #73611.
