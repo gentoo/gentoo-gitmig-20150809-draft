@@ -38,3 +38,4 @@ move net-mail/courier mail-mta/courier
 move net-mail/exim mail-mta/exim
 move net-mail/balsa mail-client/balsa
 move net-mail/cone mail-client/cone
+move net-mail/elm mail-client/elm
