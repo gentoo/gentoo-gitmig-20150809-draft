@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-2.0.2-r3.ebuild,v 1.12 2004/04/26 12:23:12 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-2.0.2-r3.ebuild,v 1.13 2004/05/08 16:03:38 kugelfang Exp $
 
 inherit tetex eutils
 
@@ -13,4 +13,9 @@ KEYWORDS="x86 ppc sparc mips alpha hppa amd64 ia64"
 src_unpack() {
 	tetex_src_unpack
 	epatch ${FILESDIR}/${PN}-no-readlink-manpage.diff
+}
+
+src_compile() {
+	use amd64 && replace-flags "-O3" "-O2"
+	tetex_src_compile
 }
