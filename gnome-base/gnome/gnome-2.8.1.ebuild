@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.8.1.ebuild,v 1.2 2004/11/29 11:21:48 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.8.1.ebuild,v 1.3 2004/11/30 07:16:21 obz Exp $
 
 S=${WORKDIR}
 DESCRIPTION="Meta package for the GNOME desktop"
@@ -24,7 +24,7 @@ RDEPEND="!gnome-base/gnome-core
 	!hppa? ( >=dev-libs/libxml2-2.6.15-r1 )
 	>=dev-libs/libxslt-1.1.9-r1
 
-	>=x11-libs/libxklavier-1.04
+	>=x11-libs/libxklavier-1.04-r1
 	>=media-libs/audiofile-0.2.6-r1
 	>=media-sound/esound-0.2.34
 	>=gnome-base/gnome-mime-data-2.4.2
