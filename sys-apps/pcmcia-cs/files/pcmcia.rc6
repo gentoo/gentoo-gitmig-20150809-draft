@@ -31,6 +31,11 @@ start() {
 	if [ -r ${RUN}/stab ] ; then
 		cat ${RUN}/stab | cleanup
 	fi
+	# if /var/lib/pcmcia exists (and sometimes it gets created accidentally if you run
+	#  pcmcia-cs apps w/out the proper flags), then it will really confuse the process
+	if [ -d /var/lib/pcmcia ] ; then
+		rm -rf /var/lib/pcmcia
+	fi
 
 	if [ -z "`fgrep  ds /proc/modules`" ] ; then
 		eerror "You need to load the pcmcia modules ($PCIC) and ds)"
