@@ -1,6 +1,6 @@
 # ChangeLog for net-libs/soup
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/soup/ChangeLog,v 1.13 2003/03/04 18:35:19 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/soup/ChangeLog,v 1.14 2003/03/21 17:46:15 weeve Exp $
 
 *soup-0.7.11 (04 Mar 2003)
 
@@ -12,7 +12,10 @@
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
 
-*soup-0.7.10 (24 Dec 2002) 
+*soup-0.7.10 (24 Dec 2002)
+
+  21 Mar 2003; Jason Wever <weeve@gentoo.org> soup-0.7.10.ebuild:
+  Changed ~sparc keyword to sparc.
 
   04 Mar 2003; Alastair Tse <liquidx@gentoo.org> soup-0.7.10.ebuild :
   marking soup as stable
