@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/tcptraceroute
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcptraceroute/ChangeLog,v 1.8 2003/04/29 00:40:35 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcptraceroute/ChangeLog,v 1.9 2003/06/25 17:25:55 aliz Exp $
+
+*tcptraceroute-1.4-r1 (25 Jun 2003)
+
+  25 Jun 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Security update. Moving from sbin to bin and making tcptraceroute setuid so that everyone can use it.
 
 *tcptraceroute-1.4 (18 Aug 2002)
 
