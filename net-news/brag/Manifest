@@ -1,9 +1,14 @@
-MD5 532a8f9ca49f66546b4ee42af95bd78f ChangeLog 1615
-MD5 342fddc6268d70cc952c0db570064dbe brag-1.2.9-r1.ebuild 716
-MD5 d6aff3870c2a4b0339dac030f1d76c76 brag-1.2.9-r2.ebuild 746
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 86e9e75d778d259189be61b9bcd30211 ChangeLog 1788
 MD5 b101fbdb4c9dd5b18d70cb497461ebfe brag-1.4.1.ebuild 595
 MD5 d4764f5c17f5e0b416f7ddf271c77d71 metadata.xml 161
-MD5 0a62d26d5a77bb3096668596100e0384 files/brag-1.2.9-r1-gentoo.patch 1024
-MD5 33a311b81d17368084b4f62a588b1921 files/digest-brag-1.2.9-r1 61
-MD5 33a311b81d17368084b4f62a588b1921 files/digest-brag-1.2.9-r2 61
 MD5 a0e72cd412dc7c0a36084c5d01012b3d files/digest-brag-1.4.1 61
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBccsjI1lqEGTUzyQRAvjiAJ0fGaKccB+J5+pH11SiJDK5/fjwdgCdHtoj
+hSrott4Nxq01gz/Qmyk4vo0=
+=2GpE
+-----END PGP SIGNATURE-----
