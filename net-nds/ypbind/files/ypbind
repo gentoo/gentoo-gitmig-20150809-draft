@@ -1,30 +1,53 @@
 #!/bin/sh
-#RCUPDATE:2 3 4:75:This line is required for script management
+#RCUPDATE:3 4:72:This line is required for script management
 
 . /etc/rc.d/config/functions
 . /etc/rc.d/config/basic
 
-SERVICE="NIS Client"
-opts="start stop restart"
-
+SERVICE=ypbind
 EXE="/usr/sbin/ypbind"
 PID="/var/run/ypbind.pid"
+opts="start stop restart"
 
 start() {
-		domainname ${YP_DOMAIN}
-		ebegin "Starting $SERVICE..."
-     		start-stop-daemon --start --quiet --exec $EXE 
-		eend $? "Started $SERVICE." "Error Starting $SERVICE."
+	if [ -n "$YP_DOMAIN" ]
+	then
+	ebegin "Starting ${SERVICE}"
+
+		ypdomainname "$YP_DOMAIN"
+		start-stop-daemon --start --quiet --exec $EXE 1>&2
+		if [ -n "$?" ]
+		then
+			notfound=1
+			for i in 0 1 2 3 4 5 6 7 8 9
+			do
+				ypwhich &>/dev/null && { notfound=0; break; };
+				echo -n " ."
+				sleep 1;
+				eend 0 
+			done
+			if [ $notfound -eq 1 ] 
+			then
+				eend 1 "No NIS server found"
+			fi
+		else
+			eend $? "Error starting ${SERVICE}."
+		fi
+	else
+		eend $? "Error starting ${SERVICE}."
+	fi
 }
 
 stop() {
-		ebegin "Stopping $SERVICE..."
-		start-stop-daemon --stop --quiet --signal 9 --pid $PID
-		eend $? "Stopped $SERVICE." "Error Stopping $SERVICE."
-
+	if [ -n "$YP_DOMAIN" ]
+	then
+		ebegin "Stopping ${SERVICE}"
+		start-stop-daemon --stop --quiet -s 9 --pid $PID 1>&2
+		eend $? "Error stopping ${SERVICE}."
 	        # Remove binding files, if ypbind "forget" it
 		rm -f /var/yp/binding/*
 		rm -f /var/lock/subsys/ypbind
+	fi
 }
 
 restart() {
@@ -33,6 +56,4 @@ restart() {
 }
 
 doservice ${@}
-
-
 
