@@ -1,12 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snortalog/snortalog-2.2.1.ebuild,v 1.7 2004/11/22 18:51:45 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snortalog/snortalog-2.2.1.ebuild,v 1.8 2004/11/22 19:04:53 eldad Exp $
 
 DESCRIPTION="a powerful perl script that summarizes snort logs"
 SRC_URI="http://jeremy.chartier.free.fr/${PN}/${PN}_v${PV}.tgz"
 HOMEPAGE="http://jeremy.chartier.free.fr/snortalog/"
 
-KEYWORDS="x86 ~ppc"
+# Missing dep: dev-perl/HTML-HTMLDoc. Do not move to stable. see bug 72090. (2004 Nov 22 eldad)
+KEYWORDS="~x86 ~ppc"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE=""
