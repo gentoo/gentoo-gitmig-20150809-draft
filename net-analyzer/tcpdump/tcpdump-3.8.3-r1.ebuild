@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/tcpdump-3.8.3-r1.ebuild,v 1.3 2004/04/03 11:42:41 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/tcpdump-3.8.3-r1.ebuild,v 1.4 2004/04/03 14:51:57 weeve Exp $
 
 inherit flag-o-matic
 
@@ -15,7 +15,7 @@ HOMEPAGE="http://www.tcpdump.org/"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="x86 ppc ~sparc ~alpha ~mips ~hppa ~ia64 ~amd64"
+KEYWORDS="x86 ppc sparc ~alpha ~mips ~hppa ~ia64 ~amd64"
 
 DEPEND=">=net-libs/libpcap-0.8.3-r1
 	ssl? ( >=dev-libs/openssl-0.9.6m )"

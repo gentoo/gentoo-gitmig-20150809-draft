@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/tcpdump
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/ChangeLog,v 1.25 2004/04/03 11:42:40 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/ChangeLog,v 1.26 2004/04/03 14:51:57 weeve Exp $
+
+  03 Apr 2004; Jason Wever <weeve@gentoo.org> tcpdump-3.8.3-r1.ebuild:
+  Stable on sparc wrt bug #46258.
 
   03 Apr 2004; <solar@gentoo.org> tcpdump-3.8.3-r1.ebuild:
   stable on x86. Bug #37184,#46258
