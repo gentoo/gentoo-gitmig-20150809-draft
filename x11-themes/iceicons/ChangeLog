@@ -1,0 +1,10 @@
+# ChangeLog for x11-themes/iceicons
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/iceicons/ChangeLog,v 1.1 2004/06/19 14:07:49 usata Exp $
+
+*iceicons-0.10.0 (19 Jun 2004)
+
+  19 Jun 2004; Mamoru KOMACHI <usata@gentoo.org> iceicons-0.10.0.ebuild:
+  Initial import. Ebuild submitted by archan <archanp@hotpop.com>,
+  closing bug #50702
+
