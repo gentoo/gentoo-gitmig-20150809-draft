@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/udhcp
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/udhcp/ChangeLog,v 1.14 2004/09/04 00:33:24 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/udhcp/ChangeLog,v 1.15 2004/12/17 04:27:29 vapier Exp $
+
+*udhcp-0.9.9_pre20041216 (16 Dec 2004)
+
+  16 Dec 2004; Mike Frysinger <vapier@gentoo.org>
+  +udhcp-0.9.9_pre20041216.ebuild:
+  CVS snapshot for Uberlord.
 
   03 Sep 2004; Daniel Goller <morfic@gentoo.org> udhcp-0.9.8-r3.ebuild:
   applying gcc3.4 patch, closing bug 62714
