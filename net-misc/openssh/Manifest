@@ -1,6 +1,6 @@
 MD5 c630114ddf3ed7bb9ba71d93967f6983 openssh-3.7.1_p2-r1.ebuild 4039
-MD5 da322cb4abdc7bbc71443eab0ccb0a02 openssh-3.7.1_p2-r2.ebuild 4555
-MD5 8f2c6c12a970e1a8c0e915e00a9f4a34 ChangeLog 10711
+MD5 f9027092a97ca7e1eafdd8ff66543055 openssh-3.7.1_p2-r2.ebuild 4543
+MD5 aa8db5a731de37268b7bab1cb69826a0 ChangeLog 10824
 MD5 0feff9b09e482567359625301bddce1c metadata.xml 1329
 MD5 e937e9a713df6e2523baf3442d52e925 openssh-3.8_p1.ebuild 4657
 MD5 f3838696f97d8942b708798fa021c688 files/openssh-3.8_p1-kerberos.patch 745
@@ -11,6 +11,7 @@ MD5 9e179b1c0e3a139a5a9067c6e5bd6595 files/openssh-3.7.1_p1-selinux.diff 3389
 MD5 8f72054fc8c55107b5bf7ce13a8ad083 files/openssh-3.8_p1-chroot.patch 2884
 MD5 8f72054fc8c55107b5bf7ce13a8ad083 files/openssh-3.7.1_p2-chroot.patch 2884
 MD5 b31110303673214476c57e1bed28e1ce files/openssh-skeychallenge-args.diff 925
+MD5 9b53f18685eeb54c381c9bd11b9b80cc files/openssh-3.7.1_p2-skey.patch 326
 MD5 47853493e53ca7d4ac9942d6a76fb855 files/openssh-3.7.1_p2-kerberos.patch 1190
 MD5 b86ae0c43a704c4ee2abd2ce5c955f8f files/sshd.pam 294
 MD5 17b2fa077852f2c2990ec97c51bf198b files/sshd.rc6 1233
