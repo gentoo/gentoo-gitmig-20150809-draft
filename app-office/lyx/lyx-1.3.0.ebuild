@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.3.0.ebuild,v 1.7 2003/03/19 15:17:33 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.3.0.ebuild,v 1.8 2003/03/19 15:21:14 danarmak Exp $
 
 DESCRIPTION="WYSIWYM frontend for LaTeX"
 SRC_URI="ftp://ftp.lyx.org/pub/lyx/stable/${P}.tar.gz"
@@ -80,12 +80,7 @@ pkg_postinst() {
 		einfo	"the matheditor not to display any special characters (the ones from"
 		einfo	"the Computer Modern font family). Generated documents (.dvi, .ps...)"
 		einfo	"are ok, since tex has right fonts from the bluesky package."
-		einfo	"Until a proper solution can be found, you can consider emerging"
-		einfo	"app-text/bakoma, which provides fonts lyx can use in the matheditor."
-		einfo	"However, the bakoma package has a restrictive license that does not"
-		einfo	"allow any usage in a commercial environment as well as some other"
-		einfo	"things, so be sure to read $PORTDIR/licenses/BaKoMa carefully first."
-		einfo	"LyX 3.1.1 (RSN) includes a partial fix for this issue that at least"
+		einfo	"LyX 3.1.1 includes a partial fix for this issue that at least"
 		einfo	"allows the matheditor to display the names of the symbols instead of"
 		einfo	"wierd characters (e.g. an alpha will be replaced with the text 'alpha'",
 		einfo	"and not with a box)."
