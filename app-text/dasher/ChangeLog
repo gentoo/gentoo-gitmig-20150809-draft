@@ -1,8 +1,11 @@
 # ChangeLog for app-text/dasher
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dasher/ChangeLog,v 1.1 2003/03/16 22:15:42 sethbc Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dasher/ChangeLog,v 1.2 2003/04/26 21:27:44 liquidx Exp $
 
 *dasher-3.0.0 (16 Mar 2003)
+
+  26 Apr 2003; Alastair Tse <liquidx@gentoo.org> dasher-3.0.0.ebuild:
+  lock dep at gtkmm-1
 
   16 Mar 2003; Seth Chandler <sethbc@gentoo.org>; dasher-3.0.0.ebuild:
   added dasher to portage thanks to Gustavo Felisberto <gustavo@felisberto.net>
