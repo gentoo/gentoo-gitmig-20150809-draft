@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/booh/booh-0.2.0.ebuild,v 1.1 2005/04/02 13:41:57 dams Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/booh/booh-0.2.0.ebuild,v 1.2 2005/04/05 16:30:23 dams Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ IUSE="gtk"
 
 DEPEND=">=dev-lang/ruby-1.8.2
 	>=dev-ruby/ruby-gettext-0.8.0
-	gtk? ( >=dev-ruby/ruby-gtk2-0.10.1)
+	gtk? ( >=dev-ruby/ruby-gtk2-0.12.0)
 	gtk? ( >=x11-libs/gtk+-2.6.0 )
 	media-gfx/exif
 	>=media-gfx/imagemagick-6.2.0.4"
