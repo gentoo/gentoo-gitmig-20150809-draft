@@ -1,9 +1,9 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.9 2003/03/14 07:54:23 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.10 2003/03/15 00:41:07 seemant Exp $
 #
 # Author Ryan Phillips <rphillips@gentoo.org>
-#
+# Modified by: Seemant Kulleen <seemant@gentoo.org>
 # Ripped from the vim ebuilds. src_compile and install
 # should be integrated in at some point
 
@@ -103,28 +103,45 @@ src_unpack() {
 
 src_compile() {
 	local myconf
-	local guiconf
-	myconf="--with-features=big --enable-multibyte"
-	use nls	|| myconf="${myconf} --disable-nls"
-	use perl   && myconf="${myconf} --enable-perlinterp"
-	use python && myconf="${myconf} --enable-pythoninterp"
-	use ruby   && myconf="${myconf} --enable-rubyinterp"
 
-# tclinterp is BROKEN.  See note above DEPEND=
-#   use tcltk  && myconf="$myconf --enable-tclinterp"
+	if [ "${PN}" = "vim-core" ]
+	then
+		myconf="--with-features=tiny \
+			--enable-gui=no \
+			--without-x \
+			--disable-perlinterp \
+			--disable-pythoninterp \
+			--disable-rubyinterp \
+			--disable-gpm"
 
-# Added back gpm for temporary will remove if necessary, I think that I
-# have
-# fixed most of gpm so it should be fine.
-	use gpm	|| myconf="${myconf} --disable-gpm"
+		use nls \
+			&& myconf="${myconf} --enable-multibyte" \
+			|| myconf="${myconf} --disable-nls"
+	else
+		myconf="--with-features=huge \
+			--enable-multibyte \
+			--enable-cscope"
+		use nls	|| myconf="${myconf} --disable-nls"
+		use perl   && myconf="${myconf} --enable-perlinterp"
+		use python && myconf="${myconf} --enable-pythoninterp"
+		use ruby   && myconf="${myconf} --enable-rubyinterp"
 
-	# the console vim will change the caption of a terminal in X.
-	# the configure script should autodetect X being installed, so
-	# we'll specifically turn it off if X is not in the USE vars.
-	# -rphillips
-	use X \
-		&& myconf="${myconf} --with-x" \
-		 || myconf="${myconf} --without-x"
+		# tclinterp is BROKEN.  See note above DEPEND=
+		#   use tcltk  && myconf="$myconf --enable-tclinterp"
+
+		# Added back gpm for temporary will remove if necessary, I think that I
+		# have
+		# fixed most of gpm so it should be fine.
+		use gpm	|| myconf="${myconf} --disable-gpm"
+
+		# the console vim will change the caption of a terminal in X.
+		# the configure script should autodetect X being installed, so
+		# we'll specifically turn it off if X is not in the USE vars.
+		# -rphillips
+		use X \
+			&& myconf="${myconf} --with-x" \
+			 || myconf="${myconf} --without-x"
+	fi
 
 	# This should fix a sandbox violation.
 	for file in /dev/pty/s*
@@ -148,24 +165,55 @@ src_compile() {
 	fi
 
 
-	econf \
-		--with-features=huge \
-		--enable-cscope ${myconf} \
-		|| die "vim configure failed"
+	econf ${myconf} || die "vim configure failed"
 
-	# move config files to /etc/vim/
-	echo "#define SYS_VIMRC_FILE \"/etc/vim/vimrc\"" \
-		>>${WORKDIR}/vim61/src/feature.h
-	echo "#define SYS_GVIMRC_FILE \"/etc/vim/gvimrc\"" \
-		>>${WORKDIR}/vim61/src/feature.h
+	
+	if [ "${PN}" = "vim-core" ]
+	then
+		make tools || die "vim make failed"
+		cd ${S}
+		rm src/vim
+	else
+		# move config files to /etc/vim/
+		echo "#define SYS_VIMRC_FILE \"/etc/vim/vimrc\"" \
+			>>${WORKDIR}/vim61/src/feature.h
+		echo "#define SYS_GVIMRC_FILE \"/etc/vim/gvimrc\"" \
+			>>${WORKDIR}/vim61/src/feature.h
 
-	# Parallel make does not work
-	make || die "vim make failed"
+		# Parallel make does not work
+		make || die "vim make failed"
+	fi
 }
 
 src_install() {
 
-	if [ "${PN}" = "gvim" ]
+	if [ "${PN}" = "vim-core" ]
+	then
+		dodir /usr/{bin,share/{man/man1,vim}}
+		cd src
+		make \
+			installruntime \
+			installhelplinks \
+			installmacros \
+			installtutor \
+			installtools \
+			install-languages \
+			install-icons \
+			DESTDIR=${D} \
+			BINDIR=/usr/bin \
+			MANDIR=/usr/share/man \
+			DATADIR=/usr/share \
+			|| die "install failed"
+
+			dodoc README*
+			cd $D/usr/share/doc/$PF
+			ln -s ../../vim/*/doc $P
+
+			# fix problems with vim not finding its data files.
+			echo "VIMRUNTIME=/usr/share/vim/vim${vim_version/.}" > 40vim
+			insinto /etc/env.d
+			doins 40vim
+	elif [ "${PN}" = "gvim" ]
 	then
 		dobin src/gvim
 		dosym gvim /usr/bin/gvimdiff
