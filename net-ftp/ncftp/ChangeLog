@@ -1,9 +1,13 @@
 # ChangeLog for net-ftp/ncftp
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/ncftp/ChangeLog,v 1.15 2003/10/16 06:42:17 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/ncftp/ChangeLog,v 1.16 2003/10/16 15:34:17 nakano Exp $
 
 *ncftp-3.1.6 (16 Oct 2003)
 
+  16 Oct 2003; Masatomo Nakano <nakano@gentoo.org> ncftp-3.1.6.ebuild:
+  Removed CJK patch because the patch is already included in 
+  the original tar ball.
+ 
   16 Oct 2003; Nick Hadaway <raker@gentoo.org> ncftp-3.1.6.ebuild:
   Version bump.  This updates the previous exploit fix for better
   compatibility with serv-u and wsftpd servers.  Other bug fixes as
