@@ -201,3 +201,4 @@ move sys-apps/speedfreq sys-power/speedfreq
 move sys-apps/powernowd sys-power/powernowd
 move sys-apps/nvram-wakeup sys-power/nvram-wakeup
 move sys-apps/nvram-reboot sys-power/nvram-reboot
+move sys-apps/cpudyn sys-power/cpudyn
