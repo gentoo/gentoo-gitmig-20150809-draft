@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/imlib2-1.0.6.20030220-r1.ebuild,v 1.3 2003/03/27 10:06:45 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/imlib2-1.0.6.20030220-r1.ebuild,v 1.4 2003/07/12 18:05:46 aliz Exp $
 
 inherit flag-o-matic
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="~x86 ~ppc ~alpha ~mips ~arm ~hppa ~sparc"
+KEYWORDS="x86 ~ppc ~alpha ~mips ~arm ~hppa ~sparc"
 
 DEPEND="=media-libs/freetype-1*
 	gif? ( media-libs/libungif

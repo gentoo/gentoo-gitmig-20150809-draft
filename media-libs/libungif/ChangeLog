@@ -1,12 +1,17 @@
 # ChangeLog for media-libs/libungif
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libungif/ChangeLog,v 1.8 2003/04/01 07:12:37 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libungif/ChangeLog,v 1.9 2003/07/12 18:05:59 aliz Exp $
 
 *libungif-4.1.0.1b (01 Apr 2003)
 
   01 Apr 2003; Matthew Kennedy <mkennedy@gentoo.org> libungif-4.1.0.1b.ebuild,
   files/libungif-4.1.0-stdarg.patch, files/libungif-CVS.patch:
   minor version bump to resolve bug 18419
+
+*libungif-4.1.0-r1 (26 Mar 2003)
+ 
+  12 Jul 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Added missing changelog entry.
 
 *libungif-4.1.0 (21 Mar 2002)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libuta/libuta-0.4.4.ebuild,v 1.1 2003/05/08 10:25:34 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libuta/libuta-0.4.4.ebuild,v 1.2 2003/07/12 18:06:00 aliz Exp $
 
 IUSE=""
 DESCRIPTION="a GUI library for C++ that uses SDL as its output layer"
@@ -9,7 +9,7 @@ HOMEPAGE="http://libuta.sourceforge.net/"
 
 SLOT="0"
 LICENSE="LGPL-2.1 GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 DEPEND="media-libs/libsdl
 	media-libs/libpng

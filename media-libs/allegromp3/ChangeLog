@@ -1,5 +1,10 @@
 # ChangeLog for media-libs/allegromp3
 
+*allegromp3-2.0.2 (30 Jun 2003)
+ 
+  12 Jul 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Added missing changelog entry.
+
   30 Jun 2003; robh <robh@gentoo.org> allegromp3-2.0.2.ebuild:
   Changed depend so it doesn't depend on an old unavailable version of mpg123
 

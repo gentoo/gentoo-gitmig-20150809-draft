@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/gstreamer-0.6.2.ebuild,v 1.1 2003/06/10 15:08:43 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/gstreamer-0.6.2.ebuild,v 1.2 2003/07/12 18:05:46 aliz Exp $
 
 inherit eutils flag-o-matic libtool gnome.org
 
@@ -16,7 +16,7 @@ HOMEPAGE="http://gstreamer.sourceforge.net"
 
 SLOT=${PV_MAJ_MIN}
 LICENSE="LGPL-2"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha"
+KEYWORDS="x86 ~ppc ~sparc ~alpha"
 
 RDEPEND=">=dev-libs/glib-2.0.4
 	>=dev-libs/libxml2-2.4

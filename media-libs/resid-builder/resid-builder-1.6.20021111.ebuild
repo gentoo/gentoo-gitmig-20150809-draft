@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/resid-builder/resid-builder-1.6.20021111.ebuild,v 1.2 2003/02/13 12:54:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/resid-builder/resid-builder-1.6.20021111.ebuild,v 1.3 2003/07/12 18:06:08 aliz Exp $
 
 S=${WORKDIR}/${PN}
 DESCRIPTION="resid builder - required by sidplay"
@@ -9,7 +9,7 @@ SRC_URI="http://www-ti.informatik.uni-tuebingen.de/~bwurst/${P}.tar.bz2"
 IUSE=""
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 DEPEND="virtual/glibc
 	>=media-libs/resid-0.13-r1"

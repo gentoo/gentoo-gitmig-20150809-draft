@@ -1,4 +1,9 @@
 # ChangeLog for media-libs/allegttf
 
+*allegttf-2.0 (13 Feb 2003)
+ 
+  12 Jul 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Added missing changelog entry.
+
 * allegttf-2.0 (27 Oct 2002)
   Thomas Raschbacher<lordvan@lordvan.com>: created ebuild

@@ -1,4 +1,9 @@
 # ChangeLog for media-libs/loadpng
 
+*loadpng-0.11 (28 Feb 2003)
+ 
+  12 Jul 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Added missing changelog entry.
+
 * loadpng-0.11 (27 Oct 2002)
   Thomas Raschbacher<lordvan@lordvan.com>: created ebuild

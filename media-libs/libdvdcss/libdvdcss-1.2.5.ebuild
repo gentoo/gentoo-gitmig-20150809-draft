@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdcss/libdvdcss-1.2.5.ebuild,v 1.3 2003/03/10 22:36:59 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdcss/libdvdcss-1.2.5.ebuild,v 1.4 2003/07/12 18:05:51 aliz Exp $
 
 IUSE=""
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://developers.videolan.org/pub/videolan/libdvdcss/"
 
 SLOT="1.2"
 LICENSE="GPL-2"
-KEYWORDS="~x86 alpha"
+KEYWORDS="x86 alpha"
 
 DEPEND="virtual/glibc"
 

@@ -1,8 +1,8 @@
 # ChangeLog for media-libs/devil
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/devil/ChangeLog,v 1.5 2003/02/12 07:06:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/devil/ChangeLog,v 1.6 2003/07/12 18:05:42 aliz Exp $
 
-*Devil-1.6.5 (31 Dec 2002)
+*devil-1.6.5 (31 Dec 2002)
 
   31 Dec 2002; Martin Holzer <mholzer@gentoo.org> devil-1.6.5.ebuild files/digest-devil-1.6.5 ChangeLog :
   Version bumped. Closes #12960.

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/libpng-1.0.15-r1.ebuild,v 1.1 2003/05/18 17:36:25 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/libpng-1.0.15-r1.ebuild,v 1.2 2003/07/12 18:05:55 aliz Exp $
 
 inherit flag-o-matic eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 HOMEPAGE="http://www.libpng.org/"
 SLOT="1.0"
 LICENSE="as-is"
-KEYWORDS="~x86 ~ppc ~sparc"
+KEYWORDS="x86 ~ppc ~sparc"
 
 DEPEND=">=sys-libs/zlib-1.1.3-r2"
 

@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/qhull
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/qhull/ChangeLog,v 1.5 2003/06/09 18:28:07 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/qhull/ChangeLog,v 1.6 2003/07/12 18:06:04 aliz Exp $
+
+*qhull-3.1-r1 (09 Jun 2003)
+ 
+  12 Jul 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Added missing changelog entry.
 
   09 Jun 2003; George Shapovalov <george@gentoo.org> qhull-3.1-r1.ebuild, files/digest-qhull-3.1-r1 :
   updated ebuild to make and install shared version of library in addition to static.

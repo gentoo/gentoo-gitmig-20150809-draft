@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcddb/libcddb-0.9.2.ebuild,v 1.2 2003/05/29 09:43:42 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcddb/libcddb-0.9.2.ebuild,v 1.3 2003/07/12 18:05:50 aliz Exp $
 
 IUSE="doc"
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="LGPL-2"
-KEYWORDS="~x86 ~sparc"
+KEYWORDS="x86 ~sparc"
 
 DEPEND="doc? ( app-doc/doxygen )"
 

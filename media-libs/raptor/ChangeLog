@@ -1,8 +1,8 @@
 # ChangeLog for media-libs/raptor
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/raptor/ChangeLog,v 1.1 2003/02/18 07:59:58 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/raptor/ChangeLog,v 1.2 2003/07/12 18:06:07 aliz Exp $
 
-*raptop-0.9.8 (18 Feb 2003)
+*raptor-0.9.8 (18 Feb 2003)
 
   18 Feb 2003; Nick Hadaway <raker@gentoo.org> raptop-0.9.8.ebuild,
   files/digest-raptop-0.9.8 :

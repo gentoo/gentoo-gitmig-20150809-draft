@@ -1,6 +1,6 @@
 # Copyright 2003 Gentoo Technologies, Inc.
 # Distruibuted under the terms of the GNU General Public License, v2.
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xpm/xpm-3.4k-r2.ebuild,v 1.3 2003/06/13 00:22:03 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xpm/xpm-3.4k-r2.ebuild,v 1.4 2003/07/12 18:06:11 aliz Exp $
 
 # Note that this is a dummy package.  It's just a placeholder.  If the
 # package which needs xpm needs xfree, it doesn't need xpm, because xfree
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.gentoo.org/"
 
 
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~mips ~hppa ~arm"
+KEYWORDS="x86 ~ppc ~sparc ~alpha ~mips ~hppa ~arm"
 LICENSE="GPL-2"
 
 RDEPEND="virtual/x11"
