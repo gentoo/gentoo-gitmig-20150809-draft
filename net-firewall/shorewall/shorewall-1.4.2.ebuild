@@ -7,7 +7,7 @@ DESCRIPTION="Full state iptables firewall"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tgz"
 HOMEPAGE="http://www.shorewall.net"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha"
+KEYWORDS="x86 ~ppc ~sparc ~alpha"
 SLOT="0"
 IUSE=""
 
@@ -19,7 +19,7 @@ RDEPENR=${DEPEND}
 
 src_install () {
 	dodir /etc/init.d /var/state
-	sed -e 's:ln -s ${DEST}/${FIREWALL} /usr/share/shorewall/init::' install.sh
+	sed -i 's:ln -s ${DEST}/${FIREWALL} /usr/share/shorewall/init::' install.sh
 	PREFIX=${D} ./install.sh || die
 
 	exeinto /etc/init.d
