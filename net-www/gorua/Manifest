@@ -1,7 +1,0 @@
-MD5 c6f611a600ed5bcfc430096e07d4bf15 gorua-0.17.ebuild 1556
-MD5 816a91238fd7168d8b93b4a83d085eb5 ChangeLog 1812
-MD5 8afe4eded45a484580ce855f24ffea2e metadata.xml 265
-MD5 53b8638851a014644ff509a1059b27a2 files/gorua-bbsmenu-update-gentoo.diff 372
-MD5 b08333c6f66086e98471b495d9ff798b files/bookmarks_sample 721
-MD5 5e1b38dec1a20d9c201981a66f95f3ef files/goRua.sh 270
-MD5 e960552957518ad596196bf04d84746c files/digest-gorua-0.17 62
