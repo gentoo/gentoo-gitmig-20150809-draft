@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4c/log4c-1.0.11.ebuild,v 1.4 2004/09/07 03:33:46 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4c/log4c-1.0.12.ebuild,v 1.1 2004/09/07 03:33:46 dragonheart Exp $
 
 inherit eutils
 
@@ -10,26 +10,15 @@ HOMEPAGE="http://log4c.sourceforge.net/"
 
 SLOT="0"
 LICENSE="LGPL-2.1"
-KEYWORDS="x86 ~sparc ~ppc"
+KEYWORDS="~x86 ~sparc ~ppc"
 IUSE="doc"
 
 DEPEND="doc? ( >=app-doc/doxygen-1.2.15
 		virtual/tetex
 		virtual/ghostscript )
-	sys-devel/autoconf
 	>=media-gfx/graphviz-1.7.15-r2"
 
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/makefile.doc.am.patch || die "failed to patch"
-	epatch ${FILESDIR}/makefile.doc.in.patch || die "failed to patch"
-	epatch ${FILESDIR}/configure.in.patch || die "failed to patch"
-	epatch ${FILESDIR}/log4c_1.0.11_test.patch  || die "failed to patch"
-}
-
 src_compile() {
-
 
 	#local myconf
 	#if has maketest ${FEATURES} || use maketest;
@@ -37,7 +26,6 @@ src_compile() {
 	#	myconf="${myconf} --enable-test"
 	#fi
 
-	autoconf
 	econf --enable-test `use_enable doc` || die
 	use doc && addwrite "${ROOT}/var/cache/fonts"
 	emake || die
