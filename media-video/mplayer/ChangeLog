@@ -1,6 +1,11 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.72 2003/08/21 04:03:55 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.73 2003/08/24 07:43:56 azarah Exp $
+
+  24 Aug 2003; Martin Schlemmer <azarah@gentoo.org> mplayer-0.90-r2.ebuild,
+  mplayer-0.90-r5.ebuild, mplayer-0.90_rc4.ebuild, mplayer-0.91.ebuild,
+  files/mencoder-segfault.patch:
+  Fix mencoder segfault when used improperly, bug #23611
 
 *mplayer-0.91 (20 Aug 2003)
 
