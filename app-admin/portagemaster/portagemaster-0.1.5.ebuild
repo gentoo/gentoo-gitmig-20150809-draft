@@ -4,11 +4,14 @@
 
 S=${WORKDIR}/${PN}
 DESCRIPTION="A java portage browser and installer."
-SRC_URI="http://portagemaster.sourceforge.net/packages/portagemaster-${PV}.tar.bz2"
-SLOT="0"
+SRC_URI="http://portagemaster.sourceforge.net/packages/${P}.tar.bz2"
 HOMEPAGE="http://portagemaster.sourceforge.net"
-RDEPEND="virtual/jre"
+
+SLOT="0"
 LICENSE="GPL-2"
+KEYWORDS="x86"
+
+RDEPEND="virtual/jre"
 
 src_unpack() {
 	unpack ${A}
@@ -22,4 +25,3 @@ src_install() {
 	dobin portagemaster
 	ln -s /opt/${PN}/portagemaster-${PV}.jar ${D}/opt/${PN}/portagemaster.jar
 }
-
