@@ -1,3 +1,4 @@
-MD5 98eb79ffb52bb57ef9b21a28dfa222ab ChangeLog 413
-MD5 154d1c02490fddce3f1564d016b870a1 tn5250-0.16.5.ebuild 1977
+MD5 defd4bfeb253bf533ca653f6d6eddc7b ChangeLog 527
+MD5 804e9729c49972a1d05d2d089a504bae tn5250-0.16.5.ebuild 1788
+MD5 9f5882485c1a4adbc9605ddf6e54194e files/gcc3.patch 3353
 MD5 fc5092e2c892e2b96b2ac9aecac9c9d3 files/digest-tn5250-0.16.5 65
