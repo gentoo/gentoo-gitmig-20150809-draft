@@ -2,7 +2,7 @@
 # Zope rc-script for Gentoo Linux
 # Copyright 2002-2003 by Jason Shoemaker
 # Distributed under the terms of the GNU General Public License, v2 or later.
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/files/2.6.4/zope.initd,v 1.1 2004/03/14 12:32:15 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/files/2.6.4/zope.initd,v 1.2 2004/03/29 09:28:00 lanius Exp $
 
 python=
 
@@ -130,8 +130,8 @@ start_zope()
     if [ "${RESULT}" -eq 0 ] ; then
 	setup_exports
 	umask 077    # Recommended by Zope
-	# "normal" logfile: e.g. /var/log/zope/zope-2_6_1, 
-	# startup log: /var/log/zope/zope-2_6_1.log
+	# "normal" logfile: e.g. /var/log/zope/zope-2_6_4, 
+	# startup log: /var/log/zope/zope-2_6_4.log
 	env /usr/bin/${python} ${ZOPE_HOME}z2.py ${ZOPE_OPTS} > \
 	    ${EVENT_LOG_FILE}.log 2>&1 &
 	RESULT=${?}
