@@ -36,33 +36,31 @@
 *>=sys-apps/portage-2.0.25
 *>=sys-devel/binutils-2.13.90.0.4
 *>=sys-devel/gcc-3.2
-*=sys-libs/glibc-2.3.1-r4
+*<sys-libs/glibc-2.3.2
 =sys-kernel/linux-headers-2.4.19
 >=sys-apps/sysklogd-1.4.1
 *dev-lang/python
 
-
-## (text|file|sh)utils have been replaced by coreutils
-#*sys-apps/textutils
-#*sys-apps/fileutils
-#*sys-apps/sh-utils
-*=sys-apps/coreutils-4.5.10
-
-# SELinux patched versions, these must be locked so that users don't
-# emerge unpatched utilities
+##############################################################################
+# SELinux patched versions, need to make sure that the selinux patches
+# stay in these packages, otherwise will need to lock down the ver/rev
 *sys-apps/selinux-small
-*=sys-apps/findutils-4.1.7-r3
-*=sys-apps/procps-3.1.8
-*=sys-apps/shadow 4.0.3-r3
+*sys-apps/selinux-base-policy
+*>=sys-apps/findutils-4.1.7-r3
+*>=sys-apps/procps-3.1.8
+*>=sys-apps/shadow-4.0.3-r3
 *sys-apps/util-linux
-*=sys-apps/tar-1.13.25-r3
-*=net-misc/openssh-3.5_p1-r1
+*>=sys-apps/tar-1.13.25-r3
+*>=net-misc/openssh-3.5_p1-r1
 
-dev-util/strace-4.4-r1
-sys-apps/stat-2.5
-app-admin/logrotate-3.6.5
-sys-apps/vcron-3.0.1-r1
+# (text|file|sh)utils have been replaced by coreutils
+*>=sys-apps/coreutils-4.5.10
 
+>=dev-util/strace-4.4-r1
+>=sys-apps/stat-2.5
+>=app-admin/logrotate-3.6.5
+>=sys-apps/vcron-3.0.1-r1
+##############################################################################
 
 >=x11-base/xfree-4.1.0-r12
 # sash - static shell for system recovery
