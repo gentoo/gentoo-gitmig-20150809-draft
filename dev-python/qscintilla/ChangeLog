@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/qscintilla
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla/ChangeLog,v 1.4 2003/01/23 19:47:49 styx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla/ChangeLog,v 1.5 2003/02/01 13:29:59 styx Exp $
+
+*qscintilla-1.49-r1 (1 Feb 2003) Joachim Blaabjerg <styx@gentoo.org>
+
+  1 Feb 2003; Joachim Blaabjerg <styx@gentoo.org> qscintilla-1.49-r1.ebuild,
+  files/qscintilla-1.49-sandbox.patch, files/digest-qscintilla-1.49-r1 :
+
+  Made the ebuild install libqscintilla.a as well, by request of John Landahl.
 
   21 Jan 2003; Joachim Blaabjerg <styx@gentoo.org> qscintilla-1.49.ebuild,
   files/qscintilla-1.49-sandbox.patch :
