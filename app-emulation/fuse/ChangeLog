@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/fuse
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/fuse/ChangeLog,v 1.6 2004/03/21 06:31:05 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/fuse/ChangeLog,v 1.7 2004/03/26 09:45:59 mr_bones_ Exp $
+
+  26 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> fuse-0.6.1.1.ebuild,
+  fuse-0.6.2.1.ebuild:
+  work around portage dep issue (bug #45688)
 
   20 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> fuse-0.6.1.1.ebuild,
   fuse-0.6.2.1.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/fuse/fuse-0.6.1.1.ebuild,v 1.9 2004/03/21 06:31:05 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/fuse/fuse-0.6.1.1.ebuild,v 1.10 2004/03/26 09:45:59 mr_bones_ Exp $
 
 DESCRIPTION="Free Unix Spectrum Emulator by Philip Kendall"
 HOMEPAGE="http://www.srcf.ucam.org/~pak21/spectrum/fuse.html"
@@ -19,18 +19,20 @@ DEPEND="dev-lang/perl
 	png? ( media-libs/libpng )
 	zlib? ( sys-libs/zlib )
 	>=app-emulation/libspectrum-0.1.0
-	|| (
-		X? (
-			virtual/x11
-			gtk? (
-				gtk2? ( =x11-libs/gtk+-2* )
-				!gtk2? ( =x11-libs/gtk+-1* )
-			)
-		)
-		sdl? ( media-libs/libsdl )
-		svga? ( media-libs/svgalib )
-		fbcon? ( )
+	X? (
 		virtual/x11
+		gtk? (
+			gtk2? ( =x11-libs/gtk+-2* )
+			!gtk2? ( =x11-libs/gtk+-1* )
+		)
+	)
+	!X? (
+		|| (
+			sdl? ( media-libs/libsdl )
+			svga? ( media-libs/svgalib )
+			fbcon? ( )
+			virtual/x11
+		)
 	)
 	gnome? ( =dev-libs/glib-1* )
 	libdsk? ( app-emulation/libdsk
