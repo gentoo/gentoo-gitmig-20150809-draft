@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/mad
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mad/ChangeLog,v 1.13 2004/01/13 17:55:33 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mad/ChangeLog,v 1.14 2004/01/16 18:56:21 gmsoft Exp $
+
+  16 Jan 2004; Martin Guy <gmsoft@gentoo.org> mad-0.15.0b.ebuild:
+  Marked stable on hppa.
 
   13 Jan 2003; Jason Wever <weeve@gentoo.org> mad-0.15.0b.ebuild:
   Marked stable on sparc.
