@@ -1,6 +1,11 @@
 # ChangeLog for media-video/vlc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.53 2004/06/25 21:11:36 kanaka Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.54 2004/07/28 20:03:44 kanaka Exp $
+
+  01 Jul 2004; Joel Martin <kanaka@gentoo.org> :
+  Add dts use flag, update dependancy version requirements to more closely match
+  official requirements, integrate some ebuild changes from ebuild included in
+  the source tree, fix default font file location.
 
   25 Jun 2004; Joel Martin <kanaka@gentoo.org> vlc-0.7.2.ebuild:
   Add depend on automake 1.7.9 to close bug 54498. No version bump necessary,
