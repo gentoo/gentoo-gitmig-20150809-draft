@@ -196,3 +196,4 @@ move kde-base/kdebase-l10n kde-base/kdebase-data
 move kde-base/kdebase-pics kde-base/kdebase-data
 move kde-base/kdebase-applnk kde-base/kdebase-data
 move net-www/links www-client/links
+move sys-apps/gcloop sys-block/gcloop
