@@ -1,10 +1,16 @@
 # ChangeLog for sys-kernel/aa-sources
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/aa-sources/ChangeLog,v 1.36 2004/04/27 21:56:34 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/aa-sources/ChangeLog,v 1.37 2004/05/28 20:59:06 plasmaroo Exp $
+
+  28 May 2004; <plasmaroo@gentoo.org> aa-sources-2.4.23-r2.ebuild,
+  aa-sources-2.6.5-r5.ebuild, files/aa-sources-...patch:
+  Added patches for the CAN-2004-0075, CAN-2004-0133, CAN-2004-0181,
+  CAN-2004-0228, CAN-2004-0229, CAN-2004-0394, and CAN-2004-0427
+  vulnerabilities. Bug #47881.
 
   27 Apr 2004; Aron Griffis <agriffis@gentoo.org> aa-sources-2.4.22-r1.ebuild,
   aa-sources-2.4.23-r1.ebuild:
-  Add inherit eutils
+  Add inherit eutils.
 
   17 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> aa-sources-2.4.23-r2.ebuild:
   Fixed IUSE flags.
@@ -143,13 +149,11 @@
 *aa-sources-2.4.20_pre101 (27 Oct 2002)
 
   27 Oct 2002; Brandon Low <lostlogic@gentoo.org> aa-sources-2.4.20_pre111.ebuild:
-
   Version bump.
 
 *aa-sources-2.4.20_pre101 (15 Oct 2002)
 
   15 Oct 2002; Brandon Low <lostlogic@gentoo.org> aa-sources-2.4.20_pre101.ebuild:
-
   New package for -aa sources, the versioning is silly
   because we really have 2 parts to the -pre number the
   marcelo kernel pre version and the -ac subversion so 
