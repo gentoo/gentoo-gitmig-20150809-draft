@@ -1,6 +1,6 @@
-# Copyright 2003 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/egenix-mx-base-py21/egenix-mx-base-py21-2.0.4.ebuild,v 1.4 2003/06/22 12:15:59 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/egenix-mx-base-py21/egenix-mx-base-py21-2.0.4.ebuild,v 1.5 2003/09/08 07:16:26 msterret Exp $
 
 PYTHON_SLOT_VERSION=2.1
 inherit distutils

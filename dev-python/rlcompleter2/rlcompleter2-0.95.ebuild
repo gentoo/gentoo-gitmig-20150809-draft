@@ -1,6 +1,6 @@
-# Copyright 2003 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/rlcompleter2/rlcompleter2-0.95.ebuild,v 1.6 2003/08/07 03:06:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rlcompleter2/rlcompleter2-0.95.ebuild,v 1.7 2003/09/08 07:16:26 msterret Exp $
 
 inherit distutils
 

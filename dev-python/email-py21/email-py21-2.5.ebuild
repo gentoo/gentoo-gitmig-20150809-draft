@@ -1,6 +1,6 @@
-# Copyright 2003 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/email-py21/email-py21-2.5.ebuild,v 1.5 2003/08/07 03:05:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/email-py21/email-py21-2.5.ebuild,v 1.6 2003/09/08 07:16:26 msterret Exp $
 
 # Python 2.2.2 and 2.3 come with email version 2, while earlier versions of 
 # Python 2.2.x come with email version 1. Python 2.1.x and earlier do not come
