@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/sarg
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
 
+*sarg-1.4.1-r1 (04 Jan 2004)
+
+  04 Jan 2004; Jared Hudson <jhhudso@gentoo.org> : Added patch as requested
+  by Markus Lidel <Markus.Lidel@shadowconnect.com> under bug #36410.
+	
   12 Jun 2003; <msterret@gentoo.org> sarg-1.4.1.ebuild:
   add Header
 
