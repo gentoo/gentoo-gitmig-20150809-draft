@@ -8,12 +8,6 @@ import string
 import commands
 import shutil
 
-def tempclean():
-	mytmp=portage.settings["BUILD_PREFIX"]
-	if os.path.isdir(mytmp):
-		print ">>> Cleaning temporary build directory..."
-		shutil.rmtree(mytmp)
-
 #build our package digraph
 
 class depgraph:
@@ -145,6 +139,10 @@ class depgraph:
 			print ">>> emerge",x[1],"to",x[0]
 			#the last argument in the portage.doebuild() tells doebuild to *not* do dep checking
 			#(emerge is already handling that)
+			retval=portage.doebuild(self.db[x[0]]["porttree"].getname(x[1]),"clean",0)
+			if retval:
+				print "!!! emerge aborting."
+				sys.exit(1)
 			retval=portage.doebuild(self.db[x[0]]["porttree"].getname(x[1]),"merge",0)
 			if retval:
 				print "!!! emerge aborting."
