@@ -12,6 +12,7 @@ LICENSE="GPL-2"
 KEYWORDS="~x86"
 
 DEPEND=">=dev-perl/libwww-perl-5.50"
+RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${A}
