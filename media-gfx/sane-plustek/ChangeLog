@@ -1,0 +1,11 @@
+# ChangeLog for media-gfx/sane-plustek
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-plustek/ChangeLog,v 1.1 2003/08/18 12:53:54 phosphan Exp $
+
+*sane-plustek-0.42.9 (18 Aug 2003)
+
+  18 Aug 2003; Patrick Kursawe <phosphan@gentoo.org>
+  sane-plustek-0.42.9.ebuild, files/sane-plustek-0.42.9.patch:
+  Initial import, ebuild submitted in bug 26083 by Michal 'Spock' Januszewski
+  <spock@o2.pl>.
+
