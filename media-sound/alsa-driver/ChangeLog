@@ -1,8 +1,14 @@
 # ChangeLog for media-sound/alsa-driver
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/ChangeLog,v 1.5 2002/04/27 19:22:49 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/ChangeLog,v 1.6 2002/04/28 17:18:10 agenkin Exp $
 
 *alsa-driver-0.9.0_rc1 (27 Apr 2002)
+
+  28 Apr 2002; Arcady Genkin <agenkin@thpoon.com>
+	alsa-driver-0.9.0_rc1-r3.ebuild :
+
+  More work on the startup script and updated config file for /etc/modules.d.
+  Be sure to have a look at it and adjust it to your needs.
 
   27 Apr 2002; Arcady Genkin <agenkin@thpoon.com>
 	alsa-driver-0.9.0_rc1-r2.ebuild :
