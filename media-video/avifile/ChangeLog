@@ -1,6 +1,13 @@
 # ChangeLog for media-video/avifile
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/ChangeLog,v 1.85 2004/11/30 05:43:41 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/ChangeLog,v 1.86 2004/11/30 20:00:50 chriswhite Exp $
+
+*avifile-0.7.37.20030522-r2 (01 Dec 2004)
+
+  01 Dec 2004; Chris White <chriswhite@gentoo.org>
+  +avifile-0.7.37.20030522-r2.ebuild, avifile-0.7.41.20041001-r1.ebuild:
+  Added avifile-0.7.37-20030522-r2.ebuild back to unbreak swftools and
+  mjpegtools deps.
 
   30 Nov 2004; Chris White <chriswhite@gentoo.org>
   -avifile-0.7.32.20030219.ebuild, -avifile-0.7.37.20030522-r2.ebuild,
