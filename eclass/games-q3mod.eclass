@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/games-q3mod.eclass,v 1.2 2003/07/08 20:40:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/games-q3mod.eclass,v 1.3 2003/07/08 21:02:37 vapier Exp $
 
 inherit games
 
@@ -66,20 +66,26 @@ games-q3mod_pkg_postinst() {
 	if [ -e ${samplecfg} ] && [ ! -e ${realcfg} ] ; then
 		cp ${samplecfg} ${realcfg}
 	fi
-	return 0
+
+	einfo "To play this mod:             quake3-${MOD_NAME}"
+	einfo "To launch a dedicated server: q3ded-${MOD_NAME}"
+	[ `use dedicated` ] && \
+	einfo "To launch server at startup:  /etc/init.d/q3ded-${MOD_NAME}"
+
+	games_pkg_postinst
 }
 
 games-q3mod_make_q3ded_exec() {
 cat << EOF > ${T}/q3ded-${MOD_NAME}.bin
 #!/bin/sh
-exec q3ded +set fs_game ${MOD_NAME} +set dedicated 1 +exec server.cfg \${@}
+exec ${GAMES_BINDIR}/q3ded +set fs_game ${MOD_NAME} +set dedicated 1 +exec server.cfg \${@}
 EOF
 }
 
 games-q3mod_make_quake3_exec() {
 cat << EOF > ${T}/quake3-${MOD_NAME}.bin
 #!/bin/sh
-exec quake3 +set fs_game ${MOD_NAME} \${@}
+exec ${GAMES_BINDIR}/quake3 +set fs_game ${MOD_NAME} \${@}
 EOF
 }
 
@@ -94,13 +100,14 @@ depend() {
 
 start() {
 	ebegin "Starting ${MOD_NAME} dedicated"
-	screen -A -m -d -S ${MOD_NAME} su - ${GAMES_USER_DED} -c ${GAMES_BINDIR}/q3ded-${MOD_NAME} \${${MOD_NAME}_OPTS}
+	screen -A -m -d -S q3ded-${MOD_NAME} su - ${GAMES_USER_DED} -c ${GAMES_BINDIR}/q3ded-${MOD_NAME} \${${MOD_NAME}_OPTS}
 	eend \$?
 }
 
 stop() {
 	ebegin "Stopping ${MOD_NAME} dedicated"
-	kill \`screen -list | grep ${MOD_NAME} | awk -F . '{ print $1 }' | sed -e s/.//\`
+	local pid=\`screen -list | grep q3ded-${MOD_NAME} | awk -F . '{print \$1}' | sed -e s/.//\`
+	[ ! -z "\${pid}" ] && kill \${pid}
 	eend \$?
 }
 EOF

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.38 2003/07/08 20:40:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.39 2003/07/08 21:02:37 vapier Exp $
 #
 # devlist: {bass,phoenix,vapier}@gentoo.org
 #
@@ -115,7 +115,7 @@ games_pkg_postinst() {
 	echo
 	ewarn "Remember, in order to play games, you have to"
 	ewarn "be in the '${GAMES_GROUP}' group."
-	einfo "See the manpage for usermod for more information."
+	einfo "See the usermod(8) manpage for more information."
 	echo
 }
 
