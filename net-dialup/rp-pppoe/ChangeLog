@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/rp-pppoe
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/rp-pppoe/ChangeLog,v 1.3 2002/07/27 07:42:00 seemant Exp $
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/rp-pppoe/ChangeLog,v 1.4 2002/08/21 11:23:05 danarmak Exp $
+
+  21 Aug 2002; Dan Armak <danarmak@gentoo.org> ChangeLog  :
+
+  Fix typo in HOMEPAGE. Close #6789.
 
 *rp-pppoe-3.3 (27 Jul 2002)
 
