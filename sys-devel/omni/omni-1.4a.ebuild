@@ -1,20 +1,22 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/omni/omni-1.4a.ebuild,v 1.3 2003/10/20 10:34:54 tester Exp $
-
-DESCRIPTION="The Omni OpenMP Compiler"
-HOMEPAGE="http://phase.etl.go.jp/Omni/"
-LICENSE="Omni"
-SLOT="0"
-KEYWORDS="x86"
-MY_P=Omni-${PV}
-S=${WORKDIR}/${MY_P}
-RESTRICT="fetch"
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/omni/omni-1.4a.ebuild,v 1.4 2004/02/11 08:31:02 seemant Exp $
 
 IUSE="java doc"
 
+MY_P=Omni-${PV}
+S=${WORKDIR}/${MY_P}
+DESCRIPTION="The Omni OpenMP Compiler"
+HOMEPAGE="http://phase.hpcc.jp/Omni/home.html"
+
+SLOT="0"
+LICENSE="Omni"
+KEYWORDS="x86"
+
+RESTRICT="fetch"
+
 DEPEND="java? ( virtual/jdk
-		app-arch/zip )
+	app-arch/zip )
 	sys-apps/sed"
 
 RDEPEND="java? ( virtual/jdk )"
