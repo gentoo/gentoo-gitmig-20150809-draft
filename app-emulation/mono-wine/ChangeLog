@@ -1,0 +1,10 @@
+# ChangeLog for app-emulation/mono-wine
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/mono-wine/ChangeLog,v 1.1 2003/12/06 08:30:55 tberman Exp $
+
+*mono-wine-20030318 (06 Dec 2003)
+
+  06 Dec 2003; Todd Berman <tberman@gentoo.org> metadata.xml,
+  mono-wine-20030318.ebuild:
+  New ebuild, for mono's SWF implementation
+
