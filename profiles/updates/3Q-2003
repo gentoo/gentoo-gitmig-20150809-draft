@@ -514,3 +514,4 @@ move app-doc/mini-howto-html-single app-doc/howto-html-single
 move app-doc/mini-howto-pdf app-doc/howto-pdf
 move app-doc/mini-howto-ps app-doc/howto-ps
 move app-doc/mini-howto-text app-doc/howto-text
+move net-misc/magnesium net-im/magnesium
