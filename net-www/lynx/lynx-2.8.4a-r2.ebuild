@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-www/lynx/lynx-2.8.4a-r2.ebuild,v 1.2 2001/08/31 01:07:34 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/lynx/lynx-2.8.4a-r2.ebuild,v 1.3 2001/09/19 03:13:05 woodchip Exp $
 
 S=${WORKDIR}/lynx2-8-4
 HOMEPAGE="http://lynx.browser.org/"
@@ -34,7 +34,7 @@ src_compile() {
 	--enable-included-msgs --with-zlib --host=${CHOST} ${myconf}
 	assert
 
-	emake || die "couldnt compile! parellel make problem?"
+	emake || die "compile problem"
 }
 
 src_install() {
@@ -50,4 +50,8 @@ src_install() {
 	dodoc lynx_help/*.html
 	docinto html/keystrokes
 	dodoc lynx_help/keystrokes/*.html
+	
+	# small little manpage glitch
+	rm ${D}/usr/share/man/lynx.1
+	newman lynx.man lynx.1
 }
