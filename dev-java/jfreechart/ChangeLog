@@ -1,0 +1,10 @@
+# ChangeLog for dev-java/jfreechart
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jfreechart/ChangeLog,v 1.1 2004/07/30 11:42:29 axxo Exp $
+
+*jfreechart-0.9.19 (30 Jul 2004)
+
+  30 Jul 2004; Thomas Matthijs <axxo@gentoo.org> +metadata.xml,
+  +jfreechart-0.9.19.ebuild:
+  initial import, 48316
+
