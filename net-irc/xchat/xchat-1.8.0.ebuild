@@ -1,22 +1,23 @@
 # Copyrigth 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-1.8.0.ebuild,v 1.2 2001/07/02 00:01:06 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-1.8.0.ebuild,v 1.3 2001/07/06 19:12:32 pete Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="xchat"
 SRC_URI="http://www.xchat.org/files/source/${PV}/${P}.tar.bz2"
 HOMEPAGE="http://www.xchat.org/"
 
-DEPEND=">=gnome-base/gdk-pixbuf-0.11.0 
-        perl? ( sys-devel/perl )
-	python? ( dev-lang/python )
-	nls? ( >=sys-devel/gettext-0.10.38 )
-	gnome? ( >=gnome-base/gnome-core-1.2.2.1 )
+DEPEND="perl? ( sys-devel/perl )
+        python? ( dev-lang/python )
+        nls? ( >=sys-devel/gettext-0.10.38 )
+        gnome? ( >=gnome-base/gdk-pixbuf-0.11.0 
+                 >=gnome-base/gnome-core-1.2.2.1 )
         ssl? ( >=dev-libs/openssl-0.9.6a )"
 
-RDEPEND=">=gnome-base/gdk-pixbuf-0.11.0
-	gnome? ( >=gnome-base/gnome-core-1.2.2.1 ) ssl? ( >=dev-libs/openssl-0.9.6a )"
+RDEPEND="gnome? ( >=gnome-base/gdk-pixbuf-0.11.0
+                  >=gnome-base/gnome-core-1.2.2.1 )
+         ssl? ( >=dev-libs/openssl-0.9.6a )"
 
 src_compile() {
 
@@ -27,7 +28,7 @@ src_compile() {
   then
 	myopts="--enable-gnome --enable-panel --prefix=/opt/gnome"
   else
-	myopts="--enable-gtkfe --disable-gnome --prefix=/usr/X11R6"
+	myopts="--enable-gtkfe --disable-gnome --prefix=/usr/X11R6 --disable-gdk-pixbuf"
   fi
   if [ "`use ssl`" ] ; then
         myopts="$myopts --enable-openssl"
