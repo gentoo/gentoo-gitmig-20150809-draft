@@ -73,7 +73,6 @@ bmp
 
 jack
 
-hal
 freetts
 
 lirc
