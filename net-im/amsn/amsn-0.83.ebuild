@@ -1,4 +1,4 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # $id$
 
@@ -11,7 +11,7 @@ IUSE="gnome kde imlib"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 amd64 ~ppc ~sparc hppa"
+KEYWORDS="x86 ~amd64 ~ppc hppa"
 
 
 DEPEND=">=dev-lang/tcl-8.3.3
