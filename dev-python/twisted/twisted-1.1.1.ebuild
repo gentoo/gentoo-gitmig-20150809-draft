@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted/twisted-1.1.1.ebuild,v 1.1 2003/12/13 04:33:21 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted/twisted-1.1.1.ebuild,v 1.2 2004/01/21 11:51:39 lordvan Exp $
 
 inherit distutils
 
@@ -17,8 +17,7 @@ DEPEND=">=dev-lang/python-2.2
 	>=dev-python/pycrypto-1.9_alpha6
 	dev-python/pyserial
 	dev-python/pyOpenSSL
-	!gtk2? ( =dev-python/pygtk-0.6* )
-	gtk2? ( >=dev-python/pygtk-1.99* )
+	gtk? ( gtk2? ( >=dev-python/pygtk-1.99* ) !gtk2? ( =dev-python/pygtk-0.6* ) )
 	doc? ( =dev-python/twisted-docs-${PV} )"
 
 S=${WORKDIR}/Twisted-${PV}
