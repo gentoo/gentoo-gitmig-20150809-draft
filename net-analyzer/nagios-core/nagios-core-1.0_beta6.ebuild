@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-1.0_beta6.ebuild,v 1.2 2002/11/07 20:52:36 alron Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-1.0_beta6.ebuild,v 1.3 2002/11/19 09:08:50 alron Exp $
 DESCRIPTION="Nagios $PV core - Host and service monitor cgi, docs etc..."
 HOMEPAGE="http://www.nagios.org/"
 SRC_URI="http://telia.dl.sourceforge.net/sourceforge/nagios/nagios-1.0b6.tar.gz"
@@ -60,7 +60,7 @@ pkg_postinst() {
 	einfo
 	einfo "To have nagios visable on the web, please do the following:"
 	einfo "1. Execute the command:"
-	einfo " \"ebuild /var/db/pkg/net-misc/${PF}/${PF}.ebuild config\""
+	einfo " \"ebuild /var/db/pkg/net-analyzer/${PF}/${PF}.ebuild config\""
 	einfo " 2. Edit /etc/conf.d/apache and add \"-D NAGIOS\""
 	einfo
 	einfo "That will make nagios's web front end visable via"
