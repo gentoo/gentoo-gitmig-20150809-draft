@@ -1,6 +1,12 @@
 # ChangeLog for app-text/mecab
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mecab/ChangeLog,v 1.7 2004/07/01 19:28:49 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mecab/ChangeLog,v 1.8 2004/07/22 15:09:56 nakano Exp $
+
+*mecab-0.78 (22 Jul 2004)
+
+  22 Jul 2004; Masatomo Nakano <nakano@gentoo.org> mecab-0.76.ebuild,
+  mecab-0.77.ebuild, +mecab-0.78.ebuild:
+  Version bump. Fixed URL.
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> mecab-0.76.ebuild,
   mecab-0.77.ebuild:
