@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-tcp/ucspi-tcp-0.88-r4.ebuild,v 1.6 2002/12/09 04:37:27 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-tcp/ucspi-tcp-0.88-r4.ebuild,v 1.7 2002/12/31 20:32:56 raker Exp $
 
 IUSE="ssl ipv6"
 
@@ -12,20 +12,24 @@ SRC_URI="http://cr.yp.to/${PN}/${P}.tar.gz
  	ssl? ( http://www.nrg4u.com/qmail/ucspi-tcp-ssl-20020705.patch.gz )"
 HOMEPAGE="http://cr.yp.to/${PN}/"
 
-DEPEND="virtual/glibc"
-	#ssl? ( >=dev-libs/openssl-0.9.6g )
+DEPEND="virtual/glibc
+	ssl? ( >=dev-libs/openssl-0.9.6g )"
 
 SLOT="0"
-KEYWORDS="x86 sparc "
+KEYWORDS="~x86 ~sparc "
 LICENSE="as-is"
+
+inherit eutils
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}
 
-	use ipv6 && patch -p1 < ${WORKDIR}/ucspi-tcp-0.88-ipv6.diff13
-
-	#use ssl && patch < ${WORKDIR}/ucspi-tcp-ssl-20020705.patch
+	if use ipv6; then 
+		epatch ${WORKDIR}/ucspi-tcp-0.88-ipv6.diff13
+	elif use ssl; then
+		epatch ${WORKDIR}/ucspi-tcp-ssl-20020705.patch
+	fi
 
 	echo "gcc ${CFLAGS}" > conf-cc
 	echo "gcc" > conf-ld
