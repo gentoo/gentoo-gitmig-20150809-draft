@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/quark/quark-3.21.ebuild,v 1.2 2004/03/01 05:37:15 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/quark/quark-3.21.ebuild,v 1.3 2004/03/19 23:35:00 eradicator Exp $
 
 inherit gnome2
 
@@ -10,14 +10,14 @@ HOMEPAGE="http://quark.nerdnest.org/"
 SLOT="0"
 IUSE=""
 
-KEYWORDS="~x86 ~ppc ~alpha ~sparc"
+KEYWORDS="x86 ~ppc ~alpha ~sparc"
 
 LICENSE="GPL-2"
 
-DEPEND=">=xine-lib-1_beta10
-		>=gtk+-2.2.1
-		>=gconf-2.2.0
-		>=gnome-vfs-2.0.4-r2"
+DEPEND=">=media-libs/xine-lib-1_beta10
+	>=x11-libs/gtk+-2.2.1
+	>=gnome-base/gconf-2.2.0
+	>=gnome-base/gnome-vfs-2.0.4-r2"
 
 pkg_postinst () {
 	einfo Quark is an anti-gui music player.
