@@ -1,0 +1,10 @@
+# ChangeLog for app-text/lv
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/lv/ChangeLog,v 1.1 2002/12/10 10:41:05 nakano Exp $
+
+*lv-4.49.4 (10 Dec 2002)
+
+  10 Dec 2002; Masatomo Nakano <nakano@gentoo.org> : lv-4.49.4.ebuild, files/digest-lv-4.49.4, ChangeLog
+
+  Initial import.  
+
