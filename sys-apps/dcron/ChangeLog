@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/dcron
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dcron/ChangeLog,v 1.30 2004/04/09 17:25:13 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dcron/ChangeLog,v 1.31 2004/04/19 18:38:02 avenj Exp $
+
+  19 Apr 2004; Jon Portnoy <avenj@gentoo.org> files/crontab :
+  Updated to do run-crons every 10 minutes rather than every minute.
+  Bug #46628.
 
   09 Apr 2004; Guy Martin <gmsoft@gentoo.org> dcron-2.9-r2.ebuild:
   Marked stable on hppa.
