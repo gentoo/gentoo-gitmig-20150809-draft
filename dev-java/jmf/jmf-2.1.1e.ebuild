@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jmf/jmf-2.1.1e.ebuild,v 1.9 2004/06/24 22:35:21 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jmf/jmf-2.1.1e.ebuild,v 1.10 2004/07/14 02:32:06 agriffis Exp $
 
 inherit java-pkg
 
@@ -10,6 +10,7 @@ DESCRIPTION="The Java Media Framework API (JMF) enables audio, video and other t
 SRC_URI="${At}"
 HOMEPAGE="http://java.sun.com/products/java-media/jmf/"
 KEYWORDS="x86 sparc amd64 ~ppc"
+IUSE=""
 LICENSE="sun-bcla-jmf"
 SLOT="0"
 DEPEND=">=app-arch/unzip-5.50-r1"
@@ -62,4 +63,3 @@ src_install() {
 	insinto /usr/share/${PN}/lib
 	doins lib/jmf.properties
 }
-
