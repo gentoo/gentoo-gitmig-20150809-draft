@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/aspell-dict.eclass,v 1.27 2004/07/13 04:54:24 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/aspell-dict.eclass,v 1.28 2004/07/30 21:31:52 arj Exp $
 #
 # Author: Seemant Kulleen <seemant@gentoo.org>
 #
@@ -21,6 +21,7 @@ DESCRIPTION="${ASPELL_LANG} language dictionary for aspell"
 HOMEPAGE="http://aspell.net"
 SRC_URI="ftp://ftp.gnu.org/gnu/aspell/dict/${SPELLANG}/${MY_P}.tar.bz2"
 
+IUSE=""
 SLOT="0"
 KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64"
 
