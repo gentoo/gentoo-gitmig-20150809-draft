@@ -1,9 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Your Name <your email>
-# /home/cvsroot/gentoo-x86/berlin-base/omniORB/omniORB-303.ebuild,v 1.7 2001/05/28 05:24:13 achim Exp
-# $Header: /var/cvsroot/gentoo-x86/net-misc/omniORB/omniORB-304.ebuild,v 1.5 2001/08/31 03:23:39 pm Exp $
-
+# Author Holger Brueckner <darks@gentoo.org>
+# $Header: /var/cvsroot/gentoo-x86/net-misc/omniORB/omniORB-304.ebuild,v 1.6 2001/09/06 23:55:13 darks Exp $
 
 A="${PN}_${PV}.tar.gz omniORBpy_1_4.tar.gz omniNotify11b1.tar.gz"
 S=${WORKDIR}/omni
@@ -30,6 +28,8 @@ src_unpack() {
   cp config.mk config.mk.orig
   sed -e "s:#platform = ${PLT}:platform = ${PLT}:" \
   config.mk.orig > config.mk
+  
+  
 
   cd ${S}/mk
   cp unix.mk unix.mk.orig
@@ -79,6 +79,12 @@ src_install () {
 
     exeinto /etc/rc.d/init.d
     doexe ${FILESDIR}/omniORB
+    
+    dodir /etc/omniorb
+    insinto /etc/omniorb
+    cd ${S}
+    doins src/services/omniNotify/channel.cfg
+    doins src/services/omniNotify/standard.cfg
 
     dodoc CHANGES* COPYING* CREDITS PORTING README* ReleaseNote_omniORB_304 THIS_IS_omniORB_3_0_4
     cd doc
@@ -94,11 +100,14 @@ src_install () {
 
     dodir /etc/env.d/
     echo "PATH=/usr/share/omniORB/bin/scripts" > ${D}/etc/env.d/90omniORB
+    echo "OMNIORB_CONFIG=/etc/omniorb/omniORB.cfg" >> ${D}/etc/env.d/90omniORB
 #    echo "PYTHONPATH=/usr/share/omniORB/python" >> ${D}/etc/env.d/90omniORB
 }
 pkg_postinst() {
-  if [ ! -f "${ROOT}etc/omniORB.cfg" ] ; then
-    echo "ORBInitialHost `uname -n`" > ${ROOT}etc/omniORB.cfg
-    echo "ORBInitialPort 2809" >> ${ROOT}etc/omniORB.cfg
+  if [ ! -f "${ROOT}etc/omniorb/omniORB.cfg" ] ; then
+    echo "ORBInitialHost `uname -n`" > ${ROOT}etc/omniorb/omniORB.cfg
+    echo "ORBInitialPort 2809" >> ${ROOT}etc/omniorb/omniORB.cfg
+#    ln -s ${ROOT}etc/omniorb/omniORB.cfg /etc/omniORB.cfg    
   fi
+  /usr/bin/python ${FILESDIR}/mkomnistubs.py
 }

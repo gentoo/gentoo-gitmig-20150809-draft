@@ -4,7 +4,8 @@
 . /etc/rc.d/config/functions
 
 SERVICE=omniORB
-EXE="/usr/bin/omniNames"
+EXE1="/usr/bin/omniNames"
+EXE2="/usr/bin/notifd"
 opts="start stop restart"
 
 start() {
@@ -15,7 +16,8 @@ start() {
 		    rm -f /var/log/omniORB/omninames*
 		fi
 		ebegin "Starting ${SERVICE}"
-		exec $EXE -start 2809 -logdir /var/log/omniORB -errlog /var/log/omniORB/omniORB.errors 1>&2 &
+		exec $EXE1 -start 2809 -logdir /var/log/omniORB -errlog /var/log/omniORB/omniORB.errors 1>&2 &
+		exec $EXE2 -c /etc/omniorb/channel.cfg 1>&2 &
 		eend $? "Error starting ${SERVICE}."
 }
 
