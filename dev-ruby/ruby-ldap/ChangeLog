@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-ldap
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-ldap/ChangeLog,v 1.6 2004/11/04 15:49:29 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-ldap/ChangeLog,v 1.7 2004/12/31 01:08:37 ciaranm Exp $
+
+  31 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
 *ruby-ldap-0.8.3 (05 Nov 2004)
 
@@ -15,7 +18,7 @@
   Version bumped; bug #62475. Marked 0.8.1 stable on x86 and ppc. Removed old
   ebuilds.
 
-  03 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> ruby-ldap-0.8.1.ebuild:
+  03 Jun 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> ruby-ldap-0.8.1.ebuild:
   Stable on alpha.
 
 *ruby-ldap-0.8.1 (24 Nov 2003)

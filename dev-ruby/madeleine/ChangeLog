@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/madeleine
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/madeleine/ChangeLog,v 1.5 2004/11/14 10:22:25 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/madeleine/ChangeLog,v 1.6 2004/12/31 01:02:27 ciaranm Exp $
+
+  31 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
 *madeleine-0.7.1 (14 Nov 2004)
 
@@ -8,7 +11,7 @@
   +madeleine-0.7.1.ebuild:
   Version bumped.
 
-  03 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> madeleine-0.6.1.ebuild:
+  03 Jun 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> madeleine-0.6.1.ebuild:
   Stable on alpha.
 
 *madeleine-0.6.1 (10 Apr 2004)

@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/eruby
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/eruby/ChangeLog,v 1.16 2004/11/13 02:09:39 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/eruby/ChangeLog,v 1.17 2004/12/31 01:01:18 ciaranm Exp $
+
+  31 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   12 Nov 2004; Joshua Kinard <kumba@gentoo.org> eruby-1.0.5.ebuild:
   Marked stable on mips.
@@ -9,7 +12,7 @@
   eruby-1.0.4.ebuild, eruby-1.0.5.ebuild:
   Moved maintainer description out to metadata.xml
 
-  04 Jul 2004; Bryan ƒŠstergaard <kloeri@gentoo.org> eruby-1.0.5.ebuild:
+  04 Jul 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> eruby-1.0.5.ebuild:
   Stable on alpha.
 
   09 Jun 2004; Guy Martin <gmsoft@gentoo.org> eruby-1.0.5.ebuild:

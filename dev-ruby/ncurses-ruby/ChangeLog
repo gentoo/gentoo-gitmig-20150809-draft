@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ncurses-ruby
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ncurses-ruby/ChangeLog,v 1.8 2004/10/14 19:49:02 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ncurses-ruby/ChangeLog,v 1.9 2004/12/31 01:03:37 ciaranm Exp $
+
+  31 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   14 Oct 2004; David Holm <dholm@gentoo.org> ncurses-ruby-0.8.ebuild:
   Added to ~ppc.
@@ -8,7 +11,7 @@
   11 Sep 2004; Tom Martin <slarti@gentoo.org> ncurses-ruby-0.8.ebuild:
   Marked ~amd64.
 
-  03 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> ncurses-ruby-0.8.ebuild:
+  03 Jun 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> ncurses-ruby-0.8.ebuild:
   Stable on alpha.
 
   10 Apr 2004; Mamoru KOMACHI <usata@gentoo.org> ncurses-ruby-0.8.ebuild:

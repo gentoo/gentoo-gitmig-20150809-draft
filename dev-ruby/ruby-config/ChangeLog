@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-config
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-config/ChangeLog,v 1.24 2004/12/04 18:00:42 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-config/ChangeLog,v 1.25 2004/12/31 01:05:30 ciaranm Exp $
+
+  31 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   04 Dec 2004; Tom Martin <slarti@gentoo.org> ruby-config-0.3.1.ebuild:
   Stable on amd64.
@@ -34,7 +37,7 @@
   21 Aug 2004; Jason Wever <weeve@gentoo.org> ruby-config-0.3.ebuild:
   Stable on sparc wrt security bug #60525.
 
-  20 Aug 2004; Bryan ƒŠstergaard <kloeri@gentoo.org> ruby-config-0.3.ebuild:
+  20 Aug 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> ruby-config-0.3.ebuild:
   Stable on alpha, bug 60525.
 
   20 Aug 2004; Mamoru KOMACHI <usata@gentoo.org> ruby-config-0.3.ebuild:
