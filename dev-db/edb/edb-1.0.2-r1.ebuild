@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Your Name <your email>
-# $Header: /var/cvsroot/gentoo-x86/dev-db/edb/edb-1.0.2-r1.ebuild,v 1.2 2001/11/10 11:21:56 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/edb/edb-1.0.2-r1.ebuild,v 1.3 2002/05/23 06:50:10 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Enlightment Data Base"
@@ -9,7 +9,7 @@ SRC_URI="http://prdownloads.sourceforge.net/enlightenment/${P}.tar.gz"
 HOMEPAGE="http://enlightenment.org"
 
 RDEPEND="virtual/glibc
-	 >=x11-libs/gtk+-1.2.10-r4"
+	 =x11-libs/gtk+-1.2*"
 
 DEPEND="$RDEPEND
 	sys-apps/which"

@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Leonardo Boshell <p@kapcoweb.com>
-# $Header: /var/cvsroot/gentoo-x86/app-text/gtranslator/gtranslator-0.41.ebuild,v 1.2 2002/04/27 23:08:35 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gtranslator/gtranslator-0.41.ebuild,v 1.3 2002/05/23 06:50:10 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A gettext po file editor for GNOME"
@@ -13,7 +13,7 @@ RDEPEND=">=gnome-base/gnome-libs-1.2
 	>=gnome-extra/gal-0.11.99
 	>=app-text/scrollkeeper-0.1.4
 	=dev-libs/glib-1.2*
-	>=x11-libs/gtk+-1.2.10
+	=x11-libs/gtk+-1.2*
 	>=gnome-base/oaf-0.6.8
 	>=gnome-base/ORBit-0.5.14
 	>=gnome-base/gnome-vfs-1.0.5

@@ -13,7 +13,7 @@ HOMEPAGE="http://www.wxpython.org/"
 
 DEPEND=">=dev-lang/python-2.1
         =dev-libs/glib-1.2*
-        >=x11-libs/gtk+-1.2.5
+        =x11-libs/gtk+-1.2*
         >=x11-libs/wxGTK-2.3.2"
         #opengl? ( virtual/opengl )"
         #really need opengl? ( virtual/opengl dev-python/PyOpenGL )

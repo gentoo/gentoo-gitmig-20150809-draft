@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.0.5-r2.ebuild,v 1.3 2002/05/21 18:14:07 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.0.5-r2.ebuild,v 1.4 2002/05/23 06:50:10 seemant Exp $
 
 #provide Xmake and Xemake
 
@@ -13,7 +13,7 @@ SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/gnumeric/${P}.tar.bz2"
 HOMEPAGE="http://www.gnome.org/gnome-office/gnumeric.shtml"
 
 #Eye Of Gnome (media-gfx/eog) is for image support.
-RDEPEND=">=x11-libs/gtk+-1.2.10-r3
+RDEPEND="=x11-libs/gtk+-1.2*
 	>=gnome-base/gnome-libs-1.4.1.2-r1
 	>=gnome-base/oaf-0.6.7
 	>=gnome-base/ORBit-0.5.12-r1

@@ -1,14 +1,14 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Craig Joly <joly@ee.ualberta.ca>
-# $Header: /var/cvsroot/gentoo-x86/app-office/gaby/gaby-2.0.2-r1.ebuild,v 1.2 2002/03/29 00:11:42 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gaby/gaby-2.0.2-r1.ebuild,v 1.3 2002/05/23 06:50:10 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A small personal databases manager for Linux"
 SRC_URI="http://gaby.sourceforge.net/archives/${P}.tar.gz"
 HOMEPAGE="http://gaby.sourceforge.net"
 
-DEPEND=">=x11-libs/gtk+-1.2.10-r4
+DEPEND="=x11-libs/gtk+-1.2*
 	virtual/python
 	>=media-libs/gdk-pixbuf-0.11.0-r1
 	dev-libs/libxml

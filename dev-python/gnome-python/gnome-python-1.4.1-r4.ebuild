@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python/gnome-python-1.4.1-r4.ebuild,v 1.1 2002/03/01 03:08:49 blocke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python/gnome-python-1.4.1-r4.ebuild,v 1.2 2002/05/23 06:50:10 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="gnome-python"
@@ -9,7 +9,7 @@ SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/latest/sources/${P}.tar.gz"
 HOMEPAGE="http://www.gnome.org"
 
 DEPEND="virtual/python
-	>=x11-libs/gtk+-1.2.10-r4
+	=x11-libs/gtk+-1.2*
 	>=media-libs/imlib-1.9.10-r1
 	gnome? ( >=gnome-base/gnome-core-1.4.0.4-r1 
 		 >=gnome-base/libglade-0.17-r1

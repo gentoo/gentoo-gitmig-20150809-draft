@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Tools Team <tools@gentoo.org>
 # Author: Karl Trygve Kalleberg <karltk@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gtk/java-gtk-0.7.1.ebuild,v 1.1 2002/01/30 17:03:51 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gtk/java-gtk-0.7.1.ebuild,v 1.2 2002/05/23 06:50:10 seemant Exp $
 
 S=${WORKDIR}/java-gnome-${PV}
 DESCRIPTION="GTK+ bindings for Java"
@@ -11,7 +11,7 @@ HOMEPAGE="http://java-gnome.sf.net"
 
 DEPEND="virtual/glibc
 	virtual/jdk
-	>=x11-libs/gtk+-1.2.8
+	=x11-libs/gtk+-1.2*
 	>=dev-java/jikes-1.0"
 	
 RDEPEND="$DEPEND"
