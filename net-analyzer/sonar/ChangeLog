@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/sonar
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sonar/ChangeLog,v 1.2 2003/10/02 18:09:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sonar/ChangeLog,v 1.3 2003/10/31 16:01:44 mholzer Exp $
+
+*sonar-1.2.0 (31 Oct 2003)
+
+  31 Oct 2003; Martin Holzer <mholzer@gentoo.org> sonar-1.2.0.ebuild:
+  Adding depend. Closes #32365.
 
 *sonar-1.20 (28 Sep 2003)
 
