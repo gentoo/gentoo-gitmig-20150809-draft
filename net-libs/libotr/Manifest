@@ -1,4 +1,6 @@
-MD5 60f8224c0671f930222007e2526b5449 ChangeLog 425
+MD5 38cad0aec7a303c178ee2ef1d2ccfaad ChangeLog 537
+MD5 b4baf2a9e6cb4141b3e0eeb9319cafea libotr-2.0.0.ebuild 808
 MD5 71d0f7f41593760118aeec748577c740 libotr-1.0.4.ebuild 808
 MD5 f336d73adb9eb04864ae3f5e98787c12 metadata.xml 223
+MD5 acbf6ed5147acb3329e98ff711a7262a files/digest-libotr-2.0.0 64
 MD5 ce21e4bf4ffd89512e4a9e32f0539761 files/digest-libotr-1.0.4 64
