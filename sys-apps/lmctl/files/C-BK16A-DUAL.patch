@@ -1,0 +1,10 @@
+--- lmctl.c.orig	2005-01-08 12:29:02.176741224 +0100
++++ lmctl.c	2005-01-08 12:31:21.841508952 +0100
+@@ -108,6 +108,7 @@
+ 	{0xc505, "Receiver for Cordless Elite Duo",        "C-BG17-DUAL", 1, 0, 0, 1},
+ 	{0xc506, "Receiver for MX700 Optical Mouse",       "C-BF16-MSE",  1, 0, 1, 0},
+ 	{0xc508, "Receiver for Cordless Optical TrackMan", "C-BA4-MSE",   1, 0, 1, 0},
++	{0xc50b, "Receiver for Cordless Desktop MX",       "C-BK16A-DUAL",1, 0, 0, 1},
+ 	{0xc702, "Receiver for Cordless Presenter",        "C-UF15",      1, 0, 0, 0},
+ 
+ 	/* From Markus Wiesner <m_wiesner@gmx.net> */
