@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/showeq/showeq-4.3.18.ebuild,v 1.2 2003/11/25 08:08:34 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/showeq/showeq-4.3.18.ebuild,v 1.3 2003/12/03 01:50:24 mr_bones_ Exp $
 
 inherit games
 
@@ -9,7 +9,7 @@ DESCRIPTION="A Everquest monitoring program"
 HOMEPAGE="http://seq.sourceforge.net"
 SRC_URI="mirror://sourceforge/seq/ShowEQ-${PV}.tar.bz2"
 
-KEYWORDS="~x86"
+KEYWORDS="x86"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE=""
