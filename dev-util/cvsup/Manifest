@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 d3a66af0c2d09b6a576ef9edcaabe7f8 cvsup-16.1h.ebuild 1972
 MD5 1d3feba73cf8eb8a775b90e72a134cee ChangeLog 1610
 MD5 1c57c6b4152fb7462281a34a6d364d8e metadata.xml 643
-MD5 d3a66af0c2d09b6a576ef9edcaabe7f8 cvsup-16.1h.ebuild 1972
-MD5 ef851a57002484a5917f1b446e231e69 files/16.1h-ppc.patch 1179
+MD5 7eefb636bababc1d8db5f9d76bb80b6b files/cvsupd.confd 360
 MD5 8dfbd6317bf54cfaa516faffc69616d8 files/99cvsup 36
-MD5 10946919aa6c072bc537002932836b0e files/cvsupd.confd 367
-MD5 d08be5b26717ed8542b89b87fe9860aa files/cvsupd.rc 559
-MD5 258f2dae4891b889f3c4b05ef8598fed files/digest-cvsup-16.1h 68
-MD5 9a5b6ecba759a5260d4fb3d4e07a4c9c files/gentoo.sup 153
 MD5 3f47f29ce5967adb60f63c5e251f1452 files/gentoo_mirror.sup 208
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA8WKPHTu7gpaalycRAjoLAJ9MNCAu+1TY7k9Wnp53PPHTVQDVOACeIjvO
-SPFq4940oIQLYMOlgt7i9Zc=
-=iNCa
------END PGP SIGNATURE-----
+MD5 258f2dae4891b889f3c4b05ef8598fed files/digest-cvsup-16.1h 68
+MD5 64765468ec4e0abde1f650c70c8deda4 files/cvsupd.rc 552
+MD5 9a5b6ecba759a5260d4fb3d4e07a4c9c files/gentoo.sup 153
+MD5 ef851a57002484a5917f1b446e231e69 files/16.1h-ppc.patch 1179
