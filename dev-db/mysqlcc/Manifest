@@ -3,7 +3,7 @@ MD5 1b6808bbd78c9161f8b7efb090d966f8 metadata.xml 162
 MD5 9f313aea593f1e6c58f116c2e86fb510 mysqlcc-0.8.7-r1.ebuild 1658
 MD5 d8717cdcfc4f917a46e3817e810168ee mysqlcc-0.9.2.ebuild 1757
 MD5 5a0468d9c79896eb8559ef5bb9cfeb33 mysqlcc-0.9.3.ebuild 1697
-MD5 8985e140d9dfce8d9ee7f8c64cc678f3 mysqlcc-0.9.4.ebuild 1700
+MD5 15e16c216e09b290f210649945ff35e2 mysqlcc-0.9.4.ebuild 1713
 MD5 efaa2abbdf5d66f7120aabe7c54e8c8b files/digest-mysqlcc-0.8.7-r1 69
 MD5 3cc836a398f018fc7036b02ea4cd75bd files/digest-mysqlcc-0.9.2 69
 MD5 5e526165be4127bf54ef503255d56f16 files/digest-mysqlcc-0.9.3 69
