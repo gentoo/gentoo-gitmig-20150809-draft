@@ -21,6 +21,11 @@
 ##   End example
 ##
 
+# <carpaski@@gentoo.org> (8 Oct 2003)
+# python-2.2 python-2.3 integration ebuild
+>=sys-apps/portage-2.0.49-r16
+=sys-apps/portage-2.0.49-r14
+
 # <robbat2@gentoo.org> (20 Oct 2003)
 # needs gcc3.3/tcl8.4 fixing
 dev-embedded/picptk
@@ -60,10 +65,6 @@ x11-misc/synaptics
 =openmotif-2.2.2-r3
 =openmotif-2.1.30-r2
 =lesstif-0.93.91
-
-# <carpaski@@gentoo.org> (8 Oct 2003)
-# python-2.2 python-2.3 integration ebuild
->=sys-apps/portage-2.0.49-r14
 
 # <hanno@gentoo.org> (7 Oct 2003)
 # Old and broken cvs-releases of sidplay, to be removed soon.
