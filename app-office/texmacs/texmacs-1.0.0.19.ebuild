@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texmacs/texmacs-1.0.0.19.ebuild,v 1.5 2003/06/12 20:18:34 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texmacs/texmacs-1.0.0.19.ebuild,v 1.6 2003/07/02 11:45:09 aliz Exp $
 
 MY_P=${P/tex/TeX}-src
 S=${WORKDIR}/${MY_P}
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.texmacs.org/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 DEPEND=">=app-text/tetex-1.0.7-r7
 	>=dev-util/guile-1.3.4
