@@ -1,8 +1,13 @@
 # ChangeLog for net-mail/postfix
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/ChangeLog,v 1.34 2002/09/11 20:05:23 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/ChangeLog,v 1.35 2002/09/17 21:28:32 raker Exp $
 
 *postfix-1.1.11.20020822 (11 Sep 2002)
+
+  17 Sep 2002; Nick Hadaway <raker@gentoo.org>
+  postfix-1.1.11.20020822.ebuild :
+  Added saslv1 and saslv2 support.  This should be back to a full
+  featured postfix ebuild.
 
   11 Sep 2002; Nick Hadaway <raker@gentoo.org>
   postfix-1.1.11.20020822.ebuild :

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-1.1.11.20020822.ebuild,v 1.4 2002/09/11 20:02:55 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-1.1.11.20020822.ebuild,v 1.5 2002/09/17 21:28:32 raker Exp $
 
 PF_PV=1.1.11-20020822
 PF_P=postfix-${PF_PV}
@@ -23,7 +23,9 @@ DEPEND=">=sys-libs/db-3.2
 	>=dev-libs/libpcre-3.4
 	ldap? ( >=net-nds/openldap-1.2 )
 	mysql? ( >=dev-db/mysql-3.23.51 )
-	ssl? ( >=dev-libs/openssl-0.9.6g )"
+	ssl? ( >=dev-libs/openssl-0.9.6g )
+	sasl? ( dev-libs/cyrus-sasl )"
+
 RDEPEND="${DEPEND} 
 	>=net-mail/mailbase-0.00
 	!virtual/mta"
@@ -61,10 +63,24 @@ src_unpack() {
 		CCARGS="${CCARGS} -DHAS_SSL"
 		AUXLIBS="${AUXLIBS} -lssl -lcrypto"
 	fi
-	
+
 	cd ${S}/conf
 	cp main.cf main.cf.orig
 	sed -e "s:/usr/libexec/postfix:/usr/lib/postfix:" main.cf.orig > main.cf
+
+if [ "`use sasl`" ]
+        then
+                if [ -e /usr/include/sasl/sasl.h ]
+                then
+                        # saslv2
+                        AUXLIBS="${AUXLIBS} -lsasl2"
+                        CCARGS="${CCARGS} -I/usr/include/sasl -DUSE_SASL_AUTH"
+                else
+                        # saslv1
+                        AUXLIBS="${AUXLIBS} -lsasl"
+                        CCARGS="${CCARGS} -DUSE_SASL_AUTH"
+                fi
+fi
 
 	cd ${S}/src/global
 	cp mail_params.h mail_params.h.orig
@@ -131,6 +147,20 @@ src_install () {
 
 	exeinto /etc/init.d ; newexe ${FILESDIR}/postfix.rc6 postfix
 	insinto /etc/pam.d ; newins ${FILESDIR}/smtp.pam smtp
+
+        if [ "`use sasl`" ]
+        then
+                if [ -e /usr/include/sasl.h ]
+                then
+                        # saslv1
+                        insinto /etc/sasl ; doins ${FILESDIR}/smtpd.conf
+                fi
+                if [ -e /usr/include/sasl/sasl.h ]
+                then
+                        # saslv2
+                        insinto /etc/sasl2 ; doins ${FILESDIR}/smtpd.conf
+                fi
+        fi
 
 }
 
