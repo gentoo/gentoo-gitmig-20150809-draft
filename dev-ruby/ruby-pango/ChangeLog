@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/ruby-pango
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-pango/ChangeLog,v 1.3 2003/11/18 13:15:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-pango/ChangeLog,v 1.4 2003/11/24 19:02:16 agriffis Exp $
+
+*ruby-pango-0.8.1 (24 Nov 2003)
+
+  24 Nov 2003; Aron Griffis <agriffis@gentoo.org> ruby-pango-0.8.1.ebuild:
+  Version bump to 0.8.1
 
 *ruby-pango-0.8.0 (18 Nov 2003)
 
