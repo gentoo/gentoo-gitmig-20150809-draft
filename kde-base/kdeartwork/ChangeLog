@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdeartwork
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork/ChangeLog,v 1.87 2004/08/30 15:45:00 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork/ChangeLog,v 1.88 2004/09/02 03:39:39 tgall Exp $
+
+  01 Sep 2004; Tom Gall <tgall@gentoo.org> kdeartwork-3.3.0.ebuild:
+  stable on ppc64, bug #62166
 
   30 Aug 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   kdeartwork-3.1.5.ebuild, kdeartwork-3.2.1.ebuild, kdeartwork-3.3.0.ebuild:
