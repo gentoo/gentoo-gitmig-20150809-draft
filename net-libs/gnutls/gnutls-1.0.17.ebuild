@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-1.0.17.ebuild,v 1.11 2004/08/15 01:15:27 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-1.0.17.ebuild,v 1.12 2004/09/26 05:19:57 tgall Exp $
 
 inherit eutils gnuconfig
 
@@ -13,7 +13,7 @@ LICENSE="LGPL-2.1 | GPL-2"
 # GPL-2 for the gnutls-extras library and LGPL for the gnutls library.
 
 SLOT="0"
-KEYWORDS="x86 amd64 sparc ppc mips alpha ~ppc64 ia64 hppa"
+KEYWORDS="x86 amd64 sparc ppc mips alpha ppc64 ia64 hppa"
 
 RDEPEND=">=dev-libs/libgcrypt-1.1.94
 	crypt? ( >=app-crypt/opencdk-0.5.5 )
