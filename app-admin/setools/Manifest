@@ -1,4 +1,6 @@
-MD5 04c1ad0f9bad39b7878c2e81610dc8d1 ChangeLog 1633
+MD5 bd6fc99f6f9e9c2415445629b4b76e73 ChangeLog 1758
+MD5 716dc0c247e74274ff2d426ab88a01b6 setools-1.2.ebuild 3184
 MD5 7d030e939434c24f4affee294efcc78f setools-1.1.1.ebuild 3185
 MD5 418c2991b69fcf9d551aba29ae6f2b2e metadata.xml 505
+MD5 16a0e1619330aed5a839a2f9ff83a256 files/digest-setools-1.2 60
 MD5 021e046b2976f4ea4e1b48546b8ba7ee files/digest-setools-1.1.1 62
