@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute/iproute-20010824-r5.ebuild,v 1.2 2004/04/06 17:19:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute/iproute-20010824-r5.ebuild,v 1.3 2004/04/07 00:05:43 vapier Exp $
 
-inherit eutils
+inherit eutils flag-o-matic
 
 DEBIANPATCH="${P/-/_}-13.diff.gz"
 SRCFILE="iproute2-2.4.7-now-ss${PV/20}.tar.gz"
@@ -38,12 +38,18 @@ src_unpack() {
 	# Enable HFSC scheduler #45274
 	if [ ! -z "`grep tc_service_curve ${ROOT}/usr/include/linux/pkt_sched.h`" ] ; then
 		epatch ${FILESDIR}/${PV}-hfsc.patch
-		epatch ${FILESDIR}/${PV}-rates-1024-fix.patch
 	else
 		ewarn "Your linux-headers in /usr/include/linux are too old to"
 		ewarn "support the HFSC scheduler.  It has been disabled."
 	fi
+	epatch ${FILESDIR}/${PV}-rates-1024-fix.patch
 	rm include/linux/pkt_sched.h
+
+	# Now a little hack to handle 2.4.x headers and stupid defines ...
+	if has_version '<sys-kernel/linux-headers-2.8' ; then
+		echo '#define __constant_htons(x) htons(x)' >> include-glibc/glibc-bugs.h
+		append-flags -D_LINUX_BYTEORDER_LITTLE_ENDIAN_H -D_LINUX_BYTEORDER_BIG_ENDIAN_H
+	fi
 
 	# Fix local DoS exploit #34294
 	epatch ${FILESDIR}/${PV}-local-exploit-fix.patch
@@ -74,12 +80,13 @@ src_install() {
 	dosbin ifcfg ip routef routel rtacct rtmon rtpr || die "dosbin * failed"
 	cd ${S}/tc
 	dosbin tc || die "dosbin tc failed"
+	cd ${S}
 
 	#install Debian man pages
-	doman ${S}/debian/manpages/*.[1-9]
+	doman debian/manpages/*.[1-9]
 
-	docinto examples/diffserv ; dodoc examples/diffserv/*
 	docinto examples ; dodoc examples/*
+	docinto examples/diffserv ; dodoc examples/diffserv/*
 	dodir /etc/iproute2
 	insinto /etc/iproute2 ; doins ${S}/etc/iproute2/*
 	if use doc && [ -n "`ls doc/*.ps`" ] ; then
