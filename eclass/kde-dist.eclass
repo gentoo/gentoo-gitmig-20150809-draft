@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-dist.eclass,v 1.29 2002/11/09 21:40:11 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-dist.eclass,v 1.30 2002/11/12 19:52:44 hannes Exp $
 # This is the kde-dist eclass for >=2.2.1 kde base packages. Don't use for kdelibs though :-)
 # Don't use it for e.g. kdevelop, koffice because of their separate versionnig schemes.
 
@@ -17,6 +17,7 @@ need-kde $PV
 [ "$PV" == "3.1_beta2" ] && S=${WORKDIR}/${PN}-3.0.8
 [ "$PV" == "3.1_rc1" ] && S=${WORKDIR}/${PN}-3.0.9
 [ "$PV" == "3.1_rc2" ] && S=${WORKDIR}/${PN}-3.0.98
+[ "$PV" == "3.1_rc3" ] && S=${WORKDIR}/${PN}-3.0.99
 
 DESCRIPTION="KDE ${PV} - "
 HOMEPAGE="http://www.kde.org/"

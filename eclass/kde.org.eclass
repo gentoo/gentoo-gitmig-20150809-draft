@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde.org.eclass,v 1.20 2002/11/05 00:07:46 hannes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde.org.eclass,v 1.21 2002/11/12 19:52:44 hannes Exp $
 # Contains the locations of ftp.kde.org packages and their mirrors
 
 ECLASS=kde.org
@@ -16,6 +16,7 @@ case "$PV" in
 	3.1_beta2)		SRC_PATH="unstable/kde-3.1-beta2/src/${P//3.1_beta2/3.0.8}.tar.bz2" ;;
 	3.1_rc1)		SRC_PATH="unstable/kde-3.1-rc1/src/${P//3.1_rc1/3.0.9}.tar.bz2" ;;
 	3.1_rc2)		SRC_PATH="unstable/kde-3.1-rc2/src/${P//3.1_rc2/3.0.98}.tar.bz2" ;;
+	3.1_rc3)		SRC_PATH="unstable/kde-3.1-rc3/src/${P//3.1_rc3/3.0.99}.tar.bz2" ;;
 	3*)				SRC_PATH="stable/$PV/src/${P}.tar.bz2" ;;
 	5)					SRC_URI="" # cvs ebuilds, no SRC_URI needed
 		debug-print "$ECLASS: finished, cvs detected, SRC_URI=$SRC_URI"
