@@ -326,7 +326,7 @@ dev-perl/CDDB-File
 # <azarah@gentoo.org> (25 Aug 2002)
 # This one *STILL* activate the atexit() bug in some
 # binary packages (Win4Lin and Realplayer to name a few)
-=sys-libs/glibc-2.2.5-r7
+=sys-libs/glibc-2.2.5-r8
 
 # <cardoe@gentoo.org> (24 Aug 2002)
 # masked for testing...
