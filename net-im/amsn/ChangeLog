@@ -1,6 +1,9 @@
 # ChangeLog for net-im/amsn
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/amsn/ChangeLog,v 1.41 2004/11/17 00:39:01 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/amsn/ChangeLog,v 1.42 2004/12/03 00:43:21 tester Exp $
+
+  02 Dec 2004; Olivier Crete <tester@gentoo.org> amsn-0.94.ebuild:
+  Stable on x86
 
   16 Nov 2004; Olivier Crete <tester@gentoo.org> amsn-0.94.ebuild:
   Fix traydock installation, bug 56188
