@@ -1,0 +1,8 @@
+# ChangeLog for app-xemacs/ocaml
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/ocaml/ChangeLog,v 1.1 2002/12/16 12:22:47 rendhalver Exp $
+
+*ocaml-0.03 (16 Dec 2002)
+
+  16 Dec 2002; Rendhalver [Peter Brown] <rendhalver@gentoo.org> :
+  Initial import.
