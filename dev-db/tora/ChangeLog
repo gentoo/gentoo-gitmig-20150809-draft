@@ -1,7 +1,12 @@
 # ChangeLog for dev-db/tora
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/tora/ChangeLog,v 1.17 2003/12/08 15:13:57 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/tora/ChangeLog,v 1.18 2003/12/10 07:30:42 seemant Exp $
+
+  09 Dec 2003; Seemant Kulleen <seemant@gentoo.org> tora-1.3.10.ebuild,
+  tora-1.3.11-r1.ebuild, tora-1.3.11-r2.ebuild, tora-1.3.11.ebuild,
+  tora-1.3.12.ebuild, tora-1.3.8.ebuild, tora-1.3.9.2.ebuild:
+  removed old crufty versions and added KEYWORDS
 
   08 Dec 2003; Don Seiler <rizzo@gentoo.org>; tora-1.3.12.ebuild:
   Bumping 1.3.12 to stable x86

@@ -1,15 +1,15 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/tora/tora-1.3.12.ebuild,v 1.2 2003/12/08 15:13:57 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/tora/tora-1.3.12.ebuild,v 1.3 2003/12/10 07:30:42 seemant Exp $
 
 IUSE="kde oci8"
 DESCRIPTION="TOra - Toolkit For Oracle"
 HOMEPAGE="http://www.globecom.se/tora/"
 SRC_URI="mirror://sourceforge/${PN}/${PN}-alpha-${PV}.tar.gz"
 
-LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+LICENSE="GPL-2"
+KEYWORDS="x86 ~ppc ~sparc ~alpha ~hppa ~amd64"
 
 DEPEND=">=x11-libs/qt-3.0.0
 	dev-lang/perl
