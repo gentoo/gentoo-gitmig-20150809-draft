@@ -33,6 +33,7 @@ sybase-ct
 rtc
 uclibc
 voodoo3
+pvm
 v4l
 v4l2
 
