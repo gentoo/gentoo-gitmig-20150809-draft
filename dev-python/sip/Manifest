@@ -1,13 +1,23 @@
-MD5 6f06dd037543f4961744e3a317246bee sip-4.0.1.ebuild 1053
-MD5 dace50f19f46a74e44b88ef49da768c1 sip-3.11.1.ebuild 984
-MD5 f0ea74d645af4629f87420e799f305d0 sip-4.1.1.ebuild 1062
-MD5 1a7a3e0751fd70735a2f88eb34c43f7f sip-3.8-r1.ebuild 1104
-MD5 5e90a965439b6bb7afbd8479377f5188 ChangeLog 6543
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 26b44b2eac3a3fe40891b4f08a7a5bdf ChangeLog 6637
 MD5 811c07ba7510a315382249fc3adb44fc metadata.xml 175
 MD5 354c3ff99047b9012d51e0e42b4b3f34 sip-3.10.2.ebuild 983
-MD5 6a011f04f4a2219a674a61dd82763301 files/digest-sip-4.0.1 61
-MD5 08ece4353d9fbbcda23f73d770999e49 files/digest-sip-4.1.1 61
+MD5 dace50f19f46a74e44b88ef49da768c1 sip-3.11.1.ebuild 984
+MD5 1a7a3e0751fd70735a2f88eb34c43f7f sip-3.8-r1.ebuild 1104
+MD5 6f06dd037543f4961744e3a317246bee sip-4.0.1.ebuild 1053
+MD5 ac8a739f1cd8a1c9f4e4f863b03d8e0b sip-4.1.1.ebuild 1064
 MD5 e052f291e46bb8d1de4cfb1b45aeac88 files/digest-sip-3.10.2 62
 MD5 18e143f22df1dd8636fc12aa07ac9f36 files/digest-sip-3.11.1 62
 MD5 821af86e779d5bc5b3457336a0426fa1 files/digest-sip-3.8-r1 67
+MD5 6a011f04f4a2219a674a61dd82763301 files/digest-sip-4.0.1 61
+MD5 08ece4353d9fbbcda23f73d770999e49 files/digest-sip-4.1.1 61
 MD5 70ee7d5fd80e0bec5823095ca853d455 files/license-3.8.diff 1003
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBuI3EKRy60XGEcJIRArIrAJ9Oo3WBDzTCpH+soabbxkBVq8fS5gCgmTAM
+63IMp4GIoih5afO6WUyAvkg=
+=oWqo
+-----END PGP SIGNATURE-----
