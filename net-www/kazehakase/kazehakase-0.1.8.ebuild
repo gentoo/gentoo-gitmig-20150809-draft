@@ -1,28 +1,34 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/kazehakase/kazehakase-0.1.4.ebuild,v 1.7 2004/06/25 00:56:37 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/kazehakase/kazehakase-0.1.8.ebuild,v 1.1 2004/07/29 10:30:53 nakano Exp $
 
 inherit eutils
 
-IUSE=""
+IUSE="migemo estraier"
 
 DESCRIPTION="Kazehakase is a browser with gecko engine like Epiphany or Galeon."
 HOMEPAGE="http://kazehakase.sourceforge.jp/"
-SRC_URI="mirror://sourceforge.jp/${PN}/8924/${P}.tar.gz"
+SRC_URI="mirror://sourceforge.jp/${PN}/10580/${P}.tar.gz"
 
 SLOT="0"
-KEYWORDS="x86 ~alpha amd64 ~ppc"
+KEYWORDS="~x86"
 LICENSE="GPL-2"
 
 DEPEND="${DEPEND}
 	sys-devel/automake
 	sys-devel/libtool
-	<net-www/mozilla-1.7
+	net-www/mozilla
 	x11-libs/pango
 	>=x11-libs/gtk+-2*
-	dev-util/pkgconfig"
+	dev-util/pkgconfig
+	migemo? ( || ( app-text/cmigemo app-text/migemo ) )
+	estraier? ( app-text/estraier )"
 
-S="${WORKDIR}/${P}"
+RDEPEND="net-www/mozilla
+	x11-libs/pango
+	>=x11-libs/gtk+-2*
+	migemo? ( || ( app-text/cmigemo app-text/migemo ) dev-ruby/uconv )
+	estraier? ( app-text/estraier )"
 
 pkg_setup(){
 	if grep -v gtk2 /var/db/pkg/net-www/mozilla-[[:digit:]]*/USE > /dev/null
@@ -39,14 +45,7 @@ pkg_setup(){
 }
 
 src_compile(){
-	export WANT_AUTOCONF=2.5
-	export WANT_AUTOMAKE=1.6
-
-	epatch ${FILESDIR}/kz-scrap-bookmark-action.gcc2.patch
-	epatch ${FILESDIR}/kz-tab-label.gcc2.patch
-
-	./autogen.sh || die
-	econf || die
+	econf `use_enable migemo` || die
 	emake || die
 }
 
