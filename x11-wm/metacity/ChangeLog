@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/metacity
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/ChangeLog,v 1.67 2004/07/04 19:23:26 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/ChangeLog,v 1.68 2004/07/29 02:15:46 tgall Exp $
+
+  28 Jul 2004; Tom Gall <tgall@gentoo.org> metacity-2.8.1.ebuild:
+  stable on ppc64, bug #58191
 
   04 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> metacity-2.8.0.ebuild:
   Stable on alpha.
