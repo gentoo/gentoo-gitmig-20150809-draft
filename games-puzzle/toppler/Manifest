@@ -1,4 +1,16 @@
-MD5 49d5ca12fb3d580bab01c46cb1f77f19 ChangeLog 1392
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 369f071c2f64f5168d54c2d162fb6aa3 ChangeLog 1512
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+MD5 d35c7fffc2736657b0f43a73e841645f toppler-1.1.0.ebuild 800
 MD5 7a5ff163478658bd49949e991cd4eb38 toppler-1.0.6.ebuild 830
 MD5 00d09175b8f314775e198c195968b152 files/digest-toppler-1.0.6 66
+MD5 84cd2cbe79cc38de65805e17a5117488 files/digest-toppler-1.1.0 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBvlN1roRuSHgZdywRAufCAJ9m1CbF7PdN7QkuroR+/iZWC21vqwCfcNF1
+3pInHpxyeZSlJP74UqTWGBo=
+=Iy8F
+-----END PGP SIGNATURE-----
