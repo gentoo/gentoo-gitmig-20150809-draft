@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/gtk-engines
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines/ChangeLog,v 1.9 2003/09/23 16:15:31 darkspecter Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines/ChangeLog,v 1.10 2003/10/08 09:15:36 obz Exp $
+
+  08 Oct 2003; Mike Gardiner <obz@gentoo.org> gtk-engines-2.2.0.ebuild:
+  Modified imlib depend test re bug #24439
 
   23 Sep 2003; Bartosch Pixa <darkspecter@gentoo.org>
   gtk-engines-2.2.0.ebuild:
