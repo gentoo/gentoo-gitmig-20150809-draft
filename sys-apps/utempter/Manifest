@@ -1,5 +1,15 @@
-MD5 6b90b247ba7fbf915af9ee58334422ba ChangeLog 3919
-MD5 cd5a6a45a6eab0e2959af689dee3255c utempter-0.5.5.5-r1.ebuild 1310
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 ead67259560e11f3f635a49255114bf6 metadata.xml 181
+MD5 7860e63e952511ebe532b820c7ac9ea5 ChangeLog 4042
+MD5 0f6e57be6fffc1d9b2e5808e988cc49e utempter-0.5.5.5-r1.ebuild 1322
 MD5 d3293569252b4437ee84ef41b158aa00 files/digest-utempter-0.5.5.5-r1 68
 MD5 b2dc09a11b51ceac5735f963a718fa32 files/utempter-0.5.5.5-soname-makefile-fix.patch 932
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFCTCJC5mJXAu5GbtIRAsaVAJ44rXKmiZiWL1y9837JcZ0vNTiLqwCfS+Ak
+iJ8/05zPcV0Y1CMvV9YOpyQ=
+=tXqC
+-----END PGP SIGNATURE-----
