@@ -1,4 +1,5 @@
 #!/sbin/runscript
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/files/alsasound,v 1.4 2002/04/27 20:07:06 agenkin Exp $
 #
 # alsasound     This shell script takes care of starting and stopping
 #               the ALSA sound driver.
