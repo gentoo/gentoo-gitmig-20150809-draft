@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/sparc-dev-sources
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/sparc-dev-sources/ChangeLog,v 1.8 2004/02/15 07:30:08 wesolows Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/sparc-dev-sources/ChangeLog,v 1.9 2004/02/20 04:14:35 wesolows Exp $
+
+*sparc-dev-sources-2.6.3 (19 Feb 2004)
+
+  19 Feb 2004; Keith M Wesolowski <wesolows@gentoo.org>
+  sparc-dev-sources-2.6.3.ebuild:
+  Bump to version 2.6.3.  This will be the last sparc-dev-sources as
+  we are now using development-sources.
 
   14 Feb 2004; Keith M Wesolowski <wesolows@gentoo.org>
   sparc-dev-sources-2.6.0.ebuild, sparc-dev-sources-2.6.2_rc2.ebuild:
