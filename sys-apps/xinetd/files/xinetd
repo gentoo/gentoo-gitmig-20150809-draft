@@ -22,20 +22,19 @@ start() {
 			exit 1
 		fi
 		ebegin "Starting ${SERVICE}"
-		start-stop-daemon --start --quiet --exec $EXE 1>&2
+		/usr/bin/svc -u /etc/svc.d/control/xinetd
 		eend $? "Error starting ${SERVICE}."
 }
 
 stop() {
 		ebegin "Stopping ${SERVICE}"
-		start-stop-daemon --stop --quiet -u root -n $SERVICE 1>&2
+		/usr/bin/svc -d /etc/svc.d/control/xinetd
 		eend $? "Error stopping ${SERVICE}."
 }
 
 reconfig () {
-		ebegin "Reconfiguring ${SERVICE}"
-	 	start-stop-daemon --stop --quiet -u root -n $SERVICE --signal 1 1>&2
-		eend $? "Error reconfiguring ${SERVICE}."
+		stop
+		start
 }
 
 doservice ${@}
