@@ -1,0 +1,8 @@
+# ChangeLog for net-dns/ldapdns
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the  GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dns/ldapdns/Changelog,v 1.1 2003/03/17 07:32:08 edolnx Exp $
+
+*lapdns-2.03 (17 Mar 2003)
+
+  17 Mar 2003; Carl Perry <edolnx@gentoo.org>, ldapdns-2.03.ebuild :
+  Initial import.  Ebuild submitted by Mark Farver  <mfarver@mindbent.org>.
