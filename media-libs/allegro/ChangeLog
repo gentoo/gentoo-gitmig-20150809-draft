@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/allegro
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/ChangeLog,v 1.22 2004/06/09 18:00:37 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/ChangeLog,v 1.23 2004/06/09 19:10:52 mr_bones_ Exp $
+
+  09 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org> metadata.xml:
+  add metadata.xml
 
   09 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org> allegro-4.1.14.ebuild:
   filter out -fprefetch-loop-arrays (bug #53352)
