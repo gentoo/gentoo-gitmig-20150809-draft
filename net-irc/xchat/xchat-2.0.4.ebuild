@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-2.0.4.ebuild,v 1.11 2003/09/11 01:23:41 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-2.0.4.ebuild,v 1.12 2003/09/22 12:01:20 obz Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.xchat.org/"
 LICENSE="GPL-2"
 SLOT="2"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha hppa"
-IUSE="perl tcltk python ssl gtk mmx ipv6 nls"
+IUSE="perl tcltk python ssl mmx ipv6 nls"
 # Local use flag for the text frontend (bug #26427)
 IUSE="${IUSE} xchattext xchatnogtk"
 
