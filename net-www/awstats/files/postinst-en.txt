@@ -1,0 +1,22 @@
+Alias /awstats/classes "/usr/share/webapps/awstats/6.3/htdocs/classes/"
+Alias /awstats/css "/usr/share/webapps/awstats/6.3/htdocs/css/"
+Alias /awstats/icons "/usr/share/webapps/awstats/6.3/htdocs/icon/"
+ScriptAlias /awstats/ "/usr/share/webapps/awstats/6.3/hostroot/cgi-bin/"
+
+<Directory "/usr/share/webapps/awstats/6.3/htdocs">
+    Options None
+    AllowOverride None
+    <IfModule mod_access.c>
+	Order allow,deny
+	Allow from all
+    </IfModule>
+</Directory>
+
+<Directory "/usr/share/webapps/6.3/hostroot/cgi-bin">
+    Options ExecCGI
+    AllowOverride None
+    <IfModule mod_access.c>
+	Order allow,deny
+	Allow from all
+    </IfModule>
+</Directory>

@@ -1,5 +1,19 @@
-MD5 789d3b6f752930fee89811a68b8ed999 ChangeLog 1329
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 24a900759ea1086f3c68fb5480668252 awstats-6.3.ebuild 3753
+MD5 723f420b1d10952a6b4d783fee3ffd90 ChangeLog 1583
+MD5 6bc2db5b1e135821863e91fa8658ad48 metadata.xml 255
 MD5 344e16a880e4d54f9f76c54270011165 awstats-6.1.ebuild 4006
-MD5 d2da0e45d7e39184d1cb7abbe3879086 metadata.xml 159
-MD5 10127a480be4fd2c2eb40cbe88f10ad0 files/awstats-6.1-r1.diff 564
 MD5 2e2bdf14564309eeb8366a8b6b65b54c files/digest-awstats-6.1 60
+MD5 6e7773a7ddac4fe0259957c488da02cd files/digest-awstats-6.3 60
+MD5 10127a480be4fd2c2eb40cbe88f10ad0 files/awstats-6.1-r1.diff 564
+MD5 7a52d3f65ff7220a519056716d460ecd files/awstats-6.3-gentoo.diff 1219
+MD5 102ec928bf01d326931ea260173c1dab files/postinst-en.txt 649
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFB9QppEZCkKN40op4RArWSAJwJ+YCT3kcK3EEpb+pyPMJCSF3xSQCeIxwB
+bw7nA1oVeYpitoZof32r1VM=
+=d8Qr
+-----END PGP SIGNATURE-----
