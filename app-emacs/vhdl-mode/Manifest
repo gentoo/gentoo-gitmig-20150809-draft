@@ -1,5 +1,5 @@
-MD5 7d539ea253f509d6af6a9396d8d1ff01 ChangeLog 562
+MD5 03e5a1ae5fee4c863cd345173454e166 ChangeLog 567
 MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
-MD5 ff0f55ebdd9225c3be3df5e75ab37249 vhdl-mode-3.33.2.ebuild 887
+MD5 6b95301e2e6632e720ae87322cf05e08 vhdl-mode-3.33.2.ebuild 892
 MD5 a660a1a260fe78bf0674e003faac9cb7 files/50vhdl-mode-gentoo.el 147
 MD5 792ddd890b1e4550ece823eb320ddbc3 files/digest-vhdl-mode-3.33.2 68

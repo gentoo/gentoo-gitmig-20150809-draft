@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 1cf178db69a1375c2fbaa0a7cfb76b7a haskell-mode-1.44-r1.ebuild 700
-MD5 044ccce59065981090237461192cbd6e ChangeLog 1221
+MD5 def583e501dbebbf6c689b10669bd7ad ChangeLog 1225
+MD5 bad5edb9bea305ec99dd5e52ba66f80d haskell-mode-1.44-r1.ebuild 704
 MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
 MD5 0dfd307298e9d2c80f00001a80d95f89 files/50haskell-mode-gentoo.el 476
 MD5 a310c35d01a33d349ce788cb408b70c3 files/digest-haskell-mode-1.44-r1 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBOOBDCHk4+ZoBpvsRAiBeAJ9bFO2EpGncKo1xTmBNoJp1etsbswCfV31P
-dvc8HlkPEAEMDUu/XqBJ7wc=
-=7pBk
------END PGP SIGNATURE-----

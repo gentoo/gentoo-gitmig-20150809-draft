@@ -1,5 +1,5 @@
-MD5 9744697549e29525a89fe5655b1bef04 ChangeLog 615
+MD5 f7aabfa6a99123dee5ade64fa146691e ChangeLog 620
 MD5 21c241bbefde20d6fea4b612da378963 metadata.xml 178
-MD5 a05c7ffbab6fb2508a470548245f2307 pymacs-0.22.ebuild 971
+MD5 6cd5a568c658a1f2b6ac392b8c1c2176 pymacs-0.22.ebuild 976
 MD5 bda0b79a6ef909ba726d0f9a9a7e84c0 files/50pymacs-gentoo.el 191
 MD5 f7d73dd21b3da6c8dc519bcb4cbea18c files/digest-pymacs-0.22 63

@@ -1,5 +1,5 @@
-MD5 2c7240864fac3aa5b73aaa734744fed9 ChangeLog 411
+MD5 e2cc029b804743e524e18abca4c63a1a ChangeLog 413
 MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
-MD5 4d918de707058d72b2f47d2853bddea4 mmm-mode-0.4.7.ebuild 956
+MD5 72981627c5ab7af7fac3d78e3a95790d mmm-mode-0.4.7.ebuild 958
 MD5 15fbbb4437f8e2a5f3078a68727ba406 files/50mmm-mode-gentoo.el 106
 MD5 a91bc1220be4b1f18aee15a6391cb7aa files/digest-mmm-mode-0.4.7 66

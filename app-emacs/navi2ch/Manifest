@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 cd708aebe216371dc1ec2673aa56c8d3 ChangeLog 2672
+MD5 137bf469f573c43395d5b189600dbe18 ChangeLog 2676
 MD5 1d42b06bfb3e26653185a94eb94bae8a metadata.xml 266
-MD5 8a009bb55aacddfe6b3a5c0f765cd6ce navi2ch-1.7.3.ebuild 1295
-MD5 6e79d1038006d4b7b94d41c55af3890f navi2ch-1.7.4.ebuild 1306
-MD5 b9ec64c9b805552b67b3e808c9b4be16 navi2ch-1.7.5.ebuild 1287
+MD5 4a3e64c3f47d4cc95dabe2321009b294 navi2ch-1.7.5.ebuild 1292
+MD5 22f302f42c6f27413edaded7def5bbee navi2ch-1.7.3.ebuild 1300
+MD5 93187e4af1f380ba979bba9a5df72ec7 navi2ch-1.7.4.ebuild 1310
 MD5 b6d9a432b8f788eb992be7213cc8a249 files/50navi2ch-gentoo.el 99
+MD5 9411e13333c8e6c42bd2f3026f059bcf files/digest-navi2ch-1.7.5 65
 MD5 340e536a81e2cf264d1de14d9cdbd155 files/digest-navi2ch-1.7.3 65
 MD5 0291e3f94bf11003587420cdf20e37a7 files/digest-navi2ch-1.7.4 65
-MD5 9411e13333c8e6c42bd2f3026f059bcf files/digest-navi2ch-1.7.5 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBxZKA60LfUIagIAkRAta9AJ46KLdjbB610HP865fTKirIy7P6LgCfcox7
-MAZtDrsuRHp9sYSsKqo4Y5Y=
-=RA20
------END PGP SIGNATURE-----

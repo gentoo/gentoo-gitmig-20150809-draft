@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 0a8f4b51c6266bf8d03ac2f396afcffb cedet-1.0_beta3.ebuild 1424
-MD5 9bbdaeb2a66ea0de64873be1bc319077 ChangeLog 675
+MD5 9bbc881d00b9a7998677b684646a9d28 ChangeLog 679
+MD5 e6c955562e851c750ade873cf2921654 cedet-1.0_beta3.ebuild 1428
 MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
 MD5 a070e39802eeece0cd8c0bf82727f2f2 files/60cedet-gentoo.el 263
 MD5 9dbe11bdb8fec03e4dd3cf9cbad937ca files/digest-cedet-1.0_beta3 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBQtHrCHk4+ZoBpvsRAtOeAJ9dujk71oLQSJElJwPH3ArPVYKTwQCaA69X
-LA+8AFvAmzY5DXuViYOf9eY=
-=mr4i
------END PGP SIGNATURE-----

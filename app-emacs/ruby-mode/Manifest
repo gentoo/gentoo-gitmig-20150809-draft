@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 079e94c5731238d6fd8c1bab59b5ff98 ruby-mode-1.8.1.ebuild 674
-MD5 1c7593efc59e4706c6e77f39d08793ac ruby-mode-1.8.0.ebuild 704
-MD5 1b9f57c6a90972cebb278db48092d71e ChangeLog 908
+MD5 413cfcdb17c9b820618e0ffae2fca85e ChangeLog 912
 MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
+MD5 9130affceb3b021ba93741e8cb2eabaa ruby-mode-1.8.0.ebuild 706
+MD5 4613c2da9ee82a6c2b55b01993ea31d1 ruby-mode-1.8.1.ebuild 678
+MD5 a8b4c21b12b53dc9ecab406a17419f77 files/50ruby-mode-gentoo.el 243
 MD5 e1c6eac35da8ce7f11bab66795de0b80 files/digest-ruby-mode-1.8.0 63
 MD5 72d152e1bd1b4cb1eab8bee7324ba953 files/digest-ruby-mode-1.8.1 63
-MD5 a8b4c21b12b53dc9ecab406a17419f77 files/50ruby-mode-gentoo.el 243
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBOOy7CHk4+ZoBpvsRAnBTAJoC0LP7N23dskdQ/EPNJC/rnrB7/gCcDgZz
-+FI7vTcqhYM0p5sFwqLAYnY=
-=SLfS
------END PGP SIGNATURE-----

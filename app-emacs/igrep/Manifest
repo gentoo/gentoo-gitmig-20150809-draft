@@ -1,5 +1,5 @@
-MD5 1c338fb844430b907e797c3a6a712ed0 igrep-2.93.ebuild 839
-MD5 2b945484f06407ef97606bab619d2092 ChangeLog 390
+MD5 fbff74f78144bb6ba0dcb629390ff2ae ChangeLog 392
+MD5 9cc8504a76f519cd79ebb55c84ead5f8 igrep-2.93.ebuild 841
 MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
 MD5 cf8ba1bce245cdff66b34dc2e6fc6dae files/50igrep-gentoo.el 1218
 MD5 cb6b8b04b8b86f17afe952a80b4ec33d files/digest-igrep-2.93 61

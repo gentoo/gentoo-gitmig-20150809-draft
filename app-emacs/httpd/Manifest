@@ -1,5 +1,5 @@
-MD5 3e86a8260c9153a334bc555af92c4f5e httpd-0.5.ebuild 817
-MD5 22f4284d4e02f722e7559206006e6080 ChangeLog 387
+MD5 a5de9e3cd101e888fa343bd720d7b5f1 ChangeLog 389
+MD5 d1a028b34115e897899d44d35847cdb4 httpd-0.5.ebuild 819
 MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
 MD5 4b7b922729c67a512fe94cb5c34c2316 files/50httpd-gentoo.el 84
 MD5 e40c4aaed262da159d585d14063d5456 files/digest-httpd-0.5 60

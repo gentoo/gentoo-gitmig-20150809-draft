@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 8d4fabd304ffe936d43e481232846185 ChangeLog 795
+MD5 8cbecfbc8edb5c15302c01e2ecb99d49 ChangeLog 799
+MD5 65d67af462fb01faf4e0a1b7f2d632fd erc-cvs-4.1.ebuild 862
 MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
-MD5 54f9d9e4aacf83e53deb7f9b13569b94 erc-cvs-4.1.ebuild 858
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-erc-cvs-4.1 0
 MD5 525caef1ddd566109a224e44097d6e73 files/50erc-cvs-gentoo.el 101
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBOOkQCHk4+ZoBpvsRApA/AJ91ySTEqSvAQT/wamodlvMdUNjs4ACfZ75i
-EKLacajdUM8Rr9pWs83cERI=
-=xNCa
------END PGP SIGNATURE-----
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-erc-cvs-4.1 0

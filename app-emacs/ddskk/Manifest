@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 3ae2b8f4be5f712f7098c233c41f6b85 ChangeLog 2774
+MD5 ebf176c66d9afdccad2f07bb7fef5ee8 ChangeLog 2779
+MD5 2a91dccbb12d6672732c4fc7679ec558 ddskk-12.2.0-r1.ebuild 1062
 MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
-MD5 060c6c20299e86d77489308d0c429bd5 ddskk-12.2.1_pre20040822.ebuild 1107
-MD5 364d2f0dadde137b6b7d02d28a489ad2 ddskk-12.2.0-r1.ebuild 1057
+MD5 58b382ce702ab7511dc23c351694521d ddskk-12.2.1_pre20040822.ebuild 1112
 MD5 9f0765d97bdc7577ec845d54678eead9 files/50ddskk-gentoo.el 183
 MD5 e4f6ddf1c5fb2962dc34c1afcaf352c4 files/digest-ddskk-12.2.0-r1 65
 MD5 571175d2559282a5b03109d1a5a37480 files/digest-ddskk-12.2.1_pre20040822 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (Darwin)
-
-iD8DBQFBkY2wVWNWqTUmv+0RAuUyAJ9bLNc8GYMtGS8FyR5FRFouzH3eLACgpvsF
-sUX9X0EqD/Y9YSfMxg0WHy4=
-=A2KT
------END PGP SIGNATURE-----

@@ -1,5 +1,5 @@
-MD5 472dd5223704fca06da43affb1e3b167 ChangeLog 829
+MD5 c1b218ad4adc2ef0b8f8336dc3fa3e68 ChangeLog 834
 MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
-MD5 9648fd3f5b5fbfcc19505fb8a644a2e4 uptimes-2.3.ebuild 500
+MD5 facf1db39c599d98d5fa46ef034ca297 uptimes-2.3.ebuild 506
 MD5 19d1dbc6dedbee412140ed577f6bd5ac files/50uptimes-gentoo.el 105
 MD5 dfe98eaa57f6398fd1c61a9667bd99b9 files/digest-uptimes-2.3 62

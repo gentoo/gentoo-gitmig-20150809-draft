@@ -1,5 +1,5 @@
-MD5 510542b6a45d2e4a7a713e8d28d43627 ChangeLog 1635
+MD5 19fd723985bca5826213230fc55e6fd7 ChangeLog 1640
 MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
-MD5 5e9bc5a8aa6f732981571fb3ee13c2cc semantic-1.4.4-r1.ebuild 853
+MD5 38d33cc5b97b3aeb1b0f978693c44dd9 semantic-1.4.4-r1.ebuild 858
 MD5 897c44f1325a3ed9da30ae5cf3a6f451 files/60semantic-gentoo.el 956
 MD5 bc0fe7f73f997260a6a65d5149dcb65b files/digest-semantic-1.4.4-r1 66

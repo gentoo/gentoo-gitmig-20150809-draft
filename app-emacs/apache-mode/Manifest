@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 0786d00b8a6b1e0a8a27f26eba5d5a07 apache-mode-1.0.ebuild 865
-MD5 002bf6ef10d3bb2d237eeb8fb6fb879b apache-mode-1.1.ebuild 865
-MD5 f099ec80e3b95c9c9fd05a1f1bdd6db4 ChangeLog 893
+MD5 8734829e4fb32dd291b97fa93436736e ChangeLog 897
+MD5 6ad78531427590e775c51dc179037b44 apache-mode-1.0.ebuild 867
 MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
+MD5 612258acde9cd93537711dbbf36a5b99 apache-mode-1.1.ebuild 869
+MD5 36f8fd593bb185bfa2f31f1945414214 files/50apache-mode-gentoo.el 551
 MD5 5dbfa409fe0601da457e0abb5008f924 files/digest-apache-mode-1.0 66
 MD5 ff6967ad8da55344ed3ef5f670f819c5 files/digest-apache-mode-1.1 64
-MD5 36f8fd593bb185bfa2f31f1945414214 files/50apache-mode-gentoo.el 551
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBOO+nCHk4+ZoBpvsRAmvKAJ9hzb+cfZbgVY180wyQw9viGT/KwACgipDi
-hUUU8+80FxWldAYXcEE03fI=
-=1fjL
------END PGP SIGNATURE-----

@@ -1,5 +1,5 @@
-MD5 acc76d54f00bb019eae92ca588a937b2 ChangeLog 632
-MD5 8965bdb2f89027a8d992fb8940ec1388 filladapt-2.12.ebuild 490
+MD5 48167d781750aa6c7c84350094c39380 ChangeLog 637
+MD5 eb7a43727b84d83e7eea5d2e88bd0a4a filladapt-2.12.ebuild 495
 MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
 MD5 bcaaf39e9aa704c9b1622da3a48a1f71 files/50filladapt-gentoo.el 98
 MD5 0578b823eb6c4bb8c6f72c3eb3fcdf47 files/digest-filladapt-2.12 63

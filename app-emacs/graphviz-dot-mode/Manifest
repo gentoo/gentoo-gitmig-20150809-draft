@@ -1,5 +1,5 @@
-MD5 d54843b4d116df1f383198e3ad321032 ChangeLog 340
-MD5 5ada0fa34ae7e447f18e6e3e719cadf9 graphviz-dot-mode-0.2.ebuild 553
+MD5 10ee31773af2c94302e79eb2f2249b94 ChangeLog 342
+MD5 5ad5f7c412e78be47fe2bf89f6551ac8 graphviz-dot-mode-0.2.ebuild 556
 MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
 MD5 e6aabcd03e12074a52d113a3271138a9 files/50graphviz-dot-mode-gentoo.el 90
 MD5 ee0df00d70ac9de5dbe3f99f5e904fb8 files/digest-graphviz-dot-mode-0.2 71

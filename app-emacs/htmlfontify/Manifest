@@ -1,5 +1,5 @@
-MD5 6407e81c60e9ee49979a9a4122858672 htmlfontify-0.17.ebuild 916
-MD5 01e8080e709ab3c7485fc1d2eb31aacf ChangeLog 590
+MD5 cb465dcb1a7d104fbe552885cef2897d ChangeLog 592
+MD5 46415eb60159f6293dd9b2d9ec2b2837 htmlfontify-0.17.ebuild 918
 MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
 MD5 4f2171cc57ec51f59c407f6bf8c1efc8 files/50htmlfontify-gentoo.el 112
 MD5 29cb44272c00732b1bc6f13514277783 files/digest-htmlfontify-0.17 75

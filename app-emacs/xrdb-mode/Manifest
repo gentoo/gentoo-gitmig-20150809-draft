@@ -1,5 +1,5 @@
-MD5 ad1d67ca00feb2a5951795e947ca993a ChangeLog 465
+MD5 6a012d3cbc656f6f82cf00b6f1b5916a ChangeLog 470
 MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
-MD5 c57af2247ec2c0e02bece7bc2d097cf9 xrdb-mode-2.31.ebuild 685
+MD5 4db6d2c1ca5f23b84fad1f5531b44bea xrdb-mode-2.31.ebuild 690
 MD5 ccb153bdc46e5a6cf54e9428d7210a28 files/70xrdb-mode-gentoo.el 401
 MD5 2f6bc90ec678754b47d558cb3b3c6b90 files/digest-xrdb-mode-2.31 64

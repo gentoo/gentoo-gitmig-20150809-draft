@@ -1,5 +1,5 @@
-MD5 b7b9b92e68bc8d0dd894b0d5aebfebe1 ChangeLog 684
+MD5 37a86f1153f0aa4ec864476d47cac2be ChangeLog 689
+MD5 331f60ee155d7dcaf6812d3ad35264ef inform-mode-1.5.8.ebuild 790
 MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
-MD5 02aa361be8bf50f1c258a16e13c7d2e4 inform-mode-1.5.8.ebuild 785
 MD5 4deaf47f175ea180bf4af1ef030f2223 files/50inform-mode-gentoo.el 379
 MD5 f21f4607e3427959cf7039ee83721772 files/digest-inform-mode-1.5.8 69

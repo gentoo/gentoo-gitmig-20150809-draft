@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d3b4c961664e043235a5642061565031 ChangeLog 3122
-MD5 89fb9ece337d16df3f4e3405d96ad755 auctex-11.53.ebuild 929
-MD5 f7e470d44fe2cef2dbab215475e99708 auctex-11.14.ebuild 1343
+MD5 4fdc2ee9e0c96cbf56c48ca0df7e6bfc ChangeLog 3127
+MD5 db16ab40765513f4606c956746daaecb auctex-11.14.ebuild 1348
 MD5 58f3ddc03b5e54563fc8a9764e687dd5 metadata.xml 183
-MD5 ae54ad5f0109e11f428dd9430db3af5c auctex-11.53-r1.ebuild 1026
+MD5 8bc06c2bb2e021ff30701fe98542b9a8 auctex-11.53-r1.ebuild 1031
+MD5 713dbaefb1ea8a2f031546b86b2cebf5 auctex-11.53.ebuild 934
 MD5 07f98857b9cd7c49631f6b5cb42f9778 files/50auctex-gentoo.el 57
-MD5 f3090531afe8a9861685328690f74dfa files/digest-auctex-11.53 64
 MD5 3a36edc892ced33e4f4aa21ebb595c04 files/digest-auctex-11.14 64
 MD5 f3090531afe8a9861685328690f74dfa files/digest-auctex-11.53-r1 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBrwJDVWNWqTUmv+0RApS+AJ4v3vE18rr6dk23ohKrAyNcDRcg2ACgt9AO
-7L6S+mCRnnHThWuhntuUUmw=
-=u+5u
------END PGP SIGNATURE-----
+MD5 f3090531afe8a9861685328690f74dfa files/digest-auctex-11.53 64

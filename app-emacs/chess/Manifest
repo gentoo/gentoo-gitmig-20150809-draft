@@ -1,5 +1,5 @@
-MD5 5110ecf77959b931f1d9e067850a2401 ChangeLog 626
-MD5 37f0b24f9b6f68baeb221eda49fd6c64 chess-2.0_beta3.ebuild 1077
+MD5 6d4f6ad8f43504f6ef584e9e80e65789 ChangeLog 631
+MD5 c8e404cb38c7d934b67eaec49976d4c2 chess-2.0_beta3.ebuild 1082
 MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
 MD5 9126e1d41dd1cb51f77ee832df3a9a85 files/50chess-gentoo.el 436
 MD5 627b245c618bd76c6fe27edf4a1e4d3c files/digest-chess-2.0_beta3 215

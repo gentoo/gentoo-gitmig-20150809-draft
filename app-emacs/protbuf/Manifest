@@ -1,5 +1,5 @@
-MD5 43db85cca4190b30532dc601d0411c6f protbuf-1.7.ebuild 855
-MD5 ee169c53b1d237447679e0e3875ebb08 ChangeLog 399
+MD5 014a0e2397febfcc38f80d880d08b70c ChangeLog 401
 MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
+MD5 e7a889db698c16cdd3ff2095f5c483e5 protbuf-1.7.ebuild 857
 MD5 45ecd04158f003c0d23f93b7505d735a files/50protbuf-gentoo.el 104
 MD5 eb90c3e4a2085a7fb9a299a57c04ba7e files/digest-protbuf-1.7 62
