@@ -23,10 +23,9 @@ tetex		app-text/tetex
 aalib		media-libs/aalib	
 nas		media-libs/nas
 bonobo		gnome-base/bonobo
-svga		media-libs/svgalib
 ggi		media-libs/libggi
 tcltk		dev-lang/tcl dev-lang/tk
-java		virtual/jre
+# java		virtual/jre
 guile		dev-util/guile
 ruby		dev-lang/ruby
 mysql		dev-db/mysql

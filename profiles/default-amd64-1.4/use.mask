@@ -1,0 +1,8 @@
+# Anything that relies on vm86.h will not built on amd64
+# SVGAlib doesnt build
+svga
+
+# There is no JDK for x86_64 yet
+java
+jikes
+junit

@@ -1,14 +1,14 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # System-wide defaults for the gcc 3.2 Portage system
 
-USE="x86 oss 3dnow apm arts avi berkdb crypt cups encode foomaticdb gdbm gif gpm gtk imlib
-java jpeg kde gnome libg++ libwww mikmod mmx motif mpeg ncurses nls oggvorbis
-opengl pam pdflib png python qt quicktime readline sdl slang spell ssl
-svga tcpd truetype X xml2 xmms xv zlib"
+USE="amd64 oss 3dnow apm arts avi berkdb crypt -cups encode foomaticdb gdbm gif gpm gtk imlib
+-java jpeg kde gnome libg++ libwww mikmod mmx motif mpeg ncurses nls oggvorbis
+opengl pam pdflib png python -qt quicktime readline sdl slang spell sse ssl
+tcpd truetype X xml2 xmms xv zlib"
 
 ARCH="amd64"
 COMPILER="gcc3"
 ACCEPT_KEYWORDS="amd64"
-CFLAGS="-O2"
+CFLAGS="-O2 -fPIC"
 CHOST="x86_64-pc-linux-gnu"
 CXXFLAGS="${CFLAGS}"
