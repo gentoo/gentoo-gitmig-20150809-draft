@@ -1,4 +1,6 @@
-MD5 4040346bfbcf290d03e60d8b1648cc5e yatex-1.71.ebuild 1140
+MD5 28a8b4dcfef35fc7d6e9896514498cbe yatex-1.71.ebuild 1140
+MD5 73b8438632d3ec40a9f16e142f48b43a metadata.xml 646
+MD5 f8cbf24513f0e3152fef975527411071 ChangeLog 411
 MD5 25efbe9871a1b36669916928339fa1d8 files/50yatex-gentoo.el 532
 MD5 920ec551a0bac37b6e5b1142af2df6d0 files/yatex-1.71-gentoo.diff 2634
 MD5 cea9c48d2281fc63126df7a0dbb1c43b files/digest-yatex-1.71 61
