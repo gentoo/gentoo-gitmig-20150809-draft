@@ -1,23 +1,23 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 048fff0a0f31ca496ef8344d5fa5c8af ChangeLog 21407
-MD5 126ca8f672f0296d2f1e6830e6729a91 metadata.xml 231
-MD5 10a2319b0ee1e7e99e0503373d606ea2 sylpheed-1.0.4.ebuild 1613
 MD5 be77a46270c7b556dbfddd12c5fe20ce sylpheed-1.9.5.ebuild 1485
-MD5 bc51518bdbb48fbd6e0baff96268aced sylpheed-1.9.6.ebuild 1485
+MD5 7692620ad55e2702933bc75ca639987a sylpheed-1.0.4.ebuild 1615
 MD5 79126d7061a31b9aa5c2b0663137a57c sylpheed-1.0.3.ebuild 1610
-MD5 ead030bfd70c22a18c117bc77b1f1429 files/digest-sylpheed-1.9.6 68
-MD5 f4242298cfab21456442bfe52505d2b8 files/sylpheed-procmime.diff 1119
-MD5 4cbec71671b7349c904f860a12fee5d9 files/sylpheed-namespace.diff 550
-MD5 a362fe1639f77a7898dfeab021cf9ca2 files/digest-sylpheed-1.0.4 68
-MD5 cdbd74d02e21e89ef0a94ee91dbab75c files/digest-sylpheed-1.0.3 68
-MD5 27f6f6d2b688f8a5a197eae7d319daa1 files/digest-sylpheed-1.9.5 68
+MD5 bc51518bdbb48fbd6e0baff96268aced sylpheed-1.9.6.ebuild 1485
+MD5 b16f4b147e7188a2189b806dccea03ae ChangeLog 21636
+MD5 126ca8f672f0296d2f1e6830e6729a91 metadata.xml 231
 MD5 28f6e562e3c547daedea86c235dd15a3 files/sylpheed-1.9.2-references.diff 6489
+MD5 cdbd74d02e21e89ef0a94ee91dbab75c files/digest-sylpheed-1.0.3 68
+MD5 a362fe1639f77a7898dfeab021cf9ca2 files/digest-sylpheed-1.0.4 68
+MD5 27f6f6d2b688f8a5a197eae7d319daa1 files/digest-sylpheed-1.9.5 68
+MD5 ead030bfd70c22a18c117bc77b1f1429 files/digest-sylpheed-1.9.6 68
+MD5 4cbec71671b7349c904f860a12fee5d9 files/sylpheed-namespace.diff 550
+MD5 f4242298cfab21456442bfe52505d2b8 files/sylpheed-procmime.diff 1119
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFCSlshugEuf3OQ0akRAuHvAJ99SEb56sF43w5lv6F6U5u7mzg4WgCfUX1D
-GaHVpwNIzX3n2YfiXKp9Ots=
-=jVqA
+iD8DBQFCSpuH06ebR+OMO78RAscgAJ0dJBEWqPudBUXUsfHGnQ0kPLyzWACghJbR
+n3EV0BxZkF50JUNZLOaPOp8=
+=4Jqk
 -----END PGP SIGNATURE-----

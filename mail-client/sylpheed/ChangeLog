@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/sylpheed
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed/ChangeLog,v 1.94 2005/03/30 07:53:48 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed/ChangeLog,v 1.95 2005/03/30 12:28:38 luckyduck Exp $
+
+  30 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org> sylpheed-1.0.4.ebuild:
+  stable on amd64 wrt security bug #86541
 
   30 Mar 2005; Bryan Østergaard <kloeri@gentoo.org> sylpheed-1.0.4.ebuild:
   Stable on alpha, bug 86541.
@@ -49,6 +52,9 @@
 
   10 Mar 2005; Danny van Dyk <kugelfang@gentoo.org> sylpheed-1.0.3.ebuild:
   Stable on amd64 wrt Security BUG #84056.
+
+  09 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org> sylpheed-1.0.3.ebuild:
+  stable on amd64 wrt to #84056
 
   09 Mar 2005; Michael Hanselmann <hansmi@gentoo.org> sylpheed-1.0.3.ebuild:
   Stable on ppc.
