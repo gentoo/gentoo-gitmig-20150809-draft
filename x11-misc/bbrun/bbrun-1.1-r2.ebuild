@@ -1,6 +1,6 @@
-# Copyright 1999-2000 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbrun/bbrun-1.1-r2.ebuild,v 1.5 2002/07/11 06:30:57 drobbins Exp $
+# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbrun/bbrun-1.1-r2.ebuild,v 1.6 2002/07/22 13:38:41 aliz Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="blackbox program execution dialog box"
@@ -12,12 +12,13 @@ KEYWORDS="x86"
 
 DEPEND=">=x11-wm/blackbox-0.61
         =x11-libs/gtk+-1.2*"
+RDEPEND=$DEPEND
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}/bbrun
 	mv Makefile Makefile.orig
-	try sed '/CFLAGS =/ s:$: -I/usr/include/gtk-1.2 -I/usr/include/glib-1.2 '"${CFLAGS}"':' Makefile.orig > Makefile
+	sed '/CFLAGS =/ s:$: -I/usr/include/gtk-1.2 -I/usr/include/glib-1.2 '"${CFLAGS}"':' Makefile.orig > Makefile
 }
 
 src_compile() {
