@@ -1,5 +1,5 @@
 #!/bin/bash
-# $Header: /var/cvsroot/gentoo-x86/games-server/halflife-statsme/files/modsetup,v 1.1 2003/09/10 05:51:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/halflife-statsme/files/modsetup,v 1.2 2004/07/18 03:20:29 dragonheart Exp $
 
 source GENTOO_CFGDIR/modsetup.conf || { echo "Could not find config file!" ; exit 1 ; }
 
