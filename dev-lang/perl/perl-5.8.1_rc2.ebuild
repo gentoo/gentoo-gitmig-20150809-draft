@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.1_rc2.ebuild,v 1.1 2003/07/23 21:41:12 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.1_rc2.ebuild,v 1.2 2003/07/25 21:02:24 rac Exp $
 
 inherit eutils flag-o-matic 
 
@@ -151,6 +151,15 @@ src_compile() {
 	then
 		myconf="${myconf} -Ud_longdbl"
 	fi
+
+	if [ "`use alpha`" -a "${CC}" == "ccc" ]
+	then
+		ewarn "Perl will not be built with berkdb support, use gcc if you needed it..."
+		myconf="${myconf} -Ui_db -Ui_ndbm"
+	fi
+
+	[ "${ARCH}" = "hppa" ] && append-flags -fPIC
+	
 	
 cat > config.over <<EOF
 installprefix=${D}/usr
