@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.5 2002/04/17 20:01:39 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.6 2002/05/10 12:07:56 danarmak Exp $
 # This contains everything except things that modify ebuild variables and functions (e.g. $P, src_compile() etc.)
 ECLASS=kde-functions
 
@@ -37,8 +37,8 @@ set-kdedir() {
 	    ;;
 	    3*)	
 	    debug-print "$FUNCNAME: requesting autoconf-2.5, automake-1.4 for kde version 3*"
-	    export WANT_AUTOCONF_2_5=1
-	    export WANT_AUTOMAKE_1_4=1
+	    #export WANT_AUTOCONF_2_5=1
+	    #export WANT_AUTOMAKE_1_4=1
 	    ;;
 	esac
 	

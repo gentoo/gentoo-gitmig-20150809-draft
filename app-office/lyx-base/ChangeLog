@@ -1,8 +1,8 @@
 # ChangeLog for app-office/lyx-base
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-office/lyx-base/ChangeLog,v 1.4 2002/03/23 23:50:49 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lyx-base/ChangeLog,v 1.5 2002/05/10 12:07:56 danarmak Exp $
 
-*lyx-base-1.1.6.4-r2 (18 Mar 2002)
+*lyx-base-1.1.6.4-r3 (18 Mar 2002)
 
 	24 Mar 2002; Dan Armak <danarmak@gentoo.org> New revsion: close bug #1215.
 	Added configure parameter --with-extra-inc=/usr/X11R6/include.
