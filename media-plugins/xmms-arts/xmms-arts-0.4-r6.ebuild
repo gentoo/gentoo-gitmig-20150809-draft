@@ -1,7 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-arts/xmms-arts-0.4-r6.ebuild,v 1.3 2003/01/28 12:37:25 hannes Exp $
-inherit kde-base libtool
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-arts/xmms-arts-0.4-r6.ebuild,v 1.4 2003/01/28 12:45:09 seemant Exp $
+
+inherit kde-base libtool eutils
 
 # Note: we set many vars e.g. DEPEND insteaed of extending them because this isn't a proper KDE app,
 # it only links against arts. So we need set-kdedir, but almost nothing else. So make sure it continues
@@ -23,13 +24,13 @@ set-kdedir 3
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	patch -p2 < ${FILESDIR}/${PN/-/}-${PV}-nocmallocc.patch || die "Failed patch"
+	epatch ${FILESDIR}/${PN/-/}-${PV}-nocmallocc.patch
 	cp Makefile.am Makefile.orig
 	sed -e "s:artsc-config:${KDEDIR}/bin/artsc-config:" \
 		Makefile.orig > Makefile.am
-	patch -p1 < ${FILESDIR}/${P}-gentoo2.patch || die "Failed patch"
+	epatch ${FILESDIR}/${P}-gentoo2.patch
 	autoconf
-	#patch -p1 < ${FILESDIR}/${P}-gentoo-endian.patch || die "Failed patch"
+	#epatch ${FILESDIR}/${P}-gentoo-endian.patch
 }
 
 src_compile() {     
