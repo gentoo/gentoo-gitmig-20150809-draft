@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/genkernel
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.75 2005/03/02 21:17:24 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.76 2005/03/30 15:06:13 plasmaroo Exp $
+
+*genkernel-3.1.5 (30 Mar 2005)
+
+  30 Mar 2005; <plasmaroo@gentoo.org> +genkernel-3.1.5.ebuild:
+  Sync Portage to latest genkernel version.
 
 *genkernel-3.1.1b (02 Mar 2005)
 
