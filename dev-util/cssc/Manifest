@@ -1,13 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a46fb7dc387f811b36db261d4b78fe26 cssc-0.15_alpha0.ebuild 684
-MD5 5266e82035ddcc833620e48c9318a9cc ChangeLog 594
+MD5 d4a7a9ec36fa22d780eeceb8bc9209fc cssc-0.15_alpha0.ebuild 685
+MD5 79760fd654a7d567a77b4048c83521c9 ChangeLog 703
 MD5 8361f81b35233fa20d14209d08b15818 files/digest-cssc-0.15_alpha0 70
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBOsPlI1lqEGTUzyQRAu0JAJoDQqORXU4bsBr3i897O7UHpXoeZQCfYzdk
-tYU/CXpnD2FODqwY0lNU8cE=
-=Jo8z
------END PGP SIGNATURE-----

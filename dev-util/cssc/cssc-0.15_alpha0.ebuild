@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cssc/cssc-0.15_alpha0.ebuild,v 1.5 2004/07/02 05:04:27 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cssc/cssc-0.15_alpha0.ebuild,v 1.6 2004/09/05 17:09:28 aliz Exp $
 
 MY_P=${P/cssc/CSSC}
 MY_P=${MY_P/_alpha/alpha.pl}
@@ -11,7 +11,7 @@ HOMEPAGE="http://cssc.sourceforge.net/"
 SLOT="0"
 LICENSE="GPL-2 LGPL-2"
 
-KEYWORDS="x86"
+KEYWORDS="x86 ~amd64"
 IUSE=""
 
 DEPEND="virtual/libc"
