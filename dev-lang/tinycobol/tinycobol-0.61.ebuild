@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tinycobol/tinycobol-0.61.ebuild,v 1.2 2003/10/27 09:57:25 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tinycobol/tinycobol-0.61.ebuild,v 1.3 2003/11/12 08:57:15 phosphan Exp $
 
 inherit eutils
 
@@ -32,6 +32,10 @@ src_install() {
 	dodir /usr/man/man1
 	dodir /usr/lib
 	dodir /usr/share/htcobol
-	einstall
+	make prefix="${D}/usr" install
 	dodoc AUTHORS ChangeLog README STATUS
+	cd ${D}/usr/lib
+	rm libhtcobol.so libhtcobol.so.0
+	ln -s libhtcobol.so.0.* libhtcobol.so.0
+	ln -s libhtcobol.so.0 libhtcobol.so
 }
