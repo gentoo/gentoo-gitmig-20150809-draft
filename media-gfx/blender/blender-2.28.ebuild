@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.28.ebuild,v 1.2 2003/09/29 23:26:51 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.28.ebuild,v 1.3 2003/09/30 19:22:25 mr_bones_ Exp $
 
 inherit flag-o-matic
 replace-flags -march=pentium4 -march=pentium3
@@ -18,10 +18,10 @@ KEYWORDS="~x86 ~ppc"
 
 DEPEND="virtual/x11
 	blender-game? ( dev-games/ode )
-        sdl? ( media-libs/libsdl )
-        jpeg? ( media-libs/jpeg )
-        png? ( media-libs/libpng )
-        mozilla? ( net-www/mozilla )
+	sdl? ( media-libs/libsdl )
+	jpeg? ( media-libs/jpeg )
+	png? ( media-libs/libpng )
+	mozilla? ( net-www/mozilla )
 	truetype? ( >=freetype-2.0 )
 	fmod? ( media-libs/fmod )
 	>=openal-20020127
@@ -33,41 +33,41 @@ src_compile() {
 	local myconf=""
 
 	# SDL Support
-        if [ -n "`use sdl`" ]
-        then
-                myconf="${myconf} --with-sdl=/usr"
-        fi
+	if [ -n "`use sdl`" ]
+	then
+		myconf="${myconf} --with-sdl=/usr"
+	fi
 
 	# JPG Support (Should be there by default, but I'll put it in anyways)
-        if [ -n "`use jpeg`" ]
-        then
-                myconf="${myconf} --with-libjpeg=/usr"
-        fi
-                                                                    
-        # PNG Support (Same as above)
-        if [ -n "`use png`" ]
-        then
-                myconf="${myconf} --with-libpng=/usr"
-        fi
+	if [ -n "`use jpeg`" ]
+	then
+		myconf="${myconf} --with-libjpeg=/usr"
+	fi
+
+	# PNG Support (Same as above)
+	if [ -n "`use png`" ]
+	then
+		myconf="${myconf} --with-libpng=/usr"
+	fi
 
 	# ./configure points at the wrong mozilla directories and will fail
 	# with this enabled. (A simple patch should take care of this)
-        #if [ -n "`use mozilla`" ]
-        #then
-        #        myconf="${myconf} --with-mozilla=/usr"
-        #fi
+	#if [ -n "`use mozilla`" ]
+	#then
+	#	myconf="${myconf} --with-mozilla=/usr"
+	#fi
 
 	# TrueType support (For text objects)
-        if [ -n "`use truetype`" ]
-        then
-                myconf="${myconf} --with-freetype2=/usr"
-        fi
+	if [ -n "`use truetype`" ]
+	then
+		myconf="${myconf} --with-freetype2=/usr"
+	fi
 
 	# Build Staticly
-        if [ -n "`use blender-static`" ]
-        then
-                myconf="${myconf} --enable-blenderstatic"
-        fi
+	if [ -n "`use blender-static`" ]
+	then
+		myconf="${myconf} --enable-blenderstatic"
+	fi
 
 	# Build the game engine (Fails in 2.28)
 	if [ -n "`use blender-game`" ]
@@ -76,14 +76,15 @@ src_compile() {
 	fi
 
 	# Build the plugin (Will probably fail, especially without mozilla)
-        if [ -n "`use blender-plugin`" ]
-        then
-                myconf="${myconf} --enable-blenderplugin"
-        fi
+	if [ -n "`use blender-plugin`" ]
+	then
+		myconf="${myconf} --enable-blenderplugin"
+	fi
 
 	econf ${myconf} || die
 	emake || die
 }
+
 src_install() {
 	einstall || die
 }
