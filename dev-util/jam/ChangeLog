@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/jam
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/jam/ChangeLog,v 1.8 2004/06/25 02:37:00 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/jam/ChangeLog,v 1.9 2004/07/18 17:14:54 aliz Exp $
+
+  18 Jul 2004; Daniel Ahlberg <aliz@gentoo.org> jam-2.5.ebuild:
+  Added amd64 keyword, closing #57341.
 
   01 May 2004; Jeremy Huddleston <eradicator@gentoo.org> jam-2.5.ebuild:
   blocking on !dev-util/boost-jam
