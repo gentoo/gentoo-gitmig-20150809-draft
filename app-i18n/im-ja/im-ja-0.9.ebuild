@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/im-ja/im-ja-0.9.ebuild,v 1.3 2004/02/29 16:55:52 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/im-ja/im-ja-0.9.ebuild,v 1.4 2004/03/04 19:21:50 usata Exp $
 
 inherit gnome2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://im-ja.sourceforge.net/"
 SRC_URI="http://im-ja.sourceforge.net/${P}.tar.gz
 	http://im-ja.sourceforge.net/old/${P}.tar.gz"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~sparc"
+KEYWORDS="x86 ~sparc"
 SLOT="0"
 IUSE="gnome canna freewnn"
 
