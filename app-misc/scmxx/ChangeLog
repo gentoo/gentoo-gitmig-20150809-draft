@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/scmxx
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/scmxx/ChangeLog,v 1.9 2004/06/24 22:32:24 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/scmxx/ChangeLog,v 1.10 2004/10/17 19:59:57 pylon Exp $
+
+*scmxx-0.7.4 (17 Oct 2004)
+
+  17 Oct 2004; Lars Weiler <pylon@gentoo.org> +scmxx-0.7.4.ebuild:
+  Version bump as requested in bug #48537.
 
 *scmxx-0.6.4 (06 Sep 2003)
 
