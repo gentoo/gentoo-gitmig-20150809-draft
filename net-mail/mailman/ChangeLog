@@ -1,8 +1,12 @@
 # ChangeLog for net-mail/mailman
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/ChangeLog,v 1.6 2003/01/22 01:13:19 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/ChangeLog,v 1.7 2003/02/03 22:44:54 raker Exp $
 
 *mailman-2.1 (21 Jan 2003)
+
+  03 Feb 2003; Nick Hadaway <raker@gentoo.org> mailman-2.1.ebuild,
+  files/sendmail.rc :
+  Added an rc file.
 
   21 Jan 2003; Nick Hadaway <raker@gentoo.org> mailman-2.1.ebuild,
   files/digest-mailman-2.1 :
