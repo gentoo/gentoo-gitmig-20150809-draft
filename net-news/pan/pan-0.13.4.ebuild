@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/pan/pan-0.13.4.ebuild,v 1.1 2003/02/27 21:58:55 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/pan/pan-0.13.4.ebuild,v 1.2 2003/02/28 01:03:43 foser Exp $
 
 IUSE="spell"
 
@@ -15,6 +15,7 @@ SLOT="0"
 RDEPEND=">=dev-libs/glib-2.0.4
 	>=x11-libs/gtk+-2.0.5
 	>=dev-libs/libxml2-2.4.22
+	>=net-libs/gnet-1.1.5
 	spell? ( >=app-text/gtkspell-2.0.2 )"
 
 DEPEND="${RDEPEND}
