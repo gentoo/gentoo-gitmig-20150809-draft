@@ -1,10 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-1.5.3.ebuild,v 1.3 2002/10/05 05:39:22 drobbins Exp $
-
-IUSE="ipv6 gdbm tcltk ldap berkdb mysql pam"
-
-S=${WORKDIR}/${P}
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-1.5.3.ebuild,v 1.4 2002/11/30 03:04:46 vapier Exp $
 
 DESCRIPTION="An IMAP daemon designed specifically for maildirs"
 SRC_URI="http://ftp1.sourceforge.net/courier/${P}.tar.gz"
@@ -13,8 +9,10 @@ HOMEPAGE="http://www.courier-mta.org/"
 KEYWORDS="x86 ppc sparc sparc64"
 LICENSE="GPL-2"
 SLOT="0"
+IUSE="ipv6 gdbm tcltk ldap berkdb mysql pam"
 
 PROVIDE="virtual/imapd"
+
 RDEPEND="virtual/glibc
 	>=dev-libs/openssl-0.9.6
 	pam? ( >=sys-libs/pam-0.75 )
@@ -66,11 +64,9 @@ src_compile() {
 	emake || die "compile problem"
 }
 
-src_install () {
-
-	dodir /var/lib/courier-imap
-	mkdir -p ${D}/etc/pam.d
-	make install DESTDIR=${D}
+src_install() {
+	dodir /var/lib/courier-imap /etc/pam.d
+	make install DESTDIR=${D} || die
 
 	# avoid name collisions in /usr/sbin wrt imapd and pop3d
 	cd ${D}/usr/sbin
