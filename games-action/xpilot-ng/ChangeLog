@@ -1,0 +1,10 @@
+# ChangeLog for games-arcade/xpilot-ng
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/xpilot-ng/ChangeLog,v 1.1 2004/09/17 23:39:16 wolf31o2 Exp $
+
+*xpilot-ng-4.6.6 (17 Sep 2004)
+
+  17 Sep 2004; Chris Gianelloni <wolf31o2@gentoo.org> +xpilot-ng-4.6.6.ebuild:
+  Initial import. Ebuild submitted to bug #62537 by Lars Diesselberg
+  <larsdiesselberg@gmx.de>. Closing bug #62537.
+
