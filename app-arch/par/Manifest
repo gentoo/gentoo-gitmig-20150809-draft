@@ -1,3 +1,13 @@
-MD5 2fc01fe0cbb9fca373722956b691cb75 par-1.1.ebuild 725
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 898f82ac293f7c4362eba8dc2cbe01ed ChangeLog 935
+MD5 890ca3eae971dc989fd69b1219fe7a41 par-1.1.ebuild 701
 MD5 9373343eb9ba09a04f7a15781438de31 files/digest-par-1.1 59
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFA3LrjHTu7gpaalycRAla/AJ9Hw0OoeT+2kKEIeE1bSecA6WQ4RQCgxWkZ
+T/cqrhXYtZYIzieHGKTKAcg=
+=Pgzo
+-----END PGP SIGNATURE-----

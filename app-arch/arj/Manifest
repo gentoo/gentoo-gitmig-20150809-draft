@@ -1,9 +1,19 @@
-MD5 a3d72d1d37dcc81e901a7173d9cde6ac arj-3.10.20.ebuild 749
-MD5 c8c07f811894634ec27a1eb8e0717f3b arj-3.10g.ebuild 816
-MD5 ed3965c99f06962c46ab4f40895f6919 arj-3.10.18.ebuild 885
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 d4b5fd506cfe678483214ecefd04d5d8 ChangeLog 1188
-MD5 7c4c01b5654eb39a7be1799abaad4c2f files/digest-arj-3.10.18 63
-MD5 6c06d74438839e6880711dddb5efd036 files/digest-arj-3.10.20 63
-MD5 5e2195c695615ccdb1ecbefe4bcad796 files/arj-3.10.18-2.6.headers.patch 402
+MD5 1b5d3ba04bfd349be5d290ce4acd84e5 arj-3.10g.ebuild 777
+MD5 72f807fdab35ab52d9f79b3cbacdaaa6 arj-3.10.18.ebuild 891
+MD5 0f3defca7384ce0c18200e654e834742 arj-3.10.20.ebuild 753
 MD5 47ce44cd0bdc2037f4bfa8dc8e81dfbd files/digest-arj-3.10g 61
+MD5 7c4c01b5654eb39a7be1799abaad4c2f files/digest-arj-3.10.18 63
+MD5 5e2195c695615ccdb1ecbefe4bcad796 files/arj-3.10.18-2.6.headers.patch 402
 MD5 0187cf8866c2daa752565918b94e7ea0 files/arj-3.10.18-fPIC.patch 342
+MD5 6c06d74438839e6880711dddb5efd036 files/digest-arj-3.10.20 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFA3LmLHTu7gpaalycRApLTAJ49cZ6yImHs8Lfng9YfVPEDryGhXQCg3/eG
+TmQ7uoMt8CBYja5j/3eqpZg=
+=Rq19
+-----END PGP SIGNATURE-----

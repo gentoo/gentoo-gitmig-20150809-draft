@@ -1,13 +1,23 @@
-MD5 9494a9f699a07fd577d9e9852727b5fb tar-1.14.ebuild 1379
-MD5 81c70b1b110d4aec35fd9ea4733702be tar-1.13.92-r3.ebuild 1624
-MD5 b1611551a3ed1c7cbb72136ab0097a3d tar-1.13.25-r3.ebuild 1399
-MD5 37864435a09c80cba957fcaa84ea2be9 tar-1.13.94.ebuild 1349
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 1dad1cec31fb6183d30c3437722c7373 ChangeLog 6347
-MD5 e7c9ac5824e453f73a56032123c46f97 files/digest-tar-1.14 62
-MD5 e05d36a6f2aeb7f6374d04d61872bd53 files/tar-1.13.92-fix-one_file_system.patch 547
-MD5 a5f8c5da7a9465ea1978145f3ef0610c files/tar.1 7113
-MD5 a1ed3f466203d67eb2ec618b8b95c5d7 files/digest-tar-1.13.94 65
-MD5 4518c28dd014a2efcc10690d53b58ffd files/tar-1.13.25-r3.gentoo.diff 314
-MD5 8adb291e1142c213ed26260319bef9f4 files/tar-1.13.92-dont-strip-dot_slash.patch 893
+MD5 b1611551a3ed1c7cbb72136ab0097a3d tar-1.13.25-r3.ebuild 1399
+MD5 81c70b1b110d4aec35fd9ea4733702be tar-1.13.92-r3.ebuild 1624
+MD5 37864435a09c80cba957fcaa84ea2be9 tar-1.13.94.ebuild 1349
+MD5 d7d4677306979eb2c12d702dc93d422e tar-1.14.ebuild 1379
 MD5 ebfd134ad54b3a6a08124bef38ecdad6 files/digest-tar-1.13.25-r3 64
 MD5 e4017a705a2d9950c025b458ead9ac79 files/digest-tar-1.13.92-r3 65
+MD5 a1ed3f466203d67eb2ec618b8b95c5d7 files/digest-tar-1.13.94 65
+MD5 4518c28dd014a2efcc10690d53b58ffd files/tar-1.13.25-r3.gentoo.diff 314
+MD5 a5f8c5da7a9465ea1978145f3ef0610c files/tar.1 7113
+MD5 e7c9ac5824e453f73a56032123c46f97 files/digest-tar-1.14 62
+MD5 8adb291e1142c213ed26260319bef9f4 files/tar-1.13.92-dont-strip-dot_slash.patch 893
+MD5 e05d36a6f2aeb7f6374d04d61872bd53 files/tar-1.13.92-fix-one_file_system.patch 547
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFA3LuMHTu7gpaalycRApLcAJ4oVDwcCNV/iPJqR1JCPIzp8BtTGQCgwzGy
+6oC/n2fK3I7AC5P4SzY4ZI0=
+=sYr3
+-----END PGP SIGNATURE-----

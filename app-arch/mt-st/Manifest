@@ -1,8 +1,18 @@
-MD5 b222602d56bd9ac434e45670da9caf62 mt-st-0.7.ebuild 668
-MD5 7081056f60b05998ec789635fe3f8336 mt-st-0.6.ebuild 652
-MD5 89c87047b16a0c99d06f6b51e4b088e7 mt-st-0.7-r1.ebuild 730
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 1598dc5977334087820281f1ce2c2861 ChangeLog 1214
+MD5 327db41d39bae02d26019e48248e4e3c mt-st-0.6.ebuild 656
+MD5 2f5699f051d8493447bfda13b7c360f6 mt-st-0.7-r1.ebuild 735
+MD5 1de5a15a13654768b17cb3db0920cc9f mt-st-0.7.ebuild 672
 MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
 MD5 6a81aa6195840ec61f8fdfc81f476f03 files/digest-mt-st-0.6 60
 MD5 97eb21a50a993a5e783cb7964d288978 files/digest-mt-st-0.7 60
 MD5 97eb21a50a993a5e783cb7964d288978 files/digest-mt-st-0.7-r1 60
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFA3LrMHTu7gpaalycRAuFzAJ9pB9P76yVAjhdNSVN5/pSqZya7YACglPHc
+iYl0gRTskpDDfOHR/ZidJ1M=
+=yHdX
+-----END PGP SIGNATURE-----

@@ -1,4 +1,14 @@
-MD5 2484939485bef8c82cd2f402214ea88b gzip-x86-0.90.ebuild 681
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 81f283cb7f396ab25ced3553813d5f42 ChangeLog 646
+MD5 cb9bbede7cf3c5c390969a92b6b048a6 gzip-x86-0.90.ebuild 574
 MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
 MD5 30ea90807bc53110bd9192ea05b16412 files/digest-gzip-x86-0.90 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFA3LpnHTu7gpaalycRAoaXAKCwPCeUuf78NpNxayPUuPMiJmP8fgCgm0ri
+Qa//DctpewORzo6hvuiaLbI=
+=JQTJ
+-----END PGP SIGNATURE-----

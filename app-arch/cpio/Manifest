@@ -1,5 +1,15 @@
-MD5 8076f2a7f6dc407b3310b96e7d315cd0 cpio-2.4.2-r4.ebuild 881
-MD5 597c43011fee3120050c051cfedfb17f cpio-2.5.ebuild 752
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 75fa04bb3bb4a4d842fc21377bd3f63b ChangeLog 2396
+MD5 bdf751eacd7d76c34d4bce788910e0c2 cpio-2.4.2-r4.ebuild 878
+MD5 ca2ab6c7ce3d8f001a3d2a058252ecf4 cpio-2.5.ebuild 749
 MD5 6d916de4f4c7c2ce09bb45559eb50658 files/digest-cpio-2.4.2-r4 62
 MD5 a0838e9d5ff0463ecb8758db81652ff1 files/digest-cpio-2.5 60
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFA3LoHHTu7gpaalycRAo6SAJ0dcuZpm6GklugfzycauN4R8h6MqQCeK7eL
+UhsypLJ52eDGSEjztqm7vbk=
+=iBa4
+-----END PGP SIGNATURE-----

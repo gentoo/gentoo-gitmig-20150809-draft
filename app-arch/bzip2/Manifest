@@ -1,4 +1,14 @@
-MD5 2d69be7be4345211cb9071883dbb9a08 bzip2-1.0.2-r3.ebuild 1921
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 f56c3e79641c3432b990bece698b7ed3 ChangeLog 3675
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+MD5 4c3992a58d084723d6e5bb22bac8e1d4 bzip2-1.0.2-r3.ebuild 1918
 MD5 382f154f0ba01de10aff6207652d6799 files/digest-bzip2-1.0.2-r3 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFA3LnLHTu7gpaalycRAtiqAKCccGVlTfgtmj7j8m9m3lF1w4ow/wCgqYnb
+3Xs2YMe5bFRu1KFJeLKLeho=
+=kj+q
+-----END PGP SIGNATURE-----
