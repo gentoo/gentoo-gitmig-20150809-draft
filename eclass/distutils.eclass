@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/distutils.eclass,v 1.13 2003/09/09 17:18:27 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/distutils.eclass,v 1.14 2003/09/09 22:50:02 liquidx Exp $
 #
 # Author: Jon Nelson <jnelson@gentoo.org>
 # Current Maintainer: Alastair Tse <liquidx@gentoo.org>
@@ -71,8 +71,6 @@ distutils_python_tkinter() {
 	fi
 }
 
-# export PYVER as well
-distutils_python_version
 
 EXPORT_FUNCTIONS src_compile src_install
 
