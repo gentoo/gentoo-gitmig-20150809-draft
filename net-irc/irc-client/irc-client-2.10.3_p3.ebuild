@@ -1,13 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irc-client/irc-client-2.10.3_p3.ebuild,v 1.7 2004/07/01 22:21:33 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irc-client/irc-client-2.10.3_p3.ebuild,v 1.8 2004/07/12 23:05:42 swegener Exp $
 
-MY_P=irc
-MY_PV=2.10.3p3
+MY_P=irc${PV/_/}
+
 DESCRIPTION="A simplistic RFC compliant IRC client"
 HOMEPAGE="http://www.irc.org"
-SRC_URI="ftp://ftp.irc.org/irc/server/${MY_P}${MY_PV}.tgz
-		 ftp://ftp.funet.fi/pub/unix/irc/server/${MY_P}${MY_PV}.tgz"
+SRC_URI="ftp://ftp.irc.org/irc/server/${MY_P}.tgz"
 LICENSE="GPL-1"
 SLOT="0"
 
@@ -15,13 +14,12 @@ KEYWORDS="x86 ~ppc"
 IUSE="ipv6"
 
 DEPEND="virtual/libc
-		sys-libs/ncurses
-		sys-libs/zlib"
+	sys-libs/ncurses
+	sys-libs/zlib"
 
-S=${WORKDIR}/${MY_P}${MY_PV}
+S=${WORKDIR}/${MY_P}
 
 src_compile () {
-
 	use ipv6 && myconf="--with-ip6" || myconf="--without-ip6"
 
 	./configure \
@@ -39,7 +37,6 @@ src_compile () {
 }
 
 src_install() {
-
 	# See note above.
 	cd `support/config.guess`
 	make \
