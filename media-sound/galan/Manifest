@@ -1,8 +1,18 @@
-MD5 913185a1c73b4cbcfbd8448faedd6a99 ChangeLog 2318
-MD5 0d953ee321db35d8a9784266711a5e75 galan-0.2.14.ebuild 1014
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 87b9488bdcc1d1ecc9c2aa1a7a031ed5 ChangeLog 2454
+MD5 25f6cf51116a62d11af977796da4c16b galan-0.2.14.ebuild 994
 MD5 3be4f6e757e3057184136a002b0165f9 metadata.xml 221
-MD5 601b43789abda4a308ae8c2ff33649e0 galan-0.3.0_beta6.ebuild 990
+MD5 6ecbd79c39c0b5fcfdd1f28a509588c1 galan-0.3.0_beta6.ebuild 942
 MD5 38bdd7c55254e5267b7daa66e27d1fea files/digest-galan-0.2.14 64
 MD5 f291c312c9ac1307d9821704d09ed26b files/galan-0.2.14-alsalib-fix.patch 1862
 MD5 80af60dfcd3796ed3347b6a5306dba94 files/galan-0.3.0_beta3-gcc2_fix.patch 726
 MD5 5765c1e52d2d54a3c3f9563437b9a248 files/digest-galan-0.3.0_beta6 70
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBlHReArHZZzCEUG0RAuTWAJ95cWhmtdOFTQBq7iaq/+pjOMYf1gCeNGG5
+HdLBM2MsHmxnN5JQz5uSuHE=
+=PwxL
+-----END PGP SIGNATURE-----

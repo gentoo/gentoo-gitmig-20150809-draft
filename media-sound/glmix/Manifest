@@ -1,4 +1,14 @@
-MD5 5a0aaa5e75e4cbcfea8267fcc08c500b ChangeLog 687
-MD5 1d12c95fdde508e9912305e9c1d9cf86 glmix-0.1.ebuild 772
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 0a684e9948812f1d0f68aad03682294f ChangeLog 779
+MD5 e365fad8794d5045525aaab6801e1b7a glmix-0.1.ebuild 772
 MD5 2f758c82434233f84f01f80f850a1112 metadata.xml 217
 MD5 976305ee1d5b57f1fe6319ccec43b0c7 files/digest-glmix-0.1 60
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBlHR1ArHZZzCEUG0RAhcgAJ9qjlurUHRidZOXI6vnknWGYk9tgACfewTq
+6jDwBCVB0xMjP+5ygE4fSJA=
+=OnzF
+-----END PGP SIGNATURE-----

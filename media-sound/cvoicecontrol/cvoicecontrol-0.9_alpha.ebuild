@@ -1,13 +1,14 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cvoicecontrol/cvoicecontrol-0.9_alpha.ebuild,v 1.11 2004/07/12 22:45:32 eradicator Exp $
-
-inherit eutils
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cvoicecontrol/cvoicecontrol-0.9_alpha.ebuild,v 1.12 2004/11/12 08:24:59 eradicator Exp $
 
 IUSE=""
 
+inherit eutils
+
 MY_P=${P/_/}
 S=${WORKDIR}/${MY_P}
+
 DESCRIPTION="Console based speech recognition system"
 HOMEPAGE="http://www.kiecza.de/daniel/linux/cvoicecontrol/index.html"
 SRC_URI="http://www.kiecza.de/daniel/linux/${MY_P}.tar.bz2"
@@ -16,10 +17,8 @@ DEPEND="virtual/libc"
 
 SLOT="0"
 LICENSE="GPL-2"
-# ~sparc, ~amd64: 0.9_alpha: Builds fine on these systems, but I lack the 
-# ability to test, so it will remain in ~arch until I get good user feedback
-# If you use this on amd64 or sparc, please contact me.  --eradicator
-KEYWORDS="x86 ~amd64 ~sparc"
+
+KEYWORDS="amd64 sparc x86"
 
 src_unpack() {
 	unpack ${A}
@@ -38,9 +37,9 @@ src_unpack() {
 
 
 src_install () {
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die
 
 	#install documentation
-	dodoc AUTHORS BUGS COPYING ChangeLog FAQ README
+	dodoc AUTHORS BUGS ChangeLog FAQ README
 	dohtml cvoicecontrol/docs/en/*.html
 }
