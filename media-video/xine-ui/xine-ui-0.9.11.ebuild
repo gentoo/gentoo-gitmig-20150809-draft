@@ -1,21 +1,22 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/xine-ui-0.9.11.ebuild,v 1.1 2002/06/20 21:20:20 agenkin Exp $ 
+# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/xine-ui-0.9.11.ebuild,v 1.2 2002/06/21 14:09:33 seemant Exp $ 
 
 DESCRIPTION="Xine is a free gpl-licensed video player for unix-like systems"
 HOMEPAGE="http://xine.sourceforge.net/"
 LICENSE="GPL"
 
-DEPEND="virtual/glibc
-	media-libs/libpng
+DEPEND="media-libs/libpng
 	>=media-libs/xine-lib-${PV}
-	nls? ( sys-devel/gettext )
 	X? ( virtual/x11 )
-	directfb? ( >=dev-libs/DirectFB-0.9.9 )
-	gnome? ( gnome-base/ORBit )"
-RDEPEND="${DEPEND}"
+	aalib? ( media-libs/aalib )
+	gnome? ( gnome-base/ORBit )
+	directfb? ( >=dev-libs/DirectFB-0.9.9 )"
+
+RDEPEND="nls? ( sys-devel/gettext )"
 
 SLOT="0"
+LICENSE="GPL-2"
 
 SRC_URI="http://xine.sourceforge.net/files/${P}.tar.gz"
 S=${WORKDIR}/${P}

@@ -1,6 +1,12 @@
 # ChangeLog for media-video/xine-ui
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/ChangeLog,v 1.13 2002/06/20 21:20:20 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/ChangeLog,v 1.14 2002/06/21 14:09:33 seemant Exp $
+
+*xine-ui-0.9.11 (21 Jun 2002)
+
+  21 Jun 2002; Seemant Kulleen <seemant@gentoo.org> xine-ui-0.9.11.ebuild :
+
+  Added aalib as an optional dependency -- no revision bump.
 
 *xine-ui-0.9.11 (20 Jun 2002)
 
