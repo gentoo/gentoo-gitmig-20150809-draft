@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/digest-bubblebabble
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/digest-bubblebabble/ChangeLog,v 1.1 2003/06/23 17:38:13 mcummings Exp $
+
+*digest-bubblebabble-0.01 (23 Jun 2003)
+
+  23 Jun 2003; Michael Cummings <mcummings@gentoo.org>
+  digest-bubblebabble-0.01.ebuild:
+  dep for net-ssh
+
