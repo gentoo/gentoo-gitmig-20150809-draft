@@ -1,10 +1,18 @@
-MD5 669b486c641128f4c1f0a753d99ec6e6 ChangeLog 1278
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 0f94dcf5e1efb75ff104c58dddc8800a sms-2.0.1.ebuild 705
 MD5 53f9af53bd2ae23719be948338b95567 metadata.xml 756
-MD5 de8c02af85d7dc109ebe48f293dacf29 sms-1.9.2k.ebuild 743
-MD5 ad7e0910bc8a7e0ef0a9e1659bbcc976 sms-1.9.2l.ebuild 739
+MD5 d11bf105d2e5f91c10bb176fed242837 ChangeLog 1441
 MD5 5f3c2637bce2fa0c3debb237ffb1a708 sms-1.9.2m.ebuild 795
 MD5 22ecc56bb60ac1ea7954ad2d4cfc26cc sms-2.0.0_rc1.ebuild 727
-MD5 36116b7cf448ae4958c5017ff02f7068 files/digest-sms-1.9.2k 61
-MD5 3eb701b3f757855808807c89c6989427 files/digest-sms-1.9.2l 61
+MD5 29b4816eadb9d9e01fab320dd2272883 files/digest-sms-2.0.1 60
 MD5 d5c218a66c4b257f2c0b06daa234f78c files/digest-sms-1.9.2m 61
 MD5 80bee5ce797ad0b11888210980a1c56b files/digest-sms-2.0.0_rc1 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBgM1KmdTrptrqvGERAiBAAJ4kslqSq8wSdqg9+el/or33kl/GsgCaAzxZ
+rNzb5Sc5RfBSDCRP0LJuItY=
+=oW2q
+-----END PGP SIGNATURE-----
