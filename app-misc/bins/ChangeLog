@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/bins
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/bins/ChangeLog,v 1.29 2005/01/01 14:53:20 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/bins/ChangeLog,v 1.30 2005/01/02 21:08:35 ciaranm Exp $
+
+  02 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
 *bins-1.1.27 (21 Dec 2004)
 
@@ -29,7 +32,7 @@
   bins-1.1.23-r1.ebuild:
   Masked bins-1.1.23-r1.ebuild stable for ppc
 
-  02 Oct 2004; Bryan Østergaard <kloeri@gentoo.org> bins-1.1.26-r1.ebuild:
+  02 Oct 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> bins-1.1.26-r1.ebuild:
   Stable on alpha.
 
   29 Sep 2004; Michael Cummings <mcummings@gentoo.org>
@@ -80,7 +83,7 @@
   build directory, necessary for the gui portion to function. See bug 49661 for
   the history, thanks to Jason Mercer for pointing it out.
 
-  04 May 2004; Bryan Østergaard <kloeri@gentoo.org> bins-1.1.23-r1.ebuild:
+  04 May 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> bins-1.1.23-r1.ebuild:
   Stable on alpha.
 
 *bins-1.1.23-r1 (21 Dec 2003)

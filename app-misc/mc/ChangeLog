@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/mc
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/ChangeLog,v 1.70 2005/01/01 15:13:51 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/ChangeLog,v 1.71 2005/01/02 21:18:05 ciaranm Exp $
+
+  02 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   29 Dec 2004; Heinrich Wendel <lanius@gentoo.org> mc-4.6.0-r11.ebuild,
   mc-4.6.0-r12.ebuild:
@@ -37,7 +40,7 @@
   06 Oct 2004; Guy Martin <gmsoft@gentoo.org> mc-4.6.0-r11.ebuild:
   Stable on hppa.
 
-  02 Oct 2004; Bryan Østergaard <kloeri@gentoo.org> mc-4.6.0-r11.ebuild:
+  02 Oct 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> mc-4.6.0-r11.ebuild:
   Stable on alpha.
 
   27 Sep 2004; Heinrich Wendel <lanius@gentoo.org> mc-4.6.0-r11.ebuild:
@@ -58,7 +61,7 @@
   20 Sep 2004; Heinrich Wendel <lanius@gentoo.org> mc-4.6.0-r11.ebuild:
   add missing syntax files again, bug #64721
 
-  20 Sep 2004; Bryan Østergaard,,, <kloeri@gentoo.org> mc-4.6.0-r10.ebuild:
+  20 Sep 2004; Bryan Ã˜stergaard,,, <kloeri@gentoo.org> mc-4.6.0-r10.ebuild:
   Stable on alpha.
 
   16 Sep 2004; Heinrich Wendel <lanius@gentoo.org>
@@ -116,7 +119,7 @@
   09 May 2004; Gustavo Zacarias <gustavoz@gentoo.org> mc-4.6.0-r7.ebuild:
   Stable on hppa & sparc wrt #49990
 
-  09 May 2004; Bryan Østergaard <kloeri@gentoo.org> mc-4.6.0-r7.ebuild:
+  09 May 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> mc-4.6.0-r7.ebuild:
   Stable on alpha.
 
 *mc-4.6.0-r7 (08 May 2004)

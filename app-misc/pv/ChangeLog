@@ -1,8 +1,11 @@
 # ChangeLog for app-misc/pv
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/pv/ChangeLog,v 1.6 2005/01/01 15:20:10 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/pv/ChangeLog,v 1.7 2005/01/02 21:21:07 ciaranm Exp $
 
-  19 Oct 2004; Bryan Østergaard <kloeri@gentoo.org> pv-0.8.1.ebuild:
+  02 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
+
+  19 Oct 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> pv-0.8.1.ebuild:
   ~alpha keyword.
 
   15 Aug 2004; Jason Wever <weeve@gentoo.org> pv-0.8.1.ebuild:

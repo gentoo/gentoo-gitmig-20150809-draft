@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/run-mailcap
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/run-mailcap/ChangeLog,v 1.27 2005/01/01 15:22:30 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/run-mailcap/ChangeLog,v 1.28 2005/01/02 21:26:22 ciaranm Exp $
+
+  02 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
 *run-mailcap-3.28_p1-r1 (24 Dec 2004)
 
@@ -36,11 +39,11 @@
   09 Aug 2004; Tom Martin <slarti@gentoo.org> run-mailcap-3.26_p1.ebuild:
   No longer installs /etc/mime.types - RDEPENDs on app-misc/mime-types now.
 
-  03 Jul 2004; Bryan Østergaard <kloeri@gentoo.org>
+  03 Jul 2004; Bryan Ã˜stergaard <kloeri@gentoo.org>
   run-mailcap-3.26_p1.ebuild:
   Stable on alpha.
 
-  04 May 2004; Bryan Østergaard <kloeri@gentoo.org>
+  04 May 2004; Bryan Ã˜stergaard <kloeri@gentoo.org>
   run-mailcap-3.23_p1-r1.ebuild:
   Stable on alpha.
 

@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/lirc
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.57 2005/01/01 15:12:16 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.58 2005/01/02 21:15:49 ciaranm Exp $
+
+  02 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   25 Dec 2004; Doug Goldstein <cardoe@gentoo.org> lirc-0.7.0-r1.ebuild:
   compile fix, add libtoolize
@@ -60,7 +63,7 @@
   lirc-0.6.6-r1.ebuild:
   Masked lirc-0.6.6-r1.ebuild stable for ppc
 
-  02 Oct 2004; Bryan Østergaard <kloeri@gentoo.org> lirc-0.7.0_pre7.ebuild:
+  02 Oct 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> lirc-0.7.0_pre7.ebuild:
   Stable on alpha.
 
   28 Sep 2004; Sven Wegener <swegener@gentoo.org> files/lircmd:
@@ -107,7 +110,7 @@
   28 Jul 2004; Tom Gall <tgall@gentoo.org> lirc-0.7.0_pre6.ebuild:
   stable on ppc64, bug #55076
 
-  03 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> lirc-0.7.0_pre4.ebuild:
+  03 Jul 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> lirc-0.7.0_pre4.ebuild:
   Stable on alpha.
 
 *lirc-0.7.0_pre6 (30 Jun 2004)

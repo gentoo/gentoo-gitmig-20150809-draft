@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/mime-types
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mime-types/ChangeLog,v 1.21 2005/01/01 15:14:31 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mime-types/ChangeLog,v 1.22 2005/01/02 21:20:24 ciaranm Exp $
+
+  02 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   16 Oct 2004; Tom Martin <slarti@gentoo.org> mime-types-1.0-r1.ebuild:
   Stable on amd64.
@@ -12,7 +15,7 @@
   mime-types-1.0-r1.ebuild:
   Masked mime-types-1.0-r1.ebuild stable for ppc
 
-  02 Oct 2004; Bryan Østergaard <kloeri@gentoo.org> mime-types-1.0-r1.ebuild:
+  02 Oct 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> mime-types-1.0-r1.ebuild:
   Stable on alpha.
 
   02 Oct 2004; Hasan Khalil <gongloo@gentoo.org> mime-types-1.0-r1.ebuild:

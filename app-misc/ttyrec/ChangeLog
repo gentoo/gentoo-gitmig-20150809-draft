@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/ttyrec
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ttyrec/ChangeLog,v 1.12 2005/01/01 15:27:38 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ttyrec/ChangeLog,v 1.13 2005/01/02 21:36:12 ciaranm Exp $
+
+  02 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   13 Dec 2004; Jason Wever <weeve@gentoo.org> ttyrec-1.0.6.ebuild:
   Stable on sparc.
@@ -14,7 +17,7 @@
   18 Sep 2004; Jason Wever <weeve@gentoo.org> ttyrec-1.0.6.ebuild:
   Added ~sparc keyword, resolves bug #63721.
 
-  12 Sep 2004; Bryan Østergaard <kloeri@gentoo.org> ttyrec-1.0.6.ebuild:
+  12 Sep 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> ttyrec-1.0.6.ebuild:
   Add ~alpha keyword, bug 63724.
 
   31 Jul 2004; Tom Gall <tgall@gentoo.org> ttyrec-1.0.6.ebuild:

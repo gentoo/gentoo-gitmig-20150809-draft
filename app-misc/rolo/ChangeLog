@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/rolo
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/rolo/ChangeLog,v 1.9 2005/01/01 15:22:15 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/rolo/ChangeLog,v 1.10 2005/01/02 21:24:29 ciaranm Exp $
+
+  02 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   29 Dec 2004; Tom Martin <slarti@gentoo.org> rolo-011.ebuild:
   Marked ~amd64, resolves bug 75728.
@@ -15,7 +18,7 @@
   rolo-011.ebuild:
   x86 stable
 
-  04 May 2004; Bryan Østergaard <kloeri@gentoo.org> rolo-011.ebuild:
+  04 May 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> rolo-011.ebuild:
   Stable on alpha.
 
   24 Jul 2003; Don Seiler <rizzo@gentoo.org>; rolo-011.ebuild:

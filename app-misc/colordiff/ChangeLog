@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/colordiff
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/colordiff/ChangeLog,v 1.30 2005/01/01 14:57:00 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/colordiff/ChangeLog,v 1.31 2005/01/02 21:10:57 ciaranm Exp $
+
+  02 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   27 Oct 2004; Kito <kito@gentoo.org> colordiff-1.0.4.ebuild:
   added ~ppc-macos closes bug 67555
@@ -38,10 +41,10 @@
   07 May 2004; Ferris McCormick <fmccor@gentoo.org> colordiff-1.0.3.ebuild:
   Marked stable on sparc.
 
-  04 May 2004; Bryan Østergaard <kloeri@gentoo.org> colordiff-1.0.4.ebuild:
+  04 May 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> colordiff-1.0.4.ebuild:
   Stable on alpha.
 
-  19 Apr 2004; Bryan Østergaard <kloeri@gentoo.org> colordiff-1.0.4.ebuild:
+  19 Apr 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> colordiff-1.0.4.ebuild:
   Added ~alpha to keywords.
 
 *colordiff-1.0.4 (04 Jan 2004)

@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/countrycodes
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/countrycodes/ChangeLog,v 1.13 2005/01/01 14:57:26 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/countrycodes/ChangeLog,v 1.14 2005/01/02 21:11:46 ciaranm Exp $
+
+  02 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   18 Dec 2004; Simon Stelling <blubb@gentoo.org> countrycodes-1.0.5.ebuild:
   added ~amd64
@@ -18,7 +21,7 @@
   19 Sep 2004; Tom Gall <tgall@gentoo.org> countrycodes-1.0.5.ebuild:
   stable on ppc64, bug #63661
 
-  12 Sep 2004; Bryan Østergaard <kloeri@gentoo.org> countrycodes-1.0.5.ebuild:
+  12 Sep 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> countrycodes-1.0.5.ebuild:
   Add ~alpha keyword, bug 63723.
 
   30 Jun 2004; David Holm <dholm@gentoo.org> countrycodes-1.0.5.ebuild:

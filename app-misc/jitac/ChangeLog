@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/jitac
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/jitac/ChangeLog,v 1.11 2005/01/01 15:08:26 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/jitac/ChangeLog,v 1.12 2005/01/02 21:14:09 ciaranm Exp $
+
+  02 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   16 Oct 2004; Thomas Matthijs <axxo@gentoo.org> jitac-0.2.0-r1.ebuild:
   use java-pkg_dohtml instead of dohtml to also install the package-list in
@@ -26,7 +29,7 @@
   10 Jul 2004; Tom Martin <slarti@gentoo.org> jitac-0.2.0.ebuild:
   Added ~amd64.
 
-  04 May 2004; Bryan Østergaard <kloeri@gentoo.org> jitac-0.2.0.ebuild:
+  04 May 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> jitac-0.2.0.ebuild:
   Stable on alpha.
 
 *jitac-0.2.0 (14 Feb 2004)

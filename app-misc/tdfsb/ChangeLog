@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/tdfsb
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tdfsb/ChangeLog,v 1.12 2005/01/01 15:25:34 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tdfsb/ChangeLog,v 1.13 2005/01/02 21:31:25 ciaranm Exp $
+
+  02 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> tdfsb-0.0.7.ebuild:
   Masked tdfsb-0.0.7.ebuild stable for ppc
@@ -9,7 +12,7 @@
   Added amd64 keyword and replaced hardcoded cflags with user cflags. Closing
   #54353.
 
-  04 May 2004; Bryan Østergaard <kloeri@gentoo.org> tdfsb-0.0.7.ebuild:
+  04 May 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> tdfsb-0.0.7.ebuild:
   Stable on alpha.
 
   19 Mar 2004; Gustavo Zacarias <gustavoz@gentoo.org> tdfsb-0.0.7.ebuild:

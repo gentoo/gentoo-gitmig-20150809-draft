@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/livecd-tools
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/livecd-tools/ChangeLog,v 1.35 2005/01/01 15:12:30 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/livecd-tools/ChangeLog,v 1.36 2005/01/02 21:16:55 ciaranm Exp $
+
+  02 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   23 Dec 2004; Guy Martin <gmsoft@gentoo.org> livecd-tools-1.0.10.ebuild:
   Stable on hppa.
@@ -85,7 +88,7 @@
   05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> :
   Masked livecd-tools-1.0.1.ebuild stable for ppc
 
-  05 Sep 2004; Bryan Østergaard <kloeri@gentoo.org> livecd-tools-1.0.2.ebuild:
+  05 Sep 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> livecd-tools-1.0.2.ebuild:
   Add ~alpha keyword.
 
 *livecd-tools-1.0.5 (27 Jul 2004)
