@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-3.2.5-r1.ebuild,v 1.5 2003/10/06 06:09:38 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-3.2.5-r1.ebuild,v 1.6 2003/10/07 07:16:40 lu_zero Exp $
 
 IUSE="qt kde gnome"
 
@@ -51,8 +51,9 @@ src_unpack() {
 	patch -p1 < ${FILESDIR}/fglrx-2.6-vmalloc-vmaddr.patch
 	einfo "applying fglrx-2.6-iminor.patch"
 	patch -p1 < ${FILESDIR}/fglrx-2.6-iminor.patch
-	einfo "applying fglrx-2.6-tsk_euid.patch"
-	patch < ${FILESDIR}/3.2.5-linux-2.6.0-test6-mm.patch
+	# test6-mm1 is outdated
+	#einfo "applying fglrx-2.6-tsk_euid.patch"
+	#patch < ${FILESDIR}/3.2.5-linux-2.6.0-test6-mm.patch
 	fi
 }
 
