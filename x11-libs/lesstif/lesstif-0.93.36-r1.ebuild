@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/lesstif/lesstif-0.93.36-r1.ebuild,v 1.3 2002/11/12 19:06:31 cretin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/lesstif/lesstif-0.93.36-r1.ebuild,v 1.4 2002/11/23 20:31:26 cybersystem Exp $
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 
@@ -9,7 +9,7 @@ LICENSE="LGPL"
 
 DEPEND="virtual/x11"
 
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 SLOT="0"
 
 S="${WORKDIR}/${P}"
