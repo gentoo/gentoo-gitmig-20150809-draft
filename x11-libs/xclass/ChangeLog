@@ -1,10 +1,13 @@
 # ChangeLog for x11-libs/xclass
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xclass/ChangeLog,v 1.4 2003/02/12 09:24:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xclass/ChangeLog,v 1.5 2003/06/27 11:56:43 cretin Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *xclass-0.7.4 (23 Oct 2002)
+
+  27 Jun 2003; Stefan Jones <cretin@gentoo.org> :
+  Keep -fPIC as it is needed, fix sandbox instead ...
 
   23 Oct 2002; Mike Frysinger <vapier@gentoo.org> :
   Initial import. Ebuild submitted by me.
