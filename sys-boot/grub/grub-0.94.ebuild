@@ -1,25 +1,20 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.94.ebuild,v 1.2 2004/02/02 22:49:58 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.94.ebuild,v 1.3 2004/02/04 17:01:00 vapier Exp $
 
-inherit mount-boot eutils flag-o-matic
+inherit mount-boot eutils flag-o-matic gcc
 
-filter-flags "-fstack-protector"
-
-IUSE="static"
-
-S=${WORKDIR}/${P}
 DESCRIPTION="GNU GRUB boot loader"
 HOMEPAGE="http://www.gnu.org/software/grub/"
 SRC_URI="ftp://alpha.gnu.org/gnu/grub/${P}.tar.gz"
 
-SLOT="0"
 LICENSE="GPL-2"
+SLOT="0"
 KEYWORDS="-* ~x86"
+IUSE="static"
 
 DEPEND=">=sys-libs/ncurses-5.2-r5
 	>=sys-devel/autoconf-2.5"
-
 PROVIDE="virtual/bootloader"
 
 src_unpack() {
@@ -46,12 +41,14 @@ src_compile() {
 	### incompatible system.
 	unset CFLAGS
 
-	append-flags "-DNDEBUG -minline-all-stringops"
-	use static && export LDFLAGS="${LDFLAGS} -static"
+	filter-flags -fstack-protector
+
+	append-flags -DNDEBUG
+	[ `gcc-major-version` -eq 3 ] && append-flags -minline-all-stringops
+	use static && append-ldflags -static
 
 	# http://www.gentoo.org/proj/en/hardened/etdyn-ssp.xml
-	if has_version 'sys-devel/hardened-gcc' && [ "${CC}"="gcc" ]
-	then
+	if has_version 'sys-devel/hardened-gcc' && [ "$(gcc-getCC)" == "gcc" ] ; then
 		# the configure script has problems with -nostdlib
 		CC="${CC} -yet_exec -yno_propolice"
 	fi
@@ -62,7 +59,7 @@ src_compile() {
 
 	# build the net-bootable grub first
 	CFLAGS="" \
-		econf \
+	econf \
 		--datadir=/usr/lib/grub \
 		--exec-prefix=/ \
 		--disable-auto-linux-mem-opt \
@@ -81,11 +78,11 @@ src_compile() {
 
 	# now build the regular grub
 	CFLAGS="${CFLAGS}" \
-		econf \
+	econf \
 			--datadir=/usr/lib/grub \
 			--exec-prefix=/ \
 			--disable-auto-linux-mem-opt || die
-		emake || die "making regular stuff"
+	emake || die "making regular stuff"
 }
 
 src_install() {
