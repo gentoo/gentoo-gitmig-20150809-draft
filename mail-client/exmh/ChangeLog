@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/exmh
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/exmh/ChangeLog,v 1.1 2004/05/30 02:42:31 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/exmh/ChangeLog,v 1.2 2004/06/03 15:55:48 dholm Exp $
+
+  03 Jun 2004; David Holm <dholm@gentoo.org> exmh-2.6.3.ebuild:
+  Added to ~ppc.
 
 *exmh-2.6.3 (29 May 2004)
 

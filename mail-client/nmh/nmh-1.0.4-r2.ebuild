@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/nmh/nmh-1.0.4-r2.ebuild,v 1.1 2004/05/30 02:54:26 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/nmh/nmh-1.0.4-r2.ebuild,v 1.2 2004/06/03 15:54:40 dholm Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="New MH mail reader"
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.mhost.com/nmh/"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="x86 sparc"
+KEYWORDS="x86 sparc ~ppc"
 
 DEPEND="virtual/glibc
 	=sys-libs/db-1.85*
