@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swig/swig-1.3_alpha5.ebuild,v 1.1 2000/11/26 20:54:17 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swig/swig-1.3_alpha5-r1.ebuild,v 1.1 2000/12/01 19:46:12 drobbins Exp $
 
 P=swig1.3a5
 A=${P}.tar.gz
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.swig.org"
 
 DEPEND=">=sys-devel/gcc-2.95.2
 	>=sys-libs/glibc-2.1.3
-	|| ( >=sys-devel/python-basic-1.5.2 >=dev-lang/python-1.5.2 )
+	>=virtual/python-1.5.2
 	>=dev-lang/jdk-1.2.2
 	>=dev-lang/ruby-1.6.1
 	>=dev-util/guile-1.4

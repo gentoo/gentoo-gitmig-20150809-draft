@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-office/gnumeric/gnumeric-0.59a.ebuild,v 1.3 2000/11/25 18:59:38 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-office/gnumeric/gnumeric-0.59a-r1.ebuild,v 1.1 2000/12/01 19:46:12 drobbins Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/gnumeric/"${A}
 HOMEPAGE="http://www.gnome.org/gnome-office/gnumeric.shtml"
 
 DEPEND=">=sys-devel/perl-5
-	|| ( >=sys-devel/python-basic-1.5 >=dev-lang/python-1.5 )
+	>=virtual/python-1.5.2
 	>=gnome-base/gal-0.2.2
 	>=gnome-libs/gb-0.0.15
 	>=gnome-libs/libole2-0.1.7

@@ -140,6 +140,18 @@ build_depend() {
 	fi
 }
 
+gen_depend() {
+	for x in $DEPEND
+	do 
+		echo "$x" >> ${FILESDIR}/depend-${PF}
+	done
+	for x in $RDEPEND
+	do
+		echo "$x" >> ${FILESDIR}/rdepend-${PF}
+	done
+	echo ">>> Completed generating dependencies for ${PF}."
+}
+
 merge_check() {
 	dopython portage.merge_check "${CATEGORY}/${PF}"
     if [ $? -ne 0 ]
@@ -792,7 +804,11 @@ src_menu() {
 		dyn_merge
 		runtime_depend
 	    ;;
-
+	gendeps)
+		#create DEPEND and RDEPEND files in the same directory as the .ebuild file
+		#this is used for the auto dependency resolving features of ebuild
+		gen_depend
+		;;
 	rpm)
 		build_depend
 		dyn_fetch

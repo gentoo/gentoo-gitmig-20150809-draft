@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/python-basic/python-basic-1.5.2-r3.ebuild,v 1.1 2000/11/30 23:15:06 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/python-basic/python-basic-1.5.2-r4.ebuild,v 1.1 2000/12/01 19:46:12 drobbins Exp $
 
 P=python-basic-1.5.2      
 A="py152.tgz python-fchksum-1.1.tar.gz"
@@ -18,7 +18,7 @@ DEPEND=">=sys-libs/db-1.85
 	>=sys-libs/gpm-1.19.3"
 RDEPEND="$DEPEND
 	 >=sys-apps/bash-2.04"
-
+PROVIDE="virtual/python-1.5.2"
 
 src_compile() {                           
     try ./configure --prefix=/usr --with-threads
