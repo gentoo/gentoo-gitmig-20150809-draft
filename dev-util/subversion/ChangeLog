@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/subversion
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/ChangeLog,v 1.52 2004/02/13 23:31:02 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/ChangeLog,v 1.53 2004/02/19 14:13:42 pauldv Exp $
+
+  19 Feb 2004; Paul de Vrieze <pauldv@gentoo.org> subversion-0.37.0-r1.ebuild,
+  subversion-0.37.0.ebuild:
+  Remove the -r1 version as it is based on an old ebuild version and is broken.
+  Incorporate the python changes in this version.
 
 *subversion-0.37.0-r1 (14 Feb 2004)
 
