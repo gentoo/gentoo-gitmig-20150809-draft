@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-dsssl-stylesheets/docbook-dsssl-stylesheets-1.64.ebuild,v 1.2 2001/06/08 01:08:06 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-dsssl-stylesheets/docbook-dsssl-stylesheets-1.64.ebuild,v 1.3 2001/12/10 09:55:08 gbevin Exp $
 
 A="db164.zip"
 S=${WORKDIR}/docbook
@@ -21,7 +21,7 @@ src_unpack() {
 
 src_install () {
 
-    try make DESTDIR=${D}/usr/share/sgml/docbook/dsssl-stylesheets-${PV} install
+    try make BINDIR="${D}/usr/bin" DESTDIR="${D}/usr/share/sgml/docbook/dsssl-stylesheets-${PV}" install
 
 }
 
