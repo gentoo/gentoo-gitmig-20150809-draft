@@ -1,7 +1,16 @@
 # ChangeLog for media-gfx/tuxpaint
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/tuxpaint/ChangeLog,v 1.11 2005/02/12 17:15:20 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/tuxpaint/ChangeLog,v 1.12 2005/03/20 21:26:00 leonardop Exp $
 
+*tuxpaint-0.9.14 (20 Mar 2005)
+
+  20 Mar 2005; Leonardo Boshell <leonardop@gentoo.org> tuxpaint-0.9.14.ebuild:
+  New release. Uses a modified patch to fix a few small problems.
+
+  20 Mar 2005; Leonardo Boshell <leonardop@gentoo.org>
+  tuxpaint-0.9.13-r1.ebuild:
+  Marked stable on x86.
+  
   12 Feb 2005; Gregorio Guidi <greg_g@gentoo.org> tuxpaint-0.9.13-r1.ebuild:
   Install kde files in /usr (#63863).
 

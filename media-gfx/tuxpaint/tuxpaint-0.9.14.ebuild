@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/tuxpaint/tuxpaint-0.9.13-r1.ebuild,v 1.3 2005/03/20 21:26:00 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/tuxpaint/tuxpaint-0.9.14.ebuild,v 1.1 2005/03/20 21:26:01 leonardop Exp $
 
 inherit eutils
 
@@ -17,19 +17,19 @@ DEPEND="media-libs/libpng
 	nls? ( sys-devel/gettext )"
 
 IUSE="gnome kde nls"
-SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz
-mirror://gentoo/${P}-makefile.patch"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="~x86 ~ppc"
 
 src_unpack() {
-	unpack ${P}.tar.gz
+	unpack ${A}
 	cd ${S}
 
-	# Sanitize the hack that is its Makefile
-	epatch ${DISTDIR}/${P}-makefile.patch
+	find . -name CVS | xargs rm -rf
+	# Sanitize the Makefile and correct a few other issues.
+	epatch ${FILESDIR}/${P}-gentoo.patch
 }
 
 src_compile() {
@@ -44,18 +44,26 @@ src_compile() {
 src_install () {
 	local myopts=""
 
-	use gnome && myopts="${myopts} GNOME_PREFIX=/usr"
+	use gnome && myopts="${myopts} GNOME_PREFIX=${D}/usr"
 
-	if use kde && which kde-config ; then
+	if use kde; then
 		myopts="${myopts} \
-			KDE_PREFIX=/usr/share/applnk \
-			KDE_ICON_PREFIX=/usr/share/icons"
+			KDE_PREFIX=${D}/usr/share/applnk \
+			KDE_ICON_PREFIX=${D}/usr/share/icons"
 	fi
 
 	use nls && myopts="${myopts} ENABLE_GETTEXT=1"
 
-	make DESTDIR=${D} ${myopts} install || die
+	make PREFIX="${D}/usr" ${myopts} install || die
 
-	rm docs/INSTALL.txt
+	rm docs/COPYING.txt docs/INSTALL.txt
 	dodoc docs/*.txt
 }
+
+pkg_postinst() {
+	einfo ""
+	einfo "For additional graphic stamps, you can emerge the"
+	einfo "media-gfx/tuxpaint-stamps package."
+	einfo ""
+}
+

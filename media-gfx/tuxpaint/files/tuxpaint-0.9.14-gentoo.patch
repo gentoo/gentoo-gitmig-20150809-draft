@@ -1,0 +1,137 @@
+diff -NurdB tuxpaint-0.9.14-orig/Makefile tuxpaint-0.9.14/Makefile
+--- tuxpaint-0.9.14-orig/Makefile	2005-03-20 04:35:07.000000000 -0500
++++ tuxpaint-0.9.14/Makefile	2005-03-20 06:16:28.000000000 -0500
+@@ -11,7 +11,7 @@
+ 
+ # Where to install things:
+ 
+-PREFIX=/usr/local
++PREFIX=/usr
+ 
+ 
+ # Program:
+@@ -35,7 +35,7 @@
+ ifeq ($(PREFIX),/usr)
+   CONFDIR=/etc/tuxpaint
+ else
+-  CONFDIR=$(PREFIX)/etc/tuxpaint
++  CONFDIR=$(PREFIX)/../etc/tuxpaint
+ endif
+ 
+ 
+@@ -49,13 +49,14 @@
+ 
+ ICON_PREFIX=$(PREFIX)/share/pixmaps/
+ X11_ICON_PREFIX=$(PREFIX)/X11R6/include/X11/pixmaps/
+-GNOME_PREFIX=`gnome-config --prefix`
+-KDE_PREFIX=`kde-config --install apps --expandvars`
+-KDE_ICON_PREFIX=`kde-config --install icon --expandvars`
++GNOME_PREFIX=
++KDE_PREFIX=
++KDE_ICON_PREFIX=
+ 
+ 
+ # Locale files
+ 
++ENABLE_GETTEXT=0
+ LOCALE_PREFIX=$(PREFIX)/share/locale/
+ # LOCALE_PREFIX=/usr/share/locale/
+ 
+@@ -88,7 +89,7 @@
+ 
+ # The entire set of CFLAGS:
+ 
+-CFLAGS=-O2 -Wall -Isrc/$(MOUSEDIR) -D$(CURSOR_SHAPES)_CURSOR_SHAPES
++CFLAGS += -Wall -Isrc/$(MOUSEDIR) -D$(CURSOR_SHAPES)_CURSOR_SHAPES
+ DEFS=-DDATA_PREFIX=\"$(DATA_PREFIX)\" \
+ 	-D$(NOSOUNDFLAG) -DDOC_PREFIX=\"$(DOC_PREFIX)\" \
+ 	-DLOCALEDIR=\"$(LOCALE_PREFIX)\" -DCONFDIR=\"$(CONFDIR)\"
+@@ -96,7 +97,10 @@
+ 
+ # "make" with no arguments builds the program and man page from sources:
+ 
+-all:	tuxpaint translations
++all:	tuxpaint
++	@if [ -n "$(ENABLE_GETTEXT)" ] && [ $(ENABLE_GETTEXT) -eq 1 ]; then \
++		make translations; \
++	fi
+ 	@echo
+ 	@echo "--------------------------------------------------------------"
+ 	@echo
+@@ -143,10 +147,13 @@
+ # to do this as superuser ("root"))
+ 
+ install:	install-bin install-data install-man install-doc \
+-		install-icon install-gettext install-importscript \
++		install-icon install-importscript \
+ 		install-default-config install-example-stamps \
+ 		install-example-starters \
+ 		install-gnome install-kde install-kde-icons
++	@if [ -n "$(ENABLE_GETTEXT)" ] && [ $(ENABLE_GETTEXT) -eq 1 ]; then \
++		make install-gettext; \
++	fi
+ 	@echo
+ 	@echo "--------------------------------------------------------------"
+ 	@echo
+@@ -322,11 +329,9 @@
+ 	 install -d $(GNOME_PREFIX)/share/pixmaps; \
+ 	 cp data/images/icon.png $(GNOME_PREFIX)/share/pixmaps/tuxpaint.png; \
+ 	 chmod 644 $(GNOME_PREFIX)/share/pixmaps/tuxpaint.png; \
+-	 install -d $(GNOME_PREFIX)/share/gnome/apps/Graphics; \
+-	 cp src/tuxpaint.desktop $(GNOME_PREFIX)/share/gnome/apps/Graphics/; \
+-	 chmod 644 $(GNOME_PREFIX)/share/gnome/apps/Graphics/tuxpaint.desktop; \
+-	else \
+-	 make install-gnome GNOME_PREFIX=/usr; \
++	 install -d $(GNOME_PREFIX)/share/applications; \
++	 cp src/tuxpaint.desktop $(GNOME_PREFIX)/share/applications/; \
++	 chmod 644 $(GNOME_PREFIX)/share/applications/tuxpaint.desktop; \
+ 	fi
+ 
+ 
+diff -NurdB tuxpaint-0.9.14-orig/src/tuxpaint.c tuxpaint-0.9.14/src/tuxpaint.c
+--- tuxpaint-0.9.14-orig/src/tuxpaint.c	2005-03-20 04:35:07.000000000 -0500
++++ tuxpaint-0.9.14/src/tuxpaint.c	2005-03-20 06:08:21.000000000 -0500
+@@ -172,32 +172,11 @@
+ #endif
+ 
+ #include "SDL_image.h"
+-#ifndef _IMG_h
+-#error "---------------------------------------------------"
+-#error "If you installed SDL_image from a package, be sure"
+-#error "to get the development package, as well!"
+-#error "(e.g., 'libsdl-image1.2-devel.rpm')"
+-#error "---------------------------------------------------"
+-#endif
+ 
+ #include "SDL_ttf.h"
+-#ifndef _SDLttf_h
+-#error "---------------------------------------------------"
+-#error "If you installed SDL_ttf from a package, be sure"
+-#error "to get the development package, as well!"
+-#error "(e.g., 'libsdl-ttf1.2-devel.rpm')"
+-#error "---------------------------------------------------"
+-#endif
+ 
+ #ifndef NOSOUND
+ #include "SDL_mixer.h"
+-#ifndef _MIXER_H_
+-#error "---------------------------------------------------"
+-#error "If you installed SDL_mixer from a package, be sure"
+-#error "to get the development package, as well!"
+-#error "(e.g., 'libsdl-mixer1.2-devel.rpm')"
+-#error "---------------------------------------------------"
+-#endif
+ #endif
+ 
+ #ifndef SAVE_AS_BMP
+diff -NurdB tuxpaint-0.9.14-orig/src/tuxpaint.desktop tuxpaint-0.9.14/src/tuxpaint.desktop
+--- tuxpaint-0.9.14-orig/src/tuxpaint.desktop	2005-03-20 04:35:07.000000000 -0500
++++ tuxpaint-0.9.14/src/tuxpaint.desktop	2005-03-20 04:58:45.000000000 -0500
+@@ -30,6 +30,7 @@
+ Exec=tuxpaint
+ Icon=tuxpaint
+ Terminal=false
++Categories=Application;Graphics;
+ GenericName=Drawing program
+ GenericName[af]=Tekenprogram
+ GenericName[be]=Праграма для маляваньня
