@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/font.eclass,v 1.2 2004/05/31 14:59:26 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/font.eclass,v 1.3 2004/06/21 09:17:54 usata Exp $
 
 # Author: foser <foser@gentoo.org>
 
@@ -43,7 +43,10 @@ font_xfont_config() {
 			-e /usr/share/fonts/encodings/large \
 			-e /usr/X11R6/lib/X11/fonts/encodings \
 			${D}/usr/share/fonts/${PN}
-		doins ${FONT_S}/fonts.alias
+		if [ -e ${FONT_S}/fonts.alias ] ;
+		then
+			doins ${FONT_S}/fonts.alias
+		fi
 	fi
 
 }
