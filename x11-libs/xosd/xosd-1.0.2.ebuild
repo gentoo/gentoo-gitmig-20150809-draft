@@ -32,6 +32,7 @@ src_install () {
 	dolib.a src/libxosd/.libs/libxosd.a
 	dolib.so src/libxosd/.libs/libxosd.so.1
 	dobin src/.libs/osd_cat
+	dobin script/xosd-config
 	doman man/*.1 man/*.3
 	dodoc AUTHORS ChangeLog NEWS COPYING README
 }
