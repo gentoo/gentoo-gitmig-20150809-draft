@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/openbox
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.68 2003/12/14 02:26:27 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.69 2003/12/22 21:24:47 tseng Exp $
+
+*openbox-3.1 (22 Dec 2003)
+
+  22 Dec 2003; Brandon Hale <tseng@gentoo.org> openbox-3.1.ebuild:
+  Version bump, thanks to SuperLag on freenode for his lightening fast report.
 
   14 Dec 2003; Lars Weiler <pylon@gentoo.org> openbox-3.0-r1.ebuild:
   Masked stable on ppc
