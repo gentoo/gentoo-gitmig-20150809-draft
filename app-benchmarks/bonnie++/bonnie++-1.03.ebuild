@@ -1,23 +1,25 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/bonnie++/bonnie++-1.03.ebuild,v 1.2 2003/06/29 15:43:52 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/bonnie++/bonnie++-1.03.ebuild,v 1.3 2003/08/01 20:09:19 vapier Exp $
 
 DESCRIPTION="Hard drive bottleneck testing benchmark suite."
-SRC_URI="http://www.coker.com.au/bonnie++/${P}.tgz"
 HOMEPAGE="http://www.coker.com.au/bonnie++/"
+SRC_URI="http://www.coker.com.au/bonnie++/${P}.tgz"
 
-SLOT="0"
 LICENSE="GPL-2"
-# I think this should work on other than x86 platforms (by sandymac)
+SLOT="0"
 KEYWORDS="x86 ~ppc ~sparc ~alpha"
-IUSE=""
+IUSE="debug"
+
 DEPEND="virtual/glibc"
 
 src_compile() {
-	local myconf=""
-	[ "$DEBUG" == "true" ] && myconf="--with-debug --disable-stripping"
+	local myconf="`use_with debug`"
+	[ `use debug` ] \
+		&& myconf="${myconf} --disable-stripping" \
+		|| myconf="${myconf} --enable-stripping"
 
-	econf ${myconf}
+	econf ${myconf} || die
 	emake || die "emake failed"
 	emake zcav || die "emake zcav failed" # see #9073
 }
