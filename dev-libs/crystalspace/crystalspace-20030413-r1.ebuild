@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/crystalspace/crystalspace-20030413-r1.ebuild,v 1.1 2003/04/27 20:51:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/crystalspace/crystalspace-20030413-r1.ebuild,v 1.2 2003/04/27 20:57:21 vapier Exp $
 
 inherit games
 
@@ -40,11 +40,6 @@ src_compile() {
 src_install() {
 	dodir ${CRYSTAL_PREFIX}
 	make INSTALL_DIR=${D}/${CRYSTAL_PREFIX} install || die
-
-	insinto /etc/env.d
-	echo "CRYSTAL=${CRYSTAL_PREFIX}" > ${T}/90crystalspace
-	echo "CEL=${CRYSTAL_PREFIX}" >> ${T}/90crystalspace 
-	doins ${T}/90crystalspace
 
 	dodir ${GAMES_BINDIR}
 	dosym ${CRYSTAL_PREFIX}/bin/cs-config ${GAMES_BINDIR}/cs-config
