@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xvid/xvid-0.9.2.ebuild,v 1.1 2003/08/10 18:03:22 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xvid/xvid-0.9.2-r1.ebuild,v 1.1 2003/08/10 21:14:26 mholzer Exp $
 
 MY_P=${PN}core-${PV}
 S="${WORKDIR}/${MY_P}/build/generic"
@@ -29,6 +29,7 @@ src_install() {
 	cd ${S}/../../
 
 	dodoc authors.txt changelog.txt LICENSE README.txt todo.txt
+	dosym /usr/lib/libxvidcore.so.2.1 /usr/lib/libxvidcore.so
 	
 	if [ "`use doc`" ]
 	then
