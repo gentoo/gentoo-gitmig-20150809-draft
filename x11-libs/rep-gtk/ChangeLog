@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/rep-gtk
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/rep-gtk/ChangeLog,v 1.27 2004/05/10 21:29:06 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/rep-gtk/ChangeLog,v 1.28 2004/05/13 17:52:02 agriffis Exp $
+
+*rep-gtk-0.15-r3 (13 May 2004)
+
+  13 May 2004; Aron Griffis <agriffis@gentoo.org> +rep-gtk-0.15-r3.ebuild:
+  Restore rep-gtk-0.15 which is needed by sawfish-1.0.1 which is needed by
+  gnome-1.4
 
   10 May 2004; Aron Griffis <agriffis@gentoo.org> -rep-gtk-0.15-r3.ebuild,
   -rep-gtk-0.16.ebuild, -rep-gtk-0.17.ebuild:
