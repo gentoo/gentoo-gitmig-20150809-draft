@@ -1,7 +1,10 @@
-MD5 1dfc35aec1e0f49db80dcca1b4ce8a40 ChangeLog 1935
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 75634d4ee386ea5de82e2dd95ff42c0f ChangeLog 2106
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 MD5 6575b824fd5cbfb4833874d8261e8dfb mupen64-0.3.ebuild 2448
-MD5 4b91a628ee1c98827ced2d977d7047b5 mupen64-0.4-r1.ebuild 2638
+MD5 227e9120351ee4589a80c1ce1686395c mupen64-0.4-r1.ebuild 2641
 MD5 e2b006764c1bac03ac2667ad60a66101 files/0.3-gcc3.patch 3662
 MD5 a0d71f9477dc18606c7cf5dd61fa63da files/digest-mupen64-0.3 396
 MD5 4fd55475c3cb8bec06cddcac05c0e735 files/mupen64 574
@@ -14,5 +17,11 @@ MD5 8cb72fa87f95c2a79540ea5e4a15c0b9 files/mupen64-gtk2-makefile.patch 3144
 MD5 948cf998de2319579074b530861362aa files/mupen64-makefiles.patch 2040
 MD5 87053b50f759d8d4b65a2369fe42338a files/mupen64-rice-confdir.patch 1208
 MD5 638046a5841774d744611e9f38751bcc files/mupen64-noasm.patch 229
-MD5 b21462ab51b383d28ca9d83f6531c664 files/digest-mupen64-0.4 265
 MD5 b21462ab51b383d28ca9d83f6531c664 files/digest-mupen64-0.4-r1 265
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFB3wvoUpKYMelfdYERAmY3AJ0e11Mw8NLWAc98a8Yv2e1OuoHOpACeL5ga
+8ZqzwCfAN+HiMkVXRWNUc50=
+=ty85
+-----END PGP SIGNATURE-----
