@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libgcrypt
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/ChangeLog,v 1.24 2004/05/01 22:24:10 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/ChangeLog,v 1.25 2004/05/02 20:48:07 geoman Exp $
+
+  02 May 2004; Stephen P. Becker <geoman@gentoo.org> libgcrypt-1.1.94.ebuild:
+  Added ~mips keyword.
 
 *libgcrypt-1.1.94 (02 May 2004)
 
