@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc. Distributed under the terms
 # of the GNU General Public License, v2 or later 
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.4.ebuild,v 1.1 2002/06/21 00:25:56 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.4.ebuild,v 1.2 2002/06/23 21:40:57 drobbins Exp $
  
 S=${WORKDIR}/${P}
 SLOT="0"
@@ -138,16 +138,22 @@ pkg_postinst() {
 	if [ -d ${ROOT}var/db/pkg ]
 	then
 		cd ${ROOT}var/db/pkg
-		python2.2 ${ROOT}usr/lib/portage/bin/db-update.py `find -name VIRTUAL`
+		for x in *
+		do
+			[ ! -d "$x" ] && continue
+			#go into each category directory so we don't overload the python2.2 command-line
+			cd $x
+			python2.2 ${ROOT}usr/lib/portage/bin/db-update.py `find -name VIRTUAL`
+			cd ..
 	fi
 
 	#fix cache (could contain staleness)
 	if [ -d ${ROOT}var/cache/edb/dep ]
 	then
-		rm -rf ${ROOT}var/cache/edb/dep/*
-	else
-		install -d ${ROOT}var/cache/edb/dep
+		#avoid using "*" below as it can overwhelm rm
+		rm -rf ${ROOT}var/cache/edb/dep
 	fi	
+	install -d ${ROOT}var/cache/edb/dep
 	rm -f ${ROOT}usr/lib/python2.2/site-packages/portage.py[co]
 	# we gotta re-compile these modules and deal with systems with clock skew (stale compiled files)
 	python -c "import compileall; compileall.compile_dir('${ROOT}usr/lib/python2.2/site-packages')" || die
