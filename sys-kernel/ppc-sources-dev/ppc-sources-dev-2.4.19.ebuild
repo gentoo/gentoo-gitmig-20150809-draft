@@ -1,15 +1,16 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc. 
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Id: ppc-sources-dev-2.4.19.ebuild,v 1.3 2002/08/17 21:03:28 trance Exp $ 
+# $Id: ppc-sources-dev-2.4.19.ebuild,v 1.4 2002/08/17 23:47:23 gerk Exp $ 
 
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 #we use this next variable to avoid duplicating stuff on cvs
 GFILESDIR=${PORTDIR}/sys-kernel/linux-sources/files
-OKV=2.4.19
-KV=${PVR}
+OKV=${PVR}
+KV=2.4.19-r7
 S=${WORKDIR}/linux-${KV}
 ETYPE="sources"
+
 
 # What's in this kernel?
 
@@ -19,18 +20,24 @@ ETYPE="sources"
 #	Ani Joshi's rivafb bigendian fixes from YDL 
 
 
-DESCRIPTION="Full developmental sources for the Gentoo Linux PPC kernel"
-SRC_URI="http://www.penguinppc.org/~kevyn/kernels/gentoo/linux-${OKV}.tar.gz"
+DESCRIPTION="Full developmental sources for the Gentoo Linux PPC kernel - Experimental!"
+SRC_URI="http://www.penguinppc.org/~kevyn/kernels/gentoo/linux-${KV}.tar.bz2"
 PROVIDE="virtual/linux-sources"
 HOMEPAGE="http://www.kernel.org/ http://www.gentoo.org/" 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="-ppc -x86 -sparc -sparc64"
+KEYWORDS="ppc -x86 -sparc -sparc64"
+
+if [ $ETYPE = "sources" ] && [ -z "`use build`" ]                                           
+then                                                                                        
+        DEPEND=">=sys-devel/binutils-2.11.90.0.31"                                          
+        RDEPEND=">=sys-libs/ncurses-5.2 sys-devel/perl >=sys-apps/modutils-2.4.2 sys-devel/make"
+fi                                                                                          
+
 
 src_unpack() {
 	cd ${WORKDIR}
-	unpack linux-${OKV}.tar.gz
-	mv linux linux-${KV} || die
+	unpack linux-${KV}.tar.bz2
 	cd ${S}
 	pwd
 	
@@ -38,12 +45,11 @@ src_unpack() {
 	cd ${WORKDIR}
 	chown -R 0.0 *
 	chmod -R a+r-w+X,u+w *
-fi
 
 }
 
 src_install() {
-	if [ "$ETYPE" = "linux-sources" ]
+	if [ "$ETYPE" = "sources" ]
 	then
 		dodir /usr/src
 		cd ${S}
@@ -60,9 +66,25 @@ src_install() {
 		cp -ax ${S}/include/asm-ppc/* ${D}/usr/include/asm
 	fi
 }
-pkg_preinst() {
-	fi
-}
-plg_postinst() {
-	fi
+
+pkg_preinst() {                                                                             
+        if [ "$ETYPE" = "headers" ]                                                         
+        then                                                                                
+                [ -L ${ROOT}usr/include/linux ] && rm ${ROOT}usr/include/linux              
+                [ -L ${ROOT}usr/include/asm ] && rm ${ROOT}usr/include/asm                  
+                true                                                                        
+        fi                                                                                  
+}                                                                                           
+                                                                                            
+pkg_postinst() {                                                                            
+        [ "$ETYPE" = "headers" ] && return                                                  
+        if [ ! -e ${ROOT}usr/src/linux ]                                                    
+        then                                                                                
+                rm -f ${ROOT}usr/src/linux                                                  
+                ln -sf linux-${KV} ${ROOT}/usr/src/linux                                    
+        fi                                                                                  
+
+	einfo "* Warning * - This is an experimental kernel to test features"
+	einfo " before they make it to ppc-sources.  Stability cannaot be" 
+	einfo " guaranteed. You have been warned. :^)"
 }
