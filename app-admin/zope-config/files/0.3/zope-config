@@ -8,7 +8,7 @@
 #
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/zope-config/files/0.3/zope-config,v 1.1 2003/12/10 19:03:39 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/zope-config/files/0.3/zope-config,v 1.2 2003/12/12 07:40:57 lanius Exp $
 
 VERSION="0.2"
 
@@ -63,7 +63,7 @@ zinst_fs_setup()
 		fi
 
 		if [ -f $2/var/Data.fs ]; then
-			cp $2/var/Data.fs $2/var/Data.fs.org
+			mv $2/var/Data.fs $2/var/Data.fs.org
 		fi
 
 		cp -R $1/.templates/Extensions $2
