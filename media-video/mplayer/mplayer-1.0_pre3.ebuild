@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre3.ebuild,v 1.2 2003/12/12 07:38:05 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre3.ebuild,v 1.3 2003/12/12 17:13:06 seemant Exp $
 
 IUSE="dga oss xmms jpeg 3dfx sse matrox sdl X svga ggi oggvorbis 3dnow aalib gnome xv opengl truetype dvd gtk gif esd fbcon encode alsa directfb arts dvb gtk2 samba lirc matroska debug joystick"
 
@@ -138,7 +138,7 @@ src_compile() {
 	# Only disable X if gtk is not in USE
 	use X || use gtk \
 		|| myconf="${myconf} --disable-gui --disable-x11 --disable-xv \
-		                     --disable-xmga --disable-png"
+				--disable-xmga --disable-png"
 
 	use jpeg \
 		|| myconf="${myconf} --disable-jpeg"
@@ -205,8 +205,7 @@ src_compile() {
 
 	use dvd \
 		&& myconf="${myconf} --enable-mpdvdkit" \
-		|| myconf="${myconf} --disable-mpdvdkit --disable-dvdread \
-		                     --disable-css"
+		|| myconf="${myconf} --disable-mpdvdkit --disable-dvdread"
 	# Disable dvdnav support as its not considered to be
 	# functional anyhow, and will be removed.
 
@@ -294,6 +293,7 @@ src_compile() {
 		--enable-real \
 		--with-reallibdir=${REALLIBDIR} \
 		--with-x11incdir=/usr/X11R6/include \
+		`use_enable xinerama` \
 		${myconf} || die
 	# Breaks with gcc-2.95.3, bug #14479:
 	#  --enable-shared-pp \
@@ -412,7 +412,7 @@ pkg_postinst() {
 		echo
 		einfo "When you see only GREEN salad on your G4 while playing"
 		einfo "a DivX, you should recompile _without_ altivec enabled."
-		einfo "Furher information: http://bugs.gentoo.org/show_bug.cgi?id=18511"
+		einfo "Further information: http://bugs.gentoo.org/show_bug.cgi?id=18511"
 		echo
 		einfo "If everything functions fine with watching DivX and"
 		einfo "altivec enabled, please drop a comment on the mentioned bug!"

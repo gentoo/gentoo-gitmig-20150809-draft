@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.98 2003/12/12 07:37:03 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.99 2003/12/12 17:13:06 seemant Exp $
+
+  12 Dec 2003; Seemant Kulleen <seemant@gentoo.org> mplayer-1.0_pre3.ebuild:
+  --disable-css is a deprecated configure option now. Closes bug #35644 by
+  butters@opengames.net and its duplicates
 
 *mplayer-1.0_pre3 (11 Dec 2003)
 
