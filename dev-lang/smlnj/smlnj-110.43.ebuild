@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/smlnj/smlnj-110.43.ebuild,v 1.4 2004/04/21 16:37:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/smlnj/smlnj-110.43.ebuild,v 1.5 2004/04/24 09:56:05 mattam Exp $
 
 inherit eutils
 
@@ -81,4 +81,9 @@ src_install() {
 	dosym ${SMLNJ_DEST}/bin/ml-makedepend /usr/bin
 	dosym ${SMLNJ_DEST}/bin/ml-yacc /usr/bin
 	dosym ${SMLNJ_DEST}/bin/sml /usr/bin
+}
+
+pkg_postinst()
+{
+	einfo "You need to run env-update to get a working installation"
 }

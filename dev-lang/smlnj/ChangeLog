@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/smlnj
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/smlnj/ChangeLog,v 1.5 2004/03/02 09:25:00 aliz Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/smlnj/ChangeLog,v 1.6 2004/04/24 09:56:05 mattam Exp $
+
+  24 Apr 2004; Matthieu Sozeau <mattam@gentoo.org> smlnj-110.42.ebuild,
+  smlnj-110.43.ebuild:
+  Fix copyright header.
+
+  24 Apr 2004; Matthieu Sozeau <mattam@gentoo.org> smlnj-110.43.ebuild:
+  Add postinst instructions (fix bug#48509).
 
 *smlnj-110.43 (30 Sep 2003)
 
