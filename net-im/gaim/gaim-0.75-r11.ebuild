@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.75-r11.ebuild,v 1.3 2004/04/01 02:42:19 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.75-r11.ebuild,v 1.4 2004/04/01 03:59:20 rizzo Exp $
 
 inherit flag-o-matic eutils gcc
 use debug && inherit debug
@@ -55,11 +55,13 @@ src_unpack() {
 	epatch ${FILESDIR}/gaim-0.75-yahoo-security.diff
 	epatch ${FILESDIR}/gaim-0.76cvs-yahoo-misc-fixes-1.diff
 
-	# put in gentoo branding
-	sed "s/GAIM_VERSION/${PV}/; s/GENTOO_EBUILD_VERSION/${PV}-gentoo-${PR%r0}/" \
-		${FILESDIR}/gaim-gentoo-branding.patch \
-		> ${WORKDIR}/gaim-gentoo-branding.patch
-	epatch ${WORKDIR}/gaim-gentoo-branding.patch
+	has_version '>=sys-devel/gettext-0.12.1' && {
+		# put in gentoo branding
+		sed "s/GAIM_VERSION/${PV}/; s/GENTOO_EBUILD_VERSION/${PV}-gentoo-${PR%r0}/" \
+			${FILESDIR}/gaim-gentoo-branding.patch \
+			> ${WORKDIR}/gaim-gentoo-branding.patch
+		epatch ${WORKDIR}/gaim-gentoo-branding.patch
+	}
 
 	use cjk && epatch ${FILESDIR}/gaim-0.74_cjk_gtkconv.patch
 	use gnome && epatch ${FILESDIR}/gaim-0.74-gnome-url-handler.patch
@@ -102,7 +104,7 @@ src_compile() {
 	econf ${myconf} || die "Configuration failed"
 
 	emake || MAKEOPTS="${MAKEOPTS} -j1" emake || die "Make failed"
-	sed -i -e 's:mkinstalldirs =.*:mkinstalldirs = \$\(MKINSTALLDIRS\):' po/Makefile
+	has_version '>=sys-devel/gettext-0.12.1' && sed -i -e 's:mkinstalldirs =.*:mkinstalldirs = \$\(MKINSTALLDIRS\):' po/Makefile
 }
 
 src_install() {

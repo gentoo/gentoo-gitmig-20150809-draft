@@ -1,10 +1,13 @@
 # ChangeLog for net-im/gaim
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/ChangeLog,v 1.151 2004/04/01 02:42:19 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/ChangeLog,v 1.152 2004/04/01 03:59:20 rizzo Exp $
 
   31 Mar 2004; Travis Tilley <lv@gentoo.org> gaim-0.75-r11.ebuild:
   nls disabled on amd64 since the version of gettext that works is masked -amd64
   - see bug #46253 for more information
+
+  31 Mar 2004; Don Seiler <rizzo@gentoo.org>; gaim-0.75-r11.ebuild:
+  Conditionally applying branding patch depending on gettext version
 
 *gaim-0.75-r11 (24 Mar 2004)
 
