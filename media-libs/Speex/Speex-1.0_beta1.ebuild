@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/Speex/Speex-1.0_beta1.ebuild,v 1.1 2002/10/24 20:39:37 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/Speex/Speex-1.0_beta1.ebuild,v 1.2 2002/10/24 21:49:16 raker Exp $
 
 DESCRIPTION="open-source, patent-free voice codec"
 HOMEPAGE="http://www.speex.org/"
@@ -8,7 +8,7 @@ SRC_URI="http://www.speex.org/download/${P/_/}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 IUSE=""
 
