@@ -1,6 +1,17 @@
 # ChangeLog for media-radio/xlog
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/xlog/ChangeLog,v 1.5 2004/10/01 23:13:15 killsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/xlog/ChangeLog,v 1.6 2004/12/09 00:23:25 killsoft Exp $
+
+  08 Dec 2004; Robb Romans <killsoft@gentoo.org> :
+  Changes for xlog version 0.9.12
+  * Opening/closing the worked before dialog now correctly sets the
+    corresponding optionmenu.
+  * When a new log is created the corresponding filename is now created
+    correctly.
+  * The README has been left out of the help menu and is migrated with the
+    MANUAL. It is now included with the source code only.
+  * Some effort has been done to compile cleanly with mingw. Untested.
+  * Polish translations by Boguslaw Ciastek, SQ5TB. Thanks!
 
 *xlog-0.9.7 (01 Oct 2004)
 
