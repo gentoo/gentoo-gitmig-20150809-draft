@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/jabref/jabref-1.7.ebuild,v 1.4 2005/04/03 10:32:14 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/jabref/jabref-1.7.ebuild,v 1.5 2005/04/03 11:03:03 axxo Exp $
 
 inherit java-pkg eutils
 
@@ -41,7 +41,7 @@ src_unpack() {
 
 
 src_compile() {
-	local antflags="compile unjarlib jars"
+	local antflags="jars"
 	use jikes && antflags="${antflags} -Dbuild.compiler=jikes"
 	ant ${antflags} || die "compile problem"
 }
@@ -49,8 +49,8 @@ src_compile() {
 src_install() {
 	java-pkg_dojar build/lib/${PN}.jar
 
-	echo "#!/bin/sh" > ${PN}
-	echo '$(java-config -J) -jar $(java-config -p jabref)' '$*' >> ${PN}
+	echo "#!/bin/bash" > ${PN}
+	echo '$(java-config -J) -classpath $(java-config -p commons-httpclient,commons-logging,antlr,jgoodies-forms,jgoodies-looks-1.2,spin,jabref) net.sf.jabref.JabRef "$@"' >> ${PN}
 
 	dobin ${PN}
 }
