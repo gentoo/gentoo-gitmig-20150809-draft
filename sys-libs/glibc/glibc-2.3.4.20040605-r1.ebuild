@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040605-r1.ebuild,v 1.4 2004/06/12 06:10:26 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040605-r1.ebuild,v 1.5 2004/06/14 02:02:59 lv Exp $
 
 IUSE="nls pic build nptl erandom hardened makecheck multilib"
 
@@ -100,6 +100,18 @@ setup_flags() {
 
 
 want_nptl() {
+	einfon "Checking gcc for __thread support ... "
+	if ! gcc -c ${FILESDIR}/test-__thread.c -o ${T}/test2.o &> /dev/null; then
+		echo "no"
+		echo
+		eerror "Could not find a gcc that supports the __thread directive!"
+		eerror "please update to gcc-3.2.2-r1 or later, and try again."
+		die "No __thread support in gcc!"
+	else
+		echo "yes"
+	fi
+
+
 	# Archs that can use NPTL
 	if use amd64 || use alpha || use ia64 || use ppc || \
 	   use ppc64 || use s390 || use sparc; then
@@ -121,8 +133,16 @@ want_nptl() {
 want_tls() {
 	# Archs that can use TLS (Thread Local Storage)
 	if use amd64 || use alpha || use ia64 || use ppc || \
-	   use ppc64 || use s390 || use sparc || use x86; then
+	   use ppc64 || use s390 || use sparc; then
 		return 0
+	fi
+
+	# Specific x86 CHOSTS that can use TLS
+	if use x86; then
+		case "${CHOST/-*}" in
+			i486|i586|i686)	return 0 ;;
+		esac
+
 	fi
 
 	return 1
@@ -190,53 +210,6 @@ pkg_setup() {
 		die "GCC too old"
 	fi
 	echo
-
-	if want_nptl; then
-		einfon "Checking gcc for __thread support ... "
-		if ! gcc -c ${FILESDIR}/test-__thread.c -o ${T}/test2.o &> /dev/null; then
-			echo "no"
-			echo
-			eerror "Could not find a gcc that supports the __thread directive!"
-			eerror "please update to gcc-3.2.2-r1 or later, and try again."
-			die "No __thread support in gcc!"
-		else
-			echo "yes"
-		fi
-
-	elif use nptl; then
-		echo
-		# Just tell the user not to expect too much ...
-		ewarn "You have \"nptl\" in your USE, but your kernel version or"
-		ewarn "architecture does not support it!"
-	fi
-	echo
-}
-
-
-do_pax_patches() {
-	cd ${S}
-
-	# localedef contains nested function trampolines, which trigger
-	# segfaults under PaX -solar
-	# Debian Bug (#231438, #198099)
-	epatch ${FILESDIR}/2.3.3/glibc-2.3.3-localedef-fix-trampoline.patch
-
-	# With latest versions of glibc, a lot of apps failed on a PaX enabled
-	# system with:
-	#
-	#  cannot enable executable stack as shared object requires: Permission denied
-	#
-	# This is due to PaX 'exec-protecting' the stack, and ld.so then trying
-	# to make the stack executable due to some libraries not containing the
-	# PT_GNU_STACK section.  Bug #32960.  <azarah@gentoo.org> (12 Nov 2003).
-	use mips || epatch ${FILESDIR}/2.3.3/${PN}-2.3.3-dl_execstack-PaX-support.patch
-
-	# Program header support for PaX.
-	epatch ${FILESDIR}/2.3.3/${PN}-2.3.3_pre20040117-pt_pax.diff
-
-	# Suppress unresolvable relocation against symbol `main' in Scrt1.o
-	# can be reproduced with compiling net-dns/bind-9.2.2-r3 using -pie
-	epatch ${FILESDIR}/2.3.3/${PN}-2.3.3_pre20040117-got-fix.diff
 }
 
 
@@ -348,6 +321,33 @@ do_arch_x86_patches() {
 }
 
 
+do_pax_patches() {
+	cd ${S}
+
+	# localedef contains nested function trampolines, which trigger
+	# segfaults under PaX -solar
+	# Debian Bug (#231438, #198099)
+	epatch ${FILESDIR}/2.3.3/glibc-2.3.3-localedef-fix-trampoline.patch
+
+	# With latest versions of glibc, a lot of apps failed on a PaX enabled
+	# system with:
+	#
+	#  cannot enable executable stack as shared object requires: Permission denied
+	#
+	# This is due to PaX 'exec-protecting' the stack, and ld.so then trying
+	# to make the stack executable due to some libraries not containing the
+	# PT_GNU_STACK section.  Bug #32960.  <azarah@gentoo.org> (12 Nov 2003).
+	use mips || epatch ${FILESDIR}/2.3.3/${PN}-2.3.3-dl_execstack-PaX-support.patch
+
+	# Program header support for PaX.
+	epatch ${FILESDIR}/2.3.3/${PN}-2.3.3_pre20040117-pt_pax.diff
+
+	# Suppress unresolvable relocation against symbol `main' in Scrt1.o
+	# can be reproduced with compiling net-dns/bind-9.2.2-r3 using -pie
+	epatch ${FILESDIR}/2.3.3/${PN}-2.3.3_pre20040117-got-fix.diff
+}
+
+
 do_hardened_fixes() {
 	# disable binutils -as-needed
 	sed -e 's/^have-as-needed.*/have-as-needed = no/' -i ${S}/config.make.in
@@ -361,11 +361,35 @@ do_hardened_fixes() {
 	sed -e 's/^LDFLAGS-rtld += $(relro.*/LDFLAGS-rtld += -Wl,-z,norelro/' -i ${S}/Makeconfig
 
 	# disables building nscd as pie
-	use hardened || sed -e 's/^have-fpie.*/have-fpie = no/' -i ${S}/config.make.in
+	has_hardened || sed -e 's/^have-fpie.*/have-fpie = no/' -i ${S}/config.make.in
 
 	# disable completely relro usage (also for ld.so)
-	use hardened || sed -e 's/^have-z-relro.*/have-z-relro = no/' -i ${S}/config.make.in
-	use hardened || sed -e 's/HAVE_Z_RELRO/USE_Z_RELRO/' -i ${S}/config.h.in
+	has_hardened || sed -e 's/^have-z-relro.*/have-z-relro = no/' -i ${S}/config.make.in
+	has_hardened || sed -e 's/HAVE_Z_RELRO/USE_Z_RELRO/' -i ${S}/config.h.in
+
+	# Sanity check the forward and backward chunk pointers in the
+	# unlink() macro used by Doug Lea's implementation of malloc(3).
+	epatch ${FILESDIR}/2.3.3/glibc-2.3.3-owl-malloc-unlink-sanity-check.diff
+
+	# this patch is needed to compile nptl with a hardened gcc
+	has_hardened && use nptl && \
+		epatch ${FILESDIR}/2.3.4/glibc-2.3.4-hardened-sysdep-shared.patch
+}
+
+
+do_ssp_patches() {
+	# To circumvent problems with propolice __guard and
+	# __guard_setup__stack_smash_handler
+	#
+	#  http://www.gentoo.org/proj/en/hardened/etdyn-ssp.xml
+	if [ "${ARCH}" != "hppa" ] && [ "${ARCH}" != "hppa64" ]; then
+		epatch ${FILESDIR}/2.3.3/glibc-2.3.2-propolice-guard-functions-v3.patch
+		cp ${FILESDIR}/2.3.3/ssp.c ${S}/sysdeps/unix/sysv/linux || \
+			die "failed to copy ssp.c to ${S}/sysdeps/unix/sysv/linux/"
+	fi
+
+	# patch this regardless of architecture, although it's ssp-related
+	epatch ${FILESDIR}/2.3.3/glibc-2.3.3-frandom-detect.patch
 }
 
 
@@ -381,24 +405,20 @@ src_unpack() {
 	mkdir -p ${S}/man
 	cd ${S}/man
 	tar xjf ${FILESDIR}/glibc-manpages-2.3.2.tar.bz2
-	cd ${S};
+	cd ${S}
 	unpack glibc-infopages-2.3.4.tar.bz2
 
-	cd ${S}
 
-	# To circumvent problems with propolice __guard and
-	# __guard_setup__stack_smash_handler
-	#
-	#  http://www.gentoo.org/proj/en/hardened/etdyn-ssp.xml
-	if [ "${ARCH}" != "hppa" ] && [ "${ARCH}" != "hppa64" ]; then
-		epatch ${FILESDIR}/2.3.3/glibc-2.3.2-propolice-guard-functions-v3.patch
-		cp ${FILESDIR}/2.3.3/ssp.c ${S}/sysdeps/unix/sysv/linux || \
-			die "failed to copy ssp.c to ${S}/sysdeps/unix/sysv/linux/"
-	fi
+	# SSP support in glibc (where it belongs)
+	do_ssp_patches
 
 
 	# PaX-related Patches
 	do_pax_patches
+
+
+	# hardened toolchain/relro/nptl/security/etc fixes
+	do_hardened_fixes
 
 
 	# Arch specific patching
@@ -415,24 +435,8 @@ src_unpack() {
 	use x86		&& do_arch_x86_patches
 
 
-	# hardened toolchain/relro/nptl/etc fixes
-	do_hardened_fixes
-
-
 	# Remaining patches
 	cd ${S}
-
-	# patch this regardless of architecture, although it's ssp-related
-	epatch ${FILESDIR}/2.3.3/glibc-2.3.3-frandom-detect.patch
-
-	# Sanity check the forward and backward chunk pointers in the
-	# unlink() macro used by Doug Lea's implementation of malloc(3).
-	epatch ${FILESDIR}/2.3.3/glibc-2.3.3-owl-malloc-unlink-sanity-check.diff
-
-	# We do not want name_insert() in iconvconfig.c to be defined inside
-	# write_output() as it causes issues with trampolines/PaX.
-#	epatch ${FILESDIR}/2.3.2/${PN}-2.3.2-iconvconfig-name_insert.patch
-
 
 	# Fix permissions on some of the scripts
 	chmod u+x ${S}/scripts/*.sh
@@ -458,10 +462,13 @@ src_compile() {
 		myconf="${myconf} --enable-add-ons=linuxthreads --without-__thread"
 	fi
 
-	# we dont want to enable tls ourselves, as this can cause catalyst to fail
-	# for some people on some archs.
+	# this can be tricky sometimes... if it breaks glibc for you, you should
+	# add a block in the want_tls logic. if it breaks linuxthreads, but nptl
+	# works... make sure to add 'use !nptl' to that logic.
 	want_tls || myconf="${myconf} --without-tls"
+	want_tls && myconf="${myconf} --with-tls"
 
+	einfo "Configuring GLIBC..."
 	rm -rf ${WORKDIR}/build
 	mkdir -p ${WORKDIR}/build
 	cd ${WORKDIR}/build
@@ -478,6 +485,7 @@ src_compile() {
 		--libexecdir=/usr/lib/misc \
 		${myconf} || die
 
+	einfo "Building GLIBC..."
 	make PARALLELMFLAGS="${MAKEOPTS}" || die
 }
 
@@ -526,11 +534,9 @@ EOF
 		setup_locales
 
 		einfo "Installing man pages and docs..."
-		# Install linuxthreads man pages
-		want_nptl || {
+		# Install linuxthreads man pages even if nptl is enabled
 			dodir /usr/share/man/man3
 			doman ${S}/man/*.3thr
-		}
 
 		# Install nscd config file
 		insinto /etc
