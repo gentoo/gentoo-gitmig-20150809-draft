@@ -1,0 +1,10 @@
+# ChangeLog for app-dicts/stardict-jmdict-en-ja
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/stardict-jmdict-en-ja/ChangeLog,v 1.1 2003/07/06 17:49:48 liquidx Exp $
+
+*stardict-jmdict-en-ja-2.1.1 (06 Jul 2003)
+
+  06 Jul 2003; Alastair Tse <liquidx@gentoo.org> metadata.xml,
+  stardict-jmdict-en-ja-2.1.1.ebuild:
+  new dictionary
+
