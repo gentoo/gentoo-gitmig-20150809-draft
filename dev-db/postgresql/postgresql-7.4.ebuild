@@ -1,10 +1,11 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.4.ebuild,v 1.2 2003/11/20 15:51:22 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.4.ebuild,v 1.3 2003/11/20 17:16:37 mholzer Exp $
 
 DESCRIPTION="sophisticated Object-Relational DBMS."
 
 SRC_URI="mirror://postgresql/v${PV}/${P}.tar.gz"
+RESTRICT="nomirror"
 HOMEPAGE="http://www.postgresql.org/"
 
 LICENSE="POSTGRESQL"
