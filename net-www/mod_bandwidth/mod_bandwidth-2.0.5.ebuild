@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_bandwidth/mod_bandwidth-2.0.5.ebuild,v 1.5 2004/09/03 23:24:08 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_bandwidth/mod_bandwidth-2.0.5.ebuild,v 1.6 2005/01/08 21:06:39 hollow Exp $
 
 DESCRIPTION="Bandwidth Management Module for Apache"
 HOMEPAGE="http://www.cohprog.com/v3/bandwidth/intro-en.html"

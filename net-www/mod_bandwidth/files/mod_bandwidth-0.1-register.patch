@@ -1,0 +1,19 @@
+diff -Nur mod_bandwidth-0.1/mod_bandwidth-0.1.c mod_bandwidth-0.1-register/mod_bandwidth-0.1.c
+--- mod_bandwidth-0.1/mod_bandwidth-0.1.c	2004-11-05 23:18:31.000000000 +0100
++++ mod_bandwidth-0.1-register/mod_bandwidth-0.1.c	2004-11-17 10:59:05.199819784 +0100
+@@ -340,6 +340,7 @@
+ 
+ 
+ #define VERSION             0.1
++#define VERSION_S           "0.1"
+ #define CORE_PRIVATE
+ 
+ #include <time.h>
+@@ -1010,6 +1011,7 @@
+ 
+     ap_mpm_query(AP_MPMQ_HARD_LIMIT_THREADS, &thread_limit);
+     ap_mpm_query(AP_MPMQ_HARD_LIMIT_DAEMONS, &server_limit);
++    ap_add_version_component(p, "mod_bandwidth/"VERSION_S);
+     return OK;
+ }
+ 

@@ -1,5 +1,14 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>apache</herd>
+  <herd>apache</herd>
+  <maintainer>
+    <email>hollow@gentoo.org</email>
+    <name>Benedikt Boehm</name>
+  </maintainer>
+  <longdescription>
+    Mod_bandwidth is a module for the Apache webserver that enables the setting
+    of server-wide or per connection bandwidth limits, based on the directory,
+    size of files and remote IP/domain.
+  </longdescription>
 </pkgmetadata>

@@ -1,6 +1,15 @@
 # ChangeLog for net-www/mod_bandwidth
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_bandwidth/ChangeLog,v 1.8 2004/09/03 23:24:08 pvdabeel Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_bandwidth/ChangeLog,v 1.9 2005/01/08 21:06:39 hollow Exp $
+
+*mod_bandwidth-2.0.5-r1 (08 Jan 2005)
+
+  08 Jan 2005; Benedikt Boehm <hollow@gentoo.org> metadata.xml,
+  +files/10_mod_bandwidth.conf, +files/11_mod_bandwidth.conf,
+  +files/mod_bandwidth-0.1-register.patch,
+  +files/mod_bandwidth-2.0.5-register.patch, +mod_bandwidth-0.1.ebuild,
+  +mod_bandwidth-2.0.5-r1.ebuild:
+  Apache herd package refresh
 
   04 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   mod_bandwidth-2.0.5.ebuild:

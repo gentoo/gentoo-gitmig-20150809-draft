@@ -1,8 +1,26 @@
-MD5 2439656c04681f553a9ecac9adb96d31 ChangeLog 1382
-MD5 d2da0e45d7e39184d1cb7abbe3879086 metadata.xml 159
-MD5 cc0a323077d650bbb9ca332efe12e547 mod_bandwidth-2.0.4.ebuild 1720
-MD5 04b736dafe7019352697a500f62db173 mod_bandwidth-2.0.5.ebuild 1727
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 694c90675a81dbf3a051090b62aa730d ChangeLog 1725
+MD5 52d4491250bfe0a8852170c9ce5aa3a8 metadata.xml 501
+MD5 853dc35eff084e13004e17e2c6dc6908 mod_bandwidth-2.0.4.ebuild 1718
+MD5 98fabcbf50d867020d0673ed2c28740b mod_bandwidth-2.0.5.ebuild 1725
+MD5 5dbb760a9cff8450ce5e9ba04bc7807f mod_bandwidth-0.1.ebuild 875
+MD5 f44ba07ed97dc95e35212f0d3c4003c6 mod_bandwidth-2.0.5-r1.ebuild 1006
 MD5 b1f6d1637699dda2b89daf03a5991078 files/digest-mod_bandwidth-2.0.4 59
 MD5 b1f6d1637699dda2b89daf03a5991078 files/digest-mod_bandwidth-2.0.5 59
 MD5 7fdb7dc609577ce39c00d5c998411c56 files/mod_bandwidth-2.0.4-register.patch 658
 MD5 cb75940c95ae90a42fc84bd3baac4f4f files/mod_bandwidth.conf 519
+MD5 7fdb7dc609577ce39c00d5c998411c56 files/mod_bandwidth-2.0.5-register.patch 658
+MD5 b1f6d1637699dda2b89daf03a5991078 files/digest-mod_bandwidth-2.0.5-r1 59
+MD5 261701832cd085ac1d31fa948299c5d5 files/10_mod_bandwidth.conf 900
+MD5 656e380794c40a6ad5b626a19890bcdb files/digest-mod_bandwidth-0.1 65
+MD5 737edf391183726e938f43fdc836389a files/11_mod_bandwidth.conf 893
+MD5 ea897e09ddaffb4b385d94b6f827beb9 files/mod_bandwidth-0.1-register.patch 625
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFB4EtVmPFBzbX68WERAnmBAKCEI9cA4qmbn/crfGjXQPQplnQt/QCfQFs7
+ymN753ue9uyG6nmsZbCsDrc=
+=zWBQ
+-----END PGP SIGNATURE-----
