@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.7a-r1.ebuild,v 1.1 2003/03/19 09:26:09 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.7a-r1.ebuild,v 1.2 2003/06/22 08:04:03 drobbins Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ RDEPEND="virtual/glibc"
 DEPEND="${RDEPEND} >=dev-lang/perl-5"
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~alpha ~sparc ~hppa"
+KEYWORDS="-*"
 
 warning() {
 	ewarn "BIG FAT WARNING!!!"

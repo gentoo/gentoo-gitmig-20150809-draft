@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.7a.ebuild,v 1.3 2003/03/13 22:27:16 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.7a.ebuild,v 1.4 2003/06/22 08:04:03 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Toolkit for SSL v2/v3 and TLS v1"
@@ -11,7 +11,7 @@ RDEPEND="virtual/glibc"
 DEPEND="${RDEPEND} >=dev-lang/perl-5"
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~alpha ~sparc ~hppa"
+KEYWORDS="-*"
 
 warning() {
 	ewarn "BIG FAT WARNING!!!"
