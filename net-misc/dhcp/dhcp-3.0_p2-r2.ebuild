@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-3.0_p2-r2.ebuild,v 1.4 2003/10/24 17:42:37 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-3.0_p2-r2.ebuild,v 1.5 2003/11/05 22:52:39 max Exp $
 
 inherit eutils flag-o-matic
 
@@ -38,17 +38,19 @@ src_compile() {
 
 	cat <<-END >> includes/site.h
 	#define _PATH_DHCPD_CONF "/etc/dhcp/dhcpd.conf"
-	#define _PATH_DHCLIENT_DB "/var/lib/dhcp/dhclient.leases"
+	#define _PATH_DHCPD_PID "/var/run/dhcp/dhcpd.pid"
 	#define _PATH_DHCPD_DB "/var/lib/dhcp/dhcpd.leases"
+	#define _PATH_DHCLIENT_DB "/var/lib/dhcp/dhclient.leases"
 	#define DHCPD_LOG_FACILITY LOG_LOCAL1
 	END
 
 	cat <<-END > site.conf
-	CC = gcc ${CFLAGS}
+	CC = gcc
 	LIBDIR = /usr/lib
 	INCDIR = /usr/include
 	ETC = /etc/dhcp
 	VARDB = /var/lib/dhcp
+	VARRUN = /var/run/dhcp
 	ADMMANDIR = /usr/share/man/man8
 	FFMANDIR = /usr/share/man/man5
 	LIBMANDIR = /usr/share/man/man3
@@ -56,7 +58,7 @@ src_compile() {
 	END
 
 	./configure --with-nsupdate \
-		--copts "-DPARANOIA -DEARLY_CHROOT" || die "configure failed"
+		--copts "-DPARANOIA -DEARLY_CHROOT ${CFLAGS}" || die "configure failed"
 
 	emake || die "compile problem"
 }
@@ -81,16 +83,14 @@ src_install() {
 
 	insinto /etc/conf.d
 	newins "${FILESDIR}/dhcp.conf" dhcp
-
 	exeinto /etc/init.d
 	newexe "${FILESDIR}/dhcp.rc6" dhcp
 
-	keepdir /var/lib/dhcp
-	fowners dhcp:dhcp /var/lib/dhcp
+	keepdir /var/{lib,run}/dhcp
 }
 
 pkg_postinst() {
-	chown dhcp:dhcp /var/lib/dhcp
+	chown dhcp:dhcp "${ROOT}/var/lib/dhcp" "${ROOT}/var/run/dhcp"
 
 	einfo "You can edit /etc/conf.d/dhcp to customize dhcp settings"
 	einfo
@@ -108,10 +108,10 @@ pkg_config() {
 
 	if [ ! -d "${CHROOT:=/chroot/dhcp}" ] ; then
 		ebegin "Setting up the chroot directory"
-		mkdir -m 0755 -p "${CHROOT}/etc" "${CHROOT}/var/lib"
+		mkdir -m 0755 -p "${CHROOT}/etc" "${CHROOT}/var/lib" "${CHROOT}/var/run"
 		cp -R /etc/dhcp "${CHROOT}/etc/"
 		cp -R /var/lib/dhcp "${CHROOT}/var/lib"
-		chown -R dhcp:dhcp "${CHROOT}/var/lib"
+		chown -R dhcp:dhcp "${CHROOT}/var/lib" "${CHROOT}/var/lib"
 		eend
 
 		if [ "`grep '^#[[:blank:]]\?CHROOT' /etc/conf.d/dhcp`" ] ; then
