@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/linux-headers
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.35 2003/12/08 23:43:59 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.36 2003/12/11 21:15:24 plasmaroo Exp $
+
+  11 Dec 2003; <plasmaroo@gentoo.org>
+  files/linux-headers-strict-ansi-fix.patch:
+  Updated the 'linux-headers-strict-ansi-fix.patch' patch to fix problematic
+  packages such as kdemultimedia with ANSI compilation errors; this should close
+  bug #32246. Thanks to all those involved in testing this.
 
   09 Dec 2003; <spider@gentoo.org> linux-headers-2.2.20.ebuild,
   linux-headers-2.2.21_pre3.ebuild, linux-headers-2.4.16-r1.ebuild,
