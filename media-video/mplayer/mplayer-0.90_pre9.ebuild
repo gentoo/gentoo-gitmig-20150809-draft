@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-0.90_pre7.ebuild,v 1.8 2002/10/24 23:23:45 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-0.90_pre9.ebuild,v 1.1 2002/10/27 19:36:26 azarah Exp $
 
 IUSE="dga oss jpeg 3dfx sse matrox sdl X svga ggi oggvorbis 3dnow aalib gnome xv opengl truetype dvd gtk gif esd fbcon encode alsa directfb"
 
@@ -9,12 +9,12 @@ IUSE="dga oss jpeg 3dfx sse matrox sdl X svga ggi oggvorbis 3dnow aalib gnome xv
 #                  make it work without dvd support.
 
 # Handle PREversions as well
-MY_PV=${PV/_/}
+MY_PV="${PV/_/}"
 S="${WORKDIR}/MPlayer-${MY_PV}"
 # Only install Skin if GUI should be build (gtk as USE flag)
-SRC_URI="ftp://mplayerhq.hu/MPlayer/releases/MPlayer-${MY_PV}.tar.bz2
-	ftp://mplayerhq.hu/MPlayer/releases/mp-arial-iso-8859-1.zip
-	ftp://mplayerhq.hu/MPlayer/releases/mp-arial-iso-8859-2.zip
+SRC_URI="http://mplayerhq.hu/MPlayer/releases/MPlayer-${MY_PV}.tar.bz2
+	http://mplayerhq.hu/MPlayer/releases/mp-arial-iso-8859-1.zip
+	http://mplayerhq.hu/MPlayer/releases/mp-arial-iso-8859-2.zip
 	gtk? ( mirror://gentoo/distfiles/default-skin-0.1.tar.bz2 )"
 #	 This is to get the digest problem fixed.
 #	 gtk? ( ftp://mplayerhq.hu/MPlayer/Skin/default.tar.bz2 )"
@@ -37,13 +37,18 @@ RDEPEND="x86? ( >=media-libs/divx4linux-20020418 )
 	ggi? ( media-libs/libggi )
 	sdl? ( media-libs/libsdl )
 	alsa? ( media-libs/alsa-lib )
+	nas? ( media-libs/nas )
 	svga? ( media-libs/svgalib )
 	encode? ( media-sound/lame 
 	          >=media-libs/libdv-0.9.5 )
 	opengl? ( virtual/opengl )
 	directfb? ( dev-libs/DirectFB )
 	oggvorbis? ( media-libs/libvorbis )
+	nls? ( sys-devel/gettext )
+	media-sound/cdparanoia
 	>=sys-apps/portage-2.0.36"
+# Hardcode paranoia support for now, as there is no
+# related USE flag.
 
 DEPEND="${RDEPEND}
 	x86? ( dev-lang/nasm )
@@ -51,7 +56,7 @@ DEPEND="${RDEPEND}
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 -ppc"
+KEYWORDS="~x86 ~ppc"
 
 
 src_unpack() {
@@ -67,6 +72,9 @@ src_unpack() {
 		cd ${WORKDIR}/default
 		patch < ${FILESDIR}/default-skin.diff || die "gtk patch failed"
 	fi
+
+	# Fix compile without dvd support
+	cd ${S}; patch -p1 < ${FILESDIR}/${P}-no-dvd.patch || die
 }
 
 src_compile() {
@@ -96,8 +104,9 @@ src_compile() {
 	use gif \
 		|| myconf="${myconf} --disable-gif"
 
-	use matrox && use X \
-		&& myconf="${myconf} --enable-xmga"
+	( use matrox && use X ) \
+		&& myconf="${myconf} --enable-xmga" \
+		|| myconf="${myconf} --disable-xmga"
 
 	use gtk \
 		&& myconf="${myconf} --enable-gui --enable-x11 \
@@ -131,6 +140,9 @@ src_compile() {
 	use alsa \
 		|| myconf="${myconf} --disable-alsa"
 
+	use nas \
+		|| myconf="${myconf} --disable-nas"
+
 	use oggvorbis \
 		|| myconf="${myconf} --disable-vorbis"
 
@@ -149,6 +161,10 @@ src_compile() {
 
 	use 3dfx \
 		&& myconf="${myconf} --enable-3dfx --enable-tdfxfb"
+
+	use nls \
+		&& myconf="${myconf} --enable-i18n" \
+		|| myconf="${myconf} --disable-i18n"
 
 	# Crashes on start when compiled with most optimizations.
 	# The code have CPU detection code now, with CPU specific
@@ -275,6 +291,7 @@ src_install() {
 	
 	insinto /usr/share/mplayer
 	doins ${S}/etc/codecs.conf
+	doins ${S}/etc/input.conf
 
 	if [ -n "`use matrox`" ]
 	then
