@@ -6,4 +6,4 @@ if [ ! -e ~/.armagetron ]; then
 	ln -s DATADIR/{arenas,models,moviesounds,textures,language,moviepack,sound} ~/.armagetron/
 fi
 cd ~/.armagetron
-BINDIR/armagetron "$@"
+exec BINDIR/armagetron "$@"
