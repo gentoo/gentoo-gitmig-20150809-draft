@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/openal
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/ChangeLog,v 1.11 2004/02/18 23:23:48 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/ChangeLog,v 1.12 2004/02/19 15:31:16 wolf31o2 Exp $
+
+  19 Feb 2004; Chris Gianelloni <wolf31o2@gentoo.org> openal-20040218.ebuild,
+  files/openalrc:
+  Adding sample openalrc.
 
 *openal-20040218 (18 Feb 2004)
 
