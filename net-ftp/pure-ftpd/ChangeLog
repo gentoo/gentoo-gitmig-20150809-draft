@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/pure-ftpd
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/ChangeLog,v 1.40 2004/09/17 23:45:42 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/ChangeLog,v 1.41 2004/12/29 03:09:43 ciaranm Exp $
+
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   18 Sep 2004; Gustavo Felisberto <humpback@gentoo.org>;
   pure-ftpd-1.0.20.ebuild:
@@ -42,7 +45,7 @@
   23 Jun 2004; Jason Wever <weeve@gentoo.org> pure-ftpd-1.0.18-r1.ebuild:
   Marked stable on sparc wrt bug #54590.
 
-  23 Jun 2004; Bryan Østergaard <kloeri@gentoo.org>
+  23 Jun 2004; Bryan Ã˜stergaard <kloeri@gentoo.org>
   pure-ftpd-1.0.18-r1.ebuild:
   Stable on alpha, see bug #54590.
 

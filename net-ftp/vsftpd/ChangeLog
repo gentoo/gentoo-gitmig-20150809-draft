@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/vsftpd
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/vsftpd/ChangeLog,v 1.45 2004/10/01 03:16:13 jforman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/vsftpd/ChangeLog,v 1.46 2004/12/29 03:10:56 ciaranm Exp $
+
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   30 Sep 2004; Jeffrey Forman <jforman@gentoo.org> files/vsftpd.init.d:
   updated init.d/vsftpd to remove source cmd per bug #51908
@@ -33,7 +36,7 @@
   15 Jun 2004; Jason Wever <weeve@gentoo.org> vsftpd-1.2.2.ebuild:
   Marked stable on sparc wrt bug #53116.
 
-  15 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> vsftpd-1.2.2.ebuild:
+  15 Jun 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> vsftpd-1.2.2.ebuild:
   Stable on alpha, bug 53116.
 
 *vsftpd-1.2.2 (15 Jun 2004)
