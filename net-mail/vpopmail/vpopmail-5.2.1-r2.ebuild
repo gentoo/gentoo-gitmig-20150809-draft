@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/vpopmail-5.2.1-r2.ebuild,v 1.3 2002/07/26 11:33:10 carpaski Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/vpopmail-5.2.1-r2.ebuild,v 1.4 2002/07/26 13:31:34 carpaski Exp $
 
 # TODO: all ldap, sybase support
 S=${WORKDIR}/${P}
@@ -26,6 +26,7 @@ RDEPEND="net-mail/qmail
 VPOP_DEFAULT_HOME="/var/vpopmail"
 VPOP_HOME="$VPOP_DEFAULT_HOME"
 
+# This makes sure the variable is set, and that it isn't null.
 vpopmail_set_homedir() {
 	VPOP_HOME=`grep vpopmail /etc/passwd | cut -d: -f6`
 	if [ -z "$VPOP_HOME" ]; then
