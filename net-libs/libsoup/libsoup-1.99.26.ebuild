@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/libsoup-1.99.26.ebuild,v 1.6 2003/11/28 20:34:23 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/libsoup-1.99.26.ebuild,v 1.7 2003/11/29 15:16:42 zul Exp $
 
 
 inherit gnome.org libtool
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.gnome.org/"
 IUSE="gnutls"
 SLOT="0"
 LICENSE="LGPL-2"
-KEYWORDS="x86 sparc  ~ppc alpha ~hppa"
+KEYWORDS="x86 sparc  ~ppc alpha ~hppa ~amd64"
 
 RDEPEND=">=dev-libs/glib-2.0
 	!gnutls? ( dev-libs/openssl )
