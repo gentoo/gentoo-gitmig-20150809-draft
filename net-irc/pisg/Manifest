@@ -1,5 +1,7 @@
+MD5 eaa1e046521a93b2d2fc377c62a84e72 pisg-0.51.ebuild 936
 MD5 59fc87354904f33975c323b8eed325ae pisg-0.50.ebuild 1076
 MD5 d7456373ce1e0ae3f970acfb3121f2d4 ChangeLog 450
 MD5 44c39c6ad372a8e5a5e7ee3311f703a7 metadata.xml 160
 MD5 4122e1015b1785c4ba317d53a3f95dec files/digest-pisg-0.50 61
+MD5 d1bbe01fcf4658d44fe890463108b7be files/digest-pisg-0.51 61
 MD5 f21fe11a6e586134609a2959f88aad5e files/0.50-network-option-fix.patch 1231
