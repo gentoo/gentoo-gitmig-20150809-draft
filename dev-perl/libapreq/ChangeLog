@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/libapreq
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/libapreq/ChangeLog,v 1.1 2002/02/01 21:53:28 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/libapreq/ChangeLog,v 1.2 2002/07/25 05:23:30 seemant Exp $
+
+*libapreq-1.01-r1 (24 Jul 2002)
+
+  24 Jul 2002; Seemant Kulleen <seemant@gentoo.org> libapreq-1.01-r1.ebuild:
+
+  Fell through the cracks during the great eclassing.
 
 *libapreq-0.31 (1 Feb 2002)
 
