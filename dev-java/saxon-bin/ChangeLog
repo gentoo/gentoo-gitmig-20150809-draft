@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/saxon-bin
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/saxon-bin/ChangeLog,v 1.7 2005/03/25 18:06:40 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/saxon-bin/ChangeLog,v 1.8 2005/03/28 14:35:56 gustavoz Exp $
+
+  28 Mar 2005; Gustavo Zacarias <gustavoz@gentoo.org> saxon-bin-8.0b.ebuild:
+  Stable on sparc
 
 *saxon-bin-8.3b (25 Mar 2005)
 

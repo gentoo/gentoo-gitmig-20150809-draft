@@ -1,20 +1,20 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 f18e83bc6d81c47a698cedc1094501c9 saxon-bin-7.8.ebuild 696
-MD5 dd79adeba7ae857db5a7a23e579f74b1 saxon-bin-6.5.3.ebuild 697
-MD5 4ad3ebd5205b824f61f254310671f030 saxon-bin-8.3b.ebuild 714
-MD5 0b3dd52edd61fdd2229fe6daffece1b1 saxon-bin-8.0b.ebuild 712
-MD5 7b4481856a0896634addf91cf084ecf8 ChangeLog 2126
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
-MD5 269092bbeba00cbf503959cfa96ebea3 files/digest-saxon-bin-6.5.3 60
-MD5 d222d51f71c7175a0f0f2274b78b5c5f files/digest-saxon-bin-8.0b 59
+MD5 4ad3ebd5205b824f61f254310671f030 saxon-bin-8.3b.ebuild 714
+MD5 f18e83bc6d81c47a698cedc1094501c9 saxon-bin-7.8.ebuild 696
+MD5 689a6d026cf7b6567be8956802fbfde3 ChangeLog 2221
+MD5 dd79adeba7ae857db5a7a23e579f74b1 saxon-bin-6.5.3.ebuild 697
+MD5 e91a6b5f7e804371dc4a42023bb23aea saxon-bin-8.0b.ebuild 710
 MD5 2594805d781bc09afb7ebf7e824d05cd files/digest-saxon-bin-8.3b 59
 MD5 c63f36309076fd38e541122ac2cb397a files/digest-saxon-bin-7.8 58
+MD5 269092bbeba00cbf503959cfa96ebea3 files/digest-saxon-bin-6.5.3 60
+MD5 d222d51f71c7175a0f0f2274b78b5c5f files/digest-saxon-bin-8.0b 59
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCRFNF06ebR+OMO78RAmb1AJ9g+Fo7tdojuOy9mDnwKnPEAy+PVgCeI02B
-6dsB8Vvch1s8/fquJ4Ris00=
-=cmzP
+iD8DBQFCSBYpKRy60XGEcJIRAtZHAJ4t4JZ/guc3gsnyQar4uhHxx0/AJQCdGRvZ
+yqxlCdqm9s5AWkKf0fw4WCk=
+=DlkN
 -----END PGP SIGNATURE-----
