@@ -11,7 +11,8 @@ SRC_URI="ftp://ftp.uk.research.att.com/pub/omniORB/omniORB3/${PN}_${PV}.tar.gz
 	 ftp://ftp.uk.research.att.com/pub/omniNotify/omniNotify1/omniNotify11b1.tar.gz"
 HOMEPAGE="http://www.uk.research.att.com/omniORB/"
 
-DEPEND="virtual/glibc dev-lang/python"
+DEPEND="virtual/glibc 
+        >=dev-lang/python-2.1"
 
 PLT="i586_linux_2.0_glibc2.1"
 
@@ -63,15 +64,15 @@ src_install () {
     insinto ${T}/idl/COS
     doins idl/COS/*.idl
     cp -af include ${D}/${T}
-    dodir /usr/lib/python2.0/site-packages
+    dodir /usr/lib/python2.1/site-packages
     cd ${S}
-    cp -af  lib/${PLT}/_* ${D}/usr/lib/python2.0/site-packages
+    cp -af  lib/${PLT}/_* ${D}/usr/lib/python2.1/site-packages
     dolib lib/${PLT}/*.{a,so*}
     rm ${D}/usr/lib/_*.*
     exeinto ${T}/lib
     doexe lib/${PLT}/omnicpp
-    dodir /usr/lib/python2.0
-    cp -af lib/python/* ${D}/usr/lib/python2.0/
+    dodir /usr/lib/python2.1
+    cp -af lib/python/* ${D}/usr/lib/python2.1/
     doman man/man[15]/*.[15]
 
     exeinto /etc/rc.d/init.d
