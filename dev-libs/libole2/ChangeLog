@@ -1,9 +1,11 @@
 # ChangeLog for dev-libs/libole2
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libole2/ChangeLog,v 1.6 2002/12/13 10:56:29 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libole2/ChangeLog,v 1.7 2003/02/07 16:44:13 agriffis Exp $
+
+  07 Feb 2003; Aron Griffis <agriffis@gentoo.org> libole2-0.2.4.ebuild :
+  Add alpha to KEYWORDS
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
- 
 
 *libole2-0.2.4 (1 Feb 2002)
 
