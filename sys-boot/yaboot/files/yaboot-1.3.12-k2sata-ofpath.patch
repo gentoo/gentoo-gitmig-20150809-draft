@@ -1,14 +1,5 @@
 --- yaboot-1.3.12.orig/ybin/ofpath	2004-05-23 17:20:56.382633120 -0400
 +++ yaboot-1.3.12/ybin/ofpath	2004-05-23 17:20:26.013249968 -0400
-@@ -293,7 +293,7 @@
- 	    ;;
- 	mesh)
- 	    HOST_LIST="$(for i in `find /proc/device-tree -name compatible` ; do
--			lgrep "$i" "mesh" ; done)"
-+			lg/rep "$i" "mesh" ; done)"
- 	    DEVICE_PATH="$(printhost $SCSI_HOSTNUMBER $HOST_LIST)"
- 	    echo "${DEVICE_PATH##*device-tree}/@$DEVICE_ID:$PARTITION"
- 	    ;;
 @@ -301,7 +301,13 @@
  	    HOST_LIST="$(for i in `find /proc/device-tree -name compatible` ; do
  			lgrep "$i" "k2-s-ata" ; done)"
