@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/glade
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/ChangeLog,v 1.4 2002/05/28 23:43:35 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/ChangeLog,v 1.5 2002/06/02 18:28:25 stroke Exp $
+
+*glade-1.1.0-r1 (2 June 2002)
+  2 June 2002; Gabriele Giorgetti <stroke@gentoo.org> glade-1.1.0-r1.ebuild
+  changed libgnomeprint, libgnomeprintui dependecies after the move
+  of those libs to gnome-base.  
 
 *glade-1.1.0 (28 May 2002)
   28 May 2002; Spider <spider@gentoo.org> glade-1.1.0.ebuild
