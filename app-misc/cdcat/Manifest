@@ -1,6 +1,16 @@
-MD5 d5a53e3254ff42700a59494580c74fbe ChangeLog 1088
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 e152e5b908d4b75a578f83a2f695940b cdcat-0.2.ebuild 1187
 MD5 bc906ee2129ed0d5001b99d5b7aa18f4 cdcat-0.3.ebuild 1179
+MD5 d5a53e3254ff42700a59494580c74fbe ChangeLog 1088
 MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
-MD5 e13ac4bbced4adf7df0d1e308ba8596d files/digest-cdcat-0.2 119
-MD5 f6c631031edc8dd1dde9ab31d518cb4c files/digest-cdcat-0.3 119
+MD5 de03d4c71abe85a09112b0a7798f0cf6 files/digest-cdcat-0.2 59
+MD5 f1b8dcb8cef1196c49a5cb034051c6e0 files/digest-cdcat-0.3 59
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBo4dXI1lqEGTUzyQRAsisAJ4xaxiZI0S20xzvLFJYVzp+cfJg/QCdG/ne
+WQVmNnVrY8ij3lhKpYqrPOo=
+=gLYA
+-----END PGP SIGNATURE-----
