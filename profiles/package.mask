@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <seemant@gentoo.org> (11 Nov 2002)
+# Masked because we're not sure how legal this is yet.
+media-video/realone
+
 # <carpaski@gentoo.org> (11 Nov 2002)
 # Testing fixups for rescue portage (so 1.2 can install)
 # Should be good, but report all weird output and any tracebacks.
