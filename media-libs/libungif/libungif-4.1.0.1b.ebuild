@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libungif/libungif-4.1.0.1b.ebuild,v 1.8 2004/03/07 05:17:46 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libungif/libungif-4.1.0.1b.ebuild,v 1.9 2004/06/02 20:22:49 vapier Exp $
 
 inherit eutils libtool
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://gentoo/${REAL_P}.tar.bz2"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86 ppc sparc alpha hppa amd64 ia64 ~mips"
+KEYWORDS="x86 ppc sparc ~mips alpha arm hppa amd64 ia64"
 IUSE="X gif"
 
 RDEPEND="X? ( virtual/x11 )"
@@ -32,8 +32,7 @@ src_compile() {
 	export WANT_AUTOCONF=2.5
 
 	local myconf
-	use alpha \
-		&& myconf="${myconf} --host=alpha-unknown-linux-gnu"
+	use alpha && myconf="${myconf} --host=alpha-unknown-linux-gnu"
 	econf `use_with X x` ${myconf} || die
 	emake || die
 }
@@ -49,7 +48,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	if [ `use gif` ] ; then
+	if use gif ; then
 		einfo "You had the gif USE flag set, so it is assumed that you want"
 		einfo "the binary from giflib instead.  Please make sure you have"
 		einfo "giflib emerged.  Otherwise, unset the gif flag and remerge this"

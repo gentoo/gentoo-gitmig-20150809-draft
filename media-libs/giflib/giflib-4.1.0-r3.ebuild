@@ -1,29 +1,25 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/giflib/giflib-4.1.0-r3.ebuild,v 1.24 2004/04/15 03:15:56 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/giflib/giflib-4.1.0-r3.ebuild,v 1.25 2004/06/02 20:21:00 vapier Exp $
 
 inherit gnuconfig
-
-IUSE="X gif"
 
 DESCRIPTION="Library to handle, display and manipulate GIF images"
 HOMEPAGE="http://prtr-13.ucsc.edu/~badger/software/libungif/index.shtml"
 SRC_URI="ftp://metalab.unc.edu/pub/Linux/libs/giflib/${P}.tar.gz
 	 ftp://prtr-13.ucsc.edu/pub/libungif/${P}.tar.gz"
 
-SLOT="0"
 LICENSE="as-is | BSD"
-KEYWORDS="x86 ppc sparc alpha hppa amd64 ia64 mips"
+SLOT="0"
+KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64"
+IUSE="X gif"
 
 DEPEND="X? ( virtual/x11 )"
 
 src_unpack() {
-	unpack ${A} || die
+	unpack ${A}
 	cd ${S}
-	use alpha && gnuconfig_update
-	use hppa && gnuconfig_update
-	use amd64 && gnuconfig_update
-	use ia64 && gnuconfig_update
+	gnuconfig_update
 }
 
 src_compile() {
