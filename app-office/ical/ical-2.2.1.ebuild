@@ -1,50 +1,52 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/ical/ical-2.2.1.ebuild,v 1.5 2004/03/14 01:47:30 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/ical/ical-2.2.1.ebuild,v 1.6 2004/03/15 04:11:06 seemant Exp $
 
 PATCH_VER="0.1"
-DESCRIPTION="Calendar program"
+MY_P=${P}a
+S=${WORKDIR}/${MY_P}
+DESCRIPTION="Tk-based Calendar program"
 HOMEPAGE="http://www.fnal.gov/docs/products/tktools/ical.html"
-SRC_URI="http://helios.dii.utk.edu/ftp/pub/tcl/apps/ical/${P}a.tar.bz2
-		 http://www.ibiblio.org/gentoo/distfiles/${P}a.patch-${PATCH_VER}.tar.bz2"
-LICENSE="as-is GPL-2"
+SRC_URI="http://helios.dii.utk.edu/ftp/pub/tcl/apps/ical/${MY_P}.tar.bz2
+		 http://www.ibiblio.org/gentoo/distfiles/${MY_P}.patch-${PATCH_VER}.tar.bz2"
+
 SLOT="0"
+LICENSE="as-is GPL-2"
 KEYWORDS="x86"
 
-DEPEND="dev-lang/tcl dev-lang/tk sys-devel/autoconf"
-RDEPEND="dev-lang/tcl dev-lang/tk"
+RDEPEND="dev-lang/tcl
+	dev-lang/tk"
 
-S=${WORKDIR}/${P}a
+DEPEND="${RDEPEND}
+	>=sys-apps/sed-4
+	sys-devel/autoconf"
 
 src_unpack() {
 	unpack ${A}
 	cd ${WORKDIR}
 
-	patch -p0 < ${P}a-newtcl.patch	|| die
-	patch -p0 < ${P}a-hack.patch	|| die
-	patch -p0 < ${P}a-glibc22.patch	|| die
-	patch -p0 < ${P}a-print.patch	|| die
+	epatch ${MY_P}-newtcl.patch
+	epatch ${MY_P}-hack.patch
+	epatch ${MY_P}-glibc22.patch
+	epatch ${MY_P}-print.patch
 
-	D=${S}/ dosed "s: \@TCL_LIBS\@::" Makefile.in
-	D=${S}/ dosed "s:mkdir:mkdir -p:" Makefile.in
+	sed -i \
+		-e "s: \@TCL_LIBS\@::" \
+		-e "s:mkdir:mkdir -p:" \
+			Makefile.in
 
 	if has_version '=dev-lang/tcl-8.4*' ; then
-		patch -p0 < ${P}a-tcl8.4.patch || die
+		epatch ${MY_P}-tcl8.4.patch
 	fi
 
 }
 
 src_compile() {
 	autoconf
-	econf --with-tclsh=/usr/bin/tclsh
-	emake || die "parallel make failed"
+	econf --with-tclsh=/usr/bin/tclsh || die
+	emake || make || die "parallel make failed"
 }
 
 src_install () {
-	#make DESTDIR=${D} install || die
-	make \
-		prefix=${D}/usr \
-		mandir=${D}/usr/share/man \
-		infodir=${D}/usr/share/info \
-		install || die "install failed"
+	einstall || die "install failed"
 }
