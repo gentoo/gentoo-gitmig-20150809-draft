@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-qfilter/qmail-qfilter-1.5.ebuild,v 1.8 2005/01/07 18:32:12 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-qfilter/qmail-qfilter-1.5.ebuild,v 1.9 2005/01/09 13:39:39 hansmi Exp $
 
 inherit toolchain-funcs
 
@@ -31,7 +31,7 @@ src_install () {
 	dodir ${QMAIL_BINDIR} /usr/share/man/
 	./installer || die "Installer failed"
 	dodoc ANNOUNCEMENT FILES NEWS README TARGETS TODO VERSION
-	dointo sample
+	docinto sample
 	dodoc sample/*
 }
 
