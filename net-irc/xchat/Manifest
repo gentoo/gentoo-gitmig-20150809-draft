@@ -6,21 +6,21 @@ MD5 e862cd62853b7ae38fc97f1fcedfcab8 xchat-1.8.11-r1.ebuild 2267
 MD5 c7a7980c17925334874c0457ea29397c xchat-2.0.7-r1.ebuild 2072
 MD5 548285e3c87cbd6dba10827e0e306b4e xchat-2.0.8-r1.ebuild 2072
 MD5 2d43b704437a16331e576f10daa6a9b3 xchat-2.0.9.ebuild 2131
-MD5 da47edd4ea0d886e2271ac933e2b6bf5 xchat-2.0.10-r1.ebuild 2336
-MD5 b1676b9b3205a9c4b6d92d68d0ae91d1 ChangeLog 16543
+MD5 c1d77484b7fd9616574dc00ac0423e04 ChangeLog 16863
+MD5 ff18d19130362ad91437ae6e9e8d2919 xchat-2.0.10-r2.ebuild 2337
 MD5 e2b99b2d2dfc54ba96e560c0ed8392df files/digest-xchat-1.8.11-r1 65
 MD5 15dadb9b77f7536f6c7769689fc883c9 files/digest-xchat-2.0.7-r1 64
 MD5 aac7b6be8968c5e6e1bdf580546a18fd files/digest-xchat-2.0.8-r1 64
 MD5 2effc9c4c2a5454c5abba3817894e865 files/digest-xchat-2.0.9 126
 MD5 a8f607d224408d4a27777d2ffce8beac files/xc1811fixststint.diff 422
 MD5 31de685eff3d16d9466416434c9fd6c3 files/xc208-fixsocks5.diff 688
-MD5 181879489fb6c5d1607d85d099f36ec7 files/xc2010-fixtabcomp.diff 721
-MD5 cadc31076541d914ac76a6b556bc4fb6 files/digest-xchat-2.0.10-r1 66
 MD5 ce08cfd7b93fbb37e1d9b510747a58d5 files/xc2010-fixfocus.diff 676
+MD5 cce105d96f5155e6454cd0b961038b24 files/xc2010-fixtabcomp2.diff 712
+MD5 cadc31076541d914ac76a6b556bc4fb6 files/digest-xchat-2.0.10-r2 66
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.4 (GNU/Linux)
 
-iD8DBQFA+RZYAXomK8S72HoRAjy5AJ4wOsvgWr6BWjD+FqPMcvDvF6IzFACfWIbb
-YptvmC12Kf9x9VHixET+xU4=
-=+Omc
+iD8DBQFA+burAXomK8S72HoRAomvAKCG+SQLVKlB+X0DpeOLzvCBpsyggACfcILP
+TxxdnwFy++q540tarO71oKg=
+=/P90
 -----END PGP SIGNATURE-----
