@@ -870,3 +870,5 @@ x11-base/xdirectfb
 # masking due to compile issues with gnustep-base
 =dev-util/gnustep-make-1.3.4
 =dev-util/gnustep-base-1.3.4
+# test this build.  doesn't require gnustep-env :)
+>=x11-wm/WindowMaker-0.80.1-r2
