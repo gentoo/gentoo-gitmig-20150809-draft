@@ -1,33 +1,50 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Donny Davies <woodchip@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lilo/lilo-21.7.5-r1.ebuild,v 1.1 2002/02/03 03:46:22 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lilo/lilo-21.7.5-r1.ebuild,v 1.2 2002/02/19 04:28:54 woodchip Exp $
 
-# NOTES:  Not finished yet, but completely usable.  Havent decided yet howto
-#         package the boot animations, if any..  Also havent decided what to
-#         do with the utils for making boot animations.. ie: include them in
-#         this package, or make a separate package, as SuSE has done..
 #
-#         Remember to mount /boot before you merge this thing!
+# This lilo has the Suse animated bootlogo patches.. fun stuff.
+#
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Standard Linux boot loader"
 SRC_URI="ftp://metalab.unc.edu/pub/Linux/system/boot/lilo/${P}.tar.gz"
 
 DEPEND="virtual/glibc >=sys-devel/bin86-0.15.5"
-RDEPEND="virtual/glibc" #gfxboot
+RDEPEND="virtual/glibc"
+
+pkg_setup() {
+	if [ `cut -f 2 -d " " /proc/mounts | grep "/boot"` ]
+	then
+		einfo "Your boot partition was detected as being mounted as /boot."
+		einfo "Files will be installed there for lilo to function correctly."
+	else
+		mount /boot
+		if [ `cut -f 2 -d " " /proc/mounts | grep "/boot"` ]
+		then
+			einfo "Your boot partition was not mounted as /boot, but portage was able to mount"
+			einfo "it without additional intervention."
+			einfo "Files will be installed there for lilo to function correctly."
+		else
+			eerror "Your boot partition has to be mounted on /boot before the installation"
+			eerror "can continue. Lilo needs to install important files there."
+			die "Please mount your /boot partition."
+		fi
+	fi
+}
 
 src_unpack() {
 	unpack ${A} ; cd ${S}
 
-	# patches for animated boot logo from Suse.  weeee! :>
+	# patches for animated boot logo from Suse.  loopdev fix too.
 	patch -p1 < ${FILESDIR}/${PV}/lilo-21.7.4.diff || die
 	patch -p1 < ${FILESDIR}/${PV}/lilo-21.7.4-loop_dev.diff || die
 	patch -p1 < ${FILESDIR}/${PV}/lilo-21.7.4-gfx.diff || die
 	patch -p0 < ${FILESDIR}/${PV}/lilo-21.7-vga_inst.diff || die
 
 	mv Makefile Makefile.orig
-	sed -e "s:-g:${CFLAGS}:" Makefile.orig > Makefile
+	sed -e "s:-g::" Makefile.orig > Makefile
 }
 
 src_compile() {
@@ -44,11 +61,6 @@ src_install() {
 	doins boot-text.b boot-menu.b chain.b os2_d.b
 	doman manPages/*.[5-8]
 	dodoc CHANGES COPYING INCOMPAT QuickInst README*
-
-	#dodir /usr/share/lilo
-	#hmm, maybe include some boot animations from the homepage
-	#listed below, but we're required to redistribute the sources
-	#for them too.. will decide soon.
 }
 
 pkg_preinst() {

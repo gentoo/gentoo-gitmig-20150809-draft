@@ -1,8 +1,16 @@
 # ChangeLog for sys-apps/lilo
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lilo/ChangeLog,v 1.3 2002/02/04 12:52:58 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lilo/ChangeLog,v 1.4 2002/02/19 04:28:54 woodchip Exp $
 
-*lilo-21.7.5-r2 (4 Feb 2002)
+  18 Feb 2002; Donny Davies <woodchip@gentoo.org> lilo-21.7.5-r1.ebuild :
+  
+  Cleaned up the comments I left behind in .ebuild.  Also added the pkg_setup() from
+  lilo-22.1 into this one.. good stuff.  ATTN Maintainers:  This lilo has the
+  patches from SuSe for animated boot logo stuff, quite fun, so please dont go
+  deleting it because its simply older than the lilo-22.1 version in portage!
+  I deleted the stale ebuilds to simply the situation.
+
+*lilo-22.1-r2 (4 Feb 2002)
 
   4 Feb 2002; G.Bevin <gbevin@gentoo.org> lilo-22.1-r2.ebuild :
   
