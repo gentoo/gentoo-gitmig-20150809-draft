@@ -1,6 +1,13 @@
 # ChangeLog for dev-db/hk_classes
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/hk_classes/ChangeLog,v 1.29 2005/02/25 02:08:58 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/hk_classes/ChangeLog,v 1.30 2005/03/22 21:58:46 carlo Exp $
+
+*hk_classes-0.7.3 (22 Mar 2005)
+
+  22 Mar 2005; Carsten Lohrke <carlo@gentoo.org>
+  +files/hk_classes-0.7.3-amd64.patch, hk_classes-0.7.2-r1.ebuild,
+  +hk_classes-0.7.3.ebuild:
+  version bump and Python 2.4 compatibility thanks to Rob Cakebread, #85721
 
   24 Feb 2005; Jason Wever <weeve@gentoo.org> hk_classes-0.7.2-r1.ebuild:
   Added ~sparc keyword.

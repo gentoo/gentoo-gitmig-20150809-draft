@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/hk_classes/hk_classes-0.7.2-r1.ebuild,v 1.4 2005/03/22 21:58:46 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/hk_classes/hk_classes-0.7.3.ebuild,v 1.1 2005/03/22 21:58:46 carlo Exp $
 
 inherit eutils python
 
@@ -31,7 +31,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 
-	epatch ${FILESDIR}/${PN}-amd64.patch
+	epatch ${FILESDIR}/${P}-amd64.patch
 }
 
 src_compile() {
