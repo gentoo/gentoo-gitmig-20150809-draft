@@ -1,6 +1,18 @@
 # ChangeLog for media-sound/alsa-xmms
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-xmms/ChangeLog,v 1.1 2002/05/03 06:15:43 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-xmms/ChangeLog,v 1.2 2002/07/08 01:52:12 raker Exp $
+
+*media-sound/alsa-xmms-0.9-r1 (07 Jul 2002)
+
+  07 Jul 2002; Nick Hadaway <raker@gentoo.org> alsa-xmms-0.9-r1.ebuild
+  
+  12:16pm - Write alsa-xmms author reporting crash
+  12:32pm - Author responds saying he'll fix it
+  2:02pm - Author reports that it is fixed
+  2:28pm - Author reports that a new tarball is available
+
+  Much props to Matthieu Sozeau (alsa-xmms author) for his ultra-prompt 
+  response to a bug report.
 
 *media-sound/alsa-xmms-0.9 (2 May 2002)
 
