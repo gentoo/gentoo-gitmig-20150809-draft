@@ -46,12 +46,13 @@ fi
 if [ ! -e /etc/modules/${KERNVERS} ]
 then
     ebegin "Auto-generating ${KERNVERS} modules.conf"
-    modprobe -c >/etc/modules/${KERNVERS}
+    modprobe -c | grep -v ".*=.*/modules\..*" >/etc/modules/${KERNVERS}
     if [ $? -eq 0 ]
     then
 	eend 0
     	einfo "File /etc/modules/${KERNVERS} created."
     	einfo "Please customize this file as desired."
+	depmod -a 1>&2 
     else
     	eend 1 "Error configuring module dependencies."
     fi
