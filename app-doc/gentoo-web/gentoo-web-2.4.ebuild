@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/gentoo-web/gentoo-web-2.4.ebuild,v 1.12 2002/11/07 18:45:49 zhen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/gentoo-web/gentoo-web-2.4.ebuild,v 1.13 2002/11/07 20:40:16 zhen Exp $
  
 S=${WORKDIR}/gentoo-src/gentoo-web
 TEMPLATE=${S}/xsl/guide-main.xsl
@@ -44,7 +44,7 @@ src_unpack() {
 		else
 			# give it a nice default
 			WEBROOT=/home/httpd/htdocs
-			GENTOO_SRCDIR=/data/gentoo-src
+			#GENTOO_SRCDIR=/data/gentoo-src
 		fi
 	fi
 
@@ -89,7 +89,11 @@ src_install() {
 		lynx -dump ${z}.html | awk 'BEGIN { DOIT=0; } { if ($0 ~ /Updated/) DOIT=1; if (DOIT != 1) print $0}'i | sed -e '1,3d'  \
 		&> ${D}${WEBROOT}/doc/txt/${z}.txt || die
 	done
-	
+
+	cd ${D}${WEBROOT}/doc/txt
+	tar -cf gentoo-web-doc.tar *
+	bzip2 -z gentoo-web-doc.tar
+
 	cd ${S}
 	cp txt/firewall ${D}${WEBROOT}/doc/
 	dodir ${WEBROOT}/images
