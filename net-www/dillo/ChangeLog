@@ -1,18 +1,17 @@
 # ChangeLog for net-www/dillo
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/dillo/ChangeLog,v 1.8 2002/12/09 04:33:20 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/dillo/ChangeLog,v 1.9 2002/12/12 02:26:06 bcowan Exp $
 
+*dillo-0.6.6-r3 (11 Dec 2002)
+
+  11 Dec 2002; Brad Cowan <bcowan@gentoo.org> dillo-0.6.6-r3.ebuild,
+  files/digest-dillo-0.6.6-r3:
+  
+  Changed ebuild to use eutils to patch using epatch.
+    
 \* Autoupdate keywords (12-6-02)
   06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
  
-*dillo-0.6.6-r2 (16 Oct 2002)
-
-  16 Oct 2002; Brad Cowan <bcowan@gentoo.org> dillo-0.6.6-r2.ebuild,
-  files/digest-dillo-0.6.6-r2 :
-  
-  Added new local-browse patch when libwww is in USE, removed scaling patch as
-  it seems to work poorly with local-browse patch.
-
 *dillo-0.6.6-r1 (16 Aug 2002)
 
   16 Aug 2002; Seemant Kulleen <seemant@gentoo.org> dillo-0.6.6-r1.ebuild :
