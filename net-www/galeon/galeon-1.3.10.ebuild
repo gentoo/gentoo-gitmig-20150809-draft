@@ -1,18 +1,17 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/galeon/galeon-1.3.10.ebuild,v 1.8 2003/12/29 15:55:48 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/galeon/galeon-1.3.10.ebuild,v 1.9 2004/04/27 23:41:33 vapier Exp $
 
-inherit gnome2 debug libtool
+inherit gnome2 debug libtool eutils
 
 DESCRIPTION="A GNOME Web browser based on gecko (mozilla's rendering engine)"
 HOMEPAGE="http://galeon.sourceforge.net"
 SRC_URI="mirror://sourceforge/galeon/${P}.tar.bz2"
-RESTRICT="nomirror"
 
-IUSE=""
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc alpha sparc ia64 amd64"
 SLOT="0"
+KEYWORDS="x86 ppc alpha sparc ia64 amd64"
+IUSE=""
 
 # supports both moz-1.3 and moz-1.4
 RDEPEND="virtual/x11
@@ -28,7 +27,6 @@ RDEPEND="virtual/x11
 	>=gnome-base/gnome-vfs-2
 	>=gnome-base/libglade-2
 	app-text/scrollkeeper"
-
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	dev-util/intltool
@@ -37,7 +35,6 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-
 	epatch ${FILESDIR}/${PN}-${PV}-gcc2_fixes.patch
 }
 
@@ -61,4 +58,4 @@ src_compile() {
 	make || die "compile failed"
 }
 
-DOCS="AUTHORS COPYING COPYING.README ChangeLog FAQ INSTALL README README.ExtraPrefs THANKS TODO NEWS"
+DOCS="AUTHORS ChangeLog FAQ INSTALL README README.ExtraPrefs THANKS TODO NEWS"
