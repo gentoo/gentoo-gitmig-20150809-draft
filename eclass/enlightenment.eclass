@@ -1,13 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/enlightenment.eclass,v 1.2 2003/10/14 02:33:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/enlightenment.eclass,v 1.3 2003/10/21 13:10:10 vapier Exp $
 #
 # Author: vapier@gentoo.org
 
 ECLASS=enlightenment
 INHERITED="$INHERITED $ECLASS"
 
-EXPORT_FUNCTIONS src_unpack src_compile src_install
+EXPORT_FUNCTIONS pkg_setup src_unpack src_compile src_install pkg_postinst
 
 DESCRIPTION="A DR17 production"
 HOMEPAGE="http://www.enlightenment.org/"
@@ -22,6 +22,19 @@ IUSE="nls"
 DEPEND="nls? ( sys-devel/gettext )"
 
 S=${WORKDIR}/${PN}
+
+enlightenment_warning_msg() {
+	if [ "${PV/2003}" != "${PV}" ] ; then
+		ewarn "Please do not contact the E team about bugs in Gentoo."
+		ewarn "Only contact vapier@gentoo.org via e-mail or bugzilla."
+		ewarn "Remember, this stuff is CVS only code so dont cry when"
+		ewarn "I break you :)."
+	fi
+}
+
+enlightenment_pkg_setup() {
+	enlightenment_warning_msg
+}
 
 # the stupid gettextize script prevents non-interactive mode, so we hax it
 gettext_modify() {
@@ -57,4 +70,8 @@ enlightenment_src_install() {
 	[ -z "${EDOCS}" ] && EDOCS="AUTHORS ChangeLog NEWS README TODO"
 	dodoc ${EDOCS}
 	[ -d doc ] && dohtml -r doc/*
+}
+
+enlightenment_pkg_postinst() {
+	enlightenment_warning_msg
 }
