@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/qhacc/qhacc-3.2.1.ebuild,v 1.2 2004/10/11 22:21:18 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/qhacc/qhacc-3.2.1.ebuild,v 1.3 2004/10/11 23:01:13 carlo Exp $
 
 inherit libtool kde-functions eutils
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/qhacc/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ~ppc ~sparc ~alpha"
-IUSE="doc mysql postgres sqlite xml"
+IUSE="doc mysql postgres sqlite"
 
 DEPEND="mysql? ( dev-db/mysql++ )
 	postgres? ( dev-db/postgresql )
