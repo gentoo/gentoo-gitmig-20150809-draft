@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/qingy/qingy-0.4.1.ebuild,v 1.1 2004/07/27 23:46:47 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/qingy/qingy-0.4.1.ebuild,v 1.2 2004/07/31 20:43:29 s4t4n Exp $
 
 DESCRIPTION="Qingy is a DirectFB getty replacement."
 HOMEPAGE="http://qingy.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~amd64"
+KEYWORDS="x86 ~ppc ~amd64"
 IUSE="emacs gpm pam static"
 DEPEND=">=dev-libs/DirectFB-0.9.18
 	emacs? ( virtual/emacs )
