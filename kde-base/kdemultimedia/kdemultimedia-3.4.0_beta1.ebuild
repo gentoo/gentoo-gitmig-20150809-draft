@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.4.0_beta1.ebuild,v 1.6 2005/02/02 11:48:19 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.4.0_beta1.ebuild,v 1.7 2005/02/02 13:13:24 lanius Exp $
 
 inherit kde-dist flag-o-matic
 
@@ -24,6 +24,12 @@ DEPEND="~kde-base/kdebase-${PV}
 	>=media-libs/taglib-1.2
 	media-libs/tunepimp
 	!media-sound/juk"
+
+src_unpack() {
+	kde_src_unpack
+	cd ${S}
+	epatch ${FILESDIR}/${P}-amd64.patch
+}
 
 src_compile() {
 	use xine && myconf="$myconf --with-xine-prefix=/usr"

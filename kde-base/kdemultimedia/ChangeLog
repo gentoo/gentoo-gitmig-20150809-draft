@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdemultimedia
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/ChangeLog,v 1.148 2005/02/02 11:48:19 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/ChangeLog,v 1.149 2005/02/02 13:13:24 lanius Exp $
+
+  02 Feb 2005; Heinrich Wendel <lanius@gentoo.org>
+  +files/kdemultimedia-3.4.0_beta1-amd64.patch,
+  kdemultimedia-3.4.0_beta1.ebuild:
+  fix compilation on amd64
 
   02 Feb 2005; Heinrich Wendel <lanius@gentoo.org>
   kdemultimedia-3.4.0_beta1.ebuild:
