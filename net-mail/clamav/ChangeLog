@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/clamav
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/clamav/ChangeLog,v 1.27 2004/04/17 20:25:30 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/clamav/ChangeLog,v 1.28 2004/04/21 15:21:23 gmsoft Exp $
+
+  21 Apr 2004; Guy Martin <gmsoft@gentoo.org> clamav-0.68.1.ebuild:
+  Marked stable on hppa.
 
 *clamav-0.70 (17 Apr 2004)
 
