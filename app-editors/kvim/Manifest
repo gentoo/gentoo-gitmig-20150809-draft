@@ -3,10 +3,12 @@ MD5 7fd153aeeadf13395f1e67fa3f58a813 kvim-6.1.141.ebuild 1382
 MD5 9c8e84dd33045265019557c46d628120 kvim-6.1.141_rc1.ebuild 795
 MD5 f45360910e219490d73b7952b9b984ce kvim-6.1.141_rc2.ebuild 1415
 MD5 ee78ee9d3852ad2fc2455a227622aefe metadata.xml 173
-MD5 05162db4d67b53a7cbc30c48c3b56d26 kvim-6.2.14.ebuild 1570
+MD5 df5ee8abb44848d1b992fc1902f97f78 kvim-6.2.14_pre1.ebuild 1418
+MD5 e532ffbdcfc3ddaf4201a12fcca50527 kvim-6.2.14.ebuild 1653
 MD5 f88c2bf9d5e40bfec8bbfaecb5813d7d files/digest-kvim-6.1.141 66
 MD5 cde9e15be8d92c34b6e007ece3806866 files/digest-kvim-6.1.141_rc1 69
 MD5 c6e5d53f69d38db215ca3743c200bc9a files/digest-kvim-6.1.141_rc2 69
 MD5 28777cae6584ddd161133cedd97a6642 files/kvim-6.1.141.patch 1082
 MD5 660d4fea9d8112a4bb35007f494b5a34 files/kvim-6.1.141_rc1-gcc2fix.patch 513
 MD5 e2dea441da69d0dacb672cb8a7dc5c5b files/digest-kvim-6.2.14 65
+MD5 4d2459727266d29b61b856ee4dfc31e0 files/kvim-6.2.14-gcc2.patch 505
