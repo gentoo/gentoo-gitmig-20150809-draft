@@ -1,8 +1,12 @@
 # ChangeLog for app-text/aiksaurus
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/aiksaurus/ChangeLog,v 1.1 2002/05/31 17:54:03 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/aiksaurus/ChangeLog,v 1.2 2002/07/16 03:41:08 owen Exp $
 
 *aiksaurus-0.15.ebuild (31 May 2002)
+
+  15 Jul 2002; Owen Stampflee <owen@gentoo.org> :
+
+  Added KEYWORDS.
 
   31 May 2002; Dan Armak <danarmak@gentoo.org> changelog:
   Initial version.

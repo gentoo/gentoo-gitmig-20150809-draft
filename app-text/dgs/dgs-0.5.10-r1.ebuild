@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-text/dgs/dgs-0.5.10-r1.ebuild,v 1.7 2002/07/11 06:30:18 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dgs/dgs-0.5.10-r1.ebuild,v 1.8 2002/07/16 03:43:01 owen Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A Ghostscript based DPS server"
@@ -15,6 +15,8 @@ DEPEND="virtual/glibc sys-apps/texinfo
 RDEPEND="virtual/glibc
  	=dev-libs/glib-1.2*
 	virtual/x11"
+
+KEYWORDS="x86 ppc"
 
 src_unpack() {
 	unpack ${A}

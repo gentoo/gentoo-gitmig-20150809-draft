@@ -1,6 +1,6 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-text/gv/gv-3.5.8-r1.ebuild,v 1.5 2002/07/11 06:30:18 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gv/gv-3.5.8-r1.ebuild,v 1.6 2002/07/16 03:51:43 owen Exp $
 
 # this r1 is a major change. it uses sed instead of patches.
 # hopefully this will enable everyone to compile gv on widely
@@ -16,7 +16,7 @@ HOMEPAGE="http://wwwthep.physik.uni-mainz.de/~plass/gv/"
 # There's probably more, but ghostscript also depends on it,
 # so I can't identify it
 DEPEND="virtual/x11 x11-libs/Xaw3d app-text/ghostscript"
-
+KEYWORDS="ppc x86"
 src_unpack() {
     
     # need to check if this can be done automatically

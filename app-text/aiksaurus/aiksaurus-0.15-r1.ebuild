@@ -11,6 +11,7 @@ LICENSE="GPL-2"
 
 DEPEND="sys-devel/gcc"
 RDEPEND=""
+KEYWORDS="x86 ppc"
 
 src_unpack() {
 	unpack ${A}

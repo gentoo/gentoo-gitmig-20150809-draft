@@ -1,8 +1,12 @@
 # ChangeLog for app-text/chktex
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/chktex/ChangeLog,v 1.3 2002/06/29 01:54:10 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/chktex/ChangeLog,v 1.4 2002/07/16 03:42:10 owen Exp $
 
 *cktex-1.5-r2 (28 Jun 2002)
+
+  15 Jul 2002; Owen Stampflee <owen@gentoo.org> :
+
+  Added KEYWORDS.
 
   28 Jun 2002; Seemant Kulleen <seemant@gentoo.org> chktex-1.5-r2.ebuild
   files/digest-chktex-1.5-r2 :
