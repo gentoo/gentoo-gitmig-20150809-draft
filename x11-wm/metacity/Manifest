@@ -1,10 +1,11 @@
 MD5 5c81809203d4969fd95b37f2f4ed9f9a metacity-2.4.1.ebuild 1073
 MD5 203f98d98e27300cd7b76f6fb9038e56 metacity-2.4.55.ebuild 1064
 MD5 108a5ef6535f214de1f04c76c123f084 metacity-2.4.34.ebuild 1039
-MD5 9578df1d1a9b8d366d66ebe1dec4fdd1 metacity-2.5.5.ebuild 1070
 MD5 506d6877e4d6b50023d97d586a6fb590 ChangeLog 4338
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+MD5 9578df1d1a9b8d366d66ebe1dec4fdd1 metacity-2.5.5.ebuild 1070
 MD5 cef4128bbffb47a28f74008418ff9e95 metacity-2.6.0.ebuild 1084
+MD5 c3eabbb6a1bfa604db6c9dc22d1cb3b4 metacity-2.6.1.ebuild 1082
 MD5 888edb091b2a7f1feebf5ad86907048f files/metacity-2.4.3-ppc-gcc3.2.diff 1062
 MD5 be03404ddfeb13e12276ec1037a5ea42 files/metacity-2.4.0-ppc-gcc3.2.diff 1211
 MD5 a72a1bec809aa05fb1b9002b934f7bca files/metacity-2.4.1-ppc-gcc3.2.diff 1211
@@ -13,3 +14,4 @@ MD5 e5a49c7190b101c113e02491301f77fe files/digest-metacity-2.4.55 69
 MD5 532afda9465b65441cfce76596155801 files/digest-metacity-2.4.1 67
 MD5 540b7a077be3d47e9d0521795bb1a5b9 files/digest-metacity-2.5.5 68
 MD5 0800c1477373d846f6980dd22fd1592b files/digest-metacity-2.6.0 68
+MD5 bcb681865ef146908184b8ef4c70b274 files/digest-metacity-2.6.1 68
