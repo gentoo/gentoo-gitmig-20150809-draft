@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author: Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.12 2002/12/14 21:46:25 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.13 2003/01/17 08:08:48 azarah Exp $
 # This eclass is for general purpose functions that most ebuilds
 # have to implement themselves.
 #
@@ -319,6 +319,8 @@ epatch() {
 # Thanks to nall <nall@gentoo.org> for this.
 #
 get_number_of_jobs() {
+	local jobs=0
+
 	if [ ! -r /proc/cpuinfo ]
 	then
 		return 1
@@ -329,35 +331,48 @@ get_number_of_jobs() {
 	if [ "${ARCH}" = "x86" ]
 	then
 		# x86 always has "processor"
-		export MAKEOPTS="${MAKEOPTS} -j$((`grep -c ^processor /proc/cpuinfo` * 2))"
+		jobs="$((`grep -c ^processor /proc/cpuinfo` * 2))"
 	
 	elif [ "${ARCH}" = "sparc" -o "${ARCH}" = "sparc64" ]
 	then
 		# sparc always has "ncpus active"
-		export MAKEOPTS="${MAKEOPTS} -j$((`grep "^ncpus active" /proc/cpuinfo | sed -e "s/^.*: //"` * 2))"
+		jobs="$((`grep "^ncpus active" /proc/cpuinfo | sed -e "s/^.*: //"` * 2))"
 	
 	elif [ "${ARCH}" = "alpha" ]
 	then
 		# alpha has "cpus active", but only when compiled with SMP
-		if [ "`grep -c "^cpus active" /proc/cpuinfo`" = "1" ]
+		if [ "`grep -c "^cpus active" /proc/cpuinfo`" -eq 1 ]
 		then
-			export MAKEOPTS="${MAKEOPTS} -j$((`grep "^cpus active" /proc/cpuinfo | sed -e "s/^.*: //"` * 2))"
+			jobs="$((`grep "^cpus active" /proc/cpuinfo | sed -e "s/^.*: //"` * 2))"
 		else
-			export MAKEOPTS="${MAKEOPTS} -j2"
+			jobs=2
 		fi
 		
 	elif [ "${ARCH}" = "ppc" ]
 	then
 		# ppc has "processor", but only when compiled with SMP
-		if [ "`grep -c "^processor" /proc/cpuinfo`" = "1" ]
+		if [ "`grep -c "^processor" /proc/cpuinfo`" -eq 1 ]
 		then
-			export MAKEOPTS="${MAKEOPTS} -j$((`grep -c ^processor /proc/cpuinfo` * 2))"
+			jobs="$((`grep -c ^processor /proc/cpuinfo` * 2))"
 		else
-			export MAKEOPTS="${MAKEOPTS} -j2"
+			jobs=2
 		fi
+	elif [ "${ARCH}" = "mips" ]
+	then
+		# mips always has "processor"
+		jobs="$((`grep -c ^processor /proc/cpuinfo` * 2))"
+		
 	else
-		export MAKEOPTS="${MAKEOPTS} -j$((`grep -c ^cpu /proc/cpuinfo` * 2))"
+		jobs="$((`grep -c ^cpu /proc/cpuinfo` * 2))"
 		die "Unknown ARCH -- ${ARCH}!"
 	fi
+
+	# Make sure the number is valid ...
+	if [ "${jobs}" -lt 1 ]
+	then
+		jobs=1
+	fi
+
+	export MAKEOPTS="${MAKEOPTS} -j${jobs}"
 }
 
