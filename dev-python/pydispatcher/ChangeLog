@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/pydispatcher
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pydispatcher/ChangeLog,v 1.1 2004/07/22 06:32:24 pythonhead Exp $
+
+*pydispatcher-1.0.0 (21 Jul 2004)
+
+  21 Jul 2004; Rob Cakebread <pythonhead@gentoo.org> +metadata.xml,
+  +pydispatcher-1.0.0.ebuild:
+  New package. Thanks Mike Fletcher for the submission. bug# 54860
+
