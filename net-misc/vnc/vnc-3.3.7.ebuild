@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/vnc-3.3.7.ebuild,v 1.8 2003/11/11 15:58:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/vnc-3.3.7.ebuild,v 1.9 2003/11/21 15:52:17 aliz Exp $
 
 inherit eutils
 
@@ -25,6 +25,7 @@ src_unpack() {
 	cd ${S}
 
 	epatch ${FILESDIR}/${P}-gentoo.security.patch
+	epatch ${FILESDIR}/${P}-imake-tmpdir.patch
 	if [ "${ARCH}" = "sparc" ]
 	then
 		epatch ${FILESDIR}/vnc-3.3.3r2-getline-fix.patch
