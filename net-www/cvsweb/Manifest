@@ -1,5 +1,5 @@
-MD5 6e9a005d32b9259cf21c3c180ebd1f43 cvsweb-1.93-r1.ebuild 747
-MD5 7e1836b697212455c9b480110b23d22f cvsweb-1.112.ebuild 861
 MD5 a07ccc90c0d570be12ff962db4360679 ChangeLog 1127
+MD5 c10e3a5635cf76bf2f4b6b426918e106 cvsweb-1.112.ebuild 873
+MD5 9f08f8cbc998abe99e7b2f7f78f96eb6 cvsweb-1.93-r1.ebuild 759
 MD5 1f9930e7dc9c78f027d027ea8e8ca952 files/digest-cvsweb-1.112 63
 MD5 947f34c2c4de11e6d9ebbd7a5129afa9 files/digest-cvsweb-1.93-r1 62
