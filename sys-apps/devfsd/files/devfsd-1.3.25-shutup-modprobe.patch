@@ -1,0 +1,27 @@
+--- devfsd/devfsd.c.orig	2003-02-22 15:21:43.000000000 +0200
++++ devfsd/devfsd.c	2003-02-22 15:23:08.000000000 +0200
+@@ -1217,7 +1217,7 @@
+     [RETURNS] Nothing.
+ */
+ {
+-    char *argv[6];
++    char *argv[7];
+     char device[STRING_LENGTH];
+     char *env[4] = {"HOME=/", "TERM=linux",  /*  Safe mode environment  */
+ 		    "PATH=/sbin:/usr/sbin:/bin:/usr/bin", NULL};
+@@ -1239,10 +1239,11 @@
+     }
+     argv[0] = "/sbin/modprobe";
+     argv[1] = "-k";
+-    argv[2] = "-C";
+-    argv[3] = "/etc/modules.devfs";
+-    argv[4] = device;
+-    argv[5] = NULL;
++    argv[2] = "-q";
++    argv[3] = "-C";
++    argv[4] = "/etc/modules.devfs";
++    argv[5] = device;
++    argv[6] = NULL;
+     snprintf (device, sizeof (device), "/dev/%s", info->devname);
+     if (trace_level > 1)
+ 	fprintf (stderr, "%s modprobe with name: \"%s\"\n",
