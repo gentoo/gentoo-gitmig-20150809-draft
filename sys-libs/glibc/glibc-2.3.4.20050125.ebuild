@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20050125.ebuild,v 1.2 2005/02/06 01:03:57 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20050125.ebuild,v 1.3 2005/02/06 06:39:30 eradicator Exp $
 
 KEYWORDS="-*"
 
@@ -22,7 +22,7 @@ DESCRIPTION="GNU libc6 (also called glibc2) C library"
 HOMEPAGE="http://www.gnu.org/software/libc/libc.html"
 LICENSE="LGPL-2"
 
-IUSE="${IUSE:+${IUSE} }nls pic build nptl nptlonly erandom hardened debug userlocales nomalloccheck"
+IUSE="nls pic build nptl nptlonly erandom hardened debug userlocales nomalloccheck multilib"
 
 PROVIDE="virtual/glibc virtual/libc"
 
@@ -197,8 +197,18 @@ toolchain-glibc_src_test() {
 	# around with sandbox, so lets just punt it
 	unset LD_PRELOAD
 
-	cd ${GBUILDDIR}
-	make check || die "make check failed :("
+	# do the linuxthreads build unless we're using nptlonly
+	if use !nptlonly ; then
+		cd ${WORKDIR}/build-${ABI}-${CTARGET}-linuxthreads
+		einfo "Checking GLIBC with linuxthreads..."
+		make check || die "linuxthreads glibc did not pass make check"
+	fi
+	if want_nptl; then
+		cd ${WORKDIR}/build-${ABI}-${CTARGET}-nptl
+		unset LD_ASSUME_KERNEL || :
+		einfo "Checking GLIBC with NPTL..."
+		make check || die "nptl glibc did not pass make check"
+	fi
 }
 
 toolchain-glibc_pkg_preinst() {
@@ -506,76 +516,85 @@ setup_flags() {
 	strip-flags
 	strip-unsupported-flags
 
-	# -freorder-blocks for all but ppc
-	use ppc || append-flags "-freorder-blocks"
-
-	# Sparc/Sparc64 support
-	if use sparc; then
-		# Both sparc and sparc64 can use -fcall-used-g6.  -g7 is bad, though.
-		filter-flags "-fcall-used-g7"
-		append-flags "-fcall-used-g6"
-
-		# Sparc64 Only support...
-		if [ "${PROFILE_ARCH}" = "sparc64" ]; then
-			# Get rid of -mcpu options (the CHOST will fix this up) and flags
-			# known to fail
-			filter-flags "-mcpu=ultrasparc -mcpu=v9 -mvis"
-
-			# Setup the CHOST properly to insure "sparcv9"
-			# This passes -mcpu=ultrasparc -Wa,-Av9a to the compiler
-			if [ "${CHOST}" = "sparc-unknown-linux-gnu" ]; then
-				CTARGET="sparcv9-unknown-linux-gnu"
-				CHOST="${CTARGET}"
-			fi
-		fi
-
-		if [ "${PROFILE_ARCH}" = "sparc64-multilib" ]; then
-			# We change our CHOST, so set this right here
-			export CC="$(tc-getCC)"
-
-			# glibc isn't too smart about guessing our flags.  It
-			# will default to -xarch=v9, but assembly in sparc64 glibc
-			# requires v9a or greater...
-			if is-flag "-mcpu=ultrasparc3"; then
-				# Change CHOST to include us3 assembly
-				if [ "${ABI}" = "sparc32" ]; then
-					CTARGET="sparcv9b-unknown-linux-gnu"
-					CHOST="${CTARGET}"
-				else
-					CTARGET="sparc64b-unknown-linux-gnu"
-					CHOST="${CTARGET}"
-					CFLAGS_sparc64="$(get_abi_CFLAGS) -Wa,-xarch=v9b"
-				fi
-			else
-				if [ "${ABI}" = "sparc32" ]; then
-					CTARGET="sparcv9-unknown-linux-gnu"
-					CHOST="${CTARGET}"
-				else
-					CTARGET="sparc64-unknown-linux-gnu"
-					CHOST="${CTARGET}"
-					CFLAGS_sparc64="$(get_abi_CFLAGS) -Wa,-xarch=v9a"
-				fi
-			fi
-
-			filter-flags -mvis -m32 -m64 -Wa,-xarch -Wa,-A
-		fi
-	fi
-
-	# AMD64 multilib
-	if use amd64 && has_multilib_profile; then
+	if has_multilib_profile; then
 		# We change our CHOST, so set this right here
 		export CC="$(tc-getCC)"
+		local new_target
 
-		if [ "${ABI}" = "amd64" ]; then
-			CTARGET="x86_64-pc-linux-gnu"
-			CHOST="${CTARGET}"
+		case ${ABI} in
+			x86)
+				new_target="i686-pc-linux-gnu"
+			;;
+			amd64)
+				new_target="x86_64-pc-linux-gnu"
+			;;
+			o32)
+				new_target="mips-unknown-linux-gnu"
+			;;
+			n32|n64)
+				new_target="mips64-unknown-linux-gnu"
+			;;		
+			ppc)
+				new_target="powerpc-unknown-linux-gnu"
+			;;
+			ppc64)
+				new_target="powerpc64-unknown-linux-gnu"
+			;;
+			sparc)
+				if is-flag "-mcpu=ultrasparc3"; then
+						new_target="sparcv9b-unknown-linux-gnu"
+				else
+						new_target="sparcv9-unknown-linux-gnu"
+				fi
+			;;
+			sparc64)
+				if is-flag "-mcpu=ultrasparc3"; then
+					new_target="sparc64b-unknown-linux-gnu"
+					CFLAGS_sparc64="$(get_abi_CFLAGS) -Wa,-xarch=v9b"
+				else
+					new_target="sparc64-unknown-linux-gnu"
+					CFLAGS_sparc64="$(get_abi_CFLAGS) -Wa,-xarch=v9a"
+				fi
+
+				filter-flags -Wa,-xarch -Wa,-A
+			;;
+		esac
+
+		if is_crosscompile; then
+			CTARGET="${new_target}"
 		else
-			CTARGET="i686-pc-linux-gnu"
-			CHOST="${CTARGET}"
+			CTARGET="${new_target}"
+			CHOST="${new_target}"
 		fi
 
-		filter-flags -m32 -m64
+		filter-flags -m32 -m64 -mabi=*
 	fi
+
+	case $(tc-arch) in
+		ppc)
+			append-flags "-freorder-blocks"
+		;;
+		sparc)
+			# Both sparc and sparc64 can use -fcall-used-g6.  -g7 is bad, though.
+			filter-flags "-fcall-used-g7"
+			append-flags "-fcall-used-g6"
+			filter-flags "-mvis"
+
+			# Sparc64 Only support...
+			if [ "${PROFILE_ARCH}" = "sparc64" ]; then
+				# Get rid of -mcpu options (the CHOST will fix this up) and flags
+				# known to fail
+				filter-flags -mcpu=ultrasparc -mcpu=v9
+
+				# Setup the CHOST properly to insure "sparcv9"
+				# This passes -mcpu=ultrasparc -Wa,-Av9a to the compiler
+				if [ "${CHOST}" = "sparc-unknown-linux-gnu" ]; then
+					CTARGET="sparcv9-unknown-linux-gnu"
+					CHOST="${CTARGET}"
+				fi
+			fi
+		;;
+	esac
 
 	if [ "`gcc-major-version`" -ge "3" -a "`gcc-minor-version`" -ge "4" ]; then
 		# broken in 3.4.x
@@ -618,7 +637,7 @@ check_nptl_support() {
 	echo
 
 	einfon "Checking gcc for __thread support ... "
-	if ! gcc -c ${FILESDIR}/test-__thread.c -o ${T}/test2.o &> /dev/null; then
+	if ! $(tc-getCC) -c ${FILESDIR}/test-__thread.c -o ${T}/test2.o &> /dev/null; then
 		echo "no"
 		echo
 		eerror "Could not find a gcc that supports the __thread directive!"
@@ -659,17 +678,16 @@ check_nptl_support() {
 want_nptl() {
 	if use nptl || use nptlonly ; then
 		# Archs that can use NPTL
-		if use amd64 || use ia64 || use ppc || \
-		   use ppc64 || use s390 ; then
-			return 0
-		fi
-
-		# Specific x86 CHOSTS that can use NPTL
-		if use x86; then
-			case "${CHOST/-*}" in
-				i486|i586|i686)	return 0 ;;
-			esac
-		fi
+		case $(tc-arch) in
+			amd64|ia64|ppc|ppc64|s390|sparc)
+				return 0;
+			;;
+			x86)
+				case "${CHOST/-*}" in
+					i486|i586|i686)	return 0 ;;
+				esac
+			;;
+		esac
 	fi
 
 	return 1
@@ -678,22 +696,19 @@ want_nptl() {
 
 want_tls() {
 	# Archs that can use TLS (Thread Local Storage)
-	if use amd64 || use alpha || use ia64 || use ppc || \
-	   use ppc64 || use s390 || use sparc; then
-		return 0
-	fi
-
-	# Specific x86 CHOSTS that can use TLS
-	if use x86; then
-		case "${CHOST/-*}" in
-			i486|i586|i686)	return 0 ;;
-		esac
-
-	fi
+	case $(tc-arch) in
+		alpha|amd64|ia64|ppc|ppc64|s390|sparc)
+			return 0;
+		;;
+		x86)
+			case "${CHOST/-*}" in
+				i486|i586|i686)	return 0 ;;
+			esac
+		;;
+	esac
 
 	return 1
 }
-
 
 install_locales() {
 	unset LANGUAGE LANG LC_ALL
@@ -702,7 +717,6 @@ install_locales() {
 		install_root=${D} localedata/install-locales || die
 	keepdir /usr/lib/locale/ru_RU/LC_MESSAGES
 }
-
 
 setup_locales() {
 	if use !userlocales ; then
@@ -725,27 +739,6 @@ setup_locales() {
 	else
 		einfo "Installing -ALL- locales..."
 		install_locales || die
-	fi
-}
-
-
-pkg_setup() {
-	if use nptlonly && use !nptl ; then
-		eerror "If you want nptlonly, add nptl to your USE too ;p"
-		die "nptlonly without nptl"
-	fi
-
-	# give some sort of warning about the nptl logic changes...
-	if want_nptl && use !nptlonly ; then
-		ewarn "Warning! Gentoo's GLIBC with NPTL enabled now behaves like the"
-		ewarn "glibc from almost every other distribution out there. This means"
-		ewarn "that glibc is compiled -twice-, once with linuxthreads and once"
-		ewarn "with nptl. The NPTL version is installed to lib/tls and is still"
-		ewarn "used by default. If you do not need nor want the linuxthreads"
-		ewarn "fallback, you can disable this behavior by adding nptlonly to"
-		ewarn "USE to save yourself some compile time."
-		ebeep
-		epause
 	fi
 }
 
@@ -802,10 +795,6 @@ glibc_do_configure() {
 	${S}/configure ${myconf} || die "failed to configure glibc"
 }
 
-must_exist() {
-	test -e ${D}/${1}/${2} || die "${1}/${2} was not installed"
-}
-
 fix_lib64_symlinks() {
 	# the original Gentoo/AMD64 devs decided that since 64bit is the native
 	# bitdepth for AMD64, lib should be used for 64bit libraries. however,
@@ -849,13 +838,53 @@ is_crosscompile() {
 
 use_multilib() {
 	case $(tc-arch) in
-		amd64|mips|sparc)
+		amd64|mips|sparc) # |ppc64
 			is_crosscompile || has_multilib_profile || use multilib
 		;;
 		*)
 			false
 		;;
 	esac
+}
+
+crosscompile_setup() {
+	if use_multilib; then
+		case $(tc-arch) in
+			amd64)
+				export CFLAGS_x86="${CFLAGS_x86--m32}"
+				export CFLAGS_amd64="${CFLAGS_amd64--m64}"
+
+				export MULTILIB_ABIS="x86 amd64"
+				export DEFAULT_ABI="amd64"
+				export ABI="amd64"
+			;;
+			mips)
+				export CFLAGS_o32="${CFLAGS_o32--mabi=32}"
+				export CFLAGS_n32="${CFLAGS_n32--mabi=n32}"
+				export CFLAGS_n64="${CFLAGS_n64--mabi=n64}"
+
+				export MULTILIB_ABIS="n64 n32 o32"
+				export DEFAULT_ABI="o32"
+				export ABI="o32"
+			;;
+			ppc64)
+				export CFLAGS_ppc="${CFLAGS_ppc--m32}"
+				export CFLAGS_ppc64="${CFLAGS_ppc64--m64}"
+
+				export MULTILIB_ABIS="ppc ppc64"
+				export DEFAULT_ABI="ppc64"
+				export ABI="ppc64"
+			;;
+			sparc)
+				export CFLAGS_sparc="${CFLAGS_sparc--m32}"
+				export CFLAGS_sparc64="${CFLAGS_sparc64--m64}"
+
+				export MULTILIB_ABIS="sparc64 sparc"
+				export DEFAULT_ABI="sparc"
+				export ABI="sparc"
+			;;
+		esac
+	fi
 }
 
 ### /ECLASS PUNTAGE ###
@@ -865,8 +894,6 @@ if is_crosscompile; then
 else
 	SLOT="2.2"
 fi
-
-IUSE="${IUSE} multilib"
 
 # we'll handle stripping ourself #46186
 RESTRICT="nostrip multilib-pkg-force"
@@ -888,6 +915,30 @@ RDEPEND="virtual/os-headers
 
 # until amd64's 2004.3 is purged out of existence
 PDEPEND="amd64? ( multilib? ( >=app-emulation/emul-linux-x86-glibc-2.3.4 ) )"
+
+pkg_setup() {
+	if use nptlonly && use !nptl ; then
+		eerror "If you want nptlonly, add nptl to your USE too ;p"
+		die "nptlonly without nptl"
+	fi
+
+	# give some sort of warning about the nptl logic changes...
+	if want_nptl && use !nptlonly ; then
+		ewarn "Warning! Gentoo's GLIBC with NPTL enabled now behaves like the"
+		ewarn "glibc from almost every other distribution out there. This means"
+		ewarn "that glibc is compiled -twice-, once with linuxthreads and once"
+		ewarn "with nptl. The NPTL version is installed to lib/tls and is still"
+		ewarn "used by default. If you do not need nor want the linuxthreads"
+		ewarn "fallback, you can disable this behavior by adding nptlonly to"
+		ewarn "USE to save yourself some compile time."
+		ebeep
+		epause
+	fi
+	
+	if is_crosscompile; then
+		crosscompile_setup
+	fi
+}
 
 src_unpack() {
 	case $(tc-arch ${CTARGET}) in
@@ -936,7 +987,7 @@ src_unpack() {
 
 	# If gcc supports __thread, test it even in --with-tls --without-__thread
 	# builds.
-	if echo '__thread int a;' | $GCC -xc - -S -o /dev/null 2>/dev/null; then
+	if echo '__thread int a;' | $(tc-getCC) -xc - -S -o /dev/null 2>/dev/null; then
 		sed -i -e 's~0 ||~1 ||~' ./elf/tst-tls10.h ./linuxthreads/tst-tls1.h
 	fi
 
@@ -979,39 +1030,8 @@ src_install() {
 		OABI="${ABI}"
 		for ABI in $(get_install_abis); do
 			export ABI
-
-			# Handle stupid lib32 BS
-			if use amd64 && [ "${ABI}" = "x86" -a "$(get_libdir)" != "lib" ]; then
-				OLD_LIBDIR="$(get_libdir)"
-				LIBDIR_x86="lib"
-			fi
-
+			einfo "Installing ${ABI} glibc"
 			src_install
-
-			# Handle stupid lib32 BS
-			if use amd64 && [ "${ABI}" = "x86" -a -n "${OLD_LIBDIR}" ]; then
-				LIBDIR_x86="${OLD_LIBDIR}"
-				unset OLD_LIBDIR
-
-				mv ${D}/lib ${D}/$(get_libdir)
-				mv ${D}/usr/lib ${D}/usr/$(get_libdir)
-				mkdir ${D}/lib
-				dosym ../$(get_libdir)/ld-linux.so.2 /lib/ld-linux.so.2
-				dosed "s:/lib/:/$(get_libdir)/:g" /usr/$(get_libdir)/libc.so /usr/$(get_libdir)/libpthread.so
-
-				rm -rf ${D}/usr/$(get_libdir)/misc ${D}/usr/$(get_libdir)/locale
-
-				for f in ${D}/usr/$(get_libdir)/*.so; do
-					local basef=$(basename ${f})
-					if [ -L ${f} ]; then
-						local target=$(readlink ${f})
-						target=${target/\/lib\//\/$(get_libdir)\/}
-						rm ${f}
-						dosym ${target} /usr/$(get_libdir)/${basef}
-					fi
-				done
-			fi
-
 		done
 		ABI="${OABI}"
 		unset OABI
@@ -1020,7 +1040,38 @@ src_install() {
 	unset MLTEST
 
 	ABI=${ABI:-default}
+
+	# Handle stupid lib32 BS
+	if [ "$(tc-arch)" = "amd64" -a "${ABI}" = "x86" -a "$(get_libdir)" != "lib" ] && ! is_crosscompile; then
+		OLD_LIBDIR="$(get_libdir)"
+		LIBDIR_x86="lib"
+	fi
+
 	toolchain-glibc_src_install
+
+	# Handle stupid lib32 BS
+	if [ "$(tc-arch)" = "amd64" -a "${ABI}" = "x86" -a -n "${OLD_LIBDIR}" ] && ! is_crosscompile; then
+		LIBDIR_x86="${OLD_LIBDIR}"
+		unset OLD_LIBDIR
+
+		mv ${D}/lib ${D}/$(get_libdir)
+		mv ${D}/usr/lib ${D}/usr/$(get_libdir)
+		mkdir ${D}/lib
+		dosym ../$(get_libdir)/ld-linux.so.2 /lib/ld-linux.so.2
+		dosed "s:/lib/:/$(get_libdir)/:g" /usr/$(get_libdir)/libc.so /usr/$(get_libdir)/libpthread.so
+
+		rm -rf ${D}/usr/$(get_libdir)/misc ${D}/usr/$(get_libdir)/locale
+
+		for f in ${D}/usr/$(get_libdir)/*.so; do
+			local basef=$(basename ${f})
+			if [ -L ${f} ]; then
+				local target=$(readlink ${f})
+				target=${target/\/lib\//\/$(get_libdir)\/}
+				rm ${f}
+				dosym ${target} /usr/$(get_libdir)/${basef}
+			fi
+		done
+	fi
 }
 
 pkg_preinst() {
