@@ -8,3 +8,4 @@ MD5 ec89a2b6c6e9739aae723eb9c35db6aa files/digest-bluefish-0.11 66
 MD5 e60836fae74fcfb183148e9df9dc75df files/digest-bluefish-0.12 66
 MD5 bc9b63ac2469bf96338ac088068828da files/digest-bluefish-0.9 65
 MD5 870f031f504c06b82c5c85a73b813a02 files/digest-bluefish-0.13 67
+MD5 3b49e1ecdc735c10a145dd6dc9c528ee files/bluefish-make-destdir.patch 2052
