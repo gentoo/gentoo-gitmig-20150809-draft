@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gtk-engines.eclass,v 1.24 2003/07/18 20:11:22 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gtk-engines.eclass,v 1.25 2004/03/25 01:53:28 liquidx Exp $
 #
 # The gtk-engines eclass is inherited by all gtk-engines-* ebuilds.
 #
@@ -30,15 +30,15 @@ INHERITED="$INHERITED $ECLASS"
 
 KEYWORDS="x86 ppc alpha sparc hppa amd64"
 
-newdepend /c virtual/x11
+DEPEND="${DEPEND} virtual/x11"
 
 case "${SLOT}" in
 	"1" )
-		newdepend '=x11-libs/gtk+-1.2*' ;;
+		DEPEND="${DEPEND} =x11-libs/gtk+-1.2" ;;
 	"2" )
-		newdepend '>=x11-libs/gtk+-2' ;;
+		DEPEND="${DEPEND} >=x11-libs/gtk+-2" ;;
 	* )
-		newdepend x11-libs/gtk+ ;;
+		DEPEND="${DEPEND} x11-libs/gtk+" ;;
 esac
 
 [ -n "$DEBUG" ] && einfo "SLOT is ${SLOT}"
@@ -83,7 +83,7 @@ case "${ENGINE}" in
 			CXXFLAGS="${CXXFLAGS} -g"
 			
 		else
-			newdepend '>=media-libs/imlib-1.8'
+			DEPEND="${DEPEND} >=media-libs/imlib-1.8"
 		fi
 		;;
 		
