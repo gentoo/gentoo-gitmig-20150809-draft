@@ -1,0 +1,20 @@
+diff -Naur libnjb-2.0.orig/Makefile.in libnjb-2.0/Makefile.in
+--- libnjb-2.0.orig/Makefile.in	2004-05-25 07:38:21.000000000 -0700
++++ libnjb-2.0/Makefile.in	2004-10-08 02:41:10.801812805 -0700
+@@ -1,4 +1,5 @@
+ prefix=@prefix@
++libdir=@libdir@
+ exec_prefix=@exec_prefix@
+ top_builddir=@top_builddir@
+ mandir=@mandir@
+@@ -23,8 +24,8 @@
+ 
+ install-lib: lib
+ 	cd src && $(MAKE) install prefix=$(prefix) exec_prefix=$(exec_prefix)
+-	$(INSTALL) -d $(prefix)/lib/pkgconfig
+-	$(INSTALL) libnjb.pc $(prefix)/lib/pkgconfig
++	$(INSTALL) -d $(libdir)/pkgconfig
++	$(INSTALL) libnjb.pc $(libdir)/pkgconfig
+ 
+ install-docs:
+ 	$(INSTALL) -d $(mandir)/man3
