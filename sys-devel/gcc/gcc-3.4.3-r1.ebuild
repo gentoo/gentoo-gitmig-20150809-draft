@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.3-r1.ebuild,v 1.1 2004/11/26 03:18:56 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.3-r1.ebuild,v 1.2 2004/11/27 23:13:25 lv Exp $
 
 DESCRIPTION="The GNU Compiler Collection.  Includes C/C++, java compilers, pie+ssp extensions, Haj Ten Brugge runtime bounds checking"
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
@@ -50,8 +50,7 @@ PP_FVER="${PP_VER//_/.}-0"
 HTB_VER="1.00"
 HTB_GCC_VER="3.4.2"
 
-# nothing in the tree supports libssp
-#GCC_LIBSSP_SUPPORT="true"
+GCC_LIBSSP_SUPPORT="true"
 
 ETYPE="gcc-compiler"
 
@@ -153,6 +152,18 @@ src_unpack() {
 	epatch ${FILESDIR}/gcc-spec-env.patch
 	epatch ${FILESDIR}/3.4.2/810-arm-bigendian-uclibc.patch
 
+	# nothing in the tree provides libssp.so, so nothing will ever trigger this
+	# logic, but having the patch in the tree makes life so much easier for me
+	# since I dont have to also have an overlay for this.
+	want_libssp && epatch ${FILESDIR}/3.4.3/libssp.patch
+
+	# Anything useful and objc will require libffi. Seriously. Lets just force
+	# libffi to install with USE="objc", even though it normally only installs
+	# if you attempt to build gcj.
+	if use objc && ! use gcj ; then
+		epatch ${FILESDIR}/3.4.3/libffi-without-libgcj.patch
+	fi
+
 	# If mips, and we DON'T want multilib, then rig gcc to only use n32 OR n64
 	if use mips && use !multilib; then
 		use n32 && epatch ${FILESDIR}/3.4.1/gcc-3.4.1-mips-n32only.patch
@@ -181,11 +192,10 @@ src_unpack() {
 	fi
 }
 
-
 src_install() {
 	local x=
 
-	# Do allow symlinks in ${LOC}/lib/gcc-lib/${CHOST}/${PV}/include as
+	# Do allow symlinks in ${PREFIX}/lib/gcc-lib/${CHOST}/${PV}/include as
 	# this can break the build.
 	for x in ${WORKDIR}/build/gcc/include/*
 	do
@@ -234,27 +244,44 @@ src_install() {
 		cp ${WORKDIR}/build/*.specs ${D}/${LIBPATH}
 	fi
 
+	# we dont want these in freaky non-versioned paths that dont ever get used
+	fix_freaky_non_versioned_library_paths_that_dont_ever_get_used 32
+	fix_freaky_non_versioned_library_paths_that_dont_ever_get_used 64
+	# and mips is just freaky in general ;p
+	fix_freaky_non_versioned_library_paths_that_dont_ever_get_used o32
+	# and finally, the non-bitdepth-or-ABI-specific freaky path
+	if [ -d ${D}/${LIBPATH}/../lib ] ; then
+		mv ${D}/${LIBPATH}/../lib/* ${D}/${LIBPATH}/
+		rm -rf ${D}/${LIBPATH}/../lib
+	fi
+	# we also dont want libs in /usr/lib*
+	if [ -d ${D}/${PREFIX}/lib32 -a -d ${D}/${LIBPATH}/32 ] ; then
+		mv ${D}/${PREFIX}/lib32/* ${D}/${LIBPATH}/32/
+		rm -rf ${D}/${PREFIX}/lib32/
+	elif [ -d ${D}/${PREFIX}/lib32 -a ! -d ${D}/${LIBPATH}/32 ] ; then
+		mv ${D}/${PREFIX}/lib32/* ${D}/${LIBPATH}/
+		rm -rf ${D}/${PREFIX}/lib32/
+	fi
+	if [ -d ${D}/${PREFIX}/lib64 -a -d ${D}/${LIBPATH}/64 ] ; then
+		mv ${D}/${PREFIX}/lib64/* ${D}/${LIBPATH}/64/
+		rm -rf ${D}/${PREFIX}/lib64/
+	elif [ -d ${D}/${PREFIX}/lib64 -a ! -d ${D}/${LIBPATH}/64 ] ; then
+		mv ${D}/${PREFIX}/lib64/* ${D}/${LIBPATH}/
+		rm -rf ${D}/${PREFIX}/lib64/
+	fi
+	# and sometimes crap ends up here too :|
+	mv ${D}/${LIBPATH}/../*.a ${D}/${LIBPATH}/../*.la ${D}/${LIBPATH}/../*so* \
+		${D}/${LIBPATH}/
+
+	# make sure the libtool archives have libdir set to where they actually
+	# -are-, and not where they -used- to be.
+	fix_libtool_libdir_paths "$(find ${D}/${LIBPATH} -name *.la)"
+
 	# Make sure we dont have stuff lying around that
 	# can nuke multiple versions of gcc
 	if ! use build
 	then
 		cd ${D}${LIBPATH}
-
-		# Tell libtool files where real libraries are
-		for x in ${D}${LOC}/lib/*.la ${D}${LIBPATH}/../*.la
-		do
-			if [ -f "${x}" ]
-			then
-				sed -i -e "s:/usr/lib:${LIBPATH}:" ${x}
-				mv ${x} ${D}${LIBPATH}
-			fi
-		done
-
-		# Move all the libraries to version specific libdir.
-		for x in ${D}${PREFIX}/lib/*.{so,a}* ${D}${LIBPATH}/../*.{so,a}*
-		do
-			[ -f "${x}" -o -L "${x}" ] && mv -f ${x} ${D}${LIBPATH}
-		done
 
 		# Move Java headers to compiler-specific dir
 		for x in ${D}${PREFIX}/include/gc*.h ${D}${PREFIX}/include/j*.h
@@ -317,54 +344,6 @@ src_install() {
 
 	cd ${S}
 	if ! use build && [ "${CHOST}" == "${CTARGET}" ] ; then
-		cd ${S}
-		docinto ${CTARGET}
-		dodoc ChangeLog* FAQ MAINTAINERS README
-		docinto ${CTARGET}/html
-		dohtml *.html
-		cd ${S}/boehm-gc
-		docinto ${CTARGET}/boehm-gc
-		dodoc ChangeLog doc/{README*,barrett_diagram}
-		docinto ${CTARGET}/boehm-gc/html
-		dohtml doc/*.html
-		cd ${S}/gcc
-		docinto ${CTARGET}/gcc
-		dodoc ChangeLog* FSFChangeLog* LANGUAGES NEWS ONEWS README* SERVICE
-		if use fortran ; then
-			cd ${S}/libf2c
-			docinto ${CTARGET}/libf2c
-			dodoc ChangeLog* README TODO *.netlib
-		fi
-		cd ${S}/libffi
-		docinto ${CTARGET}/libffi
-		dodoc ChangeLog* README
-		cd ${S}/libiberty
-		docinto ${CTARGET}/libiberty
-		dodoc ChangeLog* README
-		if use objc
-		then
-			cd ${S}/libobjc
-			docinto ${CTARGET}/libobjc
-			dodoc ChangeLog* README* THREADS*
-		fi
-		cd ${S}/libstdc++-v3
-		docinto ${CTARGET}/libstdc++-v3
-		dodoc ChangeLog* README
-		docinto ${CTARGET}/libstdc++-v3/html
-		dohtml -r -a css,diff,html,txt,xml docs/html/*
-		cp -f docs/html/17_intro/[A-Z]* \
-			${D}/usr/share/doc/${PF}/${DOCDESTTREE}/17_intro/
-
-		if use gcj
-		then
-			cd ${S}/fastjar
-			docinto ${CTARGET}/fastjar
-			dodoc AUTHORS CHANGES ChangeLog* NEWS README
-			cd ${S}/libjava
-			docinto ${CTARGET}/libjava
-			dodoc ChangeLog* HACKING NEWS README THANKS
-		fi
-
 		prepman ${DATAPATH}
 		prepinfo ${DATAPATH}
 	else
@@ -379,17 +358,6 @@ src_install() {
 		doins ${FILESDIR}/awk/fixlafiles.awk
 		exeinto /sbin
 		doexe ${FILESDIR}/fix_libtool_files.sh
-	fi
-
-	# we dont want these in freaky non-versioned paths that dont ever get used
-	fix_freaky_non_versioned_library_paths_that_dont_ever_get_used 32
-	fix_freaky_non_versioned_library_paths_that_dont_ever_get_used 64
-	# and mips is just freaky in general ;p
-	fix_freaky_non_versioned_library_paths_that_dont_ever_get_used o32
-	# and finally, the non-bitdepth-or-ABI-specific freaky path
-	if [ -d ${D}/${LIBPATH}/../lib ] ; then
-		mv ${D}/${LIBPATH}/../lib/* ${D}/${LIBPATH}/
-		rm -rf ${D}/${LIBPATH}/../lib
 	fi
 }
 
@@ -414,6 +382,13 @@ fix_freaky_non_versioned_library_paths_that_dont_ever_get_used() {
 	fi
 }
 
+fix_libtool_libdir_paths() {
+	local dirpath
+	for archive in ${*} ; do
+		dirpath=$(dirname ${archive} | sed -e "s:^${D}::")
+		sed -i ${archive} -e "s:^libdir.*:libdir=\'${dirpath}\':"
+	done
+}
 
 pkg_preinst() {
 

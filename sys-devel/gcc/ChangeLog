@@ -1,12 +1,21 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.357 2004/11/27 21:19:14 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.358 2004/11/27 23:13:25 lv Exp $
 
   27 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org> gcc-3.3.5.ebuild:
   -sparc because of weirdness
 
   26 Nov 2004; Sven Wegener <swegener@gentoo.org> :
   Added missing digest entries.
+
+  27 Nov 2004; Travis Tilley <lv@gentoo.org>
+  +files/3.4.3/libffi-without-libgcj.patch, gcc-3.4.3-r1.ebuild:
+  1) added a patch that will allow building libffi without gcj. This
+     should make gnustep users happy. ;)
+  2) fixed a few more issues with libraries ending up outside the gcc
+     ${LIBPATH}
+  3) fixed the libtool archive libdir fixing thingie, which has apparently
+     been broken for quite some time without anyone noticing
 
 *gcc-3.4.3-r1 (25 Nov 2004)
 
