@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-sparc64/gcc-sparc64-3.3.5.ebuild,v 1.2 2004/11/27 21:27:10 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-sparc64/gcc-sparc64-3.3.5.ebuild,v 1.3 2004/11/30 04:58:42 eradicator Exp $
 
 # Variables 
 inherit eutils flag-o-matic
@@ -18,7 +18,7 @@ SRC_URI="ftp://gcc.gnu.org/pub/gcc/releases/${TMP_P}/${TMP_P}.tar.bz2"
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
 
-KEYWORDS="-sparc"
+KEYWORDS="~sparc"
 
 DEPEND="virtual/libc
 	>=sys-devel/binutils-2.14.90.0.7
