@@ -1,6 +1,14 @@
 # ChangeLog for app-editors/ted
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/ted/ChangeLog,v 1.18 2005/01/01 13:34:41 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/ted/ChangeLog,v 1.19 2005/03/28 22:41:06 spider Exp $
+
+*ted-2.12-r1 (28 Mar 2005)
+
+  28 Mar 2005; Spider <spider@gentoo.org> +ted-2.12-r1.ebuild:
+  Added a small build-fix to get around userpriv. The buildscript has a test
+  for RPM_BUILD_ROOT, so I'm just using that.
+  The package appears to have issues with missing fonts, not too sure if I have
+  100% functionality here. 
 
   07 Jun 2004; Daniel Black <dragonheart@gentoo.org> metadata.xml,
   ted-2.11.ebuild, ted-2.12.ebuild:
