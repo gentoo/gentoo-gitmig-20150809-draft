@@ -1,11 +1,16 @@
 # ChangeLog for net-misc/freeswan
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/freeswan/ChangeLog,v 1.14 2003/10/21 21:56:58 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/freeswan/ChangeLog,v 1.15 2003/11/18 15:57:32 aliz Exp $
+
+*freeswan-2.04 (18 Nov 2003)
+
+  18 Nov 2003; Daniel Ahlerb <aliz@gentoo.org> freeswan-2.04.ebuild:
+  Version bump.
 
 *freeswan-2.03 (21 Oct 2003)
 
   21 Oct 2003; Daniel Ahlerb <aliz@gentoo.org> freeswan-2.03.ebuild:
-  Version bump
+  Version bump.
 
 *freeswan-2.02 (19 Sep 2003)
 
