@@ -1,0 +1,7 @@
+# ChangeLog for net-dialup/mclient
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/mclient/ChangeLog,v 1.1 2003/11/22 20:57:01 lanius Exp $
+
+  22 Nov 2003; Heinrich Wendel <lanius@gentoo.org> :
+  initial revision, thx to Jonathan Rogers <jonner@teegra.net>
+
