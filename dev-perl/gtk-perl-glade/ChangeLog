@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/gtk-perl-glade
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk-perl-glade/ChangeLog,v 1.1 2002/02/01 21:53:28 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk-perl-glade/ChangeLog,v 1.2 2002/05/06 23:42:43 seemant Exp $
+
+*gtk-perl-glade-0.7004-r2 (6 May 2002)
+
+  6 May 2002; Seemant Kulleen <seemant@gentoo.org>
+  gtk-perl-glade-0.7004-r2.ebuild :
+
+  eclassed.
 
 *gtk-perl-glade-0.7004-r1 (1 Feb 2002)
 
