@@ -1,3 +1,5 @@
-MD5 2a92fd060cdc74aaa415529b58d0bd50 files/digest-ksambaplugin-0.4.2 71
-MD5 cd33a38f00673872f0f481f82faf466b ChangeLog 748
+MD5 23fcab95af2187ca5f03e68bb1878264 ksambaplugin-0.5b.ebuild 542
 MD5 53f9db4104ec00ade2ed1a66fdc4e272 ksambaplugin-0.4.2.ebuild 662
+MD5 cd33a38f00673872f0f481f82faf466b ChangeLog 748
+MD5 c3785542a7c44e94197b29fd8858817e files/digest-ksambaplugin-0.5b 70
+MD5 2a92fd060cdc74aaa415529b58d0bd50 files/digest-ksambaplugin-0.4.2 71
