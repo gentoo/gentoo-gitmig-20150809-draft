@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/telnet-bsd
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/telnet-bsd/ChangeLog,v 1.12 2005/03/07 16:50:11 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/telnet-bsd/ChangeLog,v 1.13 2005/03/30 23:47:04 vapier Exp $
+
+*telnet-bsd-1.0-r1 (30 Mar 2005)
+
+  30 Mar 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/telnet-bsd-1.0-overflow.patch, +files/telnetd.xinetd,
+  +telnet-bsd-1.0-r1.ebuild:
+  Version bump for security #87019.
 
   07 Mar 2005; Markus Rothe <corsair@gentoo.org> telnet-bsd-1.0.ebuild:
   Stable on ppc64
