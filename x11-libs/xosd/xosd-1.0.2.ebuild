@@ -21,17 +21,17 @@ KEYWORDS="x86 sparc sparc64"
 #}
 
 src_compile() {
-	econf --without-plugindir || die
+	econf || die
 	make || die
 }
 src_install () {
 	cd ${S}
 	insinto /usr/include
-	doins xosd.h
+	doins src/xosd.h
 	into /usr
-	dolib.a libxosd.a
-	dolib.so libxosd.so
-	dobin osd_cat
-	doman osd_cat.1 xosd.e 
+	dolib.a src/libxosd/.libs/libxosd.a
+	dolib.so src/libxosd/.libs/libxosd.so.1
+	dobin src/.libs/osd_cat
+	doman man/*.1 man/*.3
 	dodoc AUTHORS ChangeLog NEWS COPYING README
 }
