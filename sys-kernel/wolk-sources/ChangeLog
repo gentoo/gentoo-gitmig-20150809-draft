@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/wolk-sources
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/wolk-sources/ChangeLog,v 1.16 2003/09/15 03:11:27 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/wolk-sources/ChangeLog,v 1.17 2003/09/22 12:14:38 pauldv Exp $
+
+  22 Sep 2003; <paul@gentoo.org> metadata.xml:
+  Fix metadata.xml
 
   14 Sep 2003; <nerdboy@gentoo.org> metadata.xml, wolk-sources-4.3.ebuild:
   bumped to x86 added to x86-kernel herd
