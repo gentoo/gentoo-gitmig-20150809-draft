@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.2.2-r1.ebuild,v 1.5 2003/02/13 17:00:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.2.2-r1.ebuild,v 1.6 2003/04/30 09:38:32 liquidx Exp $
 
 S=${WORKDIR}/openMotif-2.2.2
 
@@ -24,8 +24,10 @@ src_unpack() {
 	patch -p1 < ${FILESDIR}/include-order.diff || die "patch failed"
 }
 
-src_compile() { 
-
+src_compile() {
+	# get around some LANG problems in make (#15119)
+	unset LANG
+	
 	./configure \
 		--prefix=/usr/X11R6 \
 		--sysconfdir=/etc/X11 \

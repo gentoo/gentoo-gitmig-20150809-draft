@@ -1,9 +1,12 @@
 # ChangeLog for x11-libs/openmotif
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/ChangeLog,v 1.9 2003/02/12 09:24:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/ChangeLog,v 1.10 2003/04/30 09:38:32 liquidx Exp $
 
-  05 Jan 2003; Daniel Ahlberg <aliz@gentoo.org> openmotif-2.1.30-r1.ebuild, openmotif-2.2.2.ebuild,
-						openmotif-2.2.2-r1.ebuild :
+  30 Apr 2003; Alastair Tse <liquidx@gentoo.org> openmotif-2.2.2-r1.ebuild:
+  workaround LANG problem in makefile. #15117
+
+  05 Jan 2003; Daniel Ahlberg <aliz@gentoo.org> openmotif-2.1.30-r1.ebuild,
+  openmotif-2.2.2.ebuild, openmotif-2.2.2-r1.ebuild :
   Added PROVIDE.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
