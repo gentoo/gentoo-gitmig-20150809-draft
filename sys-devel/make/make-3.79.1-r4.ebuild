@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/make/make-3.79.1-r4.ebuild,v 1.7 2002/12/15 10:44:24 bjb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/make/make-3.79.1-r4.ebuild,v 1.8 2003/01/18 19:00:26 tuxus Exp $
 
 IUSE="nls static build"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.gnu.org/software/make/make.html"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc alpha"
+KEYWORDS="x86 ppc sparc alpha mips"
 
 DEPEND="virtual/glibc nls? ( sys-devel/gettext )"
 RDEPEND="virtual/glibc"
