@@ -1,7 +1,13 @@
 # ChangeLog for net-analyzerkismetChangeLog/
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/ChangeLog,v 1.3 2002/12/13 11:00:24 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/ChangeLog,v 1.4 2002/12/16 19:32:11 jhhudso Exp $
 
+*kismet-2.6.2 (16 Dec 2002)
+
+  16 Dec 2002; Jared Hudson <jhhudso@gentoo.org> : Bug ids #9349, 10643, 11018.
+  ebuild submitted by Alberto Ornaghi <alor@blackhats.it>
+	
+	
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
   31 Oct 2002; Hannes Mehnert <hannes@gentoo.org>:
