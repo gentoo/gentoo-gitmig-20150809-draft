@@ -1,3 +1,4 @@
+MD5 94691e2b466f0684ddd7b4b455ee4e10 gimp-1.3.21.ebuild 2685
 MD5 b928f577024133c5ac49bf05dd04b6aa gimp-1.3.20-r1.ebuild 2776
 MD5 bb244e8a31052406c6f1fded704e54d8 gimp-1.2.5.ebuild 3227
 MD5 d410d062966d05248f9c4251bd81d3af gimp-1.2.3-r3.ebuild 4707
@@ -11,6 +12,7 @@ MD5 12ff6c7c980ee34dc7d4d94aa40059b0 files/ltmain_sh-1.5.0-fix-relink.patch 1718
 MD5 edd3aa0572ed45191d25b99712a875d9 files/gimp-1.2.4-gentoo.diff 427
 MD5 9696bde4a1b70dd2816d46bed477ebc0 files/gimp.desktop 2404
 MD5 cdda0b1cc179cf75eabb63945efdae0e files/gimp-1.2.3-libgimpi-libtool.diff 1365
+MD5 d77070b05a1a161edf507b38b3372fc9 files/digest-gimp-1.3.21 66
 MD5 edd3aa0572ed45191d25b99712a875d9 files/gimp-1.2.3-r2-gentoo.diff 427
 MD5 2170edc67e192249c4f10fadc0cded91 files/digest-gimp-1.3.20-r1 66
 MD5 f8c14ef5c45d029ac5abc6c614701d5e files/gimp-1.3.20-screenshot_fix.patch 20024
