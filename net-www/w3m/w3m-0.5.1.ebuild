@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/w3m/w3m-0.5.1.ebuild,v 1.5 2004/06/25 01:15:17 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/w3m/w3m-0.5.1.ebuild,v 1.6 2004/09/07 08:42:19 usata Exp $
 
 inherit eutils
 
@@ -9,8 +9,9 @@ HOMEPAGE="http://w3m.sourceforge.net/
 	http://www.page.sannet.ne.jp/knabe/w3m/w3m.html"
 PATCH_PATH="http://www.page.sannet.ne.jp/knabe/w3m/"
 SRC_URI="mirror://sourceforge/w3m/${P}.tar.gz
-	async? ( ${PATCH_PATH}/w3m-cvs-1.912-async-1.diff.gz )
 	nls? ( ${PATCH_PATH}/w3m-cvs-1.916-nlsfix-2.diff )"
+# w3m async patch:
+#	async? ( ${PATCH_PATH}/w3m-cvs-1.912-async-1.diff.gz )
 # w3m color patch:
 #	http://homepage3.nifty.com/slokar/w3m/${P}-cvs-1.895_256-001.patch.gz
 # w3n canna inline patch:
@@ -21,7 +22,7 @@ SRC_URI="mirror://sourceforge/w3m/${P}.tar.gz
 LICENSE="w3m"
 SLOT="0"
 KEYWORDS="x86 alpha ppc sparc"
-IUSE="X gtk imlib imlib2 xface ssl migemo gpm cjk nls lynxkeymap"
+IUSE="X gtk imlib2 xface ssl migemo gpm cjk nls lynxkeymap"
 #IUSE="canna unicode"
 
 # canna? ( app-i18n/canna )
