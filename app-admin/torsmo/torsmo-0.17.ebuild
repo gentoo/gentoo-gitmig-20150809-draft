@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/torsmo/torsmo-0.17.ebuild,v 1.7 2004/08/16 10:20:29 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/torsmo/torsmo-0.17.ebuild,v 1.8 2004/09/02 11:47:13 lv Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/torsmo/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~amd64"
+KEYWORDS="x86 ~ppc amd64"
 IUSE="mozilla"
 
 RDEPEND="virtual/libc

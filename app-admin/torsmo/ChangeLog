@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/torsmo
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/torsmo/ChangeLog,v 1.10 2004/08/16 10:20:29 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/torsmo/ChangeLog,v 1.11 2004/09/02 11:47:13 lv Exp $
+
+  02 Sep 2004; Travis Tilley <lv@gentoo.org> torsmo-0.17.ebuild:
+  stable on amd64
 
   16 Aug 2004; Daniel Black <dragonheart@gentoo.org>
   +files/torsmo-0.17-mozilla.patch, torsmo-0.17.ebuild:
