@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/gtkhtml-1.1.10.ebuild,v 1.9 2004/01/20 13:06:42 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/gtkhtml-1.1.10.ebuild,v 1.10 2004/03/24 23:16:44 mholzer Exp $
 
 IUSE="nls gnome"
 
@@ -19,7 +19,7 @@ SLOT="0"
 KEYWORDS="x86 ppc sparc alpha hppa"
 
 # peg gtkhtml at gal-0.23 because it might get confused with gal-1.99
-RDEPEND="=gnome-extra/gal-0.24*
+DEPEND="=gnome-extra/gal-0.24*
 	<gnome-base/control-center-1.99.0
 	>=gnome-base/libghttp-1.0.9-r1
 	>=dev-libs/libunicode-0.4-r1
@@ -31,8 +31,6 @@ RDEPEND="=gnome-extra/gal-0.24*
 	<gnome-base/gconf-1.1.0"
 #	gnome? ( <gnome-base/gconf-1.1.0 )
 # Borks without gconf in most cases
-
-DEPEND="${RDEPEND}"
 
 src_compile() {
 	elibtoolize

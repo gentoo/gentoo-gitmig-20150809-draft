@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/glibwww
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/glibwww/ChangeLog,v 1.5 2003/02/12 06:52:54 vapier Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/glibwww/ChangeLog,v 1.6 2004/03/24 23:15:29 mholzer Exp $
+
+  25 Mar 2004; Martin Holzer <mholzer@gentoo.org> glibwww-0.2-r2.ebuild:
+  fixing depend. see 45343
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
