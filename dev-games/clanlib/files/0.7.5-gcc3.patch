@@ -1,0 +1,11 @@
+--- Sources/Network/Socket/socket_generic.h.orig	2003-10-25 05:09:55.768228944 -0400
++++ Sources/Network/Socket/socket_generic.h	2003-10-25 05:10:04.888842400 -0400
+@@ -114,7 +114,7 @@
+ 	//: Internal function to shutdown a socket that has disconnected
+ 	void disconnect();
+ 
+-	friend CL_Socket_KeepAliveHelper;
++	friend class CL_Socket_KeepAliveHelper;
+ };
+ 
+ #endif

@@ -1,12 +1,17 @@
 # ChangeLog for dev-games/clanlib
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/clanlib/ChangeLog,v 1.7 2003/10/20 14:38:02 port001 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/clanlib/ChangeLog,v 1.8 2003/10/25 09:13:51 vapier Exp $
+
+*clanlib-0.7.5 (25 Oct 2003)
+
+  25 Oct 2003; Mike Frysinger <vapier@gentoo.org> :
+  Version bump.
+
+*clanlib-0.7.4 (06 Oct 2003)
 
   20 Oct 2003; Ian Leitch <port001@gentoo.org> clanlib-0.6.5-r1.ebuild,
   clanlib-0.7.2-r1.ebuild, clanlib-0.7.4.ebuild:
   Install the INSTALL.linux document. #31594
-
-*clanlib-0.7.4 (06 Oct 2003)
 
   06 Oct 2003; Mike Frysinger <vapier@gentoo.org> :
   Version bump to fix #30488.
