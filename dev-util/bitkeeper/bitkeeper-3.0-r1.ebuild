@@ -1,24 +1,22 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bitkeeper/bitkeeper-3.0-r1.ebuild,v 1.2 2002/11/21 04:28:00 blizzy Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bitkeeper/bitkeeper-3.0-r1.ebuild,v 1.3 2002/11/30 01:42:23 vapier Exp $
 
-S=${WORKDIR}/${P}
 DESCRIPTION="BitKeeper is a scalable configuration management system."
-SRC_URI=""
+SRC_URI="x86? ( bk-3.0-x86-glibc22-linux.bin )
+	ppc? ( bk-3.0-powerpc-glibc21-linux.bin )
+	sparc? ( bk-3.0-sparc-glibc21-linux.bin )
+	sparc64? ( bk-3.0-sparc-glibc21-linux.bin )
+	alpha? ( bk-3.0-alpha-glibc21-linux.bin )"
 HOMEPAGE="http://www.bitkeeper.com"
-DEPEND=">=virtual/glibc-2.2
-	>=dev-lang/tcl-8.3.3
-	X? ( >=dev-lang/tk-8.3.3 )"
 
 SLOT="0"
 LICENSE="BKL"
 KEYWORDS="x86 ppc sparc alpha"
 
-# I'm not sure what the official way to do this is...
-[ -n "`use x86`" ] && A="bk-3.0-x86-glibc22-linux.bin"
-[ -n "`use ppc`" ] && A="bk-3.0-powerpc-glibc21-linux.bin"
-[ -n "`use sparc`" ] && A="bk-3.0-sparc-glibc21-linux.bin"
-[ -n "`use alpha`" ] && A="bk-3.0-alpha-glibc21-linux.bin"
+DEPEND=">=virtual/glibc-2.2
+	>=dev-lang/tcl-8.3.3
+	X? ( >=dev-lang/tk-8.3.3 )"
 
 pkg_setup() {
 	if [ ! -f ${DISTDIR}/${A} ] ; then
@@ -42,8 +40,8 @@ src_unpack() {
 	mv $archive ${S}/archive
 }
 
-src_install () {
-	mkdir -p ${D}/opt ${D}/etc/env.d
+src_install() {
+	dodir /opt /etc/env.d
 	cd ${D}/opt && tar -xzpf ${S}/archive
 	mv ${D}/opt/bitkeeper ${D}/opt/${P}
 	chown -R root:root ${D}/opt/${P}
@@ -56,6 +54,6 @@ MANPATH=/opt/${P}/man
 EOF
 }
 
-pkg_postinst () {
+pkg_postinst() {
 	einfo "Run 'bk regressions' to verify the installation. (Recommended)"
 }
