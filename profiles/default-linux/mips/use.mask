@@ -1,4 +1,8 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/use.mask,v 1.22 2005/02/18 15:40:00 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/use.mask,v 1.23 2005/02/21 05:26:26 hardave Exp $
+
+# Hardave Riar <hardave@gentoo.org>
+# x86 binary only package
+fdftk
 
 # Ciaran McCreesh <ciaranm@gentoo.org>
 # unresolved dep, bug #82428
