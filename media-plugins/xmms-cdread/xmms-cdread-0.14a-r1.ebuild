@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-cdread/xmms-cdread-0.14a-r1.ebuild,v 1.9 2004/07/06 23:10:49 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-cdread/xmms-cdread-0.14a-r1.ebuild,v 1.10 2004/08/11 03:10:39 tgall Exp $
 
 IUSE=""
 
@@ -11,7 +11,7 @@ HOMEPAGE="ftp://mud.stack.nl/pub/OuterSpace/willem/"
 SRC_URI="ftp://mud.stack.nl/pub/OuterSpace/willem/${P}.tar.gz"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc ~alpha ~ia64 ~amd64 ~sparc"
+KEYWORDS="x86 ~ppc ~alpha ~ia64 ~amd64 ~sparc ppc64"
 
 DEPEND=">=media-sound/xmms-1.2.8"
 
