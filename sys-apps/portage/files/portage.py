@@ -1921,6 +1921,7 @@ def pkgmerge(mytbz2):
 		return None
 
 	rundepfile="var/db/pkg/"+mycatpkg+"/RDEPEND"
+	rdep=""
 	if os.path.exists(rundepfile):
 		a=open(rundepfile,"r")
 		myrunlines=a.readlines()
@@ -1928,12 +1929,15 @@ def pkgmerge(mytbz2):
 		for x in myrunlines:
 			rdep=rdep+" "+x[:-1]
 		del myrunlines
-		doebuild("var/db/pkg/"+mycatpkg+"/"+mypkg+".ebuild","preinst")
-		merge(mycat,mypkg,os.getcwd())
-		doebuild(root+"var/db/pkg/"+mycatpkg+"/"+mypkg+".ebuild","postinst")
-		cleanup_pkgmerge(mypkg)
+	doebuild("var/db/pkg/"+mycatpkg+"/"+mypkg+".ebuild","preinst")
+	merge(mycat,mypkg,os.getcwd())
+	doebuild(root+"var/db/pkg/"+mycatpkg+"/"+mypkg+".ebuild","postinst")
+	cleanup_pkgmerge(mypkg)
 	print ">>> Done."
-	return rdep[1:]
+	if rdep=="":
+		return ""
+	else:
+		return rdep[1:]
 
 def init():
 	global root, ERRPKG, ERRVER, configdefaults, configsettings, currtree, roottree, localtree, porttree 
