@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/alloy/alloy-0.4.1a.ebuild,v 1.3 2004/04/17 12:26:49 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/alloy/alloy-0.4.1a.ebuild,v 1.4 2004/04/27 19:35:49 pvdabeel Exp $
 
 inherit kde
 need-kde 3.1
@@ -12,7 +12,7 @@ IUSE=""
 LICENSE="GPL-2"
 SLOT="0"
 DEPEND="kde-base/kdebase"
-KEYWORDS="x86 ~ppc ~sparc ~alpha"
+KEYWORDS="x86 ppc ~sparc ~alpha"
 
 pkg_postinst(){
 	ewarn "HOW TO USE THIS THEME FOR KDE:"
