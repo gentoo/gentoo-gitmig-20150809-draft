@@ -1,8 +1,11 @@
 # ChangeLog for dev-libs/expat
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/expat/ChangeLog,v 1.4 2002/07/23 20:20:22 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/expat/ChangeLog,v 1.5 2002/07/23 21:10:48 gerk Exp $
 
 *expat-1.95.4 (23 Jul 2002)
+
+  23 Jul 2002; Mark Guertin <gerk@gentoo.org> :
+  Added ppc to keywords
 
   23 Jul 2002; Arcady Genkin <agenkin@thpoon.com> expat-1.95.4.ebuild :
 
