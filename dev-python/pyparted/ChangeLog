@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyparted
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyparted/ChangeLog,v 1.9 2005/01/21 20:55:53 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyparted/ChangeLog,v 1.10 2005/04/04 22:37:55 gustavoz Exp $
+
+  04 Apr 2005; Gustavo Zacarias <gustavoz@gentoo.org> pyparted-1.6.9.ebuild:
+  Keyworded ~sparc and ~hppa
 
   21 Jan 2005; Marcus D. Hanwell <cryos@gentoo.org> pyparted-1.6.9.ebuild:
   Added append-flags -fPIC as this is needed for compilation on amd64. Applied
