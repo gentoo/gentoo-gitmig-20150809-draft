@@ -1,10 +1,11 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/files/courier-pop3d-ssl.rc6,v 1.4 2004/03/06 03:16:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/files/courier-pop3d-ssl.rc6,v 1.5 2004/04/01 06:11:52 robbat2 Exp $
 
 depend() {
 	need net authdaemond
+	use famd
 }
 
 source /etc/courier-imap/pop3d-ssl
