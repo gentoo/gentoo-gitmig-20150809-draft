@@ -1,7 +1,11 @@
 # ChangeLog for sys-apps/logwatch
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/logwatch/ChangeLog,v 1.9 2003/10/22 21:16:41 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/logwatch/ChangeLog,v 1.10 2003/11/17 07:50:56 jhhudso Exp $
 
+*logwatch-5.0 (17 Nov 2003)
+
+  17 Nov 2003; Jared Hudson <jhhudso@gentoo.org> : Version bump.
+	
   23 Oct 2003; Martin Holzer <mholzer@gentoo.org> logwatch-4.3.2.ebuild:
   removing auto-adding to cron. Closes #29012.
 
