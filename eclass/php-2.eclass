@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-2.eclass,v 1.1 2003/11/16 12:21:46 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-2.eclass,v 1.2 2003/11/23 01:41:27 robbat2 Exp $
 # Author: Robin H. Johnson <robbat2@gentoo.org>
 
 # This EBUILD is totally masked presently. Use it at your own risk.  I know it
@@ -481,12 +481,16 @@ php_src_install() {
 		# A lot of ini file funkiness
 		insinto ${PHPINIDIRECTORY}
 		newins ${phpinisrc} ${PHPINIFILENAME}
-		dodir /etc/php4
-		[ "${PHPMAJORVER}" -eq 4 ] && dosym ${PHPINIDIRECTORY}/${PHPINIFILENAME} /etc/php4/${PHPINIFILENAME}
+
+		# we don't install it anymore
+		# this is obsolete, and passed it's phaseout
+		#dodir /etc/php4
+		#[ "${PHPMAJORVER}" -eq 4 ] && dosym ${PHPINIDIRECTORY}/${PHPINIFILENAME} /etc/php4/${PHPINIFILENAME}
 	fi
 }
 
 php_pkg_preinst() {
+	# obsolete
 	einfo "Checking if we need to preserve a really old /etc/php4/php.ini file"
 	if [ -e /etc/php4/php.ini ] && [ ! -L /etc/php4/php.ini ]; then
 		ewarn "Old setup /etc/php4/php.ini file detected, moving to new location (${PHPINIDIRECTORY}/${PHPINIFILENAME})"
