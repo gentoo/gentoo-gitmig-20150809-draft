@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.15.91.0.1-r2.ebuild,v 1.3 2004/06/24 22:43:22 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.15.91.0.1-r2.ebuild,v 1.4 2004/06/27 04:55:48 solar Exp $
 
 # NOTE to Maintainer:  ChangeLog states that it no longer use perl to build
 #                      the manpages, but seems this is incorrect ....
@@ -33,10 +33,13 @@ src_unpack() {
 	mkdir ${WORKDIR}/patch/skip
 	mv ${WORKDIR}/patch/05* ${WORKDIR}/patch/skip/
 
+	# remove unused patches first (should not be in tarball at all)
+	mv ${WORKDIR}/patch/{90,utils}* ${WORKDIR}/patch/skip/
+
 	# uclibc uses non-relro version
 	use uclibc \
 		&& mv ${WORKDIR}/patch/*relro* ${WORKDIR}/patch/skip/ \
-		|| mv ${WORKDIR}/patch/{20,63,90}_* ${WORKDIR}/patch/skip/
+		|| mv ${WORKDIR}/patch/*no_rel_ro* ${WORKDIR}/patch/20_* ${WORKDIR}/patch/skip/
 
 	epatch ${WORKDIR}/patch
 

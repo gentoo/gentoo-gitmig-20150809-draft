@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/binutils
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.137 2004/06/24 22:43:22 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.138 2004/06/27 04:55:47 solar Exp $
+
+  27 Jun 2004; <solar@gentoo.org> binutils-2.15.91.0.1-r2.ebuild:
+  remove unused patches from tarball an no_rel_ro patches
 
   23 Jun 2004; Aron Griffis <agriffis@gentoo.org>
   binutils-2.11.92.0.12.3-r2.ebuild, binutils-2.11.92.0.7.ebuild,
