@@ -1,6 +1,6 @@
-# ChangeLog for app-misc/celestia
+# ChangeLog for app-sci/celestia
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/celestia/ChangeLog,v 1.2 2004/02/25 08:05:25 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/celestia/ChangeLog,v 1.3 2004/03/04 20:05:24 vapier Exp $
 
   25 Feb 2004; Patrick Kursawe <phosphan@gentoo.org> celestia-1.3.0-r1.ebuild:
   Sandbox violation fixed
