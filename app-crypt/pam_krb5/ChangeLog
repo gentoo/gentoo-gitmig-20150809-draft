@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/pam_krb5
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/pam_krb5/ChangeLog,v 1.5 2003/03/28 12:42:02 pvdabeel Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/pam_krb5/ChangeLog,v 1.6 2004/03/30 00:29:14 mr_bones_ Exp $
+
+  29 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> pam_krb5-1.0.ebuild:
+  inherit eutils for epatch
 
   28 Mar 2003; Pieter Van den Abeele <pvdabeel@gentoo.org> :
   stable ppc
