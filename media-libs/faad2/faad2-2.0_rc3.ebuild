@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/faad2/faad2-2.0_rc3.ebuild,v 1.4 2004/01/26 00:33:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/faad2/faad2-2.0_rc3.ebuild,v 1.5 2004/01/30 05:55:55 drobbins Exp $
 
 inherit eutils libtool flag-o-matic
 
@@ -12,11 +12,12 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ~ppc ~sparc ~amd64"
 
-DEPEND="virtual/glibc
-	sys-devel/automake
-	sys-devel/autoconf"
+DEPEND="sys-devel/automake
+	>=sys-devel/autoconf-2.58"
 #	xmms? ( >=media-sound/xmms-1.2.7
 #		media-libs/id3lib )"
+
+RDEPEND=""
 
 S=${WORKDIR}/${PN}
 

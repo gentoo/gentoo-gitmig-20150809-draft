@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/aalib/aalib-1.4_rc4-r2.ebuild,v 1.16 2004/01/29 04:01:59 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/aalib/aalib-1.4_rc4-r2.ebuild,v 1.17 2004/01/30 05:54:28 drobbins Exp $
 
 inherit eutils libtool
 
@@ -15,10 +15,12 @@ SLOT="0"
 KEYWORDS="x86 ppc sparc alpha hppa amd64 ia64"
 IUSE="X slang gpm"
 
-DEPEND=">=sys-libs/ncurses-5.1
+RDEPEND=">=sys-libs/ncurses-5.1
 	X? ( virtual/x11 )
 	gpm? ( sys-libs/gpm )
 	slang? ( >=sys-libs/slang-1.4.2 )"
+
+DEPEND="$RDEPEND >=sys-devel/autoconf-2.58"
 
 pkg_setup() {
 	# We need autoconf-2.5

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2_loaders/imlib2_loaders-1.0.4.20031225.ebuild,v 1.2 2004/01/26 00:35:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2_loaders/imlib2_loaders-1.0.4.20031225.ebuild,v 1.3 2004/01/30 06:01:13 drobbins Exp $
 
 inherit enlightenment flag-o-matic
 
@@ -9,10 +9,10 @@ HOMEPAGE="http://www.enlightenment.org/pages/imlib2.html"
 
 IUSE="${IUSE} X"
 
-DEPEND="${DEPEND}
-	>=media-libs/imlib2-1.1.0
+RDEPEND=">=media-libs/imlib2-1.1.0
 	>=dev-db/edb-1.0.4.20031013
 	>=dev-libs/eet-0.9.0.20031013"
+DEPEND="$RDEPEND >=sys-devel/autoconf-2.58"
 
 src_compile() {
 	cp autogen.sh{,.old}
