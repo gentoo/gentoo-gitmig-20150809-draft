@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/sdl-sopwith/sdl-sopwith-1.7.1.ebuild,v 1.6 2004/04/17 23:12:23 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/sdl-sopwith/sdl-sopwith-1.7.1.ebuild,v 1.7 2004/04/18 01:29:19 wolf31o2 Exp $
 
 inherit games
 
@@ -15,13 +15,13 @@ SLOT="0"
 KEYWORDS="x86 ppc"
 IUSE=""
 
-RDEPEND=">=media-libs/freetype-2"
-DEPEND=">=media-libs/libsdl-1.1.3
+RDEPEND=">=media-libs/freetype-2
+	>=media-libs/libsdl-1.1.3
 	dev-libs/atk
 	x11-libs/pango
 	>=x11-libs/gtk+-2
-	>=dev-libs/glib-2
-	dev-util/pkgconfig"
+	>=dev-libs/glib-2"
+DEPEND="dev-util/pkgconfig"
 
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
