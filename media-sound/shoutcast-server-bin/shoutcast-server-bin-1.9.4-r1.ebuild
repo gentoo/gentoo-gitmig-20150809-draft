@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/shoutcast-server-bin/shoutcast-server-bin-1.9.4-r1.ebuild,v 1.3 2004/11/30 22:03:00 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/shoutcast-server-bin/shoutcast-server-bin-1.9.4-r1.ebuild,v 1.4 2004/12/19 06:43:41 eradicator Exp $
 
 IUSE=""
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.shoutcast.com/download/license.phtml"
 SRC_URI="shoutcast-${SVER}-linux-glibc6.tar.gz"
 LICENSE="shoutcast"
 SLOT="0"
-KEYWORDS="-* x86 ~amd64"
+KEYWORDS="-* amd64 x86"
 DEPEND="amd64? ( app-emulation/emul-linux-x86-glibc )"
 
 S="${WORKDIR}/shoutcast-${SVER}-linux-glibc6"
