@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/stardict.eclass,v 1.2 2003/10/15 23:19:32 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/stardict.eclass,v 1.3 2004/01/09 01:10:55 liquidx Exp $
 
 # Author : Alastair Tse <liquidx@gentoo.org>
 #
@@ -16,7 +16,7 @@
 ECLASS="stardict"
 INHERITED="$INHERITED $ECLASS"
 
-RESTRICT="nostrip nosharedlib"
+RESTRICT="nostrip"
 
 [ -z "${DICT_SUFFIX}" ] && DICT_SUFFIX=${PN#stardict-[a-z]*-}
 [ -z "${DICT_P}" ] && DICT_P=stardict-${DICT_PREFIX}${DICT_SUFFIX}-${PV}
@@ -27,7 +27,7 @@ elif [ -z "${DESCRIPTION}" ]; then
 	DESCRIPTION="Another Stardict Dictionary"
 fi	
 	
-HOMEPAGE="http://stardict.sourceforge.net/ ${HOMEPAGE}"
+HOMEPAGE="http://stardict.sourceforge.net/"
 SRC_URI="mirror://sourceforge/stardict/${DICT_P}.tar.bz2"
 
 SLOT="0"
@@ -44,8 +44,10 @@ stardict_src_compile() {
 
 stardict_src_install() {
 	insinto /usr/share/stardict/dic
+	echo `pwd`
 	doins *.dict.dz
-	doins *.idx.gz
+	doins *.idx*
+	doins *.ifo
 }
 
 EXPORT_FUNCTIONS src_compile src_install
