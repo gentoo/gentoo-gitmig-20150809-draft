@@ -1,6 +1,13 @@
 # ChangeLog for net-im/silc-client
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/silc-client/ChangeLog,v 1.22 2004/06/24 22:59:30 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/silc-client/ChangeLog,v 1.23 2004/07/07 08:43:04 swegener Exp $
+
+*silc-client-1.0.1-r1 (07 Jul 2004)
+
+  07 Jul 2004; Sven Wegener <swegener@gentoo.org>
+  +silc-client-1.0.1-r1.ebuild:
+  Modified to allow installation of net-im/silc-toolkit and net-im/silc-client
+  at the time. Made CFLAGS aware.
 
   10 Jun 2004; Aron Griffis <agriffis@gentoo.org> silc-client-0.9.11.ebuild,
   silc-client-0.9.12.1.ebuild, silc-client-0.9.14.ebuild,
