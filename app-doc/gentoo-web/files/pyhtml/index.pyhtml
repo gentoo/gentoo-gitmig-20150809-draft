@@ -20,7 +20,7 @@
 						Download:<br>
 						Alt. Download:<br>
 						CVSWeb:<br>
-						<b>Mailing Lists</b>:<br><br>
+						<b>Mailing Lists</b>:<br><br><br>
 						rsync:</b>
 					</td>
 					<td align="left" valign="top">
@@ -29,6 +29,7 @@
 						<a href="http://cvs.gentoo.org/cgi-bin/cvsweb.cgi">http://cvs.gentoo.org/cgi-bin/cvsweb.cgi</a><br>
 						developer discussion (<a href="http://www.gentoo.org/mailman/listinfo/gentoo-dev">click to subscribe</a>)<br>
 						announcements (<a href="http://www.gentoo.org/mailman/listinfo/gentoo-announce">click to subscribe</a>)<br>
+						NEW! CVS log (1/day) (<a href="http://www.gentoo.org/mailman/listinfo/gentoo-cvs">click to subscribe</a><br>
 						rsync://cvs.gentoo.org<br>
 					</td>
 					<td align="left" valign="top">
