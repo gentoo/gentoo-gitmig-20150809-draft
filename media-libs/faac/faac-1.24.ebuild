@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/faac/faac-1.24.ebuild,v 1.11 2005/01/11 13:02:36 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/faac/faac-1.24.ebuild,v 1.12 2005/01/21 21:57:18 pylon Exp $
 
 inherit libtool eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="amd64 arm ~hppa ~ia64 ~mips ~ppc ppc64 ~ppc-macos sparc x86"
+KEYWORDS="amd64 arm ~hppa ~ia64 ~mips ppc ppc64 ~ppc-macos sparc x86"
 IUSE=""
 
 RDEPEND=">=media-libs/libsndfile-1.0.0"
