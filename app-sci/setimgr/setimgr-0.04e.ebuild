@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/setimgr/setimgr-0.04e.ebuild,v 1.4 2004/06/24 22:17:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/setimgr/setimgr-0.04e.ebuild,v 1.5 2004/12/24 04:06:51 ribosome Exp $
 
 DESCRIPTION="A SETI@home management program"
 HOMEPAGE="http://www.arkady.demon.co.uk/seti/"
@@ -10,7 +10,7 @@ SLOT="0"
 KEYWORDS="x86"
 IUSE=""
 DEPEND=""
-RDEPEND=">=app-sci/setiathome-3.08"
+RDEPEND=">=sci-astronomy/setiathome-3.08"
 
 src_compile() {
 	emake || die
