@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/gtkmm-2.2.8.ebuild,v 1.10 2004/04/12 17:06:27 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/gtkmm-2.2.8.ebuild,v 1.11 2004/05/12 13:47:00 khai Exp $
 
 inherit gnome2
 IUSE=""
@@ -13,7 +13,7 @@ KEYWORDS="x86 ppc sparc alpha hppa amd64 ia64"
 
 RDEPEND=">=dev-libs/glib-2.2
 	>=x11-libs/gtk+-2.2
-	>=dev-libs/libsigc++-1.2"
+	=dev-libs/libsigc++-1.2*"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	!=sys-devel/gcc-3.3.0*"
