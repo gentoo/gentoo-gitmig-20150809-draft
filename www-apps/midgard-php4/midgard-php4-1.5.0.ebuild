@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/midgard-php4/midgard-php4-1.5.0.ebuild,v 1.1 2004/09/22 10:50:57 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/midgard-php4/midgard-php4-1.5.0.ebuild,v 1.2 2004/09/22 11:32:45 rl03 Exp $
 
 DESCRIPTION="PHP module for the Midgard framework"
 HOMEPAGE="http://www.midgard-project.org/"
@@ -22,7 +22,7 @@ src_compile() {
 	econf
 	# set INSTALL_ROOT to respect sandbox
 	sed "1iINSTALL_ROOT=${D}" -i Makefile
-	emake
+	emake || die "emake failed"
 }
 
 src_install() {
