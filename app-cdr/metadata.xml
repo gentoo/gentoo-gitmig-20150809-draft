@@ -6,12 +6,16 @@
 		working with .iso files.
 	</longdescription>
 	<longdescription lang="es">
-		La categoría app-cdr contiene programas para escribir CDs y DVDs, y para
+		La categorÃ­a app-cdr contiene programas para escribir CDs y DVDs, y para
 		trabajar con archivos .iso.
 	</longdescription>
 	<longdescription lang="de">
-		Die Kategorie app-cdr enthält Software für das Erstellen von CDs und DVDs, 
-		sowie für das Arbeiten mit ISO-Dateien.
+		Die Kategorie app-cdr enthÃ¤lt Software fÃ¼r das Erstellen von CDs und DVDs, 
+		sowie fÃ¼r das Arbeiten mit ISO-Dateien.
+	</longdescription>
+	<longdescription lang="en">
+		De app-cdr categorie bevat applicaties om CD's en DVD's te branden en om
+		.iso bestanden te bewerken.
 	</longdescription>
 </catmetadata>
 
