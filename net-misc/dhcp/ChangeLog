@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/dhcp
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.1 2002/02/01 21:53:34 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.2 2002/02/14 18:58:47 drobbins Exp $
+
+*dhcp-3.0 (14 Feb 2002)
+
+  14 Feb 2002; Daniel Robbins <drobbins@gentoo.org>: New 3.0 release.
 
 *dhcp-3.0_rc12-r6 (1 Feb 2002)
 
