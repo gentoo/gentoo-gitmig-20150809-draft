@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pychart/pychart-1.33.ebuild,v 1.2 2003/09/19 08:02:19 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pychart/pychart-1.33.ebuild,v 1.3 2003/12/09 18:06:29 lanius Exp $
 
 
 inherit distutils
@@ -17,7 +17,7 @@ IUSE=""
 
 DEPEND="dev-lang/python
 	>=sys-apps/sed-4
-	>=app-text/ghostscript-7.05.5"
+	virtual/ghostscript"
 
 S=${WORKDIR}/${MY_P}
 DOCS="README.txt"

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pychart
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pychart/ChangeLog,v 1.2 2003/09/19 08:02:19 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pychart/ChangeLog,v 1.3 2003/12/09 18:06:26 lanius Exp $
+
+  09 Dec 2003; Heinrich Wendel <lanius@gentoo.org> pychart-1.33.ebuild:
+  changed app-text/ghostscript to virtual/ghostscript
 
   19 Sep 2003; Michael Sterrett <msterret@gentoo.org> pychart-1.33.ebuild:
   sed -i requires sed >= 4; repoman: whitespace cleanup
