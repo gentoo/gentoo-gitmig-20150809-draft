@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/quota/quota-3.06-r2.ebuild,v 1.1 2003/10/28 12:55:56 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/quota/quota-3.06-r2.ebuild,v 1.2 2003/11/23 23:49:13 seemant Exp $
 
-IUSE="nls"
+IUSE="nls tcpd"
 
 S=${WORKDIR}/quota-tools
 DESCRIPTION="Linux quota tools"
