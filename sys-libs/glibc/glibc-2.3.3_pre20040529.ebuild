@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.3_pre20040529.ebuild,v 1.10 2004/06/04 15:15:51 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.3_pre20040529.ebuild,v 1.11 2004/06/04 18:20:59 lv Exp $
 
 IUSE="nls pic build nptl erandom hardened multilib"
 
@@ -531,8 +531,6 @@ src_compile() {
 	else
 		myconf="${myconf} --without-__thread \
 		                  --enable-add-ons=linuxthreads"
-		use build && myconf="${myconf} --without-tls" || \
-					 myconf="${myconf} --with-tls"
 
 		# If we build for the build system we use the kernel headers from the target
 		# We also now set it without "build" as well, else it might use the
