@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/puregui/puregui-0.3.5.ebuild,v 1.16 2004/03/12 10:45:39 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/puregui/puregui-0.3.5.ebuild,v 1.17 2004/04/28 18:56:02 agriffis Exp $
 
 S=${WORKDIR}/${PN}
 DESCRIPTION="A GUI to Configure Pure-FTPD"
@@ -18,7 +18,7 @@ RDEPEND="nls? ( sys-devel/gettext )"
 src_compile() {
 	local myconf
 	use nls || myconf="${myconf} --disable-nls"
-	econf ${myconf}
+	econf ${myconf} || die "econf failed"
 	emake || die
 }
 

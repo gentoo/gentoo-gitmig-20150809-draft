@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gpsui/gpsui-2.2.ebuild,v 1.7 2004/03/12 10:45:38 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gpsui/gpsui-2.2.ebuild,v 1.8 2004/04/28 18:53:36 agriffis Exp $
 
 DESCRIPTION="GUI program for managing running processes"
 HOMEPAGE="http://gpsui.sourceforge.net/"
@@ -22,7 +22,7 @@ src_compile() {
 	use nls \
 		&& myconf="--enable-nls" \
 		|| myconf="--disable-nls"
-	econf ${myconf}
+	econf ${myconf} || die "econf failed"
 
 	emake || die "Compilation failed"
 }

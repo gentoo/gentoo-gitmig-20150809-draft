@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/fam/fam-2.7.0.ebuild,v 1.12 2004/03/13 19:28:26 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/fam/fam-2.7.0.ebuild,v 1.13 2004/04/28 18:52:28 agriffis Exp $
 
 inherit libtool eutils gnuconfig
 
@@ -27,7 +27,8 @@ src_unpack() {
 
 src_compile() {
 	use mips && gnuconfig_update
-	econf && emake
+	econf || die "econf failed"
+	emake || die "emake failed"
 }
 
 src_install() {
