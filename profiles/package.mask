@@ -1,7 +1,3 @@
-# temp so no one accidently emerge it. / drobbins, remove this when you are
-# finished.
->=sys-apps/portage-1.5.4
-
 # conflict with linux-sources, to be resolved soon
 sys-kernel/linux-sources-vanilla
 
