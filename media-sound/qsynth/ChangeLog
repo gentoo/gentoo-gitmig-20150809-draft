@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/qsynth
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qsynth/ChangeLog,v 1.2 2004/01/15 05:38:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qsynth/ChangeLog,v 1.3 2004/06/20 14:38:19 fvdpol Exp $
+
+  20 Jun 2004; Frank van de Pol <fvdpol@gentoo.org> metadata.xml,
+  qsynth-0.1.0.ebuild:
+  Fixed sandbox violations, closing bug #45289.
+  
+  (note: Package was marked stable x86; left it that way since this is only a
+  correction in the ebuild. Flagging it ~x86 might break people's systems who
+  managed to install it.)
 
 *qsynth-0.1.0 (15 Jan 2004)
 
