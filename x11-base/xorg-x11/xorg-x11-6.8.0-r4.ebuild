@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0-r4.ebuild,v 1.2 2004/11/17 18:24:04 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0-r4.ebuild,v 1.3 2004/11/18 16:25:24 spyderous Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -232,6 +232,12 @@ src_unpack() {
 	epatch ${FILESDIR}/xpm-secfix-thomas.diff
 
 	host_def_setup
+
+	# uclibc lacks sinf and cosf
+	if use uclibc; then
+		sed -i -e 's:GLXCLIENTDIRS = glxinfo glxgears:GLXCLIENTDIRS = :' \
+			${S}/programs/Imakefile
+	fi
 
 	cd ${S}
 	if use doc; then
@@ -748,11 +754,6 @@ host_def_setup() {
 		# Make xv optional for more minimal builds
 		use_build xv BuildXvLibrary
 		use_build xv BuildXvExt
-
-		# uclibc love from iggy
-		if use uclibc; then
-			echo "#define BuildGLULibrary NO" >> config/cf/host.def
-		fi
 
 		if use alpha; then
 			echo "#define XF86CardDrivers mga nv tga s3virge sis rendition \

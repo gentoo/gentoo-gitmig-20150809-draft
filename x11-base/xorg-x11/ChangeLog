@@ -1,6 +1,11 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.210 2004/11/17 18:32:11 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.211 2004/11/18 16:25:24 spyderous Exp $
+
+  18 Nov 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  xorg-x11-6.8.0-r4.ebuild:
+  For USE=uclibc, stop building glxgears and glxinfo. But build GLU library
+  again.
 
   17 Nov 2004; Donnie Berkholz <spyderous@gentoo.org>; :
   Update credits on xpm-secfix-thomas.diff.
