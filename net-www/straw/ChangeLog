@@ -1,6 +1,12 @@
 # ChangeLog for net-www/straw
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/straw/ChangeLog,v 1.15 2003/11/15 18:02:16 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/straw/ChangeLog,v 1.16 2003/11/27 12:47:59 liquidx Exp $
+
+*straw-0.21.2 (27 Nov 2003)
+
+  27 Nov 2003; Alastair Tse <liquidx@gentoo.org> straw-0.21.2.ebuild:
+  put gconf files in the right place and use gnome2 eclass. temporary fix
+  for ${S}. will be fixed upstream in next version.
 
 *straw-0.21.1 (15 Nov 2003)
 
