@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/binutils
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.154 2004/09/07 00:37:05 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.155 2004/09/08 18:14:27 vapier Exp $
+
+  08 Sep 2004; Mike Frysinger <vapier@gentoo.org>
+  binutils-2.14.90.0.8-r1.ebuild, -binutils-2.14.90.0.8-r2.ebuild:
+  Merge the changes from -r2 back into -r1 since it was just uclibc specific.
 
   06 Sep 2004; <solar@gentoo.org>
   +files/2.15/binutils-2.15-elf32-arm-textrel.patch,

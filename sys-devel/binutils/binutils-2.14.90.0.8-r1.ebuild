@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.14.90.0.8-r1.ebuild,v 1.21 2004/09/02 17:28:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.14.90.0.8-r1.ebuild,v 1.22 2004/09/08 18:14:27 vapier Exp $
 
-inherit eutils libtool flag-o-matic
+inherit eutils libtool flag-o-matic gnuconfig
 
-PATCHVER="1.2"
+PATCHVER="1.3"
 DESCRIPTION="Tools necessary to build programs"
 HOMEPAGE="http://sources.redhat.com/binutils/"
 SRC_URI="mirror://kernel/linux/devel/binutils/${P}.tar.bz2
@@ -14,7 +14,7 @@ SRC_URI="mirror://kernel/linux/devel/binutils/${P}.tar.bz2
 LICENSE="GPL-2 | LGPL-2"
 SLOT="0"
 KEYWORDS="x86 ~ppc sparc mips alpha ~hppa amd64 ~ia64 ~ppc64 s390"
-IUSE="nls bootstrap build multitarget"
+IUSE="nls bootstrap build multitarget uclibc"
 
 DEPEND="virtual/libc
 	nls? ( sys-devel/gettext )
@@ -28,6 +28,12 @@ src_unpack() {
 	# The prescott patch is not ready yet.
 	mkdir ${WORKDIR}/patch/skip
 	mv ${WORKDIR}/patch/05* ${WORKDIR}/patch/skip/
+
+	# one of 38/39 has to be moved out of the way, both are backports of different relro versions
+	# 39 is more current, but not fully backported
+	mv ${WORKDIR}/patch/39_* ${WORKDIR}/patch/skip/
+
+	use uclibc && mv ${WORKDIR}/patch/*relro* ${WORKDIR}/patch/*sparc1* ${WORKDIR}/patch/skip/
 
 	epatch ${WORKDIR}/patch
 
@@ -44,11 +50,13 @@ src_unpack() {
 			}' ${x}.orig > ${x}
 		rm -rf ${x}.orig
 	done
+
+	gnuconfig_update
 }
 
 src_compile() {
 	# Generate borked binaries.  Bug #6730
-	filter-flags -fomit-frame-pointer -fssa
+	filter-flags -fomit-frame-pointer -fssa -freduce-all-givs
 
 	local myconf=
 	[ ! -z "${CBUILD}" ] && myconf="--build=${CBUILD}"
@@ -168,4 +176,9 @@ src_install() {
 	else
 		rm -rf ${D}/usr/share/man
 	fi
+
+	use uclibc && rm -rf ${D}/usr/lib/ldscripts
+
+	# remove shared libs' links (.so) to build all apps against the static versions
+	use uclibc && rm -f ${D}/usr/lib/lib{bfd,opcodes}.so ${D}/usr/lib/lib*.la
 }
