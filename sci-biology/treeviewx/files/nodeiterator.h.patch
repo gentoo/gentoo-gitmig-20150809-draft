@@ -1,9 +1,9 @@
 --- nodeiterator.h.old	2002-02-24 15:37:17.000000000 -0500
-+++ nodeiterator.h	2005-02-19 21:09:31.000000000 -0500
++++ nodeiterator.h	2005-02-20 17:52:21.088923200 -0500
 @@ -20,7 +20,7 @@
   */
  
-  // $Id: nodeiterator.h.patch,v 1.1 2005/02/20 02:31:40 ribosome Exp $
+  // $Id: nodeiterator.h.patch,v 1.2 2005/02/20 23:00:19 ribosome Exp $
 - 
 +
  /**
