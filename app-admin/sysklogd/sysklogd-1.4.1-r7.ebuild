@@ -1,10 +1,9 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysklogd/sysklogd-1.4.1-r7.ebuild,v 1.6 2004/03/29 23:19:31 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysklogd/sysklogd-1.4.1-r7.ebuild,v 1.7 2004/03/29 23:20:19 mr_bones_ Exp $
 
 inherit eutils
 
-S=${WORKDIR}/${P}
 DESCRIPTION="Standard log daemons"
 HOMEPAGE="http://www.infodrom.org/projects/sysklogd/"
 SRC_URI="ftp://metalab.unc.edu/pub/Linux/system/daemons/${P}.tar.gz"
