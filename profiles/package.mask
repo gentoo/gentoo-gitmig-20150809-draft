@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3755 2005/03/23 15:19:26 g2boojum Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3756 2005/03/23 15:22:16 seemant Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -119,7 +119,6 @@ net-firewall/ipset
 #Gnome-2.10 mask
 >=www-client/epiphany-extensions-1.6.0
 >=www-client/epiphany-extensions-1.5.8
->=net-www/epiphany-1.5.8
 >=www-client/epiphany-1.5.8
 >=gnome-base/gnome-2.9
 >=gnome-base/gnome-light-2.9
