@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/expect/expect-5.40.0.ebuild,v 1.6 2004/08/12 00:33:37 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/expect/expect-5.40.0.ebuild,v 1.7 2005/01/19 23:37:30 vapier Exp $
 
 inherit gnuconfig
 
@@ -10,7 +10,7 @@ SRC_URI="http://expect.nist.gov/src/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~mips hppa amd64 ppc64"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~mips hppa amd64 ppc64 sh"
 IUSE="X doc"
 
 DEPEND=">=dev-lang/tcl-8.2

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/expect/expect-5.42.1.ebuild,v 1.2 2004/12/21 11:27:46 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/expect/expect-5.42.1.ebuild,v 1.3 2005/01/19 23:37:30 vapier Exp $
 
 inherit eutils gnuconfig
 
@@ -10,12 +10,11 @@ SRC_URI="http://expect.nist.gov/src/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="X doc"
 
 RDEPEND=">=dev-lang/tcl-8.2
 	X? ( >=dev-lang/tk-8.2 )"
-
 DEPEND="${RDEPEND}
 	=sys-devel/autoconf-2.1*"
 
