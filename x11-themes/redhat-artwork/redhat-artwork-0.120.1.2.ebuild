@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/redhat-artwork-0.120.1.2.ebuild,v 1.3 2005/01/15 00:23:48 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/redhat-artwork-0.120.1.2.ebuild,v 1.4 2005/01/26 14:57:56 greg_g Exp $
 
-inherit eutils rpm libtool versionator
+inherit eutils rpm libtool versionator kde-functions
 
 MY_PV=$(replace_version_separator 2 '-')
 DESCRIPTION="RedHat's Bluecurve theme for GTK1, GTK2, KDE3, GDM, Metacity and Nautilus"
@@ -48,7 +48,7 @@ _replace() {
 
 src_compile() {
 
-	use kde && addwrite "${QTDIR}/etc/settings"
+	use kde && set-kdedir 3
 
 	export WANT_AUTOCONF=2.5
 	# dies is LANG has UTF-8
@@ -135,22 +135,9 @@ src_install () {
 	export LANG=C
 	export LC_ALL=C
 
-	make prefix=${D}/usr kde_moduledir=${D}/${KDEDIR}/lib \
-	styledir=${D}/${KDEDIR}/lib/kde3/plugins/styles \
-	settingsdir=${D}/${KDEDIR}/etc/settings install || die
-
-	use kde && (
-		dodir ${KDEDIR}/share/apps
-		mv ${D}/usr/share/apps/* ${D}/${KDEDIR}/share/apps
-		rmdir ${D}/usr/share/apps
-
-		dodir ${KDEDIR}/share/icons
-		dosym /usr/share/icons/Bluecurve ${KDEDIR}/share/icons/Bluecurve
-	)
-
-	use kde || (
-		rm -rf ${D}/usr/share/apps
-	)
+	make prefix=${D}/usr kde_moduledir=${D}/usr/lib \
+	styledir=${D}/usr/lib/kde3/plugins/styles \
+	settingsdir=${D}/${QTDIR}/etc/settings install || die
 
 	# yank redhat logos (registered trademarks, etc)
 	rm -f ${D}/usr/share/gdm/themes/Bluecurve/rh_logo-header.png
