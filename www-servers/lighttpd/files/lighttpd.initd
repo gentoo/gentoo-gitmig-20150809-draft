@@ -1,0 +1,29 @@
+#!/sbin/runscript
+# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/files/lighttpd.initd,v 1.1 2004/08/08 17:28:06 stuart Exp $
+
+PID_FILE="/var/run/lighttpd.pid"
+LIGHTTPD_BIN="/usr/sbin/lighttpd"
+LIGHTTPD_CONF="/etc/conf.d/lighttpd.conf"
+
+depend() {
+	need net
+	use mysql logger
+	after sshd
+}
+			
+start() {
+	ebegin "Starting lighttpd"
+	${LIGHTTPD_BIN} -u lighttpd -f ${LIGHTTPD_CONF}
+	RET=$?
+	pidof lighttpd >${PID_FILE}
+	eend ${RET}
+}
+
+stop() {
+	ebegin "Stopping lighttpd"
+	kill `cat ${PID_FILE}`
+	RET=$?
+	eend ${RET}
+}

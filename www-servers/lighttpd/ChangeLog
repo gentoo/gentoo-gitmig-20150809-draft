@@ -1,0 +1,58 @@
+# ChangeLog for net-www/lighttpd
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.1 2004/08/08 17:28:06 stuart Exp $
+
+*lighttpd-1.1.8 (08 Aug 2004)
+
+  08 Aug 2004; Stuart Herbert <stuart@gentoo.org> +metadata.xml,
+  +files/lighttpd-1.1.8-gentoo.diff, +files/lighttpd-1.2.2-php.diff,
+  +files/lighttpd-1.2.2.initd, +files/lighttpd.initd,
+  +lighttpd-1.1.8-r1.ebuild, +lighttpd-1.1.8.ebuild, +lighttpd-1.2.2.ebuild:
+  Moved from net-www/lighttpd to www-servers/lighttpd.
+
+  08 Aug 2004; Tom Martin <slarti@gentoo.org> lighttpd-1.1.8-r1.ebuild,
+  lighttpd-1.1.8.ebuild:
+  Typo in DESCRIPTION: intented -> intended. Bug 59717.
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  lighttpd-1.1.8-r1.ebuild, lighttpd-1.1.8.ebuild, lighttpd-1.2.2.ebuild:
+  virtual/glibc -> virtual/libc
+
+*lighttpd-1.2.2 (27 Jun 2004)
+
+  27 Jun 2004; Stuart Herbert <stuart@gentoo.org>
+  +files/lighttpd-1.2.2-php.diff, +files/lighttpd-1.2.2.initd,
+  +lighttpd-1.2.2.ebuild:
+  Version bump; php support now available; thanks to Boris Wachtmeister
+  <sirro@nurfuerspam.de>; see bug #55049
+
+  25 Jun 2004; Aron Griffis <agriffis@gentoo.org> lighttpd-1.1.8-r1.ebuild,
+  lighttpd-1.1.8.ebuild:
+  QA - fix use invocation
+
+*lighttpd-1.1.8-r1 (29 Apr 2004)
+
+  29 Apr 2004; Stuart Herbert <stuart@gentoo.org> lighttpd-1.1.8-r1.ebuild,
+  files/lighttpd.initd:
+  Fix for shutdown problems; see bug #46833
+
+  27 Apr 2004; Aron Griffis <agriffis@gentoo.org> lighttpd-1.1.8.ebuild:
+  Add inherit eutils
+
+  25 Apr 2004; David Holm <dholm@gentoo.org> lighttpd-1.1.8.ebuild:
+  Added to ~ppc.
+
+  24 Apr 2004; Stuart Herbert <stuart@gentoo.org> lighttpd-1.1.8.ebuild:
+  Replaced einstall (which doesn't work properly) with good ol' make install
+
+  23 Apr 2004; Stuart Herbert <stuart@gentoo.org> lighttpd-1.1.8.ebuild,
+  metadata.xml, files/lighttpd-1.1.8-gentoo.diff:
+  Fixes to get the server running; thanks to Boris Wachtmeister
+  <sirro@nurfuerspam.de> once again
+
+*lighttpd-1.1.8 (23 Apr 2004)
+
+  23 Apr 2004; Stuart Herbert <stuart@gentoo.org> lighttpd-1.1.8.ebuild,
+  files/lighttpd-1.1.8-gentoo.diff, files/lighttpd.initd:
+  Initial import; thanks to Boris <sirro@nurfuerspam.de>; see bug #46833
+
