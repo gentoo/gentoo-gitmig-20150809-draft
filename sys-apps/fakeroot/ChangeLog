@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/fakeroot
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/fakeroot/ChangeLog,v 1.10 2004/07/05 11:04:45 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/fakeroot/ChangeLog,v 1.11 2004/08/24 03:00:42 swegener Exp $
+
+  24 Aug 2004; Sven Wegener <swegener@gentoo.org> fakeroot-0.4.4-r1.ebuild,
+  fakeroot-0.4.4.ebuild:
+  Changed SRC_URI to use mirror:// syntax.
 
   05 Jul 2004; <solar@gentoo.org> fakeroot-0.4.4-r1.ebuild,
   files/fakeroot-0.4.4-faked.patch:
