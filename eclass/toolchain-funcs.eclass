@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.2 2004/10/13 14:15:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.3 2004/10/13 23:44:35 vapier Exp $
 #
 # Author: Toolchain Ninjas <ninjas@gentoo.org>
 #
@@ -9,7 +9,7 @@
 
 inherit eutils
 
-ECLASS=toolfuncs
+ECLASS=toolchain-funcs
 INHERITED="$INHERITED $ECLASS"
 
 DESCRIPTION="Based on the ${ECLASS} eclass"
