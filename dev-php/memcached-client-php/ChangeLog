@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/memcached-client-php
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/memcached-client-php/ChangeLog,v 1.6 2004/08/03 20:29:59 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/memcached-client-php/ChangeLog,v 1.7 2004/10/23 15:29:50 weeve Exp $
+
+  23 Oct 2004; Jason Wever <weeve@gentoo.org>
+  memcached-client-php-0.1.2.ebuild:
+  Added ~sparc keyword.
 
   03 Aug 2004; <agriffis@gentoo.org> memcached-client-php-0.1.2.ebuild:
   add ~ia64 #56295
