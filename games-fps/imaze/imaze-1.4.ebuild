@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/imaze/imaze-1.4.ebuild,v 1.1 2004/03/21 08:54:26 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/imaze/imaze-1.4.ebuild,v 1.2 2004/03/21 13:45:20 dholm Exp $
 
 inherit games
 
@@ -11,7 +11,7 @@ SRC_URI="http://home.tu-clausthal.de/student/iMaze/files/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ~ppc"
 IUSE="X Xaw3d joystick"
 
 RDEPEND="virtual/x11
