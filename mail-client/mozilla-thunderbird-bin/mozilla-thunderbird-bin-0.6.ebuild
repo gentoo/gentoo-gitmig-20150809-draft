@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird-bin/mozilla-thunderbird-bin-0.6.ebuild,v 1.1 2004/05/30 19:41:09 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird-bin/mozilla-thunderbird-bin-0.6.ebuild,v 1.2 2004/06/07 13:56:46 agriffis Exp $
 
 inherit nsplugins eutils
 
@@ -13,7 +13,7 @@ SRC_URI="http://ftp.mozilla.org/pub/mozilla.org/thunderbird/releases/${PV}/thund
 HOMEPAGE="http://www.mozilla.org/projects/thunderbird"
 RESTRICT="nostrip"
 
-KEYWORDS="~x86 -ppc -sparc -alpha"
+KEYWORDS="-* ~x86"
 SLOT="0"
 LICENSE="MPL-1.1 | NPL-1.1"
 IUSE="gnome gtk2 crypt"
@@ -43,7 +43,7 @@ src_install() {
 	dobin ${FILESDIR}/thunderbird
 
 	# Install icon and .desktop for menu entry
-	if [ "`use gnome`" ]
+	if use gnome
 	then
 		insinto /usr/share/pixmaps
 		doins ${FILESDIR}/${PV}/icon/thunderbird-icon.png
