@@ -1,14 +1,14 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/oro/oro-2.0.6-r2.ebuild,v 1.5 2004/01/17 03:06:49 strider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/oro/oro-2.0.8.ebuild,v 1.1 2004/01/17 03:06:49 strider Exp $
 
 DESCRIPTION="A set of text-processing Java classes that provide Perl5 compatible regular expressions, AWK-like regular expressions, glob expressions, and utility classes for performing substitutions, splits, filtering filenames, etc."
 HOMEPAGE="http://jakarta.apache.org/oro/index.html"
-SRC_URI="mirror://apache/jakarta/oro/source/jakarta-oro-${PV}.tar.gz"
+SRC_URI="mirror://apache/jakarta/oro/source/jakarta-${PN}-${PV}.tar.gz"
 
 LICENSE="Apache-1.1"
 SLOT="0"
-KEYWORDS="x86 ppc sparc"
+KEYWORDS="~x86 ~ppc ~sparc"
 IUSE="doc jikes"
 
 DEPEND=">=virtual/jdk-1.3
@@ -35,7 +35,7 @@ src_compile() {
 src_install() {
 	mv jakarta-oro*.jar oro.jar
 	dojar oro.jar || die "Failed Installing"
-	dodoc BUGS CHANGES COMPILE CONTRIBUTORS README STYLE TODO
+	dodoc CHANGES COMPILE CONTRIBUTORS ISSUES LICENSE README STYLE TODO
 	dohtml *.html
 
 	[ -n "`use doc`" ] && dohtml -r docs/
