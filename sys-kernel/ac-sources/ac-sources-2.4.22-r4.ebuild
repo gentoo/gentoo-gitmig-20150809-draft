@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ac-sources/ac-sources-2.4.21-r2.ebuild,v 1.4 2003/09/07 19:02:33 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ac-sources/ac-sources-2.4.22-r4.ebuild,v 1.1 2003/09/25 08:39:54 iggy Exp $
 
 IUSE="build"
 
@@ -33,15 +33,15 @@ DESCRIPTION="Full sources for Alan Cox's Linux kernel"
 # If it's a last-stable+pre/rc+ac (marcelo), we need to handle it differently
 # ourkernel is the stable kernel we'll be working with (previous or current)
 if [ ${PRERC} ]; then
-OURKERNEL="2.4.${OKVLASTPR}"
-SRC_URI="mirror://kernel/linux/kernel/v2.4/linux-${OURKERNEL}.tar.bz2
-mirror://kernel/linux/kernel/people/alan/linux-2.4/${BASE}/patch-${KV}.bz2
-mirror://kernel/linux/kernel/v2.4/testing/patch-${PV/_/-}.bz2"
+	OURKERNEL="2.4.${OKVLASTPR}"
+	SRC_URI="mirror://kernel/linux/kernel/v2.4/linux-${OURKERNEL}.tar.bz2
+		mirror://kernel/linux/kernel/people/alan/linux-2.4/${BASE}/patch-${KV}.bz2
+		mirror://kernel/linux/kernel/v2.4/testing/patch-${PV/_/-}.bz2"
 else
-OURKERNEL="2.4.${OKVLAST}"
-SRC_URI="mirror://kernel/linux/kernel/v2.4/linux-${OURKERNEL}.tar.bz2
-mirror://kernel/linux/kernel/people/alan/linux-2.4/${BASE}/patch-${KV}.bz2"
-fi
+	OURKERNEL="2.4.${OKVLAST}"
+	SRC_URI="mirror://kernel//linux/kernel/v2.4/linux-${OURKERNEL}.tar.bz2
+		mirror://kernel/linux/kernel/people/alan/linux-2.4/${BASE}/patch-${KV}.bz2"
+	fi
 
 KEYWORDS="x86"
 SLOT="${KV}"
@@ -55,7 +55,7 @@ src_unpack() {
 
 	# if we need a pre/rc patch, then use it
 	if [ ${PRERC} ]; then
-	bzcat ${DISTDIR}/patch-${PV/_/-}.bz2|patch -p1 || die "-marcelo patch failed"
+		bzcat ${DISTDIR}/patch-${PV/_/-}.bz2|patch -p1 || die "-marcelo patch failed"
 	fi
 
 	bzcat ${DISTDIR}/patch-${KV}.bz2|patch -p1 || die "-ac patch failed"
