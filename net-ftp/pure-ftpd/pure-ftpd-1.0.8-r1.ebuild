@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/pure-ftpd-1.0.8-r1.ebuild,v 1.7 2002/10/05 05:39:18 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/pure-ftpd-1.0.8-r1.ebuild,v 1.8 2002/11/04 17:46:27 seemant Exp $
 
 IUSE="ldap pam postgres mysql"
 
@@ -27,11 +27,12 @@ src_compile() {
 	use mysql && myconf="${myconf} --with-mysql"
 	use postgres && myconf="${myconf} --with-pgsql"
 	use ldap && myconf="${myconf} --with-ldap"
-	./configure --prefix=/usr --with-altlog --with-puredb		\
-		--with-extauth --with-throttling --with-ratios		\
-		--with-quotas --with-cookie				\
-		--with-uploadscript --with-virtualhosts			\
-		--with-virtualchroot --with-diraliases --with-ftpwho	\
+
+	./configure --prefix=/usr --with-altlog --with-puredb \
+		--with-extauth --with-throttling --with-ratios \
+		--with-quotas --with-cookie \
+		--with-uploadscript --with-virtualhosts \
+		--with-virtualchroot --with-diraliases --with-ftpwho \
 		--host=${CHOST} ${myconf} || die
 	emake || die
 
@@ -40,13 +41,13 @@ src_compile() {
 src_install() {
 
 	make DESTDIR=${D} install || die
-	mkdir -p ${D}/etc
-	cp ${FILESDIR}/ftpusers ${D}/etc/ftpusers
-	mkdir -p ${D}/etc/conf.d
-	cp ${FILESDIR}/pure-ftpd.conf_d ${D}/etc/conf.d/pure-ftpd
-	mkdir -p ${D}/etc/init.d
-	cp ${FILESDIR}/pure-ftpd.rc6 ${D}/etc/init.d/pure-ftpd		
-	chmod 755 ${D}/etc/init.d/pure-ftpd
-	
-}
 
+	insinto /etc
+	doins ${FILESDIR}/ftpusers
+
+	insinto /etc/conf.d
+	newins ${FILESDIR}/pure-ftpd.conf_d pure-ftpd
+
+	exeinto /etc/init.d
+	newexe ${FILESDIR}/pure-ftpd.rc6 pure-ftpd		
+}
