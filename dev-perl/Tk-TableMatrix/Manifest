@@ -1,4 +1,7 @@
 MD5 10313405b70991b3fef21140097b65de ChangeLog 584
 MD5 f331d9b79acc8dee4274769833cb3d72 Tk-TableMatrix-1.01.ebuild 577
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 06db4ef365dce64a1a06be5cb2c3fdf1 Tk-TableMatrix-1.01-r1.ebuild 658
 MD5 89f24085a2e7ef5b505d409705a6afbe files/digest-Tk-TableMatrix-1.01 71
+MD5 8a54e8fee478628d727c66043ddef456 files/patch.diff 566
+MD5 89f24085a2e7ef5b505d409705a6afbe files/digest-Tk-TableMatrix-1.01-r1 71
