@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/net-snmp
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.25 2003/10/20 05:25:09 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.26 2003/10/20 06:44:15 max Exp $
+
+*net-snmp-5.0.9-r2 (19 Oct 2003)
+
+  19 Oct 2003; Max Kalika <max@gentoo.org> net-snmp-5.0.9-r2.ebuild:
+  Add experimental perl support. Fixes bugs 29603 and 30439.
 
   19 Oct 2003; Max Kalika <max@gentoo.org> net-snmp-5.0.9-r1.ebuild:
   Add ucd-snmp/dlmod MIB support. Fixes bug 31217.
