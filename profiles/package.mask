@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# seemant@gentoo.org (02 Aug 2003)
+# Testing, alpha version.  In demand, so it's in portage
+>=x11-wm/openbox-3.0_alpha1
+
 # taviso@gentoo.org (30 Jul 03)
 # Unstable version, available for those
 # who need it.
