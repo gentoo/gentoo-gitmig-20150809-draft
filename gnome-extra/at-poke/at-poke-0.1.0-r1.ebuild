@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/at-poke/at-poke-0.1.0-r1.ebuild,v 1.2 2002/08/16 04:13:57 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/at-poke/at-poke-0.1.0-r1.ebuild,v 1.3 2002/09/05 21:27:01 spider Exp $
 
 inherit gnome2
 
@@ -17,7 +17,7 @@ RDEPEND=">=gnome-extra/at-spi-0.12.1
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.12.0"
 
-SRC_URI="mirror://gnome/sources/${PN}/${P}.tar.bz2"
+SRC_URI="mirror://gnome/2.0.0/sources/${PN}/${P}.tar.bz2"
 S=${WORKDIR}/${P}
 SLOT="0"
 

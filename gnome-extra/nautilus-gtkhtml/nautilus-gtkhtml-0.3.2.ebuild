@@ -1,12 +1,12 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-gtkhtml/nautilus-gtkhtml-0.3.2.ebuild,v 1.4 2002/08/16 04:14:00 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-gtkhtml/nautilus-gtkhtml-0.3.2.ebuild,v 1.5 2002/09/05 21:27:01 spider Exp $
 
 inherit debug
 
 S=${WORKDIR}/${P}
 DESCRIPTION="libgtkhtml addons for Nautilus in gnome2"
-SRC_URI="mirror://gnome/sources/${PN}/${P}.tar.bz2"
+SRC_URI="mirror://gnome/2.0.0/sources/${PN}/${P}.tar.bz2"
 HOMEPAGE="http://www.gnome.org/"
 LICENSE="GPL-2"
 SLOT="0"
