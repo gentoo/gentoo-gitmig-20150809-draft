@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <aliz@gentoo.org> (3 Oct 2002)
+# Masked for testing
+=app-sci/magic-7.1-r1
+
 # <tantive@gentoo.org> (2 Oct 2002)
 # Version bumped, masked due to freeze
 =sys-kernel/usermode-sources-2.4.19-r8
