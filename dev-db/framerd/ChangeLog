@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/framerd
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/framerd/ChangeLog,v 1.5 2004/03/14 13:18:13 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/framerd/ChangeLog,v 1.6 2004/03/24 21:43:38 mr_bones_ Exp $
+
+  24 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> framerd-2.4.3.ebuild:
+  remove older version
 
   14 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org>
   framerd-2.4.3-r1.ebuild, framerd-2.4.3.ebuild:
