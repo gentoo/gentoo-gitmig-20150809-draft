@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 540786a5b668e6acacac4d3cee3b56e4 ChangeLog 842
+MD5 80f214f9d2911e2b8a675455f0579d67 ChangeLog 848
 MD5 eb4a409d9097b2428f59a7bc83b368a1 artresources-0.1.2.ebuild 912
 MD5 9549997fe7562b1be89b5e4f4e1846da metadata.xml 343
 MD5 892e005cc3738915896d6e46fa79472b files/config-artresources.sh 560
@@ -9,7 +9,7 @@ MD5 74c55a275f831cb2ad466f69d0bc6c1a files/digest-artresources-0.1.2 72
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBo5+pArHZZzCEUG0RAvV0AJ9NqEYETmZkdbyS9yaRR4TP+bdw7wCfURI5
-qhV+SQJmBmOATlKfxHdPy4I=
-=gc69
+iD8DBQFBo6CKArHZZzCEUG0RArr2AJ9Gd3EYQ7phuDOMy6eSYWcdMzofSgCgh9cm
+mxUwZip3ndKn7sTkFqEGhlo=
+=bYE9
 -----END PGP SIGNATURE-----

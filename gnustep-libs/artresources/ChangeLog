@@ -1,10 +1,10 @@
 # ChangeLog for gnustep-libs/artresources
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/artresources/ChangeLog,v 1.6 2004/11/23 20:37:51 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/artresources/ChangeLog,v 1.7 2004/11/23 20:41:37 eradicator Exp $
 
   23 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org>
   artresources-0.1.2.ebuild:
-  Stable... bug #68857.
+  Stable amd64... bug #68857.
 
   05 Nov 2004; Simon Stelling <blubb@gentoo.org> artresources-0.1.2.ebuild:
   added ~amd64
