@@ -1,6 +1,12 @@
 # ChangeLog for app-text/tetex
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/ChangeLog,v 1.29 2003/02/05 05:26:32 satai Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/ChangeLog,v 1.30 2003/02/06 04:19:28 satai Exp $
+
+*tetex-2.0-r1 (05 Feb 2003)
+
+  05 Feb 2003; Matthew Turk <satai@gentoo.org> :
+  Revision bump.  Added a patch to fix the local tree.  Also enabled a number
+  of Babel formats.  Installation should be all fixed now, too.
 
   04 Feb 2003; Matthew Turk <satai@gentoo.org> : tetex-2.0.ebuild
   Fixed installation woes; will now manually remove /usr/share/texmf/dvipdfm if

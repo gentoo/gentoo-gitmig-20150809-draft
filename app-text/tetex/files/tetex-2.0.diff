@@ -1,0 +1,47 @@
+diff -ru tetex-src-2.0-orig/texk/kpathsea/texmf.in tetex-src-2.0/texk/kpathsea/texmf.in
+--- tetex-src-2.0-orig/texk/kpathsea/texmf.in	2003-01-19 05:58:27.000000000 -0600
++++ tetex-src-2.0/texk/kpathsea/texmf.in	2003-02-05 20:17:16.000000000 -0600
+@@ -58,7 +58,7 @@
+ TEXMFMAIN = @texmf@
+ 
+ % A place for local additions to a "standard" texmf tree.  For example:
+-TEXMFLOCAL = @texmf@-local
++TEXMFLOCAL = /usr/local/share/texmf
+ 
+ % If defined, teTeX's texconfig stores modifications here (instead of the
+ % TEXMFMAIN tree).
+diff -ru tetex-src-2.0-orig/texk/web2c/fmtutil.in tetex-src-2.0/texk/web2c/fmtutil.in
+--- tetex-src-2.0-orig/texk/web2c/fmtutil.in	2003-01-26 16:24:30.000000000 -0600
++++ tetex-src-2.0/texk/web2c/fmtutil.in	2003-02-05 20:17:44.000000000 -0600
+@@ -39,7 +39,7 @@
+ 
+ # Change "tex.ini -> bplain.ini" and "- -> language.dat"
+ # if you want babel support in tex:
+-tex		@TEXBIN@		-		tex.ini
++tex		@TEXBIN@		language.dat		bplain.ini
+ # Change "tex -> etex" and "latex.ini -> *latex.ini" to get an
+ # eTeX-2 enabled LaTeX format named latex. Or, don't change anything
+ # and use elatex which is just the same.
+@@ -48,7 +48,7 @@
+ @ETEX@elatex		etex		language.dat	*elatex.ini
+ # Change "pdftex.ini -> pdfbplain.ini" and "- -> language.dat"
+ # if you want babel support in pdftex:
+-@PTEX@pdftex		pdftex		-	pdftex.ini
++@PTEX@pdftex		pdftex		language.dat	pdfbplain.ini
+ @PTEX@pdflatex	pdftex		language.dat	pdflatex.ini
+ @PETEX@pdfetex		pdfetex		language.def	*pdfetex.ini
+ @PETEX@pdfelatex	pdfetex		language.dat	*pdfelatex.ini
+@@ -59,11 +59,11 @@
+ 
+ # Change "amstex.ini -> bamstex.ini" and "- -> language.dat"
+ # if you want babel support in amstex:
+-#! amstex	@TEXBIN@		-		amstex.ini
++ amstex	@TEXBIN@		language.dat		bamstex.ini
+ 
+ # Change "pdfamstex.ini -> pdfbamstex.ini" and "- -> language.dat"
+ # if you want babel support in pdfamstex:
+-#! pdfamstex	pdftex			-	pdfamstex.ini
++ pdfamstex	pdftex			language.dat	pdfbamstex.ini
+ 
+ # Context formats:
+ #! cont-cz	pdfetex		cont-usr.tex	*cont-cz.ini
