@@ -1,7 +1,7 @@
 If your version of Portage dies for some reason, try using the
-portage-rescue package as follows:
+portage-rescue package as follows for Gentoo Linux 1.0+ systems:
 
-# tar xjpUvf portage-rescue-1.8.8-r1.tbz2 -C /
+# tar xjpUvf portage-rescue-1.8.16.tbz2 -C /
 
 That should get Portage up and running again.
 
