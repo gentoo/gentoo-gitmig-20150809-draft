@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/jswat
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jswat/ChangeLog,v 1.5 2003/05/23 07:09:24 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jswat/ChangeLog,v 1.6 2003/05/24 10:24:45 absinthe Exp $
+
+*jswat-2.17-r1 (24 May 2003)
+
+  24 May 2003; Dylan Carlson <absinthe@gentoo.org> jswat-2.17-r1.ebuild,
+  jswat-2.17.ebuild, files/jswat:
+  This package _should_ work correctly now.  Apologies for the confusion.
 
 *jswat-2.17 (23 May 2003)
 

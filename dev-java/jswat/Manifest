@@ -1,3 +1,4 @@
-MD5 a989589f0a88e10238bbba40d7eabb66 jswat-2.17.ebuild 1383
-MD5 feb81c726532eb872cd99f3dd4da012c ChangeLog 1202
-MD5 118ed7a87e5e670070676eaaa139f77a files/digest-jswat-2.17 67
+MD5 41c62a4b912b016a70071b3339b7225c jswat-2.17-r1.ebuild 1397
+MD5 35fa762d202da25fafce524723f7de14 ChangeLog 1414
+MD5 87261df0a884f1e99d3463113b1cd4da files/jswat2 1170
+MD5 118ed7a87e5e670070676eaaa139f77a files/digest-jswat-2.17-r1 67
