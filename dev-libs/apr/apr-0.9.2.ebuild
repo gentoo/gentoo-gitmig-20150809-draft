@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr/apr-0.9.2.ebuild,v 1.3 2003/09/06 22:29:24 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr/apr-0.9.2.ebuild,v 1.4 2003/10/23 14:42:35 aliz Exp $
 
 inherit libtool
 
@@ -10,8 +10,8 @@ S="${WORKDIR}/${P}"
 S2="${WORKDIR}/${PN}-util-${PV}"
 
 DESCRIPTION="Apache's Portable Runtime Library."
-SRC_URI="http://www.apache.org/dist/apr/${P1}
-		http://www.apache.org/dist/apr/${P2}"
+SRC_URI="mirror://apache/apr/${P1}
+	mirror://apache/apr/${P2}"
 HOMEPAGE="http://apr.apache.org/"
 
 DEPEND=">=sys-devel/autoconf-2.50

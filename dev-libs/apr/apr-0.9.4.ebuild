@@ -1,13 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr/apr-0.9.4.ebuild,v 1.1 2003/10/12 17:21:07 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr/apr-0.9.4.ebuild,v 1.2 2003/10/23 14:42:35 aliz Exp $
 
 IUSE=""
 
 DESCRIPTION="Apache Portable Runtime Library"
 HOMEPAGE="http://apr.apache.org/"
-SRC_URI="http://www.apache.org/dist/apr/${P}.tar.gz
-		http://www.apache.org/dist/apr/${PN}-util-${PV}.tar.gz"
+SRC_URI="mirror://apache/apr/${P}.tar.gz
+	mirror://apache/apr/${PN}-util-${PV}.tar.gz"
 
 LICENSE="Apache-1.1"
 KEYWORDS="~x86"

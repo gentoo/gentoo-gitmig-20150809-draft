@@ -1,12 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.7b.ebuild,v 1.7 2003/09/29 03:52:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.7b.ebuild,v 1.8 2003/10/23 14:42:35 aliz Exp $
 
 inherit eutils
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Toolkit for SSL v2/v3 and TLS v1"
-SRC_URI="http://www.openssl.org/source/${P}.tar.gz"
+SRC_URI="mirror://openssl/source/${P}.tar.gz"
 HOMEPAGE="http://www.openssl.org/"
 
 RDEPEND="virtual/glibc"

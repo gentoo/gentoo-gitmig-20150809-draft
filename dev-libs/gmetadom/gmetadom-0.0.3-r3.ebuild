@@ -1,12 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmetadom/gmetadom-0.0.3-r3.ebuild,v 1.3 2003/09/08 07:19:26 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmetadom/gmetadom-0.0.3-r3.ebuild,v 1.4 2003/10/23 14:42:35 aliz Exp $
 
 IUSE=""
 
 DESCRIPTION="A library providing bindings for multiple languages of multiple C DOM implementations"
 HOMEPAGE="http://gmetadom.sf.net"
-SRC_URI="http://belnet.dl.sourceforge.net/sourceforge/gmetadom/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/gmetadom/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
