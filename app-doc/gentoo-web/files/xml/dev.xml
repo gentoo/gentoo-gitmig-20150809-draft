@@ -1,4 +1,6 @@
 <?xml version='1.0'?>
+<!DOCTYPE guide PUBLIC "-//Gentoo//DTD Guide XML V1.0//EN"
+"/usr/share/sgml/gentoo/guide/guide.dtd">
 <guide>
 <title>Gentoo Linux Development Guide</title>
 <author title="Chief Architect" email="drobbins@gentoo.org">Daniel Robbins</author>

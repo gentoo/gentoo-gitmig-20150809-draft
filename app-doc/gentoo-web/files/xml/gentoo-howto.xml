@@ -1,4 +1,7 @@
 <?xml version='1.0'?>
+<!DOCTYPE guide PUBLIC "-//Gentoo//DTD Guide XML V1.0//EN"
+"/usr/share/sgml/gentoo/guide/guide.dtd">
+
 <guide>
 <title>Gentoo Linux HOWTO</title>
 
@@ -199,7 +202,7 @@ variable settings. The variables you can set are:</p>
 </li><li>DEPEND - build dependencies; see the section <a href="#dependencies">Package Dependencies</a>
 </li><li>RDEPEND - runtime dependencies; see the section <a href="#dependencies">Package Dependencies</a>
 </li></ul>
-<p>
+<p></p>
 </body>
 </section>
 

@@ -1,4 +1,7 @@
 <?xml version='1.0'?>
+<!DOCTYPE guide PUBLIC "-//Gentoo//DTD Guide XML V1.0//EN"
+"/usr/share/sgml/gentoo/guide/guide.dtd">
+
 <guide>
 <title>Gentoo Linux Installation Guide</title>
 <author title="Chief Architect" email="drobbins@gentoo.org">Daniel Robbins</author>
@@ -62,7 +65,7 @@ filesystems, we support this as well.  Support will likely be added for JFS in
 the near future, as well as XFS - as soon as it's ready.  Here are our recommended
 filesystem sizes and types:</p>
 
-  <table border="1"><tr border="0"><td><b>Partition</b></td><td><b>Size</b></td><td><b>Type</b></td></tr>
+  <table border="1"><tr><td><b>Partition</b></td><td><b>Size</b></td><td><b>Type</b></td></tr>
   <tr><td>boot partition, containing kernel(s) and boot information</td><td>~100 Megabytes</td><td>ReiserFS recommended, ext2 ok</td></tr>
   <tr><td>root partition, containing main filesystem (/usr, /home, etc)</td><td>&gt;=1.5 Gigabytes</td><td>ReiserFS recommended, ext2 ok</td></tr>
   <tr><td>swap partition (no longer a 128 Megabyte limit)</td><td>&gt;=128 Megabytes</td><td>Linux swap</td></tr>
