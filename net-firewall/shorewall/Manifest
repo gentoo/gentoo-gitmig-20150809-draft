@@ -1,4 +1,6 @@
-MD5 ac483b545be736591d53d02dd219a446 shorewall-1.4.1a.ebuild 803
 MD5 ad0ef5143a419557ae8926165c5e3719 ChangeLog 1333
+MD5 ac483b545be736591d53d02dd219a446 shorewall-1.4.1a.ebuild 803
+MD5 ac483b545be736591d53d02dd219a446 shorewall-1.4.2.ebuild 803
 MD5 84488f78e793227b3abb0c86543754dc files/digest-shorewall-1.4.1a 66
 MD5 2bb788dc55a65a1daee4a13ca9240fab files/shorewall 433
+MD5 5f8cd4aac7756b6a80f752542a791459 files/digest-shorewall-1.4.2 65
