@@ -1,18 +1,20 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/spe/spe-0.4.2c.ebuild,v 1.1 2003/12/28 00:07:01 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/spe/spe-0.4.2c.ebuild,v 1.2 2004/04/26 01:45:41 vapier Exp $
 
-inherit distutils
+inherit distutils eutils
 
 MY_P="SPE-0.4.2.c-wx2.4.2.4.-bl2.31"
 S="${WORKDIR}/${MY_P}"
 DESCRIPTION="Python IDE with Blender support"
 HOMEPAGE="http://spe.pycs.net/"
 SRC_URI="http://projects.blender.org/download.php/66/${MY_P}.zip"
+
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
+
 DEPEND=">=dev-lang/python-2.2.3-r1
 	>=dev-python/wxPython-2.4.2.4"
 

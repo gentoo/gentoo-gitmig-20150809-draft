@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/meld-0.9.1.ebuild,v 1.2 2003/11/25 10:00:42 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/meld-0.9.1.ebuild,v 1.3 2004/04/26 01:32:35 vapier Exp $
 
-inherit python
+inherit python eutils
 
 DESCRIPTION="A graphical (GNOME 2) diff and merge tool"
 HOMEPAGE="http://meld.sourceforge.net/"
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/meld/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~alpha ~sparc"
+KEYWORDS="~x86 ~sparc ~alpha"
 IUSE=""
 
 DEPEND=">=dev-lang/python-2.2

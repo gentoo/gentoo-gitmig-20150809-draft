@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/rhide/rhide-1.5-r1.ebuild,v 1.9 2004/04/03 21:22:42 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/rhide/rhide-1.5-r1.ebuild,v 1.10 2004/04/26 01:37:22 vapier Exp $
+
+inherit eutils
 
 #SNAPSHOT="20020825"
 TVISIONVER="2.0.1"
@@ -10,6 +12,7 @@ SETEDIT_S="setedit"
 GDBVER="5.3"
 
 DESCRIPTION="console IDE for various languages"
+HOMEPAGE="http://www.rhide.com/"
 if [ -z "${SNAPSHOT}" ]
 then
 	S="${WORKDIR}/${P}"
@@ -23,10 +26,9 @@ SRC_URI="${SRC_URI}
 	mirror://sourceforge/tvision/rhtvision-${TVISIONVER}.src.tar.gz
 	mirror://sourceforge/setedit/setedit-${SETEDITVER}.tar.gz
 	mirror://gnu/gdb/gdb-${GDBVER}.tar.bz2"
-HOMEPAGE="http://www.rhide.com/"
 
-SLOT="0"
 LICENSE="GPL-2"
+SLOT="0"
 KEYWORDS="x86"
 IUSE="X"
 
