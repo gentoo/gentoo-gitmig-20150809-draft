@@ -1,6 +1,11 @@
 # ChangeLog for media-tv/xawtv
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xawtv/ChangeLog,v 1.6 2003/10/26 03:59:01 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xawtv/ChangeLog,v 1.7 2003/12/05 01:01:14 spyderous Exp $
+
+*xawtv-3.90-r1 (04 Dec 2003)
+
+  04 Dec 2003; Donnie Berkholz <spyderous@gentoo.org>; xawtv-3.90-r1.ebuild:
+  Changing media-libs/zvbi dependency to USE flag to close bug #26723.
 
   26 Oct 2003; Brad House <brad_mssw@gentoo.org> xawtv-3.90.ebuild:
   take out use_enable mmx for amd64 as it assumes 32bit assembly which is
