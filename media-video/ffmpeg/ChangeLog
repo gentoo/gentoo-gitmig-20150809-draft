@@ -1,6 +1,10 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.36 2004/06/09 15:02:44 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.37 2004/06/09 20:55:00 lordvan Exp $
+
+  09 Jun 2004; Thomas Raschbacher <lordvan@gentoo.org>
+  ffmpeg-0.4.8.20040322-r1.ebuild:
+  only enable faac when we are not on ia64 or alpha in src_compile
 
 *ffmpeg-0.4.8.20040322-r1 (09 Jun 2004)
 
