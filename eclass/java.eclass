@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Karl Trygve Kalleberg <karltk@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/java.eclass,v 1.3 2002/08/26 16:41:50 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java.eclass,v 1.4 2002/10/19 23:44:12 karltk Exp $
 
 ECLASS=java
 INHERITED="$INHERITED $ECLASS"
@@ -61,14 +61,14 @@ system_arch() {
 }
 
 set_java_env() {
-        dodir /etc/env.d/java
-        sed \
-                -e "s/@P@/${P}/g" \
-                -e "s/@PN@/${PN}/g" \
-                -e "s/@PV@/${PV}/g" \
-                -e "s/@PF@/${PF}/g" \
-                < $1 \
-                > ${D}/etc/env.d/java/20`basename $1` || die
+	dodir /etc/env.d/java
+	sed \
+		-e "s/@P@/${P}/g" \
+		-e "s/@PN@/${PN}/g" \
+		-e "s/@PV@/${PV}/g" \
+		-e "s/@PF@/${PF}/g" \
+		< $1 \
+		> ${D}/etc/env.d/java/20`basename $1` || die
 }
 
 pkg_postrm() {
@@ -83,11 +83,9 @@ install_mozilla_plugin() {
 	local bn
 	bn=`basename $1`
 
-        if [ "`use mozilla`" ] ; then
-                dodir /usr/lib/mozilla/plugins
-                dosym $1 /usr/lib/mozilla/plugins/${bn}
-	fi
-
-
+	if [ "`use mozilla`" ] ; then
+		dodir /usr/lib/mozilla/plugins
+		dosym $1 /usr/lib/mozilla/plugins/${bn}
+	if
 }
 
