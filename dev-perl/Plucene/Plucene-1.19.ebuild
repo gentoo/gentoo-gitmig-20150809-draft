@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Plucene/Plucene-1.19.ebuild,v 1.1 2004/10/06 23:22:25 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Plucene/Plucene-1.19.ebuild,v 1.2 2004/10/06 23:23:36 mcummings Exp $
 
 inherit perl-module
 
-DESCRIPTION=""
+DESCRIPTION="Plucene - the Perl lucene port"
 HOMEPAGE="http://search.cpan.org/~simon/${P}/"
 SRC_URI="mirror://cpan/authors/id/S/SI/SIMON/${P}.tar.gz"
 
