@@ -1,0 +1,37 @@
+--- Makefile.org.orig	Thu Apr 26 15:39:41 2001
++++ Makefile.org	Thu Apr 26 15:42:30 2001
+@@ -19,10 +19,12 @@
+ # for, say, /usr/ and yet have everything installed to /tmp/somedir/usr/.
+ # Normally it is left empty.
+ INSTALL_PREFIX=
+-INSTALLTOP=/usr/local/ssl
++#INSTALLTOP=/usr/local/ssl
++INSTALLTOP=/usr/ssl
+ 
+ # Do not edit this manually. Use Configure --openssldir=DIR do change this!
+-OPENSSLDIR=/usr/local/ssl
++#OPENSSLDIR=/usr/local/ssl
++OPENSSLDIR=/usr/ssl
+ 
+ # RSAref  - Define if we are to link with RSAref.
+ # NO_IDEA - Define to build without the IDEA algorithm
+@@ -55,7 +57,8 @@
+ 
+ CC= gcc
+ #CFLAG= -DL_ENDIAN -DTERMIO -O3 -fomit-frame-pointer -m486 -Wall -Wuninitialized -DSHA1_ASM -DMD5_ASM -DRMD160_ASM
+-CFLAG= -DTERMIOS -DL_ENDIAN -fomit-frame-pointer -O3 -m486 -Wall -DSHA1_ASM -DMD5_ASM -DRMD160_ASM
++#CFLAG= -DTERMIOS -DL_ENDIAN -fomit-frame-pointer -O3 -m486 -Wall -DSHA1_ASM -DMD5_ASM -DRMD160_ASM
++CFLAG=$(CFLAGS) -DTERMIOS -DL_ENDIAN -fomit-frame-pointer -Wall -DSHA1_ASM -DMD5_ASM -DRMD160_ASM
+ DEPFLAG= 
+ PEX_LIBS= 
+ EX_LIBS= 
+@@ -169,7 +172,8 @@
+ MAKEFILE= Makefile.ssl
+ MAKE=     make -f Makefile.ssl
+ 
+-MANDIR=$(OPENSSLDIR)/man
++#MANDIR=$(OPENSSLDIR)/man
++MANDIR=$(OPENSSLDIR)/../share/man
+ MAN1=1
+ MAN3=3
+ SHELL=/bin/sh

@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Your Name <your email>
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/entity/entity-0.7.2.ebuild,v 1.2 2001/04/28 18:59:57 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/entity/entity-0.7.2.ebuild,v 1.3 2001/05/10 01:52:55 achim Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -16,7 +16,7 @@ DEPEND=">=media-libs/imlib-1.9.8.1
 	python? ( >=dev-lang/python-2.0 )
 	sdl? ( >=media-libs/libsdl-1.1.7 )
 	ssl? ( >=dev-libs/openssl-0.9.6 )
-	gnome? ( >=gnome-base/gnome-libs-1.2.13 )"
+	gnome? ( >=gnome-base/gnome-core-1.4 )"
 
 
 src_compile() {
