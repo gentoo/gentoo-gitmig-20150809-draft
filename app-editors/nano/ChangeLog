@@ -1,8 +1,11 @@
 # ChangeLog for app-editors/nano
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/ChangeLog,v 1.23 2003/03/29 15:35:40 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/ChangeLog,v 1.24 2003/04/16 00:43:41 gmsoft Exp $
 
 *nano-1.2.0 (22 Feb 2003)
+
+  16 Apr 2003; Guy Martin <gmsoft@gentoo.org> nano-1.2.0.ebuild :
+  Marked stable on hppa.
 
   29 Mar 2003; Christian Birchinger <joker@gentoo.org> nano-1.2.0.ebuild:
   Added sparc stable keyword
