@@ -1,5 +1,5 @@
 # Distributed under the terms of the GNU General Public License v2 
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.48-r1.ebuild,v 1.3 2003/05/31 21:56:40 carpaski Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.48-r1.ebuild,v 1.4 2003/06/01 08:23:05 carpaski Exp $
 
 IUSE="build"
 
@@ -102,7 +102,9 @@ src_install() {
 	dosym ../lib/portage/bin/xpak /usr/bin/xpak
 	dosym ../lib/portage/bin/repoman /usr/bin/repoman
 	dosym ../lib/portage/bin/tbz2tool /usr/bin/tbz2tool
+
 	dosym ../lib/portage/bin/portageq /usr/bin/portageq
+	dosym ../lib/portage/bin/fixpackages /usr/bin/fixpackages
 
 	dosym ../lib/portage/bin/g-cpan.pl /usr/bin/g-cpan.pl
 	dosym ../lib/portage/bin/quickpkg /usr/bin/quickpkg
