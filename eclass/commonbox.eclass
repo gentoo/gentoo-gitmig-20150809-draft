@@ -1,7 +1,7 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2
 # Author: Seemant Kulleen <seemant@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/commonbox.eclass,v 1.2 2002/07/14 23:01:40 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/commonbox.eclass,v 1.3 2002/07/14 23:51:01 seemant Exp $
 
 # The commonbox eclass is designed to allow easier installation of the box
 # window managers such as blackbox and fluxbox and commonbox
@@ -15,7 +15,7 @@ INHERITED="$INHERITED $ECLASS"
 EXPORT_FUNCTIONS commonify src_compile src_install
 
 DEPEND="x11-misc/commonbox-utils
-	x11-misc/commonbox-styles"
+	x11-themes/commonbox-styles"
 
 RDEPEND="nls? ( sys-devel/gettext )"
 PROVIDE="virtual/blackbox"
@@ -40,9 +40,9 @@ commonbox_commonify() {
 
 	cd ${S}/src
 	cp Makefile Makefile.orig
-	sed -e "s:\(DEFAULT_MENU = \).*:\1/usr/share/commonbox/menu:" \
-		-e "s:\(DEFAULT_STYLE = \).*:\1/usr/share/commonbox/styles/Clean:" \
-		-e "s:\(DEFAULT_INITFILE = \).*:\1/usr/share/commonbox/init:" \
+	sed -e 's:$(pkgdatadir)/menu:\\"/usr/share/commonbox/menu\\":' \
+		-e 's:$(pkgdatadir)/styles:\\"/usr/share/commonbox/styles\\":' \
+		-e 's:\(DEFAULT_INITFILE\).*:\1=\\"/usr/share/commonbox/init\\":' \
 		Makefile.orig > Makefile
 
 	cd ${S}
