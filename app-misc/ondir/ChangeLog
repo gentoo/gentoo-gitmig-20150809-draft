@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/ondir
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ondir/ChangeLog,v 1.6 2004/10/21 14:27:44 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ondir/ChangeLog,v 1.7 2004/10/25 13:57:02 ka0ttic Exp $
+
+*ondir-0.2.2 (25 Oct 2004)
+
+  25 Oct 2004; Aaron Walker <ka0ttic@gentoo.org> +ondir-0.2.2.ebuild:
+  Version bump; updated HOMEPAGE and SRC_URI; respect user CFLAGS; use make
+  install instead of a sleu of do* functions.
 
   21 Oct 2004; Aaron Walker <ka0ttic@gentoo.org> +metadata.xml:
   Add metadata (shell-tools)
