@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.6.2-r1.ebuild,v 1.11 2004/06/26 16:01:04 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.6.2-r1.ebuild,v 1.12 2004/06/26 17:14:28 kugelfang Exp $
 
 inherit flag-o-matic gcc eutils
 
@@ -79,8 +79,7 @@ src_compile() {
 
 	# Needed at least on amd64, BUG #55222
 	# Danny van Dyk <kugelfang@gentoo.org> 2004/06/26
-	# [ "${ARCH}" != x86 ] && ...
-	if [ "`use amd64`" ]; then
+	if [ "${ARCH}" != x86 ]; then
 		sed -i -e "s/gcc\ \-fno\-pic/gcc\ \-fPIC/" utils/Makefile
 	fi
 

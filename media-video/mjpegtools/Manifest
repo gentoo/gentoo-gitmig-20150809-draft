@@ -3,7 +3,7 @@ MD5 fe49014257499366bdc6903a9aa33fe5 metadata.xml 311
 MD5 ea564d3a0b8f7435249b8d54c5b6fc11 mjpegtools-1.6.0-r7.ebuild 2853
 MD5 f37748181fc868c34d64151104a52b84 mjpegtools-1.6.1.90-r2.ebuild 1912
 MD5 196d85982bf4a0ba2ac433b58b842e36 mjpegtools-1.6.2-r3.ebuild 2825
-MD5 bdd8fd78e9dd8d4e01ea3d571f52500d mjpegtools-1.6.2-r1.ebuild 2727
+MD5 076b96be4393adb0f7e71e9f9cd22a40 mjpegtools-1.6.2-r1.ebuild 2699
 MD5 94b45a7608327840f696deb03ebc5ffc files/1.6.0-r7-ppc.patch 443
 MD5 961944a5d3c12bdac7baf7d12ea995d7 files/digest-mjpegtools-1.6.0-r7 147
 MD5 094ac8c3e42a24141ae45bfa0d5d029d files/digest-mjpegtools-1.6.2-r3 69
