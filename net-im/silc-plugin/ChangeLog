@@ -1,6 +1,13 @@
 # ChangeLog for net-im/silc-plugin
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/silc-plugin/ChangeLog,v 1.8 2004/10/17 19:11:23 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/silc-plugin/ChangeLog,v 1.9 2004/11/28 12:59:33 ticho Exp $
+
+*silc-plugin-1.0.1-r2 (28 Nov 2004)
+
+  28 Nov 2004; Andrej Kacian <ticho@gentoo.org> silc-plugin-1.0.1-r1.ebuild,
+  +silc-plugin-1.0.1-r2.ebuild:
+  Added a RDEPEND on dev-perl/MIME-tools-5.413 for silc-mime.pl script. Closes
+  #72653, reported by Daniel Webert <rockoo@rockoo.homelinux.org>.
 
 *silc-plugin-1.0.1-r1 (17 Oct 2004)
 

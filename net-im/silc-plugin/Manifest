@@ -2,17 +2,19 @@
 Hash: SHA1
 
 MD5 f6d26cfbae99200b2df227d077fa41be silc-plugin-1.0.1.ebuild 2965
-MD5 2371ab3b7a750db18d694ae41518c675 ChangeLog 1484
+MD5 a1a5374ae5c26220ca98d25024600c23 ChangeLog 1777
 MD5 3d21d1bc81cfd81bfd0b0b3b2123b71c metadata.xml 271
-MD5 cb97c478d741236b2f5f3266116e11cd silc-plugin-1.0.1-r1.ebuild 3072
+MD5 1fb9d64a97724d353650417aaec7c4d7 silc-plugin-1.0.1-r1.ebuild 3101
+MD5 438579e9763948bec432a8c41abb012d silc-plugin-1.0.1-r2.ebuild 3101
 MD5 ce1069db2e4cfc5c0b0d4b988c6c053c files/digest-silc-plugin-1.0.1 202
 MD5 1acb3335a10232ac14f179305e20477f files/1.0.1-gcc34.patch 471
 MD5 ce1069db2e4cfc5c0b0d4b988c6c053c files/digest-silc-plugin-1.0.1-r1 202
+MD5 ce1069db2e4cfc5c0b0d4b988c6c053c files/digest-silc-plugin-1.0.1-r2 202
 MD5 71989b1101d6cf41e9f61a1b62d2cc85 files/1.0.1-branch-update.patch 6717
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD4DBQFBcsPk10xuJSrg3/sRAuWtAJjNoa/52W1zjpEMD7tGwOdCjslGAJ9I+jFS
-n5u6CUDwOVbdf2d4g4EJaA==
-=4phY
+iD8DBQFBqcu+10xuJSrg3/sRAn8HAJ0eDFTAJnggOVriTXvbLyTW0y5l+gCfUlYR
+sP7qAXYZ1wmjNoXPAyJwwT4=
+=TsYe
 -----END PGP SIGNATURE-----
