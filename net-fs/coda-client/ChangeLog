@@ -1,8 +1,13 @@
 # ChangeLog for net-fs/coda-client
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/coda-client/ChangeLog,v 1.1 2002/10/23 21:23:01 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/coda-client/ChangeLog,v 1.2 2002/11/05 21:18:53 lostlogic Exp $
 
 *coda-client-5.3.19 (23 Jul 2002)
+
+  06 Nov 2002; Brandon Low <lostlogic@gentoo.org> coda-client-5.3.19.ebuild :
+
+  Make not db4 compliant, and take the auto adding and removing from startup
+  level default out of the ebuild.
 
   23 Oct 2002; Brandon Low <lostlogic@gentoo.org> coda-client-5.3.19.ebuild, coda-client-5.3.19-gentoo.patch, coda-client-5.3.19-gentoo2.patch:
 
