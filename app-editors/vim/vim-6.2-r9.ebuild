@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/vim-6.2-r8.ebuild,v 1.3 2004/04/30 23:32:34 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/vim-6.2-r9.ebuild,v 1.1 2004/04/30 23:32:34 rphillips Exp $
 
 inherit vim
 
 VIM_VERSION="6.2"
-VIM_GENTOO_PATCHES="vim-6.2.069-gentoo-patches.tar.bz2"
-VIM_ORG_PATCHES="vim-6.2.461-patches.tar.bz2"
+VIM_GENTOO_PATCHES="vim-6.2.070-gentoo-patches.tar.bz2"
+VIM_ORG_PATCHES="vim-6.2.517-patches.tar.bz2"
 
 SRC_URI="${SRC_URI}
 	ftp://ftp.vim.org/pub/vim/unix/vim-${VIM_VERSION}.tar.bz2
