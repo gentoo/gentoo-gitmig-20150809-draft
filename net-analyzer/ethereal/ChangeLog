@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/ethereal
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ChangeLog,v 1.3 2002/04/12 16:56:07 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ChangeLog,v 1.4 2002/04/17 04:27:38 rphillips Exp $
+
+*ethereal-0.9.3 (16 Apr 2002)
+  16 Apr 2002; Ryan Phillips <rphillips@gentoo.org>
+  Change URLs to point to correct web address. (#1851)
 
 *ethereal-0.9.3 (11 Apr 2002)
   11 Apr 2002; Spider <spider@gentoo.org>
