@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Jerry Alexandratos <jerry@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/procmail/procmail-3.15.ebuild,v 1.1 2000/12/15 08:52:07 jerry Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/procmail/procmail-3.15.1.ebuild,v 1.1 2001/04/19 07:14:58 jerry Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
