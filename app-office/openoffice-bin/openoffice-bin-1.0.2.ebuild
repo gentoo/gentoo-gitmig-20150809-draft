@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-1.0.2.ebuild,v 1.9 2003/03/11 21:11:45 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-1.0.2.ebuild,v 1.10 2003/03/19 05:30:37 sethbc Exp $
 
 IUSE="kde gnome"
 
@@ -89,7 +89,8 @@ src_install() {
 
 	#fix the libstdc++.so symlink
 	cd ${D}/${INSTDIR}/program
-	ln -sf libstdc++.so.3 libstdc++
+	ln -sf libstdc++.so.3.0.4 libstdc++.so.3
+	ln -sf libstdc++.so.3.0.4 libstdc++
 
 	echo
 	einfo "Removing build root from registry..."
@@ -121,7 +122,7 @@ src_install() {
 	# Install wrapper script
 	exeinto /usr/bin
 	sed -e "s|<pv>|${PV}|g" \
-		${FILESDIR}/${PV}/ooffice-wrapper-1.1 > ${T}/ooffice
+		${FILESDIR}/${PV}/ooffice-wrapper-1.2 > ${T}/ooffice
 	doexe ${T}/ooffice
 	# Component symlinks
 	dosym ooffice /usr/bin/oocalc
