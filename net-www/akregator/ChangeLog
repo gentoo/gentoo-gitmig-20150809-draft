@@ -1,0 +1,11 @@
+# ChangeLog for net-www/akregator
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/akregator/ChangeLog,v 1.1 2004/06/23 01:50:18 absinthe Exp $
+
+*akregator-1.0_beta3 (22 Jun 2004)
+
+  22 Jun 2004; Dylan Carlson <absinthe@gentoo.org> +metadata.xml,
+  +akregator-1.0_beta3.ebuild:
+  Initial import to close # 51697 (cheers: Philipp Droessler).  
+  Keywords ~amd64 ~x86.
+
