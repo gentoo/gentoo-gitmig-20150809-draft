@@ -1,0 +1,91 @@
+diff -ur geda-gschem-20041228/docs/g_register.texi geda-gschem-20041228.plasmaroo/docs/g_register.texi
+--- geda-gschem-20041228/docs/g_register.texi	2004-12-29 04:09:32.000000000 +0000
++++ geda-gschem-20041228.plasmaroo/docs/g_register.texi	2005-01-02 14:27:32.671563448 +0000
+@@ -212,7 +212,7 @@
+ 
+   /* keymapping callbacks */
+   gh_new_procedure0_0 ("file-new-window", g_key_file_new_window);
+-  gh_new_procedure0_0 ("file-new", g_key_file_new);
++  gh_new_procedure0_0 ("file-new", geda_key_file_new);
+   gh_new_procedure0_0 ("file-open", g_key_file_open);
+   gh_new_procedure0_0 ("file-script", g_key_file_script);
+   gh_new_procedure0_0 ("file-save", g_key_file_save);
+diff -ur geda-gschem-20041228/docs/gschemdoc.info-1 geda-gschem-20041228.plasmaroo/docs/gschemdoc.info-1
+--- geda-gschem-20041228/docs/gschemdoc.info-1	2004-12-29 04:09:39.000000000 +0000
++++ geda-gschem-20041228.plasmaroo/docs/gschemdoc.info-1	2005-01-02 14:27:56.345964392 +0000
+@@ -4568,7 +4568,7 @@
+ 
+   /* keymapping callbacks */
+   gh_new_procedure0_0 ("file-new-window", g_key_file_new_window);
+-  gh_new_procedure0_0 ("file-new", g_key_file_new);
++  gh_new_procedure0_0 ("file-new", geda_key_file_new);
+   gh_new_procedure0_0 ("file-open", g_key_file_open);
+   gh_new_procedure0_0 ("file-script", g_key_file_script);
+   gh_new_procedure0_0 ("file-save", g_key_file_save);
+diff -ur geda-gschem-20041228/include/prototype.h geda-gschem-20041228.plasmaroo/include/prototype.h
+--- geda-gschem-20041228/include/prototype.h	2004-12-29 02:06:45.000000000 +0000
++++ geda-gschem-20041228.plasmaroo/include/prototype.h	2005-01-02 14:23:02.919571984 +0000
+@@ -27,7 +27,7 @@
+ /* g_key.c */
+ void set_window_current_key(TOPLEVEL *w_current);
+ void g_key_execute(int state, int keyval);
+-SCM g_key_file_new(void);
++SCM geda_key_file_new(void);
+ SCM g_key_file_new_window(void);
+ SCM g_key_file_open(void);
+ SCM g_key_file_script(void);
+diff -ur geda-gschem-20041228/noweb/g_key.nw geda-gschem-20041228.plasmaroo/noweb/g_key.nw
+--- geda-gschem-20041228/noweb/g_key.nw	2003-10-20 04:37:25.000000000 +0100
++++ geda-gschem-20041228.plasmaroo/noweb/g_key.nw	2005-01-02 14:24:38.940974512 +0000
+@@ -322,7 +322,7 @@
+ hack */
+ DEFINE_G_KEY(cancel)
+ 
+-@ %def DEFINE_G_KEY g_key_file_new g_key_file_new_window g_key_file_open g_key_file_script g_key_file_save g_key_file_save_as g_key_file_save_all g_key_file_print g_key_file_write_png g_key_file_close g_key_file_quit g_key_edit_undo g_key_edit_redo g_key_edit_select g_key_edit_copy g_key_edit_copy_hotkey g_key_edit_move g_key_edit_move_hotkey g_key_edit_delete g_key_edit_rotate_90 g_key_edit_rotate_90_hotkey g_key_edit_mirror g_key_edit_mirror_hotkey g_key_edit_stretch g_key_edit_stretch_hotkey g_key_edit_slot g_key_edit_color g_key_edit_edit g_key_edit_text g_key_edit_lock g_key_edit_unlock g_key_edit_linetype g_key_edit_filltype g_key_edit_translate g_key_edit_embed g_key_edit_unembed g_key_edit_show_hidden g_key_buffer_copy1 g_key_buffer_copy2 g_key_buffer_copy3 g_key_buffer_copy4 g_key_buffer_copy5 g_key_buffer_cut1 g_key_buffer_cut2 g_key_buffer_cut3 g_key_buffer_cut4 g_key_buffer_cut5 g_key_buffer_paste1 g_key_buffer_paste2 g_key_buffer_paste3 g_key_buffer_paste4 g_key_buffer_paste5 g_key_buffer_paste1_hotkey g_key_buffer_paste2_hotkey g_key_buffer_paste3_hotkey g_key_buffer_paste4_hotkey g_key_buffer_paste5_hotkey g_key_view_redraw g_key_view_zoom_full g_key_view_zoom_extents g_key_view_zoom_in g_key_view_zoom_out g_key_view_zoom_in_hotkey g_key_view_zoom_out_hotkey g_key_view_zoom_box g_key_view_zoom_box_hotkey g_key_view_pan g_key_view_pan_hotkey g_key_view_update_cues g_key_page_manager g_key_page_next g_key_page_prev g_key_page_new g_key_page_close g_key_page_revert g_key_page_discard g_key_page_print g_key_add_component g_key_add_attribute g_key_add_attribute_hotkey g_key_add_net g_key_add_net_hotkey g_key_add_bus g_key_add_bus_hotkey g_key_add_text g_key_add_line g_key_add_line_hotkey g_key_add_box g_key_add_box_hotkey g_key_add_circle g_key_add_circle_hotkey g_key_add_arc g_key_add_arc_hotkey g_key_add_pin g_key_add_pin_hotkey g_key_hierarchy_down_schematic g_key_hierarchy_down_symbol g_key_hierarchy_up g_key_hierarchy_documentation g_key_attributes_attach g_key_attributes_detach g_key_attributes_show_name g_key_attributes_show_value g_key_attributes_show_both g_key_attributes_visibility_toggle g_key_script_console g_key_options_text_size g_key_options_afeedback g_key_options_grid g_key_options_snap g_key_options_snap_size g_key_options_rubberband g_key_options_show_log_window g_key_options_show_coord_window g_key_misc g_key_misc2 g_key_misc3 g_key_help_about g_key_help_manual g_key_help_hotkeys g_key_cancel
++@ %def DEFINE_G_KEY geda_key_file_new g_key_file_new_window g_key_file_open g_key_file_script g_key_file_save g_key_file_save_as g_key_file_save_all g_key_file_print g_key_file_write_png g_key_file_close g_key_file_quit g_key_edit_undo g_key_edit_redo g_key_edit_select g_key_edit_copy g_key_edit_copy_hotkey g_key_edit_move g_key_edit_move_hotkey g_key_edit_delete g_key_edit_rotate_90 g_key_edit_rotate_90_hotkey g_key_edit_mirror g_key_edit_mirror_hotkey g_key_edit_stretch g_key_edit_stretch_hotkey g_key_edit_slot g_key_edit_color g_key_edit_edit g_key_edit_text g_key_edit_lock g_key_edit_unlock g_key_edit_linetype g_key_edit_filltype g_key_edit_translate g_key_edit_embed g_key_edit_unembed g_key_edit_show_hidden g_key_buffer_copy1 g_key_buffer_copy2 g_key_buffer_copy3 g_key_buffer_copy4 g_key_buffer_copy5 g_key_buffer_cut1 g_key_buffer_cut2 g_key_buffer_cut3 g_key_buffer_cut4 g_key_buffer_cut5 g_key_buffer_paste1 g_key_buffer_paste2 g_key_buffer_paste3 g_key_buffer_paste4 g_key_buffer_paste5 g_key_buffer_paste1_hotkey g_key_buffer_paste2_hotkey g_key_buffer_paste3_hotkey g_key_buffer_paste4_hotkey g_key_buffer_paste5_hotkey g_key_view_redraw g_key_view_zoom_full g_key_view_zoom_extents g_key_view_zoom_in g_key_view_zoom_out g_key_view_zoom_in_hotkey g_key_view_zoom_out_hotkey g_key_view_zoom_box g_key_view_zoom_box_hotkey g_key_view_pan g_key_view_pan_hotkey g_key_view_update_cues g_key_page_manager g_key_page_next g_key_page_prev g_key_page_new g_key_page_close g_key_page_revert g_key_page_discard g_key_page_print g_key_add_component g_key_add_attribute g_key_add_attribute_hotkey g_key_add_net g_key_add_net_hotkey g_key_add_bus g_key_add_bus_hotkey g_key_add_text g_key_add_line g_key_add_line_hotkey g_key_add_box g_key_add_box_hotkey g_key_add_circle g_key_add_circle_hotkey g_key_add_arc g_key_add_arc_hotkey g_key_add_pin g_key_add_pin_hotkey g_key_hierarchy_down_schematic g_key_hierarchy_down_symbol g_key_hierarchy_up g_key_hierarchy_documentation g_key_attributes_attach g_key_attributes_detach g_key_attributes_show_name g_key_attributes_show_value g_key_attributes_show_both g_key_attributes_visibility_toggle g_key_script_console g_key_options_text_size g_key_options_afeedback g_key_options_grid g_key_options_snap g_key_options_snap_size g_key_options_rubberband g_key_options_show_log_window g_key_options_show_coord_window g_key_misc g_key_misc2 g_key_misc3 g_key_help_about g_key_help_manual g_key_help_hotkeys g_key_cancel
+ 
+ 
+ @section Function @code{g_get_selected_filename()}
+diff -ur geda-gschem-20041228/noweb/g_register.nw geda-gschem-20041228.plasmaroo/noweb/g_register.nw
+--- geda-gschem-20041228/noweb/g_register.nw	2004-12-29 02:00:39.000000000 +0000
++++ geda-gschem-20041228.plasmaroo/noweb/g_register.nw	2005-01-02 14:24:21.204670840 +0000
+@@ -195,7 +195,7 @@
+ 
+   /* keymapping callbacks */
+   gh_new_procedure0_0 ("file-new-window", g_key_file_new_window);
+-  gh_new_procedure0_0 ("file-new", g_key_file_new);
++  gh_new_procedure0_0 ("file-new", geda_key_file_new);
+   gh_new_procedure0_0 ("file-open", g_key_file_open);
+   gh_new_procedure0_0 ("file-script", g_key_file_script);
+   gh_new_procedure0_0 ("file-save", g_key_file_save);
+diff -ur geda-gschem-20041228/src/g_register.c geda-gschem-20041228.plasmaroo/src/g_register.c
+--- geda-gschem-20041228/src/g_register.c	2004-12-29 04:08:28.000000000 +0000
++++ geda-gschem-20041228.plasmaroo/src/g_register.c	2005-01-02 14:24:58.141055656 +0000
+@@ -156,7 +156,7 @@
+ 
+   /* keymapping callbacks */
+   gh_new_procedure0_0("file-new-window", g_key_file_new_window);
+-  gh_new_procedure0_0("file-new", g_key_file_new);
++  gh_new_procedure0_0("file-new", geda_key_file_new);
+   gh_new_procedure0_0("file-open", g_key_file_open);
+   gh_new_procedure0_0("file-script", g_key_file_script);
+   gh_new_procedure0_0("file-save", g_key_file_save);
+diff -ur geda-gschem-20041228/src/g_key.c geda-gschem-20041228.plasmaroo/src/g_key.c
+--- geda-gschem-20041228/src/g_key.c	2005-01-02 14:42:52.506727248 +0000
++++ geda-gschem-20041228.plasmaroo/src/g_key.c	2005-01-02 14:42:54.388441184 +0000
+@@ -104,7 +104,14 @@
+ 	return SCM_BOOL_T;				\
+ }
+ 
+-DEFINE_G_KEY(file_new)
++#define DEFINE_GEDA_KEY(name)				\
++SCM geda_key_ ## name(void)				\
++{							\
++	i_callback_ ## name(global_window_current, 0, NULL);	\
++	return SCM_BOOL_T;				\
++}
++
++DEFINE_GEDA_KEY(file_new)
+ 
+     DEFINE_G_KEY(file_new_window)
+ 

@@ -1,6 +1,12 @@
 # ChangeLog for sci-electronics/geda
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/geda/ChangeLog,v 1.2 2004/12/27 20:48:51 swegener Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/geda/ChangeLog,v 1.3 2005/01/02 17:43:45 plasmaroo Exp $
+
+*geda-20041228 (02 Jan 2005)
+
+  02 Jan 2005; <plasmaroo@gentoo.org> +geda-20041228.ebuild,
+  +files/geda-20041228-glib26.patch:
+  Version bump. Bug #76349.
 
 *geda-20040111-r1 (27 Dec 2004)
 
