@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-1.0.7.ebuild,v 1.1 2005/02/05 01:43:53 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-1.0.7.ebuild,v 1.2 2005/03/15 04:44:54 vapier Exp $
 
 inherit gnuconfig eutils flag-o-matic
 
@@ -18,9 +18,11 @@ RDEPEND="tcpd? ( sys-apps/tcp-wrappers )
 	>=sys-apps/util-linux-2.11f"
 DEPEND="${RDEPEND}
 	>=sys-apps/portage-2.0.51
-	>=dev-libs/libevent-1.0b
-	>=net-libs/nfsidmap-0.9
-	nfsv4? ( app-crypt/mit-krb5 )"
+	nfsv4? (
+		>=dev-libs/libevent-1.0b
+		>=net-libs/nfsidmap-0.9
+		app-crypt/mit-krb5
+	)"
 	# kth-krb doesn't provide the right include
 	# files, and nfs-utils doesn't build against heimdal either, 
 	# so don't depend on virtual/krb.
