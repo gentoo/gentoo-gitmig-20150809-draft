@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/bash-completion.eclass,v 1.6 2004/12/29 10:26:33 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/bash-completion.eclass,v 1.7 2004/12/30 00:18:25 ka0ttic Exp $
 #
 # Simple eclass that provides an interface for installing
 # contributed (ie not included in bash-completion proper)
@@ -19,9 +19,6 @@ IUSE="${IUSE} bash-completion"
 #RDEPEND="${RDEPEND}
 #	bash-completion? ( app-shells/bash-completion-config )"
 
-##### VARIABLES #####
-[[ -z "${BASH_COMPLETION_NAME}" ]] && BASH_COMPLETION_NAME="${PN}"
-
 # dobashcompletion <file> <new file>
 #	First arg, <file>, is required and is the location of the bash-completion
 # script to install.  Second arg, <new file>, is optional and specifies an
@@ -29,7 +26,8 @@ IUSE="${IUSE} bash-completion"
 
 dobashcompletion() {
 	[[ -z "$1" ]] && die "usage: dobashcompletion <file> <new file>"
-	[[ -n "$2" ]] && export BASH_COMPLETION_NAME="$2"
+	[[ -z "${BASH_COMPLETION_NAME}" ]] && BASH_COMPLETION_NAME="${2:-${PN}}"
+
 	if useq bash-completion ; then
 		insinto /usr/share/bash-completion
 		newins "$1" "${BASH_COMPLETION_NAME}" || die "Failed to install $1"
