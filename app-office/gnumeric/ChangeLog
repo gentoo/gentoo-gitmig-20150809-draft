@@ -1,6 +1,13 @@
 # ChangeLog for app-office/gnumeric
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/ChangeLog,v 1.5 2002/03/17 22:21:43 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/ChangeLog,v 1.6 2002/04/04 09:26:00 seemant Exp $
+
+*gnumeric-1.0.5-r1 (4 Apr 2002)
+
+  4 Apr 2002; Seemant Kulleen <seemant@gentoo.org> gnumeric-1.0.5-r1.ebuild :
+
+  Added Mandrake's fix to allow gnumeric to be compiled without the DISPLAY
+  being set.  Clever -- it uses Xvfb.
 
 *gnumeric-1.0.5 (11 March 2002)
 
