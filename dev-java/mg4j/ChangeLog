@@ -1,0 +1,9 @@
+# ChangeLog for dev-java/mg4j
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed unde the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/mg4j/ChangeLog,v 1.5 2004/12/04 13:19:02 karltk Exp $
+
+*mg4j-0.9.1 (04 Dec 2004)
+
+  04 Dec 2004; Karl Trygve Kalleberg <karltk@gentoo.org> mg4j-0.9.1.ebuild:
+  Initial import. Ebuild submitted by Jan Brinkmann <lucky@the-luckyduck.de>.
+  Fixes #63278.
