@@ -1,6 +1,14 @@
 # ChangeLog for app-text/a2ps
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/ChangeLog,v 1.32 2004/08/04 19:16:33 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/ChangeLog,v 1.33 2004/08/27 18:39:08 usata Exp $
+
+*a2ps-4.13b-r6 (28 Aug 2004)
+
+  28 Aug 2004; Mamoru KOMACHI <usata@gentoo.org>
+  +files/a2ps-4.13-select-freebsd.patch, +a2ps-4.13b-r6.ebuild,
+  +a2ps-4.13c-r1.ebuild:
+  Security fix: bug #61500. Thanks to vorlon <vorlon@vorlons.info>
+  and Sune Kloppenborg Jeppesen <jaervosz@gentoo.org>.
 
   05 Aug 2004; Mamoru KOMACHI <usata@gentoo.org> -a2ps-4.13b-r4.ebuild,
   a2ps-4.13b-r5.ebuild, a2ps-4.13c.ebuild:
