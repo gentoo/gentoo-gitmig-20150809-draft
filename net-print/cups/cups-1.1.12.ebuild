@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Donny Davies <woodchip@gentoo.org>
 # Maintainer: System Team <system@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.1.12.ebuild,v 1.2 2002/01/08 07:36:38 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.1.12.ebuild,v 1.3 2002/01/09 01:55:05 woodchip Exp $
 
 DESCRIPTION="The Common Unix Printing System"
 HOMEPAGE="http://www.cups.org"
@@ -17,8 +17,8 @@ DEPEND="virtual/glibc
 	slp? ( >=net-libs/openslp-1.0.4 )
 	>=media-libs/libpng-1.0.12
 	>=media-libs/tiff-3.5.5
-	>=media-libs/jpeg-6b
-	!net-print/LPRng"
+	>=media-libs/jpeg-6b"
+RDEPEND="${DEPEND} !virtual/lpr"
 
 src_unpack() {
 
