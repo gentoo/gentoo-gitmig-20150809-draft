@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/uw-imap-2002e-r4.ebuild,v 1.7 2004/11/24 09:28:34 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/uw-imap-2002e-r4.ebuild,v 1.8 2005/01/03 07:40:38 josejx Exp $
 
 MY_P=imap-${PV}
 S=${WORKDIR}/${MY_P}
