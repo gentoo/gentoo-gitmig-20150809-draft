@@ -5,7 +5,7 @@ MD5 c2f4d54b5e00765874ba216692db12c6 ChangeLog 4772
 MD5 d24403622d172658c4e564baec674de9 metadata.xml 281
 MD5 a4262200090acfbe30511d59d5177da1 slang-1.4.5-r1.ebuild 1042
 MD5 e944db465cf771d07c6522c0fbf6d0b1 slang-1.4.5-r2.ebuild 1188
-MD5 4b162b0df674364a039214de4996a5c6 slang-1.4.9-r1.ebuild 1847
+MD5 669cc071226583ff25e3c2f24f78bc4c slang-1.4.9-r1.ebuild 1856
 MD5 b94b8fe00fc41fca7e7552f11286ebf6 slang-1.4.9.ebuild 1187
 MD5 b33b25719286e6314758026cdaf75fb2 files/digest-slang-1.4.5-r1 63
 MD5 b33b25719286e6314758026cdaf75fb2 files/digest-slang-1.4.5-r2 63
@@ -20,7 +20,7 @@ MD5 4be647282e8c01060db9d1707098bd1d files/slang-utf8-fix.patch 855
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBh55VHTu7gpaalycRAmXcAJ4zdBvzHuUKuM1iyK8kt61UXC6WDACeI+lm
-snV8SVFrVSi8ituBhzqMMCY=
-=4DjH
+iD8DBQFBh569HTu7gpaalycRAtIoAJ9BG0xntww4rJ5jpq3xPRs9+Y6MwACeJ/Et
+sLNXOo3mZF4g+fM8mgS+5j8=
+=SL0v
 -----END PGP SIGNATURE-----
