@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/freenet-0.5.2.1-r7.ebuild,v 1.1 2003/09/09 22:27:02 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/freenet-0.5.2.1-r7.ebuild,v 1.2 2004/01/31 12:33:04 mholzer Exp $
 
 IUSE=""
 
@@ -8,6 +8,7 @@ S=${WORKDIR}/${PN}
 
 DESCRIPTION="large-scale peer-to-peer network that creates a massive virtual information store open to anyone"
 SRC_URI="mirror://sourceforge/freenet/${P}.tar.gz"
+RESTRICT="nomirror"
 HOMEPAGE="http://freenetproject.org/"
 
 SLOT="0"
