@@ -1,6 +1,9 @@
 # ChangeLog for net-im/sim
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/sim/ChangeLog,v 1.20 2003/11/26 15:11:53 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/sim/ChangeLog,v 1.21 2004/01/14 09:38:55 aliz Exp $
+
+  14 Jan 2004; Daniel Ahlberg <aliz@gentoo.org> sim-0.9.ebuild, sim-0.9.1.ebuild :
+  Mask 0.9.1 becuse of masked dependencies and unmask 0.9, closing #38145.
 
   26 Nov 2003; Daniel Ahlberg <aliz@gentoo.org> sim-0.9.1.ebuild :
   Added dependecy to automake-1.7.8. Closing #34352.
