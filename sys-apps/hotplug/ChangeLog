@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/hotplug
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hotplug/ChangeLog,v 1.18 2003/06/12 00:28:43 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hotplug/ChangeLog,v 1.19 2003/06/12 02:14:32 weeve Exp $
+
+  11 Jun 2003; Jason Wever <weeve@gentoo.org> hotplug-20030501-r2.ebuild:
+  Added ~sparc to keywords.
 
 *hotplug-20030501-r2 (11 Jun 2003)
 
