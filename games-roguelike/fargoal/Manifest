@@ -1,5 +1,15 @@
-MD5 b3a1b8436cd273d9531300a81fbc8194 fargoal-20030731b.ebuild 1333
-MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 37779fc775540555fe79652e755d84ff ChangeLog 562
+MD5 dc9bc7259c924580ffbd451f4c6e830c fargoal-20030731b.ebuild 1346
+MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 MD5 336cedc9e4543c149a20bbf8a0446ea7 files/digest-fargoal-20030731b 65
 MD5 bbb65152078901fe1ae1775f6956da7b files/gentoo-home-write.patch 5709
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBiOFXHTu7gpaalycRAgwQAJsERL5m/NpmKKUtMf0/KFAWDG66hQCfYzzb
+vXlzgI2ouFu8ahOqGu31wpQ=
+=v+zV
+-----END PGP SIGNATURE-----
