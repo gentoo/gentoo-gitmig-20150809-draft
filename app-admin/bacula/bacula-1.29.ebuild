@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/bacula/bacula-1.29.ebuild,v 1.6 2003/09/20 19:56:29 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/bacula/bacula-1.29.ebuild,v 1.7 2003/10/18 18:12:16 mholzer Exp $
 
 DESCRIPTION="featureful client/server network backup suite"
 HOMEPAGE="http://www.bacula.org/"
@@ -14,7 +14,7 @@ IUSE="readline tcpd ssl gnome mysql sqlite X static"
 #theres a local sqlite use flag. use it -OR- mysql, not both.
 #mysql is the reccomended choice ...
 DEPEND=">=sys-libs/zlib-1.1.4
-	readline? >=sys-libs/readline-4.3
+	readline? >=sys-libs/readline-4.1
 	tcpd? >=sys-apps/tcp-wrappers-7.6
 	ssl? >=dev-libs/openssl-0.9.6
 	gnome? gnome-base/gnome-libs
@@ -79,6 +79,8 @@ src_install() {
 	cp -a examples ${D}/usr/share/doc/${PF}
 	chown -R root.root ${D}/usr/share/doc/${PF} #hrmph :\
 	dohtml -r doc/html-manual doc/home-page
+	exeinto /etc/init.d
+	newexe ${FILESDIR}/bacula-init bacula
 }
 
 pkg_postinst() {
