@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-docs/python-docs-2.2.2.ebuild,v 1.1 2003/01/22 21:23:50 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-docs/python-docs-2.2.2.ebuild,v 1.2 2003/01/22 21:30:58 agenkin Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="HTML documentation for Python"
@@ -22,9 +22,6 @@ src_unpack() {
 src_install() {
 	docinto html
 	cp -R ${S}/* ${D}/usr/share/doc/${PF}/html
-	chown -R root.root ${D}/usr/share/doc/${PF}/html
-	find ${D}/usr/share/doc/${PF}/html -type d -exec chmod 0755 \{\} \;
-	find ${D}/usr/share/doc/${PF}/html -type f -exec chmod 0644 \{\} \;
 	dodir /etc/env.d
 	echo "PYTHONDOCS=/usr/share/doc/${PF}/html" > ${D}/etc/env.d/50python-docs
 }
