@@ -11,7 +11,7 @@ HOMEPAGE="http://www.gnu.org/software/screen/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc sparc64"
+KEYWORDS="x86 ppc sparc sparc64 alpha"
 
 DEPEND=">=sys-libs/ncurses-5.2"
 
