@@ -4,7 +4,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Tools Team <tools@gentoo.org>
 # Author: Karl Trygve Kalleberg <karltk@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/files/java-config,v 1.13 2002/06/24 21:58:52 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/files/java-config,v 1.14 2002/09/07 23:47:22 owen Exp $
 
 version=0.2.0
 all_params="$*"
@@ -19,6 +19,7 @@ fi
 
 PFORM="i386"
 
+CLASSPATH=`echo ${CLASSPATH} | sed "s/:\.//g"`
 case $SYSTEM_ARCH in
 	ppc)	PFORM="ppc";;
 	i386)	PFORM="i386";;
@@ -97,7 +98,7 @@ classpathfor()
 			exit 1
 		fi
 	done
-	echo $total | sed "s/::/:/g"
+	echo $total  | sed "s/::/:/g" 
 }
 
 findpluginpath() {
