@@ -1,13 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/vyqchat/vyqchat-0.1.1.ebuild,v 1.3 2003/12/28 20:32:03 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/vyqchat/vyqchat-0.2.3.ebuild,v 1.1 2003/12/28 20:32:03 zul Exp $
 
 DESCRIPTION="QT based Vypress Chat clone for X."
 HOMEPAGE="http://linux.bydg.org/~yogin/"
 SRC_URI="http://linux.bydg.org/~yogin/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~x86"
 
 IUSE="arts"
 
@@ -18,12 +18,15 @@ S=${WORKDIR}/${P}
 
 src_compile() {
 	local myconf
+
+	epatch ${FILESDIR}/vyqchat_packet_id.patch
+
 	use arts && myconf="--with-arts"
 	./configure  --host=${CHOST} \
 		--prefix=/usr --infodir=/usr/share/info \
 		--mandir=/usr/share/man --with-x \
 		--with-Qt-dir=/usr/qt/3 ${myconf} || die "./configure failed"
-	emake || die
+	make || die
 }
 
 src_install() {
