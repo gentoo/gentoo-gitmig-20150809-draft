@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgeotiff/libgeotiff-1.2.0.ebuild,v 1.1 2003/06/19 18:57:09 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgeotiff/libgeotiff-1.2.0.ebuild,v 1.2 2003/09/06 22:29:24 msterret Exp $
 
 inherit base eutils
 
@@ -22,7 +22,7 @@ src_unpack() {
     cd ${S}
 	patch -p0 -s < ${FILESDIR}/geo_trans.diff
 }
-				
+
 src_compile() {
 	econf || die
 	MAKEOPTS="-j1" pmake || die

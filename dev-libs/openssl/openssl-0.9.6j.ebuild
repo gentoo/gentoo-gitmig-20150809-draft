@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.6j.ebuild,v 1.7 2003/07/29 20:13:54 wwoods Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.6j.ebuild,v 1.8 2003/09/06 22:29:25 msterret Exp $
 
 inherit eutils
 
@@ -31,7 +31,7 @@ esac
 
 src_unpack() {
 	unpack ${A} ; cd ${S}
-	
+
 	epatch ${FILESDIR}/${PN}-0.9.6i-gentoo.diff
 
 	if [ "${ARCH}" = "mips" ]
@@ -65,7 +65,7 @@ src_compile() {
 	fi
 	# i think parallel make has problems
 	make all || die
-	
+
 }
 
 src_install() {

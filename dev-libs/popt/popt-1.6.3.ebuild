@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/popt/popt-1.6.3.ebuild,v 1.16 2003/02/13 10:49:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/popt/popt-1.6.3.ebuild,v 1.17 2003/09/06 22:29:25 msterret Exp $
 
 IUSE="nls"
 
@@ -19,7 +19,7 @@ src_compile() {
 	local myconf
 
 	use nls || myconf="$myconf --disable-nls"
-	
+
 	econf ${myconf} || die
 	make || die
 }

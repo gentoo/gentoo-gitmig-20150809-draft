@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.6i-r2.ebuild,v 1.5 2003/06/14 03:21:14 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.6i-r2.ebuild,v 1.6 2003/09/06 22:29:25 msterret Exp $
 
 inherit eutils
 
@@ -23,11 +23,11 @@ fi
 if [ "`uname -m`" = "parisc64" ]; then
 	SSH_TARGET="linux-parisc"
 fi
-		
+
 
 src_unpack() {
 	unpack ${A} ; cd ${S}
-	
+
 	epatch ${FILESDIR}/${P}-klima_pokorny_rosa_attack.patch
 	epatch ${FILESDIR}/${P}-blinding.patch
 	epatch ${FILESDIR}/${P}-gentoo.diff
@@ -50,9 +50,9 @@ src_unpack() {
 	elif [ "${ARCH}" = "alpha" ]; then
 		if [ "${CC}" != "ccc" ]; then
 			# ccc compiled openssl will break things linked against
-			# a gcc compiled openssl, the configure will automatically detect 
+			# a gcc compiled openssl, the configure will automatically detect
 			# ccc and use it, so stop that if user hasnt asked for it.
-			#         
+			#
 			sed -e \
 				's!CC=ccc!CC=gcc!' config > config.orig
 			cp config.orig config
@@ -74,7 +74,7 @@ src_compile() {
 	fi
 	# i think parallel make has problems
 	make all || die
-	
+
 }
 
 src_install() {

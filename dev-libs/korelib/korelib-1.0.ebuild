@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/korelib/korelib-1.0.ebuild,v 1.5 2003/02/13 10:40:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/korelib/korelib-1.0.ebuild,v 1.6 2003/09/06 22:29:24 msterret Exp $
 
 IUSE=""
 DESCRIPTION="theKompany's cross-platform c++ library for developing modular applications"
@@ -27,7 +27,7 @@ src_compile() {
 
 src_install() {
 	make DESTDIR=${D} install
-	
+
 	#the lib installs one binary with by the name "demo" - bad choice
 	mv ${D}/usr/bin/demo ${D}/usr/bin/kore-demo
 

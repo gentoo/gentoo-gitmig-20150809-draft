@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-imap-dev/cyrus-imap-dev-2.1.14.ebuild,v 1.3 2003/08/06 08:06:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-imap-dev/cyrus-imap-dev-2.1.14.ebuild,v 1.4 2003/09/06 22:29:24 msterret Exp $
 
 inherit eutils
 
@@ -57,7 +57,7 @@ src_unpack() {
 
 src_compile() {
 	local myconf
-	
+
 	use afs && myconf="--with-afs" \
 		|| myconf="--without-afs"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/libxslt-1.0.30-r1.ebuild,v 1.5 2003/07/23 21:45:06 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/libxslt-1.0.30-r1.ebuild,v 1.6 2003/09/06 22:29:24 msterret Exp $
 
 inherit libtool gnome.org
 
@@ -29,7 +29,7 @@ src_compile() {
 	emake || die
 }
 
-src_install() {                               
+src_install() {
 	make DESTDIR=${D} \
 		DOCS_DIR=/usr/share/doc/${PF}/python \
 		EXAMPLE_DIR=/usr/share/doc/${PF}/python/example \

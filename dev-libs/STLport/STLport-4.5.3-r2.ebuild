@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/STLport/STLport-4.5.3-r2.ebuild,v 1.6 2003/02/13 10:32:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/STLport/STLport-4.5.3-r2.ebuild,v 1.7 2003/09/06 22:29:24 msterret Exp $
 
 IUSE=""
 
@@ -20,14 +20,14 @@ LICENSE="as-is"
 src_unpack() {
 
 	unpack ${A}
-	
+
 	cd ${S}
 	# Do we use the new multi scheme gcc ?
 	if ! /usr/sbin/gcc-config --get-current-profile &> /dev/null
 	then
 		epatch ${FILESDIR}/${P}-gcc3.patch2
 	fi
-	
+
 	epatch ${FILESDIR}/${P}-optimize.patch
 }
 
@@ -41,11 +41,11 @@ src_install () {
 	dodir /usr/include
 	cp -R ${S}/stlport ${D}/usr/include
 	rm -rf ${D}/usr/include/stlport/BC50
-		
+
 	dodir /usr/lib
 	cp -R ${S}/lib/* ${D}/usr/lib/
 	rm -rf ${D}/usr/lib/obj
-	
+
 	cd ${S}/etc/
 	dodoc ChangeLog* README TODO *.txt
 

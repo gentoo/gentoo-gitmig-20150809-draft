@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/qsa/qsa-1.0.0.ebuild,v 1.3 2003/08/28 03:40:55 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/qsa/qsa-1.0.0.ebuild,v 1.4 2003/09/06 22:29:25 msterret Exp $
 
 inherit eutils kde-functions
 
@@ -9,7 +9,7 @@ S="${WORKDIR}/${PN}-x11-free-${PV}"
 DESCRIPTION="QSA version ${PV}"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc" 
+KEYWORDS="x86 ~ppc"
 SRC_URI="ftp://ftp.trolltech.com/qsa/source/${PN}-x11-free-${PV}.tar.gz"
 HOMEPAGE="http://www.trolltech.com/"
 DEPEND=">=x11-libs/qt-3.1.2-r3"

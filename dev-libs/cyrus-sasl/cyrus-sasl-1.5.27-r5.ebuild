@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-1.5.27-r5.ebuild,v 1.7 2003/07/16 14:22:30 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-1.5.27-r5.ebuild,v 1.8 2003/09/06 22:29:24 msterret Exp $
 
 IUSE="kerberos"
 
@@ -39,7 +39,7 @@ src_unpack() {
 	# old, so remove it, as "automake --add-missing"
 	# will install the new one if its not found.
 	rm -f ${S}/config/missing
-	
+
 	libtoolize --copy --force
 	export WANT_AUTOMAKE_1_5=1
 	aclocal -I cmulocal || die

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/fftw/fftw-2.1.3-r1.ebuild,v 1.3 2003/07/08 05:44:22 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/fftw/fftw-2.1.3-r1.ebuild,v 1.4 2003/09/06 22:29:24 msterret Exp $
 
 IUSE="mpi"
 
@@ -16,13 +16,13 @@ KEYWORDS="x86 ppc sparc ~alpha"
 
 src_unpack() {
 	#doc suggests installing single and double precision versions via separate compilations
-	#will do in two separate source trees 
+	#will do in two separate source trees
 	#since some sed'ing is done during the build (?if --enable-type-prefix is set?)
-	
+
     unpack "${P}.tar.gz"
     cd "${WORKDIR}"
 	mv ${P} ${P}-single
-	
+
     unpack "${P}.tar.gz"
     cd "${WORKDIR}"
 	mv ${P} ${P}-double
@@ -36,10 +36,10 @@ src_compile() {
 	export CFLAGS="${CFLAGS/-fomit-frame-pointer/} -fomit-frame-pointer"
 
 	local myconf=""
-	use mpi && myconf="${myconf} --enable-mpi" 
+	use mpi && myconf="${myconf} --enable-mpi"
 	#mpi is not a valid flag yet. In this revision it is used merely to block --enable-mpi option
 	#it might be needed if it is decided that lam is an optional dependence
-	
+
 	cd "${S}-single"
 	econf \
 		--enable-shared \
@@ -69,7 +69,7 @@ src_install () {
 	cd "${S}-single"
 
 	make DESTDIR=${D} install || die
-	
+
 	cd "${S}-double"
 
 	# fix info file

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcxml/libcxml-5.2.0.ebuild,v 1.4 2003/08/19 18:01:17 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcxml/libcxml-5.2.0.ebuild,v 1.5 2003/09/06 22:29:24 msterret Exp $
 
 S=${WORKDIR}/usr
 SRC_URI=""
@@ -19,7 +19,7 @@ IUSE="ev6 doc"
 
 # non portage variable
 RELEASE="5.2.0-2"
-	
+
 src_unpack() {
 	local EV; use ev6 && EV=ev6 || EV=ev5
 	At="cxml_${EV}-${RELEASE}.alpha.rpm"
@@ -28,7 +28,7 @@ src_unpack() {
 	fi
 
 	# agriffis' improved method for rpm extraction
-	# 
+	#
 	i=${DISTDIR}/${At}
 	dd ibs=`rpmoffset < ${i}` skip=1 if=$i 2>/dev/null \
 		| gzip -dc | cpio -idmu 2>/dev/null \
@@ -45,7 +45,7 @@ src_unpack() {
 		mkdir usr/share
 		mv usr/doc usr/share/
 	fi
-	
+
 }
 
 src_compile () {
@@ -59,7 +59,7 @@ src_compile () {
 
 src_install () {
 	mv ${WORKDIR}/usr ${D}
-	prepalldocs	
+	prepalldocs
 	einfo "Please wait while portage strips the libraries..."
 	einfo "This may take a minute..."
 }

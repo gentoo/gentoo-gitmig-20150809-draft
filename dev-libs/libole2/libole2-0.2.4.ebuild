@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libole2/libole2-0.2.4.ebuild,v 1.14 2003/03/06 15:30:39 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libole2/libole2-0.2.4.ebuild,v 1.15 2003/09/06 22:29:24 msterret Exp $
 
 inherit gnome.org
 
@@ -26,7 +26,7 @@ src_install() {
     cd ${S}/doc
     mv Makefile Makefile.orig
     sed 's/gtkdoc-fixxref.*/\\/' Makefile.orig > Makefile
-    
+
     cd ${S}
 	make DESTDIR=${D} install || die
 	dodoc AUTHORS COPYING ChangeLog NEWS README* TODO

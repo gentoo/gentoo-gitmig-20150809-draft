@@ -1,9 +1,9 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/commonc++/commonc++-1.9.7-r3.ebuild,v 1.3 2003/07/12 09:22:21 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/commonc++/commonc++-1.9.7-r3.ebuild,v 1.4 2003/09/06 22:29:24 msterret Exp $
 
 S=${WORKDIR}/${P/commonc/CommonC}
-DESCRIPTION="GNU Common C++ is a C++ framework offering portable support for\ 
+DESCRIPTION="GNU Common C++ is a C++ framework offering portable support for\
 threading, sockets, file access, daemons, persistence, serial I/O, XML parsing,\
 and system services"
 SRC_URI="http://ftp.azc.uam.mx/mirrors/gnu/commonc++/${P}.tar.gz

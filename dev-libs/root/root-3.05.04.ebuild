@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/root/root-3.05.04.ebuild,v 1.2 2003/04/25 16:44:35 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/root/root-3.05.04.ebuild,v 1.3 2003/09/06 22:29:25 msterret Exp $
 
 inherit flag-o-matic eutils
 
@@ -34,7 +34,7 @@ src_compile() {
 		ppc)
 			append-flags "-fsigned-char";;
 	esac
-	#export GENTOO_CFLAGS="${CFLAGS}" GENTOO_CXXFLAGS="${CXXFLAGS}" 
+	#export GENTOO_CFLAGS="${CFLAGS}" GENTOO_CXXFLAGS="${CXXFLAGS}"
 	./configure \
 		linux \
 		--prefix=/usr \
@@ -63,7 +63,7 @@ src_compile() {
 
 src_install() {
 	make DESTDIR=${D} INSTALL="install" install || die
-	
+
 	dodir /etc/env.d
 	echo "LDPATH=/usr/lib/root" > ${D}/etc/env.d/60root
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigc++/libsigc++-1.0.4-r2.ebuild,v 1.11 2003/08/03 02:18:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigc++/libsigc++-1.0.4-r2.ebuild,v 1.12 2003/09/06 22:29:24 msterret Exp $
 
 DESCRIPTION="The GLib library of C routines"
 HOMEPAGE="http://libsigc.sourceforge.net/"
@@ -19,28 +19,28 @@ src_compile() {
 		&& myconf="--enable-debug=yes" \
 		|| myconf="--enable-debug=no"
 	econf ${myconf} || die
-	
+
 	# Fix sandbox violation when old libsig++ is already installed,
 	# hopefully this will go away after the header location settles down
 	# Comment out the remove old header directory line
-	
+
 	cp sigc++/Makefile sigc++/Makefile.orig
 	sed -e 's:\(@if\):#\1:' \
 		sigc++/Makefile.orig > sigc++/Makefile
-	
+
 	# This occurs in two places
-	
+
 	cp sigc++/config/Makefile sigc++/config/Makefile.orig
 	sed -e 's:\(@if\):#\1:' \
         sigc++/config/Makefile.orig > sigc++/config/Makefile
-		
+
 	emake || die
 }
 
 src_install() {
 	make DESTDIR=${D} \
 	     install || die
-    
+
 	dodoc AUTHORS ChangeLog COPYING README* INSTALL NEWS
 }
 

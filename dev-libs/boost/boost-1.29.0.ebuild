@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.29.0.ebuild,v 1.4 2003/07/12 09:22:21 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.29.0.ebuild,v 1.5 2003/09/06 22:29:24 msterret Exp $
 
 MY_V="${PV//\./_}"
 
@@ -36,8 +36,8 @@ src_install () {
 
 	cd ${S}
 	# install libraries
-	find libs -type f -name \*.a -exec dolib.a {} \; 	
-	find libs -type f -name \*.so -exec dolib.so {} \; 	
+	find libs -type f -name \*.a -exec dolib.a {} \;
+	find libs -type f -name \*.so -exec dolib.so {} \;
 
 	# install source/header files
 	find boost -type f -exec install -D -m0644 {} ${D}/usr/include/{} \;

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/nss-3.8.ebuild,v 1.12 2003/09/05 11:21:50 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/nss-3.8.ebuild,v 1.13 2003/09/06 22:29:25 msterret Exp $
 
 S=${WORKDIR}/${P}
 
@@ -25,7 +25,7 @@ src_unpack() {
 	# hack nspr paths
 	echo 'INCLUDES += -I/usr/include/nspr -I$(DIST)/include/dbm' \
 		>> ${S}/mozilla/security/coreconf/headers.mk || die "failed to append include"
-	
+
 	sed -e 's:$(DIST)/lib/$(LIB_PREFIX)plc4:/usr/lib/$(LIB_PREFIX)plc4:' \
 		-e 's:$(DIST)/lib/$(LIB_PREFIX)plds4:/usr/lib/$(LIB_PREFIX)plds4:' \
 		-i ${S}/mozilla/security/nss/lib/ckfw/builtins/Makefile
@@ -36,7 +36,7 @@ src_unpack() {
 	# modify install path
 	sed -e 's:SOURCE_PREFIX = $(CORE_DEPTH)/\.\./dist:SOURCE_PREFIX = $(CORE_DEPTH)/dist:' \
 		-i ${S}/mozilla/security/coreconf/source.mk
-		
+
 	# workaround to satisfy linux-2.6* (#24626)
 	cp ${S}/mozilla/security/coreconf/Linux2.5.mk ${S}/mozilla/security/coreconf/Linux2.6.mk
 }
@@ -56,7 +56,7 @@ src_compile() {
 
 src_install () {
 	cd ${S}/mozilla/security/dist
-	
+
 	# put all *.a files in /usr/lib/nss (because some have conflicting names
 	# with existing libraries)
 	dodir /usr/lib/nss
@@ -67,7 +67,7 @@ src_install () {
 	insinto /usr/include/nss
 	doins private/nss/*.h
 	doins public/nss/*.h
-	
+
 	# NOTE: we ignore the binary files
-	
+
 }

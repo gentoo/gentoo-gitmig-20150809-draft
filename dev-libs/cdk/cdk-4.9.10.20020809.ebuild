@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cdk/cdk-4.9.10.20020809.ebuild,v 1.4 2003/07/12 09:22:21 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cdk/cdk-4.9.10.20020809.ebuild,v 1.5 2003/09/06 22:29:24 msterret Exp $
 
 
 MY_P=${P/.2002/-2002}
@@ -24,7 +24,7 @@ src_compile()
 
 	emake || die "make failed!"
 }
- 
+
 
 src_install()
 {

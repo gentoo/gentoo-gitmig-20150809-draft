@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/libpcre-4.2-r1.ebuild,v 1.5 2003/07/23 21:26:15 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/libpcre-4.2-r1.ebuild,v 1.6 2003/09/06 22:29:24 msterret Exp $
 
 inherit libtool
 
@@ -18,7 +18,7 @@ DEPEND="virtual/glibc"
 src_compile() {
 	elibtoolize
 	econf --enable-utf8 || die
-	make || die 
+	make || die
 }
 
 src_install () {

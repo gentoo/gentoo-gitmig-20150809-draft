@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/pwlib-1.5.2.ebuild,v 1.1 2003/09/03 10:23:12 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/pwlib-1.5.2.ebuild,v 1.2 2003/09/06 22:29:25 msterret Exp $
 
 DESCRIPTION="Portable Multiplatform Class Libraries for OpenH323"
 HOMEPAGE="http://www.openh323.org/"
@@ -41,12 +41,12 @@ src_compile() {
 	fi
 
 	econf || die "configure failed"
-	
+
 	# horrible hack to strip out -L/usr/lib to allow upgrades
-	# problem is it adds -L/usr/lib before -L${S} when SSL is enabled 
+	# problem is it adds -L/usr/lib before -L${S} when SSL is enabled
 	sed -i -e "s:^\(LDFLAGS.*\)-L/usr/lib:\1:" ${S}/make/ptbuildopts.mak
 	sed -i -e "s:^\(LDFLAGS[\s]*=.*\) -L/usr/lib:\1:" ${S}/make/ptlib-config
-	
+
 	emake opt || die "make failed"
 }
 
@@ -60,8 +60,8 @@ src_install() {
 	# FIXME: probably should fix this with ptlib-config
 	dodir /usr/share/pwlib/include
 	cp -r ${D}/usr/include/* ${D}/usr/share/pwlib/include
-	
-	dodir /usr/share/pwlib/lib	
+
+	dodir /usr/share/pwlib/lib
 	for x in ${D}/usr/lib/*; do
 		dosym /usr/lib/`basename ${x}` /usr/share/pwlib/lib/`basename ${x}`
 	done
@@ -86,6 +86,6 @@ src_install() {
 
 	# satisfy ptlib.mak's weird definition (should check if true for future versions)
 	cp ${D}/usr/bin/ptlib-config ${D}/usr/share/pwlib/make/ptlib-config
-	
+
 	dodoc ReadMe.txt History.txt
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libelf/libelf-0.7.0.ebuild,v 1.10 2003/02/13 10:41:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libelf/libelf-0.7.0.ebuild,v 1.11 2003/09/06 22:29:24 msterret Exp $
 
 IUSE="nls"
 
@@ -20,17 +20,17 @@ src_compile() {
 	local myconf
 
 	use nls || myconf="--disable-nls"
-	
+
 	econf \
 		--enable-shared \
 		${myconf} || die
-		
+
 	emake || die
 }
 
 src_install () {
 	make prefix=${D}/usr \
 		install || die
-		
+
 	dodoc COYPING.LIB CHangeLog VERSION README
 }

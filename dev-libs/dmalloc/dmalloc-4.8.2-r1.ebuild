@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dmalloc/dmalloc-4.8.2-r1.ebuild,v 1.7 2003/06/10 19:19:47 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dmalloc/dmalloc-4.8.2-r1.ebuild,v 1.8 2003/09/06 22:29:24 msterret Exp $
 
 inherit debug
 
@@ -24,7 +24,7 @@ src_install () {
 	# install extra docs
 	dodoc ChangeLog INSTALL TODO NEWS NOTES README
 	dohtml Release.html dmalloc.html
-	
+
 	make prefix=${D}/usr install installth installsl
 	doinfo dmalloc.info
 }

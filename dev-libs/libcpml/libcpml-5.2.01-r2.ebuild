@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcpml/libcpml-5.2.01-r2.ebuild,v 1.3 2003/06/23 17:03:35 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcpml/libcpml-5.2.01-r2.ebuild,v 1.4 2003/09/06 22:29:24 msterret Exp $
 
 S=${WORKDIR}/usr
 SRC_URI=""
@@ -13,7 +13,7 @@ LICENSE="compaq-sdla"
 SLOT="5.2.01"
 KEYWORDS="-x86 -ppc -sparc alpha"
 IUSE="ev6"
-	
+
 src_unpack() {
 	local EV; use ev6 && EV=ev6 || EV=ev5
 	At="cpml_${EV}-5.2.0-1.alpha.rpm"
@@ -22,17 +22,17 @@ src_unpack() {
 	fi
 
 #	rpm2targz ${DISTDIR}/${At}
-#	tar zxf cpml_${EV}-5.2.0-1.alpha.tar.gz 
+#	tar zxf cpml_${EV}-5.2.0-1.alpha.tar.gz
 
 	# agriffis' improved method for rpm extraction
-	# 
+	#
 	i=${DISTDIR}/${At}
 	dd ibs=`rpmoffset < ${i}` skip=1 if=$i 2>/dev/null \
 		| gzip -dc | cpio -idmu 2>/dev/null \
-		&& find usr -type d -print0 | xargs -0 chmod a+rx	
+		&& find usr -type d -print0 | xargs -0 chmod a+rx
 	eend ${?}
 	assert "Failed to extract ${At%.rpm}.tar.gz"
-	
+
 }
 
 src_compile () {
@@ -45,15 +45,15 @@ src_install () {
 	local EV; use ev6 && EV=ev6 || EV=ev5
 
 	mv ${WORKDIR}/usr ${D}
-	
+
 	dodir /usr/lib/
-	dosym ./compaq/cpml-5.2.0/libcpml_${EV}.so /usr/lib/libcpml_${EV}.so 
+	dosym ./compaq/cpml-5.2.0/libcpml_${EV}.so /usr/lib/libcpml_${EV}.so
 	dosym ./compaq/cpml-5.2.0/libcpml_${EV}.a /usr/lib/libcpml_${EV}.a
-	
+
 	dodir /usr/share
 	mv ${D}/usr/doc ${D}/usr/share
-	prepalldocs	
-	
+	prepalldocs
+
 	dosym ./compaq/cpml-5.2.0/libcpml_${EV}.so /usr/lib/libcpml.so
 	dosym ./compaq/cpml-5.2.0/libcpml_${EV}.a /usr/lib/libcpml.a
 }

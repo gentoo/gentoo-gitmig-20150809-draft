@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/elfutils-0.84.ebuild,v 1.5 2003/09/03 20:06:30 cretin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/elfutils-0.84.ebuild,v 1.6 2003/09/06 22:29:24 msterret Exp $
 
 inherit eutils
 
@@ -36,7 +36,7 @@ src_unpack() {
 src_compile() {
 	econf --program-prefix="eu-" \
 		--enable-shared || die "./configure failed"
-		
+
 	emake || die
 }
 

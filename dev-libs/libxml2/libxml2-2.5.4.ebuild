@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/libxml2-2.5.4.ebuild,v 1.6 2003/07/12 09:22:22 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/libxml2-2.5.4.ebuild,v 1.7 2003/09/06 22:29:24 msterret Exp $
 
 inherit eutils libtool gnome.org flag-o-matic
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.gnome.org/"
 DEPEND="sys-libs/zlib
 	python? ( dev-lang/python )
 	readline? ( sys-libs/readline )"
- 
+
 SLOT="2"
 LICENSE="MIT"
 KEYWORDS="x86 ppc ~sparc alpha hppa"
@@ -36,7 +36,7 @@ src_compile() {
 	#use zlib && myconf="--with-zlib" || myconf="--without-zlib"
 
 	use python && myconf="${myconf} --with-python" \
-		|| myconf="${myconf} --without-python" 
+		|| myconf="${myconf} --without-python"
 	use readline && myconf="${myconf} --with-readline" \
 		|| myconf="${myconf} --without-readline"
 
@@ -54,6 +54,6 @@ src_install() {
 		EXAMPLES_DIR=/usr/share/doc/${PF}/example \
 		TARGET_DIR=/usr/share/doc/${PF}/html \
 		install || die
-	
+
 	dodoc AUTHORS COPYING* ChangeLog NEWS README
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.2.1.ebuild,v 1.11 2003/08/03 02:06:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.2.1.ebuild,v 1.12 2003/09/06 22:29:24 msterret Exp $
 
 inherit libtool
 
@@ -22,7 +22,7 @@ src_compile() {
 	# Seems libtool have another wierd bug, try to fix it
 	# with a fix for nautilus, bug #4190
 	elibtoolize --reverse-deps
-	
+
 	local myconf=""
 	use doc \
 		&& myconf="${myconf} --enable-gtk-doc" \

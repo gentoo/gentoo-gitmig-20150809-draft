@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/skalibs/skalibs-0.30.ebuild,v 1.1 2003/08/25 20:28:19 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/skalibs/skalibs-0.30.ebuild,v 1.2 2003/09/06 22:29:25 msterret Exp $
 
 # NOTE: The comments in this file are for instruction and documentation.
 # They're not meant to appear with your final, production ebuild.  Please
@@ -26,7 +26,7 @@ S=${WORKDIR}/prog/${P}
 
 src_unpack() {
 	unpack ${A}
-	
+
 	cd ${S}/src/headers
 	patch gccattributes.h < ${FILESDIR}/skalibs-0.30-gccattributes.h.patch
 }

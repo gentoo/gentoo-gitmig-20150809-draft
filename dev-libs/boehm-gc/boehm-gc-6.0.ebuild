@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boehm-gc/boehm-gc-6.0.ebuild,v 1.9 2003/08/05 19:02:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boehm-gc/boehm-gc-6.0.ebuild,v 1.10 2003/09/06 22:29:24 msterret Exp $
 
 S=${WORKDIR}/gc${PV}
 
@@ -21,12 +21,12 @@ src_compile() {
 src_install() {
 	dodir /usr/include/gc
 	insinto /usr/include/gc
-	doins include/*.h 
-	
+	doins include/*.h
+
 	mv gc.a libgc.a
 	dodir /usr/lib
 	dolib.a libgc.a
-	
+
 	dodoc README.QUICK doc/README* doc/barrett_diagram
 	dohtml doc
 	mv doc/gc.man doc/gc.1

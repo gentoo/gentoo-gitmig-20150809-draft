@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cln/cln-1.1.5.ebuild,v 1.4 2003/02/13 10:35:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cln/cln-1.1.5.ebuild,v 1.5 2003/09/06 22:29:24 msterret Exp $
 
 inherit flag-o-matic
 
@@ -32,7 +32,7 @@ src_compile() {
 		--infodir=/usr/share/info \
 		--datadir=/usr/share/doc/${P} \
 		--mandir=/usr/share/man || die "./configure failed"
-	
+
 	#it doesn't also like parallel make :)
 	make || die
 }

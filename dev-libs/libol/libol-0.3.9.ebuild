@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libol/libol-0.3.9.ebuild,v 1.8 2003/07/16 07:50:20 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libol/libol-0.3.9.ebuild,v 1.9 2003/09/06 22:29:24 msterret Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Support library for syslog-ng"
@@ -25,5 +25,5 @@ src_compile() {
 
 src_install() {
 	einstall || die
-	dodoc ChangeLog 
+	dodoc ChangeLog
 }

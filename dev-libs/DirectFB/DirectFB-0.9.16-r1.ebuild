@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/DirectFB-0.9.16-r1.ebuild,v 1.7 2003/08/06 13:34:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/DirectFB-0.9.16-r1.ebuild,v 1.8 2003/09/06 22:29:24 msterret Exp $
 
 DESCRIPTION="Thin library on top of the Linux framebuffer devices"
 HOMEPAGE="http://www.directfb.org/"
@@ -31,7 +31,7 @@ src_unpack() {
 
 src_compile() {
 	local myconf=""
-	
+
 	# Bug in the ./configure script that breaks if you
 	# have --enable-mmx
 	use mmx \
@@ -45,7 +45,7 @@ src_compile() {
 	use mpeg \
 		&& myconf="${myconf} --enable-libmpeg3" \
 		|| myconf="${myconf} --disable-libmpeg3"
-	
+
 	use jpeg \
 		&& myconf="${myconf} --enable-jpeg" \
 		|| myconf="${myconf} --disable-jpeg"
@@ -68,7 +68,7 @@ src_compile() {
 	use mpeg && ( \
 		cd ${S}/interfaces/IDirectFBVideoProvider
 		cp idirectfbvideoprovider_libmpeg3.c ${T}
-	
+
 		sed s':#include <libmpeg3.h>:#include <libmpeg3/libmpeg3.h>:' \
 			${T}/idirectfbvideoprovider_libmpeg3.c > \
 				idirectfbvideoprovider_libmpeg3.c

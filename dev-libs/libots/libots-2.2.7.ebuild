@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libots/libots-2.2.7.ebuild,v 1.4 2003/05/20 19:30:50 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libots/libots-2.2.7.ebuild,v 1.5 2003/09/06 22:29:24 msterret Exp $
 
 At="libots-2.2.7-2.alpha.rpm"
 S=${WORKDIR}/usr/lib/compaq/libots-2.2.7
@@ -13,7 +13,7 @@ RDEPEND="$DEPEND"
 LICENSE="compaq-sdla"
 SLOT="2.2.7"
 KEYWORDS="-x86 -ppc -sparc alpha"
-	
+
 src_unpack() {
 	#if [ ! -f ${DISTDIR}/${At} ] ; then
 	#	die "Please download ${At} from ${HOMEPAGE}"
@@ -24,9 +24,9 @@ src_unpack() {
 
 src_install () {
 	dodir /usr/lib
-	
+
 	cp libots.* ${D}/usr/lib
 
-	dodoc README 
+	dodoc README
 }
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/libxml2-2.5.8.ebuild,v 1.5 2003/09/06 19:13:21 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/libxml2-2.5.8.ebuild,v 1.6 2003/09/06 22:29:24 msterret Exp $
 
 inherit eutils libtool gnome.org
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.xmlsoft.org/"
 DEPEND="sys-libs/zlib
 	python? ( dev-lang/python )
 	readline? ( sys-libs/readline )"
- 
+
 SLOT="2"
 LICENSE="MIT"
 KEYWORDS="x86 ~ppc ~sparc ~alpha hppa ~amd64"
@@ -44,7 +44,7 @@ src_install() {
 		EXAMPLES_DIR=/usr/share/doc/${PF}/example \
 		TARGET_DIR=/usr/share/doc/${PF}/html \
 		install || die
-	
+
 	dodoc AUTHORS COPYING* ChangeLog NEWS README
 }
 
@@ -58,7 +58,7 @@ pkg_postinst() {
 	if [ ! -e ${CATALOG} ]; then
 		[ -d /etc/xml ] || mkdir /etc/xml
 		/usr/bin/xmlcatalog --create > ${CATALOG}
-		einfo "Created XML catalog in ${CATALOG}" 
+		einfo "Created XML catalog in ${CATALOG}"
 	fi
 
 }

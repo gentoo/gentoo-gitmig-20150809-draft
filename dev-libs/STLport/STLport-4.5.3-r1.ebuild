@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/STLport/STLport-4.5.3-r1.ebuild,v 1.7 2003/02/13 10:32:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/STLport/STLport-4.5.3-r1.ebuild,v 1.8 2003/09/06 22:29:24 msterret Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="C++ STL library"
@@ -31,11 +31,11 @@ src_install () {
 	dodir /usr/include
 	cp -R ${S}/stlport ${D}/usr/include
 	rm -rf ${D}/usr/include/stlport/BC50
-		
+
 	dodir /usr/lib
 	cp -R ${S}/lib/* ${D}/usr/lib/
 	rm -rf ${D}/usr/lib/obj
-	
+
 	cd ${S}/etc/
 	dodoc ChangeLog* README TODO *.txt
 
