@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/w3mimgfb/w3mimgfb-0.9.1.ebuild,v 1.5 2004/06/24 22:51:43 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/w3mimgfb/w3mimgfb-0.9.1.ebuild,v 1.6 2004/09/08 14:24:52 usata Exp $
 
 inherit gcc
 
@@ -14,7 +14,7 @@ KEYWORDS="x86 ~ppc"
 IUSE=""
 
 DEPEND=">=media-libs/stimg-0.1.0
-	virtual/textbrowser"
+	virtual/w3m"
 
 src_compile() {
 	emake CC="$(gcc-getCC)" CFLAGS="${CFLAGS}" || die "emake failed"
@@ -24,17 +24,17 @@ src_install() {
 
 	local realbin
 
-	if has_version '<net-www/w3m-0.4.2' ; then
+	if has_version '<www-client/w3m-0.4.2' ; then
 		exeinto /usr/lib/w3m
 		doexe w3mimgdisplayfb
-	elif has_version '>=net-www/w3m-0.4.2-r1' ; then
+	elif has_version '>=www-client/w3m-0.4.2-r1' ; then
 		exeinto /usr/libexec/w3m
 		doexe w3mimgdisplayfb
 	fi
-	if has_version '<net-www/w3m-m17n-0.4.2' ; then
+	if has_version '<www-client/w3m-m17n-0.4.2' ; then
 		exeinto /usr/lib/w3m-m17n
 		doexe w3mimgdisplayfb
-	elif has_version '>=net-www/w3m-m17n-0.4.2' ; then
+	elif has_version '>=www-client/w3m-m17n-0.4.2' ; then
 		exeinto /usr/libexec/w3m-m17n
 		doexe w3mimgdisplayfb
 	fi
