@@ -1,6 +1,19 @@
 # ChangeLog for media-video/nvidia-kernel
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/ChangeLog,v 1.103 2004/11/30 01:25:56 cyfred Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/ChangeLog,v 1.104 2004/12/19 15:52:47 azarah Exp $
+
+*nvidia-kernel-1.0.6629-r1 (19 Dec 2004)
+
+  19 Dec 2004; Martin Schlemmer <azarah@gentoo.org>
+  +files/1.0.6629/NVIDIA_kernel-1.0-6629-1155389.patch,
+  +files/1.0.6629/NVIDIA_kernel-1.0-6629-1161283.patch,
+  +files/1.0.6629/NVIDIA_kernel-1.0-6629-1162524.patch,
+  +files/1.0.6629/NVIDIA_kernel-1.0-6629-1165235.patch,
+  +files/1.0.6629/NVIDIA_kernel-1.0-6629-1171869.patch,
+  +files/1.0.6629/NVIDIA_kernel-1.0-6629-1175225.patch,
+  +files/1.0.6629/nv-disable-preempt-on-smp_processor_id-2.patch,
+  +nvidia-kernel-1.0.6629-r1.ebuild:
+  Update with patches from Zander (http://www.minion.de/files/1.0-6629/)
 
   30 Nov 2004; Andrew Bevitt <cyfred@gentoo.org> +files/nvidia,
   -files/nvidia-1.1, nvidia-kernel-1.0.6111-r3.ebuild,

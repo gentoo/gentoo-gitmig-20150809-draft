@@ -1,0 +1,20 @@
+--- 1/nv/nv.c	2004-12-19 17:08:46.000000000 +0200
++++ 2/nv/nv.c	2004-12-19 17:09:07.000000000 +0200
+@@ -2821,7 +2821,7 @@ void NV_API_CALL nv_lock_rm(
+     nv_linux_state_t *nvl = NV_GET_NVL_FROM_NV_STATE(nv);
+     NO_COMPILER_WARNINGS(nvl);
+ 
+-    if (nvl->rm_lock_cpu == smp_processor_id())
++    if (nvl->rm_lock_cpu == _smp_processor_id())
+     {
+         nvl->rm_lock_count++;
+         return;
+@@ -2830,7 +2830,7 @@ void NV_API_CALL nv_lock_rm(
+     spin_unlock_wait(&nvl->rm_lock);
+     spin_lock_irq(&nvl->rm_lock);
+ 
+-   nvl->rm_lock_cpu = smp_processor_id();
++   nvl->rm_lock_cpu = _smp_processor_id();
+    nvl->rm_lock_count = 1;
+ }
+ 

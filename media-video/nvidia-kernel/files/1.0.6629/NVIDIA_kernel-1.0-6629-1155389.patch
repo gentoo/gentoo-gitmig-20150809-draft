@@ -1,0 +1,38 @@
+diff -ru usr/src/nv/nv-linux.h usr/src/nv.1155389/nv-linux.h
+--- usr/src/nv/nv-linux.h	2004-11-03 22:53:00.000000000 +0100
++++ usr/src/nv.1155389/nv-linux.h	2004-11-04 11:47:05.000000000 +0100
+@@ -729,12 +729,21 @@
+         return order;
+     }
+ 
++/* mark memory UC-, rather than UC (don't use _PAGE_PWT) */
++static inline pgprot_t pgprot_noncached_weak(pgprot_t old_prot)
++    {
++        pgprot_t new_prot = old_prot;
++        if (boot_cpu_data.x86 > 3)
++            new_prot = __pgprot(pgprot_val(old_prot) | _PAGE_PCD);
++        return new_prot;
++    }
++
+ #if !defined (pgprot_noncached)
+ static inline pgprot_t pgprot_noncached(pgprot_t old_prot)
+     {
+         pgprot_t new_prot = old_prot;
+         if (boot_cpu_data.x86 > 3)
+-            new_prot = __pgprot(pgprot_val(old_prot) | _PAGE_PCD);
++            new_prot = __pgprot(pgprot_val(old_prot) | _PAGE_PCD | _PAGE_PWT);
+         return new_prot;
+     }
+ #endif
+diff -ru usr/src/nv/nv.c usr/src/nv.1155389/nv.c
+--- usr/src/nv/nv.c	2004-11-03 22:53:00.000000000 +0100
++++ usr/src/nv.1155389/nv.c	2004-11-04 11:47:05.000000000 +0100
+@@ -1551,7 +1551,7 @@
+     /* NV fb space */
+     else if (IS_FB_OFFSET(nv, NV_VMA_OFFSET(vma), vma->vm_end - vma->vm_start))
+     {
+-        vma->vm_page_prot = pgprot_noncached(vma->vm_page_prot);
++        vma->vm_page_prot = pgprot_noncached_weak(vma->vm_page_prot);
+         if (NV_REMAP_PAGE_RANGE(vma->vm_start,
+                              NV_VMA_OFFSET(vma),
+                              vma->vm_end - vma->vm_start,
