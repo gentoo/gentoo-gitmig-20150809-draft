@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/gnupg
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.55 2004/03/29 22:48:49 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.56 2004/04/24 18:21:57 gmsoft Exp $
+
+  24 Apr 2004; Guy Martin <gmsoft@gentoo.org> gnupg-1.2.4.ebuild,
+  files/gnupg-1.2.4-hppa_unaligned_constant.patch:
+  Added a alignement patch for hppa. Fix check on some systems.
 
   30 Mar 2004; Lars Weiler <pylon@gentoo.org> gnupg-1.2.4.ebuild:
   stable on ppc

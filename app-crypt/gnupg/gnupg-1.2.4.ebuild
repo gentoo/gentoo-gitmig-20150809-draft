@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.2.4.ebuild,v 1.14 2004/03/29 22:48:49 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.2.4.ebuild,v 1.15 2004/04/24 18:21:57 gmsoft Exp $
 
 inherit eutils flag-o-matic
 
@@ -45,6 +45,12 @@ fi
 
 src_unpack() {
 	unpack ${A}
+
+	if use hppa
+	then
+		cd ${S}
+		epatch ${FILESDIR}/gnupg-1.2.4-hppa_unaligned_constant.patch
+	fi
 
 	# Please read http://www.gnupg.org/why-not-idea.html
 	if use idea; then
