@@ -13,6 +13,11 @@ HOMEPAGE="http://aspell.sourceforge.net"
 DEPEND=">=app-text/pspell-0.12
 	>=sys-libs/ncurses-5.2"
 
+#
+# These flags a reset here because too much optimisation can cause aspell's
+# compilation process to break.  Moreover, these must be set before ./configure
+# otherwise it breaks again.  A very fragile build process, really.
+#
 CXXFLAGS="-O3"
 CFLAGS=${CXXFLAGS}
 
@@ -23,7 +28,9 @@ src_unpack() {
 }
 
 src_compile() {
-	
+	# 
+	# These two lines are here again to prevent breaking the compilation
+	#
 	libtoolize --copy --force
 	aclocal
 
