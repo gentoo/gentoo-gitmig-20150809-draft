@@ -1,0 +1,12 @@
+diff -ruN ogmtools-1.3.orig/avilib/avidump.c ogmtools-1.3/avilib/avidump.c
+--- ogmtools-1.3.orig/avilib/avidump.c	2004-04-16 12:32:29.332935192 +0200
++++ ogmtools-1.3/avilib/avidump.c	2004-04-16 12:33:40.520113096 +0200
+@@ -57,7 +57,7 @@
+                    ((x<<8)  & 0x00ff0000) |\
+                    ((x<<24) & 0xff000000))
+ # define SWAP8(x) (( (SWAP4(x)<<32) & 0xffffffff00000000ULL) |\
+-                   ( SWAP4(x))
++                    SWAP4(x))
+ #else
+ # define SWAP2(a) (a)
+ # define SWAP4(a) (a)
