@@ -1,13 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/pdksh/pdksh-5.2.14-r4.ebuild,v 1.11 2003/02/13 09:29:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/pdksh/pdksh-5.2.14-r4.ebuild,v 1.12 2003/03/19 18:09:56 agriffis Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="The Public Domain Korn Shell"
 SRC_URI="ftp://ftp.cs.mun.ca/pub/pdksh/${P}.tar.gz
 	 ftp://ftp.cs.mun.ca/pub/pdksh/${P}-patches.1"
 HOMEPAGE="http://ww.cs.mun.ca/~michael/pdksh/"
-KEYWORDS="x86 ppc sparc "
+KEYWORDS="x86 ppc sparc alpha"
 SLOT="0"
 LICENSE="as-is"
 
