@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2803 2004/04/07 08:53:51 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2804 2004/04/07 14:58:43 foser Exp $
 #
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
@@ -22,6 +22,11 @@
 ##
 ##   End example
 ##
+
+# <foser@gentoo.org> (07 Apr 2004)
+# still need to add some ch* stuff to make the init work
+# consider it broken until then
+sys-apps/dbus
 
 # <mr_bones_@gentoo.org> (04 Apr 2004)
 # versioning change.
