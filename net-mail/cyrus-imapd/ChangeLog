@@ -1,8 +1,11 @@
 # ChangeLog for net-mail/cyrus-imapd
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/ChangeLog,v 1.4 2002/08/08 15:29:01 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/ChangeLog,v 1.5 2002/08/12 15:27:35 raker Exp $
 
 *cyrus-imapd-2.1.5 (13 Jul 2002)
+
+  12 Aug 2002; Nick Hadaway <raker@gentoo.org> cyrus-imapd-2.1.5.ebuild :
+  I have no idea why --without-perl was one of the configure options.
 
   08 Aug 2002; Nick Hadaway <raker@gentoo.org> cyrus-imapd-2.1.5.ebuild :
   Added a couple of configure options suggested by mhromada@elas.sk on

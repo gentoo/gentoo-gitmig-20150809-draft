@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.1.5.ebuild,v 1.5 2002/08/08 15:29:01 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.1.5.ebuild,v 1.6 2002/08/12 15:27:35 raker Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="The Cyrus IMAP Server"
@@ -62,7 +62,6 @@ src_compile() {
 		--without-gssapi \
 		--enable-listext \
 		--disable-cyradm \
-		--without-perl \
 		--with-cyrus-user=cyrus \
 		--with-cyrus-group=mail \
 		--enable-shared \
