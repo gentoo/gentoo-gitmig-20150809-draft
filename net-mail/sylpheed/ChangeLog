@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/sylpheed
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed/ChangeLog,v 1.36 2003/07/09 05:52:37 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed/ChangeLog,v 1.37 2003/07/29 16:35:10 bcowan Exp $
+
+*sylpheed-0.9.4 (29 Jul 2003)
+
+  29 Jul 2003; Brad Cowan <bcowan@gentoo.org> sylpheed-0.9.4.ebuild:
+  Version bump.
 
 *sylpheed-0.9.3 (09 Jul 2003)
 
