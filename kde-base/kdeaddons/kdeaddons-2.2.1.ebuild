@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Philippe Namias <pnamias@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons/kdeaddons-2.2.1.ebuild,v 1.2 2001/09/19 17:18:11 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons/kdeaddons-2.2.1.ebuild,v 1.3 2001/09/19 18:56:33 danarmak Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="KDE ${PV} - Addons"
@@ -25,7 +25,7 @@ src_unpack() {
 }
 
 src_compile() {
-    . /etc/env.d/90{kde${PV},qt}
+
     local myconf
     if [ "`use qtmt`" ]
     then
