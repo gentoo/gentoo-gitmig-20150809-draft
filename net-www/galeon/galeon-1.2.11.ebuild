@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/galeon/galeon-1.2.11.ebuild,v 1.1 2003/07/21 21:50:49 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/galeon/galeon-1.2.11.ebuild,v 1.2 2003/08/22 13:23:03 foser Exp $
 
 IUSE="nls"
 
@@ -12,7 +12,7 @@ SRC_URI="http://download.sourceforge.net/${PN}/${P}.tar.gz
 HOMEPAGE="http://galeon.sourceforge.net"
 
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~alpha ~sparc"
+KEYWORDS="x86 ~ppc ~alpha ~sparc"
 SLOT="0"
 
 RDEPEND=">=net-www/mozilla-1.3
