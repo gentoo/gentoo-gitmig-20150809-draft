@@ -1,0 +1,12 @@
+--- glade-2.0.0/omf-install/Makefile.in	2003-04-11 14:12:35.000000000 +0100
++++ glade-2.0.0/omf-install/Makefile.in.new	2003-04-22 13:14:02.000000000 +0100
+@@ -238,7 +238,8 @@
+ 	-for file in $(srcdir)/*.omf; do \
+ 		$(INSTALL_DATA) $(srcdir)/$$file $(DESTDIR)$(omf_dest_dir); \
+ 	done
+-	-scrollkeeper-update -p $(scrollkeeper_localstate_dir) 
++	-scrollkeeper-update -p $(scrollkeeper_localstate_dir) \
++	-o $(DESTDIR)$(omf_dest_dir)
+ 
+ uninstall-local:
+ 	-for file in $(srcdir)/*.omf; do \
