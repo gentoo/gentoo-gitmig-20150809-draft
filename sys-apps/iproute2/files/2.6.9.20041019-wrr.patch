@@ -449,7 +449,7 @@ diff -Naur iproute2-2.6.9.orig/tc/q_wrr.c iproute2-2.6.9.wrr/tc/q_wrr.c
 +}
 +
 +
-+struct qdisc_util wrr_util = {
++struct qdisc_util wrr_qdisc_util = {
 +	.id = "wrr",
 +	.parse_qopt = wrr_parse_opt,
 +	.print_qopt = wrr_print_opt,
