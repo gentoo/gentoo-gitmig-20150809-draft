@@ -1,0 +1,21 @@
+#!/sbin/runscript
+klog="/usr/sbin/klogd"
+slog="/usr/sbin/syslogd"
+
+start() {
+    ebegin "Starting syslogd, klogd"
+    start-stop-daemon --start --exec $slog -- $SYSLOGD 1>&2
+    retval=$?
+    start-stop-daemon --start --exec $klog -- $KLOGD 1>&2
+    retval=$(( $retval + $? ))
+    eend $retval 
+}
+
+stop() {
+    ebegin "Stopping klogd, syslogd"
+    start-stop-daemon --stop --pidfile /var/run/klogd.pid 1>&2
+    retval=$?
+    start-stop-daemon --stop --pidfile /var/run/syslogd.pid 1>&2
+    retval=$(( $retval + $? ))
+    eend $retval 
+}
