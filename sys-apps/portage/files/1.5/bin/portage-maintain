@@ -5,40 +5,41 @@ import portage
 import string
 import sys
 
-#Things that need to be done:
-# system profile support
+installeddict=portage.port_insttree()
+currentdict=portage.port_currtree()
+portagedict=portage.port_porttree()
 
-#create db of installed packages at "root"
-installed=portage.vartree(portage.root)
-current=portage.currenttree(portage.getsetting("CURRENTFILE"))
-available=portage.portagetree(portage.getsetting("PORTDIR"))
-
-for mykey in installed.getallnodes():
-	installednode=installed.getnode(mykey)
-	currentnode=current.getnode(mykey)
-	availnode=available.getnode(mykey)
-	if not current.hasnode(mykey):
-		continue
-	if ((len(installednode)==1) and (current.hasnode(mykey))):
-		if (len(currentnode)==1):
-			if current.exists_specific(installednode[0][0]):
+for mypkg in installeddict.keys():
+	#if there is one installed version, and one recommended version, and they both
+	#are the same version, don't list the package.  This package is up-to-date.
+	if (len(installeddict[mypkg])==1) and currentdict.has_key(mypkg): 
+		if len(currentdict[mypkg])==1: 
+			if portage.pkgcmp(currentdict[mypkg][0][1][1:],installeddict[mypkg][0][1][1:])==0:
 				continue
-	print "Package",mykey
+	print "Package",mypkg
 	print "Installed version(s):"
-	for inspkg in installednode:
+	for inspkg in installeddict[mypkg]:
 		print " ",inspkg[0]
 	# print available portage versions, labelling one as the recommended version
 	print "Available versions:"
-	if available.hasnode(mykey):
-		for avpkg in availnode:
-			print " ",avpkg[0]
-	else:
-		print " ","(none)"
-	print "Recommended version(s):"
-	if len(currentnode)==0:
-		print " ","(none)"
-	else:
-		for curpkg in currentnode:
+	if portagedict.has_key(mypkg):
+		for curpkg in portagedict[mypkg]:
 			print " ",curpkg[0]
-		
+	else:
+		print " ","(none)"
+	print "Recommended version:"
+	if currentdict.has_key(mypkg):
+		for curpkg in currentdict[mypkg]:
+			print " ",curpkg[0]
+	else:
+		print " ","(none)"
 	print
+
+print "System (important) packages not installed:"
+print
+for x in currentdict.keys():
+	if currentdict[x][0][1][0][0:4]=="sys-":
+		#required package
+		if not installeddict.has_key(x):
+			print x
+print

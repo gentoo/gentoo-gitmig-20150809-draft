@@ -1,10 +1,6 @@
 # Copyright 2000 Daniel Robbins, Gentoo Technologies, Inc.
 # System-wide defaults for the Portage system
 
-ROOT="/"
-
-MAINTAINER="yes"
-
 #proxy settings PROXY(both), or HTTP_PROXY/FTP_PROXY
 #PROXY=freebox.gentoo.org:3128
 #HTTP_PROXY=
@@ -48,5 +44,3 @@ CXXFLAGS=${CFLAGS}
 #Debug build -- if defined, binaries won't be stripped
 #DEBUG=true
 
-#Package Mode - tbz2 or tgz (what binary package mode)
-PACKAGE=tbz2

@@ -2,7 +2,7 @@
 import sys,portage
 for x in sys.argv[1:]:
 	#the 0 disables the environment check
-	mysetting=portage.getsetting(x,0)
+	mysetting=portage.getsetting(x,portage.root,0)
 	if x=="ROOT":
 		#make sure path ends with a "/"
 		if len(mysetting)==0:

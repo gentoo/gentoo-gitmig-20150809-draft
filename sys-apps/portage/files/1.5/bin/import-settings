@@ -1,7 +1,7 @@
 #!/usr/bin/spython
 import sys,portage
 for x in sys.argv[1:]:
-	mysetting=portage.getsetting(x)
+	mysetting=portage.getsetting(x,portage.root)
 	if x=="ROOT":
 		#make sure path ends with a "/"
 		if len(mysetting)==0:

@@ -4,8 +4,8 @@
 # Version 1.0 7/31/2000
 
 import string,os
-from commands import *
 from stat import *
+from commands import *
 import fchksum,types
 import sys
 import shlex
@@ -22,6 +22,46 @@ categories=("app-admin", "app-arch", "app-cdr", "app-doc", "app-editors", "app-e
 			"net-analyzer", "net-dialup", "net-fs", "net-ftp", "net-irc", "net-libs", "net-mail", "net-misc", "net-nds", 
 			"net-print", "net-www", "packages", "sys-apps", "sys-devel", "sys-kernel", "sys-libs", "x11-base", "x11-libs", 
 			"x11-terms", "x11-wm","virtual")
+
+#beautiful directed graph object
+
+class digraph:
+	def __init__(self):
+		self.dict={}
+
+	def addnode(self,mykey,myparent):
+	#	print digraph
+		if not self.dict.has_key(mykey):
+			if myparent==None:
+				self.dict[mykey]=[0,[]]
+			else:
+				self.dict[mykey]=[0,[myparent]]
+				self.dict[myparent][0]=self.dict[myparent][0]+1
+			return
+		if not myparent in self.dict[mykey][1]:
+			self.dict[mykey][1].append(myparent)
+			self.dict[myparent][0]=self.dict[myparent][0]+1
+	
+	def delnode(self,mykey):
+		if not self.dict.has_key(mykey):
+			return
+		for x in self.dict[mykey][1]:
+			self.dict[x][0]=self.dict[x][0]-1
+		del self.dict[mykey]
+
+	def firstzero(self):
+		"returns first node with zero references, or NULL if no such node exists"
+		for x in self.dict.keys():
+			if self.dict[x][0]==0:
+				return x
+		return None 
+
+	def empty(self):
+		if len(self.dict)==0:
+			return 1
+		return 0
+
+
 
 # valid end of version components; integers specify offset from release version
 # pre=prerelease, p=patchlevel (should always be followed by an int), rc=release candidate
@@ -228,10 +268,10 @@ def gen_archnames():
 	"generate archive names from URL list"
 	myurls=getenv("SRC_URI")
 	a=string.split(myurls)
-	returnme=""
+	myfiles={}
 	for x in a:
-		returnme=returnme+" "+string.split(x,"/")[-1]
-	print "A='"+returnme[1:]+"'"
+		myfiles[string.split(x,"/")[-1]]=1
+	print "A='"+string.join(myfiles.keys()," ")+"'"
 
 def doebuild(myebuild,mydo):
 	return os.system("/usr/sbin/ebuild "+myebuild+" "+mydo)
@@ -291,30 +331,40 @@ def getenv(mykey):
 		return os.environ[mykey]
 	return ""
 
-def getsetting(mykey,env=1,recdepth=0):
+def getsetting(mykey,root="/",env=1,recdepth=0):
 	"""perform bash-like basic variable expansion, recognizing ${foo} and $bar"""
 	
 	if recdepth>10:
 		return ""
 		#avoid infinite recursion
-	
-	configdefaults=getconfig("/etc/make.defaults")
-	configsettings=getconfig("/etc/make.conf")
-	
+
+	if os.path.exists(root+"etc/make.globals"):
+		configglobals=getconfig(root+"etc/make.globals")
+	else:
+		print "!!! Error:",root+"etc/make.globals not found."
+		sys.exit(1)
+	if os.path.exists(root+"etc/make.profile/make.defaults"):
+		configdefaults=getconfig(root+"etc/make.profile/make.defaults")
+	else:
+		print "!!! Error:",root+"etc/make.profile/make.defaults not found."
+		print "!!! (make.profile should be a symlink pointing to your current system profile)"
+		sys.exit(1)
+	if os.path.exists(root+"etc/make.conf"):
+		configsettings=getconfig(root+"etc/make.conf")
+	else:
+		configsettings={}
+		
+	mystring=None
 	if env:
 		if os.environ.has_key(mykey):
 			mystring=os.environ[mykey]
-		elif configsettings.has_key(mykey):
-			mystring=configsettings[mykey]
-		elif configdefaults.has_key(mykey):
-			mystring=configdefaults[mykey]
-		else:
-			return ""
-	else:
+	if mystring==None:		
 		if configsettings.has_key(mykey):
 			mystring=configsettings[mykey]
 		elif configdefaults.has_key(mykey):
 			mystring=configdefaults[mykey]
+		elif configglobals.has_key(mykey):
+			mystring=configglobals[mykey]
 		else:
 			return ""
 		
@@ -364,7 +414,7 @@ def getsetting(mykey,env=1,recdepth=0):
 				varname=mystring[pos+2:newpos]
 				if len(varname)==0:
 					return "" #zero-length variable, error
-				newstring=newstring+getsetting(varname,env,recdepth+1)
+				newstring=newstring+getsetting(varname,root,env,recdepth+1)
 				pos=newpos+1
 			else:
 				newpos=pos+1
@@ -377,7 +427,7 @@ def getsetting(mykey,env=1,recdepth=0):
 				pos=newpos
 				if len(varname)==0:
 					return "" #zero-length variable, error
-				newstring=newstring+getsetting(varname,env,recdepth+1)
+				newstring=newstring+getsetting(varname,root,env,recdepth+1)
 				#recurse
 		else:
 			newstring=newstring+mystring[pos]
@@ -448,8 +498,16 @@ def relparse(myver):
 				number=string.atof(myver[0:divider])
 			else:
 				number=string.atof(myver)		
+	else:
+		#normal number or number with letter at end
+		divider=len(myver)-1
+		if myver[divider:] not in "1234567890":
+			#letter at end
+			p1=ord(myver[divider:])
+			number=string.atof(myver[0:divider])
+		else:
+			number=string.atof(myver)  
 	return [number,p1,p2]
-
 
 def revverify(myrev):
 	if len(myrev)==0:
@@ -913,44 +971,86 @@ def dep_frontend(mytype,depstring):
 #		dep_print_resolve(myparse[1])		
 	return 1
 
+# gets virtual package settings
+
+def getvirtual(myroot):
+	myfile=open(myroot+"/etc/make.profile/virtual","r")
+	mylines=myfile.readlines()
+	myvirts={}
+	for x in mylines:
+		mysplit=string.split(x)
+		if len(mysplit)!=2:
+			continue
+		myvirts[mysplit[0]]=mysplit[1]
+	return myvirts
+
 class packagetree:
-	def __init__(self):
+	def __init__(self,virtual):
 		self.tree={}
 		self.populated=0
+		self.virtual=virtual
+	
 	def populate(self):
 		"populates the tree with values"
 		populated=1
 		pass
-	def exists_specific(self,catpkg):
+	
+	def resolve_key(self,mykey):
+		"generates new key, taking into account virtual keys"
+		if self.virtual:
+			if self.virtual.has_key(mykey):
+				return self.virtual[mykey]
+		return mykey
+
+	def exists_specific(self,myspec):
 		if not self.populated:
 			self.populate()
-		"this function tells you whether or not a specific package is installed"
-		cpsplit=catpkgsplit(catpkg,0)
-		if cpsplit==None:
-			return None 
-		if not self.tree.has_key(cpsplit[0]+"/"+cpsplit[1]):
-			return 0
-		for x in self.tree[cpsplit[0]+"/"+cpsplit[1]]:
-			if x[0]==catpkg:
-				return 1
+		myspec=self.resolve_specific(myspec)
+		if not myspec:
+			return None
+		cps=catpkgsplit(myspec)
+		if not cps:
+			return None
+		mykey=cps[0]+"/"+cps[1]
+		if self.tree.has_key(mykey):
+			for x in self.tree[mykey]:
+				if x[0]==myspec: 
+					return 1
 		return 0
-	def hasnode(self,nodename):
+
+	def resolve_specific(self,myspec):
+		cps=catpkgsplit(myspec)
+		if not cps:
+			return None
+		mykey=self.resolve_key(cps[0]+"/"+cps[1])
+		mykey=mykey+"-"+cps[2]
+		if cps[3]!="r0":
+			mykey=mykey+"-"+cps[3]
+		return mykey
+	
+	def hasnode(self,mykey):
 		if not self.populated:
 			self.populate()
-		if self.tree.has_key(nodename):
+		if self.tree.has_key(self.resolve_key(mykey)):
 			return 1
 		return 0
+	
 	def getallnodes(self):
 		"returns a list of all keys in our tree"
 		if not self.populated:
 			self.populate()
 		return self.tree.keys()
+
 	def getnode(self,nodename):
 		if not self.populated:
 			self.populate()
-		if self.tree.has_key(nodename):
-			return self.tree[nodename]
-		return []
+		nodename=self.resolve_key(nodename)
+		if not nodename:
+			return []
+		if not self.tree.has_key(nodename):
+			return []
+		return self.tree[nodename]
+	
 	def depcheck(self,depstring):
 		"""evaluates a dependency string and returns a 2-node result list
 		[1, None] = ok, no dependencies
@@ -959,7 +1059,7 @@ class packagetree:
 		"""
 		if not self.populated:
 			self.populate()
-		myusesplit=string.split(getsetting("USE"))
+		myusesplit=string.split(getsetting("USE"),self.root)
 		mysplit=string.split(depstring)
 		#convert parenthesis to sublists
 		mysplit=dep_parenreduce(mysplit)
@@ -982,6 +1082,7 @@ class packagetree:
 			return [1,[]]
 		else:
 			return [1,dep_listcleanup(dep_zapdeps(mysplit,mysplit2))]
+
 	def dep_wordreduce(self,mydeplist):
 		"""Calls dep_depreduce() on all the items in the deplist"""
 		mypos=0
@@ -1042,6 +1143,7 @@ class packagetree:
 				return 0
 		else:
 			return None
+
 	def dep_bestmatch(self,mypkgdep):
 		"""
 		returns best match for mypkgdep in the tree.  Accepts
@@ -1092,6 +1194,7 @@ class packagetree:
 				if pkgcmp(x[1][1:],bestmatch[1][1:])>0:
 					bestmatch=x
 			return bestmatch[0]
+
 	def dep_match(self,mypkgdep):
 		"""
 		returns a list of all matches for mypkgdep in the tree.  Accepts
@@ -1136,9 +1239,9 @@ class packagetree:
 			
 class vartree(packagetree):
 	"this tree will scan a var/db/pkg database located at root (passed to init)"
-	def __init__(self,root):
+	def __init__(self,root="/",virtual=None):
 		self.root=root
-		packagetree.__init__(self)
+		packagetree.__init__(self,virtual)
 	def populate(self):
 		"populates the local tree (/var/db/pkg)"
 		if not os.path.isdir(self.root+"var"):
@@ -1175,13 +1278,14 @@ class vartree(packagetree):
 
 class portagetree(packagetree):
 	"this tree will scan a portage directory located at root (passed to init)"
-	def __init__(self,root):
+	def __init__(self,root="/",virtual=None):
 		self.root=root
-		packagetree.__init__(self)
+		self.portroot=getsetting("PORTDIR",self.root)
+		packagetree.__init__(self,virtual)
 	def populate(self):
 		"populates the port tree"
 		origdir=os.getcwd()
-		os.chdir(self.root)
+		os.chdir(self.portroot)
 		for x in categories:
 			if not os.path.isdir(os.getcwd()+"/"+x):
 				continue
@@ -1200,7 +1304,7 @@ class portagetree(packagetree):
 						self.tree[mykey]=[]
 					mysplit=catpkgsplit(fullpkg,0)
 					if mysplit==None:
-						print "!!! Error:",self.root+"/"+x+"/"+y,"is not a valid Portage directory, skipping..."
+						print "!!! Error:",self.portroot+"/"+x+"/"+y,"is not a valid Portage directory, skipping..."
 						continue	
 					self.tree[mykey].append([fullpkg,mysplit])
 		os.chdir(origdir)
@@ -1214,7 +1318,7 @@ class portagetree(packagetree):
 			if mysplit==None:
 				#parse error
 				return ""
-			mydepfile=self.root+"/"+mysplit[0]+"/"+mysplit[1]+"/files/depend-"+string.split(pf,"/")[1]
+			mydepfile=self.portroot+"/"+mysplit[0]+"/"+mysplit[1]+"/files/depend-"+string.split(pf,"/")[1]
 			if os.path.exists(mydepfile):
 				myd=open(mydepfile,"r")
 				mydeps=myd.readlines()
@@ -1226,9 +1330,14 @@ class portagetree(packagetree):
 		return ""
 	def getname(self,pkgname):
 		"returns file location for this particular package"
+		if not self.populated:
+			self.populate()
+		pkgname=self.resolve_specific(pkgname)
+		if not pkgname:
+			return ""
 		mysplit=string.split(pkgname,"/")
 		psplit=pkgsplit(mysplit[1])
-		return self.root+"/"+mysplit[0]+"/"+psplit[0]+"/"+mysplit[1]+".ebuild"
+		return self.portroot+"/"+mysplit[0]+"/"+psplit[0]+"/"+mysplit[1]+".ebuild"
 
 class currenttree(packagetree):
 	"this tree will scan a current package file located at root (passed to init)"
@@ -1237,7 +1346,12 @@ class currenttree(packagetree):
 		packagetree.__init__(self)
 	def populate(self):
 		"populates the current tree"
-		mycurrent=open(self.root,"r")
+		newroot=getsetting("CURRENTFILE",self.root)
+		
+		#the currentfile still comes from /usr/portage, not ${ROOT}/usr/portage, but the currentfile setting
+		#comes from ${ROOT}/etc/make.*
+		
+		mycurrent=open(+newroot,"r")
 		mylines=mycurrent.readlines()
 		for x in mylines:
 			if x[:2]!="./":
@@ -1259,17 +1373,18 @@ class currenttree(packagetree):
 
 class binarytree(packagetree):
 	"this tree scans for a list of all packages available in PKGDIR"
-	def __init__(self):
-		self.root=getsetting("PKGDIR")
-		packagetree.__init__(self)
+	def __init__(self,root="/",virtual=None):
+		self.root=root
+		self.pkgdir=getsetting("PKGDIR",root)
+		packagetree.__init__(self,virtual)
 	def populate(self):
 		"popules the binarytree"
-		if (not os.path.isdir(self.root)):
+		if (not os.path.isdir(self.pkgdir)):
 			return 0
-		for mypkg in os.listdir(self.root+"/All"):
+		for mypkg in os.listdir(self.pkgdir+"/All"):
 			if mypkg[-5:]!=".tbz2":
 				continue
-			mytbz2=xpak.tbz2(self.root+"/All/"+mypkg)
+			mytbz2=xpak.tbz2(self.pkgdir+"/All/"+mypkg)
 			mycat=mytbz2.getfile("CATEGORY")
 			if not mycat:
 				#old-style or corrupt package
@@ -1289,9 +1404,9 @@ class binarytree(packagetree):
 		"returns file location for this particular package"
 		mysplit=string.split(pkgname,"/")
 		if len(mysplit)==1:
-			return self.root+"/All/"+pkgname+".tbz2"
+			return self.pkgdir+"/All/"+self.resolve_specific(pkgname)+".tbz2"
 		else:
-			return self.root+"/All/"+mysplit[1]+".tbz2"
+			return self.pkgdir+"/All/"+mysplit[1]+".tbz2"
 
 class dblink:
 	"this class provides an interface to the standard text package database"
@@ -1444,7 +1559,9 @@ class dblink:
 				self.create()
 				#open contents file if it isn't already open
 			mergestart=mergeroot
-			print 
+			print ">>> Updating mtimes..."
+			#before merging, it's *very important* to touch all the files !!!
+			os.system("(cd "+mergeroot+"; for x in `find`; do  touch $x; done)")
 			print ">>> Merging",self.cat+"/"+self.pkg,"to",root
 			if not os.path.exists(root):
 				print "!!! Error: ROOT setting points to a non-existent directory.  Exiting."
@@ -1457,7 +1574,7 @@ class dblink:
 			oldcontents=self.getcontents()
 			doebuild(inforoot+"/"+self.pkg+".ebuild","preinst")
 			outfile=open(self.dbdir+"/CONTENTS","w")
-			
+				
 		mergestart=mergestart
 		os.chdir(mergestart)
 		cpref=os.path.commonprefix([mergeroot,mergestart])
@@ -1694,7 +1811,7 @@ def depgrab(myfilename,depmark):
 	return string.join(string.split(depstring)," ")
 
 def cleanup_pkgmerge(mypkg,origdir):
-	shutil.rmtree(getsetting("PKG_TMPDIR")+"/"+mypkg,1)
+	shutil.rmtree(getsetting("PKG_TMPDIR")+"/"+mypkg)
 	os.chdir(origdir)
 
 def pkgmerge(mytbz2):
@@ -1745,9 +1862,7 @@ def pkgmerge(mytbz2):
 
 def ebuild_init():
 	"performs db/variable initialization for the ebuild system.  Not required for other scripts."
-	global configdefaults, configsettings, currtree, roottree, localtree, porttree, ebuild_initialized, root
-	configdefaults=getconfig("/etc/make.defaults")
-	configsettings=getconfig("/etc/make.conf")
+	global roottree, localtree, porttree, ebuild_initialized, root
 	localtree=vartree("/")	
 	if root=="/":
 		#root is local, and build dep database is the runtime dep database
@@ -1755,11 +1870,10 @@ def ebuild_init():
 	else:
 		#root is non-local, initialize non-local database as roottree
 		roottree=vartree(root)
-	porttree=portagetree(getsetting("PORTDIR"))
-	currtree=currenttree(getsetting("CURRENTFILE"))
+	porttree=portagetree("/")
 	ebuild_initialized=1
 
-root=getsetting("ROOT")
+root=getenv("ROOT")
 if len(root)==0:
 	root="/"
 elif root[-1]!="/":

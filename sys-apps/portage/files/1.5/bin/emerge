@@ -1,0 +1,97 @@
+#!/usr/bin/env python
+
+import portage
+import sys
+import os
+import xpak
+import string
+import commands
+
+#build our package digraph
+
+def digraph_create(digraph,mykey,thetree,myenv,myparent=None):
+	myebuild=porttree.getname(mykey)
+	mysplit=portage.catpkgsplit(mykey)
+	mycommands="export PATH=/usr/lib/portage/bin:${PATH}; export PV='"+mysplit[2]+"'; export P='"+mysplit[1]+"-"+mysplit[2]+"'; export PR='"+mysplit[3]+"';"
+	if mysplit[3]=='r0':
+		mycommands=mycommands+"export PF='"+mysplit[1]+"-"+mysplit[2]+"'; export PVR='"+mysplit[2]+"'"
+	else:
+		mycommands=mycommands+"export PF='"+mysplit[1]+"-"+mysplit[2]+"-"+mysplit[3]+"'; export PVR='"+mysplit[2]+"-"+mysplit[3]+"'"
+	if myenv=="DEPEND":
+		mydep=commands.getoutput(mycommands+"; source "+myebuild+"; echo $DEPEND")
+	else:
+		mydep=commands.getoutput(mycommands+"; source "+myebuild+'; if [ "$RDEPEND" = "" ]; then echo $DEPEND; else  echo $RDEPEND; fi')
+	#eliminate duplicates
+	depdict={}
+	for x in string.split(mydep):
+		depdict[mydep]=1
+	mynewdep=string.join(depdict.keys()," ")
+	digraph.addnode(mykey,myparent)
+	mycheck=thetree.depcheck(mynewdep)
+	if mycheck[0]==0:
+		print "!!! Error: "+myenv+" string formatted incorrectly:",mydep
+		return None 
+	for x in mycheck[1]:
+		mymatch=porttree.dep_bestmatch(x)
+		if mymatch=="":
+			print "!!! Error: can't resolve dependency --",x
+			print "!!!",mydep
+			return None
+		if not digraph_create(digraph,mymatch,thetree,myenv,mykey):
+			return None
+	return 1
+
+#main program loop
+virts=portage.getvirtual(portage.root)
+roottree=portage.vartree("/",virts)
+#roottee=the apps we have installed right now
+if portage.root=="/":
+	desttree=roottree
+else:
+	desttree=portage.vartree(portage.root,virts)
+#desttree=the apps on our destination filesystem
+porttree=portage.portagetree("/",virts)
+pretend=0
+if len(sys.argv)>=2:
+	if sys.argv[1]=="--pretend":
+		print
+		print "These are the packages that I would merge, in order."
+		print
+		pretend=1
+		delnode sys.argv[1]
+	elif sys.argv[1]=="--help":
+		print "Usage: pkgmerge [--pretend] pkg1.tbz2 [pkg2.tbz2]..."
+		sys.exit(1)
+digraph=portage.digraph()
+for mypkg in sys.argv[1:]:
+	if len(mypkg)<=7:
+		print ">>> Error: short ebuild name, skipping..."
+		continue
+	if mypkg[-7:]!=".ebuild":
+		print ">>> Error: there is no ebuild extension on",mypkg+", skipping..."
+		continue
+		
+	mykey=os.path.basename(os.path.abspath(mypkg+"/../.."))+"/"+os.path.basename(mypkg)[:-7]
+	
+	for x in [[roottree,"DEPEND","/","Build"],[desttree,"RDEPEND",portage.root,"Runtime"]]:
+		if pretend==1:
+			print x[3],"dependencies:"
+		digraph_create(digraph,mykey,x[0],x[1])	
+		while (not digraph.empty()):
+			mycurkey=digraph.firstzero()
+			if (mykey==mycurkey) and (x[1]=="DEPEND"):
+				digraph.delnode(mycurkey)
+				continue
+			if not mycurkey:
+				print "!!! Error: circular dependencies"
+				sys.exit(1)
+			myebuild=porttree.getname(mycurkey)
+			if pretend:
+				print "  ",myebuild+" to "+x[2]
+			else:
+				retval=os.system("/usr/sbin/ebuild "+myebuild+" merge")
+				if retval:
+					print "!!! Error emerging",mypkg+".  Stopping."
+					sys.exit(1)
+			digraph.delnode(mycurkey)
+			
