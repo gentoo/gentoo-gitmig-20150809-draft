@@ -1,11 +1,11 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegames/kdegames-3.1.2.ebuild,v 1.3 2003/06/10 23:38:27 wwoods Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegames/kdegames-3.1.2.ebuild,v 1.4 2003/06/19 14:32:01 wwoods Exp $
 inherit kde-dist eutils
 
 DESCRIPTION="KDE games (solitaire :-)"
 IUSE=""
-KEYWORDS="x86 ~ppc sparc ~alpha"
+KEYWORDS="x86 ~ppc sparc alpha"
 
 src_compile() {
     if [ ${ARCH} == "alpha" ] ; then 
