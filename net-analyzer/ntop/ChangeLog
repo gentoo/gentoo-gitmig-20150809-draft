@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/ntop
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ChangeLog,v 1.18 2004/02/05 15:16:37 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ChangeLog,v 1.19 2004/03/11 04:40:05 weeve Exp $
+
+  10 Mar 2004; Jason Wever <weeve@gentoo.org> ntop-2.2c.ebuild:
+  Stable on sparc.
 
   05 Feb 2004; Daniel Ahlberg <aliz@gentoo.org> ntop-2.2c.ebuild:
   Added fpic patches to make it compile on amd64. Also compile everything with our preferred cflags.
