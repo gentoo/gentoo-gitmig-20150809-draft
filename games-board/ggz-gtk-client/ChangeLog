@@ -1,0 +1,19 @@
+# ChangeLog for app-games/ggz-gtk-client
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/ggz-gtk-client/ChangeLog,v 1.1 2003/09/10 17:46:27 vapier Exp $
+
+*ggz-gtk-client-0.0.7 (10 Jul 2003)
+
+  10 Jul 2003; Mike Frysinger <vapier@gentoo.org> :
+  Version bump #24166.  Added gtk2 support for disabled for now ... seems to segfault.
+
+*ggz-gtk-client-0.0.5 (13 Apr 2002)
+
+  17 jul 2002; Jose Alberto Suárez López <bass@gentoo.org> ggz-gtk-client-0.0.5.ebuild :
+  Added LICENSE, KEYWORDS, SLOT.
+
+  07 May 2002; Spider <spider@gentoo.org> ggz-gtk-client-0.0.5.ebuild :
+  fix sourceforge mirroring.
+        
+  13 Apr 2002; T.Kvernes <terjekv@math.uio.no> ChangeLog :
+  Initial ebuild.  This is the gtk client for the GGZ Gaming Zone.

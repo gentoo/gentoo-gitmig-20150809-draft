@@ -1,0 +1,14 @@
+# ChangeLog for app-games/gnushogi
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnushogi/ChangeLog,v 1.1 2003/09/10 17:46:27 vapier Exp $
+
+  03 Sep 2003; Michael Sterrett <msterret@gentoo.org> gnushogi-1.3.ebuild:
+  use sed >= 4; error messages
+
+*gnushogi-1.3 (22 Dec 2002)
+
+  29 Dec 2003; J.Alberto Suarez Lopez <bass@gentoo.org> :
+  Fix bug #12903 , a problem with X version.
+
+  22 Dec 2002; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by Rigo Ketelings <rigo@home.nl>.

@@ -1,0 +1,32 @@
+# ChangeLog for app-games/gnugo
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnugo/ChangeLog,v 1.1 2003/09/10 17:46:27 vapier Exp $
+
+*gnugo-3.3.22 (10 Jul 2003)
+
+  10 Jul 2003; Michael Sterrett <msterret@gentoo.org> gnugo-3.3.22.ebuild:
+  unstable version bump for bug 18796.  Not to be marked stable.  Note that
+  the SRC_URI and HOMEPAGE are different from the stable version.
+
+*gnugo-3.2 (26 Jan 2003)
+
+  26 Jan 2003; Phil Bordelon <sunflare@gentoo.org> gnugo-3.2.ebuild :
+  Version bump, with minor tweakage to more closely fit the current build
+  methodology.  A quick glance on Bugzilla shows that Kalen Peterson
+  <kalenp@cs.washington.edu> suggested a bump as well in bug #12226.
+
+*gnugo-3.0.0 (1 Feb 2002)
+
+  28 Aug 2002; Mark Guertin <gerk@gentoo.org> gnugo-3.0.0.ebuild :
+  Added ppc to keywords
+
+  17 jul 2002; Jose Alberto Suárez López <bass@gentoo.org> gnugo-3.0.0.ebuild :
+  Added LICENSE, KEYWORDS.
+
+  1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
+  
+  Added initial ChangeLog which should be updated whenever the package is
+  updated in any way. This changelog is targetted to users. This means that the
+  comments should well explained and written in clean English. The details about
+  writing correct changelogs are explained in the skel.ChangeLog file which you
+  can find in the root directory of the portage repository.

@@ -1,0 +1,10 @@
+# ChangeLog for app-games/gtkboard
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/gtkboard/ChangeLog,v 1.1 2003/09/10 17:46:27 vapier Exp $
+
+*gtkboard-0.10.4 (30 Jul 2003)
+
+  30 Jul 2003; Michael Sterrett <msterret@gentoo.org> gtkboard-0.10.4.ebuild:
+  initial commit; ebuild submitted by Rob Cakebread (bug 24901) and then
+  modified.
+

@@ -1,0 +1,16 @@
+# ChangeLog for app-games/xboard
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/xboard/ChangeLog,v 1.1 2003/09/10 17:46:27 vapier Exp $
+
+*xboard-4.2.6-r1 (14 Aug 2003)
+
+  14 Aug 2003; Mike Frysinger <vapier@gentoo.org> :
+  Added games.eclass support.
+
+*xboard-4.2.6 (18 Apr 2002)
+
+  17 jul 2002; Jose Alberto Suárez López <bass@gentoo.org> xboard-4.2.6.ebuild :
+  Added LICENSE, KEYWORDS, SLOT.
+
+  18 Apr 2002; Ryan Phillips <rphillips@gentoo.org> xboard-4.2.6.ebuild :
+  Added for initial release.

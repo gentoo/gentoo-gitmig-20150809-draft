@@ -1,0 +1,16 @@
+# ChangeLog for app-games/xfrisk
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/xfrisk/ChangeLog,v 1.1 2003/09/10 17:46:27 vapier Exp $
+
+  29 Jun 2003; <msterret@gentoo.org> xfrisk-1.2.ebuild:
+  don't bother to sed the spec file since it's unused
+  use sed -i
+  added some more docs
+
+*xfrisk-1.2 (15 Dec 2002)
+
+  04 Mar 2003; Jason Wever <weeve@gentoo.org> xfrisk-1.2.ebuild:
+  Added ~sparc to keywords in regards to bug #15703.
+
+  15 Dec 2002; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by Richard Garand <richard@garandnet.net>.

@@ -1,0 +1,5 @@
+MD5 18e0707048c018135c6c4454f93641c6 ChangeLog 639
+MD5 d51cd28abdfb5a4d323d17b7f877e7ed xgammon-0.98.ebuild 792
+MD5 713a4a778934c4793f43df1ba783d07c files/digest-xgammon-0.98 64
+MD5 5e492c857cd63f9bc13aced6d469814f files/xgammon-0.98-broken.patch 263
+MD5 9a1350fd77ab6f36cd2539f73c4b0a6a files/xgammon-0.98-config.patch 823

@@ -1,0 +1,21 @@
+# ChangeLog for app-games/xgammon
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $ Header: $
+
+  12 Jun 2003; <msterret@gentoo.org> xgammon-0.98.ebuild:
+  fix Header
+
+*xgammon-0.98 (03 Jul 2002)
+
+  05 Mar 2003; Bartosch Pixa <darkspecter@gentoo.org> xgammon-0.98.ebuild:
+  set ~ppc in keywords
+
+  17 jul 2002; Jose Alberto Suárez López <bass@gentoo.org> xgammon-0.98.ebuild :
+  Added KEYWORDS.
+
+  03 Jul 2002; T.Kvernes <terjekv@math.uio.no> xgammon-0.98:
+  
+  Initial ebuild, kludged about with the process due to broken
+  behaviour from xgammon (amoungst other thing it expects "."
+  in $PATH for root).
+

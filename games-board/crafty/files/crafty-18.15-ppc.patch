@@ -1,0 +1,24 @@
+--- utility.c.orig	Thu May 23 19:02:28 2002
++++ utility.c	Fri Aug  2 22:29:49 2002
+@@ -1159,12 +1159,18 @@
+ }
+ 
+ void Print(int vb, char *fmt, ...) {
+-  va_list ap;
++  va_list ap, ap2;
+   va_start(ap,fmt);
++  #ifdef __va_copy
++  __va_copy(ap2, ap);
++  #else
++  /* FIXME: C99 has va_copy() - test for C99 and use it if present */ 
++  ap2 = ap;
++  #endif
+   if (vb&display_options) vprintf(fmt, ap);
+   fflush(stdout);
+   if (time_limit>99 || tc_time_remaining>6000 || vb==4095) {
+-    if (log_file) vfprintf(log_file, fmt, ap);
++    if (log_file) vfprintf(log_file, fmt, ap2);
+     if (log_file) fflush(log_file);
+   }
+   va_end(ap);
+

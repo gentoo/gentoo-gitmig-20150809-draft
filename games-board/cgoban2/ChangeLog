@@ -1,0 +1,14 @@
+# ChangeLog for app-games/cgoban2
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/cgoban2/ChangeLog,v 1.1 2003/09/10 17:46:27 vapier Exp $
+
+*cgoban2-2.5.1 (17 Jul 2003)
+
+  17 Jul 2003; Michael Sterrett <msterret@gentoo.org> cgoban2-2.5.1.ebuild:
+  version bump (bug 24663)
+
+*cgoban2-2.4.61 (10 Jul 2003)
+
+  10 Jul 2003; Michael Sterrett <msterret@gentoo.org> cgoban2-2.4.61.ebuild:
+  initial commit.  ebuild based on one provided by TGL (bug 15840)
+

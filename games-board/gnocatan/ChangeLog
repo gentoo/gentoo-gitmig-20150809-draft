@@ -1,0 +1,30 @@
+# ChangeLog for app-games/gnocatan
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnocatan/ChangeLog,v 1.1 2003/09/10 17:46:27 vapier Exp $
+
+*gnocatan-0.7.1-r3 (28 Jun 2003)
+
+  28 Jun 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Security update. Ebuild and patch contributed by Sybren Harmsma <S.Harmsma@student.rug.nl>.
+
+*gnocatan-0.7.1-r2 (18 Jun 2003)
+
+  29 Jun 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Added missing changelog entry.
+
+  18 Jun 2003; msterret :
+  Change default metaserver per Bug 23015
+
+  19 May 2003; Patrick Kursawe <phosphan@gentoo.org> gnocatan-0.7.1-r1.ebuild,
+  gnocatan-0.7.1.ebuild:
+  Fixed homepage typo (bug 21238)
+
+*gnocatan-0.7.1-r1 (20 Mar 2003)
+
+  20 Mar 2003; Graham Forest <vladimir@gentoo.org> gnocatan-0.7.1-r1.ebuild:
+  Removed usage of pic USE flag
+
+*gnocatan-0.7.1 (02 Mar 2003)
+
+  02 Mar 2003; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by Craig Joly <craig@taipan.mudshark.org> #8871.

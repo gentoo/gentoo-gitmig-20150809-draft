@@ -1,0 +1,13 @@
+# ChangeLog for app-games/scid
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/scid/ChangeLog,v 1.1 2003/09/10 17:46:27 vapier Exp $
+
+*scid-3.4 (18 Jun 2003)
+
+  18 Jun 2003; Mike Frysinger <vapier@gentoo.org> :
+  Version bump.
+
+*scid-3.3 (16 Dec 2002)
+
+  16 Dec 2002; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by Thomas T. Veldhouse <veldy@veldy.net>.

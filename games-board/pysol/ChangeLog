@@ -1,0 +1,24 @@
+# ChangeLog for app-games/pysol
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/pysol/ChangeLog,v 1.1 2003/09/10 17:46:27 vapier Exp $
+
+*pysol-4.82 (03 Sep 2003)
+
+  03 Sep 2003; Michael Sterrett <msterret@gentoo.org> pysol-4.82.ebuild:
+  version bump
+
+  29 Apr 2003; Alastair Tse <liquidx@gentoo.org> pysol-4.81-r1.ebuild:
+  Added tk missing warning
+
+*pysol-4.81-r1 (16 Jul 2002)
+
+  16 Jul 2002; Jon Nelson <jnelson@gentoo.org> pysol-4.81-r1.ebuild files/digest-pysol-4.81-r1:
+  
+  Updated ebuild to depend on tcltk (Closes: #4849)
+  Removed pysol-4.81.ebuild files/digest-pysol-4.81
+
+*pysol-4.81 (08 Jul 2002)
+
+  08 Jul 2002; Jon Nelson <jnelson@gentoo.org> pysol-4.81.ebuild ChangeLog:
+  New ebuild for Py Solitaire
+  Closes bug #1963

@@ -1,0 +1,18 @@
+# ChangeLog for app-games/kwappen
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/kwappen/ChangeLog,v 1.1 2003/09/10 17:46:27 vapier Exp $
+
+  31 Aug 2003; Michael Sterrett <msterret@gentoo.org> kwappen-1.1.2.ebuild:
+  inherit kde-base -> inherit kde
+
+  12 Jul 2003; Michael Sterrett <msterret@gentoo.org> kwappen-1.1.2.ebuild:
+  fix DESCRIPTION
+
+  02 Nov 2002; Hannes Mehnert <hannes@gentoo.org> kwappen-1.1.2.ebuild:
+  marked stable for x86
+
+*kwappen-1.1.2 (23 Oct 2002)
+
+  23 Oct 2002; Hannes Mehnert <hannes@gentoo.org> kwappen-1.1.2.ebuild,
+  ChangeLog: Initial ebuild. Thanks to rigo@home.nl (Rigo Ketelings) for
+  submission (bug #6902)

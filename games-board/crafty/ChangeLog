@@ -1,0 +1,26 @@
+# ChangeLog for app-games/crafty
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/crafty/ChangeLog,v 1.1 2003/09/10 17:46:27 vapier Exp $
+
+*crafty-19.1.ebuild (25 Oct 2002)
+
+  25 Oct 2002; Mike Frysinger <vapier@gentoo.org> :
+  Update to 19.1 per #9657.
+
+*crafty-18.15-r2 (13 Feb 2003)
+
+  29 Jun 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Added missing changelog entry.
+
+*crafty-18.15-r1.ebuild (15 Jul 2002)
+
+  30 Sep 2002; Mike Frysinger <vapier@gentoo.org> crafty-18.15-r2.ebuild :
+  Updated to allow for compile on gcc3.x and i586 optimizations
+
+*crafty-18.15-r1.ebuild (15 Jul 2002)
+
+  07 Aug 2002; Mark Guertin <gerk@gentoo.org> crafty-18.15-r1.ebuild :
+  Added ppc patch to close bug #5932 and ppc to keywords
+
+  15 Jul 2002; J.Alberto S.L. <bass@gentoo.org> crafty-18.15-r1.ebuild :
+  First relase. Ebuild submitted by Frank Eibisch <feibisch@estec.net>.

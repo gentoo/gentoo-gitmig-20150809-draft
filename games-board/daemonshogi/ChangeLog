@@ -1,0 +1,10 @@
+# ChangeLog for app-games/daemonshogi
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/daemonshogi/ChangeLog,v 1.1 2003/09/10 17:46:27 vapier Exp $
+
+*daemonshogi-0.1.3 (05 Jul 2003)
+
+  05 Jul 2003; Michael Sterrett <msterret@gentoo.org>
+  daemonshogi-0.1.3.ebuild:
+  Initial commit.  Based on the ebuild submitted by Julien Cayzac (bug 22866).
+  Marked stable for x86, ppc, and sparc based on the users submitted ebuild.

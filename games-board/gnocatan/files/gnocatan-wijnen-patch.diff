@@ -1,0 +1,187 @@
+diff --unified --recursive --new-file gnocatan-0.7.1/ai/client.c gnocatan-0.7.1-patched/ai/client.c
+--- gnocatan-0.7.1/ai/client.c	2002-06-09 14:59:33.000000000 +0200
++++ gnocatan-0.7.1-patched/ai/client.c	2003-06-19 23:47:02.000000000 +0200
+@@ -155,12 +155,12 @@
+ 		client_exit();
+ 		return TRUE;
+ 	case SM_RECV:
+-		if (sm_recv(sm, "ERR %S", str)) {
++		if (sm_recv(sm, "ERR %S", str, sizeof (str))) {
+ 			log_message( MSG_ERROR, "Error (%s): %s\n", sm_current_name(sm), str);
+ 			exit(0);
+ 			return TRUE;
+ 		}
+-		if (sm_recv(sm, "%S", str)) {
++		if (sm_recv(sm, "%S", str, sizeof (str))) {
+ 			log_message( MSG_ERROR, "Error (%s): %s\n", sm_current_name(sm), str);
+ 			return TRUE;
+ 		}
+@@ -228,7 +228,7 @@
+ 	gint player_num;
+ 	char str[512];
+ 
+-	if (sm_recv(sm, "player %d chat %S", &player_num, str)) {
++	if (sm_recv(sm, "player %d chat %S", &player_num, str, sizeof (str))) {
+ 		/*
+ 		log_message( MSG_INFO, _("%s said: "), player_name(player_num, TRUE));
+ 		log_message( MSG_CHAT, "%s\n", str);
+@@ -239,7 +239,7 @@
+ 		player_change_name(player_num, NULL);
+ 		return TRUE;
+ 	}
+-	if (sm_recv(sm, "player %d is %S", &player_num, str)) {
++	if (sm_recv(sm, "player %d is %S", &player_num, str, sizeof (str))) {
+ 		player_change_name(player_num, str);
+ 		return TRUE;
+ 	}
+@@ -490,7 +490,7 @@
+ 		return TRUE; 
+ 	} 
+ 	if (sm_recv(sm, "player %d of %d, welcome to gnocatan server %S",
+-		    &player_num, &total_num, version)) {
++		    &player_num, &total_num, version, sizeof (version))) {
+ 		player_set_my_num(player_num);
+ 		player_set_total_num(total_num);
+ 		if (saved_name != NULL)
+@@ -576,7 +576,7 @@
+ 	}
+ 	if (check_other_players(sm))
+ 		return TRUE;
+-	if (sm_recv(sm, "%S", str)) {
++	if (sm_recv(sm, "%S", str, sizeof (str))) {
+ 		params_load_line(game_params, str);
+ 		return TRUE;
+ 	}
+diff --unified --recursive --new-file gnocatan-0.7.1/client/client.c gnocatan-0.7.1-patched/client/client.c
+--- gnocatan-0.7.1/client/client.c	2002-06-08 23:57:33.000000000 +0200
++++ gnocatan-0.7.1-patched/client/client.c	2003-06-20 01:21:07.000000000 +0200
+@@ -185,15 +185,15 @@
+ 		sm_goto(sm, mode_offline);
+ 		return TRUE;
+ 	case SM_RECV:
+-		if (sm_recv(sm, "ERR %S", str)) {
++		if (sm_recv(sm, "ERR %S", str , sizeof (str))) {
+ 			log_message( MSG_ERROR, "Error (%s): %s\n", sm_current_name(sm), str);
+ 			return TRUE;
+ 		}
+-		if (sm_recv(sm, "NOTE %S", str)) {
++		if (sm_recv(sm, "NOTE %S", str, sizeof (str))) {
+ 			log_message( MSG_ERROR, "Notice: %s\n", str);
+ 			return TRUE;
+ 		}
+-		if (sm_recv(sm, "%S", str)) {
++		if (sm_recv(sm, "%S", str, sizeof (str))) {
+ 			log_message( MSG_ERROR, "Unknown message in %s: %s\n", sm_current_name(sm), str);
+ 			return TRUE;
+ 		}
+@@ -246,7 +246,7 @@
+ 	gint player_num;
+ 	char str[512];
+ 
+-	if (sm_recv(sm, "player %d chat %S", &player_num, str)) {
++	if (sm_recv(sm, "player %d chat %S", &player_num, str, sizeof (str))) {
+ 		chat_parser( player_num, str );
+ 		/*
+ 		log_message( MSG_INFO, _("%s said: "), player_name(player_num, TRUE));
+@@ -258,7 +258,7 @@
+ 		player_change_name(player_num, NULL);
+ 		return TRUE;
+ 	}
+-	if (sm_recv(sm, "player %d is %S", &player_num, str)) {
++	if (sm_recv(sm, "player %d is %S", &player_num, str, sizeof (str))) {
+ 		player_change_name(player_num, str);
+ 		return TRUE;
+ 	}
+@@ -606,7 +606,7 @@
+ 		}
+ 	}
+ 	if (sm_recv(sm, "player %d of %d, welcome to gnocatan server %S",
+-		    &player_num, &total_num, version)) {
++		    &player_num, &total_num, version, sizeof (version))) {
+ 		player_set_my_num(player_num);
+ 		player_set_total_num(total_num);
+ 		if (saved_name != NULL)
+@@ -694,7 +694,7 @@
+ 	}
+ 	if (check_other_players(sm))
+ 		return TRUE;
+-	if (sm_recv(sm, "%S", str)) {
++	if (sm_recv(sm, "%S", str, sizeof (str))) {
+ 		params_load_line(game_params, str);
+ 		return TRUE;
+ 	}
+@@ -782,7 +782,7 @@
+ 		strcpy(rinfo.prevstate, "PLENTY");
+ 		return TRUE;
+ 	}
+-	if (sm_recv(sm, "state %S", str)) {
++	if (sm_recv(sm, "state %S", str, sizeof (str))) {
+ 		strcpy(rinfo.prevstate, str);
+ 		return TRUE;
+ 	}
+diff --unified --recursive --new-file gnocatan-0.7.1/common/state.c gnocatan-0.7.1-patched/common/state.c
+--- gnocatan-0.7.1/common/state.c	2002-06-08 23:32:05.000000000 +0200
++++ gnocatan-0.7.1-patched/common/state.c	2003-06-20 00:12:10.000000000 +0200
+@@ -150,7 +150,15 @@
+ 		break;
+ 	case NET_READ:
+ 		sm->line = line;
+-		route_event(sm, SM_RECV);
++		/* Only handle data if there is a context.  Fixes bug that
++		 * clients starting to send data immediately crash the
++		 * server */
++		if (sm->stack_ptr != -1)
++			route_event(sm, SM_RECV);
++		else {
++			dec_use_count (sm);
++			return;
++		}
+ 		break;
+ 	}
+ 	route_event(sm, SM_INIT);
+@@ -235,7 +243,9 @@
+ 		switch (*fmt++) {
+ 		case 'S': /* string from current position to end of line */
+ 			str = va_arg(ap, gchar*);
+-			strcpy(str, line + offset);
++			len = va_arg(ap, gint);
++			strncpy(str, line + offset, len - 1);
++			str[len - 1] = '\0';
+ 			offset += strlen(str);
+ 			break;
+ 		case 'd': /* integer */
+diff --unified --recursive --new-file gnocatan-0.7.1/server/player.c gnocatan-0.7.1-patched/server/player.c
+--- gnocatan-0.7.1/server/player.c	2002-05-19 20:23:17.000000000 +0200
++++ gnocatan-0.7.1-patched/server/player.c	2003-06-19 23:55:54.000000000 +0200
+@@ -85,11 +85,11 @@
+ 		}
+ 		return TRUE;
+ 	case SM_RECV:
+-		if (sm_recv(sm, "chat %S", text)) {
++		if (sm_recv(sm, "chat %S", text, sizeof (text))) {
+ 			player_broadcast(player, PB_ALL, "chat %s\n", text);
+ 			return TRUE;
+ 		}
+-		if (sm_recv(sm, "name %S", text)) {
++		if (sm_recv(sm, "name %S", text, sizeof (text))) {
+ 			player_set_name(player, text);
+ 			return TRUE;
+ 		}
+@@ -446,7 +446,7 @@
+ 		break;
+ 	
+ 	case SM_RECV:
+-		if( sm_recv(sm, "version %S", version ) )
++		if( sm_recv(sm, "version %S", version, sizeof (version) ) )
+ 		{
+ 			player->client_version = g_strdup(version);
+ 			if( check_versions( version ) )
+@@ -482,7 +482,7 @@
+ 			player_setup(player, -1);
+ 			return TRUE;
+ 		}
+-		else if( sm_recv(sm, "status reconnect %S", playername ) )
++		else if( sm_recv(sm, "status reconnect %S", playername, sizeof (playername) ) )
+ 		{
+ 			/* if possible, try to revive the player */
+ 			player_revive(player, playername);

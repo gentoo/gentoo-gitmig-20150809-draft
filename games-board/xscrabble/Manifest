@@ -1,0 +1,4 @@
+MD5 c19e0ecddaa500074a5fa91392f2659b files/digest-xscrabble-2.10 184
+MD5 f6e1f3f73d71157779c68284da50e166 files/2.10-path-fixes.patch 1184
+MD5 acbda8865d400fa8ba380d3185ace4a6 ChangeLog 388
+MD5 e0275acd4d84d22937ad7b93ca553120 xscrabble-2.10.ebuild 1160

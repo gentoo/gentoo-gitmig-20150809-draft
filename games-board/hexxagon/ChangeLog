@@ -1,0 +1,8 @@
+# ChangeLog for app-games/hexxagon
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/hexxagon/ChangeLog,v 1.1 2003/09/10 17:46:27 vapier Exp $
+
+*hexxagon-0.3.1 (22 Jun 2003)
+
+  22 Jun 2003; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by Colonel Paneek <colp@solder.ath.cx> #16986.
