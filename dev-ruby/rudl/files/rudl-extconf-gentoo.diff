@@ -1,0 +1,16 @@
+--- extconf.rb.orig	2003-09-27 07:59:45.000000000 +0900
++++ extconf.rb	2004-03-20 03:58:22.090782672 +0900
+@@ -52,10 +52,10 @@
+ windows=mswin32||cygwin
+ unix=!windows
+ 
+-$CFLAGS+="-funroll-loops " if !mswin32
++$CFLAGS+=" -funroll-loops " if !mswin32
+ 
+-$CFLAGS+="-Wall " if unix||cygwin
+-$CPPFLAGS+="-GX " if mswin32
++$CFLAGS+=" -Wall " if unix||cygwin
++$CPPFLAGS+=" -GX " if mswin32
+ 
+ if unix
+ 	$CFLAGS += `#{sdl_config} --cflags`.chomp

@@ -1,0 +1,11 @@
+--- rudl_video_surface.c.orig	2003-10-19 20:26:13.000000000 +0900
++++ rudl_video_surface.c	2004-03-20 04:14:43.786542232 +0900
+@@ -58,7 +58,7 @@
+ 	return surface;
+ }
+ 
+-__inline__ void setMasksFromBPP(Uint32 bpp, boolean alphaWanted, Uint32* Rmask, Uint32* Gmask, Uint32* Bmask, Uint32* Amask)
++__inline__ void setMasksFromBPP(Uint32 bpp, bool alphaWanted, Uint32* Rmask, Uint32* Gmask, Uint32* Bmask, Uint32* Amask)
+ {
+ 	*Amask = 0;
+ 	if(alphaWanted && (bpp==32||bpp==16)){

@@ -1,16 +1,16 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rudl/rudl-0.7.ebuild,v 1.4 2004/03/19 19:23:05 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rudl/rudl-0.7.1.ebuild,v 1.1 2004/03/19 19:23:05 usata Exp $
 
 inherit ruby
 
 DESCRIPTION="Rubyesque Directmedia Layer - Ruby/SDL bindings"
 HOMEPAGE="http://rudl.sourceforge.net/"
-SRC_URI="mirror://sourceforge/rudl/${P}-source.tgz"
+SRC_URI="mirror://sourceforge/rudl/${P}-source.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="x86"
 USE_RUBY="ruby16 ruby18 ruby19"
+KEYWORDS="~x86"
 IUSE=""
 DEPEND=">=media-libs/libsdl-1.2.4.20020601
 	>=media-libs/sdl-gfx-2.0.3
@@ -18,23 +18,22 @@ DEPEND=">=media-libs/libsdl-1.2.4.20020601
 	>=media-libs/sdl-mixer-1.2.4
 	>=media-libs/sdl-ttf-2.0.5
 	>=dev-lang/ruby-1.6.7"
-S="${WORKDIR}/${PN}"
+S="${WORKDIR}"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
 	epatch ${FILESDIR}/${PN}-extconf-gentoo.diff
+	epatch ${FILESDIR}/${P}-gentoo.diff
 }
 
 src_compile() {
 	ruby extconf.rb
 	emake || die
-	#make || die
 }
 
-src_install() {
-	# AFAIK this package's makefile does not make use of DESTDIR
-	# and it contains neither man nor info pages.
-	# make DESTDIR=${D} install || die
-	make prefix=${D}/usr install || die
-}
+#src_install() {
+#	# AFAIK this package's makefile does not make use of DESTDIR
+#	# and it contains neither man nor info pages.
+#	# make DESTDIR=${D} install || die
+#	make prefix=${D}/usr install || die
+#}

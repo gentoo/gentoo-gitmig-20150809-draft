@@ -1,6 +1,14 @@
 # ChangeLog for dev-ruby/rudl
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rudl/ChangeLog,v 1.3 2003/10/23 13:59:09 aliz Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rudl/ChangeLog,v 1.4 2004/03/19 19:23:05 usata Exp $
+
+*rudl-0.7.1 (20 Mar 2004)
+
+  20 Mar 2004; Mamoru KOMACHI <usata@gentoo.org> rudl-0.7.1.ebuild,
+  rudl-0.7.ebuild, files/rudl-0.7.1-gentoo.diff,
+  files/rudl-extconf-gentoo.diff:
+  Version bumped and added ruby.eclass support. Updated HOMEPAGE and
+  SRC_URI. Fixed missing category in DEPEND list, see bug #45110.
 
 *rudl-0.7 (11 Nov 2002) 
 
