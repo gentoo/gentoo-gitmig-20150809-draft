@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/pyds
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyds/ChangeLog,v 1.4 2004/02/17 12:19:20 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyds/ChangeLog,v 1.5 2004/04/17 12:02:58 kloeri Exp $
+
+*pyds-0.7.1 (17 Apr 2004)
+
+  17 Apr 2004; Bryan Østergaard <kloeri@gentoo.org> pyds-0.7.0.ebuild,
+  +pyds-0.7.1.ebuild:
+  Version bump.
 
   14 Feb 2004; Alastair Tse <liquidx@gentoo.org> pyds-0.7.0.ebuild:
   also add patch to 0.7.0
