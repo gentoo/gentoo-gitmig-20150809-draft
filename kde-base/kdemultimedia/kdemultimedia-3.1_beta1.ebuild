@@ -1,6 +1,6 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.1_beta1.ebuild,v 1.4 2002/08/30 07:06:17 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.1_beta1.ebuild,v 1.5 2002/09/20 10:19:49 danarmak Exp $
 inherit kde-dist flag-o-matic 
 
 DESCRIPTION="KDE $PV - multimedia apps"
@@ -45,6 +45,8 @@ use motif	&& myinterface="$myinterface,motif" && myconf="$myconf --enable-motif"
 use slang	&& myinterface="$myinterface,slang" && myconf="$myconf --enable-slang"
 use tcltk	&& myinterface="$myinterface,tcltk" && myconf="$myconf --enable-tcltk"
 use oggvorbis	&& myconf="$myconf --with-vorbis=/usr"		|| myconf="$myconf --without-vorbis"
+
+use cdr		|| KDE_REMOVE_DIR="kaudiocreator"
 
 export DO_NOT_COMPILE="xine_artsplugin"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.0.3.ebuild,v 1.2 2002/08/30 03:34:18 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.0.3.ebuild,v 1.3 2002/09/20 10:19:49 danarmak Exp $
 inherit kde-dist flag-o-matic
 
 DESCRIPTION="KDE $PV - multimedia apps"
@@ -15,11 +15,13 @@ newdepend ">=sys-libs/ncurses-5.2
 	motif? ( >=x11-libs/openmotif-2.1.30 )
 	gtk? ( =x11-libs/gtk+-1.2* )
 	slang? ( >=sys-libs/slang-1.4.4 )
-	app-cdr/cdrtools
-	>=app-cdr/cdrdao-1.1.5
 	>=media-sound/mpg123-0.59r
 	tcltk? ( >=dev-lang/tk-8.0.5-r2 )"
 #	alsa? ( >=media-libs/alsa-lib-0.5.9 )"
+
+RDEPEND="$RDEPEND
+	cdr? ( app-cdr/cdrtools
+	>=app-cdr/cdrdao-1.1.5 )"
 
 replace-flags "-O3" "-O2"
 
@@ -37,6 +39,8 @@ use slang	&& myinterface="$myinterface,slang" && myconf="$myconf --enable-slang"
 use tcltk	&& myinterface="$myinterface,tcltk" && myconf="$myconf --enable-tcltk"
 
 myconf="$myconf $myaudio $myinterface"
+
+use cdr		|| KDE_REMOVE_DIR="koncd"
 
 src_unpack() {
     
