@@ -1,5 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-2.1.2-r1.ebuild,v 1.3 2004/01/07 20:28:39 mr_bones_ Exp $
 
 DESCRIPTION="Eclipse Tools Platform"
 HOMEPAGE="http://www.eclipse.org/"
@@ -55,7 +56,7 @@ src_compile() {
 	if [ ! -z "`java-config --java-version | grep IBM`" ] ; then
 		ANT_EXTRA_OPTS="-Dbootclasspath=`java-config --jdk-home`/jre/lib/core.jar"
 	fi
-	
+
 	gtk_launcher_src_dir="${WORKDIR}/plugins/platform-launcher/library/gtk"
 	motif_launch_src_dir="${WORKDIR}/plugins/platform-launcher/library/motif"
 	gtk_swt_src_dir=${WORKDIR}/plugins/org.eclipse.swt/Eclipse\ SWT\ PI/gtk/library
@@ -187,7 +188,7 @@ src_compile() {
 	fi
 
 
-	# remove all the java files so we can install this. 
+	# remove all the java files so we can install this.
 	# there is no install target in build.xml for some reason and
 	# we don't want all of these files merged.
 	# also remove all the .project, .classpath and build.* files spread out all over the place
