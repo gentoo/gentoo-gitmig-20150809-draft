@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre4-r7.ebuild,v 1.11 2004/07/31 17:02:41 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre4-r7.ebuild,v 1.12 2004/08/12 17:31:43 ferringb Exp $
 
 inherit eutils flag-o-matic kmod
 
@@ -181,10 +181,10 @@ src_compile() {
 	fi
 
 	#disable png *only* if the flag is off, and gtk gui isn't on.
-	if use !png && use !gtk; then
-		myconf="${myconf} --disable-png"
+	if use png ||  use gtk; then
+		myconf="${myconf} --enable-png"
 	else
-		myconf="${myconf} $(use_enable png)"
+		myconf="${myconf} --disable-png"
 	fi
 
 	if use ia64 || use !network; then
