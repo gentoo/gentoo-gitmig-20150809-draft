@@ -1,33 +1,32 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/pingus/pingus-0.6.0-r1.ebuild,v 1.6 2004/06/24 23:08:44 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/pingus/pingus-0.6.0-r1.ebuild,v 1.7 2004/08/15 08:53:52 vapier Exp $
 
-inherit eutils games
+inherit games eutils flag-o-matic
 
 DESCRIPTION="free Lemmings clone"
 HOMEPAGE="http://pingus.seul.org/"
 SRC_URI="http://pingus.seul.org/files/${P}.tar.bz2"
 
-KEYWORDS="x86"
 LICENSE="GPL-2"
 SLOT="0"
+KEYWORDS="x86 amd64"
 IUSE="nls opengl"
 
 DEPEND=">=media-libs/hermes-1.3.2-r2
 	=dev-games/clanlib-0.6.5*
 	>=dev-libs/libxml2-2.5.6"
 
-pkg_setup() {
-	clanlib-config 0.6.5
-}
-
 src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch "${FILESDIR}/${PV}-gcc3.patch"
+	autoconf || die
 }
 
 src_compile() {
+	append-flags -I${ROOT}/usr/include/clanlib-0.6.5
+	append-ldflags -L${ROOT}/usr/lib/clanlib-0.6.5
 	egamesconf \
 		--with-bindir="${GAMES_BINDIR}" \
 		--with-datadir="${GAMES_DATADIR_BASE}" \
