@@ -1,8 +1,11 @@
 # ChangeLog for app-i18n/imhangul
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/imhangul/ChangeLog,v 1.6 2003/04/14 14:58:45 seo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/imhangul/ChangeLog,v 1.7 2003/04/25 14:03:05 seo Exp $
 
 *imhangul-0.9.6 (14 Apr 2003)
+
+  25 Apr 2003; Jungmin Seo <seo@gentoo.org> imhangul-0.9.6.ebuild :
+  fixed dependency (gtk+2.0.6 -> gtk+-2.2.0), and now it is stable
 
   14 Apr 2003; Jungmin Seo <seo@gentoo.org> imhangul-0.9.6.ebuild :
   new version
