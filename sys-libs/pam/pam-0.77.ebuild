@@ -1,6 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.77.ebuild,v 1.3 2003/11/13 06:18:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.77.ebuild,v 1.4 2003/11/13 20:46:04 vapier Exp $
+
+PATCH_LEVEL="1.0"
+BDB_VER="4.1.25"
+PAM_REDHAT_VER="0.77-4"
 
 DEPEND="dev-lang/perl
 	>=sys-libs/cracklib-2.7-r8
@@ -35,10 +39,6 @@ inherit gcc eutils flag-o-matic
 
 HOMEPAGE="http://www.kernel.org/pub/linux/libs/pam/"
 DESCRIPTION="Pluggable Authentication Modules"
-
-PATCH_LEVEL="1.0"
-BDB_VER="4.1.25"
-PAM_REDHAT_VER="0.77-4"
 
 S="${WORKDIR}/Linux-PAM-${PV}"
 S2="${WORKDIR}/pam-${PVR}-patches"
