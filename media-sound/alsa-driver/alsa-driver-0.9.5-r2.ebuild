@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-0.9.5-r2.ebuild,v 1.1 2003/07/15 16:26:35 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-0.9.5-r2.ebuild,v 1.2 2003/07/15 17:02:39 agenkin Exp $
 
 DESCRIPTION="Advanced Linux Sound Architecture kernel modules"
 HOMEPAGE="http://www.alsa-project.org/"
@@ -20,6 +20,7 @@ IUSE="oss"
 # Need the baselayout 1.7.9 or newer for the init script to work correctly.
 DEPEND="sys-devel/autoconf
 	virtual/glibc
+	virtual/linux-sources
 	>=sys-apps/portage-1.9.10
 	>=sys-apps/baselayout-1.7.9"
 PROVIDE="virtual/alsa"
@@ -45,8 +46,7 @@ src_unpack() {
 
 	# Fix for compilation problems with SMP-enabled kernels.
 	# Bug #24323.
-	patch -p1 < ${FILESDIR}/${P}-ak4117-fix.patch || die
-	patch -p1 < ${FILESDIR}/${P}-pdaudiocf-fix.patch || die
+	patch -p1 < ${FILESDIR}/${P}-spinlock_t.patch || die
 
 }
 
