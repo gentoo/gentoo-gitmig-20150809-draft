@@ -1,6 +1,11 @@
 # ChangeLog for app-doc/autobook
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/autobook/ChangeLog,v 1.2 2004/06/24 21:38:37 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/autobook/ChangeLog,v 1.3 2004/09/12 23:19:28 mr_bones_ Exp $
+
+*autobook-1.4 (12 Sep 2004)
+
+  12 Sep 2004; Michael Sterrett <mr_bones_@gentoo.org> +autobook-1.4.ebuild:
+  version bump
 
 *autobook-1.3 (16 Mar 2003)
   16 Mar 2003; J.Alberto Suárez López <bass@gentoo.org> autobook-1.3.ebuild:
