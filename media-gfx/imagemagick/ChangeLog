@@ -1,10 +1,14 @@
 # ChangeLog for media-gfx/imagemagick
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/ChangeLog,v 1.8 2002/04/13 13:09:42 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/ChangeLog,v 1.9 2002/04/17 17:41:03 azarah Exp $
+
+  17 Apr 2002; Martin Schlemmer <azarah@gentoo.org> imagemagick-5.4.4-r2.ebuild :
+
+  Libtoolized to fix build problems with dual gcc installations.
 
 *imagemagick-5.4.4-r2 (13 Apr 2002)
 
-  13 Apr 2002; Seemant Kulleen <seemant@gentoo.org> imagemagick-5.4.4-r2.ebuild
+  13 Apr 2002; Seemant Kulleen <seemant@gentoo.org> imagemagick-5.4.4-r2.ebuild :
   files/digest-imagemagick-5.4.4-r2 :
 
   I rearranged the MY_P variables, and oops'd on it, because it wasn't setting
