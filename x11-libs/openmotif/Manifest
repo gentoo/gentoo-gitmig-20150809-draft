@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 fbb20870c7615b798d58853827d0b3a4 openmotif-2.1.30-r12.ebuild 5242
-MD5 d97af874221917fcce29fff3a1a63e48 openmotif-2.2.3-r3.ebuild 3238
+MD5 fe1eed3a8d07695afa719aca4a428fc9 openmotif-2.1.30-r12.ebuild 5260
+MD5 820298e14c2fe7aa9d83621eb59a75ad openmotif-2.2.3-r3.ebuild 3239
 MD5 18a738af27482c9abb5153e4227db96d openmotif-2.1.30-r6.ebuild 3861
 MD5 adfb21d30974061a3fa839be7831ea77 openmotif-2.2.3.ebuild 3190
 MD5 459687380ba71bba6e17cd677c6f9d60 openmotif-2.1.30-r7.ebuild 3986
 MD5 c809a002367d77a58dea832df44290c9 ChangeLog 15678
 MD5 503ccb1138f9c49f0855884d830988a6 metadata.xml 253
-MD5 72c74f867e31f8976394e1ca475cf76e openmotif-2.2.3-r6.ebuild 3881
+MD5 edb33af06bf83d50fa5c4a47d1dc63e4 openmotif-2.2.3-r6.ebuild 3899
 MD5 37febd986e265643fcd22394f41d92ac openmotif-2.1.30-r9.ebuild 3987
 MD5 ee3a092a933a6393bf14d5d7e6231934 files/openmotif-2.1.30-xpm2.diff 47085
 MD5 744ea82c1ac06c88fb0e8c93418d5a6e files/digest-openmotif-2.2.3-r3 68
@@ -46,7 +46,7 @@ MD5 216193f922fae0747195fd851696b580 files/openmotif-2.2.3-mwm-configdir.patch 1
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCQvfSevY57Fted3ERAkTkAKCgMo3ch/1m7k3KcpFoW1bonEf7PgCcD4DU
-TN/87o2E7tUcc5Zo+oeISlI=
-=4gCH
+iD8DBQFCQ7lNevY57Fted3ERAnzzAJ9OOoX+3iLQS+rqOe9fpNstAH4aRgCfTala
+gMDV0U9RmZJUGik8vzCSe2w=
+=XXQa
 -----END PGP SIGNATURE-----
