@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 9f87dffda39ac5c559aef68bf2b647c4 ChangeLog 680
 MD5 b8a08e3c1c20196a639e132f0106ab28 avinfo-1.0_alpha15.ebuild 653
-MD5 194354179c380c5dab0498d715fae079 metadata.xml 230
+MD5 effe5e070522123c77b8f0fe75082671 ChangeLog 773
+MD5 31018765c8c65a239dba78a98c405543 metadata.xml 224
 MD5 ebc518a8585fd39dbe7888a14b38975b files/digest-avinfo-1.0_alpha15 62
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBpkyFFdQwWVoAgN4RAsKFAKCcAFh19/aYNyW5HURX/zTTgYF3FgCg7qZn
-wKa9HRkvsR+/3r305AXMYsA=
-=VyZE
+iD8DBQFBrKBpI1lqEGTUzyQRAmEFAKCqXWb6kzSbnsEvtF11jClv7/kBuACfUJeb
+qzgjsQIC8zpfxMWCqypzy9E=
+=NtYO
 -----END PGP SIGNATURE-----
