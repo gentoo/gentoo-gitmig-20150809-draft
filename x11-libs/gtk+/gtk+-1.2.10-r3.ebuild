@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-1.2.10-r3.ebuild,v 1.1 2001/08/30 04:33:21 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-1.2.10-r3.ebuild,v 1.2 2001/09/29 17:29:10 azarah Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -51,7 +51,7 @@ src_install() {
 	docinto html
 	dodoc *.html *.gif
 
-	#install nice, clean-looking default gtk+ style
-	insinto /etc/X11/gtk
+	#install nice, clean-looking gtk+ style
+	insinto /usr/X11R6/share/themes/Gentoo/gtk
 	doins ${FILESDIR}/gtkrc
 }
