@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.4.20-r4.ebuild,v 1.1 2003/05/08 21:32:50 pfeifer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.4.20-r5.ebuild,v 1.1 2003/05/10 03:49:27 pfeifer Exp $
 
 IUSE="build crypt evms2 aavm usagi"
 
@@ -125,9 +125,12 @@ pkg_postinst() {
 	echo
 	einfo "This set contains the ptrace patch as part of grsecurity."
 	echo
-	einfo "If there are issues with it, please check http://bugs.gentoo.org/"
-	einfo "for an existing bug first. Then create a new bug if you have not found"
-	einfo "one that matches your issue. Assign it to x86-kernel@gentoo.org"
+	einfo "If there are issues with it, read the docs and associated help provided."
+	einfo "Next you should check http://forums.gentoo.org/ for assistance."
+	einfo "Otherwise check http://bugs.gentoo.org/ for an existing bug."
+	einfo "Only create a new bug if you have not found one that matches your issue."
+	einfo "It is best to do an advanced search as the initial search has a very low yield."
+	einfo "Assign bugs to x86-kernel@gentoo.org"
 	echo
 	einfo "Please read the changelog and associated docs for more information."
 }
