@@ -1,4 +1,4 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 
 IUSE="xml2"
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.vcdimager.org/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ppc"
 
 # Ideally this would also include help2man, but it's not yet in portage.
 DEPEND=">=dev-libs/libcdio-0.64

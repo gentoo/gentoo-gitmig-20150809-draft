@@ -1,6 +1,9 @@
 # ChangeLog for media-video/vcdimager
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vcdimager/ChangeLog,v 1.9 2003/10/20 22:01:13 mholzer Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/vcdimager/ChangeLog,v 1.10 2004/01/17 05:26:45 darkspecter Exp $
+
+  16 Jan 2004; Bartosch Pixa <darkspecter@gentoo.org> vcdimager-0.7.19.ebuild:
+  set ppc in keywords
 
 *vcdimager-0.7.19 (22 Oct 2003)
 
