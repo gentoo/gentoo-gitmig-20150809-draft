@@ -1,5 +1,5 @@
-MD5 3b33ce5b1c6ff83186b9ac22471d5b50 ChangeLog 606
+MD5 b15c4e894f46c71f5f8b47d12c4621a1 ChangeLog 612
 MD5 e2221de0c28464ca6e2051d7e29b9ae0 pnetlib-0.5.2.ebuild 615
-MD5 71608bb79bd77d9d711115d49ae055ac pnetlib-0.5.4.ebuild 516
+MD5 f9d897955e55beeaace449214b602f1e pnetlib-0.5.4.ebuild 621
 MD5 a680aaff693359f344290a0437eff55b files/digest-pnetlib-0.5.2 66
 MD5 0b36bf226bd0a7d2048ccc75e9eb2431 files/digest-pnetlib-0.5.4 66
