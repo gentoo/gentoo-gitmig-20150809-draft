@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/openmosixview/openmosixview-1.2.ebuild,v 1.2 2002/09/28 17:02:25 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/openmosixview/openmosixview-1.2.ebuild,v 1.3 2002/10/02 19:16:33 tantive Exp $
 
 
 S=${WORKDIR}/openmosixview
@@ -78,12 +78,15 @@ pkg_postinst() {
 	einfo
 	einfo "You will need ssh to all cluster-nodes without password."
 	einfo
-	einfo "To setup your other nodes you will have to copy the openmosixprocs binary to them:"
-	einfo "scp /usr/local/bin/openmosixprocs your_node:/usr/local/bin/openmosixprocs"
+	einfo "To setup your other nodes you will have to copy the"
+	einfo "openmosixprocs binary onto each node"
+	einfo "(scp /usr/local/bin/openmosixprocs your_node:/usr/local/bin/openmosixprocs)"
 	einfo
-	einfo "Start openmosixcollector manually (/etc/init.d/openmosixcollector start) or"
-	einfo "automatically using rc-update (rc-update add /etc/init.d/openmosixcollector default)."
+	einfo "Start openmosixcollector"
+	einfo "manually (/etc/init.d/openmosixcollector start) or"
+	einfo "automatically using rc-update"
+	einfo "(rc-update add /etc/init.d/openmosixcollector default)."
 	einfo
-	einfo "Start openmosixview by simply typing openmosixview"
+	einfo "Run openmosixview by simply typing openmosixview."
 	einfo
 }
