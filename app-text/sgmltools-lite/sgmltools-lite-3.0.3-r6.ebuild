@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sgmltools-lite/sgmltools-lite-3.0.3-r6.ebuild,v 1.6 2003/09/05 22:37:22 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sgmltools-lite/sgmltools-lite-3.0.3-r6.ebuild,v 1.7 2003/09/27 14:58:26 obz Exp $
 
 inherit sgml-catalog
 
@@ -69,10 +69,10 @@ src_install() {
 	# Create simple alias scripts that people are used to
 	# And make the manpages for those link to the sgmltools-lite manpage
 	mandir=${D}/usr/share/man/man1
-	ScripTEXT="/usr/bin/sgmltools --backend="
+	ScripTEXT="#!/bin/sh\n/usr/bin/sgmltools --backend="
 	for back in html ps dvi rtf txt
 	do
-		echo "${ScripTEXT}${back}" > sgml2${back}
+		echo -e ${ScripTEXT}${back} '$*' > sgml2${back}
 		exeinto /usr/bin
 		doexe sgml2${back}
 

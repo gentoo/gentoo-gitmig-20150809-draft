@@ -1,6 +1,11 @@
 # ChangeLog for app-text/sgmltools-lite
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sgmltools-lite/ChangeLog,v 1.18 2003/06/12 20:28:17 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sgmltools-lite/ChangeLog,v 1.19 2003/09/27 14:58:26 obz Exp $
+
+  27 Sep 2003; Mike Gardiner <obz@gentoo.org> metadata.xml,
+  sgmltools-lite-3.0.3-r5.ebuild, sgmltools-lite-3.0.3-r6.ebuild:
+  Fixed the sgml2* tools, thanks to <parapente@mail15.com> for bug #27658. Added
+  metadata.xml and removed older -r5 version
 
   12 Jun 2003; <msterret@gentoo.org> sgmltools-lite-3.0.3-r5.ebuild,
   sgmltools-lite-3.0.3-r6.ebuild:
