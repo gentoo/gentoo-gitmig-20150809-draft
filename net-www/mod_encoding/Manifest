@@ -1,5 +1,5 @@
-MD5 480d1683c5702251b71fac2453d8b7cf mod_encoding-20021209.ebuild 1355
-MD5 c0a9aa140a441c14c4e1ecbb404fa385 ChangeLog 537
+MD5 0f7efcdc0f92452a3b49703df471fe2f mod_encoding-20021209.ebuild 1351
+MD5 1e713b96b6ec1890d4ed06077eedcfe5 ChangeLog 533
 MD5 d2da0e45d7e39184d1cb7abbe3879086 metadata.xml 159
 MD5 e274f697cbb8b61da07d216dd8100f47 files/mod_encoding.conf 336
 MD5 00857432d70d5a0a4f1723623feee5f6 files/digest-mod_encoding-20021209 73

@@ -1,5 +1,5 @@
-MD5 7915ec1ee210d1a94fdff57c3d5fa594 mod_roaming-2.0.0.ebuild 984
-MD5 8591c34a1ffbfdc41b9774a93fcefb04 ChangeLog 555
+MD5 4f3f27503b1d4deecbdc0922ad0ab7d9 mod_roaming-2.0.0.ebuild 980
+MD5 ff741a6e895320dc8cba00c19dee88c7 ChangeLog 551
 MD5 d2da0e45d7e39184d1cb7abbe3879086 metadata.xml 159
 MD5 6ccb5bfdbe8bfba614da810c60d0acee files/18_mod_roaming.conf 414
 MD5 0c01fe5f077bd4d205041537b5ac85e1 files/mod_roaming-register.patch 761

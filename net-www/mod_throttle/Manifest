@@ -1,5 +1,5 @@
-MD5 f0f6c937aed84965ec8e85cf84efdcfd mod_throttle-3.1.2-r1.ebuild 1278
-MD5 27399b5bfd977017f4de4356d70c4555 ChangeLog 935
+MD5 94d00484d6cb6dd8bfd92b49695d1f50 mod_throttle-3.1.2-r1.ebuild 1275
+MD5 c4fdfee9f03bfb2a60a301a1032fe548 ChangeLog 932
 MD5 d2da0e45d7e39184d1cb7abbe3879086 metadata.xml 159
 MD5 758dec7efa2b34d6c0b42a8b911ae163 files/digest-mod_throttle-3.1.2-r1 63
 MD5 4a46e6ffa79445bf5ab527f42b81a89b files/mod_throttle.conf 525

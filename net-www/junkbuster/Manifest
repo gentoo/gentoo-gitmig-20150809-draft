@@ -1,4 +1,4 @@
-MD5 1ff3172585603afda49e630e23da0339 ChangeLog 871
-MD5 f0de1d007c085bf84063cae8b23fe71d junkbuster-2.0.2.ebuild 928
+MD5 089263c48c158c5434864a7a0cb41f90 junkbuster-2.0.2.ebuild 919
+MD5 378d72c64f00fbd06ed07547c2a6ffc8 ChangeLog 864
 MD5 144473c056c1fe200cf39e691a8417ba files/digest-junkbuster-2.0.2 70
-MD5 99314d107237a3f2ee7c6f458c9b16df files/junkbuster.rc6 590
+MD5 31529dd845cfe8ef0cdb534127c6d159 files/junkbuster.rc6 589

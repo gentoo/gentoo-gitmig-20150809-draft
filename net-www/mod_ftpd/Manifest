@@ -1,5 +1,5 @@
-MD5 6b56b6626ef76ea59da7daade763528f mod_ftpd-0.12.3.ebuild 1138
-MD5 823cc98bad569167ba80770687f6269e ChangeLog 658
+MD5 a83db93af4318818ae9af414376a78fd mod_ftpd-0.12.3.ebuild 1135
+MD5 cee40c63afa7aa39c615a6059d2b3965 ChangeLog 655
 MD5 5b6dd438f81019e56fa641841c0c13fe metadata.xml 501
 MD5 853c5251554ad3b0b04dd46bd6f3ce90 files/digest-mod_ftpd-0.12.3 68
 MD5 e4b00c859e767293dba0066453b34da2 files/0.12.3-mod_ftpd-ipv6.patch 513
