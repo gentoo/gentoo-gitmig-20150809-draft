@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/openh323-1.13.5.ebuild,v 1.11 2005/01/08 20:15:47 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/openh323-1.13.5.ebuild,v 1.12 2005/01/10 12:24:44 stkn Exp $
 
 IUSE="ssl"
 
@@ -66,6 +66,9 @@ src_unpack() {
 
 src_compile() {
 	local makeopts
+
+	# remove -fstack-protector, may cause problems (bug #75259)
+	filter-flags -fstack-protector
 
 	export PWLIBDIR=/usr/share/pwlib
 	export PTLIB_CONFIG=/usr/bin/ptlib-config
