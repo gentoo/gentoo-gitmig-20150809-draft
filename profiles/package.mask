@@ -279,10 +279,6 @@ gnome-extra/gcalctool
 # 1.16 breaks jEdit, better use >=1.17
 =dev-java/jikes-1.16
 
-# <raker@gentoo.org> (17 Oct 2002)
-# new ncurses.  Please comment on bug #9245
->=sys-libs/ncurses-5.3
-
 # <seemant@gentoo.org> (16 Oct 2002)
 # new version is 3.2 (upstream has version numbering issues)
 =x11-plugins/gkrellshoot-0.3.11
@@ -886,9 +882,6 @@ sys-apps/sysvinit
 
 #untested, author mentions an error
 media-libs/id3lib-docs
-
-#still not working:
-=sys-libs/ncurses-5.2-r4
 
 # conflict with linux-sources, to be resolved soon
 sys-kernel/linux-sources-vanilla
