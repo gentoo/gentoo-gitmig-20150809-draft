@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/nucleo
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/nucleo/ChangeLog,v 1.6 2004/12/02 11:34:58 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/nucleo/ChangeLog,v 1.7 2004/12/03 10:58:25 usata Exp $
+
+  03 Dec 2004; Mamoru KOMACHI <usata@gentoo.org> +files/nucleo-0.1-nv.patch,
+  nucleo-0.1_p20041130.ebuild:
+  Added a patch to fix bug #72934.
 
 *nucleo-0.1_p20041130 (02 Dec 2004)
 

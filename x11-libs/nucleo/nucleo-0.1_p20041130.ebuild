@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/nucleo/nucleo-0.1_p20041130.ebuild,v 1.1 2004/12/02 11:34:58 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/nucleo/nucleo-0.1_p20041130.ebuild,v 1.2 2004/12/03 10:58:25 usata Exp $
+
+inherit eutils
 
 IUSE=""
 
@@ -19,6 +21,12 @@ LICENSE="LGPL-2.1"
 KEYWORDS="~x86 ~ppc"
 
 S="${WORKDIR}/${P/_p*/}"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}/nucleo/gl/texture
+	epatch ${FILESDIR}/${P/_p*/}-nv.patch
+}
 
 src_compile() {
 	econf || die "configure failed"
