@@ -1,4 +1,6 @@
 MD5 4b0f826fba3fc7a08f390a7341fc0a7c virtualjaguar-1.0.5.ebuild 1248
 MD5 6a6a75a8e9fd2d0497cb8b24ad71d7d8 ChangeLog 401
+MD5 3f9e92fd49f7aa9df5eb24c446324608 virtualjaguar-1.0.6.ebuild 1252
 MD5 537c716601ef69dc13d9285e99d0f339 files/digest-virtualjaguar-1.0.5 72
-MD5 3c40df8eb5791440301d22df29713f43 files/virtualjaguar 751
+MD5 8939c8d227b3de0c10b4e6283b684967 files/virtualjaguar 751
+MD5 8c33120cd4e2306208ebe81ada04636d files/digest-virtualjaguar-1.0.6 76
