@@ -1,0 +1,8 @@
+# ChangeLog for <CATEGORY>/<PACKAGE_NAME>
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/prosper/ChangeLog,v 1.1 2003/07/14 02:53:10 satai Exp $
+
+*prosper-1.00.4 (13 Jul 2003)
+
+  13 Jul 2003; Matthew Turk <satai@gentoo.org> :
+  Initial import.  Ebuild submitted by Marc Reynes <marc.reynes@tuxfamily.org>
