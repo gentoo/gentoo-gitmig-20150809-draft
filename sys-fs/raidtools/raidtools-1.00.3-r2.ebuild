@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/raidtools/raidtools-1.00.3-r2.ebuild,v 1.3 2004/09/04 18:10:22 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/raidtools/raidtools-1.00.3-r2.ebuild,v 1.4 2004/09/06 02:28:34 swegener Exp $
 
 inherit flag-o-matic eutils
 
@@ -21,6 +21,7 @@ src_unpack() {
 
 	cd ${S}
 	epatch ${FILESDIR}/mkraid.c-gcc33.patch
+	epatch ${FILESDIR}/${P}-2.6.Headers.patch
 
 	# Buffer overflow fix
 	sed -i "s:#define MAX_LINE_LENGTH\t\t\t(100):#define MAX_LINE_LENGTH (1000):" \
