@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/fribidi
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/fribidi/ChangeLog,v 1.3 2003/07/04 09:13:33 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/fribidi/ChangeLog,v 1.4 2003/07/05 16:31:50 nakano Exp $
+
+*fribidi-0.10.4 (01 Apr 2003)
+
+  05 Jul 2003; Masatomo Nakano <nakano@gentoo.org> fribidi-0.10.4.ebuild:
+  Marked as stable(x86,ppc)
 
   04 Jun 2003; Luca Barbato <lu_zero@gentoo.org> fribidi-0.10.4.ebuild :
   Added ~ppc keyword
@@ -10,8 +15,6 @@
   one to app-text. We've discovered this now and will keep his ebuild (which is
   better) in dev-libs (which is a more logical location). So, this is his
   ebuild.
-
-*fribidi-0.10.4 (01 Apr 2003)
 
   01 Apr 2003; danarmak <danarmak@gentoo.org> fribidi-0.10.4.ebuild:
   fribidi is a library implementing the Unicode Bidirectional Algorithm
