@@ -30,7 +30,7 @@ KEYWORDS="~ppc"
 
 DEPEND="virtual/libc
 	>=dev-java/java-config-0.2.5
-	doc? ( =dev-java/java-sdk-docs-1.4.2* )
+	doc? ( =dev-java/java-sdk-docs-1.4.1* )
 	X? ( virtual/x11 )"
 RDEPEND=" !ppc64? sys-libs/lib-compat"
 
