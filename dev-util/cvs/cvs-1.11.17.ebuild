@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs/cvs-1.11.17.ebuild,v 1.6 2004/06/10 10:09:08 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs/cvs-1.11.17.ebuild,v 1.7 2004/06/10 20:14:32 scandium Exp $
 
 inherit eutils flag-o-matic
 
@@ -18,7 +18,7 @@ SRC_URI="http://ccvs.cvshome.org/files/documents/19/191/${P}.tar.bz2
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc mips alpha ~arm hppa amd64 ~ia64 ~ppc64 ~s390"
+KEYWORDS="x86 ppc sparc mips alpha ~arm hppa amd64 ia64 ~ppc64 ~s390"
 
 IUSE="doc emacs"
 
