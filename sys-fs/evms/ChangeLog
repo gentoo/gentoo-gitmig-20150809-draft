@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/evms
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/ChangeLog,v 1.4 2003/12/13 19:37:52 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/ChangeLog,v 1.5 2003/12/22 16:50:28 iggy Exp $
+
+  22 Dec 2003; Brian Jackson <iggy@gentoo.org> evms-2.1.1.ebuild,
+  evms-2.2.1.ebuild:
+  stable bump
 
   13 Dec 2003; Martin Holzer <mholzer@gentoo.org> evms-2.2.1.ebuild:
   adding RESTRICT="nomirror"
