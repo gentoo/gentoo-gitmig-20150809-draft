@@ -1,14 +1,22 @@
 # ChangeLog for app-admin/powertweak
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/powertweak/ChangeLog,v 1.8 2003/01/12 23:10:07 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/powertweak/ChangeLog,v 1.9 2003/02/11 12:05:34 seemant Exp $
+
+*powertweak-0.99.5_pre20021029 (Oct 29 2002)
+
+  11 Feb 2003; Seemant Kulleen <seemant@gentoo.org>
+  powertweak-0.99.5_pre20021029.ebuild
+  files/powertweak-0.99.5_pre20021029.diff.bz2 :
+
+  Moved the diff onto the mirrors and out of files.  Also, cleaned the
+  ebuild up to use epatch from eutils, etc.
 
   12 Jan 2003; Nick Hadaway <raker@gentoo.org> files/powertweakd.rc6 :
   Fixed up problems in powertweakd.rc6
 
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> :
+  changed sparc ~sparc keywords
  
-*powertweak-0.99.5_pre20021029 (Oct 29 2002)
-
   01 Nov 2002; Nick Hadaway <raker@gentoo.org>
   powertweak-0.99.5_pre20021029.ebuild :
   Marked stable.
