@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.26.ebuild,v 1.5 2003/05/27 12:49:27 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.26.ebuild,v 1.6 2004/03/21 09:40:34 mholzer Exp $
 
 inherit flag-o-matic
 replace-flags -march=pentium4 -march=pentium3
@@ -17,10 +17,10 @@ LICENSE="GPL-2 | BL"
 KEYWORDS="~x86 ~ppc"
 
 DEPEND="virtual/x11
-	>=openal-20020127
-	>=libsdl-1.2
-	>=libvorbis-1.0
-	>=openssl-0.9.6"
+	>=media-libs/openal-20020127
+	>=media-libs/libsdl-1.2
+	>=media-libs/libvorbis-1.0
+	>=dev-libs/openssl-0.9.6"
 
 
 src_install() {
