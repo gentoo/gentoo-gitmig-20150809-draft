@@ -1,0 +1,82 @@
+--- WindowMaker-0.91.0/src/wmspec.c.old	2004-10-24 21:36:15.000000000 +0200
++++ WindowMaker-0.91.0/src/wmspec.c	2004-12-09 18:29:00.000000000 +0100
+@@ -27,6 +27,7 @@
+ 
+ #include <X11/Xlib.h>
+ #include <X11/Xatom.h>
++#include <X11/Xarch.h>
+ #include <string.h>
+ 
+ #include "WindowMaker.h"
+@@ -382,40 +383,54 @@
+                                 &nitems_return, &bytes_after_return, &prop_return);
+ 
+     if (rc==Success && prop_return) {
+-        unsigned int *data = (unsigned int *)prop_return;
++        unsigned long *data = (unsigned long *)prop_return;
+         unsigned int pos = 0, len = 0;
+         unsigned int best_pos = 0, best_tmp = ~0;
++        unsigned int tmp;
+         extern WPreferences wPreferences;
+         unsigned int pref_size = wPreferences.icon_size;
+         unsigned int pref_sq = pref_size*pref_size;
+-        char *src, *dst;
++        unsigned char *src, *dst;
+         RImage *new_rimage;
+ 
+         do {
+             len = data[pos+0]*data[pos+1];
+-            unsigned int tmp = pref_sq-len;
++            tmp = pref_sq-len;
+             if (tmp < best_tmp && tmp > 0) {
+                 best_tmp = tmp;
+-                best_pos = pos;
++                best_pos = pos+2;
+             }
+             pos += 2+len;
+         } while (pos < nitems_return && len != 0);
+ 
+-        new_rimage = RCreateImage(data[best_pos+0], data[best_pos+1], True);
+-        len = data[best_pos+0] * data[best_pos+1];
+-        src = (char*)&data[best_pos+2];
+-        dst = new_rimage->data;
+-        for (pos=0; pos<len; ++pos, src+=4, dst+=4) {
+-            dst[0] = src[2]; /* R */
+-            dst[1] = src[1]; /* G */
+-            dst[2] = src[0]; /* B */
+-            dst[3] = src[3]; /* A */
+-        }
++	if ( best_pos < 2 )  best_pos = 2;
++
++        new_rimage = RCreateImage(data[best_pos-2], data[best_pos-1], True);
+ 
+         if (new_rimage) {
+-            if (wwin->net_icon_image)
+-                RReleaseImage(wwin->net_icon_image);
+-            wwin->net_icon_image = new_rimage;
++          len = data[best_pos-2] * data[best_pos-1];
++          dst = new_rimage->data;
++
++	  for (pos = best_pos; pos < best_pos + len; pos++, dst += 4) {
++	    src = (unsigned char *) &data[pos];
++
++#if BYTE_ORDER == BIG_ENDIAN
++	    src += sizeof(unsigned long) - 4;
++	    dst[0] = src[1]; /* R */
++	    dst[1] = src[2]; /* G */
++	    dst[2] = src[3]; /* B */
++	    dst[3] = src[0]; /* A */
++#else /* Little endian */
++	    dst[0] = src[2]; /* R */
++	    dst[1] = src[1]; /* G */
++	    dst[2] = src[0]; /* B */
++	    dst[3] = src[3]; /* A */
++#endif /* endianness */
++	  }
++
++	  if (wwin->net_icon_image)
++	    RReleaseImage(wwin->net_icon_image);
++	  wwin->net_icon_image = new_rimage;
+         }
+ 
+         XFree(prop_return);
