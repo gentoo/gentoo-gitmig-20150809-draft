@@ -1,0 +1,11 @@
+# ChangeLog for media-libs/openal
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/ChangeLog,v 1.1 2002/04/13 12:20:37 blocke Exp $
+
+*openal-20020127 (13 Apr 2002)
+
+  13 Apr 2002; Bruce A. Locke <blocke@shivan.org> openal-20020127.ebuild :
+
+  OpenAL added to Gentoo
+
+
