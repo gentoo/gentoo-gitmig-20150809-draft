@@ -1,6 +1,9 @@
 # ChangeLog for dev-dotnet/glade-sharp
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/glade-sharp/ChangeLog,v 1.5 2004/12/05 04:27:36 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/glade-sharp/ChangeLog,v 1.6 2004/12/30 23:21:25 swegener Exp $
+
+  31 Dec 2004; Sven Wegener <swegener@gentoo.org> glade-sharp-1.0.4.ebuild:
+  Switched inherit order.
 
   04 Dec 2004; Peter Johanson <latexer@gentoo.org> glade-sharp-1.0.4.ebuild:
   Marking ~ppc, as it's really just a pice of gtk-sharp.
