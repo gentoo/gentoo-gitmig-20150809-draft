@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm-sensors/lm-sensors-2.8.0.ebuild,v 1.8 2004/01/04 18:29:46 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm-sensors/lm-sensors-2.8.0.ebuild,v 1.9 2004/01/04 20:12:25 plasmaroo Exp $
 
 inherit flag-o-matic
 
@@ -75,7 +75,7 @@ src_compile()  {
 
 	cd ${S}
 	emake clean
-	emake I2C_HEADERS=${MYI2C} LINUX=$LINUX || die "lm_sensors requires the source of a compatible kernel version in /usr/src/linux or specified in \$LINUX and >=i2c-2.8.0 support built as modules. This support is included in gentoo-sources as of 2.4.20-r1"
+	emake I2C_HEADERS=${MYI2C} LINUX=$LINUX || die "lm_sensors requires the source of a compatible kernel version in /usr/src/linux or specified in \$LINUX and >=i2c-2.8.0 support built as modules."
 }
 
 src_install() {

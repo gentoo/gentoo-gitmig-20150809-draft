@@ -17,14 +17,14 @@ start() {
 
 	mount | grep sysfs &>/dev/null
 	if [ $? == 0 ]; then
-		if ! [ -e /sys/i2c ]; then
+		if ! ( [ -e /sys/i2c ] || [ -e /sys/bus/i2c ] ); then
 			ebegin "  Loading i2c-core"
 			modprobe i2c-core &>/dev/null
 			if [ $? != 0 ]; then
 				eerror "    Could not load i2c-core!"
 				eend 1
 			fi
-			[ -e /sys/i2c ] || return 1
+			( [ -e /sys/i2c ] || [ -e /sys/bus/i2c ] ) || return 1
 			eend 0
 		fi
 	elif ! [ -e /proc/sys/dev/sensors ]; then
