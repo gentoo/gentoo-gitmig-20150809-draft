@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/glitz/glitz-0.2.3.ebuild,v 1.1 2004/12/19 18:12:43 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/glitz/glitz-0.2.3.ebuild,v 1.2 2004/12/20 13:01:20 twp Exp $
 
 inherit eutils
 
@@ -13,7 +13,6 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc"
 IUSE=""
 DEPEND="virtual/opengl"
-S=${WORKDIR}/${P}
 
 src_compile() {
 	WANT_AUTOMAKE=1.8 ./autogen.sh --prefix=/usr \
