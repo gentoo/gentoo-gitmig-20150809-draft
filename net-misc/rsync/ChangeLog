@@ -1,8 +1,11 @@
 # ChangeLog for net-misc/rsync
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/ChangeLog,v 1.7 2002/07/09 10:51:40 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/ChangeLog,v 1.8 2002/07/29 23:56:38 gerk Exp $
 
 *rsync-2.5.5-r1 (07 May 2002)
+
+  29 Jul 2002; Mark Guertin <gerk@gentoo.org> :
+  Added ppc to keywords
 
   09 Jul 2002; phoen][x <phoenix@gentoo.org> rsync-2.5.5-r1.ebuild :
   Added KEYWORDS, LICENSE, SLOT.

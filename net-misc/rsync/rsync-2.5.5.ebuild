@@ -1,12 +1,12 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/rsync-2.5.5.ebuild,v 1.2 2002/07/09 10:51:40 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/rsync-2.5.5.ebuild,v 1.3 2002/07/29 23:56:38 gerk Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="File transfer program to keep remote files into sync"
 SRC_URI="http://rsync.samba.org/ftp/rsync/${P}.tar.gz"
 HOMEPAGE="http://rsync.samba.org"
-KEYWORDS="x86"
+KEYWORDS="x86 ppc"
 LICENSE="GPL-2"
 SLOT="0"
 
