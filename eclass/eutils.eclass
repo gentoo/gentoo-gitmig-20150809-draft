@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.131 2004/12/26 07:09:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.132 2004/12/26 22:23:35 vapier Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -1298,6 +1298,9 @@ cdrom_get_cds() {
 		einfo "the variable CD_ROOT so that it points to the"
 		einfo "directory containing the files."
 		echo
+		einfo "For example:"
+		einfo "export CD_ROOT=/mnt/cdrom"
+		echo
 	else
 		einfo "This package will need access to ${CDROM_TOTAL_CDS} cds."
 		cdcnt=0
@@ -1321,6 +1324,9 @@ cdrom_get_cds() {
 		einfo "you only have one cdrom, you can export CD_ROOT"
 		einfo "and that place will be used as the same data source"
 		einfo "for all the CDs."
+		echo
+		einfo "For example:"
+		einfo "export CD_ROOT_1=/mnt/cdrom"
 		echo
 	fi
 	export CDROM_CURRENT_CD=0
