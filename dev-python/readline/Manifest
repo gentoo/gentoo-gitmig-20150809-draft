@@ -1,3 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 473c4bd39f60180f5f6e98977888c09b ChangeLog 572
-MD5 1a4401d6340cb84af14e76fe3631db79 readline-2.3.3.ebuild 648
+MD5 4006397f40b1d6ea019e0714e5dfef4f readline-2.3.3.ebuild 558
 MD5 06cb89ebacdc06b393c34d4029abdfa8 files/digest-readline-2.3.3 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFBB6XHHTu7gpaalycRAnNXAKCZw8p6vmFD5GNPZLElwwU5DMoH1gCfT/4i
++jJCW7lBwTbfVTzhclZ7uGA=
+=OAoS
+-----END PGP SIGNATURE-----
