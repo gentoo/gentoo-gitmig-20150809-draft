@@ -5,7 +5,7 @@
 
 depend() {
 	need net
-	use mysql named
+	use mysql dns logger
 }
 
 start() {
@@ -35,4 +35,3 @@ svc_restart() {
 		eend $?
 	fi
 }
-
