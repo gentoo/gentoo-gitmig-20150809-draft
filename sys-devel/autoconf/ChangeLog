@@ -1,8 +1,12 @@
 # ChangeLog for sys-devel/autoconf
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/ChangeLog,v 1.40 2004/02/15 21:18:56 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/ChangeLog,v 1.41 2004/02/16 04:57:01 brad_mssw Exp $
 
 *autoconf-2.59-r1 (15 Feb 2004)
+
+  15 Feb 2004; Brad House <brad_mssw@gentoo.org> files/ac-wrapper-2.pl:
+  Revert ac-wrapper-2.pl patch, as it causes any package that runs autoheader to
+  fail
 
   15 Feb 2004; Martin Schlemmer <azarah@gentoo.org> autoconf-2.59-r1.ebuild:
   New revision to propagate recent wrapper fixes.
