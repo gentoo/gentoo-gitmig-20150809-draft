@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/glide-v3
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/glide-v3/ChangeLog,v 1.17 2004/06/24 23:01:18 agriffis Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/glide-v3/ChangeLog,v 1.18 2005/03/19 23:07:56 weeve Exp $
+
+  19 Mar 2005; Jason Wever <weeve@gentoo.org> glide-v3-3.10-r3.ebuild,
+  glide-v3-3.10-r4.ebuild:
+  Masked on SPARC wrt bug #61147.
 
   24 Jun 2004; Bryan Stine <battousai@gentoo.org>;
   +files/glide-v3-3.10-2.6-headers-fix.patch, glide-v3-3.10-r4.ebuild:
