@@ -1,4 +1,16 @@
-MD5 57abb926dbece1db33a43f45cd5a2865 adns-python-1.0.0.ebuild 522
-MD5 14a166480f13212d0c4f098968009eb7 ChangeLog 898
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
+MD5 9632263166bf4dc890ee57e569f15675 adns-python-1.0.0.ebuild 521
+MD5 09ed931859456713430c9344fb29c4ac ChangeLog 1029
+MD5 03365bf8f22a259d8ac5f1439adc26e6 adns-python-1.1.0.ebuild 521
+MD5 2126e791ad8c9ea825c4b8db97675060 files/digest-adns-python-1.1.0 68
 MD5 3baab9ec9dc37ebd421ed4e779b22bf0 files/digest-adns-python-1.0.0 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCDd09ugEuf3OQ0akRAosGAKCGt34x848F/mi/uiMk7LdICak31QCfdu/Y
+vMr+sThRyD1h1ZISxPxfhXw=
+=fBEo
+-----END PGP SIGNATURE-----
