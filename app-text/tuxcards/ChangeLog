@@ -1,6 +1,10 @@
 # ChangeLog for app-text/tuxcards
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tuxcards/ChangeLog,v 1.5 2004/12/13 22:56:57 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tuxcards/ChangeLog,v 1.6 2004/12/27 21:39:57 ticho Exp $
+
+  27 Dec 2004; Andrej Kacian <ticho@gentoo.org> tuxcards-1.1.ebuild,
+  tuxcards-1.2.ebuild:
+  Stable on x86.
 
   13 Dec 2004; Andrej Kacian <ticho@gentoo.org> tuxcards-1.1.ebuild,
   tuxcards-1.2.ebuild:
