@@ -1,0 +1,15 @@
+# ChangeLog for net-fs/coda-server
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-fs/coda-server/ChangeLog,v 1.1 2003/04/14 09:39:45 seemant Exp $
+
+*coda-server-5.3.19 (14 Apr 2003)
+
+  14 Apr 2003; Seemant Kulleen <seemant@gentoo.org>
+  coda-server-5.3.19.ebuild ChangeLog files/coda-server-5.3.19-gentoo.patch
+  files/digest-coda-server-5.3.19 :
+
+  New package.  This is the coda-client ebuild with a two line change: the
+  coda client's initscript patch is not applied, and the einstall installs
+  coda-server instead of coda-client.  This ebuild was requested by: Joe
+  <ptlame@core.com> in bug #13696, but I don't want to support it, so it's
+  looking for a maintainer.
