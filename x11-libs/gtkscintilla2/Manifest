@@ -1,6 +1,16 @@
-MD5 c824c625420a5ff9452ea87eb3284b4b ChangeLog 1088
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 ba56c9cb8e3ab49bd8c8e78cf8698bce ChangeLog 1214
 MD5 ffcd1cf74fbd27a58e785b42f97bf17a gtkscintilla2-0.0.8.ebuild 1133
-MD5 3eef36c1b76cd3a1395a45e2a7da96ec gtkscintilla2-0.1.0.ebuild 1112
+MD5 c921295b2f0da2090a2c861c9ab6b764 gtkscintilla2-0.1.0.ebuild 1141
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 f29bb40add3aa939317a482a5351a3fd files/digest-gtkscintilla2-0.0.8 71
 MD5 dc9e42bf3ab4148baffc1e474a266416 files/digest-gtkscintilla2-0.1.0 71
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBcrSTRkyva5PS18kRAuvSAJwL4dm9mJk/HxXEBQW0+zKqGwx5vACfWz5B
+/qwYAZuo6CsvIOdoW+csn0o=
+=MGof
+-----END PGP SIGNATURE-----

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkscintilla2/gtkscintilla2-0.1.0.ebuild,v 1.5 2004/10/05 12:16:03 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkscintilla2/gtkscintilla2-0.1.0.ebuild,v 1.6 2004/10/17 18:05:36 liquidx Exp $
 
 MY_P="GtkScintilla2-${PV}"
 DESCRIPTION="Gtk-2 wrappers for the Scintilla source editing components."
@@ -9,7 +9,7 @@ SRC_URI="http://gphpedit.org/download/files/${MY_P}.tar.gz"
 
 IUSE=""
 SLOT="0"
-KEYWORDS="~x86 ~amd64 ppc"
+KEYWORDS="x86 ~amd64 ppc"
 LICENSE="GPL-2"
 
 RDEPEND=">=x11-libs/gtk+-2.0"
@@ -27,20 +27,19 @@ src_unpack() {
 
 	# some quick touches to the Makefile, bump the version
 	# and make use of our CFLAGS
-	cp Makefile Makefile.orig
-	sed -e "/CFLAGS/s/-g/${CFLAGS} -fPIC/" < Makefile.orig > Makefile
+	GTHREAD_LDFLAGS="$(pkg-config gthread-2.0 --libs)"
+	sed -e "/CFLAGS/s/-g/${CFLAGS} -fPIC/" \
+		-e "s/^LDFLAGS_PRE =/LDFLAGS_PRE = ${GTHREAD_LDFLAGS}/" \
+		-i Makefile
 
 	# and again, in the scintilla part
 	cd ${S}/scintilla/gtk
-	cp makefile makefile.orig
-	sed -e "/CXXFLAGS/s/-Os/${CFLAGS} -fPIC/" < makefile.orig > makefile
+	sed -e "/CXXFLAGS/s/-Os/${CFLAGS} -fPIC/" -i makefile
 
 }
 
 src_compile() {
-
-	emake || die
-
+	emake  || die
 }
 
 src_install() {
