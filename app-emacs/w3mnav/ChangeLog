@@ -1,6 +1,8 @@
 # ChangeLog for app-emacs/w3mnav
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/w3mnav/ChangeLog,v 1.3 2004/03/09 17:05:34 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/w3mnav/ChangeLog,v 1.4 2004/03/12 14:58:27 aliz Exp $
+
+*w3mnav-0.5-r1 (09 Mar 2004)
 
   09 Mar 2004; <mkennedy@gentoo.org> :
   Moved site-file from 60 to 90 (emacs-w3m is now 70).
