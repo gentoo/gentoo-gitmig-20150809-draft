@@ -1,0 +1,19 @@
+*** mindi	Thu Jul 18 20:16:18 2002
+--- mindi~	Thu Jul 18 20:17:42 2002
+***************
+*** 781,787 ****
+  	    output="$location $output"
+  	    copies_found=$(($copies_found+1))
+  	    if [ -h "$location" ] ; then
+! 		resolved=`ls -l $location |tr -s ' ' '\t' | cut -f11`
+  		if [ "`echo "$resolved" | grep "/"`" = "" ] ; then
+  		    stub=`echo "$location" | $AWK -F '/' '{ for(i=1;i<NF;i++) {printf("/%s",$i);};};'`
+  		    output="/$stub/$resolved $output"
+--- 781,787 ----
+  	    output="$location $output"
+  	    copies_found=$(($copies_found+1))
+  	    if [ -h "$location" ] ; then
+! 		resolved=`ls -l $location |tr -s ' ' '\t' | $AWK '{printf $NF;}'`
+  		if [ "`echo "$resolved" | grep "/"`" = "" ] ; then
+  		    stub=`echo "$location" | $AWK -F '/' '{ for(i=1;i<NF;i++) {printf("/%s",$i);};};'`
+  		    output="/$stub/$resolved $output"

@@ -1,0 +1,9 @@
+# ChangeLog for sys-apps/mindi
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mindi/ChangeLog,v 1.1 2002/07/23 22:09:52 lostlogic Exp $
+
+*mindi-0.65 (23 Jul 2002)
+
+  23 Jul 2002; Brandon Low <lostlogic@gentoo.org> mindi-0.65.ebuild files/mindi-0.65.patch:
+
+  Thanks to Andreas Kotowicz <koto@mynetix.de> for this initial ebuild.
