@@ -1,6 +1,11 @@
 # ChangeLog for x11-themes/gkrellm-themes
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gkrellm-themes/ChangeLog,v 1.6 2004/09/05 23:44:04 pylon Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gkrellm-themes/ChangeLog,v 1.7 2005/03/20 14:13:58 humpback Exp $
+
+  20 Mar 2005; Gustavo Felisberto <humpback@gentoo.org>;
+  gkrellm-themes-0.1.ebuild:
+  Removing aqua theme as it is causing ALOT of bugs with digests. Will add in a
+  week or so to force mirror reget.
 
   06 Sep 2004; Lars Weiler <pylon@gentoo.org> gkrellm-themes-0.1.ebuild:
   Stable on ppc.
