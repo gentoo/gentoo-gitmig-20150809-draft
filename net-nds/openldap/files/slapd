@@ -4,7 +4,7 @@
 . /etc/rc.d/config/functions
 
 SERVICE=ldap-server
-EXE="/usr/libexec/openldap/slapd"
+EXE="/usr/lib/openldap/slapd"
 opts="start stop restart"
 
 start() {

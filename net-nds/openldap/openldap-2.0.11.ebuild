@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.0.11.ebuild,v 1.1 2001/06/08 01:58:13 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.0.11.ebuild,v 1.2 2001/06/11 10:56:47 achim Exp $
 
 A=${P}.tgz
 S=${WORKDIR}/${P}
@@ -44,7 +44,7 @@ src_compile() {
   try ./configure --host=${CHOST} --enable-passwd \
 	      --enable-shell --enable-shared --enable-static --enable-ipv6 \
 	      --prefix=/usr --sysconfdir=/etc --localstatedir=/var/state \
-              --mandir=/usr/share/man  --libexecdir=/usr/li$myconf
+              --mandir=/usr/share/man  --libexecdir=/usr/lib/openldap $myconf
   try make depend
   try make
   cd tests
@@ -54,8 +54,7 @@ src_compile() {
 src_install() {
 
   try make prefix=${D}/usr sysconfdir=${D}/etc/openldap \
-        localstatedir=${D}/var/state mandir=${D}/usr/share/man libexecdir=${D}/usr/lib install
-  prepman
+        localstatedir=${D}/var/state mandir=${D}/usr/share/man libexecdir=${D}/usr/lib/openldap  install
 
   dodoc ANNOUNCEMENT CHANGES COPYRIGHT README LICENSE
   docinto rfc
