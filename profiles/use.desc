@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.210 2004/12/27 16:32:06 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.211 2004/12/29 02:19:37 ribosome Exp $
 
 # keep them sorted (excluding the special arch flags near the end).
 
@@ -99,7 +99,7 @@ gd-external - Use the external version of gd rather than the bundled one (possib
 gdbm - Adds support for sys-libs/gdbm (GNU database libraries)
 ggi - Adds support for media-libs/libggi (non-X video api/drivers)
 gif - Adds GIF image support
-ginac - Adds app-sci/ginac (symbolic math) support
+ginac - Adds sci-mathematics/ginac (symbolic math) support
 gmp - Adds support for dev-libs/gmp (GNU MP library)
 gnome - Adds GNOME support
 gnustep - Adds integration with GNUstep environment
