@@ -1,0 +1,20 @@
+--- bin/wrapper.pl.orig	2003-04-30 08:35:27.000000000 -0400
++++ bin/wrapper.pl	2003-04-30 08:39:56.000000000 -0400
+@@ -381,7 +381,7 @@
+ 	chop($pid);
+ 
+ 	if ($cmd eq "stop") {
+-	    print("Stopping ${name}\n");
++	    print("");
+ 	}
+ 	kill(15, $pid);
+ 	unlink($pid_file);
+@@ -652,7 +652,7 @@
+       $date = `date`;
+       chop($date);
+ 
+-      print("Resin $name $cmd at $date\n");
++      print("");
+ 
+       # create a keepalive socket
+       # when the wrapper dies, the httpd class will detect that and
