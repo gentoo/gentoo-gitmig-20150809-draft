@@ -1,0 +1,12 @@
+# ChangeLog for media-fonts/aquafont
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/aquafont/ChangeLog,v 1.1 2003/07/27 17:29:27 usata Exp $
+
+*aquafont-2.7 (28 Jul 2003)
+
+  28 Jul 2003; Mamoru KOMACHI <usata@gentoo.org> aquafont-2.7.ebuild:
+  Initial import. Original ebuild submitted by Atzm WATANABE
+  <sitosito@p.chan.ne.jp> at GentooJP BugTrack.  Redistribution 
+  courtesy of the author, Aqua <aquablue@m12.milkcafe.to>
+  See /usr/portage/licenses/aquafont before using the software.
+
