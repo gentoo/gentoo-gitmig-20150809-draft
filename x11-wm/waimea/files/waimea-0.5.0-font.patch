@@ -1,0 +1,11 @@
+--- waimea-0.5.0_orig/src/Render.cc	2004-04-29 20:17:41.000000000 +0900
++++ waimea-0.5.0/src/Render.cc	2004-06-08 11:56:54.429595664 +0900
+@@ -1589,7 +1589,7 @@
+         font = cairo_current_font(cr);
+         cairo_font_reference (font);
+     }
+-
++    if (!font) return;
+     calc_length(size, size_u, dwo->ws->hdpi, w, &font_size);
+     calc_length(tab_spacing, tab_spacing_u, dwo->ws->hdpi, w, &tab_space);
+     calc_length(line_spacing, line_spacing_u, dwo->ws->vdpi, h, &line_space);

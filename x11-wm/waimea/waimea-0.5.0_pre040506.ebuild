@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/waimea/waimea-0.5.0_pre040506.ebuild,v 1.5 2004/06/05 19:49:05 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/waimea/waimea-0.5.0_pre040506.ebuild,v 1.6 2004/06/08 10:41:17 dholm Exp $
 
 inherit eutils 64-bit
 
@@ -27,6 +27,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	64-bit && epatch ${FILESDIR}/${MY_P}-64bit-clean.patch
+	epatch ${FILESDIR}/${MY_P}-font.patch
 }
 
 src_compile() {
