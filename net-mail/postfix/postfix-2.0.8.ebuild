@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-2.0.7.ebuild,v 1.2 2003/03/25 04:21:03 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-2.0.8.ebuild,v 1.1 2003/04/16 15:52:14 lostlogic Exp $
 
 inherit eutils
 
@@ -49,6 +49,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	if [ "`use ssl`" ] && [ "`use ipv6`" ]; then
+		patch ${WORKDIR}/${IPV6_P}.patch < ${FILESDIR}/${P}_patch.patch || die
 		epatch ${WORKDIR}/${IPV6_P}.patch || die
 		CCARGS="${CCARGS} -DHAS_SSL"
 		AUXLIBS="${AUXLIBS} -lssl -lcrypto"

@@ -1,0 +1,19 @@
+--- tls+ipv6-1.13-pf-2.0.7.patch	2003-04-16 10:21:26.000000000 -0500
++++ tls+ipv6-1.13-pf-2.0.8.patch	2003-04-16 10:29:21.000000000 -0500
+@@ -10308,7 +10308,7 @@
+  /* match_parse_mask - parse net/mask pattern */
+  
+  static int match_parse_mask(const char *pattern, unsigned long *net_bits,
+-@@ -198,27 +504,55 @@
++@@ -198,28 +504,56 @@
+      return (mask != 0);
+  }
+  
+@@ -10328,6 +10328,7 @@
+      unsigned long mask_bits;
+      unsigned long net_bits;
+      unsigned long addr_bits;
++     struct in_addr net_addr;
+ +#endif
+  
+      if (msg_verbose)
