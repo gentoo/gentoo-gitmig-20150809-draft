@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/ruby-cvs
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby-cvs/ChangeLog,v 1.10 2004/02/21 10:39:51 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby-cvs/ChangeLog,v 1.11 2004/04/10 06:00:46 usata Exp $
+
+  10 Apr 2004; Mamoru KOMACHI <usata@gentoo.org> ruby-cvs-1.8.1-r1.ebuild,
+  ruby-cvs-1.8.1.ebuild, ruby-cvs-1.9.0-r1.ebuild, ruby-cvs-1.9.0.ebuild:
+  Provides virtual/ruby instead of dev-lang/ruby-${PV}, see bug #46968
 
   21 Feb 2004; Mamoru KOMACHI <usata@gentoo.org> ruby-cvs-1.8.1-r1.ebuild,
   ruby-cvs-1.9.0-r1.ebuild:
