@@ -1,3 +1,7 @@
+# 26 Feb 2003 Guy Martin <gmsoft@gentoo.org>
+# No lirc support on hppa
+lirc
+
 # 22 Jul 2003 Guy Martin <gmsoft@gentoo.org>
 # Scanner and gphoto2 not yet tested
 gphoto2
