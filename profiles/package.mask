@@ -21,6 +21,12 @@
 ##   End example
 ##
 
+# <azarah@gentoo.org> (17 May 2003)
+# There is a bit of work needed to the tree to get it gcc-3.3 ready.
+# Also, I want to verify that the Hammer update do not break older
+# Athlons ...
+>=sys-devel/gcc-3.3
+
 # <lu_zero@gentoo.org> (14 May 2003)
 # Not yet ready, sadly
 =media-video/cinelerra-1.1.6
