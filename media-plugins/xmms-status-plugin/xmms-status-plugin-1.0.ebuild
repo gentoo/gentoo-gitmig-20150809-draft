@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-status-plugin/xmms-status-plugin-1.0.ebuild,v 1.5 2004/06/24 23:46:18 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-status-plugin/xmms-status-plugin-1.0.ebuild,v 1.6 2004/07/07 08:42:12 eradicator Exp $
 
 IUSE="nls"
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.hellion.org.uk/xmms-status-plugin/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~ppc x86 amd64"
+KEYWORDS="~ppc x86 amd64 ~sparc"
 
 DEPEND="media-sound/xmms
 	=x11-libs/gtk+-1.2*"
