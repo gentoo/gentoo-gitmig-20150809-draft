@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/vpopmail-5.2.1-r6.ebuild,v 1.13 2004/05/30 11:00:03 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/vpopmail-5.2.1-r6.ebuild,v 1.14 2004/06/09 22:26:39 agriffis Exp $
 
 IUSE="mysql ipalias clearpasswd"
 
@@ -59,7 +59,7 @@ src_unpack() {
 
 	epatch ${FILESDIR}/vpopmail-5.2.1-showall.patch
 
-	if [ "`use mysql`" ]; then
+	if use mysql; then
 		einfo "Applying MySQL patch..."
 		# Thanks to Nicholas Jones (carpaski@gentoo.org)
 		epatch ${DISTDIR}/vpopmail-5.2.1-mysql.diff
@@ -176,7 +176,7 @@ pkg_preinst() {
 pkg_postinst() {
 	einfo "Performing post-installation routines for ${P}."
 
-	if [ "`use mysql`" ]; then
+	if use mysql; then
 		echo
 		einfo "You have 'mysql' turned on in your USE"
 		einfo "Vpopmail needs a VALID MySQL USER. Let's call it 'vpopmail'"

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/vpopmail-5.4.0.ebuild,v 1.6 2004/06/03 15:47:38 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/vpopmail-5.4.0.ebuild,v 1.7 2004/06/09 22:26:39 agriffis Exp $
 
 inherit eutils gnuconfig fixheadtails
 

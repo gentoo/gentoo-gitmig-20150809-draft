@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/tpop3d/tpop3d-1.4.2.ebuild,v 1.11 2004/05/30 08:29:50 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/tpop3d/tpop3d-1.4.2.ebuild,v 1.12 2004/06/09 22:23:56 agriffis Exp $
 
 inherit eutils
 
@@ -62,7 +62,7 @@ src_compile() {
 	if [ ! -a $ENABLE_DRAC ]; then
 		myconf="${myconf} --enable-drac"
 	fi
-	if [ `use debug` ]; then
+	if use debug; then
 		myconf="${myconf} --enable-electric-fence --enable-backtrace"
 	fi
 	econf ${myconf} || die "./configure failed"

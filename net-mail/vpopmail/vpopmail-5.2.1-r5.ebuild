@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/vpopmail-5.2.1-r5.ebuild,v 1.9 2004/05/30 11:00:03 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/vpopmail-5.2.1-r5.ebuild,v 1.10 2004/06/09 22:26:39 agriffis Exp $
 
 IUSE="mysql ipalias"
 
@@ -56,7 +56,7 @@ src_unpack() {
 	unpack ${P}.tar.gz
 	cd ${S}
 
-	if [ "`use mysql`" ]; then
+	if use mysql; then
 		einfo "Applying MySQL patch..."
 		# Thanks to Nicholas Jones (carpaski@gentoo.org)
 		epatch ${DISTDIR}/vpopmail-5.2.1-mysql.diff
@@ -107,7 +107,7 @@ src_compile() {
 		--enable-logging=y \
 		--enable-log-name=vpopmail || die "econf failed"
 
-	[ "`use mysql`" ] && echo '#define MYSQL_PASSWORD_FILE "/etc/vpopmail.conf"' >> config.h
+	use mysql && echo '#define MYSQL_PASSWORD_FILE "/etc/vpopmail.conf"' >> config.h
 
 	emake || die "Make failed."
 }
@@ -130,11 +130,11 @@ src_install () {
 	for item in `ls -1 ${D}${VPOP_HOME}/bin`; do dosym ${VPOP_HOME}/bin/${item} usr/bin/${item} ; done
 
 	# Create /etc/vpopmail.conf
-	[ "`use mysql`" ] && dodir /etc && cp ${FILESDIR}/vpopmail.conf ${D}/etc/
+	use mysql && dodir /etc && cp ${FILESDIR}/vpopmail.conf ${D}/etc/
 
 	# Configure b0rked. We'll do this manually
 	echo "-I${VPOP_HOME}/include" > ${D}/${VPOP_HOME}/etc/inc_deps
-	if [ "`use mysql`" ]; then
+	if use mysql; then
 		echo "-L${VPOP_HOME}/lib -lvpopmail -L/usr/lib/mysql -lmysqlclient -lz" > ${D}/${VPOP_HOME}/etc/lib_deps
 	else
 		echo "-L${VPOP_HOME}/lib -lvpopmail" > ${D}/${VPOP_HOME}/etc/lib_deps
@@ -155,7 +155,7 @@ pkg_postinst() {
 	einfo "Performing post-installation routines for ${P}."
 	echo "40 * * * * /usr/bin/clearopensmtp 2>&1 > /dev/null" >> /var/spool/cron/crontabs/root
 
-	if [ "`use mysql`" ]; then
+	if use mysql; then
 		einfo ""
 		einfo "You have 'mysql' turned on in your USE"
 		einfo "Vpopmail needs a VALID MySQL USER. Let's call it 'vpopmail'"
