@@ -1,5 +1,7 @@
 MD5 8d1df18ee3039c6ea39663d6a53e0f81 ChangeLog 469
 MD5 a88ab84af875144f4e6d3878ada1b129 libcdio-0.62.ebuild 647
 MD5 b59c555b84da3d3784bf7cd3de9c958f libcdio-0.63.ebuild 646
+MD5 f00b2f7ee423d9e420f32401a70e2223 libcdio-0.64.ebuild 588
 MD5 53ffcccfe51fc5a56c0283cf5b38299e files/digest-libcdio-0.62 65
+MD5 0165911115603b51b34b8ae19ab71e2a files/digest-libcdio-0.64 65
 MD5 3f8d9e657fd2c878f80e0bcb841314fa files/digest-libcdio-0.63 65
