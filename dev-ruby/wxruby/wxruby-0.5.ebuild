@@ -1,14 +1,14 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/wxruby/wxruby-0.3.0.ebuild,v 1.3 2004/07/14 22:20:45 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/wxruby/wxruby-0.5.ebuild,v 1.1 2004/08/29 15:50:27 twp Exp $
 
 MY_P="${PN}-${PV}-src"
 DESCRIPTION="Ruby language bindings for the wxWidgets GUI toolkit"
 HOMEPAGE="http://rubyforge.org/projects/wxruby/"
-SRC_URI="http://rubyforge.org/frs/download.php/542/${MY_P}.tgz"
+SRC_URI="http://rubyforge.org/frs/download.php/1254/${MY_P}.tgz"
 LICENSE="wxWinLL-3"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ~ppc ~sparc"
 IUSE="unicode"
 DEPEND=">=dev-lang/ruby-1.8
 	>=x11-libs/wxGTK-2.4.1"

@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/wxruby
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/wxruby/ChangeLog,v 1.7 2004/08/02 17:20:30 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/wxruby/ChangeLog,v 1.8 2004/08/29 15:50:27 twp Exp $
+
+*wxruby-0.5 (29 Aug 2004)
+
+  29 Aug 2004; <twp@gentoo.org> -wxruby-0.2.1.ebuild, -wxruby-0.3.0.ebuild,
+  +wxruby-0.5.ebuild:
+  Version bump (masked in package.mask), removed old versions.
 
 *wxruby-0.4.0 (02 Aug 2004)
 
