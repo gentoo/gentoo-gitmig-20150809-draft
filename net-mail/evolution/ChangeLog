@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/evolution
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/ChangeLog,v 1.75 2003/08/20 16:02:31 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/ChangeLog,v 1.76 2003/08/29 06:11:06 liquidx Exp $
+
+  29 Aug 2003; Alastair Tse <liquidx@gentoo.org> evolution-1.4.4.ebuild:
+  added yelp dependency
 
   20 Aug 2003; Aron Griffis <agriffis@gentoo.org> evolution-1.4.4.ebuild:
   Add ~alpha now that I think most of the 64-bit problems are patched
