@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.7.3-r3.ebuild,v 1.2 2004/11/19 02:42:48 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.7.3-r3.ebuild,v 1.3 2004/11/19 02:57:01 agriffis Exp $
 
 unset ALLOWED_FLAGS  # stupid extra-functions.sh ... bug 49179
 inherit flag-o-matic gcc eutils nsplugins mozilla-launcher mozconfig makeedit
@@ -28,7 +28,7 @@ SLOT="0"
 LICENSE="MPL-1.1 NPL-1.1"
 
 # xrender.pc appeared for the first time in xorg-x11-6.7.0-r2
-# and is required to build with support for cairo.
+# and is required to build with support for cairo.  #71504
 RDEPEND="java? ( virtual/jre )
 	mozsvg? (
 		>=x11-base/xorg-x11-6.7.0-r2
