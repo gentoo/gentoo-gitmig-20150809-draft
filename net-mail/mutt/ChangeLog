@@ -1,6 +1,14 @@
 # ChangeLog for net-mail/mutt
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mutt/ChangeLog,v 1.6 2002/07/28 05:39:03 cselkirk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mutt/ChangeLog,v 1.7 2002/07/28 13:09:58 stubear Exp $
+
+*mutt-1.4-r2 (28 Jul 2002) 
+
+  28 Jul 2002; Stuart Bouyer <stubear@gentoo.org> mutt-1.4-r2.ebuild :
+
+  Added patch for Japanese support (submitted by Cong 
+  <vo.chi.cong-linux@is.titech.ac.jp> ). 
+  Removed PPC from KEYWORDS, cause I can't test that the patch works on PPC.
 
 *mutt-1.4-r1 (27 Jul 2002)
 
