@@ -1,12 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003-demo/ut2003-demo-2206-r2.ebuild,v 1.2 2003/10/05 02:42:05 vapier Exp $.
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003-demo/ut2003-demo-2206-r2.ebuild,v 1.3 2004/01/05 20:15:34 wolf31o2 Exp $.
 
 inherit games
 
 DESCRIPTION="Unreal Tournament 2003 Demo"
 HOMEPAGE="http://www.ut2003.com/"
-SRC_URI="http://unreal.epicgames.com/linux/ut2003/ut2003demo-lnx-${PV}.sh.bin"
+SRC_URI="http://unreal.epicgames.com/linux/ut2003/ut2003demo-lnx-${PV}.sh.bin
+	http://unreal.epicgames.com/files/IpDrv.so.bz2"
 
 LICENSE="ut2003-demo"
 SLOT="0"
@@ -57,6 +58,11 @@ src_install() {
 	exeinto ${dir}/Benchmark
 	doexe ${FILESDIR}/{benchmark,results.sh}
 
+	# Security patch
+	cd ${D}/opt/ut2003-demo/System
+	cp ${DISTDIR}/IpDrv.so.bz2 .
+	bunzip2 --force IpDrv.so.bz2
+
 	# create menu entry (closes bug #27594)
 	insinto /usr/share/applications
 	newins ${D}/opt/ut2003-demo/Unreal.xpm UT2003-demo.xpm
@@ -70,11 +76,6 @@ pkg_postinst() {
 	einfo "Type 'ut2003-demo' to start the game."
 	einfo "You can run benchmarks by typing 'ut2003-demo --bench' (MinDetail seems"
 	einfo "to not be working for some unknown reason :/)"
-	echo
-	einfo "This version of ut2003 works well with NVIDIA cards, somewhat OK with"
-	einfo "the ATI unified drivers (emerge ati-drivers) and may also work"
-	einfo "with some recent versions of the commercial Xi Graphics drivers"
-	einfo "(http://www.xig.com/), although this has not yet been confirmed by me."
 	echo
 	einfo "Read ${dir}/README.linux for instructions on how to run a"
 	einfo "dedicated server."
