@@ -515,12 +515,6 @@ dev-lang/tcl-tk
 # This is the new version of shadow, needs more beta testing
 >=sys-apps/shadow-4.0.3
 
-#seemant@gentoo.org
-# 5 Apr 2002
-# >ncurses-5.2-r5 causes an incompatibility here
-# masking until that can be resolved
-=sys-devel/gdb-5.1.1
-
 #george@gentoo.org
 #10 Apr 2002
 #gpc rebuilds gcc backend when installed.
