@@ -1,8 +1,11 @@
 # ChangeLog for sys-apps/xinetd
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/xinetd/ChangeLog,v 1.18 2003/03/30 21:29:31 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/xinetd/ChangeLog,v 1.19 2003/04/06 20:15:30 gmsoft Exp $
 
 *xinetd-2.3.10 (26 Mar 2003)
+
+  06 Apr 2003; Guy Martin <gmsoft@gentoo.org> xinetd-2.3.10.ebuild :
+  Added ~hppa to KEYWORDS.
 
   26 Mar 2003; Seemant Kulleen <seemant@gentoo.org> xinetd-2.3.10.ebuild,
   xinetd-2.3.7.ebuild, xinetd-2.3.9.ebuild:
@@ -14,6 +17,9 @@
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *xinetd-2.3.9 (24 Oct 2002)
+
+  06 Apr 2003; Guy Martin <gmsoft@gentoo.org> xinetd-2.3.9.ebuild :
+  Added hppa to KEYWORDS.
 
   30 Mar 2003; Christian Birchinger <joker@gentoo.org> xinetd-2.3.9.ebuild:
   Added sparc stable keyword
