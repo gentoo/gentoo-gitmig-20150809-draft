@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsepol/libsepol-1.2.ebuild,v 1.1 2004/11/14 18:58:44 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsepol/libsepol-1.2.ebuild,v 1.2 2004/11/15 17:59:00 pebenito Exp $
 
 IUSE="mls"
 
@@ -18,8 +18,10 @@ src_unpack() {
 
 	cd ${S}
 
-	use mls && sed -i -e '/^MLS/s/n/y/' src/Makefile \
-		|| die "MLS option failed."
+	if use mls; then
+		sed -i -e '/^MLS/s/n/y/' src/Makefile \
+			|| die "MLS option failed."
+	fi
 
 	sed -i -e "s:-Wall:-Wall ${CFLAGS}:g" src/Makefile \
 		|| die "src Makefile CFLAGS fix failed."

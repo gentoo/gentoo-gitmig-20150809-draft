@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/libsepol
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsepol/ChangeLog,v 1.2 2004/11/14 18:58:44 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsepol/ChangeLog,v 1.3 2004/11/15 17:59:00 pebenito Exp $
+
+  15 Nov 2004; Chris PeBenito <pebenito@gentoo.org> libsepol-1.2.ebuild:
+  Fix non mls compile.
 
 *libsepol-1.2 (14 Nov 2004)
 
