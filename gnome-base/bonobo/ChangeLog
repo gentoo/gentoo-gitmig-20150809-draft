@@ -1,6 +1,10 @@
 # ChangeLog for gnome-base/bonobo
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/bonobo/ChangeLog,v 1.18 2004/06/24 21:54:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/bonobo/ChangeLog,v 1.19 2004/08/07 23:02:29 slarti Exp $
+
+  08 Aug 2004; Tom Martin <slarti@gentoo.org> bonobo-1.0.19-r1.ebuild,
+  bonobo-1.0.21.ebuild, bonobo-1.0.22.ebuild:
+  Typo in DESCRIPTION: independant -> independent. Bug 59717.
 
   13 May 2004; Stephen P. Becker <geoman@gentoo.org> bonobo-1.0.22.ebuild:
   Keyworded mips to satisfy repoman deps for xmms.

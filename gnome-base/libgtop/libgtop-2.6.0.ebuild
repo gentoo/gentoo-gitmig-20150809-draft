@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgtop/libgtop-2.6.0.ebuild,v 1.10 2004/08/05 21:37:03 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgtop/libgtop-2.6.0.ebuild,v 1.11 2004/08/07 23:07:20 slarti Exp $
 
 inherit gnome2
 
-DESCRIPTION="A library that proivdes top functionality to applications"
+DESCRIPTION="A library that provides top functionality to applications"
 HOMEPAGE="http://www.gnome.org/"
 LICENSE="GPL-2"
 
