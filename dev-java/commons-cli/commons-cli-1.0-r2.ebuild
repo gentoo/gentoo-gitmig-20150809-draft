@@ -1,15 +1,14 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-cli/commons-cli-1.0-r2.ebuild,v 1.5 2003/09/06 22:26:46 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-cli/commons-cli-1.0-r2.ebuild,v 1.6 2004/04/05 05:34:37 zx Exp $
 
 inherit jakarta-commons
 
-S="${WORKDIR}/${P}"
 DESCRIPTION="The CLI library provides a simple and easy to use API for working with the command line arguments and options."
-HOMEPAGE="http://jakarta.apache.org/commons/logging.html"
+HOMEPAGE="http://jakarta.apache.org/commons/cli/"
 SRC_URI="mirror://apache/jakarta/commons/cli/source/cli-${PV}-src.tar.gz"
 DEPEND=">=virtual/jdk-1.3
-	>=dev-java/ant-1.4"
+		>=dev-java/ant-1.4"
 RDEPEND=">=virtual/jdk-1.3"
 LICENSE="Apache-1.1"
 SLOT="0"
