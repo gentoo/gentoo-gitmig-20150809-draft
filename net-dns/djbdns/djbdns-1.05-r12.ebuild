@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/djbdns-1.05-r12.ebuild,v 1.6 2004/08/23 04:16:00 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/djbdns-1.05-r12.ebuild,v 1.7 2004/09/18 15:42:07 weeve Exp $
 
 IUSE="aliaschain cnamefix doc fwdzone ipv6 multipleip roundrobin semanticfix"
 
@@ -22,7 +22,7 @@ SRC_URI="http://cr.yp.to/djbdns/${P}.tar.gz
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="x86 ~amd64 ~sparc"
+KEYWORDS="x86 ~amd64 sparc"
 
 RDEPEND=">=sys-apps/daemontools-0.70
 	doc? ( app-doc/djbdns-man )
