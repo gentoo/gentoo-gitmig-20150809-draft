@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/batik
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/batik/ChangeLog,v 1.6 2004/04/05 05:28:14 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/batik/ChangeLog,v 1.7 2004/04/18 14:51:20 zx Exp $
+
+  18 Apr 2004; Chris Aniszczyk <zx@gentoo.org> batik-1.5.ebuild:
+  Removing jikes from USE, jikes failed to build batik properly. Closes #47661
 
   05 Apr 2004; Chris Aniszczyk <zx@gentoo.org> batik-1.1.1.ebuild:
   Clean up.
