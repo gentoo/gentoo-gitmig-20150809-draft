@@ -22,6 +22,10 @@
 ##
 
 
+# <agenkin@gentoo.org> (30 Sep 2002)
+# Masking pending unfreeze.
+>=app-cdr/cdrtools-1.11.35
+
 # <satai@gentoo.org> (29 Sep 2002)
 # Waiting for freeze to end.
 =dev-util/cweb-3.63-r1
