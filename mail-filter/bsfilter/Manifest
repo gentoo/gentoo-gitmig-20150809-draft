@@ -1,16 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 318f0143e84f3b82e963ff454167a1de ChangeLog 677
+MD5 244b3333fa6400a689187a0dac713a11 bsfilter-1.0.3.ebuild 716
+MD5 61a8a400bcae10515f66d321a3674ef9 bsfilter-1.0.5.ebuild 727
+MD5 2113f59f5095e155f92cde3d985bfbac ChangeLog 801
 MD5 991eaeddc2ff443697a2b974d4275d3a bsfilter-1.0.4.ebuild 725
 MD5 38f7e7e07cecf943cd078f4aef09fef1 metadata.xml 250
-MD5 244b3333fa6400a689187a0dac713a11 bsfilter-1.0.3.ebuild 716
 MD5 657c0b5cf28b76ae2ef13e7a2d850990 files/digest-bsfilter-1.0.3 63
 MD5 a0ebe8dbe35fb1a9bb01b75db938ed9b files/digest-bsfilter-1.0.4 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBV/7410xuJSrg3/sRAi3mAJ9J0ieaSbOP7Fs2scBDYoyS4kZ2GwCfd6Ge
-2E5TYTez9709YrvxjSsCFrc=
-=cOmO
------END PGP SIGNATURE-----
+MD5 49b61e234e0631408de7713528da9876 files/digest-bsfilter-1.0.5 63
