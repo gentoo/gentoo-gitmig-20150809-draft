@@ -1,6 +1,9 @@
 # ChangeLog for app-text/tree
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tree/ChangeLog,v 1.8 2003/06/12 01:17:47 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tree/ChangeLog,v 1.9 2003/06/12 18:26:25 agriffis Exp $
+
+  12 Jun 2003; Aron Griffis <agriffis@gentoo.org> tree-1.4.ebuild:
+  Mark stable on alpha
 
 *tree-1.4 (11 Jun 2003)
 
