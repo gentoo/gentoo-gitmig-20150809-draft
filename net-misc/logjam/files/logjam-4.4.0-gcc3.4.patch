@@ -1,0 +1,10 @@
+--- src/network-libxml.c	2004-05-30 14:25:20.659296496 -0400
++++ src/network-libxml.c	2004-05-30 14:25:47.695186416 -0400
+@@ -73,6 +73,7 @@
+ 				_("File not found."));
+ 		goto out;
+ 	default:
++		break;
+ 	}
+ 
+ 	response = g_string_new(NULL);
