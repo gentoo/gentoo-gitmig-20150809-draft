@@ -1,6 +1,9 @@
 # ChangeLog for dev-dotnet/pnetc
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/pnetc/ChangeLog,v 1.11 2004/05/29 13:04:20 scandium Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/pnetc/ChangeLog,v 1.12 2004/06/16 03:53:28 weeve Exp $
+
+  15 Jun 2004; Jason Wever <weeve@gentoo.org> pnetc-0.6.6.ebuild:
+  Stable on sparc.
 
 *pnetc-0.6.6 (29 May 2004)
 
