@@ -3,14 +3,9 @@ Hash: SHA1
 
 MD5 a04dd7c90c18842cd77d9d29ecd4a2d3 ChangeLog 6457
 MD5 d0dad7daa0e6d356fc35f778fed36006 metadata.xml 225
-MD5 72f8396ece4332ba82d0dc4b1090c7db iproute2-2.4.7.20020116-r1.ebuild 2911
 MD5 8d218ee880cd70a5c54ac099374a9677 iproute2-2.6.9.20040831.ebuild 1571
 MD5 0c93c8279072ba9e3f42dd3d1374bd86 iproute2-2.6.7.20040608-r1.ebuild 2359
-MD5 ddd77e6d0215884a89ef5ad579945710 files/digest-iproute2-2.4.7.20020116-r1 169
-MD5 9977add19060fbeac6a3582ce8a5e098 files/2.4.7.20020116-htb.patch 9207
 MD5 d3a321fa8b70eef6df11d7343a14fd02 files/2.4.7.20020116-hfsc.patch 9507
-MD5 2d163d8622e69d17eb7ba73a61ffb51e files/2.4.7.20020116-local-exploit-fix.patch 666
-MD5 249c1788ee3cc7a3d55dee871076a5a1 files/2.4.7.20020116-misc-deb-fixes.patch 977
 MD5 f9d5951d63104d862180994be31e96a2 files/digest-iproute2-2.6.9.20040831 75
 MD5 d0071e387038661c76eefb2c8e6b5c46 files/2.6.7.20040608-misc-deb-fixes.patch 632
 MD5 24a69d69fb222231a8d0f4358743190f files/2.6.7.20040608-misc-gentoo-fixes.patch 3970
@@ -19,7 +14,7 @@ MD5 e9826ddf5fac917b17fa8e25684d68ea files/2.6.9.20040831-make-install.patch 504
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBVQ5DHTu7gpaalycRAn+sAJ93UHqY7L/foaWWxmNo16/4SzrxqwCcDoyX
-GlNPpBFXDGVppJh2mLGKHOU=
-=D+1M
+iD8DBQFBkuh9HTu7gpaalycRAvO0AJ4mEd67XNH/Xthy8KJ1JX493RssogCeJFSZ
+0H++DD2x6BrNJT58NX3h5Cw=
+=oFQ1
 -----END PGP SIGNATURE-----
