@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pygtk
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/ChangeLog,v 1.59 2004/09/28 19:24:43 lucass Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/ChangeLog,v 1.60 2004/10/03 21:33:39 lucass Exp $
+
+*pygtk-2.4.0 (03 Oct 2004)
+
+  03 Oct 2004; Lukasz Strzygowski <lucass@gentoo.org> +pygtk-2.4.0.ebuild:
+  Version bump. Updated dependencies.
 
 *pygtk-2.3.97 (28 Sep 2004)
 
