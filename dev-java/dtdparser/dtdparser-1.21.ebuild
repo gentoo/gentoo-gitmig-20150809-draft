@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/dtdparser/dtdparser-1.21.ebuild,v 1.1 2005/01/22 17:46:27 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/dtdparser/dtdparser-1.21.ebuild,v 1.2 2005/03/16 18:18:23 luckyduck Exp $
 
 inherit eutils java-pkg
 
@@ -32,9 +32,6 @@ src_compile() {
 	if use jikes; then
 		antflags="${antflags} -Dbuild.compiler=jikes"
 	fi
-	if use source; then
-		antflags="${antflags} sourcezip"
-	fi
 	ant ${antflags} || die "failed to build"
 }
 
@@ -46,7 +43,6 @@ src_install() {
 		java-pkg_dohtml -r doc/*
 	fi
 	if use source; then
-		dodir /usr/share/doc/${PF}/source
-		cp dist/${PN}-src.zip ${D}usr/share/doc/${PF}/source
+		java-pkg_dosrc source/*
 	fi
 }
