@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-x11/qt-x11-2.2.2.ebuild,v 1.1 2000/12/11 18:05:42 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-x11/qt-x11-2.2.2.ebuild,v 1.2 2001/04/23 19:59:44 drobbins Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/qt-2.2.2
@@ -12,9 +12,9 @@ HOMEPAGE="http://www.kde.org/"
 
 DEPEND=">=media-libs/libpng-1.0.7
 	>=media-libs/libmng-0.9.3
-	>=media-libs/mesa-3.4
+	virtual/opengl	
 	>=media-sound/nas-1.4.1
-	>=x11-base/xfree-4.0.1"
+	virtual/x11"
 
 export QTDIR=${S}
 
