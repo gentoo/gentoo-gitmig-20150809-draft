@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/cracklib
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/ChangeLog,v 1.52 2004/09/01 12:26:31 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/ChangeLog,v 1.53 2004/09/30 09:21:48 blubb Exp $
+
+  30 Sep 2004; Simon Stelling <blubb@gentoo.org> cracklib-2.7-r9.ebuild:
+  get_libdir-ized
 
   01 Sep 2004; Travis Tilley <lv@gentoo.org> +files/cracklib-2.7-libdir.patch,
   cracklib-2.7-r10.ebuild:
