@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20050125.ebuild,v 1.24 2005/02/14 07:58:48 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20050125.ebuild,v 1.25 2005/02/14 11:39:38 eradicator Exp $
 
 KEYWORDS="~amd64 ~mips ~sparc ~x86"
 
@@ -857,10 +857,12 @@ crosscompile_setup() {
 				amd64)
 					export CFLAGS_x86="${CFLAGS_x86--m32}"
 					export CHOST_x86="i686-pc-linux-gnu"
+					export CDEFINE_x86="__i386__"
 					export LIBDIR_x86="lib"
 
 					export CFLAGS_amd64="${CFLAGS_amd64--m64}"
 					export CHOST_amd64="x86_64-pc-linux-gnu"
+					export CDEFINE_amd64="__x86_64__"
 					export LIBDIR_amd64="lib64"
 
 					export MULTILIB_ABIS="x86 amd64"
@@ -869,14 +871,17 @@ crosscompile_setup() {
 				mips)
 					export CFLAGS_o32="${CFLAGS_o32--mabi=32}"
 					export CHOST_o32="mips-unknown-linux-gnu"
+					export CDEFINE_o32="_ABIO32"
 					export LIBDIR_o32="lib"
 
 					export CFLAGS_n32="${CFLAGS_n32--mabi=n32}"
 					export CHOST_n32="mips64-unknown-linux-gnu"
+					export CDEFINE_n32="_ABIN32"
 					export LIBDIR_n32="lib32"
 
 					export CFLAGS_n64="${CFLAGS_n64--mabi=64}"
 					export CHOST_n64="mips64-unknown-linux-gnu"
+					export CDEFINE_n64="_ABI64"
 					export LIBDIR_n64="lib64"
 
 					export MULTILIB_ABIS="n64 n32 o32"
@@ -885,22 +890,28 @@ crosscompile_setup() {
 				ppc64)
 					export CFLAGS_ppc="${CFLAGS_ppc--m32}"
 					export CHOST_ppc="powerpc-unknown-linux-gnu"
+					export CDEFINE_ppc=""
 					export LIBDIR_ppc="lib"
 
 					export CFLAGS_ppc64="${CFLAGS_ppc64--m64}"
 					export CHOST_ppc64="powerpc64-unknown-linux-gnu"
+					export CDEFINE_ppc64=""
 					export LIBDIR_ppc64="lib64"
 
 					export MULTILIB_ABIS="ppc ppc64"
 					export DEFAULT_ABI="ppc64"
+
+					die "ppc64 crosscompile not yet supported.  Bug a ppc64 dev to fill in the CDEFINE values in the glibc ebuild."
 				;;
 				sparc)
 					export CFLAGS_sparc="${CFLAGS_sparc--m32}"
 					export CHOST_sparc="sparc-unknown-linux-gnu"
+					export CDEFINE_sparc="!__arch64__"
 					export LIBDIR_sparc="lib"
 
 					export CFLAGS_sparc64="${CFLAGS_sparc64--m64}"
 					export CHOST_sparc64="sparc64-unknown-linux-gnu"
+					export CDEFINE_sparc64="__arch64__"
 					export LIBDIR_sparc64="lib64"
 
 					export MULTILIB_ABIS="sparc64 sparc"
