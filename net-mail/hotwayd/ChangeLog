@@ -1,6 +1,12 @@
 # ChangeLog for net-mail/hotwayd
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/hotwayd/ChangeLog,v 1.6 2004/07/28 21:14:19 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/hotwayd/ChangeLog,v 1.7 2004/07/29 17:52:05 langthang Exp $
+
+*hotwayd-0.7.4 (29 Jul 2004)
+
+  29 Jul 2004; Tuan Van <langthang@gentoo.org> +hotwayd-0.7.4.ebuild:
+  add hotwayd-0.7.4 wrt bug #58531.
+  straight to stable.
 
   28 Jul 2004; Tuan Van <langthang@gentoo.org> hotwayd-0.8.ebuild:
   move inherit to above IUSE.
