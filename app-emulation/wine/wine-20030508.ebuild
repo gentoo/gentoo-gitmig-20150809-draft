@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20030508.ebuild,v 1.4 2003/05/20 16:51:30 utx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20030508.ebuild,v 1.5 2003/06/28 11:00:14 coronalvr Exp $
 
 inherit eutils base
 
@@ -44,6 +44,8 @@ src_compile() {
 
 	[ -z $DEBUG ] && myconf="$myconf --disable-trace --disable-debug" || myconf="$myconf --enable-trace --enable-debug"
 	# there's no configure flag for cups, arts, alsa and nas, it's supposed to be autodetected
+	
+	unset CFLAGS CXXFLAGS
 	
 	ac_cv_header_jack_jack_h=no \
 	ac_cv_lib_soname_jack= \

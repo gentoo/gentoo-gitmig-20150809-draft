@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/wine
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.44 2003/06/26 15:29:37 coronalvr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.45 2003/06/28 11:00:14 coronalvr Exp $
+
+  28 Jun 2003; Alex Veber <coronalvr@gentoo.org> wine-20030508.ebuild,
+  wine-20030618.ebuild:
+  unset C[XX]FLAGS
 
 *wine-20030618 (26 Jun 2003)
 
