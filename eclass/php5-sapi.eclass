@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php5-sapi.eclass,v 1.16 2004/08/07 20:05:48 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php5-sapi.eclass,v 1.17 2004/08/07 20:56:22 robbat2 Exp $
 #
 # eclass/php5-sapi.eclass
 #		Eclass for building different php5 SAPI instances
@@ -142,7 +142,13 @@ php5-sapi_check_awkward_uses () {
 		eerror "You must have the ORACLE_HOME variable in your environment!"
 		eerror
 		die "Oracle configuration incorrect; user error"
-		
+	fi
+
+	if useq oci8 || useq oracle7; then
+		if has_version  'dev-db/oracle-instantclient-basic'; then
+			ewarn "Please ensure you have a full install of the Oracle client."
+			ewarn "dev-db/oracle-instantclient* is NOT sufficent."
+		fi
 	fi
 
 	if useq dba ; then
