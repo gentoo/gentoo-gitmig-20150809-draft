@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SGMLSpm/SGMLSpm-1.03-r4.ebuild,v 1.5 2003/01/10 11:17:05 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SGMLSpm/SGMLSpm-1.03-r4.ebuild,v 1.6 2003/02/10 17:09:01 gmsoft Exp $
 
 MY_P="${P}ii"
 S=${WORKDIR}/${PN}
@@ -10,7 +10,7 @@ HOMEPAGE="http://search.cpan.org/author/DMEGG/SGMLSpm-1.03ii/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc alpha ppc"
+KEYWORDS="x86 sparc alpha ppc hppa"
 
 src_unpack() {
 

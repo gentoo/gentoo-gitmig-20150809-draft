@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/SGMLSpm
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SGMLSpm/ChangeLog,v 1.10 2003/01/10 11:17:04 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SGMLSpm/ChangeLog,v 1.11 2003/02/10 17:09:01 gmsoft Exp $
+
+  10 Feb 2003; Guy Martin <gmsoft@gentoo.org> SGMLSpm-1.03-r4.ebuild :
+  Added hppa to keywords.
 
 *SGMLSpm-1.03-r4 (30 Oct 2002)
 
