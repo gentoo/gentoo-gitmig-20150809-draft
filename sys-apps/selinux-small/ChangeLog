@@ -1,6 +1,15 @@
 # ChangeLog for sys-apps/selinux-small
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/selinux-small/ChangeLog,v 1.15 2003/05/14 19:13:15 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/selinux-small/ChangeLog,v 1.16 2003/05/22 20:20:18 pebenito Exp $
+
+*selinux-small-2003040709-r2 (22 May 2003)
+
+  22 May 2003; Chris PeBenito <pebenito@gentoo.org>
+  selinux-small-2003040709-r2.ebuild:
+  Changed pam dep to shadow, so /etc/pam.d files are created correctly (shadow
+  depends on pam). Moved /etc/security files to selinux-base-policy since they
+  need to be modified based on the base policy. Added initial version of rlpkg
+  which will relabel a package based on its CONTENTS in the portage db.
 
 *selinux-small-2003040709-r1 (14 May 2003)
 
