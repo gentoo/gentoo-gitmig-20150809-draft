@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.18.ebuild,v 1.16 2004/07/02 10:03:53 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.17.ebuild,v 1.21 2004/07/02 10:03:53 mr_bones_ Exp $
 
 inherit eutils flag-o-matic gnuconfig
 
@@ -10,10 +10,10 @@ SRC_URI="ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/${P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="2"
-KEYWORDS="~x86 ~ppc sparc ~mips ~alpha arm hppa amd64 ~ia64 s390 ppc64"
+KEYWORDS="~x86 ~ppc ~sparc ~amd64 alpha ia64 hppa mips"
 IUSE="gdbm ldap mysql postgres kerberos static ssl java pam"
 
-RDEPEND="virtual/libc
+RDEPEND="virtual/glibc
 	>=sys-libs/db-3.2
 	gdbm? ( >=sys-libs/gdbm-1.8.0 )
 	ldap? ( >=net-nds/openldap-2.0.25 )
@@ -23,11 +23,12 @@ RDEPEND="virtual/libc
 	ssl? ( >=dev-libs/openssl-0.9.6d )
 	kerberos? ( virtual/krb5 )
 	java? ( virtual/jdk )"
+
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4
+	sys-devel/libtool
 	>=sys-devel/autoconf-2.58
-	sys-devel/automake
-	sys-devel/libtool"
+	sys-devel/automake"
 
 src_unpack() {
 	unpack ${A} && cd "${S}"
@@ -41,7 +42,7 @@ src_unpack() {
 		-i saslauthd/auth_rimap.c || die "sed failed"
 
 	# DB4 detection and versioned symbols.
-	epatch "${FILESDIR}/cyrus-sasl-2.1.18-db4.patch"
+	epatch "${FILESDIR}/cyrus-sasl-2.1.17-db4.patch"
 
 	# Add configdir support.
 	epatch "${FILESDIR}/cyrus-sasl-2.1.17-configdir.patch"
@@ -87,11 +88,11 @@ src_compile() {
 	fi
 
 	# Compaq-sdk checks for -D_REENTRANT and -pthread takes care the cpp stuff.
+	# taviso #24998 (17 Aug 03)
 	use alpha && append-flags -D_REENTRANT -pthread
 
-	# Detect mips systems properly.
+	# Detect mips systems properly
 	use mips && gnuconfig_update
-	use ppc64 && gnuconfig_update
 
 	econf \
 		--with-saslauthd=/var/lib/sasl2 \
