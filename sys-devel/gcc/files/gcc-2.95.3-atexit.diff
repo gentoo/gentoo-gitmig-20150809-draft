@@ -1,0 +1,52 @@
+--- gcc/config/i386/linux.h.jj  Mon Mar 12 11:45:15 2001
++++ gcc/config/i386/linux.h     Fri Mar 16 18:52:31 2001
+@@ -170,3 +170,21 @@ Boston, MA 02111-1307, USA.  */
+     }                                                                  \
+   } while (0)
+ #endif
++
++#if defined(__PIC__) && defined (USE_GNULIBC_1)
++/* This is a kludge. The i386 GNU/Linux dynamic linker needs ___brk_addr,
++   __environ and atexit (). We have to make sure they are in the .dynsym
++   section. We accomplish it by making a dummy call here. This
++   code is never reached.  */
++
++#define CRT_END_INIT_DUMMY             \
++  do                                   \
++    {                                  \
++      extern void *___brk_addr;                \
++      extern char **__environ;         \
++                                       \
++      ___brk_addr = __environ;         \
++      atexit (0);                      \
++    }                                  \
++  while (0)
++#endif
+============================================================
+Index: gcc/crtstuff.c
+--- gcc/crtstuff.c      1999/03/23 00:43:51     1.18
++++ gcc/crtstuff.c      2001/03/19 10:21:44
+@@ -379,20 +379,8 @@
+   FORCE_INIT_SECTION_ALIGN;
+ #endif
+   asm (TEXT_SECTION_ASM_OP);
+-
+-/* This is a kludge. The i386 GNU/Linux dynamic linker needs ___brk_addr,
+-   __environ and atexit (). We have to make sure they are in the .dynsym
+-   section. We accomplish it by making a dummy call here. This
+-   code is never reached.  */
+-
+-#if defined(__linux__) && defined(__PIC__) && defined(__i386__)
+-  {
+-    extern void *___brk_addr;
+-    extern char **__environ;
+-
+-    ___brk_addr = __environ;
+-    atexit ();
+-  }
++#ifdef CRT_END_INIT_DUMMY
++  CRT_END_INIT_DUMMY;
+ #endif
+ }
+
+
