@@ -1,6 +1,12 @@
 # ChangeLog for app-sci/lard
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/lard/ChangeLog,v 1.5 2003/02/12 05:17:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/lard/ChangeLog,v 1.6 2003/03/15 08:05:20 george Exp $
+
+*lard-20030204 (14 Mar 2003)
+
+  14 Mar 2003; George Shapovalov <george@gentoo.org> lard-20030204.ebuild, files/lard-20030204-configure.patch :
+  new version (#17439)
+  updated patch submitted by Chris Bainbridge <chrb@dcs.ed.ac.uk>
 
 *lard-20030109 (06 Feb 2003)
 
