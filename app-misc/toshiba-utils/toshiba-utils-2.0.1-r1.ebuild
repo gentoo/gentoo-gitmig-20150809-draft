@@ -1,8 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/toshiba-utils/toshiba-utils-2.0.1-r1.ebuild,v 1.6 2002/10/20 18:40:23 vapier Exp $
-
-IUSE="X gtk"
+# $Header: /var/cvsroot/gentoo-x86/app-misc/toshiba-utils/toshiba-utils-2.0.1-r1.ebuild,v 1.7 2002/11/30 21:31:19 vapier Exp $
 
 S=${WORKDIR}/toshutils-${PV}
 DESCRIPTION="Toshiba Laptop Utilities"
@@ -12,6 +10,7 @@ SRC_URI="http://www.buzzard.org.uk/toshiba/toshutils-${PV}.tar.gz"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 -ppc -sparc -sparc64"
+IUSE="X gtk"
 
 DEPEND="gtk? ( =x11-libs/gtk+-1* )"
 
@@ -30,7 +29,7 @@ src_unpack() {
 }
 
 src_compile() {
-	econf || die "bad ./configure"
+	econf
 	make depend
 	make -C src || die
 }
