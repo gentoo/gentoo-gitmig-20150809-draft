@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ghostscript-7.05.6.ebuild,v 1.2 2003/03/09 19:50:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ghostscript-7.05.6.ebuild,v 1.3 2003/04/03 12:08:46 nakano Exp $
 
 DESCRIPTION="ESP Ghostscript -- an enhanced version of GNU Ghostscript with better printer support"
 SRC_URI="ftp://ftp.easysw.com/pub/ghostscript/espgs-${PV}-source.tar.bz2
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.easysw.com/"
 SLOT="0"
 LICENSE="GPL-2 LGPL-2"
 KEYWORDS="~x86 ~ppc ~sparc alpha"
-IUSE="X cups gnome cjk"
+IUSE="X cups cjk"
 
 DEPEND="virtual/glibc
 	>=media-libs/jpeg-6b 
@@ -39,11 +39,10 @@ src_unpack() {
 
 ##	patch -p0 < ${FILESDIR}/png.diff || die "patch failed"
 
-##	if [ -n `use cjk` ] ; then
-##		patch -p0 < ${FILESDIR}/gs7.05-cjk.diff || die "patch failed"
-##	fi
+	use cjk && epatch ${FILESDIR}/gs${PV}-cjk.diff
+
 	# man page patch from absinthe@pobox.com (Dylan Carlson) bug #14150
-	patch -p0 ${S}/man/gs.1 < ${FILESDIR}/${P}.man.patch
+	patch -p0 ${S}/man/gs.1 < ${FILESDIR}/${P}.man.patch || die
 }
 
 src_compile() {
