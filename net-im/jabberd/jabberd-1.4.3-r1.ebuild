@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/jabberd-1.4.3-r1.ebuild,v 1.4 2004/01/29 23:47:06 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/jabberd-1.4.3-r1.ebuild,v 1.5 2004/02/10 23:06:42 humpback Exp $
 
 S="${WORKDIR}/jabberd-${PV}"
 DESCRIPTION="Open Source Jabber Server"
@@ -82,13 +82,13 @@ src_install() {
 	local test_group=`grep ^jabber: /etc/group | cut -d: -f1`
 	if [ -z $test_group ]
 	then
-		groupadd jabber
+		enewgroup jabber
 	fi
 
 	local test_user=`grep ^jabber: /etc/passwd | cut -d: -f1`
 	if [ -z $test_user ]
 	then
-		useradd jabber -s /bin/false -d /var/spool/jabber -g jabber -m
+		enewuser jabber -1 /bin/false /var/spool/jabber jabber
 	fi
 
 	dodoc README UPGRADE ${FILESDIR}/README.Gentoo
