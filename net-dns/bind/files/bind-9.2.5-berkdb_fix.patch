@@ -1,0 +1,11 @@
+--- configure.in.orig	2005-03-25 23:33:33.000000000 +0300
++++ configure.in	2005-03-25 23:34:04.000000000 +0300
+@@ -453,7 +453,7 @@
+ 				then
+                                         use_dlz_bdb=$d
+ 					DLZ_BDB_INCDIR=$use_dlz_bdb/include
+-                                        DLB_BDB_LIB="-ldb"                                        
++                                        DLZ_BDB_LIB="-ldb"                                        
+                                         break                                  
+ 				fi
+ 			done

@@ -1,0 +1,13 @@
+--- files/named.rc6	2004-07-15 03:36:02.000000000 +0400
++++ named	2005-03-25 20:19:16.000000000 +0300
+@@ -33,7 +33,9 @@
+ start() {
+ 	ebegin "Starting ${CHROOT:+chrooted }named"
+ 	checkconfig || return 1
+-	start-stop-daemon --start --quiet --exec /usr/sbin/named -- -u named -n $CPU $OPTIONS ${CHROOT:+-t $CHROOT}
++	start-stop-daemon --start --quiet --exec /usr/sbin/named \
++		--pid ${CHROOT}/var/run/named/named.pid \
++		-- -u named -n $CPU $OPTIONS ${CHROOT:+-t $CHROOT}
+ 	eend $?
+ }
+ 

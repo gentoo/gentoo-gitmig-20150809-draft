@@ -1,6 +1,11 @@
 # ChangeLog for net-dns/bind-tools
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind-tools/ChangeLog,v 1.32 2004/12/29 02:59:58 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind-tools/ChangeLog,v 1.33 2005/03/25 22:28:18 voxus Exp $
+
+*bind-tools-9.2.5 (26 Mar 2005)
+
+  26 Mar 2005; Konstantin Arkhipov <voxus@gentoo.org> +bind-tools-9.2.5.ebuild:
+  Version bump. Closes bugs #79718 and #83736.
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance

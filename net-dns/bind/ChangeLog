@@ -1,6 +1,14 @@
 # ChangeLog for net-dns/bind
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.56 2005/02/07 02:28:31 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.57 2005/03/25 22:28:20 voxus Exp $
+
+*bind-9.2.5 (26 Mar 2005)
+
+  26 Mar 2005; Konstantin Arkhipov <voxus@gentoo.org> +bind-9.2.5.ebuild,
+  +files/bind-9.2.5-berkdb_fix.patch, +files/bind-9.2.5-dlz-mysql.patch,
+  +files/bind-9.2.5-mysql.patch, +files/named.rc6-pid_fix:
+  Version bump. Also closes bugs: #45254, #32908, #48610, #58932, #51577,
+  #65885, #65885, #65885, #76348, #76820, #76820, #85292, #85419, #73257.
 
   06 Feb 2005; Joshua Kinard <kumba@gentoo.org> bind-9.2.2-r3.ebuild:
   Marked stable on mips.
