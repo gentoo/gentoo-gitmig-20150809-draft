@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/0verkill/0verkill-0.16-r1.ebuild,v 1.2 2004/01/06 02:52:51 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/0verkill/0verkill-0.16-r2.ebuild,v 1.1 2004/01/08 05:52:48 vapier Exp $
 
 inherit games eutils
 
@@ -22,8 +22,8 @@ src_unpack() {
 	cd ${S}
 	epatch ${FILESDIR}/${PV}-docs.patch
 	epatch ${FILESDIR}/${PV}-home-overflow.patch
+	epatch ${FILESDIR}/${PV}-gentoo-paths.patch
 	sed -i "s:data/:${GAMES_DATADIR}/${PN}/data/:" cfg.h
-	sed -i "s:grx/:${GAMES_DATADIR}/${PN}/grx/:" data/*
 }
 
 src_compile() {

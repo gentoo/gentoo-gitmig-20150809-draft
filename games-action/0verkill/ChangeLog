@@ -1,11 +1,16 @@
 # ChangeLog for games-action/0verkill
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/0verkill/ChangeLog,v 1.5 2004/01/06 02:52:51 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/0verkill/ChangeLog,v 1.6 2004/01/08 05:52:48 vapier Exp $
+
+*0verkill-0.16-r2 (08 Jan 2004)
+
+  08 Jan 2004; Mike Frysinger <vapier@gentoo.org> :
+  Don't edit paths in data files, screws md5sums.  Chdir instead #37419.
+
+*0verkill-0.16-r1 (30 Nov 2003)
 
   05 Jan 2004; Jon Portnoy <avenj@gentoo.org> :
   AMD64 keywords.
-
-*0verkill-0.16-r1 (30 Nov 2003)
 
   30 Nov 2003; Mike Frysinger <vapier@gentoo.org> :
   Added HOME overflow patch #33701.
