@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.864 2005/01/14 12:27:01 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.865 2005/01/14 13:31:39 greg_g Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -298,10 +298,11 @@ kde-base/kdeadmin:foreign-package - Enable building of kpackage, which manages r
 kde-base/kdeadmin:foreign-sysvinit - Enable building of ksysv, which manages SysV-style initscripts
 kde-base/kdeartwork:xscreensaver - Builds xscreensavers as compile time
 kde-base/kdebase:logitech-mouse - Builds module for configuring logitech mice.
+kde-base/kdegraphics:jpeg2k - Enable support for jpeg2k (jasper)
 kde-base/kdegraphics:povray - Enable povray dependency - needed for kpovmodeler
 kde-base/kdelibs:jpeg2k - Enable support for jpeg2k (jasper)
-kde-base/kdelibs:openexr - Enable support for openexr graphic file format (www.openexr.com)
-kde-base/kdemultimedia:cdparanoia - Enables build support for the cdparanoia package
+kde-base/kdelibs:openexr - Enable support for OpenEXR graphic file format (www.openexr.com)
+kde-base/kdemultimedia:cdparanoia - Enables support for audiocd browsing and ripping
 kde-base/kdenetwork:wifi - Enable wireless network functions in kde
 kde-base/kdepim:gnokii - Enable address synchronization with mobile phones with gnokii
 mail-client/evolution:nntp - Enable evolution nntp (news) functionality
