@@ -1,21 +1,22 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/uptimed/uptimed-0.2.0-r1.ebuild,v 1.1 2002/07/19 20:50:24 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/uptimed/uptimed-0.2.0-r1.ebuild,v 1.2 2002/07/25 19:18:35 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Standard informational utilities and process-handling tools"
 SRC_URI="http://telia.dl.sourceforge.net/sourceforge/uptimed/${P}.tar.bz2"
 HOMEPAGE="http://unixcode.org/uptimed"
-DEPEND="virtual/glibc"
-RDEPEND="${DEPEND}"
+
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86"
 
+DEPEND="virtual/glibc"
+
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	patch -p1 <${FILESDIR}/${P}.patch
+	patch -p1 <${FILESDIR}/${P}.patch || die
 }
 
 src_compile() {

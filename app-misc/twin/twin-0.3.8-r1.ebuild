@@ -1,15 +1,18 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-misc/twin/twin-0.3.8-r1.ebuild,v 1.7 2002/07/11 06:30:16 drobbins Exp $
-
+# $Header: /var/cvsroot/gentoo-x86/app-misc/twin/twin-0.3.8-r1.ebuild,v 1.8 2002/07/25 19:18:35 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A text-mode window environment"
 SRC_URI="http://ftp1.sourceforge.net/twin/${P}.tar.gz
 	http://linuz.sns.it/~max/twin/${P}.tar.gz"
 HOMEPAGE="http://linuz.sns.it/~max/twin/" 
-DEPEND="virtual/glibc
-	X? ( virtual/x11 )
+
+SLOT="0"
+LICENSE="GPL-2 LGPL-2"
+KEYWORDS="x86"
+
+DEPEND="X? ( virtual/x11 )
 	ggi? ( >=media-libs/libggi-1.9 )
 	>=sys-libs/gpm-1.19.3
 	>=sys-libs/ncurses-5.2"

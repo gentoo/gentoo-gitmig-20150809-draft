@@ -1,24 +1,21 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/rox/rox-1.3.2.ebuild,v 1.1 2002/07/13 14:23:15 stroke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/rox/rox-1.3.2.ebuild,v 1.2 2002/07/25 19:18:34 seemant Exp $
 
+S=${WORKDIR}/${P}
 DESCRIPTION="ROX-Filer is a fast and powerful graphical file manager"
 HOMEPAGE="http://rox.sourceforge.net"
 SRC_URI="mirror://sourceforge/rox/${P}.tgz"
+
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86"
 
-DEPEND=">=x11-base/xfree-4.0.3
+DEPEND=">=x11-libs/gtk+-2.0.5
 	>=dev-libs/glib-2.0.4
-	>=x11-libs/gtk+-2.0.5
 	>=dev-libs/libxml2-2.4.23
 	>=x11-misc/shared-mime-info-0.7"
 
-RDEPEND="${DEPEND}"
-
-
-S=${WORKDIR}/${P}
 
 src_install() {
 

@@ -1,21 +1,19 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/nomadii-utils/nomadii-utils-0.8.ebuild,v 1.2 2002/07/09 21:43:55 nitro Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/nomadii-utils/nomadii-utils-0.8.ebuild,v 1.3 2002/07/25 19:18:34 seemant Exp $
 
-P="nomadII-utils-$PV"
-S=${WORKDIR}/${P}
-
+MY_P=${P/ii/II}
+S=${WORKDIR}/${MY_P}
 DESCRIPTION="Supports for Creative Nomad II, IIc and II MG under Linux running USB for file transfers and other operations."
 HOMEPAGE="http://nomadii.sourceforge.net/"
-SRC_URI="mirror://sourceforge/nomadii/${P}.tgz"
+SRC_URI="mirror://sourceforge/nomadii/${MY_P}.tgz"
 
-KEYWORDS="x86"
-LICENSE="GPL-2"
 SLOT="0"
+LICENSE="GPL-2"
+KEYWORDS="x86"
 
-DEPEND="virtual/glibc
-		>=sys-libs/ncurses-5.2
-		readline? ( >=sys-libs/readline-4.1 )"
+DEPEND=">=sys-libs/ncurses-5.2
+	readline? ( >=sys-libs/readline-4.1 )"
 
 src_compile() {
 
@@ -37,11 +35,9 @@ src_compile() {
 }
 
 src_install() {
-
 	dodir /usr/bin /usr/share/man/man1
 	dobin nomadii 
 	newman nomadii.man nomadii.1
-
 }
 
 pkg_postinst() {

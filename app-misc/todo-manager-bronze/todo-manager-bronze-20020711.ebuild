@@ -1,16 +1,18 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-misc/todo-manager-bronze/todo-manager-bronze-20020711.ebuild,v 1.1 2002/07/11 18:35:19 bass Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/todo-manager-bronze/todo-manager-bronze-20020711.ebuild,v 1.2 2002/07/25 19:18:35 seemant Exp $
 
 S="${WORKDIR}/${PN}"
 DESCRIPTION="A task manager."
 SRC_URI="mirror://sourceforge/todo-manager/${P}.tar.gz"
 HOMEPAGE="todo-manager.sourceforge.net"
-LICENSE="GPL-2"
-DEPEND="dev-lang/python
-		dev-lang/tk"
-RDEPEND="${RDEPEND}"
+
 SLOT="0"
+LICENSE="GPL-2"
+KEYWORDS="x86"
+
+DEPEND="dev-lang/python
+	dev-lang/tk"
 
 src_compile() {
 	python setup.py clean || die

@@ -1,14 +1,15 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-misc/xosview/xosview-1.8.0.ebuild,v 1.2 2002/07/24 22:42:37 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/xosview/xosview-1.8.0.ebuild,v 1.3 2002/07/25 19:18:35 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="X11 operating system viewer"
 SRC_URI="http://www.ibiblio.org/pub/Linux/system/status/xstatus/${P}.tar.gz"
 HOMEPAGE="http://xosview.sourceforge.net"
+
+SLOT="0"
 LICENSE="GPL-2 BSD"
 KEYWORDS="x86 ppc"
-SLOT="0"
 
 DEPEND="virtual/x11"
 
@@ -23,7 +24,6 @@ src_compile() {
 }
 
 src_install () {
-
 	exeinto /usr/bin
 	doexe xosview
 	insinto /usr/lib/X11
@@ -31,5 +31,4 @@ src_install () {
 	doins XOsview
 	into /usr
 	doman *.1
-
 }

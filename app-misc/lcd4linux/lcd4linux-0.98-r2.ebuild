@@ -7,6 +7,10 @@ DESCRIPTION="system and ISDN information is shown on an external display or in a
 SRC_URI="http://download.sourceforge.net/lcd4linux/${P}.tar.gz"
 HOMEPAGE="http://lcd4linux.sourceforge.net"
 
+SLOT="0"
+LICENSE="GPL-2"
+KEYWORDS="x86"
+
 DEPEND="png? ( media-libs/libpng
 		sys-libs/zlib
 		media-libs/libgd )"

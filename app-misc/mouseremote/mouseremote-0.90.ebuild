@@ -1,17 +1,19 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mouseremote/mouseremote-0.90.ebuild,v 1.2 2002/07/11 06:30:16 drobbins Exp $
-
-DESCRIPTION="X10 MouseRemote"
-HOMEPAGE="http://www4.pair.com/gribnif/ha/"
-LICENSE="GPL-2"
-
-SRC_URI="http://www4.pair.com/gribnif/ha/MouseRemote.tar.gz"
-
-DEPEND=""
-RDEPEND="dev-perl/Time-HiRes"
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mouseremote/mouseremote-0.90.ebuild,v 1.3 2002/07/25 19:18:34 seemant Exp $
 
 S=${WORKDIR}/MouseRemote
+DESCRIPTION="X10 MouseRemote"
+HOMEPAGE="http://www4.pair.com/gribnif/ha/"
+SRC_URI="http://www4.pair.com/gribnif/ha/MouseRemote.tar.gz"
+
+SLOT="0"
+LICENSE="GPL-2"
+KEYWORDS="x86"
+
+RDEPEND="dev-perl/Time-HiRes"
+DEPEND="${RDEPEND}"
+
 
 src_compile() {
 	patch -p1 < ${FILESDIR}/${PN}-gentoo.diff || die

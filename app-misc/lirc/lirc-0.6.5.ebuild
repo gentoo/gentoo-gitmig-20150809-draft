@@ -1,11 +1,10 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.6.5.ebuild,v 1.1 2002/07/14 14:34:10 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.6.5.ebuild,v 1.2 2002/07/25 19:18:34 seemant Exp $
 
 
 DESCRIPTION="LIRC is a package that allows you to decode and send infra-red \
 	signals of many (but not all) commonly used remote controls."
-
 HOMEPAGE="http://www.lirc.org"
 
 [ "x${LIRC_OPTS}" = x ] && LIRC_OPTS="--with-driver=any \
@@ -41,21 +40,19 @@ HOMEPAGE="http://www.lirc.org"
 # --without-soft-carrier	# if your serial hw generates carrier
 # --with-transmitter	# if you use a transmitter diode
 
+SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86"
-SLOT="0"
 
-DEPEND="virtual/linux-sources
-	virtual/glibc"
-RDEPEND=${DEPEND}
+DEPEND="virtual/linux-sources"
 
-SRC_URI="http://unc.dl.sourceforge.net/sourceforge/lirc/${P}.tar.bz2"
+SRC_URI="mirror://sourceforge/lirc/${P}.tar.bz2"
 
 S=${WORKDIR}/${P}
 
 src_unpack() {
 	unpack ${P}.tar.bz2
-	patch -p0 < ${FILESDIR}/${P}-gentoo.diff
+	patch -p0 < ${FILESDIR}/${P}-gentoo.diff || die
 
 	# You need my little patch, because with it:
 	# - lirc compiles with gentoo 2.4.19pre-ac and vanilla kernels

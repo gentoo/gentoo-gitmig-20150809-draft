@@ -9,29 +9,26 @@ physical terminal between several processes"
 SRC_URI="ftp://ftp.uni-erlangen.de/pub/utilities/screen/${P}.tar.gz"
 HOMEPAGE="http://www.gnu.org/software/screen/"
 
-DEPEND="virtual/glibc
-	>=sys-libs/ncurses-5.2"
+SLOT="0"
+LICENSE="GPL-2"
+KEYWORDS="x86"
+
+DEPEND=">=sys-libs/ncurses-5.2"
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}
 }
 src_compile() {
-
 	addpredict /dev/ptys/*
 	
-	./configure \
-		--prefix=/usr \
-		--host=${CHOST} \
+	econf \
 		--with-sys-screenrc=/etc/screen/screenrc \
-		--mandir=/usr/share \
 		--libexecdir=/usr/lib/misc || die
 	emake || die
-
 }
 
 src_install () {
-
 	dobin screen
 	insinto /usr/share/terminfo
 	doins terminfo/screencap
@@ -41,5 +38,4 @@ src_install () {
 	doc/{FAQ,README.DOTSCREEN,fdpat.ps,window_to_display.ps}
 	doman doc/screen.1
 	doinfo doc/screen.info*
-
 }
