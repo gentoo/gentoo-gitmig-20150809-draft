@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/mtools
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/mtools/ChangeLog,v 1.5 2003/02/12 02:25:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/mtools/ChangeLog,v 1.6 2003/05/01 21:13:50 agriffis Exp $
+
+  01 May 2003; Aron Griffis <agriffis@gentoo.org> mtools-3.9.8-r1.ebuild:
+  Mark stable on alpha
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
