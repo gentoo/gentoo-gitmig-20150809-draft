@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/subversion.eclass,v 1.5 2004/02/27 09:00:25 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/subversion.eclass,v 1.6 2004/03/01 16:34:42 hattya Exp $
 
 ## --------------------------------------------------------------------------- #
 # Author: Akinori Hattori <hattya@gentoo.org>
@@ -105,6 +105,7 @@ subversion_svn_fetch() {
 
 	if [ ! -d "${ESVN_STORE_DIR}" ]; then
 		mkdir -p "${ESVN_STORE_DIR}" || die "subversion.eclass: can't mkdir ${ESVN_STORE_DIR}."
+		chmod -f o+rw "${ESVN_STORE_DIR}" || die "subversion.eclass: can't chmod ${ESVN_STORE_DIR}."
 		einfo "created store directory: ${ESVN_STORE_DIR}"
 		einfo
 	fi
@@ -126,8 +127,8 @@ subversion_svn_fetch() {
 		einfo "check out from: ${ESVN_REPO_URI}"
 
 		mkdir -p "${ESVN_PROJECT}" || die "subversion.eclass: can't mkdir ${ESVN_PROJECT}."
+		chmod -f o+rw "${ESVN_PROJECT}" || die "subversion.eclass: can't chmod ${ESVN_PROJECT}."
 		cd "${ESVN_PROJECT}"
-
 		${ESVN_FETCH_CMD} "${ESVN_REPO_URI}" || die "subversion.eclass: can't fetch from ${ESVN_REPO_URI}."
 		einfo "     stored in: ${ESVN_STORE_DIR}/${ESVN_CO_DIR}"
 
@@ -142,9 +143,8 @@ subversion_svn_fetch() {
 		einfo "    updated in: ${ESVN_STORE_DIR}/${ESVN_CO_DIR}"
 	fi
 
-	if [ $(whoami) != "portage" ]; then
-		chmod -R o+rw ${ESVN_STORE_DIR} || die "subversion.eclass: can't chmod ${ESVN_STORE_DIR}."
-	fi
+	# permission fix
+	chmod -Rf o+rw .
 
 	# copy to the ${WORKDIR}
 	cp -Rf "${ESVN_STORE_DIR}/${ESVN_CO_DIR}" "${WORKDIR}/${P}" || die "subversion.eclass: can't copy to ${WORKDIR}/${P}."
