@@ -1,17 +1,17 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 a4ff3c2db130ded28cb7109b2d45261c ChangeLog 1128
+MD5 066b340ef4b57512a4f60f62d5fc0ed9 ChangeLog 1274
 MD5 e7307c1653035014c1e36a27ca8ccb45 metadata.xml 163
-MD5 a5daf17522746ba10db1532172c84abd metisse-0.3.2.ebuild 928
+MD5 d242884870a918b29a88bb592e3bf80a metisse-0.3.4.ebuild 824
 MD5 efe69d349c77c8e88c1967744f0cbd89 metisse-0.3.3.ebuild 928
-MD5 52db3e3f560d064c8bef2ab5a93e0df2 files/digest-metisse-0.3.2 67
+MD5 417e224f0ecd4c48bc9f5cffdeaa7787 files/digest-metisse-0.3.4 67
 MD5 8ea4e9e1bbbc76708d3076dc47a161aa files/metisse-0.3.1-FvwmGtk.1-DESTDIR.diff 1325
 MD5 1e4bdfcc3fe024ad5f29d4661d63ad4b files/digest-metisse-0.3.3 67
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
+Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBYAJ/VWNWqTUmv+0RAk17AJsHN0AqTe98M/u1x5Rj8LutLN72bgCfYa5T
-Y2LizQO0B2SCGRJlnhjDlRs=
-=rlEX
+iD8DBQFBr+fFVWNWqTUmv+0RAt9LAKCLaCE8ylssFOaByjizAJQRkFif6QCdHIph
+LTyTFdl4PmsHXn/B4wizUmg=
+=f4SI
 -----END PGP SIGNATURE-----

@@ -1,8 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/metisse/metisse-0.3.2.ebuild,v 1.3 2004/09/03 13:59:25 usata Exp $
-
-inherit eutils
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/metisse/metisse-0.3.4.ebuild,v 1.1 2004/12/03 04:12:47 usata Exp $
 
 # fc is broken
 IUSE="freetype xv"
@@ -12,19 +10,13 @@ SRC_URI="http://insitu.lri.fr/~chapuis/software/metisse/${P}.tar.bz2"
 HOMEPAGE="http://insitu.lri.fr/~chapuis/metisse"
 
 DEPEND="virtual/x11
-	>=x11-libs/nucleo-0.1-r1"
+	>=x11-libs/nucleo-0.1_p20041130"
 RDEPEND="${DEPEND}
 	!x11-wm/fvwm"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc"
-
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/metisse-0.3.1-FvwmGtk.1-DESTDIR.diff
-}
+KEYWORDS="~x86 ~ppc"
 
 src_compile() {
 	econf \
