@@ -1,0 +1,18 @@
+# ChangeLog for app-crypt/bcrypt
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/bcrypt/ChangeLog,v 1.1 2003/06/18 21:39:41 absinthe Exp $
+
+*bcrypt-1.1 (18 Jun 2003)
+
+  18 Jun 2003; Dylan Carlson <absinthe@gentoo.org> bcrypt-1.1.ebuild:
+  Initial import.
+
+  NOTE:
+  In addition to encrypting your data, bcrypt will by default overwrite the 
+  original input file with random garbage three times before deleting it in 
+  order to thwart data recovery attempts by persons who may gain access to 
+  your computer. 
+  
+  If you're not quite ready for this level of paranoia yet, use the '-r'
+  switch.  Please see the bcrypt(1) man page for more details.
+
