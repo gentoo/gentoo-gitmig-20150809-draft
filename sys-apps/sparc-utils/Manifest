@@ -1,9 +1,19 @@
-MD5 a83a7925b21e56602f33941e061b7867 sparc-utils-1.9.ebuild 1819
-MD5 5cbd095b0dfca375c29bb22399744e01 sparc-utils-1.9-r2.ebuild 2076
-MD5 aebe2beda42a6c0df12e466f60beeecc ChangeLog 2285
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 3bb872114d9133dec68bd48af1f78d62 ChangeLog 2410
 MD5 1281e21ae801232cac21628092fbc7f9 metadata.xml 420
 MD5 34f88d015c2239fb052e42cfc0de6acb sparc-utils-1.9-r1.ebuild 1997
-MD5 783037e3661cca44a73e38b5fd112166 files/digest-sparc-utils-1.9-r1 141
-MD5 783037e3661cca44a73e38b5fd112166 files/digest-sparc-utils-1.9-r2 141
+MD5 8beee5ee89b91aea98e55a5db7ad3df7 sparc-utils-1.9-r2.ebuild 2164
+MD5 a83a7925b21e56602f33941e061b7867 sparc-utils-1.9.ebuild 1819
 MD5 90419bd873d8ef797f6ac6f982c3bcbf files/audioctl.init 571
 MD5 783037e3661cca44a73e38b5fd112166 files/digest-sparc-utils-1.9 141
+MD5 783037e3661cca44a73e38b5fd112166 files/digest-sparc-utils-1.9-r1 141
+MD5 783037e3661cca44a73e38b5fd112166 files/digest-sparc-utils-1.9-r2 141
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCQa9VArHZZzCEUG0RAg37AJsFeaLbgVe2UR47uMaChug6es7wBwCfbful
+dZZ1fo5N4vMIEy/iGbjbyKs=
+=CqME
+-----END PGP SIGNATURE-----

@@ -1,8 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sparc-utils/sparc-utils-1.9-r2.ebuild,v 1.5 2004/08/08 00:38:51 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sparc-utils/sparc-utils-1.9-r2.ebuild,v 1.6 2005/03/23 18:02:36 eradicator Exp $
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 DESCRIPTION="Various sparc utilities from Debian GNU/Linux"
 HOMEPAGE="http://www.debian.org/"
@@ -28,10 +28,10 @@ src_unpack() {
 src_compile() {
 	local CFLAGS="-O3"
 
-	emake -C elftoaout-2.3 CFLAGS="${CFLAGS}" || die
-	emake -C src piggyback piggyback64 CFLAGS="${CFLAGS}" || die
-	emake -C prtconf-1.3 all || die
-	emake -C audioctl-1.3 || die
+	emake -C elftoaout-2.3 CC="$(tc-getCC)" CFLAGS="${CFLAGS}" || die
+	emake -C src piggyback piggyback64 CC="$(tc-getCC)" CFLAGS="${CFLAGS}" || die
+	emake -C prtconf-1.3 CC="$(tc-getCC)" all || die
+	emake -C audioctl-1.3 CC="$(tc-getCC)" || die
 
 	# sparc32 is in sys-devel/sparc32
 	# emake -C sparc32-1.1

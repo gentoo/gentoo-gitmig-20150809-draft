@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/sparc-utils
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sparc-utils/ChangeLog,v 1.17 2004/08/08 00:38:51 slarti Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sparc-utils/ChangeLog,v 1.18 2005/03/23 18:02:36 eradicator Exp $
+
+  23 Mar 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  sparc-utils-1.9-r2.ebuild:
+  Use correct toolchain compiler.
 
   08 Aug 2004; Tom Martin <slarti@gentoo.org> sparc-utils-1.9-r1.ebuild,
   sparc-utils-1.9-r2.ebuild, sparc-utils-1.9.ebuild:
