@@ -1,6 +1,6 @@
 # ChangeLog for sys-libs/readline
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/ChangeLog,v 1.22 2003/03/15 14:45:38 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/ChangeLog,v 1.23 2003/03/28 16:46:50 joker Exp $
 
   15 Mar 2003; Martin Schlemmer <azarah@gentoo.org> readline-4.3-r4.ebuild :
   Remove /lib/*.old files, closing bug #16731.  Mark stable for x86.
@@ -24,6 +24,9 @@
   Added mips to keywords.
 
 *readline-4.3-r4 (09 Dec 2002)
+
+  28 Mar 2003; Christian Birchinger <joker@gentoo.org> readline-4.3-r4.ebuild:
+  Added sparc stable keyword
 
   24 Feb 2003; Nicholas Wourms <dragon@gentoo.org> readline-4.3-r4.ebuild :
   Marked as stable for mips.

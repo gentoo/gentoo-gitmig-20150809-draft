@@ -1,6 +1,6 @@
 # ChangeLog for sys-libs/ncurses
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ChangeLog,v 1.26 2003/03/13 10:31:43 doctomoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ChangeLog,v 1.27 2003/03/28 16:45:30 joker Exp $
 
   13 Mar 2003; Olivier Reisch <doctomoe@gentoo.org> ncurses-5.3-r1.ebuild :
   Marked ppc stable
@@ -28,6 +28,9 @@
 *ncurses-5.2-r7 (26 Oct 2002)
 *ncurses-5.2.20020511-r3 (26 Oct 2002)
 *ncurses-5.3-r1 (26 Oct 2002)
+
+  28 Mar 2003; Christian Birchinger <joker@gentoo.org> ncurses-5.3-r1.ebuild:
+  Added sparc stable keyword
 
   24 Feb 2003; Nicholas Wourms <dragon@gentoo.org> ncurses-5.3-r1.ebuild :
   Tested on mips extensively, works fine.  Marked as stable for mips.
