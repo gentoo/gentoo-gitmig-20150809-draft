@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/cons/cons-2.2.0.ebuild,v 1.10 2004/09/03 19:37:35 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/cons/cons-2.2.0.ebuild,v 1.11 2005/01/03 00:01:29 ciaranm Exp $
 
 DESCRIPTION="Extensible perl-based build utility"
 SRC_URI="http://www.dsmit.com/cons/stable/${P}.tgz"

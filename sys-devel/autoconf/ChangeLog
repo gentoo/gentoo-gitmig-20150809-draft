@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/autoconf
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/ChangeLog,v 1.57 2004/10/21 01:06:27 vapier Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/ChangeLog,v 1.58 2005/01/02 23:58:57 ciaranm Exp $
+
+  02 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
 *autoconf-2.13 (20 Oct 2004)
 
@@ -35,7 +38,7 @@
   16 Jun 2004; Martin Schlemmer <azarah@gentoo.org> files/ac-wrapper-4.pl:
   Update comments to show that we check for 2.13 and not 2.1.
 
-  11 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> autoconf-2.59-r4.ebuild:
+  11 Jun 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> autoconf-2.59-r4.ebuild:
   Stable on alpha.
 
   06 Jun 2004; Guy Martin <gmsoft@gentoo.org> autoconf-2.59-r3.ebuild:

@@ -1,11 +1,14 @@
 # ChangeLog for sys-devel/cons
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/cons/ChangeLog,v 1.8 2004/09/03 19:37:35 pvdabeel Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/cons/ChangeLog,v 1.9 2005/01/03 00:01:29 ciaranm Exp $
+
+  03 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> cons-2.2.0.ebuild:
   Masked cons-2.2.0.ebuild stable for ppc
 
-  11 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> cons-2.2.0.ebuild:
+  11 Jun 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> cons-2.2.0.ebuild:
   Stable on alpha.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords

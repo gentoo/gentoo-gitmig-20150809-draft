@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gnuconfig
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gnuconfig/ChangeLog,v 1.12 2004/09/03 19:37:35 pvdabeel Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gnuconfig/ChangeLog,v 1.13 2005/01/03 00:05:39 ciaranm Exp $
+
+  03 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   gnuconfig-20040214.ebuild:
@@ -11,7 +14,7 @@
   files/gnuconfig-20040312-update.patch:
   added uclibc support to gnuconfig with 2004-03-12 update
 
-  11 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> gnuconfig-20040214.ebuild:
+  11 Jun 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> gnuconfig-20040214.ebuild:
   Stable on alpha.
 
   29 Apr 2004; Guy Martin <gmsoft@gentoo.org> gnuconfig-20040214.ebuild:

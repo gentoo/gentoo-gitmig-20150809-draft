@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gcc-config
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/ChangeLog,v 1.73 2004/12/29 01:09:22 vapier Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/ChangeLog,v 1.74 2005/01/03 00:02:43 ciaranm Exp $
+
+  03 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
 *gcc-config-1.3.9 (27 Dec 2004)
 
@@ -93,7 +96,7 @@
   -gcc-config-1.3.6-r2.ebuild, +gcc-config-1.3.6-r3.ebuild:
   fixed the handling of GCC_SPECS-specific gcc configs
 
-  02 Oct 2004; Bryan Østergaard <kloeri@gentoo.org>
+  02 Oct 2004; Bryan Ã˜stergaard <kloeri@gentoo.org>
   gcc-config-1.3.6-r2.ebuild:
   Stable on alpha.
 
@@ -143,7 +146,7 @@
   +gcc-config-1.3.6.ebuild:
   Make sure we cleanup stale wrappers, bug #36388.
 
-  11 Jun 2004; Bryan Østergaard <kloeri@gentoo.org>
+  11 Jun 2004; Bryan Ã˜stergaard <kloeri@gentoo.org>
   gcc-config-1.3.5-r1.ebuild:
   Stable on alpha.
 
