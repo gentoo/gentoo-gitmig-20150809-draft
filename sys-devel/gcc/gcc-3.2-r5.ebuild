@@ -1,10 +1,10 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.2-r5.ebuild,v 1.1 2002/11/10 15:19:55 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.2-r5.ebuild,v 1.2 2002/11/19 18:55:04 azarah Exp $
 
 IUSE="static nls bootstrap java build"
 
-inherit flag-o-matic libtool
+inherit eutils flag-o-matic libtool
 
 # Compile problems with these (bug #6641 among others)...
 filter-flags "-fno-exceptions -fomit-frame-pointer"
@@ -45,6 +45,8 @@ DATAPATH="${LOC}/share/gcc-data/${CCHOST}/${MY_PV}"
 # We will handle /usr/include/g++-v3/ with gcc-config ...
 STDCXX_INCDIR="${LIBPATH}/include/g++-v${MY_PV/\.*/}"
 
+PATCH_VER="1.0"
+
 # Snapshot support ...
 #SNAPSHOT="2002-08-12"
 SNAPSHOT=""
@@ -53,7 +55,7 @@ if [ -z "${SNAPSHOT}" ]
 then
 	S="${WORKDIR}/${P}"
 	SRC_URI="ftp://gcc.gnu.org/pub/gcc/releases/${P}/${P}.tar.bz2
-		mirror://gentoo/distfiles/${P}-patches-1.0.tar.bz2"
+		mirror://gentoo/distfiles/${P}-patches-${PATCH_VER}.tar.bz2"
 else
 	S="${WORKDIR}/gcc-${SNAPSHOT//-}"
 	SRC_URI="ftp://sources.redhat.com/pub/gcc/snapshots/${SNAPSHOT}/gcc-${SNAPSHOT//-}.tar.bz2"
@@ -102,7 +104,7 @@ pkg_setup() {
 src_unpack() {
 	if [ -z "${SNAPSHOT}" ]
 	then
-		unpack ${P}.tar.bz2 ${P}-patches-1.0.tar.bz2
+		unpack ${P}.tar.bz2 ${P}-patches-${PATCH_VER}.tar.bz2
 	else
 		unpack gcc-${SNAPSHOT//-}.tar.bz2
 	fi
@@ -110,37 +112,9 @@ src_unpack() {
 	cd ${S}
 	# Fixup libtool to correctly generate .la files with portage
 	elibtoolize --portage --shallow
-	
-	cd ${S}; einfo "Applying various patches (bugfixes/updates)..."
-	for x in ${WORKDIR}/patch/*.patch.bz2
-	do
-		# New ARCH dependant patch naming scheme...
-		#
-		#   ???_arch_foo.patch
-		#
-		if [ -f ${x} ] && \
-		   [ "${x/_all_}" != "${x}" -o "`eval echo \$\{x/_${ARCH}_\}`" != "${x}" ]
-		then
-			local count=0
-			local popts="-l"
 
-			einfo "  ${x##*/}..."
-                
-			# Most -p differ for these patches ... im lazy, so shoot me :/
-			while [ "${count}" -lt 5 ]
-			do
-				if bzip2 -dc ${x} | patch ${popts} --dry-run -f -p${count} > /dev/null
-				then
-					bzip2 -dc ${x} | patch ${popts} -p${count} > /dev/null
-					break
-				fi
-                                
-				count=$((count + 1))
-			done
-    
-			[ "${count}" -eq 5 ] && die "Failed Patch: ${x##*/}!"
-		fi
-	done 
+	# Do bulk patches included in ${P}-patches-${PATCH_VER}.tar.bz2
+	epatch ${WORKDIR}/patch
 
 	# Fixes a bug in gcc-3.1 and above ... -maccumulate-outgoing-args flag (added
 	# in gcc-3.1) causes gcc to misconstruct the function call frame in many cases.
@@ -157,16 +131,13 @@ src_unpack() {
 	#
 	#   http://archive.linuxfromscratch.org/mail-archives/lfs-dev/2002/08/0588.html
 	#
-	einfo "Applying fix-copy and fix-var patches..."
-	patch -p1 < ${FILESDIR}/${PV}/${P}.fix-copy.patch > /dev/null || die
-	patch -p1 < ${FILESDIR}/${PV}/${P}.fix-var.patch > /dev/null || die
+	epatch ${FILESDIR}/${PV}/${P}.fix-copy.patch
+	epatch ${FILESDIR}/${PV}/${P}.fix-var.patch
 
 	# Fixes to get gcc to compile under glibc-2.3*
-	einfo "Applying glibc-2.3-compat patch..."
-	patch -p1 < ${FILESDIR}/${PV}/${P}-glibc-2.3-compat.diff > /dev/null || die
+	epatch ${FILESDIR}/${PV}/${P}-glibc-2.3-compat.diff
 	# This one is thanks to cretin@gentoo.org
-	einfo "Applying gcc-3.2-ctype patch..."
-	patch -p1 < ${FILESDIR}/${PV}/${P}.ctype.patch > /dev/null || die
+	epatch ${FILESDIR}/${PV}/${P}.ctype.patch
 
 	# Currently if any path is changed via the configure script, it breaks
 	# installing into ${D}.  We should not patch it in src_install() with
