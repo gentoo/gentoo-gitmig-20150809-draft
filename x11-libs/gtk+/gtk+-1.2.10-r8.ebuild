@@ -1,19 +1,19 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-1.2.10-r8.ebuild,v 1.6 2002/07/16 00:06:06 owen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-1.2.10-r8.ebuild,v 1.7 2002/08/05 10:02:51 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="The GIMP Toolkit"
 HOMEPAGE="http://www.gtk.org/"
 SRC_URI="ftp://ftp.gtk.org/pub/gtk/v1.2/${P}.tar.gz
-         ftp://ftp.gnome.org/pub/GNOME/stable/sources/gtk+/${P}.tar.gz
-         http://ftp.gnome.org/pub/GNOME/stable/sources/gtk+/${P}.tar.gz
-		 http://www.ibiblio.org/gentoo/distfiles/gtk+-1.2.10-r8-gentoo.diff.bz2"
+	ftp://ftp.gnome.org/pub/GNOME/stable/sources/gtk+/${P}.tar.gz
+	http://ftp.gnome.org/pub/GNOME/stable/sources/gtk+/${P}.tar.gz
+	http://www.ibiblio.org/gentoo/distfiles/gtk+-1.2.10-r8-gentoo.diff.bz2"
 
 DEPEND="virtual/glibc virtual/x11
-        =dev-libs/glib-1.2*
-		nls? ( sys-devel/gettext
-		dev-util/intltool )"
+	=dev-libs/glib-1.2*
+	nls? ( sys-devel/gettext
+	dev-util/intltool )"
 
 SLOT="1"
 LICENSE="LGPL-2.1"
@@ -42,9 +42,7 @@ src_compile() {
 		myconf="${myconf} --enable-debug=no"
 	fi
 
-	./configure --host=${CHOST} \
-		--prefix=/usr \
-		--mandir=/usr/share/man \
+	econf \
 		--sysconfdir=/etc/X11 \
 		--with-xinput=xfree \
 		--with-x \
@@ -77,8 +75,8 @@ pkg_postinst() {
 	echo "**********************************************************************"
 	echo "* Older versions added /etc/X11/gtk/gtkrc which changed settings for *"
 	echo "* all themes it seems.  Please remove it manually as it will not due *"
-	echo "* to /env protection.                                                *"
-	echo "*                                                                    *"
+	echo "* to /env protection.						*"
+	echo "*								    *"
 	echo "* NB:  The old gtkrc is available through the new Gentoo gtk theme.  *"
 	echo "**********************************************************************"
 	echo

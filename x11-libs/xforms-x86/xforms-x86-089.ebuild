@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xforms-x86/xforms-x86-089.ebuild,v 1.2 2002/07/22 03:56:44 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xforms-x86/xforms-x86-089.ebuild,v 1.3 2002/08/05 10:02:51 seemant Exp $
 
 MY_P="bxform-${PV}-glibc2.1"
 
@@ -22,7 +22,6 @@ src_compile() {
 }
 
 src_install () {
-
 	into /usr/X11R6
 	dolib FORMS/libforms.{a,so.*}
 	dobin DESIGN/fdesign
@@ -33,5 +32,4 @@ src_install () {
 	insinto /usr/X11R6/include
 	doins FORMS/forms.h
 	doman FORMS/xforms.5
-        
 }
