@@ -1,6 +1,9 @@
 # ChangeLog for net-www/epiphany
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/epiphany/ChangeLog,v 1.64 2004/08/18 21:04:57 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/epiphany/ChangeLog,v 1.65 2004/08/18 23:40:30 lv Exp $
+
+  18 Aug 2004; Travis Tilley <lv@gentoo.org> epiphany-1.2.7-r1.ebuild:
+  stable on amd64
 
 *epiphany-1.2.7-r1 (18 Aug 2004)
 
