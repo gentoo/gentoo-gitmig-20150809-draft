@@ -1,6 +1,9 @@
 # ChangeLog for media-video/dvdbackup
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdbackup/ChangeLog,v 1.1 2003/03/24 18:37:57 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdbackup/ChangeLog,v 1.2 2003/12/29 21:20:40 weeve Exp $
+
+  29 Dec 2003; Jason Wever <weeve@gentoo.org> dvdbackup-0.1.1.ebuild:
+  Added ~sparc to keywords.
 
 *dvdbackup-0.1.1 (24 Mar 2003)
 
