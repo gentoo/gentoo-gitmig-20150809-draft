@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/fmod/fmod-3.73.ebuild,v 1.4 2004/07/13 15:57:00 scandium Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/fmod/fmod-3.73.ebuild,v 1.5 2004/09/01 16:55:04 eradicator Exp $
 
 IUSE=""
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.fmod.org/"
 
 SLOT="0"
 LICENSE="fmod"
-KEYWORDS="-* x86 ~amd64"
+KEYWORDS="-* x86 amd64"
 
 DEPEND="virtual/libc"
 RDEPEND="${DEPEND}
