@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.2_beta3.ebuild,v 1.6 2005/01/25 17:20:32 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.2_beta3.ebuild,v 1.7 2005/01/26 13:40:16 greg_g Exp $
 
 inherit kde eutils
 
@@ -21,9 +21,10 @@ KEYWORDS="~amd64 ~ppc -sparc ~x86"
 
 #	Not yet released:
 #	">=media-libs/libvisual-0.2.0
-DEPEND="kde? ( || ( kde-base/kdebase-meta >=kde-base/kdebase-3.2 ) )
-	arts? ( || ( kde-base/kdemultimedia-meta >=kde-base/kdemultimedia-3.2 )
-		>=kde-base/arts-1.2 )
+DEPEND="kde? ( || ( kde-base/konqueror kde-base/kdebase ) )
+	arts? ( || ( kde-base/kdemultimedia-arts kde-base/kdemultimedia )
+		|| ( kde-base/akode kde-base/kdemultimedia )
+		kde-base/arts )
 	opengl? ( virtual/opengl )
 	xmms? ( >=media-sound/xmms-1.2 )
 	xine? ( >=media-libs/xine-lib-1_rc4 )
