@@ -1,3 +1,7 @@
+# 04 Oct 2004 Guy Martin <gmsoft@gentoo.org>
+# hal not yet tested
+hal
+
 # 11 Aug 2004 Guy Martin <gmsoft@gentoo.org>
 # No nptl support yet
 nptl
