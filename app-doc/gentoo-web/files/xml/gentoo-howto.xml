@@ -256,10 +256,36 @@ default installation destinations are fine, with a few exceptions:</p>
 <section>
 <title>Public scripts</title>
 <body><p>These are scripts used by the system-administrator to install and remove packages, and maintain the package database.</p>
-<ul>
-<li>ebuild - the main engine of the Portage system; performs all major tasks such as unpacking, compiling, installing, merging, and unmerging packages</li>
-<li>emerge - recursively merges a package and all of its dependencies</li>
-<li>pkgmerge - merges a pre-packaged .tbz2 file for a package</li>
+<p><c>ebuild</c></p>
+<p><c>ebuild</c> is the main engine of the Portage system; it performs all major tasks such as unpacking, compiling, installing, merging, and unmerging packages. It is called using the command: <c>ebuild path/to/package.ebuild command</c>. The commands available are:</p>
+<table>
+<tr><td><c>depend</c></td><td>displays the dependencies required to build the package</td></tr>
+<tr><td><c>check</c></td><td>checks that the package dependencies are fulfilled</td></tr>
+<tr><td><c>rcheck</c></td>checks that the package runtime dependencies<td></td></tr>
+<tr><td><c>merge</c></td><td>unpacks, compiles, installs, and merges the package into your filesystem</td></tr>
+<tr><td>*<c>qmerge</c></td><td>merges the package into your filesystem, assuming that the the unpack, compile, and install stages have already been executed</td></tr>
+<tr><td><c>unpack</c></td>unpacks the source tarballs into the work directory<td></td></tr>
+<tr><td><c>compile</c></td><td>compiles the package</td></tr>
+<tr><td><c>rpm</c></td><td>creates an RPM from the package</td></tr>
+<tr><td><c>package</c></td><td>creates a Gentoo <c>tbz2</c> package</td></tr>
+<tr><td>*<c>prerm</c></td><td>executes the pre-removal stage of the package</td></tr>
+<tr><td>*<c>postrm</c></td><td>executes the post-removal stage of the package</td></tr>
+<tr><td>*<c>preinst</c></td><td>executes the pre-installation stage of the package</td></tr>
+<tr><td>*<c>postinst</c></td><td>executes the post-installation stage of the package</td></tr>
+<tr><td>*<c>config</c></td><td></td></tr>
+<tr><td>*<c>touch</c></td><td></td></tr>
+<tr><td><c>clean</c></td><td>cleans the work directory for the package</td></tr>
+<tr><td><c>fetch</c></td><td>fetches the package source tarballs</td></tr>
+<tr><td>*<c>digest</c></td><td>creates a digest file for the package</td></tr>
+<tr><td><c>install</c></td><td>installs the package into the image directory</td></tr>
+<tr><td><c>unmerge</c></td><td>unmerges the package from your filesystem</td></tr>
+</table>
+
+<p><c>emerge</c></p>
+<p><c>emerge</c> recursively merges a package and all of its dependencies into your filesystem.</p>
+
+<p><c>pkgmerge</c></p>
+<p><c>pkgmerge</c> merges a Gentoo <c>tbz2</c> package.</p>
 </ul>
 </body>
 </section>
