@@ -1,6 +1,10 @@
 # ChangeLog for net-news/newspost
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/newspost/ChangeLog,v 1.14 2004/07/01 22:38:45 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/newspost/ChangeLog,v 1.15 2004/07/04 22:56:48 swegener Exp $
+
+  05 Jul 2004; Sven Wegener <swegener@gentoo.org> -newspost-1.20.ebuild,
+  -newspost-2.0.ebuild, -newspost-2.1.ebuild:
+  Removed older ebuilds.
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   newspost-2.1.1.ebuild:
