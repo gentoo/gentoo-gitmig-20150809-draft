@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-2.2.6.ebuild,v 1.2 2002/10/26 00:11:05 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-2.2.6.ebuild,v 1.3 2002/10/26 16:39:16 vapier Exp $
 
 IUSE="tcpd ldap cups ssl acl vscan"
 
@@ -34,7 +34,6 @@ src_unpack() {
 	unpack ${A} || die
 	cd ${S} || die
 
-	patch -p0 < ${FILESDIR}/samba-2.2.2-smbmount.diff || die
 	patch -p0 < ${FILESDIR}/samba-2.2.2-smbmount.diff || die
 	patch -p1 < ${FILESDIR}/samba-2.2.5-gp-reloc-fix.patch || die
 	cd source/client; patch -p0 < ${FILESDIR}/samba-2.2.6-smbumount_lazy.patch || die
