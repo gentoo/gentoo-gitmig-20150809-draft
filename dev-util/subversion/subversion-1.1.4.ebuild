@@ -1,35 +1,34 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.1.2.ebuild,v 1.3 2005/01/18 19:32:47 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.1.4.ebuild,v 1.1 2005/04/05 09:31:50 pauldv Exp $
 
-inherit elisp-common libtool python eutils bash-completion
+inherit elisp-common libtool python eutils bash-completion flag-o-matic depend.apache
 
 DESCRIPTION="A compelling replacement for CVS"
-SRC_URI="http://subversion.tigris.org/tarballs/${P/_rc/-rc}.tar.bz2"
 HOMEPAGE="http://subversion.tigris.org/"
+SRC_URI="http://subversion.tigris.org/tarballs/${P/_rc/-rc}.tar.bz2"
 
-SLOT="0"
 LICENSE="Apache-1.1"
-KEYWORDS="~x86 ~sparc ~ppc ~amd64 ~alpha ~hppa ~ppc64 ~ia64"
-IUSE="ssl apache2 berkdb python emacs perl java"
-
-S=${WORKDIR}/${P/_rc/-rc}
+SLOT="0"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+IUSE="ssl apache2 berkdb python emacs perl java nls"
+RESTRICT="maketest"
 
 # Presently subversion doesn't build with swig-1.3.22, bug 65424
-RDEPEND="apache2? ( >=net-www/apache-2.0.49 )
-	!apache2? ( !>=net-www/apache-2* )
-	!dev-libs/apr
+RDEPEND="apache2? ( ${APACHE2_DEPEND} )
+	>=dev-libs/apr-util-0.9.5
 	python? ( =dev-lang/swig-1.3.21 >=dev-lang/python-2.0 )
 	perl? ( =dev-lang/swig-1.3.21 >=dev-lang/perl-5.8 )
 	>=net-misc/neon-0.24.7
 	berkdb? ( =sys-libs/db-4* )
 	java? ( virtual/jdk )
 	emacs? ( virtual/emacs )"
-
 DEPEND="${RDEPEND}
 	>=sys-devel/autoconf-2.59"
 # Does not work because jikes is broken
 #	jikes? (dev-java/jikes)"
+
+S=${WORKDIR}/${P/_rc/-rc}
 
 # Allow for custion repository locations.
 # This can't be in pkg_setup because the variable needs to be available to
@@ -37,10 +36,6 @@ DEPEND="${RDEPEND}
 : ${SVN_REPOS_LOC:=/var/svn}
 
 pkg_setup() {
-	if has_version =sys-devel/autoconf-2.58*; then
-		die "Subversion WILL NOT BUILD with autoconf-2.58"
-	fi
-
 	if use berkdb && has_version '<dev-util/subversion-0.34.0' && [[ -z ${SVN_DUMPED} ]]; then
 		echo
 		ewarn "Presently you have $(best_version subversion)"
@@ -54,21 +49,6 @@ pkg_setup() {
 		echo
 		die "Ensure that you dump your repository first"
 	fi
-
-	if use apache2; then
-		echo
-		einfo "The apache2 subversion module will be built, and libapr from the"
-		einfo "apache package will be used instead of the included."
-		echo
-	else
-		echo
-		einfo "Please note that subversion and apache2 cannot be installed"
-		einfo "simultaneously without specifying the apache2 use flag. This is"
-		einfo "because subversion installs its own libapr and libapr-util in that"
-		einfo "case. Specifying the apache2 useflag will also enable the building of"
-		einfo "the apache2 module."
-		echo
-	fi
 }
 
 src_unpack() {
@@ -77,7 +57,6 @@ src_unpack() {
 
 	epatch ${FILESDIR}/subversion-db4.patch
 	epatch ${FILESDIR}/subversion-1.1.1-perl-vendor.patch
-	epatch ${FILESDIR}/subversion-1.1.2-perl.patch
 
 	export WANT_AUTOCONF=2.5
 	elibtoolize
@@ -89,9 +68,9 @@ src_unpack() {
 
 src_compile() {
 	local myconf
+	myconf="--with-apr=/usr --with-apr-util=/usr"
 
-	use apache2 && myconf="${myconf} --with-apxs=/usr/sbin/apxs2 \
-		--with-apr=/usr --with-apr-util=/usr"
+	use apache2 && myconf="${myconf} --with-apxs=${APXS2}"
 	use apache2 || myconf="${myconf} --without-apxs"
 
 	myconf="${myconf} $(use_enable java javahl)"
@@ -104,10 +83,15 @@ src_compile() {
 		myconf="${myconf} --without-swig"
 	fi
 
+	append-flags `/usr/bin/apr-config --cppflags`
+
 	econf ${myconf} \
 		$(use_with ssl) \
 		$(use_with berkdb berkeley-db) \
 		$(use_with python) \
+		$(use_enable nls) \
+		--with-apr=/usr \
+		--with-apr-util=/usr \
 		--with-neon=/usr \
 		--disable-experimental-libtool \
 		--disable-mod-activation || die "econf failed"
@@ -116,19 +100,11 @@ src_compile() {
 	# Also apparently the included apr has a libtool that doesn't like -L flags.
 	# So not specifying it at all when not building apache modules and only
 	# specify it for internal parts otherwise.
-	if use apache2; then
-		( emake external-all && emake LT_LDFLAGS="-L${D}/usr/lib" local-all ) || die "make of subversion failed"
-	else
-		( emake external-all && emake local-all ) || die "make of subversion failed"
-	fi
+	( emake external-all && emake LT_LDFLAGS="-L${D}/usr/lib" local-all ) || die "make of subversion failed"
 
 	if use python; then
 		# Building fails without the apache apr-util as includes are wrong.
-		if use apache2; then
-			emake swig-py || die "subversion python bindings failed"
-		else
-			emake SVN_APR_INCLUDES="-I${S}/apr/include -I${S}/apr-util/include" swig-py || die "subversion python bindings failed"
-		fi
+		emake swig-py || die "subversion python bindings failed"
 	fi
 
 	if use perl; then
@@ -157,24 +133,19 @@ src_compile() {
 
 
 src_install () {
-	use apache2 && mkdir -p ${D}/etc/apache2/conf
-
 	python_version
 	PYTHON_DIR=/usr/lib/python${PYVER}
 
 	make DESTDIR=${D} install || die "Installation of subversion failed"
-	if [[ -e ${D}/usr/lib/apache2 ]]; then
-		if has_version '>=net-www/apache-2.0.48-r2'; then
-			mv ${D}/usr/lib/apache2/modules ${D}/usr/lib/apache2-extramodules
-			rmdir ${D}/usr/lib/apache2
-		else
-			mv ${D}/usr/lib/apache2 ${D}/usr/lib/apache2-extramodules
-		fi
-	fi
 
-	if has_version '>=net-www/apache-2.0.48-r2'; then
-		chown -R root:root ${D}/usr/include/apr-0/
-	fi
+#	This might not be necessary with the new install
+#	if [[ -e ${D}/usr/lib/apache2 ]]; then
+#		if [ "${APACHE2_MODULESDIR}" != "/usr/lib/apache2/modules" ]; then
+#			mkdir -p ${D}/`dirname ${APACHE2_MODULESDIR}`
+#			mv ${D}/usr/lib/apache2/modules ${D}/${APACHE2_MODULESDIR}
+#			rmdir ${D}/usr/lib/apache2 2>/dev/null
+#		fi
+#	fi
 
 
 	dobin svn-config
@@ -196,11 +167,11 @@ src_install () {
 
 	# Install apache module config
 	if useq apache2; then
-		mkdir -p ${D}/etc/apache2/conf/modules.d
-		cat <<EOF >${D}/etc/apache2/conf/modules.d/47_mod_dav_svn.conf
+		mkdir -p ${D}/${APACHE2_MODULES_CONFDIR}
+		cat <<EOF >${D}/${APACHE2_MODULES_CONFDIR}/47_mod_dav_svn.conf
 <IfDefine SVN>
 	<IfModule !mod_dav_svn.c>
-		LoadModule dav_svn_module	extramodules/mod_dav_svn.so
+		LoadModule dav_svn_module	modules/mod_dav_svn.so
 	</IfModule>
 	<Location /svn/repos>
 		DAV svn
@@ -212,7 +183,7 @@ src_install () {
 	</Location>
 	<IfDefine SVN_AUTHZ>
 		<IfModule !mod_authz_svn.c>
-			LoadModule authz_svn_module	extramodules/mod_authz_svn.so
+			LoadModule authz_svn_module	${APACHE2_MODULESDIR/${APACHE2_BASEDIR}\/}/mod_authz_svn.so
 		</IfModule>
 	</IfDefine>
 </IfDefine>
@@ -234,9 +205,7 @@ EOF
 	insinto /etc/conf.d ; newins ${FILESDIR}/svnserve.confd svnserve
 	insinto /etc/xinetd.d ; newins ${FILESDIR}/svnserve.xinetd svnserve
 
-	# 
-	# Past here is all documentation and examples
-	#
+	# Install documentation
 
 	dodoc BUGS COMMITTERS COPYING HACKING INSTALL README
 	dodoc CHANGES
@@ -245,7 +214,6 @@ EOF
 	cp -r --parents tools/{client-side,examples,hook-scripts} ${D}/usr/share/doc/${PF}/
 	cp -r --parents contrib/hook-scripts ${D}/usr/share/doc/${PF}/
 
-	# Install documentation
 	docinto notes
 	for f in notes/*
 	do
