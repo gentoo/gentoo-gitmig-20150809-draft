@@ -1,6 +1,6 @@
 # ChangeLog for net-analyzer/nagios-core
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/ChangeLog,v 1.20 2004/02/27 14:30:32 mboman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/ChangeLog,v 1.21 2004/03/19 09:44:52 aliz Exp $
 
 *nagios-core-1.2 (27 Feb 2004)
 
@@ -42,7 +42,7 @@
   nagios-core-1.1-r4.ebuild:
   adding RESTRICT="nomirror"
 
-*nagios-core-1.1-r3 (20 Jul 2003)
+*nagios-core-1.1-r4 (20 Jul 2003)
   20 Jul 2003; <klieber@gentoo.org> nagios-core-1.1-r4 :
   added /contrib/ directory closing #24865
 

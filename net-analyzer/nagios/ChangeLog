@@ -1,6 +1,6 @@
 # ChangeLog for net-analyzer/nagios
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios/ChangeLog,v 1.13 2004/02/18 10:57:54 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios/ChangeLog,v 1.14 2004/03/19 09:44:52 aliz Exp $
 
   18 Feb 2004; Martin Holzer <mholzer@gentoo.org> nagios-1.1.ebuild:
   removing einfo since this is done in nagios-core
@@ -19,7 +19,7 @@
   14 Jul 2003; Patrick Kursawe <phosphan@gentoo.org> :
   Generated digest files, even if there's nothing to digest...
 
-*nagios-1.1		(10 Jun 2003)
+*nagios-1.1 (10 Jun 2003)
   10 Jun 2003; Dean Bailey <alron@gentoo.org> nagios-1.1 :
   Version bump to force updates to nagios-1.1.
 

@@ -1,6 +1,6 @@
 # ChangeLog for net-analyzer/xtraceroute
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/xtraceroute/ChangeLog,v 1.6 2003/10/10 09:20:58 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/xtraceroute/ChangeLog,v 1.7 2004/03/19 09:44:52 aliz Exp $
 
   10 Oct 2003; Michael Sterrett <mr_bones_@gentoo.org>
   xtraceroute-0.9.0.ebuild:
@@ -14,7 +14,7 @@
   28 Jun 2002; Thilo Bangert <bangert@gentoo.org> :
   moved to net-analyzer - added SLOT
 
-*xtraceroute-0.9.0,  (10 May 2002)
+*xtraceroute-0.9.0 (10 May 2002)
 
   11 May 2002; G Shapovalov <george@gentoo.org> ChangeLog :
 
