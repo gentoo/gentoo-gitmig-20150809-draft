@@ -1,4 +1,4 @@
-MD5 ceb9b61cf7f86d71eb063e446c9bba71 ChangeLog 7145
+MD5 8c9f0ad84fdbdcbb769e57a5e197f265 ChangeLog 7262
 MD5 ec784111eba5eea296151646c1b40e64 galeon-1.2.8.ebuild 3254
 MD5 c90bd5a3f085adc3689e5105bb5c7457 galeon-1.2.6.ebuild 3003
 MD5 de55ba364ec5d350564f7bdb54da2dcf galeon-1.2.7-r1.ebuild 3081
@@ -7,6 +7,7 @@ MD5 b1dcbfc1f26d6f28e920f26e30df45ca galeon-1.3.2.ebuild 1616
 MD5 e3e35eb1d10dcd317a3e73aef9c6ffd6 galeon-1.3.3.ebuild 1800
 MD5 2cd15b0629bc9d6e9c0938a6d4f5be36 galeon-1.2.9.ebuild 3263
 MD5 952302c8a0bd5a234d6944a9c012e3de galeon-1.3.4.ebuild 1687
+MD5 dcb74769bc96a7df5c3ac1a71dc11ad4 galeon-1.2.10.ebuild 3276
 MD5 7452327082b17acbb2ae8b41e9d4356c files/digest-galeon-1.2.8 65
 MD5 bbfc72f2fb2c1023fa9722dfa6bbfaa4 files/digest-galeon-1.3.2 579
 MD5 61056f75dbefbbf2d8d48ec8c3323152 files/digest-galeon-1.2.6 65
@@ -21,3 +22,4 @@ MD5 27abbf68b9d04fd4ab742e9217d2a4d3 files/galeon-omffix.patch 1420
 MD5 1547a74d44a66a666139d4bf88fea367 files/digest-galeon-1.3.3 65
 MD5 1745a1b5fb19426c721b8d1aefad75fa files/digest-galeon-1.2.9 65
 MD5 45c670ad8bd2014a4b86dcd37c1c5d11 files/digest-galeon-1.3.4 66
+MD5 c08151870ccc9d91e6e8ceb9a8a83b8b files/digest-galeon-1.2.10 66
