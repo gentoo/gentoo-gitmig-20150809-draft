@@ -37,7 +37,7 @@ then
 	RDEPEND="${DEPEND}
 		 !build? ( >=sys-libs/ncurses-5.2
 		dev-lang/perl
-		virtual/modutils
+		sys-apps/module-init-tools
 		sys-devel/make )"
  
 	PROVIDE="virtual/linux-sources virtual/alsa"
