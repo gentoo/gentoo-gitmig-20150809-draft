@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mozilla.eclass,v 1.20 2004/11/05 22:51:57 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mozilla.eclass,v 1.21 2004/11/06 08:23:23 brad Exp $
 
 ECLASS=mozilla
 INHERITED="$INHERITED $ECLASS"
@@ -247,7 +247,8 @@ mozilla_conf() {
 			--disable-calendar \
 			--disable-svg \
 			--disable-necko-disk-cache \
-			--disable-profilesharing 
+			--disable-profilesharing \
+			--disable-plugins
 	fi
 
 	# Some firefox-only flags
