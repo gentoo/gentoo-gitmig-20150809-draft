@@ -9,8 +9,8 @@ HOMEPAGE="http://www.csm.ornl.gov/pvm/pvm_home.html"
 IUSE=""
 
 DEPEND=">=sys-cluster/pvm-3.4.1-r1
-	=dev-lang/tcl-8.3*
-	=dev-lang/tk-8.3*"
+	dev-lang/tcl
+	dev-lang/tk"
 RDEPEND=""
 
 SLOT="0"
