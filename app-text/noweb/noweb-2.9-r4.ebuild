@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/noweb/noweb-2.9-r4.ebuild,v 1.1 2004/09/01 09:36:37 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/noweb/noweb-2.9-r4.ebuild,v 1.2 2004/09/02 07:07:27 usata Exp $
 
 inherit eutils
 
@@ -30,13 +30,20 @@ src_unpack() {
 
 	# make touch only touches the files required, not the whole
 	# tree as with find . -type f | xargs touch <obz@gentoo.org>
-	make touch
+	#make touch || die "make touch failed."
 
 }
 
 src_compile() {
 	local libsrc
 	use icon && libsrc="icon" || libsrc="awk"
+
+	# noweb tries to use notangle and noweb; see bug #50429
+	( cd c; emake CFLAGS="${CFLAGS}" LIBSRC="$libsrc" ) || die
+	export PATH="${PATH}:${T}"
+	emake BIN=${T} LIB=${T} LIBSRC="$libsrc" install-code \
+		|| die "make temporal install failed."
+
 	emake CFLAGS="${CFLAGS}" LIBSRC="$libsrc" || die
 }
 
