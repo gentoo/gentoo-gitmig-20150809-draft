@@ -1,0 +1,6 @@
+MD5 92eade8ea983c3b5aee3b56ed8362512 ChangeLog 2679
+MD5 d4764f5c17f5e0b416f7ddf271c77d71 metadata.xml 161
+MD5 13c9fb371216ef57405b76b04f282d4e inn-2.4.1.ebuild 8193
+MD5 9bfea7a0644e2f3adc2738d86bfa2254 files/innd 436
+MD5 69e1740d0d4d85a272e0491fa1a7ddb7 files/2.4.1-berkdb.patch 1393
+MD5 12b5b155a7df558664f522f72ab5f723 files/digest-inn-2.4.1 118
