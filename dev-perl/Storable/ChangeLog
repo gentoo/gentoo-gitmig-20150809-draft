@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Storable
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Storable/ChangeLog,v 1.13 2003/04/06 16:17:22 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Storable/ChangeLog,v 1.14 2003/06/01 01:37:31 mcummings Exp $
+
+*Storable-2.07 (31 May 2003)
+
+  31 May 2003; Michael Cummings <mcummings@gentoo.org> Storable-2.07.ebuild:
+  New version from CPAN.
 
 *Storable-2.04-r1 (29 Oct 2002)
 
