@@ -1,12 +1,16 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-sci/qcad/qcad-1.4.7.ebuild,v 1.2 2002/07/11 06:30:18 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/qcad/qcad-1.4.7.ebuild,v 1.3 2002/07/18 04:09:19 george Exp $
 
 MY_P=${P}-src
 S=${WORKDIR}/${MY_P}
 DESCRIPTION="A 2D CAD package based upon Qt."
 SRC_URI="http://www.qcad.org/archives/${MY_P}.tar.gz"
 HOMEPAGE="http://www.qcad.org"
+
+LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="x86"
 
 DEPEND=">=dev-util/tmake-1.8-r1 
 	=x11-libs/qt-2.3*"

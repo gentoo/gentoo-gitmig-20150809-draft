@@ -8,6 +8,10 @@ SRC_URI="ftp://ftp.gromacs.org/pub/gromacs/${P}.tar.gz"
 
 HOMEPAGE="http://www.gromacs.org/"
 
+LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="x86"
+
 DEPEND=">=dev-libs/fftw-2.1.3
 		>=sys-devel/binutils-2.10.91.0.2"
 

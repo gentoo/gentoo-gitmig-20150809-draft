@@ -1,14 +1,17 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-sci/scigraphica/scigraphica-0.8.0.ebuild,v 1.2 2002/07/11 06:30:18 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/scigraphica/scigraphica-0.8.0.ebuild,v 1.3 2002/07/18 04:09:19 george Exp $
 
 S=${WORKDIR}/${P}
 
 DESCRIPTION="Scientific application for data analysis and technical graphics."
 
 SRC_URI="http://scigraphica.sourceforge.net/src/${P}.tar.gz"
-
 HOMEPAGE="http://scigraphica.sourceforge.net/"
+
+LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="x86"
 
 DEPEND=">=x11-libs/gtk+extra-0.99.17
 		>=dev-python/Numeric-20.3

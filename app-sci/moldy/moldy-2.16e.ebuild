@@ -8,6 +8,10 @@ SRC_URI="ftp://ftp.earth.ox.ac.uk/pub/${P}.tar.gz"
 #For lack of a better homepage
 HOMEPAGE="http://sal.kachinatech.com/Z/2/MOLDY.html"
 
+LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="x86"
+
 DEPEND="virtual/glibc
                 X? ( x11-base/xfree )"
 
