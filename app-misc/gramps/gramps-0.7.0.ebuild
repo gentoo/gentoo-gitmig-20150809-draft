@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/gramps-0.7.0.ebuild,v 1.4 2002/07/25 17:20:00 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/gramps-0.7.0.ebuild,v 1.5 2002/08/27 18:06:41 spider Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Genealogical Research and Analysis Management Programming System"
@@ -12,7 +12,7 @@ LICENSE="GPL-2"
 KEYWORDS="x86"
 
 DEPEND=">=dev-lang/python-2.0
-	>=gnome-base/gnome-core-1.2
+	<=gnome-base/gnome-panel-1.5
 	dev-python/gnome-python
 	dev-python/PyXML
 	dev-python/Imaging
