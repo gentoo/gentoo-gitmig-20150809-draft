@@ -1,6 +1,11 @@
 # ChangeLog for app-emacs/xslide
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/xslide/ChangeLog,v 1.2 2003/02/12 03:58:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/xslide/ChangeLog,v 1.3 2003/09/10 05:25:34 mkennedy Exp $
+
+*xslide-0.2.2 (10 Sep 2003)
+
+  10 Sep 2003; Matthew Kennedy <mkennedy@gentoo.org> xslide-0.2.2.ebuild:
+  minor version update. resolves bug 27641
 
 *xslide-0.2 (31 Oct 2002)
 
