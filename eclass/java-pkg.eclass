@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-pkg.eclass,v 1.20 2004/11/18 17:16:02 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-pkg.eclass,v 1.21 2004/11/29 21:46:16 axxo Exp $
 
 ECLASS=java-pkg
 INHERITED="${INHERITED} ${ECLASS}"
@@ -253,6 +253,10 @@ java-pkg_dozip()
 _record-jar()
 {
 	echo "$(basename $2)@$1" >> ${pkglistpath}
+}
+
+java-pkg_jarfrom() {
+	java-pkg_jar-from "$@"
 }
 
 java-pkg_jar-from()
