@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyid3lib/pyid3lib-0.5.1.ebuild,v 1.1 2004/06/05 15:09:56 lucass Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyid3lib/pyid3lib-0.5.1.ebuild,v 1.2 2004/06/08 12:40:42 dholm Exp $
 
 inherit distutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://pyid3lib.sourceforge.net/"
 IUSE=""
 SLOT="0"
 LICENSE="LGPL-2.1"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 DEPEND="virtual/python
 	media-libs/id3lib"
 
