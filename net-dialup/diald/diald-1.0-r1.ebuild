@@ -1,7 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Maintainer: Donny Davies <woodchip@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/diald/diald-1.0.ebuild,v 1.1 2002/04/02 18:30:58 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/diald/diald-1.0-r1.ebuild,v 1.1 2002/05/04 03:20:58 woodchip Exp $
 
 # You need SLIP in your kernel to run diald.
 
@@ -12,6 +11,8 @@ S=${WORKDIR}/${P}
 
 DEPEND="virtual/glibc sys-libs/pam sys-apps/tcp-wrappers"
 RDEPEND="${DEPEND} net-dialup/ppp"
+LICENSE="as-is"
+SLOT="0"
 
 src_unpack() {
 	unpack ${A} ; cd ${S}
