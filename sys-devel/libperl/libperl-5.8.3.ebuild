@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/libperl-5.8.3.ebuild,v 1.7 2004/06/24 22:47:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/libperl-5.8.3.ebuild,v 1.8 2004/06/29 17:43:00 agriffis Exp $
 
 # The basic theory based on comments from Daniel Robbins <drobbins@gentoo.org>.
 #
@@ -51,7 +51,6 @@
 #  course DEPEND on libperl.
 #
 # Martin Schlemmer <azarah@gentoo.org> (28 Dec 2002).
-
 
 IUSE="berkdb gdbm threads"
 
@@ -170,10 +169,6 @@ src_compile() {
 		myconf="${myconf} -Dd_u32align"
 	fi
 	if use sparc
-	then
-		myconf="${myconf} -Ud_longdbl"
-	fi
-	if use sparc64
 	then
 		myconf="${myconf} -Ud_longdbl"
 	fi
@@ -301,7 +296,6 @@ EOF
 		dosed 's:./miniperl:/usr/bin/perl:' /usr/bin/xsubpp
 		fperms 0755 /usr/bin/xsubpp
 
-
 		./perl installman \
 			--man1dir="${D}/usr/share/man/man1" --man1ext='1' \
 			--man3dir="${D}/usr/share/man/man3" --man3ext='3'
@@ -374,5 +368,4 @@ pkg_postinst() {
 		fi
 	fi
 }
-
 
