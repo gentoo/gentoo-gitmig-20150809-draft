@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/antlr/antlr-2.7.4.ebuild,v 1.6 2005/01/26 21:24:06 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/antlr/antlr-2.7.4.ebuild,v 1.7 2005/02/05 15:59:53 luckyduck Exp $
 
 inherit java-pkg gnuconfig
 
@@ -11,7 +11,7 @@ DEPEND=">=virtual/jdk-1.2"
 SLOT="0"
 LICENSE="ANTLR"
 KEYWORDS="~x86 ~amd64 ppc64"
-IUSE=""
+IUSE="doc examples"
 
 src_compile() {
 	gnuconfig_update
@@ -20,12 +20,20 @@ src_compile() {
 }
 
 src_install () {
-	insinto /usr/share/antlr
 	java-pkg_dojar *.jar
+
+	insinto /usr/share/antlr
 	doins extras/antlr-mode.el
-	java-pkg_dohtml -r doc/*
-	cp -R examples ${D}/usr/share/doc/${P}/
+
+	dobin scripts/antlr-config
+
+	use doc && java-pkg_dohtml -r doc/*
 	dodoc RIGHTS
+
+	if use examples; then
+		dodir /usr/share/doc/${PF}/examples
+		cp -r examples/* ${D}/usr/share/doc/${PF}/examples
+	fi
 	cd lib/cpp
 	make DESTDIR=$D install
 }
