@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040605-r1.ebuild,v 1.1 2004/06/11 07:38:37 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040605-r1.ebuild,v 1.2 2004/06/11 07:55:24 kumba Exp $
 
 IUSE="nls pic build nptl erandom hardened makecheck multilib"
 
@@ -76,24 +76,20 @@ PROVIDE="virtual/glibc"
 
 
 setup_flags() {
-	# -freorder-blocks for all but ia64 s390 s390x
+	# -freorder-blocks for all but ppc
 	use ppc || append-flags "-freorder-blocks"
 
 	# Sparc/Sparc64 support
 	if use sparc; then
 
 		# Both sparc and sparc64 can use -fcall-used-g6.  -g7 is bad, though.
-		replace-flags "-fcall-used-g7" ""
+		filter-flags "-fcall-used-g7"
 		append-flags "-fcall-used-g6"
 
 		# Sparc64 Only support...
 		if [ "${PROFILE_ARCH}" = "sparc64" ]; then
-			# Get rid of -mcpu options, the CHOST will fix this up
-			replace-flags "-mcpu=ultrasparc" ""
-			replace-flags "-mcpu=v9" ""
-
-			# Get rid of flags known to fail
-			replace-flags "-mvis" ""
+			# Get rid of -mcpu options (the CHOST will fix this up) and flags known to fail
+			filter-flags "-mcpu=ultrasparc -mcpu=v9 -mvis"
 
 			# Setup the CHOST properly to insure "sparcv9"
 			# This passes -mcpu=ultrasparc -Wa,-Av9a to the compiler
