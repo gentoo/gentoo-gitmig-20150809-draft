@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# agenkin@gentoo.org (07 Aug 2003)
+# Compilation fails for me; masking pending a bugfix.
+=media-libs/xine-lib-1_rc0-r1
+
 # robbat2@gentoo.org (05 Aug 2003)
 # Work in progress, some limited testing going on before rolling out to
 # unstable. BIG WARNING: this may break your qmail at the moment!
