@@ -1,0 +1,20 @@
+--- configure.in.orig	2003-04-04 02:54:46.000000000 -0800
++++ configure.in	2003-04-04 02:55:00.000000000 -0800
+@@ -128,17 +128,6 @@
+ msgmerge=$MSGMERGE
+ AC_SUBST(msgmerge)
+ 
+-dnl ensure xgettext is installed
+-test -z "$XGETTEXT" && AC_CHECK_PROG(XGETTEXT, xgettext, /usr/bin/xgettext)
+-if test "$XGETTEXT" = ""; then
+-	echo
+-	echo 'FATAL ERROR: xgettext does not seem to be installed.'
+-	echo $pkg_name cannot be built without a working gettext installation.
+-	exit 1
+-fi
+-xgettext=$XGETTEXT
+-AC_SUBST(xgettext)
+-
+ dnl ensure libtool is installed
+ test -z "$LIBTOOL" && AC_PATH_PROG(LIBTOOL, libtool,,/usr/bin)
+ if test "$LIBTOOL" = ""; then
