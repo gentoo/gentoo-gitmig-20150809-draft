@@ -1,18 +1,23 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Vitaly Kushneriuk <vitaly_kushneriuk@yahoo.com>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmailanalog/qmailanalog-0.70.ebuild,v 1.1 2002/01/30 13:36:48 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmailanalog/qmailanalog-0.70.ebuild,v 1.2 2002/06/17 14:27:17 bangert Exp $
 
 S=${WORKDIR}/${P}
 
 DESCRIPTION="collection of tools to help you analyze qmail's activity record."
 SRC_URI="http://cr.yp.to/software/${P}.tar.gz"
 HOMEPAGE="http://cr.yp.to/qmailanalog.html"
+LICENSE="as-is"
 
 DEPEND="virtual/glibc
 		sys-apps/groff"
 
 src_compile() {
+	echo "/var/qmail" > conf-home
+	echo "gcc ${CFLAGS}" > conf-cc
+	echo "gcc" > conf-ld
+	
 	emake || die
 	gcc ${FILESDIR}/tai64nfrac.c -o tai64nfrac
 }
