@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/kimdaba/kimdaba-1.1.ebuild,v 1.3 2004/06/24 22:44:31 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/kimdaba/kimdaba-1.1.ebuild,v 1.4 2005/03/13 16:20:49 carlo Exp $
 inherit kde
 need-kde 3
 

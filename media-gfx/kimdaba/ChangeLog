@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/kimdaba
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/kimdaba/ChangeLog,v 1.7 2004/12/31 18:26:04 weeve Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/kimdaba/ChangeLog,v 1.8 2005/03/13 16:20:49 carlo Exp $
+
+  13 Mar 2005; Carsten Lohrke <carlo@gentoo.org> kimdaba-2.0.ebuild:
+  stable on x86
 
   31 Dec 2004; Jason Wever <weeve@gentoo.org> kimdaba-2.0.ebuild:
   Added ~sparc keyword.
