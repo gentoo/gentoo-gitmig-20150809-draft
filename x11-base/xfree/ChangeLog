@@ -1,6 +1,9 @@
 # ChangeLog for x11-base/xfree
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.295 2004/03/15 00:02:13 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.296 2004/03/15 00:16:11 spyderous Exp $
+
+  14 Mar 2004; Donnie Berkholz <spyderous@gentoo.org>; xfree-4.3.0-r6.ebuild:
+  Removing DONE stuff from TODO, it's just cluttering things up.
 
   14 Mar 2004; Donnie Berkholz <spyderous@gentoo.org>; xfree-4.3.0-r6.ebuild:
   Cosmetic fix in ebuild warning, update files to 0.1.5 to change license from

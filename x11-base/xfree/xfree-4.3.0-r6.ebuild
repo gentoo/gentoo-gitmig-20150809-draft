@@ -1,41 +1,11 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r6.ebuild,v 1.2 2004/03/15 00:02:13 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r6.ebuild,v 1.3 2004/03/15 00:16:11 spyderous Exp $
 
 # TODO
 # 14 Mar. 2004 <spyderous@gentoo.org>
 # 	TARGET: 4.3.0-r6
 # 		spy: Correct licenses
-# 		(DONE) spy: Rename media-fonts/corefonts to microsoft-fonts, provide
-# 			virtual/corefonts in combination with ttf-bitstream-vera, the
-# 			default
-# 			-- Hard dep on ttf-bitstream-vera, mirrors upstream decision
-# 		(DONE) spy: Update xft/xrender/render to latest
-# 		(DONE) spy: Add compatibility symlink, seds for misc fonts and warnings
-# 		(DONE) battousai: Update wacom driver and build against SDK (#37389)
-# 		(DONE) spy: Remove references to libxml. It was never actually used;
-# 			expat was instead. It's still sitting there for no reason
-# 		(DONE) spy: Transition to new patch_exclude()
-# 		(DONE) spy: Enhance docs building to match how we do it in 4.3.99
-# 		(DONE) spy: Install docs to /usr/share/doc
-# 		(DONE) spy: Install man pages to /usr/share/man
-# 		(DONE) spy: Some encodings end up in ${WORKDIR}/usr/X11R6,
-# 			get font encodings all into /usr/share/fonts/encodings/
-# 		(DONE) spy: Install fonts to /usr/share/fonts/*
-# 		(DONE) spy: Filesset 0.1.1: 23957
-# 		(DONE) spy: Patchset 2.1.26.8: 29953 (evdev), 17345 (2.5 headers)
-# 		(DONE) Bugs fixed: 21417, 21120, 35468 (crappy fix), 36923, 42235,
-# 			8927, 38232, 23023
-# 		(DONE) cyfred: Move filesdir stuff to patch tarball
-# 		(DONE) spy: Move corefonts out of ebuild, dep on virtual instead (#37757)
-# 		(DONE) spy: Update SiS driver to latest snapshot
-# 		(DONE) spy: Move synaptics out of ebuild
-# 		(DONE) cyfred: 0100 and 2000 patches working together
-# 		(DONE) tseng: Hardened patches -- fix on 9930 from solar
-# 		(DONE) battousai, spy: Gatos patches
-# 		(DONE) spy: External xft, render, xrender
-# 		(DONE) spy: Generate xrender.pc
-# 		(DONE) spy: Allow autodetection of mmx/sse/3dnow
 # 	TARGET: 4.3.0-r7
 # 		spy: External zlib
 # 		spy: Add Alan Cox's VIA 2D+3D driver from XFree86-4.3.0-57.src.rpm, use
