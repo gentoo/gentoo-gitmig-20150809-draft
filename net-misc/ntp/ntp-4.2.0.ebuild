@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ntp-4.2.0.ebuild,v 1.5 2004/02/16 01:56:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ntp-4.2.0.ebuild,v 1.6 2004/02/16 01:58:37 vapier Exp $
 
 inherit eutils
 
@@ -20,10 +20,6 @@ RDEPEND=">=sys-libs/ncurses-5.2
 	ssl? ( dev-libs/openssl )
 	selinux? ( sec-policy/selinux-ntp )"
 DEPEND="${RDEPEND}
-	|| (
-		dev-libs/libelf
-		dev-libs/elfutils
-	)
 	>=sys-devel/autoconf-2.58
 	>=sys-devel/automake-1.7.7
 	>=sys-apps/sed-4.0.5"
