@@ -1,12 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysklogd/sysklogd-1.4.1-r4.ebuild,v 1.1 2003/05/11 21:06:32 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysklogd/sysklogd-1.4.1-r4.ebuild,v 1.2 2003/05/15 01:32:29 kumba Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Standard log daemons"
 SRC_URI="ftp://metalab.unc.edu/pub/Linux/system/daemons/${P}.tar.gz"
 HOMEPAGE="http://www.infodrom.org/projects/sysklogd/"
-KEYWORDS="x86 ppc sparc alpha hppa arm"
+KEYWORDS="x86 ppc sparc alpha hppa arm ~mips"
 SLOT="0"
 LICENSE="BSD"
 DEPEND="virtual/glibc"
