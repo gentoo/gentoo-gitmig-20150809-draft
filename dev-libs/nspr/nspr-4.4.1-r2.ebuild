@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/nspr-4.4.1-r1.ebuild,v 1.1 2004/11/15 21:16:29 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/nspr-4.4.1-r2.ebuild,v 1.1 2004/11/25 04:54:46 lv Exp $
 
 inherit eutils
 
@@ -46,7 +46,21 @@ src_install () {
 	cp -rfL dist/* ${D}/usr
 	rm -rf ${D}/usr/bin/lib*.so
 
+	# there have been /usr/lib/nspr changes (like the ldpath below), but never
+	# have I seen any libraries end up in this directory. lets fix that.
+	# note: I tried doing this fix via the build system. It wont work.
+	if [ ! -e ${D}/usr/lib/nspr ] ; then
+		mkdir -p ${D}/usr/lib/nspr
+		mv ${D}/usr/lib/*so* ${D}/usr/lib/nspr
+		mv ${D}/usr/lib/*\.a ${D}/usr/lib/nspr
+	fi
+	# and while we're at it, lets make it actually use the arch's libdir damnit
+	if [ "lib" != "$(get_libdir)" ] ; then
+		mv ${D}/usr/lib ${D}/usr/$(get_libdir)
+	fi
+
 	# cope with libraries being in /usr/lib/nspr
 	dodir /etc/env.d
-	echo 'LDPATH=/usr/lib/nspr' > ${D}/etc/env.d/50nspr
+	echo "LDPATH=/usr/$(get_libdir)/nspr" > ${D}/etc/env.d/50nspr
 }
+

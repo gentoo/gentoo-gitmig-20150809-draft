@@ -1,21 +1,11 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 fc158cfde2442ac70b176dc5f0ecc3cc ChangeLog 3055
+MD5 90d4699f04984259358ab135abc1d351 ChangeLog 3253
 MD5 cee0bd3a864ab0f7c990d3d51b5d45db nspr-4.1.2.ebuild 1160
 MD5 0598e8cd704060328f76cf8744c302ef nspr-4.3.ebuild 1011
-MD5 302aca18816802ac6f66606e2a730a94 nspr-4.4.1-r1.ebuild 1272
 MD5 0d6964f5c129a3c22f8dabc6c7088a68 nspr-4.4.1.ebuild 1142
+MD5 d2820b842a0f12cdd8e38ecfd27508ca nspr-4.4.1-r2.ebuild 1808
 MD5 10437559f8044e78299742d18180760e files/digest-nspr-4.1.2 63
 MD5 6cbbac8e2a77405ce2ab861405896548 files/digest-nspr-4.3 61
 MD5 0a10b7414a160ead09dbd743e3128364 files/digest-nspr-4.4.1 63
 MD5 b12990968c289b9e7f8fbb2174ec827c files/nspr-4.3-amd64.patch 7713
 MD5 1a031c0f4c5de0e38a0df0b5308c3453 files/nspr-4.4.1-hppa.patch 4046
-MD5 0a10b7414a160ead09dbd743e3128364 files/digest-nspr-4.4.1-r1 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBmRzIRkyva5PS18kRAs2KAKChQRTwM44JNTBckYrTsgF9VlHlCACgmh6U
-W+6wmxiHnzhtjC8DRYZdAP8=
-=ifcb
------END PGP SIGNATURE-----
+MD5 0a10b7414a160ead09dbd743e3128364 files/digest-nspr-4.4.1-r2 63
