@@ -1,0 +1,11 @@
+# ChangeLog for app-arch/flexbackup
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/flexbackup/ChangeLog,v 1.1 2003/04/16 12:25:49 mholzer Exp $
+
+*flexbackup-1.1.6 (16 Apr 2003)
+
+  16 Apr 2003; Martin Holzer <mholzer@gentoo.org> Manifest, flexbackup-1.0.3.ebuild,
+  flexbackup-1.1.6.ebuild, files/Makefile-gentoo.diff:
+  Initial ebuild by myself. Thx to Raphael Deimel for the devfs hint with the
+  tape.
+
