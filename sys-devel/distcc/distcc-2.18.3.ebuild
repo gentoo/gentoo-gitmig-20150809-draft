@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-2.18.3.ebuild,v 1.2 2004/12/14 22:23:59 lisa Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-2.18.3.ebuild,v 1.3 2004/12/28 08:49:55 eradicator Exp $
 
 # If you change this in any way please email lisa@gentoo.org and make an
 # entry in the ChangeLog (this means you spanky :P). (2004-04-11) Lisa Seelye
@@ -46,6 +46,10 @@ RDEPEND="
 src_unpack() {
 	unpack ${A}
 	cd ${S}
+
+	# Commented out pending lisa's approval, since I'm not the maintainer.
+	# See bug #75420 --eradicator
+	#epatch ${FILESDIR}/distcc-gentoo-multilib.patch
 	gnuconfig_update
 }
 
