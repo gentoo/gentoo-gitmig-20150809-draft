@@ -1,17 +1,18 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ogle/ogle-0.9.1.ebuild,v 1.3 2003/10/10 16:55:00 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ogle/ogle-0.9.1.ebuild,v 1.4 2003/12/13 21:27:00 seemant Exp $
 
 inherit libtool
+
+IUSE="oss mmx alsa xv"
 
 DESCRIPTION="Full featured DVD player that supports DVD menus."
 HOMEPAGE="http://www.dtek.chalmers.se/groups/dvd/"
 SRC_URI="http://www.dtek.chalmers.se/groups/dvd/dist/${P}.tar.gz"
 
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ppc ~sparc ~alpha ~hppa ~mips ~arm ~amd64 ~ia64"
 LICENSE="GPL-2"
-IUSE="oss mmx alsa xv"
 
 DEPEND=">=media-libs/libdvdcss-1.2.2
 	media-libs/jpeg
