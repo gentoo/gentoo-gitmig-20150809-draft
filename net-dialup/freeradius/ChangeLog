@@ -1,0 +1,8 @@
+# ChangeLog for net-dialup/freeradius
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/ChangeLog,v 1.1 2002/12/12 00:22:29 rphillips Exp $
+
+*freeradius-0.8.1 (11 Dec 2002)
+
+  11 Dec 2002; Ryan Phillips <rphillips@gentoo.org> ChangeLog :
+  Initial import. Ebuild submitted by Ernesto. Fixes #8940
