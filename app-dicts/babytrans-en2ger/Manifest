@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 1e550892f703fb42bfbcf13c8bf631fa babytrans-en2ger-0.1.ebuild 841
-MD5 b1e97d830df53a5e3c94be12f6eb290b ChangeLog 489
 MD5 d378a890367f8f48c801b0ead6464e2f metadata.xml 264
+MD5 f7d84a00463e688c91b42793f1c3bacc ChangeLog 566
 MD5 2a0527796368ba66f33f9749a592a481 files/digest-babytrans-en2ger-0.1 61
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBTKD8I1lqEGTUzyQRAjnuAKCrnrOcnGxVu+oNF/mTLoGwLJSCVgCfdYNJ
+JpJOiu5V5q8x41+Cl7lkfSY=
+=MUzW
+-----END PGP SIGNATURE-----
