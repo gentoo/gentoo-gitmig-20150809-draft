@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/udev
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.83 2004/11/17 21:02:55 gregkh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.84 2004/11/18 19:26:27 gregkh Exp $
+
+  18 Nov 2004; Greg Kroah-Hartman <gregkh@gentoo.org> udev-045.ebuild:
+  mark 045 stable on x86
 
 *udev-045 (17 Nov 2004)
 
