@@ -1,5 +1,15 @@
-MD5 1cf98319bde4cda87651209f894d1e64 ChangeLog 2175
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 c20b500d5504ba5b99fac0c113db6d4b memcached-1.1.11.ebuild 1351
+MD5 119816030c68a3c8bf35e1dc4df467e3 ChangeLog 2259
 MD5 7d313d0464bf2dcec9d83b20646b0a95 files/conf 537
-MD5 a513989dda7189a51c6d117b5c997223 files/init 532
 MD5 66a850e16ef028f59367429466d54cc3 files/digest-memcached-1.1.11 68
+MD5 a513989dda7189a51c6d117b5c997223 files/init 532
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBOsqnI1lqEGTUzyQRAg+CAKCXIyKrgP/WMOoV3ChkZlWVqGjoCwCeIREa
+dSBsnxfutDavArmNWRo0b1A=
+=uEc1
+-----END PGP SIGNATURE-----

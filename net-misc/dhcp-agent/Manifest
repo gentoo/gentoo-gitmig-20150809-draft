@@ -1,3 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 51fdfbaaeada853746039191a5001913 dhcp-agent-0.37.ebuild 677
-MD5 226616f55df92fe2fc2ed8d040cbc8c8 ChangeLog 435
+MD5 3a37d2c60c52789860362f33de93e18c ChangeLog 513
 MD5 0f4db3ad1136755fd8a72247359cb188 files/digest-dhcp-agent-0.37 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBOsojI1lqEGTUzyQRAraMAJ4kpiqfyaMhbnIkFzJLifjGdh4qHACgiyER
+dKR0fie3L/gE7G6eQ4hv8os=
+=72R9
+-----END PGP SIGNATURE-----

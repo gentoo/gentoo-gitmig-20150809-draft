@@ -1,10 +1,20 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
+MD5 af0af71e427ae68969d29be93278bfc8 proxyper-333.ebuild 1341
 MD5 6a665441b135c1bafa6a41bae57d02b9 proxyper-335.ebuild 1248
 MD5 4c7f8528a4b40b05d2302274cf5fdec3 proxyper-341a.ebuild 1264
-MD5 af0af71e427ae68969d29be93278bfc8 proxyper-333.ebuild 1341
-MD5 37411c85cec03b1586af3dd8cd31b12b ChangeLog 985
-MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
+MD5 f0354c8e79ffe2df3a9d0f9061cb92a7 ChangeLog 1064
 MD5 725a1f7d026ed892bb7fcf4e886925cc files/digest-proxyper-333 148
 MD5 75e548fc485b3e9cb662b4072fd1c696 files/digest-proxyper-335 73
-MD5 8becd524f6d135d39832e172293c374b files/proxyper.ini 779
 MD5 0bbf06a867af0eb0acfde293e21607bf files/digest-proxyper-341a 81
+MD5 8becd524f6d135d39832e172293c374b files/proxyper.ini 779
 MD5 ef0224f949235ba4a1bdef80905f56f8 files/proxyper.init 596
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBOsrXI1lqEGTUzyQRAjImAKDNacTYWPRTXm8uURklXuaorJ6dkwCgnn9L
+mg7qTrsiB4L2+Nmqyw7sXhw=
+=vMUN
+-----END PGP SIGNATURE-----

@@ -1,4 +1,14 @@
-MD5 37fc9049791afef9fd51b438b09ba342 ChangeLog 616
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 19c7e78f2870c42ad91b4499961072ed fsh-1.2-r1.ebuild 828
+MD5 31f49c6f5cdcc2a6661c57504397b5bd ChangeLog 693
 MD5 b784b126706d26f48759c60d6b2a5c45 files/digest-fsh-1.2-r1 59
 MD5 2822dfff6a02066868da8c3ab1ccc775 files/fsh-1.2-fcpwrap.patch 460
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBOspMI1lqEGTUzyQRAsshAKCNuwITifdj2hnk0JvOgGC3IyPtTgCgs9GC
+WZwI/IBj1NkxPe3oxEoPQA4=
+=1eZt
+-----END PGP SIGNATURE-----

@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 c6737c691bac524db9b71ff11ead4037 gwget-0.14.ebuild 854
 MD5 2937d78df4fe6f060e4ce978fe796f2f gwget-0.6.ebuild 1139
-MD5 a1782b088cb97c5c0691c991e3ca8728 ChangeLog 1714
 MD5 d24d7cd4a1e718be29f31d6a07824412 metadata.xml 598
-MD5 1f48614db94467a3d2842b4d8d4be1fc files/digest-gwget-0.6 62
+MD5 b06f10a6420a7d76f43a697ee271a424 ChangeLog 1797
 MD5 e2185bfe2f306641a8e808ec17d0e643 files/digest-gwget-0.14 62
+MD5 1f48614db94467a3d2842b4d8d4be1fc files/digest-gwget-0.6 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBOsp4I1lqEGTUzyQRAjvuAKDXh0MrXglRdqdpJN5GPJ2ltKuWIACdE9wU
+aMvvUq0eKcOlhizUmuMEzOw=
+=xT4u
+-----END PGP SIGNATURE-----
