@@ -1,6 +1,6 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc. Distributed under the terms
 # of the GNU General Public License, v2 or later 
-# $Header: /var/cvsroot/gentoo-x86/app-doc/gentoo-web/gentoo-web-2.3a.ebuild,v 1.8 2002/07/11 06:30:11 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/gentoo-web/gentoo-web-2.3a.ebuild,v 1.9 2002/07/19 17:51:07 g2boojum Exp $
  
 S=${WORKDIR}/gentoo-src/gentoo-web
 TEMPLATE=${S}/xsl/guide-main.xsl
@@ -26,6 +26,15 @@ src_unpack() {
 	then
 		echo -e "\e[32;1mCHIBA detected.\e[0m"
 		WEBROOT=/www/virtual/www.gentoo.org/htdocs
+	else
+		if [ -n "${WEBROOT}" ]
+		then
+			# assign it from the environment.
+			WEBROOT=${WEBROOT}
+		else
+			# give it a nice default
+			WEBROOT=/home/httpd/htdocs
+		fi
 	fi
 
 	echo "Setting GENTOO_SRCDIR to $GENTOO_SRCDIR"
