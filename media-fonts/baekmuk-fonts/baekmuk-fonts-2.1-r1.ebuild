@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/baekmuk-fonts/baekmuk-fonts-2.1-r1.ebuild,v 1.6 2004/03/07 19:24:07 psi29a Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/baekmuk-fonts/baekmuk-fonts-2.1-r1.ebuild,v 1.7 2004/04/25 17:36:05 usata Exp $
 
 IUSE="X truetype"
 
 DESCRIPTION="Korean Baekmuk Font"
 SRC_URI="http://gentoo.or.kr/distfiles/baekmuk-fonts/${P}.tar.gz"
-HOMEPAGE="http://www.mizi.co.kr/ko/prod/etc/mos-pro2.htm"
+HOMEPAGE="http://kldp.net/projects/baekmuk/"
 
 SLOT="0"
 LICENSE="BAEKMUK"
@@ -17,7 +17,6 @@ DEPEND="virtual/x11
 RDEPEND="X? ( virtual/x11
 	truetype? ( virtual/xft ) )"
 
-S=${WORKDIR}/${P}
 FONTDIR="/usr/share/fonts/baekmuk"
 TTFONTDIR="/usr/share/fonts/ttf/korean/baekmuk"
 
