@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/fox
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox/ChangeLog,v 1.11 2004/02/17 20:08:52 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox/ChangeLog,v 1.12 2004/02/18 00:51:42 gmsoft Exp $
+
+  18 Feb 2004; Guy Martin <gmsoft@gentoo.org> fox-1.0.49.ebuild :
+  Marked stable on hppa.
 
   17 Feb 2004; Aron Griffis <agriffis@gentoo.org> fox-1.0.49.ebuild:
   stable on alpha and ia64 for the sake of dev-ruby/fxruby
