@@ -1,0 +1,14 @@
+# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License, v2 or later
+
+# Config file for the speedtouch ebuild
+
+# Set the microcode path
+# MICROCODE="/usr/share/speedtouch/mgmt.o"
+
+# Set verbose level for modem_run
+VERBOSE="0"
+
+# Set the peer filename
+# This should be in /etc/ppp/peers/
+PEER="adsl"

@@ -1,0 +1,23 @@
+# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License, v2 or later
+
+# This file could be rename but its place is under /etc/ppp/peers
+# To connect to Internet using this configuration file
+# pppd call adsl, where "adsl" stands for the name of this file
+
+debug
+kdebug 1
+noipdefault
+defaultroute
+pty "/usr/sbin/pppoa3 -m 1 -c -vpi 8 -vci 35"
+sync
+user "your_login_here"
+noauth
+noaccomp
+nopcomp
+noccp
+novj
+holdoff 4
+persist
+maxfail 25
+usepeerdns
