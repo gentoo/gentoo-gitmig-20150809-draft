@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/trackballs/trackballs-1.0.0.ebuild,v 1.3 2004/04/19 20:54:37 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/trackballs/trackballs-1.0.0.ebuild,v 1.4 2004/06/24 22:00:03 agriffis Exp $
 
 inherit eutils games
 

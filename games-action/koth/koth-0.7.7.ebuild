@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc. and Arcady Genkin <agenkin@thpoon.com>
+# Copyright 1999-2004 Gentoo Foundation and Arcady Genkin <agenkin@thpoon.com>
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/koth/koth-0.7.7.ebuild,v 1.3 2004/04/19 20:32:39 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/koth/koth-0.7.7.ebuild,v 1.4 2004/06/24 21:56:30 agriffis Exp $
 
 inherit eutils
 

@@ -1,6 +1,6 @@
 # ChangeLog for games-action/parsec
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/parsec/ChangeLog,v 1.4 2004/04/19 20:46:15 wolf31o2 Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/parsec/ChangeLog,v 1.5 2004/06/24 21:57:57 agriffis Exp $
 
   19 Apr 2004; Chris Gianelloni <wolf31o2@gentoo.org> parsec-0197.ebuild:
   Added IUSE.

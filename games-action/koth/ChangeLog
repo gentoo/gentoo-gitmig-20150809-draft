@@ -1,6 +1,6 @@
 # ChangeLog for games-action/koth
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/koth/ChangeLog,v 1.6 2004/06/01 12:00:05 wolf31o2 Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/koth/ChangeLog,v 1.7 2004/06/24 21:56:30 agriffis Exp $
 
   01 Jun 2004; Chris Gianelloni <wolf31o2@gentoo.org> koth-0.8.0.ebuild:
   Marking stable on alpha (no bugs in 478 days).

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/bzflag/bzflag-1.10.6.20040515-r1.ebuild,v 1.2 2004/06/10 21:46:08 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/bzflag/bzflag-1.10.6.20040515-r1.ebuild,v 1.3 2004/06/24 21:53:03 agriffis Exp $
 
 inherit flag-o-matic games
 

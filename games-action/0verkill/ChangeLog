@@ -1,6 +1,6 @@
 # ChangeLog for games-action/0verkill
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/0verkill/ChangeLog,v 1.8 2004/06/03 07:03:55 mr_bones_ Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/0verkill/ChangeLog,v 1.9 2004/06/24 21:51:22 agriffis Exp $
 
   03 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org>
   0verkill-0.16-r2.ebuild:

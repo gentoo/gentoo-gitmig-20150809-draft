@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/heroes/heroes-0.21.ebuild,v 1.6 2004/06/03 06:17:35 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/heroes/heroes-0.21.ebuild,v 1.7 2004/06/24 21:56:08 agriffis Exp $
 
 inherit games
 
