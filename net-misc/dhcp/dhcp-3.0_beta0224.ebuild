@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-3.0_beta0224.ebuild,v 1.2 2001/04/15 11:01:37 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-3.0_beta0224.ebuild,v 1.3 2001/04/15 13:31:08 achim Exp $
 
 P=dhcp-3.0b2pl24
 A="${P}.tar.gz"
@@ -11,21 +11,43 @@ SRC_URI="ftp://ftp.isc.org/isc/dhcp/${P}.tar.gz"
 HOMEPAGE="http://www.isc.org/products/DHCP/"
 
 DEPEND="virtual/glibc"
+src_unpack() {
+    unpack ${A}
+    cd ${S}/includes
+cat <<END >> site.h
+#define _PATH_DHCPD_DB	"/etc/dhcp/dhcpd.leases"
+#define _PATH_DHCPD_CONF "/etc/dhcp/dhcpd.conf"
+#define _PATH_DHCLIENT_DB   "/var/lib/dhcp/dhclient.leases" 
+END
+
+}
 
 src_compile() {
 
-  echo "CC = gcc ${CFLAGS}" > site.conf
-  echo "ETC = /etc/dhcp" >> site.conf
-  echo "VARDB = /var/lib/dhcp" >> site.conf
+cat <<END > site.conf
+CC = gcc ${CFLAGS}
+ETC = /etc/dhcp
+VARDB = /var/lib/dhcp
+ADMMANDIR = /usr/share/man/man8
+FFMANDIR = /usr/share/man/man5
+LIBMANDIR = /usr/share/man/man3
+END
+
   try ./configure --with-nsupdate
   try make
+
+}
+
+src_install2() {
+  try make DESTDIR=${D} install
 }
 
 src_install () {
 
     cd ${S}/work.linux-2.2/client
-    into /usr
+    into /
     dosbin dhclient
+    into /usr
     doman *.5 *.8
 
     cd ../common
@@ -35,6 +57,7 @@ src_install () {
     dolib libdhcpctl.a
     insinto /usr/include
     doins dhcpctl.h
+    doman *.3
 
     cd ../omapip
     dolib libomapi.a
@@ -50,11 +73,12 @@ src_install () {
 
     cd ${S}/client
     insinto /etc/dhcp
-    doins dhclient.conf
-    donewins scripts/linux dhclient-script
+    newins dhclient.conf dhclient.conf.example
+    exeinto /sbin
+    newexe scripts/linux dhclient-script
 
     cd ${S}/server
-    doins dhcpd.conf
+    newins dhcpd.conf dhcpd.conf.example
 
     cd ${S}/includes/omapip
     insinto /usr/include/omapip
