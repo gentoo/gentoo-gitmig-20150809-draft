@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.2-r2.ebuild,v 1.1 2003/02/17 18:30:34 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.2-r2.ebuild,v 1.2 2003/02/21 21:31:35 agriffis Exp $
 
 S=${WORKDIR}
 DESCRIPTION="GNOME 2.0 - merge this package to merge the Gnome2 desktop"
@@ -10,7 +10,7 @@ SLOT="2.0"
 
 # when unmasking for an arch
 # double check none of the deps are still masked !
-KEYWORDS="x86 ~ppc"
+KEYWORDS="x86 ~ppc ~alpha"
 
 #  Note to developers:
 #  This is a wrapper for the complete Gnome2 desktop, 
@@ -47,7 +47,6 @@ RDEPEND="!gnome-base/gnome-core
 	>=gnome-extra/gnome-utils-2.2.0.3
 	>=gnome-extra/gnome-system-monitor-2.0.4-r1
 	>=gnome-extra/gnome-games-2.2
-	>=gnome-extra/gnome-media-2.2.1.1
 	>=gnome-extra/gconf-editor-0.4.0
 	>=gnome-extra/gnome2-user-docs-2.0.5
 	>=gnome-base/gnome-mime-data-2.2.0
@@ -73,17 +72,22 @@ RDEPEND="!gnome-base/gnome-core
 	>=gnome-base/ORBit2-2.6
 	>=gnome-base/libgnomeprint-2.2.1.1
 	>=gnome-base/libgnomeprintui-2.2.1.1
-	>=media-libs/gstreamer-0.6.0-r2
-	>=media-libs/gst-plugins-0.6.0-r1
-
 	>=x11-themes/gnome-icon-theme-1.0.0
 	>=x11-themes/gnome-themes-2.2
 	>=app-arch/file-roller-2.2.1
-	>=gnome-extra/nautilus-media-0.2.1
 	>=gnome-extra/acme-2.0.2
-	>=app-text/ggv-1.99.98"
+	>=app-text/ggv-1.99.98
+	!alpha? ( 
+		>=gnome-extra/gnome-media-2.2.1.1
+		>=gnome-extra/nautilus-media-0.2.1
+		>=media-libs/gst-plugins-0.6.0-r1
+		>=media-libs/gstreamer-0.6.0-r2 )"
 # g-s-m 2.0.4-r1 has a gnome 2.2+ only patch
 #	>=x11-libs/libzvt-2.0.1
+
+# The packages marked !alpha above don't build yet on alpha.  We
+# haven't given up, but there's no reason for them to hold up Gnome
+# 2.2 for alpha.
 
 pkg_postinst () {
 	einfo "note that to change windowmanager to metacity do: "
