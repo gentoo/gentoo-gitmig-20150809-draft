@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 0ce3c683a85d13186f42245fe122ad52 ChangeLog 1559
 MD5 7fd737b7327157c7f908389c431f4619 amap-2.7.ebuild 1016
 MD5 ec97051a7f45d8a9e89aed869d224133 amap-4.3.ebuild 1242
-MD5 a52ca1dd960b7ded66723b1fc24c3d9e amap-4.5.ebuild 1041
-MD5 7f7d158de99a9b96fed3ceb359cdaf0f ChangeLog 1476
+MD5 e43631d316941ae64e27fe9b1b0d17c4 amap-4.5.ebuild 1040
 MD5 f34e3c8858756da0001b12d2d3fa1af2 metadata.xml 159
 MD5 6ab433a807edba43512f283f9c6c9bbc files/digest-amap-2.7 59
 MD5 6bdf30d6d6aa4b292a997760f68c8cd3 files/digest-amap-4.3 60
 MD5 7c224016f4cdcd954c8ec479473b4e84 files/digest-amap-4.5 60
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
-
-iD8DBQFBIIhKT+MN7JbqCpMRAlK8AJwOagzTV/uQvar2Dp05OGGpWSq/GgCeKCUH
-qE6tHAr5Qvn3dpFRae/Jrgs=
-=y/QQ
------END PGP SIGNATURE-----
