@@ -1,7 +1,7 @@
 MD5 cb59ba5f37b96485e737883eb49cd466 sendmail-8.13.1-r1.ebuild 5934
 MD5 93a365615996aed3e45735bb24914bf0 sendmail-8.12.11-r3.ebuild 5845
 MD5 17156e0ae4d330ec87483ee2986c9b1b sendmail-8.13.1.ebuild 5852
-MD5 5dc09b6ae9149950eff0923cfee7777e ChangeLog 9004
+MD5 ad77d040ad95bc53e323d9268f31495c ChangeLog 9141
 MD5 07aa1897fda73805b9d68a2b82090e5f metadata.xml 218
 MD5 9cf5b1a30908c5f96f258b835f430865 files/sendmail.cf 39312
 MD5 1a9fedeb2f17b9a7de4f0f8da6c06d63 files/sendmail.mc 299
@@ -13,7 +13,7 @@ MD5 95d58f15432e44c91f8018839f65327c files/sendmail-8.12.6-r1-gentoo.diff 1701
 MD5 0027be040b9dacdf253813fe2ddb8982 files/digest-sendmail-8.13.1 68
 MD5 875d3c33bfa16e73e5e75ecb1d1a9d2b files/sendmail-procmail.cf 39897
 MD5 40db5be0dc4aad98df023d3af8e8c132 files/sendmail-procmail.mc 357
-MD5 05db500413c7a470eddfd611d8d18431 files/sendmail 670
+MD5 34585ddfef902dacb4e02e6eeace6dec files/sendmail 596
 MD5 61d4e49cceb149f6ff46cf6a1b598b88 files/mailer.conf 1306
 MD5 0027be040b9dacdf253813fe2ddb8982 files/digest-sendmail-8.13.1-r1 68
 MD5 7b2a2b2f8f608ddbd8b0c1b910ffb981 files/sendmail-delivered_hdr.patch 341

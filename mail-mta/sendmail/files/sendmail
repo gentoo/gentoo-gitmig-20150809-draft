@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/sendmail/files/sendmail,v 1.3 2004/12/07 01:59:31 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/sendmail/files/sendmail,v 1.4 2004/12/21 14:00:13 tigger Exp $
 
 depend() {
 	need net
@@ -14,7 +14,6 @@ start() {
 	/usr/bin/newaliases > /dev/null 2>&1
 	(cd /var/spool/mqueue; rm -f xf*)
 	/usr/sbin/sendmail ${SENDMAIL_OPTS} > /dev/null 2>&1
-	/usr/sbin/sendmail -C /etc/mail/sendmail-slow.cf -q5m > /dev/null 2>&1
 	/usr/sbin/sendmail ${CLIENTMQUEUE_OPTS} > /dev/null 2>&1
 	eend $?
 }
