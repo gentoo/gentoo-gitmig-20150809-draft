@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus-bin/azureus-bin-2.0.8.0a.ebuild,v 1.1 2004/03/14 01:32:19 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus-bin/azureus-bin-2.0.8.0a.ebuild,v 1.2 2004/03/16 19:14:02 eradicator Exp $
 
 inherit eutils
 
@@ -22,14 +22,14 @@ SLOT="0"
 
 # Still in progress... trying to get most external classes in through DEPENDs rather than 
 KEYWORDS="~x86"
-IUSE="gtk"
+IUSE="gtk kde"
 
 DEPEND="virtual/glibc"
 
 RDEPEND="${DEPEND}
 	dev-java/commons-cli
 	dev-java/log4j
-	dev-java/systray4j
+	kde? ( dev-java/systray4j )
 	dev-java/junit
 	gtk? ( =x11-libs/gtk+-2* )
 	!gtk? ( =x11-libs/openmotif-2.1* )
@@ -39,7 +39,12 @@ RDEPEND="${DEPEND}
 PROGRAM_DIR="/usr/lib/${MY_PN}"
 
 src_unpack() {
-	if [ `use gtk` ] ; then
+	if ! use kde; then
+		einfo "The kde use flag is off, so the systray support will be disabled."
+		einfo "kde is required to build dev-java/systray4j."
+	fi
+
+	if use gtk; then
 		unpack Azureus_${PV}_linux.GTK.tar.bz2
 		echo
 		einfo "Using the GTK Azureus package, to use the Motif package"
@@ -111,4 +116,5 @@ pkg_postinst() {
 	einfo "the setting in ~/.azureus/gentoo.config will be properly used, but"
 	einfo "you should report all bugs pertaining to the CVS release to the"
 	einfo "azureus developers and not Gentoo."
+	echo
 }
