@@ -312,11 +312,6 @@ net-p2p/gift
 #
 >=net-www/opera-6.0
 
-# xine-0.9.10 and later has a new API, so these plugins don't work for now.
-# 17 Jun 2002, Brandon Low <lostlogic@gentoo.org>
-media-video/xine-d4d
-media-video/xine-d5d
-
 # Masing Azarah's new baselayout until several problems are confirmed fixed.
 # 4 Mar 2002, Daniel Robbins
 =sys-apps/baselayout-1.7.2
