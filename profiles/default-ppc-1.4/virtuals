@@ -43,7 +43,7 @@ virtual/tetex		app-text/tetex
 virtual/quicktime	media-libs/libquicktime
 virtual/bittorrent	net-p2p/bittorrent
 virtual/logger		app-admin/sysklogd
-
+virtual/cdrtools	app-cdr/cdrtools
 virtual/ssh			    net-misc/openssh
 virtual/commonlisp	dev-lisp/sbcl
 virtual/tftp			net-misc/tftp-hpa
