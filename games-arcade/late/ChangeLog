@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/late
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/late/ChangeLog,v 1.3 2004/06/24 22:07:06 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/late/ChangeLog,v 1.4 2004/11/02 21:02:02 josejx Exp $
+
+  03 Nov 2004; Joseph Jezak <josejx@gentoo.org> late-0.1.0.ebuild:
+  Added ~ppc.
 
 *late-0.1.0 (22 Aug 2003)
 

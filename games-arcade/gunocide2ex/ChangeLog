@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/gunocide2ex
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/gunocide2ex/ChangeLog,v 1.4 2004/06/24 22:05:42 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/gunocide2ex/ChangeLog,v 1.5 2004/11/02 21:00:21 josejx Exp $
+
+  03 Nov 2004; Joseph Jezak <josejx@gentoo.org> gunocide2ex-1.0.ebuild:
+  Added ~ppc.
 
   26 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> gunocide2ex-1.0.ebuild:
   don't rdepend on sed; tidy
