@@ -1,5 +1,11 @@
 # kernel.eclass rewrite for a clean base regarding the 2.6 series of kernel
 # with back-compatibility for 2.4
+#
+# Author: John Mylchreest <johnm@gentoo.org>
+# Copyright 2004 Gentoo Linux
+#
+# Please direct your bugs to the current eclass maintainer :)
+# thatll be: johnm
 
 # added functionality:
 # unipatch		- a flexible, singular method to extract, add and remove patches.
