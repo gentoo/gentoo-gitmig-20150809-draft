@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-sources-dev/ppc-sources-dev-2.4.22.ebuild,v 1.1 2003/09/16 16:09:45 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-sources-dev/ppc-sources-dev-2.4.22.ebuild,v 1.2 2003/10/26 12:44:38 dholm Exp $
 
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
@@ -39,14 +39,18 @@ LICENSE="GPL-2"
 SLOT="${KV}"
 KEYWORDS="~ppc -x86 -sparc -mips -hppa -alpha -arm"
 IUSE="build crypt"
+DEPEND=">=sys-devel/binutils-2.11.90.0.31"
+RDEPEND=">=sys-libs/ncurses-5.2 dev-lang/perl virtual/modutils sys-devel/make"
 
 
-src_unpack() {
+src_unpack()
+{
 	unpack ${A}
 	mv linux-${OKV} linux-${KV} || die "Unable to move kernel source tree to linux-${KV}"
 
 	cd ${WORKDIR}/${KV}
-	# This is the crypt USE flag, keeps {USAGI/superfreeswan/patch-int/loop-jari}
+	# This is the crypt USE flag
+	# keeps {USAGI/superfreeswan/patch-int/loop-jari}
 	if [ -z "`use crypt`" ]; then
 		einfo "No Cryptographic support, dropping patches..."
 		for file in 6* ;do
@@ -58,9 +62,12 @@ src_unpack() {
 	fi
 
 	kernel_src_unpack
+	(cd ${S} && epatch ${FILESDIR}/ppc-sources-dev-2.4.22-r1.via-pmu.diff) || \
+		die "patch failed"
 }
 
-pkg_postinst() {
+pkg_postinst()
+{
 	kernel_pkg_postinst
 
 	ewarn "Bootsplash currently does not work on Macs."
