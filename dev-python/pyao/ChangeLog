@@ -1,8 +1,11 @@
 # ChangeLog for dev-python/pyao
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyao/ChangeLog,v 1.1 2003/03/02 17:33:30 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyao/ChangeLog,v 1.2 2003/03/25 21:21:00 liquidx Exp $
 
 *pyao-0.81 (02 Mar 2003)
+
+  25 Mar 2003; Alastair Tse <liquidx@gentoo.org> pyao-0.81.ebuild:
+  stable bump
 
   02 Mar 2003; Alastair Tse <liquidx@gentoo.org> pyao-0.81.ebuild files/digest-pyao-0.81 :
   Initial Ebuild. Thanks to mike wakerly <mikew@wakerly.com>. Resolves #15979.

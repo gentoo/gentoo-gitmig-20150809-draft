@@ -1,8 +1,11 @@
 # ChangeLog for dev-python/htmlgen
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/htmlgen/ChangeLog,v 1.1 2003/03/08 14:47:42 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/htmlgen/ChangeLog,v 1.2 2003/03/25 21:21:00 liquidx Exp $
 
 *htmlgen-2.2.2 (08 Mar 2003)
+
+  25 Mar 2003; Alastair Tse <liquidx@gentoo.org> htmlgen-2.2.2.ebuild:
+  bump to stable
 
   08 Mar 2003; Alastair Tse <liquidx@gentoo.org> htmlgen-2.2.2.ebuild:
   initial ebuild. solves #10653.
