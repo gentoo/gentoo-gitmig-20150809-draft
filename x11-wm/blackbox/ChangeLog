@@ -1,6 +1,13 @@
 # ChangeLog for x11-wm/blackbox
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/blackbox/ChangeLog,v 1.38 2005/02/06 18:50:49 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/blackbox/ChangeLog,v 1.39 2005/03/10 14:53:44 ka0ttic Exp $
+
+*blackbox-0.70.0 (10 Mar 2005)
+
+  10 Mar 2005; Aaron Walker <ka0ttic@gentoo.org> -files/blackbox,
+  +files/blackbox.desktop, +blackbox-0.70.0.ebuild:
+  Version bump for bug 84399. New ebuild rewritten and no longer uses
+  commonbox.eclass.
 
   06 Feb 2005; Markus Rothe <corsair@gentoo.org> blackbox-0.65.0-r4.ebuild:
   Stable on ppc64
