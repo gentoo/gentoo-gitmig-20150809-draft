@@ -1,0 +1,34 @@
+# ChangeLog for net-analyzer/snort
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/ChangeLog,v 1.1 2002/06/28 11:54:12 bangert Exp $
+
+  28 Jun 2002; Thilo Bangert <bangert@gentoo.org> :
+  moved to net-analyzer - added SLOT - added LICENSE
+
+*snort-1.8.5 (6 Apr 2002)
+
+  6 Apr 2002; Matthew Kennedy <mkennedy@gentoo.org> ChangeLog,
+  snort-1.8.5.ebuild, files/digest-snort-1.8.5:
+
+  Added dependency for PostgreSQL. Moved netlib dep from RDEPEND to
+  DEPEND (it is statically linked). Version bump to latest.
+
+*snort-1.8.3-r1 (8 Feb 2002)
+
+  8 Feb 2002; Donny Davies <woodchip@gentoo.org> Changelog,
+  snort-1.8.3-r1.ebuild, files/digest-snort-1.8.3-r1,
+  files/snort.confd, files/snort.rc6 files/snort.conf :
+
+  Fix for nonexistant /etc/conf.d/snort.  Make user/group addition
+  a little smarter.
+
+*snort-1.8.3 (1 Feb 2002)
+
+  1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
+  
+  Added initial ChangeLog which should be updated whenever the package is
+  updated in any way. This changelog is targetted to users. This means that the
+  comments should well explained and written in clean English. The details about
+  writing correct changelogs are explained in the skel.ChangeLog file which you
+  can find in the root directory of the portage repository.
+
