@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/uclibc/uclibc-0.9.26-r1.ebuild,v 1.1 2004/01/08 07:31:43 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/uclibc/uclibc-0.9.26-r1.ebuild,v 1.2 2004/02/01 09:41:56 solar Exp $
 
 inherit eutils
 
@@ -8,7 +8,7 @@ MY_P="${P/ucl/uCl}"
 DESCRIPTION="C library for developing embedded Linux systems"
 HOMEPAGE="http://www.uclibc.org/"
 SRC_URI="http://www.kernel.org/pub/linux/libs/uclibc/${MY_P}.tar.bz2"
-IUSE="etdyn"
+IUSE="pie"
 LICENSE="LGPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~mips"
@@ -41,7 +41,7 @@ src_unpack() {
 	done
 
 	if [ `use x86` ] ; then
-		use etdyn && PIC=1
+		use pie && PIC=1
 		[ "`is-flag -fPIC`" == "true" ] && PIC=1
 	fi
 
@@ -50,6 +50,7 @@ src_unpack() {
 
 	if [ "${PIC}" == 1 ] ; then
 		einfo "Enable Position Independent Executable support in ${P}"
+		sed -i -e "s:# UCLIBC_PIE_SUPPORT.*:UCLIBC_PIE_SUPPORT=y:" .config
 		sed -i -e "s:# UCLIBC_PIE_SUPPORT.*:UCLIBC_PIE_SUPPORT=y:" .config
 	fi
 	if [ "${SSP}" == 1 ]; then
