@@ -1,10 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.3.1-r1.ebuild,v 1.4 2003/02/25 16:57:47 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.3.1-r1.ebuild,v 1.5 2003/03/03 08:57:59 seemant Exp $
 
 inherit flag-o-matic 
 
-IUSE="png apache2 truetype postgres tiff libwww nls jpeg ssl oci8 mysql X gdbm curl imap xml2 xml cjk pdflib qt snmp crypt flash odbc ldap berkdb freetds firebird pam"
+IUSE="png apache2 truetype postgres tiff libwww nls jpeg ssl oci8 mysql X gdbm curl imap xml2 xml cjk pdflib qt snmp crypt flash odbc ldap berkdb freetds firebird pam spell"
 
 MY_P=php-${PV}
 S=${WORKDIR}/${MY_P}
@@ -23,8 +23,8 @@ replace-flags "-march=k6*" "-march=i586"
 	# - rphillips
 	#>=dev-libs/gmp-3.1.1
 
-DEPEND="
-	>=net-www/apache-1.3.26-r2
+DEPEND=">=net-www/apache-1.3.26-r2
+	>=app-crypt/mhash-0.8 )
 	apache2? ( >=net-www/apache-2.0.43-r1 )
 	truetype? ( ~media-libs/freetype-1.3.1 >=media-libs/t1lib-1.3.1 )
 	jpeg? ( >=media-libs/jpeg-6b )
@@ -44,14 +44,14 @@ DEPEND="
 	odbc? ( >=dev-db/unixODBC-1.8.13 )
 	xml2? ( dev-libs/libxml2 )
 	crypt? ( >=dev-libs/libmcrypt-2.4
-	>=app-crypt/mhash-0.8 )
 	mysql? ( >=dev-db/mysql-3.23.26 )
-	freetds? ( >=dev-db/freetds-0.53 )
 	flash? ( media-libs/libswf >=media-libs/ming-0.2a )
+	spell? ( app-text/aspell )
 	berkdb? ( >=sys-libs/db-3 )
 	libwww? ( >=net-libs/libwww-5.3.2 )
-	firebird? ( >=dev-db/firebird-1.0 )
 	pdflib? ( >=media-libs/pdflib-4.0.1-r2 )
+	freetds? ( >=dev-db/freetds-0.53 )
+	firebird? ( >=dev-db/firebird-1.0 )
 	postgres? ( >=dev-db/postgresql-7.1 )"
 	#java? ( virtual/jdk )
 # Only needed by CGI-Version
@@ -125,6 +125,7 @@ src_compile() {
 	use pdflib && myconf="${myconf} --with-pdflib=/usr"
 	use jpeg && myconf="${myconf} --with-jpeg-dir=/usr/lib"
 	use tiff && myconf="${myconf} --with-tiff-dir=/usr"
+	use spell && myconf="${myconf} --with-pspell"
 
 	if [ "`use png`" ] ; then
 		myconf="${myconf} --with-png-dir=/usr/lib"
@@ -152,10 +153,7 @@ src_compile() {
 		fi
 	fi
 
-	use qt && { 
-		export QTDIR=/usr/qt/2 #hope this helps - danarmak
-		myconf="${myconf} --with-qtdom" 
-	}
+	use qt && myconf="${myconf} --with-qtdom" 
 
 	if [ "`use imap`" ] ; then
 		if [ "`use ssl`" ] && [ "`strings ${ROOT}/usr/lib/c-client.a \

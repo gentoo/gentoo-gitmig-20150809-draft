@@ -1,8 +1,12 @@
 # ChangeLog for dev-php/mod_php
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/ChangeLog,v 1.53 2003/02/25 16:57:47 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/ChangeLog,v 1.54 2003/03/03 08:57:59 seemant Exp $
 
 *mod_php-4.3.1-r1 (24 Feb 2003)
+
+  03 Mar 2003; Seemant Kulleen <seemant@gentoo.org> mod_php-4.3.1-r1.ebuild,
+  mod_php-4.3.1.ebuild:
+  qt fixes and spell support added
 
   25 Feb 2003; Guy Martin <gmsoft@gentoo.org> mod_php-4.3.1-r1.ebuild :
   Added ~hppa to keywords.
