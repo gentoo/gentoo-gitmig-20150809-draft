@@ -1,0 +1,9 @@
+# ChangeLog for games-roguelike/scourge
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/scourge/ChangeLog,v 1.1 2004/01/26 11:12:49 mr_bones_ Exp $
+
+*scourge-0.1 (26 Jan 2004)
+
+  26 Jan 2004; Michael Sterrett <mr_bones_@gentoo.org> scourge-0.1.ebuild:
+  initial commit (bug 39316)
+
