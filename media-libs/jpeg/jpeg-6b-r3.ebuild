@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/jpeg-6b-r3.ebuild,v 1.21 2004/03/22 21:00:21 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/jpeg-6b-r3.ebuild,v 1.22 2004/04/26 03:01:37 agriffis Exp $
 
 inherit gnuconfig flag-o-matic
 
@@ -36,7 +36,7 @@ src_compile() {
 	replace-flags k6-2 i586
 	replace-flags k6 i586
 
-	econf --enable-shared --enable-static
+	econf --enable-shared --enable-static || die "econf failed"
 
 	make || die
 }
