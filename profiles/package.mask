@@ -22,6 +22,10 @@
 ##   End example
 ##
 
+# <raker@gentoo.org> (26 Jul 2002)
+# New libgda masked for testing.
+=gnome-extra/libgda-0.8.192
+
 # <cselkirk@gentoo.org> (26 Jul 2002)
 # fix for procmail delivery to Maildir style mailboxes.
 # Masked for testing.
