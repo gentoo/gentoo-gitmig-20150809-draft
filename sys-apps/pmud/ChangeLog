@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/pmud 
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Id: ChangeLog,v 1.1 2002/04/27 10:34:28 pvdabeel Exp $
+# $Id: ChangeLog,v 1.2 2002/04/29 21:33:03 pvdabeel Exp $
+
+*pmud-0.10-r1 <pvdabeel@gentoo.org> ChangeLog:
+ 	
+	Mon Apr 29 23:15:43 2002 CEST; pvdabeel <pvdabeel@gentoo.org> 
+	Bug #2238: added pmud-makefile-x-gentoo.diff, new version
 
 *pmud-0.10.1 <kain@kain.org> ChangeLog:
 
