@@ -1,6 +1,10 @@
 # ChangeLog for dev-lisp/cl-binary-types
-# Copyright 2000-2004 Gentoo Foundation and Matthew Kennedy <mkennedy@gentoo.org>; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-binary-types/ChangeLog,v 1.6 2004/06/24 23:41:36 agriffis Exp $
+# Copyright 2000-2005 Gentoo Foundation and Matthew Kennedy <mkennedy@gentoo.org>; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-binary-types/ChangeLog,v 1.7 2005/03/18 08:19:56 mkennedy Exp $
+
+  18 Mar 2005; Matthew Kennedy <mkennedy@gentoo.org>
+  cl-binary-types-0.90.ebuild:
+  Keywording for ~amd64
 
   12 Feb 2004; <mkennedy@gentoo.org> cl-binary-types-0.90.ebuild:
   changed home page

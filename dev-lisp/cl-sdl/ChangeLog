@@ -1,6 +1,9 @@
 # ChangeLog for dev-lisp/cl-sdl
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-sdl/ChangeLog,v 1.6 2004/06/24 23:54:41 agriffis Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-sdl/ChangeLog,v 1.7 2005/03/18 08:21:06 mkennedy Exp $
+
+  18 Mar 2005; Matthew Kennedy <mkennedy@gentoo.org> cl-sdl-0.2.2-r1.ebuild:
+  Keywording for ~amd64
 
 *cl-sdl-0.2.2-r1 (12 Feb 2004)
 

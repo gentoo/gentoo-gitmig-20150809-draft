@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-series/cl-series-2.2.8.ebuild,v 1.1 2005/02/03 05:31:21 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-series/cl-series-2.2.8.ebuild,v 1.2 2005/03/18 08:20:32 mkennedy Exp $
 
 inherit common-lisp eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://series.sf.net"
 SRC_URI="mirror://sourceforge/series/series-${PV}.tar.bz2"
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ~ppc ~amd64"
 IUSE=""
 DEPEND="dev-lisp/common-lisp-controller
 	virtual/commonlisp"
