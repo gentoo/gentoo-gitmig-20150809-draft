@@ -1,6 +1,13 @@
 # ChangeLog for net-im/jit
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jit/ChangeLog,v 1.6 2004/03/28 19:17:16 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jit/ChangeLog,v 1.7 2004/04/07 16:52:34 humpback Exp $
+
+*jit-1.1.6-r3 (07 Apr 2004)
+
+  07 Apr 2004; Gustavo Felisberto <humpback@gentoo.org>; jit-1.1.6-r3.ebuild,
+  files/jit.xml:
+  This version adds the ability of starting jit as a independent service. See
+  bug 43851. Also fixed a small bug in the jit.xml Bug 43854
 
   28 Mar 2004; Jason Wever <weeve@gentoo.org> jit-1.1.6-r2.ebuild,
   files/jit-sparc.patch:

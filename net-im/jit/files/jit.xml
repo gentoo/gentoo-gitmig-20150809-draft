@@ -90,7 +90,7 @@
       <no_jabber_roster/>
       
       <!-- File with stats -->        
-      <user_count_file>session_count.log</user_count_file>
+      <user_count_file>/var/log/jabber/jit.session_count.log</user_count_file>
       
       <!-- Interval beetween checking sessions: ping, messages, acks -->                 
       <session_check>5</session_check>
@@ -121,6 +121,8 @@
     </load>
 
   </service>
+
+<pidfile>/var/log/jabber/jit.pid</pidfile>
 
   <!--
      The settings here have to match the setting you made

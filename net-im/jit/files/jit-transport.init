@@ -1,0 +1,23 @@
+#!/sbin/runscript
+
+depend() {
+	need net
+	use jabber-server
+}
+
+start() {
+	ebegin "Starting ICQ Jabber Transport"
+	/usr/sbin/jabberd -d -c /etc/jabber/jit.xml -H /var/spool/jabber >/dev/null 2>&1
+	eend $?
+}
+
+stop() {
+	ebegin "Stoping ICQ Jabber Transport"
+	kill `cat /var/log/jabber/jit.pid`
+	sleep 2
+	if ( -f /var/log/jabber/jit.pid ); then
+		kill -9 `cat /var/log/jabber/jit.pid`
+		rm -f /var/log/jabber/jit.pid
+	fi
+	eend $?
+}
