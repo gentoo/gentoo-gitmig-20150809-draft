@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/cacti-0.8.3.ebuild,v 1.2 2003/09/05 23:40:08 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/cacti-0.8.3.ebuild,v 1.3 2003/09/23 17:01:13 mholzer Exp $
 
 inherit eutils
 
@@ -11,13 +11,13 @@ SRC_URI="http://www.raxnet.net/downloads/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha"
-IUSE="snmp"
+IUSE="snmp mysql"
 
 DEPEND=""
 RDEPEND="net-www/apache
 	snmp? ( virtual/snmp )
 	net-analyzer/rrdtool
-	dev-db/mysql
+	mysql? ( dev-db/mysql )
 	dev-php/php
 	dev-php/mod_php"
 
