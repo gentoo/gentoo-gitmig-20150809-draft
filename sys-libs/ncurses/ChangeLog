@@ -1,8 +1,11 @@
 # ChangeLog for sys-libs/ncurses
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ChangeLog,v 1.28 2003/06/11 23:01:33 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ChangeLog,v 1.29 2003/07/01 14:55:55 todd Exp $
 
 *ncurses-5.3-r2 (11 Jun 2003)
+
+  01 Jul 2003; Todd Sunderlin <todd@gentoo.org> ncurses-5.3-r2.ebuild,
+  set stable on sparc
 
   11 Jun 2003; Seemant Kulleen <seemant@gentoo.org> ncurses-5.2-r7.ebuild,
   ncurses-5.2.20020511-r3.ebuild, ncurses-5.3-r2.ebuild,
