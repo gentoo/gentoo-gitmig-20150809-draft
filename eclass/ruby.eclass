@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ruby.eclass,v 1.28 2004/04/10 13:02:38 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ruby.eclass,v 1.29 2004/04/24 13:39:55 usata Exp $
 #
 # Author: Mamoru KOMACHI <usata@gentoo.org>
 #
@@ -179,7 +179,7 @@ prepall() {
 	[[ ! -x /usr/bin/ruby18 ]] && export USE_RUBY=${USE_RUBY/ruby18/}
 	[[ ! -x /usr/bin/ruby19 ]] && export USE_RUBY=${USE_RUBY/ruby19/}
 
-	if [ -n "${USE_RUBY}" -a "${USE_RUBY}" != "any" ] ; then
+	if [ $(echo "${USE_RUBY}" | wc -w) -ge 2 ] ; then
 		einfo "Now we are building the package for ${USE_RUBY}"
 		for rb in ${USE_RUBY} ruby ; do
 			einfo "Using $rb"
@@ -190,6 +190,7 @@ prepall() {
 			einfo "Unpacking for $rb"
 			src_unpack || die "src_unpack failed"
 			cd ${S}
+			find . -name '*.[ao]' -exec rm {} \;
 			einfo "Building for $rb"
 			src_compile || die "src_compile failed"
 			cd ${S}
