@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/workrave-1.6.2.ebuild,v 1.4 2005/01/01 15:30:19 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/workrave-1.6.2.ebuild,v 1.5 2005/03/28 20:50:07 leonardop Exp $
 
 inherit eutils gnome2
 
@@ -35,14 +35,20 @@ DEPEND="${RDEPEND}
 MAKEOPTS="${MAKEOPTS} -j1"
 DOCS="AUTHORS ChangeLog NEWS README"
 
-G2CONF="${G2CONF} $(use_enable distribution)"
-G2CONF="${G2CONF} $(use_enable nls)"
-G2CONF="${G2CONF} $(use_enable xml2 xml)"
-G2CONF="${G2CONF} $(use_enable gnome)"
+G2CONF="${G2CONF} $(use_enable distribution) $(use_enable nls) \
+$(use_enable xml2 xml) $(use_enable gnome)"
 
-use gnome          && G2CONF="${G2CONF} --enable-gconf"
+use gnome && G2CONF="${G2CONF} --enable-gconf"
 
 if ! use gnome && ! use xml2
 then
 	G2CONF="${G2CONF} --enable-gconf"
 fi
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+
+	# Removes a few broken macros. See bug #86939.
+	epatch ${FILESDIR}/${P}-nls_macros.patch
+}
