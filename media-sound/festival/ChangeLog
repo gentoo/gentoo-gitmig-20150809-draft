@@ -3,6 +3,10 @@
 # $Header: /home/cvsroot/gentoo-x86/media-sound/festival/ChangeLog,v 1 2002/05/07
 # 03:58:19 naz Exp $
 
+  12 Feb 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  festival-1.4.3.ebuild:
+  Fixed RDEPEND/DEPEND to close bug #41412
+
   11 Feb 2004; Jeremy Huddleston <eradicator@gentoo.org>
   festival-1.4.2-r1.ebuild, festival-1.4.2-r2.ebuild,
   festival-1.4.2-r3.ebuild, festival-1.4.2.ebuild, festival-1.4.3.ebuild:
