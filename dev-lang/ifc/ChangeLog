@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/ifc
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ifc/ChangeLog,v 1.11 2003/09/24 15:11:58 avenj Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ifc/ChangeLog,v 1.12 2004/02/09 08:26:16 jhhudso Exp $
+
+*ifc-7.1.008 (09 Feb 2004)
+
+  09 Feb 2004; root <root@gentoo.org> ifc-6.0.ebuild, ifc-7.0.064-r1.ebuild,
+  ifc-7.0.064.ebuild, ifc-7.1.008.ebuild, metadata.xml:
+  Version bump and fixed copyright headers in other ebuilds. New ebuild credit
+  goes to Derek Dolney <dolney@astro.upenn.edu> under bug id #29483
 
   24 Sep 2003; Jon Portnoy <avenj@gentoo.org> ifc-7.0.064-r1.ebuild :
   Changed rpm_unpack call to properly unpack all RPMs, fixes bug
