@@ -70,7 +70,6 @@ sys-apps/texinfo
 sys-apps/textutils
 sys-apps/ucspi-tcp
 sys-apps/util-linux
-sys-apps/vcron
 sys-apps/vim-nogui
 sys-apps/watchpid
 sys-apps/which
