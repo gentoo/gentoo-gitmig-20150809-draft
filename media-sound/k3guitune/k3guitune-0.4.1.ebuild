@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/k3guitune/k3guitune-0.4.1.ebuild,v 1.2 2004/08/30 15:36:39 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/k3guitune/k3guitune-0.4.1.ebuild,v 1.3 2004/09/14 07:51:20 eradicator Exp $
 
 DESCRIPTION="A program for KDE 3 that lets you tune musical instruments."
 HOMEPAGE="http://home.planet.nl/~lamer024/k3guitune.html"
@@ -8,7 +8,7 @@ SRC_URI="http://home.planet.nl/~lamer024/files/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc ~amd64"
 IUSE="alsa arts oss debug xinerama"
 
 DEPEND=">=kde-base/kdelibs-3
