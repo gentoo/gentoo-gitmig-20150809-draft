@@ -1,9 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ck-sources-2.6.7-r5.ebuild,v 1.3 2004/08/04 20:39:48 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ck-sources-2.6.7-r5.ebuild,v 1.4 2004/08/09 22:51:22 plasmaroo Exp $
 
 UNIPATCH_LIST="${DISTDIR}/patch-${KV}.bz2 ${FILESDIR}/${P}.CAN-2004-0596.patch
-	${DISTDIR}/linux-${OKV}-CAN-2004-0415.patch"
+	${DISTDIR}/linux-${OKV}-CAN-2004-0415.patch
+	${FILESDIR}/${P}.cmdlineLeak.patch"
 K_PREPATCHED="yes"
 UNIPATCH_STRICTORDER="yes"
 
