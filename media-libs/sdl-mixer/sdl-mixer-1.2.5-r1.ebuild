@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-mixer/sdl-mixer-1.2.5-r1.ebuild,v 1.14 2004/06/24 23:21:43 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-mixer/sdl-mixer-1.2.5-r1.ebuild,v 1.15 2004/08/11 02:39:20 tgall Exp $
 
-inherit eutils
+inherit eutils gnuconfig
 
 MY_P="${P/sdl-/SDL_}"
 S=${WORKDIR}/${MY_P}
@@ -12,7 +12,7 @@ SRC_URI="http://www.libsdl.org/projects/SDL_mixer/release/${MY_P}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc alpha hppa amd64 ~mips"
+KEYWORDS="x86 ppc sparc alpha hppa amd64 ~mips ppc64"
 IUSE="mpeg mikmod oggvorbis"
 
 RDEPEND=">=media-libs/libsdl-1.2.5
@@ -35,6 +35,9 @@ src_unpack() {
 }
 
 src_compile() {
+
+	use ppc64 && gnuconfig_update
+
 	econf \
 		`use_enable mikmod mod` \
 		`use_enable mpeg music-mp3` \

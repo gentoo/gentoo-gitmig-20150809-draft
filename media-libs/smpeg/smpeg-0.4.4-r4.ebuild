@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/smpeg/smpeg-0.4.4-r4.ebuild,v 1.16 2004/07/16 21:36:20 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/smpeg/smpeg-0.4.4-r4.ebuild,v 1.17 2004/08/11 02:35:25 tgall Exp $
 
-inherit eutils gcc
+inherit eutils gcc gnuconfig
 
 DESCRIPTION="SDL MPEG Player Library"
 HOMEPAGE="http://www.lokigames.com/development/smpeg.php3"
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.lokigames.com/pub/open-source/smpeg/${P}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc ~mips alpha hppa amd64"
+KEYWORDS="x86 ppc sparc ~mips alpha hppa amd64 ppc64"
 IUSE="X gtk opengl debug"
 
 DEPEND=">=media-libs/libsdl-1.2.0
@@ -34,6 +34,9 @@ src_unpack() {
 }
 
 src_compile() {
+
+	use ppc64 && gnuconfig_update
+
 	# --enable-mmx causes test apps to crash on startup #470
 	#	$(use_enable mmx) \
 	econf \
