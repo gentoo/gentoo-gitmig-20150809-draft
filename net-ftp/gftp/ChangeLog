@@ -1,6 +1,12 @@
 # ChangeLog for net-ftp/gftp
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/gftp/ChangeLog,v 1.6 2002/07/19 01:59:54 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/gftp/ChangeLog,v 1.7 2002/07/23 13:58:28 aliz Exp $
+
+*gftp-2.0.13 (23 Jul 2002)
+
+  23 Jul 2002; Daniel Ahlberg <aliz@gentoo.org> gftp-2.0.13.ebuild :
+
+  Version bump.
 
 *gftp-2.0.12-r3 (18 Jul 2002)
 
