@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/aspell-0.50.3.ebuild,v 1.11 2003/09/05 22:37:21 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/aspell-0.50.3.ebuild,v 1.12 2004/04/02 19:15:09 avenj Exp $
 
 inherit libtool
 
@@ -8,17 +8,20 @@ DESCRIPTION="A spell checker replacement for ispell"
 HOMEPAGE="http://aspell.net/"
 SRC_URI="ftp://ftp.gnu.org/gnu/aspell/${P}.tar.gz"
 
+IUSE="gpm"
 SLOT="0"
 LICENSE="LGPL-2"
 KEYWORDS="x86 ppc sparc alpha ~mips hppa amd64"
 
-DEPEND=">=sys-libs/ncurses-5.2"
+DEPEND=">=sys-libs/ncurses-5.2
+	gpm? ( sys-libs/gpm )"
 
 pkg_setup() {
 	if [ ${ARCH} = "ppc" ] ; then
 		CXXFLAGS="-O2 -fsigned-char"
 		CFLAGS=${CXXFLAGS}
 	fi
+	use gpm && LDFLAGS="-lgpm"
 }
 
 src_compile() {
