@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/bsd-games-non-free/bsd-games-non-free-2.13.ebuild,v 1.2 2004/01/19 14:17:48 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/bsd-games-non-free/bsd-games-non-free-2.13.ebuild,v 1.3 2004/02/22 09:47:10 vapier Exp $
 
 inherit games
 
@@ -8,9 +8,9 @@ DESCRIPTION="collection of games from NetBSD"
 HOMEPAGE="http://www.advogato.org/proj/bsd-games/"
 SRC_URI="ftp://metalab.unc.edu/pub/Linux/games/${P}.tar.gz"
 
-SLOT="0"
 # See /usr/share/doc/${P}/COPYRIGHT.hack and CHANGES.rogue
 LICENSE="BSD | free-noncomm"
+SLOT="0"
 KEYWORDS="x86"
 
 DEPEND="sys-libs/ncurses
@@ -51,7 +51,7 @@ src_install() {
 	[ `build_game rogue` ] && fperms g+s ${GAMES_BINDIR}/rogue
 
 	# state files
-	[ `build_game hack` ] && dodir ${GAMES_STATEDIR}/hack && chmod ug+rw ${GAMES_STATEDIR}/hack
+	[ `build_game hack` ] && keepdir ${GAMES_STATEDIR}/hack && chmod ug+rw ${GAMES_STATEDIR}/hack
 	[ `build_game rogue` ] && do_statefile rogue.scores
 
 	# extra docs
