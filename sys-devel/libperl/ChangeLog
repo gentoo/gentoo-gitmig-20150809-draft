@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/libperl
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/ChangeLog,v 1.45 2004/09/08 20:10:42 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/ChangeLog,v 1.46 2004/09/09 18:42:54 gustavoz Exp $
+
+  09 Sep 2004; Gustavo Zacarias <gustavoz@gentoo.org> libperl-5.8.4-r1.ebuild:
+  Stable on sparc to finally solve #36478
 
   08 Sep 2004; Robert Coie <rac@gentoo.org> libperl-5.8.4-r1.ebuild:
   keyword x86 and arm for uclibc folks
