@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/qat
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/qat/ChangeLog,v 1.1 2003/02/17 16:13:26 alain Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/qat/ChangeLog,v 1.2 2004/03/07 02:45:00 zx Exp $
+
+  09 Mar 2004; Chris Aniszczyk <zx@gentoo.org> qat-2.7.0.ebuild:
+  Version bump.
 
 *qat-2.7.0 (17 Feb 2003)
 
