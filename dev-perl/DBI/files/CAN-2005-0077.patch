@@ -1,0 +1,47 @@
+--- libdbi-perl-1.21.orig/lib/DBI/ProxyServer.pm
++++ libdbi-perl-1.21/lib/DBI/ProxyServer.pm
+@@ -33,12 +33,6 @@
+ package DBI::ProxyServer;
+ 
+ 
+-my $haveFileSpec = eval { require File::Spec };
+-my $tmpDir = $haveFileSpec ? File::Spec->tmpdir() :
+-    ($ENV{'TMP'} || $ENV{'TEMP'} || '/tmp');
+-my $defaultPidFile = $haveFileSpec ?
+-    File::Spec->catdir($tmpDir, "dbiproxy.pid") : "/tmp/dbiproxy.pid";
+-
+ 
+ ############################################################################
+ #
+@@ -107,7 +101,8 @@
+     } else {
+ 	$o->{'mode'} = 'single';
+     }
+-    $o->{'pidfile'}    = $defaultPidFile;
++    # No pidfile by default, configuration must provide one if needed
++    $o->{'pidfile'}    = 'none';
+     $o->{'user'}       = undef;
+ };
+ 
+@@ -491,7 +486,7 @@
+ =item I<pidfile> (B<--pidfile=file>)
+ 
+ (UNIX only) If this option is present, a PID file will be created at the
+-given location.
++given location. Default is do not create a pidfile.
+ 
+ =item I<user> (B<--user=uid>)
+ 
+only in patch2:
+unchanged:
+--- libdbi-perl-1.21.orig/dbiproxy.PL
++++ libdbi-perl-1.21/dbiproxy.PL
+@@ -143,7 +143,7 @@
+ =item B<--pidfile=file>
+ 
+ (UNIX only) If this option is present, a PID file will be created at the
+-given location.
++given location. Default is do not create a pidfile.
+ 
+ =item B<--user=uid>
+ 
