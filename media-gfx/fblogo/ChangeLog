@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/fblogo
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fblogo/ChangeLog,v 1.1 2003/08/17 04:56:15 tad Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fblogo/ChangeLog,v 1.2 2003/09/26 18:54:33 seemant Exp $
+
+*fblogo-0.5.1 (26 Sep 2003)
+
+  26 Sep 2003; Seemant Kulleen <seemant@gentoo.org> fblogo-0.5.1.ebuild:
+  version bump, identical to previous release, but fixes multiline strings for
+  gcc-3.3
 
 *fblogo-0.5.0 (17 Aug 2003)
 
