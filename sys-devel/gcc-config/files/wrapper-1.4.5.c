@@ -1,7 +1,7 @@
 /*
  * Copyright 1999-2004 Gentoo Foundation
  * Distributed under the terms of the GNU General Public License v2
- * $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/files/wrapper-1.4.5.c,v 1.2 2005/01/31 06:16:58 eradicator Exp $
+ * $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/files/wrapper-1.4.5.c,v 1.3 2005/02/07 19:24:21 eradicator Exp $
  * Author: Martin Schlemmer <azarah@gentoo.org>
  */
 
@@ -301,10 +301,9 @@ static char **getNewArgv(char **argv, const char *newflagsStr) {
 		}
 	}
 
-	/* Allocate our array */
+	/* Allocate our array Make room for the original, new ones, and the
+           NULL terminator */
 	newargv = (char **)malloc(sizeof(char *) * (argc + newflagsCount + 1));
-
-	/* Make room for the original, new ones, and the NULL terminator */
 	if(!newargv)
 		return NULL;
 
