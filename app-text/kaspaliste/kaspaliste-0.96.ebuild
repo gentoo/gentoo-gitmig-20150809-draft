@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/kaspaliste/kaspaliste-0.96.ebuild,v 1.2 2005/01/01 16:23:26 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/kaspaliste/kaspaliste-0.96.ebuild,v 1.3 2005/03/15 21:02:17 lanius Exp $
 
 inherit kde
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/kaspaliste/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE=""
 
 DEPEND=">=dev-db/postgresql-7.3"

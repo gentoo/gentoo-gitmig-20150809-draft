@@ -1,6 +1,9 @@
 # ChangeLog for app-text/kaspaliste
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/kaspaliste/ChangeLog,v 1.7 2005/01/01 16:23:26 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/kaspaliste/ChangeLog,v 1.8 2005/03/15 21:02:17 lanius Exp $
+
+  15 Mar 2005; Heinrich Wendel <lanius@gentoo.org> kaspaliste-0.96.ebuild:
+  stable
 
 *kaspaliste-0.96 (03 Dec 2004)
 
