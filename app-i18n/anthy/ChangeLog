@@ -1,8 +1,13 @@
 # ChangeLog for app-i18n/anthy
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/anthy/ChangeLog,v 1.4 2003/09/11 07:41:05 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/anthy/ChangeLog,v 1.5 2003/09/12 22:22:06 usata Exp $
 
 *anthy-4507 (11 Sep 2003)
+
+  13 Sep 2003; Mamoru KOMACHI <usata@gentoo.org> anthy-4507.ebuild:
+  Added to DEPEND >=app-dicts/canna-cannadict-0.95-r1, which installs
+  gcanna{,f}.ctd and don't require canna if USE="-canna". Thanks to
+  Hattya <hattya@inter7.jp> for reporting the bug in Bug #28530
 
   11 Sep 2003; Mamoru KOMACHI <usata@gentoo.org> anthy-4507.ebuild:
   New snapshot branch.  Ebuild submitted by Hattya <hattya@inter7.jp>

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/anthy/anthy-4507.ebuild,v 1.1 2003/09/11 07:41:05 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/anthy/anthy-4507.ebuild,v 1.2 2003/09/12 22:22:06 usata Exp $
 
 IUSE="emacs"
 
@@ -19,7 +19,7 @@ S="${WORKDIR}/${P}"
 
 DEPEND="virtual/glibc
 	emacs? ( virtual/emacs )
-	app-dicts/canna-cannadic"
+	>=app-dicts/canna-cannadic-0.95-r1"
 RDEPEND="virtual/glibc
 	emacs? ( virtual/emacs )"
 
