@@ -1,13 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/signify/signify-1.07.ebuild,v 1.11 2003/02/13 14:40:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/signify/signify-1.07.ebuild,v 1.12 2003/03/11 21:11:46 seemant Exp $
 
 S=${WORKDIR}/${PN}
 DESCRIPTION="A (semi-)random e-mail signature rotator"
 SRC_URI="http://www.ibiblio.org/pub/Linux/utils/text/${P}.tar.gz"
 HOMEPAGE="http://ibiblio.org/pub/Linux/utils/text/"
 
-DEPEND="sys-devel/perl"
+DEPEND="dev-lang/perl"
 
 SLOT="0"
 LICENSE="public-domain"

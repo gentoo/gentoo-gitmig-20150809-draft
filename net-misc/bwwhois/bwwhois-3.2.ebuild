@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bwwhois/bwwhois-3.2.ebuild,v 1.2 2003/02/13 14:46:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bwwhois/bwwhois-3.2.ebuild,v 1.3 2003/03/11 21:11:46 seemant Exp $
 
 inherit perl-post
 
@@ -15,7 +15,7 @@ SLOT="0"
 LICENSE="Artistic | GPL-2"
 KEYWORDS="x86 ~ppc ~sparc ~alpha"
 
-DEPEND="sys-devel/perl"
+DEPEND="dev-lang/perl"
 
 src_unpack() {
 

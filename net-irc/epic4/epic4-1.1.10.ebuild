@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-irc/epic4/epic4-1.1.10.ebuild,v 1.2 2003/02/13 14:15:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/epic4/epic4-1.1.10.ebuild,v 1.3 2003/03/11 21:11:46 seemant Exp $
 
 IUSE="ipv6 perl ssl"
 
@@ -14,7 +14,7 @@ LICENSE="as-is"
 KEYWORDS="~x86 ~ppc"
 
 DEPEND=">=sys-libs/ncurses-5.2
-	perl? ( >=sys-devel/perl-5.6.1 )
+	perl? ( >=dev-lang/perl-5.6.1 )
 	ssl? ( >=dev-libs/openssl-0.9.5 )"
 inherit flag-o-matic
 replace-flags "-O?" "-O"

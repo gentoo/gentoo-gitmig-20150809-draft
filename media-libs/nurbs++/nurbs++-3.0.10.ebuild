@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/nurbs++/nurbs++-3.0.10.ebuild,v 1.8 2003/02/13 12:52:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/nurbs++/nurbs++-3.0.10.ebuild,v 1.9 2003/03/11 21:11:46 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="NURBS surfaces manipulation library"
@@ -13,7 +13,7 @@ LICENSE="LGPL-2"
 KEYWORDS="x86 sparc "
 
 DEPEND="virtual/x11
-	sys-devel/perl"
+	dev-lang/perl"
 	#media-gfx/imagemagick # doesn't work yet either
 	# opengl? ( virtual/opengl ) # doesn't work yet
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-1.8.10.ebuild,v 1.8 2003/02/13 14:17:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-1.8.10.ebuild,v 1.9 2003/03/11 21:11:46 seemant Exp $
 
 IUSE="ssl nls mmx gnome ipv6 python kde gtk perl"
 
@@ -15,7 +15,7 @@ KEYWORDS="x86 ppc sparc "
 
 RDEPEND="=x11-libs/gtk+-1.2*
 	python? ( >=dev-lang/python-2.2-r7 )
-	perl?   ( >=sys-devel/perl-5.6.1 )
+	perl?   ( >=dev-lang/perl-5.6.1 )
 	gnome?  ( <gnome-base/gnome-panel-1.5.0
 				>=media-libs/gdk-pixbuf-0.11.0-r1 )
 	ssl?    ( >=dev-libs/openssl-0.9.6a )"

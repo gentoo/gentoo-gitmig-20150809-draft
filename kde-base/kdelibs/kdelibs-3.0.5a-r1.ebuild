@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.0.5a-r1.ebuild,v 1.6 2003/03/08 12:23:02 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.0.5a-r1.ebuild,v 1.7 2003/03/11 21:11:46 seemant Exp $
 inherit kde kde.org eutils
 #don't inherit  kde-base or kde-dist! it calls need-kde which adds kdelibs to depend!
 
@@ -16,7 +16,7 @@ LICENSE="GPL-2 LGPL-2"
 # DEPEND from scratch.
 DEPEND=""
 RDEPEND=""
-newdepend "sys-devel/perl
+newdepend "dev-lang/perl
 	>=media-libs/audiofile-0.1.9
 	>=sys-apps/bzip2-1.0.1
 	>=dev-libs/libxslt-1.0.7

@@ -16,3 +16,4 @@ move app-editors/kile-1.31 app-editors/kile-1.3.1
 move app-i18n/kde-i18n-zh_CN.GB2312-2.2.2 app-i18n/kde-i18n-zh_CN-2.2.2
 move app-i18n/kde-i18n-zh_TW.Big5-2.2.2 app-i18n/kde-i18n-zh_TW-2.2.2
 move sys-apps/bash app-shells/bash
+move sys-devel/perl dev-lang/perl

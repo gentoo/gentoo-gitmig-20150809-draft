@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.43-r1.ebuild,v 1.7 2003/02/13 15:31:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.43-r1.ebuild,v 1.8 2003/03/11 21:11:46 seemant Exp $
 
 inherit eutils
 
@@ -18,7 +18,7 @@ LICENSE="Apache-1.1"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha ~mips ~hppa"
 
 DEPEND="sys-libs/db
-	sys-devel/perl
+	dev-lang/perl
 	>=sys-libs/zlib-1.1.4
 	>=sys-libs/gdbm-1.8
 	>=dev-libs/expat-1.95.2

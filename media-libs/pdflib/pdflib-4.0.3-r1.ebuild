@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-libs/pdflib/pdflib-4.0.3-r1.ebuild,v 1.3 2003/02/13 12:53:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/pdflib/pdflib-4.0.3-r1.ebuild,v 1.4 2003/03/11 21:11:46 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A library for generating PDF on the fly"
@@ -13,7 +13,7 @@ LICENSE="Aladdin"
 KEYWORDS="x86 ~sparc"
 
 DEPEND="tcltk? ( >=dev-lang/tk-8.2 )
-	perl? ( >=sys-devel/perl-5.1 )
+	perl? ( >=dev-lang/perl-5.1 )
 	python? ( =dev-lang/python-2.2* )
 	java? ( >=virtual/jdk-1.3 )"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.59.9.ebuild,v 1.2 2003/03/07 13:21:28 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.59.9.ebuild,v 1.3 2003/03/11 21:11:46 seemant Exp $
 
 inherit kde-functions eutils
 
@@ -19,7 +19,7 @@ DEPEND="=sys-libs/db-1*
 	nls? ( sys-devel/gettext )
 	nas? ( >=media-libs/nas-1.4.1-r1 )
 	arts? ( >=kde-base/arts-0.9.5 )
-	perl? ( >=sys-devel/perl-5.6.1 )
+	perl? ( >=dev-lang/perl-5.6.1 )
 	( gnome? ( =gnome-base/gnome-panel-1.4* >=media-libs/gdk-pixbuf-0.16.0 ) : 
   	( =x11-libs/gtk+-1.2* =dev-libs/glib-1.2* ) )
 	ssl? ( dev-libs/openssl )"

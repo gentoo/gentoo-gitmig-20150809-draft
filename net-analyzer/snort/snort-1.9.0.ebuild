@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-1.9.0.ebuild,v 1.5 2003/02/13 13:50:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-1.9.0.ebuild,v 1.6 2003/03/11 21:11:46 seemant Exp $
 
 IUSE="ssl postgres mysql snmp"
 
@@ -22,7 +22,7 @@ DEPEND="virtual/glibc
 	snmp? ( >=net-analyzer/net-snmp-5.0 )"
 
 RDEPEND="virtual/glibc 
-	sys-devel/perl
+	dev-lang/perl
 	>=net-libs/libpcap-0.6.2-r1
 	postgres? ( >=dev-db/postgresql-7.2 )
 	mysql? ( >=dev-db/mysql-3.23.26 )

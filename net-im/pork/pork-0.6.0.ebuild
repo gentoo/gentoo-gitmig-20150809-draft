@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pork/pork-0.6.0.ebuild,v 1.1 2003/03/03 16:10:48 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pork/pork-0.6.0.ebuild,v 1.2 2003/03/11 21:11:46 seemant Exp $
 
 IUSE=""
 
@@ -11,7 +11,7 @@ LICENSE="GPL-2"
 
 KEYWORDS="~x86 ~alpha"
 SLOT="0"
-DEPEND="perl? ( sys-devel/perl )
+DEPEND="perl? ( dev-lang/perl )
 	sys-libs/ncurses"
 
 src_compile() {

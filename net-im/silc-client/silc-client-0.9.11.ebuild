@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/silc-client/silc-client-0.9.11.ebuild,v 1.4 2003/03/04 07:21:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/silc-client/silc-client-0.9.11.ebuild,v 1.5 2003/03/11 21:11:46 seemant Exp $
 
 DESCRIPTION="IRSSI-based text client for Secure Internet Live Conferencing"
 SRC_URI="http://www.silcnet.org/download/client/sources/${P}.tar.bz2"
@@ -12,7 +12,7 @@ KEYWORDS="x86 ppc"
 IUSE="ipv6 perl"
 
 DEPEND="=dev-libs/glib-1.2*
-	perl? ( sys-devel/perl )
+	perl? ( dev-lang/perl )
 	sys-libs/ncurses"
 
 src_compile() {

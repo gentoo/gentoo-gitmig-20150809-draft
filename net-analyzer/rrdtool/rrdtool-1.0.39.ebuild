@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.0.39.ebuild,v 1.11 2003/02/13 13:50:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.0.39.ebuild,v 1.12 2003/03/11 21:11:46 seemant Exp $
 
 inherit perl-module
 
@@ -13,7 +13,7 @@ LICENSE="GPL-2"
 KEYWORDS="x86 ppc sparc"
 IUSE="tcltk perl"
 
-DEPEND="perl? ( sys-devel/perl )
+DEPEND="perl? ( dev-lang/perl )
 	sys-apps/gawk
 	>=media-libs/libgd-1.8.3"
 RDEPEND="tcltk? ( dev-lang/tcl )"

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gnump3d/gnump3d-1.0.ebuild,v 1.5 2003/02/14 08:52:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gnump3d/gnump3d-1.0.ebuild,v 1.6 2003/03/11 21:11:46 seemant Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ KEYWORDS="x86"
 IUSE="oggvorbis"
 
 DEPEND="virtual/glibc"
-RDEPEND=">=sys-devel/perl-5.6.1
+RDEPEND=">=dev-lang/perl-5.6.1
 	oggvorbis? ( media-libs/libvorbis )"
 
 src_unpack() {

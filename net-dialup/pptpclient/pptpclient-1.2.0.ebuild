@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/pptpclient/pptpclient-1.2.0.ebuild,v 1.1 2003/02/26 23:31:46 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/pptpclient/pptpclient-1.2.0.ebuild,v 1.2 2003/03/11 21:11:46 seemant Exp $
 
 MY_P=pptp-linux-${PV}
 S=${WORKDIR}/${MY_P}
@@ -14,7 +14,7 @@ KEYWORDS="~x86 ~ppc"
 IUSE="tcltk"
 
 DEPEND="net-dialup/ppp
-		sys-devel/perl
+		dev-lang/perl
 		tcltk? ( dev-perl/perl-tk )"
 
 src_compile() {

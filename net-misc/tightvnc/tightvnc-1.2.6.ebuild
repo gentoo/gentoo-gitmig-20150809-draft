@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/tightvnc-1.2.6.ebuild,v 1.4 2003/02/13 15:08:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/tightvnc-1.2.6.ebuild,v 1.5 2003/03/11 21:11:46 seemant Exp $
 
 S="${WORKDIR}/vnc_unixsrc"
 DESCRIPTION="A great client/server software package allowing remote network access to graphical desktops."
@@ -12,7 +12,7 @@ LICENSE="GPL-2"
 SLOT="0"
 
 DEPEND="virtual/x11
-	sys-devel/perl
+	dev-lang/perl
 	~media-libs/jpeg-6b
 	sys-libs/zlib"
 

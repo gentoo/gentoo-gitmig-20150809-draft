@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier/courier-0.40.0.20021026.ebuild,v 1.4 2003/02/13 14:25:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier/courier-0.40.0.20021026.ebuild,v 1.5 2003/03/11 21:11:46 seemant Exp $
 
 DESCRIPTION="An MTA designed specifically for maildirs"
 SRC_URI="http://ftp1.sourceforge.net/courier/${P}.tar.bz2"
@@ -25,7 +25,7 @@ RDEPEND="virtual/glibc
 	ldap? ( >=net-nds/openldap-1.2.11 )
 	postgres? ( >=dev-db/postgresql-7.1.3 )
 	tcltk? ( >=dev-tcltk/expect-5.33.0 )"
-DEPEND="${RDEPEND} sys-devel/perl sys-apps/procps"
+DEPEND="${RDEPEND} dev-lang/perl sys-apps/procps"
 
 src_unpack() {
 	unpack ${A} ; cd ${S}

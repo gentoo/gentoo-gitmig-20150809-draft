@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/amaya/amaya-6.1.ebuild,v 1.10 2003/02/20 17:22:41 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/amaya/amaya-6.1.ebuild,v 1.11 2003/03/11 21:11:46 seemant Exp $
 
 S=${WORKDIR}/Amaya/LINUX-ELF
 DESCRIPTION="The W3C Web-Browser"
@@ -12,7 +12,7 @@ LICENSE="GPL-2"
 SLOT="0"
 IUSE=""
 
-DEPEND=">=x11-libs/openmotif-2.1.30 sys-devel/perl"
+DEPEND=">=x11-libs/openmotif-2.1.30 dev-lang/perl"
 RDEPEND=">=x11-libs/openmotif-2.1.30"
 
 src_compile() {

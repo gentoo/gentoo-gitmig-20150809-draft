@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/pptpclient/pptpclient-1.1.0-r1.ebuild,v 1.2 2003/02/13 13:55:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/pptpclient/pptpclient-1.1.0-r1.ebuild,v 1.3 2003/03/11 21:11:46 seemant Exp $
 
 
 S=${WORKDIR}/pptp-linux-${PV}-1
@@ -9,7 +9,7 @@ HOMEPAGE="http://pptpclient.sourceforge.net/"
 SRC_URI="mirror://sourceforge/pptpclient/pptp-linux-${PV}-1.tar.gz"
 
 DEPEND="net-dialup/ppp
-		sys-devel/perl
+		dev-lang/perl
 		tcltk? ( dev-perl/perl-tk )"
 
 SLOT="0"

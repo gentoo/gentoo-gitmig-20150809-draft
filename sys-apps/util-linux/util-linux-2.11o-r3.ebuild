@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.11o-r3.ebuild,v 1.14 2003/03/11 06:21:01 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.11o-r3.ebuild,v 1.15 2003/03/11 21:11:46 seemant Exp $
 
 inherit eutils
 
@@ -17,7 +17,7 @@ LICENSE="GPL-2"
 DEPEND="virtual/glibc
 	>=sys-libs/ncurses-5.2-r2
 	sys-apps/pam-login"
-RDEPEND="${DEPEND} sys-devel/perl
+RDEPEND="${DEPEND} dev-lang/perl
 	nls? ( sys-devel/gettext )"
 
 SLOT="0"

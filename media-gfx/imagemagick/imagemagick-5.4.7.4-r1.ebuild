@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-5.4.7.4-r1.ebuild,v 1.3 2003/02/13 12:35:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-5.4.7.4-r1.ebuild,v 1.4 2003/03/11 21:11:46 seemant Exp $
 
 IUSE="perl X cups xml2 lcms"
 
@@ -28,7 +28,7 @@ DEPEND="media-libs/libpng
 		>=app-text/dgs-0.5.9.1 )
 	cups?   ( >=app-text/ghostscript-6.50 )
 	lcms? ( >=media-libs/lcms-1.06 )
-	perl? ( >=sys-devel/perl-5 )
+	perl? ( >=dev-lang/perl-5 )
 	xml2? ( >=dev-libs/libxml2-2.4.10 )"
 
 src_compile() {

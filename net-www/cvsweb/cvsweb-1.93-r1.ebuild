@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/cvsweb/cvsweb-1.93-r1.ebuild,v 1.9 2003/02/13 15:32:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/cvsweb/cvsweb-1.93-r1.ebuild,v 1.10 2003/03/11 21:11:46 seemant Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/cvsweb
@@ -11,7 +11,7 @@ KEYWORDS="x86 sparc "
 SLOT="0"
 LICENSE="BSD"
 
-RDEPEND=">=sys-devel/perl-5 >=app-text/rcs-5.7"
+RDEPEND=">=dev-lang/perl-5 >=app-text/rcs-5.7"
 
 src_unpack () {
 	unpack ${A}

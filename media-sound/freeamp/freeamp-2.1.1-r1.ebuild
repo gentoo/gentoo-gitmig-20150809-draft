@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/freeamp/freeamp-2.1.1-r1.ebuild,v 1.13 2003/02/13 13:11:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/freeamp/freeamp-2.1.1-r1.ebuild,v 1.14 2003/03/11 21:11:46 seemant Exp $
 
 IUSE="arts esd gnome X gtk oggvorbis alsa"
 
@@ -27,7 +27,7 @@ RDEPEND="=x11-libs/gtk+-1.2*
 
 DEPEND="${RDEPEND} 
 	x86? ( dev-lang/nasm )
-	sys-devel/perl"
+	dev-lang/perl"
 
 SLOT="0"
 LICENSE="GPL-2"

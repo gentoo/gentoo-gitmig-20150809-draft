@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imap-admin/cyrus-imap-admin-2.1.9.ebuild,v 1.6 2003/02/13 14:27:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imap-admin/cyrus-imap-admin-2.1.9.ebuild,v 1.7 2003/03/11 21:11:46 seemant Exp $
 
 inherit perl-module
 
@@ -19,7 +19,7 @@ DEPEND="virtual/glibc
 	afs? ( >=net-fs/openafs-1.2.2 )
 	snmp? ( >=net-analyzer/ucd-snmp-4.2.3 )
 	ssl? ( >=dev-libs/openssl-0.9.6 )
-    	>=sys-devel/perl-5.6.1
+    	>=dev-lang/perl-5.6.1
 	kerberos? ( >=app-crypt/krb5-1.2.5 )
 	>=sys-libs/db-3.2
 	>=sys-libs/pam-0.75

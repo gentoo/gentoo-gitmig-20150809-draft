@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.1.5-r2.ebuild,v 1.6 2003/02/13 14:27:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.1.5-r2.ebuild,v 1.7 2003/03/11 21:11:46 seemant Exp $
 
 IUSE="ssl perl snmp afs"
 
@@ -21,7 +21,7 @@ RDEPEND="virtual/glibc
 	afs? ( >=net-fs/openafs-1.2.2 )
 	snmp? ( >=net-analyzer/ucd-snmp-4.2.3 )
 	ssl? ( >=dev-libs/openssl-0.9.6 )
-    perl? ( >=sys-devel/perl-5.6.1 )
+    perl? ( >=dev-lang/perl-5.6.1 )
 	>=sys-libs/db-3.2
 	>=sys-libs/pam-0.75
 	>=dev-libs/cyrus-sasl-2.1.2
@@ -30,7 +30,7 @@ DEPEND="virtual/glibc
 	afs? ( >=net-fs/openafs-1.2.2 )
 	snmp? ( >=net-analyzer/ucd-snmp-4.2.3 )
 	ssl? ( >=dev-libs/openssl-0.9.6 )
-    perl? ( >=sys-devel/perl-5.6.1 )
+    perl? ( >=dev-lang/perl-5.6.1 )
 	>=sys-libs/db-3.2
 	>=sys-libs/pam-0.75
 	>=dev-libs/cyrus-sasl-2.1.2

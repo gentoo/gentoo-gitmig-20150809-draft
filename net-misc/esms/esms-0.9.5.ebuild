@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/esms/esms-0.9.5.ebuild,v 1.11 2003/02/28 16:55:00 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/esms/esms-0.9.5.ebuild,v 1.12 2003/03/11 21:11:46 seemant Exp $
 
 S=${WORKDIR}/${P}
 
@@ -14,7 +14,7 @@ SLOT="0"
 DEPEND=">=dev-perl/libwww-perl-5.64 \
 	>=dev-perl/HTML-Parser-3.26 \
 	>=dev-perl/HTML-Tree-3.11
-	>=sys-devel/perl-5.6.1"
+	>=dev-lang/perl-5.6.1"
 
 
 src_compile() {

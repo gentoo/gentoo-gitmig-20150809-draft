@@ -15,7 +15,7 @@ SLOT="0"
 
 DEPEND="virtual/glibc
 	>=x11-base/xfree-4.1.0
-	>=sys-devel/perl-5.6.1
+	>=dev-lang/perl-5.6.1
 	~media-libs/jpeg-6b
 	>=sys-libs/zlib-1.1.4"
 

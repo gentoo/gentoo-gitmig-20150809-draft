@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim-cvs/gaim-cvs-0.60-r3.ebuild,v 1.5 2003/03/10 22:38:15 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim-cvs/gaim-cvs-0.60-r3.ebuild,v 1.6 2003/03/11 21:11:46 seemant Exp $
 
 IUSE="nls perl spell"
 
@@ -18,7 +18,7 @@ DEPEND="=sys-libs/db-1*
 	>=media-libs/audiofile-0.2.0
 	media-libs/libao
 	nls? ( sys-devel/gettext )
-	perl? ( >=sys-devel/perl-5.6.1 )
+	perl? ( >=dev-lang/perl-5.6.1 )
 	spell? ( >=app-text/gtkspell-2.0.2 )"
 
 inherit cvs

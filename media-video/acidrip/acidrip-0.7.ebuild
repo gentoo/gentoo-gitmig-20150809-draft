@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/acidrip/acidrip-0.7.ebuild,v 1.1 2003/03/06 04:05:55 vladimir Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/acidrip/acidrip-0.7.ebuild,v 1.2 2003/03/11 21:11:46 seemant Exp $
 
 inherit perl-module
 
@@ -12,7 +12,7 @@ SLOT="0"
 KEYWORDS="~ppc ~x86"
 IUSE="encode"
 
-DEPEND="sys-devel/perl
+DEPEND="dev-lang/perl
 		dev-perl/gtk-perl
 		media-video/lsdvd
 		media-video/mplayer

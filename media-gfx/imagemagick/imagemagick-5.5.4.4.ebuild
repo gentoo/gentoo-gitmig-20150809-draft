@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-5.5.4.4.ebuild,v 1.3 2003/02/21 17:55:34 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-5.5.4.4.ebuild,v 1.4 2003/03/11 21:11:46 seemant Exp $
 
 inherit libtool
 inherit perl-module
@@ -33,7 +33,7 @@ DEPEND="media-libs/jbigkit
 	jpeg? ( >=media-libs/jpeg-6b )
 	lcms? ( >=media-libs/lcms-1.06 )
 	mpeg? ( media-video/mpeg2vidcodec )
-	perl? ( >=sys-devel/perl-5 )
+	perl? ( >=dev-lang/perl-5 )
 	png? ( media-libs/libpng )
 	tiff? ( >=media-libs/tiff-3.5.5 )
 	xml2? ( >=dev-libs/libxml2-2.4.10 )

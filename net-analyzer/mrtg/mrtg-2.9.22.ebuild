@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mrtg/mrtg-2.9.22.ebuild,v 1.3 2003/02/13 13:42:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mrtg/mrtg-2.9.22.ebuild,v 1.4 2003/03/11 21:11:46 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A tool to monitor the traffic load on network-links"
@@ -12,7 +12,7 @@ LICENSE="GPL-2"
 SLOT="0"
 
 DEPEND="virtual/glibc
-	sys-devel/perl
+	dev-lang/perl
 	>=media-libs/libgd-1.8.3"
 #	>=media-libs/libpng-1.2.1"
 

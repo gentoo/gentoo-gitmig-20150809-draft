@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ferm/ferm-1.1_pre7.ebuild,v 1.6 2003/02/13 14:49:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ferm/ferm-1.1_pre7.ebuild,v 1.7 2003/03/11 21:11:46 seemant Exp $
 
 DESCRIPTION="Command line util for managing firewall rules"
 HOMEPAGE="http://www.geo.vu.nl/~koka/ferm/"
@@ -8,7 +8,7 @@ LICENSE="GPL-2"
 KEYWORDS="x86 sparc "
 SLOT="0"
 DEPEND=""
-RDEPEND="sys-devel/perl"
+RDEPEND="dev-lang/perl"
 SRC_URI="http://www.geo.vu.nl/~koka/ferm/${PN}.tar.gz"
 S=${WORKDIR}/${PN}-1.1-pre7
 

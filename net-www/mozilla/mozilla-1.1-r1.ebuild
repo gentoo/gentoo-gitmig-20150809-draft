@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.1-r1.ebuild,v 1.16 2003/02/13 15:39:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.1-r1.ebuild,v 1.17 2003/03/11 21:11:46 seemant Exp $
 
 IUSE="moznomail java mozp3p crypt ldap gtk2 mozinterfaceinfo ssl mozaccess mozxmlterm mozctl gnome mozsvg"
 
@@ -64,7 +64,7 @@ RDEPEND=">=x11-base/xfree-4.2.0-r11
 
 DEPEND="${RDEPEND}
 	virtual/x11
-	sys-devel/perl
+	dev-lang/perl
 	java? ( >=dev-java/java-config-0.2.0 )"
 
 # needed by src_compile() and src_install()

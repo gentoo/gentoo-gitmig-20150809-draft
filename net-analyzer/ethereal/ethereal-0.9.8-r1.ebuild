@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ethereal-0.9.8-r1.ebuild,v 1.6 2003/02/15 07:39:40 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ethereal-0.9.8-r1.ebuild,v 1.7 2003/03/11 21:11:46 seemant Exp $
 
 IUSE="gtk ipv6 snmp ssl gtk2"
 
@@ -21,7 +21,7 @@ RDEPEND=">=sys-libs/zlib-1.1.4
 	>=net-libs/libpcap-0.7.1"
 
 DEPEND="${RDEPEND}
-	sys-devel/perl
+	dev-lang/perl
 	sys-devel/bison
 	sys-devel/flex"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/maildrop/maildrop-1.4.0.ebuild,v 1.8 2003/02/13 14:33:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/maildrop/maildrop-1.4.0.ebuild,v 1.9 2003/03/11 21:11:46 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Mail delivery agent/filter"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/courier/${P}.tar.gz"
 HOMEPAGE="http://www.flounder.net/~mrsam/maildrop/index.html"
 
 DEPEND=">=sys-libs/gdbm-1.8.0
-	sys-devel/perl
+	dev-lang/perl
 	net-mail/mailbase"
 
 SLOT="0"

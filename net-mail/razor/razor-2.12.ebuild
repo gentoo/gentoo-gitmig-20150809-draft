@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/razor/razor-2.12.ebuild,v 1.7 2003/02/13 14:38:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/razor/razor-2.12.ebuild,v 1.8 2003/03/11 21:11:46 seemant Exp $
 
 inherit perl-module
 
@@ -14,7 +14,7 @@ SLOT="0"
 LICENSE="Artistic"
 KEYWORDS="x86 ppc sparc"
 
-RDEPEND="sys-devel/perl
+RDEPEND="dev-lang/perl
 	dev-perl/Net-DNS
 	dev-perl/Time-HiRes
 	dev-perl/Digest-SHA1

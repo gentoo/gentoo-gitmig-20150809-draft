@@ -1,7 +1,7 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Updated to exim-4 by Ben Lutgens <lamer@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/exim/exim-4.04-r2.ebuild,v 1.7 2003/02/13 14:28:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/exim/exim-4.04-r2.ebuild,v 1.8 2003/03/11 21:11:46 seemant Exp $
 
 IUSE="pgsql ssl tcpd mysql ldap pam"
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.exim.org/"
 
 DEPEND="virtual/glibc
 		>=sys-libs/db-3.2
-		>=sys-devel/perl-5.6.0
+		>=dev-lang/perl-5.6.0
 		>=dev-libs/libpcre-3.4
 		pam? ( >=sys-libs/pam-0.75 )
 		tcpd? ( sys-apps/tcp-wrappers )

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.5_p1.ebuild,v 1.14 2003/02/13 15:03:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.5_p1.ebuild,v 1.15 2003/03/11 21:11:46 seemant Exp $
 
 IUSE="ipv6 static pam tcpd"
 
@@ -20,7 +20,7 @@ RDEPEND="virtual/glibc
 	sys-libs/zlib"
 
 DEPEND="${RDEPEND}
-	sys-devel/perl
+	dev-lang/perl
 	sys-apps/groff
 	tcpd? ( >=sys-apps/tcp-wrappers-7.6 )"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/squidalyser/squidalyser-0.2.55.ebuild,v 1.2 2003/02/13 15:44:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/squidalyser/squidalyser-0.2.55.ebuild,v 1.3 2003/03/11 21:11:46 seemant Exp $
 
 DESCRIPTION="Interactive log analyser for the Squid proxy."
 HOMEPAGE="http://ababa.org"
@@ -11,7 +11,7 @@ KEYWORDS="~x86 ~sparc ~alpha ~ppc"
 IUSE=""
 
 RDEPEND="net-www/squid
-	sys-devel/perl
+	dev-lang/perl
 	dev-perl/CGI
 	dev-perl/DBI
 	dev-perl/DBD-mysql

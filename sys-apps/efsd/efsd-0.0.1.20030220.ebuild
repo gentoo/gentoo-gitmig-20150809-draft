@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/efsd/efsd-0.0.1.20030220.ebuild,v 1.4 2003/02/22 07:39:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/efsd/efsd-0.0.1.20030220.ebuild,v 1.5 2003/03/11 21:11:46 seemant Exp $
 
 DESCRIPTION="daemon that provides commonly needed file system functionality to clients"
 HOMEPAGE="http://www.enlightenment.org/pages/efsd.html"
@@ -14,7 +14,7 @@ IUSE="pic"
 
 DEPEND="virtual/glibc
 	sys-devel/gcc
-	sys-devel/perl"
+	dev-lang/perl"
 RDEPEND="${DEPEND}
 	app-admin/fam-oss
 	>=dev-db/edb-1.0.3.2003*

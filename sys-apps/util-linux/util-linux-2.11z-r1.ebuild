@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.11z-r1.ebuild,v 1.5 2003/02/27 21:22:18 tuxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.11z-r1.ebuild,v 1.6 2003/03/11 21:11:46 seemant Exp $
 
 IUSE="crypt nls"
 
@@ -23,7 +23,7 @@ DEPEND="virtual/glibc
 	>=sys-libs/ncurses-5.2-r2
 	sys-apps/pam-login"
 
-RDEPEND="${DEPEND} sys-devel/perl
+RDEPEND="${DEPEND} dev-lang/perl
 	nls? ( sys-devel/gettext )"
 
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/kdegraphics-3.1.ebuild,v 1.9 2003/02/28 20:44:52 wwoods Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/kdegraphics-3.1.ebuild,v 1.10 2003/03/11 21:11:45 seemant Exp $
 inherit kde-dist 
 
 IUSE="gphoto tetex scanner"
@@ -9,7 +9,7 @@ DESCRIPTION="KDE graphics-related apps"
 KEYWORDS="x86 ppc sparc ~alpha"
 
 newdepend "gphoto2? ( >=media-gfx/gphoto2-2.0_beta1 )
-	sys-devel/perl
+	dev-lang/perl
 	scanner? ( media-gfx/sane-backends )
 	tetex? ( >=app-text/tetex-1.0.7 )
 	media-libs/imlib

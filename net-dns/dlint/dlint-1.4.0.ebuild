@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dlint/dlint-1.4.0.ebuild,v 1.9 2003/03/11 20:50:08 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dlint/dlint-1.4.0.ebuild,v 1.10 2003/03/11 21:11:46 seemant Exp $
 
 MY_P=${PN}${PV}
 S=${WORKDIR}/${MY_P}
@@ -13,7 +13,7 @@ KEYWORDS="x86 sparc "
 LICENSE="GPL-2"
 
 DEPEND="net-dns/bind-tools
-	sys-devel/perl
+	dev-lang/perl
 	app-shells/bash"
 
 src_compile() {

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/maildrop/maildrop-1.5.0-r1.ebuild,v 1.5 2003/02/13 14:33:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/maildrop/maildrop-1.5.0-r1.ebuild,v 1.6 2003/03/11 21:11:46 seemant Exp $
 
 IUSE="mysql ldap gdbm berkdb"
 
@@ -9,7 +9,7 @@ DESCRIPTION="Mail delivery agent/filter"
 SRC_URI="mirror://sourceforge/courier/${P}.tar.bz2"
 HOMEPAGE="http://www.flounder.net/~mrsam/maildrop/index.html"
 
-DEPEND="sys-devel/perl
+DEPEND="dev-lang/perl
 	virtual/mta
 	>=sys-libs/db-3.2
 	gdbm? ( >=sys-libs/gdbm-1.8.0 )

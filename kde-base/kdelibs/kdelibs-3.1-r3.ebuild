@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.1-r3.ebuild,v 1.1 2003/03/11 13:32:58 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.1-r3.ebuild,v 1.2 2003/03/11 21:11:46 seemant Exp $
 inherit kde kde.org 
 #don't inherit  kde-base or kde-dist! it calls need-kde which adds kdelibs to depend!
 
@@ -19,7 +19,7 @@ PATCHES="${FILESDIR}/${P}-bookmark.diff
 # so we recreate the entire DEPEND from scratch.
 DEPEND=""
 RDEPEND=""
-newdepend "sys-devel/perl
+newdepend "dev-lang/perl
 	>=media-libs/audiofile-0.1.9
 	>=sys-apps/bzip2-1.0.1
 	>=dev-libs/libxslt-1.0.7

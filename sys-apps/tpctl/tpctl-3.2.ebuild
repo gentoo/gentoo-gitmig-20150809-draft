@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/tpctl/tpctl-3.2.ebuild,v 1.10 2003/02/13 16:18:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/tpctl/tpctl-3.2.ebuild,v 1.11 2003/03/11 21:11:46 seemant Exp $
 
 IUSE="ncurses tpctlir perl"
 
@@ -17,7 +17,7 @@ SLOT="0"
 LICENSE="GPL-2"
 
 DEPEND="$DEPEND sys-apps/thinkpad ncurses? ( sys-libs/ncurses )"
-RDEPEND="$RDEPEND sys-apps/thinkpad ncurses? ( sys-libs/ncurses ) perl? ( sys-devel/perl )"
+RDEPEND="$RDEPEND sys-apps/thinkpad ncurses? ( sys-libs/ncurses ) perl? ( dev-lang/perl )"
 
 src_compile() {
 	emake -C lib || die "lib make failed"

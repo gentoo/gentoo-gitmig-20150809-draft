@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier/courier-0.40.1.ebuild,v 1.6 2003/02/13 14:25:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier/courier-0.40.1.ebuild,v 1.7 2003/03/11 21:11:46 seemant Exp $
 
 DESCRIPTION="An MTA designed specifically for maildirs"
 SRC_URI="mirror://sourceforge/courier/${P}.tar.bz2"
@@ -27,7 +27,7 @@ RDEPEND="virtual/glibc
 	postgres? ( >=dev-db/postgresql-7.1.3 )
 	tcltk? ( >=dev-tcltk/expect-5.33.0 )"
 DEPEND="${RDEPEND}
-	sys-devel/perl
+	dev-lang/perl
 	sys-apps/procps"
 
 inherit flag-o-matic

@@ -33,7 +33,7 @@ RDEPEND="virtual/glibc
 	tcltk? ( >=dev-tcltk/expect-5.33.0 )
 	spell? ( >=app-text/aspell-0.50.3 )"
 DEPEND="${RDEPEND}
-	sys-devel/perl
+	dev-lang/perl
 	sys-apps/procps"
 
 src_unpack() {

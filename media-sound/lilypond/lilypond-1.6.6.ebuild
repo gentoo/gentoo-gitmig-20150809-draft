@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/lilypond-1.6.6.ebuild,v 1.5 2003/03/09 19:50:01 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/lilypond-1.6.6.ebuild,v 1.6 2003/03/11 21:11:46 seemant Exp $
 
 IUSE="doc"
 
@@ -15,7 +15,7 @@ LICENSE="GPL-2"
 KEYWORDS="x86 alpha"
 
 DEPEND=">=dev-lang/python-2.2.1-r2
-	>=sys-devel/perl-5.6.1-r6
+	>=dev-lang/perl-5.6.1-r6
 	>=dev-util/guile-1.4-r3
 	>=sys-devel/bison-1.35
 	>=app-text/tetex-1.0.7-r12

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.3_beta.ebuild,v 1.1 2003/02/23 20:31:54 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.3_beta.ebuild,v 1.2 2003/03/11 21:11:46 seemant Exp $
 
 IUSE="java crypt ipv6 gtk2 ssl ldap gnome"
 # Internal USE flags that I do not really want to advertise ...
@@ -86,7 +86,7 @@ RDEPEND=">=x11-base/xfree-4.2.0-r11
 DEPEND="${RDEPEND}
 	virtual/x11
 	dev-util/pkgconfig
-	sys-devel/perl
+	dev-lang/perl
 	java? ( >=dev-java/java-config-0.2.0 )"
 
 

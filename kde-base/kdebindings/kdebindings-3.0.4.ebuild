@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings/kdebindings-3.0.4.ebuild,v 1.7 2003/02/13 12:26:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings/kdebindings-3.0.4.ebuild,v 1.8 2003/03/11 21:11:45 seemant Exp $
 # TODO: add gnustep bindings
 inherit kde-dist
 
@@ -10,7 +10,7 @@ KEYWORDS="x86 ppc alpha"
 
 newdepend ">=kde-base/kdebase-${PV}
 	=x11-libs/gtk+-1.2*
-	sys-devel/perl
+	dev-lang/perl
 	python? ( dev-lang/python )
 	java? (	virtual/jdk )
 	=x11-libs/gtk+-1.2*

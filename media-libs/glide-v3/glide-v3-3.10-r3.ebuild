@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/glide-v3/glide-v3-3.10-r3.ebuild,v 1.7 2003/02/13 12:44:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/glide-v3/glide-v3-3.10-r3.ebuild,v 1.8 2003/03/11 21:11:46 seemant Exp $
 
 # NOTE:  Do NOT build this with optimizations, as it will make this package
 #        unstable!!!!
@@ -21,7 +21,7 @@ DEPEND=">=sys-devel/automake-1.4
 	>=sys-devel/autoconf-2.13
 	>=sys-devel/libtool-1.3.3
 	>=sys-devel/m4-1.4
-	>=sys-devel/perl-5.005"
+	>=dev-lang/perl-5.005"
 
 PROVIDE="virtual/glide"
 

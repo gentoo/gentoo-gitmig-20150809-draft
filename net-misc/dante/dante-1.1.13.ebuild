@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dante/dante-1.1.13.ebuild,v 1.12 2003/03/04 19:39:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dante/dante-1.1.13.ebuild,v 1.13 2003/03/11 21:11:46 seemant Exp $
 
 inherit gcc
 
@@ -17,7 +17,7 @@ RDEPEND="virtual/glibc
 	sys-libs/pam
 	tcpd? ( sys-apps/tcp-wrappers )"
 DEPEND="${RDEPEND}
-	sys-devel/perl"
+	dev-lang/perl"
 
 src_compile() {
 	[ "`gcc-version`" == "3.2" ] && export CFLAGS=""
