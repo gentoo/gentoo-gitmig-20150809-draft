@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/debianutils/debianutils-1.16.3.ebuild,v 1.1 2002/09/25 12:16:21 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/debianutils/debianutils-1.16.3.ebuild,v 1.2 2002/09/25 22:22:42 azarah Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A selection of tools from Debian"
@@ -17,7 +17,11 @@ src_unpack() {
 	unpack ${A}
 	
 	cd ${S}
-	patch -p0 < ${FILESDIR}/${P}-Makefile-gentoo.diff
+	patch -p0 < ${FILESDIR}/${P}-Makefile-gentoo.diff || die
+
+	# Make installkernel and mkboot more Gentoo friendly
+	# <azarah@gentoo.org> (25 Sep 2002)
+	patch -p1 < ${FILESDIR}/${P}-gentoo.patch || die
 }
 
 src_compile() {

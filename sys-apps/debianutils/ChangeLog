@@ -1,11 +1,12 @@
 # ChangeLog for sys-apps/debianutils
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/debianutils/ChangeLog,v 1.4 2002/09/25 12:16:21 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/debianutils/ChangeLog,v 1.5 2002/09/25 22:22:42 azarah Exp $
 
 *debianutils-1.16.3 (25 Sep 2002)
 
   25 Sep 2002; Martin Schlemmer <azarah@gentoo.org> :
-  Version update.  Add some of missing util.
+  Version update.  Add some of missing util.  Add patch to make
+  installkernel and mkboot more Gentoo friendly.
 
 *debianutils-1.13.3-r3 (14 July 2002)
 
