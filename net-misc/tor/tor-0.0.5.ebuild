@@ -1,11 +1,10 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/tor-0.0.2_pre23.ebuild,v 1.1 2004/02/29 14:25:35 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/tor-0.0.5.ebuild,v 1.1 2004/03/31 00:52:51 latexer Exp $
 
-MY_P=${P/_pre/pre}
 DESCRIPTION="Anonymizing overlay network for TCP"
 HOMEPAGE="http://www.freehaven.net/tor/"
-SRC_URI="http://www.freehaven.net/tor/dist/${MY_P}.tar.gz"
+SRC_URI="http://www.freehaven.net/tor/dist/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -14,7 +13,6 @@ IUSE=""
 
 DEPEND="dev-libs/openssl"
 RDEPEND="net-misc/tsocks"
-S=${WORKDIR}/${MY_P}
 
 src_install() {
 	make DESTDIR=${D} install || die
