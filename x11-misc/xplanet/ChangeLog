@@ -1,8 +1,11 @@
 # ChangeLog for x11-misc/xplanet
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xplanet/ChangeLog,v 1.4 2002/08/23 15:42:17 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xplanet/ChangeLog,v 1.5 2003/01/20 14:41:18 weeve Exp $
 
 *xplanet-0.94-r1 (23 Aug 2002)
+
+  20 Jan 2003: Jason Wever <weeve@gentoo.org> xplanet-0.94-r1.ebuild:
+  Added ~sparc to keywords
 
   23 Aug 2002; Matthew Kennedy <mkennedy@gentoo.org> ChangeLog,
   xplanet-0.94-r1.ebuild, files/digest-xplanet-0.94-r1 :
