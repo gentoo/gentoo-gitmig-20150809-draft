@@ -1,5 +1,11 @@
 
 
+  12 Feb 2004; Brad Laue <brad@gentoo.org> mozilla-firefox-0.8.ebuild:
+  Move mozilla-firefox to stable on x86. This is the first step is moving its
+  predecessor, mozilla-firebird, out of the tree entirely. 
+  
+  Please test on as many arches as soon as possible!
+
 *mozilla-firefox-0.8 (10 Feb 2004)
 
   10 Feb 2004; Brad Laue <brad@gentoo.org> metadata.xml,
