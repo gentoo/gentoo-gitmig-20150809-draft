@@ -1,0 +1,20 @@
+--- Makefile.org.orig	Fri Jul 13 21:15:54 2001
++++ Makefile.org	Fri Jul 13 21:17:08 2001
+@@ -55,7 +55,7 @@
+ 
+ CC= gcc
+ #CFLAG= -DL_ENDIAN -DTERMIO -O3 -fomit-frame-pointer -m486 -Wall -Wuninitialized -DSHA1_ASM -DMD5_ASM -DRMD160_ASM
+-CFLAG= -DTERMIOS -DL_ENDIAN -fomit-frame-pointer -O3 -m486 -Wall -DSHA1_ASM -DMD5_ASM -DRMD160_ASM
++CFLAG=$(CFLAGS) -DTERMIOS -DL_ENDIAN -fomit-frame-pointer -Wall -DSHA1_ASM -DMD5_ASM -DRMD160_ASM
+ DEPFLAG= 
+ PEX_LIBS= 
+ EX_LIBS= 
+@@ -169,7 +169,7 @@
+ MAKEFILE= Makefile.ssl
+ MAKE=     make -f Makefile.ssl
+ 
+-MANDIR=$(OPENSSLDIR)/man
++MANDIR=$(OPENSSLDIR)/../share/man
+ MAN1=1
+ MAN3=3
+ SHELL=/bin/sh
