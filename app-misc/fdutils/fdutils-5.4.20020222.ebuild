@@ -1,14 +1,16 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/fdutils/fdutils-5.4.20020222.ebuild,v 1.8 2003/02/13 08:56:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/fdutils/fdutils-5.4.20020222.ebuild,v 1.9 2003/08/05 15:43:12 vapier Exp $
+
+inherit eutils
 
 DESCRIPTION="utilities for configuring and debugging the Linux floppy driver"
+HOMEPAGE="http://fdutils.linux.lu/"
 SRC_URI="http://fdutils.linux.lu/fdutils-5.4.tar.gz
 	 http://fdutils.linux.lu/fdutils-5.4-20020222.diff.gz"
-HOMEPAGE="http://fdutils.linux.lu/"
 
-SLOT="0"
 LICENSE="GPL-2"
+SLOT="0"
 KEYWORDS="x86"
 
 DEPEND=">=mtools-3
@@ -18,11 +20,11 @@ S=${WORKDIR}/${PN}-5.4
 
 src_unpack() {
 	unpack fdutils-5.4.tar.gz
-	gunzip -c ${DISTDIR}/${PN}-5.4-20020222.diff.gz | patch -p0
+	epatch ${DISTDIR}/${PN}-5.4-20020222.diff.gz
 }
 
 src_compile() {
-	econf --enable-fdmount-floppy-only
+	econf --enable-fdmount-floppy-only || die
 	make || die
 }
 

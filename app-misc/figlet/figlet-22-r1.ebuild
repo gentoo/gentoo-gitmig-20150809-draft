@@ -1,6 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/figlet/figlet-22-r1.ebuild,v 1.7 2003/07/05 01:15:04 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/figlet/figlet-22-r1.ebuild,v 1.8 2003/08/05 15:43:12 vapier Exp $
+
+inherit eutils
 
 MY_P=${P/-/}
 S=${WORKDIR}/${MY_P}
@@ -8,8 +10,8 @@ DESCRIPTION="program for making large letters out of ordinary text"
 HOMEPAGE="http://www.figlet.org/"
 SRC_URI="ftp://ftp.figlet.org/pub/figlet/program/unix/${MY_P}.tar.gz"
 
-SLOT="0"
 LICENSE="Artistic"
+SLOT="0"
 KEYWORDS="x86 ~ppc sparc ~alpha ~mips hppa ~arm"
 
 DEPEND="virtual/glibc
