@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/chktex
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/chktex/ChangeLog,v 1.7 2004/09/21 12:10:03 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/chktex/ChangeLog,v 1.8 2004/09/25 20:11:10 weeve Exp $
+
+  25 Sep 2004; Jason Wever <weeve@gentoo.org> chktex-1.6.2.ebuild:
+  Stable on sparc.
 
 *chktex-1.5-r3 (21 Sep 2004)
 
