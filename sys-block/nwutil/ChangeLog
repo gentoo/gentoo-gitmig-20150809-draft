@@ -1,6 +1,6 @@
-# ChangeLog for sys-apps/nwutil
+# ChangeLog for sys-block/nwutil
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/nwutil/ChangeLog,v 1.1 2005/03/06 00:50:07 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/nwutil/ChangeLog,v 1.2 2005/03/06 11:57:15 swegener Exp $
 
 *nwutil-1.4 (06 Mar 2005)
 
