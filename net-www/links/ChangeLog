@@ -1,7 +1,14 @@
 # ChangeLog for net-www/links
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/links/ChangeLog,v 1.4 2002/05/28 01:02:05 ashmodai Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/links/ChangeLog,v 1.5 2002/05/31 08:33:58 naz Exp $
 
+*links-2.0_pre4-r2 (29 May 2002)
+
+  29 May 2002: Michael M Nazaroff <naz@gentoo.org> links-2.0_pre4-r2.ebuild :
+
+  Applied patch that hopefully seems to fix the gpm-1.20.0 problem, and also
+  adds some other little features to links.
+  
 *links-2.0_pre4-r1 (27 May 2002)
 
   27 May 2002; Mike Jones <ashmodai@gentoo.org> links-2.0_pre4-r1.ebuild :
