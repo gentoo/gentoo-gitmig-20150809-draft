@@ -1,0 +1,20 @@
+#!/sbin/runscript
+
+depend() {
+	need portmap
+}
+
+
+start() {
+	ebegin "Starting fam"
+	#for some reason dont want to daemonize without the '&'
+	start-stop-daemon --start --quiet --exec /usr/bin/fam \
+		-- -T 0 -c /etc/fam.conf &
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping fam"
+	start-stop-daemon --stop --quiet --exec /usr/bin/fam
+	eend $?
+}
