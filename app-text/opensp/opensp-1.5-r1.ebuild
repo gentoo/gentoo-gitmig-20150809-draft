@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/opensp/opensp-1.5-r1.ebuild,v 1.1 2003/05/07 20:38:49 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/opensp/opensp-1.5-r1.ebuild,v 1.2 2003/06/02 11:06:28 liquidx Exp $
 
 MY_P=${P/opensp/OpenSP}
 S=${WORKDIR}/${MY_P}
@@ -18,6 +18,13 @@ PDEPEND=">=app-text/openjade-1.3.2"
 # Note: openjade is in PDEPEND because starting from openjade-1.3.2, opensp
 #       has been SPLIT from openjade into its own package. Hence if you
 #       install this, you need to upgrade to a new openjade as well.
+
+src_unpack() {
+	unpack ${A}
+	# from gentoo bug #21631 and 
+	# http://sourceforge.net/tracker/index.php?func=detail&aid=742214&group_id=2115&atid=302115
+	epatch ${FILESDIR}/${P}-gcc33.patch
+}
 
 src_compile() {
 	local myconf
