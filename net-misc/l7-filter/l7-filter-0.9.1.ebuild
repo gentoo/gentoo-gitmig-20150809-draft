@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-filter/l7-filter-0.9.1.ebuild,v 1.1 2004/08/17 09:33:07 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-filter/l7-filter-0.9.1.ebuild,v 1.2 2004/08/28 15:27:08 dholm Exp $
 
 inherit kmod eutils
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/l7-filter/${MY_P}.tar.gz"
 RESTRICT="nomirror"
 LICENSE="GPL-2"
 SLOT="${KV}"
-KEYWORDS="x86"
+KEYWORDS="x86 ~ppc"
 IUSE=""
 
 S=${WORKDIR}/${MY_P}
