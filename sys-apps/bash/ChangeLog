@@ -1,12 +1,13 @@
 # ChangeLog for sys-apps/bash
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/bash/ChangeLog,v 1.4 2002/07/24 02:52:26 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/bash/ChangeLog,v 1.5 2002/07/24 09:18:06 seemant Exp $
 
 *bash-2.05b (23 Jul 2002)
 
   23 Jul 2002; Seemant Kulleen <seemant@gentoo.org> bash-2.05b.ebuild :
 
-  Version bump.
+  Version bump.  Thanks to christian-neumair@web.de (Christian - Manny
+  Calavera - Neumair) in bug #5422
 
 *bash-2.05a-r1.ebuild (14 July 2002)
 
