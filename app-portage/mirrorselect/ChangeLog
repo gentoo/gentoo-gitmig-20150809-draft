@@ -1,6 +1,12 @@
 # ChangeLog for app-portage/mirrorselect
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/mirrorselect/ChangeLog,v 1.4 2003/08/21 23:59:43 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/mirrorselect/ChangeLog,v 1.5 2003/09/14 19:02:24 johnm Exp $
+
+*mirrorselect-0.82 (14 Sep 2003)
+
+  14 Sep 2003; John Mylchreest <johnm@gentoo.org>; mirrorselect-0.81.ebuild,
+  mirrorselect-0.82.ebuild:
+  Version bump. fixes #28158 and a few other minors
 
   21 Aug 2003; Jason Wever <weeve@gentoo.org> mirrorselect-0.81.ebuild:
   Marked stable for sparc.
