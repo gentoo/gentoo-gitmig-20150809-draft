@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/hddtemp
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/ChangeLog,v 1.18 2004/06/29 19:37:34 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/ChangeLog,v 1.19 2004/10/24 22:46:03 pylon Exp $
+
+  25 Oct 2004; Lars Weiler <pylon@gentoo.org> hddtemp-0.2.ebuild,
+  hddtemp-0.3_beta10.ebuild, hddtemp-0.3_beta11.ebuild,
+  hddtemp-0.3_beta8.ebuild:
+  Changed all appearances of http://coredump.free.fr to http://www.guzu.net
 
   29 Jun 2004; Aron Griffis <agriffis@gentoo.org> hddtemp-0.2.ebuild:
   add sed-4 dep
