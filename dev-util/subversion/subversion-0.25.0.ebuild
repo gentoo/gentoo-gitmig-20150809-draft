@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-0.25.0.ebuild,v 1.1 2003/07/16 19:06:41 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-0.25.0.ebuild,v 1.2 2003/07/18 19:03:59 pauldv Exp $
 
 inherit libtool
 
@@ -237,7 +237,7 @@ pkg_config() {
 	if [ ! -x /usr/bin/svnadmin ]; then
 		die "You seem to only have build the subversion client"
 	fi
-	einfo ">>> Initializing the database ..."
+	einfo ">>> Initializing the database in ${SVN_REPOS_LOC}..."
 	if [ -f ${SVN_REPOS_LOC}/repos ] ; then
         echo "A subversion repository already exists and I will not overwrite it."
 		echo "Delete ${SVN_REPOS_LOC}/repos first if you're sure you want to have a clean version."
