@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jmx/jmx-1.2.1.ebuild,v 1.1 2004/02/25 06:25:45 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jmx/jmx-1.2.1.ebuild,v 1.2 2004/03/23 03:20:16 zx Exp $
 
 inherit java-pkg
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://java.sun.com/products/JavaManagement/index.jsp"
 SRC_URI="${PN}-${PV//./_}-scsl.zip"
 LICENSE="sun-csl"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE="jikes doc"
 DEPEND=">=virtual/jdk-1.4"
 RDEPEND=">=virtual/jre-1.4"
@@ -35,7 +35,7 @@ src_compile() {
 	local antflags="jar"
 	use jikes && antflags="${antflags} -Dbuild.compiler=jikes"
 	use doc && antflags="${antflags} examples"
-	ant ${antflags}
+	ant ${antflags} || die "compile problem"
 }
 
 src_install() {

@@ -1,16 +1,15 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sablecc/sablecc-2.18.2.ebuild,v 1.1 2004/02/18 03:31:39 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sablecc/sablecc-2.18.2.ebuild,v 1.2 2004/03/23 03:10:26 zx Exp $
 
 inherit java-pkg
 
 DESCRIPTION="Java based compiler / parser generator"
 HOMEPAGE="http://www.sablecc.org/"
 SRC_URI="mirror://sourceforge/sablecc/${P}.tar.gz"
-
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE="jikes"
 
 DEPEND=">=virtual/jdk-1.4
@@ -26,7 +25,7 @@ src_compile () {
 	else
 		antflags="${antflags} -Dbuild.compiler=modern"
 	fi
-	ant ${antflags}
+	ant ${antflags} || die "compile error"
 }
 
 src_install () {

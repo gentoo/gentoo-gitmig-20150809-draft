@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/joscar/joscar-0.9.3.ebuild,v 1.1 2004/02/22 01:51:47 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/joscar/joscar-0.9.3.ebuild,v 1.2 2004/03/23 03:15:18 zx Exp $
 
 inherit java-pkg
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://joust.kano.net/joscar"
 
 SLOT="0"
 LICENSE="BSD"
-KEYWORDS="~x86 ~sparc"
+KEYWORDS="x86 ~sparc"
 IUSE="jikes doc"
 
 DEPEND=">=virtual/jdk-1.4
@@ -22,7 +22,7 @@ src_compile() {
 	local antflags="jar"
 	use jikes && antflags="${antflags} -Dbuild.compiler=jikes"
 	use doc && antflags="${antflags} javadoc"
-	ant ${antflags}
+	ant ${antflags} || die "compilation problem"
 }
 
 src_install() {

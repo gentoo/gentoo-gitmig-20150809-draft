@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/joscar
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/joscar/ChangeLog,v 1.1 2004/02/22 01:51:47 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/joscar/ChangeLog,v 1.2 2004/03/23 03:15:18 zx Exp $
+
+  22 Mar 2004; Chris Aniszczyk <zx@gentoo.org> joscar-0.9.3.ebuild:
+  Marking stable on x86. Fixes according to #45398
 
 *joscar-0.9.3 (24 Feb 2004)
 
