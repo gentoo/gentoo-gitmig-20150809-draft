@@ -1,11 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.80.ebuild,v 1.15 2004/08/02 17:52:22 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.80.ebuild,v 1.16 2004/08/26 03:42:28 rizzo Exp $
 
-inherit flag-o-matic eutils gcc
-use debug && inherit debug
+inherit flag-o-matic eutils gcc debug
 
-IUSE="nls perl spell nas debug crypt cjk gnutls silc evo krb4"
+IUSE="nls perl spell nas crypt cjk gnutls silc evo"
 
 DESCRIPTION="GTK Instant Messenger client"
 HOMEPAGE="http://gaim.sourceforge.net/"
@@ -26,7 +25,6 @@ DEPEND=">=x11-libs/gtk+-2.0
 	spell? ( >=app-text/gtkspell-2.0.2 )
 	dev-libs/nss
 	gnutls? ( net-libs/gnutls )
-	krb4? ( app-crypt/mit-krb5 )
 	silc? ( >=net-im/silc-toolkit-0.9.12-r2 )
 	evo? ( mail-client/evolution )"
 
@@ -87,7 +85,6 @@ src_compile() {
 	use nls  || myconf="${myconf} --disable-nls"
 	use nas && myconf="${myconf} --enable-nas" || myconf="${myconf} --disable-nas"
 	use evo || myconf="${myconf} --disable-gevolution"
-	use krb4 && myconf="${myconf} --with-krb4=/usr"
 
 	if use gnutls ; then
 		myconf="${myconf} --with-gnutls-includes=/usr/include/gnutls"
