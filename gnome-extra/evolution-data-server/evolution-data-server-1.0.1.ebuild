@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-1.0.1.ebuild,v 1.2 2004/10/03 22:48:22 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-1.0.1.ebuild,v 1.3 2004/10/19 18:41:46 vapier Exp $
 
 inherit gnome2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.ximian.com/"
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~amd64 ~sparc ~mips ~hppa"
+KEYWORDS="~amd64 ~hppa ~ia64 ~mips ~ppc ~sparc ~x86"
 IUSE="doc ldap"
 
 RDEPEND=">=dev-libs/glib-2
