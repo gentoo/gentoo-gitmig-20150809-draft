@@ -1,3 +1,6 @@
-MD5 0ab6ad1fa27169d6290ff23ee29b06de ChangeLog 910
 MD5 3b275adef4966545ed571758212af355 x11fonts-jmk-3.0.ebuild 688
+MD5 46663aa7236a0e481523489828441ace ChangeLog 1082
+MD5 4f86345d05d5f8eaada17e009539ef63 x11fonts-jmk-3.0-r1.ebuild 717
+MD5 295674d4bed87f5a7c2796e032ed561e metadata.xml 158
 MD5 55def5813a5ef8bd6ce0a466a5b12b67 files/digest-x11fonts-jmk-3.0 69
+MD5 55def5813a5ef8bd6ce0a466a5b12b67 files/digest-x11fonts-jmk-3.0-r1 69

@@ -1,6 +1,11 @@
 # ChangeLog for media-fonts/x11fonts-jmk
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/x11fonts-jmk/ChangeLog,v 1.1 2003/06/02 13:48:12 seemant Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/x11fonts-jmk/ChangeLog,v 1.2 2004/05/15 14:10:46 usata Exp $
+
+*x11fonts-jmk-3.0-r1 (15 May 2004)
+
+  15 May 2004; Mamoru KOMACHI <usata@gentoo.org> x11fonts-jmk-3.0-r1.ebuild:
+  Changed font path to /usr/share/fonts, closing bug #49706
 
 *x11fonts-jmk-3.0 (02 Jun 2003)
 
