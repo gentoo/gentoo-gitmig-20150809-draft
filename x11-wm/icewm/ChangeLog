@@ -1,6 +1,15 @@
 # ChangeLog for x11-wm/icewm
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/ChangeLog,v 1.4 2002/02/20 04:36:33 chouser Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/ChangeLog,v 1.5 2002/05/26 21:17:43 mkennedy Exp $
+
+*icewm-1.0.9.2-r4 (26 May 2002)
+
+  26 May 2002; Matthew Kennedy <mkennedy@gentoo.org> ChangeLog,
+  icewm-1.0.9.2-r4.ebuild, files/digest-icewm-1.0.9.2-r4,
+  files/icewm-1.0.9.2-gcc31-gentoo.patch :
+
+  Code patch to support gcc3.1 (thanks to yasea@gmx.net (Thomas
+  Weidner) and http://bugs.gentoo.org/show_bug.cgi?id=2969).
 
 *icewm-1.0.9.2-r3 (19 Feb 2002)
 
