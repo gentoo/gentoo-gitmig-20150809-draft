@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.2a-r2.ebuild,v 1.11 2004/06/10 19:48:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.2a-r2.ebuild,v 1.12 2004/06/15 12:46:30 satya Exp $
 
 inherit eutils
 
@@ -9,9 +9,9 @@ HOMEPAGE="http://www.samba.org/
 	http://www.openantivirus.org/projects.php"
 
 SMBLDAP_TOOLS_VER=0.8.4
-VSCAN_VER=0.3.4
-VSCAN_MODS=${VSCAN_MODS:=fprot mks openantivirus sophos trend icap clamav} #kapersky
+VSCAN_VER=0.3.5
 # To build the "kapersky" plugin, the kapersky lib must be installed.
+VSCAN_MODS="oav sophos fprotd fsav trend icap mksd kavp clamav nai"
 
 _CVS="-${PV/_/}"
 S=${WORKDIR}/${PN}${_CVS}
@@ -183,13 +183,8 @@ src_compile() {
 		cd ${S}/examples.bin/VFS/${PN}-vscan-${VSCAN_VER}
 		./configure
 		assert "bad ${PN}-vscan-${VSCAN_VER} ./configure"
-
-		for i in ${VSCAN_MODS}
-		do
-			cd ${S}/examples.bin/VFS/${PN}-vscan-${VSCAN_VER}/$i
-			make USE_INCLMKSDLIB=1 #needed for the mks build
-			assert "problem building $i vscan module"
-		done
+		# as per bug #52009
+		make ${VSCAN_MODS}
 	fi
 
 	# Build mkntpasswd from the smbldap-tools.
@@ -283,7 +278,7 @@ src_install() {
 	exeinto /usr/lib/samba/vfs
 	if use oav
 	then
-		doexe examples.bin/VFS/${PN}-vscan-${VSCAN_VER}/*/vscan-*.so
+		doexe examples.bin/VFS/${PN}-vscan-${VSCAN_VER}/vscan-*.so
 	fi
 	for i in audit cap default_quota extd_audit fake_perms \
 		netatalk readonly recycle
@@ -392,9 +387,12 @@ src_install() {
 	newins ${FILESDIR}/samba.pam samba
 	doins ${FILESDIR}/system-auth-winbind
 
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/samba-init samba
-	newexe ${FILESDIR}/winbind-init winbind
+	#2004-06-15: satya@gentoo.org: changed invocation method
+	#exeinto /etc/init.d
+	#newexe ${FILESDIR}/samba-init samba
+	#newexe ${FILESDIR}/winbind-init winbind
+	exeinto /etc/init.d; newexe ${FILESDIR}/samba-init samba
+	insinto /etc/conf.d; newins ${FILESDIR}/samba-conf samba
 
 	insinto /etc/xinetd.d
 	newins ${FILESDIR}/swat.xinetd swat

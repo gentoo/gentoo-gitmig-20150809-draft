@@ -1,6 +1,10 @@
 # ChangeLog for net-fs/samba
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.80 2004/06/15 02:31:11 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.81 2004/06/15 12:46:30 satya Exp $
+
+  15 Jun 2004; Christian Andreetta <satya@gentoo.org> samba-3.0.2a-r2.ebuild:
+  minor initscript fix (as per bug #53962), oav support fix (#52009, Alessandro
+  Pisani)
 
   14 Jun 2004; Aron Griffis <agriffis@gentoo.org> samba-3.0.4-r1.ebuild:
   Fix use invocation
