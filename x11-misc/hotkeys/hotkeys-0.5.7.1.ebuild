@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/hotkeys/hotkeys-0.5.7.1.ebuild,v 1.2 2003/02/13 17:14:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/hotkeys/hotkeys-0.5.7.1.ebuild,v 1.3 2003/03/08 23:12:46 aliz Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Make use of extra buttons on newer keyboards."
@@ -9,7 +9,7 @@ HOMEPAGE="http://ypwong.org/hotkeys/"
 IUSE=""
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~sparc"
+KEYWORDS="x86 ~sparc"
 
 DEPEND="virtual/x11
 	>=dev-libs/libxml2-2.2.8
