@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.607 2004/09/08 14:19:26 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.608 2004/09/09 06:27:02 cardoe Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -172,6 +172,7 @@ dev-lang/tk:threads - Enable threads as some packages require it.
 dev-libs/DirectFB:fusion - add Multi Application support (fusion kernel device)
 dev-libs/boehm-gc:c++ - Adds support for C++
 dev-libs/cyrus-sasl:pam-mysql - Switch to deprecated pam_mysql authentication method
+dev-libs/expat:makecheck - Includes depends needed for FEATURES=maketest to be successful.
 dev-libs/gmetadom:ocaml - adds support/bindings for the Ocaml
 dev-libs/libcdio:cddb - use libcddb for CD database lookups
 dev-libs/libmix:no-net2 - disable libpcap and libnet support
