@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/ssldump
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ssldump/ChangeLog,v 1.9 2005/01/29 05:12:51 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ssldump/ChangeLog,v 1.10 2005/02/21 18:19:13 luckyduck Exp $
+
+  21 Feb 2005; Jan Brinkmann <luckyduck@gentoo.org> ssldump-0.9.ebuild:
+  stable on amd64. fixes #82740
 
   29 Jan 2005; Daniel Black <dragonheart@gentoo.org> ssldump-0.9.ebuild:
   changed net-libs/libpcap depend to virtual/libcap
