@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-print/gnome-print-0.35-r3.ebuild,v 1.3 2002/04/03 10:20:54 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-print/gnome-print-0.35-r3.ebuild,v 1.4 2002/04/03 11:14:06 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GNOME printing library"
@@ -17,7 +17,7 @@ DEPEND="${RDEPEND}
 	sys-devel/perl
    	>=app-text/ghostscript-6.50-r2
 	>=dev-libs/libxml-1.8.17
-	tex? ( app-text/tetex )
+	tex? ( app-text/tetex )"
 
 src_unpack() {
 	unpack ${A}
@@ -57,7 +57,7 @@ src_install() {
 
 pkg_postinst() {
 	ldconfig >/dev/null 2>/dev/null
-	echo ">>> Installing fonts..."
+	einfo ">>> Installing fonts..."
 	perl /usr/share/fonts/run-gnome-font-install \
 		/usr/bin/gnome-font-install \
 		/usr/share/fonts /usr/share/fonts /etc >/dev/null 2>/dev/null
