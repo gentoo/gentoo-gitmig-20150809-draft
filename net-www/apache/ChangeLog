@@ -1,6 +1,9 @@
 # ChangeLog for net-www/apache
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.60 2003/07/12 15:14:22 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.61 2003/07/14 05:17:08 woodchip Exp $
+
+  14 Jul 2003; Donny Davies <woodchip@gentoo.org> apache-2.0.47.ebuild:
+  Re-add dev-util/yacc; modules/ssl calls yacc on modules/ssl/ssl_expr_parse.y
 
   12 Jul 2003; Donny Davies <woodchip@gentoo.org> apache-2.0.47.ebuild:
   Marked x86 stable.
