@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/sun-jdk
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# /space/gentoo/cvsroot/gentoo-x86/dev-java/sun-jdk/ChangeLog,v 1.10 2002/06/16 00:24:09 rphillips Exp
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/ChangeLog,v 1.12 2002/06/25 18:34:37 mkennedy Exp $
+
+*sun-jdk-1.4.0-r5 (25 Jun 2002)
+
+  25 Jun 2002; Matthew Kennedy <mkennedy@gentoo.org>
+  sun-jdk-1.4.0-r5.ebuild : Fixed documentation/manual symlink
+  instuctions bug. Bug #3962
 
 *sun-jdk-1.4.0-r4 (19 Jun 2002)
 
