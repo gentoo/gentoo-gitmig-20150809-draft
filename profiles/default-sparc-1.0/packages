@@ -43,7 +43,7 @@
 >=x11-base/xfree-4.1.0-r12
 *app-shells/sash
 *sys-devel/perl
-*app-editors/nano
+*virtual/editor
 *net-ftp/ftp
 *net-misc/dhcpcd
 *net-misc/rsync

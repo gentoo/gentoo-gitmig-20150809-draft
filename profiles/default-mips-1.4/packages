@@ -42,7 +42,7 @@
 # sash - static shell for system recovery
 *app-shells/sash
 *sys-devel/perl
-*app-editors/nano
+*virtual/editor
 #no real cost for nano, since we already have ncurses
 *net-ftp/ftp
 *net-misc/dhcpcd

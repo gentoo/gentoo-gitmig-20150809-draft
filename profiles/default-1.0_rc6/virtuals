@@ -25,9 +25,9 @@ virtual/cron            sys-apps/dcron
 sys-apps/reiserfs-utils sys-apps/reiserfsprogs
 virtual/sylpheed        net-mail/sylpheed
 virtual/php             dev-php/mod_php
-virtual/xforms          x11-libs/xforms-x86
 virtual/textbrowser		net-www/links
 virtual/mda		net-mail/procmail
 virtual/krb5			app-crypt/heimdal
 virtual/motif           x11-libs/openmotif
 virtual/bootloader		sys-apps/grub
+virtual/editor			app-editors/nano

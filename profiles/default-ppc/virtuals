@@ -22,9 +22,9 @@ virtual/emacs        app-editors/emacs
 sys-apps/reiserfs-utils sys-apps/reiserfsprogs
 virtual/sylpheed    net-mail/sylpheed
 virtual/php         dev-php/mod_php
-virtual/xforms            x11-libs/xforms-ppc
 virtual/textbrowser		net-www/links
 virtual/mda		net-mail/procmail
 virtual/krb5			app-crypt/heimdal
 virtual/motif           x11-libs/openmotif
 virtual/bootloader		sys-apps/yaboot
+virtual/editor			app-editors/nano

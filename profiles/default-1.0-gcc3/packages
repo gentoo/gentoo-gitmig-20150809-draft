@@ -48,7 +48,7 @@
 
 *<sys-devel/perl-5.8.0
 *dev-perl/ExtUtils-MakeMaker
-*app-editors/nano
+*virtual/editor
 #no real cost for nano, since we already have ncurses
 *net-ftp/ftp
 *net-misc/dhcpcd

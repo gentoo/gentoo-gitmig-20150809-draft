@@ -9,7 +9,7 @@
 *<sys-apps/baselayout-1.6
 *<sys-apps/sysklogd-1.4-r6
 
-*app-editors/nano
+*virtual/editor
 
 #the above is needed for our new env-update
 *net-ftp/ftp

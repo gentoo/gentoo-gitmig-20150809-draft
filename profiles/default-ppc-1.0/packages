@@ -77,7 +77,7 @@ sys-kernel/ppc-sources
 sys-apps/sysklogd
 *>=dev-lang/python-2.2-r4
 >=x11-base/xfree-4.1.0-r2
-*app-editors/nano
+*virtual/editor
 #*app-editors/vim # Vim emerges xfree ... this sucks
 *sys-apps/hfsutils
 *virtual/bootloader

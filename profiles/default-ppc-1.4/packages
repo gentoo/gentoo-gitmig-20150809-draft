@@ -102,8 +102,7 @@
 sys-kernel/ppc-sources
 >=sys-apps/sysklogd-1.4.1
 *>=dev-lang/python-2.2-r4
-*app-editors/nano
-#*app-editors/vim # Vim emerges xfree ... this sucks
+*virtual/editor
 *sys-apps/hfsutils
 *virtual/bootloader
 *sys-apps/mac-fdisk

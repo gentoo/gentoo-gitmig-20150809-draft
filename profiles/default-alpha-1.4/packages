@@ -42,7 +42,7 @@
 *dev-libs/libelf
 *sys-devel/perl
 *dev-perl/ExtUtils-MakeMaker
-*app-editors/nano
+*virtual/editor
 #no real cost for nano, since we already have ncurses
 *net-ftp/ftp
 *net-misc/dhcpcd

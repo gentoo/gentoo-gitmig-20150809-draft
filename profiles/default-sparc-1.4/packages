@@ -54,7 +54,7 @@
 >=x11-base/xfree-4.2.1
 *app-shells/sash
 *sys-devel/perl
-*app-editors/nano
+*virtual/editor
 *net-ftp/ftp
 *net-misc/dhcpcd
 *net-misc/rsync

@@ -16,8 +16,7 @@
 
 *<sys-devel/perl-5.8.0
 *dev-perl/ExtUtils-MakeMaker
-*app-editors/nano
-#no real cost for nano, since we already have ncurses
+*virtual/editor
 *net-ftp/ftp
 *net-misc/dhcpcd
 *net-misc/netkit-telnetd
@@ -137,7 +136,7 @@
 <=sys-apps/tcp-wrappers-7.6-r3
 
 # These lines added by ../default-sparc-1.0/scripts/generate-packages.sh
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-sparc64-1.0/packages,v 1.28 2003/01/06 09:52:30 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-sparc64-1.0/packages,v 1.29 2003/01/06 11:03:51 seemant Exp $
 #
 # Please edit the file packages.sparc, it will be included in
 # packages the next time you run generate-packages.sh
