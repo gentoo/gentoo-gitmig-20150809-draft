@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/shadow
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.88 2004/11/12 00:34:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.89 2004/11/24 04:34:46 vapier Exp $
+
+  23 Nov 2004; Mike Frysinger <vapier@gentoo.org> shadow-4.0.5-r2.ebuild,
+  shadow-4.0.5-r3.ebuild, shadow-4.0.6.ebuild:
+  Update DEPENDs so that we either require pam-login or block it depending on
+  USE=pam #67815.
 
 *shadow-4.0.6 (11 Nov 2004)
 

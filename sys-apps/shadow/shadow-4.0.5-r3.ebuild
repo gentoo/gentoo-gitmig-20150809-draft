@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.5-r3.ebuild,v 1.2 2004/11/12 21:02:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.5-r3.ebuild,v 1.3 2004/11/24 04:34:46 vapier Exp $
 
 inherit eutils libtool gnuconfig flag-o-matic
 
@@ -17,15 +17,13 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86
 IUSE="pam selinux nls skey"
 
 RDEPEND=">=sys-libs/cracklib-2.7-r3
-	pam? ( >=sys-libs/pam-0.75-r4 )
-	!pam? ( !virtual/login )
+	pam? ( >=sys-libs/pam-0.75-r4 sys-apps/pam-login )
+	!pam? ( sys-apps/pam-login )
 	skey? ( app-admin/skey )
 	selinux? ( sys-libs/libselinux )"
 DEPEND="${DEPEND}
 	>=sys-apps/portage-2.0.51-r2
 	nls? ( sys-devel/gettext )"
-#this requires a newer portage (>2.0.51-r2)
-#PROVIDE="!pam? ( virtual/login )"
 
 pkg_preinst() {
 	rm -f ${ROOT}/etc/pam.d/system-auth.new
