@@ -1,8 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/netcdf/netcdf-3.5.0-r2.ebuild,v 1.1 2002/11/20 07:50:45 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/netcdf/netcdf-3.5.0-r2.ebuild,v 1.2 2002/12/18 14:29:29 vapier Exp $
 
-S=${WORKDIR}/${P}/src
 DESCRIPTION="Interface for array oriented data access"
 SRC_URI="ftp://ftp.unidata.ucar.edu/pub/netcdf/${P}.tar.Z"
 HOMEPAGE="http://www.unidaa.ucar.edu/packages/netcdf/"
@@ -10,6 +9,8 @@ HOMEPAGE="http://www.unidaa.ucar.edu/packages/netcdf/"
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="x86"
+
+S=${WORKDIR}/${P}/src
 
 src_unpack() {
 	unpack ${A}
@@ -25,17 +26,14 @@ src_unpack() {
 
 src_compile() {
 	export CPPFLAGS=-Df2cFortran
-	econf || die
+	econf
 	make || die
 	make test || die
 }
 
 src_install() {
 	dodir /usr/{lib,share}
-
-	einstall \
-		MANDIR=${D}/usr/share/man || die
-
+	einstall MANDIR=${D}/usr/share/man
 	dodoc COMPATIBILITY COPYRIGHT MANIFEST README RELEASE_NOTES VERSION
 	dohtml -r .
 }
