@@ -3,6 +3,7 @@ MD5 4840deac2eb017351de9aa225c2d1763 libdvdcss-1.1.1-r2.ebuild 1562
 MD5 99642e6f1c21ed15f44e45d7ece6e713 libdvdcss-1.2.5.ebuild 1592
 MD5 5db7ae563ca7db6443e1472aa37916e4 libdvdcss-1.2.6.ebuild 1609
 MD5 6aa252b78f1a9e279f22a3f92096d14e libdvdcss-1.2.3.ebuild 1570
+MD5 9ef4af14dad87b03fde8e43f19e08d26 metadata.xml 225
 MD5 2fb3d0d14d666d356c8679ca83eaa297 libdvdcss-1.2.8.ebuild 1556
 MD5 bdfea8c75d248d714004f44c70a142c2 ChangeLog 3175
 MD5 b8d04090ca4f6e07798a3c10d8080989 files/digest-libdvdcss-1.2.3 67
