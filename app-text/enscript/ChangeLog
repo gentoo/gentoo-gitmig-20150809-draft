@@ -1,6 +1,9 @@
 # ChangeLog for app-text/enscript
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/enscript/ChangeLog,v 1.24 2005/01/27 18:57:17 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/enscript/ChangeLog,v 1.25 2005/01/28 02:07:36 weeve Exp $
+
+  27 Jan 2005; Jason Wever <weeve@gentoo.org> enscript-1.6.3-r3.ebuild:
+  Stable on sparc wrt security bug #77408.
 
   27 Jan 2005; Markus Rothe <corsair@gentoo.org> enscript-1.6.3-r3.ebuild:
   Stable on ppc64; bug #77408
