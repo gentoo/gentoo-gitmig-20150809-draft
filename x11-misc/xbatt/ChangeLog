@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xbatt
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xbatt/ChangeLog,v 1.2 2003/11/20 03:00:12 vapier Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xbatt/ChangeLog,v 1.3 2004/04/11 17:29:27 pyrania Exp $
+
+  11 Apr 2004; Markus Nigbur <pyrania@gentoo.org> xbatt-1.2.1.ebuild:
+  Ebuild fixups.
 
 *xbatt-1.2.1 (18 Nov 2003)
 

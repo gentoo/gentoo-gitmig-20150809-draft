@@ -1,10 +1,9 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xalf/xalf-0.12-r1.ebuild,v 1.12 2003/02/13 17:19:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xalf/xalf-0.12-r1.ebuild,v 1.13 2004/04/11 17:27:40 pyrania Exp $
 
 IUSE="gnome"
 
-S=${WORKDIR}/${P}
 DESCRIPTION="X11 Application Launch Feedback"
 SRC_URI="http://www.lysator.liu.se/~astrand/projects/xalf/${P}.tgz"
 HOMEPAGE="http://www.lysator.liu.se/~astrand/projects/xalf/"
