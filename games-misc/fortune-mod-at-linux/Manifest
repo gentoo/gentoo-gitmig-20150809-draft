@@ -1,4 +1,14 @@
-MD5 c7335c2a02046ce232b937d062600ccd ChangeLog 695
-MD5 8254674104477f1700b67496d32b254f fortune-mod-at-linux-20030120.ebuild 620
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 0586f0b3a2ece51590ef7de859197f87 fortune-mod-at-linux-20030120.ebuild 641
+MD5 b67a9d4cecb7c4d3639327140c9fff6b ChangeLog 829
 MD5 959fc7abb397bb88b9eeb99c8553e5ba metadata.xml 257
 MD5 d72ede7a09c13925f4735d8d9bdd2e6d files/digest-fortune-mod-at-linux-20030120 80
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBpP4II1lqEGTUzyQRAlN5AKCx+l+CW51LqKCJ5j9z2CgDKSMSqgCgvo9O
+n4c4bu0cEMQ1wIqTdLGwSVo=
+=MzYU
+-----END PGP SIGNATURE-----

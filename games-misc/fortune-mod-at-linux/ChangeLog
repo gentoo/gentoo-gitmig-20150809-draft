@@ -1,6 +1,10 @@
 # ChangeLog for games-misc/fortune-mod-at-linux
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-at-linux/ChangeLog,v 1.4 2004/10/15 23:14:29 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-at-linux/ChangeLog,v 1.5 2004/11/24 21:32:50 swegener Exp $
+
+  24 Nov 2004; Sven Wegener <swegener@gentoo.org>
+  fortune-mod-at-linux-20030120.ebuild:
+  Fixed SRC_URI to match real file name.
 
   16 Oct 2004; Guy Martin <gmsoft@gentoo.org>
   fortune-mod-at-linux-20030120.ebuild:
