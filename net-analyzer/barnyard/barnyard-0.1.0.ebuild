@@ -1,10 +1,9 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/barnyard/barnyard-0.1.0.ebuild,v 1.3 2004/03/15 22:47:22 mboman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/barnyard/barnyard-0.1.0.ebuild,v 1.4 2004/03/21 12:05:57 mboman Exp $
 
 IUSE="mysql"
 
-S=${WORKDIR}/${P}
 DESCRIPTION="Fast output system for Snort"
 SRC_URI="http://www.snort.org/dl/barnyard/barnyard-${PV}.tar.gz"
 HOMEPAGE="http://www.snort.org"

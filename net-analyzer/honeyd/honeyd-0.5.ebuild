@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/honeyd/honeyd-0.5.ebuild,v 1.3 2004/03/13 11:25:54 mboman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/honeyd/honeyd-0.5.ebuild,v 1.4 2004/03/21 12:09:10 mboman Exp $
 
 inherit eutils
 
@@ -18,8 +18,6 @@ IUSE=""
 DEPEND=">=libdnet-1.4
 	>=libevent-0.6
 	>=libpcap-0.7.1"
-
-S="${WORKDIR}/${P}"
 
 src_unpack() {
 	unpack ${P}.tar.gz
