@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/cnet
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cnet/ChangeLog,v 1.8 2004/11/21 11:50:22 eldad Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cnet/ChangeLog,v 1.9 2005/01/31 13:55:30 ka0ttic Exp $
+
+  31 Jan 2005; Aaron Walker <ka0ttic@gentoo.org> cnet-2.0.9.ebuild:
+  Marked stable on x86.
 
 *cnet-2.0.9 (21 Nov 2004)
 

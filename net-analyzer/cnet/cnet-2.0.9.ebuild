@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cnet/cnet-2.0.9.ebuild,v 1.1 2004/11/21 11:50:22 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cnet/cnet-2.0.9.ebuild,v 1.2 2005/01/31 13:55:30 ka0ttic Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.csse.uwa.edu.au/cnet"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE=""
 
 # cnet will NOT work against elfutils (but it will compile!) Bug #67375. (21 Nov 2004 eldad)
