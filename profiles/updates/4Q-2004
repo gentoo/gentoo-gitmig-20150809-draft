@@ -155,3 +155,4 @@ move app-sci/gnucap sci-electronics/gnucap
 move app-sci/gtkwave sci-electronics/gtkwave
 move app-sci/gwave sci-electronics/gwave
 move app-sci/klogic sci-electronics/klogic
+move app-sci/iverilog sci-electronics/iverilog
