@@ -1,6 +1,16 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.28 2003/07/30 03:08:50 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.29 2003/08/01 03:23:26 agriffis Exp $
+
+*ruby-1.8.0_pre2-r3 (31 Jul 2003)
+
+  31 Jul 2003; Aron Griffis <agriffis@gentoo.org> ruby-1.6.8-r1.ebuild,
+  ruby-1.6.8.ebuild, ruby-1.8.0_pre2-r1.ebuild, ruby-1.8.0_pre2-r2.ebuild,
+  ruby-1.8.0_pre2-r3.ebuild, ruby-1.8.0_pre2.ebuild, ruby-1.8.0_pre3.ebuild,
+  ruby-1.8.0_pre4.ebuild, ruby-1.8.0_pre5.ebuild, ruby-1.8.0_pre6.ebuild:
+  Version bump and switch to ruby mirrors.  This is due to Matz's comment on
+  ruby-talk that his company's server was becoming overloaded with the number
+  of downloads.
 
   29 Jul 2003; Aron Griffis <agriffis@gentoo.org> ruby-1.8.0_pre5.ebuild:
   Add a warning about possibly needing to remerge vim
