@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/newt
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/newt/ChangeLog,v 1.16 2004/12/27 16:30:41 corsair Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/newt/ChangeLog,v 1.17 2005/02/06 17:58:38 corsair Exp $
+
+  06 Feb 2005; Markus Rothe <corsair@gentoo.org> newt-0.50.35-r4.ebuild:
+  Stable on ppc64
 
   27 Dec 2004; Markus Rothe <corsair@gentoo.org> newt-0.50.35-r4.ebuild:
   Added ~ppc64 to KEYWORDS

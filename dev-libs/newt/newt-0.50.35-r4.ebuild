@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/newt/newt-0.50.35-r4.ebuild,v 1.3 2004/12/27 16:30:41 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/newt/newt-0.50.35-r4.ebuild,v 1.4 2005/02/06 17:58:38 corsair Exp $
 
 inherit python toolchain-funcs
 
@@ -9,7 +9,7 @@ SRC_URI="http://koto.mynetix.de/gentoo/${P}.tar.gz"
 HOMEPAGE="http://www.redhat.com"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc ~hppa ~amd64 ~alpha ~ppc64"
+KEYWORDS="~x86 ~ppc ~sparc ~hppa ~amd64 ~alpha ppc64"
 IUSE="uclibc"
 DEPEND=">=sys-libs/slang-1.4
 	>=dev-libs/popt-1.6
