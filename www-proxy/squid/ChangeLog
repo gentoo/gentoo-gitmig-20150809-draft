@@ -1,6 +1,12 @@
 # ChangeLog for www-proxy/squid
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-proxy/squid/ChangeLog,v 1.26 2005/01/21 11:42:43 cyfred Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-proxy/squid/ChangeLog,v 1.27 2005/01/27 02:20:45 cyfred Exp $
+
+*squid-2.5.7-r4 (27 Jan 2005)
+
+  27 Jan 2005; Andrew Bevitt <cyfred@gentoo.org> -squid-2.5.7-r3.ebuild,
+  +squid-2.5.7-r4.ebuild:
+  Security bump bug #79495
 
 *squid-2.5.7-r3 (21 Jan 2005)
 
