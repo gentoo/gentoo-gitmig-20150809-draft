@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-4.3-r4.ebuild,v 1.22 2004/08/24 04:36:42 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-4.3-r4.ebuild,v 1.23 2004/09/08 15:17:46 vapier Exp $
 
-inherit eutils
+inherit eutils gnuconfig
 
 # Official patches
 PLEVEL="x001 x002"
@@ -17,13 +17,12 @@ SLOT="0"
 KEYWORDS="x86 ppc sparc mips alpha hppa amd64 ia64"
 IUSE=""
 
-# We must be sertain that we have a bash that is linked
+# We must be certain that we have a bash that is linked
 # to its internal readline, else we may get problems.
 DEPEND=">=app-shells/bash-2.05b-r2
 	>=sys-libs/ncurses-5.2-r2"
 
 src_unpack() {
-
 	unpack ${P}.tar.gz
 
 	cd ${S}
@@ -35,6 +34,8 @@ src_unpack() {
 	# Fix segfaults in Python when using latin-1 chars in interactive mode
 	# (bug #11762).
 	epatch ${FILESDIR}/readline4.3-mbutil.patch
+
+	gnuconfig_update
 }
 
 src_compile() {
