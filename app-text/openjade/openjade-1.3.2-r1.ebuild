@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/openjade/openjade-1.3.2-r1.ebuild,v 1.17 2004/05/22 23:15:28 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/openjade/openjade-1.3.2-r1.ebuild,v 1.18 2004/06/03 13:07:20 vapier Exp $
 
 inherit libtool sgml-catalog eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/openjade/${P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="ia64 x86 amd64 hppa ppc alpha sparc mips s390"
+KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64 s390"
 IUSE=""
 
 RDEPEND="app-text/sgml-common
