@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-gentoo-forums/fortune-mod-gentoo-forums-20040922.ebuild,v 1.4 2004/10/16 00:37:33 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-gentoo-forums/fortune-mod-gentoo-forums-20040922.ebuild,v 1.5 2004/10/16 04:08:42 squinky86 Exp $
 
 IUSE="offensive"
 
@@ -11,7 +11,7 @@ SRC_URI="http://dev.gentoo.org/~squinky86/files/gentoo-forums-${PV}.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~amd64 hppa ~sparc"
+KEYWORDS="x86 ppc amd64 hppa sparc"
 
 DEPEND="games-misc/fortune-mod"
 

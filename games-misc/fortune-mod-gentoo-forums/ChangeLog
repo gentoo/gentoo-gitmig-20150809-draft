@@ -1,6 +1,10 @@
 # ChangeLog for games-misc/fortune-mod-gentoo-forums
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-gentoo-forums/ChangeLog,v 1.3 2004/10/16 00:37:33 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-gentoo-forums/ChangeLog,v 1.4 2004/10/16 04:08:42 squinky86 Exp $
+
+  15 Oct 2004; Jon Hood <squinky86@gentoo.org>
+  fortune-mod-gentoo-forums-20040922.ebuild:
+  Stable all around irt #67731.
 
   15 Oct 2004; Jason Wever <weeve@gentoo.org>
   fortune-mod-gentoo-forums-20040922.ebuild:
