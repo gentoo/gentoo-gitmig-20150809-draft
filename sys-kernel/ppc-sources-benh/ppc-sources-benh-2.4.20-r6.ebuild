@@ -1,10 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-sources-benh/ppc-sources-benh-2.4.20-r6.ebuild,v 1.1 2003/02/26 20:28:06 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-sources-benh/ppc-sources-benh-2.4.20-r6.ebuild,v 1.2 2003/03/01 09:47:50 gerk Exp $
 
 IUSE=""
 
-ETYPE="kernel"
+ETYPE="sources"
 inherit kernel
 
 # OKV=original kernel version, KV=patched kernel version.  They can be the same.
