@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/aget/aget-0.4.ebuild,v 1.8 2004/09/16 02:15:31 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/aget/aget-0.4.ebuild,v 1.9 2004/10/23 05:54:31 mr_bones_ Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.enderunix.org/${PN}/${P}.tar.gz
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~mips ppc64 macos ppc-macos"
+KEYWORDS="~x86 ~ppc ~sparc ~mips ppc64 ppc-macos"
 
 DEPEND="virtual/libc"
 
