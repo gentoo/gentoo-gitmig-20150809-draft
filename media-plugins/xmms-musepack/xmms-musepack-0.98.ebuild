@@ -1,13 +1,14 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-musepack/xmms-musepack-0.98.ebuild,v 1.2 2004/02/04 06:43:53 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-musepack/xmms-musepack-0.98.ebuild,v 1.3 2004/02/04 11:18:03 eradicator Exp $
 
 inherit flag-o-matic eutils
 
 # Enabling -mfpath=sse can cause high-pitched whine, at least on Pentiums.
 # This drops the entire flag for safety. Reports of success with any variations
 # would be welcomed, but mind those eardrums!
-filter-mfpmath "sse"
+# This seems to be fixed for the 0.98 release (see bug #32327)
+# filter-mfpmath "sse"
 
 DESCRIPTION="XMMS plugin to play audio files encoded with Andree Buschmann's encoder Musepack (mpc, mp+, mpp)"
 HOMEPAGE="http://sourceforge.net/projects/mpegplus/ http://www.personal.uni-jena.de/~pfk/MPP/index2.html"
