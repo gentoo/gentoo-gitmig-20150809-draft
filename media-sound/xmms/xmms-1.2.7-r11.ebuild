@@ -28,11 +28,9 @@ RDEPEND="app-arch/unzip
 	avi? ( >=media-video/avifile-0.7.4.20020426-r2 )
 	esd? ( >=media-sound/esound-0.2.22 )
 	xml? ( >=dev-libs/libxml-1.8.15 )
-	gnome? ( >=gnome-base/gnome-panel-1.4.1 
-			  <gnome-base/gnome-panel-1.5.0 )
+	gnome? ( >=gnome-base/gnome-panel-1.4.1 <gnome-base/gnome-panel-1.5.0 )
 	opengl? ( virtual/opengl )
 	oggvorbis? ( >=media-libs/libvorbis-1.0_beta4 )"
-	
 
 DEPEND="${RDEPEND}
 	nls? ( dev-util/intltool )"
@@ -47,9 +45,9 @@ src_unpack() {
 	#
 	# NOTE: because we change a Makefile.am here, we run auto* at the
 	#	  bottom.
-	use avi && ( \
+	if use avi; then
 		patch -p1 <${FILESDIR}/${P}-enable-avifile-plugins.patch || die
-	)
+	fi
 	
 	# The following code prevents a correct unpack on PPC, so let's
 	# exclude the code on that platform. Olivier Reisch <doctomoe@gentoo.org>
@@ -83,10 +81,10 @@ src_unpack() {
 #		patch -p1 <plover-xmms${PLO_VER}.diff || die
 #	)
 
-	[ ! -f ${S}/config.rpath ] && ( \
+	if [ ! -f ${S}/config.rpath ]; then
 		touch ${S}/config.rpath
 		chmod +x ${S}/config.rpath
-	)
+	fi
 
 	# We run automake and autoconf here else we get a lot of warning/errors.
 	# I have tested this with gcc-2.95.3 and gcc-3.1.
@@ -130,11 +128,11 @@ src_compile() {
 	use nls \
 		|| myopts="${myopts} --disable-nls"
 
-	econf ${myopts} || die
+	econf ${myopts}
 	emake || die
 }
 
-src_install() {						 
+src_install() {
 	make prefix=${D}/usr \
 		mandir=${D}/usr/share/man \
 		sysconfdir=${D}/etc \
@@ -143,8 +141,8 @@ src_install() {
 		install || die
 
 	dodoc AUTHORS ChangeLog COPYING FAQ NEWS README TODO 
-	
-	mkdir -p ${D}/usr/share/xmms/Skins
+
+	dodir /usr/share/xmms/Skins
 	insinto /usr/share/pixmaps/
 	donewins gnomexmms/gnomexmms.xpm xmms.xpm
 	doins xmms/xmms_logo.xpm
@@ -154,21 +152,19 @@ src_install() {
 	insinto /etc/X11/wmconfig
 	donewins xmms/xmms.wmconfig xmms
 
-	use gnome && ( \
+	if use gnome; then
 		insinto /usr/share/gnome/apps/Multimedia
 		doins xmms/xmms.desktop
 		dosed "s:xmms_mini.xpm:mini/xmms_mini.xpm:" \
 			/usr/share/gnome/apps/Multimedia/xmms.desktop
-	) || ( \
+	else
 		rm ${D}/usr/share/man/man1/gnomexmms*
-	)
+	fi
 }
 
 pkg_postrm() {
-
 	if [ -x ${ROOT}/usr/bin/xmms ] && [ ! -d ${ROOT}/usr/share/xmms/Skins ]
 	then
 		mkdir -p ${ROOT}/usr/share/xmms/Skins
 	fi
 }
-

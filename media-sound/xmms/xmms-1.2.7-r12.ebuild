@@ -1,23 +1,20 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.7-r12.ebuild,v 1.9 2002/10/05 05:39:16 drobbins Exp $
-
-IUSE="xml nls esd gnome opengl mmx oggvorbis mikmod 3dnow avi"
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.7-r12.ebuild,v 1.10 2002/11/17 09:47:37 vapier Exp $
 
 inherit libtool
 
 PLO_VER="$(echo ${PV} | sed -e "s:\.::g")"
-S=${WORKDIR}/${P}
 DESCRIPTION="X MultiMedia System"
 SRC_URI="http://www.xmms.org/files/1.2.x/${P}.tar.gz
 	 avi? ( http://www.openface.ca/~nephtes/plover-${PN}${PLO_VER}.tar.gz )
 	 mmx? ( http://members.jcom.home.ne.jp/jacobi/linux/etc/${P}-mmx.patch.gz )"
-
 HOMEPAGE="http://www.xmms.org/"
 
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 ppc sparc sparc64"
+IUSE="xml nls esd gnome opengl mmx oggvorbis mikmod 3dnow avi"
 
 RDEPEND="app-arch/unzip
 	=x11-libs/gtk+-1.2*
@@ -29,7 +26,6 @@ RDEPEND="app-arch/unzip
 	opengl? ( virtual/opengl )
 	oggvorbis? ( >=media-libs/libvorbis-1.0_beta4 )"
 	
-
 DEPEND="${RDEPEND}
 	nls? ( dev-util/intltool )"
 
@@ -138,11 +134,7 @@ src_compile() {
 	use nls \
 		|| myopts="${myopts} --disable-nls"
 
-	./configure --host=${CHOST} \
-		--prefix=/usr \
-		--mandir=/usr/share/man \
-		${myopts} || die
-
+	econf ${myopts}
 	emake || die
 }
 
@@ -155,8 +147,8 @@ src_install() {
 	     install || die
 
 	dodoc AUTHORS ChangeLog COPYING FAQ NEWS README TODO 
-	
-	mkdir -p ${D}/usr/share/xmms/Skins
+
+	dodir /usr/share/xmms/Skins
 	insinto /usr/share/pixmaps/
 	donewins gnomexmms/gnomexmms.xpm xmms.xpm
 	doins xmms/xmms_logo.xpm
@@ -166,21 +158,19 @@ src_install() {
 	insinto /etc/X11/wmconfig
 	donewins xmms/xmms.wmconfig xmms
 
-	use gnome && ( \
+	if `use gnome` ; then
 		insinto /usr/share/gnome/apps/Multimedia
 		doins xmms/xmms.desktop
 		dosed "s:xmms_mini.xpm:mini/xmms_mini.xpm:" \
 			/usr/share/gnome/apps/Multimedia/xmms.desktop
-	) || ( \
+	else
 		rm ${D}/usr/share/man/man1/gnomexmms*
-	)
+	fi
 }
 
 pkg_postrm() {
-
 	if [ -x ${ROOT}/usr/bin/xmms ] && [ ! -d ${ROOT}/usr/share/xmms/Skins ]
 	then
 		mkdir -p ${ROOT}/usr/share/xmms/Skins
 	fi
 }
-
