@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-db/tora/tora-1.3.9.2.ebuild,v 1.1 2003/04/22 07:57:26 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/tora/tora-1.3.9.2.ebuild,v 1.2 2003/04/22 14:23:19 phosphan Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="TOra - Toolkit For Oracle"
@@ -8,7 +8,6 @@ SRC_URI="mirror://sourceforge/${PN}/${PN}-alpha-${PV}.tar.gz"
 HOMEPAGE="http://www.globecom.se/tora/"
 DEPEND=">=x11-libs/qt-3.0.0
 		dev-lang/perl
-		mysql? ( >=dev-db/mysql-3.23 )
 		kde? ( >=kde-base/kde-2.2 )"
 SLOT="0"
 KEYWORDS="~x86"
@@ -19,7 +18,6 @@ src_compile() {
 
 	use kde		&& myconf="$myconf --with-kde" \
 				|| myconf="$myconf --without-kde"	
-	use mysql	|| myconf="$myconf --without-mysql"	
 	use oci8	|| myconf="$myconf --without-oracle"	
 
 	./configure --prefix=/usr --with-mono $myconf
