@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dcron/dcron-2.7-r1.ebuild,v 1.1 2001/01/10 07:05:03 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dcron/dcron-2.7-r2.ebuild,v 1.1 2001/01/15 07:15:39 jerry Exp $
 
 A=dcron27.tgz
 S=${WORKDIR}/dcron
@@ -23,7 +23,7 @@ src_install() {
 	chown root.wheel ${D}/usr/sbin/crond
 	chown root.cron ${D}/usr/bin/crontab
 	chmod 700 ${D}/usr/sbin/crond
-	chmod 4750 ${D}/usr/bin/crontab
+	chmod 4755 ${D}/usr/bin/crontab
 	doman *.[18]
 	diropts -m0750
 	dodir /var/spool/cron/crontabs /var/cron/lastrun
