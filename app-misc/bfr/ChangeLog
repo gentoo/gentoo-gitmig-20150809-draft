@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/bfr
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/bfr/ChangeLog,v 1.1 2003/09/15 02:22:09 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/bfr/ChangeLog,v 1.2 2003/10/08 03:38:45 hillster Exp $
+
+  07 Oct 2003; Joel Hill <hillster@gentoo.org> bfr-1.5.ebuild:
+  cleanup, marking stable.
 
 *bfr-1.5 (14 Sep 2003)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/jot/jot-9.0.ebuild,v 1.2 2003/06/21 14:19:02 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/jot/jot-9.0.ebuild,v 1.3 2003/10/08 03:43:50 hillster Exp $
 
 inherit rpm
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.mit.edu/afs/athena/system/rhlinux/athena-${PV}/free/SRPMS/at
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE=""
 
 S="${WORKDIR}/athena-${P}"
