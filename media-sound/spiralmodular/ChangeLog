@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/spiralmodular
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/spiralmodular/ChangeLog,v 1.3 2004/03/01 05:37:16 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/spiralmodular/ChangeLog,v 1.4 2004/03/21 03:49:50 eradicator Exp $
+
+*spiralmodular-0.2.2a (20 Mar 2004)
+
+  20 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  spiralmodular-0.2.1.ebuild, spiralmodular-0.2.2a.ebuild:
+  Version bump.
 
   28 Oct 2003; Martin Holzer <mholzer@gentoo.org> spiralmodular-0.2.1.ebuild,
   files/spiralmodular-0.2.1-gentoo.patch:
