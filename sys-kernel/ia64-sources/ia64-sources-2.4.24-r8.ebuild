@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ia64-sources/ia64-sources-2.4.24-r7.ebuild,v 1.1 2004/07/21 22:34:05 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ia64-sources/ia64-sources-2.4.24-r8.ebuild,v 1.1 2004/08/04 22:31:58 plasmaroo Exp $
 
 IUSE=""
 
@@ -32,7 +32,8 @@ S=${WORKDIR}/linux-${KV}
 MYSNAPSHOT="040109"
 DESCRIPTION="Full sources for the Gentoo Kernel."
 SRC_URI="mirror://kernel/linux/kernel/v2.4/linux-${OKV}.tar.bz2
-mirror://kernel/linux/kernel/ports/ia64/v2.4/linux-${OKV}-ia64-${MYSNAPSHOT}.diff.bz2"
+	 mirror://kernel/linux/kernel/ports/ia64/v2.4/linux-${OKV}-ia64-${MYSNAPSHOT}.diff.bz2
+	 http://dev.gentoo.org/~plasmaroo/patches/kernel/misc/security/${P}-CAN-2004-0415.patch"
 
 HOMEPAGE="http://www.gentoo.org/ http://www.kernel.org/"
 LICENSE="GPL-2"
@@ -60,6 +61,7 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}.CAN-2004-0178.patch || die "Failed to add the CAN-2004-0178 patch!"
 	epatch ${FILESDIR}/${P}.CAN-2004-0181.patch || die "Failed to add the CAN-2004-0181 patch!"
 	epatch ${FILESDIR}/${P}.CAN-2004-0394.patch || die "Failed to add the CAN-2004-0394 patch!"
+	epatch ${DISTDIR}/${P}-CAN-2004-0415.patch || die "Failed to add the CAN-2004-0415 patch!"
 	epatch ${FILESDIR}/${P}.CAN-2004-0427.patch || die "Failed to add the CAN-2004-0427 patch!"
 	epatch ${FILESDIR}/${P}.CAN-2004-0447.patch || die "Failed to add the CAN-2004-0447 patch!"
 	epatch ${FILESDIR}/${P}.CAN-2004-0495.patch || die "Failed to add the CAN-2004-0495 patch!"
