@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/trustees/trustees-2.10.ebuild,v 1.1 2003/10/14 01:48:12 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/trustees/trustees-2.10.ebuild,v 1.2 2003/10/27 20:39:58 max Exp $
 
 DESCRIPTION="Advanced permission management system (ACLs) for Linux."
 HOMEPAGE="http://trustees.sourceforge.net/"
@@ -10,7 +10,9 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86"
 
-DEPEND="virtual/linux-sources"
+DEPEND="virtual/glibc
+	virtual/linux-sources
+	>=sys-apps/sed-4"
 
 S="${WORKDIR}"
 
@@ -24,6 +26,10 @@ src_unpack() {
 	}
 
 	unpack ${A}
+
+	# fix linking error
+	sed -e '0,0i #include <errno.h>' \
+		-i "${S}/set-trustee.c" || die "sed failed"
 }
 
 src_compile() {
