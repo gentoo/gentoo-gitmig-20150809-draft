@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-2.3.0_p1.ebuild,v 1.1 2000/11/22 09:08:46 jerry Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-2.3.0_p1.ebuild,v 1.2 2000/12/05 18:34:25 achim Exp $
 
 P=openssh-2.3.0p1
 A=${P}.tar.gz
@@ -32,11 +32,11 @@ src_unpack() {
 
 src_install() {                               
     try make manpages install-files DESTDIR=${D} 
-    prepman
     dodoc ChangeLog COPYING.* CREDITS OVERVIEW README* TODO UPGRADING
     cd ${O}/files
     dodir /etc/rc.d/init.d/
     insinto /etc/rc.d/init.d
+    insopts -m755
     doins sshd
     insinto /etc/pam.d
     donewins sshd.pam sshd
