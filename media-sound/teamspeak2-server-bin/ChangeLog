@@ -1,12 +1,12 @@
 # ChangeLog for media-sound/teamspeak2-server-bin
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/teamspeak2-server-bin/ChangeLog,v 1.4 2004/04/20 08:19:13 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/teamspeak2-server-bin/ChangeLog,v 1.5 2004/04/20 08:19:46 eradicator Exp $
 
 *teamspeak2-server-bin-2.0.20.1 (20 Apr 2004)
 
   20 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org>
   teamspeak2-server-bin-2.0.20.1.ebuild, files/teamspeak2-server.rc6:
-  Version bump.  Closes bug #47758.
+  Version bump.  Closes bug #47758.  Thanks Dustin Parr <parr@cs.utk.edu>.
 
   01 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org>
   teamspeak2-server-bin-2.0.19.40.ebuild:
