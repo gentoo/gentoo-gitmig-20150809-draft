@@ -1,6 +1,10 @@
 # ChangeLog for net-nds/openldap
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.46 2003/07/23 19:11:11 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.47 2003/07/26 18:59:46 raker Exp $
+
+  26 Jul 2003; Nick Hadaway <raker@gentoo.org> openldap-2.0.25-r3.ebuild:
+  Backporting features from the 2.0.27-r4 ebuild so 1.0 profiles are
+  caught up.
 
   23 Jul 2003; Nick Hadaway <raker@gentoo.org> openldap-2.0.27-r4.ebuild,
   rfc2252-bork.patch:
