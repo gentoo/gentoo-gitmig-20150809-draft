@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/URI/URI-1.35.ebuild,v 1.6 2005/02/06 22:57:44 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/URI/URI-1.35.ebuild,v 1.7 2005/03/09 00:56:05 vapier Exp $
 
 inherit perl-module
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://cpan/authors/id/G/GA/GAAS/${P}.tar.gz"
 
 LICENSE="Artistic"
 SLOT="0"
-KEYWORDS="x86 ~ppc sparc mips alpha ~arm hppa ~amd64 ~ia64 ~s390"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ~ppc s390 sparc x86"
 IUSE=""
 
 DEPEND="dev-perl/MIME-Base64"
