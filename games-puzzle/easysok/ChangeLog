@@ -1,6 +1,11 @@
 # ChangeLog for games-puzzle/easysok
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/easysok/ChangeLog,v 1.3 2004/06/24 23:03:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/easysok/ChangeLog,v 1.4 2004/10/18 20:12:25 mr_bones_ Exp $
+
+*easysok-0.3.4 (18 Oct 2004)
+
+  18 Oct 2004; Michael Sterrett <mr_bones_@gentoo.org> +easysok-0.3.4.ebuild:
+  version bump (bug #67882)
 
   15 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org> easysok-0.3.3.ebuild:
   stabilize

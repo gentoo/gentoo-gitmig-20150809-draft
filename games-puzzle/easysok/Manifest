@@ -1,14 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 84930ba4e24b087d32b977b9b6313434 ChangeLog 491
 MD5 bdc5e31ac099b18dd22ea2a7880f30ad easysok-0.3.3.ebuild 474
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+MD5 b307eedecd708efc49224a37dc0fb8ef ChangeLog 629
+MD5 b7620d2379f9154a468bdd1b51e1ef6c easysok-0.3.4.ebuild 477
 MD5 aca5d2d10914c829b8f94ba929f2e97f files/digest-easysok-0.3.3 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBHwizHTu7gpaalycRAlLFAJ0ROsF05Wli9VUl95la5+2XwtfEgwCfaySJ
-DvRta8TLgBizckYlO/RXXAc=
-=2VbO
------END PGP SIGNATURE-----
+MD5 c3ae7e22e3f84384cbcba9b8f16d4595 files/digest-easysok-0.3.4 66
