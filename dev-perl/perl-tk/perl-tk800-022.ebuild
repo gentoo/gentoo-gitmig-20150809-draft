@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/perl-tk/perl-tk800-022.ebuild,v 1.2 2000/09/15 20:08:52 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/perl-tk/perl-tk800-022.ebuild,v 1.3 2000/11/01 06:27:12 achim Exp $
 
 P=Tk800.022
 A=${P}.tar.gz
@@ -10,6 +10,9 @@ DESCRIPTION="A Perl Module for Tk"
 SRC_URI="http://cpan.valueclick.com/modules/by-module/Tk/${A}"
 HOMEPAGE="http://cpan.valueclick.com/modules/by-module/Tk/${P}.readme"
 
+DEPEND=">=sys-devel/perl-5
+	>=sys-libs/glibc-2.1.3
+	>=x11-base/xfree-4.0.1"
 
 src_compile() {
 

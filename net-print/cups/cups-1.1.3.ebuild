@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.1.3.ebuild,v 1.2 2000/10/29 20:37:00 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.1.3.ebuild,v 1.3 2000/11/01 06:27:12 achim Exp $
 
 A=${P}-source.tar.bz2
 S=${WORKDIR}/${P}
@@ -9,6 +9,10 @@ DESCRIPTION="The Common Unix Printing System"
 SRC_URI="ftp://ftp.easysw.com/pub/cups/${PV}/${A}"
 HOMEPAGE="http://www.cups.org"
 
+DEPEND=">=sys-devel/gcc-2.95.2
+	>=sys-libs/glibc-2.1.3
+	>=sys-libs/pam-0.72
+	>=media-libs/libpng-1.0.7"
 
 src_compile() {
 
