@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-1.2.1-r1.ebuild,v 1.1 2004/04/08 20:04:41 lisa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-1.2.1-r1.ebuild,v 1.2 2004/04/14 06:18:53 lisa Exp $
 
 inherit eutils gnome2
 
@@ -38,13 +38,17 @@ DOCS="AUTHORS COPYING ChangeLog FUTURE NEWS README THANKS TODO"
 
 MAKEOPTS="${MAKEOPTS} -j1"
 
+
 src_unpack() {
 	unpack ${A}
 
 	cd ${S}
-#	epatch ${FILESDIR}/${P}_xim.patch
+#       epatch ${FILESDIR}/${P}_xim.patch
 	epatch ${FILESDIR}/anjuta-1.2.1.fix.cmp.usage.diff.gz
 	epatch ${FILESDIR}/anjuta-1.2.1.pass.proper.aclocal.args.diff.gz
+
+	cd ${S}/global-tags
+	epatch ${FILESDIR}/anjuta-1.2.0.globaltagfix.diff.gz
 }
 
 pkg_postinst() {
