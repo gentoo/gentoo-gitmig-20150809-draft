@@ -1,0 +1,84 @@
+--- src/SMTask.cc	2004-08-03 07:34:37.000000000 -0400
++++ newsrc/SMTask.cc	2004-08-23 21:20:04.000000000 -0400
+@@ -221,6 +221,11 @@
+    return count;
+ }
+ 
++void SMTask::Cleanup()
++{
++  delete init_task;
++}
++
+ #include <errno.h>
+ #include "ResMgr.h"
+ ResDecl enospc_fatal ("xfer:disk-full-fatal","no",ResMgr::BoolValidate,ResMgr::NoClosure);
+--- src/SMTask.h	2004-08-02 06:47:44.000000000 -0400
++++ newsrc/SMTask.h	2004-08-23 21:19:35.000000000 -0400
+@@ -97,6 +97,8 @@
+    static int TaskCount();
+    static bool NonFatalError(int err);
+    static bool TemporaryNetworkError(int err);
++   
++   static void Cleanup();
+ };
+ 
+ class SMTaskInit : public SMTask
+--- src/SignalHook.cc	2003-10-03 10:18:46.000000000 -0400
++++ newsrc/SignalHook.cc	2004-08-23 20:53:17.000000000 -0400
+@@ -93,3 +93,10 @@
+    Ignore(SIGXFSZ);  // and EFBIG
+ #endif
+ }
++
++void SignalHook::Cleanup()
++{
++   delete [] counts;
++   delete [] old_handlers;
++   delete [] old_saved;
++}
+--- src/SignalHook.h	1999-10-04 13:45:40.000000000 -0400
++++ newsrc/SignalHook.h	2004-08-23 20:51:27.000000000 -0400
+@@ -49,6 +49,7 @@
+    static void RestoreAll();
+ 
+    static void ClassInit();
++   static void Cleanup();
+ };
+ 
+ #endif//SIGNALHOOK_H
+--- src/log.cc	2004-03-15 04:03:55.000000000 -0500
++++ newsrc/log.cc	2004-08-24 11:18:18.062682431 -0400
+@@ -125,6 +125,10 @@
+    Write(l,buf);
+ }
+ 
++void Log::Cleanup()
++{
++   delete global;
++}
+ Log::~Log()
+ {
+    CloseOutput();
+--- src/log.h	2004-02-04 16:40:06.000000000 -0500
++++ newsrc/log.h	2004-08-23 21:03:02.000000000 -0400
+@@ -84,6 +84,8 @@
+    void ShowPID(bool yes=true) { show_pid=yes; }
+    void ShowTime(bool yes=true) { show_time=yes; }
+    void ShowContext(bool yes=true) { show_context=yes; }
++
++   static void Cleanup();
+ };
+ 
+ #endif // LOG_H
+--- src/lftp.cc	2004-04-16 10:27:36.000000000 -0400
++++ newsrc/lftp.cc	2004-08-23 21:21:24.000000000 -0400
+@@ -421,6 +421,9 @@
+    ProcWait::DeleteAll();
+    DirColors::DeleteInstance();
+    IdNameCacheCleanup();
++   SignalHook::Cleanup();
++   Log::Cleanup();
++   SMTask::Cleanup();
+ 
+    // the tasks left: SMTaskInit, LsCache::ExpireHelper, Log::global.
+    int task_count=SMTask::TaskCount();
