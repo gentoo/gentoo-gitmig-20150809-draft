@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/gmudix/gmudix-0.10.ebuild,v 1.4 2004/07/01 11:21:15 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/gmudix/gmudix-0.10.ebuild,v 1.5 2004/07/14 14:47:37 agriffis Exp $
 
 inherit games
 
@@ -8,6 +8,7 @@ DESCRIPTION="An improved version of MUDix, a MUD client for the Linux console.  
 SRC_URI="http://dw.nl.eu.org/gmudix/${P}.tar.gz"
 HOMEPAGE="http://dw.nl.eu.org/mudix.html"
 KEYWORDS="x86"
+IUSE=""
 LICENSE="GPL-2"
 SLOT="0"
 
