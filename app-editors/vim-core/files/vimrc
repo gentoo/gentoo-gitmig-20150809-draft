@@ -20,8 +20,10 @@ set ruler               " Show the cursor position all the time
 " according to conversation on vim devel ML:
 " http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=212696
 " http://article.gmane.org/gmane.editors.vim.devel/4410
-" If you're not paranoid, feel free to delete this line or override it in
-" your ~/.vimrc -- there aren't any known security issues with this any more.
+"
+" There are other currently unpublished issues with vim modelines, so it is
+" recommended that this settings is left alone until we can get a working
+" patch. -- ciaranm, 7 December 2004.
 set nomodeline
 
 if v:lang =~ "^ko"

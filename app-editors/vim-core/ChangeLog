@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/vim-core
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim-core/ChangeLog,v 1.109 2004/11/28 14:38:13 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim-core/ChangeLog,v 1.110 2004/12/07 21:07:09 ciaranm Exp $
+
+  07 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> files/vimrc:
+  Update the vimrc comments regarding modelines. If you need more information
+  on this, either email me or await the next vim release.
 
 *vim-core-7.0_alpha20041128 (28 Nov 2004)
 
