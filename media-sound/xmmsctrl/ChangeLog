@@ -1,0 +1,12 @@
+# ChangeLog for media-sound/xmmsctrl
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmmsctrl/ChangeLog,v 1.1 2002/12/15 21:52:19 seemant Exp $
+
+*xmmsctrl-1.6 (15 Dec 2002)
+
+  15 Dec 2002; Seemant Kulleen <seemant@gentoo.org> xmmsctrl-1.6.ebuild
+  ChangeLog files/xmmsctrl-jump.patch files/digest-xmmsctrl-1.6 :
+
+  New package to control XMMS from the commandline, by novas007@gmx.net
+  (Mike Lundy) in bug #10821. This is patched to allow the "jump to file"
+  dialog box to pop up.
