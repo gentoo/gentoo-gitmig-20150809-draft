@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/devfsd/devfsd-1.3.25-r8.ebuild,v 1.9 2004/10/05 15:48:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/devfsd/devfsd-1.3.25-r8.ebuild,v 1.10 2004/10/16 17:09:36 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -34,16 +34,12 @@ src_unpack() {
 	use uclibc && sed -e 's|libnsl.so.1|libnsl.so.0|' -i GNUmakefile
 }
 
-src_compile() {
-	make || die
-}
-
 src_install() {
 	dodir /sbin /usr/share/man /etc
 	make PREFIX=${D} install || die
-
-	#config file is handled in baselayout
-	rm -f ${D}/etc/devfsd.conf
-
 	dodoc devfsd.conf INSTALL
+
+	dodir /etc/devfs.d
+	insinto /etc
+	doins ${FILESDIR}/devfsd.conf
 }
