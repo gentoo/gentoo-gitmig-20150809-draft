@@ -1,15 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ea835f1b49e73aa262e074026f1176eb drpython-3.6.10.ebuild 799
+MD5 c6ffd64c80ea4df0cd229f16833044f3 drpython-3.10.6.ebuild 798
+MD5 bb1bf4095e77d57cb652183b1f6ba5d2 ChangeLog 605
 MD5 948a940cc7f534cf1b0b136f02d51a66 metadata.xml 381
-MD5 20a46f619886dffeb93090025663a035 ChangeLog 441
-MD5 fa7811eea5250f43772dc4601161c384 files/drpython.py-3.6.10.patch 403
+MD5 9235c250a01209bfb58e78c6ddf81875 drpython-3.6.10.ebuild 798
+MD5 02c5d9df509a5816a4966e0f1a0cdf16 files/digest-drpython-3.10.6 64
 MD5 9c765d518e830b13bb56bd19d9fee8ae files/digest-drpython-3.6.10 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBl0oe2jLqHNfbg2URAmpSAJ9saRTgGh6eGWqODL93HPtNcUarHgCfU2eE
-pVL5IUkdZGufaVl7GK8i2Ms=
-=2qcl
------END PGP SIGNATURE-----
+MD5 f6389804ba5a8094c6d1df91ab320d76 files/drpython.py-3.10.6.patch 434
+MD5 fa7811eea5250f43772dc4601161c384 files/drpython.py-3.6.10.patch 403
