@@ -1,6 +1,9 @@
 # ChangeLog for media-video/vobcopy
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vobcopy/ChangeLog,v 1.10 2004/06/25 00:53:01 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vobcopy/ChangeLog,v 1.11 2004/07/02 20:51:55 kugelfang Exp $
+
+  02 Jul 2004; Danny van Dyk <kugelfang@gentoo.org> vobcopy-0.5.13.ebuild:
+  Marked ~amd64.
 
   14 Apr 2004; Jason Wever <weeve@gentoo.org> vobcopy-0.5.13.ebuild:
   Added ~sparc keyword.
