@@ -23,6 +23,8 @@ CURRENTFILE=${PORTDIR}/current-packages
 SYSPROFILE=default
 SYSPROFILEDIR=${PORTDIR}/profiles
 PLATFORM=$CHOST
+CONFIG_PROTECT="/etc /var/qmail/control"
+
 
 # Options passed to make during the build process
 MAKEOPTS="-j2"

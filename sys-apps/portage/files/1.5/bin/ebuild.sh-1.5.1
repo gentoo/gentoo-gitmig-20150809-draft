@@ -512,19 +512,6 @@ dyn_install() {
     src_install
     prepall
 	cd ${D}
-	#prep for config-file management
-	if [ -d etc ]
-	then
-		echo ">>> Prepping files in /etc..."
-		cd etc
-		local mycfg
-		local newcfg
-		for mycfg in `find -type f`
-		do
-			newcfg="`dirname $mycfg`/._cfg_`basename $mycfg`"
-			mv "$mycfg" "$newcfg"
-		done
-	fi
 	echo ">>> Completed installing into ${D}"
     echo
     cd ${BUILDDIR}

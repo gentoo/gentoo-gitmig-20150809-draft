@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc. Distributed under the terms
 # of the GNU General Public License, v2 or later 
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-1.5-r6.ebuild,v 1.1 2001/05/02 16:08:15 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-1.5.2.ebuild,v 1.1 2001/06/19 21:18:14 drobbins Exp $
  
 S=${WORKDIR}/${P}
 DESCRIPTION="Portage autobuild system"
@@ -24,19 +24,19 @@ src_install() {
 	#config files
 	cd ${FILESDIR}/${PPV}/cnf
 	insinto /etc
-	newins make.globals make.globals.eg
-	newins make.conf make.conf.eg
+	doins make.globals make.conf
 
 	#python modules
 	cd ${FILESDIR}/${PPV}/pym
 	insinto /usr/lib/python2.0
-	doins portage.py xpak.py
-
+	doins xpak.py portage.py
+	
 	#binaries and scripts
 	dodir /usr/lib/portage/bin
 	cd ${FILESDIR}/${PPV}/bin
 	exeinto /usr/lib/portage/bin
 	doexe *
+	dosym emake /usr/lib/portage/bin/pmake
 	doexe ${S}/tbz2tool
 
 	#symlinks
@@ -62,14 +62,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	if [ ! -e ${ROOT}/etc/make.conf ]
-	then
-		cp ${ROOT}/etc/make.conf.eg ${ROOT}/etc/make.conf
-	fi
-    sed -e "s:^CHOST.*:CHOST=${CHOST}:" \
-        -e "s:^CFLAGS.*:CFLAGS=\"${CFLAGS}\":" \
-        -e "s:^CXXFLAGS.*:CXXFLAGS=\"${CXXFLAGS}\":" \
-        ${ROOT}/etc/make.globals.eg > ${ROOT}/etc/make.globals
 	if [ ! -e ${ROOT}/etc/make.profile ]
 	then
 		cd ${ROOT}/etc
