@@ -29,4 +29,4 @@ move net-fs/kasablanca net-ftp/kasablanca
 move media-sound/mad media-sound/madplay
 move games-action/mutantstormdemo games-action/mutantstorm-demo
 move games-action/spacetripperdemo games-action/spacetripper-demo
-
+move x11-misc/culmus media-fonts/culmus
