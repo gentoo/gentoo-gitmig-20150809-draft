@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.128 2004/02/12 11:05:57 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.129 2004/02/23 21:33:55 azarah Exp $
+
+  23 Feb 2004; Martin Schlemmer <azarah@gentoo.org> glibc-2.3.2-r9.ebuild,
+  files/2.3.2/glibc-2.3.2-ipv6-bytestring-fix.patch:
+  Fix broken reverse resolving for IPv6 addresses, bug #42492. Research done by
+  Bernhard Schmidt <berni@birkenwald.de>.
 
   12 Feb 2004; <solar@gentoo.org> glibc-2.3.3_pre20040117-r1.ebuild,
   files/2.3.3/glibc-2.3.3_pre20040117-got-fix.diff:

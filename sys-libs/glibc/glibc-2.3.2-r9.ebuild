@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.2-r9.ebuild,v 1.15 2004/02/08 06:19:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.2-r9.ebuild,v 1.16 2004/02/23 21:33:55 azarah Exp $
 
 IUSE="nls pic build nptl"
 
@@ -333,6 +333,9 @@ src_unpack() {
 	# We do not want name_insert() in iconvconfig.c to be defined inside
 	# write_output() as it causes issues with PaX.
 	cd ${S}; epatch ${FILESDIR}/${PV}/${P}-iconvconfig-name_insert.patch
+
+	# Fix broken reverse resolving for IPv6 addresses, bug #42492.
+	cd ${S}; epatch ${FILESDIR}/${PV}/${P}-ipv6-bytestring-fix.patch
 
 	# A few patches only for the MIPS platform.  Descriptions of what they
 	# do can be found in the patch headers.
