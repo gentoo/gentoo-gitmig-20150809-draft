@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.91 2005/02/07 12:44:23 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.92 2005/02/07 23:19:33 johnm Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -740,12 +740,12 @@ detect_version() {
 	elif [ ${ETYPE} != "headers" ]
 	then
 		[ -z "${K_NOUSENAME}" ] && EXTRAVERSION="${EXTRAVERSION}-${PN/-*/}"
-		[ "${PN/-*/}" == "wolk" ] && EXTRAVERSION="-${PN/-*/}-${PV}"
-		[ "${PN/-*/}" == "vserver" ] && EXTRAVERSION="-${PN/-*/}-${PV}"
+		[ "${PN/-*/}" == "wolk" ] && EXTRAVERSION="${EXTRAVERSION}-${PN/-*/}-${PV}"
+		[ "${PN/-*/}" == "vserver" ] && EXTRAVERSION="${EXTRAVERSION}-${PN/-*/}-${PV}"
 		[ "${PR}" != "r0" ] 	&& EXTRAVERSION="${EXTRAVERSION}-${PR}"
 	fi
 
-	KV_FULL=${OKV}${RELEASE}${EXTRAVERSION}
+	KV_FULL=${OKV}${EXTRAVERSION}
 
 	# -rc-bk pulls can be achieve by specifying CKV
 	# for example:
