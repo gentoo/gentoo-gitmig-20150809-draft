@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0-r2.ebuild,v 1.4 2004/10/11 08:24:36 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0-r2.ebuild,v 1.5 2004/10/11 08:27:13 spyderous Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -23,7 +23,7 @@ RESTRICT="nostrip"
 
 # IUSE="gatos" disabled because gatos is broken on ~4.4 now (31 Jan 2004)
 IUSE="3dfx 3dnow bitmap-fonts cjk debug dlloader dmx doc dri glx hardened
-	insecure-drivers ipv6 mmx nls pam sdk sse static xfs xprint"
+	insecure-drivers ipv6 mmx nls pam sdk sse static uclibc xfs xprint"
 # IUSE_INPUT_DEVICES="synaptics wacom"
 
 FILES_VER="0.2"
@@ -115,7 +115,7 @@ PDEPEND="x86? (
 		alpha? (
 			3dfx? ( >=media-libs/glide-v3-3.10 )
 		)
-		x11-terms/xterm"
+		!uclibc? ( x11-terms/xterm )"
 
 PROVIDE="virtual/x11
 	virtual/opengl
@@ -410,6 +410,12 @@ host_def_setup() {
 		# DRI can't build if glx isn't built, so keep this below DRI define.
 		use_build glx BuildGlxExt
 		use_build glx BuildGLXLibrary
+
+		# uclibc love from iggy
+		if use uclibc
+		then
+			echo "#define BuildGLULibrary NO" >> config/cf/host.def
+		fi
 
 		if use alpha
 		then
