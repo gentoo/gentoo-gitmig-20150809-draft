@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/endeavour/endeavour-2.3.0.ebuild,v 1.3 2003/11/14 20:04:51 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/endeavour/endeavour-2.3.0.ebuild,v 1.4 2003/12/16 00:32:04 avenj Exp $
 
 IUSE=""
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://wolfpack.twu.net/users/wolfpack/${P}.tar.bz2
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="x86 ~ppc amd64"
 
 DEPEND="app-arch/bzip2
 	=x11-libs/gtk+-1.2*
