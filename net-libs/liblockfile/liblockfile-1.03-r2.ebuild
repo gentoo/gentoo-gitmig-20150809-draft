@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/liblockfile/liblockfile-1.03-r1.ebuild,v 1.13 2005/01/27 05:22:44 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/liblockfile/liblockfile-1.03-r2.ebuild,v 1.1 2005/01/27 05:22:44 eradicator Exp $
 
 IUSE=
 
-inherit eutils gcc
+inherit eutils gcc multilib
 
 DESCRIPTION="Implements functions designed to lock the standard mailboxes."
 SRC_URI="mirror://debian/pool/main/libl/${PN}/${PN}_${PV}.tar.gz"
@@ -14,7 +14,7 @@ DEPEND="virtual/libc"
 
 SLOT="0"
 LICENSE="LGPL-2"
-KEYWORDS="x86 ppc sparc alpha hppa ia64 amd64 ~mips ppc64"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~ia64 ~amd64 ~mips ~ppc64"
 IUSE=""
 
 src_unpack() {
@@ -28,13 +28,11 @@ src_unpack() {
 }
 
 src_compile() {
-
-	econf --with-mailgroup=mail || die
+	econf --with-mailgroup=mail --enable-shared || die
 	emake || die
 }
 
 src_install() {
-
-	dodir /usr/{bin,include,lib} /usr/share/man/{man1,man3}
-	make  ROOT=${D} install || die
+	dodir /usr/{bin,include,$(get_libdir)} /usr/share/man/{man1,man3}
+	make ROOT=${D} install || die
 }
