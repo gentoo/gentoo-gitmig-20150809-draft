@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/gallery
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/ChangeLog,v 1.2 2004/08/19 06:35:48 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/ChangeLog,v 1.3 2004/08/19 23:50:39 weeve Exp $
+
+  19 Aug 2004; Jason Wever <weeve@gentoo.org> gallery-1.4.4-r1.ebuild:
+  Stable on sparc wrt securit bug #60742.
 
 *gallery-1.4.4-r1 (19 Aug 2004)
 
