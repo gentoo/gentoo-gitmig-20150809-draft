@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/cvs.eclass,v 1.42 2003/06/13 09:22:47 torbenh Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/cvs.eclass,v 1.43 2003/06/30 18:17:11 danarmak Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -29,6 +29,13 @@ INHERITED="$INHERITED $ECLASS"
 [ -z "$ECVS_CO_OPTS" ] && ECVS_CO_OPTS=""
 
 # set this to some value for the module/subdir to be fetched non-recursively: ECVS_LOCAL
+
+# local name of module.  useful if the module on the server is called
+# something common like 'driver' or is nested deep in a tree, and you don't
+# like useless empty directories.
+# WARNING: to be set only from within ebuilds! if set in your shell or some such,
+# things wil break because the ebuild won't expect it and have e.g. a wrong $S setting.
+[ -z "$ECVS_LOCALNAME" ] && ECVS_LOCALNAME="$ECVS_MODULE"
 
 # Where the cvs modules are stored/accessed
 [ -z "$ECVS_TOP_DIR" ] && ECVS_TOP_DIR="${DISTDIR}/cvs-src"
@@ -99,6 +106,12 @@ cvs_fetch() {
 		ECVS_CO_OPTS="$ECVS_CO_OPTS -r$ECVS_BRANCH"
 	fi
 
+	if [ "$ECVS_LOCALNAME" != "$ECVS_MODULE" ]; then
+		# the option to cvs on which this is based. note this isn't the same as the 
+		# global -d option to cvs, which specifies the cvs server. ugh @ cvs syntax.
+		ECVS_CO_OPTS="$ECVS_CO_OPTS -d $ECVS_LOCALNAME"
+	fi
+
 	# it's easiest to always be in "run-as mode", logic-wise
 	# or would be if sudo didn't ask for a password even when sudo'ing to `whoami`
 	if [ -z "$ECVS_RUNAS" ]; then
@@ -127,7 +140,7 @@ cvs_fetch() {
 	ECVS_TOP_DIR="`/bin/pwd`"
 
 	# determine checkout or update mode
-	if [ ! -d "$ECVS_TOP_DIR/$ECVS_MODULE/CVS" ]; then
+	if [ ! -d "$ECVS_TOP_DIR/$ECVS_LOCALNAME/CVS" ]; then
 		mode=checkout
 	else
 		mode=update
@@ -146,7 +159,7 @@ cvs_fetch() {
 
 	# switch servers automagically if needed
 	if [ "$mode" == "update" ]; then
-		cd /$ECVS_TOP_DIR/$ECVS_MODULE
+		cd /$ECVS_TOP_DIR/$ECVS_LOCALNAME
 		oldserver="`$run cat CVS/Root`"
 		if [ "$server" != "$oldserver" ]; then
 
@@ -182,7 +195,7 @@ cvs_fetch() {
 
 	# commands to run
 	cmdlogin="${run} ${ECVS_CVS_COMMAND} -d \"${cvsroot_pass}\" login"
-	cmdupdate="${run} ${ECVS_CVS_COMMAND} -d \"${cvsroot_nopass}\" update ${ECVS_UP_OPTS} ${ECVS_MODULE}"
+	cmdupdate="${run} ${ECVS_CVS_COMMAND} -d \"${cvsroot_nopass}\" update ${ECVS_UP_OPTS} ${ECVS_LOCALNAME}"
 	cmdcheckout="${run} ${ECVS_CVS_COMMAND} -d \"${cvsroot_nopass}\" checkout ${ECVS_CO_OPTS} ${ECVS_MODULE}"
 
 	cd "${ECVS_TOP_DIR}"
@@ -229,17 +242,18 @@ ECVS_USER=$ECVS_USER
 ECVS_PASS=$ECVS_PASS
 ECS_MODULE=$ECVS_MODULE
 ECVS_LOCAL=$ECVS_LOCAL
-ECVS_RUNAS=$ECVS_RUNAS"
+ECVS_RUNAS=$ECVS_RUNAS
+ECVS_LOCALNAME=$ECVS_LOCALNAME"
 
 	[ -z "$ECVS_MODULE" ] && die "ERROR: CVS module not set, cannot continue."
 
 	if [ "$ECVS_SERVER" == "offline" ]; then
 		# we're not required to fetch anything, the module already exists and shouldn't be updated
-	 	if [ -d "${ECVS_TOP_DIR}/${ECVS_MODULE}" ]; then
+	 	if [ -d "${ECVS_TOP_DIR}/${ECVS_LOCALNAME}" ]; then
 			debug-print "$FUNCNAME: offline mode"
 		else
-			debug-print "$FUNCNAME: offline mode specified but directory ${ECVS_TOP_DIR}/${ECVS_MODULE} not found, exiting with error"
-			die "ERROR: Offline mode specified, but dir ${ECVS_TOP_DIR}/${ECVS_MODULE} not found. Aborting."
+			debug-print "$FUNCNAME: offline mode specified but directory ${ECVS_TOP_DIR}/${ECVS_LOCALNAME} not found, exiting with error"
+			die "ERROR: Offline mode specified, but dir ${ECVS_TOP_DIR}/${ECVS_LOCALNAME} not found. Aborting."
 		fi
 	elif [ -n "$ECVS_SERVER" ]; then # ECVS_SERVER!=offline --> real fetching mode
 		einfo "Fetching cvs module $ECVS_MODULE into $ECVS_TOP_DIR..."
@@ -249,24 +263,23 @@ ECVS_RUNAS=$ECVS_RUNAS"
 	fi
 
 	einfo "Copying $ECVS_MODULE from $ECVS_TOP_DIR..."
-	debug-print "Copying module $ECVS_MODULElocal_mode=$ECVS_LOCAL from $ECVS_TOP_DIR..."
+	debug-print "Copying module $ECVS_MODULE local_mode=$ECVS_LOCAL from $ECVS_TOP_DIR..."
 
 	# probably redundant, but best to make sure
-	mkdir -p "$WORKDIR/$ECVS_MODULE"
+	mkdir -p "$WORKDIR/$ECVS_LOCALNAME"
 
 	if [ -n "$ECVS_LOCAL" ]; then
-		mkdir -p "$WORKDIR/$ECVS_MODULE"
-		cp -f "$ECVS_TOP_DIR/$ECVS_MODULE"/* "$WORKDIR/$ECVS_MODULE"
+		cp -f "$ECVS_TOP_DIR/$ECVS_LOCALNAME"/* "$WORKDIR/$ECVS_LOCALNAME"
 	else
-		cp -Rf "$ECVS_TOP_DIR/$ECVS_MODULE" "$WORKDIR/$ECVS_MODULE/.."
+		cp -Rf "$ECVS_TOP_DIR/$ECVS_LOCALNAME" "$WORKDIR/$ECVS_LOCALNAME/.."
 	fi
 
 	# if the directory is empty, remove it; empty directories cannot exist in cvs.
 	# this happens when fex. kde-source requests module/doc/subdir which doesn't exist.
 	# still create the empty directory in workdir though.
-	if [ "`ls -A \"${ECVS_TOP_DIR}/${ECVS_MODULE}\"`" == "CVS" ]; then
-		debug-print "$FUNCNAME: removing cvs-empty directory $ECVS_MODULE"
-		rm -rf "${ECVS_TOP_DIR}/${ECVS_MODULE}"
+	if [ "`ls -A \"${ECVS_TOP_DIR}/${ECVS_LOCALNAME}\"`" == "CVS" ]; then
+		debug-print "$FUNCNAME: removing cvs-empty directory $ECVS_LOCALNAME"
+		rm -rf "${ECVS_TOP_DIR}/${ECVS_LOCALNAME}"
 	fi
 
 	# implement some of base_src_unpack's functionality;
