@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/rsync-2.6.3.ebuild,v 1.5 2004/11/12 15:44:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/rsync-2.6.3.ebuild,v 1.6 2004/11/22 03:40:25 vapier Exp $
 
 inherit eutils flag-o-matic gcc gnuconfig
 
@@ -35,7 +35,7 @@ src_unpack() {
 	# yes, updating the man page is very important.
 	sed -i \
 		-e 's|/etc/rsyncd|/etc/rsync/rsyncd|g' \
-		rsyncd.conf.5 \
+		rsync.1 rsyncd.conf.5 \
 		|| die "sed rsyncd.conf.5 failed"
 }
 

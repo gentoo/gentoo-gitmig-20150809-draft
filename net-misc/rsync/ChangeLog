@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/rsync
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/ChangeLog,v 1.70 2004/10/03 04:36:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/ChangeLog,v 1.71 2004/11/22 03:40:25 vapier Exp $
+
+  21 Nov 2004; Mike Frysinger <vapier@gentoo.org> rsync-2.6.0-r3.ebuild,
+  rsync-2.6.3.ebuild:
+  Make sure we update the rsync(1) manpage with the new .conf location too
+  #71650 by Paul Oldham.
 
 *rsync-2.6.3 (03 Oct 2004)
 
