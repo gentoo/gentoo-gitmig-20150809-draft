@@ -1,4 +1,14 @@
-MD5 1557d2ef3df2d922894878ebdf68daef modplugbmp-2.05.ebuild 547
-MD5 0694c8355abd0c94e548da3c80b5398f ChangeLog 423
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 dd820d87dff56ca4b796eab2bee68873 modplugbmp-2.05.ebuild 555
+MD5 6015f7eb2d440650e813840de9e67931 ChangeLog 542
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 9a8c41fa5eed5d7dbff94c57218926fc files/digest-modplugbmp-2.05 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCPzHD06ebR+OMO78RAomBAJwM44l8qvg4FdYjsJJUiLYOyttXqQCdFimJ
+Gr25mJQ5yOLN0xR3lEW3Q1k=
+=JZ1U
+-----END PGP SIGNATURE-----
