@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/screen
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/ChangeLog,v 1.58 2004/03/24 02:22:19 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/ChangeLog,v 1.59 2004/04/04 04:10:46 spyderous Exp $
+
+*screen-4.0.2 (03 Apr 2004)
+
+  03 Apr 2004; Donnie Berkholz <spyderous@gentoo.org>; screen-4.0.2.ebuild:
+  Version bump, closes #43485.
 
   23 Mar 2004; Donnie Berkholz <spyderous@gentoo.org>;
   screen-3.9.13-r4.ebuild, screen-3.9.15-r1.ebuild, screen-3.9.15.ebuild,
