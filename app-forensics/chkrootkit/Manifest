@@ -1,19 +1,19 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 b81ff21807489f7057378f482f47d6ce ChangeLog 8101
+MD5 0d0b6d0e08b3c60520c708a1a6a90fb2 chkrootkit-0.44.ebuild 1443
+MD5 9d44ac1021ba924847c6c046c614f152 ChangeLog 8196
+MD5 7460fdec86596dcf99c66fbb167712af metadata.xml 256
 MD5 cfa2d89ba918b5b388154b6ed6bf5e4d chkrootkit-0.43-r3.ebuild 931
 MD5 20a80cb789b5489a4786a77a0e90cb74 chkrootkit-0.43-r4.ebuild 1108
-MD5 841b91bdf09bc95a2d2bc29c6fa341a3 chkrootkit-0.44.ebuild 1444
-MD5 7460fdec86596dcf99c66fbb167712af metadata.xml 256
+MD5 1f4cc273611ca05137d997b8d4bad9de files/digest-chkrootkit-0.44 140
+MD5 e4f72853578cf59cb609efc280621591 files/digest-chkrootkit-0.43-r4 142
 MD5 bb6a980a762d72e1928231eabf4a9304 files/chkrootkit.cron 78
 MD5 e4f72853578cf59cb609efc280621591 files/digest-chkrootkit-0.43-r3 142
-MD5 e4f72853578cf59cb609efc280621591 files/digest-chkrootkit-0.43-r4 142
-MD5 1f4cc273611ca05137d997b8d4bad9de files/digest-chkrootkit-0.44 140
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
+Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBh50wHTu7gpaalycRAjpMAKC4/RDXNSjltObfhmbINXEtt7Rq+QCdGsjq
-BhnAVvCbghfSlgqSj9iCug0=
-=8Kjn
+iD8DBQFBk8FCugEuf3OQ0akRAsnSAJ0cqEv160CBwZUNf/2zDRvJxt9gyQCgmmgM
+cS5FYKQbYZ5hpL4uZXwNsNY=
+=o0Wp
 -----END PGP SIGNATURE-----
