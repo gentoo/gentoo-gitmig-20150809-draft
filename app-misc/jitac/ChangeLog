@@ -1,11 +1,14 @@
 # ChangeLog for app-misc/jitac
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/jitac/ChangeLog,v 1.7 2004/10/03 21:28:16 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/jitac/ChangeLog,v 1.8 2004/10/03 21:30:24 weeve Exp $
+
+  03 Oct 2004; Jason Wever <weeve@gentoo.org> :
+  Added ~sparc keyword rather, not stable ;)
 
 *jitac-0.2.0-r1 (03 Oct 2004)
 
   03 Oct 2004; Jason Wever <weeve@gentoo.org> jitac-0.2.0-r1.ebuild:
-  Stable on sparc.
+  Added ~sparc keyword.
 
   21 Sep 2004; Thomas Matthijs <axxo@gentoo.org> jitac-0.2.0.ebuild:
   now builds from source
