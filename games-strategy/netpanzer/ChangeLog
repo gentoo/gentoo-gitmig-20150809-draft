@@ -1,6 +1,11 @@
 # ChangeLog for games-strategy/netpanzer
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/netpanzer/ChangeLog,v 1.1 2003/10/22 01:36:22 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/netpanzer/ChangeLog,v 1.2 2003/11/19 08:47:47 mr_bones_ Exp $
+
+*netpanzer-0.1.2 (19 Nov 2003)
+
+  19 Nov 2003; Michael Sterrett <mr_bones_@gentoo.org> netpanzer-0.1.2.ebuild:
+  version bump; mark stable; ebuild submitted by Matze Braun via bug 33551
 
 *netpanzer-0.1.1 (21 Oct 2003)
 

@@ -1,4 +1,7 @@
 MD5 4b46f95d12f6061c6110c0ea26bfd7c3 netpanzer-0.1.1.ebuild 1362
 MD5 a30c9d4ce8f9629d6d7323eaab258343 metadata.xml 241
 MD5 2e0c547a6196d31c6eac737bf071cb4e ChangeLog 408
+MD5 4471368faed5f0747931c510ee76c53b netpanzer-0.1.2.ebuild 1509
+MD5 845bf534428c971a36b91920aa3d0a9f attachment.cgi?id=20920 1507
 MD5 445b8fd897674545f22a41398d72e1aa files/digest-netpanzer-0.1.1 139
+MD5 645083cd556e0f9fbfcd8d3f235b0987 files/digest-netpanzer-0.1.2 141
