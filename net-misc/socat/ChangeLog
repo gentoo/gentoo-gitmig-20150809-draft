@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/socat
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/socat/ChangeLog,v 1.14 2004/12/29 20:11:27 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/socat/ChangeLog,v 1.15 2005/03/21 23:10:18 chriswhite Exp $
+
+*socat-1.4.2.0 (22 Mar 2005)
+
+  22 Mar 2005; Chris White <chriswhite@gentoo.org> +socat-1.4.2.0.ebuild:
+  Version bump to 1.4.2.0.  Closes bug #86187.
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
