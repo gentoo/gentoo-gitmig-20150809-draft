@@ -1,4 +1,14 @@
-MD5 a162e770fb7a961ad9517fc0c2bc656d esmart-0.9.0.20040529.ebuild 519
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 72c438b3abce7b4050a3b4a273d24185 ChangeLog 477
+MD5 0689489408eda6722fd9e7d45b9430de esmart-0.9.0.20040710.ebuild 517
 MD5 03e193e953748331a7a613ed5973379c metadata.xml 322
-MD5 88000d252b527b6b1dca71eadba39c99 files/digest-esmart-0.9.0.20040529 73
+MD5 9d68d2dbbb8f1814b0bf74ffa83235b6 files/digest-esmart-0.9.0.20040710 73
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFA8oWZHTu7gpaalycRAvgXAKC/8d1bT3uM+OPZUTGeXmrfQx1kaACg5jFd
+XZWMGPKredKGyl/MdtVyqQY=
+=ztV/
+-----END PGP SIGNATURE-----

@@ -1,4 +1,14 @@
-MD5 56beaffcd382313a58b77d56e1f3bfaa evas-1.0.0.20040529_pre13.ebuild 2311
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 4bf96dabf8299fbfac51640fbdd2e95b ChangeLog 875
+MD5 152f388cfcc5153cc78d9e302035839b evas-1.0.0.20040710_pre13.ebuild 2309
 MD5 f252e043af6a26e0d6d472a0af071f6d metadata.xml 1304
-MD5 e2fa4bee2ac9b92ff9751ae5e7234e5d files/digest-evas-1.0.0.20040529_pre13 79
+MD5 d28528a5842a05770c4dd8c9f665d15d files/digest-evas-1.0.0.20040710_pre13 79
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFA8oXbHTu7gpaalycRAl5JAKD2bqqIDkUoqMwMMFr6pG34+JHu8QCghZR5
++V3iquwfeYAqEuc/PllmBu0=
+=zuvF
+-----END PGP SIGNATURE-----
