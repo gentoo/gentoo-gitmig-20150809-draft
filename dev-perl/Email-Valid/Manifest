@@ -1,6 +1,16 @@
-MD5 37903fe1ee72b56db68246bac94dd524 Email-Valid-0.15.ebuild 597
-MD5 099a76803d4ad3f3246471cc74f9555d ChangeLog 989
-MD5 ae57d828f094beeae1415443f6335464 Email-Valid-0.14.ebuild 580
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 410d6429a95878f2a299e34e1c79be5e ChangeLog 1088
+MD5 49cb35eb18afc24b9e8b19355599f98b Email-Valid-0.14.ebuild 584
+MD5 29b38a4f1535cc488b4f6fdccd4a0d4a Email-Valid-0.15.ebuild 602
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 7b34fd95373daa8b8140f36a8410a581 files/digest-Email-Valid-0.15 66
 MD5 e8c4032af924f0f408ede69dcc94d663 files/digest-Email-Valid-0.14 66
+MD5 7b34fd95373daa8b8140f36a8410a581 files/digest-Email-Valid-0.15 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFB5bZyKRy60XGEcJIRAp8wAKCfOQrZodANeYVvgXhM69BpwQQb2wCfTK/r
+Rx4yevgeFFr8cZVgB1cpl/c=
+=j8HD
+-----END PGP SIGNATURE-----
