@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/color-theme/color-theme-5.2.13.ebuild,v 1.3 2003/03/20 22:05:40 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/color-theme/color-theme-6.5.0.ebuild,v 1.1 2003/03/20 22:05:40 mkennedy Exp $
 
 inherit elisp
 
