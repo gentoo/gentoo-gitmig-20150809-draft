@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnome/libgnome-2.8.1.ebuild,v 1.2 2005/02/24 10:14:42 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnome/libgnome-2.8.1.ebuild,v 1.3 2005/03/25 01:42:02 halcy0n Exp $
 
 inherit gnome2 eutils
 
@@ -38,5 +38,7 @@ src_unpack() {
 	# http://bugzilla.gnome.org/show_bug.cgi?id=168110
 	epatch ${FILESDIR}/${P}-va_list.patch
 
+	# patch to fix gcc4 compile problem see: bug #85558
+	epatch ${FILESDIR}/${PN}-gcc4.patch
 }
 
