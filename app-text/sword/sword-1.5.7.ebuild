@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sword/sword-1.5.7.ebuild,v 1.3 2004/04/08 20:18:46 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sword/sword-1.5.7.ebuild,v 1.4 2004/04/08 22:11:14 squinky86 Exp $
 
 inherit eutils
 
@@ -15,12 +15,13 @@ KEYWORDS="~x86 ~ppc"
 IUSE="icu curl"
 DEPEND="virtual/glibc
 	sys-libs/zlib
-	curl? ( >=net-misc/curl-7.9 )
+	curl? ( >=net-misc/curl-7.10.8 )
 	icu? ( dev-libs/icu )"
 
 src_unpack() {
 	unpack ${A}
-	epatch ${FILESDIR}/${P}-gentoo.patch
+	cd ${S}
+	epatch ${FILESDIR}/${PN}-installmgr-gentoo.patch
 }
 
 src_compile() {
@@ -30,6 +31,8 @@ src_compile() {
 
 src_install() {
 	einstall || die "install failed"
+	dodir /etc
+	doins ${FILESDIR}/sword.conf
 
 	dodoc AUTHORS CODINGSTYLE INSTALL ChangeLog README
 	cp -R samples examples ${D}/usr/share/doc/${PF}
