@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/offlineimap
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/offlineimap/ChangeLog,v 1.10 2004/10/01 21:03:11 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/offlineimap/ChangeLog,v 1.11 2004/10/07 01:23:08 agriffis Exp $
+
+  06 Oct 2004; Aron Griffis <agriffis@gentoo.org> offlineimap-4.0.7.ebuild:
+  stable on alpha, ia64, amd64 and x86
 
 *offlineimap-4.0.7 (01 Oct 2004)
 
