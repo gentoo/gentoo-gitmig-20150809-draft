@@ -1,8 +1,11 @@
 # ChangeLog for gnome-extra/gnome-system-monitor
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-system-monitor/ChangeLog,v 1.13 2003/02/12 06:53:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-system-monitor/ChangeLog,v 1.14 2003/02/19 19:54:29 foser Exp $
 
 *gnome-system-monitor-2.0.4-r1 (1 Feb 2003)
+
+  19 Feb 2003; foser <foser@gentoo.org> gnome-system-monitor-2.0.4-r1.ebuild :
+  disabled patch for now (#15406)
 
   07 Feb 2003; foser <foser@gentoo.org> gnome-system-monitor-2.0.4-r1.ebuild :
   Added MAKEOPTS to fix possible failure with compiling in combination with the patch
