@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jdbc2-postgresql
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc2-postgresql/ChangeLog,v 1.4 2004/02/10 07:18:24 strider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc2-postgresql/ChangeLog,v 1.5 2004/02/25 09:02:44 absinthe Exp $
+
+  25 Feb 2004; Dylan Carlson <absinthe@gentoo.org>
+  jdbc2-postgresql-7.3.ebuild:
+  added amd64 keyword.
 
   10 Feb 2004; Adrian Almenar <strider@gentoo.org>
   jdbc2-postgresql-6.5.2.ebuild, jdbc2-postgresql-7.0.ebuild,
