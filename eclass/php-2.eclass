@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-2.eclass,v 1.4 2003/12/22 06:44:46 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-2.eclass,v 1.5 2003/12/23 10:53:35 coredumb Exp $
 # Author: Robin H. Johnson <robbat2@gentoo.org>
 
 inherit eutils flag-o-matic
@@ -190,10 +190,13 @@ php_src_unpack() {
 	# ensure correct perms on configure
 	chmod 755 configure
 
+
+	# no longer needed and breaks pear - Tal, 20031223
+	
 	# fix PEAR installer for our packaging
 	# we keep a backup of it as we need it at the end of the install
-	cp pear/PEAR/Registry.php pear/PEAR/Registry.old
-	sed -e "s:\$pear_install_dir\.:\'${D}/usr/lib/php/\' . :g" -i pear/PEAR/Registry.php
+	#cp pear/PEAR/Registry.php pear/PEAR/Registry.old
+	#sed -e "s:\$pear_install_dir\.:\'${D}/usr/lib/php/\' . :g" -i pear/PEAR/Registry.php
 }
 
 
@@ -429,11 +432,12 @@ php_src_install() {
 	#install scripts
 	exeinto /usr/bin
 
+	# See comment above regarding this 
 	# only php-core has the PEAR stuff
-	if [ "${PN}" = "php-core" ]; then
-		#revert Pear patch
-		cp ${S}/pear/PEAR/Registry.old ${D}/usr/lib/php/PEAR/Registry.php
-	fi
+	#if [ "${PN}" = "php-core" ]; then
+	#	#revert Pear patch
+	#	cp ${S}/pear/PEAR/Registry.old ${D}/usr/lib/php/PEAR/Registry.php
+	#fi
 
 	# Support for Java extension
 	# 1. install php_java.jar file into ${EXT_DIR}
