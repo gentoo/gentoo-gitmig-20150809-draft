@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/ppp
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.41 2003/12/27 14:37:21 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.42 2003/12/27 14:47:27 lanius Exp $
+
+  27 Dec 2003; Heinrich Wendel <lanius@gentoo.org> files/2.4.2b3/net.ppp0:
+  fixed sleep command to work on all locales (bug #36571)
 
   27 Dec 2003; Heinrich Wendel <lanius@gentoo.org> ppp-2.4.2_beta3-r1.ebuild:
   fixed sed expression to only replace pppoe.so but not rp-pppoe.so
