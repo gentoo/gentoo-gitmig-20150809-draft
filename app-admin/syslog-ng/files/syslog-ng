@@ -1,0 +1,27 @@
+#!/bin/sh
+#RCUPDATE:1 2 3 4 5:19:This line is required for script management
+
+. /etc/rc.d/config/functions
+. /etc/rc.d/config/basic
+
+SERVICE=syslog-ng
+opts="start stop"
+
+start() {
+    ebegin "Starting syslog-ng"
+    start-stop-daemon --start --exec /usr/sbin/syslog-ng -- 1>&2
+    retval=$?
+    eend $retval 
+}
+
+stop() {
+    ebegin "Stopping syslog-ng"
+    start-stop-daemon --stop --pidfile /var/run/syslog-ng.pid 1>&2
+    retval=$?
+    eend $retval 
+}
+
+doservice ${@}
+
+
+
