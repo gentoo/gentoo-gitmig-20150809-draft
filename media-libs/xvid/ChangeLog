@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/xvid
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xvid/ChangeLog,v 1.32 2004/10/22 15:22:22 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xvid/ChangeLog,v 1.33 2004/10/25 23:21:44 weeve Exp $
+
+  25 Oct 2004; Jason Wever <weeve@gentoo.org> xvid-1.0.2.ebuild:
+  Stable on sparc.
 
   22 Oct 2004; Patrick Kursawe <phosphan@gentoo.org> xvid-1.0.2.ebuild:
   Declaring stable for x86.
