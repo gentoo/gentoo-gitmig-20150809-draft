@@ -1,2 +1,5 @@
-MD5 36d6038b3b6996965446d17a1230b1b8 hspell-0.4.ebuild 558
+MD5 29b6ef7cdff2fc11d04580e364fdef06 hspell-0.4.ebuild 656
+MD5 a151e77304b422fcecb6a0fd3dbe249e ChangeLog 376
+MD5 29b6ef7cdff2fc11d04580e364fdef06 hspell-0.5.ebuild 656
 MD5 a3add5004188510ae49094621f34b52b files/digest-hspell-0.4 61
+MD5 d2366a1445d9b6dff132730b00319e58 files/digest-hspell-0.5 62
