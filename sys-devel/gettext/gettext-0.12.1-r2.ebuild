@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.12.1-r2.ebuild,v 1.14 2004/11/12 14:14:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.12.1-r2.ebuild,v 1.15 2004/12/13 04:44:08 usata Exp $
 
 inherit eutils gnuconfig toolchain-funcs libtool
 
@@ -20,7 +20,7 @@ src_unpack() {
 	cd ${S}
 	use bootstrap && epatch ${FILESDIR}/${P}-bootstrap.patch
 	epatch ${FILESDIR}/${P}-tempfile.patch #66355
-	elibtoolize --reverse-deps
+	use ppc-macos || elibtoolize --reverse-deps
 	gnuconfig_update
 }
 
