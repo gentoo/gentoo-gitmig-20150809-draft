@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/mysql++
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql++/ChangeLog,v 1.10 2003/08/02 19:53:30 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql++/ChangeLog,v 1.11 2003/08/18 04:37:58 robbat2 Exp $
+
+*mysql++-1.7.9-r2 (17 Aug 2003)
+
+  17 Aug 2003; Robin H. Johnson <robbat2@gentoo.org> mysql++-1.7.9-r2.ebuild:
+  add latest patches, should fix #23621
 
   02 Aug 2003; Robin H. Johnson <robbat2@gentoo.org> mysql++-1.7.9-r1.ebuild:
   $A should NOT be quoted at all in an unpack call
