@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/squirrelmail/squirrelmail-1.4.2-r5.ebuild,v 1.2 2004/05/02 10:20:20 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/squirrelmail/squirrelmail-1.4.2-r5.ebuild,v 1.3 2004/05/02 19:40:07 eradicator Exp $
 
 inherit webapp eutils
 
@@ -153,7 +153,7 @@ src_install() {
 	cp -r . ${D}${MY_HTDOCSDIR}
 
 	# Identify the configuration files that this app uses
-	local configs="data config/config.php config/config_local.php plugins/retrieveuserdata/config.php"
+	local configs="config/config.php config/config_local.php plugins/retrieveuserdata/config.php"
 	use virus_scan && configs="${configs} plugins/virus_scan/config.php"
 	use crypt && configs="${configs} plugins/gpg/gpg_local_prefs.txt"
 	use ldap && configs="${configs} plugins/ldapuserdata/config.php"
