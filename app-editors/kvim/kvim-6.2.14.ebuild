@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/kvim/kvim-6.2.14.ebuild,v 1.4 2003/10/03 11:53:04 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/kvim/kvim-6.2.14.ebuild,v 1.5 2003/11/12 14:30:14 agriffis Exp $
 
 IUSE="python gpm nls ruby perl"
 
@@ -25,6 +25,8 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/kvim-6.2.14-gcc2.patch
+	# Resolve conflicting symbol "e_number" between vim and perl 5.8.2
+	epatch ${FILESDIR}/kvim-6.2.14-perl582.patch
 }
 
 src_compile() {
