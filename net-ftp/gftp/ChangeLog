@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/gftp
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/gftp/ChangeLog,v 1.34 2004/08/04 13:53:58 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/gftp/ChangeLog,v 1.35 2004/11/02 19:43:24 corsair Exp $
+
+  02 Nov 2004; Markus Rothe <corsair@gentoo.org> gftp-2.0.17.ebuild:
+  Stable on ppc64
 
   04 Aug 2004; Travis Tilley <lv@gentoo.org> gftp-2.0.15.ebuild,
   gftp-2.0.16-r1.ebuild, gftp-2.0.17.ebuild:
