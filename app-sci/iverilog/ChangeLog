@@ -1,6 +1,9 @@
 # ChangeLog for app-sci/iverilog
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/iverilog/ChangeLog,v 1.5 2003/03/09 20:29:43 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/iverilog/ChangeLog,v 1.6 2003/06/12 00:09:50 msterret Exp $
+
+  11 Jun 2003; <msterret@gentoo.org> iverilog-0.7.ebuild:
+  Based on Bug#: 20350, add -j1 to emake.
 
 *iverilog-0.7 (09 Mar 2003)
 
