@@ -1,18 +1,17 @@
 # Copyright 2002 Gentoo Technologies Inc.
 # Distributed under the terms of the GNU General Public License, v2.
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/pptpclient/pptpclient-1.1.0.ebuild,v 1.2 2002/07/17 10:43:25 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/pptpclient/pptpclient-1.1.0.ebuild,v 1.3 2002/09/23 20:07:52 vapier Exp $
 
 
 S=${WORKDIR}/pptp-linux-${PV}-1
-DESCRIPTION="Linux client for the proprietary Microsoft Point-to-Point Tunneling Protocol, PPTP. Allows connection to a PPTP based VPN 
-as used by employers and some cable and ADSL service providers."
-HOMEPAGE="http://pptpclient.sourceforge.net"
+DESCRIPTION="Linux client for PPTP"
+HOMEPAGE="http://pptpclient.sourceforge.net/"
 SRC_URI="mirror://sourceforge/pptpclient/pptp-linux-${PV}-1.tar.gz"
 
 DEPEND="net-dialup/ppp"
 
 SLOT="0"
-LICENSE="GPL"
+LICENSE="GPL-2"
 KEYWORDS="x86"
 
 src_compile() {

@@ -1,18 +1,18 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/mgetty/mgetty-1.1.28.ebuild,v 1.3 2002/07/17 10:43:24 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/mgetty/mgetty-1.1.28.ebuild,v 1.4 2002/09/23 20:02:59 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Fax and Voice modem programs."
 SRC_URI="ftp://alpha.greenie.net/pub/mgetty/source/1.1/${PN}${PV}-Jan10.tar.gz"
-HOMEPAGE="http://alpha.greenie.net/mgetty"
+HOMEPAGE="http://alpha.greenie.net/mgetty/"
 
 DEPEND="app-text/tetex
 	sys-apps/gawk
 	sys-devel/perl"
 
 SLOT="0"
-LICENSE="GPL"
+LICENSE="GPL-2"
 KEYWORDS="x86"
 
 src_unpack() {
