@@ -1,12 +1,16 @@
 # ChangeLog for media-video/gst-player
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gst-player/ChangeLog,v 1.4 2003/02/12 07:38:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gst-player/ChangeLog,v 1.5 2003/02/21 14:55:06 foser Exp $
+
+*gst-player-0.5.0 (21 Feb 2003)
+
+  21 Feb 2003; foser <foser@gentoo.org> gst-player-0.5.0.ebuild :
+  New version, cleaned up the ebuild
 
 *gst-player-0.4.2-r1 (02 Nov 2002)
 
   03 Jan 2003; Luca Barbato <lu_zero@gentoo.org> gst-player-0.4.2-r1.ebuild :
   libexec path fix
-
 
 *gst-player-0.4.2 (02 Nov 2002)
 
