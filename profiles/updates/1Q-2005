@@ -175,3 +175,4 @@ move sys-apps/cronbase sys-process/cronbase
 move sys-apps/dcron sys-process/dcron
 move sys-apps/fcron sys-process/fcron
 move sys-apps/vixie-cron sys-process/vixie-cron
+move sys-apps/subterfugue sys-devel/subterfugue
