@@ -1,12 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-1.0.5-r1.ebuild,v 1.3 2003/09/07 00:11:41 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-1.0.5-r1.ebuild,v 1.4 2003/10/21 16:09:47 mholzer Exp $
 
 IUSE="tcpd"
 
 DESCRIPTION="NFS client and server daemons"
 SRC_URI="mirror://sourceforge/nfs/${P}.tar.gz"
 HOMEPAGE="http://nfs.sourceforge.net/"
+RESTRICT="nomirror"
 
 SLOT="0"
 LICENSE="GPL-2"
