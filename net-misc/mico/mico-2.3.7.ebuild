@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mico/mico-2.3.7.ebuild,v 1.3 2003/09/05 22:01:49 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mico/mico-2.3.7.ebuild,v 1.4 2004/05/10 20:28:32 lv Exp $
 
 IUSE="ssl tcltk"
 
