@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/perlgcache/perlgcache-0.8.3.ebuild,v 1.1 2004/10/12 17:24:35 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/perlgcache/perlgcache-0.8.3.ebuild,v 1.2 2004/10/17 09:57:20 dholm Exp $
 
 inherit webapp
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.jonatkins.com/perlgcache/"
 SRC_URI="http://www.jonatkins.com/perlgcache/${P}.tar.gz"
 LICENSE="as-is"
 IUSE=""
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 
 DEPEND=">=sys-apps/sed-4"
 RDEPEND=">=net-www/apache-1.3.24-r1

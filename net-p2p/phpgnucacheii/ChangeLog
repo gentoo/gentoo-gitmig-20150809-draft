@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/phpgnucacheii
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/phpgnucacheii/ChangeLog,v 1.1 2004/09/17 16:52:53 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/phpgnucacheii/ChangeLog,v 1.2 2004/10/17 09:58:25 dholm Exp $
+
+  17 Oct 2004; David Holm <dholm@gentoo.org> phpgnucacheii-2.1.1.ebuild:
+  Added to ~ppc.
 
 *phpgnucacheii-2.1.1 (17 Sep 2004)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/phpgnucacheii/phpgnucacheii-2.1.1.ebuild,v 1.1 2004/09/17 16:52:53 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/phpgnucacheii/phpgnucacheii-2.1.1.ebuild,v 1.2 2004/10/17 09:58:25 dholm Exp $
 
 inherit webapp
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://gwcii.sourceforge.net/"
 SRC_URI="mirror://sourceforge/gwcii/${P}.tar.gz"
 LICENSE="GPL-2"
 IUSE=""
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 
 S=${WORKDIR}/${PN}
 
