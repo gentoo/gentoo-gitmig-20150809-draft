@@ -17,5 +17,5 @@ MD5 258879d2a4fd175a96b7c80bb99a82cf files/digest-arts-1.3.1 63
 MD5 64df5930253711053181dcdbba96f42b files/arts-1.3.2-mcopidl.patch 418
 MD5 22eaa23f91c114995e7b8ae286c3ac2c files/arts-1.3.2-alsa-bigendian.patch 571
 MD5 185a4720c0e94a1546ee383016fc3e3c files/arts-vorbis-fix.dif 1136
-MD5 4068c026231dc426da1b5827a7d4acc7 files/digest-arts-3.4.0_beta2 64
+MD5 cae7c39ec324d9a874c2c75aa3cf33f2 files/digest-arts-3.4.0_beta2 64
 MD5 196311c78bda3759d3d92a450fcf12ea files/arts-1.4-mcopidl.patch 448
