@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tse3/tse3-0.2.7.ebuild,v 1.12 2004/09/01 17:31:36 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tse3/tse3-0.2.7.ebuild,v 1.13 2004/10/08 09:51:50 eradicator Exp $
 
 IUSE="alsa oss arts"
 
@@ -35,19 +35,15 @@ src_unpack() {
 src_compile() {
 	local myconf=""
 
-	use arts || myconf="$myconf --without-arts"
-	use alsa || myconf="$myconf --without-alsa"
-	use oss || myconf="$myconf --without-oss"
-	./configure \
-		--host=${CHOST} \
-		--prefix=/usr \
-		--infodir=/usr/share/info \
-		--mandir=/usr/share/man \
-	$myconf || die "./configure failed"
-	make || die
+	use arts || myconf="${myconf} --without-arts"
+	use alsa || myconf="${myconf} --without-alsa"
+	use oss || myconf="${myconf} --without-oss"
+
+	econf ${myconf} || die "./configure failed"
+	emake -j1 || die
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die
 	dodoc AUTHORS ChangeLog COPYING INSTALL NEWS README THANKS TODO Version
 }

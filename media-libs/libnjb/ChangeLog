@@ -1,9 +1,10 @@
 # ChangeLog for media-libs/libnjb
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libnjb/ChangeLog,v 1.13 2004/10/07 03:00:27 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libnjb/ChangeLog,v 1.14 2004/10/08 09:46:58 eradicator Exp $
 
-  06 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org> libnjb-1.2.ebuild:
-  get_libdir fixes.
+  08 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  +files/libnjb-1.2-gentoo-multilib.patch, libnjb-1.2.ebuild::
+  multilib fixes.  Stable amd64.
 
 *libnjb-1.2 (05 Oct 2004)
 
