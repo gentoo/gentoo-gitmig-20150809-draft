@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgd/libgd-1.8.3-r5.ebuild,v 1.7 2002/10/05 05:39:15 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgd/libgd-1.8.3-r5.ebuild,v 1.8 2002/10/23 02:55:21 seemant Exp $
 
 IUSE="X"
 
@@ -14,27 +14,46 @@ SLOT="0"
 LICENSE="as-is | BSD"
 KEYWORDS="x86 ppc sparc sparc64"
 
-DEPEND=">=media-libs/jpeg-6b
-	>=media-libs/libpng-1.0.7
-	~media-libs/freetype-1.3.1
-	X? ( virtual/x11 )"
+DEPEND="sys-apps/supersed
+	media-libs/libpng
+	X? ( virtual/x11 )
+	jpeg? ( media-libs/jpeg )
+	truetype? ( =media-libs/freetype-1.3* )"
 
 src_unpack() {
 
 	unpack ${A}
 	cd ${S}
-	cp Makefile Makefile.orig
-	if [ "`use X`" ]
+
+	local compopts
+	local libsopts
+
+	use X \
+		&& compopts="${compopts} -DHAVE_XPM" \
+		&& libsopts="${libsopts} -lXpm -lX11"
+	
+	use jpeg \
+		&& compopts="${compopts} -DHAVE_JPEG" \
+		&& libsopts="${libsopts} -ljpeg"
+
+	
+	compopts="${compopts} -DHAVE_PNG" \
+	libsopts="${libsopts} -lpng"
+	
+	use truetype \
+		&& compopts="${compopts} -DHAVE_LIBTTF" \
+		&& libsopts="${libsopts} -lttf"
+	
+	if use truetype
 	then
-		sed -e "s/^\(CFLAGS\)=.*/\1=$CFLAGS -DHAVE_XPM -DHAVE_JPEG -DHAVE_LIBTTF -DHAVE_PNG /" \
-		-e "s/^\(LIBS\)=.*/\1=-lm -lgd -lpng -lz -ljpeg -lttf -lXpm -lX11/" \
-		-e "s/^\(INCLUDEDIRS\)=/\1=-I\/usr\/include\/freetype /" \
-		Makefile.orig > Makefile
+		ssed -i -e "s:^\(CFLAGS\)=.*:\1=${CFLAGS} ${compopts} :" \
+			-e "s:^\(LIBS\)=.*:\1=-lm -lgd -lz ${libsopts}:" \
+			-e "s:^\(INCLUDEDIRS\)=:\1=-I/usr/include/freetype :" \
+		Makefile
 	else
-		sed -e "s/^\(CFLAGS\)=.*/\1=$CFLAGS -DHAVE_JPEG -DHAVE_LIBTTF -DHAVE_PNG /" \
-		-e "s/^\(LIBS\)=.*/\1=-lm -lgd -lpng -lz -ljpeg -lttf/" \
-		-e "s/^\(INCLUDEDIRS\)=/\1=-I\/usr\/include\/freetype /" \
-		Makefile.orig > Makefile
+		ssed -i -e "s:^\(CFLAGS\)=.*:\1=${CFLAGS} ${compopts} :" \
+		-e "s:^\(LIBS\)=.*:\1=-lm -lgd -lz ${libsopts}:" \
+		Makefile
 	fi
 
 }
@@ -49,10 +68,10 @@ src_install() {
 	
 	dodir /usr/{bin,lib,include}
 	
-	make 	\
-		INSTALL_LIB=${D}/usr/lib	\
+	make \
+		INSTALL_LIB=${D}/usr/lib \
 		INSTALL_BIN=${D}/usr/bin \
-		INSTALL_INCLUDE=${D}/usr/include	\
+		INSTALL_INCLUDE=${D}/usr/include \
 		install || die
 	
 	preplib /usr
