@@ -1,6 +1,10 @@
 # ChangeLog for app-text/chasen
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/chasen/ChangeLog,v 1.5 2004/04/18 05:16:14 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/chasen/ChangeLog,v 1.6 2004/04/25 15:00:25 usata Exp $
+
+  25 Apr 2004; Mamoru KOMACHI <usata@gentoo.org> chasen-2.3.1.ebuild,
+  chasen-2.3.2.ebuild, chasen-2.3.3.ebuild:
+  Marked stable on x86. Don't assign default to S
 
   18 Apr 2004; <matsuu@gentoo.org> chasen-2.3.3.ebuild:
   Added ~ppc and ~sparc to KEYWORDS.
