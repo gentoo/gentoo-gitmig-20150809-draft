@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gnubg/gnubg-0.14.2.ebuild,v 1.8 2004/12/27 04:31:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnubg/gnubg-0.14.2.ebuild,v 1.9 2004/12/27 06:41:02 vapier Exp $
 
 inherit gnuconfig flag-o-matic games
 
@@ -15,7 +15,7 @@ SRC_URI="ftp://alpha.gnu.org/gnu/gnubg/${P}.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="-amd64 ~ppc ~sparc x86"
-IUSE="gtk gtk2 readline python guile X gdbm truetype nls png esd arts nas"
+IUSE="gtk gtk2 readline python guile X gdbm truetype nls png esd arts nas opengl"
 
 # FIXME does this need to DEPEND on netpbm?
 RDEPEND="guile? ( dev-util/guile )
@@ -30,6 +30,7 @@ RDEPEND="guile? ( dev-util/guile )
 			=x11-libs/gtk+-1.2*
 			=dev-libs/glib-1*
 		)
+		opengl? ( x11-libs/gtkglext )
 	)
 	readline? ( sys-libs/readline )
 	X? ( virtual/x11 )
@@ -70,8 +71,11 @@ src_compile() {
 		else
 			myconf="${myconf} --with-gtk --without-gtk2"
 		fi
+		if use opengl ; then
+			myconf="${myconf} --with-board3d"
+		fi
 	else
-		myconf="${myconf} --disable-gtktest"
+		myconf="${myconf} --disable-gtktest --without-board3d"
 	fi
 	if use esd || use arts ; then
 		myconf="${myconf} --with-sound"
@@ -84,8 +88,6 @@ src_compile() {
 	# configure script doesn't handle this option correctly.
 	#       `use_with guile` \
 	egamesconf \
-		--disable-dependency-tracking \
-		--with-board3d \
 		$(use_with python) \
 		$(use_enable esd) \
 		$(use_enable arts artsc) \
