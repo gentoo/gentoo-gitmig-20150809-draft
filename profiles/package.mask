@@ -1,3 +1,6 @@
+# broken
+app-admin/webconfig
+
 # this new bison has problems and breaks nearly anything that uses it.
 # drobbins (12/31/2001)
 =sys-devel/bison-1.30
