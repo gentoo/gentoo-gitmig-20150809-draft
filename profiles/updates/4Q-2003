@@ -41,3 +41,15 @@ move games-mud/tkMOO-light games-mud/tkmoo
 move app-misc/read-edid x11-misc/read-edid
 move dev-libs/commoncpp2 dev-cpp/commoncpp2
 move app-admin/fam-oss app-admin/fam
+move sys-apps/aboot sys-boot/aboot
+move sys-apps/dvhtool sys-boot/dvhtool
+move sys-apps/grub sys-boot/grub
+move sys-apps/grub-static sys-boot/grub-static
+move sys-apps/lilo sys-boot/lilo
+move sys-apps/milo sys-boot/milo
+move sys-apps/nettrom sys-boot/nettrom
+move sys-apps/palo sys-boot/palo
+move sys-apps/quik sys-boot/quik
+move sys-apps/silo sys-boot/silo
+move sys-apps/syslinux sys-boot/syslinux
+move sys-apps/yaboot sys-boot/yaboot
