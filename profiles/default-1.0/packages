@@ -166,3 +166,10 @@
 >=net-dialup/ppp-2.4.1-r6
 <=sys-apps/tcp-wrappers-7.6-r3
 <=app-sci/octave-2.0.17
+
+#GNUStep stuff works in gcc-3 only
+~dev-util/gnustep-back
+~dev-util/gnustep-base
+~dev-util/gnustep-gui
+~dev-util/gnustep-guile
+~dev-util/gnustep-make
