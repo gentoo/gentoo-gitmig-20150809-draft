@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.4.19-r8.ebuild,v 1.1 2002/08/20 11:02:31 mjc Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.4.19-r8.ebuild,v 1.2 2002/08/20 11:19:12 mjc Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 #we use this next variable to avoid duplicating stuff on cvs
@@ -36,7 +36,6 @@ fi
 src_unpack() {
 	cd ${WORKDIR}
 	unpack linux-${OKV}.tar.bz2
-	mv linux linux-${KV} || die
 	cd ${S}
 	cat ${DISTDIR}/linux-gentoo-${KV}.patch.bz2 | bzip2 -d | patch -p1 || die
 	
