@@ -1,6 +1,13 @@
 # ChangeLog for gnome-extra/gnome-pilot
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-pilot/ChangeLog,v 1.9 2002/07/16 22:28:13 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-pilot/ChangeLog,v 1.10 2002/07/17 23:08:46 seemant Exp $
+
+*gnome-pilot-0.1.65-r5 (17 Jul 2002)
+
+  17 Jul 2002; Seemant Kulleen <seemant@gentoo.org>
+  gnome-pilot-0.1.65-r5.ebuild files/digest-gnome-pilot-0.1.65-r5 :
+
+  I oops'd on the fixing on the last release.
 
 *gnome-pilot-0.1.65-r4 (16 Jul 2002)
 
