@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-2.8.3.ebuild,v 1.3 2004/11/12 10:26:10 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-2.8.3-r1.ebuild,v 1.1 2004/11/21 17:53:21 foser Exp $
 
 inherit gnome2 eutils
 
@@ -70,6 +70,8 @@ src_unpack() {
 
 	# updated hal support (#65378)
 	epatch ${DISTDIR}/${P}-updated_hal_support.patch
+	# reiser4 patch, c'mon (#57756)
+	epatch ${FILESDIR}/${P}-reiser4_support.patch
 
 	autoconf
 

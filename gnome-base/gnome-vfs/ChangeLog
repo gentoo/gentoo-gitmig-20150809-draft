@@ -1,6 +1,11 @@
 # ChangeLog for gnome-base/gnome-vfs
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/ChangeLog,v 1.116 2004/11/12 02:19:22 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/ChangeLog,v 1.117 2004/11/21 17:53:21 foser Exp $
+
+*gnome-vfs-2.8.3-r1 (21 Nov 2004)
+
+  21 Nov 2004; foser <foser@gentoo.org> gnome-vfs-2.8.3-r1.ebuild :
+  Re-add reiser4 patch, silly me (#57756)
 
   11 Nov 2004; Gustavo Zacarias <gustavoz@gentoo.org>
   gnome-vfs-2.8.1-r2.ebuild:

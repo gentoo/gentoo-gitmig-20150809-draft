@@ -1,0 +1,11 @@
+diff -r -u --from-file=gnome-vfs-2.7.92.orig gnome-vfs-2.7.92.orig/libgnomevfs/gnome-vfs-filesystem-type.c gnome-vfs-2.7.92/libgnomevfs/gnome-vfs-filesystem-type.c
+--- gnome-vfs-2.7.92.orig/libgnomevfs/gnome-vfs-filesystem-type.c	2004-09-12 16:25:59.650886232 +0100
++++ gnome-vfs-2.7.92/libgnomevfs/gnome-vfs-filesystem-type.c	2004-09-12 22:43:46.278080336 +0100
+@@ -61,6 +61,7 @@
+ 	{ "nwfs"     , N_("Netware Volume"), 0 },
+ 	{ "proc"     , N_("System Volume"), 0 },
+ 	{ "procfs"   , N_("System Volume"), 0 },
++	{ "reiser4"  , N_("Reiser4 Linux Volume"), 1 },
+ 	{ "reiserfs" , N_("ReiserFS Linux Volume"), 1 },
+ 	{ "smbfs"    , N_("Windows Shared Volume"), 1 },
+ 	{ "supermount",N_("SuperMount Volume"), 0 },
