@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 d6bbd4ccbc7469f801d0178782bc11eb ChangeLog 1575
-MD5 8a1c6c5f4c13a4109f6f4198fdd1874b metadata.xml 223
-MD5 fc20aaf6e468523ea7d8712e962f9aa4 clamassassin-1.2.0-r1.ebuild 1011
+MD5 f9c07fb10ad476b6f2f72a56bf645a57 clamassassin-1.2.0-r1.ebuild 889
 MD5 889617f11d8f105fd686420607fa80b9 clamassassin-1.2.1.ebuild 889
-MD5 260a237b1e8241e0b63aa29c4bb7807a files/digest-clamassassin-1.2.1 69
+MD5 4f8eab476a1f164052a2a5afda779740 ChangeLog 1776
+MD5 8a1c6c5f4c13a4109f6f4198fdd1874b metadata.xml 223
 MD5 16aa47c42167085b678a375f78fce9ef files/digest-clamassassin-1.2.0-r1 69
+MD5 260a237b1e8241e0b63aa29c4bb7807a files/digest-clamassassin-1.2.1 69
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBUTs010xuJSrg3/sRAqVeAJ40Gvd/Zy2fTTWnBFUVx+mAVf1ipgCbBlbF
-DiGLwvNdz+3qiFDxEtkjfUg=
-=aiz/
+iD8DBQFBVdWACHk4+ZoBpvsRApfJAJ97dr30bciavfAmbkGeN3O8ch+OpACgsWM/
+HO14+jkadmVimD3lwpGU7jA=
+=XhHN
 -----END PGP SIGNATURE-----
