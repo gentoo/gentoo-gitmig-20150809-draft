@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-3.2.9-r7.ebuild,v 1.2 2003/09/04 08:04:42 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-3.2.9-r7.ebuild,v 1.3 2003/09/06 17:55:23 pappy Exp $
 
 IUSE=""
 
@@ -53,6 +53,12 @@ src_unpack() {
 	# Fix invalid .la files
 	cd ${WORKDIR}/${P}/dist
 	rm -f ltversion.sh
+
+	# http://www.gentoo.org/proj/en/hardened/etdyn-ssp.xml
+    if has_version 'sys-devel/hardened-gcc' && [ ${CC}="gcc" ] ; then
+        CFLAGS="-yet_exec ${CFLAGS}"
+    fi
+
 	# remove config.guess else we have problems with gcc-3.2
 	rm -f config.guess
 	sed -i "s,\(-D_GNU_SOURCE\),\1 ${CFLAGS}," configure

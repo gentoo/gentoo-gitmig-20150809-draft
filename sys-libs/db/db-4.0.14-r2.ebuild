@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.0.14-r2.ebuild,v 1.2 2003/09/04 08:04:42 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.0.14-r2.ebuild,v 1.3 2003/09/06 17:55:23 pappy Exp $
 
 IUSE="tcltk java doc"
 
@@ -44,6 +44,15 @@ src_compile() {
 		export PATH=`dirname ${JAVAC}`:${PATH}
 		export JAVAC=`basename ${JAVAC}`
 	fi
+
+    # http://www.gentoo.org/proj/en/hardened/etdyn-ssp.xml
+    if has_version 'sys-devel/hardened-gcc' && [ ${CC}="gcc" ] ; then
+		einfo "if you get errors that the blackdown jar cannot be found"
+		einfo "do not forget to chpax -pems the jar and java binaries"
+		einfo "to prevent the PaX kernel from killing the binary"
+        CFLAGS="-yet_exec ${CFLAGS}"
+		sleep 4s
+    fi
 
 	../dist/configure \
 		--prefix=/usr \
