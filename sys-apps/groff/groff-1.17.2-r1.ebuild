@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/groff-1.17.2.ebuild,v 1.2 2002/01/01 22:35:51 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/groff-1.17.2-r1.ebuild,v 1.1 2002/01/07 03:59:36 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Text formatter used for man pages"
@@ -11,18 +11,19 @@ HOMEPAGE="http://www.gnu.org/software/groff/groff.html"
 DEPEND="virtual/glibc"
 
 src_compile() {
-	./configure --host=${CHOST} \
-		--prefix=/usr \
-		--mandir=/usr/share/man || die
+	./configure --host=${CHOST} --prefix=/usr --mandir=/usr/share/man || die
 	# emake doesn't work
 	make || die
 }
 
 src_install() {
 	dodir /usr
-	make prefix=${D}/usr \
-		manroot=${D}/usr/share/man \
-		install || die
+	make prefix=${D}/usr manroot=${D}/usr/share/man install || die
+	cd ${D}/usr/bin
+	#the following links are required for xman
+	ln -s eqn geqn
+	ln -s tbl gtbl
+	ln -s soelim zsoelim
 	dodoc NEWS PROBLEMS PROJECTS README TODO VERSION BUG-REPORT \
 		COPYING ChangeLog FDL MORE.STUFF REVISION
 }
