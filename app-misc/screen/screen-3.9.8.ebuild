@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Ben Lutgens
-# $Header: /home/blutgens/gentoo-x86/app-misc/screen.ebuild,v 1.2 2001/04/21
+# $Header: /home/cvsroot/gentoo-x86/app-misc/screen.ebuild,v 1.2 2001/04/21
 # 19:25 CST blutgens Exp $
 
 #P=
