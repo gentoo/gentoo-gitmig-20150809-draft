@@ -21,6 +21,13 @@
 ##   End example
 ##
 
+# <seemant@gentoo.org> (15 Oct 2002)
+# b0rked beyond belief.
+# ExtUtils-MakeMaker is now a part of the default system profile
+# so now perl and MakeMaker will be hand in hand on every system by
+# default anyway
+=sys-devel/perl-5.6.1-r8
+
 # <blizzy@gentoo.org> (15 Oct 2002)
 # b0rked
 =app-admin/gentoo-stats-0.3
