@@ -1,8 +1,8 @@
 # Copyright 2003-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-3.0.0.ebuild,v 1.3 2004/07/06 23:24:45 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-3.0.0.ebuild,v 1.4 2004/07/09 21:17:40 karltk Exp $
 
-inherit eutils
+inherit java-utils
 
 DESCRIPTION="Eclipse Tools Platform"
 HOMEPAGE="http://www.eclipse.org/"
@@ -31,29 +31,9 @@ DEPEND="${RDEPEND}
 	app-arch/unzip"
 
 pkg_setup() {
-	ewarn "This package is _highly_ experimental."
-	ewarn "If you are using Eclipse 2.1.x for any serious work, stop now."
-	ewarn "You cannot expect to be productive with this packaging of 3.0!"
-
-	# karltk: refactor, put in java-pkg.eclass?
-	local version="$(java-config --java-version | grep 'java version' | sed -r 's/java version \"(.*)\"/\1/')"
-	local ver_rx="([0-9]+)\.([0-9]+)\.([0-9]+)(.*)"
-	local major=$(echo ${version} | sed -r "s/${ver_rx}/\1/")
-	local minor=$(echo ${version} | sed -r "s/${ver_rx}/\2/")
-	local patch=$(echo ${version} | sed -r "s/${ver_rx}/\3/")
-	local extra=$(echo ${version} | sed -r "s/${ver_rx}/\4/")
-
-	if [ ${major} -ge 1 ] && [ ${minor} -gt 4 ] ; then
-		einfo "Detected JDK is sufficient to compile Eclipse (${version} >= 1.4.2)"
-	elif [ ${major} -ge 1 ] && [ ${minor} -ge 4 ] && [ ${patch} -ge 2 ] ; then
-		einfo "Detected JDK is sufficient to compile Eclipse (${version} >= 1.4.2)"
-	else
-		die "Detected JDK (${version}) is too old to compile Eclipse, need at least 1.4.2!"
-	fi
-
-	# Needed for the IBM JDK
-	addwrite "/proc/self/maps"
-	addwrite "/proc/cpuinfo"
+	java-utils_ensure-jdk
+	java-utils_setup-vm
+#	java-utils_ensure-vm-version-ge 1 4 2
 
 	set_dirs
 	use gtk && use_gtk='true' || use_gtk='false'
@@ -201,9 +181,6 @@ build_motif_frontend() {
 }
 
 src_compile() {
-
-	addwrite "/proc/self/maps"
-	addwrite "/proc/cpuinfo"
 
 	# Figure out correct boot classpath
 	if [ ! -z "`java-config --java-version | grep IBM`" ] ; then

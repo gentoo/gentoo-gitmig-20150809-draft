@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-2.1.3-r4.ebuild,v 1.1 2004/07/09 16:32:10 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-2.1.3-r4.ebuild,v 1.2 2004/07/09 21:17:40 karltk Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://download.eclipse.org/downloads/drops/R-2.1.3-200403101828/eclips
 IUSE="gtk motif gnome kde jikes"
 SLOT="2"
 LICENSE="CPL-1.0"
-KEYWORDS="x86 ~ppc sparc"
+KEYWORDS="~x86 ~ppc ~sparc"
 
 RDEPEND=">=virtual/jdk-1.3
 	|| (
