@@ -1,12 +1,8 @@
 # ChangeLog for x11-libs/evas
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/evas/ChangeLog,v 1.5 2003/02/12 09:22:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/evas/ChangeLog,v 1.6 2003/02/20 11:52:32 vapier Exp $
 
-*evas-0.6.0 (20 Apr 2002)
+*evas-1.0.0.20030220_pre5 (20 Feb 2003)
 
-  20 Apr 2002; Leigh Dyer <lsd@linuxgamers.net> evas-0.6.0.ebuild:
-  Initial add to portage. Be sure to try evas_test once you've merged it.
-  Evas is a hardware-accelerated canvas API for X-Windows that can draw
-  anti-aliased text, smooth super and sub-sampled images, alpha-blend, as well
-  as drop down to using normal X11 primitives such as pixmaps, lines and
-  rectangles for speed if your CPU or graphics hardware are too slow
+  20 Feb 2003; Mike Frysinger <vapier@gentoo.org> :
+  Version bump to evas2 cause it pwns evas1 (CVS snapshot).
