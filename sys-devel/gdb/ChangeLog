@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/gdb
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/ChangeLog,v 1.47 2004/07/02 08:39:18 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/ChangeLog,v 1.48 2004/07/28 07:01:48 solar Exp $
+
+  28 Jul 2004; <solar@gentoo.org> gdb-6.1.1.ebuild, gdb-6.1.ebuild,
+  files/gdb-6.1-uclibc.patch:
+  patched bfd/config.bfd and ltmain for uclibc
 
   02 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> gdb-5.1.1-r2.ebuild:
   virtual/glibc -> virtual/libc
