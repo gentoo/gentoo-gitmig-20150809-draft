@@ -4,7 +4,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Tools Team <tools@gentoo.org>
 # Author: Karl Trygve Kalleberg <karltk@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/files/java-config,v 1.10 2002/05/21 19:49:12 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/files/java-config,v 1.11 2002/06/03 21:40:39 karltk Exp $
 
 version=0.2.0
 all_params="$*"
@@ -27,7 +27,7 @@ case $SYSTEM_ARCH in
 	arm)    PFORM="arm";;
 esac
 
-if [ -f $HOME/.gentoo/java-env ] ; then
+if [ $UID != 0 ] && [ -f $HOME/.gentoo/java-env ] ; then
 	. $HOME/.gentoo/java-env
 elif  [ -f /etc/env.d/20java ] ; then
 	oldpath=$PATH
@@ -35,11 +35,14 @@ elif  [ -f /etc/env.d/20java ] ; then
 	PATH=$oldpath:$PATH
 fi
 
+function eerror() {
+	echo "!!! $1" 1>&2
+}
 svm=`echo $1|egrep "\-\-(set-(system|user)-vm|list-available-vms)"`
 if [ -z "$JAVA_HOME" ] && [ -z "$svm" ] && [ "$1" != "--help" ]; then
-	echo "!!! No Java installation found" > /dev/stderr
-	echo "!!! Use --set-system-vm to select default system JVM" > /dev/stderr
-	echo "!!! Alternatively, use --set-user-vm to select default system JVM" > /dev/stderr
+	eerror "No Java installation found"
+	eerror "Use --set-system-vm to select default system JVM"
+	eerror "Alternatively, use --set-user-vm to select default system JVM"
 	exit 1
 fi
 
@@ -73,7 +76,7 @@ find_exec() {
 	elif [ -f ${JAVA_HOME}/jre/bin/$1 ] ; then
 		echo ${JAVA_HOME}/jre/bin/$1
 	else
-		echo $1 not found > /dev/stderr
+		eerror "$1 not found" 
 		exit 1
 	fi
 }                                                                       
@@ -90,7 +93,7 @@ classpathfor()
 			addcp=`grep "CLASSPATH=" $pf | sed "s/CLASSPATH=//"`
 			total="${total}:${addcp}"
 		else
-			echo "Package ${i} not found" > /dev/stderr
+			eerror "Package ${i} not found"
 			exit 1
 		fi
 	done
@@ -118,7 +121,7 @@ findpluginpath() {
 			fi
 		done
 	else
-		echo Browser "$1" unknow > /dev/stderr
+		eerror "Browser [$1] unknown"
 	fi
 
 	# This covers IBM
@@ -171,6 +174,12 @@ function vm_envvars() {
 	)
 }
 
+function source_java_classpath() {
+	echo "if [ -f $HOME/.gentoo/java-env-classpath ] ; then"
+	echo "	. $HOME/.gentoo/java-env-classpath"
+	echo "fi"
+}
+
 function set_vm() {
 	local vm=$1
 	local cfgpath=$2
@@ -189,8 +198,7 @@ function set_vm() {
 			echo "# Cmd: $0 $all_params" >> ${cfgpath}/${cfgfile}
 			vm_envvars $i $system >> ${cfgpath}/${cfgfile}
 			if [ -z $system ] ; then
-				echo ". $HOME/.gentoo/java-env-classpath" >> \
-					$HOME/.gentoo/java-env
+				source_java_classpath >> $HOME/.gentoo/java-env
 			fi
 			found="yes"
 		fi
@@ -220,7 +228,7 @@ while test $# -gt 0; do
 			if [ -n "$pluginpath" ] ; then
 				echo `basename $pluginpath`
 			else
-				echo "Plugin not found" > /dev/stderr
+				eerror "Plugin not found"
 			fi
 		;;
 		--full-browser-plugin-path=*)
@@ -285,18 +293,22 @@ while test $# -gt 0; do
 		;;
 		--set-user-classpath=*)
 			mkdir -p $HOME/.gentoo
-			echo "CLASSPATH=`calc_full_classpath $optarg`" > \
+			echo "CLASSPATH=\${CLASSPATH}:`calc_full_classpath $optarg`" > \
 				$HOME/.gentoo/java-env-classpath
 			if [ ! -f $HOME/.gentoo/java-env ] ; then
-				echo ". $HOME/.gentoo/java-env-classpath" > \
-				$HOME/.gentoo/java-env
+				source_java_classpath > $HOME/.gentoo/java-env
 			fi
 		;;
 		--set-system-vm=*)
 			set_vm $optarg /etc/env.d 20java
 		;;
 		--set-user-vm=*)
-			set_vm $optarg $HOME/.gentoo java-env 
+			if [ $UID == 0 ] ; then
+				eerror "ERROR: root should _always_ use the system-vm"
+				eerror "NOTE : user-vm for root not set."
+			else 
+				set_vm $optarg $HOME/.gentoo java-env 
+			fi
 		;;
 		*)
 			usage

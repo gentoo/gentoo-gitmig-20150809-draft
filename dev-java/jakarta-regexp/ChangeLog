@@ -1,0 +1,16 @@
+# ChangeLog for dev-java/jakarta-regexp
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jakarta-regexp/ChangeLog,v 1.1 2002/06/03 21:40:39 karltk Exp $
+
+*jakarta-regexp-1.2 (03 Jun 2002)
+
+  03 Jun 2002; Karl Trygve Kalleberg <karltk@gentoo.org> jakarta-regexp-1.2.ebuild files/digest-jakarta-regexp-1.2 :
+
+  Regexp is a 100% Pure Java Regular Expression package that was graciously 
+  donated to the Apache Software Foundation by Jonathan Locke. He originally 
+  wrote this software back in 1996 and it has stood up quite well to the test 
+  of time. It includes complete Javadoc documentation as well as a simple 
+  Applet for visual debugging and testing suite for compatibility. 
+
+  Ebuild contributed by Jordan Armstrong <jordan@papercrane.net>
+
