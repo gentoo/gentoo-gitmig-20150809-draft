@@ -1,0 +1,11 @@
+# ChangeLog for net-misc/cutecom
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cutecom/ChangeLog,v 1.1 2004/12/16 20:53:32 sekretarz Exp $
+
+*cutecom-0.12.0 (16 Dec 2004)
+
+  16 Dec 2004; Karol Wojtaszek <sekretarz@gentoo.org> +metadata.xml,
+  +cutecom-0.12.0.ebuild:
+  Initial add and the glory goes to Jurek Bartuszek <koxta@koxta.net> in bug
+  #74236
+
