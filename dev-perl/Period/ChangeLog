@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/Period
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Period/ChangeLog,v 1.2 2002/05/05 18:56:34 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Period/ChangeLog,v 1.3 2002/07/08 21:17:17 sunflare Exp $
+
+*Period-1.20-r2 (08 Jul 2002)
+
+  08 Jul 2002; Phil Bordelon <sunflare@gentoo.org> Period-1.20-r2.ebuild
+
+  The ebuild no longer worked with our current Perl modules system.  Fixed.
+  I also lintool'd and repoman'd it while I was at it.
 
 *Period-1.20-r1 (5 May 2002)
 
