@@ -1,6 +1,10 @@
 # ChangeLog for net-www/cvsweb
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cvsweb/ChangeLog,v 1.1 2004/08/15 17:26:18 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cvsweb/ChangeLog,v 1.2 2004/08/18 16:52:00 rl03 Exp $
+
+  18 Aug 2004; Renat Lumpau <rl03@gentoo.org> :
+  Version bump (bug #43546). Thanks to Rodney Amato <rodnet@iinet.net.au>
+  for his initial ebuild.
 
 *cvsweb-1.112 (15 Aug 2004)
 

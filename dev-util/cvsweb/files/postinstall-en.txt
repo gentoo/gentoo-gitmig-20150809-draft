@@ -1,0 +1,1 @@
+Now edit /etc/cvsweb/cvsweb.conf
