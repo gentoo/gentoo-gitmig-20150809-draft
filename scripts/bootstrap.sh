@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.49 2003/08/10 00:47:53 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.50 2003/10/30 23:39:30 drobbins Exp $
 
 # IMPORTANT NOTE:
 # This script no longer accepts an optional argument.
@@ -208,7 +208,23 @@ then
 fi
 
 export USE="${ORIGUSE} bootstrap"
-emerge ${STRAP_EMERGE_OPTS} ${myTEXINFO} ${myGETTEXT} ${myBINUTILS} ${myGCC} ${myGLIBC} ${myBASELAYOUT} ${myZLIB} || cleanup 1
+emerge ${STRAP_EMERGE_OPTS} ${myTEXINFO} ${myGETTEXT} ${myBINUTILS} ${myGCC} || cleanup 1
+
+# We used to call emerge once, but now we call it twice. Why? Because gcc may
+# have been built to use a different LDPATH. We want subsequent packages merged
+# to pick up any new gcc libraries. Breaking the emerge after gcc should allow
+# this to happen. This *should* allow issues like the following to be fixed (as
+# of 30 Oct 2003, whether this fixes the issue in this forums post is
+# unconfirmed):
+#
+# http://forums.gentoo.org/viewtopic.php?t=100263
+#
+# If you have questions or information about this change, like whether this
+# fixed or didn't fix the "zlib undefined symbol: xmalloc_set_program_name"
+# issue, please email rac@gentoo.orgm, drobbins@gentoo.org and
+# azarah@gentoo.org.
+
+emerge ${STRAP_EMERGE_OPTS} ${myGLIBC} ${myBASELAYOUT} ${myZLIB} || cleanup 1
 # ncurses-5.3 and up also build c++ bindings, so we need to rebuild it
 export USE="${ORIGUSE}"
 emerge ${STRAP_EMERGE_OPTS} ${myNCURSES} || cleanup 1
