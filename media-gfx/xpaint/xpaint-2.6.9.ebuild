@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xpaint/xpaint-2.6.9.ebuild,v 1.2 2003/05/27 02:33:40 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xpaint/xpaint-2.6.9.ebuild,v 1.3 2003/05/27 02:35:06 joker Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="XPaint is an image editor which supports most standard paint program options."
@@ -41,7 +41,7 @@ src_install() {
 	insinto /usr/share/xpaint/include
 	doins image.h
 
-	insinto /usr/share/xpaint
+	insinto /usr/share/pixmaps
 	doins XPaintIcon.xpm
 
 	newman xpaint._man xpaint.1
