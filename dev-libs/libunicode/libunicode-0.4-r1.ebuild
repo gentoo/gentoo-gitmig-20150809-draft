@@ -1,10 +1,10 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libunicode/libunicode-0.4-r1.ebuild,v 1.13 2002/10/04 05:16:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libunicode/libunicode-0.4-r1.ebuild,v 1.14 2002/12/08 16:00:02 mholzer Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Unicode library"
-SRC_URI="ftp://ftp.gnome.org/pub/GNOME/unstable/sources/${PN}/${P}.gnome.tar.gz"
+SRC_URI="ftp://ftp.gnome.org/pub/GNOME/sources/${PN}/${PV}/${P}.gnome.tar.gz"
 HOMEPAGE="http://www.gnome.org/"
 
 SLOT="0"
