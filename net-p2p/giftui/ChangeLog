@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/giftui
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/giftui/ChangeLog,v 1.6 2003/10/23 18:22:02 lanius Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/giftui/ChangeLog,v 1.7 2004/03/13 10:14:14 eradicator Exp $
+
+  13 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org> giftui-0.1.1.ebuild,
+  giftui-0.2.0.ebuild, giftui-0.3.1.ebuild:
+  ebuild cleanup. stable on x86
 
 *giftui-0.3.1 (23 Oct 2003)
 
