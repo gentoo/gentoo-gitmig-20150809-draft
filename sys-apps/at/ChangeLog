@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/at
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/at/ChangeLog,v 1.12 2003/12/15 04:18:56 rajiv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/at/ChangeLog,v 1.13 2004/01/25 23:18:27 vapier Exp $
+
+*at-3.1.8-r10 (25 Jan 2004)
+
+  25 Jan 2004; Mike Frysinger <vapier@gentoo.org> :
+  Move spool dir from /var/cron to /var/spool/at #31310 by Douglas R. Hoffman.
 
 *at-3.1.8-r9 (14 Dec 2003)
 
