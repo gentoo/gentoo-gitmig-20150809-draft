@@ -1,17 +1,17 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed-claws/sylpheed-claws-0.9.6-r1.ebuild,v 1.1 2003/10/29 00:06:57 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed-claws/sylpheed-claws-0.9.6-r1.ebuild,v 1.2 2003/11/11 02:46:56 seemant Exp $
 
 IUSE="nls gnome xface dillo crypt spell imlib ssl ldap ipv6 pda clamav pdflib"
 
-inherit eutils
+inherit eutils flag-o-matic
 
 GS_PN=ghostscript-viewer
 GS_PV=0.5
 MY_GS=${GS_PN}-${GS_PV}
 MY_P="sylpheed-${PV}claws"
 S=${WORKDIR}/${MY_P}
-S2=${WORKDIR}/${MY_GS}
+S2=${S}/src/plugins/${MY_GS}
 DESCRIPTION="Bleeding edge version of Sylpheed"
 HOMEPAGE="http://sylpheed-claws.sf.net"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2
@@ -42,6 +42,11 @@ PROVIDE="virtual/sylpheed"
 
 src_unpack() {
 	unpack ${A}
+
+	mv ${WORKDIR}/${MY_GS} ${S}/src/plugins
+
+	einfo ${S}
+	einfo ${S2}
 
 	# Change package name to sylpheed-claws ...
 	for i in `find ${S}/ -name 'configure*'`
@@ -105,8 +110,13 @@ src_compile() {
 	if use pdflib
 	then
 		cd ${S2}
-		econf \
-			--with-sylpheed-dir=${S} || die
+		einfo "Compiling ghostscript-viewer plugin"
+		PKG_CONFIG_PATH=${S} \
+		CFLAGS="-I${S} -I${S}/src -I${S}/src/common -I${S}/src/gtk ${CFLAGS}" \
+		CXXFLAGS="${CFLAGS}" \
+			econf \
+				--with-sylpheed-dir=../.. || die
+
 		emake || die
 	fi
 
