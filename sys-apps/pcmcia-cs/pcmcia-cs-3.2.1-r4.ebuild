@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/pcmcia-cs-3.2.1-r4.ebuild,v 1.4 2003/03/02 18:15:52 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/pcmcia-cs-3.2.1-r4.ebuild,v 1.5 2003/03/04 19:41:22 latexer Exp $
 
 NOCO_VERSION="0.13b"
 
@@ -8,8 +8,8 @@ S=${WORKDIR}/${P}
 OV="orinoco-${NOCO_VERSION}"
 DESCRIPTION="PCMCIA tools for Linux"
 SRC_URI="mirror://sourceforge/pcmcia-cs/${P}.tar.gz
-	wavelan? ( http://airsnort.shmoo.com/${OV}-patched.diff )
-	wavelan? ( http://ozlabs.org/people/dgibson/dldwd/${OV}.tar.gz )"
+	!wavelan? ( http://airsnort.shmoo.com/${OV}-patched.diff )
+	!wavelan? ( http://ozlabs.org/people/dgibson/dldwd/${OV}.tar.gz )"
 
 HOMEPAGE="http://pcmcia-cs.sourceforge.net"
 DEPEND="sys-kernel/linux-headers"
