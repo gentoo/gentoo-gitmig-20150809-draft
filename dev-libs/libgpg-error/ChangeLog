@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libgpg-error
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgpg-error/ChangeLog,v 1.6 2004/05/02 20:41:06 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgpg-error/ChangeLog,v 1.7 2004/05/12 17:44:26 kloeri Exp $
+
+  12 May 2004; Bryan Østergaard <kloeri@gentoo.org> libgpg-error-0.7.ebuild:
+  Add ~alpha.
 
   02 May 2004; Stephen P. Becker <geoman@gentoo.org> libgpg-error-0.7.ebuild:
   Added ~mips keyword.
