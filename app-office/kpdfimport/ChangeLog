@@ -1,6 +1,9 @@
 # ChangeLog for app-office/kpdfimport
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kpdfimport/ChangeLog,v 1.1 2004/03/18 21:08:13 centic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kpdfimport/ChangeLog,v 1.2 2004/03/19 08:05:44 dholm Exp $
+
+  19 Mar 2004; David Holm <dholm@gentoo.org> kpdfimport-0.5.ebuild:
+  Added to ~ppc.
 
 *kpdfimport-0.5 (18 Mar 2004)
 
