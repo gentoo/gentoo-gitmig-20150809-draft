@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvutil/dvutil-0.13.6.ebuild,v 1.1 2003/03/28 13:38:33 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvutil/dvutil-0.13.6.ebuild,v 1.2 2003/05/04 01:25:23 pvdabeel Exp $
 
 A=dvutil-${PV}.tar.gz
 S=${WORKDIR}/dvutil-${PV}
@@ -14,6 +14,10 @@ SLOT="0"
 IUSE=""
 DEPEND="virtual/glibc"
 RDEPEND=${DEPEND}
+
+src_compile() {
+	econf --prefix=${D}/usr --datadir=${D}/usr/share || die
+}
 
 src_install() {
 	make prefix=${D}/usr install
