@@ -1,0 +1,31 @@
+#!/sbin/runscript
+# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License, v2 or later
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpv6/files/dhcp6s.rc,v 1.1 2003/06/18 02:30:28 latexer Exp $
+
+#configuration is done in /etc/dhcp6s.conf
+
+depend() {
+    need net
+}
+
+checkconfig() {
+    if [ ! -e /etc/dhcp6s.conf ] ; then
+	eerror "You need an /etc/dhcp6s.conf file to run dhcp6s"
+	eerror "There is a sample conf file in /usr/share/doc/dhcpv6-0.7"
+	return 1
+    fi
+}
+
+start() {
+    checkconfig || return 1
+    ebegin "Starting dhcp6s"
+    start-stop-daemon --start --quiet --exec /usr/sbin/dhcp6s
+    eend $?
+}
+
+stop() {
+    ebegin "Stopping dhcp6s"
+    start-stop-daemon --stop --quiet --exec /usr/sbin/dhcp6s
+    eend $?
+}
