@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php/php-4.3.3-r2.ebuild,v 1.4 2004/01/10 18:08:55 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php/php-4.3.3-r2.ebuild,v 1.5 2004/01/12 18:07:09 gmsoft Exp $
 
 PHPSAPI="cli"
 inherit php eutils
@@ -9,7 +9,7 @@ IUSE="${IUSE} readline"
 
 DESCRIPTION="PHP Shell Interpreter"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc alpha ~hppa ia64"
+KEYWORDS="x86 ~ppc ~sparc alpha hppa ia64"
 
 DEPEND_EXTRA="readline? ( >=sys-libs/ncurses-5.1 >=sys-libs/readline-4.1 )
 	ncurses? ( >=sys-libs/ncurses-5.1 )"

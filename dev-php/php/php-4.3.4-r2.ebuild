@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php/php-4.3.4-r2.ebuild,v 1.5 2004/01/10 18:08:55 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php/php-4.3.4-r2.ebuild,v 1.6 2004/01/12 18:07:09 gmsoft Exp $
 
 PHPSAPI="cli"
 inherit php-sapi eutils
 
 DESCRIPTION="PHP Shell Interpreter"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc alpha ~hppa amd64 ia64"
+KEYWORDS="x86 ~ppc ~sparc alpha hppa amd64 ia64"
 
 src_compile() {
 	myconf="${myconf} \
