@@ -102,7 +102,7 @@ src_unpack() {
 
 src_compile() {
     cd ${S}
-    try make
+    try pmake
 }
 
 src_install () {

@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Jerry Alexandratos <jerry@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-20010228.2-r1.ebuild,v 1.2 2001/05/30 18:24:34 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-20010228.2-r1.ebuild,v 1.3 2001/06/12 07:44:12 hallski Exp $
 
 P=${PN}-20010228-pl02
 A=${P}.tar.gz
@@ -63,7 +63,7 @@ src_unpack() {
 
 src_compile() {
     cd ${S}
-    try make
+    try pmake
 }
 
 src_install () {
