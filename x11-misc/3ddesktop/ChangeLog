@@ -2,6 +2,9 @@
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
 # $Header
 
+  13 Apr 2004; Danny van Dyk <kugelfang@gentoo.org> 3ddesktop-0.2.5-r1.ebuild:
+  marked ~amd64
+
 *3ddesktop-0.2.5-r1 (13 Apr 2004)
 
   13 Apr 2004; Brandon Hale <tseng@gentoo.org> 3ddesktop-0.2.5-r1.ebuild:
