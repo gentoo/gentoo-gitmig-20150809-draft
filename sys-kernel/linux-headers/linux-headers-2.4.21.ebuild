@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.4.21.ebuild,v 1.13 2003/11/16 18:26:58 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.4.21.ebuild,v 1.14 2003/11/16 23:31:11 kumba Exp $
 
 
 OKV=${PV/_/-}
@@ -64,7 +64,7 @@ src_compile() {
 
 	# If this is sparc, then generate asm_offsets.h
 	if [ -n "`use sparc`" ]; then
-		make dep ARCH=sparc || die "Failed to run 'make dep'"
+		make dep ARCH=${ARCH} || die "Failed to run 'make dep'"
 	fi
 }
 
