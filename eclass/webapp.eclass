@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/webapp.eclass,v 1.18 2004/05/17 22:44:35 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/webapp.eclass,v 1.19 2004/05/22 18:45:13 stuart Exp $
 #
 # eclass/webapp.eclass
 #				Eclass for installing applications to run under a web server
@@ -23,13 +23,15 @@ ECLASS=webapp
 INHERITED="$INHERITED $ECLASS"
 SLOT="${PVR}"
 IUSE="$IUSE vhosts"
-DEPEND="$DEPEND >=net-www/webapp-config-1.9 app-portage/gentoolkit"
+DEPEND="$DEPEND >=net-www/webapp-config-1.7 app-portage/gentoolkit"
 
 EXPORT_FUNCTIONS pkg_postinst pkg_setup src_install pkg_prerm
 
 INSTALL_DIR="/$PN"
 IS_UPGRADE=0
 IS_REPLACE=0
+
+INSTALL_CHECK_FILE="installed_by_webapp_eclass"
 
 # ------------------------------------------------------------------------
 # INTERNAL FUNCTION - USED BY THIS ECLASS ONLY
@@ -301,7 +303,14 @@ function webapp_src_install ()
 	fowners root:root ${MY_PERSISTDIR}
 	fperms 755 ${MY_PERSISTDIR}
 
-	HAS_webapp_src_install=1
+	# to test whether or not the ebuild has correctly called this function
+	# we add an empty file to the filesystem
+	#
+	# we used to just set a variable in the shell script, but we can
+	# no longer rely on Portage calling both webapp_src_install() and
+	# webapp_pkg_postinst() within the same shell process
+
+	touch ${D}/${MY_APPDIR}/${INSTALL_CHECK_FILE}
 }
 
 # ------------------------------------------------------------------------
@@ -431,7 +440,7 @@ function webapp_pkg_postinst ()
 {
 	# sanity checks, to catch bugs in the ebuild
 
-	if [ "$HAS_webapp_src_install+" == "+" ]; then
+	if [ ! -f ${MY_APPDIR}/${INSTALL_CHECK_FILE} ]; then
 		eerror
 		eerror "This ebuild did not call webapp_src_install() at the end"
 		eerror "of the src_install() function"
