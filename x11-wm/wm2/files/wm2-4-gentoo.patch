@@ -1,0 +1,107 @@
+diff -Nru wm2-4/Border.C wm2-4.orig/Border.C
+--- wm2-4/Border.C	2003-03-09 19:34:25.000000000 +0900
++++ wm2-4.orig/Border.C	2003-03-09 19:43:14.000000000 +0900
+@@ -183,7 +183,7 @@
+ 
+     if (m_label) free(m_label);
+     m_label = m_client->iconName() ?
+-	NewString(m_client->iconName()) : NewString(CONFIG_INCOGNITO);
++	NewString(m_client->iconName()) : NewString("incognito");
+ 
+     int len = strlen(m_label);
+     m_tabHeight = XRotTextWidth(m_tabFont, m_label, len) + 6 + m_tabWidth;
+diff -Nru wm2-4/Buttons.C wm2-4.orig/Buttons.C
+--- wm2-4/Buttons.C	2003-03-09 19:42:37.000000000 +0900
++++ wm2-4.orig/Buttons.C	2003-03-09 19:43:14.000000000 +0900
+@@ -139,11 +139,7 @@
+ 		       (allowExit && ((n) > clients.count())) ? "[Exit wm2]" \
+ 		       : clients.item((n)-1)->label())
+ 
+-#ifdef CONFIG_MENU_REVERSE
+-    for (i = m_hiddenClients.count() - 1; i>=0; --i) {
+-#else
+     for (i = 0; i < m_hiddenClients.count(); ++i) {
+-#endif
+ 	clients.append(m_hiddenClients.item(i));
+     }
+     int nh = clients.count() + 1;
+diff -Nru wm2-4/Client.C wm2-4.orig/Client.C
+--- wm2-4/Client.C	2003-03-09 19:34:25.000000000 +0900
++++ wm2-4.orig/Client.C	2003-03-09 19:43:14.000000000 +0900
+@@ -4,7 +4,7 @@
+ 
+ #include <X11/Xutil.h>
+ 
+-const char *const Client::m_defaultLabel = CONFIG_INCOGNITO;
++const char *const Client::m_defaultLabel = "incognito";
+ 
+ 
+ 
+diff -Nru wm2-4/Config.h wm2-4.orig/Config.h
+--- wm2-4/Config.h	2003-03-09 19:41:43.000000000 +0900
++++ wm2-4.orig/Config.h	2003-03-09 19:43:14.000000000 +0900
+@@ -39,9 +39,6 @@
+ 
+ #define CONFIG_FRAME_THICKNESS    7
+ 
+-#define CONFIG_INCOGNITO	  "incognito"
+-#define CONFIG_MENU_REVERSE
+-
+ // If CONFIG_PROD_SHAPE is True, all frame element shapes will be
+ // recalculated afresh every time their focus changes.  This will
+ // probably slow things down hideously, but has been reported as
+@@ -49,3 +46,4 @@
+ #define CONFIG_PROD_SHAPE False
+ 
+ #endif
++
+diff -Nru wm2-4/General.h wm2-4.orig/General.h
+--- wm2-4/General.h	2003-03-09 19:34:25.000000000 +0900
++++ wm2-4.orig/General.h	2003-03-09 19:43:14.000000000 +0900
+@@ -32,7 +32,7 @@
+ #define NewString(x) (strcpy((char *)malloc(strlen(x)+1),(x)))
+ 
+ #ifndef SIGNAL_CALLBACK_TYPE
+-#define SIGNAL_CALLBACK_TYPE (void (*)(int))
++#define SIGNAL_CALLBACK_TYPE (void (*)(...))
+ #endif
+ 
+ #define signal(x,y)     \
+diff -Nru wm2-4/Makefile wm2-4.orig/Makefile
+--- wm2-4/Makefile	2003-03-09 19:34:25.000000000 +0900
++++ wm2-4.orig/Makefile	2003-03-09 19:43:14.000000000 +0900
+@@ -1,8 +1,8 @@
+ 
+-LIBS	=  -L/usr/X11R6/lib -lXext -lX11 -lXmu -lm
++LIBS	=  -L/usr/X11/lib -lXext -lX11 -lXmu -lm
+ 
+ CC	= gcc
+-CCC	= g++
++CCC	= gcc
+ CFLAGS	= -O2
+ OBJECTS	= Border.o Buttons.o Client.o Events.o Main.o Manager.o Rotated.o
+ 
+diff -Nru wm2-4/Manager.C wm2-4.orig/Manager.C
+--- wm2-4/Manager.C	2003-03-09 19:34:25.000000000 +0900
++++ wm2-4.orig/Manager.C	2003-03-09 19:43:14.000000000 +0900
+@@ -368,7 +368,7 @@
+     return m_currentTime;
+ }
+ 
+-void WindowManager::sigHandler(int n)
++void WindowManager::sigHandler()
+ {
+     m_signalled = True;
+ }
+diff -Nru wm2-4/Manager.h wm2-4.orig/Manager.h
+--- wm2-4/Manager.h	2003-03-09 19:34:25.000000000 +0900
++++ wm2-4.orig/Manager.h	2003-03-09 19:43:14.000000000 +0900
+@@ -85,7 +85,7 @@
+ 
+     static Boolean m_initialising;
+     static int errorHandler(Display *, XErrorEvent *);
+-    static void sigHandler(int);
++    static void sigHandler();
+     static int m_signalled;
+ 
+     void initialiseScreen();
