@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/subversion.eclass,v 1.6 2004/03/01 16:34:42 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/subversion.eclass,v 1.7 2004/03/01 16:37:31 hattya Exp $
 
 ## --------------------------------------------------------------------------- #
 # Author: Akinori Hattori <hattya@gentoo.org>
@@ -144,7 +144,7 @@ subversion_svn_fetch() {
 	fi
 
 	# permission fix
-	chmod -Rf o+rw .
+	chmod -Rf o+rw . 2>/dev/null
 
 	# copy to the ${WORKDIR}
 	cp -Rf "${ESVN_STORE_DIR}/${ESVN_CO_DIR}" "${WORKDIR}/${P}" || die "subversion.eclass: can't copy to ${WORKDIR}/${P}."
