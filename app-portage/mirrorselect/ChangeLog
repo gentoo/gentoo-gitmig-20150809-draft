@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/mirrorselect
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/mirrorselect/ChangeLog,v 1.20 2004/09/05 16:37:43 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/mirrorselect/ChangeLog,v 1.21 2004/11/07 14:52:42 johnm Exp $
+
+  07 Nov 2004; John Mylchreest <johnm@gentoo.org> :
+  updated 0.86 to stable a little bit ago, testing new key for signing manifest
 
 *mirrorselect-0.86 (05 Sep 2004)
 
