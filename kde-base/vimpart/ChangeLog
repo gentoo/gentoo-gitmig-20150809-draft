@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/vimpart
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/vimpart/ChangeLog,v 1.3 2005/02/27 20:21:43 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/vimpart/ChangeLog,v 1.4 2005/02/28 04:47:01 danarmak Exp $
+
+*vimpart-3.4.0_rc1 (28 Feb 2005)
+
+  28 Feb 2005; Dan Armak <danarmak@gentoo.org> vimpart-3.4.0_beta1.ebuild,
+  vimpart-3.4.0_beta2.ebuild, vimpart-3.4.0_rc1.ebuild:
+  Fix name of patch: it wasn't being applied.
 
   27 Feb 2005; Dan Armak <danarmak@gentoo.org> :
   Ebuild for 3.4.0 RC1.
