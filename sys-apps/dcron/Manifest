@@ -1,9 +1,19 @@
-MD5 be321d9d043b0d754e027be55f5915d1 ChangeLog 4803
-MD5 b9e54c2cf3a3dcd8fa3f09bb8282dcea dcron-2.9-r2.ebuild 1905
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 1dba78d52fd982608cea9ab6e1d1db66 dcron-2.9-r2.ebuild 2067
+MD5 8538b19056d4e904ec6ce58757233841 ChangeLog 4941
 MD5 d0dad7daa0e6d356fc35f778fed36006 metadata.xml 225
-MD5 562feacfdde7b16558e57b142a98326f files/crontab 824
-MD5 bedf02492e4cc8875b735c6a4bcdd272 files/dcron 614
-MD5 932978359b7a3b3a2d29a96827ceca83 files/dcron-2.7-Makefile-gentoo.diff 534
 MD5 a82da32a58b097ea2ccd1b7a4aed72f3 files/dcron-2.9-ldflags.patch 590
+MD5 932978359b7a3b3a2d29a96827ceca83 files/dcron-2.7-Makefile-gentoo.diff 534
+MD5 562feacfdde7b16558e57b142a98326f files/crontab 824
 MD5 2db10e843ecdf10a2b3aa5f70322310b files/digest-dcron-2.9-r2 55
 MD5 577b9903a5bc13b51ed4e9a7e5d8b17e files/dcron.logrotate 36
+MD5 bedf02492e4cc8875b735c6a4bcdd272 files/dcron 614
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFB4iW2LLFUmVNQ7rkRAvX9AJwLph/WwwbnbmTmpM+pcQFh6VLcZQCfaGtP
+2ohgUCl6Va/pDUJvb3hE+lQ=
+=Gcyy
+-----END PGP SIGNATURE-----
