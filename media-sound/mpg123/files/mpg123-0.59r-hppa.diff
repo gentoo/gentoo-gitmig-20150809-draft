@@ -1,0 +1,24 @@
+--- Makefile.orig	2003-06-23 14:25:34.000000000 +0200
++++ Makefile	2003-06-23 14:28:09.000000000 +0200
+@@ -58,6 +58,7 @@
+ 	@echo "                    (ie with 'as' from binutils-2.9.1.0.19a or later)"
+ 	@echo "make linux-alpha    make with minor changes for ALPHA-Linux"
+ 	@echo "make linux-ppc      LinuxPPC or MkLinux for the PowerPC"
++	@echo "make linux-hppa     Linux/hppa HP-PARISC using OSS"
+ 	@echo "make linux-m68k     Linux/m68k (Amiga, Atari) using OSS"
+ 	@echo "make linux-nas      Linux, output to Network Audio System"
+ 	@echo "make linux-sparc    Linux/Sparc"
+@@ -237,6 +238,13 @@
+ 			-fomit-frame-pointer -funroll-all-loops \
+ 			-finline-functions -ffast-math' \
+ 		mpg123-make
++linux-hppa:                                                                                                                  
++	$(MAKE)   LDFLAGS= \
++		OBJECTS='decode.o dct64.o audio_oss.o' \
++		CFLAGS='-DREAL_IS_FLOAT -DUSE_MMAP -DLINUX -Wall -O2 \
++			-fomit-frame-pointer -funroll-all-loops \
++			-finline-functions -ffast-math' \
++		mpg123-make
+ 
+ linux-m68k:
+ 	$(MAKE)  LDFLAGS= OBJECTS='decode.o dct64.o audio_oss.o' \

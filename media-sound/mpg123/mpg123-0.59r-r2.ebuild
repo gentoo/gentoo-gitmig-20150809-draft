@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/mpg123-0.59r-r2.ebuild,v 1.3 2003/05/29 00:38:55 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/mpg123-0.59r-r2.ebuild,v 1.4 2003/06/23 13:05:38 gmsoft Exp $
 
 S=${WORKDIR}/${P}
 
@@ -13,7 +13,7 @@ DEPEND="virtual/glibc
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="x86 ppc sparc alpha"
+KEYWORDS="x86 ppc sparc alpha ~hppa"
 
 src_unpack () {
 	unpack ${A}
@@ -21,6 +21,7 @@ src_unpack () {
 	patch -p1 < ${FILESDIR}/${P}-make-fix.diff
 	patch -p1 < ${FILESDIR}/${P}-sparc.diff
 	use alpha && patch -p1 < ${FILESDIR}/${P}-alpha.diff
+	use hppa && patch -p0 < ${FILESDIR}/${P}-hppa.diff
 	cp Makefile Makefile.orig
 	sed -e "s:-O2 -m486:${CFLAGS}:" \
 		-e "s:-O2 -mcpu=ppc:${CFLAGS}:g" \
@@ -51,8 +52,10 @@ src_compile() {
 	   MAKESTYLE="-i486";;
 	  sparc)
 	   MAKESTYLE="-sparc";;
-	 alpha)
+	  alpha)
 	   MAKESTYLE="-alpha";;
+	  hppa)
+	   MAKESTYLE="-hppa";;
 	  arm)
 	   ;; 
 	esac
