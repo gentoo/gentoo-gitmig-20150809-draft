@@ -1,6 +1,12 @@
 # ChangeLog for sec-policy/selinux-snort
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-snort/ChangeLog,v 1.6 2004/11/23 17:18:39 kaiowas Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-snort/ChangeLog,v 1.7 2005/02/25 08:27:09 kaiowas Exp $
+
+*selinux-snort-20050219 (25 Feb 2005)
+
+  25 Feb 2005; petre rodan <kaiowas@gentoo.org>
+  -selinux-snort-20041028.ebuild, +selinux-snort-20050219.ebuild:
+  merge with upstream policy
 
   23 Nov 2004; petre rodan <kaiowas@gentoo.org>
   selinux-snort-20041117.ebuild:
