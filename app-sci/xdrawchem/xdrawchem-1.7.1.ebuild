@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/xdrawchem/xdrawchem-1.7.1.ebuild,v 1.3 2003/08/05 18:41:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/xdrawchem/xdrawchem-1.7.1.ebuild,v 1.4 2004/02/22 19:53:44 agriffis Exp $
 
 DESCRIPTION="a molecular structure drawing program"
 HOMEPAGE="http://www.prism.gatech.edu/~gte067k/${PN}"
@@ -8,7 +8,7 @@ SRC_URI="http://www.prism.gatech.edu/~gte067k/${PN}/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc "
+KEYWORDS="x86 ~ppc ~sparc"
 IUSE="qt"
 
 DEPEND="qt? ( >=x11-libs/qt-3.1.0 )"
