@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/orsa/orsa-0.6.1.ebuild,v 1.5 2004/11/22 23:46:19 kingtaco Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/orsa/orsa-0.6.1.ebuild,v 1.6 2004/12/03 10:44:47 phosphan Exp $
 
 inherit base flag-o-matic
 
@@ -48,10 +48,12 @@ src_compile() {
 	fi
 	if ! use qt; then
 		myconf="${myconf} --with-qt-dir=/no/such/file"
+	else
+		addwrite "${QTDIR}/etc/settings"
 	fi
 	econf ${myconf} $(use_with opengl gl) || die "configure failed"
 	if use mpi; then
-		sed -e 's/\(orsa_LDADD = .*\)/\1 -llammpi++ -lmpi -llam -lpthread/' \
+		sed -e 's/\(orsa_LDADD = .*\)/\1 -llammpi++ -lmpi -llam -lpthread -lutil/' \
 			-i src/orsa/Makefile
 	fi
 

@@ -1,6 +1,10 @@
 # ChangeLog for app-sci/orsa
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/orsa/ChangeLog,v 1.14 2004/11/22 23:46:19 kingtaco Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/orsa/ChangeLog,v 1.15 2004/12/03 10:44:47 phosphan Exp $
+
+  03 Dec 2004; Patrick Kursawe <phosphan@gentoo.org> orsa-0.6.1.ebuild:
+  Fixing bug #73146 (adding -lutil to libs, adding write permissions for Qt
+  stuff)
 
   22 Nov 2004; Mike Doty <kingtaco@gentoo.org> :
   ~amd64 incorrectly added.
