@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/bonobo/bonobo-1.0.9-r2.ebuild,v 1.1 2001/10/06 20:15:36 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/bonobo/bonobo-1.0.9-r2.ebuild,v 1.2 2001/10/06 21:18:23 hallski Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -46,7 +46,7 @@ src_compile() {
 	CFLAGS="${CFLAGS} `gnome-config --cflags print`"
 
 	./configure --host=${CHOST} 					\
-		    --prefix=/use					\
+		    --prefix=/usr					\
 	            --sysconfdir=/etc					\
 		    ${myconf} || die
 
