@@ -740,7 +740,7 @@ gnome-extra/libgnomeuimm
 
 # stroke@gentoo.org, 14 Jun 2002
 # I Have to test a few things before it goes in.
-=dev-libs/libmcrypt-2.5.0.ebuild
+=dev-libs/libmcrypt-2.5.0
 
 # mkennedy@gentoo.org 14 Apr 2002
 # Beta, so masked for now. See also bug 1662.
