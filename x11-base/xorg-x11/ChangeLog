@@ -1,6 +1,11 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.262 2005/01/10 19:42:26 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.263 2005/01/11 10:49:53 eradicator Exp $
+
+  11 Jan 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  xorg-x11-6.8.0-r3.ebuild, xorg-x11-6.8.0-r4.ebuild,
+  xorg-x11-6.8.1.901.ebuild:
+  Only do amd64 libdir overriding on older profiles.
 
   10 Jan 2005; Aron Griffis <agriffis@gentoo.org> xorg-x11-6.8.1.901.ebuild:
   add ~alpha

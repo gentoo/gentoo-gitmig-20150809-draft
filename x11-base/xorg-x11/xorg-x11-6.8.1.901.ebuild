@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.1.901.ebuild,v 1.15 2005/01/10 19:42:26 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.1.901.ebuild,v 1.16 2005/01/11 10:49:53 eradicator Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -161,10 +161,11 @@ pkg_setup() {
 	# on amd64 we need /usr/lib64/X11/locale/lib to be a symlink
 	# created by the emul lib ebuild in order for adobe acrobat, staroffice,
 	# and a few other apps to work.
-	use amd64 && get_libdir_override lib64
-	# lib32 isnt a supported configuration (yet?)
-	[ "${CONF_LIBDIR}" == "lib32" ] && get_libdir_override lib
-
+	if [ -z "${MULTILIB_ABIS}" ]; then
+		use amd64 && get_libdir_override lib64
+		# lib32 isnt a supported configuration (yet?)
+		[ "$(get_libdir)" == "lib32" ] && get_libdir_override lib
+	fi
 
 	# Echo a message to the user about bitmap-fonts
 	if ! use bitmap-fonts; then
