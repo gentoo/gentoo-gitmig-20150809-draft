@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.9.ebuild,v 1.1 2004/11/20 15:11:07 satya Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.9.ebuild,v 1.2 2004/11/21 20:58:01 weeve Exp $
 
 inherit eutils flag-o-matic
 #---------------------------------------------------------------------------
@@ -47,7 +47,7 @@ RDEPEND="ldap? dev-perl/perl-ldap ${_COMMON_DEPS}
 #---------------------------------------------------------------------------
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~sparc"
 #===========================================================================
 pkg_setup() {
 	ewarn "2004-11: new ebuild flags:"
