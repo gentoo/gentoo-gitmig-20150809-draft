@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre/ibm-jre-1.4.0.ebuild,v 1.3 2002/12/12 11:29:26 strider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre/ibm-jre-1.4.0-r2.ebuild,v 1.1 2002/12/23 16:44:57 strider Exp $
 
 inherit nsplugins
 
@@ -17,7 +17,7 @@ PROVIDE="virtual/jre-1.3.1
 	virtual/java-scheme-2"
 LICENSE="IBM-ILNWP"
 SLOT="1.4"
-KEYWORDS="x86 -ppc -sparc "
+KEYWORDS="x86 -ppc -sparc -alpha"
 
 src_unpack() {
 	if [ ! -f ${DISTDIR}/${At} ] ; then
@@ -45,7 +45,6 @@ src_install () {
 }
 
 src_postinst() {
-	# Plugin as been disabled as it crashes all the time
-	# inst_plugin /opt/${P}/bin/javaplugin.so
+	inst_plugin /opt/${P}/bin/javaplugin.so
 	true
 }
