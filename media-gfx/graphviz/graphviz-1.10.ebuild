@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/graphviz-1.10.ebuild,v 1.8 2004/01/27 13:09:58 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/graphviz-1.10.ebuild,v 1.9 2004/01/28 11:48:12 vapier Exp $
 
 DESCRIPTION="open source graph drawing software"
 HOMEPAGE="http://www.research.att.com/sw/tools/graphviz/"
@@ -8,7 +8,7 @@ SRC_URI="http://www.graphviz.org/pub/graphviz/${P}.tar.gz"
 
 LICENSE="as-is | ATT"
 SLOT="0"
-KEYWORDS="x86 ~ppc sparc alpha hppa amd64 ia64"
+KEYWORDS="x86 ppc sparc alpha hppa amd64 ia64"
 IUSE="tcltk"
 
 #Can use freetype-1.3 or 2.0, but not both
