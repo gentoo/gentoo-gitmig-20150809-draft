@@ -1,8 +1,8 @@
 # ChangeLog for games-strategy/glob2
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/glob2/ChangeLog,v 1.1 2004/02/21 21:36:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/glob2/ChangeLog,v 1.2 2004/02/28 19:21:19 aliz Exp $
 
-*glob2-0.8.3 (21 Feb 2004)
+*glob2-0.8.2 (21 Feb 2004)
 
   21 Feb 2004; Mike Frysinger <vapier@gentoo.org> :
   Initial import.  Ebuild submitted by me for #24206.
