@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-1.1.11.20020822.ebuild,v 1.2 2002/09/11 19:52:15 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-1.1.11.20020822.ebuild,v 1.3 2002/09/11 19:57:03 raker Exp $
 
 PF_PV=1.1.11-20020822
 PF_P=postfix-${PF_PV}
@@ -49,7 +49,7 @@ src_unpack() {
 	if [ `use ssl` ] && [ `use ipv6` ]
 	then
 		cd ${S}
-		patch -p1 < ${FILESDIR}/${IPV6_P}.patch || die "patch failed"
+		bzcat ${FILESDIR}/${IPV6_P}.patch.bz2 | patch -p1 || die "patch failed"
 		CCARGS="${CCARGS} -DHAS_SSL"
 		AUXLIBS="${AUXLIBS} -lssl -lcrypto"
 	elif [ `use ssl` ]
