@@ -1,6 +1,8 @@
 # ChangeLog for media-sound/ermixer
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ermixer/ChangeLog,v 1.8 2003/06/30 22:02:12 brain Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ermixer/ChangeLog,v 1.9 2003/07/02 22:23:15 brain Exp $
+  02 Jul 2003; Michele Balistreri <brain@gentoo.org> ermixer-0.8.ebuild:
+  ppc keyword
 
   01 Jul 2003; Michele Balistreri <brain@gentoo.org> ermixer-0.8.ebuild:
   marking as stable on x86
