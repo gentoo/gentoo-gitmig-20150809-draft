@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/alsa-tools-1.0.7.ebuild,v 1.5 2005/02/13 03:34:47 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/alsa-tools-1.0.7.ebuild,v 1.6 2005/03/20 02:23:13 pylon Exp $
 
 IUSE="X"
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://www.alsa-project.org"
 SRC_URI="mirror://alsaproject/tools/${P}.tar.bz2"
 
 SLOT="0.9"
-KEYWORDS="amd64 ~ppc sparc x86 ~mips"
+KEYWORDS="amd64 ppc sparc x86 ~mips"
 LICENSE="GPL-2"
 
 DEPEND=">=media-libs/alsa-lib-1.0.0
