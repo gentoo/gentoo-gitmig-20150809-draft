@@ -1,8 +1,12 @@
 # ChangeLog for app-crypt/kth-krb
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/kth-krb/ChangeLog,v 1.1 2002/02/01 21:53:00 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/kth-krb/ChangeLog,v 1.2 2002/08/19 00:52:17 rphillips Exp $
 
 *kth-krb-1.1-r1 (1 Feb 2002)
+
+  18 Aug 2002; Ryan Phillips <rphillips@gentoo.org> :
+
+  Changed emake to make due to compile issue
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
   

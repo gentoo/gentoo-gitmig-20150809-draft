@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/kth-krb/kth-krb-1.1-r1.ebuild,v 1.4 2002/08/16 02:36:53 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/kth-krb/kth-krb-1.1-r1.ebuild,v 1.5 2002/08/19 00:52:17 rphillips Exp $
 
 S=${WORKDIR}/krb4-${PV}
 DESCRIPTION="Kerberos 4 implementation from KTH"
@@ -27,7 +27,7 @@ src_compile() {
 		--sysconfdir=/etc \
 		${myconf} || die
 
-	emake || die
+	make || die
 }
 
 src_install () {
