@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/minicom
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/minicom/ChangeLog,v 1.6 2003/02/12 07:53:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/minicom/ChangeLog,v 1.7 2003/03/19 16:21:19 gmsoft Exp $
+
+  19 Mar 2003; Guy Martin <gmsoft@gentoo.org> minicom-1.83.1-r1.ebuild :
+  Added hppa to keywords.
 
   05 Feb 2003; Mark Guetin <gerk@gentoo.org> minicom-2.00.0.ebuild :
   Added ppc to keywords, runs great
