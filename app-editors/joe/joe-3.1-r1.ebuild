@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/joe/joe-3.1-r1.ebuild,v 1.2 2004/11/24 18:30:41 kito Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/joe/joe-3.1-r1.ebuild,v 1.3 2004/12/18 19:27:42 blubb Exp $
 
-inherit flag-o-matic
+inherit flag-o-matic eutils
 
 DESCRIPTION="A free ASCII-Text Screen Editor for UNIX"
 HOMEPAGE="http://sourceforge.net/projects/joe-editor/"
