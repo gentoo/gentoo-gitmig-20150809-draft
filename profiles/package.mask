@@ -852,3 +852,7 @@ net-mail/sendmail
 # masking because I can't test it.
 net-mail/qmail-scanner
 
+# g2boojum@gentoo.org 11 June 2002
+# masking dev-perl/Mail-SpamAssassin because we already have it in net-mail
+dev-perl/Mail-SpamAssassin
+
