@@ -1,6 +1,9 @@
 # ChangeLog for net-www/mozilla
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.212 2004/12/18 19:37:49 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.213 2004/12/20 15:18:48 absinthe Exp $
+
+  20 Dec 2004; Dylan Carlson <absinthe@gentoo.org> mozilla-1.7.5.ebuild:
+  Stable on amd64, bug 68976.
 
 *mozilla-1.7.5 (18 Dec 2004)
 
