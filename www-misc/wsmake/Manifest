@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 cd2b2e30407218958c3c0ed2fb947e07 wsmake-0.6.4.ebuild 1093
-MD5 46c7a636499dab1a07ba3e2c0e56e19f ChangeLog 629
+MD5 8a8a129ffaf47c307379eb543b500daf ChangeLog 728
+MD5 2b2e5a9058109dce2c31a1ce21b14d47 wsmake-0.6.4.ebuild 1090
 MD5 6d15df4a1798e50da3dd30c5bff389e0 files/digest-wsmake-0.6.4 251
 MD5 7cc535ed0163eab82da703f14632a0dd files/wsmake-0.6.4-bv.diff 308
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBOtl0I1lqEGTUzyQRAqaIAJ4/MU0zyMgFYoB71vuJqxBTh2b/JACfbqmn
-H4iLqbMLmozvnEvc7k3+n2I=
-=zY+/
+iD8DBQFBjPqMI7fK2cqeyXkRAmkaAKCIVjtvmbu6PotCgsL4RfxHcuMKBgCff4cN
+lcLWh+zKM1OgCt05vikX/Zc=
+=lJWr
 -----END PGP SIGNATURE-----
