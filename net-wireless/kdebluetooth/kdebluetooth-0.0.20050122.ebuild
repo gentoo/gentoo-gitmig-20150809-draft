@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kdebluetooth/kdebluetooth-0.0.20050122.ebuild,v 1.1 2005/01/22 19:51:14 motaboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kdebluetooth/kdebluetooth-0.0.20050122.ebuild,v 1.2 2005/01/24 21:30:34 motaboy Exp $
 
 inherit kde
 
@@ -22,7 +22,7 @@ need-kde 3
 
 src_compile() {
 	kde_src_compile myconf
-	myconf="$myconf `use_with xmms`"
+	myconf="$myconf `use_with xmms` --disable-irmcsynckonnector"
 	kde_src_compile configure make
 }
 

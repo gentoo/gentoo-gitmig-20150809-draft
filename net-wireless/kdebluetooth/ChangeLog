@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/kdebluetooth
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kdebluetooth/ChangeLog,v 1.20 2005/01/22 19:51:14 motaboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kdebluetooth/ChangeLog,v 1.21 2005/01/24 21:30:34 motaboy Exp $
+
+  24 Jan 2005; Simone Gotti <motaboy@gentoo.org>
+  kdebluetooth-0.0.20050122.ebuild:
+  Force the --disable-irmcsynckonnector configure's flag. Fixes bug #79180.
 
 *kdebluetooth-0.0.20050122 (22 Jan 2005)
 
