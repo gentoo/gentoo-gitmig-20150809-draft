@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ntp-4.1.2.ebuild,v 1.7 2003/09/26 20:14:00 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ntp-4.1.2.ebuild,v 1.8 2003/09/30 03:28:06 vapier Exp $
 
 inherit eutils
 
@@ -46,9 +46,9 @@ src_unpack() {
 	epatch ${FILESDIR}/linux-config-phone.patch #13001
 	sed -i "s:-Wpointer-arith::" configure.in
 
-	aclocal -I . || die
-	automake || die
-	autoconf || die
+	aclocal -I . || die "autolocal"
+	automake || die "automake"
+	autoconf || die "autoconf"
 }
 
 src_compile() {
