@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.3.2-r1.ebuild,v 1.8 2003/11/12 18:49:57 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.3.2-r1.ebuild,v 1.9 2003/11/13 09:01:53 liquidx Exp $
 
 inherit flag-o-matic python
 
@@ -110,7 +110,7 @@ src_install() {
 
 	# install our own custom python-config
 	exeinto /usr/bin
-	newexe ${FILESDIR}/python-config-${PV} python-config
+	newexe ${FILESDIR}/python-config-${PYVER} python-config
 
 	# The stuff below this line extends from 2.1, and should be deprecated
 	# in 2.3, or possibly can wait till 2.4

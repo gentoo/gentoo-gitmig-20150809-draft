@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/python
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.50 2003/11/12 18:49:57 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.51 2003/11/13 09:01:53 liquidx Exp $
+
+  13 Nov 2003; Alastair Tse <liquidx@gentoo.org> python-2.3.2-r1.ebuild:
+  fix python-config install for python-2.3
 
   12 Nov 2003; Alastair Tse <liquidx@gentoo.org> python-2.2.2-r1.ebuild,
   python-2.2.3-r2.ebuild, python-2.2.3-r3.ebuild, python-2.2.3-r4.ebuild,
