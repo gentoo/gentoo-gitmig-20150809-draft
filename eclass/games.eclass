@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.79 2004/10/06 07:11:05 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.80 2004/10/13 06:28:20 mr_bones_ Exp $
 #
 # devlist: {vapier,wolf31o2,mr_bones_}@gentoo.org
 #
@@ -199,7 +199,7 @@ games_make_wrapper() {
 	local bin="$1" ; shift
 	local chdir="$1" ; shift
 	local libdir="$1" ; shift
-	local tmpwrapper="$(mymktemp ${T})"
+	local tmpwrapper="$(emktemp)"
 	cat << EOF > "${tmpwrapper}"
 #!/bin/sh
 cd "${chdir}"
