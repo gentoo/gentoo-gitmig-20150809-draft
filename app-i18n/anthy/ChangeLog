@@ -1,6 +1,13 @@
 # ChangeLog for app-i18n/anthy
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/anthy/ChangeLog,v 1.3 2003/09/04 19:15:04 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/anthy/ChangeLog,v 1.4 2003/09/11 07:41:05 usata Exp $
+
+*anthy-4507 (11 Sep 2003)
+
+  11 Sep 2003; Mamoru KOMACHI <usata@gentoo.org> anthy-4507.ebuild:
+  New snapshot branch.  Ebuild submitted by Hattya <hattya@inter7.jp>
+  in Bug #28361.  Now it merges other canna dictionaries into main
+  Anthy dictionary during installation.
 
 *anthy-4300b (20 Aug 2003)
 
