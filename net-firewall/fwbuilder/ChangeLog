@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/fwbuilder
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/fwbuilder/ChangeLog,v 1.1 2003/01/06 12:46:17 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/fwbuilder/ChangeLog,v 1.2 2003/01/10 14:00:58 aliz Exp $
+
+  10 Jan 2003; Daniel Ahlberg <aliz@gentoo.org> fwbuilder-1.0.6.ebuild, fwbuilder-1.0.7.ebuild,
+						fwbuilder-1.0.8.ebuild :
+  Make dependency on libfwbuilder strict.
 
 *fwbuilder-1.0.8 (05 Jan 2003)
 
