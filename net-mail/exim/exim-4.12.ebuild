@@ -1,15 +1,22 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# Updated to exim-4 by Ben Lutgens <lamer@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/exim/exim-4.12.ebuild,v 1.3 2003/02/13 14:29:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/exim/exim-4.12.ebuild,v 1.4 2003/02/14 21:00:11 vapier Exp $
 
-IUSE="tcpd ssl postgres mysql ldap pam"
-S=${WORKDIR}/${P}
+inherit eutils
+
 EXISCAN_VER=${PV}-21
 DESCRIPTION="A highly configurable, drop-in replacement for sendmail"
 SRC_URI="ftp://ftp.exim.org/pub/exim/exim4/${P}.tar.gz
 	http://duncanthrax.net/exiscan/exiscan-${EXISCAN_VER}.tar.gz"
 HOMEPAGE="http://www.exim.org/"
+
+SLOT="0"
+LICENSE="GPL-2"
+KEYWORDS="x86 ~sparc"
+IUSE="tcpd ssl postgres mysql ldap pam"
+
+PROVIDE="virtual/mta"
+
 DEPEND="virtual/glibc
 	>=sys-libs/db-3.2
 	>=sys-devel/perl-5.6.0
@@ -23,12 +30,6 @@ DEPEND="virtual/glibc
 RDEPEND="${DEPEND}
 	!virtual/mta
 	>=net-mail/mailbase-0.00"
-PROVIDE="virtual/mta"
-SLOT="0"
-LICENSE="GPL-2"
-KEYWORDS="x86 ~sparc"
-
-inherit eutils
 
 src_unpack() {
 	local myconf

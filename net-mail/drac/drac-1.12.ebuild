@@ -1,20 +1,23 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/drac/drac-1.12.ebuild,v 1.2 2003/02/13 14:28:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/drac/drac-1.12.ebuild,v 1.3 2003/02/14 20:59:24 vapier Exp $
+
+inherit eutils
 
 DESCRIPTION="A robust implementation of POP-before-SMTP"
 HOMEPAGE="http://mail.cc.umanitoba.ca/drac/"
 SRC_URI="ftp://ftp.cc.umanitoba.ca/src/${PN}.tar.Z"
+
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
+
 DEPEND="virtual/glibc
 	sys-libs/db
 	>=net-mail/sendmail-8.9"
-S=${WORKDIR}
 
-inherit eutils
+S=${WORKDIR}
 
 src_compile() {
 	cp Makefile Makefile.orig

@@ -2,6 +2,11 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: /home/cvsroot/gentoo-x86/net-mail/courier/courier-0.41.0.ebuild
 
+inherit flag-o-matic eutils
+
+filter-flags -fomit-frame-pointer
+filter-flags -funroll-loops
+
 DESCRIPTION="An MTA designed specifically for maildirs"
 SRC_URI="mirror://sourceforge/courier/${P}.tar.bz2"
 HOMEPAGE="http://www.courier-mta.org/"
@@ -30,11 +35,6 @@ RDEPEND="virtual/glibc
 DEPEND="${RDEPEND}
 	sys-devel/perl
 	sys-apps/procps"
-
-inherit flag-o-matic eutils
-
-filter-flags -fomit-frame-pointer
-filter-flags -funroll-loops
 
 src_unpack() {
 	unpack ${A} ; cd ${S}
