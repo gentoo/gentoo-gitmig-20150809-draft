@@ -1,8 +1,14 @@
 # ChangeLog for net-libs/libnet
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnet/ChangeLog,v 1.5 2002/08/27 17:11:33 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnet/ChangeLog,v 1.6 2002/09/02 17:02:14 lostlogic Exp $
 
 *libnet-1.1.0 (27 Aug 2002)
+
+  02 Sep 2002: Brandon Low <lostlogic@gentoo.org>
+  This package is NOT backward compatible with previous versoins of libnet.
+  Additionally the install process forgets to install libnet-config which
+  is necessary for library configuration, Added that script, and trying to
+  figure out what is b0rken with this new library.
 
   27 Aug 2002; Daniel Ahlberg <aliz@gentoo.org:
   Version bump. Closes #7039. Ebuild contributed by michael.sterrett@coat.com.
