@@ -1,6 +1,9 @@
 # ChangeLog for app-benchmarks/bonnie
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/bonnie/ChangeLog,v 1.7 2004/03/29 23:22:31 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/bonnie/ChangeLog,v 1.8 2004/03/30 07:50:29 aliz Exp $
+
+  30 Mar 2004; Daniel Ahlberg <aliz@gentoo.org> bonnie-2.0.6.ebuild:
+  Adding amd64 keyword. Closing #42977.
 
   29 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> bonnie-2.0.6.ebuild:
   inherit eutils for epatch
