@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdebindings
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings/ChangeLog,v 1.44 2003/11/29 23:19:22 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings/ChangeLog,v 1.45 2003/12/10 01:14:30 caleb Exp $
+
+*kdebindings-3.2.0_beta2 (09 Dec 2003)
+
+  09 Dec 2003; Caleb Tennis <caleb@gentoo.org> kdebindings-3.2.0_beta2.ebuild:
+  New beta version
 
   29 Nov 2003; Brad House <brad_mssw@gentoo.org> kdebindings-3.1.4.ebuild:
   mark stable on amd64
