@@ -1,11 +1,15 @@
 # ChangeLog for net-irc/xchat
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.56 2003/07/08 16:37:41 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.57 2003/07/09 17:14:58 liquidx Exp $
 
 *xchat-2.0.3-r1 (08 Jul 2003)
 
   08 Jul 2003; foser <foser@gentoo.org> xchat-2.0.3-r1.ebuild :
   Added dcc patch, should fix possible dcc problems
+
+  09 Jul 2003; Alastair Tse <liquidx@gentoo.org> xchat-2.0.0.ebuild,
+  xchat-2.0.1.ebuild, xchat-2.0.2-r2.ebuild:
+  added pkgconfig deps
 
 *xchat-2.0.3 (29 Jun 2003)
 

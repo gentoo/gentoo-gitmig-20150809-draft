@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-2.0.0.ebuild,v 1.7 2003/03/11 21:11:46 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-2.0.0.ebuild,v 1.8 2003/07/09 17:14:58 liquidx Exp $
 
 IUSE="perl tcltk python ssl gtk mmx ipv6" 
 
@@ -22,6 +22,7 @@ RDEPEND=">=dev-libs/glib-2.0.3
 	tcltk? ( dev-lang/tcl )"               
 
 DEPEND="${RDEPEND}
+	dev-util/pkgconfig
 	nls? ( >=sys-devel/gettext-0.10.38 )"
 
 src_compile() {
