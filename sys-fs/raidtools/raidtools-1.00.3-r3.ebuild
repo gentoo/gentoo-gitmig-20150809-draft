@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/raidtools/raidtools-1.00.3-r3.ebuild,v 1.1 2005/02/12 02:08:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/raidtools/raidtools-1.00.3-r3.ebuild,v 1.2 2005/02/23 00:16:51 vapier Exp $
 
 inherit flag-o-matic eutils
 
@@ -46,6 +46,9 @@ src_install() {
 	make install ROOTDIR="${D}" || die
 
 	if ! use build ; then
+		exeinto /etc/cron.daily
+		newexe "${FILESDIR}"/raidtools.cron raidtools
+
 		doman *.8 *.5
 		dodoc README *raidtab raidreconf-HOWTO reconf.notes retry summary
 		dodoc Software-RAID.HOWTO/Software-RAID.HOWTO.txt

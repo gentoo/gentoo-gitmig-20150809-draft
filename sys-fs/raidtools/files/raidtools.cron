@@ -1,0 +1,18 @@
+#!/bin/bash
+# Cron job to check that raid devices are functional.
+# On error cron will mail the fauly mdstat to root.
+#   md.c appends (F) to a faulty device
+#   raid1.c and raid5.c list devices as U (operational) or _ (not)
+#   a _ device may be either hot, standby or bad
+# Merlin Hughes <merlin@merlin.org> 
+
+[ -e /proc/mdstat ] || exit 0 
+
+mdstat=$(</proc/mdstat)
+
+if [ "${mdstat/(F)}" != "${mdstat}" ] ; then
+	echo 'WARNING: Some disks in your RAID arrays seem to have failed!'
+	echo 'Below is the content of /proc/mdstat:'
+	echo 
+	echo "$mdstat"
+fi
