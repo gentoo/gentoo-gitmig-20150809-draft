@@ -15,3 +15,14 @@ diff -Naur kon2-0.3.9b/tools/Configure.linux kon2-0.3.9b-gentoo/tools/Configure.
  	echo $sig $ans >>$CONFIG_OUT
  	if [ "$def" != "y" -a "$def" != "n" ]
  	then
+--- kon2-0.3.9b/kon.cfg.linux	1997-02-06 09:56:44.000000000 +0900
++++ kon2-0.3.9b-gentoo/kon.cfg.linux	2003-12-29 04:14:40.000000000 +0900
+@@ -127,7 +127,7 @@
+ 	zcat /dos/lib/font/jpnhn16x.Z | /usr/bin/fld.fontx -n
+ 	zcat /dos/lib/font/jpnzn16x.Z | /usr/bin/fld.fontx -n
+ minix-gzip:Startup
+-	/usr/bin/fld -t fontx -n /usr/share/fonts/vga.fnt
++	gzip -d < /usr/share/fonts/pubfont.a.gz | /usr/bin/fld -t minix -n
+ 	gzip -d < /usr/share/fonts/pubfont.k.gz | /usr/bin/fld -t minix -n
+ #	gzip -d < /usr/share/fonts/vga.fnt.gz | /usr/bin/fld.fontx -n
+ #	gzip -d < /usr/share/fonts/pubfont.a.gz | /usr/bin/fld.minix -n

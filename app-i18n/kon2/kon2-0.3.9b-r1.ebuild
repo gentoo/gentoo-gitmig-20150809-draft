@@ -1,6 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/kon2/kon2-0.3.9b-r1.ebuild,v 1.3 2003/12/23 11:23:26 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/kon2/kon2-0.3.9b-r1.ebuild,v 1.4 2003/12/28 19:48:49 usata Exp $
+
+IUSE=""
 
 DESCRIPTION="KON Kanji ON Linux console"
 SRC_URI="ftp://ftp.linet.gr.jp/pub/KON/${P}.tar.gz"
@@ -12,7 +14,7 @@ KEYWORDS="x86"
 
 DEPEND="virtual/glibc"
 RDEPEND="${DEPEND}
-	>=app-i18n/konfont-0.1"
+	>=media-fonts/konfont-0.1"
 
 S=${WORKDIR}/${P}
 
@@ -36,10 +38,6 @@ src_install(){
 		MANDIR=${D}/usr/share/man/ja/man1 \
 		BINDIR=${D}/usr/bin install || die
 
-	if [ ! -e /usr/share/terminfo/k/kon ]
-	then
-		dodir /usr/share/terminfo
-		tic terminfo.kon -o${D}/usr/share/terminfo
-	fi
+	dodir /usr/share/terminfo
+	tic terminfo.kon -o${D}/usr/share/terminfo
 }
-
