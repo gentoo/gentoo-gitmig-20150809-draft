@@ -1,16 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d5c02996b76321e89cdc933904fe4a31 scim-wnn-0.1.0.ebuild 1098
+MD5 8829eb109700fab0c6e7b0c739485356 ChangeLog 706
 MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
-MD5 c30ff72b8296fe0d521485e35529f4e2 ChangeLog 526
-MD5 cc37efa2ad74e15718f56dea1ec9a31c scim-wnn-0.2.1.ebuild 1116
+MD5 d5c02996b76321e89cdc933904fe4a31 scim-wnn-0.1.0.ebuild 1098
+MD5 84ea68cd862a7c9b7fe613b5aa7cdc83 scim-wnn-0.2.1.ebuild 1115
+MD5 efe5765ca462d6f28bfaec8ddeb2087c scim-wnn-0.2.2.ebuild 1116
 MD5 883048f41756927b7310d8843af9e4ed files/digest-scim-wnn-0.1.0 67
 MD5 cf28f352d323cb0ee619791be11364b3 files/digest-scim-wnn-0.2.1 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFB8OMZVWNWqTUmv+0RAq8pAJ4tU3DoyWXtQECbBTxkOyF7BiQ5BgCdHWjQ
-suoAWBaI1kmKRE7Jtwrqqy8=
-=vgnP
------END PGP SIGNATURE-----
+MD5 03ff5991ff909fca64c5ac2c9721cb21 files/digest-scim-wnn-0.2.2 66
