@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/grip
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/grip/ChangeLog,v 1.28 2004/03/07 09:52:31 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/grip/ChangeLog,v 1.29 2004/03/23 07:01:54 eradicator Exp $
+
+*grip-3.1.7 (22 Mar 2004)
+
+  22 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org> grip-3.1.4.ebuild,
+  grip-3.1.7.ebuild:
+  Removing old ebuild.  Version bump closes bug #45449.
 
 *grip-3.1.5 (07 Mar 2004)
 

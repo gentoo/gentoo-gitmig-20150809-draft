@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/grip/grip-3.1.4.ebuild,v 1.4 2004/02/07 18:04:52 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/grip/grip-3.1.7.ebuild,v 1.1 2004/03/23 07:01:54 eradicator Exp $
 
 inherit eutils
 
@@ -26,18 +26,16 @@ IUSE="nls oggvorbis"
 SLOT="0"
 KEYWORDS="~x86 ~ppc alpha ~amd64 ~hppa ~sparc"
 
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${P}-cdda.patch
-}
-
 src_compile() {
 	econf --disable-dependency-tracking `use_enable nls` || die
 	emake || die "emake failed"
 }
 
 src_install () {
-	einstall || die
+	make DESTDIR=${D} install || die
+	dodir /usr/share/gnome/apps/Multimedia
+	dodir /usr/share/applnk/Multimedia
+	cp ${D}/usr/share/applications/grip.desktop ${D}/usr/share/gnome/apps/Multimedia
+	cp ${D}/usr/share/applications/grip.desktop ${D}/usr/share/applnk/Multimedia
 	dodoc AUTHORS CREDITS ChangeLog README TODO || die "dodoc failed"
 }
