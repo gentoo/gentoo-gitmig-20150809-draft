@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers-extra/ati-drivers-extra-3.7.6.ebuild,v 1.3 2004/04/11 17:57:38 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers-extra/ati-drivers-extra-3.7.6.ebuild,v 1.4 2004/04/16 13:22:53 lu_zero Exp $
 
 IUSE="qt kde gnome"
 
@@ -18,7 +18,7 @@ DEPEND=">=virtual/linux-sources-2.4
 	=media-video/ati-drivers-${PV}*
 	qt? ( >=x11-libs/qt-3.0 )"
 
-RDEPEND="=media-video/ati-drivers-${PV}
+RDEPEND="=media-video/ati-drivers-${PV}*
 	qt? ( >=x11-libs/qt-3.0 )"
 
 ATIBIN="${D}/opt/ati/bin"
