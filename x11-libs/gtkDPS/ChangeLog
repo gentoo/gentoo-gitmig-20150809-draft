@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/gtkDPS
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkDPS/ChangeLog,v 1.14 2004/06/28 17:35:08 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkDPS/ChangeLog,v 1.15 2004/08/28 15:15:12 usata Exp $
+
+  29 Aug 2004; Mamoru KOMACHI <usata@gentoo.org> gtkDPS-0.3.4.ebuild:
+  Stable on ppc to support autotrace.
 
   28 Jun 2004; Aron Griffis <agriffis@gentoo.org> gtkDPS-0.3.3-r1.ebuild,
   gtkDPS-0.3.4.ebuild:

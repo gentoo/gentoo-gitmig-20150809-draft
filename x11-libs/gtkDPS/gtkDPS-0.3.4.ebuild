@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkDPS/gtkDPS-0.3.4.ebuild,v 1.10 2004/06/28 17:35:08 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkDPS/gtkDPS-0.3.4.ebuild,v 1.11 2004/08/28 15:15:12 usata Exp $
 
 inherit gnuconfig
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.gyve.org/pub/${PN}/${P}.tar.gz"
 HOMEPAGE="http://www.gyve.org/gtkDPS/"
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~sparc alpha ~ppc ~amd64"
+KEYWORDS="~x86 ~sparc alpha ppc ~amd64"
 
 DEPEND="virtual/libc
 	=x11-libs/gtk+-1.2*
