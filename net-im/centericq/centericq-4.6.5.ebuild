@@ -1,7 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Shachar Goldin <aldarsior@yahoo.com>, Maintainer Bart Verwilst <verwilst@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-im/centericq/centericq-4.5.0.ebuild,v 1.3 2002/02/09 11:47:56 verwilst Exp $
+# Author Shachar Goldin <aldarsior@yahoo.com>
+# Maintainer Bart Verwilst <verwilst@gentoo.org>
+# $Header: /var/cvsroot/gentoo-x86/net-im/centericq/centericq-4.6.5.ebuild,v 1.1 2002/03/24 15:23:23 verwilst Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A ncurses ICQ/Yahoo!/MSN Client"
