@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.1.30-r12.ebuild,v 1.1 2005/03/23 18:44:11 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.1.30-r12.ebuild,v 1.2 2005/03/24 17:23:35 lanius Exp $
 
 # disable sandbox, needed for motif-config
 SANDBOX_DISABLED="1"
@@ -173,6 +173,6 @@ pkg_postinst() {
 	motif-config --install openmotif-2.1
 }
 
-pkg_postrm() {
+pkg_prerm() {
 	[ -f $T/upgrade ] || motif-config --uninstall openmotif-2.1
 }
