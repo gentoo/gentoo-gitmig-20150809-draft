@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.1.26.ebuild,v 1.6 2004/02/28 01:12:37 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.1.26.ebuild,v 1.7 2004/03/02 08:44:43 vapier Exp $
 
 inherit eutils
 
@@ -178,7 +178,7 @@ pkg_postinst() {
 			chmod 640 ldap.pem
 			chown root:ldap ldap.pem
 		else
-			einfo "An LDAP cert already appears to exist, no creating"
+			einfo "An LDAP cert already appears to exist, not creating"
 		fi
 	fi
 
