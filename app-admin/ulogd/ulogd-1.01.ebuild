@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ulogd/ulogd-1.01.ebuild,v 1.9 2004/07/17 17:20:25 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ulogd/ulogd-1.01.ebuild,v 1.10 2004/07/19 13:04:53 aliz Exp $
 
 DESCRIPTION="iptables daemon for ULOG target for userspace iptables filter logging"
 SRC_URI="http://ftp.netfilter.org/pub/ulogd/${P}.tar.bz2"
@@ -13,11 +13,9 @@ IUSE="mysql"
 
 DEPEND="net-firewall/iptables"
 
-MAKEOPTS="${MAKEOPTS} -j1"
-
 src_compile() {
 	econf `use_with mysql` || die "configure failed"
-	emake || die "make failed"
+	make || die "make failed"
 }
 
 src_install() {
