@@ -1,14 +1,29 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.11 2002/06/21 01:21:22 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.12 2002/06/23 15:49:00 lostlogic Exp $
+
+*xine-lib-0.9.12 (23 Jun 2002)
+
+  23 Jun 2002; Brandon Low <lostlogic@gentoo.org>xine-lib-0.9.12.ebuild:
+
+  Another new release from our friendly release crazy xine people.  
+  According to the xine people here is the changelog, enjoy:
+
+  * demux_ts fixes for ATSC streams
+  * configurable size of avi subtitles
+  * fixed bug in libsputext that caused subtitle flashing
+  * update win32 codec loading code
+  * use directshow filter to decode msmpeg4 v1/v2
+  * fixed logo file name extension
+  * fixed german i18n files
 
 *xine-lib-0.9.11 (20 Jun 2002)
 
-  20 Jun 2002; Brandon Low <lostlogic@gentoo.org> xine-lib-0.9.10.ebuild :
+  20 Jun 2002; Brandon Low <lostlogic@gentoo.org> xine-lib-0.9.12.ebuild:
 
   Updated to use the 0.9.11a source from the xine folks...
 
-  20 Jun 2002; Arcady Genkin <agenkin@thpoon.com> xine-lib-0.9.10.ebuild :
+  20 Jun 2002; Arcady Genkin <agenkin@thpoon.com> xine-lib-0.9.12.ebuild:
 
   Update to version 0.9.11.
 

@@ -1,6 +1,21 @@
 # ChangeLog for media-video/xine-ui
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/ChangeLog,v 1.14 2002/06/21 14:09:33 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/ChangeLog,v 1.15 2002/06/23 15:49:00 lostlogic Exp $
+
+*xine-ui-0.9.12 (23 Jun 2002)
+
+  23 Jun 2002; Brandon Low <lostlogic@gentoo.org> xine-ui-0.9.12.ebuild:
+
+  Another new release from our friendly release crazy xine people.
+  According to the xine people here is the changelog, enjoy:
+
+  * demux_ts fixes for ATSC streams
+  * configurable size of avi subtitles
+  * fixed bug in libsputext that caused subtitle flashing
+  * update win32 codec loading code
+  * use directshow filter to decode msmpeg4 v1/v2
+  * fixed logo file name extension
+  * fixed german i18n files
 
 *xine-ui-0.9.11 (21 Jun 2002)
 
