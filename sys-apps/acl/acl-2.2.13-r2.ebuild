@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/acl/acl-2.2.13-r2.ebuild,v 1.15 2004/07/19 02:41:48 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/acl/acl-2.2.13-r2.ebuild,v 1.16 2004/08/15 17:17:20 lv Exp $
 
 DESCRIPTION="Access control list utilities, libraries and headers"
 HOMEPAGE="http://oss.sgi.com/projects/xfs"
@@ -25,12 +25,15 @@ src_compile() {
 	use s390 && unset PLATFORM
 	autoconf || die
 
+	[ -z "${CONF_LIBDIR}" ] && local mylibdir="lib"
+	[ ! -z "${CONF_LIBDIR}" ] && local mylibdir=${CONF_LIBDIR}
+
 	./configure \
 		`use_enable nls gettext` \
 		--mandir=/usr/share/man \
 		--prefix=/usr \
-		--libexecdir=/usr/lib \
-		--libdir=/lib \
+		--libexecdir=/usr/${mylibdir} \
+		--libdir=/${mylibdir} \
 		|| die
 
 	sed -i \
@@ -45,11 +48,14 @@ src_install() {
 	make DIST_ROOT=${D} install install-dev install-lib || die
 	#einstall DESTDIR=${D} install install-dev install-lib || die
 
-	rm -f ${D}/usr/lib/libacl.so
-	rm -f ${D}/lib/*a
-	dosym /lib/libacl.so /usr/lib/libacl.so
-	dosym /usr/lib/libacl.la /lib/libacl.la
-	dosym /usr/lib/libacl.a /lib/libacl.a
+	[ -z "${CONF_LIBDIR}" ] && local mylibdir="lib"
+	[ ! -z "${CONF_LIBDIR}" ] && local mylibdir=${CONF_LIBDIR}
+
+	rm -f ${D}/usr/${mylibdir}/libacl.so
+	rm -f ${D}/${mylibdir}/*a
+	dosym /${mylibdir}/libacl.so /usr/${mylibdir}/libacl.so
+	dosym /usr/${mylibdir}/libacl.la /${mylibdir}/libacl.la
+	dosym /usr/${mylibdir}/libacl.a /${mylibdir}/libacl.a
 
 	dodir /bin
 	mv ${D}/usr/bin/* ${D}/bin/
