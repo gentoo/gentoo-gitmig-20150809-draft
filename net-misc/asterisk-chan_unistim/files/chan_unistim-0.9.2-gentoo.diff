@@ -1,0 +1,33 @@
+--- chan_unistim-0.9.2/Makefile.orig	2005-03-29 14:56:16.634635584 +0000
++++ chan_unistim-0.9.2/Makefile	2005-03-29 15:02:37.375754136 +0000
+@@ -7,15 +7,14 @@
+ INSTALL_PREFIX=
+ ASTERISK_HEADER_DIR=$(INSTALL_PREFIX)/usr/include
+ 
+-MODULES_DIR=$(INSTALL_PREFIX)/usr/lib/asterisk/modules
++MODULES_DIR=$(INSTALL_PREFIX)$(shell /usr/bin/asterisk-config --modulesdir)
++ETC_DIR=$(INSTALL_PREFIX)$(shell /usr/bin/asterisk-config --sysconfdir)
+ 
+ PROC=$(shell uname -m)
+ 
+ DEBUG=-g #-pg
+ INCLUDE=-I$(ASTERISK_HEADER_DIR)
+-CFLAGS=-pipe -Wall -Wmissing-prototypes -Wmissing-declarations $(DEBUG) $(INCLUDE) -D_REENTRANT -D_GNU_SOURCE
+-CFLAGS+=-O6
+-CFLAGS+=$(shell if $(CC) -march=$(PROC) -S -o /dev/null -xc /dev/null >/dev/null 2>&1; then echo "-march=$(PROC)"; fi)
++CFLAGS+=-pipe -fPIC -DPIC -Wall -Wmissing-prototypes -Wmissing-declarations $(DEBUG) $(INCLUDE) -D_REENTRANT -D_GNU_SOURCE
+ CFLAGS+=$(shell if uname -m | grep -q ppc; then echo "-fsigned-char"; fi)
+ 
+ LIBS=-ldl -lpthread -lm
+@@ -40,8 +39,10 @@
+ 	$(CC) -shared -Xlinker -x -o $@ chan_unistim.o
+ 
+ install: all
++	if [ ! -d $(MODULES_DIR) ]; then mkdir -m 755 -p $(MODULES_DIR) ; fi
+ 	for x in $(SHAREDOS); do $(INSTALL) -m 755 $$x $(MODULES_DIR) ; done
+ 
+ config: all
+-	cp unistim.conf $(INSTALL_PREFIX)/etc/asterisk/
++	if [ ! -d $(ETC_DIR) ]; then mkdir -m 755 -p $(ETC_DIR) ; fi
++	cp unistim.conf $(ETC_DIR)
+ 

@@ -1,0 +1,10 @@
+# ChangeLog for net-misc/asterisk-chan_unistim
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-chan_unistim/ChangeLog,v 1.1 2005/03/29 15:09:44 stkn Exp $
+
+*asterisk-chan_unistim-0.9.2 (29 Mar 2005)
+
+  29 Mar 2005; Stefan Knoblich <stkn@gentoo.org> +metadata.xml,
+  +files/chan_unistim-0.9.2-gentoo.diff, +asterisk-chan_unistim-0.9.2.ebuild:
+  Initial import.
+
