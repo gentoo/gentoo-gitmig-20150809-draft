@@ -1,0 +1,15 @@
+diff -ur mpg123-0.59r.ORG/audio_sun.c mpg123-0.59r/audio_sun.c
+--- mpg123-0.59r.ORG/audio_sun.c	Thu Feb  4 13:22:34 1999
++++ mpg123-0.59r/audio_sun.c	Fri May 10 07:31:28 2002
+@@ -28,6 +28,11 @@
+ #include <asm/audioio.h>
+ #endif
+ 
++#ifdef SPARCLINUX
++#include <audiofile.h>
++#include <linux/soundcard.h>
++#endif
++
+ static void audio_set_format_helper(struct audio_info_struct *ai,audio_info_t *ainfo);
+ 
+ 
