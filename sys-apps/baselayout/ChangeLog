@@ -1,9 +1,13 @@
 # ChangeLog for sys-apps/baselayout
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.96 2003/10/05 21:31:45 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.97 2003/10/09 19:05:52 pappy Exp $
 
 # See the gentoo-src rc-scripts ChangeLog for up-to-date release information:
 # http://www.gentoo.org/cgi-bin/viewcvs.cgi/rc-scripts/ChangeLog?rev=HEAD&cvsroot=gentoo-src&content-type=text/vnd.viewcvs-markup
+
+  09 Oct 2003; Alexander Gabert <pappy@gentoo.org>
+  baselayout-1.8.6.10-r1.ebuild:
+  removed hardened-gcc flags again
 
   05 Oct 2003; Martin Schlemmer <azarah@gentoo.org>
   baselayout-1.8.6.10-r1.ebuild, baselayout-1.8.6.8-r1.ebuild:
