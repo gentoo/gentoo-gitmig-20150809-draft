@@ -81,4 +81,3 @@ dev-libs/elfutils
 
 # Needs >=readline-4.2
 <media-sound/cdcd-0.6.4
-<net-nds/openldap-2.0.27
