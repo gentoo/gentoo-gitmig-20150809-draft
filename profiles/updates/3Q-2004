@@ -85,3 +85,4 @@ move net-www/mini_httpd www-servers/mini_httpd
 move net-www/monkeyd www-servers/monkeyd
 move net-www/ncsa-httpd www-servers/ncsa-httpd
 move net-www/orion www-servers/orion
+move net-www/plb www-servers/plb
