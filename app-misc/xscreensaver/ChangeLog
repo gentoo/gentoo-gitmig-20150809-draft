@@ -1,6 +1,15 @@
 # ChangeLog for app-misc/xscreensaver
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-misc/xscreensaver/ChangeLog,v 1.11 2002/06/06 22:19:53 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/xscreensaver/ChangeLog,v 1.12 2002/06/10 06:19:48 seemant Exp $
+
+
+*xscreensaver-4.04.2-r2 (9 Jun 2002)
+
+  9 Jun 2002; Seemant Kulleen <seemant@gentoo.orG>
+  xscreensaver-4.04.2-r2.ebuild files/digest-xscreensaver-4.04.2-r2 :
+
+  There was a typo in the last revision which caused GL screenhacks to fail.
+  This closes bug #3479 by phil@lsu.edu (Phil Bordelon)
 
 *xscreensaver-4.04.2-r1 (6 Jun 2002)
 
