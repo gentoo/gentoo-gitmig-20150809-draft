@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libdvdread
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdread/ChangeLog,v 1.14 2004/08/24 00:17:01 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdread/ChangeLog,v 1.15 2004/08/30 02:26:10 tgall Exp $
+
+  29 Aug 2004; Tom Gall <tgall@gentoo.org> libdvdread-0.9.4.ebuild:
+  added ~ppc64, bug #60786
 
   23 Aug 2004; Michael Sterrett <mr_bones_@gentoo.org>
   libdvdread-0.9.4.ebuild:
