@@ -64,7 +64,6 @@
 </tr>
 <?php } ?>
 <tr>
-	<td bgcolor="#dddaec"><b>Date</b></td>
 	<td bgcolor="#dddaec"><b>Title</b></td>
 	<td bgcolor="#dddaec"><b>Followups</b></td>
 	<td bgcolor="#dddaec"><b>Existed</b></td>
@@ -81,7 +80,6 @@
 				$flagimgs = '<img src="images/public.gif" width=16 height=16 alt="public">';
 ?>
 <tr>
-	<td><?=date( "n/j/y", $todo['date'] );?></td>
 	<td><a href="single.php?tid=<?=$todo['tid'];?>"><?=$todo['title'];?></a></td>
 	<td><?=$fupcount;?></td>
 	<td><?=date( "n/j/y", $todo['date'] );?>-<?=date( "n/j/y", $todo['datecompleted'] );?></td>

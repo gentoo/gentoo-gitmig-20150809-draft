@@ -54,10 +54,10 @@
 	// show/hide privates
 	if ( $show_privates == 1 ) {
 		$query_where = '';
-		$disptxt = " <a href=\"index.php?ch_show_privates=0\">(private todos shown)</a>";
+		$disptxt = " <a href=\"index.php?ch_show_privates=0\">(private todos shown; click to hide)</a>";
 	} else {
 		$query_where = ' and public!=0';
-		$disptxt = " <a href=\"index.php?ch_show_privates=1\">(private todos hidden)</a>";
+		$disptxt = " <a href=\"index.php?ch_show_privates=1\">(private todos hidden; click to show)</a>";
 	}
 
 	// ooh, now real content...
