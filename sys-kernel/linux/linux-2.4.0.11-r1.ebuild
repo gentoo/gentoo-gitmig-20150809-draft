@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux/linux-2.4.0.11-r1.ebuild,v 1.1 2001/01/25 18:13:08 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux/linux-2.4.0.11-r1.ebuild,v 1.2 2001/01/25 18:54:07 drobbins Exp $
 
 S=${WORKDIR}/linux
 KV=2.4.0-ac11
@@ -53,6 +53,8 @@ src_unpack() {
 
 	echo "Preparing for compilation..."
 	cd ${S}
+	#sometimes we have icky kernel symbols; this seems to get rid of them
+	make mrproper
 	#this is the configuration for the default kernel
 	#annoying but true -- we need to do this for linux-sources as well
 	#so that autoconf.h exists and other packages compile
