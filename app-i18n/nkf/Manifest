@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 bfaa56af3c5312872b7fece5edde037f ChangeLog 1970
+MD5 bc734aa5235604f524eefddbcc46e98f ChangeLog 2059
 MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
 MD5 eb08756476ddae29aeb8ab5bd708dc33 nkf-2.0.2-r1.ebuild 1029
-MD5 d33c0d204dc6ab97cec9c817f376fa15 nkf-2.0.4.ebuild 1024
-MD5 846425777c3e9f5dcb205262a1548d7a files/digest-nkf-2.0.4 58
+MD5 2e53e4f87ec30f537829c97268e859ed nkf-2.0.4.ebuild 1029
 MD5 9cb8e05b1ef22ec8e3e5e7ad852e0f9c files/digest-nkf-2.0.2-r1 57
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA33sOHTu7gpaalycRAqRCAJ4qWo4mhQqixcpMAlwdhkiU5yRWPwCfYu5Y
-yP64xNuylD84TTy7xn0clYw=
-=cOVW
------END PGP SIGNATURE-----
+MD5 846425777c3e9f5dcb205262a1548d7a files/digest-nkf-2.0.4 58
