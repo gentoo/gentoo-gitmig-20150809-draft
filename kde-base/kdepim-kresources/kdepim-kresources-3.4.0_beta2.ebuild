@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-kresources/kdepim-kresources-3.4.0_beta2.ebuild,v 1.2 2005/02/05 18:57:21 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-kresources/kdepim-kresources-3.4.0_beta2.ebuild,v 1.3 2005/02/06 02:05:45 motaboy Exp $
 
 KMNAME=kdepim
 KMMODULE=kresources
@@ -34,6 +34,7 @@ KMEXTRACTONLY="
 	kmail/kmailicalIface.h
 	libkdenetwork/
 	libkpgp/
+	libemailfunctions/
 	"
 KMCOMPILEONLY="
 	libkdenetwork/gpgmepp

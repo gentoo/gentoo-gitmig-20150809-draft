@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdepim-kresources
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-kresources/ChangeLog,v 1.2 2005/02/05 11:39:16 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-kresources/ChangeLog,v 1.3 2005/02/06 02:05:45 motaboy Exp $
+
+  06 Feb 2005; Simone Gotti <motaboy@gentoo.org>
+  kdepim-kresources-3.4.0_beta2.ebuild:
+  Add extraction of "libemailfuctions" dir needed for the compilation.
 
 *kdepim-kresources-3.4.0_beta2 (05 Feb 2005)
 
