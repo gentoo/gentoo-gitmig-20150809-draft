@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 e3e5e02c80ab348e41dfd2a4a957da9d ac-sources-2.6.10-r12.ebuild 1109
 MD5 7e41fd342e363a0da3e4f561475a5a5a ChangeLog 4013
 MD5 2b0cfdcefc398952a818684668e808f1 metadata.xml 384
 MD5 655251f31f0bdc85bdd0cd0280af22b7 files/ac-sources-2.6.10.75963.patch 979
 MD5 281668169159edbd7a6d01b3b14b8a99 files/digest-ac-sources-2.6.10-r12 133
 MD5 1642828ee921eeb793b21733b50acdb7 files/ac-sources-2.6.10.77094.patch 3711
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFCCxcknVkA0cTr1F4RAl/hAJ94TeUNNIHoLTUzl7iazNuSWxwWhwCfdT0Q
+HhFYSPUAEuQhhzJkbDVMuQg=
+=nQVE
+-----END PGP SIGNATURE-----
