@@ -11,10 +11,8 @@ app-editors
 app-emacs
 app-emulation
 app-forensics
-app-gnustep
 app-i18n
 app-laptop
-app-macos
 app-misc
 app-office
 app-pda
@@ -70,7 +68,6 @@ kde-misc
 mail-client
 mail-filter
 mail-mta
-mail-server
 media-fonts
 media-gfx
 media-libs
@@ -113,7 +110,6 @@ sec-policy
 sys-apps
 sys-boot
 sys-cluster
-sys-darwin
 sys-devel
 sys-fs
 sys-kernel
@@ -122,7 +118,6 @@ www-apache
 www-apps
 www-client
 www-misc
-www-plugin
 www-proxy
 www-servers
 x11-base
