@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt/rxvt-2.7.10-r2.ebuild,v 1.1 2005/04/03 14:20:53 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt/rxvt-2.7.10-r2.ebuild,v 1.2 2005/04/06 04:11:39 usata Exp $
 
-inherit eutils flag-o-matic
+inherit eutils flag-o-matic libtool
 
 DESCRIPTION="rxvt -- nice small x11 terminal"
 HOMEPAGE="http://www.rxvt.org/
@@ -26,6 +26,8 @@ src_unpack() {
 	use motif && epatch ${FILESDIR}/${P}-azz4.diff
 	use cjk && epatch ${DISTDIR}/${P}-xim-fix.patch.gz
 	use linguas_ja && epatch ${FILESDIR}/${P}-rk.patch
+
+	uclibctoolize
 }
 
 src_compile() {
