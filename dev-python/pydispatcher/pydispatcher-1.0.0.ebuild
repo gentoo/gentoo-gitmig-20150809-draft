@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pydispatcher/pydispatcher-1.0.0.ebuild,v 1.2 2004/07/22 20:59:23 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pydispatcher/pydispatcher-1.0.0.ebuild,v 1.3 2004/08/27 22:12:58 pythonhead Exp $
 
 inherit distutils
 
