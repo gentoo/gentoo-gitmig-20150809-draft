@@ -1,32 +1,35 @@
-#! /bin/bash
-#RCUPDATE:2 3 4:95:This line is required for script management
-# Let this start as late as possible, but before those services 
-# which must start last e.g. xdm/kdm
-# If it starts too early, it may do so before a working internet
-# connection is up
+#!/bin/sh
+#RCUPDATE:2 3 4:70:This line is required for script management
 
-. /etc/rc.d/config/basic
 . /etc/rc.d/config/functions
+. /etc/rc.d/config/basic
 
+SERVICE="wwwoffled"
 opts="start stop restart"
 
+#PIDFILE=/var/run/wwwoffled.pid
+EXE=/usr/sbin/wwwoffled
+
+# WARNING: wwwoffled detaches from the console and as it does so it assumes
+# a new pid. DO NOT use pidfile tracking, it does NOT work!
+# (This was a note to self, who did use pidfile tracking until he learned better)
+
 start() {
-	ebegin "Starting wwwoffled"
-	#start-stop-daemon --start --quiet --exe `which wwwoffled` -c /var/spool/wwwoffle/wwwoffle.conf 1>&2
-	wwwoffled -c /var/spool/wwwoffle/wwwoffle.conf
-        eend $? "Error starting wwwoffled, perhaps it's already running?"
+    ebegin "Starting $SERVICE"
+    start-stop-daemon --start --quiet --exec $EXE -- -c /var/spool/wwwoffle/wwwoffle.conf
+    eend $? "Started $SERVICE." "Error starting $SERVICE."
 }
 
 stop() {
-	ebegin "Stopping wwwoffled"
-	#start-stop-daemon --stop --quiet --exe `which wwwoffled` -c /var/spool/wwwoffle/wwwoffle.conf 1>&2
-	wwwoffle -kill
-	eend $? "Error stopping wwwoffled, perhaps it wasn't running?"
+    ebegin "Stopping $SERVICE"
+    start-stop-daemon --stop --quiet --exec $EXE
+    eend $? "Stopped $SERVICE." "Error stopping $SERVICE."
 }
 
 restart() {
-	stop
-	start
+    stop
+    sleep 1s
+    start
 }
 
 doservice ${@}
