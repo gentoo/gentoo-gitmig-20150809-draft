@@ -17,7 +17,7 @@ KEYWORDS="~x86 ~ppc"
 
 
 DEPEND="gtk? ( >=lablgtk-1.2.4 )
-	>=dev-lang/ocaml-3.0.6
+	>=dev-lang/ocaml-3.06
 	dev-lang/perl"
 RDEPEND="net-misc/wget"
 
@@ -38,6 +38,9 @@ src_compile() {
 		--localstatedir=/var/mldonkey \
 		--enable-ocamlver=3 \
 		--enable-batch
+
+	# ocalm 3.07 fix
+	sed -i -e"s:format:format4:g" src/utils/lib/autoconf.ml
 
 	emake || die
 }
