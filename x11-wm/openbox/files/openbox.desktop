@@ -1,0 +1,9 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Openbox
+Comment=This session logs you into Openbox
+Exec=openbox
+TryExec=openbox
+# no icon yet, only the top three are currently used
+Icon=
+Type=Application

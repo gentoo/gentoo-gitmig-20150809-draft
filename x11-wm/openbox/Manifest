@@ -1,4 +1,3 @@
-MD5 a85e4dbde3989efbf8a383e400f44309 ChangeLog 14134
 MD5 416452bedba085c06bd2502510370e1a metadata.xml 162
 MD5 5dfe3a3dad2d7e59ec7e5fc229b3997f openbox-1.2.4.ebuild 629
 MD5 cd8e991ef4a7829c1a715bf68403ecdf openbox-2.1.3-r4.ebuild 874
@@ -7,6 +6,9 @@ MD5 bbddfe37157511609a9ef1a0674b1a73 openbox-2.3.1.ebuild 1257
 MD5 0ecc1bdb4d94a39ce73b7b2835926e62 openbox-3.0-r1.ebuild 1418
 MD5 fc2def52b7a44b9c694a4f5e63cddcf5 openbox-3.0.ebuild 1316
 MD5 75d36a78036bee377348f0e44b0c7a05 openbox-3.1.ebuild 1424
+MD5 e3e043742cdd884baf60f39941960a56 openbox-3.1-r1.ebuild 1388
+MD5 ebc17b17b5f5d514f26fa5eaaedf71bc ChangeLog 14317
+MD5 87a0450483a263221557f426bd7b0d60 files/openbox.desktop 192
 MD5 f0b52d0f48a8b10c418a6d6558c4198c files/digest-openbox-1.2.4 65
 MD5 14ea1589afa8d9807619faebdd1468b5 files/digest-openbox-2.1.3-r4 65
 MD5 e8173797964d97d9293eee8faa1a95aa files/digest-openbox-2.3.0 65
@@ -17,3 +19,4 @@ MD5 65fe3e6fb33eb6717d28799c961b51ca files/digest-openbox-3.1 134
 MD5 df0043ec05d0e257c30a0c1b7b28a78e files/openbox-2.3.1-epist.patch 318
 MD5 0b79bdcff70f29cdaf7980382b34dee4 files/openbox-2.3.1-nls-codeset.patch 306
 MD5 056f24d600f8f7ad2c02642ecd41ebfa files/openbox-gcc.patch 276
+MD5 65fe3e6fb33eb6717d28799c961b51ca files/digest-openbox-3.1-r1 134
