@@ -1,0 +1,10 @@
+# ChangeLog for app-admin/system-tools-backends
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/system-tools-backends/ChangeLog,v 1.1 2005/03/09 06:20:00 joem Exp $
+
+*system-tools-backends-1.2.0 (09 Mar 2005)
+
+  09 Mar 2005; Joe McCann <joem@gentoo.org> +metadata.xml,
+  +system-tools-backends-1.2.0.ebuild:
+  New package. Backend for gnome-system-tools
+
