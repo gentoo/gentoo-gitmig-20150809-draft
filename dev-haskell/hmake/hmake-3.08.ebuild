@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hmake/hmake-3.08.ebuild,v 1.6 2003/09/17 21:24:49 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hmake/hmake-3.08.ebuild,v 1.7 2004/03/25 07:21:17 mr_bones_ Exp $
 
 inherit base fixheadtails
 
@@ -15,7 +15,8 @@ IUSE="nhc98 readline"
 
 # hmake can be build with either ghc or nhc98; we prefer ghc
 # unless a use flag tells us otherwise
-DEPEND="nhc98?        ( dev-lang/nhc98 ) : ( virtual/ghc )
+DEPEND="nhc98? ( dev-lang/nhc98 )
+	!nhc98? ( virtual/ghc )
 	readline?     ( sys-libs/readline )"
 RDEPEND="readline?    ( sys-libs/readline )
 	virtual/glibc

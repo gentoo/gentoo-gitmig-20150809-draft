@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/hmake
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hmake/ChangeLog,v 1.5 2003/09/17 21:24:49 johnm Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hmake/ChangeLog,v 1.6 2004/03/25 07:21:17 mr_bones_ Exp $
+
+  24 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> hmake-3.08.ebuild:
+  don't use deprecated ? : use syntax
 
   17 Sep 2003; John Mylchreest <johnm@gentoo.org>; hmake-3.08.ebuild:
   updating to fix headtails issue
