@@ -152,5 +152,6 @@ zlib - Adds support for zlib (de)compression
 x86 - indicates that architecture is x86
 ppc - indicates that architecture is PowerPC
 sparc - indicates that architecture is (32-bit) Sparc
-sparc64 - indicates that architecture is 64-bit Sparc
 alpha - indicates that architecture is 64-bit Alpha
+mips - indicates that architecture is MIPS based
+hppa - indicates that architecture is HP PA-Risc
