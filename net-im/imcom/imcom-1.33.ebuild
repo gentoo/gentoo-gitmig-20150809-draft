@@ -1,9 +1,7 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/imcom/imcom-1.33.ebuild,v 1.5 2004/06/25 12:37:04 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/imcom/imcom-1.33.ebuild,v 1.6 2004/07/03 21:05:49 slarti Exp $
 
-MYVER=${PV}
-S=${WORKDIR}/${PN}-${MYVER}
 SRC_URI="http://imcom.floobin.cx/files/${P}.tar.gz"
 #SRC_URI="http://nafai.dyndns.org/files/imcom-betas/${PN}-${MYVER}.tar.gz"
 HOMEPAGE="http://imcom.floobin.cx"
@@ -11,11 +9,10 @@ DESCRIPTION="Python commandline Jabber Client"
 
 DEPEND=">=dev-lang/python-2.2
 	>=dev-python/pyxml-0.7"
-RDEPEND="${DEPEND}"
 
 SLOT="0"
 LICENSE="BSD"
-KEYWORDS="x86 ~ppc ~sparc"
+KEYWORDS="x86 ~ppc ~sparc ~amd64"
 IUSE=""
 
 src_compile() {

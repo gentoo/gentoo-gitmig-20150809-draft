@@ -1,6 +1,9 @@
 # ChangeLog for net-im/imcom
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/imcom/ChangeLog,v 1.19 2004/06/25 12:37:04 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/imcom/ChangeLog,v 1.20 2004/07/03 21:05:49 slarti Exp $
+
+  03 Jul 2004; Tom Martin <slarti@gentoo.org> imcom-1.33.ebuild:
+  Added ~amd64 keyword.
 
   25 Jun 2004; Thomas Raschbacher <lordvan@gentoo.org> imcom-1.32.ebuild,
   imcom-1.33.ebuild:
