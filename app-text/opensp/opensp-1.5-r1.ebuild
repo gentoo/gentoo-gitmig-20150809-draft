@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/opensp/opensp-1.5-r1.ebuild,v 1.22 2004/06/29 04:19:37 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/opensp/opensp-1.5-r1.ebuild,v 1.23 2004/07/13 21:07:50 mr_bones_ Exp $
 
 inherit eutils gnuconfig
 
@@ -40,7 +40,7 @@ src_compile() {
 	myconf="${myconf} --enable-default-catalog=/etc/sgml/catalog"
 	myconf="${myconf} --enable-default-search-path=/usr/share/sgml"
 	myconf="${myconf} --datadir=/usr/share/sgml/${P}"
-	econf ${myconf} $(use_enable nsl) || die "econf failed"
+	econf ${myconf} $(use_enable nls) || die "econf failed"
 	emake pkgdocdir=/usr/share/doc/${PF} || die "parallel make failed"
 }
 
