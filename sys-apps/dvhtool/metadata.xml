@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<herd>mips</herd>
+	<maintainer>
+		<email>mips@gentoo.org</email>
+		<name>Mips Team</name>
+	</maintainer>
+
+	<longdescription>
+		dvhtool is the utility to store kernel images (or any file) into the SGI Volume Header on SGI MIPS machines
+	</longdescription>
+</pkgmetadata>
+
