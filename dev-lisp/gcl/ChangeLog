@@ -1,6 +1,14 @@
 # ChangeLog for dev-lisp/gcl
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl/ChangeLog,v 1.26 2004/12/18 12:19:41 blubb Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl/ChangeLog,v 1.27 2005/02/02 22:47:08 mkennedy Exp $
+
+*gcl-2.6.6 (02 Feb 2005)
+
+  02 Feb 2005; Matthew Kennedy <mkennedy@gentoo.org> -gcl-2.4.0.ebuild,
+  -gcl-2.4.3.ebuild, -gcl-2.5.2.ebuild, -gcl-2.5.3.ebuild,
+  -gcl-2.6.2.ebuild, -gcl-2.6.3.ebuild, -gcl-2.6.4.ebuild,
+  -gcl-2.6.5.ebuild, +gcl-2.6.6.ebuild:
+  New upstream version; Removed older ebuilds; Tag stable keywords for x86
 
   18 Dec 2004; Simon Stelling <blubb@gentoo.org> gcl-2.6.5.ebuild:
   added ~amd64
