@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gulm/gulm-1.0_pre2.ebuild,v 1.1 2005/01/27 04:47:30 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gulm/gulm-1.0_pre2.ebuild,v 1.2 2005/01/27 16:12:45 xmerlin Exp $
 
 inherit eutils linux-mod
 
@@ -17,14 +17,12 @@ SLOT="0"
 KEYWORDS="~x86"
 
 
-DEPEND="virtual/libc
-	sys-cluster/ccs
-	sys-cluster/cman
-	tcpd? (sys-apps/tcp-wrappers)
+DEPEND=">=sys-cluster/ccs-0.7
+	>=sys-cluster/cman-1.0_pre3
+	sys-apps/tcp-wrappers
 	"
 
-RDEPEND="virtual/libc
-	tcpd? (sys-apps/tcp-wrappers)"
+RDEPEND="sys-apps/tcp-wrappers"
 
 
 S="${WORKDIR}/${MY_P}"
