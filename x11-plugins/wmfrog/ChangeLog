@@ -1,0 +1,10 @@
+# ChangeLog for x11-plugins/wmfrog
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmfrog/ChangeLog,v 1.1 2003/12/25 22:00:16 pyrania Exp $
+
+*wmfrog-0.1.6 (25 Dec 2003)
+
+  25 Dec 2003; Markus Nigbur <pyrania@gentoo.org> metadata.xml,
+  wmfrog-0.1.6.ebuild:
+  Initial import. Thanks to Thibaut Colar for parts of the ebuild.
+
