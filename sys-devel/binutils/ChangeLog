@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/binutils
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.133 2004/06/16 06:33:03 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.134 2004/06/16 06:50:25 lv Exp $
+
+  15 Jun 2004; Travis Tilley <lv@gentoo.org> binutils-2.14.90.0.8-r2.ebuild:
+  changed the ebuild to not have "use uclibc ... || die", but it still doesnt
+  patch cleanly so it is still masked
 
   15 Jun 2004; Travis Tilley <lv@gentoo.org> binutils-2.14.90.0.8-r2.ebuild:
   masking -* due to bug 54059

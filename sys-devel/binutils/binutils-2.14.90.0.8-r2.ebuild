@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.14.90.0.8-r2.ebuild,v 1.2 2004/06/16 06:33:03 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.14.90.0.8-r2.ebuild,v 1.3 2004/06/16 06:50:25 lv Exp $
 
 # NOTE to Maintainer:  ChangeLog states that it no longer use perl to build
 #                      the manpages, but seems this is incorrect ....
@@ -37,7 +37,8 @@ src_unpack() {
 	# one of 38/39 has to be moved out of the way, both are backports of different relro versions
 	# 39 is more current, but not fully backported
 	mv ${WORKDIR}/patch/39_* ${WORKDIR}/patch/skip/
-	use uclibc && rm -f ${WORKDIR}/patch/*relro* && rm -rf ${WORKDIR}/patch/*sparc1* || die
+
+	use uclibc && mv ${WORKDIR}/patch/{38,63,64,92}* ${WORKDIR}/patch/skip/
 
 	epatch ${WORKDIR}/patch
 
