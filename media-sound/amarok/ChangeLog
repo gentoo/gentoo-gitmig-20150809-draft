@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/amarok
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.1 2003/09/21 01:56:48 jje Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.2 2003/09/26 13:45:24 coronalvr Exp $
+
+  26 Sep 2003; Alex Veber <coronalvr@gentoo.org> amarok-0.6.0.ebuild:
+  added a missing dep on kdemultimedia
 
 *amarok-0.6.0 (21 Sep 2003)
 
