@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-0.99.10.9-r1.ebuild,v 1.2 2004/09/19 20:09:05 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-0.99.10.9-r1.ebuild,v 1.3 2004/09/22 08:30:51 ticho Exp $
 
 IUSE="debug ipv6 ldap mbox pam postgres sasl ssl gnutls vpopmail nopop3d mysql"
 
 DESCRIPTION="An IMAP and POP3 server written with security primarily in mind"
 HOMEPAGE="http://dovecot.org/"
-SRC_URI="${HOMEPAGE}/releases/${P}.tar.gz"
+SRC_URI="http://dovecot.org/releases/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="LGPL-2.1"

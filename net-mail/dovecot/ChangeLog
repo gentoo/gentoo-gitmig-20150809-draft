@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/dovecot
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.15 2004/09/19 20:09:05 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.16 2004/09/22 08:30:51 ticho Exp $
+
+  22 Sep 2004; Andrej Kacian <ticho@gentoo.org> dovecot-0.99.10.9-r1.ebuild,
+  dovecot-0.99.11.ebuild:
+  Do not use ${HOMEPAGE} in SRC_URI.
 
 *dovecot-0.99.11 (19 Sep 2004)
 
