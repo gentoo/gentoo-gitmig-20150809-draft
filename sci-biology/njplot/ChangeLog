@@ -1,0 +1,22 @@
+# ChangeLog for sci-biology/njplot-unrooted
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/njplot/ChangeLog,v 1.1 2005/01/09 18:30:03 ribosome Exp $
+
+*njplot-1 (09 Jan 2005)
+
+  09 Jan 2005; Olivier Fisette <ribosome@gentoo.org> +metadata.xml,
+  +njplot-1.ebuild:
+  Moved from sci-biology/njplot-unrooted to sci-biology/njplot.
+
+*njplot-unrooted-1 (23 Dec 2004)
+
+  23 Dec 2004; Olivier Fisette <ribosome@gentoo.org> +metadata.xml,
+  +njplot-unrooted-1.ebuild:
+  Moved from app-sci/njplot-unrooted to sci-biology/njplot-unrooted.
+
+*njplot-unrooted-1 (06 Oct 2004)
+
+  06 Oct 2004; Olivier Fisette <ribosome@gentoo.org> +metadata.xml,
+  +njplot-unrooted-1.ebuild:
+  Initial import.
+
