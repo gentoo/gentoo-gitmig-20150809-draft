@@ -1,8 +1,11 @@
 # ChangeLog for app-editors/vim-core
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim-core/ChangeLog,v 1.18 2003/03/28 16:51:25 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim-core/ChangeLog,v 1.19 2003/04/02 14:41:59 agriffis Exp $
 
 *vim-core-6.1-r5 (22 Mar 2003)
+
+  02 Apr 2003; Aron Griffis <agriffis@gentoo.org> vim-core-6.1-r5.ebuild:
+  Move primary deps to eclass and add IUSE=ncurses in support of bug 18488
 
   28 Mar 2003; Christian Birchinger <joker@gentoo.org> vim-core-6.1-r5.ebuild:
   Added sparc stable keyword
