@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 9b7c53b834d7ba88da26adc6c62ae128 ChangeLog 562
+MD5 d1decab41f9cb174a25dff452adcd45d ChangeLog 726
 MD5 83c2574543d0501303b57050254e3880 metadata.xml 222
-MD5 cb647525fd55554f12e3eb29b0fd9ecb wavpack-4.0.ebuild 571
-MD5 b5fbe60b720ca98e28dfec58111eb0ff wavpack-4.1.ebuild 574
+MD5 64dd6e6b85891bc84105530ca8c5801a wavpack-4.0.ebuild 597
+MD5 744cd0b170ef080ecdf5d70a3be0eff3 wavpack-4.1.ebuild 611
 MD5 647f67953fe2e93a709b8e8c8e1e45ea files/digest-wavpack-4.0 63
 MD5 17333ced2ae7a4e6e6e8b0aa6f395558 files/digest-wavpack-4.1 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBU4riE67gNkjlZFIRAgqaAJ9MOndoWQI/fx5cGXIAuSAnhGmidQCeMVcX
-27/+rf/WMjf5oegyhZZrHIk=
-=M4wS
------END PGP SIGNATURE-----
