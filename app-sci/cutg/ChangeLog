@@ -1,6 +1,10 @@
 # ChangeLog for app-sci/cutg
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/cutg/ChangeLog,v 1.5 2004/09/29 23:17:19 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/cutg/ChangeLog,v 1.6 2004/11/01 01:48:18 ribosome Exp $
+
+  31 Oct 2004; Olivier Fisette <ribosome@gentoo.org> -cutg-142.ebuild,
+  cutg-143.ebuild:
+  Removed old version. Added 143 to x86.
 
 *cutg-143 (29 Sep 2004)
 
