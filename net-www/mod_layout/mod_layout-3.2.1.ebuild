@@ -1,13 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_layout/mod_layout-3.2.1.ebuild,v 1.4 2005/01/07 19:06:56 vericgar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_layout/mod_layout-3.2.1.ebuild,v 1.5 2005/03/01 00:28:32 beu Exp $
 
 
 DESCRIPTION="An Apache DSO module for adding custom headers and/or footers"
 HOMEPAGE="http://software.tangent.org/"
 SRC_URI="http://software.tangent.org/download/${P}.tar.gz"
-DEPEND="=net-www/apache-1*
-		>=sys-apps/sed-4"
+DEPEND="=net-www/apache-1*"
 RDEPEND=""
 
 LICENSE="Apache-1.1"
