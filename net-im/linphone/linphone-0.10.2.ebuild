@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/linphone/linphone-0.10.2.ebuild,v 1.9 2004/01/03 02:10:56 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/linphone/linphone-0.10.2.ebuild,v 1.10 2004/03/14 21:10:44 stkn Exp $
 
 IUSE="doc gnome gtk2 gtk nls xv alsa"
 
@@ -13,14 +13,14 @@ LICENSE="GPL-2"
 KEYWORDS="x86"
 
 DEPEND="dev-libs/glib
-	>=net-libs/libosip-0.9.6
+	<net-libs/libosip-2.0.0
 	dev-util/pkgconfig
 	x86? ( xv? ( dev-lang/nasm ) )
 	gtk? ( =x11-libs/gtk+-1.2* )
 	gtk2? ( >=x11-libs/gtk+-2 )
 	gnome? ( gnome-base/gnome-panel
-	gnome-base/libgnome
-	gnome-base/libgnomeui )
+		gnome-base/libgnome
+		gnome-base/libgnomeui )
 	alsa? ( >media-libs/alsa-lib-0.5 )
 	doc? ( dev-util/gtk-doc )"
 
@@ -32,10 +32,10 @@ src_compile() {
 	then
 	    use gtk2 && myconf="${myconf} --enable-platform-gnome-2"
 	else
-	    use gnome || myconf="${myconf}--enable-gnome_ui=no"
+	    use gnome || myconf="${myconf} --enable-gnome_ui=no"
 	fi
 
-	if use gtk && use doc
+	if use doc
 	then
 		myconf="${myconf} --enable-gtk-doc"
 	else

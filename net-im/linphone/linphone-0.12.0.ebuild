@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/linphone/linphone-0.12.0.ebuild,v 1.3 2004/01/03 02:10:56 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/linphone/linphone-0.12.0.ebuild,v 1.4 2004/03/14 21:10:44 stkn Exp $
 
 IUSE="doc gnome gtk2 gtk nls xv alsa"
 
@@ -13,7 +13,7 @@ LICENSE="GPL-2"
 KEYWORDS="~x86"
 
 DEPEND="dev-libs/glib
-	>=net-libs/libosip-0.9.6
+	<net-libs/libosip-2.0.0
 	dev-util/pkgconfig
 	x86? ( xv? ( dev-lang/nasm ) )
 	gtk? ( =x11-libs/gtk+-1.2* )
