@@ -1,0 +1,10 @@
+# ChangeLog for www-apache/mod_proxy_html
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_proxy_html/ChangeLog,v 1.1 2005/01/10 11:26:38 hollow Exp $
+
+*mod_proxy_html-2.4.3 (10 Jan 2005)
+
+  10 Jan 2005; Benedikt Boehm <hollow@gentoo.org>
+  +files/27_mod_proxy_html.conf, +mod_proxy_html-2.4.3.ebuild:
+  Apache herd package refresh. Initial revision
+
