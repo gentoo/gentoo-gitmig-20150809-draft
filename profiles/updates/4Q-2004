@@ -153,3 +153,4 @@ move app-sci/gerbv sci-electronics/gerbv
 move app-sci/gplcver sci-electronics/gplcver
 move app-sci/gnucap sci-electronics/gnucap
 move app-sci/gtkwave sci-electronics/gtkwave
+move app-sci/gwave sci-electronics/gwave
