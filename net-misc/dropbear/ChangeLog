@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/dropbear
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbear/ChangeLog,v 1.9 2004/06/25 03:12:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbear/ChangeLog,v 1.10 2004/07/09 19:03:49 vapier Exp $
+
+  09 Jul 2004; Mike Frysinger <vapier@gentoo.org> dropbear-0.42.ebuild:
+  Add support for multibinary functionality (multicall) and static.
 
 *dropbear-0.42 (21 Jun 2004)
 
