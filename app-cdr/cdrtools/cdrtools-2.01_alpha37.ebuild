@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-2.01_alpha37.ebuild,v 1.1 2004/08/22 22:26:23 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-2.01_alpha37.ebuild,v 1.2 2004/08/23 00:04:39 pylon Exp $
 
 inherit eutils gcc gnuconfig
 
@@ -29,8 +29,8 @@ src_unpack() {
 	dosed "s:/opt/schily:/usr:g" scsi-remote.c
 
 	cd ${S}/RULES
-	ln -sf x86_64-linux-cc.rul i386-linux-cc.rul
-	ln -sf x86_64-linux-gcc.rul i386-linux-gcc.rul
+	ln -sf i386-linux-cc.rul x86_64-linux-cc.rul
+	ln -sf i386-linux-gcc.rul x86_64-linux-gcc.rul
 	ln -sf ppc-linux-cc.rul ppc64-linux-cc.rul
 }
 
