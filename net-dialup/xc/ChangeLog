@@ -1,6 +1,15 @@
 # ChangeLog for net-dialup/xc
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/xc/ChangeLog,v 1.6 2003/11/19 14:51:43 lanius Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/xc/ChangeLog,v 1.7 2004/01/16 10:50:38 kumba Exp $
+
+*xc-4.3.2-r1 (16 Jan 2004)
+
+  16 Jan 2004; Joshua Kinard <kumba@gentoo.org> xc-4.3.2-r1.ebuild,
+  files/xc-4.3.2-add-115200.patch:
+  Added a small patch which allows xc to use 115200 baud speed for serial port
+  connections (I wanted to use this program to link into my cobalt raq2, which
+  operates at such a speed, and minicom has issues). Also tweaked the Makefile
+  to import CFLAGS from the portage environment.
 
   19 Nov 2003; Heinrich Wendel <lanius@gentoo.org> metadata.xml:
   metadata.xml
