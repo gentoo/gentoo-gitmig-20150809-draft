@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/xpdf-3.00.ebuild,v 1.1 2004/01/25 11:50:22 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/xpdf-3.00.ebuild,v 1.2 2004/01/27 13:55:46 lanius Exp $
 
 DESCRIPTION="An X Viewer for PDF Files"
 HOMEPAGE="http://www.foolabs.com/xpdf/xpdf.html"
@@ -31,14 +31,4 @@ src_install() {
 	dodoc README ANNOUNCE CHANGES COPYING
 	insinto /etc
 	doins ${FILESDIR}/xpdfrc
-}
-
-pkg_postinst() {
-	einfo
-	einfo "HINT: To have even nicer results add these lines to your ~/.xpdfrc"
-	einfo
-	einfo "  include         /etc/xpdfrc"
-	einfo "  t1libControl    high"
-	einfo "  freetypeControl high"
-	einfo
 }
