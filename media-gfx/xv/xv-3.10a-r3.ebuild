@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/xv-3.10a-r3.ebuild,v 1.8 2003/09/04 03:47:05 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/xv-3.10a-r3.ebuild,v 1.9 2003/09/12 02:41:54 vapier Exp $
 
 inherit ccc eutils
 
@@ -11,14 +11,14 @@ SRC_URI="ftp://ftp.cis.upenn.edu/pub/xv/${P}.tar.gz
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc ~alpha"
+KEYWORDS="x86 ppc sparc alpha"
 IUSE="png"
 
 DEPEND="virtual/x11
 	png? ( media-libs/jpeg
-	media-libs/tiff
-	media-libs/libpng
-	>=sys-libs/zlib-1.1.4 )"
+		media-libs/tiff
+		media-libs/libpng
+		>=sys-libs/zlib-1.1.4 )"
 
 src_unpack() {
 	unpack ${A}
