@@ -1,6 +1,4 @@
-MD5 25cb1791ffa0d0e67c91c884488ef626 ChangeLog 1407
+MD5 a8909d571eb2ef2dd81d5cc8378a2abf ChangeLog 1505
 MD5 ef5e6ad02c028e3e948e7c0193aab0c4 crimson-0.4.2.ebuild 1207
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 f3eaec5cdbdbe374f0f1308e12b1d785 crimson-0.4.0.ebuild 1204
 MD5 1a52415580d0384faf85d82960384432 files/digest-crimson-0.4.2 66
-MD5 57ff5fc6413a35032e2ae1ed7c3f602c files/digest-crimson-0.4.0 66
