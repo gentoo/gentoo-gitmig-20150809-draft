@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/xf4vnc/xf4vnc-4.3.0.103.ebuild,v 1.2 2004/04/28 09:25:19 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/xf4vnc/xf4vnc-4.3.0.103.ebuild,v 1.3 2004/06/14 00:49:41 spyderous Exp $
 
 DESCRIPTION="VNC (remote desktop viewer) derived from tightvnc but cooler :-)"
 HOMEPAGE="http://xf4vnc.sourceforge.net/"
@@ -18,7 +18,7 @@ SLOT="0"
 KEYWORDS="~alpha -*"
 IUSE=""
 
-DEPEND="=x11-base/xfree-4.3*"
+DEPEND="virtual/x11"
 
 src_install() {
 	insinto /usr/X11R6/lib/modules/
