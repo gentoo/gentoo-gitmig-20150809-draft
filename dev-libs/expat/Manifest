@@ -1,28 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 cfbd7c4948d872a21af754fc601fccb0 expat-1.95.5-r1.ebuild 634
+MD5 450d60e493bc2e65b92ef540a0a9c351 ChangeLog 5245
 MD5 a6902abc6ebd52482888e7eba179159b expat-1.95.4.ebuild 763
-MD5 86b967b7e27907d10a76a59fd9d67f81 expat-1.95.6.ebuild 630
-MD5 43e377139ff5f3b7415b94a8c8d5260d metadata.xml 158
-MD5 499fda1295129cfc23804cf9e9019ebc ChangeLog 5149
-MD5 fc870f094a18e7edf608283b5b6c794a expat-1.95.7.ebuild 687
+MD5 cfbd7c4948d872a21af754fc601fccb0 expat-1.95.5-r1.ebuild 634
 MD5 990e27113f8887a61f0a36be26879333 expat-1.95.6-r1.ebuild 859
-MD5 2bedf946f6ee6bcb8f5fda0e0a8e02b7 expat-1.95.8.ebuild 880
+MD5 86b967b7e27907d10a76a59fd9d67f81 expat-1.95.6.ebuild 630
 MD5 290c1cecf1b315db2afc4359b48e7a9f expat-1.95.7-r1.ebuild 859
-MD5 5a60260c06d2a4e63854a754788998ac files/digest-expat-1.95.6 64
-MD5 5a60260c06d2a4e63854a754788998ac files/digest-expat-1.95.6-r1 64
-MD5 be97487dd2627fe82f06252c88b83ab1 files/digest-expat-1.95.8 64
-MD5 fc080bb7f4438c40244db79d3a22b63e files/xmlstatus.patch 846
-MD5 0137bf2c738329ab03f266ac859b4613 files/digest-expat-1.95.7 64
-MD5 ef6e63456a1e54d230d665fd7e9fe0d0 files/expat-1.95.6-uclibc.patch 1466
-MD5 0137bf2c738329ab03f266ac859b4613 files/digest-expat-1.95.7-r1 64
+MD5 fc870f094a18e7edf608283b5b6c794a expat-1.95.7.ebuild 687
+MD5 9dab6987582eae3624167c8c76648e41 expat-1.95.8.ebuild 881
+MD5 43e377139ff5f3b7415b94a8c8d5260d metadata.xml 158
 MD5 7868bf2a29b820e0358f371167bc740f files/digest-expat-1.95.4 64
 MD5 a39abdca141d50129afe4aeccd400e19 files/digest-expat-1.95.5-r1 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBnwQ+Fhz/XBeRBtARAqITAJ4rqX1QAaQGkgjOTa3AF355kEgt3QCcCeUp
-WYs1gNofWouVa1pCWSYr/tE=
-=OTvQ
------END PGP SIGNATURE-----
+MD5 5a60260c06d2a4e63854a754788998ac files/digest-expat-1.95.6 64
+MD5 5a60260c06d2a4e63854a754788998ac files/digest-expat-1.95.6-r1 64
+MD5 0137bf2c738329ab03f266ac859b4613 files/digest-expat-1.95.7 64
+MD5 0137bf2c738329ab03f266ac859b4613 files/digest-expat-1.95.7-r1 64
+MD5 be97487dd2627fe82f06252c88b83ab1 files/digest-expat-1.95.8 64
+MD5 ef6e63456a1e54d230d665fd7e9fe0d0 files/expat-1.95.6-uclibc.patch 1466
+MD5 fc080bb7f4438c40244db79d3a22b63e files/xmlstatus.patch 846
