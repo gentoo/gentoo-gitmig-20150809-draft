@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/gcc-config-1.3.7-r1.ebuild,v 1.1 2004/10/26 03:14:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/gcc-config-1.3.7-r1.ebuild,v 1.2 2004/10/28 15:53:08 vapier Exp $
+
+inherit toolchain-funcs
 
 # Version of .c wrapper to use
 W_VER="1.4.2"
@@ -28,7 +30,7 @@ src_install() {
 	export PATH="${D}/usr/bin:${PATH}"
 
 	einfo "Compiling wrapper..."
-	${CC:-gcc} -O2 -Wall -o ${WORKDIR}/wrapper \
+	$(tc-getCC) -O2 -Wall -o ${WORKDIR}/wrapper \
 		${FILESDIR}/wrapper-${W_VER}.c || die
 
 	exeinto /usr/lib/gcc-config

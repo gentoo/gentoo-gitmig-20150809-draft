@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.14.1.ebuild,v 1.10 2004/10/07 23:51:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.14.1.ebuild,v 1.11 2004/10/28 15:57:16 vapier Exp $
 
-inherit eutils gnuconfig gcc mono
+inherit eutils gnuconfig toolchain-funcs mono
 
 DESCRIPTION="GNU locale utilities"
 HOMEPAGE="http://www.gnu.org/software/gettext/gettext.html"
@@ -44,7 +44,7 @@ src_compile() {
 	# need preloadable_libintl.so for new help2man, bug #40162.
 	# Also note that it only gets build with USE=nls ...
 	# Lastly, we need to build without --disable-shared ...
-	CXX=$(gcc-getCC) \
+	CXX=$(tc-getCC) \
 		econf \
 		--without-included-gettext \
 		$(use_enable nls) \
