@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/sh --login
 #
 # $Xorg: Xsession,v 1.4 2000/08/17 19:54:17 cpqbld Exp $
 #
@@ -44,19 +44,23 @@ fi
 #fi  
 
 startup=$HOME/.xsession
+resources=$HOME/.Xresources
 
-# First run ~/.xsession if it exists
-if [ -s "$startup" ]; then
+# First run the system default
+if [ -n "`/etc/X11/chooser.sh`" ]; then
+	exec "`/etc/X11/chooser.sh`"
+# If not defined, try the user's ~/.xsession
+elif [ -s "$startup" ]; then
 	if [ -x "$startup" ]; then
 		exec "$startup"
 	else
 		exec /bin/sh "$startup"
 	fi
-# If not, try the system default
-elif [ -n "`/etc/X11/chooser.sh`" ]; then
-	exec "`/etc/X11/chooser.sh`"
 # Lastly, xsm as failsafe
 else
+	if [ -r "$resources" ]; then
+		xrdb -load "$resources"
+	fi
 	exec xsm
 fi
 
