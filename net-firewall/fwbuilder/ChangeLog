@@ -1,6 +1,11 @@
 # ChangeLog for net-firewall/fwbuilder
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/fwbuilder/ChangeLog,v 1.34 2004/10/05 13:59:24 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/fwbuilder/ChangeLog,v 1.35 2004/10/05 15:30:45 aliz Exp $
+
+*fwbuilder-2.0.3 (05 Oct 2004)
+
+  05 Oct 2004; Daniel Ahlberg <aliz@gentoo.org> fwbuilder-2.0.3.ebuild:
+  Version bump, closing #66116.
 
   05 Oct 2004; Daniel Ahlberg <aliz@gentoo.org> fwbuilder-2.0.2.ebuild:
   Added QMAKESPEC, closing #62715.
