@@ -1,7 +1,7 @@
-MD5 6649f256f1890a6650a6d8eeb7105f86 ChangeLog 18826
+MD5 8ab419aec04bab8a25e42595004aa04c ChangeLog 18974
 MD5 7187b8c28501f454a2412c9e4a7fcf53 metadata.xml 421
 MD5 ce24bc72d595e976d3dd24ac2b2463cf ck-sources-2.6.10-r5.ebuild 901
-MD5 19ec35f21fc3cbc8345d5aa18571063a ck-sources-2.4.28-r3.ebuild 1273
+MD5 07d302d5021bc0635909da0cf1bb90dc ck-sources-2.4.28-r3.ebuild 1272
 MD5 039b47422c7f0f36c1012ba93ebed0ec files/digest-ck-sources-2.6.10-r5 131
 MD5 6aa8f7a7c2d55734389b53d3bcf78570 files/ck-sources-2.4.28.CAN-2004-1016.patch 2835
 MD5 c27699e9d62f7d46213bd51f87636163 files/ck-sources-2.4.28.vma.patch 8143
@@ -19,6 +19,7 @@ MD5 d1ccc2047be533c992f67270a150a210 files/ck-sources-2.4.28.cmdlineLeak.patch 3
 MD5 8c35751caf824a9dacb02e80d6189b2e files/ck-sources-2.4.28.CAN-2004-1137.patch 1764
 MD5 001b0a631c9fc28133013a1f8f78f74c files/ck-sources-2.6.10-drm-dos-fix.patch 8458
 MD5 0286d7c662e35f00f8d5b8e25b58f23a files/ck-sources-2.6.10-smbfs-dos-fix.patch 5325
+MD5 0f93b46ae17cbd0fc9b4d1cf5d704296 files/ck-sources-2.4.28.81106.patch 2243
 MD5 f859ca498ab3a824778abf94124f955c files/ck-sources-2.6.10-77666.patch 4556
 MD5 ea61cd84e266e1ddfa963d27e9c1ba99 files/digest-ck-sources-2.4.28-r3 210
 MD5 b9a94233e1457787352e5f85e3e3582d files/ck-sources-2.4.28.binfmt_a.out.patch 2009
