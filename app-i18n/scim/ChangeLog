@@ -1,6 +1,12 @@
 # ChangeLog for app-i18n/scim
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/ChangeLog,v 1.4 2003/08/29 18:11:11 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/ChangeLog,v 1.5 2003/11/09 12:40:58 liquidx Exp $
+
+*scim-0.8.2 (09 Nov 2003)
+
+  09 Nov 2003; Alastair Tse <liquidx@gentoo.org> scim-0.4.1.ebuild,
+  scim-0.5.1.ebuild, scim-0.8.2.ebuild, files/scim-0.5.1-gtk2immodule.patch:
+  version bump
 
 *scim-0.6.1 (29 Aug 2003)
 
