@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-musepack/xmms-musepack-1.00.ebuild,v 1.1 2004/07/07 00:24:45 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-musepack/xmms-musepack-1.00.ebuild,v 1.2 2004/09/03 08:15:01 eradicator Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/mpegplus/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 #-sparc: 1.00: error window about not being able to decode the file
-KEYWORDS="~x86 ~ppc ~amd64"
+KEYWORDS="x86 ~ppc amd64 -sparc"
 IUSE=""
 
 DEPEND="media-sound/xmms"
