@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ruby.eclass,v 1.9 2003/10/19 16:08:20 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ruby.eclass,v 1.10 2003/10/20 12:01:18 usata Exp $
 #
 # Author: Mamoru KOMACHI <usata@gentoo.org>
 #
@@ -48,15 +48,27 @@ erubyconf() {
 	fi
 	shift
 
-	if [ -f extconf.rb ] ; then
-		${RUBY} extconf.rb $@ || die "extconf.rb failed"
-	elif [ -f install.rb ] ; then
+	if [ -f configure ] ; then
+		./configure \
+			--prefix=/usr \
+			--host=${CHOST} \
+			--mandir=/usr/share/man \
+			--infodir=/usr/share/info \
+			--datadir=/usr/share \
+			--sysconfdir=/etc \
+			--localstatedir=/var/lib \
+			--with-ruby=${RUBY} \
+			${EXTRA_ECONF} \
+			$@ || die "econf failed"
+	fi
+	if [ -f install.rb ] ; then
 		${RUBY} install.rb config --prefix=/usr $@ \
 			|| die "install.rb config failed"
 		${RUBY} install.rb setup $@ \
 			|| die "install.rb setup failed"
-	elif [ -f configure ] ; then
-		econf --with-ruby=${RUBY} $@ || die "econf failed"
+	fi
+	if [ -f extconf.rb ] ; then
+		${RUBY} extconf.rb $@ || die "extconf.rb failed"
 	fi
 }
 
