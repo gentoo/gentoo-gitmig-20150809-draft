@@ -1,0 +1,10 @@
+diff -urN dnsmasq-2.21.orig/src/netlink.c dnsmasq-2.21/src/netlink.c
+--- dnsmasq-2.21.orig/src/netlink.c  2005-03-13 10:37:44.000000000 +0100
++++ dnsmasq-2.21/src/netlink.c  2005-03-24 12:31:52.000000000 +0100
+@@ -16,6 +16,7 @@
+
+ #ifdef HAVE_RTNETLINK
+
++#include <linux/types.h>
+ #include <linux/netlink.h>
+ #include <linux/rtnetlink.h>
