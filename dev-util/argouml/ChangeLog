@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/argouml
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/argouml/ChangeLog,v 1.8 2004/08/15 18:26:31 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/argouml/ChangeLog,v 1.9 2004/11/18 20:26:22 blubb Exp $
+
+  18 Nov 2004; Simon Stelling <blubb@gentoo.org> argouml-0.16.ebuild:
+  added ~amd64
 
   15 Aug 2004; Chris Aniszczyk <zx@gentoo.org> -argouml-0.14.1.ebuild,
   -argouml-0.14.ebuild, -argouml-0.15.6.ebuild:
