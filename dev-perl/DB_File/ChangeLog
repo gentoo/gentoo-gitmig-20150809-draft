@@ -1,6 +1,14 @@
 # ChangeLog for dev-perl/DB_File
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DB_File/ChangeLog,v 1.27 2004/07/22 02:45:12 tgall Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DB_File/ChangeLog,v 1.28 2005/03/14 10:28:52 mcummings Exp $
+
+*DB_File-1.811 (14 Mar 2005)
+
+  14 Mar 2005; Michael Cummings <mcummings@gentoo.org> +DB_File-1.811.ebuild:
+  Bug 84744. New version, first step in blocking perl-5.8.6 users from being 
+  able to emerge older DB_File's since perl-5.8.6 comes with 1.810 
+  - emerging anything less than that will override the core perl with 
+  an older (deprecated) version.
 
   21 Jul 2004; Tom Gall <tgall@gentoo.org> DB_File-1.808.ebuild:
   stable on ppc64, bug #57585
