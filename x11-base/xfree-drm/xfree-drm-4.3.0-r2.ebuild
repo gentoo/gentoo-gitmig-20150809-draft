@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree-drm/xfree-drm-4.3.0-r2.ebuild,v 1.4 2003/06/14 09:01:24 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree-drm/xfree-drm-4.3.0-r2.ebuild,v 1.5 2003/07/23 21:54:57 tester Exp $
 
 # Small note:  we should prob consider using a DRM only tarball, as it will ease
 #              some of the overhead on older systems, and will enable us to
@@ -29,7 +29,7 @@ SRC_URI="mirror://gentoo/linux-drm-${PV}-kernelsource-${SNAPSHOT}.tar.gz
 
 LICENSE="X11"
 SLOT="${KV}"
-KEYWORDS="x86 ppc ~alpha"
+KEYWORDS="x86 ppc ~alpha amd64"
 
 DEPEND=">=x11-base/xfree-${PV}
 		virtual/linux-sources"
