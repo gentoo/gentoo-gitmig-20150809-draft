@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-multitail/desklet-multitail-0.1.6.ebuild,v 1.2 2004/02/04 13:40:49 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-multitail/desklet-multitail-0.2.2.ebuild,v 1.1 2004/02/04 13:40:49 obz Exp $
 
 DESKLET_NAME="MultiTail"
 S=${WORKDIR}/${DESKLET_NAME}-${PV}
@@ -14,7 +14,7 @@ SLOT="0"
 IUSE=""
 KEYWORDS="~x86"
 
-DEPEND=">=gnome-extra/gdesklets-core-0.24"
+DEPEND=">=gnome-extra/gdesklets-core-0.25"
 
 DOCS="README"
 
@@ -27,10 +27,8 @@ src_install() {
 
 	# first we install the Sensors
 	python ${INSTALL_BIN} --nomsg ${D}${SYS_PATH}/Sensors
-	python Install_DisplayConstraints_Sensor.bin \
-		--nomsg ${D}${SYS_PATH}/Sensors
 
-	# and now the display
+# and now the display
 	cp -R ${DESKLET_NAME} ${D}${SYS_PATH}/Displays
 	rm ${D}${SYS_PATH}/Displays/${DESKLET_NAME}/README
 
