@@ -1,4 +1,4 @@
-MD5 0657e369c292bca5690ac619c3de3492 ChangeLog 1646
-MD5 010e6fbd516e3af61a8eedccbcb90598 glib-perl-1.012.ebuild 749
-MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 3708565214e916a2d14f98ed97f5f6c8 files/digest-glib-perl-1.012 62
+MD5 0657e369c292bca5690ac619c3de3492 ChangeLog 1646
+MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 fe6684ea7c80722330a149b40a6c67ec glib-perl-1.012.ebuild 735
