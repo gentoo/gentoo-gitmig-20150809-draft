@@ -1,6 +1,10 @@
 # ChangeLog for app-text/ptex
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ptex/ChangeLog,v 1.33 2005/01/22 21:15:15 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ptex/ChangeLog,v 1.34 2005/02/21 15:00:52 agriffis Exp $
+
+  20 Feb 2005; Aron Griffis <agriffis@gentoo.org> ptex-3.1.5.ebuild,
+  ptex-3.1.8.20050111.ebuild:
+  add ~ia64
 
   22 Jan 2005; Jason Wever <weeve@gentoo.org> ptex-3.1.4-r2.ebuild:
   Stable on sparc wrt security bug #75801.

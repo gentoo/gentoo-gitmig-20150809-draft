@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ptex/ptex-3.1.8.20050111.ebuild,v 1.1 2005/01/21 11:40:29 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ptex/ptex-3.1.8.20050111.ebuild,v 1.2 2005/02/21 15:00:52 agriffis Exp $
 
 TETEX_PV=2.99.9.20050111
 TEXMF_PATH=/var/lib/texmf
@@ -31,7 +31,7 @@ SRC_URI="${SRC_PATH_TETEX}/${TETEX_SRC}
 
 LICENSE="GPL-2 BSD"
 SLOT="0"
-KEYWORDS="~x86 ~alpha ~amd64 ~ppc ~sparc ~ppc64 ~ppc-macos"
+KEYWORDS="~x86 ~alpha ~amd64 ~ppc ~sparc ~ppc64 ~ppc-macos ~ia64"
 IUSE="X motif lesstif Xaw3d neXt"
 
 DEPEND="X? ( >=media-libs/freetype-2
