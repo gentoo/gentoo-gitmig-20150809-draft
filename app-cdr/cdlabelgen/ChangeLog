@@ -1,6 +1,12 @@
 # ChangeLog for app-cdr/cdlabelgen
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdlabelgen/ChangeLog,v 1.7 2003/03/28 11:36:29 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdlabelgen/ChangeLog,v 1.8 2003/08/27 01:53:11 zul Exp $
+
+*cdlabelgen-2.6.0 (26 Aug 2003)
+
+  26 Aug 2003; Chuck Short <zul@gentoo.org> cdlabelgen-2.6.0.ebuild,
+  files/makefile.patch-2.6.0:
+  Version bump, thanks to totenkopf@zworg.com. Closes #23076.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
