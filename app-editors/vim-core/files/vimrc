@@ -75,6 +75,11 @@ augroup gentoo
         \ if line("'\"") > 0 && line ("'\"") <= line("$") |
         \   exe "normal g'\"" |
         \ endif
+
+  " When editing a crontab file, set backupcopy to yes rather than auto. See
+  " :help crontab and bug 53437.
+  autocmd FileType crontab set backupcopy=yes
+
 augroup END
 
 endif " has("autocmd")
