@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.11 2002/08/05 12:48:55 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.12 2002/08/14 14:41:42 aliz Exp $
+
+*util-linux-2.11u (14 Aug 2002)
+
+  05 Aug 2002; Daniel Ahlberg <aliz@gentoo.org> util-linux-2.11u.ebuild:
+  Version bump.  
 
 *util-linux-2.11t (05 Aug 2002)
 
