@@ -1,6 +1,19 @@
-MD5 e1d5db80fe1ed9680665c50c11ec3fbe ChangeLog 5761
-MD5 027898bb4f64339083a599c95d3ac4f1 findutils-4.1.20-r1.ebuild 2065
-MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 bc3f7171797c9e05f190c430e1c1a264 findutils-4.2.18.ebuild 1971
+MD5 87c31eb9bb3ed6de08e6f27b2c576f92 ChangeLog 6009
+MD5 1f7197b778d47c773d19430261c84f49 metadata.xml 261
+MD5 3f4b41cc2feb37166ed7b75ea6d44f10 findutils-4.1.20-r1.ebuild 2066
+MD5 62f86a597482354916befe2e1f084b8d files/findutils-4.2.18-selinux.diff 15327
 MD5 43e3e3c15b66b30de4be62db3b7674ea files/findutils-4.1.20-selinux.diff 10392
-MD5 be3f6e925d8c5774cc1ea631677e7401 files/digest-findutils-4.1.20-r1 68
+MD5 f983b276be2d73937687b61be2bc917d files/digest-findutils-4.2.18 68
 MD5 0315b5033cf65d15f24b1c252070db45 files/findutils-env-size.patch 672
+MD5 be3f6e925d8c5774cc1ea631677e7401 files/digest-findutils-4.1.20-r1 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFCF20eLLFUmVNQ7rkRAoODAJ0RGlHQaJrjWVXNvmY+TJVGfEpn0gCglpW+
+k54WNKrC+Q0S7X+LogpNAmQ=
+=mLOZ
+-----END PGP SIGNATURE-----

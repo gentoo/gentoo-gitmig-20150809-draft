@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/findutils
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/ChangeLog,v 1.39 2004/07/01 08:11:51 solar Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/ChangeLog,v 1.40 2005/02/19 16:45:21 ciaranm Exp $
+
+*findutils-4.2.18 (19 Feb 2005)
+
+  19 Feb 2005; Ciaran McCreesh <ciaranm@gentoo.org> metadata.xml,
+  +files/findutils-4.2.18-selinux.diff, +findutils-4.2.18.ebuild:
+  Version bump, bug #82581. Thanks to spb for testing the updated selinux patch
 
   01 Jul 2004; <solar@gentoo.org> findutils-4.1.20-r1.ebuild:
   added support for static linking of find/xargs
