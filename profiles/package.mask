@@ -21,6 +21,69 @@
 ##   End example
 ##
 
+# <foser@gentoo.org> (07 Sept 2003)
+# Gnome 2.4 RC mask
+>=gnome-base/gnome-2.3
+>=gnome-base/ORBit2-2.7
+>=gnome-base/libgnome-2.3
+>=gnome-base/libgnomeui-2.3
+>=gnome-base/libgnomecanvas-2.3
+>=gnome-base/libbonobo-2.3
+>=gnome-base/libbonoboui-2.3
+>=gnome-base/libgnomeprint-2.3
+>=gnome-base/libgnomeprintui-2.3
+>=gnome-base/control-center-2.3
+>=gnome-base/gail-1.3
+>=gnome-base/gconf-2.3
+>=gnome-base/gnome-2.3
+>=gnome-base/gnome-applets-2.3
+>=gnome-base/gnome-desktop-2.3
+>=gnome-base/gnome-mime-data-2.3
+>=gnome-base/gnome-panel-2.3
+>=gnome-base/gnome-session-2.3
+>=gnome-base/gnome-vfs-2.3
+>=gnome-base/libgtop-2.3
+>=gnome-base/librsvg-2.3
+>=gnome-base/eel-2.3
+>=gnome-base/nautilus-2.3
+>=gnome-extra/bug-buddy-2.3
+gnome-extra/gcalctool
+>=gnome-extra/gconf-editor-2.3
+>=gnome-extra/gnome-media-2.3
+>=gnome-extra/gnome-games-2.3
+>=gnome-extra/gnome-network-1.99
+>=gnome-extra/gnome-system-monitor-2.3
+>=gnome-extra/gnome-utils-2.3
+=gnome-extra/libgtkhtml-2.4*
+gnome-extra/gucharmap
+gnome-extra/nautilus-cd-burner
+>=gnome-extra/nautilus-media-0.3
+>=gnome-extra/yelp-2.3
+>=x11-libs/libwnck-2.3
+>=x11-libs/vte-0.11
+>=x11-terms/gnome-terminal-2.3
+>=x11-wm/metacity-2.5
+>=x11-themes/gnome-themes-2.3
+>=dev-libs/atk-1.3
+>=app-text/ggv-2.3
+app-text/gpdf
+>=app-editors/gedit-2.3
+>=app-editors/gedit-plugins-2.3
+>=app-arch/file-roller-2.3
+>=media-gfx/eog-2.3
+
+# <foser@gentoo.org> (07 Sept 2003)
+# experimental gst-plugins eclass stuff
+# (related to gnome2 mask)
+>=media-libs/gstreamer-0.6.3
+>=media-libs/gst-plugins-0.6.2-r5
+media-libs/gst-plugins-oss
+media-libs/gst-plugins-vorbis
+media-libs/gst-plugins-mad
+media-libs/gst-plugins-gnomevfs
+media-libs/gst-plugins-cdparanoia
+=media-sound/sound-juicer-0.3-r5
+
 # <spider@gentoo.org> (04 Sep 2003)
 # Experimental gtk2 support
 =net-mail/sylpheed-0.9.4-r1
@@ -243,22 +306,6 @@ app-text/gpdf
 # It is alpha after all.
 >=app-crypt/mit-krb5-1.3_alpha
 
-# <foser@gentoo.org> 17 Jun 2003
-# experimental gst-plugins eclass stuff
-# needs testing
-=media-libs/gst-plugins-0.6.2-r5
-media-libs/gst-plugins-oss
-media-libs/gst-plugins-vorbis
-media-libs/gst-plugins-mad
-media-libs/gst-plugins-gnomevfs
-media-libs/gst-plugins-cdparanoia
-=media-sound/sound-juicer-0.3-r5
-
-# <vladimir@gentoo.org> 10 June 2003
-# As per Luca's request
-# buffer issue on ncurses application (e.g. BitchX)
-#>=x11-libs/vte-0.10.28
-
 # <twp@gentoo.org> 10 Jun 2003
 # Needs testing (I can't test it)
 =dev-ruby/optparse-0.12
@@ -406,10 +453,6 @@ dev-db/mergeant
 # <mholzer@gentoo.org> (09 Feb 2003)
 >=media-video/mjpegtools-1.6.1
 
-# <lu_zero@gentoo.org> (28 Jan 2003)
-#not sure that it works now, sorry
-gnome-extra/nautilus-cd-burner
-
 # <chadh@gentoo.org> (23 Jan 2003)
 # new pcmcia-cs ebuilds need testing and acceptance
 sys-apps/pcmcia-cs-tools
@@ -484,11 +527,6 @@ app-emacs/monk
 =sys-devel/gcc-3.2.1-r5
 =sys-devel/gcc-3.2-r3
 =sys-devel/gcc-3.2-r5
-
-# <foser@gentoo.org> (27 Oct 2002)
-# Unstable GNOME2 tree mask (2.1)
-# or whats left of it
-gnome-extra/gcalctool
 
 # <spider@gentoo.org> (23 oct 2002)
 # okay, this has been a bothersome thing with recompiles of static packages 
