@@ -1,13 +1,9 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.1.3.ebuild,v 1.1 2004/07/02 18:01:01 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.1.3.ebuild,v 1.2 2004/08/15 23:51:22 langthang Exp $
 
 inherit eutils ssl-cert
 
-MAJOR_VER="2.1"
-PATCH_LEVEL="03"
-PATCH_LEVEL1="01"
-PATCH_LEVEL2="02"
 VDA_P="${PN}-2.1.3"
 TLS_P="pfixtls-0.8.18-2.1.3-0.9.7d"
 IPV6="1.25"
@@ -17,10 +13,7 @@ PGSQL_P="postfix-pg.postfix-2.0.0.2"
 
 DESCRIPTION="A fast and secure drop-in replacement for sendmail."
 HOMEPAGE="http://www.postfix.org/"
-SRC_URI="ftp://ftp.porcupine.org/mirrors/postfix-release/official/${PN}-${MAJOR_VER}.0.tar.gz
-	ftp://ftp.porcupine.org/mirrors/postfix-release/official/${PN}-${MAJOR_VER}-patch${PATCH_LEVEL1}.gz
-	ftp://ftp.porcupine.org/mirrors/postfix-release/official/${PN}-${MAJOR_VER}-patch${PATCH_LEVEL2}.gz
-	ftp://ftp.porcupine.org/mirrors/postfix-release/official/${PN}-${MAJOR_VER}-patch${PATCH_LEVEL}.gz
+SRC_URI="ftp://ftp.porcupine.org/mirrors/postfix-release/official/${P}.tar.gz
 	vda? ( http://web.onda.com.br/nadal/postfix/VDA/${VDA_P}.patch.gz )
 	ssl? ( ftp://ftp.aet.tu-cottbus.de/pub/postfix_tls/${TLS_P}.tar.gz )
 	ipv6? ( ftp://ftp.stack.nl/pub/postfix/tls+ipv6/${IPV6}/${IPV6_P}.patch.gz )
@@ -28,7 +21,7 @@ SRC_URI="ftp://ftp.porcupine.org/mirrors/postfix-release/official/${PN}-${MAJOR_
 
 LICENSE="IPL-1"
 SLOT="0"
-KEYWORDS="~x86 ~sparc ~ppc ~alpha ~amd64 ~s390"
+KEYWORDS="x86 ~sparc ~ppc ~alpha ~amd64 ~s390"
 IUSE="ipv6 pam ldap mysql postgres ssl sasl vda mailwrapper mbox"
 
 PROVIDE="virtual/mta virtual/mda"
@@ -45,36 +38,33 @@ RDEPEND="${DEPEND}
 	!mailwrapper? ( !virtual/mta )
 	mailwrapper? ( >=net-mail/mailwrapper-0.2 )"
 
-S=${WORKDIR}/${PN}-${MAJOR_VER}.0
-
 pkg_setup() {
 	# put out warnings to work around bug #45764
-	echo
-	ewarn "If you are upgrading from postfix-2.0.18 or earlier, one of the empty queue"
-	ewarn "directory get deleted during unmerge the older version (#45764). Please run"
-	ewarn "\`etc/postfix/post-install upgrade-permissions\` to recreate them."
-	ewarn "Waiting 15 seconds before continuing."
-	echo
-	sleep 15
+	if has_version '<=mail-mta/postfix-2.1.4'; then
+		echo
+		ewarn "You are upgrading from postfix-2.0.18 or earlier, one of the empty queue"
+		ewarn "directory get deleted during unmerge the older version (#45764). Please run"
+		ewarn "\`etc/postfix/post-install upgrade-source\` to recreate them."
+		echo
+	sleep 5
+	fi
+
 	# logic to fix bug #53324
-	if [[ -f $(type -p postconf) ]] ; then
-		VER=$(postconf | grep mail_version); VER=${VER/mail_version = }
-		MAJ_VER=${VER:0:3}
-		if [[ -n $(pidof master) ]] ; then
-			if [[ ${MAJ_VER} < 2.1 ]] ; then
-				echo
-				eerror "You are upgrading from the incompatible verion."
-				eerror "Please stop Postfix then emerge again."
-				die "Upgrade from incompatible version."
-			else
-				echo
-				ewarn "It is safe to upgrade your current version while it's running."
-				ewarn "If you don't want to take any chance; please hit ctrl+c now; stop"
-				ewarn "Postfix then emerge again."
-				ewarn "Waiting 30 seconds before continuing."
-				echo
-				sleep 30
-			fi
+	if [[ -n $(pidof master) ]] ; then
+		if has_version '<mail-mta/postfix-2.1.3' ; then
+			echo
+			eerror "You are upgrading from the incompatible verion."
+			eerror "Please stop Postfix then emerge again."
+			die "Upgrade from incompatible version."
+		else
+			echo
+			ewarn "It is safe to upgrade your current version while it's running."
+			ewarn "If you don't want to take any chance; please hit Ctrl+C now;"
+			ewarn "stop Postfix then emerge again."
+			ewarn "You have been warned!"
+			ewarn "Waiting 10 seconds before continuing."
+			echo
+			sleep 10
 		fi
 	fi
 }
@@ -82,10 +72,6 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A} && cd "${S}"
 
-	# Patch patchlevel
-	epatch "${WORKDIR}/${PN}-${MAJOR_VER}-patch${PATCH_LEVEL1}"
-	epatch "${WORKDIR}/${PN}-${MAJOR_VER}-patch${PATCH_LEVEL2}"
-	epatch "${WORKDIR}/${PN}-${MAJOR_VER}-patch${PATCH_LEVEL}"
 	if use ssl ; then
 		if use ipv6 ; then
 			epatch "${WORKDIR}/${IPV6_TLS_P}.patch"
