@@ -1,10 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libid3tag/libid3tag-0.15.0b.ebuild,v 1.12 2004/01/16 18:51:32 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libid3tag/libid3tag-0.15.0b.ebuild,v 1.13 2004/03/26 16:32:48 eradicator Exp $
 
 IUSE="debug"
-
-S=${WORKDIR}/${P}
 
 DESCRIPTION="The MAD id3tag library"
 HOMEPAGE="http://mad.sourceforge.net"

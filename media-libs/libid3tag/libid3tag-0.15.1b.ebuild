@@ -1,10 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libid3tag/libid3tag-0.15.1b.ebuild,v 1.2 2004/02/21 23:08:11 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libid3tag/libid3tag-0.15.1b.ebuild,v 1.3 2004/03/26 16:32:48 eradicator Exp $
 
 IUSE="debug"
-
-S=${WORKDIR}/${P}
 
 DESCRIPTION="The MAD id3tag library"
 HOMEPAGE="http://mad.sourceforge.net"
@@ -13,7 +11,7 @@ RESTRICT="nomirror"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~alpha ~sparc ~hppa amd64 ~mips ~ia64"
+KEYWORDS="x86 ~ppc ~alpha ~sparc ~hppa amd64 ~mips ~ia64"
 
 DEPEND="virtual/glibc
 	>=sys-libs/zlib-1.1.3"
