@@ -1,3 +1,6 @@
 MD5 5a37094f9d14ea576b4af420fb5ccb94 isic-0.05.ebuild 611
 MD5 8289eac05d43982e280d8afc20d7431b files/digest-isic-0.05 57
-MD5 ca338aef53331a2e8a9f215930394f61 ChangeLog 465
+MD5 dc04d956165e86c16def01ea29593c2f files/0.05-libnet-1.0.patch 1540
+MD5 8289eac05d43982e280d8afc20d7431b files/digest-isic-0.05-r1 57
+MD5 7f2c64cd300fef29e238ab3dff3a0f54 ChangeLog 602
+MD5 df4e55e9e6052c38df4a9359757fb523 isic-0.05-r1.ebuild 744

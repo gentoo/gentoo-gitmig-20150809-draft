@@ -1,3 +1,6 @@
-MD5 076a5b90b9b22e2772a1217ee0a764c0 ChangeLog 475
 MD5 f963c5d34e4b5845cbfe07283f791584 zodiac-0.4.9.ebuild 787
 MD5 512754e3be6eb5e2866a9bd5817ee7b0 files/digest-zodiac-0.4.9 63
+MD5 5975e291b98f9130cb34be64d7e8aeac files/0.4.9-libnet-1.0.patch 1921
+MD5 512754e3be6eb5e2866a9bd5817ee7b0 files/digest-zodiac-0.4.9-r1 63
+MD5 bc1ffa34aca7b09926be2ee03e0f7f29 ChangeLog 615
+MD5 bf5c4cbf99256c829667575a2e1c5ccb zodiac-0.4.9-r1.ebuild 935
