@@ -5,7 +5,7 @@
  install-doc:
  		@echo Generating RDoc documentation
 -		$(bindir)/$(PROGRAM) $(srcdir)/bin/rdoc --all --ri-system $(srcdir)
-+		$(DESTDIR)$(bindir)/$(PROGRAM) $(srcdir)/bin/rdoc --all --ri-system $(srcdir)
++		cd $(srcdir)/lib && find . -name \*.rb -print0 | xargs -0 $(DESTDIR)$(bindir)/$(PROGRAM) ../bin/rdoc --all --ri-system
  
  clean-ext:
  		@-$(MINIRUBY) $(srcdir)/ext/extmk.rb $(SCRIPT_ARGS) clean 2> /dev/null || true
