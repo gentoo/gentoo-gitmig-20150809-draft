@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lcms/lcms-1.09.ebuild,v 1.5 2002/10/04 05:48:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lcms/lcms-1.09.ebuild,v 1.6 2002/10/20 13:27:52 bjb Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A lightweight, speed optimized color management engine"
@@ -13,7 +13,7 @@ DEPEND="media-libs/tiff
 
 SLOT="0"
 LICENSE="LGPL-2.1"
-KEYWORDS="x86 ppc sparc sparc64"
+KEYWORDS="x86 ppc sparc sparc64 alpha"
 
 src_compile() {
 
