@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/e
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/e/ChangeLog,v 1.1 2003/02/20 12:41:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/e/ChangeLog,v 1.2 2003/03/10 17:46:32 vapier Exp $
+
+*e-0.17.20030310_pre0 (10 Mar 2003)
+
+  10 Mar 2003; Mike Frysinger <vapier@gentoo.org> :
+  Bugfixes ... dunno what really ;)
 
 *e-0.17.20030220_pre0 (20 Feb 2003)
 

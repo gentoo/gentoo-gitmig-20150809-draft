@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/e/e-0.17.20030220_pre0.ebuild,v 1.2 2003/03/03 01:53:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/e/e-0.17.20030310_pre0.ebuild,v 1.1 2003/03/10 17:46:32 vapier Exp $
 
 DESCRIPTION="window manager and desktop shell"
 HOMEPAGE="http://www.enlightenment.org/pages/enlightenment.html"
@@ -42,4 +42,7 @@ src_install() {
 	# fix name clash with 0.16.x
 	cd ${D}/usr/bin
 	mv enlightenment{,-0.17}
+
+	exeinto /etc/X11/Sessions
+	doexe ${FILESDIR}/e17
 }
