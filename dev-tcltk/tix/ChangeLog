@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/tix
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tix/ChangeLog,v 1.11 2004/05/23 00:31:34 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tix/ChangeLog,v 1.12 2004/06/10 15:04:43 fmccor Exp $
+
+  10 Jun 2004; Ferris McCormick <fmccor@gentoo.org> tix-8.2.0-r1.ebuild:
+  Marked stable for sparc.
 
   23 May 2004; Ferris McCormick <fmccor@gentoo.org> tix-8.2.0-r1.ebuild:
   Add ~sparc keyword.
