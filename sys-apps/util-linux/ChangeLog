@@ -1,8 +1,12 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.29 2003/03/24 03:11:55 method Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.30 2003/04/22 22:16:26 kumba Exp $
 
 *util-linux-2.11z (03 Feb 2003)
+
+  22 Apr 2003; Joshua Kinard <kumba@gentoo.org> util-linux-2.11z-r1.ebuild:
+  added patch from util-linux maintainer that makes fdisk function correctly on mips
+  patch only gets added on "mips" archs, but will be standard in util-linux 2.12
 
   23 Mar 2003; Joshua Brindle <method@gentoo.org> util-linux-2.11z-r1.ebuild:
   added selinux support, thanks sindian

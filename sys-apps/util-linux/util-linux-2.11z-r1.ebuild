@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.11z-r1.ebuild,v 1.7 2003/03/24 03:11:55 method Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.11z-r1.ebuild,v 1.8 2003/04/22 22:16:26 kumba Exp $
 
 IUSE="crypt nls selinux"
 
@@ -44,6 +44,16 @@ src_unpack() {
 
 	# Fix unreadable df output
 	epatch ${FILESDIR}/no-symlink-resolve.patch
+
+	# <kumba@gentoo.org> (22 Apr 2003)
+	# Fix fdisk so it works on SGI Disk Labels and lets the user
+	# Actually select a partition, rather than automatically
+	# choosing "4".
+	if [ "${ARCH}" = "mips" ]
+	then
+		epatch ${FILESDIR}/${P}-mips-fdisk-fix.patch
+	fi
+
 
 	cp MCONFIG MCONFIG.orig
 

@@ -1,0 +1,54 @@
+--- ../../util-linux-2.11z/fdisk/fdisk.c	Sat Nov 23 17:05:24 2002
++++ ./fdisk.c	Thu Apr 10 01:26:39 2003
+@@ -1335,7 +1337,15 @@
+ 	int i, sys, origsys;
+ 	struct partition *p;
+ 
+-	i = get_existing_partition(0, partitions);
++	/* If sgi_label then don't use get_existing_partition,
++	   let the user select a partition, since get_existing_partition()
++	   only works for Linux like partition tables. */
++	if (!sgi_label) { 
++		i = get_existing_partition(0, partitions);
++	} else {
++		i = get_partition(0, partitions);
++	}
++
+ 	if (i == -1)
+ 		return;
+ 	p = ptes[i].part_table;
+@@ -1866,7 +1876,7 @@
+ 	fill_bounds(first, last);
+ 	if (n < 4) {
+ 		start = sector_offset;
+-		if (display_in_cyl_units)
++		if (display_in_cyl_units || !total_number_of_sectors)
+ 			limit = heads * sectors * cylinders - 1;
+ 		else
+ 			limit = total_number_of_sectors - 1;
+@@ -1946,7 +1956,7 @@
+ 			 _("Last %s or +size or +sizeM or +sizeK"),
+ 			 str_units(SINGULAR));
+ 		stop = read_int(cround(start), cround(limit), cround(limit),
+-				cround(start), mesg);
++				cround(start)-1, mesg);
+ 		if (display_in_cyl_units) {
+ 			stop = stop * units_per_sector - 1;
+ 			if (stop >limit)
+@@ -2575,7 +2585,15 @@
+ 				unknown_command(c);
+ 			break;
+ 		case 'd':
+-			j = get_existing_partition(1, partitions);
++        		/* If sgi_label then don't use get_existing_partition,
++			   let the user select a partition, since
++			   get_existing_partition() only works for Linux-like
++			   partition tables */
++        		if (!sgi_label) {
++                		j = get_existing_partition(1, partitions);
++        		} else {
++                		j = get_partition(1, partitions);
++        		}
+ 			if (j >= 0)
+ 				delete_partition(j);
+ 			break;
