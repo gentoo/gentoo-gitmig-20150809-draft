@@ -1,6 +1,6 @@
-# ChangeLog for sys-apps/uhinv
+# ChangeLog for app-portage/basc
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/basc/ChangeLog,v 1.1 2004/12/22 19:03:47 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/basc/ChangeLog,v 1.2 2004/12/23 01:10:41 swegener Exp $
 
 * basc-1.3.9 (22 Dec 2004)
 
