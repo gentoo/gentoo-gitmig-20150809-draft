@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/bogofilter/bogofilter-0.93.2.ebuild,v 1.2 2004/12/28 20:30:36 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/bogofilter/bogofilter-0.93.4.ebuild,v 1.1 2005/01/10 21:27:12 tove Exp $
 
 inherit eutils
 
@@ -10,8 +10,8 @@ SRC_URI="mirror://sourceforge/bogofilter/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-#KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
-KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86"
+#KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86" # bug 74046
+KEYWORDS=" ~alpha ~amd64      ~hppa ~ia64       ~ppc ~ppc64 ~sparc ~x86"
 IUSE="doc gsl notransactions"
 
 RDEPEND="virtual/libc
@@ -34,8 +34,9 @@ src_unpack() {
 
 src_compile() {
 	local myconf
-	myconf="$(use_with !gsl included-gsl)
-		$(use_enable !notransactions transactions)"
+	myconf="$(use_enable !notransactions transactions)"
+	use !gsl &&	myconf="${myconf} --with-included-gsl" # 'without-' doesn't work
+
 	econf ${myconf} || die "could not configure"
 	emake || die "emake failed"
 }
@@ -64,7 +65,9 @@ src_install() {
 	else
 		dohtml doc/bogofilter-faq{,-fr}.html doc/bogofilter-tuning.HOWTO.html
 	fi
+	dosym /usr/share/doc/${PF} /usr/share/doc/bogo
 }
+
 
 pkg_postinst() {
 	ewarn "Incompatible changes in bogofilter-0.93:"
