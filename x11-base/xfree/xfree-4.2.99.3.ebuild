@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.99.3.ebuild,v 1.17 2002/12/21 21:58:33 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.99.3.ebuild,v 1.18 2002/12/22 10:22:37 seemant Exp $
 
 IUSE="nls 3dfx pam truetype 3dnow sse mmx"
 
@@ -49,6 +49,7 @@ SRC_URI="http://www.ibiblio.org/gentoo/gentoo-sources/X${MY_V}-1.tar.bz2
 	http://www.ibiblio.org/gentoo/gentoo-sources/X${MY_V}-4.tar.bz2
 	mirror://sourceforge/freetype/freetype-${FT2_VER}.tar.bz2
 	http://www.ibiblio.org/gentoo/gentoo-sources/truetype.tar.gz
+	mirror://gentoo/glide3-headers.tar.bz2
 	${X_PATCHES}
 	${X_DRIVERS}
 	truetype? ( ${MS_FONT_URL} )"
@@ -82,40 +83,16 @@ src_unpack () {
 
 	unpack X${MY_V}-{1,2,3,4}.tar.bz2 \
 		freetype-${FT2_VER}.tar.bz2
-	#	fcpackage.${FC2_VER/\./_}.tar.gz \
-
-	# Fix permissions
-	# chmod -R 0755 ${WORKDIR}/fcpackage.${FC2_VER/\./_}/
-	
-
-	# Deploy our custom freetype2.  We want it static for stability,
-	# and because some things in Gentoo depends the freetype2 that
-	# is distributed with XFree86.
-#	unpack freetype-${FT2_VER}.tar.bz2
-#	cd ${S}/extras/freetype2
-#	rm -rf *
-#	mv ${WORKDIR}/freetype-${FT2_VER}/* .
-
 	# Install the glide3 headers for compiling the tdfx driver
-#	if use 3dfx
-#	then
-#		ebegin "Installing temporary glide3 headers"
-#		cd ${WORKDIR}; unpack glide3-headers.tar.bz2
-#		cp -f ${S}/lib/GL/mesa/src/drv/tdfx/Imakefile ${T}
-#		sed -e 's:${GLIDE3INCDIR}:${WORKDIR}/glide3:g' \
-#			${T}/Imakefile > ${S}/lib/GL/mesa/src/drv/tdfx/Imakefile
-#		eend 0
-#	fi
-	
-#	ebegin "Updating Xrender"
-#	cd ${S}
-#	rm -rf ${S}/lib/Xrender
-#	mv ${WORKDIR}/fcpackage.${FC2_VER/\./_}/Xrender ${S}/lib/Xrender || die
-#	cp ${S}/lib/Xrender/Imakefile ${S}/lib/Xrender/Imakefile.orig
-#	sed -s '2i NONSTANDARD_HEADERS = extutil.h region.h render.h renderproto.h'\
-#		${S}/lib/Xrender/Imakefile.orig > ${S}/lib/Xrender/Imakefile
-#	eend0
-
+	if use 3dfx
+	then
+		ebegin "Installing temporary glide3 headers"
+		cd ${WORKDIR}; unpack glide3-headers.tar.bz2
+		cp -f ${S}/lib/GL/mesa/src/drv/tdfx/Imakefile ${T}
+		sed -e 's:${GLIDE3INCDIR}:${WORKDIR}/glide3:g' \
+			${T}/Imakefile > ${S}/lib/GL/mesa/src/drv/tdfx/Imakefile
+		eend 0
+	fi
 
 	# Enable hinting for truetype fonts
 	cd ${S}/extras/freetype2/include/freetype/config
@@ -135,10 +112,10 @@ src_unpack () {
 	eend 0
 
 	# Update the SIS Driver
-	ebegin "Updating SIS Driver"
-	cd ${S}/programs/Xserver/hw/xfree86/drivers/sis
-	tar zxf ${DISTDIR}/sis_drv_src_${SISDRV_VER}.tar.gz || die
-	eend 0
+	#ebegin "Updating SIS Driver"
+	#cd ${S}/programs/Xserver/hw/xfree86/drivers/sis
+	#tar zxf ${DISTDIR}/sis_drv_src_${SISDRV_VER}.tar.gz || die
+	#eend 0
 
 	# Update Wacom Driver, hopefully resolving bug #1632
 	# The kernel driver should prob also be updated, this can be
@@ -260,22 +237,11 @@ src_unpack () {
 		${S}/programs/Xserver/Imakefile.orig \
 		> ${S}/programs/Xserver/Imakefile
 
-	# LibPNG fixes
-#	cd ${S}
-#	cp xmakefile xmakefile.orig
-#	sed "s:-lpng:-lpng -lz -lm:" \
-#		xmakefile.orig > xmakefile
-
-#	cd ${S}/config/cf
-#	cp X11.tmpl X11.tmpl.orig
-#	sed "s:-lpng:-lpng -lz -lm:" \
-#		X11.tmpl.orig > X11.tmpl
-	
-	cd ${S}
-
 }
 
 src_compile() {
+	
+	cd ${S}
 
 	einfo "Building XFree86..."
 	emake World || die
@@ -565,7 +531,7 @@ update_XftConfig() {
 		if [ "${CHECK1}" = "${CHECK2}" ]
 		then
 			echo
-			ewarn "Due to an invalid /etc/X11/XftConfig from x11-base/xfree-4.2.1,"
+			ewarn "Due to an invalid /etc/X11/XftConfig from x11-base/xfree-4.2.99,"
 			ewarn "/etc/X11/XftConfig is being updated automatically.  Your
 old"
 			ewarn "version of /etc/X11/XftConfig will be backed up as:"
@@ -730,7 +696,7 @@ ${ROOT}/usr/X11R6/lib/X11/fonts/encodings/encodings.dir \
 		chmod 1777 ${x}
 	done
 
-	if [ "`use 3dfx`" ]
+	if use 3dfx
 	then
 		echo
 		einfo "If using a 3DFX card, and you had \"3dfx\" in your USE
