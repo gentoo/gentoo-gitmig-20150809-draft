@@ -1,10 +1,9 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/openc6/openc6-0.9.4_beta.ebuild,v 1.1 2003/11/29 18:42:24 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/openc6/openc6-0.9.4_beta.ebuild,v 1.2 2003/11/29 18:45:59 lu_zero Exp $
 
 inherit kde-base
 
-need-kde 3.1
 need-qt 3.1
 
 DESCRIPTION="OpenC6, a free C6 client."
