@@ -1,6 +1,6 @@
 # ChangeLog for app-crypt/gpgme
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/ChangeLog,v 1.11 2003/02/12 03:27:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/ChangeLog,v 1.12 2003/02/13 08:08:11 gerk Exp $
 
 *gpgme-0.4.0 (29 Jan 2003)
 
@@ -10,6 +10,9 @@
   to a program that needs gpgme 0.4.0 or later.
 
 *gpgme-0.3.14 (29 Jan 2003)
+
+  13 Feb 2003; Mark Guertin <gerk@gentoo.org> gpgme-0.3.14.ebuild :
+  set ppc in keywords
 
   29 Jan 2003; J Robert Ray <jrray@gentoo.org> : Added 0.3.14 and unmasking
   for x86, contains lots of bug fixes over the currently unmasked 0.3.9
