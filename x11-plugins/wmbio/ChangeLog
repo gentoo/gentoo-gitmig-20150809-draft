@@ -1,6 +1,8 @@
 # ChangeLog for x11-plugins/wmbio
 # Copyright 2001-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbio/ChangeLog,v 1.7 2004/09/02 18:22:40 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbio/ChangeLog,v 1.8 2004/09/03 02:38:28 tgall Exp $
+  02 Sep 2004; Tom Gall <tgall@gentoo.org> wmbio-1.02.ebuild:
+  stable on ppc64, bug #62249
 
   02 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> wmbio-1.02.ebuild:
   Masked wmbio-1.02.ebuild stable for ppc
