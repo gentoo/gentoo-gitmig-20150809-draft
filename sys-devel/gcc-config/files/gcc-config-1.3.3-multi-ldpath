@@ -1,9 +1,8 @@
 #!/bin/bash
-# Copyright 1999-2003 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
+# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/files/gcc-config-1.3.3-multi-ldpath,v 1.2 2004/03/06 04:14:45 vapier Exp $
 # Author:  Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/files/gcc-config-1.3.3-multi-ldpath,v 1.1 2003/10/18 19:35:48 brad_mssw Exp $
-
 
 source /etc/init.d/functions.sh || {
 	echo "$0: Could not source /etc/init.d/functions.sh!"

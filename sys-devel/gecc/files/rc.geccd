@@ -1,15 +1,13 @@
 #!/sbin/runscript
-# Copyright 1999-2003 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gecc/files/rc.geccd,v 1.2 2003/02/14 23:27:35 vapier Exp $
+# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gecc/files/rc.geccd,v 1.3 2004/03/06 04:14:45 vapier Exp $
 
-depend()
-{
+depend() {
 	need net
 }
 
-start()
-{
+start() {
 	local myopts
 	if [ ! -z "${GECCD_CENTRAL}" ]; then
 		myopts="-c -a ${GECCD_CENTRAL} -A ${GECCD_PORT}"
@@ -17,18 +15,17 @@ start()
 
 	ebegin "Starting geccd"
 	start-stop-daemon --start --quiet --exec /usr/bin/geccd -- \
-						 ${myopts} \
-						 -c \
-						 -p ${GECCD_PORT} \
-						 -C ${GECCD_CACHE} \
-						 -j ${GECCD_JOBS} \
-						 -s /var/run/geccd.sock \
-						 --pid-file /var/run/geccd.pid
+		${myopts} \
+		-c \
+		-p ${GECCD_PORT} \
+		-C ${GECCD_CACHE} \
+		-j ${GECCD_JOBS} \
+		-s /var/run/geccd.sock \
+		--pid-file /var/run/geccd.pid
 	eend $?
 }
 
-stop()
-{
+stop() {
 	ebegin "Stopping geccd"
 	start-stop-daemon --stop --quiet -p /var/run/geccd.pid
 	eend $?
