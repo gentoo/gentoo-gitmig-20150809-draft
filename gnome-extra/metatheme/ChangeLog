@@ -1,10 +1,16 @@
 # ChangeLog for gnome-extra/metatheme
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/metatheme/ChangeLog,v 1.2 2002/06/02 22:58:13 stroke Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/metatheme/ChangeLog,v 1.3 2002/07/25 04:35:07 spider Exp $
+
+
 
 *metatheme-0.9.7-r1 (3 June 2002)
+  25 Jul 2002; Spider <spider@gentoo.org>
+  KEYWORDS added
+
   3 June 2002; Gabriele Giorgetti <stroke@gentoo.org> metatheme-0.9.7-r1.ebuild :
   libgnomeprintui has been moved in gnome-base
+
 
 *metatheme-0.9.7 (22 May 2002)
   22 May 2002; Spider <spider@gentoo.org> metatheme-0.9.7.ebuild :
