@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/freetds
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/freetds/ChangeLog,v 1.26 2004/10/11 16:41:54 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/freetds/ChangeLog,v 1.27 2004/11/01 18:04:33 pylon Exp $
+
+  01 Nov 2004; Lars Weiler <pylon@gentoo.org> freetds-0.62.3.ebuild:
+  Stable on ppc for PHP5, Bug #60442.
 
   11 Oct 2004; Guy Martin <gmsoft@gentoo.org> freetds-0.62.3.ebuild:
   Marked stable on hppa.
