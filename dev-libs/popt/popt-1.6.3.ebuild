@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/popt/popt-1.6.3.ebuild,v 1.13 2002/12/15 10:44:12 bjb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/popt/popt-1.6.3.ebuild,v 1.14 2003/01/18 18:44:33 tuxus Exp $
 
 IUSE="nls"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.rpm.org"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="x86 ppc sparc alpha"
+KEYWORDS="x86 ppc sparc alpha mips"
 
 DEPEND="nls? ( sys-devel/gettext )"
 

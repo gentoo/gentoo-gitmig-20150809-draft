@@ -1,6 +1,6 @@
 # ChangeLog for dev-libs/popt
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/popt/ChangeLog,v 1.8 2002/12/13 10:56:29 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/popt/ChangeLog,v 1.9 2003/01/18 18:44:33 tuxus Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
@@ -10,6 +10,9 @@
   Version bump/added pic support
 
 *popt-1.6.3 (03 Mar 2002)
+
+  18 Jan 2003; Jan Seidel <tuxus@gentoo.org> :
+  Added mips to keywords
 
   03 Oct 2002; Brad Cowan <bcowan@gentoo.org> popt-1.6.3.ebuild :
   fixed nls compile problems per bug #8731
