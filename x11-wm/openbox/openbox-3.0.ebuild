@@ -1,10 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/openbox-3.0.ebuild,v 1.2 2003/11/07 04:04:51 tseng Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/openbox-3.0.ebuild,v 1.3 2003/11/07 05:12:42 tseng Exp $
 
 S=${WORKDIR}/${P/_/-}
 DESCRIPTION="Openbox is a standards compliant, fast, light-weight, extensible window manager."
-SRC_URI="http://icculus.org/openbox/releases/${P/_/-}.tar.gz"
+
+SRC_URI="http://icculus.org/openbox/releases/${P/_/-}.tar.gz
+		mirror://gentoo/ob-themes-usability.tar.bz2"
+
 HOMEPAGE="http://icculus.org/openbox/"
 IUSE="nls"
 SLOT="3"
@@ -35,4 +38,12 @@ src_install () {
 
 	make DESTDIR=${D} install || die
 	dodoc README AUTHORS ChangeLog TODO
+
+	# Extra styles from http://home.clara.co.uk/dpb/openbox.htm
+	# These are included due to the poor usability of the default themes
+	# for users with limited vision. These are based on Jimmac's
+	# Gorilla and Industrial themes for Metacity.
+
+	dodir /usr/share/themes
+	cp -a ${WORKDIR}/ob-themes-usability/* ${D}/usr/share/themes
 }
