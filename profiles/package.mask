@@ -418,10 +418,6 @@ x11-terms/powershell
 # masked coz all our packages only use the old version
 >=net-libs/libnet-1.1.0
 
-# <phoenix@gentoo.org> (02 Sep 2002)
-# This needs a lot of testing
-=net-dialup/minicom-2.00.0
-
 # <phoenix@gentoo.org> (01 Sep 2002)
 # This needs a lot of testing
 app-emulation/winex-cvs
