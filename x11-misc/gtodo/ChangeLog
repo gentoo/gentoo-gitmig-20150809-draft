@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/gtodo
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gtodo/ChangeLog,v 1.3 2003/12/07 00:22:26 pyrania Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gtodo/ChangeLog,v 1.4 2004/03/10 13:15:52 pyrania Exp $
+
+*gtodo-0.14 (10 Mar 2004)
+
+  10 Mar 2004; Markus Nigbur <pyrania@gentoo.org> gtodo-0.14.ebuild:
+  Version bump.
 
   07 Dec 2003; Markus Nigbur <pyrania@gentoo.org> gtodo-0.13.5.ebuild:
   Bumped stable
