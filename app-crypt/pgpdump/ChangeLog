@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/pgpdump
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/pgpdump/ChangeLog,v 1.5 2004/07/16 18:10:42 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/pgpdump/ChangeLog,v 1.6 2004/10/05 15:21:52 matsuu Exp $
+
+  06 Oct 2004; MATSUU Takuto <matsuu@gentoo.org> pgpdump-0.22.ebuild:
+  Set IUSE. Bugs #66410.
+  Mark stable.
 
 *pgpdump-0.22 (16 Jul 2004)
 
