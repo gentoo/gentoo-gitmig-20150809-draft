@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/selinux-small/selinux-small-2003011510-r3.ebuild,v 1.1 2003/04/12 04:53:32 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/selinux-small/selinux-small-2003011510-r3.ebuild,v 1.2 2003/04/12 05:04:44 pebenito Exp $
 
 DESCRIPTION="SELinux policy compiler and example policies"
 HOMEPAGE="http://www.nsa.gov/selinux"
@@ -15,7 +15,7 @@ S="${WORKDIR}/selinux"
 # to easily specify that libsecure is in the workdir
 LIBSECURE="-I${S}/libsecure/include -L${S}/libsecure/src"
 
-KEYWORDS="x86"
+KEYWORDS="~x86"
 IUSE="selinux"
 DEPEND="<sys-libs/glibc-2.3.2
 	sys-devel/flex
