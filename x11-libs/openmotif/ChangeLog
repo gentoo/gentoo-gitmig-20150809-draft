@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/openmotif
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/ChangeLog,v 1.53 2004/09/16 21:41:02 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/ChangeLog,v 1.54 2004/10/05 11:47:43 lanius Exp $
+
+  05 Oct 2004; Heinrich Wendel <lanius@gentoo.org> openmotif-2.1.30-r5.ebuild:
+  parallel compile sometimes fails, bug #51682
 
   16 Sep 2004; Gustavo Zacarias <gustavoz@gentoo.org>
   openmotif-2.1.30-r5.ebuild:

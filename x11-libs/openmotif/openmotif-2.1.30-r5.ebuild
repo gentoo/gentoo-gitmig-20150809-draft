@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.1.30-r5.ebuild,v 1.14 2004/09/16 21:41:02 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.1.30-r5.ebuild,v 1.15 2004/10/05 11:47:43 lanius Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ DESCRIPTION="Open Motif (Metrolink Bug Fix Release)"
 SRC_URI="ftp://ftp.metrolink.com/pub/openmotif/2.1.30-4/${MY_P}.tar.gz"
 HOMEPAGE="http://www.metrolink.com/openmotif/"
 LICENSE="MOTIF"
-KEYWORDS="x86 ppc sparc alpha hppa amd64 ia64 ppc64"
+KEYWORDS="x86 ppc sparc alpha hppa amd64 ia64 ppc64 ~mips"
 IUSE=""
 DEPEND="virtual/libc
 	virtual/x11
@@ -25,6 +25,9 @@ SLOT="0"
 # packages athlon-xp and only motif i686.  needs investigation.
 inherit flag-o-matic
 replace-flags "-mcpu=athlon-xp" "-mcpu=i686"
+
+# parallel compile sometimes failes
+MAKEOPTS="${MAKEOPTS} -j1"
 
 src_unpack() {
 	local cfg="${S}/config/cf/site.def"
