@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/libquicktime-0.9.2_pre1.ebuild,v 1.11 2003/08/06 13:31:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/libquicktime-0.9.2_pre1.ebuild,v 1.12 2003/08/12 23:56:18 lu_zero Exp $
 
 inherit libtool eutils
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/libquicktime/${MY_P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="x86 ~alpha"
+KEYWORDS="x86 ~alpha ~ppc"
 
 IUSE="oggvorbis png jpeg"
 
@@ -33,7 +33,7 @@ src_unpack() {
 
 	# Fix bug 10966 by replacing the x86-centric OPTIMIZE_CFLAGS with
 	# our $CFLAGS
-	if use alpha; then
+	if [ -z "`use x86`" ]; then
 		mv configure.ac configure.ac.old
 		awk -F= '$1=="OPTIMIZE_CFLAGS" { print $1"="cflags; next }
 		         { print }' cflags="$CFLAGS" \
