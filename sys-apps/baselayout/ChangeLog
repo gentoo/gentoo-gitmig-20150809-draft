@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/baselayout
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.40 2002/11/05 22:22:58 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.41 2002/11/17 17:16:01 azarah Exp $
+
+*baselayout-1.8.5 (17 Nov 2002)
+
+  17 Nov 2002; Martin Schlemmer <azarah@gentoo.org> baselayout-1.8.5.ebuild :
+
+  New version that have depscan.sh using awk scripts to do the main work.
+  This should improve speed a lot, and hopefully resolve bug #10548.
 
 *baselayout-1.8.4.2 (5 Nov 2002)
 
