@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 2830f952afd9acf6008947276c7f8640 ChangeLog 9254
+MD5 a6d29166979030a850a97d1f018a8faa ChangeLog 9357
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
-MD5 a4d5306b080c3caa4e2bf0b8f672fdaf uw-imap-2004c-r3.ebuild 5440
+MD5 bfba17d2103fcc7b667acd5572ff0be2 uw-imap-2004c-r3.ebuild 5439
 MD5 2a95a847286c5b23cb291f923f75c6e0 uw-imap-2004c-r2.ebuild 4648
 MD5 f86653fdd59e2727644fc31305b236c2 uw-imap-2004c-r1.ebuild 4127
 MD5 f8341ad011ccea95c157f34f869a0a69 uw-imap-2004c.ebuild 3296
@@ -24,7 +24,7 @@ MD5 464e6baf7e9bdb0bebb80f0810515962 files/digest-uw-imap-2004c-r2 63
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFCJwAjQlM6RnzZP+IRAv/qAJ9xAYcF8a8CxYl5mRu2LrOUPWVCWwCeP/IR
-NgfvIFj2Zbc7c7eR222B+D0=
-=I+Z8
+iD8DBQFCJ0FmQlM6RnzZP+IRAufqAJ9tSnFnVbqjl+4XAiF8KFbz2f0P8gCfXBON
+mvrH5vccGIzNHkN05ROefXA=
+=SRXR
 -----END PGP SIGNATURE-----
