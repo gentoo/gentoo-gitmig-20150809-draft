@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/atftp/atftp-0.6.2.ebuild,v 1.7 2004/06/24 23:35:25 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/atftp/atftp-0.6.2.ebuild,v 1.8 2004/07/15 02:38:43 agriffis Exp $
 
 inherit eutils
 
@@ -10,6 +10,7 @@ SRC_URI="ftp://ftp.mamalinux.com/pub/atftp/${P}.tar.gz"
 LICENSE="GPL-2"
 
 KEYWORDS="x86 ~sparc"
+IUSE="tcpd"
 SLOT="0"
 
 DEPEND="tcpd? ( sys-apps/tcp-wrappers )
@@ -39,4 +40,3 @@ src_install () {
 	insinto /etc/conf.d
 	newins ${FILESDIR}/atftp.confd atftp
 }
-
