@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc. Distributed under the terms
 # of the GNU General Public License, v2 or later 
 # Author: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-doc/gentoo-web/gentoo-web-2.2.ebuild,v 1.36 2002/02/25 01:29:56 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/gentoo-web/gentoo-web-2.2.ebuild,v 1.37 2002/02/25 02:13:03 drobbins Exp $
  
 # WARNING: THIS EBUILD SHOULD BE EDITED BY DANIEL ROBBINS ONLY
  
@@ -40,7 +40,7 @@ src_install() {
 	done
 	dodir ${WEBROOT}/images
 	insinto ${WEBROOT}/images
-	cp -a ${S}/images ${WEBROOT}
+	cp -a ${S}/images ${D}/${WEBROOT}
 	local x
 	cd images
 	for x in shots/desktop*.png
