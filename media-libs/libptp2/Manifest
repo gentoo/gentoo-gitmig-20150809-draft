@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 5e90f970c61527a29c2a0797d9df8a73 ChangeLog 743
+MD5 ba6f68b1b3bcaed9863ed9dc93dd0a4f libptp2-1.0.1.ebuild 910
 MD5 6d796b061ed1c1337ef157a5f74dab35 metadata.xml 403
-MD5 c748e634f13f38ddc03a2fd08993fd2b libptp2-1.0.1.ebuild 907
-MD5 5c57a6200ff86f8f35bf4263fbd94573 ChangeLog 648
 MD5 20edc79b41d07fe8e2db6a2448c7e2cf files/digest-libptp2-1.0.1 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBnuV6mdTrptrqvGERAkqpAKCP87tRjnqYONVqPPkJ/Cw+2iJWNgCfXwho
-iG5ZPTrf+m9sZ5g4XQl80gg=
-=bpdE
------END PGP SIGNATURE-----
