@@ -1,17 +1,25 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/licq/licq-1.2.4-r2.ebuild,v 1.7 2003/02/11 01:10:29 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/licq/licq-1.2.6.ebuild,v 1.1 2003/04/22 22:36:12 drobbins Exp $
 
 IUSE="ssl socks5 qt kde gtk ncurses"
-
-use kde && inherit kde-base
-use kde && need-kde 3.0
 
 DESCRIPTION="ICQ Client with v8 support" 
 HOMEPAGE="http://www.licq.org"
 LICENSE="GPL-2"
 
-DEPEND="${DEPEND}
+inherit kde-base
+need-kde 3.0
+
+#we can't have conditional dependencies so "use kde && inherit kde-base" 
+#won't work -- messes up dep caching.
+
+#need-kde and their eclass friends inject things into DEPEND. But we only
+#want them enabled if the kde USE flag is set. We get around this in the
+#following dep lines:
+
+RDEPEND="kde? ( $DEPEND )"
+DEPEND="kde? ( $DEPEND )
 	ssl? ( >=dev-libs/openssl-0.9.6 )
 	qt?  ( >=x11-libs/qt-3.0.0 )
 	gtk? ( =x11-libs/gtk+-1.2* )
