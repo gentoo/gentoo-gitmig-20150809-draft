@@ -1,5 +1,5 @@
 MD5 9da84ecbe70e49ec92b26196c23c5143 portfwd-0.26_rc6.ebuild 1548
-MD5 51f79312774e281d1eafa34fba5a8e71 ChangeLog 800
+MD5 e5e5e58cdea81c2093fbe4db34795a59 ChangeLog 801
 MD5 0fe8ca65a96b8d81ae11da21d271bee5 portfwd-0.26_rc6-r1.ebuild 1544
 MD5 c830fd70af9bf03fed1479a0a03ceb52 files/portfwd.init 896
 MD5 3e26912825dccefb4a4474400d2c7eb6 files/digest-portfwd-0.26_rc6 67
