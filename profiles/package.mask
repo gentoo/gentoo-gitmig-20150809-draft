@@ -609,3 +609,7 @@ app-cdr/cddump
 # blender-static just seems silly.  It could have been accomplished with
 # the static flag on the blender ebuild. Masking for obsoleteness
 =media-gfx/blender-static
+
+# seemant@gentoo.org 29 Apr 2002
+# new package -- masking while testing.
+=x11-misc/bbrb-0.4.1
