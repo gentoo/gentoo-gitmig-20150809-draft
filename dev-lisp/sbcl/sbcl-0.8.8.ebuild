@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-0.8.8.ebuild,v 1.1 2004/02/27 22:15:36 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-0.8.8.ebuild,v 1.2 2004/03/24 03:29:23 mkennedy Exp $
 
 inherit common-lisp-common
 
@@ -53,6 +53,10 @@ src_unpack() {
 		cp ${FILESDIR}/${PV}/customize-target-features.lisp.no-threads \
 			${S}/customize-target-features.lisp
 	fi
+
+	find ${S} -type f -name .cvsignore -exec rm -f '{}' \;
+	find ${S} -type d -name CVS \) -exec rm -rf '{}' \;
+	find ${S} -type f -name \*.c -exec chmod 644 '{}' \;
 }
 
 src_compile() {
@@ -92,10 +96,8 @@ src_install() {
 	dodoc ${FILESDIR}/${PV}/README.Gentoo
 	dohtml doc/html/*
 
-	find ${D} -type f -name .cvsignore -exec rm -f '{}' \;
-	find ${D} -type f -name \*.c -exec chmod 644 '{}' \;
-
 	keepdir /usr/lib/common-lisp/sbcl
+
 
 	impl-save-timestamp-hack sbcl || die
 }
