@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-meta.eclass,v 1.20 2005/02/10 21:19:51 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-meta.eclass,v 1.21 2005/02/10 21:28:01 caleb Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 # Simone Gotti <simone.gotti@email.it>
@@ -298,7 +298,7 @@ function kde-meta_src_unpack() {
 		
 		echo ">>> Extracting from tarball..."
 		# Note that KMTARPARAMS is also used by an ebuild
-		tar -xpf $TARFILE $KMTARPARAMS $extractlist	
+		tar -xpf $TARFILE $KMTARPARAMS $extractlist	2> /dev/null
 		
 		# Avoid syncing if possible
 		rm -f $T/$myP.tar
