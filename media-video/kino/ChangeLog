@@ -1,6 +1,9 @@
 # ChangeLog for media-video/kino
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kino/ChangeLog,v 1.18 2004/05/30 13:36:44 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kino/ChangeLog,v 1.19 2004/06/02 02:38:46 lv Exp $
+
+  01 Jun 2004; Travis Tilley <lv@gentoo.org> kino-0.7.1.ebuild:
+  stable on amd64
 
   30 May 2004; Travis Tilley <lv@gentoo.org> +files/kino_gcc34_fix,
   kino-0.7.1.ebuild:
