@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3259 2004/10/18 14:42:45 swegener Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3260 2004/10/18 15:00:48 spyderous Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -357,10 +357,6 @@ net-www/netscape-communicator
 # Masked by request of upstream developers.
 >=net-p2p/mldonkey-2.5.17
 
-# <seemant@gentoo.org> (13 Aug 2004)
-# Masked for TESTING by DEVS and ARCHES!
-=x11-base/xorg-x11-6.7.99*
-
 # <pfeifer@gentoo.org> (12 Aug 2004)
 # Masked for following ebuilds for testing:
 =sys-apps/mindi-1.10
@@ -500,10 +496,6 @@ app-accessibility/speechd-up
 # Still in the testing phase.
 # Just changed the package name, so I'm fixing the line up.
 app-admin/mailmin
-
-# <battousai@gentoo.org> (08 Apr 2004)
-# Needs more development and testing. Don't use it yet.
->=x11-base/xfree-drm-4.3.0-r8
 
 # <humpback@gentoo.org> (07 Apr 2004)
 # these are here waiting for jabberd2
