@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.0.1-r3.ebuild,v 1.4 2002/12/24 03:43:21 sethbc Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.0.1-r3.ebuild,v 1.5 2002/12/24 03:45:54 sethbc Exp $
 
 # IMPORTANT:  This is extremely alpha!!!
 
@@ -430,7 +430,7 @@ src_install() {
         # Sandbox issues; bug #11838
         addpredict "/user"
         addpredict "/share"
-
+	addpredict "/dev/dri"
 	# This allows us to change languages without editing the ebuild.
 	#
 	#   languages1="ENUS,FREN,GERM,SPAN,ITAL,DTCH,PORT,SWED,POL,RUSS"
