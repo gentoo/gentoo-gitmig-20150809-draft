@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-0.2.95-r1.ebuild,v 1.12 2004/02/22 20:52:42 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-0.2.95-r1.ebuild,v 1.13 2004/05/29 03:46:59 pvdabeel Exp $
 
 IUSE="ldap odbc postgres mysql"
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.gnome-db.org/pub/gnome-db/sources/latest/${P}.tar.gz
 HOMEPAGE="http://www.gnome.org/gnome-db"
 SLOT="0"
 LICENSE="GPL-2 LGPL-2"
-KEYWORDS="x86 sparc"
+KEYWORDS="x86 sparc ppc"
 
 
 RDEPEND="virtual/glibc

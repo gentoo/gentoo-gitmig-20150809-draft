@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnobog/gnobog-0.4.3.ebuild,v 1.8 2003/09/08 05:22:59 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnobog/gnobog-0.4.3.ebuild,v 1.9 2004/05/29 03:46:58 pvdabeel Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Gnome Bookmarks Organizer"
@@ -9,7 +9,7 @@ SRC_URI="http://freesoftware.fsf.org/download/${PN}/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc"
+KEYWORDS="x86 sparc ppc"
 
 DEPEND=">=gnome-base/libglade-0.17-r5"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/shermans-aquarium/shermans-aquarium-2.2.0.ebuild,v 1.5 2004/04/03 23:31:49 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/shermans-aquarium/shermans-aquarium-2.2.0.ebuild,v 1.6 2004/05/29 03:46:59 pvdabeel Exp $
 
 MY_P=${PN/-/_}-${PV}
 DESCRIPTION="A gnome/wm applet displaying comical fish"
@@ -9,7 +9,7 @@ SRC_URI="mirror://sourceforge/aquariumapplet/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ppc"
 # this applet contains support for either using gnome1, gnome2,
 # gtk1, or gtk2, so we could use something like
 # if gtk is enabled, then that infers to build for gnome1
