@@ -1,11 +1,17 @@
 # ChangeLog for app-office/texmacs
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texmacs/ChangeLog,v 1.22 2004/05/01 18:56:23 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texmacs/ChangeLog,v 1.23 2004/06/23 15:58:42 usata Exp $
+
+*texmacs-1.0.3.9 (23 Jun 2004)
+
+  23 Jun 2004; Mamoru KOMACHI <usata@gentoo.org> texmacs-1.0.3-r1.ebuild,
+  +texmacs-1.0.3.9.ebuild, texmacs-1.0.3.ebuild:
+  Version bumped. Marked 1.0.3 stable.
 
   01 May 2004; Jason Wever <weeve@gentoo.org> texmacs-1.0.3.7.ebuild:
   Added ~sparc keyword to help resolve #49540.
 
-  26 Apr 2004; Bryan Østergaard <kloeri@gentoo.org> texmacs-1.0.3.7.ebuild:
+  26 Apr 2004; Bryan ƒŠstergaard <kloeri@gentoo.org> texmacs-1.0.3.7.ebuild:
   Keyworded ~alpha, requested by Decade at freenode/#gentoo-alpha.
 
 *texmacs-1.0.3.7 (26 Apr 2004)
