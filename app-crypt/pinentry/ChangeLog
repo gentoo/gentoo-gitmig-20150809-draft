@@ -1,6 +1,12 @@
 # ChangeLog for app-crypt/pinentry
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/pinentry/ChangeLog,v 1.19 2005/01/02 19:23:11 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/pinentry/ChangeLog,v 1.20 2005/01/28 15:36:31 swegener Exp $
+
+*pinentry-0.7.2 (28 Jan 2005)
+
+  28 Jan 2005; Sven Wegener <swegener@gentoo.org>
+  -pinentry-0.7.1_p20041207.ebuild, +pinentry-0.7.2.ebuild:
+  Version bump, bug #79801.
 
   02 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance

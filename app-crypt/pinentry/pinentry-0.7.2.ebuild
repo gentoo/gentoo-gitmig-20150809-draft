@@ -1,17 +1,17 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/pinentry/pinentry-0.7.1_p20041207.ebuild,v 1.2 2005/01/01 12:36:58 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/pinentry/pinentry-0.7.2.ebuild,v 1.1 2005/01/28 15:36:31 swegener Exp $
 
 inherit flag-o-matic
 
 DESCRIPTION="collection of simple PIN or passphrase entry dialogs which utilize the Assuan protocol"
 HOMEPAGE="http://www.gnupg.org/aegypten/"
-SRC_URI="mirror://gentoo/${P}.tar.bz2 http://dev.gentoo.org/~swegener/distfiles/${P}.tar.bz2"
+SRC_URI="ftp://ftp.gnupg.org/gcrypt/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~amd64"
-IUSE="qt gtk gtk2 ncurses"
+IUSE="gtk gtk2 ncurses qt"
 
 DEPEND="gtk? (
 		!gtk2? ( =x11-libs/gtk+-1* )
@@ -24,11 +24,14 @@ DEPEND="gtk? (
 src_compile() {
 	local myconf=""
 
-	if ! ( use qt || use gtk || use ncurses ) ; then
+	if ! ( use qt || use gtk || use ncurses )
+	then
 		myconf="--enable-pinentry-curses --enable-fallback-curses --disable-pinentry-gtk --disable-pinentry-gtk2"
-	elif use gtk && use gtk2 ; then
+	elif use gtk && use gtk2
+	then
 		myconf="--enable-pinentry-gtk2 --disable-pinentry-gtk"
-	elif use gtk ; then
+	elif use gtk
+	then
 		myconf="--enable-pinentry-gtk --disable-pinentry-gtk2"
 	else
 		myconf="--disable-pinentry-gtk --disable-pinentry-gtk2"
@@ -37,11 +40,11 @@ src_compile() {
 	append-ldflags -Wl,-z,now
 
 	econf \
+		--disable-dependency-tracking \
+		--enable-maintainer-mode \
 		$(use_enable qt pinentry-qt) \
 		$(use_enable ncurses pinentry-curses) \
 		$(use_enable ncurses fallback-curses) \
-		--disable-dependency-tracking \
-		--enable-maintainer-mode \
 		${myconf} \
 		|| die "econf failed"
 	emake || die "emake failed"
