@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/zaptel
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/ChangeLog,v 1.29 2005/02/03 22:40:04 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/ChangeLog,v 1.30 2005/02/07 20:03:02 blubb Exp $
+
+  07 Feb 2005; Simon Stelling <blubb@gentoo.org> zaptel-1.0.4.ebuild:
+  added ~amd64
 
   03 Feb 2005; Stefan Knoblich <stkn@gentoo.org> files/zaptel.rc6:
   Fixed zaptel init script (checkconfig returned wrong values, bug #80298),
