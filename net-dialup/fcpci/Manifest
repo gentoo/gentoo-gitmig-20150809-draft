@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 7df64f9651c0df4722a8696f4a0995e7 ChangeLog 1099
+MD5 ad3d363b3aafe0534baa3f4a1cad7dd9 ChangeLog 1100
 MD5 0d5d85f3c77ee1182c4bb748c53fdf3f fcpci-03.10.02.ebuild 1080
 MD5 f33ffce2d8a0940f2d43ef0727a5e683 fcpci-03.11.02.ebuild 1133
 MD5 ec2f84816306825d125d0c01bd86758d metadata.xml 163
@@ -13,7 +13,7 @@ MD5 19cda2540206daba0f907ca4fa34c8b4 files/digest-fcpci-3.11.02-r1 148
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBnjm+jtv59x0+BrURApKVAJ4rsBerc9fZWJ5vLDsfmFDjYl6VowCg1vG9
-yyT8YqLFVY2Y7nxVMy+32oo=
-=1BJh
+iD8DBQFBnj83jtv59x0+BrURAmAaAKDHtlCwWRhcDbTKECt4jo7rR+gMSQCfRxDp
+nHzlx0kSy6Ctq+mqNaXgbmk=
+=UjAL
 -----END PGP SIGNATURE-----
