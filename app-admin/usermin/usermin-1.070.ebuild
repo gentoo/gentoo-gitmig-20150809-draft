@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/usermin-1.070.ebuild,v 1.2 2004/04/23 00:23:15 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/usermin-1.070.ebuild,v 1.3 2004/04/23 00:25:51 eradicator Exp $
 
 inherit eutils
 
@@ -46,9 +46,6 @@ src_install() {
 	newins ${FILESDIR}/${PN}.pam ${PN}
 
 	dosym ../usr/libexec/usermin /etc/usermin
-
-	dodir /usr/sbin
-	dosym ../libexec/usermin/usermin-init /usr/sbin/usermin
 }
 
 pkg_postinst() {
