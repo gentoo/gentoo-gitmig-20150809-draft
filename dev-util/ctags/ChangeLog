@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/ctags
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ctags/ChangeLog,v 1.10 2003/10/03 12:44:56 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ctags/ChangeLog,v 1.11 2003/10/11 21:31:46 pappy Exp $
+
+  11 Oct 2003; Alexander Gabert <pappy@gentoo.org> ctags-5.5-r1.ebuild:
+  test and compiled on hppa, adding flags to recover from vim DEPEND problems on
+  hppa
 
   03 Oct 2003; Christian Birchinger <joker@gentoo.org> ctags-5.5-r1.ebuild:
   Added sparc stable keyword
