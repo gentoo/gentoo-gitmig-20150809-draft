@@ -1,0 +1,20 @@
+--- apache/config-gentoo-linux.orig	2004-05-15 00:49:39.000000000 -0700
++++ apache/config-gentoo-linux	2004-05-15 00:50:21.000000000 -0700
+@@ -1,11 +1,11 @@
+ show_list=0
+-httpd_dir=/etc/apache
+-httpd_path=/usr/sbin/apache
+-apachectl_path=/usr/sbin/apachectl
+-start_cmd=/etc/init.d/apache start
++httpd_dir=/etc/apache2
++httpd_path=/usr/sbin/apache2
++apachectl_path=/usr/sbin/apache2ctl
++start_cmd=/etc/init.d/apache2 start
+ stop_cmd=/etc/init.d/apache stop
+-httpd_conf=/etc/apache/conf/apache.conf
+-mime_types=/etc/apache/conf/mime.types
++httpd_conf=/etc/apache2/conf/apache2.conf
++mime_types=/etc/apache2/conf/mime.types
+ show_order=0
+ max_servers=100
+ test_config=1

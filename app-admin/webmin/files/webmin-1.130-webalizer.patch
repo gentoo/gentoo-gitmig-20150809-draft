@@ -1,5 +1,5 @@
---- webalizer-lib.pl.orig	2004-04-07 01:08:50.000000000 -0700
-+++ webalizer-lib.pl	2004-04-07 01:08:15.000000000 -0700
+--- webalizer/webalizer-lib.pl.orig	2004-04-07 01:08:50.000000000 -0700
++++ webalizer/webalizer-lib.pl	2004-04-07 01:08:15.000000000 -0700
 @@ -176,10 +176,11 @@
  	local $cmd = "$config{'webalizer'} $conf -o '$lconf->{'dir'}' $type -p '$a'";
  	if ($user ne "root") {
