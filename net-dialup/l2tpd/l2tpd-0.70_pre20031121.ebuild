@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/l2tpd/l2tpd-0.70_pre20031121.ebuild,v 1.1 2004/09/15 14:13:30 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/l2tpd/l2tpd-0.70_pre20031121.ebuild,v 1.2 2004/12/05 09:43:26 mrness Exp $
 
 inherit eutils
 
 DESCRIPTION="Layer 2 Tunnelling Protocol Daemon"
 HOMEPAGE="http://www.l2tpd.org/"
 MY_P="l2tpd_0.70-pre20031121"
-S=${WORKDIR}/`echo ${P} | sed 's/_/-/'`.orig
+S="${WORKDIR}/${P/_/-}.orig"
 SRC_URI="http://ftp.debian.org/debian/pool/main/l/l2tpd/${MY_P}.orig.tar.gz
 	http://ftp.debian.org/debian/pool/main/l/l2tpd/${MY_P}-2.diff.gz"
 
@@ -15,7 +15,7 @@ DEPEND="virtual/libc
 	>=sys-apps/sed-4"
 
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc"
 SLOT="0"
 IUSE=""
 
