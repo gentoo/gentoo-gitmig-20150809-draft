@@ -21,7 +21,7 @@ for my $f (@ARGV) {
 
     while (<I>) {
         /^KEYWORDS/ or print, next;
-        s/[-~]?$arch/$kw/ || s/.*?['"].*?(?=['"])/$& $kw/;
+        s/[-~]?$arch/$kw/ || s/(.*?['"].*?)\s*(?=['"])/$1 $kw/;
         print $_, <I> or die "Can't write $f.new: $!\n";
     }
 
