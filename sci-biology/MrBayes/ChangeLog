@@ -1,0 +1,7 @@
+# ChangeLog for sci-biology/MrBayes
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/MrBayes/ChangeLog,v 1.1 2005/01/20 00:34:38 j4rg0n Exp $
+
+  19 Jan 2005; Lina Pezzella <j4rg0n@gentoo.org> :
+  Initial commit
+
