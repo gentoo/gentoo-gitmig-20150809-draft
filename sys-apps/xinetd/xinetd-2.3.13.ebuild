@@ -1,16 +1,16 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/xinetd/xinetd-2.3.13.ebuild,v 1.10 2004/07/30 04:00:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/xinetd/xinetd-2.3.13.ebuild,v 1.11 2004/10/04 23:20:26 vapier Exp $
 
 inherit gnuconfig
 
-DESCRIPTION="Xinetd is a powerful replacement for inetd, with advanced features"
+DESCRIPTION="powerful replacement for inetd"
 HOMEPAGE="http://www.xinetd.org/"
 SRC_URI="http://www.xinetd.org/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~mips alpha arm ~hppa ~amd64 ~ia64 ~ppc64 s390"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sparc x86"
 IUSE="tcpd"
 
 DEPEND="virtual/libc
@@ -28,19 +28,15 @@ src_unpack() {
 src_compile() {
 	local myconf
 	use tcpd && myconf="--with-libwrap"
-
-	# the --with-inet6 is now obsolete. Services will default to IPv4 unless configured otherwise.
-
 	econf --with-loadavg ${myconf} || die "econf failed"
 
 	# Fix CFLAGS
 	sed -i -e "/^CFLAGS/s/+=/=/" Makefile
-
 	emake || die "Failed to compile"
 }
 
 src_install() {
-	into /usr ; dosbin xinetd/xinetd xinetd/itox
+	into /usr ; dosbin xinetd/xinetd xinetd/itox || die
 	exeinto /usr/sbin ; doexe xinetd/xconv.pl
 
 	newman xinetd/xinetd.conf.man xinetd.conf.5
