@@ -14,7 +14,7 @@ DEPEND="media-gfx/feh"
 RDEPEND="virtual/x11"
 
 src_install() {
-	dobin util/{fbsetbg,commonbox-menugen}
+	dobin {fbsetbg,commonbox-menugen}
 	dodoc README.commonbox-utils AUTHORS COPYING
 }
 
