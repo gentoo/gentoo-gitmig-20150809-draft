@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.1.5.ebuild,v 1.1 2002/05/30 04:13:02 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.1.5.ebuild,v 1.2 2002/06/14 01:53:44 spider Exp $
 
 #provide Xmake and Xemake
 . /usr/portage/eclass/inherit.eclass
@@ -21,8 +21,8 @@ RDEPEND="=x11-libs/gtk+-2.0*
 	>=gnome-base/libgnomeui-1.106.0
 	>=gnome-base/libbonobo-1.106.0
 	>=gnome-base/libbonoboui-1.106.0
-	>=gnome-extra/libgnomeprint-1.106.0
-	>=gnome-extra/libgnomeprintui-1.106.0
+	>=gnome-base/libgnomeprint-1.106.0
+	>=gnome-base/libgnomeprintui-1.106.0
 	>=gnome-extra/gal2-0.0.3
 	>=gnome-base/libglade-1.99.10
 	dev-libs/libxml2
