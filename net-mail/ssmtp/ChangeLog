@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/ssmtp
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/ssmtp/ChangeLog,v 1.35 2004/04/26 02:20:33 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/ssmtp/ChangeLog,v 1.36 2004/04/27 21:14:25 agriffis Exp $
+
+  27 Apr 2004; Aron Griffis <agriffis@gentoo.org> ssmtp-2.60.4.ebuild:
+  Add inherit eutils
 
   25 Apr 2004; Tom Gall <tgall@gentoo.org> ssmtp-2.60.7.ebuild:
   Stable on ppc64

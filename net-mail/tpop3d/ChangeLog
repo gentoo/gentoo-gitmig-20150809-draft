@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/tpop3d
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/tpop3d/ChangeLog,v 1.8 2004/03/03 17:12:49 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/tpop3d/ChangeLog,v 1.9 2004/04/27 21:15:17 agriffis Exp $
+
+  27 Apr 2004; Aron Griffis <agriffis@gentoo.org> tpop3d-1.4.2.ebuild:
+  Add inherit eutils
 
   03 Mar 2004; Martin Holzer <mholzer@gentoo.org> tpop3d-1.4.2.ebuild,
   tpop3d-1.5.3.ebuild:
