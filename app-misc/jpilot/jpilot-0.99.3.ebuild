@@ -1,26 +1,26 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/jpilot/jpilot-0.99.3.ebuild,v 1.1 2002/11/18 05:35:36 blocke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/jpilot/jpilot-0.99.3.ebuild,v 1.2 2002/11/30 21:00:46 vapier Exp $
 
 SYNCMAL="0.71"
 MALSYNC="2.0.7"
-S=${WORKDIR}/${P}
 DESCRIPTION="Desktop Organizer Software for the Palm Pilot"
 SRC_URI="http://jpilot.org/${P}.tar.gz
 	http://www.tomw.org/malsync/malsync_${MALSYNC}.src.tar.gz
 	http://jasonday.home.att.net/code/syncmal/jpilot-syncmal_${SYNCMAL}.tar.gz"
 HOMEPAGE="http://jpilot.org/"
-IUSE="nls"
 
 # In order to use the malsync plugin you'll need to refer to the homepage
 # for jpilot-syncmal http://jasonday.home.att.net/code/syncmal/
 # And you'll also need an avangto account. 
 
-DEPEND="=x11-libs/gtk+-1.2* >=dev-libs/pilot-link-0.11.5"
-
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~x86"
+IUSE="nls"
+
+DEPEND="=x11-libs/gtk+-1.2*
+	>=dev-libs/pilot-link-0.11.5"
 
 src_unpack() {
 	unpack ${P}.tar.gz
@@ -32,18 +32,16 @@ src_unpack() {
 
 src_compile() {
 	use nls || NLS_OPTION="--disable-nls"
-
-	econf ${NLS_OPTION} || die
+	econf ${NLS_OPTION}
 
 	# make sure we use $CFLAGS
 	mv Makefile Makefile.old
 	sed -e "s/-g -O2/${CFLAGS}/" Makefile.old > Makefile
-
 	emake || die
 
 	# build malsync plugin
 	cd ${S}/jpilot-syncmal_${SYNCMAL}
-	econf || die
+	econf
 	emake || die
 }
 
@@ -51,7 +49,7 @@ src_install() {
 	# work around for broken Makefile
 	dodir /usr/bin
 
-	einstall || die
+	einstall
 
 	insinto /usr/lib/jpilot/plugins
 	doins jpilot-syncmal_${SYNCMAL}/.libs/libsyncmal.so
