@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/libesmtp
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libesmtp/ChangeLog,v 1.12 2003/09/17 19:58:49 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libesmtp/ChangeLog,v 1.13 2003/11/10 15:28:42 foser Exp $
+
+*libesmtp-1.0.1 (10 Nov 2003)
+
+  10 Nov 2003; foser <foser@gentoo.org> libesmtp-1.0.1.ebuild :
+  New version, some minor cleanups
+  Added package to gnome herd for now
 
   17 Sep 2003; Daniel Ahlberg <aliz@gentoo.org> libesmtp-1.0-r1.ebuild :
   Added patch to make libesmtp compile with OpenSSL 0.9.7. Closing #21914.
