@@ -33,6 +33,10 @@
 
 # PPC PROFILE
 
+# syslog-ng segfaults on usage
+# maksed for now, Gerk Jul 14/02
+~app-admin/syslog-ng
+
 # gstreamer uses x86 asm :(
 # Gerk - July 4, 2002
 ~media-libs/gstreamer
