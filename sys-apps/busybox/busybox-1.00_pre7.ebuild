@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.00_pre7.ebuild,v 1.1 2004/02/05 15:10:30 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.00_pre7.ebuild,v 1.2 2004/02/14 16:37:55 lu_zero Exp $
 
 MY_PV=${PV/_/-}
 MY_P=${PN}-${MY_PV}
@@ -10,7 +10,7 @@ SRC_URI="http://www.busybox.net/downloads/${MY_P}.tar.gz"
 HOMEPAGE="http://www.busybox.net"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 IUSE="debug static uclibc savedconfig"
 
 # Forward anticipation of expected supported arches would include ~x86

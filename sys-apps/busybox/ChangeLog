@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/busybox
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.22 2004/02/14 13:58:51 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.23 2004/02/14 16:37:55 lu_zero Exp $
+
+  14 Feb 2004; Luca Barbato <lu_zero@gentoo.org> busybox-1.00_pre7.ebuild:
+  Marked ~ppc
 
 *busybox-0.60.3-r2 (14 Feb 2004)
 
