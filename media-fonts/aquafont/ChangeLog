@@ -1,6 +1,11 @@
 # ChangeLog for media-fonts/aquafont
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/aquafont/ChangeLog,v 1.5 2004/02/04 00:19:33 augustus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/aquafont/ChangeLog,v 1.6 2004/06/21 09:14:03 usata Exp $
+
+*aquafont-2.7-r1 (21 Jun 2004)
+
+  21 Jun 2004; Mamoru KOMACHI <usata@gentoo.org> +aquafont-2.7-r1.ebuild:
+  font.eclassify
 
   03 Feb 2004; <augustus@gentoo.org> aquafont-2.7.ebuild:
   Added ~amd64 keyword.
