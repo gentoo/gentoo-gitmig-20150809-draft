@@ -1,6 +1,11 @@
 # ChangeLog for games-arcade/tomatoes
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/tomatoes/ChangeLog,v 1.2 2004/10/19 02:35:57 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/tomatoes/ChangeLog,v 1.3 2004/12/01 07:43:30 mr_bones_ Exp $
+
+*tomatoes-1.55 (30 Nov 2004)
+
+  30 Nov 2004; Michael Sterrett <mr_bones_@gentoo.org> +tomatoes-1.55.ebuild:
+  version that uses sdl-mixer instead of fmod for greater portability.
 
   18 Oct 2004; Michael Sterrett <mr_bones_@gentoo.org> +files/1.5-gcc34.patch,
   tomatoes-1.5.ebuild:
