@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/mldonkey-2.5.22-r1.ebuild,v 1.1 2004/08/04 03:38:24 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/mldonkey-2.5.22-r1.ebuild,v 1.2 2004/08/04 16:43:40 squinky86 Exp $
 
 inherit eutils
 
@@ -19,7 +19,7 @@ RDEPEND="gtk? ( =dev-ml/lablgtk-1.2.6* )
 	>=dev-lang/ocaml-3.07
 	dev-lang/perl
 	net-misc/wget"
-#	!gtk2? ( gtk? ( =dev-ml/lablgtk-1.2.6* ) )
+#	gtk? ( !gtk2? ( =dev-ml/lablgtk-1.2.6* ) )
 #	gtk2? ( =dev-ml/lablgtk-2* )
 
 DEPEND="${RDEPEND}
