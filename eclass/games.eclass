@@ -1,6 +1,6 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.19 2002/12/01 04:13:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.20 2002/12/01 04:16:38 vapier Exp $
 
 # devlist: {bass,phoenix,vapier}@gentoo.org
 # This is the games ebuild for standardizing the install of games ...
@@ -44,8 +44,8 @@ egamesinstall() {
 		make prefix=${D}${GAMES_PREFIX} \
 		    mandir=${D}/usr/share/man \
 		    infodir=${D}/usr/share/info \
-		    datadir=${D}${GAMES_DATADIR}/${PN} \
-		    sysconfdir=${D}${GAMES_SYSCONFDIR}/${PN} \
+		    datadir=${D}${GAMES_DATADIR} \
+		    sysconfdir=${D}${GAMES_SYSCONFDIR} \
 		    localstatedir=${D}${GAMES_STATEDIR} \
 		    "$@" install || die "einstall failed"
 	else
