@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.7.4-r2.ebuild,v 1.2 2002/03/18 20:18:32 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.7.4-r2.ebuild,v 1.3 2002/03/20 18:35:51 drobbins Exp $
 
 SV="1.3.0"
 SVREV=""
@@ -102,15 +102,11 @@ defaltmerge() {
 	#(because it conflicts with some makefiles)
 	local ROOT
 	ROOT="`cat ${T}/ROOT`"
-	#if we are bootstrapping, we want to merge to /dev.
-	if [ -z "`use build`" ]
+	if [ -z "`use build`" ] &&  [ -e ${ROOT}/dev/.devfsd ]
 	then
-		if [ "$ROOT" = "/" ] && [ "`cat /proc/mounts | grep '/dev devfs'`" ]
-		then
-			#we're installing to our current system and have devfs enabled.  We'll need to
-			#make adjustments
-			altmerge=1
-		fi
+		# we're installing to a system that has devfs enabled; don't create device
+		# nodes.
+		altmerge=1
 	fi
 }
 
@@ -213,17 +209,16 @@ src_install()
 #	insinto /usr/bin
 #	insopts -m0755
 #	doins colors
+	keepdir /lib/dev-state
 	if [ $altmerge -eq 1 ]
 	then
 		#rootfs and devfs
-		keepdir /lib/dev-state
 		dosym /usr/sbin/MAKEDEV /lib/dev-state/MAKEDEV
 		#this is not needed anymore...
 		#keepdir /lib/dev-state/pts /lib/dev-state/shm
 	else
 		#normal
 		keepdir /dev
-		keepdir /lib/dev-state
 		keepdir /dev/pts /dev/shm
 		dosym /usr/sbin/MAKEDEV /dev/MAKEDEV
 	fi	
@@ -316,7 +311,7 @@ pkg_postinst() {
 	defaltmerge
 	# we dont want to create devices if this is not a bootstrap and devfs
 	# is used, as this was the cause for all the devfs problems we had
-	if [ ! $altmerge -eq 1 ]
+	if [ $altmerge -eq 0 ]
 	then
 		cd ${D}/dev
 		#These devices are also needed by many people and should be included

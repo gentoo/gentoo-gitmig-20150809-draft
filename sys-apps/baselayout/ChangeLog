@@ -1,17 +1,23 @@
 # ChangeLog for sys-apps/baselayout
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.13 2002/03/11 12:08:38 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.14 2002/03/20 18:35:51 drobbins Exp $
 
-  11 March 2002; Martin Schlemmer <azarah@gentoo.org> baselayout-1.7.4-r2.ebuild,
-                                                      functions.sh :
+  20 March 2002; Daniel Robbins <drobbins@gentoo.org> : tweaked ebuild to test
+  for devfs mount by looking for /dev/.devfsd, not by catting /proc/mounts.
+  Catting /proc/mounts can give inaccurate results if you're inside a chroot
+  and your "outside" root has devfs enabled (which is normally the case,
+  really, since the CD uses devfs).  This should fix a problem where device
+  nodes don't exist after bootstrap, which causes the sys-devel/perl build to
+  fail since it cats stuff to /dev/null. (causes obscure "missing seperator
+  in makefile, line 613" error).  No rev bump for this fix.
 
-  Fix functions.sh using /usr/bin/basename for users that have /usr on seperate
-  partition.
+  11 March 2002; Martin Schlemmer <azarah@gentoo.org>
+  baselayout-1.7.4-r2.ebuild, functions.sh : Fix functions.sh using
+  /usr/bin/basename for users that have /usr on seperate partition.
 
-  11 March 2002; Martin Schlemmer <azarah@gentoo.org> baselayout-1.7.4-r1.ebuild,
-                                                      depscan.sh :
-  
-  Fix bash error if no service "provide" a virtual service.
+  11 March 2002; Martin Schlemmer <azarah@gentoo.org>
+  baselayout-1.7.4-r1.ebuild, depscan.sh : Fix bash error if no service
+  "provide" a virtual service.
 
 *baselayout-1.7.4 (10 March 2002)
 
