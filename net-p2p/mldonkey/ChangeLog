@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/mldonkey
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/ChangeLog,v 1.69 2004/08/19 17:03:53 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/ChangeLog,v 1.70 2004/08/22 11:30:28 lv Exp $
+
+  22 Aug 2004; Travis Tilley <lv@gentoo.org> mldonkey-2.5.28.ebuild:
+  added ~amd64 keyword
 
 *mldonkey-2.5.28 (19 Aug 2004)
 
