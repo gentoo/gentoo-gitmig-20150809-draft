@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/unlzx
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/unlzx/ChangeLog,v 1.8 2003/11/25 03:42:44 agriffis Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unlzx/ChangeLog,v 1.9 2004/01/06 05:02:45 avenj Exp $
+
+  05 Jan 2004; Jon Portnoy <avenj@gentoo.org> unlzx-1.1.ebuild :
+  AMD64 keywords.
 
   24 Nov 2003; Aron Griffis <agriffis@gentoo.org> unlzx-1.1.ebuild:
   Add ~alpha
