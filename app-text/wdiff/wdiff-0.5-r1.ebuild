@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wdiff/wdiff-0.5-r1.ebuild,v 1.1 2004/08/20 20:59:41 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wdiff/wdiff-0.5-r1.ebuild,v 1.2 2004/08/26 01:54:42 seemant Exp $
 
 inherit eutils
 
@@ -41,6 +41,7 @@ src_install() {
 	if ! use build
 	then
 		dodoc COPYING ChangeLog NEWS README
+		doman wdiff.1
 	else
 		rm -rf ${D}/usr/share/info
 	fi

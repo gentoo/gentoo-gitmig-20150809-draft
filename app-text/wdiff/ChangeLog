@@ -1,6 +1,10 @@
 # ChangeLog for app-text/wdiff
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wdiff/ChangeLog,v 1.8 2004/08/20 20:59:41 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wdiff/ChangeLog,v 1.9 2004/08/26 01:54:42 seemant Exp $
+
+  25 Aug 2004; Seemant Kulleen <seemant@gentoo.org> wdiff-0.5-r1.ebuild:
+  Install man page. Problem reported and fixed by: Haroon Rafique
+  <corporate_gadfly@hotmail.com> in bug #61429
 
 *wdiff-0.5-r1 (20 Aug 2004)
 
