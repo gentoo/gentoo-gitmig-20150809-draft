@@ -1,9 +1,7 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-1.4.6.ebuild,v 1.9 2004/07/28 03:36:39 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-1.4.6.ebuild,v 1.10 2004/08/06 19:41:03 liquidx Exp $
 
-# kde before gnome2, otherwise kde_src_install will override gnome2_src_install
-use kde && inherit kde
 inherit flag-o-matic virtualx gnome2 eutils
 
 # problems with -O3 on gcc-3.3.1
@@ -14,7 +12,7 @@ DESCRIPTION="A GNOME groupware application, a Microsoft Outlook workalike"
 SRC_URI="${SRC_URI} http://www.sleepycat.com/update/snapshot/${DB3}.tar.gz"
 HOMEPAGE="http://www.ximian.com"
 
-IUSE="ssl mozilla ldap doc spell pda ipv6 kerberos kde crypt"
+IUSE="ssl mozilla ldap doc spell pda ipv6 kerberos crypt"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 ppc sparc hppa alpha amd64 ia64"
@@ -137,8 +135,8 @@ src_compile() {
 		&& myconf="${myconf} --enable-ipv6=yes" \
 		|| myconf="${myconf} --enable-ipv6=no"
 
-	use kde && [ -n "${KDEDIR}" ] \
-		&& myconf="${myconf} --with-kde-applnk-path=${KDEDIR}/share/applnk"
+	# KDE 3.2 does not need applnk anymore
+	myconf="${myconf} --with-kde-applnk-path=no"
 
 	use amd64 && myconf="${myconf} --with-pic"
 
