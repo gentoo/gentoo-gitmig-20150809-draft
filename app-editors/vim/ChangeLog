@@ -1,6 +1,12 @@
 # ChangeLog for app-editors/vim
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.156 2005/03/22 15:32:35 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.157 2005/03/25 03:29:07 ciaranm Exp $
+
+*vim-6.3.068 (25 Mar 2005)
+
+  25 Mar 2005; Ciaran McCreesh <ciaranm@gentoo.org> +vim-6.3.068.ebuild:
+  New release. Fixes bug #79981, bug #81289, bug #83383, bug #83416, bug
+  #83565, bug #85758, upstream patches up to 6.3.068.
 
   22 Mar 2005; Aron Griffis <agriffis@gentoo.org> vim-6.3-r4.ebuild:
   Stable on alpha
