@@ -1,18 +1,16 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gal/gal-0.24.ebuild,v 1.10 2004/01/09 20:30:57 agriffis Exp $
-
-IUSE="nls doc"
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gal/gal-0.24.ebuild,v 1.11 2004/02/11 01:30:05 vapier Exp $
 
 inherit gnome.org libtool
 
-S="${WORKDIR}/${P}"
 DESCRIPTION="The Gnome Application Libraries"
 HOMEPAGE="http://www.gnome.org/"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="x86 ppc sparc alpha hppa"
+KEYWORDS="x86 ppc sparc alpha hppa ~amd64"
+IUSE="nls doc"
 
 RDEPEND=">=dev-libs/libxml-1.8.16
 	>=gnome-base/gnome-print-0.34
@@ -21,7 +19,6 @@ RDEPEND=">=dev-libs/libxml-1.8.16
 	<gnome-base/gnome-vfs-1.9.0
 	>=dev-libs/libunicode-0.4-r1
 	media-libs/gdk-pixbuf"
-
 DEPEND="nls? ( sys-devel/gettext )
 	>=dev-util/intltool-0.11
 	dev-lang/perl

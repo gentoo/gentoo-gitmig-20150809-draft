@@ -1,16 +1,16 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gal/gal-1.99.10.ebuild,v 1.9 2003/12/16 16:55:16 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gal/gal-1.99.10.ebuild,v 1.10 2004/02/11 01:30:05 vapier Exp $
 
 inherit gnome2 gnome.org libtool
 
 DESCRIPTION="The Gnome Application Libraries"
 HOMEPAGE="http://www.gnome.org/"
 
-IUSE="doc"
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="2"
 KEYWORDS="x86 ppc sparc hppa alpha ia64 amd64"
+IUSE="doc"
 
 RDEPEND=">=gnome-base/libgnomeprint-2.2.0
 	>=gnome-base/libgnomeprintui-2.2.1
@@ -19,7 +19,6 @@ RDEPEND=">=gnome-base/libgnomeprint-2.2.0
 	>=gnome-base/libgnomecanvas-2.2.0.2
 	>=dev-libs/libxml2-2.0
 	app-text/scrollkeeper"
-
 DEPEND="sys-devel/gettext
 	dev-util/pkgconfig
 	doc? ( dev-util/gtk-doc )
