@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Bruce A. Locke <blocke@shivan.org>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tcptraceroute/tcptraceroute-1.2.ebuild,v 1.1 2001/11/20 01:32:50 blocke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tcptraceroute/tcptraceroute-1.2.ebuild,v 1.2 2001/11/20 01:42:18 blocke Exp $
 
 
 S=${WORKDIR}/${P}
@@ -13,7 +13,7 @@ DEPEND="sys-libs/glibc net-libs/libpcap net-libs/libnet"
 
 src_compile() {
     cd ${S}
-    make || die
+    make CFLAGS="$CFLAGS" || die
 }
 
 src_install () {
