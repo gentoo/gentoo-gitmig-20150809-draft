@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/vtun/vtun-2.5.ebuild,v 1.2 2002/05/26 08:42:02 prez Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/vtun/vtun-2.5.ebuild,v 1.3 2002/05/27 17:27:34 drobbins Exp $
 
 DESCRIPTION="Tunneling software to use the universal tunnel"
 HOMEPAGE="http://vtun.sourceforge.net"
@@ -10,7 +10,7 @@ DEPEND=">=sys-libs/zlib-1.1.4
 	>=dev-libs/openssl-0.9.6c-r1
 	>=sys-kernel/linux-headers-2.4.18"
 #RDEPEND=""
-SRC_URI="ftp://prdownloads.sourceforge.net/vtun/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/vtun/${P}.tar.gz"
 S=${WORKDIR}/vtun
 
 src_compile() {

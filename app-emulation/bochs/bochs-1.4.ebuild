@@ -9,7 +9,7 @@ DESCRIPTION="Bochs is a pc emulator.
   This ebuild is set up to emulate a Pentium, with a NE2000 network card, and a
 CDROM drive.
   It also comes with a disk image using dlxlinux."
-SRC_URI="ftp://prdownloads.sourceforge.net/bochs/${PN}.tar.gz
+SRC_URI="mirror://sourceforge/bochs/${PN}.tar.gz
 	 http://bochs.sourceforge.net/guestos/dlxlinux3.tar.gz"
 HOMEPAGE="http://bochs.sourceforge.net"
 

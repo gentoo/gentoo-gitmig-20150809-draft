@@ -6,7 +6,7 @@
 
 S=${WORKDIR}/${P}
 DESCRIPTION="zsnes is an excellent snes (super nintendo) emulator"
-SRC_URI="ftp://prdownloads.sourceforge.net/zsnes/zsnes1337src.tar.gz"
+SRC_URI="mirror://sourceforge/zsnes/zsnes1337src.tar.gz"
 HOMEPAGE="http://www.zsnes.com/"
 
 RDEPEND="opengl? ( virtual/opengl )
