@@ -1,4 +1,4 @@
-MD5 5c773d662acf6e6a6d7a44544fd29eb4 ChangeLog 533
-MD5 ce4c111589c6850e820efccd2ec9fcb4 bcm4400-1.0.1.ebuild 793
+MD5 396601e8ef2c103c6e0ce4a9a782d0f1 ChangeLog 534
+MD5 7b21d08450b3c32282167ded8d7ba0fd bcm4400-1.0.1.ebuild 794
 MD5 0e4dcb709292a0e3ad8dc1c8b0007a70 files/digest-bcm4400-1.0.1 64
 MD5 5d8babff662bb7839a483a6b60c6bd95 files/bcm4400-1.0.1-gcc33-fix.patch 786
