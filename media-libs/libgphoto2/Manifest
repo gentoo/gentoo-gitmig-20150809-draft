@@ -1,11 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 9f138f802ccda0b21d4e646a3e8886d5 ChangeLog 5981
 MD5 5486abc5e535376eed3bd94b7d947b8b libgphoto2-2.1.3-r1.ebuild 3622
 MD5 3d38d90a3725f02565866268fc5eb422 libgphoto2-2.1.3.ebuild 2884
-MD5 784200e895bc817510d3c9d411aa9c3f libgphoto2-2.1.4.ebuild 3879
+MD5 4ac7382e672633492fe9b4e501c1fe72 libgphoto2-2.1.4.ebuild 3876
 MD5 80850151bae2bd61c4ac796f83656ef6 metadata.xml 217
-MD5 52324e6d654a9ccc56454390ddbff75b ChangeLog 5887
 MD5 8fc24b590738d4420bb8df6521fbbda0 files/canon.powershot.usermap 4575
 MD5 ba2eb5dbe5b2b2214d41dafc6ec6993d files/digest-libgphoto2-2.1.3 70
 MD5 ba2eb5dbe5b2b2214d41dafc6ec6993d files/digest-libgphoto2-2.1.3-r1 70
@@ -16,10 +13,3 @@ MD5 91db4be9fea579f0440cef2d114fcab3 files/libgphoto2-2.1.2-norpm.patch 533
 MD5 1a200bb63548924b958987cd87c45dda files/libgphoto2-2.1.3-canon.patch 8487
 MD5 3b33f744c18b1251ef1d6ce48978dd6b files/libgphoto2-2.1.4-gcc2_fixes.patch 1680
 MD5 d9f7cf4aab81ea4981c30a5e313f3f8e files/libgphoto2-2.1.4-blink2.patch 1655
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBZK8TArHZZzCEUG0RAq0oAJ43YBU3KyBZ4kLWcn+0q/8xw0kTyQCfRwjE
-DJaw3A33bjfP4s7CySgr1dk=
-=A6zo
------END PGP SIGNATURE-----
