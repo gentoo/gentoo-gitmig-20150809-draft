@@ -1,13 +1,13 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-1.1.0.4.ebuild,v 1.4 2002/12/02 19:57:41 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-1.1.0.4.ebuild,v 1.5 2002/12/04 23:03:28 doctomoe Exp $
 inherit kde-base flag-o-matic
 
 # this is the arts 1.1 from kde 3.1, as opposed to arts 1.1.0 from kde 3.1 beta2 and friends
 
 S=$WORKDIR/$PN-1.1
 SRC_URI="mirror://kde/stable/3.1/src/arts-1.1.tar.bz2"
-KEYWORDS="x86"
+KEYWORDS="x86 ppc"
 HOMEPAGE="http://multimedia.kde.org"
 DESCRIPTION="aRts, the KDE sound (and all-around multimedia) server/output manager"
 set-kdedir 3.1
