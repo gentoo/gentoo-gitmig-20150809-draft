@@ -1,6 +1,12 @@
 # ChangeLog for net-www/squid
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/squid/ChangeLog,v 1.14 2003/02/12 08:53:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/squid/ChangeLog,v 1.15 2003/03/27 22:38:13 woodchip Exp $
+
+*squid-2.5.2 (27 Mar 2003)
+
+  27 Mar 2003; Donny Davies <woodchip@gentoo.org> squid-2.5.2.ebuild,
+  files/squid-2.5.2-gentoo.diff:
+  Bump to latest.  Made new patch, clean some docs, fix cron snip install.
 
 *squid-2.5.1-r2 (31 Jan 2003)
 
