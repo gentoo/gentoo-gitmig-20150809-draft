@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3125 2004/09/03 19:15:16 caleb Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3126 2004/09/03 19:31:26 caleb Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -669,10 +669,6 @@ dev-db/mergeant
 sys-apps/pcmcia-cs-tools
 sys-apps/pcmcia-cs-drivers
 
-# <lu_zero@gentoo.org> (23 Jan 2003)
-# Not enough mature
-media-video/lumiere
-
 # <mkennedy@gentoo.org> (14 Dec 2002)
 # see dev-db/postgresql #11822, net-im/sim #11654, and net-misc/mico
 # (btw, all the other distros are using 2.5.4a)
@@ -689,10 +685,6 @@ media-video/lumiere
 # <verwilst@gentoo.org> (13 Nov 2002)
 # B0rks jabber-server, using 1.4.0 instead
 ~dev-libs/pth-1.4.1
-
-# <mkennedy@gentoo.org> (31 Oct 2002)
-# Masked (incomplete)
-app-emacs/monk
 
 # <chadh@gentoo.org> (21 Oct 2002)
 # This is a version of pcmcia-cs-3.2.1 with a patch to let it work with kismet
@@ -715,15 +707,6 @@ app-emacs/monk
 #=net-nds/openldap-2.0.25-r3
 =dev-libs/cyrus-sasl-1.5.27-r5
 
-# <mkennedy@gentoo.org> (15 Sep 2002)
-# Upstream too buggy to use. Doesn't seem to be a stable or pre
-# release that actually works.
-x11-terms/powershell
-
-# Daniel Robbins <drobbins@gentoo.org> (30 Jul 2002)
-# no corresponding PyQt on cvs to get this thing to compile
-dev-python/anygui
-
 # <seemant@gentoo.org> (25 Jul 2002)
 # masked because of unhealthy groupadd operation in postinst
 # needs sorting out on the policy
@@ -741,10 +724,6 @@ app-misc/ldapbrowser
 # libwmfun completes compiling but doesn't appear to support PLDrawString
 # functions correctly.  Masking while incompatible pointers are figured out
 =x11-libs/libwmfun-0.0.4
-
-# <george@gentoo.org> (8 Jun 2002)
-# masking nhc98, until strange module lookup behaviour is resolved
-=dev-lang/nhc98-1.12
 
 # According to spider this breaks gnome-vfs (sandymac, 03 May 2002):
 # and evolution (azarah, 05 May 2002)
@@ -790,14 +769,7 @@ media-libs/id3lib-docs
 app-text/sgml2x
 >=app-admin/modlogan-0.7.4
 
-# unfinished
-app-admin/va-systemimager-server
-app-admin/va-systemimager-client
-
 # broken
 >=media-video/mpeg2-movie-1.5
 
-#seemant@gentoo.org 20 Mar 2002
-# Masking medusa-0.5.1-r4 because it requires libtool-1.4.2 which is also masked
-=gnome-extra/medusa-0.5.1-r4
 
