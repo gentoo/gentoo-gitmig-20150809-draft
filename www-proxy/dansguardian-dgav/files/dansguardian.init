@@ -1,0 +1,22 @@
+#!/sbin/runscript
+# Copyright 1999-2004 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/www-proxy/dansguardian-dgav/files/dansguardian.init,v 1.1 2005/03/08 19:45:38 mrness Exp $
+
+depend() {
+	need net clamd
+	after squid
+}
+
+start() {
+	ebegin "Starting DansGuardian"
+	start-stop-daemon --start --quiet --pidfile /var/run/dansguardian.pid \
+		--exec /usr/sbin/dansguardian
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping DansGuardian"
+	start-stop-daemon --stop --quiet --pidfile /var/run/dansguardian.pid
+	eend $?
+}

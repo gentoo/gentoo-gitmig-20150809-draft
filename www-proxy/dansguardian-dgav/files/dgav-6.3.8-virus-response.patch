@@ -1,0 +1,28 @@
+--- VirusScanner.cpp.ori	2004-12-03 19:15:56.000000000 +0100
++++ VirusScanner.cpp	2004-12-03 19:10:19.000000000 +0100
+@@ -367,20 +367,20 @@
+ 	    }
+ 	    else {
+ 		(*peerconn).writeString("<html><head>");
+-		(*peerconn).writeString("<script language=JavaScript>");
+-		(*peerconn).writeString("location.href=");
++		(*peerconn).writeString("<meta http-equiv=\"REFRESH\" content=\"0;url=");
+ 		(*peerconn).writeString(location.c_str());
+ 		(*peerconn).writeString("?USER==");
+ 		(*peerconn).writeString(username.c_str());
+ 		(*peerconn).writeString("::REASON==Virus%20'");
+ 		(*peerconn).writeString(virname);
+ 		(*peerconn).writeString("'%20found");
+-		(*peerconn).writeString("::URL==");
++		(*peerconn).writeString("::DENIEDURL==");
+ 		(*peerconn).writeString(url.toCharArray());
+-		(*peerconn).writeString("</script>");
++		(*peerconn).writeString("::IP==");
++		(*peerconn).writeString(clientip.c_str());
++		(*peerconn).writeString("\">");
+ 		(*peerconn).writeString("</head></html>");
+ 	    }
+-
+ 	    if (o.notify) {
+ 		#ifdef DGDEBUG
+ 		    std::cout << "Sending email..." << endl;
