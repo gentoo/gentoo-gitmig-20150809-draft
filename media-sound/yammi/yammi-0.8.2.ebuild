@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-sound/yammi/yammi-0.8.2.ebuild,v 1.3 2003/07/12 20:31:01 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/yammi/yammi-0.8.2.ebuild,v 1.4 2003/07/31 03:30:51 caleb Exp $
 
 IUSE="cdr xmms oggvorbis kde"
 
@@ -27,7 +27,7 @@ DEPEND=">=x11-libs/qt-3.1.0-r1
 	xmms? ( >=media-sound/xmms-1.2.7-r18 )
 	oggvorbis? ( >=media-libs/libvorbis-1.0-r1
 	>=vorbis-tools-1.0-r1 )
-	kde? ( >=kde-base/kde-3.0.4 )"
+	kde? ( >=kde-base/kdebase-3.0.4 )"
 
 src_unpack() {
 	unpack ${P}fixed.tar.gz
