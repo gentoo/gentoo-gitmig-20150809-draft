@@ -1,6 +1,8 @@
 # ChangeLog for net-www/bugzilla
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/bugzilla/ChangeLog,v 1.1 2003/12/01 16:34:24 sj7trunks Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/bugzilla/ChangeLog,v 1.2 2004/03/02 11:39:28 aliz Exp $
+
+*bugzilla-2.17.6-r1 (01 Dec 2003)
 
   01 Dec 2003; Benjamin Coles <sj7trunks@gentoo.org> bugzilla-2.17.6-r1.ebuild:
   Thanks to Abhishek@gentoo.org for submitting this ebuild; bug #15031

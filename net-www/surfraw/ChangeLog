@@ -1,10 +1,10 @@
 # ChangeLog for net-www/surfraw
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/surfraw/ChangeLog,v 1.7 2003/02/12 15:21:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/surfraw/ChangeLog,v 1.8 2004/03/02 11:40:11 aliz Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
-* surfraw-1.0.7 (4 August 2002)
+*surfraw-1.0.7 (4 Aug 2002)
 
   4 August 2002; Sascha Schwabbauer <cybersystem@gentoo.org> ChangeLog, surfraw-1.0.7.ebuild, files/digest-surfraw-1.0.7 :
 
