@@ -1,11 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/crypto++/crypto++-5.2.ebuild,v 1.2 2004/07/14 22:01:03 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/crypto++/crypto++-5.2.ebuild,v 1.3 2004/08/03 01:54:15 vapier Exp $
 
 inherit flag-o-matic eutils
-
-#-O3 causes segfaults
-replace-flags -O3 -O2
 
 DESCRIPTION="Crypto++ is a C++ class library of cryptographic schemes"
 HOMEPAGE="http://cryptopp.com"
@@ -19,8 +16,10 @@ IUSE=""
 S=${WORKDIR}
 
 src_compile() {
+	# -O3 causes segfaults
+	replace-flags -O3 -O2
 
-	emake -f GNUmakefile || die
+	emake -f GNUmakefile CXXFLAGS="${CXXFLAGS}" || die
 	if ! ./cryptest.exe v
 	then
 	    eerror "crypto++ self-tests failed"
