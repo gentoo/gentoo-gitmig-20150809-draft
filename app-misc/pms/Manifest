@@ -1,2 +1,4 @@
-MD5 5db199472a696f6836792bb61fc866b7 pms-0.94.ebuild 842
 MD5 0e4c142722b55361f2c56faadfaa0cac files/digest-pms-0.94 60
+MD5 faaa7148137c1312a28a643466298aa1 files/ui.diff 102
+MD5 3c614687ecf085b0f233df71e2ac61ef ChangeLog 348
+MD5 2fdb0efceb329304df51cc597446df2a pms-0.94.ebuild 937
