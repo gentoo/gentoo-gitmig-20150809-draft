@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-1.0.23.ebuild,v 1.3 2005/01/07 15:34:17 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-1.0.23.ebuild,v 1.4 2005/01/14 23:56:03 dragonheart Exp $
 
 inherit eutils gnuconfig
 
@@ -48,16 +48,13 @@ src_compile() {
 		`use_with zlib` \
 		--without-included-minilzo \
 		--without-included-libtasn1 \
-		 --without-included-opencdk \
+		--without-included-opencdk \
 		${myconf} || die
 	emake || die
 }
 
 src_install() {
 	emake DESTDIR=${D} install || die
-
-	# make compatibility symlinks - 0.8.x
-	#dosym /usr/lib/libgnutls.so.10 /usr/lib/libgnutls.so.7
 
 	dodoc AUTHORS COPYING COPYING.LIB ChangeLog NEWS \
 		README THANKS doc/TODO
@@ -67,4 +64,23 @@ src_install() {
 		docinto examples
 		dodoc doc/examples/*.c
 	fi
+}
+
+pkg_postinst() {
+	ewarn "An API has changed in gnutls. This is why the library has gone from "
+	ewarn "libgnutls.so.10 to libgnutls.so.11."
+	ewarn
+	ewarn "What is required is a revdep-rebuild."
+	ewarn "To show you what is needed to rebuild"
+	ewarn "revdep-rebuild --soname libgnutls.so.10 -- -p"
+	ewarn ""
+	ewarn "Then do:"
+	ewarn "revdep-rebuild --soname libgnutls.so.10"
+	einfo ""
+	einfo "Afterward just try:"
+	einfo "revdep-rebuild -- -p"
+	einfo "to see if there are any other packages broken."
+	einfo "To rebuild these:"
+	einfo "revdep-rebuild"
+
 }

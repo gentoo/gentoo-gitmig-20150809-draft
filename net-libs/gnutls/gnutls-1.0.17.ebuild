@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-1.0.17.ebuild,v 1.17 2005/01/06 11:09:31 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-1.0.17.ebuild,v 1.18 2005/01/14 23:56:03 dragonheart Exp $
 
 inherit eutils gnuconfig
 
@@ -72,4 +72,23 @@ src_install() {
 		docinto examples
 		dodoc doc/examples/*.c
 	fi
+}
+
+pkg_postinst() {
+	ewarn "An API has changed in gnutls. This is why the library has gone from "
+	ewarn "libgnutls.so.10 to libgnutls.so.11."
+	ewarn
+	ewarn "What is required is a revdep-rebuild."
+	ewarn "To show you what is needed to rebuild"
+	ewarn "revdep-rebuild --soname libgnutls.so.10 -- -p"
+	ewarn ""
+	ewarn "Then do:"
+	ewarn "revdep-rebuild --soname libgnutls.so.10"
+	einfo ""
+	einfo "Afterward just try:"
+	einfo "revdep-rebuild -- -p"
+	einfo "to see if there are any other packages broken."
+	einfo "To rebuild these:"
+	einfo "revdep-rebuild"
+
 }
