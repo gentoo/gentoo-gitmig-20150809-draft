@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/raptor
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/raptor/ChangeLog,v 1.18 2004/10/01 20:36:57 kito Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/raptor/ChangeLog,v 1.19 2004/11/11 02:18:04 vapier Exp $
+
+*raptor-1.4.2 (10 Nov 2004)
+
+  10 Nov 2004; Mike Frysinger <vapier@gentoo.org> +raptor-1.4.2.ebuild:
+  Version bump.
 
   01 Oct 2004; kito@gentoo.org raptor-1.2.0.ebuild:
   added ~ppc-macos
