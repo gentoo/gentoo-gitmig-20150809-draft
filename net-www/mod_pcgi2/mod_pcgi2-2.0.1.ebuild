@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_pcgi2/mod_pcgi2-2.0.1.ebuild,v 1.10 2004/08/16 17:40:12 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_pcgi2/mod_pcgi2-2.0.1.ebuild,v 1.11 2004/08/30 23:26:06 dholm Exp $
 
 inherit eutils
 
@@ -43,7 +43,7 @@ HOMEPAGE="http://www.zope.org/Members/phd/${PN}/"
 SRC_URI="http://zope.org/Members/phd/${PN}/${PV}/${P}-src.tar.gz"
 LICENSE="GPL-2"
 SLOT="${APACHEVER}"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 IUSE="apache2"
 
 DEPEND="${DEPEND}
