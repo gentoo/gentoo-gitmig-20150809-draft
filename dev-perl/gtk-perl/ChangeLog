@@ -1,6 +1,15 @@
 # ChangeLog for dev-perl/gtk-perl
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk-perl/ChangeLog,v 1.23 2004/02/25 22:23:09 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk-perl/ChangeLog,v 1.24 2004/02/27 14:58:52 mcummings Exp $
+
+*gtk-perl-0.7008-r11 (27 Feb 2004)
+
+  27 Feb 2004; Michael Cummings <mcummings@gentoo.org>
+  gtk-perl-0.7008-r10.ebuild, gtk-perl-0.7008-r11.ebuild,
+  gtk-perl-0.7008-r9.ebuild, gtk-perl-0.7009.ebuild:
+  Adding optional support for opengl (bug 26424). Had to do a -r bump because 2
+  archs didn't have opengl support (no other change to the ebuild was made other
+  than the optional opengl that was already there)
 
   25 Feb 2004; Michael Cummings <mcummings@gentoo.org> gtk-perl-0.7009.ebuild:
   Wrong src-uri; forgot i got the tarball from cpan when i was trying to get
