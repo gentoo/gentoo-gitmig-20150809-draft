@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-media/gnome-media-1.2.3.ebuild,v 1.3 2001/08/31 03:23:39 pm Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-media/gnome-media-1.2.3.ebuild,v 1.4 2001/10/06 21:44:08 hallski Exp $
 
 
 A=${P}.tar.bz2
@@ -10,37 +10,36 @@ DESCRIPTION="gnome-media"
 SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/gnome-media/"${A}
 HOMEPAGE="http://www.gnome.org/"
 
-DEPEND=">=gnome-base/gnome-libs-1.2.4
-        >=gnome-base/scrollkeeper-0.2
+RDEPEND=">=gnome-base/gnome-libs-1.4.1.2-r1"
+
+DEPEND="${RDEPEND}
+        >=app-text/scrollkeeper-0.2
         nls? ( sys-devel/gettext )"
 
-RDEPEND=">=gnome-base/gnome-libs-1.2.4"
 
 src_compile() {                           
-  local myconf
-  if [ -z "`use nls`" ] ; then
-     myconf="--disable-nls"
-  fi
+	local myconf
 
-  if [ "`use alsa`"  ] ; then
-    myconf="--enable-alsa=yes"
-  else
-    myconf="--enable-alsa=no"
-  fi
+	if [ -z "`use nls`" ] ; then
+		myconf="--disable-nls"
+	fi
 
-  try ./configure --host=${CHOST} --prefix=/opt/gnome \
-	--with-ncurses $myconf
+	if [ "`use alsa`"  ] ; then
+		myconf="--enable-alsa=yes"
+	else
+		myconf="--enable-alsa=no"
+	fi
 
-  try pmake
+	./configure --host=${CHOST} 					\
+		    --prefix=/usr					\
+		    --with-ncurses $myconf || die
+
+	emake || die
 }
 
 src_install() {                               
-  cd ${S}
-  try make prefix=${D}/opt/gnome install
-  dodoc AUTHORS COPYING* ChangeLog NEWS
-  dodoc README*
+	make DESTDIR=${D} install || die
+	
+	dodoc AUTHORS COPYING* ChangeLog NEWS README*
 }
-
-
-
 
