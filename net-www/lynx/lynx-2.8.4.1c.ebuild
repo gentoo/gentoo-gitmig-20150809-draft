@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/lynx/lynx-2.8.4.1c.ebuild,v 1.7 2002/12/09 04:33:20 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/lynx/lynx-2.8.4.1c.ebuild,v 1.8 2003/02/11 17:28:51 gmsoft Exp $
 
 IUSE="ssl nls ipv6"
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://lynx.isc.org/${PN}/${PN}2.8.4/${PN}${MY_PV}.tar.bz2
 	ftp://lynx.isc.org/lynx/lynx2.8.4/patches/${PN}${MY_PV}a.patch
 	ftp://lynx.isc.org/lynx/lynx2.8.4/patches/${PN}${MY_PV}b.patch
 	ftp://lynx.isc.org/lynx/lynx2.8.4/patches/${PN}${MY_PV}c.patch"
-KEYWORDS="x86 ppc sparc "
+KEYWORDS="x86 ppc sparc hppa"
 SLOT="0"
 LICENSE="GPL-2"
 
