@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/weka/weka-3.4.3_p20041113.ebuild,v 1.2 2005/02/22 16:18:51 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/weka/weka-3.4.3_p20041113.ebuild,v 1.3 2005/03/04 10:57:09 luckyduck Exp $
 
 inherit eutils java-pkg
 
@@ -12,7 +12,7 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 amd64"
 DEPEND=">=virtual/jdk-1.4
-	app-arch/unzip"
+	dev-java/ant"
 #	jikes?( >=dev-java/jikes-1.21 )"
 RDEPEND=">=virtual/jre-1.4"
 IUSE="doc" # jikes"

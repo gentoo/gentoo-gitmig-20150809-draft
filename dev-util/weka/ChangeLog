@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/weka
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/weka/ChangeLog,v 1.8 2005/02/22 16:18:51 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/weka/ChangeLog,v 1.9 2005/03/04 10:57:09 luckyduck Exp $
+
+  04 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org> weka-3.4.1-r1.ebuild,
+  weka-3.4.1.ebuild, weka-3.4.3_p20041113.ebuild:
+  added missing jikes dependency. fixes #84053
 
   22 Feb 2005; Jan Brinkmann <luckyduck@gentoo.org>
   weka-3.4.3_p20041113.ebuild:
