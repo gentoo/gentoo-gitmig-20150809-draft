@@ -1,0 +1,9 @@
+# ChangeLog for net-misc/netkit-tftp
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+
+*geotrace-0.0.4 (17 Feb 2002)
+
+   18 Feb 2002; F.Meyndert <m0rpheus@gentoo.org> netkit-tftp-0.17.ebuild,
+   
+   New ebuild for netkit-tftp, ftp client and server.
+
