@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openntpd/openntpd-3.6.1_p1.ebuild,v 1.2 2004/12/11 17:58:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openntpd/openntpd-3.6.1_p1.ebuild,v 1.3 2004/12/22 14:38:24 vapier Exp $
 
 inherit eutils
 
@@ -12,9 +12,10 @@ SRC_URI="mirror://openbsd/OpenNTPD/${MY_P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
-IUSE=""
+IUSE="ssl"
 
 RDEPEND="virtual/libc
+	ssl? ( dev-libs/openssl )
 	!<=net-misc/ntp-4.2.0-r2"
 DEPEND="${RDEPEND}
 	>=sys-apps/portage-2.0.51"
@@ -31,6 +32,11 @@ src_unpack() {
 	cd ${S}
 	sed -i '/NTPD_USER/s:_ntp:ntp:' ntpd.h || die
 	epatch ${FILESDIR}/${PV}-ntpd.8.patch
+}
+
+src_compile() {
+	econf $(use_with !ssl builtin-arc4random) || die
+	emake || die "emake failed"
 }
 
 src_install() {

@@ -1,21 +1,69 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 6d507652f9181eb7a26e668efc246f10 ChangeLog 1641
+MD5 d83f94df275397dfe9fe0ec204efcea0 ChangeLog 1787
+MD5 35c3a3de621be7dee3a78baa97d69103 openntpd-3.6.1_p1.ebuild 1125
 MD5 e30195b608a584f4e245e7edfe260680 openntpd-0.20040824p.ebuild 944
-MD5 448c44d41fcd4956f50fe507b41f65be openntpd-3.6_p1.ebuild 1000
-MD5 40e264626e44d490efc662edc790e85d openntpd-3.6.1_p1.ebuild 997
+MD5 63017f153b09088aacf25d1df999e8d1 openntpd-3.6_p1.ebuild 1126
 MD5 b1e008f7e477784dded26817d225dd1c files/3.6_p1-ntpd.8.patch 507
-MD5 6629cc381ff1007852deb4dfc2303b20 files/digest-openntpd-0.20040824p 70
-MD5 ccc41a09c3fd03e626921199700f9a7e files/digest-openntpd-3.6_p1 66
-MD5 9cb3424ed5b3f20a231d581b78629afb files/openntpd.conf.d 257
 MD5 31c9feba04713eebbe16cd1979fca83d files/openntpd.rc 918
-MD5 71e8d0be6ce1e3324576b9ddce02c74e files/3.6.1_p1-ntpd.8.patch 664
+MD5 9cb3424ed5b3f20a231d581b78629afb files/openntpd.conf.d 257
 MD5 ab87a8b0466a0c1c687eb7648b7f8754 files/digest-openntpd-3.6.1_p1 68
+MD5 ccc41a09c3fd03e626921199700f9a7e files/digest-openntpd-3.6_p1 66
+MD5 6629cc381ff1007852deb4dfc2303b20 files/digest-openntpd-0.20040824p 70
+MD5 71e8d0be6ce1e3324576b9ddce02c74e files/3.6.1_p1-ntpd.8.patch 664
+MD5 da1b53902926c8884384b6880ef66bfb openntpd-3.6.1p1/.cvsignore 106
+MD5 a5d71108adcfb148db4153bc6a21d073 openntpd-3.6.1p1/CREDITS 192
+MD5 b30438f1a0ca894e12c4c3b1cb0fc1b8 openntpd-3.6.1p1/ChangeLog 26348
+MD5 ea136045f2c08d19edc9304a12c135da openntpd-3.6.1p1/Makefile.in 3457
+MD5 4240036ce45360e9c6d84a35d7067ef2 openntpd-3.6.1p1/README 915
+MD5 5932ded28730f0d046fbd94d1b3e9957 openntpd-3.6.1p1/buffer.c 3316
+MD5 a1ee5ab879814c7e735eed79c9ef2623 openntpd-3.6.1p1/client.c 8527
+MD5 05f8ed9422ea0546c16a7c7ac16a250d openntpd-3.6.1p1/config.c 4555
+MD5 e8f87acaddff75a691755466f0918100 openntpd-3.6.1p1/config.guess 42081
+MD5 74587542264e2bb761ee931ddb7d69f1 openntpd-3.6.1p1/config.sub 30470
+MD5 a53e8a00ac1e953710a201547c9df2d4 openntpd-3.6.1p1/configure.ac 14819
+MD5 2166c981efe59195327c301bd3b9deff openntpd-3.6.1p1/defines.h 4366
+MD5 2b0827a3d8f183c96e0fb69cf2b5d89f openntpd-3.6.1p1/imsg.c 3817
+MD5 074d6c6d11099245d6d15b1b86f4c59a openntpd-3.6.1p1/includes.h 1992
+MD5 d84f5bac39dd1170c9ca8be697dca1ec openntpd-3.6.1p1/install-sh 5586
+MD5 a1bff5b217feaad85b1f9a032c7f398e openntpd-3.6.1p1/log.c 3179
+MD5 1adce2db917c46cb3d7b41692576dea1 openntpd-3.6.1p1/ntp.c 10520
+MD5 a75fd92afc34bb3d3133d5ed9ab12151 openntpd-3.6.1p1/ntp.h 5252
+MD5 3e78d5aa2e2273fc5890933b047a1000 openntpd-3.6.1p1/ntp_msg.c 5058
+MD5 4ec7450d67823f0432d29973dc9f06bf openntpd-3.6.1p1/ntpd.8 2958
+MD5 76cb06cf9c1dee4f231f6fdf9668514b openntpd-3.6.1p1/ntpd.c 7422
+MD5 05cfadcc490fe88810e135b2fc2861ec openntpd-3.6.1p1/ntpd.conf 409
+MD5 ca6002f8867ce94a0b1f17b67b6cbc61 openntpd-3.6.1p1/ntpd.conf.5 2984
+MD5 7ebd5db2abefa166a1352cc63cce3e94 openntpd-3.6.1p1/ntpd.h 6010
+MD5 da5455ab0aa4feea1c925e424ab8460d openntpd-3.6.1p1/parse.y 8294
+MD5 c173c20d799411fa858316c33e7fa68c openntpd-3.6.1p1/server.c 4305
+MD5 00815b49ff32b69d3788f581945126f3 openntpd-3.6.1p1/util.c 2011
+MD5 a5f1b726548d92ef6f5422a2006e7eb9 openntpd-3.6.1p1/version.h 35
+MD5 96971bdf36da82917093dbc96adc037f openntpd-3.6.1p1/y.tab.c 21180
+MD5 a7f5a6ebfdd1190d26d087ac4509f8c8 openntpd-3.6.1p1/configure 279351
+MD5 3fa70f0edbf81e053c667e9087ce4bbf openntpd-3.6.1p1/config.h.in 6947
+MD5 539a0bdeaf454cbe8b3d7a99ac5ce295 openntpd-3.6.1p1/ntpd-vs-openbsd.diff 6759
+MD5 a8f373c9089da673e120c99f2ba757b7 openntpd-3.6.1p1/openbsd-compat/.cvsignore 10
+MD5 245f91cdb2236f14c46d771bf87b5ac1 openntpd-3.6.1p1/openbsd-compat/Makefile.in 658
+MD5 31aa218985e980f34a831e336e9c15bc openntpd-3.6.1p1/openbsd-compat/asprintf.c 1914
+MD5 bf089491a810e5748bd63edd7eab38e7 openntpd-3.6.1p1/openbsd-compat/bsd-arc4random.c 3553
+MD5 57b2f1c156e2a35a0ac59aa7bea66eb1 openntpd-3.6.1p1/openbsd-compat/bsd-misc.c 2746
+MD5 3a19a6b4a5bc557c3f29590acc35fe2e openntpd-3.6.1p1/openbsd-compat/bsd-snprintf.c 15884
+MD5 2caf7629dc1fdf7c2844f9c5a7e90648 openntpd-3.6.1p1/openbsd-compat/daemon.c 2519
+MD5 90ad15127ecb8a1b6f4c224d21d23ac8 openntpd-3.6.1p1/openbsd-compat/fake-rfc2553.c 6077
+MD5 d209848652e68897c85f2137cc2e3090 openntpd-3.6.1p1/openbsd-compat/fake-rfc2553.h 4964
+MD5 728ad5969cb1ad41b5df08a94d46f35f openntpd-3.6.1p1/openbsd-compat/inet_pton.c 5537
+MD5 e2ab0f0b2b13009c57ee0f380ac90bd1 openntpd-3.6.1p1/openbsd-compat/openbsd-compat.h 2132
+MD5 86c34304d6837fa147e23e9f71b05657 openntpd-3.6.1p1/openbsd-compat/strlcpy.c 1885
+MD5 47aaf06d95b4428e4e9caa9b23a6951b openntpd-3.6.1p1/openbsd-compat/sys-queue.h 19257
+MD5 00f8b55c20e9ae763dbf922a1786c6a0 openntpd-3.6.1p1/openbsd-compat/uidswap.c 2492
+MD5 f0ed257410e87654e56c1914afeeadff openntpd-3.6.1p1/contrib/redhat/ntpd 1070
+MD5 90d2d083caad5e6b5179dbc35c36b292 openntpd-3.6.1p1/contrib/redhat/openntpd.spec 1278
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBwvJyKRy60XGEcJIRAmarAJ9Zbhrq6ojV+ZJEERJNGLZ9sv38QACfRUkL
-SC81C+RvvW97G6+G6f4z2y4=
-=boOK
+iD8DBQFByYcaroRuSHgZdywRAnLbAJ0dutt8lqbuYA/XkfvlL4cPnxgeqgCeI+wT
+puDVyw1bQXZEvHsQ/Qm+nH8=
+=icZz
 -----END PGP SIGNATURE-----
