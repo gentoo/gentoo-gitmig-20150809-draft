@@ -4,6 +4,8 @@ MD5 fd4714e0bb891037632920b15e7af092 mono-0.96.ebuild 1560
 MD5 a9c0950d998a9c703fa103dad6ca0852 mono-0.30.ebuild 2395
 MD5 bf1cb54e6b1538a8b171acc7c22e3960 mono-0.91.ebuild 1664
 MD5 89cb74a4e734de56f04e2ab38772fdfb mono-0.30.1.ebuild 2397
+MD5 1a915d94d70a3ea8560add6fa892f1c3 mono-1.0.4.ebuild 1502
+MD5 7e241ab7225841b6eaecdc13b9e388c0 mono-1.0.4-r1.ebuild 2105
 MD5 5d0b32410408e9e4f2418dc17eaaacb4 mono-0.28.ebuild 2100
 MD5 b92843896a3417a8aa46a8638c029cdb mono-1.0.1.ebuild 1480
 MD5 271befb09aa1c005b1ea442f98c760b8 mono-0.95.ebuild 1560
@@ -18,10 +20,12 @@ MD5 9f4b4eb6a1555ed574dbdd359cae3070 files/dotnet.conf 573
 MD5 f33c78b627cbbc1db2ab5f6cc5299e70 files/dotnet.init 1034
 MD5 7d7ffd8b6b060338e93efa00227516e7 files/digest-mono-1.0.1 64
 MD5 c56c6d79308a09f11e1a64e84c4bfd13 files/digest-mono-1.0.2 64
+MD5 2cef534891ce7b0c980d5615ae1397af files/digest-mono-1.0.4 64
 MD5 33b073ed2746ffc3552b2c68a2215b56 files/digest-mono-0.30.1 127
 MD5 7d7ffd8b6b060338e93efa00227516e7 files/digest-mono-1.0.1-r1 64
 MD5 7d7ffd8b6b060338e93efa00227516e7 files/digest-mono-1.0.1-r2 64
 MD5 c56c6d79308a09f11e1a64e84c4bfd13 files/digest-mono-1.0.2-r1 64
+MD5 2cef534891ce7b0c980d5615ae1397af files/digest-mono-1.0.4-r1 64
 MD5 43da8709d0752a2ef9f9dfb050a05d9f files/digest-mono-0.28 123
 MD5 b1d7d1f8b30cadd81ca257cfb0126f2b files/digest-mono-0.30 123
 MD5 e7d95f62bf18430aa812b1a501c2e485 files/digest-mono-0.31 124

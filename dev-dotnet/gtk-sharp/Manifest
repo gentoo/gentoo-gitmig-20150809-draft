@@ -1,24 +1,16 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 691077c38ec42362f4896f6d7776adf2 ChangeLog 6036
 MD5 f0bcc185a4ba82f292a02f962fea3627 gtk-sharp-0.91.1.ebuild 1575
-MD5 9a60c17e159827a0d8e9dbb6d8d9f9d9 gtk-sharp-0.93.ebuild 1667
-MD5 4387f6ee16c7878e05f86a61065ded74 gtk-sharp-0.98.ebuild 1319
-MD5 1c8a027e133ff742d3f92bdb40cd7f59 gtk-sharp-0.99.ebuild 1409
 MD5 cb88d34bc5ce559fed6db3859526af8f gtk-sharp-1.0.2.ebuild 1296
-MD5 6b60029bfca2c475175b7b5a2f210258 gtk-sharp-1.0.ebuild 1292
+MD5 4387f6ee16c7878e05f86a61065ded74 gtk-sharp-0.98.ebuild 1319
+MD5 9a60c17e159827a0d8e9dbb6d8d9f9d9 gtk-sharp-0.93.ebuild 1667
+MD5 60d0ebbb364be9dfb67355d3b73da36b gtk-sharp-1.0.4.ebuild 1316
+MD5 1c8a027e133ff742d3f92bdb40cd7f59 gtk-sharp-0.99.ebuild 1409
+MD5 691077c38ec42362f4896f6d7776adf2 ChangeLog 6036
 MD5 e06909c47712ae995f4879eefb22e38b metadata.xml 160
+MD5 6b60029bfca2c475175b7b5a2f210258 gtk-sharp-1.0.ebuild 1292
+MD5 a0edc972ee8b58abf8c67e5ccd24c1de files/digest-gtk-sharp-1.0 66
 MD5 d9f80b7be9ee3f9e1ef22ff3846fe5c8 files/digest-gtk-sharp-0.91.1 69
+MD5 9eb4072ab135bd19b04413c16707c809 files/digest-gtk-sharp-1.0.2 68
+MD5 4ab18ac87ac1bf96db94fa7496d21af8 files/digest-gtk-sharp-1.0.4 68
 MD5 20ac11101783b76d9721c6e38ae60aaa files/digest-gtk-sharp-0.93 67
 MD5 cbb55d885fae188a8492e25f329313e6 files/digest-gtk-sharp-0.98 67
 MD5 28a1eb3d410cb512635f236cb6210775 files/digest-gtk-sharp-0.99 67
-MD5 a0edc972ee8b58abf8c67e5ccd24c1de files/digest-gtk-sharp-1.0 66
-MD5 9eb4072ab135bd19b04413c16707c809 files/digest-gtk-sharp-1.0.2 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBgPVBI1lqEGTUzyQRAoByAJ9UvE3lEUPPOGRqVjmID7k9M9cRpACgs8hk
-DrUVZJCzjElqOCT1Zo71Qhs=
-=4Bov
------END PGP SIGNATURE-----

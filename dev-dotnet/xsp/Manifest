@@ -1,3 +1,4 @@
+MD5 ad917c4c14afcd6984e467a7489023db xsp-1.0.4.ebuild 1052
 MD5 988605da778b5f9a6c8933ec3bde3e2d xsp-1.0.ebuild 1048
 MD5 12a4371f4a88ee7b75fa0670707c1d28 xsp-0.13.ebuild 875
 MD5 36c5acdf88a099614d21aea4f4277d91 xsp-1.0.1.ebuild 1050
@@ -13,6 +14,7 @@ MD5 26af51781fab59682eb75d854280b4a9 files/digest-xsp-0.15 60
 MD5 f18d63d88f5bee4df47c3f7e9f0285c5 files/digest-xsp-0.16 60
 MD5 34efb73f2759b0dcbeca8b12be4de37d files/digest-xsp-1.0.1 61
 MD5 478f71b966dfdb287739600f67a43200 files/digest-xsp-1.0.2 61
+MD5 1d50c87af657764f57be8292fbf95061 files/digest-xsp-1.0.4 61
 MD5 5788140ef902e673f760b875b5f4c1c0 files/xsp.confd 301
 MD5 4c6ea487a7fa33ca219f4d49803f1e25 files/xsp.initd 669
 MD5 f546d127c2bbcd153f5668d0f114de3d files/digest-xsp-1.0 59
