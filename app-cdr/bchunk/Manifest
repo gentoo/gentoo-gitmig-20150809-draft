@@ -1,13 +1,13 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 0679df719c4d69fcc61d8d58b663b1e2 ChangeLog 854
+MD5 5d12134bc7dc1a79479a59e77167b986 ChangeLog 955
 MD5 47bdc50cef4a21e6eeacc8cdbba3337f bchunk-1.1.1.ebuild 601
 MD5 13b561039eacac208de0f28160e92d77 files/digest-bchunk-1.1.1 63
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
+Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFA3zfMHTu7gpaalycRAuI1AKDDG5AkEVY4kTTaaWXRA92hRTl28QCeJnKx
-J00VimJg6u29zwuxgiRynMk=
-=X8qc
+iD8DBQFBW0B+I1lqEGTUzyQRAoRDAKCIZW53dcpyot2H7uwVyUHyIPi6SgCgpR1f
+OscKiMsA+gDPSibf1+tDrBo=
+=aChx
 -----END PGP SIGNATURE-----
