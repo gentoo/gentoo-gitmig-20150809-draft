@@ -27,8 +27,8 @@ diff -b -p -u -r1.38 -r1.39
  
  */
  
--// $Id: kdelibs-3.1-kimageeffect.patch,v 1.1 2002/12/03 00:12:35 hannes Exp $
-+// $Id: kdelibs-3.1-kimageeffect.patch,v 1.1 2002/12/03 00:12:35 hannes Exp $
+-// $Id: kdelibs-3.1-kimageeffect.patch,v 1.2 2002/12/03 13:06:31 hannes Exp $
++// $Id: kdelibs-3.1-kimageeffect.patch,v 1.2 2002/12/03 13:06:31 hannes Exp $
  
  #include <math.h>
  
