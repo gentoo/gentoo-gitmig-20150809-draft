@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.5.0_rc1.ebuild,v 1.1 2004/09/02 12:30:20 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.5.0_rc1.ebuild,v 1.2 2004/09/03 05:43:06 axxo Exp $
 
 IUSE="doc gnome kde mozilla jce"
 
@@ -45,7 +45,7 @@ PACKED_JARS="lib/tools.jar jre/lib/rt.jar jre/lib/jsse.jar jre/lib/charsets.jar 
 # this is needed for proper operating under a PaX kernel without activated grsecurity acl
 CHPAX_CONSERVATIVE_FLAGS="pemsv"
 
-FETCH_SDK="http://javashoplm.sun.com/ECom/docs/Welcome.jsp?StoreId=22&PartDetailId=jce-1.5.0-rc-oth-JPR&SiteId=JSC&TransactionId=noreg"
+FETCH_SDK="http://javashoplm.sun.com/ECom/docs/Welcome.jsp?StoreId=22&PartDetailId=jdk-1.5.0-rc-oth-JPR&SiteId=JSC&TransactionId=noreg"
 FETCH_JCE="http://javashoplm.sun.com/ECom/docs/Welcome.jsp?StoreId=22&PartDetailId=jce-1.5.0-rc-oth-JPR&SiteId=JSC&TransactionId=noreg"
 
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/sun-jdk
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/ChangeLog,v 1.84 2004/09/02 12:30:20 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/ChangeLog,v 1.85 2004/09/03 05:43:06 axxo Exp $
+
+  03 Sep 2004; Thomas Matthijs <axxo@gentoo.org> sun-jdk-1.5.0_rc1.ebuild:
+  correct sdk download url, closes 62663
 
 *sun-jdk-1.5.0_rc1 (02 Sep 2004)
 
