@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/dmalloc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dmalloc/ChangeLog,v 1.7 2003/11/08 16:50:13 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dmalloc/ChangeLog,v 1.8 2003/11/20 13:37:14 liquidx Exp $
+
+*dmalloc-5.2.4 (20 Nov 2003)
+
+  20 Nov 2003; Alastair Tse <liquidx@gentoo.org> dmalloc-5.2.4.ebuild:
+  version bump
 
 *dmalloc-5.2.3 (08 Nov 2003)
 
