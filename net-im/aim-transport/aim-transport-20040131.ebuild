@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/aim-transport/aim-transport-20040131.ebuild,v 1.1 2004/02/28 15:10:38 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/aim-transport/aim-transport-20040131.ebuild,v 1.2 2004/02/29 02:36:39 humpback Exp $
 
 MY_PN="${PN}-stable"
 S="${WORKDIR}/${MY_PN}-${PV}"
@@ -20,13 +20,15 @@ IUSE=""
 
 DEPEND=">=net-im/jabberd-1.4.3"
 
-
+src_unpack() {
+	unpack ${A}
+	epatch ${FILESDIR}/aimtrans.patch
+}
 
 src_compile() {
 	einfo
 	einfo "Please ignore any errors/warnings"
 	einfo
-	epatch ${FILESDIR}/aimtrans.patch
 	automake
 	libtoolize --force
 	aclocal

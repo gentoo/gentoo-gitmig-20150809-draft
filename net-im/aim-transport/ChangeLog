@@ -1,6 +1,10 @@
 # ChangeLog for net-im/aim-transport
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/aim-transport/ChangeLog,v 1.4 2004/02/28 15:10:38 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/aim-transport/ChangeLog,v 1.5 2004/02/29 02:36:39 humpback Exp $
+
+  29 Feb 2004; Gustavo Felisberto <humpback@gentoo.org>;
+  aim-transport-20040131.ebuild:
+  Moving patch from src_compile to src_unpack
 
 *aim-transport-20040131 (28 Feb 2004)
 
