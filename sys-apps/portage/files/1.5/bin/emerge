@@ -209,6 +209,9 @@ for x in sys.argv[1:]:
 		else:
 			print "!!! Error:",x,"does not exist or is an invalid command-line option."
 			sys.exit(1)
+if not portage.settings.has_key("MAINTAINER"):
+	if not "--autoclean" in myopts:
+		myopts.append("--autoclean")
 
 if "--help" in myopts:
 	if len(mymode)==0:
@@ -245,8 +248,8 @@ if "--help" in myopts:
 		print "              build directory before it starts the building a package.  With"
 		print "              --autoclean, it will also clean the directory *after* the"
 		print "              build completes.  This option is automatically enabled for"
-		print "              normal users, and automatically disabled for maintainers (if"
-		print "              MAINTAINER=\"YES\" is in /etc/make.conf"
+		print "              normal users, but maintainers can use this option to enable"
+		print "              autocleaning."
 		print
 		print "       \x1b[32;01m--pretend\x1b[0m"
 		print "              instead of actually performing the merge, simply display what"
