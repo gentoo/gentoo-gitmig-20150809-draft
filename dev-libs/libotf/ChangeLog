@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libotf
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libotf/ChangeLog,v 1.6 2004/06/24 23:21:14 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libotf/ChangeLog,v 1.7 2004/07/19 02:17:57 tgall Exp $
+
+  18 Jul 2004; Tom Gall <tgall@gentoo.org> libotf-0.9-r1.ebuild:
+  stable on ppc64, bug #57120
 
 *libotf-0.9-r1 (16 Jun 2004)
 
