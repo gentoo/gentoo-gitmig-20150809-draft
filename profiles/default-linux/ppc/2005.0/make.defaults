@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ppc/2005.0/make.defaults,v 1.4 2005/01/12 23:08:21 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ppc/2005.0/make.defaults,v 1.5 2005/01/25 06:05:18 lu_zero Exp $
 
 ARCH="ppc"
 ACCEPT_KEYWORDS="ppc"
 
-USE="unicode pam bitmap-fonts dvd gif jpeg nls png ppc truetype truetype-fonts type1-fonts fortran f77"
+USE="unicode pam bitmap-fonts dvd gif jpeg nls png ppc xv truetype truetype-fonts type1-fonts fortran f77"
 
 FEATURES="sandbox sfperms"
