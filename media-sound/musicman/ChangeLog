@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/musicman
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/musicman/ChangeLog,v 1.5 2004/11/23 10:11:18 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/musicman/ChangeLog,v 1.6 2004/11/29 23:06:38 eradicator Exp $
+
+  29 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  musicman-0.11-r1.ebuild, -musicman-0.11.ebuild:
+  Changing fam depend to virtual.
 
   23 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org>
   musicman-0.11-r1.ebuild:
