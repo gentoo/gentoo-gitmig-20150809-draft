@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/icewm
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/ChangeLog,v 1.61 2004/09/06 13:26:43 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/ChangeLog,v 1.62 2004/09/13 01:06:14 malc Exp $
+
+  12 Sep 2004; Malcolm Lashley <malc@gentoo.org> icewm-1.2.16-r1.ebuild:
+  ~amd64, needed for gcc3.4 compilation
 
   06 Sep 2004; Gustavo Zacarias <gustavoz@gentoo.org> icewm-1.2.16-r1.ebuild:
   Stable on sparc
