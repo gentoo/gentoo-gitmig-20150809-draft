@@ -1,8 +1,11 @@
 # ChangeLog for net-www/fnord
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/fnord/ChangeLog,v 1.5 2002/10/26 21:56:15 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/fnord/ChangeLog,v 1.6 2002/10/31 01:02:08 raker Exp $
 
 *fnord-1.6 (26 Oct 2002)
+
+  30 Oct 2002; Nick Hadaway <raker@gentoo.org> fnord-1.6.ebuild :
+  Marked stable.
 
   26 Oct 2002; Nick Hadaway <raker@gentoo.org> fnord-1.6.ebuild :
   Version bump.
