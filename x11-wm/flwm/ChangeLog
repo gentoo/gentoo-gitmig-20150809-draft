@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/flwm
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/flwm/ChangeLog,v 1.7 2004/06/24 23:41:11 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/flwm/ChangeLog,v 1.8 2004/08/24 10:25:16 usata Exp $
+
+  24 Aug 2004; Mamoru KOMACHI <usata@gentoo.org> -flwm-1.00-r2.ebuild,
+  -flwm-1.00-r3.ebuild, flwm-1.00-r4.ebuild:
+  Changed x11-base/xfree to virtual/x11; bug #60787. Integrated into
+  one ebuild.
 
   07 May 2004; Brandon Hale <tseng@gentoo.org> flwm-1.00-r2.ebuild,
   flwm-1.00-r3.ebuild, flwm-1.00-r4.ebuild:

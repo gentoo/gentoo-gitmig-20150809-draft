@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/flwm/flwm-1.00-r4.ebuild,v 1.6 2004/06/24 23:41:11 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/flwm/flwm-1.00-r4.ebuild,v 1.7 2004/08/24 10:25:16 usata Exp $
 
 inherit eutils
 
@@ -12,11 +12,11 @@ HOMEPAGE="http://flwm.sourceforge.net"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 -ppc ~amd64"
+KEYWORDS="x86 -ppc ~amd64"
 
 
-DEPEND=">=x11-base/xfree-4.0.1
-	>=x11-libs/fltk-1.1*
+DEPEND="virtual/x11
+	>=x11-libs/fltk-1.0
 	opengl? ( virtual/opengl )"
 
 	#Configuration of the appearance and behavior of flwm
@@ -33,10 +33,15 @@ src_compile() {
 
 	use opengl && export X_EXTRA_LIBS=-lGL
 
-	export CXXFLAGS="${CXXFLAGS} -I/usr/include/fltk-1.1"
-	export LIBS="-L/usr/lib/fltk-1.1"
+	if has_version '>=x11-libs/fltk-1.1' ; then
+		export CXXFLAGS="${CXXFLAGS} -I/usr/include/fltk-1.1"
+		export LIBS="-L/usr/lib/fltk-1.1"
 
-	epatch ${FILESDIR}/fltk1.1.patch
+		epatch ${FILESDIR}/fltk1.1.patch
+	else	# fltk-1.0
+		export CXXFLAGS="${CXXFLAGS} -I/usr/include/fltk-1.0"
+		export LIBS="-L/usr/lib/fltk-1.0"
+	fi
 
 	econf || die
 	make || die
