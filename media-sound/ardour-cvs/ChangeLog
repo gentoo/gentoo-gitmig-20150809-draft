@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/ardour-cvs
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour-cvs/ChangeLog,v 1.1 2002/10/25 03:14:47 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour-cvs/ChangeLog,v 1.2 2003/01/02 10:50:02 raker Exp $
+
+*ardour-cvs-0.5-r1 (02 Jan 2002)
+
+  02 Jan 2002; Nick Hadaway <raker@gentoo.org> ardour-cvs-0.5-r1.ebuild,
+  files/digest-ardour-cvs-0.5-r1 :
+  New ebuild which depends on jack-cvs
 
 *ardour-cvs-0.5 (24 Oct 2002)
 
