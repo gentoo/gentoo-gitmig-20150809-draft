@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/yaz/yaz-2.0.19.ebuild,v 1.1 2004/04/17 02:42:00 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/yaz/yaz-2.0.19.ebuild,v 1.2 2004/04/27 20:49:17 agriffis Exp $
+
+inherit eutils
 
 DESCRIPTION="YAZ is a C/C++ programmer's toolkit supporting the development of Z39.50v3 clients and servers"
 HOMEPAGE="http://www.indexdata.dk/${PN}"

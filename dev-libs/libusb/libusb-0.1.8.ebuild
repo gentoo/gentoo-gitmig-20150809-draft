@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb/libusb-0.1.8.ebuild,v 1.2 2004/04/01 13:06:43 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb/libusb-0.1.8.ebuild,v 1.3 2004/04/27 20:47:56 agriffis Exp $
+
+inherit eutils
 
 DESCRIPTION="Userspace access to USB devices"
 HOMEPAGE="http://libusb.sourceforge.net/"
