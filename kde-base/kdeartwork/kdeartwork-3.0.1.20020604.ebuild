@@ -1,11 +1,11 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork/kdeartwork-3.0.1.20020604.ebuild,v 1.1 2002/06/05 19:14:09 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork/kdeartwork-3.0.1.20020604.ebuild,v 1.2 2002/06/05 20:13:09 danarmak Exp $
 
 inherit kde-patch kde-dist 
 
-newdepend "opengl? ( virtual/opengl ) ~kde-base/kdebase-${PV}"
+newdepend "opengl? ( virtual/opengl ) >=kde-base/kdebase-${PV}"
 
 DESCRIPTION="${DESCRIPTION}Artwork"
 

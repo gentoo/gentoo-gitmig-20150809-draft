@@ -1,15 +1,15 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons/kdeaddons-3.0.1.20020604.ebuild,v 1.1 2002/06/05 19:14:09 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons/kdeaddons-3.0.1.20020604.ebuild,v 1.2 2002/06/05 20:13:08 danarmak Exp $
 
 inherit kde-patch kde-dist || die
 
 DESCRIPTION="${DESCRIPTION}Addons"
 
 newdepend ">=kde-base/kdebase-${PV}
-	~kde-base/kdenetwork-${PV}
-	~kde-base/kdemultimedia-${PV}
+	>=kde-base/kdenetwork-${PV}
+	>=kde-base/kdemultimedia-${PV}
 	sdl? ( >=media-libs/libsdl-1.2 )"
 
 use sdl && myconf="$myconf --with-sdl --with-sdl-prefix=/usr" || myconf="$myconf --without-sdl --disable-sdltest"
