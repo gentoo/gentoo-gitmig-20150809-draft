@@ -1,9 +1,9 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpgtx/mpgtx-1.3.ebuild,v 1.1 2003/09/08 17:34:34 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpgtx/mpgtx-1.3.ebuild,v 1.2 2003/10/27 09:53:07 aliz Exp $
 
 DESCRIPTION="mpgtx a command line MPEG audio/video/system file toolbox"
-SRC_URI="http://umn.dl.sourceforge.net/sourceforge/mpgtx/${P}.tgz"
+SRC_URI="mirror://sourceforge/mpgtx/${P}.tgz"
 HOMEPAGE="http://mpgtx.sourceforge.net/"
 
 KEYWORDS="~x86"
