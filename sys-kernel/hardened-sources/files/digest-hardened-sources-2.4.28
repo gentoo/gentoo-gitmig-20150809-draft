@@ -1,2 +1,4 @@
 MD5 ac7735000d185bc7778c08288760a8a3 linux-2.4.28.tar.bz2 31064046
 MD5 89087134d26519e7137d7ab621addb3f hardened-patches-2.4-28.1.tar.bz2 528257
+MD5 c8502dbcfa95cbf109bf5476d2f1ac3e hardened-sources-grsec-2.4.28-CAN-2004-0814.patch.gz 21048
+MD5 11e8db635b8230337a73179881cad6d0 hardened-sources-selinux-2.4.28-CAN-2004-0814.patch.gz 21043

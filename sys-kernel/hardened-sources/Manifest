@@ -2,7 +2,7 @@ MD5 480ad33ed1ba9f53128a0afd5ab27ad7 ChangeLog 10807
 MD5 0a473e60c059cb41c96a6bbcbff84769 metadata.xml 459
 MD5 ec13a8435dc6785ca17db91918579f3d hardened-sources-2.4.27-r2.ebuild 1027
 MD5 91d88b3126d4cc0b7cc5a22819808e68 hardened-sources-2.4.27-r3.ebuild 1028
-MD5 672b698d89f6923a6c067098da6882c9 hardened-sources-2.4.28.ebuild 1606
+MD5 d4ecb98afe62804ab5f6aff4d9315a8e hardened-sources-2.4.28.ebuild 1792
 MD5 8850fb5244d9d10736d95a85f3c5b3f1 files/2.4.27-CAN-2004-0394.patch 448
 MD5 d1ccc2047be533c992f67270a150a210 files/2.4.27-cmdline-race.patch 388
 MD5 073eb0c263e55f7f1d72d14c8957f4e2 files/digest-hardened-sources-2.4.27-r2 145
@@ -11,4 +11,4 @@ MD5 376d0153645489845937a4ffd83e761b files/2.4.28-grsec-cmdline-race.patch 352
 MD5 c8985a5695cfda1c35d1b433d62604ce files/2.4.28-selinux-binfmt_a.out.patch 1743
 MD5 98e84c850a16b9cb458be21ae4fb82df files/2.4.28-selinux-cmdline-race.patch 352
 MD5 3cfa2f10ac7a4d62112f84dcb047b050 files/digest-hardened-sources-2.4.27-r3 145
-MD5 5c9dbdd5009ff95e182e906027400436 files/digest-hardened-sources-2.4.28 145
+MD5 8652613a5ac92aa0ad7fdf0cc6c01716 files/digest-hardened-sources-2.4.28 339
