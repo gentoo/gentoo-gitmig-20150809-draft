@@ -1,6 +1,6 @@
-# ChangeLog for homeblutgensgentoo-x86net-ircirssiChangeLog/
+# ChangeLog for net-irc/irssi
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/ChangeLog,v 1.13 2002/12/13 11:00:01 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/ChangeLog,v 1.14 2002/12/17 19:43:20 vapier Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
