@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jess
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jess/ChangeLog,v 1.1 2004/02/14 21:48:05 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jess/ChangeLog,v 1.2 2004/03/24 23:29:16 mholzer Exp $
+
+  25 Mar 2004; Martin Holzer <mholzer@gentoo.org> jess-6.1.6.ebuild:
+  fixing depend. see 45343
 
 *jess-6.1.6 (14 Feb 2004)
 

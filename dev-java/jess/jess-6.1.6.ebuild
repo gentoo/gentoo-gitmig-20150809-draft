@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jess/jess-6.1.6.ebuild,v 1.1 2004/02/14 21:48:05 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jess/jess-6.1.6.ebuild,v 1.2 2004/03/24 23:29:16 mholzer Exp $
 
 inherit java-pkg
 
@@ -14,8 +14,7 @@ SLOT="0"
 KEYWORDS="~x86"
 RESTRICT="fetch"
 IUSE="doc"
-RDEPEND=">=virtual/jre-1.2"
-DEPEND=${RDEPEND}
+DEPEND=">=virtual/jre-1.2"
 
 S=${WORKDIR}/${MY_PN}
 
