@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-0.90_pre1.ebuild,v 1.2 2002/04/26 21:32:27 sandymac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-0.90_pre1.ebuild,v 1.3 2002/04/29 21:39:24 seemant Exp $
 
 # Handle PREversions as well
 MY_PV=${PV/_/}
@@ -218,7 +218,7 @@ src_install() {
 		|| use dga && video="dga" \
 		|| video="x11"
 	) || (
-		use fbdev && video="fbdev" \
+		use fbcon && video="fbdev" \
 		|| use svga && video="svga" \
 		|| use aalib && video="aa"
 	)
