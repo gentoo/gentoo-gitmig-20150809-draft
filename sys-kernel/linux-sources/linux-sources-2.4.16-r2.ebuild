@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-sources/linux-sources-2.4.16-r1.ebuild,v 1.5 2001/12/23 03:47:57 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-sources/linux-sources-2.4.16-r2.ebuild,v 1.1 2001/12/24 17:45:41 drobbins Exp $
 
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
@@ -76,7 +76,10 @@ src_unpack() {
 		tar -xz --no-same-owner -f ${DISTDIR}/MOSIX-${MOSV}.tar.gz MOSIX-${MOSV}/patches.${OKV}
 	fi
 	cd ${S}
-	patchorama $PATCHES
+	# the linux-2.4.16-binutils.patch fixes a compile problem in the kernel (uses binutils incorrectly).
+	# This triggers an error when binutils 2.11.92.0.12.3 is installed.  This particular problem is fixed
+	# in kernel 2.4.17.
+	patchorama ${FILESDIR}/linux-2.4.16-binutils.patch $PATCHES
 	echo "Fixing up a single reject..."
 	#This is a reject related to both low latency and XFS's kdb modifying the same enum.  No biggie.
 	cp ${GFILESDIR}/sysctl.h ${S}/include/linux

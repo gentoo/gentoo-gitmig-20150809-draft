@@ -1,0 +1,10 @@
+--- linux/arch/i386/vmlinux.lds	Mon Dec 24 10:38:51 2001
++++ linux-fixed/arch/i386/vmlinux.lds	Mon Dec 24 10:39:02 2001
+@@ -71,7 +71,6 @@
+ 
+   /* Sections to be discarded */
+   /DISCARD/ : {
+-	*(.text.exit)
+ 	*(.data.exit)
+ 	*(.exitcall.exit)
+ 	}
