@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 430b931d7a6030eebe39830578fbce5d ChangeLog 674
+MD5 e67a1b08230b96533ea90bf673b46ae9 qgo-0.1.3.ebuild 704
+MD5 ab25643f8cb75acf678dd8dc2d42977f qgo-0.2.ebuild 628
+MD5 ea31f1b4f8e8ffba12eae3e14a66c499 ChangeLog 669
 MD5 7be057a9771e6eb03103063d47a366b8 metadata.xml 388
-MD5 1885e54a7874cb88c4511f67ad436976 qgo-0.1.3.ebuild 713
-MD5 baa93969da9bd59d69f6dfae7187cb4f qgo-0.2.ebuild 634
-MD5 ea7f21cf900889be2ff0f258234dab0d files/digest-qgo-0.1.3 62
-MD5 c8d87e22089221af58773e0115d51003 files/0.2-gcc.patch 520
 MD5 5a2efa67c8d2fe8776b7989246d2d620 files/digest-qgo-0.2 60
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFAxb9eHTu7gpaalycRAniGAJ9LVXUu+wliiG3BpJI+5qtkmEp6/wCg0/bv
-wUYNy55R8yMilIx18FutvyU=
-=HLzM
------END PGP SIGNATURE-----
+MD5 c8d87e22089221af58773e0115d51003 files/0.2-gcc.patch 520
+MD5 ea7f21cf900889be2ff0f258234dab0d files/digest-qgo-0.1.3 62
