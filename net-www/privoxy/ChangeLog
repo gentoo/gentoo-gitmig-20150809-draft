@@ -1,11 +1,20 @@
 # ChangeLog for net-www/privoxy
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/privoxy/ChangeLog,v 1.5 2002/12/13 11:00:28 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/privoxy/ChangeLog,v 1.6 2002/12/15 01:13:32 seemant Exp $
+
+*privoxy-3.0.0 (14 Dec 2002)
+
+  14 Dec 2002; Seemant Kulleen <seemant@gentoo.org> privoxy-3.0.0.ebuild
+  files/digest-privoxy-3.0.0 files/privoxy-3.0.0-gentoo.diff
+  files/privoxy.rc6 :
+
+  Version bump and fixes from fridtjof@fbunet.de (Fridtjof Busse) in bug
+  #11835
+
+*privoxy-2.9.14_beta (07 Jul 2002)
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
-*privoxy-2.9.14_beta (07 Jul 2002)
-
   29 Aug 2002; Seemant Kulleen <seemant@gentoo.org> privoxy-2.9.14_beta :
 
   Cleaned up ebuild slightly, and added a virtual/textbrowser dependency,

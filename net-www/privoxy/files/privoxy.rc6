@@ -8,7 +8,7 @@ depend() {
 
 start() {
 	ebegin "Starting privoxy"
-	start-stop-daemon --start --quiet --exec /usr/sbin/privoxy -- /etc/privoxy/config &
+	start-stop-daemon --start --quiet --exec /usr/sbin/privoxy -- /etc/privoxy/config --user privoxy.privoxy &
 	eend $?
 }
 
