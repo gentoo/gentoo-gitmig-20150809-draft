@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.0-r12.ebuild,v 1.14 2002/08/14 12:00:14 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.0-r12.ebuild,v 1.15 2002/09/01 00:12:47 azarah Exp $
 
 inherit flag-o-matic
 
@@ -296,7 +296,16 @@ pkg_postinst() {
 	find ${ROOT}/usr/X11R6/lib/X11/fonts/* -type d -maxdepth 1 \
 		-exec ${ROOT}/usr/X11R6/bin/mkfontdir {} ';'
 
-	#switch to the xfree implementation
+	# make sure all the Compose files are present
+	for x in $(find ${ROOT}/usr/X11R6/lib/X11/locale/ -mindepth 1 -type d)
+	do
+		if [ ! -f ${x}/Compose ]
+		then
+			touch ${x}/Compose
+		fi
+	done
+
+	# switch to the xfree implementation
 	if [ "${ROOT}" = "/" ]
 	then
 		/usr/sbin/opengl-update xfree
