@@ -1,0 +1,20 @@
+--- kio/kio/job.cpp	1 Oct 2004 20:29:04 -0000	1.397.2.1
++++ kio/kio/job.cpp	8 Dec 2004 01:08:15 -0000	1.397.2.8
+@@ -3115,12 +3119,14 @@ void CopyJob::copyNextFile()
+                        if ( f.open( IO_ReadWrite ) )
+                        {
+                            f.close();
+                            KSimpleConfig config( path );
+                            config.setDesktopGroup();
+-                           config.writePathEntry( QString::fromLatin1("URL"), (*it).uSource.url() );
+-                           config.writeEntry( QString::fromLatin1("Name"), (*it).uSource.url() );
++                           KURL url = (*it).uSource;
++                           url.setPass( "" );
++                           config.writePathEntry( QString::fromLatin1("URL"), url.url() );
++                           config.writeEntry( QString::fromLatin1("Name"), url.url() );
+                            config.writeEntry( QString::fromLatin1("Type"), QString::fromLatin1("Link") );
+                            QString protocol = (*it).uSource.protocol();
+                            if ( protocol == QString::fromLatin1("ftp") )
+                                config.writeEntry( QString::fromLatin1("Icon"), QString::fromLatin1("ftp") );
+                            else if ( protocol == QString::fromLatin1("http") )
+
