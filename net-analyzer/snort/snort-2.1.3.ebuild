@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.1.3.ebuild,v 1.4 2004/08/16 10:57:42 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.1.3.ebuild,v 1.5 2004/08/16 11:02:54 eldad Exp $
 
 inherit eutils gnuconfig
 
@@ -55,7 +55,7 @@ src_unpack() {
 
 	#is this needed in 2.0? -Method
 	#epatch ${FILESDIR}/${P}-configure.patch
-	use flexresp && epatch ${FILESDIR}/${PV}-libnet-1.0.patch
+	use flexresp && epatch ${FILESDIR}/2.1.2-libnet-1.0.patch
 
 	epatch ${FILESDIR}/${P}-gcc3.patch
 
