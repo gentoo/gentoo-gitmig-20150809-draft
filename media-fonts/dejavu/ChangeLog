@@ -1,0 +1,11 @@
+# ChangeLog for media-fonts/dejavu
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/dejavu/ChangeLog,v 1.1 2004/10/17 07:16:22 usata Exp $
+
+*dejavu-1.4 (17 Oct 2004)
+
+  17 Oct 2004; Mamoru KOMACHI <usata@gentoo.org> +metadata.xml,
+  +dejavu-1.4.ebuild:
+  Initial import. Ebuild submitted by Vaclov Slavik
+  <vaclav.slavik@matfyz.cz>, closing bug #55950.
+
