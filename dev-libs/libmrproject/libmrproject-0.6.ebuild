@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmrproject/libmrproject-0.6.ebuild,v 1.1 2002/08/18 23:13:23 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmrproject/libmrproject-0.6.ebuild,v 1.2 2002/08/19 00:21:43 spider Exp $
 
 
 S=${WORKDIR}/${P}
@@ -32,7 +32,6 @@ src_compile() {
 
 	econf \
 		--disable-maintainer-mode \
-		--enable-debug \
 		${myconf} || die
 	emake || die
 }
