@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-sapi.eclass,v 1.11 2004/03/10 07:51:19 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-sapi.eclass,v 1.12 2004/03/28 21:02:06 stuart Exp $
 # Author: Robin H. Johnson <robbat2@gentoo.org>
 
 inherit eutils flag-o-matic
@@ -38,7 +38,7 @@ fi
 # Where we work
 S=${WORKDIR}/${MY_P}
 
-IUSE="${IUSE} X crypt curl firebird flash freetds gd gd-external gdbm imap informix ipv6 java jpeg ldap mcal memlimit mysql nls oci8 odbc pam pdflib png postgres qt snmp spell ssl tiff truetype xml2 yaz fdftk"
+IUSE="${IUSE} X crypt curl firebird flash freetds gd gd-external gdbm imap informix ipv6 java jpeg ldap mcal memlimit mysql nls oci8 odbc pam pdflib png postgres qt snmp spell ssl tiff truetype xml2 yaz fdftk doc"
 
 # berkdb stuff is complicated
 # we need db-1.* for ndbm
@@ -52,6 +52,9 @@ RDEPEND="${RDEPEND} berkdb? ( =sys-libs/db-1*
 
 # Everything is in this list is dynamically linked agaist or needed at runtime
 # in some other way
+#
+# 2004/03/28 - stuart - added dependency on the php manual snapshot
+
 RDEPEND="${RDEPEND}
    >=sys-libs/cracklib-2.7-r7
    app-arch/bzip2
@@ -89,7 +92,8 @@ RDEPEND="${RDEPEND}
    sys-libs/zlib 
    virtual/mta
    sys-apps/file
-   yaz? ( dev-libs/yaz )"
+   yaz? ( dev-libs/yaz )
+   doc? ( app-doc/php-docs-200403 )"
 
 
 # USE structure doesn't support ~x86
