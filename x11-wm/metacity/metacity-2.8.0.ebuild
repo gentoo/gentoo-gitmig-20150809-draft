@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/metacity-2.8.0.ebuild,v 1.2 2004/03/30 01:32:53 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/metacity-2.8.0.ebuild,v 1.3 2004/03/30 22:37:31 foser Exp $
 
-inherit gnome2
+inherit gnome2 eutils
 
 DESCRIPTION="Gnome default windowmanager"
 HOMEPAGE="http://www.gnome.org/"
@@ -25,15 +25,23 @@ RDEPEND="virtual/x11
 DEPEND="${RDEPEND}
 	sys-devel/gettext
 	>=dev-util/pkgconfig-0.12.0
-	>=dev-util/intltool-0.29"
+	>=dev-util/intltool-0.29
+	sys-devel/autoconf"
+#autoconf for the config patch only
 
 DOCS="AUTHORS COPYING ChangeLog HACKING INSTALL NEWS README *txt"
 
 G2CONF="${G2CONF} $(use_enable xinerama)"
 
-src_unpack(){
+src_unpack() {
 
 	unpack ${A}
+	cd ${S}
+
+	# fix the xinerama configure stuff (#46291)
+	epatch ${FILESDIR}/${P}-xinerama_config_test.patch
+	WANT_AUTOCONF=2.5 autoconf || die
+
 #We can remove that one eventually
 	# causes ICE on ppc w/ gcc (still)
 #	use ppc && (
@@ -42,5 +50,6 @@ src_unpack(){
 #			patch -p0 < ${FILESDIR}/metacity-2.4.3-ppc-gcc3.2.diff || die "patch failed"
 #		fi
 #	)
+
 
 }
