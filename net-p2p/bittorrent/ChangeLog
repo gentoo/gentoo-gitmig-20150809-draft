@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/bittorrent 
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent/ChangeLog,v 1.8 2003/05/08 07:26:29 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent/ChangeLog,v 1.9 2003/05/15 15:48:11 taviso Exp $
+
+  15 May 2003; Tavis Ormandy <taviso@gentoo.org> bittorrent-3.2.1b-r2.ebuild:
+  marking ~alpha
 
 *bittorrent-3.2.1b-r2 (08 May 2003)
 
