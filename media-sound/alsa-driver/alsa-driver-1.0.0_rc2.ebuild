@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.0_rc2.ebuild,v 1.3 2003/12/26 16:42:05 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.0_rc2.ebuild,v 1.4 2004/02/08 09:53:07 eradicator Exp $
 
 DESCRIPTION="Advanced Linux Sound Architecture kernel modules"
 HOMEPAGE="http://www.alsa-project.org/"
@@ -43,6 +43,7 @@ src_unpack() {
 	# which we REALLY dont want.
 	# This patch stops that
 	epatch ${FILESDIR}/makefile.patch || die "Makefile patch failed"
+	epatch ${FILESDIR}/${PN}-0.9.8-au-fix.patch
 }
 
 
