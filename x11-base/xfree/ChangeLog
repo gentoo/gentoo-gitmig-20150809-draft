@@ -1,6 +1,11 @@
 # ChangeLog for x11-base/xfree
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.218 2003/10/18 00:40:15 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.219 2003/10/18 08:51:55 spyderous Exp $
+
+  18 Oct 2003; Donnie Berkholz <spyderous@gentoo.org>; xfree-4.3.0-r3.ebuild:
+  New PATCH_VER 2.1.17. 0803_all_4.3.0-xkb-broken-capslock-fix-CVS11006-v2.patch
+  to attempt closing bug #30821, and cleaner 0119_all_4.3.0-exports-lib-v2.patch
+  from splite on bug #23581.
 
   17 Oct 2003; Donnie Berkholz <spyderous@gentoo.org>; xfree-4.3.0-r2.ebuild:
   Adding dependency on >=sys-devel/patch-2.5.9, as some patches break without it.
