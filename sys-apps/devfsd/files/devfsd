@@ -1,5 +1,5 @@
 #!/bin/sh
-#RCUPDATE:boot:06:This line is required for script management
+#RCUPDATE:boot:04:This line is required for script management
 
 
 . /etc/rc.d/config/basic
@@ -8,6 +8,6 @@
 # Test if we use devfs and start devfsd
 mount --bind /dev /dev-state
 mount -t devfs none /dev
-//sbin/devfsd /dev
+/sbin/devfsd /dev
 
   
