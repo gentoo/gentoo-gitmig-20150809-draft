@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040602.ebuild,v 1.11 2004/06/04 18:20:40 iluxa Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040602.ebuild,v 1.12 2004/06/05 01:47:46 iluxa Exp $
 
 IUSE="nls pic build nptl erandom hardened makecheck multilib"
 
@@ -65,6 +65,12 @@ PROVIDE="virtual/glibc"
 
 # theoretical x-compiler support
 [ -z "${CCHOST}" ] && CCHOST="${CHOST}"
+
+# We need to be able to set alternative headers for
+# compiling for non-native platform
+# Will also come useful for testing kernel-headers without screwing up
+# whole system
+[ -z "${ALT_HEADERS}" ] && ALT_HEADERS="/usr/include"
 
 setup_flags() {
 	# -freorder-blocks for all but ia64 s390 s390x
@@ -256,7 +262,7 @@ src_unpack() {
 	# This is due to PaX 'exec-protecting' the stack, and ld.so then trying
 	# to make the stack executable due to some libraries not containing the
 	# PT_GNU_STACK section.  Bug #32960.  <azarah@gentoo.org> (12 Nov 2003).
-	cd ${S}; epatch ${FILESDIR}/2.3.3/${PN}-2.3.3-dl_execstack-PaX-support.patch
+	use mips || ( cd ${S}; epatch ${FILESDIR}/2.3.3/${PN}-2.3.3-dl_execstack-PaX-support.patch )
 
 	# Program header support for PaX.
 	cd ${S}; epatch ${FILESDIR}/2.3.3/${PN}-2.3.3_pre20040117-pt_pax.diff
@@ -289,6 +295,7 @@ src_unpack() {
 		epatch ${FILESDIR}/2.3.3/mips-syscall.h.diff
 		epatch ${FILESDIR}/2.3.3/semtimedop.diff
 		epatch ${FILESDIR}/2.3.3/mips-sysify.diff
+		epatch ${FILESDIR}/2.3.4/mips-sysdep-cancel.diff
 		# Need to install into /lib for n32-only userland for now.
 		# Propper solution is to make all userland /lib{32|64}-aware.
 		use multilib || epatch ${FILESDIR}/2.3.3/mips-nolib3264.diff
@@ -379,14 +386,14 @@ src_compile() {
 		--disable-profile \
 		--without-gd \
 		--without-cvs \
-		--with-headers=/usr/include \
+		--with-headers=${ALT_HEADERS} \
 		--prefix=/usr \
 		--mandir=/usr/share/man \
 		--infodir=/usr/share/info \
 		--libexecdir=/usr/lib/misc \
 		${myconf} || die
 
-	make || die
+	make PARALLELMFLAGS="${MAKEOPTS}" || die
 }
 
 src_install() {

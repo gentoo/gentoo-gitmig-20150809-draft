@@ -1,6 +1,14 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.171 2004/06/04 18:15:25 iluxa Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.172 2004/06/05 01:47:46 iluxa Exp $
+
+  04 Jun 2004; Ilya A. Volynets-Evenbach <iluxa@gentoo.org>
+  +files/2.3.4/mips-sysdep-cancel.diff, glibc-2.3.4.20040602.ebuild:
+  Finalize n32 fixes (n64 is yet to be tested, but should be
+  piece of cake now)
+  Add ALT_HEADERS variable, which will allows us to point glibc
+  to something other then /usr/lib. This will be needed for
+  x-compilation support.
 
   04 Jun 2004; Travis Tilley <lv@gentoo.org> glibc-2.3.3_pre20040529.ebuild:
   stable on amd64
