@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/vice-1.16.ebuild,v 1.1 2005/02/12 05:44:12 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/vice-1.16.ebuild,v 1.2 2005/02/14 09:17:52 mr_bones_ Exp $
 
 inherit games
 
@@ -19,7 +19,6 @@ DEPEND="virtual/libc
 	media-libs/libpng
 	sys-libs/zlib
 	arts? ( kde-base/arts )
-	ffmpeg? ( media-video/ffmpeg )
 	gnome? ( gnome-base/libgnomeui )
 	readline? ( sys-libs/readline )
 	sdl? ( media-libs/libsdl )
@@ -27,6 +26,8 @@ DEPEND="virtual/libc
 	Xaw3d? ( x11-libs/Xaw3d )"
 
 src_compile() {
+	# disabled ffmpeg support since ffmpeg isn't slotted and later
+	# versions aren't compatible with the vice code (bug #81795)
 	egamesconf \
 		--disable-dependency-tracking \
 		--enable-fullscreen \
@@ -35,7 +36,7 @@ src_compile() {
 		--enable-realdevice \
 		--with-resid \
 		--without-midas \
-		$(use_enable ffmpeg) \
+		--disable-ffmpeg \
 		$(use_enable gnome gnomeui) \
 		$(use_enable nls) \
 		$(use_with X x) \

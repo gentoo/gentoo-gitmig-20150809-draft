@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/vice
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/ChangeLog,v 1.21 2005/02/12 05:44:12 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/ChangeLog,v 1.22 2005/02/14 09:17:52 mr_bones_ Exp $
+
+  14 Feb 2005; Michael Sterrett <mr_bones_@gentoo.org> vice-1.16.ebuild:
+  disabled ffmpeg support since ffmpeg isn't slotted and later versions aren't
+  compatible with the vice code (bug #81795)
 
 *vice-1.16 (12 Feb 2005)
 
