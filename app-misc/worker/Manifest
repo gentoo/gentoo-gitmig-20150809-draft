@@ -1,6 +1,4 @@
-MD5 c47c239582327a2793f0badedb020aef worker-2.7.0.ebuild 660
-MD5 d9db90ca74bbed771017b9420ca2dc75 ChangeLog 887
+MD5 fb6ef73b2558eec70b2eec12a9df85d1 ChangeLog 822
 MD5 fe4d95871dac9e7b60276474dd915445 metadata.xml 612
 MD5 b3f8e3c0f9840c7074c111bc00ae0bca worker-2.8.1.ebuild 786
-MD5 7f85a2467c1b930bbba8a651aafad934 files/digest-worker-2.7.0 65
 MD5 1242e7f0d5f4ba594ba5c0a19a5885fa files/digest-worker-2.8.1 65
