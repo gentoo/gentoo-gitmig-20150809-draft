@@ -1,0 +1,11 @@
+# ChangeLog for app-i18n/prime
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/prime/ChangeLog,v 1.1 2003/12/05 11:52:30 usata Exp $
+
+*prime-0.6.2 (05 Dec 2003)
+
+  05 Dec 2003; Mamoru KOMACHI <usata@gentoo.org> metadata.xml,
+  prime-0.6.2.ebuild:
+  Initial import. Ebuild submitted by Hattya <hattya@inter7.jp>
+  Closing bug #31498
+
