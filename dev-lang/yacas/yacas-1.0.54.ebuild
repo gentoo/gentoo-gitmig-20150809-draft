@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/yacas/yacas-1.0.54.ebuild,v 1.2 2003/04/23 15:13:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/yacas/yacas-1.0.54.ebuild,v 1.3 2003/06/10 18:29:31 msterret Exp $
 
 DESCRIPTION="very powerful general purpose Computer Algebra System"
 HOMEPAGE="http://yacas.sourceforge.net/"
@@ -10,7 +10,8 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~x86"
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/glibc
+	>=sys-apps/sed-4"
 
 src_compile() {
 	econf || die "./configure failed"
