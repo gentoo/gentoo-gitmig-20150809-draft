@@ -1,6 +1,11 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.231 2004/12/06 23:23:19 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.232 2004/12/06 23:27:20 spyderous Exp $
+
+  06 Dec 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  xorg-x11-6.8.0-r4.ebuild:
+  Fix an xkb symlink that was hardcoded lib rather than using get_libdir().
+  Reported by Georgi Georgiev <chutz@gg3.net>.
 
   06 Dec 2004; Donnie Berkholz <spyderous@gentoo.org>;
   xorg-x11-6.8.0-r4.ebuild:

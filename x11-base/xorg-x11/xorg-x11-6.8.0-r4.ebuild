@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0-r4.ebuild,v 1.20 2004/12/06 23:23:19 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0-r4.ebuild,v 1.21 2004/12/06 23:27:20 spyderous Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -1075,8 +1075,9 @@ setup_standard_symlinks() {
 	dosym ../X11R6/include/DPS /usr/include/DPS
 	dosym ../X11R6/include/GL /usr/include/GL
 	dosym ../../usr/$(get_libdir)/xkb /etc/X11/xkb
-	# Added one to reflect xkb move from /usr/X11R6/lib/X11/xkb to /usr/lib/xkb
-	dosym ../../lib/xkb /usr/X11R6/lib/X11/xkb
+	# Added one to reflect xkb move from /usr/X11R6/libdir/X11/xkb
+	# to /usr/libdir/xkb
+	dosym ../../$(get_libdir)/xkb /usr/X11R6/$(get_libdir)/X11/xkb
 }
 
 compose_files_setup() {
@@ -1328,7 +1329,7 @@ migrate_usr_x11r6_lib() {
 		&& ln -s ../$(get_libdir) ${ROOT}usr/X11R6/$(get_libdir)
 
 	# We also need to create a symlink from /usr/X11R6/libdir/X11/xkb
-	# to /usr/lib/xkb, so libxklavier and xkb stuff is happy
+	# to /usr/libdir/xkb, so libxklavier and xkb stuff is happy
 
 	einfo "Migrating from /usr/X11R6/$(get_libdir)/X11/xkb to /usr/$(get_libdir)/xkb..."
 	# Make the new dir if it doesn't already exist
