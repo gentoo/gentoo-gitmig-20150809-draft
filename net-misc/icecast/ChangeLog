@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/icecast
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/icecast/ChangeLog,v 1.14 2003/12/11 21:40:34 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/icecast/ChangeLog,v 1.15 2003/12/29 12:19:21 mholzer Exp $
+
+*icecast-2.0_beta3 (29 Dec 2003)
+
+  29 Dec 2003; Martin Holzer <mholzer@gentoo.org> icecast-2.0_beta3.ebuild:
+  Version bumped. Closes 36203.
 
 *icecast-2.0_beta2 (11 Dec 2003)
 
