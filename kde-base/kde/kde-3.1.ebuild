@@ -1,8 +1,8 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde/kde-3.1.ebuild,v 1.3 2002/12/04 23:37:50 doctomoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde/kde-3.1.ebuild,v 1.4 2003/02/01 18:39:54 jmorgan Exp $
 
-KEYWORDS="x86 ppc"
+KEYWORDS="x86 ppc ~sparc"
 DESCRIPTION="KDE 3.1 - merge this to pull in all non-developer kde-base/* packages"
 HOMEPAGE="http://www.kde.org/"
 # removed: kdebindings, kdesdk, kdoc since these are developer-only packages
