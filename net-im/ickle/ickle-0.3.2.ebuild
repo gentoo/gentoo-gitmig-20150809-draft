@@ -1,10 +1,9 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ickle/ickle-0.3.2.ebuild,v 1.6 2004/06/24 22:53:41 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ickle/ickle-0.3.2.ebuild,v 1.7 2004/07/15 00:13:52 agriffis Exp $
 
 IUSE="spell gnome"
 
-S=${WORKDIR}/${P}
 DESCRIPTION="ICQ 200x compatible ICQ client. limited featureset."
 SRC_URI="mirror://sourceforge/ickle/${P}.tar.gz"
 HOMEPAGE="http://ickle.sf.net"
