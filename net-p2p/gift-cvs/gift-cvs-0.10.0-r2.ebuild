@@ -1,16 +1,16 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift-cvs/gift-cvs-0.12.0.ebuild,v 1.3 2003/06/10 02:24:28 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift-cvs/gift-cvs-0.10.0-r2.ebuild,v 1.1 2003/06/10 18:53:10 lostlogic Exp $
 
 DESCRIPTION="A OpenFT, Gnutella and FastTrack p2p network client"
 HOMEPAGE="http://gift.sourceforge.net"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="-x86 -sparc -ppc"
+KEYWORDS="~x86 ~sparc ~ppc"
 
 DEPENDS="virtual/glibc
-		>=sys-apps/sed-4
-		>=sys-libs/zlib-1.1.4"
+	>=sys-apps/sed-4
+	>=sys-libs/zlib-1.1.4"
 
 inherit cvs debug flag-o-matic
 
@@ -55,12 +55,8 @@ src_compile() {
 
 	# Compile the FastTrack plugin. The developers of this thing sure as hell don't like automated installs.
 	cd ${S}/FastTrack
-	sed -i -e "s:\$(HOME)/.giFT:${D}/etc/giFT:" \
-	       -e "s:/usr/local/lib/giFT:${D}/usr/lib/giFT:" \
-	       -e "s:LIBGIFT_CFLAGS =:#LIBGIFT_CFLAGS =:" \
-	       -e "s:LIBGIFT_LDFLAGS =:#LIBGIFT_LDFLAGS =:" Makefile
-	sed -i -e "s:#include <libgift/proto/:#include <../plugin/:" \
-	       -e "s:#include <libgift/:#include <../lib/:" *.c *.h
+	cp /usr/share/libtool/ltmain.sh .
+	./autogen.sh --prefix=/usr --host=${CHOST} || die "FastTrack configure failed"
 	emake || die "FastTrack plugin failed to build"
 
 }
@@ -76,7 +72,7 @@ src_install() {
 		 libgiftincdir=${D}/usr/include/libgift || die "Install failed"
 	# Install the FastTrack plugin.
 	cd ${S}/FastTrack
-	einstall || "FastTrack plugin failed to install"
+	make DESTDIR="${D}" install || "FastTrack plugin failed to install"
 
 	# Fix the giFT-setup executable.
 	cd ${D}/usr/bin
@@ -89,10 +85,10 @@ pkg_postinst() {
 	einfo "user account to create the giFT configuration files."
 	echo
 	einfo "To run giFT with FastTrack support, run:"
-	einfo "giFT -p /usr/lib/giFT/FastTrack.so"
+	einfo "giFT -p /usr/lib/giFT/libFastTrack.so"
 	echo
 	einfo "Alternatively you can add the following line to"
 	einfo "your ~/.giFT/gift.conf configuration file:"
-	einfo "plugins = OpenFT:/usr/lib/giFT/FastTrack.so"
+	einfo "plugins = OpenFT:/usr/lib/giFT/libFastTrack.so"
 }
 
