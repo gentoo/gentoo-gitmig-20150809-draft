@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/shadow
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.39 2003/10/29 03:14:07 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.40 2003/11/18 01:08:15 method Exp $
+
+*shadow-4.0.3-r8 (17 Nov 2003)
+
+  17 Nov 2003; Joshua Brindle <method@gentoo.org> shadow-4.0.3-r8.ebuild:
+  added optional pam support
 
   28 Oct 2003; Chris PeBenito <pebenito@gentoo.org> shadow-4.0.3-r7.ebuild,
   files/shadow-4.0.3-selinux.diff:
