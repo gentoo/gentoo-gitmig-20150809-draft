@@ -1,6 +1,6 @@
-# ChangeLog for app-games/sex
+# ChangeLog for games-misc/sex
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/sex/ChangeLog,v 1.1 2003/09/10 18:14:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/sex/ChangeLog,v 1.2 2003/09/10 20:25:07 vapier Exp $
 
   09 Jun 2003; Brad Laue <brad@gentoo.org> sex-1.0.ebuild:
   Mark stable for x86
