@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 07ea0b8ab0cfec3fd71cb400adfea4f6 ChangeLog 474
+MD5 ea0876432d4be91652ed231e577702ff plruby-0.4.2.ebuild 573
+MD5 c58463b6c2e890df38cd388ab22750df ChangeLog 572
 MD5 f8d3d207746da2a3cd14dcaab8daab76 metadata.xml 163
-MD5 bfd2a20b103da6565e681e0c8a8437d3 plruby-0.4.2.ebuild 574
 MD5 dd0d972d596a8d7143b35e007d21091e files/digest-plruby-0.4.2 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBU2NBHTu7gpaalycRAtriAJoCxGU4ANfMC7XB3qFf7AceSU18ugCg5NEJ
-HM2dgaUHGo5Q2vJvC9Ont3s=
-=wR+t
------END PGP SIGNATURE-----
