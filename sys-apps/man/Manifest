@@ -1,8 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 3bd65831671771511c11d46616c6a1ea ChangeLog 8769
-MD5 97d89ba8d19a4a4dc203fcc9e7309367 man-1.5m-r2.ebuild 4056
+MD5 7c642f4865fe3906c99b88c4a5919f5c ChangeLog 8893
+MD5 afc5f4e97f7afcef3bfda7f447a07758 man-1.5m-r2.ebuild 4086
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 7e4bd368680d1c95bdaa6c6d5ee556f1 files/man-1.5m-locale-order.patch 454
 MD5 a1fe892ffb27e5e044ed342b611d2db1 files/makewhatis.cron 126
@@ -16,10 +13,3 @@ MD5 cbbd4de51a8359a1ae81f46f2dad6bd8 files/man-1.5m-search-order.patch 489
 MD5 cb6f4195874e0c7bd39bc6ccc26611b7 files/man-1.5m-security.patch 781
 MD5 fe9f5db8b8b6feaaac25563cb294c901 files/man-1.5m-util_c-segfault.patch 2276
 MD5 de02d99d60fb0e923c37e9130989b324 files/man-1.5m-wrong-quotes-v2.patch 328
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBY3l7HTu7gpaalycRApuNAJ9ND8HpSf3j5YLHrRgVIJsPQmzQUwCg0q0K
-pbTGny2VqHyC2g0/6l1ax6M=
-=csn/
------END PGP SIGNATURE-----

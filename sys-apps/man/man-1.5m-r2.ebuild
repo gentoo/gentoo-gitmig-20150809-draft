@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/man-1.5m-r2.ebuild,v 1.2 2004/10/06 04:24:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/man-1.5m-r2.ebuild,v 1.3 2004/11/08 06:15:31 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -85,10 +85,9 @@ src_unpack() {
 
 src_compile() {
 	local myconf=
-
 	use nls && myconf="+lang all" || myconf="+lang none"
-
-	./configure -confdir=/etc \
+	./configure \
+		-confdir=/etc \
 		+sgid +fhs \
 		${myconf} || die "configure failed"
 
@@ -98,6 +97,7 @@ src_compile() {
 src_install() {
 	dodir /usr/{bin,sbin}
 	make PREFIX="${D}" install || die "make install failed"
+	dosym man /usr/bin/manpath
 
 	insinto /etc
 	doins src/man.conf
