@@ -1,7 +1,11 @@
 # ChangeLog for app-editors/vi
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vi/ChangeLog,v 1.13 2003/05/14 01:39:22 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vi/ChangeLog,v 1.14 2003/05/29 17:03:13 agriffis Exp $
 
+  29 May 2003; Aron Griffis <agriffis@gentoo.org> vi-3.7-r3.ebuild:
+  Set WARN='' on the make command-line to fix bug 21903.  This is a
+  compile-time error, not a run-time error, so no revision bump required.
+  Also mark stable on alpha.
 
 *vi-3.7-r3 (05 Sep 2002)
 
