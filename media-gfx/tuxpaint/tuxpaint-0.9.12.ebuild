@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/tuxpaint/tuxpaint-0.9.12.ebuild,v 1.1 2003/10/31 12:35:35 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/tuxpaint/tuxpaint-0.9.12.ebuild,v 1.2 2003/10/31 13:56:14 leonardop Exp $
 
 DESCRIPTION="Drawing program designed for young children (kids ages 3 and up)"
 HOMEPAGE="http://www.newbreedsoftware.com/tuxpaint/"
@@ -43,7 +43,8 @@ src_compile() {
 		sed -i "s:^KDE_ICON_PREFIX=.*:KDE_ICON_PREFIX=:" Makefile
 	fi
 
-	emake || die
+	# emake can cause some grief at this point..
+	make || die
 }
 
 src_install () {
@@ -51,6 +52,11 @@ src_install () {
 	sed -i "s:^  CONFDIR=.*:  CONFDIR=${D}etc/tuxpaint:" Makefile
 
 	dodir /usr/bin
+	use kde && dodir /usr/kde/3.1/share/applnk/Graphics \
+		/usr/kde/3.1/share/icons/hicolor/48x48/apps \
+		/usr/kde/3.1/share/icons/hicolor/32x32/apps \
+		/usr/kde/3.1/share/icons/hicolor/16x16/apps
+
 	make install || die
 
 	rm docs/INSTALL.txt
