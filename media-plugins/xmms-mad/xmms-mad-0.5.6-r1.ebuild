@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-mad/xmms-mad-0.5.6-r1.ebuild,v 1.13 2004/11/10 01:30:03 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-mad/xmms-mad-0.5.6-r1.ebuild,v 1.14 2004/11/12 11:38:32 eradicator Exp $
 
 IUSE=""
 
@@ -15,6 +15,7 @@ SLOT="0"
 KEYWORDS="amd64 arm hppa ia64 ~ppc ppc64 sparc x86"
 
 RDEPEND="media-sound/xmms
+	 media-libs/libid3tag
 	 media-libs/libmad"
 
 DEPEND="${RDEPEND}

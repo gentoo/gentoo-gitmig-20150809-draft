@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/xmms-mad
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-mad/ChangeLog,v 1.27 2004/11/10 01:30:03 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-mad/ChangeLog,v 1.28 2004/11/12 11:38:32 eradicator Exp $
+
+  12 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  xmms-mad-0.5.6-r1.ebuild:
+  Added media-libs/libid3tag to RDEPEND to close bug #70698.
 
   09 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org>
   -xmms-mad-0.5.6-r2.ebuild:
