@@ -1,6 +1,7 @@
 # ChangeLog for net-p2p/bittorrent-mxs
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent-mxs/ChangeLog,v 1.2 2003/08/11 13:58:35 luke-jr Exp $
+# Copyright 2000-2003 Gentoo Technologies, Inc. and Luke-Jr
+# Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent-mxs/ChangeLog,v 1.3 2003/08/21 13:41:46 luke-jr Exp $
 
 *bittorrent-mxs-3.2.1b (10 Aug 2003)
 
