@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/xtux/xtux-20030306.ebuild,v 1.8 2004/08/30 23:39:58 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/xtux/xtux-20030306.ebuild,v 1.9 2005/02/18 02:08:33 mr_bones_ Exp $
 
 inherit games
 
@@ -10,28 +10,30 @@ SRC_URI="mirror://sourceforge/xtux/xtux-src-${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 amd64 ~ppc"
+KEYWORDS="amd64 ~ppc x86"
 IUSE=""
 
-RDEPEND="virtual/x11"
-DEPEND="${RDEPEND}
-	>=sys-apps/sed-4"
+DEPEND="virtual/x11"
 
-S="${WORKDIR}/${PN}"
+S=${WORKDIR}/${PN}
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	sed -i \
+		-e "s:-g -Wall -O2:${CFLAGS}:" \
+		src/{client,common,server}/Makefile \
+		|| die "sed failed"
+}
 
 src_compile() {
-	for f in src/{client,common,server}/Makefile ; do
-		sed -i \
-			-e "s:-g -Wall -O2:${CFLAGS}:" ${f} \
-				|| die "sed ${F} failed"
-	done
 	emake DATADIR="${GAMES_DATADIR}/xtux/data" || die "emake failed"
 }
 
 src_install () {
-	dogamesbin xtux tux_serv
-	dodir ${GAMES_DATADIR}/xtux
-	cp -r data ${D}/${GAMES_DATADIR}/xtux/
+	dogamesbin xtux tux_serv || die "dogamesbin failed"
+	dodir "${GAMES_DATADIR}/xtux"
+	cp -r data "${D}/${GAMES_DATADIR}/xtux/" || die "cp failed"
 	dodoc AUTHORS CHANGELOG README README.GGZ doc/*
 	prepgamesdirs
 }
