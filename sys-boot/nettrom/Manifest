@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 7f9452c684d6c4e11e863da6d606a5e8 ChangeLog 531
-MD5 9329beebe3a45bf9c4d4b56dee4c1753 nettrom-2.3.3.ebuild 549
 MD5 8ef75eba39772bdd1a8facc7815dbebb metadata.xml 161
+MD5 94e560222ecb5ceb36ff10b48d76fed4 nettrom-2.3.3.ebuild 577
 MD5 bc2c56b21ce5b702fd2a7031559ecb1f files/digest-nettrom-2.3.3 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBJtZqHTu7gpaalycRAg7dAKC2qZSLP61hCYBgWK5Qfwne2zwuEACdFSub
+q5QOJTeizb50Ivy9WUZx6z0=
+=RVbv
+-----END PGP SIGNATURE-----
