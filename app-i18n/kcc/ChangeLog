@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/kcc
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/kcc/ChangeLog,v 1.3 2003/06/12 20:13:51 msterret Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/kcc/ChangeLog,v 1.4 2004/01/07 09:46:07 usata Exp $
+
+  07 Jan 2004; <usata@gentoo.org> kcc-1.0.ebuild, files/kcc-gcc3-gentoo.diff,
+  files/kcc-1.0/gentoo.diff:
+  Fixed compilation when using gcc-3.3.x, closing bug #34936
 
   12 Jun 2003; <msterret@gentoo.org> kcc-1.0.ebuild:
   add Header
