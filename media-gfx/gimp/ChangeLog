@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/gimp
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.64 2004/01/14 03:54:56 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.65 2004/01/14 18:34:08 gustavoz Exp $
+
+  14 Jan 2004; <gustavoz@gentoo.org> gimp-1.2.5.ebuild:
+  stable on hppa
 
   13 Jan 2004; Jon Portnoy <avenj@gentoo.org> gimp-1.2.5.ebuild :
   Stable on AMD64.
