@@ -1,0 +1,17 @@
+# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/files/unrealircd.confd,v 1.1 2003/02/01 04:47:09 vapier Exp $
+
+# user to run unrealircd as
+UNREALIRCD_USER="UserBah"
+
+# extra options to pass to unrealircd ...
+# useful if you want to specify conf files other
+# than the default
+#
+# [-f config]
+# [-h servername]
+# [-p portnumber]
+# [-x loglevel]
+# [-t] (to enable debug output)
+UNREALIRCD_OPTS=""
