@@ -1,8 +1,11 @@
 # ChangeLog for app-admin/gentoolkit
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/ChangeLog,v 1.69 2003/03/21 12:37:17 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/ChangeLog,v 1.70 2003/03/21 14:45:30 agriffis Exp $
 
 *gentoolkit-0.1.19-r3 (12 Mar 2003)
+
+  21 Mar 2003; Aron Griffis <agriffis@gentoo.org> files/scripts/echangelog:
+  Disallow root as the echangelog user
 
   21 Mar 2003; Martin Holzer <mholzer@gentoo.org> files/scripts/qpkg:
   Fixed type in qpkg. Closes #17851.

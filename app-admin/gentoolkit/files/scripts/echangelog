@@ -97,6 +97,8 @@ $input =~ s/^/  /gm;        # add indentation
 # Prepend the user info to the input
 $user = $ENV{'ECHANGELOG_USER'} ||
         sprintf("%s <%s\@gentoo.org>", (getpwuid($<))[6,0]);
+# Make sure that we didn't get "root"
+die "Please set ECHANGELOG_USER or run as non-root\n" if $user =~ / root@/;
 $date = strftime("%d %b %Y", localtime);
 $entry = "$date; $user ";
 $entry .= join ', ', grep !/files.digest/, @files;  # don't list digests
