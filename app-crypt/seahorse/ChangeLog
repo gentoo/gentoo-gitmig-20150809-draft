@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/seahorse
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/ChangeLog,v 1.21 2004/10/16 10:37:37 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/ChangeLog,v 1.22 2004/10/31 15:27:12 tgall Exp $
+
+  31 Oct 2004; Tom Gall <tgall@gentoo.org> seahorse-0.6.3-r1.ebuild:
+  stable on ppc64, bug #64485
 
   16 Oct 2004; Daniel Black <dragonheart@gentoo.org> seahorse-0.6.3-r1.ebuild:
   x86 stable. bug #64485
