@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/pastemecli
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/pastemecli/ChangeLog,v 1.2 2005/01/01 15:18:37 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/pastemecli/ChangeLog,v 1.3 2005/03/22 16:09:50 kloeri Exp $
+
+  22 Mar 2005; Bryan Østergaard <kloeri@gentoo.org> pastemecli-0.8.ebuild:
+  Add ~alpha keyword.
 
 *pastemecli-0.8 (30 Nov 2004)
 
