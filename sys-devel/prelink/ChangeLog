@@ -1,11 +1,14 @@
 # ChangeLog for sys-devel/prelink
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/prelink/ChangeLog,v 1.15 2003/04/14 09:49:39 cretin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/prelink/ChangeLog,v 1.16 2003/04/14 12:26:18 cretin Exp $
 
 09 Mar 2003; Stefan Jones <cretin@gentoo.org> prelink-*.ebuild :
   Removed sparc from KEYWORDS as it is not supported by anyone.
 
 *prelink-20030217 (07 Mar 2003):
+
+  14 Apr 2003; Stefan Jones <cretin@gentoo.org> :
+  Added patch so compiles under sys-libs/glibc-2.3.1, moved to stable.
 
   09 Mar 2003; Stefan Jones <cretin@gentoo.org> prelink-20030217.ebuild :
   Changed DEPEND to glibc-2.3.2
