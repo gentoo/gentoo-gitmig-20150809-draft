@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdemultimedia
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/ChangeLog,v 1.17 2002/11/12 20:03:08 hannes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/ChangeLog,v 1.18 2002/11/21 17:51:54 hannes Exp $
+
+  21 Nov 2002; Hannes Mehnert <hannes@gentoo.org> kdemultimedia-3.0*.ebuild:
+  filtered -fomit-frame-pointer from kdemultimedia-3.0.x ebuilds,
+  this fixes bug #9894, thanks to jjcspamme@yahoo.com (Jerry) for submission
 
 *kdemultimedia-3.1_rc3 (12 Nov 2002)
 
