@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/ppc-development-sources
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-development-sources/ChangeLog,v 1.18 2004/01/16 13:05:07 darkspecter Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-development-sources/ChangeLog,v 1.19 2004/01/18 18:34:49 darkspecter Exp $
+
+  18 Jan 2004; Bartosch Pixa <darkspecter@gentoo.org> :
+  updated to latest gcloop, fixes a leak
 
   16 Jan 2004; Bartosch Pixa <darkspecter@gentoo.org>
   ppc-development-sources-2.6.1-r1.ebuild:
