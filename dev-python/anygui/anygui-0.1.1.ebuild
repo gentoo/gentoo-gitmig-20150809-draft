@@ -10,7 +10,7 @@ HOMEPAGE="http://anygui.sourceforge.net/"
 
 DEPEND=">=dev-lang/python-2.0
 	sys-libs/ncurses
-        qt? ( dev-python/PyQt ) 
+        qt? ( =dev-python/PyQt-2.4* ) 
         gtk? ( dev-python/pygtk )
         tcltk? ( dev-lang/tk-8.3.3 )
 	wxwin? ( dev-python/wxPython )"
