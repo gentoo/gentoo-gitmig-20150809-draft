@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.7-r1.ebuild,v 1.6 2004/09/09 17:31:32 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.7-r1.ebuild,v 1.7 2004/11/01 01:17:29 vapier Exp $
 
 IUSE="java crypt ipv6 gtk2 ssl ldap gnome debug xinerama xprint"
 # Internal USE flags that I do not really want to advertise ...
@@ -123,7 +123,7 @@ src_unpack() {
 		echo "${PV%_*}" >> config/milestone.txt   # add version line
 	fi
 
-	WANT_AUTOCONF_2_1=1 autoconf &> /dev/null
+	WANT_AUTOCONF=2.1 autoconf &> /dev/null
 
 	# Unpack the enigmail plugin
 	if use crypt && ! use moznomail; then
