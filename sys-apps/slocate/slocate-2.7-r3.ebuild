@@ -1,21 +1,27 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/slocate/slocate-2.7-r3.ebuild,v 1.2 2003/11/01 21:31:10 puggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/slocate/slocate-2.7-r3.ebuild,v 1.3 2003/11/02 18:32:10 vapier Exp $
 
-S=${WORKDIR}/${P}
-DESCRIPTION="Secure locate provides a secure way to index and quickly search for files on your system (drop-in replacement for 'locate')"
+inherit flag-o-matic
+
+DESCRIPTION="secure way to index and quickly search for files on your system (drop-in replacement for 'locate')"
 HOMEPAGE="http://www.geekreview.org/slocate/"
 SRC_URI="ftp://ftp.geekreview.org/slocate/src/slocate-${PV}.tar.gz"
 
-SLOT="0"
 LICENSE="GPL-2"
+SLOT="0"
 KEYWORDS="~x86 ~amd64 ~ppc ~sparc ~alpha ~hppa ~mips ~ia64"
 
 DEPEND="sys-apps/shadow
 	>=sys-apps/sed-4"
 
-src_install() {
+src_compile() {
+	filter-flags -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE
+	econf || die
+	emake || die
+}
 
+src_install() {
 	dodir /usr/share/man/man1
 
 	sed -i -e "/groupadd/s/^/#/;/chown.*slocate/s/^/#/" Makefile || die
