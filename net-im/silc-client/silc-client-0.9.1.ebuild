@@ -1,8 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author: Stein Magnus Jodal <stein.magnus@jodal.no>
 # Updated by Phil Bordelon <phil@lsu.edu> to sync up to v0.9
-# Maintainer: Chris Houser <chouser@gentoo.org>
 # /space/gentoo/cvsroot/gentoo-x86/net-im/silc-client/silc-client-0.7.6.2.ebuild,v 1.3 2002/04/12 18:54:01 spider Exp
 
 S=${WORKDIR}/${P}

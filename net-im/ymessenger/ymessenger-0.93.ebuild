@@ -1,7 +1,6 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Authors: Seemant Kulleen <seemant@gentoo.org> Matthew Kennedy <mkennedy@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-im/ymessenger/ymessenger-0.93.ebuild,v 1.2 2002/05/22 12:40:30 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ymessenger/ymessenger-0.93.ebuild,v 1.3 2002/07/11 06:30:46 drobbins Exp $
 
 MY_P="ymessenger-0.93.0-1.i386.rpm"
 S=${WORKDIR}/usr/local

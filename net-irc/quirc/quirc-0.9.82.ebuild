@@ -1,7 +1,6 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Dmitriy Kropivnitskiy <nigde@mitechki.net> aka Jeld The Dark Elf
-# $Header: /var/cvsroot/gentoo-x86/net-irc/quirc/quirc-0.9.82.ebuild,v 1.2 2002/05/22 14:12:29 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/quirc/quirc-0.9.82.ebuild,v 1.3 2002/07/11 06:30:46 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A GUI IRC client scriptable in Tcl/Tk"
