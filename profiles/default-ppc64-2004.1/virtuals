@@ -12,8 +12,8 @@ virtual/glu            x11-base/xorg-x11
 virtual/glut		media-libs/glut
 virtual/imapUW		net-mail/uw-imap
 x11-libs/xaw		x11-libs/Xaw3d
-virtual/jdk		dev-java/blackdown-jdk
-virtual/jre		dev-java/blackdown-jre
+virtual/jdk		dev-java/ibm-jdk-bin
+virtual/jre		dev-java/ibm-jre-bin
 virtual/imapd		net-mail/courier-imap
 virtual/blackbox	x11-wm/blackbox
 virtual/emacs		app-editors/emacs
@@ -33,7 +33,7 @@ virtual/inetd		sys-apps/xinetd
 virtual/antivirus	app-antivirus/clamav
 virtual/aspell-dict	app-dicts/aspell-en
 virtual/skkserv		app-i18n/skkserv
-virtual/ghc		dev-lang/ghc-bin
+irtual/ghc		dev-lang/ghc-bin
 virtual/snmp		net-analyzer/net-snmp
 virtual/imap-c-client	net-libs/c-client
 virtual/flim		app-emacs/flim
