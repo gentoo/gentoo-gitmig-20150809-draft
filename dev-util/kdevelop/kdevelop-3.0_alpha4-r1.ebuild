@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-3.0_alpha4-r1.ebuild,v 1.1 2003/04/19 10:41:53 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-3.0_alpha4-r1.ebuild,v 1.2 2003/05/21 13:50:34 weeve Exp $
 
 inherit kde-base
 need-kde 3
@@ -12,7 +12,7 @@ DESCRIPTION="KDevelop is an easy to use C/C++ IDE for Unix. It supports KDE/Qt, 
 SRC_URI="mirror://kde/unstable/kdevelop-3.0-alpha4a/src/${MY_P}.tar.bz2"
 HOMEPAGE="http://www.kdevelop.org"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~sparc"
 SLOT=3
 # -j2 and greater fails - see bug #6199
 export MAKEOPTS="$MAKEOPTS -j1"

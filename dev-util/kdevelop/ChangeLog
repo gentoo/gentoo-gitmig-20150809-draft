@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/kdevelop
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/ChangeLog,v 1.27 2003/04/19 10:41:53 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/ChangeLog,v 1.28 2003/05/21 13:50:20 weeve Exp $
+
+  21 May 2003; Jason Wever <weeve@gentoo.org> kdevelop-3.0_alpha4-r1.ebuild:
+  Added ~sparc to keywords.
 
 *kdevelop-3.0_alpha4-r1 (19 Apr 2003)
 
