@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/DirectFB
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/ChangeLog,v 1.41 2004/06/24 23:05:08 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/ChangeLog,v 1.42 2004/08/12 07:09:16 mr_bones_ Exp $
+
+*DirectFB-0.9.20-r1 (12 Aug 2004)
+
+  12 Aug 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  +DirectFB-0.9.20-r1.ebuild:
+  Fix mms/sse for non-amd64; error check sed; tidy
 
   04 May 2004; Travis Tilley <lv@gentoo.org>
   +files/DirectFB-0.9.20-64bit.diff, +files/DirectFB-0.9.20-simd-amd64.diff,
