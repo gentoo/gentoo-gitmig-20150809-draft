@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ruby.eclass,v 1.39 2004/09/16 14:09:20 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ruby.eclass,v 1.40 2004/09/23 23:50:45 vapier Exp $
 #
 # Author: Mamoru KOMACHI <usata@gentoo.org>
 #
@@ -31,7 +31,7 @@
 #		If your ebuild supports both ruby 1.6 and 1.8 but has version
 #		depenedent files such as libraries, set it to something like
 #		"ruby16 ruby18". Possible values are "any ruby16 ruby18 ruby19"
-# EXTRA_ECONF	You can pass extra arguments to econf by defining this
+# RUBY_ECONF	You can pass extra arguments to econf by defining this
 #		variable. Note that you cannot specify them by command line
 #		if you are using <sys-apps/portage-2.0.49-r17.
 # PATCHES	Space delimited list of patch files.
@@ -69,6 +69,7 @@ ruby_src_unpack() {
 
 ruby_econf() {
 
+	RUBY_ECONF="${RUBY_ECONF} ${EXTRA_ECONF}"
 	if [ -f configure ] ; then
 		./configure \
 			--prefix=/usr \
@@ -79,24 +80,24 @@ ruby_econf() {
 			--sysconfdir=/etc \
 			--localstatedir=/var/lib \
 			--with-ruby=${RUBY} \
-			${EXTRA_ECONF} \
+			${RUBY_ECONF} \
 			"$@" || die "econf failed"
 	fi
 	if [ -f install.rb ] ; then
 		${RUBY} install.rb config --prefix=/usr "$@" \
-			${EXTRA_ECONF} || die "install.rb config failed"
+			${RUBY_ECONF} || die "install.rb config failed"
 		${RUBY} install.rb setup "$@" \
-			${EXTRA_ECONF} || die "install.rb setup failed"
+			${RUBY_ECONF} || die "install.rb setup failed"
 	fi
 	if [ -f setup.rb ] ; then
 		${RUBY} setup.rb config --prefix=/usr "$@" \
-			${EXTRA_ECONF} || die "setup.rb config failed"
+			${RUBY_ECONF} || die "setup.rb config failed"
 		${RUBY} setup.rb setup "$@" \
-			${EXTRA_ECONF} || die "setup.rb setup failed"
+			${RUBY_ECONF} || die "setup.rb setup failed"
 	fi
 	if [ -f extconf.rb ] ; then
 		${RUBY} extconf.rb "$@" \
-			${EXTRA_ECONF} || die "extconf.rb failed"
+			${RUBY_ECONF} || die "extconf.rb failed"
 	fi
 }
 
@@ -108,7 +109,7 @@ ruby_emake() {
 
 ruby_src_compile() {
 
-	# You can pass configure options via EXTRA_ECONF
+	# You can pass configure options via RUBY_ECONF
 	ruby_econf || die
 	ruby_emake "$@" || die
 }
@@ -116,16 +117,17 @@ ruby_src_compile() {
 ruby_einstall() {
 	local siteruby
 
+	RUBY_ECONF="${RUBY_ECONF} ${EXTRA_ECONF}"
 	if [ -f install.rb ] ; then
 		${RUBY} install.rb config --prefix=${D}/usr "$@" \
-			${EXTRA_ECONF} || die "install.rb config failed"
+			${RUBY_ECONF} || die "install.rb config failed"
 		${RUBY} install.rb install "$@" \
-			${EXTRA_ECONF} || die "install.rb install failed"
+			${RUBY_ECONF} || die "install.rb install failed"
 	elif [ -f setup.rb ] ; then
 		${RUBY} setup.rb config --prefix=${D}/usr "$@" \
-			${EXTRA_ECONF} || die "setup.rb config failed"
+			${RUBY_ECONF} || die "setup.rb config failed"
 		${RUBY} setup.rb install "$@" \
-			${EXTRA_ECONF} || die "setup.rb install failed"
+			${RUBY_ECONF} || die "setup.rb install failed"
 	elif [ -f extconf.rb -o -f Makefile ] ; then
 		make DESTDIR=${D} "$@" install || die "make install failed"
 	else
