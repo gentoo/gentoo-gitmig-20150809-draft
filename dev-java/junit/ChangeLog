@@ -1,8 +1,11 @@
 # ChangeLog for dev-java/junit
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-java/junit/ChangeLog,v 1.4 2002/10/14 17:46:44 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/junit/ChangeLog,v 1.5 2002/10/29 15:29:06 karltk Exp $
 
 *junit-3.8.1 (14 Oct 2002)
+
+  29 Oct 2002; Karl Trygve Kalleberg <karltk@gentoo.org> junit-3.8.1.ebuild :
+  Added dev-java/ant as a dependency. Fixes #9709.
 
   14 Oct 2002; Karl Trygve Kalleberg <karltk@gentoo.org> junit-3.8.1.ebuild files/digest-junit-3.8.1 :
   New upstream version.
