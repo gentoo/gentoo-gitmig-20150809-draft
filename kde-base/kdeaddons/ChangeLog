@@ -1,7 +1,16 @@
 # ChangeLog for kde-base/kdeaddons
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons/ChangeLog,v 1.6 2002/06/11 18:43:47 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons/ChangeLog,v 1.7 2002/06/25 23:51:36 gerk Exp $
   
+  25 June 2002; Mark Guertin <gerk@gentoo.org> changelog:
+
+  Fixed svgalib dep.  Was really to close bug #3161 (not 3104).  In that
+  case the user had previously installed svgalib and noautounmadness.so linked
+  against it.  have seen this in PPC land before as well,  If kdelibs is 
+  built with svgalib (or any other lib) linked and you remove it you will run 
+  into same problem if you don't rebuild the kdelibs after removing.
+
+
   10 Jun 2002; Dan Armak <danarmak@gentoo.org> changelog:
 
   Add missing svgalib dep, close bug #3104.
