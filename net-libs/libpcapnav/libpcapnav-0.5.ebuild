@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcapnav/libpcapnav-0.5.ebuild,v 1.1 2005/03/16 11:24:29 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcapnav/libpcapnav-0.5.ebuild,v 1.2 2005/03/16 12:37:15 config Exp $
 
 DESCRIPTION="A libpcap wrapper library that allows navigation to arbitrary packets in a tcpdump trace file between reads, using timestamps or percentage offsets."
 HOMEPAGE="http://netdude.sourceforge.net/"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/netdude/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 IUSE="doc"
 
 DEPEND="virtual/libpcap"

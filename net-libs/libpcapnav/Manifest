@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ccf3797f20e50aca6b024a8489110da1 libpcapnav-0.5.ebuild 769
 MD5 b65e4a2837456a2cc3a15441c6ca8a3a ChangeLog 398
+MD5 5dac4994d13e15fa3bfd3a366278fd4f libpcapnav-0.5.ebuild 775
 MD5 637389da071d8ee0c0292695525bc29f metadata.xml 160
 MD5 f4e907703b4719c71b8edeb57a788e04 files/digest-libpcapnav-0.5 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCOBeDEZCkKN40op4RAnxbAKCpJEefbg+lpeTZdKgeqmWTblo1NwCdEvGF
-FxAWMpYhv2wMOBoZ+f0OYdQ=
-=+jE4
------END PGP SIGNATURE-----
