@@ -5,8 +5,8 @@ LOG=/tmp/perl-update.log
 echo "The script will attempt to re-emerge your perl modules, any packages"
 echo "that compiled against libperl.so previously, as well as any packages"
 echo "that placed files in /usr/lib/perl*. A log of its attempts, work, and"
-echo "even failures is kept in ${LOG} - please refer to this log should you"
-echo "experience any difficulties."
+echo "even failures is kept in ${LOG} - please refer to this"
+echo "log should you experience any difficulties."
 
 
 echo "--------------------------------------------------------------" >> $LOG
