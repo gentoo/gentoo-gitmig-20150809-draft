@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Achim Gottinger <achim@gentoo.org>
 # Maintainer: Jon Nelson <jnelson@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/strace-4.4.ebuild,v 1.1 2002/04/28 03:15:25 jnelson Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/strace-4.4.ebuild,v 1.2 2002/05/17 05:06:52 blocke Exp $
 
 # NOTE: For some reason, upstream has changed the naming scheme
 # for the tarballs to something quite lame:
@@ -16,8 +16,15 @@
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A usefull diagnostic, instructional, and debugging tool"
-SRC_URI="http://prdownloads.sourceforge.net/strace/strace_${PV}-1.tar.gz"
+SRC_URI1="http://unc.dl.sourceforge.net/sourceforge/strace/strace_4.4-1.tar.gz"
+SRC_URI2="http://telia.dl.sourceforge.net/sourceforge/strace/strace_4.4-1.tar.gz"
+SRC_URI3="http://belnet.dl.sourceforge.net/sourceforge/strace/strace_4.4-1.tar.gz"
+SRC_URI="${SRC_URI1} ${SRC_URI2} ${SRC_URI3}"
 HOMEPAGE="http://www.wi.leidenuniv.nl/~wichert/strace/"
+
+LICENSE="as-is"
+SLOT="0"
+
 DEPEND="virtual/glibc"
 RDEPEND="${DEPEND}"
 
