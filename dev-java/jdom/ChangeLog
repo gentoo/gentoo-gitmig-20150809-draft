@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/jdom
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdom/ChangeLog,v 1.5 2003/02/12 05:53:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdom/ChangeLog,v 1.6 2003/05/26 09:09:53 absinthe Exp $
+
+*jdom-1.0_beta8-r3 (26 May 2003)
+
+  26 May 2003; Dylan Carlson <absinthe@gentoo.org> jdom-1.0_beta8-r3.ebuild,
+  files/jdom-1.0_beta8-nojdk1.1.patch:
+  Version bump/fix to close bug #15731.  Thanks to Zhen Lin <lowzl@hotmail.com>.
 
 *jdom-1.0_beta8-r2 (12 Jan 2003)
 
