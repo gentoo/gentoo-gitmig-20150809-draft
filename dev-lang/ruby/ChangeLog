@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.67 2004/04/30 16:54:23 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.68 2004/05/18 05:41:57 usata Exp $
+
+  18 May 2004; Mamoru KOMACHI <usata@gentoo.org> ruby-1.6.8-r10.ebuild,
+  ruby-1.6.8-r9.ebuild, ruby-1.8.0-r6.ebuild, ruby-1.8.1-r2.ebuild,
+  ruby-1.8.1-r3.ebuild, ruby-1.8.1-r5.ebuild, ruby-1.8.1-r6.ebuild,
+  files/oniguruma-20040202.diff:
+  Added autoconf dependancy, closing bug #51301. Marked 1.6.8-r10 and
+  1.8.1-r6 stable on x86, alpha and ppc.
 
 *ruby-1.8.1-r6 (01 May 2004)
 *ruby-1.6.8-r10 (01 May 2004)
