@@ -1,6 +1,9 @@
-MD5 087796d19a5cfdb2b1484af11142573b ChangeLog 2453
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 86f051688733270579b4e227260b4a48 ChangeLog 2594
 MD5 3eec9f3fe48b51f49dbc1f171a3b026f metadata.xml 157
-MD5 a906f4800c5dbb0fd91c2eba3a9fc62d ruby-gdkpixbuf2-0.11.0.ebuild 469
+MD5 6f450ffeab11f355a7bc754f366b29d1 ruby-gdkpixbuf2-0.11.0.ebuild 469
 MD5 212e5a4d53cbe32c41543fdab9c9f8bc ruby-gdkpixbuf2-0.8.0.ebuild 444
 MD5 02bf9f90deb342e89701c50d19517bb8 ruby-gdkpixbuf2-0.8.1.ebuild 443
 MD5 608eae067fbfe7315815f243784bdd96 ruby-gdkpixbuf2-0.9.1.ebuild 500
@@ -10,3 +13,10 @@ MD5 f15d65d18e7816f32c3bcf8023b5835b files/digest-ruby-gdkpixbuf2-0.8.0 73
 MD5 7de5312a62217022283595b441356cde files/digest-ruby-gdkpixbuf2-0.8.1 73
 MD5 2b2c4fe1967f3e6d7abc0f74a6008c23 files/digest-ruby-gdkpixbuf2-0.9.1 73
 MD5 43ae64cda07995d0490456a74ef8f043 files/digest-ruby-gdkpixbuf2-0.10.1 74
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBpU0SVWNWqTUmv+0RAhzyAKCBedEK6qTLFf1NoWFZrEPL/m8WoACgmL+V
+AQ0p4ExU1osYBCYl0IVnHyw=
+=DvG8
+-----END PGP SIGNATURE-----

@@ -1,6 +1,9 @@
-MD5 071110bc3846442c49267563482fafdb ChangeLog 1997
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 817114e858700ca63ccb9f350e6c6418 ChangeLog 2126
 MD5 3eec9f3fe48b51f49dbc1f171a3b026f metadata.xml 157
-MD5 a33bfe11f5919b9b9bbecf28742c2a96 ruby-pango-0.11.0.ebuild 455
+MD5 ed53d28f2aec817db1a9d995ee38e4ce ruby-pango-0.11.0.ebuild 455
 MD5 d750d0a72ca6308bc7cdeb90b47c303c ruby-pango-0.10.1.ebuild 485
 MD5 4727b9c2a7c27e118ca2fe73c852552e ruby-pango-0.8.0.ebuild 431
 MD5 8b1191ebad27afd9481b8510ebb5177f ruby-pango-0.8.1.ebuild 467
@@ -10,3 +13,10 @@ MD5 43ae64cda07995d0490456a74ef8f043 files/digest-ruby-pango-0.10.1 74
 MD5 f15d65d18e7816f32c3bcf8023b5835b files/digest-ruby-pango-0.8.0 73
 MD5 7de5312a62217022283595b441356cde files/digest-ruby-pango-0.8.1 73
 MD5 2b2c4fe1967f3e6d7abc0f74a6008c23 files/digest-ruby-pango-0.9.1 73
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBpUxVVWNWqTUmv+0RAkFXAJ9yxtza6u7DoOvAhGAuFIUeSrg8BACcDHV3
+SKsjosddI0y6hAyRdYwvbqY=
+=edKb
+-----END PGP SIGNATURE-----
