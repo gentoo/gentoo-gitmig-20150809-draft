@@ -1,6 +1,12 @@
 # ChangeLog for net-news/blam
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/blam/ChangeLog,v 1.14 2004/12/01 23:47:00 latexer Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-news/blam/ChangeLog,v 1.15 2005/01/12 23:24:24 latexer Exp $
+
+*blam-1.6.1 (12 Jan 2005)
+
+  12 Jan 2005; Peter Johanson <latexer@gentoo.org> -blam-1.4.0.ebuild,
+  -blam-1.4.1.ebuild, +blam-1.6.1.ebuild:
+  Bump, and remove some older versions.
 
 *blam-1.6.0-r1 (01 Dec 2004)
 
