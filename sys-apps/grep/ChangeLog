@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/grep
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/ChangeLog,v 1.40 2005/01/06 05:36:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/ChangeLog,v 1.41 2005/01/08 00:46:04 vapier Exp $
+
+  07 Jan 2005; Mike Frysinger <vapier@gentoo.org> files/2.5.1-tests.patch:
+  Update tests so that grep+glibc dont get stuck in an infinite loop #76879 by
+  Patrick Lauer.
 
 *grep-2.5.1-r7 (06 Jan 2005)
 
