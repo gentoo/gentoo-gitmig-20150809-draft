@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnet/gnet-1.1.9.ebuild,v 1.5 2003/07/14 15:42:16 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnet/gnet-1.1.9.ebuild,v 1.6 2003/07/18 22:04:42 tester Exp $
 
 DESCRIPTION="GNet network library."
 SRC_URI="http://www.gnetlibrary.org/src/${P}.tar.gz"
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnetlibrary.org/"
 IUSE=""
 SLOT="1"
 LICENSE="LGPL-2"
-KEYWORDS="x86 ~ppc hppa"
+KEYWORDS="x86 ~ppc hppa amd64"
 
 # yes, the >= is correct, this software can use both glib 1.2 and 2.0!
 RDEPEND=">=dev-libs/glib-1.2.0"
