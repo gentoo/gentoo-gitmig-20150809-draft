@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.7.0-r1.ebuild,v 1.13 2004/06/16 19:59:46 jhuebel Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.7.0-r1.ebuild,v 1.14 2004/06/19 23:12:22 spyderous Exp $
 
 # This is a snapshot of the XORG-RELEASE-1 branch.
 
@@ -260,6 +260,7 @@ host_def_setup() {
 		# FHS install locations for docs
 		echo "#define ManDirectoryRoot /usr/share/man" >> config/cf/host.def
 		echo "#define DocDir /usr/share/doc/${PF}" >> config/cf/host.def
+		echo "#define FontDir /usr/share/fonts" >> config/cf/host.def
 
 		# Make man4 and man7 stuff get 'x' suffix like everything else
 		# Necessary so we can install to /usr/share/man without overwriting
@@ -699,7 +700,7 @@ src_compile() {
 	unset MAKE_OPTS
 
 	einfo "Building xorg-x11..."
-	FAST=1 emake World WORLDOPTS="" FONTDIR="/usr/share/fonts" || die
+	FAST=1 emake World WORLDOPTS="" || die
 
 	if use nls
 	then
@@ -945,12 +946,12 @@ src_install() {
 	# whole build will not be compiled without mmx instructions.
 	if [ "`gcc-version`" != "2.95" ] && use x86
 	then
-		make install DESTDIR=${D} FONTDIR="/usr/share/fonts" || \
+		make install DESTDIR=${D} || \
 		make CDEBUGFLAGS="${CDEBUGFLAGS} -mno-mmx" \
 			CXXDEBUGFLAGS="${CXXDEBUGFLAGS} -mno-mmx" \
-			install DESTDIR=${D} FONTDIR="/usr/share/fonts" || die
+			install DESTDIR=${D} || die
 	else
-		make install DESTDIR=${D} FONTDIR="/usr/share/fonts" || die
+		make install DESTDIR=${D} || die
 	fi
 
 	if use sdk # || use gatos

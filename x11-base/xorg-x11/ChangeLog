@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.60 2004/06/16 16:13:55 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.61 2004/06/19 23:12:22 spyderous Exp $
+
+  19 Jun 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  xorg-x11-6.7.0-r1.ebuild:
+  Move how font directories are defined into a host.def setting.
 
   16 Jun 2004; Luca Barbato <lu_zero@gentoo.org> xorg-x11-6.7.0-r1.ebuild:
   Marked ppc for security reason, see Bug #53226
