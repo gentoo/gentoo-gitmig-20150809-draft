@@ -103,5 +103,5 @@ virtual/os-headers
 *sys-libs/pwdb      
 *sys-libs/readline  
 *sys-libs/zlib
-*net-misc/openssh
+*virtual/ssh
 *sys-fs/devfsd

@@ -33,9 +33,11 @@ virtual/os-headers		sys-kernel/linux-headers
 virtual/ghc				dev-lang/ghc-bin
 virtual/modutils		sys-apps/modutils
 virtual/inetd			sys-apps/xinetd
+virtual/antivirus		net-mail/clamav
 virtual/aspell-dict		app-dicts/aspell-en
 virtual/skkserv			app-i18n/skkserv
 virtual/snmp			net-analyzer/net-snmp
+virtual/winkernel		sys-kernel/win4lin-sources
 virtual/imap-c-client	net-libs/c-client
 virtual/wine			app-emulation/wine app-emulation/winex app-emulation/winex-cvs
 virtual/flim			app-emacs/flim
