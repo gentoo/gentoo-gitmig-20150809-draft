@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/wl/wl-2.8.1.ebuild,v 1.3 2003/02/28 23:19:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/wl/wl-2.8.1.ebuild,v 1.4 2003/05/29 11:34:42 yakina Exp $
 
 inherit elisp
 
@@ -18,6 +18,8 @@ DEPEND="virtual/emacs
          >=app-emacs/semi-1.14.3"
 #        >=virtual/flim-1.14.3
 #        >=virtual/semi-1.14.3
+
+S="${WORKDIR}/${P}"
 
 src_compile() {
 	make || die

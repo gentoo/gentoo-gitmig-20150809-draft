@@ -1,8 +1,13 @@
 # ChangeLog for app-emacs/mew
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/mew/ChangeLog,v 1.8 2003/03/25 16:18:33 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/mew/ChangeLog,v 1.9 2003/05/29 11:39:27 yakina Exp $
 
 *mew-3.2 (01 Mar 2003)
+
+  29 May 2003; <yakina@gentoo.org> mew-2.2.ebuild, mew-3.1.ebuild,
+  mew-3.2.ebuild:
+  Added S
+
   25 Mar 2003; Masatomo Nakano <nakano@gentoo.org> ChangeLog, mew-3.2.ebuild:
 
   Markded as stable for x86,ppc.
