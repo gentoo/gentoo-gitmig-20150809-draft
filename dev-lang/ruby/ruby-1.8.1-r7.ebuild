@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.1-r7.ebuild,v 1.1 2004/06/19 10:08:25 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.1-r7.ebuild,v 1.2 2004/06/19 12:22:47 usata Exp $
 
 ONIGURUMA="onigd2_2_8"
 SNAP_DATE="2004.05.02"
@@ -31,7 +31,7 @@ DEPEND="sys-devel/autoconf
 	${RDEPEND}"
 PROVIDE="virtual/ruby"
 
-S=${WORKDIR}/${P%_pre*}
+S=${WORKDIR}/${P}-${SNAP_DATE}
 
 src_unpack() {
 	unpack ${A}
