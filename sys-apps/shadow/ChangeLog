@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/shadow
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.96 2005/02/06 23:41:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.97 2005/02/10 18:35:28 azarah Exp $
+
+  10 Feb 2005; Martin Schlemmer <azarah@gentoo.org> shadow-4.0.5-r3.ebuild:
+  Basically -r3 is the same as -r2, just with fix for the MAIL issue with su,
+  so mark stable for all that have -r2 stable.
 
 *shadow-4.0.7 (06 Feb 2005)
 
