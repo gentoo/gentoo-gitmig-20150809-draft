@@ -1,6 +1,11 @@
 # ChangeLog for dev-php/smarty
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/smarty/ChangeLog,v 1.16 2004/07/04 08:15:36 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/smarty/ChangeLog,v 1.17 2004/08/01 21:24:55 twp Exp $
+
+*smarty-2.6.3 (01 Aug 2004)
+
+  01 Aug 2004; <twp@gentoo.org> +smarty-2.6.3.ebuild:
+  Version bump. Bug # 55590.
 
   04 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> smarty-2.6.2.ebuild:
   Stable on alpha.
