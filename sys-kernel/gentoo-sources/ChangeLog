@@ -1,16 +1,27 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.49 2003/12/21 06:45:59 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.50 2004/01/06 15:17:52 plasmaroo Exp $
+
+*gentoo-sources-2.4.20-r10 (06 Jan 2004)
+
+  06 Jan 2004; <plasmaroo@gentoo.org> gentoo-sources-2.4.20-r10.ebuild,
+  gentoo-sources-2.4.22-r2.ebuild, gentoo-sources-2.4.22.ebuild, 
+  files/gentoo-sources-2.4.20-hpt372.patch,
+  files/gentoo-sources-2.4.20-rtc_fix.patch,
+  files/gentoo-sources-2.4.22-rtc_fix.patch,
+  files/gentoo-sources-2.4.CAN-2003-0985.patch:
+  Version bump - addresses the security vulnerabilities in bugs #37292 and
+  #37317. 2.4.20-r10 also includes the patch for HPT372/HPT374 controllers
+  from bug #20986.
 
   21 Dec 2003; Brian Jackson <iggy@gentoo.org>
-  gentoo-sources-2.4.22-r2.ebuild:
-  oh yeah, also bumped to stable
+  gentoo-sources-2.4.22-r2.ebuild: Bumped to stable.
 
 *gentoo-sources-2.4.22-r2 (21 Dec 2003)
 
   21 Dec 2003; Brian Jackson <iggy@gentoo.org>
   gentoo-sources-2.4.22-r2.ebuild:
-  new version, fixes bug 35045, acpi update, updated forcedeth, etc.
+  New version, fixes bug #35045, ACPI update, updated forcedeth, etc.
 
   05 Dec 2003; <plasmaroo@gentoo.org> gentoo-sources-2.4.22-r1.ebuild,
   files/gentoo-sources-2.4.22-kmsgdump.patch:

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.4.20-r5.ebuild,v 1.6 2004/01/06 15:17:52 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.4.20-r10.ebuild,v 1.1 2004/01/06 15:17:52 plasmaroo Exp $
 
 IUSE="build crypt evms2 aavm usagi"
 
@@ -30,10 +30,10 @@ S=${WORKDIR}/linux-${KV}
 
 DESCRIPTION="Full sources for the Gentoo Kernel."
 SRC_URI="mirror://kernel/linux/kernel/v2.4/linux-${OKV}.tar.bz2
-	mirror://gentoo/patches-${KV}.tar.bz2"
+	mirror://gentoo/patches-${KV/10/5}.tar.bz2"
 HOMEPAGE="http://www.gentoo.org/ http://www.kernel.org/"
 LICENSE="GPL-2"
-KEYWORDS="x86 -ppc -sparc -alpha -hppa -mips -arm"
+KEYWORDS="~x86 -ppc -sparc -alpha -hppa -mips -arm"
 SLOT="${KV}"
 
 
@@ -41,7 +41,10 @@ src_unpack() {
 	unpack ${A}
 	mv linux-${OKV} linux-${KV} || die "Error moving kernel source tree to linux-${KV}"
 
-	cd ${WORKDIR}/${KV}
+	cd ${WORKDIR}/${KV/10/5}
+
+	# Move over new iptables-ROUTE patch
+	cp ${FILESDIR}/gentoo-sources-2.4.20-ipt-route.patch 727_iptables-ROUTE
 
 	# This is the *ratified* aavm USE flag, enables aavm support in this kernel
 	if [ -z "`use aavm`" ]; then
@@ -58,12 +61,11 @@ src_unpack() {
 		done
 	fi
 
-	# If the compiler isn't gcc>3.1 drop the gcc>3.1 patches
-	if [[ "${COMPILER}" == "gcc3" ]];then
-		einfo "You are using gcc>3.1"
-		einfo "Enabling gcc>3.1 processor optimizations."
-		einfo "To use, choose the processor family labelled with (gcc>31) in"
-		einfo "Processor type and features -> Processor Family"
+	# If the compiler isn't gcc>3.1 drop the gcc>=3.1 patches
+	if [[ "${COMPILER}" == "gcc3" ]]; then
+		einfo "Enabling gcc > 3.1 processor optimizations..."
+		einfo "To use them, choose the processor families labelled with (gcc>31)"
+		einfo "in \"Processor type and features -> Processor Family\""
 	else
 		einfo "Your compiler is not gcc3, dropping patches..."
 		for file in *gcc3*;do
@@ -74,13 +76,13 @@ src_unpack() {
 
 	# This is the *ratified* evms2 USE flag, enables evms2 support
 	if [ -z "`use evms2`" ]; then
-		einfo "Setting up kernel for EVMS 1.2.1 support(default)."
+		einfo "Setting up kernel for EVMS 1.2.1 support (default)..."
 		for file in 2* ;do
 			einfo "Dropping ${file}..."
 			rm -f ${file}
 		done
 	else
-		einfo "Setting up kernel for EVMS 2.0.1 support."
+		einfo "Setting up kernel for EVMS 2.0.1 support..."
 		ewarn "This is very beta. Please read the 'evms2' doc provided with this kernel."
 		ewarn "It is the install doc from the evms 2.0.1 tarball."
 		for file in 1* ;do
@@ -97,7 +99,7 @@ src_unpack() {
 			rm -f ${file}
 		done
 	else
-		einfo "Cryptographic patches will be applied"
+		einfo "Cryptographic patches will be applied."
 	fi
 
 	# This is the usagi USE flag, keeps USAGI, drops {superfreeswan/patch-int/loop-jari}
@@ -116,15 +118,33 @@ src_unpack() {
 		done
 	fi
 
-	epatch ${FILESDIR}/do_brk_fix.patch
-
 	kernel_src_unpack
+
+	epatch ${FILESDIR}/security.patch1
+	epatch ${FILESDIR}/security.patch2
+	epatch ${FILESDIR}/security.patch3
+	epatch ${FILESDIR}/security.patch4
+	epatch ${FILESDIR}/gentoo-sources-2.4.20-gcc33.patch
+	epatch ${FILESDIR}/gentoo-sources-2.4.20-cs46xx-gcc33.patch
+	epatch ${FILESDIR}/gentoo-sources-2.4.20-grsec-datasize_fix.patch
+	epatch ${FILESDIR}/gentoo-sources-2.4.20-grsec-disabled.patch
+	epatch ${FILESDIR}/gentoo-sources-2.4.20-sched-interrupt.patch
+	epatch ${FILESDIR}/gentoo-sources-2.4.20-mdcount.patch
+	epatch ${FILESDIR}/gentoo-sources-2.4.20-devfs-snd-fix.patch
+	epatch ${FILESDIR}/gentoo-sources-2.4.20-ipt-realm.patch
+	epatch ${FILESDIR}/gentoo-sources-2.4.20-hpt372.patch
+
+	epatch ${FILESDIR}/do_brk_fix.patch || die "Failed to apply do_brk() fix!"
+	epatch ${FILESDIR}/gentoo-sources-2.4.CAN-2003-0985.patch || die "Failed to apply mremap() fix!"
+	epatch ${FILESDIR}/gentoo-sources-2.4.20-rtc_fix.patch || die "Failed to apply RTC fix!"
+
 }
 
 pkg_postinst() {
 
 	kernel_pkg_postinst
 
+	echo
 	ewarn "There is no xfs support in this kernel."
 	ewarn "If you need xfs support, emerge xfs-sources."
 	echo
@@ -135,10 +155,14 @@ pkg_postinst() {
 	echo
 	einfo "If there are issues with it, read the docs and associated help provided."
 	einfo "Next you should check http://forums.gentoo.org/ for assistance."
+	echo
 	einfo "Otherwise check http://bugs.gentoo.org/ for an existing bug."
 	einfo "Only create a new bug if you have not found one that matches your issue."
-	einfo "It is best to do an advanced search as the initial search has a very low yield."
-	einfo "Assign bugs to x86-kernel@gentoo.org"
+	einfo "It is best to do an advanced search to increase search yield."
 	echo
-	einfo "Please read the changelog and associated docs for more information."
+	einfo "Please assign bugs to x86-kernel@gentoo.org"
+	echo
+	einfo "Please read the ChangeLog and associated docs for more information."
+	echo
+
 }

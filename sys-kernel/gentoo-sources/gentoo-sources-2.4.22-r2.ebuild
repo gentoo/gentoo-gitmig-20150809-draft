@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.4.22-r2.ebuild,v 1.2 2003/12/21 06:45:59 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.4.22-r2.ebuild,v 1.3 2004/01/06 15:17:52 plasmaroo Exp $
 
 # OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
@@ -37,6 +37,9 @@ src_unpack() {
 		|| die "Failed to patch kernel, please file a bug at bugs.gentoo.org"
 
 	cd ${S}
+
+	epatch ${FILESDIR}/gentoo-sources-2.4.CAN-2003-0985.patch || die "Failed to apply mremap() fix!"
+	epatch ${FILESDIR}/gentoo-sources-2.4.22-rtc_fix.patch || die "Failed to apply RTC fix!"
 
 	make mrproper || die "make mrproper failed"
 	make include/linux/version.h || die "make include/linux/version.h failed"
