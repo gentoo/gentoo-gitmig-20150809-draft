@@ -1,11 +1,15 @@
 # ChangeLog for sys-apps/diffutils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/diffutils/ChangeLog,v 1.18 2003/04/02 08:37:03 rajiv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/diffutils/ChangeLog,v 1.19 2003/04/02 14:02:33 joker Exp $
 
   09 Feb 2003; Guy Martin <gmsoft@gentoo.org> :
   Added hppa to keywords.
 
 *diffutils-2.8.4-r3 (04 Feb 2003)
+
+  02 Apr 2003; Christian Birchinger <joker@gentoo.org>
+  diffutils-2.8.4-r3.ebuild:
+  Added stable sparc keyword
 
   27 Feb 2003; Zach Welch <zwelch@gentoo.org> diffutils-2.7.7.ebuild,
   diffutils-2.8.4-r2.ebuild, diffutils-2.8.4-r3.ebuild:
