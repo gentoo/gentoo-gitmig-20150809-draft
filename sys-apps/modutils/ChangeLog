@@ -1,14 +1,13 @@
 # ChangeLog for sys-apps/modutils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/modutils/ChangeLog,v 1.18 2003/03/24 22:06:21 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/modutils/ChangeLog,v 1.19 2003/03/25 00:29:57 drobbins Exp $
 
 *modutils-2.4.24 (24 Mar 2003)
 
   24 Mar 2003; Daniel Robbins <drobbins@gentoo.org> modutils-2.4.24.ebuild:
   New upstream version. New alias.h.diff to close bug #11886. New PROVIDE
-  "virtual/module-tools" to allow closing of bugg #16294, which will happen
-  in the x86 profile initially. This will be unmasked for x86 to allow
-  #11886 to be closed; experimental for everything else.
+  "virtual/modutils" to allow closing of bug #16294, which will happen
+  in the x86 profile initially. 
 
 *modutils-2.4.23 (13 Mar 2003)
 
