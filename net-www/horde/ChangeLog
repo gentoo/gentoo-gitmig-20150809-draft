@@ -1,6 +1,9 @@
 # ChangeLog for net-www/horde
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/horde/ChangeLog,v 1.18 2004/02/26 18:11:55 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/horde/ChangeLog,v 1.19 2004/03/28 17:23:50 zx Exp $
+
+  01 Apr 2004; Chris Aniszczyk <zx@gentoo.org> horde-2.2.5.ebuild:
+  Marking ~hppa
 
 *horde-2.2.5 (26 Feb 2004)
 
