@@ -1,6 +1,15 @@
 # ChangeLog for dev-libs/expat
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/expat/ChangeLog,v 1.2 2002/03/26 03:50:25 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/expat/ChangeLog,v 1.3 2002/07/10 20:45:40 seemant Exp $
+
+*expat-1.95.3 (10 Jul 2002)
+
+  10 Jul 2002; Seemant Kulleen <seemant@gentoo.org> expat-1.95.3.ebuild
+  files/digest-expat-1.95.3 :
+
+  Version bump.  Also, SRC_URI changed to use sourceforge mirror.  LICENSE,
+  SLOT and KEYWORDS added.  Thanks to: gentoo@gonzo.ch (Roman Weber) in bug
+  #4797
 
 *expat-1.95.2 (25 Mar 2002)
 
