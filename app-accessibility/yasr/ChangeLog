@@ -1,0 +1,9 @@
+# ChangeLog for app-misc/yasr
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/yasr/ChangeLog,v 1.1 2004/03/16 21:06:04 dmwaters Exp $
+
+*yasr-0.6.5 (16 Mar 2004)
+
+  16 Mar 2004; <dmwaters@gentoo.org> metadata.xml, yasr-0.6.5.ebuild:
+  New package. Yasr is a screenreader for linux and other unix based os's.
+
