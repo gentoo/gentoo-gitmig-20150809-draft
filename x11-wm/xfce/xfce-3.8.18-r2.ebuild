@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/xfce/xfce-3.8.18-r2.ebuild,v 1.6 2003/08/18 06:12:19 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/xfce/xfce-3.8.18-r2.ebuild,v 1.7 2003/09/04 05:11:37 msterret Exp $
 
 IUSE="arts gtk gnome nls tcltk"
 inherit gnuconfig
@@ -21,7 +21,7 @@ DEPEND="virtual/x11
 	gnome? ( dev-libs/libxml2 )
 	gtk? ( >=media-libs/gdk-pixbuf-0.11.0-r1 >=media-libs/imlib-1.9.10-r1 )
 	arts? ( kde-base/arts )"
-	
+
 RDEPEND="nls? ( sys-devel/gettext )
 	tcltk? ( dev-lang/tk )"
 
@@ -37,13 +37,13 @@ src_compile() {
 	use gnome && myconf="${myconf} --enable-gdm --enable-libxml2"
 
 	use nls || myconf="${myconf} --disable-nls"
-	
+
 	use arts && myconf="${myconf} --enable-arts"
-	
+
 	pkg-config xft \
 		&& myconf="${myconf} --enable-xft2" \
 		|| myconf="${myconf} --enable-xft"
-	
+
 	econf \
 	    --enable-taskbar \
 	    ${myconf} || die
@@ -62,6 +62,6 @@ src_install () {
 
 	exeinto /etc/X11/Sessions
 	doexe $FILESDIR/xfce
-	
+
 	dodoc ChangeLog* AUTHORS LICENSE README* TODO*
 }
