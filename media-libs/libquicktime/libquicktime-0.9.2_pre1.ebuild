@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/libquicktime-0.9.2_pre1.ebuild,v 1.10 2003/07/19 22:05:29 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/libquicktime-0.9.2_pre1.ebuild,v 1.11 2003/08/06 13:31:32 vapier Exp $
 
 inherit libtool eutils
 
@@ -10,8 +10,8 @@ DESCRIPTION="A library based on quicktime4linux with extensions"
 HOMEPAGE="http://libquicktime.sourceforge.net/"
 SRC_URI="mirror://sourceforge/libquicktime/${MY_P}.tar.gz"
 
-SLOT="0"
 LICENSE="LGPL-2.1"
+SLOT="0"
 KEYWORDS="x86 ~alpha"
 
 IUSE="oggvorbis png jpeg"
@@ -23,7 +23,6 @@ DEPEND=">=sys-apps/sed-4.0.5
 	jpeg ( media-libs/jpeg )
 	oggvorbis? ( media-libs/libvorbis )
 	!media-libs/quicktime4linux"
-
 PROVIDE="virtual/quicktime"
 
 src_unpack() {
