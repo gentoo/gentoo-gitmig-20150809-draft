@@ -1,11 +1,21 @@
-MD5 31e40ddc86726a43db5fb3a37cec472d ChangeLog 2605
-MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 a224b7620fa2de3b5da9ae61e7a4e2f9 cdparanoia-3.9.8-r2.ebuild 1458
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 0396e35859308f068b618eaca4410643 ChangeLog 2722
 MD5 768d28beceed7b9859722c46b83b9f39 cdparanoia-3.9.8-r1.ebuild 1226
-MD5 0c381b5b41380f5a4a92f3e018fe16fe files/cdparanoia-3.9.8-identify_crash.patch 536
+MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+MD5 f5eee1599ff4bf9d9e576bfaf46f0906 cdparanoia-3.9.8-r2.ebuild 1465
+MD5 8dfcb53296c1e66ba13fb02d81eef39b files/3.9.8-gcc34.patch 772
+MD5 532963b39bb2da5b1961bcf17fb11e68 files/cdparanoia-3.9.8-include-cdda_interface_h.patch 452
 MD5 9d2dfbe5871d672111900f8d3fd09880 files/digest-cdparanoia-3.9.8-r1 76
 MD5 9d2dfbe5871d672111900f8d3fd09880 files/digest-cdparanoia-3.9.8-r2 76
-MD5 532963b39bb2da5b1961bcf17fb11e68 files/cdparanoia-3.9.8-include-cdda_interface_h.patch 452
 MD5 ab34ae9f60b4a00e3a9e6b7310b84746 files/cdparanoia-3.9.8-toc.patch 778
-MD5 8dfcb53296c1e66ba13fb02d81eef39b files/3.9.8-gcc34.patch 772
+MD5 0c381b5b41380f5a4a92f3e018fe16fe files/cdparanoia-3.9.8-identify_crash.patch 536
 MD5 22fcfd4883bc0ce781d42429655a4a3d files/cdparanoia-3.9.8-use-destdir.patch 2468
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBlHK9ArHZZzCEUG0RAr46AKCKrmhKQ+J0QPuOtNA1M3mWBWeHWACeKVvb
+AGpCs2zdqHPyLzaPauqlK+A=
+=3eFn
+-----END PGP SIGNATURE-----

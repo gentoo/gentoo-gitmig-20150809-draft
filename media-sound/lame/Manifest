@@ -1,23 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 df1e58f4e3ed4e14532a675feb714d11 ChangeLog 7664
-MD5 f908b88d67a5f3e359ced4dd865f43d4 lame-3.92.ebuild 1552
+MD5 d21b87d2f9021891a728608f0c134cfa ChangeLog 7828
 MD5 05ab4d4775083f0930841e415df18ad6 metadata.xml 160
 MD5 e7cc551e0ddb9b01e8ebf7f3b4df36e9 lame-3.96.1.ebuild 2285
 MD5 e54937108072f56ed05c217d2bacd887 lame-3.96.ebuild 2169
-MD5 5a99cc8dfb13e74eaefb4f258906dcfe lame-3.93.1-r1.ebuild 1610
-MD5 2b1af4843f5ca4107de793b7a584db34 files/digest-lame-3.92 61
-MD5 af03fdd6d579097e09e99b9faeaf929b files/lame-3.96-ccc.patch 658
 MD5 3b8e04486d3959e978f2466bdc621a59 files/digest-lame-3.96 62
-MD5 aefad4480f6888fcee536e08205804b1 files/digest-lame-3.93.1-r1 64
-MD5 1dfbfacec1d8f89bf39620c15becb6bc files/lame-3.91-gcc3.diff 383
-MD5 77956e1d8bad436bc943b5005842aa80 files/lame-3.96.1-shared-frontend.patch 945
 MD5 f7a856198d82691c0506cfc77fa95e87 files/digest-lame-3.96.1 64
+MD5 af03fdd6d579097e09e99b9faeaf929b files/lame-3.96-ccc.patch 658
+MD5 77956e1d8bad436bc943b5005842aa80 files/lame-3.96.1-shared-frontend.patch 945
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBk/ciugEuf3OQ0akRAm0bAJ9V6VyQlPafYwvb3egoTVznTbFiDACfRD+k
-/T+8cdElE4U/thStFcC+CBU=
-=Qxg5
+iD8DBQFBlHJkArHZZzCEUG0RAqvZAJ9t9idpy6hNpsIfnsDrLHGuveDllwCbB9Hm
+xT452RK+2Jh36Avu1Ym/1Xc=
+=LFCn
 -----END PGP SIGNATURE-----

@@ -1,8 +1,16 @@
-MD5 2ef2d885de52f0af27f8fca4a9782de3 ChangeLog 1318
-MD5 97085bbab989e0ee176404b9cf2b92d1 cd-discid-0.6.ebuild 691
-MD5 4e37154885f07a3d6d9b624c4c3309ec cd-discid-0.8.ebuild 696
-MD5 7d111f5c875298f35734e4e2915b6884 cd-discid-0.9.ebuild 692
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 4055ee8de0947f9ff53a1c785fc4b13c ChangeLog 1478
+MD5 3e75a4c0a5dff061def5bb34d7b76647 cd-discid-0.8.ebuild 727
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 8697d0e86e83978804e8ad853fd0f8c0 files/digest-cd-discid-0.6 68
+MD5 adcab1487facf4840f1b0341d71c3fff cd-discid-0.9.ebuild 735
 MD5 46a28720bb5f8a1eca5efc9cf06e3a59 files/digest-cd-discid-0.8 69
 MD5 b0c6b5b4e405c5e736b2a03fa724a533 files/digest-cd-discid-0.9 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBlHIgArHZZzCEUG0RAtj7AJ9sWz+B+dGANDUhK1bqpT1TJqEJBgCcDjdu
+sHaNNOIH3Vw23CMeBpFHMNw=
+=DI3V
+-----END PGP SIGNATURE-----

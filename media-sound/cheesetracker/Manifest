@@ -1,17 +1,15 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 3099ebe2484d08fc71b11b812a515a81 cheesetracker-0.9.1.ebuild 851
-MD5 20afe0790d38565801a3c39c5ecc1467 cheesetracker-0.9.9.ebuild 937
+MD5 b780a812051cbb8cf7755d60ff0c8e44 cheesetracker-0.9.9.ebuild 936
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 c5a891385c5e68761f8a1b20b3ba479f ChangeLog 1788
+MD5 53d5d1e36978653646b24455adcc6e3e ChangeLog 1950
 MD5 c434058097d9333a5c15d70afd4d861c files/cheesetracker-0.9.9-64bit-clean.diff 4677
-MD5 9a021f83c28ea2197e9b09b6fe1c1a6d files/digest-cheesetracker-0.9.1 71
 MD5 494c01057ccc3d858baac01aead9b270 files/digest-cheesetracker-0.9.9 71
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBZhptArHZZzCEUG0RAi0YAJ9zCe32Y9ijCI2z9Xj9K95LxrLHSgCfcSLY
-SAKFDub7TjgZMwrxlPNbYlM=
-=quMS
+iD8DBQFBlHMcArHZZzCEUG0RAjAvAJwPmlsq0K2oeYQSQgCU1R0wyEzJnACdEmAA
+I2qkCXv6SAOXzuxoUMsHOZ4=
+=A3BJ
 -----END PGP SIGNATURE-----
