@@ -1,22 +1,21 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/docutils-0.3.3-r1.ebuild,v 1.8 2005/03/14 19:38:08 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/docutils-0.3.7.ebuild,v 1.1 2005/03/14 19:38:08 pythonhead Exp $
 
 inherit distutils eutils
 
 DESCRIPTION="Set of python tools for processing plaintext docs into HTML, XML, etc."
 HOMEPAGE="http://docutils.sourceforge.net/"
-SRC_URI="mirror://sourceforge/docutils/${P}-alpha.tar.gz"
+SRC_URI="mirror://sourceforge/docutils/${P}.tar.gz
+		 glep? ( mirror://gentoo/glep-${PV}.tbz2 )"
 
 LICENSE="public-domain PYTHON BSD"
 SLOT="0"
-KEYWORDS="x86 ppc ~alpha ~amd64 ~sparc"
-IUSE=""
+KEYWORDS="~x86 ~ppc ~alpha ~sparc ~ppc-macos"
+IUSE="glep"
+DEPEND=">=dev-lang/python-2.2"
 
-DEPEND="<dev-lang/python-2.4"
-
-# GLEP version
-GLEP_SRC=${FILESDIR}/glep-${PV}
+GLEP_SRC=${WORKDIR}/glep-${PV}
 
 src_unpack() {
 	unpack ${A}
@@ -40,7 +39,13 @@ install_txt_doc() {
 	dodoc ${doc}
 }
 
+src_test() {
+	cd ${S}/test
+	./alltests.py || die "alltests.py failed"
+}
+
 src_install() {
+	cd ${S}
 	mydoc="MANIFEST.in *.txt"
 	distutils_src_install
 	# Tools
@@ -58,12 +63,15 @@ src_install() {
 	done
 
 	# installing Gentoo GLEP tools. Uses versioned GLEP distribution
-	distutils_python_version
-	newbin ${GLEP_SRC}/glep.py docutils-glep.py || die "newbin failed"
-	insinto /usr/lib/python${PYVER}/site-packages/docutils/readers
-	newins ${GLEP_SRC}/glepread.py glep.py || die "newins reader failed"
-	insinto /usr/lib/python${PYVER}/site-packages/docutils/transforms
-	newins ${GLEP_SRC}/glepstrans.py gleps.py || "newins transform failed"
-	insinto /usr/lib/python${PYVER}/site-packages/docutils/writers
-	newins ${GLEP_SRC}/glep_htmlwrite.py glep_html.py || die "newins writer failed"
+	if use glep
+	then
+		distutils_python_version
+		newbin ${GLEP_SRC}/glep.py docutils-glep.py || die "newbin failed"
+		insinto /usr/lib/python${PYVER}/site-packages/docutils/readers
+		newins ${GLEP_SRC}/glepread.py glep.py || die "newins reader failed"
+		insinto /usr/lib/python${PYVER}/site-packages/docutils/transforms
+		newins ${GLEP_SRC}/glepstrans.py gleps.py || "newins transform failed"
+		insinto /usr/lib/python${PYVER}/site-packages/docutils/writers
+		newins ${GLEP_SRC}/glep_htmlwrite.py glep_html.py || die "newins writer failed"
+	fi
 }

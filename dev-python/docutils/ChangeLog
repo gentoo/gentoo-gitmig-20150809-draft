@@ -1,6 +1,14 @@
 # ChangeLog for dev-python/docutils
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/ChangeLog,v 1.22 2005/02/19 06:19:11 gongloo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/ChangeLog,v 1.23 2005/03/14 19:38:08 pythonhead Exp $
+
+*docutils-0.3.7 (14 Mar 2005)
+
+  14 Mar 2005; Rob Cakebread <pythonhead@gentoo.org>
+  +files/docutils-0.3.7-extramodules.patch, docutils-0.3-r1.ebuild,
+  docutils-0.3.3-r1.ebuild, docutils-0.3.5.ebuild, +docutils-0.3.7.ebuild,
+  docutils-0.3_pre20030530-r3.ebuild:
+  Fixed python 2.4 DEPENDs. Added src_test to 0.3.7. Marked 0.3.5 x86 bug# 79635
 
   19 Feb 2005; <gongloo@gentoo.org> docutils-0.3.5.ebuild:
   Stable on ppc-macos.
