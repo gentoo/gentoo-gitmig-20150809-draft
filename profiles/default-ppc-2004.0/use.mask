@@ -11,6 +11,7 @@ svga
 sse 
 firebird
 tcc
+acpi
 
 # For ppc SElinux support please use the SElinux profile
 # Maintained by Chris Pebenito <pebenito@gentoo.org>
