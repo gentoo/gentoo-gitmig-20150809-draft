@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/hardened-dev-sources
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-dev-sources/ChangeLog,v 1.16 2004/05/07 20:25:37 tseng Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-dev-sources/ChangeLog,v 1.17 2004/05/20 02:23:02 lv Exp $
+
+  20 May 2004; Travis Tilley <lv@gentoo.org>
+  hardened-dev-sources-2.6.4-r4.ebuild, hardened-dev-sources-2.6.5-r3.ebuild:
+  added amd64 keyword
 
   07 May 2004; Brandon Hale <tseng@gentoo.org>
   hardened-dev-sources-2.6.4-r4.ebuild:
