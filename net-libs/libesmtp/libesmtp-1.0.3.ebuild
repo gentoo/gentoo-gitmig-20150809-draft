@@ -1,30 +1,26 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libesmtp/libesmtp-1.0-r1.ebuild,v 1.11 2004/09/03 01:14:59 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libesmtp/libesmtp-1.0.3.ebuild,v 1.1 2004/09/03 01:14:59 ticho Exp $
 
 inherit gcc eutils gnuconfig libtool
 
-IUSE="ssl"
-
+MY_P="${P}r1"
 DESCRIPTION="libESMTP is a library that implements the client side of the SMTP protocol"
-SRC_URI="http://www.stafford.uklinux.net/${PN}/${P}.tar.bz2"
+SRC_URI="http://www.stafford.uklinux.net/${PN}/${MY_P}.tar.bz2"
 HOMEPAGE="http://www.stafford.uklinux.net/${PN}/"
+LICENSE="LGPL-2.1 GPL-2"
 
-DEPEND=">=sys-devel/libtool-1.4.1
-	ssl? ( >=dev-libs/openssl-0.9.6b )
+RDEPEND="ssl? ( >=dev-libs/openssl-0.9.6b )"
+
+DEPEND="${RDEPEND}
+	>=sys-devel/libtool-1.4.1
 	>=sys-apps/sed-4"
 
-RDEPEND=""
-
+IUSE="ssl"
 SLOT="0"
-LICENSE="LGPL-2.1 GPL-2"
-KEYWORDS="x86 sparc ~ppc alpha"
+KEYWORDS="~x86 ~sparc ~ppc ~alpha ~amd64"
 
-src_unpack() {
-	unpack ${A} ; cd ${S}
-
-	epatch ${FILESDIR}/${P}-openssl.patch
-}
+S="${WORKDIR}/${MY_P}"
 
 src_compile() {
 	gnuconfig_update
@@ -39,7 +35,8 @@ src_compile() {
 		myconf="${myconf} --disable-isoc"
 	fi
 
-	./configure --prefix=/usr \
+	./configure \
+		--prefix=/usr \
 		--enable-all \
 		--enable-threads \
 		${myconf} || die "configure failed"
@@ -52,7 +49,9 @@ src_compile() {
 }
 
 src_install () {
+
 	make prefix=${D}/usr install || die "make install failed"
 	dodoc AUTHORS COPYING COPYING.GPL INSTALL ChangeLog NEWS Notes README TODO
 	dohtml doc/api.xml
+
 }

@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/libesmtp
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libesmtp/ChangeLog,v 1.17 2004/06/24 23:12:11 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libesmtp/ChangeLog,v 1.18 2004/09/03 01:14:59 ticho Exp $
+
+*libesmtp-1.0.3 (03 Sep 2004)
+
+  03 Sep 2004; Andrej Kacian <ticho@gentoo.org> metadata.xml,
+  +libesmtp-1.0.3.ebuild:
+  Version bump. Reported by Torsten Stets <mai98bmg@studserv.uni-leipzig.de>,
+  closing #57194. Use ${PN} in SRC_URI and HOMEPAGE for all libesmtp ebuilds.
 
   13 Apr 2004; Danny van Dyk <kugelfang@gentoo.org> libesmtp-1.0.1.ebuild:
   marked ~amd64
