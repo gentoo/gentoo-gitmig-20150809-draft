@@ -136,6 +136,7 @@ net-misc/netkit-telnetd
 *sys-apps/man
 *sys-apps/man-pages
 *sys-apps/modutils
+*net-misc/iputils
 *sys-apps/net-tools
 *sys-apps/netkit-base
 *sys-apps/procps
