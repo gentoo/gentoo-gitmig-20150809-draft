@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.51 2003/06/11 07:19:52 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.52 2003/06/11 23:07:52 rac Exp $
+
+*mysql-4.0.13-r2 (11 Jun 2003)
+
+  11 Jun 2003; <rac@gentoo.org> mysql-4.0.13-r2.ebuild:
+  Allow user CFLAGS to determine -O level, instead of imposing -O3
 
 *mysql-4.0.13-r1 (31 May 2003)
 
