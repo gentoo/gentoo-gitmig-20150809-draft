@@ -1,0 +1,13 @@
+--- src/cdpar.c.org	2004-01-03 16:16:56.000000000 +0100
++++ src/cdpar.c	2004-01-03 16:17:03.000000000 +0100
+@@ -44,8 +44,8 @@
+ #define size16 short
+ #define size32 int
+ 
+-#include <cdda/cdda_interface.h>
+-#include <cdda/cdda_paranoia.h>
++#include <cdda_interface.h>
++#include <cdda_paranoia.h>
+ 
+ static void PutNum(long num,int f,int endianness,int bytes);
+ static void WriteWav(int f,long bytes);
