@@ -1,0 +1,10 @@
+# ChangeLog for dev-util/calltree
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/calltree/ChangeLog,v 1.1 2003/05/23 10:36:35 pauldv Exp $
+
+*calltree-0.2.95 (23 May 2003)
+
+  23 May 2003; Paul de Vrieze <pauldv@gentoo.org> calltree-0.2.95.ebuild:
+  Initial commit. calltree is a program that is needed for the newer
+  version of Kcachegrind.
+
