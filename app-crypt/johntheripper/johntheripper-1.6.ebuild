@@ -1,18 +1,19 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/johntheripper-1.6.ebuild,v 1.7 2003/02/10 06:46:26 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/johntheripper-1.6.ebuild,v 1.8 2003/02/13 05:38:01 seemant Exp $
 
 inherit eutils
 
 IUSE="mmx"
 
-PN0="john"
-S=${WORKDIR}/${PN0}-${PV}
-DEBPATCH=${PN0}_${PV}-17.diff.gz
+MY_PN=${PN/theripper/}
+MY_P=${MY_PN}-${PV}
+S=${WORKDIR}/${MY_P}
+DEBPATCH=${MY_PN}_${PV}-17.diff
 DESCRIPTION="John the Ripper is a fast password cracker."
 HOMEPAGE="http://www.openwall.com/${PN0}/"
-SRC_URI="${HOMEPAGE}/${PN0}-${PV}.tar.gz
-	 http://ftp.debian.org/debian/pool/main/j/${PN0}/${DEBPATCH}"
+SRC_URI="${HOMEPAGE}/${MY_P}.tar.gz
+	 http://ftp.debian.org/debian/pool/main/j/${PN0}/${DEBPATCH}.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
@@ -21,8 +22,8 @@ KEYWORDS="x86 sparc "
 DEPEND=">=sys-devel/binutils-2.8.1.0.15"
 
 src_unpack() {
-	unpack ${PN0}-${PV}.tar.gz
-	epatch ${DISTDIR}/${DEBPATCH}
+	unpack ${A}
+	epatch ${WORKDIR}/${DEBPATCH}
 }
 
 src_compile() {
