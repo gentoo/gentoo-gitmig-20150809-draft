@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/xmmsctrl
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmmsctrl/ChangeLog,v 1.6 2003/07/11 11:25:54 seemant Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmmsctrl/ChangeLog,v 1.7 2004/03/01 05:31:06 eradicator Exp $
+
+  29 Feb 2004; Jeremy Huddleston <eradicator@gentoo.org> metadata.xml,
+  xmmsctrl-1.6-r1.ebuild, xmmsctrl-1.6.ebuild:
+  Removing ~mips as it can't satisfy DEPEND.
 
 *xmmsctrl-1.6-r1 (11 Jul 2003)
 
