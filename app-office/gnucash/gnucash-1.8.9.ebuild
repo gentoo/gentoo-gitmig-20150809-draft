@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-1.8.9.ebuild,v 1.1 2004/05/11 09:38:27 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-1.8.9.ebuild,v 1.2 2004/05/11 17:53:17 seemant Exp $
 
 inherit flag-o-matic libtool
 
@@ -10,14 +10,14 @@ filter-flags -fomit-frame-pointer
 filter-flags -fno-inline
 
 DOC_VER="1.8.4"
-IUSE="nls postgres ofx hbci"
+IUSE="nls postgres ofx hbci quotes"
 
 DESCRIPTION="A personal finance manager"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz
 	mirror://sourceforge/${PN}/${PN}-docs-${DOC_VER}.tar.gz"
 HOMEPAGE="http://www.gnucash.org/"
 
-KEYWORDS="x86 alpha ~ppc ~sparc"
+KEYWORDS="~x86 ~alpha ~ppc ~sparc"
 SLOT="0"
 LICENSE="GPL-2"
 
@@ -39,8 +39,11 @@ RDEPEND=">=gnome-base/gnome-libs-1.4.1.2-r1
 	app-text/docbook-xsl-stylesheets
 	=app-text/docbook-xml-dtd-4.1.2*
 	=sys-libs/db-1*
-	hbci? ( >=net-libs/openhbci-0.9.13 )
 	ofx? ( >=dev-libs/libofx-0.6.4 )
+	hbci? ( >=net-libs/openhbci-0.9.13 )
+	quotes? ( dev-perl/DateManip
+		dev-perl/Finance-Quote
+		dev-perl/HTML-TableExtract )
 	postgres? ( dev-db/postgresql )"
 
 DEPEND="${RDEPEND}
@@ -91,6 +94,13 @@ pkg_postinst() {
 	if [ -x ${ROOT}/usr/bin/scrollkeeper-update ]; then
 		echo ">>> Updating Scrollkeeper"
 		scrollkeeper-update -q -p ${ROOT}/var/lib/scrollkeeper
+	fi
+
+	if [ -z "`use quotes`" ]; then
+		ewarn
+		einfo "If you wish to enable Online Stock Quotes Retrieval,"
+		einfo "Please re-emerge gnucash with USE=\"quotes\""
+		ewarn
 	fi
 }
 

@@ -1,6 +1,10 @@
 # ChangeLog for app-office/gnucash
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/ChangeLog,v 1.43 2004/05/11 09:38:26 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/ChangeLog,v 1.44 2004/05/11 17:53:17 seemant Exp $
+
+  11 May 2004; Seemant Kulleen <seemant@gentoo.org> gnucash-1.8.9.ebuild:
+  added quotes local USE flag to enable online stock quote retrieval. Closes
+  bug #29083 by SpanKY <vapier@gentoo.org>
 
 *gnucash-1.8.9 (11 May 2004)
 
