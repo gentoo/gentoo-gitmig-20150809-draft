@@ -1,5 +1,6 @@
 #!/sbin/runscript
 # Portions Copyright 2003 Gentoo Linux
+# $ Header: $
 #
 # script originally from Courier distfile original name = courier.sysvinit
 # adapted for Gentoo by Brian Jackson
