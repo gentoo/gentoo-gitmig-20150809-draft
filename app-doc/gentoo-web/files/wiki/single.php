@@ -171,7 +171,8 @@
 				?></select>
 				<?php } else {
 					print "$public - <img src=\"images/$public.gif\" width=16 height=16>";
-				} ?><br>
+				}
+				if ( $team != 'Infrastructure' ) { ?><br>
 				<b>Branch:</b>
 				<?php if ( $theirs ) {
 					if (!$branch) $branch = 'none'; ?>
@@ -184,6 +185,7 @@
 				<?php } else {
 					print $branch;
 				}
+				} # if ( $team != 'Infrastructure' )
 
 				if ( $uid && $uid != $todo['owner'] && $public == 'public' ) { ?>
 					<br><a href="index.php?action=grab_todo&tid=<?=$tid;?>"><img src="images/grab.gif" border=0 width=109 height=15></a>
