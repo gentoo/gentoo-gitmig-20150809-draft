@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/regex-markup
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/regex-markup/ChangeLog,v 1.1 2003/10/12 20:17:01 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/regex-markup/ChangeLog,v 1.2 2003/11/25 01:34:06 zul Exp $
+
+  24 Nov 2003; Chuck Short <zul@gentoo.org> regex-markup-0.9.0.ebuild:
+  Marked stable.
 
 *regex-markup-0.9.0 (12 Oct 2003)
 
