@@ -1,6 +1,14 @@
 # ChangeLog for dev-perl/MIME-Base64
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MIME-Base64/ChangeLog,v 1.15 2004/01/18 22:22:38 tuxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MIME-Base64/ChangeLog,v 1.16 2004/02/14 14:17:08 mcummings Exp $
+
+*MIME-Base64-3.00 (14 Feb 2004)
+
+  14 Feb 2004; Michael Cummings,,, <mcummings@gentoo.org> :
+  2 series isn't available off of cpan anymore, or from the mirrors, forced to
+  do a major bump. Tested on sparc and x86. Sorry folks - Michael
+
+*MIME-Base64-3.00 (14 Feb 2004)
 
   18 Jan 2004; <tuxus@gentoo.org> MIME-Base64-2.20.ebuild:
   Added ~mips to KEYWORDS.
