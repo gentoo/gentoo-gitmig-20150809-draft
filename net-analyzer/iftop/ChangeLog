@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/iftop
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iftop/ChangeLog,v 1.6 2003/09/03 21:48:28 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iftop/ChangeLog,v 1.7 2003/09/25 03:18:39 zul Exp $
+
+  24 Sep 2003; Chuck Short <zul@gentoo.org> :
+  Version bump, closes bug #28057.
 
 *iftop-0.13 (03 Sep 2003)
 
