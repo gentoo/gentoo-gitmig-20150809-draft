@@ -1,0 +1,10 @@
+# ChangeLog for net-www/tikiwiki
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/tikiwiki/ChangeLog,v 1.1 2003/12/30 16:01:47 mholzer Exp $
+
+*tikiwiki-1.7.4 (30 Dec 2003)
+
+  30 Dec 2003; Martin Holzer <mholzer@gentoo.org> tikiwiki-1.7.4.ebuild:
+  Inital ebuild submitted by Gualter Barbas Baptista <gualter@gaia.org.pt> in
+  32435
+
