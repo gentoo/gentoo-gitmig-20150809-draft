@@ -1,6 +1,10 @@
 # ChangeLog for dev-tcltk/tclgpgme
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclgpgme/ChangeLog,v 1.9 2004/09/10 01:59:26 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclgpgme/ChangeLog,v 1.10 2004/09/18 09:22:01 dragonheart Exp $
+
+  18 Sep 2004; Daniel Black <dragonheart@gentoo.org> metadata.xml,
+  tclgpgme-1.0-r1.ebuild:
+  x86 stable. Taking over maintaince
 
   10 Sep 2004; Daniel Black <dragonheart@gentoo.org> tclgpgme-1.0.ebuild:
   Modified gpgme dependancy in preparation of stabilisation

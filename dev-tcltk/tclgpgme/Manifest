@@ -1,17 +1,17 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 55bb8dbf1364b54f44a74a89df2bdefd ChangeLog 993
+MD5 bb66b1e68d2b506857f1305ba71f51d1 ChangeLog 1125
 MD5 6508b4f3986b7abbc68e1567b7abd8fe tclgpgme-1.0.ebuild 797
-MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
-MD5 bd1915fae9434e1ced32096afc7174bc tclgpgme-1.0-r1.ebuild 833
+MD5 a5b6e338682ae5b8d1b1804d4eb3e9cd metadata.xml 322
+MD5 11e50d3825d269f8e83e86350121851d tclgpgme-1.0-r1.ebuild 838
 MD5 4e3e9586fdec9cf9cb7630c99969095b files/1.0-Makefile.in.diff 796
 MD5 6999cca5e670e9e7ea1f6483633b38a3 files/digest-tclgpgme-1.0 61
 MD5 6999cca5e670e9e7ea1f6483633b38a3 files/digest-tclgpgme-1.0-r1 61
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.4 (GNU/Linux)
 
-iD8DBQFBQQuUmdTrptrqvGERAgqRAKCBkIOjpyQWV0VQHn3LZ1vZtLAtpgCggZwx
-x+9yK/yowP25NP8pAGc/xYU=
-=fZZY
+iD8DBQFBS/5AmdTrptrqvGERAnSbAJwOMz1v4ShCJb7lt52qYpfI11hCnACglJ7M
+s3v2hNfrFrjLOHdDjtE8cig=
+=AoI/
 -----END PGP SIGNATURE-----
