@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_rc4-r1.ebuild,v 1.2 2004/05/15 19:52:05 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_rc4-r1.ebuild,v 1.3 2004/05/18 01:03:25 avenj Exp $
 
 inherit eutils flag-o-matic gcc libtool
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/xine/${PN}-${PV/_/-}${MY_PKG_SUFFIX}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="1"
-KEYWORDS="~x86 ~ppc -hppa ~sparc -amd64 -ia64 ~alpha"
+KEYWORDS="~x86 ~ppc -hppa ~sparc ~amd64 -ia64 ~alpha"
 IUSE="arts esd avi nls dvd aalib X directfb oggvorbis alsa gnome sdl speex theora ipv6"
 
 RDEPEND="oggvorbis? ( media-libs/libvorbis )
@@ -69,6 +69,9 @@ src_unpack() {
 	epatch ${FILESDIR}/xine-lib-gcc34.patch
 
 	elibtoolize #40317
+
+	# Fix building on amd64, #49569
+	use amd64 && epatch ${FILESDIR}/configure-64bit-define.patch
 }
 
 src_compile() {
