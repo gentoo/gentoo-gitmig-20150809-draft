@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ptex/ptex-3.1.2.ebuild,v 1.1 2003/07/26 16:14:06 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ptex/ptex-3.1.2.ebuild,v 1.2 2003/07/29 16:31:28 usata Exp $
 
 inherit eutils flag-o-matic
 filter-flags "-fstack-protector"
@@ -111,7 +111,8 @@ src_compile() {
 		--without-dvipdfm \
 		${myconf}
 
-	emake texmf=/usr/share/texmf || die "make teTeX failed"
+	# emake sometimes b0rks on SPARC
+	make texmf=/usr/share/texmf || die "make teTeX failed"
 
 	cat <<-EOF>>${S}/texk/web2c/fmtutil.cnf
 
