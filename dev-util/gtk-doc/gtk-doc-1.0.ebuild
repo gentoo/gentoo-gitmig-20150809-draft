@@ -1,15 +1,14 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc/gtk-doc-1.0.ebuild,v 1.11 2003/07/15 13:20:34 todd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc/gtk-doc-1.0.ebuild,v 1.12 2003/08/03 02:32:24 vapier Exp $
 
 inherit gnome.org
 
-S=${WORKDIR}/${P}
 DESCRIPTION="GTK+ Documentation Generator"
 HOMEPAGE="http://www.gtk.org/"
 
-SLOT="0"
 LICENSE="GPL-2"
+SLOT="0"
 KEYWORDS="x86 ppc sparc ~alpha hppa"
 
 DEPEND=">=dev-util/pkgconfig-0.12.0
@@ -23,20 +22,16 @@ DEPEND=">=dev-util/pkgconfig-0.12.0
 
 src_compile() {
 	local myconf
+	use debug \
+		&& myconf="--enable-debug=yes" \
+		|| myconf="--enable-debug=no"
 
-	if [ "${DEBUGBUILD}" ]
-	then
-		myconf="--enable-debug=yes"
-	else
-		myconf="--enable-debug=no"
-	fi
-	
-	econf ${myconf}
+	econf ${myconf} || die
 	emake || die
 }
 
 src_install() {
-	einstall
+	einstall || die
 
 	dodoc AUTHORS ChangeLog COPYING INSTALL README* NEWS 
 	docinto doc
