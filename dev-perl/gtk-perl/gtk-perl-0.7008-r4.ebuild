@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk-perl/gtk-perl-0.7008-r4.ebuild,v 1.10 2002/10/18 14:25:10 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk-perl/gtk-perl-0.7008-r4.ebuild,v 1.11 2002/10/18 14:32:28 mcummings Exp $
 
 inherit perl-module
 
@@ -24,7 +24,7 @@ newdepend "=x11-libs/gtk+-1.2* \
 
 mydoc="VERSIONS WARNING NOTES"
 
-myconf="${myconf} --withoutguessing"
+myconf="${myconf} --without-guessing"
 
 src_compile() {
 
