@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/sylpheed-claws
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws/ChangeLog,v 1.21 2004/10/17 23:06:51 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws/ChangeLog,v 1.22 2004/10/18 01:43:26 weeve Exp $
+
+  17 Oct 2004; Jason Wever <weeve@gentoo.org>
+  sylpheed-claws-0.9.12b-r1.ebuild:
+  Added ~sparc keyword wrt bug #66691.
 
 *sylpheed-claws-0.9.12b-r1 (18 Oct 2004)
 

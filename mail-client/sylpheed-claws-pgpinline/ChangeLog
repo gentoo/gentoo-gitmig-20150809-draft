@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/sylpheed-claws-pgpinline
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws-pgpinline/ChangeLog,v 1.1 2004/10/17 23:10:01 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws-pgpinline/ChangeLog,v 1.2 2004/10/18 01:41:57 weeve Exp $
+
+  17 Oct 2004; Jason Wever <weeve@gentoo.org>
+  sylpheed-claws-pgpinline-0.2.ebuild:
+  Added ~sparc keyword wrt bug #66691.
 
 *sylpheed-claws-pgpinline-0.2 (18 Oct 2004)
 
