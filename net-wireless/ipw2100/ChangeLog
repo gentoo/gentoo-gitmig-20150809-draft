@@ -1,6 +1,13 @@
 # ChangeLog for net-wireless/ipw2100
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw2100/ChangeLog,v 1.9 2004/03/18 22:07:40 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw2100/ChangeLog,v 1.10 2004/03/25 04:35:39 latexer Exp $
+
+*ipw2100-0.38 (24 Mar 2004)
+
+  24 Mar 2004; Peter Johanson <latexer@gentoo.org> ipw2100-0.37.ebuild,
+  ipw2100-0.38.ebuild, files/ipw2100-0.38-makefile-1.diff,
+  files/ipw2100-0.38-makefile-2.diff, files/ipw2100-0.38-resume.patch:
+  Bump. 0.38 includes a fix for ACPI resume issues. Enjoy.
 
 *ipw2100-0.35 (18 Mar 2004)
 
