@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/wolk-sources
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/wolk-sources/ChangeLog,v 1.56 2004/08/10 01:53:22 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/wolk-sources/ChangeLog,v 1.57 2004/08/15 01:16:16 nerdboy Exp $
+
+*wolk-sources-4.15 (14 Aug 2004)
+
+  14 Aug 2004; Steve Arnold <nerdboy@gentoo.org> +files/binfmt_elf.patch,
+  wolk-sources-4.14-r7.ebuild, +wolk-sources-4.15.ebuild:
+  Added wolk 4.15, contributed by Lance Albertson <ramereth@gentoo.org>
+  bumped 4.14-r7 to x86 (since it was basically a series of security fixes)
 
 *wolk-sources-4.9-r14 (10 Aug 2004)
 

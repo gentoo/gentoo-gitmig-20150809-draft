@@ -1,0 +1,38 @@
+--- fs/binfmt_elf.c	2004-07-20 14:54:17.000000000 -0500
++++ fs/binfmt_elf.c.new	2004-07-21 10:04:29.000000000 -0500
+@@ -105,7 +105,7 @@
+ 
+ #ifdef CONFIG_GRKERNSEC_PAX_RANDEXEC
+ 	if (current->flags & PF_PAX_RANDEXEC)
+-		__do_mmap_pgoff(NULL, ELF_PAGEALIGN(start + current->mm->delta_exec), 0UL, PROT_READ | PROT_WRITE, MAP_PRIVATE | MAP_FIXED | MAP_MIRROR, start);
++		__do_mmap_pgoff(current->mm, NULL, ELF_PAGEALIGN(start + current->mm->delta_exec), 0UL, PROT_READ | PROT_WRITE, MAP_PRIVATE | MAP_FIXED | MAP_MIRROR, start);
+ #endif
+ 
+ }
+@@ -983,7 +983,7 @@
+ 				if (len > SEGMEXEC_TASK_SIZE || addr > SEGMEXEC_TASK_SIZE-len)
+ 					continue;
+ 				down_write(&current->mm->mmap_sem);
+-				error = __do_mmap_pgoff(bprm->file, addr, len, elf_prot, elf_flags, (elf_ppnt->p_offset - ELF_PAGEOFFSET(elf_ppnt->p_vaddr)) >> PAGE_SHIFT);
++				error = error = __do_mmap_pgoff(current->mm, bprm->file, addr, len, elf_prot, elf_flags, (elf_ppnt->p_offset - ELF_PAGEOFFSET(elf_ppnt->p_vaddr)) >> PAGE_SHIFT);
+ 				up_write(&current->mm->mmap_sem);
+ 			}
+ #endif
+@@ -1011,14 +1011,14 @@
+ #ifdef CONFIG_GRKERNSEC_PAX_SEGMEXEC
+ 			if (current->flags & PF_PAX_SEGMEXEC) {
+ 				if (elf_prot & PROT_EXEC) {
+-					load_addr_random = __do_mmap_pgoff(NULL, ELF_PAGESTART(load_bias_random + vaddr), elf_ppnt->p_memsz + ELF_PAGEOFFSET(elf_ppnt->p_vaddr), PROT_NONE, MAP_PRIVATE | MAP_FIXED, 0UL);
++					load_addr_random = __do_mmap_pgoff(current->mm, NULL, ELF_PAGESTART(load_bias_random + vaddr), elf_ppnt->p_memsz + ELF_PAGEOFFSET(elf_ppnt->p_vaddr), PROT_NONE, MAP_PRIVATE | MAP_FIXED, 0UL);
+ 					if (!BAD_ADDR(load_addr_random)) {
+-						load_addr_random = __do_mmap_pgoff(NULL, ELF_PAGESTART(load_bias_random + vaddr + SEGMEXEC_TASK_SIZE), 0UL, elf_prot, elf_flags | MAP_MIRROR, error);
++						load_addr_random = __do_mmap_pgoff(current->mm, NULL, ELF_PAGESTART(load_bias_random + vaddr + SEGMEXEC_TASK_SIZE), 0UL, elf_prot, elf_flags | MAP_MIRROR, error); 
+ 						if (!BAD_ADDR(load_addr_random))
+ 							load_addr_random -= SEGMEXEC_TASK_SIZE;
+ 					}
+ 				} else
+-					load_addr_random = __do_mmap_pgoff(NULL, ELF_PAGESTART(load_bias_random + vaddr), 0UL, elf_prot, elf_flags | MAP_MIRROR, error);
++					load_addr_random = __do_mmap_pgoff(current->mm, NULL, ELF_PAGESTART(load_bias_random + vaddr), 0UL, elf_prot, elf_flags | MAP_MIRROR, error);
+ 			}
+ #endif
+ 
