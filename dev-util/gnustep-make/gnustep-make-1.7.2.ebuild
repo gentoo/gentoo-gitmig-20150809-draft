@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gnustep-make/gnustep-make-1.7.2.ebuild,v 1.3 2004/01/29 16:21:31 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gnustep-make/gnustep-make-1.7.2.ebuild,v 1.4 2004/05/04 15:59:27 kloeri Exp $
 
 IUSE="X"
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.gnustep.org/pub/gnustep/core/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha"
+KEYWORDS="~x86 ~ppc ~sparc alpha"
 
 DEPEND="virtual/glibc
 	>=sys-devel/gcc-3.2
