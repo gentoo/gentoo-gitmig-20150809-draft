@@ -6,7 +6,7 @@ MD5 658a9d46f96119d1d6bed25dfa7147fd sylpheed-claws-0.9.10.ebuild 3755
 MD5 e2fbaf474d88efb6b9f39a805abb80fe sylpheed-claws-0.9.7.ebuild 4664
 MD5 629047acc47cd15a42e01cddaa25e9c1 sylpheed-claws-0.9.11.ebuild 3755
 MD5 d9766ef8a00cfb3bf78d19a4c66d55e3 ChangeLog 15941
-MD5 86da52ff9c034e1d4e597fdba07babb1 sylpheed-claws-0.9.12a-r1.ebuild 6383
+MD5 1f1fa99f67770d5aa82bc24b99256685 sylpheed-claws-0.9.12a-r1.ebuild 6466
 MD5 b069e484f8a50b4b494eb55aca483dc1 sylpheed-claws-0.9.12a.ebuild 4301
 MD5 e5a1953a555e8060722cada98b9d55fb files/digest-sylpheed-claws-0.9.10 149
 MD5 8ca534b232f6988e9df8e9fd48563e43 files/digest-sylpheed-claws-0.9.11 149
@@ -18,7 +18,7 @@ MD5 127bc1fa7e9c9f3d46b0df6f05446360 files/digest-sylpheed-claws-0.9.12a-r1 442
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.5 (GNU/Linux)
 
-iD8DBQFBLNGQ6J2i8a8J4okRAlp/AKCKIPIjFKKpPpKtF/wsq+7UP4iEngCgijdK
-rkCRHbWHMxJHbbO4b+CV5YY=
-=bEL0
+iD8DBQFBLNPa6J2i8a8J4okRAmqiAJ4qNZ320WVuggVPY39a/IExhcrrxACfc/ne
+bvCeGADZ+PXQL6tPaWyG4H0=
+=YzLg
 -----END PGP SIGNATURE-----
