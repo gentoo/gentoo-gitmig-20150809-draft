@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libstroke
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libstroke/ChangeLog,v 1.11 2004/03/25 04:18:32 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libstroke/ChangeLog,v 1.12 2004/03/30 20:52:06 spyderous Exp $
+
+  30 Mar 2004; Donnie Berkholz <spyderous@gentoo.org>; libstroke-0.4.ebuild,
+  libstroke-0.5.1.ebuild:
+  Change x11-base/xfree dependency to virtual/x11.
 
   24 Mar 2004; Jason Wever <weeve@gentoo.org> libstroke-0.5.1.ebuild:
   Stable on sparc.

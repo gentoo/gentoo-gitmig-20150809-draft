@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libstroke/libstroke-0.5.1.ebuild,v 1.5 2004/03/25 04:18:32 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libstroke/libstroke-0.5.1.ebuild,v 1.6 2004/03/30 20:52:06 spyderous Exp $
 
 inherit gnuconfig
 
@@ -15,7 +15,7 @@ KEYWORDS="x86 sparc alpha ~ppc ~amd64"
 
 DEPEND=">=sys-libs/glibc-2.1.3
 	>=x11-libs/gtk+-1.2.10
-	>=x11-base/xfree-4.0.3"
+	virtual/x11"
 
 src_compile() {
 	gnuconfig_update
