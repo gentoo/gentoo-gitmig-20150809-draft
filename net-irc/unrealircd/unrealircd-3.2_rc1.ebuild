@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/unrealircd-3.2_rc1.ebuild,v 1.4 2004/03/06 12:15:13 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/unrealircd-3.2_rc1.ebuild,v 1.5 2004/04/22 12:01:54 zul Exp $
 
-MY_P=Unreal3.2-RC1
+MY_P=Unreal3.2-RC2
 DESCRIPTION="aimed to be an advanced (not easy) IRCd"
 HOMEPAGE="http://www.unrealircd.com/"
 SRC_URI="http://www.gower.net/unrealircd/${MY_P}.tar.gz
@@ -22,7 +22,7 @@ S=${WORKDIR}/Unreal3.2
 src_compile() {
 	local myconf=" --enable-nospoof \
 	--prefix=/usr \
-	--with-dpath=${D}/etc/unrealircd \
+	--with-dpath=/etc/unrealircd \
 	--with-spath=/usr/bin/unrealircd \
 	--enable-prefixaq \
 	--enable-ziplinks \
