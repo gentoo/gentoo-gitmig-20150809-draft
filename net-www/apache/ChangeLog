@@ -1,6 +1,17 @@
 # ChangeLog for net-www/apache
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
 
+*apache-2.0.40-r1 (04 Sept 2002)
+
+  04 Sept 2002; Nicholas Jones <carpaski@gentoo.org> :
+	Made it path compliant. Fixed the modules files. Fixed the init.d and
+	conf.d files. Still needs default configs and more tuning.
+
+*apache-2.0.40 (15 Aug 2002)
+
+  15 Aug 2002; Michael J. Cohen <mjc@gentoo.org> :
+  Initial release, needs a few modules cleaned up as well as paths
+
 *apache-1.3.26-r4 (3 Jul 2002)
 
   14 Aug 2002; Pieter Van den Abeele <pvdabeel@gentoo.org> :
