@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/dxpc/dxpc-3.8.2.ebuild,v 1.1 2003/11/22 16:11:43 port001 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/dxpc/dxpc-3.8.2.ebuild,v 1.2 2004/04/11 15:01:15 pyrania Exp $
 
 IUSE=""
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.vigor.nu/dxpc/"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 DEPEND="virtual/x11
 	>=dev-libs/lzo-1.0.8"

@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/dsx
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/dsx/ChangeLog,v 1.1 2003/11/15 02:17:58 abhishek Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/dsx/ChangeLog,v 1.2 2004/04/11 15:01:08 pyrania Exp $
+
+  11 Apr 2004; Markus Nigbur <pyrania@gentoo.org> dsx-0.1.ebuild:
+  Marked stable.
 
 *dsx-0.1 (14 Nov 2003)
 
