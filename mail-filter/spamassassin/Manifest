@@ -1,5 +1,5 @@
-MD5 c709aaee3e517e1706e8737f5c59b0d1 spamassassin-2.63.ebuild 2262
-MD5 36f5c1a3bdf1fe8c32bf4bf525390c0d ChangeLog 8162
+MD5 9eaca4316a17c6ed8a9b867e95cc5b49 spamassassin-2.63.ebuild 2293
+MD5 12acd73c513f1a9eb1784be43234e5fb ChangeLog 8317
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 1ed9c6ddcb224ed5d2ad37aab7c0cce9 files/spamd.conf 265
 MD5 78e6ff428976e0b024f67eaa9d060ab3 files/spamd.init 652
