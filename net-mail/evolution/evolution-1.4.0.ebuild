@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-1.4.0.ebuild,v 1.9 2003/09/05 08:46:39 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-1.4.0.ebuild,v 1.10 2003/09/09 07:05:20 obz Exp $
 
 IUSE="ssl mozilla ldap doc spell pda ipv6 kerberos kde"
 
@@ -32,7 +32,6 @@ RDEPEND=">=gnome-extra/libgtkhtml-3.0.5
 	>=gnome-base/libgnomeui-2.0
 	>=gnome-base/libglade-2.0
 	>=gnome-base/libgnome-2.0
-	>=gnome-base/bonobo-activation-2.2.1
 	>=dev-libs/libxml2-2.5
 	>=gnome-base/gconf-2.0
 	>=gnome-base/libgnomecanvas-2.2.0.2
