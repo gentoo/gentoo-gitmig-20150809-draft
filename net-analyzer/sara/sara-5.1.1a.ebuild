@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sara/sara-5.0.5b.ebuild,v 1.5 2004/08/05 23:16:40 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sara/sara-5.1.1a.ebuild,v 1.1 2004/08/05 23:16:40 squinky86 Exp $
 
 DESCRIPTION="SARA Security Auditor's Research Assistant is a derived work of Security Administrator Tool for Analyzing Networks SATAN"
 SRC_URI="http://www-arc.com/sara/downloads/${P}.tgz"
@@ -9,7 +9,7 @@ HOMEPAGE="http://www-arc.com/sara/"
 
 SLOT="0"
 LICENSE="satan"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="~x86 ~ppc"
 IUSE="X"
 
 DEPEND=">=dev-lang/perl-5.8 \
@@ -30,7 +30,7 @@ src_install() {
 
 	dodir ${SARA_HOME}
 	insinto ${SARA_HOME}
-	doins add_user reconfig status_file
+	doins add_user reconfig
 	exeinto ${SARA_HOME}
 	doexe sara
 	dodir ${SARA_HOME}/administrators
@@ -39,11 +39,11 @@ src_install() {
 	dodir ${SARA_HOME}/config
 	insinto ${SARA_HOME}/config ; doins config/*
 	dodir ${SARA_HOME}/perl
-	insinto ${SARA_HOME}/perl ;  doins perl/*.pl perl/*.pm
+	insinto ${SARA_HOME}/perl ;  doins perl/*.pl
 	dodir ${SARA_HOME}/perl/contrib
 	insinto ${SARA_HOME}/perl/contrib ; doins perl/contrib/*
-	dodir ${SARA_HOME}/perl/Net
-	insinto ${SARA_HOME}/perl/Net ; doins perl/Net/*
+	dodir ${SARA_HOME}/perl/Modules/Net
+	insinto ${SARA_HOME}/perl/Modules/Net ; doins perl/Modules/Net/*
 	dodir ${SARA_HOME}/rules
 	insinto ${SARA_HOME}/rules
 	doins rules/drop rules/corrections.default rules/facts rules/hosttype rules/*.rules \
@@ -91,5 +91,5 @@ src_install() {
 pkg_postinst() {
 	einfo "Read the documentation in ${SARA_HOME}/html directory before run this program."
 	einfo "You must have installed a WWW browser."
-	einfo "For run, type from ${SARA_HOME} directory ./sara"
+	einfo "To run, type from ${SARA_HOME} directory ./sara"
 }
