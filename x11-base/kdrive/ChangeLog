@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/kdrive
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/kdrive/ChangeLog,v 1.5 2003/09/16 09:25:28 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/kdrive/ChangeLog,v 1.6 2003/10/13 03:42:42 spyderous Exp $
+
+  12 Oct 2003; Donnie Berkholz <spyderous@gentoo.org>; kdrive-4.3.0-r1.ebuild:
+  Major reworking of ebuild, centered around removing repetitive statements.
+  Also smaller fixes.
 
 *kdrive-4.3.0-r1 (16 Sep 2003)
 

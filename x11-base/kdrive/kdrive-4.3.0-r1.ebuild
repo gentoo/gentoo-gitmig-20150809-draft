@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/kdrive/kdrive-4.3.0-r1.ebuild,v 1.1 2003/09/16 09:25:28 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/kdrive/kdrive-4.3.0-r1.ebuild,v 1.2 2003/10/13 03:42:42 spyderous Exp $
 
 # If you don't want to build the Xvesa server, do this.
 # VESA="no" emerge kdrive
@@ -11,7 +11,7 @@ RESTRICT="nostrip"
 
 IUSE="ipv6 xinerama fbdev"
 
-# VIDEO_CARDS="savage trident sis trio ts300 mach64 i810 igs"
+# VIDEO_CARDS="savage trident sis530 trio ts300 mach64 i810 igs"
 
 filter-flags "-funroll-loops"
 
@@ -47,22 +47,19 @@ PATCHDIR="${WORKDIR}/patch"
 BASE_PV="${PV}"
 MY_SV="${BASE_PV//\.}"
 S="${WORKDIR}/xc"
-SRC_PATH0="ftp://ftp.xfree.org/pub/XFree86/${BASE_PV}/source"
-SRC_PATH1="ftp://ftp1.sourceforge.net/pub/mirrors/XFree86/${BASE_PV}/source"
+SRC_PATH="mirror://xfree/${BASE_PV}/source"
 HOMEPAGE="http://www.xfree.org"
 
-SRC_URI="${SRC_PATH0}/X${MY_SV}src-1.tgz
-	${SRC_PATH0}/X${MY_SV}src-2.tgz
-	${SRC_PATH0}/X${MY_SV}src-3.tgz
-	${SRC_PATH1}/X${MY_SV}src-1.tgz
-	${SRC_PATH1}/X${MY_SV}src-2.tgz
-	${SRC_PATH1}/X${MY_SV}src-3.tgz
+SRC_URI="${SRC_PATH}/X${MY_SV}src-1.tgz
+	${SRC_PATH}/X${MY_SV}src-2.tgz
+	${SRC_PATH}/X${MY_SV}src-3.tgz
 	mirror://gentoo/${P}-gentoo-${PATCHVER}.tar.bz2"
 
 LICENSE="X11"
 SLOT="0"
 KEYWORDS="x86"
 
+# Need portage for USE_EXPAND
 DEPEND=">=sys-apps/baselayout-1.8.3
 	>=sys-libs/ncurses-5.1
 	>=sys-libs/zlib-1.1.3-r2
@@ -71,7 +68,7 @@ DEPEND=">=sys-apps/baselayout-1.8.3
 	>=sys-apps/sed-4
 	dev-lang/perl
 	media-libs/libpng
-	pam? ( >=sys-libs/pam-0.75 )"
+	>=sys-apps/portage-2.0.49-r13"
 
 PROVIDE="virtual/x11"
 
@@ -79,7 +76,7 @@ PROVIDE="virtual/x11"
 #do the right thing. Otherwise RDEPEND doesn't get set properly.
 inherit eutils flag-o-matic gcc xfree
 
-DESCRIPTION="Xfree86: famous and free X server. Tiny version (Kdrive)"
+DESCRIPTION="Xfree86: famous and free X server. Tiny version (KDrive)"
 
 vesa() {
 	has "$1" "${VESA}"
@@ -87,7 +84,6 @@ vesa() {
 
 src_unpack() {
 
-	# Unpack and patch source
 	unpack ${A}
 	# Update from Keith Packard's CVS repo, www.keithp.com
 	epatch ${PATCHDIR}/kdrive-keithp-CVS-20030707.patch
@@ -95,9 +91,12 @@ src_unpack() {
 	epatch ${PATCHDIR}/XFree86-4.2.99.1-kdrive-posix-sigaction.patch
 
 	ebegin "Setting up config/cf/host.def"
+
+	# See linux.cf for MMX, 3DNOW and SSE autodetection. (spyderous)
+
 	cd ${S}
 	touch config/cf/host.def
-	echo "#define XVendorString \"Gentoo Linux (TinyX ${PV}, revision ${PR})\"
+	echo "#define XVendorString \"Gentoo Linux (KDrive ${PV}, revision ${PR})\"
 #define KDriveXServer YES
 #define TinyXServer YES
 #define ProjectRoot /usr/X11R6
@@ -122,30 +121,26 @@ src_unpack() {
 	# Bug #12775 .. fails with -Os.
 	replace-flags "-Os" "-O2"
 
-	if [ "`gcc-version`" != "2.95" ]
-	then
+	if [ "`gcc-version`" != "2.95" ] ; then
 		# Should fix bug #4189.  gcc-3.x have problems with -march=pentium4
 		# and -march=athlon-tbird
 		replace-flags "-march=pentium4" "-march=pentium3"
 		replace-flags "-march=athlon-tbird" "-march=athlon"
 
 		# Without this, modules breaks with gcc3
-		if [ "`gcc-version`" = "3.1" ]
-		then
+		if [ "`gcc-version`" = "3.1" ] ; then
 			append-flags "-fno-merge-constants"
 			append-flags "-fno-merge-constants"
 		fi
 	fi
 
-	if [ "`uname -r | cut -d. -f1,2`" != "2.2" ]
-	then
+	is_kernel "2" "2" && \
 		echo "#define HasLinuxInput YES" >> config/cf/host.def
-	fi
 
 	echo "#define OptimizedCDebugFlags ${CFLAGS}" >> config/cf/host.def
 	echo "#define OptimizedCplusplusDebugFlags ${CXXFLAGS}" >> config/cf/host.def
-	if use debug
-	then
+
+	if use debug ; then
 		echo "#define XFree86Devel	YES" >> config/cf/host.def
 		echo "#define DoLoadableServer	NO" >>config/cf/host.def
 	else
@@ -154,56 +149,21 @@ src_unpack() {
 			>> config/cf/host.def
 	fi
 
-	if [ "${ARCH}" = "x86" ] && false # Let X decide this
-	then
-		# optimize for architecture
-		if use mmx
-		then
-			echo "#define HasMMXSupport	YES" >> config/cf/host.def
-		else
-			echo "#define HasMMXSupport	NO" >> config/cf/host.def
-		fi
-		if use mmx && use 3dnow
-		then
-			echo "#define Has3DNowSupport YES" >> config/cf/host.def
-		else
-			echo "#define Has3DNowSupport NO" >> config/cf/host.def
-		fi
-		if use mmx && use sse
-		then
-			echo "#define HasKatmaiSupport YES" >> config/cf/host.def
-		else
-			echo "#define HasKatmaiSupport NO" >> config/cf/host.def
-		fi
-
-	fi
-
 	# Xvesa isn't available on non-x86, non-gcc platforms.
 	# See http://lists.debian.org/debian-x/2000/debian-x-200012/msg00029.html
 
-	if vesa no
-	then
+	if vesa no || [ "${ARCH}" != "x86" ] ; then
 		echo "#define XvesaServer NO" >> config/cf/host.def
 	else
-		if [ "${ARCH}" != "x86" ]
-		then
-			echo "#define XvesaServer NO" >> config/cf/host.def
-		else
-			echo "#define XvesaServer YES" >> config/cf/host.def
-		fi
+		echo "#define XvesaServer YES" >> config/cf/host.def
 	fi
 
-	if use fbdev
-	then
-		echo "#define XfbdevServer YES" >> config/cf/host.def
-	else
+	use fbdev && \
+		echo "#define XfbdevServer YES" >> config/cf/host.def || \
 		echo "#define XfbdevServer NO" >> config/cf/host.def
-	fi
 
-	if use ipv6
-	then
+	use ipv6 && \
 		echo "#define HasIPv6 YES" >> config/cf/host.def
-	fi
 
 	if use xinerama
 	then
@@ -216,53 +176,15 @@ src_unpack() {
 	# fonts (but support for built-in ``fixed'' and ``cursor'' fonts, and
 	# normal support for bitmap fonts and font-server provided fonts).
 
-#	if use video_cards_savage
-	if vcards savage
-	then
-		echo "#define XSavageServer YES" >> config/cf/host.def
-	fi
-
-#	if use video_cards_trident
-	if vcards trident
-	then
-		echo "#define XTridentServer YES" >> config/cf/host.def
-	fi
-
-#	if use video_cards_sis
-	if vcards sis
-	then
-		echo "#define XSis530Server YES" >> config/cf/host.def
-	fi
-
-#	if use video_cards_trio
-	if vcards trio
-	then
-		echo "#define XTrioServer YES" >> config/cf/host.def
-	fi
-
-#	if use video_cards_ts300
-	if vcards ts300
-	then
-		echo "#define XTS300Server YES" >> config/cf/host.def
-	fi
-
-#	if use video_cards_igs
-	if vcards igs
-	then
-		echo "#define XIgsServer YES" >> config/cf/host.def
-	fi
-
-#	if use video_cards_i810
-	if vcards i810
-	then
-		echo "#define Xi810Server YES" >> config/cf/host.def
-	fi
-
-#	if use video_cards_mach64
-	if vcards mach64
-	then
-		echo "#define Xmach64Server YES" >> config/cf/host.def
-	fi
+local KDRIVE_XF_SERVERS="Savage Trident Sis530 Trio TS300 Igs i810 mach64"
+for i in ${KDRIVE_XF_SERVERS} ;
+	do
+# I wish it worked like this. (spyderous)
+#		if use video_cards_${i/[A-Z]/[a-z]} ; then
+		if use `echo video_cards_${i} | tr [:upper:] [:lower:]` ; then
+			echo "#define X${i}Server YES" >> config/cf/host.def
+		fi
+done
 
 	eend 0
 }
@@ -280,9 +202,9 @@ src_compile() {
 	unset MAKE_OPTS
 
 	einfo "Building XFree86..."
-	emake World || die
+	emake World WORLDOPTS="" || die
 
-# Build man
+# Build all man pages because I can't just build one. (spyderous)
 	ebegin "Making and installing man pages..."
 	local M=${WORKDIR}/man
 	mkdir ${M}
@@ -295,87 +217,37 @@ src_install() {
 
 	exeinto /usr/X11R6/bin
 
-	if [ -z "`vesa no`" ]
-	then
+	if [ -z "`vesa no`" ] ; then
 		doexe programs/Xserver/Xvesa
-		fperms 4755 /usr/X11R6/bin/Xvesa
+		fperms 4711 /usr/X11R6/bin/Xvesa
 	fi
 
-	if use fbdev
-	then
+	if use fbdev ; then
 		doexe programs/Xserver/Xfbdev
-		fperms 4755 /usr/X11R6/bin/Xfbdev
+		fperms 4711 /usr/X11R6/bin/Xfbdev
 	fi
 
-#	if use video_cards_savage
-	if vcards savage
-	then
-		doexe programs/Xserver/Xsavage
-		fperms 4755 /usr/X11R6/bin/Xsavage
-	fi
+local KDRIVE_SERVERS="savage trident sis530 trio ts300 igs i810 mach64"
+for i in ${KDRIVE_SERVERS} ;
+	do
+		if use video_cards_${i} ; then
+			doexe programs/Xserver/X${i}
+			fperms 4711 /usr/X11R6/bin/X${i}
+		fi
+	done
 
-#	if use video_cards_trident
-	if vcards trident
-	then
-		doexe programs/Xserver/Xtrident
-		fperms 4755 /usr/X11R6/bin/Xtrident
-	fi
-
-#	if use video_cards_sis
-	if vcards sis
-	then
-		doexe programs/Xserver/Xsis530
-		fperms 4755 /usr/X11R6/bin/Xsis530
-	fi
-
-#	if use video_cards_trio
-	if vcards trio
-	then
-		doexe programs/Xserver/Xtrio
-		fperms 4755 /usr/X11R6/bin/Xtrio
-	fi
-
-#	if use video_cards_ts300
-	if vcards ts300
-	then
-		doexe programs/Xserver/Xts300
-		fperms 4755 /usr/X11R6/bin/Xts300
-	fi
-
-#	if use video_cards_igs
-	if vcards igs
-	then
-		doexe programs/Xserver/Xigs
-		fperms 4755 /usr/X11R6/bin/Xigs
-	fi
-
-#	if use video_cards_i810
-	if vcards i810
-	then
-		doexe programs/Xserver/Xi810
-		fperms 4755 /usr/X11R6/bin/Xi810
-	fi
-
-#	if use video_cards_mach64
-	if vcards mach64
-	then
-		doexe programs/Xserver/Xmach64
-		fperms 4755 /usr/X11R6/bin/Xmach64
-	fi
-
-# We also need to install our startx script.
-	exeinto /usr/X11R6/bin
+	# Install our startx script
 	doexe ${PATCHDIR}/startxkd
 
+	# Install man pages
 	local M=${WORKDIR}/man
-	if use fbdev
-	then
+
+	use fbdev && \
 		doman -x11 ${M}/usr/X11R6/man/man1/Xfbdev.1x
-	fi
-	if [ -z "`vesa no`" ]
-	then
+
+	[ -z "`vesa no`" ] && \
 		doman -x11 ${M}/usr/X11R6/man/man1/Xvesa.1x
-	fi
+
 	doman -x11 ${M}/usr/X11R6/man/man1/Xkdrive.1x
 
 }
@@ -387,4 +259,5 @@ pkg_postinst() {
 	einfo "Or you can use something like:"
 	einfo "\"xinit -- /usr/X11R6/bin/Xvesa :0 -screen 1280x1024x16 -nolisten tcp\"."
 	einfo "Your ~/.xinitrc will be used if you use xinit."
+
 }
