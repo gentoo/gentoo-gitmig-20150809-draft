@@ -1,6 +1,27 @@
 # ChangeLog for dev-ruby/ruby-gtk2
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gtk2/ChangeLog,v 1.3 2003/07/28 09:50:57 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gtk2/ChangeLog,v 1.4 2003/08/06 13:37:25 agriffis Exp $
+
+*ruby-gtk2-0.5.0-r1 (06 Aug 2003)
+
+  06 Aug 2003; Aron Griffis <agriffis@gentoo.org> ruby-gtk2-0.5.0-r1.ebuild:
+  Update this ebuild to use the new ruby-gnome2.eclass.  The effects of this
+  change are:
+
+    1. All the ruby-gnome2 ebuilds use the same source tarball, so there's
+       less overall to download.
+
+    2. This ebuild doesn't supply pango, glib2 or gdk_pixbuf2. Instead it
+       RDEPENDS on the appropriate ruby-* ebuilds. I did a careful comparison
+       to make sure that the file listing of the combined packages is
+       equivalent to the previous file listing of this single package. 
+
+    3. The ebuild is a lot smaller and easier to maintain.
+
+	4. I removed the KEYWORDS I'm fairly certain were not added by the
+	   appropriate arch teams.  Considering how many bugs crop up when
+	   bindings like this are built on another architecture, I think it's best
+	   to follow policy on this.
 
 *ruby-gtk2-0.5.0 (10 Jun 2003)
 
