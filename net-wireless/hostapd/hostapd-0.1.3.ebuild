@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/hostapd-0.1.3.ebuild,v 1.2 2004/06/25 00:44:50 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/hostapd-0.1.3.ebuild,v 1.3 2004/07/15 05:27:31 agriffis Exp $
 
 inherit eutils
 
@@ -12,7 +12,6 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
 DEPEND=">=net-wireless/hostap-driver-0.1.0"
-S="${WORKDIR}/${P}"
 
 src_compile() {
 	emake CC="${CC}" CFLAGS="${CFLAGS}" || die
