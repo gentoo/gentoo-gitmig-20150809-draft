@@ -1,13 +1,15 @@
 # ChangeLog for net-dns/djbdns
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/ChangeLog,v 1.2 2002/07/12 20:55:58 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/ChangeLog,v 1.3 2002/09/10 14:44:49 drobbins Exp $
+
+  10 Sep 2002; Daniel Robbins <drobbins@gentoo.org>: djbdns-1.05-r3: fixed unpack()
+  and made the ipv6 patch dependent upon the setting of the ipv6 USE variable. No
+  rev bump. This closes bug #7236.
 
 *djbdns-1.05-r3 (12 Jul 2002)
 
-  12 Jul 2002; Grant Goodyear <g2boojum@gentoo.org> ChangeLog  :
-
-  Added ipv6 patch if ipv6 in USE; thanks to Sascha Silbe for pointing out
-  this patch
+  12 Jul 2002; Grant Goodyear <g2boojum@gentoo.org> ChangeLog  : Added ipv6
+  patch if ipv6 in USE; thanks to Sascha Silbe for pointing out this patch
 
 *djbdns-1.05-r2 (13 May 2002)
 

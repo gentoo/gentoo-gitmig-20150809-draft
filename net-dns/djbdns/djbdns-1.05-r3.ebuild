@@ -1,11 +1,10 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/djbdns-1.05-r3.ebuild,v 1.4 2002/08/29 20:51:35 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/djbdns-1.05-r3.ebuild,v 1.5 2002/09/10 14:44:49 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Excellent high-performance DNS services"
-SRC_URI="http://cr.yp.to/djbdns/${P}.tar.gz
-		 http://www.fefe.de/dns/djbdns-1.05-test17.diff.bz2"
+SRC_URI="http://cr.yp.to/djbdns/${P}.tar.gz ipv6? http://www.fefe.de/dns/djbdns-1.05-test17.diff.bz2"
 HOMEPAGE="http://cr.yp.to/djbdns.html"
 
 LICENSE="as-is"
@@ -18,7 +17,7 @@ RDEPEND=">=sys-apps/daemontools-0.70
 
 src_unpack() {
 	unpack ${P}.tar.gz
-	use ipv6 && bzcat ${DISTDIR}/djbdns-1.05-test17.diff.bz2 | patch -d ${S} -p1|| die
+	use ipv6 && { bzcat ${DISTDIR}/djbdns-1.05-test17.diff.bz2 | patch -d ${S} -p1 || die "Failed to apply the ipv6 patch"; }
 }
 
 src_compile() {                           
