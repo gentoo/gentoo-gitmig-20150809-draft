@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ecasound/ecasound-2.2.3.ebuild,v 1.5 2003/10/16 19:53:19 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ecasound/ecasound-2.2.3.ebuild,v 1.6 2004/01/22 11:50:22 torbenh Exp $
 
 IUSE="ncurses arts alsa python oss mikmod oggvorbis jack"
 
@@ -30,7 +30,10 @@ DEPEND="virtual/glibc
 src_unpack() {
 	unpack ${A}
 	cd ${S}
+
 	sed -i 's:map.h:map:g' configure
+	sed -i "/#include <alsa\\/asoundlib.h>/i\\#define ALSA_PCM_OLD_HW_PARAMS_API 1\\" libecasound/plugins/audioio_alsa.cpp
+	sed -i "/#include <alsa\\/asoundlib.h>/i\\#define ALSA_PCM_OLD_HW_PARAMS_API 1\\" libecasound/plugins/audioio_alsa_named.cpp
 }
 
 src_compile () {
