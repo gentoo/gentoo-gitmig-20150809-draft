@@ -1,6 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ntop-2.0.99_rc2-r2.ebuild,v 1.5 2002/10/04 05:59:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ntop-2.0.99_rc2-r2.ebuild,v 1.6 2002/10/05 05:39:17 drobbins Exp $
+
+IUSE="ssl readline mysql"
 
 S=${WORKDIR}/RC2/ntop
 DESCRIPTION="ntop is a unix tool that shows network usage like top"

@@ -1,6 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-2.2.5.ebuild,v 1.5 2002/10/04 06:03:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-2.2.5.ebuild,v 1.6 2002/10/05 05:39:18 drobbins Exp $
+
+IUSE="tcpd ldap cups ssl acl"
 
 DESCRIPTION="SAMBA is a suite of SMB and CIFS client/server programs for UNIX"
 HOMEPAGE="http://www.samba.org"

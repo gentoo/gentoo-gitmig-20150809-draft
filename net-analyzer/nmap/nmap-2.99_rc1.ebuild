@@ -1,6 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/nmap-2.99_rc1.ebuild,v 1.2 2002/08/14 12:12:28 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/nmap-2.99_rc1.ebuild,v 1.3 2002/10/05 05:39:17 drobbins Exp $
+
+IUSE="gtk gnome ipv6"
 
 MY_P="${P/_rc/RC}"
 S=${WORKDIR}/${MY_P}

@@ -1,6 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/djbdns-1.05-r3.ebuild,v 1.6 2002/10/04 06:02:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/djbdns-1.05-r3.ebuild,v 1.7 2002/10/05 05:39:18 drobbins Exp $
+
+IUSE="ipv6"
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Excellent high-performance DNS services"

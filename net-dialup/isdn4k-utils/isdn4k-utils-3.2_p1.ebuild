@@ -1,6 +1,8 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/isdn4k-utils-3.2_p1.ebuild,v 1.2 2002/10/04 06:01:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/isdn4k-utils-3.2_p1.ebuild,v 1.3 2002/10/05 05:39:18 drobbins Exp $
+
+IUSE="mysql"
 
 S=${WORKDIR}/${PN}
 DESCRIPTION="ISDN-4-Linux Utils"

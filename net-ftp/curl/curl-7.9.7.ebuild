@@ -1,6 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/curl/curl-7.9.7.ebuild,v 1.7 2002/10/04 06:03:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/curl/curl-7.9.7.ebuild,v 1.8 2002/10/05 05:39:18 drobbins Exp $
+
+IUSE="ssl"
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A Client that groks URLs"

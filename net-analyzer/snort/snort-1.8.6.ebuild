@@ -1,6 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-1.8.6.ebuild,v 1.5 2002/08/14 12:12:29 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-1.8.6.ebuild,v 1.6 2002/10/05 05:39:17 drobbins Exp $
+
+IUSE="ssl postgres mysql"
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Libpcap-based packet sniffer/logger/lightweight IDS"
