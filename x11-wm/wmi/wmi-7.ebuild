@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/wmi/wmi-7.ebuild,v 1.6 2004/08/30 19:19:31 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/wmi/wmi-7.ebuild,v 1.7 2004/09/27 02:55:40 usata Exp $
 
 DESCRIPTION="WMI is a new window manager for X11, which combines the best features of larswm, ion, evilwm and ratpoison into one window manager."
 HOMEPAGE="http://wmi.berlios.de/"
@@ -11,8 +11,7 @@ SLOT="0"
 KEYWORDS="x86 ppc"
 IUSE=""
 
-DEPEND="virtual/x11
-	dev-libs/STLport"
+DEPEND="virtual/x11"
 
 src_install () {
 	make DESTDIR=${D} install || die
