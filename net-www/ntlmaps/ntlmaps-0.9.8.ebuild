@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/ntlmaps/ntlmaps-0.9.8.ebuild,v 1.1 2004/06/11 08:43:55 satya Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/ntlmaps/ntlmaps-0.9.8.ebuild,v 1.2 2004/06/11 18:10:52 dholm Exp $
 
 DESCRIPTION="NTLM proxy. Authentication against MS proxy/web server written in python"
 HOMEPAGE="http://ntlmaps.sourceforge.net/"
@@ -9,7 +9,7 @@ S=${WORKDIR}/${MY_P_URL}
 SRC_URI="mirror://sourceforge/ntlmaps/${MY_P_URL}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 DEPEND=">=dev-lang/python-1.5"
 IUSE=""
 
