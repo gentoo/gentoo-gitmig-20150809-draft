@@ -1,6 +1,10 @@
 # ChangeLog for net-fs/netatalk
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/ChangeLog,v 1.21 2004/12/12 06:03:06 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/ChangeLog,v 1.22 2004/12/12 21:52:24 rphillips Exp $
+
+  12 Dec 2004; <rphillips@gentoo.org> netatalk-2.0.1.ebuild:
+  fixed invalid USE variable. includes cracklib by default now and pulls in the
+  dependency
 
 *netatalk-2.0.1 (11 Dec 2004)
 

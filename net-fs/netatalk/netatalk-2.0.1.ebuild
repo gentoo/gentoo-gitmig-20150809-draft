@@ -1,9 +1,9 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/netatalk-2.0.1.ebuild,v 1.1 2004/12/12 06:03:06 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/netatalk-2.0.1.ebuild,v 1.2 2004/12/12 21:52:24 rphillips Exp $
 
 inherit eutils flag-o-matic
-IUSE="ssl pam tcpd slp cups kerberos krb4 afs debug cracklib"
+IUSE="ssl pam tcpd slp cups kerberos krb4 afs debug"
 
 DESCRIPTION="kernel level implementation of the AppleTalk Protocol Suite"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
@@ -14,6 +14,7 @@ LICENSE="GPL-2"
 KEYWORDS="~x86 ~ppc"
 
 RDEPEND="sys-apps/shadow
+	sys-libs/cracklib
 	pam? ( sys-libs/pam )
 	ssl? ( dev-libs/openssl )
 	tcpd? ( sys-apps/tcp-wrappers )
@@ -21,8 +22,7 @@ RDEPEND="sys-apps/shadow
 	cups? ( net-print/cups )
 	afs? ( net-fs/openafs )
 	kerberos? ( virtual/krb5 )
-	krb4? ( virtual/krb5 )
-	cracklib? ( sys-libs/cracklib )"
+	krb4? ( virtual/krb5 )"
 
 DEPEND="${RDEPEND}
 	sys-apps/sed"
@@ -59,7 +59,7 @@ src_compile() {
 		$(use_enable cups) \
 		$(use_enable ssl) \
 		$(use_enable debug) \
-		$(use_with cracklib) \
+		--with-cracklib \
 		--enable-fhs \
 		--with-shadow \
 		--with-bdb=/usr \
