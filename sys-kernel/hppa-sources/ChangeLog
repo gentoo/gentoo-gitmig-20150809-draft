@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/hppa-sources
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hppa-sources/ChangeLog,v 1.23 2003/12/18 19:17:19 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hppa-sources/ChangeLog,v 1.24 2003/12/28 02:18:48 gmsoft Exp $
+
+*hppa-sources-2.4.23_p4-r1 (28 Dec 2003)
+
+  28 Dec 2003; Guy Martin <gmsoft@gentoo.org> hppa-sources-2.4.23_p4-r1.ebuild :
+  Added xfs support. Tweaks defconfig for more reasonable 'gentoo' defaults.
 
 *hppa-sources-2.4.23_p4 (18 Dec 2003)
 
