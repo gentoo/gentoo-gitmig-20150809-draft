@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-019-r1.ebuild,v 1.1 2004/02/29 00:23:16 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-019-r1.ebuild,v 1.2 2004/02/29 11:14:50 azarah Exp $
 
 # Note: Cannot use external libsysfs with klibc ..
 USE_KLIBC="no"
@@ -118,7 +118,7 @@ src_install() {
 	doins ${FILESDIR}/udev.conf
 #	newins etc/udev/udev.rules udev.rules.example
 	# For devfs style layout
-	newins ${FILESDIR}/udev.rules.post_012 udev.rules
+	newins ${FILESDIR}/udev.rules-018 udev.rules
 	# Our own custom udev.permissions
 	doins ${FILESDIR}/udev.permissions
 #	doins etc/udev/udev.permissions
