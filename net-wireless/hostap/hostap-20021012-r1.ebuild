@@ -1,21 +1,22 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostap/hostap-20021012-r1.ebuild,v 1.9 2003/03/24 23:57:17 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostap/hostap-20021012-r1.ebuild,v 1.10 2003/04/07 00:28:03 latexer Exp $
 
 inherit eutils
 
 DESCRIPTION="HostAP wireless drivers"
 HOMEPAGE="http://hostap.epitest.fi/"
 
-if [ -n "`use pcmcia`" ]; then
-	has_version '=sys-apps/pcmcia-cs-3.2.1*' && PCMCIA_VERSION="3.2.1"
-	has_version '=sys-apps/pcmcia-cs-3.2.3*' && PCMCIA_VERSION="3.2.3"
-	has_version '=sys-apps/pcmcia-cs-3.2.4*' && PCMCIA_VERSION="3.2.4"
-fi
+MY_PCMCIA="pcmcia-cs-3.2.1"
 
-MY_PCMCIA="pcmcia-cs-${PCMCIA_VERSION}"
+PATCH_3_2_2="${MY_PCMCIA}-3.2.2.diff.gz"
+PATCH_3_2_3="${MY_PCMCIA}-3.2.3.diff.gz"
+PATCH_3_2_4="${MY_PCMCIA}-3.2.4.diff.gz"
 SRC_URI="http://hostap.epitest.fi/releases/${PN}-2002-10-12.tar.gz
-		pcmcia? ( mirror://sourceforge/pcmcia-cs/${MY_PCMCIA}.tar.gz )"
+		pcmcia? ( mirror://sourceforge/pcmcia-cs/${MY_PCMCIA}.tar.gz )
+		pcmcia? ( mirror://gentoo/${PATCH_3_2_2} )
+		pcmcia? ( mirror://gentoo/${PATCH_3_2_3} )
+		pcmcia? ( mirror://gentoo/${PATCH_3_2_4} )"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -37,12 +38,25 @@ else
 fi
 
 src_unpack() {
-	unpack ${A}
-	cd ${S}
+	unpack ${PN}-2002-10-12.tar.gz
+
+	if [ -n "`use pcmcia`" ]; then
+		unpack ${MY_PCMCIA}.tar.gz
+		cd ${WORKDIR}/${MY_PCMCIA}
+		if [ -z "`has_version =sys-apps/pcmcia-cs-3.2.4*`" ]; then
+			epatch ${DISTDIR}/${PATCH_3_2_4}
+		elif [ -z "`has_version =sys-apps/pcmcia-cs-3.2.3*`" ]; then
+			epatch ${DISTDIR}/${PATCH_3_2_3}
+		elif [ -z "`has_version =sys-apps/pcmcia-cs-3.2.2*`" ]; then
+			epatch ${DISTDIR}/${PATCH_3_2_2}
+		fi
+	fi
+
 
 	# This is a patch that has already been applied to the hostap
 	# cvs tree. It fixes hostapd compilation for gcc-3.2
 
+	cd ${S}
 	epatch ${FILESDIR}/${P}-gentoo-patch.diff
 
 	mv Makefile ${T}
