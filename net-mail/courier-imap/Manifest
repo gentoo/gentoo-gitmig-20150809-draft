@@ -2,14 +2,12 @@ MD5 bb9fc1d0628d1a719bbf4f52bbe59fcd courier-imap-1.7.1.ebuild 5262
 MD5 fb165fc2d4178bc45ab1c41600196098 courier-imap-1.7.3-r1.ebuild 6869
 MD5 c6bc519510721ac4af838457798367e3 courier-imap-1.6.2-r1.ebuild 4813
 MD5 e399aedb51a23ab288d5f2d2d2be868c courier-imap-1.7.3.ebuild 6856
-MD5 fec05da6d35205b535fbe3f25fffba27 courier-imap-2.0.0-r1.ebuild 6714
 MD5 7a974af8a51e0f760d3fcb108f349fdb courier-imap-1.7.0.ebuild 4954
 MD5 3ceeec6646001e4da5a2e32051f19267 courier-imap-1.7.2.ebuild 6696
-MD5 3af1188ca8ee8811edaf2b175800bfac courier-imap-2.1.1.ebuild 6697
-MD5 40a2b7d03331f15a0b264519b2ade11a ChangeLog 6941
-MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
+MD5 d0a5bec5417f35c4961e5e9661e75559 courier-imap-2.1.1.ebuild 6571
+MD5 cfd741d09b6ea8102640c00e975bd2b4 ChangeLog 7117
+MD5 6b964abdc013cf2bb64040e8e33215ae metadata.xml 242
 MD5 fba567e34491b014536e1ee20da7bdc9 courier-imap-2.0.0.ebuild 6598
-MD5 d76de3c27c501ddaf14a8e3128bc6336 files/courier-imap-2.0.0-removetcldepend.patch 1930
 MD5 f959e38175d1fd8f8e7a977a14f7265f files/gentoo-pop3d-1.7.3-r1.rc 1018
 MD5 e448df5fdbc088132766b33d27f27073 files/gentoo-imapd.rc 1006
 MD5 6eabb1afe28900b3ed92bc9889116303 files/courier-imapd-ssl.rc6 1207
@@ -35,7 +33,6 @@ MD5 c7fcdd240762eddd559da4a56028d167 files/digest-courier-imap-2.1.1 72
 MD5 a949b3b821df42c3cfee300c25a53750 files/gentoo-imapd-1.7.3-r1.rc 1027
 MD5 9626da27b0e11f495ea062e6166e11d3 files/gentoo-imapd-ssl.rc 1013
 MD5 70a999ccc2bc13e7df65b72959fa6f7d files/gentoo-pop3d.rc 997
-MD5 2c48420faba16395e99faa48d098414a files/digest-courier-imap-2.0.0-r1 72
 MD5 12b60a6d075d607adf99f90af1a300e3 files/authdaemond.rc6 976
 MD5 70a104ae9721e2f5d86a8f7c326d9f1d files/courier-pop3d.rc6 960
 MD5 7b677e761c000af45fa7a37635b0c5c8 files/mkpop3dcert 996
