@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich/mpich-1.2.5.2.ebuild,v 1.3 2004/03/17 09:20:28 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich/mpich-1.2.5.2.ebuild,v 1.4 2004/03/26 10:36:48 dholm Exp $
 
 DESCRIPTION="MPICH - A portable MPI implementation"
 HOMEPAGE="http://www-unix.mcs.anl.gov/mpi/mpich"
@@ -8,7 +8,7 @@ SRC_URI="ftp://ftp.mcs.anl.gov/pub/mpi/${P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ~ppc"
 IUSE="doc crypt"
 
 DEPEND="virtual/glibc"
