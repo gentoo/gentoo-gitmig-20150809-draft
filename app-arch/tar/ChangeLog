@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/tar
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/ChangeLog,v 1.28 2004/10/10 07:58:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/ChangeLog,v 1.29 2004/10/10 20:26:15 eradicator Exp $
+
+  10 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org> tar-1.14.90.ebuild:
+  Fixed SRC_URI.
 
 *tar-1.14.90 (10 Oct 2004)
 
