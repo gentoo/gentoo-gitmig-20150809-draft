@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/epic4
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/epic4/ChangeLog,v 1.10 2003/02/12 08:04:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/epic4/ChangeLog,v 1.11 2003/03/24 09:37:23 aliz Exp $
+
+  24 Mar 2003; Daniel Ahlberg <aliz@gentoo.org> *.ebuild :
+  Changed SRC_URI from epicsol.org to prbh.org due to persistent DoS attacks. From nsx in #gentoo.
 
 *epic4-1.1.10 (09 Feb 2003)
 

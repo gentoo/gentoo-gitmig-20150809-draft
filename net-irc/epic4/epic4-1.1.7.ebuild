@@ -1,12 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-irc/epic4/epic4-1.1.7.ebuild,v 1.5 2003/03/11 21:11:46 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/epic4/epic4-1.1.7.ebuild,v 1.6 2003/03/24 09:37:23 aliz Exp $
 
 IUSE="ipv6 perl ssl"
 
 DESCRIPTION="Epic4 IRC Client"
-SRC_URI="ftp://ftp.epicsol.org/pub/epic/EPIC4-ALPHA/${P}.tar.bz2
-	 ftp://epicsol.org/pub/epic/EPIC4-BETA/epic4pre2-help.tar.gz"
+SRC_URI="ftp://prbh.org/pub/epic/EPIC4-ALPHA/${P}.tar.bz2
+	 ftp://prbh.org/pub/epic/EPIC4-BETA/epic4pre2-help.tar.gz"
 HOMEPAGE="http://epicsol.org"
 
 SLOT="0"
