@@ -1,6 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/pearpc/pearpc-0.3.1.ebuild,v 1.3 2005/01/01 14:15:09 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/pearpc/pearpc-0.3.1.ebuild,v 1.4 2005/02/24 18:17:29 port001 Exp $
+
+inherit flag-o-matic
 
 IUSE="debug jit sdl"
 #IUSE="debug qt gtk jit sdl"
@@ -28,14 +30,17 @@ RDEPEND="virtual/x11
 
 DEFAULT_TO_X11=0
 
-#pkg_setup() {
+pkg_setup() {
+
+	append-ldflags -Wl,-z,now
+
 #	if (use qt && use sdl) || (use qt && use gtk) || (use gtk && sdl) || (use gtk && use qt && use sdl); then
 #		ewarn
 #		ewarn "More than one frontend USE flags enabled, defaulting to X11 support."
 #		ewarn
 #		DEFAULT_TO_X11=1
 #	fi		
-#}
+}
 
 src_compile() {
 	local myconf
