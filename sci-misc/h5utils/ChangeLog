@@ -1,6 +1,6 @@
-# ChangeLog for app-sci/h5utils
+# ChangeLog for sci-misc/h5utils
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/h5utils/ChangeLog,v 1.1 2004/12/27 21:15:09 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/h5utils/ChangeLog,v 1.2 2004/12/28 03:42:10 swegener Exp $
 
 *h5utils-1.7.2 (27 Dec 2004)
 

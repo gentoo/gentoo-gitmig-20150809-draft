@@ -1,6 +1,6 @@
-# ChangeLog for app-sci/comedi
+# ChangeLog for sci-misc/comedi
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/comedi/ChangeLog,v 1.1 2004/12/27 21:40:39 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/comedi/ChangeLog,v 1.2 2004/12/28 03:39:14 swegener Exp $
 
 *comedi-0.7.68 (27 Dec 2004)
 
