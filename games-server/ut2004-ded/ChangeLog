@@ -1,0 +1,13 @@
+# ChangeLog for games-server/ut2004-ded
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-server/ut2004-ded/ChangeLog,v 1.1 2004/07/04 00:38:43 wolf31o2 Exp $
+
+*ut2004-ded-3236 (03 Jul 2004)
+
+  03 Jul 2004; Chris Gianelloni <wolf31o2@gentoo.org> +metadata.xml,
+  +files/ut2004-ded.rc, +ut2004-ded-3236.ebuild:
+  Initial import. Original ebuild submitted by James Jones
+  <cuban@drunkstudents.net> with an init script submitted by Ken Smith
+  <themyrmidon@mac.com>. Updated to 3236-1 patch by Davin Boling
+  <davin@postmark.net> with some modifications by me. Closing bug #46057.
+
