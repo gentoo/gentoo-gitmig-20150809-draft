@@ -1,6 +1,16 @@
 # ChangeLog for x11-themes/gnome-themes
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes/ChangeLog,v 1.29 2003/11/15 03:05:37 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes/ChangeLog,v 1.30 2003/12/11 15:22:41 liquidx Exp $
+
+*gnome-themes-2.4.1 (11 Dec 2003)
+
+  11 Dec 2003; Alastair Tse <liquidx@gentoo.org> gnome-themes-2.2.2-r1.ebuild,
+  gnome-themes-2.4.0.ebuild, gnome-themes-2.4.1.ebuild:
+  also version bumped
+
+  11 Dec 2003; Alastair Tse <liquidx@gentoo.org> gnome-themes-2.2.2-r1.ebuild,
+  gnome-themes-2.4.0.ebuild:
+  fix x11-theme typo (#35539)
 
   14 Nov 2003; Aron Griffis <agriffis@gentoo.org> gnome-themes-2.4.0.ebuild:
   Stable on ia64
