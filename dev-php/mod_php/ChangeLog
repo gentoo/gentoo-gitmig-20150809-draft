@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/mod_php
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/ChangeLog,v 1.203 2005/01/25 19:44:56 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/ChangeLog,v 1.204 2005/02/01 15:50:52 cryos Exp $
+
+  01 Feb 2005; Marcus D. Hanwell <cryos@gentoo.org> mod_php-5.0.3-r1.ebuild:
+  Marked ~amd64 as the c-client issues should now be resolved in the latest
+  c-client/uw-imap ebuilds.
 
   25 Jan 2005; Marcus D. Hanwell <cryos@gentoo.org> mod_php-5.0.3-r1.ebuild:
   Removing ~amd64 from KEYWORDS until problems with c-client are resolved.
