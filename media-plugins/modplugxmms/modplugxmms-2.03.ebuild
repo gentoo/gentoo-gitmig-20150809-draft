@@ -1,10 +1,9 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/modplugxmms/modplugxmms-2.03.ebuild,v 1.7 2004/06/24 23:32:44 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/modplugxmms/modplugxmms-2.03.ebuild,v 1.8 2004/07/14 20:40:52 agriffis Exp $
 
 IUSE=""
 
-S=${WORKDIR}/${P}
 DESCRIPTION="XMMS plugin for MOD-like music files"
 SRC_URI="mirror://sourceforge/modplug-xmms/${P}.tar.gz"
 HOMEPAGE="http://modplug-xmms.sourceforge.net/"
