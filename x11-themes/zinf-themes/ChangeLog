@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/zinf-themes
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/zinf-themes/ChangeLog,v 1.1 2004/06/04 12:29:36 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/zinf-themes/ChangeLog,v 1.2 2004/06/05 20:37:58 kugelfang Exp $
+
+  05 Jun 2004; Danny van Dyk <kugelfang@gentoo.org> zinf-themes-0.0.1.ebuild:
+  Marked ~amd64.
 
 *zinf-themes-0.0.1 (04 Jun 2004)
 

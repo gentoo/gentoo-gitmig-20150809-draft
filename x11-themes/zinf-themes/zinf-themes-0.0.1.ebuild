@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/zinf-themes/zinf-themes-0.0.1.ebuild,v 1.1 2004/06/04 12:29:36 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/zinf-themes/zinf-themes-0.0.1.ebuild,v 1.2 2004/06/05 20:37:58 kugelfang Exp $
 
 RESTRICT="nomirror"
 DESCRIPTION="Collection of ZINF themes"
@@ -53,7 +53,7 @@ SRC_URI="${THEME_URI}/AquaX.fat
 
 SLOT="0"
 LICENSE="freedist"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 
 IUSE=""
 
