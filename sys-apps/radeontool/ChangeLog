@@ -1,0 +1,8 @@
+# ChangeLog for sys-apps/radeontool
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/radeontool/ChangeLog,v 1.1 2003/09/26 18:59:04 twp Exp $
+
+*radeontool-1.0 (26 Sep 2003)
+
+  26 Sep 2003; Tom Payne <twp@gentoo.org> radeontool-1.0.ebuild :
+  Initial version.
