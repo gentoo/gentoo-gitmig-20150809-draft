@@ -1,0 +1,11 @@
+# ChangeLog for x11-libs/libiterm-mbt
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libiterm-mbt/ChangeLog,v 1.1 2003/10/02 03:21:49 hhg Exp $
+
+*libiterm-mbt-0.5 (02 Oct 2003)
+
+  02 Oct 2003; Hallgrimur H. Gunnarsson <hhg@gentoo.org>
+  libiterm-mbt-0.5.ebuild, metadata.xml:
+  new package -- libiterm-mbt submitted by Paolo Sacconier <axa1981@libero.it>
+  in bug #30117
+
