@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-pages/man-pages-1.43.ebuild,v 1.1 2001/11/12 01:33:38 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-pages/man-pages-1.43-r1.ebuild,v 1.1 2001/12/05 19:19:04 azarah Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A somewhat comprehensive collection of Linux man pages"
@@ -18,7 +18,7 @@ src_unpack() {
 	unpack ${P}.tar.gz
     
 	cd ${S}
-	unpack netman-20000610.tgz
+#	unpack netman-20000610.tgz
 	tar xzf ${FILESDIR}/man2.tar.gz
     
 #	for x in 2 3 7
