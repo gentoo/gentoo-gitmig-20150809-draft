@@ -1,13 +1,12 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc. Distributed under the terms
 # of the GNU General Public License, v2 or later 
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.1.ebuild,v 1.1 2002/06/17 05:10:08 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.3.ebuild,v 1.1 2002/06/20 19:15:37 drobbins Exp $
  
 S=${WORKDIR}/${P}
 SLOT="0"
 DESCRIPTION="Portage ports system"
 SRC_URI=""
 HOMEPAGE="http://www.gentoo.org"
-#debianutils is for "readlink"
 #We need this if/then/else clause for compatibility with stuff that doesn't know !build?
 if [ "`use build`" ]
 then
@@ -40,7 +39,8 @@ src_install() {
 	insinto /etc
 	case "$ARCH" in
 		ppc )
-		doins ${FILESDIR}/ppc-${PV}/*
+		newins make.globals.ppc make.globals
+		newins make.conf.ppc make.conf
 		;;
 		* )
 		doins make.globals make.conf
@@ -55,10 +55,7 @@ src_install() {
 	insinto /usr/lib/python2.2/site-packages
 	doins xpak.py portage.py output.py
 
-	# we gotta compile these modules
-	python -c "import compileall; compileall.compile_dir('${D}/usr/lib/python2.2/site-packages')" || die
-	python -O -c "import compileall; compileall.compile_dir('${D}/usr/lib/python2.2/site-packages')" || die
-	
+
 	#binaries, libraries and scripts
 	dodir /usr/lib/portage/bin
 	cd ${S}/bin
@@ -86,7 +83,7 @@ src_install() {
 	#dosym /usr/lib/portage/bin/portage-maintain /usr/sbin/portage-maintain
 	dosym ../lib/portage/bin/env-update /usr/sbin/env-update
 	dosym ../lib/portage/bin/xpak /usr/bin/xpak
-	dosym ../lib/portage/bin/tbz2tool /usr/bin/tbz2tool
+	dosym ../lib/portage/bin/repoman /usr/bin/repoman
 	dosym newins /usr/lib/portage/bin/donewins
 	
 	# man pages
@@ -150,4 +147,8 @@ pkg_postinst() {
 	else
 		install -d ${ROOT}var/cache/edb/dep
 	fi	
-}
+	rm -f ${ROOT}usr/lib/python2.2/site-packages/portage.py[co]
+	# we gotta re-compile these modules and deal with systems with clock skew (stale compiled files)
+	python -c "import compileall; compileall.compile_dir('${ROOT}usr/lib/python2.2/site-packages')" || die
+	python -O -c "import compileall; compileall.compile_dir('${ROOT}usr/lib/python2.2/site-packages')" || die
+	}
