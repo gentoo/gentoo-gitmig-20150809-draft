@@ -1,4 +1,16 @@
-MD5 e85451b23a50bb9787be324c3d37df00 ChangeLog 747
-MD5 2148faadc8deaa9c59199a0196f6f01e fmtools-0.99.1.ebuild 654
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 ddafe73bd8f967641f5bda0cf60cb041 fmtools-1.0.ebuild 644
+MD5 039cdabc5e13c8e480b0138b7ad173b8 fmtools-0.99.1.ebuild 645
+MD5 bf4bab5e3f19f3b281a2d11050329bd7 ChangeLog 928
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 fa94f4db1de686293eed401f22883e5b files/digest-fmtools-0.99.1 65
+MD5 786cb9e92477ee620abefa7a3e0cf12b files/digest-fmtools-1.0 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCSLln06ebR+OMO78RAsDdAJ0QGJckow/TtdtcQ5/l+3hg7TFaewCgmZe+
+SmV7Xem68pjE7V3U+Q2srxg=
+=AQey
+-----END PGP SIGNATURE-----

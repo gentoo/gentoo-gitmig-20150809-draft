@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/fmtools
-# Copyright 2003-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/fmtools/ChangeLog,v 1.4 2004/07/01 07:51:39 eradicator Exp $
+# Copyright 2003-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/fmtools/ChangeLog,v 1.5 2005/03/29 02:11:39 luckyduck Exp $
+
+*fmtools-1.0 (29 Mar 2005)
+
+  29 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org> fmtools-0.99.1.ebuild,
+  +fmtools-1.0.ebuild:
+  new upstream version, updated HOMEPAGE. fixes #86891
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   fmtools-0.99.1.ebuild:
