@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux/linux-2.4.0.11-r3.ebuild,v 1.5 2001/02/05 23:47:21 pete Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux/linux-2.4.0.11-r3.ebuild,v 1.6 2001/02/06 00:17:08 pete Exp $
 
 S=${WORKDIR}/linux
 KV=2.4.0-ac11
@@ -51,7 +51,7 @@ src_unpack() {
     echo "Unpacking and applying LVM patch..."
     unpack lvm_${LVMV}.tar.gz
     cd LVM/${LVMV}
-    try ./configure --prefix=/ --mandir=/usr/man
+    try ./configure --prefix=/ --mandir=/usr/man --with-kernel_dir="${S}"
     cd PATCHES
     	try make KERNEL_VERSION=2.4.0-ac11 KERNEL_DIR=${S}
 	cd ${S}
