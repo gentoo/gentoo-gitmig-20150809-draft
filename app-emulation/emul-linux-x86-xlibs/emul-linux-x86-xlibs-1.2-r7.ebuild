@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-xlibs/emul-linux-x86-xlibs-1.2-r7.ebuild,v 1.2 2005/03/10 01:10:14 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-xlibs/emul-linux-x86-xlibs-1.2-r7.ebuild,v 1.3 2005/03/10 01:13:57 cryos Exp $
 
 inherit multilib
 
@@ -10,7 +10,7 @@ SRC_URI="http://dev.gentoo.org/~lv/emul-linux-x86-xlibs-${PV}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="-* ~amd64"
+KEYWORDS="-* amd64"
 IUSE=""
 
 RDEPEND="virtual/libc
