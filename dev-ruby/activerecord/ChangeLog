@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/activerecord
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activerecord/ChangeLog,v 1.1 2005/02/16 05:40:45 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activerecord/ChangeLog,v 1.2 2005/02/28 17:52:30 caleb Exp $
+
+*activerecord-1.7.0 (28 Feb 2005)
+
+  28 Feb 2005; Caleb Tennis <caleb@gentoo.org> +activerecord-1.7.0.ebuild:
+  Version bump for new release, bug #83446
 
 *activerecord-1.6.0 (15 Feb 2005)
 

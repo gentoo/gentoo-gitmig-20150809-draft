@@ -1,14 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 8a652f7a04076b032c05d2779e304c41 actionmailer-0.7.0.ebuild 690
 MD5 4815f696d9820c320a417c0de9f0dea7 actionmailer-0.6.1.ebuild 695
+MD5 36f24f5d5c2df0c8818d3d317b731fc6 ChangeLog 509
 MD5 3eec9f3fe48b51f49dbc1f171a3b026f metadata.xml 157
-MD5 df6fa6679e055879271ff916aaa2bb32 ChangeLog 371
 MD5 190bb447ec0db2a9f340acaf55011d58 files/digest-actionmailer-0.6.1 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCEt4Yz2gxt1z4IGYRAj2DAJ0V4FIL9nJ3mDd9ILkyCSjtxnNbggCgulU0
-p04NdkEx6l87CZQC6s+cRi4=
-=qoWF
------END PGP SIGNATURE-----
+MD5 05df4fe794b345deb7f1412a08655fde files/digest-actionmailer-0.7.0 66
