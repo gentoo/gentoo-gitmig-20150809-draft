@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/nano-1.0.8-r1.ebuild,v 1.12 2002/10/20 18:37:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/nano-1.0.8-r1.ebuild,v 1.13 2002/10/23 19:23:33 vapier Exp $
 
 IUSE="nls build slang"
 
@@ -24,7 +24,7 @@ src_compile() {
 	use slang && myconf="${myconf} --with-slang"
 	use nls   || myconf="${myconf} --disable-nls"
 	
-	if use bootcd || use build ; then
+	if use build ; then
 		myconf="${myconf} --disable-wrapping-as-root"
 	fi
 
@@ -44,7 +44,7 @@ src_install () {
 		DESTDIR=${D} \
 		install || die
 
-	if use bootcd || use build; then
+	if use build; then
 		rm -rf ${D}/usr/share
 	else
 		dodoc COPYING ChangeLog README

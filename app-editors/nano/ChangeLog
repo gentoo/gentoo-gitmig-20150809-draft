@@ -1,45 +1,46 @@
 # ChangeLog for app-editors/nano
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/ChangeLog,v 1.6 2002/09/25 23:41:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/ChangeLog,v 1.7 2002/10/23 19:24:54 vapier Exp $
 
 *nano-1.0.9 (25 Sep 2002)
+
+  23 Oct 2002; Mike Frysinger <vapier@gentoo.org> :
+  Removed bootcd USE flag
 
   25 Sep 2002; Mike Frysinger <vapier@gentoo.org> :
   bumped version
 
 *nano-1.0.8-r1 (12 Mar 2002)
 	
-  15 Jul 2002; Owen Stampflee <owen@gentoo.org> :
+  23 Oct 2002; Mike Frysinger <vapier@gentoo.org> :
+  Removed bootcd USE flag
 
+  15 Jul 2002; Owen Stampflee <owen@gentoo.org> :
   Added KEYWORDS.
 
+  11 Apr 2002; Seemant Kulleen <seemant@gentoo.org> nano-1.0.8-r1.ebuild :
 
-	11 Apr 2002; Seemant Kulleen <seemant@gentoo.org> nano-1.0.8-r1.ebuild :
+  I did not bump the revision number of this, but I added a flag to 
+  disable text wrapping as root, for when nano is built for the bootcd
+  or build environments.  This means that the nano -w instruction in
+  our Gentoo Installation docs will need to be adjusted to just say
+  "nano" now.  Thanks to chrisa@asty.org (Chris Allegretta) in bug
+  # 1565
 
-	I did not bump the revision number of this, but I added a flag to 
-	disable text wrapping as root, for when nano is built for the bootcd
-	or build environments.  This means that the nano -w instruction in
-	our Gentoo Installation docs will need to be adjusted to just say
-	"nano" now.  Thanks to chrisa@asty.org (Chris Allegretta) in bug
-	# 1565
-
-	12 Mar 2002; Seemant Kulleen <seemant@gentoo.org>
-
-	Add USE-conditional nls compilation
+  12 Mar 2002; Seemant Kulleen <seemant@gentoo.org>
+  Add USE-conditional nls compilation
 
 *nano-1.0.8 (20 Feb 2002)
 
-	20 Feb 2002; Aron Griffis <agriffis@gentoo.org> nano-1.0.8.ebuild :
-
-	Updated to 1.0.8.  Added USE-conditional slang compilation.
+  20 Feb 2002; Aron Griffis <agriffis@gentoo.org> nano-1.0.8.ebuild :
+  Updated to 1.0.8.  Added USE-conditional slang compilation.
 
 *nano-1.0.6 (1 Feb 2002)
 
-	1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
-	
-	Added initial ChangeLog which should be updated whenever the package is
-	updated in any way. This changelog is targetted to users. This means that
-	the comments should well explained and written in clean English. The
-	details about writing correct changelogs are explained in the
-	skel.ChangeLog file which you can find in the root directory of the
-	portage repository.
+  1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
+  Added initial ChangeLog which should be updated whenever the package is
+  updated in any way. This changelog is targetted to users. This means that
+  the comments should well explained and written in clean English. The
+  details about writing correct changelogs are explained in the
+  skel.ChangeLog file which you can find in the root directory of the
+  portage repository.
