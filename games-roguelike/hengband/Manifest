@@ -1,5 +1,6 @@
 MD5 c34089cb845f7619754b28d8e46fde6f ChangeLog 535
-MD5 9c884ff462ae1d9a2d30728cbeae449e hengband-1.5.4.ebuild 1182
+MD5 ce0bab59fd18dbd182c8418a02ce0c59 hengband-1.5.4.ebuild 1185
+MD5 a30c9d4ce8f9629d6d7323eaab258343 metadata.xml 241
 MD5 2975d3b554f532036969bfda96d17cf3 hengband-1.6.0.ebuild 1330
 MD5 bb9d132e77a3a543f730c17629232cfe files/digest-hengband-1.5.4 67
 MD5 53a0deca2810ccb05eeff76414bee9f6 files/digest-hengband-1.6.0 67
