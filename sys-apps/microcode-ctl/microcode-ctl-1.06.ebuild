@@ -1,7 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/microcode-ctl/microcode-ctl-1.06.ebuild,v 1.2 2003/06/21 21:19:40 drobbins Exp $
-
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/microcode-ctl/microcode-ctl-1.06.ebuild,v 1.3 2003/11/12 23:38:32 plasmaroo Exp $
 
 MY_P=${PN/-/_}-${PV}
 S=${WORKDIR}/${MY_P}
@@ -42,4 +41,7 @@ pkg_postinst() {
 	einfo "The update will not survive a reboot. To have it do that run"
 	einfo ""
 	einfo "\trc-update add microcode_ctl default"
+	einfo ""
+	einfo "NOTE: For 2.6x series kernels, use the '-d' flag to specify a"
+	einfo "      different microcode device: /dev/misc/microcode"
 }
