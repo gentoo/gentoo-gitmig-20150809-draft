@@ -1,0 +1,7 @@
+MD5 b471acb36b16224da1acc6acfeda5432 ChangeLog 826
+MD5 af00795fb0a47d65e4d6939cb633771c cdlabelgen-2.3.0.ebuild 717
+MD5 11d887599f716e8272fec8371f1385d4 cdlabelgen-2.4.0.ebuild 699
+MD5 f5f68a6ca5f9f6ff5324d33fcaa46ace files/digest-cdlabelgen-2.3.0 65
+MD5 b340cb1f3df8fdb267d0bbdafbd5e930 files/digest-cdlabelgen-2.4.0 65
+MD5 bff2b23835a3572047c6661e88129d75 files/makefile.patch 927
+MD5 856cfdea5f6e8201ccb75b8020754335 files/makefile.patch-2.4.0 1088
