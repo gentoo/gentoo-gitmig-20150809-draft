@@ -1,7 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-arch/dump/dump-0.4.28.ebuild,v 1.2 2002/07/06 20:46:50 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dump/dump-0.4.28.ebuild,v 1.3 2002/07/11 06:30:09 drobbins Exp $
 
 MY_P=${P/4./4b}
 S=${WORKDIR}/${MY_P}

@@ -1,7 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Maintainer: Spider <spider@gentoo.org> Author: Craig Dooley <cd5697@albany.edu>
-# $Header: /var/cvsroot/gentoo-x86/app-arch/par/par-1.1.ebuild,v 1.3 2002/07/06 20:46:50 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/par/par-1.1.ebuild,v 1.4 2002/07/11 06:30:10 drobbins Exp $
 
 S=${WORKDIR}/par-cmdline
 DESCRIPTION="Parchive archive fixing tool"

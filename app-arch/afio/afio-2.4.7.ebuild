@@ -1,6 +1,5 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Maintainer: Dominik Bartenstein <dom@wahuu.at>
 
 S=${WORKDIR}/${P}
 DESCRIPTION="makes cpio-format archives and deals somewhat gracefully with \

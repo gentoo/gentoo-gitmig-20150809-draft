@@ -1,7 +1,6 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.0.4-r2.ebuild,v 1.4 2002/07/06 20:46:50 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.0.4-r2.ebuild,v 1.5 2002/07/11 06:30:10 drobbins Exp $
 
 # note to self: check for java deps
 

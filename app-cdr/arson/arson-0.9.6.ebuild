@@ -1,6 +1,5 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# Author Bart Verwilst <verwilst@gentoo.org>
 # /space/gentoo/cvsroot/gentoo-x86/app-cdr/arson/arson-0.9.5-r1.ebuild,v 1.1 2002/06/01 19:56:38 danarmak Exp
 
 inherit kde-base

@@ -1,7 +1,6 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# Author Aron Griffis <agriffis@bigfoot.com>
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cddump/cddump-0.7.ebuild,v 1.3 2002/07/06 20:51:34 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cddump/cddump-0.7.ebuild,v 1.4 2002/07/11 06:30:10 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="cddump - backup to CD-Recordable and CD-Rewritable"
