@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.4.20-r1.ebuild,v 1.6 2003/02/27 23:28:44 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.4.20-r1.ebuild,v 1.7 2003/03/11 20:42:57 lostlogic Exp $
 
 IUSE="build crypt xfs"
 
@@ -88,7 +88,7 @@ pkg_postinst() {
 	einfo "high performance patchset of the linux kernel."
 	einfo "If there are problems with it, please report them"
 	einfo "by assigning bugs on bugs.gentoo.org to"
-	einfo "lostlogic@gentoo.org"
+	einfo "x86-kernel@gentoo.org"
 	ewarn
 	ewarn "If you use iptables, and get an invalid argument error, you"
 	ewarn "simply need to rebuild iptables to solve the problem"

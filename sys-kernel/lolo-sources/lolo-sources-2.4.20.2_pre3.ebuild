@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/lolo-sources/lolo-sources-2.4.20.2_pre3.ebuild,v 1.1 2003/02/28 14:58:23 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/lolo-sources/lolo-sources-2.4.20.2_pre3.ebuild,v 1.2 2003/03/11 20:42:57 lostlogic Exp $
 
 IUSE="build crypt xfs"
 
@@ -83,7 +83,7 @@ pkg_postinst() {
 	einfo "patchset of the linux kernel sources."
 	einfo "If there are problems with it, please report them"
 	einfo "by assigning bugs on bugs.gentoo.org to"
-	einfo "lostlogic@gentoo.org"
+	einfo "x86-kernel@gentoo.org"
 #	[ `use xfs` ] && ewarn "XFS patches enabled, this may cause JFS problems" || \
 #		einfo "XFS not enabled, is that on purpose?  JFS users beware of XFS."
 
