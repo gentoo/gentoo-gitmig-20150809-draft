@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/automake-1.5.ebuild,v 1.13 2005/01/30 11:34:01 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/automake-1.5.ebuild,v 1.14 2005/01/30 13:32:26 vapier Exp $
 
 inherit eutils gnuconfig
 
@@ -23,6 +23,7 @@ src_unpack() {
 	cd ${S}
 	epatch ${FILESDIR}/${P}-target_hook.patch
 	epatch ${FILESDIR}/${P}-slot.patch
+	sed -i 's:error\.test::' tests/Makefile.in #79529
 	sed -i \
 		-e "/^@setfilename/s|automake|automake${SLOT}|" \
 		-e "s|automake: (automake)|automake v${SLOT}: (automake${SLOT})|" \

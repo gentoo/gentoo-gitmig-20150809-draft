@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/automake-1.4_p6.ebuild,v 1.11 2005/01/30 13:26:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/automake-1.4_p6.ebuild,v 1.12 2005/01/30 13:32:26 vapier Exp $
 
 inherit eutils gnuconfig
 
@@ -24,7 +24,9 @@ S="${WORKDIR}/${MY_P}"
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	EPATCH_SUFFIX="patch" epatch ${FILESDIR}/1.4
+	epatch ${FILESDIR}/automake-1.4-libtoolize.patch
+	epatch ${FILESDIR}/automake-1.4-subdirs-89656.patch
+	epatch ${FILESDIR}/automake-1.4-ansi2knr-stdlib.patch
 	sed -i 's:error\.test::' tests/Makefile.in #79529
 	sed -i \
 		-e "/^@setfilename/s|automake|automake${SLOT}|" \
