@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/php
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php/ChangeLog,v 1.75 2004/02/05 07:30:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php/ChangeLog,v 1.76 2004/02/06 22:12:25 pylon Exp $
+
+  06 Feb 2004; Lars Weiler <pylon@gentoo.org> php-4.3.4-r4.ebuild:
+  Stable on ppc.
 
 *php-4.3.4-r4 (26 Jan 2004)
 
