@@ -1,4 +1,6 @@
+MD5 3e48feee711423bd00a83cbdb0bc2cfc ChangeLog 476
 MD5 d841b01b7e9328df885fd31028ae78bd XML-Stream-1.21.ebuild 642
-MD5 90d05891c8cc435d68ed0d605ace63ce ChangeLog 361
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 93dd095010380f36523a486854ec6585 XML-Stream-1.22.ebuild 640
 MD5 725aa2934ebd6f37450c6cd0883b8f6a files/digest-XML-Stream-1.21 66
+MD5 9c2ad8f24d7f25c2a5a9f302e566d07b files/digest-XML-Stream-1.22 66
