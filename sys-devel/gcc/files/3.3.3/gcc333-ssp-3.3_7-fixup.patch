@@ -1,0 +1,58 @@
+--- protector.dif.orig	2004-02-17 22:14:30.087588656 +0200
++++ protector.dif	2004-02-17 22:28:24.977666072 +0200
+@@ -23,23 +23,6 @@
+   
+   BACKEND = main.o libbackend.a
+   
+-*************** LIB2FUNCS_1 = _muldi3 _negdi2 _lshrdi3 _
+-*** 795,801 ****
+-  
+-  LIB2FUNCS_2 = _floatdixf _fixunsxfsi _fixtfdi _fixunstfdi _floatditf \
+-      _clear_cache _trampoline __main _exit _absvsi2 _absvdi2 _addvsi3 \
+-!     _addvdi3 _subvsi3 _subvdi3 _mulvsi3 _mulvdi3 _negvsi2 _negvdi2 _ctors
+-  
+-  # Defined in libgcc2.c, included only in the static library.
+-  LIB2FUNCS_ST = _eprintf _bb __gcc_bcmp
+---- 795,801 ----
+-  
+-  LIB2FUNCS_2 = _floatdixf _fixunsxfsi _fixtfdi _fixunstfdi _floatditf \
+-      _clear_cache _trampoline __main _exit _absvsi2 _absvdi2 _addvsi3 \
+-!     _addvdi3 _subvsi3 _subvdi3 _mulvsi3 _mulvdi3 _negvsi2 _negvdi2 _ctors _stack_smash_handler
+-  
+-  # Defined in libgcc2.c, included only in the static library.
+-  LIB2FUNCS_ST = _eprintf _bb __gcc_bcmp
+ *************** ifcvt.o : ifcvt.c $(CONFIG_H) $(SYSTEM_H
+ *** 1662,1667 ****
+ --- 1662,1668 ----
+@@ -50,6 +33,31 @@
+   
+   $(out_object_file): $(out_file) $(CONFIG_H) $(TREE_H) $(GGC_H) \
+      $(RTL_H) $(REGS_H) hard-reg-set.h real.h insn-config.h conditions.h \
++Index: gcc/mklibgcc.in
++===================================================================
++RCS file: /home/cvsroot/gcc/gcc/mklibgcc.in,v
++retrieving revision 1.1.1.13
++retrieving revision 1.1.1.13.2.1
++diff -c -3 -p -r1.1.1.13 -r1.1.1.13.2.1
++*** gcc/mklibgcc.in	2003/06/18 08:05:16	1.1.1.13
++--- gcc/mklibgcc.in	2003/06/18 08:51:26	1.1.1.13.2.1
++*************** lib2funcs='_muldi3 _negdi2 _lshrdi3 _ash
++*** 48,54 ****
++  	_fixunsdfdi _fixdfdi _fixunssfdi _fixsfdi _fixxfdi _fixunsxfdi
++  	_floatdixf _fixunsxfsi _fixtfdi _fixunstfdi _floatditf _clear_cache
++  	_trampoline __main _exit _absvsi2 _absvdi2 _addvsi3 _addvdi3
++! 	_subvsi3 _subvdi3 _mulvsi3 _mulvdi3 _negvsi2 _negvdi2 _ctors
++  	_ffssi2 _ffsdi2 _clz _clzsi2 _clzdi2 _ctzsi2 _ctzdi2 _popcount_tab
++  	_popcountsi2 _popcountdi2 _paritysi2 _paritydi2'
++  
++--- 48,54 ---
++  	_fixunsdfdi _fixdfdi _fixunssfdi _fixsfdi _fixxfdi _fixunsxfdi
++  	_floatdixf _fixunsxfsi _fixtfdi _fixunstfdi _floatditf _clear_cache
++  	_trampoline __main _exit _absvsi2 _absvdi2 _addvsi3 _addvdi3
++! 	_subvsi3 _subvdi3 _mulvsi3 _mulvdi3 _negvsi2 _negvdi2 _ctors _stack_smash_handler
++  	_ffssi2 _ffsdi2 _clz _clzsi2 _clzdi2 _ctzsi2 _ctzdi2 _popcount_tab
++  	_popcountsi2 _popcountdi2 _paritysi2 _paritydi2'
++  
+ Index: gcc/calls.c
+ ===================================================================
+ RCS file: /home/cvsroot/gcc/gcc/calls.c,v
