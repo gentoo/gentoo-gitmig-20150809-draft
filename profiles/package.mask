@@ -161,6 +161,7 @@ dev-lisp/cmucl-bin
 =kde-base/kdelibs-3.2.0_beta1
 =kde-base/kdebase-3.2.0_beta1
 =kde-base/kdesdk-3.2.0_beta1
+=kde-base/kdesdk-3.2.0_beta1-r1
 =kde-base/kdegraphics-3.2.0_beta1
 =kde-base/kdenetwork-3.2.0_beta1
 =kde-base/kdemultimedia-3.2.0_beta1
