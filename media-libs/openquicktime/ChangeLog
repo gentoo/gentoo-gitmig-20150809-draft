@@ -1,8 +1,11 @@
 # ChangeLog for media-libs/openquicktime
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openquicktime/ChangeLog,v 1.1 2002/04/25 08:40:36 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openquicktime/ChangeLog,v 1.2 2002/08/07 18:33:58 gerk Exp $
 
 *openquicktime-1.0 (25 Apr 2002)
+
+  07 Aug 2002; Mark Guertin <gerk@gentoo.org> :
+  Added ppc to keywords
 
   25 Apr 2002; Ryan Phillips <rphillips@gentoo.org> ChangeLog :
   
