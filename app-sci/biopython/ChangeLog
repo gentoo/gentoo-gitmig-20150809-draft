@@ -1,8 +1,16 @@
 # ChangeLog for app-sci/biopython
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-sci/biopython/ChangeLog,v 1.5 2003/12/31 02:47:08 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/biopython/ChangeLog,v 1.6 2004/02/29 16:17:52 pbienst Exp $
+
+*biopython-1.24 (29 Feb 2004)
+
+  29 Feb 2004; Peter Bienstman <pbienst@gentoo.org> biopython-1.24.ebuild :
+  version bump
 
 *biopython-1.23 (30 Dec 2003)
+
+  29 Feb 2004; Peter Bienstman <pbienst@gentoo.org> biopython-1.23.ebuild :
+  marked stable on x86
 
   30 Dec 2003; George Shapovalvo <george@gentoo.org> biopython-1.23.ebuild :
   new version, reworked to use distutils. Thanks to 
