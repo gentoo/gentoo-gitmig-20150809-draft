@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/mythtv-themes
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/mythtv-themes/ChangeLog,v 1.13 2005/02/27 20:13:18 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/mythtv-themes/ChangeLog,v 1.14 2005/03/02 07:59:02 eradicator Exp $
+
+  01 Mar 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  mythtv-themes-0.17.ebuild:
+  Removing Titivillus theme since it is included in the base install.
 
 *mythtv-themes-0.17 (27 Feb 2005)
 
