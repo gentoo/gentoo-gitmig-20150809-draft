@@ -2,12 +2,15 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer:  Desktop Team <desktop@cvs.gentoo.org>
 # Author:  Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gtm/gtm-0.4.11.ebuild,v 1.2 2002/05/06 14:39:22 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gtm/gtm-0.4.11.ebuild,v 1.3 2002/07/07 07:27:26 phoenix Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GTM - a transfer manager"
 SRC_URI="http://download.sourceforge.net/gtm/${P}.tar.gz"
 HOMEPAGE="http://gtm.sourceforge.net/"
+KEYWORDS="x86"
+LICENSE="GPL-2"
+SLOT="0"
 
 DEPEND="virtual/glibc
 	virtual/x11

@@ -1,13 +1,14 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gtm/gtm-0.4.11-r1.ebuild,v 1.1 2002/05/28 23:40:58 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gtm/gtm-0.4.11-r1.ebuild,v 1.2 2002/07/07 07:27:26 phoenix Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GTM - a transfer manager"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 HOMEPAGE="http://gtm.sourceforge.net/"
 SLOT="0"
-LICENSE="GPL-"
+LICENSE="GPL-2"
+KEYWORDS="x86"
 
 DEPEND="virtual/glibc
 	virtual/x11
