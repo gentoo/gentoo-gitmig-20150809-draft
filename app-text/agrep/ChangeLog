@@ -1,6 +1,9 @@
 # ChangeLog for app-text/agrep
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/agrep/ChangeLog,v 1.11 2004/09/08 02:13:08 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/agrep/ChangeLog,v 1.12 2004/10/21 14:58:43 ka0ttic Exp $
+
+  21 Oct 2004; Aaron Walker <ka0ttic@gentoo.org> +metadata.xml:
+  Add metadata (shell-tools)
 
   07 Sep 2004; Tom Gall <tgall@gentoo.org> agrep-2.04.ebuild:
   stable on ppc64, bug #63057
