@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cvsq/cvsq-0.4.4.ebuild,v 1.3 2004/06/25 02:26:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cvsq/cvsq-0.4.4.ebuild,v 1.4 2004/07/14 23:08:25 agriffis Exp $
 
 IUSE=""
 
@@ -17,10 +17,7 @@ RDEPEND="dev-util/cvs
 		app-shells/bash
 		sys-apps/coreutils"
 
-S="${WORKDIR}/${P}"
-
 src_install () {
-	sed -i -e "s:tail -n 1: tail -1:g" cvsq
 	dodir /usr/bin
 	dobin cvsq
 	dodoc README AUTHORS ChangeLog
