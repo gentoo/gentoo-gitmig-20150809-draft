@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.6.1_p1.ebuild,v 1.2 2004/05/26 01:45:40 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.6.1_p1.ebuild,v 1.3 2004/05/30 18:55:34 foser Exp $
 
 # UPDATE TRACKER : GNOME TEAM ONLY
 
@@ -39,18 +39,18 @@ RDEPEND="!gnome-base/gnome-core
 	>=media-libs/libart_lgpl-2.3.16
 
 	>=dev-libs/libIDL-0.8.3
-	>=gnome-base/ORBit2-2.10.1
+	>=gnome-base/ORBit2-2.10.2
 
 	>=gnome-base/gconf-2.6.1
 	>=gnome-base/gnome-keyring-0.2.1
 	>=gnome-base/gnome-vfs-2.6.1.1
 
-	>=gnome-base/libbonobo-2.6
-	>=gnome-base/libbonoboui-2.6
+	>=gnome-base/libbonobo-2.6.2
+	>=gnome-base/libbonoboui-2.6.1
 	>=gnome-base/libgnome-2.6.1.1
 	>=gnome-base/libgnomeui-2.6.1.1
 	>=gnome-base/libgnomecanvas-2.6.1.1
-	>=gnome-base/libglade-2.3.6
+	>=gnome-base/libglade-2.4
 
 	>=gnome-extra/bug-buddy-2.6.1
 	>=gnome-base/control-center-2.6.1
