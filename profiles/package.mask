@@ -32,7 +32,7 @@
 
 # <woodchip@gentoo.org> 24 Jul 2002
 # apparently fatally flawed.
-net-www/fakeidentd
+net-misc/fakeidentd
 
 # <spider@gentoo.org> 25 Jul 2002
 #  Just a minor change, worth testing 
