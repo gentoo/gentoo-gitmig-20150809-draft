@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/gnokii/gnokii-0.6.3.ebuild,v 1.7 2004/11/04 13:30:32 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/gnokii/gnokii-0.6.3.ebuild,v 1.8 2004/11/06 08:52:17 corsair Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.gnokii.org/download/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~ppc sparc ~x86 ~alpha"
+KEYWORDS="~amd64 ~hppa ~ppc sparc ~x86 ~alpha ~ppc64"
 IUSE="nls X bluetooth irda sms postgres mysql"
 
 RDEPEND="X? ( =x11-libs/gtk+-1.2* )
