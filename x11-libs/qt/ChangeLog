@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/qt
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.19 2002/07/23 04:19:01 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.20 2002/07/25 09:21:15 jayskwak Exp $
+
+*qt-3.0.5-r1 (25 Jul 2002)
+
+  25 Jul 2002; Jays Kwak <jayskwak@gentoo.org> qt-3.0.5-r1.ebuild
+  Added Korean input patch
 
   23 Jul 2002; Dan Armak <danarmak@gentoo.org> ChangeLog  :
 
