@@ -1,6 +1,11 @@
 # ChangeLog for net-www/links
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/links/ChangeLog,v 1.53 2004/10/17 12:44:50 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/links/ChangeLog,v 1.54 2004/10/23 22:15:28 lanius Exp $
+
+  24 Oct 2004; Heinrich Wendel <lanius@gentoo.org> -links-0.96-r2.ebuild,
+  -links-2.1_pre11.ebuild, -links-2.1_pre13.ebuild, -links-2.1_pre14.ebuild,
+  links-2.1_pre15.ebuild, -links-2.1_pre9.ebuild:
+  remove old versions; commit a fix for bug 67528
 
   17 Oct 2004; Dylan Carlson <absinthe@gentoo.org> links-2.1_pre15.ebuild:
   stable on amd64.

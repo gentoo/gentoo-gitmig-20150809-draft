@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/links/links-2.1_pre15.ebuild,v 1.16 2004/10/17 12:44:50 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/links/links-2.1_pre15.ebuild,v 1.17 2004/10/23 22:15:28 lanius Exp $
 
 inherit eutils
 
@@ -109,6 +109,8 @@ src_compile (){
 	# Note: ./configure only support 'gpm' features auto-detection, so if
 	# 'sys-libs/gpm' is compiled on your system, you'll compile links
 	# with gpm support ...
+
+	export LANG=C
 
 	econf ${myconf} || die "configure failed"
 	emake || die "make failed"
