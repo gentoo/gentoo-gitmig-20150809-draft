@@ -1,0 +1,5 @@
+MD5 751c755567bc82f4759271200bb74a4b ChangeLog 370
+MD5 c9f54ac0eadf3d14a44e5dc692f0df73 metadata.xml 230
+MD5 0093e580d129caf998e2dc3503806b62 tinycdb-0.74.ebuild 758
+MD5 5135db2bb58eb563213ef9273329cd9f files/digest-tinycdb-0.74 63
+MD5 244663b6896ea4d20caec08ea5e0cba3 files/tinycdb-libbase.diff 385
