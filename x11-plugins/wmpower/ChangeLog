@@ -1,0 +1,9 @@
+# ChangeLog for x11-plugins/wmpower
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmpower/ChangeLog,v 1.1 2003/06/03 06:26:06 bcowan Exp $
+
+*wmpower-0.1.2 (03 Jun 2003)
+
+  03 Jun 2003; Brad Cowan <bcowan@gentoo.org> wmpower-0.1.2.ebuild:
+  Initial import. Thanks to Noberasco Michele bug #17963.
+
