@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/gnustep-gui
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gnustep-gui/ChangeLog,v 1.8 2003/06/26 22:49:14 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gnustep-gui/ChangeLog,v 1.9 2003/07/02 08:12:12 raker Exp $
+
+*gnustep-gui-0.8.5-r1 (02 Jul 2003)
+
+  02 Jul 2003; Nick Hadaway <raker@gentoo.org> gnustep-gui-0.8.5-r1.ebuild:
+  New build which depends on the gnustep eclass.
 
 *gnustep-gui-0.8.5 (26 Jun 2003)
 
