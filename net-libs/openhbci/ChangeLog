@@ -1,8 +1,8 @@
 # ChangeLog for net-libs/openhbci
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/openhbci/ChangeLog,v 1.15 2004/09/19 15:34:36 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/openhbci/ChangeLog,v 1.16 2004/09/19 15:41:18 kugelfang Exp $
 
-  19 Sep 2004; Danny van Dyk <kugelfang@gentoo.org> :
+  19 Sep 2004; Danny van Dyk <kugelfang@gentoo.org> openhbci-0.9.16.ebuild:
   Marked ~amd64.
 
 *openhbci-0.9.16 (24 Jun 2004)
