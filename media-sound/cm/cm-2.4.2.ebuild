@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cm/cm-2.4.2.ebuild,v 1.1 2004/03/01 04:18:01 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cm/cm-2.4.2.ebuild,v 1.2 2004/03/19 23:27:21 eradicator Exp $
 
 DESCRIPTION="Common Music: An object oriented music composition environment in LISP/scheme"
 HOMEPAGE="http://commonmusic.sourceforge.net"
@@ -9,10 +9,9 @@ RESTRICT="nomirror"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
-DEPEND=">=guile-1.6.4"
-RDEPEND="${DEPEND}"
+DEPEND=">=dev-util/guile-1.6.4"
 
 src_install() {
 	dodir /usr/share/${PN}
