@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jfreechart/jfreechart-0.9.19.ebuild,v 1.2 2004/08/03 11:40:56 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jfreechart/jfreechart-0.9.19.ebuild,v 1.3 2004/09/08 12:18:48 axxo Exp $
 
 inherit java-pkg
 
@@ -19,9 +19,14 @@ DEPEND=">=virtual/jdk-1.3
 		jikes? ( dev-java/jikes )"
 RDEPEND=">=virtual/jdk-1.3"
 
-src_compile() {
+src_unpack() {
+	unpack ${A}
+	cd ${S}
 	rm -f junit/*
 	rm -f lib/*
+}
+
+src_compile() {
 	local antflags="compile -Djcommon.jar=$(java-config -p jcommon) -Dservlet.jar=$(java-config -p servletapi-2.3) -Dgnujaxp.jar=$(java-config -p gnu-jaxp)"
 	use jikes && antflags="${antflags} -Dbuild.compiler=jikes"
 	use doc && antflags="${antflags} javadoc"

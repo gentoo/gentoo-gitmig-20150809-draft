@@ -1,4 +1,14 @@
-MD5 d10e9942969638eb9abcde426237f0b5 ChangeLog 451
-MD5 5cf5f29a6ce9b54161b56a38ef10da5f jfreechart-0.9.19.ebuild 1100
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 e02974e1ca6cfc4d7f2adcbd1d103a3e jfreechart-0.9.19.ebuild 1139
+MD5 0ce4e47fd023b74522a0a2545ce49a46 ChangeLog 553
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 7cf1354e4c3417f3dbc608e0e7691d7d files/digest-jfreechart-0.9.19 70
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBPvkL/rLF9B432nYRAi9iAJ9BNQRhkTA5pPMQute/cnBiuoB2EQCggQj7
+mvDe79YxYRuMP6YlnQcRwSo=
+=6AIU
+-----END PGP SIGNATURE-----
