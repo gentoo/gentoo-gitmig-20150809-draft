@@ -1,6 +1,9 @@
 # ChangeLog for app-text/libwpd
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libwpd/ChangeLog,v 1.2 2003/11/25 23:19:12 foser Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/libwpd/ChangeLog,v 1.3 2004/03/08 19:59:35 augustus Exp $
+
+  08 Mar 2004; <augustus@gentoo.org> libwpd-0.6.6.ebuild:
+  Added ~amd64 keyword.
 
 *libwpd-0.6.6 (25 Nov 2003)
 
