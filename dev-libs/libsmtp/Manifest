@@ -1,0 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 b321cfedc15bf47d4d7fb376e6a8e27b libsmtp-0.8.ebuild 870
+MD5 8c7e4cc226ad64fa91a7080dba661f2c ChangeLog 417
+MD5 f8d10f350e91f30316ea4e1bd1e76470 metadata.xml 254
+MD5 048850bcec357fbed8ef287a0bd8762c files/digest-libsmtp-0.8 63
+MD5 0c17bbeaf05fa9afc7f243f0c670e0a4 files/libsmtp-0.8-gentoo.diff 5082
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFByYOAEZCkKN40op4RAhm2AJ9JIlUzIasOBrIXsi5PCdMQ9m8t7ACeNFuE
+v8SMx/qp7g6+5vYhws7Dqf0=
+=ohtL
+-----END PGP SIGNATURE-----
