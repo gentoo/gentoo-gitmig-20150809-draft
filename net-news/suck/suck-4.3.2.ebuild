@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/suck/suck-4.3.2.ebuild,v 1.1 2004/06/22 23:13:02 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/suck/suck-4.3.2.ebuild,v 1.2 2004/06/23 18:50:32 dholm Exp $
 
 DESCRIPTION="Grab news from a remote NNTP server and feed them to another"
 HOMEPAGE="http://home.comcast.net/~bobyetman/"
 SRC_URI="http://home.comcast.net/~bobyetman/${P}.tar.gz"
 LICENSE="public-domain"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 IUSE="ssl perl"
 
 DEPEND="sys-libs/db
