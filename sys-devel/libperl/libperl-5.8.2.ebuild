@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/libperl-5.8.2.ebuild,v 1.20 2005/01/03 00:06:39 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/libperl-5.8.2.ebuild,v 1.21 2005/02/05 19:29:59 rac Exp $
 
 # The basic theory based on comments from Daniel Robbins <drobbins@gentoo.org>.
 #
@@ -86,8 +86,7 @@ KEYWORDS="amd64 x86 sparc ppc alpha mips hppa ia64 ppc64"
 
 DEPEND="sys-apps/groff
 	berkdb? ( sys-libs/db )
-	gdbm? ( >=sys-libs/gdbm-1.8.0 )
-	>=sys-apps/portage-2.0.45-r4"
+	gdbm? ( >=sys-libs/gdbm-1.8.0 )"
 
 RDEPEND="
 	berkdb? ( sys-libs/db )

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/libperl-5.8.6.ebuild,v 1.4 2005/01/16 17:55:23 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/libperl-5.8.6.ebuild,v 1.5 2005/02/05 19:29:59 rac Exp $
 
 # The basic theory based on comments from Daniel Robbins <drobbins@gentoo.org>.
 #
@@ -87,8 +87,7 @@ RESTRICT="maketest"
 
 DEPEND="!uclibc? ( sys-apps/groff )
 	berkdb? ( sys-libs/db )
-	gdbm? ( >=sys-libs/gdbm-1.8.0 )
-	>=sys-apps/portage-2.0.45-r4"
+	gdbm? ( >=sys-libs/gdbm-1.8.0 )"
 
 RDEPEND="
 	berkdb? ( sys-libs/db )
