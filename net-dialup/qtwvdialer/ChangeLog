@@ -1,11 +1,15 @@
 # ChangeLog for net-dialup/qtwvdialer
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/qtwvdialer/ChangeLog,v 1.2 2003/02/12 07:54:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/qtwvdialer/ChangeLog,v 1.3 2003/05/23 07:34:28 killian Exp $
+
+*qtwvdialer-0.3.1-r2 (23 May 2003)
+
+  23 May 2003; Chuck Brewer <killian@gentoo.org>:
+  Added manifest.
 
 *qtwvdialer-0.3.1-r2 (1 Feb 2002)
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
-  
   Added initial ChangeLog which should be updated whenever the package is
   updated in any way. This changelog is targetted to users. This means that the
   comments should well explained and written in clean English. The details about

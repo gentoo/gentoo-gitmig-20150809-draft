@@ -1,6 +1,11 @@
 # ChangeLog for net-dialup/pptpclient
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/pptpclient/ChangeLog,v 1.6 2003/02/26 23:31:46 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/pptpclient/ChangeLog,v 1.7 2003/05/23 07:26:42 killian Exp $
+
+*pptpclient-1.2.0 (23 May 2003)
+
+  23 May 2003; Chcuk Brewer <killian@gentoo.org):
+  Added manifest.
 
 *pptpclient-1.2.0 (26 Feb 2003)
 
