@@ -1,6 +1,11 @@
 # ChangeLog for app-office/dia
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/dia/ChangeLog,v 1.35 2004/08/19 22:31:59 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/dia/ChangeLog,v 1.36 2004/09/03 23:10:26 leonardop Exp $
+
+*dia-0.94 (03 Sep 2004)
+
+  03 Sep 2004; L. Boshell <leonardop@gentoo.org> dia-0.94.ebuild:
+  New release.
 
   20 Aug 2004; foser <foser@gentoo.org> dia-0.92.2.ebuild :
   Added patch by Benoit Boissinot fixing the FT includes (#44113)
