@@ -1,0 +1,18 @@
+diff -ur gnump3d-2.6.original/bin/gnump3d2 gnump3d-2.6/bin/gnump3d2
+--- gnump3d-2.6.original/bin/gnump3d2	2003-10-16 09:21:20.000000000 -0500
++++ gnump3d-2.6/bin/gnump3d2	2004-01-23 16:34:11.425553072 -0600
+@@ -393,6 +393,13 @@
+ if ( ( not $DEBUG ) and ( $BACKGROUND ) )
+ {
+     fork() && exit;
++
++    # 2003-02-22 Jyrki Muukkonen
++    # we need a pidfile for /etc/init.d/gnump3d script
++    open( PIDFILE, ">/var/run/gnump3d.pid" );
++    print PIDFILE $PID;
++    close( PIDFILE );
++
+ }
+ 
+ 
+Only in gnump3d-2.6/bin: gnump3d2~
