@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/fakenes/fakenes-0.3.1.ebuild,v 1.1 2004/09/02 02:06:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/fakenes/fakenes-0.3.1.ebuild,v 1.2 2004/09/12 10:04:41 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -22,12 +22,12 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	# this is a hack simply because upstream seems kind
 	# of dead atm ... if they ever revive, we can do this
 	# properly by making an autoconf patch ...
-	epatch ${FILESDIR}/0.3.0-allegro.patch
+	epatch "${FILESDIR}/${PV}-allegro.patch"
 	if ! use fbcon ; then
 		sed -i \
 			-e '/sedfbme/s:.*::' \
@@ -54,7 +54,7 @@ src_unpack() {
 src_compile() {
 	egamesconf \
 		--with-hawknl \
-		`use_with zlib` \
+		$(use_with zlib) \
 		|| die
 	emake || die "emake failed"
 }
