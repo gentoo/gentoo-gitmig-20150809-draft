@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-nds/ypserv/ypserv-1.3.12.ebuild,v 1.5 2002/07/11 06:30:49 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/ypserv/ypserv-1.3.12.ebuild,v 1.6 2002/07/17 02:53:35 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="NIS SERVER"
@@ -8,12 +8,13 @@ SRC_URI="ftp://ftp.de.kernel.org/pub/linux/utils/net/NIS/${P}.tar.gz
 	 ftp://ftp.uk.kernel.org/pub/linux/utils/net/NIS/${P}.tar.gz
 	 ftp://ftp.kernel.org/pub/linux/utils/net/NIS/${P}.tar.gz"
 HOMEPAGE="http://www.linux-nis.org/nis/"
+
+SLOT="1"
 LICENSE="GPL-2"
+KEYWORDS="x86"
 
 DEPEND=">=sys-libs/gdbm-1.8.0
 	tcpd? ( >=sys-apps/tcp-wrappers-7.6 )"
-
-SLOT="1"
 
 src_unpack() {
 
