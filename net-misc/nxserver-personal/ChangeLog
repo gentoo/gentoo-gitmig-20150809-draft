@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/nxserver-personal
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-personal/ChangeLog,v 1.12 2004/06/25 00:02:01 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-personal/ChangeLog,v 1.13 2004/07/20 08:42:43 stuart Exp $
+
+*nxserver-personal-1.3.2-r1 (20 Jul 2004)
+
+  20 Jul 2004; Stuart Herbert <stuart@gentoo.org>
+  +nxserver-personal-1.3.2-r1.ebuild:
+  Version bump; moved dep on nxclient from the ebuild after user complaints that
+  the dep was being ignored
 
 *nxserver-personal-1.3.2 (13 May 2004)
 
