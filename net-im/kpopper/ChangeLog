@@ -1,0 +1,17 @@
+# ChangeLog for net-misc/kpopper
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-im/kpopper/ChangeLog,v 1.1 2003/10/08 13:54:22 lanius Exp $
+
+*kpopper-1.0 (08 Oct 2003)
+
+  08 Oct 2003; Heinrich Wendel <lanius@gentoo.org> kpopper-1.0.ebuild:
+  moved from net-misc to net-im
+
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
+ 
+*kpopper-1.0 (10 Apr 2002)
+
+  10 Apr 2002; Bart Verwilst <verwilst@gentoo.org> kpopper-1.0.ebuild
+  files/digest-kpopper-1.0 :
+
+  New Package.
