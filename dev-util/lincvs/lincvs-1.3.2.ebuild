@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/lincvs/lincvs-1.3.2.ebuild,v 1.3 2004/07/11 12:43:32 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/lincvs/lincvs-1.3.2.ebuild,v 1.4 2004/09/15 20:57:08 morfic Exp $
 
-inherit kde-functions
+inherit kde-functions eutils gcc
 
 IUSE="kde"
 
@@ -21,6 +21,18 @@ RDEPEND="${DEPEND}
 	dev-util/cvs"
 
 need-qt 3
+
+src_unpack() {
+
+	unpack ${A}
+	cd ${S}
+
+	#apply both patches to compile with gcc-3.4.0 closing bug #63957
+	if [ "`gcc-major-version`" -ge "3" -a "`gcc-minor-version`" -ge "4" ]
+	then
+		epatch ${FILESDIR}/lincvs-${PV}-gcc34.patch
+	fi
+}
 
 src_compile() {
 	qmake -o Makefile lincvs.pro
