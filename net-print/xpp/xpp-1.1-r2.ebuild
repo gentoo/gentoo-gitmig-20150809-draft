@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/xpp/xpp-1.1-r2.ebuild,v 1.6 2004/07/01 22:40:47 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/xpp/xpp-1.1-r2.ebuild,v 1.7 2004/07/15 03:59:29 agriffis Exp $
 
 inherit eutils
 
@@ -9,6 +9,7 @@ SRC_URI="mirror://sourceforge/cups/${P}.tar.gz"
 HOMEPAGE="http://cups.sourceforge.net/xpp/"
 
 KEYWORDS="x86 ~amd64"
+IUSE=""
 SLOT="0"
 LICENSE="GPL-2"
 
