@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3370 2004/12/02 12:59:29 lu_zero Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3371 2004/12/02 19:10:37 bcowan Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -253,6 +253,8 @@ sys-fs/submount
 >=xfce-base/xfce4-extras-4.1.91
 >=xfce-extra/xfmedia-0.3.0
 >=xfce-extra/xfce4-minicmd-0.3.0
+xfce-extra/exo
+xfce-extra/terminal
 
 # <axxo@gentoo.org> (07 Oct 2004)
 # work in progress
