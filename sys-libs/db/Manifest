@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 7c715f76cfae70f34f151d6eae693755 db-3.3.11.ebuild 2408
 MD5 1570fff7e312929ed8b70ff24e8f828b db-1.85-r2.ebuild 1429
 MD5 f4fb5b01541980d1272802f3462495bb db-4.0.14-r3.ebuild 2370
@@ -8,7 +11,7 @@ MD5 d283981a560da94632d4e31471f431e1 db-4.0.14-r2.ebuild 2123
 MD5 9d956e9bdde251e4f0ad5df56c5ad2a8 db-4.2.52_p2.ebuild 2762
 MD5 614efe97c52640e9d6fa811f34295ecd db-4.1.25_p1-r3.ebuild 2658
 MD5 2b2c98cc29af812434da4f33ffa37901 db-3.2.9-r7.ebuild 4354
-MD5 304062df69ae5db35df1557589a53b0c ChangeLog 15773
+MD5 0e3d3be7bb343a1a61f4b2c0614cfe3a ChangeLog 15863
 MD5 5c921197970cd970a8fbb4cad2d7df7b metadata.xml 1457
 MD5 f3db8cf5807090698c572eae328a874f db-4.2.52_p1.ebuild 2773
 MD5 6eb8be5f7803acaa5bcfd4ed5ffabf83 files/db-3.2.9-jarlocation.patch 492
@@ -32,3 +35,11 @@ MD5 68a677d9846ad3fc623f173581ff9aa5 files/digest-db-4.2.52_p2 175
 MD5 9cf113248f29b1e319ae73b266df4986 files/patch.3.2.9.1 2139
 MD5 f8edd1cf6535cd62f9b8ff81e0474273 files/patch.3.2.9.2 495
 MD5 3c47ce6ed92e948fbde232c1e3571f16 files/db-4.2-jarlocation.patch 599
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.5 (GNU/Linux)
+Comment: .//Manifest 1094115961
+
+iD8DBQFBNuZsPpIsIjIzwiwRAlizAKD8Ub7t+z6Py4V9zqCGoZZfqYaTKACg8M4V
+MTT2goyv4F6a/kkfKd7/C9k=
+=cuUW
+-----END PGP SIGNATURE-----
