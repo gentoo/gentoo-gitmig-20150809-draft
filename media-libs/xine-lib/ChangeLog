@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.180 2005/01/01 05:54:49 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.181 2005/01/01 06:05:36 chriswhite Exp $
+
+  01 Jan 2005; Chris White <chriswhite@gentoo.org> xine-lib-1.0.ebuild:
+  Fixed bug #75928.  Changed fb to fbcon global USE flag.
 
   01 Jan 2005; Chris White <chriswhite@gentoo.org> xine-lib-1.0.ebuild:
   Fixed Bug #76090 where xine-lib will not build with -libcaca in use.

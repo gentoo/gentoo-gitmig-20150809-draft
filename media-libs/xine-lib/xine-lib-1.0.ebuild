@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.0.ebuild,v 1.9 2005/01/01 05:54:49 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.0.ebuild,v 1.10 2005/01/01 06:05:36 chriswhite Exp $
 
 inherit eutils flag-o-matic gcc libtool
 
@@ -16,7 +16,7 @@ LICENSE="GPL-2"
 SLOT="1"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="arts esd avi nls dvd X directfb oggvorbis alsa gnome sdl speex
-	theora ipv6 altivec opengl aac fb xv xvmc nvidia i8x0 samba dxr3 vidix png mng pic"
+	theora ipv6 altivec opengl aac fbcon xv xvmc nvidia i8x0 samba dxr3 vidix png mng pic"
 
 RDEPEND="oggvorbis? ( media-libs/libvorbis )
 	!amd64? ( X? ( virtual/x11 ) )
@@ -213,7 +213,7 @@ src_compile() {
 		$(use_with arts) --disable-artstest \
 		$(use_with oggvorbis ogg) $(use_with oggvorbis vorbis) \
 		$(use_enable ipv6) \
-		$(use_enable directfb) $(use_enable fb) \
+		$(use_enable directfb) $(use_enable fbcon fb) \
 		$(use_enable opengl) \
 		$(use_enable aac faad) \
 		${myconf} \
