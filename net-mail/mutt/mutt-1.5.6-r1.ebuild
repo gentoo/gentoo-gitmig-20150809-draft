@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mutt/mutt-1.5.6-r1.ebuild,v 1.2 2004/05/25 03:24:59 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mutt/mutt-1.5.6-r1.ebuild,v 1.3 2004/05/25 03:46:43 agriffis Exp $
 
 IUSE="ssl nls slang crypt imap mbox nntp vanilla"
 
@@ -32,9 +32,9 @@ DEPEND="${RDEPEND}
 	net-mail/mailbase
 	ssl? ( >=dev-libs/openssl-0.9.6 )
 	slang? ( >=sys-libs/slang-1.4.2 )
-	!vanilla? ( 
+	!vanilla? (
 		=sys-libs/db-4.1*
-		nntp? ( sys-devel/automake sys-devel/autoconf ) 
+		nntp? ( sys-devel/automake sys-devel/autoconf )
 	)"
 
 SLOT="0"
@@ -149,7 +149,7 @@ src_install() {
 	find ${D}/usr/share/doc -type f | grep -v "html\|manual" | xargs gzip
 	if use mbox; then
 		insinto /etc/mutt
-		doins ${FILESDIR}/Muttrc.mbox
+		newins ${FILESDIR}/Muttrc.mbox Muttrc
 	else
 		insinto /etc/mutt
 		doins ${FILESDIR}/Muttrc

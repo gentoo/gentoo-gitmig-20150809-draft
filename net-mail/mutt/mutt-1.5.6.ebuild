@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mutt/mutt-1.5.6.ebuild,v 1.14 2004/05/25 03:24:59 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mutt/mutt-1.5.6.ebuild,v 1.15 2004/05/25 03:46:43 agriffis Exp $
 
 IUSE="ssl nls slang crypt imap mbox nntp vanilla"
 
@@ -130,7 +130,7 @@ src_install() {
 	find ${D}/usr/share/doc -type f | grep -v "html\|manual" | xargs gzip
 	if use mbox; then
 		insinto /etc/mutt
-		doins ${FILESDIR}/Muttrc.mbox
+		newins ${FILESDIR}/Muttrc.mbox Muttrc
 	else
 		insinto /etc/mutt
 		doins ${FILESDIR}/Muttrc
