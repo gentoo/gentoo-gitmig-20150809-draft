@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvutil/dvutil-0.13.13.ebuild,v 1.6 2004/10/11 15:45:07 dams Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvutil/dvutil-0.13.13.ebuild,v 1.7 2004/10/22 13:46:31 pvdabeel Exp $
 
 S=${WORKDIR}/dvutil-${PV}
 DESCRIPTION="dvutil provides some general C++ utility classes for files, directories, dates, property lists, reference counted pointers, number conversion etc. "
@@ -12,7 +12,6 @@ SLOT="0"
 
 IUSE=""
 DEPEND="virtual/libc"
-RDEPEND=${DEPEND}
 PATCHS="${FILESDIR}/0.13.13-gentoo-doc_distdir.patch"
 
 inherit eutils
