@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/cm3-bin/cm3-bin-5.2.6.ebuild,v 1.7 2004/06/24 22:47:44 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/cm3-bin/cm3-bin-5.2.6.ebuild,v 1.8 2004/10/26 13:36:44 vapier Exp $
+
+inherit toolchain-funcs
 
 DESCRIPTION="Critical Mass Modula-3 compiler (binary version)"
 HOMEPAGE="http://www.elegosoft.com/cm3/"
@@ -21,11 +23,11 @@ src_unpack() {
 	local TARGET
 	local GNU_PLATFORM
 	case ${ARCH} in
-		x86)	TARGET=LINUXLIBC6
-			GNU_PLATFORM=i486--linuxelf
+		x86) TARGET=LINUXLIBC6
+			 GNU_PLATFORM=i486--linuxelf
 			;;
-		ppc)	TARGET=PPC_LINUX
-			GNU_PLATFORM=powerpc-apple-linuxelf
+		ppc) TARGET=PPC_LINUX
+			 GNU_PLATFORM=powerpc-apple-linuxelf
 			;;
 	esac
 	sed \
@@ -33,7 +35,7 @@ src_unpack() {
 		-e "s:GENTOO_GNU_PLATFORM:${GNU_PLATFORM}:" \
 		-e "s:GENTOO_INITIAL_REACTOR_EDITOR:${EDITOR:-/usr/bin/nano}:" \
 		-e "s:GENTOO_INSTALL_ROOT:/usr/lib/cm3/:" \
-		-e "s:GENTOO_GNU_CC:${CC:-gcc}:" \
+		-e "s:GENTOO_GNU_CC:$(tc-getCC):" \
 		-e "s:GENTOO_GNU_CFLAGS:${CFLAGS:--O}:" \
 		-e "s:GENTOO_GNU_MAKE:${MAKE:-make}:" \
 		-e "s:GENTOO_ROOT:/usr/lib/cm3/pkg/:" \

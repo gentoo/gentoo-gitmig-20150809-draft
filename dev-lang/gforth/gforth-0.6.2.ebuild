@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gforth/gforth-0.6.2.ebuild,v 1.8 2004/09/03 15:04:48 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gforth/gforth-0.6.2.ebuild,v 1.9 2004/10/26 13:39:13 vapier Exp $
 
-inherit elisp-common eutils
+inherit elisp-common eutils toolchain-funcs
 
 DESCRIPTION="GNU Forth is a fast and portable implementation of the ANSI Forth language"
 HOMEPAGE="http://www.gnu.org/software/gforth"
@@ -24,7 +24,7 @@ src_unpack() {
 }
 
 src_compile() {
-	econf CC="gcc -fno-reorder-blocks -fno-inline" --enable-force-reg || die "econf failed"
+	econf CC="$(tc-getCC) -fno-reorder-blocks -fno-inline" --enable-force-reg || die "econf failed"
 	make || die
 	use emacs && emacs --batch -f batch-byte-compile --no-site-file --no-init-file *.el
 }
