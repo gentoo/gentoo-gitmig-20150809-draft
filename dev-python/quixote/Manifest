@@ -1,6 +1,16 @@
-MD5 5c2df2708ab99c0e0519b5d6c9c64b32 ChangeLog 1993
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 c204d327ab0886abf5a5ceb4cda1c524 ChangeLog 2127
 MD5 a2cfe785f6ad94c61071fa71dbe89aeb metadata.xml 244
-MD5 b1be5df97bb2bfd9a4e6579613805dbd quixote-0.6.1.ebuild 787
-MD5 e61fb16d62c12070a02920c535a3e7db quixote-1.0.ebuild 792
+MD5 08c258c3dc13ce92d8bdd6dee0413cc2 quixote-0.6.1.ebuild 785
+MD5 a4e0b94816324bba5635af02173c64ea quixote-1.0.ebuild 790
 MD5 f0b85ab0bd5e039d101c49571e31286f files/digest-quixote-0.6.1 65
 MD5 d0fe64af7a033c96a95874b7c81439a9 files/digest-quixote-1.0 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFCB41dxtZcznfol0URAvlvAKCh7Li/3Uao1wAEBmbRhkYvV8wfhgCfWMSm
+OSEm+7Kt/hgYY3efR/Whryo=
+=qCbb
+-----END PGP SIGNATURE-----

@@ -1,6 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/quixote/quixote-0.6.1.ebuild,v 1.5 2005/01/20 02:59:36 gongloo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/quixote/quixote-0.6.1.ebuild,v 1.6 2005/02/07 15:46:14 fserb Exp $
+
+inherit distutils
 
 PN0="Quixote"
 DESCRIPTION="Python HTML templating framework for developing web applications."
@@ -11,8 +13,6 @@ LICENSE="CNRI"
 SLOT="0"
 KEYWORDS="x86"
 IUSE=""
-
-inherit distutils
 
 DEPEND=">=dev-lang/python-2.2"
 S=${WORKDIR}/${PN0}-${PV}

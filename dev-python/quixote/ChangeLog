@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/quixote
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/quixote/ChangeLog,v 1.12 2005/01/20 02:59:36 gongloo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/quixote/ChangeLog,v 1.13 2005/02/07 15:46:14 fserb Exp $
+
+  07 Feb 2005; Fernando Serboncini <fserb@gentoo.org> quixote-0.6.1.ebuild,
+  quixote-1.0.ebuild:
+  moved 'inherit' to the right place
 
   19 Jan 2005; <gongloo@gentoo.org> quixote-1.0.ebuild:
   Keyworded ~ppc-macos.
