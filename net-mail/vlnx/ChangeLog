@@ -1,6 +1,13 @@
 # ChangeLog for net-mail/vlnx
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vlnx/ChangeLog,v 1.1 2002/02/01 21:53:34 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vlnx/ChangeLog,v 1.2 2002/03/19 05:10:18 chadh Exp $
+
+*vlnx-414e-r1 (1 Feb 2002)
+  18 Mar 2002; Chad Huneycutt <chadh@gentoo.org>
+  uvscan was complaining of missing library, which indeed was not being
+  installed.  I updated the ebuild to install the library and also a man page.
+  Unfortunately, uvscan still will not run, complaining that the program has
+  been tampered with
 
 *vlnx-414e-r1 (1 Feb 2002)
 
