@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/gphoto2
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gphoto2/ChangeLog,v 1.10 2003/05/11 11:12:33 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gphoto2/ChangeLog,v 1.11 2003/05/21 00:10:40 weeve Exp $
+
+  20 May 2003; Jason Wever <weeve@gentoo.org> gphoto2-2.1.1-r1.ebuild:
+  Added ~sparc to keywords.
 
 *gphoto2-2.1.1-r1 (11 May 2003)
 
