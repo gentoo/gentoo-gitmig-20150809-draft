@@ -15,25 +15,6 @@
 # Dont work's yet BaSS 05 Jun 2002
 =app-misc/gtk-theme-switch-2.0.0-r2
 
-# Short-term mask, will test quickly and announce. -danarmak Jun 5th
->=kde-base/kde-3.0.1.20020604
->=kde-base/arts-1.0.1.20020604
->=kde-base/kdeaddons-3.0.1.20020604
->=kde-base/kdeadmin-3.0.1.20020604
->=kde-base/kdeartwork-3.0.1.20020604
->=kde-base/kdebase-3.0.1.20020604
->=kde-base/kdebindings-3.0.1.20020604
->=kde-base/kdeedu-3.0.1.20020604
->=kde-base/kdegames-3.0.1.20020604
->=kde-base/kdegraphics-3.0.1.20020604
->=kde-base/kdelibs-3.0.1.20020604
->=kde-base/kdemultimedia-3.0.1.20020604
->=kde-base/kdenetwork-3.0.1.20020604
->=kde-base/kdepim-3.0.1.20020604
->=kde-base/kdesdk-3.0.1.20020604
->=kde-base/kdetoys-3.0.1.20020604
->=kde-base/kdeutils-3.0.1.20020604
-
 #the XMMS crash when activate the osd plugin, but osd_cat work's well
 #x11-libs/xosd
 
