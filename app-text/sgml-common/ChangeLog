@@ -1,6 +1,9 @@
 # ChangeLog for app-text/sgml-common
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/sgml-common/ChangeLog,v 1.12 2003/02/05 08:28:18 satai Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sgml-common/ChangeLog,v 1.13 2003/02/10 16:36:50 gmsoft Exp $
+
+  10 Feb 2003; Guy Martin <gmsoft@gentoo.org> :
+  Added hppa to keywords.
 
 *sgml-common-0.6.3-r4 (05 Feb 2003)
 
