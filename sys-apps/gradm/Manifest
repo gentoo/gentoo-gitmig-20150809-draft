@@ -6,10 +6,10 @@ MD5 2e720d74ab505928c734da3a006579c9 gradm-1.7b.ebuild 983
 MD5 4a018241746366477b1511f3eef5e78e files/grsecurity.rc 1646
 MD5 19f513de16672643532b502ab8c12d46 files/gradm-1.6-chpax.c 7256
 MD5 b8590c75dd3f70a7c45ee7faf7c01f2d files/grsecurity 1481
-MD5 539c2919ef1df87046cf88f9a1674ac0 files/digest-gradm-1.5a 511
+MD5 98f02df513a8f9f3dcb55c48780e60c5 files/digest-gradm-1.5a 61
 MD5 243a1d9e93c14279bee890ad71d6dd5f files/digest-gradm-1.7b 61
 MD5 fd77d6f0b1ede0d13fd1e802fef41542 files/gradm-1.5a-chpax.c 5769
 MD5 d71d9da7a36e1e0e28a76f2bb5288e3b files/digest-gradm-1.6 60
 MD5 19f513de16672643532b502ab8c12d46 files/gradm-1.7b-chpax.c 7256
 MD5 19f513de16672643532b502ab8c12d46 files/gradm-chpax.c 7256
-MD5 78648cf2cdf8cd32d270c069fbb27f01 files/digest-gradm-1.9.9g 515
+MD5 c557fd6dff49625348f8620bf8eaa54c files/digest-gradm-1.9.9g 63
