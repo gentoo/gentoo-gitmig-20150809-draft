@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/bogofilter/bogofilter-0.94.0.ebuild,v 1.1 2005/03/06 10:12:30 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/bogofilter/bogofilter-0.94.1.ebuild,v 1.1 2005/03/17 07:57:11 tove Exp $
 
 inherit eutils
 
@@ -33,7 +33,7 @@ src_unpack() {
 
 src_compile() {
 	local myconf=""
-	use !gsl &&	myconf="--with-included-gsl" # 'without-' doesn't work
+	use !gsl && myconf="--with-included-gsl" # 'without-' doesn't work
 
 	econf ${myconf} || die "could not configure"
 	emake || die "emake failed"
@@ -63,7 +63,6 @@ src_install() {
 	else
 		dohtml doc/bogofilter-faq{,-fr}.html doc/bogofilter-tuning.HOWTO.html
 	fi
-	dosym /usr/share/doc/${PF} /usr/share/doc/bogo
 }
 
 
