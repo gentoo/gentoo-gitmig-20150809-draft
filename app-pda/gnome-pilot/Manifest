@@ -1,12 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 bab8bcd7880c784efa48bd8bd717360c ChangeLog 6263
 MD5 9ded78d9d2412aa21752c81f86023812 gnome-pilot-0.1.65-r5.ebuild 1208
 MD5 db26cab929faaf5210f81f6ff7b4ea92 gnome-pilot-0.1.71.ebuild 1360
-MD5 a3faef0fc0e777f15badb625001dc2f6 gnome-pilot-2.0.10-r1.ebuild 1506
-MD5 3f0d4ea4e5e15bd2b9dd0ba93eea5f53 gnome-pilot-2.0.12.ebuild 991
+MD5 07d715e9dee48c9338a1f4a3ce155868 gnome-pilot-2.0.10-r1.ebuild 1512
 MD5 1e1031eae2f36a13b2cd73550a31d03d metadata.xml 175
+MD5 0b01cfffd3aa87bf4d9de555333f23f1 gnome-pilot-2.0.12.ebuild 994
 MD5 6dd42dbe52e081c7ac130b8303cd84ac files/digest-gnome-pilot-0.1.65-r5 71
 MD5 327dd488b418afec2cac40f6b8bbbcd7 files/digest-gnome-pilot-0.1.71 71
-MD5 3434f149c580da7e00c52a173dfdf96a files/digest-gnome-pilot-2.0.12 71
 MD5 4c1bf3e985e3e12a7196902b013f314c files/digest-gnome-pilot-2.0.10-r1 71
 MD5 df4f6d9882436059cee414d0fb7d91ae files/gnome-pilot-0.1.70-usb.patch 1122
 MD5 de42a13e198e82cd8d8c5f77bc1a1705 files/gnome-pilot-2.0.1-pisock.patch 450
@@ -16,4 +18,12 @@ MD5 d8281597713f41bcc2f8d66d72c64a5c files/gnome-pilot-2.0.10-treo600.patch 670
 MD5 ba03ae634fb8f71f80715cdfea0ba409 files/gnome-pilot-2.0.10-clie.patch 638
 MD5 3720cf4f610ccbcdfce32c5c540d1076 files/gnome-pilot-2.0.10-missing_proc.patch 440
 MD5 0a9a340af87da627cb43fe7d0b3c5a3e files/gnome-pilot-2.0.10-gcc34.patch 4108
+MD5 3434f149c580da7e00c52a173dfdf96a files/digest-gnome-pilot-2.0.12 71
 MD5 95d8bbe1bdf7dc712cc5d616a9a93995 files/gnome-pilot-2.0.12-zire31.patch 474
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBdV7DHTu7gpaalycRArtTAKDJjC2+RceFdfplOa3kGJYrBZwzjgCaAhyY
+sg+gZ4UvX1cYk5gp5EVJgLg=
+=v4k/
+-----END PGP SIGNATURE-----
