@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/kdepim-3.2.1.ebuild,v 1.2 2004/03/09 12:34:44 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/kdepim-3.2.1.ebuild,v 1.3 2004/03/10 03:23:53 caleb Exp $
 
 inherit kde-dist
 
@@ -13,6 +13,11 @@ DEPEND="~kde-base/kdenetwork-${PV}
 	pda? ( app-pda/pilot-link dev-libs/libmal )
 	ldap? ( net-nds/openldap )
 	crypt? ( app-crypt/cryptplug app-crypt/gnupg )"
+
+src_unpack() {
+	kde_src_unpack
+	cd ${S} && epatch ${FILESDIR}/kpilot-parallel-make-fix.patch
+}
 
 src_compile() {
 	use pda && myconf="$myconf --with-extra-includes=/usr/include/libpisock"
