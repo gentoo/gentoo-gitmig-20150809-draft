@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-pkg.eclass,v 1.4 2003/05/15 01:37:01 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-pkg.eclass,v 1.5 2004/01/12 09:43:18 karltk Exp $
 
 inherit base
 ECLASS=java-pkg
@@ -170,5 +170,28 @@ java-pkg_dozip()
 {
 	debug-print-function ${FUNCNAME} $*
 	java-pkg_dojar $*
+}
+
+java-pkg_jar-from()
+{
+	local pkg=$1
+	local jar=$2
+	local destjar=$3
+
+	if [ -z "${destjar}" ] ; then
+		destjar=${jar}
+	fi
+
+	for x in `java-config --classpath=${pkg} | tr ':' ' '`; do
+		if [ ! -f ${x} ] ; then
+			eerror "Installation problems with jars in ${pkg} - is it installed?"
+			return 1
+		fi
+		if [ "`basename ${x}`" == "${jar}" ] ; then
+			ln -sf ${x} ${destjar}
+			return 0
+		fi
+	done
+        return 1
 }
 
