@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/db
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.31 2003/05/30 10:04:24 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.32 2003/06/07 12:21:22 pauldv Exp $
+
+  07 Jun 2003; Paul de Vrieze <pauldv@gentoo.org> db-3.2.9-r5.ebuild,
+  db-4.0.14.ebuild, db-4.1.24.ebuild, db-4.1.25.ebuild:
+  Fix the autosymlinking script to work in a cross environment. Courtessy of
+  Alastair Tse <liquidx@gentoo.org>, bug #22393.
 
 *db-4.1.25 (30 May 2003)
 
