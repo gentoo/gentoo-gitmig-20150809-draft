@@ -81,7 +81,6 @@ nxserver_pkg_postinst() {
 
 	einfo "Changing permissions for files under /usr/NX"
 	chown nx.root /usr/NX/etc/passwd
-	chown nx.root /usr/NX/etc/users.id_dsa
 	chown -R nx.root /usr/NX/nxhome
 	chown -R nx.root /usr/NX/var/sessions
 
@@ -89,6 +88,7 @@ nxserver_pkg_postinst() {
 	if [ ! -f /usr/NX/etc/users.id_dsa ]; then
 		ssh-keygen -q -t dsa -N '' -f /usr/NX/etc/users.id_dsa
 	fi
+	chown nx.root /usr/NX/etc/users.id_dsa
 	cp -f /usr/NX/nxhome/.ssh/server.id_dsa.pub.key /usr/NX/nxhome/.ssh/authorized_keys2
 
 	if [ ! -f /usr/NX/var/broadcast.txt ]; then
