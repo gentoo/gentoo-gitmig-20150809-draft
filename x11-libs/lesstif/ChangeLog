@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/lesstif
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/lesstif/ChangeLog,v 1.48 2005/03/02 18:38:55 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/lesstif/ChangeLog,v 1.49 2005/03/02 19:49:22 corsair Exp $
+
+  02 Mar 2005; Markus Rothe <corsair@gentoo.org> lesstif-0.94.0-r2.ebuild:
+  Stable on ppc64; bug #83656
 
 *lesstif-0.93.94-r1 (02 Mar 2005)
 
