@@ -1,6 +1,13 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.77 2003/08/12 16:19:08 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.78 2003/09/07 15:17:47 azarah Exp $
+
+*glibc-2.3.2-r4 (07 Sep 2003)
+
+  07 Sep 2003; Martin Schlemmer <azarah@gentoo.org> glibc-2.3.2-r4.ebuild,
+  files/2.3.2/glibc-2.3.2-fix-omitted-operand-in-mathinline_h.patch:
+  Update cvs snapshot to 20030906.  Update nptl to version 0.57.  Add patch
+  for bug #27142.
 
   12 Aug 2003; Alexander Gabert <pappy@gentoo.org> glibc-2.3.2-r1.ebuild:
   hppa building fails, linuxthreads/sysdeps/hppa/pt-machine.h is missing proper
