@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040619.ebuild,v 1.15 2004/07/12 22:19:44 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040619.ebuild,v 1.16 2004/07/14 17:24:55 lv Exp $
 
 IUSE="nls pic build nptl erandom hardened makecheck multilib debug"
 
@@ -108,7 +108,7 @@ setup_flags() {
 
 	if [ "`gcc-major-version`" -ge "3" -a "`gcc-minor-version`" -ge "4" ]; then
 		# broken in 3.4.x
-		replace-cpu-flags pentium-m pentium3
+		replace-flags -march=pentium-m -mtune=pentium3
 	fi
 
 

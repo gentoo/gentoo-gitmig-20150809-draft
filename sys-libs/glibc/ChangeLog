@@ -1,6 +1,12 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.208 2004/07/12 22:19:44 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.209 2004/07/14 17:24:54 lv Exp $
+
+  14 Jul 2004; Travis Tilley <lv@gentoo.org> glibc-2.3.3.20040420.ebuild,
+  glibc-2.3.4.20040605-r1.ebuild, glibc-2.3.4.20040619.ebuild:
+  change pentium-m fix to use -mtune=pentium3 instead of -march=pentium4. that
+  should finally fix bug 55696, or at least work around it until upstream has a
+  proper fix
 
   11 Jul 2004; Tom Gall <tgall@gentoo.org> glibc-2.3.4.20040619.ebuild,
   glibc-2.3.4.20040605.ebuild:
