@@ -1,39 +1,35 @@
 # ChangeLog for dev-java/blackdown-jdk
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/ChangeLog,v 1.12 2002/08/09 00:07:06 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/ChangeLog,v 1.13 2002/08/26 16:04:12 karltk Exp $
 
 *blackdown-jdk-1.3.1-r7 (16 Jul 2002)
 
-  01 Aug 2002; Karl Trygve Kalleberg <karltk@gentoo.org> blackdown-jdk-1.3.1-r7 :
+  26 Aug 2002; Karl Trygve Kalleberg <karltk@gentoo.org> blackdown-jdk-1.3.1-r7:
+  Added doc keyword to optionally install documentation. Set SLOT to 1.3, so 
+  that it may coexist with the upcoming 1.4 release. Fixes #6668.
 
+  01 Aug 2002; Karl Trygve Kalleberg <karltk@gentoo.org> blackdown-jdk-1.3.1-r7:
   Added LICENSE and KEYWORDS.
 
-  16 Jul 2002; Karl Trygve Kalleberg <karltk@gentoo.org> files/blackdown-jdk-1.3.1 :
-
+  16 Jul 2002; Karl Trygve Kalleberg <karltk@gentoo.org> files/blackdown-jdk-1.3.1:
   Added MANPATH to the environment file.
   
   25 Jun 2002; Karl Trygve Kalleberg <karltk@gentoo.org> blackdown-jdk-1.3.1-r7.ebuild files/digest-blackdown-jdk-1.3.1-r7:
-
   Now Blackdown JDK is set to be the default VM if none are set on install.
-
   Removed blackdown-jdk-1.3.1-r6.ebuild files/digest-blackdown-jdk-1.3.1-r6
 
 *blackdown-jdk-1.3.1-r6 (26 May 2002)
 
   26 May 2002; Karl Trygve Kalleberg <karltk@gentoo.org> blackdown-jdk-1.3.1-r6.ebuild files/digest-blackdown-jdk-1.3.1-r6:
-
   CLASSPATH pointed to jre's runtime library, fixed to point to jdk's instead.
-
   Removed blackdown-jdk-1.3.1-r5.ebuild files/digest-blackdown-jdk-1.3.1-r5
 
 *blackdown-jdk-1.3.1-r5 (24 Apr 2002)
 
   27 Apr 2002; pvdabeel <pvdabeel@gentoo.org> 
-
   ppc/sparc fix
 
   24 Apr 2002; Karl Trygve Kalleberg <karltk@gentoo.org> blackdown-jdk-1.3.1-r5.ebuild files/digest-blackdown-jdk-1.3.1-r5:
-
   When compiling certain versions of PHP with Blackdown, libhpi.so was not 
   found. A workaround whereby the proper directories for Blackdown are added
   to the system's LDPATH is included in this revision. This should also take 
@@ -44,18 +40,16 @@
 *blackdown-jdk-1.3.1-r4 (16 Apr 2002)
 
   16 Apr 2002; Ryan Phillips <rphillips@gentoo.org> blackdown-jdk-1.3.1-r4.ebuild files/digest-blackdown-jdk-1.3.1-r4:
-
   Removed ROOTPATH from files/blackdown-fdk-1.3.1 (#1850)
   
 *blackdown-jdk-1.3.1-r4 (09 Apr 2002)
 
   09 Apr 2002; Karl Trygve Kalleberg <karltk@gentoo.org> blackdown-jdk-1.3.1-r4.ebuild files/digest-blackdown-jdk-1.3.1-r4:
-
   Fixed erroneous font specification (#1533), missing ROOTPATH (#1577).
-
   Removed blackdown-jdk-1.3.1-r3.ebuild files/digest-blackdown-jdk-1.3.1-r3
 
 *blackdown-jdk-1.3.1-r3 (18 Mar 2002)
+ 
   21 Mar 2002; Seemant Kulleen <seemant@gentoo.org> blackdown-jdk-1.3.1-r3.ebuild :
   HTML documentation no longer gets gzipped.  Bug reported by
   stefan@mdy.univie.ac.at
@@ -63,17 +57,10 @@
 *blackdown-jdk-1.3.1-r3 (18 Mar 2002)
 
   18 Mar 2002; Karl Trygve Kalleberg <karltk@gentoo.org> blackdown-jdk-1.3.1-r3 files/digest-blackdown-jdk-1.3.1-r3 files/blackdown-jdk-1.3.1 :
-
   Added support for JVM switching.
-
   Removed old revisions.
 
 *blackdown-jdk-1.3.1-r2 (1 Feb 2002)
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
-  
-  Added initial ChangeLog which should be updated whenever the package is
-  updated in any way. This changelog is targetted to users. This means that the
-  comments should well explained and written in clean English. The details about
-  writing correct changelogs are explained in the skel.ChangeLog file which you
-  can find in the root directory of the portage repository.
+  Added initial ChangeLog.
