@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/kismet
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/ChangeLog,v 1.13 2003/02/03 18:16:18 jhhudso Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/ChangeLog,v 1.14 2003/02/11 19:39:18 latexer Exp $
+
+  11 Feb 2003; Peter Johanson <latexer@gentoo.org> :
+  Fixed up some formatting stuff in all the ebuilds . Purely asthetics.
 
 *kismet-2.8.1 (3 Feb 2003)
 
@@ -42,7 +45,6 @@
 
   16 Dec 2002; Jared Hudson <jhhudso@gentoo.org> : Bug ids #9349, 10643, 11018.
   ebuild submitted by Alberto Ornaghi <alor@blackhats.it>
-	
 	
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
