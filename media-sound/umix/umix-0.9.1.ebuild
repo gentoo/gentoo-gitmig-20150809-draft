@@ -1,13 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/umix/umix-0.9.1.ebuild,v 1.6 2002/10/05 05:39:16 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/umix/umix-0.9.1.ebuild,v 1.7 2003/02/01 17:55:00 kutsuya Exp $
 
 IUSE="ncurses gtk"
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Program for adjusting soundcard volumes"
-SRC_URI="http://www.ionstream.fi/sakari/${PN}/${P}.tar.gz"
-HOMEPAGE="http://www.ionstream.fi/sakari/umix/"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
+HOMEPAGE="http://umix.sourceforge.net/"
 
 SLOT="0"
 KEYWORDS="x86 ppc"
