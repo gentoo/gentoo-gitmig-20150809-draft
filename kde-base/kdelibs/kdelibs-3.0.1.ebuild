@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.0.1.ebuild,v 1.1 2002/05/13 19:42:32 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.0.1.ebuild,v 1.2 2002/05/15 12:51:12 verwilst Exp $
 . /usr/portage/eclass/inherit.eclass || die
 inherit kde kde.org
 #don't inherit kde-base or kde-dist! it calls need-kde which adds kdelibs to depend!
@@ -18,21 +18,21 @@ SLOT="3"
 DEPEND=""
 RDEPEND=""
 newdepend ">=sys-devel/gcc-2.95.2
-		virtual/glibc
-		sys-devel/ld.so
-		sys-devel/perl
-		>=media-libs/audiofile-0.1.9
-		>=sys-apps/bzip2-1.0.1
-		>=dev-libs/libxslt-1.0.7
-		>=dev-libs/libpcre-3.5
-		>=dev-libs/libxml2-2.4.10
-		ssl? ( >=dev-libs/openssl-0.9.6 )
-		alsa? ( >=media-libs/alsa-lib-0.5.9 )
-		cups? ( >=net-print/cups-1.1.14 )
-		>=media-libs/tiff-3.5.5
-		app-admin/fam-oss
-		>=kde-base/arts-1.0.0
-		app-text/ghostscript"
+	virtual/glibc
+	sys-devel/ld.so
+	sys-devel/perl
+	>=media-libs/audiofile-0.1.9
+	>=sys-apps/bzip2-1.0.1
+	>=dev-libs/libxslt-1.0.7
+	>=dev-libs/libpcre-3.5
+	>=dev-libs/libxml2-2.4.10
+	ssl? ( >=dev-libs/openssl-0.9.6 )
+	alsa? ( >=media-libs/alsa-lib-0.5.9 )
+	cups? ( >=net-print/cups-1.1.14 )
+	>=media-libs/tiff-3.5.5
+	app-admin/fam-oss
+	>=kde-base/arts-1.0.1
+	app-text/ghostscript"
 
 DEPEND="$DEPEND
 	sys-devel/make
