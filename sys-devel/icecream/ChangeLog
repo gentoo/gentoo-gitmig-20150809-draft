@@ -1,0 +1,9 @@
+# ChangeLog for sys-devel/icecream
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/icecream/ChangeLog,v 1.1 2005/01/11 22:40:00 tantive Exp $
+
+  11 Jan 2005; Michael Imhof <tantive@gentoo.org> +files/99icecream,
+  +files/icecream.nokde.patch, +files/icecream_disable.patch,
+  +files/icecreamdaemon, +files/icecreamscheduler:
+  Initial import. The ebuild was contributed by Alexander Holler.
+

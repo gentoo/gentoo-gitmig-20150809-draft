@@ -1,0 +1,17 @@
+#!/sbin/runscript
+depend() {
+        need net
+	after icecreamscheduler
+}
+
+start() {
+        ebegin "Starting Icecream daemon"
+	start-stop-daemon --start --quiet --exec /opt/icecream/bin/iceccd -- -d -m 5 > /dev/null
+        eend $?
+}
+
+stop() {
+        ebegin "Stopping Icecream daemon"
+        start-stop-daemon --stop --quiet --retry 5 --exec /opt/icecream/bin/iceccd
+        eend $?
+}
