@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.30.ebuild,v 1.3 2004/06/24 22:23:33 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.30.ebuild,v 1.4 2004/07/14 16:50:36 agriffis Exp $
 
 inherit eutils
 
-IUSE="tcpd ssl postgres mysql ldap pam exiscan-acl maildir lmtp ipv6 sasl"
+IUSE="exiscan exiscan-acl ipv6 ldap lmtp maildir mysql pam postgres sasl ssl tcpd"
 
 EXISCANACL_VER=${PV}-16
 
@@ -215,5 +215,3 @@ pkg_postinst() {
 	einfo "/etc/exim/auth_conf.sub contains the configuration sub for using smtp auth."
 	einfo "Please create /etc/exim/exim.conf from /etc/exim/exim.conf.dist."
 }
-
-

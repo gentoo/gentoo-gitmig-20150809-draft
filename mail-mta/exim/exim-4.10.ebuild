@@ -1,11 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # Updated to exim-4 by Ben Lutgens <lamer@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.10.ebuild,v 1.4 2004/07/01 19:52:50 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.10.ebuild,v 1.5 2004/07/14 16:50:36 agriffis Exp $
 
 IUSE="tcpd ssl postgres mysql ldap pam"
 
-S=${WORKDIR}/${P}
 EXISCAN_VER=${PV}-16
 
 DESCRIPTION="A highly configurable, drop-in replacement for sendmail"
