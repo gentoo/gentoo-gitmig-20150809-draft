@@ -1,6 +1,10 @@
 # ChangeLog for mail-mta/courier
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/ChangeLog,v 1.23 2004/11/16 08:47:46 swtaylor Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/ChangeLog,v 1.24 2004/11/16 23:34:09 swtaylor Exp $
+
+  16 Nov 2004; Scott W Taylor <swtaylor@gentoo.org>
+  courier-0.47.20041113.ebuild:
+  add maildropldap
 
 *courier-0.47.20041113 (16 Nov 2004)
 

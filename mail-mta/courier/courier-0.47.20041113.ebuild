@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/courier-0.47.20041113.ebuild,v 1.1 2004/11/16 08:47:46 swtaylor Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/courier-0.47.20041113.ebuild,v 1.2 2004/11/16 23:34:09 swtaylor Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SLOT="0"
 LICENSE="GPL-2"
 #KEYWORDS="~x86 ~alpha ~ppc ~sparc ~amd64 ~mips"
 KEYWORDS="-*"
-IUSE="postgres ldap mysql pam nls ipv6 spell fax crypt norewrite uclibc"
+IUSE="postgres ldap mysql pam nls ipv6 spell fax crypt norewrite uclibc mailwrapper"
 
 PROVIDE="virtual/mta
 	 virtual/mda
@@ -29,7 +29,8 @@ DEPEND="virtual/libc
 	ldap? ( >=net-nds/openldap-1.2.11 )
 	postgres? ( >=dev-db/postgresql-7.1.3 )
 	spell? ( virtual/aspell-dict )
-	!virtual/mta
+	!mailwrapper? ( !virtual/mta )
+	mailwrapper? ( >=net-mail/mailwrapper-0.2 )
 	!virtual/mda
 	!virtual/imapd"
 
@@ -48,7 +49,9 @@ src_unpack() {
 
 src_compile() {
 	local myconf
-	myconf="`use_with spell ispell` `use_with ipv6`"
+	myconf="`use_with spell ispell` `use_with ipv6` `use_enable ldap maildropldap`"
+
+	use ldap && myconf="${myconf} --with-ldapconfig=/etc/courier/maildrop.ldaprc"
 
 	if use nls && [ ! -z "$ENABLE_UNICODE" ]; then
 		myconf="${myconf} --enable-unicode=$ENABLE_UNICODE"
@@ -58,7 +61,7 @@ src_compile() {
 
 	myconf="${myconf} debug=true"
 
-einfo "${myconf}"
+	einfo "Building courier with: ${myconf}"
 
 	./configure \
 		--prefix=/usr \
@@ -204,8 +207,14 @@ src_install() {
 	insopts -m 400 -o mail -g mail
 	doins ${FILESDIR}/password.dist
 
-	# fixes bug #25028 courier doesn't symlink sendmail to /usr/sbin
-	dosym /usr/bin/sendmail /usr/sbin/sendmail
+	if use mailwrapper ; then
+		mv ${D}/usr/bin/sendmail ${D}/usr/bin/sendmail.courier
+		rm ${D}/usr/bin/rmail
+		insinto /etc/mail
+		doins ${FILESDIR}/mailer.conf
+	else
+		dosym /usr/bin/sendmail /usr/sbin/sendmail
+	fi
 
 	echo "MAILDIR=\$HOME/.maildir" >> ${D}/etc/courier/courierd
 
