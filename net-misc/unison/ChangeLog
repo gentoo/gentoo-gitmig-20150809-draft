@@ -1,7 +1,15 @@
 # ChangeLog for net-misc/unison
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/unison/ChangeLog,v 1.18 2004/08/19 10:50:27 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/unison/ChangeLog,v 1.19 2004/09/25 21:05:24 mattam Exp $
 
+*unison-2.10.2 (25 Sep 2004)
+
+  25 Sep 2004; Matthieu Sozeau <mattam@gentoo.org> +unison-2.10.2.ebuild,
+  -unison-2.9.1.ebuild:
+  New beta version of unison, with brand new lablgtk2 GUI. Thanks to Alan Shmitt
+  <alan.schmitt@polytechnique.org>, for the submission (bug #63107). Removed 
+  old, unused ebuild.
+  
   19 Aug 2004; Stuart Herbert <stuart@gentoo.org> unison-2.9.1-r1.ebuild,
   unison-2.9.1.ebuild:
   Fixed broken SRC_URI settings, requested by tigger@gentoo.org

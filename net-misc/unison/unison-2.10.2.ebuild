@@ -1,20 +1,26 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/unison/unison-2.9.1.ebuild,v 1.19 2004/08/19 10:50:27 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/unison/unison-2.10.2.ebuild,v 1.1 2004/09/25 21:05:24 mattam Exp $
 
-IUSE="gtk"
+inherit eutils
+
+IUSE="gtk gtk2"
 
 DESCRIPTION="Two-way cross-platform file synchronizer"
 HOMEPAGE="http://www.cis.upenn.edu/~bcpierce/unison/"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 sparc ~ppc alpha ~amd64"
+KEYWORDS="~x86 ~ppc"
 
 DEPEND=">=dev-lang/ocaml-3.04
-	gtk? ( =dev-ml/lablgtk-1.2* )"
-RDEPEND="gtk? ( =x11-libs/gtk+-1.2* )"
+	gtk? ( gtk2? ( >=dev-ml/lablgtk-2.2 ) !gtk2? ( =dev-ml/lablgtk-1.2* ) )"
+RDEPEND="gtk? ( gtk2? ( >=dev-ml/lablgtk-2.2 ) !gtk2? ( =dev-ml/lablgtk-1.2* ) )"
 
-SRC_URI="mirror://gentoo/${P}.tar.gz"
+SRC_URI="http://www.cis.upenn.edu/~bcpierce/unison/download/beta-test/${P}/${P}.tar.gz"
+
+pkg_setup() {
+	ewarn "This is a beta release, use at your very own risk"
+}
 
 src_unpack() {
 	unpack ${P}.tar.gz
@@ -25,11 +31,14 @@ src_unpack() {
 }
 
 src_compile() {
-
 	local myconf
 
 	if use gtk; then
-		myconf="$myconf UISTYLE=gtk"
+		if use gtk2; then
+			myconf="$myconf UISTYLE=gtk2"
+		else
+			myconf="$myconf UISTYLE=gtk"
+		fi
 	else
 		myconf="$myconf UISTYLE=text"
 	fi
