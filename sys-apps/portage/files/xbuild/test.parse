@@ -1,0 +1,19 @@
+cd /usr/local/bin
+a = `ls -l foo/bar`
+b="asd;lfkjsdf;"
+c="asdlfkj"foobar$foo$bar${foobar}
+d=`ls -l foobar$oo$gar${foobar}`$foo
+for x in a
+do
+	echo a
+done
+if [ x == 1 ]
+then
+	asdlfk
+	lasdk
+	asldkf
+	lsdk
+done
+if (x >=1) {
+	print foo bar
+}
