@@ -31,6 +31,9 @@ echo "Using $myGETTEXT"
 echo "Using $myGLIBC"
 echo "Using $myTEXINFO"
 
+#This should not be set to get glibc to build properly. See bug #7652.
+LD_LIBRARY_PATH=""
+
 cleanup() {
 	cp /etc/make.conf.build /etc/make.conf
 	exit $1
