@@ -19,7 +19,7 @@ virtual/emacs	   app-editors/emacs
 virtual/cron	    sys-apps/dcron
 sys-apps/reiserfs-utils sys-fs/reiserfsprogs
 virtual/xemacs	  app-editors/xemacs
-virtual/sylpheed	net-mail/sylpheed
+virtual/sylpheed	mail-client/sylpheed
 virtual/php	     dev-php/mod_php
 virtual/textbrowser		net-www/links
 virtual/mda				net-mail/procmail

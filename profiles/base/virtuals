@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/virtuals,v 1.14 2004/05/30 00:50:48 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/virtuals,v 1.15 2004/05/30 07:47:03 robbat2 Exp $
 
 # This file describes the packages that by default satisfy a certain virtual
 # That this file exists in the base profile implies that these packages will
@@ -43,7 +43,7 @@ virtual/semi					app-emacs/semi
 virtual/skkserv					app-i18n/skkserv
 virtual/snmp					net-analyzer/net-snmp
 virtual/ssh						net-misc/openssh
-virtual/sylpheed				net-mail/sylpheed
+virtual/sylpheed				mail-client/sylpheed
 virtual/tetex					app-text/tetex
 virtual/textbrowser				net-www/links
 virtual/tftp					net-misc/tftp-hpa

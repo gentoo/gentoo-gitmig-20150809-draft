@@ -37,7 +37,7 @@ virtual/quicktime	media-libs/libquicktime
 virtual/semi		app-emacs/semi
 virtual/skkserv		app-i18n/skkserv
 virtual/snmp		net-analyzer/net-snmp
-virtual/sylpheed	net-mail/sylpheed
+virtual/sylpheed	mail-client/sylpheed
 virtual/tetex		app-text/tetex
 virtual/textbrowser	net-www/links
 virtual/x11	     x11-base/xfree
