@@ -1,0 +1,10 @@
+# ChangeLog for dev-libs/libbulletml
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libbulletml/ChangeLog,v 1.1 2004/09/27 06:55:07 mr_bones_ Exp $
+
+*libbulletml-0.0.6 (26 Sep 2004)
+
+  26 Sep 2004; Michael Sterrett <mr_bones_@gentoo.org> +metadata.xml,
+  +libbulletml-0.0.6.ebuild:
+  initial commit - ebuild submitted by Atzm Watanabe via bug #45038
+
