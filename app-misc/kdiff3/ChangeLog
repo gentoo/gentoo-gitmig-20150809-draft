@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/kdiff3
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/kdiff3/ChangeLog,v 1.13 2004/03/21 20:11:23 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/kdiff3/ChangeLog,v 1.14 2004/04/03 23:08:13 pylon Exp $
+
+  04 Apr 2004; Lars Weiler <pylon@gentoo.org> kdiff3-0.9.82.ebuild:
+  stable on ppc
 
   21 Mar 2004; Jason Wever <weeve@gentoo.org> kdiff3-0.9.82.ebuild:
   Added ~sparc keyword.
