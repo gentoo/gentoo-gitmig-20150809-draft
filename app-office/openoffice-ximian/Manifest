@@ -1,9 +1,9 @@
 MD5 52e27b9b0c1d0fe5aeb780ee95d688a3 openoffice-ximian-1.1.53.ebuild 14861
-MD5 1799ceaa43daed54b1dc0465c9b6eadb openoffice-ximian-1.1.55-r1.ebuild 15437
+MD5 55055b45744d13228e8dce0538aa0a84 openoffice-ximian-1.1.55-r1.ebuild 15484
 MD5 665131dd815e781e7fb75a405e7c8c11 openoffice-ximian-1.1.51-r1.ebuild 15080
 MD5 5a8067cff008bb262faf659be4f79d03 openoffice-ximian-1.1.55.ebuild 14965
 MD5 306123f155769cc00478ece73816167b openoffice-ximian-1.1.54.ebuild 14856
-MD5 9579ea6afbfd51831b58efff767daa85 ChangeLog 10017
+MD5 afb5879a78016ff46250fdebf4f80433 ChangeLog 10201
 MD5 f3942f82433bf5ae16461240cbcc4984 metadata.xml 300
 MD5 bd8a36025a84cb2ad840e822f513e468 files/digest-openoffice-ximian-1.1.51-r1 213
 MD5 f1c9394d16cfa3ba87a38e7bb7c50a04 files/digest-openoffice-ximian-1.1.55-r1 293
@@ -29,3 +29,4 @@ MD5 7978a9c1f590a83622b8040ee83197a4 files/1.1.1/nptl.patch 1285
 MD5 fc8711196de6324c9fae45342d159bf3 files/1.1.1/build.patch 330
 MD5 ec45b66d175ad9662716a06e7c678cef files/1.1.1/newstlportfix.patch 10362
 MD5 6fd623d53d17e17f953232da5b04447f files/1.1.1/fixscale.patch 1035
+MD5 31663a485adc28ea4f98c20d16b186c2 files/1.1.1/gentoo-1.1.55.patch 606

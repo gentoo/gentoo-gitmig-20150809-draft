@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.1.55-r1.ebuild,v 1.2 2004/05/07 20:50:04 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.1.55-r1.ebuild,v 1.3 2004/05/12 09:02:44 suka Exp $
 
 # IMPORTANT:  This is extremely alpha!!!
 
@@ -29,15 +29,6 @@
 inherit flag-o-matic eutils gcc
 
 IUSE="gnome kde ooo-kde"
-
-# We want gcc3 if possible!!!!
-export WANT_GCC_3="yes"
-
-# Set $ECPUS to amount of processes multiprocessing build should use.
-# NOTE:  Setting this too high might cause dmake to segfault!!
-#        Setting this to anything but "1" on my pentium4 causes things
-#        to segfault :(
-[ -z "${ECPUS}" ] && export ECPUS="1"
 
 OO_VER=1.1.1
 PATCHLEVEL=OOO_1_1_1
@@ -187,6 +178,9 @@ oo_setup() {
 	unset LANG
 	unset LC_ALL
 
+	# We want gcc3 if possible!!!!
+	export WANT_GCC_3="yes"
+
 	export NEW_GCC="0"
 
 	if [ -x /usr/sbin/gcc-config ]
@@ -231,6 +225,9 @@ src_unpack() {
 	cd ${PATCHDIR}
 	epatch ${FILESDIR}/${OO_VER}/fixscale.patch
 
+	#Beginnings of our own patchset
+	epatch ${FILESDIR}/${OO_VER}/gentoo-${PV}.patch
+
 	#Still needed: The STLport patch
 	cd ${S}
 	rm stlport/STLport-4.5.3.patch
@@ -242,9 +239,6 @@ src_unpack() {
 	#Additional patch for Kernel 2.6
 	epatch ${FILESDIR}/${OO_VER}/openoffice-1.1.0-linux-2.6-fix.patch
 
-	#Work around recent portage sandbox troubles
-	epatch ${FILESDIR}/${OO_VER}/build.patch
-
 	if [ ${ARCH} = "sparc" ]; then
 		epatch ${FILESDIR}/${OO_VER}/openoffice-1.1.0-sparc64-fix.patch
 	fi
@@ -252,9 +246,11 @@ src_unpack() {
 	if [ `use ooo-kde` ]; then
 		DISTRO=KDE
 		ICONDIR=${WORKDIR}/ooo-KDE_icons-${KDE_ICON_VER}
+		WIDGETSET=kde
 	else
-		DISTRO=Ximian
+		DISTRO=Gentoo
 		ICONDIR=${WORKDIR}/ooo-icons-${ICON_VER}
+		WIDGETSET=gtk
 	fi
 
 	einfo "Applying Ximian OO.org Patches"
@@ -324,6 +320,7 @@ src_compile() {
 	# get linker errors due to the ABI being different (STLport will be
 	# compiled with 2.95.3, while OO is compiled with 3.x). (Az)
 	einfo "Configuring OpenOffice.org with language support for ${LFULLNAME}..."
+	einfo "Using Native widgest set for ${WIDGETSET}"
 	cd ${S}/config_office
 	rm -f config.cache
 	autoconf
@@ -338,8 +335,8 @@ src_compile() {
 		--with-system-zlib \
 		--with-system-freetype \
 		--with-system-curl \
-		--disable-java"
-	use ooo-kde && myconf="${myconf} --with-widgetset=kde"
+		--disable-java
+		--with-widgetset=${WIDGETSET}"
 	./configure ${myconf} || die
 
 	cd ${S}
@@ -347,6 +344,12 @@ src_compile() {
 
 	# Build as minimal as possible
 	export BUILD_MINIMAL="${LANGNO}"
+
+	# Set $ECPUS to amount of processes multiprocessing build should use.
+	# NOTE:  Setting this too high might cause dmake to segfault!!
+	#        Setting this to anything but "1" on my pentium4 causes things
+	#        to segfault :(
+	[ -z "${ECPUS}" ] && export ECPUS="1"
 
 	# Should the build use multiprocessing?
 	if [ "${ECPUS}" -gt 1 ]
@@ -384,8 +387,6 @@ src_install() {
 	addpredict "/dev/dri"
 	addpredict "/usr/bin/soffice"
 	addpredict "/pspfontcache"
-
-	get_EnvSet
 
 	# The install part should now be relatively OK compared to
 	# what it was.  Basically we use autoresponse files to install
