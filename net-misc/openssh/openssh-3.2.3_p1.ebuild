@@ -1,19 +1,27 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.2.3_p1.ebuild,v 1.1 2002/05/31 02:22:41 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.2.3_p1.ebuild,v 1.2 2002/05/31 02:31:50 agenkin Exp $
+
+DESCRIPTION="Port of OpenBSD's free SSH release"
+HOMEPAGE="http://www.openssh.com/"
+
+# openssh recognizes when openssl has been slightly upgraded and refuses to run.
+# This new rev will use the new openssl.
+RDEPEND="virtual/glibc pam? ( >=sys-libs/pam-0.73 >=sys-apps/shadow-4.0.2-r2 )
+	>=dev-libs/openssl-0.9.6d
+	sys-libs/zlib"
+
+DEPEND="${RDEPEND}
+	sys-devel/perl
+	sys-apps/groff
+	tcpd? ( >=sys-apps/tcp-wrappers-7.6 )"
 
 # Make it more portable between straight releases
 # and _p? releases.
 PARCH=${P/_/}
-S=${WORKDIR}/${PARCH}
-DESCRIPTION="Port of OpenBSD's free SSH release"
-SRC_URI="ftp://ftp.openbsd.org/pub/unix/OpenBSD/OpenSSH/portable/${PARCH}.tar.gz"
-HOMEPAGE="http://www.openssh.com/"
 
-#openssh recognizes when openssl has been slightly upgraded and refuses to run.  This new rev
-#will use the new openssl.
-RDEPEND="virtual/glibc pam? ( >=sys-libs/pam-0.73 >=sys-apps/shadow-4.0.2-r2 ) >=dev-libs/openssl-0.9.6d sys-libs/zlib"
-DEPEND="${RDEPEND} sys-devel/perl sys-apps/groff tcpd? ( >=sys-apps/tcp-wrappers-7.6 )"
+SRC_URI="ftp://ftp.openbsd.org/pub/unix/OpenBSD/OpenSSH/portable/${PARCH}.tar.gz"
+S=${WORKDIR}/${PARCH}
 
 src_compile() {
 	local myconf
