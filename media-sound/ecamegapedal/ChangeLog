@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/ecamegapedal
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ecamegapedal/ChangeLog,v 1.1 2003/06/21 04:00:07 jje Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ecamegapedal/ChangeLog,v 1.2 2003/10/16 19:34:06 mholzer Exp $
+
+*ecamegapedal-0.4.3 (17 Oct 2003)
+
+  17 Oct 2003; Martin Holzer <mholzer@gentoo.org> ecamegapedal-0.4.3.ebuild:
+  Version bumped. Closes #31266.
 
 *ecamegapedal-0.4.2 (21 Jun 2003)
 
