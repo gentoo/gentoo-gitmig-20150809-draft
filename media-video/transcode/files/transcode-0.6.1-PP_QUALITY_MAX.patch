@@ -1,0 +1,24 @@
+diff -ru transcode-0.6.1/filter/filter_pp.c transcode-0.6.1-r1/filter/filter_pp.c
+--- transcode-0.6.1/filter/filter_pp.c	2002-06-16 08:30:53.000000000 +0200
++++ transcode-0.6.1-r1/filter/filter_pp.c	2002-11-15 13:26:09.000000000 +0100
+@@ -154,7 +154,7 @@
+                   pp_page, vob->ex_v_width,
+                   vob->ex_v_width, vob->ex_v_height,
+                   NULL, 0,
+-                  GET_PP_QUALITY_MAX);    
++                  PP_QUALITY_MAX);    
+     }
+   }
+   
+diff -ru transcode-0.6.1/filter/filter_ppcvs.c transcode-0.6.1-r1/filter/filter_ppcvs.c
+--- transcode-0.6.1/filter/filter_ppcvs.c	2002-06-16 08:30:53.000000000 +0200
++++ transcode-0.6.1-r1/filter/filter_ppcvs.c	2002-11-15 13:26:20.000000000 +0100
+@@ -160,7 +160,7 @@
+                   pp_page, vob->ex_v_width,
+                   vob->ex_v_width, vob->ex_v_height,
+                   NULL, 0,
+-                  GET_PP_QUALITY_MAX);    
++                  PP_QUALITY_MAX);    
+     }
+   }
+   

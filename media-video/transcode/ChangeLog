@@ -1,6 +1,13 @@
 # ChangeLog for media-video/transcode
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.15 2002/10/29 16:53:43 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.16 2002/11/15 20:56:13 phoenix Exp $
+
+*transcode-0.6.1-r1 (29 Oct 2002)
+
+  29 Oct 2002; phoen][x <phoenix@gentoo.org> ChangeLog, transcode-0.6.1-r1.ebuild,
+  files/digest-transcode-0.6.1-1, transcode-0.6.1-PP_QUALITY_MAX.patch :
+  Added a workaround for the GET_PP_QUALITY_MAX compile problem. This fixes bugs
+  #9351, #10788 and #10790. Thanks for your help, guys.
 
 *transcode-0.6.1 (29 Oct 2002)
 
