@@ -1,6 +1,6 @@
 # ChangeLog for net-wireless/hostap
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostap/ChangeLog,v 1.9 2003/03/24 23:57:17 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostap/ChangeLog,v 1.10 2003/04/07 00:28:03 latexer Exp $
 
   24 Mar 2003; Peter Johanson <latexer@gentoo.org> hostap-20021012-r1.ebuild :
   Use has_version to set PCMCIA_VERSION. using all portage stuff now. should work once and for all.
@@ -27,6 +27,9 @@
   Fixed IUSE
 
 *hostap-20021012-r1 (13 Feb 2003)
+
+  07 Apr 2003; Peter Johanson <latexer@gentoo.org> hostap-20021012-r1.ebuild:
+  Much better method of compiling against proper pcmcia-cs version
 
   13 Feb 2003; Peter Johanson <latexer@gentoo.org> hostap-20021012-r1.ebuild
   files/digest-hostap-20021012-r1 :
