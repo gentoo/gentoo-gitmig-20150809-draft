@@ -6,7 +6,11 @@
 		editor.
 	</longdescription>
 	<longdescription lang="de">
-		Die Kategorie app-emacs enthält Pakete für den Texteditor Emacs.
+		Die Kategorie app-emacs enthÃ¤lt Pakete fÃ¼r den Texteditor Emacs.
+	</longdescription>
+	<longdescription lang="es">
+		La categoría app-emacs contiene paquetes de extensión para el editor
+		de texto Emacs.
 	</longdescription>
 </catmetadata>
 
