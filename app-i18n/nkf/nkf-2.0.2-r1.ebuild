@@ -1,9 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/nkf/nkf-2.0.2-r1.ebuild,v 1.10 2005/01/01 14:36:38 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/nkf/nkf-2.0.2-r1.ebuild,v 1.11 2005/03/21 07:00:59 mr_bones_ Exp $
 
-inherit gcc
-inherit perl-module
+inherit gcc perl-module
 
 MY_P="${PN}${PV//./}"
 DESCRIPTION="Network Kanji code conversion Filter with UTF-8/16 support"
