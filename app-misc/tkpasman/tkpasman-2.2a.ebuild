@@ -1,6 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tkpasman/tkpasman-2.2a.ebuild,v 1.8 2005/01/01 15:26:28 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tkpasman/tkpasman-2.2a.ebuild,v 1.9 2005/01/01 19:22:47 aliz Exp $
+
+inherit eutils
 
 MY_P="TkPasMan-${PV}"
 S=${WORKDIR}/${MY_P}
@@ -11,7 +13,7 @@ SRC_URI="http://www.xs4all.nl/~wbsoft/linux/projects/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ~amd64"
 IUSE="ssl"
 
 DEPEND=">=dev-lang/tcl-8.3
@@ -24,6 +26,8 @@ RDEPEND="ssl? ( dev-libs/openssl )
 
 src_unpack() {
 	unpack ${A} && cd "${S}"
+
+	epatch ${FILESDIR}/${P}-gentoo.patch
 
 	use ssl || sed -i "s:^USE_OPENSSL=true:USE_OPENSSL=false:g" config
 }
