@@ -1,6 +1,12 @@
 # ChangeLog for app-dicts/stardict-xdict-en-zh-gb
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/stardict-xdict-en-zh-gb/ChangeLog,v 1.1 2003/06/04 13:42:40 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/stardict-xdict-en-zh-gb/ChangeLog,v 1.2 2004/01/07 17:28:15 liquidx Exp $
+
+*stardict-xdict-en-zh-gb-2.4.2 (07 Jan 2004)
+
+  07 Jan 2004; Alastair Tse <liquidx@gentoo.org>
+  stardict-xdict-en-zh-gb-2.4.2.ebuild:
+  version bumping to new dict format
 
 *stardict-xdict-en-zh-gb-2.1.0 (04 Jun 2003)
 
