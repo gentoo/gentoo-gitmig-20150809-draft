@@ -1,6 +1,13 @@
 # ChangeLog for kde-misc/komics
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/komics/ChangeLog,v 1.6 2004/12/31 05:41:56 weeve Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/komics/ChangeLog,v 1.7 2005/01/02 14:27:22 motaboy Exp $
+
+*komics-1.4-r1 (01 Jan 2005)
+
+  01 Jan 2005; Simone Gotti <motaboy@gentoo.org>
+  +files/komics-1.4-RightClickMenu.patch, +komics-1.4-r1.ebuild,
+  -komics-1.4.ebuild:
+  Added a patch to fix bug #72814.
 
   30 Dec 2004; Jason Wever <weeve@gentoo.org> komics-1.4.ebuild:
   Added ~sparc keyword.

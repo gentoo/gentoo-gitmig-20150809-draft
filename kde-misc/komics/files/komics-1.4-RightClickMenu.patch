@@ -1,0 +1,11 @@
+--- src/komics.cpp.orig  2004-10-10 22:14:19.000000000 +0200
++++ src/komics.cpp       2004-11-29 15:36:21.965446918 +0100
+@@ -709,7 +709,7 @@
+
+     if( item >= 0 )
+     {
+-        while( --item >= 0 )
++        while( (m_strips[it.key()]["activated"] == "0") || (--item >= 0) )
+             it++;
+
+         setIcon(Loading);
