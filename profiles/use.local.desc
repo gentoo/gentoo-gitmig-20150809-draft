@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.498 2004/07/20 16:10:11 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.499 2004/07/21 07:09:48 st_lim Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -218,6 +218,10 @@ mail-client/sylpheed-claws:dillo - Enables support for inline http email viewing
 mail-filter/amavisd-new:milter - Build sendmail mail filter (milter) support
 mail-filter/dspam:neural - Build neural support for dspam
 mail-filter/dspam:procmail - Build procmail filter support
+mail-filter/dspam:cyrus - Build delivery options for cyrus-imapd
+mail-filter/dspam:exim - Build with delivery options for exim
+mail-filter/dspam:maildrop - Build with delivery options for maildrop
+mail-filter/qmail-scanner:spamassassin - Build faster spamassassin checks into qmail-scanner
 mail-mta/courier:fax - Enables fax support in the courier mail server
 mail-mta/courier:norewrite - Prevents courier mail server from mangling virtual user addresses when sending
 mail-mta/exim:dnsdb - Adds support for a DNS search for a record whose domain name is the supplied query
