@@ -1,9 +1,14 @@
 # ChangeLog for sys-apps/baselayout
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.138 2004/05/07 22:24:32 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.139 2004/05/08 11:28:10 agriffis Exp $
 
 # See the gentoo-src rc-scripts ChangeLog for up-to-date release information:
 # http://www.gentoo.org/cgi-bin/viewcvs.cgi/rc-scripts/ChangeLog?rev=HEAD&cvsroot=gentoo-src&content-type=text/vnd.viewcvs-markup
+
+  08 May 2004; Aron Griffis <agriffis@gentoo.org> baselayout-1.9.0.ebuild:
+  Bump rc-scripts rev to 1.4.11-r1 because I accidentally packaged x86 .o files
+  in the 1.4.11 release. This fixes bug 50430 (baselayout-1.9.0 won't build on
+  non-x86 arch)
 
 *baselayout-1.9.0 (07 May 2004)
 
