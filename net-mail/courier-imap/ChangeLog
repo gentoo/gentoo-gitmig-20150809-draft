@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/courier-imap
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.62 2004/04/06 11:24:05 method Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.63 2004/04/20 02:08:25 robbat2 Exp $
+
+  19 Apr 2004; Robin H. Johnson <robbat2@gentoo.org>
+  courier-imap-3.0.2.ebuild:
+  fix bug #21330 a bit better
 
   31 Mar 2004; Robin H. Johnson <robbat2@gentoo.org>
   files/courier-imapd-ssl.rc6, files/courier-imapd.rc6,

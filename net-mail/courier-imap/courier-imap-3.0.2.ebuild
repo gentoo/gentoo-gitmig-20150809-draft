@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-3.0.2.ebuild,v 1.7 2004/04/06 11:24:05 method Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-3.0.2.ebuild,v 1.8 2004/04/20 02:08:25 robbat2 Exp $
 
 DESCRIPTION="An IMAP daemon designed specifically for maildirs"
 SRC_URI="mirror://sourceforge/courier/${P}.tar.bz2"
@@ -111,9 +111,9 @@ src_compile() {
 	rm -f ${cachefile}
 
 	# fix for bug #21330
-	CFLAGS=`echo ${CFLAGS} | xargs`
-	CXXFLAGS=`echo ${CXXFLAGS} | xargs`
-	LDFLAGS=`echo ${LDFLAGS} | xargs`
+	CFLAGS="`echo ${CFLAGS} | xargs`"
+	CXXFLAGS="`echo ${CXXFLAGS} | xargs`"
+	LDFLAGS="`echo ${LDFLAGS} | xargs`"
 
 	# fix for bug #27528
 	# they really should use a better way to detect redhat
