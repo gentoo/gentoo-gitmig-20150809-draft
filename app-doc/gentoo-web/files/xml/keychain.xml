@@ -8,8 +8,8 @@ This page contains information about Keychain, an OpenSSH-compatible RSA/DSA key
 application for bash.
 </abstract>
 
-<version>1.3</version>
-<date>12 Sep 2001</date>
+<version>1.4</version>
+<date>20 Sep 2001</date>
 
 <chapter>
 <title>Keychain Intro</title>
@@ -61,7 +61,7 @@ time you really need to reinitialize the long-running <c>ssh-agent</c> process.
 
 <p>
 The most recent release of <c>keychain</c> can be found here:<br/><br/>
-<uri>http://www.ibiblio.org/gentoo/distfiles/keychain-1.3.tar.bz2</uri>
+<uri>http://www.ibiblio.org/gentoo/distfiles/keychain-1.4.tar.bz2</uri>
 </p>
 </body>
 </section>
@@ -92,6 +92,26 @@ unencrypted private keys.
 <pre caption="ChangeLog for KeyChain">
 # ChangeLog for KeyChain; http://www.gentoo.org/projects/keychain
 # Copyright 2001 Gentoo Technologies, Inc.; Distributed under the GPL
+# Written by Daniel Robbins (drobbins@gentoo.org)
+
+*keychain 1.4 (20 Sep 2001)
+
+  20 Sep 2001; David Hull (hull@paracel.com):
+  "touch $foo" to ">$foo" optimization and other "don't fork" fixes.
+  Converted ${foo#--} to a case statement for Solaris sh compatibility.
+
+  20 Sep 2001;
+  Try an alternate "ps" syntax if our default one fails.  This should
+  give us Solaris and IRIX (sysV) compatibility without breaking BSD.
+
+  20 Sep 2001; Hans Peter Verne (h.p.verne@usit.uio.no);
+  "echo -e" to "echo $E" (for IRIX compatibility with --nocolor),
+  optimization of grep ("grep [s]sh-agent")
+  
+  17 Sep 2001; Marko Myllynen (myllynen@lut.fi):
+  Various fixes: trap signal 2 if signal INT not supported (NetBSD);
+  handle invalid keys correctly; ancient version of ash didn't support ~,
+  so using $HOME; correct zsh instruction; minor cleanups
 
 *keychain 1.3 (12 Sep 2001)
   
@@ -100,12 +120,13 @@ unencrypted private keys.
   terms so it was switched to bold.  Additional --help text added.
   
   10 Sep 2001;
+  We now use .ssh-agent-[hostname] instead of .ssh-agent.
   We now create a .ssh-agent-csh-[hostname] file that can be sourced
   by csh-compatible shells.  We also now kill all our existing 
   ssh-agent processes before starting a new one.
 
   10 Sep 2001; Robert R. Wal (rrw@hell.pl):
-  Very nice NFS fixes, colorization fixes, tcsh redirect -&gt; grep -v
+  Very nice NFS fixes, colorization fixes, tcsh redirect -> grep -v
   fix.  Thanks go out to others who sent me similar patches.
 
   10 Sep 2001; Johann Visagie (johann@egenetics.com):
