@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: system@gentoo.org
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/DirectFB-0.9.9-r2.ebuild,v 1.2 2002/04/16 03:26:37 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/DirectFB-0.9.9-r2.ebuild,v 1.3 2002/04/16 03:49:57 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="DirectFB is a thin library on top of the Linux framebuffer devices"
@@ -20,19 +20,15 @@ DEPEND="sys-devel/perl
 
 RDEPEND="${DEPEND}"
 
-#extralibinfo=""
-#use mpeg && extralibinfo="LIBMPEG3_DIR=/usr/lib LIBMPEG3_LIBS=-lmpeg3"
-
-src_unpack() {
-	
-	unpack ${A}
-
-	cd ${WORKDIR}/libmpeg3
-	make
-}
-
 src_compile() {
 	
+	# If user wants libmpeg3 support, then compile that first
+	use mpeg && ( \
+		cd ${WORKDIR}/libmpeg3
+		make
+		cd ${S}
+	)
+
 	local myconf
 	
 	use mmx	\
@@ -78,12 +74,7 @@ src_compile() {
 		--prefix=/usr \
 		${myconf} || die
 
-	use mpeg && ( \
-		make "${extralibinfo}" || die "libmpeg3 sucks"
-	) || ( \
-		make || die "why did I die?"
-	)
-			
+	make || die
 
 }
 
