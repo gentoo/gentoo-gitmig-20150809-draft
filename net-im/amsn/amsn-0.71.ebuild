@@ -1,10 +1,10 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/amsn/amsn-0.61.3.ebuild,v 1.1 2002/11/26 22:06:11 verwilst Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/amsn/amsn-0.71.ebuild,v 1.1 2002/12/07 18:37:05 verwilst Exp $
 
 S="${WORKDIR}/msn"
 DESCRIPTION="Alvarro's Messenger client for MSN"
-SRC_URI="mirror://sourceforge/${PN}/amsn-cvs20021112.tar.gz"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 HOMEPAGE="http://amsn.sourceforge.net"
 
 SLOT="0"
