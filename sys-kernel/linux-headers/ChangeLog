@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/linux-headers
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.46 2004/02/22 16:55:36 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.47 2004/02/29 21:54:54 plasmaroo Exp $
+
+  29 Feb 2004; <plasmaroo@gentoo.org>
+  files/linux-headers-2.6.3-strict-ansi-fix.patch:
+  Added Kevin Owen's contributed patch porting our X86 specific
+  compatibility patches to AMD64. Closes bug #43520. Thanks!
 
 *linux-headers-2.6.3-r1 (22 Feb 2004)
 
