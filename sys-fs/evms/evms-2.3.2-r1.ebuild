@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/evms-2.3.2.ebuild,v 1.2 2004/06/13 22:04:44 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/evms-2.3.2-r1.ebuild,v 1.1 2004/06/23 18:16:06 eradicator Exp $
 
 IUSE="ncurses gtk"
 
@@ -22,6 +22,9 @@ DEPEND="virtual/glibc
 	ncurses? ( sys-libs/ncurses )"
 
 src_compile() {
+	# Bug #54856
+	filter-flags "-fstack-protector"
+
 	local excluded_interfaces=""
 	use ncurses || excluded_interfaces="--disable-text-mode"
 	use gtk || excluded_interfaces="${excluded_interfaces} --disable-gui"
