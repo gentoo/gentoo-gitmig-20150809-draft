@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.1.ebuild,v 1.27 2002/10/28 22:13:02 jrray Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.1.ebuild,v 1.28 2002/11/30 21:57:38 vapier Exp $
 
 IUSE="sse nls mmx truetype 3dnow 3dfx"
 
@@ -353,7 +353,7 @@ src_install() {
 	if [ -n "`use truetype`" ]
 	then
 		einfo "Installing MS Core Fonts..."
-		mkdir -p ${D}/usr/X11R6/lib/X11/fonts/truetype
+		dodir /usr/X11R6/lib/X11/fonts/truetype
 		mv -f ${WORKDIR}/truetype/*.ttf ${D}/usr/X11R6/lib/X11/fonts/truetype
 	fi
 
