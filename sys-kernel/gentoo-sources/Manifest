@@ -1,4 +1,5 @@
-MD5 29f116fb487eb2932ec66f88f6692eb4 ChangeLog 10367
+MD5 3a28ca625fa4e11c632d9c80071c3447 ChangeLog 10769
+MD5 73e93003f3d428f0211e324428a73032 gentoo-sources-2.4.20-r8.ebuild 5217
 MD5 d5979ff24ef45e712ff68e48cf7c66c0 gentoo-sources-2.4.19-r10.ebuild 2113
 MD5 401c0e324d9c0a514bf972a76db6b554 gentoo-sources-2.4.20-r7.ebuild 5149
 MD5 4a2e7892431d591f82bb474d737cb4eb gentoo-sources-2.4.20-r5.ebuild 4571
@@ -7,6 +8,7 @@ MD5 6450fd1b19f30aa33866e5e467c0d828 files/gentoo-sources-2.4.20-cs46xx-gcc33.pa
 MD5 b40c150e8529876064e1ec409a47984e files/security.patch4 783
 MD5 9601c35f96d297ed0d13753875fb3068 files/gentoo-sources-2.4.20-gcc33.patch 13455
 MD5 9f412f3083cdd87db058dd2f5fbcd103 files/gentoo-sources-2.4.20-ipt-realm.patch 1028
+MD5 d96fe98630a0a160723a67e4ca93dcff files/gentoo-sources-2.4.20-grsec-datasize_fix.patch 1421
 MD5 849223b7d8e6c9c2a22f84b571aa516c files/digest-gentoo-sources-2.4.20-r6 145
 MD5 f308aef282ea75ea55d5c6035dafa100 files/security.patch2 4014
 MD5 1326d31d343f60512dfb1376bfe134a2 files/gentoo-sources-2.4.20-sched-interrupt.patch 400
@@ -15,6 +17,7 @@ MD5 849223b7d8e6c9c2a22f84b571aa516c files/digest-gentoo-sources-2.4.20-r7 145
 MD5 3bf2f78421fe7eb5babc154d4ad4dbbd files/security.patch1 14328
 MD5 857ff623313f874e811763a2db96e831 files/lcall-DoS.patch 885
 MD5 cbd2a33f15a8d2e7ab700a0b45fac377 files/gentoo-sources-2.4.20-grsec-disabled.patch 562
+MD5 849223b7d8e6c9c2a22f84b571aa516c files/digest-gentoo-sources-2.4.20-r8 145
 MD5 849223b7d8e6c9c2a22f84b571aa516c files/digest-gentoo-sources-2.4.20-r5 145
 MD5 2ac4fd77e067652901ccf234c9687bb1 files/i810_drm.patch 1247
 MD5 0d1cdff97252338dc5acc37c5f84d7c6 files/security.patch3 3333
