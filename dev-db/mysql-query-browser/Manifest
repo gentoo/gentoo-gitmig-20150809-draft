@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 18a4ecd8f50b8419c2ce35b290b2c12b mysql-query-browser-1.1.3a.ebuild 1260
-MD5 48cb5ad07d83ab9e24d95716b695bb4e ChangeLog 1775
+MD5 0e0362b7d839534b2e45c7cd46391a3b mysql-query-browser-1.1.4.ebuild 1259
+MD5 843e57dfe2b1cb31f36ba792d8c1c5a4 ChangeLog 1957
 MD5 28ed354a0713d1b36793acecb2193738 metadata.xml 687
-MD5 e8b0801ef5b4494730b6720a3a048e0e files/digest-mysql-query-browser-1.1.3a 79
+MD5 903e50a406c3c5357a6949e740d9a93e files/digest-mysql-query-browser-1.1.4 78
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBvHzZI1lqEGTUzyQRAnfLAKCWf6fHrefRmzOy3SqFKEJcLSAKjgCgrp4+
-WzcZdJJy2noaRYz76ufl0rY=
-=B0EA
+iD8DBQFBxx0mI1lqEGTUzyQRAsFbAJ0URcTkAs3LqRObBQHkTSTzH70ELQCfS6so
+TQdSR1bA6uD6jiaWgOwqjgo=
+=zTjg
 -----END PGP SIGNATURE-----
