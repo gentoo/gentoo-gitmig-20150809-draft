@@ -1,6 +1,10 @@
 # ChangeLog for sys-cluster/lam-mpi
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/lam-mpi/ChangeLog,v 1.19 2004/07/13 16:16:49 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/lam-mpi/ChangeLog,v 1.20 2004/09/02 15:16:06 fmccor Exp $
+
+  02 Sep 2004; Ferris McCormick <fmccor@gentoo.org> lam-mpi-7.0.6.ebuild:
+  Add ~sparc keyword. Builds for sparc and runs lamtests-7.0.6 in a cluster
+  of 2 smp systems (2xSMP(2)), with USE=crypt (ssh).
 
 *lam-mpi-7.0.4-r1 (13 Jul 2004)
 
