@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw2100/ipw2100-0.56.ebuild,v 1.1 2004/10/15 18:59:24 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw2100/ipw2100-0.56.ebuild,v 1.2 2004/10/19 06:59:47 brix Exp $
 
 inherit kernel-mod eutils
 
@@ -57,7 +57,7 @@ src_unpack() {
 		eerror "${P} requires support for AES cipher algorithms (i586)"
 		eerror "(CONFIG_CRYPTO_AES_586) in the kernel."
 		eerror ""
-		die "CONFIG_CRYPTO_MICHAEL_MIC support not detected."
+		die "CONFIG_AES_586 support not detected."
 	fi
 
 	if ! kernel-mod_configoption_present FW_LOADER

@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/ipw2100
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw2100/ChangeLog,v 1.34 2004/10/15 18:59:24 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw2100/ChangeLog,v 1.35 2004/10/19 06:59:47 brix Exp $
+
+  19 Oct 2004; Henrik Brix Andersen <brix@gentoo.org> ipw2100-0.56.ebuild:
+  Fixed CRYPTO_AES_586 error message.
 
 *ipw2100-0.56 (15 Oct 2004)
 
