@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.1-r2.ebuild,v 1.5 2003/02/13 12:43:07 hannes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.1-r2.ebuild,v 1.6 2003/02/13 18:54:52 danarmak Exp $
 inherit kde kde.org 
 #don't inherit  kde-base or kde-dist! it calls need-kde which adds kdelibs to depend!
 
@@ -68,7 +68,6 @@ src_install() {
 echo "PATH=${PREFIX}/bin
 ROOTPATH=${PREFIX}/sbin:${PREFIX}/bin
 LDPATH=${PREFIX}/lib
-KDEDIRS=${PREFIX}
 CONFIG_PROTECT=${PREFIX}/share/config" > ${D}/etc/env.d/49kdelibs-${PV} # number goes down with version upgrade
 
 	echo "KDEDIR=$PREFIX" > ${D}/etc/env.d/56kdedir-${PV} # number goes up with version upgrade
@@ -76,4 +75,14 @@ CONFIG_PROTECT=${PREFIX}/share/config" > ${D}/etc/env.d/49kdelibs-${PV} # number
 	# kdelibs-apidocs is provided by kdelibs-apidocs ebuild, kdelibs ebuild
 	# shouldn't install anything into kdelibs-apidocs (bug #15102)
 	rm -r ${D}/$KDEDIR/share/doc/HTML/en/kdelibs-apidocs
+}
+
+pkg_postinst() {
+
+einfo "NOTE: for things to work properly, please upgrade kdebase (if installed) to 3.1-r1
+or greater."
+einfo "If you have kde 3.0.x installed, please upgrade to kdeils-3.0.5a-r2 and kdebase-3.0.5a-r1.
+If they don't have your arch's keywords, edit /etc/env.d/65kdelibs-3.0.*, remove the KDEDIRS=
+line and env-update."
+
 }
