@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/popa3d
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/popa3d/ChangeLog,v 1.9 2004/07/15 02:05:53 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/popa3d/ChangeLog,v 1.10 2004/07/28 16:00:10 port001 Exp $
+
+*popa3d-0.6.4.1 (28 Jul 2004)
+
+  28 Jul 2004; Ian Leitch <port001@gentoo.org> +popa3d-0.6.4.1.ebuild:
+  Version bumped
 
   14 Jul 2004; Jason Wever <weeve@gentoo.org> popa3d-0.6.4.ebuild:
   Added ~sparc keyword, resolves bug #57102.
