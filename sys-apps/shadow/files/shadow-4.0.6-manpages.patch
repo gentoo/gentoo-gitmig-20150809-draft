@@ -1,0 +1,18 @@
+--- man/usermod.8.orig	2004-11-03 23:04:32.000000000 -0500
++++ man/usermod.8	2004-12-11 14:49:59.162308224 -0500
+@@ -113,2 +113,3 @@
+ .BR groupmod (8),
++.BR gpasswd (1),
+ .BR useradd (8),
+--- man/groupadd.8.orig	2004-11-03 22:06:31.000000000 -0500
++++ man/groupadd.8	2004-12-11 14:50:15.458830776 -0500
+@@ -71,2 +71,3 @@
+ .BR groupmod (8),
++.BR gpasswd (1),
+ .BR useradd (8),
+--- man/groupdel.8.orig	2004-11-03 23:04:32.000000000 -0500
++++ man/groupdel.8	2004-12-11 14:50:06.814144968 -0500
+@@ -62,2 +62,3 @@
+ .BR groupmod (8),
++.BR gpasswd (1),
+ .BR useradd (8),
