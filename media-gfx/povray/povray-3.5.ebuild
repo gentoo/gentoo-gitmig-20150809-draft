@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/povray-3.50c.ebuild,v 1.19 2004/08/07 23:18:08 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/povray-3.5.ebuild,v 1.1 2004/09/21 22:54:39 morfic Exp $
 
 inherit gcc eutils
 
@@ -20,6 +20,8 @@ DEPEND="media-libs/libpng
 	X? ( virtual/x11 )
 	icc? ( dev-lang/icc )
 	svga? ( media-libs/svgalib )"
+
+S=${WORKDIR}/povray-3.50c/
 
 pkg_setup() {
 	if use icc
