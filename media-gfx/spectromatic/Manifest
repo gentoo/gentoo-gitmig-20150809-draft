@@ -1,6 +1,16 @@
-MD5 d8b29c21bda7f2fc8a804f74636f5127 spectromatic-1.0.ebuild 935
-MD5 9a8489a18e7e7a5083bf2a84a7315cd5 ChangeLog 687
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 67245f2c05a5ecc4885ec55efb791bf1 spectromatic-1.0.ebuild 937
+MD5 dbaf280d9298efb111da2c7443a4e49a ChangeLog 966
 MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
 MD5 981e4c6dcc48b5ffbd99f76b39c32ef8 files/spectromatic-1.0-stringliteral.patch 2217
 MD5 3f1f11cd807e925f279e51c239688289 files/spectromatic-1.0-gentoo.diff 603
 MD5 23d4c34b3e33e1ed27f69a9d41c34220 files/digest-spectromatic-1.0 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBzHLyI1lqEGTUzyQRAhIMAKDEOA5EKVMRReywg7aOXVge/oLB5ACfQDso
+xP4gEpRaqRb+Y40tR4kw2fo=
+=NjEi
+-----END PGP SIGNATURE-----
