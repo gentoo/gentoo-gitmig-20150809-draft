@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork/kdeartwork-3.3.0.ebuild,v 1.2 2004/08/26 15:29:39 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork/kdeartwork-3.3.0.ebuild,v 1.3 2004/08/27 18:15:49 mr_bones_ Exp $
 
 inherit kde-dist eutils
 
@@ -17,8 +17,8 @@ src_unpack() {
 	sed -ie "s:X11R6/lib\(/X11\)\?:lib:g" kscreensaver/kxsconfig/Makefile.in
 	if ! use arts; then
 		epatch ${FILESDIR}/3.3.0-kfiresaver-configure.in.in.patch
-		epatch ${FILESDIR}/3.3.0-kfiresaver-Makefile.am.patch 
-		cd ${S} 
+		epatch ${FILESDIR}/3.3.0-kfiresaver-Makefile.am.patch
+		cd ${S}
 		make -f admin/Makefile.common
 	fi
 }
