@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-eazel/gtk-engines-eazel-0.3-r1.ebuild,v 1.5 2004/02/29 16:45:27 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-eazel/gtk-engines-eazel-0.3-r1.ebuild,v 1.6 2004/03/03 16:21:47 foser Exp $
 
 inherit gtk-engines2
 
@@ -18,3 +18,13 @@ DEPEND="=x11-libs/gtk+-1.2*
 	=gnome-base/control-center-1.4*"
 
 S=${WORKDIR}/${MY_PN}-${PV}
+
+src_unpack() {
+
+	unpack ${A}
+
+	cd ${S}
+	# ugly hack to get around the glade dep (#38045)
+	echo 'int main(){return 0;}' > test.c
+
+}
