@@ -1,0 +1,11 @@
+# ChangeLog for net-analyzer/darkstat
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/darkstat/ChangeLog,v 1.1 2003/10/18 16:59:12 zul Exp $
+
+*darkstat-2.5 (18 Oct 2003)
+
+  18 Oct 2003; Chuck Short <zul@gentoo.org> darkstat-2.5.ebuild,
+  files/darkstat-confd:
+  Initial version, submitted by Thomas Preissler <tomjohn@gmx.de>
+  closes bug #29548.
+
