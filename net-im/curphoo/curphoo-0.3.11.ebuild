@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/curphoo/curphoo-0.3.9.ebuild,v 1.3 2004/01/21 21:12:15 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/curphoo/curphoo-0.3.11.ebuild,v 1.1 2004/01/21 21:12:15 mkennedy Exp $
 
 DESCRIPTION="Curphoo is a console Yahoo! Chat client written in Python"
 HOMEPAGE="http://savannah.nongnu.org/projects/curphoo/"
-SRC_URI="http://savannah.nongnu.org/download/curphoo/curphoo.pkg/${PV}/${P}.tar.gz"
+SRC_URI="mirror://gentoo/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 sparc "
@@ -16,7 +16,6 @@ S=${WORKDIR}/${P}
 
 src_unpack() {
 	unpack ${A}
-	epatch ${FILESDIR}/${P}-server-gentoo.patch
 	cd ${S}
 	cp ${FILESDIR}/curphoo.sh curphoo.sh.templ
 	sed -e "s#@PHOOPATH@#${P}#" curphoo.sh.templ >curphoo.sh
@@ -27,7 +26,7 @@ src_compile() {
 }
 
 src_install () {
-	dodoc BUGS CHANGELOG README TODO floo2phoo
+	dodoc BUGS CHANGELOG ChangeLog README TODO floo2phoo
 	dodir /usr/lib/${P}
 	mv curphoo curphoo.py
 	cp *.py *.so ${D}/usr/lib/${P}
