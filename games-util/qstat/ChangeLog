@@ -1,6 +1,13 @@
 # ChangeLog for games-util/qstat
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/qstat/ChangeLog,v 1.5 2004/07/01 11:24:46 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/qstat/ChangeLog,v 1.6 2004/08/17 01:35:38 vapier Exp $
+
+*qstat-2.5c (16 Aug 2004)
+
+  16 Aug 2004; Mike Frysinger <vapier@gentoo.org> -files/qstat-25b.gcc3-fix,
+  +qstat-2.5c.ebuild, +qstat-2.6.ebuild, -qstat-25b-r1.ebuild,
+  -qstat-25c.ebuild:
+  Version bump and version renaming #60622 by Keith Constable.
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> qstat-25b-r1.ebuild,
   qstat-25c.ebuild:
