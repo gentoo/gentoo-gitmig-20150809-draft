@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/med/med-0.01.20030629.ebuild,v 1.2 2003/06/29 19:57:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/med/med-0.01.20031013.ebuild,v 1.1 2003/10/14 03:07:45 vapier Exp $
 
 inherit enlightenment
 
@@ -13,10 +13,10 @@ KEYWORDS="~x86 ~ppc ~alpha"
 
 DEPEND="${DEPEND}
 	virtual/x11
-	>=media-libs/ebits-1.0.1.2003*
-	>=x11-libs/ecore-0.0.2.2003*
-	>=dev-db/edb-1.0.3.2003*
-	>=x11-libs/evas-1.0.0.2003*"
+	>=media-libs/ebits-1.0.1.20031013
+	>=x11-libs/ecore-1.0.0.20031013_pre4
+	>=dev-db/edb-1.0.4.20031013
+	>=x11-libs/evas-1.0.0.20031013_pre12"
 
 S=${WORKDIR}/${PN}
 
