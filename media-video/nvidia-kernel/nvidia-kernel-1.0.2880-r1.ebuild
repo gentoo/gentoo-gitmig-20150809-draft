@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer:  Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/nvidia-kernel-1.0.2880-r1.ebuild,v 1.4 2002/05/08 05:00:56 jnelson Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/nvidia-kernel-1.0.2880-r1.ebuild,v 1.5 2002/05/08 05:33:47 jnelson Exp $
 
 DESCRIPTION="Linux kernel module for the NVIDIA's X driver"
 HOMEPAGE="http://www.nvidia.com/"
@@ -22,14 +22,7 @@ RESTRICT="nostrip"
 
 src_compile() {
 	# Portage should determine the version of the kernel sources
-	if [ x"${KV}" = x ]
-	then
-		eerror ""
-		eerror "Could not determine you kernel version."
-		eerror "Make sure that you have /usr/src/linux symlink."
-		eerror ""
-		die
-	fi
+	check_KV
 	make KERNDIR="/usr/src/linux" \
 		clean NVdriver || die
 }
