@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/mailmin
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/mailmin/ChangeLog,v 1.3 2004/04/14 11:35:10 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/mailmin/ChangeLog,v 1.4 2004/04/19 05:11:30 klasikahl Exp $
+
+*mailmin-0.0.1-r2 (18 Apr 2004)
+
+  18 Apr 2004; Zack Gilburd <klasikahl@gentoo.org> +mailmin-0.0.1-r2.ebuild:
+  New version, 0.0.1-pre3-alpha
 
   11 Apr 2004; Zack Gilburd <klasikahl@gentoo.org> :
   Today there was a move from virt-mail-admin to mailmin.  Forgot to update
