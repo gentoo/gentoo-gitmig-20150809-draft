@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/wolk-sources/wolk-sources-4.9-r3.ebuild,v 1.1 2004/01/06 00:28:57 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/wolk-sources/wolk-sources-4.9-r3.ebuild,v 1.2 2004/02/18 16:19:05 plasmaroo Exp $
 
 IUSE="build wolk-bootsplash wolk-supermount ipv6"
 
@@ -16,7 +16,7 @@ KV="${OKV}${EXTRAVERSION}"
 
 S=${WORKDIR}/linux-${KV}
 DESCRIPTION="Working Overloaded Linux Kernel (Server-Edition)"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~arm ~mips"
+KEYWORDS="x86 ~ppc ~sparc ~alpha ~hppa ~arm ~mips"
 SRC_PATH="mirror://www.kernel.org/pub/linux/kernel/v2.4/linux-${OKV}.tar.bz2"
 
 SRC_URI="http://www.kernel.org/pub/linux/kernel/v2.4/linux-${OKV}.tar.bz2
