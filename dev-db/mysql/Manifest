@@ -5,6 +5,7 @@ MD5 4ef3ef3898ba2d07e8bde1f8bc4a9e2b mysql-4.0.14-r2.ebuild 7555
 MD5 d17e99dea8deb7f23510ab224f09f7a9 mysql-4.0.17.ebuild 7939
 MD5 74194a77362fc74a238f1e05a3506f5f mysql-4.0.12.ebuild 6751
 MD5 6204372a85124c9a0eaba94b47e3dd40 mysql-4.0.15-r1.ebuild 7678
+MD5 ce8a0d4193521f961ce1c48670000b32 mysql-3.23.58.ebuild 6491
 MD5 fa83fdcb6761b293a7f658f0807cac0c mysql-4.0.19.ebuild 7917
 MD5 7edf29c2f472ff1f418526e6be2d7abb mysql-4.0.14.ebuild 6903
 MD5 f57faf79f4ad744991e5d6e76ca45edc mysql-3.23.52-r1.ebuild 5851
@@ -15,7 +16,7 @@ MD5 2f313db0bb87efbe5a7354053b2ab6cc mysql-4.0.16.ebuild 7503
 MD5 c3b780e828243fa381f1e68ecf92bb08 mysql-4.0.13-r4.ebuild 7278
 MD5 2a761cb155aff6fd0ad3dafdc9bb5fcb mysql-3.23.57.ebuild 6538
 MD5 15e6382efa5d15584a5a36df4ac3b14d mysql-4.0.18.ebuild 7652
-MD5 44033d8ed4513403f090c713689f7c2b ChangeLog 17588
+MD5 3fedad1af817e269c72e994bc8bfa926 ChangeLog 17709
 MD5 a089b3a2de50fb17b2932f02d3a5a684 mysql-4.0.15.ebuild 7561
 MD5 a5dda17df0286cd82cae42d117784903 metadata.xml 163
 MD5 4541e130a1b0fa90db8612973b0adb75 files/mysql-4.0-mysqld-safe-sh.diff 1477
@@ -57,6 +58,7 @@ MD5 7a5badec9c28c2f4d434d6aed0a5103b files/mysql-3.23-my-print-defaults.diff 218
 MD5 a76ec36b83c2f0dbfba65c993f75d135 files/mysql-4.0.18-mysqlbugsecurity.diff 672
 MD5 296a01da527263926d20aca0446bc87d files/digest-mysql-3.23.56 67
 MD5 dcd899fe185459da4cb9e71c75c3bda3 files/digest-mysql-3.23.57 67
+MD5 6e0ae36e30287df25336d8bd71c0e764 files/digest-mysql-3.23.58 67
 MD5 977be6c68f6231cbcf1febd3305ade5d files/mysql-4.0.14-r1-tcpd-vars-fix.diff 465
 MD5 57531ccd19e17ccca95e0e3bf833cd67 files/mysql-3.23-db-3.2.3.diff 1105
 MD5 4c36e60ff941b21103df0acf1e6985b7 files/my.cnf-4.0.14-r1 2812

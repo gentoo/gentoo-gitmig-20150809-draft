@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.110 2004/06/29 17:36:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.111 2004/07/05 00:04:05 robbat2 Exp $
+
+*mysql-3.23.58 (04 Jul 2004)
+
+  04 Jul 2004; Robin H. Johnson <robbat2@gentoo.org> mysql-3.23.58.ebuild:
+  version bump.
 
   29 Jun 2004; Aron Griffis <agriffis@gentoo.org> mysql-3.23.52-r1.ebuild,
   mysql-3.23.56.ebuild, mysql-3.23.57-r1.ebuild, mysql-3.23.57.ebuild,
