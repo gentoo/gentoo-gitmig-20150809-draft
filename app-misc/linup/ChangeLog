@@ -1,6 +1,14 @@
 # ChangeLog for app-misc/linup
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/linup/ChangeLog,v 1.4 2003/10/24 18:05:18 lisa Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/linup/ChangeLog,v 1.5 2003/12/22 04:03:44 lisa Exp $
+
+*linup-1.1.1-r1 (21 Dec 2003)
+
+  21 Dec 2003; Lisa Seelye <lisa@gentoo.org> linup-1.1.1-r1.ebuild,
+  files/fix-uptimes-host.gz:
+  This is a LIVE fix for the fact that uptimes.wonko.com has stopped hosting.
+  The host has now changed to uptimes.hostingwired.com. The patch is to patch
+  linup.h to change a #DEFINE HOST
 
   24 Oct 2003; Lisa Seelye <lisa@gentoo.org> linup-1.1.1.ebuild:
   This has been ~x86 for so long, I think its safe to put in x86.
