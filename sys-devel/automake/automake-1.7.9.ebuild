@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/automake-1.7.9.ebuild,v 1.5 2004/12/03 23:13:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/automake-1.7.9.ebuild,v 1.6 2004/12/11 02:10:06 vapier Exp $
 
 inherit eutils gnuconfig
 
@@ -26,6 +26,7 @@ src_unpack() {
 		-e "s|automake: (automake)|automake v${SLOT}: (automake${SLOT})|" \
 		-e "s|aclocal: (automake)|aclocal v${SLOT}: (automake${SLOT})|" \
 		automake.texi || die "sed failed"
+	epatch ${FILESDIR}/${P}-infopage-namechange.patch
 	gnuconfig_update
 	export WANT_AUTOCONF=2.5
 }
