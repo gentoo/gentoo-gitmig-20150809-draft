@@ -1,0 +1,11 @@
+# ChangeLog for net-mail/smtptools
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/smtptools/ChangeLog,v 1.1 2004/10/31 14:12:01 ticho Exp $
+
+*smtptools-0.2.3 (31 Oct 2004)
+
+  31 Oct 2004; Andrej Kacian <ticho@gentoo.org> +metadata.xml,
+  +smtptools-0.2.3.ebuild:
+  Initial import, closes #65848. Ebuild submitted by Jesse D. Guardiani
+  <jesse@wingnet.net>.
+
