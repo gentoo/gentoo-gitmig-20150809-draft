@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Donny Davies <woodchip@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-print/hp-web-jetadmin/hp-web-jetadmin-6.5.ebuild,v 1.1 2001/09/28 03:36:35 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hp-web-jetadmin/hp-web-jetadmin-6.5.ebuild,v 1.2 2001/09/28 07:05:23 woodchip Exp $
 
 # *** README ***
 #
@@ -16,20 +16,11 @@
 # a whole truckload of doc files into /opt/hp-web-jetadmin/doc, totalling
 # some 34MB. The daemon even writes configuration info into that directory
 # which you'll notice if you play around with the program, and then unmerge
-# it. All in all, its a nice program, if somewhat cluttered and clumsy.
+# it.
 #
 # I probably need to tweak the depends a little; I couldn't make it install
-# on an rc5 box with no X. For the love of Joe, I hope this program doesn't
-# require X to install! It sure shouldn't need it to run. Consider this a
-# rant on a large vendor's idea of 'supporting Linux'. Im my opinion, too
-# many vendors are providing binary-only packages/drivers that are simply
-# "not acceptable". They wouldn't pass QA inside of their own organisations
-# most likely. Quite frankly, the situation is basically pathetic, and I
-# now can sympathise with Alan Cox, who refuses to even entertain queries
-# on binary-only drivers. </soapbox>
-#
-# If you can help with the depends, or make any other suggestions for this
-# glorius package, feel free.
+# on an rc5 box with no X. If you can help, or make any other suggestions
+# for this package, feel free.
 #
 # *** README ***
 
@@ -92,8 +83,9 @@ src_install() {
 	exeinto /etc/init.d ; newexe ${FILESDIR}/hpwebjetd-6.5.rc6 hpwebjetd
 	
 	#
-	# This lets you start the daemon from anywhere, rather than
-	# making you cd to /opt/hp-web-jetadmin.
+	# This adds an LDPATH entry, which allows you to use the
+	# initscript to start the daemon from anywhere. You need
+	# not cd /opt/hp-web-jetadmin first.
 	#
 	insinto /etc/env.d ; doins ${FILESDIR}/20hpwebjetadmin
 
@@ -106,7 +98,7 @@ src_install() {
 	dodoc ${DISTDIR}/wjainfo_pps.html
 
 	#
-	# Butcher alert -- this is completely ridiculous. Ciao baby.
+	# Butcher alert -- this is ridiculous. Ciao baby.
 	#
 	rm -f /etc/redhat-release
 }
@@ -123,6 +115,5 @@ src_install() {
 #   back it up if there, drop in our file, install, then move
 #   the backup back. I dont see the need for this nonsense. Why
 #   cant vendors just say you need libc this, ssl that, libfoo
-#   this and libbar that. This just makes them look like aloof
-#   butchers if you ask me. Nonsense.
+#   this and libbar that.
 #
