@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gwget/gwget-0.14.ebuild,v 1.2 2004/10/22 13:21:54 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gwget/gwget-0.14.ebuild,v 1.3 2004/11/04 08:52:35 obz Exp $
 
 inherit gnome2
 
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc ~amd64"
 
 RDEPEND=">=net-misc/wget-1.8
-	>=x11-libs/gtk+-2
+	>=x11-libs/gtk+-2.4
 	>=gnome-base/gconf-2
 	>=gnome-base/libgnomeui-2
 	>=gnome-base/libglade-2"
