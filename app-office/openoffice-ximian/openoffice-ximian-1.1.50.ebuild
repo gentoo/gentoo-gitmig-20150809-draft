@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.1.50.ebuild,v 1.5 2004/02/04 10:48:17 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.1.50.ebuild,v 1.6 2004/02/05 09:22:11 suka Exp $
 
 # IMPORTANT:  This is extremely alpha!!!
 
@@ -330,9 +330,9 @@ src_compile() {
 	# Should the build use multiprocessing?
 	if [ "${ECPUS}" -gt 1 ]
 	then
-		buildcmd="${S}/solenv/bin/build.pl --all -P${ECPUS} product=full --dlv_switch link"
+		buildcmd="${S}/solenv/bin/build.pl --all -P${ECPUS} product=full strip=true --dlv_switch link"
 	else
-		buildcmd="${S}/solenv/bin/build.pl --all product=full --dlv_switch link"
+		buildcmd="${S}/solenv/bin/build.pl --all product=full strip=true --dlv_switch link"
 	fi
 
 	if [ -z "$(grep 'CCCOMP' ${S}/${LinuxEnvSet})" ]
@@ -451,26 +451,24 @@ src_install() {
 	insinto /usr/share/pixmaps
 	doins *.png
 
-	einfo "Installing Menu shortcuts (need \"gnome\" or \"kde\" in USE)..."
+	einfo "Installing Menu shortcuts and mime info (need \"gnome\" or \"kde\" in USE)..."
 	if [ -n "`use gnome`" ]
 	then
 		insinto /usr/share/applications
 		doins ${FILESDIR}/${OO_VER}/*.desktop
+		insinto /usr/share/application-registry
+		doins ${FILESDIR}/${OO_VER}/ximian-openoffice.applications
+		insinto /usr/share/mime-info
+		doins ${FILESDIR}/${OO_VER}/ximian-openoffice.keys
 	fi
 
 	if [ -n "`use kde`" ]
 	then
 		insinto /usr/share/applnk/Ximian-OpenOffice.org
 		doins ${FILESDIR}/${OO_VER}/*.desktop
+		insinto /usr/share/mimelnk/application
+		doins ${S}/sysui/${SOLPATH}/misc/kde/share/mimelnk/application/*
 	fi
-
-	# Don't forget the mime info...
-	insinto /usr/share/mimelnk/application
-	doins ${S}/sysui/${SOLPATH}/misc/kde/share/mimelnk/application/*
-	insinto /usr/share/application-registry
-	doins ${FILESDIR}/${OO_VER}/ximian-openoffice.applications
-	insinto /usr/share/mime-info
-	doins ${FILESDIR}/${OO_VER}/ximian-openoffice.keys
 
 	# Install corrected Symbol Font
 	insinto /usr/X11R6/lib/X11/fonts/truetype/
