@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/gentoo-web/gentoo-web-2.4.ebuild,v 1.8 2002/10/23 22:51:51 peitolm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/gentoo-web/gentoo-web-2.4.ebuild,v 1.9 2002/11/01 09:53:16 peitolm Exp $
  
 S=${WORKDIR}/gentoo-src/gentoo-web
 TEMPLATE=${S}/xsl/guide-main.xsl
@@ -154,8 +154,10 @@ src_install() {
 	xsltproc $TEMPLATE xml/main-docs.xml > ${D}${WEBROOT}/index-docs.html || die
 	xsltproc $TEMPLATE xml/main-articles.xml > ${D}${WEBROOT}/index-articles.html || die
 	xsltproc $TEMPLATE xml/main-contract.xml > ${D}${WEBROOT}/index-contract.html || die
-	xsltproc $TEMPLATE xml/main-graphics.xml > ${D}${WEBROOT}/index-graphics.html || diea
+	xsltproc $TEMPLATE xml/main-graphics.xml > ${D}${WEBROOT}/index-graphics.html || die
 	xsltproc $TEMPLATE ${T}/main-use.xml > ${D}${WEBROOT}/doc/use.html || die
+	xsltproc $TEMPLATE xml/main-mirrors.xml > ${D}${WEBROOT}/index-mirrors.html || die
+	xsltproc $TEMPLATE xml/main-irc.xml > ${D}${WEBROOT}/index-irc.html || die
 	OLDROOT=${ROOT} ; unset ROOT
 	
 	ROOT=${OLDROOT}
