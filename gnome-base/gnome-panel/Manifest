@@ -1,4 +1,4 @@
-MD5 3b447f22e8de601e7df40e4db34fd858 ChangeLog 8187
+MD5 6768d3b2a19ce81e8e68baecee3f4384 ChangeLog 8370
 MD5 1c41d01742b08320a5080625b7862d11 gnome-panel-1.4.1.ebuild 1774
 MD5 1272743bcce046b4520549f4e2c297f3 gnome-panel-2.2.1.ebuild 967
 MD5 95daeb28a4a553527a9b88656a058732 gnome-panel-2.2.2.ebuild 975
@@ -6,7 +6,7 @@ MD5 5de595bbd96413c3f35afd8f7c72a777 gnome-panel-2.4.0-r2.ebuild 1874
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 623e3c1deaace4f7ecea86edb2de8e71 gnome-panel-2.0.9.ebuild 1264
 MD5 eb58dda325007520bcfc41d8f435dd60 gnome-panel-2.2.2.2.ebuild 960
-MD5 596ccca340559130591243988c6bbb4d gnome-panel-2.4.1.ebuild 1632
+MD5 f19b1a41588be31e1560c5546fbc1494 gnome-panel-2.4.1.ebuild 1752
 MD5 48542b12f7de0aa1d685b144b762a3ff gnome-panel-1.4.2-r2.ebuild 2016
 MD5 110d7baa6d45676d75e42fb41df97191 gnome-panel-2.4.0-r1.ebuild 1621
 MD5 fae3355b5d711fc7eb4d3e3428a6b2ae files/digest-gnome-panel-1.4.1 70
@@ -23,3 +23,4 @@ MD5 e32de20a66c2dddfb1a4178bbce00e28 files/gnome-panel-2.4.0-autohide_fix.patch 
 MD5 30ed8bbd528d5b284c0b489cd8c52210 files/digest-gnome-panel-1.4.2-r2 70
 MD5 756269f1a3d35355c5fd61009b9f4831 files/digest-gnome-panel-2.4.1 71
 MD5 08d08fb07508d922ef40625fd41d53d6 files/gnome-panel-2.4.0-drawers_expanding_fix.patch 639
+MD5 9696dc7286c62ec7105c7d927be6b4dc files/gnome-panel-2.4.1-drawers_expanding_fix.patch 639

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/gnome-panel-2.4.1.ebuild,v 1.1 2003/10/20 16:25:16 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/gnome-panel-2.4.1.ebuild,v 1.2 2003/10/31 14:57:34 leonardop Exp $
 
 inherit gnome2 eutils
 
@@ -44,6 +44,9 @@ src_unpack() {
 
 	# fix initial menu size
 	epatch ${FILESDIR}/${PN}-2.4-panel_size.patch
+
+	# fix bad behavior of drawers on `autohide' panels.
+	epatch ${FILESDIR}/${PN}-2.4.1-drawers_expanding_fix.patch
 
 	sed -i 's:--load:-v:' gnome-panel/Makefile.am
 
