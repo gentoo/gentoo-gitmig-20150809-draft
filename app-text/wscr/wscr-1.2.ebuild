@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wscr/wscr-1.2.ebuild,v 1.6 2004/07/01 12:11:19 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wscr/wscr-1.2.ebuild,v 1.7 2004/10/13 20:20:52 taviso Exp $
 
 DESCRIPTION="A Lightweight and Fast Anagram Solver"
 HOMEPAGE="http://hood.sjfn.nb.ca/~eddie/wscr.html"
@@ -10,10 +10,8 @@ SLOT="0"
 
 KEYWORDS="x86 alpha ~sparc ~mips"
 IUSE=""
-DEPEND="virtual/libc
-	>=sys-apps/sed-4"
-RDEPEND="virtual/libc
-	sys-apps/miscfiles"
+DEPEND="virtual/libc"
+RDEPEND="virtual/libc sys-apps/miscfiles"
 
 src_compile() {
 	sed -i 's#"/usr/dict/words";#"/usr/share/dict/words";#' wscr.h
@@ -22,8 +20,7 @@ src_compile() {
 }
 
 src_install() {
-	exeinto /usr/bin
-	doexe wscr
+	dobin wscr
 	doman wscr.6
 	dodoc README
 }
