@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/xmms-musepack
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-musepack/ChangeLog,v 1.14 2004/04/22 09:08:22 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-musepack/ChangeLog,v 1.15 2004/04/22 16:54:58 eradicator Exp $
+
+  22 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  xmms-musepack-0.99.ebuild:
+  Adding fix for bug #40970.
 
   22 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org>
   xmms-musepack-0.94-r1.ebuild, xmms-musepack-0.94-r2.ebuild,
