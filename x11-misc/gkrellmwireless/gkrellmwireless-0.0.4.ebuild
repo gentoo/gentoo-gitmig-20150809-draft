@@ -14,7 +14,7 @@ HOMEPAGE="http://gkrellm.luon.net/"
 DEPEND=">=app-admin/gkrellm-1.0.6"
 
 src_compile() {
-
+	export PATH="${PATH}:/usr/X11R6/bin"
     try make
 
 }

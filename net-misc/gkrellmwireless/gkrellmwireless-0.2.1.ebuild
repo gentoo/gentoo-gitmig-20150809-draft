@@ -5,13 +5,12 @@
 # 26 Apr 2001 21:30 CST blutgens Exp $
 
 #P=
-A=${P}.tar.gz
 S=${WORKDIR}/${P}
 DESCRIPTION="A plugin for gkrellm that monitors your wireless network card"
-SRC_URI="http://gkrellm.luon.net/files/${A}"
+SRC_URI="http://gkrellm.luon.net/files/${P}.tar.gz"
 HOMEPAGE="http://gkrellm.luon.net/"
 
-DEPEND=">=app-admin/gkrellm-1.0.6"
+DEPEND=">=app-admin/gkrellm-1.2.1"
 
 src_compile() {
 	export PATH="${PATH}:/usr/X11R6/bin"
@@ -23,6 +22,6 @@ src_install () {
 
     exeinto /usr/lib/gkrellm/plugins
     doexe wireless.so
-    dodoc README ChangeLog
+    dodoc README Changelog
 }
 
