@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/monafont/monafont-2.90-r1.ebuild,v 1.5 2004/09/29 17:40:31 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/monafont/monafont-2.90-r1.ebuild,v 1.6 2004/10/05 06:21:15 usata Exp $
 
 inherit font
 
@@ -16,7 +16,8 @@ KEYWORDS="x86 alpha ppc sparc ~amd64"
 IUSE="X truetype"
 DEPEND="virtual/x11
 	dev-lang/perl
-	>=sys-apps/sed-4"
+	>=sys-apps/sed-4
+	app-arch/unzip"
 RDEPEND="X? ( virtual/x11 )"
 
 S="${WORKDIR}/${MY_P}"
