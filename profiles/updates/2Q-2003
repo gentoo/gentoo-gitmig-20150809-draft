@@ -21,3 +21,4 @@ move app-text/freefonts media-fonts/freefonts
 move app-text/gnu-gs-fonts-other media-fonts/gnu-gs-fonts-other
 move app-text/gnu-gs-fonts-std media-fonts/gnu-gs-fonts-std
 move app-text/sharefonts media-fonts/sharefonts
+move net-www/phoenix-bin net-www/mozilla-firebird-bin
