@@ -1,6 +1,15 @@
 # ChangeLog for sys-libs/libtermcap-compat
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libtermcap-compat/ChangeLog,v 1.14 2003/09/17 22:42:51 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libtermcap-compat/ChangeLog,v 1.15 2003/12/31 06:43:13 seemant Exp $
+
+*libtermcap-compat-2.0.8 (30 Dec 2003)
+
+  30 Dec 2003; Seemant Kulleen <seemant@gentoo.org>
+  libtermcap-compat-2.0.8.ebuild:
+  version bump. This incorporates Eric Raymond's latest iteration of the
+  /etc/termcap file, patched with some patches from Mandrake. Additionally,
+  libtermcap's src.rpm was liberally raided for Mandrake patches. This is
+  designed to work with coreutils-5.0.91-r3
 
   17 Sep 2003; Jon Portnoy <avenj@gentoo.org>
   libtermcap-compat-1.2.3-r1.ebuild :
