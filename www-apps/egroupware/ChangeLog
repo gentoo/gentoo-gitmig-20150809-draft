@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/egroupware
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/egroupware/ChangeLog,v 1.14 2004/12/08 21:53:20 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/egroupware/ChangeLog,v 1.15 2004/12/29 01:47:59 ciaranm Exp $
+
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   08 Dec 2004; Karol Wojtaszek <sekretarz@gentoo.org>
   egroupware-1.0.00.006.ebuild:
@@ -40,7 +43,7 @@
   egroupware-1.0.00.004.ebuild:
   Fixed DEPEND/RDEPEND. Removed empty src_compile
 
-  25 Aug 2004; Bryan Østergaard <kloeri@gentoo.org>
+  25 Aug 2004; Bryan Ã˜stergaard <kloeri@gentoo.org>
   egroupware-1.0.00.004.ebuild:
   Stable on alpha, bug 61510.
 
@@ -70,7 +73,7 @@
   +egroupware-0.9.99.015.ebuild:
   Version bumped. Closes 53747
 
-  31 May 2004; Bryan Østergaard <kloeri@gentoo.org>
+  31 May 2004; Bryan Ã˜stergaard <kloeri@gentoo.org>
   egroupware-0.9.99.008.ebuild:
   Stable on alpha.
 

@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/phpwebsite
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/phpwebsite/ChangeLog,v 1.14 2004/11/24 19:17:12 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/phpwebsite/ChangeLog,v 1.15 2004/12/29 01:50:51 ciaranm Exp $
+
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
 *phpwebsite-0.10.0 (24 Nov 2004)
 
@@ -35,7 +38,7 @@
   05 Sep 2004; Sven Wegener <swegener@gentoo.org> :
   Fixed ChangeLog header.
 
-  04 Sep 2004; Bryan Østergaard <kloeri@gentoo.org>
+  04 Sep 2004; Bryan Ã˜stergaard <kloeri@gentoo.org>
   phpwebsite-0.9.3_p4-r1.ebuild:
   Stable on alpha.
 
@@ -75,7 +78,7 @@
   +phpwebsite-0.9.3_p2-r1.ebuild:
   Moved from net-www/phpwebsite to www-apps/phpwebsite.
 
-  11 Jun 2004; Bryan Østergaard <kloeri@gentoo.org>
+  11 Jun 2004; Bryan Ã˜stergaard <kloeri@gentoo.org>
   phpwebsite-0.9.3_p2-r1.ebuild:
   Stable on alpha.
 
