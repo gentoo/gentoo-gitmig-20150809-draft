@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/rsbac-admin/rsbac-admin-1.2.3_pre5.ebuild,v 1.2 2004/06/25 03:08:35 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/rsbac-admin/rsbac-admin-1.2.3_pre5.ebuild,v 1.3 2004/07/15 02:30:02 agriffis Exp $
 
-IUSE="ncurses"
+IUSE=""
 
 # RSBAC Adming packet name
 RSBACV=1.2.3

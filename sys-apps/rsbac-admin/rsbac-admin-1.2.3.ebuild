@@ -1,8 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/rsbac-admin/rsbac-admin-1.2.3.ebuild,v 1.1 2004/06/29 01:37:06 kang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/rsbac-admin/rsbac-admin-1.2.3.ebuild,v 1.2 2004/07/15 02:30:02 agriffis Exp $
 
-IUSE="ncurses debug"
+inherit eutils
+
+IUSE="debug"
 
 # RSBAC Adming packet name
 ADMIN=rsbac-admin-v${PV}
