@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_rc4-r1.ebuild,v 1.4 2004/05/25 22:09:02 jhuebel Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_rc4-r1.ebuild,v 1.5 2004/05/27 15:41:34 gmsoft Exp $
 
 inherit eutils flag-o-matic gcc libtool
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/xine/${PN}-${PV/_/-}${MY_PKG_SUFFIX}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="1"
-KEYWORDS="~x86 ~ppc -hppa ~sparc amd64 -ia64 ~alpha"
+KEYWORDS="~x86 ~ppc hppa ~sparc amd64 -ia64 ~alpha"
 IUSE="arts esd avi nls dvd aalib X directfb oggvorbis alsa gnome sdl speex theora ipv6"
 
 RDEPEND="oggvorbis? ( media-libs/libvorbis )
@@ -72,6 +72,9 @@ src_unpack() {
 
 	# Fix building on amd64, #49569
 	use amd64 && epatch ${FILESDIR}/configure-64bit-define.patch
+
+	# Fix detection of hppa2.0 and hppa1.1 CHOST
+	use hppa && sed -e 's/hppa-/hppa*-linux-/' -i ${S}/configure
 }
 
 src_compile() {
@@ -98,6 +101,10 @@ src_compile() {
 
 	use amd64 \
 		&& myconf="${myconf} --with-xv-path=/usr/X11R6/lib"
+
+	# The default CFLAGS (-O) is the only thing working on hppa.
+	use hppa \
+		&& unset CFLAGS
 
 	econf \
 		`use_enable X x11` \
