@@ -1,5 +1,15 @@
-MD5 6c7491c89c61e1a64ca4458605e35f21 ChangeLog 1065
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 c3b4db15310df0ba27bdf7a92fd46fde ChangeLog 1211
 MD5 4e7e9014696193c4090658f7b1c76778 raccess-0.6.ebuild 1167
-MD5 e7f5403af72701ebff3dee523eb30048 raccess-0.7.ebuild 827
+MD5 e2d49e8e18ae2af203ab98e6b79c50eb raccess-0.7.ebuild 832
 MD5 6f29cd79f699f5fe7678b0f86f20124d files/digest-raccess-0.6 63
 MD5 a18e5873428ae9421937358592a66ad9 files/digest-raccess-0.7 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFB+/7smdTrptrqvGERAoDMAJsFxno3GIvRX1VVa5svCLVdzjLWxwCbBygV
+nPknUTZQ5Uod6sGH0OHrB1w=
+=1HYi
+-----END PGP SIGNATURE-----

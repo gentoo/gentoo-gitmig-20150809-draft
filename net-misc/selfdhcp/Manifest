@@ -1,15 +1,15 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 321f8769a6471f1a7fe37f5f6748f906 selfdhcp-0.2.ebuild 740
-MD5 0f07c137b8bd68fedaa3783af5677b3c ChangeLog 503
-MD5 a15b3197c7d2bac1805c6d41d1cf2307 selfdhcp-0.2a.ebuild 780
-MD5 8dababb85d4f9451707cd1408b1e745c files/digest-selfdhcp-0.2a 66
+MD5 bb24875e293c724aeed8d74d858d10a6 ChangeLog 671
+MD5 b11790ffb55f3847eeadeb0e99e4f119 selfdhcp-0.2.ebuild 737
+MD5 865d3136b4637fad50637e68ee30418b selfdhcp-0.2a.ebuild 777
 MD5 7b587bc8dd98655bf66a338fbd02c547 files/digest-selfdhcp-0.2 65
+MD5 8dababb85d4f9451707cd1408b1e745c files/digest-selfdhcp-0.2a 66
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
+Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFBLMVtKtJO8LeSoosRAtecAJ9kXtp+yaWZZACZMBkIroSDkz6PGgCeJi+O
-49iQrAkxJfNTMICpL64Tf1k=
-=OQBh
+iD8DBQFB+/86mdTrptrqvGERAuwGAJsFu7bk89wJXRutJ6kAyGPidaTAAACeLPDT
+DCSvmLZggh/68QLksJT4eP8=
+=dzPQ
 -----END PGP SIGNATURE-----
