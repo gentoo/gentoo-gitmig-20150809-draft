@@ -1,3 +1,6 @@
+13 Feb 2003 Aron Griffis <agriffis@gentoo.org>
+    * update ekeyword to fix strange spacing from other keyword tools
+
 12 Feb 2003 Aron Griffis <agriffis@gentoo.org>
     * update echangelog to insert entry at the correct location in the
 	  ChangeLog
