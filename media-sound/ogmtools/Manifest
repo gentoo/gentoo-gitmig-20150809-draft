@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 f203686c22c7053268cd4bb2bba900d7 ChangeLog 3053
+MD5 9b29a8e26330e30a2de4df034ed189c3 ChangeLog 3162
 MD5 d0d7ea03e238a808414b4426394c100f metadata.xml 221
-MD5 5a4fc01d94c0945cd838dd228a557779 ogmtools-1.5.ebuild 1018
+MD5 33ba37611e7696d940f45f0448869117 ogmtools-1.5.ebuild 1015
 MD5 ecc522a3c339ebf582a4b39cc755f336 ogmtools-1.4.ebuild 1014
 MD5 fd266b183ab7c000bbfb8eb349acba47 ogmtools-1.4.1.ebuild 1023
 MD5 b761ed0428ae14a6836e25964a36e5f0 files/digest-ogmtools-1.5 65
@@ -15,7 +15,7 @@ MD5 1d1619956bd0f7029e7450c0ec898626 files/digest-ogmtools-1.4.1 67
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBowzxArHZZzCEUG0RAoTxAJ9twBejeoAKomrKhxRFXJKqixjR0ACfWy8V
-YqMwZ0Ufg0CSNR1mykZPdm0=
-=fyxF
+iD8DBQFBxRvvArHZZzCEUG0RAjldAJ9JkCTa3bpL+eoZ8vaEGgJfQOyXTwCeIZC8
+SbjLreNN6E/vyVnbEXB2zSM=
+=aZBE
 -----END PGP SIGNATURE-----
