@@ -1,15 +1,17 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
+MD5 7f7e53d7d82a0dcefe778e1a517e7383 mysql-query-browser-1.0.7a_beta.ebuild 1447
+MD5 5e8e6e9b8f343f349b41031367d93e2a mysql-query-browser-1.1.1.ebuild 1444
+MD5 a34cd4790ab99ad993bb858a14b0d398 ChangeLog 1268
 MD5 28ed354a0713d1b36793acecb2193738 metadata.xml 687
-MD5 8450ce280467218d4f4e2716e4b7a177 ChangeLog 983
-MD5 3e55c603b7ff1f41544e3782962cafec mysql-query-browser-1.0.7a_beta.ebuild 1419
 MD5 1b63d1ede30317531b67b872a5fb3665 files/mysql-query-browser 303
 MD5 e7511de4fcda374e7233bb1bffb55270 files/digest-mysql-query-browser-1.0.7a_beta 84
+MD5 0ad986b62f6fd4b03426739f6a5bff81 files/digest-mysql-query-browser-1.1.1 84
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD4DBQFBeZKMI1lqEGTUzyQRAnbbAJ994xl/Um4+tb9f12zEI7wgvANoigCY7TYZ
-gEsL0jt8vArOQHxoXtSTbg==
-=2wFK
+iD8DBQFBoSiCI1lqEGTUzyQRAjr8AJ9SPoKn9xaBJqR2Bw0XOkUs/EDjugCfdCEm
+YvXJ2qhrUuEVeH/4eC5BwC8=
+=mRvC
 -----END PGP SIGNATURE-----

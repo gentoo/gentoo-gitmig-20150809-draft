@@ -1,6 +1,13 @@
 # ChangeLog for dev-db/mysql-query-browser
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-query-browser/ChangeLog,v 1.4 2004/10/22 23:06:44 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-query-browser/ChangeLog,v 1.5 2004/11/21 23:45:00 swegener Exp $
+
+*mysql-query-browser-1.1.1 (22 Nov 2004)
+
+  22 Nov 2004; Sven Wegener <swegener@gentoo.org>
+  mysql-query-browser-1.0.7a_beta.ebuild, +mysql-query-browser-1.1.1.ebuild:
+  Version bump. This version needs >=dev-db/mysql-4.1. Modified the 1.0.7
+  ebuild to depend on <dev-db/mysql-4.1.
 
   23 Oct 2004; Sven Wegener <swegener@gentoo.org>
   mysql-query-browser-1.0.7a_beta.ebuild:

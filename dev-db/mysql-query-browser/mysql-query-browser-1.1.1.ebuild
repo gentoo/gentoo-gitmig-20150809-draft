@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-query-browser/mysql-query-browser-1.0.7a_beta.ebuild,v 1.4 2004/11/21 23:45:00 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-query-browser/mysql-query-browser-1.1.1.ebuild,v 1.1 2004/11/21 23:45:00 swegener Exp $
 
 inherit gnome2
 
-MY_P="${P/_/-}"
+MY_P="${P}-gamma"
 
 DESCRIPTION="MySQL Query Browser"
 HOMEPAGE="http://www.mysql.com/"
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc"
 IUSE=""
 
-RDEPEND="<dev-db/mysql-4.1
+RDEPEND=">=dev-db/mysql-4.1
 	>=dev-libs/libpcre-4.4
 	>=dev-libs/libxml2-2.6.2
 	>=gnome-base/libglade-2
