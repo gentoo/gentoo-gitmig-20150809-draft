@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.44 2003/01/06 23:20:34 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.45 2003/01/19 14:36:49 azarah Exp $
+
+  19 Jan 2003; Martin Schlemmer <azarah@gentoo.org> mplayer-0.90_rc2.ebuild :
+
+  Only enable devfs support if /dev/.devfsd exists, bug #13613.
 
   07 Dec 2002; Martin Schlemmer <azarah@gentoo.org> mplayer-0.90_rc2.ebuild :
 

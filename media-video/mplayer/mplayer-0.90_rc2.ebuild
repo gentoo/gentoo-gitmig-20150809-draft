@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-0.90_rc2.ebuild,v 1.2 2003/01/06 23:20:34 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-0.90_rc2.ebuild,v 1.3 2003/01/19 14:36:49 azarah Exp $
 
 IUSE="dga oss jpeg 3dfx sse matrox sdl X svga ggi oggvorbis 3dnow aalib gnome xv opengl truetype dvd gtk gif esd fbcon encode alsa directfb arts"
 
@@ -198,6 +198,11 @@ src_compile() {
 		myconf="${myconf} --disable-lirc"
 	fi
 
+	if [ -e /dev/.devfsd ]
+	then
+		myconf="${myconf} --enable-linux-devfs"
+	fi
+
 	# Crashes on start when compiled with most optimizations.
 	# The code have CPU detection code now, with CPU specific
 	# optimizations, so extra should not be needed and is not
@@ -208,7 +213,6 @@ src_compile() {
 		--confdir=/usr/share/mplayer \
 		--disable-runtime-cpudetection \
 		--enable-largefiles \
-		--enable-linux-devfs \
 		--enable-real \
 		--with-reallibdir=${REALLIBDIR} \
 		${myconf} || die
