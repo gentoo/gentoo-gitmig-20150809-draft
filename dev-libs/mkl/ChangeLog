@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/mkl
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/mkl/ChangeLog,v 1.8 2004/03/03 16:42:59 pbienst Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mkl/ChangeLog,v 1.9 2004/03/24 14:33:56 weeve Exp $
+
+  24 Mar 2004; Jason Wever <weeve@gentoo.org> mkl-5.1.ebuild, mkl-5.2.ebuild:
+  All masked on sparc as this is an x86 binary only package.
 
   03 Mar 2004; Peter Bienstman <pbienst@gentoo.org> mkl-5.2.ebuild :
   mark stable on x86
