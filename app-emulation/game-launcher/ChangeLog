@@ -1,5 +1,9 @@
 # ChangeLog for app-emulation/game-launcher
-
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/game-launcher/ChangeLog,v 1.3 2003/01/04 13:22:02 lordvan Exp $
+	
 * game-launcher-0.9.8 (27 Oct 2002)
-  Thomas Raschbacher <lordvan@lordvan.com>: added ebuild
+  27 Oct 2002; Thomas Raschbacher <lordvan@gentoo.org>: added ebuild
   WARNING: is a security-hole cuz parts of it are(and have to be) world-writeable!!!!
+  04 Jan 2003; Thomas Raschbacher <lordvan@gentoo.org>:
+  fixed ChangeLog
