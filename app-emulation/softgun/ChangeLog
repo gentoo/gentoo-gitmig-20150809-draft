@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/softgun
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/softgun/ChangeLog,v 1.3 2005/03/04 16:18:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/softgun/ChangeLog,v 1.4 2005/04/06 23:58:51 vapier Exp $
+
+*softgun-0.09 (06 Apr 2005)
+
+  06 Apr 2005; Mike Frysinger <vapier@gentoo.org> +softgun-0.09.ebuild:
+  Version bump, thanks to Mr_Bones.
 
 *softgun-0.08 (04 Mar 2005)
 
