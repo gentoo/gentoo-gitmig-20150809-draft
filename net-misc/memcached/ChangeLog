@@ -1,6 +1,17 @@
 # ChangeLog for net-misc/memcached
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/memcached/ChangeLog,v 1.5 2005/01/05 07:11:23 lisa Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/memcached/ChangeLog,v 1.6 2005/01/15 02:39:45 lisa Exp $
+
+*memcached-1.1.12_rc1 (14 Jan 2005)
+
+  14 Jan 2005; Lisa Seelye <lisa@gentoo.org> +metadata.xml,
+  +files/1.1.12/conf, +files/1.1.12/init, +memcached-1.1.12_rc1.ebuild:
+  Add 1.1.12-rc1 and retool the conf/init scripts to take advantage of the new
+  -P (pidfile) option. The default behavior is to save the pidfile in
+  /var/run/memcached/memcached-PORT.pid. This, it seems would make it easier
+  for people to have multiple instances of memcached running (simply rename
+  /etc/init.d/memcached to /etc/init.d/memcached.instance and the conf.d file
+  accordingly.
 
   05 Jan 2005; Lisa Seelye <lisa@gentoo.org> memcached-1.1.11.ebuild:
   Dependency update: dev-libs/memcached-api-perl -> dev-perl/Cache-Memcached.

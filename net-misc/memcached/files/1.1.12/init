@@ -1,0 +1,43 @@
+#!/sbin/runscript
+# $Header: /var/cvsroot/gentoo-x86/net-misc/memcached/files/1.1.12/init,v 1.1 2005/01/15 02:39:45 lisa Exp $
+
+depend() {
+	need net
+}
+
+checkconfig() {
+        if [ -z "${LISTENON}" ]; then
+          eerror "Edit /etc/conf.d/memcached and specify an address to listen on."
+          return 1
+        fi
+
+}
+
+start() {
+	ebegin "Starting memcached"
+        checkconfig || return 1
+        local dir="$(dirname ${PIDFILE})"
+        if [ ! -d "${dir}" ]; then
+          einfo " Creating ${dir}"
+          mkdir "${dir}"
+          chown ${MEMCACHED_RUNAS} "${dir}"
+        fi
+        if [ -f ${PIDFILE} ]; then
+          einfo "  Removing stale pidfile ${PIDFILE}"
+          rm -f ${PIDFILE} 1>/dev/null
+        fi
+        
+	/sbin/start-stop-daemon --start \
+	        --exec ${MEMCACHED_BINARY} --startas ${MEMCACHED_BINARY} -- \
+	        -d -p ${PORT} -l ${LISTENON} -m ${MEMUSAGE} \
+		-c ${MAXCONN} -u ${MEMCACHED_RUNAS} -P ${PIDFILE}
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping memcached"
+	start-stop-daemon --stop --quiet --pidfile ${PIDFILE}
+	rm -f ${PIDFILE}
+	eend $?
+}
+
