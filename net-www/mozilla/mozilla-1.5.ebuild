@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.5.ebuild,v 1.7 2003/10/20 09:25:53 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.5.ebuild,v 1.8 2003/10/25 17:19:11 brad Exp $
 
 IUSE="java crypt ipv6 gtk2 ssl ldap gnome debug"
 # Internal USE flags that I do not really want to advertise ...
@@ -248,6 +248,14 @@ src_compile() {
 	# spellcheck
 	# Non-defaults are:
 	#     xmlterm access-builtin datetime finger cview
+	use mozxmlterm || use mozaccess && \
+		ewarn "" && \
+		ewarn "The use of the non-default extensions is considered unsupported, and these" && \
+		ewarn "may not always compile properly." && \
+		ewarn "Please do not use if you do not know what you're doing!" && \
+		ewarn "" && \
+		sleep 3
+
 	local myext="default"
 	if [ -n "`use mozxmlterm`" ]
 	then
