@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/fontconfig
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/ChangeLog,v 1.60 2004/12/21 14:22:17 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/ChangeLog,v 1.61 2004/12/21 15:57:30 corsair Exp $
+
+  21 Dec 2004; Markus Rothe <corsair@gentoo.org> fontconfig-2.2.3.ebuild:
+  Stable on ppc64; bug #44116
 
   21 Dec 2004; Luca Barbato <lu_zero@gentoo.org> fontconfig-2.2.2.ebuild,
   fontconfig-2.2.3.ebuild:
