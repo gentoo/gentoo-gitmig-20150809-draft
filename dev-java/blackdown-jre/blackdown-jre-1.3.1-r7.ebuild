@@ -1,8 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/blackdown-jre-1.3.1-r7.ebuild,v 1.20 2002/12/10 01:19:10 blauwers Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/blackdown-jre-1.3.1-r7.ebuild,v 1.21 2002/12/10 01:24:32 blauwers Exp $
 
-. /usr/portage/eclass/inherit.eclass
 inherit java
 
 S=${WORKDIR}/j2re1.3.1
