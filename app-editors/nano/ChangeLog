@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/nano
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/ChangeLog,v 1.65 2004/11/23 03:27:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/ChangeLog,v 1.66 2004/11/27 20:50:36 eradicator Exp $
+
+  27 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  +files/nano-1.3.5-break_line.patch, nano-1.3.5.ebuild:
+  Fix compilation because of conflicting types of break_line()
 
 *nano-1.3.5 (22 Nov 2004)
 
