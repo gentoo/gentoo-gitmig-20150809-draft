@@ -1,16 +1,23 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.20 2002/05/08 05:58:31 jnelson Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.21 2002/05/21 21:09:47 azarah Exp $
+
+*mplayer-0.90_pre4 (21 May 2002)
+
+  21 May 2002; Martin Schlemmer <azarah@gentoo.org> mplayer-0.90_pre4 :
+
+  Add new version. Resolves bug #2891.  This version seems to fix many
+  of the bugs with previous 0.90_pre versions.
 
 *mplayer-0.90_pre3-r1 (5 May 2002)
 
- 8 May 2002; Jon Nelson <jnelson@gentoo.org> mplayer-0.90_pre3-r1 :
+  8 May 2002; Jon Nelson <jnelson@gentoo.org> mplayer-0.90_pre3-r1 :
  
- Use new check_KV from portage 1.9.10
+  Use new check_KV from portage 1.9.10
  
- 5 May 2002; Martin Schlemmer <azarah@gentoo.org> mplayer-0.90_pre3-r1 :
+  5 May 2002; Martin Schlemmer <azarah@gentoo.org> mplayer-0.90_pre3-r1 :
 
- Fix some compile problems for Gui, thanks to Gwenn Gueguen.
+  Fix some compile problems for Gui, thanks to Gwenn Gueguen.
 
 *mplayer-0.90_pre3 (5 May 2002)
 

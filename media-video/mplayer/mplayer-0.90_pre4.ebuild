@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-0.90_pre2-r1.ebuild,v 1.1 2002/05/01 22:00:21 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-0.90_pre4.ebuild,v 1.1 2002/05/21 21:09:47 azarah Exp $
 
 # Handle PREversions as well
 MY_PV=${PV/_/}
@@ -9,7 +9,6 @@ S="${WORKDIR}/MPlayer-${MY_PV}"
 # Only install Skin if GUI should be build (gtk as USE flag)
 SRC_URI="ftp://mplayerhq.hu/MPlayer/releases/MPlayer-${MY_PV}.tar.bz2
 	 ftp://mplayerhq.hu/MPlayer/releases/mp-arial-iso-8859-1.zip
-	 ftp://ftp.mplayerhq.hu/MPlayer/patches/dxr3.patch
 	 gtk? ( http://www.ibiblio.org/gentoo/distfiles/default-skin-0.1.tar.bz2 )"
 #	 This is to get the digest problem fixed.
 #	 gtk? ( ftp://mplayerhq.hu/MPlayer/Skin/default.tar.bz2 )"
@@ -17,7 +16,7 @@ DESCRIPTION="Media Player for Linux"
 HOMEPAGE="http://www.mplayerhq.hu/"
 
 # 'encode' in USE for MEncoder
-RDEPEND=">=media-libs/divx4linux-20020304
+RDEPEND=">=media-libs/divx4linux-20020418
 	>=media-libs/win32codecs-0.60
 	dvd? ( media-libs/libdvdread
 	       media-libs/libdvdcss )
@@ -28,10 +27,12 @@ RDEPEND=">=media-libs/divx4linux-20020304
 	sdl? ( media-libs/libsdl )
 	alsa? ( media-libs/alsa-lib )
 	svga? ( media-libs/svgalib )
-	encode? ( media-sound/lame )
+	encode? ( media-sound/lame 
+	          >=media-libs/libdv-0.9.5 )
 	opengl? ( virtual/opengl )
 	directfb? ( dev-libs/DirectFB )
-	oggvorbis? ( media-libs/libvorbis )"
+	oggvorbis? ( media-libs/libvorbis )
+	>=sys-apps/portage-1.9.10"
 
 DEPEND="${RDEPEND}
 	dev-lang/nasm
@@ -50,11 +51,22 @@ src_unpack() {
 		cd ${WORKDIR}/default
 		patch < ${FILESDIR}/default-skin.diff || die "gtk patch failed"
 	)
+
+	cd ${S}
+	# Fixes some compile problems, thanks to Gwenn Gueguen
+	patch -p0 <${FILESDIR}/${P}-widget.patch || die "widget patch failed"
 }
 
 src_compile() {
 
+	if use matrox; then
+	        check_KV
+	fi
+        
 	local myconf=""
+
+	# Some people have compile problems with the vidix stuff
+	myconf="${myconf} --disable-vidix"
 
 	use 3dnow \
 		|| myconf="${myconf} --disable-3dnow --disable-3dnowex"
@@ -109,7 +121,7 @@ src_compile() {
 
 	use dvd \
 		&& myconf="${myconf} --enable-dvdread --enable-css" \
-		|| myconf="${myconf} --disable-dvdread --disable-css"
+		|| myconf="${myconf} --disable-mpdvdkit --disable-dvdread --disable-css"
 
 	use matrox \
 		&& myconf="${myconf} --enable-mga" \
@@ -199,13 +211,15 @@ src_install() {
 	)
 
 	use sdl && audio="sdl" \
-	|| use alsa && audio="alsa5" \
-	|| use oss audio="oss" \
+	|| use alsa && (
+		[ -e /usr/lib/libasound.so.2 ] && audio="alsa9" \
+		|| audio="alsa5"
+	) || use oss audio="oss" \
 	
 	# Note to myself:  do not change " into '
-	sed -e "s/vo=xv/vo=${video}/"					\
-	    -e "s/ao=oss/ao=${audio}/"					\
-	    -e 's/include =/#include =/'				\
+	sed -e "s/vo=xv/vo=${video}/" \
+	    -e "s/ao=oss/ao=${audio}/" \
+	    -e 's/include =/#include =/' \
 	    ${S}/etc/example.conf > ${T}/mplayer.conf
 
 	insinto /etc
@@ -215,8 +229,8 @@ src_install() {
 	doins ${S}/etc/codecs.conf
 
 	use matrox && ( \
-		dodir /lib/modules/${KVERS}/kernel/drivers/char
-		cp ${S}/drivers/mga_vid.o ${D}/lib/modules/${KVERS}/kernel/drivers/char
+		dodir /lib/modules/${KV}/kernel/drivers/char
+		cp ${S}/drivers/mga_vid.o ${D}/lib/modules/${KV}/kernel/drivers/char
 	)
 }
 
