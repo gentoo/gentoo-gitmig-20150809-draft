@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.12-r4.ebuild,v 1.17 2004/09/04 20:11:54 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.12-r4.ebuild,v 1.18 2004/10/04 21:42:50 pvdabeel Exp $
 
 inherit eutils flag-o-matic
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://kernel/linux/utils/${PN}/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc sparc mips alpha arm hppa amd64 ia64 ~ppc64 s390"
+KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64 ~ppc64 s390"
 IUSE="crypt nls static pam selinux uclibc"
 
 DEPEND="virtual/libc
