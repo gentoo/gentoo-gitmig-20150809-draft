@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/anthy
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/anthy/ChangeLog,v 1.7 2003/09/22 00:47:26 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/anthy/ChangeLog,v 1.8 2003/09/25 18:53:32 usata Exp $
+
+  26 Sep 2003; Mamoru KOMACHI <usata@gentoo.org> anthy-4507.ebuild,
+  anthy-4515.ebuild, anthy-4519.ebuild:
+  Moved snapshots to app-i18n/anthy-ss
 
 *anthy-4519 (22 Sep 2003)
 
