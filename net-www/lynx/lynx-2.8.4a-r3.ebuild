@@ -1,11 +1,11 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-www/lynx/lynx-2.8.4a-r3.ebuild,v 1.1 2002/03/21 13:28:44 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/lynx/lynx-2.8.4a-r3.ebuild,v 1.2 2002/05/08 23:29:54 edolnx Exp $
 
 S=${WORKDIR}/lynx2-8-4
 HOMEPAGE="http://lynx.browser.org/"
-SRC_URI="ftp://lynx.isc.org/lynx/lynx2.8.4/lynx2.8.4.tar.bz2"
+SRC_URI="ftp://lynx.isc.org/lynx2.8.4/lynx2.8.4.tar.bz2"
 
 DESCRIPTION="An excellent console-based web browser with ssl support"
 

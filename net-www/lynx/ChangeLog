@@ -1,6 +1,12 @@
 # ChangeLog for net-www/lynx
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/lynx/ChangeLog,v 1.2 2002/03/21 13:28:44 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/lynx/ChangeLog,v 1.3 2002/05/08 23:29:54 edolnx Exp $
+
+*lynx-2.8.4a-r3 (08 May 2002)
+  08 May 2002; Carl Perry <edolnx@gentoo.org> lynx-2.8.4ar3.ebuild :
+
+  Fixed the alternate SRC_URI link so that it works.  Found during
+  ibiblio.org outage yesterday.
 
 *lynx-2.8.4a-r3 (21 Mar 2002)
 
