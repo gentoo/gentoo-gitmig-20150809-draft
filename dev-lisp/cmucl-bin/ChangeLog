@@ -1,9 +1,15 @@
 # ChangeLog for dev-lisp/cmucl-bin
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cmucl-bin/ChangeLog,v 1.1 2002/06/06 22:51:55 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cmucl-bin/ChangeLog,v 1.2 2002/07/13 05:34:11 george Exp $
 
 *cmucl-bin-18d (07 Jun 2002)
 
+  11 July 2002; George Shapovalov <george@gentoo.org> cmucl-bin-18d.ebuild :
+
+  few tweaks to make it work "out-of-the box"
+  suggested by Jonathan Meeks <meeks@rtg.cnchost.com>
+  bug# 4756
+  
   07 Jun 2002; Karl Trygve Kalleberg <karltk@gentoo.org> cmucl-bin-18d.ebuild files/digest-cmucl-bin-18d :
 
   From the web page:
