@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc. Distributed under the terms
 # of the GNU General Public License, v2 or later 
-# $Header: /var/cvsroot/gentoo-x86/app-doc/gentoo-web/gentoo-web-2.4.ebuild,v 1.1 2002/08/23 23:54:15 peitolm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/gentoo-web/gentoo-web-2.4.ebuild,v 1.2 2002/08/24 10:25:52 peitolm Exp $
  
 S=${WORKDIR}/gentoo-src/gentoo-web
 TEMPLATE=${S}/xsl/guide-main.xsl
@@ -55,7 +55,7 @@ src_unpack() {
 		ln -s "${GENTOO_SRCDIR}" gentoo-src || die
 	else
 		echo "GENTOO_SRCDIR $GENTOO_SRCDIR"
-		cvs -d /home/cvsroot co gentoo-src
+		cvs -d /home/cvsroot co gentoo-src/gentoo-web
 	fi
 }	
 
