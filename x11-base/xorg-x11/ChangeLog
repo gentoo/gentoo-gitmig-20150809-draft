@@ -1,6 +1,11 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.285 2005/01/21 07:45:12 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.286 2005/01/21 08:58:04 spyderous Exp $
+
+  21 Jan 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  xorg-x11-6.8.0-r4.ebuild, xorg-x11-6.8.1.901-r1.ebuild,
+  xorg-x11-6.8.1.902.ebuild:
+  Add a match for lib to RgbPath fixing so libdir != lib cases work.
 
   20 Jan 2005; Donnie Berkholz <spyderous@gentoo.org>;
   xorg-x11-6.8.0-r4.ebuild:

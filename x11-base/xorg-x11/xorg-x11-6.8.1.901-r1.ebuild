@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.1.901-r1.ebuild,v 1.6 2005/01/20 19:16:07 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.1.901-r1.ebuild,v 1.7 2005/01/21 08:58:04 spyderous Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -1407,7 +1407,9 @@ update_config_files() {
 						${IMAGE}${FILE}
 
 					# This moved in the /usr/X11R6/libdir -> /usr/libdir change
-					sed -i 's~^\([ \t]*RgbPath[ \t]\+\)"/usr/X11R6/$(get_libdir)/X11/rgb"~\1"/usr/$(get_libdir)/X11/rgb"~' \
+					sed -i \
+						-e 's~^\([ \t]*RgbPath[ \t]\+\)"/usr/X11R6/$(get_libdir)/X11/rgb"~\1"/usr/$(get_libdir)/X11/rgb"~' \
+						-e 's~^\([ \t]*RgbPath[ \t]\+\)"/usr/X11R6/lib/X11/rgb"~\1"/usr/lib/X11/rgb"~' \
 						${IMAGE}${FILE}
 
 					# Work around upgrade problem where people have
