@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-sapi.eclass,v 1.8 2004/02/11 09:11:08 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-sapi.eclass,v 1.9 2004/02/11 17:31:37 robbat2 Exp $
 # Author: Robin H. Johnson <robbat2@gentoo.org>
 
 inherit eutils flag-o-matic
@@ -442,7 +442,7 @@ php-sapi_src_compile() {
 	replace-flags "-march=k6" "-march=i586"
 
 	if [ -z "${PHP_SKIP_CONFIGURE}" ]; then
-	LIBS="${LIBS}" econf \
+	LDFLAGS="${LDFLAGS} -L/usr/lib" LIBS="${LIBS}" econf \
 		${myconf} || die "bad ./configure, please include ${MY_P}/config.log in any bug reports."
 	fi
 
