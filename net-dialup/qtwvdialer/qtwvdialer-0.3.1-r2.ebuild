@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/qtwvdialer/qtwvdialer-0.3.1-r2.ebuild,v 1.10 2003/03/24 23:36:42 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/qtwvdialer/qtwvdialer-0.3.1-r2.ebuild,v 1.11 2003/09/10 04:59:01 msterret Exp $
 
 S=${WORKDIR}/QtWvDialer-${PV}
 DESCRIPTION="QT Frontend for wvdial"
@@ -19,21 +19,21 @@ KEYWORDS="x86"
 
 src_compile() {
 
-    cd ${S}
-    export TMAKEPATH="/usr/lib/tmake/linux-g++"
-    cp configure configure.orig
-    sed -e "s:TMAKEPATH/\.\./\.\./bin/tmake:TMAKEPATH/../../../bin/tmake:" \
+	cd ${S}
+	export TMAKEPATH="/usr/lib/tmake/linux-g++"
+	cp configure configure.orig
+	sed -e "s:TMAKEPATH/\.\./\.\./bin/tmake:TMAKEPATH/../../../bin/tmake:" \
 	configure.orig > configure
-    ./configure || die
-    QTDIR=/usr/qt/2 make -e CFLAGS="$CFLAGS" || die
+	./configure || die
+	QTDIR=/usr/qt/2 make -e CFLAGS="$CFLAGS" || die
 
 }
 
 src_install () {
 
-    insinto /usr
-    dobin bin/qtwvdialer
-    dodoc AUTHORS CHANGELOG COPYING README
+	insinto /usr
+	dobin bin/qtwvdialer
+	dodoc AUTHORS CHANGELOG COPYING README
 
 }
 

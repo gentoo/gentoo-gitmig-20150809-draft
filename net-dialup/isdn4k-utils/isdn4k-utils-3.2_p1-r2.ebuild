@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/isdn4k-utils-3.2_p1-r2.ebuild,v 1.6 2003/09/07 00:09:22 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/isdn4k-utils-3.2_p1-r2.ebuild,v 1.7 2003/09/10 04:59:41 msterret Exp $
 
 IUSE="X"
 
@@ -65,7 +65,7 @@ src_compile() {
 }
 
 src_install() {
-  	cd ${S}
+	cd ${S}
 	dodir /dev /sbin /usr/bin
 	make DESTDIR=${D} install || die
 	rm -rf ${D}/usr/doc ${D}/dev
