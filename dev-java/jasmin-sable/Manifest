@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 139701486e7f6ada704220a298a6b5f2 jasmin-sable-1.2.7.ebuild 1178
-MD5 2a07bbe41e5bd3ace65d2348ef7bd971 ChangeLog 908
+MD5 11144f396b04a392e0ed37a862006f2b ChangeLog 1012
+MD5 84915dd9987b7cd5bb177b107ef6fc27 jasmin-sable-1.2.7.ebuild 1189
 MD5 9ece6aa521a5439c81ec2fc31a2e353e metadata.xml 276
 MD5 554417c81a5cb389652e1cdc42d1fa8d files/digest-jasmin-sable-1.2.7 70
 MD5 b4944c81095b6addfe5db9acb9c13dc1 files/jasmin 345
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBcVgA/rLF9B432nYRAmIGAKCnjCbv1qedEWkJSuqfFa9Jz8PajQCgq1K4
-c3hZk/TuKi+TqQ+95IXatAs=
-=jJnj
------END PGP SIGNATURE-----
