@@ -1,10 +1,13 @@
 # ChangeLog for sys-apps/ethtool
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ethtool/ChangeLog,v 1.5 2003/02/12 08:57:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ethtool/ChangeLog,v 1.6 2003/08/03 15:31:52 gmsoft Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *ethtool-1.7 (10 Nov 2002)
+
+  03 Aug 2003; Guy Martin <gmsoft@gentoo.org> ethtool-1.7.ebuild :
+  Added hppa to KEYWORDS.
 
   10 Nov 2002; Stefan Jones <cretin@gentoo.org>:
 
