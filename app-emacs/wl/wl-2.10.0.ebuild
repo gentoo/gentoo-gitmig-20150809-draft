@@ -1,14 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/wl/wl-2.10.0.ebuild,v 1.3 2003/02/13 07:10:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/wl/wl-2.10.0.ebuild,v 1.4 2003/02/28 23:19:53 vapier Exp $
 
 inherit elisp
 
-IUSE=""
-
-DESCRIPTION="Wanderlust is a mail/news reader supporting IMAP4rev1 for emacsen"
+DESCRIPTION="wanderlust is a mail/news reader supporting IMAP4rev1 for emacsen"
 HOMEPAGE="http://www.gohome.org/wl/index.html"
 SRC_URI="ftp://ftp.gohome.org/wl/stable/${P}.tar.gz"
+
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86"
@@ -20,15 +19,12 @@ DEPEND="virtual/emacs
 #        >=virtual/flim-1.14.3
 #        >=virtual/semi-1.14.3
 
-S=${WORKDIR}/${P}
-
 src_compile() {
-	make || die;
-	make info || die;
+	make || die
+	make info || die
 }
 
 src_install() {
-
 	make \
 		LISPDIR=${D}/usr/share/emacs/site-lisp \
 		PIXMAPDIR=${D}/usr/share/${PN}/icons \
@@ -42,7 +38,7 @@ src_install() {
 	doins samples/*
 
 	doinfo doc/wl-ja.info doc/wl.info
-	dodoc BUGS* COPYING ChangeLog INSTALL* README*
+	dodoc BUGS* ChangeLog INSTALL* README*
 }
 
 pkg_postinst() {
