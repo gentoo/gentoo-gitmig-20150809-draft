@@ -1,0 +1,18 @@
+Index: audiodeng_buildfilters.cpp
+===================================================================
+RCS file: /cvsroot/avidemux/avidemux/avidemux/ADM_audiofilter/audiodeng_buildfilters.cpp,v
+retrieving revision 1.18
+diff -u -r1.18 audiodeng_buildfilters.cpp
+--- audiodeng_buildfilters.cpp	5 Nov 2004 19:36:10 -0000	1.18
++++ audiodeng_buildfilters.cpp	7 Nov 2004 10:07:00 -0000
+@@ -70,8 +70,8 @@
+ #ifdef HAVE_LIBMP3LAME
+ 		{"lame","Lame", AUDIOENC_MP3},
+ #endif
+-#ifdef USE_AAC
+-		{"aac","FAAC", AUDIOENC_AAC},
++#ifdef USE_FAAC
++		{"aac","FAAC", AUDIOENC_FAAC},
+ #endif
+ #ifdef USE_VORBIS
+ 		{"vorbis","Vorbis", AUDIOENC_VORBIS},
