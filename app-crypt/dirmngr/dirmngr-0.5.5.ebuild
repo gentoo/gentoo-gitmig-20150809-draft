@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/dirmngr/dirmngr-0.5.5.ebuild,v 1.1 2004/08/15 03:24:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/dirmngr/dirmngr-0.5.5.ebuild,v 1.2 2004/08/15 23:51:32 mr_bones_ Exp $
 
 DESCRIPTION="DirMngr is a daemon to handle CRL and certificate requests for GnuPG"
 HOMEPAGE="http://www.gnupg.org/(en)/download/index.html#dirmngr"
@@ -19,6 +19,6 @@ DEPEND=">=net-nds/openldap-2.1.26
 RDEPEND=""
 
 src_install() {
-    make DESTDIR=${D} install || die
+	make DESTDIR=${D} install || die
 	dodoc AUTHORS ChangeLog NEWS README README-alpha THANKS TODO
 }
