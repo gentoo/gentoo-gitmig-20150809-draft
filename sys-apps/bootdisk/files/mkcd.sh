@@ -11,11 +11,21 @@ fi
 eval `import-settings PORTDIR`
 export BOOTIMG=${ROOT}/bootcd
 export INITDISK=${ROOT}/initdisk
+export PORTDIR=$PORTDIR/gentoo-x86
 
+if [ -d ${BOOTIMG} ]
+then
+  rm -r ${BOOTIMG}
+fi
+
+if [ -d ${INITDISK} ]
+then
+  rm -r ${INITDISK}
+fi
 
 if [ ! -d "${PORTDIR}/sys-apps/bootdisk" ]
 then
-  echo "Sorry no bootdisk in the cvs tree !"
+  echo "Sorry no bootdisk in the cvs tree $PORTDIR !"
   exit 1
 fi
 
@@ -75,7 +85,8 @@ touch ld.so.conf
 
 echo "Creating linuxrc"
 cd ${BOOTIMG}/initrd
-gcc -Os -static -o linuxrc ${PORTDIR}/sys-apps/bootdisk/files/linuxrc.c
+#gcc -Os -static -o linuxrc ${PORTDIR}/sys-apps/bootdisk/files/linuxrc.c
+cp ${PORTDIR}/sys-apps/bootdisk/files/linuxrc .
 strip linuxrc
 echo "Creating other dirs for initrd"
 cd ${BOOTIMG}/initrd/var
@@ -111,6 +122,7 @@ for i in console fd0 fd0u1440 hd[abcd]* kmem loop[012] \
 do
     cp -af /dev/$i .
 done
+
 /dev/MAKEDEV hde
 /dev/MAKEDEV hdf
 /dev/MAKEDEV hdg

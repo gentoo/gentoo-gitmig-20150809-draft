@@ -27,10 +27,6 @@ char readbuf[80];
 		echo 0x902>/proc/sys/kernel/real-root-dev
 	umount /proc
 */
-/* achim notes (14 Dec 2000)
-	replaced getchar with fgetc
-	modifyed mount to work with diet-libc
-*/	
 int set_loop(const char *device, const char *file, int offset, int loopro)
 {
 	struct loop_info loopinfo;
@@ -108,35 +104,34 @@ int writefile(const char *myfile, char *mystring) {
 
 
 int getspace(char *dev) {
-	char mychar,dummy;
+	char mychar;
 	printf("\n1) Try %s again\n2) Continue looking\n\n%s> %s",dev,color,off);
 	mychar=fgetc(stdin);
-	dummy=fgetc(stdin); // return
 	if (mychar=='1')
 		return 1;
 	return 0;
 }
 int main(void) {
-	char *drives[]={ "/dev/hdc","/dev/hdd","/dev/hdb","/dev/hda","/dev/scd0","/dev/scd1"};
+	char *drives[]={ "/dev/hdc","/dev/hdd","/dev/hdb2","/dev/hda","/dev/scd0","/dev/scd1"};
 	int i,mresult;
 	char mychar;
 	FILE *distfile;	
-	printf("\n\0337\033[01;23r\033[24;01f\033[01;44;32m%s\033[0m\0338\033[A",blurb); 
+//	printf("\n\0337\033[01;23r\033[24;01f\033[01;44;32m%s\033[0m\0338\033[A",blurb); 
 	//printf("\nRemounting root fs read-write...\n");
 	//should be rw anyway but it's not?
 	//domount("/dev/ram0","/","ext2",MS_MGC_VAL|MS_REMOUNT,NULL);
 	printf("%sLet's begin...%s\n\n",color,off);
-	printf("%sMounting /proc...%s\n",color,off);
+//	printf("%sMounting /proc...%s\n",color,off);
 	//mount /proc filesystem
-	domount("proc","/proc","proc",MS_MGC_VAL|MS_NOEXEC,NULL);
+//	domount("proc","/proc","proc",MS_MGC_VAL|MS_NOEXEC,NULL);
 	//turn off kernel logging to console
-	writefile("/proc/sys/kernel/printk","0 0 0 0");
+//	writefile("/proc/sys/kernel/printk","0 0 0 0");
 	
 	i=0;
 	while ( 1 ) {
 		printf("Trying %s...",drives[i]);
 		sleep(1);
-		mresult=domount(drives[i],"/distcd","iso9660",MS_MGC_VAL|MS_RDONLY,NULL);
+		mresult=domount(drives[i],"/distcd","reiserfs",MS_MGC_VAL|MS_RDONLY,NULL);
 		if (mresult==2) {
 			//a CD of some kind was found
 			printf("\n%sCD found...%s\n",color,off);
@@ -172,15 +167,15 @@ int main(void) {
 	}
 
 	printf("%sSuccess!%s\n",color,off);		
-	mount("/dev/loop0","/","ext2",0,MS_MGC_VAL|MS_RDONLY,0);
+	mount("/dev/loop0","/mnt/cdrom","ext2",0,MS_MGC_VAL|MS_RDONLY,0);
 
 	//set real root device to /dev/loop0 (major 7, minor 0)
-	writefile("/proc/sys/kernel/real-root-dev","0x700");
+//	writefile("/proc/sys/kernel/real-root-dev","0x700");
 	
 	//umount /proc
-	umount("proc");
+//	umount("proc");
 
 	//turn bottom bar off
-	printf("\0337\033[r\033[24;01f\033[K\0338");
+//	printf("\0337\033[r\033[24;01f\033[K\0338");
 }
 
