@@ -1,0 +1,10 @@
+# ChangeLog for sys-fs/cryptsetup
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/ChangeLog,v 1.1 2004/07/21 13:18:55 tigger Exp $
+
+*cryptsetup-0.1 (21 Jul 2004)
+
+  21 Jul 2004; Rob Holland <tigger@gentoo.org> +cryptsetup-0.1.ebuild:
+  Initial version. Closes bug #44079. Thanks to ripple@ripple.be and
+  ben@disciplina.net for submitting ebuilds for it
+
