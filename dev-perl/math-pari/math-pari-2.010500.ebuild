@@ -1,10 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/math-pari/math-pari-2.010500.ebuild,v 1.2 2003/06/23 15:31:21 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/math-pari/math-pari-2.010500.ebuild,v 1.3 2003/06/24 10:29:36 mcummings Exp $
 
 inherit perl-module
 
-MY_P=Math-Pari-${PV}
+MY_P="Math-Pari-${PV}"
 S=${WORKDIR}/${MY_P}
 DESCRIPTION="Perl interface to PARI"
 PARI_VERSION=`best_version app-sci/pari`
