@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlsdl/ocamlsdl-0.6.3.ebuild,v 1.3 2004/08/16 03:25:04 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlsdl/ocamlsdl-0.6.3.ebuild,v 1.4 2004/08/25 21:05:32 mattam Exp $
 
 DESCRIPTION="OCaml SDL Bindings"
 
@@ -9,7 +9,7 @@ SRC_URI="mirror://sourceforge/ocamlsdl/${P}.tar.bz2"
 LICENSE="LGPL-2"
 
 SLOT="0"
-KEYWORDS="~x86 ~sparc"
+KEYWORDS="x86 sparc ppc"
 IUSE=""
 
 DEPEND=">=dev-lang/ocaml-3.04
