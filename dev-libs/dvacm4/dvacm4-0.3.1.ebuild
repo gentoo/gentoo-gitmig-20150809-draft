@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvacm4/dvacm4-0.3.4.ebuild,v 1.4 2004/05/31 02:16:05 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvacm4/dvacm4-0.3.1.ebuild,v 1.7 2004/05/31 02:16:05 pvdabeel Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="dvacm4 provides autoconf macros used by the dv* C++ utilities"
