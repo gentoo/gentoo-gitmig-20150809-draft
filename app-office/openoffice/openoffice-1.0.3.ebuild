@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.0.3.ebuild,v 1.5 2003/04/10 22:27:19 sethbc Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.0.3.ebuild,v 1.6 2003/04/11 12:57:29 sethbc Exp $
 
 # IMPORTANT:  This is extremely alpha!!!
 
@@ -336,8 +336,8 @@ src_unpack() {
 	done
 
 	epatch ${FILESDIR}/${PV}/${PN}-errno.patch
-	einfo "Lets patch to get AA fonts..."
-	epatch ${FILESDIR}/${PV}/${PN}-1.0.2-default-fonts.patch
+#	einfo "Lets patch to get AA fonts..."
+#	epatch ${FILESDIR}/${PV}/${PN}-1.0.2-default-fonts.patch
 	epatch ${FILESDIR}/${PV}/${PN}-1.0.2-ft-antialias-advice.patch
 
 }
