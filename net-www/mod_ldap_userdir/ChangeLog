@@ -1,6 +1,10 @@
 # ChangeLog for net-www/mod_ldap_userdir
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_ldap_userdir/ChangeLog,v 1.6 2005/01/09 00:32:44 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_ldap_userdir/ChangeLog,v 1.7 2005/01/13 04:53:25 vericgar Exp $
+
+  12 Jan 2005; Michael Stewart <vericgar@gentoo.org>
+  mod_ldap_userdir-1.1.4-r1.ebuild:
+  Fixed 1.1.4-r1 to use apache-module.eclass correctly
 
 *mod_ldap_userdir-1.1.4-r1 (09 Jan 2005)
 
