@@ -1,6 +1,9 @@
 # ChangeLog for app-office/openoffice
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.78 2004/06/29 17:46:45 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.79 2004/08/20 20:27:37 suka Exp $
+
+  20 Aug 2004; suka@gentoo.org openoffice-1.1.2.ebuild:
+  fixing some sandbox issues and marking stable on x86, at last
 
   29 Jun 2004; Aron Griffis <agriffis@gentoo.org> openoffice-1.0.3-r2.ebuild,
   openoffice-1.1.0-r4.ebuild, openoffice-1.1.0-r5.ebuild,

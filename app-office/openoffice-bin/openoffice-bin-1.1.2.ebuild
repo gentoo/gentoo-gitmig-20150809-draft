@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-1.1.2.ebuild,v 1.4 2004/07/01 02:38:40 augustus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-1.1.2.ebuild,v 1.5 2004/08/20 20:30:20 suka Exp $
 
 # NOTE:  There are two big issues that should be addressed.
 #
@@ -21,7 +21,7 @@ SRC_URI="x86? ( mirror://openoffice/stable/${PV}/OOo_${PV}_LinuxIntel_install.ta
 
 LICENSE="LGPL-2 | SISSL-1.1"
 SLOT="0"
-KEYWORDS="~x86 ~amd64 -sparc"
+KEYWORDS="x86 ~amd64 -sparc"
 IUSE="kde gnome"
 
 DEPEND="sys-apps/findutils
@@ -49,6 +49,8 @@ src_install() {
 	addpredict "/pspfontcache"
 	addpredict "/usr/bin/soffice"
 	addpredict "/root/.gconfd"
+	addpredict "/opt/OpenOffice.org/foo.tmp"
+	addpredict "/opt/OpenOffice.org/delme"
 
 	# Sandbox issues; bug 8063
 	addpredict "/dev/dri"
