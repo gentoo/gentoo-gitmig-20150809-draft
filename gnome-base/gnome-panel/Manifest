@@ -1,9 +1,10 @@
+MD5 8a104fa86e45aa890ffd920c12131010 gnome-panel-2.8.0.ebuild 1614
 MD5 245cef6139457c93cc2a98a3fd32d54a gnome-panel-2.6.1.ebuild 1681
 MD5 7e8f64eb0656d38c2ab32e3257cd3eeb gnome-panel-2.4.2.ebuild 1735
 MD5 6580f67bfb2a21a40496271fc15f3484 gnome-panel-1.4.2-r2.ebuild 2010
 MD5 c1cc3a4aeb5177c42bafb6f920fa4b15 gnome-panel-1.4.1.ebuild 1756
 MD5 86d0d5348f2b5b72e6b032fc8a7b411b gnome-panel-2.6.0.ebuild 1674
-MD5 c5af9d1594e9ed24ab7964670da78855 ChangeLog 12798
+MD5 9a0d1a54f7b46ab4e400462fc745112f ChangeLog 12956
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 e536e267b539514365ec9d511a9446fe gnome-panel-2.6.2.ebuild 1550
 MD5 1b4289df33228cb2b0a0a97db36e781f files/gnome-panel-2.6-parallel_install.patch 946
@@ -16,3 +17,4 @@ MD5 7a56d7cd6b8d36c12f13018f16a7d1a5 files/digest-gnome-panel-2.4.2 71
 MD5 3f16b84c6dcb22313794b6f82b9f7a29 files/digest-gnome-panel-2.6.0 71
 MD5 a97c633eb450778f2ef65ae645294ce9 files/digest-gnome-panel-2.6.1 71
 MD5 afd54e022092a94648da54cd0c646241 files/digest-gnome-panel-2.6.2 71
+MD5 974047f04ed92ebd67a850f2145a41d4 files/digest-gnome-panel-2.8.0 71
