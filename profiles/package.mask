@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2933 2004/06/11 19:09:21 rizzo Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2934 2004/06/15 06:30:51 phosphan Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -104,10 +104,6 @@ net-misc/sitecopy
 # restrictions, I have masked these.
 =media-video/helixplayer-bin-0.3.0.71
 =media-video/helixplayer-bin-0.3.0.124
-
-# <phosphan@gentoo.org> (13 May 2004)
-# the change to the last version was no good idea, see bug #50856
-=media-gfx/sane-backends-1.0.14-r3
 
 # <foser@gentoo.org> (12 May 2004)
 # masking out for now, because of their unstable nature
