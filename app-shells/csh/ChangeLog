@@ -1,6 +1,18 @@
 # ChangeLog for app-shells/csh
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/csh/ChangeLog,v 1.3 2003/06/04 22:58:27 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/csh/ChangeLog,v 1.4 2003/06/12 20:34:31 taviso Exp $
+
+*csh-1.29-r1 (12 Jun 2003)
+
+  12 Jun 2003; Tavis Ormandy <taviso@gentoo.org> csh-1.29-r1.ebuild:
+  no longer uses cvs.eclass to fetch sources (#22678).
+  
+  no longer dual license, generate list of signal names from `kill -l` output.
+  
+  informational messages tweak.
+  
+  produced binary will have better `kill` builtin (no more SIGJUNK fillers),
+  so version bump.
 
   04 Jun 2003; Tavis Ormandy <taviso@gentoo.org> csh-1.29.ebuild:
   inherit eclasses _after_ my own dependencies, or they get clobbered. 
