@@ -1,6 +1,6 @@
-# Copyright 1999-2000 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/battstat/battstat-2.0.11.ebuild,v 1.2 2002/07/24 06:19:23 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/battstat/battstat-2.0.11.ebuild,v 1.3 2002/08/01 11:59:02 seemant Exp $
 
 S=${WORKDIR}/battstat_applet-${PV}
 DESCRIPTION="Battstat Applet, GNOME battery status applet."

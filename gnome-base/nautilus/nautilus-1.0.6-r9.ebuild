@@ -1,7 +1,7 @@
-# Copyright 1999-2000 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Updated by Sebastian Werner <sebastian@werner-productions.de>
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-1.0.6-r9.ebuild,v 1.7 2002/07/27 21:49:44 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-1.0.6-r9.ebuild,v 1.8 2002/08/01 11:59:02 seemant Exp $
 
 
 S=${WORKDIR}/${P}
