@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <george@gentoo.org> (03 Feb 2004)
+# blas dependants, will have to be unmasked after virtual is finalized and blas is unmasked
+=app-sci/xfoil-6.94-r1
+
 # <george@gentoo.org> (original mask 27 Oct 2003; renamed 01 Feb 2004)
 # masking work in progress (multiple blas related packages will have to be unmasked
 # sinchronously)
