@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/madman/madman-0.93.ebuild,v 1.5 2004/09/03 10:00:28 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/madman/madman-0.93.ebuild,v 1.6 2004/09/15 19:48:58 eradicator Exp $
 
 IUSE=""
 
@@ -18,7 +18,7 @@ KEYWORDS="x86 -amd64 sparc ~ppc"
 DEPEND=">=x11-libs/qt-3.1.0-r3
 	>=media-libs/libvorbis-1.0
 	>=media-sound/xmms-1.2.7-r20
-	>=media-libs/id3lib-3.8.3"
+	>=media-libs/libid3tag-0.15.1b"
 
 src_unpack() {
 	unpack ${A}

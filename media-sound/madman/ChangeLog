@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/madman
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/madman/ChangeLog,v 1.9 2004/09/03 10:00:28 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/madman/ChangeLog,v 1.10 2004/09/15 19:48:58 eradicator Exp $
+
+  15 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org> madman-0.93.ebuild:
+  Fixed dependency to require libid3tag.  Closes bug #63158.
 
   03 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org> madman-0.93.ebuild:
   Stable sparc, x86.
