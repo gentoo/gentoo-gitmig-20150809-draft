@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dcron/dcron-2.9-r2.ebuild,v 1.18 2004/10/28 15:47:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dcron/dcron-2.9-r2.ebuild,v 1.19 2004/11/08 06:48:55 vapier Exp $
 
 inherit eutils toolchain-funcs
 
@@ -15,7 +15,8 @@ KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sparc x86"
 IUSE=""
 
 DEPEND="virtual/libc
-	>=sys-apps/sed-4"
+	>=sys-apps/sed-4
+	>=sys-apps/portage-2.0.51"
 RDEPEND="!virtual/cron
 	>=sys-apps/cronbase-0.2.1-r3
 	virtual/mta"
@@ -59,7 +60,7 @@ src_install() {
 	dodoc CHANGELOG README ${FILESDIR}/crontab
 	doman crontab.1 crond.8
 
-	exeinto /etc/init.d ; doexe ${FILESDIR}/dcron
+	doinitd ${FILESDIR}/dcron
 
 	insopts -o root -g root -m 0644
 	insinto /etc
