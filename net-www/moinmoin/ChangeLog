@@ -1,6 +1,9 @@
 # ChangeLog for net-www/moinmoin
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/moinmoin/ChangeLog,v 1.14 2004/07/08 22:27:16 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/moinmoin/ChangeLog,v 1.15 2004/07/10 04:20:47 weeve Exp $
+
+  09 Jul 2004; Jason Wever <weeve@gentoo.org> moinmoin-1.2.2.ebuild:
+  Stable on sparc wrt bug #53126.
 
 *moinmoin-1.2.2 (08 Jul 2004)
 
