@@ -1,7 +1,17 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 3eced3506533b830a8039bf1e8d419ca ChangeLog 3176
-MD5 bca7fa9a26de4d4e70e5646763fee256 allegro-4.0.3.ebuild 2043
-MD5 d28cc0cff87b5e713f0577c02224cf8a allegro-4.1.11.ebuild 2076
-MD5 850cc68f12ded7669114a2a41ba99561 allegro-4.1.12.ebuild 2093
+MD5 40d16f65c304b2229c7dcb98ba32b234 allegro-4.0.3.ebuild 2036
+MD5 f11475b1a5d32dabc277fda8599b3e05 allegro-4.1.11.ebuild 2064
+MD5 a0fa3ee16ccdb1fac4825dec76e649d3 allegro-4.1.12.ebuild 2082
 MD5 9f28e5d796c572eb801998504cf84fbb files/digest-allegro-4.0.3 66
 MD5 133ef15fde8b5a3105ef1953ed385d6d files/digest-allegro-4.1.11 67
 MD5 c65bb76fe43b79e784e9566c6e3c1f3c files/digest-allegro-4.1.12 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFAv8oZHTu7gpaalycRAllJAKCriT52Isl7vAFMwb0dI5qsHo2fDQCfRHu9
+eachX4JuX95Zzd9QQfTZdD4=
+=qY6l
+-----END PGP SIGNATURE-----
