@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r6.ebuild,v 1.19 2004/04/08 16:27:21 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r6.ebuild,v 1.20 2004/04/12 05:30:24 spyderous Exp $
 
 # TODO
 # 14 Mar. 2004 <spyderous@gentoo.org>
@@ -220,6 +220,12 @@ src_unpack() {
 
 	# Remove bum encoding
 	rm -f ${WORKDIR}/usr/share/fonts/encodings/urdunaqsh-0.enc
+
+	cd ${S}
+	bzcat ${DISTDIR}/XFree86-compose.dir-0.1.bz2 > nls/compose.dir
+	bzcat ${DISTDIR}/XFree86-locale.alias.bz2 > nls/locale.alias
+	bzcat ${DISTDIR}/XFree86-locale.dir.bz2 > nls/locale.dir
+	bzcat ${DISTDIR}/XFree86-en_US.UTF-8.old.bz2 > nls/Compose/en_US.UTF-8
 
 	# Update the Savage Driver
 	# savage driver 1.1.27t is a .zip and contains a savage directory
@@ -566,10 +572,6 @@ src_unpack() {
 	eend 0
 
 	cd ${S}
-	bzcat ${DISTDIR}/XFree86-compose.dir-0.1.bz2 > nls/compose.dir
-	bzcat ${DISTDIR}/XFree86-locale.alias.bz2 > nls/locale.alias
-	bzcat ${DISTDIR}/XFree86-locale.dir.bz2 > nls/locale.dir
-	bzcat ${DISTDIR}/XFree86-en_US.UTF-8.old.bz2 > nls/Compose/en_US.UTF-8
 
 	if use doc
 	then
