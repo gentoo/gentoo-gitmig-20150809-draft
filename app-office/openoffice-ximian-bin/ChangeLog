@@ -1,6 +1,13 @@
 # ChangeLog for app-office/openoffice-ximian-bin
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian-bin/ChangeLog,v 1.5 2004/07/17 21:34:08 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian-bin/ChangeLog,v 1.6 2004/08/01 14:13:41 suka Exp $
+
+*openoffice-ximian-bin-1.1.53 (01 Aug 2004)
+
+  01 Aug 2004; suka@gentoo.org -files/1.1.1/DicOOo.sxw,
+  openoffice-ximian-bin-1.1.52.ebuild, +openoffice-ximian-bin-1.1.53.ebuild:
+  A - very - late update to 1.1.53, also some cleanup to keep the portage dir
+  smaller
 
   17 Jul 2004; suka@gentoo.org openoffice-ximian-bin-1.1.52.ebuild:
   fix for stupid sandbox troubles
