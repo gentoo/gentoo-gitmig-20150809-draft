@@ -1,0 +1,10 @@
+# ChangeLog for <CATEGORY>/<PACKAGE_NAME>
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/grun/ChangeLog,v 1.1 2002/04/19 10:07:31 mkennedy Exp $
+
+*grun-0.9.2 (19 Apr 2002)
+
+  19 Apr 2002; Matthew Kennedy grun-0.9.2.ebuild, ChangeLog,
+  files/digest-grun-0.9.2, files/grun-0.9.2-gentoo.diff :
+
+  New ebuild.
