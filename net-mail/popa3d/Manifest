@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 502f6b64dad9109c858b94bba710445e popa3d-0.6.4.ebuild 4305
-MD5 6fab7e157f0c6ff2e931648bf78d17a9 ChangeLog 2173
-MD5 35d2ea8521e51213f72ef32efbac30d4 popa3d-0.6.4.1.ebuild 4306
+MD5 2c820aa61321b3fcd8f08eeb85ad3113 ChangeLog 2322
 MD5 dbb40cd6b37794fccc9251f434aa99ce metadata.xml 425
 MD5 ea3321c609c3c0452d40ea3984d26004 popa3d-0.6.3.ebuild 4285
-MD5 6e6b9368bd2cafab8d90bde76f5011b7 files/pam 136
+MD5 502f6b64dad9109c858b94bba710445e popa3d-0.6.4.ebuild 4305
+MD5 b976da7d114b8a409206b6850d72f036 popa3d-0.6.4.1.ebuild 4311
 MD5 a39dff3e063ffd11e322158dc3b18523 files/digest-popa3d-0.6.3 201
-MD5 309ea38c54e2c8653d224cbf72036dd6 files/digest-popa3d-0.6.4.1 203
-MD5 d7e80b35c6a318d497f9fc4e538e0429 files/popa3d-initrc 479
 MD5 2e722f7560b3b3fc07a8853ec869b8c2 files/digest-popa3d-0.6.4 201
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
-
-iD8DBQFBPLOwLLFUmVNQ7rkRAvAoAKCvpPg/RSj7mFD9fvJGiK9D/unQPQCgpywD
-NSCPikZ+LyFIGVNi9YC5GFc=
-=PbsB
------END PGP SIGNATURE-----
+MD5 6e6b9368bd2cafab8d90bde76f5011b7 files/pam 136
+MD5 d7e80b35c6a318d497f9fc4e538e0429 files/popa3d-initrc 479
+MD5 309ea38c54e2c8653d224cbf72036dd6 files/digest-popa3d-0.6.4.1 203
