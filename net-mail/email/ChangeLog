@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/email
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/email/ChangeLog,v 1.6 2005/03/30 14:26:47 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/email/ChangeLog,v 1.7 2005/04/06 14:02:55 ticho Exp $
+
+*email-2.3.3 (06 Apr 2005)
+
+  06 Apr 2005; Andrej Kacian <ticho@gentoo.org> +email-2.3.3.ebuild:
+  Version bump.
 
   30 Mar 2005; Andrej Kacian <ticho@gentoo.org> email-2.3.2.ebuild:
   Stable on x86. Bug #87257.
