@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/dcgui-qt
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/dcgui-qt/ChangeLog,v 1.20 2004/08/09 03:42:39 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/dcgui-qt/ChangeLog,v 1.21 2004/08/14 00:29:35 squinky86 Exp $
+
+  13 Aug 2004; Jon Hood <squinky86@gentoo.org> dcgui-qt-0.3.2.ebuild:
+  Apply fix from bug #60174 from Peter <preach@home.se>.
 
   08 Aug 2004; Jon Hood <squinky86@gentoo.org> metadata.xml,
   -dcgui-qt-0.2.22.ebuild, -dcgui-qt-0.3.1.ebuild, dcgui-qt-0.3.2.ebuild:
