@@ -1,9 +1,8 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/rep-gtk/rep-gtk-0.13a.ebuild,v 1.2 2000/09/15 20:08:49 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/rep-gtk/rep-gtk-0.14.ebuild,v 1.1 2000/09/21 17:36:57 achim Exp $
 
-P=rep-gtk-0.13a
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
 DESCRIPTION="GTK/GDK bindings for the librep Lisp environment"
