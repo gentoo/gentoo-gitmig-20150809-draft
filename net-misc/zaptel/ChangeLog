@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/zaptel
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/ChangeLog,v 1.24 2005/01/27 19:40:38 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/ChangeLog,v 1.25 2005/01/27 20:05:47 stkn Exp $
+
+  27 Jan 2005; Stefan Knoblich <stkn@gentoo.org> -files/zaptel-modulesd.patch,
+  -zaptel-0.7.0.ebuild, -zaptel-0.8.1.ebuild:
+  removing old versions
 
   27 Jan 2005; Stefan Knoblich <stkn@gentoo.org> zaptel-1.0.0.ebuild:
   updated to use kernel-kmod
