@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/2004.1/ppc/use.mask,v 1.4 2004/11/05 02:59:25 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/2004.1/ppc/use.mask,v 1.5 2004/11/06 17:55:03 pebenito Exp $
 
 # disallow posix acl since this is SELinux
 acl
@@ -10,6 +10,7 @@ acl
 afs
 3dfx
 3dnow
+3dnowex
 avi
 icc
 icc-pgo
