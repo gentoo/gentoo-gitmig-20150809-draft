@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libhttpd-persistent
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libhttpd-persistent/ChangeLog,v 1.4 2004/06/24 23:12:33 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libhttpd-persistent/ChangeLog,v 1.5 2004/07/04 10:08:04 eradicator Exp $
+
+  04 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  libhttpd-persistent-1.3p-r6.ebuild:
+  ~sparc and added || dies
 
   29 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org>
   libhttpd-persistent-1.3p-r6.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libhttpd-persistent/libhttpd-persistent-1.3p-r6.ebuild,v 1.4 2004/06/24 23:12:33 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libhttpd-persistent/libhttpd-persistent-1.3p-r6.ebuild,v 1.5 2004/07/04 10:08:04 eradicator Exp $
 
 MY_P="libhttpd-1.3p-f"
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.deleet.de/projekte/daap/daapd/"
 SRC_URI="http://www.deleet.de/projekte/daap/daapd/${MY_P}.tgz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="x86 ~ppc ~sparc"
 IUSE=""
 DEPEND=""
 
@@ -26,9 +26,9 @@ src_compile() {
 	emake || die
 
 	cd ${S}/src
-	ranlib libhttpd-persistent.a
+	ranlib libhttpd-persistent.a || die
 	echo g++ ${CFLAGS} -D_OS_UNIX -fPIC protocol.c api.c version.c ip_acl.c select.c -o libhttpd-persistent.so -Wl,-shared,-soname,libhttpd-persistent.so
-	g++ ${CFLAGS} -D_OS_UNIX -fPIC protocol.c api.c version.c ip_acl.c select.c -o libhttpd-persistent.so -Wl,-shared,-soname,libhttpd-persistent.so
+	g++ ${CFLAGS} -D_OS_UNIX -fPIC protocol.c api.c version.c ip_acl.c select.c -o libhttpd-persistent.so -Wl,-shared,-soname,libhttpd-persistent.so || die
 }
 
 src_install() {
