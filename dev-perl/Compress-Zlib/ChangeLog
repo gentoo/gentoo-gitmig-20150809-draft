@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Compress-Zlib
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Compress-Zlib/ChangeLog,v 1.13 2004/01/19 20:59:02 tuxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Compress-Zlib/ChangeLog,v 1.14 2004/01/19 21:44:46 esammer Exp $
+
+  19 Jan 2004; Eric Sammer <esammer@gentoo.org> :
+  Added ~hppa and ~arm. Updated headers. Fixing a depend.BAD trail.
 
   19 Jan 2004; <tuxus@gentoo.org> Compress-Zlib-1.22.ebuild:
   Added ~mips to KEYWORDS.
