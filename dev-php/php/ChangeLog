@@ -1,7 +1,15 @@
 # ChangeLog for dev-php/php
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php/ChangeLog,v 1.47 2003/05/31 22:26:32 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php/ChangeLog,v 1.48 2003/05/31 22:32:02 robbat2 Exp $
  
+*php-4.3.2 (31 May 2003)
+
+  26 May 2003; Robin H. Johnson <robbat2@gentoo.org> php-4.3.2.ebuild,
+  files/digest-php-4.3.2:
+  Version bump.
+  BerkDB is disabled due to DB4 issues and changes in PHP 4.3.2 presently.
+  If you need BerkDB support, please do NOT upgrade at this time.
+
 *php-4.3.1-r2 (22 Apr 2003)
 
   26 May 2003; Robin H. Johnson <robbat2@gentoo.org> php-4.3.1-r2.ebuild:
