@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/yammi
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/yammi/ChangeLog,v 1.2 2003/05/14 09:00:45 jje Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/yammi/ChangeLog,v 1.3 2003/05/20 07:08:25 jje Exp $
+
+*yammi-0.8.2 (20 May 2003)
+
+  20 May 2003; jje <jje@gentoo.org> yammi-0.7.ebuild, yammi-0.7.ebuild,
+  yammi-0.8.1.ebuild, yammi-0.8.1.ebuild, yammi-0.8.2.ebuild:
+  Version bump. Clean out old versions.
+  
+  Submitted by: Arno Ekkes <arno.ekkes@xs4all.nl>
 
 *yammi-0.8.1 (14 May 2003)
 
