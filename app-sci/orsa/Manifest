@@ -1,3 +1,6 @@
-MD5 af24859547262dfa8753d1803ad1595e ChangeLog 494
 MD5 14bd275cc9173160adaac8ae0c525c38 orsa-0.3.0_rc1.ebuild 1219
+MD5 2a114b9adabe6f79ab36eff5b4efefff orsa-0.3.0_rc3.ebuild 854
+MD5 7f0f5930f7f9921b4d285a52b374a602 ChangeLog 793
+MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
 MD5 4ac11cc803cd2a23ab9da8490d841e7c files/digest-orsa-0.3.0_rc1 66
+MD5 9a419b528b36565c111576fcc7dfaa7c files/digest-orsa-0.3.0_rc3 66
