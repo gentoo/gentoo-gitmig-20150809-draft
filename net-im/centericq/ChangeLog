@@ -1,6 +1,9 @@
 # ChangeLog for net-im/centericq
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-im/centericq/ChangeLog,v 1.16 2003/02/04 15:55:26 nall Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/centericq/ChangeLog,v 1.17 2003/02/07 20:50:36 rphillips Exp $
+
+*centericq-4.9.2 (07 Feb 2003) Ryan Phillips <rphillips@gentoo.org> :
+  New version
 
 *centericq-4.9.0 (26 Dec 2002) Ryan Phillips <rphillips@gentoo.org> :
 
