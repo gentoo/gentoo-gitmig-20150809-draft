@@ -1,6 +1,10 @@
 # ChangeLog for net-ftp/pure-ftpd
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/ChangeLog,v 1.33 2004/07/01 22:16:46 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/ChangeLog,v 1.34 2004/07/04 17:53:12 hansmi Exp $
+
+  04 Jul 2004; Michael Hanselmann <hansmi@gentoo.org>
+  pure-ftpd-1.0.18-r1.ebuild:
+  Stable on ppc.
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   pure-ftpd-1.0.16b.ebuild, pure-ftpd-1.0.16c.ebuild,
