@@ -36,31 +36,8 @@
 	* scripttempl/elf.sc (.eh_frame, .gcc_except_table): Move into text
 	segment if all input sections are readonly.
 
-diff -Naurp binutils-2.13.90.0.18.orig/ld/emultempl/elf32.em binutils-2.13.90.0.18/ld/emultempl/elf32.em
---- binutils-2.13.90.0.18.orig/ld/emultempl/elf32.em	2003-01-21 13:21:34.000000000 -0500
-+++ binutils-2.13.90.0.18/ld/emultempl/elf32.em	2003-01-27 10:12:32.000000000 -0500
-@@ -1051,7 +1051,8 @@ output_rel_find (sec)
-   for (u = lang_output_section_statement.head; u; u = lookup->next)
-     {
-       lookup = &u->output_section_statement;
--      if (strncmp (".rel", lookup->name, 4) == 0)
-+      if (lookup->constraint != -1
-+	  && strncmp (".rel", lookup->name, 4) == 0)
- 	{
- 	  /* Don't place after .rel.plt as doing so results in wrong
- 	     dynamic tags.  Also, place allocated reloc sections before
-@@ -1291,7 +1292,7 @@ gld${EMULATION_NAME}_place_orphan (file,
- 					    (bfd_vma) 0,
- 					    (etree_type *) NULL,
- 					    (etree_type *) NULL,
--					    load_base);
-+					    load_base, 0);
- 
-   lang_add_section (&os->children, s, os, file);
- 
-diff -Naurp binutils-2.13.90.0.18.orig/ld/emultempl/mmo.em binutils-2.13.90.0.18/ld/emultempl/mmo.em
---- binutils-2.13.90.0.18.orig/ld/emultempl/mmo.em	2002-12-16 15:22:53.000000000 -0500
-+++ binutils-2.13.90.0.18/ld/emultempl/mmo.em	2003-01-27 10:10:42.000000000 -0500
+--- ld/emultempl/mmo.em.jj	Mon Dec 16 15:22:53 2002
++++ ld/emultempl/mmo.em	Thu Feb  6 08:33:16 2003
 @@ -56,6 +56,8 @@ output_prev_sec_find (os)
         u = lookup->next)
      {
@@ -79,10 +56,9 @@ diff -Naurp binutils-2.13.90.0.18.orig/ld/emultempl/mmo.em binutils-2.13.90.0.18
  
    lang_add_section (&os->children, s, os, file);
  
-diff -Naurp binutils-2.13.90.0.18.orig/ld/emultempl/pe.em binutils-2.13.90.0.18/ld/emultempl/pe.em
---- binutils-2.13.90.0.18.orig/ld/emultempl/pe.em	2003-01-21 13:21:34.000000000 -0500
-+++ binutils-2.13.90.0.18/ld/emultempl/pe.em	2003-01-27 10:10:42.000000000 -0500
-@@ -1507,6 +1507,8 @@ output_prev_sec_find (os)
+--- ld/emultempl/pe.em.jj	Thu Feb  6 08:07:12 2003
++++ ld/emultempl/pe.em	Thu Feb  6 08:33:16 2003
+@@ -1508,6 +1508,8 @@ output_prev_sec_find (os)
         u = lookup->next)
      {
        lookup = &u->output_section_statement;
@@ -91,7 +67,7 @@ diff -Naurp binutils-2.13.90.0.18.orig/ld/emultempl/pe.em binutils-2.13.90.0.18/
        if (lookup == os)
  	return s;
  
-@@ -1673,7 +1675,7 @@ gld_${EMULATION_NAME}_place_orphan (file
+@@ -1674,7 +1676,7 @@ gld_${EMULATION_NAME}_place_orphan (file
  						(bfd_vma) 0,
  						(etree_type *) NULL,
  						(etree_type *) NULL,
@@ -100,9 +76,51 @@ diff -Naurp binutils-2.13.90.0.18.orig/ld/emultempl/pe.em binutils-2.13.90.0.18/
  
        lang_add_section (&add_child, s, os, file);
  
-diff -Naurp binutils-2.13.90.0.18.orig/ld/ldgram.y binutils-2.13.90.0.18/ld/ldgram.y
---- binutils-2.13.90.0.18.orig/ld/ldgram.y	2003-01-21 13:21:34.000000000 -0500
-+++ binutils-2.13.90.0.18/ld/ldgram.y	2003-01-27 10:10:42.000000000 -0500
+--- ld/emultempl/elf32.em.jj	Thu Feb  6 08:07:12 2003
++++ ld/emultempl/elf32.em	Thu Feb  6 08:38:28 2003
+@@ -1053,7 +1053,8 @@ output_rel_find (sec)
+   for (u = lang_output_section_statement.head; u; u = lookup->next)
+     {
+       lookup = &u->output_section_statement;
+-      if (strncmp (".rel", lookup->name, 4) == 0)
++      if (lookup->constraint != -1
++	  && strncmp (".rel", lookup->name, 4) == 0)
+ 	{
+ 	  /* Don't place after .rel.plt as doing so results in wrong
+ 	     dynamic tags.  Also, place allocated reloc sections before
+@@ -1293,7 +1294,7 @@ gld${EMULATION_NAME}_place_orphan (file,
+ 					    (bfd_vma) 0,
+ 					    (etree_type *) NULL,
+ 					    (etree_type *) NULL,
+-					    load_base);
++					    load_base, 0);
+ 
+   lang_add_section (&os->children, s, os, file);
+ 
+--- ld/scripttempl/elf.sc.jj	Fri Sep 27 11:33:09 2002
++++ ld/scripttempl/elf.sc	Thu Feb  6 08:33:16 2003
+@@ -280,6 +280,8 @@ cat <<EOF
+   ${CREATE_SHLIB-${SBSS2}}
+   ${OTHER_READONLY_SECTIONS}
+   .eh_frame_hdr : { *(.eh_frame_hdr) }
++  .eh_frame     ${RELOCATING-0} : ONLY_IF_RO { KEEP (*(.eh_frame)) }
++  .gcc_except_table ${RELOCATING-0} : ONLY_IF_RO { *(.gcc_except_table) }
+ 
+   /* Adjust the address for the data segment.  We want to adjust up to
+      the same address within the page on the next page up.  */
+@@ -312,8 +314,8 @@ cat <<EOF
+   .data1        ${RELOCATING-0} : { *(.data1) }
+   .tdata	${RELOCATING-0} : { *(.tdata${RELOCATING+ .tdata.* .gnu.linkonce.td.*}) }
+   .tbss		${RELOCATING-0} : { *(.tbss${RELOCATING+ .tbss.* .gnu.linkonce.tb.*})${RELOCATING+ *(.tcommon)} }
+-  .eh_frame     ${RELOCATING-0} : { KEEP (*(.eh_frame)) }
+-  .gcc_except_table ${RELOCATING-0} : { *(.gcc_except_table) }
++  .eh_frame     ${RELOCATING-0} : ONLY_IF_RW { KEEP (*(.eh_frame)) }
++  .gcc_except_table ${RELOCATING-0} : ONLY_IF_RW { *(.gcc_except_table) }
+   ${WRITABLE_RODATA+${RODATA}}
+   ${OTHER_READWRITE_SECTIONS}
+   ${TEXT_DYNAMIC-${DYNAMIC}}
+--- ld/ldgram.y.jj	Tue Jan 21 13:21:34 2003
++++ ld/ldgram.y	Thu Feb  6 08:33:16 2003
 @@ -143,14 +143,14 @@ static int error_index;
  %token ORIGIN FILL
  %token LENGTH CREATE_OBJECT_SYMBOLS INPUT GROUP OUTPUT CONSTRUCTORS
@@ -151,9 +169,39 @@ diff -Naurp binutils-2.13.90.0.18.orig/ld/ldgram.y binutils-2.13.90.0.18/ld/ldgr
  		}
  		opt_comma
  		{}
-diff -Naurp binutils-2.13.90.0.18.orig/ld/ldlang.c binutils-2.13.90.0.18/ld/ldlang.c
---- binutils-2.13.90.0.18.orig/ld/ldlang.c	2003-01-21 13:21:34.000000000 -0500
-+++ binutils-2.13.90.0.18/ld/ldlang.c	2003-01-27 10:37:12.000000000 -0500
+--- ld/mri.c.jj	Tue Jan 21 13:21:34 2003
++++ ld/mri.c	Thu Feb  6 08:33:16 2003
+@@ -237,7 +237,7 @@ mri_draw_tree ()
+ 	  lang_enter_output_section_statement (p->name, base,
+ 					       p->ok_to_load ? 0 : noload_section,
+ 					       1, align, subalign,
+-					       (etree_type *) NULL);
++					       (etree_type *) NULL, 0);
+ 	  base = 0;
+ 	  tmp = (struct wildcard_list *) xmalloc (sizeof *tmp);
+ 	  tmp->next = NULL;
+--- ld/ldlang.h.jj	Mon Dec 16 15:22:53 2002
++++ ld/ldlang.h	Thu Feb  6 08:39:55 2003
+@@ -132,6 +132,8 @@ typedef struct lang_output_section_state
+ 
+   int subsection_alignment;	/* alignment of components */
+   int section_alignment;	/* alignment of start of section */
++  int constraint;
++  bfd_boolean all_input_readonly;
+ 
+   union etree_union *load_base;
+ 
+@@ -388,7 +390,7 @@ extern lang_output_section_statement_typ
+ 	   bfd_vma block_value,
+ 	   etree_type *align,
+ 	   etree_type *subalign,
+-	   etree_type *));
++	   etree_type *, int));
+ extern void lang_final
+   PARAMS ((void));
+ extern void lang_process
+--- ld/ldlang.c.jj	Tue Jan 21 13:21:34 2003
++++ ld/ldlang.c	Thu Feb  6 08:44:49 2003
 @@ -73,6 +73,10 @@ static lang_input_statement_type *new_af
  	   bfd_boolean));
  static lang_memory_region_type *lang_memory_default
@@ -175,16 +223,16 @@ diff -Naurp binutils-2.13.90.0.18.orig/ld/ldlang.c binutils-2.13.90.0.18/ld/ldla
  static lang_input_statement_type *lookup_name
    PARAMS ((const char *));
  static bfd_boolean load_symbols
-@@ -114,6 +121,9 @@ static void insert_undefined
-   PARAMS ((const char *));
- static void lang_place_undefineds
+@@ -112,6 +119,9 @@ static void lang_reasonable_defaults
    PARAMS ((void));
+ static void insert_undefined
+   PARAMS ((const char *));
 +static void check_input_sections
 +  PARAMS ((lang_statement_union_type *,
 +	   lang_output_section_statement_type *));
+ static void lang_place_undefineds
+   PARAMS ((void));
  static void map_input_to_output_sections
-   PARAMS ((lang_statement_union_type *, const char *,
- 	   lang_output_section_statement_type *));
 @@ -742,9 +752,10 @@ lang_memory_default (section)
    return lang_memory_region_lookup ("*default*");
  }
@@ -300,31 +348,31 @@ diff -Naurp binutils-2.13.90.0.18.orig/ld/ldlang.c binutils-2.13.90.0.18/ld/ldla
 +  for (; s != (lang_statement_union_type *) NULL; s = s->header.next)
 +    {
 +      switch (s->header.type)
-+	{
-+	case lang_wild_statement_enum:
-+	  walk_wild (&s->wild_statement, check_section_callback,
-+		     output_section_statement);
-+	  if (! output_section_statement->all_input_readonly)
-+	    return;
-+	  break;
-+	case lang_constructors_statement_enum:
-+	  check_input_sections (constructor_list.head,
-+				output_section_statement);
-+	  if (! output_section_statement->all_input_readonly)
-+	    return;
-+	  break;
-+	case lang_group_statement_enum:
-+	  check_input_sections (s->group_statement.children.head,
-+				output_section_statement);
-+	  if (! output_section_statement->all_input_readonly)
-+	    return;
-+	  break;
-+	default:
-+	  break;
-+	}
++      {
++      case lang_wild_statement_enum:
++	walk_wild (&s->wild_statement, check_section_callback,
++		   output_section_statement);
++	if (! output_section_statement->all_input_readonly)
++	  return;
++	break;
++      case lang_constructors_statement_enum:
++	check_input_sections (constructor_list.head,
++			      output_section_statement);
++	if (! output_section_statement->all_input_readonly)
++	  return;
++	break;
++      case lang_group_statement_enum:
++	check_input_sections (s->group_statement.children.head,
++			      output_section_statement);
++	if (! output_section_statement->all_input_readonly)
++	  return;
++	break;
++      default:
++	break;
++      }
 +    }
 +}
-+ 
++
  /* Open input files and attach to output sections.  */
  
  static void
@@ -414,30 +462,8 @@ diff -Naurp binutils-2.13.90.0.18.orig/ld/ldlang.c binutils-2.13.90.0.18/ld/ldla
  
    /* If this is the first section, then base the VMA of future
       sections on this one.  This will work correctly even if `.' is
-diff -Naurp binutils-2.13.90.0.18.orig/ld/ldlang.h binutils-2.13.90.0.18/ld/ldlang.h
---- binutils-2.13.90.0.18.orig/ld/ldlang.h	2002-12-16 15:22:53.000000000 -0500
-+++ binutils-2.13.90.0.18/ld/ldlang.h	2003-01-27 10:14:00.000000000 -0500
-@@ -132,6 +132,8 @@ typedef struct lang_output_section_state
- 
-   int subsection_alignment;	/* alignment of components */
-   int section_alignment;	/* alignment of start of section */
-+  int constraint;
-+  bfd_boolean all_input_readonly;
- 
-   union etree_union *load_base;
- 
-@@ -388,7 +390,7 @@ extern lang_output_section_statement_typ
- 	   bfd_vma block_value,
- 	   etree_type *align,
- 	   etree_type *subalign,
--	   etree_type *));
-+	   etree_type *, int));
- extern void lang_final
-   PARAMS ((void));
- extern void lang_process
-diff -Naurp binutils-2.13.90.0.18.orig/ld/ldlex.l binutils-2.13.90.0.18/ld/ldlex.l
---- binutils-2.13.90.0.18.orig/ld/ldlex.l	2002-11-09 14:08:31.000000000 -0500
-+++ binutils-2.13.90.0.18/ld/ldlex.l	2003-01-27 10:10:43.000000000 -0500
+--- ld/ldlex.l.jj	Sat Nov  9 14:08:31 2002
++++ ld/ldlex.l	Thu Feb  6 08:33:16 2003
 @@ -303,6 +303,8 @@ V_IDENTIFIER [*?.$_a-zA-Z\[\]\-\!\^]([*?
  <EXPRESSION,BOTH,SCRIPT>"COPY"		{ RTOKEN(COPY);}
  <EXPRESSION,BOTH,SCRIPT>"INFO"		{ RTOKEN(INFO);}
@@ -447,38 +473,3 @@ diff -Naurp binutils-2.13.90.0.18.orig/ld/ldlex.l binutils-2.13.90.0.18/ld/ldlex
  <BOTH,SCRIPT>"o"			{ RTOKEN(ORIGIN);}
  <BOTH,SCRIPT>"org"			{ RTOKEN(ORIGIN);}
  <BOTH,SCRIPT>"l"			{ RTOKEN( LENGTH);}
-diff -Naurp binutils-2.13.90.0.18.orig/ld/mri.c binutils-2.13.90.0.18/ld/mri.c
---- binutils-2.13.90.0.18.orig/ld/mri.c	2003-01-21 13:21:34.000000000 -0500
-+++ binutils-2.13.90.0.18/ld/mri.c	2003-01-27 10:10:42.000000000 -0500
-@@ -237,7 +237,7 @@ mri_draw_tree ()
- 	  lang_enter_output_section_statement (p->name, base,
- 					       p->ok_to_load ? 0 : noload_section,
- 					       1, align, subalign,
--					       (etree_type *) NULL);
-+					       (etree_type *) NULL, 0);
- 	  base = 0;
- 	  tmp = (struct wildcard_list *) xmalloc (sizeof *tmp);
- 	  tmp->next = NULL;
-diff -Naurp binutils-2.13.90.0.18.orig/ld/scripttempl/elf.sc binutils-2.13.90.0.18/ld/scripttempl/elf.sc
---- binutils-2.13.90.0.18.orig/ld/scripttempl/elf.sc	2002-09-27 11:33:09.000000000 -0400
-+++ binutils-2.13.90.0.18/ld/scripttempl/elf.sc	2003-01-27 10:10:42.000000000 -0500
-@@ -280,6 +280,8 @@ cat <<EOF
-   ${CREATE_SHLIB-${SBSS2}}
-   ${OTHER_READONLY_SECTIONS}
-   .eh_frame_hdr : { *(.eh_frame_hdr) }
-+  .eh_frame     ${RELOCATING-0} : ONLY_IF_RO { KEEP (*(.eh_frame)) }
-+  .gcc_except_table ${RELOCATING-0} : ONLY_IF_RO { *(.gcc_except_table) }
- 
-   /* Adjust the address for the data segment.  We want to adjust up to
-      the same address within the page on the next page up.  */
-@@ -312,8 +314,8 @@ cat <<EOF
-   .data1        ${RELOCATING-0} : { *(.data1) }
-   .tdata	${RELOCATING-0} : { *(.tdata${RELOCATING+ .tdata.* .gnu.linkonce.td.*}) }
-   .tbss		${RELOCATING-0} : { *(.tbss${RELOCATING+ .tbss.* .gnu.linkonce.tb.*})${RELOCATING+ *(.tcommon)} }
--  .eh_frame     ${RELOCATING-0} : { KEEP (*(.eh_frame)) }
--  .gcc_except_table ${RELOCATING-0} : { *(.gcc_except_table) }
-+  .eh_frame     ${RELOCATING-0} : ONLY_IF_RW { KEEP (*(.eh_frame)) }
-+  .gcc_except_table ${RELOCATING-0} : ONLY_IF_RW { *(.gcc_except_table) }
-   ${WRITABLE_RODATA+${RODATA}}
-   ${OTHER_READWRITE_SECTIONS}
-   ${TEXT_DYNAMIC-${DYNAMIC}}
