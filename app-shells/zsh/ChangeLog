@@ -1,10 +1,15 @@
 # ChangeLog for app-shells/zsh
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/ChangeLog,v 1.16 2003/02/12 05:21:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/ChangeLog,v 1.17 2003/03/25 20:55:02 seemant Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *zsh-4.0.6-r3 (15 Oct 2002)
+
+  25 Mar 2003; Seemant Kulleen <seemant@gentoo.org> zsh-4.0.6-r1.ebuild,
+  zsh-4.0.6-r3.ebuild:
+  homepage syntax fix thanks to: Frantz Dhin <tragedy_rm@hotmail.com> in bug
+  #18145
 
   15 Oct 2002; phoen][x <phoenixk@gentoo.org> zsh-4.0.6-r3.ebuild :
 

@@ -1,20 +1,20 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/zsh-4.0.6-r3.ebuild,v 1.3 2003/02/13 09:31:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/zsh-4.0.6-r3.ebuild,v 1.4 2003/03/25 20:55:02 seemant Exp $
 
 IUSE=""
 
 DESCRIPTION="UNIX Shell similar to the Korn shell"
 MYPATCH="zsh_4.0.6-15.diff"
+HOMEPAGE="http://www.zsh.org/"
 SRC_URI="ftp://ftp.zsh.org/pub/${P}.tar.gz
 	 http://ftp.debian.org/debian/pool/main/z/${PN}/${MYPATCH}.gz"
-HOMEPAGE="www.zsh.org/"
+
 SLOT="0"
 LICENSE="ZSH"
+KEYWORDS="x86 alpha ~ppc ~sparc"
 
 DEPEND=">=sys-libs/ncurses-5.1"
-
-KEYWORDS="x86 alpha ~ppc ~sparc "
 
 src_unpack() {
 	unpack ${A}
