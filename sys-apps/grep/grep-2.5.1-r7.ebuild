@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/grep-2.5.1-r7.ebuild,v 1.2 2005/02/20 01:32:30 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/grep-2.5.1-r7.ebuild,v 1.3 2005/02/25 04:44:13 vapier Exp $
 
 inherit flag-o-matic eutils
 
@@ -14,12 +14,9 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="build nls pcre static uclibc"
 
-RDEPEND="virtual/libc"
+RDEPEND=""
 DEPEND="${RDEPEND}
-	pcre? (
-		>=sys-apps/sed-4
-		dev-libs/libpcre
-	)
+	pcre? (	dev-libs/libpcre )
 	nls? ( sys-devel/gettext )"
 
 src_unpack() {
