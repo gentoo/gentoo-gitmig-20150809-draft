@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/happy/happy-1.14.ebuild,v 1.4 2004/10/21 15:15:43 kosmikus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/happy/happy-1.14.ebuild,v 1.5 2004/11/10 18:29:44 kosmikus Exp $
+
+inherit base eutils
 
 DESCRIPTION="A yacc-like parser generator for Haskell"
 HOMEPAGE="http://haskell.org/happy/"
@@ -12,8 +14,6 @@ IUSE=""
 
 DEPEND="virtual/ghc"
 RDEPEND=""
-
-inherit base eutils
 
 src_unpack() {
 	base_src_unpack

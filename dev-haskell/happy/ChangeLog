@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/happy
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/happy/ChangeLog,v 1.5 2004/10/21 15:15:43 kosmikus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/happy/ChangeLog,v 1.6 2004/11/10 18:29:44 kosmikus Exp $
+
+  10 Nov 2004; Andres Loeh <kosmikus@gentoo.org> happy-1.14.ebuild:
+  Moved inherit to the correct position within the ebuild.
 
   21 Oct 2004; Andres Loeh <kosmikus@gentoo.org> happy-1.13.ebuild,
   happy-1.14.ebuild, files/happy-1.13-pragma.patch.bz2,
