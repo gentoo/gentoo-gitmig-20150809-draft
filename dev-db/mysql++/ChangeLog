@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/mysql++
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql++/ChangeLog,v 1.23 2004/08/14 21:48:35 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql++/ChangeLog,v 1.24 2004/12/29 21:52:33 ciaranm Exp $
+
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   14 Aug 2004; Robin H. Johnson <robbat2@gentoo.org> mysql++-1.7.9.ebuild:
   bug #60345.
@@ -24,7 +27,7 @@
   files/mysql++-1.7.9-r5_gcc333.patch:
   fix bug #50442 in -r5.
 
-  05 May 2004; Bryan Østergaard <kloeri@gentoo.org> mysql++-1.7.9-r4.ebuild:
+  05 May 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> mysql++-1.7.9-r4.ebuild:
   Stable on alpha.
 
 *mysql++-1.7.9-r4 (03 May 2004)

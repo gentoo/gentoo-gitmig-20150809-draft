@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.152 2004/12/26 06:55:45 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.153 2004/12/29 21:51:10 ciaranm Exp $
+
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   25 Dec 2004; Robin H. Johnson <robbat2@gentoo.org> mysql-4.0.23.ebuild,
   mysql-4.1.8.ebuild:
@@ -81,7 +84,7 @@
   18 Oct 2004; Tom Gall <tgall@gentoo.org> mysql-4.0.21.ebuild:
   stable on ppc64, bug #67062
 
-  18 Oct 2004; Bryan Østergaard <kloeri@gentoo.org> mysql-4.0.21.ebuild:
+  18 Oct 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> mysql-4.0.21.ebuild:
   Stable on alpha, bug 67062.
 
   18 Oct 2004; Gustavo Zacarias <gustavoz@gentoo.org> mysql-4.0.21.ebuild:
@@ -121,7 +124,7 @@
   mysql-4.0.20-r1.ebuild:
   Stable on x86. Bug #60744.
 
-  25 Aug 2004; Bryan Østergaard <kloeri@gentoo.org> mysql-3.23.58-r1.ebuild,
+  25 Aug 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> mysql-3.23.58-r1.ebuild,
   mysql-4.0.20-r1.ebuild:
   Stable on alpha, bug 60744.
 
@@ -149,7 +152,7 @@
   16 Jul 2004; Gustavo Zacarias <gustavoz@gentoo.org> mysql-4.0.20.ebuild:
   Stable on sparc and hppa
 
-  14 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> mysql-4.0.20.ebuild:
+  14 Jul 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> mysql-4.0.20.ebuild:
   Stable on alpha.
 
   10 Jul 2004; Robin H. Johnson <robbat2@gentoo.org> mysql-4.0.20.ebuild:
@@ -210,7 +213,7 @@
   14 Apr 2004; Jason Wever <weeve@gentoo.org> mysql-4.0.18-r1.ebuild:
   Stable on sparc wrt bug #46242.
 
-  14 Apr 2004; Bryan Østergaard,,, <kloeri@gentoo.org> mysql-4.0.18-r1.ebuild:
+  14 Apr 2004; Bryan Ã˜stergaard,,, <kloeri@gentoo.org> mysql-4.0.18-r1.ebuild:
   Stable on Alpha.
 
   14 Apr 2004; Michael McCabe <randy@gentoo.org> mysql-4.0.18-r1.ebuild:

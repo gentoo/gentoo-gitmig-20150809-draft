@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/metakit
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/metakit/ChangeLog,v 1.22 2004/07/01 21:49:15 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/metakit/ChangeLog,v 1.23 2004/12/29 21:50:09 ciaranm Exp $
+
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   metakit-2.4.9.3-r2.ebuild:
@@ -22,7 +25,7 @@
   18 Apr 2004; Michael McCabe <randy@gentoo.org> metakit-2.4.9.3-r2.ebuild:
   Added s390 keywords
 
-  06 Apr 2004; Bryan Østergaard <kloeri@gentoo.org> metakit-2.4.9.3-r2.ebuild:
+  06 Apr 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> metakit-2.4.9.3-r2.ebuild:
   Stable on x86, close bug #46823.
 
   24 Feb 2004; Sven Blumenstein <bazik@gentoo.org> metakit-2.4.9.3-r2.ebuild:
@@ -31,7 +34,7 @@
   22 Feb 2004; Daniel Ahlberg <aliz@gentoo.org> metakit-2.4.9.3-r2.ebuild:
   Adding amd64 keyword.
 
-  20 Feb 2004; Bryan Østergaard,,, <kloeri@gentoo.org>
+  20 Feb 2004; Bryan Ã˜stergaard,,, <kloeri@gentoo.org>
   metakit-2.4.9.3-r2.ebuild:
   Fix annoying python2.3 paths which broke emerge on python2.2 systems. Closes
   bug #42205.
@@ -48,14 +51,14 @@
 
 *metakit-2.4.9.3 (29 Jan 2004)
 
-  29 Jan 2004; Bryan Østergaard,,, <kloeri@gentoo.org> metakit-2.4.9.3.ebuild:
+  29 Jan 2004; Bryan Ã˜stergaard,,, <kloeri@gentoo.org> metakit-2.4.9.3.ebuild:
   Added 2.4.9.3 version.
 
-  29 Jan 2004; Bryan Østergaard,,, <kloeri@gentoo.org>
+  29 Jan 2004; Bryan Ã˜stergaard,,, <kloeri@gentoo.org>
   metakit-2.4.9.2-r1.ebuild:
   Marked 2.4.9.2-r1 x86 as requested by author.
 
-  08 Dec 2003; Bryan Østergaard,,, <kloeri@gentoo.org>
+  08 Dec 2003; Bryan Ã˜stergaard,,, <kloeri@gentoo.org>
   metakit-2.4.9.2-r1.ebuild:
   Fix Python-2.3 issues, closes bug #35168
 

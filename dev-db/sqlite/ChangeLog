@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/sqlite
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.60 2004/12/20 13:35:06 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.61 2004/12/29 21:55:09 ciaranm Exp $
+
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   20 Dec 2004; Dylan Carlson <absinthe@gentoo.org> sqlite-2.8.15.ebuild:
   Stable on amd64.
@@ -70,7 +73,7 @@
   10 Sep 2004; Hasan Khalil <gongloo@gentoo.org> sqlite-2.8.15.ebuild:
   Stable on macos.
 
-  06 Sep 2004; Bryan Østergaard <kloeri@gentoo.org> sqlite-2.8.14.ebuild:
+  06 Sep 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> sqlite-2.8.14.ebuild:
   Stable on alpha.
 
 *sqlite-3.0.6 (05 Sep 2004)

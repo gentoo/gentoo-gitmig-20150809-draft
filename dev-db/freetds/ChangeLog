@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/freetds
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/freetds/ChangeLog,v 1.27 2004/11/01 18:04:33 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/freetds/ChangeLog,v 1.28 2004/12/29 21:49:31 ciaranm Exp $
+
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   01 Nov 2004; Lars Weiler <pylon@gentoo.org> freetds-0.62.3.ebuild:
   Stable on ppc for PHP5, Bug #60442.
@@ -14,7 +17,7 @@
   19 Aug 2004; Tom Gall <tgall@gentoo.org> freetds-0.62.3.ebuild:
   stable on ppc64
 
-  03 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> freetds-0.62.3.ebuild:
+  03 Jul 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> freetds-0.62.3.ebuild:
   Stable on alpha.
 
   29 Jun 2004; Aron Griffis <agriffis@gentoo.org> freetds-0.61-r1.ebuild,
