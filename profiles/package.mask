@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3004 2004/07/13 23:13:34 batlogg Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3005 2004/07/16 13:43:38 eldad Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -21,6 +21,14 @@
 ##
 ##   End example
 ##
+
+# <eldad@gentoo.org> (16 July 2004)
+# Nessus 2.1.x is the development branch, not for production use.
+=net-analyzer/libnasl-2.1*
+=net-analyzer/nessus-libraries-2.1*
+=net-analyzer/nessus-plugins-2.1*
+=net-analyzer/nessus-2.1*
+=net-analyzer/nessus-core-2.1*
 
 # <batlogg@gentoo.org> (14 July 2004)
 # not sure if ebuild is stable enough for production use. needs some additional work.
