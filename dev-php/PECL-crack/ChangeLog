@@ -1,0 +1,10 @@
+# ChangeLog for dev-php/PECL-crack
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PECL-crack/ChangeLog,v 1.1 2005/02/17 06:24:33 sebastian Exp $
+
+*PECL-crack-0.1 (17 Feb 2005)
+
+  17 Feb 2005; Sebastian Bergmann <sebastian@gentoo.org> +metadata.xml,
+  +PECL-crack-0.1.ebuild:
+  Initial ebuild for crack PECL package, closes bug 59838.
+
