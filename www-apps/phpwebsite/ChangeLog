@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/phpwebsite
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/phpwebsite/ChangeLog,v 1.21 2005/03/01 02:52:20 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/phpwebsite/ChangeLog,v 1.22 2005/03/01 16:14:06 rizzo Exp $
+
+  01 Mar 2005; Don Seiler <rizzo@gentoo.org> phpwebsite-0.10.0-r2.ebuild:
+  stable on x86
 
   28 Feb 2005; Jason Wever <weeve@gentoo.org> phpwebsite-0.10.0-r2.ebuild:
   Stable on sparc wrt security bug #83297.
