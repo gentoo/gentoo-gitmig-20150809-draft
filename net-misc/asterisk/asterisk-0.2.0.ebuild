@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: 
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-0.2.0.ebuild,v 1.4 2003/06/12 21:34:00 msterret Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Asterisk - Full PBX in Software"
