@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysklogd/sysklogd-1.4.1-r5.ebuild,v 1.2 2003/09/06 22:08:32 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysklogd/sysklogd-1.4.1-r5.ebuild,v 1.3 2003/09/07 22:10:28 lanius Exp $
 
 S="${WORKDIR}/${P}"
 DESCRIPTION="Standard log daemons"
@@ -35,7 +35,7 @@ src_install() {
 	dodoc ANNOUNCE CHANGES COPYING MANIFEST NEWS README.1st README.linux
 	dodoc ${FILESDIR}/syslog.conf
 	insinto /etc
-  	doins ${FILESDIR}/syslog.conf
+	doins ${FILESDIR}/syslog.conf
 	exeinto /etc/init.d
 	newexe ${FILESDIR}/sysklogd.rc6 sysklogd
 	insinto /etc/conf.d

@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/longrun/longrun-0.9-r1.ebuild,v 1.3 2003/06/29 15:24:07 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/longrun/longrun-0.9-r1.ebuild,v 1.4 2003/09/07 22:19:29 lanius Exp $
 
 S=${WORKDIR}/${PN}
 DESCRIPTION="A utility to control Transmeta's Crusoe processor"
