@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmfishtime/wmfishtime-1.23-r2.ebuild,v 1.10 2004/06/28 20:45:52 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmfishtime/wmfishtime-1.23-r2.ebuild,v 1.11 2004/09/01 02:22:46 tgall Exp $
 
 # to make this work in KDE, run it with the -b option :)
 IUSE=""
@@ -10,7 +10,7 @@ SRC_URI="http://www.ne.jp/asahi/linux/timecop/software/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc amd64 ppc"
+KEYWORDS="x86 sparc amd64 ppc ppc64"
 
 DEPEND="=x11-libs/gtk+-1.2*
 	>=sys-apps/sed-4"
