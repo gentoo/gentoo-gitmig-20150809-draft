@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/zsh-4.2.0_pre3.ebuild,v 1.1 2004/03/05 23:59:40 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/zsh-4.2.0_pre4.ebuild,v 1.1 2004/03/12 20:26:49 usata Exp $
 
-IUSE="maildir ncurses static doc pcre"
+IUSE="maildir ncurses static doc pcre cap"
 
 DESCRIPTION="UNIX Shell similar to the Korn shell"
 HOMEPAGE="http://www.zsh.org/"
@@ -21,7 +21,7 @@ DEPEND="sys-apps/groff
 	>=sys-apps/sed-4
 	${RDEPEND}"
 RDEPEND="pcre? ( >=dev-libs/libpcre-3.9 )
-	sys-libs/libcap
+	cap? ( sys-libs/libcap )
 	ncurses? ( >=sys-libs/ncurses-5.1 )"
 
 S="${WORKDIR}/${MY_P}"
@@ -39,11 +39,8 @@ src_unpack() {
 src_compile() {
 	local myconf
 
-	use ncurses && myconf="${myconf} --with-curses-terminfo"
-	use maildir && myconf="${myconf} --enable-maildir-support"
 	use static && myconf="${myconf} --disable-dynamic" \
 		&& LDFLAGS="${LDFLAGS} -static"
-	use pcre && myconf="${myconf} --enable-pcre"
 
 	econf \
 		--bindir=/bin \
@@ -58,6 +55,10 @@ src_compile() {
 		--enable-site-fndir=/usr/share/zsh/site-functions \
 		--enable-function-subdirs \
 		--enable-ldflags="${LDFLAGS}" \
+		`use_with ncurses curses-terminfo` \
+		`use_enable maildir maildir-support` \
+		`use_enable pcre` \
+		`use_enable cap` \
 		${myconf} || die "configure failed"
 
 	if [ -n "`use static`" ] ; then
@@ -91,6 +92,8 @@ src_install() {
 	keepdir /usr/share/zsh/site-functions
 	insinto /usr/share/zsh/site-functions
 	newins ${FILESDIR}/_portage-${MYDATE} _portage
+	insinto /usr/share/zsh/${PV}/functions/Prompts
+	doins ${FILESDIR}/prompt_gentoo_setup
 
 	dodoc ChangeLog* META-FAQ README INSTALL LICENCE config.modules
 
@@ -115,6 +118,14 @@ pkg_preinst() {
 
 pkg_postinst() {
 
+	einfo
+	einfo "If you want to enable Portage completion and Gentoo prompt,"
+	einfo "add"
+	einfo "	autoload -U compinit promptinit"
+	einfo "	compinit"
+	einfo "	promptinit; prompt gentoo"
+	einfo "to your ~/.zshrc"
+	einfo
 	# see Bug 26776
 	ewarn
 	ewarn "If you are upgrading from zsh-4.0.x you may need to"
