@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.59 2004/04/02 10:54:58 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.60 2004/05/01 22:03:12 rac Exp $
 #
 # Author: Seemant Kulleen <seemant@gentoo.org>
 # Maintained by the Perl herd <perl@gentoo.org>
@@ -25,22 +25,18 @@ SITE_ARCH=""
 SITE_LIB=""
 ARCH_LIB=""
 POD_DIR=""
-MMSIXELEVEN=""
 
 perl-module_src_prep() {
+
+	perlinfo
+
 	SRC_PREP="yes"
 	if [ "${style}" == "builder" ]; then
 		perl ${S}/Build.PL installdirs=vendor destdir=${D}
 	else
-		if [ "${MMSIXELEVEN}" ]; then
-			perl Makefile.PL ${myconf} \
-			PREFIX=/usr INSTALLDIRS=vendor DESTDIR=${D}
-		else
-			perl Makefile.PL ${myconf} \
-			PREFIX=${D}/usr INSTALLDIRS=vendor
-		fi
+		perl Makefile.PL ${myconf} \
+		PREFIX=/usr INSTALLDIRS=vendor DESTDIR=${D}
 	fi
-
 }
 
 perl-module_src_compile() {
@@ -62,7 +58,6 @@ perl-module_src_test() {
 	else
 		make test
 	fi
-
 }
 
 perl-module_src_install() {
@@ -75,33 +70,7 @@ perl-module_src_install() {
 	if [ "${style}" == "builder" ]; then
 		perl ${S}/Build install
 	else
-	if [ "${MMSIXELEVEN}" ]; then
 		make ${myinst} ${mytargets} || die
-	else
-		make \
-			PREFIX=${D}/usr \
-			INSTALLMAN1DIR=${D}/usr/share/man/man1 \
-			INSTALLMAN2DIR=${D}/usr/share/man/man2 \
-			INSTALLMAN3DIR=${D}/usr/share/man/man3 \
-			INSTALLMAN4DIR=${D}/usr/share/man/man4 \
-			INSTALLMAN5DIR=${D}/usr/share/man/man5 \
-			INSTALLMAN6DIR=${D}/usr/share/man/man6 \
-			INSTALLMAN7DIR=${D}/usr/share/man/man7 \
-			INSTALLMAN8DIR=${D}/usr/share/man/man8 \
-			INSTALLSITEMAN1DIR=${D}/usr/share/man/man1 \
-			INSTALLSITEMAN2DIR=${D}/usr/share/man/man2 \
-			INSTALLSITEMAN3DIR=${D}/usr/share/man/man3 \
-			INSTALLSITEMAN4DIR=${D}/usr/share/man/man4 \
-			INSTALLSITEMAN5DIR=${D}/usr/share/man/man5 \
-			INSTALLSITEMAN6DIR=${D}/usr/share/man/man6 \
-			INSTALLSITEMAN7DIR=${D}/usr/share/man/man7 \
-			INSTALLSITEMAN8DIR=${D}/usr/share/man/man8 \
-			INSTALLVENDORMAN3DIR=${D}/usr/share/man/man3 \
-			INSTALLSITEARCH=${D}/${SITE_ARCH} \
-			INSTALLSCRIPT=${D}/usr/bin \
-			${myinst} \
-			${mytargets} || die
-		fi
 	fi
 
 	if [ -f ${D}${ARCH_LIB}/perllocal.pod ];
@@ -177,9 +146,6 @@ perlinfo() {
 	ARCH_LIB=${installarchlib}
 	eval `perl '-V:installsitearch'`
 	SITE_LIB=${installsitearch}
-# handling of DESTDIR changed in makemaker 6.11
-	MMSIXELEVEN=`perl -e 'use ExtUtils::MakeMaker; print( $ExtUtils::MakeMaker::VERSION ge "6.11" )'`
-
 }
 
 updatepod() {
