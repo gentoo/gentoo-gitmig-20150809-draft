@@ -5,3 +5,9 @@
 
 #NTPDATESERVER=ntp.ctr.columbia.edu
 
+##
+# A list of available servers is available here:
+# * http://www.eecis.udel.edu/~mills/ntp/clock1.htm
+# and
+# * http://www.eecis.udel.edu/~mills/ntp/clock2.htm
+##

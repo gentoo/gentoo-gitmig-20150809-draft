@@ -1,6 +1,6 @@
 # ChangeLog for net-misc/ntp
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ChangeLog,v 1.6 2002/07/09 10:08:31 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ChangeLog,v 1.7 2002/08/13 14:55:06 verwilst Exp $
 
 *ntp-4.1.1a (4 May 2002)
   09 Jul 2002; phoen][x <phoenix@gentoo.org> ntp-4.1.1a.ebuild :
@@ -8,6 +8,10 @@
 
   4 May 2002; Jon Nelson <jnelson@gentoo.org> ntp-4.1.7*.ebuild
   Removed all 4.1.7* ebuilds
+
+  13 aug 2002; Bart Verwilst <verwilst@gentoo.org> :
+
+  Added a few URLs that point to NTP server in ntpd.confd, as comments.
 
 *ntp-4.1.1a (1 May 2002)
   1 May 2002; Jon Nelson <jnelson@gentoo.org> ntp-4.1.72-r2.ebuild :
