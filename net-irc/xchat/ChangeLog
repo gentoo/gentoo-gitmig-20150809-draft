@@ -1,6 +1,6 @@
 # ChangeLog for net-irc/xchat
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.17 2002/09/05 20:07:46 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.18 2002/09/06 04:36:42 rphillips Exp $
 
 
 *xchat-1.8.10 (05 Sep 2002) 
@@ -23,6 +23,10 @@
   Fix some bad things, including sandboxing problems, blah.
 
 *xchat-1.8.9-r3 (21 Jul 2002)
+
+  05 Sep 2002; Ryan Phillips <rphillips@gentoo.org> xchat-1.8.9-r3.ebuild :
+
+  updated the perl/gnome patch
 
   26 Aug 2002; Ryan Phillips <rphillips@gentoo.org> xchat-1.8.9-r3.ebuild :
 

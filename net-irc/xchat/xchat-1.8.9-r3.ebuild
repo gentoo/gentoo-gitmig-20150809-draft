@@ -1,6 +1,6 @@
 # Copyrigth 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-1.8.9-r3.ebuild,v 1.4 2002/08/31 21:22:25 jmorgan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-1.8.9-r3.ebuild,v 1.5 2002/09/06 04:36:42 rphillips Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="X-Chat is a graphical IRC client for UNIX operating systems."
@@ -48,6 +48,8 @@ src_compile() {
 		use gnome \
 			&& CFLAGS="${CFLAGS} -I/usr/include/orbit-1.0" \
 			|| myopts="${myopts} --disable-gnome"
+	else
+		myopts="${myopts} --disable-gnome"
 	fi
 
 	use gtk \
@@ -77,6 +79,7 @@ src_compile() {
 		&& myflags="`python-config`" \
 	 	&& myopts="${myopts} --enable-python"
 	
+
 	./configure \
 		--prefix=/usr \
 		--host=${CHOST} \
