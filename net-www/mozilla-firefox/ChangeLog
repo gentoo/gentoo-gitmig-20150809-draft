@@ -1,6 +1,11 @@
 # ChangeLog for net-www/mozilla-firefox
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/ChangeLog,v 1.76 2004/11/09 21:09:41 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/ChangeLog,v 1.77 2004/11/13 23:27:13 agriffis Exp $
+
+*mozilla-firefox-1.0-r1 (13 Nov 2004)
+
+  13 Nov 2004; Aron Griffis <agriffis@gentoo.org> +mozilla-firefox-1.0-r1.ebuild:
+  use mozconfig.eclass instead of mozilla.eclass for building
 
 *mozilla-firefox-1.0 (09 Nov 2004)
 

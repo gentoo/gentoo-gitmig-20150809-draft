@@ -1,6 +1,11 @@
 # ChangeLog for net-www/mozilla
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.205 2004/11/13 17:14:24 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.206 2004/11/13 23:29:49 agriffis Exp $
+
+*mozilla-1.7.3-r1 (13 Nov 2004)
+
+  13 Nov 2004; Aron Griffis <agriffis@gentoo.org> +mozilla-1.7.3-r1.ebuild:
+  use mozconfig.eclass instead of mozilla.eclass for building
 
   13 Nov 2004; <plasmaroo@gentoo.org> mozilla-1.7.3.ebuild:
   Marking stable on IA64.
