@@ -1,0 +1,49 @@
+diff -Naur Makefile.in Makefile.in
+--- Makefile.in	2004-11-28 14:36:13.000000000 +0100
++++ Makefile.in	2004-11-29 00:28:01.017495772 +0100
+@@ -181,7 +181,7 @@
+ target_alias = @target_alias@
+ spooldir = @localstatedir@/spool/capisuite
+ pkgsysconfdir = @sysconfdir@/capisuite
+-doc_DATA = COPYING NEWS README
++doc_DATA =
+ EXTRA_DIST = rc.capisuite.in capisuite.cronin cronjob.conf
+ SUBDIRS = src scripts docs
+ all: config.h
+diff -Naur docs/Makefile.in docs/Makefile.in
+--- docs/Makefile.in	2004-11-28 14:36:12.000000000 +0100
++++ docs/Makefile.in	2004-11-29 00:28:21.312213674 +0100
+@@ -558,9 +558,6 @@
+ 		$(mkinstalldirs) $(DESTDIR)$(docdir) ; \
+ 		cp -r manual $(DESTDIR)$(docdir)/ ; \
+ 	fi
+-	if test -f manual.pdf; then \
+-		cp manual.pdf $(DESTDIR)$(docdir)/ ; \
+-	fi
+ 
+ uninstall-local:
+ 	-rm -rf $(DESTDIR)$(docdir) 
+diff -Naur scripts/Makefile.in scripts/Makefile.in
+--- scripts/Makefile.in	2004-11-28 14:36:12.000000000 +0100
++++ scripts/Makefile.in	2004-11-29 00:28:51.101928173 +0100
+@@ -173,7 +173,7 @@
+ target_alias = @target_alias@
+ spooldir = @localstatedir@/spool/capisuite
+ pkgsysconfdir = @sysconfdir@/capisuite
+-dist_pkglib_DATA = idle.py incoming.py README
++dist_pkglib_DATA = idle.py incoming.py
+ python_module_DATA = cs_helpers.py
+ EXTRA_DIST = cs_helpers.pyin fax.confin answering_machine.confin capisuitefax.in
+ pkgsysconf_DATA = fax.conf answering_machine.conf
+diff -Naur scripts/waves/Makefile.in scripts/waves/Makefile.in
+--- scripts/waves/Makefile.in	2004-11-28 14:36:12.000000000 +0100
++++ scripts/waves/Makefile.in	2004-11-29 00:29:22.131381092 +0100
+@@ -164,7 +164,7 @@
+ 	bitte-neue-ansage-komplett.la neue-ansage-lautet.la wenn-einverstanden-1.la \
+ 	bitte-neue-ansage-kurz.la ansage-gespeichert.la und.la ein.la 10.la 11.la \
+ 	12.la 13.la 14.la 15.la 16.la 17.la 18.la 19.la 20.la 30.la 40.la 50.la 60.la \
+-	70.la 80.la 90.la fernabfrage-aktiv.la unbekannt.la +.la README
++	70.la 80.la 90.la fernabfrage-aktiv.la unbekannt.la +.la
+ 
+ all: all-am
+ 
