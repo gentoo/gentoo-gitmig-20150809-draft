@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/nano-1.3.4.ebuild,v 1.8 2004/10/02 01:37:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/nano-1.3.4.ebuild,v 1.9 2004/11/15 19:11:46 vapier Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.nano-editor.org/dist/v1.3/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 ppc-macos s390 sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 ppc-macos s390 sh sparc x86"
 IUSE="nls build spell justify debug slang ncurses nomac"
 
 DEPEND=">=sys-libs/ncurses-5.2
