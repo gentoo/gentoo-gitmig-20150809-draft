@@ -1,6 +1,6 @@
 # ChangeLog for app-text/docbook-dsssl-stylesheets
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-dsssl-stylesheets/ChangeLog,v 1.11 2003/02/22 03:39:18 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-dsssl-stylesheets/ChangeLog,v 1.12 2003/07/23 17:18:09 gmsoft Exp $
 
   10 Feb 2003; Guy Martin <gmsoft@gentoo.org> :
   Added hppa to keywords.
@@ -9,6 +9,9 @@
   Changed dummy line to return 0.
 
 *docbook-dsssl-stylesheets-1.77-r2 (07 Feb 2002)
+
+  23 Jul 2003; Guy Martin <gmsoft@gentoo.org> docbook-dsssl-stylesheets-1.77-r2.ebuild :
+  Marked stable on hppa.
 
   21 Feb 2003; Aron Griffis <agriffis@gentoo.org> docbook-dsssl-stylesheets-1.77-r2.ebuild :
   Mark stable on Alpha
