@@ -1,14 +1,23 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 b7007fa17769c775444d124d5aba6e4d chkrootkit-0.44.ebuild 1159
 MD5 6444ea8cc0366657ae08111e3f531b16 chkrootkit-0.43-r2.ebuild 935
-MD5 91dbb272148b894153769c814d045e6f chkrootkit-0.37.ebuild 752
 MD5 b27a0b043514751e83ca9091a7451d03 chkrootkit-0.43.ebuild 971
 MD5 4ba9dbd11e2eba27cedd01346f5deaee chkrootkit-0.43-r4.ebuild 1116
-MD5 9da2be2981a3b1ed5ea31bb4e1762f87 ChangeLog 6829
+MD5 3116544fe5b792b75dc1274c45465f3c ChangeLog 7039
 MD5 7460fdec86596dcf99c66fbb167712af metadata.xml 256
 MD5 925fd170321f798a30e77b54fe33c4ce chkrootkit-0.43-r3.ebuild 928
 MD5 0fae3f5676335dc0c50bdf5658aa69b8 files/digest-chkrootkit-0.43-r2 142
 MD5 e4f72853578cf59cb609efc280621591 files/digest-chkrootkit-0.43-r3 142
 MD5 e4f72853578cf59cb609efc280621591 files/digest-chkrootkit-0.43-r4 142
-MD5 f97957a94793b86fd018b32e44811f89 files/chkrootkit-0.37-gentoo.diff 4531
 MD5 bb6a980a762d72e1928231eabf4a9304 files/chkrootkit.cron 78
-MD5 7cf45be07aafbbaa3252ce9ece31d5b6 files/digest-chkrootkit-0.37 66
 MD5 e403f736d82cbf43e0780a5bb62993cb files/digest-chkrootkit-0.43 66
+MD5 018d4a220696256baf0a269e09fca3f6 files/digest-chkrootkit-0.44 139
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBTKJYEZCkKN40op4RArdmAJwM4wNajdXjvHWKlmYIVOQFnj8jmQCgqHGb
+xtYfDkLyYlzqaTpwYULIDes=
+=qdjs
+-----END PGP SIGNATURE-----
