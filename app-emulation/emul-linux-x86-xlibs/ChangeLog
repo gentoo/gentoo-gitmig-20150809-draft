@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/emul-linux-x86-xlibs
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-xlibs/ChangeLog,v 1.22 2005/02/08 10:31:40 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-xlibs/ChangeLog,v 1.23 2005/03/09 22:35:39 cryos Exp $
+
+*emul-linux-x86-xlibs-1.2-r7 (09 Mar 2005)
+
+  09 Mar 2005; Marcus D. Hanwell <cryos@gentoo.org>
+  +emul-linux-x86-xlibs-1.2-r7.ebuild:
+  Fixed pkg_postrm() function logic not to remove the symlink on upgrades,
+  closes bug 84441. Also added some extra symlinks as requested in bug 81045.
 
   08 Feb 2005; Marcus D. Hanwell <cryos@gentoo.org>
   emul-linux-x86-xlibs-1.2-r6.ebuild:
