@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/kdepim-3.2.1.ebuild,v 1.3 2004/03/10 03:23:53 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/kdepim-3.2.1.ebuild,v 1.4 2004/03/10 13:08:38 caleb Exp $
 
 inherit kde-dist
 
@@ -17,6 +17,7 @@ DEPEND="~kde-base/kdenetwork-${PV}
 src_unpack() {
 	kde_src_unpack
 	cd ${S} && epatch ${FILESDIR}/kpilot-parallel-make-fix.patch
+	cd ${S} && aclocal
 }
 
 src_compile() {
