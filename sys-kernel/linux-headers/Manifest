@@ -10,9 +10,10 @@ MD5 34a46d20968133f3bc61cac57369b50c linux-headers-2.4.17-r5.ebuild 4291
 MD5 31f6867046a3f183c6d98abec53a605a linux-headers-2.4.18-r1.ebuild 4526
 MD5 5d21e2e8e69747864329a465bc7c5be5 linux-headers-2.4.18-r2.ebuild 4568
 MD5 cb5101ea2408061e456453df9c06dedf linux-headers-2.4.18.ebuild 3189
+MD5 c802934f6240ddcbc1321e4b7935cdd9 linux-headers-2.4.19-r1.ebuild 4804
 MD5 45657102a76c0f97cc81fc91138d4fae linux-headers-2.4.19.ebuild 4638
-MD5 a62efd86abf6a59a746b2ab948c2ee25 linux-headers-2.4.19-r1.ebuild 4802
-MD5 a7ed612cc224b9399ef5c77108883ff0 linux-headers-2.4.21.ebuild 3098
+MD5 7c80faefb9d6d1ef2f65f5e9aea86f2b linux-headers-2.4.21.ebuild 3093
+MD5 e300a3e148a7dcc38a0e099494fb6cb3 files/bigendian-byteorder-fix.patch 1557
 MD5 07aeae7e5036a3ec3e06d29fd68e9cce files/digest-linux-headers-2.2.20 216
 MD5 167e790d7861e0ed3a31577b31a92968 files/digest-linux-headers-2.2.21_pre3 281
 MD5 ac116e74551067f3bd3a2a3c85ba0b0b files/digest-linux-headers-2.4.16 281
@@ -27,5 +28,4 @@ MD5 b1f0fb91c6c3d60ac2f1f1d6893e145a files/digest-linux-headers-2.4.18-r2 67
 MD5 0d7bb77bc61a34b15bef6328c9279cb2 files/digest-linux-headers-2.4.19 67
 MD5 0d7bb77bc61a34b15bef6328c9279cb2 files/digest-linux-headers-2.4.19-r1 67
 MD5 9854e47afccae85e887bcb970fc68890 files/digest-linux-headers-2.4.21 67
-MD5 e300a3e148a7dcc38a0e099494fb6cb3 files/bigendian-byteorder-fix.patch 1557
 MD5 c3e19cc983ab9e751bc4f5c391e66b0c files/generate-asm-sparc 1656
