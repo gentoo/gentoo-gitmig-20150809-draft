@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/s390-tools/s390-tools-1.2.4.ebuild,v 1.1 2004/04/18 03:18:26 randy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/s390-tools/s390-tools-1.2.4.ebuild,v 1.2 2004/04/27 21:30:31 agriffis Exp $
+
+inherit eutils
 
 STREAM="june2003"
 

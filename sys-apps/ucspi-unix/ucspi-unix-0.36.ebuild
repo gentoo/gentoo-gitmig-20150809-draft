@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-unix/ucspi-unix-0.36.ebuild,v 1.5 2004/01/07 22:14:55 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-unix/ucspi-unix-0.36.ebuild,v 1.6 2004/04/27 21:34:49 agriffis Exp $
+
+inherit eutils
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A ucspi implementation for unix sockets."

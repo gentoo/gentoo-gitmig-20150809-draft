@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/file
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/ChangeLog,v 1.40 2004/04/27 18:39:40 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/ChangeLog,v 1.41 2004/04/27 21:04:30 agriffis Exp $
+
+  27 Apr 2004; Aron Griffis <agriffis@gentoo.org> file-4.06.ebuild,
+  file-4.07-r1.ebuild, file-4.07.ebuild:
+  Add inherit eutils
 
 *file-4.09 (27 Apr 2004)
 

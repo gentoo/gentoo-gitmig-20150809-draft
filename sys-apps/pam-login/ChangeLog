@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/pam-login
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pam-login/ChangeLog,v 1.37 2004/03/31 02:21:11 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pam-login/ChangeLog,v 1.38 2004/04/27 21:22:38 agriffis Exp $
+
+  27 Apr 2004; Aron Griffis <agriffis@gentoo.org> pam-login-3.11-r1.ebuild,
+  pam-login-3.12.ebuild, pam-login-3.14.ebuild:
+  Add inherit eutils
 
   30 Mar 2004; Tom Gall <tgall@gentoo.org> pam-login-3.14.ebuild:
   stable on ppc64 and minor fix 

@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/cpudyn/cpudyn-0.6.1.ebuild,v 1.2 2004/02/02 03:00:34 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/cpudyn/cpudyn-0.6.1.ebuild,v 1.3 2004/04/27 21:03:33 agriffis Exp $
+
+inherit eutils
 
 DESCRIPTION="A daemon to control laptop power consumption via cpufreq and disk standby"
 HOMEPAGE="http://mnm.uib.es/~gallir/${PN}/"

@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/partimage
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/partimage/ChangeLog,v 1.8 2004/04/26 14:31:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/partimage/ChangeLog,v 1.9 2004/04/27 21:25:16 agriffis Exp $
+
+  27 Apr 2004; Aron Griffis <agriffis@gentoo.org> partimage-0.6.4.ebuild:
+  Add inherit eutils
 
   26 Apr 2004; Aron Griffis <agriffis@gentoo.org> partimage-0.6.2.ebuild,
   partimage-0.6.4.ebuild:

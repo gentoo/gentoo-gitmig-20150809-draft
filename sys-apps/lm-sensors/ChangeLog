@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/lm-sensors
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm-sensors/ChangeLog,v 1.25 2004/04/08 03:43:43 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm-sensors/ChangeLog,v 1.26 2004/04/27 21:13:54 agriffis Exp $
+
+  27 Apr 2004; Aron Griffis <agriffis@gentoo.org> lm-sensors-2.6.5.ebuild,
+  lm-sensors-2.8.1.ebuild, lm-sensors-2.8.2.ebuild, lm-sensors-2.8.3.ebuild,
+  lm-sensors-2.8.4.ebuild, lm-sensors-2.8.5.ebuild, lm-sensors-2.8.6.ebuild:
+  Add inherit eutils
 
 *lm-sensors-2.8.6 (07 Apr 2004)
 

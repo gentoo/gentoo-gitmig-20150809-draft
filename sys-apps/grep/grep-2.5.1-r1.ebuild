@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/grep-2.5.1-r1.ebuild,v 1.19 2004/03/21 21:08:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/grep-2.5.1-r1.ebuild,v 1.20 2004/04/27 21:09:02 agriffis Exp $
 
-inherit gnuconfig flag-o-matic
+inherit gnuconfig flag-o-matic eutils
 
 
 DESCRIPTION="GNU regular expression matcher"

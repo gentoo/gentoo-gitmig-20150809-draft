@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/parted-1.6.9.ebuild,v 1.1 2004/04/23 05:02:11 npmccallum Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/parted-1.6.9.ebuild,v 1.2 2004/04/27 21:23:51 agriffis Exp $
+
+inherit eutils
 
 DESCRIPTION="Create, destroy, resize, check, copy partitions and file systems"
 HOMEPAGE="http://www.gnu.org/software/parted"

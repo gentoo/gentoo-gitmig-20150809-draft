@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/gradm
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gradm/ChangeLog,v 1.29 2004/04/19 01:48:53 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gradm/ChangeLog,v 1.30 2004/04/27 21:07:37 agriffis Exp $
+
+  27 Apr 2004; Aron Griffis <agriffis@gentoo.org> gradm-1.9.14.ebuild:
+  Add inherit eutils
 
 *gradm-2.0 (18 Apr 2004)
 

@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/usbutils-0.11-r3.ebuild,v 1.11 2004/03/23 02:02:53 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/usbutils-0.11-r3.ebuild,v 1.12 2004/04/27 21:37:07 agriffis Exp $
 
-inherit gnuconfig
+inherit gnuconfig eutils
 
 # note: update these regularly from http://www.linux-usb.org/usb.ids
 #       and upload to gentoo mirrors - <liquidx@gentoo.org>

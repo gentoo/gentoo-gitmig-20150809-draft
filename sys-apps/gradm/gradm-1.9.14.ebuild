@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gradm/gradm-1.9.14.ebuild,v 1.1 2004/03/11 22:45:07 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gradm/gradm-1.9.14.ebuild,v 1.2 2004/04/27 21:07:37 agriffis Exp $
 
-inherit gcc flag-o-matic
+inherit gcc flag-o-matic eutils
 
 DESCRIPTION="Administrative interface for grsecurity ${PV} access control lists"
 SRC_URI="http://www.grsecurity.net/${P}.tar.gz"

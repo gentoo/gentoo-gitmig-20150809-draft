@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pam-login/pam-login-3.11-r1.ebuild,v 1.6 2004/02/17 08:25:15 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pam-login/pam-login-3.11-r1.ebuild,v 1.7 2004/04/27 21:22:38 agriffis Exp $
 
-inherit gnuconfig
+inherit gnuconfig eutils
 
 IUSE="nls"
 

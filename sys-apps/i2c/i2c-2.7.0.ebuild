@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/i2c/i2c-2.7.0.ebuild,v 1.10 2004/01/25 23:15:20 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/i2c/i2c-2.7.0.ebuild,v 1.11 2004/04/27 21:10:55 agriffis Exp $
+
+inherit eutils
 
 DESCRIPTION="I2C Bus support"
 HOMEPAGE="http://www2.lm-sensors.nu/~lm78/"

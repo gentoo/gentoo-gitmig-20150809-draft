@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/hdparm
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hdparm/ChangeLog,v 1.37 2004/03/24 21:19:17 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hdparm/ChangeLog,v 1.38 2004/04/27 21:09:52 agriffis Exp $
+
+  27 Apr 2004; Aron Griffis <agriffis@gentoo.org> hdparm-5.4.ebuild:
+  Add inherit eutils
 
   24 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> hdparm-5.3-r2.ebuild:
   don't set DEPEND="${RDEPEND}" (bug #45343); IUSE; tidy

@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/s390-tools
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/s390-tools/ChangeLog,v 1.1 2004/04/18 03:18:26 randy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/s390-tools/ChangeLog,v 1.2 2004/04/27 21:30:31 agriffis Exp $
+
+  27 Apr 2004; Aron Griffis <agriffis@gentoo.org> s390-tools-1.2.4.ebuild:
+  Add inherit eutils
 
 *s390-tools-1.2.4 (17 Apr 2004)
 

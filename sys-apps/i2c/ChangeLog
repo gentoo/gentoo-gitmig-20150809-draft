@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/i2c
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/i2c/ChangeLog,v 1.15 2004/04/27 09:18:39 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/i2c/ChangeLog,v 1.16 2004/04/27 21:10:55 agriffis Exp $
+
+  27 Apr 2004; Aron Griffis <agriffis@gentoo.org> i2c-2.7.0.ebuild,
+  i2c-2.8.0.ebuild, i2c-2.8.1.ebuild, i2c-2.8.2.ebuild, i2c-2.8.3.ebuild,
+  i2c-2.8.4.ebuild:
+  Add inherit eutils
 
 *i2c-2.8.3 (27 Mar 2004)
 *i2c-2.8.4 (27 Mar 2004)

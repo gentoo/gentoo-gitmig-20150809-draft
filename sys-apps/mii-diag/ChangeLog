@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/mii-diag
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mii-diag/ChangeLog,v 1.4 2004/03/01 19:59:51 aliz Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mii-diag/ChangeLog,v 1.5 2004/04/27 21:17:16 agriffis Exp $
+
+  27 Apr 2004; Aron Griffis <agriffis@gentoo.org> mii-diag-2.07.ebuild,
+  mii-diag-2.09.ebuild:
+  Add inherit eutils
 
 *mii-diag-2.09 (19 Sep 2003)
 

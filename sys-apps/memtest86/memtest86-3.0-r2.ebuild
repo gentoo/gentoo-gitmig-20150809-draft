@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtest86/memtest86-3.0-r2.ebuild,v 1.2 2004/02/05 20:34:19 augustus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtest86/memtest86-3.0-r2.ebuild,v 1.3 2004/04/27 21:15:51 agriffis Exp $
 
-inherit mount-boot
+inherit mount-boot eutils
 
 IUSE="serial"
 S=${WORKDIR}/${P}

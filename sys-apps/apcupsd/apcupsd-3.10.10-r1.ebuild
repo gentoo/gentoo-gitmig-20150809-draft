@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/apcupsd/apcupsd-3.10.10-r1.ebuild,v 1.1 2004/04/21 21:12:00 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/apcupsd/apcupsd-3.10.10-r1.ebuild,v 1.2 2004/04/27 21:00:49 agriffis Exp $
+
+inherit eutils
 
 IUSE="doc snmp usb apache2"
 

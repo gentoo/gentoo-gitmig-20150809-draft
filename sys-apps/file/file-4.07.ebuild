@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-4.07.ebuild,v 1.3 2004/02/23 00:41:55 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-4.07.ebuild,v 1.4 2004/04/27 21:04:31 agriffis Exp $
 
-inherit flag-o-matic gnuconfig
+inherit flag-o-matic gnuconfig eutils
 
 DESCRIPTION="Program to identify a file's format by scanning binary data for patterns"
 SRC_URI="ftp://ftp.gw.com/mirrors/pub/unix/file/${P}.tar.gz

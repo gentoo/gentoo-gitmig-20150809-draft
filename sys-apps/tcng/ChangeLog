@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/tcng
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/tcng/ChangeLog,v 1.5 2004/04/25 16:06:34 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/tcng/ChangeLog,v 1.6 2004/04/27 21:32:34 agriffis Exp $
+
+  27 Apr 2004; Aron Griffis <agriffis@gentoo.org> tcng-9h.ebuild,
+  tcng-9i.ebuild, tcng-9l.ebuild:
+  Add inherit eutils
 
   25 Apr 2004; David Holm <dholm@gentoo.org> tcng-9l.ebuild:
   Added to ~ppc.

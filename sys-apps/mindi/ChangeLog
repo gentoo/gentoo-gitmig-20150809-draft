@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/mindi
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mindi/ChangeLog,v 1.8 2003/09/17 03:01:02 seemant Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mindi/ChangeLog,v 1.9 2004/04/27 21:18:13 agriffis Exp $
+
+  27 Apr 2004; Aron Griffis <agriffis@gentoo.org> mindi-0.86.ebuild:
+  Add inherit eutils
 
   16 Sep 2003; Seemant Kulleen <seemant@gentoo.org> mindi-0.67.ebuild,
   mindi-0.81.ebuild, mindi-0.85.ebuild, mindi-0.86.ebuild:

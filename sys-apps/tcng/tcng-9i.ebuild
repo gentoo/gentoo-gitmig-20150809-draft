@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/tcng/tcng-9i.ebuild,v 1.3 2004/04/24 10:37:30 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/tcng/tcng-9i.ebuild,v 1.4 2004/04/27 21:32:34 agriffis Exp $
+
+inherit eutils
 
 DESCRIPTION="Traffic Control Next Generation"
 HOMEPAGE="http://tcng.sourceforge.net/"

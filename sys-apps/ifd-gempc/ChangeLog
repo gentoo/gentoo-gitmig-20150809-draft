@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/ifd-gempc
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ifd-gempc/ChangeLog,v 1.1 2004/03/23 19:56:09 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ifd-gempc/ChangeLog,v 1.2 2004/04/27 21:11:44 agriffis Exp $
+
+  27 Apr 2004; Aron Griffis <agriffis@gentoo.org> ifd-gempc-0.9.1.ebuild:
+  Add inherit eutils
 
 *ifd-gempc-0.9.1 (24 Mar 2004)
 
