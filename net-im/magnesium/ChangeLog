@@ -1,0 +1,24 @@
+# ChangeLog for net-misc/magnesium
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-im/magnesium/ChangeLog,v 1.1 2003/10/08 13:51:57 lanius Exp $
+
+*magnesium-1.0_pre10 (08 Oct 2003)
+
+  08 Oct 2003; Heinrich Wendel <lanius@gentoo.org>
+  magnesium-1.0_pre10-r1.ebuild, magnesium-1.0_pre10.ebuild,
+  magnesium-1.0_pre11.ebuild, files/magnesium:
+  moved from net-misc to net-im
+
+  16 Sep 2003; Matthew Kennedy <mkennedy@gentoo.org> :
+  new upstream. SRC_URI tweak
+
+*magnesium-1.0_pre10-r1 (14 Sep 2003)
+
+  14 Sep 2003; Matthew Kennedy <mkennedy@gentoo.org>
+  magnesium-1.0_pre10-r1.ebuild:
+  fixed location of glade data
+
+*magnesium-1.0_pre10 (14 Spe 2003)
+
+  14 Sep 2003; Matthew Kennedy <mkennedy@gentoo.org>  :
+  Initial import.  Ebuild submitted by Matthew Kennedy <mkennedy@gentoo.org>.
