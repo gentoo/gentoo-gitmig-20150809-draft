@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <phoenix@gentoo.org> (02 Sep 2002)
+# This needs a lot of testing
+=net-dialup/minicom-2.00.0
+
 # <tantive@gentoo.org> (02 Sep 2002)
 # Masked for testing, fixed some compile errors with >2.99 
 =sys-kernel/openmosix-sources-2.4.19-r3
