@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/canna/canna-3.6_p4.ebuild,v 1.3 2003/09/22 21:12:03 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/canna/canna-3.6_p4.ebuild,v 1.4 2003/09/23 11:47:43 usata Exp $
 
-inherit cannadic eutils
+inherit cannadic
 
 IUSE="tetex"
 
@@ -19,8 +19,7 @@ KEYWORDS="~x86 ~ppc ~sparc ~alpha"
 DEPEND="virtual/glibc
 	x11-base/xfree
 	>=sys-apps/sed-4
-	tetex? ( app-text/ptex
-		app-text/dvipdfmx )"
+	tetex? ( app-text/ptex )"
 RDEPEND="virtual/glibc"
 
 S="${WORKDIR}/${MY_P}"
@@ -39,12 +38,19 @@ src_compile() {
 	make canna || die
 
 	if [ -n "`use tetex`" ] ; then
-		einfo "Compiling DVI, PS and PDF document"
+		einfo "Compiling DVI, PS (and PDF) document"
 		cd doc/man/guide/tex
 		xmkmf || die
 		make JLATEXCMD=platex \
 			DVI2PSCMD="dvips -f" \
-			canna.dvi canna.ps canna.pdf || die
+			canna.dvi canna.ps || die
+		if has_version 'app-text/dvipdfmx' && \
+			( has_version 'app-text/acroread' \
+			|| has_version 'app-text/xpdf-japanese' ); then
+			make JLATEXCMD=platex \
+				DVI2PSCMD="dvips -f" \
+				canna.pdf || die
+		fi
 	fi
 }
 
