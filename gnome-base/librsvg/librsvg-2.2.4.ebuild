@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/librsvg-2.2.4.ebuild,v 1.1 2003/03/11 00:12:22 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/librsvg-2.2.4.ebuild,v 1.2 2003/03/17 12:26:01 weeve Exp $
 
 inherit gnome2
 
@@ -8,7 +8,7 @@ IUSE="doc"
 DESCRIPTION="rendering svg library"
 HOMEPAGE="http://www.gnome.org/"
 SLOT="2"
-KEYWORDS="~x86 ~ppc ~alpha"
+KEYWORDS="~x86 ~ppc ~alpha ~sparc"
 LICENSE="GPL-2 LGPL-2"
 
 RDEPEND=">=dev-libs/glib-2
