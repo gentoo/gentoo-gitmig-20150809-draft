@@ -1,7 +1,7 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Reviewed by Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-1.4.0.3-r3.ebuild,v 1.13 2004/03/10 05:51:46 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-1.4.0.3-r3.ebuild,v 1.14 2004/06/03 23:24:52 agriffis Exp $
 
 IUSE="nls"
 
@@ -34,7 +34,7 @@ src_unpack() {
 src_compile() {
 	local myconf
 
-	if [ -z "`use nls`" ] ; then
+	if ! use nls ; then
 		myconf="--disable-nls"
 	fi
 
