@@ -1,0 +1,80 @@
+--- fglrx_panel_sources.orig/main.cpp	2004-06-23 17:35:09.000000000 +0200
++++ fglrx_panel_sources/main.cpp	2004-09-23 12:49:47.000000000 +0200
+@@ -28,8 +28,6 @@
+ //    printf ( "%s\n", lpath.data() ) ;
+ //    printf ( "%s\n", lfile.data() ) ;
+ 
+-    QApplication::setStyle ( new QWindowsStyle ) ;
+-
+     QApplication a( argc, argv );
+ 
+     if ( fi.exists() )
+--- fglrx_panel_sources.orig/Makefile	2004-10-05 01:34:33.743903120 +0200
++++ fglrx_panel_sources/Makefile	2004-10-05 01:35:18.268134408 +0200
+@@ -404,12 +404,8 @@
+ 	cd /var/tmp/portage/ati-drivers-extra-3.14.1-r1/image//opt/ati/bin/. ; rm -f $(BASENAME) ; ln -s $(TARGET0) $(BASENAME)
+ 	cp LICENSE.GPL /var/tmp/portage/ati-drivers-extra-3.14.1-r1/image//opt/ati/bin/.
+ 	cp LICENSE.QPL /var/tmp/portage/ati-drivers-extra-3.14.1-r1/image//opt/ati/bin/.
+-	if  [ $KDEDIR ]; then\
+-	  cp fireglcontrol.kdelnk $(KDEDIR)/share/applnk/. ;\
+-	  cp ati.xpm $(KDEDIR)/share/icons/. ;\
+-	fi
+-	if test -d /usr/share/gnome/apps; then \
+-	  cp fireglcontrol.desktop /usr/share/gnome/apps/. ;\
++	if test -d /usr/share/applications; then \
++	  cp fireglcontrol.desktop /usr/share/applications/. ;\
+ 	  if test -d /usr/share/pixmaps; then \
+ 	    cp ati.xpm /usr/share/pixmaps/. ;\
+ 	  fi ;\
+--- fglrx_panel_sources.orig/Makefile	2004-06-23 17:35:04.000000000 +0200
++++ fglrx_panel_sources/Makefile	2004-09-23 12:58:52.377143856 +0200
+@@ -381,7 +381,6 @@
+ depclean:: dep_clean
+ 
+ clean::
+-	@make dep_clean
+ 	@rm -f *.o *.bak *~ *% #*
+ 	@rm -f $(TARGET0_CC_META) $(BASENAME) $(TARGET0)
+ 	@#rm -f $(TARGET0_CC_META) $(BASENAME) $(TARGET0) $(TARGET1) $(TARGET2)
+--- fglrx_panel_sources.orig/AdjustPage.cpp	2004-06-23 17:35:04.000000000 +0200
++++ fglrx_panel_sources/AdjustPage.cpp	2004-09-23 14:39:56.488884576 +0200
+@@ -251,9 +251,9 @@
+   connect ( pUndo, SIGNAL(clicked()), SLOT(OnUndo() ) ) ;
+ #endif // FGL_LATER
+ 
+-  connect ( pSliderRed, SIGNAL(valueChanged(int)), SLOT(OnSliderRed(int) ) ) ;
+-  connect ( pSliderGreen, SIGNAL(valueChanged(int)), SLOT(OnSliderGreen(int) ) ) ;
+-  connect ( pSliderBlue, SIGNAL(valueChanged(int)), SLOT(OnSliderBlue(int) ) ) ;
++  connect ( pSliderRed, SIGNAL(sliderMoved(int)), SLOT(OnSliderRed(int) ) ) ;
++  connect ( pSliderGreen, SIGNAL(sliderMoved(int)), SLOT(OnSliderGreen(int) ) ) ;
++  connect ( pSliderBlue, SIGNAL(sliderMoved(int)), SLOT(OnSliderBlue(int) ) ) ;
+   connect ( pDefaultRed, SIGNAL(clicked()), SLOT(OnDefaultRed() ) ) ;
+   connect ( pDefaultGreen, SIGNAL(clicked()), SLOT(OnDefaultGreen() ) ) ;
+   connect ( pDefaultBlue, SIGNAL(clicked()), SLOT(OnDefaultBlue() ) ) ;
+@@ -628,7 +628,7 @@
+   if ( CurGamma < GAMMA_MIN ) CurGamma = GAMMA_MIN ;
+   if ( CurGamma > GAMMA_MAX ) CurGamma = GAMMA_MAX ;
+   
+-  DeltaGamma = (float)((int)((CurGamma - m_Gamma.red)*100)) / 100 ;
++  DeltaGamma = CurGamma - m_Gamma.red;
+   m_Gamma.red = CurGamma ;
+   if ( pCouple->isChecked() )
+   {
+@@ -662,7 +662,7 @@
+   if ( CurGamma < GAMMA_MIN ) CurGamma = GAMMA_MIN ;
+   if ( CurGamma > GAMMA_MAX ) CurGamma = GAMMA_MAX ;
+   
+-  DeltaGamma = (float)((int)((CurGamma - m_Gamma.green)*100)) / 100 ;
++  DeltaGamma = CurGamma - m_Gamma.green ;
+   m_Gamma.green = CurGamma ;
+   if ( pCouple->isChecked() )
+   {
+@@ -696,7 +696,7 @@
+   if ( CurGamma < GAMMA_MIN ) CurGamma = GAMMA_MIN ;
+   if ( CurGamma > GAMMA_MAX ) CurGamma = GAMMA_MAX ;
+   
+-  DeltaGamma = (float)((int)((CurGamma - m_Gamma.blue)*100)) / 100 ;
++  DeltaGamma = CurGamma - m_Gamma.blue ;
+   m_Gamma.blue = CurGamma ;
+   if ( pCouple->isChecked() )
+   {
