@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.69 2004/09/09 03:05:08 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.70 2004/09/10 22:40:31 ciaranm Exp $
 
 # Authors:
 # 	Ryan Phillips <rphillips@gentoo.org>
@@ -21,7 +21,7 @@
 # -carbon -gtk motif              MOTIF
 # -carbon -gtk -motif             ATHENA
 
-inherit eutils vim-doc flag-o-matic
+inherit eutils vim-doc flag-o-matic versionator
 
 # Support -cvs ebuilds, even though they're not in the official tree.
 MY_PN="${PN%-cvs}"
@@ -269,16 +269,48 @@ src_compile() {
 
 		elif [[ "${MY_PN}" == "gvim" ]] ; then
 			myconf="${myconf} --with-vim-name=gvim --with-x"
-			if use gtk && use gtk2 ; then
-				myconf="${myconf} --enable-gui=gtk2 --enable-gtk2-check"
-			elif use gnome ; then
-				myconf="${myconf} --enable-gui=gnome"
-			elif use gtk ; then
-				myconf="${myconf} --enable-gui=gtk"
-			elif use motif ; then
-				myconf="${myconf} --enable-gui=motif"
+
+			# prior to gvim 6.3-r1 we do things a bit strangely
+			if version_is_at_least "6.3-r1" ; then
+				if use gtk ; then
+					if use gtk2 ; then
+						myconf="${myconf} --enable-gtk2-check"
+						if use gnome ; then
+							einfo "Building gvim with the GNOME 2 GUI"
+							myconf="${myconf} --enable-gui=gnome2"
+						else
+							einfo "Building gvim with the gtk+-2 GUI"
+							myconf="${myconf} --enable-gui=gtk2"
+						fi
+					else
+						if use gnome ; then
+							einfo "Building gvim with the GNOME 1 GUI"
+							myconf="${myconf} --enable-gui=gnome"
+						else
+							einfo "Building gvim with the gtk+-1.2 GUI"
+							myconf="${myconf} --enable-gui=gtk"
+						fi
+					fi
+				elif use motif ; then
+					einfo "Building gvim with the MOTIF GUI"
+					myconf="${myconf} --enable-gui=motif"
+				else
+					einfo "Building gvim with the Athena GUI"
+					myconf="${myconf} --enable-gui=athena"
+				fi
+
 			else
-				myconf="${myconf} --enable-gui=athena"
+				if use gtk && use gtk2 ; then
+					myconf="${myconf} --enable-gui=gtk2 --enable-gtk2-check"
+				elif use gnome ; then
+					myconf="${myconf} --enable-gui=gnome"
+				elif use gtk ; then
+					myconf="${myconf} --enable-gui=gtk"
+				elif use motif ; then
+					myconf="${myconf} --enable-gui=motif"
+				else
+					myconf="${myconf} --enable-gui=athena"
+				fi
 			fi
 		else
 			die "vim.eclass doesn't understand MY_PN=${MY_PN}"
@@ -346,6 +378,7 @@ src_install() {
 		# both vim and gvim
 		insinto /etc/vim/
 		doins ${FILESDIR}/vimrc
+
 	elif [[ "${MY_PN}" == "gvim" ]] ; then
 		dobin src/gvim
 		dosym gvim /usr/bin/gvimdiff
@@ -353,6 +386,15 @@ src_install() {
 		dosym gvim /usr/bin/eview
 		insinto /etc/vim
 		doins ${FILESDIR}/gvimrc
+
+		# as of 6.3-r1, we install a desktop entry. bug #44633.
+		if version_is_at_least "6.3-r1" ; then
+			insinto /usr/share/applications
+			doins ${FILESDIR}/gvim.desktop
+			insinto /usr/share/pixmaps
+			doins ${FILESDIR}/gvim.xpm
+		fi
+
 	else
 		dobin src/vim
 		ln -s vim ${D}/usr/bin/vimdiff && \
