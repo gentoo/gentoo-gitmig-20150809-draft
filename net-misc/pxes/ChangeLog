@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/pxes
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pxes/ChangeLog,v 1.9 2004/03/01 10:24:32 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pxes/ChangeLog,v 1.10 2004/04/03 18:23:24 wolf31o2 Exp $
+
+*pxes-0.8 (03 Apr 2004)
+
+  03 Apr 2004; Chris Gianelloni <wolf31o2@gentoo.org> pxes-0.8.ebuild:
+  Adding pxes-0.8 ebuild and closing bugs #32794 and #46639.
 
   01 Mar 2004; Michael Cummings <mcummings@gentoo.org> pxes-0.7.ebuild:
   Fixed calls to perl-modules eclass. This resolves the sandbox violation of bug
