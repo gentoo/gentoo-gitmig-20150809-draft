@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3c/mp3c-0.27.ebuild,v 1.9 2004/06/25 00:12:10 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3c/mp3c-0.27.ebuild,v 1.10 2005/01/15 23:01:33 luckyduck Exp $
 
 IUSE=""
 DESCRIPTION="console based mp3 ripper, with cddb support"

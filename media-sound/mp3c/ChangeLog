@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/mp3c
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3c/ChangeLog,v 1.9 2004/09/30 00:52:27 swegener Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3c/ChangeLog,v 1.10 2005/01/15 23:01:33 luckyduck Exp $
+
+  16 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org> mp3c-0.29.ebuild:
+  changed app-cdr/cdrtools dependency to virtual/cdrtools. see bug #77817.
 
   26 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> mp3c-0.29.ebuild:
   Stable x86, amd64, sparc.
