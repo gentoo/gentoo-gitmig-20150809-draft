@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/gnome-system-tools
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gnome-system-tools/ChangeLog,v 1.1 2004/05/26 07:45:53 leonardop Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gnome-system-tools/ChangeLog,v 1.2 2004/06/15 18:48:18 malc Exp $
+
+  15 Jun 2004; <mlashley@gentoo.org> gnome-system-tools-0.33.0.ebuild:
+  Add ~amd64 keyword, fixes bug #53110
 
 *gnome-system-tools-0.33.0 (26 May 2004)
 
