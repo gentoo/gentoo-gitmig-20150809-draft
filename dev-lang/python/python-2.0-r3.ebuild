@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.0-r2.ebuild,v 1.3 2001/06/03 09:54:22 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.0-r3.ebuild,v 1.1 2001/06/04 19:49:02 drobbins Exp $
 
 S=${WORKDIR}/Python-2.0
 S2=${WORKDIR}/python-fchksum-1.1
@@ -39,7 +39,7 @@ src_unpack() {
     sed	-e 's/#_locale/_locale/'  \
 	-e 's/#syslog/syslog/'  \
 	-e 's:#zlib zlibmodule.c -I$(prefix)/include -L$(exec_prefix)/lib -lz:zlib zlibmodule.c -lz:' \
-	-e 's:^TKPATH=\:lib-tk:#TKPATH:' \
+	-e 's:^TKPATH=\:lib-tk:#TKPATH:' -e 's:^#termios:termios:' -e 's:^#resource:resource:' \
 	Setup.in > Setup
 	echo "fchksum fchksum.c md5_2.c" >> Setup
 
