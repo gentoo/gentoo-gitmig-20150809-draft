@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/beep-media-player/beep-media-player-0.9.7-r2.ebuild,v 1.6 2005/02/05 22:20:13 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/beep-media-player/beep-media-player-0.9.7-r2.ebuild,v 1.7 2005/03/30 19:16:29 chainsaw Exp $
 
 IUSE="nls gnome mp3 oggvorbis alsa oss esd mmx old-eq"
 
@@ -19,10 +19,12 @@ SLOT="0"
 
 KEYWORDS="amd64 ~ppc sparc x86 ~hppa ~mips ppc64 ~alpha"
 
+# beep-config has a runtime depend on pkg-config
 RDEPEND="app-arch/unzip
 	>=x11-libs/gtk+-2.4
 	>=x11-libs/pango-1.2
 	>=gnome-base/libglade-2.3.1
+	dev-util/pkgconfig
 	esd? ( >=media-sound/esound-0.2.30 )
 	oggvorbis? ( >=media-libs/libvorbis-1.0 )
 	alsa? ( >=media-libs/alsa-lib-1.0 )
