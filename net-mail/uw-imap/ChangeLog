@@ -1,12 +1,16 @@
 # ChangeLog for net-mail/uw-imap
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/ChangeLog,v 1.12 2003/02/12 08:17:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/ChangeLog,v 1.13 2003/03/20 17:17:15 gmsoft Exp $
 
   09 Feb 2003; Dean Bailey <alron@gentoo.org> uw-imap-2002b.ebuild, 
   uw-imap-2001a-r3.ebuild :
   Added !net-mail/vimap conflict.
   
 *uw-imap-2002b (12 Jan 2003)
+
+  20 Mar 2003; Guy Martin <gmsoft@gentoo.org> uw-imap-2002b.ebuild,
+  uw-imap-2002a.ebuild :
+  Added ~hppa to KEYWORDS.
 
   12 Jan 2003; Nick Hadaway <raker@gentoo.org> uw-imap-2002b.ebuild,
   files/digest-uw-imap-2002b :
@@ -24,6 +28,9 @@
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *uw-imap-2001a-r3 (25 Sep 2002)
+
+  20 Mar 2003; Guy Martin <gmsoft@gento.org> uw-imap-2001a-r3.ebuild :
+  Added hppa to KEYWORDS.
 
   24 Sep 2002; Nick Hadaway <raker@gentoo.org> uw-imap-2001a-r3.ebuild,
   files/digest-uw-imap-2001a-r3, files/gentoo-2001a-r3.diff,
