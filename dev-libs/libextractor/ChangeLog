@@ -1,8 +1,11 @@
 # ChangeLog for dev-libs/libextractor
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libextractor/ChangeLog,v 1.8 2003/03/28 23:37:26 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libextractor/ChangeLog,v 1.9 2003/04/01 20:55:35 liquidx Exp $
 
 *libextractor-0.2.2 (23 mar 2003)
+
+  01 Apr 2003; Alastair Tse <liquidx@gentoo.org> libextractor-0.2.2.ebuild:
+  another fix for this shoddy library. this time its missing -lvorbisfile.
 
   28 Mar 2003; Alastair Tse <liquidx@gentoo.org> libextractor-0.2.2.ebuild:
   elibtoolize
