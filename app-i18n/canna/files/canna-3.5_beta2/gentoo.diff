@@ -1,0 +1,2574 @@
+diff -uNr Canna35b2.orig/Canna.conf Canna35b2/Canna.conf
+--- Canna35b2.orig/Canna.conf	Thu Nov 28 19:27:01 1996
++++ Canna35b2/Canna.conf	Fri May 17 11:47:38 2002
+@@ -128,14 +128,19 @@
+  * $Id: gentoo.diff,v 1.1 2002/06/01 13:40:35 wmertens Exp $
+  */
+ 
+-cannaBinDir = /usr/local/canna/bin
+-cannaSrvDir = /usr/local/canna/bin
+-cannaLibDir = /usr/local/canna/lib
+-cannaManDir = /usr/local/canna/man
+-cannaIncDir = /usr/local/canna/include/canna
+-libCannaDir = /usr/lib
+-
+-ErrDir  = /usr/spool/canna
++cannaBinDir   = /usr/bin
++cannaSrvDir   = /usr/sbin
++cannaLibDir   = /etc/canna
++cannaEtcDir   = /etc/canna
++cannaManDir   = /usr/share/man
++cannaIncDir   = /usr/include/canna
++libCannaDir   = /usr/lib
++cannaDocDir   = /usr/share/doc/canna-3.5_beta2
++cannaShareDir = /usr/share/canna
++
++ErrDir   = /var/log/canna
++LockDir  = /tmp/.iroha_unix
++LockFile = IROHA
+ 
+ wcharDefinition = -DCANNA_WCHAR
+ Wlib =
+@@ -148,7 +153,7 @@
+ 
+ pointerIntegerDef =
+ 
+-cannaDsoRev = 1
++cannaDsoRev = 1.0
+     /* SunOS 4.x をお使いの方で shared object を利用する場合には
+             cannaDsoRev = 1.1
+     と指定してください。また、FreeBSD を利用する場合は、
+@@ -167,7 +172,7 @@
+ CHMOD = chmod
+ 
+ /* 日本語マニュアルを使わないのであればコメントアウト */
+-#define JAPANESEMAN
++/* #define JAPANESEMAN */
+ 
+ /* locale ディレクトリを持っている場合は以下を記述する */
+ /* #define LOCALE_DIR /usr/lib/locale */
+@@ -204,7 +209,7 @@
+ /* #define UseInstalledLibCanna YES */
+ #define UseInstalledLibCanna NO
+ 
+-DicDir   = $(cannaLibDir)/dic
++DicDir   = /var/lib/canna/dic
+ 
+ #ifdef NeXT
+ #define NO_X_ENV
+@@ -283,11 +288,13 @@
+      SCRIPTS_DEFINES = 
+ 
+ /* The following is based on the macro definition in mit/config/Imake.rules */
++/*
+ #ifdef JAPANESEMAN
+  MANSRCSUFF = jmn
+ #else
+  MANSRCSUFF = man
+ #endif
++*/
+ 
+ /* USE_OBSOLETE_STYLE_FILENAME を定義するための定義 */
+ #ifdef USE_OBSOLETE_STYLE_FILENAME
+@@ -304,6 +311,9 @@
+ 	(echo "s%@(cannaBinDir)%$(cannaBinDir)%g"; \			@@\
+ 	 echo "s%@(cannaLibDir)%$(cannaLibDir)%g"; \			@@\
+ 	 echo "s%@(cannaIncDir)%$(cannaIncDir)%g"; \			@@\
++	 echo "s%@(DicDir)%$(DicDir)%g"; \				@@\
++	 echo "s%@(LockDir)%$(LockDir)%g"; \				@@\
++	 echo "s%@(LockFile)%$(LockFile)%g"; \				@@\
+ 	 echo "s%@(ErrDir)%$(ErrDir)%g") > $(MANUALSED)			@@\
+ clean::									@@\
+ 	$(RM) $(MANUALSED)
+@@ -317,22 +327,30 @@
+ 	echo "s%@(cannaBinDir)%$(cannaBinDir)%g" > $(MANUALSED)		@@\
+ 	echo "s%@(cannaLibDir)%$(cannaLibDir)%g" >> $(MANUALSED)	@@\
+ 	echo "s%@(cannaIncDir)%$(cannaIncDir)%g" >> $(MANUALSED)	@@\
++	echo "s%@(DicDir)%$(DicDir)%g" >> $(MANUALSED)		@@\
++	echo "s%@(LockDir)%$(LockDir)%g" >> $(MANUALSED)		@@\
++	echo "s%@(LockFile)%$(LockFile)%g" >> $(MANUALSED)		@@\
+ 	echo "s%@(ErrDir)%$(ErrDir)%g" >> $(MANUALSED)			@@\
+ clean::									@@\
+ 	$(RM) $(MANUALSED)
+ #endif
+ 
++MANSUFFIX = 1 /* man section for user programs */
++
+ #ifdef InstallManPageLong
+ #undef InstallManPageLong
+ #endif
+ #define	InstallManPageLong(file,destdir,dest)				@@\
+-ConvertPathName(file.tmp,file.$(MANSRCSUFF))				@@\
+-install.man:: file.tmp							@@\
++ConvertPathName(file.tmp,file.man)					@@\
++ConvertPathName(file.jtmp,file.jmn)					@@\
++install.man:: file.tmp file.jtmp					@@\
+ 	MakeDir($(DESTDIR)destdir/man$(MANSUFFIX))			@@\
++	MakeDir($(DESTDIR)destdir/ja/man$(MANSUFFIX))		@@\
+ 	$(INSTALL) -c $(INSTMANFLAGS) file.tmp $(DESTDIR)destdir/man$(MANSUFFIX)/dest.$(MANSUFFIX)	@@\
+-	$(RM) file.tmp							@@\
++	$(INSTALL) -c $(INSTMANFLAGS) file.jtmp $(DESTDIR)destdir/ja/man$(MANSUFFIX)/dest.$(MANSUFFIX)	@@\
++	$(RM) file.tmp file.jtmp					@@\
+ clean::									@@\
+-	$(RM) file.tmp
++	$(RM) file.tmp file.jtmp
+ 
+ #ifdef InstallManPage
+ #undef InstallManPage
+@@ -340,17 +358,22 @@
+ #define	InstallManPage(file,destdir)					@@\
+ InstallManPageLong(file,destdir,file)
+ 
++LIBMANSUFFIX = 3 /* man section for libraries */
++
+ #ifdef InstallLibManPageLong
+ #undef InstallLibManPageLong
+ #endif
+ #define	InstallLibManPageLong(file,destdir,dest)			@@\
+-ConvertPathName(file.tmp,file.$(MANSRCSUFF))				@@\
+-install.man:: file.tmp							@@\
++ConvertPathName(file.tmp,file.man)				@@\
++ConvertPathName(file.jtmp,file.jmn)				@@\
++install.man:: file.tmp file.jtmp				@@\
+ 	MakeDir($(DESTDIR)destdir/man$(LIBMANSUFFIX))			@@\
++	MakeDir($(DESTDIR)destdir/ja/man$(LIBMANSUFFIX))	@@\
+ 	$(INSTALL) -c $(INSTMANFLAGS) file.tmp $(DESTDIR)destdir/man$(LIBMANSUFFIX)/dest.$(LIBMANSUFFIX)	@@\
+-	$(RM) file.tmp							@@\
++	$(INSTALL) -c $(INSTMANFLAGS) file.jtmp $(DESTDIR)destdir/ja/man$(LIBMANSUFFIX)/dest.$(LIBMANSUFFIX)	@@\
++	$(RM) file.tmp file.jtmp					@@\
+ clean::									@@\
+-	$(RM) file.tmp
++	$(RM) file.tmp file.jtmp
+ 
+ #ifdef InstallLibManPage
+ #undef InstallLibManPage
+@@ -375,7 +398,7 @@
+ step::									@@\
+ 	@case '${MFLAGS}' in *[i]*) set +e;; esac;			@@\
+ 	DirFailPrefix@for i in dirs; do if [ -d $(DESTDIR)$$i ]; then \	@@\
+-		set +x; else (set -x; $(MKDIRHIER) $(DESTDIR)$$i;$(CHOWN) owner $(DESTDIR)$$i;$(CHGRP) group $(DESTDIR)$$i); fi \	@@\
++		set +x; else (set -x; $(MKDIRHIER) $(DESTDIR)$$i;$(CHOWN) owner $(DESTDIR)$$i;$(CHGRP) group $(DESTDIR)$$i); fi; \	@@\
+ 	done
+ #endif /* MakeDirectories */
+ 
+@@ -423,6 +446,7 @@
+ 	echo "#define CANNAHOSTFILE '$(cannaLibDir)/cannahost'" >> junk	@@\
+ 	echo "/* for lib/canna */" >> junk				@@\
+ 	echo "#define CANNALIBDIR '$(cannaLibDir)'" >> junk		@@\
++	echo "#define CANNASHAREDIR '$(cannaShareDir)'" >> junk		@@\
+ 	echo "/* for scripts */" >> junk				@@\
+ 	echo "#define CANNABINDIR $(cannaBinDir)" >> junk		@@\
+ 	echo "/* others */" >> junk					@@\
+@@ -446,6 +470,7 @@
+ 	 echo "#define CANNAHOSTFILE \"$(cannaLibDir)/cannahost\"";\	@@\
+ 	 echo "/* for lib/canna */";\					@@\
+ 	 echo "#define CANNALIBDIR \"$(cannaLibDir)\""; \		@@\
++	 echo "#define CANNASHAREDIR \"$(cannaShareDir)\""; \		@@\
+ 	 echo "/* for scripts */";\					@@\
+ 	 echo "#define CANNABINDIR $(cannaBinDir)"; \			@@\
+ 	 echo "/* others */";\					@@\
+diff -uNr Canna35b2.orig/Imakefile Canna35b2/Imakefile
+--- Canna35b2.orig/Imakefile	Wed Nov 27 16:01:34 1996
++++ Canna35b2/Imakefile	Fri May 17 09:59:40 2002
+@@ -3,7 +3,7 @@
+ 
+ #define IHaveSubdirs
+ #define PassCDebugFlags
+-      WORLDOPTS = -k
++      WORLDOPTS =
+         SUBDIRS = lib canna server cmd dic misc doc
+         INCLUDE = ./include/canna
+ AllTarget(cannaconf.h)
+@@ -11,7 +11,7 @@
+ DependSubdirs($(SUBDIRS))
+ 
+ clean::
+-	$(RM) -r include cannaconf.h
++	$(RM) -r include
+ 
+ includes::
+ 	$(RM) -r include
+diff -uNr Canna35b2.orig/ccustom/canna.h Canna35b2/ccustom/canna.h
+--- Canna35b2.orig/ccustom/canna.h	Thu Nov  7 10:21:45 1996
++++ Canna35b2/ccustom/canna.h	Thu May 16 16:26:11 2002
+@@ -41,7 +41,7 @@
+ /*#include "jrkanji.h"*/
+ 
+ #if defined(SYSV) || defined(SVR4) || defined(__STDC__)
+-# if defined(SYSV) || defined(SVR4)
++# if defined(SYSV) || defined(SVR4) || defined(linux) || defined(__GNU__)
+ #  include <memory.h>
+ # endif
+ # define bzero(buf, size) memset((char *)(buf), 0x00, (size))
+diff -uNr Canna35b2.orig/cmd/cannacheck/ccheck.man Canna35b2/cmd/cannacheck/ccheck.man
+--- Canna35b2.orig/cmd/cannacheck/ccheck.man	Thu Jan 27 19:45:08 1994
++++ Canna35b2/cmd/cannacheck/ccheck.man	Thu May 16 22:28:13 2002
+@@ -46,13 +46,13 @@
+ Displays all the above information including items that contain no problem.
+ .SH "FILES"
+ .IP "@(cannaLibDir)/cannahost" 36
+-Name of the host under which \fIcannaserver(1M)\fP is in operation.
++Name of the host under which \fIcannaserver(1)\fP is in operation.
+ .SH "SEE ALSO"
+ .br
+-cannaserver(1M), cannakill(1M), cannastat(1)
++cannaserver(1), cannakill(1), cannastat(1)
+ .SH "ENVIRONMENT"
+ .IP "CANNAHOST" 12
+-Specifies the name of the host under which \fIcannaserver(1M)\fP is in
++Specifies the name of the host under which \fIcannaserver(1)\fP is in
+ operation.
+ .IP "CANNAFILE" 12
+ Specifies the initialize file (.canna).
+diff -uNr Canna35b2.orig/cmd/cannastat/cstat.man Canna35b2/cmd/cannastat/cstat.man
+--- Canna35b2.orig/cmd/cannastat/cstat.man	Thu Jan 27 19:45:51 1994
++++ Canna35b2/cmd/cannastat/cstat.man	Thu May 16 22:28:13 2002
+@@ -29,9 +29,9 @@
+ .SH "DESCRIPTION"
+ .PP
+ \fIcannastat(1)\fP displays information about the Kana-Kanji conversion
+-server \fIcannaserver(1M)\fP.  The information includes the
++server \fIcannaserver(1)\fP.  The information includes the
+ following: the name of the machine on which the connected server
+-exists, the \fIcannaserver(1M)\fP's version, the number of clients
++exists, the \fIcannaserver(1)\fP's version, the number of clients
+ connecting to the server, the name of the user connecting to the
+ server, its user number, the socket number, the number of contexts,
+ the time of connection to the server, the time of use of the server,
+@@ -85,10 +85,10 @@
+ Name of the host under which cannaserver is in operation.
+ .SH "SEE ALSO"
+ .PP
+-cannaserver(1M), cannakill(1M), cannacheck(1)
++cannaserver(1), cannakill(1), cannacheck(1)
+ .PP
+ .SH "ENVIRONMENT"
+ .PP
+ .IP "CANNAHOST" 12
+-Specifies the name of the host under which \fIcannaserver(1M)\fP is in
++Specifies the name of the host under which \fIcannaserver(1)\fP is in
+ operation.
+diff -uNr Canna35b2.orig/cmd/catdic/Imakefile Canna35b2/cmd/catdic/Imakefile
+--- Canna35b2.orig/cmd/catdic/Imakefile	Mon Dec  2 20:38:14 1996
++++ Canna35b2/cmd/catdic/Imakefile	Thu May 16 23:19:12 2002
+@@ -1,6 +1,9 @@
+ /* $Id: gentoo.diff,v 1.1 2002/06/01 13:40:35 wmertens Exp $ */
+ #include "../../Canna.conf"
+ 
++/* gentoo: use hard links so that the image can be merged correctly */
++              LN = ln
++
+        CANNAROOT = ../..
+         CANNASRC = $(CANNAROOT)/lib/canna
+           RKCSRC = $(CANNAROOT)/lib/RKC
+@@ -53,45 +56,45 @@
+ 
+ #ifdef __EMX__
+ install::
+-	$(RM) $(cannaBinDir)/cpdic.exe
+-	$(RM) $(cannaBinDir)/lsdic.exe
+-	$(RM) $(cannaBinDir)/mkdic.exe
+-	$(RM) $(cannaBinDir)/mvdic.exe
+-	$(RM) $(cannaBinDir)/rmdic.exe
+-	$(RM) $(cannaBinDir)/syncdic.exe
+-	$(RM) $(cannaBinDir)/chmoddic.exe
+-	$(RM) $(cannaBinDir)/addwords.exe
+-	$(RM) $(cannaBinDir)/delwords.exe
+-	$(RM) $(cannaBinDir)/cannakill.exe
+-	$(LN) $(cannaBinDir)/catdic.exe $(cannaBinDir)/cpdic.exe
+-	$(LN) $(cannaBinDir)/catdic.exe $(cannaBinDir)/lsdic.exe
+-	$(LN) $(cannaBinDir)/catdic.exe $(cannaBinDir)/mkdic.exe
+-	$(LN) $(cannaBinDir)/catdic.exe $(cannaBinDir)/mvdic.exe
+-	$(LN) $(cannaBinDir)/catdic.exe $(cannaBinDir)/rmdic.exe
+-	$(LN) $(cannaBinDir)/catdic.exe $(cannaBinDir)/syncdic.exe
+-	$(LN) $(cannaBinDir)/catdic.exe $(cannaBinDir)/chmoddic.exe
+-	$(LN) $(cannaBinDir)/catdic.exe $(cannaBinDir)/addwords.exe
+-	$(LN) $(cannaBinDir)/catdic.exe $(cannaBinDir)/delwords.exe
+-	$(LN) $(cannaBinDir)/catdic.exe $(cannaBinDir)/cannakill.exe
++	$(RM) $(DESTDIR)$(cannaBinDir)/cpdic.exe
++	$(RM) $(DESTDIR)$(cannaBinDir)/lsdic.exe
++	$(RM) $(DESTDIR)$(cannaBinDir)/mkdic.exe
++	$(RM) $(DESTDIR)$(cannaBinDir)/mvdic.exe
++	$(RM) $(DESTDIR)$(cannaBinDir)/rmdic.exe
++	$(RM) $(DESTDIR)$(cannaBinDir)/syncdic.exe
++	$(RM) $(DESTDIR)$(cannaBinDir)/chmoddic.exe
++	$(RM) $(DESTDIR)$(cannaBinDir)/addwords.exe
++	$(RM) $(DESTDIR)$(cannaBinDir)/delwords.exe
++	$(RM) $(DESTDIR)$(cannaBinDir)/cannakill.exe
++	$(LN) $(DESTDIR)$(cannaBinDir)/catdic.exe $(DESTDIR)$(cannaBinDir)/cpdic.exe
++	$(LN) $(DESTDIR)$(cannaBinDir)/catdic.exe $(DESTDIR)$(cannaBinDir)/lsdic.exe
++	$(LN) $(DESTDIR)$(cannaBinDir)/catdic.exe $(DESTDIR)$(cannaBinDir)/mkdic.exe
++	$(LN) $(DESTDIR)$(cannaBinDir)/catdic.exe $(DESTDIR)$(cannaBinDir)/mvdic.exe
++	$(LN) $(DESTDIR)$(cannaBinDir)/catdic.exe $(DESTDIR)$(cannaBinDir)/rmdic.exe
++	$(LN) $(DESTDIR)$(cannaBinDir)/catdic.exe $(DESTDIR)$(cannaBinDir)/syncdic.exe
++	$(LN) $(DESTDIR)$(cannaBinDir)/catdic.exe $(DESTDIR)$(cannaBinDir)/chmoddic.exe
++	$(LN) $(DESTDIR)$(cannaBinDir)/catdic.exe $(DESTDIR)$(cannaBinDir)/addwords.exe
++	$(LN) $(DESTDIR)$(cannaBinDir)/catdic.exe $(DESTDIR)$(cannaBinDir)/delwords.exe
++	$(LN) $(DESTDIR)$(cannaBinDir)/catdic.exe $(DESTDIR)$(cannaBinDir)/cannakill.exe
+ #else
+ install::
+-	$(RM) $(cannaBinDir)/cpdic
+-	$(RM) $(cannaBinDir)/lsdic
+-	$(RM) $(cannaBinDir)/mkdic
+-	$(RM) $(cannaBinDir)/mvdic
+-	$(RM) $(cannaBinDir)/rmdic
+-	$(RM) $(cannaBinDir)/syncdic
+-	$(RM) $(cannaBinDir)/chmoddic
+-	$(RM) $(cannaBinDir)/addwords
+-	$(RM) $(cannaBinDir)/delwords
+-	$(RM) $(cannaBinDir)/cannakill
+-	$(LN) $(cannaBinDir)/catdic $(cannaBinDir)/cpdic
+-	$(LN) $(cannaBinDir)/catdic $(cannaBinDir)/lsdic
+-	$(LN) $(cannaBinDir)/catdic $(cannaBinDir)/mkdic
+-	$(LN) $(cannaBinDir)/catdic $(cannaBinDir)/mvdic
+-	$(LN) $(cannaBinDir)/catdic $(cannaBinDir)/rmdic
+-	$(LN) $(cannaBinDir)/catdic $(cannaBinDir)/syncdic
+-	$(LN) $(cannaBinDir)/catdic $(cannaBinDir)/addwords
+-	$(LN) $(cannaBinDir)/catdic $(cannaBinDir)/delwords
+-	$(LN) $(cannaBinDir)/catdic $(cannaBinDir)/cannakill
++	$(RM) $(DESTDIR)$(cannaBinDir)/cpdic
++	$(RM) $(DESTDIR)$(cannaBinDir)/lsdic
++	$(RM) $(DESTDIR)$(cannaBinDir)/mkdic
++	$(RM) $(DESTDIR)$(cannaBinDir)/mvdic
++	$(RM) $(DESTDIR)$(cannaBinDir)/rmdic
++	$(RM) $(DESTDIR)$(cannaBinDir)/syncdic
++	$(RM) $(DESTDIR)$(cannaBinDir)/chmoddic
++	$(RM) $(DESTDIR)$(cannaBinDir)/addwords
++	$(RM) $(DESTDIR)$(cannaBinDir)/delwords
++	$(RM) $(DESTDIR)$(cannaBinDir)/cannakill
++	$(LN) $(DESTDIR)$(cannaBinDir)/catdic $(DESTDIR)$(cannaBinDir)/cpdic
++	$(LN) $(DESTDIR)$(cannaBinDir)/catdic $(DESTDIR)$(cannaBinDir)/lsdic
++	$(LN) $(DESTDIR)$(cannaBinDir)/catdic $(DESTDIR)$(cannaBinDir)/mkdic
++	$(LN) $(DESTDIR)$(cannaBinDir)/catdic $(DESTDIR)$(cannaBinDir)/mvdic
++	$(LN) $(DESTDIR)$(cannaBinDir)/catdic $(DESTDIR)$(cannaBinDir)/rmdic
++	$(LN) $(DESTDIR)$(cannaBinDir)/catdic $(DESTDIR)$(cannaBinDir)/syncdic
++	$(LN) $(DESTDIR)$(cannaBinDir)/catdic $(DESTDIR)$(cannaBinDir)/addwords
++	$(LN) $(DESTDIR)$(cannaBinDir)/catdic $(DESTDIR)$(cannaBinDir)/delwords
++	$(LN) $(DESTDIR)$(cannaBinDir)/catdic $(DESTDIR)$(cannaBinDir)/cannakill
+ #endif
+diff -uNr Canna35b2.orig/cmd/catdic/cannakill.man Canna35b2/cmd/catdic/cannakill.man
+--- Canna35b2.orig/cmd/catdic/cannakill.man	Tue Dec  6 09:51:37 1994
++++ Canna35b2/cmd/catdic/cannakill.man	Thu May 16 22:28:13 2002
+@@ -29,14 +29,14 @@
+ .SH "DESCRIPTION"
+ .PP
+ cannakill terminates operation of Kana-Kanji conversion server
+-cannaserver(1M).  This causes the server to delete the lock file and
++cannaserver(1).  This causes the server to delete the lock file and
+ close all open dictionaries before terminating its processing.
+ .PP
+-The user who has started cannaserver(1M) or the super user can only
+-use cannakill(1M) to terminate operation of canncannaer.
++The user who has started cannaserver(1) or the super user can only
++use cannakill(1) to terminate operation of canncannaer.
+ .SH "FILES"
+ .IP "@(LockDir)/@(LockFile)" 36
+ Lock file
+ .SH "SEE ALSO"
+ .PP
+-cannaserver(1M), cannastat(1), cannacheck(1)
++cannaserver(1), cannastat(1), cannacheck(1)
+diff -uNr Canna35b2.orig/cmd/catdic/catdic.man Canna35b2/cmd/catdic/catdic.man
+--- Canna35b2.orig/cmd/catdic/catdic.man	Thu Jan 27 19:46:29 1994
++++ Canna35b2/cmd/catdic/catdic.man	Thu May 16 22:28:13 2002
+@@ -30,7 +30,7 @@
+ catdic downloads a dictionary file to the current directory. 
+ The file downloaded is a dictionary file the dictionary name of which is
+ \fIremote-dic\fP.  It is in the user dictionary directory of the machine 
+-on which \fIcannaserver\fP(1M) is in operation.  (Hereafter, this machine 
++on which \fIcannaserver\fP(1) is in operation.  (Hereafter, this machine 
+ is called the remote host.)
+ .SH "OPTIONS"
+ .IP "\-cs \fIcanna-server\fP (or \-cannaserver \fIcanna-server\fP)" 12
+@@ -61,4 +61,4 @@
+ file ``test2.t''.
+ .SH "SEE ALSO"
+ .PP
+-cannaserver(1M), lsdic(1), mkdic(1)
++cannaserver(1), lsdic(1), mkdic(1)
+diff -uNr Canna35b2.orig/cmd/catdic/mkdic.man Canna35b2/cmd/catdic/mkdic.man
+--- Canna35b2.orig/cmd/catdic/mkdic.man	Thu Jan 27 19:46:50 1994
++++ Canna35b2/cmd/catdic/mkdic.man	Thu May 16 22:28:14 2002
+@@ -28,7 +28,7 @@
+ .SH "DESCRIPTION"
+ .PP
+ mkdic creates user dictionary named \fIremote-dic\fP in the user dictionary 
+-directory of the remote host, on which \fIcannaserver\fP(1M) is in operation. 
++directory of the remote host, on which \fIcannaserver\fP(1) is in operation. 
+ Dictionary file name \fIremote-dic\fP is assigned to this file at this time.
+ .PP
+ If the \- and \-l option isn't specified, mkdic creates an empty dictionary.
+@@ -96,4 +96,4 @@
+ user1.t is a dictionary file name generated automatically by the system.
+ .SH "SEE ALSO"
+ .PP
+-catdic(1), cannaserver(1M), lsdic(1)
++catdic(1), cannaserver(1), lsdic(1)
+diff -uNr Canna35b2.orig/cmd/crxgram/crxgram.c Canna35b2/cmd/crxgram/crxgram.c
+--- Canna35b2.orig/cmd/crxgram/crxgram.c	Wed Nov 27 17:20:14 1996
++++ Canna35b2/cmd/crxgram/crxgram.c	Thu May 16 16:26:11 2002
+@@ -69,6 +69,7 @@
+ static char	fileName[256];
+ static int	lineNum;
+ 
++#if !defined(__GLIBC__)
+ static char *
+ basename(name)
+   char *name;
+@@ -83,6 +84,7 @@
+ 	    break;
+     return ++s;
+ }
++#endif /* __GLIBC__ */
+ static void
+ usage(prog)
+   char	*prog;
+diff -uNr Canna35b2.orig/cmd/cshost/cshost.man Canna35b2/cmd/cshost/cshost.man
+--- Canna35b2.orig/cmd/cshost/cshost.man	Thu Jan 27 18:51:23 1994
++++ Canna35b2/cmd/cshost/cshost.man	Thu May 16 22:28:14 2002
+@@ -6,9 +6,9 @@
+ .SH "DESCRIPTION"
+ .PP
+ the \fIcshost\fP(1) prints the list of machines that are allowed to make
+-connections to \fIcannaserver\fP(1M).
++connections to \fIcannaserver\fP(1).
+ .PP
+-\fIcannaserver\fP(1M) allows network connections only from programs
++\fIcannaserver\fP(1) allows network connections only from programs
+ running on the same machine or machines listed in the file
+ /etc/hosts.canna.  If /etc/hosts.canna does not exist or the file
+ is empty, access is granted to everyone.
+diff -uNr Canna35b2.orig/dic/ideo/grammar/Imakefile Canna35b2/dic/ideo/grammar/Imakefile
+--- Canna35b2.orig/dic/ideo/grammar/Imakefile	Wed Nov 27 16:14:45 1996
++++ Canna35b2/dic/ideo/grammar/Imakefile	Fri May 17 09:27:09 2002
+@@ -85,6 +85,6 @@
+ InstallMultipleFlags($(ALLDIC),$(CANNADICDIR),-m 0664 $(cannaOwnerGroup))
+ 
+ install::
+-	$(CHGRP) $(cannaGroup) $(CANNADICDIR)
+-	$(CHOWN) $(cannaOwner) $(CANNADICDIR)
+-	$(CHMOD) ug+w $(CANNADICDIR)
++	$(CHGRP) $(cannaGroup) $(DESTDIR)$(CANNADICDIR)
++	$(CHOWN) $(cannaOwner) $(DESTDIR)$(CANNADICDIR)
++	$(CHMOD) ug+w $(DESTDIR)$(CANNADICDIR)
+diff -uNr Canna35b2.orig/dic/ideo/grammar/gram.code Canna35b2/dic/ideo/grammar/gram.code
+--- Canna35b2.orig/dic/ideo/grammar/gram.code	Mon Dec  2 17:38:39 1996
++++ Canna35b2/dic/ideo/grammar/gram.code	Thu May 16 16:26:11 2002
+@@ -30,7 +30,7 @@
+ /* KN 形式名詞: 実質的な意味からはなれ，形式的な意味のみを持っている,
+  *              名詞のような働きをする語．従来から定義されている語．
+  * TKN 新形式名詞:
+- *		新しくつけ足した形式名詞．働きは同じ．
++ *		「な」がJTNOのように働く後に引き続く。「はず」「わけ」の二語。
+  * FKN 副助詞からの形式名詞:
+  *		副助詞であったが，形式的で名詞のような働きをする語，
+  *		くらい，ぐらい，だけ，など，ほど,ゆえ --> 形式名詞へ移動
+@@ -46,9 +46,9 @@
+ N03     _       _       /* 十,二十,…,数十 */
+ 
+ KN      _       _
+-	/* あと/うち/おり/こと/ため/とき/ところ/はず/ほう/ほか/まえ/まま/もの/わけ/ */
++	/* あと/うち/おり/こと/ため/とき/ところ/はず/ほう/ほか/まえ/まま/もの/わけ//あいだ/あまり/うえ/おかげ/かぎり/かた/くせ/ごと/つもり/ふし/やつ/よう/ような/よし */
+ TKN      _      _
+-	/* あいだ/あまり/うえ/おかげ/かぎり/かた/くせ/ごと/つもり/ふし/やつ/よう/ような/よし */
++	/* はず/わけ (KNとの二重登録をする) */
+ FKN      _      _
+ 	/* くらい/ぐらい/こそ/だけ/など/ほど/ゆえ */
+ 
+@@ -218,29 +218,30 @@
+ /* 動詞活用語尾
+  *	1. 連用形が名詞になるもののコード分類について
+  *	  連用形だけ別コード化し，他の活用形は共有することにする．
+- *	ただし，C5r(行く)については一語のみなので連用形のコードとする
+  *	  また，一段動詞については，語幹での接続のみが問題になるので，
+  *	語幹は２分類とするが，活用語尾を共通にすることにした．
+  */
+ /* か行5段 */
+-k5      a       か              /* 置か_ない,書か_ない */
+-        iO      い              /* 置い_たら,書い_た */
++k5      iO      い              /* 置い_たら,書い_た */
+         u       く              /* 置く_とき,書く_とき */
+         e       け              /* 置け,     書け */   
+         o       こ              /* 置こ_う,  書こ_う */
+         ya      _               /* 置きゃ */
+ 
++k5a     _       か              /* 置か_ない,書か_ない: ktek5a参照 */
+ k5i	_	き              /* 置き_ます */
+ k5ir	_	き		/* 書き_ます,書き */
+ 
+ /* カ行5段 行く */
+-c5r     a       か              /* 行か_ない */
+-        i       き              /* 行き_ます */
+-        tO      っ              /* 行っ_たら */
+-        u       く              /* 行く_とき */
+-        e       け              /* 行け */
+-        o       こ              /* 行こ_う */
+-        ya      _               /* 行きゃ */
++/* 品詞数削減のため主にK5rと活用語尾を共有
++ * 行か_ない k5a
++ * 行き_ます k5ir
++ * 行く_とき k5u
++ * 行け      k5e
++ * 行こ_う   k5o 
++ * 行きゃ    k5ya
++ * 行っ_たら t5tO
++ */
+ 
+ /* が行5段 */
+ g5      a       が              /* 仰が_ない,急が_ない */
+@@ -263,13 +264,13 @@
+ 
+ /* た行5段 */
+ t5      a       た              /* 絶た_ない,打た_ない */
+-        tO      っ              /* 絶っ_たら,打っ_た */
+         u       つ              /* 絶つ_とき,打つ_とき */
+         e       て              /* 絶て,     打て_ば */
+         o       と              /* 絶と_う,  打と_う */
+         ya      _               /* 絶ちゃ,打ちゃ */
+ t5i	_	ち              /* 絶ち_ます */
+ t5ir	_	ち		/* 打ち_ます,打ち */
++t5tO	_	っ              /* 絶っ_たら,打っ_た */
+ 
+ /* な行5段 */
+ n5      a       な              /* 死な_ない */
+@@ -394,10 +395,11 @@
+ mase    _       ませ/まし
+ 
+ /* です:断定 */
+-des     ho      でしょ
+-        hou     でしょう
+-        i       でし
+-        u       です
++des	i	でし
++	u	です
++desho	_	でしょ
++deshou	_	でしょう
++
+ 
+ /* た:過去完了 */
+ kt      ara     たら
+@@ -429,13 +431,15 @@
+ /* だ:断定 */
+ ddar	o	だろ            /* 形動の語尾を兼ねる ? */
+ 	ou	だろう
+-dd      at      だっ            /* 形動の語尾を兼ねる ? */
+-        emo     でも            /* 接続助詞 ? */
++ddat	_	だっ            /* 形動の語尾を兼ねる ? */
++ddemo	_	でも            /* 接続助詞 ? */
+ dda1    _       だ              /* 形動の語尾を兼ねる ? */
+ dda2    _       だ              /* 文章末にしか接続しない */
+ dde1    _       で              /* 形動の語尾を兼ねる ? */
+ dde2	_	で              /* 文節末に接続しない */
++dde3	_	で		/* 「しない_で_くれ」:「し_て_くれ」と対応 */
+ ddeha	_	では/じゃ       /* 接続助詞 ? */
++djan	_	_		/* 「じゃ_ない」と同じ前後の接続 */
+ 
+ /* 動詞型接尾語活用
+  *	形態が変化する接尾語を含む
+@@ -449,7 +453,8 @@
+ /* 上下活用の助動詞 */
+ saseru  _       させ    /* 使役 */
+ simeru  _       しめ    /* 使役 */
+-sugiru  _       すぎ    /* 行き_すぎる */
++sugiru  _       すぎ    /* 行き_すぎる、立派_すぎる */
++yagaru	_	_	/* 動詞の後のみ */
+ seru    _       せ      /* 使役 */
+ N2KS    _       _      /* 一段動詞化(KS): (名)+付(づ)ける: */
+ 
+@@ -536,7 +541,7 @@
+ /* ない:否定 */
+ nai     _       な
+ nainya	_	_	/* 食べ_にゃ(あ) */
+-nainee	_	_	/* 食べ_ねえ */
++nainee	_	ない	/* 食べ_ねえ: 本来の形「ない」もここに収める。 */
+ naisa   _       なさ	/* 食べ_なさそうだ */
+ 
+ /* 接尾語 */
+@@ -597,15 +602,11 @@
+ 
+ na	_	な	/* なの */
+ 
+-/* kte に接続する口語の品詞 */
++/* k5 が接続する口語の品詞:「減ってく」など。 */
++kte2	_	_	/* 減っ_て_かない */
+ 
+-ktec5	a	_	/* 連れて_か_ない */
+-/*	i	*/	/* 連れて_き_ます :「連れて来ます」もあるため保留 */
+-	tO	_	/* 連れて_っ_て */
+-	u	_	/* 連れて_く */
+-	e	_	/* 連れて_け */
+-	o	_	/* 連れて_こ_うよ */
+-	ya	_	/* 連れて_きゃ */
++/* kte2 に接続する k5a:「付いてかんが」対策 */
++ktek5a	_	か	/* 減って_か_ない */
+ 
+ /* kto, kdo に接続する口語の品詞 */
+ 
+diff -uNr Canna35b2.orig/dic/ideo/grammar/gram.goto Canna35b2/dic/ideo/grammar/gram.goto
+--- Canna35b2.orig/dic/ideo/grammar/gram.goto	Mon Dec  2 21:59:25 1996
++++ Canna35b2/dic/ideo/grammar/gram.goto	Thu May 16 16:26:11 2002
+@@ -37,7 +37,7 @@
+ #define KAKUJOSHI	Kkara Kga Kde Kdeno Kto Kni Knite Khe Kmade Kyori Kwo
+ 
+ BB+	BB Kto
+-BB+	KJ NN N00 N01 N02 N03 CJ RT KN TKN FKN
++BB+	KJ NN N00 N01 N02 N03 CJ RT KN FKN
+ BB+	T00 T01 T02 T03 T04 T05 T06 T07 T08 T09
+ BB+	T10 T11 T12 T13 T14 T15 T16 T17 T18 T19
+ BB+	T20 T21 T22 T23 T24 T25 T26 T27 T28 T29
+@@ -48,7 +48,7 @@
+ BB+	K5 G5 S5 T5 N5 B5 M5 R5 L5 W5 U5 KS KX SX ZX NZX
+ BB+	K5r C5r G5r S5r T5r B5r M5r R5r W5r U5r KSr	/* sugiru dekiru */
+ BB+	kx sx sxu2 aru iru oru kureru morau yaru miru oku naru yoru
+-BB+	rasii youda mitaida dd dda1 dde1 ddar ddeha des JS
++BB+	rasii youda mitaida ddat ddemo dda1 dde1 ddar ddeha des desho deshou JS
+ BB+	nainee
+ BB+	PRE CNPRE JNPRE NNPRE SNPRE		/* 接頭語 */
+ BB+	N2T10 N2T15 N2T16 N2T18 N2T30 N2T35 K2T15 K2T16 K2T35
+@@ -58,9 +58,13 @@
+ BB+	CN CNS JN JNS JNM JCN KK
+ BB+	OKX
+ 
++#ifdef BUNMATU
++BM+	BM
++#endif
++
+ YOUGEN+	K5 G5 S5 T5 N5 B5 M5 R5 L5 W5 U5 KS KX SX ZX NZX
+ YOUGEN+	K5r C5r G5r S5r T5r B5r M5r R5r W5r U5r KSr	/* sugiru dekiru */
+-YOUGEN+	kx sx aru iru oru kureru morau yaru miru oku rasii dd dda1 dde1 ddar ddeha des ssu
++YOUGEN+	kx sx aru iru oru kureru morau yaru miru oku rasii ddat ddemo dda1 dde1 ddar ddeha djan des desho deshou ssu
+ YOUGEN+ KY KYna KYT KYmi KYme KYmime
+ 
+ TAIGEN+	T00 T01 T02 T03 T04 T05 T06 T07 T08 T09
+@@ -86,7 +90,7 @@
+  *			ddat(だっ)、dda(だ)はよいが
+  *			では/じゃ、でも は 助動詞語尾か接続助詞か
+  */
+-#define	T_NA	Fdatte kdn dd dda2 dde1 ddar ddeha sugiru mitaida ysouda	/* 形容動詞の活用語尾 */
++#define	T_NA	Fdatte kdn ddat ddemo dda2 dde1 ddar ddeha djan sugiru mitaida ysouda	/* 形容動詞の活用語尾 */
+ #define	T_SA	K2T15 K2T16 K2T35			/* [さ]が接続 */
+ #define	T_SURU	Ssae Skoso sx sxu2 dekiru gatera nasaru	/* [する]が接続 */
+ #define	COMMON_GOKAN 	/* T_GOKAN と F_GOKAN の共通部分 */ \
+@@ -95,7 +99,7 @@
+ 	Fka Fkoso Fsae Fsika Fsura Fdano Fttara Ftte\
+ 	Ftoka Ftote Ftomo Fdokoro Fnagara Fnaradeha Fnari Fnomi\
+ 	Fha Fbakari Fmo Fya Fyara Fyue Fnazo Fdatte Fttatte FKN JTNO Snara\
+-	rasii ppoi dd dde1 ddar ddeha des ssu mitaida buru na\
++	rasii ppoi ddat ddemo dde1 ddar ddeha djan des desho deshou ssu mitaida buru na\
+ 	N2T10 N2T15 N2T16 N2T18 N2T30 N2KS N2K5 N2R5 N2KYT ND2KY SUC
+ #define	T_GOKAN COMMON_GOKAN dda1
+ 
+@@ -265,10 +269,13 @@
+ N02+	BB N00 N03 NN JS
+ N03+	BB N00 NN JS
+ CN+	@T35 CNSUC1 CNSUC2
+-CNS+	@T35 CNSUC2
++CN-	SUC
++CNS+	@CN
++CNS-	CNSUC1
+ JN+	@T35 JNSUC
+-JNS+	@T35 JNM JNSSUC JNSUC
+-JNM+	@T35 JNMSUC JNSUC
++JN-	SUC
++JNS+	@JN JNSSUC /* JNM */
++JNM+	@JN JNMSUC
+ JCN+	@JNS @CN
+ 
+ #define	F_TARU		kdt		/* [たる]に接続 */
+@@ -335,9 +342,9 @@
+ KYU+	BB
+ 
+ /******************** その他 (接続詞，感動詞，連語，連体詞など) ********************/
+-CJ+	BB /*dd dde1 ddar ddeha des*/
++CJ+	BB /*ddat ddemo dde1 ddar ddeha djan des desho deshou*/
+ 
+-RT+	BB KN TKN FKN KJ SX ZX NZX PRE NNPRE CNPRE JNPRE
++RT+	BB KN FKN KJ SX ZX NZX PRE NNPRE CNPRE JNPRE
+ RT+	T00 T01 T02 T03 T04 T05 T06 T07 T08 T09
+ RT+	T10 T11 T12 T13 T14 T15 T16 T17 T18 T19
+ RT+	T20 T21 T22 T23 T24 T25 T26 T27 T28 T29
+@@ -353,7 +360,7 @@
+ OKX+	Zkai Zkasira Zkana Zsa Zne Zyo
+ OKX+	Fka Fsura Fdano
+ OKX+	Ftono Fha Fya JTNO Sto Stoka Stote Snara Ssae Skoso
+-OKX+	nasaru rasii dd dda2 dde1 ddar ddeha des
++OKX+	nasaru rasii ddat ddemo dda2 dde1 ddar ddeha djan des desho deshou
+ 
+ /******************** 形式名詞 ********************/
+ JTNO+	@T35
+@@ -361,10 +368,15 @@
+ JTNO-	BB Kde Kdeno Kno JTNO Fzutu
+ JTNO-	N2T10 N2T15 N2T16 N2T18 N2T30 N2KS N2K5 N2R5 N2KYT ND2KY SUC
+ JTNN+	@JTNO
+-JTNN-	Fttara Ftte Kto
++JTNN-	Fttara Ftte Fdano ddemo Kto
+ KN+	@T35
+-TKN+	@T35
++KN-	SUC
+ FKN+	@T35
++FKN-	SUC
++/* TKN: 〜な(わけ|はず) */
++TKN+	BB Zka Zkai Zkasira Zkana Zsa Zne Znee Zyo 
++TKN+	Ftoka Fdokoro Fnari Fha Fmo Snara Stte
++TKN+	rasii ppoi ddat ddemo dda1 dde1 ddar ddeha djan des desho deshou ssu mitaida na
+ 
+ /******************** 動詞 ********************/
+ /*上下一段動詞活用: 連用形が名詞になるものを追加(連用形の接続が異なるだけ) */
+@@ -372,26 +384,26 @@
+ KS+	Fsura Fha Fya Fmo
+ KS+	Stutu Snagara Ssae Skoso sasu sasiru
+ KS+	Zna
+-KS+	mas saseru sugiru nasaru rareru chau 
++KS+	mas saseru sugiru yagaru nasaru rareru chau 
+ KS+	nai nainya nainee naisa tai yasui ysouda zu znn z you mai
+ KS+	tamae D2T35 D2T16
+-KS+	kt kte kteha ktya ktemo kto gatera
++KS+	kt kte kte2 kteha ktya ktemo kto gatera
+ KS+	ni
+ /* KS-	ktemo */
+ 
+ KSr+	@KS @T35
+-KSr-	N2T35
++KSr-	N2T35 SUC
+ 
+ /* 上下一段動詞の活用語尾: 未然形，連用形の活用語尾はなく語幹のみ
+  *			   語幹が連用形のものの活用語尾を共有する
+  */
+-ksru+	BB Kni JTNO JTNN KN TKN FKN Kyori
++ksru+	BB Kni JTNO JTNN KN FKN Kyori
+ ksru+	Fga Fkoso Fsae Fsika Fsura Fdano Fdeha Fdemo Fto Ftoka Ftono Fnazo
+ ksru+	Fnomi Fha Fbakari Fmade	Fya Fyara Fyue Fmo	/* ところは、はずす */
+ ksru+	Fttatte
+ ksru+	Ska Skara Snode Sga Skuseni Skeredo Ssi Stte /*Stokoro*/ Stomo Stote
+ ksru+	Sdokoro Snara Snagara Snari Sniha Smono
+-ksru+	rasii youda mitaida dsouda mai be goto des ssu ddar ddeha
++ksru+	rasii youda mitaida dsouda mai be goto des desho deshou ssu ddar ddeha djan
+ ksru+	Zkai Zkasira Zkana Zsa Zze Zzo Ztomo Zna Znaa Zne Znee Zno
+ ksru+	Zya Zyo Zyona Zwa	/* Zka */
+ ksru+	Zmono
+@@ -408,11 +420,10 @@
+ ksya+	BB Zsa Zna Znaa Zne Znee
+ 
+ /* 5段活用語幹:	連用形が名詞になるものを追加(連用形の接続が異なるだけ) */
+-K5+	k5 k5i
+-C5r+	c5r
++K5+	k5 k5a k5i
+ G5+	g5 g5i
+ S5+	s5 s5i
+-T5+	t5 t5i
++T5+	t5 t5i t5tO
+ N5+	n5
+ B5+	b5 b5i
+ M5+	m5 m5i
+@@ -425,10 +436,11 @@
+ ZX+	zx
+ NZX+	nzx
+ 
+-K5r+    k5 k5ir
++K5r+    k5 k5a k5ir
++C5r+    k5 k5a k5ir t5tO
+ G5r+    g5 g5ir
+ S5r+    s5 s5ir
+-T5r+    t5 t5ir
++T5r+    t5 t5ir t5tO
+ B5r+    b5 b5ir
+ M5r+    m5 m5ir
+ R5r+    r5 r5a r5nO r5ir
+@@ -446,7 +458,7 @@
+ k5i+	Fkiri Fmo Fha Fya Fsura
+ k5i+	Stutu Snagara Ssae Skoso
+ k5i+	Zna
+-k5i+	nasaru tai yasui you ysouda mas sugiru tamae
++k5i+	nasaru tai yasui you ysouda mas sugiru yagaru tamae
+ k5i+	N2T18 ND2KY D2KY D2T35 D2T16
+ k5i+	gatera
+ k5i+	ni
+@@ -455,10 +467,10 @@
+ k5i+	Kni
+ k5i+	Fga Fsika Fdano Ftono Fbakari Fmade Fyara
+ k5i+	Ska Skara Stte Sto Stoka Stote Snara Sniha
+-k5i+	nasaru rasii des dd dda2 dde1 na
++k5i+	nasaru rasii des desho deshou ddat ddemo dda2 dde1 na
+ #endif
+ 
+-k5iO+	kt kte kteha ktya ktemo kto chau
++k5iO+	kt kte kte2 kteha ktya ktemo kto chau
+ 
+ k5u+	@ksru
+ 
+@@ -466,17 +478,10 @@
+ k5e-	Kni ni Snagara sasu sasiru saseru rareru tai yasui tamae Zi
+ 
+ k5ir+	@k5i @T35 N2KYT
++k5ir-	SUC
+ 
+ k5ya+	BB
+ 
+-c5ra+	@k5a
+-c5ro+	@k5o
+-c5ri+	@k5i @T35
+-c5rtO+	@k5iO
+-c5ru+	@k5u
+-c5re+	@k5e
+-c5rya+	@k5ya
+-
+ g5a+	@k5a
+ g5o+	@k5o
+ g5i+	@k5i
+@@ -485,6 +490,7 @@
+ g5e+	@k5e
+ 
+ g5ir+	@g5i @T35
++g5ir-	SUC
+ g5ya+	@k5ya
+ 
+ s5a+	@k5a
+@@ -494,6 +500,7 @@
+ s5e+	@k5e
+ 
+ s5ir+	@s5i @T35
++s5ir-	SUC
+ s5ya+	@k5ya
+ 
+ t5a+	@k5a
+@@ -504,6 +511,7 @@
+ t5e+	@k5e
+ 
+ t5ir+	@t5i @T35
++t5ir-	SUC
+ t5ya+	@k5ya
+ 
+ n5a+	@k5a
+@@ -522,6 +530,7 @@
+ b5e+	@k5e
+ 
+ b5ir+	@b5i @T35
++b5ir-	SUC
+ b5ya+	@k5ya
+ 
+ m5a+	@k5a
+@@ -532,6 +541,7 @@
+ m5e+	@k5e
+ 
+ m5ir+	@m5i @T35
++m5ir-	SUC
+ m5ya+	@k5ya
+ 
+ r5a+	@k5a
+@@ -543,6 +553,7 @@
+ r5e+	@k5e
+ 
+ r5ir+	@r5i @T35
++r5ir-	SUC
+ r5ya+	@k5ya
+ 
+ l5a+	@k5a
+@@ -563,6 +574,7 @@
+ w5e+	@k5e
+ 
+ w5ir+	@w5i @T35
++w5ir-	SUC
+ w5ya+	@k5ya
+ 
+ u5a+	@k5a
+@@ -573,6 +585,7 @@
+ u5e+	@k5e
+ 
+ u5ir+	@u5i @T35
++u5ir-	SUC
+ u5ya+	@k5ya
+ 
+ /* カ行変格活用 */
+@@ -581,7 +594,7 @@
+ kxi+	Fnagara Fha Fmo Fya
+ kxi+	Stutu Snagara Ssae nasaru
+ kxi+	Zna
+-kxi+	tai yasui ysouda mas kt kte kteha ktya ktemo chau sugiru tamae
++kxi+	tai yasui ysouda mas kt kte kteha ktya ktemo chau sugiru yagaru tamae
+ kxi+	ND2KY N2KYT
+ 
+ kxuru+	@k5u
+@@ -600,8 +613,8 @@
+ sxi+	Fnomi Fha Fbakari Fmade Fmo Fya Fyara
+ sxi+	Stutu Snagara Ssae
+ sxi+	Zna
+-sxi+	ysouda tai yasui nai nainee naisa mai mas sugiru nasaru you tamae ND2KY N2KYT
+-sxi+	kt kte kteha ktya ktemo kto
++sxi+	ysouda tai yasui nai nainee naisa mai mas sugiru yagaru nasaru chau you tamae ND2KY N2KYT
++sxi+	kt kte kte2 kteha ktya ktemo kto
+ sxi+	gatera
+ sxi+	ni
+ 
+@@ -639,8 +652,9 @@
+ /* 動詞型接尾語活用 */
+ buru+	@R5
+ garu+	@R5r
+-sugiru+	BB Fka you des dd dda1 dde1 ddar ddeha nai nainya nainee mas ks zu znn z na
++sugiru+	BB Fka you des desho deshou ddat ddemo dda1 dde1 ddar ddeha djan nai nainya nainee mas ks zu znn z na
+ sugiru+ kt kte kteha ktya ktemo 
++yagaru+	BB r5 /* r5i, r5ir はわざと入れてない */
+ 
+ /* 可能の助動詞 */
+ rareru+	@KS
+@@ -657,7 +671,7 @@
+ sasiru+	@k5iO
+ 
+ k5sa+	reru simeru nai nainya nainee zu z su siru		/* 未然に付く助動詞 */
+-k5siru+	kt kte kteha ktya ktemo
++k5siru+	kt kte kte2 kteha ktya ktemo
+ k5siru+	Stutu Snagara
+ k5siru+	tai yasui ysouda mas sugiru
+ k5siru+	N2T18 ND2KY D2KY D2T35 D2T16
+@@ -672,7 +686,7 @@
+ /* アスペクト */
+ aru+	r5 aru5a aru5i
+ aru5a+	seru reru simeru zu znn z 
+-aru5i+	@r5i Kno Sto Stomo ddar dd dda2 dde1 ddeha
++aru5i+	@r5i Kno Sto Stomo ddar ddat ddemo dda2 dde1 ddeha djan
+ 
+ iru+	ks ksyo saseru rareru tai ysouda mas nai naisa zu znn z you mai sugiru nasaru tamae
+ iru+	kt kte kteha ktya ktemo
+@@ -680,7 +694,7 @@
+ 
+ oru+	@R5
+ 
+-kureru+	BB ks Fto Stte
++kureru+	BB ks Fto Stte Zi Zya Zyo Zyona
+ kureru+ saseru rareru sugiru nasaru
+ kureru+	tai yasui ysouda mas nai nainya nainee naisa zu znn z you mai tamae
+ kureru+ kt kte kteha ktya ktemo 
+@@ -719,7 +733,7 @@
+ 
+ kykat+	kt
+ 
+-kyi+	@k5u Kde Kdeno ddeha Ztto
++kyi+	@k5u /*Kde Kdeno*/ ddeha djan Ztto
+ kyi-	mai
+ 
+ kykere+	Sdomo Sba
+@@ -735,11 +749,13 @@
+ 
+ /* 形容詞の語幹について名詞化 */
+ kymi+	@T35
++kymi-	SUC
+ 
+ nai+	ky kyku
+ nai+	ysouda
+ nainya+	BB Zna Znaa Znee Znee
+-nainee+	@kyi
++nainee+	@kyi dde3
++nainee- Fsura Zne Znee
+ naisa+	ysouda sugiru	/* 〜なさる は、動詞として対処することにする */
+ 
+ /* 形容詞型活用助動詞 */
+@@ -761,7 +777,7 @@
+ 
+ kdni+	BB Fto Fkoso Fsika Fsura Fdeha Fdemo Fmade Ftoka Fnazo Fha Fmo
+ kdni+	Sdokoro Snari Ssae
+-kdni+	/* sx sxu2 */ yoru ddar dd naru
++kdni+	sx sxu2 yoru ddar ddat ddemo naru
+ kdni+	Zkai Zkasira Zsa Zna Zne	/* Zka */
+ 
+ kdto+	@kdni
+@@ -787,14 +803,14 @@
+   N2T10 N2T15 N2T16 N2T18 N2T30 N2T35 D2T35 D2T16 K2T15 K2T16 K2T35 \
+   N2KS N2K5 N2R5 ND2KY N2KYT D2KY
+ 
+-SUC+	@KN @TKN @FKN N2T10 N2T15 N2T16 JNSUC CNSUC2 JNSSUC JNMSUC
+-CNSUC1+	@KN @TKN @FKN N2T10 N2T15 N2T16 JNSUC CNSUC2 JNSSUC JNMSUC
+-CNSUC2+	@KN @TKN @FKN N2T10 N2T15 N2T16 JNSUC CNSUC2 JNSSUC JNMSUC
+-JNSUC+	@KN @TKN @FKN N2T10 N2T15 N2T16 CNSUC2
+-JNSSUC+	@KN @TKN @FKN N2T10 N2T15 N2T16 CNSUC2
+-JNMSUC+	@KN @TKN @FKN N2T10 N2T15 N2T16 CNSUC2
+-JS+	@KN @TKN @FKN JSSUC @T35 JSmono
+-JSSUC+	@KN @TKN @FKN JSmono
++SUC+	@KN @FKN N2T10 N2T15 N2T16 JNSUC CNSUC2 JNSSUC JNMSUC
++CNSUC1+	@KN @FKN N2T10 N2T15 N2T16 JNSUC CNSUC2 JNSSUC JNMSUC
++CNSUC2+	@KN @FKN N2T10 N2T15 N2T16 JNSUC CNSUC2 JNSSUC JNMSUC
++JNSUC+	@KN @FKN N2T10 N2T15 N2T16 CNSUC2
++JNSSUC+	@KN @FKN N2T10 N2T15 N2T16 CNSUC2
++JNMSUC+	@KN @FKN N2T10 N2T15 N2T16 CNSUC2
++JS+	@KN @FKN JSSUC @T35 JSmono
++JSSUC+	@KN @FKN JSmono
+ JSmono+	BB
+ SUC-	SUFFIX
+ CNSUC1- SUFFIX
+@@ -856,12 +872,12 @@
+ /* ごとし */
+ gotoku+	BB Kni Fkoso Fsae Fsika Fsura Fdano Fha Fmo Sto Stomo
+ gotosi+	@ksru Kni
+-gotoki+	BB Kni Kno Fha KN TKN FKN
++gotoki+	BB Kni Kno Fha KN FKN
+ 
+ /* べし */
+ bekara+ zu znn z
+ beku+	BB Fha Fmo Stote ktomo
+-beki+	BB Kga Sto Stomo dd dda1 dde1 ddar ddeha des na Fka
++beki+	BB Kga Sto Stomo ddat ddemo dda1 dde1 ddar ddeha djan des desho deshou na Fka
+ beki+	Zsa Zne Znee Zyo
+ 
+ besi+	BB Fsika Fnomi Fbakari Fyara Fdano Ftono
+@@ -869,7 +885,7 @@
+ 
+ /* ぬ */
+ zu+	BB Fdano Fbakari Sto Stoka Stote Skeredo Snagara Ska
+-zu+	dd dda2 dde2 ddar N2T18
++zu+	ddat ddemo dda2 dde2 ddar N2T18
+ zu+	Kni
+ zu+	Zkai Zkasira Zkana Zsa Zya
+ zu+	ktomo
+@@ -879,7 +895,7 @@
+ znu+	Stte Ska Sga Ssi Sniha Skara Skeredo Snari Snagara Skuseni
+ znu+	Smono Stote Stomo Sdokoro /*Stokoro*/		/* ところは、はずす */
+ znu+	JTNO
+-znu+	goto dsouda dd dda1 dde2 ddeha ddar youda mitaida rasii N2T18
++znu+	goto dsouda ddat ddemo dda1 dde2 ddeha ddar youda mitaida rasii N2T18
+ znu+	Zkai Zkasira Zkana Zsa Zze Zzo Ztomo Zya Zyo Zyona Zwa
+ 
+ zne+	Sdomo Sba			/* BB */
+@@ -914,7 +930,7 @@
+ /* ます */
+ mase+	BB Sto
+ 
+-masen+	BB des Fga Sto Stte Stoka Ssi Skara Snode Skeredo Stomo Smono JTNO
++masen+	BB des desho deshou Fga Sto Stte Stoka Ssi Skara Snode Skeredo Stomo Smono JTNO
+ masen+	Zka Zkai Zkasira Zkana Zze Zzo Ztomo Zna Znaa Zne Znee Zno Zya Zyo Zyona Zwa
+ masen+	Zmono
+ 
+@@ -925,11 +941,12 @@
+ masu+	BB Fdano Fsika Fnomi Fbakari Fkiri Fyara Fya	/* ところは、はずす */
+ masu+	Ska Fga Sto Stte Stoka Ssi Sniha Skara Snode
+ masu+	Skeredo Snari Smono Stomo Sdokoro /*Stokoro*/ Stote
+-masu+	mai youda JTNO
++masu+	deshou desho mai youda JTNO
+ masu+	Zkai Zkasira Zkana Zsa Zze Zzo Ztomo Zna Znaa Zne Znee Zno Zya Zyo Zyona Zwa	/* Zka */
+ masu+	Zmono
+ 
+ masuru+	@masu
++masuru-	desho mai
+ 
+ masure+	Sdomo Sba
+ 
+@@ -940,19 +957,20 @@
+ kta+	Fdano Ftoka Ftono Fnari Fsika Fnomi Fbakari Fkiri Fyara Fyue Fmade Fmo
+ kta+	Ska Sga Ssi Skara Snode Skeredo Snari Skuseni Smono Stte
+ kta+	Snara Fga Fto Stomo Stote
+-kta+	ddeha dsouda youda mitaida rasii des ssu N2T18 JTNO JTNN KN TKN FKN
++kta+	ddeha djan dsouda youda mitaida rasii des desho deshou ssu N2T18 JTNO JTNN KN FKN
+ kta+	Zkai Zkasira Zkana Zsa Zze Zzo Zna Znaa Zne Znee Zno Zya Zyo Zyona Zwa
+ kta+	/* Zka */ Zmono Ztto
+ kta+	kke
+ 
+ ktara+	BB Sba Sto Zsa Zna Znaa Zne Znee kd
+ 
+-ktari+	BB Fsika Fsura Fdano Fto Ftoka Fnazo Fha Fbakari Fmo Ssae Skoso sx
++ktari+	BB Fsika Fsura Fdano Fto Ftoka Fnazo Fha Fbakari Fmo Ssae Skoso 
++ktari+	sx ddar ddat ddemo dda2 dde1 ddeha djan
+ 
+ kte+	BB Kno Kkara Fmade Fsae Fsika Fsura Fnomi Fbakari Fkoso Ska
+-kte+	nai nainee naisa dd dda2 dde2 des aru iru oru kureru morau yaru miru oku
+-kte+	Zna Znaa Zne Znee Zya Zyo /* kx はずす予定 */
+-kte+	ktec5 nn te
++kte+	nai nainee naisa ddat ddemo dda2 dde2 des desho deshou aru iru oru kureru morau yaru miru oku
++kte+	Zsa Zna Znaa Zne Znee Zya Zyo /* kx はずす予定 */
++kte+	nn te
+ kte+	@iru /* 食べてる */
+ kte-	zu znn z mai saseru sugiru ksyo	/* @iru に含まれていた */
+ kte-	kte		/* te が接続するので不要 */
+@@ -960,7 +978,7 @@
+ kteha+ 	BB Sto Zna Znaa Zne Znee
+ ktya+ 	@kteha
+ ktemo+ 	BB
+-ktemo+	dd dda2 dde2 ddar des
++ktemo+	ddat ddemo dda2 dde2 ddar des desho deshou
+ ktemo+	Zka Zkai Zkasira Zkana Zsa Zna Znaa Zne Znee Zyo
+ 
+ ktomo+	BB
+@@ -988,10 +1006,12 @@
+ 
+ dde1+	BB Fsae Fsika Fsura Fkoso
+ dde1+	Sto Stte Snara
+-dde1+	nai nainee naisa aru des
++dde1+	nai nainee naisa aru des desho deshou
+ dde1+	Zsa Zna Znaa Zne Znee Zno Zyo
+ /* dde2+	Fsae Fsika Fsura Fkoso */
+-dde2+	nai nainee naisa aru des
++dde2+	nai nainee naisa aru des desho deshou
++dde3+	BB Kno Fsae Fbakari Fkoso Ska iru kureru morau oku
++dde3+	Zna Znaa Zne Znee Zyo
+ 
+ ddat+   kt
+ 
+@@ -1009,17 +1029,18 @@
+ ddeha+	@kteha nai
+ ddeha+	Zne Znee Zsa Znaa Zyo
+ ddemo+	@ktemo Kga nai
++djan+	BB Zka
+ 
+ /* 形容動詞型活用助動詞 */
+-youda+	kdn dd dda1 dde1 ddar ddeha des BB Zne Zyo na Snara
++youda+	kdn ddat ddemo dda1 dde1 ddar ddeha djan des desho deshou BB Zne Zyo na Snara
+ mitaida+ @youda
+-ysouda+	kdn dd dda1 dde1 ddar ddeha des BM na Fmo
++ysouda+	kdn ddat ddemo dda1 dde1 ddar ddeha djan des desho deshou BM na Fmo
+ ysouda+ Zka Zkai Zkasira Zkana Zsa Zne Znee Zya Zyo Zyona
+ 
+-dsouda+	dd dda1 dde1 ddar ddeha des des na Zna Zne Znee Zyo
++dsouda+	ddat ddemo dda1 dde1 ddar ddeha djan des desho deshou na Zna Zne Znee Zyo
+ 
+ /* う/よう/まい */
+-u+	BB KN TKN FKN
++u+	BB KN FKN
+ u+	Fto Ftono Fga Fkoso Fsae Fsura Fdano Fbakari Fyara Fyue Fnazo
+ u+	Ska Stte Stoka Stote Snimo Smono
+ u+	Zni Zsa Zze Zzo Zna Znaa Zne Zya Zyo Zkana Zkasira /* Zka */
+@@ -1032,17 +1053,15 @@
+ 
+ tamae+	BB Ftono Sto Stomo Zyo
+ 
+-na+	JTNO JTNN Zno
++na+	TKN JTNO JTNN Zno
+ 
+-ktec5a+		@c5ra
+-ktec5a-		saseru simeru znn z
+-ktec5o+		@c5ro
+-ktec5tO+	@c5rtO
+-ktec5u+		@c5ru
+-ktec5u-		Fkoso Fsae Fnomi Stote Snagara goto
+-ktec5e+		@c5re
+-ktec5e-		Sdomo Stote Stutu nainya tamae
+-ktec5ya+ 	@c5rya
++/* 食べ_てかない
++ * 「蹴っていてき」を避けるため、k5ir は除く
++ * 「ついてかんが」を避けるため、k5a ではなく ktek5a
++ */
++kte2+	k5 ktek5a t5tO
++ktek5a+	@k5a
++ktek5a-	saseru simeru znn z
+ 
+ ktok5a+		@k5a
+ ktok5a-		saseru seru reru simeru zu znn z su sasu sasiru
+@@ -1059,11 +1078,11 @@
+ ktok5o+		@k5o
+ ktok5ya+	@k5ya
+ 
+-nn+	JTNO Zno dd dde2 ddar ddeha des
++nn+	JTNO Zno ddat ddemo dde2 ddar ddeha djan des desho deshou
+ te+	BB Zna Znaa Zne Znee Zyo Zyona
+ 
+ /******************** 格助詞類 ********************/
+-#define	K_BUN dd dda2 dde2 ddar ddeha des rasii/* 〜からだ、〜からです、〜かららしい */
++#define	K_BUN ddat ddemo dda2 dde2 ddar ddeha djan des desho deshou rasii/* 〜からだ、〜からです、〜かららしい */
+ 
+ Kkara+	BB /*Kde*/ Kdeno Kga Kto Kyori Kwo Kno K_BUN Kni
+ Kkara+	Fya Fdano Fnari Fsae Fsika Fsura Fnomi Fbakari Fkiri
+@@ -1074,7 +1093,7 @@
+ Kga+	BB
+ Kga+	Zkai Zkasira Zkana Zsa Zna Znaa Zne Znee Zyo	/* Zka */
+ 
+-Kno+	BB KN TKN FKN youda goto
++Kno+	BB KN FKN youda goto
+ 
+ Kde+	BB Kto
+ Kde+	Fmade Fya Fdano Fnari Fsae Fsika Fsura Fnomi Fbakari Fyara Fmo Fkoso
+@@ -1087,12 +1106,13 @@
+ Kto+	Fnomi Fbakari Fmade Fha Fmo
+ Kto+	Skara Sdokoro Snara Snari Sniha
+ Kto+	Zka Zkai Zkasira Zkana Zsa Zna Znaa Zne Znee Zno	/* Zka */
+-Kto+	ddar dd dda2 dde1
++Kto+	ddar ddat ddemo dda2 dde1
+ 
+ Kni+	BB /* sx naru */ yoru K_BUN FKN
+-Kni+	Fka Fmade Fya Fdano Fnari Fsae Fsika Fsura Fnomi Fbakari Fkiri
++Kni+	Fka Fmade Fya Fdano Fnari Fsae Fsika Fsura Fnomi Fbakari
+ Kni+	Fyara Fha Fkoso Fmo Ftote Stomo
+ Kni+	Zkai Zkasira Zkana Zsa Zna Znaa Zne Znee Zya Zyo
++Kni+	naru
+ 
+ Knite+	BB
+ 
+@@ -1114,13 +1134,13 @@
+ Kwo+	Zkai Zkasira Zkana Zsa Zna Znaa Zne Znee Zya Zyo
+ 
+ /******************** 副助詞 ********************/
+-Fka+	BB @KAKUJS dd dda2 dde1 ddar ddeha
++Fka+	BB @KAKUJS ddat ddemo dda2 dde1 ddar ddeha djan
+ Fka+	Fmade Fdano Fsae Fsika Fsura Fha Fmo Stte
+ Fka+	Znaa Zne Znee Zyo
+ Fka+	FKN
+ Fka-	Kde
+ 
+-Fkiri+	BB @KAKUJS dd dda2 dde1 ddar ddeha des rasii N2T18
++Fkiri+	BB @KAKUJS ddat ddemo dda2 dde1 ddar ddeha djan des desho deshou rasii na N2T18
+ Fkiri+	Fmade Fya Fdano Fnari Fsae Fsika Fsura Fnomi Fbakari
+ Fkiri+	Fzutu Fyara Fka Fha Fmo Fkoso Stte
+ Fkiri+	Zkai Zkasira Zkana Zsa Zna Zne Znee Zya Zyo	/* Zka */
+@@ -1128,7 +1148,7 @@
+ 
+ Fga+ 	BB Zna Znaa Zne Znee
+ 
+-Fkoso+	BB /*Kga Kwo Kto Fka Fha*/ dd dda2 dde1 ddar ddeha des
++Fkoso+	BB /*Kga Kwo Kto Fka Fha*/ ddat ddemo dda2 dde1 ddar ddeha des desho deshou
+ Fkoso+	Zkai Zkasira Zkana Zsa Zne Znee Zyo
+ 
+ Fsae+	BB nai Fsura Fmo
+@@ -1138,7 +1158,7 @@
+ Fsura+	BB Kga Kwo Kno nai Fsika Fka Fmo
+ Fsura+	Zkai Zkasira Zkana Zsa Zna Znaa Zne Znee	/* Zka */
+ 
+-Fzutu+	BB @KAKUJS dd dda2 dde1 ddar ddeha des nai rasii N2T18
++Fzutu+	BB @KAKUJS ddat ddemo dda2 dde1 ddar ddeha djan des desho deshou nai rasii N2T18
+ Fzutu+	Fya Fdano Fnari Fsae Fsika Fsura Fnomi Fbakari Fkiri
+ Fzutu+	Fyara Fka Fha Fmo Fkoso Fmade Stte
+ Fzutu+	Zkai Zkasira Zkana Zsa Zna Znaa Zne Znee Zya Zyo	/* Zka */
+@@ -1150,9 +1170,9 @@
+ Fttara+	BB /*Zkai Zkasira Zkana*/ Zsa Zna Znaa Zne Znee Zya Zyo	/* Zka */
+ Ftte+	@Fttara JTNO
+ 
+-Fto+	BB Kde Kdeno Kni Kwo Kmade Kno dd dda2 dde1 ddar ddeha des rasii
+-Fto+	Fya Fdano Fnari Fsae Fsika Fsura Fnomi Fbakari Fkiri Fyara Fka Fkoso
+-Fto+	Fdeha Fdemo Fdokoro Fnazo Fha Fmade Fmo Snara
++Fto+	BB Kde Kdeno Kni Kwo Kmade Kno ddat ddemo dda2 dde1 ddar ddeha djan des desho deshou rasii
++Fto+	Fnari Fsae Fsika Fsura Fnomi Fbakari Fkiri Fyara Fka Fkoso
++Fto+	Fdeha Fdemo Fha Fmade Fmo Snara
+ Fto+	Zka Zkai Zkasira Zkana Zsa Zna Znaa Zne Znee Zya Zyo	/* Zka */
+ Fto+	sx sxu1 naru
+ 
+@@ -1174,7 +1194,7 @@
+ Fnagara+	BB Kno Fmo
+ Fnagarani+	BB
+ 
+-Fnazo+	BB @KAKUJS dd dda2 dde1 ddar ddeha des rasii
++Fnazo+	BB @KAKUJS ddat ddemo dda2 dde1 ddar ddeha des desho deshou rasii
+ Fnazo+	Fya Fdano Fsae Fsika Fsura Fbakari Fkiri Fyara Fha Fmo Fkoso Ftote Ftomo
+ Fnazo+	Zkai Zkasira Zkana Zsa Zne Znee Zya Zyo
+ Fnazo-	Kde
+@@ -1185,18 +1205,18 @@
+ 
+ Fnaradeha+	BB Kno Sto Stte
+ 
+-Fnari+	BB Kga Kno Kni Khe Kwo Kkara Kmade Kyori Kto dd dda2 dde1 ddar ddeha
++Fnari+	BB Kga Kno Kni Khe Kwo Kkara Kmade Kyori Kto ddat ddemo dda2 dde1 ddar ddeha
+ Fnari+	Fya Fdano Fmade Fsae Fsika Fsura Fnomi Fyara Fmo
+ Fnari+	Zkai Zkasira Zkana Zsa Zne Znee	Zyo	/* Zka */
+ 
+-Fnomi+	BB @KAKUJS dd dda2 dde1 ddar ddeha des rasii na	/* のみ＋なの */
++Fnomi+	BB @KAKUJS ddat ddemo dda2 dde1 ddar ddeha des desho deshou rasii na	/* のみ＋なの */
+ Fnomi+	Fya Fdano Fsika Fbakari Fkiri Fyara Fka Fha Fkoso
+ Fnomi+	Zkai Zkasira Zkana Zsa Zne Znee Zyo 	/* Zka */
+ Fnomi-	Kde
+ 
+ Fha+	BB Zsa Zne Znee
+ 
+-Fbakari+ BB @KAKUJS dd dda1 dde1 ddar ddeha des rasii N2T18
++Fbakari+ BB @KAKUJS ddat ddemo dda1 dde1 ddar ddeha djan des desho deshou rasii N2T18
+ Fbakari+ Fya Fdano Fsae Fsika Fnomi Fzutu Fyara Fka Fha Fmo Fkoso Stte
+ Fbakari+ Zkai Zkasira Zkana Zsa Zne Znee Zyo 	/* Zka */
+ Fbakari- Kde
+@@ -1204,10 +1224,10 @@
+ Fmade+	BB Kga Kno Kni Kwo Kyori Khe Kmade Kkara /* 直すこと */
+ Fmade+	Fya Fdano Fnari Fsae Fsika Fsura Fnomi Fbakari Fkiri
+ Fmade+	Fyara Fka Fha Fmo Fkoso Sdokoro Sto Stte
+-Fmade+	dd dda1 dde1 ddar ddeha des rasii N2T18 /* kx はずす予定 */
++Fmade+	ddat ddemo dda1 dde1 ddar ddeha djan des desho deshou rasii N2T18 /* kx はずす予定 */
+ Fmade+	Zkai Zkasira Zkana Zsa Zne Znee Zsa Zyo
+ 
+-Fmo+	BB @KAKUJS Fka Sto nai rasii dd dda2 dde2 ddar ddeha des
++Fmo+	BB @KAKUJS Fka Sto nai rasii ddat ddemo dda2 dde2 ddar ddeha djan des desho deshou
+ Fmo+	Zsa Zna Znaa Zne Znee Zyo
+ Fmo-	Kno Kwo Kde Kni Kto
+ 
+@@ -1220,7 +1240,7 @@
+ Fyara+	Zsa Zne Znee
+ 
+ Fyue+	BB Kno Kni Fka Fdeha Fdemo Fnomi Fkoso Ftomo Fbakari Sto
+-Fyue+	dd dda2 dde1 ddar ddeha des
++Fyue+	ddat ddemo dda2 dde1 ddar ddeha des desho deshou
+ 
+ Fdatte+	BB Zsa Zna Znaa Zne Znee Zyo
+ Fttatte+	@Fdatte
+@@ -1230,7 +1250,7 @@
+ 
+ Skara+	BB Fka Stte Sniha
+ Skara+	Sto Stomo Stote Fkoso
+-Skara+	dd dda2 dde1 ddar ddeha des rasii N2T18
++Skara+	ddat ddemo dda2 dde1 ddar ddeha djan des desho deshou rasii N2T18
+ Skara+	Zsa Zna Znaa Zne Znee Zyo
+ 
+ Snode+	BB
+@@ -1276,7 +1296,7 @@
+ Snari+	BB Kni Kwo Kde
+ Snari+	Zyo Zne Znee
+ 
+-Snagara+ BB Kga dd dda2 dde1 ddar ddeha
++Snagara+ BB Kga ddat ddemo dda2 dde1 ddar ddeha djan
+ Snagara+ Fmade Fya Fdano Fnari Fsae Fsika Fsura Fnomi Fbakari Fkiri
+ Snagara+ Fyara Fka Fha Fmo Fkoso Stte
+ Snagara+ Zsa Zyo Zna Znaa Zne Znee
+diff -uNr Canna35b2.orig/dic/ideo/pubdic/a.p Canna35b2/dic/ideo/pubdic/a.p
+--- Canna35b2.orig/dic/ideo/pubdic/a.p	Mon Dec  2 21:59:27 1996
++++ Canna35b2/dic/ideo/pubdic/a.p	Thu May 16 16:26:11 2002
+@@ -659,7 +659,7 @@
+ あたまきん 頭金 #T35 0
+ あたまごなし 頭ごなし #T05 0
+ あたみ 熱海 #JCN 0
+-あたらし 新し #KYmi 255
++あたらし 新し #KYme 255
+ あたらしが 新しが #R5 0
+ あたらしゅう 新しゅう #KYU 3
+ あたり アタリ #KK 1
+@@ -1070,6 +1070,8 @@
+ あらわれ 現れ #KSr 49
+ あらわれ 表れ #KSr 5
+ あらわれ 現われ #KSr 8
++あらんかぎりの あらんかぎりの #RT 0
++あらんかぎりの あらん限りの #RT 0
+ あり 蟻 #T35 5
+ あり あり #T36 0
+ あり 有り #T36 0
+@@ -3703,7 +3705,7 @@
+ えんじん エンジン #T35 28
+ えんすい 円錐 #T35 1
+ えんすいだい 円錐台 #T35 2
+-えんずい 延随 #T35 0
++えんずい 延髄 #T35 0
+ えんせい 厭世 #T30 0
+ えんせい 遠征 #T30 1
+ えんせき 宴席 #T35 0
+@@ -5560,7 +5562,9 @@
+ おなげき お嘆き #OKX 2
+ おなごみ お和み #OKX 1
+ おなじ 同じ #T05 255
+-おなじ おなじ #T35 0
++おなじ 同じ #RT 0
++おなじ おなじ #T05 0
++おなじ おなじ #RT 0
+ おなじ 々 #T35 28
+ おなじく 同じく #CJ 25
+ おなじく 〃 #T35 1
+diff -uNr Canna35b2.orig/dic/ideo/pubdic/h.p Canna35b2/dic/ideo/pubdic/h.p
+--- Canna35b2.orig/dic/ideo/pubdic/h.p	Mon Dec  2 18:23:00 1996
++++ Canna35b2/dic/ideo/pubdic/h.p	Thu May 16 16:26:11 2002
+@@ -3481,7 +3481,7 @@
+ ふりわけ 振り分け #KSr 3
+ ふりん 不倫 #T00 1
+ ふる 旧 #KY 0
+-ふる 古 #KYmi 138
++ふる 古 #KYmime 138
+ ふる フル #PRE 4
+ ふる フル #T35 7
+ ふる 古 #T35 81
+diff -uNr Canna35b2.orig/dic/ideo/pubdic/k.p Canna35b2/dic/ideo/pubdic/k.p
+--- Canna35b2.orig/dic/ideo/pubdic/k.p	Mon Dec  2 18:22:50 1996
++++ Canna35b2/dic/ideo/pubdic/k.p	Thu May 16 16:26:11 2002
+@@ -2892,8 +2892,8 @@
+ き 生 #PRE 0
+ き 斬 #R5 0
+ き 伐 #R5 1
+-き 切 #R5 152
+-き き #R5 6
++き 切 #R5r 152
++き き #R5r 6
+ き 帰 #S5 4
+ き 器 #SUC 0
+ き 機 #SUC 0
+@@ -7801,7 +7801,7 @@
+ こつ コツ #T35 2
+ こつこつ こつこつ #F14 2
+ こつこつ コツコツ #F14 2
+-こつずい 骨随 #T35 0
++こつずい 骨髄 #T35 0
+ こつつぼ 骨壷 #T35 0
+ こつにく 骨肉 #T35 0
+ こつばん 骨盤 #T35 0
+diff -uNr Canna35b2.orig/dic/ideo/pubdic/m.p Canna35b2/dic/ideo/pubdic/m.p
+--- Canna35b2.orig/dic/ideo/pubdic/m.p	Mon Dec  2 18:23:02 1996
++++ Canna35b2/dic/ideo/pubdic/m.p	Thu May 16 16:26:11 2002
+@@ -2235,7 +2235,7 @@
+ も も #R5r 2
+ も 盛 #R5r 3
+ も 燃 #S5 2
+-も 模 #SX 45
++も 模 #KJ 0
+ も 喪 #T35 1
+ も 藻 #T35 1
+ も も #T5 19
+@@ -2364,6 +2364,8 @@
+ もしくは もしくは #CJ 16
+ もしもし もしもし #CJ 0
+ もしゃ 模写 #T30 0
++もした 模した #RT 0
++もして 模して #F14 0
+ もしや もしや #CJ 1
+ もしゅ 喪主 #T35 0
+ もしょう 喪章 #T35 0
+@@ -2638,6 +2640,7 @@
+ もんたーじゅ モンタージュ #T30 0
+ もんだい 問題 #T15 255
+ もんだいてん 問題点 #T35 77
++もんだいな 問題な #KY 0
+ もんちゃく 悶着 #T30 1
+ もんつき 紋付 #T35 0
+ もんてい 門弟 #T35 0
+diff -uNr Canna35b2.orig/dic/ideo/pubdic/n.p Canna35b2/dic/ideo/pubdic/n.p
+--- Canna35b2.orig/dic/ideo/pubdic/n.p	Mon Dec  2 18:22:57 1996
++++ Canna35b2/dic/ideo/pubdic/n.p	Thu May 16 16:26:11 2002
+@@ -7,6 +7,7 @@
+ な 奈 #KJ 9
+ な 無 #KY 255
+ な な #KY 99
++な 亡 #KY 0
+ な 成 #R5 12
+ な な #R5 255
+ な 鳴 #R5r 5
+@@ -886,6 +887,7 @@
+ にしむろ 西牟婁 #CN 0
+ にしめ 西目 #CN 0
+ にしめ 煮しめ #KSr 0
++にしめ 煮染め #KSr 0
+ にしめや 西目屋 #CN 0
+ にしめら 西米良 #CN 0
+ にしもと 西本 #JNS 0
+diff -uNr Canna35b2.orig/dic/ideo/pubdic/pod.c Canna35b2/dic/ideo/pubdic/pod.c
+--- Canna35b2.orig/dic/ideo/pubdic/pod.c	Tue May 31 20:42:12 1994
++++ Canna35b2/dic/ideo/pubdic/pod.c	Thu May 16 16:26:11 2002
+@@ -30,6 +30,7 @@
+ 
+ #if __STDC__
+ #include <stddef.h>
++#include <stdlib.h>
+ #else
+ extern char *malloc();
+ #endif
+@@ -51,7 +52,7 @@
+ static int list_kinds;
+ static int copy_frequency, extract_kana = 0;
+ static long specific_kind;
+-static FILE *in1 = stdin, *in2 = stdin;
++static FILE *in1, *in2;
+ static char *common_out, *old_out, *new_out, *hinshi_table, *bunrui;
+ static char *description_table;
+ static int selhinshi = 0;
+@@ -1377,6 +1378,8 @@
+   setlocale(LC_ALL, "");
+ #endif
+ 
++  in1 = stdin, in2 = stdin;
++
+   (void)internkind(kihonh); /* 基本辞書用。1L として登録 */
+   parseargs(argc, argv);
+   storepd(in1);
+diff -uNr Canna35b2.orig/dic/ideo/pubdic/t.p Canna35b2/dic/ideo/pubdic/t.p
+--- Canna35b2.orig/dic/ideo/pubdic/t.p	Mon Dec  2 18:22:55 1996
++++ Canna35b2/dic/ideo/pubdic/t.p	Thu May 16 16:26:11 2002
+@@ -936,8 +936,8 @@
+ たとえ たとえ #F14 24
+ たとえ たとえ #KS 1
+ たとえ 例え #KS 8
+-たとえば たとえば #CJ 5
+-たとえば 例えば #F14 226
++たとえば たとえば #T36 5
++たとえば 例えば #T36 226
+ たとみ 田富 #JCN 0
+ たど 多度 #JCN 0
+ たど たど #R5 12
+@@ -4494,6 +4494,11 @@
+ とっこうやく 特効薬 #T35 1
+ とっしゅつ 突出 #T30 0
+ とっしん 突進 #T30 0
++とって とって #T35 0
++とって 取っ手 #T35 0
++とって 取手 #T35 0
++とって 把っ手 #T35 0
++とって 把手 #T35 0
+ とっとり 鳥取 #JCN 0
+ とっとりけん 鳥取県 #CNS 0
+ とっとりし 鳥取市 #CNS 0
+diff -uNr Canna35b2.orig/dic/ideo/words/Imakefile Canna35b2/dic/ideo/words/Imakefile
+--- Canna35b2.orig/dic/ideo/words/Imakefile	Wed Nov 27 16:14:55 1996
++++ Canna35b2/dic/ideo/words/Imakefile	Fri May 17 09:28:07 2002
+@@ -69,13 +69,13 @@
+ #endif
+ 
+ install::
+-	$(CHGRP) $(cannaGroup) $(CANNADICDIR)
+-	$(CHOWN) $(cannaOwner) $(CANNADICDIR)
+-	$(CHMOD) ug+w $(CANNADICDIR)
+-	$(CHGRP) $(cannaGroup) $(DicDir)
+-	$(CHOWN) $(cannaOwner) $(DicDir)
+-	$(CHMOD) ug+w $(DicDir)
+-	$(CHMOD) -w $(CANNADICDIR)/dics.dir
++	$(CHGRP) $(cannaGroup) $(DESTDIR)$(CANNADICDIR)
++	$(CHOWN) $(cannaOwner) $(DESTDIR)$(CANNADICDIR)
++	$(CHMOD) ug+w $(DESTDIR)$(CANNADICDIR)
++	$(CHGRP) $(cannaGroup) $(DESTDIR)$(DicDir)
++	$(CHOWN) $(cannaOwner) $(DESTDIR)$(DicDir)
++	$(CHMOD) ug+w $(DESTDIR)$(DicDir)
++	$(CHMOD) -w $(DESTDIR)$(CANNADICDIR)/dics.dir
+ 
+ #ifndef USE_OBSOLETE_STYLE_FILENAME
+ InstallNamedNonExec(necgaiji.t,necgaiji.ctd,$(CANNADICDIR))
+diff -uNr Canna35b2.orig/dic/ideo/words/dics.dir Canna35b2/dic/ideo/words/dics.dir
+--- Canna35b2.orig/dic/ideo/words/dics.dir	Sat Nov  9 11:14:13 1996
++++ Canna35b2/dic/ideo/words/dics.dir	Thu May 16 16:26:11 2002
+@@ -33,6 +33,7 @@
+ number.ctd(.swd)		-number---
+ katakana.ctd(.mwd)		-katakana---
+ keishiki.ctd(.swd)		-keishiki---
++suffix.ctd(.swd)		-suffix---
+ 
+ chimei.ctd(.mwd)		-chimei---
+ kanasmpl.ctd(.mwd)		-kanasample---
+diff -uNr Canna35b2.orig/dic/ideo/words/hojomwd.t Canna35b2/dic/ideo/words/hojomwd.t
+--- Canna35b2.orig/dic/ideo/words/hojomwd.t	Mon Dec  2 17:41:24 1996
++++ Canna35b2/dic/ideo/words/hojomwd.t	Thu May 16 16:26:11 2002
+@@ -22,10 +22,11 @@
+ 
+ /* $Id: gentoo.diff,v 1.1 2002/06/01 13:40:35 wmertens Exp $ */
+ # $Id: gentoo.diff,v 1.1 2002/06/01 13:40:35 wmertens Exp $
++きりがな #KY きりがな
+ くりゃ #kxya 来りゃ
+ くりゃあ #kxya 来りゃあ
+ とい #W5 と言 とい
+-なあ #T35 @
++なあ #CJ なあ
+ きが #T32 気が
+ きにな #R5 気にな
+ きも #T32 気も
+diff -uNr Canna35b2.orig/dic/ideo/words/hojoswd.t Canna35b2/dic/ideo/words/hojoswd.t
+--- Canna35b2.orig/dic/ideo/words/hojoswd.t	Sat Nov  9 11:14:52 1996
++++ Canna35b2/dic/ideo/words/hojoswd.t	Thu May 16 16:26:11 2002
+@@ -22,7 +22,7 @@
+ # $Id: gentoo.diff,v 1.1 2002/06/01 13:40:35 wmertens Exp $
+ い #Zi @ #ktok5iO @
+ か #Zka @
+-か #ktec5a @ #ktok5a @
++か #ktok5a @
+ かい #Zkai @
+ かしら #Zkasira @
+ かしらん #Zkasira @
+@@ -30,20 +30,20 @@
+ がた #yasui @
+ がち #D2T16 @
+ き #ktok5i @
+-きゃ #ktec5ya @ #ktok5ya @ #kykya @ #k5ya @ #c5rya @
+-きゃあ #ktec5ya @ #ktok5ya @ #kykya @ #k5ya @ #c5rya @
++きゃ #ktok5ya @ #kykya @ #k5ya @
++きゃあ #ktok5ya @ #kykya @ #k5ya @
+ ぎゃ #g5ya @
+ ぎゃあ #g5ya @
+-く #ktec5u @ #ktok5u @
++く #ktok5u @
+ くらい #FKN @
+ くりゃ #kxya @
+ くん #JNSUC 君 くん
+ ぐらい #FKN @
+-け #ktec5e @ #ktok5e @
++け #ktok5e @
+ けど #Skeredo けど
+ けども #Skeredo @
+ けりゃ #kykya @
+-こ #ktec5o @ #ktok5o @
++こ #ktok5o @
+ こそ #FKN @
+ さ #Zsa @
+ さし #sasiru さし
+@@ -54,6 +54,7 @@
+ しゃあ #s5ya @
+ じま #jau @
+ じゃ #jau @ #kdya @
++じゃん #djan @
+ すりゃ #sxya @
+ すりゃあ #sxya @
+ ずりゃ #zxya @
+@@ -67,7 +68,6 @@
+ ちゃ #chau @ #ktya @ #t5ya @
+ ちゃあ #ktya @ #t5ya @
+ ちゃん #JNSUC ちゃん
+-っ #ktec5tO @
+ っけ #kke @
+ っす #ssu @
+ ったって #Fttatte @
+@@ -76,6 +76,7 @@
+ っと #Ztto @
+ っぱなし #D2T35 っぱなし
+ づら #yasui @
++て #kte2 @
+ と #kto @
+ とも #Ztomo @
+ ど #kdo @
+@@ -93,7 +94,7 @@
+ ねえ #Znee @
+ ねえ #nainee @
+ の #Zno @
+-はず #KN @
++はず #KN @ #TKN @
+ びゃ #b5ya @
+ びゃあ #b5ya @
+ まま #KN @
+@@ -102,6 +103,7 @@
+ もの #Zmono @
+ もん #Zmono @
+ や #Zya @
++やが #yagaru @
+ やす #yasui @
+ よ #Zyo @
+ よな #Zyona @
+@@ -110,6 +112,8 @@
+ りゃあ #r5ya @ #ksya @
+ れ #rareru れ
+ わ #Zwa @
++わけ #TKN @
+ ん #nn @
+ ん #r5nO @
+ ん #JTNN @
++んで #Snode @
+diff -uNr Canna35b2.orig/dic/ideo/words/keishiki.t Canna35b2/dic/ideo/words/keishiki.t
+--- Canna35b2.orig/dic/ideo/words/keishiki.t	Wed Nov 13 09:58:30 1996
++++ Canna35b2/dic/ideo/words/keishiki.t	Thu May 16 16:26:11 2002
+@@ -26,7 +26,5 @@
+ こと #KN @
+ とき #KN @
+ ところ #KN @
+-ほう #KN @
+-ほか #KN @
+ もの #KN @
+ わけ #KN @
+diff -uNr Canna35b2.orig/dic/ideo/words/obsolete.dir Canna35b2/dic/ideo/words/obsolete.dir
+--- Canna35b2.orig/dic/ideo/words/obsolete.dir	Wed Nov 13 09:58:45 1996
++++ Canna35b2/dic/ideo/words/obsolete.dir	Thu May 16 16:26:11 2002
+@@ -32,7 +32,7 @@
+ hojomwd.t(.mwd)		-hojomwd---
+ number.t(.swd)		-number---
+ katakana.t(.mwd)	-katakana---
+-keishiki.t(.mwd)	-keishiki---
++keishiki.t(.swd)	-keishiki---
+ 
+ chimei.t(.mwd)		-chimei---
+ kanasmpl.t(.mwd)	-kanasample---
+diff -uNr Canna35b2.orig/dic/ideo/words/suffix.t Canna35b2/dic/ideo/words/suffix.t
+--- Canna35b2.orig/dic/ideo/words/suffix.t	Thu Oct 21 21:50:02 1993
++++ Canna35b2/dic/ideo/words/suffix.t	Thu May 16 16:26:11 2002
+@@ -1,6 +1,6 @@
+ # $Id: gentoo.diff,v 1.1 2002/06/01 13:40:35 wmertens Exp $
+ か #N2T30*1187 化
+-てき #N2T17*1187 的
++てき #N2T16*1187 的
+ さん #JNSUC*1139 さん
+ てん #SUC*809 点
+ せい #SUC*693 性
+diff -uNr Canna35b2.orig/dic/phono/Imakefile Canna35b2/dic/phono/Imakefile
+--- Canna35b2.orig/dic/phono/Imakefile	Wed Nov 27 16:15:14 1996
++++ Canna35b2/dic/phono/Imakefile	Thu May 16 16:26:11 2002
+@@ -27,9 +27,10 @@
+ 
+        ROMAJI_DIC_DEF = -DSHIFT
+ 
+-               DICDIR = $(cannaLibDir)/dic
+-            SAMPLEDIR = $(cannaLibDir)/sample
+-         SAMPLESRCDIR = $(cannaLibDir)/sample/src
++               DICDIR = $(DicDir)
++        CANNASHAREDIR = $(cannaShareDir)
++            SAMPLEDIR = $(cannaDocDir)/sample
++         SAMPLESRCDIR = $(cannaDocDir)/sample/src
+ 
+     KPDEF = default.kpdef jdaemon.kpdef just.kpdef kaisoku.kpdef kana.kpdef \
+             lan5.kpdef matsu.kpdef newjis.kpdef romaji.kpdef sokuon.kpdef \
+@@ -69,7 +70,7 @@
+ MakeDirectories(install,$(DICDIR))
+ MakeDirectories(install,$(SAMPLESRCDIR))
+ 
+-InstallMultiple($(ROMKANA_TABLES),$(DICDIR))
++InstallMultiple($(ROMKANA_TABLES),$(CANNASHAREDIR))
+ 
+ #ifdef USE_OBSOLETE_STYLE_FILENAME
+ InstallNonExec(default.kpdef,$(SAMPLESRCDIR))
+diff -uNr Canna35b2.orig/lib/RK/RKintern.h Canna35b2/lib/RK/RKintern.h
+--- Canna35b2.orig/lib/RK/RKintern.h	Sat Nov 30 15:33:23 1996
++++ Canna35b2/lib/RK/RKintern.h	Thu May 16 16:26:11 2002
+@@ -34,6 +34,9 @@
+    なくなり変換効率が向上します。このコードをかいて下さいました藤枝さ
+    んに感謝します。 */
+ 
++#define FUJIEDA_HACK
++/* 藤枝＠ＪＡＩＳＴのハックを有効にする */
++
+ #define EXTENSION_NEW
+ 
+ #include "cannaconf.h"
+@@ -98,7 +101,7 @@
+ #endif
+ 
+ #if defined(SYSV) || defined(SVR4) || defined(__STDC__) || defined(WIN)
+-# if defined(SYSV) || defined(SVR4)
++# if defined(SYSV) || defined(SVR4) || defined(linux) || defined(__GNU__)
+ #  include <memory.h>
+ # endif
+ # ifndef __EMX__
+@@ -608,6 +611,9 @@
+   int			refcount; /* reference counter */
+   struct RkKxGram	*gramdic; /* grammar dictionary */
+   int	 		P_BB, P_NN, P_T00, P_T30, P_T35; /* hinshi codes */
++#ifdef FUJIEDA_HACK
++  int			P_KJ; /* tankanji */
++#endif
+ };
+ 
+ extern struct RkGram SG;
+@@ -682,6 +688,9 @@
+ #define NW_SWD		0x40
+ #define NW_PRE		0x20
+ #define NW_SUC		0x10
++#ifdef FUJIEDA_HACK
++#define NW_DUMMY	0x08
++#endif
+ #ifdef BUNMATU
+ #define NW_BUNMATU	0x04
+ #endif
+diff -uNr Canna35b2.orig/lib/RK/context.c Canna35b2/lib/RK/context.c
+--- Canna35b2.orig/lib/RK/context.c	Wed Nov 27 17:20:59 1996
++++ Canna35b2/lib/RK/context.c	Thu May 16 16:26:11 2002
+@@ -175,6 +175,9 @@
+ 		SG.P_T00 = RkGetGramNum(SG.gramdic, "T00");
+ 		SG.P_T30 = RkGetGramNum(SG.gramdic, "T30");
+ 		SG.P_T35 = RkGetGramNum(SG.gramdic, "T35");
++#ifdef FUJIEDA_HACK
++		SG.P_KJ  = RkGetGramNum(SG.gramdic, "KJ");
++#endif
+ 		CX = (struct RkContext *)
+ 		  Calloc(INIT_CONTEXT, sizeof(struct RkContext));
+ 		if (CX) {
+diff -uNr Canna35b2.orig/lib/RK/dd.c Canna35b2/lib/RK/dd.c
+--- Canna35b2.orig/lib/RK/dd.c	Wed Nov 27 16:20:19 1996
++++ Canna35b2/lib/RK/dd.c	Thu May 16 16:26:11 2002
+@@ -27,7 +27,7 @@
+ 
+ #include	"RKintern.h"
+ 
+-#if defined(USG) || defined(SYSV) || defined(SVR4) || defined(WIN)
++#if defined(USG) || defined(SYSV) || defined(SVR4) || defined(WIN) || defined(linux)
+ #include <string.h>
+ #else
+ #include <strings.h>
+@@ -1743,7 +1743,7 @@
+   }
+ 
+   if (newflags != dd->dd_flags) {
+-    dicsdir = malloc(strlen(dd->dd_path + strlen("/dics.dir") + 1));
++    dicsdir = malloc(strlen(dd->dd_path) + strlen("/dics.dir") + 1);
+     if (dicsdir) {
+       int filemode;
+ 
+diff -uNr Canna35b2.orig/lib/RK/nword.c Canna35b2/lib/RK/nword.c
+--- Canna35b2.orig/lib/RK/nword.c	Sat Nov  9 11:17:04 1996
++++ Canna35b2/lib/RK/nword.c	Thu May 16 16:26:11 2002
+@@ -208,7 +208,11 @@
+     conc = *q;
+     conc.nw_klen  += p->nw_klen;
+     conc.nw_ylen  += p->nw_ylen;
++#ifdef FUJIEDA_HACK
++    conc.nw_flags = p->nw_flags&(NW_PRE|NW_SUC|NW_SWD|NW_DUMMY);
++#else
+     conc.nw_flags = p->nw_flags&(NW_PRE|NW_SUC|NW_SWD);
++#endif
+     conc.nw_prio = p->nw_prio;
+     conc.nw_next = (struct nword *)0;
+     conc.nw_left = p;
+@@ -237,6 +241,9 @@
+ 	break;
+     case	ND_MWD:
+ 	conc.nw_flags |= NW_MWD;
++#ifdef FUJIEDA_HACK
++	conc.nw_flags |= (q->nw_flags & NW_DUMMY);
++#endif
+ 	conc.nw_prio = q->nw_prio;
+ 	break;
+     case	ND_SWD:
+@@ -699,10 +706,12 @@
+ 	  break;
+ 	};
+ 	switch (*k) {
++#ifndef FUJIEDA_HACK
+ 	case 0xa4a1: case 0xa4a3: case 0xa4a5:
+ 	case 0xa4a7: case 0xa4a9:
+ 	case 0xa4e3: case 0xa4e5: case 0xa4e7:
+ 	case 0xa4c3: case 0xa4f3:
++#endif
+ 	case 0xa1ab: case 0xa1ac: case 0xa1b3:
+ 	case 0xa1b4: case 0xa1b5: case 0xa1b6:
+ 	case 0xa1bc:
+@@ -743,6 +752,9 @@
+ 		    clen, cx->gram->P_BB);
+ 	    if (punct)
+ 	      w[-1].nw_class = punct;
++#ifdef FUJIEDA_HACK
++	    w[-1].nw_flags |= NW_DUMMY;
++#endif
+ 	  };
+       }
+     }
+@@ -984,8 +996,10 @@
+ #ifdef BUNMATU
+ 	      /* 文章末にしかならない */
+ 	      if (IsBunmatu(gram, pq->nw_rowcol)) {
+-		/* 句読点その他の場合には文章末検査は不要 */
+-		if (q->nw_class >= ND_OPN)
++		/* 句読点などの場合と、読みを尽くしている場合には
++		   文章末検査は不要 */
++		if (q->nw_class >= ND_OPN ||
++		    (doflush && yy + pq->nw_ylen == cx->store->nyomi))
+ 		  pq->nw_flags &= ~NW_BUNMATU;
+ 		else
+ 		  pq->nw_flags |= NW_BUNMATU;
+@@ -1350,6 +1364,23 @@
+   }
+ }
+ 
++#ifdef BUNMATU
++static
++struct nword	*
++modifyPrio(cx, words)
++    struct RkContext	*cx;
++    struct nword	*words;
++{
++  struct RkKxGram	*gram = cx->gram->gramdic;
++  struct nword		*w;
++
++  for (w = words; w; w = w->nw_next)
++    if (w->nw_prio > 0 && !IsBunmatu(gram, w->nw_rowcol))
++	w->nw_prio += 0x2000 << 4;
++  return words;
++}
++#endif
++
+ static 
+ void
+ storeBun(cx, yy, ys, ye, bun)
+@@ -1361,7 +1392,11 @@
+   struct nword	*w;
+   int		maxclen;
+   
++#ifdef BUNMATU
++  full = sortWord(modifyPrio(cx, parseBun(cx, yy, ys, ye, 1, 0, &maxclen)));
++#else
+   full = sortWord(parseBun(cx, yy, ys, ye, 1, 0, &maxclen));
++#endif
+   bun->nb_cand = full;
+   bun->nb_yoff = yy;
+ /* kouho wo unique ni suru */
+@@ -1382,6 +1417,41 @@
+   int		l2;
+ };
+ 
++#define FUJIEDA_HACK
++/* 藤枝＠ＪＡＩＳＴのハックを有効にする */
++
++#ifdef FUJIEDA_HACK
++static
++void
++evalSplit(cx, suc, ul)
++     struct RkContext	*cx;
++     struct nword	*suc;
++     struct splitParm	*ul;
++{
++  struct nword	*p;
++  unsigned	l2;
++  unsigned long	u2;
++  
++  l2 = 0;
++  u2 = 0L;
++  for (p = suc; p; p = p->nw_next)  
++  {
++    if (!CanSplitWord(p) || /* 文節にならない */
++	OnlyBunmatu(p) || /* リテラルの直前でしか文節になれない */
++	(p->nw_rowcol == cx->gram->P_KJ) || /* 単漢字 */
++	(p->nw_flags & NW_DUMMY) || /* 捏造された名詞 */
++	(p->nw_flags & NW_SUC))
++      continue;
++    if (l2 <= p->nw_ylen) {
++      l2 = p->nw_ylen;
++      if (u2 < p->nw_prio)
++        u2 = p->nw_prio;
++    }
++  }
++  ul->l2 = l2;
++  ul->u2 = u2;
++}
++#else /* FUJIEDA_HACK */
+ static
+ void
+ evalSplit(suc, ul)
+@@ -1396,16 +1466,26 @@
+   u2 = 0L;
+   for (p = suc; p; p = p->nw_next)  
+   {
++#ifdef BUNMATU
++    if (!CanSplitWord(p) || OnlyBunmatu(p) || (p->nw_flags & NW_SUC))
++#else
+     if (!CanSplitWord(p) || (p->nw_flags & NW_SUC))
++#endif
+       continue;
+     if ((unsigned long)l2 < (unsigned long)p->nw_ylen) 
+       l2 = p->nw_ylen;
++#ifdef FUJIEDA_HACK
++    /* 読みが一文字の単語の優先度は考慮しない */
++    if (u2 < p->nw_prio && p->nw_ylen > 1)
++#else
+     if (u2 < p->nw_prio)
++#endif
+       u2 = p->nw_prio;
+   };
+   ul->l2 = l2;
+   ul->u2 = u2;
+ }
++#endif /* FUJIEDA_HACK */
+ 
+ #define PARMSIZE 256
+ 
+@@ -1419,8 +1499,13 @@
+      int		maxclen;
+      int		flush;
+ {
++#ifdef FUJIEDA_HACK
++  int			L, L1 = 0, L2;
++  unsigned long		U;
++#else
+   unsigned		L, L1 = 0, L2;
+   unsigned		U2;
++#endif
+   struct nword	*w;
+   int			i;
+   int			maxary = PARMSIZE - 1;
+@@ -1448,27 +1533,34 @@
+   }
+   if (L1 == 0) {
+     L = (L1 = 1)+ (L2 = 0);
++#ifdef FUJIEDA_HACK
++    U = 0L;
++#else
+     U2 = (unsigned)0;
++#endif
+     if (maxary > maxclen)
+       maxary = maxclen;
+     for (i = 0; i <= maxary; i++)
+       ul2[i].l2 = ul2[i].u2 = 0L;
+     for (w = top; w; w = w->nw_next) {
+-      int				l, l1;
++      int			l, l1;
++#ifdef FUJIEDA_HACK
++      unsigned long		u;
++#endif
+       struct splitParm		ul;
+-      /* ichido ni 2tu tukomono ha yameru */
++      /* 文節にならない */
+       if (!CanSplitWord(w)) {
+ 	continue;
+       }
+       if ((w->nw_flags & NW_PRE) && (w->nw_flags & NW_SUC)) {
+ 	continue;
+       }
+-      /* mijikasugiru/bunsetumatu ni narenai  monoha hazusu */
++      /* 読みを消費していない */
+       l1 = w->nw_ylen;
+       if (l1 <= 0) {
+ 	continue;
+       }
+-      /* shuujoushi ha bun no tochuu deha tukanai */
++      /* 一文節にするのが最長 */
+       if (flush && (unsigned)yy + w->nw_ylen == cx->store->nyomi) {
+ 	L1 = l1;
+ 	break;
+@@ -1480,17 +1572,44 @@
+ 	continue;
+       }
+ #endif
+-      /* migi donari no bunsetsu wo kaiseki */
++#ifdef FUJIEDA_HACK
++      /* 単漢字は文の途中に登場しない */
++      if (w->nw_rowcol == cx->gram->P_KJ) {
++        DontSplitWord(w);
++        continue;
++      }
++#endif
++      /* 右隣の文節を解析 */
+       if (l1 <= maxary) {
+ 	if (!ul2[l1].l2) 
+-	  evalSplit(xq[l1].tree, &ul2[l1]);
++#ifdef FUJIEDA_HACK
++        evalSplit(cx, xq[l1].tree, &ul2[l1]);
++#else
++        evalSplit(xq[l1].tree, &ul2[l1]);
++#endif
+ 	ul = ul2[l1];
+       }
+       else {
+-	evalSplit(xq[l1].tree, &ul);
++#ifdef FUJIEDA_HACK
++      evalSplit(cx, xq[l1].tree, &ul);
++#else
++      evalSplit(xq[l1].tree, &ul);
++#endif
+       }
+       /* hikaku */
+       l = l1 + ul.l2;
++#ifdef FUJIEDA_HACK
++      u = w->nw_prio + ul.u2;
++      if ((L < l) || /* 二文節最長 */
++        ((L == l) &&
++         (U < u || /* 優先度の合計 */
++          (U == u && (L2 < ul.l2))))) { /* 二文節目の長さ */
++        L = l;
++        U = u;
++        L1 = l1;
++        L2 = ul.l2;
++      }
++#else
+       if ((((int)L < l)) ||
+ 	  (((int)L == l) &&  (U2 < ul.u2)) ||
+ 	  (((int)L == l) &&  (U2 == ul.u2) && ((int)L2 < ul.l2))
+@@ -1500,6 +1619,7 @@
+ 	L2 = ul.l2;
+ 	U2 = ul.u2;
+       }
++#endif
+     }
+   }
+ #ifdef USE_MALLOC_FOR_BIG_ARRAY
+@@ -2000,8 +2120,10 @@
+ 	candidates[i] = wp;
+ 	wp += 2 * ((*wp >> 1) & 0x7f) + 2;
+       };
++/*
+       if (thisCache->nc_count)
+ 	continue;
++*/
+       if (qm && qm->dm_qbits) {
+ 	int		bits;
+ 	
+diff -uNr Canna35b2.orig/lib/RK/permdic.c Canna35b2/lib/RK/permdic.c
+--- Canna35b2.orig/lib/RK/permdic.c	Mon Jul 22 13:56:50 1996
++++ Canna35b2/lib/RK/permdic.c	Thu May 16 16:26:11 2002
+@@ -257,6 +257,9 @@
+ 	dm->dm_gram->P_T00 = RkGetGramNum(gram, "T00");
+ 	dm->dm_gram->P_T30 = RkGetGramNum(gram, "T30");
+ 	dm->dm_gram->P_T35 = RkGetGramNum(gram, "T35");
++#ifdef FUJIEDA_HACK
++	dm->dm_gram->P_KJ  = RkGetGramNum(gram, "KJ");
++#endif
+ 	dm->dm_gram->refcount = 1;
+ 	goto next;
+       }
+diff -uNr Canna35b2.orig/lib/RKC/rkc.h Canna35b2/lib/RKC/rkc.h
+--- Canna35b2.orig/lib/RKC/rkc.h	Wed Nov 27 16:21:35 1996
++++ Canna35b2/lib/RKC/rkc.h	Thu May 16 16:26:11 2002
+@@ -42,7 +42,7 @@
+ #endif
+ 
+ #if defined(SYSV) || defined(SVR4) || defined(__STDC__) || defined(WIN)
+-# if defined(SYSV) || defined(SVR4) || defined(WIN)
++# if defined(SYSV) || defined(SVR4) || defined(WIN) || defined(linux) || defined(__GNU__)
+ #  include <memory.h>
+ # endif
+ # ifndef __EMX__
+diff -uNr Canna35b2.orig/lib/canna/Imakefile Canna35b2/lib/canna/Imakefile
+--- Canna35b2.orig/lib/canna/Imakefile	Wed Nov 27 16:23:42 1996
++++ Canna35b2/lib/canna/Imakefile	Thu May 16 16:26:11 2002
+@@ -116,8 +116,8 @@
+ #endif /* ProjectX */
+ #endif /* DoSharedLib */
+ 
+-sglobal.h: GSYM.awk globnames
+-	awk -f GSYM.awk < globnames > $@
++includes::
++	awk -f GSYM.awk < globnames > sglobal.h
+ 
+ clean::
+ 	$(RM) y.tab.h y.tab.c lex.yy.c gram.h gram.c lex.c sglobal.h
+diff -uNr Canna35b2.orig/lib/canna/canna.h Canna35b2/lib/canna/canna.h
+--- Canna35b2.orig/lib/canna/canna.h	Mon Dec  2 11:20:15 1996
++++ Canna35b2/lib/canna/canna.h	Thu May 16 16:26:11 2002
+@@ -106,7 +106,7 @@
+ #define STROKE_LIMIT 500 /* ストロークで接続を切る */
+ 
+ #if defined(SYSV) || defined(SVR4) || defined(__STDC__) || defined(WIN)
+-# if defined(SYSV) || defined(SVR4)
++# if defined(SYSV) || defined(SVR4) || defined(linux) || defined(__GNU__)
+ #  include <memory.h>
+ # endif
+ # ifndef __EMX__
+diff -uNr Canna35b2.orig/lib/canna/ebind.c Canna35b2/lib/canna/ebind.c
+--- Canna35b2.orig/lib/canna/ebind.c	Wed Jun  5 15:09:02 1996
++++ Canna35b2/lib/canna/ebind.c	Thu May 16 16:26:11 2002
+@@ -205,9 +205,9 @@
+     }
+   }
+ 
+-  inbuf[0] = (wchar_t)buffer_return[0];
++  inbuf[0] = (wchar_t)(buffer_return[0] & 0xff);
+   for (i = 1 ; i < nbytes ; i++) {
+-    inbuf[i] = (wchar_t)buffer_return[i];
++    inbuf[i] = (wchar_t)(buffer_return[i] & 0xff);
+   }
+   ch = buffer_return[0] & 0xff;
+   ret = XwcLookupKanji2(dpy, win, inbuf, inbufsize, nbytes, functionalChar,
+diff -uNr Canna35b2.orig/lib/canna/romaji.c Canna35b2/lib/canna/romaji.c
+--- Canna35b2.orig/lib/canna/romaji.c	Mon Nov 25 19:06:50 1996
++++ Canna35b2/lib/canna/romaji.c	Thu May 16 16:26:11 2002
+@@ -37,11 +37,15 @@
+ #endif
+ #endif
+ 
++/* Comment out original code.
+ #ifdef WIN
+ #define DEFAULT_ROMKANA_TABLE "/dic/default.cbp"
+ #else
+ #define DEFAULT_ROMKANA_TABLE "/dic/default.kp"
+ #endif
++*/
++/* Canna 3.5b2 have only cbp files. */
++#define DEFAULT_ROMKANA_TABLE "/dic/default.cbp"
+ 
+ #ifdef luna88k
+ extern int errno;
+@@ -389,7 +393,7 @@
+ 
+       if (retval == (struct RkRxDic *)NULL) { /* これもオープンできない */
+         extern jrUserInfoStruct *uinfo;
+-
++	
+         rdic[0] = '\0';
+         if (uinfo && uinfo->topdir) {
+ 	  strcpy(rdic, uinfo->topdir);
+@@ -400,7 +404,7 @@
+ 	strcat(rdic, "/dic/");
+ 	strcat(rdic, table);
+ 	retval = RkwOpenRoma(rdic);
+-
++	
+ 	if (ckverbose) {
+ 	  if (retval != (struct RkRxDic *)NULL) {
+ 	    if (ckverbose == CANNA_FULL_VERBOSE) {
+@@ -410,27 +414,76 @@
+ 	    }
+ 	  }
+ 	}
++      }
+ 
+-	if (retval == (struct RkRxDic *)NULL) { /* 全部オープンできない */
+-	  sprintf(rdic, 
++      if (retval == (struct RkRxDic *)NULL) { /* added for Debian by ISHIKAWA Mutsumi <ishikawa@linux.or.jp> */
++        extern jrUserInfoStruct *uinfo;
++	
++        rdic[0] = '\0';
++        if (uinfo && uinfo->topdir) {
++	  strcpy(rdic, uinfo->topdir);
++        }
++        else {
++          strcpy(rdic, CANNALIBDIR);
++        }
++	strcat(rdic, "/");
++	strcat(rdic, table);
++	retval = RkwOpenRoma(rdic);
++	
++	if (ckverbose) {
++	  if (retval != (struct RkRxDic *)NULL) {
++	    if (ckverbose == CANNA_FULL_VERBOSE) {
+ #ifndef WIN
+-		  "ローマ字かな変換テーブル(%s)がオープンできません。",
+-#else
+-	"\245\355\241\274\245\336\273\372\244\253\244\312"
+-	"\312\321\264\271\245\306\241\274\245\326\245\353\50\45\163\51\244\254"
+-	"\245\252\241\274\245\327\245\363\244\307\244\255\244\336\244\273"
+-	"\244\363\241\243",
+-#endif
+-		  table);
+-           /* ローマ字かな変換テーブル(%s)がオープンできません。 */
+-	  addWarningMesg(rdic);
+-	  retval = (struct RkRxDic *)0;
+-	  goto return_ret;
++              printf("ローマ字かな変換テーブルは \"%s\" を用います。\n", rdic);
++#endif
++	    }
++	  }
+ 	}
+       }
++      
++      if (retval == (struct RkRxDic *)NULL) { /* added for Debian by ISHIKAWA Mutsumi <ishikawa@linux.or.jp> */
++        extern jrUserInfoStruct *uinfo;
++	
++        rdic[0] = '\0';
++        if (uinfo && uinfo->topdir) {
++	  strcpy(rdic, uinfo->topdir);
++        }
++        else {
++          strcpy(rdic, CANNASHAREDIR);
++        }
++	strcat(rdic, "/");
++	strcat(rdic, table);
++	retval = RkwOpenRoma(rdic);
++	
++	if (ckverbose) {
++	  if (retval != (struct RkRxDic *)NULL) {
++	    if (ckverbose == CANNA_FULL_VERBOSE) {
++#ifndef WIN
++              printf("ローマ字かな変換テーブルは \"%s\" を用います。\n", rdic);
++#endif
++	    }
++	  }
++	}
++      }
++      
++      if (retval == (struct RkRxDic *)NULL) { /* 全部オープンできない */
++	sprintf(rdic, 
++#ifndef WIN
++		"ローマ字かな変換テーブル(%s)がオープンできません。",
++#else
++		"\245\355\241\274\245\336\273\372\244\253\244\312"
++		"\312\321\264\271\245\306\241\274\245\326\245\353\50\45\163\51\244\254"
++		"\245\252\241\274\245\327\245\363\244\307\244\255\244\336\244\273"
++		"\244\363\241\243",
++#endif
++		table);
++	/* ローマ字かな変換テーブル(%s)がオープンできません。 */
++	addWarningMesg(rdic);
++	retval = (struct RkRxDic *)0;
++      }
+     }
+   }
+- return_ret:
++
+ #ifdef WIN
+   (void)free((char *)rdic);
+ #endif
+diff -uNr Canna35b2.orig/misc/Imakefile Canna35b2/misc/Imakefile
+--- Canna35b2.orig/misc/Imakefile	Sat Oct 26 16:37:42 1996
++++ Canna35b2/misc/Imakefile	Thu May 16 16:26:11 2002
+@@ -6,8 +6,13 @@
+ #define IHaveSubdirs
+ #define PassCDebugFlags
+ 
++#ifdef engineSwitch
+        PROGRAMS = engine.cf default.canna
+            SRCS = engine.cpp
++#else
++       PROGRAMS = default.canna
++#endif
++
+ #ifdef nec
+         DEFINES = $(SCRIPTS_DEFINES) -DLIBCANNADIR=$(libCannaDir) \
+                   -DCPP=$(CPP) -DCANNA_DSOREV=$(cannaDsoRev) -Unec
+@@ -20,19 +25,21 @@
+ 
+ AllTarget($(PROGRAMS))
+ 
++#ifdef engineSwitch
+ CppScriptTarget(engine.cf,engine.cpp,$(DEFINES),/**/)
+ InstallNonExec(engine.cf,$(cannaLibDir))
++#endif
+ 
+ MakeSubdirs($(SUBDIRS))
+ DependSubdirs($(SUBDIRS))
+ MakeLintLibSubdirs($(SUBDIRS))
+ MakeLintSubdirs($(SUBDIRS),install.ln,install.ln)
+ 
+-MakeDirectories(install,$(cannaLibDir)/sample/src)
++MakeDirectories(install,$(cannaDocDir)/sample/src)
+ #if defined(nec_ews_svr4) || defined(pcux_r32)
+-InstallNamedNonExec(rMakefile,Makefile,$(cannaLibDir)/sample/src)
++InstallNamedNonExec(rMakefile,Makefile,$(cannaDocDir)/sample/src)
+ #else
+-InstallNamedNonExec(cMakefile,Makefile,$(cannaLibDir)/sample/src)
++InstallNamedNonExec(cMakefile,Makefile,$(cannaDocDir)/sample/src)
+ #endif /* nec_ews_svr4 */
+ 
+ #ifdef USE_OBSOLETE_STYLE_FILENAME
+@@ -43,8 +50,8 @@
+ 	$(CP) default.ca default.canna
+ #endif
+ 
+-InstallNonExec(default.canna,$(cannaLibDir))
+-InstallNonExec(is.c,$(cannaLibDir)/sample/src)
++InstallNonExec(default.canna,$(cannaEtcDir))
++InstallNonExec(is.c,$(cannaDocDir)/sample/src)
+ 
+ clean::
+ 	$(RM) $(PROGRAMS)
+diff -uNr Canna35b2.orig/misc/default.ca Canna35b2/misc/default.ca
+--- Canna35b2.orig/misc/default.ca	Sat Nov  9 11:17:24 1996
++++ Canna35b2/misc/default.ca	Fri May 17 10:09:50 2002
+@@ -34,11 +34,11 @@
+  )
+ 
+ 
+-;; 一覧表示状態から、文字伸縮を行う。
++;; key bindings to extend and shrink the conversion area
+ (set-key 'ichiran-mode "\C-o" '(quit extend))
+ (set-key 'ichiran-mode "\C-i" '(quit shrink))
+ 
+-;; シンボルの定義
++;; symbol definitions
+ (defsymbol 
+   ?[ "「" "『" "[" "［" "〔"
+   ?] "」" "』" "]" "］" "〕" )
+diff -uNr Canna35b2.orig/misc/initfiles/Imakefile Canna35b2/misc/initfiles/Imakefile
+--- Canna35b2.orig/misc/initfiles/Imakefile	Fri Oct 25 14:21:27 1996
++++ Canna35b2/misc/initfiles/Imakefile	Thu May 16 16:26:11 2002
+@@ -6,7 +6,7 @@
+ #endif
+ 
+             CANNAROOT = ../..
+-            SAMPLEDIR = $(cannaLibDir)/sample
++            SAMPLEDIR = $(cannaShareDir)
+ 
+ all::
+ 
+diff -uNr Canna35b2.orig/server/IR.h Canna35b2/server/IR.h
+--- Canna35b2.orig/server/IR.h	Wed Nov 27 16:24:56 1996
++++ Canna35b2/server/IR.h	Thu May 16 16:26:11 2002
+@@ -28,7 +28,7 @@
+ #define DEBUG
+ 
+ #if defined(SYSV) || defined(SVR4) || defined(__STDC__)
+-# if defined(SYSV) || defined(SVR4)
++# if defined(SYSV) || defined(SVR4) || defined(linux) || defined(__GNU__)
+ #  include    <memory.h>
+ # endif
+ # ifndef __EMX__
+diff -uNr Canna35b2.orig/server/connection.c Canna35b2/server/connection.c
+--- Canna35b2.orig/server/connection.c	Wed Nov 27 16:26:10 1996
++++ Canna35b2/server/connection.c	Thu May 16 16:26:11 2002
+@@ -85,6 +85,11 @@
+ extern UserTblPtr *usertabl;
+ extern unsigned long connow_socks;
+ 
++#ifdef USE_INET_SOCKET
++/* flag for using INET Domain Socket */
++extern int UseInet;
++#endif
++
+ #ifdef USE_UNIX_SOCKET  /* ＵＮＩＸドメインの作成 */
+ struct sockaddr_un unsock;
+ 
+@@ -220,17 +225,19 @@
+ #endif /*  use_unix_socket */
+   
+ #ifdef USE_INET_SOCKET  /* ＩＮＥＴドメイン */    
+-  if ((request = open_inet_socket ()) != -1)
+-  {
+-    WellKnownConnections |= (1L << request);
+-  }
+-  else
+-  {
+-    ir_debug( Dmsg(5,"Warning: INET domain not created.\n");)
+-    return 0; /* 作成に失敗 */
+-  }
++  if(UseInet){
++    if ((request = open_inet_socket ()) != -1)
++    {
++      WellKnownConnections |= (1L << request);
++    }
++    else
++    {
++      ir_debug( Dmsg(5,"Warning: INET domain not created.\n");)
++      return 0; /* 作成に失敗 */
++    }
+   
+-  ir_debug( Dmsg(3,"ＩＮＥＴドメインはできた\n"); )
++    ir_debug( Dmsg(3,"ＩＮＥＴドメインはできた\n"); )
++  }
+ #endif /* use_inet_socket */
+   
+   if (WellKnownConnections == 0) {
+diff -uNr Canna35b2.orig/server/misc.c Canna35b2/server/misc.c
+--- Canna35b2.orig/server/misc.c	Wed Nov 27 16:30:30 1996
++++ Canna35b2/server/misc.c	Thu May 16 16:26:11 2002
+@@ -46,11 +46,12 @@
+ #include <fcntl.h>
+ #endif
+ #ifdef __EMX__
+-#include <sys/types.h>
+ #include <unistd.h>
+ #endif
+ #include <signal.h>
++#include <pwd.h>
+ #include <sys/ioctl.h>
++#include <sys/types.h>
+ #include "IR.h"
+ #include "net.h"
+ 
+@@ -87,6 +88,19 @@
+ int MMountFlag = 0; /* メモリに辞書をロードするかしないかのフラグ */
+ static char Name[64];
+ 
++static char *userID=NULL; /* canna server's user id */
++
++#ifdef USE_INET_SOCKET
++/* flag for using INET Domain Socket */
++#ifdef USE_UNIX_SOCKET
++/* Not to use INET domain socket, if can use Unix Domain Socket */
++int UseInet = 0;
++#else
++/* if can use Unix Domain Socket, Use INET domain socket */
++int UseInet = 1;
++#endif
++#endif
++
+ #define MAX_PREMOUNTS 20
+ 
+ char *PreMountTabl[MAX_PREMOUNTS];
+@@ -99,7 +113,7 @@
+ static void Reset();
+ static void parQUIT();
+ 
+-#define USAGE "Usage: cannaserver [-p num] [-l num] [-d] [-syslog] [dichome]"
++#define USAGE "Usage: cannaserver [-p num] [-l num] [-u userid] [-syslog] [-inet] [-d] [dichome]"
+ static void
+ Usage()
+ {
+@@ -117,6 +131,7 @@
+     char buf[ MAXDATA ];
+     int     parent, parentid, i;
+     int     context;
++    struct  passwd *pwent;
+ 
+     strcpy( Name, argv[ 0 ] );
+ 
+@@ -137,6 +152,21 @@
+ 	    /* NOTREACHED */
+ 	  }
+ 	}
++	else if( !strcmp( argv[i], "-u")) {
++	  if (++i < argc) {
++	    userID = argv[i];
++	  }
++	  else {
++	    fprintf(stderr, "%s\n", USAGE);
++	    exit(2);
++	    /* NOTREACHED */
++	  }
++	}
++#ifdef USE_INET_SOCKET
++	else if( !strcmp( argv[i], "-inet")) {
++	  UseInet = 1;
++	}
++#endif
+ #ifdef RK_MMOUNT
+ 	else if( !strcmp( argv[i], "-m") ) {
+ 	  MMountFlag = RK_MMOUNT;
+@@ -168,6 +198,23 @@
+ 	strcpy( (char *)ddname, DICHOME );
+     }
+ 
++    if (userID != NULL) {
++        pwent = getpwnam(userID);
++	if (pwent) {
++	    if(setgid(pwent->pw_gid)) {
++	        FatalError("cannaserver:couldn't set groupid to canna user's group\n");	  
++	    }
++	    if (initgroups(userID, pwent->pw_gid)) {
++	        FatalError("cannserver: couldn't init supplementary groups\n");
++	    }
++	    if (setuid(pwent->pw_uid)) {
++	        FatalError("cannaserver: couldn't set userid to %s user\n", userID);
++	    }
++	} else if (userID != NULL) {
++	    FatalError("cannaserver: -u flag specified, but canna not run as root\n");
++	}
++    }
++
+ #ifdef DEBUG
+     DebugMode = 0 ;
+     ServerLogFp = stderr ;
+@@ -560,8 +607,6 @@
+ 	current->next = (ACLPtr)NULL ;
+ 	prev = current ;
+     }
+-    if( current )
+-	current->next = (ACLPtr)NULL ;
+ 
+     fclose( fp ) ;
+     return 0;
+@@ -649,12 +694,22 @@
+ 
+     if (client->username && client->username[0]) {
+       if (client->groupname && client->groupname[0]) {
++	if (strlen(DDUSER) + strlen(client->username) +
++	    strlen(DDGROUP) + strlen(client->groupname) +
++	    strlen(DDPATH) + 4 >= 256) {
++	  return(-1);
++	}
++
+ 	sprintf(dichome, "%s/%s:%s/%s:%s",
+ 		DDUSER, client->username,
+ 		DDGROUP, client->groupname,
+ 		DDPATH);
+       }
+       else {
++        if (strlen(DDUSER) + strlen(client->username) +
++	    strlen(DDPATH) + 2 >= 256) {
++	  return(-1);
++	}
+ 	sprintf(dichome, "%s/%s:%s",
+ 		DDUSER, client->username,
+ 		DDPATH);
+diff -uNr Canna35b2.orig/server/server.man Canna35b2/server/server.man
+--- Canna35b2.orig/server/server.man	Thu Jan 27 20:12:12 1994
++++ Canna35b2/server/server.man	Fri May 17 09:15:24 2002
+@@ -28,22 +28,22 @@
+ .SH "DESCRIPTION"
+ .PP
+ cannaserver provides the Kana-Kanji conversion service.  Usually all
+-users on the network can access cannaserver(1M).  The scope of
++users on the network can access cannaserver.  The scope of
+ accessing sources (hosts, users) can be restricted using the
+ /etc/hosts.canna file.
+ .PP
+-After starting, cannaserver(1M) immediately forks and enters the
++After starting, cannaserver immediately forks and enters the
+ background process.  Thus, you do not need to use '&' to set the
+ background process explicitly.
+ .PP
+-When starting, cannaserver(1M) creates the lock file
++When starting, cannaserver creates the lock file
+ @(LockDir)/@(LockFile) to avoid its duplicate starting.  The
+-lock file is deleted automatically at the end of cannaserver(1M) if no
+-trouble occurs.  The lock file may exist although cannaserver(1M) is
+-not in operation (because cannaserver(1M) terminates abnormally, for
++lock file is deleted automatically at the end of cannaserver if no
++trouble occurs.  The lock file may exist although cannaserver is
++not in operation (because cannaserver terminates abnormally, for
+ example).  In this case, delete the file manually.
+ .PP
+-When starting, cannaserver(1M) examines
++When starting, cannaserver examines
+ @(cannaLibDir)/dic/premountdics and mounts the dictionaries described
+ there before processing.  This enables a quick response to return
+ after a request to use a premounted dictionary is received from a
+@@ -56,21 +56,21 @@
+ .IP "\fIddpath\fP" 12
+ Specifies the directory that contains the dictionary.
+ .IP "\-l \fIn\fP" 12
+-Outputs the cannaserver(1M) log to /tmp/canna.log.  n (1 to 5)
++Outputs the cannaserver log to /tmp/canna.log.  n (1 to 5)
+ specifies the log level.
+ .IP "\-d" 12
+-Starts cannaserver(1M) in debug mode.  It is executed as the
++Starts cannaserver in debug mode.  It is executed as the
+ foreground process.  Log data at log level 5 is output to the standard
+ output.
+ .SH "FILES"
+ .IP "@(LockDir)/@(LockFile)" 36
+ Lock file
+-.IP "@(cannaLibDir)/dic/*/dics.dir" 36
+-Dictionary directory
++.IP "@(DicDir)/dics.dir" 36
++Dictionary list
+ .IP "/etc/hosts.canna" 36
+ Access control file
+ .IP "@(cannaLibDir)/dic/premountdics" 36
+-Premount dictionary list
++Premounted dictionary list
+ .SH "SEE ALSO"
+ .PP
+-cannakill(1M), cannastat(1), cannacheck(1)
++cannakill(1), cannastat(1), cannacheck(1)
