@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-0.91.ebuild,v 1.4 2003/09/05 14:25:22 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-0.91.ebuild,v 1.5 2003/09/06 18:23:55 pappy Exp $
 
 IUSE="dga oss xmms jpeg 3dfx sse matrox sdl X svga ggi oggvorbis 3dnow aalib gnome xv opengl truetype dvd gtk gif esd fbcon encode alsa directfb arts dvb gtk2 samba"
 
@@ -264,6 +264,10 @@ src_compile() {
 	then
 		myconf="${myconf} --enable-linux-devfs"
 	fi
+
+    if has_version 'sys-devel/hardened-gcc' && [ ${CC}="gcc" ] ; then
+        CC="${CC} -yet_exec"
+    fi
 
 	# Crashes on start when compiled with most optimizations.
 	# The code have CPU detection code now, with CPU specific
