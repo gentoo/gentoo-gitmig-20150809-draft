@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.81-r5.ebuild,v 1.11 2004/08/26 16:10:29 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.81-r5.ebuild,v 1.12 2004/09/06 00:17:59 ciaranm Exp $
 
 inherit flag-o-matic eutils gcc debug
 
@@ -48,12 +48,8 @@ print_gaim_warning() {
 	einfo
 	einfo "Note that we are now filtering all unstable flags in C[XX]FLAGS."
 	einfo
-	for TICKER in 1 2 3 4 5; do
-		# Double beep here.
-		echo -ne "\a" ; sleep 0.1 &>/dev/null ; sleep 0,1 &>/dev/null
-		echo -ne "\a" ; sleep 1
-	done
-	sleep 3
+	ebeep 5
+	epause 3
 }
 
 pkg_setup() {
