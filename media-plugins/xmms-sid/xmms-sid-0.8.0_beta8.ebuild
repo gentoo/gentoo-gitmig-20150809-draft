@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-sid/xmms-sid-0.8.0_beta8.ebuild,v 1.1 2004/02/23 23:34:08 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-sid/xmms-sid-0.8.0_beta8.ebuild,v 1.2 2004/03/29 23:22:11 dholm Exp $
 
 MY_PV=${PV/_beta/beta}
 MY_P=${PN}-${MY_PV}
@@ -11,7 +11,7 @@ SRC_URI="http://tnsp.org/xs-files/${MY_P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~sparc ~alpha ~hppa"
+KEYWORDS="~x86 ~sparc ~alpha ~hppa ~ppc"
 
 DEPEND="media-sound/xmms
 	=media-libs/libsidplay-1.36*"
