@@ -1,3 +1,5 @@
-MD5 105dac7c108ad10413d882729da28be3 ChangeLog 480
-MD5 a3f910a57ee5ef750a2626732edd8ab3 generator-0.35.ebuild 1667
+MD5 a293a2dd839c6426b4c730775b15d18a ChangeLog 913
+MD5 b0a45ecafbd9dd5c33c937a3cf1cba35 generator-0.35.ebuild 1889
+MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+MD5 d73801e7e799ac3e7e15ef54889b76ba files/logging.patch 1564
 MD5 693c422146d7001565fb916cbb84faf5 files/digest-generator-0.35 66
