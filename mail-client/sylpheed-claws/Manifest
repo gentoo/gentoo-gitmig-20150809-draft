@@ -1,15 +1,25 @@
-MD5 0efa3825baea2c9743294403e12dbfaf sylpheed-claws-0.9.12.ebuild 3785
-MD5 e2fbaf474d88efb6b9f39a805abb80fe sylpheed-claws-0.9.7.ebuild 4664
-MD5 553944c891ab53c40326b7c20adf5ffd sylpheed-claws-0.9.5-r1.ebuild 4624
-MD5 6654528b80ddc4d778dd74bc50df1d05 sylpheed-claws-0.9.11.ebuild 3753
-MD5 658a9d46f96119d1d6bed25dfa7147fd sylpheed-claws-0.9.10.ebuild 3755
-MD5 12929a34cc36f107a397f3dd62206888 ChangeLog 14677
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 799733f5421ef60964d6df8062dfc7b3 metadata.xml 345
-MD5 a44580928f3fa901eb944e739c070d44 files/digest-sylpheed-claws-0.9.7 148
+MD5 658a9d46f96119d1d6bed25dfa7147fd sylpheed-claws-0.9.10.ebuild 3755
+MD5 553944c891ab53c40326b7c20adf5ffd sylpheed-claws-0.9.5-r1.ebuild 4624
+MD5 e2fbaf474d88efb6b9f39a805abb80fe sylpheed-claws-0.9.7.ebuild 4664
+MD5 6654528b80ddc4d778dd74bc50df1d05 sylpheed-claws-0.9.11.ebuild 3753
+MD5 06adde18c43376de7740bb11d6b22666 ChangeLog 14877
+MD5 bf73bb88d9fab28eb1d35469d1626aa6 sylpheed-claws-0.9.12.ebuild 3626
 MD5 e5a1953a555e8060722cada98b9d55fb files/digest-sylpheed-claws-0.9.10 149
 MD5 8ca534b232f6988e9df8e9fd48563e43 files/digest-sylpheed-claws-0.9.11 149
-MD5 a09d3e46460639906752864c7a38b6c4 files/digest-sylpheed-claws-0.9.12 150
-MD5 debd84fa61847ff672e179bcb7845e2b files/sylpheed-0.8.3claws32-dillo.patch 9123
-MD5 82d3d3968bf15e87b2fc7b5b53c42277 files/gv-procmime-Makefile.in.patch 930
 MD5 1e7e11ae4e8aba685f25aa113e70e1b5 files/digest-sylpheed-claws-0.9.5-r1 234
+MD5 a44580928f3fa901eb944e739c070d44 files/digest-sylpheed-claws-0.9.7 148
+MD5 82d3d3968bf15e87b2fc7b5b53c42277 files/gv-procmime-Makefile.in.patch 930
 MD5 bf4c9cd9cb7cdc6ece7d4d327910f0cf files/procmime.patch 977
+MD5 debd84fa61847ff672e179bcb7845e2b files/sylpheed-0.8.3claws32-dillo.patch 9123
+MD5 a09d3e46460639906752864c7a38b6c4 files/digest-sylpheed-claws-0.9.12 150
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFBCrEa6J2i8a8J4okRAgosAJ91kmvO/ruRAs3levOnlpoUKrMvXQCfVhkM
+whhHLyq+lhRza0TkOG+0t/c=
+=qTDV
+-----END PGP SIGNATURE-----

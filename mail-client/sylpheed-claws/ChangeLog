@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/sylpheed-claws
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws/ChangeLog,v 1.8 2004/07/17 22:08:37 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws/ChangeLog,v 1.9 2004/07/30 20:35:25 genone Exp $
+
+  30 Jul 2004; Marius Mauch <genone@gentoo.org> sylpheed-claws-0.9.12.ebuild:
+  Name has changed upstream, so removing the sed line from src_unpack.
+  Runs good enough for ~ærch, so unmasking now.
 
   01 Jul 2004; Jason Wever <weeve@gentoo.org> sylpheed-claws-0.9.11.ebuild:
   Stable on sparc.

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws/sylpheed-claws-0.9.12.ebuild,v 1.1 2004/06/30 07:21:45 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws/sylpheed-claws-0.9.12.ebuild,v 1.2 2004/07/30 20:35:25 genone Exp $
 
 IUSE="nls gnome xface dillo crypt spell imlib ssl ldap ipv6 pda clamav pdflib"
 
@@ -45,11 +45,6 @@ src_unpack() {
 	unpack ${A}
 
 	mv ${WORKDIR}/${MY_GS} ${S}/src/plugins
-
-	# Change package name to sylpheed-claws ...
-	for i in `find ${S}/ -name 'configure*'`; do
-		sed -i "s/PACKAGE\=sylpheed/PACKAGE\=sylpheed-claws/" ${i}
-	done
 
 	# use shared-mime-info
 	cd ${S}/src
