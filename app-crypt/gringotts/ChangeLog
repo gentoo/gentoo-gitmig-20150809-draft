@@ -1,6 +1,12 @@
 # ChangeLog for app-crypt/gringotts
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gringotts/ChangeLog,v 1.8 2002/12/13 10:56:01 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gringotts/ChangeLog,v 1.9 2003/01/14 07:38:32 leonardop Exp $
+
+*gringotts-1.2.3 (14 Jan 2003)
+
+  14 Jan 2003; L. Boshell <leonardop@gentoo.org> : Version bump. Thanks to
+  Alastair Tse for his contribution on bug #11920 regarding dependencies
+  for this package.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
