@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmmemfree
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmemfree/ChangeLog,v 1.6 2004/09/04 01:26:47 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmemfree/ChangeLog,v 1.7 2004/11/24 23:20:17 weeve Exp $
+
+  24 Nov 2004; Jason Wever <weeve@gentoo.org> wmmemfree-0.7-r1.ebuild:
+  Added ~sparc keyword.
 
   04 Sep 2004; Michele Noberasco <s4t4n@gentoo.org> wmmemfree-0.7-r1.ebuild:
   Stable for x86.

@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmjsql
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmjsql/ChangeLog,v 1.5 2004/11/22 10:12:46 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmjsql/ChangeLog,v 1.6 2004/11/24 23:14:23 weeve Exp $
+
+  24 Nov 2004; Jason Wever <weeve@gentoo.org> wmjsql-0.5.ebuild:
+  Added ~sparc keyword.
 
   21 Nov 2004; Michele Noberasco <s4t4n@gentoo.org> wmjsql-0.5.ebuild:
   Remove unneeded 'inherit eutils'...

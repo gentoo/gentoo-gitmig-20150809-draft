@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmmaiload
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmaiload/ChangeLog,v 1.13 2004/10/19 08:56:34 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmaiload/ChangeLog,v 1.14 2004/11/24 23:19:05 weeve Exp $
+
+  24 Nov 2004; Jason Wever <weeve@gentoo.org> wmmaiload-1.0.1.ebuild:
+  Added ~sparc keyword.
 
   19 Oct 2004; Dylan Carlson <absinthe@gentoo.org> wmmaiload-1.0.1.ebuild:
   Stable on amd64.
