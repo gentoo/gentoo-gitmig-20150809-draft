@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/shaaft/shaaft-0.5.0.ebuild,v 1.1 2004/02/01 09:57:46 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/shaaft/shaaft-0.5.0.ebuild,v 1.2 2004/06/04 21:25:03 jhuebel Exp $
 
 inherit games
 
@@ -9,7 +9,7 @@ DESCRIPTION="A falling block game similar to Blockout"
 HOMEPAGE="http://criticalmass.sourceforge.net/shaaft.php"
 SRC_URI="mirror://sourceforge/criticalmass/${P/s/S}.tar.bz2"
 
-KEYWORDS="x86"
+KEYWORDS="x86 ~amd64"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE=""
