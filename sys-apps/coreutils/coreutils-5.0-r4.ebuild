@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.0-r4.ebuild,v 1.3 2003/09/13 17:47:31 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.0-r4.ebuild,v 1.4 2003/09/15 05:10:27 seemant Exp $
 
 inherit eutils
 
@@ -48,12 +48,10 @@ src_unpack() {
 	# WARNING: These CONFLICT with the SELINUX patches
 	if use acl
 	then
-		mv ${PATCHDIR}/001* ${PATCHDIR}/excluded
 		if [ -z "`use nls`" ] ; then
-			ewarn "blah"
 			mv ${PATCHDIR}/acl/004* ${PATCHDIR}/excluded
-			ewarn "heh"
 		fi
+		use selinux || mv ${PATCHDIR}/001* ${PATCHDIR}/excluded
 		use selinux || EPATCH_SUFFIX="patch" epatch ${PATCHDIR}/acl
 	fi
 
