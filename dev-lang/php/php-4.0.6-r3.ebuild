@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-4.0.6-r3.ebuild,v 1.2 2001/11/29 08:31:36 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-4.0.6-r3.ebuild,v 1.3 2001/12/07 19:18:16 drobbins Exp $
 
 A=${PN}-4.0.6.tar.gz
 S=${WORKDIR}/${PN}-4.0.6
@@ -92,9 +92,9 @@ src_compile() {
     if [ "`use qt`" ] ; then
       myconf="$myconf --with-qtdom" 
     fi
-#    if [ "`use imap`" ] ; then
+    if [ "`use imap`" ] ; then
       myconf="$myconf --with-imap" 
-#    fi
+    fi
     if [ "`use libwww`" ] ; then
       myconf="$myconf --with-xml" 
     else
