@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mtx/mtx-1.2.18.ebuild,v 1.1 2004/01/13 19:05:31 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mtx/mtx-1.2.18.ebuild,v 1.2 2004/04/02 21:07:06 plasmaroo Exp $
 
 IUSE=""
 
@@ -16,6 +16,7 @@ SLOT="0"
 src_unpack() {
 	unpack ${A}
 	mv ${P}rel ${S}
+	sed -e 's:/usr/src/linux/include ::' -i ${S}/Makefile.in
 }
 
 src_compile() {
