@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/bacula/bacula-1.32f.ebuild,v 1.6 2004/03/23 12:21:18 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/bacula/bacula-1.32f.ebuild,v 1.7 2004/04/09 16:36:19 zul Exp $
 
 S="${WORKDIR}/${P}"
 DESCRIPTION="featureful client/server network backup suite"
@@ -34,10 +34,7 @@ src_unpack() {
 	cd ${S}
 
 	einfo "Using ${PV}-1-weekofmonth.patch"
-	patch -p0 < ${FILESDIR}/1.32f/${PV}-1-weekofmonth.patch
-
-	einfo "Using ${PV}-2-eom-nextvol.patch"
-	patch -p0 < ${FILESDIR}/1.32f/${PV}-2-eom-nextvol.patch
+	epatch ${FILESDIR}/1.32f/${PV}-1-weekofmonth.patch
 
 }
 
