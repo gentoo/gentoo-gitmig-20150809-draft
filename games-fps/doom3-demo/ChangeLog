@@ -1,0 +1,10 @@
+# ChangeLog for games-fps/doom3-demo
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-demo/ChangeLog,v 1.1 2004/10/07 12:44:37 wolf31o2 Exp $
+
+*doom3-demo-1.1.1282 (07 Oct 2004)
+
+  07 Oct 2004; Chris Gianelloni <wolf31o2@gentoo.org> +metadata.xml,
+  +doom3-demo-1.1.1282.ebuild:
+  Initial import.  Ebuild by vapier.  Closing bug #66352.
+
