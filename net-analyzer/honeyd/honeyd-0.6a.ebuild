@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/honeyd/honeyd-0.6a.ebuild,v 1.2 2003/09/08 09:26:39 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/honeyd/honeyd-0.6a.ebuild,v 1.3 2003/09/24 13:13:06 aliz Exp $
 
 inherit eutils
 
@@ -20,12 +20,15 @@ RDEPEND=${DEPEND}
 
 S="${WORKDIR}/${P}"
 
+src_unpack() {
+	unpack ${A} ; cd ${S}
+
+	sed -i "s:^CFLAGS = -O2:CFLAGS = ${CFLAGS}:g" Makefile.in
+}
+
 src_compile() {
 	econf --with-libdnet=/usr || die "econf failed"
-	emake CFLAGS="${CFLAGS} -Wall -g \
-		-DPATH_HONEYDDATA=${honeyddatadir} \
-		-DPATH_HONEYDLIB=${honeydlibdir} " \
-		|| die "emake failed"
+	emake || die
 }
 
 src_install() {
