@@ -1,4 +1,4 @@
-MD5 d354e39c5a6aee6cd13cf41fb1abe636 pdksh-5.2.14-r4.ebuild 1018
-MD5 31bdde98ed2040e4c0977f015e210c65 ChangeLog 2454
+MD5 5fc4f23eaea189fb992396acd1f01c27 ChangeLog 2458
+MD5 f11c75fd277f8ccf59bb021289d55111 pdksh-5.2.14-r4.ebuild 1022
 MD5 e00717e9bd2d8dacd3133f594a131e54 files/digest-pdksh-5.2.14-r4 129
 MD5 2cf77b988d3a4d99a847a3829c964847 files/pdksh-5.2.14-coreutils-posix-fix.patch 439

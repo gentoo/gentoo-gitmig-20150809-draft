@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e3653147b5a6fd33f58cf200d104cb89 ChangeLog 741
+MD5 99b9bb31665f70381aeebb3b9460bc3e ChangeLog 743
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
-MD5 f904abcc83262d008ec9016de51376cb smrsh-8.12.10.ebuild 1123
+MD5 e3766a89215ec71cdd5b111fdb6287b1 smrsh-8.12.10.ebuild 1127
 MD5 d80daec431bd383e452e69f1f82dbff5 files/digest-smrsh-8.12.10 69
 MD5 91f9d000e7a1e50ef639134d209f592f files/site.config.m4 478
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA4OlEHTu7gpaalycRAq2IAJ9tTY2UsKcvyr2SgwF/YQtFz7xEEACfdOJJ
-b2ViU0/9f16M3qldkEDjzUE=
-=et5+
------END PGP SIGNATURE-----

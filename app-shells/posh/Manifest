@@ -1,13 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 4a9bd244aa245b3d55e76960560922ea ChangeLog 609
-MD5 15d1a613141d45728e8f1fe99c1cf6a1 posh-0.2.28.ebuild 539
+MD5 cf8c89e521a7c180cfa4cb761a8f9c83 ChangeLog 611
+MD5 1ded192a33b1fadba6590dce11e233fb posh-0.2.28.ebuild 543
 MD5 332905d1b42cdaf6bd7789bb84bf6cf2 files/digest-posh-0.2.28 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA4Oh2HTu7gpaalycRAp9RAJ0fsS6jKAU2kBSBU6GKtMenxwfwIACgmdWP
-pHCPG4UXs+hQAvR47T12qO4=
-=JeLP
------END PGP SIGNATURE-----
