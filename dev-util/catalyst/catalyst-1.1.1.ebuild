@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/catalyst-1.1.1.ebuild,v 1.7 2005/02/12 17:25:22 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/catalyst-1.1.1.ebuild,v 1.8 2005/02/24 20:48:49 wolf31o2 Exp $
 
 inherit eutils
 
@@ -19,8 +19,7 @@ RDEPEND="dev-lang/python
 	sys-apps/portage
 	dev-util/ccache
 	amd64? ( sys-apps/linux32 )
-	cdr? ( virtual/cdrtools app-misc/zisofs-tools sys-fs/squashfs-tools )
-	>=sys-kernel/genkernel-3.1.0a"
+	cdr? ( virtual/cdrtools app-misc/zisofs-tools sys-fs/squashfs-tools )"
 
 S=${WORKDIR}/${PN}
 
