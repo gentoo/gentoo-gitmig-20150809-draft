@@ -1,4 +1,16 @@
-MD5 23fa760094f4cb4c7d54eb08b0131c3e ChangeLog 657
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 e19173433315903202ffd8fd7f731156 jade-3.2.ebuild 851
 MD5 381b02c5bddfbe57e59d15301f608549 jade-3.1.ebuild 903
+MD5 e392766c637fa667a1d8e6990347a213 ChangeLog 773
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 ea537ce20773ce1519d31bdaca64f84b files/digest-jade-3.1 62
+MD5 c62a9f527b77d0349cc01d8c181cd3a2 files/digest-jade-3.2 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFBCWC0/rLF9B432nYRApPkAJ0bRtRNDARgjp+tJYsLn0YuUW51jACeKAeM
++O1I6T3x/9p/KVKRvs8V0uw=
+=ndoS
+-----END PGP SIGNATURE-----
