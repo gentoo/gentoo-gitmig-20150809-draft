@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/psad/psad-1.4.0.ebuild,v 1.3 2005/01/07 03:57:24 battousai Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/psad/psad-1.4.0.ebuild,v 1.4 2005/01/08 00:07:49 battousai Exp $
 
 inherit eutils perl-module
 
@@ -83,7 +83,7 @@ src_install() {
 	insinto /etc/psad
 	doins *.conf
 	doins psad_*
-	doins auto_dl icmp_types posf signatures
+	doins auto_dl icmp_types posf signatures pf.os
 
 	cd ${S}/init-scripts
 	exeinto /etc/init.d
