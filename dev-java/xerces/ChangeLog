@@ -1,6 +1,19 @@
 # ChangeLog for dev-java/xerces
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xerces/ChangeLog,v 1.36 2004/12/18 09:11:59 corsair Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xerces/ChangeLog,v 1.37 2005/01/15 13:20:08 luckyduck Exp $
+
+*xerces-1.3.1-r1 (15 Jan 2005)
+
+  15 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org>
+  +files/xerces-1.3.1-build.xml, +xerces-1.3.1-r1.ebuild,
+  xerces-2.6.2-r1.ebuild:
+  made a build.xml file for xerces to make compiling on amd64 possible. packed
+  jar issues removed for 1.3.1. see bug #63287.
+
+*xerces-1.3.1-r1 15 Jan 2005
+
+  15 Jan 2005;  <> 
+  # INSERT ENTRY HERE
 
   18 Dec 2004; Markus Rothe <corsair@gentoo.org> xerces-2.6.2-r1.ebuild:
   added ~ppc64 to KEYWORDS
