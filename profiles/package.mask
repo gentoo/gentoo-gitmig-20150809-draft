@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2968 2004/06/28 04:17:24 agriffis Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2969 2004/06/28 06:18:27 zypher Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -21,15 +21,6 @@
 ##
 ##   End example
 ##
-
-# <zypher@gentoo.org> (27 June 2004)
-# Probably buggy/broken. Needs brave testing
-sys-cluster/ccs
-sys-cluster/cman
-sys-cluster/dlm
-sys-cluster/fence
-sys-cluster/gfs
-sys-cluster/iddev
 
 # <mr_bones_@gentoo.org> (25 June 2004)
 # No worky for me.  Needs some love from Spanky.
