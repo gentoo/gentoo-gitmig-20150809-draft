@@ -1,6 +1,36 @@
 # ChangeLog for <CATEGORY>/<PACKAGE_NAME>
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/ChangeLog,v 1.3 2002/04/13 00:58:40 seemant Exp $
+# /space/gentoo/cvsroot/gentoo-x86/media-gfx/povray/ChangeLog,v 1.3 2002/04/13 00:58:40 seemant Exp
+
+*povray-3.1g-r4 (19 Apr 2002)
+
+  12 Apr 2002; William McArthur <sandymac@gentoo.org>
+
+  Fixed povray to use system versions of libpng and zlib. PovRay wasn't using
+  newest libpng despite the change entry below.
+  
+  Changed the CFLAGS in the makefile to be similar to the ones in the systems
+  /etc/make.conf . This is kinda ugly but it doesn't hard code the CFLAGS for 
+  pentium 2.
+
+  Added icc support. This is also ugly but there are real speed increases to be
+  gained. To use icc you need to add "icc" to your USE variable. My benchmarks
+  show that using icc gives a 5% speed increase on a pentium 2.
+
+  Added icc Profile-guided Optimization (PGO) support. To use PGO you need to
+  add "icc-pgo" to your USE variable. Then merge the package, run it some to
+  collect profile data, and merge it again useing that profile data. PGO is a
+  two step process, so it requires that the user merge the package twice. In
+  step one the icc compiles the package with "-prof_gen" in the CFLAGS. Then
+  icc adds code in the application to collect stats on the execution flow of the
+  program. Unfortunatlly there is about a 30% performance hit but the performace
+  gains later are worth it. After you've run the program a some, the more you do
+  the better the collected stats, you recompile with "-prof_use". The resulting
+  binary is optimized based on your use of the program. In my benchmarks the PGO
+  binary was 21.7% faster that the gcc version and 15.8% faster than the non-PGO
+  icc version. If you want to recollect the PGO data delete the
+  /var/tmp/portage/povray-3.1g-r4/icc-pgo directory. The ebuild detects the
+  presence of this directory to decide which stage in the PGO process it is in.
 
 *povray-3.1g-r3 (12 Apr 2002)
 
