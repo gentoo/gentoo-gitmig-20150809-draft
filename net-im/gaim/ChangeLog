@@ -1,6 +1,6 @@
 # ChangeLog for net-im/gaim
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/ChangeLog,v 1.41 2003/04/09 05:35:47 sethbc Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/ChangeLog,v 1.42 2003/04/17 16:53:26 lostlogic Exp $
 
 *gaim-0.61 (09 Apr 2003)
 
@@ -19,6 +19,9 @@
   GAIM 0.60!!!!!
 
 *gaim-0.59.9-r1 (17 Mar 2003)
+
+  17 Apr 2003; Brandon Low <lostlogic@gentoo.org> gaim-0.59.9-r1.ebuild:
+  ppc and x86 stable keywords
 
   17 Mar 2003; Brandon Low <lostlogic@gentoo.org> gaim-0.59.9-r1.ebuild:
   Bump gaim-encryption plugin version.
