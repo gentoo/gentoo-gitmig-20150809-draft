@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellweather/gkrellweather-2.0.6.ebuild,v 1.3 2003/09/14 03:59:17 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellweather/gkrellweather-2.0.6.ebuild,v 1.4 2003/09/14 04:14:43 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GKrellM2 Plugin that monitors a METAR station and displays weather
@@ -23,11 +23,10 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 
-	sed -i "s:GrabWeather:GrabWeather2:g" \
+	sed -i \
+		-e "s:GrabWeather:GrabWeather2:g" \
+		-e "s:/usr/share/gkrellm:/usr/bin:g" \
 		gkrellweather.c
-
-	sed -i "s:GrabWeather:GrabWeather2:g" \
-		Makefile
 }
 
 src_compile() {
