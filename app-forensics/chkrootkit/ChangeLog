@@ -1,6 +1,15 @@
 # ChangeLog for app-forensics/chkrootkit
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/chkrootkit/ChangeLog,v 1.20 2005/01/01 14:22:35 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/chkrootkit/ChangeLog,v 1.21 2005/01/23 14:37:46 dragonheart Exp $
+
+*chkrootkit-0.44-r1 (23 Jan 2005)
+
+  23 Jan 2005; Daniel Black <dragonheart@gentoo.org>
+  +files/chkrootkit-0.44-coreutils-static-falsepositive.patch,
+  +chkrootkit-0.44-r1.ebuild:
+  Revision bump to solve false detections with static coreutils (du and ls). Bug
+  #73372 refers. Thanks to the author Nelson Murilo <nelson@pangeia.com.br> for
+  a very rapid response.
 
   28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
