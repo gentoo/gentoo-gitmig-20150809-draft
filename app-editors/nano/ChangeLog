@@ -1,9 +1,11 @@
 # ChangeLog for app-editors/nano
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/ChangeLog,v 1.29 2003/07/06 09:11:33 kumba Exp $
-
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/ChangeLog,v 1.30 2003/07/22 13:38:07 vapier Exp $
 
 *nano-1.2.1 (25 Apr 2003)
+
+  22 Jul 2003; Mike Frysinger <vapier@gentoo.org> :
+  Add local USE flag justify to control the justify configure option.
 
   06 Jul 2003; Joshua Kinard <kumba@gentoo.org> nano-1.2.1.ebuild:
   Changed ~mips to mips in KEYWORDS
