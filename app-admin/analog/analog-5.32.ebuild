@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/analog/analog-5.32.ebuild,v 1.15 2004/09/23 12:19:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/analog/analog-5.32.ebuild,v 1.16 2004/11/12 00:27:13 agriffis Exp $
 
 inherit eutils
 
@@ -45,7 +45,7 @@ src_compile() {
 		src/Makefile
 	eend $?
 
-	make -C src || die
+	make -C src || die "make failed"
 }
 
 src_install() {

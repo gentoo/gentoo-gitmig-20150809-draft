@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 c0cbbd4965a50cd0c9d5ed4080887885 ChangeLog 2923
-MD5 928b18fa671ed6f9194d8cca7dbca93f analog-5.32.ebuild 1676
+MD5 8de95a09196fa6defd1fd2f46b2618fe analog-5.32.ebuild 1692
 MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
 MD5 2fb240fa271f7dd72dd56552f60729ab files/analog-5.1-gentoo.diff 888
 MD5 bea5158163ebee10b42f2a008cf660d7 files/analog.cfg 3992
 MD5 680b3d1d4411710fa55b5ec607a66222 files/digest-analog-5.32 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBUr94HTu7gpaalycRAr9jAKCrhIz4QME/mn8JlN5V8Jocx/6gTgCeOqu1
-+fbA1QPr4ofvU3Y0PiC9r1I=
-=yPdM
------END PGP SIGNATURE-----
