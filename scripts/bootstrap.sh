@@ -98,7 +98,7 @@ export USE="$ORIGUSE bootstrap"
 emerge $myGLIBC $myBASELAYOUT $myTEXINFO $myGETTEXT $myZLIB $myBINUTILS $myGCC || cleanup 1
 #ncurses-5.3 and up also build c++ bindings, so we need to rebuild it
 export USE="$ORIGUSE"
-emerge $myNCURSES"
+emerge $myNCURSES
 
 #restore original make.conf
 cleanup 0
