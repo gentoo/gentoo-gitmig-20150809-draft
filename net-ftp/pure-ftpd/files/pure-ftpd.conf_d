@@ -12,7 +12,8 @@
 ## Using an invalid IP will result in server not starting and reporting
 ## a good start. Work is being done to solve that in:
 ## http://bugs.gentoo.org/show_bug.cgi?id=75861
-SERVER="-S 192.168.0.1,21"
+#SERVER="-S 192.168.0.1,21"
+SERVER="-S 21"
 
 ## Number of simultaneous connections in total, and per ip ##
 MAX_CONN="-c 30"
