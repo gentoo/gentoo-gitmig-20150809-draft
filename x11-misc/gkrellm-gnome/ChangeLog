@@ -1,6 +1,15 @@
 # ChangeLog for x11-misc/gkrellm-gnome
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gkrellm-gnome/ChangeLog,v 1.1 2002/02/01 21:53:38 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gkrellm-gnome/ChangeLog,v 1.2 2002/04/14 14:00:07 seemant Exp $
+
+*gkrellm-gnome-0.1 (14 Apr 2002)
+
+  14 Apr 2002; Seemant Kulleen <seemant@gentoo.org> gkrellm-gnome-0.1.ebuild :
+
+  Removed glibc from the DEPEND list, because that is implied.  And also 
+  removed gnome-core from the DEPEND list, because it is not a dependency.
+  This plugin merely creates hints and such, and only interacts with the 
+  gnome panel if it is present.
 
 *gkrellm-gnome-0.1 (1 Feb 2002)
 
