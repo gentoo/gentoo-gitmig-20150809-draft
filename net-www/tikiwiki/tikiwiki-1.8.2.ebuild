@@ -1,21 +1,19 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/tikiwiki/tikiwiki-1.8.2.ebuild,v 1.3 2004/06/25 01:13:54 agriffis Exp $ 
+# $Header: /var/cvsroot/gentoo-x86/net-www/tikiwiki/tikiwiki-1.8.2.ebuild,v 1.4 2004/08/04 20:15:52 mholzer Exp $
 
 inherit webapp-apache
 
 DESCRIPTION="Full featured Web Content Management System using Php and Smarty Templates"
 HOMEPAGE="http://tikiwiki.org/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
-RESTRICT="nomirror"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc"
 
 RDEPEND="virtual/php
-	media-gfx/graphviz
-	dev-db/mysql"
+	media-gfx/graphviz"
 
 pkg_setup() {
 	webapp-detect || NO_WEBSERVER=1
