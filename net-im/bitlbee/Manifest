@@ -1,6 +1,7 @@
-MD5 8a26a1f8e94511f07d5a1633f2d4c5f9 ChangeLog 6688
+MD5 2ae8b1e051c9091515a42dce0fb237f1 ChangeLog 6802
 MD5 634a166aaf83031b0bd3f679bb704250 bitlbee-0.90.ebuild 2731
 MD5 2881dcdd126a6c3a2bfe5c789f998066 bitlbee-0.90-r1.ebuild 2888
+MD5 2ac3ad2e707c1212f9c69c55fb2c9aeb bitlbee-0.91.ebuild 3044
 MD5 1ea53830f16bd092d99a424877021ed6 bitlbee-0.84.ebuild 2389
 MD5 fc51bd6f3a89c98a4a447e9b1725e488 metadata.xml 465
 MD5 a922a7ef3b8b72489cbf0f9d0d4c4613 bitlbee-0.85a.ebuild 2398
@@ -12,6 +13,7 @@ MD5 6ea807f03873746fb89cc62f5552cb9e files/bitlbeed.confd 556
 MD5 ca5844d2edbb81e8ab4c8042e122aeb6 files/bitlbeed.init 724
 MD5 3c50c03225e8618f3bc586dca3d2644b files/digest-bitlbee-0.90 64
 MD5 a13cf7e7b6f6a438f1cc81faf43aed63 files/digest-bitlbee-0.90-r1 128
+MD5 70d0e8bb8d7639b86e3ee8c0bda16334 files/digest-bitlbee-0.91 64
 MD5 b5361a82a904f5e2bf9c5a6d0717f374 files/digest-bitlbee-0.84 64
 MD5 6668146d14da88ef8240b49671db3e9b files/yahoo.diff 25463
 MD5 3697485d9a040cc81ff7f9d766ec1436 files/digest-bitlbee-0.85a 65
