@@ -1,7 +1,13 @@
 # ChangeLog for net-ftp/proftpd
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/ChangeLog,v 1.4 2002/06/09 14:34:40 nitro Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/ChangeLog,v 1.5 2002/06/20 22:23:18 nitro Exp $
 
+
+*proftpd-1.2.5 (20 Jun 2002)
+
+  20 Jun 2002; Kyle Manna <nitro@gentoo.org> proftpd-1.2.5-r1.ebuild :
+
+  Now we copy pam ftp file if we 'use pam'
 
 *proftpd-1.2.5 (9 Jun 2002)
 
