@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmufo/wmufo-1.2.0.ebuild,v 1.4 2004/11/25 15:44:08 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmufo/wmufo-1.2.0.ebuild,v 1.5 2005/03/02 08:37:00 s4t4n Exp $
 
 inherit eutils
 
@@ -17,7 +17,8 @@ LICENSE="GPL-2"
 
 DEPEND="virtual/x11
 	>=dev-util/pkgconfig-0.15.0
-	>=x11-libs/gtk+-2.2.4-r1"
+	>=x11-libs/gtk+-2.2.4-r1
+	>=gnome-base/libgtop-2.8.1"
 
 src_install () {
 	einstall || die "make install failed"
