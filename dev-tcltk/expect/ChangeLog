@@ -1,6 +1,10 @@
 # ChangeLog for dev-tcltk/expect
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/expect/ChangeLog,v 1.25 2004/10/05 04:51:01 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/expect/ChangeLog,v 1.26 2004/10/30 04:31:30 agriffis Exp $
+
+  31 Oct 2004; Aron Griffis <agriffis@gentoo.org> expect-5.40.0-r2.ebuild:
+  It appears keywords were stripped from this revbump for no reason... putting
+  them back
 
   04 Oct 2004; Jason Wever <weeve@gentoo.org> expect-5.40.0-r2.ebuild:
   Added ~sparc keyword.
