@@ -1,6 +1,6 @@
 # ChangeLog for sys-apps/pciutils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/ChangeLog,v 1.10 2003/02/12 12:43:36 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/ChangeLog,v 1.11 2003/03/11 06:13:56 seemant Exp $
 
   12 Feb 2003; Guy Martin <gmsoft@gentoo.org> pciutils-2.1.10-r1.ebuild :
   Added hppa to keywords.
@@ -13,6 +13,12 @@
   Made pcimodule patch apply cleanly.
 
 *pciutils-2.1.10 (02 Aug 2002)
+
+  10 Mar 2003; Seemant Kulleen <seemant@gentoo.org> pciutils-2.1.10-r1.ebuild,
+  pciutils-2.1.10.ebuild, pciutils-2.1.10.ebuild, pciutils-2.1.9-r1.ebuild,
+  pciutils-2.1.9-r1.ebuild, pciutils-2.1.9-r2.ebuild,
+  pciutils-2.1.9-r2.ebuild:
+  use epatch instead
 
   02 Aug 2002; Daniel Ahlberg <aliz@gentoo.org> pciutils-2.1.10.ebuild:
   Version bump. Updates the pci.ids before compiling.

@@ -1,28 +1,26 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/pciutils-2.1.10-r1.ebuild,v 1.8 2003/02/13 16:09:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/pciutils-2.1.10-r1.ebuild,v 1.9 2003/03/11 06:13:56 seemant Exp $
+
+inherit eutils
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Various utilities dealing with the PCI bus"
-SRC_URI="ftp://atrey.karlin.mff.cuni.cz/pub/linux/pci/${P}.tar.gz"
 HOMEPAGE="http://atrey.karlin.mff.cuni.cz/~mj/pciutils.html"
-KEYWORDS="x86 ppc sparc alpha hppa"
+SRC_URI="ftp://atrey.karlin.mff.cuni.cz/pub/linux/pci/${P}.tar.gz"
+
 SLOT="0"
 LICENSE="GPL-2"
+KEYWORDS="x86 ppc sparc alpha hppa"
 
 DEPEND="virtual/glibc
 	net-misc/wget"
 
-RDEPEND="virtual/glibc"
-
 src_unpack() {
-	unpack ${P}.tar.gz
-#	gunzip -c ${DISTDIR}/pcimodules-pciutils-2.1.8.diff.gz >> ${S}/pcimodules-pciutils-2.1.8.diff
+	unpack ${A}
 	cd ${S}
 
-	patch -p1 -l < ${FILESDIR}/pcimodules-pciutils-2.1.8.diff
-
-#	patch -p0 < ${FILESDIR}/${P}-pcimodules.patch
+	epatch ${FILESDIR}/pcimodules-pciutils-2.1.8.diff
 
 	cp Makefile Makefile.orig
 	sed -e "s:-O2:${CFLAGS}:" -e "s:-Werror::g" Makefile.orig > Makefile
