@@ -1,0 +1,19 @@
+--- python/vtemodule.c.orig	2005-01-27 12:22:41.699091592 +0100
++++ python/vtemodule.c	2005-01-27 12:29:47.038430184 +0100
+@@ -32,14 +32,14 @@
+ extern PyTypeObject PyVteTerminal_Type;
+ 
+ DL_EXPORT(void)
+-init_vte(void)
++initvte(void)
+ {
+ 	PyObject *m, *d;
+ 
+ 	init_pygobject();
+ 	init_pygtk();
+ 
+-	m = Py_InitModule("_vte", pyvte_functions);
++	m = Py_InitModule("vte", pyvte_functions);
+ 	d = PyModule_GetDict(m);
+ 
+ 	pyvte_register_classes(d);

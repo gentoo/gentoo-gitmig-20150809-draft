@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/vte-0.11.11-r3.ebuild,v 1.2 2005/01/22 06:30:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/vte-0.11.11-r3.ebuild,v 1.3 2005/01/31 03:35:46 fserb Exp $
 
 inherit gnome2 eutils
 
@@ -36,4 +36,6 @@ src_unpack() {
 	# patch from http://bugzilla.gnome.org/show_bug.cgi?id=122150
 	epatch ${FILESDIR}/${P}-row_fix.patch
 
+	cd ${S}
+	epatch ${FILESDIR}/${P}-vtemodule.patch
 }

@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/vte
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/ChangeLog,v 1.61 2005/01/16 22:28:36 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/ChangeLog,v 1.62 2005/01/31 03:35:46 fserb Exp $
+
+*vte-0.11.11-r3 (31 Jan 2005)
+
+  31 Jan 2005; Fernando Serboncini <fserb@gentoo.org>
+  +files/vte-0.11.11-vtemodule.patch, vte-0.11.11-r3.ebuild:
+  Fixed python binding. Closes bug #61683
 
 *vte-0.11.11-r2.ebuild (16 Jan 2005)
 
