@@ -1,6 +1,11 @@
 # ChangeLog for x11-themes/psi-themes
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/psi-themes/ChangeLog,v 1.12 2004/12/31 13:28:16 humpback Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/psi-themes/ChangeLog,v 1.13 2005/01/09 23:57:59 weeve Exp $
+
+*psi-themes-0.9.3_p1-r2 (09 Jan 2005)
+
+  09 Jan 2005; Jason Wever <weeve@gentoo.org> psi-themes-0.9.3_p1-r2.ebuild:
+  Added ~sparc keyword as it went missing in the version bump.
 
   31 Dec 2004; Gustavo Felisberto <humpback@gentoo.org>; :
   New version of the package. Most of the work and packaging was done by Przemek

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/psi-themes/psi-themes-0.9.1.ebuild,v 1.6 2004/06/24 23:36:58 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/psi-themes/psi-themes-0.9.1.ebuild,v 1.7 2005/01/09 23:57:59 weeve Exp $
 
 SMILEYS="http://dev.gentoo.org/~humpback/jisp/AIM.jisp
 	http://dev.gentoo.org/~humpback/jisp/apple_ichat-1.0.jisp
