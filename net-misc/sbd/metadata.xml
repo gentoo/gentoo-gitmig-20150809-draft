@@ -6,5 +6,10 @@
 		<email>swegener@gentoo.org</email>
 		<name>Sven Wegener</name>
 	</maintainer>
-	<longdescription>sbd is a Netcat-clone, designed to be portable and offer strong encryption. It features AES-CBC-128 + HMAC-SHA1 encryption (by Christophe Devine), program execution (-e option), choosing source port, continuous reconnection with delay, and some other nice features. Only TCP/IP communication is supported.</longdescription>
+	<longdescription>
+sbd is a Netcat-clone, designed to be portable and offer strong encryption. It
+features AES-CBC-128 + HMAC-SHA1 encryption (by Christophe Devine), program
+execution (-e option), choosing source port, continuous reconnection with delay,
+and some other nice features. Only TCP/IP communication is supported.
+	</longdescription>
 </pkgmetadata>
