@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-1.0.5-r3.ebuild,v 1.7 2003/09/06 23:51:37 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-1.0.5-r3.ebuild,v 1.8 2003/11/14 20:07:07 seemant Exp $
 
 IUSE="ssl nls"
 
@@ -18,7 +18,7 @@ KEYWORDS="x86 ppc sparc alpha hppa amd64"
 RDEPEND="( =gnome-base/gconf-1.0* )
 	>=gnome-base/gnome-libs-1.4.1.2
 	>=gnome-base/gnome-mime-data-1.0.1
-	>=sys-apps/bzip2-1.0.2
+	>=app-arch/bzip2-1.0.2
 	ssl? ( dev-libs/openssl )"
 
 
