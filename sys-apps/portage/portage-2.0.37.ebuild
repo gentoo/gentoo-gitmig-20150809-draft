@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc. 
 # Distributed under the terms of the GNU General Public License v2 
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.36.ebuild,v 1.3 2002/09/14 15:51:25 bjb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.37.ebuild,v 1.1 2002/09/19 16:32:30 drobbins Exp $
 
 # If the old /lib/sandbox.so is in /etc/ld.so.preload, it can
 # cause everything to segfault !!
