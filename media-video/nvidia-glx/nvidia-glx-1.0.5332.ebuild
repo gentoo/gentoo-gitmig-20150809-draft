@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/nvidia-glx-1.0.5332.ebuild,v 1.1 2004/01/23 06:19:54 augustus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/nvidia-glx-1.0.5332.ebuild,v 1.2 2004/01/26 01:46:51 caleb Exp $
 
 PKG_V="pkg0"
 NV_V="${PV/1.0./1.0-}"
@@ -108,4 +108,10 @@ pkg_postinst() {
 	einfo
 	einfo "To use the Nvidia GLX, run \"opengl-update nvidia\""
 	einfo
+
+	if [ `has_version x11-libs/qt` ] ; then
+		einfo "You have Qt installed on your system.  Qt is linked against opengl,"
+		einfo "which means you may have problems emerging KDE programs later until"
+		einfo "you run \"opengl-update xfree\""
+	fi
 }

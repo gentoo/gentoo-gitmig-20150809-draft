@@ -1,6 +1,9 @@
 # ChangeLog for media-video/nvidia-glx 
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/ChangeLog,v 1.32 2004/01/23 06:19:54 augustus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/ChangeLog,v 1.33 2004/01/26 01:46:51 caleb Exp $
+
+  25 Jan 2004; Caleb Tennis <caleb@gentoo.org> nvidia-glx-1.0.5332.ebuild:
+  Add a warning for Qt users that GL linkage may be broken after emerging this.
 
 *nvidia-glx-1.0.5332 (23 Jan 2004)
 
