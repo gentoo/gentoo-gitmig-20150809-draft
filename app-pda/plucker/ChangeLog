@@ -1,6 +1,10 @@
 # ChangeLog for app-pda/plucker
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/plucker/ChangeLog,v 1.5 2004/06/26 03:13:03 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/plucker/ChangeLog,v 1.6 2004/07/19 22:00:07 kloeri Exp $
+
+  19 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> plucker-1.8-r1.ebuild,
+  plucker-1.8.ebuild:
+  dev-python/Imaging renamed to dev-python/imaging.
 
   25 Jun 2004; Aron Griffis <agriffis@gentoo.org> plucker-1.8-r1.ebuild:
   Fix sed netpbm line; thanks to Chouser for the tip

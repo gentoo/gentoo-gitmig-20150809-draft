@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/plucker/plucker-1.8-r1.ebuild,v 1.5 2004/06/26 03:13:03 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/plucker/plucker-1.8-r1.ebuild,v 1.6 2004/07/19 22:00:07 kloeri Exp $
 
 IUSE="gtk"
 
@@ -19,7 +19,7 @@ RDEPEND=">=dev-lang/python-1.5.2
 	gtk? ( >=x11-libs/gtk+-2.2 x11-libs/wxGTK )
 	|| (
 		>=media-gfx/imagemagick-5.4.4
-		>=dev-python/Imaging-1.1
+		>=dev-python/imaging-1.1
 		>=media-libs/netpbm-9.15
 	)"
 
