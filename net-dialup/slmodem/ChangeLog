@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/slmodem
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/ChangeLog,v 1.4 2003/12/14 12:42:26 spyderous Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/ChangeLog,v 1.5 2004/03/06 13:17:32 lanius Exp $
+
+  06 Mar 2004; Heinrich Wendel <lanius@gentoo.org> files/slmodem-2.7.modules:
+  fix modules.d file (bug #40834)
 
   14 Dec 2003; Donnie Berkholz <spyderous@gentoo.org>; slmodem-2.7.14.ebuild:
   Fixup for people not using devfs.

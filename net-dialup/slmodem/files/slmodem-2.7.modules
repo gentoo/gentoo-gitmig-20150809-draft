@@ -1,5 +1,5 @@
 # slmodem 2.7.x kernel modules' configuration file
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/files/slmodem-2.7.modules,v 1.1 2003/10/29 05:12:59 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/files/slmodem-2.7.modules,v 1.2 2004/03/06 13:17:32 lanius Exp $
 
 ## IMPORTANT:
 ## You need to customise this for your modem
@@ -11,7 +11,7 @@
 
 ## Uncomment this and select your country.
 ## 'slver -c' will give you a list.
-# options slmodem country=USA
+# options slmdm country=USA
 
 ## You do not need to change anything below here.
 alias char-major-212 slmdm
