@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-3.5.1.ebuild,v 1.6 2004/06/04 07:58:18 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-3.5.1.ebuild,v 1.7 2004/06/09 13:40:35 agriffis Exp $
 
 IUSE="kde gnome"
 
@@ -64,14 +64,14 @@ src_install() {
 	dosym /opt/${P}/bin/runide.sh /usr/bin/netbeans
 
 	# If either Gnome or KDE are installed, then install the icons.
-	if [ "`use gnome || use kde`" ] ; then
+	if use gnome || use kde; then
 		echo "Adding icons...."
 		insinto /usr/share/pixmaps
 		doins ${FILESDIR}/netbeans.png
 	fi
 
 	# If Gnome is installed, then copy in the desktop entry.
-	if [ "`use gnome`" ] ; then
+	if use gnome ; then
 		einfo "Adding Gnome support...."
 		insinto /usr/share/gnome/apps/Development
 		doins ${FILESDIR}/netbeans.desktop
@@ -83,7 +83,7 @@ src_install() {
 	# "Development" menu.
 	# Unfortunately, the file doesn't contain any internationalized
 	# text at the moment.
-	if [ "`use kde`" ] ; then
+	if use kde ; then
 		einfo "Adding KDE support...."
 		DESKTOP_FILE=netbeans-KDE.desktop
 		DESKTOP_DIR=${KDEDIR}/share/applnk/Development
