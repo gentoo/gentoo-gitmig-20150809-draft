@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/tkseti/tkseti-3.06.ebuild,v 1.14 2004/06/24 22:34:13 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/tkseti/tkseti-3.06.ebuild,v 1.15 2004/12/24 04:14:53 ribosome Exp $
 
 DESCRIPTION="TkSeti is a GUI to control the SETI@Home client for UNIX."
 SRC_URI="http://www.cuug.ab.ca/~macdonal/tkseti/${P}.tar.gz"
@@ -8,7 +8,7 @@ HOMEPAGE="http://www.cuug.ab.ca/~macdonal/tkseti/tkseti.html"
 
 DEPEND=">=dev-lang/tcl-8.3.3
 	dev-lang/tk
-	app-sci/setiathome"
+	sci-astronomy/setiathome"
 
 SLOT="0"
 LICENSE="as-is"
