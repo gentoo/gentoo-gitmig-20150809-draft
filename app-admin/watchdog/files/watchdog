@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/watchdog/files/5.2/watchdog,v 1.5 2004/07/14 21:21:38 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/watchdog/files/watchdog,v 1.1 2004/08/06 05:39:21 vapier Exp $
 
 depend() {
 	need localmount

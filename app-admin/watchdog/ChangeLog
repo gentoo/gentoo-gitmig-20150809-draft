@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/watchdog
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/watchdog/ChangeLog,v 1.7 2004/06/24 21:42:21 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/watchdog/ChangeLog,v 1.8 2004/08/06 05:39:21 vapier Exp $
+
+*watchdog-5.2.4 (06 Aug 2004)
+
+  06 Aug 2004; Mike Frysinger <vapier@gentoo.org>
+  +files/5.2.4-sundries.patch, +watchdog-5.2.4.ebuild:
+  Add mysterious 5.2.4 version from debian.
 
   25 Apr 2004; Aron Griffis <agriffis@gentoo.org> watchdog-5.2.ebuild:
   Add die following econf for bug 48950
