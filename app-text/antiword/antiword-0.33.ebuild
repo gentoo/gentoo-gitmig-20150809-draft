@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/antiword/antiword-0.33.ebuild,v 1.12 2003/12/09 17:41:37 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/antiword/antiword-0.33.ebuild,v 1.13 2004/02/22 07:21:14 mr_bones_ Exp $
 
 IUSE="kde"
 
