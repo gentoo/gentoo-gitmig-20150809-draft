@@ -5,8 +5,8 @@ MD5 099668424a136280f1b542f4137fefe6 ChangeLog 3586
 MD5 a15812d97737f672a6d9337ddd345e48 expect-5.37.1-r1.ebuild 1823
 MD5 efa22ab043d94cd5020be7f5921fbac8 expect-5.40.0.ebuild 1778
 MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
-MD5 505d29fcc8f2a27df30688ee342f93c1 expect-5.37.1-r2.ebuild 3040
-MD5 758d5eae97bb34e2edcf60a97a933fac expect-5.40.0-r1.ebuild 2500
+MD5 c5d5a50fa148b54f1f03e74d98ce9f93 expect-5.37.1-r2.ebuild 3045
+MD5 06abc73e66f5efd525dc68042fbfb0bf expect-5.40.0-r1.ebuild 2506
 MD5 1873eb651606635550196b3df72386bf expect-5.40.0-r2.ebuild 2425
 MD5 56f93170a590d0db63d826802dcc9847 files/digest-expect-5.40.0 65
 MD5 f4bfc81e857154719e1924f00b505ea3 files/digest-expect-5.37.1-r1 65
@@ -16,7 +16,7 @@ MD5 56f93170a590d0db63d826802dcc9847 files/digest-expect-5.40.0-r2 65
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBWF/8HTu7gpaalycRAiOOAKD6XT9jp5qziQm4Ru2a5PLZcGfLjgCePsCh
-L4cl/JxLRoOPSRm+yKnB6Ac=
-=xAww
+iD8DBQFBWGTCHTu7gpaalycRAkflAJ40YAMhkI4ZpcPNkdogbTcd8rTwUgCgmuom
+fgM8HcgSyJPiwNNmMH3C+gY=
+=1vXe
 -----END PGP SIGNATURE-----
