@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/TimeDate
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/TimeDate/ChangeLog,v 1.16 2004/10/19 08:06:16 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/TimeDate/ChangeLog,v 1.17 2004/11/01 15:24:23 corsair Exp $
+
+  01 Nov 2004; Markus Rothe <corsair@gentoo.org> TimeDate-1.16.ebuild:
+  Marked ~ppc64; bug #66216
 
   19 Oct 2004; Dylan Carlson <absinthe@gentoo.org> TimeDate-1.16.ebuild:
   Stable on amd64.
