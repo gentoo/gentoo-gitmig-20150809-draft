@@ -1,9 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/licq/licq-1.2.7.ebuild,v 1.4 2003/08/13 19:58:48 blkdeath Exp $
-
-inherit kde-base
-need-kde 3.0
+# $Header: /var/cvsroot/gentoo-x86/net-im/licq/licq-1.2.7.ebuild,v 1.5 2003/08/27 15:32:27 caleb Exp $
 
 DESCRIPTION="ICQ Client with v8 support" 
 HOMEPAGE="http://www.licq.org/"
@@ -20,8 +17,8 @@ IUSE="ssl socks5 qt kde ncurses"
 # need-kde and their eclass friends inject things into DEPEND. But we only
 # want them enabled if the kde USE flag is set. We get around this in the
 # following dep lines:
-RDEPEND="kde? ( ${DEPEND} )"
-DEPEND="kde? ( ${DEPEND} )
+RDEPEND="kde? ( >=kde-base/kdelibs-3.0 )"
+DEPEND="kde? ( >=kde-base/kdelibs-3.0 )
 	ssl? ( >=dev-libs/openssl-0.9.6 )
 	qt? ( >=x11-libs/qt-3.0.0 )
 	ncurses? ( sys-libs/ncurses )"
