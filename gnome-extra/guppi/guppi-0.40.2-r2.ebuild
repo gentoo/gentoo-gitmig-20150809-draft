@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/guppi/guppi-0.40.2-r1.ebuild,v 1.3 2002/01/08 20:09:56 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/guppi/guppi-0.40.2-r2.ebuild,v 1.1 2002/01/13 16:54:24 gbevin Exp $
 
 PN=Guppi
 P=${PN}-${PV}
@@ -12,15 +12,15 @@ SRC_URI="ftp://ftp.yggdrasil.com/mirrors/site/ftp.gnome.org/pub/GNOME/stable/sou
 	ftp://ftp.gnome.org/pub/GNOME/stable/sources/${PN}/${P}.tar.bz2"
 HOMEPAGE="http://www.gnome.org/guppi/"
 
-RDEPEND=">=x11-libs/gtk+-1.2.10-r3
+RDEPEND=">=sys-apps/portage-1.8.4
+	 >=x11-libs/gtk+-1.2.10-r3
 	 >=gnome-base/gnome-libs-1.4.1.2
 	 >=gnome-base/oaf-0.6.7
 	 >=gnome-base/libglade-0.17
 	 >=gnome-base/gnome-print-0.31
 	 >=media-libs/gdk-pixbuf-0.13
 	 >=dev-util/guile-1.5
-	 >=gnome-base/bonobo-1.0.17"
-# Seems that bonobo *is* needed ....
+	 bonobo? ( >=gnome-base/bonobo-1.0.17 )"
 
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )
@@ -31,6 +31,13 @@ DEPEND="${RDEPEND}
 src_compile() {
 
 	local myconf
+
+	if [ "`use bonobo`" ]
+	then
+		myconf="--enable-bonobo"
+	else
+		myconf="--disable-bonobo"
+	fi
 
 	if [ "`use python`" ]
 	then
@@ -53,12 +60,11 @@ src_compile() {
 		    --prefix=/usr					\
 		    --sysconfdir=/etc					\
 		    --localstatedir=/var/lib				\
-		    --enable-bonobo					\
 		    ${myconf} || die
 
 	# The python 'generate' module opens some files in rw mode for some
 	# unknown reason.
-	SANDBOX_WRITE="${SANDBOX_WRITE}:/usr/lib/python2.1/"
+	addwrite "/usr/lib/python2.1/"
 
 	make || die # Doesn't work with -j 4 (hallski)
 }
