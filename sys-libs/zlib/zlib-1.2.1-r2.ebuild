@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/zlib/zlib-1.2.1-r2.ebuild,v 1.1 2003/12/23 10:57:13 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/zlib/zlib-1.2.1-r2.ebuild,v 1.2 2004/01/05 15:24:54 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -38,6 +38,7 @@ src_compile() {
 
 src_install() {
 	einstall libdir=${D}/lib || die
+	rm ${D}/lib/libz.a
 	into /usr
 	dodir /usr/include
 	insinto /usr/include
