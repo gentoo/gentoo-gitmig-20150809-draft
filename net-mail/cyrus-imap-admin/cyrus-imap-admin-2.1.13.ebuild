@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imap-admin/cyrus-imap-admin-2.1.13.ebuild,v 1.5 2004/01/20 18:07:08 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imap-admin/cyrus-imap-admin-2.1.13.ebuild,v 1.6 2004/02/22 16:14:26 agriffis Exp $
 
 inherit perl-module eutils
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/OLD-VERSIONS/imap/cyrus-imapd-$
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86 -ppc -sparc "
+KEYWORDS="x86 -ppc -sparc"
 
 PROVIDE="virtual/imapd"
 DEPEND="virtual/glibc
