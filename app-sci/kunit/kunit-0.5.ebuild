@@ -1,12 +1,12 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/kunit/kunit-0.5.ebuild,v 1.3 2003/02/15 07:11:33 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/kunit/kunit-0.5.ebuild,v 1.4 2004/02/09 10:39:48 absinthe Exp $
 
 DESCRIPTION="An excellent qt-based unit conversion tool"
 SRC_URI="http://www.netmeister.org/apps/${P}.tar.gz"
 HOMEPAGE="http://www.netmeister.org/apps/kunit/"
 
-KEYWORDS="x86 ppc"
+KEYWORDS="x86 ppc amd64"
 LICENSE="GPL-2"
 SLOT="0"
 

@@ -1,6 +1,9 @@
 # ChangeLog for app-sci/kunit
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/kunit/ChangeLog,v 1.3 2003/02/15 07:11:33 gerk Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-sci/kunit/ChangeLog,v 1.4 2004/02/09 10:39:48 absinthe Exp $
+
+  09 Feb 2004; Dylan Carlson <absinthe@gentoo.org> kunit-0.5.ebuild:
+  added amd64 keyword.
 
 *kunit-0.5 (22 Nov 2002)
 
