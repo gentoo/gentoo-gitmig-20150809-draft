@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/gentoolkit-0.1.37.ebuild,v 1.1 2003/12/14 01:32:55 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/gentoolkit-0.1.37.ebuild,v 1.2 2003/12/15 18:43:52 genone Exp $
 
 DESCRIPTION="Collection of unofficial administration scripts for Gentoo"
 HOMEPAGE="http://www.gentoo.org/"
@@ -49,7 +49,7 @@ src_install() {
 	doman ${FILESDIR}/scripts/ewhich.1
 
 	dobin ${FILESDIR}/scripts/pkg-size
-	dobin ${FILESDIR}/scripts/pkg-size.1
+	doman ${FILESDIR}/scripts/pkg-size.1
 # 2002-08-06: karltk
 # This utility currently does more harm than good. I'm not including it
 # until it has been fixed properly. See #5777 in particular.
