@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/files/shorewall,v 1.4 2004/03/04 19:20:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/files/shorewall,v 1.5 2004/07/10 03:34:15 agriffis Exp $
 
 opts="start stop restart"
 
@@ -23,6 +23,10 @@ stop() {
 }
 
 restart() {
+	# shorewall comes with its own control script that includes a
+	# restart function, so refrain from calling svc_stop/svc_start
+	# here.  Note that this comment is required to fix bug 55576;
+	# runscript.sh greps this script...  (09 Jul 2004 agriffis)
 	ebegin "Restarting firewall"
 	/sbin/shorewall restart
 	eend $?
