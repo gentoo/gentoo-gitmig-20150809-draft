@@ -22,6 +22,11 @@
 ##   End example
 ##
 
+# <mcummings@gentoo.org> (05 Aug 2002)
+# made workable in cross perl version
+# masked for testing
+=dev-perl/SGMLSpm-1.03-r2
+
 # <seemant@gentoo.org> (05 Aug 2002)
 # masked for testing
 =net-analyzer/rdtool-1.0.39
