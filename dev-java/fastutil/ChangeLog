@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/fastutil
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/fastutil/ChangeLog,v 1.8 2004/10/20 06:15:31 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/fastutil/ChangeLog,v 1.9 2004/10/26 13:16:56 axxo Exp $
+
+*fastutil-4.3.1 (26 Oct 2004)
+
+  26 Oct 2004; <keanu@gentoo.org> +fastutil-4.3.1.ebuild:
+  version bump
 
   20 Oct 2004; Dylan Carlson <absinthe@gentoo.org> fastutil-4.1.ebuild:
   Keywords ~amd64.

@@ -1,4 +1,16 @@
-MD5 3f6a35aff82f869776912e70fbcb3a24 ChangeLog 1031
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 82fbec85fa9659d6f46c7f79419939e6 fastutil-4.3.1.ebuild 956
 MD5 a58a5db119fdd8e82d1dd0586b06b0fc fastutil-4.1.ebuild 924
+MD5 06e543d8dbb578ac256740f167681c19 ChangeLog 1132
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 125f47ea2a7250ce2b5764d84b279e70 files/digest-fastutil-4.1 68
+MD5 0893c05cde010685acf479a9745864f2 files/digest-fastutil-4.3.1 70
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBfk5z/rLF9B432nYRAjE+AKCpHfrPuhIFPD7app0q1cBCwGztOACgsDEX
+s5+2XhVjm3Bd6mk4UyuOtSI=
+=QKun
+-----END PGP SIGNATURE-----
