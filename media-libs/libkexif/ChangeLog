@@ -1,0 +1,10 @@
+# ChangeLog for media-libs/libkexif
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libkexif/ChangeLog,v 1.1 2004/10/18 20:28:13 carlo Exp $
+
+*libkexif-0.1 (18 Oct 2004)
+
+  18 Oct 2004; Carsten Lohrke <carlo@gentoo.org> +metadata.xml,
+  +libkexif-0.1.ebuild:
+  Initial commit. Thanks to Maarten Wisse, #67644
+
