@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/usermin-1.020.ebuild,v 1.1 2003/05/13 18:42:37 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/usermin-1.020.ebuild,v 1.2 2003/05/13 19:04:49 mholzer Exp $
 
 IUSE="ssl"
 
@@ -20,7 +20,7 @@ DEPEND="dev-lang/perl
 src_install() {
 	dodir /usr/libexec/usermin
 	dodir /usr/sbin
-	mv *.* ${D}/usr/libexec/usermin
+	sed -i "s:/usr/local/mysql:/usr:g" mysql/config
 	mv * ${D}/usr/libexec/usermin
 	exeinto /etc/init.d
 	newexe ${FILESDIR}/patch/usermin usermin

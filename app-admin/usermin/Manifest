@@ -1,6 +1,6 @@
 MD5 afe20383b9fd6c322dad6a72e0187357 ChangeLog 1677
 MD5 f20349cea71e158cdb63697e90aaa5f0 usermin-1.000.ebuild 1271
-MD5 fd0a7e74814630154e124d92212750db usermin-1.020.ebuild 1291
+MD5 b760b2cb4512c64cadc6c61ac350e353 usermin-1.020.ebuild 1291
 MD5 049fedf8df8f47a02fd4cca679feacfb files/digest-usermin-1.020 66
 MD5 9b49ce0b06e30694e52d3a84155c9506 files/digest-usermin-1.000 66
 MD5 a5311bbc9c1fc378a6b0bfb3ca1b2394 files/usermin.pam 431
