@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.1.55-r1.ebuild,v 1.1 2004/05/07 15:30:49 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.1.55-r1.ebuild,v 1.2 2004/05/07 20:50:04 suka Exp $
 
 # IMPORTANT:  This is extremely alpha!!!
 
@@ -249,7 +249,6 @@ src_unpack() {
 		epatch ${FILESDIR}/${OO_VER}/openoffice-1.1.0-sparc64-fix.patch
 	fi
 
-	einfo "Applying Ximian OO.org Patches"
 	if [ `use ooo-kde` ]; then
 		DISTRO=KDE
 		ICONDIR=${WORKDIR}/ooo-KDE_icons-${KDE_ICON_VER}
@@ -258,11 +257,15 @@ src_unpack() {
 		ICONDIR=${WORKDIR}/ooo-icons-${ICON_VER}
 	fi
 
+	einfo "Applying Ximian OO.org Patches"
 	${PATCHDIR}/patches/apply.pl ${PATCHDIR}/patches/${PATCHLEVEL} ${S} -f --distro=${DISTRO} || die "Ximian patches failed"
 
 	einfo "Installing / Scaling Icons"
 	${PATCHDIR}/bin/scale-icons ${S}
 	cp -avf ${ICONDIR}/* ${S}
+
+	einfo "Copying splash screens in place"
+	cp ${PATCHDIR}/src/open*.bmp ${S}/offmgr/res/
 
 	einfo "Munging font mappings ..."
 	${PATCHDIR}/bin/font-munge ${S}/officecfg/registry/data/org/openoffice/VCL.xcu
@@ -312,10 +315,6 @@ src_compile() {
 	addpredict /bin
 	addpredict /root/.gconfd
 	local buildcmd=""
-
-	set_languages
-
-	oo_setup
 
 	# dmake security patch
 	cd ${S}/dmake
@@ -385,8 +384,6 @@ src_install() {
 	addpredict "/dev/dri"
 	addpredict "/usr/bin/soffice"
 	addpredict "/pspfontcache"
-
-	set_languages
 
 	get_EnvSet
 
@@ -504,9 +501,7 @@ src_install() {
 	rm -rf ${D}${INSTDIR}/share/cde
 
 	# Make sure these do not get nuked.
-	keepdir ${INSTDIR}/user/registry/res/en-us/org/openoffice/{Office,ucb}
-	keepdir ${INSTDIR}/user/psprint/{driver,fontmetric}
-	keepdir ${INSTDIR}/user/{autocorr,backup,plugin,store,temp,template}
+	keepdir ${INSTDIR}/user/registry/res/en-us/org/openoffice/{Office,ucb} ${INSTDIR}/user/psprint/{driver,fontmetric} ${INSTDIR}/user/{autocorr,backup,plugin,store,temp,template}
 }
 
 pkg_postinst() {
