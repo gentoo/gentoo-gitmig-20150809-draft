@@ -1,9 +1,10 @@
 # ChangeLog for dev-db/firebird
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/ChangeLog,v 1.8 2003/08/30 10:45:10 mksoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/ChangeLog,v 1.9 2003/08/30 10:57:54 mksoft Exp $
 
 *firebird-1.0.3 (15 Jun 2003)
   30 Aug 2003; Meir Kriheli <mksoft@gentoo.org> firebird-1.0.3.ebuild:
+  Added RESTRICT="nouserpriv", bug #24455
   Added metadata.xml
   Marked ebuild as stable
   

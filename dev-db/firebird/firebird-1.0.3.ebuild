@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/firebird-1.0.3.ebuild,v 1.3 2003/08/30 10:45:10 mksoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/firebird-1.0.3.ebuild,v 1.4 2003/08/30 10:57:54 mksoft Exp $
 
 S=${WORKDIR}/interbase
 DESCRIPTION="A relational database offering many ANSI SQL-92 features"
@@ -13,6 +13,7 @@ KEYWORDS="x86"
 DEPEND="app-shells/bash
 	app-arch/zip
 	>=sys-devel/gcc-2.95.3-r5"
+RESTRICT="nouserpriv"
 
 src_unpack() {
 	unpack FirebirdCS-1.0.3.972-0.tar.gz
