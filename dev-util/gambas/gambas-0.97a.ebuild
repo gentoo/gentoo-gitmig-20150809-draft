@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gambas/gambas-0.94a.ebuild,v 1.1 2004/07/04 23:45:33 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gambas/gambas-0.97a.ebuild,v 1.1 2004/08/23 08:06:00 genone Exp $
 
 inherit eutils
 
@@ -19,7 +19,8 @@ DEPEND=">=sys-devel/automake-1.7.5
 	sdl? ( media-libs/libsdl )
 	mysql? ( dev-db/mysql )
 	postgres? ( dev-db/postgresql )
-	curl? ( net-misc/curl )"
+	curl? ( net-misc/curl )
+	sqlite? ( dev-db/sqlite )"
 
 src_unpack() {
 	unpack ${A}
@@ -27,11 +28,9 @@ src_unpack() {
 	sed -i 's:-Os::' configure
 	# replace braindead Makefile
 	rm Makefile*
-	cp "${FILESDIR}/Makefile.am-0.94" ./Makefile.am
+	cp "${FILESDIR}/Makefile.am-0.97a" ./Makefile.am
 	# patches against hardcoded paths
-	epatch ${FILESDIR}/non-symlink-0.94.patch
-	#epatch ${FILESDIR}/html-files-location-0.93.patch
-	#epatch ${FILESDIR}/info-location-0.90.patch
+	#epatch ${FILESDIR}/non-symlink-0.95.patch
 
 	automake
 }
@@ -71,6 +70,6 @@ src_install() {
 		dohtml ${FILESDIR}/WebHome.html
 	fi
 	rm -rf ${D}/usr/share/${PN}/help ${D}/usr/share/${PN}/examples
-	dosym /usr/share/doc/${PF}/html /usr/share/${PN}/help
-	dosym /usr/share/doc/${PF}/examples /usr/share/${PN}/examples
+	dosym ../doc/${PF}/html /usr/share/${PN}/help
+	dosym ../doc/${PF}/examples /usr/share/${PN}/examples
 }
