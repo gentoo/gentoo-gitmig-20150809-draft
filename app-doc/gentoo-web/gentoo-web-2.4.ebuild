@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/gentoo-web/gentoo-web-2.4.ebuild,v 1.15 2002/11/08 18:49:00 zhen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/gentoo-web/gentoo-web-2.4.ebuild,v 1.16 2002/11/14 18:36:53 vapier Exp $
  
 S=${WORKDIR}/gentoo-src/gentoo-web
 TEMPLATE=${S}/xsl/guide-main.xsl
@@ -42,8 +42,10 @@ src_unpack() {
 			# assign it from the environment.
 			WEBROOT=${WEBROOT}
 		else
+			# look for it with apache
+			WEBROOT="`grep '^DocumentRoot' /etc/apache/conf/apache.conf | cut -d\  -f2`"
 			# give it a nice default
-			WEBROOT=/home/httpd/htdocs
+			[ -z "${WEBROOT}" ] && WEBROOT=/home/httpd/htdocs
 			#GENTOO_SRCDIR=/data/gentoo-src
 		fi
 	fi
