@@ -1,6 +1,13 @@
 # ChangeLog for app-doc/howto-html-single
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-doc/howto-html-single/ChangeLog,v 1.1 2002/02/01 21:53:00 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/howto-html-single/ChangeLog,v 1.2 2002/07/05 11:02:38 seemant Exp $
+
+*howto-html-single-20020328 (5 Jul 2002)
+
+  5 Jul 2002; Seemant Kulleen <seemant@gentoo.org>
+  howto-html-single-20020328.ebuild files/digest-howto-html-single-20020328 :
+
+  Version bump.
 
 *howto-html-single-20010823 (1 Feb 2002)
 

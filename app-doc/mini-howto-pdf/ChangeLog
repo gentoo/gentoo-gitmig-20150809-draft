@@ -1,6 +1,13 @@
 # ChangeLog for app-doc/mini-howto-pdf
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-doc/mini-howto-pdf/ChangeLog,v 1.1 2002/02/01 21:53:00 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/mini-howto-pdf/ChangeLog,v 1.2 2002/07/05 11:21:01 seemant Exp $
+
+*mini-howto-pdf-20020328 (5 Jul 2002)
+
+  5 Jul 2002; Seemant Kulleen <seemant@gentoo.org>
+  mini-howto-pdf-20020328.ebuild files/digest-mini-howto-pdf-20020328 :
+
+  Version bump.
 
 *mini-howto-pdf-20010824 (1 Feb 2002)
 
