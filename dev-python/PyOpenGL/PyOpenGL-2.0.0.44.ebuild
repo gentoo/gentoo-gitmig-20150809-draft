@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyOpenGL/PyOpenGL-2.0.0.44.ebuild,v 1.23 2004/04/10 04:35:11 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyOpenGL/PyOpenGL-2.0.0.44.ebuild,v 1.24 2004/04/11 18:54:49 spyderous Exp $
 
 inherit eutils distutils virtualx
 
@@ -38,13 +38,19 @@ src_install () {
 pkg_setup () {
 	if [ -e /etc/env.d/09opengl ]
 	then
-		VOID=$(cat /etc/env.d/09opengl | grep xfree)
+		# Set up X11 implementation
+		X11_IMPLEM_P="$(portageq best_version "${ROOT}" virtual/x11)"
+		X11_IMPLEM="${X11_IMPLEM_P%-[0-9]*}"
+		X11_IMPLEM="${X11_IMPLEM##*\/}"
+		einfo "X11 implementation is ${X11_IMPLEM}."
 
-		USING_XFREE=$?
-		if [ ${USING_XFREE} -eq 1 ]
+		VOID=$(cat /etc/env.d/09opengl | grep ${X11_IMPLEM})
+
+		USING_X11=$?
+		if [ ${USING_X11} -eq 1 ]
 		then
 			GL_IMPLEM=$(cat /etc/env.d/09opengl | cut -f5 -d/)
-			opengl-update xfree
+			opengl-update ${X11_IMPLEM}
 		fi
 	else
 		die "Could not find /etc/env.d/09opengl. Please run opengl-update."
@@ -52,7 +58,7 @@ pkg_setup () {
 }
 
 pkg_postinst () {
-	if [ ${USING_XFREE} -eq 1 ]
+	if [ ${USING_X11} -eq 1 ]
 	then
 		opengl-update ${GL_IMPLEM}
 	fi
