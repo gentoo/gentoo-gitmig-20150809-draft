@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gfontview/gfontview-0.5.0-r6.ebuild,v 1.7 2004/07/18 14:42:45 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gfontview/gfontview-0.5.0-r6.ebuild,v 1.8 2004/10/08 10:22:46 sekretarz Exp $
 
 inherit eutils
 
@@ -23,7 +23,7 @@ RDEPEND="nls? ( sys-devel/gettext )"
 src_unpack() {
 	unpack ${P}.tar.gz
 	cd ${S}
-	epatch ${FILESDIR}/01_all_gcc33.patch.bz2
+	epatch ${FILESDIR}/${P}-gcc-34.patch.gz
 }
 
 src_compile() {
