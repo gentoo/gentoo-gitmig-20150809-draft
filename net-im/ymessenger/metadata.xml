@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<maintainer><email>seemant@gentoo.org</email></maintainer>
-<longdescription>Xfree86: famous and free X server.</longdescription>
+<herd>net-im</herd>
+<maintainer><email>net-im@gentoo.org</email></maintainer>
 </pkgmetadata>
