@@ -1,9 +1,19 @@
-MD5 8be2346312c0bf37b7ad73abf65f926d ChangeLog 1786
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 2d73e7590cf2acb8c104ca1cf7235290 ChangeLog 1882
 MD5 23ca8bf661ec04a77ebae3c94c496f01 jail-1.9-r1.ebuild 1994
+MD5 65e627d704fab7691d39a6787eff6241 jail-1.9-r2.ebuild 2284
 MD5 7cb2052e33c36db6bd09152de8166065 metadata.xml 750
-MD5 8162d7822f5bc5f5cf4be8f76cc6b546 jail-1.9-r2.ebuild 2279
 MD5 e06c54745344bca0608e4ec56dfd0ed0 files/digest-jail-1.9-r1 59
-MD5 0f9cdbda612ae4e1df19de25b045bf2d files/jail-gentoo.diff 3256
-MD5 c3db70e66c86804965b502d3eb50dd2c files/wrongshell.patch 472
 MD5 e06c54745344bca0608e4ec56dfd0ed0 files/digest-jail-1.9-r2 59
+MD5 0f9cdbda612ae4e1df19de25b045bf2d files/jail-gentoo.diff 3256
 MD5 c73e8af5993b3d8fda4852dde897b1f0 files/multiuser-rsa.patch 844
+MD5 c3db70e66c86804965b502d3eb50dd2c files/wrongshell.patch 472
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFCOdHwKRy60XGEcJIRAjO2AJwLj6TAAK26f8JOE4KgqOaasRSCwACeLmol
+meZ1Qlb/rm/TxDF4DBw85xE=
+=BMRP
+-----END PGP SIGNATURE-----
