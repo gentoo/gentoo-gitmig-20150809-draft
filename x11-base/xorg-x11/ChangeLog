@@ -1,6 +1,13 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.322 2005/02/05 07:39:50 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.323 2005/02/05 07:53:10 spyderous Exp $
+
+  04 Feb 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  xorg-x11-6.8.1.904.ebuild:
+  FILES_VER 0.2. Remove PATH and ROOTPATH from /etc/env.d/10xorg, as
+  everything's in /usr/bin now. Also remove LIBGL_DRIVERS_PATH. I was told
+  this was necessary if they weren't in /usr/X11R6/lib/modules/dri, but really
+  it seems it's only if they aren't in the compile-time UsrLibDir.
 
   04 Feb 2005; Donnie Berkholz <spyderous@gentoo.org>;
   xorg-x11-6.8.0-r4.ebuild:
