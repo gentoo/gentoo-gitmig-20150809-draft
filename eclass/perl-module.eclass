@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.49 2003/07/27 14:46:02 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.50 2003/08/22 09:17:52 mcummings Exp $
 #
 # Author: Seemant Kulleen <seemant@gentoo.org>
 #
@@ -84,6 +84,7 @@ perl-module_src_install() {
 		INSTALLSITEMAN6DIR=${D}/usr/share/man/man6 \
 		INSTALLSITEMAN7DIR=${D}/usr/share/man/man7 \
 		INSTALLSITEMAN8DIR=${D}/usr/share/man/man8 \
+		INSTALLVENDORMAN3DIR=${D}/usr/share/man/man3 \
 		INSTALLSITEARCH=${D}/${SITE_ARCH} \
 		INSTALLSCRIPT=${D}/usr/bin \
 		${myinst} \
