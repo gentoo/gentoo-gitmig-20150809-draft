@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/sane-backends-1.0.14-r3.ebuild,v 1.3 2004/06/17 16:04:34 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/sane-backends-1.0.14-r3.ebuild,v 1.4 2004/06/17 17:03:02 phosphan Exp $
 
 inherit eutils
 
@@ -84,4 +84,14 @@ src_install () {
 	insinto /etc/env.d
 	doins 30sane
 
+}
+
+pkg_postinst() {
+	if use usb; then
+		einfo "There are some problems with the hotplug script when"
+		einfo "restarting hotplug with some kernel versions."
+		einfo "If you have trouble, please edit"
+		einfo "/etc/hotplug/usb/libusbscanner"
+		einfo "and see bug #50934 for details."
+	fi
 }
