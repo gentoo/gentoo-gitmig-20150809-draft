@@ -1,4 +1,6 @@
-MD5 f01b7c592528df5b96055c9317c82dbc ChangeLog 443
+MD5 3b94099d2c948d59fa4dfc6b116d13aa xfce4-icon-theme-4.1.91.ebuild 782
+MD5 099a55e7e4ffaf6e6e4d76ea0ad635bd ChangeLog 612
 MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
 MD5 adf4e92da76dfcafd4c6702342ad9ef1 xfce4-icon-theme-4.1.90.ebuild 811
 MD5 6f68b9f5ae83aacacc42f6666bd6fca2 files/digest-xfce4-icon-theme-4.1.90 76
+MD5 1369080a804f1208acea12d17bdd666e files/digest-xfce4-icon-theme-4.1.91 76

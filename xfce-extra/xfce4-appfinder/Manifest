@@ -1,14 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 88b0f00ca87ab1e666414343b79bd17b ChangeLog 439
-MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
+MD5 78c29996b24acbee6752e41c09ce1d1a xfce4-appfinder-4.1.91.ebuild 752
 MD5 5722e9077590c1fa7a3b2b371344a905 xfce4-appfinder-4.1.90.ebuild 755
+MD5 a79f19c548a31dd94764314163bc1f0b ChangeLog 606
+MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
 MD5 6ccae52b3faecb9fc6092d4edc4f398b files/digest-xfce4-appfinder-4.1.90 74
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBcwETI1lqEGTUzyQRAvpDAKDC3AYdTfVoXpYtjebC4J0zNYvfQACfQA9c
-SWAFfNRuywrUUl9hGvlMH64=
-=d6LL
------END PGP SIGNATURE-----
+MD5 386bd24b0937fa15ff06aabb1b996094 files/digest-xfce4-appfinder-4.1.91 74
