@@ -76,7 +76,7 @@ function applyPatch {
 	        findFile $patchdir/$i || break
 	        $uncomp ${patchdir}/$i | patch -p1 -R -s -E -d $sourcedir
 			echo "done."
-    	done	
+	    done	
 	fi
     return 1;
   fi
@@ -106,8 +106,8 @@ then
 	echo "Scanning patch directory: '$patchdir'"
 	for i in `ls *_*`
 		do
-    	findFile $patchdir/$i || break
-	    applyPatch $i || break
+    	findFile $patchdir/$i || exit 1
+	    applyPatch $i || exit 1
 	done
 
 else
