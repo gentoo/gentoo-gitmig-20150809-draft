@@ -1,6 +1,13 @@
 # ChangeLog for net-www/mod_auth_external
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_auth_external/ChangeLog,v 1.4 2004/01/15 03:56:36 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_auth_external/ChangeLog,v 1.5 2004/03/31 14:08:40 zul Exp $
+
+  31 Mar 2004; Chuck Short <zul@gentoo.org> metadata.xml,
+  files/10_mod_auth_external.conf:
+  Added metadata.xml.
+
+  31 Mar 2004; Chuck Short <zul@gentoo.org> files/10_mod_auth_external.conf:
+  Fixed typo in 10_mod_auth_external.conf file. Fixes 40621.
 
   14 Jan 2004; Robin H. Johnson <robbat2@gentoo.org>
   mod_auth_external-2.2.3.ebuild:
