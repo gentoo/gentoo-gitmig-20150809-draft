@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/ck-sources
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ChangeLog,v 1.68 2004/11/25 22:41:14 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ChangeLog,v 1.69 2004/11/26 01:10:48 dsd Exp $
+
+  26 Nov 2004; Daniel Drake <dsd@gentoo.org> ck-sources-2.4.27-r3.ebuild,
+  ck-sources-2.6.9-r3.ebuild:
+  Put detect_version back in for now
 
   26 Nov 2004; Daniel Drake <dsd@gentoo.org> ck-sources-2.4.27-r3.ebuild,
   ck-sources-2.6.9-r3.ebuild:
