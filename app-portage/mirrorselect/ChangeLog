@@ -1,6 +1,12 @@
 # ChangeLog for app-portage/mirrorselect
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/mirrorselect/ChangeLog,v 1.9 2004/01/25 05:32:33 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/mirrorselect/ChangeLog,v 1.10 2004/02/02 21:06:02 johnm Exp $
+
+*mirrorselect-0.82-r3 (02 Feb 2004)
+
+  02 Feb 2004; John Mylchreest <johnm@gentoo.org> mirrorselect-0.82-r3.ebuild,
+  mirrorselect-0.82.ebuild:
+  Bump to use id -u instead of whoami to check for root ID. resolves bug #40201
 
 *mirrorselect-0.82-r2 (25 Jan 2004)
 
