@@ -1,3 +1,3 @@
-MD5 0e902d72507e8c36cc262c54d1b6aff0 files/digest-xmess-0.62.2-r1 66
-MD5 c12b9772097df51b017bf4c2f2baf500 xmess-0.62.2-r1.ebuild 6992
-MD5 2a2da1fdf5de697e487a4205039aaffd ChangeLog 370
+MD5 b9d5b1d5f70db976a728f55426205e87 files/digest-xmess-0.70.1 66
+MD5 95e6c74ceaaf4763f68037436d0f0911 xmess-0.70.1.ebuild 4088
+MD5 b8a081066d852b7a0a5f8ad25089fd00 ChangeLog 566
