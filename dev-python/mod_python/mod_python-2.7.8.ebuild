@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mod_python/mod_python-2.7.8.ebuild,v 1.2 2002/11/06 15:02:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mod_python/mod_python-2.7.8.ebuild,v 1.3 2002/11/17 09:13:52 vapier Exp $
 
 DESCRIPTION="Python module for Apache"
 SRC_URI="http://www.modpython.org/dist/${P}.tgz"
@@ -9,6 +9,7 @@ HOMEPAGE="http://www.modpython.org/"
 LICENSE="AS-IS"
 KEYWORDS="~x86"
 SLOT="0"
+
 DEPEND=">=net-www/apache-1.3.26-r2
 	dev-lang/python"
 
@@ -27,10 +28,7 @@ src_compile() {
 	echo 'echo "configure done"' >> configure
 
 	export OPTFLAGS="`/usr/sbin/apxs -q CFLAGS`"
-	./configure \
-		--with-apxs=/usr/sbin/apxs \
-		--prefix=/usr \
-		--host=${CHOST} || die "configure failed" 
+	econf --with-apxs=/usr/sbin/apxs
 
 	cp Makefile Makefile.orig
 	sed -e 's/LIBEXECDIR=\/usr\/lib\/apache/LIBEXECDIR=${D}\/usr\/lib\/apache-extramodules/' \
@@ -42,14 +40,13 @@ src_compile() {
 	sed -e 's/CFLAGS=$(OPT) $(INCLUDES)/CFLAGS=$(OPT) $(INCLUDES) -DEAPI -O0/' \
 		Makefile.orig > Makefile
 
-
 	emake || die "emake failed"
 }
 
 src_install() {
-	mkdir -p ${D}/usr/lib/apache-extramodules
-	mkdir ${D}/usr/lib/python2.2
-	mkdir -p /etc/apache/conf/addon-modules
+	dodir /usr/lib/apache-extramodules
+	dodir /usr/lib/python2.2
+	dodir /etc/apache/conf/addon-modules
 
 	# compileall.py is needed or make install will fail
 	cp /usr/lib/python2.2/compileall.py ${D}usr/lib/python2.2/
