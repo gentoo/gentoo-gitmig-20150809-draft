@@ -1,6 +1,6 @@
-diff -r -u ibpp-1-0-5-2_orig/database.cpp ibpp-1-0-5-2/database.cpp
---- ibpp-1-0-5-2_orig/database.cpp	2001-11-10 13:52:58.000000000 +0100
-+++ ibpp-1-0-5-2/database.cpp	2002-03-21 09:52:02.000000000 +0100
+diff -r -u ibpp-1.0.5.2_orig/database.cpp ibpp-1.0.5.2/database.cpp
+--- ibpp-1.0.5.2_orig/database.cpp	2001-11-10 13:52:58.000000000 +0100
++++ ibpp-1.0.5.2/database.cpp	2002-03-22 10:34:07.000000000 +0100
 @@ -354,9 +354,7 @@
  		throw ExceptionImpl("Database::Create", "Database is already connected.");
  	if (_DatabaseName == NULL)
@@ -48,9 +48,9 @@ diff -r -u ibpp-1-0-5-2_orig/database.cpp ibpp-1-0-5-2/database.cpp
      dpb.Insert(isc_dpb_force_write, (short)0);
      if (_RoleName != NULL) dpb.Insert(isc_dpb_sql_role_name, _RoleName);
  
-diff -r -u ibpp-1-0-5-2_orig/exception.cpp ibpp-1-0-5-2/exception.cpp
---- ibpp-1-0-5-2_orig/exception.cpp	2001-11-10 13:52:58.000000000 +0100
-+++ ibpp-1-0-5-2/exception.cpp	2002-03-21 09:52:28.000000000 +0100
+diff -r -u ibpp-1.0.5.2_orig/exception.cpp ibpp-1.0.5.2/exception.cpp
+--- ibpp-1.0.5.2_orig/exception.cpp	2001-11-10 13:52:58.000000000 +0100
++++ ibpp-1.0.5.2/exception.cpp	2002-03-22 10:34:07.000000000 +0100
 @@ -47,6 +47,7 @@
  #endif
  
@@ -59,9 +59,33 @@ diff -r -u ibpp-1-0-5-2_orig/exception.cpp ibpp-1-0-5-2/exception.cpp
  
  using namespace ibpp_internals;
  
-diff -r -u ibpp-1-0-5-2_orig/tests/Makefile ibpp-1-0-5-2/tests/Makefile
---- ibpp-1-0-5-2_orig/tests/Makefile	2001-06-08 18:26:34.000000000 +0200
-+++ ibpp-1-0-5-2/tests/Makefile	2002-03-21 09:52:02.000000000 +0100
+diff -r -u ibpp-1.0.5.2_orig/_internals.h ibpp-1.0.5.2/_internals.h
+--- ibpp-1.0.5.2_orig/_internals.h	2001-11-10 13:52:58.000000000 +0100
++++ ibpp-1.0.5.2/_internals.h	2002-03-22 10:33:07.000000000 +0100
+@@ -832,7 +832,7 @@
+ 	//	(((((((( OBJECT INTERNALS ))))))))
+ 
+ private:
+-	friend TransactionImpl;
++	friend class TransactionImpl;
+ 
+ 	isc_stmt_handle _Handle;	// Référence d'accès au statement InterBase API
+ 
+diff -r -u ibpp-1.0.5.2_orig/Makefile ibpp-1.0.5.2/Makefile
+--- ibpp-1.0.5.2_orig/Makefile	2001-06-08 18:26:30.000000000 +0200
++++ ibpp-1.0.5.2/Makefile	2002-03-22 10:34:07.000000000 +0100
+@@ -147,7 +147,7 @@
+ release:
+ 	$(MAKE) DEBUG=0 BUILDDEPENDANCIES=1 targets
+ 
+-targets: ctags
++targets:
+ 	# build targets
+ 	if [ ! -d $(TARGETDIR)/$(PLATFORM) ]; then mkdir -p $(TARGETDIR)/$(PLATFORM); fi
+ 
+diff -r -u ibpp-1.0.5.2_orig/tests/Makefile ibpp-1.0.5.2/tests/Makefile
+--- ibpp-1.0.5.2_orig/tests/Makefile	2001-06-08 18:26:34.000000000 +0200
++++ ibpp-1.0.5.2/tests/Makefile	2002-03-22 10:34:07.000000000 +0100
 @@ -52,7 +52,7 @@
  	#LIBS+=$(IBPPDIR)/$(TARGETDIR)/$(PLATFORM)/libibpp_core.a
  	#LIBS+=$(IBPPDIR)/$(TARGETDIR)/$(PLATFORM)/libibpp_helper.a

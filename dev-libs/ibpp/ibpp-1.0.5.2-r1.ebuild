@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Geert Bevin <gbevin@uwyn.com>
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ibpp/ibpp-1.0.5.2.ebuild,v 1.1 2002/03/21 09:52:43 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ibpp/ibpp-1.0.5.2-r1.ebuild,v 1.1 2002/03/22 09:39:35 gbevin Exp $
 
 S="${WORKDIR}/${P}"
 DESCRIPTION="IBPP, a C++ client API for firebird 1.0"

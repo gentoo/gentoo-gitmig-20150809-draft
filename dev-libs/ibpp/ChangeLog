@@ -1,7 +1,14 @@
 # ChangeLog for dev-lang/sather
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ibpp/ChangeLog,v 1.1 2002/03/21 09:52:43 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ibpp/ChangeLog,v 1.2 2002/03/22 09:39:35 gbevin Exp $
 
+*ibpp-1.0.5.2-r1 (22 Mar 2002)
+
+  22 Mar 2002; G.Bevin <gbevin@gentoo.org> ibpp-1.0.5.2-r1.ebuild
+  files/digest-ibpp-1.0.5.2-r1 digest/ibpp-1.0.5.2.patch:
+  
+  Required fixes for compilation with gcc3.
+  
 *ibpp-1.0.5.2 (21 Mar 2002)
 
   21 Mar 2002; G.Bevin <gbevin@gentoo.org> ibpp-1.0.5.2.ebuild
