@@ -1,7 +1,12 @@
 # ChangeLog for net-misc/nut
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nut/ChangeLog,v 1.12 2003/02/24 12:58:48 jhhudso Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nut/ChangeLog,v 1.13 2003/04/21 03:32:55 prez Exp $
 
+*nut-1.2.2 (20 Apr 2003)
+
+  20 Apr 2003; Preston A. Elder <prez@gentoo.org> nut-1.2.2.ebuild : 
+  New stable version
+	
 *nut-1.2.1-r1 (24 Feb 2003)
 
   24 Feb 2003; Jared Hudson <jhhudso@gentoo.org> : Added hiddev driver support.
