@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.49-r13.ebuild,v 1.2 2003/10/13 19:41:05 carpaski Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.49-r13.ebuild,v 1.3 2003/10/16 16:19:57 carpaski Exp $
 
 IUSE="build"
 
@@ -242,7 +242,7 @@ pkg_postinst() {
 	rm -f ${ROOT}usr/lib/python2.2/site-packages/emergehelp.py[co]
 	rm -f ${ROOT}usr/lib/python2.2/site-packages/dispatch_conf.py[co]
 	chmod 2775 ${ROOT}var/cache/edb/dep ${ROOT}var/cache/edb/dep/*
-	chown -R root.wheel ${ROOT}var/cache/edb/dep
+	chown -R root:portage ${ROOT}var/cache/edb/dep
 
 	# we gotta re-compile these modules and deal with systems with clock skew (stale compiled files)
 	python -c "import py_compile; py_compile.compile('${ROOT}usr/lib/python2.2/site-packages/portage.py')" || die
