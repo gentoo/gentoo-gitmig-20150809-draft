@@ -1,7 +1,9 @@
 # ChangeLog for net-misc/host
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# Maintainer: George Shapovalov <george@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/host/ChangeLog,v 1.17 2004/06/24 23:48:06 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/host/ChangeLog,v 1.18 2004/10/02 15:35:10 swegener Exp $
+
+  02 Oct 2004; Sven Wegener <swegener@gentoo.org> +metadata.xml:
+  Moved maintainer from ChangeLog to metadata.xml.
 
   02 Mar 2004; Tom Gall <tgall@gentoo.org> host-991529.ebuild:
   stable on ppc64
