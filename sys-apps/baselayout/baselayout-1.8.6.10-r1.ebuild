@@ -1,9 +1,11 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.6.10-r1.ebuild,v 1.6 2003/10/05 21:31:45 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.6.10-r1.ebuild,v 1.7 2003/10/09 19:05:52 pappy Exp $
 
 # This ebuild needs to be merged "live".  You can't simply make a package
 # of it and merge it later.
+
+# with hardened-gcc-2.4.2 we do not need the -lc and libs any more for fstack-protector when building static
 
 IUSE="bootstrap build static"
 
