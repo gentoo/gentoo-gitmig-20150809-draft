@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/nwwine/nwwine-20020703.ebuild,v 1.1 2003/03/28 17:16:14 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/nwwine/nwwine-20020703.ebuild,v 1.2 2003/04/01 18:10:12 phoenix Exp $
 
 DESCRIPTION="A special version of wine for the Never Winter Nights toolkit"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
@@ -32,10 +32,9 @@ src_compile() {
 	[ -z $DEBUG ] && myconf="$myconf --disable-trace --disable-debug" || myconf="$myconf --enable-trace --enable-debug"
 	# there's no configure flag for cups, arts, alsa and nas, it's supposed to be autodetected
 	
-	# the folks at #winehq were really angry about custom optimization
-	export CFLAGS=""
-	export CXXFLAGS=""
-	
+	# use the default setting in ./configure over the /etc/make.conf setting
+	unset CFLAGS CXXFLAGS
+
 	./configure --prefix=/usr/lib/${PN} \
 		--sysconfdir=/etc/${PN} \
 		--host=${CHOST} \

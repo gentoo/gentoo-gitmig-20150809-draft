@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/winex/winex-20020628.ebuild,v 1.11 2003/02/28 23:30:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/winex/winex-20020628.ebuild,v 1.12 2003/04/01 18:06:58 phoenix Exp $
 
 DESCRIPTION="distribution of Wine with enhanced DirectX for gaming"
 SRC_URI="ftp:/www.ibiblio.org/gentoo/distfiles/${P}.tar.bz2"
@@ -33,9 +33,8 @@ src_compile() {
 	[ -z $DEBUG ] && myconf="$myconf --disable-trace --disable-debug" || myconf="$myconf --enable-trace --enable-debug"
 	# there's no configure flag for cups, it's supposed to be autodetected
 	
-	# the folks at #winehq were really angry about custom optimization
-	export CFLAGS=""
-	export CXXFLAGS=""
+	# use the default setting in ./configure over the /etc/make.conf setting
+	unset CFLAGS CXXFLAGS
 	
 	./configure --prefix=/usr \
 	--exec_prefix=/usr/winex \

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/winex/winex-20020807.ebuild,v 1.10 2003/02/28 23:30:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/winex/winex-20020807.ebuild,v 1.11 2003/04/01 18:06:58 phoenix Exp $
 
 DESCRIPTION="distribution of Wine with enhanced DirectX for gaming"
 SRC_URI="mirror://gentoo/${P}.tar.bz2
@@ -34,10 +34,10 @@ src_compile() {
 	use opengl && myconf="--enable-opengl" || myconf="--disable-opengl"
 	[ -z $DEBUG ] && myconf="$myconf --disable-trace --disable-debug" || myconf="$myconf --enable-trace --enable-debug"
 
-	# the folks at #winehq were really angry about custom optimization
-	unset CFLAGS
-	unset CXXFLAGS
+	# use the default setting in ./configure over the /etc/make.conf setting
+	unset CFLAGS CXXFLAGS
 	
+
 	./configure --prefix=/usr/lib/winex \
 	--sysconfdir=/etc/winex \
 	--host=${CHOST} \

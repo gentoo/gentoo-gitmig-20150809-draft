@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/winex
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/winex/ChangeLog,v 1.22 2003/03/28 14:54:44 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/winex/ChangeLog,v 1.23 2003/04/01 18:06:58 phoenix Exp $
+
+  01 Apr 2003; phoen][x <phoenix@gentoo.org> *.ebuild :
+  Replaced 'export C{XX}FLAGS=""' with 'unset CFLAGS CXXFLAGS'.
+  Read bug #17986 for additional information about this.
 
 *winex-20030328 (28 Mar 2003)
 

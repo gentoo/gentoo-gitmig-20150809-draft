@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20021031.ebuild,v 1.5 2003/02/28 23:27:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20021031.ebuild,v 1.6 2003/04/01 18:09:22 phoenix Exp $
 
 DESCRIPTION="free implementation of Windows(tm) on Unix"
 SRC_URI="ftp://metalab.unc.edu/pub/Linux/ALPHA/wine/development/Wine-${PV}.tar.gz"
@@ -31,10 +31,9 @@ src_compile() {
 	use opengl && myconf="--enable-opengl" || myconf="--disable-opengl"
 	[ -z $DEBUG ] && myconf="$myconf --disable-trace --disable-debug" || myconf="$myconf --enable-trace --enable-debug"
 	# there's no configure flag for cups, arts, alsa and nas, it's supposed to be autodetected
-	
-	# the folks at #winehq were really angry about custom optimization
-	export CFLAGS=""
-	export CXXFLAGS=""
+
+	# use the default setting in ./configure over the /etc/make.conf setting
+	unset CFLAGS CXXFLAGS
 	
 	./configure --prefix=/usr/lib/wine \
 		--sysconfdir=/etc/wine \
