@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/calendar
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/calendar/ChangeLog,v 1.9 2004/09/03 00:16:58 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/calendar/ChangeLog,v 1.10 2004/10/26 11:41:50 slarti Exp $
+
+  26 Oct 2004; Tom Martin <slarti@gentoo.org> calendar-1.3u.ebuild:
+  Marked ~amd64.
 
   03 Sep 2004; Ciaran McCreesh <ciaranm@gentoo.org> calendar-1.3u.ebuild:
   Help text, bug #62559

@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/info
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/info/ChangeLog,v 1.9 2004/06/24 23:02:08 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/info/ChangeLog,v 1.10 2004/10/26 11:31:52 slarti Exp $
+
+  26 Oct 2004; Tom Martin <slarti@gentoo.org> info-1.7-r1.ebuild:
+  Marked ~amd64.
 
   15 Apr 2004; Michael McCabe <randy@gentoo.org> info-1.7-r1.ebuild:
   adding s390 keywords
