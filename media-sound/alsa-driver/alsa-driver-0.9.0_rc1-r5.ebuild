@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Daniel Robbins <drobbins@gentoo.org> 
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-0.9.0_rc1-r5.ebuild,v 1.1 2002/05/03 06:44:52 agenkin Exp $
+# Author: Daniel Robbins <drobbins@gentoo.org> 
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-0.9.0_rc1-r5.ebuild,v 1.2 2002/05/08 05:53:41 jnelson Exp $
 
 DESCRIPTION="Advanced Linux Sound Architecture kernel modules"
 HOMEPAGE="http://www.alsa-project.org/"
@@ -16,9 +16,10 @@ S=${WORKDIR}/${P/_rc/rc}
 
 #virtual/glibc should depend on specific kernel headers
 DEPEND="sys-devel/autoconf
-        virtual/glibc"
+	virtual/glibc
+	>=sys-apps/portage-1.9.10"
+RDEPEND="${DEPEND}"
 PROVIDE="virtual/alsa"
-
 
 src_unpack() {
 	# Some *broken* Gentoo packages install stuff in /etc/rc.d/init.d
@@ -35,18 +36,11 @@ src_unpack() {
 
 src_compile() {
 	# Portage should determine the version of the kernel sources
-	if [ x"${KV}" = x ]
-	then
-		eerror ""
-		eerror "Could not determine you kernel version."
-		eerror "Make sure that you have /usr/src/linux symlink."
-		eerror ""
-		die
-	fi
+	check_KV
 	./configure \
 		--host=${CHOST} \
 		--prefix=/usr \
-		--with-kernel="${ROOT}usr/src/linux-${KV}" \
+		--with-kernel="${ROOT}usr/src/linux" \
 		--with-isapnp=yes \
 		--with-sequencer=yes \
 		--with-oss=yes \
