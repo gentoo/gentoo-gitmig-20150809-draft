@@ -198,11 +198,6 @@ app-admin/systemimager-server-bin
 #
 dev-util/mono-debugger
 
-# <pauldv@gentoo.org> (4 Nov 2003)
-# Testing the ebuild, but not putting it in the tree creates more problems.
-# However I cannot vouch for it actually compiling
-app-office/openoffice-ximian
-
 # <seemant@gentoo.org> (1 Nov 2003
 # Breaks dependencies with things compiled against the previous versions
 >=sys-libs/gdbm-1.8.3
