@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/nessus-plugins
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-plugins/ChangeLog,v 1.23 2004/07/13 06:16:15 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-plugins/ChangeLog,v 1.24 2004/07/16 14:06:55 eldad Exp $
+
+*nessus-plugins-2.1.0 (16 Jul 2004)
+
+  16 Jul 2004; Eldad Zack <eldad@gentoo.org> +nessus-plugins-2.1.0.ebuild:
+  Added development series 2.1.0 (hard-masked). Closes #56436
 
   13 Jul 2004; Eldad Zack <eldad@gentoo.org> +metadata.xml,
   nessus-plugins-2.0.10a.ebuild:

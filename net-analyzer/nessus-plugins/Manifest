@@ -1,6 +1,7 @@
 MD5 ac50b1939e46f164b4076f0086a30a9d nessus-plugins-2.0.10a.ebuild 854
 MD5 1ee3f7f5f58e617dfd56d5d991ab5ec5 nessus-plugins-2.0.8a.ebuild 850
 MD5 afc38ede118e555c9f054d559ae3c4b2 nessus-plugins-2.0.7.ebuild 847
+MD5 4a81d0e013f6652c2ace5a272d3ea780 nessus-plugins-2.1.0.ebuild 856
 MD5 2b574443be0cd8d7659246db8fa78fd5 nessus-plugins-2.0.9.ebuild 846
 MD5 9dd4f085b9556f877303af6a194edac5 ChangeLog 3219
 MD5 91a6d4586282cb7b4d7873b87e434b40 metadata.xml 247
@@ -8,3 +9,4 @@ MD5 08197cb8b4fa69fcdec1afe35e502e8f files/digest-nessus-plugins-2.0.8a 74
 MD5 fa78c80ccdbbc8a5b647ef02802bf804 files/digest-nessus-plugins-2.0.10a 75
 MD5 f03efc7b5553d8f59ffa201926262e70 files/digest-nessus-plugins-2.0.7 73
 MD5 92b0bd5216c9adef3096374ea1c3c737 files/digest-nessus-plugins-2.0.9 73
+MD5 22fe5ab866be6c656147332c79eb50dd files/digest-nessus-plugins-2.1.0 73
