@@ -1,8 +1,12 @@
 # ChangeLog for <CATEGORY>/<PACKAGE_NAME>
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libfame/ChangeLog,v 1.1 2002/07/19 03:39:01 chadh Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libfame/ChangeLog,v 1.2 2002/09/03 07:41:50 lostlogic Exp $
 
 *libfame-0.8.10 (18 July 2002)
+
+  03 Sep 2002; Brandon Low <lostlogic@gentoo.org) libfame-0.8.10.ebuild
+
+  Use einstall not make blah install works better, fixes sandbox whine.
 
   18 July 2002; Chad Huneycutt <chadh@gentoo.org) libfame-0.8.10.ebuild
 
