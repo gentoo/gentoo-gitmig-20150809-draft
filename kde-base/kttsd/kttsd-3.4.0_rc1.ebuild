@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kttsd/kttsd-3.4.0_rc1.ebuild,v 1.2 2005/02/28 19:17:53 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kttsd/kttsd-3.4.0_rc1.ebuild,v 1.3 2005/03/07 16:51:37 greg_g Exp $
 KMNAME=kdeaccessibility
 MAXKDEVER=$PV
 KM_DEPRANGE="$PV $MAXKDEVER"
@@ -16,9 +16,10 @@ DEPEND="$(deprange $PV $MAXKDEVER kde-base/arts)
 
 RDEPEND="
 || ( app-accessibility/festival
+app-accessibility/epos
 app-accessibility/flite
 app-accessibility/freetts
-app-accessibility/epos
+app-accessibility/mbrola
 )"
 
 myconf="$(use_enable gstreamer kttsd-gstreamer)"
