@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/prelude-manager/prelude-manager-0.8.7.ebuild,v 1.1 2003/06/21 17:09:01 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/prelude-manager/prelude-manager-0.8.7.ebuild,v 1.2 2003/06/30 14:18:32 solar Exp $
 
 DESCRIPTION="Prelude-IDS Manager"
 HOMEPAGE="http://www.prelude-ids.org"
@@ -26,10 +26,10 @@ src_compile() {
 	export WANT_AUTOCONF_2_5="1"
 	export WANT_AUTOMAKE_1_6="1"
 	
-	use ssl && myconf="${myconf} --enable-openssl" || myconf="${myconf} --disable-openssl"
-	use doc && myconf="${myconf} --enable-gtk-doc" || myconf="${myconf} --disable-gtk-doc"
-	use mysql && myconf="${myconf} --enable-mysql" || myconf="${myconf} --disable-mysql"
-	use postgres && myconf="${myconf} --enable-postgresql" || myconf="${myconf} --disable-postgresql"
+	use ssl && myconf="${myconf} --enable-openssl" || myconf="${myconf} --enable-openssl=no"
+	use doc && myconf="${myconf} --enable-gtk-doc" || myconf="${myconf} --enable-gtk-doc=no"
+	use mysql && myconf="${myconf} --enable-mysql" || myconf="${myconf} --enable-mysql=no"
+	use postgres && myconf="${myconf} --enable-postgresql" || myconf="${myconf} --enable-postgresql=no"
 	
 	aclocal -I /usr/share/aclocal
 	autoconf
