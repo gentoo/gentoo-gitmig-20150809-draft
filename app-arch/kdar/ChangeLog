@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/kdar
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/kdar/ChangeLog,v 1.5 2004/06/29 03:40:52 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/kdar/ChangeLog,v 1.6 2004/07/06 12:12:00 carlo Exp $
+
+  06 Jul 2004; Carsten Lohrke <carlo@gentoo.org> kdar-1.0.0.ebuild,
+  kdar-1.1.1.ebuild:
+  QA: newdepend -> R/DEPEND, need-kde
 
 *kdar-1.1.1 (29 Jun 2004)
 
