@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/win4lin-sources/win4lin-sources-2.4.22.ebuild,v 1.1 2003/10/28 21:31:33 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/win4lin-sources/win4lin-sources-2.4.22.ebuild,v 1.2 2003/11/20 07:43:38 lostlogic Exp $
 
 IUSE="build"
 
@@ -13,6 +13,8 @@ inherit kernel
 OKV="2.4.22"
 KV="2.4.22-win4lin"
 EXTRAVERSION="-win4lin"
+
+S=${WORKDIR}/linux-${KV}
 
 DESCRIPTION="Full sources for the linux kernel with win4lin support"
 SRC_URI="mirror://kernel/linux/kernel/v2.4/linux-${OKV}.tar.bz2

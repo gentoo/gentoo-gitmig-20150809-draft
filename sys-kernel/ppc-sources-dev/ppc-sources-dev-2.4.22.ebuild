@@ -1,14 +1,17 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-sources-dev/ppc-sources-dev-2.4.22.ebuild,v 1.2 2003/10/26 12:44:38 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-sources-dev/ppc-sources-dev-2.4.22.ebuild,v 1.3 2003/11/20 07:43:38 lostlogic Exp $
 
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 ETYPE="sources"
+IUSE="build crypt"
 
 inherit kernel
-OKV="2.4.22"
-KV=2.4.22-ppc-dev
+OKV="`echo ${PV}|sed -e 's:^\([0-9]\+\.[0-9]\+\.[0-9]\+\).*:\1:'`"
+EXTRAVERSION="-ppc-dev"
+[ ! "${PR}" == "r0" ] && EXTRAVERSION="${EXTRAVERSION}-${PR}"
+KV="${OKV}${EXTRAVERSION}"
 S=${WORKDIR}/linux-${KV}
 
 
@@ -38,7 +41,6 @@ HOMEPAGE="http://www.kernel.org/ http://www.gentoo.org/"
 LICENSE="GPL-2"
 SLOT="${KV}"
 KEYWORDS="~ppc -x86 -sparc -mips -hppa -alpha -arm"
-IUSE="build crypt"
 DEPEND=">=sys-devel/binutils-2.11.90.0.31"
 RDEPEND=">=sys-libs/ncurses-5.2 dev-lang/perl virtual/modutils sys-devel/make"
 

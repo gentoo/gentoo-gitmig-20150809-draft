@@ -1,6 +1,16 @@
 # ChangeLog for sys-kernel/ppc-sources
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-sources/ChangeLog,v 1.27 2003/10/26 13:27:48 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-sources/ChangeLog,v 1.28 2003/11/20 07:43:38 lostlogic Exp $
+
+*ppc-sources-2.4.22-r2 (20 Nov 2003)
+
+  20 Nov 2003; Brandon Low <lostlogic@gentoo.org>
+  ppc-sources-2.4.20-r2.ebuild, ppc-sources-2.4.20-r3.ebuild,
+  ppc-sources-2.4.20-r4.ebuild, ppc-sources-2.4.21-r1.ebuild,
+  ppc-sources-2.4.21-r2.ebuild, ppc-sources-2.4.22-r1.ebuild,
+  ppc-sources-2.4.22-r2.ebuild:
+  Move version handling logic to after inherit kernel, or insert it where
+  necessary
 
   26 Oct 2003; David Holm <dholm@gentoo.org> ppc-sources-2.4.22-r1.ebuild,
   files/ppc-sources-2.4.22-r1.via-pmu.diff:

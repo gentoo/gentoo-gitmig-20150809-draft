@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/alpha-sources
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/alpha-sources/ChangeLog,v 1.9 2003/07/21 22:56:22 wwoods Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/alpha-sources/ChangeLog,v 1.10 2003/11/20 07:43:38 lostlogic Exp $
+
+  19 Nov 2003; Brandon Low <lostlogic@gentoo.org>
+  alpha-sources-2.4.21-r1.ebuild:
+  Move version handling logic to after inherit kernel, or insert it where
+  necessary
 
   21 Jul 2003; Will Woods <wwoods@gentoo.org> alpha-sources-2.4.21-r1.ebuild:
   Marked stable.

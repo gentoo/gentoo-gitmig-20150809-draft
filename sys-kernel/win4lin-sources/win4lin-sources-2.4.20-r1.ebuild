@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/win4lin-sources/win4lin-sources-2.4.20-r1.ebuild,v 1.6 2003/09/29 18:39:40 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/win4lin-sources/win4lin-sources-2.4.20-r1.ebuild,v 1.7 2003/11/20 07:43:38 lostlogic Exp $
 
 IUSE="build"
 
@@ -10,7 +10,12 @@ ETYPE="sources"
 
 inherit kernel
 
-OKV="2.4.20"
+OKV="`echo ${PV}|sed -e 's:^\([0-9]\+\.[0-9]\+\.[0-9]\+\).*:\1:'`"
+EXTRAVERSION="-${PN/-*/}"
+[ ! "${PR}" == "r0" ] && EXTRAVERSION="${EXTRAVERSION}-${PR}"
+KV="${OKV}${EXTRAVERSION}"
+
+S=${WORKDIR}/linux-${KV}
 
 #add one of these in if this is for a pre or rc kernel
 #KERN_PATCH="patch-2.4.20-rc1.bz2"

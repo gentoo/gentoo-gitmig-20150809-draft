@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ia64-sources/ia64-sources-2.4.22.ebuild,v 1.3 2003/10/27 13:49:11 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ia64-sources/ia64-sources-2.4.22.ebuild,v 1.4 2003/11/20 07:43:38 lostlogic Exp $
 
 IUSE=""
 
@@ -18,8 +18,13 @@ IUSE=""
 ETYPE="sources"
 
 inherit kernel
-OKV="2.4.22"
-KV="${KV/-r0//}"
+OKV="`echo ${PV}|sed -e 's:^\([0-9]\+\.[0-9]\+\.[0-9]\+\).*:\1:'`"
+EXTRAVERSION="-${PN/-*/}"
+[ ! "${PR}" == "r0" ] && EXTRAVERSION="${EXTRAVERSION}-${PR}"
+KV="${OKV}${EXTRAVERSION}"
+
+S=${WORKDIR}/linux-${KV}
+
 # Documentation on the patches contained in this kernel will be installed
 # to /usr/share/doc/gentoo-sources-${PV}/patches.txt.gz
 

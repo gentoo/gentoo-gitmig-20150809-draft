@@ -1,12 +1,18 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/alpha-sources/alpha-sources-2.4.21-r1.ebuild,v 1.6 2003/10/27 13:49:11 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/alpha-sources/alpha-sources-2.4.21-r1.ebuild,v 1.7 2003/11/20 07:43:38 lostlogic Exp $
 
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 IUSE="build crypt usagi"
 ETYPE="sources"
 inherit kernel
+OKV="`echo ${PV}|sed -e 's:^\([0-9]\+\.[0-9]\+\.[0-9]\+\).*:\1:'`"
+EXTRAVERSION="-${PN/-*/}"
+[ ! "${PR}" == "r0" ] && EXTRAVERSION="${EXTRAVERSION}-${PR}"
+KV="${OKV}${EXTRAVERSION}"
+
+S=${WORKDIR}/linux-${KV}
 
 DESCRIPTION="Full sources for the Gentoo Linux Alpha kernel"
 SRC_URI="mirror://kernel/linux/kernel/v2.4/linux-${OKV}.tar.bz2

@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/xfs-sources
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xfs-sources/ChangeLog,v 1.27 2003/10/27 01:14:24 livewire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xfs-sources/ChangeLog,v 1.28 2003/11/20 07:43:38 lostlogic Exp $
+
+  20 Nov 2003; Brandon Low <lostlogic@gentoo.org>
+  xfs-sources-2.4.19-r2.ebuild:
+  Move version handling logic to after inherit kernel, or insert it where
+  necessary
 
 *xfs-sources-2.4.22 (26 October 2003)
 

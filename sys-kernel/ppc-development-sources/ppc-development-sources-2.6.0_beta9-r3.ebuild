@@ -1,9 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-development-sources/ppc-development-sources-2.6.0_beta9-r3.ebuild,v 1.3 2003/11/14 21:36:10 darkspecter Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-development-sources/ppc-development-sources-2.6.0_beta9-r3.ebuild,v 1.4 2003/11/20 07:43:38 lostlogic Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 ETYPE="sources"
+inherit kernel
 
 OKV=${PV/_beta/-test}
 
@@ -12,7 +13,9 @@ EXTRAVERSION="`echo ${OKV}-${PR/r/benh} | \
 
 KV=${OKV}-${PR/r/benh}
 
-inherit kernel eutils
+S=${WORKDIR}/linux-${KV}
+
+inherit eutils
 
 # What's in this kernel?
 

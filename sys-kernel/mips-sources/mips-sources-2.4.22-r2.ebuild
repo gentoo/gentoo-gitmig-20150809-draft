@@ -1,15 +1,15 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.4.22-r2.ebuild,v 1.2 2003/11/16 18:15:05 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.4.22-r2.ebuild,v 1.3 2003/11/20 07:43:38 lostlogic Exp $
 
+ETYPE="sources"
+inherit kernel
 
 OKV=${PV/_/-}
 CVSDATE=20030925
 S=${WORKDIR}/linux-${OKV}
 EXTRAVERSION=-mipscvs-${CVSDATE}
 KV="${OKV}${EXTRAVERSION}"
-ETYPE="sources"
-inherit kernel
 
 # What's in this kernel?
 

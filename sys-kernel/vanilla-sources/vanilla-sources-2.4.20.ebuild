@@ -1,14 +1,15 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/vanilla-sources-2.4.20.ebuild,v 1.9 2003/11/18 18:09:50 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/vanilla-sources-2.4.20.ebuild,v 1.10 2003/11/20 07:43:38 lostlogic Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
+
+ETYPE="sources"
+inherit kernel
 
 OKV=2.4.20
 KV=2.4.20
 EXTRAVERSION=" "
 S=${WORKDIR}/linux-${KV}
-ETYPE="sources"
-inherit kernel
 
 # What's in this kernel?
 

@@ -1,16 +1,16 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openmosix-sources/openmosix-sources-2.4.22.ebuild,v 1.4 2003/09/27 14:05:01 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openmosix-sources/openmosix-sources-2.4.22.ebuild,v 1.5 2003/11/20 07:43:38 lostlogic Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
+
+ETYPE="sources"
+inherit kernel
 
 OKV="2.4.22"
 [ "${PR}" == "r0" ] && KV=${PV/_/-}-openmosix || KV=${PV/_/-}-openmosix-${PR}
 EXTRAVERSION="`echo ${KV}|sed -e 's:[0-9]\+\.[0-9]\+\.[0-9]\+\(.*\):\1:'`"
 BASE="`echo ${KV}|sed -e s:${EXTRAVERSION}::`"
 S=${WORKDIR}/linux-${KV}
-
-ETYPE="sources"
-inherit kernel || die
 
 # What's in this kernel?
 

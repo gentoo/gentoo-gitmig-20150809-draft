@@ -1,10 +1,16 @@
 # ChangeLog for sys-kernel/pfeifer-sources
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/pfeifer-sources/ChangeLog,v 1.18 2003/10/17 19:20:06 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/pfeifer-sources/ChangeLog,v 1.19 2003/11/20 07:43:38 lostlogic Exp $
 
   TODO:
 	update FreeSWAN, aic7xxx
 	update some of the docs
+
+  20 Nov 2003; Brandon Low <lostlogic@gentoo.org>
+  pfeifer-sources-2.4.20.1_pre11.ebuild,
+  pfeifer-sources-2.4.20.1_pre12.ebuild, pfeifer-sources-2.4.21.1_pre4.ebuild:
+  Move version handling logic to after inherit kernel, or insert it where
+  necessary
 
 *pfeifer-sources-2.4.22-r1 (17 Oct 2003)
 

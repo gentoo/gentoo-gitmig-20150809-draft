@@ -1,7 +1,12 @@
 # ChangeLog for sys-kernel/mips-sources
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/ChangeLog,v 1.14 2003/11/16 18:15:05 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/ChangeLog,v 1.15 2003/11/20 07:43:38 lostlogic Exp $
 
+  20 Nov 2003; Brandon Low <lostlogic@gentoo.org>
+  mips-sources-2.4.21-r2.ebuild, mips-sources-2.4.22-r1.ebuild,
+  mips-sources-2.4.22-r2.ebuild, mips-sources-2.4.22-r3.ebuild:
+  Move version handling logic to after inherit kernel, or insert it where
+  necessary
 
 *mips-sources-2.4.22-r3 (15 Oct 2003)
 

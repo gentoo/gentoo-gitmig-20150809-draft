@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-prepatch-sources/mips-prepatch-sources-2.4.22_rc2-r1.ebuild,v 1.2 2003/09/07 07:26:01 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-prepatch-sources/mips-prepatch-sources-2.4.22_rc2-r1.ebuild,v 1.3 2003/11/20 07:43:38 lostlogic Exp $
 
 
 # Eclass Stuff
@@ -12,6 +12,7 @@ OKV=${PV/_/-}
 CVSDATE=20030813
 EXTRAVERSION=-$(echo ${OKV} | cut -d- -f2)-mipscvs-${CVSDATE}
 STABLEVERSION=2.4.21
+KV="${OKV}${EXTRAVERSION}"
 
 # Miscellaneous
 S=${WORKDIR}/linux-${OKV}

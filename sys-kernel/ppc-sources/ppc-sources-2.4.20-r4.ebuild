@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-sources/ppc-sources-2.4.20-r4.ebuild,v 1.5 2003/09/29 19:02:14 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-sources/ppc-sources-2.4.20-r4.ebuild,v 1.6 2003/11/20 07:43:38 lostlogic Exp $
 
 IUSE="build crypt"
 
@@ -18,6 +18,13 @@ IUSE="build crypt"
 ETYPE="sources"
 
 inherit kernel
+OKV="`echo ${PV}|sed -e 's:^\([0-9]\+\.[0-9]\+\.[0-9]\+\).*:\1:'`"
+EXTRAVERSION="-${PN/-*/}"
+[ ! "${PR}" == "r0" ] && EXTRAVERSION="${EXTRAVERSION}-${PR}"
+KV="${OKV}${EXTRAVERSION}"
+
+S=${WORKDIR}/linux-${KV}
+
 SLOT="${KV}"
 
 # Documentation on the patches contained in this kernel will be installed

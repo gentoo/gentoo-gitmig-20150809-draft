@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/gentoo-dev-sources
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/ChangeLog,v 1.3 2003/11/04 22:00:44 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/ChangeLog,v 1.4 2003/11/20 07:43:38 lostlogic Exp $
+
+  20 Nov 2003; Brandon Low <lostlogic@gentoo.org>
+  gentoo-dev-sources-2.6.0_beta9.ebuild:
+  Move version handling logic to after inherit kernel, or insert it where
+  necessary
 
   04 Nov 2003; John Mylchreest <johnm@gentoo.org>;
   gentoo-dev-sources-2.6.0_beta9.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-sources-benh/ppc-sources-benh-2.4.22-r1.ebuild,v 1.1 2003/08/30 19:02:44 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-sources-benh/ppc-sources-benh-2.4.22-r1.ebuild,v 1.2 2003/11/20 07:43:38 lostlogic Exp $
 
 IUSE=""
 
@@ -8,6 +8,12 @@ ETYPE="sources"
 inherit kernel
 
 # OKV=original kernel version, KV=patched kernel version.  They can be the same.
+OKV="`echo ${PV}|sed -e 's:^\([0-9]\+\.[0-9]\+\.[0-9]\+\).*:\1:'`"
+EXTRAVERSION="-${PN/-*/}"
+[ ! "${PR}" == "r0" ] && EXTRAVERSION="${EXTRAVERSION}-${PR}"
+KV="${OKV}${EXTRAVERSION}"
+
+S=${WORKDIR}/linux-${KV}
 
 MY_R=`echo $PR | sed "s:r:ben:g"`
 

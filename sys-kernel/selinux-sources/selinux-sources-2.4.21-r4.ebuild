@@ -1,12 +1,15 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/selinux-sources/selinux-sources-2.4.21-r4.ebuild,v 1.1 2003/10/26 21:52:21 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/selinux-sources/selinux-sources-2.4.21-r4.ebuild,v 1.2 2003/11/20 07:43:38 lostlogic Exp $
 
 IUSE=""
 
 ETYPE="sources"
 inherit kernel
-#KV="2.4.21-selinux"
+OKV="`echo ${PV}|sed -e 's:^\([0-9]\+\.[0-9]\+\.[0-9]\+\).*:\1:'`"
+EXTRAVERSION="-${PN/-*/}"
+[ ! "${PR}" == "r0" ] && EXTRAVERSION="${EXTRAVERSION}-${PR}"
+KV="${OKV}${EXTRAVERSION}"
 
 S=${WORKDIR}/linux-${KV}
 DESCRIPTION="LSM patched kernel with SELinux"

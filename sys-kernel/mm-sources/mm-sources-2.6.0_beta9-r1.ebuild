@@ -1,9 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/mm-sources-2.6.0_beta9-r1.ebuild,v 1.1 2003/10/30 20:16:56 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/mm-sources-2.6.0_beta9-r1.ebuild,v 1.2 2003/11/20 07:43:38 lostlogic Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 ETYPE="sources"
+inherit kernel
 
 OKV=${PV/_beta/-test}
 
@@ -12,7 +13,9 @@ EXTRAVERSION="`echo ${OKV}-${PR/r/mm} | \
 
 KV=${OKV}-${PR/r/mm}
 
-inherit kernel eutils
+S=${WORKDIR}/linux-${KV}
+
+inherit eutils
 
 # What's in this kernel?
 
