@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabber-server/jabber-server-1.4.2-r2.ebuild,v 1.9 2002/11/14 17:17:36 verwilst Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabber-server/jabber-server-1.4.2-r2.ebuild,v 1.10 2002/11/14 18:07:58 verwilst Exp $
 
 IUSE="ssl"
 
@@ -118,17 +118,24 @@ src_install() {
 
 pkg_postinst() {
 
-	cd /usr/jabber-${PV}
 	groupadd jabber
-	useradd jabber -s /bin/false -d /usr/jabber-${PV} -g jabber -m	
-	chown jabber.jabber * -R
-	chmod o-rwx * -R
-	chmod g-x * -R
-	chmod g+rw * -R
-	chmod u+xs jabberd/jabberd
+	useradd jabber -s /bin/false -g jabber	
+	chown jabber.jabber /etc/jabber 
+	chown jabber.jabber /usr/sbin/jabberd
+	chown jabber.jabber /var/spool/jabber -R
+	chmod o-rwx /etc/jabber 
+	chmod o-rwx /usr/sbin/jabberd
+	chmod o-rwx /var/spool/jabber -R
+	chmod g-x /etc/jabber 
+	chmod g-x /usr/sbin/jabberd
+	chmod g-x /var/spool/jabber -R
+	chmod g+rw /etc/jabber 
+	chmod g+rw /usr/sbin/jabberd
+	chmod g+rw /var/spool/jabber -R
+	chmod u+xs /usr/sbin/jabberd
 	
-	einfo "Change 'localhost' to your server's domainname in the *.xml configs first"
-	einfo "To enable SSL connections, execute ./self-cert.sh in the server's dir"
+	einfo "Change 'localhost' to your server's domainname in the /etc/jabber/*.xml configs first"
+	einfo "To enable SSL connections, execute /etc/jabber/self-cert.sh"
 	einfo "(Only if compiled with SSL support (ssl in USE)"
 	einfo "Server admins should be added to the "jabber" group"
 
