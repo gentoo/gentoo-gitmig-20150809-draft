@@ -4,5 +4,5 @@ MD5 b8590c75dd3f70a7c45ee7faf7c01f2d /files/grsecurity 1481
 MD5 fd77d6f0b1ede0d13fd1e802fef41542 /files/gradm-1.5a-chpax.c 5769
 MD5 19f513de16672643532b502ab8c12d46 /files/gradm-1.7b-chpax.c 7256
 MD5 19f513de16672643532b502ab8c12d46 /files/gradm-chpax.c 7256
-MD5 6e5ef41d77187f69b0cd7a6d086afc30 /gradm-1.9.9f.ebuild 1155
-MD5 1778990bfa3dcbb855af781acf91abc6 gradm-1.9.9f.tar.gz 36187
+MD5 6e5ef41d77187f69b0cd7a6d086afc30 /gradm-1.9.9g.ebuild 1155
+MD5 abbe738ad06dae1100c4a984cf9b8702 gradm-1.9.9g.tar.gz 36727
