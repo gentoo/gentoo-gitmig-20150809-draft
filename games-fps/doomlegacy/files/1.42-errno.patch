@@ -1,0 +1,33 @@
+diff -ur doomlegacy_142_src.orig/linux_x/i_sound.c doomlegacy_142_src/linux_x/i_sound.c
+--- doomlegacy_142_src.orig/linux_x/i_sound.c	2004-05-09 11:51:20.908123440 +0200
++++ doomlegacy_142_src/linux_x/i_sound.c	2004-05-09 11:40:26.257645440 +0200
+@@ -262,7 +262,6 @@
+ void myioctl(int fd, int command, int *arg)
+ {
+     int rc;
+-    extern int errno;
+ 
+     rc = ioctl(fd, command, arg);
+     if (rc < 0)
+diff -ur doomlegacy_142_src.orig/linux_x/i_video_xshm.c doomlegacy_142_src/linux_x/i_video_xshm.c
+--- doomlegacy_142_src.orig/linux_x/i_video_xshm.c	2004-05-09 11:51:20.909123288 +0200
++++ doomlegacy_142_src/linux_x/i_video_xshm.c	2004-05-09 11:40:15.969209520 +0200
+@@ -1401,7 +1401,6 @@
+       id = shmget((key_t)key, size, IPC_CREAT|0777);
+       if (id==-1)
+       {
+-        extern int errno;
+         fprintf(stderr, "errno=%d\n", errno);
+         I_Error("Could not get any shared memory");
+       }
+diff -ur doomlegacy_142_src.orig/linux_x/sndserv/linux.c doomlegacy_142_src/linux_x/sndserv/linux.c
+--- doomlegacy_142_src.orig/linux_x/sndserv/linux.c	2004-05-09 11:51:20.910123136 +0200
++++ doomlegacy_142_src/linux_x/sndserv/linux.c	2004-05-09 11:39:50.198127320 +0200
+@@ -74,7 +74,6 @@
+   int*  arg )
+ {   
+     int         rc;
+-    extern int  errno;
+     
+     rc = ioctl(fd, command, arg);  
+     if (rc < 0)

@@ -1,0 +1,15 @@
+diff -ur doomlegacy_142_src.orig/sdl/i_system.c doomlegacy_142_src/sdl/i_system.c
+--- doomlegacy_142_src.orig/sdl/i_system.c	2004-05-09 11:51:20.913122680 +0200
++++ doomlegacy_142_src/sdl/i_system.c	2004-05-09 14:54:23.716482784 +0200
+@@ -734,6 +734,11 @@
+ 
+ void I_LocateWad(void) {
+     // relict from the Linux version
++#ifdef LINUX
++#define WADLOCATION "GENTOO_DATADIR"
++    if(chdir(WADLOCATION))
++    	fprintf (stderr, "Error: chdir() " WADLOCATION " failed\n");
++#endif
+     return;
+ }
+ 

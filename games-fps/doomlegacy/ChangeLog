@@ -1,6 +1,13 @@
 # ChangeLog for games-fps/doomlegacy
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doomlegacy/ChangeLog,v 1.8 2004/06/24 22:41:23 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doomlegacy/ChangeLog,v 1.9 2004/07/21 02:22:31 vapier Exp $
+
+*doomlegacy-1.42 (20 Jul 2004)
+
+  20 Jul 2004; Mike Frysinger <vapier@gentoo.org> +files/1.42-errno.patch,
+  +files/1.42-makefile.patch, +files/1.42-sdl-gentoo-paths.patch,
+  +doomlegacy-1.42.ebuild:
+  Version bump #50549 by Florian Westphal and #41339 by Kimmo Sundqvist.
 
   30 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org>
   doomlegacy-1.41-r1.ebuild:

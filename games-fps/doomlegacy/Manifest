@@ -1,6 +1,21 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 dc86d30f1873cd6b0109c8e95dd48daa ChangeLog 1807
+MD5 d0be0b58acac6f6ea623ec89d3d0fa27 doomlegacy-1.42.ebuild 2617
 MD5 63f645bcd9419dbffe4e47791d5f3b3c doomlegacy-1.41-r1.ebuild 2776
-MD5 85b234542204f293a2dcbb2741ba2025 ChangeLog 1535
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+MD5 bb9b722c1950d5def8c8b9acdaf97e50 files/digest-doomlegacy-1.42 131
 MD5 e885b725a7ac4856ab497c431c5baaf9 files/1.41-errno.patch 1141
-MD5 adb14f545729e3b8e033a068cb60d73a files/digest-doomlegacy-1.41-r1 189
 MD5 4148627cf6a4c044c2d8499c3d1263cb files/1.41-makefile.patch 4065
+MD5 0d6de7188dfe337db9cd0b99fc2dcf05 files/1.42-errno.patch 1327
+MD5 e816487fa8ac743f0b6e9691e79bac01 files/1.42-makefile.patch 4465
+MD5 939a6e8bb2387591d70d271c6a5c55be files/1.42-sdl-gentoo-paths.patch 495
+MD5 adb14f545729e3b8e033a068cb60d73a files/digest-doomlegacy-1.41-r1 189
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFA/dN6HTu7gpaalycRAsooAKDO3M9zjqBWPiSUtgyVH9WmCFOOUQCfZn5v
+L8wxl853MnPS2GdBtA4sTpM=
+=M1zq
+-----END PGP SIGNATURE-----
