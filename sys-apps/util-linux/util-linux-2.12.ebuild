@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.12.ebuild,v 1.1 2003/07/24 06:19:08 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.12.ebuild,v 1.2 2003/07/28 18:28:17 solar Exp $
 
 IUSE="crypt nls static pam"
 
@@ -96,7 +96,7 @@ src_compile() {
 	econf || die "configure failed"
 
 	if [ "`use static`" ] ; then
-		export LDFLAGS=-static
+		export LDFLAGS="${LDFLAGS} -static"
 	fi
 	emake || die "emake failed"
 	cd sys-utils && makeinfo *.texi || die "makeinfo failed"
