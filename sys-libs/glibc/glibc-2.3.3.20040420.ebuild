@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.3.20040420.ebuild,v 1.9 2004/07/05 01:24:31 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.3.20040420.ebuild,v 1.10 2004/07/07 09:40:18 kumba Exp $
 
 IUSE="nls pic build nptl erandom debug"
 
@@ -59,7 +59,7 @@ SRC_URI="http://ftp.gnu.org/gnu/glibc/glibc-${MY_PV}.tar.bz2
 HOMEPAGE="http://www.gnu.org/software/libc/libc.html"
 
 #KEYWORDS="~x86 ~mips ~sparc ~amd64 -hppa ~ia64 ~ppc" # breaks on ~alpha
-KEYWORDS="~amd64 ppc x86"
+KEYWORDS="~amd64 ppc x86 mips"
 
 SLOT="2.2"
 LICENSE="LGPL-2"
