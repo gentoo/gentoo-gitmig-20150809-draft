@@ -1,6 +1,22 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.149 2004/07/26 18:28:57 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.150 2004/08/06 15:08:20 caleb Exp $
+
+*kdelibs-3.3.0_rc1 (06 Aug 2004)
+
+  06 Aug 2004; Caleb Tennis <caleb@gentoo.org> kdelibs-3.3.0_rc1.ebuild:
+  New _rc1, minor dep differences from _beta2.
+
+*kdelibs-3.2.3-r1 (06 Aug 2004)
+
+  06 Aug 2004; Caleb Tennis <caleb@gentoo.org> kdelibs-3.2.3-r1.ebuild,
+  kdelibs-3.3.0_beta1.ebuild, files/post-3.2.3-kdelibs-dcopserver.patch,
+  files/post-3.2.3-kdelibs-htmlframes.patch,
+  files/post-3.2.3-kdelibs-kcookiejar.patch,
+  files/post-3.2.3-kdelibs-kstandarddirs.patch:
+  Add a new _rc1.
+  Remove the _beta1.
+  Add a 3.2.3-r1 which incorporates some security fixes.
 
   26 Jul 2004; Caleb Tennis <caleb@gentoo.org> kdelibs-3.3.0_beta2.ebuild:
   add dep to libidn. Maybe this can be use flagged later, but it's such a small
