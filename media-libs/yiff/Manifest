@@ -1,4 +1,4 @@
-MD5 f7c5bce807ae818022ea8af1540770d9 files/digest-yiff-2.14.2 64
-MD5 e09ec0009a7363cf443a6fc1bb0d67f6 files/2.14.2-gcc3.patch 2512
+MD5 731dde7e0d27725a199275a23aaec33e files/digest-yiff-2.14.2 64
+MD5 8bf3317f7549f6be736e2a237a5ed26d files/2.14.2-gcc3.patch 3137
 MD5 dacb90e0163b345432abb5c2c3abb45c yiff-2.14.2.ebuild 1052
 MD5 cd92884e0cef6d74b1d38755536b42f4 ChangeLog 335
