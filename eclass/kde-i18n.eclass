@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-i18n.eclass,v 1.23 2002/08/29 08:21:30 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-i18n.eclass,v 1.24 2002/10/17 23:29:25 hannes Exp $
 inherit kde
 ECLASS=kde-i18n
 INHERITED="$INHERITED $ECLASS"
@@ -18,11 +18,15 @@ myconf="$myconf --enable-final"
 
 need-kde ${PV}
 
+case "$PV" in
+    2.2.2)	SRC_PATH="stable/${PV}/src/${P}.tar.bz2" ;;
+    3.1_beta1)	SRC_PATH="unstable/kde-3.1-beta1/src/kde-i18n/${P//3.1_beta1/3.0.7}.tar.bz2" ;;
+    3.1_beta2)	SRC_PATH="unstable/kde-3.1-beta2/src/kde-i18n/${P//3.1_beta2/3.0.8}.tar.bz2" ;;
+    3*)	SRC_PATH="stable/${PV}/src/kde-i18n/${P}.tar.bz2" ;;
+esac
 
-if [ "$PN" == "kde-i18n" -o "$PV" == "2.2.2" ]; then
-    SRC_PATH="stable/${PV}/src/${P}.tar.bz2"
-else
-    SRC_PATH="stable/${PV}/src/kde-i18n/${P}.tar.bz2"
+if [ "$PN" == "kde-i18n" ]; then
+    SRC_PATH=${SRC_PATH/kde-i18n//}
 fi
 
 SRC_URI="$SRC_URI mirror://kde/$SRC_PATH
