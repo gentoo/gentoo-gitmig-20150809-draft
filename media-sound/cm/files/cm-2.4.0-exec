@@ -1,0 +1,3 @@
+#!/bin/sh
+
+guile -c '(begin (define cm-bin-directory "/usr/share/cm/bin/") (load "/usr/share/cm/src/cm.scm") (load "/usr/share/cm/bin/cminit.lisp") (top-repl))'

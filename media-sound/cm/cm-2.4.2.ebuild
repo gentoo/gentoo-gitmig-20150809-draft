@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cm/cm-2.4.2.ebuild,v 1.5 2004/06/24 23:55:14 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cm/cm-2.4.2.ebuild,v 1.6 2004/07/06 07:10:46 eradicator Exp $
 
 IUSE=""
 
@@ -11,7 +11,7 @@ RESTRICT="nomirror"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ~sparc ~amd64"
 
 DEPEND=">=dev-util/guile-1.6.4"
 
@@ -35,22 +35,6 @@ src_install() {
 	doins ${S}/etc/examples/*
 	dohtml -r doc/*
 	dodoc ${S}/readme.text ${S}/doc/changelog.text
-}
 
-pkg_postinst() {
-	# when the package is first run it generates the cm script
-	# that will load the necessary source files into guile when run
-	guile -c "(load \"/usr/share/cm/src/cm.scm\")"
-	ln /usr/share/cm/bin/cm /usr/bin/cm
-	chmod +x /usr/bin/cm
+	newexe ${FILESDIR}/${PN}-2.4.0-exec ${PN}
 }
-
-#This will break upgrades
-#pkg_prerm() {
-#	if [ -e /usr/bin/cm ]; then
-#	    rm /usr/bin/cm
-#	fi
-#	if [ -e /usr/share/cm/bin ]; then
-#		rm -rf /usr/share/cm/bin
-#	fi
-#}

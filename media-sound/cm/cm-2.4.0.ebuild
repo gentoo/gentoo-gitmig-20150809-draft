@@ -1,12 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cm/cm-2.4.0.ebuild,v 1.10 2004/06/24 23:55:14 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cm/cm-2.4.0.ebuild,v 1.11 2004/07/06 07:10:46 eradicator Exp $
 
 IUSE=""
 
 DESCRIPTION="Common Music: An object oriented music composition environment in LISP/scheme"
-HOMEPAGE="http://www-ccrma.stanford.edu/software/cm/doc/cm.html"
-SRC_URI="ftp://ftp-ccrma.stanford.edu/pub/Lisp/cm/sources/${P}.tar.gz"
+HOMEPAGE="http://commonmusic.sourceforge.net"
+SRC_URI="mirror://sourceforge/commonmusic/${P}.tar.gz"
+RESTRICT="nomirror"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -34,22 +35,6 @@ src_install() {
 	doins ${S}/etc/examples/*
 	dohtml -r doc/*
 	dodoc ${S}/readme.text ${S}/doc/changelog.text
-}
 
-pkg_postinst() {
-	# when the package is first run it generates the cm script
-	# that will load the necessary source files into guile when run
-	guile -c "(load \"/usr/share/cm/src/cm.scm\")"
-	ln /usr/share/cm/bin/cm /usr/bin/cm
-	chmod +x /usr/bin/cm
+	newexe ${FILESDIR}/${PN}-2.4.0-exec ${PN}
 }
-
-# This will break upgrades... find a better way
-#pkg_prerm() {
-#	if [ -e /usr/bin/cm ]; then
-#	    rm /usr/bin/cm
-#	fi
-#	if [ -e /usr/share/cm/bin ]; then
-#		rm -rf /usr/share/cm/bin
-#	fi
-#}
