@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg3/libmpeg3-1.5.2-r1.ebuild,v 1.2 2005/03/26 20:42:04 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg3/libmpeg3-1.5.2-r1.ebuild,v 1.3 2005/03/29 21:52:22 eradicator Exp $
 
 inherit flag-o-matic eutils gcc
 
@@ -11,13 +11,13 @@ SRC_URI="mirror://sourceforge/heroines/${P}-src.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
-IUSE=""
+IUSE="mmx"
 
 RDEPEND="sys-libs/zlib
 	media-libs/jpeg
 	media-libs/a52dec"
 DEPEND="${RDEPEND}
-	x86? ( dev-lang/nasm )"
+	mmx? ( dev-lang/nasm )"
 
 src_unpack() {
 	unpack ${A}
@@ -46,6 +46,13 @@ src_unpack() {
 		fi
 	fi
 	sed -i "/LIBS = /s:$: -L\${ROOT}usr/$(get_libdir) ${libs}:" Makefile
+
+	if ! use mmx || has_pic ; then
+		sed -i -e 's:^NASM =.*:NASM =:' \
+		       -e 's|^HAVE_NASM :=.*|HAVE_NASM=n|' \
+		       -e 's|USE_MMX = 1|USE_MMX = 0|' \
+		       Makefile
+	fi
 }
 
 src_compile() {
@@ -53,20 +60,21 @@ src_compile() {
 
 	rm -f ${obj_dir}/*.o &> /dev/null
 
+	make CC="$(tc-getCC)" ${obj_dir}/libmpeg3.a || die "Failed libmpeg3.a"
+	rm -f ${obj_dir}/*.o
+
 	# x86 asm is not pic safe
-	if use x86; then
-		filter-flags -fPIC
-	else
+	if ! use mmx; then
 		append-flags -fPIC
 	fi
 
 	make CC="$(tc-getCC)" ${obj_dir}/libmpeg3.so || die "Failed libmpeg3.so"
-	rm ${obj_dir}/*.o
 
-	filter-flags -fPIC
-	make CC="$(tc-getCC)" ${obj_dir}/libmpeg3.a || die "Failed libmpeg3.a"
-	touch ${obj_dir}/libmpeg3.so
+	# This would add -fno-pie to CFLAGS, so don't change to it! --eradicator
+	# filter-flags -fPIC
+	CFLAGS=${CFLAGS//-fPIC/}
 
+	touch ${obj_dir}/libmpeg3.a
 	make CC="$(tc-getCC)" || die "Failed to build utilities"
 }
 
