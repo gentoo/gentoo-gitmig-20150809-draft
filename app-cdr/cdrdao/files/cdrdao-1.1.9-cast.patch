@@ -1,0 +1,11 @@
+--- cdrdao-1.1.9/trackdb/lec.cc.cast	2004-03-05 21:46:39.000000000 +0100
++++ cdrdao-1.1.9/trackdb/lec.cc	2004-06-08 14:01:16.306661872 +0200
+@@ -278,7 +278,7 @@
+   u_int32_t crc = 0;
+ 
+   while (len--) {
+-    crc = CRCTABLE[(crc ^ *data++) & 0xff] ^ (crc >> 8);
++    crc = CRCTABLE[(int)(crc ^ *data++) & 0xff] ^ (crc >> 8);
+   }
+ 
+   return crc;

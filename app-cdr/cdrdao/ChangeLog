@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/cdrdao
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/ChangeLog,v 1.48 2004/07/11 19:57:44 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/ChangeLog,v 1.49 2004/07/14 13:24:04 lv Exp $
+
+  14 Jul 2004; Travis Tilley <lv@gentoo.org> +files/cdrdao-1.1.9-cast.patch:
+  add cast patch for cdrdao 1.1.9
 
 *cdrdao-1.1.9 (11 Jul 2004)
 
