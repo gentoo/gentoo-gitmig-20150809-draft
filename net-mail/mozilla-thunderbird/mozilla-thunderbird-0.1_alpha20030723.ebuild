@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mozilla-thunderbird/mozilla-thunderbird-0.1_alpha20030723.ebuild,v 1.1 2003/07/26 16:53:20 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mozilla-thunderbird/mozilla-thunderbird-0.1_alpha20030723.ebuild,v 1.2 2003/08/01 15:35:43 brad Exp $
 
 inherit makeedit flag-o-matic gcc nsplugins
 
@@ -17,7 +17,7 @@ SRC_URI="mirror://gentoo/MozillaThunderbird-${MOZ_CO_DATE}-source.tar.bz2"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha"
 SLOT="0"
 LICENSE="MPL-1.1 | NPL-1.1"
-IUSE="gtk2 ipv6"
+IUSE="gtk2 ipv6 gnome"
 
 RDEPEND="virtual/x11
    >=dev-libs/libIDL-0.8.0
@@ -135,5 +135,23 @@ src_install() {
    chown -R root.root ${D}/usr/lib/MozillaThunderbird
    
    dobin ${FILESDIR}/MozillaThunderbird
+
+	# Install icon and .desktop for menu entry
+	if [ "`use gnome`" ]
+	then
+		insinto /usr/share/pixmaps
+		doins ${S}/build/package/rpm/SOURCES/mozilla-icon.png
+
+		# Fix comment of menu entry
+		cd ${S}/build/package/rpm/SOURCES
+		cp mozilla.desktop mozillathunderbird.desktop
+		perl -pi -e 's:Name=Mozilla:Name=Mozilla Thunderbird:' mozillathunderbird.desktop
+		perl -pi -e 's:Comment=Mozilla:Comment=Mozilla Thunderbird Mail Client:' mozillathunderbird.desktop
+		perl -pi -e 's:Exec=/usr/bin/mozilla:Exec=/usr/bin/MozillaThunderbird:' mozillathunderbird.desktop
+		cd ${S}
+		insinto /usr/share/gnome/apps/Internet
+		doins ${S}/build/package/rpm/SOURCES/mozillathunderbird.desktop
+	fi
+
 }
 
