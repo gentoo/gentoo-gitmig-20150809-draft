@@ -1,6 +1,11 @@
 # ChangeLog for net-news/blam
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/blam/ChangeLog,v 1.7 2004/08/20 01:35:20 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/blam/ChangeLog,v 1.8 2004/09/10 03:54:03 tseng Exp $
+
+*blam-1.4.0 (09 Sep 2004)
+
+  09 Sep 2004; Brandon Hale <tseng@gentoo.org> +blam-1.4.0.ebuild:
+  Version bump.
 
 *blam-1.2.4 (19 Aug 2004)
 
