@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/ptabtools
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ptabtools/ChangeLog,v 1.4 2004/12/19 06:15:33 eradicator Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ptabtools/ChangeLog,v 1.5 2005/02/20 19:19:11 pkdawson Exp $
+
+*ptabtools-0.3.1-r1 (20 Feb 2005)
+
+  20 Feb 2005; Patrick Dawson <pkdawson@gentoo.org>
+  +files/ptabtools-0.3.1-fPIC.patch, +ptabtools-0.3.1-r1.ebuild:
+  Fixed a few problems, made library build with -fPIC.
+  Closes bug #81955. Thanks to Yaakov S.
 
   18 Dec 2004; Jeremy Huddleston <eradicator@gentoo.org>
   ptabtools-0.3.1.ebuild:

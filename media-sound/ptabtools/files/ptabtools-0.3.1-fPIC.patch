@@ -1,0 +1,12 @@
+diff -ur ptabtools-0.3.orig/Makefile ptabtools-0.3/Makefile
+--- ptabtools-0.3.orig/Makefile	2005-02-19 20:07:47.000000000 -0500
++++ ptabtools-0.3/Makefile	2005-02-19 20:10:27.951481769 -0500
+@@ -26,7 +26,7 @@
+ 	$(CC) $(CFLAGS) -c $< `pkg-config --cflags glib-2.0`
+ 
+ libptb-$(PTB_VERSION).so: $(PTBSO_OBJS)
+-	$(CC) -shared $(CFLAGS) -o $@ $(PTBSO_OBJS) `pkg-config --libs glib-2.0`
++	$(CC) -shared -fPIC $(CFLAGS) -o $@ $(PTBSO_OBJS) `pkg-config --libs glib-2.0`
+ 
+ ptb2xml: $(PTB2XML_OBJS)
+ 	$(CC) $(CFLAGS) -o $@ $(PTB2XML_OBJS) `pkg-config --libs glib-2.0 libxml-2.0 libxslt` -lpopt
