@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/webapp.eclass,v 1.19 2004/05/22 18:45:13 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/webapp.eclass,v 1.20 2004/05/22 18:56:58 stuart Exp $
 #
 # eclass/webapp.eclass
 #				Eclass for installing applications to run under a web server
@@ -354,14 +354,8 @@ function webapp_pkg_setup ()
 				ewarn "Whatever is in $my_dir, it's not"
 				ewarn "compatible with webapp-config."
 				ewarn
-
-				my_output="`qpkg -nc -v -f $my_dir`"
-				if [ -n "$my_output" ]; then
-					eerror "Please remove $my_output and re-emerge."
-				else
-					eerror "Please remove the contents of $my_dir, and then re-emerge."
-				fi
-				die "Cannot upgrade contents of $my_dir"
+				ewarn "This ebuild may be overwriting important files."
+				ewarn
 			elif [ "`echo $my_output | awk '{ print $1 }'`" != "$PN" ]; then
 				eerror "$my_dir contains $my_output"
 				eerror "I cannot upgrade that"
