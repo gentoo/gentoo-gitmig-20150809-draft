@@ -1,5 +1,5 @@
 # Config file for /etc/init.d/xsp
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/xsp/files/xsp.confd,v 1.1 2004/05/21 20:18:45 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/xsp/files/xsp.confd,v 1.2 2004/07/18 02:48:47 dragonheart Exp $
 
 # This is the document root; trailing slash is not necessary
 MonoServerRoot=/usr/share/doc/xsp/test
