@@ -1,6 +1,6 @@
 # ChangeLog for sys-kernel/ppc-sources-dev
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-sources-dev/ChangeLog,v 1.20 2004/02/19 11:11:41 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-sources-dev/ChangeLog,v 1.21 2004/02/27 11:52:13 aliz Exp $
 
 *ppc-sources-dev-2.4.24-r2 (19 Feb 2004)
 
@@ -82,6 +82,7 @@
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
+*ppc-sources-dev-2.4.19 (17 Aug 2002)
 *ppc-sources-dev-2.4.19-r6 (17 Aug 2002)
 
     Added first preempt build. Based of latest BenH build. Does not

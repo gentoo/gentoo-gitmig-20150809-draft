@@ -1,6 +1,6 @@
 # ChangeLog for sys-kernel/gentoo-dev-sources
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/ChangeLog,v 1.47 2004/02/22 18:28:38 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/ChangeLog,v 1.48 2004/02/27 11:52:12 aliz Exp $
 
 *gentoo-dev-sources-2.6.3-r2 (22 Feb 2004)
 
@@ -12,6 +12,7 @@
   gentoo-dev-sources-2.6.3-r1.ebuild:
   stable on amd64
 
+*gentoo-dev-sources-2.6.1-r2 (19 Feb 2004)
 *gentoo-dev-sources-2.6.3-r1 (19 Feb 2004)
 
   19 Feb 2004; John Mylchreest <johnm@gentoo.org>
