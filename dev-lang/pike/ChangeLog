@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/pike
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/pike/ChangeLog,v 1.3 2003/10/27 12:22:55 scandium Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/pike/ChangeLog,v 1.4 2003/11/08 18:20:13 scandium Exp $
+
+  08 Nov 2003; Rainer Groesslinger <scandium@gentoo.org>
+  pike-7.4.28-r1.ebuild:
+  disabled Gtk+ support, it just caused too many problems
 
 *pike-7.4.28-r1 (27 Oct 2003)
 
