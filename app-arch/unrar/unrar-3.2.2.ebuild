@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/unrar/unrar-3.2.2.ebuild,v 1.1 2003/06/24 22:02:17 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unrar/unrar-3.2.2.ebuild,v 1.2 2003/10/01 12:19:54 lanius Exp $
 
 inherit eutils
 
@@ -19,7 +19,7 @@ DEPEND=""
 
 src_compile() {
 	epatch ${DISTDIR}/${PN}-gcc3.patch
-	make -f makefile.unix || die
+	emake -f makefile.unix CXXFLAGS="$CXXFLAGS" || die
 }
 
 src_install() {
