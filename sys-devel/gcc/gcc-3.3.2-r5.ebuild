@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.2-r5.ebuild,v 1.27 2005/01/11 08:58:54 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.2-r5.ebuild,v 1.28 2005/01/11 13:22:08 eradicator Exp $
 
-IUSE="static nls bootstrap java build X multilib gcj"
+IUSE="static nls bootstrap java build X multilib gcj emul-linux-x86"
 
 inherit eutils flag-o-matic libtool versionator
 
@@ -122,7 +122,7 @@ DEPEND="virtual/libc
 	>=sys-devel/binutils-2.14.90.0.6-r1
 	>=sys-devel/bison-1.875
 	>=sys-devel/gcc-config-1.3.1
-	amd64? ( multilib? ( >=app-emulation/emul-linux-x86-baselibs-1.0 ) )
+	emul-linux-x86? ( multilib? ( >=app-emulation/emul-linux-x86-baselibs-1.0 ) )
 	!build? ( >=sys-libs/ncurses-5.2-r2
 	          nls? ( sys-devel/gettext ) )"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.4-r1.ebuild,v 1.25 2005/01/11 08:58:54 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.4-r1.ebuild,v 1.26 2005/01/11 13:22:08 eradicator Exp $
 
 inherit eutils flag-o-matic libtool gnuconfig versionator
 
@@ -103,7 +103,7 @@ LICENSE="GPL-2 LGPL-2.1"
 
 KEYWORDS="-hppa ~alpha amd64 arm ~mips sparc x86"
 
-IUSE="static nls bootstrap build X multilib gcj fortran objc pic hardened uclibc debug"
+IUSE="static nls bootstrap build X multilib gcj fortran objc pic hardened uclibc debug emul-linux-x86"
 
 # Ok, this is a hairy one again, but lets assume that we
 # are not cross compiling, than we want SLOT to only contain
@@ -127,7 +127,7 @@ DEPEND="virtual/libc
 	>=sys-devel/binutils-2.14.90.0.6-r1
 	>=sys-devel/bison-1.875
 	>=sys-devel/gcc-config-1.3.6
-	amd64? ( multilib? ( >=app-emulation/emul-linux-x86-baselibs-1.0 ) )
+	emul-linux-x86? ( multilib? ( >=app-emulation/emul-linux-x86-baselibs-1.0 ) )
 	sparc? ( hardened? ( >=sys-libs/glibc-2.3.3.20040420 ) )
 	!build? ( >=sys-libs/ncurses-5.2-r2
 	          nls? ( sys-devel/gettext ) )"

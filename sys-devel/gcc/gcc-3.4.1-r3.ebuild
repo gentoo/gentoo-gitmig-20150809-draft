@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.1-r3.ebuild,v 1.13 2005/01/11 08:58:54 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.1-r3.ebuild,v 1.14 2005/01/11 13:22:08 eradicator Exp $
 
-IUSE="static nls bootstrap build multilib gcj gtk fortran objc hardened uclibc n32 n64"
+IUSE="static nls bootstrap build multilib gcj gtk fortran objc hardened uclibc n32 n64 emul-linux-x86"
 
 inherit eutils flag-o-matic libtool gnuconfig versionator
 
@@ -31,7 +31,7 @@ DEPEND="virtual/libc
 	amd64? ( >=sys-devel/binutils-2.15.90.0.1.1-r1 )
 	>=sys-devel/bison-1.875
 	>=sys-devel/gcc-config-1.3.1
-	amd64? ( multilib? ( >=app-emulation/emul-linux-x86-baselibs-1.0 ) )
+	emul-linux-x86? ( multilib? ( >=app-emulation/emul-linux-x86-baselibs-1.0 ) )
 	!build? (
 		gcj? (
 			gtk? ( >=x11-libs/gtk+-2.2 )

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.5-r1.ebuild,v 1.6 2005/01/10 11:26:22 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.5-r1.ebuild,v 1.7 2005/01/11 13:22:08 eradicator Exp $
 
 DESCRIPTION="The GNU Compiler Collection.  Includes C/C++, java compilers, pie+ssp extensions, Haj Ten Brugge runtime bounds checking"
 
@@ -20,7 +20,7 @@ RDEPEND="virtual/libc
 	!uclibc? ( >=sys-libs/glibc-2.3.2-r9 )
 	>=sys-devel/binutils-2.14.90.0.6-r1
 	>=sys-devel/bison-1.875
-	amd64? ( multilib? ( >=app-emulation/emul-linux-x86-glibc-1.1 ) )
+	emul-linux-x86? ( multilib? ( >=app-emulation/emul-linux-x86-glibc-1.1 ) )
 	sparc? ( hardened? ( >=sys-libs/glibc-2.3.3.20040420 ) )
 	!build? (
 		gcj? (
