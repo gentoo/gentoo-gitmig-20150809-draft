@@ -1,6 +1,11 @@
 # ChangeLog for dev-php/php-cgi
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php-cgi/ChangeLog,v 1.21 2004/07/08 04:39:16 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php-cgi/ChangeLog,v 1.22 2004/07/14 02:50:23 robbat2 Exp $
+
+*php-cgi-4.3.8 (13 Jul 2004)
+
+  13 Jul 2004; Robin H. Johnson <robbat2@gentoo.org> php-cgi-4.3.8.ebuild:
+  new version, security reasons.
 
   07 Jul 2004; Jason Wever <weeve@gentoo.org> php-cgi-4.3.7-r1.ebuild:
   Stable on sparc.
