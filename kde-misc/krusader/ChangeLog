@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/krusader
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/krusader/ChangeLog,v 1.8 2005/02/10 22:27:26 motaboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/krusader/ChangeLog,v 1.9 2005/03/03 23:46:45 carlo Exp $
+
+  04 Mar 2005; Carsten Lohrke <carlo@gentoo.org> krusader-1.51.ebuild:
+  stable on x86
 
   10 Feb 2005; Simone Gotti <motaboy@gentoo.org> krusader-1.50.ebuild,
   krusader-1.51.ebuild:
