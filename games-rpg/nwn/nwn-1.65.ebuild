@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn/nwn-1.62.ebuild,v 1.11 2004/08/29 05:00:55 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn/nwn-1.65.ebuild,v 1.1 2004/12/30 09:06:24 vapier Exp $
 
 inherit games
 
@@ -8,12 +8,13 @@ UPDATEVER=${PV//.}
 DESCRIPTION="Neverwinter Nights"
 HOMEPAGE="http://nwn.bioware.com/downloads/linuxclient.html"
 SRC_URI="http://nwdownloads.bioware.com/neverwinternights/linux/129/nwclient129.tar.gz
-	nowin? ( ftp://jeuxlinux.com/bioware/Neverwinter_Nights/nwresources129.tar.gz )
-	http://nwdownloads.bioware.com/neverwinternights/linux/${UPDATEVER}/linuxclientupdate129to${UPDATEVER}eng.tar.gz"
+	nowin? ( http://www.tucows.iinet.net/pub/games/neverwinter/linux/nwresources129.tar.gz )
+	http://content.bioware.com/neverwinternights/linux/${UPDATEVER}/linuxclientupdate1xxto${UPDATEVER}eng.tar.gz
+	http://nwdownloads.bioware.com/neverwinternights/patch/dialog/english/NWNEnglish${PV}dialog.zip"
 
 LICENSE="NWN-EULA"
 SLOT="0"
-KEYWORDS="x86 ~amd64"
+KEYWORDS="amd64 x86"
 IUSE="nowin"
 RESTRICT="nostrip nomirror"
 
@@ -31,7 +32,9 @@ src_unpack() {
 	cd ${WORKDIR}
 	use nowin && unpack nwresources129.tar.gz
 	cd ${S}
-	unpack linuxclientupdate129to${UPDATEVER}eng.tar.gz
+	rm -rf override/*
+	unpack linuxclientupdate1xxto${UPDATEVER}eng.tar.gz
+	unpack NWNEnglish${PV}dialog.zip
 }
 
 src_install() {
@@ -41,12 +44,12 @@ src_install() {
 		-e "s:GENTOO_GROUP:${GAMES_GROUP}:" \
 		-e "s:GENTOO_DIR:${GAMES_PREFIX_OPT}:" \
 		${FILESDIR}/${P}-fixinstall > ${WORKDIR}/nwn/fixinstall
-	mv ${WORKDIR}/nwn ${D}/${GAMES_PREFIX_OPT}
+	mv ${S} ${D}/${GAMES_PREFIX_OPT}
 	insinto /usr/share/pixmaps
 	doins ${FILESDIR}/nwn.png
 	dogamesbin ${FILESDIR}/nwn
 	dosed "s:GENTOO_DIR:${GAMES_PREFIX_OPT}:" ${GAMES_BINDIR}/nwn
-	make_desktop_entry nwn "Never Winter Nights" nwn.png
+	make_desktop_entry nwn "Neverwinter Nights" nwn.png
 	prepgamesdirs
 }
 
@@ -56,24 +59,20 @@ pkg_postinst() {
 		einfo "The NWN linux client is now installed."
 		einfo "Proceed with the following steps in order to get it working:"
 		einfo "1) Copy the following directories/files from your installed and"
-		einfo "   patched (${PV}) Never Winter Nights to ${GAMES_PREFIX_OPT}/nwn:"
+		einfo "   patched (${PV}) Neverwinter Nights to ${GAMES_PREFIX_OPT}/nwn:"
 		einfo "    ambient/"
-		einfo "    data/"
+		einfo "    data/ (all files except for patch.bif)"
 		einfo "    dmvault/"
 		einfo "    hak/"
 		einfo "    localvault/"
 		einfo "    modules/"
 		einfo "    music/"
-		einfo "    nwm/"
 		einfo "    override/"
 		einfo "    portraits/"
 		einfo "    saves/"
 		einfo "    servervault/"
 		einfo "    texturepacks/"
 		einfo "    chitin.key"
-		einfo "    patch.key"
-		einfo "    dialog.tlk"
-		einfo "    dialogF.tlk (French, German, Italian, and Spanish)"
 		einfo "2) Chown and chmod the files with the following commands"
 		einfo "    chown -R ${GAMES_USER}:${GAMES_GROUP} ${GAMES_PREFIX_OPT}/nwn"
 		einfo "    chmod -R g+rwX ${GAMES_PREFIX_OPT}/nwn"

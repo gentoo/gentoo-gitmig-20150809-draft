@@ -1,6 +1,14 @@
 # ChangeLog for games-rpg/nwn
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn/ChangeLog,v 1.17 2004/08/29 05:00:55 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn/ChangeLog,v 1.18 2004/12/30 09:06:24 vapier Exp $
+
+*nwn-1.65 (30 Dec 2004)
+
+  30 Dec 2004; Mike Frysinger <vapier@gentoo.org>
+  -files/nwn-1.30-fixinstall, -files/nwn-1.32-fixinstall,
+  -files/nwn-1.61-fixinstall, -files/nwn-1.62-fixinstall,
+  +files/nwn-1.65-fixinstall, -nwn-1.62.ebuild, +nwn-1.65.ebuild:
+  Version bump #74871 by Francois Guimond et al.
 
   28 Aug 2004; Michael Sterrett <mr_bones_@gentoo.org> nwn-1.62.ebuild:
   fix DESCRIPTION (bug #62066)
