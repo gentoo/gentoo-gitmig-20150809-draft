@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/xpdf-2.02.1.ebuild,v 1.7 2004/01/11 13:42:02 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/xpdf-2.02.1.ebuild,v 1.8 2004/01/13 16:56:47 agriffis Exp $
 
 IUSE="motif"
 
@@ -13,7 +13,7 @@ SRC_URI="ftp://ftp.foolabs.com/pub/xpdf/${PN}-${MY_PV}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc ~alpha ~mips hppa ~arm amd64"
+KEYWORDS="x86 ppc sparc alpha ~mips hppa ~arm amd64"
 
 DEPEND="motif? ( virtual/x11
 		x11-libs/openmotif )
