@@ -1,10 +1,15 @@
 # ChangeLog for net-misc/tsclient
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tsclient/ChangeLog,v 1.1 2002/11/06 06:19:39 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tsclient/ChangeLog,v 1.2 2002/12/29 16:39:14 bcowan Exp $
+
+*tsclient-0.86 (28 Dec 2002)
+
+  28 Dec 2002; Brad Cowan <bcowan@gentoo.org> tsclient-0.86.ebuild,
+  files/digest-tsclient-0.86:
+  Version bump.
 
 *tsclient-0.32 (06 Nov 2002)
 
   06 Nov 2002; Brad Cowan <bcowan@gentoo.org> tsclient-0.32.ebuild,
   files/digest-tsclient-0.32, ChangeLog :
-  
   Initial import.
