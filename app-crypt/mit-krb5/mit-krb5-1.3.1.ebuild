@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/mit-krb5-1.3.1.ebuild,v 1.2 2003/09/19 01:36:24 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/mit-krb5-1.3.1.ebuild,v 1.3 2003/09/19 08:03:35 msterret Exp $
 
 inherit eutils
 
@@ -19,12 +19,12 @@ DEPEND="virtual/glibc"
 
 src_compile() {
 	local myconf
-	
+
 	use krb4 && myconf="${myconf} --with-krb4 --enable-krb4" \
 		|| myconf="${myconf} --without-krb4 --disable-krb4"
 
- 	use static && myconf="${myconf} --disable-shared --enable-static" \
- 		|| myconf="${myconf} --enable-shared --disable-static"
+	use static && myconf="${myconf} --disable-shared --enable-static" \
+		|| myconf="${myconf} --enable-shared --disable-static"
 
 	CFLAGS=`echo ${CFLAGS} | xargs`
 	CXXFLAGS=`echo ${CXXFLAGS} | xargs`
@@ -53,7 +53,7 @@ src_compile() {
 
 src_install () {
 	make DESTDIR=${D} install || die
-	
+
 	cd ..
 	dodoc README
 	dohtml doc/*.html
@@ -69,7 +69,7 @@ src_install () {
 		mv ${D}/usr/share/man/man1/${i}.1 ${D}/usr/share/man/man1/k${i}.1
 		mv ${D}/usr/bin/${i} ${D}/usr/bin/k${i}
 	done
-										
+
 	insinto /etc
 		newins ${FILESDIR}/krb5.conf krb5.conf
 	insinto /etc/krb5kdc
