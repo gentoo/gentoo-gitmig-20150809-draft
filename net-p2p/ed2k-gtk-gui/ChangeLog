@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/ed2k-gtk-gui
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/ed2k-gtk-gui/ChangeLog,v 1.9 2004/07/07 16:55:31 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/ed2k-gtk-gui/ChangeLog,v 1.10 2004/09/11 16:19:21 lanius Exp $
+
+*ed2k-gtk-gui-0.6.3 (11 Sep 2004)
+
+  11 Sep 2004; Heinrich Wendel <lanius@gentoo.org> +ed2k-gtk-gui-0.6.3.ebuild:
+  version bump
 
   07 Jul 2004; Travis Tilley <lv@gentoo.org> ed2k-gtk-gui-0.6.2.ebuild:
   stable on amd64
