@@ -7,7 +7,10 @@ DESCRIPTION="Daemon for Advanced Configuration and Power Interface."
 SRC_URI="http://prdownloads.sourceforge.net/acpid/${P}.tar.gz"
 HOMEPAGE="http://acpid.sourceforge.net/"
 
-DEPEND="virtual/glibc"
+# We need the patched kernel with latest ACPI code, or else it will
+# be broken.  Hopefully it will be merge into release kernel soon.
+DEPEND="virtual/glibc
+	>=sys-kernel/linux-sources-2.4.10-r4"
 
 
 src_compile() {
