@@ -1,31 +1,134 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/fcdsl/fcdsl-2.6.20.7-r2.ebuild,v 1.3 2005/01/25 18:44:54 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/fcdsl/fcdsl-2.6.20.7-r3.ebuild,v 1.1 2005/01/25 18:44:54 genstef Exp $
 
-inherit kernel-mod rpm eutils
+inherit linux-mod eutils
 
 S="${WORKDIR}/fritz"
 
 DESCRIPTION="AVM FRITZ!Card DSL drivers for 2.6 kernel"
 HOMEPAGE="http://www.avm.de/"
-SRC_URI="ftp://ftp.suse.com/pub/suse/i386/update/9.1/rpm/src/avm_${P/2.6./2.6-}.src.rpm"
+SRC_URI="ftp://ftp.avm.de/cardware/fritzcrd.dsl/linux/suse.91/fcdsl-suse9.1-3.11-02.tar.gz
+		ftp://ftp.avm.de/cardware/fritzcrd.dsl_v20/linux/suse.91/fcdsl2-suse9.1-3.11-04.tar.gz
+		ftp://ftp.avm.de/cardware/fritzcrd.dsl_sl/linux/suse.91/fcdslsl-suse9.1-3.11-04.tar.gz
+		ftp://ftp.avm.de/cardware/fritzcrd.dsl_sl_usb/linux/suse.91/fcdslslusb-suse9.1-3.11-04.tar.gz
+		ftp://ftp.avm.de/cardware/fritzcrd.dsl_usb/linux/suse.91/fcdslusb-suse9.1-3.11-02.tar.gz"
 
 LICENSE="LGPL-2"
-SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~x86"
 IUSE=""
+SLOT="0"
 
 RDEPEND=">=net-dialup/capi4k-utils-20040810"
-DEPEND="${RDEPEND}
-	sys-apps/gawk
-	sys-apps/sed
-	virtual/linux-sources"
 
 FCDSL_NAMES=("AVM FRITZ!Card DSL" "AVM FRITZ!Card DSL v2.0" "AVM FRITZ!Card DSL SL" "AVM FRITZ!Card DSL USB" "AVM FRITZ!Card DSL SL USB")
 FCDSL_BUSTYPES=("pci" "pci" "pci" "usb" "usb")
 FCDSL_IDS=("1131:5402" "1244:2900" "1244:2700" "057c:2300" "057c:3500")
 FCDSL_FIRMWARES=("fdslbase.bin" "fds2base.bin" "fdssbase.bin" "fdsubase.frm" "fdlubase.frm")
 FCDSL_MODULES=("fcdsl" "fcdsl2" "fcdslsl" "fcdslusb" "fcdslslusb")
+
+pkg_setup() {
+	CONFIG_CHECK="ISDN_CAPI_CAPI20"
+	linux-mod_pkg_setup
+
+	MODULE_NAMES=""
+	#Check existence of user selected cards
+	if [ -n "${FCDSL_CARDS}" ] ; then
+		for USERCARD in ${FCDSL_CARDS} ; do
+			for ((CARD=0; CARD < ${#FCDSL_MODULES[*]}; CARD++)); do
+				if [ "${USERCARD}" = "${FCDSL_MODULES[CARD]}" ]; then
+					MODULE_NAMES="${MODULE_NAMES} ${FCDSL_MODULES[CARD]}(net:${WORKDIR}/${FCDSL_MODULES[CARD]/fc/fritz.}/src)"
+					continue 2
+				fi
+			done
+			die "Driver for ${USERCARD} not present in ${P}"
+		done
+	else
+		einfo
+		einfo "You can control the modules which are built with the variable"
+		einfo "FCDSL_CARDS which should contain a blank separated list"
+		einfo "of a selection from the following cards:"
+		einfo "   ${FCDSL_MODULES[*]}"
+		for ((CARD=0; CARD < ${#FCDSL_MODULES[*]}; CARD++)); do
+			MODULE_NAMES="${MODULE_NAMES} ${FCDSL_MODULES[CARD]}(net:${WORKDIR}/${FCDSL_MODULES[CARD]/fc/fritz.}/src)"
+		done
+	fi
+	BUILD_TARGETS="all"
+	BUILD_PARAMS="KDIR=${KV_DIR} LIBDIR=${S}"
+	NO_MODULESD="1"
+}
+
+src_unpack() {
+	tar xzf ${DISTDIR}/fcdsl-suse9.1-3.11-02.tar.gz
+	mv fritz fritz.dsl
+	tar xzf ${DISTDIR}/fcdsl2-suse9.1-3.11-04.tar.gz
+	mv fritz fritz.dsl2
+	tar xzf ${DISTDIR}/fcdslsl-suse9.1-3.11-04.tar.gz
+	mv fritz fritz.dslsl
+	tar xzf ${DISTDIR}/fcdslslusb-suse9.1-3.11-04.tar.gz
+	mv fritz fritz.dslslusb
+	tar xzf ${DISTDIR}/fcdslusb-suse9.1-3.11-02.tar.gz
+	mv fritz fritz.dslusb
+
+	ln -s fritz.dsl fritz
+}
+
+src_install() {
+	linux-mod_src_install
+
+	dodir /etc/drdsl /etc/modules.d /lib/firmware /usr/sbin
+
+	echo -e "# card\tfile\tproto\tio\tirq\tmem\tcardnr\toptions" >${D}/etc/capi.conf
+	echo "#" >>${D}/etc/capi.conf
+
+	echo "# modules.d config file for AVM FRITZ!Card DSL" >${D}/etc/modules.d/fcdsl
+	echo "# Correct these settings with the output from drdsl -n" >>${D}/etc/modules.d/fcdsl
+
+	for ((CARD=0; CARD < ${#FCDSL_MODULES[*]}; CARD++)); do
+		if [ -n "${FCDSL_CARDS}" ] ; then
+			INS=""
+			for USERCARD in ${FCDSL_CARDS} ; do
+				if [ "${USERCARD}" = "${FCDSL_MODULES[CARD]}" ]; then INS="1"; fi
+			done
+			if [ -z "${INS}" ]; then continue; fi
+		fi
+		echo -e "#${FCDSL_MODULES[CARD]}\t${FCDSL_FIRMWARES[CARD]}\t-\t-\t-\t-\t-" >>${D}/etc/capi.conf
+
+		echo "#options ${FCDSL_MODULES[CARD]} VPI=1 VCI=32 VCC=1" >>${D}/etc/modules.d/fcdsl
+
+		insinto /lib/firmware
+		doins ${WORKDIR}/${FCDSL_MODULES[CARD]/fc/fritz.}/${FCDSL_FIRMWARES[CARD]}
+	done
+
+	#Compatibility with <=net-dialup/isdn4k-utils-20041006-r3. 
+	#Please remove it when it becomes obsolete
+	dosym firmware /lib/isdn
+
+	insinto /etc/drdsl
+	doins ${S}/drdsl.ini
+
+	exeinto /usr/sbin
+	doexe ${S}/drdsl
+
+	dodoc ${S}/CAPI* ${S}/compile* ${S}/license.txt
+}
+
+pkg_postinst() {
+	linux-mod_pkg_postinst
+
+	echo
+	einfo "If you want to setup your DSL card driver and create a peer file, please run:"
+	einfo "    etc-update"
+	einfo "    ebuild /var/db/pkg/net-dialup/${PF}/${PF}.ebuild config"
+	einfo "    /etc/init.d/capi start"
+	einfo "    drdsl -n"
+	einfo "    nano /etc/modules.d/fcdsl"
+	einfo "    update-modules"
+	einfo "    /etc/init.d/capi restart"
+	epause 10
+}
+
+#pkg-config functions
 
 detect_fcdsl_card() {
 	PCI_IDS=""
@@ -34,18 +137,18 @@ detect_fcdsl_card() {
 		if [ -d /sys/bus/pci/devices ]; then
 			cd /sys/bus/pci/devices
 			for PCI_DEVICE in *; do
-				PCI_IDS="${PCI_IDS}$(cat ${PCI_DEVICE}/vendor | sed -e 's:0\x::'):$(cat ${PCI_DEVICE}/device | sed -e 's:0\x::') "
+				vendor="$(< ${PCI_DEVICE}/vendor)"
+				device="$(< ${PCI_DEVICE}/device)"
+				PCI_IDS="${PCI_IDS}${vendor:2}:${device:2} "
 			done
-			unset PCI_DEVICE
 		fi
 		if [ -d /sys/bus/usb/devices ]; then
 			cd /sys/bus/usb/devices
 			for USB_DEVICE in [0-9]*; do
 				if [ -f ${USB_DEVICE}/idVendor ]; then
-					USB_IDS="${USB_IDS}$(cat ${USB_DEVICE}/idVendor):$(cat ${USB_DEVICE}/idProduct) "
+					USB_IDS="${USB_IDS}$(< ${USB_DEVICE}/idVendor):$(< ${USB_DEVICE}/idProduct) "
 				fi
 			done
-			unset USB_DEVICE
 		fi
 	fi
 
@@ -68,119 +171,6 @@ detect_fcdsl_card() {
 	if [ "${FCDSL_MODULE}" == "" ]; then
 		ewarn "No AVM FRITZ!Card DSL found!"
 	fi
-}
-
-is_module_selected() {
-	if [ -z "${FCDSL_CARDS}" ] ; then
-		return 0
-	fi
-	for USERCARD in ${FCDSL_CARDS} ; do
-		if [ "$1" = ${USERCARD} ]; then
-			return 0
-		fi
-	done
-
-	return 1
-}
-
-pkg_setup() {
-	if ! kernel-mod_is_2_6_kernel; then
-		die "This package works only with 2.6 kernel!"
-	fi
-	if ! kernel-mod_configoption_present ISDN_CAPI_CAPI20; then
-		die "For using the driver you need a kernel with enabled CAPI support."
-	fi
-
-	kernel-mod_check_modules_supported
-
-	#Check existence of user selected cards
-	if [ -n "${FCDSL_CARDS}" ] ; then
-		for USERCARD in ${FCDSL_CARDS} ; do
-			for ((CARD=0; CARD < ${#FCDSL_MODULES[*]}; CARD++)); do
-				if [ "$USERCARD" = "${FCDSL_MODULES[CARD]}" ]; then
-					continue 2
-				fi
-			done
-			die "Card ${USERCARD} not present in ${P}"
-		done
-	else
-		einfo
-		einfo "You can control the modules which are built with the variable"
-		einfo "FCDSL_CARDS which should contain a blank separated list"
-		einfo "of a selection from the following cards:"
-		einfo "   ${FCDSL_MODULES[*]}"
-		einfo
-		ewarn "I give you the chance of hitting Ctrl-C and make the necessary"
-		ewarn "adjustments in /etc/make.conf."
-		ebeep
-	fi
-}
-
-src_compile() {
-	(
-		unset ARCH
-		for ((CARD=0; CARD < ${#FCDSL_IDS[*]}; CARD++)); do
-			if is_module_selected "${FCDSL_MODULES[CARD]}"; then
-				einfo "Compiling driver for ${FCDSL_NAMES[CARD]}"
-				cd ${WORKDIR}/${FCDSL_MODULES[CARD]/fc/fritz.}/src || die "Could not change to ${FCDSL_NAMES[CARD]} source directory."
-				kernel-mod_src_compile || die "Could not compile driver for ${FCDSL_NAMES[CARD]}."
-			fi
-		done
-	)
-}
-
-src_install() {
-	dodir /etc/drdsl /etc/modules.d /lib/modules/${KV_VERSION_FULL}/misc /lib/firmware /usr/sbin
-
-	echo -e "# card\tfile\tproto\tio\tirq\tmem\tcardnr\toptions" >${D}/etc/capi.conf
-	echo "#" >>${D}/etc/capi.conf
-
-	echo "# Options for AVM FRITZ!Card DSL cards" >${D}/etc/modules.d/fcdsl
-	echo "# Correct these settings with the output from drdsl -n" >>${D}/etc/modules.d/fcdsl
-
-	for ((CARD=0; CARD < ${#FCDSL_MODULES[*]}; CARD++)); do
-		if is_module_selected "${FCDSL_MODULES[CARD]}"; then
-			echo -e "#${FCDSL_MODULES[CARD]}\t${FCDSL_FIRMWARES[CARD]}\t-\t-\t-\t-\t-" >>${D}/etc/capi.conf
-
-			echo "#options ${FCDSL_MODULES[CARD]} VPI=1 VCI=32 VCC=1" >>${D}/etc/modules.d/fcdsl
-
-			insinto /lib/modules/${KV_VERSION_FULL}/misc
-			doins ${WORKDIR}/${FCDSL_MODULES[CARD]/fc/fritz.}/src/${FCDSL_MODULES[CARD]}.ko
-
-			insinto /lib/firmware
-			doins ${WORKDIR}/${FCDSL_MODULES[CARD]/fc/fritz.}/${FCDSL_FIRMWARES[CARD]}
-		fi
-	done
-
-	#Compatibility with <=net-dialup/isdn4k-utils-20041006-r3. 
-	#Please remove it when it becomes obsolete
-	dosym firmware /lib/isdn
-
-	insinto /etc/drdsl
-	doins ${S}/drdsl.ini
-
-	exeinto /usr/sbin
-	doexe ${S}/drdsl
-
-	dodoc ${S}/CAPI* ${S}/compile* ${S}/license.txt ${S}/release.txt
-	dohtml install_passive-*.html
-}
-
-pkg_postinst() {
-	einfo "Checking kernel module dependencies"
-	test -r "${ROOT}/usr/src/linux/System.map" && \
-		depmod -ae -F "${ROOT}/usr/src/linux/System.map" -b "${ROOT}" -r ${KV}
-
-	echo
-	einfo "If you want to setup your DSL card driver and create a peer file, please run:"
-	einfo "    etc-update"
-	einfo "    ebuild /var/db/pkg/net-dialup/${PF}/${PF}.ebuild config"
-	einfo "    /etc/init.d/capi start"
-	einfo "    drdsl -n"
-	einfo "    nano /etc/modules.d/fcdsl"
-	einfo "    update-modules"
-	einfo "    /etc/init.d/capi restart"
-	epause 10
 }
 
 readpassword() {
