@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich/mpich-1.2.5-r1.ebuild,v 1.1 2003/06/03 12:01:58 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich/mpich-1.2.5-r1.ebuild,v 1.2 2003/09/06 22:05:25 msterret Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="MPICH - A portable MPI implementation"
@@ -30,7 +30,7 @@ src_compile() {
 	fi
 
 	export RSHCOMMAND
-	
+
 	./configure \
 		--mandir=/usr/share/man \
 		--prefix=/usr || die
@@ -56,7 +56,7 @@ src_install() {
 
 	P=${PSave}
 
-	if use doc; then 
+	if use doc; then
 		dodir /usr/share/doc/${PF}
 		mv ${D}/usr/doc/* ${D}/usr/share/doc/${PF}
 		rmdir ${D}/usr/doc/
@@ -81,7 +81,7 @@ src_install() {
 	use doc && mv ${D}/usr/www ${D}/usr/share/doc/${PF}/html
 	use doc || rm -rf ${D}/usr/www
 
-	# Dont let users deinstall without portage	
+	# Dont let users deinstall without portage
 	rm ${D}/usr/sbin/mpiuninstall
 
 	# We dont have a real DESTDIR, so we have to fix all the files
@@ -91,7 +91,7 @@ src_install() {
 	dosed /usr/bin/mpireconfig /usr/bin/mpireconfig.dat
 	dosed /usr/bin/mpereconfig /usr/bin/mpereconfig.dat
 
-	dosed /usr/share/mpich/examples1/Makefile 
+	dosed /usr/share/mpich/examples1/Makefile
 	dosed /usr/share/mpich/examples2/Makefile
 	dosed /usr/share/mpich/jumpshot-3/bin/jumpshot
 	dosed /usr/share/mpich/jumpshot-3/bin/slog_print

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mosix-user/mosix-user-1.8.0.ebuild,v 1.3 2003/03/03 12:55:39 vladimir Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mosix-user/mosix-user-1.8.0.ebuild,v 1.4 2003/09/06 22:05:25 msterret Exp $
 
 S=${WORKDIR}/user
 DESCRIPTION="User-land utilities for MOSIX process migration (clustering) software"
@@ -23,10 +23,10 @@ pkg_setup() {
 
 src_unpack() {
 	mkdir ${S}; cd ${S}
-	tar -xz --no-same-owner -f ${DISTDIR}/${A} MOSIX-${PV}/user.tar MOSIX-${PV}/manuals.tar	
+	tar -xz --no-same-owner -f ${DISTDIR}/${A} MOSIX-${PV}/user.tar MOSIX-${PV}/manuals.tar
 	mv MOSIX-${PV}/*.tar .
 	rm -rf MOSIX-${PV}
-	tar -x --no-same-owner -f user.tar -C ${S}	
+	tar -x --no-same-owner -f user.tar -C ${S}
 	tar -x --no-same-owner -f manuals.tar -C ${S}
 }
 
@@ -44,9 +44,9 @@ src_compile() {
 src_install() {
 	cd ${S}
 	make ROOT=${D} PREFIX=${D}/usr install
-	dodir /usr/share	
+	dodir /usr/share
 	cd ${D}/usr
-	mv man share	
+	mv man share
 	exeinto /etc/init.d
 	newexe ${FILESDIR}/mosix.init mosix
 	insinto /etc

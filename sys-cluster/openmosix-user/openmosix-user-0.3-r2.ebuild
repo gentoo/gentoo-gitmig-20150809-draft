@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmosix-user/openmosix-user-0.3-r2.ebuild,v 1.1 2003/05/02 09:41:06 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmosix-user/openmosix-user-0.3-r2.ebuild,v 1.2 2003/09/06 22:05:25 msterret Exp $
 
 S=${WORKDIR}/openmosix-tools-${PV}
 DESCRIPTION="User-land utilities for openMosix process migration (clustering) software"
@@ -17,7 +17,7 @@ LICENSE="GPL-2"
 KEYWORDS="x86 -ppc -sparc -alpha"
 
 pkg_setup() {
-	if [ -z "`readlink /usr/src/linux|grep openmosix`" ]; then 
+	if [ -z "`readlink /usr/src/linux|grep openmosix`" ]; then
 		eerror
 		eerror "Your linux kernel sources do not appear to be openmosix,"
 		eerror "please check your /usr/src/linux symlink."

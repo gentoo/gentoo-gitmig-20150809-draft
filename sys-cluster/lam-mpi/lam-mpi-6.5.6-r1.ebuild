@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/lam-mpi/lam-mpi-6.5.6-r1.ebuild,v 1.1 2003/07/08 05:31:28 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/lam-mpi/lam-mpi-6.5.6-r1.ebuild,v 1.2 2003/09/06 22:05:25 msterret Exp $
 
 Name="lam"
 S=${WORKDIR}/${Name}-${PV}
@@ -34,7 +34,7 @@ src_compile() {
 		--host="${CHOST}" --with-cflags="${CFLAGS}" \
 		--sysconfdir=/etc/lam-mpi \
 		--with-cxxflags="${CXXFLAGS}" --with-rsh="ssh -x" || die
-	
+
 	# sometimes emake doesn't finish since it gets ahead of itself :)
 
 	make || die

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/keepalived/keepalived-1.1.1.ebuild,v 1.2 2003/08/18 23:07:30 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/keepalived/keepalived-1.1.1.ebuild,v 1.3 2003/09/06 22:05:25 msterret Exp $
 
 DESCRIPTION="The main goal of the keepalived project is to add a strong & robust keepalive facility to the Linux Virtual Server project."
 HOMEPAGE="http://keepalived.sourceforge.net"
@@ -17,12 +17,12 @@ S="${WORKDIR}/${P}"
 
 src_compile() {
 	local myconf
-	
+
 	myconf="--prefix=/"
 
 	use debug && myconf="${myconf} --enable-debug"
 #	use profile && myconf="${myconf} --enable-profile"
-	
+
 	cd "${S}"
 	./configure ${myconf} || die "configure failed"
 	emake || die "make failed (myconf=${myconf})"
@@ -46,7 +46,7 @@ pkg_postinst() {
 
 	einfo ""
 	einfo "If you want Linux Virtual Server support in"
-	einfo "keepalived then you must emerge an LVS patched" 
+	einfo "keepalived then you must emerge an LVS patched"
 	einfo "kernel like gentoo-sources, compile with ipvs"
 	einfo "support either as a module or built into the"
 	einfo "kernel, emerge the ipvsadm userland tools,"
