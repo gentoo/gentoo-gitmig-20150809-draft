@@ -1,13 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/chpax/chpax-0.7.ebuild,v 1.2 2004/09/17 00:11:03 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/chpax/chpax-0.7.ebuild,v 1.3 2004/09/17 02:03:46 solar Exp $
 
 inherit flag-o-matic gcc
 
 DESCRIPTION="Manages various PaX related flags for ELF32, ELF64, and a.out binaries."
 HOMEPAGE="http://pax.grsecurity.net/"
-SRC_URI="mirror://chpax-${PV}.tar.gz
-	http://pax.grsecurity.net/${P}.tar.gz"
+SRC_URI="http://pax.grsecurity.net/${P}.tar.gz"
 
 LICENSE="public-domain"
 SLOT="0"
