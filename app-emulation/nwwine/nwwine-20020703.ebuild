@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/nwwine/nwwine-20020703.ebuild,v 1.2 2003/04/01 18:10:12 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/nwwine/nwwine-20020703.ebuild,v 1.3 2003/06/07 03:31:30 msterret Exp $
 
 DESCRIPTION="A special version of wine for the Never Winter Nights toolkit"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
@@ -14,24 +14,25 @@ IUSE="nas arts cups opengl alsa tcltk"
 DEPEND="sys-devel/gcc
 	sys-devel/flex
 	dev-util/yacc
+	>=sys-apps/sed-4
 	>=sys-libs/ncurses-5.2
 	>=media-libs/freetype-2.0.0
 	X? ( 	virtual/x11 )
-	tcltk? ( dev-lang/tcl dev-lang/tk ) 
+	tcltk? ( dev-lang/tcl dev-lang/tk )
 	arts? ( kde-base/arts )
 	alsa? ( media-libs/alsa-lib )
 	nas? ( media-libs/nas )
 	cups? ( net-print/cups )
 	opengl? ( virtual/opengl )"
 
-src_compile() {	
+src_compile() {
 	cd ${S}
 	local myconf
 
 	use opengl && myconf="--enable-opengl" || myconf="--disable-opengl"
 	[ -z $DEBUG ] && myconf="$myconf --disable-trace --disable-debug" || myconf="$myconf --enable-trace --enable-debug"
 	# there's no configure flag for cups, arts, alsa and nas, it's supposed to be autodetected
-	
+
 	# use the default setting in ./configure over the /etc/make.conf setting
 	unset CFLAGS CXXFLAGS
 
@@ -39,31 +40,29 @@ src_compile() {
 		--sysconfdir=/etc/${PN} \
 		--host=${CHOST} \
 		--enable-curses \
-		${myconf} || die
+		${myconf} || die "configure failed"
 
-	cd ${S}/programs/winetest
-	cp Makefile 1
-	sed -e 's:wine.pm:include/wine.pm:' 1 > Makefile
-	
+	sed -i -e 's:wine.pm:include/wine.pm:' ${S}/programs/winetest/Makefile || \
+		die "sed programs/winetest/Makefile failed"
+
 	# No parallel make
-	cd ${S}	
-	make depend all || die
+	make depend all || die "make depend all failed"
 	cd programs && emake || die
 }
 
 src_install () {
 	local WINEMAKEOPTS="prefix=${D}/usr/lib/${PN}"
-	
+
 	### Install wine to ${D}
 	cd ${S}
 	make ${WINEMAKEOPTS} install || die
 	cd ${S}/programs
 	make ${WINEMAKEOPTS} install || die
-	
+
 	# Needed for later installation
 	dodir /usr/bin
- 
-	### Creation of /usr/lib/${PN}/.data 
+
+	### Creation of /usr/lib/${PN}/.data
 	# set up fake_windows
 	dodir /usr/lib/${PN}/.data
 	cd ${D}/usr/lib/nwwine/.data
