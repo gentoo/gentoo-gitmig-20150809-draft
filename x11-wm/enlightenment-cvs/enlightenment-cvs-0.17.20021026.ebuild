@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment-cvs/enlightenment-cvs-0.17.20021026.ebuild,v 1.5 2002/10/26 21:11:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment-cvs/enlightenment-cvs-0.17.20021026.ebuild,v 1.6 2002/10/26 21:31:35 vapier Exp $
 
 IUSE="pic X mmx truetype opengl nls"
 
@@ -55,8 +55,8 @@ src_compile() {
 
 	local cflags
 	local ldflags
-	local ldflags_lib
 	local ldflags_src
+	local ldflags_lib
 	cflags="${CFLAGS} -I${S}/libs/e{bg,bits,core,db,style,tox,vas,wd}/src"
 	cflags="${cflags} -I${S}/apps/efsd/efsd"
 	ldflags_src="${LDFLAGS} -L${S}/libs/e{bg,bits,core,db,style,tox,vas,wd}/src"
@@ -113,20 +113,20 @@ src_compile() {
 	### ewd ###
 	cd ${S}/libs/ewd
 	./autogen.sh ${baseconf} || die "could not autogen ewd"
-	make || die "could not make ewd"
+	make CFLAGS="${cflags}" LDFLAGS="${ldflags}" || die "could not make ewd"
 
 	### ebits ###
 	cd ${S}/libs/ebits
 	ln -s ${S}/libs/evas/src/Evas.h
 	./autogen.sh ${baseconf} || die "could not autogen ebits"
-	make || die "could not make ebits"
+	make CFLAGS="${cflags}" LDFLAGS="${ldflags}" || die "could not make ebits"
 
 	### ecore ###
 	cd ${S}/libs/ecore
 	addconf=
 	use X		&& addconf="${addconf} --with-x"
 	./autogen.sh ${baseconf} ${addconf} || die "could not autogen ecore"
-	make || die "could not make ecore"
+	make CFLAGS="${cflags}" LDFLAGS="${ldflags}" || die "could not make ecore"
 
 	### estyle ###
 	cd ${S}/libs/estyle
