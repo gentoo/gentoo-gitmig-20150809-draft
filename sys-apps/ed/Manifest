@@ -1,6 +1,16 @@
-MD5 9a23f4ce50b280837b214c07e084303a ed-0.2-r3.ebuild 849
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 495ef707b930c99de192dc3cb84ffd00 ChangeLog 1273
+MD5 35b8113d7f7e63b36e0b6d1b5f844e8f ed-0.2-r3.ebuild 846
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+MD5 1b60eebda7e05a6a35164bc4b23ac8ff files/digest-ed-0.2-r3 58
 MD5 549e2478edb18002261ae5dd055bcf5b files/ed-0.2-r2-gentoo.diff 373
 MD5 549e2478edb18002261ae5dd055bcf5b files/ed-0.2-r3-gentoo.diff 373
-MD5 1b60eebda7e05a6a35164bc4b23ac8ff files/digest-ed-0.2-r3 58
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFA4EHUHTu7gpaalycRAsYPAKCxbiMVyBoCbYm67fgDWMOiX3iLJACeIs4N
+5jh0CYAY1O+AeMm0ebyBruQ=
+=2nQk
+-----END PGP SIGNATURE-----

@@ -1,7 +1,17 @@
-MD5 fcf0f94dee604c0d3faf125a795f2726 debianutils-1.16.7-r4.ebuild 1418
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 095f396d6fa7edb738073ab6b7d5f93d ChangeLog 5879
+MD5 c37a999bd5ad2231538748e2aef281f1 debianutils-1.16.7-r4.ebuild 1414
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 f668f7cf3760bd5f131cec5de5602523 files/digest-debianutils-1.16.7-r4 69
-MD5 1843cf4b665254b749f1612bf12f2c0d files/debianutils-1.16.7-gentoo.patch 7326
 MD5 a497960da56a8ef8cb07158e15407c18 files/debianutils-1.16.7-gcc33.patch 2588
+MD5 1843cf4b665254b749f1612bf12f2c0d files/debianutils-1.16.7-gentoo.patch 7326
 MD5 3f67e66ea1d7aa13843f253310322f51 files/debianutils-compress.patch 743
+MD5 f668f7cf3760bd5f131cec5de5602523 files/digest-debianutils-1.16.7-r4 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFA4EGEHTu7gpaalycRAgIbAJoDUr6N+CRA2/xrDOVXB7NrqSc6EACg7Uuk
+mePXz+GAk3s2DLkBR4zNg4s=
+=qiDt
+-----END PGP SIGNATURE-----

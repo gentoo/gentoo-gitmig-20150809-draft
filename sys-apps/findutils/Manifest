@@ -1,18 +1,28 @@
-MD5 81a90cbacd0cc6eb6eac09ea91eadf40 findutils-4.1.7-r5.ebuild 1868
-MD5 2a5f01ff428fe1049f2b30fe95e7b708 findutils-4.1.7-r2.ebuild 1528
-MD5 5e3c1b66d4c781a01e8080c0ce25117b findutils-4.1.20.ebuild 1748
-MD5 34ce8f2926f22622eba66cb6ea5cefc0 findutils-4.1.7-r4.ebuild 1700
-MD5 41889a93a84bf780bc0cee62581aef95 findutils-4.1.7-r1.ebuild 1366
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 df6eb188428120ec071c701602be54db ChangeLog 5652
+MD5 82cbcd85485dc7826c04ca3cdc2fd948 findutils-4.1.20-r1.ebuild 2002
+MD5 71fa1cd4ce4cd2406a3be922c68967dc findutils-4.1.20.ebuild 1743
+MD5 2cfbe7b5a294069c56cff61f2cac3e80 findutils-4.1.7-r1.ebuild 1343
+MD5 2a5f01ff428fe1049f2b30fe95e7b708 findutils-4.1.7-r2.ebuild 1528
 MD5 75c137fc18385350b8157e719e2d2f47 findutils-4.1.7-r3.ebuild 1458
+MD5 34ce8f2926f22622eba66cb6ea5cefc0 findutils-4.1.7-r4.ebuild 1700
+MD5 81a90cbacd0cc6eb6eac09ea91eadf40 findutils-4.1.7-r5.ebuild 1868
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 21a32db9120bb9ca9247af6c5d93e447 findutils-4.1.20-r1.ebuild 2006
-MD5 0315b5033cf65d15f24b1c252070db45 files/findutils-env-size.patch 672
+MD5 be3f6e925d8c5774cc1ea631677e7401 files/digest-findutils-4.1.20 68
+MD5 be3f6e925d8c5774cc1ea631677e7401 files/digest-findutils-4.1.20-r1 68
 MD5 d6a2c5cf6a7fd16e1470d1818b08e0ca files/digest-findutils-4.1.7-r1 67
 MD5 d6a2c5cf6a7fd16e1470d1818b08e0ca files/digest-findutils-4.1.7-r2 67
 MD5 d6a2c5cf6a7fd16e1470d1818b08e0ca files/digest-findutils-4.1.7-r3 67
 MD5 d6a2c5cf6a7fd16e1470d1818b08e0ca files/digest-findutils-4.1.7-r4 67
 MD5 d6a2c5cf6a7fd16e1470d1818b08e0ca files/digest-findutils-4.1.7-r5 67
 MD5 214b1bc8ab622fdccc95a2ad658e7dad files/findutils-4.1.20-selinux.diff.bz2 3550
-MD5 be3f6e925d8c5774cc1ea631677e7401 files/digest-findutils-4.1.20-r1 68
-MD5 be3f6e925d8c5774cc1ea631677e7401 files/digest-findutils-4.1.20 68
+MD5 0315b5033cf65d15f24b1c252070db45 files/findutils-env-size.patch 672
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFA4EJmHTu7gpaalycRAl7kAJwJBhQ6tVJFWWASnFaMA6Is9+4fGQCeK/ST
+xiuwIIjN0h077U9bK/aHe3A=
+=nEpQ
+-----END PGP SIGNATURE-----
