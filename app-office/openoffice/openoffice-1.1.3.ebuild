@@ -1,8 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.1.3.ebuild,v 1.1 2004/10/07 06:26:30 suka Exp $
-
-# IMPORTANT:  This is extremely alpha!!!
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.1.3.ebuild,v 1.2 2004/10/08 06:26:58 suka Exp $
 
 # Notes:
 #
@@ -28,41 +26,45 @@
 
 inherit flag-o-matic eutils gcc
 
-IUSE="gnome kde"
+IUSE="gnome kde java"
 
 LOC="/opt"
 INSTDIR="${LOC}/OpenOffice.org"
 S="${WORKDIR}/OOo_${PV}_src"
 DESCRIPTION="OpenOffice.org, a full office productivity suite."
-SRC_URI="mirror://openoffice/stable/${PV}/OOo_${PV}-1_source.tar.gz
-	ftp://ftp.cs.man.ac.uk/pub/toby/gpc/gpc231.tar.Z"
+SRC_URI="mirror://openoffice/stable/${PV}/OOo_${PV}-1_source.tar.gz"
 HOMEPAGE="http://www.openoffice.org/"
 
 LICENSE="LGPL-2 | SISSL-1.1"
 SLOT="0"
 KEYWORDS="~x86"
 
-RDEPEND=">=sys-libs/glibc-2.1
+RDEPEND="!app-office/openoffice-bin
+	>=sys-libs/glibc-2.1
 	!=sys-libs/glibc-2.3.1*
 	>=dev-lang/perl-5.0
-	x11-libs/startup-notification
+	>=media-libs/libart_lgpl-2.3.13
+	>=x11-libs/startup-notification-0.5
+	>=media-libs/freetype-2.1.4
 	virtual/x11
 	app-arch/zip
 	app-arch/unzip
 	dev-libs/expat
-	>=virtual/jre-1.4.1
+	java? ( >=virtual/jre-1.4.1 )
 	virtual/lpr
 	ppc? ( >=sys-libs/glibc-2.2.5-r7
-	>=sys-devel/gcc-3.2 )" # needed for sqrtl patch recently introduced
+	>=sys-devel/gcc-3.2.1 )"
 
 DEPEND="${RDEPEND}
+	>=sys-apps/findutils-4.1.20-r1
 	app-shells/tcsh
-	!app-office/openoffice-bin
-	>=virtual/jdk-1.4.1
-	sys-apps/findutils
 	dev-util/pkgconfig
+	net-misc/curl
 	sys-libs/pam
-	!dev-util/dmake"
+	sys-libs/zlib
+	!dev-util/dmake
+	java? ( >=virtual/jdk-1.4.1 )
+	!java? ( dev-libs/libxslt )"
 
 pkg_setup() {
 
@@ -81,28 +83,31 @@ pkg_setup() {
 		die
 	fi
 
-	if [ -z "$(/usr/bin/java-config -O | grep "blackdown-jdk")" ] && [ "${FORCE_JAVA}" != "yes" ]
+	if use java
 	then
-		eerror
-		eerror "This ebuild has only been tested with the blackdown port of"
-		eerror "java.  If you use another java implementation, it could fail"
-		eerror "horribly, so please merge the blackdown-jdk and set it as"
-		eerror "system VM before proceeding:"
-		eerror
-		eerror " # emerge blackdown-jdk"
-		eerror " # java-config --set-system-vm=blackdown-jdk-<VERSION>"
-		eerror " # env-update"
-		eerror " # source /etc/profile"
-		eerror
-		eerror "Please adjust <VERSION> according to the version installed in"
-		eerror "/opt."
-		eerror
-		eerror "If you however want to test another JDK (not officially supported),"
-		eerror "you could do the following:"
-		eerror
-		eerror " # export FORCE_JAVA=yes"
-		eerror
-		die
+		if [ -z "$(/usr/bin/java-config -O | grep "blackdown-jdk")" ] && [ "${FORCE_JAVA}" != "yes" ]
+		then
+			eerror
+			eerror "This ebuild has only been tested with the blackdown port of"
+			eerror "java.  If you use another java implementation, it could fail"
+			eerror "horribly, so please merge the blackdown-jdk and set it as"
+			eerror "system VM before proceeding:"
+			eerror
+			eerror " # emerge blackdown-jdk"
+			eerror " # java-config --set-system-vm=blackdown-jdk-<VERSION>"
+			eerror " # env-update"
+			eerror " # source /etc/profile"
+			eerror
+			eerror "Please adjust <VERSION> according to the version installed in"
+			eerror "/opt."
+			eerror
+			eerror "If you however want to test another JDK (not officially supported),"
+			eerror "you could do the following:"
+			eerror
+			eerror " # export FORCE_JAVA=yes"
+			eerror
+			die
+		fi
 	fi
 
 	ewarn "****************************************************************"
@@ -229,8 +234,6 @@ oo_setup() {
 			fi
 		fi
 	fi
-
-	export JAVA_BINARY="`which java`"
 }
 
 src_unpack() {
@@ -240,10 +243,7 @@ src_unpack() {
 	cd ${WORKDIR}
 	unpack ${A}
 
-	# Install gpc
-	cd ${WORKDIR}/gpc231
-	cp gpc.* ${S}/external/gpc || die
-
+	#Still needed: The STLport patch
 	cd ${S}
 	rm stlport/STLport-4.5.3.patch || die
 	epatch ${FILESDIR}/${PV}/newstlportfix.patch
@@ -257,12 +257,10 @@ src_unpack() {
 	filter-flags "-fomit-frame-pointer"
 	filter-flags "-fprefetch-loop-arrays"
 	filter-flags "-fno-default-inline"
+	filter-flags "-fstack-protector"
 	append-flags "-fno-strict-aliasing"
 	replace-flags "-O3" "-O2"
 	replace-flags "-Os" "-O2"
-
-	# Enable Bytecode Interpreter for freetype ...
-	append-flags "-DTT_CONFIG_OPTION_BYTECODE_INTERPRETER"
 
 	if [ "$(gcc-version)" == "3.2" ]; then
 		einfo "You use a buggy gcc, so replacing -march=pentium4 with -march=pentium3"
@@ -298,6 +296,14 @@ src_compile() {
 	addpredict /bin
 	addpredict /root/.gconfd
 	local buildcmd=""
+	export MYCONF=""
+
+	if use java
+	then
+		MYCONF="${MYCONF} --with-jdk-home=${JAVA_HOME}"
+	else
+		MYCONF="${MYCONF} --disable-java"
+	fi
 
 	# Do NOT compile with a external STLport, as gcc-2.95.3 users will
 	# get linker errors due to the ABI being different (STLport will be
@@ -305,15 +311,20 @@ src_compile() {
 	einfo "Configuring OpenOffice.org with language support for ${LFULLNAME}..."
 	cd ${S}/config_office
 	rm -f config.cache
+
 	if [ "LANGNAME" != "ENUS" ]; then
 		LANGNAME="${LANGNAME},ENUS"
 	fi
-	./configure --enable-gcc3 \
-		--with-jdk-home=${JAVA_HOME} \
+
+	MYCONF="${MYCONF} --enable-libart \
 		--with-lang=${LANGNAME} \
 		--enable-libsn \
 		--without-fonts \
-		--with-x || die
+		--with-system-zlib \
+		--with-system-freetype \
+		--with-system-curl"
+
+	./configure ${MYCONF} || die
 
 	cd ${S}
 	get_EnvSet
@@ -336,15 +347,15 @@ src_compile() {
 	if [ -z "$(grep 'CCCOMP' ${S}/${LinuxEnvSet})" ]
 	then
 		# Set CCCOMP and CXXCOMP.  This is still needed for STLport
-		export CCCOMP=${CC}
-		export CXXCOMP=${CXX}
+		export CCCOMP="$(gcc-getCC)"
+		export CXXCOMP="$(gcc-getCXX)"
 	fi
 
 	einfo "Bootstrapping OpenOffice.org..."
 	# Get things ready for bootstrap (Az)
 	chmod 0755 ${S}/solenv/bin/*.pl
 	# Bootstrap ...
-	./bootstrap
+	./bootstrap || die
 
 	einfo "Building OpenOffice.org..."
 	echo "source ${S}/${LinuxEnvSet} && cd ${S}/instsetoo && ${buildcmd}" > build.sh
@@ -400,7 +411,7 @@ src_install() {
 
 	# Fixing install location in response file
 	sed -e "s|<destdir>|${D}${INSTDIR}|" \
-		${T}/rsfile-global > ${T}/autoresponse
+		${T}/rsfile-global > ${T}/autoresponse || die
 
 	einfo "Installing OpenOffice.org into build root..."
 	dodir ${INSTDIR}
@@ -410,7 +421,7 @@ src_install() {
 	echo
 	einfo "Removing build root from registry..."
 	# Remove totally useless stuff.
-	rm -f ${D}${INSTDIR}/program/{setup.log,sopatchlevel.sh}
+	rm -f ${D}${INSTDIR}/program/{setup.log,sopatchlevel.sh} || die
 	# Remove build root from registry and co
 	egrep -rl "${D}" ${D}${INSTDIR}/* | \
 		xargs -i perl -pi -e "s|${D}||g" {} || :
@@ -503,9 +514,7 @@ src_install() {
 	rm -rf ${D}${INSTDIR}/share/cde
 
 	# Make sure these do not get nuked.
-	keepdir ${INSTDIR}/user/registry/res/en-us/org/openoffice/{Office,ucb}
-	keepdir ${INSTDIR}/user/psprint/{driver,fontmetric}
-	keepdir ${INSTDIR}/user/{autocorr,backup,plugin,store,temp,template}
+	keepdir ${INSTDIR}/user/registry/res/en-us/org/openoffice/{Office,ucb} ${INSTDIR}/user/psprint/{driver,fontmetric} ${INSTDIR}/user/{autocorr,backup,plugin,store,temp,template}
 }
 
 pkg_postinst() {
@@ -518,9 +527,6 @@ pkg_postinst() {
 	einfo " Also, for individual components, you can use any of:"
 	einfo
 	einfo "   oocalc, oodraw, ooimpress, oomath, ooweb or oowriter"
-	einfo
-	einfo " If the fonts appear garbled in the user interface refer to "
-	einfo " Bug 8539, or http://www.openoffice.org/FAQs/fontguide.html#8"
 	einfo
 	einfo "******************************************************************"
 }
