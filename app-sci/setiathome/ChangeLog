@@ -1,6 +1,9 @@
 # ChangeLog for app-sci/setiathome
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/setiathome/ChangeLog,v 1.9 2003/07/02 12:33:39 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/setiathome/ChangeLog,v 1.10 2003/07/09 15:46:22 mholzer Exp $
+
+  09 Jul 2003; Martin Holzer <mholzer@gentoo.org> files/seti-init.d-r1:
+  Fixing typo in seti-init.d-r1. Closes #24182.
 
 *setiathome-3.08-r1 (04 May 2003)
 

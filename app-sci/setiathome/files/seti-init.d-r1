@@ -27,7 +27,7 @@ checkconfig() {
 		for thread in `seq 2 "${SETIATHOME_THREADS}"`; do
 			if [ ! -e "${SETIATHOME_DIR}/thread${thread}" ]; then
 				mkdir "${SETIATHOME_DIR}/thread${thread}"
-				cp "${SETIATHOME_DIR}/user_info.sah" "${SETIATHOME_DIR}/thread${thread}"                        fi
+				cp "${SETIATHOME_DIR}/user_info.sah" "${SETIATHOME_DIR}/thread${thread}"
 			fi
                 done
         fi
