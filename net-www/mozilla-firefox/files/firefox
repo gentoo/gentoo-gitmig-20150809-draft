@@ -2,7 +2,7 @@
 #
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/files/firefox,v 1.3 2004/02/15 16:32:49 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/files/firefox,v 1.4 2004/02/16 05:47:56 brad Exp $
 
 # Set MOZILLA_NEWTYPE to "window" in your environment if you prefer
 # new Firefox windows instead of new tabs
@@ -76,7 +76,7 @@ for u in "${urls[@]}"; do
   if [[ ${#candidates[@]} > 0 ]]; then
     for s in "${candidates[@]}"; do 
       DISPLAY=${s} \
-        ${fbpath}/mozilla-xremote-client "openURL($u, new-$newtype)" \
+        ${ffpath}/mozilla-xremote-client "openURL($u, new-$newtype)" \
         && break
     done
     retval=$?
@@ -92,7 +92,7 @@ for u in "${urls[@]}"; do
 
     # Handle case of multiple URLs
     if [[ ${#urls[@]} > 1 ]]; then
-      ${fbpath}/firefox "${args[@]}" "$u" &
+      ${ffpath}/firefox "${args[@]}" "$u" &
       if [[ -x /usr/bin/xtoolwait ]]; then
         xtoolwait sleep 10
       else
@@ -103,7 +103,7 @@ for u in "${urls[@]}"; do
     fi
 
     # Handle case of single URL
-    ${fbpath}/firefox "${args[@]}" "$u" &
+    ${ffpath}/firefox "${args[@]}" "$u" &
     break
 
   elif [[ $retval -eq 1 ]]; then
