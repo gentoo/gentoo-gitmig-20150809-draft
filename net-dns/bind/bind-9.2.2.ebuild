@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.2.2.ebuild,v 1.4 2003/04/06 20:18:45 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.2.2.ebuild,v 1.5 2003/04/15 14:44:57 mholzer Exp $
 
 IUSE="ssl ipv6 doc"
 
@@ -109,8 +109,9 @@ pkg_postinst() {
 pkg_config() {
 
 	CHROOT=`sed -n 's/^[[:blank:]]\?CHROOT="\([^"]\+\)"/\1/p' /etc/conf.d/named 2>/dev/null`
+	EXISTS="no"
 
-	if [ -z "$CHROOT" -a ! -d "/chroot/dns" ]; then
+	if [ -z "${CHROOT}" -a ! -d "/chroot/dns" ]; then
 		CHROOT="/chroot/dns"
 	elif [ -d ${CHROOT} ]; then 
 		eerror; eerror "${CHROOT:-/chroot/dns} already exists. Quitting."; eerror; EXISTS="yes"
