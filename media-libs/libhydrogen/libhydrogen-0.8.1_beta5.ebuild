@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libhydrogen/libhydrogen-0.8.1_beta5.ebuild,v 1.3 2004/01/30 05:58:33 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libhydrogen/libhydrogen-0.8.1_beta5.ebuild,v 1.4 2004/04/26 03:32:45 agriffis Exp $
 
 inherit libtool
 
@@ -31,7 +31,7 @@ src_compile() {
 
 	elibtoolize
 
-	econf
+	econf || die "econf failed"
 	emake || die
 }
 
