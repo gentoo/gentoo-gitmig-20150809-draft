@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/fvwm
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/ChangeLog,v 1.87 2004/12/28 22:38:07 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/ChangeLog,v 1.88 2004/12/31 13:20:06 taviso Exp $
+
+  31 Dec 2004; Tavis Ormandy <taviso@gentoo.org> fvwm-2.5.12.ebuild:
+  2.5.12 stable on x86
 
   28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
