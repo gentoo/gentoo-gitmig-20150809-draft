@@ -1,6 +1,11 @@
 # ChangeLog for media-video/transcode
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.19 2003/01/19 00:44:52 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.20 2003/01/19 15:25:04 mholzer Exp $
+
+transcode-0.6.3.20021219 (19 Jan 2003)
+
+  19 Jan 2003; Martin Holzer <mholzer@gentoo.org> transcode-0.6.3.20021219.ebuild files/digest-transcode-0.6.3.20021219 ChangeLog :
+  Version bumped. Now works without avifile !!!. Closes #12471
 
   18 Jan 2003; Martin Holzer <mholzer@gentoo.org> 
   Big commit cause avifile.0.7.25 breaks all transcode packages
