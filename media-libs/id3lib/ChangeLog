@@ -1,12 +1,14 @@
 # ChangeLog for media-libs/id3lib
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/id3lib/ChangeLog,v 1.10 2003/02/12 07:08:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/id3lib/ChangeLog,v 1.11 2003/03/03 17:58:55 mholzer Exp $
 
 *id3lib-3.8.2 (08 Jan 2003)
 
-  08 Jan 2003; Martin Holzer <mholzer@gentoo.org> id3lib-3.8.2.ebuild
-  files/digest-id3lib-3.8.2 ChangeLog :
+  03 Mar 2003; Martin Holzer <mholzer@gentoo.org> id3lib-3.8.2.ebuild :
+  Marked as stable.
 
+  08 Jan 2003; Martin Holzer <mholzer@gentoo.org> id3lib-3.8.2.ebuild :
+  files/digest-id3lib-3.8.2 ChangeLog :
   Version bumped. Closes #13430.
 
 *id3lib-3.8.0 (23 Aug 2002)
