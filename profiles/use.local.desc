@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.6 2003/03/27 10:11:49 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.7 2003/03/27 10:13:36 seemant Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -28,3 +28,5 @@ dev-libs/fftw:mpi - Use LAM-MPI parallel computing environment, if available.
 sys-kernel/gentoo-sources:xfs - If you want XFS filesystem support
 sys-kernel/gentoo-sources:acpi4linux - If you want ACPI support
 sys-devel/gdb:objc - If you want to be able to debug Objective C code.
+sys-libs/glibc:nptl - If you want the Native POSIX Threading Library built into glibc.
+sys-libs/glibc:pic - If you want prelink support built into glibc
