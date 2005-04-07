@@ -1,5 +1,15 @@
-MD5 52d73c0adf13fc66f3ed0dcd1dc3f5ee ChangeLog 736
-MD5 882f105c961878af9a6e7a9d3cd06ea6 tkXwin-1.0.ebuild 766
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 d51dd710a67800d3186e3ba23dc368c7 tkXwin-1.0.ebuild 777
+MD5 7eb4c7844fc39d37c989059d82859b1a ChangeLog 853
 MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
 MD5 16ac6eb6d46fda5e7ea4a11a7550c999 files/1.0-Makefile.in.diff 796
 MD5 e2feb67c29f4f32389b38df970adadd7 files/digest-tkXwin-1.0 59
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCVTa506ebR+OMO78RAhf0AJ9EWCNK5a/4NMV/ZGim6ss86nYBxACfTRAg
+6U5xDQiQziWAWFY7j2Gy/3o=
+=9Acl
+-----END PGP SIGNATURE-----

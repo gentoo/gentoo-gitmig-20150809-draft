@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/tkXwin
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkXwin/ChangeLog,v 1.8 2005/04/02 15:50:39 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkXwin/ChangeLog,v 1.9 2005/04/07 13:33:27 luckyduck Exp $
+
+  07 Apr 2005; Jan Brinkmann <luckyduck@gentoo.org> tkXwin-1.0.ebuild:
+  added ~amd64 to KEYWORDS, fixes #88186
 
   02 Apr 2005; Jason Wever <weeve@gentoo.org> tkXwin-1.0.ebuild:
   Stable on SPARC.
