@@ -1,24 +1,24 @@
-MD5 22ab20e6f547be33dac40afa58e821e5 ChangeLog 71413
-MD5 b85c16a0e65a32784335e40fb0edac0e glibc-2.2.5-r10.ebuild 4418
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 3c26cfdf2a8e9c2808e9462079906247 ChangeLog 71707
 MD5 5529417ce5503c488b1ccaaa2e781799 glibc-2.2.5-r9.ebuild 10915
 MD5 19b845756fd8e974c113e904396b9627 glibc-2.3.2-r12.ebuild 22153
 MD5 a26e42322d862d7095594da1f136355d glibc-2.3.3.20040420-r2.ebuild 21675
 MD5 767c346185a37cd59e79614af21e9d7b glibc-2.3.4.20040619-r2.ebuild 21251
 MD5 aec4e31cb25fa6043f71ca4940acaae6 glibc-2.3.4.20040808-r1.ebuild 27641
 MD5 5c6ef4eae3725638db24b736365d2786 glibc-2.3.4.20041102.ebuild 32910
-MD5 0e5408de4a1bed65dab0f9572d5eaaea glibc-2.3.4.20050125-r1.ebuild 37900
-MD5 bbaa27a858966f07a584101f1be106a8 glibc-2.3.4.20050125.ebuild 35424
 MD5 567094e03359ffc1c95af7356395228d metadata.xml 162
+MD5 b85c16a0e65a32784335e40fb0edac0e glibc-2.2.5-r10.ebuild 4418
+MD5 bbaa27a858966f07a584101f1be106a8 glibc-2.3.4.20050125.ebuild 35424
+MD5 dce0cb7033d70484fac6d772bb4b096b glibc-2.3.4.20050125-r1.ebuild 38166
 MD5 1ccc533e526eaa771e262db1dbe27ff7 glibc-2.3.4.20041102-r1.ebuild 33599
-MD5 bed7cbcac1e8582deda43664e5b3f19c files/digest-glibc-2.2.5-r10 290
 MD5 9cc1e6b6f749dba7c8759bd07266f7d9 files/digest-glibc-2.2.5-r9 143
 MD5 2d5306ef875573750af642a9f93b634a files/digest-glibc-2.3.2-r12 312
 MD5 42af7e35fe2404a49954f91fd1aee891 files/digest-glibc-2.3.3.20040420-r2 312
 MD5 470f57fe18dd0a94cb4a4d6cf51528af files/digest-glibc-2.3.4.20040619-r2 307
 MD5 2f05d3181e9a9ded61e074147af47e8e files/digest-glibc-2.3.4.20040808-r1 382
 MD5 75b85b24e4ded1b0e8a0a762d5805818 files/digest-glibc-2.3.4.20041102 383
-MD5 5f2690b0a60b336ec8f26fa3a8898361 files/digest-glibc-2.3.4.20050125 371
-MD5 71c18ba0155b5cf1e7e4bf990225d566 files/digest-glibc-2.3.4.20050125-r1 521
 MD5 e4393f4721a207750581d6265d5f7f40 files/fix-sysctl_h.patch 376
 MD5 52cfc7627fc62dfb26d8d163aac361f6 files/glibc-2.2.2-test-lfs-timeout.patch 320
 MD5 135f8145885a2f4f9876fe973f33ddf6 files/glibc-2.2.4-string2.h.diff 5221
@@ -32,6 +32,9 @@ MD5 bedcd868a9462009158714238594173c files/nscd 964
 MD5 2013443f5192d4b999953ba4248d288c files/nscd.conf 1158
 MD5 d8830438ea871dbfd1acf7a3d0299159 files/test-__thread.c 53
 MD5 4404ee4b6e3017819d8f36082e0265e5 files/test-sysctl_h.c 54
+MD5 5f2690b0a60b336ec8f26fa3a8898361 files/digest-glibc-2.3.4.20050125 371
+MD5 bed7cbcac1e8582deda43664e5b3f19c files/digest-glibc-2.2.5-r10 290
+MD5 71c18ba0155b5cf1e7e4bf990225d566 files/digest-glibc-2.3.4.20050125-r1 521
 MD5 75b85b24e4ded1b0e8a0a762d5805818 files/digest-glibc-2.3.4.20041102-r1 383
 MD5 f75ebd335c4b882013cc12229d39c9f7 files/2.2.5/glibc-2.2.5-alpha-gcc3-fix.diff 475
 MD5 843eaa26ae2c49e894aa365b6f463546 files/2.2.5/glibc-2.2.5-alpha-pcdyn-fix.diff 471
@@ -142,3 +145,10 @@ MD5 e109c03013bd08a2b96e2c2ca9017a4b files/2.3.4/glibc-gentoo-libdir.patch 1347
 MD5 bbe355d94c5a36e11f543d12b70b5702 files/2.3.4/glibc-sec-hotfix-20040916.patch 3080
 MD5 b72e5aca6d834026a6f5fb87623e6fd3 files/2.3.4/host.conf 1302
 MD5 b80890f83185acef8aeff622a1574e0b files/2.3.4/glibc-2.3.4-fix-_dl_next_tls_modid-assert.patch 9140
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCVa2+ArHZZzCEUG0RAjUJAJ9GiF9V2Y4ykXWQ+543v5L6ok0aygCeOxgU
+lvMjRr6R6Rv4yUUJgWM7N8s=
+=bGn/
+-----END PGP SIGNATURE-----

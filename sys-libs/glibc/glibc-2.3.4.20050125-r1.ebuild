@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20050125-r1.ebuild,v 1.36 2005/04/07 00:59:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20050125-r1.ebuild,v 1.37 2005/04/07 22:01:17 eradicator Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -202,8 +202,6 @@ toolchain-glibc_src_unpack() {
 	fi
 
 	cd ${S}
-
-	[[ -d glibc-compat ]] && rm -r glibc-compat
 
 	if [[ -n ${BRANCH_UPDATE} ]] ; then
 		epatch ${WORKDIR}/${PN}-${GLIBC_RELEASE_VER}-branch-update-${BRANCH_UPDATE}.patch
@@ -503,6 +501,19 @@ toolchain-glibc_src_install() {
 }
 
 toolchain-glibc_pkg_postinst() {
+	# Mixing nptlonly and -nptlonly glibc can prove dangerous if libpthread
+	# isn't removed in unmerge which happens sometimes.  See bug #87671
+	if ! is_crosscompile && want_linuxthreads ; then
+		for libdir in $(get_all_libdirs) ; do
+			for f in ${ROOT}/${libdir}/libpthread-2.* ${ROOT}/${libdir}/libpthread-0.6* ; do
+				if [[ -f ${f} ]] ; then
+					rm -f ${f}
+					ldconfig
+				fi
+			done
+		done
+	fi
+
 	# Correct me if I am wrong here, but my /etc/localtime is a file
 	# created by zic ....
 	# I am thinking that it should only be recreated if no /etc/localtime
@@ -523,13 +534,9 @@ toolchain-glibc_pkg_postinst() {
 		${ROOT}/usr/sbin/iconvconfig --prefix=${ROOT}
 	fi
 
-	if [ ! -e "${ROOT}/ld.so.1" ] && use ppc64
-	then
-		pushd ${ROOT}
+	if [ ! -e "${ROOT}/lib/ld.so.1" ] && use ppc64 && ! has_multilib_profile ; then
 		## SHOULDN'T THIS BE lib64??
-		cd ${ROOT}/lib
-		ln -s ld64.so.1 ld.so.1
-		popd
+		ln -s ld64.so.1 ${ROOT}/lib/ld.so.1
 	fi
 
 	# Reload init ...
@@ -827,7 +834,7 @@ glibc_do_configure() {
 
 	# set addons
 	pushd ${S} > /dev/null
-	ADDONS=$(echo */configure | sed -e 's!/configure!!g;s!\(linuxthreads\|nptl\|rtkaio\)\( \|$\)!!g;s! \+$!!;s! !,!g;s!^!,!;/^,\*$/d')
+	ADDONS=$(echo */configure | sed -e 's!/configure!!g;s!\(linuxthreads\|nptl\|rtkaio\|glibc-compat\)\( \|$\)!!g;s! \+$!!;s! !,!g;s!^!,!;/^,\*$/d')
 	popd > /dev/null
 
 	use nls || myconf="${myconf} --disable-nls"
@@ -1114,8 +1121,6 @@ src_unpack() {
 	esac
 
 	use nomalloccheck || GLIBC_PATCH_EXCLUDE="${GLIBC_PATCH_EXCLUDE} 5020_all_nomalloccheck.patch"
-
-	[[ $(gcc-major-version) == "4" ]] || GLIBC_PATCH_EXCLUDE="${GLIBC_PATCH_EXCLUDE} 5040_all_2.3.4-gcc4.patch"
 
 	toolchain-glibc_src_unpack
 
