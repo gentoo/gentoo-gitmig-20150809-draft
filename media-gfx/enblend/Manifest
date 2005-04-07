@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 130338d6cc19602b633244fad664d8e8 enblend-2.1.ebuild 604
+MD5 1c3edfe2fa944fb10128fcfa6b8d5bcc ChangeLog 517
 MD5 5fc54c5d01402d0610fafa96961bb8e0 metadata.xml 161
-MD5 2d2b27e0c133ebd49ba080317055ce86 enblend-2.1.ebuild 599
-MD5 6771144463ffc3adc3d26065ea823c77 ChangeLog 411
 MD5 d4cecbd66e4d004a854f32ca2c15e321 files/digest-enblend-2.1 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCVcfAntT9W3vfTuoRAlkjAKCA/a9Kg8PJvAtma0wsQu8Az4P6dgCeL4QT
+SSK3/RfXcgqeNmotbOab9nU=
+=a1o+
+-----END PGP SIGNATURE-----
