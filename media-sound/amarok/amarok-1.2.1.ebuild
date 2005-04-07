@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.2.1.ebuild,v 1.2 2005/03/21 14:42:36 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.2.1.ebuild,v 1.3 2005/04/07 15:50:59 blubb Exp $
 
 inherit kde eutils
 
@@ -14,7 +14,7 @@ SLOT="0"
 IUSE="noamazon xmms opengl xine kde arts gstreamer mysql"
 # kde: enables compilation of the konqueror sidebar plugin
 
-KEYWORDS="~amd64 ~ppc -sparc x86"
+KEYWORDS="amd64 ~ppc -sparc x86"
 
 #	Not yet released:
 #	">=media-libs/libvisual-0.2.0
