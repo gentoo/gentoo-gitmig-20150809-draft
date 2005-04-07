@@ -1,6 +1,11 @@
 # ChangeLog for app-text/enchant
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/enchant/ChangeLog,v 1.36 2005/01/02 21:57:02 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/enchant/ChangeLog,v 1.37 2005/04/07 21:03:26 foser Exp $
+
+*enchant-1.1.6 (07 Apr 2005)
+
+  07 Apr 2005; foser <foser@gentoo.org> enchant-1.1.6.ebuild :
+  New release (#87370)
 
   02 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
