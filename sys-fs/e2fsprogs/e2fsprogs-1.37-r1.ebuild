@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/e2fsprogs-1.37-r1.ebuild,v 1.2 2005/04/07 17:35:30 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/e2fsprogs-1.37-r1.ebuild,v 1.3 2005/04/07 17:36:18 seemant Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -21,8 +21,7 @@ DEPEND="${RDEPEND}
 	sys-apps/texinfo"
 
 src_unpack() {
-	unpack ${A}
-	cd "${S}"
+	unpack ${A}; cd "${S}"
 	# Fix a cosmetic error in mk_cmds's help output.
 	epatch "${FILESDIR}"/e2fsprogs-1.32-mk_cmds-cosmetic.patch
 	# Patch to make the configure and sed scripts more friendly to, 
