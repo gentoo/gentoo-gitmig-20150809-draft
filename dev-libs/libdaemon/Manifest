@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 697c9121d42995aef9e4ea2c1173bfba libdaemon-0.7.ebuild 996
+MD5 0f0cde1d120fac321897f6cae2f2359d ChangeLog 2010
 MD5 833b0ec535a1b2c5d9bc377c6d2663e6 libdaemon-0.3.ebuild 857
 MD5 a3e1e2b2909483ba00265f162dc16611 libdaemon-0.5.ebuild 891
-MD5 991f600f483d653e609cb3a1bfd3abc5 ChangeLog 1922
+MD5 5fb390cc14a2b106d79943abfcb07db6 libdaemon-0.7.ebuild 993
 MD5 f8d10f350e91f30316ea4e1bd1e76470 metadata.xml 254
 MD5 0690fac6ae3f714079ef10ca93af077a files/digest-libdaemon-0.3 65
 MD5 c030d2ae6f46e1372a2ee9dd8b00d42f files/digest-libdaemon-0.5 65
 MD5 6c25258864b43b79744d66091d05a706 files/digest-libdaemon-0.7 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCNwuRI1lqEGTUzyQRAoWLAJoDqzzC76oOCmzxAARzOG4dFyOQLwCfQ3YU
-5ilyanTvD6fnR8DQ7HUT7y0=
-=eySY
------END PGP SIGNATURE-----
