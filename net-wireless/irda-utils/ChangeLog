@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/irda-utils
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/irda-utils/ChangeLog,v 1.7 2005/02/08 14:42:45 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/irda-utils/ChangeLog,v 1.8 2005/04/07 16:52:02 blubb Exp $
+
+  07 Apr 2005; Simon Stelling <blubb@gentoo.org> irda-utils-0.9.16.ebuild:
+  stable on amd64
 
   08 Feb 2005; Henrik Brix Andersen <brix@gentoo.org>
   +files/irda-utils-0.9.16-irkbd.patch, irda-utils-0.9.16.ebuild:
