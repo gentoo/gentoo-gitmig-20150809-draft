@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20041102-r1.ebuild,v 1.5 2005/03/25 06:17:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20041102-r1.ebuild,v 1.6 2005/04/07 03:58:29 dostrow Exp $
 
 inherit eutils multilib flag-o-matic toolchain-funcs versionator
 
@@ -730,6 +730,11 @@ src_compile() {
 	# and caused bug #80591... this might help someone...
 	if [ -d /usr/include/gentoo-multilib/default ]; then
 		export CPATH=/usr/include/gentoo-multilib/default
+	fi
+
+	# hardened ppc64 parallelization periodically fails so drop to -j1
+	if use ppc64 && use hardened; then
+		MAKEOPTS="${MAKEOPTS} -j1"
 	fi
 
 	# do the linuxthreads build unless we're using nptlonly
