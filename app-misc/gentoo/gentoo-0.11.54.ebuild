@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gentoo/gentoo-0.11.54.ebuild,v 1.4 2005/04/06 21:47:43 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gentoo/gentoo-0.11.54.ebuild,v 1.5 2005/04/07 12:47:13 seemant Exp $
 
 DESCRIPTION="A modern GTK+ based filemanager for any WM"
 HOMEPAGE="http://www.obsession.se/gentoo/"
@@ -15,19 +15,20 @@ DEPEND="=x11-libs/gtk+-1.2*"
 RDEPEND="nls? ( sys-devel/gettext )
 	fam? ( app-admin/fam )"
 
+unset LINGUAS
+	
 src_compile() {
 	econf \
 		--sysconfdir=/etc/gentoo \
 		$(use_enable fam) \
-		--disable-nls || die # temporarily disable nls, will fix tomorrow
-		#$(use_enable nls) || die
+		$(use_enable nls) || die
 
 	emake || die
 }
 
 src_install() {
-	einstall \
-		sysconfdir=${D}/etc/gentoo || die
+	cp mkinstalldirs ${WORKDIR}
+	make DESTDIR=${D} install || die
 
 	if use gnome ; then
 		insinto /usr/share/pixmaps
@@ -44,7 +45,7 @@ src_install() {
 	dohtml -r docs/images
 	dohtml -r docs/config
 
-	doman docs/gentoo.1x
+	newan docs/gentoo.1x gentoo.1
 
 	docinto scratch
 	dodoc docs/scratch/*
