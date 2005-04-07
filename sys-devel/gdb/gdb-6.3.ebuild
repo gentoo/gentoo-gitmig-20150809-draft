@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-6.3.ebuild,v 1.7 2005/04/07 00:35:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-6.3.ebuild,v 1.8 2005/04/07 22:31:26 vapier Exp $
 
 inherit flag-o-matic eutils
 
@@ -51,10 +51,10 @@ src_compile() {
 
 src_install() {
 	make \
-		prefix=${D}/usr \
-		mandir=${D}/usr/share/man \
-		libdir=${D}/usr/$(get_libdir) \
-		infodir=${D}/usr/share/info \
+		prefix="${D}"/usr \
+		mandir="${D}"/usr/share/man \
+		libdir="${D}"/usr/$(get_libdir) \
+		infodir="${D}"/usr/share/info \
 		install || die "install"
 
 	dodoc README
@@ -68,27 +68,29 @@ src_install() {
 
 	if use x86; then
 		dodir /etc/skel/
-		cp ${S}/gdb_init.txt ${D}/etc/skel/.gdbinit \
+		cp "${S}"/gdb_init.txt "${D}"/etc/skel/.gdbinit \
 			|| die "install ${D}/etc/skel/.gdbinit"
 	fi
 
 	if ! has noinfo ${FEATURES} ; then
-		cd gdb/doc
-		make \
-			infodir=${D}/usr/share/info \
+		make -C "${S}"/gdb/doc \
+			infodir="${D}"/usr/share/info \
 			install-info || die "install doc info"
-
-		cd ${S}/bfd/doc
-		make \
-			infodir=${D}/usr/share/info \
+		make -C "${S}"/bfd/doc \
+			infodir="${D}"/usr/share/info \
 			install-info || die "install bfd info"
 	fi
 
 	# These includes and libs are in binutils already
-	rm -f ${D}/usr/lib/libbfd.*
-	rm -f ${D}/usr/lib/libiberty.*
-	rm -f ${D}/usr/lib/libopcodes.*
-	rm -f ${D}/usr/share/info/{bfd,configure,standards}.info*
-	rm -r ${D}/usr/share/locale
-	rm -r ${D}/usr/include
+	rm -f "${D}"/usr/lib/libbfd.*
+	rm -f "${D}"/usr/lib/libiberty.*
+	rm -f "${D}"/usr/lib/libopcodes.*
+	rm -f "${D}"/usr/share/info/{bfd,configure,standards}.info*
+	rm -r "${D}"/usr/share/locale
+	rm -r "${D}"/usr/include
+
+	# Dont bother including docs with a cross gdb
+	if [[ ${CTARGET} != ${CHOST} ]] ; then
+		rm -r "${D}"/usr/share/{man,info,doc}
+	fi
 }
