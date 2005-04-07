@@ -36,3 +36,15 @@ diff -ur raidtools-1.00.3/lsraid.c raidtools-1.00.3.plasmaroo/lsraid.c
  /*
   * Defines
   */
+diff -ur raidtools-1.00.3/raid_io.h raidtools-1.00.3.plasmaroo/raid_io.h
+--- raidtools-1.00.3/raid_io.h.old	2005-04-07 15:25:24.937871896 -0600
++++ raidtools-1.00.3/raid_io.h	2005-04-07 15:25:35.315801456 -0600
+@@ -12,7 +12,7 @@
+ #include "common.h"
+ #include "raidlib.h"
+ 
+-void progress (unsigned long blocks, unsigned long current);
++void progress (unsigned long blocks, unsigned long _current_);
+ 
+ long long raidseek (unsigned int fd, unsigned long blk);
+ extern void print_sb (mdp_super_t *sb);
