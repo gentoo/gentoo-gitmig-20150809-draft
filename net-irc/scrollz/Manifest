@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 c565bd818287962363c1ff3d8241bf5d scrollz-1.9.4-r1.ebuild 948
-MD5 638b0c28c4734a7d048ca25abb37b324 scrollz-1.9.3.ebuild 957
-MD5 bd2ed2d472224d4c8e668558dddd31e6 ChangeLog 1900
+MD5 3a0c4d95399d3f76052e2f90157995a4 ChangeLog 1990
 MD5 44c39c6ad372a8e5a5e7ee3311f703a7 metadata.xml 160
+MD5 638b0c28c4734a7d048ca25abb37b324 scrollz-1.9.3.ebuild 957
+MD5 16de260f197670c70c85fcd5802df79f scrollz-1.9.4-r1.ebuild 944
 MD5 78b9e2c9956aba31bf0333bbc7520dcc scrollz-1.9.ebuild 799
 MD5 cc02907fb214491c412f28cd0f7c0b38 files/digest-scrollz-1.9 63
 MD5 eed6967fd33ea4e7ab68a4b6e4ec2b89 files/digest-scrollz-1.9.3 65
 MD5 9f88c153a8f19376ddb8d9c429a86fba files/digest-scrollz-1.9.4-r1 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCFALdI1lqEGTUzyQRAjQeAKCiA66UPhwXAKOQh3qewlsPQrhBWwCfYfrq
-ldn/qKIuSfuVdP6ZjSI1T+g=
-=Qv2k
------END PGP SIGNATURE-----
