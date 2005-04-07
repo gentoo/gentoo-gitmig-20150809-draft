@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/nip2
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/nip2/ChangeLog,v 1.1 2005/04/06 21:13:07 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/nip2/ChangeLog,v 1.2 2005/04/07 06:42:26 swegener Exp $
+
+  07 Apr 2005; Sven Wegener <swegener@gentoo.org> nip2-7.10.9.ebuild:
+  Fixed invalid atoms in *DEPEND.
 
 *nip2-7.10.9 (06 Apr 2005)
 
