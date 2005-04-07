@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ghc-package.eclass,v 1.7 2005/03/23 13:55:06 kosmikus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ghc-package.eclass,v 1.8 2005/04/07 22:00:20 kosmikus Exp $
 #
 # Author: Andres Loeh <kosmikus@gentoo.org>
 #
@@ -113,9 +113,10 @@ ghc-register-pkg() {
 	localpkgconf="$(ghc-confdir)/$1"
 	if [[ -f ${localpkgconf} ]]; then
 		for pkg in $(ghc-listpkg ${localpkgconf}); do
-			einfo "Registering ${pkg} ..."
+			ebegin "Registering ${pkg} "
 			$(ghc-getghcpkgbin) -f ${localpkgconf} -s ${pkg} \
-				| $(ghc-getghcpkg) -u --force
+				| $(ghc-getghcpkg) -u --force > /dev/null
+			eend $?
 		done
 	fi
 }
@@ -124,14 +125,14 @@ ghc-register-pkg() {
 # package conf file, to be used on a ghc reinstallation
 ghc-reregister() {
 	einfo "Re-adding packages ..."
-	ewarn "This may cause several warnings, but they should be harmless."
+	einfo "(This may cause several warnings, but they should be harmless.)"
 	if [ -d "$(ghc-confdir)" ]; then
-		pushd $(ghc-confdir)
+		pushd $(ghc-confdir) > /dev/null
 		for conf in *.conf; do
 			einfo "Processing ${conf} ..."
 			ghc-register-pkg ${conf}
 		done
-		popd
+		popd > /dev/null
 	fi
 }
 
@@ -141,8 +142,9 @@ ghc-unregister-pkg() {
 	localpkgconf="$(ghc-confdir)/$1"
 	if [[ -f ${localpkgconf} ]]; then
 		for pkg in $(ghc-reverse "$(ghc-listpkg ${localpkgconf})"); do
-			einfo "Unregistering ${pkg} ..."
-			$(ghc-getghcpkg) -r ${pkg} --force
+			ebegin "Unregistering ${pkg} "
+			$(ghc-getghcpkg) -r ${pkg} --force > /dev/null
+			eend $?
 		done
 	fi
 }
