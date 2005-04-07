@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/kipi-plugins
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/ChangeLog,v 1.6 2005/03/04 12:35:16 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/ChangeLog,v 1.7 2005/04/07 15:46:24 blubb Exp $
+
+  07 Apr 2005; Simon Stelling <blubb@gentoo.org>
+  kipi-plugins-0.1.0_beta2.ebuild:
+  stable on amd64
 
   04 Mar 2005; Carsten Lohrke <carlo@gentoo.org>
   kipi-plugins-0.1.0_beta2.ebuild:
