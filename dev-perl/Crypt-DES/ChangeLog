@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Crypt-DES
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-DES/ChangeLog,v 1.9 2004/12/24 14:41:09 nigoro Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-DES/ChangeLog,v 1.10 2005/04/07 15:53:46 nigoro Exp $
+
+  08 Apr 2005; Yuta SATOH <nigoro@gentoo.org> Crypt-DES-2.03-r1.ebuild:
+  Stable on ppc64
 
   24 Dec 2004; Yuta SATOH <nigoro@gentoo.org> Crypt-DES-2.03-r1.ebuild:
   added ~ppc64
