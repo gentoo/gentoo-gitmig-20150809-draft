@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop/monodevelop-0.6.ebuild,v 1.1 2005/04/02 02:14:58 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop/monodevelop-0.6.ebuild,v 1.2 2005/04/07 00:08:28 latexer Exp $
 
 inherit mono eutils
 
@@ -41,8 +41,10 @@ src_install () {
 
 pkg_postinst() {
 	echo
-	ewarn "If you experience problems with syntax highlighting,"
-	ewarn "Re-emerge gtksourceview. Previous versions of monodevelop"
-	ewarn "installed a .lang file that gtksourceview now handles."
+	ewarn "${P} is affected by a bug in gtk-sharp which makes it"
+	ewarn "crash horribly when loading any project referencing the"
+	ewarn "gtk-sharp-1.0.x assemblies. If you absolutly need to use"
+	ewarn "monodevelop to compile such projects, use ${PN}-0.5.x with"
+	ewarn "mono-1.0.x"
 	echo
 }
