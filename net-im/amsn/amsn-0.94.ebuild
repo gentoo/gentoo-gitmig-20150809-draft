@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/amsn/amsn-0.94.ebuild,v 1.6 2005/03/17 08:24:18 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/amsn/amsn-0.94.ebuild,v 1.7 2005/04/07 16:07:17 blubb Exp $
 
 S="${WORKDIR}/${P/./_}"
 DESCRIPTION="Alvaro's Messenger client for MSN"
@@ -11,7 +11,7 @@ IUSE="gnome kde imlib xmms"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~alpha ~sparc ppc hppa ~amd64"
+KEYWORDS="x86 ~alpha ~sparc ppc hppa amd64"
 
 
 DEPEND=">=dev-lang/tcl-8.3
