@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig/pkgconfig-0.12.0.ebuild,v 1.15 2004/07/15 00:00:45 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig/pkgconfig-0.12.0.ebuild,v 1.16 2005/04/07 00:49:19 dostrow Exp $
 
 DESCRIPTION="Package Config system that manages compile/link flags for libraries"
 SRC_URI="http://www.freedesktop.org/software/pkgconfig/releases/${P}.tar.gz"
