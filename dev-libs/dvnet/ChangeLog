@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/dvnet
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvnet/ChangeLog,v 1.8 2004/07/02 04:38:13 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvnet/ChangeLog,v 1.9 2005/04/07 03:07:58 pvdabeel Exp $
+
+*dvnet-0.9.11 (07 Apr 2005)
+
+  07 Apr 2005; Pieter Van den Abeele <pvdabeel@gentoo.org> dvnet-0.9.11.ebuild,
+  New version
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> dvnet-0.9.4.ebuild,
   dvnet-0.9.8.ebuild:
