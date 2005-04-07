@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.138 2005/04/01 15:55:25 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.139 2005/04/07 00:42:23 vapier Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -860,7 +860,7 @@ gcc_src_unpack() {
 
 	# Misdesign in libstdc++ (Redhat)
 	if [[ ${GCCMAJOR} -ge 3 ]] ; then
-		cp -a ${S}/libstdc++-v3/config/cpu/i{4,3}86/atomicity.h
+		cp -pPR ${S}/libstdc++-v3/config/cpu/i{4,3}86/atomicity.h
 	fi
 
 	# disable --as-needed from being compiled into gcc specs
@@ -1022,7 +1022,6 @@ gcc_do_configure() {
 	# --enable-sjlj-exceptions : currently the unwind stuff seems to work 
 	# for statically linked apps but not dynamic
 	# so use setjmp/longjmp exceptions by default
-	# uclibc uses --enable-clocale=uclibc (autodetected)
 	if is_uclibc ; then
 		confgcc="${confgcc} --disable-__cxa_atexit --enable-sjlj-exceptions --enable-target-optspace"
 	else
@@ -1095,7 +1094,8 @@ gcc_do_make() {
 		# 3 stage bootstrapping doesnt quite work when you cant run the
 		# resulting binaries natively ^^;
 		GCC_MAKE_TARGET=${GCC_MAKE_TARGET-all}
-	elif { use x86 || use amd64 || use ppc64 ;} && [[ ${GCC_BRANCH_VER} != "3.3" ]] ; then
+	elif [[ $(tc-arch) == "x86" || $(tc-arch) == "amd64" ]] || use ppc64 \
+	     && [[ ${GCC_BRANCH_VER} != "3.3" ]] ; then
 		GCC_MAKE_TARGET=${GCC_MAKE_TARGET-profiledbootstrap}
 	else
 		GCC_MAKE_TARGET=${GCC_MAKE_TARGET-bootstrap-lean}
@@ -1103,11 +1103,7 @@ gcc_do_make() {
 
 	# the gcc docs state that parallel make isnt supported for the
 	# profiledbootstrap target, as collisions in profile collecting may occur.
-	if [[ ${GCC_MAKE_TARGET} == "profiledbootstrap" ]] ; then
-		MAKE_COMMAND="make"
-	else
-		MAKE_COMMAND="emake"
-	fi
+	[[ ${GCC_MAKE_TARGET} == "profiledbootstrap" ]] && export MAKEOPTS="${MAKEOPTS} -j1"
 
 	if [[ ${GCC_MAKE_TARGET} == "all" ]] ; then
 		STAGE1_CFLAGS=${STAGE1_CFLAGS-"${CFLAGS}"}
@@ -1127,15 +1123,15 @@ gcc_do_make() {
 	fi
 
 	pushd ${WORKDIR}/build
-	einfo "Running ${MAKE_COMMAND} LDFLAGS=\"${LDFLAGS}\" STAGE1_CFLAGS=\"${STAGE1_CFLAGS}\" LIBPATH=\"${LIBPATH}\" BOOT_CFLAGS=\"${BOOT_CFLAGS}\" ${GCC_MAKE_TARGET}"
+	einfo "Running make LDFLAGS=\"${LDFLAGS}\" STAGE1_CFLAGS=\"${STAGE1_CFLAGS}\" LIBPATH=\"${LIBPATH}\" BOOT_CFLAGS=\"${BOOT_CFLAGS}\" ${GCC_MAKE_TARGET}"
 
-	${MAKE_COMMAND} \
+	emake \
 		LDFLAGS="${LDFLAGS}" \
 		STAGE1_CFLAGS="${STAGE1_CFLAGS}" \
 		LIBPATH="${LIBPATH}" \
 		BOOT_CFLAGS="${BOOT_CFLAGS}" \
 		${GCC_MAKE_TARGET} \
-		|| die "${MAKE_COMMAND} failed with ${GCC_MAKE_TARGET}"
+		|| die "emake failed with ${GCC_MAKE_TARGET}"
 	popd
 }
 
@@ -1329,8 +1325,8 @@ gcc-compiler_src_install() {
 	S=${WORKDIR}/build \
 	make DESTDIR="${D}" install || die
 	# Now do the fun stripping stuff
-	env -uRESTRICT STRIP=${CHOST}-strip prepstrip "${D}/${BINPATH}" "${D}/usr/libexec"
-	env -uRESTRICT STRIP=${CTARGET}-strip prepstrip "${D}/${LIBPATH}"
+	env RESTRICT="" STRIP=${CHOST}-strip prepstrip "${D}/${BINPATH}" "${D}/usr/libexec"
+	env RESTRICT="" STRIP=${CTARGET}-strip prepstrip "${D}/${LIBPATH}"
 
 	is_crosscompile || [[ -r ${D}${BINPATH}/gcc ]] || die "gcc not found in ${D}"
 
