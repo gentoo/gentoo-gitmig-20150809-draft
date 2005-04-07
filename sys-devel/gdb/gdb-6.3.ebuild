@@ -1,8 +1,15 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-6.3.ebuild,v 1.6 2005/03/14 15:29:57 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-6.3.ebuild,v 1.7 2005/04/07 00:35:15 vapier Exp $
 
 inherit flag-o-matic eutils
+
+export CTARGET=${CTARGET:-${CHOST}}
+if [[ ${CTARGET} == ${CHOST} ]] ; then
+	if [[ ${CATEGORY/cross-} != ${CATEGORY} ]] ; then
+		export CTARGET=${CATEGORY/cross-}
+	fi
+fi
 
 DESCRIPTION="GNU debugger"
 HOMEPAGE="http://sources.redhat.com/gdb/"
@@ -11,7 +18,9 @@ SRC_URI="http://mirrors.rcn.net/pub/sourceware/gdb/releases/${P}.tar.bz2
 #SRC_URI="${SRC_URI} mirror://gentoo/gdb-6.1-hppa-01.patch.bz2"
 
 LICENSE="GPL-2 LGPL-2"
-SLOT="0"
+[[ ${CTARGET} != ${CHOST} ]] \
+	&& SLOT="${CTARGET}" \
+	|| SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~mips ~ppc ~ppc64 ~sparc ~x86"
 IUSE="nls test"
 
