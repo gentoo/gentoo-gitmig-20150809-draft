@@ -1,6 +1,13 @@
 # ChangeLog for dev-tex/tex4ht
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/tex4ht/ChangeLog,v 1.3 2005/04/02 05:53:52 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/tex4ht/ChangeLog,v 1.4 2005/04/07 05:28:11 usata Exp $
+
+*tex4ht-20050406_p1623 (07 Apr 2005)
+
+  07 Apr 2005; Mamoru KOMACHI <usata@gentoo.org>
+  -tex4ht-20050331_p2350.ebuild, +tex4ht-20050406_p1623.ebuild:
+  Added new snapshot and mirror it on Gentoo distfiles server.
+  This closes bug #88083.
 
 *tex4ht-20050331_p2350 (02 Apr 2005)
 
