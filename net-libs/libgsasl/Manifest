@@ -1,18 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 07d902c4d10380b4b08bb72c1609bc31 ChangeLog 2352
-MD5 9355c194b4e28f3ad55882c6e40f44ad libgsasl-0.2.0.ebuild 1050
 MD5 38117f7edf3fa9a82bfa8b7fd1c1d8d2 libgsasl-0.2.3.ebuild 991
+MD5 5af251d20e167509cc1ea074e2e732fd ChangeLog 2447
 MD5 9a3024665c04c1eb6ef0f20c66b451dc metadata.xml 252
-MD5 b1f915a67fdc4842f813cbadf5924826 libgsasl-0.2.4.ebuild 1002
+MD5 9dadb95a34a475dd5862c4c9010e0c4d libgsasl-0.2.4.ebuild 1009
+MD5 9355c194b4e28f3ad55882c6e40f44ad libgsasl-0.2.0.ebuild 1050
 MD5 97551928059d3959ba1761d0f332c010 files/digest-libgsasl-0.2.4 66
-MD5 1bd701f1053d1243cb785b696d3b50a7 files/digest-libgsasl-0.2.0 66
 MD5 4d2845818e9cc61826d46c6e42fa316d files/digest-libgsasl-0.2.3 66
+MD5 1bd701f1053d1243cb785b696d3b50a7 files/digest-libgsasl-0.2.0 66
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCL/5YCHk4+ZoBpvsRArOjAKCwFYZuvRNh1tQQEYMd/wHK4gu23gCfWSOS
-G/apY0+YKZa1cXYHAfAlJ9Y=
-=5xBw
+iD8DBQFCVbkLKf2g/qXtneoRAuMbAJwJY11C7102Xmw74YBqppJtY5eX/wCgjIft
+s+875M0Ug+QLqqqCZBiKE+I=
+=kUas
 -----END PGP SIGNATURE-----
