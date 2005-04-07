@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/librsvg-2.8.1-r1.ebuild,v 1.6 2005/04/02 04:39:56 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/librsvg-2.8.1-r1.ebuild,v 1.7 2005/04/07 15:23:18 blubb Exp $
 
 inherit gnome2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://librsvg.sourceforge.net/"
 
 LICENSE="LGPL-2"
 SLOT="2"
-KEYWORDS="alpha ~amd64 arm hppa ia64 mips ppc ~ppc64 sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ~ppc64 sparc x86"
 IUSE="doc zlib gnome"
 
 RDEPEND=">=dev-libs/glib-2
