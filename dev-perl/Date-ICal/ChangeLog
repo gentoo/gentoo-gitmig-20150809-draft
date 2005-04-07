@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Date-ICal
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Date-ICal/ChangeLog,v 1.16 2004/12/29 23:25:11 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Date-ICal/ChangeLog,v 1.17 2005/04/07 14:36:27 nigoro Exp $
+
+  07 Apr 2005; Yuta SATOH <nigoro@gentoo.org> Date-ICal-1.72.ebuild:
+  Stable on ppc64
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
