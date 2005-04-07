@@ -1,6 +1,9 @@
 # ChangeLog for www-client/galeon
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/galeon/ChangeLog,v 1.6 2005/03/29 00:54:55 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/galeon/ChangeLog,v 1.7 2005/04/07 17:03:57 blubb Exp $
+
+  07 Apr 2005; Simon Stelling <blubb@gentoo.org> galeon-1.3.19.ebuild:
+  stable on amd64
 
   29 Mar 2005; Joseph Jezak <josejx@gentoo.org> galeon-1.3.19.ebuild:
   Marked ppc stable for bug #85511.

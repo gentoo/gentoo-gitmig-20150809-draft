@@ -1,6 +1,9 @@
 # ChangeLog for www-client/dillo
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/dillo/ChangeLog,v 1.21 2005/04/06 14:45:29 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/dillo/ChangeLog,v 1.22 2005/04/07 17:03:22 blubb Exp $
+
+  07 Apr 2005; Simon Stelling <blubb@gentoo.org> dillo-0.8.4.ebuild:
+  stable on amd64
 
   06 Apr 2005; Gustavo Zacarias <gustavoz@gentoo.org> dillo-0.8.4-r1.ebuild:
   Stable on sparc
