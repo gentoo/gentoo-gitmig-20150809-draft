@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/guile/guile-1.6.4-r1.ebuild,v 1.21 2005/04/06 20:20:19 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/guile/guile-1.6.4-r1.ebuild,v 1.22 2005/04/07 04:06:51 mr_bones_ Exp $
 
 inherit flag-o-matic eutils libtool
 
@@ -42,7 +42,7 @@ src_compile() {
 	if [ "${ARCH}" = "ppc" ]; then
 		replace-flags -O3 -O2
 	fi
-	
+
 	econf \
 		--with-threads \
 		--with-modules || die
