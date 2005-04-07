@@ -1,21 +1,11 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 c4b2e61882a2aeab17f3428ef7a3f77b ChangeLog 11818
 MD5 e82fa0ea2fa87ab46e6c42f200791134 bootsplash-0.6-r16.ebuild 6690
-MD5 46457ec2b835dfb1fdff274ae241179c bootsplash-0.6.1-r7.ebuild 3225
 MD5 a93cb3db61c532b39e8c461c713a25f8 bootsplash-0.6.1-r4.ebuild 2973
-MD5 6814d99df649d9c8455802db006caa89 ChangeLog 11722
-MD5 d94d306da3804e41296e1bf04c7c9cae metadata.xml 255
 MD5 01b612a01dc3cb3bbf01a16c6ead3930 bootsplash-0.6.1-r6.ebuild 3076
+MD5 096aa2b77562960a59220786b7929028 bootsplash-0.6.1-r7.ebuild 3224
+MD5 d94d306da3804e41296e1bf04c7c9cae metadata.xml 255
+MD5 62e182a70b6535d721dffdf34051c48e files/0.6.1-r7-default_theme.patch 406
+MD5 e07733044709e48e34df036d69dc9f3a files/digest-bootsplash-0.6-r16 71
 MD5 3f2697605cd4c22d7ec6a8a56e562da4 files/digest-bootsplash-0.6.1-r4 232
 MD5 00168dc069b71a54b9a8fcb10e0c4752 files/digest-bootsplash-0.6.1-r6 232
 MD5 00168dc069b71a54b9a8fcb10e0c4752 files/digest-bootsplash-0.6.1-r7 232
-MD5 e07733044709e48e34df036d69dc9f3a files/digest-bootsplash-0.6-r16 71
-MD5 62e182a70b6535d721dffdf34051c48e files/0.6.1-r7-default_theme.patch 406
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFB5Gotchej4aZK9/cRAo5iAJ4rR0BsTg4sPc1BsusRToI0/POBvQCfclQB
-Co/bw01V6oVsE2ua22PkYPU=
-=SyxD
------END PGP SIGNATURE-----
