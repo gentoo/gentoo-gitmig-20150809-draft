@@ -1,3 +1,13 @@
-MD5 30df5a21baab0cccf86015a646d635d4 mountapp-3.0.ebuild 724
-MD5 6ccc072001cf05a20e3c97e5b73ebf66 ChangeLog 444
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 ee9c7ae818e0127ea0810c4129f73a5d mountapp-3.0.ebuild 728
+MD5 e2c7ec47252b438e7d9b62220ff31794 ChangeLog 550
 MD5 0d1607c39526de2638a27876059ab40d files/digest-mountapp-3.0 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCVa4ZntT9W3vfTuoRAgeVAJ97cPKWHz1f8mXqm9mAXH6flyiARwCfdg7s
+h1XBpndb/gVSz16HD3k0ETA=
+=pGr2
+-----END PGP SIGNATURE-----

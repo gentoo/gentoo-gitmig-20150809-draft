@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/mountapp
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/mountapp/ChangeLog,v 1.4 2004/06/28 20:36:11 agriffis Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/mountapp/ChangeLog,v 1.5 2005/04/07 22:02:58 cryos Exp $
+
+  07 Apr 2005; Marcus D. Hanwell <cryos@gentoo.org> mountapp-3.0.ebuild:
+  Marked ~amd64, closes bug 83853.
 
   28 Jun 2004; Aron Griffis <agriffis@gentoo.org> mountapp-3.0.ebuild:
   glibc -> libc
