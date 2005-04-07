@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/muine/muine-0.8.2.ebuild,v 1.2 2005/04/04 14:56:27 zaheerm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/muine/muine-0.8.2.ebuild,v 1.3 2005/04/07 01:39:53 latexer Exp $
 
 inherit gnome2 mono eutils
 
@@ -55,6 +55,16 @@ G2CONF="${G2CONF} $(use_enable aac faad2)"
 USE_DESTDIR=1
 DOCS="AUTHORS COPYING ChangeLog INSTALL \
 	  MAINTAINERS NEWS README TODO"
+
+pkg_setup() {
+	if ! built_with_use sys-apps/dbus mono ; then
+		echo
+		eerror "In order to compile muine, you need to have sys-apps/dbus emerged"
+		eerror "with 'mono' in your USE flags. Please add that flag, re-emerge"
+		eerror "dbus, and then emerge muine."
+		die "sys-apps/dbus is missing the .NET binding."
+	fi
+}
 
 src_unpack() {
 	unpack ${A}
