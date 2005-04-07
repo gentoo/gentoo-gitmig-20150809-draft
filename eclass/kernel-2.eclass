@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.116 2005/04/06 14:46:09 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.117 2005/04/07 18:06:52 johnm Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -71,8 +71,119 @@ LICENSE="GPL-2"
 
 #Eclass functions only from here onwards ...
 #==============================================================
+detect_version() {
+	# this function will detect and set
+	# - OKV: Original Kernel Version (2.6.0/2.6.0-test11)
+	# - KV: Kernel Version (2.6.0-gentoo/2.6.0-test11-gentoo-r1)
+	# - EXTRAVERSION: The additional version appended to OKV (-gentoo/-gentoo-r1)
+
+	if [[ -n ${KV_FULL} ]]; then
+		# we will set this for backwards compatibility.
+		KV=${KV_FULL}
+
+		# we know KV_FULL so lets stop here. but not without resetting S
+		S=${WORKDIR}/linux-${KV_FULL}
+		return
+	fi
+
+	# CKV is used as a comparison kernel version, which is used when
+	# PV doesnt reflect the genuine kernel version.
+	# this gets set to the portage style versioning. ie:
+	#   CKV=2.6.11_rc4
+	CKV=${CKV:-${PV}}
+	OKV=${OKV:-${CKV}}
+	OKV=${OKV/_beta/-test}
+	OKV=${OKV/_rc/-rc}
+	OKV=${OKV/-r*}
+	OKV=${OKV/_p*}
+
+	KV_MAJOR=$(get_version_component_range 1 ${OKV})
+	KV_MINOR=$(get_version_component_range 2 ${OKV})
+	KV_PATCH=$(get_version_component_range 3 ${OKV})
+
+	if [[ ${KV_MAJOR}${KV_MINOR}${KV_PATCH} -ge 269 ]]; then
+		KV_EXTRA=$(get_version_component_range 4- ${OKV})
+		KV_EXTRA=${KV_EXTRA/[-_]*}
+	else
+		KV_PATCH=$(get_version_component_range 3- ${OKV})
+	fi
+	KV_PATCH=${KV_PATCH/[-_]*}
+
+	KERNEL_URI="mirror://kernel/linux/kernel/v${KV_MAJOR}.${KV_MINOR}/linux-${OKV}.tar.bz2"
+
+	RELEASE=${CKV/${OKV}}
+	RELEASE=${RELEASE/_beta}
+	RELEASE=${RELEASE/_rc/-rc}
+	RELEASE=${RELEASE/_pre/-pre}
+	kernel_is_2_6 && RELEASE=${RELEASE/-pre/-bk}
+	RELEASETYPE=${RELEASE//[0-9]}
+
+	# Now we know that RELEASE is the -rc/-bk
+	# and RELEASETYPE is the same but with its numerics stripped
+	# we can work on better sorting EXTRAVERSION.
+	# first of all, we add the release
+	EXTRAVERSION="${RELEASE}"
+	[[ -n ${KV_EXTRA} ]] && EXTRAVERSION=".${KV_EXTRA}${EXTRAVERSION}"
+
+	if [[ -n ${K_PREPATCHED} ]]; then
+		EXTRAVERSION="${EXTRAVERSION}-${PN/-*}${PR/r}"
+	elif [[ "${ETYPE}" = "sources" ]]; then
+		# For some sources we want to use the PV in the extra version
+		# This is because upstream releases with a completely different
+		# versioning scheme.
+		case ${PN/-*} in
+		     wolk) K_USEPV=1;;
+		  vserver) K_USEPV=1;;
+		esac
+
+		[[ -z ${K_NOUSENAME} ]] && EXTRAVERSION="${EXTRAVERSION}-${PN/-*}"
+		[[ -n ${K_USEPV} ]]     && EXTRAVERSION="${EXTRAVERSION}-${PV//_/-}"
+		[[ -n ${PR//r0} ]]      && EXTRAVERSION="${EXTRAVERSION}-${PR}"
+	fi
+
+	# -rc-bk pulls can be achieved by specifying CKV
+	# for example:
+	#   CKV="2.6.11_rc3_pre2"
+	# will pull:
+	#   linux-2.6.10.tar.bz2 & patch-2.6.11-rc3.bz2 & patch-2.6.11-rc3-bk2.bz2
+
+	if [[ ${RELEASETYPE} == -rc ]] || [[ ${RELEASETYPE} == -pre ]]; then
+		OKV="${KV_MAJOR}.${KV_MINOR}.$((${KV_PATCH} - 1))"
+		KERNEL_URI="mirror://kernel/linux/kernel/v${KV_MAJOR}.${KV_MINOR}/testing/patch-${CKV//_/-}.bz2
+					mirror://kernel/linux/kernel/v${KV_MAJOR}.${KV_MINOR}/linux-${OKV}.tar.bz2"
+		UNIPATCH_LIST_DEFAULT="${DISTDIR}/patch-${CKV//_/-}.bz2"
+	fi
+
+	if [[ ${RELEASETYPE} == -bk ]]; then
+		KERNEL_URI="mirror://kernel/linux/kernel/v${KV_MAJOR}.${KV_MINOR}/snapshots/patch-${OKV}${RELEASE}.bz2
+					mirror://kernel/linux/kernel/v${KV_MAJOR}.${KV_MINOR}/linux-${OKV}.tar.bz2"
+		UNIPATCH_LIST_DEFAULT="${DISTDIR}/patch-${OKV}${RELEASE}.bz2"
+	fi
+
+	if [[ ${RELEASETYPE} == -rc-bk ]]; then
+		OKV="${KV_MAJOR}.${KV_MINOR}.$((${KV_PATCH} - 1))"
+		KERNEL_URI="mirror://kernel/linux/kernel/v${KV_MAJOR}.${KV_MINOR}/snapshots/patch-${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}${RELEASE}.bz2
+					mirror://kernel/linux/kernel/v${KV_MAJOR}.${KV_MINOR}/testing/patch-${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}${RELEASE/-bk*}.bz2
+					mirror://kernel/linux/kernel/v${KV_MAJOR}.${KV_MINOR}/linux-${OKV}.tar.bz2"
+		UNIPATCH_LIST_DEFAULT="${DISTDIR}/patch-${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}${RELEASE/-bk*}.bz2 ${DISTDIR}/patch-${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}${RELEASE}.bz2"
+	fi
+
+	if [[ -n ${KV_EXTRA} ]]; then
+		OKV="${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}"
+		KERNEL_URI="mirror://kernel/linux/kernel/v${KV_MAJOR}.${KV_MINOR}/patch-${CKV}.bz2
+					mirror://kernel/linux/kernel/v${KV_MAJOR}.${KV_MINOR}/linux-${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}.tar.bz2"
+		UNIPATCH_LIST_DEFAULT="${DISTDIR}/patch-${CKV}.bz2"
+	fi
+
+	KV_FULL=${OKV}${EXTRAVERSION}
+
+	# we will set this for backwards compatibility.
+	S=${WORKDIR}/linux-${KV_FULL}
+	KV=${KV_FULL}
+}
+
 kernel_is() {
-	[[ -z ${OKV} ]] && return 1	
+	[[ -z ${OKV} ]] && detect_version	
 	local operator test value x=0 y=0 z=0
 
 	case ${1} in
@@ -102,7 +213,6 @@ kernel_is() {
 
 	[ ${test} ${operator} ${value} ] && return 0 || return 1
 }
-
 
 kernel_is_2_4() {
 	kernel_is 2 4
@@ -151,12 +261,17 @@ fi
 # Unpack functions
 #==============================================================
 unpack_2_4() {
+	# Kernel ARCH != portage ARCH
+	local ARCH=$(tc-arch-kernel)	
+
 	cd ${S}
 	# this file is required for other things to build properly,
 	# so we autogenerate it
 	make mrproper || die "make mrproper died"
 	make include/linux/version.h || die "make include/linux/version.h failed"
 	echo ">>> version.h compiled successfully."
+
+	ARCH=$(tc-arch)
 }
 
 universal_unpack() {
@@ -629,117 +744,6 @@ getfilevar() {
 		 
 		ARCH=${xarch}
 	fi
-}
-
-detect_version() {
-	# this function will detect and set
-	# - OKV: Original Kernel Version (2.6.0/2.6.0-test11)
-	# - KV: Kernel Version (2.6.0-gentoo/2.6.0-test11-gentoo-r1)
-	# - EXTRAVERSION: The additional version appended to OKV (-gentoo/-gentoo-r1)
-
-	if [[ -n ${KV_FULL} ]]; then
-		# we will set this for backwards compatibility.
-		KV=${KV_FULL}
-
-		# we know KV_FULL so lets stop here. but not without resetting S
-		S=${WORKDIR}/linux-${KV_FULL}
-		return
-	fi
-
-	# CKV is used as a comparison kernel version, which is used when
-	# PV doesnt reflect the genuine kernel version.
-	# this gets set to the portage style versioning. ie:
-	#   CKV=2.6.11_rc4
-	CKV=${CKV:-${PV}}
-	OKV=${OKV:-${CKV}}
-	OKV=${OKV/_beta/-test}
-	OKV=${OKV/_rc/-rc}
-	OKV=${OKV/-r*}
-	OKV=${OKV/_p*}
-
-	KV_MAJOR=$(get_version_component_range 1 ${OKV})
-	KV_MINOR=$(get_version_component_range 2 ${OKV})
-
-	if [[ ${KV_MAJOR}${KV_MINOR}${KV_PATCH} -ge 269 ]]; then
-		KV_PATCH=$(get_version_component_range 3 ${OKV})
-		KV_EXTRA=$(get_version_component_range 4- ${OKV})
-		KV_EXTRA=${KV_EXTRA/[-_]*}
-	else
-		KV_PATCH=$(get_version_component_range 3- ${OKV})
-	fi
-	KV_PATCH=${KV_PATCH/[-_]*}
-
-	KERNEL_URI="mirror://kernel/linux/kernel/v${KV_MAJOR}.${KV_MINOR}/linux-${OKV}.tar.bz2"
-
-	RELEASE=${CKV/${OKV}}
-	RELEASE=${RELEASE/_beta}
-	RELEASE=${RELEASE/_rc/-rc}
-	RELEASE=${RELEASE/_pre/-pre}
-	kernel_is_2_6 && RELEASE=${RELEASE/-pre/-bk}
-	RELEASETYPE=${RELEASE//[0-9]}
-
-	# Now we know that RELEASE is the -rc/-bk
-	# and RELEASETYPE is the same but with its numerics stripped
-	# we can work on better sorting EXTRAVERSION.
-	# first of all, we add the release
-	EXTRAVERSION="${RELEASE}"
-	[[ -n ${KV_EXTRA} ]] && EXTRAVERSION=".${KV_EXTRA}${EXTRAVERSION}"
-
-	if [[ -n ${K_PREPATCHED} ]]; then
-		EXTRAVERSION="${EXTRAVERSION}-${PN/-*}${PR/r}"
-	elif [[ "${ETYPE}" = "sources" ]]; then
-		# For some sources we want to use the PV in the extra version
-		# This is because upstream releases with a completely different
-		# versioning scheme.
-		case ${PN/-*} in
-		     wolk) K_USEPV=1;;
-		  vserver) K_USEPV=1;;
-		esac
-
-		[[ -z ${K_NOUSENAME} ]] && EXTRAVERSION="${EXTRAVERSION}-${PN/-*}"
-		[[ -n ${K_USEPV} ]]     && EXTRAVERSION="${EXTRAVERSION}-${PV//_/-}"
-		[[ -n ${PR//r0} ]]      && EXTRAVERSION="${EXTRAVERSION}-${PR}"
-	fi
-
-	KV_FULL=${OKV}${EXTRAVERSION}
-
-	# -rc-bk pulls can be achieved by specifying CKV
-	# for example:
-	#   CKV="2.6.11_rc3_pre2"
-	# will pull:
-	#   linux-2.6.10.tar.bz2 & patch-2.6.11-rc3.bz2 & patch-2.6.11-rc3-bk2.bz2
-
-	if [[ ${RELEASETYPE} == -rc ]] || [[ ${RELEASETYPE} == -pre ]]; then
-		OKV="${KV_MAJOR}.${KV_MINOR}.$((${KV_PATCH} - 1))"
-		KERNEL_URI="mirror://kernel/linux/kernel/v${KV_MAJOR}.${KV_MINOR}/testing/patch-${CKV//_/-}.bz2
-					mirror://kernel/linux/kernel/v${KV_MAJOR}.${KV_MINOR}/linux-${OKV}.tar.bz2"
-		UNIPATCH_LIST_DEFAULT="${DISTDIR}/patch-${CKV//_/-}.bz2"
-	fi
-
-	if [[ ${RELEASETYPE} == -bk ]]; then
-		KERNEL_URI="mirror://kernel/linux/kernel/v${KV_MAJOR}.${KV_MINOR}/snapshots/patch-${OKV}${RELEASE}.bz2
-					mirror://kernel/linux/kernel/v${KV_MAJOR}.${KV_MINOR}/linux-${OKV}.tar.bz2"
-		UNIPATCH_LIST_DEFAULT="${DISTDIR}/patch-${OKV}${RELEASE}.bz2"
-	fi
-
-	if [[ ${RELEASETYPE} == -rc-bk ]]; then
-		OKV="${KV_MAJOR}.${KV_MINOR}.$((${KV_PATCH} - 1))"
-		KERNEL_URI="mirror://kernel/linux/kernel/v${KV_MAJOR}.${KV_MINOR}/snapshots/patch-${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}${RELEASE}.bz2
-					mirror://kernel/linux/kernel/v${KV_MAJOR}.${KV_MINOR}/testing/patch-${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}${RELEASE/-bk*}.bz2
-					mirror://kernel/linux/kernel/v${KV_MAJOR}.${KV_MINOR}/linux-${OKV}.tar.bz2"
-		UNIPATCH_LIST_DEFAULT="${DISTDIR}/patch-${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}${RELEASE/-bk*}.bz2 ${DISTDIR}/patch-${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}${RELEASE}.bz2"
-	fi
-
-	if [[ -n ${KV_EXTRA} ]]; then
-		OKV="${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}"
-		KERNEL_URI="mirror://kernel/linux/kernel/v${KV_MAJOR}.${KV_MINOR}/patch-${CKV}.bz2
-					mirror://kernel/linux/kernel/v${KV_MAJOR}.${KV_MINOR}/linux-${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}.tar.bz2"
-		UNIPATCH_LIST_DEFAULT="${DISTDIR}/patch-${CKV}.bz2"
-	fi
-
-	# we will set this for backwards compatibility.
-	S=${WORKDIR}/linux-${KV_FULL}
-	KV=${KV_FULL}
 }
 
 detect_arch() {
