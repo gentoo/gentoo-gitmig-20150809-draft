@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/amap/amap-4.8.ebuild,v 1.1 2005/02/22 10:52:18 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/amap/amap-4.8.ebuild,v 1.2 2005/04/07 20:54:35 vanquirius Exp $
 
 inherit eutils
 
@@ -22,7 +22,7 @@ src_unpack() {
 	cd ${S}
 	sed -i \
 		-e 's:/usr/local:/usr:' \
-		-e '/AMAP_APPDEF_PATH/s:/bin:/share/amap:' \
+		-e '/AMAP_APPDEF_PATH/s:/etc:/share/amap:' \
 		amap.h || die "sed amap.h failed"
 
 	rm -rf pcre-3.9
