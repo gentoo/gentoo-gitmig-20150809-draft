@@ -2,7 +2,7 @@ MD5 7d38ff4b27a929c6429bd75b9f6f66e5 ChangeLog 2202
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 2b7fe3bd0ee97e148829af8bbcddcf40 pkgconfig-0.12.0.ebuild 775
 MD5 c32c3402129122354285e449b9b29674 pkgconfig-0.14.0.ebuild 678
-MD5 415b4c1f4ab1c39b61682d191fd48494 pkgconfig-0.15.0.ebuild 824
+MD5 f89b6db45fcce60182b1a5e7ded55c24 pkgconfig-0.15.0.ebuild 834
 MD5 21fd2fb13663149de29865bedd90dc27 files/digest-pkgconfig-0.12.0 68
 MD5 c762315d2708042b210fde1f6479810b files/digest-pkgconfig-0.14.0 68
 MD5 488ceb4d90374d8efcb7f13d9ae6aaa6 files/digest-pkgconfig-0.15.0 68

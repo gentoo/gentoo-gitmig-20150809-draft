@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig/pkgconfig-0.15.0.ebuild,v 1.23 2005/04/07 00:49:19 dostrow Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig/pkgconfig-0.15.0.ebuild,v 1.24 2005/04/07 04:00:00 dostrow Exp $
 
 inherit gnuconfig flag-o-matic
 
@@ -19,7 +19,9 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	gnuconfig_update
-	(use ppc64 && use hardened) && replace-flags -O[2-3] -O1
+	if use ppc64 && use hardened; then
+		replace-flags -O[2-3] -O1
+	fi
 }
 
 src_install() {
