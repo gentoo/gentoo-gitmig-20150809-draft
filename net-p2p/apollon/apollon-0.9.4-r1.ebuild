@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/apollon/apollon-0.9.4-r1.ebuild,v 1.4 2004/09/28 19:34:48 centic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/apollon/apollon-0.9.4-r1.ebuild,v 1.5 2005/04/07 16:45:53 blubb Exp $
 
 inherit kde
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/apollon/${MY_P}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~amd64 ~ppc"
+KEYWORDS="x86 amd64 ~ppc"
 IUSE=""
 
 DEPEND=">=net-p2p/gift-0.11.4"

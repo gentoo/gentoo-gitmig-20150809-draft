@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/gift-openft
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift-openft/ChangeLog,v 1.26 2005/02/02 16:56:54 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift-openft/ChangeLog,v 1.27 2005/04/07 16:47:59 blubb Exp $
+
+  07 Apr 2005; Simon Stelling <blubb@gentoo.org> gift-openft-0.2.1.4.ebuild:
+  stable on amd64
 
   02 Feb 2005; Jon Hood <squinky86@gentoo.org> gift-openft-0.2.1.5.ebuild:
   Fix postinstall information.

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift-openft/gift-openft-0.2.1.4.ebuild,v 1.7 2005/02/02 16:56:54 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift-openft/gift-openft-0.2.1.4.ebuild,v 1.8 2005/04/07 16:47:59 blubb Exp $
 
 IUSE="berkdb"
 DESCRIPTION="The giFT OpenFT plugin"
@@ -9,7 +9,7 @@ SRC_URI="mirror://sourceforge/gift/${P}.tar.bz2"
 RESTRICT="nomirror"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc ~ppc ~amd64"
+KEYWORDS="x86 sparc ~ppc amd64"
 
 DEPEND="virtual/libc
 	dev-util/pkgconfig

@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/apollon
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/apollon/ChangeLog,v 1.15 2005/01/01 02:03:42 weeve Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/apollon/ChangeLog,v 1.16 2005/04/07 16:45:53 blubb Exp $
+
+  07 Apr 2005; Simon Stelling <blubb@gentoo.org> apollon-0.9.4-r1.ebuild:
+  stable on amd64
 
   31 Dec 2004; Jason Wever <weeve@gentoo.org> apollon-1.0.1.ebuild:
   Added ~sparc keyword.
