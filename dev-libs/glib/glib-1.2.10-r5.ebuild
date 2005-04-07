@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-1.2.10-r5.ebuild,v 1.39 2005/02/02 21:46:24 j4rg0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-1.2.10-r5.ebuild,v 1.40 2005/04/07 04:42:23 dostrow Exp $
 
 inherit libtool flag-o-matic eutils gnuconfig
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.gtk.org/pub/gtk/v1.2/${P}.tar.gz
 LICENSE="LGPL-2.1"
 SLOT="1"
 KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 ppc-macos s390 sh sparc x86"
-IUSE=""
+IUSE="hardened"
 
 DEPEND="virtual/libc"
 
@@ -30,6 +30,13 @@ src_unpack() {
 		darwintoolize
 		gnuconfig_update
 	fi
+
+	if use ppc64 && use hardened; then
+		replace-flags -O[2-3] -O1
+	fi
+
+	append-ldflags -ldl
+						
 }
 
 src_compile() {

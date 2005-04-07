@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/glib
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.134 2005/04/07 01:46:02 dostrow Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.135 2005/04/07 04:42:23 dostrow Exp $
+
+  07 Apr 2005; Daniel Ostrow <dostrow@gentoo.org> glib-1.2.10-r5.ebuild:
+  More hardened ppc64 stuff.
 
   06 Apr 2005; Daniel Ostrow <dostrow@gentoo.org> glib-2.6.3.ebuild:
   Patches for ppc64 hardened
