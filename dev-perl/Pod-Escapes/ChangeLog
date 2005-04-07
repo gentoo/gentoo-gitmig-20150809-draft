@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Pod-Escapes
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Pod-Escapes/ChangeLog,v 1.8 2004/12/30 00:19:41 ciaranm Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Pod-Escapes/ChangeLog,v 1.9 2005/04/07 20:48:55 hansmi Exp $
+
+  07 Apr 2005; Michael Hanselmann <hansmi@gentoo.org>
+  Pod-Escapes-1.04.ebuild:
+  Stable on ppc.
 
   30 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance

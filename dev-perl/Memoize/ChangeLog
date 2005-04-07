@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Memoize
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Memoize/ChangeLog,v 1.14 2004/12/30 00:04:37 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Memoize/ChangeLog,v 1.15 2005/04/07 20:39:59 hansmi Exp $
+
+  07 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> Memoize-1.01.ebuild:
+  Stable on ppc.
 
   30 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance

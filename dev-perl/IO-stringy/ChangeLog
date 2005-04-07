@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/IO-stringy
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-stringy/ChangeLog,v 1.17 2005/04/01 17:41:42 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-stringy/ChangeLog,v 1.18 2005/04/07 20:55:09 hansmi Exp $
+
+  07 Apr 2005; Michael Hanselmann <hansmi@gentoo.org>
+  IO-stringy-2.109.ebuild:
+  Stable on ppc.
 
   01 Apr 2005; Simon Stelling <blubb@gentoo.org> IO-stringy-2.109.ebuild:
   stable on amd64

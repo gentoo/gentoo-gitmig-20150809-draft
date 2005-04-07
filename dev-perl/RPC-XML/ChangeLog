@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/RPC-XML
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/RPC-XML/ChangeLog,v 1.16 2005/01/04 13:31:42 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/RPC-XML/ChangeLog,v 1.17 2005/04/07 20:36:14 hansmi Exp $
+
+  07 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> RPC-XML-0.53.ebuild:
+  Stable on ppc.
 
   04 Jan 2005; Michael Cummings <mcummings@gentoo.org>
   RPC-XML-0.40-r1.ebuild, RPC-XML-0.40.ebuild, RPC-XML-0.53.ebuild,

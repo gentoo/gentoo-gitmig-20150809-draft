@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/XML-DT
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-DT/ChangeLog,v 1.27 2005/04/01 18:03:09 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-DT/ChangeLog,v 1.28 2005/04/07 20:47:04 hansmi Exp $
+
+  07 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> XML-DT-0.32.ebuild:
+  Stable on ppc.
 
   01 Apr 2005; Simon Stelling <blubb@gentoo.org> XML-DT-0.32.ebuild,
   XML-DT-0.37.ebuild:

@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Time-Local
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Time-Local/ChangeLog,v 1.12 2005/04/07 14:32:09 nigoro Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Time-Local/ChangeLog,v 1.13 2005/04/07 20:44:43 hansmi Exp $
+
+  07 Apr 2005; Michael Hanselmann <hansmi@gentoo.org>
+  Time-Local-1.10.ebuild:
+  Stable on ppc.
 
   07 Apr 2005; Yuta SATOH <nigoro@gentoo.org> Time-Local-1.10.ebuild:
   Stable on ppc64

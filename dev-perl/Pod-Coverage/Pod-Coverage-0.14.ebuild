@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Pod-Coverage/Pod-Coverage-0.14.ebuild,v 1.12 2005/04/01 18:01:40 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Pod-Coverage/Pod-Coverage-0.14.ebuild,v 1.13 2005/04/07 20:50:45 hansmi Exp $
 
 inherit perl-module
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://cpan/authors/id/R/RC/RCLAMP/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc sparc alpha amd64"
+KEYWORDS="x86 ppc sparc alpha amd64"
 IUSE=""
 SRC_TEST="do"
 

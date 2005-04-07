@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Test
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test/ChangeLog,v 1.7 2005/04/03 01:37:37 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test/ChangeLog,v 1.8 2005/04/07 20:37:37 hansmi Exp $
+
+  07 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> Test-1.25.ebuild:
+  Stable on ppc.
 
   02 Apr 2005; Michael Cummings <mcummings@gentoo.org> Test-1.25.ebuild:
   Marking stable for x86 and sparc
