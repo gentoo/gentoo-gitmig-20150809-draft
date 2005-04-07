@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/basc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/basc/ChangeLog,v 1.23 2005/03/14 22:03:47 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/basc/ChangeLog,v 1.24 2005/04/07 17:37:57 blubb Exp $
+
+  07 Apr 2005; Simon Stelling <blubb@gentoo.org> basc-1.5.9.ebuild:
+  added ~amd64
 
 *basc-1.5.9 (15 Mar 2005)
 
