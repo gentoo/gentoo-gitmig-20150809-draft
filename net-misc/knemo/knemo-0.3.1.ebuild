@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/knemo/knemo-0.3.1.ebuild,v 1.3 2005/03/25 20:51:48 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/knemo/knemo-0.3.1.ebuild,v 1.4 2005/04/07 21:40:56 cryos Exp $
 
 inherit kde
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://kde-apps.org/content/show.php?content=12956"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc ~sparc"
+KEYWORDS="x86 ~ppc ~sparc ~amd64"
 IUSE="wifi"
 
 RDEPEND="sys-apps/net-tools
