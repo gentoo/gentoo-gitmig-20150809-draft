@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/ximian-artwork/ximian-artwork-0.2.29.0.6.3.ebuild,v 1.11 2005/01/09 21:24:05 joem Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/ximian-artwork/ximian-artwork-0.2.29.0.6.3.ebuild,v 1.12 2005/04/07 17:20:37 blubb Exp $
 
 inherit rpm eutils
 
@@ -16,7 +16,7 @@ HOMEPAGE="http://www.ximian.com/xd2/"
 SRC_URI="ftp://ftp.ximian.com/pub/xd2/redhat-9-i386/source/${PN}-${MY_PV}-${RPM_V}.ximian.${XIMIAN_V}.src.rpm"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 sparc ~amd64 ppc"
+KEYWORDS="x86 sparc amd64 ppc"
 IUSE="xmms"
 
 DEPEND="sys-devel/autoconf

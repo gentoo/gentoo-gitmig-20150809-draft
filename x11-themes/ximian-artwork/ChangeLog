@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/ximian-artwork
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/ximian-artwork/ChangeLog,v 1.20 2005/01/09 21:24:05 joem Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/ximian-artwork/ChangeLog,v 1.21 2005/04/07 17:20:37 blubb Exp $
+
+  07 Apr 2005; Simon Stelling <blubb@gentoo.org>
+  ximian-artwork-0.2.29.0.6.3.ebuild:
+  stable on amd64
 
   09 Jan 2005; Joe McCann <joem@gentoo.org>
   ximian-artwork-0.2.29.0.6.3.ebuild:
