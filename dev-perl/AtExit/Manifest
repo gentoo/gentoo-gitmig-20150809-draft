@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 067b27a9ce07adc13a3e2c38c635ff6d AtExit-2.01.ebuild 521
-MD5 d92d0fa25fd215c5b638604426c69507 ChangeLog 531
+MD5 9dce92df40353f60b8ef52bb749433e1 ChangeLog 613
 MD5 139a98d9223620fbdd723a52394cec47 metadata.xml 308
+MD5 5b8d78752f135da4e3d96c9b400f1cf2 AtExit-2.01.ebuild 524
 MD5 428bdcf8f35fd4c1204aa0a1aa9fe9ae files/digest-AtExit-2.01 61
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
-
-iD8DBQFBHiP8I1lqEGTUzyQRAruVAJ9o9ho529Wn2f0WozXeEo5ugmCT1wCg12d0
-jvWFjqHd1aSlb6qhYFhEBNM=
-=DXG4
------END PGP SIGNATURE-----

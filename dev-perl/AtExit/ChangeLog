@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/AtExit
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/AtExit/ChangeLog,v 1.4 2004/08/14 14:37:33 swegener Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/AtExit/ChangeLog,v 1.5 2005/04/07 10:54:10 josejx Exp $
+
+  06 Apr 2005; Joseph Jezak <josejx@gentoo.org> AtExit-2.01.ebuild:
+  Marked ~ppc.
 
   14 Aug 2004; Sven Wegener <swegener@gentoo.org> AtExit-2.01.ebuild:
   Trimmed trailing whitespace.
