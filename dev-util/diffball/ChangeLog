@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/diffball
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/diffball/ChangeLog,v 1.12 2005/04/07 07:17:41 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/diffball/ChangeLog,v 1.13 2005/04/07 11:18:04 ferringb Exp $
+
+  07 Apr 2005; Brian Harring <ferringb@gentoo.org> -diffball-0.6.ebuild:
+  Yanked 0.6 due to potential segfault issue, same keywording is on 0.6.2 which 
+  is same code, plus the fix.
 
   07 Apr 2005; Brian Harring <ferringb@gentoo.org> diffball-0.6.2.ebuild:
   Bumped up for maintenance release fixing a few segfaults.
