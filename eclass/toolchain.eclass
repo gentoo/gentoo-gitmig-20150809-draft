@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.140 2005/04/07 04:46:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.141 2005/04/07 06:05:41 vapier Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -62,7 +62,7 @@ GCC_BRANCH_VER=$(get_version_component_range 1-2)
 GCCMAJOR=$(get_version_component_range 1)
 GCCMINOR=$(get_version_component_range 2)
 GCCMICRO=$(get_version_component_range 3)
-[[ -z ${BRANCH_UPDATE} ]] && BRANCH_UPDATE=$(get_version_component_range 4)
+[[ ${BRANCH_UPDATE-notset} == "notset" ]] && BRANCH_UPDATE=$(get_version_component_range 4)
 
 # According to gcc/c-cppbuiltin.c, GCC_CONFIG_VER MUST match this regex.
 # ([^0-9]*-)?[0-9]+[.][0-9]+([.][0-9]+)?([- ].*)?
