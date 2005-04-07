@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/net-snmp
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.90 2005/03/22 13:24:40 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.91 2005/04/07 16:00:34 blubb Exp $
+
+  07 Apr 2005; Simon Stelling <blubb@gentoo.org> net-snmp-5.2.ebuild:
+  stable on amd64
 
   22 Mar 2005; Aaron Walker <ka0ttic@gentoo.org> net-snmp-5.2.1.ebuild:
   Fix src_test access violation for bug 82342. Many thanks to soulse for
