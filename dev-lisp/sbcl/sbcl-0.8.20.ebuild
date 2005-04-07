@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-0.8.20.ebuild,v 1.2 2005/03/16 07:36:15 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-0.8.20.ebuild,v 1.3 2005/04/07 07:59:30 mkennedy Exp $
 
 inherit common-lisp-common-2 eutils
 
@@ -172,6 +172,7 @@ pkg_postinst() {
 # /usr/lib/sbcl/sbcl-dist.core		  - Plain SBCL image
 # /usr/lib/sbcl/sbcl-nocallbacks.core - CLC (Common Lisp Controller) image
 # /usr/lib/sbcl/sbcl.core			  - CLC image w/ callbacks support
+
 }
 
 pkg_postrm() {
