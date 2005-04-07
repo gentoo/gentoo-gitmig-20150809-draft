@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.139 2005/04/07 00:42:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.140 2005/04/07 04:46:48 vapier Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -563,7 +563,6 @@ create_hardenednopie_specs_file() {
 }
 
 split_out_specs_files() {
-	want_split_specs || return 1
 	if hardened_gcc_works ; then
 		create_hardened_specs_file
 		create_vanilla_specs_file
@@ -1249,7 +1248,7 @@ gcc_src_compile() {
 
 	# Do not create multiple specs files for PIE+SSP if boundschecking is in
 	# USE, as we disable PIE+SSP when it is.
-	if [[ ${ETYPE} == "gcc-compiler" ]] && [[ ${SPLIT_SPECS} == "true" ]] && ! want_boundschecking ; then
+	if [[ ${ETYPE} == "gcc-compiler" ]] && want_split_specs ; then
 		split_out_specs_files || die "failed to split out specs"
 	fi
 
