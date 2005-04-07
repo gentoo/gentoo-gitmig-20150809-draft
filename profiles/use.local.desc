@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1068 2005/04/07 12:11:36 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1069 2005/04/07 14:19:44 hollow Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -731,6 +731,7 @@ sys-boot/yaboot-static:ibm - Indicate the usage of ibm based ppc64 hardware
 sys-cluster/heartbeat:ldirectord - Adds support for ldiretord, use enabled because it has a lot of deps
 sys-cluster/magma-plugins:nogulm - Removes gulm support to magma-plugins
 sys-cluster/ocfs:aio - Add aio support
+sys-cluster/util-vserver:glibc - Compile with glibc instead of dietlibc
 sys-devel/binutils:multislot - Allow for multiple versions of binutils to be emerged at once for same CTARGET
 sys-devel/binutils:multitarget - Adds support to binutils for cross compiling (does not work with gas)
 sys-devel/gcc-mips64:ip28 - Enable building a compiler capable of building an SGI IP28 kernel
