@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 cface833159f4189bfe2e799e137e814 ChangeLog 1521
+MD5 4f2ddd02ba57f2ae014b44187d7c83ae ChangeLog 1608
 MD5 ec2f84816306825d125d0c01bd86758d metadata.xml 163
 MD5 8ae8edd5fcd5b218e7e9552f9a3e8672 rp-l2tp-0.3-r1.ebuild 909
-MD5 ca632e80334729d2372cce737bde37e6 rp-l2tp-0.4.ebuild 1015
+MD5 259c2c4a67d052d9819612486cea05f8 rp-l2tp-0.4.ebuild 1013
 MD5 bf2a5a28edcc6ffeccae338ebc4b62b2 files/digest-rp-l2tp-0.3-r1 133
 MD5 0ce9c1cb5b3c8e769e422f4f6d43ba51 files/digest-rp-l2tp-0.4 63
-MD5 253968a2351a4312da37ef20131502a5 files/rp-l2tpd-init 484
 MD5 e1b913c39a0c199d38732c4ba9ab5338 files/rp-l2tp-0.4-gentoo.diff 8856
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBpQKzjtv59x0+BrURAgLWAJ9Fv3TlDi8lFnCpY++h9t/3Id9ndQCgvF3N
-7eaBEutJjVUCagSWRK5qdjQ=
-=5Vsr
------END PGP SIGNATURE-----
+MD5 253968a2351a4312da37ef20131502a5 files/rp-l2tpd-init 484
