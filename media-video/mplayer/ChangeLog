@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.288 2005/04/02 06:07:24 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.289 2005/04/07 15:05:12 luckyduck Exp $
+
+  07 Apr 2005; Jan Brinkmann <luckyduck@gentoo.org>
+  mplayer-1.0_pre6-r1.ebuild, mplayer-1.0_pre6-r2.ebuild:
+  MAKEOPTS -jN has to be -j1 for successful compilation. fixes #86245
 
   02 Apr 2005; Chris White <chriswhite@gentoo.org>
   mplayer-1.0_pre6-r2.ebuild:

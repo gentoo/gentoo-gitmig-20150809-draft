@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre6-r1.ebuild,v 1.4 2005/03/20 04:01:13 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre6-r1.ebuild,v 1.5 2005/04/07 15:05:12 luckyduck Exp $
 
 inherit eutils flag-o-matic kernel-mod
 
@@ -451,6 +451,10 @@ src_compile() {
 		--with-reallibdir=${REALLIBDIR} \
 		--with-x11incdir=/usr/X11R6/include \
 		${myconf} || die
+
+	# we run into problems if -jN > -j1
+	# see #86245
+	MAKEOPTS="${MAKEOPTS} -j1"
 
 	einfo "Make"
 	make depend && emake || die "Failed to build MPlayer!"
