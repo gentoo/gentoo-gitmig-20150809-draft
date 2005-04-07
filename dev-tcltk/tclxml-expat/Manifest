@@ -1,8 +1,18 @@
-MD5 405080329228222dbf104d0df3446e12 ChangeLog 1184
-MD5 dcf46cbd7233424fffd00d49a4fc1daf tclxml-expat-2.4.ebuild 704
-MD5 5738fcaf6eee3155eb15cb236fff3846 tclxml-expat-2.5.ebuild 696
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 8bdb43414718b0a12f62de6c8c558c1b tclxml-expat-2.5.ebuild 697
+MD5 2c89d40a50a205198edbc606d71fddf2 tclxml-expat-2.4.ebuild 715
+MD5 c8c1e0f0cf8a270959d0fcc929897501 tclxml-expat-2.6.ebuild 697
+MD5 52d9999b796119c2c1da13d91720a0aa ChangeLog 1307
 MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
-MD5 31877ab89def986c1b5c01ecf8eb9d35 tclxml-expat-2.6.ebuild 696
 MD5 0a225320340157ce509a1645988f1a10 files/digest-tclxml-expat-2.4 62
 MD5 2770e7494e3f147c5a80579ff7334250 files/digest-tclxml-expat-2.5 62
 MD5 157b44d2d7c3d7a31afd230b30a9c2e0 files/digest-tclxml-expat-2.6 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCVTxu06ebR+OMO78RAqFuAJ9RKt9gcK5oD+o5xYtQb09aKTtarQCfeMRO
+cz6hEmU7SC+0CQzP1py2RBM=
+=wnsp
+-----END PGP SIGNATURE-----

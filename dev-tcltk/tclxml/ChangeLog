@@ -1,6 +1,10 @@
 # ChangeLog for dev-tcltk/tclxml
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclxml/ChangeLog,v 1.17 2005/04/05 21:06:05 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclxml/ChangeLog,v 1.18 2005/04/07 13:56:01 luckyduck Exp $
+
+  07 Apr 2005; Jan Brinkmann <luckyduck@gentoo.org> tclxml-2.4.ebuild,
+  tclxml-2.6.ebuild:
+  added ~amd64 to KEYWORDS, fixes #88183
 
   05 Apr 2005; Gustavo Zacarias <gustavoz@gentoo.org> tclxml-2.6.ebuild:
   Stable on sparc
