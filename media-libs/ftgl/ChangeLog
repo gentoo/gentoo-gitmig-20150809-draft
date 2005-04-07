@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/ftgl
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ftgl/ChangeLog,v 1.1 2004/12/17 11:29:59 mr_bones_ Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ftgl/ChangeLog,v 1.2 2005/04/07 23:38:14 cryos Exp $
+
+  07 Apr 2005; Marcus D. Hanwell <cryos@gentoo.org> ftgl-2.1.2.ebuild:
+  Marked ~amd64.
 
 *ftgl-2.1.2 (17 Dec 2004)
 

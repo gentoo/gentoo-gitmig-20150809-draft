@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 b9ac9145e9baf74157c47cf626ef5836 ChangeLog 409
-MD5 c18941769b2de415ad1be68aa779f39d ftgl-2.1.2.ebuild 1066
+MD5 b3daca3de82a0fbe3dc600dad06078ec ftgl-2.1.2.ebuild 1072
+MD5 2f34b458ef5377bf8eae45a68e570e00 ChangeLog 494
 MD5 8c117c40c473625c657ecb59b535caa1 files/2.1.2-ftgl.pc.in.patch 334
 MD5 2c668ede6711942506740cffd25b1245 files/digest-ftgl-2.1.2 62
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFB0KLIroRuSHgZdywRAsbsAJ0WcmAJCm3ClF+w1Hz15BYL/3oC+ACeO5J8
-re/5PIfnR3mxwJ99v/RQsJ8=
-=ibIV
+iD8DBQFCVcR0ntT9W3vfTuoRAgqKAJ0eSMGUQtTTMTc3rtE+MjZyNPkj4wCfbvJN
+u9jhRIUfdCRVCsrlZI92r4U=
+=U4/D
 -----END PGP SIGNATURE-----
