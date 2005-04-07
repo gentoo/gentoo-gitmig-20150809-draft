@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xalan/xalan-2.6.0-r2.ebuild,v 1.2 2005/04/02 19:22:59 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xalan/xalan-2.6.0-r2.ebuild,v 1.3 2005/04/07 17:09:48 luckyduck Exp $
 
 inherit java-pkg eutils
 
@@ -21,7 +21,7 @@ DEPEND=">=virtual/jdk-1.3
 RDEPEND=">=virtual/jdk-1.3
 	dev-java/javacup
 	dev-java/bcel
-	=dev-java/jakarta-regexp-1.3*
+	=dev-java/jakarta-regexp-1.3-r1
 	=dev-java/bsf-2.3*
 	>=dev-java/xerces-2.6.2-r1"
 
