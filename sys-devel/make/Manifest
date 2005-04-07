@@ -1,6 +1,6 @@
 MD5 84feff63b90523a45fc23738de94fec0 ChangeLog 2842
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 68a44ced92e6f2d4e11a0f8f1db678cd make-3.80-r1.ebuild 1187
+MD5 0912f2fe6937bf25423371909fbdc8e0 make-3.80-r1.ebuild 1197
 MD5 3adc1d9cc832e98b435305f9f466279b files/3.80-memory.patch 2248
 MD5 6c9afd5ac674f6a9703fdab9e49846c4 files/digest-make-3.80-r1 62
 MD5 ea2daf4e61545882b6ba566f2b9132a2 files/make-3.80-ppc64-hardened-clock_gettime.patch 514

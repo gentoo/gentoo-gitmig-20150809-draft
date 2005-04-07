@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/make/make-3.80-r1.ebuild,v 1.3 2005/04/07 01:16:20 dostrow Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/make/make-3.80-r1.ebuild,v 1.4 2005/04/07 04:01:22 dostrow Exp $
 
 inherit gnuconfig eutils flag-o-matic
 
@@ -21,7 +21,9 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/${PV}-memory.patch
-	(use ppc64 && use hardened) && epatch ${FILESDIR}/make-3.80-ppc64-hardened-clock_gettime.patch
+	if use ppc64 && use hardened; then
+		epatch ${FILESDIR}/make-3.80-ppc64-hardened-clock_gettime.patch
+	fi
 	# Detect mips and uclibc systems properly
 	gnuconfig_update
 }
