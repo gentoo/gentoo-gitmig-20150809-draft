@@ -1,6 +1,19 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.129 2005/04/02 22:53:44 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.130 2005/04/07 10:26:07 eradicator Exp $
+
+*gentoo-sources-2.6.11-r6 (07 Apr 2005)
+
+  07 Apr 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  +gentoo-sources-2.6.11-r6.ebuild:
+  Fixed the sparc ffb.h patch to apply correctly. Removed the dm patches as
+  they caused oopses under certain circumstances. Fix p630 LPAR support on
+  ppc64. Fix deadlocks in rwsem code. Fix congestion in TCP BIC algorithm.
+  Fixes a race in the ext3 journal code. Fix matroxfb endianness issues for
+  ppc64. Fix oops when mismatching alsa-lib and alsa driver versions. Fix
+  hardlink count in /proc/<pid> directories. Fix hardlink count in
+  /proc/<pid>/task directories. Bump inotify to version 0.22-2. Stable amd64
+  for security fixes.
 
   02 Apr 2005; Daniel Drake <dsd@gentoo.org>
   gentoo-sources-2.6.11-r5.ebuild:
@@ -12,8 +25,8 @@
   -gentoo-sources-2.6.9-r14.ebuild, -gentoo-sources-2.6.11.ebuild,
   -gentoo-sources-2.6.11-r1.ebuild, -gentoo-sources-2.6.11-r2.ebuild,
   +gentoo-sources-2.6.11-r5.ebuild:
-  Update to 2.6.11.5 and 2.6.11.6. Readd sparc patches. Update skge driver to
-  0.6. Update inotify to 0.21-4.
+  Update to 2.6.11.5 and 2.6.11.6. Added sparc patches for serial and fb.
+  Update skge driver to 0.6. Update inotify to 0.21-4.
 
   30 Mar 2005; Marcus D. Hanwell <cryos@gentoo.org>
   gentoo-sources-2.6.11-r3.ebuild:
