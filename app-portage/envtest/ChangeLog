@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/envtest
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/envtest/ChangeLog,v 1.4 2005/01/01 15:51:31 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/envtest/ChangeLog,v 1.5 2005/04/07 23:46:51 genone Exp $
+
+  07 Apr 2005; Marius Mauch <genone@gentoo.org> envtest-1.2.3-r4.ebuild:
+  amd64+x86, removing SRC_URI and HOMEPAGE
 
 *envtest-1.2.3-r4 (15 Aug 2003)
 
