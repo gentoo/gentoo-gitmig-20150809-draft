@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/ufed/ufed-0.36.ebuild,v 1.2 2005/04/06 14:01:44 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/ufed/ufed-0.36.ebuild,v 1.3 2005/04/07 08:49:59 truedfx Exp $
 
 DESCRIPTION="Gentoo Linux USE flags editor"
 HOMEPAGE="http://www.gentoo.org/"
@@ -13,7 +13,7 @@ KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha ~arm ~hppa ~amd64 ~ia64 ~ppc64"
 IUSE=""
 
 RDEPEND="dev-lang/perl
-	>=dev-util/dialog-1.0.20040731
+	>=dev-util/dialog-1.0.20050206
 	dev-perl/TermReadKey
 	sys-apps/grep"
 
