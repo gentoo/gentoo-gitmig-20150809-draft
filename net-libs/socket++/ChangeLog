@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/socket++
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/socket++/ChangeLog,v 1.7 2005/03/04 00:55:42 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/socket++/ChangeLog,v 1.8 2005/04/07 12:31:28 ka0ttic Exp $
+
+  07 Apr 2005; Aaron Walker <ka0ttic@gentoo.org> socket++-1.12.12-r1.ebuild:
+  Marked stable on x86.
 
 *socket++-1.12.12-r1 (03 Mar 2005)
 
