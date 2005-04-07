@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/unixODBC-2.2.6.ebuild,v 1.14 2005/02/07 01:47:15 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/unixODBC-2.2.6.ebuild,v 1.15 2005/04/07 13:25:16 spider Exp $
 
 DESCRIPTION="ODBC Interface for Linux"
 HOMEPAGE="http://www.unixodbc.org/"
@@ -22,7 +22,7 @@ src_compile() {
 
 	if use qt
 	then
-		myconf="--enable-gui=yes --x-libraries=/usr/lib"
+		myconf="--enable-gui=yes --x-libraries=/usr/lib --x-headers=/usr/include/X11"
 	else
 		myconf="--enable-gui=no"
 	fi
