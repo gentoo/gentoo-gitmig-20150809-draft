@@ -1,10 +1,20 @@
-MD5 096dbc8ab31134403dcfa3fc50b45d12 ChangeLog 2489
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 151e50e8e53ea11a2870e874552532f1 squidguard-1.2.0-r1.ebuild 1944
+MD5 97008d0641309bd2163f1a62fcc43f25 ChangeLog 2605
 MD5 f55c49f33b1e7d83d7b02909275891d2 metadata.xml 353
-MD5 2a04f7af4567010bdefb531634830e5b squidguard-1.2.0-r1.ebuild 1939
 MD5 127270fbe0d0bfbc141ffaf56313f3e6 files/blockedsites 8
-MD5 bca506ead890af8fe52e0fdf5e73440f files/digest-squidguard-1.2.0-r1 69
-MD5 3e17e52277c56640bb3a9a24da57dae9 files/squidGuard.conf.blocksites 192
 MD5 0c3ba4835c98256ad8ee4bf3336eb277 files/squidGuard.conf.minimal 61
 MD5 5838403ff8fe47285fdc4235a53467ba files/squidguard-1.2.0-db4.patch 685
 MD5 71814cadfec6eed3d7ee2437fdd1f0ab files/squidguard-1.2.0-db41.patch 794
+MD5 bca506ead890af8fe52e0fdf5e73440f files/digest-squidguard-1.2.0-r1 69
+MD5 3e17e52277c56640bb3a9a24da57dae9 files/squidGuard.conf.blocksites 192
 MD5 d639b977d8cfd92f19913f1d9fa12564 files/squidguard-1.2.0-db42.patch 1348
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCVazSntT9W3vfTuoRAvCZAJ9+9mBvecn/VIb+Ro/LEicE1QBTiQCgoF7p
+b80F1sLtKHfUEytnOtVdzEo=
+=ovCL
+-----END PGP SIGNATURE-----
