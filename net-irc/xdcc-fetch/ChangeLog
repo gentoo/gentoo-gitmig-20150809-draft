@@ -1,0 +1,10 @@
+# ChangeLog for net-irc/xdcc-fetch
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xdcc-fetch/ChangeLog,v 1.1 2005/04/07 20:32:25 swegener Exp $
+
+*xdcc-fetch-1.409 (07 Apr 2005)
+
+  07 Apr 2005; Sven Wegener <swegener@gentoo.org> +metadata.xml,
+  +xdcc-fetch-1.409.ebuild:
+  Initial commit, thanks to Jeff Davidson in bug #78338.
+
