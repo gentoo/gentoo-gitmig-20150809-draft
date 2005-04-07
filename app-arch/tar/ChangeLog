@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/tar
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/ChangeLog,v 1.44 2005/03/27 00:38:33 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/ChangeLog,v 1.45 2005/04/07 01:49:24 vapier Exp $
+
+  07 Apr 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/tar-1.15.1-gcc4-test.patch, tar-1.15.1.ebuild:
+  Add patch from Fedora to fix tests with gcc4 #88214 by Ryan Hill.
 
   27 Mar 2005; Michael Hanselmann <hansmi@gentoo.org> tar-1.15.1.ebuild:
   Stable on ppc.

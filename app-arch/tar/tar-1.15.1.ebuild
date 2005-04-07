@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/tar-1.15.1.ebuild,v 1.6 2005/03/27 00:38:33 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/tar-1.15.1.ebuild,v 1.7 2005/04/07 01:49:24 vapier Exp $
 
 inherit flag-o-matic eutils
 
@@ -25,6 +25,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${PV}-flex-arg.patch
+	epatch "${FILESDIR}"/${P}-gcc4-test.patch
 }
 
 src_compile() {
