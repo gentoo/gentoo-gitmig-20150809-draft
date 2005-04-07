@@ -1,8 +1,18 @@
-MD5 37ad8a47e35550926b15f2e3bd0eb9bb ChangeLog 1631
-MD5 bd6bce47657289b599586646b49a76c1 Date-Leapyear-1.7.ebuild 703
-MD5 fc171a133d3d3ef68596b46989e05342 Date-Leapyear-1.7-r1.ebuild 705
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 a4d881204ef4b4de15ab7992ebe4a36d ChangeLog 1722
+MD5 544784d9dcafcddeb4415643e56bb40e Date-Leapyear-1.7-r1.ebuild 709
+MD5 04ae97c083a6408bda9a80f32e6527d3 Date-Leapyear-1.7.ebuild 706
+MD5 81f27b355dff517887494200b742cf1a Date-Leapyear-1.71.ebuild 738
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 93c5f34c5a99f29dcb087b4e07c93c39 Date-Leapyear-1.71.ebuild 738
+MD5 a658401638e7527f473cb82c5909c105 files/digest-Date-Leapyear-1.7 67
 MD5 a658401638e7527f473cb82c5909c105 files/digest-Date-Leapyear-1.7-r1 67
 MD5 109ca4de655ff3013cabe6cf9085a367 files/digest-Date-Leapyear-1.71 68
-MD5 a658401638e7527f473cb82c5909c105 files/digest-Date-Leapyear-1.7 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCVUUL60LfUIagIAkRAjbNAJ4lR5/Nl6rq22dwxMu8njwjh3BkOQCdGqRx
+moBdtx1Mi+z1kuh6/rxn9Pc=
+=JQx1
+-----END PGP SIGNATURE-----

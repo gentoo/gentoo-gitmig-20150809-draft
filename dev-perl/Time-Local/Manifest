@@ -1,10 +1,10 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 7b0dcd02ca3ce81e736cdf5f036a1bbf ChangeLog 1275
+MD5 48b376dfcea75184b7a2f0234860ac58 ChangeLog 1361
 MD5 ad590e8fd51313974bc45856d058031b Time-Local-1.05.ebuild 556
 MD5 f6716798d8aa05eb4cef035360e1482a Time-Local-1.07.ebuild 558
-MD5 bd57ba7ac2f056c0c5be79c68751eef0 Time-Local-1.10.ebuild 567
+MD5 24a9d1ca0a1f654150587585b4c6c994 Time-Local-1.10.ebuild 563
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 3f31838554c8303b856dfa2321b491f5 files/digest-Time-Local-1.05 66
 MD5 dffcec8b9f498b13ca67b0cb551d554a files/digest-Time-Local-1.07 66
@@ -12,7 +12,7 @@ MD5 418190d3eea5c695354ed8a054d462ee files/digest-Time-Local-1.10 66
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCT0VftG5z4I8BtQoRAhNPAKCLiMIblo+lWGzPj3Zv7OGol7O1LgCeLDFL
-onrbZxnRyHE+lwIZYF0SVzo=
-=f2dq
+iD8DBQFCVUSH60LfUIagIAkRAtcAAJ9zTAhVJdqTj14QubPYxoGhObsm6wCgtwrX
+ZTSeHLlEUdE8iyPRaWsSv18=
+=gorK
 -----END PGP SIGNATURE-----

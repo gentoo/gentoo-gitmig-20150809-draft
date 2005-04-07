@@ -1,8 +1,18 @@
-MD5 bff22ba362e3cd9aaa7b0774ca782b9f Date-ICal-1.72.ebuild 797
-MD5 434ca53acdc2cebdf640b6825c985136 ChangeLog 1508
-MD5 905cf49b45ec08e48342dbe3391311a3 Date-ICal-1.69-r1.ebuild 723
-MD5 bf2b7dd2f0e8dd5b6e377d0e41c4f3de Date-ICal-1.69.ebuild 720
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 e136456122cc1c5edc8e5d7530a4fd85 ChangeLog 1595
+MD5 797b3006a1b080965180dd9ae671b8c7 Date-ICal-1.69-r1.ebuild 726
+MD5 548d1b7bbb47ce361d3d211fdbedf14f Date-ICal-1.69.ebuild 723
+MD5 d67b07d6765c034a970587eb9e2ba02a Date-ICal-1.72.ebuild 796
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 5aabffbbc857bac0438ced3e230198c7 files/digest-Date-ICal-1.72 65
 MD5 2a427c048392507fd310f15bf2d62cbc files/digest-Date-ICal-1.69 65
 MD5 2a427c048392507fd310f15bf2d62cbc files/digest-Date-ICal-1.69-r1 65
+MD5 5aabffbbc857bac0438ced3e230198c7 files/digest-Date-ICal-1.72 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCVUWf60LfUIagIAkRAlImAKCnG8zX8ObLqMNY6dS/p6heDAaaGwCcCGbB
+m2kYEWoMLTqseBOBjwm7W14=
+=6RUV
+-----END PGP SIGNATURE-----
