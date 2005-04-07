@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-Net_Sieve
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_Sieve/ChangeLog,v 1.23 2005/04/06 19:43:18 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_Sieve/ChangeLog,v 1.24 2005/04/07 20:58:45 hansmi Exp $
+
+  07 Apr 2005; Michael Hanselmann <hansmi@gentoo.org>
+  PEAR-Net_Sieve-1.1.1.ebuild:
+  Stable on ppc.
 
   06 Apr 2005; Markus Rothe <corsair@gentoo.org> PEAR-Net_Sieve-1.1.1.ebuild:
   Stable on ppc64
