@@ -5,8 +5,8 @@ MD5 242a9882e6ff545eee939df0be09a8f9 glib-2.4.8.ebuild 1464
 MD5 1df68769597f0ec7fafd6df3b51df2a8 glib-2.6.0.ebuild 1494
 MD5 3cef3109de5d8f2e45f3041f4788559a glib-2.6.1.ebuild 1495
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 d032668d1f2cb85e3026fa90fb0a7fc0 glib-2.6.3.ebuild 1631
-MD5 f2f3f1289a9761e472b42d7b3f3cd7f0 glib-2.6.2-r1.ebuild 1623
+MD5 3ce389078341b385211c167a398a24fc glib-2.6.2-r1.ebuild 1622
+MD5 02e7eae5daff7482226f3333d19a27fa glib-2.6.3.ebuild 1629
 MD5 0b6b97a59b4b0e1acc433697ce022a3c files/digest-glib-1.2.10-r5 63
 MD5 bb11efe8c19407a4742056f67df25dd7 files/digest-glib-2.4.2 64
 MD5 394ed1e8214a881afbed68f0fa2546c9 files/digest-glib-2.4.8 64

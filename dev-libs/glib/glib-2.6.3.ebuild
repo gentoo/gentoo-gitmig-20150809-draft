@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.6.3.ebuild,v 1.4 2005/04/07 01:46:02 dostrow Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.6.3.ebuild,v 1.5 2005/04/07 03:55:26 dostrow Exp $
 
 inherit libtool eutils flag-o-matic
 
@@ -24,7 +24,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	use ppc-macos && epatch ${FILESDIR}/${PN}-2-macos.patch
-	if (use ppc64 && use hardened); then
+	if use ppc64 && use hardened; then
 		replace-flags -O[2-3] -O1
 		epatch ${FILESDIR}/glib-2.6.3-testglib-ssp.patch
 	fi
