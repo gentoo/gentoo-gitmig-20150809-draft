@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-8.10.19.ebuild,v 1.4 2005/03/21 11:19:06 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-8.10.19.ebuild,v 1.5 2005/04/07 14:02:00 lu_zero Exp $
 
-IUSE=""
+IUSE="opengl"
 
 inherit eutils rpm multilib linux-info linux-mod
 
@@ -162,11 +162,12 @@ src_install-libs() {
 	# same as the xorg implementation
 	dosym ../${X11_IMPLEM}/extensions ${ATI_ROOT}/extensions
 	#Workaround
+	if use opengl; then
 	sed -e "s:libdir=.*:libdir=${ATI_ROOT}/lib:" \
 		/usr/${inslibdir}/opengl/${X11_IMPLEM}/lib/libGL.la \
 		> $D/${ATI_ROOT}/lib/libGL.la
 	dosym ../${X11_IMPLEM}/include ${ATI_ROOT}/include
-
+	fi
 	# X and DRI driver
 	if has_version ">=x11-base/xorg-x11-6.8.0-r4"
 	then
@@ -212,6 +213,12 @@ pkg_postinst() {
 	ewarn "		Option \"KernelModuleParm\"  \"agplock=0\" "
 	ewarn "That should solve the hangups you could have with Neverwinter Nights"
 	ewarn "***"
+	if use ! opengl; then
+	ewarn "You don't have the opengl useflag enabled, you won't be able to build"
+	ewarn "opengl applications nor use opengl driver features, if that isn't"
+	ewarn "the intended behaviour please add opengl to your useflag and issue"
+	ewarn "# emerge -Nu ati-drivers"
+	fi
 	# DRM module
 	update-modules
 }
