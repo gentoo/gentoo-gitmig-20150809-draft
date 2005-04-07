@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20050125-r1.ebuild,v 1.35 2005/04/03 21:31:20 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20050125-r1.ebuild,v 1.36 2005/04/07 00:59:09 vapier Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -202,6 +202,8 @@ toolchain-glibc_src_unpack() {
 	fi
 
 	cd ${S}
+
+	[[ -d glibc-compat ]] && rm -r glibc-compat
 
 	if [[ -n ${BRANCH_UPDATE} ]] ; then
 		epatch ${WORKDIR}/${PN}-${GLIBC_RELEASE_VER}-branch-update-${BRANCH_UPDATE}.patch

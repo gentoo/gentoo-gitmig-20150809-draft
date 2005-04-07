@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.333 2005/04/03 21:31:20 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.334 2005/04/07 00:59:09 vapier Exp $
+
+  07 Apr 2005; Mike Frysinger <vapier@gentoo.org>
+  glibc-2.3.4.20050125-r1.ebuild:
+  Delete the glibc-compat dir since its useless to us #87739.
 
   03 Apr 2005; Daniel Goller <morfic@gentoo.org>
   glibc-2.3.4.20050125-r1.ebuild, glibc-2.3.4.20050125.ebuild:
