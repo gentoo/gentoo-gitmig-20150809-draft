@@ -1,6 +1,26 @@
 # ChangeLog for app-crypt/mit-krb5
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/ChangeLog,v 1.78 2005/04/07 20:45:25 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/ChangeLog,v 1.79 2005/04/07 21:23:49 seemant Exp $
+
+*mit-krb5-1.4 (07 Apr 2005)
+
+  07 Apr 2005; Seemant Kulleen <seemant@gentoo.org>
+  -files/mit-krb5-1.3.1-res_search.patch.bz2,
+  -files/mit-krb5-1.3.3-aname.patch.bz2,
+  -files/mit-krb5-1.3.3-autoheader.patch.bz2,
+  -files/mit-krb5-1.3.3-res_search.patch.bz2,
+  -files/mit-krb5-1.3.4-autoheader.patch.bz2,
+  -files/mit-krb5-1.3.4-res_search.patch.bz2,
+  -files/mit-krb5-1.3.4-tempfile.patch.bz2,
+  -files/mit-krb5-1.3.5-autoheader.patch.bz2,
+  -files/mit-krb5-1.3.5-res_search.patch.bz2,
+  -files/mit-krb5-1.3.5-suid_fix.patch.bz2,
+  +files/mit-krb5-1.4-2005-001.patch, -files/2004-002-patch_1.3.4.txt,
+  -files/2004-003-patch_1.3.4.txt, +mit-krb5-1.4.ebuild:
+  version bump. This is HARDMASKED because the ebuild is still a work in
+  progress. Please do NOT emerge this, unless you read my blog (I will give
+  clearance in my blog for emerging this when the time arrives -- that time is
+  certainly not now. Back away and forget you saw this.
 
   07 Apr 2005; <plasmaroo@gentoo.org> mit-krb5-1.3.6-r2.ebuild:
   Mark stable on IA64; #87145.
