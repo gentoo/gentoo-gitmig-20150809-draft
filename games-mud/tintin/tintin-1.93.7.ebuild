@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/tintin/tintin-1.93.7.ebuild,v 1.2 2005/01/25 21:32:21 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/tintin/tintin-1.93.7.ebuild,v 1.3 2005/04/07 14:45:10 blubb Exp $
 
 inherit games
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.scandum.com/tintin/download/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc sparc x86"
+KEYWORDS="amd64 ~ppc sparc x86"
 IUSE=""
 
 DEPEND="virtual/libc

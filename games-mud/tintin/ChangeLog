@@ -1,6 +1,9 @@
 # ChangeLog for games-mud/tintin
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/tintin/ChangeLog,v 1.17 2005/01/25 21:32:21 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/tintin/ChangeLog,v 1.18 2005/04/07 14:45:10 blubb Exp $
+
+  07 Apr 2005; Simon Stelling <blubb@gentoo.org> tintin-1.93.7.ebuild:
+  stable on amd64
 
   25 Jan 2005; Gustavo Zacarias <gustavoz@gentoo.org> tintin-1.93.7.ebuild:
   Stable on sparc
