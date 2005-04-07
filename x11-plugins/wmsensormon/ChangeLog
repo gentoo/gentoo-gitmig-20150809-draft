@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmsensormon
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmsensormon/ChangeLog,v 1.12 2005/02/27 12:24:17 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmsensormon/ChangeLog,v 1.13 2005/04/07 17:17:26 blubb Exp $
+
+  07 Apr 2005; Simon Stelling <blubb@gentoo.org> wmsensormon-1.2.1.ebuild:
+  stable on amd64
 
   27 Feb 2005; Henrik Brix Andersen <brix@gentoo.org>
   wmsensormon-1.2.1.ebuild:
