@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3802 2005/04/07 17:37:05 seemant Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3803 2005/04/07 21:44:34 kugelfang Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Danny van Dyk <kugelfang@gentoo.org> (07 April 2005)
+# Doesn't build anymore. Asked maintainer to fix or remove it.
+dev-lang/gpc
 
 # Seemant Kulleen <seemant@gentoo.org> (07 April 2005)
 # Mask for testing -- separate com_err and ss stuffs
