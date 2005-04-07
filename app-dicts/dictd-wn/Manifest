@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 233554ee8e4baee974aa06151175c33b ChangeLog 1693
-MD5 8cce6d2ce7889e41960e43acc29693bb dictd-wn-1.5-r1.ebuild 559
-MD5 eb0865a574c90455dfb4bccc0f46fa29 dictd-wn-2.0.ebuild 769
+MD5 7a98360f05a90c5a0d355431f973ed83 ChangeLog 1805
+MD5 1a1eeddf4ecd0a827c65a5a83b80ea47 dictd-wn-1.5-r1.ebuild 558
+MD5 123e6f79809762b24cfdd7e868b264e9 dictd-wn-2.0.ebuild 776
 MD5 eb03775ece62e57725480e782cd84ee8 metadata.xml 162
 MD5 21660b33b58fd699adfef2ea39bde92e files/digest-dictd-wn-1.5-r1 68
 MD5 7d53471837d26c8c65851e84ba6346e7 files/digest-dictd-wn-2.0 64
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCIbbN60LfUIagIAkRAmjhAKCjqSpO4VOwxBr1M92b36AbbY1CygCgrh2/
-SJGtoyQdMfTsbfYlogqN314=
-=jtMG
+iD8DBQFCVUI960LfUIagIAkRAl0iAJ9SCGIfmsMPSWzI1LR++iY3hS3kCgCfZ4ER
+57AqPNojpQuXADHZa9SzcZ4=
+=e+SW
 -----END PGP SIGNATURE-----

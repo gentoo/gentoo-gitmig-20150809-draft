@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/dictd-wn
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/dictd-wn/ChangeLog,v 1.13 2005/02/27 12:01:49 nigoro Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/dictd-wn/ChangeLog,v 1.14 2005/04/07 14:22:24 nigoro Exp $
+
+  07 Apr 2005; Yuta SATOH <nigoro@gentoo.org> dictd-wn-1.5-r1.ebuild,
+  dictd-wn-2.0.ebuild:
+  Stable on ppc64
 
   27 Feb 2005; Yuta SATOH <nigoro@gentoo.org> dictd-wn-1.5-r1.ebuild:
   added ~ppc64
