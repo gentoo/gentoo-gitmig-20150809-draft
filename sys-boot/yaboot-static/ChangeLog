@@ -1,6 +1,9 @@
 # ChangeLog for sys-boot/yaboot-static
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/yaboot-static/ChangeLog,v 1.6 2004/12/15 18:56:23 corsair Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/yaboot-static/ChangeLog,v 1.7 2005/04/07 03:37:51 dostrow Exp $
+
+  06 Apr 2005; Daniel Ostrow <dostrow@gentoo.org> :
+  Version bump
 
   15 Dec 2004; Markus Rothe <corsair@gentoo.org> yaboot-static-1.3.12.ebuild:
   Added sys-fs/hfsutils and sys-fs/hfsplusutils to DEPEND
