@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 c48ffbeaef34f8654c9d5dbb55f84b6e wmnd-0.4.9.ebuild 754
+MD5 54042788069f942fe4c990799a7ae69b ChangeLog 3118
 MD5 35b06c646b51979b2022449f31d7a7ee metadata.xml 448
-MD5 6f1dfb1bfeb5210c11a6754a1a959117 ChangeLog 3033
 MD5 d0ad9d20b42d730c58b9c9936e16133c wmnd-0.4.10.ebuild 756
-MD5 7b6ce29e5cf45c2050ecddfd2254296e wmnd-0.4.11.ebuild 760
+MD5 93a7064f489e341776f4ca05a651a85f wmnd-0.4.11.ebuild 756
+MD5 c48ffbeaef34f8654c9d5dbb55f84b6e wmnd-0.4.9.ebuild 754
+MD5 333d99d446e3bd3795da5bdb2422a299 files/digest-wmnd-0.4.10 63
 MD5 8a1fa932715cb4c1c287aabf20d0d276 files/digest-wmnd-0.4.11 63
 MD5 56841c10775892442b56de81c10828b1 files/digest-wmnd-0.4.9 62
-MD5 333d99d446e3bd3795da5bdb2422a299 files/digest-wmnd-0.4.10 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFB/lAWKRy60XGEcJIRAvkEAJwOAVaL1laGzx/0wwU3dW0aNdIFlgCaA0WQ
-DvQv0v0bnrpRgnOVzDpgY3w=
-=Smta
------END PGP SIGNATURE-----

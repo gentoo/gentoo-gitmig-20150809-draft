@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 c0751e097dc267377b70722dc9f26e45 ChangeLog 5630
+MD5 391a5ac9dd7477dcd11ced0414e82dcc ChangeLog 5720
 MD5 832c9f70b38243ed07208cf01a547dbe gkrellmms-0.5.6.ebuild 673
 MD5 5501ba1300cfb20d4e05256536ec9a66 gkrellmms-0.5.8.ebuild 663
 MD5 a67111a4b5d1a3d792451325589841eb gkrellmms-2.1.15.ebuild 697
-MD5 9af6d7c3c855684032120a98159d191b gkrellmms-2.1.21.ebuild 701
+MD5 889c6a242410e1a95e171a0a5ff2807d gkrellmms-2.1.21.ebuild 697
 MD5 de35d8f600d3d75d8075a8d848787013 metadata.xml 223
 MD5 ac569c5ef1a94fe768b2a043f1d5c7c6 files/digest-gkrellmms-0.5.6 66
 MD5 09b80fad84214e723be0b9f8867c4479 files/digest-gkrellmms-0.5.8 66
-MD5 28292acdeda41917477cff7da333acf6 files/digest-gkrellmms-2.1.21 67
 MD5 cb1a862a255479deb2b1e80dd39fd1ba files/digest-gkrellmms-2.1.15 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFCSxBLKRy60XGEcJIRAoGiAKClryK6cao4zSmB2agBUxAX5Uhr7QCfXAjm
-PwAb1JCGjXUuJWDCg9wUVS0=
-=LJyp
------END PGP SIGNATURE-----
+MD5 28292acdeda41917477cff7da333acf6 files/digest-gkrellmms-2.1.21 67

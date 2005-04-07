@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 1c1e481d2051ad9d0c7b053b2431e6ee wmsensormon-1.2.1.ebuild 845
-MD5 f2066be39373ce4aebcc2d9f85aabd47 wmsensormon-1.2.0.ebuild 836
-MD5 cdebba11cd634a6efde9b0d8ef32b894 ChangeLog 1611
+MD5 951f7d605c0ea69c7c6b50e5b12660ba ChangeLog 1706
 MD5 d5b96897c2047239f4fa533645e2e0a8 metadata.xml 463
+MD5 f2066be39373ce4aebcc2d9f85aabd47 wmsensormon-1.2.0.ebuild 836
+MD5 e3637236ab5cdf30499062602a8c5a2f wmsensormon-1.2.1.ebuild 845
 MD5 32701f3c1822efc908eba59bf6db0c2b files/digest-wmsensormon-1.2.0 68
 MD5 f9aa05ab027067c310ec6aff0dfeb0d6 files/digest-wmsensormon-1.2.1 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCIeJyI1lqEGTUzyQRAkk7AKC95lVBe6let5UBZLP+7jh0PPMVKACgzs83
-Oholm8gRB71uyXokgDtijZk=
-=Y6T5
------END PGP SIGNATURE-----
