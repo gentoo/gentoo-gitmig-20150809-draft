@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Error
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Error/ChangeLog,v 1.14 2004/12/23 09:30:40 nigoro Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Error/ChangeLog,v 1.15 2005/04/07 15:40:45 nigoro Exp $
+
+  08 Apr 2005; Yuta SATOH <nigoro@gentoo.org> Error-0.15-r2.ebuild:
+  Stable on ppc64
 
   23 Dec 2004; Yuta SATOH <nigoro@gentoo.org> Error-0.15-r2.ebuild:
   added ~ppc64
