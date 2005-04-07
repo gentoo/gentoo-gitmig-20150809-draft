@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 e70e86a59bc42c9192c2448f45904771 systray4j-2.4.ebuild 1655
 MD5 2795396ae908e7f3f379776bd2402847 ChangeLog 1055
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
-MD5 a0c032aaffc9f52e20921442a3096e11 systray4j-2.4.ebuild 1875
 MD5 f0c65493b9e6f3dcf93ec6928696b856 files/digest-systray4j-2.4 74
 MD5 1a1e3d6123fb041172ef5959bd74c225 files/systray4j-2.4-fPIC.patch 1884
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCVTbm/rLF9B432nYRAhV/AJ4qa9uIDIZLin4aMkmBVDjD/X0mPACgxYeG
+uj8Tj6dHxbS3LWNHqsBfTFU=
+=pLg4
+-----END PGP SIGNATURE-----

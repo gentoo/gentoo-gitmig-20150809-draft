@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/systray4j/systray4j-2.4.ebuild,v 1.10 2005/01/26 20:13:32 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/systray4j/systray4j-2.4.ebuild,v 1.11 2005/04/07 13:34:07 axxo Exp $
 
 inherit kde java-pkg eutils
 
@@ -65,11 +65,4 @@ src_install() {
 
 	cd ${S}/kde
 	dolib.so libsystray4j.so
-}
-
-pkg_postinst() {
-	einfo "To test out this java class, run:"
-	einfo "$ java snoozesoft.systray4j.test.Controller"
-	einfo "Don't forget to put it in your CLASSPATH:"
-	einfo "java-config --add-system-classpath=${PN}"
 }
