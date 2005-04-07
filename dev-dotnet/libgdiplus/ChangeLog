@@ -1,6 +1,17 @@
 # ChangeLog for dev-dotnet/libgdiplus
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/libgdiplus/ChangeLog,v 1.25 2005/03/31 18:33:54 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/libgdiplus/ChangeLog,v 1.26 2005/04/07 23:52:19 latexer Exp $
+
+*libgdiplus-1.1.4-r1 (07 Apr 2005)
+*libgdiplus-1.0.6-r2 (07 Apr 2005)
+*libgdiplus-1.0.5-r3 (07 Apr 2005)
+
+  07 Apr 2005; Peter Johanson <latexer@gentoo.org>
+  +files/libgdiplus-1.0.6-giflib.diff, -libgdiplus-1.0.4-r1.ebuild,
+  +libgdiplus-1.0.5-r3.ebuild, +libgdiplus-1.0.6-r2.ebuild,
+  +libgdiplus-1.1.4-r1.ebuild:
+  Lots of revision bumps to go from libungif -> giflib (bug #85720), and
+  remove one slightly older version.
 
   31 Mar 2005; Peter Johanson <latexer@gentoo.org>
   +files/libgdiplus-1.1.5-nogif.diff, libgdiplus-1.1.5.ebuild:

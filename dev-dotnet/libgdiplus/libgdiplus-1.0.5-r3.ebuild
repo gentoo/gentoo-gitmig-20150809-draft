@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/libgdiplus/libgdiplus-1.0.4-r1.ebuild,v 1.4 2005/03/15 00:47:43 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/libgdiplus/libgdiplus-1.0.5-r3.ebuild,v 1.1 2005/04/07 23:52:19 latexer Exp $
 
-inherit libtool
+inherit libtool eutils
 
 DESCRIPTION="Library for using System.Drawing with Mono"
 
@@ -12,12 +12,12 @@ SRC_URI="http://www.go-mono.com/archive/${PV}/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="~x86 ~ppc"
 
 IUSE="tiff gif jpeg png"
 
 DEPEND="sys-devel/libtool
-		>=x11-libs/cairo-0.1.23
+		>=x11-libs/cairo-0.3.0
 		tiff? ( media-libs/tiff )
 		gif? ( media-libs/libungif )
 		jpeg? ( media-libs/jpeg )
@@ -29,18 +29,20 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 
+	epatch ${FILESDIR}/${P}-cairo-0.3.0-compat.diff || die "epatch failed"
+	epatch ${FILESDIR}/${PN}-1.0.6-giflib.diff || die "epatch failed"
+
 	# See bug #55916
 	einfo "Fixing a libtool problem"
-	rm ltmain.sh
-	aclocal
-	autoconf
-	libtoolize --force --copy
+	aclocal || die "aclocal failed"
+	autoconf || die "autoconf failed"
+	libtoolize --force --copy || die "libtoolize failed"
 }
 
 src_compile() {
 	local myconf=""
 	use tiff ||  myconf="--without-libtiff ${myconf}"
-	use gif ||  myconf="--without-libungif ${myconf}"
+	use gif ||  myconf="--without-libgif ${myconf}"
 	use jpeg ||  myconf="--without-libjpeg ${myconf}"
 	use png ||  myconf="--without-libpng ${myconf}"
 
