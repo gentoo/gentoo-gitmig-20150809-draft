@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/ccxstream
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/ccxstream/ChangeLog,v 1.3 2005/03/10 11:56:08 chrb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/ccxstream/ChangeLog,v 1.4 2005/04/07 12:37:12 luckyduck Exp $
+
+  07 Apr 2005; Jan Brinkmann <luckyduck@gentoo.org> ccxstream-1.0.15.ebuild:
+  added ~amd64 to KEYWORDS, fixes #81151
 
   10 Mar 2005; Chris Bainbridge <chrb@gentoo.org> ccxstream-1.0.15.ebuild:
   mark stable on x86.

@@ -1,7 +1,17 @@
-MD5 282da2a4d8617831eda8662f884c7f42 ChangeLog 681
-MD5 d85851b286fae1725dbc26a281bb59b7 ccxstream-1.0.15.ebuild 742
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 9a59dd087ffdbf7c19563c55aee97847 ccxstream-1.0.15.ebuild 754
+MD5 fb6449a7d4b9a092a3a6a0f6beb105dd ChangeLog 805
 MD5 ced95cbc95521a341635b22cbbfc0c92 metadata.xml 331
-MD5 97b69dad34ff8cf74407cfd6acdcf1a6 files/ccxstream-termcap.patch 232
 MD5 73c83b29f34c5ee6bfeb874e05afd201 files/ccxstream.confd 1228
 MD5 fe3f207263e89aa78ad98ebd24819254 files/ccxstream.initd 463
+MD5 97b69dad34ff8cf74407cfd6acdcf1a6 files/ccxstream-termcap.patch 232
 MD5 4321e5f911d04c96005128ccf78c98f4 files/digest-ccxstream-1.0.15 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCVSmN06ebR+OMO78RAh4WAJ9l2qbpzw61L07fkLsaY1cRdNaISgCfd1qL
+YtDLrXjeM0pkNrVnZtJrIuc=
+=0rX3
+-----END PGP SIGNATURE-----
