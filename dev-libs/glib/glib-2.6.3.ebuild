@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.6.3.ebuild,v 1.3 2005/04/01 04:07:45 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.6.3.ebuild,v 1.4 2005/04/07 01:46:02 dostrow Exp $
 
 inherit libtool eutils flag-o-matic
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.gtk.org/pub/gtk/v2.6/${P}.tar.bz2"
 LICENSE="LGPL-2"
 SLOT="2"
 KEYWORDS="~x86 ~alpha ~amd64 ~arm ~hppa ia64 ~mips ~ppc ~ppc64 ~ppc-macos ~s390 sparc"
-IUSE="doc"
+IUSE="doc hardened"
 
 DEPEND=">=dev-util/pkgconfig-0.14
 	>=sys-devel/gettext-0.11
@@ -24,6 +24,10 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	use ppc-macos && epatch ${FILESDIR}/${PN}-2-macos.patch
+	if (use ppc64 && use hardened); then
+		replace-flags -O[2-3] -O1
+		epatch ${FILESDIR}/glib-2.6.3-testglib-ssp.patch
+	fi
 
 }
 
