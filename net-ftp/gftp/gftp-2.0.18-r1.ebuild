@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/gftp/gftp-2.0.18-r1.ebuild,v 1.6 2005/02/19 08:05:57 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/gftp/gftp-2.0.18-r1.ebuild,v 1.7 2005/04/07 09:15:23 kloeri Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.gftp.org"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc amd64 ppc64"
+KEYWORDS="x86 ppc sparc amd64 ppc64 ~alpha"
 IUSE="nls gtk gtk2 ssl"
 
 DEPEND="virtual/x11

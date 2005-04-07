@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/gftp
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/gftp/ChangeLog,v 1.43 2005/02/19 08:05:57 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/gftp/ChangeLog,v 1.44 2005/04/07 09:15:23 kloeri Exp $
+
+  07 Apr 2005; Bryan Østergaard <kloeri@gentoo.org> gftp-2.0.18-r1.ebuild:
+  ~alpha keyword, bug 87365.
 
   19 Feb 2005; Joseph Jezak <josejx@gentoo.org> gftp-2.0.18-r1.ebuild:
   Marked ppc stable for bug #81994.
