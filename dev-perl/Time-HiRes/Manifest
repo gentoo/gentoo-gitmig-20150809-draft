@@ -1,24 +1,14 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 0724fd0cc1c8a54abc4c97af6e465878 Time-HiRes-1.59.ebuild 624
-MD5 4be3ba459863b617351acac27909aa57 Time-HiRes-1.54.ebuild 559
-MD5 b7443f0c81a09219ca2948b28007039e Time-HiRes-1.47.ebuild 581
-MD5 f44a3daa03576f43f3fce001635c5e2f Time-HiRes-1.42.ebuild 572
 MD5 6435cdd0752a5c238bc84c213444f1f0 Time-HiRes-1.50.ebuild 584
-MD5 d62d0f3fae3a81763614c4d23341649c ChangeLog 4068
+MD5 b7443f0c81a09219ca2948b28007039e Time-HiRes-1.47.ebuild 581
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 042d3446d23b58d040636eabacf10a08 Time-HiRes-1.66.ebuild 633
-MD5 f33ad522a8c32c6292406a7e04636273 files/digest-Time-HiRes-1.42 66
-MD5 0b0c0d302e6afc7a1c06225ec6c9d607 files/digest-Time-HiRes-1.47 66
-MD5 48f5411006791142fe05e6140def5e5e files/digest-Time-HiRes-1.50 66
-MD5 42acd0773f1fc6d54b542b850ed70fac files/digest-Time-HiRes-1.54 66
-MD5 29bc4f6f9d84e8c9e9f448510b5c0c6e files/digest-Time-HiRes-1.59 66
+MD5 4b05ee0fb3c12208d317aff04e7baf85 Time-HiRes-1.66.ebuild 631
+MD5 4c570ef820329c01c75be9074d9c046d ChangeLog 4165
+MD5 f44a3daa03576f43f3fce001635c5e2f Time-HiRes-1.42.ebuild 572
+MD5 4be3ba459863b617351acac27909aa57 Time-HiRes-1.54.ebuild 559
 MD5 b262894962dc80c2da7c94a0e267483c files/digest-Time-HiRes-1.66 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFCT+f/M+I1L6GK/u4RAsitAJ9YOJTknd1W0WmQcuOuNn/Qz7s4JACfeeiK
-6q/MW73th+MMhFPkgFeUiQs=
-=dIhZ
------END PGP SIGNATURE-----
+MD5 0b0c0d302e6afc7a1c06225ec6c9d607 files/digest-Time-HiRes-1.47 66
+MD5 42acd0773f1fc6d54b542b850ed70fac files/digest-Time-HiRes-1.54 66
+MD5 48f5411006791142fe05e6140def5e5e files/digest-Time-HiRes-1.50 66
+MD5 29bc4f6f9d84e8c9e9f448510b5c0c6e files/digest-Time-HiRes-1.59 66
+MD5 f33ad522a8c32c6292406a7e04636273 files/digest-Time-HiRes-1.42 66
