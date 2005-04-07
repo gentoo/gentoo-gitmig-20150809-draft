@@ -1,19 +1,29 @@
-MD5 d04de45ea0ce840ea8ebca91e0b88966 ChangeLog 5010
-MD5 570c3b91cefa46a71ea570343906ccc3 metadata.xml 247
-MD5 25120ef4d3a708b4c30f53477a2645cb msmtp-1.2.4.ebuild 1157
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 776754f08dea1b275f28ce3af9355a4a msmtp-1.3.1.ebuild 1168
+MD5 2a812f034726a5a1c77aa110b40bd8ba msmtp-1.4.0.ebuild 1808
+MD5 97490ea8d015059297396bca7eda5552 ChangeLog 5101
 MD5 f5a4df2680c0585705c19501e1658685 msmtp-1.3.2-r1.ebuild 1568
-MD5 95ea6a4f095ea0872487cb0551f07a75 msmtp-1.3.2.ebuild 1168
-MD5 9ab5e715dff170b84417d6200a03a084 msmtp-1.3.4.ebuild 1566
 MD5 a5b4575eec20ddc33b2b764391daf483 msmtp-1.3.5.ebuild 1566
+MD5 570c3b91cefa46a71ea570343906ccc3 metadata.xml 247
+MD5 95ea6a4f095ea0872487cb0551f07a75 msmtp-1.3.2.ebuild 1168
 MD5 cffb24cc7853bae9c6775567bc268f85 msmtp-1.3.6.ebuild 1794
-MD5 53c8e9b258ca053bf9943afad500b7ed msmtp-1.4.0.ebuild 1802
+MD5 9ab5e715dff170b84417d6200a03a084 msmtp-1.3.4.ebuild 1566
+MD5 25120ef4d3a708b4c30f53477a2645cb msmtp-1.2.4.ebuild 1157
 MD5 0553a19313bf7527b1bbb9e1539f2021 files/digest-msmtp-1.2.4 63
+MD5 7794cb5bda2bdb48124f1eee5fd892d6 files/digest-msmtp-1.3.5 64
+MD5 5c7a9806b21c53c30d4c0181956371c9 files/digest-msmtp-1.4.0 64
+MD5 2aac2039b42e533f8f4986d8aa457fcc files/mailer.conf 1478
+MD5 c129ac863cc45ec6da5aa7c5a8cc16bc files/digest-msmtp-1.3.4 64
+MD5 f97e45be1f1dce532bdfb4e3cfb8d1b5 files/digest-msmtp-1.3.2-r1 64
+MD5 dc3649e52d046a8f98fdee06ac34b5a2 files/digest-msmtp-1.3.6 64
 MD5 384776a579fdf8b01782499a61d77285 files/digest-msmtp-1.3.1 64
 MD5 f97e45be1f1dce532bdfb4e3cfb8d1b5 files/digest-msmtp-1.3.2 64
-MD5 f97e45be1f1dce532bdfb4e3cfb8d1b5 files/digest-msmtp-1.3.2-r1 64
-MD5 c129ac863cc45ec6da5aa7c5a8cc16bc files/digest-msmtp-1.3.4 64
-MD5 7794cb5bda2bdb48124f1eee5fd892d6 files/digest-msmtp-1.3.5 64
-MD5 dc3649e52d046a8f98fdee06ac34b5a2 files/digest-msmtp-1.3.6 64
-MD5 2aac2039b42e533f8f4986d8aa457fcc files/mailer.conf 1478
-MD5 5c7a9806b21c53c30d4c0181956371c9 files/digest-msmtp-1.4.0 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCVbktKf2g/qXtneoRAhPHAJ9odW+6nDsjLlU9fYuJdxua8vTGTwCgwDPY
+RmwTwW9qjjOaszQICKCI/Wc=
+=aKu1
+-----END PGP SIGNATURE-----
