@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-sid/xmms-sid-0.8.0_beta10.ebuild,v 1.7 2004/10/10 20:39:06 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-sid/xmms-sid-0.8.0_beta10.ebuild,v 1.8 2005/04/07 14:36:36 luckyduck Exp $
 
 MY_PV=${PV/_beta/beta}
 MY_P=${PN}-${MY_PV}
@@ -32,6 +32,7 @@ src_unpack() {
 	aclocal -I . || die
 	automake --foreign -v || die
 	autoconf || die
+	libtoolize --copy --force
 }
 
 src_install () {
