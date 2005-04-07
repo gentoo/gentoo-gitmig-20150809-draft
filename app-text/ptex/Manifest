@@ -1,20 +1,32 @@
-MD5 f4dacad25285fd71b633da7dbbe28991 ptex-3.1.8.1.ebuild 4986
-MD5 6159b18f18d59387df77cb2813192347 ptex-3.1.4-r2.ebuild 3526
-MD5 c90244f850861b30d93e43f2daf01a8f ChangeLog 6302
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 8629315f8bdd168355e9124f954ef875 ChangeLog 6531
 MD5 d2fd604b88f163116f23670ca84b1815 metadata.xml 531
+MD5 f4dacad25285fd71b633da7dbbe28991 ptex-3.1.8.1.ebuild 4986
 MD5 a8da5e6af1588c40f6b533a5d1e1a4d0 ptex-3.1.5.ebuild 3533
 MD5 209618f44503fb7602ea5aaddf8429f7 ptex-3.1.8.1_p20050325.ebuild 4928
-MD5 77107ec8ba31c93b0e1bc35a9e4c9c4b files/xdvizilla.patch 912
-MD5 661aaa7be66ace377a17bb300e99b508 files/digest-ptex-3.1.8.1 271
-MD5 4d1956517ccb98e9be75cdf83f9b7ac0 files/20fmtutil-platex.cnf 121
-MD5 2fce5bedd61300fad1566a41f991a782 files/xpdf-goo-sizet.patch 1424
-MD5 d15f2d9ab04bcfa15c3e737f106d1625 files/psfonts-ja.map 1158
-MD5 5d40ba9d885af84bcc917ad17e2bf8e0 files/xpdf-3.00pl2-CAN-2004-1125.patch 1136
+MD5 6159b18f18d59387df77cb2813192347 ptex-3.1.4-r2.ebuild 3526
+MD5 c68b3743f00f26ebe50b1293f6506fb9 ptex-3.1.8.1_p20050405.ebuild 4738
 MD5 a1829990d625a3607cc38b99a27b9574 files/20texmf-cmap.cnf 65
-MD5 d4d469b2a8b88c4d97440979fd5c2a41 files/20updmap-ja.cfg 43
-MD5 424cf5900fe6b1af9867cd2e8c952292 files/digest-ptex-3.1.4-r2 718
+MD5 661aaa7be66ace377a17bb300e99b508 files/digest-ptex-3.1.8.1 271
+MD5 d15f2d9ab04bcfa15c3e737f106d1625 files/psfonts-ja.map 1158
 MD5 3e6bd16aa42a2c0f77d9ea14dabb96f3 files/digest-ptex-3.1.5 718
+MD5 4d1956517ccb98e9be75cdf83f9b7ac0 files/20fmtutil-platex.cnf 121
+MD5 87133c725fc92254cef1555a5643da86 files/digest-ptex-3.1.8.1_p20050325 271
+MD5 424cf5900fe6b1af9867cd2e8c952292 files/digest-ptex-3.1.4-r2 718
+MD5 77107ec8ba31c93b0e1bc35a9e4c9c4b files/xdvizilla.patch 912
+MD5 5d40ba9d885af84bcc917ad17e2bf8e0 files/xpdf-3.00pl2-CAN-2004-1125.patch 1136
+MD5 d4d469b2a8b88c4d97440979fd5c2a41 files/20updmap-ja.cfg 43
+MD5 0b67e958c7f04df95667731e071a3efa files/digest-ptex-3.1.8.1_p20050405 271
 MD5 c32a612ce419b9930ff273cf382558bf files/xpdf-3.00pl3-CAN-2005-0064.patch 346
 MD5 87d20c86d1451638e4b7adc2f7ac8067 files/xpdf-CESA-2004-007-xpdf2-newer.diff 2718
+MD5 2fce5bedd61300fad1566a41f991a782 files/xpdf-goo-sizet.patch 1424
 MD5 362296e34a1a04a6e5e2a7d9e97547c6 files/xpdf2-underflow.patch 2363
-MD5 87133c725fc92254cef1555a5643da86 files/digest-ptex-3.1.8.1_p20050325 271
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCVVo5VWNWqTUmv+0RAma7AJ96kxvcvHQtr1PmJHKUyvTCx77UigCfYFd7
+PBfHOsLRM3vrsfG8xv1vb+w=
+=lcGU
+-----END PGP SIGNATURE-----

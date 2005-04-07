@@ -1,6 +1,13 @@
 # ChangeLog for app-text/ptex
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ptex/ChangeLog,v 1.43 2005/04/05 17:10:57 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ptex/ChangeLog,v 1.44 2005/04/07 16:15:20 usata Exp $
+
+*ptex-3.1.8.1_p20050405 (07 Apr 2005)
+
+  07 Apr 2005; Mamoru KOMACHI <usata@gentoo.org>
+  +ptex-3.1.8.1_p20050405.ebuild:
+  Changed to use tetex-3_src_compile and added virtex/pdfvirtex symlinks.
+  Added jis and morisawa fonts.
 
   05 Apr 2005; Mamoru KOMACHI <usata@gentoo.org> ptex-3.1.4-r2.ebuild,
   ptex-3.1.5.ebuild, ptex-3.1.8.1.ebuild, ptex-3.1.8.1_p20050325.ebuild:
