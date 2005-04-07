@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-1.2.10-r5.ebuild,v 1.40 2005/04/07 04:42:23 dostrow Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-1.2.10-r5.ebuild,v 1.41 2005/04/07 19:09:38 mr_bones_ Exp $
 
 inherit libtool flag-o-matic eutils gnuconfig
 
@@ -36,7 +36,7 @@ src_unpack() {
 	fi
 
 	append-ldflags -ldl
-						
+
 }
 
 src_compile() {
