@@ -1,21 +1,31 @@
-MD5 6f78352ccb7b6aa40679ea7878f8f60d ChangeLog 6490
-MD5 11a4150b0b0e5afd83bdc21d32e25e72 flac-1.1.0-r2.ebuild 1368
-MD5 8a5f0b8e9adfd2c0b322c917dae6b379 flac-1.1.0.ebuild 1550
-MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 6ab3635d825a48fba589f342fb7e72b1 flac-1.1.0-r1.ebuild 1564
-MD5 922263e791c30aa4b5d2db2a4fc41043 flac-1.1.1.ebuild 1650
+MD5 63ae1202d13d4f52a5ba814550389879 flac-1.1.1.ebuild 1648
+MD5 8a5f0b8e9adfd2c0b322c917dae6b379 flac-1.1.0.ebuild 1550
+MD5 44e680af68f762f672127ee3821713a7 ChangeLog 6590
+MD5 11a4150b0b0e5afd83bdc21d32e25e72 flac-1.1.0-r2.ebuild 1368
+MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 b62680ec8c3ea069b0c9d229ae93a8ee flac-1.1.2.ebuild 1634
+MD5 bf28df385b4747a614fb93e31411b5de files/flac-1.1.2-libtool.patch 4041
+MD5 c10f4a7334db0c8eab9fbc5111363490 files/digest-flac-1.1.0-r1 63
 MD5 c10f4a7334db0c8eab9fbc5111363490 files/digest-flac-1.1.0-r2 63
 MD5 bb05dd6b2e2856a686d9d5a0441f60cd files/flac-1.1.0-m4.patch 2424
 MD5 c10f4a7334db0c8eab9fbc5111363490 files/digest-flac-1.1.0 63
-MD5 c10f4a7334db0c8eab9fbc5111363490 files/digest-flac-1.1.0-r1 63
-MD5 efbd988ef5877a8f1f4018cfaa97b378 files/flac-1.1.0-libtool.patch 3831
 MD5 291cb72013c342e434ae5be0300ef63e files/digest-flac-1.1.1 63
-MD5 bf28df385b4747a614fb93e31411b5de files/flac-1.1.1-libtool.patch 4041
+MD5 6c841c2c7db322a6c7f74f2a59e2cdf9 files/digest-flac-1.1.2 63
 MD5 97d7acba1f1548757a56330dd8ba7aa0 files/flac-1.1.1-m4.patch 1175
 MD5 d251cedb35cba423848e2e708f0f0773 files/flac-1.1.1-altivec.patch.gz 5705
-MD5 6c841c2c7db322a6c7f74f2a59e2cdf9 files/digest-flac-1.1.2 63
-MD5 bf28df385b4747a614fb93e31411b5de files/flac-1.1.2-libtool.patch 4041
 MD5 97d7acba1f1548757a56330dd8ba7aa0 files/flac-1.1.2-m4.patch 1175
 MD5 1faa1c73bc3f7236f9677ed41e22ef33 files/flac-1.1.2-gas.patch 735
+MD5 efbd988ef5877a8f1f4018cfaa97b378 files/flac-1.1.0-libtool.patch 3831
+MD5 bf28df385b4747a614fb93e31411b5de files/flac-1.1.1-libtool.patch 4041
 MD5 86b29504f63f0ebfe0ddd971fc6b2470 files/flac-1.1.2-makefile.patch 511
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCVS1V06ebR+OMO78RAi3ZAJ9cdvan21ub6fY6fhe3w0yr1b3vwACfeVHV
+cw8VOhqYnZBt52Qish+0hTA=
+=Veou
+-----END PGP SIGNATURE-----
