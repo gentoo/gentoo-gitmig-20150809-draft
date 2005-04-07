@@ -1,17 +1,19 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 883e3dfc824fff98f69511dd3cc4ab8a ChangeLog 5696
+MD5 53127b545bfcb53a18c8647aaff2c492 ChangeLog 5825
+MD5 9e5cbd4d2a7f087e91e6ecc8e95b5965 silc-toolkit-0.9.12-r3.ebuild 2158
 MD5 713de6b02db7b5d09da44fb708c5041e silc-toolkit-0.9.12-r2.ebuild 1597
 MD5 44c39c6ad372a8e5a5e7ee3311f703a7 metadata.xml 160
-MD5 9e5cbd4d2a7f087e91e6ecc8e95b5965 silc-toolkit-0.9.12-r3.ebuild 2158
-MD5 f5feddf04be28d35adc7b14360eac931 files/digest-silc-toolkit-0.9.12-r3 73
-MD5 6c8639c61522d4e5e7ee452088000fc3 files/silc-toolkit-0.9.12-64bit_goodness.patch 4563
+MD5 e149a8771273243dfa48f0a94ac4eb74 silc-toolkit-0.9.13.ebuild 1916
 MD5 f5feddf04be28d35adc7b14360eac931 files/digest-silc-toolkit-0.9.12-r2 73
+MD5 6c8639c61522d4e5e7ee452088000fc3 files/silc-toolkit-0.9.12-64bit_goodness.patch 4563
+MD5 f5feddf04be28d35adc7b14360eac931 files/digest-silc-toolkit-0.9.12-r3 73
+MD5 18e62467bfd5c7bf0d4de43e5b7c72a5 files/digest-silc-toolkit-0.9.13 73
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCFihFCHk4+ZoBpvsRAnWWAKCGeFB4K9GqVrxXNVICCe2B90EWUQCfaA3K
-awN9c4vDzwgcvsRijD13zN0=
-=6U3O
+iD8DBQFCVSJWQlM6RnzZP+IRAm/iAJ0WClz0VL2Kx2A0ExskpmOw01WO4wCdFjst
+gyi0OpyjqZPPiRDzTVdvIJY=
+=xzgS
 -----END PGP SIGNATURE-----
