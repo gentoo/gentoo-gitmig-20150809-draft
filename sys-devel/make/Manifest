@@ -1,15 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 76ab7837f60add252c5cdf7e3bbc211b ChangeLog 2738
-MD5 1c23d0b63aa4aa46d76cd61702d0a0c4 make-3.80-r1.ebuild 1081
+MD5 84feff63b90523a45fc23738de94fec0 ChangeLog 2842
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+MD5 68a44ced92e6f2d4e11a0f8f1db678cd make-3.80-r1.ebuild 1187
 MD5 3adc1d9cc832e98b435305f9f466279b files/3.80-memory.patch 2248
 MD5 6c9afd5ac674f6a9703fdab9e49846c4 files/digest-make-3.80-r1 62
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBmP1uHTu7gpaalycRAisZAJ42XEgmJLTew/5hyX8SxvQCLBmCpwCfXlF0
-GsSd/65qkeABaCoxngUPJYU=
-=Qrkw
------END PGP SIGNATURE-----
+MD5 ea2daf4e61545882b6ba566f2b9132a2 files/make-3.80-ppc64-hardened-clock_gettime.patch 514

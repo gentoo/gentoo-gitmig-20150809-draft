@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/make
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/make/ChangeLog,v 1.21 2004/10/10 03:57:29 vapier Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/make/ChangeLog,v 1.22 2005/04/07 01:16:20 dostrow Exp $
+
+  06 Apr 2005; Daniel Ostrow <dostrow@gentoo.org> make-3.80-r1.ebuild:
+  Add patch for ppc64 hardened
 
 *make-3.80-r1 (09 Oct 2004)
 

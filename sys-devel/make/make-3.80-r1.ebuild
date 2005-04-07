@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/make/make-3.80-r1.ebuild,v 1.2 2004/11/15 19:02:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/make/make-3.80-r1.ebuild,v 1.3 2005/04/07 01:16:20 dostrow Exp $
 
 inherit gnuconfig eutils flag-o-matic
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.gnu.org/gnu/make/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sh sparc x86"
-IUSE="nls static build uclibc"
+IUSE="nls static build uclibc hardened"
 
 DEPEND="virtual/libc
 	nls? ( sys-devel/gettext )"
@@ -21,6 +21,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/${PV}-memory.patch
+	(use ppc64 && use hardened) && epatch ${FILESDIR}/make-3.80-ppc64-hardened-clock_gettime.patch
 	# Detect mips and uclibc systems properly
 	gnuconfig_update
 }
