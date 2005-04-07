@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/eix
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/ChangeLog,v 1.26 2005/04/05 20:51:05 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/ChangeLog,v 1.27 2005/04/07 14:36:55 hollow Exp $
+
+  07 Apr 2005; Benedikt Boehm <hollow@gentoo.org>
+  +files/0.2.2-incorrect-masks.patch, eix-0.2.2.ebuild:
+  fix bug 88148
 
   05 Apr 2005; Gustavo Zacarias <gustavoz@gentoo.org> eix-0.2.2.ebuild:
   Stable on sparc

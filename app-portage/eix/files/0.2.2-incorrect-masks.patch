@@ -1,0 +1,43 @@
+diff -Naur eix-0.2.2.orig/ChangeLog eix-0.2.2/ChangeLog
+--- eix-0.2.2.orig/ChangeLog	2005-04-06 17:43:28.000000000 +0200
++++ eix-0.2.2/ChangeLog	2005-04-06 17:43:59.000000000 +0200
+@@ -18,6 +18,7 @@
+ 	- User root no longer needed to update database
+ 	- Moved some functionality into seperate toolkits.
+ 	- Added ~-operator to class Mask
++	- Fixed http://bugs.gentoo.org/show_bug.cgi?id=88148
+ 
+ *eix-0.2.1 (2005/02/24)
+ 
+diff -Naur eix-0.2.2.orig/src/cascadingprofile.cc eix-0.2.2/src/cascadingprofile.cc
+--- eix-0.2.2.orig/src/cascadingprofile.cc	2005-04-06 17:43:28.000000000 +0200
++++ eix-0.2.2/src/cascadingprofile.cc	2005-04-06 17:43:59.000000000 +0200
+@@ -42,6 +42,15 @@
+ /** Exclude this files from listing of files in profile. */
+ static const char *profile_exclude[] = { "parent", "..", "." , NULL };
+ 
++/** Key that should accumelate their content rathern then replace. */
++static const char *accumulating_keys[4] = {
++	"USE",
++	"CONFIG_*",
++	"FEATURES",
++	NULL
++};
++
++
+ CascadingProfile::~CascadingProfile()
+ {
+ 	for(unsigned int i = 0; i<system.size(); ++i)
+@@ -133,8 +142,10 @@
+ 		for(unsigned int i = 0; i<profile_files.size(); i++)
+ 			if( strcmp(strrchr(profile_files[i].c_str(), '/'), "/make.defaults") == 0)
+ 			{
+-				VarsReader parser(profile_files[i].c_str(), FSM_ALLOW_VAR_REFERENCES);
+-				mapAppendStrings(&this->make_defaults, parser.begin(), parser.end());
++				VarsReader parser(profile_files[i].c_str(), FSM_ALLOW_VAR_REFERENCES|FSM_USE_SUPPLIED_MAP|FSM_APPEND_VALUES);
++				parser.useMap(&make_defaults);
++				parser.accumulatingKeys(accumulating_keys);
++				parser.parse();
+ 			}
+ 		this->arch = make_defaults["ARCH"].c_str();
+ 	}

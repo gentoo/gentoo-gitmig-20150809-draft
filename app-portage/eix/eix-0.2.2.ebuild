@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/eix-0.2.2.ebuild,v 1.3 2005/04/05 20:51:05 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/eix-0.2.2.ebuild,v 1.4 2005/04/07 14:36:55 hollow Exp $
 
 inherit eutils flag-o-matic bash-completion
 
@@ -19,6 +19,8 @@ RDEPEND="sys-apps/portage
 		virtual/libc"
 
 src_compile() {
+	epatch ${FILESDIR}/0.2.2-incorrect-masks.patch
+
 	aclocal
 	libtoolize --force --copy
 	autoconf
