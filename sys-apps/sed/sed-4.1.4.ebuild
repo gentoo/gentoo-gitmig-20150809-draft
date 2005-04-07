@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sed/sed-4.1.4.ebuild,v 1.3 2005/03/26 17:06:39 gongloo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sed/sed-4.1.4.ebuild,v 1.4 2005/04/07 00:21:32 vapier Exp $
 
 inherit flag-o-matic
 
@@ -51,7 +51,7 @@ src_compile() {
 		${myconf} \
 		|| die "Configure failed"
 
-	src_bootstrap_sed
+	src_bootstrap_cleanup
 	use static && append-ldflags -static
 	emake LDFLAGS="${LDFLAGS}" || die "build failed"
 }
