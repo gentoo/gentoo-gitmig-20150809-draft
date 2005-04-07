@@ -1,53 +1,43 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 17e5291b91d1eef96d55e54a2cba6d81 nvidia-kernel-1.0.6629-r1.ebuild 4748
-MD5 39074bcff7c94a87617b44dbbcdde00f nvidia-kernel-1.0.6629-r4.ebuild 4566
-MD5 02d7a8db8a946367b75c2195e9426020 ChangeLog 29669
-MD5 418b168cf9f9073c0954be91f365dbb1 nvidia-kernel-1.0.7174.ebuild 3994
-MD5 625c9d6fe198029638080ad7548b0ec4 nvidia-kernel-1.0.7167-r1.ebuild 3947
+MD5 eceda0d62812c880e65eeef450e4e281 ChangeLog 29772
 MD5 c84a79e7d9b69a204003fb8c2dbaad01 metadata.xml 297
 MD5 6efd7d5ad3c7739f685111aa84466b68 nvidia-kernel-1.0.6111-r3.ebuild 4488
-MD5 d8fcf2021aa68584d4a4d9e96b671da0 files/nvidia 501
+MD5 17e5291b91d1eef96d55e54a2cba6d81 nvidia-kernel-1.0.6629-r1.ebuild 4748
+MD5 6375e20d022cffc8d070b5d9a200d103 nvidia-kernel-1.0.6629-r4.ebuild 4564
+MD5 625c9d6fe198029638080ad7548b0ec4 nvidia-kernel-1.0.7167-r1.ebuild 3947
+MD5 418b168cf9f9073c0954be91f365dbb1 nvidia-kernel-1.0.7174.ebuild 3994
+MD5 ed1e098d85579c75542ef0a49ee4dd5c files/digest-nvidia-kernel-1.0.6111-r3 163
 MD5 8a4687b0fc3e7cc0b36c247697d94701 files/digest-nvidia-kernel-1.0.6629-r1 163
 MD5 8a4687b0fc3e7cc0b36c247697d94701 files/digest-nvidia-kernel-1.0.6629-r4 163
-MD5 61c3ebdd8604c971bf969ea03040d170 files/digest-nvidia-kernel-1.0.7174 163
 MD5 97b3ec5488fb7f7f6cdde31ee42e45af files/digest-nvidia-kernel-1.0.7167-r1 163
-MD5 ed1e098d85579c75542ef0a49ee4dd5c files/digest-nvidia-kernel-1.0.6111-r3 163
-MD5 14924b09123b075f910c73316baff848 files/1.0.6111/power-suspend-2.6.9-changes.patch 856
-MD5 29eafcaf7ab5d59dd90d3d3243bf57c3 files/1.0.6111/nv_enable_pci.patch 3640
+MD5 d8fcf2021aa68584d4a4d9e96b671da0 files/nvidia 501
+MD5 61c3ebdd8604c971bf969ea03040d170 files/digest-nvidia-kernel-1.0.7174 163
+MD5 b5b7f947ffb9e6c19f7457ff7c14d0db files/1.0.6111/conftest_koutput_includes.patch 1082
 MD5 762e6f6e16aa6dd5b2469e99fe8decd3 files/1.0.6111/nv-pci_find_class.patch 2903
 MD5 c2b155f40d7b904f07550e8e326969c2 files/1.0.6111/nv-remap-range.patch 5715
+MD5 29eafcaf7ab5d59dd90d3d3243bf57c3 files/1.0.6111/nv_enable_pci.patch 3640
+MD5 14924b09123b075f910c73316baff848 files/1.0.6111/power-suspend-2.6.9-changes.patch 856
 MD5 5177339888e44bb5f4b6124fa5830e7f files/1.0.6111/vmalloc-reserve.patch 542
-MD5 b5b7f947ffb9e6c19f7457ff7c14d0db files/1.0.6111/conftest_koutput_includes.patch 1082
-MD5 dbf80a2cbaf69a10521429e1b2a7e10c files/1.0.6629/conftest_koutput_includes.patch 1082
-MD5 c039797780f78262baa02ff488e822ff files/1.0.6629/nv-disable-preempt-on-smp_processor_id.patch 435
-MD5 e70739410861defb6bf3d40f2706d554 files/1.0.6629/nv-pgd_offset.patch 3139
-MD5 64d76075a90dedc83f1dc971389c910e files/1.0.6629/nv-shutup-warnings.patch 712
-MD5 5aef5c6a394896bbb8392816f6795147 files/1.0.6629/nv-amd64-shutup-warnings.patch 902
-MD5 0009ccc8f3896f22bad06fd549639072 files/1.0.6629/nv-pgprot-speedup.patch 1518
-MD5 7c9db721d244f6ca709e2b8003ce4e0d files/1.0.6629/nv-vm_flags-no-VM_LOCKED.patch 677
-MD5 ddeae194df6bb2112d7de723df8d84c2 files/1.0.6629/nv-fix-memory-limit.patch 18398
 MD5 0009ccc8f3896f22bad06fd549639072 files/1.0.6629/NVIDIA_kernel-1.0-6629-1155389.patch 1518
 MD5 ddeae194df6bb2112d7de723df8d84c2 files/1.0.6629/NVIDIA_kernel-1.0-6629-1161283.patch 18398
 MD5 5a17c3fa427b4d0ff8e38f82e57cd817 files/1.0.6629/NVIDIA_kernel-1.0-6629-1162524.patch 9417
 MD5 ada7d22def202e56c01c1e72c8000d45 files/1.0.6629/NVIDIA_kernel-1.0-6629-1165235.patch 581
 MD5 f1a5a01593ef996b38fe70bc93fa7440 files/1.0.6629/NVIDIA_kernel-1.0-6629-1171869.patch 2160
 MD5 59c5fa8340585303cd18362bbeb0086f files/1.0.6629/NVIDIA_kernel-1.0-6629-1175225.patch 1877
-MD5 bca6ad85efa6071a949bdcb24fce1733 files/1.0.6629/NVIDIA_kernel-1.0-6629-agp_bridge_data.patch 7860
 MD5 d4e8ffdb0cc67c56884e6055d2045e51 files/1.0.6629/NVIDIA_kernel-1.0-6629-1182399.patch 2608
 MD5 e210d99cae87c3f60120ea474b97fca7 files/1.0.6629/NVIDIA_kernel-1.0-6629-1189413.patch 8072
 MD5 da7644fcc801d40c26fb22b570a88835 files/1.0.6629/NVIDIA_kernel-1.0-6629-1201042.diff 9445
-MD5 6c6bd7d2e4589cf3f4725082bb413a43 files/1.0.7167/NVIDIA_kernel-1.0-7167-x86-shutup-warnings.patch 742
+MD5 bca6ad85efa6071a949bdcb24fce1733 files/1.0.6629/NVIDIA_kernel-1.0-6629-agp_bridge_data.patch 7860
+MD5 dbf80a2cbaf69a10521429e1b2a7e10c files/1.0.6629/conftest_koutput_includes.patch 1082
+MD5 5aef5c6a394896bbb8392816f6795147 files/1.0.6629/nv-amd64-shutup-warnings.patch 902
+MD5 c039797780f78262baa02ff488e822ff files/1.0.6629/nv-disable-preempt-on-smp_processor_id.patch 435
+MD5 ddeae194df6bb2112d7de723df8d84c2 files/1.0.6629/nv-fix-memory-limit.patch 18398
+MD5 e70739410861defb6bf3d40f2706d554 files/1.0.6629/nv-pgd_offset.patch 3139
+MD5 0009ccc8f3896f22bad06fd549639072 files/1.0.6629/nv-pgprot-speedup.patch 1518
+MD5 64d76075a90dedc83f1dc971389c910e files/1.0.6629/nv-shutup-warnings.patch 712
+MD5 7c9db721d244f6ca709e2b8003ce4e0d files/1.0.6629/nv-vm_flags-no-VM_LOCKED.patch 677
+MD5 70bb10b2da2423a6be2a4c2bce38d807 files/1.0.7167/NVIDIA_kernel-1.0-7167-1233959.patch 490
+MD5 e2625e9e0a6679c38783b5d8985fdaf6 files/1.0.7167/NVIDIA_kernel-1.0-7167-1237815.patch 1100
+MD5 82d99e72fddbc1b0447708afd84dc8c5 files/1.0.7167/NVIDIA_kernel-1.0-7167-amd64-shutup-warnings.patch 770
 MD5 7ae487fba8a81fb91d53f35b9066512f files/1.0.7167/NVIDIA_kernel-1.0-7167-conftest-koutput-includes.patch 1082
 MD5 9df3fbed7af6fcb4ad13b1b5c3851381 files/1.0.7167/NVIDIA_kernel-1.0-7167-disable-preempt-on-smp_processor_id.patch 419
-MD5 70bb10b2da2423a6be2a4c2bce38d807 files/1.0.7167/NVIDIA_kernel-1.0-7167-1233959.patch 490
-MD5 82d99e72fddbc1b0447708afd84dc8c5 files/1.0.7167/NVIDIA_kernel-1.0-7167-amd64-shutup-warnings.patch 770
-MD5 e2625e9e0a6679c38783b5d8985fdaf6 files/1.0.7167/NVIDIA_kernel-1.0-7167-1237815.patch 1100
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCUZQ51ZcsMnZjRyIRAjJAAJ9Fm+EslfJsq1TVlzO4q2H6IMDC5wCeLSfy
-i82To4EQ7LCIRGd4rdlUONs=
-=0IZC
------END PGP SIGNATURE-----
+MD5 6c6bd7d2e4589cf3f4725082bb413a43 files/1.0.7167/NVIDIA_kernel-1.0-7167-x86-shutup-warnings.patch 742

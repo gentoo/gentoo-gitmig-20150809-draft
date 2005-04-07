@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/nvidia-kernel-1.0.6629-r4.ebuild,v 1.2 2005/04/04 19:19:29 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/nvidia-kernel-1.0.6629-r4.ebuild,v 1.3 2005/04/07 19:32:16 blubb Exp $
 
 inherit eutils linux-mod
 
@@ -27,7 +27,7 @@ S="${WORKDIR}/${NV_PACKAGE}-${PKG_V}/usr/src/nv"
 
 LICENSE="NVIDIA"
 SLOT="0"
-KEYWORDS="-* x86 ~amd64"
+KEYWORDS="-* x86 amd64"
 RESTRICT="nostrip"
 IUSE=""
 
