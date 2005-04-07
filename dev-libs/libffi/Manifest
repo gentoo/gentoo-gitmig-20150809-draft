@@ -1,20 +1,30 @@
-MD5 78fce81c2abac95d8498d36ec26df445 libffi-3.3.4.ebuild 6669
-MD5 ef0217b1fb6192d577f4ea63c50db05b libffi-3.4.3.ebuild 5783
-MD5 49582270c45808ea4ccf224f0bc2250b libffi-3.3.3.ebuild 6896
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 2705fe04da79c768857632094b264cc7 libffi-3.4.1-r1.ebuild 5751
-MD5 7fb7b7b79fee74e084b316a727d2a224 libffi-3.3.3-r1.ebuild 6671
+MD5 78fce81c2abac95d8498d36ec26df445 libffi-3.3.4.ebuild 6669
 MD5 ea5e2ecd7602d6f2fb898c3f25f6e353 libffi-1.20.ebuild 604
-MD5 1da1941da6c5c3eb4c1f2ee6d6a8f361 ChangeLog 4473
+MD5 7fb7b7b79fee74e084b316a727d2a224 libffi-3.3.3-r1.ebuild 6671
+MD5 49582270c45808ea4ccf224f0bc2250b libffi-3.3.3.ebuild 6896
 MD5 b1b14c71ebf918ab0ae9cf9588a1886e libffi-3.4.1.ebuild 7094
 MD5 76afbc82a0b8b5f9d9e481a0c4546cf7 libffi-3.3.5.ebuild 6680
+MD5 38d38ff2c7e90c2f55c1bc3ffd305085 libffi-3.4.3.ebuild 5783
+MD5 7b6496d1e6c2aa0188f25d9e692a1a00 ChangeLog 4563
 MD5 ef1d6e99f954cc3412a9e513a2d80c64 metadata.xml 1836
+MD5 ed8f1e978198c34ad3dc3b81c4804199 files/digest-libffi-1.20 63
+MD5 1ca677e646f4d209e68601c9ba83c629 files/libffi-without-libgcj.dpatch 2255
 MD5 78c9b1a1b40fcc12f8cf34d57a970f00 files/libffi-soversion.dpatch 1943
 MD5 14f4d6619c938dbb907e2420c0eeefd9 files/digest-libffi-3.3.3-r1 64
-MD5 4068b84d9ce9d440b063718549cfc354 files/digest-libffi-3.3.4 64
-MD5 1ca677e646f4d209e68601c9ba83c629 files/libffi-without-libgcj.dpatch 2255
-MD5 595fc5d3e417d76d1f7e7f0a8439535a files/digest-libffi-3.3.5 64
 MD5 03a0e46a8ce1aff598b68a731112c13a files/digest-libffi-3.4.1-r1 64
 MD5 14f4d6619c938dbb907e2420c0eeefd9 files/digest-libffi-3.3.3 64
-MD5 ed8f1e978198c34ad3dc3b81c4804199 files/digest-libffi-1.20 63
-MD5 2ca380cbcf0547fb5d2a671c1c0296de files/digest-libffi-3.4.3 64
+MD5 4068b84d9ce9d440b063718549cfc354 files/digest-libffi-3.3.4 64
+MD5 595fc5d3e417d76d1f7e7f0a8439535a files/digest-libffi-3.3.5 64
 MD5 03a0e46a8ce1aff598b68a731112c13a files/digest-libffi-3.4.1 64
+MD5 2ca380cbcf0547fb5d2a671c1c0296de files/digest-libffi-3.4.3 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCVYnCI1lqEGTUzyQRAn2kAKDGM/93+k9CTc3NFPWi/yoiVRabfgCfSgNJ
+pbodrXhklEMp90PG6IMWvXg=
+=Hi1A
+-----END PGP SIGNATURE-----
