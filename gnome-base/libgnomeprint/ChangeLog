@@ -1,6 +1,6 @@
 # ChangeLog for gnome-base/libgnomeprint
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeprint/ChangeLog,v 1.82 2005/04/07 15:25:54 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeprint/ChangeLog,v 1.83 2005/04/07 15:26:50 blubb Exp $
 
   07 Apr 2005; Simon Stelling <blubb@gentoo.org> libgnomeprint-2.8.2.ebuild:
   stable on amd64
@@ -9,7 +9,7 @@
   libgnomeprint-2.8.2.ebuild:
   stable on mips
 
-  20 Mar 2005; Bryan Østergaard <kloeri@gentoo.org>
+  20 Mar 2005; Bryan Ãstergaard <kloeri@gentoo.org>
   libgnomeprint-2.8.2.ebuild:
   Stable on alpha.
 
@@ -36,7 +36,7 @@
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
 
-  24 Dec 2004; Bryan Østergaard <kloeri@gentoo.org>
+  24 Dec 2004; Bryan Ãstergaard <kloeri@gentoo.org>
   libgnomeprint-2.8.1.ebuild:
   Stable on alpha.
 
@@ -50,7 +50,7 @@
   19 Dec 2004; Mike Gardiner <obz@gentoo.org> libgnomeprint-2.8.1.ebuild:
   Keyworded x86 and ppc for GNOME 2.8.1
 
-  11 Dec 2004; Bryan Østergaard <kloeri@gentoo.org>
+  11 Dec 2004; Bryan Ãstergaard <kloeri@gentoo.org>
   libgnomeprint-2.8.0.ebuild:
   Stable on alpha.
 
@@ -85,7 +85,7 @@
   19 Sep 2004; foser <foser@gentoo.org> libgnomeprint-2.8.0.ebuild :
   Gnome 2.8 release, dep fixes
 
-  22 Aug 2004; Bryan Østergaard <kloeri@gentoo.org>
+  22 Aug 2004; Bryan Ãstergaard <kloeri@gentoo.org>
   libgnomeprint-2.6.2.ebuild:
   Stable on alpha.
 
@@ -110,7 +110,7 @@
   11 Jul 2004; <spider@gentoo.org> +libgnomeprint-2.6.2.ebuild:
   versionbump
 
-  03 Jul 2004; Bryan Østergaard <kloeri@gentoo.org>
+  03 Jul 2004; Bryan Ãstergaard <kloeri@gentoo.org>
   libgnomeprint-2.6.0.ebuild:
   Stable on alpha.
 
