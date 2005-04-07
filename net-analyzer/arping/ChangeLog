@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/arping
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arping/ChangeLog,v 1.19 2005/02/14 17:10:38 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arping/ChangeLog,v 1.20 2005/04/07 15:54:05 blubb Exp $
+
+  07 Apr 2005; Simon Stelling <blubb@gentoo.org> arping-2.04.ebuild:
+  stable on amd64
 
   14 Feb 2005; Gustavo Zacarias <gustavoz@gentoo.org> arping-2.04.ebuild:
   Stable on sparc
