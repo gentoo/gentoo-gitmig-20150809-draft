@@ -1,17 +1,39 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/tetex-3.eclass,v 1.1 2005/04/05 17:07:45 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/tetex-3.eclass,v 1.2 2005/04/07 16:09:21 usata Exp $
 #
 # Author: Jaromir Malenko <malenko@email.cz>
 # Author: Mamoru KOMACHI <usata@gentoo.org>
 #
 # A generic eclass to install tetex 3.x distributions.
 
+TEXMF_PATH=/var/lib/texmf
+
 inherit tetex
 
 ECLASS=tetex-3
 INHERITED="${INHERITED} ${ECLASS}"
-EXPORT_FUNCTIONS src_unpack src_install pkg_preinst pkg_postinst
+EXPORT_FUNCTIONS src_unpack src_compile src_install pkg_preinst pkg_postinst
+
+IUSE="motif lesstif Xaw3d neXt"
+
+DEPEND="X? ( motif? ( lesstif? ( x11-libs/lesstif )
+			!lesstif? ( x11-libs/openmotif ) )
+		!motif? ( neXt? ( x11-libs/neXtaw )
+			!neXt? ( Xaw3d? ( x11-libs/Xaw3d ) ) )
+		!app-text/xdvik
+	)
+	!dev-tex/memoir
+	!dev-tex/lineno
+	!dev-tex/SIunits
+	!dev-tex/floatflt
+	!dev-tex/g-brief
+	!dev-tex/pgf
+	!dev-tex/xcolor
+	!dev-tex/xkeyval
+	!dev-tex/latex-beamer"
+
+
 
 tetex-3_src_unpack() {
 
@@ -20,6 +42,36 @@ tetex-3_src_unpack() {
 	# need to fix up the hyperref driver, see bug #31967
 	sed -i -e "/providecommand/s/hdvips/hypertex/" \
 		${S}/texmf/tex/latex/hyperref/hyperref.cfg
+}
+
+tetex-3_src_compile() {
+	sed -i -e "/mktexlsr/,+3d" \
+		-e "s/\(updmap-sys\)/\1 --nohash/" \
+		Makefile.in || die
+
+	use amd64 && replace-flags "-O3" "-O2"
+
+	if use X ; then
+		if use motif ; then
+			if use lesstif ; then
+				append-ldflags -L/usr/X11R6/lib/lesstif -R/usr/X
+11R6/lib/lesstif
+				export CPPFLAGS="${CPPFLAGS} -I/usr/X11R6/includ
+e/lesstif"
+			fi
+			toolkit="motif"
+		elif use neXt ; then
+			toolkit="neXtaw"
+		elif use Xaw3d ; then
+			toolkit="xaw3d"
+		else
+			toolkit="xaw"
+		fi
+
+		TETEX_ECONF="${TETEX_ECONF} --with-xdvi-x-toolkit=${toolkit}"
+	fi
+
+	tetex_src_compile
 }
 
 tetex-3_src_install() {
