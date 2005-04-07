@@ -1,0 +1,18 @@
+#!/sbin/runscript
+# Copyright 1999-2005 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/util-vserver/files/0.30.205/vprocunhide,v 1.1 2005/04/07 14:23:52 hollow Exp $
+
+start() {
+	: ${UTIL_VSERVER_VARS:=/usr/lib/util-vserver/util-vserver-vars}
+	if [[ ! -e ${UTIL_VSERVER_VARS} ]]; then
+		eerror "Cannot find util-vserver installation"
+		eerror "(the file '$UTIL_VSERVER_VARS' would be expected)"
+		exit 1
+	fi
+	. ${UTIL_VSERVER_VARS}
+	
+	ebegin "Unhiding /proc entries"
+	${_VPROCUNHIDE}
+	eend $?
+}

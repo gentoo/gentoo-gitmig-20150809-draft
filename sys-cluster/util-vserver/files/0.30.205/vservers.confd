@@ -1,0 +1,36 @@
+# Copyright 1999-2005 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/util-vserver/files/0.30.205/vservers.confd,v 1.1 2005/04/07 14:23:52 hollow Exp $
+
+# A space-delimited list of vserver MARKS to start. 
+# Identification of vservers happens by
+# putting the flavor into /etc/vservers/<vserver-id>/apps/init/mark.
+MARKS="default"
+
+# Wether to start all vservers by default (supersedes MARKS)
+# This will be enabled if STARTALL is set regardless of its content
+# i.e. you have to comment to disable it
+#STARTALL=yes
+
+# Wether to stop all vservers by default (supersedes MARKS)
+# This will be enabled if STOPALL is set regardless of its content
+# i.e. you have to comment to disable it
+STOPALL=yes
+
+# Number of vservers which shall be started in parallel; since most
+# initmethods are spending much time in sleeps, it is safe to
+# use a high number here, though you should pay attention if you make 
+# use of depends in /etc/vservers as some services may not be up if
+# started in parallel
+#NUMPARALLEL=6
+
+# The name of the vserver lock directory which is used by the init script
+# to determine which MARKS have already been started (used within
+# vstatus() to show the status of MARKS). Default should be good
+# for everyone. Change at your own risk
+#LOCKDIR=/var/lock/vservers
+
+# The location of util-vserver-vars
+# This file contains variables to util-vserver scripts used within the
+# init script. Change at your own risk.
+#UTIL_VSERVER_VARS=/usr/lib/util-vserver/util-vserver-vars

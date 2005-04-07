@@ -1,0 +1,75 @@
+#!/sbin/runscript
+# Copyright 1999-2004 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/util-vserver/files/0.30.205/vservers.initd,v 1.1 2005/04/07 14:23:52 hollow Exp $
+
+opts="${opts} vstatus"
+
+checkconfig() {
+	: ${UTIL_VSERVER_VARS:=/usr/lib/util-vserver/util-vserver-vars}
+	if [[ ! -e ${UTIL_VSERVER_VARS} ]]; then
+		eerror "Cannot find util-vserver installation"
+		eerror "(the file '$UTIL_VSERVER_VARS' would be expected)"
+		exit 1
+	fi
+	. ${UTIL_VSERVER_VARS}
+	
+	: ${MARKS:=default}
+	: ${NUMPARALLEL:=1}
+	: ${LOCKDIR:=/var/lock/vservers}
+}
+
+start() {
+	checkconfig
+	
+	if [[ -n ${STARTALL} ]]; then
+		ebegin "Starting all vservers"
+		${_START_VSERVERS} -j ${NUMPARALLEL} --all --start
+		local rc=$?
+		[[ $rc -eq 0 ]] && touch ${LOCKDIR}/all
+		eend $rc
+	else
+		for MARK in ${MARKS}; do
+			ebegin "Starting vservers of type '${MARK}'"
+			${_START_VSERVERS} -m ${MARK} -j ${NUMPARALLEL} --all --start
+			local rc=$?
+			[[ $rc -eq 0 ]] && touch ${LOCKDIR}/${MARK}
+			eend $rc
+		done
+	fi
+}
+
+stop() {
+	checkconfig
+	
+	if [[ -n ${STOPALL} ]]; then
+		ebegin "Stopping all vservers"
+		${_START_VSERVERS} -j ${NUMPARALLEL} --all --stop
+		local rc=$?
+		rm -f ${LOCKDIR}/all
+		eend $rc
+	else
+		for MARK in ${MARKS}; do
+			ebegin "Stopping vservers of type '${MARK}'"
+			${_START_VSERVERS} -m ${MARK} -j ${NUMPARALLEL} --all --stop
+			local rc=$?
+			rm ${LOCKDIR}/${MARK}
+			eend $rc
+		done
+	fi
+
+}
+
+vstatus() {
+	checkconfig
+
+	einfo "${LOCKDIR} shows the follwing types of vservers running:"
+	for i in ${LOCKDIR}/*; do
+		einfo "  ${i}"
+		local running="true"
+	done
+	
+	if [[ "${running}" != "true" ]]; then
+		einfo "  none"
+	fi
+}
