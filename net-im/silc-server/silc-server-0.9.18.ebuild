@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/silc-server/silc-server-0.9.18.ebuild,v 1.2 2004/07/17 19:10:43 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/silc-server/silc-server-0.9.18.ebuild,v 1.3 2005/04/07 13:37:22 ticho Exp $
 
 inherit eutils
 
@@ -42,7 +42,7 @@ src_install() {
 		${D}/etc/${PN}/silcd.{pub,prv}
 
 	exeinto /etc/init.d
-	newexe ${FILESDIR}/silc-server.init.d silc-server
+	newexe ${FILESDIR}/silc-server.rc6 silc-server
 
 	sed -i \
 		-e 's:/var/lib/silcd.pid:/var/run/silcd.pid:' \

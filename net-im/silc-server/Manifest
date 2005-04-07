@@ -1,15 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 29b763c07c6a6ca761954040a32ffce8 silc-server-0.9.18.ebuild 1510
-MD5 26577cacc509f394a66a46286424b4ac ChangeLog 656
+MD5 5b8732137552cca832558dd31b16374d ChangeLog 991
+MD5 081d7fe487cafda4ccbf08c626ade6fa silc-server-0.9.18.ebuild 1507
+MD5 23f441c043fde934cd443d80f01dc72a silc-server-0.9.19.ebuild 2084
 MD5 44c39c6ad372a8e5a5e7ee3311f703a7 metadata.xml 160
-MD5 4d46fea728c7503261d8cdb4c8889b12 files/silc-server.init.d 547
+MD5 daa76cd2004c198217562515888c3bd6 files/digest-silc-server-0.9.19 74
+MD5 98a0c24ebb4913a10047dc242aa60a3a files/silc-server.rc6 541
 MD5 35c2cb3f96d044d2fa789fdaee59b960 files/digest-silc-server-0.9.18 72
+MD5 1d6f438fd4db0224ebc00a4aedbf03b8 files/silcd.rc6 516
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFBskLBI1lqEGTUzyQRAjOOAKCHwXcaoV/rdNC6B7Av97lvP4XqawCg25Cz
-Ixh4sfBoQX+yV9IT+CEch0I=
-=wV03
+iD8DBQFCVTeoQlM6RnzZP+IRAgU2AKCOaa2prh/WYgJXzUSOv1pOEIqHAACfehiJ
+KvSHm3Y/BawgUo+BmV7rACE=
+=nO9e
 -----END PGP SIGNATURE-----
