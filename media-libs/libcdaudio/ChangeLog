@@ -1,13 +1,6 @@
 # ChangeLog for media-libs/libcdaudio
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcdaudio/ChangeLog,v 1.22 2005/04/07 21:45:42 eradicator Exp $
-
-*libcdaudio-0.99.12 (07 Apr 2005)
-
-  07 Apr 2005; Jeremy Huddleston <eradicator@gentoo.org>
-  -libcdaudio-0.99.6-r2.ebuild, -libcdaudio-0.99.10.ebuild,
-  libcdaudio-0.99.10-r1.ebuild, +libcdaudio-0.99.12.ebuild:
-  Version bump for bug #76888.
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcdaudio/ChangeLog,v 1.23 2005/04/07 21:48:18 eradicator Exp $
 
 *libcdaudio-0.99.12 (07 Apr 2005)
 

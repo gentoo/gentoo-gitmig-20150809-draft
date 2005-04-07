@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 294b799bdd1cf5ece51eca764e9b5b7a ChangeLog 3359
+MD5 c71496cd29c924c9b4fbea26e3cd96dc ChangeLog 3115
 MD5 107be31d1323d58d6e3c5020a1f0db1d libcdaudio-0.99.10-r1.ebuild 919
 MD5 084d8b30fc8ee6e65b7d16730557dc8e libcdaudio-0.99.9.ebuild 879
 MD5 9384ae7ba3e9f56b8027ea92f607042d metadata.xml 215
@@ -14,7 +14,7 @@ MD5 314b1b723f70b93d5b0b293f59ed6e97 files/digest-libcdaudio-0.99.12 70
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCVaoQArHZZzCEUG0RAuMVAJwL9MCED37dKGesYfZAihfjHb7WAgCfeUAM
-hhFosEmmDKRQy6AclC/B1Ms=
-=MuFc
+iD8DBQFCVaqsArHZZzCEUG0RAioxAJ9medbBxV4OdjyybsSC6L1ChKjXsQCfeQuk
+leCJOpswRMjIjulJ0Ed8L8M=
+=c0Z0
 -----END PGP SIGNATURE-----
