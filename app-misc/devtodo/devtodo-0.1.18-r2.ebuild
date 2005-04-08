@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/devtodo/devtodo-0.1.18-r2.ebuild,v 1.11 2005/03/27 00:53:40 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/devtodo/devtodo-0.1.18-r2.ebuild,v 1.12 2005/04/08 12:22:59 corsair Exp $
 
 inherit eutils gnuconfig bash-completion flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="http://swapoff.org/files/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 mips ppc s390 sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc s390 sparc x86 ppc64"
 IUSE=""
 
 RDEPEND=">=sys-libs/ncurses-5.2

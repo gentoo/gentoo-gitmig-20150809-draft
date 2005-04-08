@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/mime-types
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mime-types/ChangeLog,v 1.22 2005/01/02 21:20:24 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mime-types/ChangeLog,v 1.23 2005/04/08 12:25:00 corsair Exp $
+
+  08 Apr 2005; Markus Rothe <corsair@gentoo.org> mime-types-1.0-r1.ebuild:
+  Stable on ppc64
 
   02 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
