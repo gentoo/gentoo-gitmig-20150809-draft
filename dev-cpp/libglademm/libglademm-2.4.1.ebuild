@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libglademm/libglademm-2.4.1.ebuild,v 1.4 2005/02/10 06:58:31 joem Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libglademm/libglademm-2.4.1.ebuild,v 1.5 2005/04/08 13:22:22 gustavoz Exp $
 
 inherit gnome2 eutils
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.gnome.org/pub/GNOME/sources/libglademm/2.4/${P}.tar.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="2.4"
-KEYWORDS="~amd64 ~ppc ~x86 ~sparc"
+KEYWORDS="~amd64 ~ppc ~x86 sparc"
 IUSE=""
 
 RDEPEND=">=gnome-base/libglade-2.3.6

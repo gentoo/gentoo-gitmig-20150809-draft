@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libgnomeuimm/libgnomeuimm-2.6.0.ebuild,v 1.10 2005/01/31 15:07:38 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libgnomeuimm/libgnomeuimm-2.6.0.ebuild,v 1.11 2005/04/08 13:25:45 gustavoz Exp $
 
 inherit gnome2 eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://gtkmm.sourceforge.net/"
 
 LICENSE="LGPL-2.1"
 SLOT="2.6"
-KEYWORDS="~x86 ~amd64 ~ppc ~sparc"
+KEYWORDS="~x86 ~amd64 ~ppc sparc"
 IUSE=""
 
 RDEPEND=">=gnome-base/libgnomeui-2.6
