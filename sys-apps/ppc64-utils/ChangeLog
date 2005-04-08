@@ -1,0 +1,10 @@
+# ChangeLog for sys-apps/ppc64-utils
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ppc64-utils/ChangeLog,v 1.1 2005/04/08 21:36:24 corsair Exp $
+
+*ppc64-utils-1.4 (08 Apr 2005)
+
+  08 Apr 2005; Markus Rothe <corsair@gentoo.org> +metadata.xml,
+  +ppc64-utils-1.4.ebuild:
+  Initial import, thanks to genstef for help with ebuild
+
