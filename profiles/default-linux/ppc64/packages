@@ -1,6 +1,0 @@
-# Copyright 2001-2005 Gentoo Foundation.
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ppc64/packages,v 1.2 2005/01/05 19:36:58 tgall Exp $
-
-*sys-fs/mac-fdisk
-*sys-fs/hfsutils

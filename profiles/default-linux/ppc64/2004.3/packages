@@ -1,11 +1,11 @@
 # Copyright 2003-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ppc64/2004.3/packages,v 1.1 2005/01/03 17:58:25 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ppc64/2004.3/packages,v 1.2 2005/04/08 04:35:44 dostrow Exp $
 # Maintained by Tom Gall <tgall@gentoo.org>
 
 *>=sys-devel/binutils-2.15
 *>=sys-devel/gcc-3.4.0-r6
 *sys-libs/libstdc++-v3
 *>=sys-libs/glibc-2.3.3_pre20040529
-
-
+*sys-fs/mac-fdisk
+*sys-fs/hfsutils
