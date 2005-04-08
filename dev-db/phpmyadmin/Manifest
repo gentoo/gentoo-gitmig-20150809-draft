@@ -1,16 +1,21 @@
-MD5 30b3585d004ef3a0d25e5a86bd914223 ChangeLog 13270
-MD5 d992d28bec4a3bfd72b441145091a58e metadata.xml 244
-MD5 3a33dda459f41b062d86576003c1e0ec phpmyadmin-2.6.1.ebuild 2595
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 5ebaca8bbe759862b80f5c433e7c935b phpmyadmin-2.6.2_rc1.ebuild 2397
 MD5 be80e52ff2f5bf4da91c8eb07716f050 phpmyadmin-2.6.1_p2-r1.ebuild 2475
-MD5 8953a4dca66a41467a427449f47ea16e phpmyadmin-2.6.1_p2.ebuild 2599
-MD5 d0ac5e24e09567b4888c6ee2fbd88b3e phpmyadmin-2.6.1_rc1.ebuild 2593
-MD5 4c95d31af8becb428be471fcedf664a4 files/2.6.1_p2-no-wildcard-privs-for-you.patch 3731
-MD5 85a86432c3f64acb068a7d2cfab311a9 files/config.inc.php-2.5.6.patch 5525
-MD5 c4e16f440d397574f36ec04130d54ba0 files/digest-phpmyadmin-2.6.1 70
-MD5 22a63a92c01eef5a268311e15594367b files/digest-phpmyadmin-2.6.1_p2 74
-MD5 22a63a92c01eef5a268311e15594367b files/digest-phpmyadmin-2.6.1_p2-r1 74
-MD5 4badbcc4cd669e6f934d5c993ff9ae4e files/digest-phpmyadmin-2.6.1_rc1 74
-MD5 1a6c1907f5c2327b00453d7675c13178 files/mysql-setup.sql.in-2.5.6 3231
-MD5 c6a79ab6f3c9e6d657a5bee36b1f6565 files/phpmyadmin-config.patch 4857
-MD5 396133c1da8d8b716ad2da23aa0a5a30 files/phpmyadmin-mysql-setup.sql.in 2712
+MD5 752dc4c0fc57d799ef7eb7d4dbdf9956 ChangeLog 13702
+MD5 7b6e6cf3eaafa0480ab619fadfb37e2e metadata.xml 162
+MD5 278c189dfbc22e4f95fcb1f2c8a7622a files/digest-phpmyadmin-2.6.2_rc1 74
 MD5 56dcb2efb84915a521c18a004f96d37c files/postinstall-en.txt 506
+MD5 85a86432c3f64acb068a7d2cfab311a9 files/config.inc.php-2.5.6.patch 5525
+MD5 c6a79ab6f3c9e6d657a5bee36b1f6565 files/phpmyadmin-config.patch 4857
+MD5 4c95d31af8becb428be471fcedf664a4 files/2.6.1_p2-no-wildcard-privs-for-you.patch 3731
+MD5 22a63a92c01eef5a268311e15594367b files/digest-phpmyadmin-2.6.1_p2-r1 74
+MD5 1a6c1907f5c2327b00453d7675c13178 files/mysql-setup.sql.in-2.5.6 3231
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCVq9UEZCkKN40op4RAluVAJ9E6hLZ40DFcP5QhvJSqjRwbStiFQCgskRT
+lyEDnfcr4DjzTME+U/kPkwE=
+=9RCT
+-----END PGP SIGNATURE-----

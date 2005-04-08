@@ -1,21 +1,20 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/phpmyadmin-2.6.1.ebuild,v 1.1 2005/01/25 23:09:46 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/phpmyadmin-2.6.2_rc1.ebuild,v 1.1 2005/04/08 16:20:10 ka0ttic Exp $
 
 inherit eutils webapp
 
 MY_PV=${PV/_p/-pl}
-MY_PV=${PV/_rc/-rc}
+MY_PV=${MY_PV/_rc/-rc}
 MY_P=phpMyAdmin-${MY_PV}
 DESCRIPTION="Web-based administration for MySQL database in PHP"
 HOMEPAGE="http://www.phpmyadmin.net/"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2"
 LICENSE="GPL-2"
-KEYWORDS="~alpha ~ppc ~hppa ~sparc ~x86 ~amd64 ~mips"
+KEYWORDS="~alpha ~ppc ~hppa ~sparc x86 ~amd64 ~mips"
 IUSE=""
-DEPEND=">=net-www/apache-1.3
-	>=dev-db/mysql-3.23.32 <dev-db/mysql-5.1
-	virtual/php
+DEPEND=">=dev-db/mysql-3.23.32 <dev-db/mysql-5.1
+	virtual/httpd-php
 	sys-apps/findutils
 	!<=dev-db/phpmyadmin-2.5.6"
 S=${WORKDIR}/${MY_P}
@@ -27,6 +26,10 @@ src_unpack() {
 
 	# Remove .cvs* files and CVS directories
 	find ${S} -name .cvs\* -or \( -type d -name CVS -prune \) | xargs rm -rf
+
+	sed -e "s:\${MY_SQLSCRIPTSDIR}:${MY_SQLSCRIPTSDIR}:" \
+		-e "s:\${PVR}:${PVR}:" \
+		${FILESDIR}/postinstall-en.txt > ${WORKDIR}/postinstall-en.txt
 }
 
 src_compile() {
@@ -71,21 +74,11 @@ src_install() {
 
 	webapp_configfile ${MY_HTDOCSDIR}/config.inc.php
 
-	# Identify any script files that need #! headers adding to run under
-	# a CGI script (such as PHP/CGI)
-	#
-	# for phpmyadmin, we *assume* that all .php files that don't end in
-	# .inc.php need to have CGI/BIN support added
-
-	for x in `find . -name '*.php' -print | grep -v 'inc.php'` ; do
-		webapp_runbycgibin php ${MY_HTDOCSDIR}/$x
-	done
-
 	# there are no files which need to be owned by the web server
 
 	# add the post-installation instructions
 
-	webapp_postinst_txt en ${FILESDIR}/postinstall-en.txt
+	webapp_postinst_txt en ${WORKDIR}/postinstall-en.txt
 
 	# all done
 	#

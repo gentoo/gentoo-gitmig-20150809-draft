@@ -1,6 +1,16 @@
 # ChangeLog for dev-db/phpmyadmin
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.95 2005/03/29 14:57:05 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.96 2005/04/08 16:20:10 ka0ttic Exp $
+
+*phpmyadmin-2.6.2_rc1 (08 Apr 2005)
+
+  08 Apr 2005; Aaron Walker <ka0ttic@gentoo.org>
+  -files/phpmyadmin-mysql-setup.sql.in, metadata.xml,
+  -phpmyadmin-2.6.1_rc1.ebuild, -phpmyadmin-2.6.1.ebuild,
+  -phpmyadmin-2.6.1_p2.ebuild, +phpmyadmin-2.6.2_rc1.ebuild:
+  Revision bump for security bug 87952; tidy all the old versions from
+  previous vulnerabilities. Also updated metadata.xml since twp no longer
+  maintains this package.
 
   29 Mar 2005; Guy Martin <gmsoft@gentoo.org> phpmyadmin-2.6.1_p2-r1.ebuild:
   Stable on hppa.
