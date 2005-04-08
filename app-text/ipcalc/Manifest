@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 172ff18aa6287dea70cedf2870d96cb2 ChangeLog 1976
+MD5 bd5e5e15aedbb01841f991f35c806fbd ChangeLog 2063
 MD5 5bae51f4cf3c738986ec5764cef7609b ipcalc-0.37.ebuild 570
-MD5 3d93a1b9c7f1cb6cc52708a11e93bda6 ipcalc-0.38.ebuild 598
+MD5 a2872f140a5b2310a29ff696975615bb ipcalc-0.38.ebuild 596
 MD5 b12305fb89f104c432d327c2ed02eae0 metadata.xml 253
 MD5 db6d4e6711e63467c59f936c53991bd2 files/digest-ipcalc-0.37 61
 MD5 ea9621895b1a08581796e40e1f410968 files/digest-ipcalc-0.38 61
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFCUVQDKRy60XGEcJIRAo4GAKCByfJ64h4cAFLj3VWIauTWaDFTGwCdHn+4
-Xaf65YV6LMv7eeXTayqIJJM=
-=x2b3
------END PGP SIGNATURE-----
