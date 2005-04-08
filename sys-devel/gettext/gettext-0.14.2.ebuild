@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.14.2.ebuild,v 1.4 2005/04/03 19:05:36 j4rg0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.14.2.ebuild,v 1.5 2005/04/08 21:53:14 kito Exp $
 
-inherit eutils toolchain-funcs mono libtool
+inherit flag-o-matic eutils toolchain-funcs mono libtool
 
 DESCRIPTION="GNU locale utilities"
 HOMEPAGE="http://www.gnu.org/software/gettext/gettext.html"
@@ -43,7 +43,8 @@ src_unpack() {
 		|| die "sed docdir"
 
 	if use ppc-macos ; then
-		elibtoolize
+		glibtoolize
+		append-flags -bind_at_load
 	else
 		elibtoolize --reverse-deps
 	fi
