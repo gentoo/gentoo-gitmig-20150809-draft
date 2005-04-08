@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3804 2005/04/08 09:55:59 eradicator Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3805 2005/04/08 18:08:50 wolf31o2 Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -557,11 +557,6 @@ net-wireless/waproamd
 # 2.4 is no more supported upstream.
 <sys-kernel/hppa-sources-2.6
 sys-kernel/hppa-dev-sources
-
-# <jhuebel@gentoo.org> (26 Dec 2004)
-# p.masked 5.0 beta, if you want this, then you'll have to
-# unmask it yourself using /etc/portage/package.unmask
->=app-emulation/vmware-workstation-5.0_beta1
 
 # <robbat2@gentoo.org> (23 Dec 2004)
 # The upgrade process to this is non-trivial.
