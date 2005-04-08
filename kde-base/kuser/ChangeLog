@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kuser
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kuser/ChangeLog,v 1.7 2005/03/25 01:27:20 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kuser/ChangeLog,v 1.8 2005/04/08 12:29:21 greg_g Exp $
+
+*kuser-3.4.0-r1 (08 Apr 2005)
+
+  08 Apr 2005; Gregorio Guidi <greg_g@gentoo.org>
+  +files/kdeadmin-3.4.0-kuser.patch, +kuser-3.4.0-r1.ebuild:
+  Add patch to fix /etc/passwd corruption (#87405).
 
   25 Mar 2005; Jason Wever <weeve@gentoo.org> kuser-3.4.0.ebuild:
   Added ~sparc keyword.
