@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/jack-audio-connection-kit
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-audio-connection-kit/ChangeLog,v 1.51 2005/02/17 12:16:25 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-audio-connection-kit/ChangeLog,v 1.52 2005/04/08 19:39:50 corsair Exp $
+
+  08 Apr 2005; Markus Rothe <corsair@gentoo.org>
+  jack-audio-connection-kit-0.99.0-r1.ebuild:
+  Stable on ppc64
 
   17 Feb 2005; Michael Hanselmann <hansmi@gentoo.org>
   jack-audio-connection-kit-0.99.0-r1.ebuild:
