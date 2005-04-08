@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.130 2005/04/07 10:26:07 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.131 2005/04/08 04:26:00 tgall Exp $
+
+  07 Apr 2005; Tom Gall <tgall@gentoo.org>
+  gentoo-sources-2.6.11-r6.ebuild:
+  marked stable on ppc64, fixes in, already well tested on a wide range of hardware
 
 *gentoo-sources-2.6.11-r6 (07 Apr 2005)
 
