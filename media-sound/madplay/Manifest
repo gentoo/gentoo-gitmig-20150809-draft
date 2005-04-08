@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 4dba08eb889e63a6cc27bb8a233123d6 ChangeLog 3436
+MD5 f8dc16dcdc5bf5d9e2ca224871a7001a madplay-0.15.1b.ebuild 1156
+MD5 527dcfe3ce0f0b53c6b6aa8b82eb930c metadata.xml 252
+MD5 04cf6492e8b1b76562bd4ec0cf49a3fb ChangeLog 3534
+MD5 b70dbf85436083753b87be938e0fa7c3 madplay-0.15.2b.ebuild 1179
 MD5 46b5f219349bc5c26ac984c92e57f5bb madplay-0.15.0b-r1.ebuild 1157
 MD5 d0975634131465be31a9a6718341989d madplay-0.15.0b.ebuild 1233
-MD5 527dcfe3ce0f0b53c6b6aa8b82eb930c metadata.xml 252
-MD5 f8dc16dcdc5bf5d9e2ca224871a7001a madplay-0.15.1b.ebuild 1156
-MD5 cf0de3bff6e9450b7c81974a2bfc0499 madplay-0.15.2b.ebuild 1180
 MD5 0fc07eafcb4326558f0a89f1ec6d7702 files/digest-madplay-0.15.0b 67
+MD5 71a82995eb3d84560fb0d9a075110d74 files/digest-madplay-0.15.2b 67
 MD5 0fc07eafcb4326558f0a89f1ec6d7702 files/digest-madplay-0.15.0b-r1 67
 MD5 8841a359fd11baf1be0358c2fbe136b7 files/digest-madplay-0.15.1b 67
-MD5 71a82995eb3d84560fb0d9a075110d74 files/digest-madplay-0.15.2b 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.14 (GNU/Linux)
-
-iD8DBQFB5KC9roRuSHgZdywRAn7TAKCOJFSJ3YrI50T33Qhs1ShPlACl0wCfeLMA
-LgFCcs/gjM7bAw7uH6n7MbU=
-=NHk4
------END PGP SIGNATURE-----

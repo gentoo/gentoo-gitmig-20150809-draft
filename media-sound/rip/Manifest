@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 28a090d6b7f3d7a31e5136f213a4465b ChangeLog 2141
-MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 69808ea2413caed8358b93544568f0f3 rip-1.01-r1.ebuild 794
-MD5 66010ad7e8d9a9aada65a7b6bfa7cda7 rip-1.07.ebuild 809
-MD5 5ff5f7a6e5370222da299fc32e4a0062 files/digest-rip-1.01-r1 60
+MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+MD5 3fde6ec1a6f72f4390ed78f79e07823b ChangeLog 2230
+MD5 67cd5aee151cf9dbca2d78053f197e90 rip-1.07.ebuild 808
 MD5 6079edf2cba6cd4be440a12eca48f7ec files/digest-rip-1.07 60
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBxrcf60LfUIagIAkRAiICAKDzOyR6cd65+2JsHLw+HluVBfYAeQCg9JlL
-PRk+TvnwpRAUbPODV7ujPBw=
-=Xcxm
------END PGP SIGNATURE-----
+MD5 5ff5f7a6e5370222da299fc32e4a0062 files/digest-rip-1.01-r1 60

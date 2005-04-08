@@ -1,21 +1,11 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 26708295f442291dfd74f9d19b778ab0 ripperx-2.6.4.ebuild 1132
-MD5 0e09b502fe1a051c76f0d2fbb525bcff ripperx-2.3.ebuild 1143
-MD5 001ca454a9190deba65a0c5d3defd085 ripperx-2.6.1.ebuild 1161
-MD5 fbc890518aed604e612a69132b442923 ChangeLog 2755
 MD5 05ab4d4775083f0930841e415df18ad6 metadata.xml 160
+MD5 f23ec6d6fb1cffc32c14b6906dda2ec1 ChangeLog 2846
+MD5 001ca454a9190deba65a0c5d3defd085 ripperx-2.6.1.ebuild 1161
+MD5 0e09b502fe1a051c76f0d2fbb525bcff ripperx-2.3.ebuild 1143
+MD5 338a63c8e07ab3623b46c2f04a811d46 ripperx-2.6.4.ebuild 1128
 MD5 1f2af914ab56a0c8534da1b64458d910 files/digest-ripperx-2.6.1 65
-MD5 4a749204e0efd8e974e60aa87fd1d86f files/digest-ripperx-2.6.4 65
 MD5 89f653a43ad3b4ec7559ff31bcbe361e files/ripperx-2.6.1-gcc34.patch 1886
 MD5 d9b642d70de10a941fc7db96fa760734 files/ripperx-2.3-gcc34.patch 1601
-MD5 b15842d5d282af9b7f9da313c9a6a1f4 files/ripperx-2.6.4-wrapper 515
 MD5 e7b366801eb77e3f9ce37e94c38f3921 files/digest-ripperx-2.3 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCPygw06ebR+OMO78RAk6MAJ48v3IrS50x7I3rl03shPI1r+R3ZgCfXBt0
-bH3xJzX8XZSd4NYJNtfIKiE=
-=Rohe
------END PGP SIGNATURE-----
+MD5 b15842d5d282af9b7f9da313c9a6a1f4 files/ripperx-2.6.4-wrapper 515
+MD5 4a749204e0efd8e974e60aa87fd1d86f files/digest-ripperx-2.6.4 65
