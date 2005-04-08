@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.12p-r1.ebuild,v 1.3 2005/02/21 15:37:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.12p-r1.ebuild,v 1.4 2005/04/08 23:47:31 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -101,7 +101,7 @@ src_compile() {
 	emake || die "emake failed"
 
 	cd partx
-	has_version sys-kernel/linux26-headers && append-flags -include linux/compiler.h
+	has_version '>=sys-kernel/linux-headers-2.6' && append-flags -include linux/compiler.h
 	emake CFLAGS="${CFLAGS}" || die "make partx failed"
 
 	if use old-crypt ; then
