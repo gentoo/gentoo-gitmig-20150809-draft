@@ -1,6 +1,10 @@
 # ChangeLog for www-proxy/tinyproxy
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-proxy/tinyproxy/ChangeLog,v 1.8 2005/04/06 18:50:19 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-proxy/tinyproxy/ChangeLog,v 1.9 2005/04/08 18:07:45 hansmi Exp $
+
+  08 Apr 2005; Michael Hanselmann <hansmi@gentoo.org>
+  tinyproxy-1.6.3.ebuild:
+  Stable on ppc.
 
   06 Apr 2005; Alin Nastac <mrness@gentoo.org> tinyproxy-1.6.3.ebuild:
   Stable on x86
