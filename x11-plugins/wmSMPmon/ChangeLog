@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmSMPmon
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmSMPmon/ChangeLog,v 1.7 2005/04/07 17:09:58 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmSMPmon/ChangeLog,v 1.8 2005/04/08 07:24:51 s4t4n Exp $
+
+  08 Apr 2005; Michele Noberasco <s4t4n@gentoo.org> wmSMPmon-2.2.ebuild:
+  Wiped out older version...
 
   07 Apr 2005; Simon Stelling <blubb@gentoo.org> wmSMPmon-2.3.ebuild:
   stable on amd64
