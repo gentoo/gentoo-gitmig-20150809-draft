@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/migrationtools/migrationtools-46.ebuild,v 1.6 2005/01/12 22:31:27 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/migrationtools/migrationtools-46.ebuild,v 1.7 2005/04/08 18:02:47 hansmi Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.padl.com/download/${PN0}-${PV}.tar.gz"
 HOMEPAGE="http://www.padl.com/OSS/MigrationTools.html"
 
 SLOT="0"
-KEYWORDS="x86 sparc ~amd64 hppa ~ppc"
+KEYWORDS="x86 sparc ~amd64 hppa ppc"
 LICENSE="as-is"
 IUSE=""
 
