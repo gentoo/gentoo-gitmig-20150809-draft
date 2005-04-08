@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 66925baecb58edd4025e262d0b48dcaa pisg-0.62.ebuild 1285
-MD5 3d3baeb928c07f219dd54db81d8338d8 pisg-0.64.ebuild 1294
-MD5 b33b1e36972d5ab98efe078d47d778a1 pisg-0.63.ebuild 1289
-MD5 0caa0dad7fd83f992ae49f13523d53b8 ChangeLog 4109
 MD5 44c39c6ad372a8e5a5e7ee3311f703a7 metadata.xml 160
+MD5 16e69475bddb028d651d7c85cdc4df24 ChangeLog 4197
+MD5 66925baecb58edd4025e262d0b48dcaa pisg-0.62.ebuild 1285
+MD5 b459685754805772c4915458ad27cc6d pisg-0.63.ebuild 1286
+MD5 3d3baeb928c07f219dd54db81d8338d8 pisg-0.64.ebuild 1294
 MD5 ec19c7db381c7718faf4f2c7e26064c7 files/digest-pisg-0.62 61
 MD5 1802bad596df45d21d6316a75a964b88 files/digest-pisg-0.63 61
 MD5 20a23ff23f550ab3a458ea0513436730 files/digest-pisg-0.64 61
 MD5 2116a6e5786030640b4a7f25159dbfc6 files/0.56-network-option-fix.patch 1345
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCHjGGI1lqEGTUzyQRAmnUAJ9881s135YTam067HqfCBNbnxL3LwCgpTXA
-CYHJL2b9CdAdWm29iQoVNeM=
-=dkon
------END PGP SIGNATURE-----
