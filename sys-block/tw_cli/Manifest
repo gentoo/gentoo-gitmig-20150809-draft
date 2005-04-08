@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 c4e097ca05816f1e2e36bcc4c17dccb3 tw_cli-2.00.00.032b.ebuild 1817
-MD5 52ae31c33d4d39485cde5b89d08f50ee ChangeLog 953
-MD5 8cfbc9d6642064ebff5487bcc04510c8 tw_cli-2.00.00.042.ebuild 1707
+MD5 ebebdb7bd484f49f65b42cf1aca6843c ChangeLog 1086
+MD5 60071f161e79257dc8e6bc0c40f50c91 tw_cli-2.00.00.042.ebuild 1693
 MD5 21cd68602737d7c996bceabf6e62c468 metadata.xml 223
 MD5 a3c1d1101d70383a7e5ec69ea246314d files/digest-tw_cli-2.00.00.032b 129
 MD5 ffe9b53a7e5d9586bdbf3a11be8f7dbe files/digest-tw_cli-2.00.00.042 133
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCKvAvI1lqEGTUzyQRAmM2AKCJk4mUhR/73PnRtpMjAGzV0p9azACgyDoV
-hZlVcc5hphU33HTw2F3ybNc=
-=ZT7G
------END PGP SIGNATURE-----

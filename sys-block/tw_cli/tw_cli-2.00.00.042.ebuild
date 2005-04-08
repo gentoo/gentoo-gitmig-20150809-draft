@@ -1,34 +1,30 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/tw_cli/tw_cli-2.00.00.042.ebuild,v 1.1 2005/03/05 22:48:50 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/tw_cli/tw_cli-2.00.00.042.ebuild,v 1.2 2005/04/08 23:53:43 robbat2 Exp $
 
 DESCRIPTION="3ware Command Line Interface"
 HOMEPAGE="http://www.3ware.com"
 LICENSE="3ware"
 SLOT="0"
-IUSE="doc"
-RESTRICT="fetch"
-
-MY_P="${P}+"
-
 # binary packages
-KEYWORDS="-* ~x86 ~amd64"
-
-# upstream does NOT version releases in the filename :-(
-SRC_URI_BIN="x86? ( tw_cli-linux-x86.tgz )
-			amd64? ( tw_cli-linux-x86_64.tgz )"
-SRC_URI="${SRC_URI_BIN}"
-
-DOWNLOAD_URL_APP="http://www.3ware.com/support/dnload_agreeeng.asp?code=2&id=&softtype=CLI&os=Linux"
-
-# these are correct!
-S="${WORKDIR}/${MY_P}"
+KEYWORDS="-* x86 ~amd64"
+IUSE="doc"
+# stripping seems to break this sometimes
+RESTRICT="fetch nostrip nomirror"
+# binary packages
 DEPEND=""
 RDEPEND="virtual/libc"
 
+MY_P="${P}+"
+# upstream does NOT version releases in the filename :-(
+SRC_URI="x86? ( tw_cli-linux-x86.tgz )
+		amd64? ( tw_cli-linux-x86_64.tgz )"
+DOWNLOAD_URL_APP="http://www.3ware.com/support/dnload_agreeeng.asp?code=2&id=&softtype=CLI&os=Linux"
+S="${WORKDIR}/${MY_P}"
+
 supportedcards() {
-	einfo "This binary should support all current cards, including, but"
-	einfo "not limited to:"
+	einfo "This binary supports all current cards, including, but not"
+	einfo "limited to:"
 	einfo "PATA: 7210, 7410, 7450, 7810, 7850, 7000-2, 7500-4, 7500-8,"
 	einfo "      7500-12, 7006-2, 7506-4, 7506-4LP, 7506-8, 7506-12"
 	einfo "SATA: 8500-4, 8500-8, 8500-12, 8006-2, 8506-4, 8506-12,"
@@ -41,15 +37,12 @@ pkg_setup() {
 }
 
 pkg_nofetch() {
-	einfo "Please visit the following URL to download the application"
+	einfo "Please visit the following URL to download the tarball"
 	einfo "${DOWNLOAD_URL_APP}"
 	einfo "Download the 32-bit version for x86 machines, or the"
 	einfo "64-bit version for amd64 machines."
 	einfo "Place your downloads into ${DISTDIR}"
-}
-
-src_unpack() {
-	unpack ${SRC_URI_BIN}
+	supportedcards
 }
 
 src_install() {
