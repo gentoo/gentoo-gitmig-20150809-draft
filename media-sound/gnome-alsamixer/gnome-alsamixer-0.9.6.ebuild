@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gnome-alsamixer/gnome-alsamixer-0.9.6.ebuild,v 1.7 2004/09/14 16:30:58 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gnome-alsamixer/gnome-alsamixer-0.9.6.ebuild,v 1.8 2005/04/08 17:31:32 hansmi Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.paw.co.za/projects/gnome-alsamixer"
 SRC_URI="ftp://ftp.paw.co.za/pub/PAW/sources/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc amd64"
+KEYWORDS="x86 ppc amd64"
 RDEPEND=">=media-libs/alsa-lib-0.9.0_rc1
 	 >=x11-libs/gtk+-2.0.6
 	 >=gnome-base/libgnomeui-2.0.5"

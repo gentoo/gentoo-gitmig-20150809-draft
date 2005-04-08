@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ripperx/ripperx-2.6.4.ebuild,v 1.1 2005/01/19 15:44:19 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ripperx/ripperx-2.6.4.ebuild,v 1.2 2005/04/08 17:28:22 hansmi Exp $
 
 IUSE=""
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/ripperx/${MY_P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="amd64 ~ppc sparc x86"
+KEYWORDS="amd64 ppc sparc x86"
 
 DEPEND="=x11-libs/gtk+-1.2*
 	media-sound/lame

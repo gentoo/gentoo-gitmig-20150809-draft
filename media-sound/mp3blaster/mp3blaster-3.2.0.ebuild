@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3blaster/mp3blaster-3.2.0.ebuild,v 1.9 2004/11/22 20:36:15 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3blaster/mp3blaster-3.2.0.ebuild,v 1.10 2005/04/08 17:27:25 hansmi Exp $
 
 inherit toolchain-funcs
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.stack.nl/~brama/mp3blaster/"
 SRC_URI="http://www.stack.nl/~brama/mp3blaster/src/${P}.tar.gz"
 
 SLOT="0"
-KEYWORDS="x86 ~ppc alpha sparc amd64 ~ppc64"
+KEYWORDS="x86 ppc alpha sparc amd64 ~ppc64"
 LICENSE="GPL-2"
 IUSE="oggvorbis mysql lirc"
 

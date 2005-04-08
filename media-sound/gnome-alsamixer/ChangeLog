@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/gnome-alsamixer
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gnome-alsamixer/ChangeLog,v 1.10 2004/09/14 16:30:58 eradicator Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gnome-alsamixer/ChangeLog,v 1.11 2005/04/08 17:31:32 hansmi Exp $
+
+  08 Apr 2005; Michael Hanselmann <hansmi@gentoo.org>
+  gnome-alsamixer-0.9.6.ebuild:
+  Stable on ppc.
 
   14 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org>
   gnome-alsamixer-0.9.6.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/cd-discid
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cd-discid/ChangeLog,v 1.16 2005/03/16 17:12:15 nigoro Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cd-discid/ChangeLog,v 1.17 2005/04/08 17:29:54 hansmi Exp $
+
+  08 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> cd-discid-0.9.ebuild:
+  Stable on ppc.
 
   17 Mar 2005; Yuta SATOH <nigoro@gentoo.org> cd-discid-0.9.ebuild:
   Stable on ppc64

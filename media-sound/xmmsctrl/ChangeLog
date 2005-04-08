@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/xmmsctrl
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmmsctrl/ChangeLog,v 1.17 2004/12/19 06:51:03 eradicator Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmmsctrl/ChangeLog,v 1.18 2005/04/08 17:35:09 hansmi Exp $
+
+  08 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> xmmsctrl-1.8.ebuild:
+  Stable on ppc.
 
   18 Dec 2004; Jeremy Huddleston <eradicator@gentoo.org>
   xmmsctrl-1.8.ebuild:
