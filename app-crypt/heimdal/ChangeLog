@@ -1,6 +1,13 @@
 # ChangeLog for app-crypt/heimdal
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/ChangeLog,v 1.58 2005/01/18 14:53:59 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/ChangeLog,v 1.59 2005/04/08 16:24:06 seemant Exp $
+
+  08 Apr 2005; Seemant Kulleen <seemant@gentoo.org>
+  -files/heimdal-0.6.1-fPIC.patch.bz2, -files/heimdal-0.6.2-fPIC.patch.bz2,
+  -files/heimdal-0.6-berkdb.patch.bz2, -files/heimdal-0.6-gcc3.patch.bz2,
+  -files/heimdal-0.6-rxapps.patch.bz2, -heimdal-0.6.2.ebuild,
+  -heimdal-0.6.2-r1.ebuild, -heimdal-0.6.3.ebuild:
+  remove crufty versions
 
   18 Jan 2005; Marcus Hanwell <cryos@gentoo.org> heimdal-0.6.3-r1.ebuild:
   Added a second call to elibtoolize to fix bug 73140, as requested by seemant.

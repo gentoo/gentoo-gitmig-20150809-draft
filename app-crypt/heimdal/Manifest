@@ -1,38 +1,17 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 04077e7f2e9ee364316b0ae06ba5c187 heimdal-0.6.2-r1.ebuild 3170
-MD5 8c45dc7484dfee203dbe993c2b583f98 heimdal-0.6.3.ebuild 2962
-MD5 f565df11736f0f3a27c6b3da6f67aa60 ChangeLog 8892
-MD5 e5573e25f19694fc8ccaaced2dd576f4 metadata.xml 353
+MD5 7cc34d19549ca89500ab3083c4b1a087 ChangeLog 9235
 MD5 ef2f60bdf59f43caed1f133f8a25bf64 heimdal-0.6.3-r1.ebuild 3150
-MD5 8dccf7364a39ffa8fc1936f2a4e3de64 heimdal-0.6.2.ebuild 2824
-MD5 2ef8e452d46ff88fdca9321e7371ee73 files/heimdal-0.6.3-berkdb.patch.bz2 361
-MD5 fb7a6bd81ce67eecf3cdaaf0481995ce files/heimdal-0.6.3-no_libedit.patch.bz2 343
-MD5 e7bee43b270f79fb99ccd79e8f0d6fe0 files/heimdal-0.6.3-ldap-subtree.patch.bz2 472
-MD5 0f222a777af729dc4d6076ab03342056 files/krb5.conf 423
-MD5 59cbfb44a4bd4c27cf0dd3943b50ae52 files/digest-heimdal-0.6.2-r1 66
-MD5 3927bef9ae6c9b6cf6c5d6eb9c2bfcf7 files/digest-heimdal-0.6.3-r1 66
-MD5 0ff5ffd13efa173c639c67d7f55261de files/heimdal-0.6.3-rxapps.patch.bz2 378
-MD5 68d23a5d97f180b1ed877da8a9db6a23 files/heimdal-0.6.3.all.patch 2299
-MD5 6dc7d9f2166d5c130a8ed3303ec74f04 files/heimdal-0.6-gcc3.patch.bz2 292
-MD5 06ae43d9ec1ce6f03630f6bd5e1631eb files/krb5-kdc.schema 4051
-MD5 2be6ab7b49a076e078f34913d65bcaad files/heimdal-kdc 514
-MD5 aef635716540deadcfca7b31b2689d11 files/heimdal-0.6.3-fPIC.patch.bz2 316
-MD5 be01246cb05aad324798612f8afba51d files/heimdal-0.6.3-suid_fix.patch.bz2 368
-MD5 2ef8e452d46ff88fdca9321e7371ee73 files/heimdal-0.6-berkdb.patch.bz2 361
-MD5 aef635716540deadcfca7b31b2689d11 files/heimdal-0.6.2-fPIC.patch.bz2 316
-MD5 f4811d443f68fe11946a031ada8ce125 files/heimdal-kpasswdd 551
-MD5 0ff5ffd13efa173c639c67d7f55261de files/heimdal-0.6-rxapps.patch.bz2 378
-MD5 59cbfb44a4bd4c27cf0dd3943b50ae52 files/digest-heimdal-0.6.2 66
-MD5 3927bef9ae6c9b6cf6c5d6eb9c2bfcf7 files/digest-heimdal-0.6.3 66
+MD5 6c9cbfc951ebeca1a88d8722de4dde80 metadata.xml 231
 MD5 12c2f086658ad67e3ddaf1340cb9405a files/01heimdal 125
-MD5 aef635716540deadcfca7b31b2689d11 files/heimdal-0.6.1-fPIC.patch.bz2 316
+MD5 3927bef9ae6c9b6cf6c5d6eb9c2bfcf7 files/digest-heimdal-0.6.3-r1 66
+MD5 2ef8e452d46ff88fdca9321e7371ee73 files/heimdal-0.6.3-berkdb.patch.bz2 361
+MD5 aef635716540deadcfca7b31b2689d11 files/heimdal-0.6.3-fPIC.patch.bz2 316
+MD5 e7bee43b270f79fb99ccd79e8f0d6fe0 files/heimdal-0.6.3-ldap-subtree.patch.bz2 472
+MD5 fb7a6bd81ce67eecf3cdaaf0481995ce files/heimdal-0.6.3-no_libedit.patch.bz2 343
+MD5 0ff5ffd13efa173c639c67d7f55261de files/heimdal-0.6.3-rxapps.patch.bz2 378
+MD5 be01246cb05aad324798612f8afba51d files/heimdal-0.6.3-suid_fix.patch.bz2 368
+MD5 68d23a5d97f180b1ed877da8a9db6a23 files/heimdal-0.6.3.all.patch 2299
 MD5 0becad2fb5b2e15b30b47b2939304647 files/heimdal-kadmind 546
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFB7SL1ntT9W3vfTuoRAiKNAKCRAQU8xHc4Linorka/L9SFP9bfbQCfUGSV
-0XHZshTn9NB1Xj+F34KV2Vw=
-=DgV+
------END PGP SIGNATURE-----
+MD5 2be6ab7b49a076e078f34913d65bcaad files/heimdal-kdc 514
+MD5 f4811d443f68fe11946a031ada8ce125 files/heimdal-kpasswdd 551
+MD5 06ae43d9ec1ce6f03630f6bd5e1631eb files/krb5-kdc.schema 4051
+MD5 0f222a777af729dc4d6076ab03342056 files/krb5.conf 423
