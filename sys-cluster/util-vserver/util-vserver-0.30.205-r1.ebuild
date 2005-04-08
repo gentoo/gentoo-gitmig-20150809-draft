@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/util-vserver/util-vserver-0.30.205-r1.ebuild,v 1.1 2005/04/07 14:23:52 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/util-vserver/util-vserver-0.30.205-r1.ebuild,v 1.2 2005/04/08 05:18:00 hollow Exp $
 
 inherit eutils
 
@@ -48,7 +48,7 @@ src_install() {
 
 	# install conf.d files
 	insinto /etc/conf.d
-	newins ${FILESDIR}/vservers.confd vservers
+	newins ${FILESDIR}/${PV}/vservers.confd vservers
 
 	dodoc README ChangeLog NEWS AUTHORS INSTALL THANKS util-vserver.spec
 }
