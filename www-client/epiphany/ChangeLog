@@ -1,6 +1,9 @@
 # ChangeLog for www-client/epiphany
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.5 2005/03/28 02:54:09 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.6 2005/04/08 18:48:30 joem Exp $
+
+  08 Apr 2005; Joe McCann <joem@gentoo.org> epiphany-1.6.0-r3.ebuild:
+  fix some deps, thanks to bug 88382
 
 *epiphany-1.6.0-r3 (28 Mar 2005)
 

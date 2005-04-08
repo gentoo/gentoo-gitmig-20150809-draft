@@ -1,4 +1,6 @@
-MD5 bb946f704c96f616ff8cd3f7e81a2ce6 ChangeLog 13898
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 e5f523ab3c3864df6bc9a056270cdf26 epiphany-1.2.10.ebuild 1338
 MD5 67e7eacaf6ef55d800de3f5a881e3412 epiphany-1.2.9-r1.ebuild 1468
 MD5 359f0d9afadb78a2fc50ad795631eb11 epiphany-1.4.4.ebuild 1375
@@ -7,10 +9,11 @@ MD5 4e94eac2f85ebe735922ae85ff8f5a68 epiphany-1.4.6.ebuild 1475
 MD5 c7b5bfcfb32adb78e2fc258783cbb8d1 epiphany-1.4.7.ebuild 1497
 MD5 a00cea335a3baa39f8f1bdff3fd477b7 epiphany-1.4.8.ebuild 1466
 MD5 c7411391205185fcfd7fa2ffb8908d04 epiphany-1.6.0-r1.ebuild 1519
-MD5 3bd417e2964a7df37b72259889c5d224 epiphany-1.6.0-r2.ebuild 1617
 MD5 8aed3342a6f92a5aef502cd9cf13b561 epiphany-1.6.0.ebuild 1434
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 8802ec8a67ff6149bf8640da8f85321b epiphany-1.6.0-r3.ebuild 1495
+MD5 78f80546e6e74d2c7b910cf5534987e9 epiphany-1.6.0-r3.ebuild 1530
+MD5 e2eecf09474776209a4683e9826631f2 ChangeLog 14007
+MD5 3bd417e2964a7df37b72259889c5d224 epiphany-1.6.0-r2.ebuild 1617
 MD5 56ee35e359c12574247645a59250f5f8 files/digest-epiphany-1.2.10 69
 MD5 86259cda058c165aeb287a2b885b1b7a files/digest-epiphany-1.2.9-r1 68
 MD5 ebbdfe54389d750d3f1772e17d28a790 files/digest-epiphany-1.4.4 68
@@ -31,3 +34,10 @@ MD5 a9590e1794335ecb9fb376a3b128570b files/epiphany-1.6.0-view_source.patch 1117
 MD5 40c2cd3b20e5f2847e868edbc4f58915 files/epiphany-1.6.0-wallet_fix.patch 598
 MD5 2a6d9343d321b67fb737cb87301facfc files/epiphany-1.6.0-wallet_password.patch 1307
 MD5 6d49238d1100396b965c157b89c7038f files/digest-epiphany-1.6.0-r3 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCVtG2XjcVihsel0ERAilYAJ4nlk7hrPZSCaGqoXGUMwo7wRohDwCg1zes
+9YB1/oS7xnIfZx2zaKzEzV0=
+=Yiix
+-----END PGP SIGNATURE-----
