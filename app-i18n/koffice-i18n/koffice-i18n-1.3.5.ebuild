@@ -1,18 +1,19 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/koffice-i18n/koffice-i18n-1.3.5.ebuild,v 1.6 2005/02/03 21:36:07 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/koffice-i18n/koffice-i18n-1.3.5.ebuild,v 1.7 2005/04/08 09:37:28 greg_g Exp $
 
 inherit kde
 
 DESCRIPTION="KOffice i18n files"
 HOMEPAGE="http://www.koffice.org/"
+LICENSE="GPL-2"
 
 SLOT="0"
-LICENSE="GPL-2"
 KEYWORDS="x86 ~ppc ~amd64 sparc ppc64"
 IUSE=""
 
-DEPEND="~app-office/koffice-${PV} >=sys-apps/portage-2.0.49-r8"
+DEPEND="|| ( ~app-office/koffice-libs-${PV} ~app-office/koffice-${PV} )"
+
 need-kde 3
 
 LANGS="af bg br ca cs cy da de el en_GB eo es et fa fi fr he hsb hu it ja lo
@@ -56,4 +57,3 @@ src_install() {
 	done
 	S=${_S}
 }
-
