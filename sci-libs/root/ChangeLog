@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/root
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/root/ChangeLog,v 1.6 2005/03/29 16:36:44 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/root/ChangeLog,v 1.7 2005/04/08 18:10:33 hansmi Exp $
+
+  08 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> root-4.02.00.ebuild:
+  Like on sparc, this package doesn't work yet on ppc.
 
   29 Mar 2005; Ferris McCormick <fmccor@gentoo.org> root-4.02.00.ebuild:
   Add -sparc keyword to make explicit that as distributed, this package cannot
