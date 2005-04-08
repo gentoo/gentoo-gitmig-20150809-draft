@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 0efe56aee2ae56e942fee6b63527d88a ChangeLog 513
 MD5 0d18f0fe5d603b41b988373892caf195 metadata.xml 226
-MD5 227dda63d593098e73a2c85b029458b2 mod_umask-0.1.0.ebuild 595
-MD5 4888f48e4a67415e7b2c19c71c39f603 ChangeLog 407
-MD5 23e323a967cf54def86076d8651f3b7f files/47_mod_umask.conf 653
+MD5 2ccf0068a21e5c2bf64cc4b60ca539a8 mod_umask-0.1.0.ebuild 602
 MD5 1afc502bb26ea30f986372386213eecc files/digest-mod_umask-0.1.0 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFB4n0AmPFBzbX68WERAiBRAJ0WoHVO8qh0fpmnUWim8UxqV9+cUQCgg/ks
-G6W4ghJtJbvG/C9gmNm72X4=
-=EQxn
------END PGP SIGNATURE-----
+MD5 23e323a967cf54def86076d8651f3b7f files/47_mod_umask.conf 653

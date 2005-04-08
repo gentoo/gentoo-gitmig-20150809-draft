@@ -1,6 +1,9 @@
 # ChangeLog for www-apache/mod_umask
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_umask/ChangeLog,v 1.1 2005/01/10 13:03:00 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_umask/ChangeLog,v 1.2 2005/04/08 23:29:29 trapni Exp $
+
+  08 Apr 2005; Christian Parpart <trapni@gentoo.org> mod_umask-0.1.0.ebuild:
+  adding ~amd64 to keywords
 
 *mod_umask-0.1.0 (10 Jan 2005)
 

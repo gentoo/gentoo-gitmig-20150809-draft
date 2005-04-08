@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_umask/mod_umask-0.1.0.ebuild,v 1.1 2005/01/10 13:03:00 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_umask/mod_umask-0.1.0.ebuild,v 1.2 2005/04/08 23:29:29 trapni Exp $
 
 inherit apache-module
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.outoforder.cc/projects/apache/mod_umask/"
 
 SLOT="0"
 LICENSE="Apache-2.0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 IUSE=""
 
 APACHE2_MOD_CONF="47_${PN}"
