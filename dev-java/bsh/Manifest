@@ -1,23 +1,13 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a2ef69a52ec3d691245f9403dce5496f bsh-2.0_beta1-r1.ebuild 1172
+MD5 b0484e577fde4ebd8f953dd84ce04392 ChangeLog 3175
 MD5 8bd71a260abed0bb42193acb1ec2c8df bsh-1.3.0.ebuild 870
+MD5 3e9db06b96be80b9500257a94feb42f8 bsh-2.0_beta1-r1.ebuild 1175
 MD5 550ad7ad9811ed65d58f9c04f25e64bf bsh-2.0_beta2.ebuild 2057
-MD5 3e2d36409fa4812d1945d02e26043e75 ChangeLog 3083
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
-MD5 5ec33004601026e3f5206a441853b1ed files/digest-bsh-1.3.0 58
+MD5 32448cba89ef5394ffab7a7cdb399ded files/beanshell.desktop 266
 MD5 e98c8ab811f673d6089a092d3b8a3d97 files/bsh.Console 856
 MD5 c0ad0331cfc0855056051a83d34fc35f files/bsh.Interpreter 871
 MD5 af516cc82d6597c5f6f49ad83916647e files/bsh2-build.patch 1704
-MD5 b2666166806a0cf58b311a9a77511fdb files/digest-bsh-2.0_beta2 125
 MD5 356a59a8ed4e03783dc4ec5a143ef75f files/bsh2-readline.patch 5428
+MD5 5ec33004601026e3f5206a441853b1ed files/digest-bsh-1.3.0 58
 MD5 0321e1ba45e1f4f328eae0eecf037105 files/digest-bsh-2.0_beta1-r1 120
-MD5 32448cba89ef5394ffab7a7cdb399ded files/beanshell.desktop 266
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCMTOsI1lqEGTUzyQRAmoIAJ96d3s6ouJxTLPp+KTR5qMU8tZvJACeOf7d
-BUlpoJeYl41sawH7UsuRq7M=
-=14Ta
------END PGP SIGNATURE-----
+MD5 b2666166806a0cf58b311a9a77511fdb files/digest-bsh-2.0_beta2 125
