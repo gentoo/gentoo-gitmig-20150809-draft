@@ -1,6 +1,10 @@
 # ChangeLog for dev-tex/latex2html
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex2html/ChangeLog,v 1.19 2005/04/01 18:21:45 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex2html/ChangeLog,v 1.20 2005/04/08 16:40:34 corsair Exp $
+
+  08 Apr 2005; Markus Rothe <corsair@gentoo.org>
+  latex2html-2002.2.1_pre20041025.ebuild:
+  Stable on ppc64
 
   01 Apr 2005; Simon Stelling <blubb@gentoo.org>
   latex2html-2002.2.1_pre20041025.ebuild:
