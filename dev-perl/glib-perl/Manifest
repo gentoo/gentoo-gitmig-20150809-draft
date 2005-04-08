@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 05dee42b8168bab52d167c06cc64b0c9 glib-perl-1.042.ebuild 768
-MD5 8379f9545b31fb95aba84f327fea6695 glib-perl-1.062.ebuild 759
-MD5 42ec3b4846aea847369622a6c0b2f27f ChangeLog 3474
+MD5 1d55cc7f6b3e5d81571be44b04aaae3c ChangeLog 3567
 MD5 15c484363767f7b416f1312f65cd7a2a glib-perl-1.012.ebuild 747
-MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 e0a83e9c88806c97df9022e026511059 glib-perl-1.040.ebuild 762
+MD5 05dee42b8168bab52d167c06cc64b0c9 glib-perl-1.042.ebuild 768
+MD5 a57fd830e69cfe8cbfa1e1a7b0fca76f glib-perl-1.062.ebuild 759
+MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 3708565214e916a2d14f98ed97f5f6c8 files/digest-glib-perl-1.012 62
-MD5 e3df309a97ca58c1dc7eb79e1ef94017 files/digest-glib-perl-1.042 62
 MD5 b3f9ace0b49a0447fea2a77e62f549cd files/digest-glib-perl-1.040 62
+MD5 e3df309a97ca58c1dc7eb79e1ef94017 files/digest-glib-perl-1.042 62
 MD5 f0985e07520ccd93372582a61d920e5c files/digest-glib-perl-1.062 62
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCRsO+ugEuf3OQ0akRAtHtAJoDyb3Mx8WT/BqrnVtm0xnw3qw/+QCfWVdy
-B/1wy3brpkmayp5juwMpO8M=
-=1OaS
------END PGP SIGNATURE-----

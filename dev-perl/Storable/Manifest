@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 bf2751cdcf993bdbfd7577aa7fa61413 ChangeLog 3821
+MD5 24dc4715d60051684c5e9e122226861f ChangeLog 3909
 MD5 c7feb9a4742d0cf9ce1f21c8c1d0e15a Storable-1.0.14-r1.ebuild 553
 MD5 1c5a9abc7f1cca30fd8565857cb35bdf Storable-1.0.14.ebuild 551
 MD5 4042fb1831374b828fd1ab9cf190062e Storable-2.04-r1.ebuild 551
@@ -10,7 +7,7 @@ MD5 94f87eba926ec79ffb1f17adf7e1e7bf Storable-2.07-r1.ebuild 579
 MD5 384d40e7f659b201a254ededcebae2e2 Storable-2.07.ebuild 555
 MD5 11fd6285ac0bc1f0b7784d8282f4ca7b Storable-2.09.ebuild 574
 MD5 bfd92da5a237d24f3bd46f78cb37d5ac Storable-2.12.ebuild 529
-MD5 0f2fb3c194ac75d3cd06c7aa1188a176 Storable-2.13.ebuild 520
+MD5 210e3dc1318e5efc72632f22e54a7405 Storable-2.13.ebuild 517
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 01d06f04c719d7017a62040cef4d205f files/digest-Storable-1.0.14 66
 MD5 01d06f04c719d7017a62040cef4d205f files/digest-Storable-1.0.14-r1 66
@@ -21,10 +18,3 @@ MD5 02de96e5539723f410332029029a9924 files/digest-Storable-2.07-r1 64
 MD5 0ceb6d062bf8dda704ccbe4008d1cce5 files/digest-Storable-2.09 65
 MD5 03f958bfe49735d9e3de5f3ca9018377 files/digest-Storable-2.12 65
 MD5 f779c9ba3bd801bd1783ec7e97f162e2 files/digest-Storable-2.13 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCT0ostG5z4I8BtQoRAv0WAJ9aG1m7GlTlR+7S7wM5dNwU98A+jACfejTq
-XZTtiAkEkXJmLE0caFm1AZA=
-=NdjL
------END PGP SIGNATURE-----
