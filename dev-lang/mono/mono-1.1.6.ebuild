@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-1.1.6.ebuild,v 1.1 2005/03/31 17:46:37 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-1.1.6.ebuild,v 1.2 2005/04/08 00:08:09 latexer Exp $
 
 inherit eutils mono flag-o-matic
 
@@ -23,6 +23,7 @@ DEPEND="virtual/libc
 		>=sys-libs/glibc-2.3.3_pre20040420
 	)"
 RDEPEND="${DEPEND}
+	>=dev-dotnet/libgdiplus-1.1.4
 	dev-util/pkgconfig
 	dev-libs/libxml2"
 

@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/mono
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/ChangeLog,v 1.39 2005/04/07 23:53:28 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/ChangeLog,v 1.40 2005/04/08 00:08:09 latexer Exp $
+
+  08 Apr 2005; Peter Johanson <latexer@gentoo.org> mono-1.1.4.ebuild,
+  mono-1.1.5-r1.ebuild, mono-1.1.6.ebuild:
+  Add an RDEPEND on libgdiplus, so installs of mono have a working
+  System.Drawing (and SWF correspondingly). See bug #86733. Thanks to Scott
+  Paul Robertson <spr5@email.byu.edu> for pointing it out.
 
   07 Apr 2005; Peter Johanson <latexer@gentoo.org> -mono-1.0.4.ebuild,
   -mono-1.0.4-r1.ebuild:
