@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-lore/twisted-lore-0.1.0.ebuild,v 1.1 2005/04/08 14:35:49 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-lore/twisted-lore-0.1.0.ebuild,v 1.2 2005/04/08 19:26:28 lordvan Exp $
 
 inherit distutils
 
@@ -8,7 +8,7 @@ inherit distutils
 MY_PV="${PV/_alpha/a}"
 MY_PN="TwistedLore"
 MY_P="${MY_PN}-${MY_PV}"
-DESCRIPTION="An NNTP protocol implementation with client and server(?)"
+DESCRIPTION="Documentation generator with HTML and LaTeX support."
 HOMEPAGE="http://twistedmatrix.com/projects/lore/"
 SRC_URI="http://tmrc.mit.edu/mirror/twisted/Lore/0.1/${MY_P}.tar.bz2"
 

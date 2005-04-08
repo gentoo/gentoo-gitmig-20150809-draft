@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-pair/twisted-pair-0.1.0.ebuild,v 1.1 2005/04/08 15:48:41 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-pair/twisted-pair-0.1.0.ebuild,v 1.2 2005/04/08 19:28:56 lordvan Exp $
 
 inherit distutils
 
@@ -8,7 +8,7 @@ inherit distutils
 MY_PV="${PV/_alpha/a}"
 MY_PN="TwistedPair"
 MY_P="${MY_PN}-${MY_PV}"
-DESCRIPTION="An SSH and SFTP protocol implementation together with clients and servers."
+DESCRIPTION="Twisted Low-level stuff."
 HOMEPAGE="http://twistedmatrix.com/projects/pair/"
 SRC_URI="http://tmrc.mit.edu/mirror/twisted/Pair/0.1/${MY_P}.tar.bz2"
 
