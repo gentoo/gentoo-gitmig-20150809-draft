@@ -1,5 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 622dd0a25a56cd6a3de317dcd2433876 bonnie-2.0.6.ebuild 800
 MD5 7a0a0944383277adcdec28b29b8bd480 ChangeLog 1397
+MD5 9a551c719a5f13997e6a2f2375a93721 metadata.xml 164
 MD5 f23bd5149955b47a9739ac6279998698 files/bonnie_man.patch 350
 MD5 c72a42518e23fdc675ed7b0a4bee0045 files/Makefile.patch 248
 MD5 4f5d7854c5b9e58a36722c7b932ba53d files/digest-bonnie-2.0.6 56
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCVtC7EZCkKN40op4RAjnVAJ9DG53E5yDhz5FpBEMmVgcDKCe1agCdE8lu
+nEziRI0wJx7SSGNP8tbCYe8=
+=n+S0
+-----END PGP SIGNATURE-----
