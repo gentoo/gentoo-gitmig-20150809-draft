@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/squirrelmail
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/squirrelmail/ChangeLog,v 1.18 2005/01/29 00:31:13 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/squirrelmail/ChangeLog,v 1.19 2005/04/08 19:29:40 eradicator Exp $
+
+  08 Apr 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  squirrelmail-1.4.4.ebuild:
+  Fixed DEPEND/RDEPEND... added ispell to close bug #63951.
 
   28 Jan 2005; Jeremy Huddleston <eradicator@gentoo.org>
   -squirrelmail-1.4.3a-r2.ebuild:
