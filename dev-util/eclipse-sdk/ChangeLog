@@ -1,6 +1,14 @@
 # ChangeLog for dev-util/eclipse-sdk
 # Copyright 2003-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/ChangeLog,v 1.85 2005/04/06 19:38:00 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/ChangeLog,v 1.86 2005/04/08 18:34:19 karltk Exp $
+
+*eclipse-sdk-3.0.2 (08 Apr 2005)
+
+  08 Apr 2005; Karl Trygve Kalleberg <karltk@gentoo.org>
+  +files/eclipse-3.0.2, +files/05-mozilla-xpcom.patch,
+  +eclipse-sdk-3.0.2.ebuild, eclipse-sdk-3.1_pre6.ebuild:
+  Patches and most ebuild modifications provided by Mikko Tiihonen
+  <mikko.tiihonen@hut.fi>. Fixes #86850.
 
 *eclipse-sdk-3.1_pre6 (06 Apr 2005)
 

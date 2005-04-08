@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-3.1_pre6.ebuild,v 1.1 2005/04/06 19:38:00 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-3.1_pre6.ebuild,v 1.2 2005/04/08 18:34:19 karltk Exp $
 
 inherit eutils java-utils
 
@@ -9,7 +9,7 @@ MY_A="eclipse-sourceBuild-srcIncluded-3.1M6.zip"
 DESCRIPTION="Eclipse Tools Platform"
 HOMEPAGE="http://www.eclipse.org/"
 SRC_URI="http://download.eclipse.org/downloads/drops/S-3.1M6-200504011645/${MY_A}"
-IUSE="gnome mozilla jikes nosrc nodoc"
+IUSE="gnome mozilla jikes gcj nosrc nodoc"
 SLOT="3.1"
 LICENSE="CPL-1.0"
 KEYWORDS="~x86 ~ppc"
@@ -19,6 +19,7 @@ RDEPEND="
 	>=x11-libs/gtk+-2.2.4
 	mozilla? ( >=www-client/mozilla-1.4* )
 	jikes? ( >=dev-java/jikes-1.21 )
+	gcj? ( >=sys-devel/gcc-4.0.0_beta20050305 )
 	gnome? ( =gnome-base/gnome-vfs-2* =gnome-base/libgnomeui-2* )"
 
 DEPEND="${RDEPEND}
@@ -133,6 +134,9 @@ src_install() {
 		einfo "Stripping away documentation"
 		strip-docs
 	fi
+
+	dodir /var/lib/eclipse
+	echo "osgi.configuration=/var/lib/eclipse" >> ${D}/${eclipse_dir}/eclipse.ini
 
 	# Install startup script
 	exeinto /usr/bin
@@ -289,7 +293,8 @@ function build-native() {
 			-I${GECKO_SDK}/include/nspr \
 			-I${GECKO_SDK}/include/xpcom \
 			-I${GECKO_SDK}/include/string \
-			-I${GECKO_SDK}/include/embed_base"
+			-I${GECKO_SDK}/include/embed_base \
+			-I${JAVA_HOME}/include/linux"
 	export GECKO_LIBS="-L${GECKO_SDK} -lgtkembedmoz"
 	export SWT_PTR_CFLAGS="${swt_ptr_cflags} -I${JAVA_HOME}/include/linux"
 	export OUTPUT_DIR=${output_dir}
@@ -469,4 +474,8 @@ function strip-docs() {
 	rm -rf ${bp}/plugins/org.eclipse.platform.doc.*
 	rm -rf ${bp}/plugins/org.eclipse.jdt.doc.*
 	rm -rf ${bp}/plugins/org.eclipse.pde.doc.*
+}
+
+function recompile-with-gcj() {
+	:;
 }
