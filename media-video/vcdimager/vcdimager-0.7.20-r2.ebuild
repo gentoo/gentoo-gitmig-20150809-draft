@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vcdimager/vcdimager-0.7.20-r2.ebuild,v 1.7 2005/04/01 00:26:11 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vcdimager/vcdimager-0.7.20-r2.ebuild,v 1.8 2005/04/08 17:35:40 hansmi Exp $
 
 IUSE="xml2"
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.vcdimager.org/pub/vcdimager/vcdimager-0.7/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ~ia64 ~ppc ~sparc x86 ~ppc64"
+KEYWORDS="alpha amd64 ~ia64 ppc ~sparc x86 ~ppc64"
 
 RDEPEND=">=dev-libs/libcdio-0.66
 	xml2? ( >=dev-libs/libxml2-2.5.11 )"
