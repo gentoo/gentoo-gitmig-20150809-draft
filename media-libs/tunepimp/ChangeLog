@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/tunepimp
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tunepimp/ChangeLog,v 1.18 2005/04/07 15:49:24 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tunepimp/ChangeLog,v 1.19 2005/04/08 19:32:34 corsair Exp $
+
+  08 Apr 2005; Markus Rothe <corsair@gentoo.org> tunepimp-0.3.0-r1.ebuild:
+  Stable on ppc64
 
   07 Apr 2005; Simon Stelling <blubb@gentoo.org> tunepimp-0.3.0-r1.ebuild:
   stable on amd64
