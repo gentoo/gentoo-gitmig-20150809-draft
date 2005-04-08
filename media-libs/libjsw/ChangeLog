@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libjsw
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libjsw/ChangeLog,v 1.6 2005/03/18 23:27:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libjsw/ChangeLog,v 1.7 2005/04/08 03:57:59 vapier Exp $
+
+  08 Apr 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/libjsw-1.5.5-gcc33.patch, -libjsw-1.5.4.ebuild,
+  libjsw-1.5.5.ebuild:
+  Add a patch to work around a gcc-3.3 bug #85780.
 
 *libjsw-1.5.5 (18 Mar 2005)
 
