@@ -1,6 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/endeavour/endeavour-2.4.6.ebuild,v 1.3 2005/01/01 15:00:36 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/endeavour/endeavour-2.4.6.ebuild,v 1.4 2005/04/08 04:08:37 vapier Exp $
+
+inherit eutils
 
 M=endeavour2-mimetypes
 DESCRIPTION="Powerful file and image browser"
@@ -10,7 +12,7 @@ SRC_URI="ftp://wolfpack.twu.net/users/wolfpack/${P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~amd64"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 DEPEND="app-arch/bzip2
@@ -20,6 +22,8 @@ DEPEND="app-arch/bzip2
 src_unpack() {
 	unpack ${P}.tar.bz2
 	unpack ${M}.tgz
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-gcc33.patch
 }
 
 src_compile() {
@@ -31,13 +35,12 @@ src_install() {
 	dodoc AUTHORS HACKING INSTALL README TODO
 
 	cd endeavour2
-
-	dobin endeavour2
+	dobin endeavour2 || die
 	bunzip2 endeavour2.1.bz2
 	doman endeavour2.1
 
 	dodir /usr/share/endeavour2
-	cp -R data/* ${D}/usr/share/endeavour2
+	cp -R data/* ${D}/usr/share/endeavour2 || die
 	dodir /usr/share/endeavour2/icons/
 	cp -R images/* ${D}/usr/share/endeavour2/icons/
 
