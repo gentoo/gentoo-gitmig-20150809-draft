@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/conglomerate
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/conglomerate/ChangeLog,v 1.12 2005/03/19 19:28:45 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/conglomerate/ChangeLog,v 1.13 2005/04/08 01:29:00 allanonjl Exp $
+
+  07 Apr 2005; John N. Laliberte <allanonjl@gentoo.org>
+  conglomerate-0.9.0.ebuild:
+  Updated RDEPEND and added debug and spell to IUSE.
 
 *conglomerate-0.9.0 (19 Mar 2005)
 
