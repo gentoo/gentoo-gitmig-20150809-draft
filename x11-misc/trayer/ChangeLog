@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/trayer
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/trayer/ChangeLog,v 1.4 2005/03/13 19:44:57 lucass Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/trayer/ChangeLog,v 1.5 2005/04/08 11:26:58 lucass Exp $
+
+  08 Apr 2005; Lukasz Strzygowski <lucass@gentoo.org> trayer-1.0.ebuild:
+  Marked stable on x86.
 
   13 Mar 2005; Lukasz Strzygowski <lucass@gentoo.org> trayer-1.0.ebuild:
   Fixed bug #84675 (compilation issue).
