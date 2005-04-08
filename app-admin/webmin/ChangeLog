@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/webmin
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/ChangeLog,v 1.76 2005/03/04 23:00:19 astinus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/ChangeLog,v 1.77 2005/04/08 10:38:37 corsair Exp $
+
+  08 Apr 2005; Markus Rothe <corsair@gentoo.org> webmin-1.170-r3.ebuild:
+  Stable on ppc64
 
   04 Mar 2005; Alex Howells <astinus@gentoo.org> webmin-1.180.ebuild:
   Adding keyword ~alpha for testing.
