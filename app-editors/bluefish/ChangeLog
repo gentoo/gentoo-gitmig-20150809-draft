@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/bluefish
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/bluefish/ChangeLog,v 1.44 2005/04/05 20:26:58 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/bluefish/ChangeLog,v 1.45 2005/04/08 11:18:14 corsair Exp $
+
+  08 Apr 2005; Markus Rothe <corsair@gentoo.org> bluefish-1.0.ebuild:
+  Stable on ppc64
 
   05 Apr 2005; Gustavo Zacarias <gustavoz@gentoo.org> bluefish-1.0.ebuild:
   Stable on sparc
