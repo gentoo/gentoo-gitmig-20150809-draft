@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/alexandria/alexandria-0.5.1.ebuild,v 1.1 2005/03/29 09:56:28 citizen428 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/alexandria/alexandria-0.5.1.ebuild,v 1.2 2005/04/08 16:46:11 citizen428 Exp $
 
-inherit ruby gnome2
+inherit ruby gnome2 eutils
 
 IUSE=""
 
@@ -36,6 +36,8 @@ src_install() {
 	export GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL="1"
 	ruby install.rb config --prefix=${D}/usr || die
 	ruby install.rb install || die
+
+	make_desktop_entry alexandria "Alexandria" "/usr/share/${PN}/icons/alexandria_small.png" "Utility"
 }
 
 pkg_postinst() {

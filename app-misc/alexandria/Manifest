@@ -2,9 +2,9 @@
 Hash: SHA1
 
 MD5 196ef9ed31f3000cc479d3601ce598ea alexandria-0.5.0.ebuild 1455
-MD5 3f9aedc2ddbd67360a5ad06817210e80 alexandria-0.5.1.ebuild 1460
+MD5 9ab694dbbaa1c4bc73d214f1ad80e5d3 alexandria-0.5.1.ebuild 1568
 MD5 50ece31e344c9ce16866317850d2971e alexandria-0.4.0.ebuild 1442
-MD5 ae3a90252535004425cf8b660d02157e ChangeLog 1183
+MD5 b5355827cbc3c10129345253e4638209 ChangeLog 1284
 MD5 8efa6365a12e903001e60e3f38150264 metadata.xml 274
 MD5 341d3725f27c89e493daf66c2d07217d files/digest-alexandria-0.4.0 67
 MD5 aafb80203d611fa22e8152615b0f004f files/digest-alexandria-0.5.0 68
@@ -12,7 +12,7 @@ MD5 5632496040c8d420260b7233beae6bc3 files/digest-alexandria-0.5.1 68
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCSS25ehlBotwFZuQRAoY1AJ9NTdkbH3bxP57eRb7IT159vOXGjwCeIbC1
-EzHI66x5hKlItG4QDBGWzrc=
-=Lw+s
+iD8DBQFCVrVsehlBotwFZuQRAqtpAKCQNN8zwwAZo2a2UeRlUpDgz8O4GgCghlwS
+qY7FzJrutrDQW8WqSpvgxSA=
+=/KHK
 -----END PGP SIGNATURE-----
