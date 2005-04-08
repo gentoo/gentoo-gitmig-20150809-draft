@@ -1,6 +1,14 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.395 2005/04/03 01:55:17 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.396 2005/04/08 02:52:07 vapier Exp $
+
+*gcc-3.4.3.20050110-r2 (08 Apr 2005)
+
+  08 Apr 2005; Mike Frysinger <vapier@gentoo.org>
+  +gcc-3.4.3.20050110-r2.ebuild:
+  Add fix for PR/16625 from upstream #88022 by Ed Catmur. Patch to prevent
+  /dev/null from being deleted #79836 by David Wood. Also add a patch for arm
+  PR/16201 and a patch from Debian for m68k.
 
 *gcc-4.0.0_beta20050402 (03 Apr 2005)
 
