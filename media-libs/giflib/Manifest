@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ee366b146a37b00068bb849a9cce0105 ChangeLog 2633
+MD5 aca1b0371a8ce2e2198b1d4158db4892 ChangeLog 2721
 MD5 24d0af9f4b2f0d8e9f3272bc3a78d0bf giflib-4.1.0-r3.ebuild 2109
-MD5 6a182d3651fbb9b12fef7840dd6600e7 giflib-4.1.3.ebuild 1442
+MD5 135ea34f69c5826f8d8f987d467f0261 giflib-4.1.3.ebuild 1440
 MD5 93888297538e2f77defcfef93578b8db files/digest-giflib-4.1.0-r3 64
 MD5 eff137a49d638c20405a6f8c9c4ad5b5 files/digest-giflib-4.1.3 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFCHfYmKRy60XGEcJIRAhM3AJ4tJsNrDR3P5AGYalMMJ4tlfNgXkACgr+HU
-h50jOO5aCaJftnd4tv8XpyQ=
-=4dFy
------END PGP SIGNATURE-----
