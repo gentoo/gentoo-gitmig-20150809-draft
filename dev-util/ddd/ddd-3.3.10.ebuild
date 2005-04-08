@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ddd/ddd-3.3.10.ebuild,v 1.5 2005/03/27 12:18:33 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ddd/ddd-3.3.10.ebuild,v 1.6 2005/04/08 16:43:24 corsair Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/ddd/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2 LGPL-2.1 FDL-1.1"
-KEYWORDS="x86 ppc sparc alpha amd64 ia64 ~ppc64"
+KEYWORDS="x86 ppc sparc alpha amd64 ia64 ppc64"
 IUSE=""
 
 DEPEND="virtual/x11

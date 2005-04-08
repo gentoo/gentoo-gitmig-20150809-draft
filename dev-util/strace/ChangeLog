@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/strace
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/ChangeLog,v 1.60 2005/03/30 16:25:50 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/ChangeLog,v 1.61 2005/04/08 16:47:20 corsair Exp $
+
+  08 Apr 2005; Markus Rothe <corsair@gentoo.org> strace-4.5.9.ebuild:
+  Stable on ppc64
 
   30 Mar 2005; Michael Hanselmann <hansmi@gentoo.org> strace-4.5.9.ebuild:
   Stable on ppc.

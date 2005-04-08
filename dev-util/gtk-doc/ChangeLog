@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/gtk-doc
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc/ChangeLog,v 1.39 2005/04/06 01:02:28 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc/ChangeLog,v 1.40 2005/04/08 16:45:52 corsair Exp $
+
+  08 Apr 2005; Markus Rothe <corsair@gentoo.org> gtk-doc-1.2-r1.ebuild,
+  gtk-doc-1.3.ebuild, gtk-doc-1.3-r1.ebuild:
+  Stable on ppc64/added ~ppc64 to KEYWORDS
 
 *gtk-doc-1.3-r1 (05 Apr 2005)
 
