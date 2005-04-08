@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/dialog/dialog-1.0.20050206.ebuild,v 1.2 2005/04/08 20:04:47 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/dialog/dialog-1.0.20050206.ebuild,v 1.3 2005/04/08 23:37:28 vapier Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://debian/pool/main/d/${PN}/${PN}_${MY_PV}.orig.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ppc ~sparc ~mips ~alpha ~arm ~hppa ~amd64 ~ia64 ~ppc64 ~s390 ~ppc-macos"
+KEYWORDS="~alpha ~amd64 arm hppa ia64 m68k ~mips ppc ~ppc64 ~ppc-macos s390 sh ~sparc x86"
 IUSE="unicode"
 
 DEPEND=">=app-shells/bash-2.04-r3
@@ -26,7 +26,7 @@ src_compile() {
 }
 
 src_install() {
-	make install DESTDIR=${D} || die
+	make install DESTDIR="${D}" || die
 	dodoc CHANGES README VERSION
 
 	docinto samples
