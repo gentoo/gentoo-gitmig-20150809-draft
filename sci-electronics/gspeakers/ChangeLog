@@ -1,6 +1,9 @@
 # ChangeLog for sci-electronics/gspeakers
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gspeakers/ChangeLog,v 1.1 2005/01/05 03:00:49 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gspeakers/ChangeLog,v 1.2 2005/04/08 14:59:09 cryos Exp $
+
+  08 Apr 2005; Marcus D. Hanwell <cryos@gentoo.org> gspeakers-0.11.ebuild:
+  Marked stable on amd64 and x86.
 
 *gspeakers-0.11 (05 Jan 2005)
 
