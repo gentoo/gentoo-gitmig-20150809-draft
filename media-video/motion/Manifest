@@ -1,3 +1,13 @@
-MD5 20c205e3e0507bb2886f22257e823328 motion-3.1.19.ebuild 562
-MD5 e038fc3321eabe915a2d7b55734e0b2a ChangeLog 340
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 7938db337d96cdc84dcee4b5e56ef688 motion-3.1.19.ebuild 546
+MD5 f539088af1e936d3875b097df2dd3bd3 ChangeLog 339
 MD5 150a9a86e892532ffc13a9da72230efb files/digest-motion-3.1.19 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCVgPII1lqEGTUzyQRAvffAKDUEY0tQ3tvGhaVdyKWha4blwt8nACggf0T
+Ejcq/1D2ZtFkGJzll13XNWU=
+=CQSo
+-----END PGP SIGNATURE-----
