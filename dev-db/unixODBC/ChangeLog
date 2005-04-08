@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/unixODBC
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/ChangeLog,v 1.37 2005/04/07 13:25:16 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/ChangeLog,v 1.38 2005/04/08 08:37:01 spider Exp $
+
+  08 Apr 2005; Spider <spider@gentoo.org> unixODBC-2.2.6.ebuild:
+  Ugh, Dumb fix. Commited from the wrong overlay :(
+  -now- it works.
 
   07 Apr 2005; Spider <spider@gentoo.org> unixODBC-2.2.6.ebuild:
   Fix for bug 86936. ( X headers moved location )
