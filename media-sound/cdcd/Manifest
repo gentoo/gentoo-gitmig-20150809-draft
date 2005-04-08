@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 c1a85d02115ba81b1b515f495893d496 ChangeLog 2671
+MD5 f1c1088c15d5543f15136975cba32b84 ChangeLog 2755
 MD5 94ddd3305c2a35012c44768f37ea30f2 cdcd-0.6.4.ebuild 775
+MD5 a15728e5d34aa48f21368d9600654c41 cdcd-0.6.6.ebuild 736
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 5aef6a3e6feb9f158cf180fc810bad31 cdcd-0.6.6.ebuild 740
 MD5 87fbaee82f519b5db720d80f64dbed8e files/cdcd-0.6.4-gentoo.patch 346
 MD5 0046c0fdb538d85b9b5fd853815a0956 files/digest-cdcd-0.6.4 62
 MD5 e177c90f7b82ca5b8744a9f573dce5f0 files/digest-cdcd-0.6.6 62
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBdLRtArHZZzCEUG0RAmx6AJ0SYolfx0KgIU26mr704NwMSUM7QQCaA4IA
-PpCSy+E5vH3cP9udgFAIAtQ=
-=36bN
------END PGP SIGNATURE-----
