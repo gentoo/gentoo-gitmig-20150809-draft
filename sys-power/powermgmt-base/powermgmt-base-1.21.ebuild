@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/powermgmt-base/powermgmt-base-1.21.ebuild,v 1.1 2005/03/14 23:18:24 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/powermgmt-base/powermgmt-base-1.21.ebuild,v 1.2 2005/04/08 19:31:52 genstef Exp $
 
 DESCRIPTION="Script to test whether computer is running on AC power"
 HOMEPAGE="http://packages.debian.org/testing/utils/powermgmt-base"
@@ -8,7 +8,7 @@ SRC_URI="mirror://debian/pool/main/p/${PN}/${PN}_${PV}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE=""
 
 RDEPEND="sys-apps/gawk"
