@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3805 2005/04/08 18:08:50 wolf31o2 Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3806 2005/04/08 19:41:23 humpback Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Gustavo Felisberto <humpback@gentoo.org> (08 April 2005)
+# Initial import to give users chance to test
+net-im/ejabberd
 
 # Danny van Dyk <kugelfang@gentoo.org> (07 April 2005)
 # Doesn't build anymore. Asked maintainer to fix or remove it.
