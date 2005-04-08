@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/netselect
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netselect/ChangeLog,v 1.22 2005/02/10 01:45:48 j4rg0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netselect/ChangeLog,v 1.23 2005/04/08 17:59:13 hansmi Exp $
+
+  08 Apr 2005; Michael Hanselmann <hansmi@gentoo.org>
+  netselect-0.3-r1.ebuild:
+  Stable on ppc.
 
   09 Feb 2005; Lina Pezzella <j4rg0n@gentoo.org> netselect-0.3-r1.ebuild:
   Unstable ppc-macos

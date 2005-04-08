@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/libnasl/libnasl-2.2.0.ebuild,v 1.7 2005/03/31 10:06:31 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/libnasl/libnasl-2.2.0.ebuild,v 1.8 2005/04/08 17:58:13 hansmi Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.nessus.org/pub/nessus/nessus-${PV}/src/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc sparc alpha ~amd64 ~ppc64"
+KEYWORDS="x86 ppc sparc alpha ~amd64 ~ppc64"
 IUSE=""
 
 DEPEND="=net-analyzer/nessus-libraries-${PV}"

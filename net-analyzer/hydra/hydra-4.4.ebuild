@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hydra/hydra-4.4.ebuild,v 1.3 2005/03/05 18:21:55 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hydra/hydra-4.4.ebuild,v 1.4 2005/04/08 17:57:01 hansmi Exp $
 
 DESCRIPTION="Advanced parallized login hacker"
 HOMEPAGE="http://www.thc.org/"
@@ -8,7 +8,7 @@ SRC_URI="http://www.thc.org/releases/${P}-src.tar.gz"
 
 LICENSE="HYDRA GPL-2"
 SLOT="0"
-KEYWORDS="~ppc x86"
+KEYWORDS="ppc x86"
 IUSE="gtk ssl"
 
 DEPEND="gtk? ( >=x11-libs/gtk+-1.2 )
