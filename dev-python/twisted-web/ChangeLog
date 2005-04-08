@@ -1,0 +1,8 @@
+# ChangeLog for dev-python/twisted-web
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-web/ChangeLog,v 1.1 2005/04/08 13:59:49 lordvan Exp $
+
+  08 Apr 2005; Thomas Raschbacher <lordvan@gentoo.org> :
+  initial import
+  twisted-web was part of the main twisted release
+
