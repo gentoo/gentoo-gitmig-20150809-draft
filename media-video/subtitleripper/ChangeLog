@@ -1,0 +1,10 @@
+# ChangeLog for media-video/subtitleripper
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/subtitleripper/ChangeLog,v 1.1 2005/04/08 16:16:37 trapni Exp $
+
+*subtitleripper-0.3.4 (08 Apr 2005)
+
+  08 Apr 2005; Christian Parpart <trapni@gentoo.org>
+  +subtitleripper-0.3.4.ebuild:
+  initial import; ebuild submitted by Florian E.J. Fruth <fejf@gmx.de>
+
