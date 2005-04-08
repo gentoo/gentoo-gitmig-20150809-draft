@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmnd
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmnd/ChangeLog,v 1.28 2005/04/07 17:12:34 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmnd/ChangeLog,v 1.29 2005/04/08 07:22:21 s4t4n Exp $
+
+  08 Apr 2005; Michele Noberasco <s4t4n@gentoo.org> wmnd-0.4.10.ebuild:
+  Removed older version.
 
   07 Apr 2005; Simon Stelling <blubb@gentoo.org> wmnd-0.4.11.ebuild:
   stable on amd64
