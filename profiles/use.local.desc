@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1069 2005/04/07 14:19:44 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1070 2005/04/08 19:51:42 humpback Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -564,6 +564,10 @@ net-im/centericq:gg - Enable support for the Gadu-Gadu IM protocol
 net-im/centericq:irc - Enable support for the IRC protocol
 net-im/centericq:lj - Enable support for the LiveJournal weblog system
 net-im/centericq:rss - Enable support for RSS/RDF feeds
+net-im/ejabberd:mod_pubsub - Pubsub support in ejabberd
+net-im/ejabberd:mod_irc - Irc support in ejabberd
+net-im/ejabberd:mod_muc - Multi user chat support in ejabberd
+net-im/ejabberd:web - Web support in ejabberd
 net-im/ekg2:gsm - Enable gsm plugin
 net-im/ekg2:nogg - Disable Gadu-Gadu plugin
 net-im/gaim:eds - Enable Evolution Data Server (EDS) support
