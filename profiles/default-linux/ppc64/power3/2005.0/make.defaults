@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ppc64/power3/2005.0/make.defaults,v 1.1 2005/03/12 03:34:44 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ppc64/power3/2005.0/make.defaults,v 1.2 2005/04/08 03:26:52 tgall Exp $
 
 ARCH="ppc64"
 ACCEPT_KEYWORDS="ppc64"
@@ -15,6 +15,6 @@ ACCEPT_KEYWORDS="ppc64"
 STAGE1_USE="unicode"
 GRP_STAGE23_USE="unicode ipv6 pam tcpd readline nls ssl gpm perl python berkdb ncurses"
 
-USE="unicode pam berkdb bitmap-fonts gif jpeg nls ncurses perl png ppc64 python readline ssl tcpd truetype truetype-fonts type1-fonts zlib"
+USE="nptl ibm unicode pam berkdb bitmap-fonts gif jpeg nls ncurses perl png ppc64 python readline ssl tcpd truetype truetype-fonts type1-fonts zlib"
 
 FEATURES="autoconfig sandbox sfperms"
