@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-22.0.50_pre20050225.ebuild,v 1.1 2005/02/26 04:20:48 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-22.0.50_pre20050225.ebuild,v 1.2 2005/04/08 17:12:38 usata Exp $
 
 inherit elisp-common alternatives flag-o-matic eutils
 
@@ -26,7 +26,7 @@ DEPEND=">=sys-apps/portage-2.0.51
 	sys-libs/gdbm
 	spell? ( || ( app-text/ispell app-text/aspell ) )
 	X? ( virtual/x11
-		gif? ( >=media-libs/libungif-4.1.0.1b )
+		gif? ( >=media-libs/giflib-4.1.0.1b )
 		jpeg? ( >=media-libs/jpeg-6b )
 		tiff? ( >=media-libs/tiff-3.5.7 )
 		png? ( >=media-libs/libpng-1.2.5 )
@@ -70,6 +70,7 @@ src_unpack() {
 	sed -i -e "s:/usr/lib/\([^ ]*\).o:/usr/$(get_libdir)/\1.o:g" \
 	       ${S}/src/s/gnu-linux.h
 
+	sed -i -e "s/-lungif/-lgif/g" configure* src/Makefile.in || die
 }
 
 src_compile() {
@@ -156,7 +157,7 @@ src_install () {
 	dodoc BUGS ChangeLog README*
 
 	if use gnome; then
-		insinto /usr/share/gnome/apps/Application
+		insinto /usr/share/applications
 		doins ${FILESDIR}/${DFILE} || die "install desktop file faild"
 	fi
 }
