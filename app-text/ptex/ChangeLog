@@ -1,6 +1,9 @@
 # ChangeLog for app-text/ptex
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ptex/ChangeLog,v 1.44 2005/04/07 16:15:20 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ptex/ChangeLog,v 1.45 2005/04/08 14:31:38 corsair Exp $
+
+  08 Apr 2005; Markus Rothe <corsair@gentoo.org> ptex-3.1.5.ebuild:
+  Stable on ppc64
 
 *ptex-3.1.8.1_p20050405 (07 Apr 2005)
 

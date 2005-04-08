@@ -1,6 +1,9 @@
 # ChangeLog for app-text/opensp
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/opensp/ChangeLog,v 1.22 2005/04/01 17:00:43 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/opensp/ChangeLog,v 1.23 2005/04/08 14:27:01 corsair Exp $
+
+  08 Apr 2005; Markus Rothe <corsair@gentoo.org> opensp-1.5.1.ebuild:
+  Stable on ppc64
 
   01 Apr 2005; <blubb@gentoo.org> opensp-1.5.1.ebuild:
   stable on amd64

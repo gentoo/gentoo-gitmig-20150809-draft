@@ -1,6 +1,9 @@
 # ChangeLog for app-text/jadetex
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/jadetex/ChangeLog,v 1.23 2005/02/16 21:54:06 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/jadetex/ChangeLog,v 1.24 2005/04/08 14:24:52 corsair Exp $
+
+  08 Apr 2005; Markus Rothe <corsair@gentoo.org> jadetex-3.13.ebuild:
+  Stable on ppc64
 
   16 Feb 2005; Gustavo Zacarias <gustavoz@gentoo.org> jadetex-3.13.ebuild:
   Stable on sparc
