@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Time-HiRes
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Time-HiRes/ChangeLog,v 1.31 2005/04/07 20:43:54 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Time-HiRes/ChangeLog,v 1.32 2005/04/08 16:20:33 corsair Exp $
+
+  08 Apr 2005; Markus Rothe <corsair@gentoo.org> Time-HiRes-1.66.ebuild:
+  Stable on ppc64
 
   07 Apr 2005; Michael Hanselmann <hansmi@gentoo.org>
   Time-HiRes-1.66.ebuild:
