@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 cf2da5ac26ed6346590522b9457835d8 ChangeLog 3177
-MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
-MD5 46420b362daf2cba78ebf28148436dc9 canna-cannadic-0.95c.ebuild 763
+MD5 69bd71b41c8e448bd50d035cabfe10eb ChangeLog 3277
 MD5 6dc1ee0dac5f33da79b7e8dbb7510fd8 canna-cannadic-0.95a.ebuild 761
 MD5 fc2c5553428985ac911e8cffcdf2764a canna-cannadic-0.95b.ebuild 766
-MD5 3dfe1251aaed337409490f5dc3928495 files/05cannadic.dics.dir 101
+MD5 90f48b6160ea577968e3d6bb2054b24d canna-cannadic-0.95c.ebuild 763
+MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
 MD5 a1f01c8c2bd1d1ada4026da493bf8777 files/01cannadic.dics.dir 100
+MD5 3dfe1251aaed337409490f5dc3928495 files/05cannadic.dics.dir 101
+MD5 bc5e7e6acd52b67678caee8b118676aa files/digest-canna-cannadic-0.95a 67
 MD5 e664cee1a38f1218b0da29eb4ad7f2f3 files/digest-canna-cannadic-0.95b 67
 MD5 e4dc5bdba16e4a7fd2ced5e4c66408ca files/digest-canna-cannadic-0.95c 67
-MD5 bc5e7e6acd52b67678caee8b118676aa files/digest-canna-cannadic-0.95a 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCRdNJugEuf3OQ0akRApdCAJ4wUGGWdCWugOPaj2k8HAiK2S8dtwCfVhZv
-CTF8YEoR8x80vrioNHAvCQ4=
-=SoEN
------END PGP SIGNATURE-----
