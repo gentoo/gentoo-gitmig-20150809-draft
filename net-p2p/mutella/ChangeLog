@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/mutella
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/mutella/ChangeLog,v 1.18 2004/12/28 05:45:46 ndimiduk Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/mutella/ChangeLog,v 1.19 2005/04/08 18:03:12 hansmi Exp $
+
+  08 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> mutella-0.4.5.ebuild:
+  Stable on ppc.
 
   28 Dec 2004; Nick Dimiduk <ndimiduk@gentoo.org> mutella-0.4.5.ebuild:
   Added ~ppc-macos
