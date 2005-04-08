@@ -1,4 +1,4 @@
-MD5 857b9ac6737270b25787d6d04d732b79 pretrace-0.2.ebuild 2772
-MD5 7ee113f70e035aba11b246552c48e7f1 ChangeLog 560
+MD5 aad1a3a231a09a03cbd0de6ea754c3b5 pretrace-0.3.ebuild 2772
+MD5 a1554c7a4fb1bfc55b9fa6e9cb070a19 ChangeLog 700
 MD5 c6ea7a07929a9d7924313374907810a4 metadata.xml 284
-MD5 266e980d4a041439deffe0ed432433cf files/digest-pretrace-0.2 63
+MD5 da2815e04fd897f533ce99fa3f36f73e files/digest-pretrace-0.3 63

@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/pretrace
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pretrace/ChangeLog,v 1.3 2005/04/06 17:53:54 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pretrace/ChangeLog,v 1.4 2005/04/08 18:51:12 taviso Exp $
+
+  08 Apr 2005; Tavis Ormandy <taviso@gentoo.org> -pretrace-0.2.ebuild:
+  fixing #88391, should return of /proc/self/exe can't be resolved.
 
   06 Apr 2005; Tavis Ormandy <taviso@gentoo.org> pretrace-0.2.ebuild:
   install into /lib
