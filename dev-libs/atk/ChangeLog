@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/atk
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/atk/ChangeLog,v 1.65 2005/04/02 03:48:28 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/atk/ChangeLog,v 1.66 2005/04/08 15:52:09 corsair Exp $
+
+  08 Apr 2005; Markus Rothe <corsair@gentoo.org> atk-1.8.0.ebuild:
+  Stable on ppc64
 
   02 Apr 2005; Stephen P. Becker <geoman@gentoo.org> atk-1.8.0.ebuild:
   stable on mips

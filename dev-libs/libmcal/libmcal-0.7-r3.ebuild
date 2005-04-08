@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmcal/libmcal-0.7-r3.ebuild,v 1.8 2005/03/29 01:36:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmcal/libmcal-0.7-r3.ebuild,v 1.9 2005/04/08 16:06:27 corsair Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="${SRC_URI_BASE}/${P}.tar.gz ${SRC_URI_BASE}/${DRIVERS}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 mips ~ppc s390 sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ~ppc s390 sparc x86 ppc64"
 IUSE="pam"
 
 DEPEND="pam? ( sys-libs/pam )"

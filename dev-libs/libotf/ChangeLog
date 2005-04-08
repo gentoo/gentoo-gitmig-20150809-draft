@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libotf
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libotf/ChangeLog,v 1.18 2005/04/01 17:27:12 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libotf/ChangeLog,v 1.19 2005/04/08 16:07:48 corsair Exp $
+
+  08 Apr 2005; Markus Rothe <corsair@gentoo.org> libotf-0.9.3.ebuild:
+  Stable on ppc64
 
   01 Apr 2005; Simon Stelling <blubb@gentoo.org> libotf-0.9.3.ebuild:
   stable on amd64

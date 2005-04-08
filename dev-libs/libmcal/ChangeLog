@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libmcal
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmcal/ChangeLog,v 1.26 2005/04/01 04:36:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmcal/ChangeLog,v 1.27 2005/04/08 16:06:27 corsair Exp $
+
+  08 Apr 2005; Markus Rothe <corsair@gentoo.org> libmcal-0.7-r3.ebuild:
+  Stable on ppc64
 
   01 Apr 2005; Aron Griffis <agriffis@gentoo.org> libmcal-0.7-r5.ebuild:
   stable on ia64
