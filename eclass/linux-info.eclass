@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/linux-info.eclass,v 1.22 2005/02/01 09:13:47 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/linux-info.eclass,v 1.23 2005/04/08 18:42:23 johnm Exp $
 #
 # Description: This eclass is used as a central eclass for accessing kernel
 #			   related information for sources already installed.
@@ -49,7 +49,7 @@
 #					.config.
 
 # And to ensure all the weirdness with crosscompile
-inherit toolchain-funcs
+inherit toolchain-funcs versionator
 
 ECLASS=linux-info
 INHERITED="$INHERITED $ECLASS"
@@ -107,7 +107,6 @@ local	ERROR workingdir basefname basedname myARCH="${ARCH}"
 
 	if [ "${ERROR}" = 1 ]
 	then
-		ebeep
 		echo -e "\n"
 		eerror "getfilevar requires 2 variables, with the second a valid file."
 		eerror "   getfilevar <VARIABLE> <CONFIGFILE>"
@@ -165,64 +164,34 @@ linux_chkconfig_string() {
 kernel_is() {
 	# if we haven't determined the version yet, we need too.
 	get_version;
-	
-	local RESULT operator test value i len
-	RESULT=0
-	
-	operator="="
-	if [ "${1}" == "lt" ]
-	then
-		operator="-lt"
-		shift
-	elif [ "${1}" == "gt" ]
-	then
-		operator="-gt"
-		shift
-	elif [ "${1}" == "le" ]
-	then
-		operator="-le"
-		shift
-	elif [ "${1}" == "ge" ]
-	then
-		operator="-ge"
-		shift
-	fi
+	local operator test value x=0 y=0 z=0
 
-	if [ -n "${1}" ]
-	then
-		value="${value}${1}"
-		test="${test}${KV_MAJOR}"
-	fi
-	if [ -n "${2}" ]
-	then
-		len=$[ 3 - ${#2} ]
-		for((i=0; i<$len; i++)); do
-			value="${value}0"
-		done
-		value="${value}${2}"
+	case ${1} in
+	  lt) operator="-lt"; shift;;
+	  gt) operator="-gt"; shift;;
+	  le) operator="-le"; shift;;
+	  ge) operator="-ge"; shift;;
+	  eq) operator="-eq"; shift;;
+	   *) operator="-eq";;
+	esac
 
-		len=$[ 3 - ${#KV_MINOR} ]
-		for((i=0; i<$len; i++)); do
-			test="${test}0"
-		done
-		test="${test}${KV_MINOR}"
-	fi
-	if [ -n "${3}" ]
-	then
-		len=$[ 3 - ${#3} ]
-		for((i=0; i<$len; i++)); do
-			value="${value}0"
-		done
-		value="${value}${3}"
+	for x in ${@}; do
+		for((y=0; y<$((3 - ${#x})); y++)); do value="${value}0"; done
+		value="${value}${x}"
+		z=$((${z} + 1))
 
-		len=$[ 3 - ${#KV_PATCH} ]
-		for((i=0; i<$len; i++)); do
-			test="${test}0"
-		done
-		test="${test}${KV_PATCH}"
-	fi
-	
-	[ ${test} ${operator} ${value} ] && return 0 || return 1
+		case ${z} in
+		  1) for((y=0; y<$((3 - ${#KV_MAJOR})); y++)); do test="${test}0"; done;
+		     test="${test}${KV_MAJOR}";;
+		  2) for((y=0; y<$((3 - ${#KV_MINOR})); y++)); do test="${test}0"; done;
+		     test="${test}${KV_MINOR}";;
+		  3) for((y=0; y<$((3 - ${#KV_PATCH})); y++)); do test="${test}0"; done;
+		     test="${test}${KV_PATCH}";;
+		  *) die "Error in kernel-2_kernel_is(): Too many parameters.";;
+		esac
+	done
+
+	[ ${test} ${operator} ${value} ] && return 0 || return 1 
 }
 
 get_version() {
@@ -331,7 +300,29 @@ get_version() {
 	return 0
 }
 
+get_running_version() {
+	KV_FULL=$(uname -r)
 
+	if [[ -f ${ROOT}/lib/modules/${KV_FULL}/source/Makefile ]]; then
+		KERNEL_DIR=$(readlink -f ${ROOT}/lib/modules/${KV_FULL}/source)
+		unset KV_FULL
+		get_version
+		return $?
+	elif [[ -f ${ROOT}/lib/modules/${KV_FULL}/build/Makefile ]]; then
+		KERNEL_DIR=$(readlink -f ${ROOT}/lib/modules/${KV_FULL}/build)
+		unset KV_FULL
+		get_version
+		return $?
+	else
+		KV_MAJOR=$(get_version_component_range 1 ${KV_FULL})
+		KV_MINOR=$(get_version_component_range 2 ${KV_FULL})
+		KV_PATCH=$(get_version_component_range 3- ${KV_FULL})
+		KV_PATCH=${KV_PATCH//-*}
+		[[ -n ${KV_FULL#*-} ]] && [[ -n ${KV_FULL//${KV_FULL#*-}} ]] \
+			&& KV_EXTRA="-${KV_FULL#*-}"
+	fi
+	return 0
+}
 
 
 # ebuild check functions
