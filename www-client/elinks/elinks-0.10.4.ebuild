@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/elinks/elinks-0.10.1.ebuild,v 1.1 2005/03/15 21:52:38 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/elinks/elinks-0.10.4.ebuild,v 1.1 2005/04/08 22:38:54 spock Exp $
 
 IUSE="gpm zlib ssl ipv6 X lua guile"
 
@@ -9,11 +9,11 @@ S=${WORKDIR}/${MY_P}
 DESCRIPTION="Advanced and well-established text-mode web browser"
 HOMEPAGE="http://elinks.or.cz"
 SRC_URI="http://elinks.or.cz/download/${MY_P}.tar.bz2
-	http://dev.gentoo.org/~spock/portage/distfiles/elinks-0.9.1.conf.bz2"
+	http://dev.gentoo.org/~spock/portage/distfiles/elinks-0.10.4.conf.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc ~sparc ~amd64 ~alpha"
+KEYWORDS="~x86 ~ppc ~sparc ~amd64 ~alpha"
 
 DEPEND="virtual/libc
 	>=app-arch/bzip2-1.0.2*
@@ -31,7 +31,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${WORKDIR}
 
-	mv "${PN}-0.9.1.conf" "${PN}.conf"
+	mv "${PN}-0.10.4.conf" "${PN}.conf"
 	sed -i \
 		-e 's:CONFIG_256_COLORS=.*:CONFIG_256_COLORS=yes:' \
 		-e 's:CONFIG_LEDS=.*:CONFIG_LEDS=yes:' \
@@ -73,7 +73,7 @@ src_install() {
 	insinto /usr/share/doc/${PF}/contrib/guile ; doins contrib/guile/*.scm
 }
 
-# disable it, as the only test available is interactive..
+# disable it as the only test available is interactive..
 src_test() {
 	return 0
 }
