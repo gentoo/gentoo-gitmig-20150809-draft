@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/kazehakase/kazehakase-0.2.5.ebuild,v 1.4 2005/03/25 16:36:08 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/kazehakase/kazehakase-0.2.5.ebuild,v 1.5 2005/04/08 18:11:33 hansmi Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge.jp/${PN}/13324/${P}.tar.gz"
 HOMEPAGE="http://kazehakase.sourceforge.jp/"
 
 SLOT="0"
-KEYWORDS="x86 ~amd64 ~ppc ~sparc"
+KEYWORDS="x86 ~amd64 ppc ~sparc"
 LICENSE="GPL-2"
 
 DEPEND=">=www-client/mozilla-1.7
