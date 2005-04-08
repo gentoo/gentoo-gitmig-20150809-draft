@@ -1,0 +1,60 @@
+#!/sbin/runscript
+# Copyright 1999-2005 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-im/ejabberd/files/ejabberd-0.7.5.initd,v 1.1 2005/04/08 20:02:35 humpback Exp $
+
+opts="${opts} reload"
+
+depend() {
+	use dns
+	need net
+	provide jabber-server
+}
+
+checkconfig() {
+	if [ ! -e /etc/ejabberd/ejabberd.cfg ] ; then
+		eerror "You need an /etc/ejabberd/ejabberd.cfg file to run ejabberd"
+		return 1
+	fi
+}
+
+start() {
+	checkconfig || return 1
+	ebegin "Starting eJabberd"
+	start-stop-daemon --start --quiet --chuid ejabberd:ejabberd \
+		--exec /usr/bin/env HOME=/var/run/ejabberd /usr/bin/ejabberd -- -noshell -detached
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping eJabberd"
+	if [ -z "$EJABBERD_NODE" ];
+	then
+		EJABBERD_NODE="ejabberd@`hostname -s`"
+	fi
+	/usr/bin/ejabberdctl $EJABBERD_NODE stop
+	eend $?
+}
+
+# Work around a bug in /sbin/runscript.sh - it won't run our custom
+# restart() unless it finds these two strings in the file.
+# svc_start svc_stop
+restart() {
+	ebegin "Restarting eJabberd"
+	if [ -z "$EJABBERD_NODE" ];
+	then
+		EJABBERD_NODE="ejabberd@`hostname -s`"
+	fi
+	/usr/bin/ejabberdctl $EJABBERD_NODE restart
+	eend $?
+}
+
+reload() {
+	ebegin "Reloading eJabberd"
+	if [ -z "$EJABBERD_NODE" ];
+	then
+		EJABBERD_NODE="ejabberd@`hostname -s`"
+	fi
+	/usr/bin/ejabberdctl $EJABBERD_NODE reopen-log
+	eend $?
+}
