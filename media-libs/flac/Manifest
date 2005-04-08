@@ -2,9 +2,9 @@
 Hash: SHA1
 
 MD5 6ab3635d825a48fba589f342fb7e72b1 flac-1.1.0-r1.ebuild 1564
-MD5 63ae1202d13d4f52a5ba814550389879 flac-1.1.1.ebuild 1648
+MD5 eaa0a6e758f4cd68daebd8bb68025a5e flac-1.1.1.ebuild 1651
 MD5 8a5f0b8e9adfd2c0b322c917dae6b379 flac-1.1.0.ebuild 1550
-MD5 44e680af68f762f672127ee3821713a7 ChangeLog 6590
+MD5 918d1afff7104c8c5eac2bed6054aeb1 ChangeLog 6677
 MD5 11a4150b0b0e5afd83bdc21d32e25e72 flac-1.1.0-r2.ebuild 1368
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 b62680ec8c3ea069b0c9d229ae93a8ee flac-1.1.2.ebuild 1634
@@ -25,7 +25,7 @@ MD5 86b29504f63f0ebfe0ddd971fc6b2470 files/flac-1.1.2-makefile.patch 511
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFCVS1V06ebR+OMO78RAi3ZAJ9cdvan21ub6fY6fhe3w0yr1b3vwACfeVHV
-cw8VOhqYnZBt52Qish+0hTA=
-=Veou
+iD8DBQFCVn5306ebR+OMO78RAqIMAJ9eAPb3bwzPT8dOyVK2QDk/U+kY0wCgk853
+F+NqKmztPu9FzYmszwvKgQs=
+=y9Kc
 -----END PGP SIGNATURE-----
