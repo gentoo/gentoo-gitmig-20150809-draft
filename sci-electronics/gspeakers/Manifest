@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 625e93a3f219e35e44ecea8201b36938 gspeakers-0.11.ebuild 607
+MD5 97a57b0682dfa01a5c1feff784c1e10a gspeakers-0.11.ebuild 605
+MD5 e48bd3c809fb59fbc6fb2800a5a50601 ChangeLog 536
 MD5 2569a4668f4b3284e8029283447a7078 metadata.xml 344
-MD5 bffa7156a8f947010bd3bcdca10086df ChangeLog 426
 MD5 1c52cabf9c411f0f2541821143bb3917 files/digest-gspeakers-0.11 66
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFB21mOntT9W3vfTuoRAkf6AJ9ZXTLPBPt0nYgDmd7syNLq/rX30wCeISzM
-e7T/w7JrYNOSQc3jkbNjxHY=
-=cUad
+iD8DBQFCVpxXntT9W3vfTuoRAsA6AJ4+SlAI7u0fDZM7gYfW1NLGRnSBIgCeLtCj
+Avlxk+k7m2JuaegTV2E2gvc=
+=gU+N
 -----END PGP SIGNATURE-----
