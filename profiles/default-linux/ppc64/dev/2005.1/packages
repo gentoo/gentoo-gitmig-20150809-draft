@@ -1,6 +1,6 @@
 # Copyright 2003-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ppc64/power3/packages,v 1.1 2005/03/12 02:27:47 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ppc64/dev/2005.1/packages,v 1.1 2005/04/08 04:41:46 dostrow Exp $
 # Maintained by Tom Gall <tgall@gentoo.org>
 
 *>=sys-devel/binutils-2.15
