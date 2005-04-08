@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 ef727b8dd325e599be4ec2293406ccd9 piozone-1.0-r2.ebuild 642
 MD5 3007585ed77153785889a2935748d4b2 ChangeLog 988
 MD5 9a551c719a5f13997e6a2f2375a93721 metadata.xml 164
 MD5 73b1ff1f26935da8082864a001906694 files/digest-piozone-1.0-r2 61
 MD5 56e97e8f7a92632f15dc043ee01225f9 files/piozone-1.0-gentoo.diff 1495
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCVtLJEZCkKN40op4RAsXmAKCEISYaaQyHnizZQc6mufDUukhJDACglt2q
+4349YlbkdZmqZ0mCoLHbLLY=
+=Rr6S
+-----END PGP SIGNATURE-----
