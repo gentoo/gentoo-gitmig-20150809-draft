@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/bio2jack
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/bio2jack/ChangeLog,v 1.17 2005/02/17 12:47:05 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/bio2jack/ChangeLog,v 1.18 2005/04/08 17:43:00 hansmi Exp $
+
+  08 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> bio2jack-0.4.ebuild:
+  Stable on ppc.
 
   17 Feb 2005; Michael Hanselmann <hansmi@gentoo.org> bio2jack-0.4.ebuild:
   Added to ~hppa, bug 66571.

@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 8d85ff50d08b2e3c39f141a983ce5e14 ChangeLog 4398
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 5e17e17c1f73e4187a99946721d63f50 xmms-arts-0.7.1-r1.ebuild 757
+MD5 825e851e1761455ddec9d575bbba96bd ChangeLog 4499
+MD5 0c530a4cbd2a537c3f93c072352c6007 xmms-arts-0.7.1-r1.ebuild 757
 MD5 53dae4973af0651df719de36647891ae files/xmmsarts-0.4-nocmallocc.patch 1078
+MD5 8a92137732cf9165d7dc23ee3f0bb4df files/xmms-arts-0.4-gentoo-endian.patch 6410
 MD5 94aaa450cb287a73ebdb918f26d0db23 files/xmms-arts-0.4-gentoo2.patch 754
 MD5 30e324a6c8a02ad73d4b2c1d1603c96e files/digest-xmms-arts-0.7.1-r1 69
-MD5 8a92137732cf9165d7dc23ee3f0bb4df files/xmms-arts-0.4-gentoo-endian.patch 6410
 MD5 4fde6a522e3bccd70269561fc287102d files/xmms-arts-0.4-gentoo.patch 372
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCPH1UugEuf3OQ0akRApdlAJwKQMxmvoa1dYXAOBhq28nnD0lF+gCfRcFV
-sUBDFtNVICoaPj5CjTwp0GA=
-=X6Iu
------END PGP SIGNATURE-----

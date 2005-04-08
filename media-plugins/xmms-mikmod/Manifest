@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e4331c911c5b53b53b4a4d980fcef9ce ChangeLog 631
 MD5 5a8290e44006ccff0dff3094555d6366 metadata.xml 257
-MD5 2024afe7ff5a63b51f63223f33e35c8d xmms-mikmod-1.2.10.ebuild 489
+MD5 5c2124d06bf7aab97ac0617765dee5f8 xmms-mikmod-1.2.10.ebuild 488
+MD5 d42ac1334e74a34b1bb362bc2c3520f3 ChangeLog 732
 MD5 f930420b092ea660e8da0c4b24e0f6a4 files/digest-xmms-mikmod-1.2.10 142
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCPHzZugEuf3OQ0akRAsSMAJ9HEZNe50GYH9SH9EFqyrBwCh1WDwCePInp
-M2TTBcZvMOAWTWkPELwiU7M=
-=Sx2Z
------END PGP SIGNATURE-----
