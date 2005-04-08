@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/twisted
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted/ChangeLog,v 1.42 2004/12/31 00:41:50 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted/ChangeLog,v 1.43 2005/04/08 13:56:09 lordvan Exp $
+
+  08 Apr 2005; Thomas Raschbacher <lordvan@gentoo.org> twisted-2.0.0.ebuild:
+  Version bump (package split now look out for twisted-web, twisted-mail,
+  twisted-conch,... within the next few days)
 
   31 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
