@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>embedded</herd>
+<herd>kernel</herd>
 <maintainer>
-  <email>embedded@gentoo.org</email>
+  <email>r3pek@gentoo.org</email>
 </maintainer>
 <longdescription>a uClinux kernel for embedded mmu-less CPUs</longdescription>
 </pkgmetadata>
