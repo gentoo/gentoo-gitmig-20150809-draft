@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/xshipwars/xshipwars-1.34.0.ebuild,v 1.11 2005/03/19 18:20:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/xshipwars/xshipwars-1.34.0.ebuild,v 1.12 2005/04/08 04:09:24 vapier Exp $
 
 inherit toolchain-funcs eutils games
 
@@ -25,6 +25,8 @@ S=${WORKDIR}/${MY_P}
 
 src_unpack() {
 	unpack ${MY_P}.tar.bz2
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-gcc33.patch
 }
 
 src_compile() {
