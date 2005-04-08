@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/uclinux-sources
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/uclinux-sources/ChangeLog,v 1.30 2005/01/12 21:03:51 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/uclinux-sources/ChangeLog,v 1.31 2005/04/08 13:14:13 r3pek Exp $
+
+*uclinux-sources-2.4.29_p0 (08 Apr 2005)
+
+  08 Apr 2005; Carlos Silva <r3pek@gentoo.org>
+  +files/kernel-26-security-patches.tar.bz2,
+  +uclinux-sources-2.4.29_p0.ebuild, +uclinux-sources-2.6.11_p0.ebuild:
+  Bumping to 2.4.29 and 2.6.11
 
   12 Jan 2005; <plasmaroo@gentoo.org> files/uclinux-sources-2.6.77094.patch:
   Fix #77094 patch; bug #77458.
