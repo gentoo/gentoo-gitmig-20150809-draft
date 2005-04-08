@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/kazehakase/kazehakase-0.2.6.ebuild,v 1.1 2005/03/29 19:46:48 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/kazehakase/kazehakase-0.2.6.ebuild,v 1.2 2005/04/08 15:41:33 nakano Exp $
 
 inherit eutils
 
@@ -43,6 +43,7 @@ pkg_setup(){
 
 src_compile(){
 	epatch ${FILESDIR}/${P}-gentoo.patch
+	epatch ${FILESDIR}/${P}-gentoo-2.patch
 
 	if use firefox; then
 		geckoengine="firefox"
