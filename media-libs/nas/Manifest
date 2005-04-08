@@ -1,27 +1,17 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 f42bf1fe21a3fa45cb97af6d91ea0618 ChangeLog 4878
-MD5 3b67c96b73c8cb790b25e8b1bf14df3c nas-1.5-r1.ebuild 1109
+MD5 8ba8b361879d6c7c05d0bac3924f0077 ChangeLog 4966
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 0626f895b20c5da1096b952a129cf277 nas-1.7.ebuild 1827
+MD5 3b67c96b73c8cb790b25e8b1bf14df3c nas-1.5-r1.ebuild 1109
 MD5 9de655765f4ba715b60ffd73a62c74e1 nas-1.6.ebuild 1018
 MD5 b8146b42d6df26229f2cdffcf4d549d7 nas-1.6c-r2.ebuild 1820
-MD5 db9051151cc74996092af8d430354a62 nas-1.7-r1.ebuild 1639
+MD5 bed44961ae72e4a95a37913a29863c97 nas-1.7-r1.ebuild 1639
+MD5 0626f895b20c5da1096b952a129cf277 nas-1.7.ebuild 1827
+MD5 ac506d33fb676e68c2a77d95d3f6027e files/digest-nas-1.5-r1 63
+MD5 4a7327fe2c6fba8c4315133a522358a3 files/digest-nas-1.6 64
 MD5 8d4c92b527f79724412d1d1a77631c14 files/digest-nas-1.6c-r2 65
+MD5 520a4d59a7e5ce53b6130d9e920c064c files/digest-nas-1.7 64
+MD5 520a4d59a7e5ce53b6130d9e920c064c files/digest-nas-1.7-r1 64
+MD5 f0200b3a05bd59ab92413ec1eee10a5b files/nas-1.5-libaudioMakefile.patch 300
+MD5 fa86b591efa17e2e000c996127a2c77f files/nas-1.6c-header.patch 264
+MD5 53c1b622336ab2a0dabb9da8e69f7f56 files/nas-1.7-header.patch 774
 MD5 83023e52672dc59996f4f620563b072a files/nas.conf.d 235
 MD5 e533db5e64a7cf585a37091b49735c64 files/nas.init.d 569
-MD5 ac506d33fb676e68c2a77d95d3f6027e files/digest-nas-1.5-r1 63
-MD5 fa86b591efa17e2e000c996127a2c77f files/nas-1.6c-header.patch 264
-MD5 520a4d59a7e5ce53b6130d9e920c064c files/digest-nas-1.7 64
-MD5 f0200b3a05bd59ab92413ec1eee10a5b files/nas-1.5-libaudioMakefile.patch 300
-MD5 4a7327fe2c6fba8c4315133a522358a3 files/digest-nas-1.6 64
-MD5 53c1b622336ab2a0dabb9da8e69f7f56 files/nas-1.7-header.patch 774
-MD5 520a4d59a7e5ce53b6130d9e920c064c files/digest-nas-1.7-r1 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFB8k6EugEuf3OQ0akRAmPiAJ4rEreIc9h+1T4z6oFU8Ye0lR0PVgCdFBd5
-zXa1JEgJF8de+cmIi6U1LWM=
-=strh
------END PGP SIGNATURE-----

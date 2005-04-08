@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 4050260b2f5847c3a53eb83248f2259d hermes-1.3.3.ebuild 1300
-MD5 73d33028e217ce3914520c67cb5afc75 ChangeLog 3770
+MD5 0f64bd4f6d572a08a506f7ece3ae16dd ChangeLog 3860
 MD5 12a82e99f98da7ca55a4d4cb73f5bc75 hermes-1.3.2-r2.ebuild 1386
+MD5 d95e2ef72f4d3d996625f84dfa707141 hermes-1.3.3.ebuild 1300
 MD5 fc46488f83981e35d8d604100d4495be metadata.xml 227
-MD5 ecea84ee6b2d39a6ccdf7489e7072565 files/digest-hermes-1.3.3 65
-MD5 4d52f1dfb2057a3f9013d0277c696252 files/hermes-1.3.2-destdir.patch 972
-MD5 81d27e818f30f5421ceef7b5dd07131f files/hermes-1.3.3-destdir.patch 989
-MD5 2a24cec422e5c9f8de27d93d4c708a6a files/hermes-1.3.3-amd64.patch 588
-MD5 e314b1d068911c6643ee6c7b4ecbd1ae files/hermes-1.3.2-amd64.patch 6804
 MD5 ef39ed830f1e73b4f498305847dc5b9d files/digest-hermes-1.3.2-r2 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFB4x5mugEuf3OQ0akRAswcAJ9T7yY9wFY8JC3EpGjeerT6Hv9LtgCePoOY
-rkaYhRvW/t0vzS4qXMdyHPk=
-=0V19
------END PGP SIGNATURE-----
+MD5 ecea84ee6b2d39a6ccdf7489e7072565 files/digest-hermes-1.3.3 65
+MD5 e314b1d068911c6643ee6c7b4ecbd1ae files/hermes-1.3.2-amd64.patch 6804
+MD5 4d52f1dfb2057a3f9013d0277c696252 files/hermes-1.3.2-destdir.patch 972
+MD5 2a24cec422e5c9f8de27d93d4c708a6a files/hermes-1.3.3-amd64.patch 588
+MD5 81d27e818f30f5421ceef7b5dd07131f files/hermes-1.3.3-destdir.patch 989
