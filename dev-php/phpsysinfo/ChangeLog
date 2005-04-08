@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/phpsysinfo
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/phpsysinfo/ChangeLog,v 1.28 2005/04/03 09:59:55 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/phpsysinfo/ChangeLog,v 1.29 2005/04/08 12:56:55 gmsoft Exp $
+
+  08 Apr 2005; Guy Martin <gmsoft@gentoo.org> phpsysinfo-2.3-r2.ebuild:
+  Stable on hppa.
 
   03 Apr 2005; Bryan Østergaard <kloeri@gentoo.org>
   phpsysinfo-2.3-r2.ebuild:
