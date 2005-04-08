@@ -1,6 +1,12 @@
 # ChangeLog for sci-chemistry/xdrawchem
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/xdrawchem/ChangeLog,v 1.6 2005/03/08 06:37:12 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/xdrawchem/ChangeLog,v 1.7 2005/04/08 13:25:18 cryos Exp $
+
+*xdrawchem-1.9.4 (08 Apr 2005)
+
+  08 Apr 2005; Marcus D. Hanwell <cryos@gentoo.org> +xdrawchem-1.9.4.ebuild:
+  Version bump, cleaned up a little and fixed doc location for FHS compliance.
+  Closes bug 88321.
 
 *xdrawchem-1.9.3 (08 Mar 2005)
 

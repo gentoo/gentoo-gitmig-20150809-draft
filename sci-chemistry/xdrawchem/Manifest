@@ -1,14 +1,26 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 323556051a553b814d7fb5f2176b3b02 xdrawchem-1.8.4.ebuild 929
 MD5 9015a50a2d992601cbd997e7a6bf47a9 xdrawchem-1.9.2.ebuild 934
 MD5 adc5266a44dff37e37eaa7f9c8d3723f xdrawchem-1.7.8.ebuild 984
+MD5 19c1c180fbf7db0ca30940bbcf1c0819 xdrawchem-1.9.4.ebuild 910
 MD5 9035e5a6638f5a695d7f399764bbbc70 xdrawchem-1.8.5.ebuild 936
 MD5 1727c6c489e82d5fb9442af9d4723042 xdrawchem-1.9.3.ebuild 938
 MD5 ae3be1268408bb236f170c2ed04be245 xdrawchem-1.9.ebuild 930
-MD5 77dd68b6dc728e7e322f421305ece8f0 ChangeLog 6274
+MD5 d0a8c17c72f4f3b02b034cd7ab271784 ChangeLog 6480
 MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
 MD5 c1a95992761f80fca89f9e195e07af6c files/digest-xdrawchem-1.7.8 64
 MD5 70263425e975820b388176a7be117d91 files/digest-xdrawchem-1.8.4 68
 MD5 ecf1886c22b230931211ed6f9644ba41 files/digest-xdrawchem-1.8.5 68
 MD5 31e3555e9dacc3e4655c4307acf9465b files/digest-xdrawchem-1.9.2 68
 MD5 c6b1805d6ea410c9db8e798d4ae4d535 files/digest-xdrawchem-1.9.3 68
+MD5 498da237913312065a68e2ad63daf0fb files/digest-xdrawchem-1.9.4 68
 MD5 d70f0fb04b210abb4ad736db129d1f22 files/digest-xdrawchem-1.9 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCVoZantT9W3vfTuoRAv9NAJ4uD/WpAW3nq6G3D69+QC2ydtABzgCgteIA
+gpzArS+Y0+MGEjbDVYwckjs=
+=VZ1R
+-----END PGP SIGNATURE-----
