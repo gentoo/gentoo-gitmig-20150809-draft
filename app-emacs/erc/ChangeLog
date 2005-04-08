@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/erc
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/erc/ChangeLog,v 1.12 2005/03/23 02:31:12 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/erc/ChangeLog,v 1.13 2005/04/08 13:15:52 gustavoz Exp $
+
+  08 Apr 2005; Gustavo Zacarias <gustavoz@gentoo.org> erc-5.0.2.ebuild:
+  Stable on sparc
 
   23 Mar 2005; Matthew Kennedy <mkennedy@gentoo.org>
   +files/5.0.2/50erc-gentoo.el:
