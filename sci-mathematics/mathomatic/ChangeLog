@@ -1,6 +1,13 @@
 # ChangeLog for sci-mathematics/mathomatic
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/mathomatic/ChangeLog,v 1.3 2005/01/28 09:26:50 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/mathomatic/ChangeLog,v 1.4 2005/04/08 14:11:53 cryos Exp $
+
+*mathomatic-12.2c (08 Apr 2005)
+
+  08 Apr 2005; Marcus D. Hanwell <cryos@gentoo.org>
+  +files/mathomatic-12.2c-makefile.patch, +mathomatic-12.2c.ebuild:
+  Version bump, tidied ebuild up, made it respect user CFLAGS and added
+  src_test(). Closes bug 88254.
 
 *mathomatic-11.7 (28 Jan 2005)
 
