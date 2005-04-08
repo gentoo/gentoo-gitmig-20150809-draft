@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/Array-RefElem
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Array-RefElem/ChangeLog,v 1.1 2005/04/08 12:35:02 mcummings Exp $
+
+*Array-RefElem-1.00 (08 Apr 2005)
+
+  08 Apr 2005; Michael Cummings <mcummings@gentoo.org> +metadata.xml,
+  +Array-RefElem-1.00.ebuild:
+  Missing dep
+
