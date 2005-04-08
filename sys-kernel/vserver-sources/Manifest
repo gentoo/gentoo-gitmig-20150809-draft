@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 e0455bb8f024f206a5111df57e058c2c vserver-sources-1.9.4.ebuild 682
 MD5 a5ba52ae80eddd196e830c53bbc8ba83 vserver-sources-1.9.3.ebuild 677
 MD5 0522d03565c3ef923e127fec6d3cbce9 vserver-sources-1.9.5_rc1.ebuild 683
@@ -10,3 +13,10 @@ MD5 593cceddac697a04ab9caa51ecfdd0cc files/digest-vserver-sources-1.9.5_rc1-r1 2
 MD5 90fec4ec5fc9d3ea8bf24823820837f7 files/digest-vserver-sources-1.9.3 135
 MD5 e17b723d0c9c7c910b80b441f95f45f0 files/digest-vserver-sources-1.9.4 207
 MD5 eeba2c8f8e1d02662a34ddbb3821f384 files/digest-vserver-sources-1.9.5 199
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCVp8tz7mlh8wQzGMRAgKEAKCPfBwJkwsdgyw9BOvzYGzHxhYljgCfXzpZ
+jci75nSyXdD9mo07SbA9GK8=
+=eMcY
+-----END PGP SIGNATURE-----
