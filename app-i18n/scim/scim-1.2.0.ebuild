@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/scim-1.2.0.ebuild,v 1.4 2005/03/31 20:36:26 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/scim-1.2.0.ebuild,v 1.5 2005/04/08 12:14:25 corsair Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/scim/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 alpha ppc amd64 ~sparc ~ppc64"
+KEYWORDS="x86 alpha ppc amd64 ~sparc ppc64"
 IUSE="gnome gtk immqt immqt-bc"
 
 GTK_DEPEND=">=x11-libs/gtk+-2
