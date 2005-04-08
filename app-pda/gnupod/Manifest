@@ -1,8 +1,18 @@
-MD5 58f1a82e5935ef6e987b5f8c53404bff gnupod-0.94.ebuild 1014
-MD5 db546d29861e18b039c67563d47ee275 gnupod-0.97.ebuild 1014
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 94fd9949d3bb7b2338bf3d22f7d5110e ChangeLog 959
 MD5 60daabb01cf25ffc73fa2cff22c33b2c gnupod-0.27.ebuild 1888
-MD5 4b03ab19bb6e7b007b45b1b95c3ee1d7 ChangeLog 792
 MD5 075fea99b82d61028585dc3e42f00466 metadata.xml 156
+MD5 ef22a9e84d2824a46e7fa0036a5cf5b6 gnupod-0.97.ebuild 1014
+MD5 5b324f05d55e4758bea9430dc81da016 gnupod-0.98.ebuild 1008
 MD5 6ebe359f3cb9294398e187d7239a9400 files/digest-gnupod-0.27 68
-MD5 2e05183c0d3af4eb2194591d263b6e7d files/digest-gnupod-0.94 60
 MD5 644e45ce76da0a2dbbedeabb3d36a769 files/digest-gnupod-0.97 60
+MD5 f1400bfce407c03693f2c397f23cd425 files/digest-gnupod-0.98 60
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCVs+BRkyva5PS18kRAimgAJ0RSTKOfPClTGXPZOxUZ6RpBqsosACfV7Mm
+xHgwQnPBwMItyf+C1Zf6qKc=
+=7m/c
+-----END PGP SIGNATURE-----
