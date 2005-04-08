@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/vmware-workstation
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.79 2005/04/08 18:04:57 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.80 2005/04/08 18:45:09 wolf31o2 Exp $
+
+  08 Apr 2005; Chris Gianelloni <wolf31o2@gentoo.org> -files/vmware.png:
+  Removing icon from files and closing bug #76662.
 
 *vmware-workstation-5.0.0.13124 (08 Apr 2005)
 
