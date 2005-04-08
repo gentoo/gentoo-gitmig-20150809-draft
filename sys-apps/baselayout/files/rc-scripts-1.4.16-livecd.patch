@@ -48,7 +48,7 @@ diff -urN rc-scripts-1.4.16.orig/sbin/livecd-functions.sh rc-scripts-1.4.16/sbin
 +		if [ -c "/dev/hvc/0" ]
 +		then
 +			ln -s /dev/hvc/0 /dev/hvc0
-+			echo "c0:12345:respawn:/sbin/agetty -nl /bin/bashlogin 9600 hvc0 vt320" >> /etc/inittab
++			echo "c0:12345:respawn:/sbin/agetty -nl /bin/bashlogin 9600 hvc0 vt220" >> /etc/inittab
 +		fi
  	# The rest...
  	else
@@ -64,7 +64,7 @@ diff -urN rc-scripts-1.4.16.orig/sbin/livecd-functions.sh rc-scripts-1.4.16/sbin
 +			if [ -c "/dev/hvc/0" ]
 +			then
 +				ln -s /dev/hvc/0 /dev/hvc0
-+				echo "c1:12345:respawn:/sbin/agetty -nl /bin/bashlogin 9600 hvc0 vt320" >> /etc/inittab
++				echo "c1:12345:respawn:/sbin/agetty -nl /bin/bashlogin 9600 hvc0 vt220" >> /etc/inittab
 +			else
 +				echo "c1:12345:respawn:/sbin/agetty -nl /bin/bashlogin ${LIVECD_CONSOLE_BAUD} ${LIVECD_CONSOLE} vt100" >> /etc/inittab
 +			fi
