@@ -1,0 +1,8 @@
+# ChangeLog for dev-python/twisted-mail
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-mail/ChangeLog,v 1.1 2005/04/08 14:12:26 lordvan Exp $
+
+  08 Apr 2005; Thomas Raschbacher <lordvan@gentoo.org> twisted-mail-0.5.0:
+  initial import
+  twisted-mail was part of the main twisted release
+
