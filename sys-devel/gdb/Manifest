@@ -6,7 +6,7 @@ MD5 2a52c4cd9bf5e2667c6bc7312e179fa0 gdb-6.1.ebuild 1807
 MD5 4fd3e363d0a40676217df9b0faee4d80 gdb-6.2.1-r1.ebuild 1928
 MD5 fb4ab4aaccb90b523c650a5f30d02281 gdb-6.2.1.ebuild 1784
 MD5 44fe1e6f031c991736e4ea4b17697926 gdb-6.2.ebuild 1782
-MD5 a713e3f51f3ce5159cf199b16bf9f69a gdb-6.3.ebuild 2425
+MD5 e03e3288305a431957dde84c8be6eb5a gdb-6.3.ebuild 2400
 MD5 567094e03359ffc1c95af7356395228d metadata.xml 162
 MD5 b3790be989db97b22c599572afbce109 files/digest-gdb-6.2.1-r1 133
 MD5 374352fdf0b1516a88eeaf0a921a2208 files/gdb-6.2.1-relative-paths.patch 3499

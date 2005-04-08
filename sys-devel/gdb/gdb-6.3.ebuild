@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-6.3.ebuild,v 1.8 2005/04/07 22:31:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-6.3.ebuild,v 1.9 2005/04/08 00:06:23 vapier Exp $
 
 inherit flag-o-matic eutils
 
@@ -53,9 +53,17 @@ src_install() {
 	make \
 		prefix="${D}"/usr \
 		mandir="${D}"/usr/share/man \
-		libdir="${D}"/usr/$(get_libdir) \
 		infodir="${D}"/usr/share/info \
+		libdir="${D}"/nukeme includedir="${D}"/nukeme \
 		install || die "install"
+	# The includes and libs are in binutils already
+	rm -r "${D}"/nukeme
+
+	# Don't install docs when building a cross-gdb
+	if [[ ${CTARGET} != ${CHOST} ]] ; then
+		rm -r "${D}"/usr/share
+		return 0
+	fi
 
 	dodoc README
 	docinto gdb
@@ -79,18 +87,5 @@ src_install() {
 		make -C "${S}"/bfd/doc \
 			infodir="${D}"/usr/share/info \
 			install-info || die "install bfd info"
-	fi
-
-	# These includes and libs are in binutils already
-	rm -f "${D}"/usr/lib/libbfd.*
-	rm -f "${D}"/usr/lib/libiberty.*
-	rm -f "${D}"/usr/lib/libopcodes.*
-	rm -f "${D}"/usr/share/info/{bfd,configure,standards}.info*
-	rm -r "${D}"/usr/share/locale
-	rm -r "${D}"/usr/include
-
-	# Dont bother including docs with a cross gdb
-	if [[ ${CTARGET} != ${CHOST} ]] ; then
-		rm -r "${D}"/usr/share/{man,info,doc}
 	fi
 }
