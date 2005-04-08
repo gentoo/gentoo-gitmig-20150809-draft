@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mambo/mambo-4.5.2.ebuild,v 1.2 2005/02/25 10:18:55 beu Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mambo/mambo-4.5.2.ebuild,v 1.3 2005/04/08 14:16:19 cryos Exp $
 
 inherit webapp eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://mamboforge.net/frs/download.php/4004/${MY_P}.tar.gz
 	http://mamboforge.net/frs/download.php/4043/Patch_4.5.2_to_4.5.2.1.zip"
 
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc"
+KEYWORDS="~x86 ~ppc ~sparc ~amd64"
 S=${WORKDIR}
 
 IUSE=""

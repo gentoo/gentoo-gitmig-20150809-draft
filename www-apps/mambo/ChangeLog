@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/mambo
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mambo/ChangeLog,v 1.8 2005/02/25 10:18:55 beu Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mambo/ChangeLog,v 1.9 2005/04/08 14:16:19 cryos Exp $
+
+  08 Apr 2005; Marcus D. Hanwell <cryos@gentoo.org> mambo-4.5.2.ebuild:
+  Marked ~amd64, closes bug 88270.
 
 *mambo-4.5.2 (21 Feb 2005)
 
