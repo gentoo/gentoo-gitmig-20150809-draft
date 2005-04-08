@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libcdaudio
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcdaudio/ChangeLog,v 1.23 2005/04/07 21:48:18 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcdaudio/ChangeLog,v 1.24 2005/04/08 18:48:06 gmsoft Exp $
+
+  08 Apr 2005; Guy Martin <gmsoft@gentoo.org> libcdaudio-0.99.10-r1.ebuild:
+  Stable on hppa.
 
 *libcdaudio-0.99.12 (07 Apr 2005)
 
