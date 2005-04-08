@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdebase
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.191 2005/03/26 18:48:42 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.192 2005/04/08 14:48:27 corsair Exp $
+
+  08 Apr 2005; Markus Rothe <corsair@gentoo.org> kdebase-3.3.2-r2.ebuild:
+  Stable on ppc64
 
   26 Mar 2005; Jason Wever <weeve@gentoo.org> kdebase-3.3.2-r2.ebuild:
   Stable on SPARC.
