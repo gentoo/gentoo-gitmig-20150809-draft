@@ -1,26 +1,16 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 4e2c6845bfd8622c99d01cdd0a1de815 ChangeLog 5072
+MD5 2caada7f502f11a2187f2af0390d238d ChangeLog 5164
 MD5 c2d3ac5a228cb182b3df1a1992e35368 expect-5.37.1-r1.ebuild 1823
 MD5 9df41e392d2d7f86495ad08b8096041d expect-5.37.1-r2.ebuild 3051
 MD5 4c73ddde0d04ccf48e7c4109b995e14f expect-5.40.0-r1.ebuild 2515
 MD5 d72515e421619404da8e13d785d018da expect-5.40.0.ebuild 1778
+MD5 e4530ce9c6dda5db849c9908a2363975 expect-5.42.1-r1.ebuild 3103
 MD5 6df5dccb90b220ebfa94de0e773cf0f9 expect-5.42.1.ebuild 2998
 MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
-MD5 393e11386a64b5f30dd4e1353904a7ab expect-5.42.1-r1.ebuild 3105
 MD5 f4bfc81e857154719e1924f00b505ea3 files/digest-expect-5.37.1-r1 65
 MD5 f4bfc81e857154719e1924f00b505ea3 files/digest-expect-5.37.1-r2 65
 MD5 56f93170a590d0db63d826802dcc9847 files/digest-expect-5.40.0 65
 MD5 56f93170a590d0db63d826802dcc9847 files/digest-expect-5.40.0-r1 65
 MD5 980077a691e90dc8affe4829e3169d66 files/digest-expect-5.42.1 65
-MD5 2103ff302f6e8a0dd748772f6512b3a5 files/expect-5.42.1-multilib.patch 507
 MD5 980077a691e90dc8affe4829e3169d66 files/digest-expect-5.42.1-r1 65
 MD5 c458386d5502fab2b49da03d16fb108c files/expect-5.39.0-libdir.patch 480
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFCGhkaKRy60XGEcJIRAkbeAJ99+6mHpqSp4Apd4ARyU/VTh+f/qQCbBs8r
-XRWV7buQHaNv8kCpNQrl6d4=
-=1JqC
------END PGP SIGNATURE-----
+MD5 2103ff302f6e8a0dd748772f6512b3a5 files/expect-5.42.1-multilib.patch 507
