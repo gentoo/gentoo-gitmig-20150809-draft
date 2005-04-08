@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/xmms-mikmod
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-mikmod/ChangeLog,v 1.3 2005/03/19 19:26:11 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-mikmod/ChangeLog,v 1.4 2005/04/08 17:38:07 hansmi Exp $
+
+  08 Apr 2005; Michael Hanselmann <hansmi@gentoo.org>
+  xmms-mikmod-1.2.10.ebuild:
+  Stable on ppc.
 
   19 Mar 2005; Bryan Østergaard <kloeri@gentoo.org>
   xmms-mikmod-1.2.10.ebuild:

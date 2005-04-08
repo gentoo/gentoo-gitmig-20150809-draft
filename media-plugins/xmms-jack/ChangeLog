@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/xmms-jack
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-jack/ChangeLog,v 1.21 2005/04/02 20:45:15 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-jack/ChangeLog,v 1.22 2005/04/08 17:42:50 hansmi Exp $
+
+  08 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> xmms-jack-0.11.ebuild:
+  Stable on ppc.
 
   02 Apr 2005; Luca Barbato <lu_zero@gentoo.org> xmms-jack-0.11.ebuild:
   Endianess fix
