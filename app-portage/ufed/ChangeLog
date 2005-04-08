@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/ufed
 # Copyright 2003-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/ufed/ChangeLog,v 1.16 2005/04/07 08:49:59 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/ufed/ChangeLog,v 1.17 2005/04/08 20:06:46 pylon Exp $
+
+  08 Apr 2005; Lars Weiler <pylon@gentoo.org> ufed-0.36.ebuild:
+  Stable on ppc; bug #88396.
 
   07 Apr 2005; Harald van Dĳk <truedfx@gentoo.org> ufed-0.36.ebuild:
   depend on newer dialog version to fix bug #88233
