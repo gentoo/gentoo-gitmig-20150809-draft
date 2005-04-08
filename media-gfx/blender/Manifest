@@ -1,37 +1,27 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-- -----BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d3eba695aaee4c4ce9eac27c6a7c5ad3 metadata.xml 588
-MD5 d319a736c17f64760fe7cfcfaf4d9ba5 blender-2.34-r1.ebuild 2931
-MD5 99ad2f8fe7c190a54f498946071a613b blender-2.36.ebuild 2929
-MD5 e62bb27a37e074aad873593785548f71 blender-2.36-r1.ebuild 3298
 MD5 b024660fd2067edc9a0415547d5f5406 blender-2.35.ebuild 2802
-MD5 c6ebb09a3e5eee9ef65affbe67be418f ChangeLog 7716
+MD5 a236d916cd7a7767fb5bf55035bc763f blender-2.36-r1.ebuild 3303
 MD5 66a5b30c7230910dfe5d35c16ee19763 blender-2.34.ebuild 2819
-MD5 f65e9e32429f06fd611b9902f9d7852b files/digest-blender-2.36 65
+MD5 99ad2f8fe7c190a54f498946071a613b blender-2.36.ebuild 2929
+MD5 d319a736c17f64760fe7cfcfaf4d9ba5 blender-2.34-r1.ebuild 2931
+MD5 c094dd94b305d18c308ec14bc239d338 ChangeLog 7826
+MD5 d3eba695aaee4c4ce9eac27c6a7c5ad3 metadata.xml 588
+MD5 d95ef10fee53b71576c6da6c8163e748 files/blender.png 2119
+MD5 b5356307d35d0bfe73149428cafe23ff files/configure-fix.patch 754
+MD5 ef66b38c216b9ab1d78968353025116f files/digest-blender-2.34-r1 66
 MD5 f65e9e32429f06fd611b9902f9d7852b files/digest-blender-2.36-r1 65
 MD5 ef66b38c216b9ab1d78968353025116f files/digest-blender-2.34 66
-MD5 b5356307d35d0bfe73149428cafe23ff files/configure-fix.patch 754
-MD5 ee3557021be75082093de0d643b32260 files/blender-2.36-dirs.patch 1970
-MD5 ef66b38c216b9ab1d78968353025116f files/digest-blender-2.34-r1 66
-MD5 b8e304980dc2bfd9a7157037d6ead44b files/blender.desktop 197
 MD5 2fbf0a94ba625bce0c2af487d90cf7f5 files/digest-blender-2.35 66
-MD5 d95ef10fee53b71576c6da6c8163e748 files/blender.png 2119
+MD5 f65e9e32429f06fd611b9902f9d7852b files/digest-blender-2.36 65
+MD5 b8e304980dc2bfd9a7157037d6ead44b files/blender.desktop 197
+MD5 ee3557021be75082093de0d643b32260 files/blender-2.36-dirs.patch 1970
 MD5 705b95605426ad9d562457fdbbff5460 files/blender-2.32.patch 2562
-- -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCVcTpntT9W3vfTuoRAghkAJ9+Qary+oWYCjH4KhrEcH79fdmsQQCffoPz
-EvH1ll6m29NGbGkd22lQ/fI=
-=e28q
-- -----END PGP SIGNATURE-----
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCVcWhntT9W3vfTuoRAg87AJ979wKNB1s2nepz2QfypRf9Hlk1zwCeLiKw
-owVXspfLss6K7Sy0zaMruiQ=
-=XfN2
+iD8DBQFCVgQpI1lqEGTUzyQRAsuqAJ4itHuMyPloXMp2YD3ZJtEQI8NCAQCcCVUb
+49QFoS+2QNi6AS9G0FoG/HI=
+=tLno
 -----END PGP SIGNATURE-----
