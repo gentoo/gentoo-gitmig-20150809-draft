@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/mit-krb5
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/ChangeLog,v 1.79 2005/04/07 21:23:49 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/ChangeLog,v 1.80 2005/04/08 13:22:02 seemant Exp $
+
+  08 Apr 2005; Seemant Kulleen <seemant@gentoo.org> mit-krb5-1.4.ebuild:
+  should now install into completely non-clobbering locations. Warning: please
+  do NOT install this YET (still). kerberos-update and heimdal need to be
+  fixed up first
 
 *mit-krb5-1.4 (07 Apr 2005)
 
