@@ -3,7 +3,7 @@ MD5 2bea5738adbefa2bb2242fe12452acea sim-0.9.3-r2.ebuild 1101
 MD5 3764e3bff4d4641c71abf98403dc6869 sim-0.9.2.ebuild 1537
 MD5 eee3a2716d9506256eba11f270d533b2 sim-0.9.3-r1.ebuild 1269
 MD5 d17cfe96c9fe2cee6309ce9dbf0dcf41 ChangeLog 6512
-MD5 58e36e13620da519c94835c9cbcb5dc6 sim-0.9.3-r3.ebuild 1200
+MD5 6688521c4058bae2dabcb50250a0afa2 sim-0.9.3-r3.ebuild 1144
 MD5 c4eb5670c6e35c0ecff85a4a513909d1 sim-0.8.3.ebuild 1256
 MD5 d339c32dde1b02b447f028c1c4a351f0 files/sim-0.9.1-head.patch 1318
 MD5 4c14c29d500e9d851cd3796159ef370b files/digest-sim-0.9.3-r3 64
