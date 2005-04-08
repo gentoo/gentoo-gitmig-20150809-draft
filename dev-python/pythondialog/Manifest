@@ -1,17 +1,17 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 772698871c39e023b03346527b0d96eb pythondialog-1.0.ebuild 775
-MD5 944ab7e30307ef76a2d26537195968e1 pythondialog-2.7.ebuild 641
-MD5 2fd65f6883a277d6451fffbbb976aec9 ChangeLog 1317
+MD5 5d967831e9162ac9a884ea2ba23e63f0 ChangeLog 1420
 MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
+MD5 772698871c39e023b03346527b0d96eb pythondialog-1.0.ebuild 775
+MD5 c96c421a4b8d77aba97ac71c781a1cc0 pythondialog-2.7.ebuild 643
+MD5 80e5ace6de9868fe7574d8f566d85cdf files/00_all_setup.py.patch.bz2 322
 MD5 8d47d64d3782fd31b429258c21b66dc5 files/digest-pythondialog-1.0 53
 MD5 c7d5806c7aa14d3ef98bf70ac8e773fc files/digest-pythondialog-2.7 68
-MD5 80e5ace6de9868fe7574d8f566d85cdf files/00_all_setup.py.patch.bz2 322
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFB8W9VntT9W3vfTuoRAh6CAJ9WkVI60Aeph8y011IEGewBghqyuQCgmXvg
-Sn9JNZDGSaBoKBHfY6oya+g=
-=Pibo
+iD8DBQFCVolyKRy60XGEcJIRAvmOAJ9M8SqcNwWFmGpdWtxqvv2lnfr3+wCdH8SK
+xGbY0muO62e35BIvIhA9b0Q=
+=S2db
 -----END PGP SIGNATURE-----
