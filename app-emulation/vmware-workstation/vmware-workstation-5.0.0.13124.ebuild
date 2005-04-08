@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-5.0_beta1.ebuild,v 1.3 2005/01/05 15:38:01 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-5.0.0.13124.ebuild,v 1.1 2005/04/08 18:04:57 wolf31o2 Exp $
 
 # Unlike many other binary packages the user doesn't need to agree to a licence
 # to download VMWare. The agreeing to a licence is part of the configure step
@@ -9,57 +9,80 @@
 inherit eutils
 
 S=${WORKDIR}/vmware-distrib
-NP="VMware-workstation-5.0.0-12888"
+#ANY_ANY="vmware-any-any-update89"
+NP="VMware-workstation-5.0.0-13124"
 DESCRIPTION="Emulate a complete PC on your PC without the usual performance overhead of most emulators"
 HOMEPAGE="http://www.vmware.com/products/desktop/ws_features.html"
-
-# Mike Doty <kingtaco@gentoo.org> removed "mirror://gentoo/vmware.png" from SRC_URI and moved to 
-# FILESDIR because of fetch restrict.  also changed relevant ins* lines
-SRC_URI="${NP}.tar.gz"
+SRC_URI="http://vmware-svca.www.conxion.com/software/wkst/${NP}.tar.gz
+	http://download3.vmware.com/software/wkst/${NP}.tar.gz
+	http://download.vmware.com/htdocs/software/wkst/${NP}.tar.gz
+	http://www.vmware.com/download1/software/wkst/${NP}.tar.gz
+	ftp://download1.vmware.com/pub/software/wkst/${NP}.tar.gz
+	http://vmware-chil.www.conxion.com/software/wkst/${NP}.tar.gz
+	http://vmware-heva.www.conxion.com/software/wkst/${NP}.tar.gz
+	http://vmware.wespe.de/software/wkst/${NP}.tar.gz
+	ftp://vmware.wespe.de/pub/software/wkst/${NP}.tar.gz
+	mirror://gentoo/vmware.png"
+#	http://ftp.cvut.cz/vmware/${ANY_ANY}.tar.gz
+#	http://ftp.cvut.cz/vmware/obselete/${ANY_ANY}.tar.gz
+#	http://knihovny.cvut.cz/ftp/pub/vmware/${ANY_ANY}.tar.gz
+#	http://knihovny.cvut.cz/ftp/pub/vmware/obselete/${ANY_ANY}.tar.gz
+#	mirror://gentoo/vmware.png"
 
 LICENSE="vmware"
 IUSE=""
 SLOT="0"
 KEYWORDS="-* ~x86 ~amd64"
-RESTRICT="nostrip fetch"
+RESTRICT="nostrip"
 
+DEPEND="${RDEPEND} virtual/os-headers"
 # vmware-workstation should not use virtual/libc as this is a 
 # precompiled binary package thats linked to glibc.
 RDEPEND="sys-libs/glibc
+	amd64? ( app-emulation/emul-linux-x86-xlibs )
 	virtual/x11
 	>=dev-lang/perl-5
 	sys-apps/pciutils"
 
-DEPEND="${RDEPEND} virtual/os-headers"
+dir=/opt/vmware
+Ddir=${D}/${dir}
 
+src_unpack() {
+	unpack ${NP}.tar.gz
+#	cd ${S}
+#	unpack ${ANY_ANY}.tar.gz
+#	mv -f ${ANY_ANY}/*.tar ${S}/lib/modules/source/
+#	cd ${S}/${ANY_ANY}
+#	chmod 755 ../lib/bin/vmware ../bin/vmnet-bridge ../lib/bin/vmware-vmx ../lib/bin-debug/vmware-vmx
+	# vmware any89 still doesn't patch the vmware binary
+	#./update vmware ../lib/bin/vmware || die
+	#./update bridge ../bin/vmnet-bridge || die
+	#./update vmx ../lib/bin/vmware-vmx || die
+	#./update vmxdebug ../lib/bin-debug/vmware-vmx || die
+}
 src_install() {
-	dodir /opt/vmware/bin
-	cp -a bin/* ${D}/opt/vmware/bin/
-	chmod u+s ${D}/opt/vmware/bin/vmware || die
-	chmod u+s ${D}/opt/vmware/bin/vmware-ping || die
+	dodir ${dir}/bin
+	cp -a bin/* ${Ddir}/bin
 
-	dodir /opt/vmware/lib
-	cp -dr lib/* ${D}/opt/vmware/lib/
-
-	chmod u+s ${D}/opt/vmware/lib/bin/vmware-vmx || die
+	dodir ${dir}/lib
+	cp -dr lib/* ${Ddir}/lib
 
 	# Since with Gentoo we compile everthing it doesn't make sense to keep
 	# the precompiled modules arround. Saves about 4 megs of disk space too.
-	rm -rf ${D}/opt/vmware/lib/modules/binary
+	rm -rf ${Ddir}/lib/modules/binary
+	# We set vmware-vmx and vmware-ping suid
+	chmod u+s ${Ddir}/bin/vmware-ping
+	chmod u+s ${Ddir}/lib/bin/vmware-vmx
 
-	dodir /opt/vmware/doc
-	cp -a doc/* ${D}/opt/vmware/doc/
+	dodoc doc/*
 
-	dodir /opt/vmware/man/
-	cp -a man/* ${D}/opt/vmware/man/
+	doman ${dir}/man/man1/vmware.1.gz
 
 	# vmware service loader
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/vmware.rc vmware || die
+	newinitd ${FILESDIR}/vmware.rc vmware || die
 
 	# vmware enviroment
-	insinto /etc/env.d
-	doins ${FILESDIR}/90vmware || die
+	doenvd ${FILESDIR}/90vmware || die
 
 	dodir /etc/vmware/
 	cp -a etc/* ${D}/etc/vmware/
@@ -80,16 +103,17 @@ src_install() {
 	keepdir /etc/vmware/init.d/rc{0,1,2,3,4,5,6}.d
 
 	# A simple icon I made
-	dodir /opt/vmware/lib/icon
-	insinto /opt/vmware/lib/icon
-	doins ${FILESDIR}/vmware.png || die
-	insinto /usr/share/pixmaps
-	doins ${FILESDIR}/vmware.png || die
+	insinto ${dir}/lib/icon
+	doins ${DISTDIR}/vmware.png || die
+	doicon ${DISTDIR}/vmware.png || die
 
 	make_desktop_entry vmware "VMWare Workstation" vmware.png
 
 	dodir /usr/bin
-	dosym /opt/vmware/bin/vmware /usr/bin/vmware
+	dosym ${dir}/bin/vmware /usr/bin/vmware
+
+	# this removes the user/group warnings
+	chown -R root:root ${D}
 
 	# Questions:
 	einfo "Adding answers to /etc/vmware/locations"
@@ -137,11 +161,8 @@ pkg_preinst() {
 }
 
 pkg_config() {
-	# In case pkg_config() ends up being the defacto standard for
-	# configuring packages (malverian <malverian@gentoo.org>)
-
 	einfo "Running /opt/vmware/bin/vmware-config.pl"
-	/opt/vmware/bin/vmware-config.pl
+	${dir}/bin/vmware-config.pl
 }
 
 pkg_postinst() {

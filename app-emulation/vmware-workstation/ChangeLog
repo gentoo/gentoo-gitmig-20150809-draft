@@ -1,6 +1,15 @@
 # ChangeLog for app-emulation/vmware-workstation
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.78 2005/03/17 11:40:50 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.79 2005/04/08 18:04:57 wolf31o2 Exp $
+
+*vmware-workstation-5.0.0.13124 (08 Apr 2005)
+
+  08 Apr 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  vmware-workstation-4.5.2.8848-r5.ebuild,
+  -vmware-workstation-5.0_rc3.ebuild, -vmware-workstation-5.0_rc4.ebuild,
+  +vmware-workstation-5.0.0.13124.ebuild:
+  Updated to VMware 5.0 final and made some minor cleanups to the vmware 4.5.2
+  ebuild. Closing bug #88352.
 
 *vmware-workstation-5.0_rc4 (17 Mar 2005)
 
