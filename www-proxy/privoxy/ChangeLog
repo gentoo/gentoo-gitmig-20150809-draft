@@ -1,6 +1,10 @@
 # ChangeLog for www-proxy/privoxy
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-proxy/privoxy/ChangeLog,v 1.9 2005/04/06 18:40:06 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-proxy/privoxy/ChangeLog,v 1.10 2005/04/08 13:14:26 gustavoz Exp $
+
+  08 Apr 2005; Gustavo Zacarias <gustavoz@gentoo.org>
+  privoxy-3.0.3-r3.ebuild:
+  Stable on sparc
 
   06 Apr 2005; Alin Nastac <mrness@gentoo.org> privoxy-3.0.3-r3.ebuild:
   Stable on x86
