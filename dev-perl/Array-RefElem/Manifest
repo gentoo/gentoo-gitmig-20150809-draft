@@ -1,3 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 e013b48d11882b48fa73ca868248cd2a Array-RefElem-1.00.ebuild 368
+MD5 cee49cdc1bb74e6c15e117476c09acdc Array-RefElem-1.00.ebuild 480
+MD5 e2105c31cd4ab686379641ee2060ed12 ChangeLog 370
 MD5 ea8d4ffddb80330c5ad6b55cc96e58b9 files/digest-Array-RefElem-1.00 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCVn5ktG5z4I8BtQoRAhODAJ9gZF//Y457FC7Ro8OlvRMIy2sDeACfVdL0
+JsHFJOk6z1O+EXdLOKagTD8=
+=zgcF
+-----END PGP SIGNATURE-----
