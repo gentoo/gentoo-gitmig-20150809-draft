@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-SNMP/Net-SNMP-4.1.2.ebuild,v 1.6 2004/07/14 19:48:32 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-SNMP/Net-SNMP-4.1.2.ebuild,v 1.7 2005/04/08 18:16:29 hansmi Exp $
 
 inherit perl-module
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.cpan.org/modules/by-module/Net/${P}.readme"
 
 SLOT="0"
 LICENSE="Artistic"
-KEYWORDS="x86 amd64 ~ppc sparc alpha"
+KEYWORDS="x86 amd64 ppc sparc alpha"
 IUSE=""
 
 DEPEND="${DEPEND}
