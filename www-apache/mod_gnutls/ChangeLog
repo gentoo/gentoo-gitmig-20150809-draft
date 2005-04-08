@@ -1,6 +1,12 @@
 # ChangeLog for www-apache/mod_gnutls
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_gnutls/ChangeLog,v 1.1 2005/04/08 22:47:39 trapni Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_gnutls/ChangeLog,v 1.2 2005/04/08 22:51:34 trapni Exp $
+
+*mod_gnutls-0.1.1 (08 Apr 2005)
+
+  08 Apr 2005; Christian Parpart <trapni@gentoo.org>
+  +mod_gnutls-0.1.1.ebuild:
+  version bump; that's fast, eh?
 
 *mod_gnutls-0.1.0 (08 Apr 2005)
 
