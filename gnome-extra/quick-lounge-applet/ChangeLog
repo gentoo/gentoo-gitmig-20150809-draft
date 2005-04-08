@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/quick-lounge-applet
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/quick-lounge-applet/ChangeLog,v 1.15 2005/01/28 18:19:51 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/quick-lounge-applet/ChangeLog,v 1.16 2005/04/08 13:29:05 gustavoz Exp $
+
+  08 Apr 2005; Gustavo Zacarias <gustavoz@gentoo.org>
+  quick-lounge-applet-2.2.0.ebuild:
+  Stable on sparc
 
   28 Jan 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   quick-lounge-applet-2.2.0.ebuild:
