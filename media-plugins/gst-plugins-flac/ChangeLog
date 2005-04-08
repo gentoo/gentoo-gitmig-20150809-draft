@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-flac
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-flac/ChangeLog,v 1.28 2005/04/02 11:31:13 zaheerm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-flac/ChangeLog,v 1.29 2005/04/08 19:10:49 corsair Exp $
+
+  08 Apr 2005; Markus Rothe <corsair@gentoo.org>
+  gst-plugins-flac-0.8.8.ebuild:
+  Stable on ppc64
 
   02 Apr 2005; <zaheerm@gentoo.org> -gst-plugins-flac-0.6.4.ebuild:
   removing gstreamer 0.6.x
