@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg3/libmpeg3-1.5.2-r1.ebuild,v 1.4 2005/04/01 01:02:11 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg3/libmpeg3-1.5.2-r1.ebuild,v 1.5 2005/04/08 02:32:22 kugelfang Exp $
 
 inherit flag-o-matic eutils gcc
 
@@ -61,7 +61,7 @@ src_compile() {
 	rm -f ${obj_dir}/*.o &> /dev/null
 
 	make CC="$(tc-getCC)" ${obj_dir}/libmpeg3.a || die "Failed libmpeg3.a"
-	rm -f ${obj_dir}/*.o
+	rm -f ${obj_dir}/{video/,audio/,}*.o
 
 	# x86 asm is not pic safe
 	if ! use mmx || has_pie; then

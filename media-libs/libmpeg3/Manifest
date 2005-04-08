@@ -1,33 +1,33 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 1d1696b8c4e636c777aca2b73627bc7f ChangeLog 5059
+MD5 a8eb12e5b0444cdfe1ecd042f3d0f5b2 libmpeg3-1.5.2-r1.ebuild 2695
+MD5 4811169eda355182993beccc5a95f440 libmpeg3-1.5.2.ebuild 2136
+MD5 55c6b2b7e4518f497089a4b6f5edc566 ChangeLog 5228
 MD5 7300a7b361fa9f48e37722c6952bd432 metadata.xml 158
-MD5 e1fd6ece97b4fb870b7590cc116d4d60 libmpeg3-1.5.2-r1.ebuild 2680
-MD5 86cf602270d3f2a2e8ca221aeaff11c6 libmpeg3-1.5.2.ebuild 2133
 MD5 d3a05866020d3e1f064974f5363c6c53 files/1.5.1-gentoo-mpeg3split.patch 2315
 MD5 8c1c4667609bae1089a66ea6c8ee1f28 files/1.5.1-gentoo-p1.patch 1376
 MD5 4e83631ff34cc2e5505210c328e55a88 files/1.5.1-gentoo-p2.patch 3461
 MD5 0335a104cfdf11350198751a1f3aff8c files/1.5.1-largefile.patch 291
 MD5 07e228685340f8108b870543728f43cf files/1.5.1-proper-c.patch 601
 MD5 c945b2843e8b1d32fc4af70cf5026912 files/1.5.1-pthread.patch 204
-MD5 4c1de213cd8a773b0742da874a882100 files/1.5.2-gcc3.4.patch 5963
 MD5 9b759ebc2fff68e033053285e5a450c8 files/1.5.2-gentoo-mpeg3split.patch 2083
-MD5 c132ad46a3ae646bb3cb0f2f283db3ca files/1.5.2-gentoo-multilib.patch 877
 MD5 8c1c4667609bae1089a66ea6c8ee1f28 files/1.5.2-gentoo-p1.patch 1376
 MD5 4e83631ff34cc2e5505210c328e55a88 files/1.5.2-gentoo-p2.patch 3461
 MD5 0335a104cfdf11350198751a1f3aff8c files/1.5.2-largefile.patch 291
 MD5 4434d248764e42d26e3ad3a08cfbc4ae files/1.5.2-no-nasm.patch 553
 MD5 07e228685340f8108b870543728f43cf files/1.5.2-proper-c.patch 601
 MD5 c945b2843e8b1d32fc4af70cf5026912 files/1.5.2-pthread.patch 204
+MD5 81b6cc87dac447d9be64d2327bd6193c files/digest-libmpeg3-1.5.2-r1 71
 MD5 81b6cc87dac447d9be64d2327bd6193c files/digest-libmpeg3-1.5.2 71
 MD5 793abbb0f0a5b2d5593ffc4be358bd80 files/libmpeg3-gentoo-patch-part1 1358
 MD5 d350249b0ff07ff5969ce4368d5ebbe5 files/libmpeg3-gentoo-patch-part2 4180
-MD5 81b6cc87dac447d9be64d2327bd6193c files/digest-libmpeg3-1.5.2-r1 71
+MD5 4c1de213cd8a773b0742da874a882100 files/1.5.2-gcc3.4.patch 5963
+MD5 c132ad46a3ae646bb3cb0f2f283db3ca files/1.5.2-gentoo-multilib.patch 877
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCVeHNArHZZzCEUG0RAhRaAJ9+l3WnL+Cd3VIvf02t9wAPr/j5bwCghYwz
-ysELhFNiNdb7pTQfYkpS9iE=
-=Ee6n
+iD8DBQFCVe2j5mJXAu5GbtIRAj4bAJ45b0vPfAPHqT7PipBAPYjR/E4i5ACfV/v2
+iYDDIw0RS43/vd/hkXkM6P0=
+=bOY4
 -----END PGP SIGNATURE-----
