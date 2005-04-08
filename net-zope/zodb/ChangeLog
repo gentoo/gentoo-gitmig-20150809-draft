@@ -1,6 +1,9 @@
 # ChangeLog for net-zope/zodb
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zodb/ChangeLog,v 1.9 2005/04/04 09:38:34 radek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zodb/ChangeLog,v 1.10 2005/04/08 15:58:28 seemant Exp $
+
+  08 Apr 2005; Seemant Kulleen <seemant@gentoo.org> zodb-3.3.ebuild:
+  marked testing on amd64
 
   04 Apr 2005; Radoslaw Stachowiak <radek@gentoo.org> :
   Fixed patch to nooffset version, closing bug #85798

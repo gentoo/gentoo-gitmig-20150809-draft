@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zodb/zodb-3.3.ebuild,v 1.3 2005/03/26 00:53:55 radek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zodb/zodb-3.3.ebuild,v 1.4 2005/04/08 15:58:28 seemant Exp $
 
 inherit distutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://zope.org/Products/${MY_P}${PV}/${PV}/${MY_P}3-${PV}.tgz"
 
 LICENSE="ZPL"
 SLOT="3.3"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 IUSE=""
 
 DEPEND=">=dev-lang/python-2.3.4"
