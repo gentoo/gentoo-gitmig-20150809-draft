@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/sparc-sources
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/sparc-sources/ChangeLog,v 1.81 2005/03/06 19:21:57 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/sparc-sources/ChangeLog,v 1.82 2005/04/09 12:24:11 joker Exp $
+
+*sparc-sources-2.4.30 (09 Apr 2005)
+
+  09 Apr 2005; Christian Birchinger <joker@gentoo.org>
+  +sparc-sources-2.4.30.ebuild:
+  Bumped to 2.4.30 with updated patches.
+  Added 2.4-sparc64-ramdisk64.patch to patch archive.
 
   06 Mar 2005; Gustavo Zacarias <gustavoz@gentoo.org> +files/blade1500.patch,
   sparc-sources-2.4.29.ebuild:
