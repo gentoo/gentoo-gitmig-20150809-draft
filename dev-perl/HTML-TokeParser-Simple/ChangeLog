@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/HTML-TokeParser-Simple
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-TokeParser-Simple/ChangeLog,v 1.5 2004/10/17 17:13:17 mcummings Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-TokeParser-Simple/ChangeLog,v 1.6 2005/04/09 02:29:34 gustavoz Exp $
+
+  09 Apr 2005; Gustavo Zacarias <gustavoz@gentoo.org>
+  HTML-TokeParser-Simple-3.13.ebuild:
+  Stable on sparc
 
 *HTML-TokeParser-Simple-3.13 (17 Oct 2004)
 
