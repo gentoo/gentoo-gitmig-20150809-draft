@@ -1,10 +1,10 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/fltk-1.1.4.ebuild,v 1.12 2004/12/16 08:45:55 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/fltk-1.1.4.ebuild,v 1.13 2005/04/09 10:06:28 blubb Exp $
 
 IUSE="opengl debug nptl"
 
-inherit eutils toolchain-funcs
+inherit eutils toolchain-funcs multilib
 
 DESCRIPTION="C++ user interface toolkit for X and OpenGL."
 HOMEPAGE="http://www.fltk.org"
@@ -19,7 +19,7 @@ PV_MINOR=${PV_MINOR/.*}
 SLOT="${PV_MAJOR}.${PV_MINOR}"
 
 INCDIR=/usr/include/fltk-${SLOT}
-LIBDIR=/usr/lib/fltk-${SLOT}
+LIBDIR=/usr/$(get_libdir)/fltk-${SLOT}
 
 DEPEND="virtual/x11
 	virtual/xft

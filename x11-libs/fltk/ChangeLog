@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/fltk
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/ChangeLog,v 1.40 2004/12/28 21:56:27 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/ChangeLog,v 1.41 2005/04/09 10:06:28 blubb Exp $
+
+  09 Apr 2005; Simon Stelling <blubb@gentoo.org> fltk-1.1.4.ebuild:
+  fixed multilib-strict-issue
 
   28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
