@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/ace
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ace/ChangeLog,v 1.27 2005/01/13 09:30:36 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ace/ChangeLog,v 1.28 2005/04/09 20:50:55 hansmi Exp $
+
+  09 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> ace-5.4-r2.ebuild:
+  Stable on ppc.
 
   13 Jan 2005; Daniel Black <dragonheart@gentoo.org> :
   Digest fix as per bug #77790. Thanks to Arkadi Shishlov <arkadi@it.lv>
