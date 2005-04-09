@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnu-smalltalk/gnu-smalltalk-2.1.10.ebuild,v 1.3 2005/04/03 08:34:05 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnu-smalltalk/gnu-smalltalk-2.1.10-r1.ebuild,v 1.1 2005/04/09 19:16:28 mkennedy Exp $
 
 inherit elisp-common flag-o-matic eutils gcc
 
@@ -68,6 +68,7 @@ src_install() {
 		elisp-install ${PN} *.el *.elc
 		elisp-site-file-install ${FILESDIR}/${SITEFILE}
 	fi
+	chmod a+r ${D}/usr/share/smalltalk/packages.xml
 }
 
 pkg_postinst() {
