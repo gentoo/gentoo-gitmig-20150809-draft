@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/webmin
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/ChangeLog,v 1.78 2005/04/08 21:33:57 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/ChangeLog,v 1.79 2005/04/09 06:57:59 mr_bones_ Exp $
+
+  09 Apr 2005; Michael Sterrett <mr_bones_@gentoo.org> webmin-1.190.ebuild:
+  fix find typo (bug #88429)
 
 *webmin-1.190 (08 Apr 2005)
 

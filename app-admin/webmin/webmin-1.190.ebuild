@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/webmin-1.190.ebuild,v 1.1 2005/04/08 21:33:57 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/webmin-1.190.ebuild,v 1.2 2005/04/09 06:57:59 mr_bones_ Exp $
 
 IUSE="apache2 postgres ssl webmin-minimal"
 
@@ -112,7 +112,7 @@ src_install() {
 
 	# Fixup the config files to use their real locations
 	sed -i 's:^pidfile=.*$:pidfile=/var/run/webmin.pid:' ${D}/etc/webmin/miniserv.conf
-	find ${D}/etc/webmin -type f -exec sed -i "s:${D}:${ROOT}:g" {} \;
+	find ${D}/etc/webmin -type f -exec sed -i "s:${D}:${ROOT}:g" \{\} \;
 
 	# Cleanup from the config script
 	rm -rf ${D}/var/log/webmin
