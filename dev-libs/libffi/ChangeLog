@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libffi
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/ChangeLog,v 1.30 2005/04/06 19:15:26 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/ChangeLog,v 1.31 2005/04/09 04:26:31 fafhrd Exp $
+
+  09 Apr 2005; Armando Di Cianno <fafhrd@gentoo.org> -libffi-3.3.3.ebuild,
+  -libffi-3.3.3-r1.ebuild, -libffi-3.3.4.ebuild, libffi-3.4.1-r1.ebuild:
+  Pruning old ebuilds that are no longer needed.
 
   06 Apr 2005; Markus Rothe <corsair@gentoo.org> libffi-3.4.3.ebuild:
   Stable on ppc64

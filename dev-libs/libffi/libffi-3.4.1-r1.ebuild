@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/libffi-3.4.1-r1.ebuild,v 1.4 2005/03/05 10:44:24 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/libffi-3.4.1-r1.ebuild,v 1.5 2005/04/09 04:26:31 fafhrd Exp $
 
 inherit eutils flag-o-matic libtool gnuconfig
 
@@ -26,6 +26,9 @@ do_filter_flags() {
 	# xgcc isnt patched with the gcc symbol visibility patch
 	filter-flags -fvisibility-inlines-hidden
 	filter-flags -fvisibility=hidden
+
+	# strict-aliasing is known to break obj-c stuff in gcc-3.4*
+	filter-flags -fstrict-aliasing
 
 	# ...sure, why not?
 	strip-unsupported-flags
