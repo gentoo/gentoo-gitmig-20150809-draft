@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/libraw1394
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libraw1394/ChangeLog,v 1.25 2005/04/01 22:22:14 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libraw1394/ChangeLog,v 1.26 2005/04/09 13:20:50 corsair Exp $
+
+  09 Apr 2005; Markus Rothe <corsair@gentoo.org> libraw1394-1.1.0.ebuild:
+  Stable on ppc64
 
   01 Apr 2005; Lars Weiler <pylon@gentoo.org> libraw1394-1.1.0.ebuild:
   Stable on ppc.
