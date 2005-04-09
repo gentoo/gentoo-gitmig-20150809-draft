@@ -1,12 +1,12 @@
 #!/sbin/runscript
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-utils/files/capi.initd,v 1.4 2005/03/30 20:03:15 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-utils/files/capi.initd,v 1.5 2005/04/09 14:35:00 genstef Exp $
 
-opts="start stop info"
+opts="info showconfig"
 
 depend() {
-	after coldplug isapnp
+	after coldplug hotplug isapnp pcmcia
 }
 
 start() {
@@ -21,40 +21,59 @@ start() {
 	eend $? || return 1
 
 	local CNT=0  # wait for udev
-	while [ ! -e /dev/capi20 -a $CNT -lt 10 ]; do
-		sleep 1; : $((CNT++))
+	while [ ! -e /dev/capi20 -a $CNT -lt 20 ]; do
+		sleep 0.5; : $((CNT++))
 	done
 
 	ebegin "Starting CAPI"
-
 	if /usr/sbin/capiinit 2>/dev/null activate ; then
-		[ -f /proc/capi/capidrv -o "$CAPI_LOAD_CAPIDRV" = "0" ] || /sbin/modprobe -s capidrv
-		eindent
-		while read INFO; do einfo "$INFO"; done < /proc/capi/controller
-		eoutdent
+		[ -f /proc/capi/capidrv -o "$CAPI_LOAD_CAPIDRV" != "yes" ] || /sbin/modprobe -s capidrv
+		# eindent  -> waiting for new baselayout :-/
+		local INFO
+		while read INFO; do einfo "   ${INFO}"; done < /proc/capi/controller
+		# eoutdent
 	fi
-	
 	eend $?
 }
 
 stop() {
-	local DRIVERS=$(/usr/bin/cut 2>/dev/null -f1 -d' ' /proc/capi/driver)
+	local DRV RET FCNT=0 DRIVERS=$(/bin/cut 2>/dev/null -f1 -d' ' /proc/capi/driver)
+
+	# if some CAPI applications are still running, kill 'em
+	if /bin/fuser 2>/dev/null -s /dev/capi20; then
+		ebegin "Stopping CAPI applications"
+		/bin/fuser -ks /dev/capi20; RET=$?
+		while [ $RET -eq 0 -a $FCNT -lt 10 ]; do
+			echo -n "."; sleep 0.5; FCNT=$(($FCNT + 1))
+			/bin/fuser -s /dev/capi20; RET=$?
+		done
+		[ $RET -eq 0 ] && eend 1 || eend 0
+	fi
 
 	ebegin "Stopping CAPI"
-
-	/sbin/modprobe -sqr capidrv
-	/usr/sbin/capiinit 2>/dev/null stop
+	[ "$CAPI_LOAD_CAPIDRV" = "yes" ] && /sbin/modprobe -sqr capidrv
+	[ "$CAPI_UNLOAD_CARDS" = "yes" ] && /usr/sbin/capiinit 2>/dev/null stop
 	for DRV in $DRIVERS; do	/sbin/modprobe -sqr $DRV; done
 	/sbin/modprobe -sqr capi
-	
 	eend 0
 }
 
 info() {
 	if [ -e /proc/capi/controller ]; then
-		while read INFO; do einfo "$INFO"; done < /proc/capi/controller
+		local INFO
+		while read INFO; do einfo "${INFO}"; done < /proc/capi/controller
 	else
 		eerror "ERROR: CAPI not loaded"
 		return 1
 	fi
+}
+
+showconfig() {
+	local TEXT INFO
+	if TEXT=$(/usr/sbin/capiinit 2>&1 show); then
+		echo "$TEXT" | while read INFO; do einfo "${INFO}"; done
+		return 0
+	fi
+	echo "$TEXT" | while read INFO; do eerror "${INFO}"; done
+	return 1
 }

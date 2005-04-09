@@ -1,11 +1,11 @@
 #!/bin/bash
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-utils/files/capi.hotplug,v 1.3 2005/03/30 20:03:15 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-utils/files/capi.hotplug,v 1.4 2005/04/09 14:35:00 genstef Exp $
 
 . /etc/conf.d/capi
 
-[ "$CAPI_HOTPLUG_USB" = "0" ] && exit 0
+[ "$CAPI_HOTPLUG_USB" = "yes" ] || exit 0
 
 # syslog output
 syslog() {  # <msg>
@@ -13,11 +13,11 @@ syslog() {  # <msg>
 }
 
 beep_ok() {
-	[ "$CAPI_HOTPLUG_BEEP" = "0" ] || echo -en "\033[10;1200]\a\033[10;262]" > /dev/console
+	[ "$CAPI_HOTPLUG_BEEP" = "yes" ] && echo -en "\033[10;1200]\a\033[10;262]" > /dev/console
 }
 
 beep_error() {
-	[ "$CAPI_HOTPLUG_BEEP" = "0" ] || echo -en "\033[10;300]\a\033[10;262]" > /dev/console
+	[ "$CAPI_HOTPLUG_BEEP" = "yes" ] && echo -en "\033[10;300]\a\033[10;262]" > /dev/console
 }
 
 # driver lookup
@@ -31,7 +31,7 @@ avmusb() {  # <driver> <usbdev> <firmware>
 	local CARD NAME STATUS TYPE VER DEV FIRMWARE
 	while read CARD NAME STATUS TYPE VER DEV; do  # AVM cardinfo
 		if [ "${STATUS}" = "detected" -a ${DEV} -eq ${2} ]; then
-			syslog "loading firmware ${3} into controller ${CARD} (${NAME})"
+			syslog "loading firmware '${3}' into controller ${CARD} (${NAME})"
 			/usr/sbin/avmcapictrl load "/lib/firmware/${3}" "${CARD}"
 			break
 		fi
@@ -93,44 +93,44 @@ esac
 
 case "$ACTION" in
 	add)
-		/bin/ln 2>/dev/null -s "$$" "$LOCK" || exit 0
+		/bin/ln 2>/dev/null -s "$$" "${LOCK}" || exit 0
 	
 		# loading capi
 		if ! ( [ -f /proc/capi/capi20 ] || /sbin/modprobe -sq capi ); then
 			syslog "could not load CAPI!"
-			beep_error; /bin/rm -f "$LOCK"; exit 1
+			beep_error; /bin/rm -f "${LOCK}"; exit 1
 		fi
 	
 		# loading driver
-		if ! /sbin/modprobe -sq $DRIVER; then
+		if ! /sbin/modprobe -sq ${DRIVER}; then
 			syslog "could not load driver ${DRIVER}!"
-			beep_error; /bin/rm -f "$LOCK"; exit 1
+			beep_error; /bin/rm -f "${LOCK}"; exit 1
 		fi
 	
 		# loading firmware	
-		if [ -n "$LOADER" -a -n "$FIRMWARE" ]; then
+		if [ -n "${LOADER}" -a -n "${FIRMWARE}" ]; then
 			CNT=0  # wait for udev
-			while [ ! -e /dev/capi20 -a $CNT -lt 10 ]; do
-				sleep 1; : $((CNT++))
+			while [ ! -e /dev/capi20 -a $CNT -lt 20 ]; do
+				sleep 0.5; : $((CNT++))
 			done
 			if [ -f "/lib/firmware/${FIRMWARE}" ]; then
 				$LOADER $DRIVER $USBDEV $FIRMWARE
 			else
 				syslog "firmware ${FIRMWARE} not found!"
-				beep_error; /bin/rm -f "$LOCK"; exit 1
+				beep_error; /bin/rm -f "${LOCK}"; exit 1
 			fi
 		fi
 
 		# loading capidrv (should be loaded *after* card driver)
-		if ! ( [ -f /proc/capi/capidrv -o "$CAPI_LOAD_CAPIDRV" = "0" ] || /sbin/modprobe -sq capidrv ); then
+		if ! ( [ -f /proc/capi/capidrv -o "$CAPI_LOAD_CAPIDRV" != "yes" ] || /sbin/modprobe -sq capidrv ); then
 			syslog "could not load CAPIDRV!"
 		fi
 		
-		beep_ok; /bin/rm -f "$LOCK"
+		beep_ok; /bin/rm -f "${LOCK}"
 		;;
 
 	remove)
-		/sbin/modprobe -sqr $DRIVER
+		/sbin/modprobe -sqr ${DRIVER}
 		;;
 esac
 exit 0

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-utils/capi4k-utils-20050322.ebuild,v 1.3 2005/03/30 20:03:15 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-utils/capi4k-utils-20050322.ebuild,v 1.4 2005/04/09 14:35:00 genstef Exp $
 
 YEAR_PV=${PV:0:4}
 MON_PV=${PV:4:2}
@@ -94,9 +94,9 @@ src_install() {
 	insopts -m 0644
 	newins ${FILESDIR}/rcapid.xinetd rcapid
 
-	# install DSL sample config
+	# install DSL/ISDN sample config
 	insinto /etc/ppp/peers
-	doins pppdcapiplugin/peers/t-dsl
+	doins pppdcapiplugin/peers/t-dsl ${FILESDIR}/capi-isdn
 
 	# very useful tool ;-)
 	dobin scripts/isdncause
