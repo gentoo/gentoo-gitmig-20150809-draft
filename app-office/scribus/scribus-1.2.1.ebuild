@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/scribus-1.2.1.ebuild,v 1.5 2005/03/06 12:03:26 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/scribus-1.2.1.ebuild,v 1.6 2005/04/09 20:36:03 hansmi Exp $
 
 inherit kde-functions eutils
 need-qt 3
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.scribus.net"
 SRC_URI="http://www.scribus.org.uk/downloads/${PV}/${P}.tar.bz2"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc sparc amd64 ~ppc64"
+KEYWORDS="x86 ppc sparc amd64 ~ppc64"
 IUSE=""
 
 DEPEND=">=x11-libs/qt-3.3.3
