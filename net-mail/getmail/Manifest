@@ -1,19 +1,21 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 43e8f3fea4c39dbfa05f58f6c3b77684 ChangeLog 9144
+MD5 362f1d385d2b0483fede7a81a12682f3 ChangeLog 9328
+MD5 de5115b1ae499885ac96d8ca5193ec8c getmail-4.3.6.ebuild 1536
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
 MD5 f1032dbafab697aba8d06ec5b098dd46 getmail-4.3.4.ebuild 1536
 MD5 5e6cc744efa6c7b3a8e25a6a360c4c24 getmail-4.3.5.ebuild 1536
 MD5 fdef5056f5957616e00845af65dca038 getmail-4.3.3.ebuild 1536
 MD5 a76ebc67214c74977c6a6191b3c4362a files/python2.4-fix.patch 3119
 MD5 c01dba72bb8ffcff4ba3d1307a83d7c9 files/digest-getmail-4.3.5 65
+MD5 a1b89b1b56a166aa875358170a4a8c22 files/digest-getmail-4.3.6 65
 MD5 764ab11154c7919b1b4c9e3ba91d3c8d files/digest-getmail-4.3.3 65
 MD5 ff20696bcca438d803e7db5eb143f566 files/digest-getmail-4.3.4 65
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCU/AtQlM6RnzZP+IRAql4AJ9Fa4tM5iVH3lW50UtPZtXYTjqwvACgj1ou
-+49L1sL5kj7s7z1R/56wJJQ=
-=lMsQ
+iD4DBQFCV+DjQlM6RnzZP+IRAvNNAJUZGXChhaVhSUX8W/3W/wwOXWXbAJ994Dhr
+35oYbaCROLC4kN0eUgmSqg==
+=FLPj
 -----END PGP SIGNATURE-----
