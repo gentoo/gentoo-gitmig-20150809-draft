@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/tomcat
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.25 2005/04/04 15:02:12 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.26 2005/04/09 16:10:47 corsair Exp $
+
+  09 Apr 2005; Markus Rothe <corsair@gentoo.org> tomcat-5.0.28-r2.ebuild:
+  This version doesn't build on ppc64 (added -ppc64 to KEYWORDS)
 
   04 Apr 2005; Thomas Matthijs <axxo@gentoo.org> tomcat-5.0.28-r2.ebuild:
   change dep to reflect commons-httpclient slotting
@@ -60,7 +63,7 @@
   updated maintainer informations.
 
   18 Dec 2004; Karl Trygve Kalleberg <karltk@gentoo.org> tomcat-5.0.28.ebuild:
-  Fixes #74858 thanks to Petteri Räty <petteri.raty@welho.com>
+  Fixes #74858 thanks to Petteri RÃ¤ty <petteri.raty@welho.com>
 
   17 Nov 2004; Markus Rothe <corsair@gentoo.org> tomcat-5.0.27-r4.ebuild,
   tomcat-5.0.28.ebuild:
@@ -201,7 +204,7 @@
   25 Jun 2004; Aron Griffis <agriffis@gentoo.org> tomcat-5.0.18.ebuild:
   QA - fix use invocation
 
-  08 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> tomcat-5.0.18.ebuild:
+  08 Jun 2004; Bryan Ãstergaard <kloeri@gentoo.org> tomcat-5.0.18.ebuild:
   Stable on alpha.
 
 *tomcat-5.0.25 (19 May 2004)
