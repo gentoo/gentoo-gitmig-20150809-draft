@@ -1,6 +1,14 @@
-MD5 a1457284faaa66902037dcd2eaeab292 metadata.xml 245
-MD5 725c351bbd5c502888a9b5ace13888be ChangeLog 3477
-MD5 af5ba7d3c10514dc10923b250eee99c9 pavuk-0.9.31.ebuild 1424
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 7f80757d2db657a9f51fb876b6057283 pavuk-0.9.32.ebuild 1386
-MD5 0ecaaa14f3190993e307fea1f2d880d3 files/digest-pavuk-0.9.31 65
+MD5 725c351bbd5c502888a9b5ace13888be ChangeLog 3477
+MD5 a1457284faaa66902037dcd2eaeab292 metadata.xml 245
 MD5 452e79ff147b4c40cfee016d4c88c3bc files/digest-pavuk-0.9.32 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCWERriJcSIUGNthERAiADAJwO9wMQ9N/psIcH5TvJzZEu4KxX8wCfT/ZR
+lM8j76gBnvEqhxoLGko96nQ=
+=bDZd
+-----END PGP SIGNATURE-----
