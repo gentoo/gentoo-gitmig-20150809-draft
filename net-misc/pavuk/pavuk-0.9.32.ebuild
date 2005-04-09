@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pavuk/pavuk-0.9.32.ebuild,v 1.2 2005/04/05 21:13:56 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pavuk/pavuk-0.9.32.ebuild,v 1.3 2005/04/09 14:42:18 dsd Exp $
 
 inherit eutils
 
@@ -47,7 +47,7 @@ src_install() {
 		sed -i 's:Type=Internet:Type=Application:' pavuk.desktop
 	fi
 
-	einstall || die
+	make install DESTDIR=${D}
 
 	dodoc README CREDITS FAQ NEWS AUTHORS BUGS \
 		TODO MAILINGLIST ChangeLog wget-pavuk.HOWTO jsbind.txt \
