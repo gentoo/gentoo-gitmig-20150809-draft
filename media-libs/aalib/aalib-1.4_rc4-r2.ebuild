@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/aalib/aalib-1.4_rc4-r2.ebuild,v 1.27 2005/03/29 01:55:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/aalib/aalib-1.4_rc4-r2.ebuild,v 1.28 2005/04/09 22:00:32 j4rg0n Exp $
 
 inherit eutils libtool
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/aa-project/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sparc x86 ~ppc-macos"
 IUSE="X slang gpm static"
 
 RDEPEND=">=sys-libs/ncurses-5.1
@@ -21,12 +21,16 @@ RDEPEND=">=sys-libs/ncurses-5.1
 	gpm? ( sys-libs/gpm )
 	slang? ( >=sys-libs/slang-1.4.2 )"
 DEPEND="${RDEPEND}
-	>=sys-devel/autoconf-2.58
+	!ppc-macos? (>=sys-devel/autoconf-2.58)
 	>=sys-devel/automake-1.4"
 
 src_unpack() {
 	unpack ${A}
 	epatch ${FILESDIR}/${P}-gentoo.diff
+	if use ppc-macos; then
+		cd ${S}/src
+		epatch ${FILESDIR}/${PN}-osx.patch
+	fi
 
 	elibtoolize
 
@@ -41,6 +45,11 @@ src_compile() {
 	econf	`use_with slang slang-driver` \
 		`use_with X x11-driver` \
 		`use_enable static`
+
+	if use ppc-macos; then
+		cd ${S}
+		sed -i -e 's:$(AUTOMAKE) --foreign --include-deps:$(AUTOMAKE) --foreign --include-deps -a -c -f:' src/Makefile
+	fi
 
 	emake || die
 }

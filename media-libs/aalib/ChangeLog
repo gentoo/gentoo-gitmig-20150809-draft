@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/aalib
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/aalib/ChangeLog,v 1.16 2004/10/05 09:32:17 eradicator Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/aalib/ChangeLog,v 1.17 2005/04/09 22:00:32 j4rg0n Exp $
+
+  09 Apr 2005; Lina Pezzella <j4rg0n@gentoo.org> +files/aalib-osx.patch,
+  aalib-1.4_rc4-r2.ebuild:
+  Fix for ppc-macos. Marked testing
 
   05 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org> +metadata.xml:
   static USE flag support and added metadata.
