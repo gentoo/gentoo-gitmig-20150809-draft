@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/fvwm-crystal
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/fvwm-crystal/ChangeLog,v 1.23 2005/03/08 13:18:16 lucass Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/fvwm-crystal/ChangeLog,v 1.24 2005/04/09 13:10:48 lucass Exp $
+
+  09 Apr 2005; Lukasz Strzygowski <lucass@gentoo.org>
+  fvwm-crystal-2.20050306.ebuild:
+  Marked stable on x86.
 
 *fvwm-crystal-2.20050306 (08 Mar 2005)
 
