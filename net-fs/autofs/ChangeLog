@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/autofs
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/ChangeLog,v 1.44 2005/04/09 10:57:25 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/ChangeLog,v 1.45 2005/04/09 12:36:41 corsair Exp $
+
+  09 Apr 2005; Markus Rothe <corsair@gentoo.org> autofs-4.1.3-r2.ebuild:
+  Stable on ppc64
 
   09 Apr 2005; Simon Stelling <blubb@gentoo.org> autofs-4.1.3-r4.ebuild:
   fixed multilib-strict issues
