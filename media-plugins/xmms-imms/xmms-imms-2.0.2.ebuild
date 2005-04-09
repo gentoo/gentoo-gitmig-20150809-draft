@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-imms/xmms-imms-2.0.2.ebuild,v 1.1 2005/01/28 14:10:01 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-imms/xmms-imms-2.0.2.ebuild,v 1.2 2005/04/09 17:18:07 luckyduck Exp $
 
 IUSE="bmp xmms"
 
@@ -8,7 +8,7 @@ inherit eutils
 
 MY_P=${P/xmms-/}
 
-DESCRIPTION="intelligent XMMS playlist plug-in that tracks your listening patterns and dynamically adapts to your taste"
+DESCRIPTION="Intelligent XMMS playlist plug-in that tracks your listening patterns and dynamically adapts to your taste"
 HOMEPAGE="http://www.luminal.org/phpwiki/index.php/IMMS"
 SRC_URI="mirror://sourceforge/imms/${MY_P}.tar.bz2"
 
@@ -30,6 +30,11 @@ DEPEND="${RDEPEND}
 
 S=${WORKDIR}/${MY_P}
 
+src_unpack() {
+	unpack ${A} && cd ${S}
+	epatch ${FILESDIR}/${PV}-xorg.patch
+}
+
 src_install () {
 	dobin build/immsd || die
 	dobin build/immstool || die
@@ -48,6 +53,7 @@ src_install () {
 		exeinto "`beep-config --general-plugin-dir`"
 		doexe build/libbmpimms*.so || die
 	fi
-
-	dodoc INSTALL LICENSE README
+	dodoc INSTALL README
 }
+
+src_test() { :; }

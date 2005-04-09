@@ -1,17 +1,25 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 30319e7914cd8f2f17305f2d9d8d80d2 xmms-imms-1.0.1.ebuild 1114
-MD5 17cea4c8c68f2d0df40bdce41ef2debe xmms-imms-2.0.1.ebuild 1337
 MD5 189f644e82685832cad77c697ced6fa7 xmms-imms-1.2a.ebuild 1108
 MD5 6e84d8a021671c144b0860c8c39750d0 xmms-imms-1.1.ebuild 1117
-MD5 6459bec30d7c67a04225868c6a683ebc xmms-imms-2.0.2.ebuild 1257
-MD5 63cd244c9b22c29b8fa86bc54557b6e1 ChangeLog 3680
+MD5 c8a696821310513321a062c48a1fe5d9 xmms-imms-2.0.2.ebuild 1346
+MD5 122e3f097ae504b1261ff82aa3342476 ChangeLog 3885
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 94ff3f9aff50a805fa9bfc3ca3a74658 files/xmms-imms-1.1-makefile.patch 2517
-MD5 55f5bc41642e8db8f4234656169460da files/2.0.1-gentoo.patch 710
 MD5 5b150539965e8d54fbd01a73a683bff0 files/digest-xmms-imms-1.1 60
 MD5 de370ccf262cc471d299d6e6b6c90ea3 files/digest-xmms-imms-1.0.1 62
-MD5 1a478311a799b95a935052cff2556531 files/digest-xmms-imms-2.0.1 62
 MD5 3d1f3a0eb7144d8230e55f5968e0cd96 files/digest-xmms-imms-2.0.2 62
+MD5 49ca58eddd51ca3315cbb1c12a4ceff6 files/2.0.2-xorg.patch 383
 MD5 9fb82a2c977bec8a2596cd4b5c04c004 files/xmms-imms-1.0.1-makefile.patch 2451
 MD5 78e62c7ce406c6a3261d390f5cb5d48e files/xmms-imms-1.0.1-gcc34.patch 1144
 MD5 adf2b4594ebdf6ecbb6fcccfb126db85 files/xmms-imms-1.1-gcc34.patch 590
 MD5 17836d39f8e03df1fb52254edcc6c455 files/digest-xmms-imms-1.2a 61
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCWA6Y06ebR+OMO78RAvDZAJ40SSt/6oVbrGG+2UdoweMJrduxtwCdHT6B
+1xupnsZH1V8+7S38+QrCLTM=
+=degE
+-----END PGP SIGNATURE-----

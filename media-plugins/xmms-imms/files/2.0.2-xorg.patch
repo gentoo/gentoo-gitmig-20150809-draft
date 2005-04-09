@@ -1,0 +1,11 @@
+diff -urpN imms-2.0.2.orig/vars.mk.in imms-2.0.2/vars.mk.in
+--- imms-2.0.2.orig/vars.mk.in	2005-04-09 18:54:46.000000000 +0200
++++ imms-2.0.2/vars.mk.in	2005-04-09 19:01:44.000000000 +0200
+@@ -23,6 +23,6 @@ CXXFLAGS=@CXXFLAGS@ -fno-rtti
+ 
+ GLIB2LDFLAGS=`pkg-config glib-2.0 --libs`
+ GLIB1LDFLAGS=`pkg-config glib --libs`
+-LDFLAGS=-L. @LIBS@
++LDFLAGS=-lX11 -L. @LIBS@
+ 
+ default: all
