@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/dvdrtools
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvdrtools/ChangeLog,v 1.16 2005/03/30 02:24:38 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvdrtools/ChangeLog,v 1.17 2005/04/09 08:51:38 blubb Exp $
+
+  09 Apr 2005; Simon Stelling <blubb@gentoo.org> dvdrtools-0.2.1.ebuild:
+  added ~amd64
 
 *dvdrtools-0.2.1 (30 Mar 2005)
 
