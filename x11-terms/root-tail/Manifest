@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 36dca813cab001e352d8be3f828d6040 root-tail-1.2-r2.ebuild 947
-MD5 88c7bc31d50da25669463b2c1d97f535 root-tail-1.2-r1.ebuild 789
-MD5 ac82ac29a67025a863f3d258d3d6d680 root-tail-1.1.ebuild 673
-MD5 45bd244f36f4889e5e69bf3012cc963e ChangeLog 4324
+MD5 95d71e36b62a6f39ea09e94ece01b1a1 ChangeLog 4419
 MD5 f8d10f350e91f30316ea4e1bd1e76470 metadata.xml 254
+MD5 ac82ac29a67025a863f3d258d3d6d680 root-tail-1.1.ebuild 673
+MD5 88c7bc31d50da25669463b2c1d97f535 root-tail-1.2-r1.ebuild 789
+MD5 de76661a66b365283307b8555e38167d root-tail-1.2-r2.ebuild 948
+MD5 bc94057d9203dc8c6a01efb2172f5a15 files/digest-root-tail-1.1 64
 MD5 f8b36716748f19ede695042176e3648b files/digest-root-tail-1.2-r1 64
 MD5 f8b36716748f19ede695042176e3648b files/digest-root-tail-1.2-r2 64
-MD5 bc94057d9203dc8c6a01efb2172f5a15 files/digest-root-tail-1.1 64
 MD5 3ede80f52914b3650247dbea9ff963fb files/root-tail-1.2-kde.patch 3188
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCVA1nntT9W3vfTuoRApbeAJ9+p6PeS0xVWgMYslWyy+N85qPG1gCgrcGp
-FnLtp74nAhRYlCbx+HbGvmQ=
-=zRCM
------END PGP SIGNATURE-----
