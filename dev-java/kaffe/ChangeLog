@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/kaffe
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/kaffe/ChangeLog,v 1.26 2004/12/22 13:52:26 karltk Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/kaffe/ChangeLog,v 1.27 2005/04/09 18:53:35 karltk Exp $
+
+*kaffe-1.1.5 (09 Apr 2005)
+
+  09 Apr 2005; Karl Trygve Kalleberg <karltk@gentoo.org> +files/kaffe-1.1.5,
+  +kaffe-1.1.5.ebuild:
+  New upstream album. Hopefully fixes #88330.
 
 *kaffe-1.1.4_p20041220 (22 Dec 2004)
 
