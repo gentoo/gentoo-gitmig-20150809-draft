@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/newt/newt-0.51.6.ebuild,v 1.3 2005/04/01 19:09:10 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/newt/newt-0.51.6.ebuild,v 1.4 2005/04/09 01:52:59 kugelfang Exp $
 
 inherit python toolchain-funcs eutils flag-o-matic
 
@@ -31,7 +31,10 @@ src_unpack() {
 	fi
 
 	# use the correct compiler...
-	sed -i -e 's:gcc:$(CC):g' ${S}/Makefile.in
+	sed -i \
+		-e 's:gcc:$(CC):g' \
+		-e "s:\(libdir =\).*:\1 \$(prefix)/$(get_libdir):g" \
+		${S}/Makefile.in || die "sed failed"
 
 	# avoid make cleaning up some intermediate files
 	# as it would rebuild them during install :-(
@@ -57,5 +60,5 @@ src_install () {
 	# not parallel safe
 	emake -j1 prefix="${D}/usr" PYTHONVERS="python${PYVER}" RPM_OPT_FLAGS="ERROR" install || die "make install failed"
 	dodoc CHANGES COPYING peanuts.py popcorn.py tutorial.sgml
-	dosym libnewt.so.${PV} /usr/lib/libnewt.so.0.50
+	dosym libnewt.so.${PV} /usr/$(get_libdir)/libnewt.so.0.50
 }

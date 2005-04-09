@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/newt
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/newt/ChangeLog,v 1.20 2005/04/01 19:09:10 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/newt/ChangeLog,v 1.21 2005/04/09 01:52:59 kugelfang Exp $
+
+  09 Apr 2005; Danny van Dyk <kugelfang@gentoo.org> newt-0.51.6.ebuild:
+  Fixed BUG #87854 (multilib-strict).
 
   01 Apr 2005; Jan Brinkmann <luckyduck@gentoo.org> newt-0.51.6.ebuild:
   stable on amd64 wrt #87554
