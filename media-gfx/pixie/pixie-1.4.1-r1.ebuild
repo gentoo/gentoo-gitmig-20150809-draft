@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pixie/pixie-1.4.1.ebuild,v 1.2 2005/04/09 04:27:00 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pixie/pixie-1.4.1-r1.ebuild,v 1.1 2005/04/09 04:28:45 eradicator Exp $
 
 inherit eutils
 
