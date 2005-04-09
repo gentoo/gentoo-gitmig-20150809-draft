@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_ssl/mod_ssl-2.8.21.ebuild,v 1.15 2005/03/21 11:25:47 beu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_ssl/mod_ssl-2.8.21.ebuild,v 1.16 2005/04/09 15:28:14 hollow Exp $
 
 MY_P=${P}-1.3.32
 S=${WORKDIR}/${MY_P}
@@ -13,12 +13,8 @@ SLOT="0"
 KEYWORDS="alpha amd64 hppa ia64 mips ppc sparc x86"
 IUSE=""
 
-DEPEND="|| (
-		=net-www/apache-1.3.32*
-		=net-www/apache-1.3.33
-		=net-www/apache-1.3.33-r1
-	)
-	>=dev-libs/openssl-0.9.6k"
+DEPEND="=net-www/apache-1.3.32*
+		>=dev-libs/openssl-0.9.6k"
 
 src_unpack() {
 	unpack ${A} ; cd ${S}
@@ -29,14 +25,8 @@ src_unpack() {
 }
 
 src_compile() {
-	myconf=""
-
 	if has_version '=sys-libs/gdbm-1.8.3*' ; then
 	     myconf="--enable-rule=SSL_SDBM"
-	fi
-
-	if has_version '=net-www/apache-1.3.33' ; then
-		myconf="${myconf} --force"
 	fi
 
 	SSL_BASE=SYSTEM \
