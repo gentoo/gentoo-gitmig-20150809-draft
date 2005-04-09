@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/xmms-esd
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-esd/ChangeLog,v 1.5 2005/04/08 17:38:21 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-esd/ChangeLog,v 1.6 2005/04/09 12:31:03 corsair Exp $
+
+  09 Apr 2005; Markus Rothe <corsair@gentoo.org> xmms-esd-1.2.10-r1.ebuild:
+  Stable on ppc64
 
   08 Apr 2005; Michael Hanselmann <hansmi@gentoo.org>
   xmms-esd-1.2.10-r1.ebuild:
