@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 d32c62e571d08818e4f5c864c68bc210 vmware-workstation-4.5.2.8848-r5.ebuild 7103
 MD5 ea4ede5466ee22cb95eae1788de244bf vmware-workstation-3.2.1.2242-r3.ebuild 6909
 MD5 c22e173813b161bd1487911f7007d08d ChangeLog 18096
@@ -8,8 +11,15 @@ MD5 6b80b2fbc93e98a8656064831376fffe files/digest-vmware-workstation-4.5.2.8848-
 MD5 eea6f7ed65d7d8ca7a98e717021ed745 files/digest-vmware-workstation-3.2.1.2242-r3 210
 MD5 c2dc0111fb5bf45ff99578b57d349cb3 files/vmware.rc 1417
 MD5 5c852829f9043917fddc2f80ebb99802 files/vmware-26kern-init-gentoo.patch 3983
-MD5 d4b7c480f7c669ca3d12bc1f3bec24db files/digest-vmware-workstation-5.0.0.13124 211
+MD5 83676b7369c3654b66eee19eee651871 files/digest-vmware-workstation-5.0.0.13124 136
 MD5 48c1667773503fee21a1068da07440b9 files/3.2.1.2242/90vmware 70
 MD5 3bfb39f5e96f60db67c7246f74c21501 files/3.2.1.2242/vmware-config.pl-gcc-generalized.patch 2948
 MD5 b95a250f31a6d2005176b27b8d48c182 files/3.2.1.2242/vmware-glibc-2.3.2-compat.c 1039
 MD5 cd2c7dfb0ea80293b3647713f5e35969 files/3.2.1.2242/vmware 1419
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCV7eJI1lqEGTUzyQRAm+hAJ4kmYc8UxBe24RHVpUEPYDax0lp5gCfQBLR
+NAdZqk1XQS+yq3NdTckF5L8=
+=OX+N
+-----END PGP SIGNATURE-----
