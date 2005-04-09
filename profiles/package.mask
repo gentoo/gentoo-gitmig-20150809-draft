@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3807 2005/04/09 04:09:09 ka0ttic Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3808 2005/04/09 04:57:21 anarchy Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Jory A. Pratt <anarchy@gentoo.org (09 Apr 2005)
+# Needs much testing before allowing into production enviroment
+=net-mail/vpopmail-5.4.9
 
 # Aaron Walker <ka0ttic@gentoo.org> (09 Apr 2005)
 # mmm segfaults
