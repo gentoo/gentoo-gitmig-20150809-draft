@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/kaffe/kaffe-1.1.4.ebuild,v 1.12 2004/11/12 12:19:34 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/kaffe/kaffe-1.1.4.ebuild,v 1.13 2005/04/09 20:24:19 luckyduck Exp $
 
 inherit java
 

@@ -1,12 +1,22 @@
-MD5 ca8bf549d0ac9a700ffee5e16e667201 ChangeLog 4175
-MD5 c622f691eb4630bb55445b71f8c32ab0 kaffe-1.1.4_p20041220.ebuild 1419
-MD5 d532b38d3ba6571d5b6c59e3c50e80d2 kaffe-1.1.4.ebuild 1241
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 0d6d049e82d0118fc3f81da119db468e kaffe-1.1.5.ebuild 1391
+MD5 016e0f5f4cb08a74e1028085d901fb24 kaffe-1.1.4_p20041220.ebuild 1422
+MD5 97a1064e43b34f8e346edec5dc343052 ChangeLog 4338
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
-MD5 75898b6d8ed4434408570b38dbd82282 kaffe-1.1.5.ebuild 1380
+MD5 7f8f9981ac40dae87b7aad2e83337d05 kaffe-1.1.4.ebuild 1246
+MD5 4a6fc17bcff6810e87fb591315e3d110 files/kaffe-1.1.4_p20041220 514
+MD5 5705b7951b83fc326ce97b101de8cb49 files/kaffe-1.1.4 506
+MD5 c209796e135afcce01fe11b56990c93f files/kaffe-1.1.5 504
 MD5 22d8f8b117ca1322d67d6343f07aca01 files/30kaffe 89
 MD5 89ab9ab78ed555baabd7d861d042b7c2 files/digest-kaffe-1.1.4_p20041220 75
 MD5 d9c1b3469316eb29e7b79058353f007f files/digest-kaffe-1.1.4 64
-MD5 4a6fc17bcff6810e87fb591315e3d110 files/kaffe-1.1.4_p20041220 514
-MD5 5705b7951b83fc326ce97b101de8cb49 files/kaffe-1.1.4 506
 MD5 15d4e7be27bfaa5a835fd5acc810f3ba files/digest-kaffe-1.1.5 64
-MD5 c209796e135afcce01fe11b56990c93f files/kaffe-1.1.5 504
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCWDoa06ebR+OMO78RAnL3AJoDEldJjsLoTt9Jzbfu0ZOGjq0dCACgkQm/
+NEYqsMfj9o71fiW9cXGXcoY=
+=rFuP
+-----END PGP SIGNATURE-----
