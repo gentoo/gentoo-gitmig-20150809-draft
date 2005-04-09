@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/setools
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/setools/ChangeLog,v 1.31 2005/03/29 19:24:28 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/setools/ChangeLog,v 1.32 2005/04/09 16:50:53 pebenito Exp $
+
+*setools-2.0-r1 (09 Apr 2005)
+
+  09 Apr 2005; Chris PeBenito <pebenito@gentoo.org> +setools-2.0-r1.ebuild:
+  Fix for bug #88248.
 
   29 Mar 2005; Chris PeBenito <pebenito@gentoo.org> setools-2.0.ebuild:
   Mark stable.

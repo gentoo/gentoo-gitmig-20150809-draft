@@ -1,37 +1,46 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/setools/setools-1.5.1.ebuild,v 1.3 2005/03/04 13:59:21 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/setools/setools-2.0-r1.ebuild,v 1.1 2005/04/09 16:50:53 pebenito Exp $
 
 DESCRIPTION="SELinux policy tools"
 HOMEPAGE="http://www.tresys.com/selinux_policy_tools.html"
-SRC_URI="http://www.tresys.com/Downloads/selinux-tools/${P}.tgz"
+SRC_URI="http://www.tresys.com/Downloads/selinux-tools/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ppc ~amd64"
-IUSE="X gtk selinux"
+IUSE="X debug selinux"
 
 DEPEND="sys-devel/bison
 	sys-devel/flex
 	dev-libs/libxml2
 	dev-util/pkgconfig
 	selinux? ( sys-libs/libselinux )
-	X? ( dev-lang/tk gtk? ( >=gnome-base/libglade-2.0 ) )"
+	X? (
+		dev-lang/tk
+		>=gnome-base/libglade-2.0
+	)"
 
 RDEPEND="dev-libs/libxml2
 	selinux? ( sys-libs/libselinux )
 	X? (
 		dev-lang/tk
 		>=dev-tcltk/bwidget-1.4.1
-		gtk? ( >=gnome-base/libglade-2.0 )
+		>=gnome-base/libglade-2.0
 	)"
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}
 
+	# fix for bug #88248
+	sed -i -e '/capability\.h/d' ${S}/libapol/cond.c
+
 	# fix the Makefile to listen to portage CFLAGS
-	sed -i -e "s:-O2:${CFLAGS}:" ${S}/Makefile
+	sed -i -e "/^CFLAGS/s/-O2/${CFLAGS}/g" ${S}/Makefile
+
+	# enable debug if requested
+	useq debug && sed -i -e '/^DEBUG/s/0/1/' ${S}/Makefile
 
 	# generate the file contexts from the template
 	sed -e 's:SEUSER_BINDIR:/usr/bin:' \
@@ -44,7 +53,7 @@ src_unpack() {
 	sed -i -e 's,-Z system_u:object_r:etc_t,,g' ${S}/seaudit/Makefile
 
 	# dont do findcon, replcon, searchcon, or indexcon if USE=-selinux
-	if ! use selinux; then
+	if ! useq selinux; then
 		sed -i -e '/^USE_LIBSELINUX/s/1/0/' ${S}/Makefile
 		sed -i -e '/^SE_CMDS/s/replcon//' \
 			-e '/^SE_CMDS/s/findcon//' \
@@ -62,17 +71,10 @@ src_unpack() {
 src_compile() {
 	cd ${S}
 
-	# build command line tools
-	make all-nogui || die "command line tools compile failed"
-
-	if use X; then
-		make apol sepcut seuserx \
-			|| die "apol, sepcut, or seuserx compile failed"
-
-		if use gtk; then
-			make seaudit || die "seaudit compile failed."
-		fi
-
+	if useq X; then
+		make all || die
+	else
+		make all-nogui || die
 	fi
 }
 
@@ -89,22 +91,14 @@ src_install() {
 	make DESTDIR=${D} install-secmds \
 		|| die "secmds install failed."
 
-	if use X; then
+	if useq X; then
 		# graphical tools
-
-		make DESTDIR=${D} install-apol install-sepcut \
-			|| die "apol and sepcut install failed."
-
-		if use gtk; then
-			make DESTDIR=${D} install-seaudit \
-				|| die "seaudit install failed."
-#			make DESTDIR=${D} -C seaudit install-logwatch-service \
-#				|| die "logwatch install failed."
-		fi
+		make DESTDIR=${D} install-apol install-sepcut install-seaudit install-sediffx \
+			|| die "Graphical tool install failed."
 	fi
 
-	if use selinux; then
-		if use X; then
+	if useq selinux; then
+		if useq X; then
 			make DESTDIR=${D} install-seuserx \
 				|| die "seuserx install failed."
 		else
@@ -120,7 +114,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	if use selinux; then
+	if useq selinux; then
 		einfo "A policy for the seuser program has been installed into"
 		einfo "${POLICYDIR}.  Please reload your policy and relabel"
 		einfo "setools:  rlpkg setools"
