@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/tcptrace
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcptrace/ChangeLog,v 1.13 2005/03/23 00:48:25 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcptrace/ChangeLog,v 1.14 2005/04/09 09:50:51 corsair Exp $
+
+  09 Apr 2005; Markus Rothe <corsair@gentoo.org> tcptrace-6.6.1-r1.ebuild:
+  Stable on ppc64
 
 *tcptrace-6.6.7 (22 Mar 2005)
 
