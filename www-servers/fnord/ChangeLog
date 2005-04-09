@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/fnord
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/fnord/ChangeLog,v 1.8 2005/03/07 10:37:47 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/fnord/ChangeLog,v 1.9 2005/04/09 12:37:57 hansmi Exp $
+
+  09 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> fnord-1.9.ebuild:
+  Added to ~hppa.
 
 *fnord-1.9 (07 Mar 2005)
 
