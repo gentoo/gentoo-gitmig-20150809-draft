@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/tetex-3.eclass,v 1.2 2005/04/07 16:09:21 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/tetex-3.eclass,v 1.3 2005/04/09 13:38:48 usata Exp $
 #
 # Author: Jaromir Malenko <malenko@email.cz>
 # Author: Mamoru KOMACHI <usata@gentoo.org>
@@ -13,7 +13,7 @@ inherit tetex
 
 ECLASS=tetex-3
 INHERITED="${INHERITED} ${ECLASS}"
-EXPORT_FUNCTIONS src_unpack src_compile src_install pkg_preinst pkg_postinst
+EXPORT_FUNCTIONS pkg_setup src_unpack src_compile src_install pkg_preinst pkg_postinst
 
 IUSE="motif lesstif Xaw3d neXt"
 
@@ -33,7 +33,17 @@ DEPEND="X? ( motif? ( lesstif? ( x11-libs/lesstif )
 	!dev-tex/xkeyval
 	!dev-tex/latex-beamer"
 
+tetex-3_pkg_setup() {
+	tetex_pkg_setup
+	
+	ewarn
+	ewarn "teTeX 3.0 ebuild will remove config files stored in /usr/share/texmf."
+	ewarn "Please make a backup before upgrading if you changed anything."
+	ewarn
 
+	ebeep
+	epause
+}
 
 tetex-3_src_unpack() {
 
@@ -54,10 +64,8 @@ tetex-3_src_compile() {
 	if use X ; then
 		if use motif ; then
 			if use lesstif ; then
-				append-ldflags -L/usr/X11R6/lib/lesstif -R/usr/X
-11R6/lib/lesstif
-				export CPPFLAGS="${CPPFLAGS} -I/usr/X11R6/includ
-e/lesstif"
+				append-ldflags -L/usr/X11R6/lib/lesstif -R/usr/X11R6/lib/lesstif
+				export CPPFLAGS="${CPPFLAGS} -I/usr/X11R6/include/lesstif"
 			fi
 			toolkit="motif"
 		elif use neXt ; then
