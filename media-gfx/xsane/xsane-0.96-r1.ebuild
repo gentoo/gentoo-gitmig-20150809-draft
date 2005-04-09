@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xsane/xsane-0.96-r1.ebuild,v 1.4 2005/04/07 15:47:23 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xsane/xsane-0.96-r1.ebuild,v 1.5 2005/04/09 07:34:05 corsair Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.xsane.org/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc amd64 ~sparc ~ppc64"
+KEYWORDS="x86 ppc amd64 ~sparc ppc64"
 IUSE="gtk2 nls jpeg png tiff"
 
 DEPEND="media-gfx/sane-backends
