@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <herd>gnome</herd>
-  <maintainer>
-    <email>leonardop@gentoo.org</email>
-    <name>Leonardo Boshell</name>
-  </maintainer>
   <longdescription>
     Formerly known as the Ximian Setup Tools, the GST are a fully
     integrated set of tools aimed to make easy the job that means the
