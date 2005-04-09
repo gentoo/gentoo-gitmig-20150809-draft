@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-0.99.14-r1.ebuild,v 1.2 2005/03/31 23:54:09 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-0.99.14-r1.ebuild,v 1.3 2005/04/09 21:12:27 ticho Exp $
 
 IUSE="debug ipv6 ldap mbox pam postgres sasl ssl gnutls vpopmail nopop3d mysql"
 inherit eutils
@@ -11,7 +11,7 @@ SRC_URI="http://dovecot.org/releases/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="LGPL-2.1"
-KEYWORDS="~x86 ~amd64 ~sparc ~ppc"
+KEYWORDS="x86 ~amd64 ~sparc ~ppc"
 
 #PROVIDE="virtual/imapd"
 
