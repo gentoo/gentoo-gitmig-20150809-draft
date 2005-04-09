@@ -1,4 +1,14 @@
-MD5 39e774e23174896b98c450a389f5e22a cpufrequtils-0.2.ebuild 914
-MD5 86428119b39f6382d0963bd63df685e6 ChangeLog 1086
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 5bf8e100a24a616f24563885f66bf101 ChangeLog 1186
+MD5 2965829deb498167cf4fa1982300e64f cpufrequtils-0.2.ebuild 926
 MD5 b280eebc74d70d85e664debf1adce2c3 metadata.xml 255
 MD5 dc315d30e182bba48edb20099686c49e files/digest-cpufrequtils-0.2 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCVzIa5mJXAu5GbtIRAntMAJ4h3lSyYS6GKDGCujg9NjeArkyNuwCfeROl
+t2WscXsd2KZDxrDzVAyWJN0=
+=3LMN
+-----END PGP SIGNATURE-----
