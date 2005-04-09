@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Text-Diff
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-Diff/ChangeLog,v 1.4 2004/12/23 08:30:45 nigoro Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-Diff/ChangeLog,v 1.5 2005/04/09 00:27:22 trapni Exp $
+
+  09 Apr 2005; Christian Parpart <trapni@gentoo.org> Text-Diff-0.35.ebuild:
+  added to ~amd64
 
   23 Dec 2004; Yuta SATOH <nigoro@gentoo.org> Text-Diff-0.35.ebuild:
   added ~ppc64
