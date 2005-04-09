@@ -3,18 +3,18 @@ Hash: SHA1
 
 MD5 ada84b9585b72dda436e17b41c803900 fop-0.20.5.ebuild 1267
 MD5 3eacf1894359f19aabcde55637d44818 fop-0.20.5-r1.ebuild 1285
-MD5 2d7ec4b8a2b1d767ffae0ebe3c908ca1 ChangeLog 1581
+MD5 67d3a51a3ad080450e2d07c84a83f05d fop-0.20.5-r3.ebuild 1643
+MD5 7e5e49e0b5ad7088e21ec2566eceac81 ChangeLog 1747
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
-MD5 d1842251a16b7c6186c6ba966bc1426a fop-0.20.5-r2.ebuild 1643
 MD5 a85f49d46070d6405ecab8d2a099524f files/0.20.5-buildxml.patch 547
 MD5 198aedddc6ad08dbc64dec1545524d8d files/digest-fop-0.20.5-r1 67
-MD5 198aedddc6ad08dbc64dec1545524d8d files/digest-fop-0.20.5-r2 67
+MD5 198aedddc6ad08dbc64dec1545524d8d files/digest-fop-0.20.5-r3 67
 MD5 198aedddc6ad08dbc64dec1545524d8d files/digest-fop-0.20.5 67
-MD5 ed3dc19d2d81cd54816c7dcf57762ba8 files/0.20.5-startscript.patch 2435
+MD5 656bb7d30e63d5e57f79489637c243ce files/0.20.5-startscript.patch 2435
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFCPLxu06ebR+OMO78RAtfFAJ4waYL+RpAhXb0Lal9Lp5eDYt5SugCdHGEx
-LtjlnJNhThalCztWcU3e490=
-=bX7a
+iD8DBQFCV+LU06ebR+OMO78RAgsmAKCX97I0dQKnEPCeRwaJrXmj1yXUeQCfcDza
+reGaZ1ddRHOiHu4CL0dRKhw=
+=ZY1j
 -----END PGP SIGNATURE-----

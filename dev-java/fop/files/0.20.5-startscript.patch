@@ -84,6 +84,6 @@
 -fi
 -
 -$JAVACMD -classpath "$LOCALCLASSPATH" $FOP_OPTS org.apache.fop.apps.Fop "$@"
-+cp=${CLASSPATH}:`java-config -p avalon-framework-4.2,batik-1.5,fop,xalan,xerces-2`
++cp=${CLASSPATH}:`java-config -p avalon-framework-4.1,batik-1.5,fop,xalan,xerces-2`
  
 +`java-config -J` -classpath ${cp} ${FOP_OPTS} org.apache.fop.apps.Fop "${@}"
