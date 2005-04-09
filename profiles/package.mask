@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3809 2005/04/09 15:29:01 hollow Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3810 2005/04/09 23:02:23 cryos Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -478,11 +478,6 @@ dev-lisp/cl-imho
 # sun-jdk instead of this deprecated package.  This will be removed unless
 # someone wishes to touch this (it has an evil license btw). (bug #78854)
 dev-java/sun-j2sdk
-
-# <motaboy@gentoo.org> (22 Jan 2005)
-# Mask kdebluetooth version as it depends on kitchensync-3.4 that is masked.
-=net-wireless/kdebluetooth-0.0.20050122-r3
-=net-wireless/kdebluetooth-0.99_beta1-r1
 
 # Marius Mauch <genone@gentoo.org> (22 Jan 2005)
 # Segfaulting all over the place, pending tests with gtk2 version
