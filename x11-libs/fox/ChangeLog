@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/fox
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox/ChangeLog,v 1.39 2005/04/02 03:05:33 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox/ChangeLog,v 1.40 2005/04/09 15:50:19 corsair Exp $
+
+  09 Apr 2005; Markus Rothe <corsair@gentoo.org> fox-1.4.11.ebuild:
+  Added ~ppc64 to KEYWORDS
 
 *fox-1.2.6-r3 (02 Apr 2005)
 
