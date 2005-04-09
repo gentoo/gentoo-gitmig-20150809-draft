@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.1.4.ebuild,v 1.20 2005/03/30 14:09:49 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.1.4.ebuild,v 1.21 2005/04/09 07:45:02 suka Exp $
 
 # Notes:
 #
@@ -99,6 +99,11 @@ pkg_setup() {
 	ewarn " Please note that this package now uses the LINGUAS environment "
 	ewarn " variable to provide localization. The old LANGUAGE=ENUS|PORT..."
 	ewarn " system does NOT work anymore."
+	ewarn
+	ewarn " If you want localized helpcontent, please download the correct file "
+	ewarn " for your language from an OpenOffice.org-mirror "
+	ewarn " (directory /contrib/helpcontent/ e.g.) and put it in your "
+	ewarn " /usr/portage/distfiles, the ebuild will use it automatically. "
 	ewarn
 
 	set_languages

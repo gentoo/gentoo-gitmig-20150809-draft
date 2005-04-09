@@ -1,6 +1,10 @@
 # ChangeLog for app-office/openoffice
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.114 2005/03/30 14:09:49 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.115 2005/04/09 07:45:01 suka Exp $
+
+  09 Apr 2005; Andreas Proschofsky <suka@gentoo.org>
+  openoffice-1.1.4.ebuild:
+  Add note about localized helpcontent, closes bug #87199
 
   30 Mar 2005; Andreas Proschofsky <suka@gentoo.org>
   openoffice-1.1.4.ebuild:
