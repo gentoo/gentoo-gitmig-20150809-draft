@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.2-r1.ebuild,v 1.15 2005/04/06 18:54:05 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.2-r1.ebuild,v 1.16 2005/04/09 17:27:52 tgall Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -716,7 +716,7 @@ host_def_setup() {
 			echo "#define MakeDllModules YES" >> ${HOSTCONF}
 			echo "#define XF86VgaHw YES" >> ${HOSTCONF}
 			echo "#define XF86FBDevHw YES" >> ${HOSTCONF}
-			echo "#define XF86CardDrivers fbdev v4l ati vga nv" >> ${HOSTCONF}
+			echo "#define XF86CardDrivers mga fbdev v4l ati vga nv" >> ${HOSTCONF}
 		fi
 
 		if use sparc; then

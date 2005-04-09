@@ -1,6 +1,9 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.360 2005/04/06 05:57:09 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.361 2005/04/09 17:27:52 tgall Exp $
+
+  09 Apr 2005; Tom Gall <tgall@gentoo.org> xorg-x11-6.8.2-r1.ebuild:
+  add mga on ppc64, it works!
 
   06 Apr 2005; Guy Martin <gmsoft@gentoo.org> xorg-x11-6.8.2-r1.ebuild:
   Fixed build with USE=-xv on hppa.
