@@ -1,6 +1,11 @@
 # ChangeLog for app-office/glabels
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/glabels/ChangeLog,v 1.11 2005/03/28 19:10:16 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/glabels/ChangeLog,v 1.12 2005/04/09 22:06:26 leonardop Exp $
+
+*glabels-2.0.2 (09 Apr 2005)
+
+  09 Apr 2005; Leonardo Boshell <leonardop@gentoo.org> glabels-2.0.2.ebuild:
+  Marked stable on x86.
 
   28 Mar 2005; Michael Hanselmann <hansmi@gentoo.org> glabels-2.0.1.ebuild:
   Stable on ppc.
@@ -8,7 +13,7 @@
 *glabels-2.0.2 (07 Mar 2005)
 
   07 Mar 2005; Leonardo Boshell <leonardop@gentoo.org> glabels-2.0.2.ebuild,
-  files/glabels-2.0.2-no-update-desktop-db.patch:
+  files/glabels-2.0.2-no_update_desktop_db.patch:
   New release. Updated patch.
 
   29 Nov 2004; Gustavo Zacarias <gustavoz@gentoo.org> glabels-2.0.1.ebuild:
