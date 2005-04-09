@@ -1,6 +1,10 @@
 # ChangeLog for www-proxy/dansguardian
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-proxy/dansguardian/ChangeLog,v 1.13 2005/04/06 17:44:55 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-proxy/dansguardian/ChangeLog,v 1.14 2005/04/09 13:30:19 corsair Exp $
+
+  09 Apr 2005; Markus Rothe <corsair@gentoo.org>
+  dansguardian-2.8.0.4.ebuild:
+  Stable on ppc64
 
   06 Apr 2005; Alin Nastac <mrness@gentoo.org> dansguardian-2.8.0.4.ebuild:
   Stable on x86
