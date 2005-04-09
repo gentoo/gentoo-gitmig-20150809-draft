@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jamvm/jamvm-1.2.5.ebuild,v 1.1 2005/03/02 19:08:43 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jamvm/jamvm-1.2.5.ebuild,v 1.2 2005/04/09 18:57:41 karltk Exp $
 
 inherit eutils
 
@@ -19,6 +19,7 @@ RESTRICT="nomirror"
 src_compile() {
 	# compiles JamVM
 	cd ${S}
+	filter-flags "-fomit-frame-pointer"
 
 	# configure adds "/share/classpath" itself
 	myc="--with-classpath-install-dir=/usr"
