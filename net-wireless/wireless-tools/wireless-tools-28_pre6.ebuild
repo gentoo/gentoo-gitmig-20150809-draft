@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-tools/wireless-tools-28_pre6.ebuild,v 1.1 2005/03/22 10:33:11 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-tools/wireless-tools-28_pre6.ebuild,v 1.2 2005/04/09 12:53:41 corsair Exp $
 
 inherit toolchain-funcs
 
@@ -12,7 +12,7 @@ DESCRIPTION="A collection of tools to configure wireless LAN cards"
 SRC_URI="http://www.hpl.hp.com/personal/Jean_Tourrilhes/Linux/${MY_P}.tar.gz"
 HOMEPAGE="http://www.hpl.hp.com/personal/Jean_Tourrilhes/Linux/Tools.html"
 
-KEYWORDS="~x86 ~amd64 ~ppc ~hppa ~alpha ~mips"
+KEYWORDS="~x86 ~amd64 ~ppc ~hppa ~alpha ~mips ~ppc64"
 SLOT="0"
 LICENSE="GPL-2"
 

@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/wireless-tools
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-tools/ChangeLog,v 1.63 2005/04/07 16:52:45 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-tools/ChangeLog,v 1.64 2005/04/09 12:53:41 corsair Exp $
+
+  09 Apr 2005; Markus Rothe <corsair@gentoo.org> wireless-tools-27.ebuild,
+  wireless-tools-28_pre6.ebuild:
+  Stable on ppc64/added ~ppc64 to KEYWORDS
 
   07 Apr 2005; Simon Stelling <blubb@gentoo.org> wireless-tools-27.ebuild:
   stable on amd64
