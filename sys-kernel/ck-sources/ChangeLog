@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/ck-sources
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ChangeLog,v 1.91 2005/03/27 23:04:16 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ChangeLog,v 1.92 2005/04/09 05:42:15 marineam Exp $
+
+*ck-sources-2.6.11-r4 (09 Apr 2005)
+
+  09 Apr 2005; Micheal Marineau <marineam@gentoo.org>
+  -ck-sources-2.6.11-r2.ebuild, -ck-sources-2.6.11-r3.ebuild,
+  +ck-sources-2.6.11-r4.ebuild:
+  Just a version bump
 
 *ck-sources-2.6.11-r3 (27 Mar 2005)
 
