@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 647e70b4e1125ea38698c6fd978f8c38 ChangeLog 1890
+MD5 97a6562298a1335a2ba9fb5526fb305a ChangeLog 1978
 MD5 8e8b9393d38df263f07c394765553b01 metadata.xml 243
 MD5 a3fdba20f067a10f8271f2facd4b687e trafshow-3.1-r1.ebuild 1027
-MD5 04344a43c9e1adbb8a04f73ef4dc30ae trafshow-4.0.ebuild 999
+MD5 50cd4a11d444f16779355ec1d25d778c trafshow-4.0.ebuild 997
 MD5 d8609a48097c656e14cb38dc49dbf629 files/digest-trafshow-3.1-r1 60
-MD5 de937e07ac952efc66dbe67616befc58 files/trafshow-3.1-gentoo.patch 492
 MD5 0eaa3123d4ab8173d4f7a1a4be4e1e0f files/digest-trafshow-4.0 60
+MD5 de937e07ac952efc66dbe67616befc58 files/trafshow-3.1-gentoo.patch 492
 MD5 18731bc84348a4cbb851177332ba3596 files/trafshow-4.0-gentoo.patch 745
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFCLIb8KRy60XGEcJIRAjnfAJ0UQdQ7u8vQMn9rHDbgdl6CCv7URwCfbVKG
-463PunNWSyteAi2+E0cv7a0=
-=yRul
------END PGP SIGNATURE-----
