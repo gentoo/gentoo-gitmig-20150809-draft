@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/pavuk
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pavuk/ChangeLog,v 1.21 2005/04/09 15:35:48 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pavuk/ChangeLog,v 1.22 2005/04/09 18:47:05 weeve Exp $
+
+  09 Apr 2005; Jason Wever <weeve@gentoo.org> pavuk-0.9.32.ebuild:
+  Stable on SPARC wrt security bug #88028.
 
   09 Apr 2005; Daniel Drake <dsd@gentoo.org> pavuk-0.9.32.ebuild:
   Disable socks support due to brokenness
