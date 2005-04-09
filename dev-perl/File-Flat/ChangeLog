@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/File-Flat
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Flat/ChangeLog,v 1.8 2005/03/16 15:57:29 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Flat/ChangeLog,v 1.9 2005/04/09 01:09:49 gustavoz Exp $
+
+  09 Apr 2005; Gustavo Zacarias <gustavoz@gentoo.org> File-Flat-0.8.ebuild:
+  Stable on sparc
 
   16 Mar 2005; Michael Cummings <mcummings@gentoo.org> File-Flat-0.94.ebuild:
   style cleanup
