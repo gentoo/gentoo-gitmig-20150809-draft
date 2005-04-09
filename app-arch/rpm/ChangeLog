@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/rpm
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/ChangeLog,v 1.44 2005/04/06 18:46:21 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/ChangeLog,v 1.45 2005/04/09 09:31:17 blubb Exp $
+
+  09 Apr 2005; Simon Stelling <blubb@gentoo.org>
+  +files/rpm-4.2.1-lib64.patch, rpm-4.2.1.ebuild:
+  applied Chris Parrott's patch to fix bug #81982
 
   06 Apr 2005; Markus Rothe <corsair@gentoo.org> rpm-4.2.1.ebuild:
   Stable on ppc64

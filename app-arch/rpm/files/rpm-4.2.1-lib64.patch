@@ -1,0 +1,81 @@
+diff -uNr rpm-4.2.1.orig/configure rpm-4.2.1/configure
+--- rpm-4.2.1.orig/configure	2005-04-03 11:36:20.000000000 -0500
++++ rpm-4.2.1/configure	2005-04-03 17:45:48.000000000 -0500
+@@ -23477,9 +23477,9 @@
+ fi
+ 
+ MARK64=
+-case "${target_cpu}" in
+-x86_64*|ppc64*|powerpc64*|sparc64*|s390x*)	MARK64=64 ;;
+-esac
++#case "${target_cpu}" in
++#x86_64*|ppc64*|powerpc64*|sparc64*|s390x*)	MARK64=64 ;;
++#esac
+ 
+ 
+ autorelocate_path='%{nil}'
+@@ -23538,7 +23538,7 @@
+ 
+ LIBDIR="`echo $libdir | sed 's-/lib$-/%{_lib}-'`"
+ 
+-RPMCONFIGDIR="`echo ${usrprefix}/lib/rpm`"
++RPMCONFIGDIR="`echo ${libdir}/rpm`"
+ 
+ cat >>confdefs.h <<_ACEOF
+ #define RPMCONFIGDIR "$RPMCONFIGDIR"
+diff -uNr rpm-4.2.1.orig/file/Makefile.in rpm-4.2.1/file/Makefile.in
+--- rpm-4.2.1.orig/file/Makefile.in	2003-07-16 12:05:23.000000000 -0500
++++ rpm-4.2.1/file/Makefile.in	2005-04-03 18:34:54.000000000 -0500
+@@ -39,7 +39,7 @@
+ 
+ #MAGIC	 = @datadir@/magic
+ #data_DATA = magic magic.mime magic.mgc magic.mime.mgc
+-pkglibdir = @prefix@/lib/rpm
++pkglibdir = ${libdir}/rpm
+ ACLOCAL = @ACLOCAL@
+ AMDEP_FALSE = @AMDEP_FALSE@
+ AMDEP_TRUE = @AMDEP_TRUE@
+diff -uNr rpm-4.2.1.orig/file/configure rpm-4.2.1/file/configure
+--- rpm-4.2.1.orig/file/configure	2005-04-03 11:36:20.000000000 -0500
++++ rpm-4.2.1/file/configure	2005-04-03 13:57:28.000000000 -0500
+@@ -8005,9 +8005,9 @@
+ export CFLAGS
+ 
+ MARK64=
+-case "${target_cpu}" in
+-x86_64*)	MARK64=64 ;;
+-esac
++#case "${target_cpu}" in
++#x86_64*)	MARK64=64 ;;
++#esac
+ 
+ 
+ echo "$as_me:$LINENO: checking for ANSI C header files" >&5
+diff -uNr rpm-4.2.1.orig/popt/configure rpm-4.2.1/popt/configure
+--- rpm-4.2.1.orig/popt/configure	2005-04-03 11:36:20.000000000 -0500
++++ rpm-4.2.1/popt/configure	2005-04-03 13:58:23.000000000 -0500
+@@ -9382,9 +9382,9 @@
+ 
+ 
+ MARK64=
+-case "${target_cpu}" in
+-x86_64*|powerpc64*|ppc64*|sparc64*|s390x*)        MARK64=64 ;;
+-esac
++#case "${target_cpu}" in
++#x86_64*|powerpc64*|ppc64*|sparc64*|s390x*)        MARK64=64 ;;
++#esac
+ 
+ 
+ 
+diff -uNr rpm-4.2.1.orig/scripts/Makefile.in rpm-4.2.1/scripts/Makefile.in
+--- rpm-4.2.1.orig/scripts/Makefile.in	2003-07-16 12:05:49.000000000 -0500
++++ rpm-4.2.1/scripts/Makefile.in	2005-04-03 18:11:06.000000000 -0500
+@@ -273,7 +273,7 @@
+ 
+ installprefix = $(DESTDIR)
+ 
+-configdir = ${prefix}/lib/rpm
++configdir = ${libdir}/rpm
+ config_SCRIPTS = \
+ 	brp-compress brp-python-bytecompile brp-redhat \
+ 	brp-strip brp-strip-comment-note \
