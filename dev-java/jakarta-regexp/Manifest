@@ -1,14 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
+MD5 f3d6a995069e9c136afddcb9f471f099 jakarta-regexp-1.3-r2.ebuild 1100
 MD5 bf34785d9346ca25f852db2eb180ba80 jakarta-regexp-1.3-r1.ebuild 1095
-MD5 b7e100ed67762e8a0c23e4093389326f ChangeLog 568
+MD5 215846e9017665216b060928d48d5007 ChangeLog 747
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 6eac4bdeb129dbd95c52ac349db33c61 files/digest-jakarta-regexp-1.3-r1 70
+MD5 6eac4bdeb129dbd95c52ac349db33c61 files/digest-jakarta-regexp-1.3-r2 70
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFCUUMN/rLF9B432nYRAhU0AKCU+u0cvOQFFmW6lJzVTMbN9PqKWgCfbapV
-2ru1IyZeoX9S0HcDAtkpM9w=
-=7a1l
+iD8DBQFCWB3V06ebR+OMO78RAu/rAJ9p47DDIMmxGG8RIM5f0P1jEqgyGgCgmOGn
+Edgn2o3Rr5Yb28IvHp6EviU=
+=ABZV
 -----END PGP SIGNATURE-----
