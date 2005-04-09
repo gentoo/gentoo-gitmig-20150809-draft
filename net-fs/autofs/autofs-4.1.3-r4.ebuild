@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/autofs-4.1.3-r4.ebuild,v 1.2 2005/03/23 01:09:02 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/autofs-4.1.3-r4.ebuild,v 1.3 2005/04/09 10:57:25 blubb Exp $
 
-inherit eutils
+inherit eutils multilib
 
 IUSE="ldap"
 DESCRIPTION="Kernel based automounter"
@@ -51,7 +51,7 @@ src_compile() {
 src_install() {
 	into /usr
 	dosbin daemon/automount
-	exeinto /usr/lib/autofs
+	exeinto /usr/$(get_libdir)/autofs
 	doexe modules/*.so
 
 	dodoc COPYING COPYRIGHT NEWS README* TODO CHANGELOG CREDITS
@@ -72,7 +72,7 @@ src_install() {
 		cd ${S}/samples
 		docinto samples ; dodoc ldap* auto.master.ldap
 		insinto /etc/openldap/schema ; doins autofs.schema
-		exeinto /usr/lib/autofs ; doexe autofs-ldap-auto-master
+		exeinto /usr/$(get_libdir)/autofs ; doexe autofs-ldap-auto-master
 	fi
 }
 
