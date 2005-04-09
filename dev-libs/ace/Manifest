@@ -1,22 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 8ac4a24b571c6639254ae3f85abcfaa6 ChangeLog 3165
-MD5 b922c6a45f5c5a826b18dc2bec9b27f7 metadata.xml 503
-MD5 39768cbaf2907a409241838c845d3897 ace-5.4-r1.ebuild 2512
-MD5 98b0836528069710024b9d8732c25e80 ace-5.4-r2.ebuild 2586
-MD5 2c3f045f18624da32b8435ec0b23aeb8 ace-5.3.ebuild 2037
-MD5 862f8fef6917d3d28273901add61e56e ace-5.4.3.ebuild 1861
 MD5 3d69597df668ca58b4668dec61aa6d78 ace-5.4.ebuild 2183
-MD5 cda67156d3d7e40ae83547ed35c17bd4 files/digest-ace-5.4.3 63
-MD5 3e3d835be64fd3d448525a09dec99bba files/digest-ace-5.4-r1 61
+MD5 2c3f045f18624da32b8435ec0b23aeb8 ace-5.3.ebuild 2037
+MD5 b922c6a45f5c5a826b18dc2bec9b27f7 metadata.xml 503
+MD5 4f17fedcb11ef4771ba116288452c6cf ChangeLog 3251
+MD5 862f8fef6917d3d28273901add61e56e ace-5.4.3.ebuild 1861
+MD5 39768cbaf2907a409241838c845d3897 ace-5.4-r1.ebuild 2512
+MD5 316b7c9b9145b570e200a8d77d1853a2 ace-5.4-r2.ebuild 2580
 MD5 3e3d835be64fd3d448525a09dec99bba files/digest-ace-5.4-r2 61
 MD5 b88f6bda8016adf15d1660b3f1e0312e files/digest-ace-5.3 60
 MD5 3e3d835be64fd3d448525a09dec99bba files/digest-ace-5.4 61
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFB5j/DmdTrptrqvGERApe5AJ4xcKtIlcacexcMeY/Nb00dmrPe2gCfXwUL
-CS5zZB2iyRwHwT7qPNldjls=
-=bKvv
------END PGP SIGNATURE-----
+MD5 cda67156d3d7e40ae83547ed35c17bd4 files/digest-ace-5.4.3 63
+MD5 3e3d835be64fd3d448525a09dec99bba files/digest-ace-5.4-r1 61
