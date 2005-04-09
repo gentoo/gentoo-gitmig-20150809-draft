@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-plugins/nessus-plugins-2.2.4.ebuild,v 1.1 2005/03/24 00:22:36 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-plugins/nessus-plugins-2.2.4.ebuild,v 1.2 2005/04/09 08:52:57 corsair Exp $
 
 inherit toolchain-funcs
 
@@ -12,7 +12,7 @@ DEPEND=">=net-analyzer/nessus-core-${PV}"
 SLOT="0"
 IUSE=""
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~amd64 ~ppc64"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~amd64 ppc64"
 
 src_compile() {
 	export CC=$(tc-getCC)

@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nessus
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus/ChangeLog,v 1.54 2005/03/31 10:09:06 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus/ChangeLog,v 1.55 2005/04/09 08:57:06 corsair Exp $
+
+  09 Apr 2005; Markus Rothe <corsair@gentoo.org> nessus-2.2.4.ebuild:
+  Stable on ppc64
 
   31 Mar 2005; Bryan Østergaard <kloeri@gentoo.org> nessus-2.2.0.ebuild:
   Stable on alpha.
