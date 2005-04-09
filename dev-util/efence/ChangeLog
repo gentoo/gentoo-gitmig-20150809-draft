@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/efence
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/efence/ChangeLog,v 1.17 2005/03/03 21:25:46 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/efence/ChangeLog,v 1.18 2005/04/09 02:09:48 ka0ttic Exp $
+
+  09 Apr 2005; Aaron Walker <ka0ttic@gentoo.org> efence-2.4.13.ebuild:
+  Marked stable on x86.
 
   03 Mar 2005; Simon Stelling <blubb@gentoo.org> :
   added ~amd64
