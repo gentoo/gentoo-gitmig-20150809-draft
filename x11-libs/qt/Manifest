@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 d19bb3e74e4a955fd9d7a580440f1780 qt-3.3.4-r3.ebuild 8696
 MD5 7daec76f47482903184ed2b6d6d5640f qt-3.3.3-r1.ebuild 8039
 MD5 f48889277f11c39d5f2160b262e7c314 qt-2.3.2-r1.ebuild 2289
@@ -41,5 +44,10 @@ MD5 9833940419f474391d908dfcfc2bda85 files/digest-qt-4.0.0_beta2 75
 MD5 8f75ba0e151481962fcb239dc216cf39 files/qt-3.3.4-0051-qtoolbar_77047.patch 1278
 MD5 471c09f2792eec732d715a983b7f7244 files/qt-3.3.3-immodule-20040819-event-inversion-20040908.diff 4150
 MD5 e0a483959b1d3dad0fc58adc242624c1 files/qt-3.3.3-amd64-fullscreen.patch 1220
-MD5 07fe630c364d654be42ecb2d7a7d14e2 include/Qt/arch/qatomic.h 3153
-MD5 07fe630c364d654be42ecb2d7a7d14e2 include/QtCore/arch/qatomic.h 3153
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCV7jJI1lqEGTUzyQRAubBAKCN+hCpwp9ZAqmGig8+1TPclCWv7QCdGRGn
+fS9rJOOm4xFvZLV+7/5QUzQ=
+=f9IW
+-----END PGP SIGNATURE-----
