@@ -1,25 +1,15 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e77e777d04f3172c49253af94a7a1fa2 ChangeLog 11045
+MD5 2c5e0f3f384c4a63002fff425824377c ChangeLog 11134
 MD5 2b0b0623d889932d22c276713b4b8d7d metadata.xml 223
 MD5 cc3fe980186b567eed98f76d37dfc14a parted-1.6.10-r2.ebuild 1326
 MD5 6a60a479b678b4e38ea1dfd7db3d04d8 parted-1.6.15.ebuild 1410
-MD5 a755d5dc9a82e073ed64df88133c09c4 parted-1.6.6.ebuild 1332
 MD5 00e4c00119b7b037d217ecc4baf6ac06 parted-1.6.18.ebuild 1416
-MD5 5d73401fa50d214c164f0529a09fafdb parted-1.6.20.ebuild 1483
+MD5 c360d8d437e71774401915a714dfa693 parted-1.6.20.ebuild 1481
 MD5 e7b3490efcf383663b19cd8b5d37d50a parted-1.6.22.ebuild 1219
+MD5 a755d5dc9a82e073ed64df88133c09c4 parted-1.6.6.ebuild 1332
+MD5 b2b5bb6b91f1db8dd5b437e74c2153bc files/005_all_parted-1.6.3-pyparted.patch 433
 MD5 0df9004e28daa2db544ed65f852d695c files/digest-parted-1.6.10-r2 141
 MD5 73a4f22213522b9db8d93884318e917b files/digest-parted-1.6.15 138
-MD5 b020ac3a8080ad690bb3ce376e5273bb files/digest-parted-1.6.6 136
 MD5 83f1e4911362a823713e87148f166278 files/digest-parted-1.6.18 138
 MD5 5e556d20415f027814924e2a17b18ccb files/digest-parted-1.6.20 138
-MD5 b2b5bb6b91f1db8dd5b437e74c2153bc files/005_all_parted-1.6.3-pyparted.patch 433
 MD5 d766d64a911c4a7efc8b87e16bf84aa6 files/digest-parted-1.6.22 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFCUvxbKRy60XGEcJIRApkHAJ0QQaNGklH9uq1p6VdOs/7PoTzM+QCgqzI+
-idiCTrtwG8CURWghjsMiUGk=
-=53I+
------END PGP SIGNATURE-----
+MD5 b020ac3a8080ad690bb3ce376e5273bb files/digest-parted-1.6.6 136
