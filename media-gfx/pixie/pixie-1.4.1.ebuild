@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pixie/pixie-1.4.1.ebuild,v 1.1 2005/04/08 23:57:23 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pixie/pixie-1.4.1.ebuild,v 1.2 2005/04/09 04:27:00 eradicator Exp $
 
 inherit eutils
 
@@ -36,29 +36,25 @@ src_unpack() {
 	epatch ${FILESDIR}/${PN}-1.3.11-math.patch
 
 	# Gentoo-specific stuff to fix the build/install process
-	epatch ${FILESDIR}/${PN}-1.3.11-gentoo.patch
+	epatch ${FILESDIR}/${PN}-1.4.1-libtool.patch
 
 	export WANT_AUTOMAKE=1.8
 	export WANT_AUTOCONF=2.5
-	aclocal
-	libtoolize --force --copy
-	automake -a -f -c
-	autoconf
+	libtoolize --force --copy || die
+	aclocal || die
+	automake -a -f -c || die
+	autoconf || die
 }
 
 src_compile() {
-	econf --prefix=/opt/pixie || die
+	econf --disable-static || die
 	emake || die
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die
 	dodoc AUTHORS ChangeLog DEVNOTES NEWS README
 
-	insinto /etc/env.d
-	doins ${FILESDIR}/50pixie
-
-	edos2unix ${D}/opt/pixie/shaders/*
-
-	mv ${D}/opt/pixie/doc ${D}/usr/share/doc/${PF}/html
+	edos2unix ${D}/usr/share/pixie/shaders/*
+	mv ${D}/usr/share/pixie/doc ${D}/usr/share/doc/${PF}/html
 }
