@@ -1,6 +1,13 @@
 # ChangeLog for app-text/djvu
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/djvu/ChangeLog,v 1.19 2005/01/01 16:08:56 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/djvu/ChangeLog,v 1.20 2005/04/09 04:36:31 usata Exp $
+
+*djvu-3.5.14-r1 (09 Apr 2005)
+
+  09 Apr 2005; Mamoru KOMACHI <usata@gentoo.org> +files/gentoo-acdesktop.m4,
+  +djvu-3.5.14-r1.ebuild:
+  Added several USE flags requested on bug #83311. Thanks to Diego Petteno
+  <dgp85@users.sourceforge.net> for the patch.
 
   16 Oct 2004; Jason Wever <weeve@gentoo.org> djvu-3.5.14.ebuild:
   Stable on sparc.
