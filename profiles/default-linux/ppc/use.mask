@@ -27,3 +27,6 @@ xvmc
 
 # Unmask our instruction sets
 -altivec
+
+# Fixes bug #86787
+fusion
