@@ -1,18 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
+MD5 0698c8e6c176e7c84b9a15025d3bf3ff linkchecker-2.8.ebuild 527
 MD5 6a5b07a97a84bf573342bfda5383bc5e linkchecker-2.7.ebuild 527
 MD5 324e8a97380eccb75e196de6daf6b75f linkchecker-1.12.1.ebuild 660
-MD5 9353a8c2ab12920fa2e09eeeaf1790cc ChangeLog 2006
+MD5 50a2275794402bacc9da8384f35bc088 ChangeLog 2156
 MD5 6bc2db5b1e135821863e91fa8658ad48 metadata.xml 255
-MD5 b719089b0ba51a1d21c10aa957cd6fce linkchecker-2.6.ebuild 527
 MD5 fe51c9bc36ce4ce1967c3abf0898dfe3 files/digest-linkchecker-1.12.1 70
-MD5 e41c451fb8c007fb21b7aef4db5eb91e files/digest-linkchecker-2.6 67
 MD5 f2b3bef1f30ed23d1c770183eb90fba8 files/digest-linkchecker-2.7 67
+MD5 a112f67642e18ec6b48fd2d56ffda6b6 files/digest-linkchecker-2.8 67
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCTAgfEZCkKN40op4RAsP7AKCx5KhkurGdt/9EB17QDpA1hfzeVACgqQjo
-xXkr5Hpz4ajVv53wR+MloZk=
-=fVK9
+iD8DBQFCV5OXEZCkKN40op4RAkQlAKCpNiEWRi/ET4SGt2m/rEo/3yiWCACfeNP8
+lL365DjDC/JtzQZOiyrBrkE=
+=Jd9e
 -----END PGP SIGNATURE-----
