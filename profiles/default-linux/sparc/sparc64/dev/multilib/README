@@ -6,7 +6,7 @@ Set FEATURES=-sandbox in /etc/make.conf because of a sandbox bug that is seen
 when using gcc-config 1.4.0
 
 Make sure you have the latest gcc-config baselayout and portage:
-# emerge -uv '>=sys-devel/gcc-config-1.3.11' '>=sys-apps/portage-2.1.51-r9'
+# emerge -uv '>=sys-devel/gcc-config-1.3.11' '>=sys-apps/portage-2.0.51-r9'
 
 Delete the /usr/sparc64-unknown-linux-gnu symlink hackery:
 # rm /usr/sparc64-unknown-linux-gnu
