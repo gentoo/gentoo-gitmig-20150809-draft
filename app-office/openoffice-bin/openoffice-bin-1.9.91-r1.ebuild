@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-1.9.91-r1.ebuild,v 1.2 2005/04/09 10:32:18 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-1.9.91-r1.ebuild,v 1.3 2005/04/09 19:23:53 suka Exp $
 
 inherit eutils fdo-mime rpm versionator
 
@@ -75,15 +75,6 @@ src_unpack() {
 }
 
 src_install () {
-	# Sandbox issues; bug #8587
-	addpredict "/user"
-	addpredict "/share"
-	addpredict "/dev/dri"
-	addpredict "/usr/bin/soffice"
-	addpredict "/pspfontcache"
-	addpredict "/root/.gconfd"
-	addpredict "/opt/OpenOffice.org/foo.tmp"
-	addpredict "/opt/OpenOffice.org/delme"
 
 	einfo "Installing OpenOffice.org into build root..."
 	dodir ${INSTDIR}
