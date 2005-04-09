@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/vsound/vsound-0.6.ebuild,v 1.2 2004/09/03 20:28:14 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/vsound/vsound-0.6.ebuild,v 1.3 2005/04/09 02:37:24 josejx Exp $
 
 IUSE=""
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.zorg.org/${PN}/"
 LICENSE="GPL-2"
 DEPEND=">=media-sound/sox-12.17.1"
 
-KEYWORDS="x86 amd64 sparc"
+KEYWORDS="x86 amd64 sparc ~ppc"
 SLOT="0"
 SRC_URI="http://www.zorg.org/${PN}/${P}.tar.gz"
 

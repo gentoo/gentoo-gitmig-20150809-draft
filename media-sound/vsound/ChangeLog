@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/vsound
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/vsound/ChangeLog,v 1.10 2004/09/03 20:28:14 eradicator Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/vsound/ChangeLog,v 1.11 2005/04/09 02:37:24 josejx Exp $
+
+  08 Apr 2005; Joseph Jezak <josejx@gentoo.org> vsound-0.6.ebuild:
+  Marked ~ppc for bug #88231.
 
   03 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org> vsound-0.6.ebuild:
   Stable amd64, sparc, x86.
