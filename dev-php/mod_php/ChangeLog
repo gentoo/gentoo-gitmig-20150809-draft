@@ -1,6 +1,11 @@
 # ChangeLog for dev-php/mod_php
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/ChangeLog,v 1.209 2005/03/13 22:19:13 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/ChangeLog,v 1.210 2005/04/09 19:11:16 trapni Exp $
+
+  09 Apr 2005; Christian Parpart <trapni@gentoo.org> mod_php-4.3.8.ebuild,
+  mod_php-4.3.9_rc1.ebuild, mod_php-4.3.9.ebuild, mod_php-4.3.10.ebuild:
+  let ebuilds block to new apache that are supposed not to comply with new
+  apache-module eclass style; This is to prevent invalid bug reports.
 
 *mod_php-5.0.3-r2 (13 Mar 2005)
 
