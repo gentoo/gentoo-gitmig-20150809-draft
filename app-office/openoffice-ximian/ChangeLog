@@ -1,6 +1,10 @@
 # ChangeLog for app-office/openoffice-ximian
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/ChangeLog,v 1.118 2005/04/09 07:49:10 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/ChangeLog,v 1.119 2005/04/09 09:41:29 suka Exp $
+
+  09 Apr 2005; Andreas Proschofsky <suka@gentoo.org>
+  openoffice-ximian-1.3.9.ebuild:
+  Pushing 1.3.9 to stable on x86 as this fixes a bunch of crasher bugs
 
   09 Apr 2005; Andreas Proschofsky <suka@gentoo.org>
   openoffice-ximian-1.3.9.ebuild:
