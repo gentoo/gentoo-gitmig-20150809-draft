@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 ea3465950dd2ecf4ed94066395b7cdf2 ChangeLog 834
-MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 12d0e4cb64ba6ef40618ce1c57473c6d Test-Exception-0.15.ebuild 574
-MD5 4220ad10ac11041d16ff3a26221c7717 Test-Exception-0.20.ebuild 581
-MD5 91b081cf4a9ad27c6b582667c1190d1b files/digest-Test-Exception-0.15 69
+MD5 481e937c518583c5670a1338db00f05a Test-Exception-0.20.ebuild 579
+MD5 f331ab80bd062bf78f65dd680b020751 ChangeLog 936
+MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 7083e5aec8b5c293ea4614c3f5c838a0 files/digest-Test-Exception-0.20 69
+MD5 91b081cf4a9ad27c6b582667c1190d1b files/digest-Test-Exception-0.15 69
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCTqlVtG5z4I8BtQoRAsOkAJ4+PX8rPJcTFUOP8n/Kz29Mb/hfKQCdGiei
-a0e+8XUHp3Gl/ly930lE9U8=
-=sBil
+iD8DBQFCVz0yKRy60XGEcJIRAvWiAJ9HL39TP0ZzmKGsuQMLpNnIPWTkeQCeKLyf
+gZN/WSnn4yAXX2HBZNMYyf4=
+=4uSE
 -----END PGP SIGNATURE-----
