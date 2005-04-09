@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/squirrelmail/squirrelmail-1.4.4.ebuild,v 1.3 2005/04/08 19:29:40 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/squirrelmail/squirrelmail-1.4.4.ebuild,v 1.4 2005/04/09 18:32:12 eradicator Exp $
 
-IUSE="crypt ldap ssl virus-scan"
+IUSE="crypt ldap spell ssl virus-scan"
 
 inherit webapp eutils
 
@@ -43,7 +43,7 @@ RDEPEND="virtual/php
 	dev-perl/DB_File
 	crypt? ( app-crypt/gnupg )
 	ldap? ( net-nds/openldap )
-	app-text/ispell"
+	spell? ( || ( app-text/aspell app-text/ispell ) )"
 
 src_unpack() {
 	unpack ${MY_P}.tar.bz2
