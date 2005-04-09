@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-1.3.33-r2.ebuild,v 1.1 2005/03/20 21:10:44 beu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-1.3.33-r2.ebuild,v 1.2 2005/04/09 15:39:28 hollow Exp $
 
 inherit eutils fixheadtails
 
@@ -37,7 +37,7 @@ DEPEND="dev-lang/perl
 		lingerd? ( =net-www/lingerd-${lingerd_ver} )"
 
 # so leave it out until it's available
-PDEPEND="ssl? ( =net-www/mod_ssl-${mod_ssl_ver} )"
+PDEPEND="ssl? ( =net-www/mod_ssl-${mod_ssl_ver}-r1 )"
 
 S=${WORKDIR}/${PN}_${PV}
 
