@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-1.0.7-r1.ebuild,v 1.3 2005/04/01 22:55:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-1.0.7-r1.ebuild,v 1.4 2005/04/09 03:12:45 vapier Exp $
 
 inherit gnuconfig eutils flag-o-matic
 
@@ -31,6 +31,9 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+
+	# Fix gcc4 issues #88421
+	epatch "${FILESDIR}"/${P}-gcc4.patch
 
 	# getrpcbynumber_r is not in the SuSv3 spec. disable it for uClibc
 	epatch "${FILESDIR}"/nfs-utils-1.0.6-uclibc.patch
