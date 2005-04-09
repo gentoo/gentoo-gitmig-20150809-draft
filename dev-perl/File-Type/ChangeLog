@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/File-Type
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Type/ChangeLog,v 1.3 2005/03/16 09:54:36 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Type/ChangeLog,v 1.4 2005/04/09 01:29:48 gustavoz Exp $
+
+  09 Apr 2005; Gustavo Zacarias <gustavoz@gentoo.org> File-Type-0.22.ebuild:
+  Keyworded ~sparc
 
   16 Mar 2005; Michael Cummings <mcummings@gentoo.org> File-Type-0.22.ebuild:
   Added missing dep, first part of bug 85456
