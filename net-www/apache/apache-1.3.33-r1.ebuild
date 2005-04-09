@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-1.3.33-r1.ebuild,v 1.18 2005/04/09 15:39:28 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-1.3.33-r1.ebuild,v 1.19 2005/04/09 21:55:46 trapni Exp $
 
 # Gentoo ARCH teams
 #
@@ -35,7 +35,9 @@ DEPEND="dev-lang/perl
 	>=sys-libs/gdbm-1.8
 	>=dev-libs/expat-1.95.2
 	=sys-libs/db-1*
-	selinux? ( sec-policy/selinux-apache )"
+	selinux? ( sec-policy/selinux-apache )
+	!dev-libs/apr
+	!dev-libs/apr-util"
 
 PDEPEND="ssl? ( =net-www/mod_ssl-${mod_ssl_dep} )"
 
