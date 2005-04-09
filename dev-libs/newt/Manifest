@@ -1,22 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 2c27811d1586ed67c9fdcd76bcf932c0 ChangeLog 2746
+MD5 3f6ed66b52596ca11579308ae18eff4b ChangeLog 2848
+MD5 6f95daa9e1f390a2da094b8a32830698 newt-0.51.6.ebuild 1903
+MD5 917caa8876e58604c0e0f84dcb598380 metadata.xml 296
 MD5 85adf51bae0096b4d4b9f13c146a7d5c newt-0.50.35-r2.ebuild 859
 MD5 9dd901e4c2a68f204f1b2dce5cff066b newt-0.50.35-r3.ebuild 898
 MD5 05595a994adbcbd5b9c59ce563ced758 newt-0.50.35-r4.ebuild 1564
-MD5 917caa8876e58604c0e0f84dcb598380 metadata.xml 296
-MD5 bcd0db8f9833667fc34a6b2c9ca8c2da newt-0.51.6.ebuild 1907
-MD5 6d5a67f6fae3839c22aa176ffbd96790 files/digest-newt-0.50.35-r2 64
 MD5 6d5a67f6fae3839c22aa176ffbd96790 files/digest-newt-0.50.35-r3 64
-MD5 6d5a67f6fae3839c22aa176ffbd96790 files/digest-newt-0.50.35-r4 64
 MD5 f6412dbeaf1b1f3d11fc8c0fc08c1ee2 files/digest-newt-0.51.6 63
+MD5 6d5a67f6fae3839c22aa176ffbd96790 files/digest-newt-0.50.35-r2 64
+MD5 6d5a67f6fae3839c22aa176ffbd96790 files/digest-newt-0.50.35-r4 64
 MD5 27e2ae6e4d99b4a772f4520a89ce73f9 files/newt-0.51.4-fix-wstrlen-for-non-utf8-strings.patch 266
 MD5 9910bf0c9ea69bf046e7801c2c6958ea files/newt-gpm-fix.diff 177
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD4DBQFCVzaZ5mJXAu5GbtIRAhr4AJ47KkB4HM0CBERZYglQ7qXs+mZ4PgCWI2Sd
-rRX7JNf4RFSkCh+qnuEXHA==
-=rFcJ
------END PGP SIGNATURE-----

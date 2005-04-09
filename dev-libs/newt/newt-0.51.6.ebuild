@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/newt/newt-0.51.6.ebuild,v 1.4 2005/04/09 01:52:59 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/newt/newt-0.51.6.ebuild,v 1.5 2005/04/09 02:38:57 josejx Exp $
 
 inherit python toolchain-funcs eutils flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gentoo/${P}.tar.gz
 HOMEPAGE="http://www.redhat.com"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc sparc ~hppa amd64 ~alpha ppc64"
+KEYWORDS="x86 ppc sparc ~hppa amd64 ~alpha ppc64"
 IUSE="uclibc gpm"
 DEPEND=">=sys-libs/slang-1.4
 	>=dev-libs/popt-1.6

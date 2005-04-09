@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/newt
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/newt/ChangeLog,v 1.21 2005/04/09 01:52:59 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/newt/ChangeLog,v 1.22 2005/04/09 02:38:57 josejx Exp $
+
+  08 Apr 2005; Joseph Jezak <josejx@gentoo.org> newt-0.51.6.ebuild:
+  Marked ppc stable for bug #87554.
 
   09 Apr 2005; Danny van Dyk <kugelfang@gentoo.org> newt-0.51.6.ebuild:
   Fixed BUG #87854 (multilib-strict).
