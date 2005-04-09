@@ -1,6 +1,13 @@
 # ChangeLog for net-www/apache
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.337 2005/04/09 15:39:27 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.338 2005/04/09 21:46:40 trapni Exp $
+
+  09 Apr 2005; Christian Parpart <trapni@gentoo.org> apache-2.0.50.ebuild,
+  apache-2.0.51.ebuild, apache-2.0.51-r1.ebuild, apache-2.0.52.ebuild,
+  apache-2.0.52-r1.ebuild, apache-2.0.52-r2.ebuild:
+  adding blocks to apr and apr-util for obsolete apache2 ebuilds, so, that
+  users wanting to upgrad are enforced to unmerge before they emerge the newer
+  versions
 
   09 Apr 2005; Benedikt Boehm <hollow@gentoo.org> apache-1.3.33-r1.ebuild:
   fixed dependency issues, see bug #86052 and mod_ssl changelog for details
