@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-3.0.2.ebuild,v 1.1 2005/04/08 18:34:19 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-3.0.2.ebuild,v 1.2 2005/04/09 02:11:47 mr_bones_ Exp $
 
 inherit eutils java-utils
 
@@ -256,20 +256,20 @@ function patch-gtk-frontend() {
 		atk_lib=`pkg-config --libs atk gtk+-2.0 | sed -e "s:-Wl,--export:--export:"`
 	fi
 
-    sed -e "s:/bluebird/teamswt/swt-builddir/IBMJava2-141:$JAVA_HOME:" \
-        -e "s:/bluebird/teamswt/swt-builddir/jdk1.5.0:$JAVA_HOME:" \
- 		-e "s:/mozilla/mozilla/1.4/linux_gtk2/mozilla/dist/sdk:${mozilla_dir}:" \
- 		-e "s:echo \"Building Linux GTK AMD64 version of SWT\":GECKO_SDK=${mozilla_dir}; echo \"Building Linux GTK AMD64 version of SWT\":" \
-        -i ${S}/"${gtk_swt_src_dir}"/build.sh || die "Failed to modify build.sh"
+	sed -e "s:/bluebird/teamswt/swt-builddir/IBMJava2-141:$JAVA_HOME:" \
+		-e "s:/bluebird/teamswt/swt-builddir/jdk1.5.0:$JAVA_HOME:" \
+		-e "s:/mozilla/mozilla/1.4/linux_gtk2/mozilla/dist/sdk:${mozilla_dir}:" \
+		-e "s:echo \"Building Linux GTK AMD64 version of SWT\":GECKO_SDK=${mozilla_dir}; echo \"Building Linux GTK AMD64 version of SWT\":" \
+		-i ${S}/"${gtk_swt_src_dir}"/build.sh || die "Failed to modify build.sh"
 
-    sed -e "s:-I\$(JAVA_HOME)/include:-I\$(JAVA_HOME)/include -I\$(JAVA_HOME)/include/linux:" \
-        -e "s:GECKO_SDK)/mozilla-config.h:GECKO_SDK)/include/mozilla-config.h:" \
-        -e "s:GECKO_SDK)/\([^/]*\)/include:GECKO_SDK)/include/\1:" \
+	sed -e "s:-I\$(JAVA_HOME)/include:-I\$(JAVA_HOME)/include -I\$(JAVA_HOME)/include/linux:" \
+		-e "s:GECKO_SDK)/mozilla-config.h:GECKO_SDK)/include/mozilla-config.h:" \
+		-e "s:GECKO_SDK)/\([^/]*\)/include:GECKO_SDK)/include/\1:" \
 		-e "s:MOZILLACFLAGS = -O:MOZILLACFLAGS = -O -I\$(JAVA_HOME)/include -I\$(JAVA_HOME)/include/linux:" \
- 		-e "s:GECKO_SDK)/embedstring/bin -lembedstring:GECKO_SDK)/components -lembedcomponents:" \
- 		-e "s:GECKO_SDK)/embed_base/bin -lembed_base_s:GECKO_SDK) -lgtkembedmoz:" \
- 		-e "s:GECKO_SDK)/xpcom/bin -lxpcomglue_s -lxpcom:GECKO_SDK) -lxpcom:" \
-        -i ${S}/"${gtk_swt_src_dir}"/make_linux.mak || die "Failed to modify make_linux.mak"
+		-e "s:GECKO_SDK)/embedstring/bin -lembedstring:GECKO_SDK)/components -lembedcomponents:" \
+		-e "s:GECKO_SDK)/embed_base/bin -lembed_base_s:GECKO_SDK) -lgtkembedmoz:" \
+		-e "s:GECKO_SDK)/xpcom/bin -lxpcomglue_s -lxpcom:GECKO_SDK) -lxpcom:" \
+		-i ${S}/"${gtk_swt_src_dir}"/make_linux.mak || die "Failed to modify make_linux.mak"
 
 
 }
@@ -434,4 +434,3 @@ function install-link-files() {
 
 	echo "path=/usr/lib/eclipse-extensions-3" > ${D}/${eclipse_dir}/links/eclipse-extensions-3.link
 }
-
