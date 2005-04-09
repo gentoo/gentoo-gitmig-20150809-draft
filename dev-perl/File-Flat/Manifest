@@ -1,18 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 b7e8aaeb6c728c7ea36ee0b15be64968 ChangeLog 1013
-MD5 d2ad84e6dc7e9dd6844b654756f2f282 File-Flat-0.8.ebuild 620
-MD5 47b9971e1f9a203e3f2c88b808703000 File-Flat-0.91.ebuild 680
 MD5 f6ab25d64c82907fca101a92a2c9390f File-Flat-0.94.ebuild 781
+MD5 47b9971e1f9a203e3f2c88b808703000 File-Flat-0.91.ebuild 680
+MD5 7561491cd632120625767fdbd0c0a7d3 File-Flat-0.8.ebuild 618
+MD5 f44213669a231f5dcb45d70e2b768d28 ChangeLog 1107
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 2f423057fa0dffb2a92b90b5eb3887c4 files/digest-File-Flat-0.94 65
 MD5 0ae089b4507e301fddf90b96313235cd files/digest-File-Flat-0.8 64
 MD5 7ea4a8b5360aedabcb15a904ef330c39 files/digest-File-Flat-0.91 65
-MD5 2f423057fa0dffb2a92b90b5eb3887c4 files/digest-File-Flat-0.94 65
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCOFdvtG5z4I8BtQoRAsSEAJ9ZZZRjFHpgjei++HQRePZlFUb/MACfT59l
-iCe5WO7BFhCM2T0miZdQDbE=
-=thZG
+iD8DBQFCVytpKRy60XGEcJIRAjaxAKCPheD6lTy6H6web3wY85QN9OZcCACgsoHS
+rLmg5ANAFvbW98OTQW0tiPE=
+=7eL6
 -----END PGP SIGNATURE-----
