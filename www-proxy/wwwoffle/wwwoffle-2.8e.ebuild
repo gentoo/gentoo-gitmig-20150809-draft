@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-proxy/wwwoffle/wwwoffle-2.8e.ebuild,v 1.1 2005/04/06 19:33:00 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-proxy/wwwoffle/wwwoffle-2.8e.ebuild,v 1.2 2005/04/09 21:14:13 mrness Exp $
 
 inherit eutils
 
@@ -113,22 +113,18 @@ src_install() {
 
 	# Need to sumbit patch upstream to allow this.
 	#fowners root:wwwoffle /var/spool/wwwoffle
-	fowners wwwoffle:wwwoffle /var/spool/wwwoffle
+	#fowners wwwoffle:wwwoffle /var/spool/wwwoffle
 
 	# empty dirs are removed during update
 	keepdir \
-	/var/spool/wwwoffle/search/{mnogosearch/db,htdig/tmp,htdig/db-lasttime,htdig/db,namazu/db}
+		/var/spool/wwwoffle/search/{mnogosearch/db,htdig/tmp,htdig/db-lasttime,htdig/db,namazu/db}
 
 	touch \
-	${D}/var/spool/wwwoffle/search/htdig/wwwoffle-htdig.log \
-	${D}/var/spool/wwwoffle/search/mnogosearch/wwwoffle-mnogosearch.log \
-	${D}/var/spool/wwwoffle/search/namazu/wwwoffle-namazu.log
+		${D}/var/spool/wwwoffle/search/htdig/wwwoffle-htdig.log \
+		${D}/var/spool/wwwoffle/search/mnogosearch/wwwoffle-mnogosearch.log \
+		${D}/var/spool/wwwoffle/search/namazu/wwwoffle-namazu.log
 
-	chown -R wwwoffle:wwwoffle \
-	${D}/var/spool/wwwoffle/{http,outgoing,monitor,lasttime,prevtime[1-9],prevout[1-9],lastout,local} \
-	${D}/var/spool/wwwoffle/search/{mnogosearch/db,htdig/tmp,htdig/db-lasttime,htdig/db,namazu/db} \
-	${D}/var/spool/wwwoffle/search/{mnogosearch,htdig,namazu}/wwwoffle-*.log \
-	${D}/etc/wwwoffle
+	chown -R wwwoffle:wwwoffle ${D}/var/spool/wwwoffle ${D}/etc/wwwoffle
 
 	# TODO htdig indexing as part of initscripts
 
@@ -150,13 +146,11 @@ pkg_postinst() {
 			${ROOT}/var/spool/wwwoffle/prevout${number}
 	done
 
-	chown -R wwwoffle:wwwoffle \
-	${ROOT}/var/spool/wwwoffle/{http,outgoing,monitor,lasttime,prevtime[1-9],prevout[1-9],lastout,local} \
-	${ROOT}/var/spool/wwwoffle/search/{mnogosearch/db,htdig/tmp,htdig/db-lasttime,htdig/db,namazu/db}
+	chown -R wwwoffle:wwwoffle ${ROOT}/var/spool/wwwoffle ${ROOT}/etc/wwwoffle
 
 	# Need to sumbit patch upstream to allow this.
 	#fowners root:wwwoffle /var/spool/wwwoffle
-	fowners wwwoffle:wwwoffle /var/spool/wwwoffle
+	#fowners wwwoffle:wwwoffle /var/spool/wwwoffle
 
 	[ -f ${T}/stopped ] && \
 		ewarn "wwwoffled was stopped. /etc/init.d/wwwoffled start to restart AFTER etc-update"
