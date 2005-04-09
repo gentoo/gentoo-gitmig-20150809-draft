@@ -1,6 +1,12 @@
 # ChangeLog for x11-wm/pekwm
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/pekwm/ChangeLog,v 1.18 2005/03/01 04:00:29 fserb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/pekwm/ChangeLog,v 1.19 2005/04/09 02:43:41 fserb Exp $
+
+*pekwm-20050227-r1 (09 Apr 2005)
+
+  09 Apr 2005; Fernando Serboncini <fserb@gentoo.org>
+  +files/pekwm-20050227-dialog_fix.patch, +pekwm-20050227-r1.ebuild:
+  Added patch to fix decorations. Closes #86970.
 
 *pekwm-20050227 (01 Mar 2005)
 

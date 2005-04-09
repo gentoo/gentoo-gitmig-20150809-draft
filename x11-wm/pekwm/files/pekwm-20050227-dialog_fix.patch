@@ -1,0 +1,12 @@
+--- pekwm-dev-20050227/src/Client.cc	2005-02-27 13:52:10.000000000 -0800
++++ pekwm-knix/src/Client.cc	2005-03-03 01:59:50.662097912 -0800
+@@ -614,8 +614,7 @@
+ 				break;
+ // 			} else if (atoms[i] == ewmh->getAtom(WINDOW_TYPE_UTILITY)) {
+ // 			}
+-			} else if ((atoms[i] == ewmh->getAtom(WINDOW_TYPE_SPLASH)) ||
+-								 (atoms[i] == ewmh->getAtom(WINDOW_TYPE_DIALOG))) {
++			} else if ((atoms[i] == ewmh->getAtom(WINDOW_TYPE_SPLASH))) {
+ 				setTitlebar(false);
+ 				setBorder(false);
+ 			} else {
