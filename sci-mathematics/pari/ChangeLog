@@ -1,6 +1,11 @@
 # ChangeLog for sci-mathematics/pari
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pari/ChangeLog,v 1.9 2005/04/06 10:26:10 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pari/ChangeLog,v 1.10 2005/04/09 14:41:33 fmccor Exp $
+
+  09 Apr 2005; Ferris McCormick <fmccor@gentoo.org> pari-2.1.6.ebuild:
+  Remove ~sparc keyword (Compare Bug 87790).  This version will NOT compile on
+  sparc, and so cannot be tested.  Action on Comments 3 and 4 at Bug 87990 is
+  required before testing is remotely possible.
 
   06 Apr 2005; Bryan Østergaard <kloeri@gentoo.org> pari-2.1.6.ebuild:
   Stable on alpha, bug 87790.
