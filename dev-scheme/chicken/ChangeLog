@@ -1,6 +1,9 @@
 # ChangeLog for dev-scheme/chicken
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/chicken/ChangeLog,v 1.2 2005/02/07 19:31:45 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/chicken/ChangeLog,v 1.3 2005/04/09 08:48:25 blubb Exp $
+
+  09 Apr 2005; Simon Stelling <blubb@gentoo.org> chicken-1.89.ebuild:
+  added ~amd64 and corrected multilib handling
 
 *chicken-1.89 (07 Feb 2005)
 

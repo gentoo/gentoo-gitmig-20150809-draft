@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 7cdce9b3b2de7c3905156ae0b83a24d2 chicken-1.89.ebuild 922
-MD5 e810b90a02e925aef76ab65d7162e6ef ChangeLog 649
-MD5 2825a60b929ee12f345df1ee6d80f957 metadata.xml 529
+MD5 c1eeb50509127394ea633383b8383ce5 ChangeLog 764
 MD5 b3d71ef24428457725099810bc98d430 chicken-1.22.ebuild 880
+MD5 77fb45469a2c71bbaba103df3737a740 chicken-1.89.ebuild 974
+MD5 2825a60b929ee12f345df1ee6d80f957 metadata.xml 529
 MD5 6abb1e7b88d14c067b68a9574347b468 files/digest-chicken-1.22 65
 MD5 0cd6d50e5ea94f61f6ee4e77545a1183 files/digest-chicken-1.89 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCB8IxI1lqEGTUzyQRAuiwAJ0QwWKHtHweC8N+nHBAtSJrWbmFPQCeJef3
-s/Sx6ZaEmnAbhCObldIIapE=
-=2KTY
------END PGP SIGNATURE-----
