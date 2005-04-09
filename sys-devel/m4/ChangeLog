@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/m4
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/m4/ChangeLog,v 1.36 2005/04/01 17:30:11 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/m4/ChangeLog,v 1.37 2005/04/09 13:15:20 corsair Exp $
+
+  09 Apr 2005; Markus Rothe <corsair@gentoo.org> m4-1.4.2-r1.ebuild:
+  Stable on ppc64
 
 *m4-1.4.3 (01 Apr 2005)
 
