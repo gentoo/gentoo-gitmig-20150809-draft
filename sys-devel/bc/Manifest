@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ef5cae9bb1acd12d2d058087010ff5b7 bc-1.06-r6.ebuild 1912
-MD5 921004989fff06e42b319181fdf93a08 ChangeLog 2621
-MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+MD5 14335d4552256c2df1f9c918cd0d312b ChangeLog 2709
 MD5 5dcd4193123a3278c4e8f06a9fc46532 bc-1.06-r5.ebuild 1811
-MD5 fb32cf57c22acd86e7bd5afdb2191552 files/bc-1.06-static-save.patch 519
-MD5 40794acac9c09ee182af19387df613b4 files/bc-1.06-readline42.diff 430
+MD5 61c4cd38fc730204d78026bccb0db3fe bc-1.06-r6.ebuild 1912
+MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 c6bc9e8c6698c429c778901b2d353c3f files/bc-1.06-info-fix.diff 3182
-MD5 ab5dc8993a9b72c7a4f4160c6a6348ac files/digest-bc-1.06-r6 59
-MD5 ab5dc8993a9b72c7a4f4160c6a6348ac files/digest-bc-1.06-r5 59
 MD5 678de048f9423a545c34894a9e9045b0 files/bc-1.06-longopts.patch 913
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCPAp+ugEuf3OQ0akRAnvyAJ9XkDNvkKBFQGH98P++1mvXHsNM5ACfSG30
-vZGAgfHC1cuzrp+7ZnR2v9Y=
-=mGWD
------END PGP SIGNATURE-----
+MD5 40794acac9c09ee182af19387df613b4 files/bc-1.06-readline42.diff 430
+MD5 fb32cf57c22acd86e7bd5afdb2191552 files/bc-1.06-static-save.patch 519
+MD5 ab5dc8993a9b72c7a4f4160c6a6348ac files/digest-bc-1.06-r5 59
+MD5 ab5dc8993a9b72c7a4f4160c6a6348ac files/digest-bc-1.06-r6 59
