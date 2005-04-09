@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 e4902674a5806bfb46b6246db62deeb9 ChangeLog 710
+MD5 86d1bec7288f9d33694fd024ecf8ceb0 Curses-UI-0.94.ebuild 571
+MD5 fa25b2de21a014e1b0723879dc78e556 ChangeLog 805
 MD5 7592f6c2fa0a037272bd97e00888b5f4 Curses-UI-0.92.ebuild 566
-MD5 4dc8afca9fd205961c680a8f02b25701 Curses-UI-0.94.ebuild 573
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 eed6cc5dd6bab6baa8fc826c4e6836ce files/digest-Curses-UI-0.92 66
 MD5 3414af19c7bd8fb5071929bf8f5677b1 files/digest-Curses-UI-0.94 66
+MD5 eed6cc5dd6bab6baa8fc826c4e6836ce files/digest-Curses-UI-0.92 66
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCLHL4tG5z4I8BtQoRAkBgAJ42AqrEE4T/MKw24QwC+1RfU01/DwCfT2CX
-IGXcQExmDm/sLiqyMr+9ZdE=
-=lChU
+iD8DBQFCVzT/KRy60XGEcJIRAkHpAJ0ftvvQIqUkCDEEvFPs89M559SIdACffZZ7
+vRDa6173RGDqi0mjvMjYzW4=
+=MbXy
 -----END PGP SIGNATURE-----
