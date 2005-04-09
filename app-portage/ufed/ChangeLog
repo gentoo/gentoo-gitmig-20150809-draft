@@ -1,6 +1,12 @@
 # ChangeLog for app-portage/ufed
 # Copyright 2003-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/ufed/ChangeLog,v 1.18 2005/04/09 00:51:46 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/ufed/ChangeLog,v 1.19 2005/04/09 08:58:36 blubb Exp $
+
+  09 Apr 2005; Simon Stelling <blubb@gentoo.org> ufed-0.36.ebuild:
+  stable on amd64 wrt bug 88396
+
+  09 Apr 2005; Simon Stelling <blubb@gentoo.org> ufed-0.36.ebuild:
+  stable on amd64 wrt bug 88396
 
   09 Apr 2005; Gustavo Zacarias <gustavoz@gentoo.org> ufed-0.36.ebuild:
   Stable on sparc wrt #88396
