@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/ifplugd
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ifplugd/ChangeLog,v 1.19 2005/04/07 16:57:54 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ifplugd/ChangeLog,v 1.20 2005/04/09 16:20:56 ka0ttic Exp $
+
+  09 Apr 2005; Aaron Walker <ka0ttic@gentoo.org>
+  files/gentoo-ifplugd-init-v3:
+  Added depend() to init script as we need pcmcia to start before ifplugd if
+  the user uses pcmcia. Fixes bug 88222.
 
   07 Apr 2005; Simon Stelling <blubb@gentoo.org> ifplugd-0.26-r1.ebuild:
   stable on amd64
