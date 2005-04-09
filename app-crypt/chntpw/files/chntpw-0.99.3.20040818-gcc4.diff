@@ -1,0 +1,40 @@
+--- chntpw/chntpw.c	2004-08-18 17:42:01.000000000 -0300
++++ chntpw.new/chntpw.c	2005-04-09 18:58:34.000000000 -0300
+@@ -511,7 +511,7 @@
+ 	printf("** LANMAN password IS however set. Will now install new password as NT pass instead.\n");
+ 	printf("** NOTE: Continue at own risk!\n");
+ 	ntpw_offs = lmpw_offs;
+-	(unsigned int)*(vp+0xa8) = ntpw_offs - 0xcc;
++ 	*((unsigned int*)vp+0xa8) = ntpw_offs - 0xcc;
+ 	ntpw_len = 16;
+ 	lmpw_len = 0;
+       }
+@@ -621,14 +621,14 @@
+ 	   ntpw_len = 16;
+ 	   lmpw_len = 16;
+ 	   ntpw_offs -= 4;
+-	   (unsigned int)*(vp+0xa8) = ntpw_offs - 0xcc;
++	   *((unsigned int*)vp+0xa8) = ntpw_offs - 0xcc;
+ 	   *(vp + 0xa0) = 16;
+ 	   *(vp + 0xac) = 16;
+ 	 }
+ 	 
+ 	 for (i = 0; i < 16; i++) {
+-	   (unsigned char)*(vp+ntpw_offs+i) = despw[i];
+-	   if (lmpw_len >= 16) (unsigned char)*(vp+lmpw_offs+i) = newlandes[i];
++	   *(vp+ntpw_offs+i) = (char)despw[i];
++	   if (lmpw_len >= 16) *(vp+lmpw_offs+i) = (char)newlandes[i];
+ 	 }
+        } else {
+ 	 printf("Unable to set since it is blank.\n");
+--- chntpw/ntreg.c	2004-08-18 17:42:02.000000000 -0300
++++ chntpw.new/ntreg.c	2005-04-09 19:07:50.000000000 -0300
+@@ -2514,7 +2514,7 @@
+   ALLOC(kr,1,sizeof(int)+sizeof(int));
+   
+   kr->len = sizeof(int);
+-  (int)kr->data = dword;
++  kr->data = dword;
+ 
+   r = put_buf2val(hdesc, kr, vofs, path, REG_DWORD);
+ 

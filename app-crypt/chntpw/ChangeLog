@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/chntpw
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/chntpw/ChangeLog,v 1.5 2005/01/07 12:34:21 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/chntpw/ChangeLog,v 1.6 2005/04/09 22:17:33 vanquirius Exp $
+
+  09 Apr 2005; Marcelo Goes <vanquirius@gentoo.org>
+  +files/chntpw-0.99.3.20040818-gcc4.diff, chntpw-0.99.3.20040818.ebuild:
+  Adding gcc4 patch from Debian.
 
   07 Jan 2005; Robin H. Johnson <robbat2@gentoo.org>
   chntpw-0.99.3.20040818.ebuild:
