@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 801cbefb001567cef75bff8375ec7061 ChangeLog 2882
 MD5 dfb89448c805458b9ffe30e247431a0d t1utils-1.23.ebuild 594
-MD5 ab829434c9821ced5c69b9c150b19386 t1utils-1.25.ebuild 611
+MD5 ae708194cf94f04e9868b64ca1b49eea t1utils-1.32.ebuild 500
+MD5 305573c4a607430901f086cbf00bbfc3 ChangeLog 2973
 MD5 16c5d3ee123a6dcd709f37b018d5da82 t1utils-1.28.ebuild 506
-MD5 d8530726c15188b254bbed56e1752906 t1utils-1.32.ebuild 503
-MD5 f08cef5348c8bf92dc6f467f278ef725 files/digest-t1utils-1.23 63
+MD5 ab829434c9821ced5c69b9c150b19386 t1utils-1.25.ebuild 611
 MD5 029439bcee93c942c7cef9f2f3b561bd files/digest-t1utils-1.25 63
+MD5 f08cef5348c8bf92dc6f467f278ef725 files/digest-t1utils-1.23 63
 MD5 5c297dae75029884570a947cd17990e4 files/digest-t1utils-1.28 64
 MD5 f2a3ea77aafb0f92e7dce5a5c154882b files/digest-t1utils-1.32 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFCGheuKRy60XGEcJIRArKiAJ0YY1IJfIgq4ZyCEPbDZMj+SM3UUQCfWVxi
-/uqSO+If6vQfrMX1ywz0KvY=
-=FAeY
------END PGP SIGNATURE-----
