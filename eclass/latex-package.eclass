@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/latex-package.eclass,v 1.22 2005/02/18 14:12:48 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/latex-package.eclass,v 1.23 2005/04/09 04:42:10 usata Exp $
 #
 # Author Matthew Turk <satai@gentoo.org>
 #
@@ -56,6 +56,14 @@ SRC_URI="ftp://tug.ctan.org/macros/latex/"
 S=${WORKDIR}/${P}
 TEXMF="/usr/share/texmf"
 SUPPLIER="misc" # This refers to the font supplier; it should be overridden
+
+latex-package_has_tetex_3() {
+	if has_version '>=app-text/tetex-3' || has_version '>=app-text/ptex-3.1.8' ; then
+		true
+	else
+		false
+	fi
+}
 
 latex-package_src_doinstall() {
 	debug-print function $FUNCNAME $*
@@ -163,7 +171,11 @@ latex-package_pkg_postrm() {
 
 latex-package_rehash() {
 	debug-print function $FUNCNAME $*
-	texconfig rehash
+	if latex-package_has_tetex_3 ; then
+		texmf-update
+	else
+		texconfig rehash
+	fi
 }
 
-EXPORT_FUNCTIONS src_compile src_install pkg_postinst pkg_postrm
+EXPORT_FUNCTIONS src_compile src_install pkg_postinst pkg_postrm has_tetex_3
