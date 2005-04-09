@@ -1,4 +1,14 @@
-MD5 8eb3327e2aa3710eea5404e6f6c5b4b4 ChangeLog 572
-MD5 013cc169d6c27770168c783b3f1eaf6a libmimedir-0.3.ebuild 684
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 01d21de8d30371620570066976a628f1 ChangeLog 709
+MD5 9de649f24c9294aba3a500ff11c9056e libmimedir-0.3.ebuild 723
 MD5 075fea99b82d61028585dc3e42f00466 metadata.xml 156
 MD5 2b6cdcdb5fd112e27166e600b7b605c0 files/digest-libmimedir-0.3 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCWGiV5mJXAu5GbtIRAqh/AJ0WMfozIQKZd2TfUaxtio7qFiqozgCggaPz
+fiCfUTfx7JhtEzwlbJ0VjnY=
+=usS+
+-----END PGP SIGNATURE-----
