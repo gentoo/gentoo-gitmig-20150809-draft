@@ -1,6 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/dumb-bmp/dumb-bmp-0.01.ebuild,v 1.1 2004/12/21 19:43:57 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/dumb-bmp/dumb-bmp-0.01.ebuild,v 1.2 2005/04/09 10:03:08 blubb Exp $
+
+inherit flag-o-matic
 
 IUSE=""
 
@@ -10,13 +12,18 @@ SRC_URI="http://mitglied.lycos.de/mldoering/${P}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 S=${WORKDIR}/${PN}
 
 DEPEND="media-sound/beep-media-player
 	media-libs/dumb"
 
 src_compile() {
+	append-flags -fPIC
+	
+	# use our own CFLAGS
+	sed -i "s/CFLAGS :=.*/CFLAGS := ${CFLAGS}/" Makefile.inc
+
 	emake || die
 }
 

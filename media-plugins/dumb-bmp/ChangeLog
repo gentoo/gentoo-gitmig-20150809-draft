@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/dumb-bmp
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/dumb-bmp/ChangeLog,v 1.1 2004/12/21 19:43:57 chainsaw Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/dumb-bmp/ChangeLog,v 1.2 2005/04/09 10:03:08 blubb Exp $
+
+  09 Apr 2005; Simon Stelling <blubb@gentoo.org> dumb-bmp-0.01.ebuild:
+  added ~amd64
 
 *dumb-bmp-0.01 (21 Dec 2004)
 
