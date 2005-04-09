@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/metakit/metakit-2.4.9.3-r2.ebuild,v 1.11 2005/01/01 17:36:06 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/metakit/metakit-2.4.9.3-r2.ebuild,v 1.12 2005/04/09 10:04:14 blubb Exp $
 
-inherit python
+inherit python multilib
 
 DESCRIPTION="Embedded database library"
 HOMEPAGE="http://www.equi4.com/metakit/"
@@ -31,13 +31,14 @@ src_unpack() {
 
 src_compile() {
 	local myconf
-	use python && myconf="--with-python"
-	use tcltk && myconf="${myconf} --with-tcl=/usr/include"
+	use python && myconf="--with-python=/usr/include/python${PYVER},/usr/$(get_libdir)/python${PYVER}/site-packages"
+	use tcltk && myconf="${myconf} --with-tcl=/usr/include,/usr/$(get_libdir)"
 
 	CXXFLAGS="${CXXFLAGS}" unix/configure \
 		${myconf} \
 		--host=${CHOST} \
 		--prefix=/usr \
+		--libdir=/usr/$(get_libdir) \
 		--infodir=/usr/share/info \
 		--mandir=/usr/share/man || die "./configure failed"
 
@@ -47,7 +48,7 @@ src_compile() {
 src_install () {
 	python_version
 
-	use python && dodir /usr/lib/python${PYVER}/site-packages
+	use python && dodir /usr/$(get_libdir)/python${PYVER}/site-packages
 	make DESTDIR=${D} install || die
 
 	dodoc CHANGES README WHATSNEW

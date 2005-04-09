@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/metakit
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/metakit/ChangeLog,v 1.24 2005/01/01 17:36:06 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/metakit/ChangeLog,v 1.25 2005/04/09 10:04:14 blubb Exp $
+
+  09 Apr 2005; Simon Stelling <blubb@gentoo.org> metakit-2.4.9.3-r2.ebuild:
+  fix for multilib-strict
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
