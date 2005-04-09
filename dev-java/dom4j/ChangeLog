@@ -1,7 +1,9 @@
 # ChangeLog for dev-java/dom4j
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/dom4j/ChangeLog,v 1.17 2005/01/01 18:23:15 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/dom4j/ChangeLog,v 1.18 2005/04/09 16:07:17 corsair Exp $
 
+  09 Apr 2005; Markus Rothe <corsair@gentoo.org> dom4j-1.5.ebuild:
+  Added ~ppc64 to KEYWORDS
 
   17 Oct 2004; Thomas Matthijs <axxo@gentoo.org> dom4j-1.5.ebuild:
   Don't build docs with USE=-doc, corrected syntax to not always die with

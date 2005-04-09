@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/dom4j/dom4j-1.5.ebuild,v 1.3 2005/01/01 18:23:15 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/dom4j/dom4j-1.5.ebuild,v 1.4 2005/04/09 16:07:17 corsair Exp $
 
 inherit java-pkg
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://dom4j.sourceforge.net/"
 SRC_URI="mirror://sourceforge/dom4j/${P}.tar.gz"
 LICENSE="Apache-1.1"
 SLOT="1"
-KEYWORDS="~x86 ~amd64 ~ppc ~sparc"
+KEYWORDS="~x86 ~amd64 ~ppc ~sparc ~ppc64"
 IUSE="doc"
 DEPEND=">=virtual/jdk-1.3"
 RDEPEND=">=virtual/jdk-1.3"

@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/struts-legacy
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/struts-legacy/ChangeLog,v 1.9 2005/03/16 15:30:13 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/struts-legacy/ChangeLog,v 1.10 2005/04/09 16:04:46 corsair Exp $
+
+  09 Apr 2005; Markus Rothe <corsair@gentoo.org>
+  struts-legacy-1.0-r1.ebuild:
+  Added ~ppc64 to KEYWORDS
 
   16 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org>
   struts-legacy-1.0-r1.ebuild:

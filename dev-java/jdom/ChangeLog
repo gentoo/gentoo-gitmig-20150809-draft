@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jdom
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdom/ChangeLog,v 1.22 2005/04/06 19:16:45 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdom/ChangeLog,v 1.23 2005/04/09 16:08:37 corsair Exp $
+
+  09 Apr 2005; Markus Rothe <corsair@gentoo.org> jdom-1.0_beta9-r1.ebuild:
+  Added ~ppc64 to KEYWORDS
 
   06 Apr 2005; Jan Brinkmann <luckyduck@gentoo.org> jdom-1.0.ebuild,
   jdom-1.0_beta10-r3.ebuild, jdom-1.0_beta6.ebuild, jdom-1.0_beta9-r1.ebuild:

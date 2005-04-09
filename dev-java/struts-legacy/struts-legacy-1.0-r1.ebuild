@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/struts-legacy/struts-legacy-1.0-r1.ebuild,v 1.8 2005/03/16 15:30:13 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/struts-legacy/struts-legacy-1.0-r1.ebuild,v 1.9 2005/04/09 16:04:46 corsair Exp $
 
 inherit java-pkg
 
@@ -18,7 +18,7 @@ RDEPEND="|| (
 	dev-java/commons-logging"
 LICENSE="Apache-1.1"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~amd64"
+KEYWORDS="~x86 ~ppc ~amd64 ~ppc64"
 
 S=${WORKDIR}/${P}-src
 
