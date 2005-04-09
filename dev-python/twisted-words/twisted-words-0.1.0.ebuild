@@ -1,6 +1,6 @@
-# Copyright 1999-20.1 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-words/twisted-words-0.1.0.ebuild,v 1.1 2005/04/08 19:22:12 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-words/twisted-words-0.1.0.ebuild,v 1.2 2005/04/09 01:42:37 mr_bones_ Exp $
 
 inherit distutils
 
