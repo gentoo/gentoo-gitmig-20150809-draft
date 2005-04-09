@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/lam-mpi/lam-mpi-7.1.1.ebuild,v 1.1 2005/02/21 08:56:35 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/lam-mpi/lam-mpi-7.1.1.ebuild,v 1.2 2005/04/09 13:06:39 corsair Exp $
 
 inherit fortran
 
@@ -21,7 +21,7 @@ RDEPEND="${DEPEND}
 	!sys-cluster/mpich"
 
 SLOT="6"
-KEYWORDS="~amd64 ~x86 ~sparc"
+KEYWORDS="~amd64 ~x86 ~sparc ~ppc64"
 LICENSE="as-is"
 
 src_unpack() {
