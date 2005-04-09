@@ -1,6 +1,12 @@
 # ChangeLog for xfce-extra/xfce4-notes
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-notes/ChangeLog,v 1.8 2005/01/31 15:41:45 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-notes/ChangeLog,v 1.9 2005/04/09 22:50:18 bcowan Exp $
+
+*xfce4-notes-0.10.0-r1 (09 Apr 2005)
+
+  09 Apr 2005; Brad Cowan <bcowan@gentoo.org> +files/notes_applet.c.patch,
+  xfce4-notes-0.10.0.ebuild, +xfce4-notes-0.10.0-r1.ebuild:
+  Fix for bug #80478.
 
   31 Jan 2005; lanius@gentoo.org xfce4-notes-0.10.0.ebuild:
   stable on amd64
