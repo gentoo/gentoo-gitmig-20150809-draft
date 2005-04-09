@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/lvm2
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.31 2005/04/07 17:00:11 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.32 2005/04/09 13:16:26 corsair Exp $
+
+  09 Apr 2005; Markus Rothe <corsair@gentoo.org> lvm2-2.00.33-r1.ebuild:
+  Stable on ppc64
 
   07 Apr 2005; Simon Stelling <blubb@gentoo.org> lvm2-2.00.33-r1.ebuild:
   stable on amd64

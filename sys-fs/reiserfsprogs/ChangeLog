@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/reiserfsprogs
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/reiserfsprogs/ChangeLog,v 1.35 2005/03/19 10:51:32 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/reiserfsprogs/ChangeLog,v 1.36 2005/04/09 13:18:30 corsair Exp $
+
+  09 Apr 2005; Markus Rothe <corsair@gentoo.org>
+  reiserfsprogs-3.6.19.ebuild:
+  Stable on ppc64
 
   19 Mar 2005; Bryan Østergaard <kloeri@gentoo.org>
   reiserfsprogs-3.6.19.ebuild:
