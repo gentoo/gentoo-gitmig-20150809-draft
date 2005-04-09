@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/binutils
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.194 2005/04/06 05:13:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.195 2005/04/09 13:10:19 corsair Exp $
+
+  09 Apr 2005; Markus Rothe <corsair@gentoo.org>
+  binutils-2.15.92.0.2-r8.ebuild, binutils-2.15.94.0.2.2.ebuild:
+  Added ~ppc64 to KEYWORDS
 
 *binutils-2.15.92.0.2-r8 (06 Apr 2005)
 
