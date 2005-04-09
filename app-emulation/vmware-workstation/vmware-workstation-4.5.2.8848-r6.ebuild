@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-4.5.2.8848-r5.ebuild,v 1.5 2005/04/08 23:41:14 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-4.5.2.8848-r6.ebuild,v 1.1 2005/04/09 12:29:47 wolf31o2 Exp $
 
 # Unlike many other binary packages the user doesn't need to agree to a licence
 # to download VMWare. The agreeing to a licence is part of the configure step
@@ -49,6 +49,9 @@ Ddir=${D}/${dir}
 src_unpack() {
 	unpack ${NP}.tar.gz
 	cd ${S}
+	# Patch to resolve problems with VMware finding its distributed libraries.
+	# Patch submitted to bug #59035 by Georgi Georgiev <chutz@gg3.net>
+	epatch ${FILESDIR}/${P}-librarypath.patch
 	unpack ${ANY_ANY}.tar.gz
 	mv -f ${ANY_ANY}/*.tar ${S}/lib/modules/source/
 	cd ${S}/${ANY_ANY}

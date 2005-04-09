@@ -1,6 +1,16 @@
 # ChangeLog for app-emulation/vmware-workstation
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.81 2005/04/08 23:41:14 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.82 2005/04/09 12:29:47 wolf31o2 Exp $
+
+*vmware-workstation-4.5.2.8848-r6 (09 Apr 2005)
+
+  09 Apr 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  +files/vmware-workstation-4.5.2.8848-librarypath.patch,
+  -files/vmware-26kern-init-gentoo.patch,
+  -vmware-workstation-4.5.2.8848-r5.ebuild,
+  +vmware-workstation-4.5.2.8848-r6.ebuild:
+  Adding patch by Georgi Georgiev <chutz@gg3.net> to export more paths to
+  LD_LIBRARY_PATH when executing VMware and closing bug #59035.
 
   08 Apr 2005; Chris Gianelloni <wolf31o2@gentoo.org>
   vmware-workstation-4.5.2.8848-r5.ebuild:
