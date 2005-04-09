@@ -1,0 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 5b1bbd576e36b79994a6422b3e2f65ed webscarab-20050311.ebuild 691
+MD5 f12631b6e4761247ca59dc2752d39695 ChangeLog 442
+MD5 c61231edb3a14476ce033a479035ab22 metadata.xml 509
+MD5 0e4a4c8c401b6e7e45b066db21cba6c8 files/webscarab.sh 44
+MD5 91e2fe2baaf2c68247c705092fde3e8a files/digest-webscarab-20050311 87
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCWD5ZjiC39V7gKu0RAnkcAKDQ85aE4ixd3eLQHy1splmA0uaxlwCgukWC
+ZFJ8kvKZAEYNiGpEJQTeUM8=
+=CFsq
+-----END PGP SIGNATURE-----

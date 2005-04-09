@@ -1,0 +1,10 @@
+# ChangeLog for www-proxy/webscarab
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-proxy/webscarab/ChangeLog,v 1.1 2005/04/09 20:42:39 mrness Exp $
+
+*webscarab-20050311 (09 Apr 2005)
+
+  09 Apr 2005; Alin Nastac <mrness@gentoo.org> +files/webscarab.sh,
+  +metadata.xml, +webscarab-20050311.ebuild:
+  Initial import from bug #87126, thanks to Michael Zanetta <grimmlin@pentoo.ch>.
+
