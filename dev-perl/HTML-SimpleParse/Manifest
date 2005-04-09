@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 89f8713bb34b4d87e50cb0861d700652 ChangeLog 1157
 MD5 5741dcd39b207b7dfe8aeeeb810f01bc HTML-SimpleParse-0.11.ebuild 604
-MD5 378a7d6f524f1b189579bfd7c2c15faf HTML-SimpleParse-0.12.ebuild 611
+MD5 560b9c966f34dc812056bacbccd8e2bd HTML-SimpleParse-0.12.ebuild 609
+MD5 8dda38b933feb66296a6579ccbd0178f ChangeLog 1261
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 14cfe6b2a2ae46d3f2d305c05d5ff78d files/digest-HTML-SimpleParse-0.11 71
 MD5 a1ad75793b799af70a31476ce4c536dd files/digest-HTML-SimpleParse-0.12 71
+MD5 14cfe6b2a2ae46d3f2d305c05d5ff78d files/digest-HTML-SimpleParse-0.11 71
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCOFiqtG5z4I8BtQoRAoBUAJ9KCWO6o2Y34rePH3IA+4/tdTnzoACcDL6w
-2E1QdnSVo0Aao+z+TA6YUxo=
-=MwC3
+iD8DBQFCVzoBKRy60XGEcJIRAvrCAJ97qIdr8RSrNwj6CSQwxZVum5zX4gCgqMms
+7Ilv5BK97HmrvE6skeROHdQ=
+=Y3lo
 -----END PGP SIGNATURE-----
