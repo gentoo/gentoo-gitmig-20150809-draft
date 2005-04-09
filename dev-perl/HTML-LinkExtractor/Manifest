@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 c3475e9ceec594bcdc84fc7dc1488b24 ChangeLog 1064
+MD5 f05b7c1d6f66ce44bae3505f9e5b621e HTML-LinkExtractor-0.12.1.ebuild 675
+MD5 27fe057b2c7aa4f80ccc04566ae63095 ChangeLog 1175
 MD5 4d4ade0c36572972dca194d5d747eba6 HTML-LinkExtractor-0.11.ebuild 605
-MD5 aaf64fc5cd094e6cc9dc8ab9c0bed130 HTML-LinkExtractor-0.12.1.ebuild 674
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 17eb4b5bac059ec5e18c0616181e3b62 files/digest-HTML-LinkExtractor-0.11 74
 MD5 c0c9bdd78fc7f92677ad22436d242068 files/digest-HTML-LinkExtractor-0.12.1 75
+MD5 17eb4b5bac059ec5e18c0616181e3b62 files/digest-HTML-LinkExtractor-0.11 74
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFByqal60LfUIagIAkRAtQoAKCknB4DJW8Ujo1VKBV9tppghaDbmACfQ4GT
-Zikyn0ghqfhmdFpQZhBH7V8=
-=hEMV
+iD8DBQFCVzh7KRy60XGEcJIRAtvWAJ97iFXUzDeL9K3r5gAiV2dRuTFqPACff8DY
+mWysmSutP3cwbU6VH1k4YBw=
+=J9Uo
 -----END PGP SIGNATURE-----
