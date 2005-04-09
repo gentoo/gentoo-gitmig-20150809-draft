@@ -78,12 +78,16 @@
  #else
  
  /* During the 2.5 kernel series the kernel ucontext was changed, but
-@@ -581,10 +598,15 @@
+@@ -581,7 +598,6 @@
    struct sigcontext_struct uc_mcontext;
    sigset_t          uc_sigmask;
  };
 -enum { SIGNAL_FRAMESIZE = 64 };
  #endif
+ 
+ #endif
+@@ -733,3 +731,9 @@
+   } while (0)
  
  #endif
 +#endif /* inhibit_libc */
@@ -92,9 +96,6 @@
 +#else
 +enum { SIGNAL_FRAMESIZE = 64 };
 +#endif
- 
- #ifdef __powerpc64__
- 
 --- gcc/config.gcc
 +++ gcc/config.gcc
 @@ -295,7 +295,7 @@
