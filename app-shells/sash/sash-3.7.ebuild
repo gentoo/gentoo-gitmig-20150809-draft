@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/sash/sash-3.7.ebuild,v 1.20 2005/03/13 06:01:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/sash/sash-3.7.ebuild,v 1.21 2005/04/09 18:47:00 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -19,15 +19,15 @@ RDEPEND=""
 
 src_unpack() {
 	unpack ${P}.tar.gz
-	cd ${S}
+	cd "${S}"
 
-	epatch ${FILESDIR}/sash-3.6-fix-includes.patch
-	epatch ${FILESDIR}/sash-3.7-builtin.patch
-	use readline && epatch ${FILESDIR}/sash-3.6-readline.patch
+	epatch "${FILESDIR}"/sash-3.6-fix-includes.patch
+	epatch "${FILESDIR}"/sash-3.7-builtin.patch
+	use readline && epatch "${FILESDIR}"/sash-3.6-readline.patch
 
 	sed -i \
 		-e "s:-O3:${CFLAGS}:" \
-		-e "/^LDFLAGS /s:$:${LDFLAGS}:" \
+		-e "/^LDFLAGS /s:$: ${LDFLAGS}:" \
 		Makefile || die "sed failed"
 }
 
