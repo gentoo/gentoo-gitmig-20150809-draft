@@ -1,6 +1,12 @@
 # ChangeLog for app-text/jadetex
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/jadetex/ChangeLog,v 1.24 2005/04/08 14:24:52 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/jadetex/ChangeLog,v 1.25 2005/04/09 03:36:53 usata Exp $
+
+*jadetex-3.13-r1 (09 Apr 2005)
+
+  09 Apr 2005; Mamoru KOMACHI <usata@gentoo.org> +files/80jadetex.cnf,
+  jadetex-3.13.ebuild, +jadetex-3.13-r1.ebuild:
+  Added 80jadetex.cnf. This closes bug #21501.
 
   08 Apr 2005; Markus Rothe <corsair@gentoo.org> jadetex-3.13.ebuild:
   Stable on ppc64

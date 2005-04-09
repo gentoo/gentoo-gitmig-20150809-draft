@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/jadetex/jadetex-3.13.ebuild,v 1.11 2005/04/09 03:36:53 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/jadetex/jadetex-3.13-r1.ebuild,v 1.1 2005/04/09 03:36:53 usata Exp $
 
 inherit latex-package
 
@@ -51,6 +51,8 @@ src_install() {
 	if has_tetex_3 ; then
 		dosym /usr/bin/latex /usr/bin/jadetex
 		dosym /usr/bin/pdftex /usr/bin/pdfjadetex
+		insinto /etc/texmf/texmf.d
+		doins ${FILESDIR}/80jadetex.cnf
 	else
 		dosym /usr/bin/virtex /usr/bin/jadetex
 		dosym /usr/bin/pdfvirtex /usr/bin/pdfjadetex
@@ -61,4 +63,25 @@ src_install() {
 
 src_test() {
 	return
+}
+
+pkg_postinst() {
+	if has_tetex_3 ; then
+		texmf-update
+		einfo
+		einfo "If jadetex fails with \"TeX capacity exceeded, sorry [save size=5000]\","
+		einfo "increase save_size in /etc/texmf/texmf.d/80jadetex.cnf and."
+		einfo "remerge jadetex. See bug #21501."
+		einfo
+	else
+		latex-package_pkg_postinst
+	fi
+}
+
+pkg_postrm() {
+	if has_tetex_3 ; then
+		texmf-update
+	else
+		latex-package_pkg_postrm
+	fi
 }
