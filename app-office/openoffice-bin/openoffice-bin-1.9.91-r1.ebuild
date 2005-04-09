@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-1.9.91-r1.ebuild,v 1.1 2005/04/08 20:56:48 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-1.9.91-r1.ebuild,v 1.2 2005/04/09 10:32:18 ferringb Exp $
 
 inherit eutils fdo-mime rpm versionator
 
@@ -68,7 +68,7 @@ src_unpack() {
 
 	for i in ${LINGUAS_OOO}; do
 		i="${i/_/-}"
-		cp /usr/portage/distfiles/${LANGPACK}_${i}.sh ${S} || die
+		cp ${DISTDIR}/${LANGPACK}_${i}.sh ${S} || die
 		tail -n +146 ${S}/${LANGPACK}_${i}.sh > ${S}/${LANGPACK}_${i}.rpm || die
 		rpm_unpack ${S}/${LANGPACK}_${i}.rpm
 	done

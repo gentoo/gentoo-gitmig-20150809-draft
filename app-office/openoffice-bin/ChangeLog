@@ -1,8 +1,11 @@
 # ChangeLog for app-office/openoffice-bin
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/ChangeLog,v 1.68 2005/04/08 20:56:48 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/ChangeLog,v 1.69 2005/04/09 10:32:18 ferringb Exp $
 
 *openoffice-bin-1.9.91-r1 (08 Apr 2005)
+
+  09 Apr 002;5 Brian Harring <ferringb@gentoo.org> openoffice-bin-1.9.91-r1.ebuild:
+  s:/usr/portage/distfiles/:${DISTDIR}:g , bug 88452
 
   08 Apr 2005; Andreas Proschofsky <suka@gentoo.org>
   +openoffice-bin-1.9.91-r1.ebuild:
