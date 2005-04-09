@@ -1,0 +1,19 @@
+--- monsterz.py
++++ monsterz.py
+@@ -24,5 +24,4 @@
+ COPYRIGHT = 'MONSTERZ - COPYRIGHT 2005 SAM HOCEVAR - MONSTERZ IS ' \
+             'FREE SOFTWARE, YOU CAN REDISTRIBUTE IT AND/OR MODIFY IT ' \
+-            'UNDER THE TERMS OF THE DO WHAT THE FUCK YOU WANT TO ' \
+-            'PUBLIC LICENSE, VERSION 2 - '
++            'UNDER THE TERMS OF THE WTFPL, Version 2 - '
+ 
+@@ -1896,3 +1380,3 @@
+     print 'This is free software; you can redistribute it and/or modify it under the terms'
+-    print 'of the Do What The Fuck You Want To Public License, Version 2, as published'
++    print 'of the WTFPL, Version 2, as published'
+     print 'by Sam Hocevar. See http://sam.zoy.org/projects/COPYING.WTFPL for more details.'
+@@ -1900,3 +1900,3 @@
+     scorefile = None
+-    sharedir = dirname(argv[0])
++    sharedir = "GENTOO_DATADIR"
+     outfd = None
