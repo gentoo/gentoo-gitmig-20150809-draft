@@ -1,6 +1,9 @@
 # ChangeLog for net-zope/zopeinterface
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zopeinterface/ChangeLog,v 1.4 2005/02/18 22:23:22 radek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zopeinterface/ChangeLog,v 1.5 2005/04/09 14:45:56 weeve Exp $
+
+  09 Apr 2005; Jason Wever <weeve@gentoo.org> zopeinterface-3.0.1.ebuild:
+  Added ~sparc keyword.
 
   18 Feb 2005; Radoslaw Stachowiak <radek@gentoo.org>
   zopeinterface-3.0.1.ebuild:
