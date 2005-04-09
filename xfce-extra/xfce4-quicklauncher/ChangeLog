@@ -1,0 +1,10 @@
+# ChangeLog for xfce-extra/xfce4-quicklauncher
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-quicklauncher/ChangeLog,v 1.1 2005/04/09 21:59:52 bcowan Exp $
+
+*xfce4-quicklauncher-0.7 (09 Apr 2005)
+
+  09 Apr 2005; Brad Cowan <bcowan@gentoo.org> +metadata.xml,
+  +xfce4-quicklauncher-0.7.ebuild:
+  Initial import.
+
