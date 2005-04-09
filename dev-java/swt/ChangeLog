@@ -1,6 +1,14 @@
 # ChangeLog for dev-java/swt
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/ChangeLog,v 1.11 2005/03/23 16:16:06 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/ChangeLog,v 1.12 2005/04/09 12:19:51 karltk Exp $
+
+*swt-3.1_pre2 (09 Apr 2005)
+
+  09 Apr 2005; Karl Trygve Kalleberg <karltk@gentoo.org>
+  +files/build-3.1_pre2.xml, -files/build-3.1.xml, +swt-3.1_pre2.ebuild,
+  -swt-3.1.ebuild:
+  Fixed version number for swt 3.1. It should be 3.1_pre2, since it's an M2
+  drop, not the final release. This may sting our users a bit.
 
   23 Mar 2005; Seemant Kulleen <seemant@gentoo.org> swt-3.0.ebuild,
   swt-3.0-r1.ebuild, swt-3.0-r2.ebuild, swt-3.1.ebuild:
