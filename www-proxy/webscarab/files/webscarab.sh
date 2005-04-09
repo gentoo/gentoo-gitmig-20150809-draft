@@ -1,3 +1,3 @@
 #!/bin/sh
 
-java -jar /usr/lib/webscarab.jar
+exec java -jar /usr/lib/webscarab.jar
