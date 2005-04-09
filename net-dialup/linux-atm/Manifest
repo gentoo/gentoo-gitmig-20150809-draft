@@ -1,5 +1,5 @@
-MD5 9c972dd15e9680690252f7a77e109a46 ChangeLog 1305
-MD5 e00c0c6be5dca8884c119f89d0b132b7 linux-atm-2.4.1-r1.ebuild 998
+MD5 fbb62200cca7acbd94e6dd9a02b2ccf4 ChangeLog 1402
+MD5 3f85b58f06a9f5520501f6628ae7c5de linux-atm-2.4.1-r1.ebuild 999
 MD5 c3e1c808b2afe90339d280490cfba6c6 linux-atm-2.4.1.ebuild 857
 MD5 ec2f84816306825d125d0c01bd86758d metadata.xml 163
 MD5 377f9a635f2f11c0d0e8b5c6b83d14d7 files/2.4.1-gcc34.patch 1175
