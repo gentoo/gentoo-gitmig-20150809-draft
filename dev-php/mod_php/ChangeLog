@@ -1,6 +1,11 @@
 # ChangeLog for dev-php/mod_php
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/ChangeLog,v 1.211 2005/04/10 17:11:21 trapni Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/ChangeLog,v 1.212 2005/04/10 21:11:44 stuart Exp $
+
+*mod_php-4.3.11 (10 Apr 2005)
+
+  10 Apr 2005; Stuart Herbert <stuart@gentoo.org> +mod_php-4.3.11.ebuild:
+  Version bump; see bug #87517 for security-related details
 
   10 Apr 2005; Christian Parpart <trapni@gentoo.org>
   mod_php-4.3.10-r1.ebuild:
