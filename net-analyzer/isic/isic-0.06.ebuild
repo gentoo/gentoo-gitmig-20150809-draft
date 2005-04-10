@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/isic/isic-0.06.ebuild,v 1.2 2005/01/08 22:35:26 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/isic/isic-0.06.ebuild,v 1.3 2005/04/10 18:08:03 vanquirius Exp $
 
 inherit eutils
 
@@ -19,6 +19,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/${P}-makefile.patch || die "patch failed"
+	epatch ${FILESDIR}/${P}-gcc4.patch || die "patch failed"
 }
 
 src_compile() {
