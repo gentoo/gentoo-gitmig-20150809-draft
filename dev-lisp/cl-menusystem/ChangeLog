@@ -1,6 +1,10 @@
 # ChangeLog for dev-lisp/cl-menusystem
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-menusystem/ChangeLog,v 1.2 2004/06/24 23:47:05 agriffis Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-menusystem/ChangeLog,v 1.3 2005/04/10 21:45:28 mkennedy Exp $
+
+  10 Apr 2005; Matthew Kennedy <mkennedy@gentoo.org>
+  cl-menusystem-20030919.ebuild:
+  Keywording for ~amd64
 
 *cl-menusystem-20030919 (15 Feb 2004)
 
