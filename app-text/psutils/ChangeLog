@@ -1,6 +1,9 @@
 # ChangeLog for app-text/psutils
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/psutils/ChangeLog,v 1.15 2005/01/01 16:31:37 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/psutils/ChangeLog,v 1.16 2005/04/10 03:47:58 j4rg0n Exp $
+
+  10 Apr 2005; Lina Pezzella <j4rg0n@gentoo.org> psutils-1.17.ebuild:
+  Testing ppc-macos. Bug #86079
 
   29 Aug 2004; Seemant Kulleen <seemant@gentoo.org> psutils-1.17.ebuild:
   DESCRIPTION spelling fix thanks to: Tim Cera <timcera@earthlink.net> in bug
