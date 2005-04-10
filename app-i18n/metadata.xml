@@ -10,5 +10,8 @@
 	<longdescription lang="es">
 		La categoría app-i18n contiene paquetes para Internacionalización.
 	</longdescription>
+	<longdescription lang="nl">
+		De app-i18n categorie bevat applicaties om te internationaliseren (vertalen).
+	</longdescription>
 </catmetadata>
 
