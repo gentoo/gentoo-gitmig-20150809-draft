@@ -1,7 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/imlib2-1.2.0.20050220.ebuild,v 1.3 2005/03/19 02:09:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/imlib2-1.2.0.004.ebuild,v 1.1 2005/04/10 03:11:38 vapier Exp $
 
+EKEY_STATE=snap
 EHACKAUTOGEN=yes
 inherit enlightenment
 
@@ -17,12 +18,6 @@ DEPEND="=media-libs/freetype-2*
 	jpeg? ( media-libs/jpeg )
 	tiff? ( >=media-libs/tiff-3.5.5 )
 	X? ( virtual/x11 )"
-
-src_unpack() {
-	enlightenment_src_unpack
-	cd "${S}"
-	epatch "${FILESDIR}"/${P}-no-x.patch
-}
 
 src_compile() {
 	local mymmx=""
