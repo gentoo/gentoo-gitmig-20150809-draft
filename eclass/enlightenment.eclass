@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/enlightenment.eclass,v 1.41 2005/02/07 00:58:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/enlightenment.eclass,v 1.42 2005/04/10 03:00:52 vapier Exp $
 #
 # Author: vapier@gentoo.org
 
@@ -31,7 +31,7 @@ fi
 DESCRIPTION="A DR17 production"
 HOMEPAGE="http://www.enlightenment.org/"
 case ${ECVS_STATE} in
-	release) SRC_URI="mirror://sourceforge/enlightenment/${P}.tar.gz";;
+	release) SRC_URI="http://enlightenment.freedesktop.org/files/${P}.tar.gz mirror://sourceforge/enlightenment/${P}.tar.gz";;
 	snap)    SRC_URI="mirror://gentoo/${P}.tar.bz2";;
 	live)    SRC_URI="";;
 esac
