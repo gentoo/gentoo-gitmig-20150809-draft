@@ -13,5 +13,9 @@
 		La categoría dev-embedded contiene librerias y utilidades referentes a
 		embedded-programming.
 	</longdescription>
+	<longdescription lang="nl">
+		De dev-embedded categorie bevat bibliotheken en hulpmiddelen voor het
+		programmeren in een "embedded" omgeving.
+	</longdescription>
 </catmetadata>
 
