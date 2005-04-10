@@ -1,6 +1,10 @@
 # ChangeLog for dev-cpp/gtkmm
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/ChangeLog,v 1.60 2005/04/10 00:25:36 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/ChangeLog,v 1.61 2005/04/10 22:43:04 cryos Exp $
+
+  10 Apr 2005; Marcus D. Hanwell <cryos@gentoo.org> gtkmm-2.4.11.ebuild,
+  gtkmm-2.6.1.ebuild:
+  Added ~hppa back to KEYWORDS, as it seems they got dropped by mistake.
 
 *gtkmm-2.6.1 (10 Apr 2005)
 
