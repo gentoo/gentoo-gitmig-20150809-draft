@@ -46,6 +46,7 @@ firebird
 gnome
 jack-tmpfs
 kde
+libcaca
 mikmod
 mono
 mzscheme
