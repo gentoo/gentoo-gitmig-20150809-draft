@@ -1,6 +1,9 @@
 # ChangeLog for dev-lisp/cl-kr
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-kr/ChangeLog,v 1.1 2005/02/10 09:18:30 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-kr/ChangeLog,v 1.2 2005/04/10 20:09:54 mkennedy Exp $
+
+  10 Apr 2005; Matthew Kennedy <mkennedy@gentoo.org> cl-kr-2.3.4.ebuild:
+  Keywording for ~amd64
 
 *cl-kr-2.3.4 (09 Feb 2005)
 

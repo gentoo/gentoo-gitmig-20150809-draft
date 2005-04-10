@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-linedit/cl-linedit-0.15.12.ebuild,v 1.1 2004/08/05 04:14:02 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-linedit/cl-linedit-0.15.12.ebuild,v 1.2 2005/04/10 20:14:45 mkennedy Exp $
 
 inherit common-lisp eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://common-lisp.net/project/linedit/files/linedit_${PV}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ~ppc ~amd64"
 IUSE=""
 
 DEPEND="dev-lisp/common-lisp-controller

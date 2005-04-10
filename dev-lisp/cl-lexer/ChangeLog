@@ -1,6 +1,9 @@
 # ChangeLog for dev-lisp/cl-lexer
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-lexer/ChangeLog,v 1.5 2004/06/24 23:45:55 agriffis Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-lexer/ChangeLog,v 1.6 2005/04/10 20:10:44 mkennedy Exp $
+
+  10 Apr 2005; Matthew Kennedy <mkennedy@gentoo.org> cl-lexer-1-r1.ebuild:
+  Keywording for ~amd64
 
 *cl-lexer-1-r1 (12 Feb 2004)
 
