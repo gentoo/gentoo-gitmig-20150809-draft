@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/evidence/evidence-0.9.8.20050220.ebuild,v 1.1 2005/02/21 12:00:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/evidence/evidence-0.9.8.20050220.ebuild,v 1.2 2005/04/10 20:38:19 vapier Exp $
 
 ECVS_MODULE="evidence"
 ECVS_SERVER="cvs.sourceforge.net:/cvsroot/evidence"
@@ -28,11 +28,11 @@ DEPEND=">=dev-util/pkgconfig-0.5
 	virtual/libc
 	sys-devel/gcc
 	virtual/fam
-	>=x11-libs/evas-1.0.0.20050116_pre13
-	>=dev-db/edb-1.0.5.20050116
-	>=dev-libs/eet-0.9.9.20050116
-	>=x11-libs/ecore-1.0.0.20050116_pre7
-	>=media-libs/imlib2-1.2.0.20050116
+	>=x11-libs/evas-0.9.9
+	>=dev-db/edb-1.0.5
+	>=dev-libs/eet-0.9.9
+	>=x11-libs/ecore-0.9.9
+	>=media-libs/imlib2-1.2.0
 	gnome? ( >=gnome-base/gnome-vfs-2.0
 		>=media-libs/libart_lgpl-2.0
 		>=gnome-base/libgnomecanvas-2.0 )"
