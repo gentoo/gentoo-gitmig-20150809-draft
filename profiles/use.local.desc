@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1071 2005/04/09 04:34:40 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1072 2005/04/10 20:07:11 trapni Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -244,6 +244,7 @@ dev-util/kdevelop:perforce - Enable support for the perforce version control sys
 dev-util/kdevelop:sql - Enable support for the sql language
 dev-util/kdevelop:subversion - Enable support for the subversion version control system
 dev-util/pbuilder:uml - Enable pbuilder user mode linux support
+dev-util/subversion:webdav - Enables WebDAV support via neon library
 games-action/d2x:cdinstall - Enables copying files from the CD
 games-arcade/tuxracer:stencil-buffer - Enables use of stencil-buffer
 games-board/crafty:no-opts - Don't try to enable crazy CFLAG options
