@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/enlightenment.eclass,v 1.44 2005/04/10 03:28:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/enlightenment.eclass,v 1.45 2005/04/10 03:29:34 vapier Exp $
 #
 # Author: vapier@gentoo.org
 
@@ -26,6 +26,8 @@ if [[ ${PV/9999} != ${PV} ]] ; then
 	inherit cvs
 elif [[ ${PV/.200?????/} != ${PV} ]] ; then
 	ECVS_STATE="snap"
+elif [[ ${PV/.00?} != ${PV} ]] ; then
+	EKEY_STATE="snap"
 fi
 
 DESCRIPTION="A DR17 production"
