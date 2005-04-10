@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/gvim
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.124 2005/04/05 20:23:51 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.125 2005/04/10 18:31:01 hansmi Exp $
+
+  10 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> gvim-6.3.068.ebuild:
+  Stable on ppc.
 
   05 Apr 2005; Marcus D. Hanwell <cryos@gentoo.org> gvim-6.3.068.ebuild:
   Marked stable on amd64.
