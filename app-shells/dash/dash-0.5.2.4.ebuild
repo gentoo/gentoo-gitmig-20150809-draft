@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/dash/dash-0.5.2.3.ebuild,v 1.1 2005/04/02 16:22:26 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/dash/dash-0.5.2.4.ebuild,v 1.1 2005/04/10 15:54:08 ka0ttic Exp $
 
 inherit eutils versionator flag-o-matic toolchain-funcs
 
