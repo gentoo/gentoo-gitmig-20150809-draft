@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.3.9.ebuild,v 1.4 2005/04/09 18:57:13 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.3.9.ebuild,v 1.5 2005/04/10 13:32:45 suka Exp $
 
 # Notes:
 #
@@ -26,7 +26,7 @@
 
 inherit eutils fdo-mime flag-o-matic kde-functions toolchain-funcs
 
-IUSE="curl gnome hardened java kde nas nptl python zlib"
+IUSE="curl gnome hardened java kde nas nptl zlib"
 
 OO_VER="1.1.4"
 PATCHLEVEL="OOO_1_1_4"
@@ -73,7 +73,6 @@ RDEPEND="!app-office/openoffice-ximian-bin
 	app-arch/unzip
 	dev-libs/expat
 	java? ( >=virtual/jre-1.4.1 )
-	python? ( virtual/python )
 	ppc? ( >=sys-devel/gcc-3.2.1 )
 	linguas_ja? ( >=media-fonts/kochi-substitute-20030809-r3 )
 	linguas_zh_CN? ( >=media-fonts/arphicfonts-0.1-r2 )
@@ -371,10 +370,10 @@ src_compile() {
 	fi
 
 	#See if we use system-python
-	if use python
-	then
-		MYCONF="${MYCONF} --with-python=/usr/bin/python"
-	fi
+#	if use python
+#	then
+#		MYCONF="${MYCONF} --with-python=/usr/bin/python"
+#	fi
 
 	#See if we use system-nas
 	if use nas

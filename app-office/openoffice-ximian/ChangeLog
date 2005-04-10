@@ -1,6 +1,11 @@
 # ChangeLog for app-office/openoffice-ximian
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/ChangeLog,v 1.120 2005/04/09 18:57:13 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/ChangeLog,v 1.121 2005/04/10 13:32:45 suka Exp $
+
+  10 Apr 2005; Andreas Proschofsky <suka@gentoo.org>
+  openoffice-ximian-1.3.9.ebuild:
+  Remove system-python support for now, it tends to break the build, see bug
+  #82143
 
   09 Apr 2005; Andreas Proschofsky <suka@gentoo.org>
   openoffice-ximian-1.3.9.ebuild:
