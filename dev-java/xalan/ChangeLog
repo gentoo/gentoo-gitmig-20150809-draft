@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/xalan
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xalan/ChangeLog,v 1.36 2005/04/09 18:26:13 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xalan/ChangeLog,v 1.37 2005/04/10 18:17:37 blubb Exp $
+
+  10 Apr 2005; Simon Stelling <blubb@gentoo.org> xalan-2.6.0-r2.ebuild:
+  stable on amd64
 
   09 Apr 2005; Jan Brinkmann <luckyduck@gentoo.org> xalan-2.6.0-r2.ebuild:
   updated jakarta-regexp dependency again. fixes #88473
