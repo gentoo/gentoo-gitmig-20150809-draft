@@ -9,5 +9,9 @@
 		Die Kategorie app-misc enthält verschiedenste Applikationen welche
 		keiner anderen Kategorie zugeordnet werden konnten.
 	</longdescription>
+	<longdescription lang="nl">
+		De app-misc categorie bevat applicaties die niet in een specifieke
+		categorie geplaatst konden worden.
+	</longdescription>
 </catmetadata>
 
