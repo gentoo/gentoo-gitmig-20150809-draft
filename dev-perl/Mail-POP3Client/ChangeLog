@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Mail-POP3Client
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-POP3Client/ChangeLog,v 1.10 2004/12/29 23:59:45 ciaranm Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-POP3Client/ChangeLog,v 1.11 2005/04/10 18:42:46 hansmi Exp $
+
+  10 Apr 2005; Michael Hanselmann <hansmi@gentoo.org>
+  Mail-POP3Client-2.15.ebuild:
+  Stable on ppc.
 
   30 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance

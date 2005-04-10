@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Scalar-List-Utils/Scalar-List-Utils-1.14.ebuild,v 1.9 2005/04/01 17:36:46 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Scalar-List-Utils/Scalar-List-Utils-1.14.ebuild,v 1.10 2005/04/10 18:44:50 hansmi Exp $
 
 inherit perl-module
 
@@ -10,5 +10,5 @@ SRC_URI="mirror://cpan/authors/id/G/GB/GBARR/${P}.tar.gz"
 
 LICENSE="|| ( Artistic GPL-2 )"
 SLOT="0"
-KEYWORDS="alpha amd64 ~ppc s390 sparc x86"
+KEYWORDS="alpha amd64 ppc s390 sparc x86"
 IUSE=""
