@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/subversion
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/ChangeLog,v 1.150 2005/04/10 20:06:00 trapni Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/ChangeLog,v 1.151 2005/04/10 20:20:46 trapni Exp $
+
+  10 Apr 2005; Christian Parpart <trapni@gentoo.org>
+  subversion-1.1.4-r1.ebuild:
+  dropped a note to endusers of to inform them about the new useflag and their
+  results
 
 *subversion-1.1.4-r1 (10 Apr 2005)
 
