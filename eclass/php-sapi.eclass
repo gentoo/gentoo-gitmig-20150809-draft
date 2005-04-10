@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-sapi.eclass,v 1.56 2005/03/08 13:10:13 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-sapi.eclass,v 1.57 2005/04/10 20:46:31 stuart Exp $
 # Author: Robin H. Johnson <robbat2@gentoo.org>
 
 inherit eutils flag-o-matic multilib
@@ -550,12 +550,14 @@ php-sapi_src_install() {
 	libdir="$(get_libdir)"
 
 	addpredict /usr/share/snmp/mibs/.index
+	addpredict /var/lib/net-snmp/
 	dodir /usr/bin
 	dodir /usr/${libdir}/php
 	dodir /usr/include/php
 
 	# parallel make breaks it
 	# so no emake here
+	einfo "Running make INSTALL_ROOT=${D} ${PHP_INSTALLTARGETS}"
 	make INSTALL_ROOT=${D} ${PHP_INSTALLTARGETS} || die
 
 	# install a php-config for EACH instance of php
