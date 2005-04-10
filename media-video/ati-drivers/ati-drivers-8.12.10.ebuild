@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-8.12.10.ebuild,v 1.1 2005/04/08 00:53:11 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-8.12.10.ebuild,v 1.2 2005/04/10 12:44:01 lu_zero Exp $
 
 IUSE="opengl"
 
@@ -28,6 +28,30 @@ RESTRICT="nostrip multilib-pkg-force"
 pkg_setup(){
 	#check kernel and sets up KV_OBJ
 	linux-mod_pkg_setup
+
+	ebegin "Checking for MTRR support enabled"
+	linux_chkconfig_present MTRR
+	eend $?
+	if [[ $? -ne 0 ]] ; then
+	ewarn "You don't have MTRR support enabled, the direct rendering"
+	ewarn "will not work."
+	fi
+	
+	ebegin "Checking for AGP support enabled"
+	linux_chkconfig_present AGP
+	eend $?
+	if [[ $? -ne 0 ]] ; then
+	ewarn "You don't have AGP support enabled, the direct rendering"
+	ewarn "will not work."
+	fi
+	ebegin "Checking for DRM support disabled"
+	linux_chkconfig_present DRM
+	eend ${!?}
+	if [[ $? -ne 0 ]] ; then
+	ewarn "You have DRM support enabled, the direct rendering"
+	ewarn "will not work."
+	fi
+	
 	# Set up X11 implementation
 	X11_IMPLEM_P="$(best_version virtual/x11)"
 	X11_IMPLEM="${X11_IMPLEM_P%-[0-9]*}"
