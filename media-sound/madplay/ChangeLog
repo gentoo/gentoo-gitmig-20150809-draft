@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/madplay
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/madplay/ChangeLog,v 1.34 2005/04/08 17:28:19 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/madplay/ChangeLog,v 1.35 2005/04/10 20:56:41 j4rg0n Exp $
+
+  10 Apr 2005; Lina Pezzella <j4rg0n@gentoo.org> madplay-0.15.2b.ebuild:
+  Testing ppc-macos
 
   08 Apr 2005; Michael Hanselmann <hansmi@gentoo.org>
   madplay-0.15.2b.ebuild:
