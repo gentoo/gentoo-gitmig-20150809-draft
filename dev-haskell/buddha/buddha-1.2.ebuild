@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/buddha/buddha-1.2.ebuild,v 1.2 2005/01/01 18:03:33 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/buddha/buddha-1.2.ebuild,v 1.3 2005/04/10 01:47:59 luckyduck Exp $
 
 inherit base ghc-package
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.cs.mu.oz.au/~bjpop/buddha/download/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 
 IUSE=""
 

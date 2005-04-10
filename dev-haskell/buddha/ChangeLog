@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/buddha
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/buddha/ChangeLog,v 1.2 2005/01/01 18:03:33 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/buddha/ChangeLog,v 1.3 2005/04/10 01:47:59 luckyduck Exp $
+
+*buddha-1.2 (10 Apr 2005)
+
+  10 Apr 2005; Jan Brinkmann <luckyduck@gentoo.org> buddha-1.2.ebuild:
+  added ~amd64 to keywords, fixes #71057
 
   03 Nov 2004; Andres Loeh <kosmikus@gentoo.org> :
   Initial import, thanks to Duncan Coutts (cf. bug #69270).
