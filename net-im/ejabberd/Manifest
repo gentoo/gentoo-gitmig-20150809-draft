@@ -1,19 +1,20 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 351f8b0da8f4872ba69f58557c54479f ChangeLog 531
-MD5 a36fd15cc7c89a482e9008cd2d4ab04f ejabberd-0.7.5.ebuild 2555
+MD5 92855f3329f942dd87e1af7fef2d2513 ChangeLog 707
+MD5 ecdf7a7094ac6bb06d4a322d16832b41 ejabberd-0.7.5.ebuild 2806
 MD5 4d142ea790d97a89bdcc4325d5e3b301 metadata.xml 383
 MD5 ca45e90d16657bc09537ea6653f30678 files/digest-ejabberd-0.7.5 66
 MD5 1cecdb28cdc7fdae6bf9aa53f9309d5c files/ejabberd 355
 MD5 7348d713e30c148b3208edf8e24d6ae5 files/ejabberd-0.7.5.confd 777
-MD5 b4fdf3ec65908433c30e6f478a18c4b1 files/ejabberd-0.7.5.initd 1375
+MD5 fa69896efdf335059d0545edf83cd359 files/ejabberd-0.7.5.initd 1374
 MD5 8379adf159d3d5749af973fe74d23367 files/ejabberdctl 199
 MD5 e088cd52d4316efddc54195dc939cd24 files/inetrc 36
+MD5 369bff16ecff4a042143b458597bf957 files/self-cert.sh 491
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFCVvn/8zY1VwezZiERAg8RAJ9YFUOqpjy4lR+Ecye/89RqLnHMMgCfWZnB
-GhmMLQrJV5vmiHV+SOHjK2M=
-=stMr
+iD8DBQFCWWv/8zY1VwezZiERAiQyAJ4tSQ5gPFJ/L7LkMqRMMMUZ0wWdVwCeKMVj
+BHtnDjdDRNUSHvqpNS94P/Q=
+=V/1u
 -----END PGP SIGNATURE-----

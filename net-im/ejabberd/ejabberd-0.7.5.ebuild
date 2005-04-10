@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ejabberd/ejabberd-0.7.5.ebuild,v 1.1 2005/04/08 20:02:35 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ejabberd/ejabberd-0.7.5.ebuild,v 1.2 2005/04/10 18:10:56 humpback Exp $
 
 inherit eutils
 
@@ -69,6 +69,9 @@ src_install() {
 
 	exeinto /etc/init.d
 	newexe ${FILESDIR}/ejabberd-0.7.5.initd ejabberd
+	if use ssl ; then
+		doexe ${FILESDIR}/self-cert.sh
+	fi
 
 	insinto /etc/conf.d
 	newins ${FILESDIR}/ejabberd-0.7.5.confd ejabberd
@@ -86,5 +89,10 @@ pkg_postinst() {
 		einfo "A sample configuration file has been installed in /etc/ejabberd/ejabberd.cfg.example."
 		einfo "Please copy it to /etc/ejabberd/ejabberd.cfg and edit it according to your needs."
 		einfo "For configuration instructions, please see /usr/share/doc/${P}/html/guide.html"
+	fi
+	if use ssl ; then
+		einfo "A script to generate a ssl key has been installed in"
+		einfo "/etc/ejabberd/self-cert.sh . Use it and change the config file to"
+		einfo "point to the full path"
 	fi
 }
