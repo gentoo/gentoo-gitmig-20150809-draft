@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 7e3eb77d4ec5130916d19b76fc077aef ChangeLog 729
+MD5 bdae298b71fb17a0fc485064ee6b5816 ChangeLog 826
 MD5 76d3681a949c983c4790bcd7e89d77bc metadata.xml 254
-MD5 4a34cd0c49659a9196c6ab00fecf9db9 pflogsumm-1.1.0.ebuild 596
+MD5 85020d5aad050a8cfc498e8d12ae79e2 pflogsumm-1.1.0.ebuild 603
 MD5 e973d627bd4089d78e7f71d193a502cb pflogsumm-1.0.11.ebuild 597
 MD5 1891f17af6cbafb0f6452e73a5d174ab files/digest-pflogsumm-1.1.0 66
 MD5 4466d44df635623be63823678a976df7 files/digest-pflogsumm-1.0.11 67
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFBviM+QlM6RnzZP+IRAhKLAJ9VY6FveQXGg2R5p5V1uquNRYZEvgCgh0kB
-1X4yRunEPIw12K0ANAVYxaw=
-=Xc09
+iD8DBQFCWLD0QlM6RnzZP+IRAnsmAKC7Z2ra7JGrm4Da52wnGiCA/A3B7gCghcSZ
+8Cazo9e3kGBR+Q3wqVOUXaM=
+=RQO5
 -----END PGP SIGNATURE-----
