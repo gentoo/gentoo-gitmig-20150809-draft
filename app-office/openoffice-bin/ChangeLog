@@ -1,6 +1,13 @@
 # ChangeLog for app-office/openoffice-bin
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/ChangeLog,v 1.70 2005/04/09 19:23:53 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/ChangeLog,v 1.71 2005/04/10 15:15:48 suka Exp $
+
+*openoffice-bin-1.9.91-r2 (10 Apr 2005)
+
+  10 Apr 2005; Andreas Proschofsky <suka@gentoo.org>
+  +openoffice-bin-1.9.91-r2.ebuild:
+  Another revision, which adds some 20 new unofficial translations, also this
+  uses another translation for german, which was borked in -r1
 
   09 Apr 2005; Andreas Proschofsky <suka@gentoo.org>
   openoffice-bin-1.9.91-r1.ebuild:
