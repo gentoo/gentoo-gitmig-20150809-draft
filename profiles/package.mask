@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3811 2005/04/09 23:53:26 eradicator Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3812 2005/04/10 00:16:13 cryos Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ##
+
+# Marcus D. Hanwell <cryos@gentoo.org> (10 Apr 2005)
+# Added until dev-libs/atk-1.9.1 (Gnome 2.10 stuff) come out of p.mask
+>=dev-cpp/glibmm-2.6.1
+>=dev-cpp/gtkmm-2.6.1
 
 # Jeremy Huddleston <eradicator@gentoo.org> (09 Apr 2005)
 # Hangs in setup.sh sometimes...
