@@ -13,5 +13,9 @@
 		La categoría app-vim contiene extensiones y paquetes 
 		de syntaxis para el editor de texto Vim.
 	</longdescription>
+	<longdescription lang="nl">
+		De app-vim categorie bevat plugins en syntax-bestanden
+		voor de vim text editor.
+	</longdescription>
 </catmetadata>
 
