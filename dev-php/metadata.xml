@@ -13,5 +13,9 @@
 		La categoría dev-php contiene librerías y utilidades referentes al
 		lenguaje de programación PHP.
 	</longdescription>
+	<longdescription lang="nl">
+		De dev-php categorie bevat bibliotheken en hulpmiddelen voor het gebruik
+		van de programmeertaal PHP.
+	</longdescription>
 </catmetadata>
 
