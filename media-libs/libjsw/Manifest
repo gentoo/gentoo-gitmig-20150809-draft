@@ -1,5 +1,5 @@
 MD5 c8d0a1c9b921e036ef34424f3cab235e ChangeLog 853
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 3381f011902d2beea2a7c883f61a98df libjsw-1.5.5.ebuild 1421
+MD5 6d31412ee2f28171ac74dd2e2a09423b libjsw-1.5.5.ebuild 1477
 MD5 31ad1236d527eb6aa9762930554c4239 files/digest-libjsw-1.5.5 65
 MD5 4ebd989ae2e416ffb4e29e25f0d4e954 files/libjsw-1.5.5-gcc33.patch 889
