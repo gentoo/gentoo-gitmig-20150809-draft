@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/elmo/elmo-1.3.2-r1.ebuild,v 1.4 2005/02/21 17:09:12 citizen428 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/elmo/elmo-1.3.2-r1.ebuild,v 1.5 2005/04/10 19:55:26 ferdy Exp $
 
 inherit eutils
 
@@ -18,17 +18,21 @@ RDEPEND="ssl? ( dev-libs/openssl )
 	nls? ( sys-devel/gettext )
 	crypt? ( >=app-crypt/gpgme-0.9.0 )"
 
-
 src_compile() {
 	local myconf
 
-	epatch ${FILESDIR}/configure.in.patch
+	epatch ${FILESDIR}/configure.in.patch || die "epatch failed"
 
-	myconf="${myconf} `use_enable nls`"
-	myconf="${myconf} `use_with ssl openssl`"
-	myconf="${myconf} `use_with crypt gpgme`"
+	ebegin "Rebuilding configure"
+		autoconf || die "autoconf failed"
+	eend $?
 
-	econf ${myconf} || die "econf failed"
+	use ssl && myconf="--with-openssl=/usr"
+
+	econf ${myconf} \
+			$(use_enable nls) \
+			$(use_with crypt gpgme) || die "econf failed"
+
 	emake || die "emake failed"
 }
 
