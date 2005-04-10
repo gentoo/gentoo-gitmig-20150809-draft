@@ -1,0 +1,47 @@
+--- amap-4.8/amap.c	2005-04-10 14:28:06.000000000 -0300
++++ amap-4.8.new/amap.c	2005-04-10 14:23:00.000000000 -0300
+@@ -424,7 +424,7 @@
+   f = amap_open_file(filename, "trigger", extension, opt->verbose);
+   if (opt->verbose > 1)
+     printf("\n");
+-  if (((amap_struct_triggers*) triggers = (amap_struct_triggers*) trigger = (amap_struct_triggers*) malloc(sizeof(amap_struct_triggers))) == NULL)
++  if ((triggers = trigger = (amap_struct_triggers*) malloc(sizeof(amap_struct_triggers))) == NULL)
+     amap_error("malloc failed");
+   memset(trigger, 0, sizeof(amap_struct_triggers));
+ 
+@@ -599,7 +599,7 @@
+   f = amap_open_file(filename, "response", extension, opt->verbose);
+   if (opt->verbose > 1)
+     printf("\n");
+-  if (((amap_struct_responses*) responses = (amap_struct_responses*) response = (amap_struct_responses*) malloc(sizeof(amap_struct_responses))) == NULL)
++  if ((responses = response = (amap_struct_responses*) malloc(sizeof(amap_struct_responses))) == NULL)
+     amap_error("malloc failed");
+   memset(response, 0, sizeof(amap_struct_responses));
+ 
+@@ -644,7 +644,7 @@
+         for (i = 0; i < strlen(triggerptr); i++)
+           if (triggerptr[i] == ',')
+             count++;
+-        if (((amap_struct_triggerptr*) triggerptr_tmp = response->triggerptr = malloc(sizeof(amap_struct_triggerptr))) == NULL)
++        if ((triggerptr_tmp = response->triggerptr = malloc(sizeof(amap_struct_triggerptr))) == NULL)
+           amap_error("malloc failed");
+         triggerptr_tmp->next = NULL;
+         
+@@ -756,7 +756,7 @@
+   int count = 0;
+ 
+   f = amap_open_file(filename, "nmap", "", opt->verbose);
+-  if (((amap_struct_targets*) targets = (amap_struct_targets*) target = (amap_struct_targets*) malloc(sizeof(amap_struct_targets))) == NULL)
++  if ((targets = target = (amap_struct_targets*) malloc(sizeof(amap_struct_targets))) == NULL)
+     amap_error("malloc failed");
+   memset(target, 0, sizeof(amap_struct_targets));
+   if ((port_tmp = target->ports = (amap_struct_ports *) malloc(sizeof(amap_struct_ports))) == NULL)
+@@ -2057,7 +2057,7 @@
+       responses_tmp = (amap_struct_responses*) responses_tmp->next;
+     }
+   } else {
+-    if (((amap_struct_triggers*) triggers = (amap_struct_triggers*) malloc(sizeof(amap_struct_triggers))) == NULL)
++    if (( triggers = (amap_struct_triggers*) malloc(sizeof(amap_struct_triggers))) == NULL)
+       amap_error("malloc failed");
+     triggers->next = NULL;
+     triggers->id = strdup("NULL");

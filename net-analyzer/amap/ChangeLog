@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/amap
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/amap/ChangeLog,v 1.23 2005/04/09 08:29:02 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/amap/ChangeLog,v 1.24 2005/04/10 17:37:02 vanquirius Exp $
+
+*amap-4.8-r1 (10 Apr 2005)
+
+  10 Apr 2005; Marcelo Goes <vanquirius@gentoo.org>
+  +files/amap-4.8-gcc4.patch, +amap-4.8-r1.ebuild:
+  Revision bump. Push fix from bug 88228, adding slightly modified gcc-4 patch
+  from Debian.
 
   09 Apr 2005; Markus Rothe <corsair@gentoo.org> amap-4.7.ebuild:
   Stable on ppc64
