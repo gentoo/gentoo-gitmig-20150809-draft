@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/mpg123
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/ChangeLog,v 1.86 2005/01/10 14:27:53 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/ChangeLog,v 1.87 2005/04/10 18:49:12 j4rg0n Exp $
+
+  10 Apr 2005; Lina Pezzella <j4rg0n@gentoo.org> +files/mpg123-osx.diff,
+  mpg123-0.59s-r9.ebuild:
+  Patched and testing ppc-macos.
 
   10 Jan 2005; Hardave Riar <hardave@gentoo.org> mpg123-0.59s-r9.ebuild:
   Stable on mips, bug #76862.

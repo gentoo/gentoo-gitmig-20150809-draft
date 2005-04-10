@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/mpg123-0.59s-r9.ebuild,v 1.7 2005/01/10 14:27:53 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/mpg123-0.59s-r9.ebuild,v 1.8 2005/04/10 18:49:12 j4rg0n Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ SRC_URI="http://www.mpg123.de/mpg123/${PN}-pre${PV}.tar.gz
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ia64 mips ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 hppa ia64 mips ppc ppc64 sparc x86 ~ppc-macos"
 IUSE="mmx 3dnow esd nas oss"
 
 RDEPEND="virtual/libc
@@ -35,8 +35,15 @@ src_unpack() {
 	unpack ${A}
 
 	cd ${S}
+
 	EPATCH_SUFFIX="patch"
 	epatch ${PATCHDIR}
+
+	if use ppc-macos;
+	then
+		einfo "Patching for OSX build"
+		epatch ${FILESDIR}/${PN}-osx.diff
+	fi
 
 	sed -i "s:${PV}-mh4:${PVR}:" version.h
 }
@@ -49,6 +56,7 @@ src_compile() {
 
 	use nas && styles="${styles} -nas"
 	use oss && styles="${styles} -generic"
+	atype="linux"
 
 	case $ARCH in
 		ppc64)
@@ -58,10 +66,15 @@ src_compile() {
 			[ -z "${styles}" ] && styles="-ppc64"
 			;;
 		ppc)
-			use esd && styles="${styles} -ppc-esd"
-			use oss && styles="${styles} -ppc"
+			if use ppc-macos; then
+				[ -z "${styles}" ] && styles="macos"
+				atype=""
+			else
+				use esd && styles="${styles} -ppc-esd"
+				use oss && styles="${styles} -ppc"
 
-			[ -z "${styles}" ] && styles="-ppc"
+				[ -z "${styles}" ] && styles="-ppc"
+			fi
 			;;
 		x86)
 			use esd && styles="${styles} -esd"
@@ -105,7 +118,7 @@ src_compile() {
 
 	for style in ${styles};
 	do
-		make clean linux${style} CFLAGS="${CFLAGS}" || die
+		make clean ${atype}${style} CFLAGS="${CFLAGS}" || die
 		mv mpg123 gentoo-bin/mpg123${style}
 		[ -L "gentoo-bin/mpg123" ] && rm gentoo-bin/mpg123
 		ln -s mpg123${style} gentoo-bin/mpg123
@@ -114,7 +127,11 @@ src_compile() {
 
 src_install() {
 	dodir /usr
-	cp -dR gentoo-bin ${D}/usr/bin
+	if use ppc-macos; then
+		cp -R gentoo-bin ${D}/usr/bin
+	else
+		cp -dR gentoo-bin ${D}/usr/bin
+	fi
 	doman mpg123.1
 	dodoc BENCHMARKING BUGS CHANGES COPYING JUKEBOX README* TODO
 }
