@@ -1,7 +1,17 @@
-MD5 c720b3029d04ddcaefc17a0e499c49a2 ChangeLog 3036
-MD5 b52fc5bd9f5fee3b16174fc099728586 iptraf-2.7.0-r1.ebuild 1262
-MD5 c9bffeaf46df5f049cac7648916475ab iptraf-2.7.0.ebuild 843
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 92b21ee0011381ad63942bed173ff6a0 ChangeLog 3126
 MD5 a94566c6927ccaeca24681c25540624d metadata.xml 236
+MD5 c9bffeaf46df5f049cac7648916475ab iptraf-2.7.0.ebuild 843
+MD5 0f9e0bc956b85474f930cce31c61a644 iptraf-2.7.0-r1.ebuild 1259
+MD5 1bf72405b3017f7732841188b6914160 files/iptraf-2.7.0-atheros.patch 1644
 MD5 68d035b52bb75c049cc9a59f51ce2a07 files/digest-iptraf-2.7.0 64
 MD5 1822bd37e9eff2ce7881d2a46c074037 files/digest-iptraf-2.7.0-r1 138
-MD5 1bf72405b3017f7732841188b6914160 files/iptraf-2.7.0-atheros.patch 1644
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCWbj1QlM6RnzZP+IRAh+kAJ0UBdtLMZjRGwI+H0vZxS4TSygm1QCfYyKt
+O8JuZc9Ov3/1Soo/2MaWmtI=
+=KrTo
+-----END PGP SIGNATURE-----
