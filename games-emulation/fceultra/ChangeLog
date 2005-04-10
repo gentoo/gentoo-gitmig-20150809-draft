@@ -1,6 +1,9 @@
 # ChangeLog for games-emulation/fceultra
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/fceultra/ChangeLog,v 1.13 2004/11/24 09:14:53 mr_bones_ Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/fceultra/ChangeLog,v 1.14 2005/04/10 12:49:57 blubb Exp $
+
+  10 Apr 2005; Simon Stelling <blubb@gentoo.org> fceultra-0.98.12.ebuild:
+  added ~amd64
 
 *fceultra-0.98.12 (24 Nov 2004)
 
