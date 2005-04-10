@@ -13,5 +13,9 @@
 		La categoría games-misc contiene juegos que no encajan en ninguna de las
 		otras categorías games-.
 	</longdescription>
+	<longdescription lang="nl">
+		De games-misc categorie bevat spellen die niet in een van de andere
+		categorieen ingedeeld konden worden.
+	</longdescription>
 </catmetadata>
 
