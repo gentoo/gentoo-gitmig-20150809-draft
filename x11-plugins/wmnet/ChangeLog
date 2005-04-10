@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmnet
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmnet/ChangeLog,v 1.18 2005/04/07 17:15:01 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmnet/ChangeLog,v 1.19 2005/04/10 11:55:59 hansmi Exp $
+
+  10 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> wmnet-1.06-r1.ebuild:
+  Stable on ppc.
 
   07 Apr 2005; Simon Stelling <blubb@gentoo.org> wmnet-1.06-r1.ebuild:
   stable on amd64
