@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Temp/File-Temp-0.14.ebuild,v 1.9 2005/03/31 19:19:13 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Temp/File-Temp-0.14.ebuild,v 1.10 2005/04/10 18:18:24 blubb Exp $
 
 inherit perl-module
 
@@ -15,5 +15,5 @@ SRC_TEST="do"
 
 LICENSE="|| ( Artistic GPL-2 )"
 SLOT="0"
-KEYWORDS="x86 ~amd64 ppc sparc alpha ~ppc64"
+KEYWORDS="x86 amd64 ppc sparc alpha ~ppc64"
 IUSE=""
