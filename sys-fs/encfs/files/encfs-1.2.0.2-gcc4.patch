@@ -1,0 +1,57 @@
+diff -urN ../tmp-orig/encfs-1.2.0/encfs/FileUtils.cpp ./encfs/FileUtils.cpp
+--- ../tmp-orig/encfs-1.2.0/encfs/FileUtils.cpp	2005-02-10 20:37:50.000000000 +0100
++++ ./encfs/FileUtils.cpp	2005-03-30 17:36:49.351757058 +0200
+@@ -23,6 +23,7 @@
+ #include "config.h"
+ 
+ #include "readpassphrase.h"
++#include "autosprintf.h"
+ 
+ #include "FileUtils.h"
+ #include "Config.h"
+@@ -54,6 +55,7 @@
+ using namespace rel;
+ using namespace rlog;
+ using namespace std;
++using namespace gnu;
+ 
+ static const int DefaultBlockSize = 512;
+ // environment variable names for values encfs stores in the environment when
+diff -urN ../tmp-orig/encfs-1.2.0/encfs/encfsctl.cpp ./encfs/encfsctl.cpp
+--- ../tmp-orig/encfs-1.2.0/encfs/encfsctl.cpp	2005-02-10 20:37:51.000000000 +0100
++++ ./encfs/encfsctl.cpp	2005-03-30 17:38:08.756869007 +0200
+@@ -17,6 +17,7 @@
+ 
+ 
+ #include "encfs.h"
++#include "autosprintf.h"
+ 
+ #include "config.h"
+ 
+@@ -39,6 +40,7 @@
+ 
+ using namespace rlog;
+ using namespace std;
++using namespace gnu;
+ 
+ 
+ static int showInfo( int argc, char **argv );
+diff -urN ../tmp-orig/encfs-1.2.0/encfs/main.cpp ./encfs/main.cpp
+--- ../tmp-orig/encfs-1.2.0/encfs/main.cpp	2005-02-10 20:37:50.000000000 +0100
++++ ./encfs/main.cpp	2005-03-30 17:37:16.356693771 +0200
+@@ -18,6 +18,7 @@
+ 
+ #include "encfs.h"
+ #include "config.h"
++#include "autosprintf.h"
+ 
+ #include <iostream>
+ #include <string>
+@@ -57,6 +58,7 @@
+ #endif
+ 
+ using namespace std;
++using namespace gnu;
+ using namespace rlog;
+ using namespace rel;
+ 
