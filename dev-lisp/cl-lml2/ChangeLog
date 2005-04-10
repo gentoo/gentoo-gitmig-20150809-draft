@@ -1,6 +1,13 @@
 # ChangeLog for dev-lisp/cl-lml2
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-lml2/ChangeLog,v 1.5 2004/06/24 23:46:35 agriffis Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-lml2/ChangeLog,v 1.6 2005/04/10 20:40:11 mkennedy Exp $
+
+*cl-lml2-1.5.3 (10 Apr 2005)
+
+  10 Apr 2005; Matthew Kennedy <mkennedy@gentoo.org>
+  -files/1.5.0-gentoo.patch, -cl-lml2-1.4.1.ebuild, -cl-lml2-1.5.0.ebuild,
+  -cl-lml2-1.5.1.ebuild, +cl-lml2-1.5.3.ebuild:
+  Keywording for ~amd64; Removed older ebuilds; New upstream version.
 
   09 May 2004; David Holm <dholm@gentoo.org> cl-lml2-1.5.1.ebuild:
   Added to ~ppc.
