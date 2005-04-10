@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/dstat
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dstat/ChangeLog,v 1.9 2005/04/09 04:53:35 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dstat/ChangeLog,v 1.10 2005/04/10 11:24:27 swegener Exp $
+
+*dstat-0.5.10 (10 Apr 2005)
+
+  10 Apr 2005; Sven Wegener <swegener@gentoo.org> +dstat-0.5.10.ebuild:
+  Version bump.
 
   09 Apr 2005; Joseph Jezak <josejx@gentoo.org> dstat-0.5.9.ebuild:
   Marked ~ppc for bug #87984.
