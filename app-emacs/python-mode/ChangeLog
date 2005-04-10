@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/python-mode
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/python-mode/ChangeLog,v 1.11 2005/02/10 08:34:04 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/python-mode/ChangeLog,v 1.12 2005/04/10 18:34:33 hansmi Exp $
+
+  10 Apr 2005; Michael Hanselmann <hansmi@gentoo.org>
+  python-mode-4.63-r1.ebuild:
+  Added to ~ppc.
 
   10 Feb 2005; Mamoru KOMACHI <usata@gentoo.org> python-mode-4.63-r1.ebuild,
   -python-mode-4.63.ebuild:
