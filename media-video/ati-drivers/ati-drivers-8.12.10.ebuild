@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-8.12.10.ebuild,v 1.2 2005/04/10 12:44:01 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-8.12.10.ebuild,v 1.3 2005/04/10 18:37:41 lu_zero Exp $
 
 IUSE="opengl"
 
@@ -12,7 +12,7 @@ SRC_URI="x86? ( http://www2.ati.com/drivers/linux/fglrx_6_8_0-${PV}-1.i386.rpm )
 	 amd64? ( http://www2.ati.com/drivers/linux/fglrx64_6_8_0-${PV}-1.x86_64.rpm )"
 
 LICENSE="ATI"
-KEYWORDS="-* ~x86"
+KEYWORDS="-* ~x86 ~amd64"
 
 RDEPEND=">=x11-base/xorg-x11-6.8.0
 	 >=x11-base/opengl-update-2.1_pre1"
