@@ -1,6 +1,9 @@
 # ChangeLog for dev-lisp/cl-terminfo
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-terminfo/ChangeLog,v 1.5 2005/03/20 10:08:47 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-terminfo/ChangeLog,v 1.6 2005/04/10 20:14:19 mkennedy Exp $
+
+  10 Apr 2005; Matthew Kennedy <mkennedy@gentoo.org> cl-terminfo-1.3.ebuild:
+  Keywording for ~amd64
 
   20 Mar 2005; Matthew Kennedy <mkennedy@gentoo.org> metadata.xml:
   Corrected metadata.xml
