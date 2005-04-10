@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/opensc
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/opensc/ChangeLog,v 1.14 2005/01/31 03:33:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/opensc/ChangeLog,v 1.15 2005/04/10 16:36:09 vanquirius Exp $
+
+  10 Apr 2005; Marcelo Goes <vanquirius@gentoo.org>
+  +files/opensc-0.9.4-gcc4.patch, opensc-0.9.4.ebuild:
+  Adding gcc4 patch from Debian.
 
   30 Jan 2005; Mike Frysinger <vapier@gentoo.org> opensc-0.9.4.ebuild:
   Add reverse deps patch to fix relinking bugs.
