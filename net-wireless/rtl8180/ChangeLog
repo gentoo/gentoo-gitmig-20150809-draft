@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/rtl8180
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/rtl8180/ChangeLog,v 1.3 2005/03/23 06:23:19 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/rtl8180/ChangeLog,v 1.4 2005/04/10 12:23:44 hansmi Exp $
+
+  10 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> rtl8180-0.20.2.ebuild:
+  Added to ~ppc (reported by silian87 in #gentoo-ppc).
 
   23 Mar 2005; Stefan Schweizer <genstef@gentoo.org> rtl8180-0.19.ebuild,
   rtl8180-0.20.2.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/rtl8180/rtl8180-0.20.2.ebuild,v 1.2 2005/03/23 06:23:19 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/rtl8180/rtl8180-0.20.2.ebuild,v 1.3 2005/04/10 12:23:44 hansmi Exp $
 
 inherit linux-mod
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://rtl8180-sa2400.sourceforge.net"
 SRC_URI="mirror://sourceforge/rtl8180-sa2400/${P}.tar.gz"
 LICENSE="GPL-2"
 
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 IUSE=""
 DEPEND="net-wireless/wireless-tools"
 
