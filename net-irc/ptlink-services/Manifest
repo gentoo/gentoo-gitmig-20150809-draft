@@ -1,18 +1,20 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 c2e9f43381bf9beb46083123dceac38f ptlink-services-2.26.ebuild 2133
-MD5 4f3711219922187c6294babcf828be35 ptlink-services-2.25.1.ebuild 2131
-MD5 787be7cd009540a71e696a63c5b446fa ChangeLog 1275
+MD5 50136a9db664198e69ddf08109585c09 ptlink-services-2.26.ebuild 2088
+MD5 dfeb950cb40602e339daed80c97cb892 ptlink-services-2.25.1.ebuild 2086
+MD5 ad72c521d878eae6f40794edf6550303 ptlink-services-2.26.1.ebuild 2164
+MD5 660a21e51c42321117e3370438a32852 ChangeLog 1477
 MD5 44c39c6ad372a8e5a5e7ee3311f703a7 metadata.xml 160
 MD5 3585e53e707b0ab0a38b56eda84c4fe1 files/digest-ptlink-services-2.25.1 73
+MD5 3c890cb51331ff65716b41079986c9c5 files/digest-ptlink-services-2.26.1 77
 MD5 6292e2ff1036f5e444ff2285313e0303 files/ptlink-services.conf.d 308
 MD5 f4d76c1e161415ae8fc240e81b671a28 files/digest-ptlink-services-2.26 75
 MD5 c6208b2429d4184be4ebc50272f7853a files/ptlink-services.init.d 581
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCNip0I1lqEGTUzyQRAmqrAKCvFHVV9RTsqgQO4ngQMEWT4B29vQCgwUTp
-YUrVJCJ4Xprgq3TfPfY/3AY=
-=1ryA
+iD4DBQFCWQ9NI1lqEGTUzyQRAi8FAJi+orzoh1Vv+Wea5B6EpQLzPS8YAKDVQTIN
+FqqmFAsTaYuVy8yG8ET4PA==
+=QXuP
 -----END PGP SIGNATURE-----

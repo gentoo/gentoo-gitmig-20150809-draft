@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ptlink-services/ptlink-services-2.25.1.ebuild,v 1.3 2005/04/10 11:34:20 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ptlink-services/ptlink-services-2.26.1.ebuild,v 1.1 2005/04/10 11:34:20 swegener Exp $
 
-inherit fixheadtails eutils
+inherit fixheadtails eutils versionator
 
-MY_P="PTlink.Services${PV}"
+MY_P="PTlink.Services$(get_version_component_range 1-2)-eol.$(get_version_component_range 3)"
 
 DESCRIPTION="PTlink Services"
 HOMEPAGE="http://www.ptlink.net/"
