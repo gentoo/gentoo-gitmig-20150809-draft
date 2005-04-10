@@ -1,0 +1,8 @@
+# ChangeLog for games-strategy/glest
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/glest/ChangeLog,v 1.1 2005/04/10 04:42:43 vapier Exp $
+
+*glest-1.0.10_p7 (10 Apr 2004)
+
+  10 Apr 2004; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by Bob Ziuchkovski et al #84419.
