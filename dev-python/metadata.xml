@@ -17,5 +17,9 @@
 		Kategoria dev-python zawiera biblioteki oraz narzędzia związane
 		z językiem programowania Python.
 	</longdescription>
+	<longdescription lang="nl">
+		De dev-python categorie bevat bibliotheken en hulpmiddelen voor het gebruik
+		van de programmeertaal Python.
+	</longdescription>
 </catmetadata>
 
