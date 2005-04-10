@@ -3,8 +3,7 @@
 <pkgmetadata>
   <herd>crypto</herd>
   <maintainer>
-    <email>genstef@gentoo.org</email>
-    <name>Stefan Schweizer</name>
-    <description>I do not use it myself, feel free to contact me, if you want to take it over</description>
+    <email>vanquirius@gentoo.org</email>
+    <name>Marcelo Goes</name>
   </maintainer>
 </pkgmetadata>

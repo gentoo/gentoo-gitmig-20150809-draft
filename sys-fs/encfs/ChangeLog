@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/encfs
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/encfs/ChangeLog,v 1.7 2005/04/10 16:55:54 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/encfs/ChangeLog,v 1.8 2005/04/10 20:46:14 vanquirius Exp $
+
+  10 Apr 2005; Marcelo Goes <vanquirius@gentoo.org> metadata.xml:
+  Maintenance of this package was passed to me by genstef.
 
 *encfs-1.2.0.2 (10 Apr 2005)
 
