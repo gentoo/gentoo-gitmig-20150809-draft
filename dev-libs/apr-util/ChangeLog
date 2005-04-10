@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/apr-util
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr-util/ChangeLog,v 1.16 2005/04/01 03:58:31 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr-util/ChangeLog,v 1.17 2005/04/10 21:37:05 trapni Exp $
+
+*apr-util-1.1.2 (10 Apr 2005)
+
+  10 Apr 2005; Christian Parpart <trapni@gentoo.org> +apr-util-1.1.2.ebuild:
+  adding apr-util-1 (1.1.1) ebuilds to the series of apr versions which is the
+  base requirement (besides of apr-1) for forthcoming apache httpd 2.1.x
+  series ;)
 
   31 Mar 2005; Aron Griffis <agriffis@gentoo.org> apr-util-0.9.5.ebuild:
   stable on ia64
