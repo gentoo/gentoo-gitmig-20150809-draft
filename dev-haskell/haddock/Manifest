@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 128b9a894439f7226495b06aa0ea7b3c haddock-0.6-r2.ebuild 1981
-MD5 03482b72095314a06ab7144d9c34775d haddock-0.6-r3.ebuild 2217
-MD5 c684e8e503b63fb2dd2caf251794656f ChangeLog 3430
 MD5 a769ecfcd1cdd2d40986627df7dfb249 metadata.xml 224
-MD5 6c35081e22594c96591797459c28da01 files/digest-haddock-0.6-r2 67
-MD5 6c35081e22594c96591797459c28da01 files/digest-haddock-0.6-r3 67
+MD5 f7f7d3d647f26b2c373ad76da30932e7 ChangeLog 3523
+MD5 128b9a894439f7226495b06aa0ea7b3c haddock-0.6-r2.ebuild 1981
+MD5 c8a3d11e3e5f6a9eb1a1875f00fb4608 haddock-0.6-r3.ebuild 2214
 MD5 bd211a7c5442dadeee6975dbb15f2e45 files/haddock-0.6-gcc3.4.patch 1967
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCQtX/OKSBj1ObwosRAqL1AJ4nXoqDpejZfGBnQjHIVGENjjg80wCghH6g
-SGxUJ+ZvOxkJnSIjMZVAUpU=
-=VBqW
------END PGP SIGNATURE-----
+MD5 6c35081e22594c96591797459c28da01 files/digest-haddock-0.6-r3 67
+MD5 6c35081e22594c96591797459c28da01 files/digest-haddock-0.6-r2 67

@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 214929350ba5f0f820fa80346267337a wxhaskell-0.8-r1.ebuild 1812
-MD5 e0961f29aa49504567f8b29e7552d5d8 wxhaskell-0.7.ebuild 2355
-MD5 41c62e72cbc618dbf6dd6231a6f7897e wxhaskell-0.9.ebuild 1810
-MD5 e5dc82f3bd70d3fc4056ec7c2e1f5a1b ChangeLog 1969
 MD5 a769ecfcd1cdd2d40986627df7dfb249 metadata.xml 224
-MD5 6f249be5b808ef834f9ea740d68b12c4 files/digest-wxhaskell-0.7 66
+MD5 41c62e72cbc618dbf6dd6231a6f7897e wxhaskell-0.9.ebuild 1810
+MD5 bc306923e0af3a2325bbe15ffd4816e6 ChangeLog 2066
+MD5 94a3b57037bef592ac7def9aa9f05ab3 wxhaskell-0.8-r1.ebuild 1809
+MD5 e0961f29aa49504567f8b29e7552d5d8 wxhaskell-0.7.ebuild 2355
 MD5 252f6e6df89834ca7cc1f0b68cecbd3c files/digest-wxhaskell-0.9 66
+MD5 6f249be5b808ef834f9ea740d68b12c4 files/digest-wxhaskell-0.7 66
 MD5 08efb7ecd02832c5599b968bdc329dc9 files/digest-wxhaskell-0.8-r1 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFCNdeHOKSBj1ObwosRAjr3AJ0bzozhgSGk2CJ9VMUt4uHZN8ttBQCfTBs/
-kRDuRs17AHzzWfbZKq7dtIA=
-=bq6S
------END PGP SIGNATURE-----
