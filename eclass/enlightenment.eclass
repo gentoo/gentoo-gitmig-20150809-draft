@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/enlightenment.eclass,v 1.43 2005/04/10 03:10:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/enlightenment.eclass,v 1.44 2005/04/10 03:28:16 vapier Exp $
 #
 # Author: vapier@gentoo.org
 
@@ -24,7 +24,7 @@ if [[ ${PV/9999} != ${PV} ]] ; then
 	ECVS_SERVER=${ECVS_SERVER:-cvs.sourceforge.net:/cvsroot/enlightenment}
 	ECVS_STATE="live"
 	inherit cvs
-elif [[ ${PV/.200?????/} != ${PV} ]] || [[ ${PV/2003????} != ${PV} ]] ; then
+elif [[ ${PV/.200?????/} != ${PV} ]] ; then
 	ECVS_STATE="snap"
 fi
 
@@ -55,12 +55,12 @@ case ${ECVS_STATE} in
 esac
 
 enlightenment_warning_msg() {
-	if [[ ${PV/200} != ${PV} ]] ; then
+	if [[ ${ECVS_STATE} == "snap" ]] ; then
 		ewarn "Please do not contact the E team about bugs in Gentoo."
 		ewarn "Only contact vapier@gentoo.org via e-mail or bugzilla."
 		ewarn "Remember, this stuff is CVS only code so dont cry when"
 		ewarn "I break you :)."
-	elif [[ ${PV/9999} != ${PV} ]] ; then
+	elif [[ ${ECVS_STATE} == "live" ]] ; then
 		eerror "This is a LIVE CVS ebuild."
 		eerror "That means there are NO promises it will work."
 		eerror "If it fails to build, FIX THE CODE YOURSELF"
@@ -80,9 +80,10 @@ enlightenment_pkg_setup() {
 # the stupid gettextize script prevents non-interactive mode, so we hax it
 gettext_modify() {
 	use nls || return 0
-	cp $(which gettextize) ${T} || die "could not copy gettextize"
-	cp ${T}/gettextize ${T}/gettextize.old
-	sed -e 's:read dummy < /dev/tty::' ${T}/gettextize.old > ${T}/gettextize
+	cp $(which gettextize) "${T}"/ || die "could not copy gettextize"
+	sed -i \
+		-e 's:read dummy < /dev/tty::' \
+		"${T}"/gettextize
 }
 
 enlightenment_src_unpack() {
@@ -95,7 +96,7 @@ enlightenment_src_unpack() {
 }
 
 enlightenment_src_compile() {
-	if [[ ${ECVS_STATE} != "release" ]] ; then
+	if [[ ${ECVS_STATE} != "release" ]] || [[ ! -e configure ]] ; then
 		[[ ! -z ${EHACKAUTOGEN} ]] && sed -i 's:.*configure.*::' autogen.sh
 		export WANT_AUTOMAKE=${EAUTOMAKE:-1.8}
 		env \
