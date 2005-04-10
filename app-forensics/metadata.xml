@@ -13,5 +13,9 @@
 		La categoría app-forensics contiene programas para ayudar a detectar
 		y analizar problemas de seguridad.
 	</longdescription>
+	<longdescription lang="nl>
+		De app-forensics categorie bevat applicaties voor het detecteren en
+		analyseren van inbreuken op de veiligheid van het systeem.
+	</longdescription>
 </catmetadata>
 
