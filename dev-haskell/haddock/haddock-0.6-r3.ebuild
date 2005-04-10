@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haddock/haddock-0.6-r3.ebuild,v 1.6 2005/03/24 14:54:39 kosmikus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haddock/haddock-0.6-r3.ebuild,v 1.7 2005/04/10 18:38:40 hansmi Exp $
 #
 # USE variable summary:
 #   doc    - Build extra documenation from DocBook sources,
@@ -16,7 +16,7 @@ SRC_URI="http://www.haskell.org/haddock/${P}-src.tar.gz"
 HOMEPAGE="http://www.haskell.org/haddock"
 
 SLOT="0"
-KEYWORDS="x86 ~ppc ~amd64"
+KEYWORDS="x86 ppc ~amd64"
 LICENSE="as-is"
 
 DEPEND="virtual/ghc
