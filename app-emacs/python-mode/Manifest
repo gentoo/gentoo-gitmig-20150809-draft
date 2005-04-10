@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 0a5fcfab51b1f2025d74347b9fe8b87f ChangeLog 1329
 MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
 MD5 6e8232bd472d77f7d96b2fec0d0ad07b python-mode-4.6.ebuild 778
-MD5 f76f96627762d27c759de6ed26ff691d python-mode-4.63-r1.ebuild 876
-MD5 b16866ae5b915c74ccb69ff8591a4ada files/50python-mode-gentoo.el 334
+MD5 7328d8d19f622cfc137fe554f282337c ChangeLog 1432
+MD5 c0b341d75fdfcd95f9d378792f285f72 python-mode-4.63-r1.ebuild 882
 MD5 7842a604f7fbeda6be9d9b86f6d143bb files/digest-python-mode-4.6 67
+MD5 b16866ae5b915c74ccb69ff8591a4ada files/50python-mode-gentoo.el 334
 MD5 2f5fc2b5c01b7202432d5e420db9d66b files/55python-mode-gentoo.el 505
 MD5 45d20c84f1cf40ffa73a3471d5e4ac6f files/digest-python-mode-4.63-r1 71
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFCCxpmVWNWqTUmv+0RAklvAKCts5G+D5MEl0M3jVEIZQbd4/GOUgCdH4U6
-bn9kQ3wjkg1qTHTIw+Da+VQ=
-=G5bx
------END PGP SIGNATURE-----
