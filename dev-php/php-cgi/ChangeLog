@@ -1,6 +1,11 @@
 # ChangeLog for dev-php/php-cgi
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php-cgi/ChangeLog,v 1.55 2005/02/21 21:34:38 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php-cgi/ChangeLog,v 1.56 2005/04/10 21:44:02 stuart Exp $
+
+*php-cgi-4.3.11 (10 Apr 2005)
+
+  10 Apr 2005; Stuart Herbert <stuart@gentoo.org> +php-cgi-4.3.11.ebuild:
+  Version bump; see security-related bug #87517 for details
 
   21 Feb 2005; Hardave Riar <hardave@gentoo.org> php-cgi-4.3.10.ebuild:
   Marked ~mips
