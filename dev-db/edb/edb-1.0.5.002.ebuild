@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/edb/edb-1.0.5.20050220.ebuild,v 1.1 2005/02/21 09:30:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/edb/edb-1.0.5.002.ebuild,v 1.1 2005/04/10 03:17:25 vapier Exp $
 
-ECVS_MODULE="e17/libs/edb"
+EKEY_STATE=snap
 EHACKAUTOGEN=yes
 inherit enlightenment flag-o-matic
 
