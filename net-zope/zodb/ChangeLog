@@ -1,6 +1,9 @@
 # ChangeLog for net-zope/zodb
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zodb/ChangeLog,v 1.10 2005/04/08 15:58:28 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zodb/ChangeLog,v 1.11 2005/04/10 12:22:39 blubb Exp $
+
+  10 Apr 2005; Simon Stelling <blubb@gentoo.org> zodb-3.2.6.ebuild:
+  added ~amd64
 
   08 Apr 2005; Seemant Kulleen <seemant@gentoo.org> zodb-3.3.ebuild:
   marked testing on amd64
