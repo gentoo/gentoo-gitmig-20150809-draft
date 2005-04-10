@@ -10,5 +10,8 @@
 	<longdescription lang="es">
 		La categoría games-server contiene servidores de juegos.
 	</longdescription>
+	<longdescription lang="nl">
+		De games-server categorie bevat spelservers.
+	</longdescription>
 </catmetadata>
 
