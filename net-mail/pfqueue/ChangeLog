@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/pfqueue
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/pfqueue/ChangeLog,v 1.10 2005/03/22 17:22:09 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/pfqueue/ChangeLog,v 1.11 2005/04/10 04:43:03 ticho Exp $
+
+  10 Apr 2005; Andrej Kacian <ticho@gentoo.org> pfqueue-0.3.5.ebuild:
+  Added ~amd64 keyword.
 
 *pfqueue-0.3.5 (22 Mar 2005)
 
