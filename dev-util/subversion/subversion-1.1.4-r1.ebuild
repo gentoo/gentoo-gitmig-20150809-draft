@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.1.4-r1.ebuild,v 1.2 2005/04/10 20:20:46 trapni Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.1.4-r1.ebuild,v 1.3 2005/04/10 20:23:18 trapni Exp $
 
 inherit elisp-common libtool python eutils bash-completion flag-o-matic depend.apache
 
@@ -55,7 +55,7 @@ pkg_setup() {
 		ewarn "Please note, that subversion has now a new local useflag added."
 		ewarn
 		ewarn "This useflag, webdav, will let you optionally provide the"
-		ewarn "ability to decide wether you want the your \`svn\` client to"
+		ewarn "ability to decide wether you want the \`svn\` client to"
 		ewarn "support URL schemes like http:// and https:// or not."
 		echo
 		ebeep
