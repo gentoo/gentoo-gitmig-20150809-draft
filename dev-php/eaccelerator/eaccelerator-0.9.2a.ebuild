@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/eaccelerator/eaccelerator-0.9.2a.ebuild,v 1.5 2005/03/19 23:02:35 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/eaccelerator/eaccelerator-0.9.2a.ebuild,v 1.6 2005/04/10 14:55:35 sebastian Exp $
 
 PHP_EXT_NAME="eaccelerator"
 PHP_EXT_ZENDEXT="yes"
@@ -11,7 +11,7 @@ DESCRIPTION="A PHP Accelerator & Encoder."
 HOMEPAGE="http://www.eaccelerator.net/"
 SRC_URI="mirror://sourceforge/eaccelerator/${P}.tar.gz"
 S=${WORKDIR}/eaccelerator
-IUSE=""
+IUSE="session"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~amd64 sparc"
@@ -35,6 +35,11 @@ src_compile() {
 	fi
 
 	myconf="--enable-eaccelerator=shared"
+
+	if use !session; then
+		myconf="${myconf} --without-eaccelerator-sessions"
+	fi
+
 	php-ext-source_src_compile
 }
 
