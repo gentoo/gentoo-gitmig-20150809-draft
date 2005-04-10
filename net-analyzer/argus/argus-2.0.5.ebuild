@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/argus/argus-2.0.5.ebuild,v 1.10 2005/01/29 05:12:50 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/argus/argus-2.0.5.ebuild,v 1.11 2005/04/10 20:37:43 vanquirius Exp $
 
 inherit eutils
 
@@ -31,7 +31,8 @@ src_install () {
 	dodoc COPYING CREDITS INSTALL README
 	dodoc doc/FAQ doc/HOW-TO doc/CHANGES
 
-	doman man/man1/* man/man5/* man/man8/*
+	#do not install man/man1/tcpdump.1, file collision
+	doman man/man1/ra* man/man5/* man/man8/*
 
 	dolib lib/argus_common.a lib/argus_parse.a
 
