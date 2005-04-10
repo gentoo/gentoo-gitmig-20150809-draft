@@ -13,5 +13,9 @@
 		La categoría dev-dotnet contiene librerias y utilidades referentes al
 		ambiente de programación .NET.
 	</longdescription>
+	<longdescription lang="nl">
+		De dev-dotnet categorie bevat bibliotheken en hulpmiddelen voor het gebruik
+		van de verschillende .NET programmeertalen.
+	</longdescription>
 </catmetadata>
 
