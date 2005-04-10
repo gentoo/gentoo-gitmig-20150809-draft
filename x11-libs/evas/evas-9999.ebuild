@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/evas/evas-9999.ebuild,v 1.5 2005/01/19 01:21:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/evas/evas-9999.ebuild,v 1.6 2005/04/10 03:32:38 vapier Exp $
 
 EHACKAUTOGEN="yes"
 inherit enlightenment flag-o-matic
@@ -11,9 +11,9 @@ HOMEPAGE="http://www.enlightenment.org/pages/evas.html"
 IUSE="X directfb fbcon jpeg mmx opengl png sse cairo"
 
 DEPEND="virtual/x11
-	>=media-libs/imlib2-1.1.2.20041016
-	>=dev-libs/eet-0.9.9.20041016
-	>=dev-db/edb-1.0.5.20041016
+	>=media-libs/imlib2-1.2.0
+	>=dev-libs/eet-0.9.9
+	>=dev-db/edb-1.0.5
 	png? ( media-libs/libpng )
 	jpeg? ( media-libs/jpeg )
 	directfb? ( >=dev-libs/DirectFB-0.9.16 )
