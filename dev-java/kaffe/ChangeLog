@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/kaffe
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/kaffe/ChangeLog,v 1.29 2005/04/09 20:24:19 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/kaffe/ChangeLog,v 1.30 2005/04/10 00:54:12 luckyduck Exp $
+
+  10 Apr 2005; Jan Brinkmann <luckyduck@gentoo.org> kaffe-1.1.5.ebuild:
+  marked -ppc, javavm of this release doesnt work on ppc
 
   09 Apr 2005; Jan Brinkmann <luckyduck@gentoo.org> kaffe-1.1.5.ebuild:
   added ~amd64 to KEYWORDS, left ~ppc out because the kaffe/java binary doesnt
