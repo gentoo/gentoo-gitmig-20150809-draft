@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/subversion
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/ChangeLog,v 1.149 2005/04/05 09:31:50 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/ChangeLog,v 1.150 2005/04/10 20:06:00 trapni Exp $
+
+*subversion-1.1.4-r1 (10 Apr 2005)
+
+  10 Apr 2005; Christian Parpart <trapni@gentoo.org>
+  +subversion-1.1.4-r1.ebuild:
+  added optional depend on neon via webdav local useflag
 
 *subversion-1.1.4 (05 Apr 2005)
 
