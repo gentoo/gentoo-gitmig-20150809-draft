@@ -1,6 +1,10 @@
 # ChangeLog for net-im/silc-toolkit
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/silc-toolkit/ChangeLog,v 1.39 2005/04/07 12:06:26 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/silc-toolkit/ChangeLog,v 1.40 2005/04/10 18:35:10 eradicator Exp $
+
+  10 Apr 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  silc-toolkit-0.9.13.ebuild:
+  Fix proper -fPIC usage on amd64.  Fixed dependencies.  
 
 *silc-toolkit-0.9.13 (07 Apr 2005)
 
