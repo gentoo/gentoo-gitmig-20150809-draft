@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 dc315825960eb1ea465cd0faa21985f5 jircii-24.ebuild 774
-MD5 9c69cd5cbfc763278927444057f3d33f jircii-30.ebuild 775
-MD5 cb20b91e37314c287713d7a84454d06e ChangeLog 3005
+MD5 4fd435e4766bb88fe3e1575d83a226da jircii-31.ebuild 773
+MD5 a6e50cedb5297e5a6a04636a026a5206 jircii-24.ebuild 772
+MD5 82638ee75c78c49010f8d1c4918c72c9 ChangeLog 3138
 MD5 44c39c6ad372a8e5a5e7ee3311f703a7 metadata.xml 160
 MD5 eb993c5effb169dcd45bb06aba6dea74 files/digest-jircii-24 57
-MD5 2011184ac27e6fd6a2635235d232caf3 files/digest-jircii-30 56
+MD5 0184f40c46c47706a6515deb35b0258d files/digest-jircii-31 56
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCNfv2I1lqEGTUzyQRAryyAKCrGN3SVDH6ak9YLwZ3Ap8qyC0TJQCeONi/
-XUXWn7B5F1Ya8KlDbO3BrYY=
-=G1zm
+iD8DBQFCWRG+I1lqEGTUzyQRAt4JAJ9pugxNR/62/0jpB2pF5mg/JWYhWACfZHVI
+7b9Ocep1H4CpZ1gpXxigpfE=
+=QX8p
 -----END PGP SIGNATURE-----
