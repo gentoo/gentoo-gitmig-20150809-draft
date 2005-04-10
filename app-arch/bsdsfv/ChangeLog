@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/bsdsfv
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/bsdsfv/ChangeLog,v 1.15 2005/02/20 05:08:59 gongloo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/bsdsfv/ChangeLog,v 1.16 2005/04/10 20:51:38 vapier Exp $
+
+  10 Apr 2005; Mike Frysinger <vapier@gentoo.org> bsdsfv-1.18.ebuild:
+  Mark -amd64 since it failed to properly verify half the files in a 70 disk set.
 
   20 Feb 2005; <gongloo@gentoo.org> bsdsfv-1.18.ebuild:
   Stable on ppc-macos.
