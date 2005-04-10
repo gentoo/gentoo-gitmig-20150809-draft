@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/epic5/epic5-0.0.3.ebuild,v 1.1 2005/02/17 03:34:43 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/epic5/epic5-0.0.4.ebuild,v 1.1 2005/04/10 12:22:31 swegener Exp $
 
 inherit eutils
 
@@ -23,7 +23,6 @@ src_unpack() {
 	cd ${S}
 
 	epatch ${FILESDIR}/epic-defaultserver.patch
-	epatch ${FILESDIR}/${PV}-ipv6-fix.patch
 
 	sed -i \
 		-e 's:/include/tcl$ver:/include:' \
@@ -47,8 +46,6 @@ src_install () {
 	einstall \
 		sharedir=${D}/usr/share \
 		libexecdir=${D}/usr/lib/misc || die "einstall failed"
-
-	dosym epic5-${PV} /usr/bin/epic5
 
 	dodoc BUG_FORM COPYRIGHT README KNOWNBUGS VOTES
 

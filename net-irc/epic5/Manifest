@@ -1,16 +1,15 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 cb7e8128e10061208c484d3a258295e6 ChangeLog 637
+MD5 78d29f8e697b7322b3e76f5016abe6f2 epic5-0.0.4.ebuild 1294
+MD5 bce417f56e54e51db316a050512034c0 ChangeLog 805
 MD5 44c39c6ad372a8e5a5e7ee3311f703a7 metadata.xml 160
-MD5 9f27e0c55d9eca6a03b3c2db659a4c55 epic5-0.0.3.ebuild 1370
 MD5 6aa61e3d4cb005aac02541c2d2d1fff1 files/epic-defaultserver.patch 610
-MD5 e3b1572f52898c5b14db4fb52e86ad14 files/digest-epic5-0.0.3 64
-MD5 fbd3dcb095f830275cdf02699e4b2d55 files/0.0.3-ipv6-fix.patch 805
+MD5 a1e3d8616e5a690b90fac070aa848323 files/digest-epic5-0.0.4 64
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCFBDZI1lqEGTUzyQRAsVHAJ4w6LTAptmIY+kyYhqKcmhp8T04KgCfT61/
-x6Ed15t9Df1XwKruRgd+hSw=
-=j8fo
+iD8DBQFCWRqYI1lqEGTUzyQRAk4WAJ94lPJh+L8eUCHKKy4eXNavJPn2JgCgqJSj
+5iOIqFu0XUqr05TmO4akRmc=
+=Ixbe
 -----END PGP SIGNATURE-----
