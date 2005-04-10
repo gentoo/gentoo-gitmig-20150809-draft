@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libggi/libggi-2.1.0.ebuild,v 1.3 2005/04/09 23:10:25 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libggi/libggi-2.1.0.ebuild,v 1.4 2005/04/10 00:56:30 josejx Exp $
 
 inherit eutils libtool
 
@@ -18,13 +18,6 @@ DEPEND=">=media-libs/libgii-0.9.0
 	svga? ( >=media-libs/svgalib-1.4.2 )
 	aalib? ( >=media-libs/aalib-1.2-r1 )
 	dga? (virtual/x11)"
-
-src_unpack() {
-	unpack ${A}
-
-	cd ${S}
-	use ppc && epatch ${FILESDIR}/libggi-${PV}-ppc.patch
-}
 
 src_compile() {
 	elibtoolize
