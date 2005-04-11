@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 2a6674d3778fb8456de113ce6ebfce92 ChangeLog 2100
-MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 14e7d67e2be88028f7079ecbe90e4c0c ChangeLog 2211
 MD5 30a0509143bc40b033698b2bba7b84c5 XML-NamespaceSupport-1.07-r1.ebuild 582
 MD5 62b3842fb2428a3031208cd5bc95caaa XML-NamespaceSupport-1.07.ebuild 573
-MD5 38674d68559e13dea50f79880b3ff4e7 XML-NamespaceSupport-1.08.ebuild 585
-MD5 7920237125ecbdbb6f695d8c40f63d26 files/digest-XML-NamespaceSupport-1.07-r1 75
+MD5 3d90a17daffe0d951c020625cd37e640 XML-NamespaceSupport-1.08.ebuild 590
+MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 7920237125ecbdbb6f695d8c40f63d26 files/digest-XML-NamespaceSupport-1.07 75
+MD5 7920237125ecbdbb6f695d8c40f63d26 files/digest-XML-NamespaceSupport-1.07-r1 75
 MD5 76f23443775274572d2a867ac9cd093f files/digest-XML-NamespaceSupport-1.08 75
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFB2qUutG5z4I8BtQoRAnDoAKCLpOqTwr5+ki8rDSxZApM82pcBZgCeICNy
-9zR5WQ09+DRNqqj5xiXUydE=
-=7kvj
------END PGP SIGNATURE-----

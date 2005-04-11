@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 fea43af0ca498c1c3507f0e8823e8487 ChangeLog 1855
-MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 f928104b8395a4e662110b8cef7a9761 ChangeLog 1954
 MD5 9892a109a2f81e67e8fd1c6522502d5b XML-Sablot-0.90-r1.ebuild 593
 MD5 3bec101294624173e29a6c16977ca544 XML-Sablot-0.90.ebuild 585
-MD5 3a230d612419895a0e94acaab7614b64 XML-Sablot-0.98.ebuild 641
-MD5 d347e54c54b8de3a8097edb78625f7d4 files/digest-XML-Sablot-0.90-r1 69
+MD5 d641901126bc5ed62e7a81d943afa161 XML-Sablot-0.98.ebuild 646
+MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 d347e54c54b8de3a8097edb78625f7d4 files/digest-XML-Sablot-0.90 69
+MD5 d347e54c54b8de3a8097edb78625f7d4 files/digest-XML-Sablot-0.90-r1 69
 MD5 6c649e32064af8fe820f53dafb650196 files/digest-XML-Sablot-0.98 69
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFB2qaOtG5z4I8BtQoRAg2aAJ4uTTurD4mJhxpqQdmW4PbwiR586wCZATKE
-hvem8DE2/v2uAJjjN+3p35c=
-=bFlW
------END PGP SIGNATURE-----
