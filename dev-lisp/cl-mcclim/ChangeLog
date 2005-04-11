@@ -1,6 +1,16 @@
 # ChangeLog for dev-lisp/cl-mcclim
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-mcclim/ChangeLog,v 1.6 2005/02/09 07:55:59 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-mcclim/ChangeLog,v 1.7 2005/04/11 07:08:39 mkennedy Exp $
+
+*cl-mcclim-0.9.1 (11 Apr 2005)
+
+  11 Apr 2005; Matthew Kennedy <mkennedy@gentoo.org>
+  +files/0.9.1-mcclim.asd-cmucl.patch,
+  -files/0.9.20040603/50mcclim-gentoo.el, -files/0.9.20041227-gentoo.patch,
+  -files/0.9/system.lisp-gentoo.patch, -cl-mcclim-0.9.ebuild,
+  +cl-mcclim-0.9.1.ebuild, -cl-mcclim-0.9.20040603.ebuild,
+  -cl-mcclim-0.9.20041227.ebuild, -cl-mcclim-0.9.20050202.ebuild:
+  New upstream; Removed older ebuilds.
 
 *cl-mcclim-0.9.20050202 (04 Feb 2005)
 
