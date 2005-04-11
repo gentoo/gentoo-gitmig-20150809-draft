@@ -1,0 +1,44 @@
+diff -u ../WMxmms-0.1.4.orig/src/xmms_func.c src/xmms_func.c
+--- ../WMxmms-0.1.4.orig/src/xmms_func.c	2005-03-21 11:51:47.375860272 -0700
++++ src/xmms_func.c	2005-03-21 11:42:37.106513928 -0700
+@@ -113,17 +113,31 @@
+ {
+        char *command;
+        int status;
++       int count = 0;
++
++       if( xmms_remote_is_running(xmms_session) ) 
++	 {
++	   fprintf(stderr, "XMMS is already running...");
++	   return;
++	 }
+ 
+        command=malloc(strlen(xmms_cmd)+5);
+        sprintf(command, "%s &", xmms_cmd);
++
+        status = system(command);
+-       if (status)
+-        {
+-      		fprintf(stderr, "XMMS can't be launched, exiting...");
+-      		exit(1);
+-        }
+-       while (!xmms_remote_is_running(xmms_session))
++
++       while (!xmms_remote_is_running(xmms_session) && count < 30) {
+        		usleep(10000L);
++		count++;
++       }
++
++       if( (count == 30) && status){
++      		fprintf(stderr, 
++			"status(%d) XMMS can't be launched, exiting...\n",
++			status);
++      		exit(1);
++       }
++
+        free(command);
+ }
+ 
+Only in ../WMxmms-0.1.4.orig/src: xmms_func.c.orig
+Only in src: .xmms_func.c.swp
+Common subdirectories: ../WMxmms-0.1.4.orig/src/.xvpics and src/.xvpics

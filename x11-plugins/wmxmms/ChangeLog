@@ -1,6 +1,11 @@
 # ChangeLog for x11-plugins/wmxmms
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmxmms/ChangeLog,v 1.5 2004/09/02 18:22:41 pvdabeel Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmxmms/ChangeLog,v 1.6 2005/04/11 08:52:04 s4t4n Exp $
+
+*wmxmms-0.1.4-r1 (11 Apr 2005)
+
+  11 Apr 2005; Michele Noberasco <s4t4n@gentoo.org> wmxmms-0.1.4-r1.ebuild:
+  Revision, bump, adding patch to fix #88280.
 
   02 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   wmxmms-0.1.4.ebuild:
