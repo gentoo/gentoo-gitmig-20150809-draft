@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/math-pari
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/math-pari/ChangeLog,v 1.9 2004/06/25 00:45:28 agriffis Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/math-pari/ChangeLog,v 1.10 2005/04/11 16:25:48 mcummings Exp $
+
+*math-pari-2.010603 (11 Apr 2005)
+
+  11 Apr 2005; Michael Cummings <mcummings@gentoo.org>
+  math-pari-2.010500-r1.ebuild, +math-pari-2.010603.ebuild:
+  New version; needed for crypt modules to function (learned the hard way)
 
   08 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org>
   math-pari-2.010500.ebuild:

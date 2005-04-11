@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/math-pari/math-pari-2.010500-r1.ebuild,v 1.11 2005/04/11 16:25:48 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/math-pari/math-pari-2.010603.ebuild,v 1.1 2005/04/11 16:25:48 mcummings Exp $
 
 inherit perl-module
 
@@ -9,15 +9,17 @@ S=${WORKDIR}/${MY_P}
 DESCRIPTION="Perl interface to PARI"
 HOMEPAGE="http://www.cpan.org/authors/id/I/IL/ILYAZ/modules/${MY_P}.readme"
 SRC_URI="mirror://cpan/authors/id/I/IL/ILYAZ/modules/${MY_P}.tar.gz
-		http://www.gn-50uma.de/ftp/pari-2.1/pari-2.1.5.tar.gz"
+		http://pari.math.u-bordeaux.fr/pub/pari/unix/pari-2.1.6.tgz"
 
 LICENSE="|| ( Artistic GPL-2 )"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc ~alpha hppa ~amd64 ~mips"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~amd64 ~mips"
 IUSE=""
+
+SRC_TEST="do"
 
 # Math::Pari requires that a copy of the pari source in a parallel
 # directory to where you build it. It does not need to compile it, but
 # it does need to be the same version as is installed, hence the hard
 # DEPEND below
-DEPEND="~sci-mathematics/pari-2.1.5"
+DEPEND="~sci-mathematics/pari-2.1.6"

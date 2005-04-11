@@ -1,4 +1,6 @@
 MD5 cf5505cf2ca04bf4cbc9827ee2ef7633 ChangeLog 666
+MD5 c550f49925cd6950a571786805a41bbc crypt-rsa-1.50.ebuild 898
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 ada5dd796cd7c97349ace95c001d4745 crypt-rsa-1.50.ebuild 875
+MD5 00f02da6476116c50b52bebf5658b638 crypt-rsa-1.55.ebuild 912
 MD5 a8dad20501159576e22cb72eca1569e8 files/digest-crypt-rsa-1.50 65
+MD5 11d96095be36d85374842724ca7bbc1b files/digest-crypt-rsa-1.55 65

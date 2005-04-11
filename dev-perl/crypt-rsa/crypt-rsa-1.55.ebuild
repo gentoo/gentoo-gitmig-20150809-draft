@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/crypt-rsa/crypt-rsa-1.50.ebuild,v 1.9 2005/04/11 16:27:39 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/crypt-rsa/crypt-rsa-1.55.ebuild,v 1.1 2005/04/11 16:27:39 mcummings Exp $
 
 inherit perl-module
 
@@ -12,12 +12,12 @@ SRC_URI="mirror://cpan/authors/id/V/VI/VIPUL/${MY_P}.tar.gz"
 
 LICENSE="|| ( Artistic GPL-2 )"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc ~alpha hppa ~amd64 ~mips"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~amd64 ~mips"
 IUSE=""
 
 SRC_TEST="do"
 
-DEPEND="dev-perl/math-pari
+DEPEND=">=dev-perl/math-pari-2.010603*
 	dev-perl/crypt-random
 	dev-perl/Crypt-Blowfish
 	dev-perl/Sort-Versions
@@ -27,6 +27,6 @@ DEPEND="dev-perl/math-pari
 	dev-perl/digest-md2
 	dev-perl/convert-ascii-armour
 	dev-perl/tie-encryptedhash
-	dev-perl/data-buffer
 	dev-perl/crypt-primes
+	dev-perl/data-buffer
 	dev-perl/crypt-cbc"
