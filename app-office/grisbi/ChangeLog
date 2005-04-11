@@ -1,6 +1,16 @@
 # ChangeLog for app-office/grisbi
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/grisbi/ChangeLog,v 1.12 2005/02/25 20:30:50 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/grisbi/ChangeLog,v 1.13 2005/04/11 20:15:01 seemant Exp $
+
+*grisbi-0.5.5.20050410 (11 Apr 2005)
+
+  11 Apr 2005; Seemant Kulleen <seemant@gentoo.org> +files/grisbi.desktop,
+  -grisbi-0.5.2.ebuild, grisbi-0.5.4-r1.ebuild, grisbi-0.5.5.ebuild,
+  +grisbi-0.5.5.20050410.ebuild:
+  Version bump to cvs snapshot which fixes segfault on edit->preferences
+  issue, as reported in bug #87468 by Will Wilson <wilson.william@gmail.com>.
+  The snapshot was taken and ebuilt by: Guillaume Castagnino <guilc@fr.st> in
+  the same bug. He also added a nice .desktop file for this.
 
 *grisbi-0.5.5 (25 Feb 2005)
 

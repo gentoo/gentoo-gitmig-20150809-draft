@@ -1,0 +1,10 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Grisbi
+Comment=A personnal account manager
+Exec=grisbi
+Icon=grisbi/grisbi.png
+Terminal=false
+Type=Application
+MimeType=application/x-grisbi
+Categories=Application;Office;
