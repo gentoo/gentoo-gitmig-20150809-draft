@@ -1,6 +1,14 @@
 # ChangeLog for media-video/xine-ui
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/ChangeLog,v 1.72 2005/03/29 06:06:09 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/ChangeLog,v 1.73 2005/04/11 14:53:09 luckyduck Exp $
+
+*xine-ui-0.99.3-r1 (11 Apr 2005)
+
+  11 Apr 2005; Jan Brinkmann <luckyduck@gentoo.org> metadata.xml,
+  +xine-ui-0.99.3-r1.ebuild:
+  Applied the cleanup patch from Diego Pettenò <dgp85@users.sourceforge.net> to
+  0.99.3, fixes #87439. updated maintainer information, chriswhite is retired.
+  :(
 
 *xine-ui-0.99.3_pre20041022-r1 (29 Mar 2005)
 
