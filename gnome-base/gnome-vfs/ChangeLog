@@ -1,6 +1,11 @@
 # ChangeLog for gnome-base/gnome-vfs
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/ChangeLog,v 1.138 2005/04/08 18:41:04 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/ChangeLog,v 1.139 2005/04/11 08:27:58 obz Exp $
+
+*gnome-vfs-1.0.5-r4 (11 Apr 2005)
+
+  11 Apr 2005; Mike Gardiner <obz@gentoo.org> +gnome-vfs-1.0.5-r4.ebuild:
+  New revision to 1.0.5 for CAN-2005-0706 - see bug #84936 for more information.
 
   08 Apr 2005; Guy Martin <gmsoft@gentoo.org> gnome-vfs-2.8.4-r1.ebuild:
   Stable on hppa.
