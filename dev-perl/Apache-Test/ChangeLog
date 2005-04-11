@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Apache-Test
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-Test/ChangeLog,v 1.17 2005/04/01 17:30:50 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-Test/ChangeLog,v 1.18 2005/04/11 19:12:19 corsair Exp $
+
+  11 Apr 2005; Markus Rothe <corsair@gentoo.org> Apache-Test-1.21.ebuild:
+  Added ~ppc64 to KEYWORDS
 
   01 Apr 2005; Simon Stelling <blubb@gentoo.org> Apache-Test-1.15.ebuild:
   stable on amd64

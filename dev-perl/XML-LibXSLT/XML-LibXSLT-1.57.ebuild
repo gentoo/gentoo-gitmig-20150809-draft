@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-LibXSLT/XML-LibXSLT-1.57.ebuild,v 1.5 2005/03/22 19:07:06 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-LibXSLT/XML-LibXSLT-1.57.ebuild,v 1.6 2005/04/11 19:05:49 corsair Exp $
 
 inherit perl-module
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://search.cpan.org/~msergeant/${P}/"
 
 SLOT="0"
 LICENSE="Artistic"
-KEYWORDS="~x86 ~amd64 ~alpha ~ppc ~sparc"
+KEYWORDS="~x86 ~amd64 ~alpha ~ppc ~sparc ~ppc64"
 IUSE=""
 
 # Disabled for now. The tests generate errors on threaded perls due

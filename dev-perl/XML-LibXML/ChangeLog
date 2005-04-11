@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/XML-LibXML
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-LibXML/ChangeLog,v 1.31 2004/07/29 21:17:33 rac Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-LibXML/ChangeLog,v 1.32 2005/04/11 19:04:07 corsair Exp $
+
+  11 Apr 2005; Markus Rothe <corsair@gentoo.org> XML-LibXML-1.58.ebuild:
+  Added ~ppc64 to KEYWORDS
 
   29 Jul 2004; Robert Coie <rac@gentoo.org> XML-LibXML-1.58.ebuild:
   keyword ~mips to satisfy axkit and libxslt
