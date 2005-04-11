@@ -1,13 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/trayer/trayer-1.0.ebuild,v 1.6 2005/04/10 11:57:12 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/trayer/trayer-1.0.ebuild,v 1.7 2005/04/11 21:03:23 gustavoz Exp $
 
 DESCRIPTION="Lightweight GTK2-based systray for UNIX desktop"
 HOMEPAGE="http://fvwm-crystal.berlios.de/"
 SRC_URI="http://fvwm-crystal.berlios.de/files/versions/20050306/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~sparc ppc"
+KEYWORDS="x86 sparc ppc"
 IUSE=""
 DEPEND=">=x11-libs/gtk+-2"
 
