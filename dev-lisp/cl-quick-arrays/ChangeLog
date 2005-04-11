@@ -1,6 +1,10 @@
 # ChangeLog for dev-lisp/cl-quick-arrays
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-quick-arrays/ChangeLog,v 1.5 2005/02/03 03:42:26 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-quick-arrays/ChangeLog,v 1.6 2005/04/11 08:15:51 mkennedy Exp $
+
+  11 Apr 2005; Matthew Kennedy <mkennedy@gentoo.org>
+  cl-quick-arrays-1.0-r1.ebuild:
+  Keywording for ~amd64
 
   02 Feb 2005; Matthew Kennedy <mkennedy@gentoo.org>
   cl-quick-arrays-1.0-r1.ebuild:
