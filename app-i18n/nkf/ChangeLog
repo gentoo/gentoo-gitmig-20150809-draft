@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/nkf
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/nkf/ChangeLog,v 1.21 2005/01/01 14:36:38 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/nkf/ChangeLog,v 1.22 2005/04/11 22:43:30 matsuu Exp $
+
+*nkf-2.0.5 (11 Apr 2005)
+
+  11 Apr 2005; MATSUU Takuto <matsuu@gentoo.org> +nkf-2.0.5.ebuild:
+  Version bumped.
 
   23 Nov 2004; Akinori Hattori <hattya@gentoo.org> nkf-2.0.4.ebuild:
   stable on ia64.
