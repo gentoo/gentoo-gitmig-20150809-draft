@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mdadm/mdadm-1.9.0-r1.ebuild,v 1.3 2005/04/09 13:17:30 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mdadm/mdadm-1.9.0-r1.ebuild,v 1.4 2005/04/11 22:18:20 vapier Exp $
 
 inherit eutils
 
@@ -11,12 +11,11 @@ SRC_URI="mirror://kernel/utils/raid/mdadm/${P}.tgz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ia64 ~ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86"
 IUSE="static"
 
-RDEPEND="virtual/libc"
+RDEPEND=""
 DEPEND="${RDEPEND}
-	>=sys-apps/sed-4
 	>=sys-apps/portage-2.0.51"
 
 src_unpack() {
