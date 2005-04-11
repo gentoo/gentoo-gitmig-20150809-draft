@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre6-r1.ebuild,v 1.5 2005/04/07 15:05:12 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre6-r1.ebuild,v 1.6 2005/04/11 21:01:50 luckyduck Exp $
 
 inherit eutils flag-o-matic kernel-mod
 
@@ -501,12 +501,12 @@ src_install() {
 		# Fix the symlink
 		rm -rf ${D}/usr/bin/gmplayer
 		dosym mplayer /usr/bin/gmplayer
-	fi
 
-	insinto /usr/share/pixmaps
-	newins ${S}/Gui/mplayer/pixmaps/logo.xpm mplayer.xpm
-	insinto /usr/share/applications
-	doins ${FILESDIR}/mplayer.desktop
+		insinto /usr/share/pixmaps
+		newins ${S}/Gui/mplayer/pixmaps/logo.xpm mplayer.xpm
+		insinto /usr/share/applications
+		doins ${FILESDIR}/mplayer.desktop
+	fi
 
 	dodir /usr/share/mplayer/fonts
 	local x=

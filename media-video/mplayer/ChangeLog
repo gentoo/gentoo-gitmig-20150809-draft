@@ -1,6 +1,11 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.289 2005/04/07 15:05:12 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.290 2005/04/11 21:01:50 luckyduck Exp $
+
+  11 Apr 2005; Jan Brinkmann <luckyduck@gentoo.org>
+  mplayer-1.0_pre6-r1.ebuild, mplayer-1.0_pre6-r2.ebuild:
+  added support for blinkenlights, fixes #86776. we also dont install useless
+  menu entries any longer if use -gtk, fixes bug #86399
 
   07 Apr 2005; Jan Brinkmann <luckyduck@gentoo.org>
   mplayer-1.0_pre6-r1.ebuild, mplayer-1.0_pre6-r2.ebuild:

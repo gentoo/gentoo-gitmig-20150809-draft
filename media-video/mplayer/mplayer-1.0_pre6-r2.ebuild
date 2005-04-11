@@ -1,11 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre6-r2.ebuild,v 1.5 2005/04/07 15:05:12 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre6-r2.ebuild,v 1.6 2005/04/11 21:01:50 luckyduck Exp $
 
 inherit eutils flag-o-matic kernel-mod
 
 RESTRICT="nostrip"
-IUSE="3dfx 3dnow 3dnowex aalib alsa altivec arts avi bidi debug dga divx4linux doc dts dvb cdparanoia directfb dvd dv dvdread edl encode esd fbcon gif ggi gtk i8x0 ipv6 jack joystick jpeg libcaca lirc live lzo mad matroska matrox mpeg mmx mmxext mythtv nas nls nvidia oggvorbis opengl oss png real rtc samba sdl sse sse2 svga tga theora truetype v4l v4l2 X xanim xinerama xmms xv xvid xvmc"
+IUSE="3dfx 3dnow 3dnowex aalib alsa altivec arts avi bidi bl debug dga divx4linux doc dts dvb cdparanoia directfb dvd dv dvdread edl encode esd fbcon gif ggi gtk i8x0 ipv6 jack joystick jpeg libcaca lirc live lzo mad matroska matrox mpeg mmx mmxext mythtv nas nls nvidia oggvorbis opengl oss png real rtc samba sdl sse sse2 svga tga theora truetype v4l v4l2 X xanim xinerama xmms xv xvid xvmc"
 
 BLUV=1.4
 SVGV=1.9.17
@@ -435,6 +435,9 @@ src_compile() {
 
 	use live && myconf="${myconf} --with-livelibdir=/usr/$(get_libdir)/live"
 
+	# support for blinkenlights
+	use bl && myconf="${myconf} --enable-bl"
+
 	#leave this in place till the configure/compilation borkage is completely corrected back to pre4-r4 levels.
 	# it's intended for debugging so we can get the options we configure mplayer w/, rather then hunt about.
 	# it *will* be removed asap; in the meantime, doesn't hurt anything.
@@ -501,12 +504,12 @@ src_install() {
 		# Fix the symlink
 		rm -rf ${D}/usr/bin/gmplayer
 		dosym mplayer /usr/bin/gmplayer
-	fi
 
-	insinto /usr/share/pixmaps
-	newins ${S}/Gui/mplayer/pixmaps/logo.xpm mplayer.xpm
-	insinto /usr/share/applications
-	doins ${FILESDIR}/mplayer.desktop
+		insinto /usr/share/pixmaps
+		newins ${S}/Gui/mplayer/pixmaps/logo.xpm mplayer.xpm
+		insinto /usr/share/applications
+		doins ${FILESDIR}/mplayer.desktop
+	fi
 
 	dodir /usr/share/mplayer/fonts
 	local x=
