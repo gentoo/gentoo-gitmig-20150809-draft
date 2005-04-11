@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/XML-XPath
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-XPath/ChangeLog,v 1.18 2005/03/09 18:49:39 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-XPath/ChangeLog,v 1.19 2005/04/11 18:58:46 corsair Exp $
+
+  11 Apr 2005; Markus Rothe <corsair@gentoo.org> XML-XPath-1.13.ebuild:
+  Stable on ppc64; bug #88639
 
   09 Mar 2005; Markus Rothe <corsair@gentoo.org> XML-XPath-1.13.ebuild:
   Added ~ppc64 to KEYWORDS
