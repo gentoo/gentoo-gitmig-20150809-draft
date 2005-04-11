@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-5.0.0.13124.ebuild,v 1.1 2005/04/08 18:04:57 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-5.0.0.13124.ebuild,v 1.2 2005/04/11 15:35:59 wolf31o2 Exp $
 
 # Unlike many other binary packages the user doesn't need to agree to a licence
 # to download VMWare. The agreeing to a licence is part of the configure step
@@ -9,7 +9,7 @@
 inherit eutils
 
 S=${WORKDIR}/vmware-distrib
-#ANY_ANY="vmware-any-any-update89"
+ANY_ANY="vmware-any-any-update90"
 NP="VMware-workstation-5.0.0-13124"
 DESCRIPTION="Emulate a complete PC on your PC without the usual performance overhead of most emulators"
 HOMEPAGE="http://www.vmware.com/products/desktop/ws_features.html"
@@ -22,12 +22,11 @@ SRC_URI="http://vmware-svca.www.conxion.com/software/wkst/${NP}.tar.gz
 	http://vmware-heva.www.conxion.com/software/wkst/${NP}.tar.gz
 	http://vmware.wespe.de/software/wkst/${NP}.tar.gz
 	ftp://vmware.wespe.de/pub/software/wkst/${NP}.tar.gz
+	http://ftp.cvut.cz/vmware/${ANY_ANY}.tar.gz
+	http://ftp.cvut.cz/vmware/obselete/${ANY_ANY}.tar.gz
+	http://knihovny.cvut.cz/ftp/pub/vmware/${ANY_ANY}.tar.gz
+	http://knihovny.cvut.cz/ftp/pub/vmware/obselete/${ANY_ANY}.tar.gz
 	mirror://gentoo/vmware.png"
-#	http://ftp.cvut.cz/vmware/${ANY_ANY}.tar.gz
-#	http://ftp.cvut.cz/vmware/obselete/${ANY_ANY}.tar.gz
-#	http://knihovny.cvut.cz/ftp/pub/vmware/${ANY_ANY}.tar.gz
-#	http://knihovny.cvut.cz/ftp/pub/vmware/obselete/${ANY_ANY}.tar.gz
-#	mirror://gentoo/vmware.png"
 
 LICENSE="vmware"
 IUSE=""
@@ -49,12 +48,12 @@ Ddir=${D}/${dir}
 
 src_unpack() {
 	unpack ${NP}.tar.gz
-#	cd ${S}
-#	unpack ${ANY_ANY}.tar.gz
-#	mv -f ${ANY_ANY}/*.tar ${S}/lib/modules/source/
-#	cd ${S}/${ANY_ANY}
-#	chmod 755 ../lib/bin/vmware ../bin/vmnet-bridge ../lib/bin/vmware-vmx ../lib/bin-debug/vmware-vmx
-	# vmware any89 still doesn't patch the vmware binary
+	cd ${S}
+	unpack ${ANY_ANY}.tar.gz
+	mv -f ${ANY_ANY}/*.tar ${S}/lib/modules/source/
+	cd ${S}/${ANY_ANY}
+	chmod 755 ../lib/bin/vmware ../bin/vmnet-bridge ../lib/bin/vmware-vmx ../lib/bin-debug/vmware-vmx
+	# vmware any90 still doesn't patch the vmware binary
 	#./update vmware ../lib/bin/vmware || die
 	#./update bridge ../bin/vmnet-bridge || die
 	#./update vmx ../lib/bin/vmware-vmx || die
@@ -74,15 +73,15 @@ src_install() {
 	chmod u+s ${Ddir}/bin/vmware-ping
 	chmod u+s ${Ddir}/lib/bin/vmware-vmx
 
-	dodoc doc/*
+	dodoc doc/* || die "dodoc"
 
-	doman ${dir}/man/man1/vmware.1.gz
+	doman ${S}/man/man1/vmware.1.gz || die "doman"
 
 	# vmware service loader
-	newinitd ${FILESDIR}/vmware.rc vmware || die
+	newinitd ${FILESDIR}/vmware.rc vmware || die "newinitd"
 
 	# vmware enviroment
-	doenvd ${FILESDIR}/90vmware || die
+	doenvd ${FILESDIR}/90vmware || die "doenvd"
 
 	dodir /etc/vmware/
 	cp -a etc/* ${D}/etc/vmware/

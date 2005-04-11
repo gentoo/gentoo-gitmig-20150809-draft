@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-3.2.1.2242-r3.ebuild,v 1.1 2005/02/09 15:20:18 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-3.2.1.2242-r3.ebuild,v 1.2 2005/04/11 15:35:59 wolf31o2 Exp $
 
 # Unlike many other binary packages the user doesn't need to agree to a licence
 # to download VM Ware.  The agreeing to a licence is part of the configure step
@@ -9,7 +9,7 @@
 inherit gcc eutils
 
 S=${WORKDIR}/vmware-distrib
-ANY_ANY="vmware-any-any-update89"
+ANY_ANY="vmware-any-any-update90"
 NP="VMware-workstation-3.2.1-2242"
 DESCRIPTION="Emulate a complete PC on your PC without the usual performance overhead of most emulators"
 HOMEPAGE="http://www.vmware.com/products/desktop/ws_features.html"
@@ -82,19 +82,15 @@ src_install() {
 	chmod u+s ${Ddir}/bin/vmware-ping
 	chmod u+s ${Ddir}/lib/bin/vmware-vmx
 
-	dodir ${dir}/doc
-	cp -a doc/* ${Ddir}doc
+	dodoc doc/* || die "dodoc"
 
-	dodir ${dir}/man
-	cp -a man/* ${Ddir}/man
+	doman ${S}/man/man1/vmware.1.gz || die "doman"
 
 	# vmware service loader
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/${PV}/vmware vmware
+	newinitd ${FILESDIR}/${PV}/vmware vmware || die "newinitd"
 
 	# vmware enviroment
-	insinto /etc/env.d
-	doins ${FILESDIR}/${PV}/90vmware
+	doenvd ${FILESDIR}/${PV}/90vmware || die "doenvd"
 
 	dodir /etc/vmware/
 	cp -a etc/* ${D}/etc/vmware/
