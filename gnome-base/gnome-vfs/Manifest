@@ -8,7 +8,7 @@ MD5 3f31e708c7ae2f7d071eae7e08197c0c gnome-vfs-2.8.4.ebuild 2229
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 e77c78abdddca4a02fd259b927623ad0 gnome-vfs-2.10.0-r1.ebuild 1973
 MD5 d6bdba8e5840e57ccf5cd26bf8489ddf gnome-vfs-2.8.4-r1.ebuild 2301
-MD5 61f4ce08953a762a29fdc5377bf418bd gnome-vfs-1.0.5-r4.ebuild 2022
+MD5 43fa0ac16b8a67dcef1c35c63fb594b3 gnome-vfs-1.0.5-r4.ebuild 2020
 MD5 a88e201c8f2ec5444db0bea2e8c302b4 files/digest-gnome-vfs-1.0.5-r3 68
 MD5 87c1b9929fce8975fc0f9aedb3cab3f0 files/digest-gnome-vfs-2.8.3-r1 154
 MD5 6126fab0b179eb680b819593f4bf1412 files/digest-gnome-vfs-2.6.1.1 71
