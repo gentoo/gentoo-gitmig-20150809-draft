@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1075 2005/04/11 21:00:41 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1076 2005/04/11 21:57:42 kumba Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -50,10 +50,10 @@ app-editors/xemacs:lucid - Chooses the lucid widget set (default, deprecated)
 app-emulation/bochs:debugger - Enable the bochs debugger
 app-emulation/emul-linux-x86-glibc:nptlonly - Disables installing the linuxthreads fallback in glibc ebuilds that support building both linuxthreads and nptl.
 app-emulation/fuse:libdsk - Enable support for the floppy disk emulation library
-app-emulation/mips64emul:cacheemu - Enables support for cache emulation
-app-emulation/mips64emul:delays - Enables instruction latency/delay emulation
-app-emulation/mips64emul:mips16 - Enables MIPS16 instruction support
-app-emulation/mips64emul:userland - Enables userland support
+app-emulation/gxemul:cacheemu - Enables support for cache emulation
+app-emulation/gxemul:delays - Enables instruction latency/delay emulation
+app-emulation/gxemul:mips16 - Enables MIPS16 instruction support
+app-emulation/gxemul:userland - Enables userland support
 app-emulation/mol:oldworld - Includes Macintosh's OldWorld support
 app-emulation/mol:sheep - Support for the sheep net driver
 app-emulation/mol:vnc - Includes vnc support
