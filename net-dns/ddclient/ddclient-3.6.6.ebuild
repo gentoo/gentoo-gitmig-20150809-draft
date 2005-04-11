@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/ddclient/ddclient-3.6.6.ebuild,v 1.5 2005/04/06 18:28:29 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/ddclient/ddclient-3.6.6.ebuild,v 1.6 2005/04/11 19:23:58 seemant Exp $
 
 inherit eutils
 
@@ -47,15 +47,15 @@ src_install() {
 pkg_postinst() {
 	echo
 	einfo
-	ewarn "The files in ${ROOT}etc/ddclient will be chowned to"
+	ewarn "The files in ${ROOT}etc/ddclient *NEED* be chowned to"
 	ewarn "root:ddclient, and chmodded to 640:"
 	ewarn "(user/group read; user write)"
 	ewarn "Please run etc-update and update your initscript to take"
 	ewarn "advantage of non-root permissions on the daemon"
 	ewarn "Further, please note that your config files must be owned"
 	ewarn "by the user ddclient or have group ownership by ddclient."
-	ewarn "In other words, please follow the ownership/permissions scheme"
-	ewarn "that has been laid out in /etc/ddclient for you."
+	ewarn "The initscript will NOT run unless you do this.  Please see"
+	ewarn "bug #88225"
 	einfo
 	ebeep
 	epause

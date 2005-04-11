@@ -1,6 +1,10 @@
 # ChangeLog for net-dns/ddclient
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/ddclient/ChangeLog,v 1.18 2005/04/06 18:28:29 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/ddclient/ChangeLog,v 1.19 2005/04/11 19:23:58 seemant Exp $
+
+  11 Apr 2005; Seemant Kulleen <seemant@gentoo.org> ddclient-3.6.6.ebuild:
+  Added a blurb about making the user change perms, and referencing the bug
+  #88225 by Paul Varner <bugs.gentoo.org@varnerfamily.org>
 
   06 Apr 2005; Seemant Kulleen <seemant@gentoo.org> ddclient-3.6.6.ebuild:
   I was too hasty in my enew edits. Enewuser now behaves here. Apologies to:
