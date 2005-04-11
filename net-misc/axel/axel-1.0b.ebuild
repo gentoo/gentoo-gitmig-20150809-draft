@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/axel/axel-1.0b.ebuild,v 1.3 2005/04/11 18:56:03 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/axel/axel-1.0b.ebuild,v 1.4 2005/04/11 20:29:56 gustavoz Exp $
 
 DESCRIPTION="light Unix download accelerator"
 HOMEPAGE="http://wilmer.gaast.net/main.php/axel.html"
@@ -8,7 +8,7 @@ SRC_URI="http://wilmer.gaast.net/downloads/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ppc ppc64 ~ppc-macos ~sparc x86"
+KEYWORDS="~amd64 ppc ppc64 ~ppc-macos sparc x86"
 IUSE="debug"
 
 DEPEND="virtual/libc"
