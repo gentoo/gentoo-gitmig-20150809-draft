@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gnomemeeting/gnomemeeting-1.2.1.ebuild,v 1.2 2005/04/11 15:32:55 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gnomemeeting/gnomemeeting-1.2.1.ebuild,v 1.3 2005/04/11 18:19:46 stkn Exp $
 
 inherit gnome2 eutils
 
@@ -32,6 +32,7 @@ RDEPEND=">=dev-libs/pwlib-1.8.4
 		>=gnome-base/gconf-2.2.0
 		>=gnome-base/orbit-2.5.0
 		gnome-extra/evolution-data-server )"
+#	dbus? ( sys-apps/dbus )
 
 
 DEPEND="${RDEPEND}
@@ -42,8 +43,15 @@ DEPEND="${RDEPEND}
 
 MAKEOPTS="${MAKEOPTS} -j1"
 
-src_compile() {
+src_unpack() {
+	unpack ${A}
 
+	cd ${S}
+	# Fix configure to install schemafile into the proper directory
+	epatch ${FILESDIR}/gnomemeeting-1.2.1-configure.patch
+}
+
+src_compile() {
 	local myconf
 
 	myconf="${myconf} --with-ptlib-includes=/usr/include/ptlib"
@@ -51,6 +59,9 @@ src_compile() {
 	myconf="${myconf} --with-openh323-includes=/usr/include/openh323"
 	myconf="${myconf} --with-openh323-libs=/usr/lib"
 
+	#
+	# i'm going to break your fingers if you touch these!
+	#
 	if use ssl; then
 		myconf="${myconf} --with-openssl-libs=/usr/lib"
 		myconf="${myconf} --with-openssl-includes=/usr/include/openssl"
@@ -60,13 +71,21 @@ src_compile() {
 		&& myconf="${myconf} --with-sdl-prefix=/usr" \
 		|| myconf="${myconf} --disable-sdltest"
 
+	use gnome \
+		|| myconf="${myconf} --disable-gnome"
+
+# not available on alpha atm
+#	use dbus \
+#		&& myconf="${myconf} --enable-dbus"
+
+	use howl \
+		|| myconf="${myconf} --disable-howl"
+
 	econf \
 		--prefix=/usr \
 		--host=${CHOST} \
 		${myconf} \
-		$(use_enable howl) \
-		$(use_enable ipv6) \
-		$(use_enable gnome) || die "configure failed"
+		$(use_enable ipv6) || die "configure failed"
 	emake || die
 }
 
