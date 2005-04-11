@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1072 2005/04/10 20:07:11 trapni Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1073 2005/04/11 15:23:11 dams Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -76,6 +76,7 @@ app-i18n/uim-svn:fep - Build uim-fep
 app-i18n/uim:immqt - Enable immodule for Qt support (binary incompatible)
 app-i18n/uim:immqt-bc - Enable immodule for Qt support (binary compatible)
 app-laptop/tpctl:tpctlir - enable support for thinkpad models 760 and 765
+app-misc/booh:transcode - Use transcode to extract video thumbnails
 app-misc/lirc:streamzap - add the streamzap driver to lirc
 app-misc/screen:nethack - Express error messages in nethack style
 app-misc/towitoko:moneyplex - Makes libtowitoko work for the moneyplex home banking software
