@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/codeine/codeine-1.0_beta1.ebuild,v 1.3 2005/04/11 12:28:33 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/codeine/codeine-1.0_beta2.ebuild,v 1.1 2005/04/11 12:28:33 luckyduck Exp $
 
 inherit eutils kde
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.methylblue.com/codeine/${MY_P}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 amd64"
+KEYWORDS="~x86 ~amd64"
 IUSE="debug"
 
 DEPEND="media-libs/xine-lib"
@@ -28,11 +28,10 @@ src_unpack() {
 
 src_compile(){
 	local myconf=""
-
 	use debug && myconf="${myconf} --debug"
 
-	./configure $myconf || die "bla"
-	emake
+	./configure ${myconf} || die "configure failed"
+	emake || die "make failed"
 }
 src_install() {
 	make INSTALL_ROOT="${D}" install || die "make install failed"
