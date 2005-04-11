@@ -1,6 +1,12 @@
 # ChangeLog for app-text/jabref
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/jabref/ChangeLog,v 1.27 2005/04/04 15:00:14 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/jabref/ChangeLog,v 1.28 2005/04/11 19:09:18 luckyduck Exp $
+
+*jabref-1.7.1 (11 Apr 2005)
+
+  11 Apr 2005; Jan Brinkmann <luckyduck@gentoo.org>
+  +files/jabref-1.7.1-nojarbundler.patch, +jabref-1.7.1.ebuild:
+  new upstream version, fixes #88752
 
   04 Apr 2005; Thomas Matthijs <axxo@gentoo.org> jabref-1.6.ebuild,
   jabref-1.7.ebuild:
@@ -15,6 +21,10 @@
 
   03 Apr 2005; <SeJo@gentoo.org> jabref-1.7.ebuild:
   added ~ppc keyword
+
+  03 Apr 2005; Jan Brinkmann <luckyduck@gentoo.org> jabref-1.7.ebuild:
+  and back again since another ebuild was broken, in this case i am not the one
+  who broke it :)
 
   03 Apr 2005; Jan Brinkmann <luckyduck@gentoo.org> jabref-1.7.ebuild:
   changed a jar-from call to reflect the fact that the forms.jar is installed
