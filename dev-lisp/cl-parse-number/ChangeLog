@@ -1,6 +1,10 @@
 # ChangeLog for dev-lisp/cl-parse-number
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-parse-number/ChangeLog,v 1.4 2004/06/24 23:49:09 agriffis Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-parse-number/ChangeLog,v 1.5 2005/04/11 07:48:13 mkennedy Exp $
+
+  11 Apr 2005; Matthew Kennedy <mkennedy@gentoo.org>
+  cl-parse-number-1.0-r1.ebuild:
+  Keywording for ~amd64
 
 *cl-parse-number-1.0-r1 (12 Feb 2004)
 

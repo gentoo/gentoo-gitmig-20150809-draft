@@ -1,6 +1,9 @@
 # ChangeLog for dev-lisp/cl-paip
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-paip/ChangeLog,v 1.4 2005/02/05 22:36:40 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-paip/ChangeLog,v 1.5 2005/04/11 07:47:12 mkennedy Exp $
+
+  11 Apr 2005; Matthew Kennedy <mkennedy@gentoo.org> cl-paip-1.0.2.ebuild:
+  Keywording for ~amd64
 
   05 Feb 2005; Matthew Kennedy <mkennedy@gentoo.org>
   +files/1.0.2-package-lock-gentoo.patch, cl-paip-1.0.2.ebuild:

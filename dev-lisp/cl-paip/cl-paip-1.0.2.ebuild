@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-paip/cl-paip-1.0.2.ebuild,v 1.5 2005/02/05 22:36:40 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-paip/cl-paip-1.0.2.ebuild,v 1.6 2005/04/11 07:47:12 mkennedy Exp $
 
 inherit common-lisp eutils
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.norvig.com/paip.html http://packages.debian.org/unstable/de
 SRC_URI="http://ftp.debian.org/debian/pool/main/c/cl-paip/${PN}_${PV}.orig.tar.gz
 	http://ftp.debian.org/debian/pool/main/c/cl-paip/${PN}_${PV}-${DEB_PV}.diff.gz"
 LICENSE="Norvig"
-KEYWORDS="x86"
+KEYWORDS="x86 ~amd64"
 SLOT="0"
 IUSE=""
 
