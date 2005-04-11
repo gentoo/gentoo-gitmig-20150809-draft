@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.3.5-r1.ebuild,v 1.2 2005/04/06 11:47:44 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.3.5-r1.ebuild,v 1.3 2005/04/11 13:30:42 usata Exp $
 
-inherit kde-functions eutils libtool
+inherit kde-functions eutils libtool flag-o-matic
 
 DESCRIPTION="WYSIWYM frontend for LaTeX"
 HOMEPAGE="http://www.lyx.org/"
@@ -84,7 +84,7 @@ src_compile() {
 
 	export WANT_AUTOCONF=2.5
 
-	local flags="${CXXFLAGS} -fno-stack-protector"
+	local flags="${CXXFLAGS} $(test_flag -fno-stack-protector)"
 	unset CFLAGS
 	unset CXXFLAGS
 	econf \
