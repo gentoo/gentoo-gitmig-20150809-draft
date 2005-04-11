@@ -1,14 +1,24 @@
-MD5 89c368239e125743a4a97f89dae508f8 Test-Harness-2.28-r1.ebuild 645
-MD5 ff0b3dc75dd87cf9ca23f3dba1c7d81d Test-Harness-2.24.ebuild 614
-MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 e40735860a934ceb33e95d8a0f2cd27a ChangeLog 4184
-MD5 4ac2eb08e214b9684daf28ed3a3d3103 Test-Harness-2.42.ebuild 560
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 da02305ded0b59bea169f7b9d54e3ed5 Test-Harness-2.28.ebuild 611
+MD5 89c368239e125743a4a97f89dae508f8 Test-Harness-2.28-r1.ebuild 645
 MD5 a5550d903f0a9b96955065d3930cb872 Test-Harness-2.24-r1.ebuild 579
+MD5 4ab7e76acdc9bcfd8644e31f02901f63 Test-Harness-2.42.ebuild 558
+MD5 ff0b3dc75dd87cf9ca23f3dba1c7d81d Test-Harness-2.24.ebuild 614
+MD5 24976a8a1cf7ac1aff40429212edef70 ChangeLog 4283
 MD5 5e6971369aafc708b307f66c4e8d77d1 Test-Harness-2.30.ebuild 646
-MD5 0a02516f5c2671f44dfbadefb6d3f1a1 files/digest-Test-Harness-2.30 68
+MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 ee278ea352cf771c9939fb1bdba27ac3 files/digest-Test-Harness-2.24-r1 68
 MD5 5e79406878d74d9f0203a322951970ac files/digest-Test-Harness-2.28-r1 68
 MD5 ee278ea352cf771c9939fb1bdba27ac3 files/digest-Test-Harness-2.24 68
 MD5 5e79406878d74d9f0203a322951970ac files/digest-Test-Harness-2.28 68
+MD5 0a02516f5c2671f44dfbadefb6d3f1a1 files/digest-Test-Harness-2.30 68
 MD5 7fcf6195e61ac31b053354603b6dcd65 files/digest-Test-Harness-2.42 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCWcWrntT9W3vfTuoRAoSoAJ0T22KGez7Pg+rpkfC2haWELmrJqgCgqNv7
+xujPQIf9bDj3GT0Gr0Wbs/g=
+=eevj
+-----END PGP SIGNATURE-----
