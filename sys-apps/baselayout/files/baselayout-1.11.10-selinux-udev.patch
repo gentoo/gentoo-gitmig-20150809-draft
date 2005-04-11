@@ -1,0 +1,20 @@
+Index: sbin/rc
+===================================================================
+RCS file: /var/cvsroot/gentoo-src/rc-scripts/sbin/rc,v
+retrieving revision 1.112
+retrieving revision 1.113
+diff -u -r1.112 -r1.113
+--- sbin/rc	30 Jan 2005 20:12:31 -0000	1.112
++++ sbin/rc	10 Mar 2005 23:38:28 -0000	1.113
+@@ -241,6 +241,11 @@
+ 			fi
+ 		fi
+ 
++		# Selinux lovin; /selinux should be mounted by selinux-patched init
++		if [[ -x /sbin/restorecon ]] && [[ -c /selinux/null ]]; then
++			restorecon /dev &> /selinux/null
++		fi
++
+ 		# Actually start setting up /dev now
+ 		if [[ ${udev} = "yes" ]] ; then
+ 			# Setup temporary storage for /dev

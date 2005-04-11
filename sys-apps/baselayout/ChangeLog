@@ -1,9 +1,16 @@
 # ChangeLog for sys-apps/baselayout
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.228 2005/04/08 03:21:30 tgall Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.229 2005/04/11 21:55:00 vapier Exp $
 
 # See the gentoo-src rc-scripts ChangeLog for up-to-date release information:
 # http://www.gentoo.org/cgi-bin/viewcvs.cgi/rc-scripts/ChangeLog?rev=HEAD&cvsroot=gentoo-src&content-type=text/vnd.viewcvs-markup
+
+*baselayout-1.11.10-r7 (11 Apr 2005)
+
+  11 Apr 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/baselayout-1.11.10-selinux-udev.patch,
+  +baselayout-1.11.10-r7.ebuild:
+  Add selinux/udev patch to shut spb up.
 
   07 Apr 2005; Tom Gall <tgall@gentoo.org>
   files/rc-scripts-1.4.16-livecd.patch, baselayout-1.9.4-r6.ebuild:

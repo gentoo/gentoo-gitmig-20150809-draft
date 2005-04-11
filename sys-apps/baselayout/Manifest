@@ -1,4 +1,4 @@
-MD5 cac3e9b476675ff23c92454c63d5b6ed ChangeLog 51915
+MD5 92f6dbfea6721ee62ab0d5c30e065679 ChangeLog 52127
 MD5 a80a01d141a81638665e02c46f8011ad baselayout-1.11.10-r3.ebuild 17251
 MD5 7d1f13b6d52150660ef848a5ed09d833 baselayout-1.11.10-r4.ebuild 17251
 MD5 cd54e73f5f3f6c9995d8f5b1d4bb155c baselayout-1.11.10-r5.ebuild 17318
@@ -8,6 +8,7 @@ MD5 b8f5620b4495be623769d3590924c5f2 baselayout-1.12.0_alpha1-r4.ebuild 17579
 MD5 d58757902eef3ee1d7bfb62a5fca13a0 baselayout-1.9.4-r6.ebuild 17142
 MD5 a564d6194f6a91d76d572a0f934c4faa baselayout-1.9.4-r7.ebuild 18143
 MD5 e02bb32cac91dad28d3c05b731b37b04 metadata.xml 385
+MD5 8df668333a014f23128d78ca8a3fc179 baselayout-1.11.10-r7.ebuild 17551
 MD5 f090a91fc6fc5edab853103722150b72 files/baselayout-1.11.10-bashrc.patch 628
 MD5 333c983dc00cb352f4725cacc0378fea files/baselayout-1.11.10-bridge.patch 3547
 MD5 f96ffe6b44684809b8ec0e4450093f59 files/baselayout-1.11.10-iwconfig-2.patch 925
@@ -28,6 +29,7 @@ MD5 844ae054e507637ee440011d729858c8 files/digest-baselayout-1.11.9-r1 69
 MD5 8973ba1466f017b32112df32c15ee8a7 files/digest-baselayout-1.12.0_alpha1-r4 69
 MD5 d69d18485e6cfc948d9f39b2b766a406 files/digest-baselayout-1.9.4-r6 134
 MD5 d69d18485e6cfc948d9f39b2b766a406 files/digest-baselayout-1.9.4-r7 134
+MD5 9d6be55475cd744a889551d6cc31596b files/digest-baselayout-1.11.10-r7 70
 MD5 dc0371296346ea041fe6f70685b7ad1b files/rc-scripts-1.4.16-livecd.patch 2447
 MD5 7b2f5e48c4d9056df539620299c20641 files/rc-scripts-1.4.16-splash.patch 11251
 MD5 08ade596f939beaf9f7b3657c5811593 files/rc-scripts-1.6.9-checkfs-lvm.patch 579
@@ -35,3 +37,4 @@ MD5 126200ae85bdf0ef43de75411f71aaa8 files/rc-scripts-1.6.9-domainname.patch 380
 MD5 6ec416bfd1097d350c09e78949a736b8 files/rc-scripts-1.6.9-ifconfig.patch 266
 MD5 d50ca91cbb58c7528a60ddf5bb172956 files/sysvinit-2.84-selinux.patch 3206
 MD5 50816019be7cc03120fa58d075eb07f7 files/sysvinit-2.84-selinux1.patch 3612
+MD5 f9389ed615be0dda5b42e20542843222 files/baselayout-1.11.10-selinux-udev.patch 634
