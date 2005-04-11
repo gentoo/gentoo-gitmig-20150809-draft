@@ -1,0 +1,17 @@
+# ChangeLog for dev-perl/Module-Signature
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Module-Signature/ChangeLog,v 1.1 2005/04/11 17:02:29 mcummings Exp $
+
+*Module-Signature-0.44 (11 Apr 2005)
+
+  11 Apr 2005; Michael Cummings <mcummings@gentoo.org> +metadata.xml,
+  +Module-Signature-0.44.ebuild:
+  Bugs 88267,88354(ok, that one i created for this), and the one that brought it
+  up first, 83789. Here's the sum up: we tell users to use cpan or g-cpan if a
+  module isn't in the tree. Fine. But if they do that, they can end up with a
+  Module::Signature install because it becoming a silent dep in a lot of places
+  to confirm the security/validity of a module installation. At least this way
+  we can A) provide an ebuild that we can track/fix and B) we have some minor
+  influence in the sanity of their environment. This should override any already
+  installed versions and be safe for future uses.
+
