@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/xdelta/xdelta-1.1.3.ebuild,v 1.14 2004/07/18 17:34:12 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/xdelta/xdelta-1.1.3.ebuild,v 1.15 2005/04/11 12:32:06 wolf31o2 Exp $
 
 inherit gnuconfig
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://xdelta.sourceforge.net"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc ~amd64"
+KEYWORDS="x86 ppc sparc amd64"
 IUSE=""
 
 DEPEND="=dev-libs/glib-1.2*
