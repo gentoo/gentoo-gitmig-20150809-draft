@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/vmware-workstation
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.83 2005/04/11 15:35:59 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.84 2005/04/11 21:51:41 wolf31o2 Exp $
+
+  11 Apr 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  vmware-workstation-3.2.1.2242-r3.ebuild:
+  Fixing install problems and closing bug #82184.
 
   11 Apr 2005; Chris Gianelloni <wolf31o2@gentoo.org>
   vmware-workstation-3.2.1.2242-r3.ebuild,

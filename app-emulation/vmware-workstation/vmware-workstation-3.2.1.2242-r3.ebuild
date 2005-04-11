@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-3.2.1.2242-r3.ebuild,v 1.2 2005/04/11 15:35:59 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-3.2.1.2242-r3.ebuild,v 1.3 2005/04/11 21:51:41 wolf31o2 Exp $
 
 # Unlike many other binary packages the user doesn't need to agree to a licence
 # to download VM Ware.  The agreeing to a licence is part of the configure step
@@ -46,7 +46,7 @@ src_unpack() {
 	unpack ${NP}.tar.gz
 	if [ "${KV:0:3}" == "2.6" ] || [ "${KV:0:3}" == "2.5" ] ; then
 		unpack ${ANY_ANY}.tar.gz
-		mv ${ANY_ANY}/*.tar ${S}/lib/modules/source/
+		mv -f ${ANY_ANY}/*.tar ${S}/lib/modules/source/
 	fi
 }
 
