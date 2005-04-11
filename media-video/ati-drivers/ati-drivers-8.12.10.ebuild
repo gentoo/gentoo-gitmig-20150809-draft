@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-8.12.10.ebuild,v 1.4 2005/04/11 00:24:53 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-8.12.10.ebuild,v 1.5 2005/04/11 11:39:25 lu_zero Exp $
 
 IUSE="opengl"
 
-inherit eutils rpm multilib linux-info linux-mod
+inherit eutils rpm multilib linux-info linux-mod toolchain-funcs
 
 DESCRIPTION="Ati precompiled drivers for r350, r300, r250 and r200 chipsets"
 HOMEPAGE="http://www.ati.com"
@@ -74,6 +74,7 @@ src_unpack() {
 		epatch ${FILESDIR}/fglrx-2.6-pagetable.patch
 	fi
 	epatch ${FILESDIR}/8.8.25-via-amd64.patch
+	epatch ${FILESDIR}/8.8.25-smp.patch
 	rm -rf ${WORKDIR}/usr/X11R6/bin/fgl_glxgears
 }
 
@@ -88,11 +89,11 @@ src_compile() {
 		export _POSIX2_VERSION="199209"
 		if use_m ;
 		then
-			make -C ${KV_DIR} M="`pwd`" modules || \
-				ewarn "DRM module not built"
+			make -C ${KV_DIR} M="`pwd`" GCC_VER_MAJ=$(gcc-major-version) \
+				modules || ewarn "DRM module not built"
 		else
-			make -C ${KV_DIR} SUBDIRS="`pwd`" modules || \
-				ewarn "DRM module not built"
+			make -C ${KV_DIR} SUBDIRS="`pwd`" GCC_VER_MAJ=$(gcc-major-version) \
+				modules || ewarn "DRM module not built"
 		fi
 		set_arch_to_portage
 	else

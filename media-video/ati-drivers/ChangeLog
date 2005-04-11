@@ -1,6 +1,12 @@
 # ChangeLog for media-video/ati-drivers
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ChangeLog,v 1.83 2005/04/10 18:37:41 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ChangeLog,v 1.84 2005/04/11 11:39:25 lu_zero Exp $
+
+  11 Apr 2005; Luca Barbato <lu_zero@gentoo.org> +files/8.8.25-smp.patch,
+  ati-drivers-8.12.10.ebuild:
+  Fix smp issues (bug #72311) and gcc version issues (bug #84834, bug #83897),
+  thanks to every people listed in the bugs for reporting and providing
+  solutions
 
   10 Apr 2005; Luca Barbato <lu_zero@gentoo.org> ati-drivers-8.12.10.ebuild:
   Marked ~amd64
