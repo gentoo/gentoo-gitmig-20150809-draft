@@ -1,13 +1,13 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 bcf5e4d640e13e3b0a54208afaa3aa4b realplayer-10.0.3.ebuild 1680
+MD5 c47627c38f1db6ae47f166fd239b627f realplayer-10.0.3.ebuild 1730
 MD5 676bceecae99d42c5e133b0bc673e211 realplayer-8-r7.ebuild 2927
-MD5 9e0cfe3082af54408e1d9cbe84e7f1db realplayer-10.0.3-r1.ebuild 1683
-MD5 b5cfa00fe93588e77ddbd0e7cd051f9f realplayer-10.0.2.ebuild 1417
+MD5 e8e6c079c29f7f7bc4f275f87c2a4988 realplayer-10.0.3-r1.ebuild 1733
+MD5 06e9d3a4482679215b78095fe4b6778c realplayer-10.0.2.ebuild 1466
 MD5 019ace3134d2483700a1bd2d901e104e realplayer-8-r6.ebuild 3912
-MD5 64999c7fc0c483f21e9ea7babd4bb448 ChangeLog 5326
-MD5 8f906ffe0aa837e5e26fe03af3043461 metadata.xml 219
+MD5 9eebdd3e851de7b01a87b1cd5b5efd6e ChangeLog 5614
+MD5 526f11a066c4a4c196484c623e3aa5c5 metadata.xml 164
 MD5 b1f07ef9de78ae97ad9d42a6971b0d40 files/digest-realplayer-8-r6 357
 MD5 17ab63668e0e7e3ddf931fe0985e085f files/digest-realplayer-8-r7 290
 MD5 db1abde793632464b694bc07794630a5 files/mimeinfo 367
@@ -19,7 +19,7 @@ MD5 cc3251234e6be88a6554a5f08c0f98d9 files/realplayer.desktop 359
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFCSZwb06ebR+OMO78RAvfEAJ9s4bSidCWhceKcPE6JnLfapCry+gCfX23+
-Xm5t7tdAHHGYc4+6gz5SUJ4=
-=p/xB
+iD8DBQFCWmlO06ebR+OMO78RAstoAJ9n+ZUzHQnmSNXoI+dr+TEWvLamRwCgk5Ft
+yAu2PBkua9HuITBCE1/wQgo=
+=rXg9
 -----END PGP SIGNATURE-----

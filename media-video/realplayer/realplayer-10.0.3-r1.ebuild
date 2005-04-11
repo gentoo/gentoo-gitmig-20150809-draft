@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/realplayer/realplayer-10.0.3-r1.ebuild,v 1.1 2005/03/29 04:41:03 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/realplayer/realplayer-10.0.3-r1.ebuild,v 1.2 2005/04/11 12:10:34 luckyduck Exp $
 
 inherit nsplugins eutils rpm
 
@@ -18,7 +18,8 @@ IUSE="mozilla"
 # RDEPEND="!media-video/realplayer
 RDEPEND=">=dev-libs/glib-2
 		>=x11-libs/pango-1.2
-		>=x11-libs/gtk+-2.2"
+		>=x11-libs/gtk+-2.2
+		amd64? ( app-emulation/emul-linux-x86-gtklibs )"
 DEPEND="${RDEPEND}"
 RESTRICT="nostrip nomirror"
 
