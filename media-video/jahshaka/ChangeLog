@@ -1,6 +1,12 @@
 # ChangeLog for media-video/jahshaka
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/jahshaka/ChangeLog,v 1.5 2004/11/28 04:58:01 chriswhite Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/jahshaka/ChangeLog,v 1.6 2005/04/11 18:21:38 luckyduck Exp $
+
+  11 Apr 2005; Jan Brinkmann <luckyduck@gentoo.org> metadata.xml,
+  -jahshaka-1.9_alpha5.ebuild, -jahshaka-1.9_alpha85.ebuild,
+  jahshaka-1.9_alpha90.ebuild:
+  added missing dep, fixes #74079. updated maintainer information, chriswhite is
+  retired. did some cleanup.
 
   28 Nov 2004; Chris White <chriswhite@gentoo.org> +files/configure,
   jahshaka-1.9_alpha90.ebuild:
