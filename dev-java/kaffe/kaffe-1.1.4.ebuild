@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/kaffe/kaffe-1.1.4.ebuild,v 1.13 2005/04/09 20:24:19 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/kaffe/kaffe-1.1.4.ebuild,v 1.14 2005/04/11 12:48:00 luckyduck Exp $
 
-inherit java
+inherit java flag-o-matic
 
 DESCRIPTION="A cleanroom, open source Java VM and class libraries"
 SRC_URI="http://www.kaffe.org/ftp/pub/kaffe/v1.1.x-development/${P/_/-}.tar.gz"
@@ -23,6 +23,9 @@ PROVIDE="virtual/jdk-1.4
 		virtual/java-scheme-2"
 
 src_compile() {
+	# see #88330
+	strip-flags "-fomit-frame-pointer"
+
 	./configure \
 		--prefix=/opt/${P} \
 		--host=${CHOST} \

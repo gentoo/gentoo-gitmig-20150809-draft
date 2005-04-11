@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/kaffe
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/kaffe/ChangeLog,v 1.30 2005/04/10 00:54:12 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/kaffe/ChangeLog,v 1.31 2005/04/11 12:48:00 luckyduck Exp $
+
+  11 Apr 2005; Jan Brinkmann <luckyduck@gentoo.org> kaffe-1.1.4.ebuild,
+  kaffe-1.1.4_p20041220.ebuild, kaffe-1.1.5.ebuild:
+  added strip-flags call, -fomit-frame-pointer breaks this package. fixes #88330
 
   10 Apr 2005; Jan Brinkmann <luckyduck@gentoo.org> kaffe-1.1.5.ebuild:
   marked -ppc, javavm of this release doesnt work on ppc
