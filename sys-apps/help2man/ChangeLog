@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/help2man
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/help2man/ChangeLog,v 1.19 2005/01/12 23:02:51 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/help2man/ChangeLog,v 1.20 2005/04/11 14:03:45 corsair Exp $
+
+  11 Apr 2005; Markus Rothe <corsair@gentoo.org> help2man-1.35.1.ebuild:
+  Stable on ppc64; bug #88648
 
   12 Jan 2005; Chris Gianelloni <wolf31o2@gentoo.org> :
   Fixing digest.
