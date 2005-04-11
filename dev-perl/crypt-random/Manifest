@@ -1,8 +1,18 @@
-MD5 857ea68b5dc417aa4353a5564af7173e ChangeLog 721
-MD5 1284dd76ffb48325a28adfe80974ebd2 crypt-random-1.13.ebuild 652
-MD5 cd5ba244513727edaea3fff4f81620e3 crypt-random-1.23.ebuild 668
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 5fa17ebc9473eea2e0eff41eb588c2ba ChangeLog 956
+MD5 602200e92912c3f26ec6cf407fc77357 crypt-random-1.13.ebuild 658
+MD5 63e26f3055efc65e0e39f9664025d644 crypt-random-1.23.ebuild 674
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 a1675b016bb572946fab9f1d11144366 crypt-random-1.25.ebuild 575
+MD5 f2b9c451d21f2dddababbb61af9a4ca9 crypt-random-1.25.ebuild 686
 MD5 46c0100126dbd602693ffbed13a8bbdd files/digest-crypt-random-1.13 67
 MD5 462bab6f7b87d4f7a375840993e1b4b0 files/digest-crypt-random-1.23 67
 MD5 9ff06919cde1dd32b784e4d01f851eb7 files/digest-crypt-random-1.25 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCWqVDtG5z4I8BtQoRArlvAJ9Yx82JldJIoW2furcTTDlaE4x84wCghKZl
+PhcrM6DDvoOukAOIfMMzMfQ=
+=5YPp
+-----END PGP SIGNATURE-----
