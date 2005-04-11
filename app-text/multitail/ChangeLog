@@ -1,6 +1,10 @@
 # ChangeLog for app-text/multitail
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/multitail/ChangeLog,v 1.27 2005/04/10 18:14:08 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/multitail/ChangeLog,v 1.28 2005/04/11 20:51:29 gustavoz Exp $
+
+  11 Apr 2005; Gustavo Zacarias <gustavoz@gentoo.org>
+  multitail-3.4.8.ebuild:
+  Stable on sparc
 
   10 Apr 2005; Simon Stelling <blubb@gentoo.org> multitail-3.4.8.ebuild:
   stable on amd64
