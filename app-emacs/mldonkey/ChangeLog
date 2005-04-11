@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/mldonkey
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/mldonkey/ChangeLog,v 1.10 2005/04/06 14:38:04 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/mldonkey/ChangeLog,v 1.11 2005/04/11 21:38:31 luckyduck Exp $
+
+  11 Apr 2005; Jan Brinkmann <luckyduck@gentoo.org> mldonkey-0.0.4b.ebuild:
+  added ~amd64 to KEYWORDS, fixes #87245
 
 *mldonkey-0.0.4b (06 Apr 2005)
 
