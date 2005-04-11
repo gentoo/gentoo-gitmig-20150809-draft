@@ -1,0 +1,11 @@
+# ChangeLog for games-puzzle/londonlaw
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/londonlaw/ChangeLog,v 1.1 2005/04/11 02:58:25 mr_bones_ Exp $
+
+*londonlaw-0.2.0 (10 Apr 2005)
+
+  10 Apr 2005; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/londonlaw-0.2.0-setup.py.patch, +metadata.xml,
+  +londonlaw-0.2.0.ebuild:
+  initial commit - ebuild and patch from Christoph Brill (egore) via bug #82580
+
