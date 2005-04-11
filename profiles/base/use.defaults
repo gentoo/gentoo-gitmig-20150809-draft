@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.defaults,v 1.16 2005/03/23 16:33:33 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.defaults,v 1.17 2005/04/11 19:26:19 seemant Exp $
 
 aalib				media-libs/aalib
 adns				net-libs/adns
@@ -23,7 +23,7 @@ firebird			dev-db/firebird
 flac				media-libs/flac
 foomaticdb			net-print/foomatic-db
 freetds				dev-db/freetds
-gd					media-libs/libgd
+gd					media-libs/gd
 gdbm				sys-libs/gdbm
 ggi					media-libs/libggi
 gif					media-libs/giflib
