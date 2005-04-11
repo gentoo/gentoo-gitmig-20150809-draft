@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/mdadm
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mdadm/ChangeLog,v 1.4 2005/04/09 13:17:30 corsair Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mdadm/ChangeLog,v 1.5 2005/04/11 22:46:12 vapier Exp $
+
+*mdadm-1.11.0 (11 Apr 2005)
+
+  11 Apr 2005; Mike Frysinger <vapier@gentoo.org> +mdadm-1.11.0.ebuild:
+  Version bump #88753 by Wolfram Schlich.
 
   09 Apr 2005; Markus Rothe <corsair@gentoo.org> mdadm-1.9.0-r1.ebuild:
   Stable on ppc64
