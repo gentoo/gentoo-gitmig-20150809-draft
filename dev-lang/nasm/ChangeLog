@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/nasm
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/nasm/ChangeLog,v 1.31 2005/02/20 14:52:42 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/nasm/ChangeLog,v 1.32 2005/04/11 05:57:27 mr_bones_ Exp $
+
+  11 Apr 2005; Michael Sterrett <mr_bones_@gentoo.org> nasm-0.98.39.ebuild:
+  stable for x86
 
   20 Feb 2005; Martin Schlemmer <azarah@gentoo.org> nasm-0.98.39.ebuild:
   Remove -std=c99 from CFLAGS set by configure if we build with gcc-2.95.3.
