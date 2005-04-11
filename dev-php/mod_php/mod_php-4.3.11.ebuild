@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.3.11.ebuild,v 1.3 2005/04/11 19:05:38 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.3.11.ebuild,v 1.4 2005/04/11 20:50:49 gustavoz Exp $
 
 IUSE="${IUSE} apache2"
 
@@ -76,7 +76,6 @@ src_unpack() {
 	if [ "${ARCH}" == "amd64" ] ; then
 		epatch ${FILESDIR}/mod_php-4.3.4-amd64hack.diff
 	fi
-	[ "${ARCH}" == "sparc" ] && epatch ${FILESDIR}/stdint.diff
 
 	# bug fix for security problem - bug #39952
 	# second revision as the apache2 stuff was resolved upstream

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php-cgi/php-cgi-4.3.11.ebuild,v 1.2 2005/04/11 19:03:15 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php-cgi/php-cgi-4.3.11.ebuild,v 1.3 2005/04/11 20:52:52 gustavoz Exp $
 
 PHPSAPI="cgi"
 inherit php-sapi eutils
@@ -15,7 +15,6 @@ PROVIDE="${PROVIDE} virtual/httpd-php-${PV}"
 
 src_unpack() {
 	php-sapi_src_unpack
-	[ "${ARCH}" == "sparc" ] && epatch ${FILESDIR}/stdint.diff
 }
 
 src_compile() {
