@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kino/kino-0.7.5-r1.ebuild,v 1.2 2005/01/26 13:41:22 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kino/kino-0.7.5-r1.ebuild,v 1.3 2005/04/11 14:11:38 luckyduck Exp $
 
 inherit eutils
 
@@ -31,16 +31,21 @@ DEPEND="x11-libs/gtk+
 	quicktime? ( virtual/quicktime )
 	dvdr? ( media-video/dvdauthor )"
 
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	use ppc && epatch ${FILESDIR}/${P}-ppc.diff
+}
+
 src_compile() {
 	econf \
 		--disable-dependency-tracking \
 		--disable-debug \
-		`use_with quicktime`\
-		`use_with ffmpeg avcodec` || die
-
-	emake || die
+		$(use_with quicktime) \
+		$(use_with ffmpeg avcodec) || die "configure failed"
+	emake || die "make failed"
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	make DESTDIR=${D} install || die "make install failed"
 }

@@ -1,0 +1,225 @@
+diff -urN kino-0.7.5/src/frame.cc kino-0.7.5-ppc/src/frame.cc
+--- kino-0.7.5/src/frame.cc	2004-09-28 04:35:52.000000000 +0200
++++ kino-0.7.5-ppc/src/frame.cc	2005-03-14 12:56:46.000000000 +0100
+@@ -54,6 +54,7 @@
+ // local includes
+ #include "frame.h"
+ #include "preferences.h"
++#include "kino_common.h"
+ 
+ extern Preferences prefs;
+ 
+@@ -1052,7 +1053,11 @@
+ 
+ 			for ( int x = 0; x < width; x += 2 )
+ 			{
++#if 0
+ 				*reinterpret_cast<uint32_t*>( dest ) = Y[ 0 ] + ( Cb[ 0 ] << 8 ) + ( Y[ 1 ] << 16 ) + ( Cr[ 0 ] << 24 );
++#else
++				*reinterpret_cast<uint32_t*>( dest ) = Cr[ 0 ] + ( Y[ 0 ] << 8 ) + ( Cb[ 1 ] << 16 ) + ( Y[ 0 ] << 24 );
++#endif
+ 
+ 				dest += 4;
+ 				Y += 2;
+@@ -1071,8 +1076,13 @@
+ 
+ 			for ( int x = 0; x < width; x += 4 )
+ 			{
++#if 0
+ 				*reinterpret_cast<uint32_t*>( dest ) = Y[ 0 ] + ( Cb[ 0 ] << 8 ) + ( Y[ 1 ] << 16 ) + ( Cr[ 0 ] << 24 );
+ 				*reinterpret_cast<uint32_t*>( dest + 4 ) = Y[ 2 ] + ( Cb[ 0 ] << 8 ) + ( Y[ 3 ] << 16 ) + ( Cr[ 0 ] << 24 );
++#else
++				*reinterpret_cast<uint32_t*>( dest ) = Cr[ 0 ] + ( Y[ 0 ] << 8 ) + ( Cb[ 1 ] << 16 ) + ( Y[ 0 ] << 24 );
++				*reinterpret_cast<uint32_t*>( dest + 4 ) = Cr[ 2 ] + ( Y[ 0 ] << 8 ) + ( Cb[ 3 ] << 16 ) + ( Y[ 0 ] << 24 );
++#endif
+ 
+ 				dest += 8;
+ 				Y += 4;
+@@ -1298,6 +1308,11 @@
+ 	encoder->samples_this_frame = info.samples;
+ #endif
+ 
++	/* Do byte swap on pcm - libdv BUG ??? */
++	for ( int n = 0; n < info.samples ; ++n )
++		for ( int i = 0; i < info.channels; i++ )
++			channels[ i ][ n ] = bswap16(channels[ i ][ n ]);
++
+ 	int result = dv_encode_full_audio( encoder, channels, info.channels, info.frequency, data );
+ 	dv_encoder_free( encoder );
+ 	return ( result != -1 );
+diff -urN kino-0.7.5/src/kino_av_pipe.cc kino-0.7.5-ppc/src/kino_av_pipe.cc
+--- kino-0.7.5/src/kino_av_pipe.cc	2004-02-09 05:40:47.000000000 +0100
++++ kino-0.7.5-ppc/src/kino_av_pipe.cc	2005-03-14 12:59:46.000000000 +0100
+@@ -28,6 +28,19 @@
+ 
+ #include "kino_av_pipe.h"
+ 
++#define bswap32(x) \
++({ \
++	uint32_t __x = (x); \
++	((uint32_t)( \
++		(((uint32_t)(__x) & (uint32_t)0x000000ffUL) << 24) | \
++		(((uint32_t)(__x) & (uint32_t)0x0000ff00UL) <<  8) | \
++		(((uint32_t)(__x) & (uint32_t)0x00ff0000UL) >>  8) | \
++		(((uint32_t)(__x) & (uint32_t)0xff000000UL) >> 24) )); \
++})
++
++#include "kino_common.h"
++
++
+ /*
+  * C Functions for generating a WAV output. Should be rewritten in C++ 
+  * rather than just wrapped...
+@@ -75,7 +88,7 @@
+ {
+ 	RIFFChunk chunk = ( RIFFChunk ) malloc( sizeof( RIFFChunkType ) );
+ 	memcpy( chunk->riff, "RIFF", 4 );
+-	chunk->length = 4 + sizeof( FORMATChunkType ) + sizeof( DATAChunkType );
++	chunk->length = bswap32(4 + sizeof( FORMATChunkType ) + sizeof( DATAChunkType ));
+ 	memcpy( chunk->type, "WAVE", 4 );
+ 	return chunk;
+ }
+@@ -85,13 +98,13 @@
+ 	FORMATChunk format = ( FORMATChunk ) malloc( sizeof( FORMATChunkType ) );
+ 	memset( format, 0, sizeof( FORMATChunkType ) );
+ 	memcpy( format->format, "fmt ", 4 );
+-	format->length = 0x10;
+-	format->filler = 0x01;
+-	format->channels = channels;
+-	format->rate = rate;
+-	format->bytespersecond = rate * channels * bytespersample;
+-	format->bytespersample = bytespersample * channels;
+-	format->bitspersample = bytespersample * 8;
++	format->length = bswap32(0x10);
++	format->filler = bswap16(0x01);
++	format->channels = bswap16(channels);
++	format->rate = bswap32(rate);
++	format->bytespersecond = bswap32(rate * channels * bytespersample);
++	format->bytespersample = bswap16(bytespersample * channels);
++	format->bitspersample = bswap16(bytespersample * 8);
+ 	return format;
+ }
+ 
+@@ -128,8 +141,11 @@
+ 
+ static int WAVStruct_WriteData( WAVStruct wav, void *data, int length )
+ {
+-	wav->riff->length += length;
+-	wav->data->length += length;
++	wav->riff->length += length; //bswap32(bswap32(wav->riff->length) + length);
++	wav->data->length += length; //bswap32(bswap32(wav->data->length) + length);
++	uint16_t *p = (uint16_t *) data;
++	for (int i=0; i < length/2; i++, p++)
++		*p = bswap16(*p);
+ 	int written = fwrite( data, length, 1, wav->file );
+ 	fflush( wav->file );
+ 	return written == 1;
+@@ -137,6 +153,8 @@
+ 
+ static void WAVStruct_Close( WAVStruct wav )
+ {
++	wav->riff->length = bswap32(wav->riff->length);
++	wav->data->length = bswap32(wav->riff->length);
+ 	if ( !wav->isapipe )
+ 	{
+ 		rewind( wav->file );
+@@ -212,24 +230,24 @@
+ 		// Bad... temporary code
+ 		fread( wav.riff, sizeof( RIFFChunkType ), 1, wav.file );
+ 		fread( wav.format, sizeof( FORMATChunkType ), 1, wav.file );
+-		int remainder = wav.format->length - sizeof( FORMATChunkType );
++		int remainder = bswap32(wav.format->length) - sizeof( FORMATChunkType );
+ 		if ( remainder > 0 )
+ 			fseek( wav.file, remainder, SEEK_CUR );
+ 		fread( wav.data, sizeof( DATAChunkType ), 1, wav.file );
+ 		if ( strncasecmp( wav.data->data, "JUNK", 4 ) == 0 )
+ 		{
+-			fseek( wav.file, wav.data->length, SEEK_CUR );
++			fseek( wav.file, bswap32(wav.data->length), SEEK_CUR );
+ 			fread( wav.data, sizeof( DATAChunkType ), 1, wav.file );
+ 		}
+ 
+ 		if ( !strncmp( wav.riff->riff, "RIFF", 4 ) && !strncmp( wav.riff->type, "WAVE", 4 ) )
+ 		{
+ 			iswav = true;
+-			channels = wav.format->channels;
+-			frequency = wav.format->rate;
+-			bytespersample = wav.format->bytespersample / channels;
++			channels = bswap16(wav.format->channels);
++			frequency = bswap32(wav.format->rate);
++			bytespersample = bswap16(wav.format->bytespersample) / channels;
+ 			start = ftell( wav.file );
+-			length = wav.data->length;
++			length = bswap32(wav.data->length);
+ 		}
+ 	}
+ 
+diff -urN kino-0.7.5/src/kino_common.h kino-0.7.5-ppc/src/kino_common.h
+--- kino-0.7.5/src/kino_common.h	2004-07-11 20:55:59.000000000 +0200
++++ kino-0.7.5-ppc/src/kino_common.h	2005-03-14 12:56:46.000000000 +0100
+@@ -31,6 +31,13 @@
+ #include "filehandler.h"
+ #include "smiltime.h"
+ 
++#define bswap16(x) \
++({ \
++	uint16_t __x = (x); \
++	((uint16_t)( \
++		(((uint16_t)(__x) & (uint16_t)0x00ffU) << 8) | \
++		(((uint16_t)(__x) & (uint16_t)0xff00U) >> 8) )); \
++})
+ 
+ /** Component enumeration. This defines all the main window widgets that can be
+     activated and deactivated by a notebook page.
+diff -urN kino-0.7.5/src/page_export_pipe.cc kino-0.7.5-ppc/src/page_export_pipe.cc
+--- kino-0.7.5/src/page_export_pipe.cc	2004-10-23 04:16:13.000000000 +0200
++++ kino-0.7.5-ppc/src/page_export_pipe.cc	2005-03-14 13:04:14.000000000 +0100
+@@ -451,7 +451,23 @@
+ 				// Get the frame
+ 				playlist->GetFrame( i, frame );
+ 	
+-				// Resample
++			AudioInfo fa_info;
++			frame.GetAudioInfo(fa_info);
++			if (fa_info.frequency != info.frequency)
++			{
++				// Resample needed
++				resampler->Resample( frame );
++				info.samples = resampler->size / info.channels / 2;
++				int16_t *p = resampler->output;
++				for ( int s = 0; s < info.samples; s++ )
++					for ( int c = 0; c < info.channels; c++ )
++						audio_buffers[ c ][ s ] = *p++;
++
++				frame.EncodeAudio( info, ( int16_t ** ) audio_buffers );
++			}
++			// Write the frame
++			success = tool->output( frame );
++/*				// Resample
+ 				resampler->Resample( frame );
+ 				info.samples = resampler->size / info.channels / 2;
+ 				int16_t *p = resampler->output;
+@@ -461,7 +477,7 @@
+ 				frame.EncodeAudio( info, ( int16_t ** ) audio_buffers );
+ 	
+ 				// Write the frame
+-				success = tool->output( frame );
++				success = tool->output( frame );*/
+ 			}
+ 			// Close the tool
+ 			tool->close( );
+diff -urN kino-0.7.5/src/page_magick.cc kino-0.7.5-ppc/src/page_magick.cc
+--- kino-0.7.5/src/page_magick.cc	2004-09-29 06:38:32.000000000 +0200
++++ kino-0.7.5-ppc/src/page_magick.cc	2005-03-14 12:56:46.000000000 +0100
+@@ -1867,6 +1867,11 @@
+ 			encoder->samples_this_frame = samples;
+ #endif
+ 
++			/* Do byte swap on pcm - libdv BUG ??? */
++			for ( int n = 0; n < samples ; ++n )
++				for ( int i = 0; i < info->channels; i++ )
++					audio_buffers[ i ][ n ] = bswap16(audio_buffers[ i ][ n ]);
++
+ 			dv_encode_full_audio( encoder, audio_buffers, info->channels, info->frequency, dv_buffer );
+ 			dv_encode_metadata( dv_buffer, encoder->isPAL, encoder->is16x9, &datetime, frameNum );
+ 			dv_encode_timecode( dv_buffer, encoder->isPAL, frameNum++ );

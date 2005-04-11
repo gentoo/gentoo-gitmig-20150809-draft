@@ -1,6 +1,10 @@
 # ChangeLog for media-video/kino
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kino/ChangeLog,v 1.28 2005/01/26 13:41:22 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kino/ChangeLog,v 1.29 2005/04/11 14:11:38 luckyduck Exp $
+
+  11 Apr 2005; Jan Brinkmann <luckyduck@gentoo.org>
+  +files/kino-0.7.5-ppc.diff, kino-0.7.5-r1.ebuild:
+  added patch for ppc, fixes bug #88555
 
   26 Jan 2005; Sven Wegener <swegener@gentoo.org> kino-0.7.5-r1.ebuild:
   Added missing ? in *DEPEND.
