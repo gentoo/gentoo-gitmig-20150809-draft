@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-8.12.10.ebuild,v 1.3 2005/04/10 18:37:41 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-8.12.10.ebuild,v 1.4 2005/04/11 00:24:53 mr_bones_ Exp $
 
 IUSE="opengl"
 
@@ -36,7 +36,7 @@ pkg_setup(){
 	ewarn "You don't have MTRR support enabled, the direct rendering"
 	ewarn "will not work."
 	fi
-	
+
 	ebegin "Checking for AGP support enabled"
 	linux_chkconfig_present AGP
 	eend $?
@@ -51,7 +51,7 @@ pkg_setup(){
 	ewarn "You have DRM support enabled, the direct rendering"
 	ewarn "will not work."
 	fi
-	
+
 	# Set up X11 implementation
 	X11_IMPLEM_P="$(best_version virtual/x11)"
 	X11_IMPLEM="${X11_IMPLEM_P%-[0-9]*}"
