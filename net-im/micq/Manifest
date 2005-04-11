@@ -1,10 +1,20 @@
-MD5 f0dfd9168348d948e589c32f72a6bb07 ChangeLog 3006
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 4b3e7649dfea8abf1082ba13911d14cb ChangeLog 3102
 MD5 a574ec2607edf5e80117d65415e01d3c metadata.xml 159
 MD5 2665ff020200cc8b0ce309074f136568 micq-0.4.11.ebuild 776
-MD5 c73f63aa1c1a88be4206ff7d275eaaf1 micq-0.5.ebuild 776
-MD5 b5c65e4aedfa2e049d5af9b765bf72bc micq-0.4.12.ebuild 778
 MD5 b31604cd23e998e0c455e8251417bdb2 micq-0.5.0.1.ebuild 780
-MD5 8c379657f8fc6e6260fb558761b7c5ba files/digest-micq-0.4.11 60
-MD5 852d738491b515fdc4b36a03800d7f31 files/digest-micq-0.5 58
-MD5 4451c974cd0cd94314c2affc8e8f7764 files/digest-micq-0.4.12 60
+MD5 36209b269f0222468a73aa21c33c3cf5 micq-0.4.12.ebuild 780
+MD5 c73f63aa1c1a88be4206ff7d275eaaf1 micq-0.5.ebuild 776
 MD5 15500c185e4e7dadadf11e79990d3b54 files/digest-micq-0.5.0.1 62
+MD5 8c379657f8fc6e6260fb558761b7c5ba files/digest-micq-0.4.11 60
+MD5 4451c974cd0cd94314c2affc8e8f7764 files/digest-micq-0.4.12 60
+MD5 852d738491b515fdc4b36a03800d7f31 files/digest-micq-0.5 58
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFCWwtaKRy60XGEcJIRAr78AJ0de4uVayyj3UwzjRCkxFhSrOzT2ACbBt5P
+v4Yl7zZqmy5ChyEXhynnJpM=
+=g5+s
+-----END PGP SIGNATURE-----
