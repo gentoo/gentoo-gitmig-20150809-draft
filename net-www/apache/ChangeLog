@@ -1,6 +1,9 @@
 # ChangeLog for net-www/apache
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.339 2005/04/09 21:55:46 trapni Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.340 2005/04/11 18:52:55 corsair Exp $
+
+  11 Apr 2005; Markus Rothe <corsair@gentoo.org> apache-1.3.33-r2.ebuild:
+  Stable on ppc64; bug #88639
 
   09 Apr 2005; Christian Parpart <trapni@gentoo.org>
   apache-1.3.29-r2.ebuild, apache-1.3.31.ebuild, apache-1.3.31-r1.ebuild,
