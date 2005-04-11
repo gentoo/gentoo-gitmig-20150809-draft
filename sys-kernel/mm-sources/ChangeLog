@@ -1,10 +1,16 @@
 # ChangeLog for sys-kernel/mm-sources
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/ChangeLog,v 1.220 2005/04/11 11:42:31 r3pek Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/ChangeLog,v 1.221 2005/04/11 14:01:43 lostlogic Exp $
 
   11 Apr 2005; Carlos Silva <r3pek@gentoo.org>
   -mm-sources-2.6.12_rc1-r3.ebuild:
   Fixing digests and dropping 2.6.12-rc1
+
+*mm-sources-2.6.12_rc2-r3 (11 Apr 2005)
+
+  11 Apr 2005; Brandon Low <lostlogic@gentoo.org>
+  +mm-sources-2.6.12_rc2-r3.ebuild:
+  Bump
 
 *mm-sources-2.6.12_rc2-r1 (05 Apr 2005)
 
