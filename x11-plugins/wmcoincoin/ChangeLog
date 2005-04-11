@@ -1,6 +1,13 @@
 # ChangeLog for x11-plugins/wmcoincoin
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcoincoin/ChangeLog,v 1.9 2004/10/19 08:53:44 absinthe Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcoincoin/ChangeLog,v 1.10 2005/04/11 07:58:54 s4t4n Exp $
+
+  11 Apr 2005; Michele Noberasco <s4t4n@gentoo.org> wmcoincoin-2.5.0f.ebuild:
+  Version bump, closes #88383.
+  wmcoincoin-2.5.0c.ebuild:
+  Updated copyright headers.
+  wmcoincoin-2.4.5b.ebuild:
+  Wiped out older version.
 
   19 Oct 2004; Dylan Carlson <absinthe@gentoo.org> wmcoincoin-2.5.0c.ebuild:
   Stable on amd64.

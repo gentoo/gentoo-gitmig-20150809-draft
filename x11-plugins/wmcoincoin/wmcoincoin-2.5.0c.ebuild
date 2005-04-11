@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcoincoin/wmcoincoin-2.5.0c.ebuild,v 1.4 2004/10/19 08:53:44 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcoincoin/wmcoincoin-2.5.0c.ebuild,v 1.5 2005/04/11 07:58:54 s4t4n Exp $
 
 IUSE=""
 
