@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/math-pari
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/math-pari/ChangeLog,v 1.10 2005/04/11 16:25:48 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/math-pari/ChangeLog,v 1.11 2005/04/11 20:01:31 fmccor Exp $
+
+  11 Apr 2005; Ferris McCormick <fmccor@gentoo.org>
+  math-pari-2.010603.ebuild:
+  Remove ~sparc keyword: pari-2.1.6 does not build on sparc, See bug 87790 for
+  details.
 
 *math-pari-2.010603 (11 Apr 2005)
 
