@@ -1,10 +1,15 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3815 2005/04/11 20:35:41 latexer Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3816 2005/04/11 22:28:55 trapni Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
 # NOTE: Please add your entry at the top!
 #
+
+# Christian Parpart <trapni@gentoo.org> (11 Apr 2005)
+# masked for testing before ~testing 
+# (and to make sure we can still modify for improvements)
+=www-apps/trac-0.8.1
 
 ##
 ##  This is an example
@@ -199,8 +204,8 @@ media-video/gv4l
 
 # Elfyn McBratney <beu@gentoo.org> (14 Mar 2005)
 # Hard masking just in case this breaks stuff. :)
-=dev-libs/apr-0.9.5-r2
-=dev-libs/apr-0.9.6-r2
+#=dev-libs/apr-0.9.5-r2
+#=dev-libs/apr-0.9.6-r2
 
 # Stuart Herbert <stuart@gentoo.org> (12th march 2005)
 # automatically activates ZTS mode when any threaded MPMs are installed,
