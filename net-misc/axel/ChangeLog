@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/axel
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/axel/ChangeLog,v 1.15 2005/03/06 05:53:06 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/axel/ChangeLog,v 1.16 2005/04/11 17:19:29 ka0ttic Exp $
+
+*axel-1.0b (11 Apr 2005)
+
+  11 Apr 2005; Aaron Walker <ka0ttic@gentoo.org> +axel-1.0b.ebuild:
+  Version bump for security bug 88264.
 
   06 Mar 2005; Daniel Black <dragonheart@gentoo.org> axel-1.0a.ebuild:
   Homepage update as per bug #84123 thanks to Nicholas McGovern
