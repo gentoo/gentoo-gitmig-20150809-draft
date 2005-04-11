@@ -3,7 +3,14 @@
 <pkgmetadata>
 	<herd>no-herd</herd>
 	<maintainer>
-		<email>bug-wranglers@gentoo.org</email>
-		<description>This package lacks a primary herd or maintainer.</description>
+		<name>Richard Brown</name>
+		<email>mynamewasgone@gmail.com</email>
+		<description>Richard is the maintainer-by-proxy for this package.
+			Bug-wranglers: please be sure to cc him on every bug report about
+			it.
+		</description>
+		<name>Seemant Kulleen</name>
+		<email>seemant@gentoo.org</email>
+		<description>Seemant is the proxy in question above.</description>
 	</maintainer>
 </pkgmetadata>
