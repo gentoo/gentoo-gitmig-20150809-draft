@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/booh
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/booh/ChangeLog,v 1.3 2005/04/05 16:30:23 dams Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/booh/ChangeLog,v 1.4 2005/04/11 15:24:40 dams Exp $
+
+*booh-0.3.0 (11 Apr 2005)
+
+  11 Apr 2005; <dams@gentoo.org> +booh-0.3.0.ebuild:
+  version 0.3.0, added flags and dependancies
 
   05 Apr 2005; <dams@gentoo.org> booh-0.2.0.ebuild:
   booh actually requires >=ruby-gtk2-0.12.0
