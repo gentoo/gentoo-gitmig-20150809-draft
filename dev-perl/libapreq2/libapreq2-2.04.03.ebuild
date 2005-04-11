@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/libapreq2/libapreq2-2.04.03.ebuild,v 1.2 2004/09/30 19:40:44 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/libapreq2/libapreq2-2.04.03.ebuild,v 1.3 2005/04/11 02:02:35 trapni Exp $
 
 inherit libtool eutils flag-o-matic
 
@@ -11,7 +11,7 @@ MY_SRCBALL=${MY_P%.*}_${MY_P##*.}-dev.tar.gz
 SRC_URI="http://www.apache.org/dist/httpd/libapreq/${MY_SRCBALL}"
 HOMEPAGE="http://httpd.apache.org/apreq/"
 SLOT="2"
-LICENSE="Apache-1.1 as-is"
+LICENSE="Apache-2.0"
 KEYWORDS="~x86 ~amd64"
 
 # the 5.8.4 dep is to ensure Test-More and MakeMaker

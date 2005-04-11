@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/libapreq2
-# Copyright 2003-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/libapreq2/ChangeLog,v 1.1 2004/09/28 19:38:35 rac Exp $
+# Copyright 2003-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/libapreq2/ChangeLog,v 1.2 2005/04/11 02:02:35 trapni Exp $
+
+  11 Apr 2005; Christian Parpart <trapni@gentoo.org>
+  libapreq2-2.04.03.ebuild:
+  fixed licence item
 
 *libapreq2-2.04.03 (28 Sep 2004)
 
