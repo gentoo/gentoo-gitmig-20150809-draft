@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/gimp
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.105 2005/03/07 14:09:29 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.106 2005/04/11 16:05:26 obz Exp $
+
+*gimp-2.2.6 (12 Apr 2005)
+
+  12 Apr 2005; Mike Gardiner <obz@gentoo.org> +gimp-2.2.6.ebuild:
+  New version, see bug #83646
 
   07 Mar 2005; Markus Rothe <corsair@gentoo.org> gimp-2.2.3.ebuild:
   Stable on ppc64
