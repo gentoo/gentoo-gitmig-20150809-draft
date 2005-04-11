@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 2b60098594691abef27d72b2afed6c47 Module-Signature-0.44.ebuild 999
+MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 5cc57b8566c5c50a63c3e80311edc2ab ChangeLog 974
+MD5 2328811171112f6090c1ee376eebb70f files/digest-Module-Signature-0.44 72
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCWq25tG5z4I8BtQoRApy/AJ4xUelZz23r+0QpOZViECJpG3KA+ACbBPf7
+3F6LiNk4IWfraXtvRjkUj5Y=
+=4Ugm
+-----END PGP SIGNATURE-----
