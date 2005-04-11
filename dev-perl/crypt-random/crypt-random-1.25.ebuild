@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/crypt-random/crypt-random-1.25.ebuild,v 1.1 2005/04/11 16:26:23 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/crypt-random/crypt-random-1.25.ebuild,v 1.2 2005/04/11 20:35:12 fmccor Exp $
 
 inherit perl-module
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://cpan/authors/id/V/VI/VIPUL/${MY_P}.tar.gz"
 
 LICENSE="|| ( Artistic GPL-2 )"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~amd64 ~mips"
+KEYWORDS="~x86 ~ppc ~alpha ~hppa ~amd64 ~mips"
 IUSE=""
 SRC_TEST="do"
 

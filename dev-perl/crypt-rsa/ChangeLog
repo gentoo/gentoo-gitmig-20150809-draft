@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/crypt-rsa
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/crypt-rsa/ChangeLog,v 1.6 2005/04/11 16:27:39 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/crypt-rsa/ChangeLog,v 1.7 2005/04/11 20:34:58 fmccor Exp $
+
+  11 Apr 2005; Ferris McCormick <fmccor@gentoo.org> crypt-rsa-1.55.ebuild:
+  Remove ~sparc keyword: Problems with pari-2.1.6; see Bug 87790.
 
 *crypt-rsa-1.55 (11 Apr 2005)
 
