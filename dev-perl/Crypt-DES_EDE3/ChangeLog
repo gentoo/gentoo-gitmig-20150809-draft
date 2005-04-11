@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/Crypt-DES_EDE3
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-DES_EDE3/ChangeLog,v 1.1 2005/04/11 16:34:11 mcummings Exp $
+
+*Crypt-DES_EDE3-0.01 (11 Apr 2005)
+
+  11 Apr 2005; Michael Cummings <mcummings@gentoo.org> +metadata.xml,
+  +Crypt-DES_EDE3-0.01.ebuild:
+  Dep for Module-Signature
+

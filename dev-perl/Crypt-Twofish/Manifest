@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 f502158113b6c57039a6a98cd5e511de Crypt-Twofish-2.12.ebuild 478
+MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 4963d7b067e141953987987dfe4dd466 ChangeLog 383
+MD5 5495d735911c036ec216ef983566b3a8 files/digest-Crypt-Twofish-2.12 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCWqgqtG5z4I8BtQoRAkaBAJwL+f7AuQOiMsyZ8wClBB8tB62g4ACfbK/Z
+0TLxVXYbS+2GpHuWbMwm5Ug=
+=Uc3p
+-----END PGP SIGNATURE-----
