@@ -1,6 +1,10 @@
 # ChangeLog for x11-terms/xterm
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.70 2005/04/09 17:29:40 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.71 2005/04/11 11:51:47 seemant Exp $
+
+  11 Apr 2005; Seemant Kulleen <seemant@gentoo.org> -xterm-196.ebuild,
+  -xterm-196-r1.ebuild:
+  remove cruft
 
   09 Apr 2005; Tom Gall <tgall@gentoo.org> xterm-199.ebuild:
   ok a little late ... stable on ppc64 :-)
