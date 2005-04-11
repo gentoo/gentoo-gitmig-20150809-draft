@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/pcmcia.eclass,v 1.5 2004/06/25 00:39:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/pcmcia.eclass,v 1.6 2005/04/11 20:02:06 johnm Exp $
 
 # pcmcia.eclass - This eclass facilities writing ebuilds for driver packages 
 # that may need to build against the pcmcia-cs drivers, depending on kernel
@@ -48,12 +48,13 @@ SRC_URI="pcmcia?	( mirror://sourceforge/pcmcia-cs/${PCMCIA_BASE_VERSION}.tar.gz 
 
 DEPEND="pcmcia? ( >=sys-apps/${PCMCIA_BASE_VERSION} )"
 
-PCMCIA_SOURCE_DIR="${WORKDIR}/${PCMCIA_BASE_VERSION}"
+pcmcia_src_unpack() {
+	# So while the two eclasses exist side-by-side and also the ebuilds inherit
+	# both we need to check for PCMCIA_SOURCE_DIR, and if we find it, then we
+	# bail out and assume pcmcia.eclass is working on it.
+	[[ -n ${PCMCIA_SOURCE_DIR} ]] && return 1
 
-pcmcia_src_unpack()
-{
 	cd ${WORKDIR}
-
 	if use pcmcia ; then
 		if egrep '^CONFIG_PCMCIA=[ym]' /usr/src/linux/.config >&/dev/null
 		then
@@ -63,6 +64,8 @@ pcmcia_src_unpack()
 			PCMCIA_VERSION=""
 			PCMCIA_SOURCE_DIR=""
 		else
+			PCMCIA_SOURCE_DIR="${WORKDIR}/${PCMCIA_BASE_VERSION}"
+
 			# We unpack the base version, figure out what is installed, then
 			# patch up to that version. Ugly hack to avoid messy SRC_URIs
 			unpack ${PCMCIA_BASE_VERSION}.tar.gz
