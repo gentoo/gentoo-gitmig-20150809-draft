@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/hydrogen/hydrogen-0.9.0.ebuild,v 1.9 2005/04/11 13:55:30 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/hydrogen/hydrogen-0.9.1.ebuild,v 1.1 2005/04/11 13:55:30 luckyduck Exp $
 
 IUSE="alsa jack ladspa"
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/hydrogen/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc sparc x86 ppc64"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86 ~ppc64"
 
 DEPEND=">=media-libs/libsndfile-1.0.0
 	alsa? ( media-libs/alsa-lib )
@@ -34,6 +34,6 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die
+	make DESTDIR="${D}" install || die "make install failed"
 	dodoc AUTHORS ChangeLog README TODO
 }
