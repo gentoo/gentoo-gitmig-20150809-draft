@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/clearsilver
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/clearsilver/ChangeLog,v 1.8 2004/09/08 12:48:35 rl03 Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/clearsilver/ChangeLog,v 1.9 2005/04/11 12:16:59 trapni Exp $
+
+  11 Apr 2005; Christian Parpart <trapni@gentoo.org>
+  clearsilver-0.9.7.ebuild:
+  adding ~amd64 keyword
 
   08 Sep 2004; Renat Lumpau <rl03@gentoo.org> metadata.xml:
   Fixed herd name
