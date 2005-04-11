@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/axel
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/axel/ChangeLog,v 1.17 2005/04/11 18:28:19 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/axel/ChangeLog,v 1.18 2005/04/11 18:56:03 corsair Exp $
+
+  11 Apr 2005; Markus Rothe <corsair@gentoo.org> axel-1.0b.ebuild:
+  Stable on ppc64; bug #88264
 
   11 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> axel-1.0b.ebuild:
   Stable on ppc.
