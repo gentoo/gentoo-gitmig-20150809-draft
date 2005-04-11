@@ -1,0 +1,11 @@
+# ChangeLog for app-emulation/gxemul
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/gxemul/ChangeLog,v 1.1 2005/04/11 21:50:17 kumba Exp $
+
+*gxemul-0.3.1 (11 Apr 2005)
+
+  11 Apr 2005; Joshua Kinard <kumba@gentoo.org> +metadata.xml,
+  +files/gxemul-0.3.1-mips64-crosscc-check.patch, +gxemul-0.3.1.ebuild:
+  Package Move: formerly mips64emul; now gxemul. Bump to 0.3.1, and comment
+  ebuild a little more.
+
