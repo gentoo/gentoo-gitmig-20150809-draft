@@ -1,0 +1,8 @@
+# ChangeLog for dev-games/hdl_dump
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-games/hdl_dump/ChangeLog,v 1.1 2005/04/11 04:31:39 vapier Exp $
+
+*hdl_dump-0.8 (11 Apr 2005)
+
+  11 Apr 2005; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by me.
