@@ -3,14 +3,16 @@
 <pkgmetadata>
 	<herd>no-herd</herd>
 	<maintainer>
-		<name>Richard Brown</name>
 		<email>mynamewasgone@gmail.com</email>
+		<name>Richard Brown</name>
 		<description>Richard is the maintainer-by-proxy for this package.
 			Bug-wranglers: please be sure to cc him on every bug report about
 			it.
 		</description>
-		<name>Seemant Kulleen</name>
+	</maintainer>
+	<maintainer>
 		<email>seemant@gentoo.org</email>
+		<name>Seemant Kulleen</name>
 		<description>Seemant is the proxy in question above.</description>
 	</maintainer>
 </pkgmetadata>
