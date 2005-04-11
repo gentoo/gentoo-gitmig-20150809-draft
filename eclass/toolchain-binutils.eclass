@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.32 2005/04/11 06:00:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.33 2005/04/11 06:03:18 vapier Exp $
 
 # We install binutils into CTARGET-VERSION specific directories.  This lets 
 # us easily merge multiple versions for multiple targets (if we wish) and 
@@ -53,6 +53,7 @@ is_cross() { [[ ${CHOST} != ${CTARGET} ]] ; }
 toolchain-binutils_src_unpack() {
 	unpack ${A}
 	mkdir -p "${MY_BUILDDIR}"
+	[[ -d ${WORKDIR}/patch ]] && mkdir "${WORKDIR}"/patch/skip
 }
 
 apply_binutils_updates() {
