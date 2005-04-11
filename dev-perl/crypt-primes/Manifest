@@ -1,4 +1,14 @@
-MD5 7f35bc774de6e9eee6bf2d1f9becced8 ChangeLog 592
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 ed6094c50c9a037ebaad083a312e096b ChangeLog 697
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 00c138fe29fabb55470e9fce1d32111d crypt-primes-0.50.ebuild 684
+MD5 8ecbf2a74dd4c281050c941a1ce19f37 crypt-primes-0.50.ebuild 690
 MD5 73e547c96b9b8b5e1054e744a369dca4 files/digest-crypt-primes-0.50 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCWqSTtG5z4I8BtQoRAs+yAJ9FKa/9Oevl1mBzZIcWR3XKeixnLQCfVSDq
+4mN3r7TmaE3FdX55Bdsf+/o=
+=BEqK
+-----END PGP SIGNATURE-----
