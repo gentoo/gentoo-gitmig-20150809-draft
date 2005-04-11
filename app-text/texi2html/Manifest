@@ -1,8 +1,18 @@
-MD5 086e25c086c102c3c4021141040125d5 ChangeLog 3049
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 bce1ef73ea8074d0c317af26c8fb6c07 ChangeLog 3148
 MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
 MD5 a294bbebe1bbad7e1864e41d0ec09639 texi2html-1.64-r1.ebuild 1038
 MD5 c38f72ef15bda38ba30ce852201b0d43 texi2html-1.64.ebuild 932
-MD5 2ae1474f698df5deda0ba4d3caae3419 texi2html-1.76.ebuild 817
+MD5 f695aeae8b279f4d9a354394bf9267d5 texi2html-1.76.ebuild 819
 MD5 59e2094b0a438b711cb1687485e580a4 files/digest-texi2html-1.64 66
 MD5 59e2094b0a438b711cb1687485e580a4 files/digest-texi2html-1.64-r1 66
 MD5 d8fd1ed3f116a101ab5d92c0182ed8c7 files/digest-texi2html-1.76 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFCWu1+KRy60XGEcJIRAvIwAJwM8cKWV9kvTY/up0BQ1KF6FufEQwCeL2Nx
+sdX6bHZtpnDgnCtXNHNxG8A=
+=YdVh
+-----END PGP SIGNATURE-----

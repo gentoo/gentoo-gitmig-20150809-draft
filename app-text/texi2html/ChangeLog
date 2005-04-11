@@ -1,6 +1,9 @@
 # ChangeLog for app-text/texi2html
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texi2html/ChangeLog,v 1.27 2005/04/10 18:15:00 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/texi2html/ChangeLog,v 1.28 2005/04/11 21:34:47 gustavoz Exp $
+
+  11 Apr 2005; Gustavo Zacarias <gustavoz@gentoo.org> texi2html-1.76.ebuild:
+  Stable on sparc
 
   10 Apr 2005; Simon Stelling <blubb@gentoo.org> texi2html-1.76.ebuild:
   stable on amd64
