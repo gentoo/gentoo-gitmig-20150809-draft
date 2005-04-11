@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdts/libdts-0.0.2-r1.ebuild,v 1.1 2005/03/26 11:15:12 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdts/libdts-0.0.2-r1.ebuild,v 1.2 2005/04/11 15:09:31 luckyduck Exp $
 
 inherit eutils
 
@@ -44,3 +44,5 @@ src_install() {
 	make DESTDIR="${D}" install || die
 	dodoc AUTHORS ChangeLog INSTALL NEWS README TODO doc/libdts.txt
 }
+
+src_test() { :; }
