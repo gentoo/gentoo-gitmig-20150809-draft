@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Module-Signature
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Module-Signature/ChangeLog,v 1.1 2005/04/11 17:02:29 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Module-Signature/ChangeLog,v 1.2 2005/04/11 20:21:19 fmccor Exp $
+
+  11 Apr 2005; Ferris McCormick <fmccor@gentoo.org>
+  Module-Signature-0.44.ebuild:
+  Remove ~sparc keyword because dev-perl/math-pari-2.010603 will not build,
+  and it will not build because pari-2.1.6 does not build on sparc; See Bug
+  87790 for explanation.
 
 *Module-Signature-0.44 (11 Apr 2005)
 
