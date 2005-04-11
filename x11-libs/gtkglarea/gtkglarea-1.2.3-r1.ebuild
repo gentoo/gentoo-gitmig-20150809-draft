@@ -1,6 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkglarea/gtkglarea-1.2.3-r1.ebuild,v 1.19 2004/11/08 19:31:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkglarea/gtkglarea-1.2.3-r1.ebuild,v 1.20 2005/04/11 18:34:14 blubb Exp $
+
+inherit multilib
 
 # GTKGLArea has been abandoned by the author. We'll continue to mirror the
 # source on Gentoo mirrors.
@@ -20,12 +22,13 @@ DEPEND="virtual/libc
 
 src_compile() {
 	./configure --prefix=/usr \
-		--host=${CHOST} || die
-	make || die
+		--host=${CHOST} \
+		--libdir=/usr/$(get_libdir) || die
+	emake || die
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	make DESTDIR=${D} libdir=/usr/$(get_libdir) install || die
 	dodoc AUTHORS ChangeLog NEWS README
 	docinto txt
 	dodoc docs/*.txt
