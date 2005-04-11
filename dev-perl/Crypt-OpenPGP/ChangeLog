@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Crypt-OpenPGP
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-OpenPGP/ChangeLog,v 1.1 2005/04/11 17:00:08 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-OpenPGP/ChangeLog,v 1.2 2005/04/11 20:16:12 fmccor Exp $
+
+  11 Apr 2005; Ferris McCormick <fmccor@gentoo.org>
+  Crypt-OpenPGP-1.03.ebuild:
+  Remove ~sparc keyword; pari-2.1.6 will not build on sparc, and so also will not
+  dev-perl/math-pari-2/010603.
 
 *Crypt-OpenPGP-1.03 (11 Apr 2005)
 
