@@ -1,8 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-libs/gnome-libs-1.4.2.ebuild,v 1.27 2004/11/08 14:55:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-libs/gnome-libs-1.4.2.ebuild,v 1.28 2005/04/11 18:20:40 blubb Exp $
 
-inherit eutils libtool
+inherit eutils libtool multilib
 
 DESCRIPTION="GNOME Core Libraries"
 HOMEPAGE="http://www.gnome.org/"
@@ -56,6 +56,7 @@ src_compile() {
 
 	./configure --host=${CHOST} \
 		--prefix=/usr \
+		--libdir=/usr/$(get_libdir) \
 		--mandir=/usr/share/man \
 		--infodir=/usr/share/info \
 		--sysconfdir=/etc \
@@ -77,6 +78,7 @@ src_compile() {
 
 src_install() {
 	make prefix=${D}/usr \
+		libdir=${D}/usr/$(get_libdir) \
 		mandir=${D}/usr/share/man \
 		infodir=${D}/usr/share/info \
 		sysconfdir=${D}/etc \
