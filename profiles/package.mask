@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3814 2005/04/10 21:31:50 trapni Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3815 2005/04/11 20:35:41 latexer Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,12 @@
 ##
 ##   End example
 ##
+
+
+# Peter Johanson <latexer@gentoo.org> (11 Apr 2005)
+# Masked as a new cairo innevitably breaks cairo using apps
+=x11-libs/cairo-0.4.0
+=media-libs/glitz-0.4.0
 
 # <trapni@gentoo.org> (10 Apr 2005)
 # Before adding for testing ;)
@@ -442,10 +448,6 @@ net-www/mod_contribs
 # masking due to replacment by media-video/spca5xx. due for
 # removal from tree after 1 May 2005.
 media-video/spca50x
-
-# Tom Payne <twp@gentoo.org> (4 Feb 2005)
-# Masked pending resolution of bug # 79640
-=media-libs/glitz-0.4.0
 
 #Gustavo Felisberto <humpback@gentoo.org> (4 Feb 2005)
 #Masked for user testing
