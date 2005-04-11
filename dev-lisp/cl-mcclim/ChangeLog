@@ -1,6 +1,9 @@
 # ChangeLog for dev-lisp/cl-mcclim
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-mcclim/ChangeLog,v 1.7 2005/04/11 07:08:39 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-mcclim/ChangeLog,v 1.8 2005/04/11 07:36:23 mkennedy Exp $
+
+  11 Apr 2005; Matthew Kennedy <mkennedy@gentoo.org> cl-mcclim-0.9.1.ebuild:
+  Keywording for ~amd64
 
 *cl-mcclim-0.9.1 (11 Apr 2005)
 

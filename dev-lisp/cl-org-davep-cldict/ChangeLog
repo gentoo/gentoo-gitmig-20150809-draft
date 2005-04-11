@@ -1,6 +1,10 @@
 # ChangeLog for dev-lisp/cl-org-davep-cldict
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-org-davep-cldict/ChangeLog,v 1.1 2005/01/17 00:21:57 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-org-davep-cldict/ChangeLog,v 1.2 2005/04/11 07:38:27 mkennedy Exp $
+
+  11 Apr 2005; Matthew Kennedy <mkennedy@gentoo.org>
+  cl-org-davep-cldict-1.1.ebuild:
+  Keywording for ~amd64
 
 *cl-org-davep-cldict-1.1 (16 Jan 2005)
 

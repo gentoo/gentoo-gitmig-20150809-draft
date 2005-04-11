@@ -1,6 +1,10 @@
 # ChangeLog for dev-lisp/cl-org-davep-dictrepl
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-org-davep-dictrepl/ChangeLog,v 1.2 2004/06/24 23:48:17 agriffis Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-org-davep-dictrepl/ChangeLog,v 1.3 2005/04/11 07:39:46 mkennedy Exp $
+
+  11 Apr 2005; Matthew Kennedy <mkennedy@gentoo.org>
+  cl-org-davep-dictrepl-2.2.ebuild:
+  Keywording for ~amd64
 
 *cl-org-davep-dictrepl-2.2 (23 Jun 2004)
 
