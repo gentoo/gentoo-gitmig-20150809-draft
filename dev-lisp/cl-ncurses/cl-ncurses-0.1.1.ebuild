@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-ncurses/cl-ncurses-0.1.1.ebuild,v 1.4 2004/07/14 15:56:54 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-ncurses/cl-ncurses-0.1.1.ebuild,v 1.5 2005/04/11 06:01:21 mkennedy Exp $
 
 inherit common-lisp eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://common-lisp.net/project/cl-ncurses/files/cl-ncurses_${PV}.tgz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ~ppc ~amd64"
 IUSE=""
 
 DEPEND="dev-lisp/common-lisp-controller
