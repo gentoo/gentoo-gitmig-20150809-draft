@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/axel
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/axel/ChangeLog,v 1.16 2005/04/11 17:19:29 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/axel/ChangeLog,v 1.17 2005/04/11 18:28:19 hansmi Exp $
+
+  11 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> axel-1.0b.ebuild:
+  Stable on ppc.
 
 *axel-1.0b (11 Apr 2005)
 
