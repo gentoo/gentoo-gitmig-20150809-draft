@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.0.ebuild,v 1.24 2005/03/28 14:05:27 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.0.ebuild,v 1.25 2005/04/11 14:31:06 luckyduck Exp $
 
 inherit eutils flag-o-matic gcc libtool
 
@@ -210,7 +210,7 @@ src_compile() {
 	fi
 
 	if use X; then
-		if "${ROOT}/usr/include/X11/X.h" ]; then
+		if [ -f "${ROOT}/usr/include/X11/X.h" ]; then
 			myconf="${myconf} --x-includes=${ROOT}/usr/include"
 		elif [ -f "${ROOT}/usr/X11R6/include/X11/X.h" ]; then
 			myconf="${myconf} --x-includes=${ROOT}/usr/X11R6/include"

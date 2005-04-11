@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.198 2005/03/28 14:05:27 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.199 2005/04/11 14:31:06 luckyduck Exp $
+
+  11 Apr 2005; Jan Brinkmann <luckyduck@gentoo.org> metadata.xml,
+  xine-lib-1.0.ebuild:
+  corrected if syntax, fixes #88551. updated maintainer information, chriswhite
+  is retired.
 
   28 Mar 2005; Chris White <chriswhite@gentoo.org> xine-lib-1.0.ebuild:
   Fixed the pic logic that was breaking lots of stuff.
