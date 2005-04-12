@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.0.0_beta2.ebuild,v 1.2 2005/04/12 02:11:07 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.0.0_beta2.ebuild,v 1.3 2005/04/12 20:57:42 mr_bones_ Exp $
 
 inherit eutils flag-o-matic
 
@@ -102,14 +102,14 @@ src_compile() {
 	use jpeg	&& myconf="${myconf} -system-libjpeg" || myconf="${myconf} -qt-libjpeg"
 	use debug	&& myconf="${myconf} -debug" || myconf="${myconf} -release"
 	use zlib	&& myconf="${myconf} -system-zlib" || myconf="${myconf} -qt-zlib"
-	
+
 	use mysql	&& myconf="${myconf} -plugin-sql-mysql -I/usr/include/mysql -L/usr/$(get_libdir)/mysql" || myconf="${myconf} -no-sql-mysql"
 	use postgres	&& myconf="${myconf} -plugin-sql-psql -I/usr/include/postgresql/pgsql" || myconf="${myconf} -no-sql-psql"
 	use firebird	&& myconf="${myconf} -plugin-sql-ibase" || myconf="${myconf} -no-sql-ibase"
 	use sqlite	&& myconf="${myconf} -plugin-sql-sqlite" || myconf="${myconf} -no-sql-sqlite"
 	use odbc	&& myconf="${myconf} -plugin-sql-odbc" || myconf="${myconf} -no-sql-odbc"
 
-   myconf="${myconf} -tablet -xft -xrender -xrandr -xkb -xshape -sm"
+	myconf="${myconf} -tablet -xft -xrender -xrandr -xkb -xshape -sm"
 
 	./configure -stl -verbose -largefile -qt-imgfmt-{jpeg,png} \
 		-platform ${PLATFORM} -xplatform ${PLATFORM} \
