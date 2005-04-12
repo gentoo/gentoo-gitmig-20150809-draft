@@ -1,6 +1,16 @@
-MD5 6cf8d24dfb9984e776f61148ddb51835 propel-generator-1.1.0.ebuild 568
-MD5 313f85592e5a1748518e0807162261d3 ChangeLog 531
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 bddaf3403259004b7359a1b7e30a1e70 propel-generator-1.1.0.ebuild 568
+MD5 cfc24b8dde98b860b1befd83ce89678e ChangeLog 531
 MD5 34b376f52ca199fffb4e52b83169574a metadata.xml 156
 MD5 6cf8d24dfb9984e776f61148ddb51835 propel-generator-1.0.0.ebuild 568
 MD5 e7024a2c98bd9c29adb45b152dfb17fd files/digest-propel-generator-1.0.0 71
 MD5 6c5080e34c844e849cf06eff0eb79a35 files/digest-propel-generator-1.1.0 71
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCW22laGfFFLhbXWkRAiKWAJ9XSwXlbvLvgtEwc/J4B+hOFcffgQCfbG+J
+/p26vBbczr37rM3gF+Q+izE=
+=UaVi
+-----END PGP SIGNATURE-----
