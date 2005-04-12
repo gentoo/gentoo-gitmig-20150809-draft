@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-proxy/junkbuster/junkbuster-2.0.2-r2.ebuild,v 1.1 2005/03/08 17:39:51 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-proxy/junkbuster/junkbuster-2.0.2-r3.ebuild,v 1.1 2005/04/12 20:09:29 mrness Exp $
 inherit eutils
 
 DESCRIPTION="Filtering HTTP proxy"

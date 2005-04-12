@@ -1,6 +1,14 @@
 # ChangeLog for www-proxy/junkbuster
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-proxy/junkbuster/ChangeLog,v 1.5 2005/03/08 17:39:51 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-proxy/junkbuster/ChangeLog,v 1.6 2005/04/12 20:09:29 mrness Exp $
+
+*junkbuster-2.0.2-r3 (12 Apr 2005)
+
+  12 Apr 2005; Alin Nastac <mrness@gentoo.org>
+  files/junkbuster-2.0.2-fixups.patch, -junkbuster-2.0.2-r2.ebuild,
+  +junkbuster-2.0.2-r3.ebuild:
+  Fix remote exploitable vulnerability and heap corruption, thanks to James Ranson 
+  <euclid80@users.sf.net> and Tavis Ormandy <taviso@gentoo.org> (#88537).
 
 *junkbuster-2.0.2-r2 (08 Mar 2005)
 

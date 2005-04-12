@@ -1,6 +1,28 @@
 diff -Nru ijb20.orig/filters.c ijb20/filters.c
 --- ijb20.orig/filters.c	2000-03-29 16:05:42.000000000 +0300
-+++ ijb20/filters.c	2005-03-08 19:25:54.105567248 +0200
++++ ijb20/filters.c	2005-04-12 22:54:06.295702048 +0300
+@@ -652,7 +652,7 @@
+ ij_untrusted_url(struct http_request *http, struct client_state *csp)
+ {
+ 	int n;
+-	char *hostport, *path, *p, *v[9];
++	char *hostport, *path, *referrer, *p, *v[9];
+ 	char buf[BUFSIZ];
+ 	struct url_spec **tl, *t;
+ 
+@@ -700,9 +700,9 @@
+ 	freez(hostport);
+ 	freez(path    );
+ 
+-	strsav(p, "The referrer in this request was <strong>");
+-	strsav(p, referrer);
+-	strsav(p, "</strong><br>\n");
++	p = strsav(p, "The referrer in this request was <strong>");
++	p = strsav(p, referrer);
++	p = strsav(p, "</strong><br>\n");
+ 
+ 	p = strsav(p, "<h3>The following referrers are trusted</h3>\n");
+ 
 @@ -773,7 +773,7 @@
  
  			sprintf(out_str,
@@ -12,7 +34,7 @@ diff -Nru ijb20.orig/filters.c ijb20/filters.c
  			s = strsav(s,out_str);
 diff -Nru ijb20.orig/socks4.c ijb20/socks4.c
 --- ijb20.orig/socks4.c	1998-10-30 23:58:48.000000000 +0200
-+++ ijb20/socks4.c	2005-03-08 19:25:54.105567248 +0200
++++ ijb20/socks4.c	2005-04-12 22:44:47.367672024 +0300
 @@ -9,6 +9,7 @@
  #include <stdio.h>
  #include <sys/types.h>
@@ -32,7 +54,7 @@ diff -Nru ijb20.orig/socks4.c ijb20/socks4.c
  	char *errstr, *target_host;
 diff -Nru ijb20.orig/ssplit.c ijb20/ssplit.c
 --- ijb20.orig/ssplit.c	1998-10-30 23:58:48.000000000 +0200
-+++ ijb20/ssplit.c	2005-03-08 19:25:54.106567096 +0200
++++ ijb20/ssplit.c	2005-04-12 22:44:47.368671872 +0300
 @@ -19,6 +19,9 @@
   */
  

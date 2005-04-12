@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 da8c22348d41a42808c871bbf99c9cf8 ChangeLog 1749
+MD5 b3c185a99ebbee6ea12d5450c48e6cec junkbuster-2.0.2-r3.ebuild 996
+MD5 88c9998cec9e04e0cedece1ae79050dc ChangeLog 2090
 MD5 fc31adb42c0ec77e8f6be26b67ce7ffd metadata.xml 218
-MD5 9a6535f999af7230a8e410d969b1da3d junkbuster-2.0.2-r2.ebuild 996
-MD5 144473c056c1fe200cf39e691a8417ba files/digest-junkbuster-2.0.2-r2 70
+MD5 144473c056c1fe200cf39e691a8417ba files/digest-junkbuster-2.0.2-r3 70
 MD5 6c8d7b83685f02017218f73763bd8b71 files/junkbuster.rc6 583
-MD5 00550b1ad1399d06d361a47a44cb34bb files/junkbuster-2.0.2-fixups.patch 1266
+MD5 77a51c2ad0d03e74b67b9f6caa0d4048 files/junkbuster-2.0.2-fixups.patch 1871
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCLeN1jiC39V7gKu0RAowfAJ9fA5kds+20+lIrqQs/MR0qzVkWyQCgnq1f
-NElGas8vD4tFLPrC+sWHluQ=
-=HO11
+iD8DBQFCXCsTjiC39V7gKu0RArEjAJwLHJ0dJ1a7cEjbf2uz5wrcCYw9eACg3WZn
+1pjCC+r7/eZHrtPJQHRjGTw=
+=ALAe
 -----END PGP SIGNATURE-----
