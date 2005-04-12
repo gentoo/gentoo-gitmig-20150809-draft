@@ -1,6 +1,11 @@
 # ChangeLog for app-emacs/emacs-wiki
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-wiki/ChangeLog,v 1.7 2005/02/01 08:37:50 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-wiki/ChangeLog,v 1.8 2005/04/12 08:42:39 ming Exp $
+
+*emacs-wiki-2.68 (12 Apr 2005)
+
+  12 Apr 2005; Ming Zhao <ming@gentoo.org> emacs-wiki-2.68.ebuild :
+  version bumped. SRC_URI was changed to the maintainers homepage.
 
 *emacs-wiki-2.67.1 (01 Feb 2005)
 
