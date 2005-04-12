@@ -1,5 +1,15 @@
-MD5 4d7cf438fbf222741bc687b2af58e846 ChangeLog 890
-MD5 4a7b608ea98b55d4a6d019117ff55953 Text-Kakasi-2.04.ebuild 638
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 0de5cd84d036eeca2958cfdecb58315f ChangeLog 992
+MD5 34b65d1e3a9ce0dc385d881a590a4373 Text-Kakasi-2.04.ebuild 646
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 cda580468849e90bd729580b6f1c95c3 files/Text-Kakasi-1.05-gentoo.diff 530
 MD5 3a4cb53b76d63ddcc1b2f66619e7f13c files/digest-Text-Kakasi-2.04 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFCWzGGKRy60XGEcJIRAqnMAJ0c2SPtL/p3N4+/IKAtkKs1PdwqoACgkVRF
+4aJFm17qDooFLmRmK/HDEDA=
+=sDny
+-----END PGP SIGNATURE-----
