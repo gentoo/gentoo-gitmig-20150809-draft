@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/braa
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/braa/ChangeLog,v 1.6 2004/10/05 23:19:57 malc Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/braa/ChangeLog,v 1.7 2005/04/12 02:32:56 weeve Exp $
+
+  12 Apr 2005; Jason Wever <weeve@gentoo.org> braa-0.8.ebuild:
+  Added ~sparc keyword.
 
   05 Oct 2004; Malcolm Lashley <malc@gentoo.org> braa-0.8.ebuild:
   ~amd64 bug #66090
