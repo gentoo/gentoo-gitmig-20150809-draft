@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/bugzilla-2.18.0_rc4.ebuild,v 1.4 2005/03/29 15:25:49 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/bugzilla-2.18.0_rc4.ebuild,v 1.5 2005/04/12 11:22:00 voxus Exp $
 
 inherit eutils webapp
 
@@ -13,7 +13,7 @@ SRC_URI="http://ftp.mozilla.org/pub/mozilla.org/webtools/${MY_P}.tar.gz"
 HOMEPAGE="http://www.bugzilla.org"
 
 LICENSE="MPL-1.1 NPL-1.1"
-KEYWORDS="~x86 ppc ~sparc ~ppc64"
+KEYWORDS="~x86 ppc ~sparc ~ppc64 ~amd64"
 
 IUSE="apache2"
 
