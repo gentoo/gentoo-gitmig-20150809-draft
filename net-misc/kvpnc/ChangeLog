@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/kvpnc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/kvpnc/ChangeLog,v 1.5 2005/02/27 19:42:58 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/kvpnc/ChangeLog,v 1.6 2005/04/12 11:18:16 voxus Exp $
+
+*kvpnc-0.6.1 (12 Apr 2005)
+
+  12 Apr 2005; Konstantin Arkhipov <voxus@gentoo.org> -kvpnc-0.4.1.2.ebuild,
+  -kvpnc-0.6.ebuild, +kvpnc-0.6.1.ebuild:
+  Version bump, closing bug #87479.
 
 *kvpnc-0.6 (27 Feb 2005)
 
