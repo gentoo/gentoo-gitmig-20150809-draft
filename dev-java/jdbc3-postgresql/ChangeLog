@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/jdbc3-postgresql
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc3-postgresql/ChangeLog,v 1.7 2004/09/26 13:48:19 axxo Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc3-postgresql/ChangeLog,v 1.8 2005/04/12 20:03:03 luckyduck Exp $
+
+*jdbc3-postgresql-8.0_p311 (12 Apr 2005)
+
+  12 Apr 2005; Jan Brinkmann <luckyduck@gentoo.org>
+  +jdbc3-postgresql-8.0_p311.ebuild:
+  new upstream version, fixes #88404. introduced support for the doc, examples,
+  jikes and the source useflag.
 
 *jdbc3-postgresql-7.4.5 (26 Sep 2004)
 

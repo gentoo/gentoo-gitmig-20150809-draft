@@ -1,6 +1,18 @@
-MD5 8f3f27c04d3eaac22c4d5476def83276 ChangeLog 996
-MD5 4c8f1f6d2475fd85fa7f479860b568d5 jdbc3-postgresql-7.3.ebuild 645
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 1b37002b377f0100b1f16be13990701b jdbc3-postgresql-8.0_p311.ebuild 1241
+MD5 4b5cb8a9047f7a7a1dbadf83712077f5 jdbc3-postgresql-7.4.5.ebuild 1144
+MD5 f590b0599ac7d680f8a4adfba52b88a8 jdbc3-postgresql-7.3.ebuild 650
+MD5 2a794fc57ede763e55b018afca23eaf1 ChangeLog 1245
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
-MD5 150f241bef2122ace8f895592c631f58 jdbc3-postgresql-7.4.5.ebuild 1144
+MD5 68212c0fc3f178e7dcd29a128bc6dbb5 files/digest-jdbc3-postgresql-8.0_p311 79
 MD5 927470f50a83ea9bf353f3d3e8c68c4f files/digest-jdbc3-postgresql-7.3 58
 MD5 e71acb8b196dc2466141bfe8dabe0eee files/digest-jdbc3-postgresql-7.4.5 73
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCXCmT06ebR+OMO78RAvvPAJ0Twav7C2nE4Y55eHf2Zl09wyrATACdFGDM
+CYacffEDVja829FDcB/ikqI=
+=iFX6
+-----END PGP SIGNATURE-----
