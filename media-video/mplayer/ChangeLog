@@ -1,6 +1,12 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.290 2005/04/11 21:01:50 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.291 2005/04/12 08:09:31 lu_zero Exp $
+
+*mplayer-1.0_pre6-r3 (12 Apr 2005)
+
+  12 Apr 2005; Luca Barbato <lu_zero@gentoo.org>
+  +mplayer-1.0_pre6-r3.ebuild:
+  New p.masked ebuild, cpudetection and custom-cflags added.
 
   11 Apr 2005; Jan Brinkmann <luckyduck@gentoo.org>
   mplayer-1.0_pre6-r1.ebuild, mplayer-1.0_pre6-r2.ebuild:
