@@ -1,6 +1,12 @@
 # ChangeLog for sys-libs/cracklib
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/ChangeLog,v 1.66 2005/03/18 00:11:20 vapier Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/ChangeLog,v 1.67 2005/04/12 03:07:36 vapier Exp $
+
+*cracklib-2.8.3 (12 Apr 2005)
+
+  12 Apr 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/cracklib-2.8.3-dictname.patch, +cracklib-2.8.3.ebuild:
+  Version bump to fix packer.h issues #85698.
 
 *cracklib-2.8.2 (18 Mar 2005)
 
