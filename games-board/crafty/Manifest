@@ -1,22 +1,14 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 eef85d53939226e702b1db99a48cb734 ChangeLog 1629
-MD5 de0523025198eaab0a6cc8477f86a76b crafty-19.1.ebuild 2280
-MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 3505ffbd5c4bb22f2789ff8c96979fb6 crafty-19.8.ebuild 2113
 MD5 19e701c1670f8db20f5fda820dae8202 crafty-19.12.ebuild 2068
+MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 MD5 f03686b9106ca9dc98600eaf2184df88 crafty-19.15.ebuild 2318
+MD5 0b2ca3079bab31b591bff65474c2c978 crafty-19.18.ebuild 2308
+MD5 0314ac36353ac4610f29a6613a46584e ChangeLog 1752
+MD5 de0523025198eaab0a6cc8477f86a76b crafty-19.1.ebuild 2280
+MD5 3505ffbd5c4bb22f2789ff8c96979fb6 crafty-19.8.ebuild 2113
 MD5 4970593053a51ce5e26ea2d6bd89ffe9 files/19.8-ppc.patch 702
-MD5 1cfc5524de1fd69ae391d434d6e483d9 files/crafty-18.15-ppc.patch 634
-MD5 cf2bf7fa0aa2a30369f35f79bbc0f44a files/digest-crafty-19.1 63
-MD5 17996dcbb38db4126094543f36cd43d1 files/digest-crafty-19.8 63
 MD5 3dceccb949c1ffd0e0c563eaaa3ee237 files/digest-crafty-19.12 64
+MD5 ab7c7d5b9120c4cbf728cfc3fd8c83cf files/digest-crafty-19.18 64
+MD5 1cfc5524de1fd69ae391d434d6e483d9 files/crafty-18.15-ppc.patch 634
+MD5 17996dcbb38db4126094543f36cd43d1 files/digest-crafty-19.8 63
+MD5 cf2bf7fa0aa2a30369f35f79bbc0f44a files/digest-crafty-19.1 63
 MD5 af2077a809d76a2ad5902bedb13f5bc5 files/digest-crafty-19.15 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBHwqyHTu7gpaalycRAvZ0AJ9aY3q1S46jP132pSVDIviJUpxd7ACeOblp
-L+LgNblf+W0dgHgQQOtmj+Q=
-=gTnV
------END PGP SIGNATURE-----
