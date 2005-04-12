@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/multilib.eclass,v 1.26 2005/03/08 11:56:49 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/multilib.eclass,v 1.27 2005/04/12 19:52:21 eradicator Exp $
 #
 # Author: Jeremy Huddleston <eradicator@gentoo.org>
 #
@@ -405,7 +405,7 @@ create_ml_includes() {
 					else
 						echo "#ifdef ${sym}"
 					fi
-					echo "#include \"$(create_ml_includes-relative_between ${dest}/$(dirname ${file}) ${dir}/${file})\""
+					echo "#include <$(create_ml_includes-absolute ${dir}/${file})>"
 					echo "#endif /* ${sym} */"
 					echo ""
 				fi
@@ -417,25 +417,19 @@ create_ml_includes() {
 }
 
 # Helper function for create_ml_includes
-create_ml_includes-relative_between() {
-	local src="$(create_ml_includes-tidy_path ${1})"
-	local dst="$(create_ml_includes-tidy_path ${2})"
+create_ml_includes-absolute() {
+	local dst="$(create_ml_includes-tidy_path ${1})"
 
-	src=(${src//\// })
 	dst=(${dst//\// })
 
 	local i
-	for ((i=0; i<${#src[*]}; i++)); do
-		[ "${dst[i]}" != "${src[i]}" ] && break
+	for ((i=0; i<${#dst[*]}; i++)); do
+		[ "${dst[i]}" == "include" ] && break
 	done
 
-	local common=$i
+	local strip_upto=$i
 
-	for ((i=${#src[*]}; i>common; i--)); do
-		echo -n ../
-	done
-
-	for ((i=common; i<${#dst[*]}-1; i++)); do
+	for ((i=strip_upto+1; i<${#dst[*]}-1; i++)); do
 		echo -n ${dst[i]}/
 	done
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/tetex.eclass,v 1.36 2005/04/05 17:07:45 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/tetex.eclass,v 1.37 2005/04/12 19:52:21 eradicator Exp $
 #
 # Author: Jaromir Malenko <malenko@email.cz>
 # Author: Mamoru KOMACHI <usata@gentoo.org>
@@ -9,7 +9,7 @@
 # inherited directly in any ebuilds. It should be inherited from
 # tetex-{2,3}.eclass.
 
-inherit eutils flag-o-matic
+inherit eutils flag-o-matic toolchain-funcs
 
 ECLASS=tetex
 INHERITED="${INHERITED} ${ECLASS}"
@@ -184,7 +184,7 @@ tetex_src_compile() {
 		done
 	fi
 
-	emake -j1 texmf=${TEXMF_PATH:-/usr/share/texmf} || die "make teTeX failed"
+	emake -j1 CC="$(tc-getCC)" CXX="$(tc-getCXX)" texmf=${TEXMF_PATH:-/usr/share/texmf} || die "make teTeX failed"
 }
 
 tetex_src_install() {
