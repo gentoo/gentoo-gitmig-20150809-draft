@@ -1,9 +1,19 @@
-MD5 a1e13d1566454107a36f4fb6a278f4dd ChangeLog 4965
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 069efb442757d2d10e3a398c88342fbc ChangeLog 5056
 MD5 9a2d5bec1f7173bf7ba6c309446a6ddf gnet-1.1.9.ebuild 978
 MD5 8622ff62e90c2e7c596bc0760da9a7f1 gnet-2.0.5.ebuild 810
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 307993de25c51c5aecae36b695482c4c gnet-2.0.7.ebuild 683
+MD5 cbf65c9f378b81cf44e21b3d232070e9 gnet-2.0.7.ebuild 681
 MD5 a39e088e927a5d9b2de3794920d01405 files/digest-gnet-1.1.9 62
 MD5 94491a07093f86943ce66996189b4718 files/digest-gnet-2.0.5 62
 MD5 7b1ffb935d29a355ea158d7be3f514ed files/gnet-2.0.5-gtkdoc_fix.patch 665
 MD5 be10a790945382ccd065e826e2798bee files/digest-gnet-2.0.7 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFCWxpdKRy60XGEcJIRAhwGAJ9UMbCykBnK5ZZS0ZmCvP08yx+jXgCbBA9k
+310IDberHgYTYP2v0lK8J5o=
+=DK3C
+-----END PGP SIGNATURE-----
