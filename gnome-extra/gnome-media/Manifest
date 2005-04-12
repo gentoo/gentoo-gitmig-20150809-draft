@@ -7,16 +7,16 @@ MD5 12e4ca27d0da26baad7a1bedf9fd3b21 gnome-media-2.6.2.ebuild 1146
 MD5 a392243c82ea2994bd68329d0baac012 gnome-media-2.8.0.ebuild 1144
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 18f63700eb68df435b4730dc32b0363d gnome-media-2.10.0.ebuild 1312
-MD5 0754c972dc1e9565c631100c83dc66d5 gnome-media-2.10.1.ebuild 1311
+MD5 d36e98ee67db58490f8ee1abe0297e0c gnome-media-2.10.2.ebuild 1311
 MD5 88dec384b5105a1bffd46847025909b0 files/digest-gnome-media-1.2.3-r2 70
 MD5 28d862b5dbc7c8b0dc52ccfa0a89171b files/digest-gnome-media-2.6.2 71
 MD5 cf54400021ff023a01bdafab7ee15c30 files/digest-gnome-media-2.8.0 71
 MD5 8112026b401f71b5ca2633cdeda8b35d files/digest-gnome-media-2.10.0 72
-MD5 9f242860addefe16e501ccbe95c861c3 files/digest-gnome-media-2.10.1 72
+MD5 097229597447674a84ade529e1f51f9f files/digest-gnome-media-2.10.2 72
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFCW/kqXjcVihsel0ERAp2jAJ49qyOT2fG07Jr94G8zJPInAnLWBgCdFE+j
-qsYGCXuh6Np4WnkGIgnyRvg=
-=xjni
+iD8DBQFCW/zDXjcVihsel0ERAmC3AKC2PU77FA6M5SiIzngUmOdBga+5uACgodsR
+IWCgvlWmYH9JJPpzkCXZkn8=
+=IADt
 -----END PGP SIGNATURE-----
