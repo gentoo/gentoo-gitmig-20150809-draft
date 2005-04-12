@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.14.2.ebuild,v 1.5 2005/04/08 21:53:14 kito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.14.2.ebuild,v 1.6 2005/04/12 13:16:54 usata Exp $
 
-inherit flag-o-matic eutils toolchain-funcs mono libtool
+inherit flag-o-matic eutils toolchain-funcs mono libtool elisp-common
 
 DESCRIPTION="GNU locale utilities"
 HOMEPAGE="http://www.gnu.org/software/gettext/gettext.html"
@@ -103,14 +103,23 @@ src_install() {
 	fi
 
 	# Remove emacs site-lisp stuff if 'emacs' is not in USE
-	use emacs || rm -rf ${D}/usr/share/emacs
+	if use emacs ; then
+		elisp-site-file-install ${FILESDIR}/50po-mode-gentoo.el
+	else
+		rm -rf ${D}/usr/share/emacs
+	fi
 
 	dodoc AUTHORS BUGS ChangeLog DISCLAIM NEWS README* THANKS TODO
 }
 
 pkg_postinst() {
+	use emacs && elisp-site-regen
 	ewarn "Any package that linked against the previous version"
 	ewarn "of gettext will have to be rebuilt."
 	ewarn "Please 'emerge gentoolkit' and run:"
 	ewarn "revdep-rebuild --soname libintl.so.2"
+}
+
+pkg_postrm() {
+	use emacs && elisp-site-regen
 }

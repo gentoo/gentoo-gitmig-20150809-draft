@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/gettext
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/ChangeLog,v 1.84 2005/04/09 13:13:09 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/ChangeLog,v 1.85 2005/04/12 13:16:54 usata Exp $
+
+  12 Apr 2005; Mamoru KOMACHI <usata@gentoo.org> +files/50po-mode-gentoo.el,
+  gettext-0.14.2.ebuild:
+  Register po-mode if emacs USE is set; bug #74458.
 
   09 Apr 2005; Markus Rothe <corsair@gentoo.org> gettext-0.14.1.ebuild:
   Stable on ppc64
@@ -70,7 +74,7 @@
   09 Oct 2004; Tom Gall <tgall@gentoo.org> gettext-0.12.1-r2.ebuild:
   stable on ppc64, bug #66355
 
-  09 Oct 2004; Bryan Østergaard <kloeri@gentoo.org> gettext-0.12.1-r2.ebuild:
+  09 Oct 2004; Bryan ?stergaard <kloeri@gentoo.org> gettext-0.12.1-r2.ebuild:
   Stable on alpha, bug 66355.
 
   08 Oct 2004; Guy Martin <gmsoft@gentoo.org> gettext-0.12.1-r2.ebuild:
@@ -128,7 +132,7 @@
   gettext-0.12.1.ebuild:
   QA - fix use invocation
 
-  11 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> gettext-0.12.1-r1.ebuild:
+  11 Jun 2004; Bryan ?stergaard <kloeri@gentoo.org> gettext-0.12.1-r1.ebuild:
   Stable on alpha.
 
   02 Jun 2004; Seemant Kulleen <seemant@gentoo.org> gettext-0.12.1-r1.ebuild,
