@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/pax-utils
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/pax-utils/ChangeLog,v 1.13 2005/04/09 20:35:15 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/pax-utils/ChangeLog,v 1.14 2005/04/12 02:35:15 dostrow Exp $
+
+  12 Apr 2005; Daniel Ostrow <dostrow@gentoo.org> pax-utils-0.0.4.ebuild,
+  pax-utils-0.0.5.ebuild:
+  ~ppc64 for ppc64 hardened
 
   09 Apr 2005; Michael Hanselmann <hansmi@gentoo.org>
   pax-utils-0.0.4.ebuild:
