@@ -1,18 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 3e52ef567afa3bb85a33e3bb60be11e9 ChangeLog 7680
-MD5 b9e0433fb4d0fa3ac10caf9d48b7ddf1 kita-0.174.0.ebuild 980
+MD5 016499ed3ea21b3ef121aaac8b0dec57 ChangeLog 7768
 MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
-MD5 705218e0e0cd674b917da3b862a3e9c5 kita-0.175.0.ebuild 983
 MD5 ed1450d59b8d52726a68a6044a8012fd kita-0.175.1.ebuild 956
+MD5 b9e0433fb4d0fa3ac10caf9d48b7ddf1 kita-0.174.0.ebuild 980
+MD5 e96e60768935423e2a30030c4aa546f8 kita-0.175.0.ebuild 982
 MD5 16a36a2e2262432651f506036f75f176 files/digest-kita-0.174.0 64
 MD5 77447da35b0798df30457eb49b7ebb69 files/digest-kita-0.175.0 64
 MD5 76bcf705d2ecaf08ecde802c30900b63 files/digest-kita-0.175.1 64
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCRs0yVWNWqTUmv+0RAk49AKCpLJ6hldO5fJ60CpIUIcKQD7WYkQCgtv9d
-pVc5ahE1DFog8pBtxTQiknc=
-=+hQz
+iD8DBQFCW/ONVWNWqTUmv+0RArWmAKCYRpwZ/1UiM0+Mp9eNiyI9s9LorACfROXe
+YlSJgqAQf4ISF216+z3ODMQ=
+=FvRs
 -----END PGP SIGNATURE-----
