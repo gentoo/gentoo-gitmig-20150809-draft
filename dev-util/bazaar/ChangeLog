@@ -1,7 +1,15 @@
 # ChangeLog for dev-util/bazaar
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bazaar/ChangeLog,v 1.3 2005/03/02 19:47:45 arj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bazaar/ChangeLog,v 1.4 2005/04/12 16:49:49 arj Exp $
 
+*bazaar-1.3 (12 Apr 2005)
+
+  12 Apr 2005; Anders Rune Jensen <arj@gentoo.org> +bazaar-1.3.ebuild:
+  New version.
+	
+  12 Apr 2005; Anders Rune Jensen <arj@gentoo.org> bazaar-1.2.ebuild:
+  Mark stable on x86 and amd64.
+	
 *bazaar-1.2 (02 Mar 2005)
 
   02 Mar 2005; Anders Rune Jensen <arj@gentoo.org> +bazaar-1.2.ebuild:

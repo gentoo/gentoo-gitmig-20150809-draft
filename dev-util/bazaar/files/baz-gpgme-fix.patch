@@ -1,0 +1,12 @@
+diff -urN thelove@canonical.com---dists--bazaar--1.3/src/baz/libarch/pfs-signatures.c thelove@canonical.com---dists--bazaar--1.3-mod/src/baz/libarch/pfs-signatures.c
+--- thelove@canonical.com---dists--bazaar--1.3/src/baz/libarch/pfs-signatures.c	2005-04-11 10:07:12.000000000 +0200
++++ thelove@canonical.com---dists--bazaar--1.3-mod/src/baz/libarch/pfs-signatures.c	2005-04-12 18:32:10.000000000 +0200
+@@ -28,7 +28,7 @@
+ #include "libarch/namespace.h"
+ #include "libarch/archives.h"
+ #include "libarch/cached-archive.h"
+-#include <gpgme.h>
++#include "gpgme/gpgme.h"
+ #include "libarch/pfs-signatures.h"
+ 
+ 

@@ -1,6 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bazaar/bazaar-1.2.ebuild,v 1.2 2005/04/12 16:49:49 arj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bazaar/bazaar-1.3.ebuild,v 1.1 2005/04/12 16:49:49 arj Exp $
+
+inherit eutils
 
 S="${WORKDIR}/${P}/src/=build"
 DESCRIPTION="Bazaar is a user-interface branch of tla"
@@ -10,10 +12,10 @@ HOMEPAGE="http://bazaar.canonical.com/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 amd64"
+KEYWORDS="~x86 ~amd64"
 IUSE=""
 
-DIR="thelove@canonical.com---dists--bazaar--1.2"
+DIR="thelove@canonical.com---dists--bazaar--1.3"
 
 DEPEND="sys-apps/coreutils
 	sys-apps/diffutils
@@ -24,13 +26,16 @@ DEPEND="sys-apps/coreutils
 	sys-apps/util-linux
 	sys-apps/debianutils
 	sys-devel/make
-	>=net-misc/neon-0.24.7"
+	>=net-misc/neon-0.24.7
+	>=app-crypt/gpgme-1.0.2"
 
 src_unpack() {
 	unpack bazaar_${PV}.tar.gz
 	unpack baz.1.gz
 	mv ${DIR} ${P}
 	mkdir "${P}/src/=build"
+	cd ${P}
+	epatch ${FILESDIR}/baz-gpgme-fix.patch
 }
 
 src_compile() {
