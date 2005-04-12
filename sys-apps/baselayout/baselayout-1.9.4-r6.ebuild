@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.9.4-r6.ebuild,v 1.8 2005/04/08 03:21:30 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.9.4-r6.ebuild,v 1.9 2005/04/12 02:21:58 vapier Exp $
 
 inherit flag-o-matic eutils toolchain-funcs
 
@@ -19,7 +19,7 @@ SRC_URI="ftp://ftp.cistron.nl/pub/people/miquels/software/sysvinit-${SVIV}.tar.g
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 x86 ppc sparc mips alpha arm hppa ia64 ppc64 s390 sh"
-IUSE="bootstrap build livecd static selinux uclibc"
+IUSE="bootstrap build livecd static selinux uclibc ibm"
 
 # This version of baselayout needs gawk in /bin, but as we do not have
 # a c++ compiler during bootstrap, we cannot depend on it if "bootstrap"
@@ -69,8 +69,8 @@ src_unpack() {
 	# Add hvc console skeleton for ibm ppc64 types
 	if [ ${ARCH} == "ppc64" ]; then
 		if use ibm; then
-			sed -i -e \
-				's"# TERMINALS"# echo "# HVC CONSOLE\n#hvc:12345:respawn:/sbin/agetty -nl /bin/bashlogin 9600 hvc0 vt220" \n\n# TERMINALS"' \
+			sed -i \
+				-e 's"# TERMINALS"#HVC CONSOLE\n#hvc:12345:respawn:/sbin/agetty -nl /bin/bashlogin 9600 hvc0 vt220 \n\n# TERMINALS"' \				
 				inittab || die
 		fi
 	fi
