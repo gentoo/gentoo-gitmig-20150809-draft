@@ -1,7 +1,19 @@
-MD5 04c74c1f5e3411e081c2d7757bf5df00 ChangeLog 743
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 49da3a1d9b53db23a2306a0917ece973 ChangeLog 861
 MD5 9012cc75114fbf9d637ed6ab66f218d7 gnuserv-3.12.4.ebuild 1031
 MD5 59bc474b1052c146b527975a1a5c7b53 gnuserv-3.12.5.ebuild 1033
 MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
+MD5 8ea1f0123dde67ba3042536511cbd7c6 gnuserv-3.12.7.ebuild 925
 MD5 374a2ba319308cf76a0601098bf12ed3 files/50gnuserv-gentoo.el 241
 MD5 8a4e2838b960391e0f9adab4847042df files/digest-gnuserv-3.12.4 65
 MD5 4cea46596a8648eeaaa085ddc1e906d8 files/digest-gnuserv-3.12.5 65
+MD5 b3a071a52de64c9a575806ad23fdf7cf files/digest-gnuserv-3.12.7 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCW8XDVWNWqTUmv+0RApT2AJ0U6RGQHcGFlTJm544miEYzGlFCbwCgtfJ2
+Lp2CCN/x/knvphhyWjSZnhg=
+=DJuW
+-----END PGP SIGNATURE-----
