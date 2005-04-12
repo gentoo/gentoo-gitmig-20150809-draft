@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/manpages-fr/manpages-fr-0.9.5.ebuild,v 1.14 2005/01/01 14:34:51 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/manpages-fr/manpages-fr-0.9.5.ebuild,v 1.15 2005/04/12 21:03:29 luckyduck Exp $
 
 MY_P=${PN/pages/}
 S=${WORKDIR}/${MY_P}
@@ -11,7 +11,7 @@ HOMEPAGE="http://fr.tldp.org/"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE=""
-KEYWORDS="x86 ppc sparc alpha hppa"
+KEYWORDS="x86 ppc sparc alpha hppa ~amd64"
 
 DEPEND="app-arch/gzip"
 RDEPEND="sys-apps/man"

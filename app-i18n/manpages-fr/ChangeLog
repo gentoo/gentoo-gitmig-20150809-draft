@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/manpages-fr
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/manpages-fr/ChangeLog,v 1.8 2005/01/01 14:34:51 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/manpages-fr/ChangeLog,v 1.9 2005/04/12 21:03:29 luckyduck Exp $
+
+  12 Apr 2005; Jan Brinkmann <luckyduck@gentoo.org> manpages-fr-0.9.5.ebuild:
+  added ~amd64 to KEYWORDS, fixes #83839
 
   07 Jun 2004; Daniel Black <dragonheart@gentoo.org> +metadata.xml,
   manpages-fr-0.9.5.ebuild:
