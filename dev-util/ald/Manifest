@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 94b46feb61ba8f3dce2a73cd00fe9cad metadata.xml 224
+MD5 e69d3edb06c8cb583dc902f644d8108b ald-0.1.7.ebuild 717
+MD5 1e888b8663aaacfb225a44f22dd5a3c1 ChangeLog 396
+MD5 a32359c86ef78fa11fbf0ae51ef3dd3e files/digest-ald-0.1.7 61
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCXFqmmOfEJZHYOKcRAgLwAJ41NZ6HrBDMyirZ7Cf4mf/8JnNopACgpSBa
+smknsR/ksVzi0EOWJrU/XHw=
+=/03N
+-----END PGP SIGNATURE-----

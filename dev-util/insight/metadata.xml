@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>no-herd</herd> <!-- Should the herd be dev-tools ? -->
+<herd>dev-tools</herd>
 <maintainer>
   <email>tester@gentoo.org</email>
 </maintainer>
