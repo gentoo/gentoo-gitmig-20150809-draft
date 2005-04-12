@@ -1,6 +1,10 @@
 # ChangeLog for app-office/openoffice
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.116 2005/04/12 18:05:35 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.117 2005/04/12 19:24:16 hansmi Exp $
+
+  12 Apr 2005; Michael Hanselmann <hansmi@gentoo.org>
+  openoffice-1.1.4-r1.ebuild:
+  Stable on ppc.
 
 *openoffice-1.1.4-r1 (12 Apr 2005)
 
