@@ -1,14 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 03806568bf804bff47dd870a35f0a465 ChangeLog 376
+MD5 c51bc1a599d0d56c4b89ef7c654f63de propel-runtime-1.1.0.ebuild 560
+MD5 3bfda5c922fa56c64b51783c33198eca ChangeLog 519
 MD5 c51bc1a599d0d56c4b89ef7c654f63de propel-runtime-1.0.0.ebuild 560
 MD5 34b376f52ca199fffb4e52b83169574a metadata.xml 156
 MD5 9c8a30ef30d7412271a7ba0fbccbed2d files/digest-propel-runtime-1.0.0 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD4DBQFCNpVzaGfFFLhbXWkRAtGeAJkB05Ay5DTKXGH7cpglBIKO5yDmsQCYmYJj
-NKc6sEkOpErDKdGwRie41A==
-=b8yr
------END PGP SIGNATURE-----
+MD5 1a8cbfc763bf1353d5ca2b6c2c3457a3 files/digest-propel-runtime-1.1.0 68
