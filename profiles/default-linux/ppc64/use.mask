@@ -12,6 +12,7 @@ icc-pgo
 ifc
 krb4
 mplayer
+pcmcia
 pda
 prelude
 ruby
