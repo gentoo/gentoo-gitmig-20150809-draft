@@ -1,11 +1,23 @@
-MD5 0ad6493a6314391a76674dae154ddfdd ChangeLog 3656
-MD5 1365ae9f08b08332fa4975fe4ce3fee8 auctex-11.53-r1.ebuild 1023
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 3d050b23968fdf9c2a300d72284efcd5 ChangeLog 3871
+MD5 e864080bed8554c9ef4db2799059b13e auctex-11.55.ebuild 1124
 MD5 db16ab40765513f4606c956746daaecb auctex-11.14.ebuild 1348
 MD5 58f3ddc03b5e54563fc8a9764e687dd5 metadata.xml 183
-MD5 dd02bc5ac2a580577c7bb5f7a4739aca auctex-11.55.ebuild 1023
-MD5 8dcee69551c9bba1215783290d94eb78 auctex-11.54.ebuild 1020
+MD5 1365ae9f08b08332fa4975fe4ce3fee8 auctex-11.53-r1.ebuild 1023
+MD5 8b07f786150d7b0a4125c8e3b7f0f15b auctex-11.54.ebuild 1200
 MD5 07f98857b9cd7c49631f6b5cb42f9778 files/50auctex-gentoo.el 57
-MD5 f3090531afe8a9861685328690f74dfa files/digest-auctex-11.53-r1 64
-MD5 3a36edc892ced33e4f4aa21ebb595c04 files/digest-auctex-11.14 64
 MD5 ecb4babd641254dbeb55307f695d7923 files/digest-auctex-11.55 64
+MD5 3a36edc892ced33e4f4aa21ebb595c04 files/digest-auctex-11.14 64
+MD5 f3090531afe8a9861685328690f74dfa files/digest-auctex-11.53-r1 64
 MD5 3148f53e4484f1434e25d4b0cbc16380 files/digest-auctex-11.54 64
+MD5 05e25ca288cb38d561d81a9412d1496c files/auctex-11.55-configure.diff 3464
+MD5 47ac1da312aac32f5668803e794eeb1d files/auctex-11.54-configure.diff 3450
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCW9ltVWNWqTUmv+0RAqpcAJ9/Q7/KD5OmmOP08NCJcDw9zaxvPACfeGK/
+TPBQRrQhtL7lJA4yqFuInxU=
+=I3Sz
+-----END PGP SIGNATURE-----

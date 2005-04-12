@@ -1,6 +1,11 @@
 # ChangeLog for app-emacs/auctex
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/auctex/ChangeLog,v 1.27 2005/04/09 20:52:01 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/auctex/ChangeLog,v 1.28 2005/04/12 14:32:00 usata Exp $
+
+  12 Apr 2005; Mamoru KOMACHI <usata@gentoo.org>
+  +files/auctex-11.54-configure.diff, +files/auctex-11.55-configure.diff,
+  auctex-11.54.ebuild, auctex-11.55.ebuild:
+  Fixed compilation with emacs-23; bug #83079.
 
   09 Apr 2005; Jason Wever <weeve@gentoo.org> auctex-11.54.ebuild:
   Stable on SPARC.
