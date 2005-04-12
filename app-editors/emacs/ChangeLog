@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/emacs
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.60 2005/04/12 13:34:03 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.61 2005/04/12 21:28:03 eradicator Exp $
+
+  12 Apr 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  emacs-21.4-r1.ebuild, emacs-22.0.50_pre20050225.ebuild:
+  Use proper toolchain compiler.
 
   12 Apr 2005; Mamoru KOMACHI <usata@gentoo.org> emacs-21.4.ebuild,
   emacs-21.4-r1.ebuild:

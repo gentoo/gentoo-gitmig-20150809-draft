@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-22.0.50_pre20050225.ebuild,v 1.2 2005/04/08 17:12:38 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-22.0.50_pre20050225.ebuild,v 1.3 2005/04/12 21:28:03 eradicator Exp $
 
 inherit elisp-common alternatives flag-o-matic eutils
 
@@ -115,7 +115,7 @@ src_compile() {
 		--without-carbon \
 		${myconf} || die "econf emacs failed"
 
-	emake -j1 || die "make emacs bootstrap failed"
+	emake -j1 CC="$(tc-getCC)" || die "make emacs bootstrap failed"
 }
 
 src_install () {

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.4-r1.ebuild,v 1.2 2005/04/12 13:34:03 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.4-r1.ebuild,v 1.3 2005/04/12 21:28:03 eradicator Exp $
 
 inherit flag-o-matic eutils alternatives toolchain-funcs
 
@@ -102,7 +102,7 @@ src_compile() {
 		myconf="${myconf} --without-x"
 	fi
 	econf ${myconf} || die
-	emake || die
+	emake CC="$(tc-getCC)" || die
 }
 
 src_install() {
