@@ -1,9 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/grsec-sources/grsec-sources-2.4.29.2.1.3.ebuild,v 1.2 2005/03/11 16:47:59 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/grsec-sources/grsec-sources-2.4.29.2.1.3.ebuild,v 1.3 2005/04/12 12:24:07 solar Exp $
 
 ETYPE="sources"
 UNIPATCH_STRICTORDER="yes"
+CKV=2.4.29
+MY_PV=2.1.3
 inherit kernel-2
 detect_version
 

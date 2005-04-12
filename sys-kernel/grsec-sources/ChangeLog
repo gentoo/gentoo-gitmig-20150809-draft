@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/grsec-sources
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/grsec-sources/ChangeLog,v 1.51 2005/03/24 03:51:13 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/grsec-sources/ChangeLog,v 1.52 2005/04/12 12:24:07 solar Exp $
+
+*grsec-sources-2.4.30.2.1.5 (12 Apr 2005)
+
+  12 Apr 2005; <solar@gentoo.org> -grsec-sources-2.4.28.2.1.0-r3.ebuild,
+  grsec-sources-2.4.29.2.1.3.ebuild, grsec-sources-2.4.29.2.1.4.ebuild,
+  +grsec-sources-2.4.30.2.1.5.ebuild:
+  - version bump. added CPV/MYPV to every ebuild now due to k2 changes
 
 *grsec-sources-2.4.29.2.1.4 (23 Mar 2005)
 
