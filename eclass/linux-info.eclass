@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/linux-info.eclass,v 1.23 2005/04/08 18:42:23 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/linux-info.eclass,v 1.24 2005/04/12 12:28:14 johnm Exp $
 #
 # Description: This eclass is used as a central eclass for accessing kernel
 #			   related information for sources already installed.
@@ -118,7 +118,7 @@ local	ERROR workingdir basefname basedname myARCH="${ARCH}"
 
 		cd ${basedname}
 		echo -e "include ${basefname}\ne:\n\t@echo \$(${1})" | \
-			make ${BUILD_FIXES} -f - e 2>/dev/null
+			make ${BUILD_FIXES} -s -f - e 2>/dev/null
 		cd ${workingdir}
 
 		ARCH=${myARCH}

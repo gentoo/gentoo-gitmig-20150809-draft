@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.118 2005/04/10 21:17:16 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.119 2005/04/12 12:28:14 johnm Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -740,7 +740,7 @@ getfilevar() {
 		
 		cd ${basedname}
 		echo -e "include ${basefname}\ne:\n\t@echo \$(${1})" | \
-			make ${BUILD_FIXES} -f - e 2>/dev/null
+			make ${BUILD_FIXES} -s -f - e 2>/dev/null
 		cd ${workingdir}
 		 
 		ARCH=${xarch}
