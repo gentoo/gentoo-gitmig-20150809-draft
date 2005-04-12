@@ -1,5 +1,6 @@
 MD5 e9397e7a02a8144359a15a94ccd13584 openmosix-sources-2.4.28-r5.ebuild 2151
-MD5 481921c599879d9053ccaa6c0910f907 ChangeLog 18372
+MD5 4c11091476b9ccdd828b306506349a30 openmosix-sources-2.4.30.ebuild 1270
+MD5 34f0cead26776fc543722a25fb1e66a6 ChangeLog 18542
 MD5 41664043c4624dedcfeeb07950f08d13 metadata.xml 312
 MD5 0162afff19944f8be04c4f9302ef00eb openmosix-sources-2.4.24-r10.ebuild 3419
 MD5 de75cfa969ed092578d9ddda6c5be334 files/openmosix-sources.CAN-2004-0181.patch 1233
@@ -29,3 +30,4 @@ MD5 bf2b609e8cab6460d220b1267db09826 files/openmosix-sources.CAN-2004-0001.patch
 MD5 0f66013f643c79c97fda489618a4e2fd files/openmosix-sources.CAN-2004-0535.patch 476
 MD5 9971231cef0a944990e47a3c1e4b717c files/openmosix-sources-2.4.24-smbfs.patch 2790
 MD5 dc18e982f8149588a291956481885a8c files/openmosix-sources.CAN-2004-0495.patch 17549
+MD5 1579c1d4de54826155654f6af1447c9c files/digest-openmosix-sources-2.4.30 154
