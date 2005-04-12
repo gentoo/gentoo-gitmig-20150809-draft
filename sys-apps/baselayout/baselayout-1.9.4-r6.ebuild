@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.9.4-r6.ebuild,v 1.9 2005/04/12 02:21:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.9.4-r6.ebuild,v 1.10 2005/04/12 21:10:33 mr_bones_ Exp $
 
 inherit flag-o-matic eutils toolchain-funcs
 
@@ -70,7 +70,7 @@ src_unpack() {
 	if [ ${ARCH} == "ppc64" ]; then
 		if use ibm; then
 			sed -i \
-				-e 's"# TERMINALS"#HVC CONSOLE\n#hvc:12345:respawn:/sbin/agetty -nl /bin/bashlogin 9600 hvc0 vt220 \n\n# TERMINALS"' \				
+				-e 's"# TERMINALS"#HVC CONSOLE\n#hvc:12345:respawn:/sbin/agetty -nl /bin/bashlogin 9600 hvc0 vt220 \n\n# TERMINALS"' \
 				inittab || die
 		fi
 	fi
