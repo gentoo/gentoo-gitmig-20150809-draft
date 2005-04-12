@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.0.0_beta2.ebuild,v 1.1 2005/04/08 15:27:26 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.0.0_beta2.ebuild,v 1.2 2005/04/12 02:11:07 caleb Exp $
 
 inherit eutils flag-o-matic
 
@@ -14,9 +14,9 @@ SRC_URI="ftp://ftp.trolltech.com/qt/snapshots/qt-x11-${SRCTYPE}-${PV/_beta2/-b2}
 LICENSE="|| ( QPL-1.0 GPL-2 )"
 SLOT="4"
 KEYWORDS="-*"
-IUSE="accessibility cups debug doc examples firebird gif ipv6 jpeg mng mysql nas nis odbc opengl postgres png sqlite X xinerama zlib"
+IUSE="accessibility cups debug doc examples firebird gif ipv6 jpeg mng mysql nas nis odbc opengl postgres png sqlite xinerama zlib"
 
-DEPEND="X? ( virtual/x11 virtual/xft >=media-libs/freetype-2 )
+DEPEND="virtual/x11 virtual/xft >=media-libs/freetype-2
 	png? ( media-libs/libpng )
 	jpeg? ( media-libs/jpeg )
 	mng? ( media-libs/libmng )
@@ -102,13 +102,14 @@ src_compile() {
 	use jpeg	&& myconf="${myconf} -system-libjpeg" || myconf="${myconf} -qt-libjpeg"
 	use debug	&& myconf="${myconf} -debug" || myconf="${myconf} -release"
 	use zlib	&& myconf="${myconf} -system-zlib" || myconf="${myconf} -qt-zlib"
-	use X		&& myconf="${myconf} -tablet -xft -xrender -xrandr -xkb -xshape -sm"
-
+	
 	use mysql	&& myconf="${myconf} -plugin-sql-mysql -I/usr/include/mysql -L/usr/$(get_libdir)/mysql" || myconf="${myconf} -no-sql-mysql"
 	use postgres	&& myconf="${myconf} -plugin-sql-psql -I/usr/include/postgresql/pgsql" || myconf="${myconf} -no-sql-psql"
 	use firebird	&& myconf="${myconf} -plugin-sql-ibase" || myconf="${myconf} -no-sql-ibase"
 	use sqlite	&& myconf="${myconf} -plugin-sql-sqlite" || myconf="${myconf} -no-sql-sqlite"
 	use odbc	&& myconf="${myconf} -plugin-sql-odbc" || myconf="${myconf} -no-sql-odbc"
+
+   myconf="${myconf} -tablet -xft -xrender -xrandr -xkb -xshape -sm"
 
 	./configure -stl -verbose -largefile -qt-imgfmt-{jpeg,png} \
 		-platform ${PLATFORM} -xplatform ${PLATFORM} \
