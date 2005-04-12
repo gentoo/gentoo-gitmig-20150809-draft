@@ -1,6 +1,11 @@
 # ChangeLog for app-dicts/kasumi
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/kasumi/ChangeLog,v 1.8 2005/03/21 17:26:10 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/kasumi/ChangeLog,v 1.9 2005/04/12 05:32:53 usata Exp $
+
+*kasumi-0.8 (12 Apr 2005)
+
+  12 Apr 2005; Mamoru KOMACHI <usata@gentoo.org> +kasumi-0.8.ebuild:
+  Version bumped.
 
   21 Mar 2005; Mamoru KOMACHI <usata@gentoo.org> kasumi-0.7.ebuild:
   Stable on x86.
