@@ -2,11 +2,10 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 
 <pkgmetadata>
-  <herd>x86-kernel</herd>
+  <herd>base-system</herd>
   <maintainer>
     <email>eradicator@gentoo.org</email>
     <name>Jeremy Huddleston</name>
-    <description>Temp. maintainer since iggy left</description>
   </maintainer>
   <longdescription>
     evms is a volume management system written by IBM, it's open source
