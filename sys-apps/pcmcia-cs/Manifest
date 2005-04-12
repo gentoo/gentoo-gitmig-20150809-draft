@@ -1,35 +1,16 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 6a557b152ee1cdc4f8d0759afb481ecf pcmcia-cs-3.2.4.ebuild 4311
-MD5 52507b78798f3cd38312e34bc3737f7c pcmcia-cs-3.2.7-r1.ebuild 4822
-MD5 05862c5b7ede28f96a52f2df5c98a1d8 pcmcia-cs-3.1.34-r8.ebuild 4092
 MD5 132b99014b643c5c44b385171366fe52 pcmcia-cs-3.2.5-r1.ebuild 5380
 MD5 8ed50a0f21678c8120a0df6094bd1c8d pcmcia-cs-3.2.5.ebuild 4545
 MD5 0ca8eff3b7640aa35bd86812057f1155 pcmcia-cs-3.2.7-r2.ebuild 4898
 MD5 45aaff0492e6857427a6f48233d7293f pcmcia-cs-3.2.7.ebuild 4878
-MD5 e56af02184858a261733bf100b3372dc ChangeLog 16524
+MD5 8ffe0fc2afe6aec6b939f490837e6166 ChangeLog 16742
 MD5 19fd766bac8e110b4620363a1ace26dd metadata.xml 159
 MD5 157ac5bc22e938e1c2268c1f2610420c files/digest-pcmcia-cs-3.2.5-r1 379
-MD5 310551d0852ba9c1fe5c0f8c231c3589 files/digest-pcmcia-cs-3.2.7-r1 287
 MD5 310551d0852ba9c1fe5c0f8c231c3589 files/digest-pcmcia-cs-3.2.7-r2 287
 MD5 693d508b7dd24e64735b5ba4a16e699b files/pcmcia.rc 2038
-MD5 c5fa9638e8a3b92f58f03b662782da1c files/digest-pcmcia-cs-3.2.4 146
 MD5 f8f190b2ddbf95e58f3abf55fc303d27 files/digest-pcmcia-cs-3.2.5 150
 MD5 310551d0852ba9c1fe5c0f8c231c3589 files/digest-pcmcia-cs-3.2.7 287
-MD5 8621a69779c0a084e6092f495ac08cde files/gentoo-pcmcia-cs-3.1.34.patch 589
 MD5 da3f5dc50768f0a5d9868dd5bd227329 files/network 768
 MD5 fb59203b176eea34b5969d465efb85a9 files/ppc.config.opts 1687
 MD5 e4879f03bbdbfbdc094c1f1b6486846b files/pcmcia.conf 549
 MD5 ec6d7ed3b83d1af45933e3e8af41796a files/pcmcia-cs-3.2.7-move-pnp-ids-to-usr-share-misc.patch 1436
 MD5 0f50b04b5efd5cad60974dc51c6ce470 files/cardinfo-install-3.2.7.patch 857
-MD5 6c67e080235f83a3cb14be6cf3d2c872 files/hermes.conf 1859
-MD5 c1034d56e6decdb7d4f732bfff70088a files/digest-pcmcia-cs-3.1.34-r8 133
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-Comment: Robbat2 @ Orbis-Terrarum Networks
-
-iD8DBQFB63PmPpIsIjIzwiwRAoiyAJ9YrqBlPWbdzRYhFjfzBtFNWM4digCg1YKl
-R7SHLzo9fC1ziDGmLcjEApw=
-=Lluc
------END PGP SIGNATURE-----
