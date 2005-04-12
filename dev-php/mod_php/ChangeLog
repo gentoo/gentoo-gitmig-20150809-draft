@@ -1,6 +1,12 @@
 # ChangeLog for dev-php/mod_php
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/ChangeLog,v 1.216 2005/04/11 20:50:49 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/ChangeLog,v 1.217 2005/04/12 23:20:06 trapni Exp $
+
+  12 Apr 2005; Christian Parpart <trapni@gentoo.org>
+  mod_php-4.3.11-r1.ebuild:
+  let mod_php-4.3.11-r1 depend on apache-2.0.52-r3 instead of 2.0.43-r1 since
+  only 2.0.52-r3 and above contain (and will contain) the new configuration
+  layout, thus, this should prevent invalid bug reports, too
 
   11 Apr 2005; Gustavo Zacarias <gustavoz@gentoo.org> mod_php-4.3.11.ebuild,
   mod_php-4.3.11-r1.ebuild:
