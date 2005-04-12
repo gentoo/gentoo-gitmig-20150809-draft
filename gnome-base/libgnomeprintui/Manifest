@@ -9,7 +9,7 @@ MD5 d5552ff85c9f8336cf19dd0a513fac66 libgnomeprintui-2.8.1.ebuild 734
 MD5 3606da09621aad43d2d29691bc332481 libgnomeprintui-2.8.2.ebuild 724
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 134346029185e30f54146fc0b30cd8db libgnomeprintui-2.10.0.1.ebuild 736
-MD5 e9a51d8360a6841d54347092182e8881 libgnomeprintui-2.10.2.ebuild 734
+MD5 53254095576d1813ccfa3b24bff41f10 libgnomeprintui-2.10.2.ebuild 734
 MD5 18289359b871af166c305a4e908642be files/digest-libgnomeprintui-1.116.0 76
 MD5 3e6417d9c932e4eeff43b723a35b1353 files/digest-libgnomeprintui-2.6.2 74
 MD5 659018dfa0d3363d94c08a76dbce5256 files/digest-libgnomeprintui-2.8.0 74
@@ -22,7 +22,7 @@ MD5 10f031e0e10c3a162607bf3903f1c89c files/digest-libgnomeprintui-2.10.2 75
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFCW+2SXjcVihsel0ERAoc+AJ9WbPrhBIFw+o3WGs1JharVZ3D98QCePhcc
-/UPn/c9E/qNNSZB3BvkQJvE=
-=eo+6
+iD8DBQFCW/EWXjcVihsel0ERAmZZAJsHtLIXWb/x4bfqnZ66d30TANdwDACg2b9e
+ixmVJ+L8gOi33LkNLeAosn0=
+=JNgE
 -----END PGP SIGNATURE-----
