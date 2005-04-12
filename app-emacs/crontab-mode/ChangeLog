@@ -1,6 +1,12 @@
 # ChangeLog for app-emacs/crontab-mode
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/crontab-mode/ChangeLog,v 1.4 2005/01/01 13:41:38 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/crontab-mode/ChangeLog,v 1.5 2005/04/12 13:47:02 usata Exp $
+
+*crontab-mode-1.18 (12 Apr 2005)
+
+  12 Apr 2005; Mamoru KOMACHI <usata@gentoo.org> crontab-mode-1.11.ebuild,
+  +crontab-mode-1.18.ebuild:
+  Version bumped. Changed URL to new location; bug #83889.
 
 *crontab-mode-1.11 (31 Oct 2002)
 
