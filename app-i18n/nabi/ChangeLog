@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/nabi
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/nabi/ChangeLog,v 1.14 2005/01/01 14:36:24 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/nabi/ChangeLog,v 1.15 2005/04/12 15:12:09 luckyduck Exp $
+
+  12 Apr 2005; Jan Brinkmann <luckyduck@gentoo.org> nabi-0.13.ebuild,
+  nabi-0.14.ebuild:
+  added ~amd64 to KEYWORDS, fixes #76981. also removed default src_compile and
+  COPYING doesnt get installed any longer.
 
 *nabi-0.14 (31 Aug 2004)
 
