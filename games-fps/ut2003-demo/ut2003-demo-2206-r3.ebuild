@@ -1,13 +1,14 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003-demo/ut2003-demo-2206-r3.ebuild,v 1.7 2004/08/12 11:25:12 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003-demo/ut2003-demo-2206-r3.ebuild,v 1.8 2005/04/12 15:44:15 wolf31o2 Exp $
 
 inherit games
 
 DESCRIPTION="Unreal Tournament 2003 Demo"
 HOMEPAGE="http://www.ut2003.com/"
 SRC_URI="http://unreal.epicgames.com/linux/ut2003/ut2003demo-lnx-${PV}.sh.bin
-	http://download.factoryunreal.com/mirror/UT2003CrashFix.zip"
+	http://download.factoryunreal.com/mirror/UT2003CrashFix.zip
+	http://dev.gentoo.org/~wolf31o2/sources/${PN}/${PN}-misc.tar.bz2"
 
 LICENSE="ut2003-demo"
 SLOT="0"
@@ -43,7 +44,7 @@ src_install() {
 	dodir "${dir}"
 
 	tar -jxvf ut2003lnx_demo.tar.bz2 -C "${Ddir}" || die
-	tar -jxvf "${FILESDIR}/misc.tar.bz2" -C "${Ddir}" || die
+	tar -jxvf "${DISTDIR}/${PN}-misc.tar.bz2" -C "${Ddir}" || die
 
 	# fix the benchmark configurations to use SDL rather than the Windows driver
 	for f in MaxDetail.ini MinDetail.ini ; do
