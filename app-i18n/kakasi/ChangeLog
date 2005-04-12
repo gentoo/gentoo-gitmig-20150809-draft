@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/kakasi
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/kakasi/ChangeLog,v 1.9 2005/01/02 21:04:14 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/kakasi/ChangeLog,v 1.10 2005/04/12 02:23:44 gustavoz Exp $
+
+  12 Apr 2005; Gustavo Zacarias <gustavoz@gentoo.org> kakasi-2.3.4.ebuild:
+  Stable on sparc
 
   02 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
