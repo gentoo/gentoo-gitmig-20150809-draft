@@ -1,6 +1,16 @@
-MD5 7dfd1f6269b7fa30245a9f930c13ff46 creole-1.0.1.ebuild 492
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 fc40150a8e48443f0c55a151df86fc19 creole-1.0.1.ebuild 492
 MD5 7dfd1f6269b7fa30245a9f930c13ff46 creole-1.0.0.ebuild 492
-MD5 18ac15dca80f88f052d75d38e0cb4525 ChangeLog 471
+MD5 8749808b57c2b1330787ff8b83a7bbf4 ChangeLog 471
 MD5 34b376f52ca199fffb4e52b83169574a metadata.xml 156
 MD5 b217ffe6b247b6ec06ada79ab34c5db1 files/digest-creole-1.0.0 60
 MD5 f7bb8aba9eea1105595cff252fc5a713 files/digest-creole-1.0.1 60
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCW2oMaGfFFLhbXWkRAjTyAJ96JxAm1hvGgAKh0cxYyszyErHNpwCdGcP4
+w0P/X+bFQy8LFPJMK024bvs=
+=nBKB
+-----END PGP SIGNATURE-----
