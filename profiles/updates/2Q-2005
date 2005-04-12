@@ -4,3 +4,4 @@ move dev-perl/Locale-Maketext-Lexicon dev-perl/locale-maketext-lexicon
 move dev-java/xt-bin dev-java/xt
 move dev-java/fesi-bin dev-java/fesi
 move app-emulation/mips64emul app-emulation/gxemul
+move dev-java/java-gtk dev-java/libgtk-java
