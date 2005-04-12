@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.2.1-r5.ebuild,v 1.4 2005/04/09 12:55:49 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.2.1-r5.ebuild,v 1.5 2005/04/12 03:53:24 dostrow Exp $
 
 inherit eutils flag-o-matic
 
@@ -21,7 +21,7 @@ SRC_URI="mirror://gnu/${PN}/${P}.tar.bz2
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha amd64 arm hppa ia64 m68k ~mips ~ppc ppc64 s390 sh sparc x86"
-IUSE="nls build acl selinux static uclibc"
+IUSE="nls build acl selinux static uclibc hardened"
 
 RDEPEND="selinux? ( sys-libs/libselinux )
 	acl? ( sys-apps/acl sys-apps/attr )
@@ -71,6 +71,13 @@ src_unpack() {
 	# When cross-compiling, we can't do that since 'bin' isn't 
 	# a native binary, so let's just install outdated man-pages.
 	[[ ${CTARGET:-${CHOST}} != ${CHOST} ]] && touch man/*.1
+
+	# Rebuild of manpage seq.1 fails with ppc64 hardened so
+	# We'll install the outdated copy.
+	if use ppc64 && use hardened; then
+	    touch man/seq.1
+	fi
+		
 }
 
 src_compile() {
