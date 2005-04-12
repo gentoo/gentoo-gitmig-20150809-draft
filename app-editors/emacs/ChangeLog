@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/emacs
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.59 2005/04/08 17:12:38 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.60 2005/04/12 13:34:03 usata Exp $
+
+  12 Apr 2005; Mamoru KOMACHI <usata@gentoo.org> emacs-21.4.ebuild,
+  emacs-21.4-r1.ebuild:
+  Unset LDFLAGS; see bug #77430 and bug #65002.
 
 *emacs-21.4-r1 (08 Apr 2005)
 

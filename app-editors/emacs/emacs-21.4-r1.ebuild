@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.4-r1.ebuild,v 1.1 2005/04/08 17:12:38 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.4-r1.ebuild,v 1.2 2005/04/12 13:34:03 usata Exp $
 
 inherit flag-o-matic eutils alternatives toolchain-funcs
 
@@ -64,6 +64,9 @@ src_compile() {
 
 	# -fstack-protector gets internal compiler error at xterm.c (bug 33265)
 	filter-flags -fstack-protector
+
+	# emacs doesn't handle LDFLAGS properly (bug #77430 and bug #65002)
+	unset LDFLAGS
 
 	# gcc 3.4 with -O3 or stronger flag spoils emacs
 	if [ "$(gcc-major-version)" -ge 3 -a "$(gcc-minor-version)" -ge 4 ] ; then
