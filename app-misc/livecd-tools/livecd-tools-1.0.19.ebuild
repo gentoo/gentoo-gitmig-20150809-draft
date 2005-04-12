@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/livecd-tools/livecd-tools-1.0.18.ebuild,v 1.1 2005/03/02 14:30:48 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/livecd-tools/livecd-tools-1.0.19.ebuild,v 1.1 2005/04/12 21:32:33 wolf31o2 Exp $
 
 IUSE="opengl X"
 
@@ -26,7 +26,10 @@ src_install() {
 	if use x86
 	then
 		use X && dosbin x-setup && newinitd x-setup.init x-setup
-		use opengl && dosbin opengl-update-livecd openglify
+		#use opengl && dosbin opengl-update-livecd openglify
 	fi
 	dosbin net-setup spind
+	into /
+	dobin bashlogin
+	dosbin livecd-functions.sh
 }
