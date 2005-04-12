@@ -1,6 +1,12 @@
 # ChangeLog for app-office/openoffice
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.115 2005/04/09 07:45:01 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.116 2005/04/12 18:05:35 suka Exp $
+
+*openoffice-1.1.4-r1 (12 Apr 2005)
+
+  12 Apr 2005; Andreas Proschofsky <suka@gentoo.org>
+  +files/1.1.4/crash-objstream.diff, +openoffice-1.1.4-r1.ebuild:
+  Revision bump for security fix, see bug #88863
 
   09 Apr 2005; Andreas Proschofsky <suka@gentoo.org>
   openoffice-1.1.4.ebuild:

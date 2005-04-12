@@ -30,6 +30,7 @@ MD5 bf7df7ebe1373f6e2e5bd1e0425657bd files/1.1.3/gcc34-nptl-fix.patch 618
 MD5 e93f28c8afacb22bf9ac351ebd8195d2 files/1.1.3/gcc34-gnome.patch 598
 MD5 3d3555a66a2d8a66613d4e4471701eb8 files/1.1.3/pthreadlink-fix.patch 1163
 MD5 8c58ee1fa6e9199546bca43730d2400c files/1.1.3/nptl.patch 785
+MD5 8b9178e67b293617cabadefbfbf51fb8 files/1.1.3/crash-objstream.diff 669
 MD5 f43ca2544f6cd797bed8e5aad1e50a29 files/1.1.3/gcc34-sal-link-to-libsupc++.diff 405
 MD5 6f7ff745a5659e605fb05206914ab344 files/1.1.3/STLport-vector.patch 1472
 MD5 dd3785621235368cc28f1f85101fcac7 files/1.1.3/nojvmfwk-fix.patch 6986
@@ -44,6 +45,7 @@ MD5 964398ef88829e5a2935d0c0f8389c9d files/1.1.4/xooffice-wrapper-1.3 6091
 MD5 6938dc2e28e840cebf4fdbde9d6e2d4b files/1.1.4/gentoo-1.3.9.patch 859
 MD5 3d3555a66a2d8a66613d4e4471701eb8 files/1.1.4/pthreadlink-fix.patch 1163
 MD5 3f008e2c5595512c7f6306b1a722612e files/1.1.4/nptl.patch 243
+MD5 8b9178e67b293617cabadefbfbf51fb8 files/1.1.4/crash-objstream.diff 669
 MD5 6f7ff745a5659e605fb05206914ab344 files/1.1.4/STLport-vector.patch 1472
 MD5 69a22ccaf3c62d6b96bfd30c70a2c679 files/1.1.4/regcompfix.patch 712
 MD5 a9233bc0091b925de38145108267b949 files/1.1.4/newstlportfix.patch 3638
