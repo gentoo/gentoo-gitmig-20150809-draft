@@ -1,6 +1,11 @@
 # ChangeLog for app-office/texmacs
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texmacs/ChangeLog,v 1.34 2005/02/21 21:03:39 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texmacs/ChangeLog,v 1.35 2005/04/12 05:34:57 usata Exp $
+
+*texmacs-1.0.4.7 (12 Apr 2005)
+
+  12 Apr 2005; Mamoru KOMACHI <usata@gentoo.org> +texmacs-1.0.4.7.ebuild:
+  Version bumped.
 
   21 Feb 2005; Jan Brinkmann <luckyduck@gentoo.org> texmacs-1.0.4.5.ebuild:
   added ~amd64 to KEYWORDS. fixes #71106
