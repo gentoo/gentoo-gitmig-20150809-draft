@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/scim-1.2.1.ebuild,v 1.1 2005/03/21 08:21:16 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/scim-1.2.1.ebuild,v 1.2 2005/04/12 14:52:36 usata Exp $
 
-inherit eutils
+inherit eutils flag-o-matic
 
 DESCRIPTION="Smart Common Input Method (SCIM) is an Input Method (IM) development platform"
 HOMEPAGE="http://www.scim-im.org/"
@@ -46,6 +46,10 @@ get_gtk_confdir() {
 }
 
 src_compile() {
+	# bug #83625
+	filter-flags -fvisibility-inlines-hidden
+	filter-flags -fvisibility=hidden
+
 	use gnome || myconf="${myconf} --disable-config-gconf"
 	use gtk || use immqt || use immqt-bc || myconf="${myconf} --disable-panel-gtk --disable-setup-ui"
 	has_gtk || myconf="${myconf} --disable-gtk2-immodule"

@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/scim
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/ChangeLog,v 1.55 2005/04/08 12:14:25 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/ChangeLog,v 1.56 2005/04/12 14:52:36 usata Exp $
+
+  12 Apr 2005; Mamoru KOMACHI <usata@gentoo.org> scim-1.2.1.ebuild:
+  Filter -fvisibility-inlines-hidden and -fvisibility=hidden; bug #83625.
 
   08 Apr 2005; Markus Rothe <corsair@gentoo.org> scim-1.2.0.ebuild:
   Stable on ppc64
