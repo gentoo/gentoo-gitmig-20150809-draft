@@ -1,17 +1,15 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.3.1.ebuild,v 1.1 2005/03/25 23:15:00 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.3.1.ebuild,v 1.2 2005/04/12 11:01:19 voxus Exp $
 
 inherit eutils gnuconfig libtool
 
-IUSE="ssl ipv6 doc selinux idn caps"
+IUSE="ssl ipv6 doc selinux idn caps threads"
 
-DLZ_VER=0.7.0
 DESCRIPTION="BIND - Berkeley Internet Name Domain - Name Server"
 SRC_URI="ftp://ftp.isc.org/isc/bind9/${PV}/${P}.tar.gz"
 HOMEPAGE="http://www.isc.org/products/BIND/bind9.html"
 
-# this ebuild contains the very untested dlz extension, hard-masking it for now
 KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~amd64 ~ppc64"
 
 LICENSE="as-is"
@@ -36,10 +34,6 @@ src_unpack() {
 		       ${i}
 	done
 
-	# it should be installed by bind-tools
-	sed "s:nsupdate ::g" ${S}/bin/Makefile.in > ${T}/Makefile
-	mv ${T}/Makefile ${S}/bin/Makefile.in
-
 	if use idn; then
 		epatch ${S}/contrib/idn/idnkit-1.0-src/patch/bind9/${P}-patch
 	fi
@@ -49,6 +43,10 @@ src_unpack() {
 
 	gnuconfig_update
 
+	# it should be installed by bind-tools
+	sed "s:nsupdate ::g" ${S}/bin/Makefile.in > ${T}/Makefile
+	mv ${T}/Makefile ${S}/bin/Makefile.in
+
 	cd ${S}
 	WANT_AUTOCONF=2.5 autoconf || die "autoconf failed"
 }
@@ -57,13 +55,14 @@ src_compile() {
 	local myconf=""
 
 	use ssl && myconf="${myconf} --with-openssl"
-	use ipv6 && myconf="${myconf} --enable-ipv6" || myconf="${myconf} --enable-ipv6=no"
 	use caps || myconf="${myconf} --disable-linux-caps"
 
 	econf \
 		--sysconfdir=/etc/bind \
 		--localstatedir=/var \
 		--with-libtool \
+		`use_enable threads` \
+		`use_enable ipv6` \
 		${myconf} || die "econf failed"
 
 	emake -j1 || die "failed to compile bind"
@@ -200,4 +199,3 @@ pkg_config() {
 		einfo
 	fi
 }
-
