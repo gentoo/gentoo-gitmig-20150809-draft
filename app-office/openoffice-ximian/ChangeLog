@@ -1,6 +1,10 @@
 # ChangeLog for app-office/openoffice-ximian
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/ChangeLog,v 1.123 2005/04/12 17:51:35 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/ChangeLog,v 1.124 2005/04/12 19:32:00 hansmi Exp $
+
+  12 Apr 2005; Michael Hanselmann <hansmi@gentoo.org>
+  openoffice-ximian-1.3.6-r1.ebuild:
+  Stable on ppc.
 
 *openoffice-ximian-1.3.9-r1 (12 Apr 2005)
 *openoffice-ximian-1.3.7-r1 (12 Apr 2005)
