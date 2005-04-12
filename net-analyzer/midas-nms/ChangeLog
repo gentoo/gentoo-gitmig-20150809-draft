@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/midas-nms
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/midas-nms/ChangeLog,v 1.4 2005/01/29 05:12:51 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/midas-nms/ChangeLog,v 1.5 2005/04/12 03:18:46 weeve Exp $
+
+  12 Apr 2005; Jason Wever <weeve@gentoo.org> :
+  Added ~sparc keyword.
 
   29 Jan 2005; Daniel Black <dragonheart@gentoo.org> midas-nms-2.2f.ebuild:
   changed net-libs/libpcap depend to virtual/libcap
