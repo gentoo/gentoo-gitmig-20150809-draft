@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/darts
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/darts/ChangeLog,v 1.11 2005/03/05 08:52:45 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/darts/ChangeLog,v 1.12 2005/04/12 01:56:51 gustavoz Exp $
+
+  12 Apr 2005; Gustavo Zacarias <gustavoz@gentoo.org> darts-0.2.ebuild:
+  Stable on sparc
 
   05 Mar 2005; Markus Rothe <corsair@gentoo.org> darts-0.2.ebuild:
   Stable on ppc64
