@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3818 2005/04/12 08:06:34 lu_zero Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3819 2005/04/12 15:47:35 genone Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -412,6 +412,7 @@ gnome-extra/nautilus-media
 # it proofs itself usable (modified 13 Feb 2005).
 =mail-client/sylpheed-claws-0.9.12a-r1
 =mail-client/sylpheed-claws-1.0.1.1
+>=mail-client/sylpheed-claws-1.9
 # <genone@gentoo.org> (13 Feb 2005)
 # Plugins for gtk2 version.
 =mail-client/sylpheed-claws-pgpinline-0.5-r1
