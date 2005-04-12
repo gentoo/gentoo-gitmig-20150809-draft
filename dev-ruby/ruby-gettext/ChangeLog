@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-gettext
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gettext/ChangeLog,v 1.10 2005/03/25 23:34:50 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gettext/ChangeLog,v 1.11 2005/04/12 04:57:25 usata Exp $
+
+  12 Apr 2005; Mamoru KOMACHI <usata@gentoo.org> ruby-gettext-0.6.1.ebuild,
+  ruby-gettext-0.8.0.ebuild:
+  Corrected shim-ruby18 package name.
 
   26 Mar 2005; <blubb@gentoo.org> ruby-gettext-0.8.0.ebuild:
   added ~amd64

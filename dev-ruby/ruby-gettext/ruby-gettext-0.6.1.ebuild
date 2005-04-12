@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gettext/ruby-gettext-0.6.1.ebuild,v 1.3 2005/03/25 23:34:50 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gettext/ruby-gettext-0.6.1.ebuild,v 1.4 2005/04/12 04:57:25 usata Exp $
 
 inherit ruby
 
@@ -15,7 +15,7 @@ USE_RUBY="ruby16 ruby18 ruby19"
 SLOT="0"
 LICENSE="Ruby"
 
-DEPEND="|| ( >=dev-lang/ruby-1.8 dev-lang/ruby-cvs dev-ruby/ruby-shim18 )
+DEPEND="|| ( >=dev-lang/ruby-1.8 dev-lang/ruby-cvs dev-ruby/shim-ruby18 )
 	sys-devel/gettext
 	dev-ruby/rdtool
 	>=dev-ruby/racc-1.4.4"
