@@ -1,4 +1,14 @@
-MD5 41647723141c92ed44ab88f054f63525 ChangeLog 705
-MD5 c3e7baca3e73b99f7807600da1affb30 XML-SimpleObject-0.53.ebuild 635
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 1ac6be0633d53935b0743b81087f7eae ChangeLog 811
+MD5 76e33554f6539e84b308347814b969fc XML-SimpleObject-0.53.ebuild 634
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 3ca2b1cccb82d2e3b567a2fa6d8d3c6c files/digest-XML-SimpleObject-0.53 72
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFCWya1KRy60XGEcJIRAmZGAKCyfGClqLbCvMIjxPNEVMLYfe/tjwCdGTHq
+5Yi7LqkO7Ff1/F7QjVHKVSs=
+=sNUK
+-----END PGP SIGNATURE-----

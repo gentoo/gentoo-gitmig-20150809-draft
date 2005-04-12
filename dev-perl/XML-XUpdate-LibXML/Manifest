@@ -1,8 +1,18 @@
-MD5 819994b75cb869f7132b5ac7d8bf4c94 ChangeLog 1167
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 7b6b160b0faf4825b7f3d07ea31c95a8 ChangeLog 1280
+MD5 4b5bd5aa517b8b31df9dddcf1af2968f XML-XUpdate-LibXML-0.4.0-r1.ebuild 597
 MD5 bcb477bf3b8432cfff4ffcba889d6b6d XML-XUpdate-LibXML-0.4.0.ebuild 591
-MD5 ed15830367952db0fb8082b1b8eaded0 XML-XUpdate-LibXML-0.4.0-r1.ebuild 593
-MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 cef42e5477d79c25f522509e703ffc47 XML-XUpdate-LibXML-0.5.0.ebuild 633
+MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 9f735d7edb5df63ef43d3842fe4a921c files/digest-XML-XUpdate-LibXML-0.4.0 74
-MD5 f5eb1cfc50809d69fdd1c244f71ab912 files/digest-XML-XUpdate-LibXML-0.5.0 74
 MD5 9f735d7edb5df63ef43d3842fe4a921c files/digest-XML-XUpdate-LibXML-0.4.0-r1 74
+MD5 f5eb1cfc50809d69fdd1c244f71ab912 files/digest-XML-XUpdate-LibXML-0.5.0 74
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFCWycRKRy60XGEcJIRAlo2AJ9bB9gSpmQlbvhaWvc2H1gMKA7SsgCfSdPi
+V196D55ff3bNLQWeplSncWg=
+=Z2KO
+-----END PGP SIGNATURE-----
