@@ -1,4 +1,14 @@
-MD5 3c94d5c9bec3e8572816d2843e8b233c ChangeLog 604
-MD5 80b373c0aee1a116e19c8b902c8891a3 XML-NodeFilter-0.01.ebuild 531
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 25e62a6b4f51c66f20c4fb30256e3907 ChangeLog 708
+MD5 cff78207d3301324db7efae1cea6750c XML-NodeFilter-0.01.ebuild 535
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 a4c0808df32140c68ca202b97bddc0e8 files/digest-XML-NodeFilter-0.01 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFCWyNRKRy60XGEcJIRAlkKAJ9X9aRyqBkb4Y4pyXk6ye+9bkiMtgCeIVp6
+NR+C/hSBKVVzjKiNtI5I5EE=
+=KIiO
+-----END PGP SIGNATURE-----

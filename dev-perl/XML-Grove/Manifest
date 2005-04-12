@@ -1,6 +1,16 @@
-MD5 a2a2d73a0c0fd5162f66c0b4f334e597 XML-Grove-0.46_alpha-r1.ebuild 615
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 b0bba1ee421cd4fe03334a890513f7c8 ChangeLog 1139
+MD5 69989548ae90337f284b44edc10b3d34 XML-Grove-0.46_alpha-r1.ebuild 615
 MD5 56cb259aadf70b509a4404b5e818a089 XML-Grove-0.46_alpha.ebuild 594
-MD5 d40a93bf1744ce31b9d0dc1619598631 ChangeLog 1032
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 4bed3629bce77d8e96600dc9e5de9baf files/digest-XML-Grove-0.46_alpha 70
 MD5 4bed3629bce77d8e96600dc9e5de9baf files/digest-XML-Grove-0.46_alpha-r1 70
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFCWyJaKRy60XGEcJIRArpQAKCgzpsEDoDEXLKdj+a74lQTeZVCzgCdHRI+
+NOKLgvZD++IXU0XQWd3hb34=
+=k8Kx
+-----END PGP SIGNATURE-----
