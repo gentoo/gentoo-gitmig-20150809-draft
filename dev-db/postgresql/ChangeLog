@@ -1,6 +1,40 @@
 # ChangeLog for dev-db/postgresql
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.197 2005/04/12 11:32:47 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.198 2005/04/12 15:47:39 nakano Exp $
+
+  12 Apr 2005; Masatomo Nakano <nakano@gentoo.org>
+  -files/postgresql.init-7.3.6, -files/postgresql.init-7.3.7,
+  -files/postgresql-7.3.7-gentoo.patch,
+  -files/postgresql-7.3.7-tempfile.patch, -files/postgresql.init-7.3.8,
+  -files/postgresql-7.3.8-gentoo.patch, -files/pg_autovacuum.conf-7.4.3,
+  -files/pg_autovacuum.init-7.4.3, -files/postgresql.conf-7.4.3,
+  -files/postgresql.init-7.4.3, -files/postgresql-7.4.3-gentoo.patch,
+  -files/postgresql-7.4.3-hppa-testandset.patch,
+  -files/postgresql-7.4.3-vacuum-delay.patch,
+  -files/pg_autovacuum.conf-7.4.5, -files/pg_autovacuum.init-7.4.5,
+  -files/postgresql.conf-7.4.5, -files/postgresql.init-7.4.5,
+  -files/postgresql-7.4.5-gentoo.patch,
+  -files/postgresql-7.4.5-hppa-testandset.patch,
+  -files/postgresql-7.4.5-r1-gentoo.patch,
+  -files/postgresql-7.4.5-tempfile.patch,
+  -files/postgresql-7.4.5-vacuum-delay.patch,
+  -files/pg_autovacuum.conf-7.4.6, -files/pg_autovacuum.init-7.4.6,
+  -files/postgresql.conf-7.4.6, -files/postgresql.init-7.4.6,
+  -files/postgresql-7.4.6-gentoo.patch,
+  -files/postgresql-7.4.6-hppa-testandset.patch,
+  -files/postgresql-7.4.6-vacuum-delay.patch,
+  -files/pg_autovacuum.conf-8.0.0, -files/pg_autovacuum.init-8.0.0,
+  -files/postgresql.conf-8.0.0, -files/postgresql.init-8.0.0,
+  -files/postgresql-8.0.0-gentoo.patch, -postgresql-7.3.6-r1.ebuild,
+  -postgresql-7.3.7-r2.ebuild, -postgresql-7.3.8.ebuild,
+  -postgresql-7.3.9.ebuild, -postgresql-7.4.3.ebuild,
+  -postgresql-7.4.3-r1.ebuild, -postgresql-7.4.5.ebuild,
+  -postgresql-7.4.5-r1.ebuild, -postgresql-7.4.5-r2.ebuild,
+  -postgresql-7.4.6.ebuild, -postgresql-7.4.7.ebuild,
+  -postgresql-8.0.0.ebuild, -postgresql-8.0.1.ebuild,
+  -postgresql-8.0.1-r1.ebuild, postgresql-8.0.1-r2.ebuild,
+  postgresql-8.0.2.ebuild:
+  Tidy up.
 
 *postgresql-8.0.2 (12 Apr 2005)
 
