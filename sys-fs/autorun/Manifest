@@ -1,7 +1,4 @@
 MD5 f05d7c29842a4badd8553781a7da3433 ChangeLog 490
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 cd1e472e43673c3157384b3ffa3f991a autorun-3.15.ebuild 620
-MD5 2f7ad74d8d09ed1721066bb3c123c99c autorun-3.10.ebuild 683
-MD5 90c866c065286201c5232eeb07999b55 files/digest-autorun-3.10 64
-MD5 d2575cfc679fee43d03d6606b73eb193 files/3.10-gentoo.patch 346
 MD5 5fea78d4c0a416ffd77841c6e597a0f8 files/digest-autorun-3.15 64
