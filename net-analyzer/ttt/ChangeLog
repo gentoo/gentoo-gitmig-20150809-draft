@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/ttt
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ttt/ChangeLog,v 1.6 2005/01/29 05:12:52 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ttt/ChangeLog,v 1.7 2005/04/12 11:50:18 ka0ttic Exp $
+
+*ttt-1.8.1 (12 Apr 2005)
+
+  12 Apr 2005; Aaron Walker <ka0ttic@gentoo.org> +files/ttt-gcc4.diff,
+  +ttt-1.8.1.ebuild:
+  Version bump for bug 87980; added gcc4 patch from debian which removes the
+  icky requirements on using -Wwrite-strings -fwritable-strings.
 
   29 Jan 2005; Daniel Black <dragonheart@gentoo.org> ttt-1.8.ebuild:
   changed net-libs/libpcap depend to virtual/libcap

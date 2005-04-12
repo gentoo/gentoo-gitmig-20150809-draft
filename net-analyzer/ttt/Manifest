@@ -1,16 +1,19 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 86e66d9f3cbbf29ab3195814b437a83f ChangeLog 828
-MD5 685a02ea9c7601ba2b8fb03fb5d1e1d4 metadata.xml 264
+MD5 ce1afeb129900f89943643cdb43a25f7 ttt-1.8.1.ebuild 1284
 MD5 46ca343fdd4095fb1001eb37d4f02d1b ttt-1.8.ebuild 1114
-MD5 525b88bccd59588c935e7951ad328ffe files/digest-ttt-1.8 59
-MD5 31221ee949d56df92f0c8299be79fc64 files/ttt-1.8-linux-sll.patch 2203
+MD5 7ee7260a24a0c77fe5441961ed4d599a ChangeLog 1085
+MD5 685a02ea9c7601ba2b8fb03fb5d1e1d4 metadata.xml 264
+MD5 ea183ebbe91882d8b994ad70cf0a0eca files/ttt-gcc4.diff 683
 MD5 731900a46e4de27b97ffefca6b161c37 files/ttt-1.8-pcap.patch 297
+MD5 31221ee949d56df92f0c8299be79fc64 files/ttt-1.8-linux-sll.patch 2203
+MD5 525b88bccd59588c935e7951ad328ffe files/digest-ttt-1.8 59
+MD5 699a57dff753234cd7f51906bd1f3e31 files/digest-ttt-1.8.1 61
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD4DBQFB+xtcmdTrptrqvGERAg7dAJ9Y8NZr/JUEcMkQqyivZ0UYV3G9zACYtnVP
-+oSPQuDOG5s5ITg3ps5VsQ==
-=DpiN
+iD8DBQFCW7YxEZCkKN40op4RArnVAJ9jwx/EpNmrYRkvXaPXUqkTr0tg0wCeK9lO
+9tCCLn40HCQMWcX6uoBhc24=
+=DHgf
 -----END PGP SIGNATURE-----

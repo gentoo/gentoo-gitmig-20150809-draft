@@ -1,0 +1,22 @@
+diff -urN ../tmp-orig/ttt-1.7/net_names.c ./net_names.c
+--- ../tmp-orig/ttt-1.7/net_names.c	2000-12-20 15:30:09.000000000 +0100
++++ ./net_names.c	2005-02-09 14:41:36.180046553 +0100
+@@ -158,6 +158,9 @@
+     return NULL;
+ }
+ 
++static char *inet6_ntoa(uint32_t *addr);  /* should be replaced
++					   by addr2ascii */
++
+ char *net_getname(long type, long *id)
+ {
+     char *buf, *name;
+@@ -258,8 +261,6 @@
+     case TTTTYPE_IPV6HOST:
+     {
+ 	u_long tmp[4];
+-	static char *inet6_ntoa(u_long *addr);  /* should be replaced
+-						   by addr2ascii */
+ 	if ((buf = malloc(sizeof("xxxx:xxxx:xxxx:xxxx:xxxx:xxxx:xxxx:xxxx")))
+ 	    == NULL)
+ 	    fatal_error("get_protoname: no memory\n");
