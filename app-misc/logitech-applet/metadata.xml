@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>desktop-misc</herd>
+<maintainer>
+  <email>r3pek@gentoo.org</email>
+</maintainer>
+<longdescription>Control utility for some special features of some special
+	Logitech USB mice!</longdescription>
+</pkgmetadata>

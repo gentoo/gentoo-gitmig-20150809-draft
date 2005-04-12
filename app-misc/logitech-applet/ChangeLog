@@ -1,0 +1,10 @@
+# ChangeLog for app-misc/logitech-applet
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/logitech-applet/ChangeLog,v 1.1 2005/04/12 15:30:41 r3pek Exp $
+
+*logitech-applet-0.4_pre1 (12 Apr 2005)
+
+  12 Apr 2005; Carlos Silva <r3pek@gentoo.org> +metadata.xml,
+  +logitech-applet-0.4_pre1.ebuild:
+  Initial import thanks to Martti Rannanjärvi in bug #44813
+
