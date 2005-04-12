@@ -1,0 +1,112 @@
+diff -r -C 5 CUnit-1.0-8/CUnit/Headers/CUnit.h CUnit-1.0-8.new/CUnit/Headers/CUnit.h
+*** CUnit-1.0-8/CUnit/Headers/CUnit.h	Sun Apr  7 21:36:31 2002
+--- CUnit-1.0-8.new/CUnit/Headers/CUnit.h	Fri Apr  1 12:11:31 2005
+***************
+*** 56,66 ****
+  #ifndef TRUE
+  	#define TRUE	(int)~FALSE
+  #endif
+  
+  extern void assertImplementation(unsigned int bValue,unsigned int uiLine,
+! 				char strCondition[], char strFile[], char strFunction[]);
+  
+  
+  #undef ASSERT
+  #define ASSERT(value) if (0 == (int)(value))  {  assertImplementation(value, __LINE__, #value, __FILE__, "");  return;  }
+  
+--- 56,66 ----
+  #ifndef TRUE
+  	#define TRUE	(int)~FALSE
+  #endif
+  
+  extern void assertImplementation(unsigned int bValue,unsigned int uiLine,
+! 				const char strCondition[], const char strFile[], const char strFunction[]);
+  
+  
+  #undef ASSERT
+  #define ASSERT(value) if (0 == (int)(value))  {  assertImplementation(value, __LINE__, #value, __FILE__, "");  return;  }
+  
+diff -r -C 5 CUnit-1.0-8/CUnit/Headers/TestDB.h CUnit-1.0-8.new/CUnit/Headers/TestDB.h
+*** CUnit-1.0-8/CUnit/Headers/TestDB.h	Sun Apr  7 21:36:31 2002
+--- CUnit-1.0-8.new/CUnit/Headers/TestDB.h	Fri Apr  1 12:12:33 2005
+***************
+*** 114,125 ****
+  /*
+   * This function is for internal use and is used by the 
+   * Asssert Implementation function to store the error description
+   * and the codes.
+   */
+! extern void add_failure(unsigned int uiLineNumber, char szCondition[],
+! 				char szFileName[], PTestGroup pGroup, PTestCase pTest);
+  
+  extern const char* get_error(void);
+  
+  #ifdef __cplusplus
+  }
+--- 114,125 ----
+  /*
+   * This function is for internal use and is used by the 
+   * Asssert Implementation function to store the error description
+   * and the codes.
+   */
+! extern void add_failure(unsigned int uiLineNumber, const char szCondition[],
+! 				const char szFileName[], PTestGroup pGroup, PTestCase pTest);
+  
+  extern const char* get_error(void);
+  
+  #ifdef __cplusplus
+  }
+diff -r -C 5 CUnit-1.0-8/CUnit/Sources/Framework/AssertImpl.c CUnit-1.0-8.new/CUnit/Sources/Framework/AssertImpl.c
+*** CUnit-1.0-8/CUnit/Sources/Framework/AssertImpl.c	Wed Jan  2 07:14:04 2002
+--- CUnit-1.0-8.new/CUnit/Sources/Framework/AssertImpl.c	Fri Apr  1 12:08:45 2005
+***************
+*** 37,45 ****
+  #include "TestDB.h"
+  #include "TestRun.h"
+  
+  
+  void assertImplementation(unsigned int uiValue, unsigned int uiLine,
+! 		char strCondition[], char strFile[], char strFunction[])
+  {
+  	add_failure(uiLine, strCondition, strFile, g_pTestGroup, g_pTestCase);
+  }
+--- 37,45 ----
+  #include "TestDB.h"
+  #include "TestRun.h"
+  
+  
+  void assertImplementation(unsigned int uiValue, unsigned int uiLine,
+! 		const char strCondition[], const char strFile[], const char strFunction[])
+  {
+  	add_failure(uiLine, strCondition, strFile, g_pTestGroup, g_pTestCase);
+  }
+diff -r -C 5 CUnit-1.0-8/CUnit/Sources/Framework/TestRun.c CUnit-1.0-8.new/CUnit/Sources/Framework/TestRun.c
+*** CUnit-1.0-8/CUnit/Sources/Framework/TestRun.c	Tue Jul 23 22:43:58 2002
+--- CUnit-1.0-8.new/CUnit/Sources/Framework/TestRun.c	Fri Apr  1 12:09:57 2005
+***************
+*** 292,303 ****
+  	
+  	f_bCleanupResultSet = 1;
+  	return error_number;
+  }
+  
+! void add_failure(unsigned int uiLineNumber, char szCondition[],
+! 		char szFileName[], PTestGroup pGroup, PTestCase pTest)
+  {
+  	PTestResult pResult = NULL;
+  	PTestResult pTemp = NULL;
+  
+  	if (!g_pTestRegistry) {
+--- 292,303 ----
+  	
+  	f_bCleanupResultSet = 1;
+  	return error_number;
+  }
+  
+! void add_failure(unsigned int uiLineNumber, const char szCondition[],
+! 		const char szFileName[], PTestGroup pGroup, PTestCase pTest)
+  {
+  	PTestResult pResult = NULL;
+  	PTestResult pTemp = NULL;
+  
+  	if (!g_pTestRegistry) {

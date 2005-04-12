@@ -1,6 +1,15 @@
 # ChangeLog for dev-util/cunit
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cunit/ChangeLog,v 1.9 2004/10/30 10:21:55 dholm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cunit/ChangeLog,v 1.10 2005/04/12 08:00:14 dholm Exp $
+
+*cunit-1.1.0.1-r1 (12 Apr 2005)
+*cunit-1.0.0.8-r1 (12 Apr 2005)
+
+  12 Apr 2005; David Holm <dholm@gentoo.org> +files/cunit-const.patch,
+  +metadata.xml, +cunit-1.0.0.8-r1.ebuild, +cunit-1.1.0.1-r1.ebuild:
+  Added const pointers fix from James Ranson <euclid80 (at) users (dot) sf
+  (dot) net> (Bug #87599)
+  Added metadata.xml
 
 *cunit-2.0 (30 Oct 2004)
 
