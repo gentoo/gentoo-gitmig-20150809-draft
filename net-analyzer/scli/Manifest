@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 6f637083a2abe28438d5ab77b06d1955 scli-0.2.12.ebuild 1176
-MD5 e0a52df9a29a50c55af7ad09e826f625 ChangeLog 682
+MD5 1a5aac305e3dab2ccd85f2eedc167306 ChangeLog 771
 MD5 637389da071d8ee0c0292695525bc29f metadata.xml 160
+MD5 181043afe823d0b03b3138edf450d866 scli-0.2.12.ebuild 1181
 MD5 cee1db33c3c86f0256eb7666ad160781 files/digest-scli-0.2.12 63
-MD5 ee225bed0ca758593aa508947a98599c files/scli-0.2.12-gentoo.diff 2503
 MD5 231d44387fe2820b278e6b93943a4a82 files/scli-0.2.12-fix-configure.diff 1200
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFB+kkWEZCkKN40op4RAqY5AKCuLkBdopTP3zVLsvVqaqrxqrAwagCfQ72t
-T4WoAdTbtFmVKwKwSqVC7WE=
-=bK7L
------END PGP SIGNATURE-----
+MD5 ee225bed0ca758593aa508947a98599c files/scli-0.2.12-gentoo.diff 2503

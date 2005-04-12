@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/scli
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/scli/ChangeLog,v 1.2 2005/01/28 14:15:41 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/scli/ChangeLog,v 1.3 2005/04/12 02:42:00 weeve Exp $
+
+  12 Apr 2005; Jason Wever <weeve@gentoo.org> scli-0.2.12.ebuild:
+  Added ~sparc keyword.
 
   28 Jan 2005; Aaron Walker <ka0ttic@gentoo.org>
   files/scli-0.2.12-fix-configure.diff:
