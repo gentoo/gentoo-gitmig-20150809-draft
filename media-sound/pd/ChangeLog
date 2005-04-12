@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/pd
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pd/ChangeLog,v 1.22 2004/12/19 06:13:51 eradicator Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pd/ChangeLog,v 1.23 2005/04/12 22:03:09 luckyduck Exp $
+
+*pd-0.38.4 (13 Apr 2005)
+
+  13 Apr 2005; Jan Brinkmann <luckyduck@gentoo.org> +pd-0.38.4.ebuild:
+  new upstream release, fixes #78435. added ~amd64 to KEYWORDS.
 
   18 Dec 2004; Jeremy Huddleston <eradicator@gentoo.org> pd-0.37.4.ebuild:
   Stable sparc, x86.

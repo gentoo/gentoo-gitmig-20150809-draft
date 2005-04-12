@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pd/pd-0.37.4.ebuild,v 1.4 2005/04/12 22:03:09 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pd/pd-0.38.4.ebuild,v 1.1 2005/04/12 22:03:09 luckyduck Exp $
 
-IUSE="X alsa debug"
+IUSE="X alsa debug jack"
 
 inherit eutils versionator
 
@@ -17,15 +17,13 @@ SRC_URI="http://www-crca.ucsd.edu/~msp/Software/${MY_P}.src.tar.gz"
 
 LICENSE="|| ( BSD as-is )"
 SLOT="0"
-KEYWORDS="~ppc sparc x86"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 
-RDEPEND=">=dev-lang/tcl-8.3.3
+DEPEND=">=dev-lang/tcl-8.3.3
 	>=dev-lang/tk-8.3.3
 	alsa? ( >=media-libs/alsa-lib-0.9.0_rc2 )
+	jack? ( >=media-sound/jack-audio-connection-kit-0.99.0-r1 )
 	X? ( virtual/x11 )"
-
-DEPEND="${RDEPEND}
-	sys-apps/sed"
 
 src_unpack() {
 	unpack ${A}
@@ -45,15 +43,19 @@ src_compile() {
 
 	econf \
 		${myconf} \
-		`use_with X x` \
-		`use_enable debug` \
+		$(use_with X x) \
+		$(use_enable jack) \
+		$(use_enable debug) \
 		|| die "./configure failed"
-
 	emake || die "parallel make failed"
 }
 
 src_install() {
 	make DESTDIR=${D} install || die "install failed"
+
+	# tb: install private headers ... several external developers use them
+	cp m_imp.h ${D}/usr/include
+	cp g_canvas.h ${D}/usr/include
 
 	cd ..
 	cp -pr doc extra ${D}/usr/lib/pd
