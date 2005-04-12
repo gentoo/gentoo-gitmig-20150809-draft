@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/propel-runtime/propel-runtime-1.1.0.ebuild,v 1.1 2005/04/12 06:39:31 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/propel-runtime/propel-runtime-1.1.0.ebuild,v 1.2 2005/04/12 11:34:15 sebastian Exp $
 
 inherit php-pear
 
@@ -12,5 +12,5 @@ KEYWORDS="~x86 ~amd64"
 IUSE=""
 SRC_URI="http://propel.phpdb.org/pear/propel_runtime-${PV}.tgz"
 RDEPEND=">=dev-php/php-5.0.0
-	dev-php/creole"
+	>=dev-php/creole-1.0.1"
 S="${WORKDIR}/propel_runtime-${PV}"
