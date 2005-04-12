@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/wesnoth/wesnoth-0.9.0.ebuild,v 1.1 2005/04/11 23:47:46 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/wesnoth/wesnoth-0.9.0.ebuild,v 1.2 2005/04/12 21:49:51 mr_bones_ Exp $
 
 inherit eutils flag-o-matic gcc games
 
@@ -36,7 +36,7 @@ src_compile() {
 		S=${WORKDIR}/${PN}-lite-${PV}
 	fi
 	cd "${S}"
-	filter-flags -ftracer -fomit-frame-pointer
+	filter-flags -ftracer -fomit-frame-pointer -fstack-protector
 	egamesconf \
 		--disable-dependency-tracking \
 		$(use_enable server) \
