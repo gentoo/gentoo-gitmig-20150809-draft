@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/ldapdns/ldapdns-2.05.ebuild,v 1.5 2005/03/03 18:21:08 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/ldapdns/ldapdns-2.05.ebuild,v 1.6 2005/04/13 17:45:53 ka0ttic Exp $
 
 DESCRIPTION="A tiny, fast authoritative nameserver that queries LDAP and can be updated instantly"
 SRC_URI="http://www.nimh.org/dl/${P}.tar.gz"
@@ -33,13 +33,9 @@ src_install() {
 }
 
 pkg_postinst() {
-
-	groupadd &>/dev/null nofiles
-
-	id &>/dev/null ldapdns || \
-		useradd -g nofiles -d /nonexistent -s /bin/false ldapdns
-	id &>/dev/null dnslog || \
-		useradd -g nofiles -d /nonexistent -s /bin/false dnslog
+	enewgroup nofiles
+	enewuser ldapdns -1 /bin/false /nonexistent nofiles
+	enewuser dnslog -1 /bin/false /nonexistent nofiles
 
 	einfo "Read the readme.configure and use ldapdns-conf to setup"
 }
