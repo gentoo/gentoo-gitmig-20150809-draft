@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/eclipse-gef-bin
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-gef-bin/ChangeLog,v 1.8 2005/03/19 21:19:13 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-gef-bin/ChangeLog,v 1.9 2005/04/13 18:15:20 luckyduck Exp $
+
+  13 Apr 2005; Jan Brinkmann <luckyduck@gentoo.org>
+  -eclipse-gef-bin-20040330.ebuild, -eclipse-gef-bin-20040619.ebuild:
+  cleanup, also fixes #87511
 
 *eclipse-gef-bin-3.0.1 (19 Mar 2005)
 
