@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/drupal/drupal-4.5.2.ebuild,v 1.3 2005/04/13 12:27:37 st_lim Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/drupal/drupal-4.5.2.ebuild,v 1.4 2005/04/13 14:20:07 st_lim Exp $
 
 inherit webapp eutils
 
@@ -229,427 +229,427 @@ DEPEND="virtual/php"
 
 src_unpack() {
 	cd ${WORKDIR}
-	tar xfz ${DISTDIR}/${P}.tar.gz
+	unpack ${P}.tar.gz
 
 	cd ${S}/modules
 	einfo "Unpacking affiliate"
-	tar xfz ${DISTDIR}/affiliate-${MOD_PV}.tar.gz
+	unpack affiliate-${MOD_PV}.tar.gz
 	einfo "Unpacking album"
-	tar xfz ${DISTDIR}/album-${MOD_PV}.tar.gz
+	unpack album-${MOD_PV}.tar.gz
 	einfo "Unpacking amazon_items"
-	tar xfz ${DISTDIR}/amazon_items-${MOD_PV}.tar.gz
+	unpack amazon_items-${MOD_PV}.tar.gz
 	einfo "Unpacking amazonsearch"
-	tar xfz ${DISTDIR}/amazonsearch-${MOD_PV}.tar.gz
+	unpack amazonsearch-${MOD_PV}.tar.gz
 	einfo "Unpacking api"
-	tar xfz ${DISTDIR}/api-${MOD_PV}.tar.gz
+	unpack api-${MOD_PV}.tar.gz
 	einfo "Unpacking article"
-	tar xfz ${DISTDIR}/article-${MOD_PV}.tar.gz
+	unpack article-${MOD_PV}.tar.gz
 	einfo "Unpacking atom"
-	tar xfz ${DISTDIR}/atom-${MOD_PV}.tar.gz
+	unpack atom-${MOD_PV}.tar.gz
 	einfo "Unpacking attached_node"
-	tar xfz ${DISTDIR}/attached_node-${MOD_PV}.tar.gz
+	unpack attached_node-${MOD_PV}.tar.gz
 	einfo "Unpacking attachment"
-	tar xfz ${DISTDIR}/attachment-${MOD_PV}.tar.gz
+	unpack attachment-${MOD_PV}.tar.gz
 	einfo "Unpacking automember"
-	tar xfz ${DISTDIR}/automember-${MOD_PV}.tar.gz
+	unpack automember-${MOD_PV}.tar.gz
 	einfo "Unpacking banner"
-	tar xfz ${DISTDIR}/banner-${MOD_PV}.tar.gz
+	unpack banner-${MOD_PV}.tar.gz
 	einfo "Unpacking bbcode"
-	tar xfz ${DISTDIR}/bbcode-${MOD_PV}.tar.gz
+	unpack bbcode-${MOD_PV}.tar.gz
 	einfo "Unpacking blogroll"
-	tar xfz ${DISTDIR}/blogroll-${MOD_PV}.tar.gz
+	unpack blogroll-${MOD_PV}.tar.gz
 	einfo "Unpacking bookreview"
-	tar xfz ${DISTDIR}/bookreview-${MOD_PV}.tar.gz
+	unpack bookreview-${MOD_PV}.tar.gz
 	einfo "Unpacking bookmarks"
-	tar xfz ${DISTDIR}/bookmarks-${MOD_PV}.tar.gz
+	unpack bookmarks-${MOD_PV}.tar.gz
 	einfo "Unpacking buddylist"
-	tar xfz ${DISTDIR}/buddylist-${MOD_PV}.tar.gz
+	unpack buddylist-${MOD_PV}.tar.gz
 	einfo "Unpacking captcha"
-	tar xfz ${DISTDIR}/captcha-${MOD_PV}.tar.gz
+	unpack captcha-${MOD_PV}.tar.gz
 	einfo "Unpacking challenge_response"
-	tar xfz ${DISTDIR}/challenge_response-${MOD_PV}.tar.gz
+	unpack challenge_response-${MOD_PV}.tar.gz
 	einfo "Unpacking chatbox"
-	tar xfz ${DISTDIR}/chatbox-${MOD_PV}.tar.gz
+	unpack chatbox-${MOD_PV}.tar.gz
 	einfo "Unpacking codefilter"
-	tar xfz ${DISTDIR}/codefilter-${MOD_PV}.tar.gz
+	unpack codefilter-${MOD_PV}.tar.gz
 	einfo "Unpacking collimator"
-	tar xfz ${DISTDIR}/collimator-${MOD_PV}.tar.gz
+	unpack collimator-${MOD_PV}.tar.gz
 	einfo "Unpacking commentcloser"
-	tar xfz ${DISTDIR}/commentcloser-${MOD_PV}.tar.gz
+	unpack commentcloser-${MOD_PV}.tar.gz
 	einfo "Unpacking commentrss"
-	tar xfz ${DISTDIR}/commentrss-${MOD_PV}.tar.gz
+	unpack commentrss-${MOD_PV}.tar.gz
 	einfo "Unpacking contact_dir"
-	tar xfz ${DISTDIR}/contact_dir-${MOD_PV}.tar.gz
+	unpack contact_dir-${MOD_PV}.tar.gz
 	einfo "Unpacking contextlinks"
-	tar xfz ${DISTDIR}/contextlinks-${MOD_PV}.tar.gz
+	unpack contextlinks-${MOD_PV}.tar.gz
 	einfo "Unpacking copyright"
-	tar xfz ${DISTDIR}/copyright-${MOD_PV}.tar.gz
+	unpack copyright-${MOD_PV}.tar.gz
 	einfo "Unpacking creativecommons"
-	tar xfz ${DISTDIR}/creativecommons-${MOD_PV}.tar.gz
+	unpack creativecommons-${MOD_PV}.tar.gz
 	einfo "Unpacking csvfilter"
-	tar xfz ${DISTDIR}/csvfilter-${MOD_PV}.tar.gz
+	unpack csvfilter-${MOD_PV}.tar.gz
 	einfo "Unpacking postcount_rank"
-	tar xfz ${DISTDIR}/postcount_rank-${MOD_PV}.tar.gz
+	unpack postcount_rank-${MOD_PV}.tar.gz
 	einfo "Unpacking customerror"
-	tar xfz ${DISTDIR}/customerror-${MOD_PV}.tar.gz
+	unpack customerror-${MOD_PV}.tar.gz
 	einfo "Unpacking daily"
-	tar xfz ${DISTDIR}/daily-${MOD_PV}.tar.gz
+	unpack daily-${MOD_PV}.tar.gz
 	einfo "Unpacking dba"
-	tar xfz ${DISTDIR}/dba-${MOD_PV}.tar.gz
+	unpack dba-${MOD_PV}.tar.gz
 	einfo "Unpacking distantparent"
-	tar xfz ${DISTDIR}/distantparent-${MOD_PV}.tar.gz
+	unpack distantparent-${MOD_PV}.tar.gz
 	einfo "Unpacking donations"
-	tar xfz ${DISTDIR}/donations-${MOD_PV}.tar.gz
+	unpack donations-${MOD_PV}.tar.gz
 	einfo "Unpacking ecommerce"
-	tar xfz ${DISTDIR}/ecommerce-${MOD_PV}.tar.gz
+	unpack ecommerce-${MOD_PV}.tar.gz
 	einfo "Unpacking editasnew"
-	tar xfz ${DISTDIR}/editasnew-${MOD_PV}.tar.gz
+	unpack editasnew-${MOD_PV}.tar.gz
 	einfo "Unpacking event"
-	tar xfz ${DISTDIR}/event-${MOD_PV}.tar.gz
+	unpack event-${MOD_PV}.tar.gz
 	einfo "Unpacking excerpt"
-	tar xfz ${DISTDIR}/excerpt-${MOD_PV}.tar.gz
+	unpack excerpt-${MOD_PV}.tar.gz
 	einfo "Unpacking ezmlm"
-	tar xfz ${DISTDIR}/ezmlm-${MOD_PV}.tar.gz
+	unpack ezmlm-${MOD_PV}.tar.gz
 	einfo "Unpacking fckeditor"
-	tar xfz ${DISTDIR}/fckeditor-${MOD_PV}.tar.gz
+	unpack fckeditor-${MOD_PV}.tar.gz
 	einfo "Unpacking feature"
-	tar xfz ${DISTDIR}/feature-${MOD_PV}.tar.gz
+	unpack feature-${MOD_PV}.tar.gz
 	einfo "Unpacking feedback"
-	tar xfz ${DISTDIR}/feedback-${MOD_PV}.tar.gz
+	unpack feedback-${MOD_PV}.tar.gz
 	einfo "Unpacking filebrowser"
-	tar xfz ${DISTDIR}/filebrowser-${MOD_PV}.tar.gz
+	unpack filebrowser-${MOD_PV}.tar.gz
 	einfo "Unpacking filemanager"
-	tar xfz ${DISTDIR}/filemanager-${MOD_PV}.tar.gz
+	unpack filemanager-${MOD_PV}.tar.gz
 	einfo "Unpacking filestore2"
-	tar xfz ${DISTDIR}/filestore2-${MOD_PV}.tar.gz
+	unpack filestore2-${MOD_PV}.tar.gz
 	einfo "Unpacking flexinode"
-	tar xfz ${DISTDIR}/flexinode-${MOD_PV}.tar.gz
+	unpack flexinode-${MOD_PV}.tar.gz
 	einfo "Unpacking foaf"
-	tar xfz ${DISTDIR}/foaf-${MOD_PV}.tar.gz
+	unpack foaf-${MOD_PV}.tar.gz
 	einfo "Unpacking folksonomy"
-	tar xfz ${DISTDIR}/folksonomy-${MOD_PV}.tar.gz
+	unpack folksonomy-${MOD_PV}.tar.gz
 	einfo "Unpacking fontsize"
-	tar xfz ${DISTDIR}/fontsize-${MOD_PV}.tar.gz
+	unpack fontsize-${MOD_PV}.tar.gz
 	einfo "Unpacking forms"
-	tar xfz ${DISTDIR}/forms-${MOD_PV}.tar.gz
+	unpack forms-${MOD_PV}.tar.gz
 	einfo "Unpacking form_mail"
-	tar xfz ${DISTDIR}/form_mail-${MOD_PV}.tar.gz
+	unpack form_mail-${MOD_PV}.tar.gz
 	einfo "Unpacking front"
-	tar xfz ${DISTDIR}/front-${MOD_PV}.tar.gz
+	unpack front-${MOD_PV}.tar.gz
 	einfo "Unpacking fscache"
-	tar xfz ${DISTDIR}/fscache-${MOD_PV}.tar.gz
+	unpack fscache-${MOD_PV}.tar.gz
 	einfo "Unpacking glossary"
-	tar xfz ${DISTDIR}/glossary-${MOD_PV}.tar.gz
+	unpack glossary-${MOD_PV}.tar.gz
 	einfo "Unpacking guestbook"
-	tar xfz ${DISTDIR}/guestbook-${MOD_PV}.tar.gz
+	unpack guestbook-${MOD_PV}.tar.gz
 	einfo "Unpacking helpedit"
-	tar xfz ${DISTDIR}/helpedit-${MOD_PV}.tar.gz
+	unpack helpedit-${MOD_PV}.tar.gz
 	einfo "Unpacking htmlcorrector"
-	tar xfz ${DISTDIR}/htmlcorrector-${MOD_PV}.tar.gz
+	unpack htmlcorrector-${MOD_PV}.tar.gz
 	einfo "Unpacking htmlarea"
-	tar xfz ${DISTDIR}/htmlarea-${MOD_PV}.tar.gz
+	unpack htmlarea-${MOD_PV}.tar.gz
 	einfo "Unpacking htmltidy"
-	tar xfz ${DISTDIR}/htmltidy-${MOD_PV}.tar.gz
+	unpack htmltidy-${MOD_PV}.tar.gz
 	einfo "Unpacking image"
-	tar xfz ${DISTDIR}/image-${MOD_PV}.tar.gz
+	unpack image-${MOD_PV}.tar.gz
 	einfo "Unpacking image_filter"
-	tar xfz ${DISTDIR}/image_filter-${MOD_PV}.tar.gz
+	unpack image_filter-${MOD_PV}.tar.gz
 	einfo "Unpacking img_assist"
-	tar xfz ${DISTDIR}/img_assist-${MOD_PV}.tar.gz
+	unpack img_assist-${MOD_PV}.tar.gz
 	einfo "Unpacking inline"
-	tar xfz ${DISTDIR}/inline-${MOD_PV}.tar.gz
+	unpack inline-${MOD_PV}.tar.gz
 	einfo "Unpacking im"
-	tar xfz ${DISTDIR}/im-${MOD_PV}.tar.gz
+	unpack im-${MOD_PV}.tar.gz
 	einfo "Unpacking i18n"
-	tar xfz ${DISTDIR}/i18n-${MOD_PV}.tar.gz
+	unpack i18n-${MOD_PV}.tar.gz
 	einfo "Unpacking interwiki"
-	tar xfz ${DISTDIR}/interwiki-${MOD_PV}.tar.gz
+	unpack interwiki-${MOD_PV}.tar.gz
 	einfo "Unpacking jsdomenu"
-	tar xfz ${DISTDIR}/jsdomenu-${MOD_PV}.tar.gz
+	unpack jsdomenu-${MOD_PV}.tar.gz
 	einfo "Unpacking ldap_integration"
-	tar xfz ${DISTDIR}/ldap_integration-${MOD_PV}.tar.gz
+	unpack ldap_integration-${MOD_PV}.tar.gz
 	einfo "Unpacking legal"
-	tar xfz ${DISTDIR}/legal-${MOD_PV}.tar.gz
+	unpack legal-${MOD_PV}.tar.gz
 	einfo "Unpacking listhandler"
-	tar xfz ${DISTDIR}/listhandler-${MOD_PV}.tar.gz
+	unpack listhandler-${MOD_PV}.tar.gz
 	einfo "Unpacking livediscussions"
-	tar xfz ${DISTDIR}/livediscussions-${MOD_PV}.tar.gz
+	unpack livediscussions-${MOD_PV}.tar.gz
 	einfo "Unpacking livejournal"
-	tar xfz ${DISTDIR}/livejournal-${MOD_PV}.tar.gz
+	unpack livejournal-${MOD_PV}.tar.gz
 	einfo "Unpacking mail"
-	tar xfz ${DISTDIR}/mail-${MOD_PV}.tar.gz
+	unpack mail-${MOD_PV}.tar.gz
 	einfo "Unpacking mailalias"
-	tar xfz ${DISTDIR}/mailalias-${MOD_PV}.tar.gz
+	unpack mailalias-${MOD_PV}.tar.gz
 	einfo "Unpacking mailhandler"
-	tar xfz ${DISTDIR}/mailhandler-${MOD_PV}.tar.gz
+	unpack mailhandler-${MOD_PV}.tar.gz
 	einfo "Unpacking marksmarty"
-	tar xfz ${DISTDIR}/marksmarty-${MOD_PV}.tar.gz
+	unpack marksmarty-${MOD_PV}.tar.gz
 	einfo "Unpacking massmailer"
-	tar xfz ${DISTDIR}/massmailer-${MOD_PV}.tar.gz
+	unpack massmailer-${MOD_PV}.tar.gz
 	einfo "Unpacking members"
-	tar xfz ${DISTDIR}/members-${MOD_PV}.tar.gz
+	unpack members-${MOD_PV}.tar.gz
 	einfo "Unpacking menu_otf"
-	tar xfz ${DISTDIR}/menu_otf-${MOD_PV}.tar.gz
+	unpack menu_otf-${MOD_PV}.tar.gz
 	einfo "Unpacking mypage"
-	tar xfz ${DISTDIR}/mypage-${MOD_PV}.tar.gz
+	unpack mypage-${MOD_PV}.tar.gz
 	einfo "Unpacking news_page"
-	tar xfz ${DISTDIR}/news_page-${MOD_PV}.tar.gz
+	unpack news_page-${MOD_PV}.tar.gz
 	einfo "Unpacking nicelinks"
-	tar xfz ${DISTDIR}/nicelinks-${MOD_PV}.tar.gz
+	unpack nicelinks-${MOD_PV}.tar.gz
 	einfo "Unpacking nodewords"
-	tar xfz ${DISTDIR}/nodewords-${MOD_PV}.tar.gz
+	unpack nodewords-${MOD_PV}.tar.gz
 	einfo "Unpacking nmoderation"
-	tar xfz ${DISTDIR}/nmoderation-${MOD_PV}.tar.gz
+	unpack nmoderation-${MOD_PV}.tar.gz
 	einfo "Unpacking node_privacy_byrole"
-	tar xfz ${DISTDIR}/node_privacy_byrole-${MOD_PV}.tar.gz
+	unpack node_privacy_byrole-${MOD_PV}.tar.gz
 	einfo "Unpacking relativity"
-	tar xfz ${DISTDIR}/relativity-${MOD_PV}.tar.gz
+	unpack relativity-${MOD_PV}.tar.gz
 	einfo "Unpacking typecat"
-	tar xfz ${DISTDIR}/typecat-${MOD_PV}.tar.gz
+	unpack typecat-${MOD_PV}.tar.gz
 	einfo "Unpacking node_import"
-	tar xfz ${DISTDIR}/node_import-${MOD_PV}.tar.gz
+	unpack node_import-${MOD_PV}.tar.gz
 	einfo "Unpacking notify"
-	tar xfz ${DISTDIR}/notify-${MOD_PV}.tar.gz
+	unpack notify-${MOD_PV}.tar.gz
 	einfo "Unpacking optin"
-	tar xfz ${DISTDIR}/optin-${MOD_PV}.tar.gz
+	unpack optin-${MOD_PV}.tar.gz
 	einfo "Unpacking og"
-	tar xfz ${DISTDIR}/og-${MOD_PV}.tar.gz
+	unpack og-${MOD_PV}.tar.gz
 	einfo "Unpacking over_text"
-	tar xfz ${DISTDIR}/over_text-${MOD_PV}.tar.gz
+	unpack over_text-${MOD_PV}.tar.gz
 	einfo "Unpacking pathauto"
-	tar xfz ${DISTDIR}/pathauto-${MOD_PV}.tar.gz
+	unpack pathauto-${MOD_PV}.tar.gz
 	einfo "Unpacking paypal_framework"
-	tar xfz ${DISTDIR}/paypal_framework-${MOD_PV}.tar.gz
+	unpack paypal_framework-${MOD_PV}.tar.gz
 	einfo "Unpacking paypal_subscription"
-	tar xfz ${DISTDIR}/paypal_subscription-${MOD_PV}.tar.gz
+	unpack paypal_subscription-${MOD_PV}.tar.gz
 	einfo "Unpacking paypal_tipjar"
-	tar xfz ${DISTDIR}/paypal_tipjar-${MOD_PV}.tar.gz
+	unpack paypal_tipjar-${MOD_PV}.tar.gz
 	einfo "Unpacking pdfview"
-	tar xfz ${DISTDIR}/pdfview-${MOD_PV}.tar.gz
+	unpack pdfview-${MOD_PV}.tar.gz
 	einfo "Unpacking peoplesemailnetwork"
-	tar xfz ${DISTDIR}/peoplesemailnetwork-${MOD_PV}.tar.gz
+	unpack peoplesemailnetwork-${MOD_PV}.tar.gz
 	einfo "Unpacking periodical"
-	tar xfz ${DISTDIR}/periodical-${MOD_PV}.tar.gz
+	unpack periodical-${MOD_PV}.tar.gz
 	einfo "Unpacking poormanscron"
-	tar xfz ${DISTDIR}/poormanscron-${MOD_PV}.tar.gz
+	unpack poormanscron-${MOD_PV}.tar.gz
 	einfo "Unpacking postcard"
-	tar xfz ${DISTDIR}/postcard-${MOD_PV}.tar.gz
+	unpack postcard-${MOD_PV}.tar.gz
 	einfo "Unpacking powells"
-	tar xfz ${DISTDIR}/powells-${MOD_PV}.tar.gz
+	unpack powells-${MOD_PV}.tar.gz
 	einfo "Unpacking print"
-	tar xfz ${DISTDIR}/print-${MOD_PV}.tar.gz
+	unpack print-${MOD_PV}.tar.gz
 	einfo "Unpacking privatemsg"
-	tar xfz ${DISTDIR}/privatemsg-${MOD_PV}.tar.gz
+	unpack privatemsg-${MOD_PV}.tar.gz
 	einfo "Unpacking project"
-	tar xfz ${DISTDIR}/project-${MOD_PV}.tar.gz
+	unpack project-${MOD_PV}.tar.gz
 	einfo "Unpacking pureftp"
-	tar xfz ${DISTDIR}/pureftp-${MOD_PV}.tar.gz
+	unpack pureftp-${MOD_PV}.tar.gz
 	einfo "Unpacking quickpost"
-	tar xfz ${DISTDIR}/quickpost-${MOD_PV}.tar.gz
+	unpack quickpost-${MOD_PV}.tar.gz
 	einfo "Unpacking quicktags"
-	tar xfz ${DISTDIR}/quicktags-${MOD_PV}.tar.gz
+	unpack quicktags-${MOD_PV}.tar.gz
 	einfo "Unpacking quote"
-	tar xfz ${DISTDIR}/quote-${MOD_PV}.tar.gz
+	unpack quote-${MOD_PV}.tar.gz
 	einfo "Unpacking quotes"
-	tar xfz ${DISTDIR}/quotes-${MOD_PV}.tar.gz
+	unpack quotes-${MOD_PV}.tar.gz
 	einfo "Unpacking recipe"
-	tar xfz ${DISTDIR}/recipe-${MOD_PV}.tar.gz
+	unpack recipe-${MOD_PV}.tar.gz
 	einfo "Unpacking relatedlinks"
-	tar xfz ${DISTDIR}/relatedlinks-${MOD_PV}.tar.gz
+	unpack relatedlinks-${MOD_PV}.tar.gz
 	einfo "Unpacking remindme"
-	tar xfz ${DISTDIR}/remindme-${MOD_PV}.tar.gz
+	unpack remindme-${MOD_PV}.tar.gz
 	einfo "Unpacking role_to_file"
-	tar xfz ${DISTDIR}/role_to_file-${MOD_PV}.tar.gz
+	unpack role_to_file-${MOD_PV}.tar.gz
 	einfo "Unpacking rsvp"
-	tar xfz ${DISTDIR}/rsvp-${MOD_PV}.tar.gz
+	unpack rsvp-${MOD_PV}.tar.gz
 	einfo "Unpacking scheduler"
-	tar xfz ${DISTDIR}/scheduler-${MOD_PV}.tar.gz
+	unpack scheduler-${MOD_PV}.tar.gz
 	einfo "Unpacking series"
-	tar xfz ${DISTDIR}/series-${MOD_PV}.tar.gz
+	unpack series-${MOD_PV}.tar.gz
 	einfo "Unpacking sidecontent"
-	tar xfz ${DISTDIR}/sidecontent-${MOD_PV}.tar.gz
+	unpack sidecontent-${MOD_PV}.tar.gz
 	einfo "Unpacking simpletest"
-	tar xfz ${DISTDIR}/simpletest-${MOD_PV}.tar.gz
+	unpack simpletest-${MOD_PV}.tar.gz
 	einfo "Unpacking site_map"
-	tar xfz ${DISTDIR}/site_map-${MOD_PV}.tar.gz
+	unpack site_map-${MOD_PV}.tar.gz
 	einfo "Unpacking sitemenu"
-	tar xfz ${DISTDIR}/sitemenu-${MOD_PV}.tar.gz
+	unpack sitemenu-${MOD_PV}.tar.gz
 	einfo "Unpacking smartypants"
-	tar xfz ${DISTDIR}/smartypants-${MOD_PV}.tar.gz
+	unpack smartypants-${MOD_PV}.tar.gz
 	einfo "Unpacking smileys"
-	tar xfz ${DISTDIR}/smileys-${MOD_PV}.tar.gz
+	unpack smileys-${MOD_PV}.tar.gz
 	einfo "Unpacking spam"
-	tar xfz ${DISTDIR}/spam-${MOD_PV}.tar.gz
+	unpack spam-${MOD_PV}.tar.gz
 	einfo "Unpacking statistics_filter"
-	tar xfz ${DISTDIR}/statistics_filter-${MOD_PV}.tar.gz
+	unpack statistics_filter-${MOD_PV}.tar.gz
 	einfo "Unpacking stock"
-	tar xfz ${DISTDIR}/stock-${MOD_PV}.tar.gz
+	unpack stock-${MOD_PV}.tar.gz
 	einfo "Unpacking subscriptions"
-	tar xfz ${DISTDIR}/subscriptions-${MOD_PV}.tar.gz
+	unpack subscriptions-${MOD_PV}.tar.gz
 	einfo "Unpacking summary"
-	tar xfz ${DISTDIR}/summary-${MOD_PV}.tar.gz
+	unpack summary-${MOD_PV}.tar.gz
 	einfo "Unpacking survey"
-	tar xfz ${DISTDIR}/survey-${MOD_PV}.tar.gz
+	unpack survey-${MOD_PV}.tar.gz
 	einfo "Unpacking swish"
-	tar xfz ${DISTDIR}/swish-${MOD_PV}.tar.gz
+	unpack swish-${MOD_PV}.tar.gz
 	einfo "Unpacking sxip"
-	tar xfz ${DISTDIR}/sxip-${MOD_PV}.tar.gz
+	unpack sxip-${MOD_PV}.tar.gz
 	einfo "Unpacking syndication"
-	tar xfz ${DISTDIR}/syndication-${MOD_PV}.tar.gz
+	unpack syndication-${MOD_PV}.tar.gz
 	einfo "Unpacking taxonomy_access"
-	tar xfz ${DISTDIR}/taxonomy_access-${MOD_PV}.tar.gz
+	unpack taxonomy_access-${MOD_PV}.tar.gz
 	einfo "Unpacking taxonomy_assoc"
-	tar xfz ${DISTDIR}/taxonomy_assoc-${MOD_PV}.tar.gz
+	unpack taxonomy_assoc-${MOD_PV}.tar.gz
 	einfo "Unpacking taxonomy_block"
-	tar xfz ${DISTDIR}/taxonomy_block-${MOD_PV}.tar.gz
+	unpack taxonomy_block-${MOD_PV}.tar.gz
 	einfo "Unpacking taxonomy_browser"
-	tar xfz ${DISTDIR}/taxonomy_browser-${MOD_PV}.tar.gz
+	unpack taxonomy_browser-${MOD_PV}.tar.gz
 	einfo "Unpacking taxonomy_context"
-	tar xfz ${DISTDIR}/taxonomy_context-${MOD_PV}.tar.gz
+	unpack taxonomy_context-${MOD_PV}.tar.gz
 	einfo "Unpacking taxonomy_dhtml"
-	tar xfz ${DISTDIR}/taxonomy_dhtml-${MOD_PV}.tar.gz
+	unpack taxonomy_dhtml-${MOD_PV}.tar.gz
 	einfo "Unpacking taxonomy_html"
-	tar xfz ${DISTDIR}/taxonomy_html-${MOD_PV}.tar.gz
+	unpack taxonomy_html-${MOD_PV}.tar.gz
 	einfo "Unpacking taxonomy_image"
-	tar xfz ${DISTDIR}/taxonomy_image-${MOD_PV}.tar.gz
+	unpack taxonomy_image-${MOD_PV}.tar.gz
 	einfo "Unpacking taxonomy_xml"
-	tar xfz ${DISTDIR}/taxonomy_xml-${MOD_PV}.tar.gz
+	unpack taxonomy_xml-${MOD_PV}.tar.gz
 	einfo "Unpacking taxonomy_menu"
-	tar xfz ${DISTDIR}/taxonomy_menu-${MOD_PV}.tar.gz
+	unpack taxonomy_menu-${MOD_PV}.tar.gz
 	einfo "Unpacking taxonomy_otf"
-	tar xfz ${DISTDIR}/taxonomy_otf-${MOD_PV}.tar.gz
+	unpack taxonomy_otf-${MOD_PV}.tar.gz
 	einfo "Unpacking term_statistics"
-	tar xfz ${DISTDIR}/term_statistics-${MOD_PV}.tar.gz
+	unpack term_statistics-${MOD_PV}.tar.gz
 	einfo "Unpacking textile"
-	tar xfz ${DISTDIR}/textile-${MOD_PV}.tar.gz
+	unpack textile-${MOD_PV}.tar.gz
 	einfo "Unpacking theme_editor"
-	tar xfz ${DISTDIR}/theme_editor-${MOD_PV}.tar.gz
+	unpack theme_editor-${MOD_PV}.tar.gz
 	einfo "Unpacking themedev"
-	tar xfz ${DISTDIR}/themedev-${MOD_PV}.tar.gz
+	unpack themedev-${MOD_PV}.tar.gz
 	einfo "Unpacking title"
-	tar xfz ${DISTDIR}/title-${MOD_PV}.tar.gz
+	unpack title-${MOD_PV}.tar.gz
 	einfo "Unpacking trackback"
-	tar xfz ${DISTDIR}/trackback-${MOD_PV}.tar.gz
+	unpack trackback-${MOD_PV}.tar.gz
 	einfo "Unpacking translation"
-	tar xfz ${DISTDIR}/translation-${MOD_PV}.tar.gz
+	unpack translation-${MOD_PV}.tar.gz
 	einfo "Unpacking trip_search"
-	tar xfz ${DISTDIR}/trip_search-${MOD_PV}.tar.gz
+	unpack trip_search-${MOD_PV}.tar.gz
 	einfo "Unpacking troll"
-	tar xfz ${DISTDIR}/troll-${MOD_PV}.tar.gz
+	unpack troll-${MOD_PV}.tar.gz
 	einfo "Unpacking urlfilter"
-	tar xfz ${DISTDIR}/urlfilter-${MOD_PV}.tar.gz
+	unpack urlfilter-${MOD_PV}.tar.gz
 	einfo "Unpacking userposts"
-	tar xfz ${DISTDIR}/userposts-${MOD_PV}.tar.gz
+	unpack userposts-${MOD_PV}.tar.gz
 	einfo "Unpacking validation"
-	tar xfz ${DISTDIR}/validation-${MOD_PV}.tar.gz
+	unpack validation-${MOD_PV}.tar.gz
 	einfo "Unpacking variable"
-	tar xfz ${DISTDIR}/variable-${MOD_PV}.tar.gz
+	unpack variable-${MOD_PV}.tar.gz
 	einfo "Unpacking volunteer"
-	tar xfz ${DISTDIR}/volunteer-${MOD_PV}.tar.gz
+	unpack volunteer-${MOD_PV}.tar.gz
 	einfo "Unpacking weather"
-	tar xfz ${DISTDIR}/weather-${MOD_PV}.tar.gz
+	unpack weather-${MOD_PV}.tar.gz
 	einfo "Unpacking webform"
-	tar xfz ${DISTDIR}/webform-${MOD_PV}.tar.gz
+	unpack webform-${MOD_PV}.tar.gz
 	einfo "Unpacking weblink"
-	tar xfz ${DISTDIR}/weblink-${MOD_PV}.tar.gz
+	unpack weblink-${MOD_PV}.tar.gz
 	einfo "Unpacking webserver_auth"
-	tar xfz ${DISTDIR}/webserver_auth-${MOD_PV}.tar.gz
+	unpack webserver_auth-${MOD_PV}.tar.gz
 	einfo "Unpacking week"
-	tar xfz ${DISTDIR}/week-${MOD_PV}.tar.gz
+	unpack week-${MOD_PV}.tar.gz
 	einfo "Unpacking wiki"
-	tar xfz ${DISTDIR}/wiki-${MOD_PV}.tar.gz
+	unpack wiki-${MOD_PV}.tar.gz
 	einfo "Unpacking workflow"
-	tar xfz ${DISTDIR}/workflow-${MOD_PV}.tar.gz
+	unpack workflow-${MOD_PV}.tar.gz
 	einfo "Unpacking workspace"
-	tar xfz ${DISTDIR}/workspace-${MOD_PV}.tar.gz
+	unpack workspace-${MOD_PV}.tar.gz
 	einfo "Unpacking ystock"
-	tar xfz ${DISTDIR}/ystock-${MOD_PV}.tar.gz
+	unpack ystock-${MOD_PV}.tar.gz
 
 	cd ${S}/themes
 	einfo "Unpacking adc"
-	tar xfz ${DISTDIR}/adc-${MOD_PV}.tar.gz
+	unpack adc-${MOD_PV}.tar.gz
 	einfo "Unpacking box_grey_smarty"
-	tar xfz ${DISTDIR}/box_grey_smarty-${MOD_PV}.tar.gz
+	unpack box_grey_smarty-${MOD_PV}.tar.gz
 	einfo "Unpacking box_grey"
-	tar xfz ${DISTDIR}/box_grey-${MOD_PV}.tar.gz
+	unpack box_grey-${MOD_PV}.tar.gz
 	einfo "Unpacking democratica"
-	tar xfz ${DISTDIR}/democratica-${MOD_PV}.tar.gz
+	unpack democratica-${MOD_PV}.tar.gz
 	einfo "Unpacking friendselectric"
-	tar xfz ${DISTDIR}/friendselectric-${MOD_PV}.tar.gz
+	unpack friendselectric-${MOD_PV}.tar.gz
 	einfo "Unpacking goofy"
-	tar xfz ${DISTDIR}/goofy-${MOD_PV}.tar.gz
+	unpack goofy-${MOD_PV}.tar.gz
 	einfo "Unpacking interlaced"
-	tar xfz ${DISTDIR}/interlaced-${MOD_PV}.tar.gz
+	unpack interlaced-${MOD_PV}.tar.gz
 	einfo "Unpacking kubrick"
-	tar xfz ${DISTDIR}/kubrick-${MOD_PV}.tar.gz
+	unpack kubrick-${MOD_PV}.tar.gz
 	einfo "Unpacking lincolns_revenge"
-	tar xfz ${DISTDIR}/lincolns_revenge-${MOD_PV}.tar.gz
+	unpack lincolns_revenge-${MOD_PV}.tar.gz
 	einfo "Unpacking manji"
-	tar xfz ${DISTDIR}/manji-${MOD_PV}.tar.gz
+	unpack manji-${MOD_PV}.tar.gz
 	einfo "Unpacking marvin_2k_phptemplate"
-	tar xfz ${DISTDIR}/marvin_2k_phptemplate-${MOD_PV}.tar.gz
+	unpack marvin_2k_phptemplate-${MOD_PV}.tar.gz
 	einfo "Unpacking persian"
-	tar xfz ${DISTDIR}/persian-${MOD_PV}.tar.gz
+	unpack persian-${MOD_PV}.tar.gz
 	einfo "Unpacking pushbutton_phptemplate"
-	tar xfz ${DISTDIR}/pushbutton_phptemplate-${MOD_PV}.tar.gz
+	unpack pushbutton_phptemplate-${MOD_PV}.tar.gz
 	einfo "Unpacking spreadfirefox"
-	tar xfz ${DISTDIR}/spreadfirefox-${MOD_PV}.tar.gz
+	unpack spreadfirefox-${MOD_PV}.tar.gz
 	einfo "Unpacking sunflower"
-	tar xfz ${DISTDIR}/sunflower-${MOD_PV}.tar.gz
+	unpack sunflower-${MOD_PV}.tar.gz
 
 	cd ${S}
 	einfo "Unpacking sq"
-	tar xfz ${DISTDIR}/sq-${MOD_PV}.tar.gz
+	unpack sq-${MOD_PV}.tar.gz
 	einfo "Unpacking ar"
-	tar xfz ${DISTDIR}/ar-${MOD_PV}.tar.gz
+	unpack ar-${MOD_PV}.tar.gz
 	einfo "Unpacking eu"
-	tar xfz ${DISTDIR}/eu-${MOD_PV}.tar.gz
+	unpack eu-${MOD_PV}.tar.gz
 	einfo "Unpacking pt-br"
-	tar xfz ${DISTDIR}/pt-br-${MOD_PV}.tar.gz
+	unpack pt-br-${MOD_PV}.tar.gz
 	einfo "Unpacking ca"
-	tar xfz ${DISTDIR}/ca-${MOD_PV}.tar.gz
+	unpack ca-${MOD_PV}.tar.gz
 	einfo "Unpacking zh-hans"
-	tar xfz ${DISTDIR}/zh-hans-${MOD_PV}.tar.gz
+	unpack zh-hans-${MOD_PV}.tar.gz
 	einfo "Unpacking cs"
-	tar xfz ${DISTDIR}/cs-${MOD_PV}.tar.gz
+	unpack cs-${MOD_PV}.tar.gz
 	einfo "Unpacking da"
-	tar xfz ${DISTDIR}/da-${MOD_PV}.tar.gz
+	unpack da-${MOD_PV}.tar.gz
 	einfo "Unpacking nl"
-	tar xfz ${DISTDIR}/nl-${MOD_PV}.tar.gz
+	unpack nl-${MOD_PV}.tar.gz
 	einfo "Unpacking eo"
-	tar xfz ${DISTDIR}/eo-${MOD_PV}.tar.gz
+	unpack eo-${MOD_PV}.tar.gz
 	einfo "Unpacking fr"
-	tar xfz ${DISTDIR}/fr-${MOD_PV}.tar.gz
+	unpack fr-${MOD_PV}.tar.gz
 	einfo "Unpacking de"
-	tar xfz ${DISTDIR}/de-${MOD_PV}.tar.gz
+	unpack de-${MOD_PV}.tar.gz
 	einfo "Unpacking hu"
-	tar xfz ${DISTDIR}/hu-${MOD_PV}.tar.gz
+	unpack hu-${MOD_PV}.tar.gz
 	einfo "Unpacking id"
-	tar xfz ${DISTDIR}/id-${MOD_PV}.tar.gz
+	unpack id-${MOD_PV}.tar.gz
 	einfo "Unpacking it"
-	tar xfz ${DISTDIR}/it-${MOD_PV}.tar.gz
+	unpack it-${MOD_PV}.tar.gz
 	einfo "Unpacking ja"
-	tar xfz ${DISTDIR}/ja-${MOD_PV}.tar.gz
+	unpack ja-${MOD_PV}.tar.gz
 	einfo "Unpacking nno"
-	tar xfz ${DISTDIR}/nno-${MOD_PV}.tar.gz
+	unpack nno-${MOD_PV}.tar.gz
 	einfo "Unpacking pl"
-	tar xfz ${DISTDIR}/pl-${MOD_PV}.tar.gz
+	unpack pl-${MOD_PV}.tar.gz
 	einfo "Unpacking pt-pt"
-	tar xfz ${DISTDIR}/pt-pt-${MOD_PV}.tar.gz
+	unpack pt-pt-${MOD_PV}.tar.gz
 	einfo "Unpacking ro"
-	tar xfz ${DISTDIR}/ro-${MOD_PV}.tar.gz
+	unpack ro-${MOD_PV}.tar.gz
 	einfo "Unpacking ru"
-	tar xfz ${DISTDIR}/ru-${MOD_PV}.tar.gz
+	unpack ru-${MOD_PV}.tar.gz
 	einfo "Unpacking sv"
-	tar xfz ${DISTDIR}/sv-${MOD_PV}.tar.gz
+	unpack sv-${MOD_PV}.tar.gz
 	einfo "Unpacking drupal-pot"
-	tar xfz ${DISTDIR}/drupal-pot-${MOD_PV}.tar.gz
+	unpack drupal-pot-${MOD_PV}.tar.gz
 
 	cd ${S}/themes/engines
 	einfo "Unpacking phptemplate"
-	tar xfz ${DISTDIR}/phptemplate-${MOD_PV}.tar.gz
+	unpack phptemplate-${MOD_PV}.tar.gz
 	einfo "Unpacking smarty"
-	tar xfz ${DISTDIR}/smarty-${MOD_PV}.tar.gz
+	unpack smarty-${MOD_PV}.tar.gz
 }
 
 src_compile() {
