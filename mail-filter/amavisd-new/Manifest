@@ -1,5 +1,5 @@
-MD5 5944858fc0e0694c2cba451dbbfc509d ChangeLog 8052
-MD5 dd41810436d6d4b7e2401e95a517d93d amavisd-new-2.2.1.ebuild 4805
+MD5 f0b98aa6fe955877a271e5682d2d8e9b ChangeLog 8144
+MD5 13b88011aa82860b7be5c6f44051d162 amavisd-new-2.2.1.ebuild 4802
 MD5 7e32edfd72887a57b16ecd73f0f7a1a0 metadata.xml 184
 MD5 ccd66b725ef1b2e2ed20d4a1057b03b8 files/amavisd-new-2.2.1-amavisd.conf-gentoo.patch 6849
 MD5 ee33de51df853bd8426a4304f264245f files/amavisd-new-2.2.1-qmail-lf-workaround.patch 688
