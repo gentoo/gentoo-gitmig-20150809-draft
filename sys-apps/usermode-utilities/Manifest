@@ -2,13 +2,14 @@
 Hash: SHA1
 
 MD5 5ae3e4ac36da680421c53e9546a39c62 usermode-utilities-20040406-r1.ebuild 808
-MD5 2d46239222bf0103f195378dc7440132 ChangeLog 3372
+MD5 c28a0f61ed79ffaf2c6570ddcab8b568 ChangeLog 3479
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 2782a27c43120892c13ad8cd39ced876 files/digest-usermode-utilities-20040406-r1 74
+MD5 f072be5f18ac238e1d79313d5bbaa5b0 files/20040406-CAN-2004-1295.patch 668
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCXTb5z7mlh8wQzGMRAoRTAJwLbAr9c3sg6ALMPeHrA18lTdMfeQCff0t4
-+I9L7oXa1YHb3xJArzgP8Aw=
-=c9ni
+iD8DBQFCXYwAz7mlh8wQzGMRAv96AJ9r+FqscOtmDp2BrF7V1/+KqktKgACgkiOE
+UgagZKCHyhTa6rOYaUCnPUw=
+=WTZU
 -----END PGP SIGNATURE-----
