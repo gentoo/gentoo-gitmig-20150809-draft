@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/diffball
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/diffball/ChangeLog,v 1.14 2005/04/07 12:12:42 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/diffball/ChangeLog,v 1.15 2005/04/13 08:53:56 ferringb Exp $
+
+
+*diffball-0.6.5 (13 Apr 2005)
+
+  13 Apr 2005; Brian Harring <ferringb@gentoo.org>; diffball-0.6.5.ebuild:
+  Version bump, bug fixes with the addition of the ability to collapse multiple 
+  patches down to a single patch.
 
   06 Apr 2005; Joseph Jezak <josejx@gentoo.org> diffball-0.6.2.ebuild:
   Marked ppc stable.
