@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/BerkeleyDB/BerkeleyDB-0.25.ebuild,v 1.9 2005/01/13 02:21:38 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/BerkeleyDB/BerkeleyDB-0.25.ebuild,v 1.10 2005/04/13 17:15:10 blubb Exp $
 
 inherit perl-module eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.cpan.org/modules/by-module/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc sparc ~amd64 ~alpha ~ppc64"
+KEYWORDS="x86 ~ppc sparc amd64 ~alpha ~ppc64"
 IUSE=""
 
 # this will work with older versions of BerkeleyDB too, but I'm in
