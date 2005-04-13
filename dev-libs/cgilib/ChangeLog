@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/cgilib
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cgilib/ChangeLog,v 1.1 2005/04/12 12:15:09 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cgilib/ChangeLog,v 1.2 2005/04/13 14:21:05 ka0ttic Exp $
+
+  13 Apr 2005; Aaron Walker <ka0ttic@gentoo.org> cgilib-0.5.ebuild:
+  sed CFLAGS in Makefile instead of completely overriding them so that -I. is
+  included.
 
 *cgilib-0.5 (12 Apr 2005)
 
