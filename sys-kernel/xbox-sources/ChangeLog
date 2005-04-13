@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/xbox-sources
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xbox-sources/ChangeLog,v 1.29 2005/03/26 20:28:36 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xbox-sources/ChangeLog,v 1.30 2005/04/13 19:32:40 plasmaroo Exp $
+
+  13 Apr 2005; <plasmaroo@gentoo.org> xbox-sources-2.6.10-r2.ebuild,
+  -files/xbox-sources-2.6.10.77094.patch,
+  files/xbox-sources-2.6.10.77666.patch:
+  Fix mm/mmap.c compile errors.
 
 *xbox-sources-2.6.10-r2 (26 Mar 2005)
 

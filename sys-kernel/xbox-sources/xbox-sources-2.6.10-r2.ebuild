@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xbox-sources/xbox-sources-2.6.10-r2.ebuild,v 1.1 2005/03/26 20:28:36 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xbox-sources/xbox-sources-2.6.10-r2.ebuild,v 1.2 2005/04/13 19:32:40 plasmaroo Exp $
 
 ETYPE='sources'
 inherit kernel-2
@@ -17,7 +17,6 @@ UNIPATCH_LIST="
 	${FILESDIR}/${P}.smbfs.patch
 	${FILESDIR}/${P}.75963.patch
 	${FILESDIR}/${P}.brk-locked.patch
-	${FILESDIR}/${P}.77094.patch
 	${FILESDIR}/${P}.74070.patch
 	${FILESDIR}/${P}.77666.patch
 	${FILESDIR}/${P}.77923.patch
