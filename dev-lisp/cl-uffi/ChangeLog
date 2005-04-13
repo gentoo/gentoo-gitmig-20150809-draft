@@ -1,6 +1,13 @@
 # ChangeLog for dev-lisp/cl-uffi
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-uffi/ChangeLog,v 1.17 2005/03/18 08:06:01 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-uffi/ChangeLog,v 1.18 2005/04/13 15:48:49 mkennedy Exp $
+
+*cl-uffi-1.4.36 (13 Apr 2005)
+
+  13 Apr 2005; Matthew Kennedy <mkennedy@gentoo.org> -cl-uffi-1.4.24.ebuild,
+  -cl-uffi-1.4.26.ebuild, -cl-uffi-1.4.30.ebuild, -cl-uffi-1.4.33.ebuild,
+  +cl-uffi-1.4.36.ebuild:
+  New upstream version; Keywording x86 stable; Removed old ebuilds
 
   18 Mar 2005; Matthew Kennedy <mkennedy@gentoo.org> cl-uffi-1.4.33.ebuild:
   Keywording for ~amd64
