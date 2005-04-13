@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/gld/gld-1.5.ebuild,v 1.1 2005/04/13 10:30:00 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/gld/gld-1.5.ebuild,v 1.2 2005/04/13 10:54:11 ticho Exp $
 
 DESCRIPTION="A standalone anti-spam greylisting algorithm on top of Postfix"
 HOMEPAGE="http://www.gasmi.net/gld.html"
@@ -39,6 +39,8 @@ src_install() {
 
 	dodoc HISTORY LICENSE README*
 
+	dodir /usr/share/doc/${PF}/sql
+	insinto /usr/share/doc/${PF}/sql
 	doins table*
 
 	newinitd ${FILESDIR}/gld.rc gld
@@ -49,6 +51,6 @@ pkg_postinst() {
 	einfo "Please read /usr/share/doc/${PF}/README.gz for details on how to setup"
 	einfo "gld."
 	echo
-	einfo "The tables.sql file is located at /usr/share/doc/${PF}/sql/tables.sql."
+	einfo "The tables.*sql files are located at /usr/share/doc/${PF}/sql."
 	echo
 }

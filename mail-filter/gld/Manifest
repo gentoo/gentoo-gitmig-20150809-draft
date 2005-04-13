@@ -2,10 +2,10 @@
 Hash: SHA1
 
 MD5 4a8d1e52eea9410b5357dc2e77b7584e gld-1.3.ebuild 1153
-MD5 1968ac3e9b9005723ac77105cc2ad1c1 ChangeLog 1646
+MD5 4ae2e7adcda2ab59818a4a310ba34062 ChangeLog 1745
 MD5 fd1a136fe1866eb522142c76feafa47e gld-1.4.ebuild 1159
 MD5 8a1c6c5f4c13a4109f6f4198fdd1874b metadata.xml 223
-MD5 7888796042ae0ccd2251642467df87a5 gld-1.5.ebuild 1268
+MD5 bac3cf008855e9bbe1a862a894eaf0ce gld-1.5.ebuild 1326
 MD5 86c6bd3ef318d2cd49f9592d0ba82a9f files/gld.rc 462
 MD5 408be3de93fe18f0361ad976ab36589f files/digest-gld-1.4 55
 MD5 96d50f09283d0a87235b23ce0795499e files/Makefile.in 980
@@ -14,7 +14,7 @@ MD5 49027d2d3e0cdf8e82e306338adce9e4 files/digest-gld-1.5 55
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCXPS7QlM6RnzZP+IRAhBhAJ4u1t+LYjg41EPfG+1I9POfoveqewCcCKrd
-MaGJRjf4DxKoO3OK1TO49hY=
-=LQIH
+iD8DBQFCXPplQlM6RnzZP+IRAh/KAKCJMcuwIoiJg5TKaG6BwnVBWDth7wCfREb9
+OhPN6S0eOCOKTFBXXgvHdDc=
+=Jecz
 -----END PGP SIGNATURE-----
