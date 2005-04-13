@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/subversion
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/ChangeLog,v 1.151 2005/04/10 20:20:46 trapni Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/ChangeLog,v 1.152 2005/04/13 12:36:46 pauldv Exp $
+
+  13 Apr 2005; <pauldv@gentoo.org> -subversion-1.1.4-r1.ebuild,
+  subversion-1.1.4.ebuild:
+  Revert trapni's broken changes and change the webdav useflag into a 
+  nowebdav useflag. As the default behaviour is not changed, the change is 
+  incorporated in the normal 1.1.4 ebuild and the 1.1.4-r1 version has 
+  been removed.
 
   10 Apr 2005; Christian Parpart <trapni@gentoo.org>
   subversion-1.1.4-r1.ebuild:
