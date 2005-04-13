@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/crack-attack
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/crack-attack/ChangeLog,v 1.15 2005/04/11 22:45:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/crack-attack/ChangeLog,v 1.16 2005/04/13 23:59:04 mr_bones_ Exp $
+
+  13 Apr 2005; Michael Sterrett <mr_bones_@gentoo.org>
+  crack-attack-1.1.12-r1.ebuild:
+  Take Debian patch for icon (bug #89006);  add desktop entry support.
 
 *crack-attack-1.1.12-r1 (11 Apr 2005)
 
