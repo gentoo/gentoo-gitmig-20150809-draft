@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.119 2005/04/12 12:28:14 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.120 2005/04/13 08:50:22 johnm Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -141,6 +141,16 @@ detect_version() {
 		[[ -n ${PR//r0} ]]      && EXTRAVERSION="${EXTRAVERSION}-${PR}"
 	fi
 
+	# The only messing around which should actually effect this is for KV_EXTRA
+	# since this has to limit OKV to MAJ.MIN.PAT and strip EXTRA off else
+	# KV_FULL evaluates to MAJ.MIN.PAT.EXT.EXT after EXTRAVERSION
+	if [[ -n ${KV_EXTRA} ]]; then
+		OKV="${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}"
+		KERNEL_URI="mirror://kernel/linux/kernel/v${KV_MAJOR}.${KV_MINOR}/patch-${CKV}.bz2
+					mirror://kernel/linux/kernel/v${KV_MAJOR}.${KV_MINOR}/linux-${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}.tar.bz2"
+		UNIPATCH_LIST_DEFAULT="${DISTDIR}/patch-${CKV}.bz2"
+	fi
+	
 	# We need to set this using OKV, but we need to set it before we do any
 	# messing around with OKV based on RELEASETYPE
 	KV_FULL=${OKV}${EXTRAVERSION}
@@ -174,13 +184,6 @@ detect_version() {
 					mirror://kernel/linux/kernel/v${KV_MAJOR}.${KV_MINOR}/testing/patch-${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}${RELEASE/-bk*}.bz2
 					mirror://kernel/linux/kernel/v${KV_MAJOR}.${KV_MINOR}/linux-${OKV}.tar.bz2"
 		UNIPATCH_LIST_DEFAULT="${DISTDIR}/patch-${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}${RELEASE/-bk*}.bz2 ${DISTDIR}/patch-${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}${RELEASE}.bz2"
-	fi
-
-	if [[ -n ${KV_EXTRA} ]]; then
-		OKV="${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}"
-		KERNEL_URI="mirror://kernel/linux/kernel/v${KV_MAJOR}.${KV_MINOR}/patch-${CKV}.bz2
-					mirror://kernel/linux/kernel/v${KV_MAJOR}.${KV_MINOR}/linux-${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}.tar.bz2"
-		UNIPATCH_LIST_DEFAULT="${DISTDIR}/patch-${CKV}.bz2"
 	fi
 }
 
