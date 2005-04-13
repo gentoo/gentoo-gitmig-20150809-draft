@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.337 2005/04/12 19:30:24 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.338 2005/04/13 20:51:22 lu_zero Exp $
+
+  13 Apr 2005; Luca Barbato <lu_zero@gentoo.org> glibc-2.3.5.ebuild:
+  Marked ~ppc
 
 *glibc-2.3.5 (12 Apr 2005)
 
