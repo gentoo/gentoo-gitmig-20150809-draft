@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xfe
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfe/ChangeLog,v 1.21 2005/02/19 08:06:50 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfe/ChangeLog,v 1.22 2005/04/13 07:45:26 s4t4n Exp $
+
+  13 Apr 2005; Michele Noberasco <s4t4n@gentoo.org> xfe-0.66.ebuild:
+  Wiped out older version.
 
   19 Feb 2005; Markus Rothe <corsair@gentoo.org> xfe-0.72.ebuild:
   Stable on ppc64
