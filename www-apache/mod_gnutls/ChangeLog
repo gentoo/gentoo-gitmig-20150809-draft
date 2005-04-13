@@ -1,6 +1,10 @@
 # ChangeLog for www-apache/mod_gnutls
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_gnutls/ChangeLog,v 1.4 2005/04/13 01:05:18 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_gnutls/ChangeLog,v 1.5 2005/04/13 02:03:07 trapni Exp $
+
+  13 Apr 2005; Christian Parpart <trapni@gentoo.org>
+  files/47_mod_gnutls.conf:
+  adding missing "Listen 443" line and comment to config file
 
   13 Apr 2005; Jason Wever <weeve@gentoo.org> mod_gnutls-0.1.1-r1.ebuild:
   Added ~sparc keyword.
