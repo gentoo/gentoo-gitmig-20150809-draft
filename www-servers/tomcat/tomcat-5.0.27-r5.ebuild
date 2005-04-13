@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.0.27-r4.ebuild,v 1.7 2005/03/19 13:57:29 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.0.27-r5.ebuild,v 1.1 2005/04/13 18:22:59 luckyduck Exp $
 
 inherit eutils
 
@@ -36,8 +36,7 @@ src_install() {
 	insopts -m0750
 	newins ${FILESDIR}/${PV}/${PN}.init ${TOMCAT_NAME}
 
-	insinto /etc/env.d/
-	newins ${FILESDIR}/${PV}/${PN}.env 21${PN}
+	newenvd ${FILESDIR}/${PV}/${PN}.env 21${PN}
 
 	insinto /etc/conf.d
 	insopts -m0644
