@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/coq/coq-8.0.ebuild,v 1.1 2004/12/28 05:03:02 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/coq/coq-8.0.ebuild,v 1.2 2005/04/13 18:38:55 luckyduck Exp $
 
 inherit eutils
 

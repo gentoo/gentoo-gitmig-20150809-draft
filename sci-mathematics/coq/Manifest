@@ -1,11 +1,11 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 732e50fb532696a036c14599eee92e1f coq-8.0.ebuild 1920
-MD5 66faaf42e8842346c9920ee1c6e3166a coq-7.4.ebuild 985
-MD5 d5c1be67f3f081c7a916c1715c50904f ChangeLog 1876
+MD5 cb898371df21f1a9d28fa6e073a5505f coq-8.0.ebuild 1921
+MD5 ec14c64c02c2760bfd7750bb764b41df coq-7.4.ebuild 986
+MD5 26d5c8abe245a9fb5540eea4558e91bf ChangeLog 1990
 MD5 5af6b26df9264817e5b6a292c1436417 metadata.xml 238
-MD5 20337935fed30f221a041dae36cd5cb9 coq-8.0-r1.ebuild 2066
+MD5 83bfd344102e7fbd781532543b9a782f coq-8.0-r1.ebuild 2074
 MD5 02ac210c6af5d8e258a2805a22822a8b files/coq-8.0-ocaml-3.08.1.patch 1321
 MD5 dc0f737371101bc7c97b0a80165ddac6 files/digest-coq-8.0-r1 136
 MD5 d3f33f3602d82ea691f91b062dbf236b files/digest-coq-7.4 60
@@ -14,9 +14,9 @@ MD5 393c3085f82f205122b4e66c94232ff7 files/ocaml-3.07.patch 333
 MD5 5d46723c29afcd1e24e529e5993c3096 files/coq-8.0-byteflags.patch 676
 MD5 e5491c930f8f944ed9c3590fdc8492c1 files/coqide.desktop 242
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
+Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFB0bxhI1lqEGTUzyQRAqwuAKCWZRQSfObUTQUfcFSc7ZOiIPHKDgCglSnG
-lfaavJbvi0kQxQXl/LB653g=
-=bzgV
+iD8DBQFCXWdV06ebR+OMO78RAirZAJ97+fqd3K/MqyD8YQSs2fLeyY1xZwCfX1WV
+N1PToVe395/xJCpJinFj9lQ=
+=+SOF
 -----END PGP SIGNATURE-----
