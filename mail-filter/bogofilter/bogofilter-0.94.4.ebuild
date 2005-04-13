@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/bogofilter/bogofilter-0.94.3.ebuild,v 1.1 2005/03/30 14:08:38 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/bogofilter/bogofilter-0.94.4.ebuild,v 1.1 2005/04/13 21:02:28 tove Exp $
 
 inherit eutils
 
@@ -10,8 +10,8 @@ SRC_URI="mirror://sourceforge/bogofilter/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-#KEYWORDS="~arm ~ppc64" # missing, see bug #74046
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+#KEYWORDS="${KEYWORDS} ~arm ~mips" # missing, see bug #74046
 IUSE="doc gsl"
 
 RDEPEND="virtual/libc
@@ -28,7 +28,7 @@ src_unpack() {
 	DB_SLOT="$(best_version sys-libs/db | sed -e 's/sys-libs\/db-\(3\|4\.[123]\|4\).*/\1/' )"
 	sed -i -e "s/db_\(checkpoint\|archive\|stat\|recover\)/db${DB_SLOT}_\1/g" \
 		src/bf_compact src/bf_copy src/bf_tar src/bf_resize \
-		|| die "sed failed - echo ${DB_SLOT}"
+		|| die "sed failed - DB_SLOT ${DB_SLOT}"
 }
 
 src_compile() {
