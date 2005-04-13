@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/djbdns-1.05-r14.ebuild,v 1.8 2005/03/20 09:41:57 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/djbdns-1.05-r14.ebuild,v 1.9 2005/04/13 17:18:37 ka0ttic Exp $
 
 IUSE="aliaschain cnamefix doc fwdzone ipv6 multipleip roundrobin semanticfix static selinux"
 
@@ -130,13 +130,10 @@ src_install() {
 }
 
 pkg_postinst() {
-	groupadd &>/dev/null nofiles
-	id &>/dev/null dnscache || \
-		useradd -g nofiles -d /nonexistent -s /bin/false dnscache
-	id &>/dev/null dnslog || \
-		useradd -g nofiles -d /nonexistent -s /bin/false dnslog
-	id &>/dev/null tinydns || \
-		useradd -g nofiles -d /nonexistent -s /bin/false tinydns
+	enewgroup nofiles
+	enewuser dnscache -1 /bin/false /nonexistent nofiles
+	enewuser dnslog -1 /bin/false /nonexistent nofiles
+	enewuser tinydns -1 /bin/false /nonexistent nofiles
 
 	einfo "Use (dnscache-setup + tinydns-setup) or djbdns-setup" \
 	      "to configure djbdns."
