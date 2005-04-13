@@ -1,6 +1,10 @@
 # ChangeLog for app-office/openoffice-bin
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/ChangeLog,v 1.72 2005/04/12 17:18:24 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/ChangeLog,v 1.73 2005/04/13 00:08:20 tester Exp $
+
+  12 Apr 2005; Olivier Crête <tester@gentoo.org>
+  openoffice-bin-1.1.4-r1.ebuild:
+  Stable on x86 per security bug #88863
 
 *openoffice-bin-1.1.4-r1 (12 Apr 2005)
 
