@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/nuvexport
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/nuvexport/ChangeLog,v 1.21 2005/04/01 07:40:12 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/nuvexport/ChangeLog,v 1.22 2005/04/13 17:08:48 blubb Exp $
+
+  13 Apr 2005; Simon Stelling <blubb@gentoo.org>
+  nuvexport-0.2_pre20050331.ebuild:
+  added ~amd64
 
 *nuvexport-0.2_pre20050331 (01 Apr 2005)
 
