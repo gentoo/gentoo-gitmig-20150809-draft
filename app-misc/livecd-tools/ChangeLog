@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/livecd-tools
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/livecd-tools/ChangeLog,v 1.46 2005/04/12 21:32:33 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/livecd-tools/ChangeLog,v 1.47 2005/04/13 13:35:23 wolf31o2 Exp $
+
+*livecd-tools-1.0.20 (13 Apr 2005)
+
+  13 Apr 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  -livecd-tools-1.0.19.ebuild, +livecd-tools-1.0.20.ebuild:
+  Updated to 1.0.20 to fix an error in dhcpcd's hostname sending. This only
+  affected those of you using DDNS.
 
 *livecd-tools-1.0.19 (12 Apr 2005)
 

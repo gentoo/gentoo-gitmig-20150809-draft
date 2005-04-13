@@ -1,4 +1,4 @@
-MD5 458b98ea823542ca0a2a0e45c249b4e1 ChangeLog 8323
-MD5 50c4f795bed25967bffe057e6542683d livecd-tools-1.0.19.ebuild 959
+MD5 e6e5e58c6bc1f20df1c28eef77e658bc livecd-tools-1.0.20.ebuild 958
+MD5 00fed7272694ba49699e09142c74d43c ChangeLog 8586
 MD5 d86e5b5e47260e5a965eae2afe6d6d40 metadata.xml 159
-MD5 d0c10ebeddf545e81380dc0a159a11f5 files/digest-livecd-tools-1.0.19 70
+MD5 96f2bab49c991368279be9d3f985ac19 files/digest-livecd-tools-1.0.20 70
