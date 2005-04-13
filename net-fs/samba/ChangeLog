@@ -1,6 +1,18 @@
 # ChangeLog for net-fs/samba
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.159 2005/04/13 11:43:46 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.160 2005/04/13 11:54:54 seemant Exp $
+
+  13 Apr 2005; Seemant Kulleen <seemant@gentoo.org>
+  -files/samba-2.2.5-gp-reloc-fix.patch, -files/samba-2.2.6-libresolv.patch,
+  -files/samba-2.2.8-statfs.patch, -files/samba-3.0.0-python-setup.patch,
+  -files/samba-3.0.2a-smbprint.patch,
+  -files/samba-3.0.6-homes-reuse_v2.patch,
+  -files/samba-3.0.6-libdirsymlink.patch,
+  -files/samba-3.0.6-winbind_getpwnam_v1.patch,
+  -files/samba-3.0.8-lanman.patch,
+  -files/samba-3.0.9-util.c-bitpmap.c-4120.patch, -files/samba-3.0.x.patch,
+  -files/samba-pdb_ldap-exop.patch:
+  more cruft removal -- this time unused patches
 
   13 Apr 2005; Seemant Kulleen <seemant@gentoo.org> -samba-3.0.6-r3.ebuild,
   -samba-3.0.6-r4.ebuild, -samba-3.0.7.ebuild, -samba-3.0.7-r1.ebuild,
