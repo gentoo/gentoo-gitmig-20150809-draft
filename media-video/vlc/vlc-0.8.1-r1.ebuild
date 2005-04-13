@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.1-r1.ebuild,v 1.2 2005/04/04 17:20:15 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.1-r1.ebuild,v 1.3 2005/04/13 14:40:09 luckyduck Exp $
 
 # Missing support for...
 #	tarkin - package not in portage yet - experimental
@@ -90,10 +90,10 @@ src_unpack() {
 	# Fix the default font
 	sed -i -e "s:/usr/share/fonts/truetype/freefont/FreeSerifBold.ttf:/usr/share/fonts/ttf-bitstream-vera/VeraBd.ttf:" modules/misc/freetype.c
 
+	cd ${S}
+	epatch ${FILESDIR}/${P}-time.patch
 	cd ${S}/modules/video_output
 	epatch ${FILESDIR}/glide.patch
-	cd ${S}
-
 }
 
 src_compile () {

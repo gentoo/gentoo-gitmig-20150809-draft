@@ -1,6 +1,11 @@
 # ChangeLog for media-video/vlc
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.74 2005/04/04 17:20:15 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.75 2005/04/13 14:40:09 luckyduck Exp $
+
+  13 Apr 2005; Jan Brinkmann <luckyduck@gentoo.org>
+  +files/vlc-0.8.1-time.patch, vlc-0.8.1-r1.ebuild:
+  added patch to include missing time.h, fixes #88378. patch grabbed from
+  upstream cvs.
 
   04 Apr 2005; Jan Brinkmann <luckyduck@gentoo.org> vlc-0.8.1-r1.ebuild:
   introduced support for several useflags, implemented enhancement suggestions
