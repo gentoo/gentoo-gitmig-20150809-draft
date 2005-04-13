@@ -1,6 +1,13 @@
 # ChangeLog for media-video/transcode
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.92 2005/04/05 20:44:58 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.93 2005/04/13 16:31:02 luckyduck Exp $
+
+*transcode-0.6.14-r1 (13 Apr 2005)
+
+  13 Apr 2005; Jan Brinkmann <luckyduck@gentoo.org>
+  +files/transcode-0.6.14-amd64_mmx.patch,
+  +files/transcode-0.6.14-libquicktime094.patch, +transcode-0.6.14-r1.ebuild:
+  added patch to fix compilation with libquicktime >= 0.9.4, fixes #85865
 
   05 Apr 2005; Jeremy Huddleston <eradicator@gentoo.org>
   -transcode-0.6.10.ebuild, -transcode-0.6.12.ebuild,

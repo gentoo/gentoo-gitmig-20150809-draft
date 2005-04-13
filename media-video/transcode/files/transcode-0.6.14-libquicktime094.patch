@@ -1,0 +1,109 @@
+diff -ur transcode-0.6.14.orig/configure.in transcode-0.6.14/configure.in
+--- transcode-0.6.14.orig/configure.in	2004-11-15 07:16:27.000000000 +0100
++++ transcode-0.6.14/configure.in	2005-04-13 01:49:51.437832968 +0200
+@@ -958,6 +958,10 @@
+   [C], [quicktime/lqt.h], quicktime, quicktime_open)
+ if test x"$have_libquicktime" = x"yes" ; then
+   AC_DEFINE([HAVE_LIBQUICKTIME], 1, [have libquicktime support])
++  AC_CHECK_LIB(quicktime, lqt_encode_video,
++    [AC_DEFINE([LIBQUICKTIME_000904], [1], [Have libquicktime 0.9.4 or newer])],
++    [], 
++    [$LIBQUICKTIME_EXTRA_LIBS])
+ fi
+ AM_CONDITIONAL(HAVE_LIBQUICKTIME, test x"$have_libquicktime" = x"yes")
+ AC_SUBST(LIBQUICKTIME_CFLAGS)
+diff -ur transcode-0.6.14.orig/export/export_mov.c transcode-0.6.14/export/export_mov.c
+--- transcode-0.6.14.orig/export/export_mov.c	2004-11-03 04:45:52.000000000 +0100
++++ transcode-0.6.14/export/export_mov.c	2005-04-13 01:50:03.246037848 +0200
+@@ -102,6 +102,20 @@
+   {"info", "",  "Info string (no '=' or ',' allowed) "},
+   {NULL, NULL, NULL}};
+ 
++#ifdef LIBQUICKTIME_000904
++/* from libquicktime */
++int tc_quicktime_get_timescale(double frame_rate)
++{
++	int timescale = 600;
++	/* Encode the 29.97, 23.976, 59.94 framerates */
++	if(frame_rate - (int)frame_rate != 0) 
++		timescale = (int)(frame_rate * 1001 + 0.5);
++	else
++		if((600 / frame_rate) - (int)(600 / frame_rate) != 0) 
++			timescale = (int)(frame_rate * 100 + 0.5);
++	return timescale;
++}
++#endif
+ 
+ /* print list of things. Shamelessly stolen from export_ffmpeg.c */ 
+ static int list(char *list_type) 
+@@ -262,8 +276,16 @@
+             return(TC_EXPORT_ERROR);
+         }
+ 
++#if !defined(LIBQUICKTIME_000904)
+         /* set proposed video codec */
+         lqt_set_video(qtfile, 1, w, h, vob->ex_fps,qt_codec_info[0]);
++#else
++	fprintf(stderr, "\n \n  %i \n \n", tc_quicktime_get_timescale(vob->ex_fps));
++        /* set proposed video codec */
++        lqt_set_video(qtfile, 1, w, h,
++		tc_quicktime_get_timescale(vob->ex_fps) / vob->ex_fps+0.5,
++		tc_quicktime_get_timescale(vob->ex_fps), qt_codec_info[0]);
++#endif
+     }
+ 
+     /* set color model */
+diff -ur transcode-0.6.14.orig/import/decode_mov.c transcode-0.6.14/import/decode_mov.c
+--- transcode-0.6.14.orig/import/decode_mov.c	2004-11-03 04:45:41.000000000 +0100
++++ transcode-0.6.14/import/decode_mov.c	2005-04-13 01:49:51.438832816 +0200
+@@ -160,6 +160,7 @@
+ 			}
+ 			free(p_buffer);
+ 		} 
++#if !defined(LIBQUICKTIME_000904)
+ 		else if((strcasecmp(p_a_codec,QUICKTIME_RAW)==0) || (strcasecmp(p_a_codec,QUICKTIME_TWOS)==0)) 
+ 		{
+ 			s_sample=(1.00 * s_channel * s_bits *s_audio_rate)/(s_fps*8);
+@@ -180,6 +181,7 @@
+ 			quicktime_close(p_qt_structure);
+ 			free(p_buffer);
+ 		}
++#endif
+ 		else 
+ 		{
+ 			quicktime_close(p_qt_structure);
+diff -ur transcode-0.6.14.orig/import/import_mov.c transcode-0.6.14/import/import_mov.c
+--- transcode-0.6.14.orig/import/import_mov.c	2004-11-03 04:45:42.000000000 +0100
++++ transcode-0.6.14/import/import_mov.c	2005-04-13 01:49:51.438832816 +0200
+@@ -136,11 +136,13 @@
+     if(quicktime_supported_audio(qt_audio, 0)!=0) {
+       rawAudioMode = 0;
+     } 
++#if !defined(LIBQUICKTIME_000904)
+     /* RAW PCM is directly supported */
+     else if(strcasecmp(codec,QUICKTIME_RAW)==0) {
+       rawAudioMode = 1;
+       fprintf(stderr,"[%s] using RAW audio mode!\n",MOD_NAME);
+     }
++#endif
+     /* unsupported codec */
+     else {
+       fprintf(stderr, "error: quicktime audio codec '%s' not supported!\n",
+@@ -334,12 +336,14 @@
+     }
+ 
+     /* raw read mode */
++#if !defined(LIBQUICKTIME_000904)
+     if(rawAudioMode) {
+       bytes_read = quicktime_read_audio(qt_audio, 
+ 					param->buffer, param->size, 0);
+-    } 
+-    /* decode audio mode */
+-    else {
++    } else
++#endif
++    {
++      /* decode audio mode */
+       long pos = quicktime_audio_position(qt_audio,0);
+       long samples = param->size;
+       if(bits==16)
