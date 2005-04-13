@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.0-r1.ebuild,v 1.1 2005/04/13 16:47:56 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.0-r1.ebuild,v 1.2 2005/04/13 17:27:08 lu_zero Exp $
 
 inherit eutils flag-o-matic gcc libtool
 
@@ -15,10 +15,10 @@ SRC_URI="mirror://sourceforge/xine/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="1"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="aalib libcaca arts cle266 esd win32codecs nls dvd X directfb oggvorbis alsa gnome sdl speex theora ipv6 altivec opengl aac fbcon ffmpeg xv xvmc nvidia i8x0 samba dxr3 vidix png mng flac oss v4l xinerama"
+IUSE="aalib libcaca arts cle266 esd win32codecs nls dvd X directfb vorbis alsa gnome sdl speex theora ipv6 altivec opengl aac fbcon ffmpeg xv xvmc nvidia i8x0 samba dxr3 vidix png mng flac oss v4l xinerama"
 RESTRICT="nostrip"
 
-RDEPEND="oggvorbis? ( media-libs/libvorbis )
+RDEPEND="vorbis? ( media-libs/libvorbis )
 	X? ( virtual/x11 )
 	win32codecs? ( >=media-libs/win32codecs-0.50 )
 	esd? ( media-sound/esound )
@@ -198,7 +198,7 @@ src_compile() {
 		\
 		$(use_enable aac faad) \
 		$(use_enable flac) \
-		$(use_with oggvorbis ogg) $(use_with oggvorbis vorbis) \
+		$(use_with vorbis ogg) $(use_with vorbis ) \
 		\
 		$(use_with X x) \
 		$(use_enable xinerama) \

@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.200 2005/04/13 16:47:56 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.201 2005/04/13 17:27:08 lu_zero Exp $
+
+  13 Apr 2005; Luca Barbato <lu_zero@gentoo.org> xine-lib-1.0-r1.ebuild:
+  useflag oggvorbis deprecated
 
 *xine-lib-1.0-r1 (13 Apr 2005)
 
