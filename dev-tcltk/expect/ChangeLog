@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/expect
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/expect/ChangeLog,v 1.35 2005/04/08 16:38:53 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/expect/ChangeLog,v 1.36 2005/04/13 16:52:43 agriffis Exp $
+
+  13 Apr 2005; Aron Griffis <agriffis@gentoo.org> expect-5.42.1-r1.ebuild:
+  stable on alpha
 
   08 Apr 2005; Markus Rothe <corsair@gentoo.org> expect-5.42.1-r1.ebuild:
   Stable on ppc64
