@@ -1,8 +1,9 @@
 MD5 dc2b446cde6865cfbccaef4a94db4aa2 mod_php-4.3.10.ebuild 6134
 MD5 794be7f3942662541c6c0d25fb64161c mod_php-4.3.9.ebuild 6074
+MD5 70c46b3aaf750d6af4a7e3f4502373b7 mod_php-4.3.11-r2.ebuild 6289
 MD5 a431ba8439f0fced002aaf0f74a70e3f mod_php-4.3.8.ebuild 5963
 MD5 5f347443c2b80bb26a91346b99501aca mod_php-5.0.3-r1.ebuild 4296
-MD5 16444b033c90f63cbe582972f303a7d6 ChangeLog 38113
+MD5 e05b94ab35e187365eada35eaa1afd71 ChangeLog 38319
 MD5 8dcccea239186458cae823a2b62b80d0 mod_php-5.0.1.ebuild 4244
 MD5 3da695dab52a3e7eeea983bf1c493fa1 mod_php-5.0.2.ebuild 4257
 MD5 93afa9417917af1a31305b472ea8b70c mod_php-5.0.2-r1.ebuild 4177
@@ -34,6 +35,7 @@ MD5 11f305b98b753ee023da8503a360762a files/digest-mod_php-5.0.0-r1 63
 MD5 89a3a3b437e24b7ccc044376843d8446 files/digest-mod_php-5.0.3-r1 63
 MD5 79ed63479c494aeb2ed0bc7f5c059fb9 files/70_mod_php.conf 1022
 MD5 829febfdce39bcb2d399b5cc8808a16d files/digest-mod_php-4.3.11-r1 206
+MD5 829febfdce39bcb2d399b5cc8808a16d files/digest-mod_php-4.3.11-r2 206
 MD5 cd07c33356df77acd61cd300f2869d19 files/php-5.0.0-httpauthfix.patch 518
 MD5 80c45eef4f54629e893249f869cff5c6 files/70_mod_php5.conf 484
 MD5 273799e60d5a41a1e6f5ac53781a152f files/php5_soap_persistence_session.diff 1976
@@ -41,4 +43,5 @@ MD5 cd604ffae30af42fdc9248147efd0c4b files/php5-prefork.patch 850
 MD5 14d868f33e29b3c9a70b118e9da58dd0 files/digest-mod_php-5.0.1 63
 MD5 0b0247c6314c5f7d6685268262edfd24 files/digest-mod_php-4.3.10 206
 MD5 158cb07377a3e2a0028947b0aeb505cb files/4.3.10-r1/70_mod_php.conf 1017
+MD5 4603a5ffdc23622c3acda6b171c49d4d files/4.3.11-r2/70_mod_php.conf 1100
 MD5 80c45eef4f54629e893249f869cff5c6 files/5.0.2-r1/70_mod_php5.conf 484

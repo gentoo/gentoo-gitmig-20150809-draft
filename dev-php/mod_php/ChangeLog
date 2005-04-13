@@ -1,6 +1,12 @@
 # ChangeLog for dev-php/mod_php
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/ChangeLog,v 1.218 2005/04/12 23:34:27 trapni Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/ChangeLog,v 1.219 2005/04/13 01:20:04 trapni Exp $
+
+*mod_php-4.3.11-r2 (13 Apr 2005)
+
+  13 Apr 2005; Christian Parpart <trapni@gentoo.org>
+  +files/4.3.11-r2/70_mod_php.conf, +mod_php-4.3.11-r2.ebuild:
+  adding missing AddDirectoryIndex directive to config
 
   12 Apr 2005; Christian Parpart <trapni@gentoo.org>
   mod_php-4.3.10-r1.ebuild, mod_php-4.3.11-r1.ebuild:
