@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_gnutls/mod_gnutls-0.1.1-r1.ebuild,v 1.2 2005/04/13 01:05:18 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_gnutls/mod_gnutls-0.1.1-r1.ebuild,v 1.3 2005/04/13 02:09:57 trapni Exp $
 
-inherit apache-module
+inherit apache-module ssl-cert
 
 DESCRIPTION="mod_gnutls uses the GnuTLS library to provide SSL v3, TLS 1.0 and \
 TLS 1.1 encryption for Apache HTTPD. It is similar to mod_ssl in purpose, but \
@@ -36,7 +36,18 @@ src_install() {
 	insinto ${APACHE2_CONFDIR}
 	doins data/rsafile data/dhfile
 
+	keepdir ${APACHE2_CONFDIR}/ssl
+
 	apache-module_src_install
 }
+
+#pkg_postinst() {
+#	if [ ! -f "${APACHE2_CONFDIR}/ssl/server.crt" ]; then
+#		docert "${APACHE2_CONFDIR}/ssl/server"
+#	else
+#		einfo "Skipping generation of SSL server certificates,"
+#		einfo "as it seem you already have some."
+#	fi
+#}
 
 # vim:ts=4
