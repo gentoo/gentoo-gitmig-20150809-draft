@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.2.5-r1.ebuild,v 1.1 2005/04/12 11:01:19 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.2.5-r1.ebuild,v 1.2 2005/04/13 12:15:38 voxus Exp $
 
 inherit eutils gnuconfig libtool
 
@@ -195,6 +195,12 @@ pkg_postinst() {
 		ewarn "using the MySQL driver."
 		echo
 	fi
+
+	echo
+	ewarn "BIND >=9.2.5 makes the priority argument to MX records mandatory"
+	ewarn "when it was previously optional.  If the priority is missing, BIND"
+	ewarn "won't load the zone file at all."
+	echo
 }
 
 pkg_config() {

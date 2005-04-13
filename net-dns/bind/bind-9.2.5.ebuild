@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.2.5.ebuild,v 1.9 2005/04/10 18:12:53 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.2.5.ebuild,v 1.10 2005/04/13 12:15:38 voxus Exp $
 
 inherit eutils gnuconfig libtool
 
@@ -183,6 +183,11 @@ pkg_postinst() {
 	echo
 	einfo "	zone "com" IN { type delegation-only; };"
 	einfo "	zone "net" IN { type delegation-only; };"
+	echo
+	ewarn "BIND >=9.2.5 makes the priority argument to MX records mandatory"
+	ewarn "when it was previously optional.  If the priority is missing, BIND"
+	ewarn "won't load the zone file at all."
+	echo
 }
 
 pkg_config() {

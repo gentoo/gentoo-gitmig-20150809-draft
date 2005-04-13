@@ -1,6 +1,10 @@
 # ChangeLog for net-dns/bind
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.67 2005/04/12 11:01:19 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.68 2005/04/13 12:15:38 voxus Exp $
+
+  13 Apr 2005; Konstantin Arkhipov <voxus@gentoo.org> bind-9.2.5.ebuild,
+  bind-9.2.5-r1.ebuild:
+  Added warning note about MX's priority argument, closing bug #88888.
 
 *bind-9.2.5-r1 (12 Apr 2005)
 
