@@ -1,6 +1,12 @@
 # ChangeLog for dev-db/postgresql
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.199 2005/04/12 15:50:43 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.200 2005/04/13 11:09:46 nakano Exp $
+
+*postgresql-7.3.6-r2 (13 Apr 2005)
+
+  13 Apr 2005; Masatomo Nakano <nakano@gentoo.org>
+  +files/postgresql.init-7.3.6, +postgresql-7.3.6-r2.ebuild:
+  readded. (7.3.6 is used by postgis)
 
   12 Apr 2005; Masatomo Nakano <nakano@gentoo.org> postgresql-8.0.2.ebuild:
   ~amd64 masked.
