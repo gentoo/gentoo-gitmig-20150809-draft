@@ -1,22 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 350d135601b4e652d27bb6995ce66568 beast-0.6.4.ebuild 1210
+MD5 3d2228c69c0428b0fdb688d91d1bd2f4 beast-0.6.5.ebuild 1115
+MD5 3c5543d2a67889f77b7d956088041383 beast-0.6.4.ebuild 1108
+MD5 e581c86604ab0e006b19d7370b2f1e1f ChangeLog 2641
 MD5 b263ff7675308d90b75a170acae3f5ff metadata.xml 177
-MD5 c71cef0252221072426dd38d0dd6e087 beast-0.5.4.ebuild 1248
-MD5 c9865893e06221c849ac9859b31d0650 ChangeLog 2267
-MD5 2ffe12f6b0bab9a46af34a81788df961 beast-0.6.2.ebuild 1210
-MD5 6fad25ff86619310f54c999ea8daa20a beast-0.6.0.ebuild 1241
-MD5 692624ebf640709a8a058094aacfb6c4 files/beast-0.6.0-docs.patch 344
-MD5 516c39252801e9fd16ecdc569f1567db files/docs-reorg-0.5.4.patch 1037
-MD5 53bf4b555288cab59eb6f8bbb5940352 files/digest-beast-0.5.4 64
-MD5 cba03b233b4e201c72d3f155e6d443e7 files/digest-beast-0.6.0 64
 MD5 0b77b5cbace4f1933b8a5f3fa5375b6f files/digest-beast-0.6.4 64
-MD5 22a81b4b6225e86ce4db0d95f281ddba files/digest-beast-0.6.2 64
+MD5 4b4e3a3330b9a7ee302a339373a41a22 files/digest-beast-0.6.5 64
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0-ecc0.1.6 (GNU/Linux)
+Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFCFl8up5vW4rUFj5oRAlSDAJ9UdHe2cH++aRt/JZtfUw8Gt2aE5gCgqnuM
-1ZnSifyKRQaBoqKnwLteQGI=
-=Ssa9
+iD8DBQFCXX7D06ebR+OMO78RAkFFAJ42M5CKzSgGNfdi655LC+kaHbcS7wCaAndz
+qji7d3lrWwTChAb71OxarIY=
+=ZvuU
 -----END PGP SIGNATURE-----

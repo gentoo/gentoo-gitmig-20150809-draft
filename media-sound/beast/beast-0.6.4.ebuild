@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/beast/beast-0.6.4.ebuild,v 1.1 2005/02/18 21:31:42 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/beast/beast-0.6.4.ebuild,v 1.2 2005/04/13 20:18:47 luckyduck Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://beast.gtk.org"
 SRC_URI="ftp://beast.gtk.org/pub/beast/v${PV%.[0-9]}/${P}.tar.gz"
 
 LICENSE="GPL-2 LGPL-2.1"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc"
 SLOT="0"
 
 RDEPEND=">=dev-libs/glib-2.0
@@ -30,25 +30,19 @@ DEPEND="dev-util/pkgconfig
 	media-libs/ladspa-sdk
 	${RDEPEND}"
 
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-}
-
 src_compile() {
 	local myconf="--with-gnu-ld"
 
-	use debug || myconf="${myconf} --disable-debug"
+	econf ${myconf} \
+		$(use_enable debug) \
+		$(use_enable static) \
+		|| die "configure failed"
 
-	use static || myconf="${myconf} --disable-static"
-
-	econf ${myconf} || die "configure failed"
-
-	emake || die "configure failed"
+	emake || die "make failed"
 }
 
 src_install() {
 	make DESTDIR=${D} install || die "make install failed"
 
-	dodoc AUTHORS ChangeLog COPYING NEWS README TODO
+	dodoc AUTHORS ChangeLog NEWS README TODO
 }

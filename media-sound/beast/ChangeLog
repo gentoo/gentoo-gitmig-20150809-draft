@@ -1,6 +1,15 @@
 # ChangeLog for media-sound/beast
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/beast/ChangeLog,v 1.16 2005/02/18 21:31:42 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/beast/ChangeLog,v 1.17 2005/04/13 20:18:47 luckyduck Exp $
+
+*beast-0.6.5 (13 Apr 2005)
+
+  13 Apr 2005; Jan Brinkmann <luckyduck@gentoo.org>
+  -files/beast-0.6.0-docs.patch, -files/docs-reorg-0.5.4.patch,
+  -beast-0.5.4.ebuild, -beast-0.6.0.ebuild, -beast-0.6.2.ebuild,
+  beast-0.6.4.ebuild, +beast-0.6.5.ebuild:
+  new upstream version, fixes #88979. also added ~amd64 to KEYWORDS and did some
+  cleanup, marked 0.6.4 stable on x86.
 
 *beast-0.6.4 (18 Feb 2005)
 
