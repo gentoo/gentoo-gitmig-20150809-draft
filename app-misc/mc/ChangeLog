@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/mc
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/ChangeLog,v 1.78 2005/02/19 22:46:16 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/ChangeLog,v 1.79 2005/04/13 18:11:07 lanius Exp $
+
+  13 Apr 2005; Heinrich Wendel <lanius@gentoo.org> mc-4.6.0-r13.ebuild:
+  fix pkgconfig depend, bug #87396
 
   19 Feb 2005; Hardave Riar <hardave@gentoo.org> mc-4.6.0-r13.ebuild:
   Stable on mips, bug #77992

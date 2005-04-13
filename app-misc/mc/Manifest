@@ -1,6 +1,9 @@
-MD5 190dd26b5a69dc183c2c4c7fe58a65d6 mc-4.6.0-r13.ebuild 3206
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 d8c01c3d824b5d17593820a97c2f4b1b mc-4.6.0-r13.ebuild 3227
 MD5 ab179c2f30cd770eb6e0995f6567e434 mc-4.6.0-r12.ebuild 3145
-MD5 660e7693bf6fab7e07d257fbeb393fad ChangeLog 11727
+MD5 869cc81ed49c4280f194fe6de686e5eb ChangeLog 11834
 MD5 503ccb1138f9c49f0855884d830988a6 metadata.xml 253
 MD5 b07d2f1ccf2c5b607caaeaa82ad1681e files/mc-4.6.0-key.c.patch 811
 MD5 169bb0ff53b2a9c5271503bbcbccf3df files/mc-4.6.0-find.patch 5798
@@ -17,3 +20,10 @@ MD5 3bb3f2fa14fdb654e1352bdd406d848f files/mc-4.6.0-largefile.patch 5751
 MD5 2a6c3ed30597eadaa19a6dbdd3ce168d files/mc-4.6.0-cpan-2003-1023.patch 475
 MD5 33aafc4a9c8134eb13d62fed6b81888e files/ebuild.syntax 2588
 MD5 99fd5760d0ddfc08292de6a62b573e73 files/mc-4.6.0-ftp.patch 285
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCXWDTevY57Fted3ERAgB/AKCLN3dO2991lQDh+OTH+V2DvrbUawCfWuAQ
+yn22rVvPbDFiAoWUsq9cZ+4=
+=hUH8
+-----END PGP SIGNATURE-----

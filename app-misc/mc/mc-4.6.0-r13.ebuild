@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-4.6.0-r13.ebuild,v 1.8 2005/02/19 22:46:16 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-4.6.0-r13.ebuild,v 1.9 2005/04/13 18:11:07 lanius Exp $
 
 inherit flag-o-matic eutils
 
@@ -16,16 +16,18 @@ IUSE="gpm nls samba ncurses X slang unicode"
 
 PROVIDE="virtual/editor"
 
-DEPEND=">=sys-fs/e2fsprogs-1.19
+RDEPEND=">=sys-fs/e2fsprogs-1.19
 	ncurses? ( >=sys-libs/ncurses-5.2-r5 )
 	=dev-libs/glib-2*
-	dev-util/pkgconfig
 	pam? ( >=sys-libs/pam-0.72 )
 	gpm? ( >=sys-libs/gpm-1.19.3 )
 	slang? ( >=sys-libs/slang-1.4.9-r1 )
 	samba? ( >=net-fs/samba-3.0.0 )
 	unicode? ( >=sys-libs/slang-1.4.9-r1 )
 	X? ( virtual/x11 )"
+
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
 
 src_unpack() {
 	unpack ${P}.tar.gz
