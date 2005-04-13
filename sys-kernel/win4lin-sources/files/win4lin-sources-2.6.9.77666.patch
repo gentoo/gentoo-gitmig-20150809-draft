@@ -1,4 +1,4 @@
---- linux-2.6.9/mm/mmap.c	2005-03-16 21:06:42.000000000 +0000
+(vma->vm_start - address) >> PAGE_SHIFT--- linux-2.6.9/mm/mmap.c	2005-03-16 21:06:42.000000000 +0000
 +++ linux-2.6.9-plasmaroo/mm/mmap.c	2005-03-16 21:09:26.000000000 +0000
 @@ -1316,13 +1316,57 @@ out:
  	return prev ? prev->vm_next : vma;
@@ -59,7 +59,7 @@
  
  	if (!(vma->vm_flags & VM_GROWSUP))
  		return -EFAULT;
-@@ -1342,20 +1386,18 @@ int expand_stack(struct vm_area_struct *
+@@ -1342,28 +1386,24 @@ int expand_stack(struct vm_area_struct *
  	 */
  	address += 4 + PAGE_SIZE - 1;
  	address &= PAGE_MASK;
@@ -89,12 +89,6 @@
 +		if (!error)
 +			vma->vm_end = address;
  	}
- 	if ((vma->vm_flags & VM_LOCKED) && !capable(CAP_IPC_LOCK) &&
- 			((vma->vm_mm->locked_vm + grow) << PAGE_SHIFT) >
-@@ -1364,13 +1406,12 @@ int expand_stack(struct vm_area_struct *
- 		vm_unacct_memory(grow);
- 		return -ENOMEM;
- 	}
 -	vma->vm_end = address;
 -	vma->vm_mm->total_vm += grow;
 -	if (vma->vm_flags & VM_LOCKED)
@@ -102,7 +96,7 @@
 +	error = acct_stack_growth(vma, size, grow);
 +	if (!error)
 +		vma->vm_end = address;
- 	__vm_stat_account(vma->vm_mm, vma->vm_flags, vma->vm_file, grow);
+-	__vm_stat_account(vma->vm_mm, vma->vm_flags, vma->vm_file, grow);
  	anon_vma_unlock(vma);
 -	return 0;
 +	return error;
@@ -118,7 +112,7 @@
  
  	/*
  	 * We must make sure the anon_vma is allocated
-@@ -1411,20 +1452,20 @@ int expand_stack(struct vm_area_struct *
+@@ -1411,29 +1452,23 @@ int expand_stack(struct vm_area_struct *
  	 * anon_vma lock to serialize against concurrent expand_stacks.
  	 */
  	address &= PAGE_MASK;
@@ -150,18 +144,12 @@
 +			vma->vm_pgoff -= grow;
 +		}
  	}
- 	if ((vma->vm_flags & VM_LOCKED) && !capable(CAP_IPC_LOCK) &&
- 			((vma->vm_mm->locked_vm + grow) << PAGE_SHIFT) >
-@@ -1433,14 +1474,9 @@ int expand_stack(struct vm_area_struct *
- 		vm_unacct_memory(grow);
- 		return -ENOMEM;
- 	}
 -	vma->vm_start = address;
 -	vma->vm_pgoff -= grow;
 -	vma->vm_mm->total_vm += grow;
 -	if (vma->vm_flags & VM_LOCKED)
 -		vma->vm_mm->locked_vm += grow;
- 	__vm_stat_account(vma->vm_mm, vma->vm_flags, vma->vm_file, grow);
+-	__vm_stat_account(vma->vm_mm, vma->vm_flags, vma->vm_file, grow);
  	anon_vma_unlock(vma);
 -	return 0;
 +	return error;
