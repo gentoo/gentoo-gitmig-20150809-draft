@@ -1,6 +1,10 @@
 # ChangeLog for dev-cpp/gtkmm
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/ChangeLog,v 1.61 2005/04/10 22:43:04 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/ChangeLog,v 1.62 2005/04/13 19:29:28 cryos Exp $
+
+  13 Apr 2005; Marcus D. Hanwell <cryos@gentoo.org> gtkmm-2.6.1.ebuild:
+  Changed to SLOT=2.4, thought I had left it at that. Thanks to Sudrien
+  <sudrien@fusemail.com> for spotting it.
 
   10 Apr 2005; Marcus D. Hanwell <cryos@gentoo.org> gtkmm-2.4.11.ebuild,
   gtkmm-2.6.1.ebuild:
