@@ -13,7 +13,7 @@ MD5 b7835429b6a12c387636babaedc3aaa9 eclipse-sdk-3.0.2.ebuild 13831
 MD5 030ee53185dd243ff9adbc829417bd5d eclipse-sdk-3.0.1-r1.ebuild 13995
 MD5 0473f4cf276141e1921cab4ffc47b756 eclipse-sdk-3.1_pre6.ebuild 13569
 MD5 0b6f44460f5c2164e469e4444060b23f eclipse-sdk-3.1_pre1.ebuild 12137
-MD5 09a1ca07135a986d2665102a8ac4aae0 ChangeLog 17371
+MD5 09932d7dc8546fe241d484ca296ecaae ChangeLog 17274
 MD5 8de14dda7d318d8fb514fdbcecd4058b metadata.xml 782
 MD5 ab0f6620b4767e065bd533b06245b0fc files/01-distribute_ant_target-2.1.patch 1103
 MD5 69ee2069b0260e40c6fa93315ff759cc files/eclipse-3.1.desktop 226
@@ -45,7 +45,7 @@ MD5 e4ee97056b94052240fb360db6ffaef9 files/eclipse-3.1 1438
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCXYYX/rLF9B432nYRApP/AKDN1OuSt3XtRbFpLG+N0cXOuy996ACffnzU
-xush3OWhx9NN+pIDfzUBiUI=
-=teBT
+iD8DBQFCXYZd/rLF9B432nYRArYXAKCmyJ5FZ4Gfkiu6oWC+saESZQh+7gCfegOi
+syc/B+M7UrMWGSCOrJTWFCA=
+=s9XX
 -----END PGP SIGNATURE-----
