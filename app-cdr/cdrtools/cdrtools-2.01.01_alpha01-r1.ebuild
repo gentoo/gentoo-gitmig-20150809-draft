@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-2.01.01_alpha01-r1.ebuild,v 1.4 2005/04/04 23:51:23 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-2.01.01_alpha01-r1.ebuild,v 1.5 2005/04/13 21:48:25 eradicator Exp $
 
-inherit eutils gcc gnuconfig
+inherit eutils gnuconfig toolchain-funcs
 
 MY_CRYPT_VERS="2.01-encrypt-1.0rc1"
 
@@ -13,7 +13,7 @@ SRC_URI="ftp://ftp.berlios.de/pub/cdrecord/alpha/${P/_alpha/a}.tar.bz2
 
 LICENSE="GPL-2 freedist"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~hppa ~ia64 ~ppc ~s390 ~x86"
+KEYWORDS="~amd64 ~arm ~hppa ~ia64 ~ppc ~s390 ~sparc ~x86"
 IUSE="crypt unicode"
 
 DEPEND="virtual/libc
@@ -59,7 +59,7 @@ src_unpack() {
 src_compile() {
 	gnuconfig_update
 
-	emake CC="$(gcc-getCC) -D__attribute_const__=const" COPTX="${CFLAGS}" CPPOPTX="${CPPFLAGS}" LDOPTX="${LDFLAGS}" || die
+	emake CC="$(tc-getCC) -D__attribute_const__=const" COPTX="${CFLAGS}" CPPOPTX="${CPPFLAGS}" LDOPTX="${LDFLAGS}" || die
 }
 
 src_install() {

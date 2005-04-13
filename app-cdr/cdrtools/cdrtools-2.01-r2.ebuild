@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-2.01-r2.ebuild,v 1.9 2005/04/12 01:06:00 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-2.01-r2.ebuild,v 1.10 2005/04/13 21:48:25 eradicator Exp $
 
-inherit eutils gcc gnuconfig versionator
+inherit eutils gnuconfig versionator toolchain-funcs
 
 MY_CRYPT_VERS="$(get_version_component_range 1-2 )-encrypt-1.0rc1"
 
@@ -58,7 +58,7 @@ src_unpack() {
 src_compile() {
 	gnuconfig_update
 
-	emake CC="$(gcc-getCC) -D__attribute_const__=const" COPTX="${CFLAGS}" CPPOPTX="${CPPFLAGS}" LDOPTX="${LDFLAGS}" || die
+	emake CC="$(tc-getCC) -D__attribute_const__=const" COPTX="${CFLAGS}" CPPOPTX="${CPPFLAGS}" LDOPTX="${LDFLAGS}" || die
 }
 
 src_install() {
