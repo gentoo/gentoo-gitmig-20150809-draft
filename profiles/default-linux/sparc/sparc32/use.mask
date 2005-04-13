@@ -1,4 +1,4 @@
-# 2.6 kernel doesn't work on sparc yet.
+# nptl on sparc requires the v9 ABI which requires sun4u
 nptl
 
 # Jeremy Huddleston <eradicator@gentoo.org>
