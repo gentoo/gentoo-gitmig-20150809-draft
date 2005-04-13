@@ -1,6 +1,11 @@
 # ChangeLog for dev-php/phpsysinfo
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/phpsysinfo/ChangeLog,v 1.31 2005/04/12 16:05:14 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/phpsysinfo/ChangeLog,v 1.32 2005/04/13 04:45:27 corsair Exp $
+
+  13 Apr 2005; Markus Rothe <corsair@gentoo.org> -phpsysinfo-2.1.ebuild,
+  -phpsysinfo-2.1-r1.ebuild, -phpsysinfo-2.1-r2.ebuild,
+  -phpsysinfo-2.2.ebuild, -phpsysinfo-2.3.ebuild, -phpsysinfo-2.3-r1.ebuild:
+  Cleanup of old ebuilds after new one is stable on all archs
 
   12 Apr 2005; Simon Stelling <blubb@gentoo.org> phpsysinfo-2.3-r2.ebuild:
   stable on amd64 wrt bug 86478
