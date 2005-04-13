@@ -9,6 +9,7 @@ MD5 5cb8bfa14396777d6e3b69975cf7e181 files/digest-samba-3.0.11 204
 MD5 519576a9448b86f1a7baab18204533a5 files/lmhosts 126
 MD5 5d3129a0f6bcbec6ec91d217881a34e1 files/nsswitch.conf-winbind 298
 MD5 7ee5edc70bf80888c776f5808f865996 files/nsswitch.conf-wins 392
+MD5 60e527174c1b2c53126dbbedb3cae0f7 files/samba-2.2.8-statfs.patch 209
 MD5 b836e258befae9d6c66cb3f158769b25 files/samba-3.0.x-libdirsymlink.patch 592
 MD5 e75c2316eced1d80cb2161848581c6a3 files/samba-3.0.x-python-setup.patch 1094
 MD5 8ea7b443dd580aaaaf7e9e896eba54f2 files/samba-3.0.x-smbumount-uid32.patch 425
