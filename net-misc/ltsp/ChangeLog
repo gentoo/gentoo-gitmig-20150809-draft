@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/ltsp
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ltsp/ChangeLog,v 1.8 2005/03/02 11:06:51 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ltsp/ChangeLog,v 1.9 2005/04/13 18:31:20 lanius Exp $
+
+  13 Apr 2005; Heinrich Wendel <lanius@gentoo.org> ltsp-4.1-r1.ebuild:
+  fix pxe file location
 
   02 Mar 2005; Heinrich Wendel <lanius@gentoo.org> ltsp-4.1-r1.ebuild:
   fix pxe support, bug #83463

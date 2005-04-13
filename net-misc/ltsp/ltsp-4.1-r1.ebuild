@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ltsp/ltsp-4.1-r1.ebuild,v 1.8 2005/03/06 11:53:00 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ltsp/ltsp-4.1-r1.ebuild,v 1.9 2005/04/13 18:31:20 lanius Exp $
 
 IUSE="X debug nas esd audiofile snmp"
 
@@ -128,11 +128,11 @@ src_install() {
 	doins vmlinuz-${KERNEL_VERSION}
 
 	# pxe stuff
-	insinto /tftboot/pxe
+	insinto /tftpboot/pxe
 	doins 2.4.26-ltsp-2/pxelinux.0
 	doins 2.4.26-ltsp-2/initrd-2.4.26-ltsp-2.gz
 	doins 2.4.26-ltsp-2/bzImage-2.4.26-ltsp-2
-	insinto /tftboot/pxelinux.cfg
+	insinto /tftpboot/pxelinux.cfg
 	doins 2.4.26-ltsp-2/pxelinux.cfg/default
 
 	insinto /tftpboot/pxe
