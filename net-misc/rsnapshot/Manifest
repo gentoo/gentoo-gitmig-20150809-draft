@@ -2,13 +2,15 @@
 Hash: SHA1
 
 MD5 5dab675e2e26ac64cf96d0e5014b05db rsnapshot-1.2.1.ebuild 1100
-MD5 da52b3f0d64608f60c505f6ae7fbe70e ChangeLog 2365
+MD5 d68001624334e3d3b47a3bcdf9e463ee rsnapshot-1.1.7.ebuild 1129
+MD5 34a9d31e0cbb41e7afc9bca7edfef03d ChangeLog 2502
 MD5 3125bec127754bb5fb5fd85f47d9ff4c metadata.xml 202
 MD5 98526d4680fb46b5516a19e8c48956c4 files/digest-rsnapshot-1.2.1 67
+MD5 d048e8113a23305b3583f6abb78850f5 files/digest-rsnapshot-1.1.7 66
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCW2fAKf2g/qXtneoRAtSxAJ9KiEVwjge9akjXuYQvmNx5Ntd/XACgtZQe
-n+WBJBjbmurhaE4VelezjSQ=
-=QCoJ
+iD8DBQFCXYEbKf2g/qXtneoRAoxqAKCpag2AdGrTwAePzKGbUsHPc9d/7QCgrzbo
+Xtm+kNVEVIeJK6hJnD0tZhc=
+=bFv+
 -----END PGP SIGNATURE-----
