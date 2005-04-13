@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.5.ebuild,v 1.1 2005/04/12 19:30:24 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.5.ebuild,v 1.2 2005/04/13 18:17:48 eradicator Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -16,7 +16,7 @@
 #  CHOST = CTARGET  - install into /
 #  CHOST != CTARGET - install into /usr/CTARGET/
 
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~sparc ~x86"
 
 BRANCH_UPDATE=""
 
@@ -628,13 +628,6 @@ setup_flags() {
 
 			if is_crosscompile || [[ ${PROFILE_ARCH} == "sparc64" ]] || { has_multilib_profile && ! tc-is-cross-compiler; } ; then
 				case ${ABI} in
-					default|sparc32)
-						if is-flag "-mcpu=ultrasparc3"; then
-							CTARGET_OPT="sparcv9b-unknown-linux-gnu"
-						else
-							CTARGET_OPT="sparcv9-unknown-linux-gnu"
-						fi
-					;;
 					sparc64)
 						if is-flag "-mcpu=ultrasparc3"; then
 							CTARGET_OPT="sparc64b-unknown-linux-gnu"
@@ -645,6 +638,13 @@ setup_flags() {
 						fi
 
 						filter-flags -Wa,-xarch -Wa,-A
+					;;
+					*)
+						if is-flag "-mcpu=ultrasparc3"; then
+							CTARGET_OPT="sparcv9b-unknown-linux-gnu"
+						else
+							CTARGET_OPT="sparcv9-unknown-linux-gnu"
+						fi
 					;;
 				esac
 			else
@@ -776,6 +776,7 @@ want_tls() {
 					return 1
 				;;
 				*)
+					[[ ${PROFILE_ARCH} == "sparc" ]] && return 1
 					return 0
 				;;
 			esac
