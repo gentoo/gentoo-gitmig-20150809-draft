@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/drupal
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/drupal/ChangeLog,v 1.3 2005/02/01 15:28:20 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/drupal/ChangeLog,v 1.4 2005/04/13 12:27:37 st_lim Exp $
+
+  13 Apr 2005; Lim Swee Tat <st_lim@gentoo.org> drupal-4.5.2.ebuild:
+  4.5.2 updated with modules.
 
   01 Feb 2005; Lim Swee Tat <st_lim@gentoo.org> +files/postinstall-en.txt,
   -files/4.4.2/postinstall-en.txt, -drupal-4.4.2-r1.ebuild,

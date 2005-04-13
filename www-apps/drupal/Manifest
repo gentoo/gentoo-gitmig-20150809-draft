@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 b8c09cc3796310b8e23ef1bddebb3f5e ChangeLog 1344
-MD5 6f6a9ef2628248ade8e0e6d5104a5974 drupal-4.5.2.ebuild 18593
+MD5 330b64a2f58949db453867ee569da860 ChangeLog 1442
+MD5 444eff715ee32f554819062ea48b5411 drupal-4.5.2.ebuild 31561
 MD5 88b2c84c1b3552228d711637cb7d9269 metadata.xml 274
-MD5 d07e19be79c155e67e04bf6c8d4db220 files/digest-drupal-4.5.2 9667
 MD5 0f20a567ce1310d62af69bd56921cea3 files/postinstall-en.txt 2595
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFCHxuZjUHll2nfF60RAm5fAJ9SH4zCDnKZixYjq7Y9259BHGKqVQCfSZfz
-Ng2oJoCCcOqi8VSAJROD0WY=
-=+GSY
------END PGP SIGNATURE-----
+MD5 32c7ee9039df02be13ec0e29d2f0beb5 files/digest-drupal-4.5.2 13537
