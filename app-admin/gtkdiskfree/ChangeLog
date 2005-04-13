@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/gtkdiskfree
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gtkdiskfree/ChangeLog,v 1.14 2005/01/03 05:52:50 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gtkdiskfree/ChangeLog,v 1.15 2005/04/13 17:02:08 luckyduck Exp $
+
+  13 Apr 2005; Jan Brinkmann <luckyduck@gentoo.org> gtkdiskfree-1.9.3.ebuild:
+  added ~amd64 to KEYWORDS, fixes #88942
 
   02 Jan 2005; Daniel Goller <morfic@gentoo.org> :
   added metadata.xml
