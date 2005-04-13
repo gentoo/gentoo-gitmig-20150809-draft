@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/siefs
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/siefs/ChangeLog,v 1.3 2005/03/25 14:39:41 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/siefs/ChangeLog,v 1.4 2005/04/13 18:42:33 genstef Exp $
+
+*siefs-0.5 (13 Apr 2005)
+
+  13 Apr 2005; Stefan Schweizer <genstef@gentoo.org> -siefs-0.4.ebuild,
+  +siefs-0.5.ebuild:
+  Version bump thanks to Robert Führicht <the_master_of_disaster@gmx.at> in
+  bug 88873 and pylon for testing, removing old ebuild
 
   25 Mar 2005; <blubb@gentoo.org> siefs-0.4.ebuild:
   added ~amd64
