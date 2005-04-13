@@ -4,7 +4,8 @@ Hash: SHA1
 MD5 fd257220f66a183e8896c0cd61cfe78c xine-lib-1.0.ebuild 8497
 MD5 60f92c0bf2f960ee5fe72cfd8b60e60b xine-lib-1_rc8-r1.ebuild 5688
 MD5 b6ad8f25595f1c8e8495579462e42764 xine-lib-1_rc6-r1.ebuild 5656
-MD5 68cdb9dc762077a7911512f9203b03ec ChangeLog 2609
+MD5 3d76c8b9b558aba3dd767692bdcb5a6a ChangeLog 2952
+MD5 f83e214f7a722b02ab2513daf1cf7954 xine-lib-1.0-r1.ebuild 7489
 MD5 5529b17488d439ea93b380bacdb0a7a7 metadata.xml 239
 MD5 bcd5f2b8999f92c2f7215009f5ae1490 files/configure-64bit-define.patch 221
 MD5 c666fb35b00138d90890fef3d56548f2 files/xine-lib-1_rc5-configure-sparc.patch 587
@@ -26,6 +27,8 @@ MD5 dcb0c79c0bb106397aad42f6d936627d files/xineconfig.patch-0.9.13 601
 MD5 279ee4d06acc78adef09fe7ae4a64980 files/xine-lib-0.9.13-kxine.patch 9041
 MD5 082b3ed1c96543704d604199047b1dee files/digest-xine-lib-1_rc6-r1 68
 MD5 98bc17778384589bba027ff136956fec files/digest-xine-lib-1_rc8-r1 67
+MD5 1780c88522c9a26856effa70a0e27b50 files/digest-xine-lib-1.0-r1 65
+MD5 d0a2aa9bcd1263077cd8e3fe974b6910 files/xine-lib-configure-xvmc-header.patch 901
 MD5 0cf698a9ff87a3595140d92df7b900b6 files/xine-lib-configure.patch 342
 MD5 a52bac7d568413597e0c7932b164e58c files/xine-lib-1_rc7-2.6.patch 594
 MD5 ff56a363d07445735a05afe1dc7f6f56 files/xine-lib-1_rc5-vcd_overflow.patch 1754
@@ -36,6 +39,7 @@ MD5 a52bac7d568413597e0c7932b164e58c files/xine-lib-1_rc6-2.6.patch 594
 MD5 54088d42a9e9980285a96b7e2cce19cf files/djb_demux_aiff.patch 559
 MD5 a11a93cf97cecb7c1c2b24e11a5419ae files/xine-lib-1_rc6-ffmpeg.patch 1279
 MD5 3704271d4339b919569b4ea416a4c34e files/xine-lib-1_rc8-configure.ac.patch 2825
+MD5 08c1c3433fe4230c788156a2e625962a files/xine-lib-configure-checks.patch 11823
 MD5 d8f3138ae2260f7c98bf46ae7159be11 files/xine-lib-configure.ac.patch 926
 MD5 3cbdef8aa211184b96474addb4f7c5d6 files/xine-lib-gcc34.patch 423
 MD5 b3b75486422c6ccab706f2ff4cf7c4eb files/xine-lib-1_rc7-mmx.patch 391
@@ -43,7 +47,7 @@ MD5 1780c88522c9a26856effa70a0e27b50 files/digest-xine-lib-1.0 65
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFCWopB06ebR+OMO78RAugDAJsHyAt15/xnC2pEyxwh1mWFQ/niiQCeMCm2
-/KAxN/M2z5ASSlxnaUwbtFw=
-=EF5D
+iD8DBQFCXU1U06ebR+OMO78RAic6AJ0bh478yYtx4fa9zv1CS1a0NUtesgCaArKq
+xG597MBOGbfwn6eapdKTcl8=
+=8yr/
 -----END PGP SIGNATURE-----

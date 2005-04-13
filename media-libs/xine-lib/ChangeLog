@@ -1,6 +1,15 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.199 2005/04/11 14:31:06 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.200 2005/04/13 16:47:56 luckyduck Exp $
+
+*xine-lib-1.0-r1 (13 Apr 2005)
+
+  13 Apr 2005; Jan Brinkmann <luckyduck@gentoo.org>
+  +files/xine-lib-configure-checks.patch,
+  +files/xine-lib-configure-xvmc-header.patch, +xine-lib-1.0-r1.ebuild:
+  added 2 patches which were provided Diego Pettenò
+  <dgp85@users.sourceforge.net> who seems to be busy as a bee, like always.
+  fixes #88869
 
   11 Apr 2005; Jan Brinkmann <luckyduck@gentoo.org> metadata.xml,
   xine-lib-1.0.ebuild:

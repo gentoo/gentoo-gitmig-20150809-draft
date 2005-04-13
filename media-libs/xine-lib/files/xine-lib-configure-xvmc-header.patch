@@ -1,0 +1,29 @@
+--- xine-lib-1.0-fix1/configure.ac	2005-04-12 18:46:13.313401272 +0200
++++ xine-lib-1.0/configure.ac	2005-04-12 18:46:19.339485168 +0200
+@@ -602,7 +602,7 @@
+     fi  
+ fi
+ if test x$ac_have_xxmc = "xyes"; then
+-  AC_CHECK_HEADERS($x_includes/X11/extensions/vldXvMC.h,
++  AC_CHECK_HEADERS(X11/extensions/vldXvMC.h,
+      [ac_have_vldxvmc_h="yes"],
+      ac_have_xxmc="no",)
+   if test "x$ac_have_vldxvmc_h" = "xyes"; then
+@@ -632,7 +632,7 @@
+   fi
+ fi
+ if test x$ac_have_xxmc = "xyes"; then
+-  AC_CHECK_HEADERS($x_includes/X11/extensions/XvMC.h,,
++  AC_CHECK_HEADERS(X11/extensions/XvMC.h,,
+      ac_have_xxmc="no",)
+ fi
+ if test x$ac_have_xxmc = "xyes"; then
+@@ -685,7 +685,7 @@
+     fi  
+ fi
+ if test x$ac_have_xvmc = "xyes"; then
+-  AC_CHECK_HEADERS($x_includes/X11/extensions/XvMC.h,,
++  AC_CHECK_HEADERS(X11/extensions/XvMC.h,,
+      ac_have_xvmc="no",)
+ fi
+ if test x$ac_have_xvmc = "xyes"; then
