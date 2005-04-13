@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/usermode-utilities
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/usermode-utilities/ChangeLog,v 1.18 2004/07/01 21:43:15 eradicator Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usermode-utilities/ChangeLog,v 1.19 2005/04/13 15:12:35 johnm Exp $
+
+  13 Apr 2005; John Mylchreest <johnm@gentoo.org> :
+  fixing net_slip vuln. #74482
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   usermode-utilities-20020906.ebuild, usermode-utilities-20030118.ebuild,
