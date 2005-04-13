@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/usermode-sources/usermode-sources-2.4.26-r13.ebuild,v 1.3 2005/03/17 00:36:35 r3pek Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/usermode-sources/usermode-sources-2.4.27.ebuild,v 1.1 2005/04/13 15:10:37 johnm Exp $
 
 ETYPE="sources"
 inherit kernel-2
@@ -9,33 +9,17 @@ detect_version
 EXTRAVERSION="${EXTRAVERSION/usermode/uml1}"
 KV_FULL="${KV_FULL/usermode/uml1}"
 
-UML_PATCH="uml-patch-${PV}-3"
+UML_PATCH="uml-patch-${OKV}-1"
 
 DESCRIPTION="Full (vanilla) sources for the User Mode Linux kernel"
-SRC_URI="mirror://kernel/linux/kernel/v2.4/linux-${PV}.tar.bz2
-	mirror://sourceforge/user-mode-linux/${UML_PATCH}.bz2
-	http://dev.gentoo.org/~plasmaroo/patches/kernel/misc/security/linux-${PV}-CAN-2004-0415.patch
-	http://dev.gentoo.org/~plasmaroo/patches/kernel/misc/security/${P}-CAN-2004-0814.2.patch"
+SRC_URI="${KERNEL_URI} mirror://sourceforge/user-mode-linux/${UML_PATCH}.bz2"
 HOMEPAGE="http://www.kernel.org/ http://user-mode-linux.sourceforge.net"
 LICENSE="GPL-2"
 KEYWORDS="x86 -ppc"
-IUSE=""
 RESTRICT="nomirror"
 
-# console-tools is needed to solve the loadkeys fiasco.
-# binutils version needed to avoid Athlon/PIII/SSE assembler bugs.
-DEPEND="${DEPEND} >=sys-devel/binutils-2.11.90.0.31 dev-lang/perl"
-RDEPEND="${RDEPEND} >=sys-libs/ncurses-5.2"
-
 UNIPATCH_LIST="${DISTDIR}/${UML_PATCH}.bz2
-	${FILESDIR}/${P}.CAN-2004-0394.patch
-	${DISTDIR}/linux-${PV}-CAN-2004-0415.patch
-	${FILESDIR}/${PN}-2.4.CAN-2004-0495.patch
-	${FILESDIR}/${PN}.CAN-2004-0497.patch
-	${FILESDIR}/${PN}-2.4.CAN-2004-0535.patch
-	${FILESDIR}/${PN}-2.4.CAN-2004-0685.patch
-	${DISTDIR}/${P}-CAN-2004-0814.2.patch
-	${FILESDIR}/${PN}-2.4.FPULockup-53804.patch
+	${FILESDIR}/${P}.CAN-2004-1295.patch
 	${FILESDIR}/${PN}-2.4.cmdlineLeak.patch
 	${FILESDIR}/${PN}-2.4.XDRWrapFix.patch
 	${FILESDIR}/${PN}-2.4.binfmt_elf.patch
