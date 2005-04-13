@@ -1,22 +1,14 @@
-MD5 4c0b76f63cc5ffb4430789a088b2ede7 usermode-utilities-20030205.ebuild 697
-MD5 4448ebf50b5c89064201678fc9d830ff usermode-utilities-20030122.ebuild 698
-MD5 bf082748dbfc1d532c4a0ee60449a449 usermode-utilities-20030118.ebuild 698
-MD5 2916a4ff939c1a701d633fedaf97c98b usermode-utilities-20030205-r1.ebuild 709
-MD5 40bfb8ff8fa6368c2deba602799ea841 usermode-utilities-20040406.ebuild 706
-MD5 0af89e386a52f3dd26a11e3e57c52892 usermode-utilities-20030202.ebuild 697
-MD5 4eea6cc907f2c9117c2f191edaa9edfb usermode-utilities-20020906.ebuild 698
-MD5 93b9241ac3ab320aa915876c42305f89 usermode-utilities-20030903.ebuild 706
-MD5 0fc49c3072e0c599e9901ce2de366e8f usermode-utilities-20040114.ebuild 706
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 5ae3e4ac36da680421c53e9546a39c62 usermode-utilities-20040406-r1.ebuild 808
 MD5 c5e5595d855946835ca7459745fc55c5 ChangeLog 3293
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 cd5092dc366baa1ea4ae4ad2ca7cd3d2 usermode-utilities-20030120.ebuild 698
-MD5 7a37deee04598b1d5b0cdd1eefd01ff4 files/digest-usermode-utilities-20020906 74
-MD5 cf14551f110dae80490d6c21388a1677 files/digest-usermode-utilities-20030118 74
-MD5 fa18a9a3b69f16744546805146ad125d files/digest-usermode-utilities-20030120 74
-MD5 d64f20e18395aeafbdb1bd0979582e29 files/digest-usermode-utilities-20030122 74
-MD5 396a64eb95abd3f1920b17f48c32f4b1 files/digest-usermode-utilities-20030202 74
-MD5 30925a4e2852a06c9710121701f09667 files/digest-usermode-utilities-20030205 74
-MD5 e70fd934ac4d1acdd166b38be1c35b78 files/digest-usermode-utilities-20030903 74
-MD5 dc279a5c72b2f94f559dba34766219e7 files/digest-usermode-utilities-20040114 74
-MD5 2782a27c43120892c13ad8cd39ced876 files/digest-usermode-utilities-20040406 74
-MD5 30925a4e2852a06c9710121701f09667 files/digest-usermode-utilities-20030205-r1 74
+MD5 2782a27c43120892c13ad8cd39ced876 files/digest-usermode-utilities-20040406-r1 74
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCXTXSz7mlh8wQzGMRAg9cAJwKMcbyaFozwnBHrf0t/f5vD2fbzgCfSbjN
+6tQkfp8yTXYp6KJYtcW5cfw=
+=WR1O
+-----END PGP SIGNATURE-----
