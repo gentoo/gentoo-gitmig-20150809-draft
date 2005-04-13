@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.2.1-r5.ebuild,v 1.5 2005/04/12 03:53:24 dostrow Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.2.1-r5.ebuild,v 1.6 2005/04/13 00:50:45 mr_bones_ Exp $
 
 inherit eutils flag-o-matic
 
@@ -43,7 +43,7 @@ src_unpack() {
 	EPATCH_SUFFIX="patch" epatch ${PATCHDIR}/mandrake
 	epatch ${WORKDIR}/${P}-${I18N_VER}.patch
 
-	# Apply the ACL patches. 
+	# Apply the ACL patches.
 	# WARNING: These CONFLICT with the SELINUX patches
 	if use acl ; then
 		mv ${PATCHDIR}/generic/00{1,2,4}* ${PATCHDIR}/excluded
@@ -66,9 +66,9 @@ src_unpack() {
 	# Sparc32 SMP bug fix -- see bug #46593
 	use sparc && echo -ne "\n\n" >> ${S}/src/pr.c
 
-	# Since we've patched many .c files, the make process will 
-	# try to re-build the manpages by running `./bin --help`.  
-	# When cross-compiling, we can't do that since 'bin' isn't 
+	# Since we've patched many .c files, the make process will
+	# try to re-build the manpages by running `./bin --help`.
+	# When cross-compiling, we can't do that since 'bin' isn't
 	# a native binary, so let's just install outdated man-pages.
 	[[ ${CTARGET:-${CHOST}} != ${CHOST} ]] && touch man/*.1
 
@@ -77,7 +77,7 @@ src_unpack() {
 	if use ppc64 && use hardened; then
 	    touch man/seq.1
 	fi
-		
+
 }
 
 src_compile() {
