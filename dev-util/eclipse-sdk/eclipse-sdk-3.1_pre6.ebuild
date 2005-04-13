@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-3.1_pre6.ebuild,v 1.2 2005/04/08 18:34:19 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-3.1_pre6.ebuild,v 1.3 2005/04/13 20:49:13 axxo Exp $
 
 inherit eutils java-utils
 
@@ -296,7 +296,7 @@ function build-native() {
 			-I${GECKO_SDK}/include/embed_base \
 			-I${JAVA_HOME}/include/linux"
 	export GECKO_LIBS="-L${GECKO_SDK} -lgtkembedmoz"
-	export SWT_PTR_CFLAGS="${swt_ptr_cflags} -I${JAVA_HOME}/include/linux"
+	export SWT_PTR_CFLAGS="${swt_ptr_cflags} -I${JAVA_HOME}/include -I${JAVA_HOME}/include/linux"
 	export OUTPUT_DIR=${output_dir}
 
 
