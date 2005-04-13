@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libpqpp/libpqpp-4.0-r4.ebuild,v 1.9 2005/01/01 17:29:05 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libpqpp/libpqpp-4.0-r4.ebuild,v 1.10 2005/04/13 20:05:53 eradicator Exp $
 
 inherit eutils
 IUSE=""
@@ -10,7 +10,7 @@ HOMEPAGE="http://gborg.postgresql.org/"
 SRC_URI="ftp://gborg.postgresql.org/pub/libpqpp/stable/${MY_P}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="x86 amd64 sparc"
+KEYWORDS="sparc x86"
 
 DEPEND="virtual/libc >=dev-db/postgresql-7.3
 	>=sys-apps/sed-4"
