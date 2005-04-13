@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.7.0-r1.ebuild,v 1.11 2005/04/01 03:29:11 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.7.0-r1.ebuild,v 1.12 2005/04/13 18:22:41 lanius Exp $
 
 inherit eutils linux-mod flag-o-matic
 
@@ -19,16 +19,24 @@ HOMEPAGE="http://www.lirc.org"
 # --with-driver=X
 
 # where X is one of:
-# none, any, animax, avermedia, avermedia98,
-# bestbuy, bestbuy2, caraca, chronos, comX,
-# cph03x, cph06x, creative, fly98, flyvideo,
-# hauppauge,hauppauge_dvb, ipaq, irdeo,
+# none, any, act200l, animax, atilibusb,
+# atiusb, audio, avermedia, avermedia_vdomate,
+# avermedia98, bestbuy, bestbuy2, breakoutbox,
+# bte, caraca, chronos, comX,
+# creative_infracd, dsp, cph03x, cph06x,
+# creative, devinput, exaudio, flyvideo,
+# gvbctv5pci, hauppauge, hauppauge_dvb,
+# hercules_smarttv_stereo, igorplugusb, irdeo,
 # irdeo_remote, irman, irreal, it87, knc_one,
-# logitech, lptX, mediafocusI, packard_bell,
-# parallel, pctv, pixelview_bt878,
-# pixelview_pak, pixelview_pro, provideo,
-# realmagic, remotemaster, serial, silitek,
-# sir, slinke, streamzap tekram
+# kworld, leadtek_0007, leadtek_0010,
+# livedrive_midi, livedrive_seq, logitech,
+# lptX, mceusb, mediafocusI, mp3anywhere,
+# packard_bell, parallel, pcmak, pcmak_usb,
+# pctv, pixelview_bt878, pixelview_pak,
+# pixelview_pro, provideo, realmagic,
+# remotemaster, sa1100, sasem, serial,
+# silitek, sir, slinke, tekram, tekram_bt829,
+# tira, tvbox, udp, uirt2, uirt2_raw"
 # winfast_tv2000 is now leadtek_0010
 
 # This could be usefull too
@@ -70,6 +78,9 @@ src_unpack() {
 
 	filter-flags -Wl,-O1
 	sed	-i -e "s:-O2 -g:${CFLAGS}:" configure configure.in
+
+	# fix bz878 compilation, bug #87505
+	sed -i -e "s:lircd.conf.pixelview_bt878:lircd.conf.playtv_bt878" configure configure.in
 }
 
 src_compile() {
@@ -80,7 +91,7 @@ src_compile() {
 		--with-port=0x3f8 --with-irq=4"
 
 	# remove parallel driver on SMP systems
-	if [ ! -z "`uname -v | grep SMP`" ]; then
+	if linux_chkconfig_present SMP ; then
 		sed -i -e "s:lirc_parallel::" drivers/Makefile
 	fi
 
@@ -124,6 +135,10 @@ src_install() {
 		insinto /usr/share/doc/${PF}/images
 		doins doc/images/*
 	fi
+}
+
+pkg_preinst() {
+	cp ${ROOT}/etc/lircd.conf ${IMAGE}/etc
 }
 
 pkg_postinst() {
