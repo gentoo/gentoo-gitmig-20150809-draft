@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/bmp-mp4/bmp-mp4-20041215.ebuild,v 1.1 2005/02/28 18:46:06 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/bmp-mp4/bmp-mp4-20041215.ebuild,v 1.2 2005/04/14 20:34:05 luckyduck Exp $
 
 IUSE=""
 MY_P=${PN}_${PV}
@@ -12,7 +12,7 @@ SRC_URI="http://fondriest.frederic.free.fr/fichiers/${MY_P}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 
 DEPEND=">=media-sound/beep-media-player-0.9.7
 	>=sys-devel/automake-1.8.0

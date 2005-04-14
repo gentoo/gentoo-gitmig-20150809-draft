@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/bmp-mp4
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/bmp-mp4/ChangeLog,v 1.1 2005/02/28 18:46:06 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/bmp-mp4/ChangeLog,v 1.2 2005/04/14 20:34:05 luckyduck Exp $
+
+  14 Apr 2005; Jan Brinkmann <luckyduck@gentoo.org> bmp-mp4-20041215.ebuild:
+  added ~amd64 to KEYWORDS, fixes #89041
 
 *bmp-mp4-20041215 (28 Feb 2005)
 
