@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libmad
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmad/ChangeLog,v 1.29 2005/02/05 10:55:39 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmad/ChangeLog,v 1.30 2005/04/14 15:07:53 geoman Exp $
+
+  14 Apr 2005; Stephen P. Becker <geoman@gentoo.org>
+  libmad-0.15.0b-r1.ebuild, libmad-0.15.1b.ebuild:
+  changed to -mips keywords
 
   05 Feb 2005; Michael Hanselmann <hansmi@gentoo.org> libmad-0.15.1b.ebuild:
   Stable on ppc.
