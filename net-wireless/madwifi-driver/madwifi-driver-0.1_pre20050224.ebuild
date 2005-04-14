@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-driver/madwifi-driver-0.1_pre20050224.ebuild,v 1.1 2005/02/27 06:24:26 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-driver/madwifi-driver-0.1_pre20050224.ebuild,v 1.2 2005/04/14 10:50:09 johnm Exp $
 
 inherit linux-mod
 
@@ -23,7 +23,7 @@ pkg_setup() {
 		wlan_ccmp(net:${S}/net80211) wlan_tkip(net:${S}/net80211) wlan_wep(net:${S}/net80211)
 		wlan_xauth(net:${S}/net80211) ath_rate_amrr(net:${S}/ath_rate/amrr)
 		ath_rate_onoe(net:${S}/ath_rate/onoe) ath_pci(net:${S}/ath)"
-	BUILD_PARAMS="KERNELPATH=${ROOT}${KV_DIR} KERNELRELEASE=${KV_FULL}
+	BUILD_PARAMS="KERNELPATH=${ROOT}${KV_OUT_DIR} KERNELRELEASE=${KV_FULL}
 		TARGET=${TARGET} TOOLPREFIX=/usr/bin/"
 	BUILD_TARGETS="all"
 }
