@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/optik
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/optik/ChangeLog,v 1.17 2004/12/30 22:43:25 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/optik/ChangeLog,v 1.18 2005/04/14 18:26:00 kloeri Exp $
+
+*optik-1.5 (14 Apr 2005)
+
+  14 Apr 2005; Bryan Østergaard <kloeri@gentoo.org> +optik-1.5.ebuild:
+  Version bump.
 
   30 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
