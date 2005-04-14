@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/freeradius-1.0.2-r2.ebuild,v 1.3 2005/04/14 19:12:59 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/freeradius-1.0.2-r2.ebuild,v 1.4 2005/04/14 20:48:21 mrness Exp $
 
 inherit eutils
 
@@ -9,11 +9,12 @@ SRC_URI="ftp://ftp.freeradius.org/pub/radius/${P}.tar.gz"
 HOMEPAGE="http://www.freeradius.org/"
 
 KEYWORDS="~x86 ~amd64 ~ppc ~sparc"
-IUSE="frascend frnothreads frxp kerberos ldap mysql pam postgres snmp ssl"
 LICENSE="GPL-2"
 SLOT="0"
+IUSE="frascend frnothreads frxp kerberos ldap mysql pam postgres snmp ssl"
 
 DEPEND="!net-dialup/cistronradius
+	!net-dialup/gnuradius
 	virtual/libc
 	>=sys-libs/db-3.2
 	sys-libs/gdbm

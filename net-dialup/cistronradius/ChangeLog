@@ -1,11 +1,11 @@
 # ChangeLog for net-dialup/cistronradius
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/cistronradius/ChangeLog,v 1.9 2005/04/14 19:11:44 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/cistronradius/ChangeLog,v 1.10 2005/04/14 20:45:25 mrness Exp $
 
   14 Apr 2005; Alin Nastac <mrness@gentoo.org>
   -files/cistronradius-1.6.6-security.patch, -cistronradius-1.6.6-r1.ebuild,
   cistronradius-1.6.7.ebuild:
-  Remove old version and inter-block with net-dialup/freeradius package.
+  Remove old version and inter-block with freeradius and gnuradius packages.
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   cistronradius-1.6.6-r1.ebuild, cistronradius-1.6.7.ebuild:
