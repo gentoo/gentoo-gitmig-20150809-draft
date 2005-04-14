@@ -7,6 +7,6 @@ GIMPS_CPUS="1"
 # for more info, `mprime -h`
 # GIMPS_OPTIONS=""
 
-# this is the directory where setiathome's run-time
+# this is the directory where GIMPS run-time
 # data files will be stored
 GIMPS_DIR=/var/lib/gimps
