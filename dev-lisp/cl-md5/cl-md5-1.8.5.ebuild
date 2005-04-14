@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-md5/cl-md5-1.8.5.ebuild,v 1.1 2005/03/21 08:09:37 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-md5/cl-md5-1.8.5.ebuild,v 1.2 2005/04/14 07:16:24 mkennedy Exp $
 
 inherit common-lisp eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://ftp.debian.org/debian/pool/main/c/cl-md5/${PN}_${PV}.orig.tar.gz
 
 LICENSE="public-domain"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~amd64"
+KEYWORDS="x86 ~ppc ~amd64"
 IUSE=""
 
 DEPEND="dev-lisp/common-lisp-controller
