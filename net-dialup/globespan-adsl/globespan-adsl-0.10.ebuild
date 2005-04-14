@@ -1,23 +1,25 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/globespan-adsl/globespan-adsl-0.10.ebuild,v 1.3 2005/02/14 17:02:51 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/globespan-adsl/globespan-adsl-0.10.ebuild,v 1.4 2005/04/14 20:14:06 mrness Exp $
 
 inherit fixheadtails
 
 MY_PN="eciadsl-usermode-${PV}"
-S=${WORKDIR}/${MY_PN}
+
 DESCRIPTION="Driver for various ADSL modems. Also known as EciAdsl."
 SRC_URI="http://eciadsl.flashtux.org/download/${MY_PN}.tar.gz"
 HOMEPAGE="http://eciadsl.flashtux.org"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="x86 ~amd64"
 IUSE="tcltk"
 
 DEPEND="net-dialup/ppp"
 RDEPEND="${DEPEND}
 	tcltk? ( >=dev-lang/tk-8.3.4 )"
+
+S="${WORKDIR}/${MY_PN}"
 
 src_unpack() {
 	unpack ${A} || die "failed to unpack"
