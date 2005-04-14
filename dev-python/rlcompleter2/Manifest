@@ -1,4 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 65274f45994af10db3f066eae630b3cf rlcompleter2-0.95.ebuild 616
-MD5 788b45d85aefe573ac3b20a940b7f57b ChangeLog 667
+MD5 d297498e934f71de287d9d5839f5735a ChangeLog 799
 MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
+MD5 da8438b5e84265d9e7f656594b56d182 rlcompleter2-0.96.ebuild 615
+MD5 ec23d6d199038354c3192ec18cef4359 files/digest-rlcompleter2-0.96 68
 MD5 396be63d62788796fe338ee140acdbdf files/digest-rlcompleter2-0.95 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCXsr2Kf2g/qXtneoRAgr+AJ97HOHh34TEHkDuON5l9unGpTqNeACff7VD
+Upe7ZJNdjLFU44bBHz1HlC8=
+=QznM
+-----END PGP SIGNATURE-----
