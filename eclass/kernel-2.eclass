@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.120 2005/04/13 08:50:22 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.121 2005/04/14 10:43:25 johnm Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -597,7 +597,7 @@ unipatch() {
 
 			if [ -n "${UNIPATCH_STRICTORDER}" ]; then
 				unset z
-				STRICT_COUNT=$((${STRICT_COUNT} + 1))
+				STRICT_COUNT=$((10#${STRICT_COUNT} + 1))
 				for((y=0; y<$((6 - ${#STRICT_COUNT})); y++));
 					do z="${z}0";
 				done
@@ -646,7 +646,7 @@ unipatch() {
 
 				if [ -n "${UNIPATCH_STRICTORDER}" ]; then
 					unset z
-					STRICT_COUNT=$((${STRICT_COUNT} + 1))
+					STRICT_COUNT=$((10#${STRICT_COUNT} + 1))
 					for((y=0; y<$((6 - ${#STRICT_COUNT})); y++));
 						do z="${z}0";
 					done
