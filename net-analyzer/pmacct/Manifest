@@ -1,10 +1,20 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 b05f4235c4b25ee3275820c3eb630327 pmacct-0.8.2.ebuild 1498
-MD5 ab98ec97cad5725c181e4dcd9d301c81 pmacct-0.8.4.ebuild 1499
+MD5 aacc87d5336d5db5fe412cc2d224f874 pmacct-0.8.4.ebuild 1505
 MD5 757d501eef9c1594bc047ef6889d0170 pmacct-0.8.3.ebuild 1499
-MD5 8c01c583b61d5ec303bd267f515702ef ChangeLog 2346
+MD5 efeb0a7254be1b4ce033700981f84878 ChangeLog 2460
 MD5 808a9a788ae7955af0a3c442cafee866 metadata.xml 243
 MD5 50333f1c79a80df31266ce7235cbf36c files/pmacctd-conf.d 313
 MD5 2afa8e97312b03f3e119c0befed9e7d3 files/pmacctd-init.d 869
 MD5 87abc8e688bb058bd51283670fcfc01a files/digest-pmacct-0.8.2 64
 MD5 ab598b974f8a63136ead320763bf7a5f files/digest-pmacct-0.8.3 64
 MD5 5aada4dc083afac65f161d24379db6fc files/digest-pmacct-0.8.4 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCXnrq06ebR+OMO78RAn70AJ9n5aRgIO5BqFyvbG/O5hzdRjfLvwCcDA7e
+Au8+N4nEUc033bnikqHTRy4=
+=a+WP
+-----END PGP SIGNATURE-----
