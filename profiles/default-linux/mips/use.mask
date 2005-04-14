@@ -1,4 +1,8 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/use.mask,v 1.27 2005/04/02 03:40:49 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/use.mask,v 1.28 2005/04/14 14:57:25 geoman Exp $
+
+# Stephen P. Becker <geoman@gentoo.org>
+# mad just spits out static on mips (ip22)
+mad
 
 # Stephen P. Becker <geoman@gentoo.org>
 # masked until an alsa driver finally works on mips
