@@ -1,4 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 8fc38ae22ed029084c4d7e87a6ea10d5 ChangeLog 730
 MD5 abd42152ac00cb6597592cd40e3c4f61 pydispatcher-1.0.0.ebuild 777
 MD5 2a86b25b37ee0d26eb5b30ce68fbdd27 metadata.xml 158
-MD5 e78319c849fad158eb458d0cbbe21ad6 ChangeLog 599
+MD5 99a95c01a6dbb58b4b1c0fe8cacb8d3b pydispatcher-1.0.1.ebuild 773
 MD5 112d0f90d5bde3dabf675e265f5fb570 files/digest-pydispatcher-1.0.0 69
+MD5 9ddba755ab0b68b0b2bd496694c0fdc8 files/digest-pydispatcher-1.0.1 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCXsWIKf2g/qXtneoRAo5QAJ9GzmOGbUlYq+VoVJZ4VXFL8RxUxQCePrl3
+oueBzv2gsoPtUlREgGvPHmE=
+=g7+D
+-----END PGP SIGNATURE-----
