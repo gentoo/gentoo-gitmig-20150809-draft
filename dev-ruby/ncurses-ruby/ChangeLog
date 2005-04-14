@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ncurses-ruby
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ncurses-ruby/ChangeLog,v 1.12 2005/03/16 15:33:02 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ncurses-ruby/ChangeLog,v 1.13 2005/04/14 18:47:28 kloeri Exp $
+
+  14 Apr 2005; Bryan Østergaard <kloeri@gentoo.org>
+  ncurses-ruby-0.9.1.ebuild:
+  Stable on alpha.
 
 *ncurses-ruby-0.9.2 (16 Mar 2005)
 
