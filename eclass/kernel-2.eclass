@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.121 2005/04/14 10:43:25 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.122 2005/04/14 11:00:34 johnm Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -562,11 +562,13 @@ setup_headers() {
 #==============================================================
 unipatch() {
 	local i x y z extention PIPE_CMD UNIPATCH_DROP KPATCH_DIR PATCH_DEPTH ELINE
-	local STRICT_COUNT PATCH_LEVEL myLC_ALL
+	local STRICT_COUNT PATCH_LEVEL myLC_ALL myLANG
 	
 	# set to a standard locale to ensure sorts are ordered properly.
 	myLC_ALL="${LC_ALL}"
+	myLANG="${LANG}"
 	LC_ALL="C"
+	LANG=""
 
 	[ -z "${KPATCH_DIR}" ] && KPATCH_DIR="${WORKDIR}/patches/"
 	[ ! -d ${KPATCH_DIR} ] && mkdir -p ${KPATCH_DIR}
@@ -722,6 +724,7 @@ unipatch() {
 	for x in ${KPATCH_DIR}; do rm -Rf ${x}; done
 	
 	LC_ALL="${myLC_ALL}"
+	LANG="${myLANG}"
 }
 
 # getfilevar accepts 2 vars as follows:
