@@ -1,12 +1,24 @@
-MD5 a152a2383391e2e5a4621bc4ed4a3e98 pygame-1.5.5.ebuild 882
-MD5 b3b95433bb8e67c6ede22db3767bb0ec ChangeLog 2984
-MD5 1e6ea111c9e32afb259d75b6b136ff09 pygame-1.5.6.ebuild 888
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 5fc51a36418b83733f76cc0d8d97a32a pygame-1.5.3.ebuild 831
-MD5 0c878f997edf727d1fc36fb4cf580575 pygame-1.6.ebuild 891
+MD5 373da66ae3dd33cbc1b687cb864bbd20 ChangeLog 3104
+MD5 a152a2383391e2e5a4621bc4ed4a3e98 pygame-1.5.5.ebuild 882
 MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
-MD5 bcc21545f0d3a09c4bf9beb344d39535 files/digest-pygame-1.5.3 64
+MD5 1e6ea111c9e32afb259d75b6b136ff09 pygame-1.5.6.ebuild 888
+MD5 0c878f997edf727d1fc36fb4cf580575 pygame-1.6.ebuild 891
+MD5 618813dbc2875f0ab3e6b8afa5c098c0 pygame-1.6.2.ebuild 898
 MD5 8f157ac063bfbc2817a2ee8d2acf05c7 files/mixer.c-pause.patch 812
-MD5 d46bdbdd81463a498d29a4a22bb14f81 files/music.c-pause.patch 800
 MD5 cfc28c49f2b91b67623bee4ba4bdb54e files/digest-pygame-1.5.6 64
-MD5 a0a1443e65c63b895d64a478953de7c7 files/digest-pygame-1.5.5 64
 MD5 45f0f41f844c4bb4e9dc4e5a786988ba files/digest-pygame-1.6 62
+MD5 a0a1443e65c63b895d64a478953de7c7 files/digest-pygame-1.5.5 64
+MD5 d46bdbdd81463a498d29a4a22bb14f81 files/music.c-pause.patch 800
+MD5 9f93b8b80ed5e7919c6e718c08c74b2b files/digest-pygame-1.6.2 66
+MD5 bcc21545f0d3a09c4bf9beb344d39535 files/digest-pygame-1.5.3 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCXrlRKf2g/qXtneoRAhPsAKC6hwAOb1U7t2ma5kbRJAjxf1ub3wCdHlFh
+K7pfBu0YSPlkV0F15uSDbB8=
+=QByG
+-----END PGP SIGNATURE-----
