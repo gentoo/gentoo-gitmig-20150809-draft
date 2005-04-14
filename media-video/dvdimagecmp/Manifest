@@ -1,4 +1,14 @@
-MD5 1e28bde0386c448ebbe7af8c2aeb8363 ChangeLog 577
-MD5 4a9dea45e5b744124933bdca2df876e9 dvdimagecmp-0.2.ebuild 611
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 8a4de438f312f4027e3c1c0a05d2b7f3 dvdimagecmp-0.2.ebuild 614
+MD5 51ef6f7d5e26df207571a567a669db84 ChangeLog 699
 MD5 7300a7b361fa9f48e37722c6952bd432 metadata.xml 158
 MD5 09b53c1c3844f4c42b986438b77d9b5a files/digest-dvdimagecmp-0.2 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCXkOS06ebR+OMO78RAiQXAJ4jp9Bx90cwQjtKC4rCMzMDt+CE/wCdHD6S
+uBNr78Z67lhx56foZkMXzKs=
+=94ML
+-----END PGP SIGNATURE-----
