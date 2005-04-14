@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mplayerplug-in/mplayerplug-in-2.80.ebuild,v 1.2 2005/03/06 00:57:30 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mplayerplug-in/mplayerplug-in-2.80.ebuild,v 1.3 2005/04/14 21:14:27 josejx Exp $
 
 inherit nsplugins toolchain-funcs
 
@@ -45,6 +45,11 @@ src_install() {
 	exeinto /opt/netscape/plugins
 	doexe mplayerplug-in.so || die "plugin failed"
 	inst_plugin /opt/netscape/plugins/mplayerplug-in.so
+
+	# Install .xpt, bug #83162
+	insinto /opt/netscape/plugins
+	doins mplayerplug-in.xpt
+	inst_plugin /opt/netscape/plugins/mplayerplug-in.xpt
 
 	insinto /etc
 	doins mplayerplug-in.conf
