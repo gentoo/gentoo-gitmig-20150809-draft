@@ -1,0 +1,5 @@
+MD5 0a83fc20e332398a4f61d4c8fa229c44 mod_fcgid-1.05.ebuild 1050
+MD5 b04c3f93349f84b2bc615931f1c1d6c9 metadata.xml 483
+MD5 c2f9ec7345082793d3ae6948c13c1930 ChangeLog 406
+MD5 afcfa360a9a77fd3bdb6c2ec89efa594 files/20_mod_fcgid.conf 192
+MD5 2d8046826f8e5dd7cc5256d4e8337275 files/digest-mod_fcgid-1.05 65
