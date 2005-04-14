@@ -1,0 +1,51 @@
+--- interceptor.c.orig	2005-04-08 23:22:37.000000000 +0200
++++ interceptor.c	2005-04-08 23:23:19.000000000 +0200
+@@ -98,6 +98,23 @@
+     .notifier_call = handle_netdev_event,
+ };
+ 
++static int
++supported_device(struct net_device* dev)
++{
++    int rc=0;
++
++    if(dev->type == ARPHRD_ETHER)
++    {
++        rc=1;
++    }
++    else if(dev->type == ARPHRD_PPP)
++    {
++        rc=1;
++    }
++
++    return rc;
++}
++
+ static int __init
+ interceptor_init(struct net_device *dev)
+ {
+@@ -447,24 +464,6 @@
+     s->rc = 0;
+ }
+ 
+-static int
+-supported_device(struct net_device* dev)
+-{
+-    int rc=0;
+-
+-    if(dev->type == ARPHRD_ETHER)
+-    {
+-        rc=1;
+-    }
+-    else if(dev->type == ARPHRD_PPP)
+-    {
+-        rc=1;
+-    }
+-
+-    return rc;
+-}
+-
+-
+ static BINDING *
+ getbindingbydev(struct net_device *dev)
+ {
