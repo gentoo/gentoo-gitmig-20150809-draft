@@ -1,6 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/limewire/limewire-4.8.1.ebuild,v 1.2 2005/03/29 02:49:53 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/limewire/limewire-4.8.1.ebuild,v 1.3 2005/04/14 19:45:12 sekretarz Exp $
+
+inherit eutils
 
 IUSE="gtk"
 DESCRIPTION="Limewire Java Gnutella client"
@@ -24,7 +26,7 @@ src_compile() {
 	  echo java -jar LimeWire.jar
 	) >limewire.gentoo
 
-	echo PATH=${PREFIX} >99limewire
+	echo PATH=${PREFIX} > limewire.envd
 }
 
 src_install() {
@@ -32,13 +34,15 @@ src_install() {
 	doins *.jar *.war *.properties *.ver *.sh hashes *.txt
 	exeinto /usr/bin
 	newexe limewire.gentoo limewire
-	insinto	/etc/env.d
-	doins	99limewire
-	insinto /usr/share/applications
-	doins ${FILESDIR}/limewire.desktop
-	insinto /usr/share/pixmaps/limewire
-	doins ${FILESDIR}/main-icon.png
+
+	newenvd limewire.envd 99limewire
+
+	insinto /usr/share/icons/hicolor/32x32/apps
+	newins ${FILESDIR}/main-icon.png limewire.png
+
+	make_desktop_entry limewire LimeWire
 }
+
 pkg_postinst() {
 	use gtk || ewarn "You will probably not be able to use the gtk frontend."
 	einfo " Finished installing LimeWire into ${PREFIX}"
