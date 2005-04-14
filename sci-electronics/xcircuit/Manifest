@@ -1,10 +1,20 @@
-MD5 4d0d541b0e146f9f89775af174a38bab ChangeLog 3460
-MD5 e49bb02132d2cd74ad4e6ee291e102d9 metadata.xml 220
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 fefadd42bab965f2ca1a51ce38b982b6 ChangeLog 3548
+MD5 cec9ebc1cf60c51f5217db48c29e1a36 xcircuit-3.3.10.ebuild 1212
 MD5 c2684ade783a66cb46cf71e70a766aa0 xcircuit-3.1.31.ebuild 1203
+MD5 e49bb02132d2cd74ad4e6ee291e102d9 metadata.xml 220
 MD5 fd27b44a3608def0651ef81b60154044 xcircuit-2.5.5.ebuild 818
-MD5 e30777dd4ce656c698e72dbaec7c41fd xcircuit-3.3.10.ebuild 1208
-MD5 f31e766c87ea445fe61d969cdf427d4b files/xcircuit-2.5.4-sigsegv.patch 306
-MD5 77a4be8f41df15ace27164b9712c52e3 files/digest-xcircuit-3.3.10 65
-MD5 89d6bd7483424eb145efd4d3c58f6abb files/digest-xcircuit-3.1.31 64
 MD5 3f779f7efbaa50b91424a66a5a4ff08e files/digest-xcircuit-2.5.5 67
+MD5 f31e766c87ea445fe61d969cdf427d4b files/xcircuit-2.5.4-sigsegv.patch 306
+MD5 89d6bd7483424eb145efd4d3c58f6abb files/digest-xcircuit-3.1.31 64
+MD5 77a4be8f41df15ace27164b9712c52e3 files/digest-xcircuit-3.3.10 65
 MD5 e89ab3e2fabd20a609586953924cb1d0 files/xcircuit-2.5.4-XQueryColor.patch 342
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCXotpCHk4+ZoBpvsRAhVyAJ4lcl/LivEplXN7GgWmi6BlKsBaTwCgxIIZ
+AprbmqJCLdmqtW7UuRKmaUo=
+=hFva
+-----END PGP SIGNATURE-----
