@@ -3,9 +3,6 @@
 *virtual/baselayout
 *sys-apps/util-linux
 
-# toolchain
-#<=sys-devel/binutils-2.15.90.0.1.1-r3
-
 # minimal versions
 #-*>=net-misc/iputils-021109-r3
 -*net-misc/iputils
@@ -19,12 +16,8 @@
 -*sys-apps/man-pages
 # no support for pam
 -*sys-apps/pam-login
-# why is this in?
--*sys-devel/bc
 # this will be added by nls
 -*sys-devel/gettext
-# this will be added by berkdb
--*sys-libs/db
 # no support for pam
 -*sys-libs/pam
 # added by readline
@@ -41,5 +34,4 @@
 -*sys-libs/glibc
 
 #no idea why this is in base system
--*sys-apps/ed
 <dev-libs/glib-2.5
