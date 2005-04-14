@@ -1,4 +1,14 @@
-MD5 6fc7463ee521a7c9b7dd5507ddf157e4 ChangeLog 479
-MD5 230243144b5e136c8ef536e68ddc682a manpages-es-1.28.ebuild 939
-MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 4def940a40b537a3586ec03a08dae9a0 manpages-es-1.28.ebuild 907
+MD5 1458a2f0768dc6b9506d4160302d612c ChangeLog 592
+MD5 ca3932d46d157fa90faffe0eae0a00bf metadata.xml 236
 MD5 9651aabfb4ab714d005c2c5c96aa7a60 files/digest-manpages-es-1.28 144
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCXmYuViELBEf1JB0RAlFoAJ9nFLr8rfmcB4dnnqtr9W7C3D9UVACfRvA4
+P7I33aCbKfCPybsHQUmVf+E=
+=20fm
+-----END PGP SIGNATURE-----

@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/manpages-es
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/manpages-es/ChangeLog,v 1.6 2005/01/01 14:34:39 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/manpages-es/ChangeLog,v 1.7 2005/04/14 12:46:16 ferdy Exp $
+
+  14 Apr 2005; Fernando J. Pereda <ferdy@gentoo.org> metadata.xml,
+  manpages-es-1.28.ebuild:
+  Fix ebuild wrt 79895
 
   07 Jun 2004; Daniel Black <dragonheart@gentoo.org> +metadata.xml,
   manpages-es-1.28.ebuild:
