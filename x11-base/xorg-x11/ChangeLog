@@ -1,6 +1,26 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.361 2005/04/09 17:27:52 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.362 2005/04/14 23:38:15 spyderous Exp $
+
+*xorg-x11-6.8.2-r2 (14 Apr 2005)
+
+  14 Apr 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  +xorg-x11-6.8.2-r2.ebuild:
+  New revision, with a bunch of updates. PATCH_VER 0.1.3. (#85363, fd.o #1765)
+  Add 0487_all_6.8.2-add-relocation-type-10-to-elfloader.patch: Add another
+  relocation type to the ELF loader. (#82039) Add
+  5137_all_6.8.2-fix-r128-undefined-write-depth.patch: Fix direct rendering on
+  R128 because of undefined WRITE_DEPTH. (#82705) Add
+  9003_all_6.8.2-lnx-evdev-keyboard-dont-grab.patch: Don\'t grab the keyboard,
+  so combo keyboard/mice work. (#80685) Add 9913_all_6.8.2-cfbgc-gcc4.patch,
+  9914_all_6.8.2-mmx-gcc4.patch and 9915_all_6.8.2-radeon-gcc4.patch: GCC4
+  compile fixes. (fd.o #2750) Add 9920_all_6.8.2-fix-write-combining.patch:
+  Fix case where a smaller write-combining region blocks write-combining
+  setting of the whole frame buffer. Fix bug in wc setting code when regions
+  are first splitted and setting of write-combining then fails. (#82735) Fix
+  find(1) syntax in xfs init script. (#86890) Install release notes. (#82791)
+  Add s3 and vesa drivers on alpha. (#81728) ebegin() uses shouldn\'t contain
+  trailing periods.
 
   09 Apr 2005; Tom Gall <tgall@gentoo.org> xorg-x11-6.8.2-r1.ebuild:
   add mga on ppc64, it works!
