@@ -1,6 +1,10 @@
 # ChangeLog for net-im/ekg
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ekg/ChangeLog,v 1.15 2005/04/01 15:11:15 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ekg/ChangeLog,v 1.16 2005/04/14 20:04:15 spock Exp $
+
+  14 Apr 2005; Michał Januszewski <spock@gentoo.org>
+  +files/ekg-1.6_rc1-fpic.patch, ekg-1.6_rc1.ebuild:
+  Added a patch that should fix bug #88713.
 
   01 Apr 2005; Aron Griffis <agriffis@gentoo.org> ekg-1.6_rc1.ebuild:
   stable on ia64

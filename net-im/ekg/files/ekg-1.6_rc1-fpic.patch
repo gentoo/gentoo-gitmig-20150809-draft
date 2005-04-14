@@ -1,0 +1,12 @@
+diff -ur ekg-1.6rc1-old/configure ekg-1.6rc1/configure
+--- ekg-1.6rc1-old/configure	2005-03-20 13:46:53.000000000 +0100
++++ ekg-1.6rc1/configure	2005-04-14 13:15:30.294949464 +0200
+@@ -4224,7 +4224,7 @@
+ echo $ECHO_N "checking if -pthread is sufficient with -shared... $ECHO_C" >&6
+ 	save_CFLAGS="$CFLAGS"
+ 	save_LIBS="$LIBS"
+-	CFLAGS="-shared -Wl,-z,defs $CFLAGS"
++	CFLAGS="-shared -fPIC -Wl,-z,defs $CFLAGS"
+ 	ok="no"
+         cat >conftest.$ac_ext <<_ACEOF
+ #line $LINENO "configure"
