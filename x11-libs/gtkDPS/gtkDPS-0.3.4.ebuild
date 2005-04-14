@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkDPS/gtkDPS-0.3.4.ebuild,v 1.17 2005/03/13 19:59:23 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkDPS/gtkDPS-0.3.4.ebuild,v 1.18 2005/04/14 20:36:13 lu_zero Exp $
 
 inherit gnuconfig
 
@@ -28,6 +28,8 @@ src_compile() {
 
 	./configure --prefix=/usr --host=${CHOST} \
 		--with-x --with-dps $myconf || die
+	#Very ugly workaround 
+	use nls && echo '#define LOCALEDIR "/usr/share/locale"' >> config.h
 	make || die
 }
 

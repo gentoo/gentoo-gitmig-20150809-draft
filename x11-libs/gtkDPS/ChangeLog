@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/gtkDPS
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkDPS/ChangeLog,v 1.21 2005/03/13 19:59:23 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkDPS/ChangeLog,v 1.22 2005/04/14 20:36:13 lu_zero Exp $
+
+  14 Apr 2005; Luca Barbato <lu_zero@gentoo.org> gtkDPS-0.3.4.ebuild:
+  Workaround for nls
 
   13 Mar 2005; Jason Wever <weeve@gentoo.org> gtkDPS-0.3.4.ebuild:
   Stable on sparc.
