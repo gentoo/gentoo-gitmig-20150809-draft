@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/vim-core
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim-core/ChangeLog,v 1.145 2005/04/09 20:32:28 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim-core/ChangeLog,v 1.146 2005/04/14 16:54:48 kloeri Exp $
+
+  14 Apr 2005; Bryan Østergaard <kloeri@gentoo.org>
+  vim-core-6.3.068.ebuild:
+  Stable on alpha.
 
   09 Apr 2005; Michael Hanselmann <hansmi@gentoo.org>
   vim-core-6.3.068.ebuild:
