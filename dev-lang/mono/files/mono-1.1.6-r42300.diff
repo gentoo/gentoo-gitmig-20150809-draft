@@ -1,0 +1,36 @@
+diff -aur mono-1.1.6-orig/mono/mini/cpu-amd64.md mono-1.1.6/mono/mini/cpu-amd64.md
+--- mono-1.1.6-orig/mono/mini/cpu-amd64.md	2005-03-30 16:26:18.000000000 -0500
++++ mono-1.1.6/mono/mini/cpu-amd64.md	2005-04-11 23:12:10.000000000 -0400
+@@ -289,8 +289,8 @@
+ storei4_membase_imm: dest:b len:13
+ storei4_membase_reg: dest:b src1:i len:9
+ storei8_membase_imm: dest:b len:18
+-storer4_membase_reg: dest:b src1:f len:14
+-storer8_membase_reg: dest:b src1:f len:9
++storer4_membase_reg: dest:b src1:f len:15
++storer8_membase_reg: dest:b src1:f len:10
+ load_membase: dest:i src1:b len:15
+ loadi1_membase: dest:i src1:b len:9
+ loadu1_membase: dest:i src1:b len:9
+diff -aur mono-1.1.6-orig/mono/mini/mini-amd64.c mono-1.1.6/mono/mini/mini-amd64.c
+--- mono-1.1.6-orig/mono/mini/mini-amd64.c	2005-03-30 16:26:18.000000000 -0500
++++ mono-1.1.6/mono/mini/mini-amd64.c	2005-04-11 23:12:10.000000000 -0400
+@@ -5383,11 +5383,13 @@
+ 				patch_info->type = MONO_PATCH_INFO_INTERNAL_METHOD;
+ 				patch_info->ip.i = code - cfg->native_code;
+ 
+-				if (mono_compile_aot)
++				if (mono_compile_aot) {
+ 					amd64_mov_reg_membase (code, GP_SCRATCH_REG, AMD64_RIP, 0, 8);
+-				else
+-					amd64_set_reg_template (code, GP_SCRATCH_REG);
+-				amd64_call_reg (code, GP_SCRATCH_REG);
++					amd64_call_reg (code, GP_SCRATCH_REG);
++				} else {
++					/* The callee is in memory allocated using the code manager */
++					amd64_call_code (code, 0);
++				}
+ 
+ 				amd64_mov_reg_imm (buf, AMD64_RSI, (code - cfg->native_code) - throw_ip);
+ 				while (buf < buf2)
+Only in mono-1.1.6/mono/mini: mini-amd64.c.orig
