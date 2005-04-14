@@ -1,21 +1,21 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/gnome-ppp/gnome-ppp-0.3.16.ebuild,v 1.4 2005/02/12 08:26:39 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/gnome-ppp/gnome-ppp-0.3.21.ebuild,v 1.1 2005/04/14 20:29:35 mrness Exp $
 
 inherit gnome2 eutils
 
+MAJOR_V=${PV%.[0-9]*}
+
 DESCRIPTION="A GNOME 2 WvDial frontend"
 HOMEPAGE="http://www.gnome-ppp.org/"
-LICENSE="GPL-2"
-
-MAJOR_V=${PV%.[0-9]*}
 SRC_URI="http://www.gnome-ppp.org/download/${MAJOR_V}/${P}.tar.gz"
 
+LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~x86"
 IUSE=""
 
-RDEPEND=">=net-dialup/wvdial-1.53-r1
+RDEPEND=">=net-dialup/wvdial-1.54
 	>=gnome-base/libgnomeui-2.6
 	>=gnome-base/libglade-2.4
 	>=x11-libs/gtk+-2.4"
@@ -26,3 +26,7 @@ DEPEND="sys-devel/gettext
 	${RDEPEND}"
 
 USE_DESTDIR="1"
+
+src_install() {
+	gnome2_src_install top_builddir=${S}
+}
