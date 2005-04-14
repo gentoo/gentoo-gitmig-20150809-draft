@@ -1,6 +1,18 @@
-MD5 c4fb4f4ab8bbf57dee66a5507006b91f ChangeLog 1086
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 290041af2524a11c1b13c6e0671d080e pysnmp-4.0.1a.ebuild 567
 MD5 7c9791f78cdb8bc75e30699e353cee0b pysnmp-3.4.2.ebuild 568
 MD5 a336293671a6823a70916a2b1bfb5fd2 pysnmp-2.0.8.ebuild 437
+MD5 70e12f08bb84862b0816d1655ecb4b57 ChangeLog 1208
 MD5 bd3be6368be3d0aa82320ab237bf672b metadata.xml 598
 MD5 b30937ff6795e9c21197fb0f017b65ce files/digest-pysnmp-2.0.8 63
 MD5 f1302fe6c3ae374b76578a63ed08b9ba files/digest-pysnmp-3.4.2 63
+MD5 cdfb4b386b7d03da6b594f975f0f9b8e files/digest-pysnmp-4.0.1a 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCXs1BKf2g/qXtneoRApYtAJ94/n+p+R4WTo/eyALT7KD7mtpeegCdEB8A
++iKSkw5je/ruwFzBZMLIbds=
+=crs+
+-----END PGP SIGNATURE-----
