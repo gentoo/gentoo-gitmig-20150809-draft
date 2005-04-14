@@ -4,4 +4,4 @@ MD5 ede3148356c37addd04ffed3398ce07b drupal-4.6.0_rc1.ebuild 6967
 MD5 88b2c84c1b3552228d711637cb7d9269 metadata.xml 274
 MD5 3238e01683bce52fc0c38d90bd9eaced files/digest-drupal-4.6.0_rc1 2370
 MD5 0f20a567ce1310d62af69bd56921cea3 files/postinstall-en.txt 2595
-MD5 52a3f40b889dfae9225e37521c5ccecb files/digest-drupal-4.5.2 13537
+MD5 fd5d891b8fe29141c984c0994b04298c files/digest-drupal-4.5.2 13537
