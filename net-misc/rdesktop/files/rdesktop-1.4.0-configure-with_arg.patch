@@ -1,0 +1,84 @@
+--- rdesktop-1.4.0/configure	2005-03-02 17:35:03.000000000 +0000
++++ rdesktop-1.4.0-richard/configure	2005-04-11 13:07:30.964584294 +0100
+@@ -6679,10 +6718,15 @@
+ # Check whether --with-ipv6 or --without-ipv6 was given.
+ if test "${with_ipv6+set}" = set; then
+   withval="$with_ipv6"
+-   cat >>confdefs.h <<\_ACEOF
++
++        if test $withval != "no";
++        then
++	    cat >>confdefs.h <<\_ACEOF
+ #define IPv6 1
+ _ACEOF
+ 
++	fi
++
+ fi;
+ 
+ 
+@@ -6693,40 +6737,60 @@
+ # Check whether --with-debug or --without-debug was given.
+ if test "${with_debug+set}" = set; then
+   withval="$with_debug"
+-   cat >>confdefs.h <<\_ACEOF
++
++        if test $withval != "no";
++        then
++            cat >>confdefs.h <<\_ACEOF
+ #define WITH_DEBUG 1
+ _ACEOF
+ 
++	fi
++
+ fi;
+ 
+ 
+ # Check whether --with-debug-kbd or --without-debug-kbd was given.
+ if test "${with_debug_kbd+set}" = set; then
+   withval="$with_debug_kbd"
+-   cat >>confdefs.h <<\_ACEOF
++
++        if test $withval != "no";
++        then
++            cat >>confdefs.h <<\_ACEOF
+ #define WITH_DEBUG_KBD 1
+ _ACEOF
+ 
++	fi
++
+ fi;
+ 
+ 
+ # Check whether --with-debug-rdp5 or --without-debug-rdp5 was given.
+ if test "${with_debug_rdp5+set}" = set; then
+   withval="$with_debug_rdp5"
+-   cat >>confdefs.h <<\_ACEOF
++
++        if test $withval != "no";
++        then
++            cat >>confdefs.h <<\_ACEOF
+ #define WITH_DEBUG_RDP5 1
+ _ACEOF
+ 
++	fi
++
+ fi;
+ 
+ 
+ # Check whether --with-debug-clipboard or --without-debug-clipboard was given.
+ if test "${with_debug_clipboard+set}" = set; then
+   withval="$with_debug_clipboard"
+-   cat >>confdefs.h <<\_ACEOF
++
++        if test $withval != "no";
++        then
++            cat >>confdefs.h <<\_ACEOF
+ #define WITH_DEBUG_CLIPBOARD 1
+ _ACEOF
+ 
++	fi
++
+ fi;
+ 
+ 

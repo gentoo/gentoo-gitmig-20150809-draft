@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rdesktop/rdesktop-1.4.0.ebuild,v 1.1 2005/03/15 15:03:59 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rdesktop/rdesktop-1.4.0-r1.ebuild,v 1.1 2005/04/14 12:59:07 wolf31o2 Exp $
 
 inherit eutils
 
@@ -15,6 +15,12 @@ IUSE="ssl debug ipv6 oss"
 
 DEPEND="virtual/x11
 	ssl? ( >=dev-libs/openssl-0.9.6b )"
+
+src_unpack() {
+	unpack ${A}
+	# Patch provided by Richard Brown <mynamewasgone@gmail.com> to bug #88684
+	epatch ${FILESDIR}/${P}-configure-with_arg.patch
+}
 
 src_compile() {
 	local myconf

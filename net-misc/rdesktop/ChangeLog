@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/rdesktop
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rdesktop/ChangeLog,v 1.48 2005/03/15 15:03:59 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rdesktop/ChangeLog,v 1.49 2005/04/14 12:59:07 wolf31o2 Exp $
+
+*rdesktop-1.4.0-r1 (14 Apr 2005)
+
+  14 Apr 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  +files/rdesktop-1.4.0-configure-with_arg.patch, -rdesktop-1.3.1.ebuild,
+  +rdesktop-1.4.0-r1.ebuild, -rdesktop-1.4.0.ebuild:
+  Removing old versions. Added configure patch by Richard Brown
+  <mynamewasgone@gmail.com> and closing bug #88684.
 
 *rdesktop-1.4.0 (15 Mar 2005)
 
