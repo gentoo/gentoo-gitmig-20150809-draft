@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/linuxwacom
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/linuxwacom/ChangeLog,v 1.23 2005/02/21 22:10:09 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/linuxwacom/ChangeLog,v 1.24 2005/04/14 22:24:36 eradicator Exp $
+
+  14 Apr 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  linuxwacom-0.6.6.ebuild:
+  --enable-xserver64 on amd64.
 
   08 Feb 2005; Bryan Stine <battousai@gentoo.org> -linuxwacom-0.6.2.ebuild,
   linuxwacom-0.6.4.ebuild, linuxwacom-0.6.6.ebuild:

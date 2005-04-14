@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/linuxwacom/linuxwacom-0.6.6.ebuild,v 1.5 2005/02/21 22:10:09 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/linuxwacom/linuxwacom-0.6.6.ebuild,v 1.6 2005/04/14 22:24:36 eradicator Exp $
 
 IUSE="gtk gtk2 tcltk sdk"
 
@@ -86,26 +86,28 @@ src_unpack() {
 }
 
 src_compile() {
-	if use gtk;
-	then
-		if use gtk2;
-		then
-			withgtk="--with-gtk=2.0"
+	if use gtk; then
+		if use gtk2; then
+			myconf="${myconf} --with-gtk=2.0"
 		else
-			withgtk="--with-gtk=1.2"
+			myconf="${myconf} --with-gtk=1.2"
 		fi
 	else
-		withgtk="--with-gtk=no"
+		myconf="${myconf} --with-gtk=no"
 	fi
-	if use tcltk;
-	then
-		withtcltk="--with-tcl --with-tk"
+
+	if use tcltk ; then
+		myconf="${myconf} --with-tcl --with-tk"
 	else
-		withtcltk="--without-tcl --without-tk"
+		myconf="${myconf} --without-tcl --without-tk"
+	fi
+
+	if use amd64 ; then
+		myconf="${myconf} --enable-xserver64"
 	fi
 
 	if use sdk; then
-		myconf="--enable-wacomdrv --enable-wacdump --enable-xsetwacom $withgtk $withtcltk"
+		myconf="${myconf} --enable-wacomdrv --enable-wacdump --enable-xsetwacom"
 		if [ -f "/usr/$(get_libdir)/Server/include/xf86Version.h" ]; then
 			myconf="${myconf} --with-xf86=/usr/$(get_libdir)/Server --with-xorg-sdk=/usr/$(get_libdir)/Server"
 		else
@@ -118,7 +120,7 @@ src_compile() {
 		cd ${S}/src
 		sed -i -e "s:/include/extensions:/include:g" Makefile
 	else
-		myconf="--disable-wacomdrv --enable-wacdump --enable-xsetwacom $withgtk $withtcltk"
+		myconf="${myconf} --disable-wacomdrv --enable-wacdump --enable-xsetwacom"
 		econf ${myconf} || die "configure failed."
 	fi
 	cd ${S}
