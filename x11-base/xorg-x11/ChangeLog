@@ -1,6 +1,6 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.363 2005/04/14 23:39:08 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.364 2005/04/14 23:40:13 spyderous Exp $
 
 *xorg-x11-6.8.2-r2 (14 Apr 2005)
 
@@ -19,7 +19,7 @@
   setting of the whole frame buffer. Fix bug in wc setting code when regions
   are first splitted and setting of write-combining then fails. (#82735) Fix
   find(1) syntax in xfs init script. (#86890) Install release notes. (#82791)
-  Add s3 and vesa drivers on alpha. (#81728) ebegin() uses shouldn't contain
+  Add s3 and vesa drivers on alpha. (#81728) ebegin() use shouldn't contain
   trailing periods.
 
   09 Apr 2005; Tom Gall <tgall@gentoo.org> xorg-x11-6.8.2-r1.ebuild:
