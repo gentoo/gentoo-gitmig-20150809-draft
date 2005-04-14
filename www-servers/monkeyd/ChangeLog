@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/monkeyd
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/monkeyd/ChangeLog,v 1.7 2005/04/14 12:05:03 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/monkeyd/ChangeLog,v 1.8 2005/04/14 18:49:29 hansmi Exp $
+
+  14 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> monkeyd-0.9.1.ebuild:
+  Stable on ppc.
 
 *monkeyd-0.9.1 (14 Apr 2005)
 
