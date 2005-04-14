@@ -1,20 +1,22 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/gigaset-isdn/gigaset-isdn-0.4.1.ebuild,v 1.2 2005/04/14 20:09:13 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/gigaset-isdn/gigaset-isdn-0.4.2.ebuild,v 1.1 2005/04/14 20:09:13 mrness Exp $
 
 inherit linux-mod
 
 MY_P=${P/-isdn/}
 S=${WORKDIR}/${MY_P}
+
 DESCRIPTION="Kernel driver for Gigaset 307X/M105/M101 and compatible ISDN adapters."
 HOMEPAGE="http://gigaset307x.sourceforge.net/"
-LICENSE="GPL-2"
-DEPEND="virtual/linux-sources"
-
 SRC_URI="mirror://sourceforge/gigaset307x/${MY_P}.tar.bz2"
+
+LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~x86"
 IUSE="debug"
+
+DEPEND="virtual/linux-sources"
 
 MODULE_NAMES="bas_gigaset(drivers/isdn:) ser_gigaset(drivers/isdn:) usb_gigaset(drivers/isdn:)"
 BUILD_TARGETS="all"

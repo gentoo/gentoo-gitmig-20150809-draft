@@ -1,6 +1,12 @@
 # ChangeLog for net-dialup/gigaset-isdn
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/gigaset-isdn/ChangeLog,v 1.4 2005/02/06 10:51:59 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/gigaset-isdn/ChangeLog,v 1.5 2005/04/14 20:09:13 mrness Exp $
+
+*gigaset-isdn-0.4.2 (14 Apr 2005)
+
+  14 Apr 2005; Alin Nastac <mrness@gentoo.org> gigaset-isdn-0.4.1.ebuild,
+  +gigaset-isdn-0.4.2.ebuild:
+  Version bump. Mark 0.4.1 stable on x86.
 
 *gigaset-isdn-0.4.1 (06 Feb 2005)
 
