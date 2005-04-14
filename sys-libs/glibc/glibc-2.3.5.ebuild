@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.5.ebuild,v 1.3 2005/04/13 20:51:22 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.5.ebuild,v 1.4 2005/04/14 07:17:58 eradicator Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -701,14 +701,14 @@ check_nptl_support() {
 	echo
 
 	einfon "Checking gcc for __thread support ... "
-	if ! $(tc-getCC ${CTARGET}) -c ${FILESDIR}/test-__thread.c -o ${T}/test2.o &> /dev/null; then
+	if want__thread ; then
+		echo "yes"
+	else
 		echo "no"
 		echo
 		eerror "Could not find a gcc that supports the __thread directive!"
 		eerror "please update to gcc-3.2.2-r1 or later, and try again."
 		die "No __thread support in gcc!"
-	else
-		echo "yes"
 	fi
 
 	# Building fails on an non-supporting kernel
@@ -749,7 +749,7 @@ want_nptl() {
 		;;
 		sparc)
 			# >= v9 is needed for nptl.
-			[[ "${PROFILE_ARCH}" == "sparc32" ]] && return 1
+			[[ "${PROFILE_ARCH}" == "sparc" ]] && return 1
 			return 0;
 		;;
 	esac
@@ -770,15 +770,11 @@ want_tls() {
 			return 0;
 		;;
 		sparc)
+			# 2.3.6 should have tls support on sparc64
+			# when using newer binutils
 			case ${CTARGET/-*} in
-				sparc64*)
-					[[ ${ABI} == "sparc32" ]] && return 0
-					return 1
-				;;
-				*)
-					[[ ${PROFILE_ARCH} == "sparc" ]] && return 1
-					return 0
-				;;
+				sparc64*) return 1 ;;
+				*) return 0 ;;
 			esac
 		;;
 		x86)
@@ -789,6 +785,17 @@ want_tls() {
 	esac
 
 	return 1
+}
+
+want__thread() {
+	want_tls || return 1
+
+	[[ -n ${WANT__THREAD} ]] && return ${WANT__THREAD}
+
+	$(tc-getCC ${CTARGET}) -c ${FILESDIR}/test-__thread.c -o ${T}/test2.o &> /dev/null
+	WANT__THREAD=$?
+
+	return ${WANT__THREAD}
 }
 
 install_locales() {
@@ -842,12 +849,22 @@ glibc_do_configure() {
 	use erandom || myconf="${myconf} --disable-dev-erandom"
 
 	if [ "$1" == "linuxthreads" ] ; then
-		want_tls && myconf="${myconf} --with-tls --without-__thread"
-		want_tls || myconf="${myconf} --without-tls --without-__thread"
+		if want_tls ; then
+			myconf="${myconf} --with-tls"
+		else
+			myconf="${myconf} --without-tls"
+		fi
+
+		if want__thread ; then
+			myconf="${myconf} --with-__thread"
+		else
+			myconf="${myconf} --without-__thread"
+		fi
+
 		myconf="${myconf} --enable-add-ons=linuxthreads${ADDONS}"
 		myconf="${myconf} --enable-kernel=${LT_KERNEL_VERSION}"
 	elif [ "$1" == "nptl" ] ; then
-		want_nptl && myconf="${myconf} --with-tls --with-__thread"
+		myconf="${myconf} --with-tls --with-__thread"
 		myconf="${myconf} --enable-add-ons=nptl${ADDONS}"
 		myconf="${myconf} --enable-kernel=${NPTL_KERNEL_VERSION}"
 	else
