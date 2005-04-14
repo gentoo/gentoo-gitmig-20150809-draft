@@ -2,4 +2,3 @@ MD5 3f7d9437465db829816f12486f2fbad5 rubygems-0.8.10.ebuild 883
 MD5 9e07ef7f2deee3b322faa69a765499bd ChangeLog 1752
 MD5 3eec9f3fe48b51f49dbc1f171a3b026f metadata.xml 157
 MD5 8bbad53ea0e9bb1a53892ef892176238 files/digest-rubygems-0.8.10 64
-MD5 cb35efb385d388a1c8d666d07a118bbc files/rubygems-0.8.1-gentoo.diff 1510
