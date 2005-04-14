@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/fritzcapi/fritzcapi-2.6.32.ebuild,v 1.5 2005/02/27 17:59:43 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/fritzcapi/fritzcapi-2.6.32.ebuild,v 1.6 2005/04/14 13:33:48 genstef Exp $
 
 inherit linux-mod rpm eutils
 
@@ -30,9 +30,6 @@ FRITZCAPI_MODULES=("fcclassic" "fcpci" "fcpcmcia" "fcpnp" "fcusb" "fcusb2"
 FRITZCAPI_TARGETS=("fritz.classic" "fritz.pci" "fritz.pcmcia" "fritz.pnp"
 	"fritz.usb" "fritz.usb2" "fritz.xusb_CZ" "fritz.xusb" "e2220pc" "e5520pc")
 
-BUILD_PARAMS="KDIR=${KV_DIR} LIBDIR=${WORKDIR}/var/lib/fritz"
-BUILD_TARGETS="all"
-
 get_card_module_name() {
 	local CARD=$1
 	echo "${FRITZCAPI_MODULES[CARD]}(extra:${S}/${FRITZCAPI_TARGETS[CARD]}/src)"
@@ -50,6 +47,9 @@ pkg_setup() {
 	if ! linux_chkconfig_present ISDN_CAPI_CAPI20; then
 		die "For using the driver you need a kernel with enabled CAPI support."
 	fi
+
+	BUILD_PARAMS="KDIR=${KV_DIR} LIBDIR=${WORKDIR}/var/lib/fritz"
+	BUILD_TARGETS="all"
 
 	local USERCARD CARD
 	FRITZCAPI_BUILD_CARDS=""
@@ -97,11 +97,11 @@ pkg_setup() {
 }
 
 src_unpack() {
-	rpm_unpack ${DISTDIR}/km_${P/2.6./2.6-}.i586.rpm
-	rpm_unpack ${DISTDIR}/capi4linux-2004.4.5-0.i586.rpm
+	rpm_unpack ${DISTDIR}/km_${P/2.6./2.6-}.i586.rpm || die "error unpacking ${DISTDIR}/km_${P/2.6./2.6-}.i586.rpm"
+	rpm_unpack ${DISTDIR}/capi4linux-2004.4.5-0.i586.rpm || die "error unpacking ${DISTDIR}/capi4linux-2004.4.5-0.i586.rpm"
 	cd ${S}
 	for ((CARD=0; CARD < ${#AVM_SRC[*]}; CARD++)); do
-		unpack ${AVM_FILES[CARD]}.tar.gz
+		unpack ${AVM_FILES[CARD]}.tar.gz || die "error unpacking ${AVM_FILES[CARD]}.tar.gz"
 		CRD_NAME=${AVM_FILES[CARD]/-*}
 		CRD_NAME=${CRD_NAME/fc}
 		CRD_NAME=${CRD_NAME/f}
@@ -113,6 +113,10 @@ src_unpack() {
 	if kernel_is ge 2 6 10; then
 		epatch ${FILESDIR}/${PN}-fix-for-2.6.10.patch
 	fi
+	for i in $(find . -name Makefile); do
+		sed -i 's:-C \$(KDIR) SUBDIRS=:-C $(KDIR) $(if $(KBUILD_OUTPUT),O=$(KBUILD_OUTPUT)) SUBDIRS=:' ${i}
+		convert_to_m ${i}
+	done
 }
 
 src_install() {
