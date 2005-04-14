@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/gtk-imonc
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/gtk-imonc/ChangeLog,v 1.5 2005/03/22 15:15:39 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/gtk-imonc/ChangeLog,v 1.6 2005/04/14 20:54:57 mrness Exp $
+
+  14 Apr 2005; Alin Nastac <mrness@gentoo.org> -gtk-imonc-0.6.2.ebuild:
+  Remove obsolete version
 
   20 Mar 2005; Stefan Schweizer <genstef@gentoo.org>
   gtk-imonc-0.6.4.1.ebuild:
