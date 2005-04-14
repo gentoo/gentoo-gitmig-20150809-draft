@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/freeradius
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/ChangeLog,v 1.28 2005/04/12 02:25:55 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/ChangeLog,v 1.29 2005/04/14 19:12:59 mrness Exp $
+
+  14 Apr 2005; Alin Nastac <mrness@gentoo.org> freeradius-1.0.1.ebuild,
+  -freeradius-1.0.2-r1.ebuild, freeradius-1.0.2-r2.ebuild:
+  Remove old test version and inter-block with net-dialup/cistronradius package.
 
   12 Apr 2005; Jason Wever <weeve@gentoo.org> freeradius-1.0.2-r2.ebuild:
   Added ~sparc keyword.

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/freeradius-1.0.1.ebuild,v 1.6 2005/02/28 18:06:49 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/freeradius-1.0.1.ebuild,v 1.7 2005/04/14 19:12:59 mrness Exp $
 
 inherit eutils
 
@@ -13,7 +13,8 @@ KEYWORDS="x86 ~amd64 ~ppc"
 LICENSE="GPL-2"
 SLOT="0"
 
-DEPEND="virtual/libc
+DEPEND="!net-dialup/cistronradius
+	virtual/libc
 	>=sys-libs/db-3.2
 	sys-libs/gdbm
 	snmp? ( net-analyzer/net-snmp )
