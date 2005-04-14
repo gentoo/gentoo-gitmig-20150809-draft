@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/XML-LibXML-XPathContext
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-LibXML-XPathContext/ChangeLog,v 1.4 2004/06/25 01:12:07 agriffis Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-LibXML-XPathContext/ChangeLog,v 1.5 2005/04/14 10:25:43 luckyduck Exp $
+
+  14 Apr 2005; Jan Brinkmann <luckyduck@gentoo.org>
+  XML-LibXML-XPathContext-0.06.ebuild:
+  added ~amd64 to KEYWORDS, fixes #88637
 
 *XML-LibXML-XPathContext-0.06 (11 Jun 2004)
 
