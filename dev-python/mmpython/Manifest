@@ -1,10 +1,16 @@
-MD5 3ae196097506f0f6b2b8ad5608a20253 mmpython-0.4.6.ebuild 561
-MD5 9db51e255f9e3f2b4fd0a20136dd4ded mmpython-0.4.8.ebuild 562
-MD5 2bc34a2f24618998bb4949f98a26f890 mmpython-0.4.5.ebuild 561
-MD5 708495600920ec34c4b5d47483dcc4d9 mmpython-0.4.7.ebuild 561
-MD5 482cd2e02aeb305c63a30c7d0cb12a9a ChangeLog 2873
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 4393956902af510ece23760d583b0bb5 ChangeLog 3002
 MD5 ae750297e34c9a0c4929184c72684260 metadata.xml 181
-MD5 0b111ef775572fc3ea53f54c33377f1e files/digest-mmpython-0.4.5 66
-MD5 4ef270f792a9b174a750c5ceb1e657af files/digest-mmpython-0.4.6 66
-MD5 84dd4700bcfc22c0b2169ebdd61e74a0 files/digest-mmpython-0.4.7 66
+MD5 9db51e255f9e3f2b4fd0a20136dd4ded mmpython-0.4.8.ebuild 562
+MD5 708495600920ec34c4b5d47483dcc4d9 mmpython-0.4.7.ebuild 561
 MD5 287823425bfb710ec6983e0e337a13f1 files/digest-mmpython-0.4.8 66
+MD5 84dd4700bcfc22c0b2169ebdd61e74a0 files/digest-mmpython-0.4.7 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCXrv5Kf2g/qXtneoRAjQ1AKCc0fhQWJ0ILQhI6TffyIBzoG55RACgqNBZ
+0OMIvkTZGIhPuqGAdbOjZ1A=
+=lQ9X
+-----END PGP SIGNATURE-----
