@@ -1,17 +1,15 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 6a25a0f5c825925187ac3b60c5831213 ChangeLog 2613
-MD5 f99eb903f5c3e0b1e95bfd9055c6cf75 hcfpcimodem-1.03.ebuild 1353
+MD5 41411bad4bc9368c5907f12cac99c3d8 hcfpcimodem-1.05-r1.ebuild 1630
+MD5 5da43d2e5608c8b3171720da5b2f1452 ChangeLog 2759
 MD5 ec2f84816306825d125d0c01bd86758d metadata.xml 163
-MD5 7132c8bf3a59dc720cf8ceee6f4b5ad8 hcfpcimodem-1.05-r1.ebuild 1631
-MD5 13b1736e40486ab28af3387842521d86 files/digest-hcfpcimodem-1.03 72
 MD5 d456c8abc9d9cb81d489465d053395ab files/hcfpcimodem-1.05-nvminstall.patch 497
 MD5 c5a95c807346bdb475dcf710e9ff1fd2 files/digest-hcfpcimodem-1.05-r1 72
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCOXKJjiC39V7gKu0RAnk1AKCkrYNB4/H083+zI5N9kJiwpVwKWgCfWPvn
-ES1hhzB5N27FnEnGFKpO/CY=
-=wS4e
+iD4DBQFCXtsAjiC39V7gKu0RAufMAJjKq03V7aO6Nc0LEpGgxOtVDuEyAKCda3u0
+Gz304k/OCRCnVdCfE1bF0A==
+=/PuB
 -----END PGP SIGNATURE-----
