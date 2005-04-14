@@ -1,0 +1,20 @@
+diff -Narup k3b-0.11.20.orig/src/rip/k3bdvdrippingprocess.cpp k3b-0.11.20/src/rip/k3bdvdrippingprocess.cpp
+--- k3b-0.11.20.orig/src/rip/k3bdvdrippingprocess.cpp	2004-06-02 21:31:41.000000000 +1200
++++ k3b-0.11.20/src/rip/k3bdvdrippingprocess.cpp	2005-02-28 15:45:02.641948322 +1300
+@@ -83,7 +83,15 @@ void K3bDvdRippingProcess::checkRippingM
+     m_title = QString::number( (*m_dvd).getTitleNumber() );
+     if( (*m_dvd).getMaxAngle() == 1 ) {
+         kdDebug() << "K3bDvdRippingProcess) Rip Title" << endl;
+-        m_ripMode = "-P " + m_title;
++	K3bVersion tccatVersion = k3bcore->externalBinManager()->binObject("tccat")->version;
++	kdDebug() << "(K3bDvdRippingProcess) Tccat Version: " << tccatVersion.majorVersion() << "." << tccatVersion.minorVersion() << "." << tccatVersion.patchLevel() << endl;
++	if( tccatVersion.majorVersion() == 0 && tccatVersion.minorVersion() == 6 && tccatVersion.patchLevel() < 12){
++		//transcode <= 0.6.11
++        	m_ripMode = "-P " + m_title;
++	} else {
++		//transcode >= 0.6.12
++		m_ripMode = "-T " + m_title + ",-1 -L";
++	}
+     } else {
+         kdDebug() << "K3bDvdRippingProcess) Rip Angle" << endl;
+         // workaround due to buggy transcode, angle selection doesn't work with -1 (all chapters)
