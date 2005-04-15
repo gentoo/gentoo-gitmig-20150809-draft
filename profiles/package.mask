@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3825 2005/04/14 23:37:37 spyderous Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3826 2005/04/15 04:27:43 fafhrd Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -199,10 +199,10 @@ x11-terms/tilda
 # desktop - has been antiquated, and this is now broken
 # recycler - has been antiquated, and this is now broken
 # gworkspace - testing version that depended on above is unusable now
-=gnustep-apps/clipbook-0.94_pre20050106
-=gnustep-apps/desktop-0.7_pre20050106
-=gnustep-apps/recycler-0.7_pre20050106
-=gnustep-apps/gworkspace-0.6.6_pre20050106
+#=gnustep-apps/clipbook1.94_pre20050106
+#=gnustep-apps/desktop-0.7_pre20050106
+#=gnustep-apps/recycler-0.7_pre20050106
+#=gnustep-apps/gworkspace-0.6.6_pre20050106
 
 # Chris White <chriswhite@gentoo.org> (17 Mar 2005)
 # Security mask bug #82631

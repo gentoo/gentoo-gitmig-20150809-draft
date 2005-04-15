@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnustep.eclass,v 1.22 2005/03/21 09:12:42 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnustep.eclass,v 1.23 2005/04/15 04:27:43 fafhrd Exp $
 
 inherit gnustep-funcs eutils flag-o-matic
 
@@ -49,20 +49,23 @@ DOC_DEPEND="doc? ( virtual/tetex
 GNUSTEP_CORE_DEPEND="virtual/libc
 	>=sys-devel/gcc-3.0.4
 	${DOC_DEPEND}"
+##########################################
+# Armando Di Cianno <fafhrd@gentoo.org>
+# 20050414 - Removing use of the next two entries from all dependent ebuilds;
+# they were doing bad things to dependencies
 GNUSTEP_BASE_DEPEND="${GNUSTEP_CORE_DEPEND}
 	gnustep-base/gnustep-make
 	gnustep-base/gnustep-base"
 GNUSTEP_GUI_DEPEND="${GNUSTEP_BASE_DEPEND}
 	gnustep-base/gnustep-gui"
-GS_DEPEND="${GNUSTEP_GUI_DEPEND}"
+##########################################
+GS_DEPEND="gnustep-base/gnustep-env"
 DEBUG_DEPEND="debug? ( >=sys-devel/gdb-6.0 )"
 DOC_RDEPEND="doc? ( sys-apps/man
 	>=sys-apps/texinfo-4.6* )"
 GS_RDEPEND="${GS_DEPEND}
 	${DEBUG_DEPEND}
-	${DOC_RDEPEND}
-	virtual/gnustep-back
-	gnustep-base/gnustep-env"
+	${DOC_RDEPEND}"
 ###########################################################################
 
 ###########################################################################
