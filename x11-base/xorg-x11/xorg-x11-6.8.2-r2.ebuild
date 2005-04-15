@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.2-r2.ebuild,v 1.1 2005/04/14 23:38:16 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.2-r2.ebuild,v 1.2 2005/04/15 19:42:58 spyderous Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -504,7 +504,7 @@ host_def_setup() {
 	ebegin "Setting up ${HOSTCONF}"
 		cd ${S}; cp ${FILES_DIR}/site.def ${HOSTCONF} \
 			|| die "host.def copy failed"
-		echo "#define XVendorString \"Gentoo Linux (The X.Org Foundation ${PV}, revision ${PR}-${PATCH_VER})\"" \
+		echo "#define XVendorString \"Gentoo (The X.Org Foundation ${PV}, revision ${PR}-${PATCH_VER})\"" \
 			>> ${HOSTCONF}
 
 		# Pending http://bugs.gentoo.org/show_bug.cgi?id=49038 and
