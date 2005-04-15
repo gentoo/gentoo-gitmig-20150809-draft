@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/usermin
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/ChangeLog,v 1.56 2005/04/15 00:23:24 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/ChangeLog,v 1.57 2005/04/15 00:51:38 eradicator Exp $
+
+  15 Apr 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  usermin-1.130.ebuild:
+  Added missing var to export list.
 
 *usermin-1.130 (15 Apr 2005)
 

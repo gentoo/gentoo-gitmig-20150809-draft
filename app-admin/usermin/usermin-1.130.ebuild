@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/usermin-1.130.ebuild,v 1.2 2005/04/15 00:27:35 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/usermin-1.130.ebuild,v 1.3 2005/04/15 00:51:38 eradicator Exp $
 
 IUSE="ssl"
 
@@ -69,7 +69,7 @@ src_install() {
 	nouninstall=1
 	noperlpath=1
 	tempdir="${T}"
-	export config_dir var_dir perl autoos port login crypt host ssl nochown autothird nouninstall nostart noperlpath tempdir
+	export config_dir var_dir perl autoos port login crypt host ssl atboot nostart nochown autothird nouninstall noperlpath tempdir
 	${D}/usr/libexec/usermin/setup.sh > ${T}/usermin-setup.out 2>&1 || die "Failed to create initial usermin configuration."
 
 	# Fixup the config files to use their real locations
