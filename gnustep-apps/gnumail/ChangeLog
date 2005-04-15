@@ -1,6 +1,12 @@
 # ChangeLog for gnustep-apps/gnumail
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gnumail/ChangeLog,v 1.15 2005/03/17 20:57:35 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gnumail/ChangeLog,v 1.16 2005/04/15 05:09:36 fafhrd Exp $
+
+*gnumail-1.2.0_pre20050414 (15 Apr 2005)
+
+  15 Apr 2005; Armando Di Cianno <fafhrd@gentoo.org>
+  -gnumail-1.2.0_pre20050106-r1.ebuild, +gnumail-1.2.0_pre20050414.ebuild:
+  General GNUMail related ebuild version bumps
 
 *gnumail-1.2.0_pre20050312 (17 Mar 2005)
 
