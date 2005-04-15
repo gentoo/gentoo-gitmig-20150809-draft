@@ -1,5 +1,18 @@
-MD5 1dc1b1ef08b3eeb234425d0d20940a5c webgraph-1.4.ebuild 1370
-MD5 0e26162761f84c42abfa7141abd7fe77 ChangeLog 514
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 e6f2f551e5a05c4c993cd185e015f91d webgraph-1.4.ebuild 1432
+MD5 b14892083231abbc6b7de25b7c430a9b ChangeLog 852
+MD5 03e4e5d5a591502e4fe084cc0919303d webgraph-1.4.1.ebuild 1443
 MD5 0c9017518e143d58321621a078612580 metadata.xml 340
+MD5 ce2de7b5b8bcadaaedcce0d9912e5ac0 files/webgraph-1.4-gentoo.patch 1032
 MD5 691e86513d4baf7f43f8159360c15094 files/digest-webgraph-1.4 67
-MD5 ce2de7b5b8bcadaaedcce0d9912e5ac0 files/webgraph-gentoo.patch 1032
+MD5 049d988590f3dd6aed3a765931e542e4 files/digest-webgraph-1.4.1 69
+MD5 ff38403e894b727d945834e40263d4b9 files/webgraph-1.4.1-gentoo.patch 1404
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCX73b06ebR+OMO78RAlXeAJ9s4geY9wshmZ28LVHWGk6bZZ/FYwCfV0qN
+Lt+f52+NOvTgMCrsgO0nJMc=
+=PFJG
+-----END PGP SIGNATURE-----
