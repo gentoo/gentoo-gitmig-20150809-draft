@@ -1,6 +1,23 @@
 # ChangeLog for dev-lisp/clisp
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clisp/ChangeLog,v 1.32 2005/03/18 08:17:20 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clisp/ChangeLog,v 1.33 2005/04/15 19:33:01 mkennedy Exp $
+
+  15 Apr 2005; Matthew Kennedy <mkennedy@gentoo.org>
+  -files/2.31/bindings-wildcard-fnmatch.c-gentoo.patch,
+  -files/2.31/fastcgi-Makefile.in-gentoo.patch,
+  -files/2.32/fastcgi-Makefile.in-gentoo.patch,
+  -files/2.32/format.lisp-gentoo.patch,
+  -files/2.33.1/fastcgi-Makefile.in-gentoo.patch,
+  -files/2.33/berkely-db-configure-gentoo.patch.gz,
+  -files/2.31/bindings-glibc-linux.lisp-gentoo.patch,
+  -files/2.33/fastcgi-Makefile.in-gentoo.patch,
+  -files/2.33/format.lisp-gentoo.patch, -files/install-clc.lisp,
+  -clisp-2.28.ebuild, -clisp-2.29.ebuild, -clisp-2.30.ebuild,
+  -clisp-2.30-r1.ebuild, -clisp-2.31.ebuild, -clisp-2.31-r1.ebuild,
+  -clisp-2.32.ebuild, -clisp-2.32-r1.ebuild, -clisp-2.33.ebuild,
+  -clisp-2.33-r1.ebuild, -clisp-2.33-r2.ebuild, -clisp-2.33.1.ebuild,
+  -clisp-2.33.2.ebuild, -clisp-2.33.2-r1.ebuild:
+  Removed old ebuilds
 
   18 Mar 2005; Matthew Kennedy <mkennedy@gentoo.org> clisp-2.33.2-r2.ebuild:
   Keywording for ~amd64
