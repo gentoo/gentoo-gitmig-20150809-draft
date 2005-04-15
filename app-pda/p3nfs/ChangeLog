@@ -1,0 +1,9 @@
+# ChangeLog for app-pda/p3nfs
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-pda/p3nfs/ChangeLog,v 1.1 2005/04/15 11:56:31 brix Exp $
+
+*p3nfs-5.16 (15 Apr 2005)
+
+  15 Apr 2005; <brix@gentoo.org> +metadata.xml, +p3nfs-5.16.ebuild:
+  Initial import. Fixes bug #37010.
+
