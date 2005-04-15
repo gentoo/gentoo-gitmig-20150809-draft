@@ -1,0 +1,69 @@
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/ppc64/use.mask,v 1.1 2005/04/15 16:58:18 solar Exp $
+# This is an exact copy of the ppc64 use.mask
+
+# this is a list of USE flags
+# that should not be used on PPC64
+# Tom Gall <tgall@gentoo.org> manages this list
+afs
+acpi
+3dfx
+directfb
+emboss
+avi
+icc
+icc-pgo
+ifc
+krb4
+mplayer
+pda
+prelude
+ruby
+svga
+scanner
+firebird
+mzscheme
+chasen
+fdftk
+mono
+
+# should be ok
+jikes
+junit
+
+guile
+caps
+
+# for now from xorg ... but likely not for long as this is desirable!
+dlloader
+
+# see email to gentoo-dev with subject "use.mask and PHP5's crazy IUSE"
+# Dated Sat, 31 Jul 2004 14:49:28 -0700, from robbat2@gentoo.org
+# all of these are binary-only, and not presently available on this
+# architecture.
+adabas
+birdstep
+cpdflib
+db2
+dbmaker
+empress
+empress-bcs
+esoob
+filepro
+frontbase
+hyperwave
+informix
+ingres
+oracle7
+oci8
+pfpro
+solid
+sybase
+sybase-ct
+glitz
+cairo
+
+# dietlibc
+diet
+
+# Unmask our instruction sets
+-altivec
