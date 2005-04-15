@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/tagtool
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/tagtool/ChangeLog,v 1.10 2004/12/19 06:53:58 eradicator Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/tagtool/ChangeLog,v 1.11 2005/04/15 20:23:09 luckyduck Exp $
+
+*tagtool-0.12.1 (15 Apr 2005)
+
+  15 Apr 2005; Jan Brinkmann <luckyduck@gentoo.org> metadata.xml,
+  -tagtool-0.10.ebuild, tagtool-0.11.1.ebuild, +tagtool-0.12.1.ebuild:
+  new upstream version, fixes #68864. updated metadata.xml, chriswhite is
+  retired. changed oggvorbis useflag to vorbis, oggvorbis is deprecated. also
+  did some cleanup.
 
   18 Dec 2004; Jeremy Huddleston <eradicator@gentoo.org>
   tagtool-0.11.1.ebuild:
