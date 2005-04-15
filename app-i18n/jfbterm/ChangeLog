@@ -1,6 +1,12 @@
 # ChangeLog for app-i18n/jfbterm
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/jfbterm/ChangeLog,v 1.27 2005/04/09 20:33:09 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/jfbterm/ChangeLog,v 1.28 2005/04/15 17:19:59 usata Exp $
+
+*jfbterm-0.4.7-r1 (15 Apr 2005)
+
+  15 Apr 2005; <usata@gentoo.org> +files/jfbterm-0.4.7-sigchld-debian.patch,
+  +jfbterm-0.4.7-r1.ebuild:
+  Fixed screen lockup problem (patch taken from Debian package).
 
   09 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> jfbterm-0.4.7.ebuild:
   Stable on ppc.
