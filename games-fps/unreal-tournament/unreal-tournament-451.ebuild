@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/unreal-tournament/unreal-tournament-451.ebuild,v 1.13 2005/04/01 23:08:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/unreal-tournament/unreal-tournament-451.ebuild,v 1.14 2005/04/15 13:31:43 luckyduck Exp $
 
 inherit eutils games
 
@@ -11,12 +11,16 @@ SRC_URI="ftp://ftp.lokigames.com/pub/patches/ut/ut-install-436.run
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="-* x86"
+KEYWORDS="-* x86 ~amd64"
 IUSE="3dfx X opengl"
 
 RDEPEND="X? ( virtual/x11 )
 	=media-libs/libsdl-1.2*
-	opengl? ( virtual/opengl )"
+	opengl? ( virtual/opengl )
+	amd64? ( app-emulation/emul-linux-x86-sdl
+		app-emulation/emul-linux-x86-baselibs
+		X? ( app-emulation/emul-linux-x86-xlibs )
+	)"
 DEPEND="${RDEPEND}
 	!games-fps/unreal-tournament-goty"
 

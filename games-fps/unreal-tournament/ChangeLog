@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/unreal-tournament
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/unreal-tournament/ChangeLog,v 1.7 2004/07/01 11:18:45 eradicator Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/unreal-tournament/ChangeLog,v 1.8 2005/04/15 13:31:43 luckyduck Exp $
+
+  15 Apr 2005; Jan Brinkmann <luckyduck@gentoo.org>
+  unreal-tournament-451.ebuild:
+  added ~amd64 to KEYWORDS and dependencies needed for amd64. fixes #88776
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   unreal-tournament-451.ebuild:

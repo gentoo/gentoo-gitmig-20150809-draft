@@ -1,6 +1,16 @@
-MD5 28f52328a473a8029114c704868d573d ChangeLog 1559
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 fd2318f22f7dde7cdd416689774bb287 unreal-tournament-436.ebuild 3048
+MD5 e55c89411a767d0244c2a27c18b420dc unreal-tournament-451.ebuild 3714
+MD5 a6e258b74ff7ceb89f6f4cb1773f5e03 ChangeLog 1718
 MD5 745cf2302a475c4f92c2aae453c20c14 metadata.xml 1595
-MD5 f21fc9ff6edd41b9a0502bd2b627b2fc unreal-tournament-436.ebuild 3047
-MD5 53491cb79a719f5f2d5943fbee7b352a unreal-tournament-451.ebuild 3574
 MD5 0a78b913dfc50ea965a0215f2c41a1a5 files/digest-unreal-tournament-436 137
 MD5 3e6449f274a09ed26511140113deaff0 files/digest-unreal-tournament-451 130
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCX8JR06ebR+OMO78RAuBUAJ9gvNvWkrkKWX+vXIuI7GVefyMIMgCeIUOc
+clhTAr3PXiAXqEtxAdsZNLg=
+=sR6l
+-----END PGP SIGNATURE-----
