@@ -1,6 +1,12 @@
 # ChangeLog for dev-lisp/cl-defsystem3
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-defsystem3/ChangeLog,v 1.15 2005/03/18 07:56:22 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-defsystem3/ChangeLog,v 1.16 2005/04/15 19:18:29 mkennedy Exp $
+
+  15 Apr 2005; Matthew Kennedy <mkennedy@gentoo.org>
+  -cl-defsystem3-3.3i.ebuild, -cl-defsystem3-3.3i-r1.ebuild,
+  -cl-defsystem3-3.3i-r2.ebuild, -cl-defsystem3-3.3i-r3.ebuild,
+  -cl-defsystem3-3.3i-r4.ebuild, cl-defsystem3-3.3i-r5.ebuild:
+  Keywording stable x86; Removed old ebuilds
 
   18 Mar 2005; Matthew Kennedy <mkennedy@gentoo.org>
   cl-defsystem3-3.3i-r5.ebuild:

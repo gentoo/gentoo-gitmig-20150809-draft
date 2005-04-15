@@ -1,6 +1,10 @@
 # ChangeLog for dev-lisp/cl-chemical-compounds
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-chemical-compounds/ChangeLog,v 1.1 2005/02/10 22:22:54 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-chemical-compounds/ChangeLog,v 1.2 2005/04/15 19:12:57 mkennedy Exp $
+
+  15 Apr 2005; Matthew Kennedy <mkennedy@gentoo.org>
+  cl-chemical-compounds-1.0.2.ebuild:
+  Keywording ~ppc
 
 *cl-chemical-compounds-1.0.2 (10 Feb 2005)
 

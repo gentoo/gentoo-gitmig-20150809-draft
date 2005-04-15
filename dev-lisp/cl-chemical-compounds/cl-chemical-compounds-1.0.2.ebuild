@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-chemical-compounds/cl-chemical-compounds-1.0.2.ebuild,v 1.1 2005/02/10 22:22:54 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-chemical-compounds/cl-chemical-compounds-1.0.2.ebuild,v 1.2 2005/04/15 19:12:57 mkennedy Exp $
 
 inherit common-lisp eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://common-lisp.net/project/chemboy/
 SRC_URI="mirror://gentoo/chemical-compounds-${PV}.tar.gz"
 LICENSE="LLGPL-2.1"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64 ~ppc"
 IUSE=""
 
 DEPEND="dev-lisp/cl-periodic-table"
