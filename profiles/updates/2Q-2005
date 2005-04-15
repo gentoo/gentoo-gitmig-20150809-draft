@@ -5,3 +5,4 @@ move dev-java/xt-bin dev-java/xt
 move dev-java/fesi-bin dev-java/fesi
 move app-emulation/mips64emul app-emulation/gxemul
 move dev-java/java-gtk dev-java/libgtk-java
+move dev-java/webgraph-bin dev-java/webgraph
