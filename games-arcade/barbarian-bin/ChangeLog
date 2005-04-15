@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/barbarian-bin
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/barbarian-bin/ChangeLog,v 1.1 2004/12/13 08:39:22 mr_bones_ Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/barbarian-bin/ChangeLog,v 1.2 2005/04/15 11:22:00 wolf31o2 Exp $
+
+  15 Apr 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  barbarian-bin-1.01.ebuild:
+  Changed HOMEPAGE and closing bug #89168.
 
 *barbarian-bin-1.01 (13 Dec 2004)
 
