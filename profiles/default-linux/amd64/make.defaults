@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/make.defaults,v 1.6 2005/03/09 00:35:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/make.defaults,v 1.7 2005/04/15 14:33:54 blubb Exp $
 
 GRP_STAGE23_USE="${STAGE1_USE} ipv6 pam tcpd readline nls ssl gpm perl python berkdb ncurses readline zlib -java"
 
@@ -11,3 +11,6 @@ ARCH="amd64"
 ACCEPT_KEYWORDS="${ARCH}"
 
 CHOST="x86_64-pc-linux-gnu"
+
+CFLAGS="-O2 -pipe"
+CXXFLAGS="${CFLAGS}"
