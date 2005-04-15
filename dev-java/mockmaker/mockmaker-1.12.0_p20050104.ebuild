@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/mockmaker/mockmaker-1.12.0_p20050104.ebuild,v 1.1 2005/01/04 23:13:33 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/mockmaker/mockmaker-1.12.0_p20050104.ebuild,v 1.2 2005/04/15 16:35:44 luckyduck Exp $
 
 inherit java-pkg
 
@@ -9,7 +9,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 HOMEPAGE="http://mockmaker.sourceforge.net"
 LICENSE="MIT"
 SLOT="1.12"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~x86 ~amd64 ~ppc"
 IUSE="jikes"
 DEPEND=">=virtual/jdk-1.4
 	jikes? ( >=dev-java/jikes-1.21 )
@@ -27,17 +27,15 @@ src_unpack() {
 
 src_compile() {
 	local antflags="compile"
-	if use jikes; then
-		antflags="${antflags} -Dbuild.compiler=jikes"
-	fi
+	use jikes && antflags="${antflags} -Dbuild.compiler=jikes"
 	ant ${antflags} || die "failed to build"
 }
 
 src_install() {
 	java-pkg_dojar dist/tmp/${PN}.jar
-	dodoc LICENSE.txt README.txt
 
 	if use doc; then
+		dodoc README.txt
 		java-pkg_dohtml -r doc/*
 	fi
 }

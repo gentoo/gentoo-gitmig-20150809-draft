@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/dbunit/dbunit-2.1.ebuild,v 1.1 2005/01/04 23:45:14 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/dbunit/dbunit-2.1.ebuild,v 1.2 2005/04/15 16:36:54 luckyduck Exp $
 
 inherit java-pkg
 
@@ -9,7 +9,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}-src.tar.gz"
 HOMEPAGE="http://www.dbunit.org"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~x86 ~amd64 ~ppc"
 DEPEND=">=virtual/jdk-1.4
 	jikes? ( >=dev-java/jikes-1.21 )
 	>=dev-java/ant-core-1.6"
