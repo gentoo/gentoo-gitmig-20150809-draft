@@ -1,10 +1,10 @@
 # ChangeLog for net-dialup/fcdsl
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/fcdsl/ChangeLog,v 1.15 2005/04/15 20:03:57 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/fcdsl/ChangeLog,v 1.16 2005/04/15 20:05:48 genstef Exp $
 
   15 Apr 2005; Stefan Schweizer <genstef@gentoo.org>
   fcdsl-2.6.20.7-r4.ebuild:
-  Remove fcdsl installation in favour of net-dialup/fcdsl
+  Remove drdsl installation in favour of net-dialup/drdsl
 
   29 Mar 2005; Stefan Schweizer <genstef@gentoo.org>
   fcdsl-2.6.20.7-r4.ebuild:
