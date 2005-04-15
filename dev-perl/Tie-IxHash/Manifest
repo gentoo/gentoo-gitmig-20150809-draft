@@ -1,6 +1,16 @@
-MD5 17de5f23b47742a5a9c4dc98ae42f71c ChangeLog 967
-MD5 f06b3cc80b52aeebcd15d047453cb137 Tie-IxHash-1.21-r1.ebuild 504
-MD5 93091685ca7bd4a2538e6d43e1e4c488 Tie-IxHash-1.21.ebuild 495
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 bccc936671ec580998d8b32f7cc9388b ChangeLog 1044
+MD5 9b9ff64f3bb481d036493d6389f4470a Tie-IxHash-1.21-r1.ebuild 510
+MD5 d55b44cfdd9d188b531cd16285b50d80 Tie-IxHash-1.21.ebuild 493
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 b51a79dd0aa09c8a942dd2939d5a5a99 files/digest-Tie-IxHash-1.21 65
 MD5 b51a79dd0aa09c8a942dd2939d5a5a99 files/digest-Tie-IxHash-1.21-r1 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCX/C160LfUIagIAkRAiZpAKCbpS4UTmtFDoiZ7CTZn4lhBUVEFACeMSgY
+GAOF7eH9j5F/GqZ4JFbffoQ=
+=J+/K
+-----END PGP SIGNATURE-----
