@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/cpio/cpio-2.6-r2.ebuild,v 1.2 2005/03/30 19:12:01 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/cpio/cpio-2.6-r2.ebuild,v 1.3 2005/04/15 04:56:13 vapier Exp $
 
 inherit eutils
 
@@ -22,6 +22,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${PV}-isnumber.patch #74929
 	epatch "${FILESDIR}"/${PV}-umask.patch #79844
 	epatch "${FILESDIR}"/${PV}-lstat.patch #80246
+	epatch "${FILESDIR}"/${P}-gcc4-tests.patch #89123
 }
 
 src_compile() {
