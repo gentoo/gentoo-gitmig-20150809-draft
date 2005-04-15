@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/fcdsl/fcdsl-2.6.20.7-r4.ebuild,v 1.6 2005/03/30 09:15:31 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/fcdsl/fcdsl-2.6.20.7-r4.ebuild,v 1.7 2005/04/15 20:03:57 genstef Exp $
 
 inherit linux-mod eutils
 
@@ -20,7 +20,7 @@ done
 
 LICENSE="LGPL-2"
 KEYWORDS="x86"
-IUSE=""
+IUSE="utf8"
 SLOT="0"
 S=${WORKDIR}/fritz
 
@@ -73,15 +73,20 @@ src_unpack() {
 	done
 
 	ln -s ${FCDSL_MODULES[0]/fc/fritz.} fritz
+
+	# convert docs from latin1 to UTF-8
+	if useq utf8; then
+		for i in fritz/compile-help-german.txt; do
+			einfo "Converting '${i##*/}' to UTF-8"
+			iconv -f latin1 -t utf8 -o "${i}~" "${i}" && mv -f "${i}~" "${i}" || rm -f "${i}~"
+		done
+	fi
 }
 
 src_install() {
 	linux-mod_src_install
 
-	dodir /etc/drdsl /etc/modules.d /lib/firmware /usr/sbin
-
-	echo "# modules.d config file for AVM FRITZ!Card DSL" >${D}/etc/modules.d/fcdsl
-	echo "# Correct these settings with the output from drdsl -n" >>${D}/etc/modules.d/fcdsl
+	dodir /lib/firmware
 
 	for ((CARD=0; CARD < ${#FCDSL_MODULES[*]}; CARD++)); do
 		if [ -n "${FCDSL_CARDS}" ] ; then
@@ -92,35 +97,27 @@ src_install() {
 			if [ -z "${INS}" ]; then continue; fi
 		fi
 
-		echo "#options ${FCDSL_MODULES[CARD]} VPI=1 VCI=32 VCC=1" >>${D}/etc/modules.d/fcdsl
-
 		insinto /lib/firmware
 		doins ${WORKDIR}/${FCDSL_MODULES[CARD]/fc/fritz.}/${FCDSL_FIRMWARES[CARD]}
 	done
 
-	insinto /etc/drdsl
-	doins ${S}/drdsl.ini
-
-	exeinto /usr/sbin
-	doexe ${S}/drdsl
-
-	dodoc ${S}/CAPI* ${S}/compile* ${S}/license.txt
+	dodoc *.txt
+	dohtml *.html *.jpg
 }
 
 pkg_postinst() {
-	linux-mod_pkg_postinst
+	update_depmod
 
-	echo
+	einfo "The preferred way to setup your card is either /etc/capi.conf"
+	einfo "or hotplug, since USB-Cards are detected automatically."
+	einfo
 	einfo "If you want to setup your DSL card driver and create a peer file, please run:"
 	einfo "    etc-update"
 	einfo "    ebuild /var/db/pkg/net-dialup/${PF}/${PF}.ebuild config"
 	einfo "    /etc/init.d/capi start"
-	einfo "    drdsl -n"
-	einfo "    nano /etc/modules.d/fcdsl"
-	einfo "    update-modules"
-	einfo "    /etc/init.d/capi restart"
+	einfo "    drdsl"
 	ewarn
-	ewarn "drdsl does NOT work with capi4k-utils-2005* because its binary incompatible"
+	ewarn "'drdsl' has now its own ebuild. Please emerge net-dialup/drdsl."
 	epause 10
 }
 
