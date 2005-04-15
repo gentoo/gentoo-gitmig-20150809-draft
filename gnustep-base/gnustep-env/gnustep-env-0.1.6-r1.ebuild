@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-env/gnustep-env-0.1.6.ebuild,v 1.2 2005/04/15 04:31:38 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-env/gnustep-env-0.1.6-r1.ebuild,v 1.1 2005/04/15 04:31:38 fafhrd Exp $
 
 inherit gnustep
 
@@ -13,9 +13,12 @@ LICENSE="GPL-2"
 KEYWORDS="~x86 ~ppc ~alpha ~sparc ~amd64"
 
 IUSE=""
-DEPEND="${GS_DEPEND}
-	>=gnustep-base/gnustep-base-1.10.2"
-RDEPEND="${GS_RDEPEND}"
+DEPEND="~gnustep-base/gnustep-make-1.10.0
+	>=gnustep-base/gnustep-base-1.10.2
+	>=gnustep-base/gnustep-gui-0.9.5
+	virtual/gnustep-back"
+#RDEPEND="${GS_RDEPEND}"
+RDEPEND="${DEPEND}"
 
 egnustep_install_domain="System"
 
