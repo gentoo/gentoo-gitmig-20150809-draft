@@ -1,6 +1,6 @@
 diff -Narup k3b-0.11.23/src/rip/k3bdvdrippingprocess.cpp k3b-0.11.23-new/src/rip/k3bdvdrippingprocess.cpp
---- k3b-0.11.23.orig/src/rip/k3bdvdrippingprocess.cpp	2004-06-02 21:31:41.000000000 +1200
-+++ k3b-0.11.23/src/rip/k3bdvdrippingprocess.cpp	2005-04-15 11:21:13.000000000 +1200
+--- k3b-0.11.23/src/rip/k3bdvdrippingprocess.cpp	2004-06-02 21:31:41.000000000 +1200
++++ k3b-0.11.23.new/src/rip/k3bdvdrippingprocess.cpp	2005-04-15 11:21:13.000000000 +1200
 @@ -83,7 +83,15 @@ void K3bDvdRippingProcess::checkRippingM
      m_title = QString::number( (*m_dvd).getTitleNumber() );
      if( (*m_dvd).getMaxAngle() == 1 ) {
