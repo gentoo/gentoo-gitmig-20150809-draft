@@ -1,0 +1,7 @@
+# ChangeLog for dev-util/git
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/git/ChangeLog,v 1.1 2005/04/15 15:15:30 r3pek Exp $
+
+  15 Apr 2005; Carlos Silva <r3pek@gentoo.org> +metadata.xml:
+  Initial import
+
