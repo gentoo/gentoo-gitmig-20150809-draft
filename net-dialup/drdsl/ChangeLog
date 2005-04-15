@@ -1,0 +1,10 @@
+# ChangeLog for net-dialup/drdsl
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/drdsl/ChangeLog,v 1.1 2005/04/15 18:49:22 genstef Exp $
+
+*drdsl-1.2.0 (15 Apr 2005)
+
+  15 Apr 2005; Stefan Schweizer <genstef@gentoo.org> +metadata.xml,
+  +drdsl-1.2.0.ebuild:
+  New ebuild thanks to Stefan Briesenick <sbriesen@gmx.de>
+
