@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-0.11.19.ebuild,v 1.6 2005/04/08 09:46:54 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-0.11.23-r2.ebuild,v 1.1 2005/04/15 19:43:36 carlo Exp $
 
 inherit kde eutils
 
@@ -17,9 +17,10 @@ DEPEND="arts? ( kde-base/arts )
 	media-libs/libsamplerate
 	>=media-sound/cdparanoia-3.9.8
 	>=media-libs/id3lib-3.8.0_pre2
-	flac? ( <media-libs/flac-1.1.2 )
+	flac? ( media-libs/flac )
 	mad? ( media-libs/libmad )
 	oggvorbis? ( media-libs/libvorbis )"
+
 RDEPEND="${DEPEND}
 	virtual/cdrtools
 	>=app-cdr/cdrdao-1.1.7-r3
@@ -27,7 +28,7 @@ RDEPEND="${DEPEND}
 	dvdr? ( app-cdr/dvd+rw-tools )
 	encode? ( media-sound/lame
 		  media-sound/sox
-		  !amd64? ( <media-video/transcode-0.6.12 )
+		  media-video/transcode
 		  media-video/vcdimager )"
 
 need-kde 3.1
@@ -48,20 +49,27 @@ for X in $LANGS; do
 	SRC_URI="${SRC_URI} linguas_${X}? ( mirror://sourceforge/k3b/${I18N}.tar.bz2 )"
 done
 
+pkg_setup() {
+	if use encode ; then
+		echo
+		ewarn "Please notice, that K3b does not support ripping Video DVDs with >=media-video/transcode-0.6.12."
+		echo
+	fi
+}
 src_unpack() {
 	kde_src_unpack
-	epatch ${FILESDIR}/k3b-0.11.17-noarts.patch
-
+	epatch "${FILESDIR}/k3b-0.11.17-noarts.patch"
+	epatch "${FILESDIR}/k3b-dvdrip-transcode.patch"
 	make -f admin/Makefile.common || die
 }
 
 src_compile() {
 	local _S=${S}
-	local myconf="--enable-libsuffix= $(use_with kde k3bsetup) \
-		--with-external-libsamplerate"
+	local myconf="--enable-libsuffix= $(use_with kde k3bsetup)
+		      --with-external-libsamplerate --without-resmgr
+		      $(use_with oggvorbis) $(use_with mad libmad)
+		      $(use_with flac)"
 
-	# it is important to disable flac for bug #82558.
-	use flac || export ac_cv_lib_FLAC_FLAC__seekable_stream_decoder_process_single="no"
 
 	# Build process of K3B
 	kde_src_compile
@@ -86,15 +94,13 @@ src_install() {
 		make DESTDIR=${D} install || die
 	fi
 
-	# install menu entry and icon
+	# install menu entry
 	dodir /usr/share/applications
 	mv ${D}/usr/share/applnk/Multimedia/k3b.desktop ${D}/usr/share/applications
 	if use kde; then
 		mv ${D}/usr/share/applnk/Settings/System/k3bsetup2.desktop ${D}/usr/share/applications
 	fi
 	rm -fR ${D}/usr/share/applnk/
-	dodir /usr/share/pixmaps
-	cp ${D}/usr/share/icons/crystalsvg/32x32/apps/k3b.png ${D}/usr/share/pixmaps/
 }
 
 pkg_postinst() {

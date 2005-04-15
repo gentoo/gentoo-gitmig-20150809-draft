@@ -1,6 +1,6 @@
-diff -Narup k3b-0.11.20.orig/src/rip/k3bdvdrippingprocess.cpp k3b-0.11.20/src/rip/k3bdvdrippingprocess.cpp
---- k3b-0.11.20.orig/src/rip/k3bdvdrippingprocess.cpp	2004-06-02 21:31:41.000000000 +1200
-+++ k3b-0.11.20/src/rip/k3bdvdrippingprocess.cpp	2005-02-28 15:45:02.641948322 +1300
+diff -Narup k3b-0.11.23/src/rip/k3bdvdrippingprocess.cpp k3b-0.11.23-new/src/rip/k3bdvdrippingprocess.cpp
+--- k3b-0.11.23.orig/src/rip/k3bdvdrippingprocess.cpp	2004-06-02 21:31:41.000000000 +1200
++++ k3b-0.11.23/src/rip/k3bdvdrippingprocess.cpp	2005-04-15 11:21:13.000000000 +1200
 @@ -83,7 +83,15 @@ void K3bDvdRippingProcess::checkRippingM
      m_title = QString::number( (*m_dvd).getTitleNumber() );
      if( (*m_dvd).getMaxAngle() == 1 ) {
@@ -18,3 +18,23 @@ diff -Narup k3b-0.11.20.orig/src/rip/k3bdvdrippingprocess.cpp k3b-0.11.20/src/ri
      } else {
          kdDebug() << "K3bDvdRippingProcess) Rip Angle" << endl;
          // workaround due to buggy transcode, angle selection doesn't work with -1 (all chapters)
+@@ -119,13 +127,19 @@ void K3bDvdRippingProcess::startRippingP
+     connect( m_audioProcess, SIGNAL( finished() ), this, SLOT( slotAudioProcessFinished() ) );
+     m_delAudioProcess = true;
+     */
++
+     const K3bExternalBin *m_tccatBin = k3bcore->externalBinManager()->binObject("tccat");
++
++    /*
++     * This check probably not required any more
++     *
+     if( m_tccatBin->version >= K3bVersion( 0, 6, 12 ) ) {
+       emit infoMessage( i18n("Sorry, K3b does not support ripping Video DVDs with transcode >= 0.6.12 yet."),
+ 			ERROR );
+       emit finished( false );
+       return;
+     }
++    */
+ 
+     m_ripProcess = new KShellProcess();
+     kdDebug() << "(K3bDvdRippingProcess)" << m_tccatBin->path << " -i " << m_device <<" "<< m_ripMode << endl;
