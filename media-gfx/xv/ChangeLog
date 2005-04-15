@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/xv
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/ChangeLog,v 1.51 2005/03/14 01:45:03 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/ChangeLog,v 1.52 2005/04/15 09:26:21 taviso Exp $
+
+*xv-3.10a-r11 (15 Apr 2005)
+
+  15 Apr 2005; Tavis Ormandy <taviso@gentoo.org>
+  +files/xv-3.10a-bmpfix.patch.bz2, +files/xv-3.10a-yaos.dif.bz2,
+  +xv-3.10a-r11.ebuild:
+  switching to the jumbo patch format, includes security fixes.
 
   13 Mar 2005; Hardave Riar <hardave@gentoo.org> xv-3.10a-r10.ebuild:
   Stable on mips, bug #83686.
