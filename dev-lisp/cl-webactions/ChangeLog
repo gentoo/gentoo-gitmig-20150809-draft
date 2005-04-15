@@ -1,6 +1,10 @@
 # ChangeLog for dev-lisp/cl-webactions
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-webactions/ChangeLog,v 1.3 2005/02/24 07:28:55 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-webactions/ChangeLog,v 1.4 2005/04/15 17:10:46 mkennedy Exp $
+
+  15 Apr 2005; Matthew Kennedy <mkennedy@gentoo.org>
+  cl-webactions-1.2.42.20050220.ebuild:
+  Keywording stable x86
 
 *cl-webactions-1.2.42.20050220 (24 Feb 2005)
 
