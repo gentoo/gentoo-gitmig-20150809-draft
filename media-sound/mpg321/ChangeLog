@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/mpg321
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg321/ChangeLog,v 1.29 2005/04/03 14:22:51 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg321/ChangeLog,v 1.30 2005/04/15 03:33:17 geoman Exp $
+
+  15 Apr 2005; Stephen P. Becker <geoman@gentoo.org>
+  mpg321-0.2.10-r1.ebuild, mpg321-0.2.10-r2.ebuild:
+  changed to -mips until mad issues are worked out
 
   03 Apr 2005; Hardave Riar <hardave@gentoo.org> mpg321-0.2.10-r2.ebuild:
   Stable on mips, bug #86033.

@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/mp3splt
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3splt/ChangeLog,v 1.12 2004/11/23 20:03:35 eradicator Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3splt/ChangeLog,v 1.13 2005/04/15 03:35:13 geoman Exp $
+
+  15 Apr 2005; Stephen P. Becker <geoman@gentoo.org> mp3splt-1.9.ebuild,
+  mp3splt-2.0.ebuild, mp3splt-2.1.ebuild:
+  changed to -mips until mad issues are worked out
 
   23 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org> mp3splt-2.1.ebuild:
   --enable-ogg is broken...

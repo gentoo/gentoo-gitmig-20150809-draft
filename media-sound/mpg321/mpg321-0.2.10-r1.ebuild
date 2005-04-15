@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg321/mpg321-0.2.10-r1.ebuild,v 1.25 2005/03/23 15:09:13 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg321/mpg321-0.2.10-r1.ebuild,v 1.26 2005/04/15 03:33:17 geoman Exp $
 
 IUSE=""
 
@@ -14,7 +14,7 @@ DEPEND="media-libs/libmad
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="amd64 x86 ~ppc sparc mips alpha ppc64"
+KEYWORDS="amd64 x86 ~ppc sparc -mips alpha ppc64"
 
 PROVIDE="virtual/mpg123"
 
