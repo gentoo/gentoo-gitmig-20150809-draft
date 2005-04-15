@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/utempter
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/utempter/ChangeLog,v 1.27 2005/03/31 16:04:28 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/utempter/ChangeLog,v 1.28 2005/04/15 12:41:44 seemant Exp $
+
+  15 Apr 2005; Seemant Kulleen <seemant@gentoo.org>
+  utempter-0.5.5.5-r1.ebuild:
+  description fix thanks to: Andreas Kling <keso@impul.se> in bug #82009
 
   31 Mar 2005; Danny van Dyk <kugelfang@gentoo.org>
   utempter-0.5.5.5-r1.ebuild:
