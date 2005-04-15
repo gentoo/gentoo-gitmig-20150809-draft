@@ -1,6 +1,13 @@
 # ChangeLog for app-office/openoffice-bin
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/ChangeLog,v 1.74 2005/04/13 02:28:34 hparker Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/ChangeLog,v 1.75 2005/04/15 20:41:37 suka Exp $
+
+*openoffice-bin-1.9.93 (15 Apr 2005)
+
+  15 Apr 2005; Andreas Proschofsky <suka@gentoo.org>
+  +openoffice-bin-1.9.93.ebuild:
+  New prerelease of OOo 2.0, this still has no fix for the security bug
+  #88863, so use with care
 
   13 Apr 2005; Homer Parker <hparker@gentoo.org>
   openoffice-bin-1.1.4-r1.ebuild:
