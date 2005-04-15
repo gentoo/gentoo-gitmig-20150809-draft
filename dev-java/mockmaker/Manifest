@@ -1,4 +1,14 @@
-MD5 c8404e1d2a2e8c3d77baf67403fbd90b mockmaker-1.12.0_p20050104.ebuild 1029
-MD5 eaabb95f8e11ab130ece6f9493dbc4c9 ChangeLog 528
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 fad2c62cf6ffc4838339db8896b89fbe mockmaker-1.12.0_p20050104.ebuild 1029
+MD5 964f18980f7205bdb1fc2c45a32a85a6 ChangeLog 528
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 cd7215d2bd3ac5807cc1fb09071cfb51 files/digest-mockmaker-1.12.0_p20050104 79
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCX+1006ebR+OMO78RAsNOAJwLxhNQuRsRIRLorRsueyQWj24pNgCgmV9k
+LYaoTBRFny7+pVlABtHpBoI=
+=GyFr
+-----END PGP SIGNATURE-----
