@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.0.24.ebuild,v 1.9 2004/07/22 08:07:16 zypher Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.0.24.ebuild,v 1.10 2005/04/15 14:45:43 luckyduck Exp $
 
 inherit eutils flag-o-matic
 

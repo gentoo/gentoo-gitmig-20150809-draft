@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.0.34_rc1-r1.ebuild,v 1.2 2004/12/14 12:10:21 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.0.34_rc1-r1.ebuild,v 1.3 2005/04/15 14:45:43 luckyduck Exp $
 
 inherit eutils flag-o-matic
 
@@ -12,7 +12,7 @@ SRC_URI="http://download.berlios.de/${PN}/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="2"
 KEYWORDS="~x86 ~ppc ~amd64"
-IUSE="a52 aac alsa altivec arts debug encode mad mmx nls oggvorbis pic sdl truetype xvid xv"
+IUSE="a52 aac alsa altivec arts debug encode mad mmx nls oggvorbis sdl truetype xvid xv"
 
 RDEPEND="virtual/x11
 	a52? ( >=media-libs/a52dec-0.7.4 )
@@ -65,22 +65,21 @@ src_compile() {
 	use debug && myconf="${myconf} --enable-debug=full"
 	use aac || myconf="${myconf} --disable-faac --disable-faad"
 
-	use arts || export ac_cv_path_ART_CONFIG=no
+	use a52 || export ac_cv_header_a52dec_a52=no
 	use alsa || export ac_cv_header_alsa_asoundlib_h=no
-	use sdl || export ac_cv_path_SDL_CONFIG=no
-	use oggvorbis || export ac_cv_lib_vorbis_vorbis_info_init=no
-	use xvid || export ac_cv_header_xvid_h=no
-	use xv || export ac_cv_header_X11_extensions_XShm_h=no
-	use truetype || export ac_cv_path_FREETYPE_CONFIG=no
+	use arts || export ac_cv_path_ART_CONFIG=no
 	use encode || export ac_cv_header_lame_lame_h=no
 	use mad || export ac_cv_header_mad_h=no
-	use a52 || export ac_cv_header_a52dec_a52=no
+	use oggvorbis || export ac_cv_lib_vorbis_vorbis_info_init=no
+	use sdl || export ac_cv_path_SDL_CONFIG=no
+	use truetype || export ac_cv_path_FREETYPE_CONFIG=no
+	use xv || export ac_cv_header_X11_extensions_XShm_h=no
+	use xvid || export ac_cv_header_xvid_h=no
 
 	econf \
-		`use_enable nls` \
-		`use_enalbe altivec` \
-		`use_enable mmx` \
-		`use_with pic` \
+		$(use_enable nls) \
+		$(use_enalbe altivec) \
+		$(use_enable mmx) \
 		${myconf} || die "configure failed"
 	make || die "make failed"
 }

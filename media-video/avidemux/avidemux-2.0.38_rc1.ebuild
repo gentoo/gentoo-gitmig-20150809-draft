@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.0.38_rc1.ebuild,v 1.2 2005/03/31 10:06:31 zypher Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.0.38_rc1.ebuild,v 1.3 2005/04/15 14:45:43 luckyduck Exp $
 
 inherit eutils flag-o-matic
 
@@ -12,7 +12,7 @@ SRC_URI="http://download.berlios.de/${PN}/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="2"
 KEYWORDS="~x86 ~ppc ~amd64"
-IUSE="a52 aac alsa altivec arts debug encode mad mmx nls oggvorbis pic sdl truetype xvid xv"
+IUSE="a52 aac alsa altivec arts debug encode mad mmx nls oggvorbis sdl truetype xvid xv"
 
 RDEPEND="virtual/x11
 	a52? ( >=media-libs/a52dec-0.7.4 )
@@ -69,9 +69,8 @@ src_compile() {
 	use mmx || myconf="${myconf} --disable-mmx"
 
 	econf \
-		`use_enable nls` \
-		`use_enalbe altivec` \
-		`use_with pic` \
+		$(use_enable nls) \
+		$(use_enable altivec) \
 		${myconf} || die "configure failed"
 	make || die "make failed"
 }
