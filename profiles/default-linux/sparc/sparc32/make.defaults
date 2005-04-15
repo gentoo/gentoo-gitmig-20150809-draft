@@ -1,8 +1,17 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc32/make.defaults,v 1.10 2004/12/31 10:36:24 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc32/make.defaults,v 1.11 2005/04/15 19:11:59 gustavoz Exp $
 
 # 32bit kernel, 32bit userland
 CHOST="sparc-unknown-linux-gnu"
 PROFILE_ARCH="sparc"
 
+# Just sparc32 binutils for linux-headers
+CTARGETS_BINUTILS="sparc-unknown-linux-gnu"
+
+# Compiler flags
+CFLAGS="-O2 -pipe"
+CXXFLAGS=${CFLAGS}
+
+# Misc
+FEATURES="sandbox ccache"
