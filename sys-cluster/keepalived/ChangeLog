@@ -1,6 +1,10 @@
 # ChangeLog for sys-cluster/keepalived
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/keepalived/ChangeLog,v 1.19 2005/04/15 18:54:30 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/keepalived/ChangeLog,v 1.20 2005/04/15 18:57:26 xmerlin Exp $
+
+  15 Apr 2005; Christian Zoffoli <xmerlin@gentoo.org> :
+  keepalived-1.1.10.ebuild:
+  fixed wrong keyword in keepalived-1.1.10 (ppc need to be tested)
 
 *keepalived-1.1.11 (15 Apr 2005)
 
