@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/artresources/artresources-0.1.2.ebuild,v 1.10 2005/04/04 20:45:09 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/artresources/artresources-0.1.2.ebuild,v 1.11 2005/04/15 04:31:05 fafhrd Exp $
 
 inherit gnustep
 
@@ -17,7 +17,7 @@ LICENSE="LGPL-2.1"
 PROVIDES="virtual/gnustep-back"
 
 IUSE=""
-DEPEND="${GNUSTEP_GUI_DEPEND}
+DEPEND="gnustep-base/gnustep-gui
 	>=media-libs/libart_lgpl-2.3.16"
 
 egnustep_install_domain "System"
