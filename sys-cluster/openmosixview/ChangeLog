@@ -1,6 +1,14 @@
 # ChangeLog for sys-cluster/openmosixview
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmosixview/ChangeLog,v 1.5 2005/01/18 16:40:53 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmosixview/ChangeLog,v 1.6 2005/04/15 16:16:53 xmerlin Exp $
+
+  15 Apr 2005; Christian Zoffoli <xmerlin@gentoo.org>
+  +files/openmosixview-1.5-logdirectory.diff,
+  +files/openmosixview-1.5-nonodestmp.diff,
+  +files/openmosixview-1.5-typos.patch,
+  +files/openmosixview-1.5-usesyslog.diff, openmosixview-1.5.ebuild:
+  Fixed temporary files creation (security bug). Closes bug #86686.
+  Fixed typos. Closes bug #84672.
 
   18 Jan 2005; Michael Imhof <tantive@gentoo.org> openmosixview-1.4-r1.ebuild,
   openmosixview-1.5.ebuild:

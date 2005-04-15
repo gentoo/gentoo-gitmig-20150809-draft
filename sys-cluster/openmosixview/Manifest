@@ -1,17 +1,21 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 41664043c4624dedcfeeb07950f08d13 metadata.xml 312
-MD5 7c0418255a6387478819abcef982fcfb ChangeLog 1644
-MD5 34ece4f2532586aa90e9597fc19ddeac openmosixview-1.5.ebuild 1789
+MD5 fb920f6e34c68eac71229207b598b5eb openmosixview-1.5.ebuild 2019
 MD5 06779ea5c93059ea7218c08d0c1372bd openmosixview-1.4-r1.ebuild 2292
-MD5 36d55cc173a3505d4605028e44916ae9 files/digest-openmosixview-1.5 69
+MD5 e58cd29cf806f2cca183eceb0f719fb4 ChangeLog 2000
+MD5 41664043c4624dedcfeeb07950f08d13 metadata.xml 312
 MD5 d5017d88ab775aaf821cb3e426827008 files/digest-openmosixview-1.4-r1 70
+MD5 36d55cc173a3505d4605028e44916ae9 files/digest-openmosixview-1.5 69
 MD5 40351f8cbabc76e8c9b6860e8d92025a files/openmosixcollector.init 499
+MD5 fa2bdec7a865ea57b111efb92da5910f files/openmosixview-1.5-logdirectory.diff 4538
+MD5 d61ecf92714eac96e7d05665ea2cf911 files/openmosixview-1.5-nonodestmp.diff 2724
+MD5 083d52867bbb40018618629f5c9263c4 files/openmosixview-1.5-usesyslog.diff 2698
+MD5 c825cce4d4bc77595bb8d6584d4a1c25 files/openmosixview-1.5-typos.patch 999
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFB7TwwKtJO8LeSoosRAl9fAJ4qjJGMaaaja0C5h2tMT7E45nwv8QCeI1KC
-IMysLk7umc2is6UvofUlaKc=
-=uwWK
+iD8DBQFCX+kygMUyd/cdjWsRAoMSAJ47whSFfGYsedAghjSOBordoARp3QCfUmaY
+NK2pnGHXTsNbcWormjwuIVI=
+=C1gI
 -----END PGP SIGNATURE-----

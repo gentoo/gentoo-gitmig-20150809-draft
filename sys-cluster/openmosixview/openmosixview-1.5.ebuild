@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmosixview/openmosixview-1.5.ebuild,v 1.4 2005/01/18 16:40:53 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmosixview/openmosixview-1.5.ebuild,v 1.5 2005/04/15 16:16:53 xmerlin Exp $
 
-inherit toolchain-funcs
+inherit toolchain-funcs eutils
 
 S=${WORKDIR}/openmosixview-${PV}
 DESCRIPTION="cluster-management GUI for OpenMosix"
@@ -21,6 +21,11 @@ KEYWORDS="x86 -ppc -sparc -alpha"
 src_unpack() {
 	cd ${WORKDIR}
 	unpack openmosixview-${PV}.tar.gz
+
+	epatch ${FILESDIR}/${P}-logdirectory.diff || die
+	epatch ${FILESDIR}/${P}-nonodestmp.diff || die
+	epatch ${FILESDIR}/${P}-usesyslog.diff || die
+	epatch ${FILESDIR}/${P}-typos.patch || die
 
 	cat > configuration << EOF
 	# test which version of qt is installed
@@ -43,6 +48,8 @@ src_install() {
 	make BINDIR=${D}usr/local/bin INITDIR=${D}etc/init.d install || die
 
 	dodoc COPYING README
+
+	keepdir /var/lib/openmosixview
 
 	exeinto /etc/init.d
 	rm ${D}/etc/init.d/openmosixcollector
