@@ -1,5 +1,5 @@
-MD5 fbbf04b2a8854409b1f60a6a3ed998e0 ChangeLog 733
-MD5 dd62f11ea77e9f88f12390ccf704fee5 cl-acclaim-0.25.ebuild 1471
+MD5 f1b77117afe4858c079dd48e602891cd ChangeLog 835
+MD5 a01f03825bae215e46a2e30c1d03a565 cl-acclaim-0.25.ebuild 1470
 MD5 9b65b0341efc8f4b29498aad23315229 metadata.xml 164
 MD5 fc56f51b69c789c888afea2e7d85153d files/0.25-cmucl-eval-when-gentoo.patch 549
 MD5 3c685caf536806bd890fbe7c9d238155 files/0.25-load-slides-hint-gentoo.patch 721
