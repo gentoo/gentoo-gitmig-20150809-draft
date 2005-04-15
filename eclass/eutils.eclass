@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.165 2005/04/12 01:01:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.166 2005/04/15 22:01:42 vapier Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -84,6 +84,7 @@ gen_usr_ldscript() {
 }
 
 # Simple function to draw a line consisting of '=' the same length as $*
+#  - only to be used by epatch()
 #
 # <azarah@gentoo.org> (11 Nov 2002)
 #
@@ -1556,7 +1557,7 @@ strip-linguas() {
 		fi
 	done
 	if [[ -z ${newls} ]] ; then
-		unset LINGUAS
+		export LINGUAS=""
 	else
 		export LINGUAS=${newls:1}
 	fi
