@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/DirectFB-0.9.22.ebuild,v 1.2 2005/03/09 02:33:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/DirectFB-0.9.22.ebuild,v 1.3 2005/04/15 03:57:43 vapier Exp $
 
-inherit eutils 64-bit flag-o-matic gcc
+inherit eutils flag-o-matic toolchain-funcs
 
 IUSE_VIDEO_CARDS="ati128 cle266 cyber5k i810 mach64 matrox neomagic nsc nvidia radeon savage sis315 tdfx unichrome"
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.directfb.org/download/DirectFB/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 -mips ~ppc -sparc ~x86"
+KEYWORDS="alpha amd64 hppa ia64 -mips ppc -sparc x86"
 IUSE="debug fbcon fusion gif jpeg mmx mpeg png sdl sse static sysfs truetype"
 
 DEPEND="sdl? ( media-libs/libsdl )
@@ -65,7 +65,7 @@ src_compile() {
 		# dependency loop, only link against SDL if it isn't
 		# broken #61592
 		echo 'int main(){}' > sdl-test.c
-		$(gcc-getCC) sdl-test.c -lSDL 2>/dev/null \
+		$(tc-getCC) sdl-test.c -lSDL 2>/dev/null \
 			&& sdlconf="--enable-sdl" \
 			|| ewarn "Disabling SDL since libSDL.so is broken"
 	fi

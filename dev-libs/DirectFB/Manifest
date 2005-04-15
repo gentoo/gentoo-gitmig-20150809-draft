@@ -2,7 +2,7 @@ MD5 d8de09f6d99b8c99fb599279526f8a28 ChangeLog 7158
 MD5 b240969f40a13e860ecbd73c8c964c06 DirectFB-0.9.20-r1.ebuild 3543
 MD5 b798773c0060701f402cec4cddc05f5d metadata.xml 754
 MD5 569e6f06e9ed0a60e50071757116b115 DirectFB-0.9.21.ebuild 3046
-MD5 7e9791903170fe01d84d43ed88ce6dae DirectFB-0.9.22.ebuild 3171
+MD5 e9517baccc8555e6db5327590fe1cbd5 DirectFB-0.9.22.ebuild 3169
 MD5 e9dedca8e82842a80fa7bd1507d5f1c6 files/DirectFB-0.9.20-64bit.diff 5060
 MD5 19ec05b9146f1b76d6bc46c937a14500 files/digest-DirectFB-0.9.21 68
 MD5 ba5b8492b20c817af4f669c914a4fe04 files/0.9.20-linux-2.6.patch 809
