@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/xbomb/xbomb-2.1-r1.ebuild,v 1.10 2004/12/21 17:10:54 nigoro Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/xbomb/xbomb-2.1-r1.ebuild,v 1.11 2005/04/15 17:28:06 nigoro Exp $
 
 inherit eutils games
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.ibiblio.org/pub/Linux/games/strategy/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ia64 ppc x86 ~ppc64"
+KEYWORDS="amd64 ia64 ppc x86 ppc64"
 IUSE=""
 
 RDEPEND="virtual/x11
