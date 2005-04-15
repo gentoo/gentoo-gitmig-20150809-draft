@@ -3,6 +3,7 @@
 <pkgmetadata>
 <herd>mozilla</herd>
 <maintainer>
-  <email>mozilla@gentoo.org</email>
+  <email>josejx@gentoo.org</email>
+  <name>Joseph Jezak</name>
 </maintainer>
 </pkgmetadata>
