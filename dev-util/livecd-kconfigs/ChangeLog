@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/livecd-kconfigs
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/livecd-kconfigs/ChangeLog,v 1.2 2005/03/30 15:28:40 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/livecd-kconfigs/ChangeLog,v 1.3 2005/04/15 02:22:57 wolf31o2 Exp $
+
+  15 Apr 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  livecd-kconfigs-2005.0.ebuild:
+  Added alpha, arm, hppa, mips, ppc64, and s390 KEYWORDS. Since this package
+  is text-only, it will work on any arch.
 
   30 Mar 2005; Chris Gianelloni <wolf31o2@gentoo.org>
   livecd-kconfigs-2005.0.ebuild:
