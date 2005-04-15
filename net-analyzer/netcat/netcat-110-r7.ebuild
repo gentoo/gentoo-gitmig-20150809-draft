@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netcat/netcat-110-r7.ebuild,v 1.1 2004/12/27 23:13:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netcat/netcat-110-r7.ebuild,v 1.2 2005/04/15 01:46:07 tgall Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.atstake.com/research/tools/network_utilities/${MY_P}.tgz
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~sparc ~x86 ~ppc64"
 IUSE="ipv6 static crypt GAPING_SECURITY_HOLE"
 
 DEPEND="virtual/libc
