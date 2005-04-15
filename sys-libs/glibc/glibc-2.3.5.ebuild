@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.5.ebuild,v 1.4 2005/04/14 07:17:58 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.5.ebuild,v 1.5 2005/04/15 21:11:27 eradicator Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -790,6 +790,9 @@ want_tls() {
 want__thread() {
 	want_tls || return 1
 
+	# For some reason --with-tls --with__thread is causing segfaults on sparc32.
+	[[ ${PROFILE_ARCH} == "sparc" ]] && return 1
+
 	[[ -n ${WANT__THREAD} ]] && return ${WANT__THREAD}
 
 	$(tc-getCC ${CTARGET}) -c ${FILESDIR}/test-__thread.c -o ${T}/test2.o &> /dev/null
@@ -851,14 +854,14 @@ glibc_do_configure() {
 	if [ "$1" == "linuxthreads" ] ; then
 		if want_tls ; then
 			myconf="${myconf} --with-tls"
-		else
-			myconf="${myconf} --without-tls"
-		fi
 
-		if want__thread ; then
-			myconf="${myconf} --with-__thread"
+			if want__thread ; then
+				myconf="${myconf} --with-__thread"
+			else
+				myconf="${myconf} --without-__thread"
+			fi
 		else
-			myconf="${myconf} --without-__thread"
+			myconf="${myconf} --without-tls --without-__thread"
 		fi
 
 		myconf="${myconf} --enable-add-ons=linuxthreads${ADDONS}"
