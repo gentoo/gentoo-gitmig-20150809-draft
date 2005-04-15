@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.2-r2.ebuild,v 1.2 2005/04/15 19:42:58 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.2-r2.ebuild,v 1.3 2005/04/15 22:53:03 eradicator Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -357,7 +357,12 @@ cflag_setup() {
 			if use hardened && ! use dlloader; then
 				einfo "Softening gcc for sparc."
 				ALLOWED_FLAGS="${ALLOWED_FLAGS} -fno-pie -fno-PIE"
-				append-flags "-fno-pie -fno-PIE"
+				append-flags -fno-pie -fno-PIE
+			fi
+
+			if [[ ${ABI} == "sparc64" ]]; then
+				ALLOWED_FLAGS="${ALLOWED_FLAGS} -D__sparc_v9__ -D__linux_sparc_64__"
+				append-flags -D__sparc_v9__ -D__linux_sparc_64__
 			fi
 			;;
 		# gcc-3.3.2 causes invalid insn error
@@ -555,6 +560,7 @@ host_def_setup() {
 		# Replaces 0181_all_4.3.0-amd64-nolib64.patch
 		if [ "$(get_libdir)" == "lib64" ]; then
 			echo "#define HaveLib64 YES" >> ${HOSTCONF}
+			sed -i '/^#define Freetype2LibDir/s:^.*$:#define Freetype2LibDir /usr/lib64:' ${HOSTCONF}
 		else
 			echo "#define HaveLib64 NO" >> ${HOSTCONF}
 		fi
