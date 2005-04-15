@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/webmin-1.180.ebuild,v 1.3 2005/03/04 23:00:19 astinus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/webmin-1.200.ebuild,v 1.1 2005/04/15 00:59:59 eradicator Exp $
 
-IUSE="ssl apache2 webmin-minimal"
+IUSE="apache2 postgres ssl webmin-minimal"
 
 inherit eutils
 
-VM_V="2.40"
+VM_V="2.50"
 
 DESCRIPTION="Webmin, a web-based system administration interface"
 HOMEPAGE="http://www.webmin.com/"
@@ -16,11 +16,13 @@ SRC_URI="webmin-minimal? ( mirror://sourceforge/webadmin/${P}-minimal.tar.gz )
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~s390 ~sparc ~x86 ~mips ~alpha"
+# ~mips and ~s390 removed because of broken deps. Bug #86085
+KEYWORDS="~alpha amd64 ~hppa ~ppc ~ppc64 sparc x86"
 
 DEPEND="dev-lang/perl"
 RDEPEND="${DEPEND}
 	 ssl? ( dev-perl/Net-SSLeay )
+	 postgres? ( dev-perl/DBD-Pg )
 	 dev-perl/XML-Generator"
 
 src_unpack() {
@@ -64,11 +66,13 @@ src_install() {
 	rm -f mount/freebsd-mounts*
 	rm -f mount/openbsd-mounts*
 	rm -f mount/macos-mounts*
+
 	(find . -name '*.cgi' ; find . -name '*.pl') | perl perlpath.pl /usr/bin/perl -
 	dodir /usr/libexec/webmin
 	dodir /etc/init.d
 	dodir /var
 	dodir /etc/pam.d
+
 	cp -rp * ${D}/usr/libexec/webmin
 
 	# in webmin-minimal openslp is not present
@@ -106,12 +110,12 @@ src_install() {
 	nouninstall=1
 	noperlpath=1
 	tempdir="${T}"
-	export config_dir var_dir perl autoos port login crypt host ssl nochown autothird nouninstall nostart noperlpath tempdir
+	export config_dir var_dir perl autoos port login crypt host ssl atboot nostart nochown autothird nouninstall noperlpath tempdir
 	${D}/usr/libexec/webmin/setup.sh > ${T}/webmin-setup.out 2>&1 || die "Failed to create initial webmin configuration."
 
 	# Fixup the config files to use their real locations
 	sed -i 's:^pidfile=.*$:pidfile=/var/run/webmin.pid:' ${D}/etc/webmin/miniserv.conf
-	find ${D}/etc/webmin -type f -exec sed -i "s:${D}:${ROOT}:g" {} \;
+	find ${D}/etc/webmin -type f | xargs sed -i "s:${D}:${ROOT}:g"
 
 	# Cleanup from the config script
 	rm -rf ${D}/var/log/webmin
