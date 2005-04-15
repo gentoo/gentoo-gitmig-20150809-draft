@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.3.9-r1.ebuild,v 1.3 2005/04/15 00:56:47 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.3.9-r1.ebuild,v 1.4 2005/04/15 21:55:05 suka Exp $
 
 # Notes:
 #
@@ -269,7 +269,7 @@ src_unpack() {
 	epatch ${FILESDIR}/${OO_VER}/getcompver.awk.patch
 
 	# Security fix, bug #88863
-	epatch ${FILESDIR}/${OO_VER}/crash-objstream.diff
+	epatch ${FILESDIR}/${OO_VER}/cws-heapbug_CAN-2005-0941.diff
 
 	# Workaround for bug #73940, may break debug use flag on ppc
 	if use ppc; then
