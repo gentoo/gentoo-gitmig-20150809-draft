@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-make/gnustep-make-1.10.0-r2.ebuild,v 1.2 2005/04/04 20:31:03 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-make/gnustep-make-1.10.0-r2.ebuild,v 1.3 2005/04/15 04:38:36 fafhrd Exp $
 
 inherit gnustep
 
@@ -14,8 +14,7 @@ LICENSE="GPL-2"
 
 IUSE="${IUSE} doc non-flattened layout-osx-like layout-from-conf-file"
 DEPEND="${GNUSTEP_CORE_DEPEND}
-	>=sys-devel/make-3.75
-	${DOC_DEPEND}"
+	>=sys-devel/make-3.75"
 RDEPEND="${DEPEND}
 	${DOC_RDEPEND}"
 
