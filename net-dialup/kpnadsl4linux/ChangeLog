@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/kpnadsl4linux
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/kpnadsl4linux/ChangeLog,v 1.9 2004/11/07 08:50:26 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/kpnadsl4linux/ChangeLog,v 1.10 2005/04/15 01:59:28 tgall Exp $
+
+  14 Apr 2005; Tom Gall <tgall@gentoo.org> kpnadsl4linux-1.10-r1.ebuild:
+  added ~ppc64, bug #89139
 
   07 Nov 2004; Alin Nastac <mrness@gentoo.org>
   kpnadsl4linux-1.10-r1.ebuild:
