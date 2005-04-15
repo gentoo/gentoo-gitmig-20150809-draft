@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-base64/cl-base64-3.3.1.ebuild,v 1.5 2005/03/18 07:39:57 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-base64/cl-base64-3.3.1.ebuild,v 1.6 2005/04/15 18:50:17 mkennedy Exp $
 
 inherit common-lisp
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://packages.debian.org/unstable/devel/cl-base64.html
 SRC_URI="http://ftp.debian.org/debian/pool/main/c/cl-base64/${PN}_${PV}.orig.tar.gz"
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~amd64"
+KEYWORDS="x86 ~ppc ~amd64"
 IUSE=""
 DEPEND="dev-lisp/cl-kmrcl"
 

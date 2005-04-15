@@ -1,10 +1,10 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-cclan/cl-cclan-1.78.ebuild,v 1.3 2004/06/24 23:42:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-cclan/cl-cclan-1.86.ebuild,v 1.1 2005/04/15 19:04:31 mkennedy Exp $
 
 inherit common-lisp eutils
 
-DEB_PV=1
+DEB_PV=2
 
 DESCRIPTION="Comprehensive Common Lisp Archive Network"
 HOMEPAGE="http://cclan.sourceforge.net http://www.cliki.net/cclan http://packages.debian.org/unstable/devel/cl-cclan.html"
@@ -13,7 +13,7 @@ SRC_URI="http://ftp.debian.org/debian/pool/main/c/cl-asdf/cl-asdf_${PV}-${DEB_PV
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86 ~ppc ~amd64"
 IUSE=""
 
 DEPEND="dev-lisp/cl-asdf
@@ -33,12 +33,4 @@ src_install() {
 	common-lisp-install cclan*.lisp cclan.asd
 	common-lisp-system-symlink
 	do-debian-credits
-}
-
-pkg_preinst() {
-	rm -rf /usr/lib/common-lisp/*/${CLPACKAGE} || true
-}
-
-pkg_postrm() {
-	rm -rf /usr/lib/common-lisp/*/${CLPACKAGE} || true
 }

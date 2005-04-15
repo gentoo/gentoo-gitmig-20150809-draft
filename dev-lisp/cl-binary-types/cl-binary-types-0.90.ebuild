@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-binary-types/cl-binary-types-0.90.ebuild,v 1.5 2005/03/18 08:19:56 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-binary-types/cl-binary-types-0.90.ebuild,v 1.6 2005/04/15 18:54:54 mkennedy Exp $
 
 inherit common-lisp eutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.cs.uit.no/~frodef/sw/binary-types/binary-types-0.90.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="x86 ~amd64 ~ppc"
 IUSE=""
 
 DEPEND="dev-lisp/common-lisp-controller

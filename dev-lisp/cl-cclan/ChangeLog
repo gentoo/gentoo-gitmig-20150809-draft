@@ -1,6 +1,13 @@
 # ChangeLog for dev-lisp/cl-cclan
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-cclan/ChangeLog,v 1.8 2005/03/18 07:52:55 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-cclan/ChangeLog,v 1.9 2005/04/15 19:04:31 mkennedy Exp $
+
+*cl-cclan-1.86 (15 Apr 2005)
+
+  15 Apr 2005; Matthew Kennedy <mkennedy@gentoo.org>
+  -cl-cclan-1.77.2.ebuild, -cl-cclan-1.78.ebuild, -cl-cclan-1.81.ebuild,
+  -cl-cclan-1.81-r1.ebuild, -cl-cclan-1.84.ebuild, +cl-cclan-1.86.ebuild:
+  Remove old ebuilds; Keywording x86; New upstream version;
 
   18 Mar 2005; Matthew Kennedy <mkennedy@gentoo.org> cl-cclan-1.84.ebuild:
   Keywording for ~amd64
