@@ -1,6 +1,13 @@
 # ChangeLog for x11-terms/xterm
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.75 2005/04/15 12:07:05 sejo Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.76 2005/04/15 14:18:53 seemant Exp $
+
+*xterm-200-r1 (15 Apr 2005)
+
+  15 Apr 2005; Seemant Kulleen <seemant@gentoo.org> +xterm-200-r1.ebuild:
+  don't install any more terminfo files, as these clash with the files
+  provided by ncurses. closes bug #72502 by Maurice van der Pot
+  <griffon26@gentoo.org>
 
   15 Apr 2005; Jochen Maes <sejo@gentoo.org> xterm-200.ebuild:
   added ppc keyword
