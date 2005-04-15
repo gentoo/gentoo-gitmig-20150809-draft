@@ -1,14 +1,2 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 c0a6e9b19e7d28fcb7a65aba5aee4154 ChangeLog 1079
-MD5 3d107142a3ec13f947ea538fdfe0f517 metadata.xml 290
-MD5 c3d4bb4ffd1413c37c44f6828df0f964 emul-linux-x86-qtlibs-1.1.ebuild 904
-MD5 2e4054c8af077098840aa2e446cd77e3 files/digest-emul-linux-x86-qtlibs-1.1 79
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFCCd0WntT9W3vfTuoRAt3DAJ9OdFTwLzFRSW/BOoYLEzkNrUJRagCfSDAa
-8boedOO+tXVvpRFZzUT35jE=
-=Ryld
------END PGP SIGNATURE-----
+MD5 39216fcdf6820fadbbc172f689eaa5db emul-linux-x86-qtlibs-2.0.ebuild 735
+MD5 0d2187dbd99ba2755dd08dcf2d558226 files/digest-emul-linux-x86-qtlibs-2.0 79
