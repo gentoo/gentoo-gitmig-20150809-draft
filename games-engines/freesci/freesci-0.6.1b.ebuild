@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/freesci/freesci-0.6.1b.ebuild,v 1.5 2004/09/11 09:02:23 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/freesci/freesci-0.6.1b.ebuild,v 1.6 2005/04/15 04:05:28 vapier Exp $
 
 inherit games
 
@@ -10,7 +10,7 @@ SRC_URI="http://www-plan.cs.colorado.edu/reichenb/freesci/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~amd64"
+KEYWORDS="~amd64 ~ppc ~x86" # upstream asked us to not stabilize this version
 IUSE="X ggi directfb alsa sdl ncurses"
 
 RDEPEND="virtual/libc
@@ -23,24 +23,22 @@ RDEPEND="virtual/libc
 	alsa? ( >=media-libs/alsa-lib-0.5.0 )
 	sdl? ( >=media-libs/libsdl-1.1.8 )
 	ncurses? ( sys-libs/ncurses )"
-DEPEND="${RDEPEND}
-	>=sys-apps/sed-4"
+DEPEND="${RDEPEND}"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-
+	cd "${S}"
 	sed -i \
 		-e "/^SUBDIRS/ s/conf debian//" Makefile.in \
 			|| die "sed Makefile.in failed"
 }
 src_compile() {
 	egamesconf \
-		`use_with X x` \
-		`use_with sdl` \
-		`use_with directfb` \
-		`use_with ggi` \
-		`use_with alsa` \
+		$(use_with X x) \
+		$(use_with sdl) \
+		$(use_with directfb) \
+		$(use_with ggi) \
+		$(use_with alsa) \
 		|| die
 	emake || die "emake failed"
 }
