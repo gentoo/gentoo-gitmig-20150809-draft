@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/usermin
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/ChangeLog,v 1.55 2005/04/08 21:40:04 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/ChangeLog,v 1.56 2005/04/15 00:23:24 eradicator Exp $
+
+*usermin-1.130 (15 Apr 2005)
+
+  15 Apr 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  +usermin-1.130.ebuild:
+  Version bump.  Security bug #89141.
 
 *usermin-1.120 (08 Apr 2005)
 
