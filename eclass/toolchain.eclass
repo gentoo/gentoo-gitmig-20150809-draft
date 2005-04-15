@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.141 2005/04/07 06:05:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.142 2005/04/15 03:03:12 vapier Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -1279,20 +1279,20 @@ gcc-library_src_install() {
 		${GCC_INSTALL_TARGET} || die
 
 	if [[ ${GCC_LIB_COMPAT_ONLY} == "true" ]] ; then
-		rm -rf ${D}/${INCLUDEPATH}
-		rm -rf ${D}/${DATAPATH}
-		pushd ${D}/${LIBPATH}/
+		rm -rf "${D}"${INCLUDEPATH}
+		rm -rf "${D}"${DATAPATH}
+		pushd "${D}"${LIBPATH}/
 		rm *.a *.la *.so
 		popd
 	fi
 
 	if [[ -n ${GCC_LIB_USE_SUBDIR} ]] ; then
 		mkdir -p ${WORKDIR}/${GCC_LIB_USE_SUBDIR}/
-		mv ${D}/${LIBPATH}/* ${WORKDIR}/${GCC_LIB_USE_SUBDIR}/
-		mv ${WORKDIR}/${GCC_LIB_USE_SUBDIR}/ ${D}/${LIBPATH}
+		mv "${D}"${LIBPATH}/* ${WORKDIR}/${GCC_LIB_USE_SUBDIR}/
+		mv ${WORKDIR}/${GCC_LIB_USE_SUBDIR}/ "${D}"${LIBPATH}
 		
 		dodir /etc/env.d
-		echo "LDPATH=\"${LIBPATH}/${GCC_LIB_USE_SUBDIR}/\"" >> ${D}/etc/env.d/99${PN}
+		echo "LDPATH=\"${LIBPATH}/${GCC_LIB_USE_SUBDIR}/\"" >> "${D}"/etc/env.d/99${PN}
 	fi
 
 	if [[ ${GCC_VAR_TYPE} == "non-versioned" ]] ; then
@@ -1324,8 +1324,8 @@ gcc-compiler_src_install() {
 	S=${WORKDIR}/build \
 	make DESTDIR="${D}" install || die
 	# Now do the fun stripping stuff
-	env RESTRICT="" STRIP=${CHOST}-strip prepstrip "${D}/${BINPATH}" "${D}/usr/libexec"
-	env RESTRICT="" STRIP=${CTARGET}-strip prepstrip "${D}/${LIBPATH}"
+	env RESTRICT="" STRIP=${CHOST}-strip prepstrip "${D}${BINPATH}" "${D}/usr/libexec"
+	env RESTRICT="" STRIP=${CTARGET}-strip prepstrip "${D}${LIBPATH}"
 
 	is_crosscompile || [[ -r ${D}${BINPATH}/gcc ]] || die "gcc not found in ${D}"
 
@@ -1345,7 +1345,7 @@ gcc-compiler_src_install() {
 			create_gcc_env_entry hardenednopie
 		fi
 
-		cp ${WORKDIR}/build/*.specs ${D}/${LIBPATH}
+		cp ${WORKDIR}/build/*.specs "${D}"${LIBPATH}
 	fi
 
 	# Move the libraries to the proper location
@@ -1411,8 +1411,8 @@ gcc-compiler_src_install() {
 		#   ffi.'s include of ffitarget.h - Armando Di Cianno <fafhrd@gentoo.org>
 		if is_objc && ! is_gcj ; then
 			#dosed "s:<ffitarget.h>:<libffi/ffitarget.h>:g" /${LIBPATH}/include/ffi.h
-			mv ${D}/${LIBPATH}/include/libffi/* ${D}/${LIBPATH}/include
-			rm -Rf ${D}/${LIBPATH}/include/libffi
+			mv "${D}"${LIBPATH}/include/libffi/* "${D}"${LIBPATH}/include
+			rm -Rf "${D}"${LIBPATH}/include/libffi
 		fi
 	fi
 
@@ -1488,7 +1488,7 @@ gcc_movelibs() {
 
 		local OS_MULTIDIR=$(${XGCC} ${multiarg} --print-multi-os-directory)
 		local MULTIDIR=$(${XGCC} ${multiarg} --print-multi-directory)
-		local TODIR=${D}/${LIBPATH}/${MULTIDIR}
+		local TODIR=${D}${LIBPATH}/${MULTIDIR}
 		local FROMDIR=
 
 		# This one comes with binutils
@@ -1497,31 +1497,31 @@ gcc_movelibs() {
 
 		[[ -d ${TODIR} ]] || mkdir -p ${TODIR}
 
-		FROMDIR=${D}/${LIBPATH}/${OS_MULTIDIR}
+		FROMDIR=${D}${LIBPATH}/${OS_MULTIDIR}
 		if [[ ${FROMDIR} != "${TODIR}" && -d ${FROMDIR} ]] ; then
 			mv ${FROMDIR}/{*.a,*.so*,*.la} ${TODIR}
 			rmdir ${FROMDIR}
 		fi
 
-		FROMDIR=${D}/${LIBPATH}/../${MULTIDIR}
+		FROMDIR=${D}${LIBPATH}/../${MULTIDIR}
 		if [[ -d ${FROMDIR} ]] ; then
 			mv ${FROMDIR}/{*.a,*.so*,*.la} ${TODIR}
 			rmdir ${FROMDIR}
 		fi
 
-		FROMDIR=${D}/${PREFIX}/lib/${OS_MULTIDIR}
+		FROMDIR=${D}${PREFIX}/lib/${OS_MULTIDIR}
 		if [[ -d ${FROMDIR} ]] ; then
 			mv ${FROMDIR}/{*.a,*.so*,*.la} ${TODIR}
 			rmdir ${FROMDIR}
 		fi
 
-		FROMDIR=${D}/${PREFIX}/${CTARGET}/lib/${OS_MULTIDIR}
+		FROMDIR=${D}${PREFIX}/${CTARGET}/lib/${OS_MULTIDIR}
 		if [[ -d ${FROMDIR} ]] ; then
 			mv ${FROMDIR}/{*.a,*.so*,*.la} ${TODIR}
 			rmdir ${FROMDIR}
 		fi
 
-		FROMDIR=${D}/${PREFIX}/lib/${MULTIDIR}
+		FROMDIR=${D}${PREFIX}/lib/${MULTIDIR}
 		if [[ -d ${FROMDIR} ]] ; then
 			# The only thing that ends up here is libiberty.a (which is deleted)
 			# Lucky for us nothing mistakenly gets placed here that we need...
@@ -1535,7 +1535,7 @@ gcc_movelibs() {
 
 	# make sure the libtool archives have libdir set to where they actually
 	# -are-, and not where they -used- to be.
-	fix_libtool_libdir_paths "$(find ${D}/${LIBPATH} -name *.la)"
+	fix_libtool_libdir_paths "$(find ${D}${LIBPATH} -name *.la)"
 }
 
 #----<< src_* >>----
