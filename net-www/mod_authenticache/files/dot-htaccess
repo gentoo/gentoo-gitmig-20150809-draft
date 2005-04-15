@@ -1,8 +1,0 @@
-AuthUserFile _REPLACE_ME_.htpasswd
-AuthGroupFile /dev/null
-AuthName "Testing mod_authenticache, use test/test as l/p."
-AuthType Basic
-
-<Limit GET>
-    require user test
-</Limit>
