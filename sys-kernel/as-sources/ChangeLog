@@ -1,0 +1,10 @@
+# ChangeLog for sys-kernel/as-sources
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/as-sources/ChangeLog,v 1.1 2005/04/15 17:27:21 blubb Exp $
+
+*as-sources-2.6.10-r7 (15 Apr 2005)
+
+  15 Apr 2005; Simon Stelling <blubb@gentoo.org> +metadata.xml,
+  +as-sources-2.6.10-r7.ebuild:
+  initial import
+
