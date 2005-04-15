@@ -6,3 +6,4 @@ move dev-java/fesi-bin dev-java/fesi
 move app-emulation/mips64emul app-emulation/gxemul
 move dev-java/java-gtk dev-java/libgtk-java
 move dev-java/webgraph-bin dev-java/webgraph
+move dev-java/mg4j-bin dev-java/mg4j
