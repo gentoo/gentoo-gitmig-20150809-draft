@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ekg/ekg-1.6_rc1.ebuild,v 1.3 2005/04/14 20:04:15 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ekg/ekg-1.6_rc1.ebuild,v 1.4 2005/04/15 06:27:20 mr_bones_ Exp $
 
 inherit eutils
 
@@ -28,7 +28,7 @@ src_unpack() {
 	cd ${S}
 	epatch ${FILESDIR}/ekg-1.6_rc1-fpic.patch
 }
-	
+
 src_compile() {
 	local myconf="--enable-ioctld --enable-shared --enable-dynamic"
 	use ssl     || myconf="$myconf --disable-openssl"
@@ -37,7 +37,7 @@ src_compile() {
 	use python  && myconf="$myconf --with-python"
 	use spell   && myconf="$myconf --enable-aspell"
 	use threads && myconf="$myconf --with-pthread"
-	
+
 	econf ${myconf} || die
 	emake || die
 }
