@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/ntp
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ChangeLog,v 1.53 2004/12/29 19:59:28 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ChangeLog,v 1.54 2005/04/15 22:22:19 halcy0n Exp $
+
+  15 Apr 2005; Mark Loeser <halcy0n@gentoo.org> +files/ntp-4.2.0-gcc4.patch,
+  ntp-4.2.0.20040617.ebuild:
+  Patch for GCC4 compilation issues from Fedora
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance

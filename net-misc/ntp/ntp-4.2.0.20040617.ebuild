@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ntp-4.2.0.20040617.ebuild,v 1.4 2005/03/31 00:11:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ntp-4.2.0.20040617.ebuild,v 1.5 2005/04/15 22:22:19 halcy0n Exp $
 
 inherit eutils
 
@@ -48,6 +48,9 @@ src_unpack() {
 
 	epatch "${FILESDIR}"/ntp-4.1.1b-syscall-libc.patch
 	epatch "${FILESDIR}"/4.2.0-linux-config-phone.patch #13001
+
+	#GCC 4 compile fixes
+	epatch "${FILESDIR}"/ntp-4.2.0-gcc4.patch
 
 	sed -i \
 		-e 's:md5\.h:touch_not_my_md5:g' \
