@@ -1,24 +1,24 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 3f318baedd90e29a02901eaa00ba4f0c ChangeLog 2413
-MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 fd416224df0e8ac190bcec39efb51590 ChangeLog 2485
 MD5 b8f64642641200f86b1c8af97dc3b4f8 XML-Simple-1.08-r1.ebuild 522
 MD5 d5fcdb16280523c6f09085f5c71c35fa XML-Simple-1.08.ebuild 520
 MD5 032f9e3f31284fd0f5675d400ed33dca XML-Simple-2.05.ebuild 588
 MD5 e82920e749b601809c4afb0d79b0722c XML-Simple-2.07.ebuild 659
 MD5 30788bfbbda2c3a0121971ae4b0b8574 XML-Simple-2.09.ebuild 676
-MD5 acc38552eedc68b1c3306cd9e882cb9e XML-Simple-2.12.ebuild 695
-MD5 20ad076e6d7ef9a8b3a1d7173c14173b files/digest-XML-Simple-1.08-r1 66
+MD5 ec707e21e2693ae63e3ff7ac11db89bf XML-Simple-2.12.ebuild 699
+MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 20ad076e6d7ef9a8b3a1d7173c14173b files/digest-XML-Simple-1.08 66
+MD5 20ad076e6d7ef9a8b3a1d7173c14173b files/digest-XML-Simple-1.08-r1 66
 MD5 ab56aafa878ae0bcb7f2e6a5857a6780 files/digest-XML-Simple-2.05 66
 MD5 a51499122dce59fd4ee1e53d6bb08cdd files/digest-XML-Simple-2.07 66
 MD5 006b896508c68ff9caa4480d1329931b files/digest-XML-Simple-2.09 66
 MD5 b50187a560070334bde47f64ba3f73cb files/digest-XML-Simple-2.12 66
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFB2qcNtG5z4I8BtQoRAvm/AKCEpgrJk+ggMKaMPPsxg2UjRGX1aQCfQyjj
-+qDTc8MDE1Uh7JoAicBcD/Q=
-=eejT
+iD8DBQFCX/Lm60LfUIagIAkRAsJlAKDwl4J8UouKXiorpbA7NaAFPJtthACfTS8O
+PKV2KGC9yMcQiZEyYlTu3SM=
+=R19p
 -----END PGP SIGNATURE-----
