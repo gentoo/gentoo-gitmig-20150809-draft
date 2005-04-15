@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_gnutls/mod_gnutls-0.1.1-r1.ebuild,v 1.4 2005/04/13 03:30:33 trapni Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_gnutls/mod_gnutls-0.1.1-r1.ebuild,v 1.5 2005/04/15 06:21:02 trapni Exp $
 
 inherit apache-module ssl-cert
 
@@ -25,7 +25,7 @@ DOCFILES="LICENSE NOTICE README"
 need_apache2
 
 src_compile() {
-	econf --with-apxs=/usr/sbin/apxs2 || die "configure failed"
+	econf --with-apxs="${APXS2}" || die "configure failed"
 
 	emake || die "make failed"
 }
