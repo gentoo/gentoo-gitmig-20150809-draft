@@ -1,21 +1,14 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gwnet/gwnet-0.1_pre20050106.ebuild,v 1.1 2005/01/10 16:28:01 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gwnet/gwnet-0.1.0.7.1.ebuild,v 1.1 2005/04/15 04:35:42 fafhrd Exp $
 
-ECVS_CVS_COMMAND="cvs -q"
-ECVS_SERVER="savannah.gnu.org:/cvsroot/gnustep"
-ECVS_USER="anoncvs"
-ECVS_AUTH="ext"
-ECVS_MODULE="gnustep/usr-apps/gworkspace/${PN/gwn/GWN}"
-ECVS_CO_OPTS="-P -D ${PV/*_pre}"
-ECVS_UP_OPTS="-dP -D ${PV/*_pre}"
-ECVS_TOP_DIR="${DISTDIR}/cvs-src/savannah.gnu.org-gnustep"
-inherit gnustep cvs
+inherit gnustep
 
-S=${WORKDIR}/${ECVS_MODULE}
+S=${WORKDIR}/GWorkspace-${PV/0.1.}/${PN/gwn/GWN}
 
 DESCRIPTION="A GNUstep network filesystem file browser."
 HOMEPAGE="http://www.gnustep.it/enrico/gworkspace/"
+SRC_URI="http://www.gnustep.it/enrico/gworkspace/gworkspace-${PV/0.1.}.tar.gz"
 
 KEYWORDS="~x86 ~ppc"
 LICENSE="GPL-2"
