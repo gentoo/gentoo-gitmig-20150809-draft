@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/xterm
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.73 2005/04/14 20:22:35 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.74 2005/04/15 11:45:41 seemant Exp $
+
+  15 Apr 2005; Seemant Kulleen <seemant@gentoo.org> xterm-200.ebuild:
+  stable on amd64 as well, since I've been using it on amd64
 
   14 Apr 2005; Ferris McCormick <fmccor@gentoo.org> xterm-200.ebuild:
   Stable for sparc; thanks to Seemant for the alert. Runs well, no bugs
