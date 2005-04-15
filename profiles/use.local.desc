@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1082 2005/04/15 18:46:05 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1083 2005/04/15 20:01:21 genstef Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -532,6 +532,7 @@ net-analyzer/snort:sguil - Enable sguil (The Analyst Console for Network Securit
 net-analyzer/snort:snortsam - patches snort for use with snortsam
 net-analyzer/tcpreplay:pcapnav - Enable if you want the jump to byte offset feature via libpcapnav
 net-dialup/drdsl:utf8 - Enable UTF8 encoding
+net-dialup/fcdsl:utf8 - Enable UTF8 encoding
 net-dialup/freeradius:frascend - Enable ascend binary mode
 net-dialup/freeradius:frlargefiles - Enable large file support
 net-dialup/freeradius:frnothreads - Disable thread support
