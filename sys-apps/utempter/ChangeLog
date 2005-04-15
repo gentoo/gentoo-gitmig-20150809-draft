@@ -1,6 +1,17 @@
 # ChangeLog for sys-apps/utempter
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/utempter/ChangeLog,v 1.28 2005/04/15 12:41:44 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/utempter/ChangeLog,v 1.29 2005/04/15 13:03:31 seemant Exp $
+
+*utempter-0.5.5.6 (15 Apr 2005)
+
+  15 Apr 2005; Seemant Kulleen <seemant@gentoo.org>
+  +files/utempter-0.5.5.6-no_utmpx.patch,
+  +files/utempter-0.5.5.6-soname-makefile-fix.patch,
+  +utempter-0.5.5.6.ebuild:
+  version bump, that's allegedly compilable with gcc-4. Also, this adds a
+  patch so that utempter can be compiled against uclibc. Patch provided by
+  Peter S. Mazinger <ps.m@gmx.net> in bug #69470 by Daniel Black
+  <dragonheart@gentoo.org>
 
   15 Apr 2005; Seemant Kulleen <seemant@gentoo.org>
   utempter-0.5.5.5-r1.ebuild:
