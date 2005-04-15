@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.0.0_beta2.ebuild,v 1.4 2005/04/13 21:06:23 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.0.0_beta2.ebuild,v 1.5 2005/04/15 12:29:23 caleb Exp $
 
 inherit eutils flag-o-matic
 
@@ -43,7 +43,6 @@ pkg_setup() {
 	QTSYSCONFDIR=/etc/qt4
 	QTTRANSDIR=/usr/share/qt4/translations
 
-	export QTDIR=${S}
 	export PLATFORM=linux-g++
 }
 
@@ -55,7 +54,6 @@ qt_use() {
 src_unpack() {
 	unpack ${A}
 
-	export QTDIR=${S}
 	cd ${S}
 
 	cp configure configure.orig
@@ -83,7 +81,6 @@ src_unpack() {
 }
 
 src_compile() {
-	export QTDIR=${S}
 	export SYSCONF=${D}${QTPREFIXDIR}/etc/settings
 	export PATH="${S}/bin:${PATH}"
 	export LD_LIBRARY_PATH="${S}/lib:${LD_LIBRARY_PATH}"
@@ -118,11 +115,12 @@ src_compile() {
 		-sysconfdir ${QTSYSCONFDIR} -translationdir ${QTTRANSDIR} ${myconf} || die
 
 	emake sub-tools-all-ordered || die
-	use examples && emake sub-demos sub-examples sub-tutorial || die
+	if use examples; then 
+		emake sub-demos sub-examples sub-tutorial || die
+	fi
 }
 
 src_install() {
-	export QTDIR=${S}
 	export SYSCONF=${D}${QTPREFIXDIR}/etc/settings
 	export PATH="${S}/bin:${PATH}"
 	export LD_LIBRARY_PATH="${S}/lib:${LD_LIBRARY_PATH}"
@@ -132,7 +130,10 @@ src_install() {
 	# Using install_qmake forces lots of other things to build.  Bypass it for now.
 
 	make INSTALL_ROOT=${D} sub-tools-install_subtargets-ordered || die
-	use examples && make INSTALL_ROOT=${D} sub-tutorial-install_subtargets-ordered
+	if use example; then 
+		make INSTALL_ROOT=${D} sub-tutorial-install_subtargets-ordered || die
+	fi
+	
 	install -c ${S}/bin/qmake ${D}${QTBINDIR}/qmake
 	use doc && make INSTALL_ROOT=${D} install_htmldocs
 
