@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/vdkbuilder
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/vdkbuilder/ChangeLog,v 1.17 2004/11/01 22:08:51 gustavoz Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/vdkbuilder/ChangeLog,v 1.18 2005/04/15 14:07:28 gustavoz Exp $
+
+  15 Apr 2005; Gustavo Zacarias <gustavoz@gentoo.org> metadata.xml,
+  vdkbuilder-2.4.0.ebuild:
+  Taking over, stable on x86 wrt #45093, #51389, #67460
 
   01 Nov 2004; Gustavo Zacarias <gustavoz@gentoo.org> vdkbuilder-2.4.0.ebuild:
   Stable on sparc wrt #67460
