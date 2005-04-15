@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.9.4-r7.ebuild,v 1.4 2005/03/01 22:01:23 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.9.4-r7.ebuild,v 1.5 2005/04/15 16:13:25 wolf31o2 Exp $
 
 inherit flag-o-matic eutils toolchain-funcs multilib
 
@@ -19,7 +19,7 @@ SRC_URI="ftp://ftp.cistron.nl/pub/people/miquels/software/sysvinit-${SVIV}.tar.g
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64"
-IUSE="bootstrap build livecd static selinux uclibc"
+IUSE="bootstrap build static selinux uclibc"
 
 # This version of baselayout needs gawk in /bin, but as we do not have
 # a c++ compiler during bootstrap, we cannot depend on it if "bootstrap"
@@ -45,7 +45,6 @@ src_unpack() {
 	# available (not soon enough for 2004.3)
 	cd ${S}
 	epatch ${FILESDIR}/rc-scripts-1.4.16-splash.patch
-	epatch ${FILESDIR}/rc-scripts-1.4.16-livecd.patch
 
 	#
 	# Baselayout setup
@@ -376,9 +375,6 @@ src_install() {
 	#
 	cd ${S}/bin
 	dobin rc-status
-	if use livecd; then
-		dobin bashlogin
-	fi
 
 	#
 	# Setup files in /sbin
@@ -395,7 +391,6 @@ src_install() {
 	# These moved from /etc/init.d/ to /sbin to help newb systems
 	# from breaking
 	dosbin runscript.sh functions.sh
-	use livecd && dosbin livecd-functions.sh
 
 	# Compat symlinks between /etc/init.d and /sbin
 	# (some stuff have hardcoded paths)

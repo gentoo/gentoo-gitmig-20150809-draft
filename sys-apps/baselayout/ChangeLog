@@ -1,9 +1,18 @@
 # ChangeLog for sys-apps/baselayout
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.229 2005/04/11 21:55:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.230 2005/04/15 16:13:25 wolf31o2 Exp $
 
 # See the gentoo-src rc-scripts ChangeLog for up-to-date release information:
 # http://www.gentoo.org/cgi-bin/viewcvs.cgi/rc-scripts/ChangeLog?rev=HEAD&cvsroot=gentoo-src&content-type=text/vnd.viewcvs-markup
+
+  15 Apr 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  -files/rc-scripts-1.4.16-livecd.patch, baselayout-1.9.4-r6.ebuild,
+  baselayout-1.9.4-r7.ebuild, baselayout-1.11.9-r1.ebuild,
+  baselayout-1.11.10-r3.ebuild, baselayout-1.11.10-r4.ebuild,
+  baselayout-1.11.10-r5.ebuild, baselayout-1.11.10-r6.ebuild,
+  baselayout-1.11.10-r7.ebuild, baselayout-1.12.0_alpha1-r4.ebuild:
+  Removing livecd-specific patches and all livecd-specific options as these
+  have all been moved to livecd-tools.
 
 *baselayout-1.11.10-r7 (11 Apr 2005)
 
