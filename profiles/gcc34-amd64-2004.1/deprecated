@@ -1,8 +1,8 @@
-default-linux/amd64/2004.3
+default-linux/amd64/2005.0
 # emerge -n '>=sys-apps/portage-2.0.51'
 # cd /etc/
 # rm make.profile
-# ln -s ../usr/portage/profiles/default-linux/amd64/2004.3 make.profile
+# ln -s ../usr/portage/profiles/default-linux/amd64/2005.0 make.profile
 
 Your current profile is subject to removal any time after 2005.07.01.
 If for any reason you require this deprecated profile, please discuss it
