@@ -1,6 +1,9 @@
 # ChangeLog for dev-dotnet/gtk-sharp
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtk-sharp/ChangeLog,v 1.22 2005/04/02 01:09:10 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtk-sharp/ChangeLog,v 1.23 2005/04/15 17:58:32 latexer Exp $
+
+  15 Apr 2005; Peter Johanson <latexer@gentoo.org> gtk-sharp-1.9.2.ebuild:
+  Fix duplicate ~ppc keywords. Thanks slarti.
 
 *gtk-sharp-1.9.2 (02 Apr 2005)
 
