@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 9bac5b5027a0fc26311fca90c1248ba7 usermin-1.130.ebuild 2446
+MD5 53c49430b6c878d38e290b4014661f29 usermin-1.130.ebuild 2318
 MD5 3923b6ae9bc25fc124e24e7747c8a802 metadata.xml 226
 MD5 ec24d8da9b33f3d9a0b8f7618d7ef901 usermin-1.090.ebuild 2224
 MD5 265e9776e08e5937b984ad1c1e79a746 usermin-1.100-r1.ebuild 2524
@@ -22,7 +22,7 @@ MD5 790e601fcd965a2804ac85e89d9dee35 files/digest-usermin-1.130 66
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCXwmJArHZZzCEUG0RAr2ZAKCJUukvD2fIT2A/E6E65depCmVEXwCfUjEz
-NGXXgwVrhg2yiUDv1h/Rxf0=
-=8oHW
+iD8DBQFCXwqJArHZZzCEUG0RAgyxAJwMjhswoaTRxUOi6zrlsn7e57tObACfZZ87
+EUqu7pSvOG4iV5OdOdRlieQ=
+=v3DW
 -----END PGP SIGNATURE-----
