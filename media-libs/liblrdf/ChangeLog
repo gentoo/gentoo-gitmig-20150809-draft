@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/liblrdf
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/liblrdf/ChangeLog,v 1.19 2005/03/05 08:59:32 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/liblrdf/ChangeLog,v 1.20 2005/04/15 18:59:16 luckyduck Exp $
+
+*liblrdf-0.4.0 (15 Apr 2005)
+
+  15 Apr 2005; Jan Brinkmann <luckyduck@gentoo.org> -liblrdf-0.3.1.ebuild,
+  -liblrdf-0.3.4.ebuild, -liblrdf-0.3.5-r1.ebuild, liblrdf-0.3.7.ebuild,
+  +liblrdf-0.4.0.ebuild:
+  pkgconfig not in RDEPEND any longer, also did some cleanup. new upstream
+  version released, fixes #89018
 
   05 Mar 2005; Markus Rothe <corsair@gentoo.org> liblrdf-0.3.7.ebuild:
   Stable on ppc64
