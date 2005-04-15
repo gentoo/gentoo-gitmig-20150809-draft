@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/vdk
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/vdk/ChangeLog,v 1.13 2004/12/29 22:45:31 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/vdk/ChangeLog,v 1.14 2005/04/15 14:05:41 gustavoz Exp $
+
+  15 Apr 2005; Gustavo Zacarias <gustavoz@gentoo.org> metadata.xml,
+  vdk-2.4.0.ebuild:
+  Taking over, stable on x86 wrt #45093, #51389, #67460
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
