@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nvu/nvu-1.0_pre.ebuild,v 1.1 2005/04/14 22:57:03 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nvu/nvu-1.0_pre.ebuild,v 1.2 2005/04/15 00:00:16 anarchy Exp $
 
 inherit eutils mozilla flag-o-matic
 
@@ -72,4 +72,13 @@ src_install() {
 	#menu entry for gnome/kde
 	insinto /usr/share/applications
 	doins ${FILESDIR}/nvu.desktop
+}
+
+pkg_postinst() {
+	einfo "If you choose to setup the webbrowser feature to execute urls"
+	einfo "under the HELP section please refer to"
+	einfo "http://www.nvu.com/Building_From_Source.html#tipsandhints ."
+	einfo "Make sure you follow the instructions to the letter if you have"
+	einfo "any problems email me at anarchy@gentoo.org I will be more then"
+	einfo "happy to assist you. DO NOT file a bug report on this issue."
 }

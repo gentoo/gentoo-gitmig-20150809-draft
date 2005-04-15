@@ -2,7 +2,7 @@ MD5 dadb51fdc534f408ba685a16ae095f11 ChangeLog 2984
 MD5 09bf80a18f3b608defbdde2b56642e02 metadata.xml 376
 MD5 e3b4ccc9cb447cc7e5827c82f31d2579 nvu-0.81.ebuild 2301
 MD5 a242ea1eef3d40a59e5c249fc8063345 nvu-0.90.ebuild 2301
-MD5 c02a02509ed75722df10fc073245e990 nvu-1.0_pre.ebuild 2333
+MD5 ff6b8f0a36c4b037f82406291ded2b97 nvu-1.0_pre.ebuild 2757
 MD5 2c903c369e8f7450ba419eb7ea8050f1 files/digest-nvu-0.81 71
 MD5 ffdec5b2a9933225ba5f03bafd9fcc2a files/digest-nvu-0.90 71
 MD5 91bb5e61f505e2e53aa42345431c8fa7 files/mozconfig2 2160
