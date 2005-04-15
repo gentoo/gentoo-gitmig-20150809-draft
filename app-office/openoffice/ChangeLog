@@ -1,6 +1,10 @@
 # ChangeLog for app-office/openoffice
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.118 2005/04/13 08:41:11 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.119 2005/04/15 01:00:56 gustavoz Exp $
+
+  15 Apr 2005; Gustavo Zacarias <gustavoz@gentoo.org>
+  openoffice-1.1.4-r1.ebuild:
+  Into -sparc for the time being, use openoffice-ximian
 
   13 Apr 2005; Andreas Proschofsky <suka@gentoo.org>
   openoffice-1.1.4-r1.ebuild:
