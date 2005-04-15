@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/xterm
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.74 2005/04/15 11:45:41 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.75 2005/04/15 12:07:05 sejo Exp $
+
+  15 Apr 2005; Jochen Maes <sejo@gentoo.org> xterm-200.ebuild:
+  added ppc keyword
 
   15 Apr 2005; Seemant Kulleen <seemant@gentoo.org> xterm-200.ebuild:
   stable on amd64 as well, since I've been using it on amd64
@@ -11,6 +14,9 @@
 
   14 Apr 2005; Seemant Kulleen <seemant@gentoo.org> xterm-200.ebuild:
   Bump to stable x86
+
+  15 Apr 2005; Jochen Maes <sejo@gentoo.org> xterm-200.ebuild:
+  added ppc keyword
 
   11 Apr 2005; Seemant Kulleen <seemant@gentoo.org> -xterm-196.ebuild,
   -xterm-196-r1.ebuild:
