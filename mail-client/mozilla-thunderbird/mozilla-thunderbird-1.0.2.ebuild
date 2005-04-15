@@ -1,11 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-1.0.2.ebuild,v 1.9 2005/03/25 03:18:09 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-1.0.2.ebuild,v 1.10 2005/04/15 19:44:24 blubb Exp $
 
 IUSE="crypt"
 
 unset ALLOWED_FLAGS  # stupid extra-functions.sh ... bug 49179
-inherit flag-o-matic gcc eutils nsplugins mozconfig mozilla-launcher makeedit
+inherit flag-o-matic gcc eutils nsplugins mozconfig mozilla-launcher makeedit multilib
 
 EMVER="0.90.2"
 IPCVER="1.1.2"
@@ -68,7 +68,7 @@ src_compile() {
 	# tb-specific settings
 	mozconfig_use_enable ldap
 	mozconfig_use_enable ldap ldap-experimental
-	mozconfig_annotate '' --with-default-mozilla-five-home=/usr/lib/MozillaThunderbird
+	mozconfig_annotate '' --with-default-mozilla-five-home=/usr/$(get_libdir)/MozillaThunderbird
 
 	# Finalize and report settings
 	mozconfig_final
@@ -104,12 +104,12 @@ src_compile() {
 }
 
 src_install() {
-	dodir /usr/lib
-	dodir /usr/lib/MozillaThunderbird
-	cp -RL --no-preserve=links ${S}/dist/bin/* ${D}/usr/lib/MozillaThunderbird
+	dodir /usr/$(get_libdir)
+	dodir /usr/$(get_libdir)/MozillaThunderbird
+	cp -RL --no-preserve=links ${S}/dist/bin/* ${D}/usr/$(get_libdir)/MozillaThunderbird
 
 	# fix permissions
-	chown -R root:root ${D}/usr/lib/MozillaThunderbird
+	chown -R root:root ${D}/usr/$(get_libdir)/MozillaThunderbird
 
 	# use mozilla-launcher which supports thunderbird as of version 1.6.
 	# version 1.7-r1 moved the script to /usr/libexec
@@ -139,17 +139,17 @@ chmod 0755 ${D}/usr/bin/thunderbird
 	# avoid this.
 	einfo "Extracting thunderbird-${PV} initialization files"
 	tar xjpf ${FILESDIR}/thunderbird-0.7-init.tar.bz2 \
-		-C ${D}/usr/lib/MozillaThunderbird
+		-C ${D}/usr/$(get_libdir)/MozillaThunderbird
 }
 
 pkg_preinst() {
 	# Remove entire installed instance to solve various
 	# problems, for example see bug 27719
-	rm -rf ${ROOT}/usr/lib/MozillaThunderbird
+	rm -rf ${ROOT}/usr/$(get_libdir)/MozillaThunderbird
 }
 
 pkg_postinst() {
-	export MOZILLA_FIVE_HOME="${ROOT}/usr/lib/MozillaThunderbird"
+	export MOZILLA_FIVE_HOME="${ROOT}/usr/$(get_libdir)/MozillaThunderbird"
 
 	# Fix permissions on misc files
 	find ${MOZILLA_FIVE_HOME}/ -perm 0700 -exec chmod 0755 {} \; || :
@@ -165,8 +165,8 @@ pkg_postinst() {
 	# and 700 perms, which makes subsequent execution of firefox by user
 	# impossible.
 	einfo "Registering Components and Chrome..."
-	HOME=~root LD_LIBRARY_PATH=/usr/lib/MozillaThunderbird ${MOZILLA_FIVE_HOME}/regxpcom
-	HOME=~root LD_LIBRARY_PATH=/usr/lib/MozillaThunderbird ${MOZILLA_FIVE_HOME}/regchrome
+	HOME=~root LD_LIBRARY_PATH=/usr/$(get_libdir)/MozillaThunderbird ${MOZILLA_FIVE_HOME}/regxpcom
+	HOME=~root LD_LIBRARY_PATH=/usr/$(get_libdir)/MozillaThunderbird ${MOZILLA_FIVE_HOME}/regchrome
 
 	# Fix permissions of component registry
 	chmod 0644 ${MOZILLA_FIVE_HOME}/components/compreg.dat
