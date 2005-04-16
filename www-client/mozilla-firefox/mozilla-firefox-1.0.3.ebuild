@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-1.0-r2.ebuild,v 1.2 2005/03/23 20:05:30 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-1.0.3.ebuild,v 1.1 2005/04/16 17:50:42 brad Exp $
 
-inherit makeedit flag-o-matic gcc nsplugins eutils mozconfig mozilla-launcher
+inherit makeedit flag-o-matic gcc nsplugins eutils mozconfig mozilla-launcher multilib
 
 S=${WORKDIR}/mozilla
 
@@ -13,25 +13,20 @@ SRC_URI="http://ftp.mozilla.org/pub/mozilla.org/firefox/releases/${MY_PV}/source
 
 LICENSE="MPL-1.1 NPL-1.1"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~sparc ~x86"
-IUSE="java ipv6 moznoxft truetype xinerama"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~sparc x86"
+IUSE="java mozsvg"
 
-RDEPEND="virtual/x11
-	!moznoxft? ( virtual/xft )
-	>=sys-libs/zlib-1.1.4
-	>=media-libs/jpeg-6b
+# xrender.pc appeared for the first time in xorg-x11-6.7.0-r2
+# and is required to build with support for cairo.  #71504
+RDEPEND="java? ( virtual/jre )
 	>=media-libs/libmng-1.0.0
-	>=media-libs/libpng-1.2.1
-	>=sys-apps/portage-2.0.36
-	dev-libs/expat
-	app-arch/zip
-	app-arch/unzip
-	java?  ( virtual/jre )
-	>=www-client/mozilla-launcher-1.20"
+	mozsvg? (
+		>=x11-base/xorg-x11-6.7.0-r2
+		x11-libs/cairo
+	)
+	>=www-client/mozilla-launcher-1.28"
 
 DEPEND="${RDEPEND}
-	virtual/libc
-	dev-util/pkgconfig
 	java? ( >=dev-java/java-config-0.2.0 )"
 
 # Needed by src_compile() and src_install().
@@ -46,6 +41,22 @@ src_unpack() {
 	# alpha stubs patch from lfs project.
 	# <taviso@gentoo.org> (26 Jun 2003)
 	use alpha && epatch ${FILESDIR}/mozilla-1.3-alpha-stubs.patch
+
+	# hppa patches from Ivar <orskaug@stud.ntnu.no>
+	# <gmsoft@gentoo.org> (22 Dec 2004)
+	epatch ${FILESDIR}/mozilla-hppa.patch
+
+	# patch out ft caching code since the API changed between releases of
+	# freetype; this enables freetype-2.1.8+ compat.
+	# https://bugzilla.mozilla.org/show_bug.cgi?id=234035#c65
+	epatch ${FILESDIR}/mozilla-firefox-1.0-4ft2.patch
+
+	# patch to fix separate character on euro keyboards, bug 68995
+	epatch ${FILESDIR}/mozilla-firefox-1.0-kp_separator.patch
+
+	if has_version '>=x11-libs/cairo-0.3.0'; then
+		epatch ${FILESDIR}/svg-cairo-0.3.0-fix.patch
+	fi
 }
 
 src_compile() {
@@ -67,7 +78,10 @@ src_compile() {
 	mozconfig_use_extension mozdevelop venkman
 	mozconfig_use_enable gnome gnomevfs
 	mozconfig_use_extension gnome gnomevfs
-	mozconfig_annotate '' --with-default-mozilla-five-home=/usr/lib/MozillaFirefox
+	mozconfig_use_enable mozsvg svg
+	mozconfig_use_enable mozsvg svg-renderer-cairo
+	mozconfig_annotate '' --with-default-mozilla-five-home=/usr/$(get_libdir)/MozillaFirefox
+	mozconfig_annotate '' --prefix=/usr/$(get_libdir)/MozillaFirefox
 
 	# Finalize and report settings
 	mozconfig_final
@@ -84,37 +98,79 @@ src_compile() {
 	####################################
 
 	# ./configure picks up the mozconfig stuff
+	export LD="$(tc-getLD)"
+	export CC="$(tc-getCC)"
+	export CXX="$(tc-getCXX)"
 	econf
 
 	# This removes extraneous CFLAGS from the Makefiles to reduce RAM
 	# requirements while compiling
 	edit_makefiles
 
-	emake MOZ_PHOENIX=1 || die
+	emake MOZ_PHOENIX=1 CXX="$(tc-getCXX)" CC="$(tc-getCC)" LD="$(tc-getLD)" || die
 }
 
 src_install() {
 	# Plugin path creation
-	PLUGIN_DIR="/usr/lib/nsbrowser/plugins"
+	PLUGIN_DIR="/usr/$(get_libdir)/nsbrowser/plugins"
 	dodir ${PLUGIN_DIR}
 
-	dodir /usr/lib
-	dodir /usr/lib/MozillaFirefox
-	cp -RL --no-preserve=links ${S}/dist/bin/* ${D}/usr/lib/MozillaFirefox
+	dodir /usr/$(get_libdir)/MozillaFirefox
+	cp -RL --no-preserve=links ${S}/dist/bin/* ${D}/usr/$(get_libdir)/MozillaFirefox
+
+	einfo "Installing includes and idl files..."
+	# Copy the include and idl files
+	dodir /usr/$(get_libdir)/MozillaFirefox/include/idl /usr/include
+	cd ${S}/dist
+	cp -LfR include/* ${D}/usr/$(get_libdir)/MozillaFirefox/include
+	cp -LfR idl/* ${D}/usr/$(get_libdir)/MozillaFirefox/include/idl
+	dosym /usr/$(get_libdir)/MozillaFirefox/include /usr/include/MozillaFirefox
+
+	# Dirty hack to get some applications using this header running
+	dosym /usr/$(get_libdir)/MozillaFirefox/include/necko/nsIURI.h /usr/lib/MozillaFirefox/include/nsIURI.h
+
+	cd ${S}/build/unix
+	# Fix firefox-config and install it
+	sed -i -e "s:/lib/firefox-${MY_PV}:/$(get_libdir)/MozillaFirefox:g" firefox-config
+	sed -i -e "s:/firefox-${MY_PV}:/MozillaFirefox:g" firefox-config
+	exeinto /usr/$(get_libdir)/MozillaFirefox
+	doexe firefox-config
+	# Fix pkgconfig files and install them
+	insinto /usr/$(get_libdir)/pkgconfig
+	for x in *.pc; do
+			if [[ -f ${x} ]]; then
+					sed -i -e
+					"s:/lib/firefox-${MY_PV}:/$(get_libdir)/MozillaFirefox:g" ${x}
+					sed -i -e "s:/firefox-${MY_PV}:/MozillaFirefox:g" ${x}
+					doins ${x}
+			fi
+	done
+	cd ${S}
+
 
 	#fix permissions
-	chown -R root:root ${D}/usr/lib/MozillaFirefox
+	chown -R root:root ${D}/usr/$(get_libdir)/MozillaFirefox
 
 	# Plugin path setup (rescuing the existent plugins)
-	src_mv_plugins /usr/lib/MozillaFirefox/plugins
+	src_mv_plugins /usr/$(get_libdir)/MozillaFirefox/plugins
 
 	dodir /usr/bin
-	dosym /usr/libexec/mozilla-launcher /usr/bin/firefox
+	cat <<EOF >${D}/usr/bin/firefox
+#!/bin/sh
+# 
+# Stub script to run mozilla-launcher.  We used to use a symlink here but
+# OOo brokenness makes it necessary to use a stub instead:
+# http://bugs.gentoo.org/show_bug.cgi?id=78890
+
+export MOZILLA_LAUNCHER=firefox
+exec /usr/libexec/mozilla-launcher "\$@"
+EOF
+chmod 0755 ${D}/usr/bin/firefox
 	insinto /etc/env.d
 	doins ${FILESDIR}/10MozillaFirefox
 
 	# Fix icons to look the same everywhere
-	insinto /usr/lib/MozillaFirefox/icons
+	insinto /usr/$(get_libdir)/MozillaFirefox/icons
 	doins ${S}/build/package/rpm/SOURCES/mozicon16.xpm
 	doins ${S}/build/package/rpm/SOURCES/mozicon50.xpm
 
@@ -130,14 +186,14 @@ src_install() {
 	# run as a normal user.  Drop in some initialized files to avoid
 	# this.
 	einfo "Extracting firefox-${PV} initialization files"
-	tar xjpf ${FILESDIR}/firefox-0.9-init.tar.bz2 -C ${D}/usr/lib/MozillaFirefox
+	tar xjpf ${FILESDIR}/firefox-0.9-init.tar.bz2 -C ${D}/usr/$(get_libdir)/MozillaFirefox
 }
 
 pkg_preinst() {
-	export MOZILLA_FIVE_HOME=${ROOT}/usr/lib/MozillaFirefox
+	export MOZILLA_FIVE_HOME=${ROOT}/usr/$(get_libdir)/MozillaFirefox
 
 	# Remove the old plugins dir
-	pkg_mv_plugins /usr/lib/MozillaFirefox/plugins
+	pkg_mv_plugins /usr/$(get_libdir)/MozillaFirefox/plugins
 
 	# Remove entire installed instance to prevent all kinds of
 	# problems... see bug 44772 for example
@@ -145,7 +201,7 @@ pkg_preinst() {
 }
 
 pkg_postinst() {
-	export MOZILLA_FIVE_HOME="${ROOT}/usr/lib/MozillaFirefox"
+	export MOZILLA_FIVE_HOME="${ROOT}/usr/$(get_libdir)/MozillaFirefox"
 
 	# Needed to update the run time bindings for REGXPCOM
 	# (do not remove next line!)
@@ -158,8 +214,8 @@ pkg_postinst() {
 	# and 700 perms, which makes subsequent execution of firefox by user
 	# impossible.
 	einfo "Registering Components and Chrome..."
-	HOME=~root LD_LIBRARY_PATH=/usr/lib/MozillaFirefox ${MOZILLA_FIVE_HOME}/regxpcom
-	HOME=~root LD_LIBRARY_PATH=/usr/lib/MozillaFirefox ${MOZILLA_FIVE_HOME}/regchrome
+	HOME=~root LD_LIBRARY_PATH=/usr/$(get_libdir)/MozillaFirefox ${MOZILLA_FIVE_HOME}/regxpcom
+	HOME=~root LD_LIBRARY_PATH=/usr/$(get_libdir)/MozillaFirefox ${MOZILLA_FIVE_HOME}/regchrome
 
 	# Fix permissions of component registry
 	chmod 0644 ${MOZILLA_FIVE_HOME}/components/compreg.dat
