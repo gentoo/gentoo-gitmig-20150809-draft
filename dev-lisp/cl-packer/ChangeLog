@@ -1,6 +1,9 @@
 # ChangeLog for dev-lisp/cl-packer
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-packer/ChangeLog,v 1.1 2005/04/04 03:40:05 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-packer/ChangeLog,v 1.2 2005/04/16 22:25:32 mkennedy Exp $
+
+  16 Apr 2005; Matthew Kennedy <mkennedy@gentoo.org> cl-packer-0.2.ebuild:
+  Keywording
 
 *cl-packer-0.2 (04 Apr 2005)
 
