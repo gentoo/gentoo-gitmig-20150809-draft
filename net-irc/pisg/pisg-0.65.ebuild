@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/pisg/pisg-0.65.ebuild,v 1.1 2005/04/16 11:35:31 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/pisg/pisg-0.65.ebuild,v 1.2 2005/04/16 11:38:48 axxo Exp $
 
 inherit eutils
 
@@ -21,6 +21,8 @@ DEPEND="dev-lang/perl
 src_unpack() {
 	unpack ${A}
 	cd ${S}
+
+	epatch ${FILESDIR}/0.56-network-option-fix.patch
 
 	sed -i \
 		-e 's!lang\.txt!/usr/share/pisg/lang.txt!' \
