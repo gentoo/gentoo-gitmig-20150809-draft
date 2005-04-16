@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmosixview/openmosixview-1.5.ebuild,v 1.5 2005/04/15 16:16:53 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmosixview/openmosixview-1.5-r1.ebuild,v 1.1 2005/04/16 13:01:07 xmerlin Exp $
 
 inherit toolchain-funcs eutils
 

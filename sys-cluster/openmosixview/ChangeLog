@@ -1,6 +1,12 @@
 # ChangeLog for sys-cluster/openmosixview
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmosixview/ChangeLog,v 1.6 2005/04/15 16:16:53 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmosixview/ChangeLog,v 1.7 2005/04/16 13:01:07 xmerlin Exp $
+
+*openmosixview-1.5-r1 (16 Apr 2005)
+
+  16 Apr 2005; Christian Zoffoli <xmerlin@gentoo.org>
+  +openmosixview-1.5-r1.ebuild, -openmosixview-1.5.ebuild:
+  revision bump.
 
   15 Apr 2005; Christian Zoffoli <xmerlin@gentoo.org>
   +files/openmosixview-1.5-logdirectory.diff,
