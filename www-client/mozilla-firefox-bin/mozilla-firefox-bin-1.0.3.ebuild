@@ -1,13 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox-bin/mozilla-firefox-bin-1.0.ebuild,v 1.3 2005/03/26 23:37:58 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox-bin/mozilla-firefox-bin-1.0.3.ebuild,v 1.1 2005/04/16 18:05:59 brad Exp $
 
 inherit nsplugins eutils mozilla-launcher
 
 IUSE="gnome"
 
 DESCRIPTION="The Mozilla Firefox Web Browser"
-SRC_URI="http://ftp.mozilla.org/pub/mozilla.org/firefox/releases/1.0/linux-i686/en-US/firefox-${PV}.tar.gz"
+SRC_URI="http://ftp.mozilla.org/pub/mozilla.org/firefox/releases/${PV}/linux-i686/en-US/firefox-${PV}.tar.gz"
 HOMEPAGE="http://www.mozilla.org/projects/firefox"
 RESTRICT="nostrip"
 
@@ -25,7 +25,7 @@ RDEPEND="virtual/x11
 		>=app-emulation/emul-linux-x86-baselibs-1.0
 		>=app-emulation/emul-linux-x86-gtklibs-1.0
 	)
-	>=www-client/mozilla-launcher-1.22"
+	>=www-client/mozilla-launcher-1.28"
 
 S=${WORKDIR}/firefox
 
@@ -47,7 +47,17 @@ src_install() {
 
 	# mozilla-launcher-1.8 supports -bin versions
 	dodir /usr/bin
-	dosym /usr/libexec/mozilla-launcher /usr/bin/firefox-bin
+	cat <<EOF >${D}/usr/bin/firefox-bin
+#!/bin/sh
+# 
+# Stub script to run mozilla-launcher.  We used to use a symlink here but
+# OOo brokenness makes it necessary to use a stub instead:
+# http://bugs.gentoo.org/show_bug.cgi?id=78890
+
+export MOZILLA_LAUNCHER=firefox-bin
+exec /usr/libexec/mozilla-launcher "\$@"
+EOF
+	chmod 0755 ${D}/usr/bin/firefox-bin
 
 	# Install icon and .desktop for menu entry
 	if use gnome; then
