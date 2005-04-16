@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libiiimp
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libiiimp/ChangeLog,v 1.7 2005/03/30 17:04:44 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libiiimp/ChangeLog,v 1.8 2005/04/16 12:55:47 usata Exp $
+
+  16 Apr 2005; Mamoru KOMACHI <usata@gentoo.org>
+  -libiiimp-12.0.1_pre1891.ebuild, libiiimp-12.1_p2002.ebuild:
+  Marked 12.1_p2002 stable on x86. Removed prerelease snapshot.
 
 *libiiimp-12.1_p2002 (30 Mar 2005)
 
