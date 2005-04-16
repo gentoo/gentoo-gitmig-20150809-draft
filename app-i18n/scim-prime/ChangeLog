@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/scim-prime
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-prime/ChangeLog,v 1.1 2005/03/30 06:35:43 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-prime/ChangeLog,v 1.2 2005/04/16 06:14:43 usata Exp $
+
+*scim-prime-0.2.0 (16 Apr 2005)
+
+  16 Apr 2005; <usata@gentoo.org> +scim-prime-0.2.0.ebuild:
+  Version bumped.
 
 *scim-prime-0.1.0 (30 Mar 2005)
 
