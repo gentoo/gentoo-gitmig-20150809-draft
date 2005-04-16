@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.54.ebuild,v 1.1 2005/04/13 00:42:52 trapni Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.54.ebuild,v 1.2 2005/04/16 20:53:57 hollow Exp $
 
 inherit eutils gnuconfig
 
 # latest gentoo apache files
 GENTOO_PATCHNAME="gentoo-apache-${PVR}"
-GENTOO_PATCHSTAMP="20050413"
+GENTOO_PATCHSTAMP="20050416"
 GENTOO_PATCHDIR="${WORKDIR}/${GENTOO_PATCHNAME}"
 
 DESCRIPTION="The Apache Web Server, Version 2.0.x"
@@ -264,6 +264,9 @@ src_install () {
 
 	exeinto /etc/init.d
 	newexe ${GENTOO_PATCHDIR}/init/apache2.initd apache2
+
+	insinto /etc/logrotate.d
+	newins ${GENTOO_PATCHDIR}/scripts/apache2-logrotate apache2
 
 	insinto /etc/apache2
 	doins ${GENTOO_PATCHDIR}/conf/apache2-builtin-mods
