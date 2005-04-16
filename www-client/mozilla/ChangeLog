@@ -1,6 +1,11 @@
 # ChangeLog for www-client/mozilla
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla/ChangeLog,v 1.13 2005/03/28 09:52:17 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla/ChangeLog,v 1.14 2005/04/16 18:10:57 brad Exp $
+
+*mozilla-1.7.7 (16 Apr 2005)
+
+  16 Apr 2005; Brad Laue <brad@gentoo.org> +mozilla-1.7.7.ebuild:
+  Bump to 1.7.7. Stable on x86 due to #89305.
 
   28 Mar 2005; Guy Martin <gmsoft@gentoo.org> files/mozilla-hppa.patch,
   mozilla-1.7.6-r1.ebuild:
