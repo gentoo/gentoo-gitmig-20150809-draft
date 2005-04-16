@@ -1,6 +1,17 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.291 2005/04/12 08:09:31 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.292 2005/04/16 10:05:03 lu_zero Exp $
+
+  16 Apr 2005; Luca Barbato <lu_zero@gentoo.org>
+  -files/mplayer-1.0_pre4-alsa-gcc34.patch,
+  -files/mplayer-1.0_pre4-altivec-gcc34.patch,
+  -files/mplayer-1.0_pre4-help_mp-ro.h.patch,
+  -files/mplayer-1.0_pre4-mpst.patch, -mplayer-1.0_pre4-r7.ebuild,
+  -mplayer-1.0_pre5-r2.ebuild, -mplayer-1.0_pre5-r3.ebuild,
+  -mplayer-1.0_pre5-r4.ebuild, mplayer-1.0_pre5-r5.ebuild,
+  mplayer-1.0_pre6-r1.ebuild, mplayer-1.0_pre6-r2.ebuild,
+  mplayer-1.0_pre6-r3.ebuild:
+  useflag move 3dnowex -> 3dnowext, global cleanup
 
 *mplayer-1.0_pre6-r3 (12 Apr 2005)
 

@@ -1,11 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre6-r3.ebuild,v 1.1 2005/04/12 08:09:31 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre6-r3.ebuild,v 1.2 2005/04/16 10:05:03 lu_zero Exp $
 
 inherit eutils flag-o-matic kernel-mod
 
 RESTRICT="nostrip"
-IUSE="3dfx 3dnow 3dnowex aac aalib alsa altivec arts avi bidi bl cpudetection
+IUSE="3dfx 3dnow 3dnowext aac aalib alsa altivec arts avi bidi bl cpudetection
 custom-cflags debug dga divx4linux doc dts dvb cdparanoia directfb dvd dv dvdread edl encode esd fbcon gif ggi gtk i8x0 ipv6 jack joystick jpeg libcaca lirc live lzo mad matroska matrox mmx mmxext mythtv nas nls nvidia vorbis opengl oss png real rtc samba sdl sse sse2 svga tga theora truetype v4l v4l2 X xanim xinerama xmms xv xvid xvmc"
 
 BLUV=1.4
@@ -264,7 +264,7 @@ src_compile() {
 	# check cpu flags
 	if use x86 && use !cpudetection
 	then
-		CPU_FLAGS=(3dnow 3dnowex mmx sse sse2 mmxext)
+		CPU_FLAGS=(3dnow 3dnowext mmx sse sse2 mmxext)
 		ecpu_check CPU_FLAGS
 	fi
 
@@ -439,7 +439,7 @@ src_compile() {
 	# Advanced Options #
 	#################
 	myconf="${myconf} $(use_enable 3dnow)"
-	myconf="${myconf} $(use_enable 3dnowex)";
+	myconf="${myconf} $(use_enable 3dnowext 3dnowex)";
 	myconf="${myconf} $(use_enable sse)"
 	myconf="${myconf} $(use_enable sse2)"
 	myconf="${myconf} $(use_enable mmx)"
