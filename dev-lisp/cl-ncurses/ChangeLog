@@ -1,6 +1,11 @@
 # ChangeLog for dev-lisp/cl-ncurses
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-ncurses/ChangeLog,v 1.5 2005/04/11 06:01:21 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-ncurses/ChangeLog,v 1.6 2005/04/16 21:02:44 mkennedy Exp $
+
+  16 Apr 2005; Matthew Kennedy <mkennedy@gentoo.org>
+  -files/cl-ncurses-0.1-gentoo.patch, -cl-ncurses-0.1.ebuild,
+  cl-ncurses-0.1.1.ebuild:
+  Keywording; Removed old ebuilds.
 
   11 Apr 2005; Matthew Kennedy <mkennedy@gentoo.org>
   cl-ncurses-0.1.1.ebuild:
