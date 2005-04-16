@@ -1,6 +1,13 @@
 # ChangeLog for app-emacs/wanderlust-cvs
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/wanderlust-cvs/ChangeLog,v 1.4 2005/01/01 14:06:16 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/wanderlust-cvs/ChangeLog,v 1.5 2005/04/16 06:10:32 usata Exp $
+
+*wanderlust-cvs-2.15 (16 Apr 2005)
+*wanderlust-cvs-2.14 (16 Apr 2005)
+
+  16 Apr 2005; <usata@gentoo.org> -wanderlust-cvs-2.11.ebuild,
+  +wanderlust-cvs-2.14.ebuild, +wanderlust-cvs-2.15.ebuild:
+  Added stable and development branches.
 
   02 Jun 2004; Aron Griffis <agriffis@gentoo.org> wanderlust-cvs-2.11.ebuild:
   Fix use invocation
