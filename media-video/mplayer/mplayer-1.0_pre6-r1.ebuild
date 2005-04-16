@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre6-r1.ebuild,v 1.8 2005/04/16 10:05:03 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre6-r1.ebuild,v 1.9 2005/04/16 13:44:48 luckyduck Exp $
 
 inherit eutils flag-o-matic kernel-mod
 
@@ -194,6 +194,11 @@ src_unpack() {
 	# the end anymore ) and add 3gp (nokia) video codec support
 	# per bug #85642
 	epatch ${FILESDIR}/${P}-codecs.patch
+
+	# two security fixes, see #89277
+	epatch ${FILESDIR}/rtsp_fix_20050415.diff
+	epatch ${FILESDIR}/mmst_fix_20050415.diff
+
 }
 
 linguas_warn() {
