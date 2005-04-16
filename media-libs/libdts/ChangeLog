@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libdts
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdts/ChangeLog,v 1.10 2005/04/11 15:09:31 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdts/ChangeLog,v 1.11 2005/04/16 19:39:22 hansmi Exp $
+
+  16 Apr 2005; Michael Hanselmann <hansmi@gentoo.org>
+  libdts-0.0.2-r1.ebuild:
+  Stable on ppc.
 
   11 Apr 2005; Jan Brinkmann <luckyduck@gentoo.org> libdts-0.0.2-r1.ebuild,
   libdts-0.0.2.ebuild:
