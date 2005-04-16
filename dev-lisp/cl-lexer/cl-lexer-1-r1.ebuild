@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-lexer/cl-lexer-1-r1.ebuild,v 1.5 2005/04/10 20:10:44 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-lexer/cl-lexer-1-r1.ebuild,v 1.6 2005/04/16 20:39:41 mkennedy Exp $
 
 inherit common-lisp eutils
 
@@ -13,12 +13,10 @@ SRC_URI="http://ftp.debian.org/debian/pool/main/c/cl-lexer/${PN}_${PV}.orig.tar.
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="x86 ~amd64 ~ppc"
 IUSE=""
 
-DEPEND="dev-lisp/common-lisp-controller
-	virtual/commonlisp
-	dev-lisp/cl-regex"
+DEPEND="dev-lisp/cl-regex"
 
 CLPACKAGE=lexer
 
