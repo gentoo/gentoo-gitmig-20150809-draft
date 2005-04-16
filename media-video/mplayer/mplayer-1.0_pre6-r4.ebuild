@@ -1,12 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre6-r3.ebuild,v 1.3 2005/04/16 13:44:48 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre6-r4.ebuild,v 1.1 2005/04/16 14:48:44 luckyduck Exp $
 
 inherit eutils flag-o-matic kernel-mod
 
 RESTRICT="nostrip"
-IUSE="3dfx 3dnow 3dnowext aac aalib alsa altivec arts avi bidi bl cpudetection
-custom-cflags debug dga divx4linux doc dts dvb cdparanoia directfb dvd dv dvdread edl encode esd fbcon gif ggi gtk i8x0 ipv6 jack joystick jpeg libcaca lirc live lzo mad matroska matrox mmx mmxext mythtv nas nls nvidia vorbis opengl oss png real rtc samba sdl sse sse2 svga tga theora truetype v4l v4l2 X xanim xinerama xmms xv xvid xvmc"
+IUSE="3dfx 3dnow 3dnowext aalib alsa altivec arts avi bidi debug dga divx4linux doc dts dvb cdparanoia directfb dvd dv dvdread edl encode esd fbcon gif ggi gtk i8x0 ipv6 jack joystick jpeg libcaca lirc live lzo mad matroska matrox mpeg mmx mmxext mythtv nas nls nvidia oggvorbis opengl oss png real rtc samba sdl sse sse2 svga tga theora truetype v4l v4l2 X xanim xinerama xmms xv xvid xvmc"
 
 BLUV=1.4
 SVGV=1.9.17
@@ -61,16 +60,19 @@ RDEPEND="xvid? ( >=media-libs/xvid-0.9.0 )
 	lzo? ( dev-libs/lzo )
 	mad? ( media-libs/libmad )
 	matroska? ( >=media-libs/libmatroska-0.7.0 )
+	mpeg? ( media-libs/faad2 )
 	nas? ( media-libs/nas )
 	nls? ( sys-devel/gettext )
-	vorbis? ( media-libs/libvorbis )
+	oggvorbis? ( media-libs/libvorbis )
 	opengl? ( virtual/opengl )
 	png? ( media-libs/libpng )
 	samba? ( >=net-fs/samba-2.2.8a )
 	sdl? ( media-libs/libsdl )
 	svga? ( media-libs/svgalib )
-	theora? ( media-libs/libtheora )
-	live? ( >=media-plugins/live-2004.07.20 )
+	!ia64? (
+		theora? ( media-libs/libtheora )
+		live? ( >=media-plugins/live-2004.07.20 )
+		)
 	truetype? ( >=media-libs/freetype-2.1 )
 	xinerama? ( virtual/x11 )
 	jack? ( >=media-libs/bio2jack-0.4 )
@@ -150,10 +152,8 @@ src_unpack() {
 	cd ${S}
 
 	# Custom CFLAGS
-	if use custom-cflags ; then
 	epatch ${FILESDIR}/${P}-configure.patch
 	sed -e 's:CFLAGS="custom":CFLAGS=${CFLAGS}:' -i configure
-	fi
 
 	#adds mythtv support to mplayer
 	use mythtv && epatch ${FILESDIR}/mplayer-mythtv.patch
@@ -198,6 +198,7 @@ src_unpack() {
 	# two security fixes, see #89277
 	epatch ${FILESDIR}/rtsp_fix_20050415.diff
 	epatch ${FILESDIR}/mmst_fix_20050415.diff
+
 }
 
 linguas_warn() {
@@ -264,15 +265,13 @@ src_compile() {
 		export LINGUAS="en ${LINGUAS}"
 	fi
 
-
 	# check cpu flags
-	if use x86 && use !cpudetection
+	if use x86
 	then
 		CPU_FLAGS=(3dnow 3dnowext mmx sse sse2 mmxext)
 		ecpu_check CPU_FLAGS
 	fi
 
-	if use !custom-cflags ; then
 	# let's play the filtration game!  MPlayer hates on all!
 	strip-flags
 
@@ -285,14 +284,11 @@ src_compile() {
 		replace-flags -O3 -O2
 		filter-flags -fPIC -fPIE
 	fi
-	fi
-
 
 	local myconf=
 	################
 	#Optional features#
 	###############
-	myconf="${myconf} $(use_enable cpudetection runtime-cpudetection)"
 	myconf="${myconf} $(use_enable bidi fribidi)"
 	myconf="${myconf} $(use_enable cdparanoia)"
 	if use dvd; then
@@ -332,7 +328,12 @@ src_compile() {
 	myconf="${myconf} $(use_enable ipv6 inet6)"
 	myconf="${myconf} $(use_enable joystick)"
 	myconf="${myconf} $(use_enable lirc)"
-	myconf="${myconf} $(use_enable live)"
+	if use ia64
+	then
+		myconf="${myconf} --disable-live"
+	else
+		myconf="${myconf} $(use_enable live)"
+	fi
 	myconf="${myconf} $(use_enable rtc)"
 	myconf="${myconf} $(use_enable samba smb)"
 	myconf="${myconf} $(use_enable truetype freetype)"
@@ -350,9 +351,13 @@ src_compile() {
 	myconf="${myconf} $(use_enable dts libdts)"
 	myconf="${myconf} $(use_enable lzo liblzo)"
 	myconf="${myconf} $(use_enable matroska internal-matroska)"
-	myconf="${myconf} $(use_enable aac internal-faad)"
-	myconf="${myconf} $(use_enable vorbis)"
-	myconf="${myconf} $(use_enable theora)"
+	myconf="${myconf} $(use_enable mpeg external-faad) $(use_enable !mpeg internal-faad)"
+	myconf="${myconf} $(use_enable oggvorbis vorbis)"
+	if use ia64; then
+		myconf="${myconf} --disable-theora"
+	else
+		myconf="${myconf} $(use_enable theora)"
+	fi
 	myconf="${myconf} $(use_enable xmms)"
 	myconf="${myconf} $(use_enable xvid)"
 	use x86 && myconf="${myconf} $(use_enable real)"
@@ -478,9 +483,6 @@ src_compile() {
 	fi
 
 	use live && myconf="${myconf} --with-livelibdir=/usr/$(get_libdir)/live"
-
-	# support for blinkenlights
-	use bl && myconf="${myconf} --enable-bl"
 
 	#leave this in place till the configure/compilation borkage is completely corrected back to pre4-r4 levels.
 	# it's intended for debugging so we can get the options we configure mplayer w/, rather then hunt about.
