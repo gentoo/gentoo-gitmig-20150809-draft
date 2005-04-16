@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/allegttf/allegttf-2.0.ebuild,v 1.9 2005/04/16 20:48:03 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/allegttf/allegttf-2.0.ebuild,v 1.10 2005/04/16 21:07:09 mr_bones_ Exp $
 
 DESCRIPTION="Anti-aliased text output and font loading routines for Allegro"
 HOMEPAGE="http://huizen.dds.nl/~deleveld/allegttf.htm"
@@ -38,6 +38,6 @@ src_install() {
 	make install || die "make install failed"
 	dodoc docs/*.txt *.txt || die "dodoc failed"
 	dohtml docs/allegttf.htm || die "dohtml failed"
-	insinto /usr/share/doc/${P}/examples
+	insinto /usr/share/doc/${PF}/examples
 	doins examples/* || die "doins failed"
 }
