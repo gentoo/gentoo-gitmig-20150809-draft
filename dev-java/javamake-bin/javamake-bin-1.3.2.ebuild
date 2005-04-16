@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/javamake-bin/javamake-bin-1.3.2.ebuild,v 1.2 2005/03/18 01:12:07 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/javamake-bin/javamake-bin-1.3.2.ebuild,v 1.3 2005/04/16 16:41:45 luckyduck Exp $
 
 inherit java-pkg
 
@@ -11,11 +11,11 @@ SRC_URI="http://www.experimentalstuff.com/data/javamake${PV}.jar
 
 LICENSE="sun-asis-javamake"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 IUSE="doc"
 
 DEPEND="doc? ( app-arch/unzip )"
-RDEPEND="virtual/jre"
+RDEPEND=">=virtual/jre-1.4"
 
 src_unpack() {
 	mkdir -p ${S}
