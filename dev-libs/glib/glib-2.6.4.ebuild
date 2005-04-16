@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.6.3.ebuild,v 1.6 2005/04/16 22:37:58 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.6.4.ebuild,v 1.1 2005/04/16 22:37:58 foser Exp $
 
 inherit libtool eutils flag-o-matic
 
@@ -10,8 +10,8 @@ SRC_URI="ftp://ftp.gtk.org/pub/gtk/v2.6/${P}.tar.bz2"
 
 LICENSE="LGPL-2"
 SLOT="2"
-KEYWORDS="x86 ~alpha ~amd64 ~arm ~hppa ia64 ~mips ~ppc ~ppc64 ~ppc-macos ~s390 sparc"
-IUSE="doc hardened"
+KEYWORDS="~x86 ~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~ppc-macos ~s390 ~sparc"
+IUSE="doc hardened static"
 
 DEPEND=">=dev-util/pkgconfig-0.14
 	>=sys-devel/gettext-0.11
@@ -24,6 +24,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	use ppc-macos && epatch ${FILESDIR}/${PN}-2-macos.patch
+
 	if use ppc64 && use hardened; then
 		replace-flags -O[2-3] -O1
 		epatch ${FILESDIR}/glib-2.6.3-testglib-ssp.patch
@@ -43,7 +44,7 @@ src_compile() {
 	# enable static for PAM
 	econf \
 		--with-threads=posix \
-		--enable-static \
+		`use_enable static` \
 		`use_enable doc gtk-doc` \
 		|| die
 
