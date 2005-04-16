@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/eix-0.2.2.ebuild,v 1.5 2005/04/11 00:24:04 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/eix-0.2.2.ebuild,v 1.6 2005/04/16 23:08:26 vapier Exp $
 
 inherit eutils flag-o-matic bash-completion
 
@@ -10,27 +10,24 @@ SRC_URI="mirror://sourceforge/eix/${PN}-${PV}.tar.bz2 http://frexx.de/eix/${PN}-
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 amd64 ~alpha ~ia64 ~ppc sparc"
+KEYWORDS="~alpha amd64 ia64 ~ppc sparc x86"
 IUSE=""
 
-DEPEND="sys-devel/gcc
-		virtual/libc"
-RDEPEND="sys-apps/portage
-		virtual/libc"
+DEPEND="sys-apps/portage"
 
 src_compile() {
-	epatch ${FILESDIR}/0.2.2-incorrect-masks.patch
+	epatch "${FILESDIR}"/0.2.2-incorrect-masks.patch
 
-	aclocal
-	libtoolize --force --copy
-	autoconf
+	aclocal || die "aclocal"
+	libtoolize --force --copy || die "libtoolize"
+	autoconf || die "autoconf"
 
 	econf || die "configure failed"
 	emake || die "emake	failed"
 }
 
 src_install() {
-	make DESTDIR=${D} install || die "make install failed"
+	make DESTDIR="${D}" install || die "make install failed"
 	dobashcompletion contrib/eix.bash-completion ${PN}
 }
 
