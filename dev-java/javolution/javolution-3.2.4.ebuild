@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/javolution/javolution-2.2.0.ebuild,v 1.2 2005/04/16 21:41:32 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/javolution/javolution-3.2.4.ebuild,v 1.1 2005/04/16 21:41:32 luckyduck Exp $
 
 inherit eutils java-pkg
 
@@ -8,8 +8,8 @@ DESCRIPTION="Java Solution for Real-Time and Embedded Systems"
 SRC_URI="http://javolution.org/${P}-src.zip"
 HOMEPAGE="http://javolution.org"
 LICENSE="LGPL-2.1"
-SLOT="2.2"
-KEYWORDS="x86 amd64"
+SLOT="3.2"
+KEYWORDS="~x86 ~amd64"
 IUSE="doc source"
 DEPEND=">=virtual/jdk-1.4
 	>=dev-java/ant-core-1.4
@@ -23,7 +23,7 @@ S=${WORKDIR}/javolution-${PV%.*}
 src_compile() {
 	antflags="init_1.4 compile jar"
 	use doc && antflags="${antflags} doc"
-	# jikes support, doesnt work without patching
+	# jikes support disabled, doesnt work without patching
 	#use jikes && antflags="${antflags} -Dbuild.compiler=jikes"
 	ant ${antflags} || die "ant build failed"
 }
