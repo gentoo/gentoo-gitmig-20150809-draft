@@ -1,6 +1,13 @@
 # ChangeLog for dev-lisp/cl-linedit
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-linedit/ChangeLog,v 1.6 2005/04/10 20:14:45 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-linedit/ChangeLog,v 1.7 2005/04/16 20:44:51 mkennedy Exp $
+
+  16 Apr 2005; Matthew Kennedy <mkennedy@gentoo.org>
+  -files/0.14.8-linedit.asd-uffi-glue-gentoo.patch,
+  -files/0.15.9-linedit.asd-uffi-glue-gentoo.patch, -files/0.15.9-Makefile,
+  -files/0.14.8-Makefile, -cl-linedit-0.14.8.ebuild,
+  -cl-linedit-0.15.9.ebuild, cl-linedit-0.15.12.ebuild:
+  Keywording; Removed old ebuilds
 
   10 Apr 2005; Matthew Kennedy <mkennedy@gentoo.org>
   cl-linedit-0.15.12.ebuild:
