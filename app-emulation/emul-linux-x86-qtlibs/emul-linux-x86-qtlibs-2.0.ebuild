@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-qtlibs/emul-linux-x86-qtlibs-2.0.ebuild,v 1.1 2005/04/15 21:13:27 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-qtlibs/emul-linux-x86-qtlibs-2.0.ebuild,v 1.2 2005/04/16 05:53:49 mr_bones_ Exp $
 
 DESCRIPTION="QT 2/3 libraries for emulation of 32bit x86 on amd64"
 SRC_URI="http://fermat.ma.rhul.ac.uk/~herbie/emul/emul-linux-x86-qtlibs-${PV}.tar.bz2"
@@ -14,13 +14,9 @@ IUSE=""
 DEPEND="virtual/libc
 	>=app-emulation/emul-linux-x86-xlibs-2.0"
 
-src_unpack () {
-	unpack ${A}
-}
-
 src_install() {
 	cd ${WORKDIR}
-	
+
 	# create env.d entry
 	mkdir -p ${D}/etc/env.d
 	cat > ${D}/etc/env.d/45emul-linux-x86-qtlibs <<ENDOFENV
