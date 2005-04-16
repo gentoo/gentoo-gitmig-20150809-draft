@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mplayerplug-in/mplayerplug-in-2.66.ebuild,v 1.6 2005/02/19 07:06:04 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mplayerplug-in/mplayerplug-in-2.66.ebuild,v 1.7 2005/04/16 20:11:24 geoman Exp $
 
 inherit nsplugins toolchain-funcs
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz
 	x86? ( ftp://ftp.mozilla.org/pub/mozilla.org/mozilla/releases/mozilla1.6/${GECKO_SDK} ) "
 HOMEPAGE="http://mplayerplug-in.sourceforge.net/"
 
-KEYWORDS="x86 ~amd64 ~ia64 ~ppc ~sparc ~alpha ~hppa ~mips"
+KEYWORDS="x86 ~amd64 ~ia64 ~ppc ~sparc ~alpha ~hppa"
 SLOT="0"
 LICENSE="GPL-2"
 IUSE="gtk2"

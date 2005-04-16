@@ -1,6 +1,11 @@
 # ChangeLog for net-www/mplayerplug-in
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mplayerplug-in/ChangeLog,v 1.33 2005/04/14 21:14:27 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mplayerplug-in/ChangeLog,v 1.34 2005/04/16 20:11:24 geoman Exp $
+
+  16 Apr 2005; Stephen P. Becker <geoman@gentoo.org>
+  mplayerplug-in-2.60.ebuild, mplayerplug-in-2.66.ebuild:
+  removed ~mips keywords because this can not possibly work on mips...we do
+  not have a working mozilla or firefox
 
   14 Apr 2005; Joseph Jezak <josejx@gentoo.org> -mplayerplug-in-0.91.ebuild,
   -mplayerplug-in-0.95.ebuild, -mplayerplug-in-1.0_pre2.ebuild,
