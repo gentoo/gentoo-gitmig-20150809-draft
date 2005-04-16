@@ -2,10 +2,10 @@
 Hash: SHA1
 
 MD5 6f0ce28848bdde9794f1f713957b8e63 mplayer-1.0_pre5-r5.ebuild 18497
-MD5 54a16879a464131d8190ae58fd9c311e mplayer-1.0_pre6-r4.ebuild 18387
+MD5 cfc2d8820b32fcd814dbc0c36bcc86c6 mplayer-1.0_pre6-r4.ebuild 18385
 MD5 2b61881bab251cace8e7361fed1cbf57 mplayer-1.0_pre6-r6.ebuild 18416
 MD5 45e2a019f7e6f9fdc7bda68ff8d19f10 mplayer-1.0_pre6-r5.ebuild 18461
-MD5 b6025cf427bcb8c9793e7d3773e4cbed ChangeLog 54916
+MD5 c313e76ee545290f1910f103fbba8f04 ChangeLog 55036
 MD5 7300a7b361fa9f48e37722c6952bd432 metadata.xml 158
 MD5 9ca8563e7f6df3496b972f87feabd6c0 files/mplayer-1.0_pre6-configure.patch 534
 MD5 c2e82dbe0e7b780adcbe9bfb902b8654 files/mplayer-1.0_pre6-pic.patch 18233
@@ -47,7 +47,7 @@ MD5 68f89231bdbc972ac6abf45a135c8282 files/mplayer-jack.patch 272
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFCYSXe06ebR+OMO78RAuMrAKCXGn3+SK7AJBCnSxSJ/bg+OgtGkACfXwpt
-miHVeXxLkehrvRI7flbP/wY=
-=pGSm
+iD8DBQFCYUhC06ebR+OMO78RAnmGAJ9WN13HEDyjt7IeFu/KCOUS0S3iRwCggux6
+Bl5+qI5a10VGrtYxes+0wS8=
+=z93t
 -----END PGP SIGNATURE-----
