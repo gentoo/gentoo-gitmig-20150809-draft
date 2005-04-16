@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/linesrv/files/linesrv.rc6,v 1.1 2004/12/05 15:56:10 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/linesrv/files/linesrv.rc6,v 1.2 2005/04/16 14:28:30 mrness Exp $
 
 depend() {
 	need net logger
@@ -10,8 +10,8 @@ depend() {
 
 checkconfig() {
 	if [ ! -e /etc/linesrv.conf ] ; then
-		eerror "You  need  an  /etc/linesrv.conf file first"
-		eerror "There is a sample in /usr/share/doc/linesrv"
+		eerror "You need a /etc/linesrv.conf file first"
+		eerror "There is a sample in `echo /usr/share/doc/linesrv-*`"
 		return 1
 	fi
 }

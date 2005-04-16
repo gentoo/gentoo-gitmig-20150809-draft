@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/linesrv/linesrv-2.1.6-r1.ebuild,v 1.2 2005/02/07 20:59:06 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/linesrv/linesrv-2.1.6-r1.ebuild,v 1.3 2005/04/16 14:28:29 mrness Exp $
 
 IUSE="pam"
 
@@ -52,10 +52,12 @@ src_install() {
 	dodoc server/{INSTALL,NEWS,README}
 	newdoc htmlstatus/README README.htmlstatus
 	newdoc lclog/INSTALL INSTALL.lclog
+	newdoc ${FILESDIR}/linesrv.conf linesrv.conf.sample
 	docinto complete_syntax ; dodoc server/config/complete_syntax/*
 
 	exeinto /etc/init.d ; newexe ${FILESDIR}/linesrv.rc6 linesrv
-	insinto /etc ; newins ${FILESDIR}/linesrv.conf linesrv.conf.sample
-	insinto /etc/pam.d ; newins ${FILESDIR}/linecontrol.pam linecontrol
-	insinto /etc/pam.d ; newins ${FILESDIR}/lcshutdown.pam lcshutdown
+	if use pam ; then
+		insinto /etc/pam.d ; newins ${FILESDIR}/linecontrol.pam linecontrol
+		insinto /etc/pam.d ; newins ${FILESDIR}/lcshutdown.pam lcshutdown
+	fi
 }
