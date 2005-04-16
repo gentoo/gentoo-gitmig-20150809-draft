@@ -1,6 +1,8 @@
 ARCH="mips"
 ACCEPT_KEYWORDS="mips"
 
+CHOST="mips-gentoo-linux-uclibc"
+
 FEATURES="-sandbox"
 
 UCLIBC_CPU_DEFAULT="MIPS_ISA_1"

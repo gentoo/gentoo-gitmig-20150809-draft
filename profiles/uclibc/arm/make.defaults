@@ -1,4 +1,6 @@
 ARCH="arm"
 ACCEPT_KEYWORDS="arm"
 
+CHOST="arm-gentoo-linux-uclibc"
+
 UCLIBC_CPU_DEFAULT="GENERIC_ARM"

@@ -1,4 +1,6 @@
 ARCH="sh"
 ACCEPT_KEYWORDS="sh"
 
+CHOST="sh-gentoo-linux-uclibc"
+
 UCLIBC_CPU_DEFAULT="SH4"
