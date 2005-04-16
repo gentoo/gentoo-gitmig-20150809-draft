@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/busybox
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.61 2005/04/08 18:37:44 solar Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.62 2005/04/16 07:01:33 vapier Exp $
+
+*busybox-1.00-r2 (16 Apr 2005)
+
+  16 Apr 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/1.00/bash-tests.patch, files/1.00/more-insmod-arches.patch,
+  +files/1.00/cp-posix-opts.patch, +busybox-1.00-r2.ebuild:
+  Add fixes from upstream to support more bash code and more cp options #88841.
 
   08 Apr 2005; <solar@gentoo.org> busybox-1.00-r1.ebuild:
   - added ~ppc64 keyword. bug 73241

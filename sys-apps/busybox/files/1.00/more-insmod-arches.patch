@@ -4,8 +4,8 @@ RCS file: /var/cvs/busybox/modutils/insmod.c,v
 retrieving revision 1.125
 retrieving revision 1.126
 diff -u -r1.125 -r1.126
---- busybox/modutils/insmod.c	2 Sep 2004 23:03:25 -0000	1.125
-+++ busybox/modutils/insmod.c	26 Dec 2004 09:13:32 -0000	1.126
+--- modutils/insmod.c	2 Sep 2004 23:03:25 -0000	1.125
++++ modutils/insmod.c	26 Dec 2004 09:13:32 -0000	1.126
 @@ -109,6 +109,14 @@
  #endif
  
@@ -41,3 +41,18 @@ diff -u -r1.125 -r1.126
  /* H8/300 */
  #if defined(__H8300H__) || defined(__H8300S__)
  #define MATCH_MACHINE(x) (x == EM_H8_300)
+Index: modutils/insmod.c
+===================================================================
+--- modutils/insmod.c	(revision 9620)
++++ modutils/insmod.c	(revision 10061)
+@@ -290,8 +290,8 @@
+ /* X86_64  */
+ #if defined(__x86_64__)
+ #define MATCH_MACHINE(x) (x == EM_X86_64)
+-#define SHT_RELM	SHT_REL
+-#define Elf64_RelM	Elf64_Rel
++#define SHT_RELM	SHT_RELA
++#define Elf64_RelM	Elf64_Rela
+ #define ELFCLASSM	ELFCLASS64
+ #endif
+ 
