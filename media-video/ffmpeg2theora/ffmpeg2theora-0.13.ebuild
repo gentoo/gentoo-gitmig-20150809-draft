@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg2theora/ffmpeg2theora-0.12.ebuild,v 1.2 2005/04/16 11:58:26 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg2theora/ffmpeg2theora-0.13.ebuild,v 1.1 2005/04/16 11:58:26 luckyduck Exp $
 
 DESCRIPTION="A simple converter to create Ogg Theora files."
 HOMEPAGE="http://www.v2v.cc/~j/ffmpeg2theora/"
@@ -8,7 +8,7 @@ SRC_URI="http://www.v2v.cc/~j/ffmpeg2theora/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 IUSE=""
 
 RDEPEND=">=media-video/ffmpeg-0.4.9_pre1

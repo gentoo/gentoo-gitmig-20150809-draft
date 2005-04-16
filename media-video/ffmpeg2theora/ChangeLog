@@ -1,8 +1,14 @@
 # ChangeLog for media-video/ffmpeg2theora
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg2theora/ChangeLog,v 1.1 2005/02/08 16:52:25 kzimmerm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg2theora/ChangeLog,v 1.2 2005/04/16 11:58:26 luckyduck Exp $
+
+*ffmpeg2theora-0.13 (16 Apr 2005)
+
+  16 Apr 2005; Jan Brinkmann <luckyduck@gentoo.org> ffmpeg2theora-0.12.ebuild,
+  +ffmpeg2theora-0.13.ebuild:
+  new upstream release, fixes #89237. added ~amd64 to KEYWORDS.
 
 *ffmpeg2theora-0.12 (08 Feb 2005)
 
-	08 Feb 2005;  Kai Zimmermann <kzimmerm@gentoo.org> :
-	Initial import into the tree.  Closes bug #66458.
+  08 Feb 2005;  Kai Zimmermann <kzimmerm@gentoo.org> :
+  Initial import into the tree.  Closes bug #66458.
