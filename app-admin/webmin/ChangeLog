@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/webmin
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/ChangeLog,v 1.82 2005/04/15 20:37:01 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/ChangeLog,v 1.83 2005/04/16 07:39:21 corsair Exp $
+
+  16 Apr 2005; Markus Rothe <corsair@gentoo.org> webmin-1.200.ebuild:
+  Stable on ppc64; bug #89141
 
   15 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> webmin-1.200.ebuild:
   Stable on ppc.
