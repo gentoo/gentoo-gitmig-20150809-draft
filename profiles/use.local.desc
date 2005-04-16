@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1084 2005/04/16 10:13:04 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1085 2005/04/16 20:01:17 mr_bones_ Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -232,8 +232,8 @@ dev-scheme/bigloo-lib:ipcs - enable ipcs support
 dev-scheme/gauche-gtk:glgd - enable GL graph draw
 dev-tex/preview-latex:xemacs - Adds support for XEmacs
 dev-util/catalyst:ccache - Enables ccache support
-dev-util/eclipse-sdk:nosrc - Don't include source code
 dev-util/eclipse-sdk:nodoc - Don't include documentation
+dev-util/eclipse-sdk:nosrc - Don't include source code
 dev-util/eric:idl - Enable omniorb support
 dev-util/glade:gnomedb - Enable gnomedb widgets for Glade.
 dev-util/global:vim - vim funny stuff for global
@@ -270,6 +270,7 @@ games-server/halflife-statsme:nodod - no day of defeat
 games-server/halflife-statsme:notfc - no team fortress classic
 games-simulation/openttd:timidity - Add sound support (timidity)
 games-strategy/freecraft-fcmp:music - Installs optional music data
+games-strategy/freelords:editor - Installs optional map editor
 games-strategy/heroes3:maps - Installs optional map data
 games-strategy/heroes3:music - Installs optional music data
 games-strategy/heroes3:sounds - Installs optional sound data
@@ -316,8 +317,8 @@ kde-base/kdelibs:openexr - Enable support for OpenEXR graphic file format (www.o
 kde-base/kdelibs:zeroconf - Enable support for DNS Service Discovery (DNS-SD)
 kde-base/kdenetwork:rdesktop - Enable remote desktop functionality
 kde-base/kdepim:gnokii - Enable address synchronization with mobile phones with gnokii
-kde-base/kdesdk:subversion - Enable support for the subversion ioslave
 kde-base/kdesdk-meta:subversion - Enable support for the subversion ioslave
+kde-base/kdesdk:subversion - Enable support for the subversion ioslave
 kde-base/kig:kig-scripting - Enable support for python scripting
 kde-base/kpdf:nodrm - Disable DRM support in kpdf
 kde-base/krdc:rdesktop - Enable remote desktop functionality
@@ -572,9 +573,9 @@ net-im/centericq:gg - Enable support for the Gadu-Gadu IM protocol
 net-im/centericq:irc - Enable support for the IRC protocol
 net-im/centericq:lj - Enable support for the LiveJournal weblog system
 net-im/centericq:rss - Enable support for RSS/RDF feeds
-net-im/ejabberd:mod_pubsub - Pubsub support in ejabberd
 net-im/ejabberd:mod_irc - Irc support in ejabberd
 net-im/ejabberd:mod_muc - Multi user chat support in ejabberd
+net-im/ejabberd:mod_pubsub - Pubsub support in ejabberd
 net-im/ejabberd:web - Web support in ejabberd
 net-im/ekg2:gsm - Enable gsm plugin
 net-im/ekg2:nogg - Disable Gadu-Gadu plugin
@@ -625,6 +626,7 @@ net-mail/uw-imap:clearpasswd - Enables cleartext logins outside of SSL sessions
 net-mail/vimap:clearpasswd - Enables cleartext logins outside of SSL sessions
 net-mail/vpopmail:clearpasswd - Enables cleartext password storage in the vpasswd files
 net-mail/vpopmail:ipalias - Enables enable-ip-alias-domains
+net-misc/asterisk-chan_capi:fax - Build chan_capi with fax support
 net-misc/asterisk:bri - Enable ISDN BRI support (bristuff)
 net-misc/asterisk:noiax - Disable iax (Inter-Asterisk eXchange) support
 net-misc/asterisk:nopri - Disable pri support
@@ -634,7 +636,6 @@ net-misc/asterisk:resperl - Enables support for embedded perl in extensions.conf
 net-misc/asterisk:vmdbmysql - Enable mysql db support in voicemail application
 net-misc/asterisk:vmdbpostgres - Enable postgres db support in voicemail application
 net-misc/asterisk:zaptel - Enables zaptel support (>=asterisk-1.0.1)
-net-misc/asterisk-chan_capi:fax - Build chan_capi with fax support
 net-misc/drivel:rhythmbox - Enables support for currently playing song in rhythmbox
 net-misc/dropbear:multicall - Build all the programs as one little binary (to save space)
 net-misc/gnugk:accounting - Enables call logging (accounting)
@@ -886,8 +887,8 @@ x11-terms/mlterm:uim - Enable uim support
 x11-terms/mrxvt:xgetdefault - Enable resources via X instead of rxvt small version
 x11-terms/rxvt-unicode:tabs - Install the experimental urxvt-tabbed client
 x11-terms/rxvt-unicode:xgetdefault - Enable resources via X instead of rxvt small version
-x11-terms/rxvt:xgetdefault - Enable resources via X instead of rxvt small version
 x11-terms/rxvt:linuxkeys - Define LINUX_KEYS (changes Home/End key)
+x11-terms/rxvt:xgetdefault - Enable resources via X instead of rxvt small version
 x11-terms/xterm:toolbar - Enable the xterm toolbar to be built.
 x11-wm/enlightenment:nothemes - Don't include the standard E themes
 x11-wm/enlightenment:xrandr - Enable support for the X xrandr extension
