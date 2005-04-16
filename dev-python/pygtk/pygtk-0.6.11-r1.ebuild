@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/pygtk-0.6.11-r1.ebuild,v 1.10 2005/01/03 11:33:40 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/pygtk-0.6.11-r1.ebuild,v 1.11 2005/04/16 23:31:08 vapier Exp $
 
 inherit python
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.gtk.org/pub/gtk/python/v1.2/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="1.2"
-KEYWORDS="x86 ~ppc ~sparc ~alpha amd64 arm"
+KEYWORDS="~alpha amd64 arm hppa ia64 ~ppc ~sparc x86"
 IUSE="opengl"
 
 DEPEND="virtual/python
@@ -27,14 +27,9 @@ src_unpack() {
 	ln -s /bin/true ${S}/py-compile
 }
 
-src_compile() {
-	econf || die "econf failed"
-	emake || die "make failed"
-}
-
 src_install() {
 	einstall || die
-	dodoc AUTHORS COPYING ChangeLog INSTALL MAPPING NEWS README TODO
+	dodoc AUTHORS ChangeLog INSTALL MAPPING NEWS README TODO
 
 	python_version
 	mv ${D}/usr/lib/python${PYVER}/site-packages/pygtk.py \
