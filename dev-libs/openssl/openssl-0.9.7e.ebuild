@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.7e.ebuild,v 1.12 2005/04/08 16:17:26 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.7e.ebuild,v 1.13 2005/04/16 06:06:34 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -218,14 +218,13 @@ src_install() {
 	doins certs/*.pem
 	OPENSSL=${D}/usr/bin/openssl /usr/bin/perl tools/c_rehash ${D}/etc/ssl/certs
 
-	# The man pages rand.3 and passwd.1 conflict with other packages
-	# Rename them to ssl-* and also make a symlink from openssl-* to ssl-*
-	cd ${D}/usr/share/man/man1
-	mv passwd.1 ssl-passwd.1
-	ln -sf ssl-passwd.1 openssl-passwd.1
-	cd ${D}/usr/share/man/man3
-	mv rand.3 ssl-rand.3
-	ln -sf ssl-rand.3 openssl-rand.3
+	# These man pages with other packages so rename them
+	cd "${D}"/usr/share/man
+	for m in man1/passwd.1 man3/rand.3 man3/err.3 ; do
+		d=${m%%/*} ; m=${m##*/}
+		mv ${d}/{,ssl-}${m}
+		ln -s ssl-${m} ${d}/openssl-${m}
+	done
 
 	# openssl-0.9.6
 	test -f ${ROOT}/usr/lib/libssl.so.0.9.6 && {
