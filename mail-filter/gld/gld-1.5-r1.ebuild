@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/gld/gld-1.5-r1.ebuild,v 1.1 2005/04/14 20:35:43 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/gld/gld-1.5-r1.ebuild,v 1.2 2005/04/16 14:55:10 slarti Exp $
 
 DESCRIPTION="A standalone anti-spam greylisting algorithm on top of Postfix"
 HOMEPAGE="http://www.gasmi.net/gld.html"
@@ -9,7 +9,7 @@ SRC_URI="http://www.gasmi.net/down/${P}.tgz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86 ~ppc"
-IUSE=""
+IUSE="postgres"
 # Not adding a mysql USE flag. The package defaults to it, so we will too.
 DEPEND="virtual/libc
 	sys-libs/zlib
@@ -18,6 +18,9 @@ DEPEND="virtual/libc
 	!postgres? ( dev-db/mysql )"
 RDEPEND="${DEPEND}
 	>=mail-mta/postfix-2.1"
+
+MY_P="${P}.1"
+S="${WORKDIR}/${MY_P}"
 
 src_unpack() {
 	unpack ${A}
