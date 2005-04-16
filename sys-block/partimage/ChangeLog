@@ -1,6 +1,10 @@
 # ChangeLog for sys-block/partimage
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/partimage/ChangeLog,v 1.6 2005/04/01 13:49:12 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/partimage/ChangeLog,v 1.7 2005/04/16 13:16:20 xmerlin Exp $
+
+  16 Apr 2005; Christian Zoffoli <xmerlin@gentoo.org>
+  partimage-0.6.4-r3.ebuild:
+  stable x86.
 
   01 Apr 2005; Christian Zoffoli <xmerlin@gentoo.org>
   partimage-0.6.4-r2.ebuild, partimage-0.6.4-r3.ebuild:
