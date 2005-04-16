@@ -4,8 +4,8 @@ erl -pa /var/lib/ejabberd/ebin \
     -sname ejabberd \
     -s ejabberd \
     -ejabberd config \"/etc/ejabberd/ejabberd.cfg\" \
-    -kernel inetrc \"/etc/ejabberd/inetrc\" \
     log_path \"/var/log/ejabberd/ejabberd.log\" \
+    -kernel inetrc \"/etc/ejabberd/inetrc\" \
     -sasl sasl_error_logger \{file,\"/var/log/ejabberd/sasl.log\"\} \
     -mnesia dir \"/var/spool/ejabberd\" \
     $@

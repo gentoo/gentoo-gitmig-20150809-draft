@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ejabberd/ejabberd-0.7.5.ebuild,v 1.2 2005/04/10 18:10:56 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ejabberd/ejabberd-0.7.5.ebuild,v 1.3 2005/04/16 14:00:58 humpback Exp $
 
 inherit eutils
 
@@ -50,14 +50,15 @@ src_install() {
 	# Database
 	dodir /var/spool/ejabberd
 	fowners ejabberd:jabber /var/spool/ejabberd
+	fperms 700 /var/spool/ejabberd
 
 	# Home
 	dodir /var/run/ejabberd
-	fowners ejabber:jabber /var/run/ejabberd
+	fowners ejabberd:jabber /var/run/ejabberd
 
 	# Logs
 	dodir /var/log/ejabberd
-	fowners ejabber:jabber /var/log/ejabberd
+	fowners ejabberd:jabber /var/log/ejabberd
 
 	cd ..
 	dodoc doc/*.tex
@@ -70,6 +71,7 @@ src_install() {
 	exeinto /etc/init.d
 	newexe ${FILESDIR}/ejabberd-0.7.5.initd ejabberd
 	if use ssl ; then
+		exeinto /etc/ejabberd
 		doexe ${FILESDIR}/self-cert.sh
 	fi
 
