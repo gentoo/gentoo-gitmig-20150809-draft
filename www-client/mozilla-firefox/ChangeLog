@@ -1,6 +1,6 @@
 # ChangeLog for www-client/mozilla-firefox
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.14 2005/04/16 17:50:42 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.15 2005/04/16 18:08:52 brad Exp $
 
 *mozilla-firefox-1.0.3 (16 Apr 2005)
 
@@ -10,7 +10,7 @@
   -mozilla-firefox-1.0-r2.ebuild, -mozilla-firefox-1.0-r3.ebuild,
   -mozilla-firefox-1.0.1.ebuild, -mozilla-firefox-1.0.1-r1.ebuild,
   +mozilla-firefox-1.0.3.ebuild:
-  Bump to 1.0.3. Stable on x86 immediately due to #88039.
+  Bump to 1.0.3. Stable on x86 immediately due to #89303.
 
   27 Mar 2005; Guy Martin <gmsoft@gentoo.org> files/mozilla-hppa.patch,
   mozilla-firefox-1.0.2.ebuild:
@@ -138,7 +138,7 @@
   mozilla-firefox-1.0-r3.ebuild:
   Added hppa support.
 
-  21 Dec 2004; Bryan Østergaard <kloeri@gentoo.org>
+  21 Dec 2004; Bryan Ãstergaard <kloeri@gentoo.org>
   mozilla-firefox-1.0.ebuild:
   Stable on alpha, bug 68976.
 
