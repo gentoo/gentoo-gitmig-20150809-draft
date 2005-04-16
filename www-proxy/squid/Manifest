@@ -1,27 +1,17 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 3a2538e403f25c33ed40b387976acfb9 squid-2.5.8-r1.ebuild 6107
-MD5 1bd2eb184daf3062dcfd24296417609d squid-2.5.9.ebuild 6021
-MD5 ff5f4d1681a6be74a417a55866e801ef squid-2.5.9-r2.ebuild 5923
-MD5 f2881ab9b7a08ed59e6f62d772193dfb squid-2.5.8.ebuild 5893
-MD5 50eba27cc43e2defaa4e5dd24b888343 ChangeLog 16215
+MD5 94f13887e30793868df462d5ab9d337b squid-2.5.9-r2.ebuild 5919
 MD5 c0fd2ab16f04e5c691ca42cb5585071a metadata.xml 330
-MD5 c2d230465ceefe887175cb8121d0fbc8 files/digest-squid-2.5.8-r1 156
+MD5 505092b164fb8269cc2a0dc54a10d9b7 ChangeLog 16307
+MD5 3a2538e403f25c33ed40b387976acfb9 squid-2.5.8-r1.ebuild 6107
+MD5 f2881ab9b7a08ed59e6f62d772193dfb squid-2.5.8.ebuild 5893
+MD5 1bd2eb184daf3062dcfd24296417609d squid-2.5.9.ebuild 6021
 MD5 6d21b96f78c499cddf9ec02462a954cc files/digest-squid-2.5.9-r2 156
-MD5 e4e44e57aa7d93849649c3ceb67a3a65 files/squid.confd 437
-MD5 6f30a7f5c48ec35a7044acb189c858c5 files/squid-r1.cron 133
-MD5 c3048f19a1c725e2c53f86640b752382 files/squid-2.5.8-gentoo.diff 17233
-MD5 bea1d2ef8cb2f1590f89bf37f28b9268 files/squid.pam 505
-MD5 20bbd41f88ddbcbe57380697c2675862 files/squid.rc6 1980
-MD5 5286e7e73ca5687381fa09ff41dccbd1 files/squid-logrotate 101
-MD5 89952d7cb51de1e4dbe9b5a1992aaf13 files/squid-2.5.9-gentoo.diff 17411
-MD5 b1028824f46381ebe326b5faf0e06d35 files/digest-squid-2.5.8 155
 MD5 7aec9f6b933e46cb25a72c56c0993e9e files/digest-squid-2.5.9 156
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCYRQv06ebR+OMO78RAn/iAJ0aPHJEFCPWoS532QNlHtxwvKOMLACfezSW
-2YTwrXcWBLtRGCWhCzouF9U=
-=zuSp
------END PGP SIGNATURE-----
+MD5 bea1d2ef8cb2f1590f89bf37f28b9268 files/squid.pam 505
+MD5 c3048f19a1c725e2c53f86640b752382 files/squid-2.5.8-gentoo.diff 17233
+MD5 c2d230465ceefe887175cb8121d0fbc8 files/digest-squid-2.5.8-r1 156
+MD5 e4e44e57aa7d93849649c3ceb67a3a65 files/squid.confd 437
+MD5 20bbd41f88ddbcbe57380697c2675862 files/squid.rc6 1980
+MD5 b1028824f46381ebe326b5faf0e06d35 files/digest-squid-2.5.8 155
+MD5 89952d7cb51de1e4dbe9b5a1992aaf13 files/squid-2.5.9-gentoo.diff 17411
+MD5 6f30a7f5c48ec35a7044acb189c858c5 files/squid-r1.cron 133
+MD5 5286e7e73ca5687381fa09ff41dccbd1 files/squid-logrotate 101
