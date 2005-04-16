@@ -1,19 +1,19 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 f2c211bb339ae4dfa9fa28377f3d43a8 ChangeLog 1466
+MD5 1e68367509f66a04a89195c74156723f ChangeLog 1564
 MD5 e7307c1653035014c1e36a27ca8ccb45 metadata.xml 163
 MD5 5456e2feee1285d34c7cadc94bb49ae0 nucleo-0.1-r1.ebuild 755
 MD5 5afd7e2de086b032e5c6113928c73f47 nucleo-0.1_p20041130.ebuild 881
-MD5 06f80fd1e1a287071ece290311e16cce nucleo-0.1_p20041216.ebuild 883
+MD5 99d49efd2fef5ca2d60b56b32f69e7ac nucleo-0.1_p20041216.ebuild 882
 MD5 fd28d1ef9fa7838bd45810e67b06b92a files/digest-nucleo-0.1_p20041130 72
 MD5 62ea22d5eff98ff9d6070953441b6b1e files/digest-nucleo-0.1-r1 72
 MD5 064f13ae039729537a4ef8acebe7f051 files/nucleo-0.1-nv.patch 583
 MD5 5905afb0e3d5ed1dd63379d1d5b15ca2 files/digest-nucleo-0.1_p20041216 72
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCCxueVWNWqTUmv+0RAt8sAJkBsmQqcJaG9b11y0i7z8n2aYdJtwCfSkbE
-IrM0jd2VG3qfPD0XsYsG+mI=
-=IQPS
+iD8DBQFCYTZZVWNWqTUmv+0RAh9TAJ9NALZPDLm3nQu7GxAwzgrwc9rV5gCgnaRq
+zcEEE3INiGn5FAmwS+UVu+o=
+=40tD
 -----END PGP SIGNATURE-----
