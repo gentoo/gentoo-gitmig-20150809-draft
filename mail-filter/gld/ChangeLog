@@ -1,6 +1,11 @@
 # ChangeLog for mail-filter/gld
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/gld/ChangeLog,v 1.15 2005/04/16 14:55:10 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/gld/ChangeLog,v 1.16 2005/04/16 15:59:32 slarti Exp $
+
+  16 Apr 2005; Tom Martin <slarti@gentoo.org> gld-1.5-r1.ebuild:
+  Fix the handling of --with-pgsql. There was no --without-pgsql, and it seems
+  that adding this to econf via $(use_with) was in fact making it install
+  *with* postgres.
 
   16 Apr 2005; Tom Martin <slarti@gentoo.org> gld-1.5.ebuild,
   gld-1.5-r1.ebuild:

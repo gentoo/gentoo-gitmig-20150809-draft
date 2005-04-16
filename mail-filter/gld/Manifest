@@ -1,10 +1,10 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 ecc5d2e200d9a11456e57996bc73ead1 ChangeLog 2372
+MD5 0eee243f61fe5f2bf062ba36f8819544 ChangeLog 2610
 MD5 4a8d1e52eea9410b5357dc2e77b7584e gld-1.3.ebuild 1153
 MD5 fe9230c3509639ad387e5025cafc57de gld-1.5.ebuild 1364
-MD5 a239c91cde56bc0b27db3d34e33633e5 gld-1.5-r1.ebuild 1490
+MD5 895771744ce33d5103c9821b9fd21dab gld-1.5-r1.ebuild 1593
 MD5 8a1c6c5f4c13a4109f6f4198fdd1874b metadata.xml 223
 MD5 fd1a136fe1866eb522142c76feafa47e gld-1.4.ebuild 1159
 MD5 4ec33dbb0fd9c8a61e86f738deb457e4 files/digest-gld-1.5-r1 55
@@ -16,7 +16,7 @@ MD5 86c6bd3ef318d2cd49f9592d0ba82a9f files/gld.rc 462
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCYSgACHk4+ZoBpvsRAhscAJ9Ceys35RJ3nAncXK0xu+7RU66+AQCfc5hz
-ka5BfLQAdOw3/rBSMYuzheE=
-=kKjc
+iD8DBQFCYTcYCHk4+ZoBpvsRAnmGAKCR8i1XrUIDmxw84XofSC4aw1/clwCgiWsY
+h5Y9QrjUT4Y/7dfZWw7K+Vc=
+=9/St
 -----END PGP SIGNATURE-----

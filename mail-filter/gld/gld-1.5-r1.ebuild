@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/gld/gld-1.5-r1.ebuild,v 1.2 2005/04/16 14:55:10 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/gld/gld-1.5-r1.ebuild,v 1.3 2005/04/16 15:59:32 slarti Exp $
 
 DESCRIPTION="A standalone anti-spam greylisting algorithm on top of Postfix"
 HOMEPAGE="http://www.gasmi.net/gld.html"
@@ -29,7 +29,12 @@ src_unpack() {
 }
 
 src_compile() {
-	econf $(use_with postgres pgsql) \
+	# It's kind of weird. $(use_with postgres pgsql) won't work...
+	if use postgres ; then
+		myconf="${myconf} --with-pgsql"
+	fi
+	
+	econf ${myconf} \
 	|| die "econf failed"
 	emake || die "emake failed"
 }
@@ -43,7 +48,7 @@ src_install() {
 	dosed 's:^#USER=.*:USER=nobody:' /etc/gld.conf.sample
 	dosed 's:^#GROUP=.*:GROUP=nobody:' /etc/gld.conf.sample
 
-	dodoc HISTORY LICENSE README*
+	dodoc HISTORY README*
 
 	insinto /usr/share/${PN}/sql
 	doins table*
