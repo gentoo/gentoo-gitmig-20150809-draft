@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/ser2net
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ser2net/ChangeLog,v 1.7 2005/03/20 18:57:59 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ser2net/ChangeLog,v 1.8 2005/04/16 15:02:04 hansmi Exp $
+
+  16 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> ser2net-2.2.ebuild,
+  ser2net-2.2-r1.ebuild:
+  2.2-r1: Readding to ~ppc as it also was dropped, 2.2: Stable on ppc.
 
   20 Mar 2005; Jason Wever <weeve@gentoo.org> ser2net-2.2-r1.ebuild:
   Added ~sparc keyword as it was dropped in the version bump.
