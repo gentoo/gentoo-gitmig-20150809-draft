@@ -1,6 +1,13 @@
 # ChangeLog for net-irc/xchat-xsys
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-xsys/ChangeLog,v 1.6 2005/01/16 13:05:01 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-xsys/ChangeLog,v 1.7 2005/04/16 19:26:20 chainsaw Exp $
+
+*xchat-xsys-1.9.3 (16 Apr 2005)
+
+  16 Apr 2005; Tony Vroon <chainsaw@gentoo.org>
+  +files/1.9.3-sysfs-instead-of-lspci.patch, +xchat-xsys-1.9.3.ebuild:
+  Version bump, with experimental patch to remove the lspci dependancy and use
+  sysfs tree walking instead.
 
 *xchat-xsys-1.9.1-r1 (16 Jan 2005)
 
