@@ -1,13 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/leif/leif-12.1_p2002.ebuild,v 1.1 2005/03/30 17:18:05 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/leif/leif-12.1_p2002.ebuild,v 1.2 2005/04/16 13:27:10 usata Exp $
 
 inherit iiimf eutils
 
 DESCRIPTION="Language Engine is a component that provide actual Input Method service for IIIMF"
 SRC_URI="http://www.openi18n.org/download/im-sdk/src/${IMSDK_P}.tar.bz2"
 
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc"
 IUSE=""
 
 RDEPEND="dev-libs/eimil"
