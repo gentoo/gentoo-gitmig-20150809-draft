@@ -1,0 +1,10 @@
+# ChangeLog for net-wireless/zd1201
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/zd1201/ChangeLog,v 1.1 2005/04/16 12:02:34 genstef Exp $
+
+*zd1201-0.14 (16 Apr 2005)
+
+  16 Apr 2005; Stefan Schweizer <genstef@gentoo.org> +metadata.xml,
+  +zd1201-0.14.ebuild:
+  New ebuild thanks to Ajay Gautam <ajaygautam@yahoo.com> in bug 89183
+
