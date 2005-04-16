@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/xine-ui-0.99.3-r1.ebuild,v 1.1 2005/04/11 14:53:09 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/xine-ui-0.99.3-r1.ebuild,v 1.2 2005/04/16 10:52:42 luckyduck Exp $
 
 inherit eutils
 
@@ -33,7 +33,14 @@ src_unpack() {
 	epatch ${FILESDIR}/true-false.patch
 	epatch ${FILESDIR}/${PN}-configure-checks.patch
 	epatch ${FILESDIR}/${PN}-desktop-fixes.patch
-	./autogen.sh
+
+	export WANT_AUTOCONF=2.5
+	export WANT_AUTOMAKE=1.7
+	aclocal -I m4 || die "aclocal failed"
+	autoheader || die "autoheader failed"
+	automake -afc || die "automake failed"
+	autoconf || die "autoconf failed"
+	libtoolize --copy --force
 
 	sed -i "s:LDFLAGS =:LDFLAGS = -L/lib :" src/xitk/Makefile.in
 }
