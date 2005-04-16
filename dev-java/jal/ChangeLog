@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/jal
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jal/ChangeLog,v 1.9 2005/02/04 23:30:49 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jal/ChangeLog,v 1.10 2005/04/16 17:33:00 luckyduck Exp $
+
+*jal-20031117-r2 (16 Apr 2005)
+
+  16 Apr 2005; Jan Brinkmann <luckyduck@gentoo.org> +jal-20031117-r2.ebuild,
+  -jal-20031117.ebuild:
+  stable on ppc, version bump for a package move. introduced support for the
+  source useflag.
 
   05 Feb 2005; Jan Brinkmann <luckyduck@gentoo.org> jal-20031117.ebuild:
   stable on amd64 and x86
