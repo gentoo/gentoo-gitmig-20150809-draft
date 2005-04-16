@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/gdbm
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gdbm/ChangeLog,v 1.32 2005/04/03 04:54:16 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gdbm/ChangeLog,v 1.33 2005/04/16 16:55:16 gongloo Exp $
+
+  16 Apr 2005; <gongloo@gentoo.org> gdbm-1.8.3-r1.ebuild:
+  Stable on ppc-macos.
 
 *gdbm-1.8.0-r5 (03 Apr 2005)
 
