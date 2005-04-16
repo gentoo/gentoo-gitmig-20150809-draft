@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.6.2-r3.ebuild,v 1.21 2005/03/29 02:35:30 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.6.2-r3.ebuild,v 1.22 2005/04/16 12:55:34 luckyduck Exp $
 
 inherit flag-o-matic gcc eutils
 
@@ -43,6 +43,7 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-configure.patch
 	epatch ${FILESDIR}/${P}-fPIC.patch
 	epatch ${FILESDIR}/${P}-gcc34.patch
+	epatch ${FILESDIR}/${P}-libquicktime094.patch
 
 	if use ppc; then
 		# Fix an error in the detection of the altivec-support
@@ -94,7 +95,8 @@ src_compile() {
 		$(use_with gtk) \
 		$(use_with sdl) \
 		$(use_with dv dv /usr) \
-		${myconf} || die
+		--enable-largefile \
+		${myconf} || die "configure failed"
 
 	if has_pie; then
 		pie_magic="$(test_flag -fno-pic) $(test_flag -nopie)"

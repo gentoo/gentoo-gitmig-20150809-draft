@@ -1,10 +1,15 @@
 # ChangeLog for media-video/mjpegtools
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/ChangeLog,v 1.84 2005/03/27 20:08:31 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/ChangeLog,v 1.85 2005/04/16 12:55:34 luckyduck Exp $
+
+  16 Apr 2005; Jan Brinkmann <luckyduck@gentoo.org>
+  +files/mjpegtools-1.6.2-libquicktime094.patch, mjpegtools-1.6.2-r3.ebuild:
+  added patch to make compilation with libquicktime-0.9.4 possible (patch based
+  on upstream cvs), also enabled largefile support which fixes #66039
 
   27 Mar 2005; Luca Barbato <lu_zero@gentoo.org>
   +files/mjpegtools-1.6.2-configure.patch, mjpegtools-1.6.2-r3.ebuild:
-  Updated ebuild, from Diego Pettenò <dgp85@users.sourceforge.net>
+  Updated ebuild, from Diego PettenÃ² <dgp85@users.sourceforge.net>
 
   26 Mar 2005; Jeremy Huddleston <eradicator@gentoo.org>
   -files/1.6.0-r7-ppc.patch, -files/mjpegtools-1.6.0-gcc3.patch,
@@ -13,7 +18,7 @@
   -files/mjpegtools-1.6.1.93-fPIC.patch, -files/no-x11-lib.patch,
   -mjpegtools-1.6.0-r7.ebuild, -mjpegtools-1.6.1.90-r2.ebuild,
   -mjpegtools-1.6.2-r1.ebuild, mjpegtools-1.6.2-r3.ebuild:
-  Removilg older versions. Fixing avifile dependency to accept newer versions
+  Removing older versions. Fixing avifile dependency to accept newer versions
   as it does compile with them.
 
   15 Mar 2005; Luca Barbato <lu_zero@gentoo.org> mjpegtools-1.6.2-r3.ebuild:
@@ -227,7 +232,7 @@
 
   19 Sep 2003; Max Kalika <max@gentoo.org> mjpegtools-1.6.1.90-r1.ebuild,
   files/no-x11-lib.patch:
-  Remove dangling -lX11. Fixes bug 29070. Thanks to Christian Jiresj� for the
+  Remove dangling -lX11. Fixes bug 29070. Thanks to Christian Jiresjö for the
   patch
 
   19 Sep 2003; Max Kalika <max@gentoo.org> mjpegtools-1.6.1.90.ebuild:
