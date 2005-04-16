@@ -2,13 +2,15 @@
 Hash: SHA1
 
 MD5 b2cb15a5e04e4ef2868e2f32247ce24b po4a-0.19.ebuild 682
+MD5 eb24e134034d331f7d2c608794d0a3f0 ChangeLog 562
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 8871f76e37b1c2fbbab819e23b9c72df ChangeLog 387
+MD5 ae42bb188268550b6c98943450e9793b po4a-0.20.ebuild 646
+MD5 634efb0745017496143c296ec1c6c898 files/digest-po4a-0.20 61
 MD5 65a5818a8ff842948adf91ab33d2866e files/digest-po4a-0.19 61
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFB7PrDtG5z4I8BtQoRApZ3AKCLpOQUXwToWxkSZW4HVWjI6usGVACePqqp
-oZAIzsXjucpP4sEHSS4fHUo=
-=/feg
+iD8DBQFCYZ0ctG5z4I8BtQoRAsflAJ0bAOse490TyCBEX7m9k8pP9vqxewCeMpfr
+60j1pV8v+LJyoqeeVik10yg=
+=NJzW
 -----END PGP SIGNATURE-----
