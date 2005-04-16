@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.166 2005/04/15 22:01:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.167 2005/04/16 07:05:45 vapier Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -1011,13 +1011,12 @@ Categories=Application;${type};" > "${desktop}"
 # command: Name of the Window Manager
 
 make_session_desktop() {
+	[[ -z $1 ]] && eerror "make_session_desktop: You must specify the title" && return 1
+	[[ -z $2 ]] && eerror "make_session_desktop: You must specify the command" && return 1
 
-	[ -z "$1" ] && eerror "make_session_desktop: You must specify the title" && return 1
-	[ -z "$2" ] && eerror "make_session_desktop: You must specify the command" && return 1
-
-	local title="${1}"
-	local command="${2}"
-	local desktop="${T}/${wm}.desktop"
+	local title=$1
+	local command=$2
+	local desktop=${T}/${wm}.desktop
 
 echo "[Desktop Entry]
 Encoding=UTF-8
@@ -1029,46 +1028,42 @@ Type=Application" > "${desktop}"
 
 	insinto /usr/share/xsessions
 	doins "${desktop}"
-
-	return 0
 }
 
 domenu() {
-	local i
-	local j
+	local i j
 	insinto /usr/share/applications
-	for i in ${@}
-	do
-		if [ -f "${i}" ];
-		then
-			doins ${i}
-		elif [ -d "${i}" ];
-		then
-			for j in ${i}/*.desktop
-			do
-				doins ${j}
+	for i in "$@" ; do
+		if [[ -f ${i} ]] ; then
+			doins "${i}"
+		elif [[ -d ${i} ]] ; then
+			for j in "${i}"/*.desktop ; do
+				doins "${j}"
 			done
 		fi	
 	done
 }
+newmenu() {
+	insinto /usr/share/applications
+	newins "$1" "$2"
+}
 
 doicon() {
-	local i
-	local j
+	local i j
 	insinto /usr/share/pixmaps
-	for i in ${@}
-	do
-		if [ -f "${i}" ];
-		then
-			doins ${i}
-		elif [ -d "${i}" ];
-		then
-			for j in ${i}/*.png
-			do
-				doins ${j}
+	for i in "$@" ; do
+		if [[ -f ${i} ]] ; then
+			doins "${i}"
+		elif [[ -d ${i} ]] ; then
+			for j in "${i}"/*.png ; do
+				doins "${j}"
 			done
 		fi	
 	done
+}
+newicon() {
+	insinto /usr/share/pixmaps
+	newins "$1" "$2"
 }
 
 ##############################################################
