@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/gld/gld-1.5-r1.ebuild,v 1.3 2005/04/16 15:59:32 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/gld/gld-1.5-r1.ebuild,v 1.4 2005/04/16 18:48:42 mr_bones_ Exp $
 
 DESCRIPTION="A standalone anti-spam greylisting algorithm on top of Postfix"
 HOMEPAGE="http://www.gasmi.net/gld.html"
@@ -33,7 +33,7 @@ src_compile() {
 	if use postgres ; then
 		myconf="${myconf} --with-pgsql"
 	fi
-	
+
 	econf ${myconf} \
 	|| die "econf failed"
 	emake || die "emake failed"
