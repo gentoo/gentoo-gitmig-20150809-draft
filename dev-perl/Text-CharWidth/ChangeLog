@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/Text-CharWidth
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-CharWidth/ChangeLog,v 1.1 2005/04/16 22:16:06 mcummings Exp $
+
+*Text-CharWidth-0.04 (16 Apr 2005)
+
+  16 Apr 2005; Michael Cummings <mcummings@gentoo.org>
+  +Text-CharWidth-0.04.ebuild:
+  Dep for po4a, ebuild from Jordi Vilalta <jvprat@wanadoo.es>, closes bug 80349
+
