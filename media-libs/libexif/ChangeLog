@@ -1,6 +1,15 @@
 # ChangeLog for media-libs/libexif
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libexif/ChangeLog,v 1.33 2005/04/05 02:53:32 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libexif/ChangeLog,v 1.34 2005/04/16 18:52:39 eradicator Exp $
+
+*libexif-0.6.12-r3 (16 Apr 2005)
+
+  16 Apr 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  +files/libexif-0.6.12-86740.patch, -libexif-0.5.12-r1.ebuild,
+  -libexif-0.6.10-r1.ebuild, -libexif-0.6.12-r2.ebuild,
+  +libexif-0.6.12-r3.ebuild:
+  Removing insecure versions. Bumping 0.6 version to fix bug #86740 where a
+  pointer was incremented instead of the number it pointed to.
 
 *libexif-0.6.12-r2 (05 Apr 2005)
 
