@@ -1,20 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 93ad6a0cfeb6af2a5bcebc9c7e51c10c xmlstarlet-0.9.3.ebuild 706
 MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
-MD5 d9287cf21b25c66860d90c9035a6ec80 ChangeLog 1081
-MD5 077b9544658c7747fb9b9be7cd2b4004 xmlstarlet-0.9.5.ebuild 815
+MD5 7baf7ca7ac9603e8fa4e4eedd9d8b824 ChangeLog 1249
 MD5 50042a523ce8428e3e06a4645f82c730 xmlstarlet-1.0.0.ebuild 815
-MD5 c2591c07e7dc0bf10088129555ae67f7 xmlstarlet-1.0.1.ebuild 816
-MD5 0935f1c792a257568d986aefebb92f09 files/digest-xmlstarlet-0.9.3 68
-MD5 e9d9af08aed6ffccf668033fc6f07ed3 files/digest-xmlstarlet-0.9.5 68
+MD5 a061a37d4762f1bb7edc9ed4f7392759 xmlstarlet-1.0.1.ebuild 815
 MD5 087fae86c52296a3b9080621e6b742be files/digest-xmlstarlet-1.0.0 68
 MD5 be4d4795d51e4066aad360f3a3c66cb8 files/digest-xmlstarlet-1.0.1 68
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCP8jeVWNWqTUmv+0RAgknAKCq+jNmz3zu665zsBW94ywyJASOcACfVA/w
-rZ5aKGAv8M0ghIPUW27w/Qw=
-=4L4J
+iD8DBQFCYTnbVWNWqTUmv+0RAk74AJ9zt/ui51EVb/lnKAWuw2U7cw8dpwCgj9Is
+9CrY7ex2rGWReDntPvAqyuM=
+=/mK9
 -----END PGP SIGNATURE-----
