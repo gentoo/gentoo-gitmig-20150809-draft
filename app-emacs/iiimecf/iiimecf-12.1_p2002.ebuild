@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/iiimecf/iiimecf-12.1_p2002.ebuild,v 1.1 2005/03/30 17:13:15 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/iiimecf/iiimecf-12.1_p2002.ebuild,v 1.2 2005/04/16 13:22:04 usata Exp $
 
 inherit elisp iiimf
 
@@ -8,7 +8,7 @@ DESCRIPTION="IIIMECF is a Emacs client framework for IIIMF"
 SRC_URI="http://www.openi18n.org/download/im-sdk/src/${IMSDK_P}.tar.bz2"
 
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE=""
 
 DEPEND="app-emacs/mule-ucs
