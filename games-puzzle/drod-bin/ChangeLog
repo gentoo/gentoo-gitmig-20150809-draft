@@ -1,6 +1,12 @@
 # ChangeLog for games-puzzle/drod-bin
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/drod-bin/ChangeLog,v 1.5 2004/06/24 23:03:29 agriffis Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/drod-bin/ChangeLog,v 1.6 2005/04/16 10:13:56 mr_bones_ Exp $
+
+*drod-bin-1.6.6 (16 Apr 2005)
+
+  16 Apr 2005; Michael Sterrett <mr_bones_@gentoo.org>
+  -drod-bin-1.6.3.ebuild, -drod-bin-1.6.5.ebuild, +drod-bin-1.6.6.ebuild:
+  version bump (bug #59920); clean older ebuilds
 
 *drod-bin-1.6.5 (18 Jan 2004)
 
