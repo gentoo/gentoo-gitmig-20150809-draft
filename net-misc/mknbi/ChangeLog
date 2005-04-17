@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/mknbi
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mknbi/ChangeLog,v 1.11 2004/09/23 16:06:07 sekretarz Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mknbi/ChangeLog,v 1.12 2005/04/17 20:39:14 solar Exp $
+
+  17 Apr 2005; <solar@gentoo.org> +files/mknbi-1.4.3-nossp.patch,
+  mknbi-1.4.3.ebuild:
+  - corrected compile problems when using pie or ssp while building this package
 
   23 Sep 2004; Karol Wojtaszek <sekretarz@gentoo.org> mknbi-1.4.3.ebuild:
   Fixed gcc-3.4 compile issues. Thanks to Mark Loeser <halcyon@whiterapid.com>

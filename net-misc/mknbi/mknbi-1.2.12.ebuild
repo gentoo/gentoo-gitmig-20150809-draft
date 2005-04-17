@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mknbi/mknbi-1.2.12.ebuild,v 1.5 2004/07/15 03:04:35 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mknbi/mknbi-1.2.12.ebuild,v 1.6 2005/04/17 20:39:14 solar Exp $
 
 DESCRIPTION="Utility for making tagged kernel images useful for netbooting"
 HOMEPAGE="http://etherboot.sourceforge.net"

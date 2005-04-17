@@ -1,8 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mknbi/mknbi-1.4.3.ebuild,v 1.6 2004/09/23 16:06:07 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mknbi/mknbi-1.4.3.ebuild,v 1.7 2005/04/17 20:39:14 solar Exp $
 
-inherit gcc
+inherit gcc eutils
 
 DESCRIPTION="Utility for making tagged kernel images useful for netbooting"
 SRC_URI="mirror://sourceforge/etherboot/${P}.tar.gz"
@@ -17,6 +17,12 @@ IUSE=""
 DEPEND=">=dev-lang/perl-5.6.1
 	dev-lang/nasm"
 
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/mknbi-1.4.3-nossp.patch
+}
+
 src_compile()
 {
 	sed -i -e "s:\/usr\/local:\/usr:"  Makefile
@@ -27,6 +33,7 @@ src_compile()
 		sed -i -e "s:\-mcpu:\-mtune:" Makefile
 		sed -i -e "s:CFLAGS=:CFLAGS= -minline-all-stringops:" Makefile
 	fi
+
 	emake || die "Compile failed"
 }
 
