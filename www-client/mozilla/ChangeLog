@@ -1,6 +1,10 @@
 # ChangeLog for www-client/mozilla
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla/ChangeLog,v 1.15 2005/04/16 21:42:24 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla/ChangeLog,v 1.16 2005/04/17 05:10:06 tgall Exp $
+
+  17 Apr 2005; Tom Gall <tgall@gentoo.org> mozilla-1.7.6-r1.ebuild,
+  +mozilla-1.7.6-ppc64.patch:
+  bug #54853 -- initial ppc64 port
 
   16 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> mozilla-1.7.7.ebuild:
   Stable on ppc.
