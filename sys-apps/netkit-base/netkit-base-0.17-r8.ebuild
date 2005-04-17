@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/netkit-base/netkit-base-0.17-r8.ebuild,v 1.12 2004/06/30 22:11:03 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/netkit-base/netkit-base-0.17-r8.ebuild,v 1.13 2005/04/17 05:38:52 vapier Exp $
 
 inherit eutils
 
@@ -10,19 +10,19 @@ SRC_URI="ftp://ftp.uk.linux.org/pub/linux/Networking/netkit/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="x86 ppc sparc mips alpha hppa amd64 ia64"
-IUSE="build"
+KEYWORDS="alpha amd64 hppa ia64 mips ppc sparc x86"
+IUSE=""
 
-DEPEND="virtual/libc"
+DEPEND=""
 PROVIDE="virtual/inetd"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	# Note that epatch will intelligently patch architecture specific
 	# patches as well
-	epatch ${FILESDIR}
+	epatch "${FILESDIR}"
 }
 
 src_compile() {
@@ -37,30 +37,14 @@ src_compile() {
 }
 
 src_install() {
-	exeopts -m 4755
+	sed -i \
+		-e 's:in\.telnetd$:in.telnetd -L /usr/sbin/telnetlogin:' \
+		etc.sample/inetd.conf
 
-	# avenj@gentoo.org 19 June 03:
-	# Uncomment for the (obsolete) version of ping.
-	# Most people should merge iputils instead.
-#	exeinto /bin
-#	doexe ping/ping
+	dosbin inetd/inetd
+	doman inetd/inetd.8
+	newinitd "${FILESDIR}"/inetd.rc6 inetd
 
-	if ! use build
-	then
-		cd ${S}/etc.sample
-		sed -e 's:in\.telnetd$:in.telnetd -L /usr/sbin/telnetlogin:' \
-			< inetd.conf > inetd.conf.new
-		mv inetd.conf.new inetd.conf
-		cd ${S}
-
-		exeopts -m 755
-		exeinto /usr/bin
-		dosbin inetd/inetd
-		doman inetd/inetd.8 inetd/daemon.3
-#		doman inetd/inetd.8 inetd/daemon.3 ping/ping.8
-
-		dodoc BUGS ChangeLog README
-		docinto samples ; dodoc etc.sample/*
-		exeinto /etc/init.d ; newexe ${FILESDIR}/inetd.rc6 inetd
-	fi
+	dodoc BUGS ChangeLog README
+	docinto samples ; dodoc etc.sample/*
 }
