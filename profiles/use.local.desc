@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1086 2005/04/17 17:14:45 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1087 2005/04/17 20:51:54 ribosome Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -707,6 +707,7 @@ sci-geosciences/gmt:gmttria - Non GNU triangulation method, more efficient;
 sci-geosciences/grass:nviz - support GLw functionality
 sci-libs/gdal:fits - enables support for NASA's cfitsio library
 sci-libs/gdal:ogdi - enables support for the open geographic datastore interface
+sci-libs/hdf5:hlapi - Enables support for high-level library
 sci-libs/plplot:fortran - Support for FORTRAN bindings.
 sci-libs/plplot:itcl - Support for itcl bindings.
 sci-libs/plplot:octave - Support for Octave bindings.
