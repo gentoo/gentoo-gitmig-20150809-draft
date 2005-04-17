@@ -1,6 +1,12 @@
 # ChangeLog for media-video/totem
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.46 2005/03/11 19:15:21 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.47 2005/04/17 22:19:02 foser Exp $
+
+*totem-1.0.1 (18 Apr 2005)
+
+  18 Apr 2005; foser <foser@gentoo.org> totem-1.0.1.ebuild :
+  New release (#86902)
+  Remove the sparc specific bits
 
   11 Mar 2005; Heinrich Wendel <lanius@gentoo.org> totem-0.100-r2.ebuild:
   fix gst-plugins-ffmpeg dep
