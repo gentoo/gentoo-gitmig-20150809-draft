@@ -1,14 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 d87959d41bbfcd21ab3244a8a0a6438a klogic-1.62.ebuild 501
 MD5 1af9f62d2f98379bc7e3e801487e1bab klogic-1.61.ebuild 496
+MD5 02a71bf1916a8650823d1c64f18ced0b ChangeLog 1791
 MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
-MD5 6ffcd5f00af4d710a30d2a13bc8d6fc7 ChangeLog 1670
 MD5 93c281b9de8bdfca2c9a644ee74e1f48 files/digest-klogic-1.61 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFB2hB3ntT9W3vfTuoRAvk5AJ9rtYObOvVQnO3y/WtAtO7+AgfSdQCZAT7N
-r7L9oaZBu5HjE6XAI+icRpc=
-=mWsV
------END PGP SIGNATURE-----
+MD5 fe42b6f1ff6eeeb99116d0029d7374e8 files/digest-klogic-1.62 64
