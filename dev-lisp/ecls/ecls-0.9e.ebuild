@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/ecls/ecls-0.9e.ebuild,v 1.2 2005/04/16 22:39:32 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/ecls/ecls-0.9e.ebuild,v 1.3 2005/04/17 00:00:59 mkennedy Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ SRC_URI="mirror://sourceforge/ecls/ecl-${PV}-fix-1.tgz"
 HOMEPAGE="http://ecls.sourceforge.net/"
 SLOT="0"
 LICENSE="BSD LGPL-2"
-KEYWORDS="x86"
+KEYWORDS="x86 ~ppc"
 
 DEPEND="X? ( virtual/x11 )
 	=dev-libs/gmp-4*
