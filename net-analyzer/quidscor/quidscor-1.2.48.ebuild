@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/quidscor/quidscor-1.2.48.ebuild,v 1.4 2004/07/10 11:41:29 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/quidscor/quidscor-1.2.48.ebuild,v 1.5 2005/04/17 20:28:28 vanquirius Exp $
 
 DESCRIPTION="IDS/VA Correlation engine"
 HOMEPAGE="http://quidscor.sourceforge.net/"
@@ -17,7 +17,10 @@ DEPEND=">=dev-libs/libxml2-2.4
 
 src_unpack() {
 	unpack ${A}
-	sed -i '/^CFLAGS=/s: -g : :' Makefile
+	sed -i '/^CFLAGS=/s: -g : :' ${S}/Makefile || die
+	#yes, the fix below is as pathetic as it seems
+	echo "#define FALSE 0" >> ${S}/libqg/libqg.h
+	echo "#define TRUE 1" >> ${S}/libqg/libqg.h
 }
 
 src_compile() {

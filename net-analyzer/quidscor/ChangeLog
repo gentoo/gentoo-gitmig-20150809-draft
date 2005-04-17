@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/quidscor
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/quidscor/ChangeLog,v 1.3 2004/07/10 11:41:29 eldad Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/quidscor/ChangeLog,v 1.4 2005/04/17 20:28:28 vanquirius Exp $
+
+  17 Apr 2005; Marcelo Goes <vanquirius@gentoo.org> quidscor-1.2.48.ebuild:
+  Fix broken sed line, add fix for lacking TRUE and FALSE definitions. Thanks to
+  soulse for testing.
 
   10 Jul 2004; Eldad Zack <eldad@gentoo.org> +metadata.xml,
   quidscor-1.2.48.ebuild:
