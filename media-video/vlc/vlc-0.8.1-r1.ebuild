@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.1-r1.ebuild,v 1.3 2005/04/13 14:40:09 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.1-r1.ebuild,v 1.4 2005/04/17 21:15:17 flameeyes Exp $
 
 # Missing support for...
 #	tarkin - package not in portage yet - experimental
@@ -65,15 +65,17 @@ DEPEND="hal? ( >=sys-apps/hal-0.2.97 )
 		portaudio? ( media-libs/portaudio )"
 
 pkg_setup() {
-	WX_GTK_VER="2.4"
-	if use gtk2; then
-		if use unicode; then
-			need-wxwidgets unicode || die "You need to install wxGTK with unicode support."
+	if use wxwindows; then
+		WX_GTK_VER="2.4"
+		if use gtk2; then
+			if use unicode; then
+				need-wxwidgets unicode || die "You need to install wxGTK with unicode support."
+			else
+				need-wxwidgets gtk2 || die "You need to install wxGTK with gtk2 support."
+			fi
 		else
-			need-wxwidgets gtk2 || die "You need to install wxGTK with gtk2 support."
+			need-wxwidgets gtk || die "You need to install wxGTK with gtk support."
 		fi
-	else
-		need-wxwidgets gtk || die "You need to install wxGTK with gtk support."
 	fi
 }
 

@@ -1,6 +1,9 @@
 # ChangeLog for media-video/vlc
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.75 2005/04/13 14:40:09 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.76 2005/04/17 21:15:17 flameeyes Exp $
+
+  17 Apr 2005; Diego Pettenò <flameeyes@gentoo.org> vlc-0.8.1-r1.ebuild:
+  Add check for wxwindows before request it (fixex #89436).
 
   13 Apr 2005; Jan Brinkmann <luckyduck@gentoo.org>
   +files/vlc-0.8.1-time.patch, vlc-0.8.1-r1.ebuild:
