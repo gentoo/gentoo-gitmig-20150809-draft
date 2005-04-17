@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/dia/dia-0.94-r1.ebuild,v 1.5 2005/04/11 20:34:09 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/dia/dia-0.94-r1.ebuild,v 1.6 2005/04/17 04:26:16 halcy0n Exp $
 
 inherit eutils gnome2
 
@@ -42,4 +42,6 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-no_font_cache.patch
 	# Fix help display. See bug #83726.
 	epatch ${FILESDIR}/${P}-help.patch
+	# GCC 4 compile fixes
+	epatch ${FILESDIR}/${P}-gcc4.patch
 }
