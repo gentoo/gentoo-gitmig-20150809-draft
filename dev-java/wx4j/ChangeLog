@@ -1,0 +1,11 @@
+# ChangeLog for dev-java/wx4j
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/wx4j/ChangeLog,v 1.1 2005/04/17 15:32:26 luckyduck Exp $
+
+*wx4j-0.2.0 (17 Apr 2005)
+
+  17 Apr 2005; Jan Brinkmann <luckyduck@gentoo.org> +metadata.xml,
+  +files/wx4j-0.2.0-build.patch, +wx4j-0.2.0.ebuild:
+  Initial import, ebuilds mainly based on the contribution by Bill Six
+  <billsix316@yahoo.com>. Fixes #86559
+
