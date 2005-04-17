@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-yaclml/cl-yaclml-0.5.2.ebuild,v 1.2 2005/02/24 05:49:57 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-yaclml/cl-yaclml-0.5.2.ebuild,v 1.3 2005/04/17 01:18:13 mkennedy Exp $
 
 inherit common-lisp
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://common-lisp.net/project/bese/yaclml.html"
 SRC_URI="ftp://ftp.common-lisp.net/pub/project/bese/yaclml_${PV}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86 ~amd64 ~ppc"
 IUSE="doc"
 DEPEND="dev-lisp/cl-iterate
 	dev-lisp/cl-arnesi
