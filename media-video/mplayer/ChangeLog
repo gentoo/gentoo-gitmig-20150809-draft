@@ -1,6 +1,12 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.298 2005/04/17 10:24:46 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.299 2005/04/17 14:05:35 lu_zero Exp $
+
+  17 Apr 2005; Luca Barbato <lu_zero@gentoo.org>
+  +files/mplayer-1.0_pre5-alsa-gcc34.patch,
+  +files/mplayer-1.0_pre5-help_mp-ro.h.patch, mplayer-1.0_pre5-r5.ebuild,
+  mplayer-1.0_pre7.ebuild:
+  Fixed pre5 patchset
 
   17 Apr 2005; Markus Rothe <corsair@gentoo.org> mplayer-1.0_pre6-r4.ebuild:
   Stable on ppc64; bug #89277

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre5-r5.ebuild,v 1.30 2005/04/16 10:05:03 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre5-r5.ebuild,v 1.31 2005/04/17 14:05:35 lu_zero Exp $
 
 inherit eutils flag-o-matic kernel-mod
 
@@ -166,13 +166,13 @@ src_unpack() {
 	epatch ${FILESDIR}/${PN}-0.90-coreutils-fixup.patch
 
 	#bug #49669, horrid syntax errors in help/help_mp-ro.h	
-	epatch ${FILESDIR}/mplayer-1.0_pre4-help_mp-ro.h.patch
+	epatch ${FILESDIR}/mplayer-1.0_pre5-help_mp-ro.h.patch
 
 	#adds mythtv support to mplayer
 	use mythtv && epatch ${FILESDIR}/mplayer-mythtv.patch
 
 	# GCC 3.4 fixes
-	epatch ${FILESDIR}/mplayer-1.0_pre4-alsa-gcc34.patch
+	epatch ${FILESDIR}/mplayer-1.0_pre5-alsa-gcc34.patch
 
 	#Workaround for the altivec softscaler issues
 	epatch ${FILESDIR}/mplayer-1.0_pre5-yuv2rgb_fix.patch
