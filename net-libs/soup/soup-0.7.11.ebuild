@@ -1,10 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/soup/soup-0.7.11.ebuild,v 1.11 2004/11/09 21:26:53 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/soup/soup-0.7.11.ebuild,v 1.12 2005/04/17 21:42:18 foser Exp $
 
-IUSE="ssl doc"
-
-inherit gnome.org libtool
+inherit gnome.org libtool eutils
 
 DESCRIPTION="Soup is a SOAP implementation"
 HOMEPAGE="http://www.gnome.org/"
@@ -16,9 +14,21 @@ DEPEND=">=dev-util/pkgconfig-0.12.0
 	ssl? ( dev-libs/openssl )
 	doc? ( >=dev-util/gtk-doc-0.9-r2 )"
 
+IUSE="ssl doc"
+
 LICENSE="|| ( GPL-2 LGPL-2 )"
 SLOT="0"
 KEYWORDS="x86 sparc ppc ~alpha hppa"
+
+src_unpack() {
+
+	unpack ${A}
+
+	cd ${S}
+	# fix gcc bailing (#68047)
+	epatch ${FILESDIR}/${P}-gcc3.patch
+
+}
 
 src_compile() {
 	elibtoolize
