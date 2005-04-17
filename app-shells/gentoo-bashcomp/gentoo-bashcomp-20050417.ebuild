@@ -1,8 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/gentoo-bashcomp/gentoo-bashcomp-20050329-r1.ebuild,v 1.2 2005/04/02 06:06:09 ka0ttic Exp $
-
-inherit eutils
+# $Header: /var/cvsroot/gentoo-x86/app-shells/gentoo-bashcomp/gentoo-bashcomp-20050417.ebuild,v 1.1 2005/04/17 12:38:04 ka0ttic Exp $
 
 DESCRIPTION="Gentoo-specific bash command-line completions (emerge, ebuild, equery, etc)"
 HOMEPAGE="http://developer.berlios.de/projects/gentoo-bashcomp/"
@@ -14,12 +12,6 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~ppc-macos ~s390 ~spa
 IUSE=""
 
 RDEPEND=">=app-shells/bash-completion-20050121-r3"
-
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${PV}-fix-actionre.diff
-}
 
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed"

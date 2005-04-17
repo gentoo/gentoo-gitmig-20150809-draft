@@ -1,6 +1,13 @@
 # ChangeLog for app-shells/gentoo-bashcomp
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/gentoo-bashcomp/ChangeLog,v 1.4 2005/04/02 03:05:29 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/gentoo-bashcomp/ChangeLog,v 1.5 2005/04/17 12:38:04 ka0ttic Exp $
+
+*gentoo-bashcomp-20050417 (17 Apr 2005)
+
+  17 Apr 2005; Aaron Walker <ka0ttic@gentoo.org>
+  -files/20050329-fix-actionre.diff, -gentoo-bashcomp-20050329-r1.ebuild,
+  +gentoo-bashcomp-20050417.ebuild:
+  Version bump; closes bugs 88152, 88326, 88797, and 88799.
 
 *gentoo-bashcomp-20050329-r1 (02 Apr 2005)
 
