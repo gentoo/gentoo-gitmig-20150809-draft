@@ -1,6 +1,6 @@
 # ChangeLog for sys-devel/gnuconfig
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gnuconfig/ChangeLog,v 1.19 2005/04/17 08:19:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gnuconfig/ChangeLog,v 1.20 2005/04/17 08:24:12 vapier Exp $
 
 *gnuconfig-20050324 (17 Apr 2005)
 
@@ -8,51 +8,16 @@
   +gnuconfig-20050324.ebuild:
   Sync to latest upstream version and add some hunks for ps2 support.
 
-  09 Apr 2005; Markus Rothe <corsair@gentoo.org> gnuconfig-20050223.ebuild:
-  Stable on ppc64
-
-  26 Mar 2005; Lina Pezzella <j4rg0n@gentoo.org> gnuconfig-20050223.ebuild:
-  Stable ppc-macos
-
-  22 Mar 2005; Gustavo Zacarias <gustavoz@gentoo.org>
-  gnuconfig-20050223.ebuild:
-  Stable on sparc
-
-  12 Mar 2005; Aron Griffis <agriffis@gentoo.org> gnuconfig-20050223.ebuild:
-  stabilize alpha ia64 x86
-
 *gnuconfig-20050223 (23 Feb 2005)
 
   23 Feb 2005; Mike Frysinger <vapier@gentoo.org>
   +gnuconfig-20050223.ebuild:
   CVS update.
 
-  03 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> :
-  Change encoding to UTF-8 for GLEP 31 compliance
-
-  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
-  gnuconfig-20040214.ebuild:
-  Masked gnuconfig-20040214.ebuild stable for ppc
-
   24 Jun 2004; <solar@gentoo.org> gnuconfig-20040214.ebuild,
   files/automake-1.8.5-config-guess-uclibc.patch,
   files/gnuconfig-20040312-update.patch:
   added uclibc support to gnuconfig with 2004-03-12 update
-
-  11 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> gnuconfig-20040214.ebuild:
-  Stable on alpha.
-
-  29 Apr 2004; Guy Martin <gmsoft@gentoo.org> gnuconfig-20040214.ebuild:
-  Marked stable on hppa.
-
-  25 Apr 2004; Joshua Kinard <kumba@gentoo.org> gnuconfig-20040214.ebuild:
-  Marked stable on x86, sparc, and mips as no issues have been reported.
-
-  09 Apr 2004; Travis Tilley <lv@gentoo.org> gnuconfig-20040214.ebuild:
-  stable on amd64
-
-  19 Feb 2004; Tom Gall <tgall@gentoo.org> gnuconfig-20040214.ebuild:
-  ppc64 stable
 
 *gnuconfig-20040214 (14 Feb 2004)
 
@@ -60,12 +25,6 @@
   metadata.xml:
   Updated config.sub/guess files taken from GNU CVS (Savannah). Older versions
   off ftp.gnu.org still unavailable.  Also removed arm keywords.
-
-  17 Sep 2003; Jon Portnoy <avenj@gentoo.org> gnuconfig-20030708.ebuild :
-  ia64 keywords.
-
-  18 Jul 2003; Luca Barbato <lu_zero@gentoo.org> gnuconfig-20030708.ebuild:
-  Added the missing ppc.
 
 *gnuconfig-20030708 (12 Jul 2003)
 
@@ -76,4 +35,3 @@
   This package will start in stable, since it's just a few files called only
   if gnuconfig_update is called.  Starting keywords are "mips sparc x86 alpha hppa".
   This snapshot is from 2003 Jul 08.
-
