@@ -1,20 +1,24 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 0a17f753e284f53c48f2c1b7c212fa35 ChangeLog 2357
-MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 be0930ed084da54edbc92ae8332350dd ChangeLog 2798
+MD5 24aa63fc8db1ae9616cba4285022c7eb metadata.xml 596
 MD5 547bdfdbdbe39d102059c9c42f3a8dd5 File-Spec-0.82.ebuild 584
 MD5 adaed9a34d6de3f8576f900007a78211 File-Spec-0.84-r1.ebuild 646
 MD5 e8baa5d9819c08c852b35434af3feca5 File-Spec-0.84.ebuild 562
 MD5 f13b251265e4cfe6d40054b1f62435e9 File-Spec-0.87.ebuild 630
+MD5 3ec52a239bdc857a70ad30ec9461eeec File-Spec-3.01.ebuild 679
+MD5 063015d48b3d070bc24ce05438131d25 File-Spec-3.06.ebuild 679
+MD5 5ef01c0e76ba047775421be5b11033c6 files/digest-File-Spec-3.01 65
 MD5 4c4ff53e78adcf00c5ce38ac9d7408c1 files/digest-File-Spec-0.82 65
 MD5 144ba852cf94f6d50b9e39e953c5936a files/digest-File-Spec-0.84 65
 MD5 144ba852cf94f6d50b9e39e953c5936a files/digest-File-Spec-0.84-r1 65
 MD5 e8c2b2625d8031840c76c7fd1fdafcad files/digest-File-Spec-0.87 65
+MD5 690e170d12aed701e762e1eda88e2535 files/digest-File-Spec-3.06 66
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCNrCptG5z4I8BtQoRAmOpAJ9z/hZ268z5I0lcSaDYpnVlN1k83gCbB1r5
-soDgvKK4oLitqYK7T3HWCWo=
-=98vv
+iD8DBQFCYnratG5z4I8BtQoRAqtyAJ9EHWYkW5xgBRvrBvDbDWaJbWMyhwCeI2DN
+Jv79BMbJD7DI5mLd9jKXdeU=
+=te2Y
 -----END PGP SIGNATURE-----

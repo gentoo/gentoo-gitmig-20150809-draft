@@ -1,6 +1,16 @@
 # ChangeLog for dev-perl/File-Spec
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Spec/ChangeLog,v 1.19 2005/03/15 09:53:31 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Spec/ChangeLog,v 1.20 2005/04/17 15:03:38 mcummings Exp $
+
+*File-Spec-3.06 (17 Apr 2005)
+*File-Spec-3.01 (17 Apr 2005)
+
+  17 Apr 2005; Michael Cummings <mcummings@gentoo.org>
+  +File-Spec-3.01.ebuild, +File-Spec-3.06.ebuild:
+  Adding both version 3.01 and 3.06 to the tree. 3.01 gives us cross
+  compatibility with the version of File-Spec that is shipped with the perl
+  5.8.6 core package. 3.06 is just the current stable upstream :) Please see
+  metadata for explanation of extreme version jump.
 
   15 Mar 2005; Michael Cummings <mcummings@gentoo.org>
   File-Spec-0.84-r1.ebuild, File-Spec-0.87.ebuild:
