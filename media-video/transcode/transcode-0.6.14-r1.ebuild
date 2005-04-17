@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-0.6.14-r1.ebuild,v 1.1 2005/04/13 16:31:02 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-0.6.14-r1.ebuild,v 1.2 2005/04/17 21:39:44 weeve Exp $
 
 inherit libtool flag-o-matic eutils multilib
 
@@ -68,10 +68,18 @@ src_compile() {
 	# fix invalid paths in .la files of plugins
 	elibtoolize
 
-	use pvm \
-		&& myconf="${myconf} --enable-pvm3 \
-			--with-pvm3-lib=${PVM_ROOT}/lib/LINUX \
-			--with-pvm3-include=${PVM_ROOT}/include"
+	if use pvm; then
+		if use sparc; then
+			myconf="${myconf} --enable-pvm3 \
+				--with-pvm3-lib=${PVM_ROOT}/lib/LINUXSPARC \
+				--with-pvm3-include=${PVM_ROOT}/include"
+		else
+			myconf="${myconf} --enable-pvm3 \
+				--with-pvm3-lib=${PVM_ROOT}/lib/LINUX \
+				--with-pvm3-include=${PVM_ROOT}/include"
+		fi
+	fi
+
 	use xvid \
 		&& myconf="${myconf} --with-default-xvid=xvid4"
 
