@@ -1,6 +1,13 @@
 # ChangeLog for media-video/mjpegtools
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/ChangeLog,v 1.85 2005/04/16 12:55:34 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/ChangeLog,v 1.86 2005/04/17 20:56:29 luckyduck Exp $
+
+*mjpegtools-1.6.2-r4 (17 Apr 2005)
+
+  17 Apr 2005; Jan Brinkmann <luckyduck@gentoo.org>
+  +mjpegtools-1.6.2-r4.ebuild:
+  added a patch to fix #78404. thanks to Kevin F. Quinn <co@kevquinn.com> and
+  Ned Ludd <solar@gentoo.org>
 
   16 Apr 2005; Jan Brinkmann <luckyduck@gentoo.org>
   +files/mjpegtools-1.6.2-libquicktime094.patch, mjpegtools-1.6.2-r3.ebuild:
