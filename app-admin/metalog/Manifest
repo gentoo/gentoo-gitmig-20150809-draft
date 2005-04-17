@@ -5,7 +5,7 @@ MD5 50d1dd817d7034c47499d28d22146efa metalog-0.8_pre20031130.ebuild 1453
 MD5 41c7414c1491ff0ef859d99452671840 metalog-0.8_rc1.ebuild 1401
 MD5 a71e9c0a7f187efcffacb5a5a8222058 metalog-0.8_rc1-r1.ebuild 1433
 MD5 2a4834a861e0ed954124316c2a0ad8e9 files/consolelog.sh 191
-MD5 5a0744b717ffc52652f0f05ef0acad32 files/metalog.rc7 741
+MD5 c695812c049e1c94e606904bd47643d1 files/metalog.rc7 741
 MD5 46e8dbe8b0c2eb41e70e839dd799eca8 files/digest-metalog-0.8_rc1 67
 MD5 ab769042aa4721d0ac745943e00c70e4 files/digest-metalog-0.7-r1 63
 MD5 d16762a967c2f400ba4876a942d16d08 files/digest-metalog-0.8_pre20031130 74
