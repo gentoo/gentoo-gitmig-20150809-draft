@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3834 2005/04/17 17:05:59 genone Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3835 2005/04/17 17:45:18 taviso Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,14 @@
 ##
 ##   End example
 ##
+
+# Tavis Ormandy <taviso@gentoo.org> (17 Apr 2005)
+# masked pending resolution of security issues
+# described in #87341
+=x11-libs/lesstif-0.93.94-r3
+=x11-libs/lesstif-0.94.0-r6
+=x11-libs/openmotif-2.1.30-r12
+=x11-libs/openmotif-2.2.3-r6
 
 # Marius Mauch <genone@gentoo.org> (17 Apr 2005)
 # Site is dead.
