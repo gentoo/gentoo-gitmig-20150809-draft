@@ -1,0 +1,42 @@
+--- named.orig	2005-04-17 16:14:08.000000000 +0400
++++ named.rc6	2005-04-17 16:18:00.000000000 +0400
+@@ -17,23 +17,29 @@
+ 	fi
+ 	
+ 	# In case someone doesn't have $CPU set from /etc/conf.d/named
+-	if [ ! $CPU ] ; then
+-		CPU=1
++	if [ ! ${CPU} ] ; then
++		CPU="1"
+ 	fi
+ 
+-	if [ $CHROOT -a -d $CHROOT ] ; then
+-		PIDFILE="${CHROOT}/var/run/named/named.pid"
+-		KEY="${CHROOT}/etc/bind/rndc.key"
+-	else
+-		PIDFILE="/var/run/named/named.pid"
+-		KEY="/etc/bind/rndc.key"
+-	fi
++	# As with the named.conf test, above, there's no need
++	# for chroot and non-chroot cases here
++	PIDFILE=$(grep "pid-file" ${CHROOT}/etc/bind/named.conf | \
++		egrep -v ".*[#,//].*pid-file" | \
++		head -n 1 | \
++		sed -ne 's:.*pid-file \"\(.*\)\";:\1:p')
++	[ -n "$PIDFILE" ] || PIDFILE=/var/run/named.pid
++
++	PIDFILE="${CHROOT}$PIDFILE"
++
++	KEY="${CHROOT}/etc/bind/rndc.key"
+ }
+ 
+ start() {
+ 	ebegin "Starting ${CHROOT:+chrooted }named"
+ 	checkconfig || return 1
+-	start-stop-daemon --start --quiet --exec /usr/sbin/named -- -u named -n $CPU $OPTIONS ${CHROOT:+-t $CHROOT}
++	start-stop-daemon --start --quiet --pidfile ${PIDFILE} \
++		--exec /usr/sbin/named \
++		-- -u named -n ${CPU} ${OPTIONS} ${CHROOT:+-t $CHROOT}
+ 	eend $?
+ }
+ 

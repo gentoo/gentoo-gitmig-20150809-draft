@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.3.1.ebuild,v 1.2 2005/04/12 11:01:19 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.3.1-r1.ebuild,v 1.1 2005/04/17 12:32:57 voxus Exp $
 
 inherit eutils gnuconfig libtool
 
-IUSE="ssl ipv6 doc selinux idn caps threads"
+IUSE="ssl ipv6 doc selinux idn threads"
 
 DESCRIPTION="BIND - Berkeley Internet Name Domain - Name Server"
 SRC_URI="ftp://ftp.isc.org/isc/bind9/${PV}/${P}.tar.gz"
@@ -39,7 +39,7 @@ src_unpack() {
 	fi
 
 	cp ${FILESDIR}/named.rc6 ${T}
-	cd ${T} && epatch ${FILESDIR}/named.rc6-pid_fix
+	cd ${T} && epatch ${FILESDIR}/named.rc6-smart_pid_fix
 
 	gnuconfig_update
 
@@ -55,13 +55,13 @@ src_compile() {
 	local myconf=""
 
 	use ssl && myconf="${myconf} --with-openssl"
-	use caps || myconf="${myconf} --disable-linux-caps"
+
+	use threads && myconf="${myconf} --enable-linux-caps --enable-threads"
 
 	econf \
 		--sysconfdir=/etc/bind \
 		--localstatedir=/var \
 		--with-libtool \
-		`use_enable threads` \
 		`use_enable ipv6` \
 		${myconf} || die "econf failed"
 

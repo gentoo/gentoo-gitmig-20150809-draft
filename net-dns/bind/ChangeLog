@@ -1,6 +1,16 @@
 # ChangeLog for net-dns/bind
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.68 2005/04/13 12:15:38 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.69 2005/04/17 12:32:57 voxus Exp $
+
+*bind-9.2.5-r2 (15 Apr 2005)
+
+  15 Apr 2005; Konstantin Arkhipov <voxus@gentoo.org> -bind-9.2.5-r1.ebuild,
+  +bind-9.2.5-r2.ebuild, -bind-9.3.1.ebuild, +bind-9.3.1-r1.ebuild,
+  +files/named.rc6-smart_pid_fix:
+  Dropped "caps" use flag. Capabilities now automatically enabled by ebuild,
+  if "threads" is used. Closes bug #89358.
+  Yet again fixed init-script, closes bug #65335 and bug #79875.
+  Patch provided by Jacob Joseph <jmjoseph@andrew.cmu.edu>.
 
   13 Apr 2005; Konstantin Arkhipov <voxus@gentoo.org> bind-9.2.5.ebuild,
   bind-9.2.5-r1.ebuild:
