@@ -1,4 +1,6 @@
-MD5 f825a271a62d7517bdff2a1b91760485 ChangeLog 2721
+MD5 8f825ea1da5428e3eaa26801f604dde8 ChangeLog 2906
 MD5 52d58d9aac5ff52221cdb9e5b04c6832 gnuconfig-20050223.ebuild 830
 MD5 323cecb82ceb410827b44855ef1b123f metadata.xml 381
+MD5 df88ae0f0a742d36966aef2879cb2283 gnuconfig-20050324.ebuild 833
 MD5 e0970292f30d2429b94a661a4cb26d99 files/digest-gnuconfig-20050223 70
+MD5 bcc49e0a3cffa806deeda49e2013362a files/digest-gnuconfig-20050324 70
