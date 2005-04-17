@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-2.2.7.ebuild,v 1.1 2005/04/16 23:46:30 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-2.2.7.ebuild,v 1.2 2005/04/17 17:55:05 foser Exp $
 
-inherit eutils fdo-mime
+inherit eutils fdo-mime alternatives
 
 IUSE="gnome jpeg spell xml2 debug"
 
@@ -100,5 +100,7 @@ src_install() {
 pkg_postinst() {
 
 	fdo-mime_desktop_database_update
+
+	alternatives_auto_makesym "/usr/bin/abiword" "/usr/bin/abiword-[0-9].[0-9]"
 
 }
