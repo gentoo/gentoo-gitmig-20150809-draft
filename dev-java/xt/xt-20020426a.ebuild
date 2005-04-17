@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xt/xt-20020426a.ebuild,v 1.6 2005/02/05 13:06:53 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xt/xt-20020426a.ebuild,v 1.7 2005/04/17 15:13:15 luckyduck Exp $
 
 inherit java-pkg
 
@@ -15,9 +15,11 @@ KEYWORDS="x86 amd64 ~ppc"
 IUSE="doc jikes"
 
 DEPEND=">=virtual/jdk-1.4
+	dev-java/ant-core
 	>=dev-java/xp-0.5
 	~dev-java/servletapi-2.3
-	>=dev-java/xerces-2.6.2-r1"
+	dev-java/xml-commons
+	jikes? ( dev-java/jikes )"
 RDEPEND=">=virtual/jre-1.4"
 
 S="${WORKDIR}/${MY_P}"
@@ -27,7 +29,7 @@ src_unpack() {
 	cd ${S}
 	rm -f xt.jar lib/*.jar
 	cd lib
-	java-pkg_jar-from xerces-2 xml-apis.jar
+	java-pkg_jar-from xml-commons xml-apis.jar
 	java-pkg_jar-from xp
 	java-pkg_jar-from servletapi-2.3 servletapi-2.3.jar servlets.jar
 }
@@ -39,6 +41,8 @@ src_compile() {
 
 src_install() {
 	java-pkg_dojar xt.jar
-	dohtml README copying.txt copyingjc.txt index.html
-	use doc && java-pkg_dohtml -r docs/*
+	if use doc; then
+		java-pkg_dohtml -r docs/* index.html
+		dodoc README
+	fi
 }
