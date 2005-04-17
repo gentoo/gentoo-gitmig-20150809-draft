@@ -1,6 +1,9 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.299 2005/04/17 14:05:35 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.300 2005/04/17 21:27:22 weeve Exp $
+
+  17 Apr 2005; Jason Wever <weeve@gentoo.org> mplayer-1.0_pre6-r4.ebuild:
+  Stable on SPARC wrt security bug #89277.
 
   17 Apr 2005; Luca Barbato <lu_zero@gentoo.org>
   +files/mplayer-1.0_pre5-alsa-gcc34.patch,
