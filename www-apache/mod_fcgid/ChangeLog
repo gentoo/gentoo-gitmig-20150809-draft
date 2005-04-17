@@ -1,6 +1,10 @@
 # ChangeLog for www-apache/mod_fcgid
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_fcgid/ChangeLog,v 1.3 2005/04/17 19:13:17 ramereth Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_fcgid/ChangeLog,v 1.4 2005/04/17 19:20:27 ramereth Exp $
+
+  17 Apr 2005; Lance Albertson <ramereth@gentoo.org>
+  mod_fcgid-1.05-r2.ebuild:
+  minor fix on DEPEND to ensure blocking of non-stable apache installations
 
 *mod_fcgid-1.05-r2 (17 Apr 2005)
 

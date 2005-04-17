@@ -1,5 +1,5 @@
-MD5 c00aa91e13417582d089208b1485090f mod_fcgid-1.05-r2.ebuild 1128
+MD5 95da883d1a62fc55e80c8ea63b0f0975 mod_fcgid-1.05-r2.ebuild 1184
 MD5 b04c3f93349f84b2bc615931f1c1d6c9 metadata.xml 483
-MD5 de15d2e3020a7107b2b537578b2422fd ChangeLog 808
+MD5 68d73a59f849c0446dd9075f5a895dae ChangeLog 966
 MD5 2f3017d748d633af44a9d82fa83cdef7 files/20_mod_fcgid.conf 197
 MD5 2d8046826f8e5dd7cc5256d4e8337275 files/digest-mod_fcgid-1.05-r2 65
