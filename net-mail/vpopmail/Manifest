@@ -12,3 +12,4 @@ MD5 8c6ca78a4c32c9a267dd9c3f7e9db5f1 files/vpopmail-Maildir-dotmaildir-fix.sh 14
 MD5 851f9c731b7d03472a08ee21c046823d files/vpopmail.clearopensmtp 235
 MD5 63284ad7aa0644157e4b754b969a8421 files/vpopmail.conf 466
 MD5 aea08e2e6df4cf89a2a32a8817cc7135 files/digest-vpopmail-5.4.9 66
+MD5 eb33b7205c4d4d75c4fc3710d7774e07 files/vpopmail-5.4.9-access.violation.patch 918
