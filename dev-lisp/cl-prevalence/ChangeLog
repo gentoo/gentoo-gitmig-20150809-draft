@@ -1,6 +1,12 @@
 # ChangeLog for dev-lisp/cl-prevalence
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-prevalence/ChangeLog,v 1.6 2005/04/11 08:12:49 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-prevalence/ChangeLog,v 1.7 2005/04/17 00:16:14 mkennedy Exp $
+
+  17 Apr 2005; Matthew Kennedy <mkennedy@gentoo.org>
+  -files/prevalence-1-close-shadow-gentoo.patch, -files/prevalence.asd,
+  -cl-prevalence-1.ebuild, -cl-prevalence-1-r1.ebuild,
+  cl-prevalence-20040709.ebuild:
+  Removed old ebuilds.
 
   11 Apr 2005; Matthew Kennedy <mkennedy@gentoo.org>
   cl-prevalence-20040709.ebuild:

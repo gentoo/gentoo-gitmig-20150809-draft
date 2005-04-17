@@ -1,6 +1,10 @@
 # ChangeLog for dev-lisp/cl-s-xml
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-s-xml/ChangeLog,v 1.4 2005/04/11 08:09:49 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-s-xml/ChangeLog,v 1.5 2005/04/17 00:15:56 mkennedy Exp $
+
+  17 Apr 2005; Matthew Kennedy <mkennedy@gentoo.org>
+  -cl-s-xml-20040709.ebuild, cl-s-xml-20050202.ebuild:
+  Removed old ebuilds; Keywording
 
   11 Apr 2005; Matthew Kennedy <mkennedy@gentoo.org>
   cl-s-xml-20050202.ebuild:
