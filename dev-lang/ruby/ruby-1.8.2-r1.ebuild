@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.2-r1.ebuild,v 1.2 2005/04/14 13:09:12 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.2-r1.ebuild,v 1.3 2005/04/17 07:18:01 slarti Exp $
 
 ONIGURUMA="onigd2_4_0"
 
@@ -84,8 +84,8 @@ src_compile() {
 }
 
 src_install() {
-	LD_LIBRARY_PATH=${D}/usr/lib
-	RUBYLIB="${S}:${D}/usr/lib/ruby/${SLOT}"
+	LD_LIBRARY_PATH=${D}/usr/$(get_libdir)
+	RUBYLIB="${S}:${D}/usr/$(get_libdir)/ruby/${SLOT}"
 	for d in $(find ${S}/ext -type d) ; do
 		RUBYLIB="${RUBYLIB}:$d"
 	done
