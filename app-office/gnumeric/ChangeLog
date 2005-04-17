@@ -1,6 +1,12 @@
 # ChangeLog for app-office/gnumeric
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/ChangeLog,v 1.83 2005/04/06 18:11:08 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/ChangeLog,v 1.84 2005/04/17 16:17:30 foser Exp $
+
+*gnumeric-1.4.3 (17 Apr 2005)
+
+  17 Apr 2005; foser <foser@gentoo.org> gnumeric-1.4.3.ebuild :
+  New release
+  Add makejobs fix (#78828) for multiplejobs compile
 
   06 Apr 2005; Markus Rothe <corsair@gentoo.org> gnumeric-1.4.1.ebuild:
   Stable on ppc64

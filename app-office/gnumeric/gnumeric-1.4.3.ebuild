@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.4.2.ebuild,v 1.3 2005/04/17 16:17:30 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.4.3.ebuild,v 1.1 2005/04/17 16:17:30 foser Exp $
 
 inherit virtualx gnome2 eutils flag-o-matic
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnome.org/projects/gnumeric/"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc ~hppa amd64 ~alpha ~ia64"
+KEYWORDS="~x86 ~ppc ~sparc ~hppa ~amd64 ~alpha ~ia64"
 
 #IUSE="libgda gnomedb python bonobo"
 IUSE="libgda python gnome"
@@ -68,9 +68,12 @@ src_unpack() {
 	unpack ${A}
 	gnome2_omf_fix
 
-	cd ${S}/src
-	# fix #80565 object problem
-	epatch ${FILESDIR}/${P}-sheet_object_scroll.patch
+	cd ${S}/plugins/corba
+	# makejobs proposed patch (#78828)
+	epatch ${FILESDIR}/${PN}-1.4.3-makejobs.patch
+
+	cd ${S}
+	automake || die
 
 }
 
@@ -107,6 +110,3 @@ src_install() {
 DOCS="AUTHORS COPYING* ChangeLog HACKING NEWS README TODO"
 
 USE_DESTDIR="1"
-
-# fix possible compile problem (#78828)
-MAKEOPTS="${MAKEOPTS} -j1"
