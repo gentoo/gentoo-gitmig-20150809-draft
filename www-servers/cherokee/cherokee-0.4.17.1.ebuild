@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/cherokee-0.4.17.1.ebuild,v 1.2 2004/11/01 10:34:08 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/cherokee-0.4.17.1.ebuild,v 1.3 2005/04/17 13:12:30 ka0ttic Exp $
 
 MY_PV=0.4.17
 
@@ -21,13 +21,21 @@ IUSE=""
 
 S="${WORKDIR}/${PN}-${MY_PV}"
 
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+
+	# bug 86038 - cherokee will fail to build with >=gnutls-1.2.0 (API change)
+	if has_version '>=net-libs/gnutls-1.2.0' ; then
+		sed -i 's/\(gnutls_certificate_set_rsa\)\(_params\)/\1_export\2/' \
+			src/virtual_server.c || die "sed failed"
+	fi
+}
+
 src_compile() {
-
-# coming soon ;-)
-#	use php && my_conf="$my_conf --with-php"
-#	use mono && my_conf="$my_conf --with-mono"
-
-	./configure --prefix=/usr --sysconfdir=/etc --disable-static $my_conf --with-pic
+	./configure \
+		--prefix=/usr --sysconfdir=/etc \
+		--disable-static $my_conf --with-pic || die "configure failed"
 	emake || die
 }
 

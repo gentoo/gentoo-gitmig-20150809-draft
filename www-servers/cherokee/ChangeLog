@@ -1,6 +1,16 @@
 # ChangeLog for www-servers/cherokee
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/ChangeLog,v 1.6 2004/11/01 10:34:08 hansmi Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/ChangeLog,v 1.7 2005/04/17 13:12:30 ka0ttic Exp $
+
+*cherokee-0.4.19 (17 Apr 2005)
+
+  17 Apr 2005; Aaron Walker <ka0ttic@gentoo.org>
+  -files/cherokee-0.4.1-gcc3.patch, -cherokee-0.4.0.ebuild,
+  -cherokee-0.4.1.ebuild, -cherokee-0.4.4.ebuild, -cherokee-0.4.10.ebuild,
+  -cherokee-0.4.14.ebuild, -cherokee-0.4.15.ebuild, -cherokee-0.4.16.ebuild,
+  cherokee-0.4.17.1.ebuild, +cherokee-0.4.19.ebuild:
+  Version bump for bug 87447; fixed 0.4.17.1 and 0.4.19 to build with
+  >=net-libs/gnutls-1.2.0 for bug 86038. Also tidy'd the sleu of old ebuilds.
 
   01 Nov 2004; Michael Hanselmann <hansmi@gentoo.org>
   cherokee-0.4.17.1.ebuild:
