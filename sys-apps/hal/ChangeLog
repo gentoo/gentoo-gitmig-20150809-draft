@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/hal
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.33 2005/04/09 12:59:48 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.34 2005/04/17 19:02:48 foser Exp $
+
+*hal-0.4.7-r2 (17 Apr 2005)
+
+  17 Apr 2005; foser <foser@gentoo.org> hal-0.4.7-r2.ebuild :
+  Fix floppy detection with newer kernels
+  Change policy on mounting removable drives (#83025)
+  Keepdir some policy dirs (#87167)
 
   09 Apr 2005; Markus Rothe <corsair@gentoo.org> hal-0.4.5-r2.ebuild:
   Stable on ppc64
