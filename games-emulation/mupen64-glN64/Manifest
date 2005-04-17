@@ -1,9 +1,20 @@
-MD5 5da6257a8e48a5581a4ed751de2b1e43 ChangeLog 1862
-MD5 a3e62bf537d9a02609601aa9ba76da7e metadata.xml 247
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 97c9e64d2904f974c14d3f2b19c9703d mupen64-glN64-0.4.1_rc2-r1.ebuild 1153
 MD5 b8f36239182a7123c9e61fad2b89fd82 mupen64-glN64-0.4.1_pre1.ebuild 751
-MD5 76dc3d0f8729049b0815d0bf4746871a mupen64-glN64-0.4.1_rc2-r1.ebuild 1051
-MD5 d2f2bca612361154241f2b899673230e files/digest-mupen64-glN64-0.4.1_pre1 64
-MD5 e0e2f9111004f21e197569c2bd419c8a files/digest-mupen64-glN64-0.4.1_rc2-r1 68
+MD5 e1e865512bd9559d429e3c5a50610697 ChangeLog 2094
+MD5 a3e62bf537d9a02609601aa9ba76da7e metadata.xml 247
 MD5 47f0e615c36a823f63220f4aec84d47f files/mupen64-glN64-compile.patch 1290
-MD5 7b7b92e1dd75295fa258e3f0e02d1d3c files/mupen64-glN64-gtk2.patch 808
+MD5 b16845f6a1bc038fe837a44a2bbd4568 files/mupen64-glN64-ucode.patch 3503
 MD5 9220d158fd6e0f37797eb2f7aae4c3c7 files/mupen64-glN64-noasm.patch 409
+MD5 e0e2f9111004f21e197569c2bd419c8a files/digest-mupen64-glN64-0.4.1_rc2-r1 68
+MD5 d2f2bca612361154241f2b899673230e files/digest-mupen64-glN64-0.4.1_pre1 64
+MD5 7b7b92e1dd75295fa258e3f0e02d1d3c files/mupen64-glN64-gtk2.patch 808
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCYpoFUpKYMelfdYERAok3AKCNjmv77LAnO1OGbi/+N6CfZsU1GQCeKZb7
+lQj4vaz+BgKFPcwq9kiEmbs=
+=RHL5
+-----END PGP SIGNATURE-----

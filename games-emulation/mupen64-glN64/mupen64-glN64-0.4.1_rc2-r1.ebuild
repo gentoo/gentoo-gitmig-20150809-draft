@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64-glN64/mupen64-glN64-0.4.1_rc2-r1.ebuild,v 1.2 2005/01/31 03:26:42 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64-glN64/mupen64-glN64-0.4.1_rc2-r1.ebuild,v 1.3 2005/04/17 17:10:26 morfic Exp $
 
 inherit eutils games
 
@@ -13,13 +13,14 @@ HOMEPAGE="http://deltaanime.ath.cx/~blight/n64/"
 KEYWORDS="x86"
 LICENSE="as-is"
 SLOT="0"
-IUSE=""
+IUSE="asm"
 
 RDEPEND="media-libs/libsdl"
 
 src_compile () {
-	epatch ${FILESDIR}/${PN}-compile.patch || die "patch failed"
-	epatch ${FILESDIR}/${PN}-gtk2.patch
+	epatch ${FILESDIR}/${PN}-compile.patch || die "icompile patch failed"
+	epatch ${FILESDIR}/${PN}-gtk2.patch || die "gtk2 patch failed"
+	epatch ${FILESDIR}/${PN}-ucode.patch || die "ucode patch failed"
 	if use x86; then
 		if use asm; then
 			einfo "using x86 asm where available"
