@@ -1,6 +1,11 @@
 # ChangeLog for net-irc/xchat-xsys
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-xsys/ChangeLog,v 1.8 2005/04/17 20:13:12 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-xsys/ChangeLog,v 1.9 2005/04/17 22:27:35 chainsaw Exp $
+
+  17 Apr 2005; Tony Vroon <chainsaw@gentoo.org>
+  files/1.9.3-sysfs-instead-of-lspci.patch:
+  Improved /sys parser with higher yield, will also pick up PCI adapters and
+  integrated video adapters. Unmasking.
 
   17 Apr 2005; Tony Vroon <chainsaw@gentoo.org>
   files/1.9.3-sysfs-instead-of-lspci.patch:

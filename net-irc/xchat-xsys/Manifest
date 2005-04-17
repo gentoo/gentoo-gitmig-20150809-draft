@@ -4,9 +4,9 @@ Hash: SHA1
 MD5 a94b4009fe101872797d273b603cf610 xchat-xsys-1.9.3.ebuild 862
 MD5 e47f69b8cff83add69e3bb2c54988367 xchat-xsys-1.9.1-r1.ebuild 854
 MD5 42cef2da59c81f792584c3f9048a1930 metadata.xml 250
-MD5 3ed827bf1e5282ac11dc92c38185add3 ChangeLog 1645
+MD5 c8113baaa486e570eaefb14c458a158a ChangeLog 1855
 MD5 4102cd47e1c2df279bf2fe29cd1d5b89 xchat-xsys-1.9.1.ebuild 687
-MD5 645ce3cd3538e29be8fd64f83a7b9354 files/1.9.3-sysfs-instead-of-lspci.patch 3532
+MD5 6f20a4397c64b29491d5ce2e585c3cae files/1.9.3-sysfs-instead-of-lspci.patch 3710
 MD5 f9d3eedf5907d949b6f52bfdbc580bd7 files/digest-xchat-xsys-1.9.1-r1 61
 MD5 b9c39b3537e8ee29aa9af6c33467223b files/1.9.1-bmp-support.patch 3230
 MD5 f9d3eedf5907d949b6f52bfdbc580bd7 files/digest-xchat-xsys-1.9.1 61
@@ -14,7 +14,7 @@ MD5 6a0d14cce311c0075599544fd3a107c1 files/digest-xchat-xsys-1.9.3 62
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFCYsNrp5vW4rUFj5oRAsfoAJ9U+cTAY9/iyP4LLxntTt+vsYmv6ACaAguq
-F1EsXvzU5RdJ8++1bak0V9I=
-=FQtg
+iD8DBQFCYuLap5vW4rUFj5oRAsXhAKCrsy26X4RRqZpZmF4JXXH9geEKSQCfekfS
+lQ2FNiBZ+ENKoG8JhkrJl/8=
+=WBKr
 -----END PGP SIGNATURE-----
