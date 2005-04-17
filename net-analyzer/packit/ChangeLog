@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/packit
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/packit/ChangeLog,v 1.15 2005/03/09 07:05:43 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/packit/ChangeLog,v 1.16 2005/04/17 19:55:29 vanquirius Exp $
+
+  17 Apr 2005; Marcelo Goes <vanquirius@gentoo.org> packit-1.0.ebuild:
+  Fix a header problem with libpcap. Thanks to soulse for testing the fix.
 
   09 Mar 2005; Michael Sterrett <mr_bones_@gentoo.org> -packit-0.7.ebuild:
   clean old broken ebuild
