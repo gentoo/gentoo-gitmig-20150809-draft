@@ -1,4 +1,6 @@
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 7a6c823476410539c8ee40ea3f6bd779 ChangeLog 1715
 MD5 8b8c27d3b464d2b4030d621def523872 moagg-0.17.ebuild 1415
+MD5 15da8276c98acb7182e1c2d39c1665a6 moagg-0.18.ebuild 1431
+MD5 b6d84c19b83d4baff64d7fe1a3991784 ChangeLog 1833
 MD5 2d7ec6d91f967aad8a756d364ee8ce3d files/digest-moagg-0.17 135
+MD5 5409873e6ef3d63c6eb6349acdb9b15c files/digest-moagg-0.18 135
