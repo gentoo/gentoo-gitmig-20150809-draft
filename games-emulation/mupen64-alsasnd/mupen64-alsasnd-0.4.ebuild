@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64-alsasnd/mupen64-alsasnd-0.4.ebuild,v 1.7 2005/04/17 18:00:28 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64-alsasnd/mupen64-alsasnd-0.4.ebuild,v 1.8 2005/04/17 21:56:05 morfic Exp $
 
 inherit games eutils
 
@@ -11,7 +11,7 @@ SRC_URI="alsa-plugin-${PV}fix.tar.bz2"
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="-* x86"
-IUSE="qt gtk"
+IUSE="qt gtk gtk2"
 RESTRICT="fetch"
 
 DEPEND=">=media-libs/alsa-lib-0.9.0
