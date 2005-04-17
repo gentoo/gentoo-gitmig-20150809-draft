@@ -1,17 +1,21 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/hdf5-1.6.0.ebuild,v 1.1 2004/12/28 20:55:37 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/hdf5-1.6.4.ebuild,v 1.1 2005/04/17 20:55:44 ribosome Exp $
 
-DESCRIPTION="HDF5 is a general purpose library and file format for storing scientific data."
-SRC_URI="ftp://ftp.ncsa.uiuc.edu/HDF/HDF5/current/src/${P}.tar.gz"
+inherit eutils
+
+DESCRIPTION="General purpose library and file format for storing scientific data"
 HOMEPAGE="http://hdf.ncsa.uiuc.edu/HDF5/"
+SRC_URI="ftp://ftp.ncsa.uiuc.edu/HDF/HDF5/current/src/${P}.tar.gz"
 
 LICENSE="NCSA-HDF"
-KEYWORDS="x86"
 SLOT="0"
-IUSE="static zlib ssl"
+KEYWORDS="~x86 ~amd64 ~ppc"
+IUSE="static zlib ssl mpi hlapi szip"
 
-DEPEND="zlib? ( sys-libs/zlib )"
+DEPEND="zlib? ( sys-libs/zlib )
+		szip? ( sci-libs/szip )
+		mpi? ( || ( sys-cluster/lam-mpi sys-cluster/mpich ) )"
 
 src_compile() {
 	local myconf
@@ -20,6 +24,8 @@ src_compile() {
 	use static && myconf="--enable-cxx" || myconf="--disable-static"
 	use zlib || myconf="${myconf} --disable-zlib"
 	use ssl && myconf="${myconf} --with-ssl"
+	use mpi && myconf="${myconf} --enable-parallel"
+	use hlapi || myconf="${myconf} --disable-hl"
 
 	# NOTE: the hdf5 configure script has its own interpretation of
 	# the ARCH environment variable which conflicts with that of
@@ -28,6 +34,8 @@ src_compile() {
 	EBUILD_ARCH=${ARCH}
 	unset ARCH
 
+	use mpi && \
+	export CC="/usr/bin/mpicc"
 	./configure ${myconf} --enable-linux-lfs --with-gnu-ld \
 		--prefix=/usr \
 		--sysconfdir=/etc \
@@ -37,7 +45,7 @@ src_compile() {
 	# restore the ARCH environment variable
 	ARCH=${EBUILD_ARCH}
 
-	make || die "emake failed"
+	emake || die "emake failed"
 }
 
 src_install() {
@@ -45,6 +53,7 @@ src_install() {
 		prefix=${D}/usr \
 		mandir=${D}/usr/share/man \
 		docdir=${D}/usr/share/doc/${PF} \
+		libdir=${D}/usr/$(get_libdir)/ \
 		infodir=${D}/usr/share/info \
 		install || die "make install failed"
 
