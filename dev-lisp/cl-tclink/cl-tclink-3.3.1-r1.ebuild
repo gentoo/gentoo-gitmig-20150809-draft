@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-tclink/cl-tclink-3.3.1-r1.ebuild,v 1.6 2005/02/08 07:02:25 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-tclink/cl-tclink-3.3.1-r1.ebuild,v 1.7 2005/04/17 00:58:10 mkennedy Exp $
 
 inherit common-lisp eutils
 
@@ -13,15 +13,13 @@ SRC_URI="http://www.mapcar.org/~mrd/debs/unstable/source/${PN}_${PV}.orig.tar.gz
 
 LICENSE="LLGPL-2.1"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86 ~amd64 ~ppc"
 IUSE="doc"
 
-DEPEND="dev-lisp/common-lisp-controller
-	dev-libs/openssl
+DEPEND="dev-libs/openssl
 	dev-lisp/cl-split-sequence
 	dev-lisp/cl-uffi
-	doc? ( virtual/tetex )
-	virtual/commonlisp"
+	doc? ( virtual/tetex )"
 
 CLPACKAGE=tclink
 

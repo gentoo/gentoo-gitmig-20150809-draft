@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-unit/cl-unit-1.3.1-r1.ebuild,v 1.4 2005/02/08 08:12:21 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-unit/cl-unit-1.3.1-r1.ebuild,v 1.5 2005/04/17 01:05:35 mkennedy Exp $
 
 inherit common-lisp eutils
 
@@ -13,7 +13,7 @@ SRC_URI="http://ftp.debian.org/debian/pool/main/c/cl-unit/${PN}_${PV}.orig.tar.g
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86 ~amd64 ~ppc"
 IUSE=""
 
 DEPEND="dev-lisp/common-lisp-controller

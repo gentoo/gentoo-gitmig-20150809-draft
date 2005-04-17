@@ -1,6 +1,9 @@
 # ChangeLog for dev-lisp/cl-sha1
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-sha1/ChangeLog,v 1.5 2005/02/03 05:39:01 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-sha1/ChangeLog,v 1.6 2005/04/17 00:49:37 mkennedy Exp $
+
+  17 Apr 2005; Matthew Kennedy <mkennedy@gentoo.org> cl-sha1-1.0-r1.ebuild:
+  Keywording.
 
   02 Feb 2005; Matthew Kennedy <mkennedy@gentoo.org> cl-sha1-1.0-r1.ebuild,
   -cl-sha1-1.0.ebuild:

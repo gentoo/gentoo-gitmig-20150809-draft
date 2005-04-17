@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-trivial-http/cl-trivial-http-1.1.ebuild,v 1.1 2005/02/04 08:01:57 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-trivial-http/cl-trivial-http-1.1.ebuild,v 1.2 2005/04/17 01:00:37 mkennedy Exp $
 
 inherit common-lisp
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.cliki.net/trivial-http"
 SRC_URI="http://www.unmutual.info/software/trivial-http-${PV}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86 ~amd64 ~ppc"
 IUSE=""
 DEPEND="dev-lisp/cl-trivial-sockets"
 

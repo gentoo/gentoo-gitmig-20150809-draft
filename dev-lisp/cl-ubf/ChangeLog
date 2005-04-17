@@ -1,6 +1,10 @@
 # ChangeLog for dev-lisp/cl-ubf
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-ubf/ChangeLog,v 1.4 2004/06/24 23:56:15 agriffis Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-ubf/ChangeLog,v 1.5 2005/04/17 01:02:19 mkennedy Exp $
+
+  17 Apr 2005; Matthew Kennedy <mkennedy@gentoo.org> -cl-ubf-0.2.1.ebuild,
+  cl-ubf-0.2.1-r1.ebuild:
+  Keywording.
 
 *cl-ubf-0.2.1-r1 (12 Feb 2004)
 

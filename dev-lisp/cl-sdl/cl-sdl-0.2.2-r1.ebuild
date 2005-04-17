@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-sdl/cl-sdl-0.2.2-r1.ebuild,v 1.3 2005/03/18 08:21:06 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-sdl/cl-sdl-0.2.2-r1.ebuild,v 1.4 2005/04/17 00:45:19 mkennedy Exp $
 
 inherit common-lisp
 
@@ -9,14 +9,13 @@ HOMEPAGE="http://cl-sdl.sourceforge.net/"
 SRC_URI="mirror://sourceforge/cl-sdl/${PN}_${PV}.tar.gz"
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="x86 ~amd64 ~ppc"
 IUSE=""
 DEPEND="dev-lisp/cl-uffi
 	=media-libs/libsdl-1.2*
 	=media-libs/sdl-ttf-2*
 	=media-libs/sdl-mixer-1.2*
 	=media-libs/sdl-image-1.2*
-	virtual/commonlisp
 	virtual/opengl"
 
 S=${WORKDIR}/${PN}
