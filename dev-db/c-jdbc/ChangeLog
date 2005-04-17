@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/c-jdbc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/c-jdbc/ChangeLog,v 1.3 2005/03/27 17:18:02 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/c-jdbc/ChangeLog,v 1.4 2005/04/17 15:00:19 luckyduck Exp $
+
+  17 Apr 2005; Jan Brinkmann <luckyduck@gentoo.org> files/controller.sh,
+  c-jdbc-1.0.4-r1.ebuild:
+  xml-apis.jar is provided by xml-commons , see #82561
 
 *c-jdbc-1.0.4-r1 (27 Mar 2005)
 

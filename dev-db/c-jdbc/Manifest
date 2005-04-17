@@ -1,11 +1,11 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 f94a4bbccee76bdaa31b90a8ae16e598 c-jdbc-1.0.4-r1.ebuild 3722
-MD5 57a1599f27cdbc77a24ed26385b74287 ChangeLog 856
+MD5 916cd17c43e69f3db9dfa7ef5a6df8ed c-jdbc-1.0.4-r1.ebuild 3745
+MD5 61d182958da1cadd6f6588b39c0f3310 ChangeLog 1011
 MD5 123cf9440c1d4ac78f2caba1624765f9 metadata.xml 158
 MD5 62ac24f25532a4183e3ed1e1480878e7 files/console.sh 606
-MD5 a351a2365e7c15b6b67ead0715dd3263 files/controller.sh 1130
+MD5 d1171c36b6ee239f4db6aeaa9ad7519a files/controller.sh 1133
 MD5 6f7e7b9ace7df13d6bab70f487a31189 files/c-jdbc-1.0.4-gentoo.patch 5047
 MD5 599e87927c86dfe53eaf0415b5bae480 files/digest-c-jdbc-1.0.4-r1 70
 MD5 c366d1203f27f5438c29bc3a5724ab73 files/cjdbc-conf 313
@@ -13,7 +13,7 @@ MD5 9c7589e63d5760dde9a3d56fdc58e6a7 files/cjdbc-init 926
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFCRure06ebR+OMO78RAlIQAKCPYI7dUTtCOAP0tNhXikOn/S9M8QCdEya2
-o+pstE7/XE5IlWJUM286d8Q=
-=YgzI
+iD8DBQFCYnoW06ebR+OMO78RAiB0AJ41ZScUyzo8hoIFzD8oDPdEOIKGOgCeLVJs
+MDhzkYaMM3amoR9axLSKY/w=
+=LVBk
 -----END PGP SIGNATURE-----
