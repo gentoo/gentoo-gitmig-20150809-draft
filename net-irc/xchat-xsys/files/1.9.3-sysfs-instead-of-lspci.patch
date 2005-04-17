@@ -1,6 +1,6 @@
---- xsys2/parse.c.orig	2005-04-16 15:57:31.000000000 +0100
-+++ xsys2/parse.c	2005-04-16 20:10:09.000000000 +0100
-@@ -150,19 +150,85 @@
+--- xsys2/parse.c.orig	2005-04-17 21:01:24.000000000 +0100
++++ xsys2/parse.c	2005-04-17 21:09:07.000000000 +0100
+@@ -150,19 +150,83 @@
  
  int xs_parse_video(char *vid_card)
  {
@@ -68,26 +68,24 @@
 +		return 0;
 +	}
  
-+	while(fgets(buffer, 1024, fp3) != NULL)
-+	{
-+		if (!isspace(buffer[0])) {
-+			if(strstr(buffer, vendor) != NULL)
-+			{
-+                        	position = strstr(buffer, vendor);
-+                        	position += 6;
-+                        	strcpy(vendorname, position);
-+                        	position = strstr(vendorname, "\n");
-+                        	*(position) = '\0';
-+			}
-+                } else {
-+			if(strstr(buffer, device) != NULL) 
-+			{
-+                        	position = strstr(buffer, device);
-+                        	position += 6;
-+                        	strcpy(devicename, position);
-+                        	position = strstr(devicename, "\n");
-+                        	*(position) = '\0';
-+			}
++	while(fgets(buffer, 1024, fp3) != NULL)	{
++		if (!isspace(buffer[0]) && strstr(buffer, vendor) != NULL) {
++                       	position = strstr(buffer, vendor);
++                       	position += 6;
++                       	strncpy(vendorname, position, 128);
++                       	position = strstr(vendorname, "\n");
++                       	*(position) = '\0';
++			break;
++                }
++	}
++	while(fgets(buffer, 1024, fp3) != NULL) {
++		if(strstr(buffer, device) != NULL) {
++                        position = strstr(buffer, device);
++                        position += 6;
++                        strncpy(devicename, position, 128);
++                        position = strstr(devicename, "\n");
++                        *(position) = '\0';
++			break;
 + 		}
 +	}
 +	fclose(fp3);
@@ -95,13 +93,13 @@
  	return 0;
  }
  
-@@ -389,4 +455,3 @@
+@@ -389,4 +453,3 @@
  	}
  	return 0;
  }
 -
---- xsys2/Makefile.orig	2005-04-16 20:15:05.000000000 +0100
-+++ xsys2/Makefile	2005-04-16 20:15:42.000000000 +0100
+--- xsys2/Makefile.orig	2005-04-17 21:01:27.000000000 +0100
++++ xsys2/Makefile	2005-04-17 21:01:31.000000000 +0100
 @@ -1,7 +1,3 @@
 -#### SET THIS VALUE TO THE LOCATION OF 'lspci' ####
 -LSPCI = /sbin/lspci

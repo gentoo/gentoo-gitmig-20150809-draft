@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/xchat-xsys
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-xsys/ChangeLog,v 1.7 2005/04/16 19:26:20 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-xsys/ChangeLog,v 1.8 2005/04/17 20:13:12 chainsaw Exp $
+
+  17 Apr 2005; Tony Vroon <chainsaw@gentoo.org>
+  files/1.9.3-sysfs-instead-of-lspci.patch:
+  Update sysfs patch, avoid matching incorrect data in pci.ids. Still masked.
 
 *xchat-xsys-1.9.3 (16 Apr 2005)
 
