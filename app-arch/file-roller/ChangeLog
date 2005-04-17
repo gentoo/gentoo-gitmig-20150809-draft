@@ -1,6 +1,12 @@
 # ChangeLog for app-arch/file-roller
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/ChangeLog,v 1.100 2005/04/02 04:05:06 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/ChangeLog,v 1.101 2005/04/17 13:53:43 joem Exp $
+
+*file-roller-2.10.2 (17 Apr 2005)
+
+  17 Apr 2005; Joe McCann <joem@gentoo.org>
+  +files/file-roller-2.10.2-use_bin_tar.patch, +file-roller-2.10.2.ebuild:
+  bigfix release and updated tar patch
 
   02 Apr 2005; Stephen P. Becker <geoman@gentoo.org>
   file-roller-2.8.3.ebuild:
