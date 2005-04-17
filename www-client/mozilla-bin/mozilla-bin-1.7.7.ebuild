@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-bin/mozilla-bin-1.7.7.ebuild,v 1.1 2005/04/16 18:17:56 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-bin/mozilla-bin-1.7.7.ebuild,v 1.2 2005/04/17 21:03:22 herbs Exp $
 
 inherit nsplugins eutils mozilla-launcher
 
@@ -20,7 +20,7 @@ HOMEPAGE="http://www.mozilla.org"
 SRC_URI="http://ftp.mozilla.org/pub/mozilla.org/mozilla/releases/mozilla${PV}/mozilla-i686-pc-linux-gnu-${PV}.tar.gz"
 RESTRICT="nostrip"
 
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 SLOT="0"
 LICENSE="MPL-1.1 NPL-1.1"
 
@@ -36,6 +36,11 @@ RDEPEND="virtual/x11
 	)
 	virtual/x11
 	>=www-client/mozilla-launcher-1.28"
+
+# This is a binary x86 package => ABI=x86
+# Please keep this in future versions
+# Danny van Dyk <kugelfang@gentoo.org> 2005/03/26
+has_multilib_profile && ABI="x86"
 
 src_install() {
 	# Install mozilla in /opt
