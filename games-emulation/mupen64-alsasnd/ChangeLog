@@ -1,8 +1,13 @@
 # ChangeLog for games-emulation/mupen64-alsasnd
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64-alsasnd/ChangeLog,v 1.2 2004/06/24 22:31:15 agriffis Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64-alsasnd/ChangeLog,v 1.3 2005/04/17 18:00:28 morfic Exp $
+
+  17 Apr 2005; Daniel Goller <morfic@gentoo.org> +files/0.4-gtk.patch,
+  mupen64-alsasnd-0.4.ebuild:
+  added gtk compile fix with gcc3.4, thanks to Bret Towe 
+  closes bug #84235 
 
 *mupen64-alsasnd-0.4 (27 Dec 2003)
 
   27 Dec 2003; Mike Frysinger <vapier@gentoo.org> :
-  Initial import.  Ebuild submitted by Marcelo Góes <blueboard@terra.com.br> #32749.
+  Initial import.  Ebuild submitted by Marcelo GÃ³es <blueboard@terra.com.br> #32749.
