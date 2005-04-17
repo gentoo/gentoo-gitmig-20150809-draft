@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/msmtp
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/msmtp/ChangeLog,v 1.38 2005/04/07 22:50:14 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/msmtp/ChangeLog,v 1.39 2005/04/17 09:46:38 slarti Exp $
+
+  17 Apr 2005; Tom Martin <slarti@gentoo.org> msmtp-1.4.0.ebuild:
+  Adding missing IUSE.
 
   07 Apr 2005; Bryan Østergaard <kloeri@gentoo.org> msmtp-1.4.0.ebuild:
   ~alpha keyword.
