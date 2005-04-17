@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/wine
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.90 2005/03/18 00:53:24 vapier Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.91 2005/04/17 03:12:00 vapier Exp $
+
+*wine-20050310-r1 (17 Apr 2005)
+
+  17 Apr 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/wine-20050310-upstream-colortable.patch, -wine-20050310.ebuild,
+  +wine-20050310-r1.ebuild:
+  Add fix from upstream for X11 driver #88715 by Alan Jones.
 
 *wine-20050111-r1 (18 Mar 2005)
 
