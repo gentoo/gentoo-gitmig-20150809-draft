@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3838 2005/04/17 21:42:43 fafhrd Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3839 2005/04/17 22:30:22 chainsaw Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -51,10 +51,6 @@ app-portage/basc
 # Benedikt Boehm <hollow@gentoo.org> (17 Apr 2005)
 # Masked for testing
 =sys-kernel/vserver-sources-2.0_pre1
-
-# Tony Vroon <chainsaw@gentoo.org> (16 Apr 2005)
-# Masked for testing, experimental patch applied.
->=net-irc/xchat-xsys-1.9.3
 
 # Aaron Walker <ka0ttic@gentoo.org> (16 Apr 2005)
 # Masked for testing until 1.0.x is stabilized.
