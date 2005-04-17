@@ -1,4 +1,6 @@
-MD5 10fcaba40fa61d5e3cb97a45e289e4a1 ChangeLog 751
 MD5 79b4b31986a8021c590115901c0ee19e gnome-backgrounds-2.10.0.ebuild 526
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+MD5 10fcaba40fa61d5e3cb97a45e289e4a1 ChangeLog 751
+MD5 79b4b31986a8021c590115901c0ee19e gnome-backgrounds-2.10.1.ebuild 526
 MD5 bf9914d8c2032ae9e2c6d375a2eb71a8 files/digest-gnome-backgrounds-2.10.0 78
+MD5 c547e18a1541ee20308a075e7c49b66f files/digest-gnome-backgrounds-2.10.1 78
