@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gpc/gpc-20040516.ebuild,v 1.6 2005/04/17 21:28:18 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gpc/gpc-20050331.ebuild,v 1.1 2005/04/17 21:28:18 george Exp $
 
 inherit eutils flag-o-matic
 
@@ -9,17 +9,17 @@ filter-flags "-pipe"
 
 #due to cache requirements we cannot dynamically match gcc version
 #so sticking to a particular (and working) one
-GCC_PV="3.3.3"
+GCC_PV="3.4.3"
 
 DESCRIPTION="Gnu Pascal Compiler"
 HOMEPAGE="http://gnu-pascal.de"
-SRC_URI="http://gnu-pascal.de/beta/${P}.tar.gz
+SRC_URI="http://www.g-n-u.de/gpc/${P}.tar.bz2
 	ftp://gcc.gnu.org/pub/gcc/releases/gcc-${GCC_PV}/gcc-${GCC_PV}.tar.bz2"
 #only need gcc-core (smaller download), but user will likely have this one already
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~sparc"
+KEYWORDS="~amd64 ~x86"
 IUSE="nls"
 
 DEPEND="virtual/libc
@@ -44,14 +44,14 @@ src_unpack() {
 #	unpack "${P}.tar.gz"
 #	unpack "gcc-${GCC_PV}.tar.bz2"
 
-	cd "${WORKDIR}/${P}/p"
+	cd "${WORKDIR}/p"
 
 	#comment out read to let ebuild continue 
 	sed -i -e "s:read:#read:"  config-lang.in || die "seding autoreplies failed"
 	#and remove that P var (it doesn't seem to do much but to fail inside the ebuild)
 	sed -i -e "s:\$(P)::" Make-lang.in || die "seding Make-lan.in failed"
 
-	cd "${WORKDIR}/${P}"
+	cd "${WORKDIR}"
 	mv p "${S}/gcc/"
 
 	# Build in a separate build tree
@@ -160,7 +160,6 @@ src_install () {
 	# Install documentation.
 	#gpc wants to install some files and a lot of demos under /usr/doc
 	#lets move it under /usr/share/doc
-	#(Ok, this is not the most buitiful way to do it, but it seems to be the easiest here :))
 	cd ${D}/usr/doc
 	mkdir -p ${D}/usr/share/doc/${PF}
 	mv gpc/* ${D}/usr/share/doc/${PF}
