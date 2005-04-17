@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre6-r6.ebuild,v 1.2 2005/04/17 00:20:28 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre7.ebuild,v 1.1 2005/04/17 00:20:28 lu_zero Exp $
 
 inherit eutils flag-o-matic kernel-mod
 
@@ -13,7 +13,7 @@ SVGV=1.9.17
 
 # Handle PREversions as well
 MY_PV="${PV/_/}"
-MY_P="MPlayer-${MY_PV}a"
+MY_P="MPlayer-${MY_PV}"
 S="${WORKDIR}/${MY_P}"
 SRC_URI="mirror://mplayer/releases/${MY_P}.tar.bz2
 	mirror://mplayer/releases/fonts/font-arial-iso-8859-1.tar.bz2
@@ -177,27 +177,9 @@ src_unpack() {
 	use sparc && sed -i 's:#define __KERNEL__::' osdep/kerneltwosix.h
 	epatch ${FILESDIR}/${PN}-1.0_pre6-ppc64.patch
 
-	# Fix bug #76429
-	epatch ${FILESDIR}/${PN}-nl.patch
-
-	# fixes bug #78337
-	epatch ${FILESDIR}/${PN}-avi_crash.patch
-
 	# fixes mplayer not seeing gcc 3.4-blahetc type
 	# gcc versions.  Half stolen from toolchain-funcs
 	epatch ${FILESDIR}/${PN}-gcc_detection.patch
-
-	#fixes endian issues with jack output
-	epatch ${FILESDIR}/${PN}-jack.patch
-
-	# fixes the real codecs names (there's no .so.6.0's at
-	# the end anymore ) and add 3gp (nokia) video codec support
-	# per bug #85642
-	epatch ${FILESDIR}/${P}-codecs.patch
-
-	# two security fixes, see #89277
-	epatch ${FILESDIR}/rtsp_fix_20050415.diff
-	epatch ${FILESDIR}/mmst_fix_20050415.diff
 }
 
 linguas_warn() {
