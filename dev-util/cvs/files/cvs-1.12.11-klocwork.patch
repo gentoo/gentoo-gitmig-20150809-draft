@@ -1,0 +1,87 @@
+diff -Nurp src/login.c src/login.c
+--- src/login.c	2004-12-07 10:33:47.000000000 -0500
++++ src/login.c	2005-03-24 10:36:45.000000000 -0500
+@@ -114,7 +114,7 @@ password_entry_parseline (const char *cv
+ 
+ 	if (isspace(*(linebuf + 1)))
+ 	    /* special case since strtoul ignores leading white space */
+-	    entry_version = 0;
++	    q = linebuf + 1;
+ 	else
+ 	    entry_version = strtoul (linebuf + 1, &q, 10);
+ 
+diff -Nurp src/patch.c src/patch.c
+--- src/patch.c	2004-11-01 09:53:55.000000000 -0500
++++ src/patch.c	2005-03-24 10:38:50.000000000 -0500
+@@ -379,6 +379,7 @@ patch_fileproc (void *callerdat, struct 
+     struct utimbuf t;
+     char *vers_tag, *vers_head;
+     char *rcs = NULL;
++    char *rcs_orig = NULL;
+     RCSNode *rcsfile;
+     FILE *fp1, *fp2, *fp3;
+     int ret = 0;
+@@ -409,7 +410,7 @@ patch_fileproc (void *callerdat, struct 
+     if ((rcsfile->flags & VALID) && (rcsfile->flags & INATTIC))
+ 	isattic = 1;
+ 
+-    rcs = xmalloc (strlen (finfo->file) + sizeof (RCSEXT) + 5);
++    rcs_orig = rcs = xmalloc (strlen (finfo->file) + sizeof (RCSEXT) + 5);
+     (void)sprintf (rcs, "%s%s", finfo->file, RCSEXT);
+ 
+     /* if vers_head is NULL, may have been removed from the release */
+@@ -748,8 +749,8 @@ failed to read diff file header %s for %
+ 	free (vers_tag);
+     if (vers_head != NULL)
+ 	free (vers_head);
+-    if (rcs != NULL)
+-	free (rcs);
++    if (rcs_orig)
++	free (rcs_orig);
+     return ret;
+ }
+ 
+diff -Nurp src/rcs.c src/rcs.c
+--- src/rcs.c	2004-11-30 11:06:07.000000000 -0500
++++ src/rcs.c	2005-03-24 10:36:45.000000000 -0500
+@@ -2946,8 +2946,7 @@ RCS_getdate (RCSNode *rcs, const char *d
+     if (retval != NULL)
+ 	return retval;
+ 
+-    if (!force_tag_match ||
+-	(vers != NULL && RCS_datecmp (vers->date, date) <= 0))
++    if (vers && (!force_tag_match || RCS_datecmp (vers->date, date) <= 0))
+ 	return xstrdup (vers->version);
+     else
+ 	return NULL;
+@@ -4093,7 +4092,7 @@ RCS_checkout (RCSNode *rcs, const char *
+     size_t len;
+     int free_value = 0;
+     char *log = NULL;
+-    size_t loglen;
++    size_t loglen = 0;
+     Node *vp = NULL;
+ #ifdef PRESERVE_PERMISSIONS_SUPPORT
+     uid_t rcs_owner = (uid_t) -1;
+@@ -7357,7 +7356,7 @@ RCS_deltas (RCSNode *rcs, FILE *fp, stru
+ 
+ 		for (ln = 0; ln < headlines.nlines; ++ln)
+ 		{
+-		    char buf[80];
++		    char *buf;
+ 		    /* Period which separates year from month in date.  */
+ 		    char *ym;
+ 		    /* Period which separates month from day in date.  */
+@@ -7368,10 +7367,12 @@ RCS_deltas (RCSNode *rcs, FILE *fp, stru
+ 		    if (prvers == NULL)
+ 			prvers = vers;
+ 
++		    buf = xmalloc (strlen (prvers->version) + 24);
+ 		    sprintf (buf, "%-12s (%-8.8s ",
+ 			     prvers->version,
+ 			     prvers->author);
+ 		    cvs_output (buf, 0);
++		    free (buf);
+ 
+ 		    /* Now output the date.  */
+ 		    ym = strchr (prvers->date, '.');
