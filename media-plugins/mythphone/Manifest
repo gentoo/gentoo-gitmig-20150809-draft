@@ -1,17 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 20e2255501865de5b568424821abf69d metadata.xml 161
 MD5 268a7a7361468e07db4ea70db7acf874 ChangeLog 772
-MD5 bafc14b4f8a9065d89337ba211d649a1 mythphone-0.16.ebuild 777
-MD5 b1640230317b1d03ca822e2ba6a3f86d mythphone-0.17.ebuild 694
+MD5 20e2255501865de5b568424821abf69d metadata.xml 161
+MD5 797611792e1229748a9c73c3d99e1083 mythphone-0.16.ebuild 735
+MD5 f9f7fb063fe2fd6370dee1d3503f08e3 mythphone-0.17.ebuild 652
+MD5 48d23ed675c31009af9031bac5c37d0b mythphone-0.18.ebuild 703
 MD5 bf30357411353ae10a9bafe9186a9fe8 files/digest-mythphone-0.16 67
-MD5 f817c793f79edc3d5ab358874d1ebe74 files/digest-mythphone-0.17 67
 MD5 c8a5b3151324b04836f22f4d9586c498 files/mythphone-0.16-include.patch 242
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCDNMy5+pdB4IBr0URAp/4AJ4hMZNAGgaBWc4+YRsKyTbayonBUQCglstx
-50AMnC1ouL855muNHezEl+g=
-=YmRf
------END PGP SIGNATURE-----
+MD5 f817c793f79edc3d5ab358874d1ebe74 files/digest-mythphone-0.17 67
+MD5 e994e3c11d65c5762c760d5bb22021da files/digest-mythphone-0.18 70

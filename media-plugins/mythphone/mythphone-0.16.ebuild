@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythphone/mythphone-0.16.ebuild,v 1.4 2005/02/11 15:45:45 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythphone/mythphone-0.16.ebuild,v 1.5 2005/04/18 08:18:00 eradicator Exp $
 
 inherit myth eutils
 
@@ -13,7 +13,6 @@ SLOT="0"
 KEYWORDS="x86 ~amd64"
 
 DEPEND=">=sys-apps/sed-4
-	festival? ( app-accessibility/festival )
 	|| ( ~media-tv/mythtv-${PV} ~media-tv/mythfrontend-${PV} )"
 
 setup_pro() {
