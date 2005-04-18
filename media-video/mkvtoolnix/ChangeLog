@@ -1,6 +1,13 @@
 # ChangeLog for media-video/mkvtoolnix
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mkvtoolnix/ChangeLog,v 1.30 2005/04/18 16:54:52 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mkvtoolnix/ChangeLog,v 1.31 2005/04/18 17:46:56 flameeyes Exp $
+
+  18 Apr 2005; Diego Pettenò <flameeyes@gentoo.org>
+  +files/mkvtoolnix-configure-checks.patch, mkvtoolnix-1.4.2.ebuild:
+  Cleanup of useflags, removed oggvorbis as it's a requested dependency, added
+  patch to enforce disabling of flac, renamed X useflag to wxwindows as it
+  enables wxGTK support. Moved wxwidget selection into pkg_setup (under
+  wxwindows useflag conditional).
 
 *mkvtoolnix-1.4.2 (18 Apr 2005)
 
