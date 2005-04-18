@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/spidermonkey-1.5_rc6-r1.ebuild,v 1.2 2005/02/19 12:20:18 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/spidermonkey-1.5_rc6-r1.ebuild,v 1.3 2005/04/18 15:20:10 corsair Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.mozilla.org/pub/mozilla.org/js/js-${MY_PV}.tar.gz"
 
 LICENSE="NPL-1.1"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~amd64"
+KEYWORDS="~x86 ~ppc ~amd64 ~ppc64"
 IUSE=""
 
 DEPEND=""
