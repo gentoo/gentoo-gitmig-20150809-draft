@@ -1,6 +1,13 @@
 # ChangeLog for sys-devel/crossdev
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/ChangeLog,v 1.15 2005/03/25 13:33:58 vapier Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/ChangeLog,v 1.16 2005/04/18 06:30:28 vapier Exp $
+
+*crossdev-0.9.6 (18 Apr 2005)
+
+  18 Apr 2005; Mike Frysinger <vapier@gentoo.org>
+  -files/crossdev-0.4-fixes-one.patch, files/crossdev,
+  -crossdev-0.9.5-r1.ebuild, +crossdev-0.9.6.ebuild:
+  Add some initial support for ps2 targets (ee/iop/dvp).
 
 *crossdev-0.9.5-r1 (25 Mar 2005)
 
