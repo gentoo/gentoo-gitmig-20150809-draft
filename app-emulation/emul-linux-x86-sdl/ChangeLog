@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/emul-linux-x86-sdl
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-sdl/ChangeLog,v 1.7 2005/04/15 21:15:39 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-sdl/ChangeLog,v 1.8 2005/04/18 10:22:53 herbs Exp $
+
+*emul-linux-x86-sdl-2.1 (18 Apr 2005)
+
+  18 Apr 2005; Herbie Hopkins <herbs@gentoo.org>
+  +emul-linux-x86-sdl-2.1.ebuild:
+  Add libopenal, bug #73543. Removed .a files. Fixed SRC_URI.
 
 *emul-linux-x86-sdl-2.0 (15 Apr 2005)
 
