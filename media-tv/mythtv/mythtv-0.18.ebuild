@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.18.ebuild,v 1.2 2005/04/18 07:04:33 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.18.ebuild,v 1.3 2005/04/18 07:39:15 eradicator Exp $
 
 inherit myth flag-o-matic eutils toolchain-funcs
 
@@ -73,7 +73,7 @@ src_compile() {
 
 	# tested on different versions on gcc, P4, celeron & athlon-xp, and all bork on postProcess_MMX
 	# with mmx enabled, so disabled for all architectures for now - FIXME
-	myconf="${myconf} --disable-mmx
+	myconf="--disable-mmx
 		$(use_enable altivec)
 
 		$(use_enable oss audio-oss)
@@ -95,12 +95,8 @@ src_compile() {
 		$(use_enable X x11)"
 
 	# $(use_enable ieee1394 firewire)
-	export QMAKESPEC="linux-g++"
-	econf ${myconf} || die
 
-	qmake -o "Makefile" "${PN}.pro"
-	make qmake || die
-	emake CC="$(tc-getCC)" CXX="$(tc-getCXX)" || die
+	myth_src_compile
 }
 
 src_install() {

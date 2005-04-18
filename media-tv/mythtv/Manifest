@@ -5,7 +5,7 @@ MD5 06cd93b9712fe599cc295c0183b04ac2 ChangeLog 10003
 MD5 f62db0df6ee8ee1d4fe7b9c3d74432a7 metadata.xml 222
 MD5 f5e313e37938a6988e60395716056801 mythtv-0.16.ebuild 5794
 MD5 d031942485bf1c04b7b66ea1cbe191fb mythtv-0.17-r1.ebuild 7329
-MD5 80e8352bd27b240a0bfdfcdad431b792 mythtv-0.18.ebuild 3365
+MD5 98c16bdebaba7d21d2af97d6f45fbde9 mythtv-0.18.ebuild 3217
 MD5 fb4505fe7e8b832e115d777bf836d3bc files/digest-mythtv-0.16 66
 MD5 2623cb1c902bf07fca69b846e7a0915a files/mythbackend.conf 1186
 MD5 5938ea3584383e501674bf67a7f7e2a7 files/mythbackend.rc6 1776
@@ -17,7 +17,7 @@ MD5 67c40a05f5751719f170820c4d50c9c6 files/digest-mythtv-0.18 65
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCY1wTArHZZzCEUG0RAkLEAJ9oOncXsV56FL9d8mUAXErt27R6IACbBX7j
-1MYZpSUfePkgApaJOJ7TTGk=
-=zZVg
+iD8DBQFCY2Q0ArHZZzCEUG0RAgV9AJ9uk2is+WSfrsCGdje9xtkZOQ8UwwCfdPyF
+K1fWMZlfYUiDe+/6vn1PnzY=
+=GqNp
 -----END PGP SIGNATURE-----
