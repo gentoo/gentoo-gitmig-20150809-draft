@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1088 2005/04/18 03:08:42 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1089 2005/04/18 17:38:08 flameeyes Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -459,6 +459,8 @@ media-video/kino:ffmpeg - Enable ffmpeg support
 media-video/kmplayer:koffice-plugin - Install KOffice part
 media-video/lives:libvisual - Enable libvisual support
 media-video/mjpegtools:yv12 - Enables support for the YV12 pixel format
+media-video/mkvtoolnix:lzo - Enables support for lzo compression
+media-video/mkvtoolnix:bzip2 - Enables support for bzip2 compression
 media-video/motiontrack:libgd - Enables gd library support for debug purposes
 media-video/motiontrack:multiprocess - Enables multi-proccess support (SMP/cluster) for motiontrack programs
 media-video/mpeg4ip:v4l2 - Enable video4linux2 support
