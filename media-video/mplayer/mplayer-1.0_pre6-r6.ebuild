@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre6-r6.ebuild,v 1.2 2005/04/17 00:20:28 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre6-r6.ebuild,v 1.3 2005/04/18 19:02:41 lu_zero Exp $
 
 inherit eutils flag-o-matic kernel-mod
 
@@ -149,12 +149,6 @@ src_unpack() {
 
 	cd ${S}
 
-	# Custom CFLAGS
-	if use custom-cflags ; then
-	epatch ${FILESDIR}/${P}-configure.patch
-	sed -e 's:CFLAGS="custom":CFLAGS=${CFLAGS}:' -i configure
-	fi
-
 	#adds mythtv support to mplayer
 	use mythtv && epatch ${FILESDIR}/mplayer-mythtv.patch
 
@@ -285,8 +279,9 @@ src_compile() {
 		replace-flags -O3 -O2
 		filter-flags -fPIC -fPIE
 	fi
+	else
+	unset CFLAGS CXXFLAGS
 	fi
-
 
 	local myconf=
 	################
