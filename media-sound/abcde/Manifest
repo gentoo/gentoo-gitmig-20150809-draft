@@ -1,15 +1,25 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 059733ad92a101895ce18a1120b6eb55 metadata.xml 225
-MD5 7f35fb6c7171a2988fa440beaecc2fac abcde-2.1.15.ebuild 902
-MD5 612890e03c5a5ffe608c41a12d77c12d abcde-2.2.0.ebuild 884
-MD5 d80b8bb4a57f250358646fa098628a98 abcde-2.1.19.ebuild 908
 MD5 b4da78b40cef88c194c917809b002341 abcde-2.0.3.ebuild 820
-MD5 5a4606adafd8251c2bcd43abfd451028 ChangeLog 2984
+MD5 7f35fb6c7171a2988fa440beaecc2fac abcde-2.1.15.ebuild 902
+MD5 d80b8bb4a57f250358646fa098628a98 abcde-2.1.19.ebuild 908
 MD5 2db07ed5b82a239f751253fa19d7257b abcde-2.1.9.ebuild 876
+MD5 2e2db7874dccbc98293788417c2201b2 ChangeLog 3065
+MD5 ad8a5bcd7b8dcacfdd8b8322e56cae6c abcde-2.2.0.ebuild 890
+MD5 a2f0e2962b108c01df109e8123f0a290 files/abcde-2.0.3-gentoo.diff 1125
+MD5 2694d89dcc4dbec5b5c26687f260c483 files/abcde-2.1.9-gentoo.diff 903
+MD5 60d60afd57309ef7488531c447e6b2ae files/digest-abcde-2.0.3 67
 MD5 f2594cb41ae11004b7fb8d6e010b605b files/digest-abcde-2.1.15 68
+MD5 ad04d9d2662fcef3056d210c3e5f8cda files/digest-abcde-2.1.19 68
 MD5 25b33b09dc6ed31413a1082a5350e872 files/digest-abcde-2.1.9 67
 MD5 7b2ef4f38711230f745cbba49d892035 files/abcde-2.2.0-gentoo.diff 827
-MD5 2694d89dcc4dbec5b5c26687f260c483 files/abcde-2.1.9-gentoo.diff 903
-MD5 a2f0e2962b108c01df109e8123f0a290 files/abcde-2.0.3-gentoo.diff 1125
-MD5 ad04d9d2662fcef3056d210c3e5f8cda files/digest-abcde-2.1.19 68
-MD5 60d60afd57309ef7488531c447e6b2ae files/digest-abcde-2.0.3 67
 MD5 ce58af2601ccb50843238b885aed5a2f files/digest-abcde-2.2.0 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCY/k160LfUIagIAkRAnypAKDRVx3V1I9xV5PzRAGvYHSCa4YQlACeO/I7
+APPTFxWTVrvMQruWB1lM2B8=
+=aEcq
+-----END PGP SIGNATURE-----
