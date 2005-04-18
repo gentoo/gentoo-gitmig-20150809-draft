@@ -1,6 +1,10 @@
 # ChangeLog for media-video/fenice
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/fenice/ChangeLog,v 1.7 2005/04/13 09:53:48 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/fenice/ChangeLog,v 1.8 2005/04/18 13:44:11 flameeyes Exp $
+
+  18 Apr 2005; Diego Pettenò <flameeyes@gentoo.org> fenice-1.8.ebuild,
+  fenice-1.9.ebuild:
+  Use virtual/libc instead of sys-libs/glibc.
 
   13 Apr 2005; Luca Barbato <lu_zero@gentoo.org> fenice-1.9.ebuild:
   Minor workaround

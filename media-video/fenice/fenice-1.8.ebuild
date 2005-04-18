@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/fenice/fenice-1.8.ebuild,v 1.1 2005/03/07 12:41:07 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/fenice/fenice-1.8.ebuild,v 1.2 2005/04/18 13:44:11 flameeyes Exp $
 
 DESCRIPTION="Experimental rtsp streaming server"
 HOMEPAGE="http://streaming.polito.it/fenice.shtml"
@@ -10,10 +10,10 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc"
 IUSE=""
 
-DEPEND="sys-libs/glibc
+DEPEND="virtual/libc
 		app-text/ghostscript"
 
-RDEPEND="sys-libs/glibc"
+RDEPEND="virtual/libc"
 
 src_compile() {
 	econf --disable-fhs23 || die "econf failed"
