@@ -1,6 +1,15 @@
 # ChangeLog for www-servers/resin
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/ChangeLog,v 1.5 2004/12/17 21:40:54 corsair Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/ChangeLog,v 1.6 2005/04/18 17:23:52 luckyduck Exp $
+
+*resin-3.0.12 (18 Apr 2005)
+
+  18 Apr 2005; Jan Brinkmann <luckyduck@gentoo.org> -files/2.1.9/21resin,
+  -files/2.1.9/resin.conf, -files/2.1.9/resin.diff, -files/2.1.9/resin.init,
+  resin-2.1.14.ebuild, -resin-2.1.9.ebuild, +resin-3.0.12.ebuild,
+  resin-3.0.8-r1.ebuild, -resin-3.0.8.ebuild:
+  new upstream version, fixes #89156. did some cleanup, marked 2.1.14 and
+  3.0.8-r1 stable on amd64 and x86.
 
   17 Dec 2004; Markus Rothe <corsair@gentoo.org> resin-3.0.8-r1.ebuild:
   Stable on ppc64
