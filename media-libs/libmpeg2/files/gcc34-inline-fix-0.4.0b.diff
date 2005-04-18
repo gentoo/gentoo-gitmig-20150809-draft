@@ -9,3 +9,12 @@
  {
      static RETSIGTYPE (* oldsig) (int);
  
+@@ -157,7 +157,7 @@ static uint32_t arch_accel (void)
+ #endif /* ARCH_PPC */
+ 
+ #ifdef ARCH_SPARC
+-static inline uint32_t arch_accel (void)
++static uint32_t arch_accel (void)
+ {
+     static RETSIGTYPE (* oldsig) (int);
+ 
