@@ -1,5 +1,17 @@
-MD5 e9c5284d7e991b6313a16445763148f4 ChangeLog 824
-MD5 25fa513a88a1a8ed5f9f768723d56d66 cdstatus-0.94a.ebuild 863
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 1fdffd912e3839e1374a12c403b51014 cdstatus-0.94a.ebuild 868
+MD5 354aef6363d9602df09022ddcea837e2 ChangeLog 977
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 7d77c0a6fe47b0367208d789a05fd9a0 files/cdstatus-0.94a-gentoo.diff 388
+MD5 d354bc9f8a4ac91ce5de4666530b10ba cdstatus-0.95.03.ebuild 678
+MD5 7cc06e05fe9bccbc7d2765e66d27ab2d files/digest-cdstatus-0.95.03 67
 MD5 95dd0efca17c0f05af4c3ef97ba73161 files/digest-cdstatus-0.94a 64
+MD5 7d77c0a6fe47b0367208d789a05fd9a0 files/cdstatus-0.94a-gentoo.diff 388
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCZBq106ebR+OMO78RAvb8AJ449+lHzoVvquwYgIwDxm2UMqNu6wCglDT0
+Blb0o4DEc6po2wnZ35zUQEs=
+=C4SS
+-----END PGP SIGNATURE-----
