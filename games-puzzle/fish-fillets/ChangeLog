@@ -1,6 +1,11 @@
 # ChangeLog for games-puzzle/fish-fillets
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/fish-fillets/ChangeLog,v 1.13 2004/12/28 15:43:47 josejx Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/fish-fillets/ChangeLog,v 1.14 2005/04/18 15:33:37 mr_bones_ Exp $
+
+  18 Apr 2005; Michael Sterrett <mr_bones_@gentoo.org>
+  fish-fillets-0.6.0.ebuild:
+  Add menu support (bug #89378) with patch from Aleksandar Radovic
+  Tidy old ebuild
 
   29 Dec 2004; Joseph Jezak <josejx@gentoo.org> fish-fillets-0.6.0.ebuild:
   Marked ppc stable.

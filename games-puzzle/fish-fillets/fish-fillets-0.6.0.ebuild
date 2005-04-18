@@ -1,8 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/fish-fillets/fish-fillets-0.6.0.ebuild,v 1.2 2004/12/28 15:43:47 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/fish-fillets/fish-fillets-0.6.0.ebuild,v 1.3 2005/04/18 15:33:37 mr_bones_ Exp $
 
-inherit games
+inherit eutils games
 
 CS_PV="0.6.0"
 DATA_PV="0.6.1"
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/fillets/fillets-ng-${PV}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc ~amd64"
+KEYWORDS="~amd64 ppc x86"
 IUSE="nls"
 
 DEPEND=">=media-libs/libsdl-1.2
@@ -23,7 +23,7 @@ DEPEND=">=media-libs/libsdl-1.2
 	media-libs/sdl-ttf
 	>=dev-lang/lua-5"
 
-S="${WORKDIR}/fillets-ng-${PV}"
+S=${WORKDIR}/fillets-ng-${PV}
 
 src_compile() {
 	CPPFLAGS="-DSYSTEM_DATA_DIR=\"\\\"${GAMES_DATADIR}/${PN}\\\"\"" \
@@ -39,6 +39,8 @@ src_install() {
 	cd ../fillets-ng-data-${DATA_PV}
 	cp -r font music sound doc images script "${D}${GAMES_DATADIR}/${PN}" \
 		|| die "cp failed"
+	newicon images/icon.png fillets.png
+	make_desktop_entry fillets FishFillets fillets.png
 	if use nls ; then
 		cd ../fillets-ng-data-cs-${CS_PV}
 		cp -r sound "${D}${GAMES_DATADIR}/${PN}" \
