@@ -1,6 +1,12 @@
 # ChangeLog for media-video/gxine
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gxine/ChangeLog,v 1.29 2005/03/28 15:49:20 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gxine/ChangeLog,v 1.30 2005/04/18 11:09:41 flameeyes Exp $
+
+*gxine-0.4.3 (18 Apr 2005)
+
+  18 Apr 2005; Diego Pettenò <flameeyes@gentoo.org> +gxine-0.4.3.ebuild:
+  Added new gxine version (0.4.3) which should also fix a couple of upstream
+  bugs.
 
   29 Mar 2005; Chris White <chriswhite@gentoo.org> gxine-0.3.3-r1.ebuild,
   gxine-0.4.1.ebuild:
