@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/eix
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/ChangeLog,v 1.28 2005/04/11 00:24:04 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/ChangeLog,v 1.29 2005/04/18 10:11:46 hollow Exp $
+
+  18 Apr 2005; Benedikt Boehm <hollow@gentoo.org>
+  +files/0.2.2-unistd.h.patch, eix-0.2.2.ebuild:
+  fixed bug 89376
 
   11 Apr 2005; Marcus D. Hanwell <cryos@gentoo.org> eix-0.2.2.ebuild:
   Stable on amd64, bug 84466 is relevant to 2005.0 profile.
