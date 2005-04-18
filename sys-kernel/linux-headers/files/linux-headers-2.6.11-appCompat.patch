@@ -2023,12 +2023,17 @@ diff -urp linux-2.6.10/include/linux/types.h linux-2.6.10-gentoo/include/linux/t
 diff -urp linux-2.6.10/include/asm-i386/thread_info.h linux-2.6.10-gentoo/include/asm-i386/thread_info.h
 --- linux-2.6.10/include/asm-i386/thread_info.h	2005-02-08 21:30:49.000000000 +0000
 +++ linux-2.6.10-gentoo/asm-i386/thread_info.h	2005-02-08 21:27:03.000000000 +0000
-@@ -7,8 +7,6 @@
+@@ -7,8 +7,12 @@
  #ifndef _ASM_THREAD_INFO_H
  #define _ASM_THREAD_INFO_H
  
 -#ifdef __KERNEL__
--
++/* Fix bad upstream jojo in XEmacs; bug #82690. Temporary fix only warning until upstream fixes
++   things... */
++#ifdef register
++#undef register
++#endif
+ 
  #include <linux/config.h>
  #include <linux/compiler.h>
  #include <asm/page.h>
