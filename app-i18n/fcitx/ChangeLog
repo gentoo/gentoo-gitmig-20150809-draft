@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/fcitx
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx/ChangeLog,v 1.9 2005/03/01 11:28:08 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx/ChangeLog,v 1.10 2005/04/18 11:01:48 liquidx Exp $
+
+*fcitx-3.1.1 (18 Apr 2005)
+
+  18 Apr 2005; Alastair Tse <liquidx@gentoo.org> +fcitx-3.1.1.ebuild:
+  version bump with mirror (#89474)
 
 *fcitx-3.0.4 (01 Mar 2005)
 
