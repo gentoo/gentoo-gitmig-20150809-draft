@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.6.2.ebuild,v 1.24 2005/04/18 01:25:26 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.6.2.ebuild,v 1.25 2005/04/18 23:59:06 flameeyes Exp $
 
 # Missing support for...
 #	tarkin - package not in portage yet - experimental
@@ -56,7 +56,7 @@ RDEPEND="X? ( virtual/x11 )
 	>=media-libs/libdv-0.98
 	>=media-libs/libdvbpsi-0.1.3
 	>=media-video/ffmpeg-0.4.7
-	>media-libs/libmpeg2-0.3.1
+	=media-libs/libmpeg2-0.3*
 	>=media-video/mplayer-0.90"
 
 DEPEND="$RDEPEND >=sys-devel/autoconf-2.58"

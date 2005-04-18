@@ -1,6 +1,14 @@
 # ChangeLog for media-video/vlc
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.77 2005/04/18 01:25:26 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.78 2005/04/18 23:59:06 flameeyes Exp $
+
+  18 Apr 2005; Diego Pettenò <flameeyes@gentoo.org> metadata.xml,
+  -vlc-0.6.0-r1.ebuild, -vlc-0.6.1.ebuild, vlc-0.6.2.ebuild,
+  -vlc-0.7.1.ebuild, -vlc-0.7.1-r1.ebuild, -vlc-0.7.2-r1.ebuild,
+  -vlc-0.8.0.ebuild:
+  Pruned old ebuilds, as many bugs are fixed in recent ~arch ebuilds, and 
+  0.8.1-r1 is the wannabe-stable. Fixed dependency on libmpeg2-0.3* 
+  for vlc-0.6.2 (fixes #60696). Updated metadata, ChrisWhite is retired :/
 
   18 Apr 2005; Diego Pettenò <flameeyes@gentoo.org> vlc-0.6.0-r1.ebuild,
   vlc-0.6.1.ebuild, vlc-0.6.2.ebuild, vlc-0.6.2-r1.ebuild:
