@@ -1,0 +1,8 @@
+# ChangeLog for dev-games/ps2-packer
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ps2-packer/ChangeLog,v 1.1 2005/04/18 06:53:12 vapier Exp $
+
+*ps2-packer-0.4.4 (18 Apr 2005)
+
+  18 Apr 2005; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by me.
