@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/ppc64/use.mask,v 1.1 2005/04/15 16:58:18 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/ppc64/use.mask,v 1.2 2005/04/18 17:30:48 solar Exp $
 # This is an exact copy of the ppc64 use.mask
 
 # this is a list of USE flags
@@ -32,9 +32,6 @@ junit
 
 guile
 caps
-
-# for now from xorg ... but likely not for long as this is desirable!
-dlloader
 
 # see email to gentoo-dev with subject "use.mask and PHP5's crazy IUSE"
 # Dated Sat, 31 Jul 2004 14:49:28 -0700, from robbat2@gentoo.org
