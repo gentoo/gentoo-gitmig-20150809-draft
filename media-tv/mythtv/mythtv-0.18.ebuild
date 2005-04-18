@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.18.ebuild,v 1.1 2005/04/18 02:25:00 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.18.ebuild,v 1.2 2005/04/18 07:04:33 eradicator Exp $
 
 inherit myth flag-o-matic eutils toolchain-funcs
 
@@ -62,6 +62,10 @@ src_unpack() {
 	myth_src_unpack || die "unpack failed"
 
 	cd ${S}
+}
+
+setup_pro() {
+	return 0
 }
 
 src_compile() {
