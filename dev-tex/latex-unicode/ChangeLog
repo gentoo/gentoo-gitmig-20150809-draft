@@ -1,6 +1,10 @@
 # ChangeLog for dev-tex/latex-unicode
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex-unicode/ChangeLog,v 1.10 2004/12/28 21:29:20 absinthe Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex-unicode/ChangeLog,v 1.11 2005/04/18 17:01:44 hansmi Exp $
+
+  18 Apr 2005; Michael Hanselmann <hansmi@gentoo.org>
+  latex-unicode-20041017.ebuild:
+  Stable on ppc.
 
   28 Dec 2004; Dylan Carlson <absinthe@gentoo.org>
   latex-unicode-20040307.ebuild, latex-unicode-20041017.ebuild:
