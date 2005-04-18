@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kaffeine/kaffeine-0.6-r1.ebuild,v 1.1 2005/04/03 14:24:40 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kaffeine/kaffeine-0.6-r1.ebuild,v 1.2 2005/04/18 16:21:56 carlo Exp $
 
 inherit kde
 
@@ -15,8 +15,7 @@ IUSE="dvb"
 
 DEPEND=">=x11-base/xorg-x11-6.8.0-r4
 	>=media-libs/xine-lib-1
-	dvb? ( || ( sys-kernel/linux26-headers
-		    >=sys-kernel/linux-headers-2.6 ) )"
+	dvb? ( >=sys-kernel/linux-headers-2.6 )"
 
 # the dependency on xorg-x11 is meant to avoid bug #59746
 
