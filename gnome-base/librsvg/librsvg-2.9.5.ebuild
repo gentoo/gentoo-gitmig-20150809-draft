@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/librsvg-2.9.5.ebuild,v 1.1 2005/03/20 23:04:04 joem Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/librsvg-2.9.5.ebuild,v 1.2 2005/04/18 14:41:29 herbs Exp $
 
-inherit gnome2
+inherit gnome2 multilib
 
 DESCRIPTION="Scalable Vector Graphics (SVG) rendering library"
 HOMEPAGE="http://librsvg.sourceforge.net/"
@@ -36,6 +36,10 @@ G2CONF="${G2CONF} \
 	--enable-pixbuf-loader \
 	--enable-gtk-theme"
 
+# An arch specific config directory is used on multilib systems
+has_multilib_profile && GTK2_CONFDIR="/etc/gtk-2.0/${CHOST}"
+GTK2_CONFDIR=${GTK2_CONFDIR:=/etc/gtk-2.0/}
+
 DOCS="AUTHORS ChangeLog README NEWS TODO"
 
 src_install() {
@@ -49,12 +53,12 @@ src_install() {
 
 pkg_postinst() {
 
-	gdk-pixbuf-query-loaders > /etc/gtk-2.0/gdk-pixbuf.loaders
+	gdk-pixbuf-query-loaders > /${GTK2_CONFDIR}/gdk-pixbuf.loaders
 
 }
 
 pkg_postrm() {
 
-	gdk-pixbuf-query-loaders > /etc/gtk-2.0/gdk-pixbuf.loaders
+	gdk-pixbuf-query-loaders > /${GTK2_CONFDIR}/gdk-pixbuf.loaders
 
 }
