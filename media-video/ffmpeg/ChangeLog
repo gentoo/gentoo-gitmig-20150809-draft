@@ -1,6 +1,10 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.61 2005/04/03 01:11:14 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.62 2005/04/18 10:29:18 flameeyes Exp $
+
+  18 Apr 2005; Diego Pettenò <flameeyes@gentoo.org>
+  ffmpeg-0.4.9_p20050226-r3.ebuild:
+  Changed xvid dependency to 1.0. Fixes #88879.
 
 *ffmpeg-0.4.9_p20050226-r3 (03 Apr 2005)
 
