@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/multisync/multisync-0.83_pre20050115.ebuild,v 1.1 2005/01/20 19:15:05 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/multisync/multisync-0.83_pre20050115.ebuild,v 1.2 2005/04/18 13:48:24 genstef Exp $
 
-inherit eutils versionator
+inherit eutils versionator kde
 
 CVS_VERSION="20050115"
 MY_PV="0.82"
@@ -126,8 +126,20 @@ src_compile() {
 	do
 		einfo "Building ${plugin_dir}"
 		cd ${S}/plugins/${plugin_dir}
-		econf || die "${plugin_dir} config failed!"
-		emake || die "${plugin_dir} make failed!"
+		if test "${plugin_dir}" = "kdepim_plugin";
+		then
+			temp_S=${S}
+			S=${S}/plugins/${plugin_dir}
+			set-kdedir
+			kde_src_compile myconf
+			einfo ${myconf}
+			kde_src_compile configure || die "${plugin_dir} configure failed!"
+			kde_src_compile make || "${plugin_dir} make failed!"
+			S=${temp_S}
+		else
+			econf || die "${plugin_dir} config failed!"
+			emake || die "${plugin_dir} make failed!"
+		fi
 	done
 }
 
@@ -137,6 +149,6 @@ src_install() {
 	for plugin_dir in ${PLUGINS}
 	do
 		cd ${S}/plugins/${plugin_dir}
-		einstall || die "${plugin_dir} make failed!"
+		einstall || die "${plugin_dir} install failed!"
 	done
 }
