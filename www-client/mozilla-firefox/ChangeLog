@@ -1,6 +1,10 @@
 # ChangeLog for www-client/mozilla-firefox
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.21 2005/04/18 21:23:49 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.22 2005/04/18 22:03:53 kloeri Exp $
+
+  18 Apr 2005; Bryan Østergaard <kloeri@gentoo.org>
+  mozilla-firefox-1.0.3.ebuild:
+  Stable on ia64, bug 89303.
 
   18 Apr 2005; Bryan Østergaard <kloeri@gentoo.org>
   mozilla-firefox-1.0.3.ebuild:
