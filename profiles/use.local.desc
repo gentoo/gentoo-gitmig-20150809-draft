@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1087 2005/04/17 20:51:54 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1088 2005/04/18 03:08:42 josejx Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -604,6 +604,7 @@ net-irc/xchat:xchatdccserver - Enables support for the /dccserver command via a 
 net-irc/xchat:xchatnogtk - Disables building the GTK front end to XChat
 net-irc/xchat:xchattext - Enables the text/console front end to XChat
 net-libs/gecko-sdk:moznoxft - Disable XFT support
+net-libs/gecko-sdk:moznomail - Do not compile mail
 net-libs/libpri:bri - Enable ISDN BRI support (bristuff)
 net-libs/libsoup:gnutls - Use GnuTLS instead of OpenSSL for SSL support
 net-libs/libvncserver:no24bpp - disable 24bpp support
