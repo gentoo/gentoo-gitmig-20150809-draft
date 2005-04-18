@@ -1,4 +1,3 @@
-MD5 05470a17014072ce6ca6c7b14aa94c17 ChangeLog 12642
 MD5 ee5806b95c2dcfc5b397bcf7b64fc053 avidemux-2.0.24.ebuild 2486
 MD5 50470b95a03dd765d8fe70deb1389eb4 avidemux-2.0.34_rc1-r1.ebuild 3057
 MD5 b60a31026d6ccc354aa3d4a46fb7060b avidemux-2.0.34_rc1.ebuild 2420
@@ -7,7 +6,8 @@ MD5 0aed1a48ceb9c6c76092b0799433077a avidemux-2.0.36.ebuild 2539
 MD5 162de3edb58b8605348d0c594368017c avidemux-2.0.38_rc1.ebuild 2666
 MD5 f18fa403fee71aa513005f27bbcc4fd7 avidemux-2.0.38_rc2.ebuild 2639
 MD5 955f56e990f8c32d705708b4cc4db089 metadata.xml 251
-MD5 ec55caf8b7cb97e215cc40f3c9d99ac1 avidemux-2.0.38_rc2-r1.ebuild 2532
+MD5 d5eac482b3eb29c4c396afd394ad8633 avidemux-2.0.38_rc2-r1.ebuild 2571
+MD5 3c0b478183f7b065d81e252c1b63b4db ChangeLog 12878
 MD5 71caa2da3a9489e6d3e10b3816c753c6 files/2.0.38_rc1_mpegidentify.patch 1077
 MD5 4b0dc1a0f1e81197582e817410f8d180 files/2.0.38_rc2-fix-faad.patch 759
 MD5 c235b3c2a9d464d8729ec6698895866e files/alsa.patch 607
@@ -28,3 +28,4 @@ MD5 17fbb9e32a12d47d86a3f135c74da118 files/patch_jpeg.diff 1819
 MD5 c8b0002f8b446ffe1d4ae7e2440caf7f files/resize_crash.patch 618
 MD5 a425235d45d2628fb39a2d5e336585be files/xvid.patch 672
 MD5 4240b00a52d4c48f4c37fa919a62c75f files/digest-avidemux-2.0.38_rc2-r1 153
+MD5 7dc435f96cc9de9a1d0388947e22de48 files/avidemux-2.0.38_rc2-aclocal.patch 419

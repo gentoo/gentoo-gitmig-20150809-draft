@@ -1,0 +1,12 @@
+diff -ur /home/flame/devel/hacking/avidemux-2.0.38rc2b/admin/cvs.sh admin/cvs.sh
+--- /home/flame/devel/hacking/avidemux-2.0.38rc2b/admin/cvs.sh	2004-10-22 10:18:24.000000000 +0200
++++ admin/cvs.sh	2005-04-18 22:53:39.949443056 +0200
+@@ -58,7 +58,7 @@
+ fi
+ 
+ echo "*** Creating aclocal.m4"
+-$ACLOCAL > aclocal.log || exit 1
++$ACLOCAL -I m4 > aclocal.log || exit 1
+ echo "*** Creating configure"
+ call_and_fix_autoconf
+ 
