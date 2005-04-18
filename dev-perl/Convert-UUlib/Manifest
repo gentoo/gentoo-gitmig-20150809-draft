@@ -1,10 +1,20 @@
-MD5 022a179606031243413d9ffdfe1f1e5e Convert-UUlib-0.31.ebuild 534
-MD5 26ca28a1dec3b834be8a9d701569dc5f Convert-UUlib-1.051.ebuild 549
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 bbaf4296bc4727d3530ba937235b944b ChangeLog 1521
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 993ceeade87c98f5a317597199439b5e ChangeLog 1397
-MD5 61eee9e2668448111345e295c90616dc Convert-UUlib-1.03.ebuild 561
 MD5 9ed799beb4184a543b183361e5d8d95e Convert-UUlib-0.31-r1.ebuild 543
-MD5 74c83e3b47b56019e7ec1c37cdec7537 files/digest-Convert-UUlib-1.051 71
+MD5 022a179606031243413d9ffdfe1f1e5e Convert-UUlib-0.31.ebuild 534
+MD5 61eee9e2668448111345e295c90616dc Convert-UUlib-1.03.ebuild 561
+MD5 5b29dfe2d34f96673e87193a9aa49fcd Convert-UUlib-1.051.ebuild 550
 MD5 9bb1741154ae17182b9fdb4441292f86 files/digest-Convert-UUlib-0.31 70
-MD5 3742b534364aaceaa27c884e988958d2 files/digest-Convert-UUlib-1.03 70
 MD5 9bb1741154ae17182b9fdb4441292f86 files/digest-Convert-UUlib-0.31-r1 70
+MD5 3742b534364aaceaa27c884e988958d2 files/digest-Convert-UUlib-1.03 70
+MD5 74c83e3b47b56019e7ec1c37cdec7537 files/digest-Convert-UUlib-1.051 71
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCZBxUtG5z4I8BtQoRAkgvAJ9Oumw2CZ4dUdsG9mTmVgArgLwlvACeJc7y
+n5ZZ1/4LLBQ4qRr548VBVTI=
+=dOoy
+-----END PGP SIGNATURE-----
