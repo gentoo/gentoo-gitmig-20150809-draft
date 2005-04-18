@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.6.2-r1.ebuild,v 1.18 2005/03/23 16:18:35 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.6.2-r1.ebuild,v 1.19 2005/04/18 01:25:26 flameeyes Exp $
 
 # Missing support for...
 #	tarkin - package not in portage yet - experimental
@@ -56,7 +56,7 @@ RDEPEND="X? ( virtual/x11 )
 	truetype? ( >=media-libs/freetype-2.1.4 )
 	wxwindows? ( >=x11-libs/wxGTK-2.4.1 )
 	xosd? ( >=x11-libs/xosd-2.0 )
-	xvid? ( >=media-libs/xvid-0.9.1 )
+	xvid? ( =media-libs/xvid-0.9* )
 	3dfx? ( media-libs/glide-v3 )
 	>=media-libs/a52dec-0.7.4
 	flac? ( >=media-libs/flac-1.1.0 )

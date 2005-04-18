@@ -1,6 +1,10 @@
 # ChangeLog for media-video/vlc
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.76 2005/04/17 21:15:17 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.77 2005/04/18 01:25:26 flameeyes Exp $
+
+  18 Apr 2005; Diego Pettenò <flameeyes@gentoo.org> vlc-0.6.0-r1.ebuild,
+  vlc-0.6.1.ebuild, vlc-0.6.2.ebuild, vlc-0.6.2-r1.ebuild:
+  VLC 0.6.x needs xvid .9.x, can't build with 1.0.
 
   17 Apr 2005; Diego Pettenò <flameeyes@gentoo.org> vlc-0.8.1-r1.ebuild:
   Add check for wxwindows before request it (fixex #89436).
