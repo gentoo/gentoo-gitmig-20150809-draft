@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/helixplayer/helixplayer-1.0.3.ebuild,v 1.2 2005/03/30 11:57:16 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/helixplayer/helixplayer-1.0.3-r1.ebuild,v 1.1 2005/04/18 20:29:51 flameeyes Exp $
 
 inherit nsplugins eutils
 
@@ -77,4 +77,8 @@ src_install() {
 	done
 
 	domenu ${S}/player/installer/common/hxplay.desktop
+
+	# Remove setup script as it's dangerous, and the directory if it's empty
+	rm -rf ${D}/opt/HelixPlayer/Bin/setup
+	rm -f ${D}/opt/HelixPlayer/Bin
 }
