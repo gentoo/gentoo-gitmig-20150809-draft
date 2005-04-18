@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4c/log4c-1.0.10-r1.ebuild,v 1.5 2005/01/03 16:00:45 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4c/log4c-1.0.10-r1.ebuild,v 1.6 2005/04/18 17:02:41 hansmi Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://log4c.sourceforge.net"
 
 SLOT="0"
 LICENSE="LGPL-2.1"
-KEYWORDS="x86 sparc ~ppc amd64"
+KEYWORDS="x86 sparc ppc amd64"
 IUSE="doc"
 
 # The virtual/logger

@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libole2
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libole2/ChangeLog,v 1.15 2004/06/24 23:20:54 agriffis Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libole2/ChangeLog,v 1.16 2005/04/18 17:01:54 hansmi Exp $
+
+  18 Apr 2005; Michael Hanselmann <hansmi@gentoo.org>
+  libole2-0.2.4-r1.ebuild:
+  Stable on ppc.
 
   14 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org>
   libole2-0.2.3-r1.ebuild, libole2-0.2.4-r1.ebuild, libole2-0.2.4.ebuild:
