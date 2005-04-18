@@ -1,6 +1,17 @@
 # ChangeLog for media-video/avifile
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/ChangeLog,v 1.98 2005/04/15 03:37:46 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/ChangeLog,v 1.99 2005/04/18 00:15:15 flameeyes Exp $
+
+  18 Apr 2005; Diego Pettenò <flameeyes@gentoo.org>
+  +files/avifile-0.7.43.20050224-sdllibs.patch,
+  avifile-0.7.43.20050224-r1.ebuild:
+  Added win32codecs useflag (which allows to disable win32codecs support
+  instead of harddepend it on x86 systems). Renamed oggvorbis flag into
+  vorbis. Renamed dvd flag into a52 (it enables a52 support in avi files, not
+  in dvds, anyway). Used mad useflag in use_enable libmad. Remove dependency
+  on sed-4 (in system now). Added a patch to fix compilation of sdl support on
+  amd64 (at least). Fixed disabling of sdl with useflag. Removed x86
+  conditional on divx4linux as it's usemasked out of x86.
 
   15 Apr 2005; Stephen P. Becker <geoman@gentoo.org>
   avifile-0.7.41.20041001-r1.ebuild:
