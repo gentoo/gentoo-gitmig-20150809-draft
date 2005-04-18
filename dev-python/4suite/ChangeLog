@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/4suite
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/4suite/ChangeLog,v 1.13 2005/03/20 18:05:25 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/4suite/ChangeLog,v 1.14 2005/04/18 11:11:46 liquidx Exp $
+
+*4suite-1.0_beta1 (18 Apr 2005)
+
+  18 Apr 2005; Alastair Tse <liquidx@gentoo.org> +4suite-1.0_beta1.ebuild:
+  version bump
 
   20 Mar 2005; Heinrich Wendel <lanius@gentoo.org> 4suite-1.0_alpha4.ebuild:
   add amd64 keyword
