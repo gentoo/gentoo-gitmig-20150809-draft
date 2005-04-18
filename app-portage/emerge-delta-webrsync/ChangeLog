@@ -1,0 +1,9 @@
+# ChangeLog for <CATEGORY>/<PACKAGE_NAME>
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/emerge-delta-webrsync/ChangeLog,v 1.1 2005/04/18 04:01:42 ferringb Exp $
+
+*emerge-delta-webrsync-1: Apr 18 2005
+
+  Apr 18 2005; Brian Harring <ferringb@gentoo.org> emerge-delta-webrsync:
+  Initial import.  ~arch keywording, moving towards matching diffballs
+  keywording as arches report in.
