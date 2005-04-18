@@ -1,6 +1,10 @@
 # ChangeLog for media-video/nemesi
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nemesi/ChangeLog,v 1.5 2005/04/04 09:25:14 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nemesi/ChangeLog,v 1.6 2005/04/18 13:34:58 flameeyes Exp $
+
+  18 Apr 2005; Diego Pettenò <flameeyes@gentoo.org> nemesi-0.5.0.ebuild,
+  nemesi-0.5.1.ebuild, nemesi-0.5.2.ebuild:
+  Use virtual/libc instead of sys-libs/glibc, it builds fine on fbsd at least.
 
 *nemesi-0.5.2 (04 Apr 2005)
 
