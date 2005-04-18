@@ -1,9 +1,19 @@
-MD5 268a7a7361468e07db4ea70db7acf874 ChangeLog 772
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 1e8ec559b051f5135296d5060a8ab45f ChangeLog 953
 MD5 20e2255501865de5b568424821abf69d metadata.xml 161
-MD5 797611792e1229748a9c73c3d99e1083 mythphone-0.16.ebuild 735
-MD5 f9f7fb063fe2fd6370dee1d3503f08e3 mythphone-0.17.ebuild 652
-MD5 48d23ed675c31009af9031bac5c37d0b mythphone-0.18.ebuild 703
+MD5 d6660ef12c48f83da964d4f1069a311b mythphone-0.16.ebuild 739
+MD5 23182c4cb930e22179a4bda7403a768d mythphone-0.17.ebuild 656
+MD5 b7bfb724675487036102961c438cbe07 mythphone-0.18.ebuild 707
 MD5 bf30357411353ae10a9bafe9186a9fe8 files/digest-mythphone-0.16 67
 MD5 c8a5b3151324b04836f22f4d9586c498 files/mythphone-0.16-include.patch 242
 MD5 f817c793f79edc3d5ab358874d1ebe74 files/digest-mythphone-0.17 67
 MD5 e994e3c11d65c5762c760d5bb22021da files/digest-mythphone-0.18 70
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCY21JArHZZzCEUG0RAkDWAJ9xliXXD5Od9coNIGdEHLsvYHyKdgCfY7gI
+uNqVcoe/5kSs4SMDZ/4a8zo=
+=GBRc
+-----END PGP SIGNATURE-----

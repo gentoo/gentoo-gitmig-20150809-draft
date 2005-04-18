@@ -1,8 +1,18 @@
-MD5 b00a6af23becae71fda8824143cb3a62 ChangeLog 1813
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 43da6f4bb0b1ea2b085e4a656ea923a7 ChangeLog 1817
 MD5 f62db0df6ee8ee1d4fe7b9c3d74432a7 metadata.xml 222
 MD5 56538d56232b91c063f7c8fe68a835ef mythnews-0.16.ebuild 555
 MD5 34a7a0b2edd9bc42e874b97bad93d582 mythnews-0.17.ebuild 547
-MD5 38339819b41fdf8007933f87b363678c mythnews-0.18.ebuild 560
+MD5 51e1987d71dfd4d86318ce50195592a7 mythnews-0.18.ebuild 564
 MD5 884fcdd1409a7bce37fe7323e4b18942 files/digest-mythnews-0.16 65
 MD5 e2b81d46805e798c0ad883b5b6a809f4 files/digest-mythnews-0.17 65
 MD5 e994e3c11d65c5762c760d5bb22021da files/digest-mythnews-0.18 70
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCY2ykArHZZzCEUG0RAiWdAJ0WY94D9WHGZCi+VGyT7BSCbvvlEQCfYfEc
+2OwqnH2TKvANcxL+S+pZ39c=
+=blvO
+-----END PGP SIGNATURE-----
