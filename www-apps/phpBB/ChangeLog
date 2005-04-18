@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/phpBB
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/phpBB/ChangeLog,v 1.9 2005/03/01 16:50:15 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/phpBB/ChangeLog,v 1.10 2005/04/18 18:06:29 ka0ttic Exp $
+
+*phpBB-2.0.14 (18 Apr 2005)
+
+  18 Apr 2005; Aaron Walker <ka0ttic@gentoo.org> +phpBB-2.0.14.ebuild:
+  Version bump for sec bug 89248.
 
   01 Mar 2005; Lars Weiler <pylon@gentoo.org> phpBB-2.0.13.ebuild:
   Stable on ppc wrt bug #82955.
