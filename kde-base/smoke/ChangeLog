@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/smoke
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/smoke/ChangeLog,v 1.10 2005/03/18 16:51:36 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/smoke/ChangeLog,v 1.11 2005/04/18 22:48:38 herbs Exp $
+
+  18 Apr 2005; Herbie Hopkins <herbs@gentoo.org> smoke-3.4.0.ebuild:
+  Added ~amd64 keyword.
 
   18 Mar 2005; Daniel Goller <morfic@gentoo.org> smoke-3.4.0.ebuild:
   Added to ~ppc
