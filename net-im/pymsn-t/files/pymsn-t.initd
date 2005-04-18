@@ -1,0 +1,20 @@
+#!/sbin/runscript
+
+depend() {
+	need net
+	need jabber-server
+}
+
+start() {
+	ebegin "Starting MSN Jabber Transport"
+	cd /var/run/pymsn-t
+	start-stop-daemon --start --quiet --background --chuid pymsn-t:jabber \
+		--exec /usr/lib/pymsn-t/pymsn-t -- /etc/pymsn-t.xml
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping MSN Jabber Transport"
+	start-stop-daemon --stop --quiet --pidfile /var/run/pymsn-t/PyMSNt.pid
+	eend $?
+}
