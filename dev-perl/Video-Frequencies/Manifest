@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 3b3f71037555a5a622db3241a9693e8c Video-Frequencies-0.03.ebuild 522
-MD5 be7595e2bde4fc0a4d97355c5babf9ce ChangeLog 506
+MD5 f3eeff23069bc1021d50af288f1bc3dc Video-Frequencies-0.03.ebuild 526
+MD5 502aa3d920c3bea726f09e787672efdc ChangeLog 638
 MD5 212f198236ed9fef7b10b46f8cb80c63 metadata.xml 446
 MD5 c696b6a5a249fe6127a8957f439c8ec0 files/digest-Video-Frequencies-0.03 73
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFBcEPbMSkoRwEucGERAnjXAJ0UrmCGKKkiwp3+MkWjDlPUZA66YACfT6fL
-qgkQOLWrQ0ZRBheUharxaok=
-=F/Ok
+iD8DBQFCZArd06ebR+OMO78RAolSAJ4uFL+srT5HFkEH0blad+V4wUuyoQCfUqpn
+lCQC73o5FW1V4bSa00DED9E=
+=BreM
 -----END PGP SIGNATURE-----
