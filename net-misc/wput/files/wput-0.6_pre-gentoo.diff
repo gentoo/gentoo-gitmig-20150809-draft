@@ -1,0 +1,57 @@
+diff --exclude='*~' -urN wput.orig/Makefile.in wput/Makefile.in
+--- wput.orig/Makefile.in	2005-04-18 13:14:14.000000000 -0400
++++ wput/Makefile.in	2005-04-18 13:17:46.000000000 -0400
+@@ -15,10 +15,10 @@
+ 
+ install: all
+ 	cd po && $(MAKE) $(MAKEDEFS) $@
+-	install -d $(bindir) wput
+-	install -m0755 wput $(bindir)
+-	install -d $(mandir) doc/wput.1.gz
+-	install -m0644 doc/wput.1.gz $(mandir)
++	install -d $(DESTDIR)$(bindir)
++	install -m0755 wput $(DESTDIR)$(bindir)
++	install -d $(DESTDIR)$(mandir)
++	install -m0644 doc/wput.1.gz $(DESTDIR)$(mandir)
+ 	@echo "----------------"
+ 	@echo "Wput installed. See 'wput -h' or 'man wput' for usage information."
+ 	@echo "Further documentation is located in the doc/USAGE.* files."
+Files wput.orig/.Makefile.in.swo and wput/.Makefile.in.swo differ
+diff --exclude='*~' -urN wput.orig/src/ftp.c wput/src/ftp.c
+--- wput.orig/src/ftp.c	2005-04-18 13:14:14.000000000 -0400
++++ wput/src/ftp.c	2005-04-18 13:19:01.000000000 -0400
+@@ -88,7 +88,7 @@
+  * path and change there again */
+ /* error-levels: ERR_RECONNECT, ERR_FAILED, ERR_SKIP (failed for '/'), 1 */
+ int try_do_cwd(ftp_con * ftp, char * path, int mkd) {
+-	int res;
++	int res = -1;
+ 	if(!strcmp(path, "."))
+ 		return mkd;
+ 	if(!strcmp(path, ".."))
+@@ -201,7 +201,7 @@
+ }
+ 
+ int open_input_file(_fsession * fsession) {
+-	int fd;
++	int fd = -1;
+ 	int oflags = O_RDONLY;
+ 	char * cmd;
+ 	FILE * pipe;
+Files wput.orig/src/.ftp.c.swp and wput/src/.ftp.c.swp differ
+diff --exclude='*~' -urN wput.orig/src/ftp-ls.c wput/src/ftp-ls.c
+--- wput.orig/src/ftp-ls.c	2005-04-18 13:14:14.000000000 -0400
++++ wput/src/ftp-ls.c	2005-04-18 13:20:30.000000000 -0400
+@@ -42,6 +42,11 @@
+ #include <sys/types.h>
+ #include <errno.h>
+ 
++#ifndef _XOPEN_SOURCE
++# define _XOPEN_SOURCE
++#endif
++#include <time.h>
++
+ #include "wget.h"
+ #include "utils.h"
+ #include "ftp.h"
+Files wput.orig/src/.ftp-ls.c.swp and wput/src/.ftp-ls.c.swp differ
