@@ -65,7 +65,6 @@ move dev-java/jmf dev-java/jmf-bin
 move dev-java/maven dev-java/maven-bin
 move dev-java/saxon dev-java/saxon-bin
 move dev-java/snipsnap dev-java/snipsnap-bin
-move dev-java/wsdl4j dev-java/wsdl4j-bin
 move dev-java/sun-java3d dev-java/sun-java3d-bin
 move net-www/boa www-servers/boa
 move net-www/fnord www-servers/fnord
