@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-xlibs/emul-linux-x86-xlibs-2.1.ebuild,v 1.1 2005/04/18 09:58:47 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-xlibs/emul-linux-x86-xlibs-2.1.ebuild,v 1.2 2005/04/18 14:52:08 herbs Exp $
 
 inherit multilib
 
@@ -19,7 +19,7 @@ RDEPEND="${DEPEND}
 		virtual/libc
 		>=x11-base/xorg-x11-6.8.0-r4
 		>=app-emulation/emul-linux-x86-baselibs-2.0"
-	
+
 S=${WORKDIR}
 
 pkg_preinst() {
