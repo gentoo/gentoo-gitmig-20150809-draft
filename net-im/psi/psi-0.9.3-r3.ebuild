@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.9.3-r3.ebuild,v 1.1 2005/04/17 19:07:18 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.9.3-r3.ebuild,v 1.2 2005/04/18 03:26:27 mr_bones_ Exp $
 
 inherit eutils
 
@@ -19,7 +19,7 @@ HOMEPAGE="http://psi.affinix.com"
 SRC_URI="mirror://sourceforge/psi/${MY_P}.tar.bz2
 		extras?	( http://gentoo-pt.org/~humpback/${PN}-${VER}-gentoo-extras-0.1.tar.bz2
 		http://gentoo-pt.org/~humpback/${PN}-${VER}-gentoo-extras-0.2.tar.bz2
-		http://gentoo-pt.org/~humpback/${PN}-${VER}-gentoo-extras-0.3.tar.bz2 
+		http://gentoo-pt.org/~humpback/${PN}-${VER}-gentoo-extras-0.3.tar.bz2
 		http://gentoo-pt.org/~humpback/${PN}-${VER}-gentoo-extras-0.4.tar.bz2 )
 		linguas_ar? ( ${HTTPMIRR}/psi_ar-0.9.3.tar.bz2 )
 		linguas_ca? ( ${HTTPMIRR}/psi_ca-0.9.3.tar.bz2 )
@@ -253,4 +253,3 @@ src_install() {
 	#Install language packs
 	cp ${WORKDIR}/langs/psi_*.qm ${D}/usr/share/psi/
 }
-
