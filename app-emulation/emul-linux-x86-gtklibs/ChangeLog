@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/emul-linux-x86-gtklibs
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-gtklibs/ChangeLog,v 1.9 2005/04/15 21:09:43 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-gtklibs/ChangeLog,v 1.10 2005/04/18 10:10:11 herbs Exp $
+
+*emul-linux-x86-gtklibs-2.1 (18 Apr 2005)
+
+  18 Apr 2005; Herbie Hopkins <herbs@gentoo.org>
+  +emul-linux-x86-gtklibs-2.1.ebuild:
+  Use arch specific config directory for pango. Removed unnecessary .a files.
+  Fixed SRC_URI.
 
 *emul-linux-x86-gtklibs-2.0 (15 Apr 2005)
 
