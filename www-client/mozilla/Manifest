@@ -1,10 +1,10 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 94ab5a0ccb24a03e6a014347fe1b54ff ChangeLog 42660
+MD5 64f5090c301a24d1f16fb0666b67cfb6 ChangeLog 42765
 MD5 ce23390351fe8020387d93ee29e09a3d metadata.xml 160
 MD5 d12e70c419df7a908affe2d26980c359 mozilla-1.7.6-r1.ebuild 11614
-MD5 76062ce1f2d48c47fe942b3b2be2a00b mozilla-1.7.7.ebuild 11490
+MD5 5d8ac9165430c68af59336d76dcde21d mozilla-1.7.7.ebuild 11489
 MD5 003fd9a8ac4f985476cfe5c01c6e43e4 mozilla-1.7.5-r1.ebuild 11182
 MD5 8adafba88ad7121d8c24b45212b3d818 mozilla-1.7.5.ebuild 10571
 MD5 278524216669b594ea5b6468a180ed73 files/mozilla-stackgrowth.patch 931
@@ -28,7 +28,7 @@ MD5 6d52ff4ce4567db1cad08ea40157a65d files/icon/mozilla-icon.png 2350
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCY/XfKf2g/qXtneoRAiUHAJ9E9lizIQJrZoDrH76TGu3nd4CgsACaAn5a
-0NYUDuTOiAn6qvwucWhsSCA=
-=2CJ3
+iD8DBQFCZC6FKf2g/qXtneoRAi6TAJ0e7vWOmcG9daOvjAagZMYL/R6mKgCZAevq
+bgSfUS0tAxRx9exOBl8kw/M=
+=F14e
 -----END PGP SIGNATURE-----
