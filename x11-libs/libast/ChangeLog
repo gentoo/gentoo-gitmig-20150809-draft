@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/libast
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libast/ChangeLog,v 1.15 2005/03/06 11:01:49 corsair Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libast/ChangeLog,v 1.16 2005/04/18 23:52:31 vapier Exp $
+
+*libast-9999 (18 Apr 2005)
+
+  18 Apr 2005; Mike Frysinger <vapier@gentoo.org> +libast-9999.ebuild:
+  Add a cvs ebuild.
 
   06 Mar 2005; Markus Rothe <corsair@gentoo.org> libast-0.6.1.ebuild:
   Added ~ppc64 to KEYWORDS
