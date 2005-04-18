@@ -1,5 +1,15 @@
-MD5 f730743c23047fe085ab73e339274181 ChangeLog 1457
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 72b75dc9753bb094119b9ff9f7291e1f mysqlnavigator-1.4.2.ebuild 1235
 MD5 09fcc44c22fecf988848d48bd8b07437 mysqlnavigator-1.4.1.ebuild 701
-MD5 121ee5cfdfbe94066d5cf860bcbd0bab mysqlnavigator-1.4.2.ebuild 1229
+MD5 9484bdf10e173fe7ea54be667fc025b0 ChangeLog 1581
 MD5 2ca75439ae281db9a0dd3e0aa0f2c1b5 files/digest-mysqlnavigator-1.4.1 72
 MD5 765311fbbc2c57958979e2de14bedc32 files/digest-mysqlnavigator-1.4.2 154
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCZBcJ06ebR+OMO78RAsWqAJ9cWrQpGZt1YhXqaQHSj5AGgEApBQCeOksv
+IPh/j0YJHhsbKC6tyFzc8xA=
+=ylRm
+-----END PGP SIGNATURE-----

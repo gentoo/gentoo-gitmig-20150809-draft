@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysqlnavigator/mysqlnavigator-1.4.2.ebuild,v 1.8 2005/01/01 17:38:04 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysqlnavigator/mysqlnavigator-1.4.2.ebuild,v 1.9 2005/04/18 20:22:08 luckyduck Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://sql.kldp.org/snapshots/source/${P}.tar.gz
 HOMEPAGE="http://sql.kldp.org/mysql"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc"
+KEYWORDS="~x86 ~ppc ~sparc ~amd64"
 
 DEPEND=">=dev-db/mysql-3.23.49
 		>=x11-libs/qt-3.0.3"
