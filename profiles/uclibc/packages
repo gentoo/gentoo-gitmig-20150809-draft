@@ -1,3 +1,5 @@
+# $Header : $
+
 # core
 *>=sys-apps/portage-2.0.51
 *virtual/baselayout
@@ -29,6 +31,8 @@
 #-*sys-apps/shadow
 #-*sys-libs/cracklib
 # 
+
+-*sys-devel/bc
 
 # this needs to be package.masked all together.
 -*sys-libs/glibc

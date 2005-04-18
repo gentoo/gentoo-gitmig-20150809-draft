@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.235 2005/04/03 05:44:27 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.236 2005/04/18 19:36:18 solar Exp $
 
 # keep them sorted (excluding the special arch flags near the end).
 
@@ -245,7 +245,6 @@ perl - Adds support/bindings for the Perl language.
 pfpro - Adds support for Verisign Payflow Pro
 php - Include support for php
 pic - Build Position Independent Code. Needed for prelink or the hardened toolchain
-pie - Enable support for Position Independent Executables
 plotutils - Adds plotutils support to gnuplot (library for 2-D vector graphics)
 png - Adds support for libpng (PNG images)
 pnp - Adds support for PNP in pcmcia-cs (Plug-N-Play)

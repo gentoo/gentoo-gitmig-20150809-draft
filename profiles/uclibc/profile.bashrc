@@ -1,6 +1,6 @@
 # Copyright 2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/uclibc/profile.bashrc,v 1.4 2005/04/06 05:03:52 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/uclibc/profile.bashrc,v 1.5 2005/04/18 19:34:43 solar Exp $
 
 #
 # FEATURES="distclean"
@@ -22,7 +22,7 @@ package_clean_distdir() {
 			x=$(basename $x)
 				if [[ -w $DISTDIR/$x ]]; then
 					size="$(ls -lh ${DISTDIR}/${x} | awk '{print $5}')"
-					eecho "All done with ${x} Removing it to save ${size}"
+					eecho "Auto removing ${x} to save ${size}"
 					rm ${DISTDIR}/${x}
 				fi
 			done
@@ -47,3 +47,16 @@ if [[ $EBUILD_PHASE != "" ]]; then
 		setup|unpack|postinst|compile|*) : ;;
 	esac
 fi
+
+# Example of per package env variables
+# Searches and break in the flat text files of
+#	pkgname-pkgver-pkgrevision 
+#	pkgname-pkgver 
+#	pkgname
+
+#for conf in ${PN}-${PV}-${PR} ${PN}-${PV} ${PN}; do
+#	if [[ -r /etc/portage/env/$CATEGORY/${conf} ]]; then
+#		. /etc/portage/env/$CATEGORY/${conf}
+#		break
+#	fi
+#done
