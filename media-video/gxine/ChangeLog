@@ -1,6 +1,9 @@
 # ChangeLog for media-video/gxine
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gxine/ChangeLog,v 1.30 2005/04/18 11:09:41 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gxine/ChangeLog,v 1.31 2005/04/18 15:24:41 corsair Exp $
+
+  18 Apr 2005; Markus Rothe <corsair@gentoo.org> gxine-0.4.3.ebuild:
+  Added ~ppc64 to KEYWORDS; bug #89510
 
 *gxine-0.4.3 (18 Apr 2005)
 
