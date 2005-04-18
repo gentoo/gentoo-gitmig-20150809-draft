@@ -1,8 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/streamripper/streamripper-1.60.10.ebuild,v 1.8 2005/03/26 00:28:12 hansmi Exp $
-
-IUSE=""
+# $Header: /var/cvsroot/gentoo-x86/media-sound/streamripper/streamripper-1.60.10.ebuild,v 1.9 2005/04/18 16:45:48 luckyduck Exp $
 
 inherit eutils
 
@@ -13,6 +11,7 @@ SRC_URI="http://streamripper.sourceforge.net/files/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ppc ppc64 sparc x86"
+IUSE=""
 
 RDEPEND="media-libs/libmad"
 DEPEND="${RDEPEND}
@@ -37,6 +36,6 @@ src_unpack() {
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die
+	make DESTDIR="${D}" install || die "make install failed"
 	dodoc TODO README THANKS readme_xfade.txt
 }
