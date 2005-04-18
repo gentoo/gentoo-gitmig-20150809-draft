@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3839 2005/04/17 22:30:22 chainsaw Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3840 2005/04/18 11:33:12 humpback Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -115,6 +115,7 @@ app-portage/basc
 # Gustavo Felisberto <humpback@gentoo.org> (08 April 2005)
 # Initial import to give users chance to test
 net-im/ejabberd
+net-im/pymsn-t
 
 # Danny van Dyk <kugelfang@gentoo.org> (07 April 2005)
 # Doesn't build anymore. Asked maintainer to fix or remove it.
