@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/webmin
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/ChangeLog,v 1.83 2005/04/16 07:39:21 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/ChangeLog,v 1.84 2005/04/18 15:09:02 eradicator Exp $
+
+  18 Apr 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  files/webmin-1.140-apache2.patch:
+  Edited apache2 patch.  Closes bug #89518.
 
   16 Apr 2005; Markus Rothe <corsair@gentoo.org> webmin-1.200.ebuild:
   Stable on ppc64; bug #89141
