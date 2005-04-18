@@ -1,6 +1,6 @@
 # ChangeLog for www-client/mozilla-launcher
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-launcher/ChangeLog,v 1.7 2005/04/18 18:28:06 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-launcher/ChangeLog,v 1.8 2005/04/18 18:37:23 agriffis Exp $
 
   18 Apr 2005; Aron Griffis <agriffis@gentoo.org>
   mozilla-launcher-1.32.ebuild:
@@ -92,7 +92,7 @@
   Add XUL.mfasl to the list of files to delete when the browser is upgraded
   #67338
 
-  19 Oct 2004; Bryan Ãstergaard <kloeri@gentoo.org>
+  19 Oct 2004; Bryan Østergaard <kloeri@gentoo.org>
   mozilla-launcher-1.21.ebuild:
   Stable on alpha.
 

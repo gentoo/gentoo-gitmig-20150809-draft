@@ -1,6 +1,6 @@
 # ChangeLog for www-client/epiphany
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.6 2005/04/08 18:48:30 joem Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.7 2005/04/18 18:36:37 agriffis Exp $
 
   08 Apr 2005; Joe McCann <joem@gentoo.org> epiphany-1.6.0-r3.ebuild:
   fix some deps, thanks to bug 88382
@@ -155,7 +155,7 @@
   Versionbump, patch unnecessary, this fixes some mozilla issues to be more
   futureproof
 
-  23 Aug 2004; Bryan Østergaard <kloeri@gentoo.org> epiphany-1.2.7-r1.ebuild:
+  23 Aug 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> epiphany-1.2.7-r1.ebuild:
   Stable on alpha.
 
   18 Aug 2004; Travis Tilley <lv@gentoo.org> epiphany-1.2.7-r1.ebuild:
@@ -195,7 +195,7 @@
   Marked 1.2.6 x86 as mozilla 1.7 has moved to x86. See bug #55005 or brad[] for
   more information
 
-  07 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> epiphany-1.2.2.ebuild:
+  07 Jul 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> epiphany-1.2.2.ebuild:
   Stable on alpha.
 
 *epiphany-1.2.6 (19 Jun 2004)

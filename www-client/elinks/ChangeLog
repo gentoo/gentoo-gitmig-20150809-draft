@@ -1,6 +1,6 @@
 # ChangeLog for www-client/elinks
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/elinks/ChangeLog,v 1.5 2005/04/08 22:38:54 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/elinks/ChangeLog,v 1.6 2005/04/18 18:36:18 agriffis Exp $
 
 *elinks-0.10.4 (08 Apr 2005)
 
@@ -127,7 +127,7 @@
   -elinks-0.9.2_rc2.ebuild, +elinks-0.9.2_rc4.ebuild:
   Version bump. Removed old ebuilds.
 
-  24 Jul 2004; Bryan Ãstergaard <kloeri@gentoo.org> elinks-0.9.2_rc3.ebuild:
+  24 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> elinks-0.9.2_rc3.ebuild:
   Keyworded ~alpha.
 
 *elinks-0.9.2_rc3 (21 Jul 2004)
