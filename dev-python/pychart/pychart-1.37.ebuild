@@ -1,14 +1,14 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pychart/pychart-1.36.ebuild,v 1.1 2004/12/07 03:31:00 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pychart/pychart-1.37.ebuild,v 1.1 2005/04/18 16:51:02 pythonhead Exp $
 
 
 inherit distutils
 
 MY_P=${P/pychart/PyChart}
 DESCRIPTION="Python library for creating charts"
-HOMEPAGE="http://www.hpl.hp.com/personal/Yasushi_Saito/pychart/"
-SRC_URI="http://www.hpl.hp.com/personal/Yasushi_Saito/pychart/${MY_P}.tar.gz"
+HOMEPAGE="http://home.gna.org/pychart/"
+SRC_URI="http://download.gna.org/pychart/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
