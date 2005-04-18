@@ -1,6 +1,6 @@
-diff -Narup k3b-0.11.23/src/rip/k3bdvdrippingprocess.cpp k3b-0.11.23-new/src/rip/k3bdvdrippingprocess.cpp
---- k3b-0.11.23/src/rip/k3bdvdrippingprocess.cpp	2004-06-02 21:31:41.000000000 +1200
-+++ k3b-0.11.23.new/src/rip/k3bdvdrippingprocess.cpp	2005-04-15 11:21:13.000000000 +1200
+diff -Narup k3b-0.11.23.orig/src/rip/k3bdvdrippingprocess.cpp k3b-0.11.23/src/rip/k3bdvdrippingprocess.cpp
+--- k3b-0.11.23.orig/src/rip/k3bdvdrippingprocess.cpp	2004-06-02 11:31:41.000000000 +0200
++++ k3b-0.11.23/src/rip/k3bdvdrippingprocess.cpp	2005-04-16 13:22:21.000000000 +0200
 @@ -83,7 +83,15 @@ void K3bDvdRippingProcess::checkRippingM
      m_title = QString::number( (*m_dvd).getTitleNumber() );
      if( (*m_dvd).getMaxAngle() == 1 ) {
@@ -29,7 +29,7 @@ diff -Narup k3b-0.11.23/src/rip/k3bdvdrippingprocess.cpp k3b-0.11.23-new/src/rip
 +     * This check probably not required any more
 +     *
      if( m_tccatBin->version >= K3bVersion( 0, 6, 12 ) ) {
-       emit infoMessage( i18n("Sorry, K3b does not support ripping Video DVDs with transcode >= 0.6.12 yet."),
+       emit infoMessage( i18n("Sorry, K3b does not support ripping Video DVDs with transcode >= 0.1.12 yet."),
  			ERROR );
        emit finished( false );
        return;
