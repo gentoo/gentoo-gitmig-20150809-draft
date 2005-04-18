@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/whois/whois-4.6.22.ebuild,v 1.2 2004/11/03 00:23:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/whois/whois-4.6.22.ebuild,v 1.3 2005/04/18 22:52:20 vapier Exp $
 
 inherit eutils
 
@@ -11,12 +11,11 @@ SRC_URI="mirror://debian/pool/main/w/whois/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 sparc x86"
 IUSE="nls"
 RESTRICT="maketest" #59327
 
-RDEPEND="virtual/libc
-	net-dns/libidn"
+RDEPEND="net-dns/libidn"
 DEPEND="${RDEPEND}
 	>=dev-lang/perl-5"
 
