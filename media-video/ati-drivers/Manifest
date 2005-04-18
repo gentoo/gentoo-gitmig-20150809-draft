@@ -1,11 +1,11 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 dc996bcdd611d39b66f73b90473b52d4 ChangeLog 14856
+MD5 8e966ee8085698cc2dc9392be4e7da60 ChangeLog 14960
 MD5 6ba70f4634473ada8b39a4e0b3983597 ati-drivers-8.12.10.ebuild 6695
 MD5 a2a9c4ddd4562efd9ca3b290459e7196 metadata.xml 219
 MD5 3be35345fbc4005a932468eb839a64ff ati-drivers-8.10.19.ebuild 5968
-MD5 3a2987cd761df4062f8427ae695f10db ati-drivers-8.8.25-r3.ebuild 5752
+MD5 594314a4a5243fae95ca414ac615e93e ati-drivers-8.8.25-r3.ebuild 5753
 MD5 e61309d064f12cc623e4d6e78aa82b36 files/09ati 39
 MD5 2a93df06be0a03b771e0e980b37f7d7a files/3.2.5-linux-2.6.0-test6-mm.patch 309
 MD5 7a1a2040181cf4d2d3b0e820da5a8576 files/8.08-kernel-2.6.10.patch 4492
@@ -25,7 +25,7 @@ MD5 f2aad1d22d8cdb74d99b5efec9d02c2d files/digest-ati-drivers-8.10.19 156
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCYuDOArHZZzCEUG0RAju7AJ9rZ9zgOJwvrFbYpDHn8YGfAfmRGwCfXXTZ
-6Mawre6WfCEKlcNX8AyyvQs=
-=0hwT
+iD8DBQFCY1ilArHZZzCEUG0RAudQAJ9wAaUQCv1TnoN0o3PAxMvh7e0xwgCfTnPB
+lcfHhSkrapE1bdqlI9zxLpY=
+=GVEA
 -----END PGP SIGNATURE-----
