@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 d3a898f6dc31b653a5916d374d3bc93a gtk+-1.2.10-r11.ebuild 1827
 MD5 4cb5f6f9bbd2c302c853982ca7592744 gtk+-2.6.4.ebuild 2901
 MD5 82910bca598f511ea3183ef32776a890 gtk+-2.6.4-r1.ebuild 2987
@@ -6,8 +9,8 @@ MD5 cc82c88ecc09a6160980805e484421ac gtk+-2.4.14.ebuild 2916
 MD5 d0160ef5c7f542df383228f3a040580e gtk+-2.4.9-r1.ebuild 3139
 MD5 afb0e5aa8f6410c088c2e177a17efe5d gtk+-1.2.10-r10.ebuild 1719
 MD5 55a0240fe45beae9e83402b8bd3f8cbf gtk+-2.6.1-r2.ebuild 3279
-MD5 670f6b56f57f6c4b54df3e6aa3178f0b gtk+-2.6.7.ebuild 2901
-MD5 f6518ee7f2fb8c7f18a8cbc8590cbfa9 ChangeLog 23134
+MD5 48ef8c675f189fd710f22914df08e364 gtk+-2.6.7.ebuild 2868
+MD5 58f1f3f4898a4c6c1d00864b39615818 ChangeLog 23229
 MD5 ef2a0dc4245e964cf21ba8b20a3ad067 gtk+-2.6.2.ebuild 3036
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 b63cd20330898c8115bb7f119e4c60b6 gtk+-2.4.9-r2.ebuild 3178
@@ -32,3 +35,10 @@ MD5 c009a53ad7a5f839fc0b47feb72369fd files/gtk+-2.6.1-empty_default_combo.patch 
 MD5 d94ff41d82a8f0c56dd68a2fa71ef2fc files/gtk+-2.2.1-disable_icons_smooth_alpha.patch 1383
 MD5 0df92cf64a9324ef85fc72885a4285b1 files/gtk+-2.4.9-ppc64.patch 1732
 MD5 06d8be5421935ac9ed4da45830bb68bc files/gtk+-2.4.9-xpm_ico_secure.patch 3291
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCY9sV2G5bA0cA/ScRAvLKAJsFUMWdziKTbcuiJ60IQrG7kB7EUgCgvDZ7
+MBabrGzqPmgoSLFnkb8bM5o=
+=afAw
+-----END PGP SIGNATURE-----

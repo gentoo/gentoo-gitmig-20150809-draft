@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.6.7.ebuild,v 1.1 2005/04/16 11:50:03 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.6.7.ebuild,v 1.2 2005/04/18 16:06:18 herbs Exp $
 
 inherit flag-o-matic eutils
 
@@ -31,6 +31,11 @@ DEPEND="${RDEPEND}
 	doc? ( >=dev-util/gtk-doc-1 )
 	!x11-themes/gtk-engines-pixmap"
 
+# An arch specific config directory is used on multilib systems
+has_multilib_profile && GTK2_CONFDIR="/etc/gtk-2.0/${CHOST}"
+use x86 && [ "$(get_libdir)" == "lib32" ] && GTK2_CONFDIR="/etc/gtk-2.0/${CHOST}"
+GTK2_CONFDIR=${GTK2_CONFDIR:=/etc/gtk-2.0/}
+
 src_unpack() {
 
 	unpack ${A}
@@ -45,10 +50,10 @@ src_unpack() {
 	cd ${S}
 	# use an arch-specific config directory so that 32bit and 64bit versions
 	# dont clash on multilib systems
-	use amd64 && epatch ${DISTDIR}/gtk+-2.6.1-lib64.patch.bz2
+	has_multilib_profile && epatch ${DISTDIR}/gtk+-2.6.1-lib64.patch.bz2
 	# and this line is just here to make building emul-linux-x86-gtklibs a bit
 	# easier, so even this should be amd64 specific.
-	use x86 && [ "${CONF_LIBDIR}" == "lib32" ] && epatch ${DISTDIR}/gtk+-2.6.1-lib64.patch.bz2
+	use x86 && [ "$(get_libdir)" == "lib32" ] && epatch ${DISTDIR}/gtk+-2.6.1-lib64.patch.bz2
 
 	# patch for ppc64 (#64359)
 	use ppc64 && epatch ${FILESDIR}/${PN}-2.4.9-ppc64.patch
@@ -83,9 +88,7 @@ src_compile() {
 
 src_install() {
 
-	dodir /etc/gtk-2.0
-	use amd64 && dodir /etc/gtk-2.0/${CHOST}
-	use x86 && [ "${CONF_LIBDIR}" == "lib32" ] && dodir /etc/gtk-2.0/${CHOST}
+	dodir ${GTK2_CONFDIR}
 
 	make DESTDIR=${D} install || die
 
@@ -98,10 +101,6 @@ src_install() {
 }
 
 pkg_postinst() {
-
-	use amd64 && GTK2_CONFDIR="/etc/gtk-2.0/${CHOST}"
-	use x86 && [ "${CONF_LIBDIR}" == "lib32" ] && GTK2_CONFDIR="/etc/gtk-2.0/${CHOST}"
-	GTK2_CONFDIR=${GTK2_CONFDIR:=/etc/gtk-2.0/}
 
 	gtk-query-immodules-2.0 >	/${GTK2_CONFDIR}/gtk.immodules
 	gdk-pixbuf-query-loaders >	/${GTK2_CONFDIR}/gdk-pixbuf.loaders
