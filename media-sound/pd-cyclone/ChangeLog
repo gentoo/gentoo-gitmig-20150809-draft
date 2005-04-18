@@ -1,0 +1,11 @@
+# ChangeLog for media-sound/pd-cyclone
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pd-cyclone/ChangeLog,v 1.1 2005/04/18 16:33:52 luckyduck Exp $
+
+*pd-cyclone-0.1_alpha54 (18 Apr 2005)
+
+  18 Apr 2005; Jan Brinkmann <luckyduck@gentoo.org> +metadata.xml,
+  +files/pd-cyclone-0.1_alpha54-fPIC.patch, +pd-cyclone-0.1_alpha54.ebuild:
+  Inital import, ebuild based on the contribution by Tim Blechmann
+  <timblechmann@gmx.de>. Fixes #87951
+
