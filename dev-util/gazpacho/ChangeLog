@@ -1,0 +1,11 @@
+# ChangeLog for dev-util/gazpacho
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gazpacho/ChangeLog,v 1.1 2005/04/18 19:45:49 pythonhead Exp $
+
+*gazpacho-0.5.3 (18 Apr 2005)
+
+  18 Apr 2005; Rob Cakebread <pythonhead@gentoo.org> +metadata.xml,
+  +gazpacho-0.5.3.ebuild:
+  Initial commit. Thank you for the ebuild, Marien Zwart <m_zwart@123mail.org>
+  bug# 88771
+

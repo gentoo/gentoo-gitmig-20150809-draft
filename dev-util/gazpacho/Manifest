@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 739df4728145cbfc3f68ac57c4a6e6f5 gazpacho-0.5.3.ebuild 674
+MD5 459cd9719d60c9afcb0b0a81b1d4e008 metadata.xml 446
+MD5 0acf6db4f58b6d1c7a3045c6eb3ed669 ChangeLog 429
+MD5 0a89099cb09a956b1344953c496922b7 files/digest-gazpacho-0.5.3 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCZA6Oz2gxt1z4IGYRArahAKDYwvLeE2AviBIC2/4Dj0N9FPu2CwCgsh/j
+vbBhcYcm1g+OUEAedqsA4EE=
+=C1KY
+-----END PGP SIGNATURE-----
