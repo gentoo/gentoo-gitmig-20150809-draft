@@ -3,14 +3,14 @@ Hash: SHA1
 
 MD5 310f9d5f886c515d04be27148cae66b8 mozilla-launcher-1.30.ebuild 869
 MD5 311a023d4fabe996d3d2ab0c8a470b2d mozilla-launcher-1.32.ebuild 869
-MD5 05fb39e4b6537b6207b78d509b6c5735 ChangeLog 10661
+MD5 dd5b884abdfc8fb712ed10dfcaa034b5 ChangeLog 10585
 MD5 cc0891c820a717f0335919e48e686cbe metadata.xml 222
 MD5 647e59c9a4e6f883e364a37dc9c9203e files/digest-mozilla-launcher-1.30 68
 MD5 70ac948488bf73b6045253bab0ebe76e files/digest-mozilla-launcher-1.32 68
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCY/z5BXaUFmZvwyMRAs/BAJ9fitqeCbDb68DaKLNkeePnnubuswCgtrWv
-drd3hniE1A9KVEUakCyTT8Y=
-=vGgC
+iD8DBQFCY/0+BXaUFmZvwyMRAlHOAJ0QdGVqVyUlM59LqYFwv2+oP9DLrgCdEy6n
+koOd5vGpR9WaL1etY2caNno=
+=mw2B
 -----END PGP SIGNATURE-----
