@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/scite
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/ChangeLog,v 1.37 2005/04/06 00:44:52 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/ChangeLog,v 1.38 2005/04/18 16:51:28 hansmi Exp $
+
+  18 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> scite-1.6.2.ebuild:
+  Stable on ppc.
 
   06 Apr 2005; Rob Cakebread <pythonhead@gentoo.org> scite-1.6.3.ebuild:
   Fixed digest - upstream changed tarball. Good news is I removed the renaming
