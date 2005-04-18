@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3840 2005/04/18 11:33:12 humpback Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3841 2005/04/18 18:44:09 eradicator Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -35,6 +35,7 @@
 >=media-tv/mythfrontend-0.18
 >=media-tv/mythtv-0.18
 >=x11-themes/mythtv-themes-0.18
+>=www-apps/mythweb-0.18
 
 # Tavis Ormandy <taviso@gentoo.org> (17 Apr 2005)
 # masked pending resolution of security issues
