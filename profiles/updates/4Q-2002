@@ -27,7 +27,6 @@ move media-video/xine-d5d media-plugins/xine-d5d
 move media-video/xine-dmd media-plugins/xine-dmd
 move media-video/xine-dvdnav media-plugins/xine-dvdnav
 move media-sound/rmxmms media-plugins/rmxmms
-move dev-java/jakarta-regexp dev-java/regexp
 move app-i18n/aspell-br app-dicts/aspell-br
 move app-i18n/aspell-ca app-dicts/aspell-ca
 move app-i18n/aspell-cs app-dicts/aspell-cs
