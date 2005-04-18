@@ -1,6 +1,12 @@
 # ChangeLog for dev-php/creole
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/creole/ChangeLog,v 1.3 2005/04/12 11:50:23 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/creole/ChangeLog,v 1.4 2005/04/18 07:22:01 sebastian Exp $
+
+*creole-1.0.2 (18 Apr 2005)
+
+  18 Apr 2005; Sebastian Bergmann <sebastian@gentoo.org>
+  -creole-1.0.0.ebuild, -creole-1.0.1.ebuild, +creole-1.0.2.ebuild:
+  Version bump. Delete old versions.
 
   12 Apr 2005; Sebastian Bergmann <sebastian@gentoo.org>
   creole-1.0.1.ebuild:
