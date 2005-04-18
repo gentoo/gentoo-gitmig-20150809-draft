@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/darksnow
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/darksnow/ChangeLog,v 1.5 2004/12/19 05:39:58 eradicator Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/darksnow/ChangeLog,v 1.6 2005/04/18 15:50:42 luckyduck Exp $
+
+*darksnow-0.5 (18 Apr 2005)
+
+  18 Apr 2005; Jan Brinkmann <luckyduck@gentoo.org> +darksnow-0.5.ebuild:
+  new upstream version, fixes #65596
 
   18 Dec 2004; Jeremy Huddleston <eradicator@gentoo.org>
   darksnow-0.4.4.ebuild:
