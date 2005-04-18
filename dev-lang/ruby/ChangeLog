@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.129 2005/04/18 14:42:04 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.130 2005/04/18 16:57:37 hansmi Exp $
+
+  18 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> ruby-1.8.2-r1.ebuild:
+  Stable on ppc.
 
   18 Apr 2005; Gustavo Zacarias <gustavoz@gentoo.org> ruby-1.8.2-r1.ebuild:
   Stable on sparc
