@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/xmlwrapp
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlwrapp/ChangeLog,v 1.14 2005/04/07 12:53:35 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlwrapp/ChangeLog,v 1.15 2005/04/18 18:19:16 flameeyes Exp $
+
+  18 Apr 2005; Diego Pettenò <flameeyes@gentoo.org>
+  xmlwrapp-0.5.0-r1.ebuild:
+  Fixed compilation on amd64 multilib-strict.
 
   07 Apr 2005; Aaron Walker <ka0ttic@gentoo.org> xmlwrapp-0.5.0-r1.ebuild:
   Marked stable on x86.

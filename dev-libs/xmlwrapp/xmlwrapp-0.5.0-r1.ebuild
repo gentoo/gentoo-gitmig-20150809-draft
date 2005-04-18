@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlwrapp/xmlwrapp-0.5.0-r1.ebuild,v 1.4 2005/04/07 12:53:35 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlwrapp/xmlwrapp-0.5.0-r1.ebuild,v 1.5 2005/04/18 18:19:16 flameeyes Exp $
 
 inherit eutils toolchain-funcs
 
@@ -29,7 +29,7 @@ src_unpack() {
 }
 
 src_compile() {
-	local myconf="--prefix /usr --disable-examples"
+	local myconf="--prefix /usr --libdir /usr/$(get_libdir) --disable-examples"
 	use test && myconf="${myconf} --enable-tests"
 
 	export CXX="$(tc-getCXX)"
