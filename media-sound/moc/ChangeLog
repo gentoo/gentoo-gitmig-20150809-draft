@@ -1,6 +1,16 @@
 # ChangeLog for media-sound/moc
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/moc/ChangeLog,v 1.14 2005/03/29 10:54:06 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/moc/ChangeLog,v 1.15 2005/04/18 19:13:29 luckyduck Exp $
+
+*moc-2.2.0-r1 (18 Apr 2005)
+
+  18 Apr 2005; Jan Brinkmann <luckyduck@gentoo.org>
+  -files/moc-1.1.0-gcc3.patch, -files/moc-1.1.0-gcc34.patch,
+  -moc-1.1.0.ebuild, +moc-2.1.4-r1.ebuild, -moc-2.1.4.ebuild,
+  +moc-2.2.0-r1.ebuild, -moc-2.2.0.ebuild:
+  neither a binary nor a symlink named moc gets installed any longer, fixes bug
+  #76702. also did some cleanup and moved oggvorbis useflag to vorbis, oggvorbis
+  is deprecated.
 
   29 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org> moc-2.2.0.ebuild:
   introduced support for the flac useflag, fixes #86226
