@@ -1,6 +1,17 @@
 # ChangeLog for dev-libs/libiconv
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libiconv/ChangeLog,v 1.8 2004/06/24 23:18:35 agriffis Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libiconv/ChangeLog,v 1.9 2005/04/18 22:15:09 flameeyes Exp $
+
+*libiconv-1.9.2 (18 Apr 2005)
+
+  18 Apr 2005; Diego Pettenò <flameeyes@gentoo.org> +metadata.xml,
+  -libiconv-1.7.ebuild, +libiconv-1.9.2.ebuild:
+  Added 1.9.2 libiconv's ebuild, and removed previous 1.7.x one. I'm going 
+  to maintain libiconv in future for non-glibc systems like *bsd.
+  
+  New ebuild also blocks on glibc so that it can't be installed on glibc 
+  systems without have to remove glibc before (which is quite 
+  unpractical).
 
   25 Apr 2004; Aron Griffis <agriffis@gentoo.org> libiconv-1.7.ebuild:
   Add die following econf for bug 48950

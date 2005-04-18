@@ -1,3 +1,4 @@
-MD5 55145d903194a4f326b00b0cd53e6cf4 libiconv-1.7.ebuild 725
-MD5 d1dd7b7a0f9bde8ec57cbe70f19e7e7d ChangeLog 805
-MD5 23d3e294a30979175887909cb357a88e files/digest-libiconv-1.7 65
+MD5 c6e7193a3569d978cb042bebef43022e ChangeLog 1252
+MD5 f90c6b5ccd48096b82a7842c5994583b metadata.xml 469
+MD5 e66d2257070d9509a3550ef987d85c39 libiconv-1.9.2.ebuild 670
+MD5 ba26148d2aed650a790b129b9907ae59 files/digest-libiconv-1.9.2 67
