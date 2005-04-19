@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3842 2005/04/18 22:42:31 flameeyes Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3843 2005/04/19 00:27:32 vanquirius Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,12 @@
 ##
 ##   End example
 ##
+
+# Marcelo Goes <vanquirius@gentoo.org> (18 Apr 2005)
+# Masked for testing. Feel free to unmask if you feel
+# it works ok.
+
+=net-libs/gnutls-1.2.1
 
 # Jeremy Huddleston <eradicator@gentoo.org> (17 Apr 2005)
 # Testing for regressions with the new package layout
