@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/mplay
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mplay/ChangeLog,v 1.5 2005/04/19 08:23:08 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mplay/ChangeLog,v 1.6 2005/04/19 16:03:33 luckyduck Exp $
+
+*mplay-0.80 (19 Apr 2005)
+
+  19 Apr 2005; Jan Brinkmann <luckyduck@gentoo.org> +mplay-0.80.ebuild:
+  new upstream version, fixes #74394. thanks a lot for mcummings for his effort.
 
   19 Apr 2005; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
   Remove retired developer from metadata.xml.
