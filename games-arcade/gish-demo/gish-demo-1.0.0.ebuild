@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/gish-demo/gish-demo-1.0.0.ebuild,v 1.1 2004/12/08 04:35:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/gish-demo/gish-demo-1.0.0.ebuild,v 1.2 2005/04/19 21:47:57 herbs Exp $
 
 inherit games eutils
 
@@ -10,14 +10,21 @@ SRC_URI="ftp://demos.garagegames.com/gish/gishdemo-${PV}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="-* x86"
+KEYWORDS="-* x86 ~amd64"
 IUSE=""
 
 RDEPEND="virtual/libc
 	media-libs/libsdl
 	media-libs/openal
 	virtual/opengl
-	media-libs/libvorbis"
+	media-libs/libvorbis
+	amd64? (
+		>=app-emulation/emul-linux-x86-xlibs-2.1
+		>=app-emulation/emul-linux-x86-sdl-2.1
+	)"
+
+# Binary x86 package
+has_multilib_profile && ABI="x86"
 
 S=${WORKDIR}/gishdemo
 
@@ -30,8 +37,8 @@ src_install() {
 
 	# looks like when they built the game they accidently
 	# linked it against openssl ... lets fake it
-	dosym /lib/libc.so.6 ${dir}/libssl.so.4
-	dosym /lib/libc.so.6 ${dir}/libcrypto.so.4
+	dosym /$(get_libdir)/libc.so.6 ${dir}/libssl.so.4
+	dosym /$(get_libdir)/libc.so.6 ${dir}/libcrypto.so.4
 	exeinto ${dir}
 	doexe ${FILESDIR}/gish-wrapper
 
