@@ -3,12 +3,12 @@ Hash: SHA1
 
 MD5 5d01df84ef40a8353c6d30630364893f actionpack-1.4.0.ebuild 667
 MD5 3eec9f3fe48b51f49dbc1f171a3b026f metadata.xml 157
-MD5 2346da53a8324349678805788d0c1c33 ChangeLog 1182
+MD5 34f0dcba7379d86c49aca9f0827b703d ChangeLog 1187
 MD5 1e5e486c7cb96d32cab48e0f739c50c3 actionpack-1.5.0.ebuild 694
 MD5 64aa2e78666810fc3bf25c10d44744cd actionpack-1.5.1.ebuild 700
 MD5 2624fd4db05bba69ddc02ab338a47077 actionpack-1.6.0.ebuild 694
 MD5 29b32092b4e57a690d94dadcedd67bc0 actionpack-1.7.0.ebuild 693
-MD5 d43fa3f63aa0a829649c066574b346be actionpack-1.8.0.ebuild 694
+MD5 39c813dc63e0e50ac00ecaeefb0a8a23 actionpack-1.8.0.ebuild 699
 MD5 1dcf06b2e95fbfdf9c2f499da5be240a files/digest-actionpack-1.4.0 65
 MD5 b957eed75058069dd6830b703539fb11 files/digest-actionpack-1.5.0 65
 MD5 39838a48d8797e44af1c01a72ff978f1 files/digest-actionpack-1.5.1 65
@@ -18,7 +18,7 @@ MD5 e8c911d4b786255afa8a55578556efef files/digest-actionpack-1.8.0 65
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCZJkQz2gxt1z4IGYRAqGVAJsFBeZrdVgpFxjE7aZ9M2IX1YW77QCgseq1
-rnpuJTntf367ZOxVUcEnXlk=
-=7vML
+iD8DBQFCZJmwz2gxt1z4IGYRAmowAJ9UFbssA0umIj0F7YRetf3kqkNxfwCfWrt3
+yqyeqrB8d5FPswc96NruXUI=
+=p8LQ
 -----END PGP SIGNATURE-----
