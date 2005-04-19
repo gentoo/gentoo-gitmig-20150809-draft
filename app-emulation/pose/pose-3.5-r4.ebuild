@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/pose/pose-3.5-r4.ebuild,v 1.4 2005/01/01 14:16:02 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/pose/pose-3.5-r4.ebuild,v 1.5 2005/04/19 15:51:33 wormo Exp $
 
 S=${WORKDIR}/Emulator_Src_3.5
 HOMEPAGE="http://www.palmos.com/dev/tools/emulator/"
@@ -10,7 +10,7 @@ DESCRIPTION="Palm OS Emulator"
 
 DEPEND=">=x11-libs/fltk-1.1.4"
 
-KEYWORDS="x86"
+KEYWORDS="x86 -ppc"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE=""

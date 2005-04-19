@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/pose/pose-3.5-r1.ebuild,v 1.11 2005/01/01 14:16:02 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/pose/pose-3.5-r1.ebuild,v 1.12 2005/04/19 15:51:33 wormo Exp $
 
 S=${WORKDIR}/Emulator_Src_3.5
 FLTK_PV=1.0.11
@@ -12,7 +12,7 @@ SRC_URI="http://www.palmos.com/dev/tools/emulator/sources/emulator_src_3.5.tar.g
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 -ppc"
 IUSE=""
 
 DEPEND="virtual/libc"
