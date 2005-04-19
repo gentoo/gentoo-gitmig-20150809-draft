@@ -1,0 +1,10 @@
+# ChangeLog for net-zope/plonepopoll
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/plonepopoll/ChangeLog,v 1.1 2005/04/19 17:30:49 radek Exp $
+
+*plonepopoll-2.3 (19 Apr 2005)
+
+  19 Apr 2005; Radoslaw Stachowiak <radek@gentoo.org> +metadata.xml,
+  +plonepopoll-2.3.ebuild:
+  initial release thanks to Björn Michaelsen <bmichaelsen@gmx.de>, closes #89133
+
