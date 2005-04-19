@@ -1,6 +1,7 @@
-diff -ur yiff-2.14.2.orig/yiff/Makefile yiff-2.14.2/yiff/Makefile
---- yiff-2.14.2.orig/yiff/Makefile	2003-08-18 20:55:37.811026984 -0400
-+++ yiff-2.14.2/yiff/Makefile	2003-08-18 20:58:41.116160368 -0400
+Fix misc issues that crop up with newer gcc versions.
+
+--- yiff-2.14.2/yiff/Makefile
++++ yiff-2.14.2/yiff/Makefile
 @@ -111,7 +111,7 @@
  #   farther above.
  #
@@ -10,9 +11,8 @@ diff -ur yiff-2.14.2.orig/yiff/Makefile yiff-2.14.2/yiff/Makefile
  
  # Library Directories:
  #
-diff -ur yiff-2.14.2.orig/yiffconfig/yccb.c yiff-2.14.2/yiffconfig/yccb.c
---- yiff-2.14.2.orig/yiffconfig/yccb.c	2003-08-18 20:55:38.021994912 -0400
-+++ yiff-2.14.2/yiffconfig/yccb.c	2003-08-18 20:58:26.226423952 -0400
+--- yiff-2.14.2/yiffconfig/yccb.c
++++ yiff-2.14.2/yiffconfig/yccb.c
 @@ -168,13 +168,13 @@
  	{
  	    int status = CDialogGetResponse(
@@ -34,9 +34,8 @@ diff -ur yiff-2.14.2.orig/yiffconfig/yccb.c yiff-2.14.2/yiffconfig/yccb.c
  		CDIALOG_ICON_WARNING,
  		CDIALOG_BTNFLAG_YES | CDIALOG_BTNFLAG_NO |
  		CDIALOG_BTNFLAG_HELP,
-diff -ur yiff-2.14.2.orig/yiffutils/ymixer.c yiff-2.14.2/yiffutils/ymixer.c
---- yiff-2.14.2.orig/yiffutils/ymixer.c	2003-08-18 20:55:37.894014368 -0400
-+++ yiff-2.14.2/yiffutils/ymixer.c	2003-08-18 20:57:50.233895648 -0400
+--- yiff-2.14.2/yiffutils/ymixer.c
++++ yiff-2.14.2/yiffutils/ymixer.c
 @@ -23,26 +23,26 @@
   */
  static void print_help(void)
