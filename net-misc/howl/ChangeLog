@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/howl
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/howl/ChangeLog,v 1.25 2005/04/02 03:56:29 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/howl/ChangeLog,v 1.26 2005/04/19 22:25:33 plasmaroo Exp $
+
+  19 Apr 2005; <plasmaroo@gentoo.org> howl-0.9.8.ebuild:
+  Push 0.9.8 to ia64 stable as that doesn't break with 2.6 headers while current
+  stable does; bug #89700.
 
   02 Apr 2005; Stephen P. Becker <geoman@gentoo.org> howl-0.9.6-r2.ebuild:
   stable on mips
