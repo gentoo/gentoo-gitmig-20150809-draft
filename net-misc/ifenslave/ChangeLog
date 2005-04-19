@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/ifenslave
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ifenslave/ChangeLog,v 1.6 2005/02/22 10:58:46 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ifenslave/ChangeLog,v 1.7 2005/04/19 05:46:00 robbat2 Exp $
+
+  18 Apr 2005; Robin H. Johnson <robbat2@gentoo.org>
+  ifenslave-1.1.0-r1.ebuild, ifenslave-1.1.0-r2.ebuild:
+  Bug #89550 - cleanup linux26-headers DEPEND.
 
   22 Feb 2005; Simon Stelling <blubb@gentoo.org> ifenslave-1.1.0.ebuild:
   added ~amd64
