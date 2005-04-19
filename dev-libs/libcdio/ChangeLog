@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libcdio
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio/ChangeLog,v 1.28 2005/04/19 22:53:42 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio/ChangeLog,v 1.29 2005/04/19 23:09:03 flameeyes Exp $
+
+  19 Apr 2005; Diego Pettenò <flameeyes@gentoo.org> libcdio-0.70.ebuild:
+  0.70 stable on amd64.
 
 *libcdio-0.73 (19 Apr 2005)
 
