@@ -1,4 +1,14 @@
-MD5 d1018ffcb9008c7f13d17ca92b1ca18e ChangeLog 898
-MD5 3be4f6e757e3057184136a002b0165f9 metadata.xml 221
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 5d8313fd3902091577fb064fa6b575a2 ChangeLog 1008
+MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 755759e8296c6231cc76687807d1a022 rev-plugins-0.2.1.ebuild 740
 MD5 0d303e095f852c97bcbd1a1f09b50a1d files/digest-rev-plugins-0.2.1 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCZL8DKf2g/qXtneoRAlUmAJ97SdYzyFqND4rreyvommOPJJxX7wCfWG3E
+JvLunzkacn9eHuSzkI5Uvws=
+=VLQi
+-----END PGP SIGNATURE-----
