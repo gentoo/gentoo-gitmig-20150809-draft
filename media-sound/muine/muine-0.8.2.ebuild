@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/muine/muine-0.8.2.ebuild,v 1.3 2005/04/07 01:39:53 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/muine/muine-0.8.2.ebuild,v 1.4 2005/04/19 10:47:07 zaheerm Exp $
 
 inherit gnome2 mono eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://muine.gooeylinux.org/"
 SRC_URI="${HOMEPAGE}/${P}.tar.gz"
 
 LICENSE="GPL-2"
-IUSE="xine mad oggvorbis flac aac"
+IUSE="xine mad vorbis flac aac"
 SLOT="0"
 KEYWORDS="~x86"
 
@@ -25,7 +25,8 @@ RDEPEND=">=dev-lang/mono-0.96
 		>=media-libs/gst-plugins-0.8.8
 		>=media-plugins/gst-plugins-gnomevfs-0.8.8
 		mad? ( >=media-plugins/gst-plugins-mad-0.8.8 )
-		oggvorbis? ( >=media-plugins/gst-plugins-vorbis-0.8.8 )
+		vorbis? ( >=media-plugins/gst-plugins-ogg-0.8.8
+			>=media-plugins/gst-plugins-vorbis-0.8.8 )
 		flac? ( >=media-plugins/gst-plugins-flac-0.8.8 )
 		aac? (
 			>=media-plugins/gst-plugins-faad-0.8.8
