@@ -1,6 +1,33 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.367 2005/04/15 22:53:03 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.368 2005/04/19 07:53:11 spyderous Exp $
+
+*xorg-x11-6.8.99.3 (19 Apr 2005)
+
+  19 Apr 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  +xorg-x11-6.8.99.3.ebuild:
+  Part of a series of development snapshots of CVS HEAD. Pull a ton of patches
+  that were committed upstream:
+  0440_all_6.8.0-support-cymotion-master-and-ibm-space-saver-keyboards.patch,
+  0485_all_6.8.0-afb-cfb-dlloader-fixes.patch,
+  0487_all_6.8.2-add-relocation-type-10-to-elfloader.patch,
+  2000_all_6.8.0-fb-convert-rgb-to-bgr-when-needed.patch,
+  5135_all_6.8.1-r128-ppc-vgaaccess.patch,
+  5160_all_6.8.1-benh-radeon-ppc-fixes-v2.patch,
+  5170_all_6.8.1.904-radeon-add-bioshotkeys-option.patch,
+  5180_all_6.8.2-back-out-extra-radeonsetfblocation.patch,
+  5190_all_6.8.2-radeon-render-byteswap.patch,
+  5200_all_6.8.0-newport-accel-v4.patch,
+  9355_all_6.7.99.2-xorgconfig-fontdir-fixes-v2.patch,
+  9370_all_6.8.1.904-fix-duplicate-cfb-symbols-v2.patch,
+  9375_all_6.8.1.904-fix-duplicate-mfb-symbols.patch,
+  9930_all_6.8.0-xpm-secfix-CAN-2005-0605.patch. Update some patches to
+  reflect changes, such as 9360_all_6.7.99.2-ppc64-support-updates-v3.patch.
+  Also drop 9180_all_4.3.0-xcursorgen-check-malloc-return.patch, which just
+  caused a different kind of error. Drop the patched-in evdev driver (patches
+  9000-9003), because upstream now supplies its own, different evdev driver.
+  (#67578) Drop 0350_all_4.2.0-vt7.patch, which has poor rationale and doesn't
+  work very well.
 
   15 Apr 2005; Jeremy Huddleston <eradicator@gentoo.org>
   xorg-x11-6.8.2-r2.ebuild:
