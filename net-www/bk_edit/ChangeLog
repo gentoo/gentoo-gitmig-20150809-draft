@@ -1,6 +1,9 @@
 # ChangeLog for net-www/bk_edit
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/bk_edit/ChangeLog,v 1.1 2004/10/31 16:59:42 chriswhite Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/bk_edit/ChangeLog,v 1.2 2005/04/19 10:35:20 beu Exp $
+
+  19 Apr 2005; Elfyn McBratney <beu@gentoo.org> metadata.xml:
+  Remove retired developer from metadata.xml.
 
 *bk_edit-0.6.23 (31 Oct 2004)
 

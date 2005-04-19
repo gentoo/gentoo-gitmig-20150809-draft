@@ -1,6 +1,9 @@
 # ChangeLog for net-www/netscape-plugger
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/netscape-plugger/ChangeLog,v 1.14 2005/03/23 16:19:25 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/netscape-plugger/ChangeLog,v 1.15 2005/04/19 10:36:38 beu Exp $
+
+  19 Apr 2005; Elfyn McBratney <beu@gentoo.org> metadata.xml:
+  Remove retired developer from metadata.xml.
 
   23 Mar 2005; Seemant Kulleen <seemant@gentoo.org>
   netscape-plugger-5.0.ebuild, netscape-plugger-5.1.3.ebuild:
