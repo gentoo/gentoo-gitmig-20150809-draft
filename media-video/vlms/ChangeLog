@@ -1,6 +1,9 @@
 # ChangeLog for media-video/vlms
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlms/ChangeLog,v 1.8 2005/03/28 00:13:18 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlms/ChangeLog,v 1.9 2005/04/19 09:32:32 kloeri Exp $
+
+  19 Apr 2005; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
+  Remove retired developer from metadata.xml.
 
   28 Mar 2005; Chris White <chriswhite@gentoo.org>
   +files/0.2.2-vlf-cr-fix.patch, vlms-0.2.2.ebuild:

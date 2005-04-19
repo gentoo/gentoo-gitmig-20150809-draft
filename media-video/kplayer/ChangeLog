@@ -1,6 +1,9 @@
 # ChangeLog for media-video/kplayer
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kplayer/ChangeLog,v 1.12 2005/01/12 22:05:29 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kplayer/ChangeLog,v 1.13 2005/04/19 09:33:38 kloeri Exp $
+
+  19 Apr 2005; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
+  Remove retired developer from metadata.xml.
 
 *kplayer-0.5.3 (12 Jan 2005)
 

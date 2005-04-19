@@ -1,6 +1,9 @@
 # ChangeLog for media-video/emovix
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/emovix/ChangeLog,v 1.6 2005/01/15 22:53:00 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/emovix/ChangeLog,v 1.7 2005/04/19 09:28:23 kloeri Exp $
+
+  19 Apr 2005; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
+  Remove retired developer from metadata.xml.
 
   15 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org> emovix-0.9.0_pre1.ebuild:
   changed app-cdr/cdrtools dependency to virtual/cdrtools. see bug #77817.

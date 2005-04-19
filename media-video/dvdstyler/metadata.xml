@@ -3,10 +3,6 @@
 <pkgmetadata>
 <herd>video</herd>
 <maintainer>
-  <email>chriswhite@gentoo.org</email>
-  <name>Chris White</name>
-</maintainer>
-<maintainer>
   <email>dragonheart@gentoo.org</email>
   <name>Daniel Black</name>
 </maintainer>
