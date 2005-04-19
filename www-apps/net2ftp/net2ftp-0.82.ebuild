@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/net2ftp/net2ftp-0.82.ebuild,v 1.1 2005/02/28 12:33:07 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/net2ftp/net2ftp-0.82.ebuild,v 1.2 2005/04/19 06:08:05 uberlord Exp $
 
 inherit eutils webapp
 
@@ -14,7 +14,7 @@ SRC_URI="http://www.net2ftp.com/download/${MY_P}.zip"
 HOMEPAGE="http://www.net2ftp.com/"
 
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 DEPEND=">=dev-php/mod_php-4.2.3
 	app-arch/unzip"
