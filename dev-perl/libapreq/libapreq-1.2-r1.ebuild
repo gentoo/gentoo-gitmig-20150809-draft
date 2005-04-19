@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/libapreq/libapreq-1.2-r1.ebuild,v 1.5 2005/01/04 14:39:27 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/libapreq/libapreq-1.2-r1.ebuild,v 1.6 2005/04/19 18:31:27 hansmi Exp $
 
 inherit perl-module eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://search.cpan.org/~joesuf/${P}/"
 
 LICENSE="Apache-1.1 as-is"
 SLOT="0"
-KEYWORDS="x86 amd64 ~ppc ~sparc ~alpha ~mips"
+KEYWORDS="x86 amd64 ppc ~sparc ~alpha ~mips"
 IUSE=""
 
 DEPEND=">=sys-apps/sed-4

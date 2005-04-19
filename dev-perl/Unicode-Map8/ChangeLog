@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Unicode-Map8
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Unicode-Map8/ChangeLog,v 1.16 2005/01/04 14:02:12 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Unicode-Map8/ChangeLog,v 1.17 2005/04/19 18:23:06 hansmi Exp $
+
+  19 Apr 2005; Michael Hanselmann <hansmi@gentoo.org>
+  Unicode-Map8-0.12.ebuild:
+  Stable on ppc.
 
   04 Jan 2005; Michael Cummings <mcummings@gentoo.org>
   Unicode-Map8-0.11-r1.ebuild, Unicode-Map8-0.11.ebuild,

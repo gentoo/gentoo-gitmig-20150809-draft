@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/extutils-pkgconfig
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/extutils-pkgconfig/ChangeLog,v 1.16 2005/04/08 16:24:03 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/extutils-pkgconfig/ChangeLog,v 1.17 2005/04/19 18:29:34 hansmi Exp $
+
+  19 Apr 2005; Michael Hanselmann <hansmi@gentoo.org>
+  extutils-pkgconfig-1.07.ebuild:
+  Stable on ppc.
 
   08 Apr 2005; Markus Rothe <corsair@gentoo.org>
   extutils-pkgconfig-1.07.ebuild:
