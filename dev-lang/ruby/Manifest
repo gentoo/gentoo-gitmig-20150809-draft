@@ -4,7 +4,7 @@ Hash: SHA1
 MD5 51f40e71a9f226fb4fd79369afe87ad4 ruby-1.6.8-r12.ebuild 1937
 MD5 56ec59d6a7e76f2523f4e3367af3403d ruby-1.6.8-r11.ebuild 1973
 MD5 c72b1f634ae90d2a2763ac6e15d19a63 ruby-1.8.2.ebuild 3446
-MD5 82d88e1b0ca55c5c0fc62ba77422a256 ruby-1.8.2-r1.ebuild 3711
+MD5 fbf0433b9544cf51e7e36a4e000ab043 ruby-1.8.2-r1.ebuild 3751
 MD5 9a524b27fd3a7ef6fb4189906b92e046 ChangeLog 19838
 MD5 3eec9f3fe48b51f49dbc1f171a3b026f metadata.xml 157
 MD5 d05f63da27634456886e7c924eaf96da files/ruby-1.6.8-fix-x86_64.patch 431
@@ -20,7 +20,7 @@ MD5 a061fe32b8e0538c203bccebcd2ad8ac files/ruby-1.6.8-20040728-20041024.diff 309
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCZPUC2G5bA0cA/ScRAu0dAJ9R4FvJ+iMR0UxNeX5UgLBkCtyveACeMCf5
-srvCHPplVbC/NucLdFbomRw=
-=RXEw
+iD8DBQFCZRJJ2G5bA0cA/ScRAlKRAJ9VWbzZy1V2lE3XdNcqRivC9xa2MwCg2UB1
+g9oltpXPXnu2xKx2XqsxQsA=
+=PA4R
 -----END PGP SIGNATURE-----
