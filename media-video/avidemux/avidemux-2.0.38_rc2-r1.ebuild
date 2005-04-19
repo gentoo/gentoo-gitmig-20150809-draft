@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.0.38_rc2-r1.ebuild,v 1.2 2005/04/18 21:36:58 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.0.38_rc2-r1.ebuild,v 1.3 2005/04/19 10:46:23 flameeyes Exp $
 
 inherit eutils flag-o-matic
 
@@ -54,6 +54,7 @@ src_unpack() {
 
 	cp ${WORKDIR}/${PVR}/m4/* ${S}/m4 || die "cp m4 failed"
 	epatch ${FILESDIR}/${P}-aclocal.patch
+	epatch ${FILESDIR}/${P}-mmx_altivec.patch
 
 	make -f Makefile.dist || die "autotools failed."
 }
