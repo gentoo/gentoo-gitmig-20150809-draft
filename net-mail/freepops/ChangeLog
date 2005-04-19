@@ -1,6 +1,13 @@
 # ChangeLog for net-mail/freepops
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/freepops/ChangeLog,v 1.10 2005/04/16 07:33:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/freepops/ChangeLog,v 1.11 2005/04/19 22:13:58 vapier Exp $
+
+*freepops-0.0.27-r1 (19 Apr 2005)
+
+  19 Apr 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/freepops-0.0.27-initd.patch, +freepops-0.0.27-r1.ebuild:
+  Make the init script run under the nobody user by default #86271 by Olivier
+  and fix the .lua permissions #89612 by MickKi.
 
 *freepops-0.0.27 (16 Apr 2005)
 
