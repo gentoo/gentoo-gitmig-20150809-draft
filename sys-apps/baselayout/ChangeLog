@@ -1,9 +1,15 @@
 # ChangeLog for sys-apps/baselayout
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.230 2005/04/15 16:13:25 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.231 2005/04/19 16:15:25 uberlord Exp $
 
 # See the gentoo-src rc-scripts ChangeLog for up-to-date release information:
 # http://www.gentoo.org/cgi-bin/viewcvs.cgi/rc-scripts/ChangeLog?rev=HEAD&cvsroot=gentoo-src&content-type=text/vnd.viewcvs-markup
+
+*baselayout-1.12.0_alpha2 (19 Apr 2005)
+
+  19 Apr 2005; Roy Marples <uberlord@gentoo.org>
+  +baselayout-1.12.0_alpha2.ebuild:
+  version bump for testing highly experimental network code 
 
   15 Apr 2005; Chris Gianelloni <wolf31o2@gentoo.org>
   -files/rc-scripts-1.4.16-livecd.patch, baselayout-1.9.4-r6.ebuild,
