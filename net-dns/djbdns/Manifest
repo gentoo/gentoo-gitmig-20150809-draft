@@ -11,7 +11,7 @@ MD5 29c572d1f122fae02fb13992247e67db djbdns-1.05-r13.ebuild 4798
 MD5 2438f5b001fb08758e57ea432651b4b7 djbdns-1.05-r10.ebuild 2845
 MD5 66d96edc8899d7806cb68f2f3c20981b ChangeLog 10570
 MD5 41587a443cb11b372cf923bd90596784 djbdns-1.05-r7.ebuild 1976
-MD5 2c3158204cfb4b9c36b8bc78e8421b16 metadata.xml 223
+MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
 MD5 188096855028696985f1b9d839d1643f files/1.05-errno.patch 238
 MD5 444830203a792b4a295ca8fee554b8d3 files/djbdns-1.05-ipv6arpa+BSDok-gentoo.diff 4127
 MD5 dfd675b2775efcbb604413a84db8bf1a files/dnsroots.patch 349
@@ -32,7 +32,7 @@ MD5 625d040d68fa3f87d67688c0e15eb2f4 files/headtail.patch 1781
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCXVSLEZCkKN40op4RAhMTAKC3p9QG9GEdnn4f/BC2T83AGqx53wCgncft
-opIiUvwZI8898eeIsoG1pmI=
-=Obnh
+iD8DBQFCZX59V3J2n04EauwRAqOUAJ99GnjTgYTugRPK284vnl6o4hL7QQCgg2gK
+gDytcGRjB9XGEF97l401BhA=
+=DzUx
 -----END PGP SIGNATURE-----
