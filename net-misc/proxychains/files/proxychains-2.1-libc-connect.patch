@@ -1,16 +1,12 @@
+This is an ugly hax, but it's what upstream does, so i don't really care
+to try and 'fix' it.
+
 --- proxychains-2.1/proxychains/core.h
 +++ proxychains-2.1/proxychains/core.h
-@@ -65,11 +65,9 @@
- 
- int proxychains_write_log(char *str,...);
- 
--#ifndef __linux__
--#define __libc_connect _connect
--#endif
-+#include <sys/socket.h>
-+#define __libc_connect connect
- 
--extern int __libc_connect (int sock, const struct sockaddr *addr, unsigned int len);
- 
- 
+@@ -68,4 +68,6 @@
+ #ifndef __linux__
+ #define __libc_connect _connect
++#else
++#define __libc_connect __connect
  #endif
+ 
