@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netperf/netperf-2.4.0_rc3.ebuild,v 1.1 2005/04/19 21:24:46 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netperf/netperf-2.4.0_rc3.ebuild,v 1.2 2005/04/19 21:53:37 agriffis Exp $
 
 inherit flag-o-matic
 
@@ -18,12 +18,12 @@ LICENSE="netperf"
 SLOT="0"
 KEYWORDS="~x86 ~sparc ~ia64 ~alpha ~amd64 ~ppc64 ~ppc ~ppc-macos"
 
-IUSE="ipv6"
+IUSE=""
 
-DEPEND="virtual/libc >=sys-apps/sed-4"
+DEPEND="virtual/libc"
 
 src_compile() {
-	econf $(use_enable ipv6) || die
+	econf || die
 	emake || die
 }
 
