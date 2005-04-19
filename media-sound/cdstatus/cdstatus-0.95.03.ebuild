@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cdstatus/cdstatus-0.95.03.ebuild,v 1.1 2005/04/18 20:37:36 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cdstatus/cdstatus-0.95.03.ebuild,v 1.2 2005/04/19 19:40:00 luckyduck Exp $
 
 inherit eutils
 
@@ -17,7 +17,12 @@ IUSE=""
 DEPEND="virtual/libc"
 
 src_install() {
-	dobin cdstatus
-	fperms 755 /usr/bin/cdstatus
-	dodoc AUTHORS README NEWS TODO
+	make DESTDIR=${D} install || die "make install failed"
+}
+
+pkg_postinst() {
+	einfo ""
+	einfo "Copy cdstatus.cfg from /usr/share/cdstatus.cfg"
+	einfo "to your home directory and edit as needed."
+	einfo ""
 }
