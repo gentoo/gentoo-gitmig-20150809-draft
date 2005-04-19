@@ -6,16 +6,12 @@ MD5 922c5025744b20389f1308adfee401e7 vlc-0.6.2-r1.ebuild 6503
 MD5 6bc089e06f042607bd4bb5cabe7dc72e vlc-0.6.2.ebuild 5551
 MD5 7300a7b361fa9f48e37722c6952bd432 metadata.xml 158
 MD5 09c124e45049f615519ded3278a97376 files/0.6.2-mozilla-fix.patch 1261
-MD5 80aeaf3595979e8e16dd382c50dfd275 files/buildorder.patch 590
 MD5 d766f772e3e3be4f8d6cbf4d54bf2700 files/digest-vlc-0.6.2 63
 MD5 ed198b2a917f7be36174f7b05dcad8a3 files/digest-vlc-0.7.2 63
 MD5 77f4e9cceacd8059c3e1c8322a14c30a files/digest-vlc-0.8.1 63
 MD5 77f4e9cceacd8059c3e1c8322a14c30a files/digest-vlc-0.8.1-r1 63
 MD5 c5c0f3cdd6b2afd05a3090dfc55074e0 files/glide.patch 744
-MD5 20de936c17c2ab1c4767bcbce0d2e972 files/live-gcc3-3.patch 828
-MD5 5cf5ab60ab2619db091501d7acc50284 files/mozplugin.patch 5995
 MD5 0ee383795d543048e4d47eb58f6d36bb files/mpeg2dec-20030612-configure.in-fpic.patch 1065
-MD5 310366968813598e8b0cae64b5dbd19a files/vlc-0.7.2-live.patch 1287
 MD5 40bcf94b78e4cb16470b8dd2673adb06 files/vlc-0.8.1-time.patch 403
 MD5 0cb865191c6e2dfa7fd777e911044327 files/vlc.desktop 214
 MD5 cc5d4fb953ad7bd0ee3e14076811a1d4 files/digest-vlc-0.6.2-r1 202
