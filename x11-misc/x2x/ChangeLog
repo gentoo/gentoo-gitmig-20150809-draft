@@ -1,6 +1,13 @@
 # ChangeLog for x11-misc/x2x
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/x2x/ChangeLog,v 1.10 2004/06/24 22:36:58 agriffis Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/x2x/ChangeLog,v 1.11 2005/04/19 19:30:08 agriffis Exp $
+
+*x2x-1.27-r1 (19 Apr 2005)
+
+  19 Apr 2005; Aron Griffis <agriffis@gentoo.org> -files/x2x-1.27.diff.gz,
+  x2x-1.27.ebuild, +x2x-1.27-r1.ebuild:
+  Add Debian patches for -north/-south #57301. Move license patch to distfiles
+  and clean up ebuilds
 
   01 Jun 2004; Brandon Hale <tseng@gentoo.org> x2x-1.27.ebuild:
   Ebuild QA fixes.
