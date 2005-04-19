@@ -1,6 +1,9 @@
 # ChangeLog for dev-games/simgear
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/simgear/ChangeLog,v 1.16 2005/02/05 20:05:12 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/simgear/ChangeLog,v 1.17 2005/04/19 13:24:18 seemant Exp $
+
+  19 Apr 2005; Seemant Kulleen <seemant@gentoo.org> simgear-0.3.8.ebuild:
+  stable on x86
 
   05 Feb 2005; Chris Gianelloni <wolf31o2@gentoo.org> simgear-0.3.6.ebuild,
   simgear-0.3.8.ebuild:
