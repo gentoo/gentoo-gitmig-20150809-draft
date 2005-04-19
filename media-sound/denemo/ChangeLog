@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/denemo
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/denemo/ChangeLog,v 1.10 2004/09/14 07:35:27 eradicator Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/denemo/ChangeLog,v 1.11 2005/04/19 08:11:04 kloeri Exp $
+
+  19 Apr 2005; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
+  Remove retired developer from metadata.xml.
 
   14 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org> denemo-0.7.2.ebuild:
   Stable amd64, sparc.

@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/gtick
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gtick/ChangeLog,v 1.15 2004/12/18 13:35:05 chainsaw Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gtick/ChangeLog,v 1.16 2005/04/19 08:12:46 kloeri Exp $
+
+  19 Apr 2005; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
+  Remove retired developer from metadata.xml.
 
 *gtick-0.3.4 (18 Dec 2004)
 

@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/tapiir
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/tapiir/ChangeLog,v 1.13 2004/12/19 07:42:49 eradicator Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/tapiir/ChangeLog,v 1.14 2005/04/19 08:15:35 kloeri Exp $
+
+  19 Apr 2005; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
+  Remove retired developer from metadata.xml.
 
   18 Dec 2004; Jeremy Huddleston <eradicator@gentoo.org>
   tapiir-0.7.1.ebuild:
