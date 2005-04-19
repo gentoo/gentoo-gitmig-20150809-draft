@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/MP3-Info
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MP3-Info/ChangeLog,v 1.19 2004/12/20 11:20:40 nigoro Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MP3-Info/ChangeLog,v 1.20 2005/04/19 12:48:48 mcummings Exp $
+
+*MP3-Info-1.13 (19 Apr 2005)
+
+  19 Apr 2005; Michael Cummings <mcummings@gentoo.org> +MP3-Info-1.13.ebuild:
+  Version bump; New dep in bug 74394 for mplay
 
   20 Dec 2004; Yuta SATOH <nigoro@gentoo.org> MP3-Info-1.02-r1.ebuild:
   added ~ppc64
