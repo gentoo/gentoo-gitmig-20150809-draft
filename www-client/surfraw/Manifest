@@ -1,3 +1,6 @@
 MD5 eb652b61aaebddc598fb5fe81d66c529 surfraw-1.0.7.ebuild 1312
-MD5 be054ff4d283c84ee53ec8151b30ddc8 ChangeLog 899
+MD5 9742ffc6f3c47b70988db0009d5f7c84 ChangeLog 1155
+MD5 9160481967640bdac45691b98a05360c metadata.xml 406
+MD5 fd938a4533958066e79ed28c3b6abf07 surfraw-2.0.2.1.ebuild 2092
 MD5 0c4863c95791bde92743f7f48a1eaef8 files/digest-surfraw-1.0.7 64
+MD5 103c230476d60dd69e251265cb307a1e files/digest-surfraw-2.0.2.1 148
