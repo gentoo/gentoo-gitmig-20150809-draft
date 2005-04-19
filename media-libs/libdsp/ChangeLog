@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libdsp
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdsp/ChangeLog,v 1.5 2005/01/09 11:11:15 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdsp/ChangeLog,v 1.6 2005/04/19 08:32:13 kloeri Exp $
+
+  19 Apr 2005; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
+  Remove retired developer from metadata.xml.
 
   09 Jan 2005; Sven Wegener <swegener@gentoo.org> libdsp-4.9.2-r1.ebuild,
   libdsp-4.9.2.ebuild:

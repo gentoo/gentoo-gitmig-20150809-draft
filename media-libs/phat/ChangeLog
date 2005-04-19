@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/phat
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/phat/ChangeLog,v 1.4 2004/12/19 05:16:40 eradicator Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/phat/ChangeLog,v 1.5 2005/04/19 08:36:33 kloeri Exp $
+
+  19 Apr 2005; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
+  Remove retired developer from metadata.xml.
 
   18 Dec 2004; Jeremy Huddleston <eradicator@gentoo.org> phat-0.2.3.ebuild:
   Stable amd64, sparc, x86.
