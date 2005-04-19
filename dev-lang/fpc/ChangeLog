@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/fpc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc/ChangeLog,v 1.15 2005/03/31 01:55:54 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc/ChangeLog,v 1.16 2005/04/19 10:30:18 beu Exp $
+
+  19 Apr 2005; Elfyn McBratney <beu@gentoo.org> metadata.xml:
+  Remove retired developer from metadata.xml.
 
   31 Mar 2005; Chris White <chriswhite@gentoo.org> fpc-2.0.0_rc2.ebuild:
   Wasn't supposed to be stable marked when imported.

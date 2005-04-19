@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/fpc-source
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc-source/ChangeLog,v 1.5 2005/04/01 18:51:38 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc-source/ChangeLog,v 1.6 2005/04/19 10:28:46 beu Exp $
+
+  19 Apr 2005; Elfyn McBratney <beu@gentoo.org> metadata.xml:
+  Remove retired developer from metadata.xml.
 
 *fpc-source-2.0.0_rc2 (02 Apr 2005)
 
