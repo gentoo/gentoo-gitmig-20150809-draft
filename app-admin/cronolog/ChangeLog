@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/cronolog
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/cronolog/ChangeLog,v 1.12 2005/01/02 14:02:55 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/cronolog/ChangeLog,v 1.13 2005/04/19 10:10:51 beu Exp $
+
+  19 Apr 2005; Elfyn McBratney <beu@gentoo.org> metadata.xml:
+  Remove retired developer from metadata.xml.
 
   02 Jan 2005; Daniel Ahlberg <aliz@gentoo.org> cronolog-1.6.2-r1.ebuild:
   Removed apache dependency, closing #75925, and did some cleanup.

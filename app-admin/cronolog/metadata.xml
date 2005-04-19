@@ -2,9 +2,4 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>no-herd</herd>
-<maintainer>
-  <email>chriswhite@gentoo.org</email>
-  <name>Chris White</name>
-  <description>Metadata.xml Placeholder unless someone wants this...</description>
-</maintainer>
 </pkgmetadata>
