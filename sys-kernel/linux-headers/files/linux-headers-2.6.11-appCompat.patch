@@ -2232,6 +2232,45 @@ diff -urp linux-2.6.10/include/linux/if_fddi.h linux-2.6.10-gentoo/include/linux
  /*
   *  Define max and min legal sizes.  The frame sizes do not include
   *  4 byte FCS/CRC (frame check sequence).
+diff -urp linux-2.6.11/include/linux/keyboard.h linux-2.6.11-gentoo/include/linux/keyboard.h
+--- linux-2.6.11/include/linux/keyboard.h	2004-11-20 16:54:35.000000000 +0000
++++ linux-2.6.11-gentoo/include/linux/keyboard.h	2005-02-12 19:19:51.244852928 +0000
+@@ -1,6 +1,16 @@
+ #ifndef __LINUX_KEYBOARD_H
+ #define __LINUX_KEYBOARD_H
+ 
++#ifndef __le64
++#ifdef _LINUX_TYPES_H
++#undef _LINUX_TYPES_H
++#warning Gentoo Linux Headers Warning: GNU Libc Linux Headers Override Detected.
++#warning Gentoo Linux Headers Warning: This is bad. Removing override and continuing.
++#warning Gentoo Linux Headers Warning: If your compilation dies here, mention this when
++#warning Gentoo Linux Headers Warning: filing a bug!
++#include <linux/types.h>
++#endif
++#endif
+ #include <linux/wait.h>
+ 
+ #define KG_SHIFT	0
+diff -urp linux-2.6.11/include/asm-parisc/thread_info.h linux-2.6.11-gentoo/include/asm-parisc/thread_info.h
+--- linux-2.6.11/include/asm-parisc/thread_info.h	2004-11-20 16:54:35.000000000 +0000
++++ linux-2.6.11-gentoo/include/asm-parisc/thread_info.h	2005-02-12 19:19:51.244852928 +0000
+@@ -1,8 +1,6 @@
+ #ifndef _ASM_PARISC_THREAD_INFO_H
+ #define _ASM_PARISC_THREAD_INFO_H
+ 
+-#ifdef __KERNEL__
+-
+ #ifndef __ASSEMBLY__
+ #include <asm/processor.h>
+ 
+@@ -75,6 +73,4 @@
+ #define _TIF_USER_WORK_MASK     (_TIF_NOTIFY_RESUME | _TIF_SIGPENDING | \
+                                  _TIF_NEED_RESCHED)
+ 
+-#endif /* __KERNEL__ */
+-
+ #endif /* _ASM_PARISC_THREAD_INFO_H */
 --- linux-2.6.10/include/asm-sparc/processor.h	2004-12-11 15:49:24.522603912 -0800
 +++ linux-2.6.10-gentoo/include/asm-sparc/processor.h	2004-12-11 15:49:18.865463928 -0800
 @@ -44,11 +44,13 @@
@@ -2338,8 +2377,8 @@ diff -urp linux-2.6.10/include/linux/if_ppp.h linux-2.6.10-gentoo/include/linux/
  /* Constants used for fbio SunOS compatibility */
  /* (C) 1996 Miguel de Icaza */
  
---- linux-2.6.10/include/linux/byteorder/little_endian.h.orig	2005-03-07 01:19:49.000000000 +0100
-+++ linux-2.6.10/include/linux/byteorder/little_endian.h	2005-03-07 01:20:22.000000000 +0100
+--- linux-2.6.11/include/linux/byteorder/little_endian.h.84353	2005-03-07 01:19:49.000000000 +0100
++++ linux-2.6.11-gentoo/include/linux/byteorder/little_endian.h	2005-03-07 01:20:22.000000000 +0100
 @@ -40,6 +40,7 @@
  #define __cpu_to_be16(x) ((__force __be16)__swab16((x)))
  #define __be16_to_cpu(x) __swab16((__force __u16)(__be16)(x))

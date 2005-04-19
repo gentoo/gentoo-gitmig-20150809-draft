@@ -1,4 +1,4 @@
-MD5 d9e87ea8545e08ce50154c79196be47e ChangeLog 24953
+MD5 24c2104f56338cde6d2dec631d302c40 ChangeLog 25060
 MD5 b3099588e509bea5bf8c12f2b3882f58 linux-headers-2.2.26.ebuild 2509
 MD5 c2c4eec01b604c30d0826e73ac02cac4 linux-headers-2.4.23.ebuild 3482
 MD5 e9a0370039c1d4fe1b0f7c0be1eef478 linux-headers-2.6.11.ebuild 1522
@@ -18,7 +18,7 @@ MD5 2574d3f1b776f2df365737f456bfe435 files/digest-linux-headers-2.4.26-r1 67
 MD5 8a065c0dc3b8fac8747de35f1af75a2c files/linux-headers-2.6.0-fb.patch 386
 MD5 df6b4c19f4a4cb2b3d3a2a0107d7853d files/digest-linux-headers-2.4.25 67
 MD5 545a151ce959e51f4e528e3c27cb5a65 files/digest-linux-headers-2.4.23_p3 131
-MD5 f8840ddd764c72ccd658cc168a621ca5 files/linux-headers-2.6.11-appCompat.patch 73301
+MD5 f2325e7a77a6c1e7bdbef48ea85be4ee files/linux-headers-2.6.11-appCompat.patch 74767
 MD5 fb33a0ba21375f190137b9f478ad9799 files/digest-linux-headers-2.6.8.1-r4 146
 MD5 45ff5cde07cfe93ecbb514226def606f files/generate-asm-sparc 1661
 MD5 556c7008fbfdf81750bbd4ab2beb111e files/digest-linux-headers-2.2.26 67
