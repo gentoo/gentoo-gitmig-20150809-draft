@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/whois
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/whois/ChangeLog,v 1.43 2004/12/29 20:16:50 ciaranm Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/whois/ChangeLog,v 1.44 2005/04/19 00:04:33 vapier Exp $
+
+*whois-4.7.2 (19 Apr 2005)
+
+  19 Apr 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/whois-4.7.2-config-file.patch,
+  +files/whois-4.7.2-gentoo-security.patch, +whois-4.7.2.ebuild:
+  Version bump #73845 by Daniel Webert and add /etc/whois.conf support #89417
+  by Wakko Warner.
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
