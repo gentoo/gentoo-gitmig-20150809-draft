@@ -1,4 +1,6 @@
-MD5 4c6b7a03646ae18b185bc3414ca42481 ChangeLog 595
 MD5 936d12575815af35994ac30aecefdabf ccd2iso-0.1.ebuild 607
+MD5 9d111d0e9f418827dd01ab0d4e4b4884 ChangeLog 715
 MD5 0524a6dd3bbef425769cea01bad9ebd5 metadata.xml 301
+MD5 1f9c7af3bdaf81847fa4c87dfd0b13cb ccd2iso-0.2.ebuild 603
 MD5 49059d8ec3e9b7da09015859d86fddae files/digest-ccd2iso-0.1 59
+MD5 49059d8ec3e9b7da09015859d86fddae files/digest-ccd2iso-0.2 59
