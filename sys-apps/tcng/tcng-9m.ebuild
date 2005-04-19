@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/tcng/tcng-9m.ebuild,v 1.1 2005/02/13 04:56:13 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/tcng/tcng-9m.ebuild,v 1.2 2005/04/19 05:43:56 robbat2 Exp $
 
 inherit eutils
 
@@ -19,7 +19,7 @@ IUSE="debug doc tcsim"
 DEPEND_COMMON="dev-lang/perl
 				sys-apps/iproute2
 				net-dialup/linux-atm
-				tcsim? ( !=sys-kernel/linux-headers-2.6* !sys-kernel/linux26-headers )
+				tcsim? ( !=sys-kernel/linux-headers-2.6* )
 				virtual/os-headers
 				sys-devel/gcc
 				sys-devel/binutils"

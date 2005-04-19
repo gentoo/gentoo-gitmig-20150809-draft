@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/tcng
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/tcng/ChangeLog,v 1.10 2005/02/13 04:56:13 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/tcng/ChangeLog,v 1.11 2005/04/19 05:43:56 robbat2 Exp $
+
+  18 Apr 2005; Robin H. Johnson <robbat2@gentoo.org> tcng-9m.ebuild:
+  Bug #89550 - cleanup linux26-headers DEPEND.
 
 *tcng-9m (12 Feb 2005)
 

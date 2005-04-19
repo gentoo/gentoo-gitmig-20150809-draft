@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/readahead-list/readahead-list-0.20050328.0142.ebuild,v 1.1 2005/03/28 10:01:11 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/readahead-list/readahead-list-0.20050328.0142.ebuild,v 1.2 2005/04/19 05:44:54 robbat2 Exp $
 
 DESCRIPTION="Preloads files into the page cache to accelerate program loading."
 
@@ -18,7 +18,7 @@ RDEPEND="virtual/libc"
 # they don't compile properly!
 DEPEND="${RDEPEND}
 		virtual/os-headers
-		!=sys-kernel/linux26-headers-2.6.8.1*"
+		!=sys-kernel/linux-headers-2.6.8.1*"
 
 src_compile() {
 	econf --sbindir=/sbin || die "econf failed"
