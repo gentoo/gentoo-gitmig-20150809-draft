@@ -1,10 +1,20 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 57afce94c1d84710e61d6a9851870c5d ChangeLog 1961
+MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 3f2f1b69ece91584cd26b3128a31fa01 gtick-0.2.13.ebuild 555
 MD5 3736cb13b712a3fb10eaebe1b932fc15 gtick-0.3.0.ebuild 623
-MD5 7489e64725b50c55c9dd6f77d253fe66 gtick-0.2.4.ebuild 659
 MD5 e4410acb51234b1a635270d769ff439f gtick-0.3.4.ebuild 623
-MD5 cf7f7b01f99d1386f000531dd55f94a3 ChangeLog 1849
-MD5 3be4f6e757e3057184136a002b0165f9 metadata.xml 221
+MD5 7489e64725b50c55c9dd6f77d253fe66 gtick-0.2.4.ebuild 659
 MD5 963ec566bcc173d8386ef3f1d7ade6e4 files/digest-gtick-0.2.4 63
-MD5 a0b3ffc484fedb3547eabe3ca9c8cc1b files/digest-gtick-0.3.0 64
 MD5 e3a5325eb7038c07fb9b9a784f50ecba files/digest-gtick-0.3.4 64
+MD5 a0b3ffc484fedb3547eabe3ca9c8cc1b files/digest-gtick-0.3.0 64
 MD5 ef0dad6558842cb8241917c7d78f655c files/digest-gtick-0.2.13 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCZL2MKf2g/qXtneoRAnP4AJ9C3Ps8/7md/XdzWwLR47XH1KK3AgCdFTcH
+1eIPlUNsDWa4DXi/3vq6NJU=
+=hykw
+-----END PGP SIGNATURE-----
