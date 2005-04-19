@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/PDF-Create
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDF-Create/ChangeLog,v 1.8 2004/12/30 00:15:14 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDF-Create/ChangeLog,v 1.9 2005/04/19 10:38:59 mcummings Exp $
+
+  19 Apr 2005; Michael Cummings <mcummings@gentoo.org> PDF-Create-0.01.ebuild:
+  Fixed SRC for mirror, HOMEPAGE for new cpan format - bug 89605
 
   30 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
