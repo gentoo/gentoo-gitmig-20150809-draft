@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/gdesklets-core-0.34.3.ebuild,v 1.2 2005/04/19 03:46:10 nixphoeni Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/gdesklets-core-0.34.3.ebuild,v 1.3 2005/04/19 16:45:03 mr_bones_ Exp $
 
 inherit gnome2 eutils
 
@@ -37,36 +37,36 @@ USE_DESTDIR="1"
 DOCS="AUTHORS ChangeLog NEWS README TODO"
 
 src_unpack() {
-	
+
 	unpack ${A}
-	
+
 	# Fix up for Daylight Savings Time
 	cd ${S} && \
 		epatch ${FILESDIR}/dst-fix-0.34.3.patch
-	
+
 }
 
 src_install() {
-	
+
 	gnome2_src_install
-	
+
 	# Install the gdesklets-control-getid script
 	insinto /usr/lib/gdesklets
 	insopts -m0555
 	doins ${FILESDIR}/gdesklets-control-getid
-	
+
 	# Create a global directory for Displays
 	dodir /usr/$(get_libdir)/gdesklets/Displays
-	
+
 	# Install the Developer's book documentation
 	use doc && dohtml -r ${WORKDIR}/develbook/*
-	
+
 }
 
 pkg_postinst() {
-	
+
 	gnome2_pkg_postinst
-	
+
 	echo ""
 	einfo "gDesklets Displays are required before the library"
 	einfo "will be usable. The displays are found in - "
@@ -78,10 +78,10 @@ pkg_postinst() {
 	einfo "If you're using GNOME this can be done conveniently"
 	einfo "through Applications->Accessories->gDesklets"
 	echo ""
-	
+
 	# This stuff is important, especially the migration-tool
 	# information which flies by on an update.
 	epause 9
-	
+
 }
 
