@@ -1,11 +1,21 @@
-MD5 466bb2095ec91219cdf1c7d3532d2b46 ChangeLog 2561
-MD5 f5f1522837a3398846f77d381fda47ec metadata.xml 226
-MD5 bf8a7f0e5e929d85b7fa01a8f238669c roundup-0.5.6.ebuild 824
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 7882ddc445679873a20d08618dcb6add roundup-0.5.8.ebuild 832
-MD5 8a3bb76eab5c10abc93a09ac680e3088 roundup-0.6.4.ebuild 894
+MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
+MD5 e021919c5563d83c39c7e9a8f04db462 ChangeLog 2663
 MD5 d8baf61e61807162d25d03acebd913c6 roundup-0.7.6.ebuild 1372
-MD5 7d5f9adaaa2f73b32c8dc22108358ba9 files/digest-roundup-0.5.6 65
-MD5 25f3fa02512e6a3ba8561a8798073815 files/digest-roundup-0.5.8 65
+MD5 bf8a7f0e5e929d85b7fa01a8f238669c roundup-0.5.6.ebuild 824
+MD5 8a3bb76eab5c10abc93a09ac680e3088 roundup-0.6.4.ebuild 894
+MD5 591f15a67d110b417b2e7acb5d3c96aa files/roundup 1132
 MD5 4d7d00a2645573f2152a0a255fd9d1e1 files/digest-roundup-0.6.4 65
 MD5 36b397bc661ee56ad092acfd8c59df02 files/digest-roundup-0.7.6 65
-MD5 591f15a67d110b417b2e7acb5d3c96aa files/roundup 1132
+MD5 25f3fa02512e6a3ba8561a8798073815 files/digest-roundup-0.5.8 65
+MD5 7d5f9adaaa2f73b32c8dc22108358ba9 files/digest-roundup-0.5.6 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCZN7MjUHll2nfF60RAnM9AKCnB7Ou12No5zRUICscMv5wjUKESwCcDZZL
+D4W/696tu9XvgzYStn2OKhQ=
+=HXm8
+-----END PGP SIGNATURE-----
