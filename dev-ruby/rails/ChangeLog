@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rails
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rails/ChangeLog,v 1.16 2005/04/19 06:49:47 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rails/ChangeLog,v 1.17 2005/04/19 13:20:06 caleb Exp $
+
+  19 Apr 2005; Caleb Tennis <caleb@gentoo.org> rails-0.12.0.ebuild:
+  This version of rails seems to require rake 0.5.3
 
   19 Apr 2005; Rob Cakebread <pythonhead@gentoo.org> rails-0.12.0.ebuild:
   Removed obsolete postinst_info

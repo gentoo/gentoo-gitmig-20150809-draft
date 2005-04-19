@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rails/rails-0.12.0.ebuild,v 1.2 2005/04/19 06:49:47 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rails/rails-0.12.0.ebuild,v 1.3 2005/04/19 13:20:06 caleb Exp $
 
 inherit ruby gems
 
@@ -17,7 +17,7 @@ KEYWORDS="~x86"
 
 IUSE="mysql sqlite postgres fastcgi"
 DEPEND="=dev-lang/ruby-1.8*
-	>=dev-ruby/rake-0.4.15-r1
+	>=dev-ruby/rake-0.5.3
 	>=dev-ruby/activerecord-1.10.0
 	>=dev-ruby/actionmailer-0.9.0
 	>=dev-ruby/actionwebservice-0.7.0
