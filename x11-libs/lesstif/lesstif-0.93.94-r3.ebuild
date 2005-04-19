@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/lesstif/lesstif-0.93.94-r3.ebuild,v 1.4 2005/03/25 07:27:14 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/lesstif/lesstif-0.93.94-r3.ebuild,v 1.5 2005/04/19 11:23:48 lanius Exp $
 
 # disable sandbox, needed for motif-config
 SANDBOX_DISABLED="1"
@@ -98,14 +98,14 @@ src_install() {
 }
 
 # Profile stuff
-pkg_setup() {
-	if has_version =x11-libs/lesstif-0.93.94*; then touch /tmp/lesstif-1.2; fi
-}
+#pkg_setup() {
+#	if has_version =x11-libs/lesstif-0.93.94*; then touch /tmp/lesstif-1.2; fi
+#}
 
 pkg_postinst() {
 	motif-config --install lesstif-1.2
 }
 
-pkg_prerm() {
-	[ -f /tmp/lesstif-1.2 ] && rm -f /tmp/lesstif-1.2 || motif-config --uninstall lesstif-1.2
-}
+#pkg_prerm() {
+#	[ -f /tmp/lesstif-1.2 ] && rm -f /tmp/lesstif-1.2 || motif-config --uninstall lesstif-1.2
+#}
