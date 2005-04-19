@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/cvs
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs/ChangeLog,v 1.76 2005/04/19 17:49:53 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs/ChangeLog,v 1.77 2005/04/19 23:20:12 pylon Exp $
+
+*cvs-1.12.12 (19 Apr 2005)
+*cvs-1.11.20 (19 Apr 2005)
+
+  19 Apr 2005; Lars Weiler <pylon@gentoo.org> metadata.xml,
+  +cvs-1.11.20.ebuild, +cvs-1.12.12.ebuild:
+  Version bump due to security release.  Bug #89579.
 
   19 Apr 2005; Bryan Østergaard <kloeri@gentoo.org> cvs-1.11.18-r1.ebuild:
   Stable on ia64, bug 86476.
