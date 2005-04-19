@@ -1,6 +1,16 @@
-MD5 a2ebf2e6fe0bc6dafc0f4422e77084f9 ChangeLog 1618
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 6e269830aa6675d07249e2dbd385a9e0 monotone-0.17.ebuild 1754
 MD5 6d796b061ed1c1337ef157a5f74dab35 metadata.xml 403
-MD5 dde934a3d504967d4678c4302ddd971e monotone-0.16.ebuild 1233
-MD5 ba0a6d3954ba0881c0d88e3592aa9b7a monotone-0.17.ebuild 1750
+MD5 34050d65dd32fa7d5d90f8bdb7257df1 ChangeLog 1844
+MD5 dc5686ff5a40dfaf23bd7e7e2ae96073 monotone-0.16.ebuild 1236
 MD5 f7dab86750bae0e4ff09e2139b790084 files/digest-monotone-0.16 66
 MD5 c8834d71dc37833961a7eb7b4a455e84 files/digest-monotone-0.17 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCZXj0mdTrptrqvGERAlHpAJ0YzUFcv23Uv4xxKmYdtQa4x0AZ+ACfR5Xb
+beX3tyvDsQzCmTaQq39+OaA=
+=QEqn
+-----END PGP SIGNATURE-----

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monotone/monotone-0.17.ebuild,v 1.4 2005/04/12 11:12:35 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monotone/monotone-0.17.ebuild,v 1.5 2005/04/19 21:32:29 dragonheart Exp $
 
 inherit eutils flag-o-matic
 
@@ -18,7 +18,7 @@ IUSE="nls doc"
 RDEPEND=">=dev-libs/boost-1.31.0
 	dev-libs/popt"
 DEPEND="${RDEPEND}
-	>=sys-devel/gcc-3.3.3
+	>=sys-devel/gcc-3.2
 	sys-devel/gettext"
 #	doc? ( dev-lang/perl sys-apps/texinfo )"
 
