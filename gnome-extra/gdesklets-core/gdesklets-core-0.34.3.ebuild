@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/gdesklets-core-0.34.3.ebuild,v 1.1 2005/04/19 03:05:31 nixphoeni Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/gdesklets-core-0.34.3.ebuild,v 1.2 2005/04/19 03:46:10 nixphoeni Exp $
 
 inherit gnome2 eutils
 
@@ -77,10 +77,6 @@ pkg_postinst() {
 	einfo "           /usr/bin/gdesklets start"
 	einfo "If you're using GNOME this can be done conveniently"
 	einfo "through Applications->Accessories->gDesklets"
-	echo ""
-	ewarn "If you are migrating from a version of gDesklets"
-	ewarn "less than 0.32, please convert your settings with - "
-	ewarn "         /usr/bin/gdesklets-migration-tool "
 	echo ""
 	
 	# This stuff is important, especially the migration-tool
