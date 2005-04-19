@@ -1,0 +1,8 @@
+# ChangeLog for net-misc/clockspeed-conf
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/clockspeed-conf/ChangeLog,v 1.1 2005/04/19 22:22:54 vapier Exp $
+
+*clockspeed-conf (19 Apr 2005)
+
+  19 Apr 2005; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by Thilo Bangert #89344.
