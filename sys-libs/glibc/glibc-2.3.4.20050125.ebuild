@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20050125.ebuild,v 1.35 2005/04/03 21:31:20 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20050125.ebuild,v 1.36 2005/04/19 01:04:48 vapier Exp $
 
 KEYWORDS="~amd64 ~mips ~sparc ~x86 -ppc"
 
@@ -952,8 +952,7 @@ RESTRICT="nostrip multilib-pkg-force"
 #
 # The gcc-config dep is for the cross-compile multilib stuff
 DEPEND=">=sys-devel/gcc-3.2.3-r1
-	nptl? ( >=sys-devel/gcc-3.3.1-r1
-	        || ( >=sys-kernel/linux-headers-2.6.5 >=sys-kernel/linux26-headers-2.6.5 ) )
+	nptl? ( >=sys-devel/gcc-3.3.1-r1 >=sys-kernel/linux-headers-2.6.5 )
 	>=sys-devel/binutils-2.14.90.0.6-r1
 	>=sys-devel/gcc-config-1.3.9
 	virtual/os-headers
