@@ -1,8 +1,8 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 7e01dea45608b2dd58545850bfe970fd ChangeLog 9004
-MD5 0726ab0e790aafd41efac2faeb6f413f xv-3.10a-r11.ebuild 2111
+MD5 ae2f3128ffb336d175f6691519a8b2b5 ChangeLog 9108
+MD5 fc9929bce8b8355907b77bc26cca18b0 xv-3.10a-r11.ebuild 2117
 MD5 8fc22f08ecb2e292e60ce7553c58d0c2 metadata.xml 222
 MD5 fbe8dc0be0ab018633f1e153b56c1662 xv-3.10a-r8.ebuild 2347
 MD5 d3caaf1691b52006d2295f1443fe691b xv-3.10a-r9.ebuild 2529
@@ -26,7 +26,7 @@ MD5 123bdb40134767bb438eeaccb50f1646 files/xv-3.10a-security.diff 4079
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCZCjlKf2g/qXtneoRApBrAKCJzcGCf6oJI1Rn0DHyoJmqgS9sJQCgwE5T
-9Ac5k6KDX6NwOn4jUNtFFp0=
-=6Moq
+iD8DBQFCZE3CKf2g/qXtneoRApZEAKC4B5QSWzSwyxn9zBOGM/6MZzp1rACdGDA1
+oICwceIeuDlhmfowxlKh/7Y=
+=v1tN
 -----END PGP SIGNATURE-----
