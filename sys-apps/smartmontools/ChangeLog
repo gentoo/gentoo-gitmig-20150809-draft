@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/smartmontools
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/smartmontools/ChangeLog,v 1.41 2005/04/06 16:38:23 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/smartmontools/ChangeLog,v 1.42 2005/04/19 20:17:30 plasmaroo Exp $
+
+  19 Apr 2005; <plasmaroo@gentoo.org> smartmontools-5.33.ebuild:
+  Add ~ia64 keyword, bug #89548.
 
   06 Apr 2005; Marcus D. Hanwell <cryos@gentoo.org>
   smartmontools-5.33.ebuild:
