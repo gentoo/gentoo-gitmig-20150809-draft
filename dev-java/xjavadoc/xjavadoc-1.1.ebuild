@@ -1,13 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xjavadoc/xjavadoc-1.1.ebuild,v 1.2 2005/04/03 12:06:06 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xjavadoc/xjavadoc-1.1.ebuild,v 1.3 2005/04/19 04:37:51 axxo Exp $
 
 inherit eutils java-pkg
 
 DESCRIPTION="XDoclet is an extended Javadoc Doclet engine."
 HOMEPAGE="http://xdoclet.sf.net/"
 SRC_URI="mirror://sourceforge/xdoclet/${P}-src.zip
-	mirror://${P}-supplement.tar.bz2"
+	mirror://sourceforge/xdoclet/${P}-supplement.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"

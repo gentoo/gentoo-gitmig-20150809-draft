@@ -1,15 +1,15 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 576a2bc27de4eacc3c60d077e6e1794d ChangeLog 571
+MD5 a0d324035e9f651e35aa1287d6e8a2a2 xjavadoc-1.1.ebuild 1095
+MD5 77d67781f1c48dece540a234fa236822 ChangeLog 651
 MD5 123cf9440c1d4ac78f2caba1624765f9 metadata.xml 158
-MD5 c85e49390eff2e8b4366f2cb77088f34 xjavadoc-1.1.ebuild 1080
-MD5 7abfbf5b533b28576460b9214237b58e files/digest-xjavadoc-1.1 140
 MD5 ab072e0465aa3f0ab9c007d189415e06 files/xjavadoc-1.1-buildfile.patch 1094
+MD5 7abfbf5b533b28576460b9214237b58e files/digest-xjavadoc-1.1 140
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCT9xD06ebR+OMO78RAhbbAJ9aP3kXK/bnl81K13ZAfTPkZCvruACfaqp5
-lzkRsGdVu2Io20HqxoXUhNE=
-=6h5l
+iD8DBQFCZItA/rLF9B432nYRAgAuAJ9Uvi/S7RH9OUs35Kt3YD+2bET+rACgizLs
+EOy6E3nQ6iOLTZcOyPiTxZM=
+=1GrK
 -----END PGP SIGNATURE-----
