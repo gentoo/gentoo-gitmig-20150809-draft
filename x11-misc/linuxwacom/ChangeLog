@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/linuxwacom
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/linuxwacom/ChangeLog,v 1.25 2005/04/18 16:30:54 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/linuxwacom/ChangeLog,v 1.26 2005/04/19 17:46:29 eradicator Exp $
+
+  19 Apr 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  linuxwacom-0.6.7.ebuild:
+  Require 2.6 headers if we want to use a USB wacom device.  See bug #80992.
 
 *linuxwacom-0.6.7 (18 Apr 2005)
 

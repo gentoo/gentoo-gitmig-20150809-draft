@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/linuxwacom/linuxwacom-0.6.7.ebuild,v 1.1 2005/04/18 16:30:54 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/linuxwacom/linuxwacom-0.6.7.ebuild,v 1.2 2005/04/19 17:46:29 eradicator Exp $
 
-IUSE="gtk gtk2 tcltk sdk"
+IUSE="gtk gtk2 tcltk sdk usb"
 
 inherit eutils
 
@@ -27,6 +27,7 @@ DEPEND="${RDEPEND}
 	!x86? ( >=sys-devel/automake-1.6
 	        >=sys-devel/autoconf-2.53 )
 	dev-util/pkgconfig
+	usb? ( >=sys-kernel/linux-headers-2.6 )
 	>=sys-apps/sed-4"
 
 pkg_setup() {
