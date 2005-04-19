@@ -1,6 +1,9 @@
 # ChangeLog for media-video/acidrip
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/acidrip/ChangeLog,v 1.15 2004/11/25 20:55:50 chriswhite Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/acidrip/ChangeLog,v 1.16 2005/04/19 08:38:14 kloeri Exp $
+
+  19 Apr 2005; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
+  Remove retired developer from metadata.xml.
 
   26 Nov 2004; Chris White <chriswhite@gentoo.org> -acidrip-0.10.ebuild,
   -acidrip-0.11.ebuild, -acidrip-0.12.ebuild:
