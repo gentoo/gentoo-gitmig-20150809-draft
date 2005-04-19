@@ -1,0 +1,12 @@
+# ChangeLog for sci-chemistry/easychem
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/easychem/ChangeLog,v 1.1 2005/04/19 16:12:45 cryos Exp $
+
+*easychem-0.5 (19 Apr 2005)
+
+  19 Apr 2005; Marcus D. Hanwell <cryos@gentoo.org> +metadata.xml,
+  +easychem-0.5.ebuild:
+  Initial import. Thanks to Max Valdez <maxvalde@fis.unam.mx> and Olivier
+  Fisette <ribosome@gentoo.org> for the ebuild this is based upon. Closes bug
+  39806.
+
