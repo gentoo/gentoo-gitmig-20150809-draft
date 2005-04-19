@@ -5,7 +5,7 @@
  	if (strchr(ripeflags, ch)) {
  	    for (p = fstring; *p; p++);
 -	    sprintf(p--, "-%c ", ch);
-+	    snprintf(p--, sizeof(fstring)-1, "-%c ", ch);
++	    snprintf(p--, sizeof(fstring), "-%c ", ch);
  	    continue;
  	}
  	if (strchr(ripeflagsp, ch)) {
