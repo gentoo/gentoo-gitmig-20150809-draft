@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/hatools/hatools-1.00.ebuild,v 1.1 2005/03/15 23:52:59 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/hatools/hatools-1.00.ebuild,v 1.2 2005/04/19 17:46:02 ciaranm Exp $
 
 DESCRIPTION="hatools: High availability environment tools for shell scripting
 (halockrun and hatimerun)"
@@ -9,7 +9,7 @@ SRC_URI="http://www.fatalmind.com/software/hatools/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~sparc ~mips"
+KEYWORDS="x86 sparc mips"
 IUSE=""
 
 DEPEND=""

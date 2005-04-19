@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/hatools
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/hatools/ChangeLog,v 1.1 2005/03/15 23:52:59 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/hatools/ChangeLog,v 1.2 2005/04/19 17:46:02 ciaranm Exp $
+
+  19 Apr 2005; Ciaran McCreesh <ciaranm@gentoo.org> hatools-1.00.ebuild:
+  x86 sparc mips stable
 
 *hatools-1.00 (15 Mar 2005)
 
