@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 16150b3b28d883ff62df7c84dafe134a lsdvd-0.10.ebuild 579
+MD5 872e35054e86f65278f3eadd5b3265ed ChangeLog 1606
+MD5 7300a7b361fa9f48e37722c6952bd432 metadata.xml 158
 MD5 f4368eb4597cd2e74e1e7268f59a4bee lsdvd-0.7.ebuild 568
-MD5 d73ac9233e3aea8b4062c4edae27ee83 ChangeLog 1490
-MD5 31018765c8c65a239dba78a98c405543 metadata.xml 224
+MD5 16150b3b28d883ff62df7c84dafe134a lsdvd-0.10.ebuild 579
 MD5 7c79ba5df2a82f2097890ac88e751d7d files/digest-lsdvd-0.10 61
 MD5 a3cac3fa3a76af541f8c0c35f317fa38 files/digest-lsdvd-0.7 60
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFBhRjOMSkoRwEucGERAruUAKDIa4oSyThwKIrGvd6BMuPVaePLTwCg24yO
-mns31g8D2buceCthrxrvW1k=
-=QJRN
+iD8DBQFCZNEoKf2g/qXtneoRAj6vAJ0SU/VFocZmvvBRy+7/xRHZpH/EDwCfdpS4
+ahbua1jc850bXPPyLQzJoLU=
+=Un4w
 -----END PGP SIGNATURE-----
