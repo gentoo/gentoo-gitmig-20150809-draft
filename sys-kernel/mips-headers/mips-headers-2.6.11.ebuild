@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-headers/mips-headers-2.6.11.ebuild,v 1.3 2005/03/26 23:41:40 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-headers/mips-headers-2.6.11.ebuild,v 1.4 2005/04/19 20:27:43 kumba Exp $
 
 # Eclass bits
 ETYPE="headers"
@@ -29,8 +29,6 @@ SRC_URI="${KERNEL_URI}
 	mirror://gentoo/mips-headers-patches-${HEAPATCHVER}.tar.bz2"
 
 HOMEPAGE="http://www.linux-mips.org/ http://www.kernel.org/ http://www.gentoo.org/"
-SLOT="0"
-PROVIDE="virtual/os-headers"
 KEYWORDS="-* ~mips"
 IUSE="ip30 nptl"
 
@@ -66,7 +64,6 @@ src_unpack() {
 	unpack ${my_a}
 
 	# kernel-2 stuff
-	tc-arch-kernel
 	kernel-2_src_unpack
 }
 
