@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.130 2005/04/18 16:57:37 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.131 2005/04/19 12:09:16 herbs Exp $
+
+  19 Apr 2005; Herbie Hopkins <herbs@gentoo.org> ruby-1.8.2-r1.ebuild:
+  Correct a hard-coded lib path in the configure script to close bug #76111
+  (for real this time)
 
   18 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> ruby-1.8.2-r1.ebuild:
   Stable on ppc.
