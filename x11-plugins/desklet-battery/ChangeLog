@@ -1,6 +1,11 @@
 # ChangeLog for x11-plugins/desklet-battery
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-battery/ChangeLog,v 1.3 2004/09/02 18:22:39 pvdabeel Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-battery/ChangeLog,v 1.4 2005/04/19 03:31:33 nixphoeni Exp $
+
+*desklet-battery-0.3 (19 Apr 2005)
+
+  19 Apr 2005; Joe Sapp <nixphoeni@gentoo.org> +desklet-battery-0.3.ebuild:
+  Using the new eclass and bumping version
 
   02 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   desklet-battery-0.2.ebuild:
