@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/integrit
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/integrit/ChangeLog,v 1.10 2005/01/01 11:06:23 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/integrit/ChangeLog,v 1.11 2005/04/19 10:12:22 beu Exp $
+
+  19 Apr 2005; Elfyn McBratney <beu@gentoo.org> metadata.xml:
+  Remove retired developer from metadata.xml.
 
   31 Dec 2004; Chris White <chriswhite@gentoo.org> +metadata.xml:
   Taking over as maintainer.
