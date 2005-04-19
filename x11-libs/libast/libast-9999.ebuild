@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libast/libast-9999.ebuild,v 1.1 2005/04/18 23:52:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libast/libast-9999.ebuild,v 1.2 2005/04/19 04:44:20 vapier Exp $
 
 ECVS_MODULE="eterm/libast"
 ECVS_SERVER="cvs.sourceforge.net:/cvsroot/enlightenment"
@@ -12,7 +12,7 @@ SRC_URI=""
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~sparc ~x86 ~ppc64"
+KEYWORDS="-*"
 IUSE="imlib mmx pcre"
 
 DEPEND="virtual/x11
