@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ia64/make.defaults,v 1.2 2005/04/16 08:17:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ia64/make.defaults,v 1.3 2005/04/19 20:43:47 agriffis Exp $
 
 ARCH="ia64"
 ACCEPT_KEYWORDS="ia64"
@@ -10,3 +10,52 @@ CFLAGS="-O2 -pipe"
 CXXFLAGS="${CFLAGS}"
 
 FEATURES="sandbox sfperms"
+
+USE="
+X
+berkdb
+bitmap-fonts
+crypt
+cups
+encode
+foomaticdb
+fortran
+gdbm
+gif
+gnome
+gpm
+gtk
+gtk2
+imlib
+ipv6
+jpeg
+kde
+libg++
+libwww
+mikmod
+motif
+ncurses
+nls
+oggvorbis
+opengl
+oss
+pam
+pdflib
+perl
+png
+python
+qt
+quicktime
+readline
+sdl
+spell
+ssl
+tcpd
+truetype
+truetype-fonts
+type1-fonts
+xml2
+xmms
+xv
+zlib
+"
