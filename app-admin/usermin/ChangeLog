@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/usermin
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/ChangeLog,v 1.60 2005/04/19 17:37:16 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/ChangeLog,v 1.61 2005/04/19 20:44:16 eradicator Exp $
+
+  19 Apr 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  -usermin-1.090.ebuild, -usermin-1.100.ebuild, -usermin-1.110.ebuild,
+  -usermin-1.120.ebuild:
+  Clearing out most vulnerable versions... waiting on hppa still for 1.100.
 
   19 Apr 2005; Bryan Østergaard <kloeri@gentoo.org> usermin-1.130.ebuild:
   Stable on alpha, bug 89141.
