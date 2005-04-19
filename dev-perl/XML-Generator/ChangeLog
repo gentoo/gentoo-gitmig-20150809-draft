@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/XML-Generator
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Generator/ChangeLog,v 1.13 2005/03/04 22:58:45 astinus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Generator/ChangeLog,v 1.14 2005/04/19 17:34:00 kloeri Exp $
+
+  19 Apr 2005; Bryan Østergaard <kloeri@gentoo.org>
+  XML-Generator-0.99.ebuild:
+  Stable on alpha, bug 89141.
 
   04 Mar 2005; Alex Howells <astinus@gentoo.org> XML-Generator-0.99.ebuild:
   Keywording ~alpha
