@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/libcdio
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio/ChangeLog,v 1.27 2005/04/08 17:35:54 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio/ChangeLog,v 1.28 2005/04/19 22:53:42 flameeyes Exp $
+
+*libcdio-0.73 (19 Apr 2005)
+
+  19 Apr 2005; Diego Pettenò <flameeyes@gentoo.org> +libcdio-0.73.ebuild:
+  Added recent upstream version, won't break binary compatibility with 
+  0.70 ebuild. This version features a minimal useflag which can be used 
+  to disable building of command-line utilities (and so removes the 
+  dependency on popt).
 
   08 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> libcdio-0.69.ebuild:
   Stable on ppc.
