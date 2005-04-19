@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/webmin
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/ChangeLog,v 1.84 2005/04/18 15:09:02 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/ChangeLog,v 1.85 2005/04/19 17:35:21 kloeri Exp $
+
+  19 Apr 2005; Bryan Østergaard <kloeri@gentoo.org> webmin-1.200.ebuild:
+  Stable on alpha, bug 89141.
 
   18 Apr 2005; Jeremy Huddleston <eradicator@gentoo.org>
   files/webmin-1.140-apache2.patch:
