@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/orbit/orbit-0.5.17.ebuild,v 1.5 2005/01/08 23:35:35 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/orbit/orbit-0.5.17.ebuild,v 1.6 2005/04/19 23:18:36 herbs Exp $
 
-inherit gnome.org libtool gnuconfig
+inherit gnome.org libtool gnuconfig multilib
 
 MY_P="ORBit-${PV}"
 PVP=(${PV//[-\._]/ })
@@ -32,6 +32,7 @@ src_compile() {
 
 	./configure --host=${CHOST} \
 		--prefix=/usr \
+		--libdir=/usr/$(get_libdir) \
 		--infodir=/usr/share/info \
 		--sysconfdir=/etc \
 		--localstatedir=/var/lib \
@@ -42,6 +43,7 @@ src_compile() {
 
 src_install() {
 	make prefix=${D}/usr \
+		libdir=${D}/usr/$(get_libdir) \
 		sysconfdir=${D}/etc \
 		infodir=${D}/usr/share/info \
 		localstatedir=${D}/var/lib \
@@ -58,6 +60,6 @@ src_install() {
 	cd ../popt
 	dodoc CHANGES COPYING README
 
-	cd ${D}/usr/lib
-	patch -p0 < ${FILESDIR}/libIDLConf.sh-gentoo.diff
+	sed -i -e 's:-I/usr/include":-I/usr/include/libIDL-1.0":' \
+		${D}/usr/$(get_libdir)/libIDLConf.sh || die
 }
