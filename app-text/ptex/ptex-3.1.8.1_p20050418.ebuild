@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ptex/ptex-3.1.8.1_p20050405.ebuild,v 1.1 2005/04/07 16:15:20 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ptex/ptex-3.1.8.1_p20050418.ebuild,v 1.1 2005/04/19 07:51:40 usata Exp $
 
 TETEX_PV=3.0
 
@@ -105,22 +105,25 @@ src_compile() {
 	chmod +x configure
 	./configure EUC || die "configure pTeX failed"
 
-	make || die "make pTeX failed"
+	TEXMF="${S}/texmf" make || die "make pTeX failed"
 }
 
 src_install() {
 	addwrite /var/cache/fonts
 	addwrite /var/lib/texmf
 	addwrite /usr/share/texmf
-	tetex-3_src_install base doc fixup
+
+	tetex-3_src_install
 
 	dosym /usr/bin/tex /usr/bin/virtex
 	dosym /usr/bin/pdftex /usr/bin/pdfvirtex
 
 	einfo "Installing pTeX ..."
-	dodir ${TEXMF_PATH}/web2c
 	cd ${S}/texk/web2c/${PTEX_SRC%.tar.gz} || die
-	einstall bindir=${D}/usr/bin texmf=${D}${TEXMF_PATH} || die
+	# fix texmf.cnf failure
+	sed -i -e "s:\$(web2cdir)/texmf.cnf:${D}${TEXMF_PATH}/texmf.cnf:g" \
+		Makefile || die
+	TEXMF="${S}/texmf" einstall bindir=${D}/usr/bin texmf=${D}${TEXMF_PATH} || die
 
 	insinto /usr/share/texmf/fonts/map/dvips/tetex
 	doins ${FILESDIR}/psfonts-ja.map || die
@@ -129,6 +132,8 @@ src_install() {
 	insinto /etc/texmf/fmtutil.d
 	doins ${FILESDIR}/20fmtutil-platex.cnf
 	insinto /etc/texmf/texmf.d
+	sed -i -e '/TEXINPUTS.platex/d' ${D}/etc/texmf/texmf.d/00texmf.cnf
+	doins ${FILESDIR}/10texmf-ptex.cnf
 	doins ${FILESDIR}/20texmf-cmap.cnf
 
 	docinto dvipsk
