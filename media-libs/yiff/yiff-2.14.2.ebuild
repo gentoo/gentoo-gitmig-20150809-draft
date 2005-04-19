@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/yiff/yiff-2.14.2.ebuild,v 1.11 2004/10/08 09:57:14 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/yiff/yiff-2.14.2.ebuild,v 1.12 2005/04/19 00:18:54 vapier Exp $
 
 inherit flag-o-matic eutils kde
 
@@ -10,17 +10,21 @@ SRC_URI="ftp://wolfpack.twu.net/users/wolfpack/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc amd64"
+KEYWORDS="amd64 ppc sparc x86"
 IUSE="gtk alsa"
 
 DEPEND="gtk? ( =x11-libs/gtk+-1.2* )
-	!sparc? ( alsa? ( media-libs/alsa-lib ) )"
+	alsa? ( media-libs/alsa-lib )"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${PV}-gcc3.patch
-	epatch ${FILESDIR}/${P}-PIC.patch
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-gcc3.patch
+	epatch "${FILESDIR}"/${P}-PIC.patch
+	for d in libY2 yiff{,config,utils} ; do
+		cd "${S}"/${d}
+		epatch "${FILESDIR}"/${P}-gcc33.patch
+	done
 }
 
 src_compile() {
