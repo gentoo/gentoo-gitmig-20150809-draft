@@ -1,0 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 4f501166d96131c905828ef6539efd64 jusb-0.4.4.ebuild 1474
+MD5 78c1fb80ef2a1a7b727845989342877d ChangeLog 494
+MD5 123cf9440c1d4ac78f2caba1624765f9 metadata.xml 158
+MD5 7dfe45c66b2b735c99459e7123f37ab3 files/digest-jusb-0.4.4 62
+MD5 087570d64d04b53a1f416bb0e58117de files/jusb-0.4.4-native.patch 668
+MD5 ae2db2e259420167a40862f2a55c7da4 files/jusb-0.4.4-makefile.patch 347
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCZVum06ebR+OMO78RAlvhAJ9vdHfDUvM+vYZoHbME3nkLSVqISgCdHYUV
+Gwk+TNckRbhSn59P3iVk92s=
+=sWWY
+-----END PGP SIGNATURE-----
