@@ -1,7 +1,11 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 c5d57ca3fe025ec6371cdcf2e475ede5 hardened-sources-2.6.11-r1.ebuild 895
 MD5 524273305082cd982f2aecb77d95080f hardened-sources-2.4.29.ebuild 802
 MD5 793dcc5589a9a5204e1a684c7cad7fa9 hardened-sources-2.4.28-r5.ebuild 1091
-MD5 e31ef77081068144ecf0e4c400b8d2ec ChangeLog 13123
+MD5 e0b3e3e860384c3306daee7521a8e50b hardened-sources-2.4.30.ebuild 778
+MD5 8fefdbab92d82dbc0ee6a5743705589a ChangeLog 13395
 MD5 3f27e55312920e3241f47b70f2ef6242 hardened-sources-2.6.10-r3.ebuild 908
 MD5 0a473e60c059cb41c96a6bbcbff84769 metadata.xml 459
 MD5 4a0215139f9aebfe2cc2747743763f08 files/2.4.28-grsec-binfmt_a.out.patch 1887
@@ -10,8 +14,18 @@ MD5 13c5cbb90bda8da4e4922d1e1477a712 files/digest-hardened-sources-2.4.28-r5 145
 MD5 376d0153645489845937a4ffd83e761b files/2.4.28-grsec-cmdline-race.patch 352
 MD5 b1f723b1661a3fcbe79e921ddfe40584 files/2.4.28-grsec-2.1.0-pax-mmap-pgtables.patch 1202
 MD5 b86e17bb3729e5d79659e95c84db46a9 files/digest-hardened-sources-2.4.29 145
+MD5 c5eeb457e73703235f1639a02f397b99 files/digest-hardened-sources-2.4.30 145
 MD5 8850fb5244d9d10736d95a85f3c5b3f1 files/2.4.27-CAN-2004-0394.patch 448
 MD5 d1ccc2047be533c992f67270a150a210 files/2.4.27-cmdline-race.patch 388
 MD5 98e84c850a16b9cb458be21ae4fb82df files/2.4.28-selinux-cmdline-race.patch 352
 MD5 73d345a26186ac7508ba680069f892d7 files/digest-hardened-sources-2.6.10-r3 145
 MD5 240ef418b4a76a5758c5196f18bb7caf files/digest-hardened-sources-2.6.11-r1 145
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iQCVAwUBQmRYJJ4WFLgrx1GWAQIRNwQAlpz8k2iSrjDuaaBRmVOFFh/K1suUTp0/
+D0zOWV1VmB8/C3XIph/Nl/vj8dco2sI1v/xq/+DOn8Qkz2qH2N9iSqhhwFQwcxdg
+OG1LVrT2r/P4r4CYQ3kdvZmPGEDqScAxGkxlItyFCni+YxpxYPEBc2aNT0tFJX0B
+oMu3iDyI7F8=
+=qE0Q
+-----END PGP SIGNATURE-----
