@@ -8,7 +8,7 @@ MD5 d38aaeecbf142081ba96f86e29d25a33 mgetty-1.1.31.ebuild 3776
 MD5 6b58e8fabf4fd11e7e7da859094f6f7e mgetty-1.1.31-r1.ebuild 3850
 MD5 f62582c9548954ac535e74d829a02659 ChangeLog 7050
 MD5 ec2f84816306825d125d0c01bd86758d metadata.xml 163
-MD5 31e272cdbbb6832d99704dfd8c054db6 mgetty-1.1.33.ebuild 4030
+MD5 1e74ab114e1e5bc8625f3cc1fcb4ee71 mgetty-1.1.33.ebuild 4309
 MD5 bc47f96a12b21b779d57c0c2ad4b6837 files/mgetty-1.1.30-gentoo.diff 2771
 MD5 98aeee2f59082edadd2c9f85e0fe4fde files/mgetty-1.1.31-logfile.c.diff 1581
 MD5 3d8cb487c2713420c85ac4af2fe324ab files/mgetty-1.1.33-strerror.diff 1573
@@ -27,7 +27,7 @@ MD5 c1e91ed1386ed8e49d88ffca11b2c194 files/mgetty-1.1.33-callback.diff 991
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCZW2hjiC39V7gKu0RAlOuAKCT9elaCa7vtZtwRq9dl28kH6JRJwCgwIp0
-WhYHfHTaHwHE0sxu9+oU6tA=
-=LvCl
+iD8DBQFCZXQdjiC39V7gKu0RAhH4AJ9iotLnfFTULKw9EXI8KU4dSrBddgCfSRDz
+2pGgBM9sorC1oV/+7THTQTU=
+=iW6E
 -----END PGP SIGNATURE-----
