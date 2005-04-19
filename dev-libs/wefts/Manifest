@@ -1,15 +1,15 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
+MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
+MD5 1d5b3e4627586694c01fee8e48bf0fc5 ChangeLog 543
 MD5 028681f293cbf07363631b8f3beef379 wefts-0.99c.ebuild 863
-MD5 f5f1522837a3398846f77d381fda47ec metadata.xml 226
-MD5 79a22febed8ef9fb473c7005a18e83d4 ChangeLog 441
 MD5 7c5372f040edc68ac55c917fe359dc95 files/digest-wefts-0.99c 66
 MD5 86220ba170f6600578c478f1d5ebd9fc files/wefts-errno.patch 347
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFB1G5tFdQwWVoAgN4RAiSOAKCS6v9yNLMI86FcmcnMiqhf2S8cwQCfd5B0
-4Y8wrMYgrzUdRzgdTrmeb+4=
-=EPFt
+iD8DBQFCZNy7jUHll2nfF60RAlUzAKCJD7kTjAcohwnuepQYmzfdMAW2iACgqAHd
+eufYc60KdbJYpL/5UFcxFHM=
+=SMmO
 -----END PGP SIGNATURE-----
