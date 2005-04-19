@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 eeabf7feae6c8964eda53c6afec8460e ChangeLog 765
+MD5 7300a7b361fa9f48e37722c6952bd432 metadata.xml 158
 MD5 a18f24e77595e19d54c5b7c083a97379 mpeg2-movie-1.5-r1.ebuild 884
-MD5 53f5f7de52c0482e18b71095799e8fa4 ChangeLog 655
-MD5 31018765c8c65a239dba78a98c405543 metadata.xml 224
 MD5 b551c206ca0466fd6c5a0090662904a4 files/digest-mpeg2-movie-1.5-r1 68
 MD5 d59e050ba268a71798b323a3b33cc55d files/mpeg2-movie-1.5-gentoo.diff 312
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCZMUYKf2g/qXtneoRArqzAJwOmdq9D/Nf0hWXg3GRDahFNivMoACdF7LQ
+l6eVUwYNTz3Ved2a89q1unE=
+=9bKn
+-----END PGP SIGNATURE-----
