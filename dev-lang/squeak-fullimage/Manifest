@@ -4,7 +4,7 @@ MD5 2ef5028ed63b41e0d15cbcb6cd3b6ac8 squeak-fullimage-3.6.5424.ebuild 1250
 MD5 b79b3bbb2affab640d2e98f75bbdaf62 squeak-fullimage-3.5.5180.ebuild 1210
 MD5 0b78351046e9f0090e76507690d1a1f3 squeak-fullimage-3.4.5170.ebuild 1014
 MD5 4535507c6b9741f477236ce191912079 ChangeLog 1439
-MD5 2c3158204cfb4b9c36b8bc78e8421b16 metadata.xml 223
+MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
 MD5 d01d765b41f8c065ec9a19a7c7278e76 files/digest-squeak-fullimage-3.2.4956 129
 MD5 c47ea324aaf69084cd07c9a19d3e133f files/digest-squeak-fullimage-3.4.5170 129
 MD5 9fe48b0176607ba4e789a8ef1f78075e files/digest-squeak-fullimage-3.5.5180 129
