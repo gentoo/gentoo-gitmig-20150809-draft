@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1089 2005/04/18 17:38:08 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1090 2005/04/19 00:51:56 vapier Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -881,6 +881,7 @@ x11-libs/qt:immqt -Enable binary incompatible version of immodule for Qt
 x11-libs/qt:immqt-bc - Enable binary compatible version of immodule for Qt
 x11-libs/wxGTK:no_wxgtk1 - Disable gtk support. Must be used in combination with gtk2
 x11-misc/linuxwacom:sdk - Builds wacom X11 driver against installed X11 SDK
+x11-misc/rss-glx:xscreensaver - Enable detection of xscreensavers
 x11-misc/vnc2swf:x11vnc - Install script that depends on x11vnc
 x11-misc/xscreensaver:offensive - Adds screensavers that are not-safe-for-work.
 x11-plugins/wmhdplop:gkrellm - Enable build of gkrellm module
