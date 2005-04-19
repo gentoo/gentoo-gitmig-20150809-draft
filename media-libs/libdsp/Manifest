@@ -2,16 +2,16 @@
 Hash: SHA1
 
 MD5 900ca47026dd214786570ef16024fc3d libdsp-4.9.2-r1.ebuild 1790
-MD5 bf5b505996d7874a0ed1e780d06b4213 ChangeLog 1398
-MD5 dbafe0153b3ee5f599d5dbeac4aa3210 metadata.xml 224
+MD5 a01b90fed05a410b3bc6aecc2601067a ChangeLog 1510
+MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 8e472d29f67151e2a3266ab8ba84faf8 libdsp-4.9.2.ebuild 1528
 MD5 7026d7f1b8c75423ecfad3ceaf859760 files/digest-libdsp-4.9.2-r1 136
-MD5 7026d7f1b8c75423ecfad3ceaf859760 files/digest-libdsp-4.9.2 136
 MD5 0f21eaa6e644359d7a33dad21b8f330d files/Makefile.patch 2012
+MD5 7026d7f1b8c75423ecfad3ceaf859760 files/digest-libdsp-4.9.2 136
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFB4RFZI1lqEGTUzyQRAqkdAJ96CdZoBV+42utyi6OHujtDL00TuACdH11z
-OnJfQi7K7CLfli6lU2xhkG4=
-=pJEJ
+iD8DBQFCZMIbKf2g/qXtneoRAlVvAJwIaJP2XY/btMnGfBKlYw+Anhj+wQCfaS7q
+g9WgzcQnjuxujtNxvzb0UM4=
+=9rrF
 -----END PGP SIGNATURE-----

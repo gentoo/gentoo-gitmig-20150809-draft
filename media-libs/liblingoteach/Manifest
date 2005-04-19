@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
+MD5 d54275be121cc9d465a1a2ccee0a4131 ChangeLog 505
+MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 0d500a24594c08f108f5849d3ece1376 liblingoteach-0.2.1.ebuild 837
-MD5 dbafe0153b3ee5f599d5dbeac4aa3210 metadata.xml 224
-MD5 d170b38637622b884a469026429169d8 ChangeLog 395
 MD5 933430885c4d8162de0efd650246cf3f files/digest-liblingoteach-0.2.1 71
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFB05UiFdQwWVoAgN4RAiErAJ9PeJVTX1AVjUr/wmkK569/cT+vDQCg0IIF
-Np2LL50UJHFiwOVwhnotgmM=
-=O9xZ
+iD8DBQFCZMLOKf2g/qXtneoRAi8iAKC35dgL0VAGGALGPRzv6lL3gswYSwCgkiyi
+4pQ6IeKkMRIGhpI/PHG3AXE=
+=RShE
 -----END PGP SIGNATURE-----
