@@ -1,6 +1,13 @@
 # ChangeLog for www-proxy/squid
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-proxy/squid/ChangeLog,v 1.57 2005/04/17 17:57:43 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-proxy/squid/ChangeLog,v 1.58 2005/04/19 10:44:45 mrness Exp $
+
+*squid-2.5.9-r3 (19 Apr 2005)
+
+  19 Apr 2005; Alin Nastac <mrness@gentoo.org> -squid-2.5.9-r2.ebuild,
+  +squid-2.5.9-r3.ebuild:
+  Replace 2.5.9-r2 version with 2.5.9-r3 for fixing broken 2GB patch. See bug
+  #89586 for more info.
 
   17 Apr 2005; Jason Wever <weeve@gentoo.org> squid-2.5.9-r2.ebuild:
   Stable on SPARC wrt security bug #89149.
