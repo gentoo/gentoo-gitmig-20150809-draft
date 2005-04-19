@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-psidisplays/desklet-psidisplays-20040420.ebuild,v 1.5 2004/11/11 20:31:53 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-psidisplays/desklet-psidisplays-20040420.ebuild,v 1.6 2005/04/19 02:41:56 nixphoeni Exp $
 
 MY_PN="PsiDisplayPackage"
 MY_P=${MY_PN}-${PV}
@@ -15,7 +15,7 @@ SLOT="0"
 IUSE=""
 KEYWORDS="~x86 ppc ~alpha ~amd64"
 
-DEPEND=">=gnome-extra/gdesklets-core-0.26
+DEPEND="<=gnome-extra/gdesklets-core-0.33.1
 	>=x11-plugins/desklet-psisensors-${PV}
 	>=x11-plugins/desklet-clock-0.32"
 
