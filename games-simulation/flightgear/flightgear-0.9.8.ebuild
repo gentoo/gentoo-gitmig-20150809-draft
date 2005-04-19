@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/flightgear/flightgear-0.9.8.ebuild,v 1.3 2005/04/19 13:24:45 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/flightgear/flightgear-0.9.8.ebuild,v 1.4 2005/04/19 13:26:39 seemant Exp $
 
 inherit flag-o-matic games
 
@@ -17,7 +17,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc x86"
 IUSE=""
 
-RDEPEND="~dev-games/simgear-0.3.8
+RDEPEND="virtual/glut
+	~dev-games/simgear-0.3.8
 	>=media-libs/plib-1.8.4"
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4"

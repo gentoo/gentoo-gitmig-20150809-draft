@@ -1,6 +1,11 @@
 # ChangeLog for games-simulation/flightgear
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/flightgear/ChangeLog,v 1.17 2005/04/19 13:24:45 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/flightgear/ChangeLog,v 1.18 2005/04/19 13:26:39 seemant Exp $
+
+  19 Apr 2005; Seemant Kulleen <seemant@gentoo.org> flightgear-0.9.4.ebuild,
+  flightgear-0.9.5.ebuild, flightgear-0.9.8.ebuild:
+  add virtual/glut to RDEPEND/DEPEND strings. Thanks to: Sveinung Kvilhaugsvik
+  <sveinung@HotPOP.com> in bug #86712
 
   19 Apr 2005; Seemant Kulleen <seemant@gentoo.org> flightgear-0.9.8.ebuild:
   stable on x86
