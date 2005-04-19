@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/limewire/limewire-4.8.1.ebuild,v 1.3 2005/04/14 19:45:12 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/limewire/limewire-4.8.1.ebuild,v 1.4 2005/04/19 13:20:22 sekretarz Exp $
 
 inherit eutils
 
@@ -21,9 +21,8 @@ PREFIX="/opt/limewire"
 src_compile() {
 	( echo \#!/bin/sh
 	  echo cd ${PREFIX}
-	  echo java -cp .:collections.jar:xerces.jar:jl011.jar:MessagesBundles.jar:themes.jar:logicrypto.jar:GURL.jar com.limegroup.gnutella.gui.Main
 	  echo export J2SE_PREEMPTCLOSE=1
-	  echo java -jar LimeWire.jar
+	  echo java -cp .:collections.jar:xerces.jar:jl011.jar:MessagesBundles.jar:themes.jar:logicrypto.jar:GURL.jar:LimeWire.jar com.limegroup.gnutella.gui.Main
 	) >limewire.gentoo
 
 	echo PATH=${PREFIX} > limewire.envd
