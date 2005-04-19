@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/djbfft
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/djbfft/ChangeLog,v 1.4 2005/02/22 12:45:44 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/djbfft/ChangeLog,v 1.5 2005/04/19 20:01:37 lu_zero Exp $
+
+  19 Apr 2005; Luca Barbato <lu_zero@gentoo.org> djbfft-0.76.ebuild:
+  Marked ppc
 
   22 Feb 2005; Patrick Kursawe <phosphan@gentoo.org> djbfft-0.76.ebuild:
   Fixing bug #82804 by adding dummy src_test function
