@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/Audio-Mixer
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Audio-Mixer/ChangeLog,v 1.1 2005/04/19 15:10:12 mcummings Exp $
+
+*Audio-Mixer-0.7 (19 Apr 2005)
+
+  19 Apr 2005; Michael Cummings <mcummings@gentoo.org> +metadata.xml,
+  +Audio-Mixer-0.7.ebuild:
+  New dep for mplay, bug 74394
+
