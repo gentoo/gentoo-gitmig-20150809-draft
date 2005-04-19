@@ -1,6 +1,9 @@
 # ChangeLog for media-video/cinepaint
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cinepaint/ChangeLog,v 1.6 2005/03/18 20:06:07 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cinepaint/ChangeLog,v 1.7 2005/04/19 09:03:42 kloeri Exp $
+
+  19 Apr 2005; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
+  Remove retired developer from metadata.xml.
 
 *cinepaint-0.19.0 (19 Mar 2005)
 
