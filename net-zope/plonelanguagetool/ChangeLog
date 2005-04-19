@@ -1,0 +1,10 @@
+# ChangeLog for net-zope/plonelanguagetool
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/plonelanguagetool/ChangeLog,v 1.1 2005/04/19 17:14:12 radek Exp $
+
+*plonelanguagetool-0.5 (19 Apr 2005)
+
+  19 Apr 2005; Radoslaw Stachowiak <radek@gentoo.org> +metadata.xml,
+  +plonelanguagetool-0.5.ebuild:
+  initial release thanks to Kai Schluter, closes #85753
+
