@@ -1,16 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 322c0926f2c74daa7e674df1519b1656 ChangeLog 658
-MD5 ec09b9a6676d5d1a73e9da083b6c51b7 metadata.xml 633
+MD5 d62d3160b3636e2e9c7d25b68ad80593 ChangeLog 827
+MD5 e341a446a33b3cce8c5793bc9630b7ba metadata.xml 541
+MD5 8744fe9c5f0c4ee8ecc57f2e2ad8184b yconsole-3.0.8.ebuild 812
 MD5 bc6f2000136cfa447de05c3682a75e99 yconsole-3.0.5.ebuild 763
 MD5 ea7949504c3791cd699a231f82feef7e files/3.0.1-makefile-cflags.patch 306
 MD5 bb05cfe13c96156605b68899849040d5 files/digest-yconsole-3.0.5 67
 MD5 ea7949504c3791cd699a231f82feef7e files/3.0.5-makefile-cflags.patch 306
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA9LUeHTu7gpaalycRAjolAJ4w/kxFyEt+5vOglxXmr00ApGHxIgCgp1ld
-CEfRBalkRuswfEPjAceC1S0=
-=Htvy
------END PGP SIGNATURE-----
+MD5 3d42123d681a6e1f5b5b68bdaf51f194 files/digest-yconsole-3.0.8 67
+MD5 a4365a6d385c83b622eba2ea65a6a436 files/yconsole-3.0.8-gcc33.patch 893

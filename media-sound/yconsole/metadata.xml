@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>no-herd</herd>
-<maintainer>
- <email>vapier@gentoo.org</email>
- <name>Mike Frysinger</name>
-</maintainer>
+<herd>sound</herd>
  <longdescription>
 YConsole allows you to monitor and control 
 the Y server in a GUI environment, using the GTK+ toolkit. 
