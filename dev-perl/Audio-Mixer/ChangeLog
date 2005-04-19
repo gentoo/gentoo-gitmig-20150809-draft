@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Audio-Mixer
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Audio-Mixer/ChangeLog,v 1.1 2005/04/19 15:10:12 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Audio-Mixer/ChangeLog,v 1.2 2005/04/19 15:58:14 luckyduck Exp $
+
+  19 Apr 2005; Jan Brinkmann <luckyduck@gentoo.org> Audio-Mixer-0.7.ebuild:
+  added ~amd64 and ~ppc to KEYWORDS
 
 *Audio-Mixer-0.7 (19 Apr 2005)
 
