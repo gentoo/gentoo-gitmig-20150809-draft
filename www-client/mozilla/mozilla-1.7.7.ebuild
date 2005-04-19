@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla/mozilla-1.7.7.ebuild,v 1.7 2005/04/18 22:02:38 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla/mozilla-1.7.7.ebuild,v 1.8 2005/04/19 18:59:48 corsair Exp $
 
 unset ALLOWED_FLAGS  # stupid extra-functions.sh ... bug 49179
 inherit flag-o-matic gcc eutils nsplugins mozilla-launcher mozconfig makeedit multilib
@@ -23,7 +23,7 @@ SRC_URI="http://ftp.mozilla.org/pub/mozilla.org/mozilla/releases/${PN}${MY_PV}/s
 		http://www.mozilla-enigmail.org/downloads/src/enigmail-${EMVER}.tar.gz
 	) )"
 
-KEYWORDS="alpha amd64 hppa ia64 ppc sparc x86"
+KEYWORDS="alpha amd64 hppa ia64 ppc ~ppc64 sparc x86"
 SLOT="0"
 LICENSE="MPL-1.1 NPL-1.1"
 
@@ -74,7 +74,10 @@ src_unpack() {
 	# https://bugzilla.mozilla.org/show_bug.cgi?id=234035#c65
 	epatch ${FILESDIR}/mozilla-1.7.3-4ft2.patch
 
-	# Patch for newer versions of cairo ( bug #80301) 
+	# Patch to allow compilation on ppc64 - bug #54843
+	use ppc64 && epatch ${FILESDIR}/mozilla-1.7.6-ppc64.patch
+
+	# Patch for newer versions of cairo ( bug #80301)
 	if has_version '>=x11-libs/cairo-0.3.0'; then
 		epatch ${FILESDIR}/svg-cairo-0.3.0-fix.patch
 	fi
