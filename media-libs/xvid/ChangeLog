@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/xvid
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xvid/ChangeLog,v 1.39 2005/04/09 15:44:14 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xvid/ChangeLog,v 1.40 2005/04/19 20:11:59 lu_zero Exp $
+
+  19 Apr 2005; Luca Barbato <lu_zero@gentoo.org> xvid-1.0.2.ebuild,
+  xvid-1.0.3.ebuild:
+  ppc updated
 
   09 Apr 2005; Markus Rothe <corsair@gentoo.org> xvid-1.0.3.ebuild:
   Added ~ppc64 to KEYWORDS
