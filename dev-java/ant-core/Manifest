@@ -9,7 +9,7 @@ MD5 123cf9440c1d4ac78f2caba1624765f9 metadata.xml 158
 MD5 d7186edf4c71dc0531330f90e2c08fe9 files/1.5.4-ant 2283
 MD5 80ec3411bbdb635e7a5798b870b0b546 files/digest-ant-core-1.6.3_beta1 79
 MD5 668644917f8fddd4162667137cb53c85 files/1.6.2-ant 5062
-MD5 b8278359cc11b1847ad73299db94cdbb files/1.6.3-ant 4738
+MD5 93c5b0cd15218723394245a54155ee5f files/1.6.3-ant 5057
 MD5 4383441650437fec5622070e48e4324c files/build.sh-exit-fix.patch.gz 256
 MD5 55ece9ccf573b244b3dff966839528c5 files/rpmbuild.patch.gz 1164
 MD5 8d86f265f37d0d73cdd2e8a3fd2ff6eb files/digest-ant-core-1.5.4-r2 70
@@ -18,7 +18,7 @@ MD5 8c69a473b88559829069ac80730f2f1b files/1.6.2-scp.patch 877
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCUFI5/rLF9B432nYRAp3CAJ4u5WV9hW2Dz0F8BsKIUGVdl+S88QCaA/YZ
-IFv0JfF/oq+HHQbwk++yS/Q=
-=y20Q
+iD8DBQFCZRDd/rLF9B432nYRAiruAJwIpv1bz4wux4jOJX+y8bDLO2vatQCbB7pH
+NfzXvJSaBJYg/gxtMnRBov4=
+=Iyiz
 -----END PGP SIGNATURE-----
