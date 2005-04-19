@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/snortsnarf
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snortsnarf/ChangeLog,v 1.14 2005/03/27 01:48:26 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snortsnarf/ChangeLog,v 1.15 2005/04/19 13:17:01 ka0ttic Exp $
+
+  19 Apr 2005; Aaron Walker <ka0ttic@gentoo.org>
+  snortsnarf-021111.1-r4.ebuild:
+  Marked stable on x86.
 
 *snortsnarf-050314.1 (26 Mar 2005)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snortsnarf/snortsnarf-021111.1-r4.ebuild,v 1.1 2005/02/18 11:08:58 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snortsnarf/snortsnarf-021111.1-r4.ebuild,v 1.2 2005/04/19 13:17:01 ka0ttic Exp $
 
 inherit eutils webapp
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.silicondefense.com/software/snortsnarf/"
 SRC_URI="http://www.silicondefense.com/software/snortsnarf/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc"
 IUSE=""
 
 RDEPEND="dev-lang/perl
