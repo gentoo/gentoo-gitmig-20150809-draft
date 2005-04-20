@@ -1,6 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/omniORB/omniORB-4.0.5.ebuild,v 1.3 2005/04/20 15:31:28 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/omniORB/omniORB-4.0.6.ebuild,v 1.1 2005/04/20 15:31:28 liquidx Exp $
+
+inherit python
 
 DESCRIPTION="A robust, high-performance CORBA 2 ORB"
 SRC_URI="mirror://sourceforge/omniorb/${PF}.tar.gz"
@@ -10,7 +12,7 @@ IUSE="ssl"
 
 LICENSE="LGPL-2 GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~alpha ~ia64 ~amd64 ~ppc ~ppc64"
+KEYWORDS="~x86 ~alpha ~ia64 ~amd64 ~ppc ~ppc64"
 
 DEPEND="dev-lang/python
 	ssl? ( >=dev-libs/openssl-0.9.6b )"
@@ -33,9 +35,10 @@ src_compile() {
 
 	use ssl && MY_CONF="${MY_CONF} --with-openssl=/usr"
 
-	MY_PY=/usr/bin/python`python -c "import sys; print sys.version[:3]"`
+	python_version
+	PYTHON=/usr/bin/python${PYVER} ../configure ${MY_CONF} \
+		|| die "./configure failed"
 
-	PYTHON=${MY_PY} ../configure ${MY_CONF} || die "./configure failed"
 	emake || die "make failed"
 }
 
@@ -64,6 +67,7 @@ src_install () {
 	insinto /etc/omniorb
 	doins ${S}/omniORB.cfg
 
+	keepdir /var/log/omniORB
 }
 
 pkg_postinst() {
@@ -73,5 +77,6 @@ pkg_postinst() {
 		echo "ORBInitialHost `uname -n`" > ${ROOT}etc/omniorb/omniORB.cfg
 		echo "ORBInitialPort 2809" >> ${ROOT}etc/omniorb/omniORB.cfg
 	fi
+
 	#/usr/bin/python ${ROOT}usr/share/doc/${PF}/mkomnistubs.py
 }
