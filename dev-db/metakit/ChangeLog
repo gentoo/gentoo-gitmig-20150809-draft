@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/metakit
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/metakit/ChangeLog,v 1.26 2005/04/10 18:36:09 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/metakit/ChangeLog,v 1.27 2005/04/20 07:01:47 kloeri Exp $
+
+  20 Apr 2005; Bryan Østergaard <kloeri@gentoo.org>
+  metakit-2.4.9.3-r2.ebuild:
+  Disable broken make test.
 
   10 Apr 2005; Michael Hanselmann <hansmi@gentoo.org>
   metakit-2.4.9.3-r2.ebuild:
