@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/raidutils
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/raidutils/ChangeLog,v 1.4 2005/02/28 00:44:43 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/raidutils/ChangeLog,v 1.5 2005/04/20 15:09:09 xmerlin Exp $
+
+  20 Apr 2005; Christian Zoffoli <xmerlin@gentoo.org> raidutils-0.0.6.ebuild:
+  Stable x86.
 
 *raidutils-0.0.6 (26 Feb 2005)
 
