@@ -1,8 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xosview/xosview-1.8.2.ebuild,v 1.8 2004/12/16 10:10:23 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xosview/xosview-1.8.2.ebuild,v 1.9 2005/04/20 10:01:30 truedfx Exp $
 
-inherit gnuconfig
+inherit eutils gnuconfig
 
 DESCRIPTION="X11 operating system viewer"
 SRC_URI="mirror://sourceforge/xosview/${P}.tar.gz"
@@ -14,6 +14,12 @@ KEYWORDS="x86 alpha ppc amd64 sparc ppc64"
 
 DEPEND="virtual/x11"
 IUSE=""
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/xosview-emptyxpaths.patch
+}
 
 src_compile() {
 	# 2.6 kernel compatibility has been fixed upstream...

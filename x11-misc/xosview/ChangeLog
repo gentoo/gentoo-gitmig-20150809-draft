@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/xosview
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xosview/ChangeLog,v 1.19 2004/12/28 22:10:10 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xosview/ChangeLog,v 1.20 2005/04/20 10:01:30 truedfx Exp $
+
+  20 Apr 2005; Harald van Dĳk <truedfx@gentoo.org>
+  +files/xosview-emptyxpaths.patch, xosview-1.8.2.ebuild:
+  move up check for "empty" X paths to make it actually work (bug #74881)
 
   28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
