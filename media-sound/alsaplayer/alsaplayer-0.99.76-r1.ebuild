@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsaplayer/alsaplayer-0.99.76-r1.ebuild,v 1.3 2005/03/13 14:42:29 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsaplayer/alsaplayer-0.99.76-r1.ebuild,v 1.4 2005/04/20 19:11:29 luckyduck Exp $
 
 inherit eutils
 
-IUSE="nas nls esd opengl doc oss gtk ogg oggvorbis alsa jack mikmod flac xosd"
+IUSE="nas nls esd opengl doc oss gtk ogg vorbis alsa jack mikmod flac xosd"
 
 DESCRIPTION="Media player primarily utilising ALSA"
 HOMEPAGE="http://www.alsaplayer.org/"
@@ -15,6 +15,7 @@ LICENSE="GPL-2"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86 ~mips"
 
 RDEPEND=">=dev-libs/glib-1.2.10
+	media-libs/libsndfile
 	esd? ( media-sound/esound )
 	gtk? ( =x11-libs/gtk+-1* )
 	nas? ( media-libs/nas )
@@ -23,7 +24,7 @@ RDEPEND=">=dev-libs/glib-1.2.10
 	flac? ( media-libs/flac )
 	mikmod? ( >=media-libs/libmikmod-3.1.10 )
 	opengl? ( virtual/opengl )
-	oggvorbis? ( media-libs/libvorbis )
+	vorbis? ( media-libs/libvorbis )
 	ogg? ( media-libs/libogg )
 	xosd? ( x11-libs/xosd )"
 
@@ -59,7 +60,7 @@ src_compile() {
 		$(use_enable opengl) \
 		$(use_enable nls) \
 		$(use_enable sparc) \
-		$(use_enable oggvorbis) \
+		$(use_enable vorbis oggvorbis) \
 		$(use_enable esd) \
 		$(use_enable gtk) \
 		$(use_enable jack) \
@@ -67,7 +68,6 @@ src_compile() {
 		$(use_enable flac) \
 		${myconf} \
 		--disable-sgi --disable-dependency-tracking || die "./configure failed"
-
 	emake || die "make failed"
 }
 
@@ -75,6 +75,6 @@ src_install() {
 	make DESTDIR=${D} docdir=${D}/usr/share/doc/${PF} install \
 		|| die "make install failed"
 
-	dodoc AUTHORS COPYING ChangeLog README TODO
+	dodoc AUTHORS ChangeLog README TODO
 	dodoc docs/wishlist.txt
 }
