@@ -1,0 +1,21 @@
+# ChangeLog for net-misc/cutecom
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/cutecom/ChangeLog,v 1.1 2005/04/20 22:32:01 mrness Exp $
+
+  20 Apr 2005; Alin Nastac <mrness@gentoo.org> cutecom-0.13.1.ebuild:
+  Moved from net-misc/cutecom to net-dialup/cutecom. Correct dependancies by
+  adding net-dialup/lrzsz. Mark stable on x86.
+
+*cutecom-0.13.1 (27 Feb 2005)
+
+  27 Feb 2005; Karol Wojtaszek <sekretarz@gentoo.org> cutecom-0.12.0.ebuild,
+  +cutecom-0.13.1.ebuild:
+  Version bump, bug #74236. Stable on amd64
+
+*cutecom-0.12.0 (16 Dec 2004)
+
+  16 Dec 2004; Karol Wojtaszek <sekretarz@gentoo.org> +metadata.xml,
+  +cutecom-0.12.0.ebuild:
+  Initial add and the glory goes to Jurek Bartuszek <koxta@koxta.net> in bug
+  #74236
+
