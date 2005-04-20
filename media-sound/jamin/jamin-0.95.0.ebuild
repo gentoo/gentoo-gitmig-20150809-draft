@@ -1,18 +1,17 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jamin/jamin-0.9.0-r1.ebuild,v 1.5 2005/04/20 17:03:12 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jamin/jamin-0.95.0.ebuild,v 1.1 2005/04/20 17:03:12 luckyduck Exp $
 
 inherit eutils
-
-IUSE=""
-
-SLOT="0"
-LICENSE="GPL-2"
-KEYWORDS="x86 amd64 ~ppc"
 
 DESCRIPTION="JAMin is the JACK Audio Connection Kit (JACK) Audio Mastering interface"
 HOMEPAGE="http://jamin.sourceforge.net"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
+
+LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="~x86 ~amd64 ~ppc"
+IUSE=""
 
 DEPEND=">=media-sound/jack-audio-connection-kit-0.80.0
 	>=media-plugins/swh-plugins-0.4.6
@@ -23,16 +22,7 @@ DEPEND=">=media-sound/jack-audio-connection-kit-0.80.0
 	>=dev-libs/libxml2-2.5.0
 	>=x11-libs/gtk+-2.0.0"
 
-src_unpack() {
-	unpack ${A}
-
-	cd ${S}
-	epatch ${FILESDIR}/${P}-scenes.patch
-	epatch ${FILESDIR}/${P}-geq.patch
-	epatch ${FILESDIR}/${P}-jack99.patch
-}
-
 src_install() {
-	make install DESTDIR=${D}
-	dodoc AUTHORS ChangeLog COPYING INSTALL NEWS README TODO
+	make install DESTDIR=${D} || die "make install failed"
+	dodoc AUTHORS ChangeLog INSTALL NEWS README TODO
 }
