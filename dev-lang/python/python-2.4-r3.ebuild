@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.4-r3.ebuild,v 1.2 2005/04/20 17:10:29 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.4-r3.ebuild,v 1.3 2005/04/20 18:48:48 liquidx Exp $
 
 # NOTE about python-portage interactions :
 # - Do not add a pkg_setup() check for a certain version of portage
@@ -24,9 +24,8 @@ SLOT="2.4"
 
 KEYWORDS="~x86 ~ppc ~sparc ~arm ~hppa ~amd64 ~s390 ~alpha ~ia64 ~mips"
 
-RDEPEND="virtual/libc
+DEPEND="virtual/libc
 	>=sys-libs/zlib-1.1.3
-	dev-python/python-fchksum
 	!build? (
 		X? ( tcltk? ( >=dev-lang/tk-8.0 ) )
 		ncurses? ( >=sys-libs/ncurses-5.2 readline? ( >=sys-libs/readline-4.1 ) )
@@ -37,10 +36,14 @@ RDEPEND="virtual/libc
 		dev-libs/expat
 	)"
 
-DEPEND="${RDEPEND}"
+# NOTE: The dev-python/python-fchksum RDEPEND is needed so that this python 
+#       provides the functionality expected from previous pythons.
 
-# The dev-python/python-fchksum RDEPEND is needed to that this python provides
-# the functionality expected from previous pythons.
+# NOTE: python-fchksum is only a RDEPEND and not a DEPEND since we don't need
+#       it to compile python. We just need to ensure that when we install
+#       python, we definitely have fchksum support. - liquidx
+
+RDEPEND="${DEPEND} 	dev-python/python-fchksum"
 
 PROVIDE="virtual/python"
 
