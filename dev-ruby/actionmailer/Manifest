@@ -3,22 +3,22 @@ Hash: SHA1
 
 MD5 4815f696d9820c320a417c0de9f0dea7 actionmailer-0.6.1.ebuild 695
 MD5 3eec9f3fe48b51f49dbc1f171a3b026f metadata.xml 157
-MD5 2c4c1cdbfa6025885648946464ee937b ChangeLog 1221
+MD5 b2f1fd7af67ccaaeec40bcb2ad1af31d ChangeLog 1404
 MD5 36e19ac9d33cd3d5e6a20b4dd4f9798f actionmailer-0.7.0.ebuild 689
 MD5 408722f35e9e9a0c4524b1f64bb3d4a8 actionmailer-0.7.1.ebuild 695
 MD5 b483cec663268a89c500ea31ce64929e actionmailer-0.8.0.ebuild 690
 MD5 2093fb434f623f542c444c93a2a0c7bc actionmailer-0.8.1.ebuild 689
-MD5 7eec13e3a3a000f4aa4d4ddd50a01b39 actionmailer-0.9.0.ebuild 695
+MD5 4a48ef69d55ad5875ea71a4451c2515d actionmailer-0.9.1.ebuild 690
 MD5 190bb447ec0db2a9f340acaf55011d58 files/digest-actionmailer-0.6.1 66
 MD5 05df4fe794b345deb7f1412a08655fde files/digest-actionmailer-0.7.0 66
 MD5 7ae3e9f6afe41c44788b8399e11b52dc files/digest-actionmailer-0.7.1 66
 MD5 8f2f1e7a52f72d94cd1dc8de426c2cf1 files/digest-actionmailer-0.8.0 66
 MD5 6c2f96823c817368314fda70652086c1 files/digest-actionmailer-0.8.1 66
-MD5 d4bcaa360d2b3061f9af33f3ecba1b1f files/digest-actionmailer-0.9.0 66
+MD5 39bac841a46228ca616bc1a4cbb95a13 files/digest-actionmailer-0.9.1 66
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCZJpwz2gxt1z4IGYRAnOyAJ9EyYNbHv4vxy6Ybkld/Vp3QUnnjQCcChlL
-tAQTRrGiIZZGUfJ8fsSwlTw=
-=mQZu
+iD8DBQFCZc4Tz2gxt1z4IGYRAkgRAJ9HuzHiW5QPL40fdHhv5ixJJE1gpwCgyqmy
+U3gnHqYzeaSCQVftOfNxB+M=
+=5/7H
 -----END PGP SIGNATURE-----
