@@ -1,0 +1,19 @@
+# Copyright 2004 Gentoo Foundation.
+# Distributed under the terms of the GNU General Public License, v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/vserver/x86/use.mask,v 1.1 2005/04/20 17:44:59 hollow Exp $
+
+# This file masks out USE flags that are simply NOT allowed in the default
+# x86 profile.  This works, for example, if another architecture's
+# profile have a USE flag associated with (such as altivec, mmx, etc).
+
+# Unmask x86 instruction sets
+-mmx
+-mmx2
+-mmxext
+-sse
+-sse2
+-3dnow
+-3dnowex
+-win32codecs
+-divx4linux
+
