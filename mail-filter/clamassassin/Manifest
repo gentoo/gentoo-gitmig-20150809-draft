@@ -1,18 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 465c6db9d210ffb14e6a741d881ad300 ChangeLog 2338
-MD5 78729c01d5c2911e37a0df769fb5f307 clamassassin-1.2.2.ebuild 891
-MD5 8a1c6c5f4c13a4109f6f4198fdd1874b metadata.xml 223
-MD5 cdce842649f1c0977f2d7ca078230a71 clamassassin-1.2.0-r1.ebuild 887
+MD5 d255ff27d80903f9f820be2ea54eac43 ChangeLog 2507
 MD5 9633342e004ddf7cfdd9ad00b9465e8e clamassassin-1.2.1.ebuild 886
+MD5 8a1c6c5f4c13a4109f6f4198fdd1874b metadata.xml 223
+MD5 9176622f0cf41bfbf7f1af6f6541c019 clamassassin-1.2.2.ebuild 888
 MD5 260a237b1e8241e0b63aa29c4bb7807a files/digest-clamassassin-1.2.1 69
-MD5 16aa47c42167085b678a375f78fce9ef files/digest-clamassassin-1.2.0-r1 69
 MD5 832949fca57f09aec2601878733d90e9 files/digest-clamassassin-1.2.2 69
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFBvik6QlM6RnzZP+IRAs6HAJsFLaLvMZDMI3tGUlOBAwwiv9QLdQCfRn7P
-YvS0VlnO3gQKg8swQVaXDtc=
-=40ri
+iD8DBQFCZnXWCHk4+ZoBpvsRAmZaAKDCk7MPUOnghthbjsl5yKT5HTjKUwCgn6bq
+uOPWHMlvikjQdbiIgHmyvYs=
+=LWFz
 -----END PGP SIGNATURE-----
