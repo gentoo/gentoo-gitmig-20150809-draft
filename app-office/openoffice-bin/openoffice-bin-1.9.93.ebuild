@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-1.9.93.ebuild,v 1.1 2005/04/15 20:41:37 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-1.9.93.ebuild,v 1.2 2005/04/20 07:31:49 suka Exp $
 
 inherit eutils fdo-mime rpm versionator
 
@@ -12,7 +12,8 @@ S="${WORKDIR}/RPMS"
 DESCRIPTION="OpenOffice productivity suite"
 
 SNV="$(get_version_component_range 3)"
-LANGPACK="http://oootranslation.services.openoffice.org/pub/OpenOffice.org/680m${SNV}/OOo_1.9.${SNV}_LinuxIntel_langpack"
+LANGPACK="OOo_1.9.${SNV}_LinuxIntel_langpack"
+LANGPACKPATH="http://oootranslation.services.openoffice.org/pub/OpenOffice.org/680m${SNV}/${LANGPACK}"
 LANGLOC="http://ftp.linux.cz/pub/localization/OpenOffice.org/devel/680/SRC680_m${SNV}/Build-1/OOo_SRC680_m${SNV}_native_LinuxIntel_langpacks_rpm"
 LANGSUFFIX="1.9.${SNV}-1.i586.rpm"
 
@@ -29,22 +30,22 @@ SRC_URI="mirror://openoffice/developer/680_m${SNV}/OOo_1.9.${SNV}_LinuxIntel_ins
 	linguas_fi? ( ${LANGLOC}/openofficeorg-fi-${LANGSUFFIX} )
 	linguas_fr? ( ${LANGLOC}/openofficeorg-fr-${LANGSUFFIX} )
 	linguas_hu? ( ${LANGLOC}/openofficeorg-hu-${LANGSUFFIX} )
-	linguas_it? ( ${LANGPACK}_it.sh )
-	linguas_ja? ( ${LANGPACK}_ja.sh )
+	linguas_it? ( ${LANGPACKPATH}_it.sh )
+	linguas_ja? ( ${LANGPACKPATH}_ja.sh )
 	linguas_km? ( ${LANGLOC}/openofficeorg-km-${LANGSUFFIX} )
-	linguas_ko? ( ${LANGPACK}_ko.sh )
+	linguas_ko? ( ${LANGPACKPATH}_ko.sh )
 	linguas_nb? ( ${LANGLOC}/openofficeorg-nb-${LANGSUFFIX} )
 	linguas_nl? ( ${LANGLOC}/openofficeorg-nl-${LANGSUFFIX} )
 	linguas_nn? ( ${LANGLOC}/openofficeorg-nn-${LANGSUFFIX} )
 	linguas_ns? ( ${LANGLOC}/openofficeorg-ns-${LANGSUFFIX} )
-	linguas_pt_BR? ( ${LANGPACK}_pt-BR.sh )
+	linguas_pt_BR? ( ${LANGPACKPATH}_pt-BR.sh )
 	linguas_sk? ( ${LANGLOC}/openofficeorg-sk-${LANGSUFFIX} )
 	linguas_sl? ( ${LANGLOC}/openofficeorg-sl-${LANGSUFFIX} )
-	linguas_sv? ( ${LANGPACK}_sv.sh )
+	linguas_sv? ( ${LANGPACKPATH}_sv.sh )
 	linguas_tn? ( ${LANGLOC}/openofficeorg-tn-${LANGSUFFIX} )
 	linguas_xh? ( ${LANGLOC}/openofficeorg-xh-${LANGSUFFIX} )
-	linguas_zh_CN? ( ${LANGPACK}_zh-CN.sh )
-	linguas_zh_TW? ( ${LANGPACK}_zh-TW.sh )
+	linguas_zh_CN? ( ${LANGPACKPATH}_zh-CN.sh )
+	linguas_zh_TW? ( ${LANGPACKPATH}_zh-TW.sh )
 	linguas_zu? ( ${LANGLOC}/openofficeorg-zu-${LANGSUFFIX} )"
 
 HOMEPAGE="http://www.openoffice.org/"
