@@ -1,9 +1,9 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cgdb/cgdb-0.5.1.ebuild,v 1.1 2005/04/03 06:20:44 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cgdb/cgdb-0.5.1.ebuild,v 1.2 2005/04/20 21:58:14 blubb Exp $
 
 DESCRIPTION="curses interface to the GNU debugger"
-HOMEPAGE="http://sourceforge.net/projects/cgdb"
+HOMEPAGE="http://cgdb.sourceforge.net/"
 SRC_URI="mirror://sourceforge/cgdb/${P}.tar.gz"
 
 LICENSE="GPL-2"
