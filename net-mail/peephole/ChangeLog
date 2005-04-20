@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/peephole
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/peephole/ChangeLog,v 1.7 2004/11/25 05:32:18 weeve Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/peephole/ChangeLog,v 1.8 2005/04/20 21:31:13 hansmi Exp $
+
+  20 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> peephole-1.4.ebuild:
+  Stable on ppc.
 
   24 Nov 2004; Jason Wever <weeve@gentoo.org> peephole-1.4.ebuild:
   Added ~sparc keyword.
