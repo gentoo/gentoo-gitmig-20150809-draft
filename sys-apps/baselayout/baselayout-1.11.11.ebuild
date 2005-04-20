@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.12.0_alpha2.ebuild,v 1.2 2005/04/20 22:15:39 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.11.11.ebuild,v 1.1 2005/04/20 22:15:39 uberlord Exp $
 
 inherit flag-o-matic eutils toolchain-funcs multilib
 
-SV=1.7.1		# rc-scripts version
+SV=1.6.11		# rc-scripts version
 SVREV=			# rc-scripts rev
 
 S="${WORKDIR}/rc-scripts-${SV}${SVREV}"
@@ -24,7 +24,8 @@ IUSE="bootstrap build static uclibc"
 RDEPEND=">=sys-apps/sysvinit-2.84
 	!build? ( !bootstrap? (
 		>=sys-libs/readline-5.0-r1
-		>=app-shells/bash-3.0-r7
+		>=app-shells/bash-3.0-r9
+		>=sys-apps/coreutils-5.2.1
 	) )"
 DEPEND="virtual/os-headers"
 PROVIDE="virtual/baselayout"
@@ -419,7 +420,7 @@ pkg_postinst() {
 
 		# Now create tarball that can also be used for udev.
 		# Need GNU tar for -j so call it by absolute path.
-		/bin/tar --one-file-system -cjpf "${ROOT}/lib/udev-state/devices.tar.bz2" *
+		/bin/tar cjlpf "${ROOT}/lib/udev-state/devices.tar.bz2" *
 		rm -r *
 		cd ..
 		rmdir "${x}"
@@ -553,7 +554,9 @@ pkg_postinst() {
 		break
 	done
 
-	if sed -e 's/#.*//' ${ROOT}/etc/conf.d/{net,wireless} 2>/dev/null \
+	if sed -e 's/#.*//' ${ROOT}/etc/conf.d/net 2>/dev/null \
+		| egrep -q '\<(domain|nameservers|searchdomains)_' \
+		|| sed -e 's/#.*//' ${ROOT}/etc/conf.d/wireless 2>/dev/null \
 		| egrep -q '\<(domain|nameservers|searchdomains)_' ; then
 			echo
 			ewarn "You have depreciated variables in ${ROOT}/etc/conf.d/net"
@@ -578,4 +581,5 @@ pkg_postinst() {
 			ewarn "guarantee that they will work in future versions."
 			echo
 	fi
+
 }

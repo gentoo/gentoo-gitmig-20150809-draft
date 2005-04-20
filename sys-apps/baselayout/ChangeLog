@@ -1,9 +1,19 @@
 # ChangeLog for sys-apps/baselayout
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.231 2005/04/19 16:15:25 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.232 2005/04/20 22:15:39 uberlord Exp $
 
 # See the gentoo-src rc-scripts ChangeLog for up-to-date release information:
 # http://www.gentoo.org/cgi-bin/viewcvs.cgi/rc-scripts/ChangeLog?rev=HEAD&cvsroot=gentoo-src&content-type=text/vnd.viewcvs-markup
+
+*baselayout-1.11.11 (20 Apr 2005)
+
+  20 Apr 2005; Roy Marples <uberlord@gentoo.org> +baselayout-1.11.11.ebuild,
+  baselayout-1.12.0_alpha2.ebuild:
+  Update /etc/conf.d/{net,wireless} to change domain_* to dns_domain_*,
+  nameservers_* to dns_servers_* and searchdomains_* to dns_search_domains_*
+  
+  Added warning when using depracted variables iface_*, aliases_*, broadcasts_*,
+  netmasks_*, inet6_*, ipaddr_*, iproute_*
 
 *baselayout-1.12.0_alpha2 (19 Apr 2005)
 
