@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdewebdev
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdewebdev/ChangeLog,v 1.47 2005/04/20 20:57:36 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdewebdev/ChangeLog,v 1.48 2005/04/20 23:56:39 pylon Exp $
+
+  20 Apr 2005; Lars Weiler <pylon@gentoo.org> kdewebdev-3.3.2-r1.ebuild:
+  Stable on ppc; bug #89092.
 
   20 Apr 2005; Bryan Østergaard <kloeri@gentoo.org>
   kdewebdev-3.3.2-r1.ebuild:
