@@ -1,6 +1,19 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.227 2005/03/21 08:29:54 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.228 2005/04/20 22:07:11 carlo Exp $
+
+*kdelibs-3.4.0-r1 (20 Apr 2005)
+*kdelibs-3.3.2-r8 (20 Apr 2005)
+*kdelibs-3.2.3-r9 (20 Apr 2005)
+
+  20 Apr 2005; Carsten Lohrke <carlo@gentoo.org>
+  +files/post-3.2.3-kdelibs-idn.patch,
+  +files/post-3.2.3-kdelibs-kimgio.diff,
+  +files/post-3.3.2-kdelibs-idn-2.patch,
+  +files/post-3.3.2-kdelibs-kimgio.diff,
+  +files/post-3.4.0-kdelibs-kimgio.diff, +kdelibs-3.2.3-r9.ebuild,
+  +kdelibs-3.3.2-r8.ebuild, +kdelibs-3.4.0-r1.ebuild:
+  PCX Image Buffer Overflow Vulnerability, #88862
 
   21 Mar 2005; Guy Martin <gmsoft@gentoo.org> kdelibs-3.2.3-r7.ebuild:
   Stable on hppa.
