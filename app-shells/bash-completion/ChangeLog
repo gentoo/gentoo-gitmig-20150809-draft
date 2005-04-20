@@ -1,6 +1,18 @@
 # ChangeLog for app-shells/bash-completion
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/ChangeLog,v 1.115 2005/04/06 11:46:23 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/ChangeLog,v 1.116 2005/04/20 15:10:52 ka0ttic Exp $
+
+*bash-completion-20050121-r7 (20 Apr 2005)
+
+  20 Apr 2005; Aaron Walker <ka0ttic@gentoo.org>
+  +files/20050121/02_all_cvs.diff, +files/20050121/04_all_mplayer.diff,
+  +files/20050121/03_all_timidity.diff, +files/20050121/05_all_muttng.diff,
+  +files/20050121/01_all_gkrellm.diff, +files/20050121/06_all_tar.diff,
+  +files/20050121/07_all_find.diff, +files/20050121/08_all_lvm.diff,
+  -bash-completion-20050121-r6.ebuild, +bash-completion-20050121-r7.ebuild:
+  Revision bump; fixes bug 82810. New patch layout since we're starting to get
+  quite a few. Also include gkrellm patch which was accidentally dropped at
+  some point.
 
   06 Apr 2005; Ciaran McCreesh <ciaranm@gentoo.org>
   bash-completion-20050121-r1.ebuild:

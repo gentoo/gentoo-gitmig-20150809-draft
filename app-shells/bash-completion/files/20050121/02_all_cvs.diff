@@ -1,0 +1,11 @@
+--- bash_completion.orig/bash_completion	2005-01-20 06:29:03.982356288 -0500
++++ bash_completion/bash_completion	2005-01-20 06:44:08.957779112 -0500
+@@ -1582,7 +1583,7 @@
+ 				COMPREPLY=( $( compgen -W '${changed[@]:-} \
+ 						   ${newremoved[@]:-}' -- $cur ) )
+ 			else
+-				_filedir
++				COMPREPLY=($(compgen $default -- "$cur"))
+ 			fi
+ 		else
+ 			COMPREPLY=( $( compgen -W '-n -R -l -f -F -m -r' -- \

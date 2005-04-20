@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/bash-completion-20050121-r6.ebuild,v 1.1 2005/04/06 11:43:49 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/bash-completion-20050121-r7.ebuild,v 1.1 2005/04/20 15:10:52 ka0ttic Exp $
 
 inherit eutils
 
@@ -13,8 +13,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~ppc-macos ~s390 ~sparc ~x86"
 IUSE=""
 
-DEPEND="app-arch/tar
-	app-arch/bzip2"
+DEPEND=""
 RDEPEND="|| (
 				>=app-shells/bash-2.05a
 				app-shells/zsh
@@ -26,10 +25,7 @@ S="${WORKDIR}/${PN/-/_}"
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/${PV}-gentoo.diff
-	epatch ${FILESDIR}/${PV}-muttng.diff
-	epatch ${FILESDIR}/${PV}-tar.diff
-	epatch ${FILESDIR}/${PV}-find.diff
+	EPATCH_SUFFIX="diff" epatch ${FILESDIR}/${PV}
 }
 
 src_install() {
