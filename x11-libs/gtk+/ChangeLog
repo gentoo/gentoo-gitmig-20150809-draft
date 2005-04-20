@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.158 2005/04/18 16:06:18 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.159 2005/04/20 16:00:02 herbs Exp $
+
+  20 Apr 2005; Herbie Hopkins <herbs@gentoo.org> gtk+-2.6.4-r1.ebuild:
+  Stable on amd64.
 
   18 Apr 2005; Herbie Hopkins <herbs@gentoo.org> gtk+-2.6.7.ebuild:
   Minor multilib cleanup.
