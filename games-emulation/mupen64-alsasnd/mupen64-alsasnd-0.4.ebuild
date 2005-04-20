@@ -1,18 +1,17 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64-alsasnd/mupen64-alsasnd-0.4.ebuild,v 1.9 2005/04/17 22:39:37 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64-alsasnd/mupen64-alsasnd-0.4.ebuild,v 1.10 2005/04/20 00:28:43 morfic Exp $
 
 inherit games eutils
 
 DESCRIPTION="Alsa plugin for the mupen64 N64 emulator"
 HOMEPAGE="http://www.emutalk.net/showthread.php?threadid=16895"
-SRC_URI="alsa-plugin-${PV}fix.tar.bz2"
+SRC_URI="mirror://gentoo/alsa-plugin-${PV}fix.tar.bz2"
 
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="-* x86"
 IUSE="qt gtk gtk2"
-RESTRICT="fetch"
 
 DEPEND=">=media-libs/alsa-lib-0.9.0
 	|| (
