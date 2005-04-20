@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.14.4.ebuild,v 1.1 2005/04/19 22:19:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.14.4.ebuild,v 1.2 2005/04/20 04:41:09 vapier Exp $
 
 inherit flag-o-matic eutils toolchain-funcs mono libtool elisp-common
 
@@ -49,21 +49,24 @@ src_unpack() {
 }
 
 src_compile() {
-	# Build with --without-included-gettext (will use that of glibc), as we
-	# need preloadable_libintl.so for new help2man, bug #40162.
-	# Also note that it only gets build with USE=nls ...
-	# Lastly, we need to build without --disable-shared ...
+	local myconf=""
+	# Build with --without-included-gettext (on glibc systems)
+	if has_version sys-libs/glibc ; then
+		myconf="${myconf} --without-included-gettext $(use_enable nls)"
+	else
+		myconf="${myconf} --with-included-gettext --enable-nls"
+	fi
 	CXX=$(tc-getCC) \
 	econf \
 		--without-java \
-		--without-included-gettext \
-		$(use_enable nls) \
+		${myconf} \
 		|| die
 	emake || die
 }
 
 src_install() {
 	make install DESTDIR="${D}" || die "install failed"
+	use nls || rm -r "${D}"/usr/share/locale
 	dosym msgfmt /usr/bin/gmsgfmt #43435
 
 	exeopts -m0755
@@ -71,18 +74,18 @@ src_install() {
 	doexe gettext-tools/misc/gettextize || die "doexe"
 
 	# remove stuff that glibc handles
-	if ! use ppc-macos; then
+	if has_version sys-libs/glibc ; then
 		# Mac OS X does not provide these files.
-		rm -f ${D}/usr/include/libintl.h
-		rm -f ${D}/usr/$(get_libdir)/libintl.*
+		rm -f "${D}"/usr/include/libintl.h
+		rm -f "${D}"/usr/$(get_libdir)/libintl.*
 	fi
-	rm -rf ${D}/usr/share/locale/locale.alias
+	rm -f "${D}"/usr/share/locale/locale.alias
 
 	# older gettext's sometimes installed libintl ...
 	# need to keep the linked version or the system
 	# could die (things like sed link against it :/)
 	if use ppc-macos; then
-		rm -f ${D}/usr/lib/charset.alias
+		rm -f "${D}"/usr/lib/charset.alias
 		if [ -e "${ROOT}"/usr/$(get_libdir)/libintl.2.dylib ] ; then
 			cp -pPR ${ROOT}/usr/$(get_libdir)/libintl.2.dylib ${D}/usr/$(get_libdir)/
 			touch ${D}/usr/$(get_libdir)/libintl.2.dylib
