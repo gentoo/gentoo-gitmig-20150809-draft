@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.4-r3.ebuild,v 1.1 2005/03/19 17:51:20 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.4-r3.ebuild,v 1.2 2005/04/20 17:10:29 liquidx Exp $
 
 # NOTE about python-portage interactions :
 # - Do not add a pkg_setup() check for a certain version of portage
@@ -24,8 +24,9 @@ SLOT="2.4"
 
 KEYWORDS="~x86 ~ppc ~sparc ~arm ~hppa ~amd64 ~s390 ~alpha ~ia64 ~mips"
 
-DEPEND="virtual/libc
+RDEPEND="virtual/libc
 	>=sys-libs/zlib-1.1.3
+	dev-python/python-fchksum
 	!build? (
 		X? ( tcltk? ( >=dev-lang/tk-8.0 ) )
 		ncurses? ( >=sys-libs/ncurses-5.2 readline? ( >=sys-libs/readline-4.1 ) )
@@ -36,7 +37,7 @@ DEPEND="virtual/libc
 		dev-libs/expat
 	)"
 
-RDEPEND="${DEPEND} dev-python/python-fchksum"
+DEPEND="${RDEPEND}"
 
 # The dev-python/python-fchksum RDEPEND is needed to that this python provides
 # the functionality expected from previous pythons.
@@ -46,6 +47,10 @@ PROVIDE="virtual/python"
 src_unpack() {
 	unpack ${A}
 	cd ${S}
+
+	# unnecessary termcap dep in readline (#79013)
+	epatch ${FILESDIR}/${PN}-2.4-readline.patch
+
 	#Fixes security vulnerability in XML-RPC server - pythonhead (06 Feb 05)
 	#http://www.python.org/security/PSF-2005-001/
 	epatch ${FILESDIR}/${PN}-2.4-xmlrpc.patch

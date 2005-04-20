@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.3.5.ebuild,v 1.3 2005/03/15 12:17:58 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.3.5.ebuild,v 1.4 2005/04/20 17:10:29 liquidx Exp $
 
 # NOTE about python-portage interactions :
 # - Do not add a pkg_setup() check for a certain version of portage
@@ -23,7 +23,8 @@ SLOT="2.3"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~s390 ~sh ~sparc ~x86"
 IUSE="ncurses gdbm ssl readline tcltk berkdb bootstrap ipv6 build ucs2 doc X"
 
-DEPEND="virtual/libc
+RDEPEND="virtual/libc
+	dev-python/python-fchksum
 	>=sys-libs/zlib-1.1.3
 	!build? (
 		X? ( tcltk? ( >=dev-lang/tk-8.0 ) )
@@ -35,7 +36,7 @@ DEPEND="virtual/libc
 		dev-libs/expat
 	)"
 
-RDEPEND="${DEPEND} dev-python/python-fchksum"
+DEPEND="${RDEPEND}"
 
 # The dev-python/python-fchksum RDEPEND is needed to that this python provides
 # the functionality expected from previous pythons.
@@ -45,6 +46,10 @@ PROVIDE="virtual/python"
 src_unpack() {
 	unpack ${A}
 	cd ${S}
+
+	# fix readline detection problems due to missing termcap (#79013)
+	epatch ${FILESDIR}/${PN}-2.3-readline.patch
+
 	sed -ie 's/OpenBSD\/3.\[01234/OpenBSD\/3.\[012345/' configure || die "OpenBSD sed failed"
 	# adds /usr/lib/portage/pym to sys.path - liquidx (08 Oct 03)
 	# prepends /usr/lib/portage/pym to sys.path - liquidx (12 Apr 04)
@@ -55,6 +60,7 @@ src_unpack() {
 	epatch ${FILESDIR}/${PN}-2.3.2-disable_modules_and_ssl.patch
 	epatch ${FILESDIR}/${PN}-2.3-mimetypes_apache.patch
 	epatch ${FILESDIR}/${PN}-2.3-db4.2.patch
+
 	# installs to lib64
 	[ "$(get_libdir)" == "lib64" ] && epatch ${FILESDIR}/python-2.3.4-lib64.patch
 	# fix os.utime() on hppa. utimes it not supported but unfortunately reported as working - gmsoft (22 May 04)
