@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/spe/spe-0.5.1f.ebuild,v 1.2 2005/04/20 05:53:10 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/spe/spe-0.7.1a.ebuild,v 1.1 2005/04/20 05:53:10 kloeri Exp $
 
 inherit distutils eutils
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://spe.pycs.net/"
 SRC_URI="http://projects.blender.org/download.php/162/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="~x86 ~ppc"
 IUSE=""
 # Upstream have mismatched versions when unpacked..
 S="${WORKDIR}/${MY_P/1.f/1.d}"
