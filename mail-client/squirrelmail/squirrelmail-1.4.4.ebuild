@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/squirrelmail/squirrelmail-1.4.4.ebuild,v 1.5 2005/04/19 20:41:54 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/squirrelmail/squirrelmail-1.4.4.ebuild,v 1.6 2005/04/20 01:43:56 eradicator Exp $
 
-IUSE="crypt ldap spell ssl virus-scan mysql postgresql"
+IUSE="crypt ldap spell ssl virus-scan mysql postgres"
 
 inherit webapp eutils
 
@@ -44,7 +44,7 @@ RDEPEND="virtual/php
 	crypt? ( app-crypt/gnupg )
 	ldap? ( net-nds/openldap )
 	spell? ( || ( app-text/aspell app-text/ispell ) )
-	postgresql? ( dev-php/PEAR-DB )
+	postgres? ( dev-php/PEAR-DB )
 	mysql? ( dev-php/PEAR-DB )"
 
 src_unpack() {
