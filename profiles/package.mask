@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3846 2005/04/20 11:39:32 usata Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3847 2005/04/20 11:44:48 hollow Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Benedikt Boehm <hollow@gentoo.org> (20 Apr 2005)
+# Masked for testing
+sys-apps/baselayout-vserver
 
 # Mamoru KOMACHI <usata@gentoo.org>
 # No fix available for bug #87906
