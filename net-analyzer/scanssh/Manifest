@@ -1,19 +1,19 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 eb1b69b86833f1855ba92f84e0685004 scanssh-2.1.ebuild 693
-MD5 a43231364ea3b1663406ea801c1baa59 scanssh-2.0.ebuild 687
-MD5 2e0f90f2d6d447f8bf639859e5cefa1e ChangeLog 1560
+MD5 70a0b619a3a4d6bdc51ca7d151b6150e ChangeLog 1654
 MD5 5ef1334dd837ff015a4d3765d65d2f15 metadata.xml 319
 MD5 a163cabfb0a686754085c235298ae5d6 scanssh-1.6b.ebuild 618
+MD5 a43231364ea3b1663406ea801c1baa59 scanssh-2.0.ebuild 687
+MD5 0a2d630a98abfb6442c811253e77473d scanssh-2.1.ebuild 693
+MD5 41c4a3014bd820529d63f6b16a7b83d6 files/digest-scanssh-1.6b 63
 MD5 2541416a54e7fe091fb12c0e95754166 files/digest-scanssh-2.0 62
 MD5 82a68194d8671c58066260fd56901294 files/digest-scanssh-2.1 63
-MD5 41c4a3014bd820529d63f6b16a7b83d6 files/digest-scanssh-1.6b 63
 MD5 b1cc68d1f6c015808670555fff3da70f files/scanssh-2.0-fix-warnings.diff 1928
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFCZQ8EEZCkKN40op4RAsojAJsEnn9iE3zx4dakyOTMFuRC6UibwwCgvg+K
-MBmZ3ouyyN/JinSaMjSe2ss=
-=3CSS
+iD8DBQFCZbZ0KRy60XGEcJIRAoZgAKCb2K+bY737b0mkl3WrGS5wKrU6QgCgibaK
+4jtW9GBIak4N7zR0VoU8JMs=
+=/YoN
 -----END PGP SIGNATURE-----
