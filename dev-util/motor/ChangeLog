@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/motor
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/motor/ChangeLog,v 1.5 2004/07/24 17:54:25 liquidx Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/motor/ChangeLog,v 1.6 2005/04/20 14:34:52 liquidx Exp $
+
+*motor-3.4.0 (20 Apr 2005)
+
+  20 Apr 2005; Alastair Tse <liquidx@gentoo.org>
+  +files/motor-3.3.0-gcc34.patch, motor-3.3.0.ebuild, +motor-3.4.0.ebuild:
+  version bump
 
 *motor-3.3.0 (24 Jul 2004)
 
