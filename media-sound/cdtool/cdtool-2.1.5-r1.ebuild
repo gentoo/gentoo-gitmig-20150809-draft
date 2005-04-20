@@ -1,18 +1,18 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cdtool/cdtool-2.1.5.ebuild,v 1.10 2004/10/22 02:45:36 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cdtool/cdtool-2.1.5-r1.ebuild,v 1.1 2005/04/20 19:01:26 luckyduck Exp $
 
-IUSE=""
 DESCRIPTION="A package of command-line utilities to play and catalog cdroms."
 HOMEPAGE=""
 SRC_URI="http://www.ibiblio.org/pub/linux/apps/sound/cdrom/cli/cdtool-${PV}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 sparc amd64 ppc"
-DEPEND=""
+IUSE=""
+DEPEND="!media-sound/cdplay"
 
 src_compile() {
-	emake || die
+	emake || die "make failed"
 }
 
 src_install() {
@@ -30,8 +30,9 @@ src_install() {
 	dosym cdtool /usr/bin/cdshuffle
 	dosym cdtool /usr/bin/cdstart
 	dosym cdtool /usr/bin/cdstop
+	dosym cdtool /usr/bin/cdplay
 
 	doman cdctrl.1 cdown.1 cdtool.1
 
-	dodoc COPYING INSTALL README
+	dodoc INSTALL README
 }
