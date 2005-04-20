@@ -1,6 +1,9 @@
 # ChangeLog for sys-boot/grub
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.37 2005/04/06 00:49:19 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.38 2005/04/20 15:49:39 spb Exp $
+
+  20 Apr 2005; Stephen Bennett <spb@gentoo.org> grub-0.96-r1.ebuild:
+  Stable x86; older versions break with hardened gcc.
 
   06 Apr 2005; Mark Loeser <halcy0n@gentoo.org>
   +files/grub-0.96-r1-gcc4.patch, grub-0.96-r1.ebuild:
