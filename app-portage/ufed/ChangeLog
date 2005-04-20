@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/ufed
 # Copyright 2003-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/ufed/ChangeLog,v 1.23 2005/04/17 21:23:50 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/ufed/ChangeLog,v 1.24 2005/04/20 22:15:06 kloeri Exp $
+
+  20 Apr 2005; Bryan Østergaard <kloeri@gentoo.org> ufed-0.36.ebuild:
+  Stable on alpha, bug 88396.
 
 *ufed-0.37 (17 Apr 2005)
 
