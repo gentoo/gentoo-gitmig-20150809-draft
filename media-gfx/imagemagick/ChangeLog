@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/imagemagick
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/ChangeLog,v 1.133 2005/04/01 05:02:51 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/ChangeLog,v 1.134 2005/04/20 14:47:43 sekretarz Exp $
+
+*imagemagick-6.2.1.5 (20 Apr 2005)
+
+  20 Apr 2005; Karol Wojtaszek <sekretarz@gentoo.org>
+  +imagemagick-6.2.1.5.ebuild:
+  Perlmagick is now part of Imagemagick. Thanks to mcummings for help. Fixed
+  bug #87963
 
   01 Apr 2005; Aron Griffis <agriffis@gentoo.org> imagemagick-6.2.0.4.ebuild:
   stable on ia64
