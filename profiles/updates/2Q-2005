@@ -9,3 +9,4 @@ move dev-java/webgraph-bin dev-java/webgraph
 move dev-java/mg4j-bin dev-java/mg4j
 move dev-java/jal-bin dev-java/jal
 move net-misc/lrzsz net-dialup/lrzsz
+move net-misc/cutecom net-dialup/cutecom
