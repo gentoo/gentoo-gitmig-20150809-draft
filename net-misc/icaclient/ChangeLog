@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/icaclient
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/icaclient/ChangeLog,v 1.18 2004/12/12 16:36:27 weeve Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/icaclient/ChangeLog,v 1.19 2005/04/20 20:46:01 herbs Exp $
+
+  20 Apr 2005; Herbie Hopkins <herbs@gentoo.org> icaclient-8.0-r3.ebuild:
+  Multilib fixes, add ~amd64 keyword - Bug #89057
 
 *icaclient-8.0-r3 (12 Dec 2004)
 

@@ -1,6 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/icaclient/icaclient-8.0-r3.ebuild,v 1.2 2004/12/14 08:39:05 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/icaclient/icaclient-8.0-r3.ebuild,v 1.3 2005/04/20 20:46:01 herbs Exp $
+
+inherit multilib
 
 DESCRIPTION="ICA Client"
 HOMEPAGE="http://www.citrix.com/download/unix-downloads.asp"
@@ -8,16 +10,20 @@ SRC_URI="ICAClient-8.0-1.i386.rpm"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="-* ~x86"
+KEYWORDS="-* ~x86 ~amd64"
 IUSE="gnome"
 RESTRICT="fetch"
 
 RDEPEND="virtual/libc
-	virtual/x11"
+	virtual/x11
+	amd64? ( >=app-emulation/emul-linux-x86-xlibs-1.0 )"
 DEPEND="${RDEPEND}
 	>=app-arch/rpm-3.0.6"
 
 S="${WORKDIR}/usr"
+
+# Binary x86 package
+has_multilib_profile && ABI="x86"
 
 pkg_nofetch() {
 	einfo "Please download ${A} yourself from www.citrix.com"
@@ -70,8 +76,8 @@ src_install() {
 	doexe lib/ICAClient/wfica
 	insinto /etc/env.d
 	doins ${FILESDIR}/10ICAClient
-	insinto /usr/lib/nsbrowser/plugins
-	dosym /opt/ICAClient/npica.so /usr/lib/nsbrowser/plugins/npica.so
+	insinto /usr/$(get_libdir)/nsbrowser/plugins
+	dosym /opt/ICAClient/npica.so /usr/$(get_libdir)/nsbrowser/plugins/npica.so
 
 	if [ use gnome ]; then
 		insinto /usr/share/applications
