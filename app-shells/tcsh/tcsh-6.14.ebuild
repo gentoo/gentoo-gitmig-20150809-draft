@@ -1,8 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/tcsh/tcsh-6.13-r1.ebuild,v 1.2 2005/04/20 21:13:01 dragonheart Exp $
-
-inherit eutils
+# $Header: /var/cvsroot/gentoo-x86/app-shells/tcsh/tcsh-6.14.ebuild,v 1.1 2005/04/20 21:13:01 dragonheart Exp $
 
 MY_P="${PN}-${PV}.00"
 DESCRIPTION="Enhanced version of the Berkeley C shell (csh)"
@@ -12,7 +10,7 @@ SRC_URI="ftp://ftp.astron.com/pub/tcsh/${MY_P}.tar.gz
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc ~alpha ~arm ~hppa ~amd64 ~ia64 ~ppc64 ~mips"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~arm ~hppa ~amd64 ~ia64 ~ppc64 ~mips"
 IUSE="perl"
 
 RDEPEND="virtual/libc
@@ -21,25 +19,6 @@ RDEPEND="virtual/libc
 
 S="${WORKDIR}/${MY_P}"
 
-src_unpack() {
-	unpack ${MY_P}.tar.gz
-
-	cd ${S}
-
-	epatch ${FILESDIR}/tcsh-6.13.00-utmp.patch
-	epatch ${FILESDIR}/tcsh-6.13.00-dspmbyte.patch
-	epatch ${FILESDIR}/tcsh-6.11.00-termcap.patch
-	epatch ${FILESDIR}/tcsh-6.12.00-setpgrp.patch
-	epatch ${FILESDIR}/tcsh-6.13.00-charset.patch
-	epatch ${FILESDIR}/tcsh-6.13.00-iconv.patch
-	epatch ${FILESDIR}/tcsh-6.13.00-glob.patch
-	epatch ${FILESDIR}/tcsh-6.13.00-arch.patch
-	epatch ${FILESDIR}/tcsh-6.13.00-fcntl.patch
-	epatch ${FILESDIR}/tcsh-6.13.00-winchg.patch
-	epatch ${FILESDIR}/tcsh-6.13.00-codeset.patch
-	epatch ${FILESDIR}/tcsh-6.13.00-closem.patch
-	epatch ${FILESDIR}/tcsh-6.13.00-cstr.patch
-}
 
 src_compile() {
 	econf --prefix=/ || die "econf failed"

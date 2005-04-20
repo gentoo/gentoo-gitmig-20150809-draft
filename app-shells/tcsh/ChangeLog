@@ -1,6 +1,13 @@
 # ChangeLog for app-shells/tcsh
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/tcsh/ChangeLog,v 1.31 2005/03/02 08:54:49 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/tcsh/ChangeLog,v 1.32 2005/04/20 21:13:01 dragonheart Exp $
+
+*tcsh-6.14 (20 Apr 2005)
+
+  20 Apr 2005; Daniel Black <dragonheart@gentoo.org> tcsh-6.13-r1.ebuild,
+  +tcsh-6.14.ebuild:
+  6.13-r1 x86 stable. added version 6.14 that fixes Russian locale stuff as
+  per bug #83732. Thanks to Yuri Karaban <ykar@lisNOSPAMt.ru>
 
 *tcsh-6.13-r1 (02 Mar 2005)
 
