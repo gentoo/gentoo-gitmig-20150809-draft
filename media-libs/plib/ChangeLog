@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/plib
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/plib/ChangeLog,v 1.20 2005/04/19 13:23:20 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/plib/ChangeLog,v 1.21 2005/04/20 21:16:27 blubb Exp $
+
+  20 Apr 2005; Simon Stelling <blubb@gentoo.org> plib-1.8.4.ebuild:
+  stable on amd64
 
   19 Apr 2005; Seemant Kulleen <seemant@gentoo.org> plib-1.8.4.ebuild:
   stable on x86

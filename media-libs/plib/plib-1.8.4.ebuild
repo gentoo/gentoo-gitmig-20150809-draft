@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/plib/plib-1.8.4.ebuild,v 1.2 2005/04/19 13:23:20 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/plib/plib-1.8.4.ebuild,v 1.3 2005/04/20 21:16:27 blubb Exp $
 
 DESCRIPTION="multimedia library used by many games"
 HOMEPAGE="http://plib.sourceforge.net/"
@@ -8,7 +8,7 @@ SRC_URI="http://plib.sourceforge.net/dist/${P}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~sparc x86"
+KEYWORDS="~alpha amd64 ~hppa ~ppc ~sparc x86"
 IUSE=""
 
 DEPEND="virtual/x11
