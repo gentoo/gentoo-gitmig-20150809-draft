@@ -3,8 +3,8 @@ Index: instance.cpp
 RCS file: /home/kde/kdewebdev/kommander/executor/instance.cpp,v
 retrieving revision 1.49
 diff -u -3 -d -p -r1.49 instance.cpp
---- instance.cpp	29 Dec 2004 09:58:46 -0000	1.49
-+++ instance.cpp	13 Apr 2005 19:18:57 -0000
+--- kommander/executor/instance.cpp	29 Dec 2004 09:58:46 -0000	1.49
++++ kommander/executor/instance.cpp	13 Apr 2005 19:18:57 -0000
 @@ -131,6 +131,35 @@ bool Instance::build(QFile *a_file)
  
  bool Instance::run(QFile *a_file)
