@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv-ptune/ivtv-ptune-0.2.0_rc3.ebuild,v 1.3 2004/12/10 02:13:21 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv-ptune/ivtv-ptune-0.2.0_rc3.ebuild,v 1.4 2005/04/20 15:45:17 blubb Exp $
 
 DESCRIPTION="ivtv tuner perl scripts"
 HOMEPAGE="http://ivtv.sourceforge.net"
@@ -13,7 +13,7 @@ SRC_URI="http://205.209.168.201/~ckennedy/ivtv/${MY_P/1c/}/${MY_P}.tgz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 IUSE="X"
 
 DEPEND="dev-perl/Video-Frequencies
