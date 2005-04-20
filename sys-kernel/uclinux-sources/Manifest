@@ -3,7 +3,9 @@ MD5 c71d9b38c8cf82eb213754c9505e1cdd metadata.xml 299
 MD5 01bff29b5fe2d6b7952660aae9f74fc2 uclinux-sources-2.4.26_p0-r12.ebuild 3270
 MD5 b9af557700c063b4960c6d0e88c0e06e uclinux-sources-2.6.7_p0-r14.ebuild 3558
 MD5 70ac398323a4c9a3d3c26f5cdb6a1533 uclinux-sources-2.4.29_p0.ebuild 767
+MD5 e03374380b884cb2397929f689df749c uclinux-sources-2.6.11_p0.ebuild 857
 MD5 adaa6b7222dee1108f256696d88d8590 files/digest-uclinux-sources-2.4.29_p0 139
+MD5 2f6b34ba3171f77f3f7c89c34d321d25 files/digest-uclinux-sources-2.6.11_p0 207
 MD5 3f6f370e8be93508e492315860e508ac files/digest-uclinux-sources-2.6.7_p0-r14 287
 MD5 dbd2c0514e2320a3ce7cb18c43b07fda files/digest-uclinux-sources-2.4.26_p0-r12 304
 MD5 f4a1961e2ebf5d3463ff3802ea798d8e files/kernel-26-security-patches.tar.bz2 9206
