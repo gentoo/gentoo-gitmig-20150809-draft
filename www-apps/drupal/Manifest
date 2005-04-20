@@ -1,17 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ede3148356c37addd04ffed3398ce07b drupal-4.6.0_rc1.ebuild 6967
+MD5 ffa3c2ec1e88ab37fc8eedbe013491b4 ChangeLog 2181
+MD5 648e0a229e91ec02177bc8918cfc5e6e drupal-4.5.2.ebuild 30666
+MD5 4ce17d56782cb2a4bfa1a9cb4e62cef2 drupal-4.6.0.ebuild 14021
+MD5 dafdada02bb072949d7839aece868203 drupal-4.6.0_rc1.ebuild 14561
 MD5 88b2c84c1b3552228d711637cb7d9269 metadata.xml 274
-MD5 e875e69f861418bf86cc11b345718a96 ChangeLog 1836
-MD5 2d7a9791b9b0a762a0ca720a9d79023a drupal-4.5.2.ebuild 29077
+MD5 6e620a6c0cb76bfe99a1d535264081bc files/digest-drupal-4.6.0_rc1 67
 MD5 0f20a567ce1310d62af69bd56921cea3 files/postinstall-en.txt 2595
-MD5 279be41cdf9e391cd5d183fb221a952d files/digest-drupal-4.6.0_rc1 2370
-MD5 5b5286fcca0c20bf2707565156c28a50 files/digest-drupal-4.5.2 13537
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCZHTSjUHll2nfF60RAg/OAJwIN1Pd2dZwgV7VnqNlInhGKxoupgCfXnJx
-jLk2rYyWx1D8fHUNH/z6vUQ=
-=1E6T
------END PGP SIGNATURE-----
+MD5 60d816b2bdcf87d62c1f52a2dc8e776c files/digest-drupal-4.6.0 64
+MD5 6b1fbcd29d9526434338ea3f8b61e5c0 files/digest-drupal-4.5.2 64
