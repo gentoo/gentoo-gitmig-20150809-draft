@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.15 2005/02/13 14:05:54 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.16 2005/04/20 15:43:37 liquidx Exp $
 #
 # Author: Alastair Tse <liquidx@gentoo.org>
 #
@@ -51,10 +51,10 @@ python_version() {
 	tmpstr="$(${python} -V 2>&1 )"
 	export PYVER_ALL="${tmpstr#Python }"
 
-	export PYVER_MAJOR=$(echo ${PYVER_ALL} | cut -d. -f1)
-	export PYVER_MINOR=$(echo ${PYVER_ALL} | cut -d. -f2)
-	export PYVER_MICRO=$(echo ${PYVER_ALL} | cut -d. -f3-)
-	export PYVER="${PYVER_MAJOR}.${PYVER_MINOR}"
+	export PYVER="${PYVER_ALL%.*}"
+	export PYVER_MAJOR="${PYVER%.*}"
+	export PYVER_MINOR="${PYVER##*.}"
+	export PYVER_MICRO="${PYVER_ALL##*.}"
 }
 
 #
@@ -69,8 +69,8 @@ python_makesym() {
 
 #
 # name:   python_tkinter_exists
-# desc:   run without arguments, it will return TRUE(0) if python is compiled
-#         with tkinter or FALSE(1) if python is compiled without tkinter.
+# desc:   run without arguments, checks if python was compiled with Tkinter
+#         support.  If not, prints an error message and dies.
 #
 python_tkinter_exists() {
 	if ! python -c "import Tkinter" >/dev/null 2>&1; then
@@ -93,6 +93,7 @@ python_tkinter_exists() {
 #         fi
 #
 python_mod_exists() {
+	[ -z "$1" ] && die "${FUNCTION} requires an argument!"
 	if ! python -c "import $1" >/dev/null 2>&1; then
 		return 1
 	fi
@@ -138,7 +139,7 @@ python_mod_compile() {
 python_mod_optimize() {
 	local myroot
 	# strip trailing slash
-	myroot=$(echo ${ROOT} | sed 's:/$::')
+	myroot="${ROOT%/}"
 
 	# allow compiling for older python versions
 	if [ -n "${PYTHON_OVERRIDE_PYVER}" ]; then
@@ -171,9 +172,9 @@ python_mod_optimize() {
 #
 python_mod_cleanup() {
 	local SEARCH_PATH myroot
-	
+
 	# strip trailing slash
-	myroot=$(echo ${ROOT} | sed 's:/$::')
+	myroot="${ROOT%/}"
 
 	if [ $# -gt 0 ]; then
 		for path in $@; do
@@ -188,7 +189,7 @@ python_mod_cleanup() {
 	for path in ${SEARCH_PATH}; do
 		einfo "Cleaning orphaned Python bytecode from ${path} .."
 		for obj in $(find ${path} -name *.pyc); do
-			src_py="$(echo $obj | sed 's:c$::')"
+			src_py="${obj%c}"
 			if [ ! -f "${src_py}" ]; then
 				einfo "Purging ${src_py}[co]"
 				rm -f ${src_py}[co]
