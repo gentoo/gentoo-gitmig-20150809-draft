@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.2-r1.ebuild,v 1.7 2005/04/19 14:14:07 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.2-r1.ebuild,v 1.8 2005/04/20 14:53:52 herbs Exp $
 
 ONIGURUMA="onigd2_4_0"
 
@@ -53,7 +53,7 @@ src_unpack() {
 	epatch ${FILESDIR}/ruby-1.8.2-unittest.diff
 
 	# Fix a hardcoded lib path in configure script
-	sed -i -e 's:\(RUBY_LIB_PREFIX="\)${prefix}/lib:\1${libdir}:' \
+	sed -i -e "s:\(RUBY_LIB_PREFIX=\"\${prefix}/\)lib:\1$(get_libdir):" \
 		configure.in || die "sed failed"
 }
 

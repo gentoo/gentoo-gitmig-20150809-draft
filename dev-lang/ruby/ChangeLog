@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.131 2005/04/19 12:09:16 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.132 2005/04/20 14:53:52 herbs Exp $
+
+  20 Apr 2005; Herbie Hopkins <herbs@gentoo.org> ruby-1.8.2-r1.ebuild:
+  Fix my sed statement... bug #89736.
 
   19 Apr 2005; Herbie Hopkins <herbs@gentoo.org> ruby-1.8.2-r1.ebuild:
   Correct a hard-coded lib path in the configure script to close bug #76111
