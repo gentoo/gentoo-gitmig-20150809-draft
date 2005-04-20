@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 5d01df84ef40a8353c6d30630364893f actionpack-1.4.0.ebuild 667
 MD5 3eec9f3fe48b51f49dbc1f171a3b026f metadata.xml 157
 MD5 34f0dcba7379d86c49aca9f0827b703d ChangeLog 1187
@@ -8,17 +5,10 @@ MD5 1e5e486c7cb96d32cab48e0f739c50c3 actionpack-1.5.0.ebuild 694
 MD5 64aa2e78666810fc3bf25c10d44744cd actionpack-1.5.1.ebuild 700
 MD5 2624fd4db05bba69ddc02ab338a47077 actionpack-1.6.0.ebuild 694
 MD5 29b32092b4e57a690d94dadcedd67bc0 actionpack-1.7.0.ebuild 693
-MD5 39c813dc63e0e50ac00ecaeefb0a8a23 actionpack-1.8.0.ebuild 699
+MD5 5531109ea0b59a1159606e21143091d1 actionpack-1.8.1.ebuild 694
 MD5 1dcf06b2e95fbfdf9c2f499da5be240a files/digest-actionpack-1.4.0 65
 MD5 b957eed75058069dd6830b703539fb11 files/digest-actionpack-1.5.0 65
 MD5 39838a48d8797e44af1c01a72ff978f1 files/digest-actionpack-1.5.1 65
 MD5 7633ee045a3f6fb1108e76213ad3292d files/digest-actionpack-1.6.0 65
 MD5 0f3b14c6b6479dd1aafe7d7f867ab85d files/digest-actionpack-1.7.0 65
-MD5 e8c911d4b786255afa8a55578556efef files/digest-actionpack-1.8.0 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCZJnTz2gxt1z4IGYRAm0YAKCszrUSA1Q9L07FqVoxL/zsPfeMbQCgv3ZE
-02M7/YfLxtOvk8E+xar3GJg=
-=wyvu
------END PGP SIGNATURE-----
+MD5 a6448d89da7b19bb5147a5a46d92095a files/digest-actionpack-1.8.1 65

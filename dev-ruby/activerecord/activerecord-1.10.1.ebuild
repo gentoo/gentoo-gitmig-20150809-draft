@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activerecord/activerecord-1.10.0.ebuild,v 1.1 2005/04/19 05:34:32 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activerecord/activerecord-1.10.1.ebuild,v 1.1 2005/04/20 03:27:29 pythonhead Exp $
 
 inherit ruby gems
 
@@ -9,7 +9,7 @@ DESCRIPTION="Implements the ActiveRecord pattern (Fowler, PoEAA) for ORM"
 HOMEPAGE="http://rubyforge.org/projects/activerecord/"
 # The URL depends implicitly on the version, unfortunately. Even if you
 # change the filename on the end, it still downloads the same file.
-SRC_URI="http://rubyforge.org/frs/download.php/4115/${P}.gem"
+SRC_URI="http://rubyforge.org/frs/download.php/4146/${P}.gem"
 
 LICENSE="MIT"
 SLOT="0"
