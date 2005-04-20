@@ -1,6 +1,15 @@
 # ChangeLog for media-video/vcdimager
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vcdimager/ChangeLog,v 1.29 2005/04/08 19:44:16 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vcdimager/ChangeLog,v 1.30 2005/04/20 12:14:03 flameeyes Exp $
+
+*vcdimager-0.7.21 (20 Apr 2005)
+
+  20 Apr 2005; Diego Pettenò <flameeyes@gentoo.org>
+  vcdimager-0.7.20.ebuild, vcdimager-0.7.20-r1.ebuild,
+  vcdimager-0.7.20-r2.ebuild, +vcdimager-0.7.21.ebuild:
+  Added new upstream version (0.7.21) which can be used with latest 
+  libcdio (0.73). Fixed dependencies for 0.7.20 revisions to require a 
+  version previous to 0.71 (and added popt needed for cli programs).
 
   08 Apr 2005; Markus Rothe <corsair@gentoo.org> vcdimager-0.7.20-r2.ebuild:
   Stable on ppc64

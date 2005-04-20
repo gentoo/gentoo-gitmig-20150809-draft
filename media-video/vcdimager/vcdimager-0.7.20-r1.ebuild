@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vcdimager/vcdimager-0.7.20-r1.ebuild,v 1.6 2005/03/21 21:03:34 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vcdimager/vcdimager-0.7.20-r1.ebuild,v 1.7 2005/04/20 12:14:03 flameeyes Exp $
 
 inherit eutils
 
@@ -14,6 +14,8 @@ KEYWORDS="~x86 ~ppc ~amd64 ~alpha ~ia64 ~sparc ppc64"
 IUSE="xml2"
 
 DEPEND=">=dev-libs/libcdio-0.66
+	<=dev-libs/libcdio-0.70
+	dev-libs/popt
 	xml2? ( >=dev-libs/libxml2-2.5.11 )"
 
 src_unpack() {
