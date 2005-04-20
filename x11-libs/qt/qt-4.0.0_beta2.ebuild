@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.0.0_beta2.ebuild,v 1.6 2005/04/15 19:01:01 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.0.0_beta2.ebuild,v 1.7 2005/04/20 12:10:58 caleb Exp $
 
 inherit eutils flag-o-matic
 
@@ -84,6 +84,10 @@ src_compile() {
 	export SYSCONF=${D}${QTPREFIXDIR}/etc/settings
 	export PATH="${S}/bin:${PATH}"
 	export LD_LIBRARY_PATH="${S}/lib:${LD_LIBRARY_PATH}"
+
+	# Fixes for 89704
+	export LC_ALL=C
+	export LANG=C
 
 	# Let's just allow writing to these directories during Qt emerge
 	# as it makes Qt much happier.
