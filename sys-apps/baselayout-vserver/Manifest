@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 ce54dd47d5a880816ed8b3ef30f71d1e baselayout-vserver-1.0.ebuild 12850
+MD5 3e9ff61a954f04787f0271a753752cac baselayout-vserver-1.0.ebuild 12849
 MD5 74c5aadf8e3e9d642a20e64d1afefec8 metadata.xml 239
-MD5 dc82c95d4fbc335ef2a0e8a5039dcdcf ChangeLog 473
+MD5 c42d81956ce7e0f34b85cd0aa0bf3453 ChangeLog 571
 MD5 7c0cd50e4ac1dc062f5e6ab578e95659 files/copyright 2099
 MD5 76a9437d29bd77c416f76fbcf0cf2af2 files/vserver-changes 1642
 MD5 8a0d41f3187138a032d55869caedf650 files/digest-baselayout-vserver-1.0 144
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCZkFzmPFBzbX68WERAs9KAJ0R1bnztO7uZ/MmA6BgaEi1eynPsACeKcjs
-3nt1W1jMNhmhfCYoI23XZGI=
-=fk0r
+iD8DBQFCZpePmPFBzbX68WERAr8zAJ0aeZ/VtYLJfnBwPgSukTQy0CQGWACfQtri
+iXhziffQrQEfDLCro7PlMUI=
+=6tWx
 -----END PGP SIGNATURE-----

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout-vserver/baselayout-vserver-1.0.ebuild,v 1.1 2005/04/20 11:47:10 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout-vserver/baselayout-vserver-1.0.ebuild,v 1.2 2005/04/20 17:54:25 hollow Exp $
 
 inherit flag-o-matic eutils toolchain-funcs multilib
 
@@ -35,7 +35,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 
-	epatch ${FILESDIR}/rc-scripts-1.7.0-vserver.patch
+	epatch ${DISTDIR}/rc-scripts-1.7.0-vserver.patch
 
 	# Fix Sparc specific stuff
 	if [[ $(tc-arch) == "sparc" ]] ; then
