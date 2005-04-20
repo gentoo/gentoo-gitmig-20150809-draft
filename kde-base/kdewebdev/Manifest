@@ -1,7 +1,10 @@
-MD5 9cc8a1cb4a95e52355c68732fe1ef63e ChangeLog 5242
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-MD5 ae96fd8ee6fedc35431157d455227214 kdewebdev-3.3.2-r1.ebuild 510
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 04f4b76f94ab45b7c03cf16c8be6307a kdewebdev-3.4.0-r1.ebuild 536
+MD5 7943aa1e6041e6f0de18c642a9d2d503 kdewebdev-3.3.2-r1.ebuild 509
+MD5 bdd2d705931496cfbf81a75b745d1457 ChangeLog 5354
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 d8da4dc9bcb492f4f27562f6746840e7 kdewebdev-3.3.2.ebuild 429
 MD5 db668bfea09ef850d822ac165519ef71 kdewebdev-3.4.0.ebuild 451
 MD5 5c18da2078103b3b7c13439cc5980e13 files/digest-kdewebdev-3.3.2-r1 69
@@ -9,3 +12,10 @@ MD5 a6863fd743a5d77407c2de68efec9b90 files/digest-kdewebdev-3.4.0-r1 69
 MD5 a39adba926c0ea862356b01191d762a1 files/post-3.4-kdewebdev.diff 2698
 MD5 5c18da2078103b3b7c13439cc5980e13 files/digest-kdewebdev-3.3.2 69
 MD5 a6863fd743a5d77407c2de68efec9b90 files/digest-kdewebdev-3.4.0 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCZonHntT9W3vfTuoRAkPqAJ4nd3OLNsWRb9M5h1v+cdG/xRijVgCgouvX
+tobvn4uj6u5tGofekDn+bXA=
+=fj5R
+-----END PGP SIGNATURE-----

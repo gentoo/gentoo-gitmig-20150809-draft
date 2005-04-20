@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdewebdev
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdewebdev/ChangeLog,v 1.45 2005/04/20 13:03:20 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdewebdev/ChangeLog,v 1.46 2005/04/20 16:56:08 cryos Exp $
+
+  20 Apr 2005; Marcus D. Hanwell <cryos@gentoo.org>
+  kdewebdev-3.3.2-r1.ebuild:
+  Stable on amd64, bug 89092.
 
   20 Apr 2005; Jason Wever <weeve@gentoo.org> kdewebdev-3.3.2-r1.ebuild:
   Stable on SPARC wrt security bug #89092.
