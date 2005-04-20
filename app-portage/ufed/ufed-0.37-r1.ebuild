@@ -1,6 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/ufed/ufed-0.37.ebuild,v 1.1 2005/04/17 21:23:50 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/ufed/ufed-0.37-r1.ebuild,v 1.1 2005/04/20 23:14:36 truedfx Exp $
+
+inherit eutils
 
 DESCRIPTION="Gentoo Linux USE flags editor"
 HOMEPAGE="http://www.gentoo.org/"
@@ -16,6 +18,12 @@ RDEPEND="dev-lang/perl
 	>=dev-util/dialog-1.0.20050206
 	dev-perl/TermReadKey
 	sys-apps/grep"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${P}-nooverlay.patch
+}
 
 src_install() {
 	newsbin ufed.pl ufed || die

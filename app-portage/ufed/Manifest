@@ -1,25 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e0b0654bdb84c335b99618eb130b606f ufed-0.36.ebuild 661
-MD5 0e57184eaf0500c4035ecd9bc62ea0f0 ChangeLog 2981
+MD5 145b766bb17a2ca93087406778d58b86 ChangeLog 3458
 MD5 5b239a48dca80f4d77638418f77c1534 metadata.xml 175
-MD5 475a47da9927cf50a419bf30968cf18d ufed-0.35-r2.ebuild 678
-MD5 d7c7061e932965cf29e513d87dcf4591 ufed-0.35-r3.ebuild 888
-MD5 1b532fbc13ac37b0c32c131c28eb8e63 ufed-0.37.ebuild 674
-MD5 8d2bc2f609d970b14ec9d0a612455aec files/cascaded-profile-support.patch 1895
-MD5 acdcf613e49b8e59907b9be7acfe0267 files/quote-escape.patch 682
-MD5 6137dcf4b761f66c0d4d187a74b93bf8 files/digest-ufed-0.37 61
-MD5 f6d051548c2dd570064edc49440d3eba files/no-partial-match.patch 318
-MD5 8f87f3b0ab8514714758c3010e99cc0f files/digest-ufed-0.35-r3 134
-MD5 9aa470b56ba7c7059ec8b31cc43e2718 files/disabled-defaults.patch 526
-MD5 c8a0516c5520c99e559d7fb0c65983e9 files/too-many-flags.patch 875
-MD5 a7da464cbe65178edc2a25fdf2c17a58 files/digest-ufed-0.35-r2 61
+MD5 5034f2ba9f829ad884537987ae38872d ufed-0.37-r1.ebuild 774
+MD5 e0b0654bdb84c335b99618eb130b606f ufed-0.36.ebuild 661
+MD5 6137dcf4b761f66c0d4d187a74b93bf8 files/digest-ufed-0.37-r1 61
+MD5 8057c0b574856c637b63cb0db9a26560 files/ufed-0.37-nooverlay.patch 433
 MD5 4c94b074dd20cd29d231b0bf50bea06c files/digest-ufed-0.36 61
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCZtRxKf2g/qXtneoRAg0mAJ9v1G9cw9bOp4uokCECXoxMo/QWRgCgskhE
-72lklnmnzQxr+Rm6QdO5qhE=
-=Hfyx
------END PGP SIGNATURE-----

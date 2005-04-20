@@ -1,0 +1,11 @@
+--- ufed-0.37.orig/ufed.pl
++++ ufed-0.37/ufed.pl
+@@ -184,7 +184,7 @@
+ 	my %env = read_sh "/etc/make.conf";
+ 	push @make_conf_flags, @{$env{USE}} if exists $env{USE};
+ 	$make_conf_only = (grep { $_ eq '-*' } @make_conf_flags) > 0;
+-	@portagedirs = $environment{PORTDIR}, split ' ', $environment{PORTDIR_OVERLAY};
++	@portagedirs = $environment{PORTDIR}, split ' ', $environment{PORTDIR_OVERLAY} || '';
+ }
+ 
+ sub read_make_defaults() {
