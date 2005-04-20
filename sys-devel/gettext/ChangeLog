@@ -1,6 +1,13 @@
 # ChangeLog for sys-devel/gettext
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/ChangeLog,v 1.86 2005/04/19 22:19:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/ChangeLog,v 1.87 2005/04/20 04:35:02 vapier Exp $
+
+*gettext-0.14.1-r1 (20 Apr 2005)
+
+  20 Apr 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/gettext-0.14.1-tempfile.patch, -gettext-0.14.1.ebuild,
+  +gettext-0.14.1-r1.ebuild:
+  Add tempfile patch to resolve #85766.
 
 *gettext-0.14.4 (19 Apr 2005)
 
