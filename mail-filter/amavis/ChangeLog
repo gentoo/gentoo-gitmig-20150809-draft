@@ -1,6 +1,12 @@
 # ChangeLog for mail-filter/amavis
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavis/ChangeLog,v 1.10 2004/07/18 15:40:35 aliz Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavis/ChangeLog,v 1.11 2005/04/20 07:17:16 ticho Exp $
+
+*amavis-0.3.12-r1 (20 Apr 2005)
+
+  20 Apr 2005; Andrej Kacian <ticho@gentoo.org> +amavis-0.3.12-r1.ebuild:
+  Revision bump to update dependency on dev-perl/Convert-UUlib. Security bug
+  89501.
 
   13 Jul 2004; Tuan Van <langthang@gentoo.org> amavis-0.3.12.ebuild:
   use epatch instead of patch, trying not to use "awk."
