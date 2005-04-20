@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/perlmagick
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/perlmagick/ChangeLog,v 1.64 2005/04/01 05:06:15 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/perlmagick/ChangeLog,v 1.65 2005/04/20 14:52:52 sekretarz Exp $
+
+*perlmagick-6.2.1.5 (20 Apr 2005)
+
+  20 Apr 2005; Karol Wojtaszek <sekretarz@gentoo.org>
+  +perlmagick-6.2.1.5.ebuild:
+  Version bump, this is now obsolete package and it'll be removed from portage
+  soon. Perlmagick is now part of Imagemagick
 
   01 Apr 2005; Aron Griffis <agriffis@gentoo.org>
   perlmagick-6.2.0.4-r1.ebuild:
