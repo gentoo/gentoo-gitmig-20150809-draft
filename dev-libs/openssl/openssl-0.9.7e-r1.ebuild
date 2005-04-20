@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.7e-r1.ebuild,v 1.6 2005/04/16 06:06:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.7e-r1.ebuild,v 1.7 2005/04/20 17:24:19 solar Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://openssl/source/${P}.tar.gz
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
-IUSE="emacs uclibc"
+IUSE="emacs uclibc bindist"
 
 RDEPEND="virtual/libc"
 DEPEND="${RDEPEND}
@@ -45,14 +45,10 @@ src_unpack() {
 		;;
 		3.4 | 3.3 )
 			filter-flags -fprefetch-loop-arrays -freduce-all-givs -funroll-loops
-			if [[ ${ARCH} == "ppc" ||  ${ARCH} == "ppc64" ]] ; then
-				append-flags -fno-strict-aliasing
-			fi
+			[[ ${ARCH} == "ppc" ||  ${ARCH} == "ppc64" ]] && append-flags -fno-strict-aliasing
 			# <robbat2@gentoo.org> (14 Feb 2004)
 			# bug #69550 openssl breaks in some cases.
-			if [[ ${ARCH} == "x86" ]] ; then
-				append-flags -Wa,--noexecstack
-			fi
+			[[ ${ARCH} == "x86" ]] && append-flags -Wa,--noexecstack
 		;;
 	esac
 
@@ -131,6 +127,13 @@ src_compile() {
 	# openssl-0.9.7
 	cd ${WORKDIR}/${P}
 
+	# Clean out patent-or-otherwise-encumbered code.
+	# MDC-2: 4,908,861 13/03/2007
+	# IDEA:  5,214,703 25/05/2010
+	# RC5:   5,724,428 03/03/2015
+	# EC:    ????????? ??/??/2015
+	use bindist && conf_options="no-idea no-rc5 no-mdc2 -no-ec"
+
 	# Build correctly for mips, mips64, & mipsel
 	if use mips; then
 		if [[ ${CHOST/mipsel} != ${CHOST} ]] ; then
@@ -139,17 +142,18 @@ src_compile() {
 			mipsarch="linux-mips"
 		fi
 
-		./Configure ${mipsarch} --prefix=/usr --openssldir=/etc/ssl \
+		./Configure ${mipsarch} ${conf_options} --prefix=/usr --openssldir=/etc/ssl \
 			shared threads || die
 	# force sparcv8 on sparc32 profile
 	elif [ "$PROFILE_ARCH" = "sparc" ]; then
-		./Configure linux-sparcv8 --prefix=/usr --openssldir=/etc/ssl \
+		./Configure linux-sparcv8 ${conf_options} --prefix=/usr --openssldir=/etc/ssl \
 			shared threads || die
 	elif [ "${ABI}" = "sparc64" ]; then
-		./Configure linux64-sparcv9 --prefix=/usr --openssldir=/etc/ssl \
+		./Configure linux64-sparcv9 ${conf_options} --prefix=/usr --openssldir=/etc/ssl \
 			shared threads || die
 	else
-		./config --prefix=/usr --openssldir=/etc/ssl shared threads || die "config failed"
+		./config ${conf_options} --prefix=/usr --openssldir=/etc/ssl shared threads \
+			|| die "config failed"
 	fi
 
 	einfo "Compiling ${P}"
