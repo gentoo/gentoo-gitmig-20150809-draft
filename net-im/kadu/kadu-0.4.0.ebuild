@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/kadu-0.4.0.ebuild,v 1.1 2005/04/17 21:46:55 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/kadu-0.4.0.ebuild,v 1.2 2005/04/20 20:52:45 sekretarz Exp $
 
 inherit flag-o-matic eutils
 
@@ -17,6 +17,7 @@ SPY="0.0.7-test"
 CHESS="0.3-Calista"
 FIREWALL="20050308"
 LED_NOTIFY="0.2"
+SSVER="0.2.0"
 
 THEMES="kadu-theme-crystal-16
 	kadu-theme-crystal-22
@@ -76,13 +77,15 @@ SRC_URI="http://kadu.net/download/stable/${P}.tar.bz2
 	    http://biprowod.wroclaw.pl/kadu/inne/spy-${SPY}.tar.gz
 	    http://users.skorpion.wroc.pl/arturmat/firewall/files/firewall-${FIREWALL}.tar.bz2
 	    http://biprowod.wroclaw.pl/kadu/KaduChess-${CHESS}.tar.bz2
-	    http://pcb45.tech.us.edu.pl/~blysk/led_notify/led_notify-${LED_NOTIFY}.tar.bz2 )
+	    http://pcb45.tech.us.edu.pl/~blysk/led_notify/led_notify-${LED_NOTIFY}.tar.bz2
+		http://scripts.one.pl/screenshot/stable/0.4.0/screenshot-${SSVER}.tar.gz )
 	xmms? ( http://scripts.one.pl/xmms/devel/0.4.0/xmms-${XMMS}.tar.gz )
 	xosd? ( http://www.kadu.net/~joi/xosd_notify/xosd_notify-${XOSD_NOTIFY}.tar.bz2 )
 	mail? ( http://michal.kernel-panic.cjb.net/mail/tars/release/mail-${MAIL}.tar.bz2 )
 	spell? (
 	http://scripts.one.pl/spellchecker/devel/0.4.0/spellchecker-${SPELLCHECKER}.tar.gz
 	)"
+
 
 S=${WORKDIR}/${PN}
 
@@ -131,6 +134,7 @@ src_unpack() {
 	enable_module extramodules spy
 	enable_module extramodules led_notify
 	enable_module extramodules tabs
+	enable_module extramodules screenshot
 
 	# put some patches
 	epatch ${FILESDIR}/kadu-toolbar_toggle-gentoo.diff
