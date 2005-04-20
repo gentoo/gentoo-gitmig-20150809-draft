@@ -1,6 +1,12 @@
 # ChangeLog for media-video/vlc
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.78 2005/04/18 23:59:06 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.79 2005/04/20 13:45:35 flameeyes Exp $
+
+  20 Apr 2005; Diego Pettenò <flameeyes@gentoo.org> vlc-0.6.2.ebuild,
+  vlc-0.6.2-r1.ebuild, vlc-0.7.2.ebuild, vlc-0.8.1.ebuild,
+  vlc-0.8.1-r1.ebuild:
+  Removed deprecated oggvorbis useflag. Made vlc-0.8.1-r1 install all the docs
+  by dodoc instead of installing it on /usr/share/doc/vlc.
 
   18 Apr 2005; Diego Pettenò <flameeyes@gentoo.org> metadata.xml,
   -vlc-0.6.0-r1.ebuild, -vlc-0.6.1.ebuild, vlc-0.6.2.ebuild,

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.7.2.ebuild,v 1.11 2005/03/23 16:18:35 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.7.2.ebuild,v 1.12 2005/04/20 13:45:35 flameeyes Exp $
 
 # Missing support for...
 #	tarkin - package not in portage yet - experimental
@@ -16,7 +16,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ~ppc ~x86"
 IUSE="arts ncurses dvd gtk nls 3dfx svga fbcon esd X alsa ggi speex
-	oggvorbis gnome xv oss sdl aalib slp bidi truetype v4l lirc
+	ogg vorbis gnome xv oss sdl aalib slp bidi truetype v4l lirc
 	wxwindows imlib matroska dvb mozilla debug aac theora
 	xosd png"
 
@@ -43,8 +43,8 @@ RDEPEND="X? ( virtual/x11 )
 	mozilla? ( >=www-client/mozilla-1.4 )
 	ncurses? ( sys-libs/ncurses )
 	nls? ( >=sys-devel/gettext-0.12.1 )
-	oggvorbis? ( >=media-libs/libvorbis-1.0
-		>=media-libs/libogg-1.0 )
+	vorbis? ( >=media-libs/libvorbis-1.0 )
+	ogg? ( >=media-libs/libogg-1.0 )
 	sdl? ( >=media-libs/libsdl-1.2.5 )
 	slp? ( >=net-libs/openslp-1.0.10 )
 	bidi? ( >=dev-libs/fribidi-0.10.4 )
@@ -159,7 +159,7 @@ src_compile() {
 		$(use_enable joystick) $(use_enable lirc) \
 		$(use_enable arts) \
 		$(use_enable gtk) $(use_enable gnome) \
-		$(use_enable oggvorbis ogg) $(use_enable oggvorbis vorbis) \
+		$(use_enable ogg) $(use_enable vorbis vorbis) \
 		$(use_enable theora) \
 		$(use_enable speex) \
 		$(use_enable matroska mkv) \

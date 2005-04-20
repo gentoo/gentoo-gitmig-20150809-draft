@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.1-r1.ebuild,v 1.4 2005/04/17 21:15:17 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.1-r1.ebuild,v 1.5 2005/04/20 13:45:35 flameeyes Exp $
 
 # Missing support for...
 #	tarkin - package not in portage yet - experimental
@@ -15,7 +15,7 @@ SRC_URI="http://download.videolan.org/pub/videolan/${PN}/${PV}/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
-IUSE="a52 3dfx nls unicode debug altivec httpd vlm gnutls live v4l cdio cddb cdda ogg matroska dvb dvd vcd ffmpeg aac dts flac mpeg oggvorbis theora X opengl freetype svg fbcon svga oss aalib ggi libcaca esd arts alsa wxwindows ncurses xosd lirc joystick mozilla hal stream mad xv bidi gtk2 sdl threads ssl portaudio"
+IUSE="a52 3dfx nls unicode debug altivec httpd vlm gnutls live v4l cdio cddb cdda ogg matroska dvb dvd vcd ffmpeg aac dts flac mpeg vorbis theora X opengl freetype svg fbcon svga oss aalib ggi libcaca esd arts alsa wxwindows ncurses xosd lirc joystick mozilla hal stream mad xv bidi gtk2 sdl threads ssl portaudio"
 
 DEPEND="hal? ( >=sys-apps/hal-0.2.97 )
 		cdio? ( >=dev-libs/libcdio-0.70 )
@@ -34,7 +34,7 @@ DEPEND="hal? ( >=sys-apps/hal-0.2.97 )
 		dts? ( media-libs/libdts )
 		flac? ( media-libs/flac )
 		mpeg? ( >=media-libs/libmpeg2-0.3.2 )
-		oggvorbis? ( media-libs/libvorbis )
+		vorbis? ( media-libs/libvorbis )
 		theora? ( media-libs/libtheora )
 		X? ( virtual/x11 )
 		xv? ( virtual/x11 )
@@ -145,7 +145,7 @@ src_compile () {
 		$(use_enable ogg) \
 		$(use_enable matroska mkv) \
 		$(use_enable flac) \
-		$(use_enable oggvorbis vorbis) \
+		$(use_enable vorbis) \
 		$(use_enable theora) \
 		$(use_enable X x11) \
 		$(use_enable xv xvideo) \
@@ -202,13 +202,15 @@ src_compile () {
 src_install() {
 	make DESTDIR="${D}" install || die "Installation failed!"
 
-	dodoc ABOUT-NLS AUTHORS MAINTAINERS INSTALL HACKING THANKS TODO NEWS README
+	dodoc ABOUT-NLS AUTHORS MAINTAINERS HACKING THANKS TODO NEWS README \
+		doc/fortunes.txt doc/intf-cdda.txt doc/intf-vcd.txt
 
 	rm -r ${D}/usr/share/vlc/vlc*.png ${D}/usr/share/vlc/vlc*.xpm ${D}/usr/share/vlc/vlc*.ico \
 		${D}/usr/share/vlc/kvlc*.png ${D}/usr/share/vlc/kvlc*.xpm ${D}/usr/share/vlc/qvlc*.png \
 		${D}/usr/share/vlc/qvlc*.xpm ${D}/usr/share/vlc/gvlc*.png ${D}/usr/share/vlc/gvlc*.xpm \
 		${D}/usr/share/vlc/gvlc*.ico ${D}/usr/share/vlc/gnome-vlc*.png \
-		${D}/usr/share/vlc/gnome-vlc*.xpm ${D}/usr/share/vlc/skins2
+		${D}/usr/share/vlc/gnome-vlc*.xpm ${D}/usr/share/vlc/skins2 \
+		${D}/usr/share/doc/vlc
 
 	for res in 16 32 48; do
 		insinto /usr/share/icons/hicolor/${res}x${res}/apps/

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.6.2.ebuild,v 1.25 2005/04/18 23:59:06 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.6.2.ebuild,v 1.26 2005/04/20 13:45:35 flameeyes Exp $
 
 # Missing support for...
 #	tarkin - package not in portage yet - experimental
@@ -17,7 +17,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha x86"
 IUSE="3dfx X aalib alsa altivec arts debug dvb dvd dvdread esd aac fbcon ggi
-	gnome gtk imlib joystick kde lirc mad matroska mozilla ncurses nls oggvorbis oss
+	gnome gtk imlib joystick kde lirc mad matroska mozilla ncurses nls ogg vorbis oss
 	qt sdl slp svga truetype v4l wxwindows xosd xv xvid"
 
 RDEPEND="X? ( virtual/x11 )
@@ -42,7 +42,8 @@ RDEPEND="X? ( virtual/x11 )
 	mozilla? ( >=www-client/mozilla-1.4 )
 	ncurses? ( sys-libs/ncurses )
 	nls? ( sys-devel/gettext )
-	oggvorbis? ( >=media-libs/libvorbis-1.0 >=media-libs/libogg-1.0 )
+	vorbis? ( >=media-libs/libvorbis-1.0 )
+	ogg? ( >=media-libs/libogg-1.0 )
 	qt? ( x11-libs/qt )
 	sdl? ( >=media-libs/libsdl-1.2.5 )
 	slp? ( >=net-libs/openslp-1.0.10 )
@@ -157,7 +158,7 @@ src_compile(){
 		`use_enable joystick` `use_enable lirc` \
 		`use_enable qt` `use_enable kde` `use_enable arts` \
 		`use_enable gtk` `use_enable gnome` \
-		`use_enable oggvorbis ogg` `use_enable oggvorbis vorbis` \
+		`use_enable ogg` `use_enable vorbis` \
 		`use_enable matroska mkv` \
 		`use_enable truetype freetype` \
 		`use_enable svga svgalib` \
