@@ -1,15 +1,15 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snortalog/snortalog-2.4.0.ebuild,v 1.1 2005/04/14 12:51:04 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snortalog/snortalog-2.4.0.ebuild,v 1.2 2005/04/20 16:34:14 vanquirius Exp $
 
 inherit eutils
 
 MY_P="${PN}_v${PV}"
 
 DESCRIPTION="a powerful perl script that summarizes snort logs"
-SRC_URI="http://jeremy.chartier.free.fr/${PN}/${MY_P}.tgz"
-HOMEPAGE="http://jeremy.chartier.free.fr/snortalog/
+SRC_URI="http://jeremy.chartier.free.fr/${PN}/${MY_P}.tgz
 	tcltk? ( mirror://gentoo/${P}-fix-gui.diff.gz )"
+HOMEPAGE="http://jeremy.chartier.free.fr/snortalog/"
 
 KEYWORDS="~x86 ~ppc"
 LICENSE="GPL-2"
