@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 945e2942112bbb87efedac0e564f20d2 Mail-ClamAV-0.13.ebuild 633
-MD5 6b3586329ce3bcaa2c5b5461689de410 ChangeLog 485
+MD5 b9c75dffbbfd6ba38b8c5e8d1b9b78ef Mail-ClamAV-0.13.ebuild 632
 MD5 97b65cd62d29380ccce2196b73b5cd08 metadata.xml 403
+MD5 55c2fa6b1d17a7a9d63b9cc549cb59e0 ChangeLog 579
 MD5 a804b764f486dbf0861e319264dbd3c5 files/digest-Mail-ClamAV-0.13 67
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFB55IYI1lqEGTUzyQRAr6mAJ0dQKcVSzszzQrFyNCUAmci5++PhACguQqS
-cjEW3xW8B1wLe24WwfU0KWo=
-=rKzH
+iD8DBQFCZnEMgMUyd/cdjWsRAmTQAKCI3r6M1kK9s7ZWVm1igLqYKocBsACdHCn9
+QpxBGq0gkFqPYIa6BJDG7yE=
+=Pf1E
 -----END PGP SIGNATURE-----
