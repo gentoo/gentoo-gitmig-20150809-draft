@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/fakk2/fakk2-1.02.ebuild,v 1.6 2005/03/07 14:07:51 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/fakk2/fakk2-1.02.ebuild,v 1.7 2005/04/20 14:09:46 wolf31o2 Exp $
 
 inherit games
 
@@ -63,8 +63,12 @@ src_install() {
 }
 
 pkg_postinst() {
+	games_pkg_postinst
+	echo
+	ewarn "There are two possible security bugs in this package, both causing a denial of"
+	ewarn "service.  One affects the game when running a server, the other when running as"
+	ewarn "a client.  For more information, see bug #82149."
+	echo
 	einfo "To play the game run:"
 	einfo " fakk2"
-
-	games_pkg_postinst
 }
