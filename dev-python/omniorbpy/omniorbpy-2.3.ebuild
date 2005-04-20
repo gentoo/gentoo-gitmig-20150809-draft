@@ -1,6 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/omniorbpy/omniorbpy-2.3.ebuild,v 1.3 2004/11/17 13:23:34 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/omniorbpy/omniorbpy-2.3.ebuild,v 1.4 2005/04/20 15:31:18 liquidx Exp $
+
+inherit python
 
 MY_P=${P/omniorb/omniORB}
 S=${WORKDIR}/${MY_P}
@@ -22,11 +24,8 @@ src_compile() {
 
 	use ssl && MY_CONF="${MY_CONF} --with-openssl=/usr"
 
-	#MY_PY=/usr/bin/python`python -c "import sys; print sys.version[:3]"`
-	MY_PY=/usr/bin/python2.2
-	# install modules for python which is default python interpreter in
-	# the system
-
+    python_version
+	MY_PY=/usr/bin/python${PYVER}
 	PYTHON=${MY_PY} ./configure ${MY_CONF} || die "./configure failed"
 	emake || die
 }

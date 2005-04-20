@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/omniorbpy
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/omniorbpy/ChangeLog,v 1.7 2004/12/30 22:41:50 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/omniorbpy/ChangeLog,v 1.8 2005/04/20 15:31:18 liquidx Exp $
+
+*omniorbpy-2.6 (20 Apr 2005)
+
+  20 Apr 2005; Alastair Tse <liquidx@gentoo.org> omniorbpy-2.3.ebuild,
+  omniorbpy-2.5.ebuild, +omniorbpy-2.6.ebuild:
+  version bump. also fix ssl useflag typo (#82820). fixed hardcoding of python
+  version in 2.3 (#89794)
 
   30 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance

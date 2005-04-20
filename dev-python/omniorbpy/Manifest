@@ -1,8 +1,20 @@
-MD5 6e01a95c6f11714345a1657e1ec070ee omniorbpy-2.4.ebuild 2033
-MD5 37ff3880f19ef44811a6ca93e49dec1a omniorbpy-2.3.ebuild 2060
-MD5 bec3d9fb5748adbaa09c13360e38649d ChangeLog 2112
-MD5 9066c2edded438c2eb07b4456533fd64 omniorbpy-2.5.ebuild 2778
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 122031f897d2aeabde6f7eb1bcfaa79d ChangeLog 2366
 MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
-MD5 8fe97fa28de50ac6eb2a16622687c0a2 files/digest-omniorbpy-2.5 143
-MD5 af7d67adb7657fe0cbf30d2f773cac25 files/digest-omniorbpy-2.4 65
+MD5 ca0b53f0deb312cd6ea00a4e019de30f omniorbpy-2.3.ebuild 1945
+MD5 6e01a95c6f11714345a1657e1ec070ee omniorbpy-2.4.ebuild 2033
+MD5 b5570fd09f9f263b62382075ef5b9e29 omniorbpy-2.5.ebuild 2770
+MD5 9ddb3486aa7623c204d4a5e6cd400629 omniorbpy-2.6.ebuild 2794
 MD5 83c93e6e67ee905f02269466a4f296fd files/digest-omniorbpy-2.3 65
+MD5 af7d67adb7657fe0cbf30d2f773cac25 files/digest-omniorbpy-2.4 65
+MD5 8fe97fa28de50ac6eb2a16622687c0a2 files/digest-omniorbpy-2.5 143
+MD5 5a4a58b66c4fa989a62d00605eec2d25 files/digest-omniorbpy-2.6 143
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCZnXlTM53OX+9xmMRAt16AJ9mQHyMHvYSe7xp9lLJvJ+DhSyKpgCgyH7h
+ESO4Z8lKjhdLdWFbt7aip38=
+=GBrt
+-----END PGP SIGNATURE-----
