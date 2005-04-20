@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/trac/trac-0.8.ebuild,v 1.1 2004/12/11 21:57:13 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/trac/trac-0.8.ebuild,v 1.2 2005/04/20 21:49:00 hansmi Exp $
 
 inherit distutils webapp
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://trac.edgewall.com/"
 SRC_URI="http://ftp.edgewall.com/pub/trac/${P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc ~sparc"
+KEYWORDS="x86 ppc ~sparc"
 IUSE="vhosts"
 
 DEPEND="$DEPEND
