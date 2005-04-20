@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/wine
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.92 2005/04/19 16:40:13 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.93 2005/04/20 23:17:43 vapier Exp $
+
+*wine-20050419 (20 Apr 2005)
+
+  20 Apr 2005; Mike Frysinger <vapier@gentoo.org> +wine-20050419.ebuild:
+  Version bump #89795 by Patrizio Bassi.
 
   19 Apr 2005; Herbie Hopkins <herbs@gentoo.org> wine-20050310-r1.ebuild:
   Set CC=$(tc-getCC) to fix compilation on amd64, bug #88725.
