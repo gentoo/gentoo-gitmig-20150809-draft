@@ -1,18 +1,20 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 4899e93d9f8615d282e1ad6eef0adea4 email-2.3.3.ebuild 938
-MD5 8eedf4de603f1b16bdc17cb77aa834f0 email-2.3.0.ebuild 962
-MD5 b193a3ce261a0c6626b39c65c0b86fb0 email-2.3.2.ebuild 936
-MD5 0c51373aaa7b11e7c59c61f3e262b511 ChangeLog 1267
+MD5 ff27f9a9659fa8b9a8a01606948f71df ChangeLog 1597
+MD5 9421583ab1e2335641f34e5f356d5c98 email-2.3.4.ebuild 1140
+MD5 8cbf3cdf2f0f3da42c5a0ac818e81aa6 email-2.3.3.ebuild 1140
 MD5 850ad3e7c3a77515ca7545c20870b45f metadata.xml 326
-MD5 7d522f333c5db99952f0d5e4a7d3796e files/digest-email-2.3.0 64
-MD5 d8ffee20e1c04fcca266bed7dd3546ad files/digest-email-2.3.2 64
+MD5 b193a3ce261a0c6626b39c65c0b86fb0 email-2.3.2.ebuild 936
+MD5 8eedf4de603f1b16bdc17cb77aa834f0 email-2.3.0.ebuild 962
 MD5 a3a13329231f4835c89b9885dcf7079c files/digest-email-2.3.3 64
+MD5 50e6309f5632062f7f20d2e9eb6703c9 files/digest-email-2.3.4 64
+MD5 d8ffee20e1c04fcca266bed7dd3546ad files/digest-email-2.3.2 64
+MD5 7d522f333c5db99952f0d5e4a7d3796e files/digest-email-2.3.0 64
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCWb1TntT9W3vfTuoRAoeCAKC0caaeoFBZW4/FMPaBZepZCkaNCgCeLxI1
-Gozam7maDJWJG86GR6NnCUY=
-=vzov
+iD8DBQFCZuPyQlM6RnzZP+IRAonKAJ0WXEFfiesarGZeUNKt7AqdvL/6JwCgglWT
+8ygT+4AqNR+T6z4kYxUv/H0=
+=0OwG
 -----END PGP SIGNATURE-----
