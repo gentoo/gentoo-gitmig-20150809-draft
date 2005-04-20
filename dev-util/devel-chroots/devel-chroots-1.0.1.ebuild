@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/devel-chroots/devel-chroots-1.0.1.ebuild,v 1.5 2005/02/19 12:59:30 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/devel-chroots/devel-chroots-1.0.1.ebuild,v 1.6 2005/04/20 15:12:59 blubb Exp $
 
 DESCRIPTION="Gentoo Developer chroots installation/configuration launcher"
 HOMEPAGE="http://www.gentoo.org/"
@@ -13,7 +13,7 @@ SLOT="0"
 # for testing purposes only
 # KEYWORDS="-*"
 # expected first scope, will be expanded to amd64 and/or ia64 when test machines available
-KEYWORDS="x86 ~sparc ~hppa ~amd64 ~ppc"
+KEYWORDS="x86 ~sparc ~hppa amd64 ~ppc"
 
 IUSE=""
 
