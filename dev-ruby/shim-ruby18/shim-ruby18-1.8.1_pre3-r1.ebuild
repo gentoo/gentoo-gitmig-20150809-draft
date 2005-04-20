@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/shim-ruby18/shim-ruby18-1.8.1_pre3-r1.ebuild,v 1.2 2004/10/03 14:37:23 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/shim-ruby18/shim-ruby18-1.8.1_pre3-r1.ebuild,v 1.3 2005/04/20 17:04:10 usata Exp $
 
 inherit ruby
 
@@ -25,7 +25,7 @@ S="${WORKDIR}/shim/ruby16"
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/${PN}-CGI::Session.patch
+	epatch ${FILESDIR}/${PN}-cgi-session.patch
 }
 
 src_install() {
