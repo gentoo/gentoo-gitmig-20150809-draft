@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/fuse
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/ChangeLog,v 1.19 2005/04/13 19:10:35 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/ChangeLog,v 1.20 2005/04/20 16:49:17 genstef Exp $
+
+  20 Apr 2005; Stefan Schweizer <genstef@gentoo.org>
+  -files/fuse-1.4-kernel-2.6.10.patch, -fuse-1.4.ebuild, -fuse-2.1.ebuild,
+  -fuse-2.2.ebuild:
+  Removing old ebuilds.
 
   13 Apr 2005; Lars Weiler <pylon@gentoo.org> fuse-2.2.1.ebuild:
   Stable on ppc.
