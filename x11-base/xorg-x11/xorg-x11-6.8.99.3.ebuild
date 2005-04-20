@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.99.3.ebuild,v 1.2 2005/04/20 05:47:47 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.99.3.ebuild,v 1.3 2005/04/20 05:51:38 spyderous Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -256,8 +256,8 @@ pkg_preinst() {
 		&& rm ${ROOT}usr/include/GL/GL
 	[ -L ${ROOT}usr/include/X11/X11 ] \
 		&& rm ${ROOT}usr/include/X11/X11
-	[ -L ${ROOT}usr/share/fonts/fonts ] \
-		&& rm ${ROOT}usr/share/fonts/fonts
+	[ -d ${ROOT}usr/share/fonts/fonts ] \
+		&& rm -rf ${ROOT}usr/share/fonts/fonts
 
 	# No need to do this, if it's already been done
 	# Also, it'll overwrite a ton of stuff because it won't realize /usr/X11R6
