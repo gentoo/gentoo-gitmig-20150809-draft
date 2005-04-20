@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/oinkmaster
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/oinkmaster/ChangeLog,v 1.8 2005/02/25 13:26:57 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/oinkmaster/ChangeLog,v 1.9 2005/04/20 12:28:07 ka0ttic Exp $
+
+*oinkmaster-1.2 (20 Apr 2005)
+
+  20 Apr 2005; Aaron Walker <ka0ttic@gentoo.org> +oinkmaster-1.2.ebuild:
+  Version bump for bug 89505.
 
   25 Feb 2005; Aaron Walker <ka0ttic@gentoo.org> oinkmaster-1.1.ebuild:
   Marked stable on x86.
