@@ -1,7 +1,11 @@
 # ChangeLog for media-video/mmsv2
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mmsv2/ChangeLog,v 1.5 2005/03/28 18:39:28 arj Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mmsv2/ChangeLog,v 1.6 2005/04/20 22:57:04 arj Exp $
 
+  21 Apr 2005; Anders Rune Jensen <arj@gentoo.org>
+  +files/fix-configure.diff,mmsv2-1.0.ebuild,mmsv2-1.0.1.ebuild:
+  Fix bug #89717
+	
 *mmsv2-1.0.1 (28 Mar 2005)
 
   28 Mar 2005; Anders Rune Jensen <arj@gentoo.org> +mmsv2-1.0.1.ebuild:
