@@ -1,6 +1,13 @@
 # ChangeLog for x11-misc/rss-glx
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/rss-glx/ChangeLog,v 1.27 2005/04/15 04:28:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/rss-glx/ChangeLog,v 1.28 2005/04/20 14:37:23 liquidx Exp $
+
+*rss-glx-0.8.0 (20 Apr 2005)
+
+  20 Apr 2005; Alastair Tse <liquidx@gentoo.org>
+  +files/rss-glx-0.8.0-kdedesktop.patch, +files/jwz-vroot.h,
+  +rss-glx-0.8.0.ebuild:
+  version bump (#88982) and jwz vroot for xinerama support (#79579)
 
   15 Apr 2005; Mike Frysinger <vapier@gentoo.org> rss-glx-0.7.6-r1.ebuild:
   Add a check for kde screensaver support #88212 Olaf Freyer.
