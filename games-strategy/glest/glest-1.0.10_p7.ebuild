@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/glest/glest-1.0.10_p7.ebuild,v 1.2 2005/04/12 09:39:13 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/glest/glest-1.0.10_p7.ebuild,v 1.3 2005/04/20 02:48:52 vapier Exp $
 
 inherit eutils games
 
@@ -14,7 +14,7 @@ SRC_URI="http://www.stud.uni-karlsruhe.de/~uxsm/glest-${SOURCEVERSION}-source.ta
 	linguas_ru? ( http://www.stud.uni-karlsruhe.de/~uxsm/russian.lng )
 	linguas_dk? ( http://www.stud.uni-karlsruhe.de/~uxsm/dansk.lng )"
 
-LICENSE="GPL-2"
+LICENSE="GPL-2 glest-data"
 SLOT="0"
 KEYWORDS="~amd64 ~x86 ~ppc"
 IUSE=""
@@ -42,7 +42,10 @@ src_unpack() {
 }
 
 src_compile() {
-	egamesconf || die
+	egamesconf \
+		--with-vorbis=/usr \
+		--with-ogg=/usr \
+		|| die
 	jam || die "jam failed"
 }
 
