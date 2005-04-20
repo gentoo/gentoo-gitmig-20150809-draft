@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.0.7.ebuild,v 1.4 2005/03/29 11:52:45 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.0.7.ebuild,v 1.5 2005/04/20 01:51:27 stkn Exp $
 
 IUSE="alsa doc gtk mmx mysql pri zaptel uclibc debug postgres vmdbmysql vmdbpostgres bri hardened speex resperl"
 
@@ -230,6 +230,10 @@ src_compile() {
 	cd ${S}
 	emake -j1 || die "Make failed"
 
+	# create api docs
+	use doc && \
+		emake -j1 progdocs
+
 	#
 	# add-ons
 	#
@@ -251,10 +255,6 @@ src_install() {
 	dosbin contrib/scripts/addmailbox
 	dosbin contrib/scripts/astgenkey
 
-	# documentation
-	use doc && \
-		emake -j1 DESTDIR=${D} progdocs
-
 # rem	# install necessary files
 #	dodir /etc/env.d
 #	echo "LD_LIBRARY_PATH=\"/usr/lib/asterisk\"" > ${D}/etc/env.d/25asterisk
@@ -271,12 +271,21 @@ src_install() {
 	keepdir /var/log/asterisk/cdr-csv
 
 	# install standard docs...
-	dodoc BUGS CREDITS LICENSE ChangeLog HARDWARE README README.fpm SECURITY
+	dodoc BUGS CREDITS LICENSE ChangeLog HARDWARE README README.fpm
+	dodoc SECURITY doc/CODING-GUIDELINES doc/linkedlists.README
+	dodoc doc/README.*
+	dodoc doc/*.txt
 
 	docinto scripts
 	dodoc contrib/scripts/*
 	docinto firmware/iax
 	dodoc contrib/firmware/iax/*
+
+	# install api docs
+	if use doc; then
+		insinto /usr/share/doc/${PF}/api/html
+		doins doc/api/html/*
+	fi
 
 	insinto /usr/share/doc/${PF}/cgi
 	doins contrib/scripts/vmail.cgi
