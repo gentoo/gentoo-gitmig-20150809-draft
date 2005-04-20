@@ -1,6 +1,12 @@
 # ChangeLog for x11-terms/eterm
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/eterm/ChangeLog,v 1.28 2005/04/19 05:02:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/eterm/ChangeLog,v 1.29 2005/04/20 23:11:22 vapier Exp $
+
+*eterm-0.9.3-r2 (20 Apr 2005)
+
+  20 Apr 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/eterm-0.9.3-CARD64.patch, +eterm-0.9.3-r2.ebuild:
+  Fix window manager hints on 64bit systems by Tres #76324 by Maik Stubbe.
 
 *eterm-0.9.3-r1 (19 Apr 2005)
 
