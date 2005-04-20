@@ -1,14 +1,14 @@
 #!/sbin/runscript
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/metalog/files/metalog.rc7,v 1.2 2005/04/17 05:33:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/metalog/files/metalog.rc7,v 1.3 2005/04/20 01:57:35 vapier Exp $
 
 opts="buffer unbuffer"
 
 PIDFILE=/var/run/metalog.pid
 
 depend() {
-	need clock hostname
+	use clock hostname
 	provide logger
 }
 
