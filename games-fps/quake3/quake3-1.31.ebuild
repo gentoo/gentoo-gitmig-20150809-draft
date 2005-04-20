@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3/quake3-1.31.ebuild,v 1.16 2005/01/23 19:50:19 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3/quake3-1.31.ebuild,v 1.17 2005/04/20 14:07:14 wolf31o2 Exp $
 
 inherit games
 
@@ -66,7 +66,11 @@ src_install() {
 
 pkg_postinst() {
 	games_pkg_postinst
-
+	echo
+	ewarn "There are two possible security bugs in this package, both causing a	denial of"
+	ewarn "service.  One affects the game when running a server, the other when	running as"
+	ewarn "a client.  For more information, see bug #82149."
+	echo
 	einfo "You need to copy pak0.pk3 from your Quake3 CD into ${dir}/baseq3."
 	einfo "Or if you have got a Window installation of Q3 make a symlink to save space."
 	echo
