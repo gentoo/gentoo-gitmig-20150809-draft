@@ -27,7 +27,7 @@ MD5 73f3b46d27bd413eb79350a2ce412bf6 files/openssh-3.9_p1-pamfix.patch.bz2 1125
 MD5 7937a17eb31fc6139ef42fa04521de27 files/openssh-3.9_p1-configure-openct.patch 995
 MD5 93d19c0ef91091a730510c46ab8e811e files/openssh-3.9_p1-selinux.diff.bz2 1307
 MD5 b86ae0c43a704c4ee2abd2ce5c955f8f files/sshd.pam 294
-MD5 0a1428803057b7d25e624c6b297980d8 files/sshd.rc6 1281
+MD5 a700af683ef42fb682fa2f313a6946c3 files/sshd.rc6 1203
 MD5 f5e33d1831f95c821a08893bcf3e3f5f files/openssh-4.0_p1-sftplogging-1.2-gentoo.patch.bz2 5745
 MD5 465aab818202ddb010f0bfca738e902a files/openssh-3.9_p1-skey.patch.bz2 270
 MD5 f58807d5d75bc9929883e6876c7ddd46 files/openssh-3.9_p1-terminal_restore.patch.bz2 332
