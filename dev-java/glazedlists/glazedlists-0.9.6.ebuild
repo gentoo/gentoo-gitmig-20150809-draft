@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/glazedlists/glazedlists-0.9.6.ebuild,v 1.1 2005/04/20 05:21:58 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/glazedlists/glazedlists-0.9.6.ebuild,v 1.2 2005/04/20 05:26:05 zx Exp $
 
 inherit java-pkg
 
@@ -14,7 +14,9 @@ IUSE="doc jikes junit source"
 RESTRICT="nomirror"
 DEPEND="virtual/jdk
 	dev-java/ant
-	app-arch/unzip"
+	app-arch/unzip
+	jikes? ( >=dev-java/jikes-1.21 )
+	junit? ( dev-java/junit )"
 S=${WORKDIR}
 
 src_compile() {
