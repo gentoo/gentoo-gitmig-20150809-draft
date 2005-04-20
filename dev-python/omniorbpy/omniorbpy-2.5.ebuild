@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/omniorbpy/omniorbpy-2.5.ebuild,v 1.4 2005/04/20 15:31:18 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/omniorbpy/omniorbpy-2.5.ebuild,v 1.5 2005/04/20 22:36:48 mr_bones_ Exp $
 
 inherit eutils python
 
@@ -36,7 +36,7 @@ src_unpack() {
 }
 
 src_compile() {
-	use ssl && MY_CONF="--with-openssl=/usr" 
+	use ssl && MY_CONF="--with-openssl=/usr"
 
 	python_version
 	MY_PY=/usr/bin/python${PYVER}
@@ -53,7 +53,7 @@ src_install() {
 	sed -i -e "s/'prefix[\t ]*:= \/usr'/'prefix := \${DESTDIR}\/usr'/" \
 		mk/beforeauto.mk
 
-	# won't work without these really very ugly hack... 
+	# won't work without these really very ugly hack...
 	# maybe someone can do better..
 
 	mv python/omniORB/dir.mk python/omniORB/dir.mk_orig
