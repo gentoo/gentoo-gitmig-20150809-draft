@@ -1,6 +1,14 @@
 # ChangeLog for kde-base/kdewebdev
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdewebdev/ChangeLog,v 1.42 2005/03/18 16:40:15 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdewebdev/ChangeLog,v 1.43 2005/04/20 00:02:13 carlo Exp $
+
+*kdewebdev-3.4.0-r1 (20 Apr 2005)
+*kdewebdev-3.3.2-r1 (20 Apr 2005)
+
+  20 Apr 2005; Carsten Lohrke <carlo@gentoo.org>
+  +files/post-3.4-kdewebdev.diff, +kdewebdev-3.3.2-r1.ebuild,
+  +kdewebdev-3.4.0-r1.ebuild:
+  Kommander untrusted code execution, #89092
 
   18 Mar 2005; Daniel Goller <morfic@gentoo.org> kdewebdev-3.4.0.ebuild:
   Added to ~ppc
