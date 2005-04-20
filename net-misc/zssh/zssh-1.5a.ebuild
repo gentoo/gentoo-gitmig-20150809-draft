@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zssh/zssh-1.5a.ebuild,v 1.9 2004/07/14 06:32:56 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zssh/zssh-1.5a.ebuild,v 1.10 2005/04/20 22:09:25 mrness Exp $
 
 inherit eutils
 
@@ -16,7 +16,7 @@ IUSE="readline nls"
 DEPEND="virtual/libc"
 RDEPEND="${DEPEND}
 	 net-misc/openssh
-	 net-misc/lrzsz"
+	 net-dialup/lrzsz"
 
 src_unpack() {
 	unpack ${A}

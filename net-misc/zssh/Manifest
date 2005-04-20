@@ -1,5 +1,15 @@
-MD5 ab1680a329fe6633cec7405a7be523e7 ChangeLog 826
-MD5 cb361a684e9d375c03603cb17dc9a11d zssh-1.5a.ebuild 847
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 0184fa76a58077a00f060ebb8870949c ChangeLog 823
+MD5 aabf5f520963471b16f1fab367ca1426 zssh-1.5a.ebuild 847
+MD5 f52cf7d8f81baebdc41762a9e2403d86 files/zssh-1.5a-gentoo-termcap.diff 312
 MD5 761d5c3c6844a11229f8ec48df476b1c files/digest-zssh-1.5a 58
 MD5 e6b1336b7eaaa0ca2e2bf12cdfbd7b4b files/zssh-1.5a-gentoo-include.diff 321
-MD5 f52cf7d8f81baebdc41762a9e2403d86 files/zssh-1.5a-gentoo-termcap.diff 312
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCZtMgjiC39V7gKu0RAom8AJ417foHXqWHhDNjX06NGnaCD9Z7IgCgx2zZ
+fCbCkgPYzu70O0qeNIeqvjY=
+=BzP7
+-----END PGP SIGNATURE-----
