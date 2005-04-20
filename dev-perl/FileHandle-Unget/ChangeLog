@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/FileHandle-Unget
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/FileHandle-Unget/ChangeLog,v 1.6 2004/09/03 16:59:02 slarti Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/FileHandle-Unget/ChangeLog,v 1.7 2005/04/20 21:39:47 hansmi Exp $
+
+  20 Apr 2005; Michael Hanselmann <hansmi@gentoo.org>
+  FileHandle-Unget-0.14.ebuild:
+  Stable on ppc.
 
   03 Sep 2004; Tom Martin <slarti@gentoo.org> FileHandle-Unget-0.14.ebuild:
   Marked ~amd64.
