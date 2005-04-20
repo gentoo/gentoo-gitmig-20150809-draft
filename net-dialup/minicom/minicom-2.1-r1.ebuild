@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/minicom/minicom-2.1-r1.ebuild,v 1.11 2005/01/06 19:11:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/minicom/minicom-2.1-r1.ebuild,v 1.12 2005/04/20 22:11:07 mrness Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ IUSE=""
 
 DEPEND=">=sys-libs/ncurses-5.2-r3"
 RDEPEND="${DEPEND}
-	net-misc/lrzsz"
+	net-dialup/lrzsz"
 
 src_unpack() {
 	unpack ${A}
