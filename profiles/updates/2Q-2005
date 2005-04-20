@@ -10,3 +10,4 @@ move dev-java/mg4j-bin dev-java/mg4j
 move dev-java/jal-bin dev-java/jal
 move net-misc/lrzsz net-dialup/lrzsz
 move net-misc/cutecom net-dialup/cutecom
+move net-misc/slirp net-dialup/slirp
