@@ -7,7 +7,7 @@ MD5 dc7eab137481c73dca4e2ea75795fa9f qt-4.0.0_beta1-r5.ebuild 5880
 MD5 449d72818fdc63e80998a3749de56df7 ChangeLog 35202
 MD5 512150b47a904b0240101e319856aab1 metadata.xml 156
 MD5 3f30d4e96664ba2574dfb069b708f4a1 qt-3.3.3.ebuild 6897
-MD5 6a39e31b310e86dbb567bddff6867909 qt-4.0.0_beta2-r1.ebuild 5985
+MD5 08029b610ff355dafc7618ea1abaec61 qt-4.0.0_beta2-r1.ebuild 5985
 MD5 2a5d402b9d5ceff465069a1651f3b329 qt-2.3.2-r2.ebuild 2765
 MD5 74acd4c098f2c4bd70bdea585f0cb096 files/qt-no-rpath.patch 352
 MD5 ad4921b9f10a62c1e211d064f5c7fd9a files/44qt4 121
@@ -17,7 +17,7 @@ MD5 37722e33e1a10fcc58463d13979e0f05 files/qt4-qtprf.patch 470
 MD5 494ea57bec4dcfe3a4ca65e413d81791 files/digest-qt-3.3.3 165
 MD5 b9689fa9461944ba25ebf0acde5fb70b files/qt-3.3.4-flickerfree_qiconview_buffered.patch 3347
 MD5 9207a8f92e32bd42c37464f13abc7b3c files/digest-qt-4.0.0_beta1-r5 99
-MD5 cf967aa7d702c98a72281b8c185f2623 files/digest-qt-4.0.0_beta2-r1 100
+MD5 480ed8db4d3b3421ef01741ab58f6673 files/digest-qt-4.0.0_beta2-r1 100
 MD5 4122542a37b787efb9476b0fb1fdafc0 files/qt-3.3.4-0047-fix-kmenu-widget.diff 992
 MD5 77ee6484af384828441336443499ec0e files/digest-qt-3.3.3-r1 238
 MD5 c115b4205c2a2eab0a547375e2f62460 files/digest-qt-3.3.4-r2 166

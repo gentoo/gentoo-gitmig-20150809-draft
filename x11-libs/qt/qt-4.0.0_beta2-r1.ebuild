@@ -1,11 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.0.0_beta2-r1.ebuild,v 1.1 2005/04/21 15:32:27 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.0.0_beta2-r1.ebuild,v 1.2 2005/04/21 18:15:01 caleb Exp $
 
 inherit eutils flag-o-matic
 
 SRCTYPE="opensource"
-SNAPSHOT="20050418"
+SNAPSHOT="20050421"
 DESCRIPTION="QT version ${PV}"
 HOMEPAGE="http://www.trolltech.com/"
 
