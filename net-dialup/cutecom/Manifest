@@ -3,14 +3,14 @@ Hash: SHA1
 
 MD5 7abd3f0cb87d2aaa632af7940e9c2d0d cutecom-0.13.1.ebuild 720
 MD5 4a10bbb359afe0886696cfe9129bbcae cutecom-0.12.0.ebuild 680
-MD5 72582f83127140a346e5e25d7516adfe ChangeLog 794
+MD5 9e2df4be99a05fc2b3cc97b53d335de1 ChangeLog 798
 MD5 7660ada5608343368008e79f6b562969 metadata.xml 228
 MD5 949bebbe2a4ce9e7429475bfa947381b files/digest-cutecom-0.12.0 65
 MD5 fd1117e58a928e7e489d70ac4e07bcfb files/digest-cutecom-0.13.1 65
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCZthrjiC39V7gKu0RAlHKAJ4/w4aFAShvCF+oDqglALtbGVif9ACfdIR/
-Z5avLQzdNZRfYHQ+cMRKMtE=
-=X55j
+iD8DBQFCZz6NI1lqEGTUzyQRAoHEAJ0bZhqWUBMxDGl6suc2R2h3+xqotgCgwAYH
+qz1UnF4/K3JS4tedFxUmk78=
+=y6yJ
 -----END PGP SIGNATURE-----
