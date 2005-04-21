@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/run-mailcap
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/run-mailcap/ChangeLog,v 1.31 2005/04/01 20:15:11 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/run-mailcap/ChangeLog,v 1.32 2005/04/21 22:35:06 agriffis Exp $
+
+  21 Apr 2005; Aron Griffis <agriffis@gentoo.org>
+  run-mailcap-3.28_p1-r1.ebuild:
+  Stable on ia64
 
   01 Apr 2005; Michael Hanselmann <hansmi@gentoo.org>
   run-mailcap-3.28_p1-r1.ebuild:
