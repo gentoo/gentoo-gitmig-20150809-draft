@@ -1,6 +1,13 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.64 2005/04/19 20:14:01 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.65 2005/04/21 21:29:38 flameeyes Exp $
+
+*ffmpeg-0.4.9_p20050226-r4 (21 Apr 2005)
+
+  21 Apr 2005; Diego Pettenò <flameeyes@gentoo.org>
+  +ffmpeg-0.4.9_p20050226-r4.ebuild:
+  Added new revision which applies cleanups on bug #89172, and patch to enable
+  mmx on amd64 as for bug #88965.
 
   19 Apr 2005; Luca Barbato <lu_zero@gentoo.org>
   ffmpeg-0.4.9_p20050226-r3.ebuild:
