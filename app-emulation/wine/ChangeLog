@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/wine
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.93 2005/04/20 23:17:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.94 2005/04/21 12:12:49 herbs Exp $
+
+  21 Apr 2005; Herbie Hopkins <herbs@gentoo.org> wine-20050419.ebuild:
+  Set CC in this version too.
 
 *wine-20050419 (20 Apr 2005)
 

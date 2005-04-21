@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20050419.ebuild,v 1.1 2005/04/20 23:17:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20050419.ebuild,v 1.2 2005/04/21 12:12:49 herbs Exp $
 
 inherit eutils flag-o-matic
 
@@ -94,6 +94,7 @@ src_compile() {
 	#	$(use_enable amd64 win64)
 	# USE=debug is broken in this release
 	econf \
+		CC=$(tc-getCC) \
 		--sysconfdir=/etc/wine \
 		$(use_with ncurses curses) \
 		$(use_with opengl) \
