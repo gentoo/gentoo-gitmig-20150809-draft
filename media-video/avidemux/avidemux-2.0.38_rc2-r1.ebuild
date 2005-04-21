@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.0.38_rc2-r1.ebuild,v 1.3 2005/04/19 10:46:23 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.0.38_rc2-r1.ebuild,v 1.4 2005/04/21 23:31:23 flameeyes Exp $
 
 inherit eutils flag-o-matic
 
@@ -21,7 +21,7 @@ RDEPEND="xv? ( virtual/x11 )
 	>=dev-libs/libxml2-2.6.7
 	>=x11-libs/gtk+-2.4.1
 	aac? ( >=media-libs/faac-1.23.5
-	       >=media-libs/faad2-2.0-r2 )
+	       >=media-libs/faad2-2.0-r5 )
 	mad? ( media-libs/libmad )
 	xvid? ( >=media-libs/xvid-1.0.0 )
 	x86? ( dev-lang/nasm )

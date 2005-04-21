@@ -6,8 +6,8 @@ MD5 0aed1a48ceb9c6c76092b0799433077a avidemux-2.0.36.ebuild 2539
 MD5 162de3edb58b8605348d0c594368017c avidemux-2.0.38_rc1.ebuild 2666
 MD5 f18fa403fee71aa513005f27bbcc4fd7 avidemux-2.0.38_rc2.ebuild 2639
 MD5 955f56e990f8c32d705708b4cc4db089 metadata.xml 251
-MD5 aac9629b33adfa0884f4f294707753ed avidemux-2.0.38_rc2-r1.ebuild 2614
-MD5 d9f9ac8c7f6d06ea9d7999180febf284 ChangeLog 13106
+MD5 4c8fa260649c957fb87fc23dcdd2c559 avidemux-2.0.38_rc2-r1.ebuild 2614
+MD5 41d41054c1d8561bddcf8dc1879e8ad1 ChangeLog 13324
 MD5 71caa2da3a9489e6d3e10b3816c753c6 files/2.0.38_rc1_mpegidentify.patch 1077
 MD5 4b0dc1a0f1e81197582e817410f8d180 files/2.0.38_rc2-fix-faad.patch 759
 MD5 c235b3c2a9d464d8729ec6698895866e files/alsa.patch 607
