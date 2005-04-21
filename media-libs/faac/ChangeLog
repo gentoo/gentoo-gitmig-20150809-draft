@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/faac
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/faac/ChangeLog,v 1.25 2005/03/21 05:53:13 j4rg0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/faac/ChangeLog,v 1.26 2005/04/21 23:03:13 tester Exp $
+
+  21 Apr 2005; Olivier Crête <tester@gentoo.org> faac-1.24.ebuild:
+  Changed >=faad2-2.0-r3 to !<faad2-2.0-r3 because its not really a dep, it
+  just breaks if old versions are installed
 
   21 Mar 2005; Lina Pezzella <j4rg0n@gentoo.org> faac-1.24.ebuild:
   Stable ppc-macos

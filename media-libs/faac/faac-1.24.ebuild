@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/faac/faac-1.24.ebuild,v 1.14 2005/03/21 05:53:13 j4rg0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/faac/faac-1.24.ebuild,v 1.15 2005/04/21 23:03:13 tester Exp $
 
 inherit libtool eutils
 
@@ -17,7 +17,7 @@ RDEPEND=">=media-libs/libsndfile-1.0.0"
 DEPEND="${RDEPEND}
 	>=sys-devel/libtool-1.3.5
 	sys-devel/automake
-	>=media-libs/faad2-2.0-r3"
+	!<media-libs/faad2-2.0-r3"
 
 S=${WORKDIR}/${PN}
 
