@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation and Thomas Capricelli <orzel@kde.org>
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/boson/boson-0.10.ebuild,v 1.6 2005/01/25 17:50:49 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/boson/boson-0.10.ebuild,v 1.7 2005/04/21 19:12:51 hansmi Exp $
 
 inherit kde
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/boson/boson-all-${PV}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc -sparc"
+KEYWORDS="x86 ppc -sparc"
 IUSE="opengl"
 
 DEPEND="media-libs/lib3ds
