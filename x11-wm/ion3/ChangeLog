@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/ion3
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion3/ChangeLog,v 1.18 2005/04/04 01:22:55 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion3/ChangeLog,v 1.19 2005/04/21 22:39:34 agriffis Exp $
+
+  21 Apr 2005; Aron Griffis <agriffis@gentoo.org> ion3-20050116.ebuild,
+  ion3-20050322.ebuild:
+  Add ia64 keywords
 
   04 Apr 2005; Aron Griffis <agriffis@gentoo.org> ion3-20050116.ebuild:
   stable on amd64
