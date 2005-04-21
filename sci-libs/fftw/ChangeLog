@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/fftw
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/ChangeLog,v 1.9 2005/04/01 17:06:46 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/ChangeLog,v 1.10 2005/04/21 21:49:06 cryos Exp $
+
+  21 Apr 2005; Marcus D. Hanwell <cryos@gentoo.org> fftw-3.0.1-r1.ebuild:
+  Add sse2 USE flag, closes bug 83036.
 
   01 Apr 2005; Aron Griffis <agriffis@gentoo.org> fftw-3.0.1-r1.ebuild:
   stable on ia64
