@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/gksu
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gksu/ChangeLog,v 1.8 2004/09/03 15:35:19 pvdabeel Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gksu/ChangeLog,v 1.9 2005/04/21 11:16:30 dragonheart Exp $
+
+*gksu-1.0.7 (21 Apr 2005)
+
+  21 Apr 2005; Daniel Black <dragonheart@gentoo.org> +gksu-1.0.7.ebuild:
+  Version bump as per bug #88850. Thanks to Kalle Kotte <xake@telia.com>
 
   03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> gksu-1.0.5.ebuild:
   Masked gksu-1.0.5.ebuild stable for ppc

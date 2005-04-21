@@ -1,4 +1,16 @@
-MD5 5d7c1eb5590f98af77ee3dd0d3f065a6 ChangeLog 969
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 9aff3f21f0a0568adcb8d91eaf828369 gksu-1.0.5.ebuild 989
+MD5 363e5bcee4130fa5326fc21959bea6a4 gksu-1.0.7.ebuild 1016
 MD5 f84c4419718f522eb1ae37aa894ac49c metadata.xml 367
+MD5 22525c42dd2c86af95a05daa29ec149f ChangeLog 1146
 MD5 82ff981c48203760743e27ed03e46f0d files/digest-gksu-1.0.5 62
+MD5 5e9e0b3e6e9bca1115c9b13d0dd75725 files/digest-gksu-1.0.7 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCZ4ufmdTrptrqvGERAkDjAKCSgl1FnYa7dXfxl+Ic+7fkU8XLrQCfaNew
+VfvD7Jvb1rNXlnbihNp/wSU=
+=Lk3h
+-----END PGP SIGNATURE-----
