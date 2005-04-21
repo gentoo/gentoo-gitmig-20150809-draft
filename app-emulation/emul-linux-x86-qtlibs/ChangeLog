@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/emul-linux-x86-qtlibs
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-qtlibs/ChangeLog,v 1.8 2005/04/18 10:13:41 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-qtlibs/ChangeLog,v 1.9 2005/04/21 10:37:32 herbs Exp $
+
+  21 Apr 2005; Herbie Hopkins <herbs@gentoo.org>
+  +files/45emul-linux-x86-qtlibs, -emul-linux-x86-qtlibs-2.0.ebuild,
+  emul-linux-x86-qtlibs-2.1.ebuild, emul-linux-x86-qtlibs-1.1.ebuild:
+  Switch to use doenvd. Mark 1.1 stable.
 
 *emul-linux-x86-qtlibs-2.1 (18 Apr 2005)
 
