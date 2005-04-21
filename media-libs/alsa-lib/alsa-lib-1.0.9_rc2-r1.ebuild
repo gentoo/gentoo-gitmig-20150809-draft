@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-1.0.9_rc2-r1.ebuild,v 1.1 2005/04/06 10:29:56 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-1.0.9_rc2-r1.ebuild,v 1.2 2005/04/21 09:17:00 eradicator Exp $
 
 IUSE="jack doc"
 
@@ -57,7 +57,9 @@ pkg_postinst() {
 	einfo "If you are using an emu10k1 based sound card, and you are upgrading"
 	einfo "from a version of alsalib <1.0.6, you will need to recompile packages"
 	einfo "that link against alsa-lib due to some ABI changes between 1.0.5 and"
-	einfo "1.0.6 unique to that hardware. See the following URL for more information:"
+	einfo "1.0.6 unique to that hardware. You can do this by executing:"
+	einfo "revdep-rebuild --soname libasound.so.2"
+	einfo "See the following URL for more information:"
 	einfo "http://bugs.gentoo.org/show_bug.cgi?id=65347"
 	echo
 	ewarn "Please use media-sound/alsa-driver rather than in-kernel drivers as there"
