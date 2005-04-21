@@ -1,6 +1,10 @@
 # ChangeLog for app-laptop/ibm-acpi
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/ibm-acpi/ChangeLog,v 1.22 2005/04/16 09:10:17 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/ibm-acpi/ChangeLog,v 1.23 2005/04/21 07:16:36 wormo Exp $
+
+  21 Apr 2005; Stephanie Lockwood-Childs <wormo@gentoo.org>
+  ibm-acpi-0.10.ebuild, ibm-acpi-0.11.ebuild:
+  mark -ppc since IBM does not make ppc laptops
 
   16 Apr 2005; <brix@gentoo.org> ibm-acpi-0.11.ebuild:
   Stable on x86.
