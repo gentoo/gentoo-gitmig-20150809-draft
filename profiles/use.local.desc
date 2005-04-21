@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1096 2005/04/21 20:59:48 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1097 2005/04/21 21:28:22 flameeyes Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -453,6 +453,9 @@ media-video/chaplin:vcdimager - Enables optional support for GNU VCDimager
 media-video/dvdrip:fping - Enables fping support for cluster rendering
 media-video/dvdrip:mplayer - Enables video playback by mplayer
 media-video/dvdrip:rar - Enables rar compression of VOB fiels
+media-video/ffmpeg:dts - Enables libdts (5.1 surround sound audio) support
+media-video/ffmpeg:ieee1394 - enable dv/firewire camera support
+media-video/ffmpeg:network - Enables network streaming support
 media-video/gpac:amr - Adaptive Multi-Rate Audio support (commonly used in telephony)
 media-video/kmplayer:koffice-plugin - Install KOffice part
 media-video/lives:libvisual - Enable libvisual support
