@@ -1,5 +1,17 @@
-MD5 c6431c018a3885d540aac6414285428a ChangeLog 2173
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 b5994d4ac2d9fc1428cc8871299df99d ChangeLog 2372
 MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
+MD5 c556b3ecede6105623243ee509776d6e rioutil-1.4.7.ebuild 631
 MD5 af7062f2c780a16dab8ed5122d76395c rioutil-1.4.4.ebuild 818
 MD5 72a43d60ff9736ade5cf03ea35853db7 files/digest-rioutil-1.4.4 66
+MD5 0fbddb3e5c5bd6da73cc55af0c24b144 files/digest-rioutil-1.4.7 66
 MD5 980de0f7000d1b646ff0ce96a4f795b2 files/rioutil-1.4.4-26headers.patch 2266
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCZ4iCmdTrptrqvGERAj7pAJ9WYnm1tGFOyp9dF0cr+KGFF9vShgCgh7Gz
+dM2rHZYVZUcfW5gThj0T/7M=
+=xGBF
+-----END PGP SIGNATURE-----
