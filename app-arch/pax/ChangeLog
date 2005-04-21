@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/pax
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/pax/ChangeLog,v 1.8 2005/04/01 02:14:25 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/pax/ChangeLog,v 1.9 2005/04/21 17:49:48 blubb Exp $
+
+  21 Apr 2005; Simon Stelling <blubb@gentoo.org> pax-3.3.4.ebuild:
+  stable on amd64
 
   31 Mar 2005; Aron Griffis <agriffis@gentoo.org> pax-3.3.4.ebuild:
   stable on ia64

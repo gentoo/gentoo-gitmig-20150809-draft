@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/pax/pax-3.3.4.ebuild,v 1.11 2005/04/01 02:14:25 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/pax/pax-3.3.4.ebuild,v 1.12 2005/04/21 17:49:48 blubb Exp $
 
 inherit eutils rpm
 
@@ -13,7 +13,7 @@ SRC_URI="ftp://rpmfind.net/linux/contrib/libc6/SRPMS/${MY_PS}.src.rpm"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~mips alpha hppa ~amd64 ia64"
+KEYWORDS="~x86 ~ppc ~sparc ~mips alpha hppa amd64 ia64"
 IUSE=""
 
 DEPEND="virtual/libc
