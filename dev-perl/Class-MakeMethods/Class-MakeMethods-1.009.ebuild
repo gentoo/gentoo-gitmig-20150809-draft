@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-MakeMethods/Class-MakeMethods-1.009.ebuild,v 1.8 2005/04/01 17:40:23 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-MakeMethods/Class-MakeMethods-1.009.ebuild,v 1.9 2005/04/21 18:55:25 hansmi Exp $
 
 inherit perl-module
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.cpan.org/modules/by-module/Class/${MY_P}.readme"
 
 SLOT="0"
 LICENSE="|| ( Artistic GPL-2 )"
-KEYWORDS="x86 amd64 ~ppc sparc alpha"
+KEYWORDS="x86 amd64 ppc sparc alpha"
 IUSE=""
 
 SRC_TEST="do"
