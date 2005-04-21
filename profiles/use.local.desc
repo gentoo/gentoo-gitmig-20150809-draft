@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1092 2005/04/20 04:09:39 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1093 2005/04/21 10:05:26 tove Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -912,3 +912,4 @@ x11-wm/openbox:pango - Enable pango support
 x11-wm/openbox:startup-notification - Enable application startup notification
 x11-wm/windowmaker:modelock - Enable XKB language status lock support. README says: "If you don't know what it is you probably don't need it."
 x11-wm/windowmaker:vdesktop - Enable NEWTWM style virtual desktop support.
+x11-wm/wmii:cairo - use cairo as rendering backend (instead of Xlib)
