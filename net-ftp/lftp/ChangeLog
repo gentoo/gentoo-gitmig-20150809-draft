@@ -1,6 +1,14 @@
 # ChangeLog for net-ftp/lftp
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/ChangeLog,v 1.80 2005/04/09 12:38:19 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/ChangeLog,v 1.81 2005/04/21 09:21:17 dragonheart Exp $
+
+*lftp-3.1.3 (21 Apr 2005)
+
+  21 Apr 2005; Daniel Black <dragonheart@gentoo.org> -lftp-3.0.6.ebuild,
+  -lftp-3.1.0.ebuild, -lftp-3.1.1.ebuild, +lftp-3.1.3.ebuild:
+  Version bug inspired by bug #85827. Removed 3.1.[01] because of described
+  memory leak. Removed old version too. Thanks to BigBug
+  <BigBug@mafiN0_SPAMa.lv>
 
   09 Apr 2005; Markus Rothe <corsair@gentoo.org> lftp-3.0.13.ebuild:
   Stable on ppc64
