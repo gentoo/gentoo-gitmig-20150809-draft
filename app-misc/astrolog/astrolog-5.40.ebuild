@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/astrolog/astrolog-5.40.ebuild,v 1.7 2005/01/01 14:51:16 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/astrolog/astrolog-5.40.ebuild,v 1.8 2005/04/21 19:01:39 blubb Exp $
 
 DESCRIPTION="A many featured astrology chart calculation program"
 HOMEPAGE="http://www.astrolog.org/astrolog.htm"
@@ -9,7 +9,7 @@ LICENSE="astrolog"
 SLOT="0"
 
 # works fine on x86 - runs probably on other architectures, too
-KEYWORDS="x86 ppc64 ppc ~amd64"
+KEYWORDS="x86 ppc64 ppc amd64"
 
 IUSE="X"
 

@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/pms
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/pms/ChangeLog,v 1.8 2005/01/01 15:19:57 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/pms/ChangeLog,v 1.9 2005/04/21 19:35:44 blubb Exp $
+
+  21 Apr 2005; Simon Stelling <blubb@gentoo.org> pms-0.94.ebuild:
+  stable on amd64
 
   24 Oct 2004; <stkn@gentoo.org> files/ui.diff, pms-0.94.ebuild:
   using epatch now, replaced ui.diff with a version that works with newest cdk

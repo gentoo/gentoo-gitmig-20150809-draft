@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/countrycodes/countrycodes-1.0.5.ebuild,v 1.13 2005/01/01 14:57:26 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/countrycodes/countrycodes-1.0.5.ebuild,v 1.14 2005/04/21 19:09:01 blubb Exp $
 
 DESCRIPTION="An ISO 3166 country code finder"
 HOMEPAGE="http://www.grigna.com/diego/linux/countrycodes/"
@@ -8,7 +8,7 @@ SRC_URI="http://www.grigna.com/diego/linux/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 sparc ~mips ppc ~alpha ppc64 ~amd64"
+KEYWORDS="x86 sparc ~mips ppc ~alpha ppc64 amd64"
 IUSE=""
 
 RDEPEND="virtual/libc"

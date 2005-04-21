@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/countrycodes
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/countrycodes/ChangeLog,v 1.14 2005/01/02 21:11:46 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/countrycodes/ChangeLog,v 1.15 2005/04/21 19:09:01 blubb Exp $
+
+  21 Apr 2005; Simon Stelling <blubb@gentoo.org> countrycodes-1.0.5.ebuild:
+  stable on amd64
 
   02 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance

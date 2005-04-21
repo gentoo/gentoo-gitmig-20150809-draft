@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/fdupes
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/fdupes/ChangeLog,v 1.9 2005/01/12 23:38:09 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/fdupes/ChangeLog,v 1.10 2005/04/21 19:11:28 blubb Exp $
+
+  21 Apr 2005; Simon Stelling <blubb@gentoo.org> fdupes-1.40.ebuild:
+  stable on amd64
 
   12 Jan 2005; Gustavo Zacarias <gustavoz@gentoo.org> fdupes-1.40.ebuild:
   Stable on sparc

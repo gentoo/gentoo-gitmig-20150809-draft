@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/gramps-1.0.10.ebuild,v 1.2 2005/04/04 18:54:32 joem Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/gramps-1.0.10.ebuild,v 1.3 2005/04/21 19:17:25 blubb Exp $
 
 inherit gnome2 eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/gramps/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~sparc ~ppc ~amd64"
+KEYWORDS="x86 ~sparc ~ppc amd64"
 IUSE=""
 
 RDEPEND=">=dev-lang/python-2.2

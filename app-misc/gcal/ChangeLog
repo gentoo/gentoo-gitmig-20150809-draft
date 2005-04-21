@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/gcal
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gcal/ChangeLog,v 1.17 2005/02/05 10:18:45 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gcal/ChangeLog,v 1.18 2005/04/21 19:12:27 blubb Exp $
+
+  21 Apr 2005; Simon Stelling <blubb@gentoo.org> gcal-3.01-r2.ebuild:
+  stable on amd64
 
   05 Feb 2005; Michael Hanselmann <hansmi@gentoo.org> gcal-3.01-r2.ebuild:
   Stable on ppc.

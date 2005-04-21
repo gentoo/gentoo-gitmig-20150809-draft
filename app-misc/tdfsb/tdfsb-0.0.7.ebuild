@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tdfsb/tdfsb-0.0.7.ebuild,v 1.11 2005/01/01 15:25:34 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tdfsb/tdfsb-0.0.7.ebuild,v 1.12 2005/04/21 19:43:16 blubb Exp $
 
 IUSE=""
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.hgb-leipzig.de/~leander/TDFSB/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc -sparc alpha ~amd64"
+KEYWORDS="x86 ppc -sparc alpha amd64"
 
 DEPEND="media-libs/smpeg
 	media-libs/sdl-image

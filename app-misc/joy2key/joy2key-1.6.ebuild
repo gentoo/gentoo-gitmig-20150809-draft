@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/joy2key/joy2key-1.6.ebuild,v 1.19 2005/03/22 20:15:23 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/joy2key/joy2key-1.6.ebuild,v 1.20 2005/04/21 19:26:23 blubb Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://interreality.org/~tetron/technology/joy2key/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~amd64"
+KEYWORDS="x86 amd64"
 IUSE="X"
 
 DEPEND="X? ( virtual/x11 )"

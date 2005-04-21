@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gfontview/gfontview-0.5.0-r6.ebuild,v 1.9 2005/01/01 15:04:01 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gfontview/gfontview-0.5.0-r6.ebuild,v 1.10 2005/04/21 19:14:42 blubb Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/gfontview/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc ~amd64"
+KEYWORDS="x86 ppc amd64"
 IUSE="nls gnome"
 
 DEPEND=">=media-libs/t1lib-1.0.1

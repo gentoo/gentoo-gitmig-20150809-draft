@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/livetools
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/livetools/ChangeLog,v 1.7 2005/01/01 15:12:43 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/livetools/ChangeLog,v 1.8 2005/04/21 19:28:27 blubb Exp $
+
+  21 Apr 2005; Simon Stelling <blubb@gentoo.org> livetools-1.2.3.ebuild:
+  stable on amd64
 
   12 Nov 2004; Simon Stelling <blubb@gentoo.org> livetools-1.2.3.ebuild:
   added ~amd64

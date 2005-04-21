@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/boxes/boxes-1.0.1.ebuild,v 1.23 2005/01/01 14:53:58 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/boxes/boxes-1.0.1.ebuild,v 1.24 2005/04/21 19:03:36 blubb Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://boxes.thomasjensen.com/download/${P}.src.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc mips alpha ~amd64 ppc64"
+KEYWORDS="x86 ppc sparc mips alpha amd64 ppc64"
 IUSE=""
 
 DEPEND="virtual/libc"

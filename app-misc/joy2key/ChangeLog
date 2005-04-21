@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/joy2key
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/joy2key/ChangeLog,v 1.9 2005/03/22 20:15:23 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/joy2key/ChangeLog,v 1.10 2005/04/21 19:26:23 blubb Exp $
+
+  21 Apr 2005; Simon Stelling <blubb@gentoo.org> joy2key-1.6.ebuild:
+  stable on amd64
 
   22 Mar 2005; Karol Wojtaszek <sekretarz@gentoo.org>
   +files/fix-configure.in.diff, joy2key-1.6.ebuild:

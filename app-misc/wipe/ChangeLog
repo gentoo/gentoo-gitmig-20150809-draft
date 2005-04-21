@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/wipe
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/wipe/ChangeLog,v 1.11 2005/01/01 15:29:49 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/wipe/ChangeLog,v 1.12 2005/04/21 19:46:40 blubb Exp $
+
+  21 Apr 2005; Simon Stelling <blubb@gentoo.org> wipe-2.2.0.ebuild:
+  stable on amd64
 
   17 Dec 2004; Sven Wegener <swegener@gentoo.org> -wipe-2.1.0.ebuild:
   Removed old ebuild.
