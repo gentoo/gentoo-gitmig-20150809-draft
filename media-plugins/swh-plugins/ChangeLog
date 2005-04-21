@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/swh-plugins
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/swh-plugins/ChangeLog,v 1.25 2004/12/04 19:06:14 eradicator Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/swh-plugins/ChangeLog,v 1.26 2005/04/21 20:06:04 kito Exp $
+
+*swh-plugins-0.4.13 (21 Apr 2005)
+
+  21 Apr 2005; Kito <kito@gentoo.org> +swh-plugins-0.4.13.ebuild:
+  version bump. adds darwin/macos support
 
 *swh-plugins-0.4.11 (04 Dec 2004)
 
