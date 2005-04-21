@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.99.3.ebuild,v 1.5 2005/04/20 12:43:24 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.99.3.ebuild,v 1.6 2005/04/21 06:23:46 spyderous Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -626,13 +626,18 @@ host_def_setup() {
 		if use static; then
 			echo "#define DoLoadableServer	NO" >>${HOSTCONF}
 		else
+			einfo "Setting DoLoadableServer to YES."
+			echo "#define DoLoadableServer  YES" >> ${HOSTCONF}
+
 			if use dlloader; then
-				einfo "Setting DoLoadableServer/MakeDllModules to YES."
-				echo "#define DoLoadableServer  YES" >> ${HOSTCONF}
+				einfo "Setting MakeDllModules to YES."
 				echo "#define MakeDllModules    YES" >> ${HOSTCONF}
 				if use hardened; then
 					echo "#define HardenedGccSpecs YES" >> ${HOSTCONF}
 				fi
+			else
+				einfo "Setting MakeDllModules to NO."
+				echo "#define MakeDllModules    NO" >> ${HOSTCONF}
 			fi
 		fi
 

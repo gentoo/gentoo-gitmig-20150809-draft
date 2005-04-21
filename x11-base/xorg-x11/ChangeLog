@@ -1,6 +1,12 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.372 2005/04/20 12:43:24 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.373 2005/04/21 06:23:46 spyderous Exp $
+
+  21 Apr 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  xorg-x11-6.8.2-r2.ebuild, xorg-x11-6.8.99.3.ebuild:
+  Explicitly turn off dlloader with USE=-dlloader. Relevant on >=6.8.99.*, but
+  I'm trying to keep these two in parallel so I'm applying it to both. Caught
+  by sekretarz.
 
   20 Apr 2005; Ferris McCormick <fmccor@gentoo.org>
   xorg-x11-6.8.99.3.ebuild:
