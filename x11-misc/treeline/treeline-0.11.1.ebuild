@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/treeline/treeline-0.11.0.ebuild,v 1.1 2005/02/04 17:14:50 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/treeline/treeline-0.11.1.ebuild,v 1.1 2005/04/21 15:11:57 taviso Exp $
 
 inherit eutils python
 
