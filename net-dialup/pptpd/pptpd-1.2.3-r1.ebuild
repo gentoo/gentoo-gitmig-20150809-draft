@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/pptpd/pptpd-1.2.3.ebuild,v 1.1 2005/04/16 16:53:36 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/pptpd/pptpd-1.2.3-r1.ebuild,v 1.1 2005/04/21 18:42:02 mrness Exp $
 
 DESCRIPTION="Linux Point-to-Point Tunnelling Protocol Server"
 SRC_URI="mirror://sourceforge/poptop/${P}.tar.gz"
@@ -14,6 +14,16 @@ IUSE="tcpd"
 DEPEND="virtual/libc
 	net-dialup/ppp
 	tcpd? ( sys-apps/tcp-wrappers )"
+
+src_unpack() {
+	unpack ${A}
+
+	#Match pptpd-logwtmp.so's version with ppp (#89895)
+	local PPP_VER=$(best_version net-dialup/ppp)
+	PPP_VER=${PPP_VER#*/*-} # = ${PF}
+	PPP_VER=${PPP_VER%%[_-]*} # main version without beta/pre/patch/revision
+	sed -i -e "s:\\(#define[ \\t]*VERSION[ \\t]*\\)\".*\":\\1\"${PPP_VER}\":" ${S}/plugins/patchlevel.h
+}
 
 src_compile() {
 	local myconf

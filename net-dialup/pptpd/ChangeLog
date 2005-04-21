@@ -1,6 +1,12 @@
 # ChangeLog for net-dialup/pptpd
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/pptpd/ChangeLog,v 1.15 2005/04/16 16:53:36 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/pptpd/ChangeLog,v 1.16 2005/04/21 18:42:02 mrness Exp $
+
+*pptpd-1.2.3-r1 (21 Apr 2005)
+
+  21 Apr 2005; Alin Nastac <mrness@gentoo.org> -pptpd-1.2.3.ebuild,
+  +pptpd-1.2.3-r1.ebuild:
+  Match version of pptpd-logwtmp with current version of pppd (#89895)
 
 *pptpd-1.2.3 (16 Apr 2005)
 
