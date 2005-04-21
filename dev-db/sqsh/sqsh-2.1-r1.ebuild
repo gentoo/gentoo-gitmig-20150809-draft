@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqsh/sqsh-2.1-r1.ebuild,v 1.11 2005/04/06 21:09:33 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqsh/sqsh-2.1-r1.ebuild,v 1.12 2005/04/21 20:49:03 blubb Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.sqsh.org/${P}-src.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE="readline X motif"
-KEYWORDS="x86 ~amd64"
+KEYWORDS="x86 amd64"
 
 DEPEND="dev-db/freetds
 	readline? ( sys-libs/readline )
