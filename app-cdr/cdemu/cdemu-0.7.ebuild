@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdemu/cdemu-0.7.ebuild,v 1.3 2005/01/01 12:09:15 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdemu/cdemu-0.7.ebuild,v 1.4 2005/04/21 17:52:49 blubb Exp $
 
 inherit gcc flag-o-matic python
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/cdemu/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="hppa ppc x86 ~amd64"
+KEYWORDS="hppa ppc x86 amd64"
 IUSE=""
 
 DEPEND="virtual/linux-sources"
