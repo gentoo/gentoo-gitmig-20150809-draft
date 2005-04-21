@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gonzui/gonzui-1.1.ebuild,v 1.1 2005/04/12 16:07:17 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gonzui/gonzui-1.1.ebuild,v 1.2 2005/04/21 14:10:37 matsuu Exp $
 
 inherit eutils ruby
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/gonzui/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 
 DEPEND=">=virtual/ruby-1.8.2
 	>=sys-libs/db-4.2
