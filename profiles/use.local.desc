@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1095 2005/04/21 19:03:41 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1096 2005/04/21 20:59:48 eradicator Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -410,7 +410,6 @@ media-libs/win32codecs:xanim - Installs the xanim video codecs
 media-libs/xine-lib:cle266 - Suport for the via XvMC libs
 media-libs/xine-lib:dxr3 - Support for DXR3 mpeg accelleration cards
 media-libs/xine-lib:fb - Adds framebuffer support
-media-libs/xine-lib:ffmpeg - Use external ffmpeg library instead on internal one
 media-libs/xine-lib:i8x0 - Support the i8x0 XvMC libs
 media-libs/xine-lib:nvidia - Support the nvidia XvMC libs
 media-libs/xine-lib:vidix - Support for vidix video output
@@ -455,7 +454,6 @@ media-video/dvdrip:fping - Enables fping support for cluster rendering
 media-video/dvdrip:mplayer - Enables video playback by mplayer
 media-video/dvdrip:rar - Enables rar compression of VOB fiels
 media-video/gpac:amr - Adaptive Multi-Rate Audio support (commonly used in telephony)
-media-video/kino:ffmpeg - Enable ffmpeg support
 media-video/kmplayer:koffice-plugin - Install KOffice part
 media-video/lives:libvisual - Enable libvisual support
 media-video/mjpegtools:yv12 - Enables support for the YV12 pixel format

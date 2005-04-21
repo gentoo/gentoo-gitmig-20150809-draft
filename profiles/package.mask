@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3853 2005/04/21 20:01:55 mrness Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3854 2005/04/21 20:59:48 eradicator Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -102,10 +102,6 @@ app-portage/basc
 # Luca Barbato <lu_zero@gentoo.org> (12 Apr 2005)
 # Masked for testing
 >=media-video/mplayer-1.0_pre6-r6
-
-# Jeremy Huddleston <eradicator@gentoo.org> (11 Apr 2005)
-# Masked for testing
-=sys-libs/glibc-2.3.5
 
 # Christian Parpart <trapni@gentoo.org> (11 Apr 2005)
 # masked for testing before ~testing 
