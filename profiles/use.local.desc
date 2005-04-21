@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1094 2005/04/21 16:11:26 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1095 2005/04/21 19:03:41 eradicator Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -60,7 +60,6 @@ app-emulation/mol:vnc - Includes vnc support
 app-emulation/pearpc:jit - Use the JITC-X86 CPU
 app-emulation/qemu:qemu-fast - Enables the vl/qemu-fast on the x86 cpu
 app-emulation/qemu:softmmu - Support for softmmu targets
-app-emulation/uade:beepmp - Support for Beep Media Player
 app-emulation/vmware-console:esx - Enable VMware ESX Server documentation instead of GSX server documentation
 app-i18n/anthy-ss:ucs4 - Enable ucs4 support
 app-i18n/anthy:ucs4 - Enable ucs4 support
@@ -455,7 +454,6 @@ media-video/chaplin:vcdimager - Enables optional support for GNU VCDimager
 media-video/dvdrip:fping - Enables fping support for cluster rendering
 media-video/dvdrip:mplayer - Enables video playback by mplayer
 media-video/dvdrip:rar - Enables rar compression of VOB fiels
-media-video/emovix:codecs - Enables use of the win32 dll codecs for playback
 media-video/gpac:amr - Adaptive Multi-Rate Audio support (commonly used in telephony)
 media-video/kino:ffmpeg - Enable ffmpeg support
 media-video/kmplayer:koffice-plugin - Install KOffice part
