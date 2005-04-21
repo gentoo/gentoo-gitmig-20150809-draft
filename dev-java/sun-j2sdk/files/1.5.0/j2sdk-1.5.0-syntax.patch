@@ -142,3 +142,87 @@
  // do not include  precompiled  header file
  # include "incls/_os_linux.cpp.incl"
  
+--- ./hotspot/src/os_cpu/linux_i486/vm/atomic_linux_i486.inline.hpp.jj	2004-10-19 11:41:46.000000000 -0700
++++ ./hotspot/src/os_cpu/linux_i486/vm/atomic_linux_i486.inline.hpp	2005-04-20 15:43:20.000000000 -0700
+@@ -111,7 +111,7 @@
+                     "cmpxchg8b (%5); xchgl %%ebx, %1"
+                     : "=A" (old_value), "=r" (lo)
+                     : "1" (lo), "c" (hi), "A" (compare_value), "r" (dest), "m" (mp)
+-                    : "%ebx", "cc", "memory");
++                    : "cc", "memory");
+   return old_value;
+ }
+ 
+
+--- ./j2se/src/share/native/sun/font/bidi/uchardir.c.jj	2004-10-19 12:00:29.000000000 -0700
++++ ./j2se/src/share/native/sun/font/bidi/uchardir.c	2005-04-21 09:49:51.000000000 -0700
+@@ -581,22 +581,6 @@
+     11, 14, 16, 12, 15
+ };
+ 
+-UCharDirection u_getDirection(uint32_t cp) {
+-  if (cp < ASCII_LIMIT) {
+-    return ASCII[cp];
+-  }
+-  if (cp < RTL_START) {
+-    return u_getDirectionInternal(cp);
+-  }
+-  if (cp < RTL_LIMIT) {
+-    return RTL[cp - RTL_START];
+-  }
+-  if (cp < 0x110000) {
+-    return u_getDirectionInternal(cp);
+-  }
+-  return 0;
+-}
+-
+ static UCharDirection u_getDirectionInternal(uint32_t cp) {
+   int dc;
+   int n;
+@@ -624,6 +608,22 @@
+   return dc;
+ }
+ 
++UCharDirection u_getDirection(uint32_t cp) {
++  if (cp < ASCII_LIMIT) {
++    return ASCII[cp];
++  }
++  if (cp < RTL_START) {
++    return u_getDirectionInternal(cp);
++  }
++  if (cp < RTL_LIMIT) {
++    return RTL[cp - RTL_START];
++  }
++  if (cp < 0x110000) {
++    return u_getDirectionInternal(cp);
++  }
++  return 0;
++}
++
+ UCharDirection
+ u_charDirection(UChar ch) {
+     return u_getDirection(ch);
+--- ./j2se/src/solaris/bin/java_md.c.jj	2004-10-19 12:01:43.000000000 -0700
++++ ./j2se/src/solaris/bin/java_md.c	2005-04-20 21:08:13.000000000 -0700
+@@ -1136,7 +1136,7 @@
+                     : /* Inputs */
+                     "m" (arg)
+                     : /* Clobbers */
+-                    "%eax", "%ebx", "%ecx", "%edx"
++                    "%eax", "%ecx", "%edx"
+                     );
+   *eaxp = value_of_eax;
+   *ebxp = value_of_ebx;
+--- ./mozilla/share/plugin/mozilla_headers_ns7/nscore.h.jj	2002-09-07 10:12:44.000000000 -0700
++++ ./mozilla/share/plugin/mozilla_headers_ns7/nscore.h	2005-04-21 11:12:36.000000000 -0700
+@@ -202,6 +202,10 @@
+   #define HAVE_CPP_2BYTE_WCHAR_T
+ #endif
+ 
++#if defined(__GNUC__)
++#define HAVE_CPP_MODERN_SPECIALIZE_TEMPLATE_SYNTAX
++#endif
++
+   /* until we get an autoconf test for this, we'll assume it's on (since we're using it already) */
+ #define HAVE_CPP_TYPENAME
+ 

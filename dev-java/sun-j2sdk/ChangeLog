@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/sun-j2sdk
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-j2sdk/ChangeLog,v 1.34 2005/01/31 21:01:28 cretin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-j2sdk/ChangeLog,v 1.35 2005/04/21 22:56:04 cretin Exp $
+
+  21 Apr 2005; Stefan Jones <cretin@gentoo.org>
+  files/1.5.0/j2sdk-1.5.0-syntax.patch:
+  Updated patch to include gcc-3.4 fixes
 
 *sun-j2sdk-1.5.0 (31 Jan 2005)
 
