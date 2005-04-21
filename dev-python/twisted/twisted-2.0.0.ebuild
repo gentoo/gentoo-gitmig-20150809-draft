@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted/twisted-2.0.0.ebuild,v 1.1 2005/04/08 13:56:09 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted/twisted-2.0.0.ebuild,v 1.2 2005/04/21 13:15:46 lordvan Exp $
 
 inherit distutils
 
@@ -14,14 +14,15 @@ SRC_URI="http://tmrc.mit.edu/mirror/twisted/${MY_PN}/2.0/${MY_P}.tar.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~x86 ~amd64 ~ppc ~alpha ~sparc"
+KEYWORDS="~x86 ~sparc"
 IUSE="gtk gtk2 doc"
 
 DEPEND=">=dev-lang/python-2.2
 	>=dev-python/pycrypto-1.9_alpha6
 	dev-python/pyserial
 	dev-python/pyopenssl
-	gtk2? ( >=dev-python/pygtk-1.99* )"
+	gtk2? ( >=dev-python/pygtk-1.99* )
+	net-zope/zopeinterface"
 #	doc? ( =dev-python/twisted-docs-${PV} )"
 
 S=${WORKDIR}/${MY_P}

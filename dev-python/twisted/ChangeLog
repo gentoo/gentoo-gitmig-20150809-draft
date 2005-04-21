@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/twisted
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted/ChangeLog,v 1.43 2005/04/08 13:56:09 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted/ChangeLog,v 1.44 2005/04/21 13:15:46 lordvan Exp $
+
+  21 Apr 2005; Thomas Raschbacher <lordvan@gentoo.org> :
+  added zope.interface dep.
+  Thanks to Stephan Wienczny <Stephan@Wienczny.de> for pointing this out.
 
   08 Apr 2005; Thomas Raschbacher <lordvan@gentoo.org> twisted-2.0.0.ebuild:
   Version bump (package split now look out for twisted-web, twisted-mail,

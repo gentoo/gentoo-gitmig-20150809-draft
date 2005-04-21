@@ -2,8 +2,8 @@ MD5 1b0c1b4358d2f592e71d2cd6ded7cbf8 twisted-1.1.0.ebuild 1001
 MD5 0b80bf8a3750b39a3b6a2032d6837c3b twisted-1.2.0.ebuild 1048
 MD5 f7dea95a807c77dae8ba5c9848c2d509 twisted-1.3.0.ebuild 1106
 MD5 77e25b99cedb56904ab7a055163f6508 twisted-1.1.1.ebuild 1037
-MD5 5dab77c839968a5cdf4221ad0711cc30 twisted-2.0.0.ebuild 884
-MD5 059ce2eb74cd69265249d7a0350a751a ChangeLog 9044
+MD5 b3e1cc4a1a70e364830990ce63d5ce1a twisted-2.0.0.ebuild 889
+MD5 fc588b81c999a640e86c43d45c6ea561 ChangeLog 9204
 MD5 6cff4e20d4a4e2533e2bedc004a84dd9 twisted-1.2.1_alpha2.ebuild 1106
 MD5 19df39ef54fc4a8677998f19bb6046ac metadata.xml 218
 MD5 5c2c68c5857f1ad5b44c0672c5fd0671 files/digest-twisted-1.1.0 74
