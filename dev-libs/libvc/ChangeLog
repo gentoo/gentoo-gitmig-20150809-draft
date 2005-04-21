@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libvc
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libvc/ChangeLog,v 1.8 2004/12/29 22:37:10 ciaranm Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libvc/ChangeLog,v 1.9 2005/04/21 19:41:43 blubb Exp $
+
+  21 Apr 2005; Simon Stelling <blubb@gentoo.org> libvc-003.ebuild:
+  stable on amd64
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance

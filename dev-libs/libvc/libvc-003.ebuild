@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libvc/libvc-003.ebuild,v 1.9 2004/12/29 15:43:25 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libvc/libvc-003.ebuild,v 1.10 2005/04/21 19:41:43 blubb Exp $
 
 DESCRIPTION="vCard library (rolo)"
 HOMEPAGE="http://rolo.sourceforge.net/"
@@ -9,7 +9,7 @@ RESTRICT="nomirror"
 LICENSE="LGPL-2.1"
 SLOT="0"
 IUSE=""
-KEYWORDS="x86 ppc sparc alpha ~amd64"
+KEYWORDS="x86 ppc sparc alpha amd64"
 
 src_install() {
 	emake DESTDIR=${D} install
