@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/quilt/quilt-0.37.ebuild,v 1.2 2005/04/21 12:03:08 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/quilt/quilt-0.39.ebuild,v 1.1 2005/04/21 12:03:08 ka0ttic Exp $
 
 inherit bash-completion
 
@@ -21,21 +21,13 @@ IUSE=""
 RDEPEND="dev-util/diffstat
 	media-gfx/graphviz"
 
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-
-	# bug 89845
-	sed -i "s/ > / '>' /" bash_completion || die "sed bash_completion failed"
-}
-
 src_install() {
 	make BUILD_ROOT="${D}" install || die "make install failed"
 
 	rm -rf ${D}/usr/share/doc/${P}
-	dodoc AUTHORS BUGS quilt.changes doc/README doc/quilt.pdf \
-		doc/sample.quiltrc
+	dodoc AUTHORS BUGS TODO quilt.changes doc/README doc/README.MAIL \
+		doc/quilt.pdf doc/sample.quiltrc
 
 	rm -rf ${D}/etc/bash_completion.d
-	dobashcompletion bash_completion ${PN}
+	dobashcompletion bash_completion
 }
