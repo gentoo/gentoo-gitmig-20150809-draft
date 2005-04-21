@@ -39,3 +39,6 @@
 
 #no idea why this is in base system
 <dev-libs/glib-2.5
+
+# This just saves everybody time.
+*sys-apps/busybox
