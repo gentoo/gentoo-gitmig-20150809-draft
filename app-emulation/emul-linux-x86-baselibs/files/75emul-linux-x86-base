@@ -1,2 +1,1 @@
-LDPATH="/lib32:/usr/lib32:/usr/lib32/gcc-lib/i386-pc-linux-gnu/3.2.3/"
-
+LDPATH=/emul/linux/x86/lib:/emul/linux/x86/usr/lib
