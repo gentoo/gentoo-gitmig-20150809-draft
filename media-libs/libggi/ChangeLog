@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libggi
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libggi/ChangeLog,v 1.19 2005/04/10 00:56:30 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libggi/ChangeLog,v 1.20 2005/04/21 08:01:03 blubb Exp $
+
+  21 Apr 2005; Simon Stelling <blubb@gentoo.org> libggi-2.1.0.ebuild:
+  added ~amd64
 
   10 Apr 2005; Joseph Jezak <josejx@gentoo.org> libggi-2.1.0.ebuild:
   Forgot to remove unneeded patch on ppc.
