@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/sdl-gfx
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-gfx/ChangeLog,v 1.27 2005/04/19 00:41:59 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-gfx/ChangeLog,v 1.28 2005/04/21 19:09:31 mr_bones_ Exp $
+
+  21 Apr 2005; Michael Sterrett <mr_bones_@gentoo.org>
+  sdl-gfx-2.0.13.ebuild:
+  filter -funroll-loops for bug #89749
 
 *sdl-gfx-2.0.13 (19 Apr 2005)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-gfx/sdl-gfx-2.0.13.ebuild,v 1.2 2005/04/19 00:47:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-gfx/sdl-gfx-2.0.13.ebuild,v 1.3 2005/04/21 19:09:31 mr_bones_ Exp $
 
 inherit flag-o-matic
 
@@ -19,7 +19,7 @@ DEPEND=">=media-libs/libsdl-1.2"
 S=${WORKDIR}/${MY_P}
 
 src_compile() {
-	filter-flags -finline-functions #26892
+	filter-flags -finline-functions -funroll-loops #26892 #89749
 	replace-flags -O? -O2
 
 	econf $(use_enable mmx) || die
