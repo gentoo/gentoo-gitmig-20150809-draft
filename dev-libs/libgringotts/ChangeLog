@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libgringotts
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgringotts/ChangeLog,v 1.9 2004/11/22 18:06:16 leonardop Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgringotts/ChangeLog,v 1.10 2005/04/21 18:03:50 blubb Exp $
+
+  21 Apr 2005; Simon Stelling <blubb@gentoo.org> libgringotts-1.2.1.ebuild:
+  stable on amd64
 
   22 Nov 2004; Leonardo Boshell <leonardop@gentoo.org>
   libgringotts-1.2.1.ebuild:
