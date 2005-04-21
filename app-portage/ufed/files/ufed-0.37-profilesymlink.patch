@@ -1,0 +1,13 @@
+--- ufed-0.37.orig/ufed.pl
++++ ufed-0.37/ufed.pl
+@@ -237,8 +237,8 @@
+ }
+ 
+ sub read_profiles() {
+-	$_ = readlink '/etc/make.profile';
+-	die "/etc/make.profile is not a symlink\n" if $!;
++	$_ = readlink '/etc/make.profile' or
++	die "/etc/make.profile is not a symlink\n";
+ 	@profiles = norm_path '/etc', $_;
+ 	PARENT: {
+ 		for(noncomments "$profiles[0]/parent") {
