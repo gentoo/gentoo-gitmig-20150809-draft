@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/gmp-4.1.4.ebuild,v 1.13 2005/02/16 18:20:51 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/gmp-4.1.4.ebuild,v 1.14 2005/04/21 09:56:41 dragonheart Exp $
 
 inherit flag-o-matic libtool eutils multilib
 
@@ -18,7 +18,7 @@ DEPEND="${RDEPEND}
 	sys-apps/gawk
 	sys-devel/bison
 	sys-devel/flex
-	sys-devel/libtool
+	>=sys-devel/libtool-1.4.3-r4
 	sys-devel/gcc"
 
 src_unpack () {
