@@ -1,6 +1,13 @@
 # ChangeLog for app-editors/hteditor
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/hteditor/ChangeLog,v 1.10 2005/01/01 13:27:48 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/hteditor/ChangeLog,v 1.11 2005/04/21 10:55:51 dragonheart Exp $
+
+*hteditor-0.8.0 (21 Apr 2005)
+
+  21 Apr 2005; Daniel Black <dragonheart@gentoo.org>
+  -hteditor-0.8.0_pre1.ebuild, +hteditor-0.8.0.ebuild:
+  Version bump as per bug #88994. Thanks to Lukas Sandström
+  <gentoo-bugziFREE_OF_SPAMlla@luksan.cjb.net>
 
   05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   hteditor-0.7.4.ebuild:

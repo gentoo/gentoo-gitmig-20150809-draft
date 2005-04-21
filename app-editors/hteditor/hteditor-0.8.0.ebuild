@@ -1,12 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/hteditor/hteditor-0.8.0_pre1.ebuild,v 1.5 2005/01/01 13:27:48 eradicator Exp $
-
-inherit toolchain-funcs
+# $Header: /var/cvsroot/gentoo-x86/app-editors/hteditor/hteditor-0.8.0.ebuild,v 1.1 2005/04/21 10:55:51 dragonheart Exp $
 
 DESCRIPTION="editor for executable files"
 HOMEPAGE="http://hte.sourceforge.net/"
-SRC_URI="mirror://sourceforge/hte/ht-${PV/_/}.tar.bz2"
+SRC_URI="mirror://sourceforge/hte/ht-${PV}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -25,10 +23,9 @@ DEPEND="${RDEPEND}
 S="${WORKDIR}/ht-${PV/_/}"
 
 src_compile() {
-	chmod +x configure
-	./configure --prefix=/usr --sysconfdir=/etc || die
+	econf || die
 	emake \
-		CC="$(tc-getCC)" CXX="$(tc-getCXX)" CFLAGS="${CFLAGS}" \
+		CFLAGS="${CFLAGS}" \
 		CXXFLAGS="${CXXFLAGS}" LDFLAGS="${LDFLAGS}" || die
 }
 
