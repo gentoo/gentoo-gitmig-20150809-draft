@@ -1,6 +1,10 @@
 # ChangeLog for app-laptop/laptop-mode-tools
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/laptop-mode-tools/ChangeLog,v 1.3 2005/04/11 19:22:58 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/laptop-mode-tools/ChangeLog,v 1.4 2005/04/21 07:26:58 blubb Exp $
+
+  21 Apr 2005; Simon Stelling <blubb@gentoo.org>
+  laptop-mode-tools-1.05.ebuild:
+  added ~amd64
 
 *laptop-mode-tools-1.05 (11 Apr 2005)
 
