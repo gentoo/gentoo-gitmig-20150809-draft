@@ -1,0 +1,11 @@
+# ChangeLog for dev-lisp/cl-log4cl
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-log4cl/ChangeLog,v 1.1 2005/04/21 22:06:11 mkennedy Exp $
+
+*cl-log4cl-20050421 (21 Apr 2005)
+
+  21 Apr 2005; Matthew Kennedy <mkennedy@gentoo.org>
+  +files/20050421-defconstant-gentoo.patch, +metadata.xml,
+  +cl-log4cl-20050421.ebuild:
+  Initial port. Ebuild contributed by Matthew Kennedy <mkennedy@gentoo.org>
+
