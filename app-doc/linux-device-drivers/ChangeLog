@@ -1,6 +1,12 @@
 # ChangeLog for app-doc/linux-device-drivers
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/linux-device-drivers/ChangeLog,v 1.1 2005/02/19 19:11:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/linux-device-drivers/ChangeLog,v 1.2 2005/04/21 22:13:19 vapier Exp $
+
+*linux-device-drivers-3 (21 Apr 2005)
+
+  21 Apr 2005; Mike Frysinger <vapier@gentoo.org>
+  +linux-device-drivers-3.ebuild:
+  Version bump.
 
 *linux-device-drivers-2 (19 Feb 2004)
 
