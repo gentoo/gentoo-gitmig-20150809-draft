@@ -1,6 +1,9 @@
 # ChangeLog for app-office/ooodi
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/ooodi/ChangeLog,v 1.16 2005/03/30 20:08:40 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/ooodi/ChangeLog,v 1.17 2005/04/21 19:57:37 blubb Exp $
+
+  21 Apr 2005; Simon Stelling <blubb@gentoo.org> ooodi-0.68.ebuild:
+  stable on amd64
 
   30 Mar 2005; Gustavo Zacarias <gustavoz@gentoo.org> ooodi-0.68.ebuild:
   Stable on sparc

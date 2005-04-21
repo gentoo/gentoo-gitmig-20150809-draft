@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kbudget/kbudget-0.6.ebuild,v 1.7 2005/01/01 15:34:49 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kbudget/kbudget-0.6.ebuild,v 1.8 2005/04/21 19:55:03 blubb Exp $
 
 inherit kde
 need-kde 3.0
@@ -10,7 +10,7 @@ SRC_URI="http://www.garandnet.net/kbudget/downloads/${P}.tar.bz2"
 HOMEPAGE="http://www.garandnet.net/kbudget/"
 
 LICENSE="GPL-2"
-KEYWORDS="x86 ~amd64 sparc"
+KEYWORDS="x86 amd64 sparc"
 
 SLOT="0"
 IUSE=""

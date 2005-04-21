@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/sc/sc-7.12.ebuild,v 1.19 2005/01/01 15:41:30 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/sc/sc-7.12.ebuild,v 1.20 2005/04/21 20:00:24 blubb Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://ibiblio.org/pub/Linux/apps/financial/spreadsheet/"
 
 SLOT="0"
 LICENSE="public-domain"
-KEYWORDS="x86 ppc sparc ~amd64"
+KEYWORDS="x86 ppc sparc amd64"
 IUSE=""
 
 DEPEND=">=sys-apps/sed-4.0.5

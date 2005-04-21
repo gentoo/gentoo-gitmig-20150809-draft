@@ -1,6 +1,9 @@
 # ChangeLog for app-office/kbudget
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kbudget/ChangeLog,v 1.9 2005/01/01 15:34:49 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kbudget/ChangeLog,v 1.10 2005/04/21 19:55:03 blubb Exp $
+
+  21 Apr 2005; Simon Stelling <blubb@gentoo.org> kbudget-0.6.ebuild:
+  stable on amd64
 
   19 Jun 2004; Jason Wever <weeve@gentoo.org> kbudget-0.6.ebuild:
   Stable on sparc.
