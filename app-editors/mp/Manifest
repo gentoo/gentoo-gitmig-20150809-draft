@@ -1,4 +1,4 @@
-MD5 83cbbf8d78e16723ecde244764b4986f ChangeLog 3995
+MD5 d9a899a14c6ffd00a365f6f53f2d082c ChangeLog 4080
 MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
 MD5 a84ba8795412c9dfd6fa7bda75bdd635 mp-3.1.9.ebuild 675
 MD5 38dea2513d652b4f727653f3492eb769 mp-3.2.10.ebuild 953
@@ -7,7 +7,7 @@ MD5 dcef69b68c93d433d0ea24a7d76cd143 mp-3.3.1.ebuild 1159
 MD5 439f8a059984066d02f40de20c6a7b7b mp-3.3.10.ebuild 1529
 MD5 94e0d8921e6b6ad7fb5a77befe589d57 mp-3.3.11.ebuild 1341
 MD5 e001dc78cf8d27dbf5a8d33cf53c2ed2 mp-3.3.9.ebuild 1446
-MD5 8ac409649eb88ba5f9b9d7e15c35dabe mp-3.3.12.ebuild 1374
+MD5 28498219226272e569451e0353ea5b78 mp-3.3.12.ebuild 1379
 MD5 135880e17116622cd1cfff6f0b370a29 files/digest-mp-3.1.9 59
 MD5 ef0f5c3d7fae6d678f94005df3d90866 files/digest-mp-3.2.10 61
 MD5 7c0b9a8a327bbfc4db185cdefaa14767 files/digest-mp-3.2.11 61
