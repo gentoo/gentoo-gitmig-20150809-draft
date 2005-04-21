@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/duali-data
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/duali-data/ChangeLog,v 1.9 2005/04/01 03:45:30 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/duali-data/ChangeLog,v 1.10 2005/04/21 18:08:31 blubb Exp $
+
+  21 Apr 2005; Simon Stelling <blubb@gentoo.org> duali-data-0.1b.ebuild:
+  stable on amd64
 
   31 Mar 2005; Aron Griffis <agriffis@gentoo.org> duali-data-0.1b.ebuild:
   stable on ia64

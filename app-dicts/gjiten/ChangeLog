@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/gjiten
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/gjiten/ChangeLog,v 1.10 2005/01/01 12:52:19 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/gjiten/ChangeLog,v 1.11 2005/04/21 18:12:48 blubb Exp $
+
+  21 Apr 2005; Simon Stelling <blubb@gentoo.org> gjiten-2.3.ebuild:
+  stable on amd64
 
   04 Nov 2004; Mamoru KOMACHI <usata@gentoo.org> -gjiten-2.1.ebuild,
   -gjiten-2.2.ebuild, gjiten-2.3.ebuild:
