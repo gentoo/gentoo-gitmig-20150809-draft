@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/scotty/scotty-2.1.11.ebuild,v 1.10 2005/01/01 21:05:25 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/scotty/scotty-2.1.11.ebuild,v 1.11 2005/04/21 14:17:17 blubb Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.ibr.cs.tu-bs.de/pub/local/tkined/${P}.tar.gz"
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
-KEYWORDS="x86 alpha ~amd64"
+KEYWORDS="x86 alpha amd64"
 IUSE=""
 
 DEPEND="virtual/libc

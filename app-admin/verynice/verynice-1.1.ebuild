@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/verynice/verynice-1.1.ebuild,v 1.7 2005/01/01 11:33:58 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/verynice/verynice-1.1.ebuild,v 1.8 2005/04/21 14:06:38 blubb Exp $
 
 DESCRIPTION="A tool for dynamically adjusting the nice-level of processes"
 HOMEPAGE="http://www.tam.cornell.edu/~sdh4/verynice/"
@@ -8,7 +8,7 @@ SRC_URI="http://www.tam.cornell.edu/~sdh4/verynice/down/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~amd64"
+KEYWORDS="x86 amd64"
 IUSE=""
 
 S=${WORKDIR}/${PN}

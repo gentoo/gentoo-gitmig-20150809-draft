@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/scotty
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/scotty/ChangeLog,v 1.7 2005/01/01 21:05:25 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/scotty/ChangeLog,v 1.8 2005/04/21 14:17:17 blubb Exp $
+
+  21 Apr 2005; Simon Stelling <blubb@gentoo.org> scotty-2.1.11.ebuild:
+  stable on amd64
 
   01 Jan 2005; Daniel Ahlberg <aliz@gentoo.org> scotty-2.1.11.ebuild,
   files/scotty-2.1.11-Makefile.patch, files/scotty-2.1.11-suse.patch:

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/bastille/bastille-2.1.1-r3.ebuild,v 1.1 2005/04/05 18:02:56 battousai Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/bastille/bastille-2.1.1-r3.ebuild,v 1.2 2005/04/21 14:12:44 blubb Exp $
 
 inherit perl-module eutils
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/${PN}-linux/${MY_P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc ~sparc alpha ~amd64"
+KEYWORDS="x86 ppc ~sparc alpha amd64"
 IUSE="X"
 
 RDEPEND="net-firewall/iptables
