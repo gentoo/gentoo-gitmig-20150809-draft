@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 c4af5840300febe3dc9ae3d4c7d1930c ChangeLog 5737
-MD5 85431b845c5e8149ac07933c96fd38f4 bestcrypt-1.5_p10.ebuild 2942
+MD5 f5cb743df6c04c53fdbc6f9ec87458ab ChangeLog 5825
+MD5 bf81314335561f76f139d8cf728cfdc1 bestcrypt-1.5_p10.ebuild 2935
 MD5 566cf4f89e44670d0aba4a745913d748 metadata.xml 224
 MD5 063ae0f67213da39ed4dd75a594b3b07 files/bcrypt3 3246
-MD5 c9fdd7c76eb3731a6166cc9ff17bf722 files/digest-bestcrypt-1.5_p10 137
 MD5 e9585e8f08138f46bdda7b88ddd81cd8 files/bestcrypt-1.5_p10-makefile_fix.patch 1136
 MD5 01225cc87eee84cf54232c86b04e8c93 files/bestcrypt.devfs 1673
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCEboWmdTrptrqvGERAud6AJ9mg+bHJ08qLHkuQUyCWz2FR46BsACeI+9p
-aoVOd/sK19+bZdRWTlJ2GC0=
-=Ol3m
------END PGP SIGNATURE-----
+MD5 c9fdd7c76eb3731a6166cc9ff17bf722 files/digest-bestcrypt-1.5_p10 137

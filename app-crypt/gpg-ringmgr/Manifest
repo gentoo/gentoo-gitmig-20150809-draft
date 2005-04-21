@@ -1,4 +1,4 @@
-MD5 9b0f86ef5d8ea6c8060f43cf6eb97f55 ChangeLog 1017
-MD5 5745ecf4fee8db0c901663795719decb gpg-ringmgr-1.12.ebuild 775
+MD5 c9c0396da67baed22538cbdace21ae04 ChangeLog 1106
+MD5 3fed94f63757f6a4e63880b4b862c375 gpg-ringmgr-1.12.ebuild 769
 MD5 b0d485ea1a51fb83c70daedef2599272 metadata.xml 279
 MD5 96a66e5d7f6090fec489ff563dec6417 files/digest-gpg-ringmgr-1.12 54
