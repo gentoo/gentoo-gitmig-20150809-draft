@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pccts/pccts-1.33.33.ebuild,v 1.14 2005/02/06 17:20:55 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pccts/pccts-1.33.33.ebuild,v 1.15 2005/04/21 19:11:13 hansmi Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.polhode.com/"
 
 SLOT="0"
 LICENSE="BSD"
-KEYWORDS="x86 ~ppc sparc alpha hppa amd64 ia64 ~ppc-macos ppc64"
+KEYWORDS="x86 ppc sparc alpha hppa amd64 ia64 ~ppc-macos ppc64"
 IUSE=""
 
 DEPEND="app-arch/unzip"

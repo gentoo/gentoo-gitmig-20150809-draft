@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/devhelp
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/ChangeLog,v 1.30 2005/04/01 18:23:45 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/ChangeLog,v 1.31 2005/04/21 19:07:12 hansmi Exp $
+
+  21 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> devhelp-0.9.3.ebuild:
+  Stable on ppc.
 
   01 Apr 2005; Simon Stelling <blubb@gentoo.org> devhelp-0.9.3.ebuild:
   stable on amd64
