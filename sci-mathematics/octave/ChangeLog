@@ -1,6 +1,11 @@
 # ChangeLog for sci-mathematics/octave
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/ChangeLog,v 1.4 2005/04/18 16:19:36 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/ChangeLog,v 1.5 2005/04/21 21:05:41 cryos Exp $
+
+*octave-2.1.69 (21 Apr 2005)
+
+  21 Apr 2005; Marcus D. Hanwell <cryos@gentoo.org> +octave-2.1.69.ebuild:
+  Version bump, closes bug 89397.
 
   18 Apr 2005; Joseph Jezak <josejx@gentoo.org> octave-2.1.57-r1.ebuild:
   Marked ppc stable.
