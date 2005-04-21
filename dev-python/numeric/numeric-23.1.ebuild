@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numeric/numeric-23.1.ebuild,v 1.11 2005/04/16 23:14:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numeric/numeric-23.1.ebuild,v 1.12 2005/04/21 18:58:27 hansmi Exp $
 
 inherit distutils
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/numpy/${MY_P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ia64 ~ppc s390 sparc x86"
+KEYWORDS="alpha amd64 hppa ia64 ppc s390 sparc x86"
 IUSE=""
 
 # 2.1 gave sandbox violations see #21

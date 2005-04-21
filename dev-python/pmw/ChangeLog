@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pmw
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pmw/ChangeLog,v 1.16 2004/12/30 22:54:32 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pmw/ChangeLog,v 1.17 2005/04/21 18:59:51 hansmi Exp $
+
+  21 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> pmw-1.2.ebuild:
+  Stable on ppc.
 
   30 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
