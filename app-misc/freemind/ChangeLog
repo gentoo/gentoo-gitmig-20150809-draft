@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/freemind
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/freemind/ChangeLog,v 1.15 2005/01/12 21:55:46 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/freemind/ChangeLog,v 1.16 2005/04/21 01:47:58 zx Exp $
+
+*freemind-0.8.0_rc2 (20 Apr 2005)
+
+  20 Apr 2005; Chris Aniszczyk <zx@gentoo.org> +freemind-0.8.0_rc2.ebuild:
+  Version bump. Closes #89864
 
 *freemind-0.7.1-r1 (12 Jan 2005)
 
