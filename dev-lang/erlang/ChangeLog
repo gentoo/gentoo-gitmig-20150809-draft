@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/erlang
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/ChangeLog,v 1.16 2005/03/20 10:13:02 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/ChangeLog,v 1.17 2005/04/21 20:02:49 herbs Exp $
+
+  21 Apr 2005; Herbie Hopkins <herbs@gentoo.org> erlang-10.2.0.ebuild:
+  Small multilib issue, fixes bug #89938
 
   20 Mar 2005; Matthew Kennedy <mkennedy@gentoo.org>
   +files/50erlang-gentoo.el, erlang-10.2.0.ebuild:

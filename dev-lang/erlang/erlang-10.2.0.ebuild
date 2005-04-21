@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/erlang-10.2.0.ebuild,v 1.3 2005/03/20 10:13:02 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/erlang-10.2.0.ebuild,v 1.4 2005/04/21 20:02:49 herbs Exp $
 
 inherit eutils gcc flag-o-matic elisp-common
 
@@ -46,7 +46,7 @@ src_compile() {
 }
 
 src_install() {
-	ERL_LIBDIR="/usr/lib/erlang"
+	ERL_LIBDIR="/usr/$(get_libdir)/erlang"
 
 	make INSTALL_PREFIX=${D} install || die
 	dodoc AUTHORS EPLICENCE README
