@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<herd>no-herd</herd>
+	<maintainer>
+		<email>tove@gentoo.org</email>
+		<name>Torsten Veller</name>
+	</maintainer>
+	<longdescription lang="en">
+		wmii is a lightweight window manager, highly modularized and uses a new
+		configuration and inter-process communication interface which is
+		oriented on the 9p protocol of the plan9 operating system.
+	</longdescription>
+</pkgmetadata>
+
