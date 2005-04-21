@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.11.10-r3.ebuild,v 1.2 2005/04/15 16:13:25 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.11.11-r1.ebuild,v 1.1 2005/04/21 09:39:03 uberlord Exp $
 
 inherit flag-o-matic eutils toolchain-funcs multilib
 
-SV=1.6.10		# rc-scripts version
+SV=1.6.11		# rc-scripts version
 SVREV=			# rc-scripts rev
 
 S="${WORKDIR}/rc-scripts-${SV}${SVREV}"
@@ -24,7 +24,8 @@ IUSE="bootstrap build static uclibc"
 RDEPEND=">=sys-apps/sysvinit-2.84
 	!build? ( !bootstrap? (
 		>=sys-libs/readline-5.0-r1
-		>=app-shells/bash-3.0-r7
+		>=app-shells/bash-3.0-r9
+		>=sys-apps/coreutils-5.2.1
 	) )"
 DEPEND="virtual/os-headers"
 PROVIDE="virtual/baselayout"
@@ -33,17 +34,8 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 
-	# Bug #84999
-	epatch ${FILESDIR}/${P}-iwconfig.patch
-
-	# Stop defaulting WEP key to [1] as it messes with ndiswrapper users
-	epatch ${FILESDIR}/${P}-iwconfig-2.patch
-
-	# Stops removing IP addresses from bridge ports
-	# Fixes iwconfig taking 10 seconds to pre_stop on a non-wireless interface
-	# Fixes ifconfig from erroring when deleting addresses on a non-existant
-	# interface
-	epatch ${FILESDIR}/${P}-bridge.patch
+	# Move bashrc to /etc/bashrc
+	epatch ${FILESDIR}/${PN}-1.11.10-bashrc.patch
 
 	# Fix Sparc specific stuff
 	if [[ $(tc-arch) == "sparc" ]] ; then
@@ -143,7 +135,7 @@ src_install() {
 	: ${libdirs:=lib}	# it isn't that we don't trust multilib.eclass...
 
 	# This should be /lib/rcscripts, but we have to support old profiles too.
-	if [ "${SYMLINK_LIB}" = "yes" ]; then
+	if [[ ${SYMLINK_LIB} == "yes" ]]; then
 		rcscripts_dir="/$(get_abi_LIBDIR ${DEFAULT_ABI})/rcscripts"
 	else
 		rcscripts_dir="/lib/rcscripts"
@@ -172,11 +164,14 @@ src_install() {
 	kdir ${rcscripts_dir}
 	kdir ${rcscripts_dir}/awk
 	kdir ${rcscripts_dir}/sh
-	dodir ${rcscripts_dir}/net.modules.d	# .keep file messes up net.lo
-	dodir ${rcscripts_dir}/net.modules.d/helpers.d
+	kdir ${rcscripts_dir}/net.modules.d
+	kdir ${rcscripts_dir}/net.modules.d/helpers.d
 	kdir /mnt
-	kdir -m 0700 /mnt/cdrom
-	kdir -m 0700 /mnt/floppy
+	# Only install floppy and cdrom when first installing - fixes 88835
+	if use build ; then
+		kdir -m 0700 /mnt/cdrom
+		kdir -m 0700 /mnt/floppy
+	fi
 	kdir /opt
 	kdir -o root -g uucp -m0755 /var/lock
 	kdir /proc
@@ -370,6 +365,21 @@ src_install() {
 	unkdir
 }
 
+# Support function for remapping old wireless dns vars
+remap_dns_vars() {
+	local f="$1"
+
+	if [[ -f ${ROOT}/etc/conf.d/${f} ]]; then
+		sed -e 's/\<domain_/dns_domain_/g' \
+			-e 's/\<mac_domain_/mac_dns_domain_/g' \
+			-e 's/\<nameservers_/dns_servers_/g' \
+			-e 's/\<mac_nameservers_/mac_dns_servers_/g' \
+			-e 's/\<searchdomains_/dns_search_domains_/g' \
+			-e 's/\<mac_searchdomains_/mac_dns_search_domains_/g' \
+			${ROOT}/etc/conf.d/${f} > ${IMAGE}/etc/conf.d/${f}
+	fi
+}
+
 pkg_preinst() {
 	if [[ -f ${ROOT}/etc/modules.autoload && \
 			! -d ${ROOT}/etc/modules.autoload.d ]]; then
@@ -378,6 +388,12 @@ pkg_preinst() {
 			${ROOT}/etc/modules.autoload.d/kernel-2.4
 		ln -snf modules.autoload.d/kernel-2.4 ${ROOT}/etc/modules.autoload
 	fi
+
+	# Change some vars introduced in baselayout-1.11.0 before we go stable
+	# The new names make more sense and allow nis_domain
+	# for use in baselayout-1.12.0
+	remap_dns_vars net
+	remap_dns_vars wireless
 }
 
 pkg_postinst() {
@@ -543,4 +559,31 @@ pkg_postinst() {
 		echo
 		break
 	done
+
+	if sed -e 's/#.*//' ${ROOT}/etc/conf.d/{net,wireless} 2>/dev/null \
+		| egrep -q '\<(domain|nameservers|searchdomains)_' ; then
+			echo
+			ewarn "You have depreciated variables in ${ROOT}/etc/conf.d/net"
+			ewarn "or ${ROOT}/etc/conf.d/wireless"
+			ewarn
+			ewarn "domain_* -> dns_domain_*"
+			ewarn "nameservers_* -> dns_servers_*"
+			ewarn "searchdomains_* -> dns_search_domains_*"
+			ewarn
+			ewarn "They have been converted for you - ensure that you"
+			ewarn "update them via 'etc-update'"
+			echo
+	fi
+
+	if sed -e 's/#.*//' ${ROOT}/etc/conf.d/net 2>/dev/null \
+		| egrep -q '\<(ifconfig|aliases|broadcasts|netmasks|inet6|ipaddr|iproute)_'; then
+			echo
+			ewarn "You are using deprecated variables in ${ROOT}/etc/conf.d/net"
+			ewarn
+			ewarn "You are advised to review the new configuration variables as"
+			ewarn "found in ${ROOT}/etc/conf.d/net.example as there is no"
+			ewarn "guarantee that they will work in future versions."
+			echo
+	fi
+
 }
