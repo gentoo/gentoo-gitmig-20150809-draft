@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/sml-mode/sml-mode-3.9.5.ebuild,v 1.7 2005/01/01 14:01:40 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/sml-mode/sml-mode-3.9.5.ebuild,v 1.8 2005/04/21 18:43:08 blubb Exp $
 
 inherit elisp
 
@@ -9,7 +9,7 @@ HOMEPAGE="ftp://ftp.research.bell-labs.com/dist/smlnj/contrib/emacs/"
 SRC_URI="ftp://ftp.research.bell-labs.com/dist/smlnj/contrib/emacs/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~alpha ~ppc-macos ~amd64"
+KEYWORDS="x86 ~alpha ~ppc-macos amd64"
 IUSE=""
 
 SITEFILE=50sml-mode-gentoo.el

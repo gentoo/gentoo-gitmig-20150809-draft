@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/w3
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/w3/ChangeLog,v 1.12 2005/01/01 14:05:34 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/w3/ChangeLog,v 1.13 2005/04/21 18:34:55 blubb Exp $
+
+  21 Apr 2005; Simon Stelling <blubb@gentoo.org> w3-4.0_pre47-r1.ebuild:
+  stable on amd64
 
   07 Aug 2004; Tom Martin <slarti@gentoo.org> w3-4.0_pre47-r1.ebuild:
   Typo in DESCRIPTION: ull-featured -> full-featured. Bug 59717.

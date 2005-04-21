@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/ecb
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ecb/ChangeLog,v 1.16 2005/02/24 00:57:41 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ecb/ChangeLog,v 1.17 2005/04/21 18:32:24 blubb Exp $
+
+  21 Apr 2005; Simon Stelling <blubb@gentoo.org> ecb-2.24.ebuild:
+  stable on amd64
 
   23 Feb 2005; Matthew Kennedy <mkennedy@gentoo.org> metadata.xml,
   ecb-2.31.ebuild:

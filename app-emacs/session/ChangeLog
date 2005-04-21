@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/session
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/session/ChangeLog,v 1.7 2005/01/01 14:00:19 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/session/ChangeLog,v 1.8 2005/04/21 18:42:30 blubb Exp $
+
+  21 Apr 2005; Simon Stelling <blubb@gentoo.org> session-2.2a.ebuild:
+  stable on amd64
 
   10 Oct 2004; Mamoru KOMACHI <usata@gentoo.org> session-2.2a.ebuild:
   Stable on x86 and ppc.

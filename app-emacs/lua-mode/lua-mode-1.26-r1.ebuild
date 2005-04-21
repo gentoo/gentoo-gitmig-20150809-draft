@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/lua-mode/lua-mode-1.26-r1.ebuild,v 1.6 2005/01/01 13:52:39 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/lua-mode/lua-mode-1.26-r1.ebuild,v 1.7 2005/04/21 18:36:59 blubb Exp $
 
 inherit elisp
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://lua-users.org/wiki/LuaEditorSupport"
 SRC_URI="mirror://gentoo/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~amd64 ~ppc"
+KEYWORDS="x86 amd64 ~ppc"
 IUSE=""
 
 SITEFILE="70${PN}-gentoo.el"

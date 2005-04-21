@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/php-mode
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/php-mode/ChangeLog,v 1.9 2005/01/01 13:56:08 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/php-mode/ChangeLog,v 1.10 2005/04/21 18:40:01 blubb Exp $
+
+  21 Apr 2005; Simon Stelling <blubb@gentoo.org> php-mode-1.1.0.ebuild:
+  stable on amd64
 
   10 Oct 2004; Mamoru KOMACHI <usata@gentoo.org> php-mode-1.1.0.ebuild:
   Stable on x86 and ppc.

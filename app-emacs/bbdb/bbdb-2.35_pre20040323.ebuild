@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/bbdb/bbdb-2.35_pre20040323.ebuild,v 1.9 2005/01/01 13:39:28 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/bbdb/bbdb-2.35_pre20040323.ebuild,v 1.10 2005/04/21 18:30:18 blubb Exp $
 
 inherit elisp eutils
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://gentoo/${P}.tar.gz
 	http://www.mit.edu/afs/athena/contrib/emacs-contrib/Fin/dates.el"
 LICENSE="GPL-2 as-is"
 SLOT="0"
-KEYWORDS="x86 ~amd64 ppc sparc"
+KEYWORDS="x86 amd64 ppc sparc"
 
 DEPEND="virtual/emacs"
 RDEPEND="${DEPEND}
