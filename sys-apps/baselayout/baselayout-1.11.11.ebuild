@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.11.11.ebuild,v 1.1 2005/04/20 22:15:39 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.11.11.ebuild,v 1.2 2005/04/21 06:43:00 uberlord Exp $
 
 inherit flag-o-matic eutils toolchain-funcs multilib
 
@@ -132,7 +132,7 @@ src_install() {
 	: ${libdirs:=lib}	# it isn't that we don't trust multilib.eclass...
 
 	# This should be /lib/rcscripts, but we have to support old profiles too.
-	if [ "${SYMLINK_LIB}" = "yes" ]; then
+	if [[ ${SYMLINK_LIB} == "yes" ]]; then
 		rcscripts_dir="/$(get_abi_LIBDIR ${DEFAULT_ABI})/rcscripts"
 	else
 		rcscripts_dir="/lib/rcscripts"
@@ -161,11 +161,14 @@ src_install() {
 	kdir ${rcscripts_dir}
 	kdir ${rcscripts_dir}/awk
 	kdir ${rcscripts_dir}/sh
-	dodir ${rcscripts_dir}/net.modules.d	# .keep file messes up net.lo
-	dodir ${rcscripts_dir}/net.modules.d/helpers.d
+	kdir ${rcscripts_dir}/net.modules.d
+	kdir ${rcscripts_dir}/net.modules.d/helpers.d
 	kdir /mnt
-	kdir -m 0700 /mnt/cdrom
-	kdir -m 0700 /mnt/floppy
+	# Only install floppy and cdrom when first installing - fixes 88835
+	if use build ; then
+		kdir -m 0700 /mnt/cdrom
+		kdir -m 0700 /mnt/floppy
+	fi
 	kdir /opt
 	kdir -o root -g uucp -m0755 /var/lock
 	kdir /proc
@@ -554,9 +557,7 @@ pkg_postinst() {
 		break
 	done
 
-	if sed -e 's/#.*//' ${ROOT}/etc/conf.d/net 2>/dev/null \
-		| egrep -q '\<(domain|nameservers|searchdomains)_' \
-		|| sed -e 's/#.*//' ${ROOT}/etc/conf.d/wireless 2>/dev/null \
+	if sed -e 's/#.*//' ${ROOT}/etc/conf.d/{net,wireless} 2>/dev/null \
 		| egrep -q '\<(domain|nameservers|searchdomains)_' ; then
 			echo
 			ewarn "You have depreciated variables in ${ROOT}/etc/conf.d/net"
