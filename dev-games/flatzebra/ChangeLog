@@ -1,6 +1,9 @@
 # ChangeLog for dev-games/flatzebra
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/flatzebra/ChangeLog,v 1.6 2005/01/18 04:01:13 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/flatzebra/ChangeLog,v 1.7 2005/04/21 20:58:53 blubb Exp $
+
+  21 Apr 2005; Simon Stelling <blubb@gentoo.org> flatzebra-0.1.1.ebuild:
+  stable on amd64
 
   17 Jan 2005; Jason Wever <weeve@gentoo.org> flatzebra-0.1.1.ebuild:
   Added ~sparc keyword.
