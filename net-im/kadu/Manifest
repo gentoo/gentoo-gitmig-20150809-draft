@@ -22,12 +22,12 @@ MD5 5d82fddca529f0af79869df2a55db7f1 files/digest-kadu-0.3.6 63
 MD5 d6cc7076216ed7aa0d0ab8b3ff154d41 files/digest-kadu-0.3.7 63
 MD5 7259b6aef0a2d10501b79c455fe4b763 files/digest-kadu-0.3.8 63
 MD5 9c405497d2804fa81d6b2d48c00e227f files/digest-kadu-0.3.9 63
-MD5 ff58d32b5c11aebf82745fcdf3be93ec files/digest-kadu-0.4.0 1699
+MD5 27947a323558dd9aaa82c5b164f398b8 files/digest-kadu-0.4.0 1699
 MD5 878470dcf216da170b3878d17b0f59a2 files/kadu-0.3.9-nas-gentoo.diff 986
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCZz9HI1lqEGTUzyQRAtGnAKDAE28wJlELC0Io3DVfiIoSoQ6tVwCfUlHF
-cQh5n8iCxok7D5QqmIS6rKk=
-=AmEs
+iD8DBQFCZ8vqZ/iYVBmujdURAhgkAJ9t8EYrCasSBkndLygfiw78YJDxVACfZoN9
+hVVugE2MGi5Ga12gL4De4Ns=
+=UlR8
 -----END PGP SIGNATURE-----
