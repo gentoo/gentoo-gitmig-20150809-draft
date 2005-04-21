@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/hteditor
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/hteditor/ChangeLog,v 1.11 2005/04/21 10:55:51 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/hteditor/ChangeLog,v 1.12 2005/04/21 14:04:39 herbs Exp $
+
+  21 Apr 2005; Herbie Hopkins <herbs@gentoo.org> hteditor-0.8.0.ebuild:
+  ~amd64 keyword added, bug #88994
 
 *hteditor-0.8.0 (21 Apr 2005)
 
