@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/parrot/parrot-0.1.2.ebuild,v 1.1 2005/04/21 22:24:47 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/parrot/parrot-0.1.2.ebuild,v 1.2 2005/04/21 22:26:13 mcummings Exp $
 
 inherit base eutils
 
@@ -20,7 +20,7 @@ DEPEND=">=dev-lang/perl-5.8.5-r2
 
 src_compile()	{
 	#This configure defines the DESTDIR for make.
-	perl Configure.pl --prefix=${D}|| die "Perl ./Configure.pl failed"  
+	perl Configure.pl --prefix=${D}|| die "Perl ./Configure.pl failed"
 	emake -j1 || die "emake failed"
 }
 
@@ -38,7 +38,7 @@ src_install()	{
 	dosym /usr/lib/${P}/bin/parrot /usr/lib/${P}/parrot
 
 	insinto /usr/lib/${P}
-	doins config_lib.pasm 
+	doins config_lib.pasm
 	dodir /usr/lib/${P}/include
 	dodir /usr/lib/${P}/include/parrot
 	insinto /usr/lib/${P}/include/parrot/
