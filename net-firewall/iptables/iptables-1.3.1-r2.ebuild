@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.3.1-r1.ebuild,v 1.3 2005/03/28 23:04:02 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.3.1-r2.ebuild,v 1.1 2005/04/21 12:17:47 dragonheart Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -18,7 +18,7 @@ DEPEND="virtual/os-headers
 RDEPEND=""
 
 L7_PN="netfilter-layer7"
-L7_PV="1.1"
+L7_PV="1.2"
 L7_P="${L7_PN}-v${L7_PV}"
 L7_PATCH="iptables-layer7-${L7_PV}.patch"
 IMQ_PATCH="iptables-1.3.0-imq1.diff"
