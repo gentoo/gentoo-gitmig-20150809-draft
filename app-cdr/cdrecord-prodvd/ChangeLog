@@ -1,6 +1,10 @@
 # ChangeLog for app-cdr/cdrecord-prodvd
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrecord-prodvd/ChangeLog,v 1.17 2005/04/19 21:51:04 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrecord-prodvd/ChangeLog,v 1.18 2005/04/21 17:53:49 blubb Exp $
+
+  21 Apr 2005; Simon Stelling <blubb@gentoo.org>
+  cdrecord-prodvd-2.01.01-r1.ebuild:
+  re-added ~amd64
 
   19 Apr 2005; Lars Weiler <pylon@gentoo.org>
   -cdrecord-prodvd-2.01_beta31.ebuild, cdrecord-prodvd-2.01.01-r1.ebuild:
