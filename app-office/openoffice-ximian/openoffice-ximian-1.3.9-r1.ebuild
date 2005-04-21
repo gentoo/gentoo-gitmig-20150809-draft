@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.3.9-r1.ebuild,v 1.4 2005/04/15 21:55:05 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.3.9-r1.ebuild,v 1.5 2005/04/21 07:42:44 suka Exp $
 
 # Notes:
 #
@@ -79,7 +79,7 @@ RDEPEND="!app-office/openoffice-ximian-bin
 	linguas_zh_TW? ( >=media-fonts/arphicfonts-0.1-r2 )"
 
 DEPEND="${RDEPEND}
-	virtual/lpr
+	net-print/cups
 	>=sys-apps/findutils-4.1.20-r1
 	app-shells/tcsh
 	dev-util/pkgconfig
