@@ -1,6 +1,11 @@
 # ChangeLog for sci-astronomy/xephem
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/xephem/ChangeLog,v 1.2 2004/12/24 20:01:08 swegener Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/xephem/ChangeLog,v 1.3 2005/04/21 11:39:30 phosphan Exp $
+
+*xephem-3.6.4 (21 Apr 2005)
+
+  21 Apr 2005; Patrick Kursawe <phosphan@gentoo.org> +xephem-3.6.4.ebuild:
+  Version bump (bug #86762) - only little changes (a Makefile was renamed).
 
 *xephem-3.6.2 (23 Dec 2004)
 
