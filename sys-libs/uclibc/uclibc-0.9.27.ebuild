@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.27.ebuild,v 1.14 2005/03/19 22:56:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.27.ebuild,v 1.15 2005/04/21 15:47:59 solar Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -298,7 +298,8 @@ src_install() {
 		emake PREFIX="${D}" install_utils || die "install-utils failed"
 		dodir /usr/bin
 		exeinto /usr/bin
-		doexe extra/scripts/getent
+		#doexe extra/scripts/getent
+		doexe ${FILESDIR}/getent
 	fi
 
 	if ! use build ; then
