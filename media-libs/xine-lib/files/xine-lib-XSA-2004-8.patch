@@ -1,15 +1,6 @@
 diff -ur xine-lib-1.0/src/input/librtsp/rtsp.c xine-lib-1.0-r1/src/input/librtsp/rtsp.c
---- xine-lib-1.0/src/input/librtsp/rtsp.c	2004-07-25 19:13:54.000000000 +0200
-+++ xine-lib-1.0-r1/src/input/librtsp/rtsp.c	2005-04-21 23:31:28.167133048 +0200
-@@ -17,7 +17,7 @@
-  * along with this program; if not, write to the Free Software
-  * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA
-  *
-- * $Id: xine-lib-XSA-2004-8.patch,v 1.1 2005/04/21 22:05:51 flameeyes Exp $
-+ * $Id: xine-lib-XSA-2004-8.patch,v 1.1 2005/04/21 22:05:51 flameeyes Exp $
-  *
-  * a minimalistic implementation of rtsp protocol,
-  * *not* RFC 2326 compilant yet.
+--- xine-lib-1.0/src/input/librtsp/rtsp.c	2005-04-22 00:32:40.067919280 +0200
++++ xine-lib-1.0-r1/src/input/librtsp/rtsp.c	2005-04-22 00:32:16.066568040 +0200
 @@ -218,6 +218,7 @@
    unsigned int answer_seq;
    char **answer_ptr=s->answers;

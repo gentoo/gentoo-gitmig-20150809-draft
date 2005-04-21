@@ -42,5 +42,5 @@ MD5 3cbdef8aa211184b96474addb4f7c5d6 files/xine-lib-gcc34.patch 423
 MD5 ddf48f1eb00a6985b6fba5fff9386ad0 files/xine-lib-hardened-mmx.patch 2558
 MD5 5d2c3c00bf3ae9a89dfcaa8b5c5b17a2 files/xine-lib-x11.patch 703
 MD5 dcb0c79c0bb106397aad42f6d936627d files/xineconfig.patch-0.9.13 601
-MD5 2d8a9a082f0d0ecee0002a4af25096fe files/xine-lib-XSA-2004-8.patch 1941
+MD5 93e50bb9c91e39eb06a74e4d66477100 files/xine-lib-XSA-2004-8.patch 1532
 MD5 1780c88522c9a26856effa70a0e27b50 files/digest-xine-lib-1.0-r2 65
