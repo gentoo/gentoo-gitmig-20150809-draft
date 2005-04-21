@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/xc/xc-4.3.2-r1.ebuild,v 1.11 2005/02/12 10:17:46 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/xc/xc-4.3.2-r1.ebuild,v 1.12 2005/04/21 19:07:49 blubb Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.ibiblio.org/pub/Linux/apps/serialcomm/dialout/${P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="mips ppc sparc x86 ~amd64"
+KEYWORDS="mips ppc sparc x86 amd64"
 IUSE=""
 
 DEPEND="sys-libs/ncurses"
