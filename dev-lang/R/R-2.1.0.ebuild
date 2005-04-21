@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.1.0.ebuild,v 1.1 2005/04/20 23:44:10 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.1.0.ebuild,v 1.2 2005/04/21 21:02:31 cryos Exp $
 
 inherit 64-bit fortran
 
@@ -12,10 +12,10 @@ SRC_URI="http://cran.r-project.org/src/base/R-2/${P}.tar.gz"
 HOMEPAGE="http://www.r-project.org/"
 DEPEND="virtual/libc
 		>=dev-lang/perl-5.6.1-r3
-		>=sys-libs/readline-4.1-r3
+		readline? (>=sys-libs/readline-4.1-r3)
 		zlib? ( >=sys-libs/zlib-1.1.3-r2 )
-		>=media-libs/jpeg-6b-r2
-		>=media-libs/libpng-1.2.1
+		jpeg? ( >=media-libs/jpeg-6b-r2 )
+		png? ( >=media-libs/libpng-1.2.1 )
 		blas? ( virtual/blas )
 		X? ( virtual/x11 )
 		tcltk? ( dev-lang/tk )

@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/R
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.40 2005/04/20 23:44:10 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.41 2005/04/21 21:02:31 cryos Exp $
+
+  21 Apr 2005; Marcus D. Hanwell <cryos@gentoo.org> R-2.1.0.ebuild:
+  Update deps to reflect new USE flags.
 
 *R-2.1.0 (20 Apr 2005)
 
