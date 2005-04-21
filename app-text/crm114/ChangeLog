@@ -1,6 +1,16 @@
 # ChangeLog for app-text/crm114
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/crm114/ChangeLog,v 1.19 2005/01/12 16:52:18 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/crm114/ChangeLog,v 1.20 2005/04/21 18:48:40 slarti Exp $
+
+*crm114-20050415 (21 Apr 2005)
+
+  21 Apr 2005; Tom Martin <slarti@gentoo.org>
+  -files/crm114-20040627-loopfix.patch, -crm114-20040627.ebuild,
+  -crm114-20040627-r1.ebuild, -crm114-20040820.ebuild,
+  -crm114-20040924.ebuild, crm114-20041231.ebuild, +crm114-20050415.ebuild:
+  Version bump, resolves bug 89851 (no more procmail dependency now, so this
+  also resolves bug 69358). Mark 20041231 stable on amd64, and purge a few old
+  ebuilds.
 
   12 Jan 2005; Tom Martin <slarti@gentoo.org> crm114-20041110.ebuild:
   Stabilising on amd64.
