@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/omnibook/omnibook-20040916.ebuild,v 1.3 2005/01/02 10:29:49 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/omnibook/omnibook-20040916.ebuild,v 1.4 2005/04/21 07:18:56 wormo Exp $
 
 inherit linux-mod
 
@@ -10,7 +10,7 @@ DESCRIPTION="Linux kernel module for HP Omnibook support"
 HOMEPAGE="http://www.sourceforge.net/projects/omke"
 SRC_URI="mirror://sourceforge/omke/${MY_P}.tar.gz"
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="x86 -ppc"
 IUSE=""
 S="${WORKDIR}/${MY_P}"
 
