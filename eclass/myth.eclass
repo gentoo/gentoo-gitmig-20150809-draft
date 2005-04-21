@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/myth.eclass,v 1.10 2005/04/18 07:37:39 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/myth.eclass,v 1.11 2005/04/21 08:25:18 eradicator Exp $
 #
 # Author: Daniel Ahlberg <aliz@gentoo.org>
 #
@@ -15,12 +15,16 @@ EXPORT_FUNCTIONS src_unpack src_compile src_install
 
 MYTHPLUGINS="mythbrowser mythdvd mythgallery mythgame mythmusic mythnews mythphone mythvideo mythweather mythweb"
 
-if version_is_at_least 0.18 && hasq ${PN} ${MYTHPLUGINS} ; then
+atleast_0.18() {
+	[[ $(get_version_component_range 1) > 0 || $(get_version_component_range 2) > 17 ]]
+}
+
+if atleast_0.18 && hasq ${PN} ${MYTHPLUGINS} ; then
 	S="${WORKDIR}/mythplugins-${PV}"
 fi
 
 myth_src_unpack() {
-	if version_is_at_least 0.18 && hasq ${PN} ${MYTHPLUGINS} ; then
+	if atleast_0.18 && hasq ${PN} ${MYTHPLUGINS} ; then
 		pkg_pro="mythplugins.pro"
 	elif [ "${PN}" == "mythfrontend" ]; then
 		pkg_pro="mythtv.pro"
@@ -58,7 +62,7 @@ myth_src_unpack() {
 myth_src_compile() {
 	export QMAKESPEC="linux-g++"
 
-	if version_is_at_least 0.18 ; then
+	if atleast_0.18 ; then
 		if hasq ${PN} ${MYTHPLUGINS} ; then
 			for x in ${MYTHPLUGINS} ; do
 				if [[ ${PN} == ${x} ]] ; then
@@ -77,7 +81,7 @@ myth_src_compile() {
 }
 
 myth_src_install() {
-	if version_is_at_least 0.18 && hasq ${PN} ${MYTHPLUGINS} ; then
+	if atleast_0.18 && hasq ${PN} ${MYTHPLUGINS} ; then
 		cd ${S}/${PN}
 	fi
 
