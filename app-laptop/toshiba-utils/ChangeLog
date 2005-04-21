@@ -1,6 +1,10 @@
 # ChangeLog for app-laptop/toshiba-utils
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/toshiba-utils/ChangeLog,v 1.6 2005/01/01 14:49:21 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/toshiba-utils/ChangeLog,v 1.7 2005/04/21 19:50:45 wormo Exp $
+
+  21 Apr 2005; Stephanie Lockwood-Childs <wormo@gentoo.org>
+  toshiba-utils-2.0.1-r1.ebuild:
+  marked -ppc since toshiba does not make any ppc laptops
 
   09 Oct 2004; Doug Goldstein <cardoe@gentoo.org> +metadata.xml:
   Added missing metadata.xml
