@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/rp-pppoe/rp-pppoe-3.5-r9.ebuild,v 1.2 2005/04/16 23:27:43 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/rp-pppoe/rp-pppoe-3.5-r9.ebuild,v 1.3 2005/04/21 19:08:12 mrness Exp $
 
 inherit eutils
 
@@ -60,9 +60,9 @@ src_install () {
 	#Don't use compiled rp-pppoe plugin; use it from the current version of pppd
 	rm ${D}/etc/ppp/plugins/rp-pppoe.so
 	local PPPD_VER=`best_version net-dialup/ppp`
-	PPPD_VER=${PPPD_VER:15} #reduce it to ${PV}-${PR}
-	PPPD_VER=${PPPD_VER/-*/} #reduce it to ${PV}
-	if [ -n "${PPPD_VER}" ] && [ -f /usr/lib/pppd/${PPPD_VER}/rp-pppoe.so ] ; then
+	PPPD_VER=${PPPD_VER#*/*-} #reduce it to ${PV}-${PR}
+	PPPD_VER=${PPPD_VER%%-*} #reduce it to ${PV}
+	if [ -n "${PPPD_VER}" ] && [ -f ${ROOT}/usr/lib/pppd/${PPPD_VER}/rp-pppoe.so ] ; then
 		dosym /usr/lib/pppd/${PPPD_VER}/rp-pppoe.so /etc/ppp/plugins/rp-pppoe.so
 	fi
 
