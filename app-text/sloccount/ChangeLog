@@ -1,6 +1,9 @@
 # ChangeLog for app-text/sloccount
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sloccount/ChangeLog,v 1.9 2005/03/31 16:00:09 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sloccount/ChangeLog,v 1.10 2005/04/21 20:29:08 blubb Exp $
+
+  21 Apr 2005; Simon Stelling <blubb@gentoo.org> sloccount-2.26.ebuild:
+  stable on amd64
 
   31 Mar 2005; Ferris McCormick <fmccor@gentoo.org> sloccount-2.26-r1.ebuild:
   Add sparc keyword, closing Bug 76102.  This has worked fine for over a month;

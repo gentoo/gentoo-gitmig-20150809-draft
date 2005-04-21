@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/estraier/estraier-1.2.25.ebuild,v 1.3 2005/03/28 19:08:59 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/estraier/estraier-1.2.25.ebuild,v 1.4 2005/04/21 20:19:12 blubb Exp $
 
 IUSE="debug chasen kakasi mecab zlib"
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 RESTRICT="nomirror"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~amd64 ppc ~sparc"
+KEYWORDS="x86 amd64 ppc ~sparc"
 SLOT="0"
 
 DEPEND=">=dev-db/qdbm-1.8.16

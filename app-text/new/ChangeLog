@@ -1,6 +1,9 @@
 # ChangeLog for app-text/new
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/new/ChangeLog,v 1.7 2005/01/01 16:27:20 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/new/ChangeLog,v 1.8 2005/04/21 20:26:08 blubb Exp $
+
+  21 Apr 2005; Simon Stelling <blubb@gentoo.org> new-1.3.2.ebuild:
+  stable on amd64
 
   01 Oct 2004; <pyrania@gentoo.org> new-1.3.2.ebuild:
   Marked stable on x86. Added IUSE.

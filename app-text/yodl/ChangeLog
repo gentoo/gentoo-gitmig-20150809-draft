@@ -1,6 +1,9 @@
 # ChangeLog for app-text/yodl
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/yodl/ChangeLog,v 1.10 2005/01/02 22:54:41 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/yodl/ChangeLog,v 1.11 2005/04/21 20:36:13 blubb Exp $
+
+  21 Apr 2005; Simon Stelling <blubb@gentoo.org> yodl-1.31.18.ebuild:
+  stable on amd64
 
   02 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance

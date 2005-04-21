@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/uudeview/uudeview-0.5.20.ebuild,v 1.9 2005/01/01 16:40:51 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/uudeview/uudeview-0.5.20.ebuild,v 1.10 2005/04/21 20:33:32 blubb Exp $
 
 IUSE="X tcltk debug"
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.fpx.de/fp/Software/UUDeview/download/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc ppc ~amd64"
+KEYWORDS="x86 sparc ppc amd64"
 
 RDEPEND="tcltk? ( dev-lang/tcl X? ( dev-lang/tk ) )"
 

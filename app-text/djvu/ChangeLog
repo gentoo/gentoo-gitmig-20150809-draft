@@ -1,6 +1,9 @@
 # ChangeLog for app-text/djvu
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/djvu/ChangeLog,v 1.21 2005/04/15 14:34:03 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/djvu/ChangeLog,v 1.22 2005/04/21 20:17:53 blubb Exp $
+
+  21 Apr 2005; Simon Stelling <blubb@gentoo.org> djvu-3.5.14.ebuild:
+  stable on amd64
 
   15 Apr 2005; <usata@gentoo.org> djvu-3.5.14-r1.ebuild:
   removed pic USE flag
