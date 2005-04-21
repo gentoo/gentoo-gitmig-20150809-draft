@@ -1,6 +1,12 @@
 # ChangeLog for mail-filter/gld
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/gld/ChangeLog,v 1.17 2005/04/20 15:18:09 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/gld/ChangeLog,v 1.18 2005/04/21 17:05:20 slarti Exp $
+
+*gld-1.5.2 (21 Apr 2005)
+
+  21 Apr 2005; Tom Martin <slarti@gentoo.org> +gld-1.5.2.ebuild:
+  Version bump. Resolves bug 88971 in the process. Thanks to Benjamin Smee
+  <ben@disciplina.net> for the fix.
 
 *gld-1.5-r2 (20 Apr 2005)
 
