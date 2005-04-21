@@ -4,6 +4,7 @@
 
 app-editors/vim-core
 app-shells/zsh
+dev-libs/libxml2
 media-libs/a52dec
 sys-apps/diffutils
 sys-apps/grep
