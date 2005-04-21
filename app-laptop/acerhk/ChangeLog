@@ -1,6 +1,11 @@
 # ChangeLog for app-laptop/acerhk
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/acerhk/ChangeLog,v 1.9 2005/03/20 23:45:48 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/acerhk/ChangeLog,v 1.10 2005/04/21 07:10:52 wormo Exp $
+
+  21 Apr 2005; Stephanie Lockwood-Childs <wormo@gentoo.org>
+  acerhk-0.5.18-r1.ebuild, acerhk-0.5.18.ebuild, acerhk-0.5.20.ebuild,
+  acerhk-0.5.22.ebuild:
+  added -ppc since this applies only to non-ppc hardware
 
 *acerhk-0.5.22 (21 Mar 2005)
 
