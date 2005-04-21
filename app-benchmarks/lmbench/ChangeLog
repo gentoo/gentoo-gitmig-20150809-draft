@@ -1,6 +1,9 @@
 # ChangeLog for app-benchmarks/lmbench
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/lmbench/ChangeLog,v 1.9 2005/01/01 12:04:47 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/lmbench/ChangeLog,v 1.10 2005/04/21 17:51:32 blubb Exp $
+
+  21 Apr 2005; Simon Stelling <blubb@gentoo.org> lmbench-3.0_alpha3.ebuild:
+  stable on amd64
 
   05 Jun 2004; Jason Wever <weeve@gentoo.org> :
   Added ~sparc keyword.
