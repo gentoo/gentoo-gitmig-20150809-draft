@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/helixplayer/helixplayer-1.0.4.ebuild,v 1.1 2005/04/21 11:09:42 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/helixplayer/helixplayer-1.0.4.ebuild,v 1.2 2005/04/21 16:29:20 tester Exp $
 
 inherit nsplugins eutils
 
@@ -12,7 +12,7 @@ SRC_URI="https://helixcommunity.org/download.php/1138/${MY_PKG}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 # -sparc -amd64: 1.0_beta1: build fails on both platforms... --eradicator
-KEYWORDS="-*"
+KEYWORDS="-* ~x86"
 IUSE="mozilla nptl"
 DEPEND="media-libs/libtheora
 	media-libs/libogg"
