@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/cvsd
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cvsd/ChangeLog,v 1.12 2004/11/14 15:33:27 max Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cvsd/ChangeLog,v 1.13 2005/04/21 14:17:26 ka0ttic Exp $
+
+*cvsd-1.0.6 (21 Apr 2005)
+
+  21 Apr 2005; Aaron Walker <ka0ttic@gentoo.org> metadata.xml,
+  -cvsd-1.0.1.ebuild, cvsd-1.0.2.ebuild, cvsd-1.0.3.ebuild,
+  +cvsd-1.0.6.ebuild:
+  Version bump; closes bug 77514 and 82462. Marked 1.0.3 stable on x86.
 
 *cvsd-1.0.3 (13 Nov 2004)
 
