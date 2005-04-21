@@ -1,15 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 72ee175390e12178b10bec2ec9090700 mysql++-1.7.26.ebuild 1726
-MD5 1464e1a89294ec5a4a384a48343b96cd ChangeLog 5063
+MD5 980aa1ebff9591f15644623d909f53d6 ChangeLog 5152
 MD5 a5dda17df0286cd82cae42d117784903 metadata.xml 163
+MD5 3c72a6d14f9a3d16403a8b0cd7418d9e mysql++-1.7.26.ebuild 1724
 MD5 65084d7d1a78fed8de0e81c773c9eeab files/digest-mysql++-1.7.26 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-Comment: Robbat2 @ Orbis-Terrarum Networks
-
-iD8DBQFCEDnmPpIsIjIzwiwRAjw/AJ0a1v8tT9sT2TJPm+/l8VwECd/vtwCfRL7H
-NrwHkds69dUfjZGqAmRZ2CQ=
-=gxKt
------END PGP SIGNATURE-----
