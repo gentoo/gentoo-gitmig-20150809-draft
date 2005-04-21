@@ -1,21 +1,21 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 72b6df7092115140967bfcaa2d8cefe1 uade-1.01.ebuild 1604
-MD5 8e6ad8d0b13a8821a4aa083a47e4ddbf uade-1.00.ebuild 1602
-MD5 1a0eb9587c6b615bf15e5ff84babf035 uade-0.91-r1.ebuild 1539
-MD5 b0067de7c2b071849fbe532a63b818ed uade-0.81.ebuild 1596
-MD5 30ee4a413e3bdea75da99b58469c9ae9 ChangeLog 3127
+MD5 a1cc2a76c68f617ddd6de6a2a7060fcd ChangeLog 3260
 MD5 a715d9de7a6423e88a804a562c2220a9 metadata.xml 219
-MD5 ef3c7fc767538fbeb54e89c600038bdd files/uade-0.91-bmp-fix.patch 1252
+MD5 b0067de7c2b071849fbe532a63b818ed uade-0.81.ebuild 1596
+MD5 1a0eb9587c6b615bf15e5ff84babf035 uade-0.91-r1.ebuild 1539
+MD5 8ed4ebd5310ffb6471a51a0c50c01db7 uade-1.00.ebuild 1594
+MD5 0904b59d1220def164cb0310a402f15c uade-1.01.ebuild 1596
 MD5 4df754504fa84b727b0d21eccfcbf1c5 files/digest-uade-0.81 63
-MD5 196ca74d6a4fbf1a5f1faa68af4cba37 files/digest-uade-1.00 63
-MD5 4e65fc223461726956f0f0f80cb9a71d files/digest-uade-1.01 63
 MD5 1f90b1c9ed54563fc4371e3976a2b4bb files/digest-uade-0.91-r1 63
+MD5 196ca74d6a4fbf1a5f1faa68af4cba37 files/digest-uade-1.00 63
+MD5 ef3c7fc767538fbeb54e89c600038bdd files/uade-0.91-bmp-fix.patch 1252
+MD5 4e65fc223461726956f0f0f80cb9a71d files/digest-uade-1.01 63
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCLPbYchej4aZK9/cRAq/+AJ4szWHuKxKFviDvNAiCcH+tA/TV/ACeJbJe
-71TvEPBHotDqp0EQ4pSPFbA=
-=MzGN
+iD8DBQFCZ/fTArHZZzCEUG0RAhPYAJ9lBaAu4W39wVU5M92aUhP70lBYswCfe7eB
+z4EOWeNwRIFiNJT9Y3aNTZs=
+=12/O
 -----END PGP SIGNATURE-----
