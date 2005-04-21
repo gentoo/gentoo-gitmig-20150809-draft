@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 d1bde3c6e4f62385a65a238fc4ead789 ChangeLog 2048
 MD5 0d18f0fe5d603b41b988373892caf195 metadata.xml 226
 MD5 c6f20308436219669643d328d4e6361f mod_dav-1.0.3-r1.ebuild 1472
@@ -10,3 +13,10 @@ MD5 7d3db28f46542782bd0dc91504945f8e files/mod_dav_fs_lock.patch 942
 MD5 48fd840765d593fa280f25c60f073e0c files/digest-mod_dav-1.0.3-r1 71
 MD5 48fd840765d593fa280f25c60f073e0c files/digest-mod_dav-1.0.3-r2 71
 MD5 48fd840765d593fa280f25c60f073e0c files/digest-mod_dav-1.0.3-r3 71
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCZzdomPFBzbX68WERAjn5AJ9JBslVQgUBS+aczCaUD0TEfQcy5QCfaO/4
+hetL29vjNn6AoiGmZA6F4Z8=
+=Y0bj
+-----END PGP SIGNATURE-----
