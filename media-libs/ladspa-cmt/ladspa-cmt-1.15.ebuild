@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ladspa-cmt/ladspa-cmt-1.15.ebuild,v 1.16 2004/10/29 00:39:27 kito Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ladspa-cmt/ladspa-cmt-1.15.ebuild,v 1.17 2005/04/21 18:02:53 kito Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ DESCRIPTION="CMT (computer music toolkit) Lasdpa library plugins"
 HOMEPAGE="http://www.ladspa.org/"
 SRC_URI="http://www.ladspa.org/download/${MY_P}.tgz"
 
-KEYWORDS="x86 ~ppc amd64 sparc ~ppc-macos"
+KEYWORDS="x86 ~ppc amd64 sparc ppc-macos"
 LICENSE="LGPL-2.1"
 SLOT="0"
 
