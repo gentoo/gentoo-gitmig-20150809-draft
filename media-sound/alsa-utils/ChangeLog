@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/alsa-utils
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.91 2005/04/12 07:56:46 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.92 2005/04/21 09:07:45 eradicator Exp $
+
+  21 Apr 2005; Jeremy Huddleston <eradicator@gentoo.org> files/alsasound,
+  files/alsasound.confd:
+  Cleaned up alsasound init script. Added RESTORE_ON_START and ENABLE_OSS_EMUL
+  options.
 
   12 Apr 2005; Jeremy Huddleston <eradicator@gentoo.org>
   -alsa-utils-0.9.8.ebuild, -alsa-utils-1.0.6.ebuild:
