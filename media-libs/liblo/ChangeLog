@@ -1,0 +1,10 @@
+# ChangeLog for media-libs/liblo
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/liblo/ChangeLog,v 1.1 2005/04/21 20:45:26 kito Exp $
+
+*liblo-0.18 (21 Apr 2005)
+
+  21 Apr 2005; Kito <kito@gentoo.org> +metadata.xml, +liblo-0.18.ebuild:
+  inital import. Thanks to Sean Bolton <smbolton@jps.net> and Michael Schnake
+  <schnake@composition.de>. Closes Bug #68350
+
