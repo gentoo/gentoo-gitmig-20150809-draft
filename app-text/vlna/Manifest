@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 451c5eb419a99344c57ae30e450cf220 vlna-1.2.ebuild 809
-MD5 841d9cafb3d1a60bf007bd3ce00142e9 ChangeLog 667
+MD5 0af82946fc85f11c1e7e1ea09f581201 ChangeLog 748
 MD5 87a6ee0d78b50d54d75c38c3845d3b91 metadata.xml 401
+MD5 1fda8e56dd446aa1c6c1f9a700402ffe vlna-1.2.ebuild 804
 MD5 1fb6f19f8cab31ab7105e0c58921c892 files/digest-vlna-1.2 59
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFB3ZOvZ/iYVBmujdURAmS5AKCY25SsRAQChtM6WqVqwgCmH2443wCg4+IX
-rwOoXm5n93ijxETzVFlKMsg=
-=d6xi
------END PGP SIGNATURE-----
