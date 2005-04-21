@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.1.8.ebuild,v 1.9 2005/03/03 17:08:35 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.1.8.ebuild,v 1.10 2005/04/21 16:35:17 robbat2 Exp $
 
 inherit eutils gnuconfig
 #to accomodate -laadeedah releases
@@ -22,7 +22,6 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="static readline innodb berkdb tcpd ssl perl ruby selinux debug cluster"
-RESTRICT="nomirror"
 
 DEPEND="
 	!<dev-db/mysql-4.1*

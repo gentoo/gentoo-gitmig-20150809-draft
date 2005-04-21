@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.0.24-r1.ebuild,v 1.2 2005/03/13 20:25:16 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.0.24-r1.ebuild,v 1.3 2005/04/21 16:35:17 robbat2 Exp $
 
 inherit eutils gnuconfig
 #to accomodate -laadeedah releases
@@ -22,7 +22,6 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
 IUSE="berkdb debug doc minimal perl readline selinux ssl static tcpd"
-RESTRICT="nomirror"
 
 DEPEND="readline? ( >=sys-libs/readline-4.1 )
 	tcpd? ( >=sys-apps/tcp-wrappers-7.6-r6 )
