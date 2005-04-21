@@ -1,5 +1,5 @@
-MD5 c1dfa31d9443afee729f49810c7b97dc ChangeLog 742
-MD5 0d8af86c399f3e15066e2f9e72b8224c css-mode-0.11.ebuild 779
+MD5 cabd34cc0fc61ab88054c19f2a554995 ChangeLog 827
+MD5 8b84dbab09a24f2b7b8b982fe0a010e7 css-mode-0.11.ebuild 773
 MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
 MD5 f58e0c2624c381f256f4377b822a74ca files/50css-mode-gentoo.el 206
 MD5 59c666a172ca00a012c8cf109411f953 files/digest-css-mode-0.11 64
