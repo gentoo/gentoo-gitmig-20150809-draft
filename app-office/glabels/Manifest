@@ -1,5 +1,5 @@
-MD5 5ea0bfb3f200c05062534e77f13f9683 ChangeLog 3532
+MD5 d2822d2dfc7d614ecccd86558bb742a6 ChangeLog 3619
+MD5 1f5d76fa3b05b3b857ed01ceebab53e6 glabels-2.0.2.ebuild 1109
 MD5 54b7f17aa1f3cf4e8cc03858fd99070c metadata.xml 554
-MD5 ae67c7864b0caa6c097eb0b3f6ceb0cd glabels-2.0.2.ebuild 1113
 MD5 3f3dda95f4d36a5df9fcb2096bde8f44 files/digest-glabels-2.0.2 66
 MD5 f151423cc5fb2f1ded05168f2158ad01 files/glabels-2.0.2-no_update_desktop_db.patch 437
