@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/blam/blam-1.6.1.ebuild,v 1.3 2005/03/15 01:01:18 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/blam/blam-1.6.1.ebuild,v 1.4 2005/04/21 00:37:04 latexer Exp $
 
 inherit mono eutils
 
@@ -18,7 +18,7 @@ DEPEND=">=dev-lang/mono-1.0
 		=dev-dotnet/gtk-sharp-1.0*
 		=dev-dotnet/gconf-sharp-1.0*
 		=dev-dotnet/glade-sharp-1.0*
-		>=dev-dotnet/gecko-sharp-0.6
+		=dev-dotnet/gecko-sharp-0.6*
 		>=gnome-base/gconf-2.4"
 
 src_compile() {

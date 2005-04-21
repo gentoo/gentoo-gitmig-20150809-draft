@@ -1,6 +1,10 @@
 # ChangeLog for net-news/blam
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/blam/ChangeLog,v 1.17 2005/03/15 01:01:18 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/blam/ChangeLog,v 1.18 2005/04/21 00:37:04 latexer Exp $
+
+  21 Apr 2005; Peter Johanson <latexer@gentoo.org> blam-1.6.0-r1.ebuild,
+  blam-1.6.1.ebuild:
+  Fix the gecko-sharp dep so it gets the right SLOT.
 
   14 Mar 2005; Peter Johanson <latexer@gentoo.org> blam-1.6.0-r1.ebuild,
   -blam-1.6.0.ebuild, blam-1.6.1.ebuild:
