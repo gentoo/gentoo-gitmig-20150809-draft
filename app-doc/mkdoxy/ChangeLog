@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/mkdoxy
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/mkdoxy/ChangeLog,v 1.9 2005/04/01 02:27:10 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/mkdoxy/ChangeLog,v 1.10 2005/04/21 18:17:13 blubb Exp $
+
+  21 Apr 2005; Simon Stelling <blubb@gentoo.org> mkdoxy-1.0.0.ebuild:
+  stable on amd64
 
   31 Mar 2005; Aron Griffis <agriffis@gentoo.org> mkdoxy-1.0.0.ebuild:
   stable on ia64
