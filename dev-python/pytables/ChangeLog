@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pytables
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pytables/ChangeLog,v 1.19 2005/04/20 15:59:13 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pytables/ChangeLog,v 1.20 2005/04/21 09:49:00 kloeri Exp $
+
+  21 Apr 2005; Bryan Østergaard <kloeri@gentoo.org> :
+  Fix broken digest.
 
   20 Apr 2005; Alastair Tse <liquidx@gentoo.org> pytables-0.9.1.ebuild:
   fix numarray dep (#72327)

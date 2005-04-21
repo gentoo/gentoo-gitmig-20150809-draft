@@ -1,20 +1,20 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 b03f035f2ab22e3759ce0976b25cf3af ChangeLog 2285
+MD5 a7e3e676434ccd740ca1d742e2da0dd6 pytables-0.8.1.ebuild 528
+MD5 c36665ad30aa37bd7322a00225d2e88e ChangeLog 2361
+MD5 0d508cfae59a14b100c113029021b732 pytables-0.9.1.ebuild 536
 MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
 MD5 ab78ac37a87e443155a6718fe13b6581 pytables-0.7.2.ebuild 522
-MD5 a7e3e676434ccd740ca1d742e2da0dd6 pytables-0.8.1.ebuild 528
 MD5 17c1213be156b60e0e58f637f90aa08d pytables-0.8.ebuild 520
-MD5 0d508cfae59a14b100c113029021b732 pytables-0.9.1.ebuild 536
+MD5 521927168459d6ba58e49fb73e536857 files/digest-pytables-0.8 65
 MD5 215625681422b404c7b499e6ec664314 files/digest-pytables-0.7.2 66
-MD5 ce105875d1c8066cfaee8b302c563c03 files/digest-pytables-0.8 65
 MD5 666811c77fb131983a32904d33c5bc3e files/digest-pytables-0.8.1 67
 MD5 fd8c69b76c15d2bec91326d54c2cad8f files/digest-pytables-0.9.1 67
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCZnznTM53OX+9xmMRArGtAKCcqy0sNJWe7rBV9wzBOjsSGmISDwCdFOkS
-Z2kPEoqEqekwqfvHPB1qGx4=
-=5vM7
+iD8DBQFCZ3cnKf2g/qXtneoRApbiAKCxdxXG0hzr7LE6dIwajG9XJ7GuxACgnCDf
+qwT1Dc3eZOMVWUn7OJfSc4A=
+=QVrY
 -----END PGP SIGNATURE-----
