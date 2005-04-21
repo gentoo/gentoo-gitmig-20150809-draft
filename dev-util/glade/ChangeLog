@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/glade
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/ChangeLog,v 1.35 2005/04/15 18:21:35 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/ChangeLog,v 1.36 2005/04/21 02:40:52 allanonjl Exp $
+
+*glade-2.10.0 (21 Apr 2005)
+
+  21 Apr 2005; John N. Laliberte <allanonjl@gentoo.org> metadata.xml,
+  +glade-2.10.0.ebuild:
+  Version bump as requested by #86606. Added accessibility use flag for
+  libgail dep.
 
   15 Apr 2005; Simon Stelling <blubb@gentoo.org> glade-2.6.8.ebuild:
   stable on amd64
