@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/aes-crypt
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/aes-crypt/ChangeLog,v 1.6 2005/01/01 12:23:29 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/aes-crypt/ChangeLog,v 1.7 2005/04/21 17:58:24 blubb Exp $
+
+  21 Apr 2005; Simon Stelling <blubb@gentoo.org> aes-crypt-1.0.7.ebuild:
+  stable on amd64
 
   13 Aug 2004; Danny van Dyk <kugelfang@gentoo.org> aes-crypt-1.0.7.ebuild:
   Marked ~amd64.

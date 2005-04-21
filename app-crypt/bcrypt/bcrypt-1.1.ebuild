@@ -1,13 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/bcrypt/bcrypt-1.1.ebuild,v 1.7 2005/01/01 12:24:32 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/bcrypt/bcrypt-1.1.ebuild,v 1.8 2005/04/21 17:59:02 blubb Exp $
 
 DESCRIPTION="A file encryption utility using Paul Kocher's implementation of the blowfish algorithm"
 HOMEPAGE="http://bcrypt.sourceforge.net/"
 SRC_URI="mirror://sourceforge/bcrypt/${P}.tar.gz"
 SLOT="0"
 LICENSE="BSD"
-KEYWORDS="x86 ppc sparc alpha ~amd64"
+KEYWORDS="x86 ppc sparc alpha amd64"
 IUSE=""
 DEPEND="sys-libs/zlib"
 
