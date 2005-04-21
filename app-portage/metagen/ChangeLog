@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/metagen
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/metagen/ChangeLog,v 1.10 2005/01/07 16:49:13 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/metagen/ChangeLog,v 1.11 2005/04/21 20:09:31 blubb Exp $
+
+  21 Apr 2005; Simon Stelling <blubb@gentoo.org> metagen-0.3.ebuild:
+  stable on amd64
 
 *metagen-0.5 (07 Jan 2005)
 
