@@ -1,0 +1,16 @@
+# ChangeLog for sci-misc/boinc
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/ChangeLog,v 1.1 2005/04/21 16:25:58 cryos Exp $
+
+*boinc-4.32 (21 Apr 2005)
+*boinc-4.19 (21 Apr 2005)
+
+  21 Apr 2005; Marcus D. Hanwell <cryos@gentoo.org>
+  +files/boinc-4.32_cmdline_options.patch,
+  +files/boinc-4.32_socket_close_fix.patch, +files/boinc.conf,
+  +files/boinc.init, +metadata.xml, +boinc-4.19.ebuild, +boinc-4.32.ebuild:
+  Initial import, placed in p.mask for now during initial testing. Thanks go
+  to Robert Moss <robmoss@gentoo.org> and Tony Murray <tonymurray@fastmail.fm>
+  for the ebuilds and maintenance performed by Tony, as well as all the other
+  contributors who helped with this ebuild. This closes bug 54962.
+
