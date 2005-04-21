@@ -1,6 +1,12 @@
 # ChangeLog for media-video/helixplayer
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/helixplayer/ChangeLog,v 1.8 2005/04/19 09:12:54 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/helixplayer/ChangeLog,v 1.9 2005/04/21 11:09:42 flameeyes Exp $
+
+*helixplayer-1.0.4 (21 Apr 2005)
+
+  21 Apr 2005; Diego Pettenò <flameeyes@gentoo.org>
+  +helixplayer-1.0.4.ebuild:
+  Added new upstream revision (-* as I can't test it).
 
   19 Apr 2005; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
   Remove retired developer from metadata.xml.
