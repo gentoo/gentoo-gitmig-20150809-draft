@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gnome-alsamixer/gnome-alsamixer-0.9.6.ebuild,v 1.9 2005/04/21 08:37:22 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gnome-alsamixer/gnome-alsamixer-0.9.6.ebuild,v 1.10 2005/04/21 09:45:35 eradicator Exp $
 
 inherit eutils
 
@@ -22,6 +22,7 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	epatch ${FILESDIR}/${P}-gtk24.patch
+	epatch ${FILESDIR}/${P}-fixpath.patch
 }
 
 src_install() {

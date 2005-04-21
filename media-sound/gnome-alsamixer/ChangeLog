@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/gnome-alsamixer
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gnome-alsamixer/ChangeLog,v 1.12 2005/04/21 08:37:22 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gnome-alsamixer/ChangeLog,v 1.13 2005/04/21 09:45:35 eradicator Exp $
+
+  21 Apr 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  +files/gnome-alsamixer-0.9.6-fixpath.patch, gnome-alsamixer-0.9.6.ebuild:
+  Added patch to fix path to alsa includes. This closes bug #88730 thanks to
+  Alexey Maximov <amax@mail.ru>.
 
   21 Apr 2005; Jeremy Huddleston <eradicator@gentoo.org>
   -gnome-alsamixer-0.9.3.ebuild, gnome-alsamixer-0.9.6.ebuild:
