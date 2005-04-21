@@ -1,6 +1,17 @@
 # ChangeLog for sci-electronics/magic
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/magic/ChangeLog,v 1.2 2004/12/27 21:01:45 swegener Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/magic/ChangeLog,v 1.3 2005/04/21 20:54:56 wormo Exp $
+
+*magic-7.1-r3 (21 Apr 2005)
+
+  21 Apr 2005; Stephanie Lockwood-Childs <wormo@gentoo.org>
+  +files/magic-7.1-ppc-endian.patch, +files/magic-7.1-remove-decl.patch,
+  +magic-7.1-r3.ebuild:
+  Took out a conflicting declaration to fix compile under gcc3.4
+  Make it build on ppc by defining powerpc endianness in header
+  and getting correct CFLAGS into defs.mak
+  Fix file collisions caused by man pages with very generic names;
+  add "magic-" prefix to man page filenames
 
 *magic-7.1-r2 (27 Dec 2004)
 
