@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gnome-alsamixer/gnome-alsamixer-0.9.6.ebuild,v 1.8 2005/04/08 17:31:32 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gnome-alsamixer/gnome-alsamixer-0.9.6.ebuild,v 1.9 2005/04/21 08:37:22 eradicator Exp $
 
 inherit eutils
 
@@ -14,6 +14,7 @@ KEYWORDS="x86 ppc amd64"
 RDEPEND=">=media-libs/alsa-lib-0.9.0_rc1
 	 >=x11-libs/gtk+-2.0.6
 	 >=gnome-base/libgnomeui-2.0.5"
+
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	dev-util/desktop-file-utils"
@@ -31,4 +32,9 @@ src_install() {
 	doins ${FILESDIR}/${PN}.desktop
 
 	dodoc AUTHORS COPYING ChangeLog INSTALL
+}
+
+pkg_postinst() {
+	fdo-mime_mime_database_update
+	fdo-mime_desktop_database_update
 }
