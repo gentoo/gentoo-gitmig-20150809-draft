@@ -9,7 +9,7 @@ MD5 16ac3d0adb42d86b1f231af467d2931c kadu-0.3.9.ebuild 2093
 MD5 4cd31fb88974954e268028c5b1dd663d kadu-0.4.0_rc2.ebuild 7631
 MD5 5dea796a7f3e380693bd0185bd5b35cd kadu-0.3.6.ebuild 609
 MD5 92e6b2c409481dba26af02a7b685af6b kadu-0.3.8.ebuild 867
-MD5 163913a85d92629d7edd15a48ab8efc1 ChangeLog 3301
+MD5 b9d9d14f694f7fb5cc0eb1c021b72ee5 ChangeLog 3385
 MD5 a574ec2607edf5e80117d65415e01d3c metadata.xml 159
 MD5 2b6dd9d889e66221f2f9d82d5653889b files/digest-kadu-0.4.0_rc2 1638
 MD5 0b7c1b741e9bd306dbff42d1b217dd7b files/digest-kadu-0.4.0_rc3 1638
@@ -22,12 +22,12 @@ MD5 5d82fddca529f0af79869df2a55db7f1 files/digest-kadu-0.3.6 63
 MD5 d6cc7076216ed7aa0d0ab8b3ff154d41 files/digest-kadu-0.3.7 63
 MD5 7259b6aef0a2d10501b79c455fe4b763 files/digest-kadu-0.3.8 63
 MD5 9c405497d2804fa81d6b2d48c00e227f files/digest-kadu-0.3.9 63
-MD5 461160290c6432abc7016928349ec366 files/digest-kadu-0.4.0 1633
+MD5 ff58d32b5c11aebf82745fcdf3be93ec files/digest-kadu-0.4.0 1699
 MD5 878470dcf216da170b3878d17b0f59a2 files/kadu-0.3.9-nas-gentoo.diff 986
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCZr/dZ/iYVBmujdURAmjRAKCs+BxzmyB9Bt28kHwzoWk5kdRo+ACg+T3F
-YiMZraHNEhGlYdzk5jjqd/s=
-=DR9U
+iD8DBQFCZz9HI1lqEGTUzyQRAtGnAKDAE28wJlELC0Io3DVfiIoSoQ6tVwCfUlHF
+cQh5n8iCxok7D5QqmIS6rKk=
+=AmEs
 -----END PGP SIGNATURE-----
