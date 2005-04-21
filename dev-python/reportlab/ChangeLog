@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/reportlab
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/reportlab/ChangeLog,v 1.15 2005/04/14 19:48:36 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/reportlab/ChangeLog,v 1.16 2005/04/21 19:17:23 blubb Exp $
+
+  21 Apr 2005; Simon Stelling <blubb@gentoo.org> reportlab-1.18.ebuild:
+  stable on amd64
 
 *reportlab-1.20 (14 Apr 2005)
 
