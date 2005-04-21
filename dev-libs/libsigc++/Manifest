@@ -1,25 +1,15 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e48c7bb1105948b286784f27e30fa66d libsigc++-1.2.3.ebuild 1041
-MD5 c1752a0d3dd0446994f41f3357a59f01 libsigc++-1.2.5.ebuild 1466
+MD5 01160d126870a84803ca2015a35a7295 ChangeLog 6493
+MD5 09db05165ade799adc26846ff7c3eb5f libsigc++-1.0.4-r2.ebuild 1568
 MD5 401a2c3b3020ab9d031f9ea40fe45045 libsigc++-1.2.2.ebuild 1042
-MD5 f04e89a1fa018af377a15e727c753b8c libsigc++-2.0.11.ebuild 1124
-MD5 3a2f99e5f692c165076c84905a3044f0 ChangeLog 6383
+MD5 e48c7bb1105948b286784f27e30fa66d libsigc++-1.2.3.ebuild 1041
+MD5 3e93e1ff1a6bb2b55765ce141b599548 libsigc++-1.2.5.ebuild 1474
+MD5 77575177c48707c46e5416db1ca1a905 libsigc++-2.0.11.ebuild 1188
 MD5 b89b10aded1bc2c788bb755489cd41c9 libsigc++-2.0.5.ebuild 1406
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 09db05165ade799adc26846ff7c3eb5f libsigc++-1.0.4-r2.ebuild 1568
+MD5 628fd3eec229a5ec7bdf9751004f9b46 files/digest-libsigc++-1.0.4-r2 67
 MD5 1dafc199015856931c135a0a15a757c1 files/digest-libsigc++-1.2.2 67
 MD5 d022afc817cff89e7d0eec21e87613f3 files/digest-libsigc++-1.2.3 67
 MD5 2097fbc4c79a21de2b7f3a7e89a35137 files/digest-libsigc++-1.2.5 67
-MD5 2456d199198c3d5a0d0f0edb607589c8 files/digest-libsigc++-2.0.5 68
 MD5 10662f31c9be983522a9e54748c50069 files/digest-libsigc++-2.0.11 70
+MD5 2456d199198c3d5a0d0f0edb607589c8 files/digest-libsigc++-2.0.5 68
 MD5 b1f9c8d8239349f2f8501d3ff425b77b files/gcc-3.4.patch 692
-MD5 628fd3eec229a5ec7bdf9751004f9b46 files/digest-libsigc++-1.0.4-r2 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCWHVFntT9W3vfTuoRAncKAJsGYZ2hH3sUoYyi3+hseWHOQam7ygCcDH7h
-UJmAa3BjQCORU5F3PJDpCuI=
-=ZYBD
------END PGP SIGNATURE-----

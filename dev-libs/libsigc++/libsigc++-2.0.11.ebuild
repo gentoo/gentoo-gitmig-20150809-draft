@@ -1,20 +1,21 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigc++/libsigc++-2.0.11.ebuild,v 1.1 2005/04/10 00:37:15 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigc++/libsigc++-2.0.11.ebuild,v 1.2 2005/04/21 22:26:35 kito Exp $
 
-inherit eutils gnome.org
+inherit eutils gnome.org flag-o-matic
 
 DESCRIPTION="Typesafe callback system for standard C++"
 HOMEPAGE="http://libsigc.sourceforge.net/"
 
 LICENSE="LGPL-2.1"
 SLOT="2"
-KEYWORDS="~x86 ~ppc ~alpha ~amd64 ~sparc ~ppc64 ~hppa"
+KEYWORDS="~x86 ~ppc ~alpha ~amd64 ~sparc ~ppc64 ~hppa ~ppc-macos"
 IUSE="debug"
 
 DEPEND="virtual/libc"
 
 src_compile() {
+	use ppc-macos && append-ldflags -lgcc_s
 	local myconf
 	use debug \
 		&& myconf="--enable-debug=yes" \
