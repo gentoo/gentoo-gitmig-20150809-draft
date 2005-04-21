@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/regviewer/regviewer-0.1.ebuild,v 1.2 2005/01/01 14:23:43 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/regviewer/regviewer-0.1.ebuild,v 1.3 2005/04/21 08:44:30 dragonheart Exp $
 
 DESCRIPTION="RegViewer is GTK 2.2 based GUI Windows registry file navigator"
 
@@ -17,6 +17,7 @@ RDEPEND="dev-libs/atk
 	gnome-base/gconf
 	gnome-base/libbonobo
 	gnome-base/libgnome
+	gnome-base/libgnomeui
 	gnome-base/orbit
 	media-libs/alsa-lib
 	media-libs/audiofile
