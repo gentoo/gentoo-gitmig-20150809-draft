@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.3.2-r8.ebuild,v 1.1 2005/04/20 22:07:12 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.3.2-r8.ebuild,v 1.2 2005/04/21 08:40:09 cryos Exp $
 
 inherit kde eutils flag-o-matic
 set-kdedir 3.3
@@ -11,7 +11,7 @@ SRC_URI="mirror://kde/stable/${PV}/src/${PN}-${PV}.tar.bz2"
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="3.3"
-KEYWORDS="~amd64 ~hppa ~mips ~ppc ~ppc64 ~sparc x86 ~alpha"
+KEYWORDS="amd64 ~hppa ~mips ~ppc ~ppc64 ~sparc x86 ~alpha"
 IUSE="alsa arts cups doc ipv6 kerberos ldap spell ssl tiff"
 
 # kde.eclass has kdelibs in DEPEND, and we can't have that in here.
@@ -65,7 +65,7 @@ src_unpack() {
 
 	# see bug #81110.
 	epatch ${FILESDIR}/post-3.3.2-kdelibs-idn-2.patch
-	
+
 	# kimgio input validation errors, see bug #88862
 	cd ${S}/kimgio && patch -p0 < "${FILESDIR}/post-3.3.2-kdelibs-kimgio.diff"
 }
