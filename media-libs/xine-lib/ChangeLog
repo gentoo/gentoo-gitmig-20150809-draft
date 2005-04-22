@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.202 2005/04/21 22:05:51 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.203 2005/04/22 17:21:20 flameeyes Exp $
+
+*xine-lib-1.0-r3 (22 Apr 2005)
+
+  22 Apr 2005; Diego Pettenò <flameeyes@gentoo.org>
+  +files/xine-lib-gcc4.patch, +xine-lib-1.0-r3.ebuild:
+  Added new revision with patch to compile with GCC 4.0.0, fixes #89935.
+  Moving to -r3 as -r2 is a stable target for now.
 
 *xine-lib-1.0-r2 (21 Apr 2005)
 
