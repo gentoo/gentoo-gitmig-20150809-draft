@@ -1,4 +1,4 @@
-MD5 6b0b0f819ad21f0f9eb38c2ef882f144 ChangeLog 9796
+MD5 2f9c5463b2cb02e1fdeca3f85119f747 ChangeLog 9924
 MD5 de878cc424e3dc3b3d1a15fa1565fb97 ffmpeg-0.4.7.ebuild 2201
 MD5 aae18a15539a110fd4ef3199cc2b4f94 ffmpeg-0.4.8.20040222.ebuild 3367
 MD5 b28732767da5cfc6e18c8ddffaf5c6ed ffmpeg-0.4.8.20040322-r1.ebuild 3756
@@ -10,7 +10,7 @@ MD5 556d5a8e7d0e3475c6eb42280a6d92d0 ffmpeg-0.4.9_p20050226.ebuild 3271
 MD5 b426bb275301556b7556c9da9b54b385 ffmpeg-0.4.9_pre1.ebuild 3676
 MD5 7300a7b361fa9f48e37722c6952bd432 metadata.xml 158
 MD5 651f1835f5f6dc7c249b937547dca00c ffmpeg-0.4.9_p20050226-r3.ebuild 4384
-MD5 bbccfe2b39e49ca5c6ff63a4fe19d586 ffmpeg-0.4.9_p20050226-r4.ebuild 4659
+MD5 d82fb944edee3a6e416f3f64488335b1 ffmpeg-0.4.9_p20050226-r4.ebuild 4663
 MD5 003b0062185efcb0ea5a6115fa8a646a files/0.4.8-gcc3.4-magicF2W.patch 994
 MD5 6f1d9c82b5e8c3b7c46b80bc3c1bb443 files/alpha-idct.patch 777
 MD5 7eca667f050b6c515830ff9be05bacc6 files/digest-ffmpeg-0.4.7 65

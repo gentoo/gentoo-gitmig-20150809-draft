@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.4.9_p20050226-r4.ebuild,v 1.1 2005/04/21 21:29:38 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.4.9_p20050226-r4.ebuild,v 1.2 2005/04/22 13:12:58 flameeyes Exp $
 
 inherit eutils flag-o-matic gcc multilib toolchain-funcs
 
@@ -19,7 +19,8 @@ SLOT="0"
 # ~alpha need to test aac useflag
 # ~ia64 ~arm ~mips ~hppa 
 KEYWORDS="~x86 ~ppc ~sparc ~amd64 ~ppc64"
-IUSE="aac altivec debug doc ieee1394 a52 encode imlib mmx ogg vorbis oss threads truetype v4l xvid dts network zlib"
+IUSE="aac altivec debug doc ieee1394 a52 encode imlib mmx ogg vorbis oss threads
+truetype v4l xvid dts network zlib sdl"
 
 # Theora support has switch but there's no oggtheora.c sourcefile...
 
@@ -80,7 +81,7 @@ src_compile() {
 
 	#disable mmx accelerated code if not requirested, or if PIC is required
 	# as the provided asm decidedly isn't PIC.
-	if ( !has_pic && use mmx ) || use amd64 ; then
+	if ( ! has_pic && use mmx ) || use amd64; then
 		myconf="${myconf} --enable-mmx"
 	else
 		myconf="${myconf} --disable-mmx"

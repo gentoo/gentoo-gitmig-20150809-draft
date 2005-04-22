@@ -1,6 +1,10 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.65 2005/04/21 21:29:38 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.66 2005/04/22 13:12:58 flameeyes Exp $
+
+  22 Apr 2005; Diego Pettenò <flameeyes@gentoo.org>
+  ffmpeg-0.4.9_p20050226-r4.ebuild:
+  Fixed typo on pic/mmx if condition.
 
 *ffmpeg-0.4.9_p20050226-r4 (21 Apr 2005)
 
