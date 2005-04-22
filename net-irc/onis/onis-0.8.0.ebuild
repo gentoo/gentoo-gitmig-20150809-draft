@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/onis/onis-0.6.1.ebuild,v 1.4 2005/04/22 15:21:29 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/onis/onis-0.8.0.ebuild,v 1.1 2005/04/22 15:21:29 swegener Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://verplant.org/onis/"
 SRC_URI="http://verplant.org/${PN}/${P}.tar.bz2"
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="~x86 ~ppc"
 IUSE=""
 
 RDEPEND="dev-lang/perl"
@@ -22,26 +22,26 @@ src_unpack() {
 
 	epatch ${FILESDIR}/0.6.0-nochdir.patch
 
-	sed -i -e s:lang/:/usr/share/onis/lang/: config
+	sed -i -e s:lang/:/usr/share/onis/lang/: onis.conf || die "sed failed"
 }
 
 src_install () {
 	eval $(perl -V:installprivlib)
 
-	dobin onis
+	dobin onis || die "dobin failed"
 
-	dodir ${installprivlib}
-	cp -R lib/Onis ${D}/${installprivlib}
+	insinto "${installprivlib}"
+	doins -r lib/Onis || die "doins failed"
 
-	dodir /usr/share/onis
-	cp -R lang reports/* ${D}/usr/share/onis
+	insinto /usr/share/onis
+	doins -r lang reports/* || die "doins failed"
 
-	dodoc CHANGELOG README THANKS config users.conf
+	dodoc CHANGELOG README THANKS onis.conf users.conf
 }
 
 pkg_postinst() {
 	einfo
 	einfo "The onis themes have been installed in /usr/share/onis/*-theme"
-	einfo "You can find a sample configuration at /usr/share/doc/${PF}/config.gz"
+	einfo "You can find a sample configuration at /usr/share/doc/${PF}/onis.conf.gz"
 	einfo
 }
