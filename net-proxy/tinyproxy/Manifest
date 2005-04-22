@@ -1,7 +1,17 @@
-MD5 84ff13b31cf587fe52b68ab2c841a629 tinyproxy-1.6.3.ebuild 1100
-MD5 e5a20e5686a9a7cd87c395915105d8b7 tinyproxy-1.6.2.ebuild 1099
-MD5 da6667bf5a0c8f746b328b22dd299dbd ChangeLog 2013
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 655b251338e4fb8d957e7f5a065fcae6 tinyproxy-1.6.3.ebuild 1100
+MD5 badfc23f731970df3b33029570c94856 tinyproxy-1.6.2.ebuild 1099
+MD5 b72681c11ad45e9c7f2ace9a25a01f0c ChangeLog 2013
 MD5 9cafc01ae2d4a91da29afd4613e9683f metadata.xml 226
 MD5 abaaa5a551eca73c41945d48b358ecbd files/digest-tinyproxy-1.6.2 67
 MD5 9a5f65bb4b75d82277efa9cddc4d05ca files/digest-tinyproxy-1.6.3 67
-MD5 038979904fe8567468d0c8244fc5fb81 files/tinyproxy.rc 552
+MD5 7041efb40925a2cc0cea7b352e809ef5 files/tinyproxy.rc 552
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCaU1bjiC39V7gKu0RAoVeAJ9wuf7M4w/pmaMfFUmyZd5uxCe+XwCdFXM9
+pjZEZBLLrxe0y3teCZQvwSo=
+=f1nM
+-----END PGP SIGNATURE-----

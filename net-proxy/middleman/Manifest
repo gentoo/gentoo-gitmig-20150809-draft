@@ -1,10 +1,20 @@
-MD5 09a107b85bc5676b9d532807cdff8647 middleman-2.0.1-r2.ebuild 2012
-MD5 8c493d7fe8efde573c25dcdee34b0711 middleman-2.0.1.ebuild 1831
-MD5 c4f44329733723815da6abc01f959236 ChangeLog 4390
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 28158bb252e672bcac6bd828964e2de1 middleman-2.0.1-r2.ebuild 2012
+MD5 6f19ddbde3b7efc2ae4524bb1b03466e middleman-2.0.1.ebuild 1831
+MD5 4b52ad578a47a34b3a9461eb8842ef30 ChangeLog 4390
 MD5 b3089a22f33a39676bb267f8d3d59c07 metadata.xml 1012
 MD5 900b7f67e15e2549a495775afebed6b9 files/digest-middleman-2.0.1-r2 67
 MD5 22c116e20fcb12dbd46cbb38125f2e68 files/middleman-2.0.1-putlog-fix.patch 3671
 MD5 900b7f67e15e2549a495775afebed6b9 files/digest-middleman-2.0.1 67
 MD5 bb883e451ed1555f5171f3b196874712 files/middleman-2.0.1-gcc-34.patch 1091
 MD5 cca46008c83644944b263535a7d2ead1 files/conf.d/mman 138
-MD5 9505c222e2602ecc27c6e9ecdd1c08f5 files/init.d/mman 968
+MD5 de3be299916f4858bbad3e953757ddf4 files/init.d/mman 968
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCaU1rjiC39V7gKu0RAheqAKDipTfuYZI7b1TYiPzgOcRbyfBuAgCg34hj
+M+Cw4fmyccfGnovX9X9Nt5E=
+=PmB5
+-----END PGP SIGNATURE-----

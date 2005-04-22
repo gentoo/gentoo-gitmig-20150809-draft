@@ -1,4 +1,14 @@
-MD5 6df6ddcc47c17858af3408c86434ac9d paros-3.2.0.ebuild 703
-MD5 3c4659f9a555460ffcc84cd04f508255 ChangeLog 449
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 e3502e9bc4cfe1a720629c8a1daa1383 paros-3.2.0.ebuild 703
+MD5 184d2ae8654a30aeb46378b148d9ec1c ChangeLog 449
 MD5 4b03e120ede9dfedec0594e35156b38c metadata.xml 256
 MD5 63433745c47ead240f2be10aa5d8954d files/digest-paros-3.2.0 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCaU1wjiC39V7gKu0RAhcOAJ92vbk6+N/hWU/3llNSro0ErBlXAgCfZmOc
+khAueQIRAIXPlJII28skGPY=
+=u9x0
+-----END PGP SIGNATURE-----

@@ -1,5 +1,15 @@
-MD5 2ceaa8e9ed78fda116480b2b2eb1799d ChangeLog 2267
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 07bf8044849e81e69eed6b4c7f25cfc6 ChangeLog 2267
 MD5 0bba18e763cee72e6af83a6bc6e1db87 metadata.xml 241
-MD5 e21dd0c617690c511268f9c9870a6424 oops-1.5.23.ebuild 2330
+MD5 a758be28bcc143af4341e9cc7bf12db8 oops-1.5.23.ebuild 2328
 MD5 6f1e80af4f1280cfb10b31ab9d2ab820 files/oops.cfg 17896
 MD5 5ecad9ef80ba71f386b700b68e68754e files/digest-oops-1.5.23 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCaU14jiC39V7gKu0RAhdnAKDHVGlHB1JRKSXZ4mc7MPfgVn2N3gCbBcyB
+9vGoWfj2vOMhSHz5JfzG9Xg=
+=CF/6
+-----END PGP SIGNATURE-----
