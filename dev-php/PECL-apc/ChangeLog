@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/PECL-apc
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PECL-apc/ChangeLog,v 1.9 2005/02/14 08:36:53 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PECL-apc/ChangeLog,v 1.10 2005/04/22 14:48:45 blubb Exp $
+
+  22 Apr 2005; Simon Stelling <blubb@gentoo.org> PECL-apc-2.0.ebuild:
+  stable on amd64
 
 *PECL-apc-2.0.4 (14 Feb 2005)
 

@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-Image_IPTC
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Image_IPTC/ChangeLog,v 1.9 2004/12/30 19:24:05 ciaranm Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Image_IPTC/ChangeLog,v 1.10 2005/04/22 14:44:01 blubb Exp $
+
+  22 Apr 2005; Simon Stelling <blubb@gentoo.org>
+  PEAR-Image_IPTC-1.0.2.ebuild:
+  stable on amd64
 
   30 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
