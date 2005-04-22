@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ccmath/ccmath-2.2.1.ebuild,v 1.9 2004/10/19 21:38:47 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ccmath/ccmath-2.2.1.ebuild,v 1.10 2005/04/22 09:23:20 blubb Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://freshmeat.net/projects/ccmath/"
 
 SLOT="0"
 LICENSE="LGPL-2.1"
-KEYWORDS="x86 ppc sparc ~amd64"
+KEYWORDS="x86 ppc sparc amd64"
 
 DEPEND="virtual/libc"
 

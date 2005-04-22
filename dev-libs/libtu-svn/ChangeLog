@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libtu-svn
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtu-svn/ChangeLog,v 1.8 2004/09/05 10:58:50 malc Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtu-svn/ChangeLog,v 1.9 2005/04/22 09:36:29 blubb Exp $
+
+  22 Apr 2005; Simon Stelling <blubb@gentoo.org> libtu-svn-20040902.ebuild:
+  stable on amd64
 
   05 Sep 2004; Malcolm Lashley <malc@gentoo.org> libtu-svn-20040902.ebuild:
   Add ~amd64 closes bug #62762

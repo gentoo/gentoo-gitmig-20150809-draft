@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/zthread
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/zthread/ChangeLog,v 1.15 2004/12/04 07:40:57 dragonheart Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/zthread/ChangeLog,v 1.16 2005/04/22 09:45:10 blubb Exp $
+
+  22 Apr 2005; Simon Stelling <blubb@gentoo.org> zthread-2.3.1.ebuild:
+  stable on amd64
 
   04 Dec 2004; Daniel Black <dragonheart@gentoo.org> -zthread-1.5.3.ebuild,
   -zthread-2.2.10-r1.ebuild, zthread-2.3.1.ebuild:

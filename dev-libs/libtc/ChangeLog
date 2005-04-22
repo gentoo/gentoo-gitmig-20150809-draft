@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libtc
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtc/ChangeLog,v 1.8 2005/04/01 04:37:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtc/ChangeLog,v 1.9 2005/04/22 09:35:45 blubb Exp $
+
+  22 Apr 2005; Simon Stelling <blubb@gentoo.org> libtc-1.0.3.ebuild:
+  stable on amd64
 
   01 Apr 2005; Aron Griffis <agriffis@gentoo.org> libtc-1.0.3.ebuild:
   stable on ia64

@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libassetml
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libassetml/ChangeLog,v 1.5 2004/07/04 11:36:44 dholm Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libassetml/ChangeLog,v 1.6 2005/04/22 09:31:27 blubb Exp $
+
+  22 Apr 2005; Simon Stelling <blubb@gentoo.org> libassetml-1.1.ebuild:
+  stable on amd64
 
   04 Jul 2004; David Holm <dholm@gentoo.org> libassetml-1.2.1.ebuild:
   Added to ~ppc.
