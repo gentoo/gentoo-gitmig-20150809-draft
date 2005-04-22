@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/spectemu
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/spectemu/ChangeLog,v 1.11 2005/04/22 00:25:58 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/spectemu/ChangeLog,v 1.12 2005/04/22 19:48:25 rphillips Exp $
+
+  22 Apr 2005; <rphillips@gentoo.org> spectemu-0.99.3.ebuild:
+  Fix man page location
 
   21 Apr 2005; <rphillips@gentoo.org> spectemu-0.99.3.ebuild:
   Fixed sandbox violation
