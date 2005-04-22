@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/pomap
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/pomap/ChangeLog,v 1.10 2004/09/30 00:21:12 swegener Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/pomap/ChangeLog,v 1.11 2005/04/22 09:47:26 blubb Exp $
+
+  22 Apr 2005; Simon Stelling <blubb@gentoo.org> pomap-2.9.4.ebuild:
+  stable on amd64
 
   25 Sep 2004; Matthieu Sozeau <mattam@gentoo.org> pomap-2.9.4.ebuild:
   Fix bug #65089 (unsupported parallel builds) and add ~amd64 as suggested.
