@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/spectemu/spectemu-0.99.3.ebuild,v 1.1 2005/04/19 21:00:08 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/spectemu/spectemu-0.99.3.ebuild,v 1.2 2005/04/22 00:25:58 rphillips Exp $
 
 ### Several versions of specemu exist,  xspect & vgaspect, utilising X11
 ### and/or svgalib. libreadline provides optional runtime features.
@@ -24,6 +24,8 @@ src_compile() {
 	local myflags
 	use X || myflags="${myflags} --with-x=no"
 	use readline || myflags="${myflags} --without-readline"
+
+	myflags="${myflags} --mandir=${D}/usr/share/man/man1"
 
 	econf ${myflags} || die "Spectemu ./configure failed"
 	emake || die "Spectemu make failed"
