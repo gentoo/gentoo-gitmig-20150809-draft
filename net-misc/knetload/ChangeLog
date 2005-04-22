@@ -1,6 +1,15 @@
 # ChangeLog for net-misc/knetload
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/knetload/ChangeLog,v 1.20 2004/10/23 16:50:55 weeve Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/knetload/ChangeLog,v 1.21 2005/04/22 12:52:02 flameeyes Exp $
+
+*knetload-3.0_alpha2 (22 Apr 2005)
+
+  22 Apr 2005; Diego Pettenò <flameeyes@gentoo.org> metadata.xml,
+  +knetload-3.0_alpha2.ebuild:
+  New upstream version, package.masked as it's still alpha-quality. I'm taking
+  over the maintainership of this package as I'm current upstream maintainer.
+  The new version depends on libksnmp to support remote network load
+  monitoring.
 
   23 Oct 2004; Jason Wever <weeve@gentoo.org> knetload-2.3.ebuild:
   Stable on sparc.
