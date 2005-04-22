@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mkvtoolnix
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mkvtoolnix/ChangeLog,v 1.31 2005/04/18 17:46:56 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mkvtoolnix/ChangeLog,v 1.32 2005/04/22 15:18:46 luckyduck Exp $
+
+  22 Apr 2005; Jan Brinkmann <luckyduck@gentoo.org> mkvtoolnix-1.0.1.ebuild:
+  1.0.1 stable on amd64, backported some changes from the 1.4.2 ebuild to the
+  1.0.1 ebuild
 
   18 Apr 2005; Diego Pettenò <flameeyes@gentoo.org>
   +files/mkvtoolnix-configure-checks.patch, mkvtoolnix-1.4.2.ebuild:

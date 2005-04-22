@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mkvtoolnix/mkvtoolnix-1.0.1.ebuild,v 1.2 2005/03/11 18:55:16 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mkvtoolnix/mkvtoolnix-1.0.1.ebuild,v 1.3 2005/04/22 15:18:46 luckyduck Exp $
 
 inherit eutils wxwidgets
 
@@ -10,18 +10,19 @@ SRC_URI="http://www.bunkus.org/videotools/mkvtoolnix/sources/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~amd64"
-IUSE="gtk2 X oggvorbis flac"
+KEYWORDS="x86 amd64"
+IUSE="gtk2 X flac"
 
 DEPEND=">=dev-libs/libebml-0.7.2
 	>=media-libs/libmatroska-0.7.4
-	oggvorbis? ( media-libs/libogg media-libs/libvorbis media-libs/flac )
-	X? ( >=x11-libs/wxGTK-2.4.2-r2 )
-	flac? ( >=media-libs/flac-1.1.0 )
+	media-libs/libogg
+	media-libs/libvorbis
 	dev-libs/expat
 	app-arch/bzip2
 	sys-libs/zlib
-	dev-libs/lzo"
+	dev-libs/lzo
+	X? ( >=x11-libs/wxGTK-2.4.2-r2 )
+	flac? ( >=media-libs/flac-1.1.0 )"
 
 src_compile() {
 	if use X ; then
@@ -37,6 +38,6 @@ src_compile() {
 
 src_install() {
 	einstall || die "make install failed"
-	dodoc AUTHORS COPYING ChangeLog INSTALL README TODO
+	dodoc AUTHORS ChangeLog INSTALL README TODO
 	dohtml doc/mkvmerge-gui.html doc/images/*
 }
