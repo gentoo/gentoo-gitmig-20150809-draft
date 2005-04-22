@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/otter
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/otter/ChangeLog,v 1.2 2004/12/28 20:55:25 swegener Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/otter/ChangeLog,v 1.3 2005/04/22 00:06:28 wormo Exp $
+
+  21 Apr 2005; Stephanie Lockwood-Childs <wormo@gentoo.org> otter-3.3.ebuild:
+  marked ~ppc
 
 *otter-3.3 (28 Dec 2004)
 

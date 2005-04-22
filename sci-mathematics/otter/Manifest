@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a0eb4ff9f662840a735cdece2762446d otter-3.3.ebuild 719
-MD5 12e8e13341caac3257d1c538d297a5cf otter-3.2.ebuild 692
-MD5 988b018cd51d668686ff40385af7fbcf ChangeLog 1615
+MD5 b450ba537d87af196b0f1a800f488a90 ChangeLog 1705
 MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
+MD5 5b9225829ac717696386cfa4798eebb0 otter-3.2.ebuild 689
+MD5 508b843f5dabfe4c03dd079138ea1857 otter-3.3.ebuild 721
 MD5 b299411e0aa76723d9617046d8d7ea5e files/digest-otter-3.2 62
 MD5 aa559b24f0a62ba3189129735c89b785 files/digest-otter-3.3 62
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFB0chFI1lqEGTUzyQRAktcAJ0XV6wwF4IxFw3zcCbMZRimmVy9iwCdHs7g
-uxsmQh39uIcEeU6ZSt9lUuQ=
-=N0I1
------END PGP SIGNATURE-----
