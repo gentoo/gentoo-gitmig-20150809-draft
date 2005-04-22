@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/konq-plugins
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/konq-plugins/ChangeLog,v 1.6 2005/03/25 01:16:50 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/konq-plugins/ChangeLog,v 1.7 2005/04/22 18:19:22 danarmak Exp $
+
+*konq-plugins-3.4.0-r1 (22 Apr 2005)
+
+  22 Apr 2005; Dan Armak <danarmak@gentoo.org>
+  +konq-plugins-3.4.0-r1.ebuild:
+  Don't install the documentation; the kdeaddons-docs-konq-plugins ebuild does
+  that. Fixes file overwriting/ownership conflict. Closes bug #86009.
 
   25 Mar 2005; Jason Wever <weeve@gentoo.org> konq-plugins-3.4.0.ebuild:
   Added ~sparc keyword.
