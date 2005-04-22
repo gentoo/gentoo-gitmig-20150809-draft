@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/oregano/oregano-0.40.3.ebuild,v 1.2 2005/02/24 19:36:00 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/oregano/oregano-0.40.3.ebuild,v 1.3 2005/04/22 02:41:50 gustavoz Exp $
 
 inherit eutils
 
@@ -23,6 +23,15 @@ DEPEND=">=dev-libs/libxml2-2.6.0
 	>=gnome-base/libgnomeprintui-2.4
 	>=x11-libs/cairo-0.1.23-r1
 	>=x11-libs/gtksourceview-1.0"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+
+	# Gnome 2.10 fix
+	sed -i -e "s/-DGNOME_DISABLE_DEPRECATED=1//" \
+		src/Makefile.in
+}
 
 src_compile() {
 	econf || die "econf failed"
