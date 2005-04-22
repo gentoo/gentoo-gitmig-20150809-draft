@@ -31,3 +31,4 @@ move www-proxy/tinyproxy net-proxy/tinyproxy
 move www-proxy/webscarab net-proxy/webscarab
 move www-proxy/wwwoffle net-proxy/wwwoffle
 move net-misc/dante net-proxy/dante
+move net-misc/3proxy net-proxy/3proxy
