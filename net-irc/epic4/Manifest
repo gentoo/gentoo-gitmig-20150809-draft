@@ -3,19 +3,19 @@ Hash: SHA1
 
 MD5 1c369d7d62b8f45cdc9ca842f24095a2 epic4-2.0-r1.ebuild 2333
 MD5 f7c12be41b15e9674f48d07ea84c953f epic4-1.1.16-r1.ebuild 2071
-MD5 b7297454869e44f4c476bd906e4f904b epic4-2.2.ebuild 2165
-MD5 f5eaf2b652370cbb582ca041c6fc7ec2 ChangeLog 8437
+MD5 3f958bb3a1f81ae293e236b12b3828b1 epic4-2.2.ebuild 2197
+MD5 5595e4974218cafa8b4d7b1d414aca11 ChangeLog 8530
 MD5 44c39c6ad372a8e5a5e7ee3311f703a7 metadata.xml 160
 MD5 a0a06abf43f925f0472c026573bf622f files/epic-defaultserver.patch 620
-MD5 8989f4be2d37fd43a69718f476986247 files/digest-epic4-2.2 133
+MD5 5d98357a61d5adf165c257471d1d41b3 files/digest-epic4-2.2 133
 MD5 1d5075abb862c8b98c2b16df96e37407 files/local 21043
 MD5 8668b72bb8d4af8c83ddcbb8fc606022 files/digest-epic4-1.1.16-r1 136
 MD5 202b467aa8e4fa72afb00aa40b4f423d files/2.0-toggle-stop-screen.patch 1628
 MD5 cbb9caa10a6573474c6e18ca5e01b85e files/digest-epic4-2.0-r1 133
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCI7FpI1lqEGTUzyQRAjSLAKCUfWqJdO6nQyM7EZdjjXezKiWxXgCgpv2E
-ZyOxTVred2EMjFseZ+pp1lU=
-=+6tJ
+iD8DBQFCaRzNI1lqEGTUzyQRAmU6AJ4nI0Pz/kmi6Ja5Q/Nsvfl/k016WACeP5gq
+1rcVUwn+6/vyvqAKUaQQswk=
+=H6tc
 -----END PGP SIGNATURE-----

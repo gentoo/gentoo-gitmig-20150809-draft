@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/epic4/epic4-2.2.ebuild,v 1.3 2005/03/01 00:03:45 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/epic4/epic4-2.2.ebuild,v 1.4 2005/04/22 15:48:10 swegener Exp $
 
 inherit flag-o-matic eutils
 
-HELP_V="20040801"
+HELP_V="20050315"
 
 DESCRIPTION="Epic4 IRC Client"
 HOMEPAGE="http://epicsol.org/"
@@ -13,7 +13,7 @@ SRC_URI="ftp://ftp.epicsol.org/pub/epic/EPIC4-PRODUCTION/${P}.tar.bz2
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~ia64 ~alpha ~hppa ~sparc ~amd64 ~ppc-macos"
+KEYWORDS="x86 ~ppc ~ia64 ~alpha ~hppa ~sparc ~amd64 ~ppc-macos"
 IUSE="ipv6 perl ssl"
 
 DEPEND=">=sys-libs/ncurses-5.2
@@ -63,7 +63,8 @@ src_install () {
 		*.txt colors EPIC* IRCII_VERSIONS local_vars missing new-load \
 		nicknames outputhelp SILLINESS TS4
 
-	mv ${WORKDIR}/help/* ${D}/usr/share/epic/help
+	insinto /usr/share/epic/help
+	doins -r ${WORKDIR}/help/* || die "doins failed"
 }
 
 pkg_postinst() {
