@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jdbc3-oracle
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc3-oracle/ChangeLog,v 1.10 2004/10/20 11:01:44 absinthe Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc3-oracle/ChangeLog,v 1.11 2005/04/22 08:36:45 blubb Exp $
+
+  22 Apr 2005; Simon Stelling <blubb@gentoo.org>
+  jdbc3-oracle-9.2.0.3.ebuild:
+  stable on amd64
 
 *jdbc3-oracle-9.2.0.5 (20 Oct 2004)
 

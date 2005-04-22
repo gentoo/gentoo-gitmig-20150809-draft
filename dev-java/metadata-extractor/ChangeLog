@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/metadata-extractor
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/metadata-extractor/ChangeLog,v 1.4 2004/10/22 09:39:33 absinthe Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/metadata-extractor/ChangeLog,v 1.5 2005/04/22 08:42:46 blubb Exp $
+
+  22 Apr 2005; Simon Stelling <blubb@gentoo.org>
+  metadata-extractor-2.2.2.ebuild:
+  stable on amd64
 
   22 Oct 2004; Dylan Carlson <absinthe@gentoo.org>
   metadata-extractor-2.2.2.ebuild:

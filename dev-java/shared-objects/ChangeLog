@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/shared-objects
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/shared-objects/ChangeLog,v 1.5 2004/10/19 20:18:07 absinthe Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/shared-objects/ChangeLog,v 1.6 2005/04/22 08:14:43 blubb Exp $
+
+  22 Apr 2005; Simon Stelling <blubb@gentoo.org> shared-objects-1.4.ebuild:
+  stable on amd64
 
   19 Oct 2004; Dylan Carlson <absinthe@gentoo.org>
   shared-objects-1.4.ebuild:

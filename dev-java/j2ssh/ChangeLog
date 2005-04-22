@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/j2ssh
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/j2ssh/ChangeLog,v 1.7 2004/10/22 11:03:36 absinthe Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/j2ssh/ChangeLog,v 1.8 2005/04/22 08:32:20 blubb Exp $
+
+  22 Apr 2005; Simon Stelling <blubb@gentoo.org> j2ssh-0.2.7-r1.ebuild:
+  stable on amd64
 
   22 Oct 2004; Dylan Carlson <absinthe@gentoo.org> j2ssh-0.2.7-r1.ebuild,
   j2ssh-0.2.7.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/cglib
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/cglib/ChangeLog,v 1.5 2005/01/20 16:00:59 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/cglib/ChangeLog,v 1.6 2005/04/22 08:59:56 blubb Exp $
+
+  22 Apr 2005; Simon Stelling <blubb@gentoo.org> cglib-2.0.2.ebuild:
+  stable on amd64
 
 *cglib-2.0.2-r1 (20 Jan 2005)
 

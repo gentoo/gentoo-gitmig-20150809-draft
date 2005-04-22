@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/maven-bin
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/maven-bin/ChangeLog,v 1.4 2004/10/29 12:56:51 axxo Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/maven-bin/ChangeLog,v 1.5 2005/04/22 08:42:13 blubb Exp $
+
+  22 Apr 2005; Simon Stelling <blubb@gentoo.org> maven-bin-1.0_rc3.ebuild:
+  stable on amd64
 
   29 Oct 2004; Thomas Matthijs <axxo@gentoo.org> maven-bin-1.0.ebuild,
   maven-bin-1.0_rc3.ebuild, maven-bin-1.0_rc4.ebuild:

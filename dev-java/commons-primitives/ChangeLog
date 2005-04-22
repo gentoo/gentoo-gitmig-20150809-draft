@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/commons-primitives
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-primitives/ChangeLog,v 1.9 2005/03/27 18:01:37 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-primitives/ChangeLog,v 1.10 2005/04/22 08:22:25 blubb Exp $
+
+  22 Apr 2005; Simon Stelling <blubb@gentoo.org>
+  commons-primitives-1.0.ebuild:
+  stable on amd64
 
   27 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org>
   commons-primitives-1.0.ebuild:

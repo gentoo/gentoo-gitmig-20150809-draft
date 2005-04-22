@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/sablecc
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sablecc/ChangeLog,v 1.7 2004/10/22 10:10:07 absinthe Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sablecc/ChangeLog,v 1.8 2005/04/22 08:46:56 blubb Exp $
+
+  22 Apr 2005; Simon Stelling <blubb@gentoo.org> sablecc-2.18.2.ebuild:
+  stable on amd64
 
   22 Oct 2004; Dylan Carlson <absinthe@gentoo.org> sablecc-2.18.2.ebuild:
   Keywords ~amd64.

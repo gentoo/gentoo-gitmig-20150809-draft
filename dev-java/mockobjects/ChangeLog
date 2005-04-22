@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/mockobjects
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/mockobjects/ChangeLog,v 1.9 2005/03/16 18:26:00 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/mockobjects/ChangeLog,v 1.10 2005/04/22 08:43:22 blubb Exp $
+
+  22 Apr 2005; Simon Stelling <blubb@gentoo.org> mockobjects-0.09.ebuild:
+  stable on amd64
 
   16 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org> mockobjects-0.09.ebuild:
   mockobjects now makes use of java-pkg_dosrc

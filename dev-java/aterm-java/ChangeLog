@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/aterm-java
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/aterm-java/ChangeLog,v 1.9 2005/01/01 18:08:48 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/aterm-java/ChangeLog,v 1.10 2005/04/22 08:15:00 blubb Exp $
+
+  22 Apr 2005; Simon Stelling <blubb@gentoo.org> aterm-java-1.6.ebuild:
+  stable on amd64
 
   19 Oct 2004; Dylan Carlson <absinthe@gentoo.org> aterm-java-1.6.ebuild:
   Keywords ~amd64.

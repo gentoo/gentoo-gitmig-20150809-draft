@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/avalon-phoenix
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/avalon-phoenix/ChangeLog,v 1.10 2005/01/01 18:09:13 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/avalon-phoenix/ChangeLog,v 1.11 2005/04/22 08:15:33 blubb Exp $
+
+  22 Apr 2005; Simon Stelling <blubb@gentoo.org>
+  avalon-phoenix-4.0.4.ebuild:
+  stable on amd64
 
   19 Oct 2004; Dylan Carlson <absinthe@gentoo.org>
   avalon-phoenix-4.0.4.ebuild:

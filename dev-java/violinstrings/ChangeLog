@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/violinstrings
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/violinstrings/ChangeLog,v 1.7 2005/01/20 18:59:07 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/violinstrings/ChangeLog,v 1.8 2005/04/22 08:49:50 blubb Exp $
+
+  22 Apr 2005; Simon Stelling <blubb@gentoo.org> violinstrings-1.0.2.ebuild:
+  stable on amd64
 
   20 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org>
   violinstrings-1.0.2.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/infobus-bin
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/infobus-bin/ChangeLog,v 1.4 2004/10/20 08:27:54 absinthe Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/infobus-bin/ChangeLog,v 1.5 2005/04/22 08:31:52 blubb Exp $
+
+  22 Apr 2005; Simon Stelling <blubb@gentoo.org> infobus-bin-1.2.ebuild:
+  stable on amd64
 
   20 Oct 2004; Dylan Carlson <absinthe@gentoo.org> infobus-bin-1.2.ebuild:
   Fixed HOMEPAGE. Keywords ~amd64.

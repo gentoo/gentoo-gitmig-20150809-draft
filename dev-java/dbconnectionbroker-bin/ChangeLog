@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/dbconnectionbroker-bin
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/dbconnectionbroker-bin/ChangeLog,v 1.5 2005/01/01 18:22:46 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/dbconnectionbroker-bin/ChangeLog,v 1.6 2005/04/22 08:24:45 blubb Exp $
+
+  22 Apr 2005; Simon Stelling <blubb@gentoo.org>
+  dbconnectionbroker-bin-1.0.13.ebuild:
+  stable on amd64
 
   20 Oct 2004; Dylan Carlson <absinthe@gentoo.org>
   dbconnectionbroker-bin-1.0.13.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jump
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jump/ChangeLog,v 1.7 2004/10/29 01:40:24 absinthe Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jump/ChangeLog,v 1.8 2005/04/22 08:56:06 blubb Exp $
+
+  22 Apr 2005; Simon Stelling <blubb@gentoo.org> jump-0.4.1-r1.ebuild:
+  stable on amd64
 
   28 Oct 2004; Dylan Carlson <absinthe@gentoo.org> jump-0.4.1-r1.ebuild:
   Fix dep on ant. (thanks compnerd)

@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jasmin-sable
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jasmin-sable/ChangeLog,v 1.9 2005/03/26 00:20:27 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jasmin-sable/ChangeLog,v 1.10 2005/04/22 08:34:05 blubb Exp $
+
+  22 Apr 2005; Simon Stelling <blubb@gentoo.org> jasmin-sable-1.2.7.ebuild:
+  stable on amd64
 
   26 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org> jasmin-sable-1.2.7.ebuild:
   cleanup, also introduced support for the examples and the source useflag.

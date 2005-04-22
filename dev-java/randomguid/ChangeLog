@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/randomguid
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/randomguid/ChangeLog,v 1.9 2004/10/22 10:08:49 absinthe Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/randomguid/ChangeLog,v 1.10 2005/04/22 08:45:54 blubb Exp $
+
+  22 Apr 2005; Simon Stelling <blubb@gentoo.org> randomguid-1.2.1.ebuild:
+  stable on amd64
 
   22 Oct 2004; Dylan Carlson <absinthe@gentoo.org> randomguid-1.2.1.ebuild:
   Keywords ~amd64.

@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/kissme-classpath
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/kissme-classpath/ChangeLog,v 1.8 2004/10/22 09:34:09 absinthe Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/kissme-classpath/ChangeLog,v 1.9 2005/04/22 08:41:08 blubb Exp $
+
+  22 Apr 2005; Simon Stelling <blubb@gentoo.org>
+  kissme-classpath-0.19.ebuild:
+  stable on amd64
 
   22 Oct 2004; Dylan Carlson <absinthe@gentoo.org>
   kissme-classpath-0.19.ebuild:
