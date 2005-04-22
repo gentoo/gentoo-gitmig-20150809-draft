@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnopernicus/gnopernicus-0.10.4.ebuild,v 1.1 2005/03/11 00:05:37 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnopernicus/gnopernicus-0.10.7.ebuild,v 1.1 2005/04/22 20:30:30 leonardop Exp $
 
 inherit gnome2
 
