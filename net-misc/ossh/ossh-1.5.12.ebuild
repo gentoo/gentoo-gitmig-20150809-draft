@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ossh/ossh-1.5.12.ebuild,v 1.3 2004/11/06 16:14:54 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ossh/ossh-1.5.12.ebuild,v 1.4 2005/04/22 20:56:51 mrness Exp $
 
 inherit gnuconfig flag-o-matic
 
@@ -15,7 +15,7 @@ IUSE="zlib socks5"
 
 DEPEND="!virtual/ssh
 	zlib? ( sys-libs/zlib )
-	socks5? ( net-misc/dante )
+	socks5? ( net-proxy/dante )
 	dev-libs/gmp
 	dev-libs/openssl"
 PROVIDE="virtual/ssh"
