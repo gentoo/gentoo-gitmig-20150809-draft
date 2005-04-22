@@ -1,0 +1,12 @@
+# ChangeLog for net-libs/libksnmp
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libksnmp/ChangeLog,v 1.1 2005/04/22 11:37:46 flameeyes Exp $
+
+*libksnmp-0.3 (22 Apr 2005)
+
+  22 Apr 2005; Diego Pettenò <flameeyes@gentoo.org> +metadata.xml,
+  +libksnmp-0.3.ebuild:
+  Initial version, libksnmp is a snmp library for kde (actually an
+  encapsulation of net-snmp) and is needed for 3.0 versions of knetload. Im
+  the author and Ill be the maintainer here.
+
