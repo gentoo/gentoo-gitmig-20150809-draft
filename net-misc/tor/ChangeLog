@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/tor
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.35 2005/04/08 13:55:48 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.36 2005/04/22 22:41:25 mrness Exp $
+
+  22 Apr 2005; Alin Nastac <mrness@gentoo.org> tor-0.0.9.5.ebuild,
+  tor-0.0.9.6.ebuild, tor-0.0.9.7.ebuild:
+  net-misc/tsocks -> net-proxy/tsocks
 
   08 Apr 2005; Gustavo Zacarias <gustavoz@gentoo.org> tor-0.0.9.7.ebuild:
   Keyworded ~sparc wrt #88305
