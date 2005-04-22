@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/epic5/epic5-0.0.4.ebuild,v 1.1 2005/04/10 12:22:31 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/epic5/epic5-0.0.4.ebuild,v 1.2 2005/04/22 21:04:14 mrness Exp $
 
 inherit eutils
 
@@ -16,7 +16,7 @@ DEPEND=">=sys-libs/ncurses-5.2
 	perl? ( >=dev-lang/perl-5.6.1 )
 	ssl? ( >=dev-libs/openssl-0.9.5 )
 	tcltk? ( dev-lang/tcl )
-	socks5? ( net-misc/dante )"
+	socks5? ( net-proxy/dante )"
 
 src_unpack() {
 	unpack ${A}

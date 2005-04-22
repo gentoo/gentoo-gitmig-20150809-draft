@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/irssi-0.8.10_rc5-r1.ebuild,v 1.4 2005/03/08 05:10:08 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/irssi-0.8.10_rc5-r1.ebuild,v 1.5 2005/04/22 21:02:08 mrness Exp $
 
 inherit perl-module eutils
 
@@ -21,7 +21,7 @@ RDEPEND="!net-irc/irssi-cvs
 	sys-libs/ncurses
 	ssl? ( dev-libs/openssl )
 	perl? ( dev-lang/perl )
-	socks5? ( >=net-misc/dante-1.1.13 )"
+	socks5? ( >=net-proxy/dante-1.1.13 )"
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )
 	>=sys-apps/sed-4"
