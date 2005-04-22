@@ -1,19 +1,26 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/horde.eclass,v 1.16 2004/12/26 06:16:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/horde.eclass,v 1.17 2005/04/22 21:42:42 vapier Exp $
 #
 # Help manage the horde project http://www.horde.org/
 #
 # Author: Mike Frysinger <vapier@gentoo.org>
 # CVS additions by Chris Aniszczyk <zx@mea-culpa.net>
+# SNAP additions by Jonathan Polansky <jpolansky@lsit.ucsb.edu>
 #
 # This eclass provides generic functions to make the writing of horde
 # ebuilds fairly trivial since there are many horde applications and 
 # they all share the same basic install process.
 
+# EHORDE_SNAP
+# This variable tracks whether the user is using a snapshot version
+#
+# EHORDE_SNAP_BRANCH
+# You set this via the ebuild to whatever branch you wish to grab a
+# snapshot of.  Typically this is 'HEAD' or 'RELENG'.
+#
 # EHORDE_CVS
-# This variable is just simply used to track whether the user is 
-# using a cvs version of a horde ebulid.
+# This variable tracks whether the user is using a cvs version
 
 inherit webapp eutils
 [[ ${PN} != ${PN/-cvs} ]] && inherit cvs
@@ -26,20 +33,32 @@ EXPORT_FUNCTIONS pkg_setup src_unpack src_install pkg_postinst
 [[ -z ${HORDE_PN} ]] && HORDE_PN="${PN/horde-}"
 [[ -z ${HORDE_MAJ} ]] && HORDE_MAJ=""
 
+EHORDE_CVS="false"
+EHORDE_SNAP="false"
 if [[ ${PN} != ${PN/-cvs} ]] ; then
+	EHORDE_CVS="true"
+	HORDE_PN=${HORDE_PN/-cvs}
+
 	ECVS_SERVER="anoncvs.horde.org:/repository"
 	ECVS_MODULE="${HORDE_PN}"
 	ECVS_TOP_DIR="${DISTDIR}/cvs-src/${PN}"
 	ECVS_USER="cvsread"
 	ECVS_PASS="horde"
 
-	HORDE_PN="${HORDE_PN/-cvs}"
-
-	EHORDE_CVS="true"
 	SRC_URI=""
-	S=${WORKDIR}/${ECVS_MODULES}
+	S=${WORKDIR}/${HORDE_PN}
+
+elif [[ ${PN} != ${PN/-snap} ]] ; then
+	EHORDE_SNAP="true"
+	EHORDE_SNAP_BRANCH=${EHORDE_SNAP_BRANCH:-HEAD}
+	SNAP_PV=${PV:0:4}-${PV:4:2}-${PV:6:2}
+
+	HORDE_PN=${HORDE_PN/-snap}
+
+	SRC_URI="http://ftp.horde.org/pub/snaps/${SNAP_PV}/${HORDE_PN}-${EHORDE_SNAP_BRANCH}-${SNAP_PV}.tar.gz"
+	S=${WORKDIR}/${HORDE_PN}
+
 else
-	EHORDE_CVS="false"
 	SRC_URI="http://ftp.horde.org/pub/${HORDE_PN}/${HORDE_PN}${HORDE_MAJ}-${PV/_/-}.tar.gz"
 	S=${WORKDIR}/${HORDE_PN}${HORDE_MAJ}-${PV/_/-}
 fi
