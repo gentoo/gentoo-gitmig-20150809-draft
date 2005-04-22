@@ -1,0 +1,9 @@
+# ChangeLog for dev-db/sqliteodbc
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqliteodbc/ChangeLog,v 1.1 2005/04/22 20:27:44 arj Exp $
+
+*sqliteodbc-0.64 (22 Apr 2005)
+
+  22 Apr 2005; Anders Rune Jensen <arj@gentoo.org> +sqliteodbc-0.64.ebuild:
+  New package. Fixes #56259.
+
