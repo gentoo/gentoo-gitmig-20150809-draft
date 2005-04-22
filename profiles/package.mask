@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3858 2005/04/22 17:26:36 lanius Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3859 2005/04/22 19:33:20 pythonhead Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Rob Cakebread <pythonhead@gentoo.org> (22 Apr 2005)
+# Versions in portage no longer supported. Abeni 1.0 will be in portage soon after wxGTK-2.6.0
+app-portage/abeni
 
 # Herbie Hopkins <herbie@hopkins.net> (22 Apr 2005)
 # Masked for testing bug #89971
