@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-firmware/alsa-firmware-1.0.7.ebuild,v 1.4 2005/01/23 11:24:42 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-firmware/alsa-firmware-1.0.8-r1.ebuild,v 1.1 2005/04/22 11:15:04 eradicator Exp $
 
 IUSE=""
 
@@ -16,6 +16,11 @@ KEYWORDS="amd64 sparc x86"
 LICENSE="GPL-2"
 
 DEPEND=""
+
+src_compile() {
+	econf --with-hotplug-dir=/lib/firmware
+	emake || die
+}
 
 src_install () {
 	make DESTDIR="${D}" install || die

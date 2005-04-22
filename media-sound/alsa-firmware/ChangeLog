@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/alsa-firmware
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-firmware/ChangeLog,v 1.16 2005/03/16 11:58:54 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-firmware/ChangeLog,v 1.17 2005/04/22 11:15:04 eradicator Exp $
+
+*alsa-firmware-1.0.8-r1 (22 Apr 2005)
+
+  22 Apr 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  -alsa-firmware-1.0.7.ebuild, -alsa-firmware-1.0.8.ebuild,
+  +alsa-firmware-1.0.8-r1.ebuild:
+  Corrected firmware location for hotplug to be /lib/firmware. Closes bug
+  #78780.
 
   16 Mar 2005; Jeremy Huddleston <eradicator@gentoo.org>
   -alsa-firmware-1.0.4.ebuild:
