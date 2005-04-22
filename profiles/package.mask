@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3856 2005/04/22 13:36:51 ka0ttic Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3857 2005/04/22 15:55:55 herbs Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Herbie Hopkins <herbie@hopkins.net> (22 Apr 2005)
+# Masked for testing bug #89971
+=app-emulation/emul-linux-x86-qtlibs-2.1.1
 
 # Alin Nastac <mrness@gentoo.org> (21 Apr 2005)
 # viruses are filtered only on the first request of the URL (bug #89948)
