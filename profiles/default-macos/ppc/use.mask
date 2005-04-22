@@ -42,7 +42,7 @@ esd
 mikmod
 xmms
 
-# net-misc/dante fails to compile, so we mask it until we succeed
+# net-proxy/dante fails to compile, so we mask it until we succeed
 # (dev-lang/ruby, net-misc/lftp)
 socks5
 
