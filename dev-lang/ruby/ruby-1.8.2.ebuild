@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.2.ebuild,v 1.8 2005/04/08 15:50:53 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.2.ebuild,v 1.9 2005/04/22 20:51:25 mrness Exp $
 
 ONIGURUMA="onigd2_4_0"
 
@@ -21,7 +21,7 @@ RDEPEND="virtual/libc
 	>=sys-libs/gdbm-1.8.0
 	>=sys-libs/readline-4.1
 	>=sys-libs/ncurses-5.2
-	socks5? ( >=net-misc/dante-1.1.13 )
+	socks5? ( >=net-proxy/dante-1.1.13 )
 	tcltk? ( dev-lang/tk )
 	>=dev-ruby/ruby-config-0.3
 	!=dev-lang/ruby-cvs-1.8*"

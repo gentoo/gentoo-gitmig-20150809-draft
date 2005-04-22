@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby-cvs/ruby-cvs-1.8.2-r1.ebuild,v 1.3 2004/10/06 04:00:43 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby-cvs/ruby-cvs-1.8.2-r1.ebuild,v 1.4 2005/04/22 20:53:04 mrness Exp $
 
 IUSE="socks5 tcltk doc threads"
 
@@ -19,7 +19,7 @@ DEPEND="virtual/libc
 	>=sys-libs/readline-4.1
 	>=sys-libs/ncurses-5.2
 	dev-util/gperf
-	socks5? ( >=net-misc/dante-1.1.13 )
+	socks5? ( >=net-proxy/dante-1.1.13 )
 	tcltk?  ( dev-lang/tk )
 	sys-apps/findutils
 	>=dev-ruby/ruby-config-0.3.1"
