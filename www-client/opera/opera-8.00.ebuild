@@ -1,11 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-8.00_beta2.ebuild,v 1.1 2005/03/15 15:09:21 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-8.00.ebuild,v 1.1 2005/04/22 17:24:42 lanius Exp $
 
 IUSE="static spell"
 
-OPERAVER="8.0-20050225"
-OPERAFTPDIR="800b2/beta/en"
+OPERAVER="8.0-20050415"
+OPERAFTPDIR="800/final/en"
 
 S=${WORKDIR}/${A/.tar.bz2/}
 
@@ -13,16 +13,16 @@ DESCRIPTION="Opera web browser."
 HOMEPAGE="http://www.opera.com/linux/"
 
 # that's an ugly workaround for the broken src_uri syntax
-OPERA_URI="ftp://ftp.opera.com/pub/opera/linux/${OPERAFTPDIR}/"
+OPERA_URI="mirror://opera/linux/${OPERAFTPDIR}/"
 SRC_URI="
 	x86? ( static? ( ${OPERA_URI}/i386/static/${PN}-${OPERAVER}.1-static-qt.i386-en.tar.bz2 ) )
-	x86? ( !static? ( ${OPERA_URI}/i386/${PN}-${OPERAVER}.5-shared-qt.i386-en.tar.bz2 ) )
-	amd64? ( ${OPERA_URI}/i386/static/${PN}-${OPERAVER}.1-static-qt.i386-en.tar.bz2 )
-	sparc? ( static? ( ${OPERA_URI}/sparc/static/${PN}-${OPERAVER}.1-static-qt.sparc-en.tar.bz2 ) )
+	x86? ( !static? ( ${OPERA_URI}/i386/shared/${PN}-${OPERAVER}.5-shared-qt.i386-en.tar.bz2 ) )
+	amd64? ( static? ( ${OPERA_URI}/i386/static/${PN}-${OPERAVER}.1-static-qt.i386-en.tar.bz2 ) )
+	amd64? ( !static? ( ${OPERA_URI}/i386/shared/${PN}-${OPERAVER}.5-shared-qt.i386-en.tar.bz2 ) )
+	sparc? ( ${OPERA_URI}/sparc/static/${PN}-${OPERAVER}.1-static-qt.sparc-en.tar.bz2 )
 	ppc? ( ${OPERA_URI}/ppc/static/${PN}-${OPERAVER}.1-static-qt.ppc-en.tar.bz2 )"
 
 #	sparc? ( !static? ( ${OPERA_URI}/sparc/${PN}-${OPERAVER}.2-shared-qt.sparc-en.tar.bz2 ) )
-#	amd64? ( !static? ( ${OPERA_URI}/intel-linux/en/${PN}-${OPERAVER}.5-shared-qt.i386-en.tar.bz2 ) )
 #	ppc? ( !static? ( ${OPERA_URI}/ppc-linux/en/${PN}-${OPERAVER}.3-shared-qt.ppc-en.tar.bz2 ) )
 
 # Dependencies may be augmented later (see below).
@@ -35,8 +35,7 @@ RDEPEND="virtual/x11
 	x11-libs/openmotif
 	spell? ( app-text/aspell )
 	amd64? ( static? ( app-emulation/emul-linux-x86-xlibs )
-	         !static? ( =app-emulation/emul-linux-x86-qtlibs-1* ) )
-
+	         !static? ( =app-emulation/emul-linux-x86-qtlibs ) )
 	x86? ( !static? ( =x11-libs/qt-3* ) )"
 
 SLOT="0"
