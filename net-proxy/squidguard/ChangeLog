@@ -1,0 +1,73 @@
+# ChangeLog for www-proxy/squidguard
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squidguard/ChangeLog,v 1.1 2005/04/22 19:15:11 mrness Exp $
+
+  22 Apr 2005; Alin Nastac <mrness@gentoo.org> :
+  Rename category & herd www-proxy to net-proxy
+
+  07 Apr 2005; Marcus D. Hanwell <cryos@gentoo.org>
+  squidguard-1.2.0-r1.ebuild:
+  Marked ~amd64, closes bug 87088.
+
+  07 Mar 2005; Markus Rothe <corsair@gentoo.org> squidguard-1.2.0-r1.ebuild:
+  Stable on ppc64
+
+  26 Jan 2005; Markus Rothe <corsair@gentoo.org> squidguard-1.2.0-r1.ebuild:
+  Added ~ppc64 to KEYWORDS; bug #79564
+
+  05 Sep 2004; Sven Wegener <swegener@gentoo.org> :
+  Fixed ChangeLog header.
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  squidguard-1.2.0-r1.ebuild:
+  Masked squidguard-1.2.0-r1.ebuild stable for ppc
+
+  31 Aug 2004; David Holm <dholm@gentoo.org> squidguard-1.2.0-r1.ebuild:
+  Added to ~ppc.
+
+  26 Aug 2004; Andrew Bevitt <cyfred@gentoo.org>;
+  +files/squidguard-1.2.0-db42.patch, squidguard-1.2.0-r1.ebuild:
+  Adding db4.2 support, see bug #61578
+
+  16 Aug 2004; Andrew Bevitt <cyfred@gentoo.org>; squidguard-1.2.0-r1.ebuild:
+  Changing net-www/squid to www-proxy/squid in depends
+
+*squidguard-1.2.0-r1 (15 Aug 2004)
+
+  15 Aug 2004; Stuart Herbert <stuart@gentoo.org> +metadata.xml,
+  +files/blockedsites, +files/squidGuard.conf.blocksites,
+  +files/squidGuard.conf.minimal, +files/squidguard-1.2.0-db4.patch,
+  +files/squidguard-1.2.0-db41.patch, +squidguard-1.2.0-r1.ebuild:
+  Moved from net-www/squidguard to www-proxy/squidguard.
+
+  15 Jul 2004; Andrew Bevitt <cyfred@gentoo.org>;
+  +files/squidguard-1.2.0-db41.patch, squidguard-1.2.0-r1.ebuild,
+  -squidguard-1.2.0.ebuild:
+  Adding support for DB 4.1, closing bugs #34154 and #44546; removing old
+  version.
+
+  23 Jun 2004; Andrew Bevitt <cyfred@gentoo.org>; +metadata.xml:
+  Adding metadata.xml
+
+  27 Apr 2004; Aron Griffis <agriffis@gentoo.org> squidguard-1.2.0-r1.ebuild:
+  Add inherit eutils
+
+  20 Sep 2003; Todd Sunderlin <todd@gentoo.org> squidguard-1.2.0.ebuild:
+  marked unstable for sparc
+
+*squidguard-1.2.0-r1 (04 Aug 2003)
+
+  04 Aug 2003; Martin Holzer <mholzer@gentoo.org> squidguard-1.2.0-r1.ebuild:
+  Adding config option. Submitted by Maik Schreiber <blizzy@blizzy.de> in #25516.
+
+  28 May 2003; Paul de Vrieze <pauldv@gentoo.org> squidguard-1.2.0.ebuild:
+  Fix squidguard to properly recognize db4's versioned symbols.
+
+*squidguard-1.2.0 (23 Oct 2002)
+
+  13 Apr 2003; Martin Holzer <mholzer@gentoo.org> Manifest,
+  squidguard-1.2.0.ebuild:
+  Corrected Homepage. Closes #19255.
+
+  23 Oct 2002; Maik Schreiber <blizzy@gentoo.org> : Initial import. ebuild done
+  by myself.

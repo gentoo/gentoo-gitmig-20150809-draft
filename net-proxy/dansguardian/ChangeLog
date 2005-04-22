@@ -1,0 +1,113 @@
+# ChangeLog for www-proxy/dansguardian
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/dansguardian/ChangeLog,v 1.1 2005/04/22 19:15:11 mrness Exp $
+
+  22 Apr 2005; Alin Nastac <mrness@gentoo.org> :
+  Rename category & herd www-proxy to net-proxy
+
+  09 Apr 2005; Markus Rothe <corsair@gentoo.org>
+  dansguardian-2.8.0.4.ebuild:
+  Stable on ppc64
+
+  06 Apr 2005; Alin Nastac <mrness@gentoo.org> dansguardian-2.8.0.4.ebuild:
+  Stable on x86
+
+  25 Mar 2005; <blubb@gentoo.org> dansguardian-2.8.0.4.ebuild:
+  added ~amd64
+
+  11 Mar 2005; Alin Nastac <mrness@gentoo.org> -dansguardian-2.7.1.ebuild,
+  -dansguardian-2.7.6.ebuild, dansguardian-2.8.0.4.ebuild:
+  Remove obsolete versions and fix mode of init.d script.
+
+  08 Mar 2005; Alin Nastac <mrness@gentoo.org> dansguardian-2.7.1.ebuild,
+  dansguardian-2.7.6.ebuild, dansguardian-2.8.0.2.ebuild,
+  dansguardian-2.8.0.4.ebuild:
+  Inter-block this package with dansguardian-dgav.
+
+*dansguardian-2.8.0.4 (26 Feb 2005)
+
+  26 Feb 2005; Alin Nastac <mrness@gentoo.org> metadata.xml,
+  files/dansguardian.init, dansguardian-2.8.0.2.ebuild,
+  +dansguardian-2.8.0.4.ebuild:
+  Version bump. Fix bug #66177. Append user CFLAGS. Change herd to www-proxy.
+
+  06 Feb 2005; Markus Rothe <corsair@gentoo.org> dansguardian-2.8.0.2.ebuild:
+  Stable on ppc64
+
+  30 Dec 2004; Markus Rothe <corsair@gentoo.org> dansguardian-2.8.0.2.ebuild:
+  Added ~ppc64 to KEYWORDS
+
+  05 Sep 2004; Sven Wegener <swegener@gentoo.org> :
+  Fixed ChangeLog header.
+
+  29 Aug 2004; David Holm <dholm@gentoo.org> dansguardian-2.8.0.2.ebuild:
+  Added to ~ppc.
+
+*dansguardian-2.8.0.2 (27 Aug 2004)
+
+  27 Aug 2004; Renat Lumpau <rl03@gentoo.org> +dansguardian-2.8.0.2.ebuild:
+  Version bump, updated location of cgi-in. Closes #58400, 54961.
+
+  27 Aug 2004; Renat Lumpau <rl03@gentoo.org> metadata.xml:
+  Method is no longer maintaining dansguardian; reassigning to web-apps.
+
+  16 Aug 2004; Andrew Bevitt <cyfred@gentoo.org>; dansguardian-2.7.1.ebuild:
+  Changing net-www/squid to www-proxy/squid in 2.7.1 depends
+
+*dansguardian-2.7.1 (15 Aug 2004)
+
+  15 Aug 2004; Stuart Herbert <stuart@gentoo.org> +metadata.xml,
+  +files/dansguardian-xnaughty-2.7.6-1.diff, +files/dansguardian.init,
+  +dansguardian-2.7.1.ebuild, +dansguardian-2.7.6.ebuild:
+  Moved from net-www/dansguardian to www-proxy/dansguardian.
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  dansguardian-2.7.6.ebuild:
+  virtual/glibc -> virtual/libc
+
+  15 Apr 2004; Ciaran McCreesh <ciaranm@gentoo.org> dansguardian-2.7.6.ebuild:
+  Added ~sparc,
+
+  14 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  dansguardian-2.7.1.ebuild, dansguardian-2.7.6.ebuild:
+  don't assign to P; inherit eutils for epatch; error messages
+
+  14 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  dansguardian-2.6.0.ebuild, dansguardian-2.7.2.ebuild,
+  dansguardian-2.7.5.ebuild:
+  tidy extra versions, leaving one stable and one unstable
+
+*dansguardian-2.7.6 (05 Dec 2003)
+
+  05 Dec 2003; Joshua Brindle <method@gentoo.org> dansguardian-2.7.6.ebuild,
+  files/dansguardian-xnaughty-2.7.6-1.diff:
+  version bump, took squid out of DEPEND since you can use any proxy
+  (particularly lighter weight ones), added my patch to add an X-Naughty header
+  to naughty pages but otherwise leave them alone (for better control upstream)
+
+*dansguardian-2.7.5 (19 Nov 2003)
+
+  19 Nov 2003; Joshua Brindle <method@gentoo.org> dansguardian-2.7.5.ebuild:
+  version bump
+
+  05 Aug 2003; Joshua Brindle <method@gentoo.org> dansguardian-2.7.1.ebuild,
+  dansguardian-2.7.2.ebuild:
+  fixed logrotate issue
+
+*dansguardian-2.7.2 (31 Jul 2003)
+
+  31 Jul 2003; Joshua Brindle <method@gentoo.org> dansguardian-2.7.2.ebuild:
+  upstream bump
+
+*dansguardian-2.7.1 (28 May 2003)
+
+  28 May 2003; Joshua Brindle <method@gentoo.org> dansguardian-2.6.0.ebuild,
+  dansguardian-2.7.1.ebuild, files/dansguardian.init:
+  initial import thanks to Pat Double <double@inebraska.com>
+
+*dansguardian-2.6.0 (28 May 2003)
+
+  28 May 2003; Joshua Brindle <method@gentoo.org> dansguardian-2.6.0.ebuild,
+  dansguardian-2.7.1.ebuild, files/dansguardian.init:
+  initial import thanks to Pat Double <double@inebraska.com>
+

@@ -1,0 +1,7 @@
+MD5 84ff13b31cf587fe52b68ab2c841a629 tinyproxy-1.6.3.ebuild 1100
+MD5 e5a20e5686a9a7cd87c395915105d8b7 tinyproxy-1.6.2.ebuild 1099
+MD5 da6667bf5a0c8f746b328b22dd299dbd ChangeLog 2013
+MD5 9cafc01ae2d4a91da29afd4613e9683f metadata.xml 226
+MD5 abaaa5a551eca73c41945d48b358ecbd files/digest-tinyproxy-1.6.2 67
+MD5 9a5f65bb4b75d82277efa9cddc4d05ca files/digest-tinyproxy-1.6.3 67
+MD5 038979904fe8567468d0c8244fc5fb81 files/tinyproxy.rc 552

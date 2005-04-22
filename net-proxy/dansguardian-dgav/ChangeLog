@@ -1,0 +1,25 @@
+# ChangeLog for www-proxy/dansguardian-dgav
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/dansguardian-dgav/ChangeLog,v 1.1 2005/04/22 19:15:11 mrness Exp $
+
+  22 Apr 2005; Alin Nastac <mrness@gentoo.org> dansguardian-dgav-6.3.8.ebuild:
+  Rename category & herd www-proxy to net-proxy. Demote ebuild to unstable (#89948).
+
+  06 Apr 2005; Alin Nastac <mrness@gentoo.org>
+  dansguardian-dgav-6.3.8.ebuild:
+  Stable on x86
+
+  11 Mar 2005; Alin Nastac <mrness@gentoo.org>
+  dansguardian-dgav-6.3.8.ebuild:
+  Fix mode of init.d script.
+
+  10 Mar 2005; Alin Nastac <mrness@gentoo.org> dansguardian-dgav-6.3.8.ebuild:
+  Always link with pthread lib (needed by libesmtp).
+
+*dansguardian-dgav-6.3.8 (08 Mar 2005)
+
+  08 Mar 2005; Alin Nastac <mrness@gentoo.org> +metadata.xml,
+  +files/dansguardian-xnaughty-2.7.6-1.diff, +files/dansguardian.init,
+  +files/dgav-6.3.8-virus-response.patch, +dansguardian-dgav-6.3.8.ebuild:
+  Initial import from bug #60093, thanks to Francisco Javier <ffelix@sshinf.com>.
+

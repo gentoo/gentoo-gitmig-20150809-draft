@@ -1,0 +1,13 @@
+# ChangeLog for www-proxy/httpush
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/httpush/ChangeLog,v 1.1 2005/04/22 19:15:11 mrness Exp $
+
+  22 Apr 2005; Alin Nastac <mrness@gentoo.org> :
+  Rename category & herd www-proxy to net-proxy
+
+*httpush-0.9_beta11 (01 Apr 2005)
+
+  01 Apr 2005; Alin Nastac <mrness@gentoo.org> +metadata.xml,
+  +httpush-0.9_beta11.ebuild:
+  Initial import from bug #87307.
+

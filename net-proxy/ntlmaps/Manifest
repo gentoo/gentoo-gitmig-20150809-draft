@@ -1,0 +1,6 @@
+MD5 e2fd4eeb91e7685257f39b6b0e830e52 ntlmaps-0.9.9.ebuild 1248
+MD5 9d205f5bd7e920f2dcd8ce2478ee44f5 ChangeLog 1883
+MD5 a65bb25d95d5de35ca0f2727b1e8e7c9 metadata.xml 489
+MD5 4ac59759588c1d0764a9dba7cb7bff23 files/ntlmaps.init 697
+MD5 89d940c1a5df0a265c10c920498f1a03 files/ntlmaps-0.9.9-gentoo.patch 1165
+MD5 677c6c0d28b021c5c460dcd020ca6dce files/digest-ntlmaps-0.9.9 64

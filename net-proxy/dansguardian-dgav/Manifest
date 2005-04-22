@@ -1,0 +1,7 @@
+MD5 7bd2b3b9dcd6caf2946431c8eee91696 dansguardian-dgav-6.3.8.ebuild 1669
+MD5 e41a4a43828ce20aec5b3155eac1e299 ChangeLog 1065
+MD5 775fe3a71382d0807bfddb0235f35f30 metadata.xml 233
+MD5 50f8def5997a7e9daeefd0789bc56434 files/dansguardian.init 576
+MD5 dd34bc7952c9d271a3b5b25605afaafc files/digest-dansguardian-dgav-6.3.8 169
+MD5 6313b934a33da7e4308812e834494074 files/dansguardian-xnaughty-2.7.6-1.diff 2325
+MD5 0fab1970b596ce0eb39925955884fa17 files/dgav-6.3.8-virus-response.patch 1083
