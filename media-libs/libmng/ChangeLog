@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libmng
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmng/ChangeLog,v 1.21 2005/04/03 19:07:54 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmng/ChangeLog,v 1.22 2005/04/22 01:43:38 flameeyes Exp $
+
+  22 Apr 2005; Diego Pettenò <flameeyes@gentoo.org> libmng-1.0.8.ebuild,
+  libmng-1.0.8-r1.ebuild:
+  Fixed dependency on autoconf/automake for version 1.0.8 (fixes #75824),
+  cleaned up 1.0.8-r1 to use emake instead of just make.
 
 *libmng-1.0.8-r1 (03 Apr 2005)
 

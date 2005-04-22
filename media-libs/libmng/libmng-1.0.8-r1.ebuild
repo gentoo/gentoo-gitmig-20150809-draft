@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmng/libmng-1.0.8-r1.ebuild,v 1.1 2005/04/03 19:07:54 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmng/libmng-1.0.8-r1.ebuild,v 1.2 2005/04/22 01:43:38 flameeyes Exp $
 
 DESCRIPTION="Multiple Image Networkgraphics lib (animated png's)"
 HOMEPAGE="http://www.libmng.com/"
@@ -17,7 +17,7 @@ RDEPEND=">=media-libs/jpeg-6b
 
 DEPEND="${RDEPEND}
 	sys-devel/autoconf
-	sys-devel/automake"
+	!ppc-macos? ( =sys-devel/automake-1.9* )"
 
 src_unpack() {
 	unpack ${A}
@@ -31,7 +31,7 @@ src_unpack() {
 
 src_compile() {
 	econf --with-lcms || die
-	make || die
+	emake || die
 }
 
 src_install() {
