@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.7.43.20050224-r1.ebuild,v 1.2 2005/04/18 00:15:15 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.7.43.20050224-r1.ebuild,v 1.3 2005/04/22 01:34:42 flameeyes Exp $
 
 inherit eutils flag-o-matic
 
@@ -56,6 +56,8 @@ src_unpack() {
 	epatch ${FILESDIR}/avifile-0.7.43.20050224-sysffmpeg.patch
 	# removes sed-out of -L/usr/lib(64?) on sdl libs flags
 	epatch ${FILESDIR}/avifile-0.7.43.20050224-sdllibs.patch
+	# fixes bug #86320
+	epatch ${FILESDIR}/${P}-fixlabels.patch
 
 	if ! use qt ; then
 		sed -i -e 's/qtvidcap\ qtrecompress//g' \
