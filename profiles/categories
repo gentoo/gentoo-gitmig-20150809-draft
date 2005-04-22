@@ -92,6 +92,7 @@ net-news
 net-nntp
 net-p2p
 net-print
+net-proxy
 net-wireless
 net-www
 net-zope
@@ -121,7 +122,6 @@ www-apache
 www-apps
 www-client
 www-misc
-www-proxy
 www-servers
 x11-base
 x11-libs

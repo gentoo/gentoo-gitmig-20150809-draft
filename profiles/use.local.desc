@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1099 2005/04/22 18:56:59 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1100 2005/04/22 19:44:10 mrness Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -846,15 +846,15 @@ www-client/w3m:async - Enables asynchronous fetch
 www-client/w3m:imlib2 - If you want to link imlib2 instead of imlib against w3mimgdisplay
 www-client/w3m:lynxkeymap - If you prefer Lynx-like key binding
 www-misc/nsxml:xslt - Enables xslt support
-www-proxy/squid:customlog - Add support for custom log file formats
-www-proxy/squid:logrotate - Use logrotate for rotating logs
-www-proxy/squid:underscores - Enables support for domain names containing underscores
-www-proxy/tinyproxy:transparent-proxy - enable support for transparent proxies
-www-servers/fnord:diet - Compile and link with dietlibc
-www-servers/lighttpd:xattr - if you want extended attributes enabled
-www-servers/pound:msdav - if you want the Microsoft DAV extensions enabled
-www-servers/pound:unsafe - if you want the 'unsafe' characters passed through to the web servers
-www-servers/skunkweb:apache1 - enable apache1 support if internal server and apache2 support not wanted
+net-proxy/squid:customlog - Add support for custom log file formats
+net-proxy/squid:logrotate - Use logrotate for rotating logs
+net-proxy/squid:underscores - Enables support for domain names containing underscores
+net-proxy/tinyproxy:transparent-proxy - enable support for transparent proxies
+net-servers/fnord:diet - Compile and link with dietlibc
+net-servers/lighttpd:xattr - if you want extended attributes enabled
+net-servers/pound:msdav - if you want the Microsoft DAV extensions enabled
+net-servers/pound:unsafe - if you want the 'unsafe' characters passed through to the web servers
+net-servers/skunkweb:apache1 - enable apache1 support if internal server and apache2 support not wanted
 x11-base/kdrive:fbdev - Enables framebuffer kdrive server
 x11-base/kdrive:font-server - Enables font server support
 x11-base/kdrive:freetype - Enables Freetype font support
