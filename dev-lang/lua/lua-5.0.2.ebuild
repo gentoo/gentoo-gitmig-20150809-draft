@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/lua-5.0.2.ebuild,v 1.15 2005/04/21 22:37:43 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/lua-5.0.2.ebuild,v 1.16 2005/04/22 10:06:43 herbs Exp $
 
 inherit eutils
 
@@ -32,6 +32,7 @@ src_unpack() {
 			-e 's:^#\(POPEN= -DUSE_POPEN=1\)$:\1:' \
 			-e "s:^\(MYCFLAGS= \)-O2:\1${CFLAGS}:" \
 			-e 's:^\(INSTALL_ROOT= \)/usr/local:\1$(DESTDIR)/usr:' \
+			-e "s:^\(INSTALL_LIB= \$(INSTALL_ROOT)/\)lib:\1$(get_libdir):" \
 			-e 's:^\(INSTALL_MAN= $(INSTALL_ROOT)\)/man/man1:\1/share/man/man1:'
 	else
 		sed -i config \
@@ -56,7 +57,7 @@ src_unpack() {
 prefix=/usr
 exec_prefix=\${prefix}
 includedir=\${prefix}/include
-libdir=\${exec_prefix}/lib
+libdir=\${exec_prefix}/$(get_libdir)
 interpreter=\${exec_prefix}/bin/lua
 compiler=\${exec_prefix}/bin/luac
 
@@ -101,6 +102,6 @@ src_install() {
 	newins etc/lua.magic magic
 	insinto /usr/share/pixmaps
 	doins etc/lua.xpm
-	insinto /usr/lib/pkgconfig
+	insinto /usr/$(get_libdir)/pkgconfig
 	doins etc/lua.pc
 }
