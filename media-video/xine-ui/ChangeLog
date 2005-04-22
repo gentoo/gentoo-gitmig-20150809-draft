@@ -1,6 +1,10 @@
 # ChangeLog for media-video/xine-ui
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/ChangeLog,v 1.74 2005/04/16 10:52:42 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/ChangeLog,v 1.75 2005/04/22 17:55:25 flameeyes Exp $
+
+  22 Apr 2005; Diego Pettenò <flameeyes@gentoo.org>
+  +files/xine-ui-gcc4.patch, xine-ui-0.99.3-r1.ebuild:
+  Added patch to compile on gcc4, fixes #89936.
 
   16 Apr 2005; Jan Brinkmann <luckyduck@gentoo.org> xine-ui-0.99.3-r1.ebuild:
   modified autotool usage, fixes #88750
