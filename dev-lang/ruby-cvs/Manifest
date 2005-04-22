@@ -1,7 +1,17 @@
-MD5 84c6a4efa8ddfdc2c3759e325ec2b1e4 ChangeLog 3112
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 d2de32ee271324dcc1bd0fe906f1a3a0 ruby-cvs-1.8.2-r1.ebuild 2655
+MD5 e529b80327523fd1ea8d8c35a5fd69a6 ruby-cvs-1.9.0-r2.ebuild 2545
+MD5 089b382779f0bd215d790e5e7e40204f ChangeLog 3251
 MD5 3eec9f3fe48b51f49dbc1f171a3b026f metadata.xml 157
-MD5 f023d660a2e979f8aa69aa7eec3c3286 ruby-cvs-1.8.2-r1.ebuild 2653
-MD5 6c408fb4614c1766834fffdb55a78be8 ruby-cvs-1.9.0-r2.ebuild 2543
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-ruby-cvs-1.9.0-r2 0
 MD5 999d392f0a17f7643659081973e99def files/ruby-rdoc-gentoo.diff 432
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-ruby-cvs-1.8.2-r1 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-ruby-cvs-1.9.0-r2 0
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCaWRHjiC39V7gKu0RAky0AJ9po0ixrBV5vkn4I/RK6dncdpWdogCgqSxH
+l2/MkxIOFAicwmKZM+2KiLg=
+=eWSg
+-----END PGP SIGNATURE-----
