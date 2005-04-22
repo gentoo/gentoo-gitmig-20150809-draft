@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20050125-r1.ebuild,v 1.40 2005/04/19 01:04:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20050125-r1.ebuild,v 1.41 2005/04/22 23:04:24 vapier Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -1047,9 +1047,7 @@ DEPEND=">=sys-devel/gcc-3.2.3-r1
 	>=sys-devel/gcc-config-1.3.9
 	virtual/os-headers
 	nls? ( sys-devel/gettext )"
-
 RDEPEND="virtual/os-headers
-	sys-apps/baselayout
 	nls? ( sys-devel/gettext )"
 
 if [[ ${CATEGORY/cross-} != ${CATEGORY} ]] ; then
