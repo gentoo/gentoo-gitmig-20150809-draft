@@ -1,4 +1,14 @@
-MD5 46c55e931f2577c48e0ba38578c8faba ChangeLog 2515
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 14a1e2de9a11b1735815df7ffc0ecc62 ChangeLog 2619
 MD5 e4bdac528fd001633aa222d2b42fe048 metadata.xml 219
-MD5 83d6a2ab7414dd2a6061e9f9b8b3e7e4 stellarium-0.6.2.ebuild 638
+MD5 27f3b61e92aa8b1a450e3822c1697d57 stellarium-0.6.2.ebuild 637
 MD5 f5da1da443e2c3a6bc8bce43e07e5742 files/digest-stellarium-0.6.2 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCaP/k5mJXAu5GbtIRAlP9AJ9bhCioI9DR22MrM3qt+dzcPGMw8wCeIFsN
+wWQ6lfiDyoYHeKgtitwx/hA=
+=SWGm
+-----END PGP SIGNATURE-----
