@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 7839084269cad923900590c5f9654750 ChangeLog 2131
-MD5 af9d50d5bf14defff2ea93da5bcf8de6 zthread-2.3.1.ebuild 900
+MD5 730bbe56d279513640ca13fcd7f632ac ChangeLog 2215
+MD5 2e5e03a8eb9285e4df5a3c9484b9d3cd zthread-2.3.1.ebuild 893
 MD5 368ff02a9eb850ad51265d76953eb2e0 files/digest-zthread-2.3.1 65
 MD5 e7a8dff68ee9c400e82941b399176b6c files/zthread-gcc34.patch 819
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBsWoQmdTrptrqvGERAgkDAJ9T9a5hDzKLmtKg12AFMkXGsnYYugCggE5o
-EINb4RJD1wGRCEsuC5Z3gns=
-=DAo6
------END PGP SIGNATURE-----
