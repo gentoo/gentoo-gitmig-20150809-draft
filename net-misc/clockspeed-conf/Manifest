@@ -1,3 +1,4 @@
-MD5 47e10b7dc4e4ba86742c8b652c6fcfe5 clockspeed-conf-0.4.5.ebuild 663
-MD5 5214c2894901be302e07671507b40caa ChangeLog 366
-MD5 fcff2d4f599d8921bf32f06e71cf1860 files/digest-clockspeed-conf-0.4.5 71
+MD5 61836cee91d55bb2625cbaeebb8a0252 ChangeLog 592
+MD5 d41701b14b08b67884275965b79d3b5e clockspeed-conf-0.4.5-r1.ebuild 764
+MD5 fcff2d4f599d8921bf32f06e71cf1860 files/digest-clockspeed-conf-0.4.5-r1 71
+MD5 d7846d884b197274ba50d50473217534 files/clockspeed-conf-0.4.5-gentoo.patch 674
