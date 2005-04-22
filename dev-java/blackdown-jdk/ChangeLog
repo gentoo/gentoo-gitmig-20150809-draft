@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/blackdown-jdk
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/ChangeLog,v 1.76 2005/03/26 15:59:43 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/ChangeLog,v 1.77 2005/04/22 13:49:49 luckyduck Exp $
+
+  22 Apr 2005; Jan Brinkmann <luckyduck@gentoo.org>
+  blackdown-jdk-1.4.1-r1.ebuild, blackdown-jdk-1.4.2.01-r2.ebuild:
+  we now also disable pax flags for javah
 
   26 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org>
   blackdown-jdk-1.4.2.01-r2.ebuild:

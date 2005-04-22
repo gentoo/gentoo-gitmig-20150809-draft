@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/blackdown-jdk-1.4.1-r1.ebuild,v 1.5 2005/02/14 12:42:24 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/blackdown-jdk-1.4.1-r1.ebuild,v 1.6 2005/04/22 13:49:49 luckyduck Exp $
 
 
 inherit java
@@ -124,7 +124,7 @@ pkg_postinst() {
 		echo
 		einfo "setting up conservative PaX flags for jar and javac"
 
-		for paxkills in "jar" "javac" "java"
+		for paxkills in "jar" "javac" "java" "javah"
 		do
 			chpax -${CHPAX_CONSERVATIVE_FLAGS} /opt/${PN}-${PV}/bin/$paxkills
 		done

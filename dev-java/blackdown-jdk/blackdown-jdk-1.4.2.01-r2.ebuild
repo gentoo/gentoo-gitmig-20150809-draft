@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/blackdown-jdk-1.4.2.01-r2.ebuild,v 1.3 2005/03/26 15:59:43 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/blackdown-jdk-1.4.2.01-r2.ebuild,v 1.4 2005/04/22 13:49:49 luckyduck Exp $
 
 inherit java versionator
 
@@ -138,7 +138,7 @@ pkg_postinst() {
 
 		CHPAX_CONSERVATIVE_FLAGS="pemrxs"
 
-		for paxkills in "jar" "javac" "java"
+		for paxkills in "jar" "javac" "java" "javah"
 		do
 			chpax -${CHPAX_CONSERVATIVE_FLAGS} /opt/${PN}-${PV}/bin/$paxkills
 		done
