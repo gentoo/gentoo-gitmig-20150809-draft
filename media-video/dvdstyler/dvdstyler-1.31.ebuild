@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdstyler/dvdstyler-1.31.ebuild,v 1.2 2005/03/30 10:55:49 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdstyler/dvdstyler-1.31.ebuild,v 1.3 2005/04/22 14:44:39 luckyduck Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/dvdstyler/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="x86 amd64"
 IUSE="gnome"
 S=${WORKDIR}/${MY_P}
 
@@ -33,8 +33,6 @@ RDEPEND="virtual/x11
 	sys-libs/zlib
 	app-cdr/dvd+rw-tools
 	virtual/cdrtools"
-
-
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	sys-devel/gcc
@@ -43,10 +41,6 @@ DEPEND="${RDEPEND}
 
 #	sys-devel/autoconf"
 #PDEPEND= kde? and gnome
-
-src_unpack() {
-	unpack ${A}
-}
 
 src_compile() {
 	# Propergate automake patch

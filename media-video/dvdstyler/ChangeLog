@@ -1,6 +1,15 @@
 # ChangeLog for media-video/dvdstyler
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdstyler/ChangeLog,v 1.11 2005/04/19 09:35:11 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdstyler/ChangeLog,v 1.12 2005/04/22 14:44:39 luckyduck Exp $
+
+  22 Apr 2005; Jan Brinkmann <luckyduck@gentoo.org>
+  -files/1.1-AutoMakefile.patch, -files/1.1-code.patch,
+  -files/1.1-gcc34.patch, -files/1.3_beta-code.patch, -dvdstyler-1.1.ebuild,
+  dvdstyler-1.31.ebuild, -dvdstyler-1.3_beta.ebuild:
+  stable on amd64 and x86, did some cleanup
+
+  22 Apr 2005; Jan Brinkmann <luckyduck@gentoo.org> dvdstyler-1.31.ebuild:
+  stable on amd64 and x86
 
   19 Apr 2005; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
   Remove retired developer from metadata.xml.
