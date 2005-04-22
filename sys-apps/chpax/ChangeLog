@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/chpax
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/chpax/ChangeLog,v 1.32 2005/03/16 01:01:43 dostrow Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/chpax/ChangeLog,v 1.33 2005/04/22 20:01:55 solar Exp $
+
+  22 Apr 2005; <solar@gentoo.org> -chpax-0.6.1.ebuild, chpax-0.7.ebuild:
+  - removed old ebuild from the tree. SRC_URI no longer fetchable
 
   15 Mar 2005; Daniel Ostrow <dostrow@gentoo.org> chpax-0.7.ebuild:
   Stable on ppc64
