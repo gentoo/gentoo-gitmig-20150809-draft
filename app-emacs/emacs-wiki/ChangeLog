@@ -1,6 +1,11 @@
 # ChangeLog for app-emacs/emacs-wiki
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-wiki/ChangeLog,v 1.8 2005/04/12 08:42:39 ming Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-wiki/ChangeLog,v 1.9 2005/04/22 05:11:03 ming Exp $
+
+*emacs-wiki-2.69 (22 Apr 2005)
+
+  22 Apr 2005; Ming Zhao <ming@gentoo.org> +emacs-wiki-2.69.ebuild:
+  minor version bump
 
 *emacs-wiki-2.68 (12 Apr 2005)
 
