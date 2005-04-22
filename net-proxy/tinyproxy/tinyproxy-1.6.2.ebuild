@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/tinyproxy/tinyproxy-1.6.2.ebuild,v 1.1 2005/04/22 19:15:11 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/tinyproxy/tinyproxy-1.6.2.ebuild,v 1.2 2005/04/22 20:54:42 mrness Exp $
 
 DESCRIPTION="A lightweight HTTP/SSL proxy"
 HOMEPAGE="http://tinyproxy.sourceforge.net/"
@@ -11,7 +11,7 @@ SLOT="0"
 KEYWORDS="x86 ~sparc ppc"
 IUSE="socks5 transparent-proxy debug"
 
-DEPEND="socks5? ( net-misc/dante )"
+DEPEND="socks5? ( net-proxy/dante )"
 
 src_compile() {
 	econf \
