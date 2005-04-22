@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/grsec-sources/grsec-sources-2.4.30.2.1.5.ebuild,v 1.1 2005/04/12 12:24:07 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/grsec-sources/grsec-sources-2.4.30.2.1.5.ebuild,v 1.2 2005/04/22 14:05:40 solar Exp $
 
 ETYPE="sources"
 UNIPATCH_STRICTORDER="yes"
@@ -24,7 +24,7 @@ SRC_URI="http://grsecurity.net/${PATCH_SRC_BASE} \
 	http://dev.gentoo.org/~plasmaroo/patches/kernel/misc/security/linux-2.4.28-CAN-2004-0814.patch"
 
 HOMEPAGE="http://www.kernel.org/ http://www.grsecurity.net"
-KEYWORDS="~x86 ~sparc ~ppc ~alpha ~amd64 -hppa"
+KEYWORDS="x86 ~sparc ~ppc ~alpha ~amd64 -hppa"
 RESTRICT="buildpkg"
 IUSE=""
 RDEPEND=""
