@@ -1,8 +1,18 @@
-MD5 938dbe850011d46b810c68d930857bc9 foldingathome-5.0.2-r3.ebuild 2019
-MD5 fe63240d3631efcb43cabbdb1d23c97a ChangeLog 5352
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 ca39e5ad54370bbd778c6905496b932b ChangeLog 5464
+MD5 f2bac6b14a4b471449216800a9bedbe4 foldingathome-5.0.2-r3.ebuild 2018
 MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
 MD5 2f181dd626be0626fc9000536fd0d4c4 files/digest-foldingathome-5.0.2-r3 61
-MD5 f3a9e0a439c14bd3d328cea6e3af1540 files/initfolding-r2 150
-MD5 3174784abb8ed1da2fc846d722aeffe5 files/folding-conf.d-r1 1172
 MD5 b695ee5884feb42cd5678eb977d862cc files/init-5.0.2-r3 1478
+MD5 3174784abb8ed1da2fc846d722aeffe5 files/folding-conf.d-r1 1172
+MD5 f3a9e0a439c14bd3d328cea6e3af1540 files/initfolding-r2 150
 MD5 71ad6348b9f8b367f2417eddf75417c7 files/copy_client_config-5.0.2-r1 393
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCaQDw5mJXAu5GbtIRAmXFAJwP/AJ2w2GxOWxRZ8kEssW1dUDMygCfUtk0
+WEEtiNe1ipfTT0SV0n70VRc=
+=Yr0i
+-----END PGP SIGNATURE-----
