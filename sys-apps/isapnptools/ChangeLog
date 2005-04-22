@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/isapnptools
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/isapnptools/ChangeLog,v 1.6 2004/10/06 01:41:46 vapier Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/isapnptools/ChangeLog,v 1.7 2005/04/22 00:19:27 wormo Exp $
+
+  21 Apr 2005; Stephanie Lockwood-Childs <wormo@gentoo.org>
+  isapnptools-1.26-r1.ebuild:
+  updated keywords (-ppc) - ISA still doesn't exist on PPC..
 
 *isapnptools-1.26-r1 (05 Oct 2004)
 

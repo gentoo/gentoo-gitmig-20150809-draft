@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 b7ebf9efdf0980c101dc8da91f593a6a ChangeLog 1361
-MD5 ede4df5ce314578352d41805399a56ea isapnptools-1.26-r1.ebuild 978
+MD5 dd767398c51ddec5aeef56457f61b7bd ChangeLog 1512
+MD5 74fec5e308b560bc4117c9bf9933835d isapnptools-1.26-r1.ebuild 982
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 54980db44fa935a4b0c3a04893cd2980 files/isapnp.rc 655
 MD5 f1915a1decdb9bad292e52fb7ae5e727 files/digest-isapnptools-1.26-r1 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBY01kHTu7gpaalycRAnZ4AKDSHVqv+0itp8V92ftgXUb6etkPagCg6UDV
-W1IY2cDRqtr6cxDGWTvWXME=
-=vnn/
------END PGP SIGNATURE-----
+MD5 54980db44fa935a4b0c3a04893cd2980 files/isapnp.rc 655
