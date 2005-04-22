@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-perl/gnome2-perl-1.00.ebuild,v 1.3 2004/07/14 17:40:19 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-perl/gnome2-perl-1.00.ebuild,v 1.4 2005/04/22 15:28:29 mcummings Exp $
 
 inherit perl-module
 
@@ -21,7 +21,6 @@ DEPEND=">=x11-libs/gtk+-2*
 	gnome-base/libgnomeui
 	gnome-base/libbonoboui
 	>=dev-perl/gnome2-canvas-1.0*
-	>=dev-perl/gtk2-perl-1*
 	>=dev-perl/extutils-depends-0.2*
 	>=dev-perl/extutils-pkgconfig-1.03
 	>=dev-perl/glib-perl-1.04
