@@ -1,6 +1,12 @@
 # ChangeLog for net-zope/calendarx
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/calendarx/ChangeLog,v 1.2 2005/04/20 10:43:13 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/calendarx/ChangeLog,v 1.3 2005/04/22 18:05:59 radek Exp $
+
+*calendarx-0.6.0 (22 Apr 2005)
+
+  22 Apr 2005; Radoslaw Stachowiak <radek@gentoo.org>
+  +calendarx-0.6.0.ebuild:
+  version bump
 
 *calendarx-0.4.15 (18 Apr 2005)
 
