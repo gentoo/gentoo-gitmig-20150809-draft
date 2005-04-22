@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/log-dispatch
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/log-dispatch/ChangeLog,v 1.8 2005/03/15 14:40:19 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/log-dispatch/ChangeLog,v 1.9 2005/04/22 13:40:54 blubb Exp $
+
+  22 Apr 2005; Simon Stelling <blubb@gentoo.org> log-dispatch-2.08.ebuild:
+  stable on amd64
 
   15 Mar 2005; Michael Cummings <mcummings@gentoo.org>
   log-dispatch-2.06.ebuild, log-dispatch-2.08.ebuild,
