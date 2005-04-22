@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/unrealircd-3.2.3.ebuild,v 1.1 2005/03/14 21:43:25 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/unrealircd-3.2.3.ebuild,v 1.2 2005/04/22 14:57:59 swegener Exp $
 
-inherit eutils ssl-cert
+inherit eutils ssl-cert versionator
 
 MY_P=Unreal${PV}
 
@@ -14,7 +14,7 @@ SRC_URI="http://unrealircd.funny4chat.de/downloads/${MY_P}.tar.gz
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc"
 IUSE="hub ipv6 ssl zlib"
 
 RDEPEND="ssl? ( dev-libs/openssl )
@@ -22,7 +22,7 @@ RDEPEND="ssl? ( dev-libs/openssl )
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4"
 
-S=${WORKDIR}/Unreal3.2
+S="${WORKDIR}/Unreal$(get_version_component_range 1-2)"
 
 src_unpack() {
 	unpack ${A}
