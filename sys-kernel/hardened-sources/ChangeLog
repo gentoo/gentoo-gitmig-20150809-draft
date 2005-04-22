@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/hardened-sources
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.52 2005/04/19 01:01:00 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.53 2005/04/22 01:33:43 solar Exp $
+
+*hardened-sources-2.4.30-r1 (21 Apr 2005)
+
+  21 Apr 2005; <solar@gentoo.org> +hardened-sources-2.4.30-r1.ebuild:
+  - disable aout by default
 
 *hardened-sources-2.4.30 (18 Apr 2005)
 
