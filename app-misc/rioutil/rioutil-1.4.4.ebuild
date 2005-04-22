@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/rioutil/rioutil-1.4.4.ebuild,v 1.10 2005/04/21 19:40:15 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/rioutil/rioutil-1.4.4.ebuild,v 1.11 2005/04/22 09:03:10 dragonheart Exp $
 
 inherit eutils
 
@@ -14,7 +14,8 @@ KEYWORDS="x86 amd64"
 IUSE=""
 
 DEPEND="sys-libs/zlib
-	virtual/libc"
+	virtual/libc
+	dev-libs/libusb"
 
 src_unpack() {
 	unpack ${A} || die 'Failed to unpack!'

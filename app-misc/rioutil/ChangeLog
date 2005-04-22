@@ -1,6 +1,14 @@
 # ChangeLog for app-misc/rioutil
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/rioutil/ChangeLog,v 1.20 2005/04/21 19:40:15 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/rioutil/ChangeLog,v 1.21 2005/04/22 09:03:10 dragonheart Exp $
+
+*rioutil-1.5.0b (22 Apr 2005)
+
+  22 Apr 2005; Daniel Black <dragonheart@gentoo.org>
+  +files/rioutil-1.5.0b-time.patch, rioutil-1.4.4.ebuild,
+  rioutil-1.4.7.ebuild, +rioutil-1.5.0b.ebuild:
+  libusb dependancies added as per bug #89975. Version bump to 1.5.0b added
+  too. Thanks to Ian Renton <tsuki@marmaNo_SpAMblue.co.uk>
 
 *rioutil-1.4.7 (21 Apr 2005)
 
