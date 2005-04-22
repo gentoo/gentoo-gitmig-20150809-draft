@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/lirc
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.65 2005/04/13 18:22:41 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.66 2005/04/22 17:37:34 lanius Exp $
+
+*lirc-0.7.1 (22 Apr 2005)
+
+  22 Apr 2005; Heinrich Wendel <lanius@gentoo.org> +lirc-0.7.1.ebuild:
+  version bump
 
   13 Apr 2005; Heinrich Wendel <lanius@gentoo.org> -lirc-0.7.0_pre3.ebuild,
   -lirc-0.7.0_pre6.ebuild, -lirc-0.7.0_pre7.ebuild, -lirc-0.7.0_pre8.ebuild,
