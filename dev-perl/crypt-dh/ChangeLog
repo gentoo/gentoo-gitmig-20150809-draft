@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/crypt-dh
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/crypt-dh/ChangeLog,v 1.4 2004/06/25 00:17:32 agriffis Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/crypt-dh/ChangeLog,v 1.5 2005/04/22 12:48:45 blubb Exp $
+
+  22 Apr 2005; Simon Stelling <blubb@gentoo.org> crypt-dh-0.03.ebuild:
+  stable on amd64
 
   25 Feb 2004; Joshua Kinard <kumba@gentoo.org> crypt-dh-0.03.ebuild:
   Added ~mips to KEYWORDS to satisfy repoman deps.
