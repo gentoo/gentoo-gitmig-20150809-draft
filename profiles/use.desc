@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.237 2005/04/19 23:33:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.238 2005/04/22 18:56:59 flameeyes Exp $
 
 # keep them sorted (excluding the special arch flags near the end).
 
@@ -138,6 +138,7 @@ icc - Add support for the Intel C++ Compiler (does _not_ set $CC)
 icc-pgo - Enable PGO data generation or use when use icc.
 iconv - Enable support for the iconv character set conversion library
 icq - Enable ICQ IM protocol support
+ieee1394 - Enable FireWire/iLink IEEE1394 support (dv, camera, ...)
 ifc - use ifc instead of g77 to build
 imagemagick - Enables support for Imagemagick (image converter)
 imap - Adds support for IMAP

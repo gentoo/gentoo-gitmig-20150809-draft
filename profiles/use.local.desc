@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1098 2005/04/21 21:47:12 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1099 2005/04/22 18:56:59 flameeyes Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -197,7 +197,6 @@ dev-libs/libmix:no-net2 - disable libpcap and libnet support
 dev-libs/libsqlora8:orathreads - specifies use of Oracle threads
 dev-libs/log4cxx:smtp - offer SMTP support via libsmtp
 dev-libs/opensc:pcsc-lite - build with pcsc-lite instead of openct
-dev-libs/pwlib:ieee1394 - enable dv/firewire camera support
 dev-libs/pwlib:v4l2 - Enable video4linux2 support
 dev-libs/qsa:examples - build the examples that come with qsa
 dev-libs/qsa:ide - enable the qsa ide
@@ -302,11 +301,9 @@ gnustep-base/gnustep-make:non-flattened - do not flatten launch and library path
 kde-base/akode:libsamplerate - Enable support for converting sample rates using libsamplerate
 kde-base/arts:artswrappersuid - Set artswrapper suid for realtime playing, which is a security hazard
 kde-base/kbugbuster:kcal - Add support for kcal (calendar) format
-kde-base/kcontrol:ieee1394 - Enable firewire support in Info Center
 kde-base/kcontrol:logitech-mouse - Enable Control Center module for configuring logitech mice
 kde-base/kdeartwork-kscreensaver:xscreensaver - Enable detection of xscreensavers
 kde-base/kdeartwork:xscreensaver - Enable detection of xscreensavers
-kde-base/kdebase:ieee1394 - Enable firewire support in Info Center
 kde-base/kdebase:logitech-mouse - Enable Control Center module for configuring logitech mice
 kde-base/kdeedu:kig-scripting - Enable support for python scripting in kig
 kde-base/kdegraphics-kfile-plugins:openexr - Enable support for OpenEXR graphic file format (www.openexr.com)
@@ -394,7 +391,6 @@ media-libs/dumb:dumb-allegro - Compile in support for allegro sound cards
 media-libs/libao:mmap - (experimental) Enable memory-mapped I/O
 media-libs/libggi:vis - Enables sparc vis support for libggi
 media-libs/libgphoto2:nousb - Disable USB support
-media-libs/libquicktime:ieee1394 - enable dv/firewire camera support
 media-libs/libsdl:noaudio - Allow users to disable audio support completely (at their own risk)
 media-libs/libsdl:nojoystick - Allow users to disable joystick support completely (at their own risk)
 media-libs/libsdl:novideo - Allow users to disable video support completely (at their own risk)
@@ -436,11 +432,9 @@ media-sound/rezound:soundtouch - compile with support for soundtouch
 media-sound/timidity++:ao - Use libao for sound playback
 media-tv/freevo:matrox - Enable output support on Matrox cards
 media-tv/mythfrontend:cle266 - Enable viaslice hardware MPEG decoding support
-media-tv/mythfrontend:ieee1394 - Enable firewire capture support
 media-tv/mythfrontend:lcd - Enable LCD display support using lcdproc
 media-tv/mythfrontend:nvidia - Enable nVidia XvMC decoding support
 media-tv/mythtv:cle266 - Enable viaslice hardware MPEG decoding support
-media-tv/mythtv:ieee1394 - Enable firewire capture support
 media-tv/mythtv:lcd - Enable LCD display support using lcdproc
 media-tv/mythtv:nvidia - Enable nVidia XvMC decoding support
 media-tv/xawtv:zvbi - Enable VBI Decoding Library for Zapping
@@ -454,7 +448,6 @@ media-video/dvdrip:fping - Enables fping support for cluster rendering
 media-video/dvdrip:mplayer - Enables video playback by mplayer
 media-video/dvdrip:rar - Enables rar compression of VOB fiels
 media-video/ffmpeg:dts - Enables libdts (5.1 surround sound audio) support
-media-video/ffmpeg:ieee1394 - enable dv/firewire camera support
 media-video/ffmpeg:network - Enables network streaming support
 media-video/gpac:amr - Adaptive Multi-Rate Audio support (commonly used in telephony)
 media-video/kmplayer:koffice-plugin - Install KOffice part
