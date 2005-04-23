@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.51.20-r2.ebuild,v 1.1 2005/04/23 14:57:19 jstubbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.51.20-r2.ebuild,v 1.2 2005/04/23 15:53:58 jstubbs Exp $
 
 inherit toolchain-funcs
 
@@ -18,9 +18,9 @@ RESTRICT="nosandbox sandbox multilib-pkg-force"
 # Disable the sandbox on portages that don't support RESTRICT="nosandbox"
 export SANDBOX_DISABLED="1"
 
-IUSE="build sandbox selinux"
+IUSE="build selinux"
 DEPEND=""
-RDEPEND="!build? ( >=sys-apps/sed-4.0.5 dev-python/python-fchksum >=dev-lang/python-2.2.1 sys-apps/debianutils >=app-shells/bash-2.05a ) sandbox? ( sys-apps/sandbox ) selinux? ( >=dev-python/python-selinux-2.15 )"
+RDEPEND="!build? ( >=sys-apps/sed-4.0.5 dev-python/python-fchksum >=dev-lang/python-2.2.1 sys-apps/debianutils >=app-shells/bash-2.05a ) !x86-fbsd? ( !ppc-macos? ( sys-apps/sandbox ) ) selinux? ( >=dev-python/python-selinux-2.15 )"
 
 S=${WORKDIR}/${PN}-${PV}
 
@@ -58,7 +58,7 @@ src_install() {
 	cd ${S}/cnf
 	insinto /etc
 	doins etc-update.conf dispatch-conf.conf make.globals
-	if [ -f "make.globals.${ARCH}" ]; then
+	if [ -f "make.conf.${ARCH}" ]; then
 		newins make.conf.${ARCH} make.conf.example
 	else
 		eerror ""
@@ -99,6 +99,7 @@ src_install() {
 	dosym ../lib/portage/bin/repoman /usr/bin/repoman
 	dosym ../lib/portage/bin/tbz2tool /usr/bin/tbz2tool
 	dosym ../lib/portage/bin/portageq /usr/bin/portageq
+	dosym ../lib/portage/bin/ebuild /usr/bin/ebuild
 	dosym ../lib/portage/bin/quickpkg /usr/bin/quickpkg
 	dosym ../lib/portage/bin/g-cpan.pl /usr/bin/g-cpan.pl
 
