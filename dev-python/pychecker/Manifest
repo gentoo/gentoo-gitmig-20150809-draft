@@ -1,8 +1,18 @@
-MD5 6535b031bbbdf4c2da9418b1092321c7 ChangeLog 2958
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 06d44b81477e397b8fd0839762f75f7b ChangeLog 3068
+MD5 152e88ef91b5f068c324e8b5a530e82b pychecker-0.8.14.ebuild 529
 MD5 020639d57f048c90fa70ab1d359e26c6 pychecker-0.8.13.ebuild 521
 MD5 ab670763853ad401079b97002ffad754 pychecker-0.8.12.ebuild 520
-MD5 87b9737a9f8de44fe00db5242d61210f pychecker-0.8.14.ebuild 551
 MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
+MD5 7696260fce8dd1520d08b5793ea79594 files/digest-pychecker-0.8.12 68
 MD5 40b672e778ce575ce651188541f32aa6 files/digest-pychecker-0.8.14 68
 MD5 0731fa83dc882055232c283f9aed177a files/digest-pychecker-0.8.13 68
-MD5 7696260fce8dd1520d08b5793ea79594 files/digest-pychecker-0.8.12 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCakbIKf2g/qXtneoRAjRuAJ93YxNoZYBzvr2qFFMnK9fOCV65GwCdHh5+
+RlmtXvOa+U9nsclqg5rrpvA=
+=CH7P
+-----END PGP SIGNATURE-----
