@@ -52,6 +52,7 @@ mono
 mzscheme
 nas
 qdbm
+sandbox
 socks5
 xmms
 

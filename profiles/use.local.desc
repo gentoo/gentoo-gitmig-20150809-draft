@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1101 2005/04/23 07:33:31 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1102 2005/04/23 08:30:51 jstubbs Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -736,6 +736,7 @@ sys-apps/memtest86:serial - Compile with serial console support
 sys-apps/module-init-tools:no-old-linux - Don't support modules for Linux 2.4 and older
 sys-apps/parted:noreiserfs - Do not include reiserfs support
 sys-apps/pcmcia-cs:wavelan - Use the wavelan and not the orinoco wireless drivers
+sys-apps/portage:sandbox - Adds support for sys-apps/sandbox
 sys-apps/tcng:tcsim - enable traffic simulator
 sys-apps/tinylogin:make-symlinks - Create all the appropriate symlinks in /bin and /sbin
 sys-apps/util-linux:old-crypt - build support for the older cryptoapi that earlier util-linux's included
