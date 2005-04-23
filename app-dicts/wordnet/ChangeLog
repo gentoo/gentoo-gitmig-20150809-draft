@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/wordnet
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/wordnet/ChangeLog,v 1.4 2005/01/01 13:03:56 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/wordnet/ChangeLog,v 1.5 2005/04/23 11:23:01 luckyduck Exp $
+
+  23 Apr 2005; Jan Brinkmann <luckyduck@gentoo.org> wordnet-2.0.ebuild:
+  added ~amd64 to KEYWORDS, fixes #90093
 
   30 Nov 2004; Sven Wegener <swegener@gentoo.org> wordnet-2.0.ebuild:
   Fixed invalid atoms in *DEPEND.
