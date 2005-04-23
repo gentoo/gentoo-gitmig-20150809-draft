@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/potracegui
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/potracegui/ChangeLog,v 1.1 2005/04/06 04:22:01 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/potracegui/ChangeLog,v 1.2 2005/04/23 09:32:23 luckyduck Exp $
+
+  23 Apr 2005; Jan Brinkmann <luckyduck@gentoo.org> potracegui-1.2.ebuild:
+  added ~amd64 to KEYWORDS, fixes #89992
 
 *potracegui-1.2 (06 Apr 2005)
 
