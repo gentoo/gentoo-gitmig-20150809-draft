@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/zphoto
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/zphoto/ChangeLog,v 1.10 2004/11/04 11:54:28 usata Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/zphoto/ChangeLog,v 1.11 2005/04/23 06:31:00 usata Exp $
+
+*zphoto-1.2-r1 (23 Apr 2005)
+
+  23 Apr 2005; Mamoru KOMACHI <usata@gentoo.org> +zphoto-1.2-r1.ebuild:
+  Added wxwindows support. Thanks to Nuno Araujo <nuno.araujo@russo79.com>;
+  bug #88964.
 
   04 Nov 2004; Mamoru KOMACHI <usata@gentoo.org> zphoto-1.2.ebuild:
   Marked as stable.
