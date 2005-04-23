@@ -1,6 +1,9 @@
 # ChangeLog for media-video/dvdrip
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/ChangeLog,v 1.35 2005/03/29 18:38:15 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/ChangeLog,v 1.36 2005/04/23 21:28:57 hansmi Exp $
+
+  23 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> dvdrip-0.52.3.ebuild:
+  Added to ~ppc.
 
   29 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org> dvdrip-0.52.3.ebuild:
   changed gnome-extra/gtkhtml dependency to gnome-extra/libgtkhtml. fixes #67987
