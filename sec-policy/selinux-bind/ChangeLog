@@ -1,6 +1,13 @@
 # ChangeLog for sec-policy/selinux-bind
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-bind/ChangeLog,v 1.9 2005/02/25 07:30:11 kaiowas Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-bind/ChangeLog,v 1.10 2005/04/23 17:09:38 kaiowas Exp $
+
+*selinux-bind-20050408 (23 Apr 2005)
+
+  23 Apr 2005; petre rodan <kaiowas@gentoo.org>
+  -selinux-bind-20040428.ebuild, -selinux-bind-20040925.ebuild,
+  -selinux-bind-20041120.ebuild, +selinux-bind-20050408.ebuild:
+  merge with upstream, removed old ebuilds
 
 *selinux-bind-20050219 (25 Feb 2005)
 
