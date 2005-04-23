@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 888509fdd5db3c736c9eaee4c987970e acpi-0.06-r5.ebuild 1067
 MD5 6a74b35f25fb95a1b325bb984fea5a3f acpi-0.09.ebuild 844
-MD5 afd11f0e989d8ea6db5e33459c33e651 ChangeLog 1171
+MD5 8086b22be59b67ab3ed775ab99dc092b ChangeLog 1173
 MD5 19fd766bac8e110b4620363a1ace26dd metadata.xml 159
 MD5 110e12e115d1d3af995c88fa9db2639b files/digest-acpi-0.06-r5 127
 MD5 2d88a2be6a153a4da348340339f7feab files/digest-acpi-0.09 122
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCakpBI1lqEGTUzyQRAkEdAKCLQVbKGGDsuNUXwgbw+QoxxXnf6wCfU9YI
+a3tBZ66BCchf+EsLkwnJQms=
+=FwLe
+-----END PGP SIGNATURE-----
