@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/siege/siege-2.62_beta5.ebuild,v 1.1 2005/04/09 04:09:15 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/siege/siege-2.63_beta1.ebuild,v 1.1 2005/04/23 12:37:25 ka0ttic Exp $
 
 inherit eutils bash-completion
 
@@ -24,6 +24,8 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/${PN}-2.60-gentoo.diff
+	sed -i 's/\\b\(Transactions:\)/\1/' src/main.c || \
+		die "sed src/main.c failed"
 }
 
 src_compile() {
