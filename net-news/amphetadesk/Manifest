@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 bb917ed72d29a25cab8a99dc6fe094ba amphetadesk-0.93.1.ebuild 1445
-MD5 986a25dd807a50bc9bfbab6844bfe4d5 ChangeLog 1109
-MD5 94387e2d2ef31bb8f0e6671d89e4f827 files/digest-amphetadesk-0.93.1 75
+MD5 d715807b84d0aacd20c592086410619c ChangeLog 1217
+MD5 04b18d4778422f0902481184d0127e02 amphetadesk-0.93.1.ebuild 1456
 MD5 e974e73646575c737c41b43b1806f554 files/amphetadesk.initd 204
+MD5 94387e2d2ef31bb8f0e6671d89e4f827 files/digest-amphetadesk-0.93.1 75
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCakgBI1lqEGTUzyQRAuHZAJ40T1sGMqye5ECFjDR8Tk+cmZaI5QCeJpFI
-5JEZgf/sPDOI03oh5lTHzmM=
-=4RnV
+iD8DBQFCaqwvArHZZzCEUG0RAkhgAJwOh7VdxuVf6GkYBvMtWL1+1W7DRwCfcYoA
+pMhZ7I+Oh2HykN2ztjSn5JU=
+=i6aF
 -----END PGP SIGNATURE-----
