@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1102 2005/04/23 08:30:51 jstubbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1103 2005/04/23 10:02:38 slarti Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -323,6 +323,7 @@ kde-base/kpdf:nodrm - Disable DRM support in kpdf
 kde-base/krdc:rdesktop - Enable remote desktop functionality
 mail-client/evolution:nntp - Enable evolution nntp (news) functionality
 mail-client/mail-notification:gmail - Enable Gmail mailbox checking
+mail-client/mail-notification:gmailtimestamps - Enable support for Gmail timestamps
 mail-client/mozilla-thunderbird:moznoxft - Disable XFT support in mozilla (also firefox, thunderbird)
 mail-client/mozilla-thunderbird:mozplaintext - Disallow HTML editing for email
 mail-client/mutt:buffysize - Enables buffysize workaround, see bug 72422
