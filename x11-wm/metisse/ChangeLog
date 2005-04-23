@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/metisse
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/metisse/ChangeLog,v 1.9 2005/04/16 16:16:13 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/metisse/ChangeLog,v 1.10 2005/04/23 00:36:46 hansmi Exp $
+
+  23 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> metisse-0.3.5.ebuild:
+  Stable on ppc.
 
   16 Apr 2005; Mamoru KOMACHI <usata@gentoo.org>
   -files/metisse-0.3.1-FvwmGtk.1-DESTDIR.diff, -metisse-0.3.3.ebuild,

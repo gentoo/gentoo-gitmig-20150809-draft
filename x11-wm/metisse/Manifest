@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 165ad8947378dc0b1460f49f411fd8a2 ChangeLog 1791
 MD5 e7307c1653035014c1e36a27ca8ccb45 metadata.xml 163
+MD5 7ed8fb655e28ebf44304c40a2496d82f ChangeLog 1887
 MD5 bd188a43cc088ca73161889614be3035 metisse-0.3.4.ebuild 1112
-MD5 19d601a7dbad4ae2f871d71c593d3e2a metisse-0.3.5.ebuild 1120
-MD5 417e224f0ecd4c48bc9f5cffdeaa7787 files/digest-metisse-0.3.4 67
+MD5 8cbd77484deafae549df5956110a0ba3 metisse-0.3.5.ebuild 1120
 MD5 9b064fb7563ea3a27b17c5c02871eba9 files/digest-metisse-0.3.5 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCYTgQVWNWqTUmv+0RAucOAJkBwOYghQTH4bgoU1xhNPYOgvvzEACfcLvE
-dtreaanUVarUbW6BIiGIAUA=
-=sM4I
------END PGP SIGNATURE-----
+MD5 417e224f0ecd4c48bc9f5cffdeaa7787 files/digest-metisse-0.3.4 67
