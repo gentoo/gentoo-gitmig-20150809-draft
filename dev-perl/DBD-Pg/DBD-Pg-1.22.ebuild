@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-Pg/DBD-Pg-1.22.ebuild,v 1.9 2005/04/19 18:19:00 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-Pg/DBD-Pg-1.22.ebuild,v 1.10 2005/04/23 23:06:52 gmsoft Exp $
 
 inherit perl-module
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://cpan.pair.com/authors/id/D/DW/DWHEELER/${P}.readme"
 
 SLOT="0"
 LICENSE="|| ( Artistic GPL-2 )"
-KEYWORDS="x86 amd64 ppc sparc ~alpha"
+KEYWORDS="x86 amd64 ppc sparc ~alpha hppa"
 IUSE=""
 
 DEPEND="${DEPEND}
