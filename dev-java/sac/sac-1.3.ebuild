@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sac/sac-1.3.ebuild,v 1.3 2005/04/23 18:21:12 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sac/sac-1.3.ebuild,v 1.4 2005/04/23 20:36:02 compnerd Exp $
 
 inherit java-pkg
 
@@ -34,6 +34,7 @@ src_unpack() {
 src_compile() {
 	local antflags=""
 	use jikes && antflags="${antflags} -Dbuild.compiler=jikes"
+
 	ant ${antflags} || die "Compiling failed"
 }
 
