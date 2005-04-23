@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sac/sac-1.3.ebuild,v 1.2 2005/04/23 17:06:57 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sac/sac-1.3.ebuild,v 1.3 2005/04/23 18:21:12 luckyduck Exp $
 
 inherit java-pkg
 
@@ -10,14 +10,14 @@ SRC_URI="http://www.w3.org/2002/06/sacjava-${PV}.zip"
 
 LICENSE="W3C"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86 ~ppc"
 IUSE="doc jikes source"
 
-DEPEND="virtual/jdk
-		app-arch/unzip
-		jikes? (dev-java/jikes)
-		source? (app-arch/zip)"
-RDEPEND="virtual/jre"
+DEPEND=">=virtual/jdk-1.4
+	app-arch/unzip
+	jikes? ( dev-java/jikes )
+	source? ( app-arch/zip )"
+RDEPEND=">=virtual/jre-1.4"
 
 src_unpack() {
 	unpack ${A}
@@ -34,7 +34,6 @@ src_unpack() {
 src_compile() {
 	local antflags=""
 	use jikes && antflags="${antflags} -Dbuild.compiler=jikes"
-
 	ant ${antflags} || die "Compiling failed"
 }
 
@@ -42,9 +41,5 @@ src_install() {
 	dojar ${S}/dist/sac.jar
 
 	use doc && java-pkg_dohtml -r ${S}/dist/doc/*
-	dohtml ${S}/COPYRIGHT.html
-
-	if use source; then
-		java-pkg_dosrc ${S}/src/* || die "Failed to package sources"
-	fi
+	use source && java-pkg_dosrc ${S}/src/*
 }
