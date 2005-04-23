@@ -1,0 +1,10 @@
+# ChangeLog for x11-plugins/desklet-wirelessmonitor
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-wirelessmonitor/ChangeLog,v 1.1 2005/04/23 05:29:20 nixphoeni Exp $
+
+*desklet-wirelessmonitor-0.13 (23 Apr 2005)
+
+  23 Apr 2005; Joe Sapp <nixphoeni@gentoo.org> +metadata.xml,
+  +desklet-wirelessmonitor-0.13.ebuild:
+  Initial commit
+
