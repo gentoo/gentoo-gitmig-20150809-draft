@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/php-cgi
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php-cgi/ChangeLog,v 1.62 2005/04/14 22:24:01 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php-cgi/ChangeLog,v 1.63 2005/04/23 23:30:10 gmsoft Exp $
+
+  24 Apr 2005; Guy Martin <gmsoft@gentoo.org> php-cgi-4.3.11.ebuild:
+  Stable on hppa.
 
   14 Apr 2005; Bryan Østergaard <kloeri@gentoo.org> php-cgi-4.3.11.ebuild:
   Stable on ia64, bug 87517.
