@@ -1,0 +1,11 @@
+--- pym/portage.py	23 Apr 2005 07:26:04 -0000	1.524.2.59
++++ pym/portage.py	23 Apr 2005 14:48:34 -0000
+@@ -1192,7 +1192,7 @@
+ 		if "maketest" in self.features and "test" not in self.features:
+ 			self.features.append("test")
+ 
+-		if not portage_exec.sandbox_capable and "sandbox" in self.features or "usersandbox" in self.features:
++		if not portage_exec.sandbox_capable and ("sandbox" in self.features or "usersandbox" in self.features):
+ 			writemsg(red("!!! Problem with sandbox binary. Disabling...\n\n"))
+ 			if "sandbox" in self.features:
+ 				self.features.remove("sandbox")

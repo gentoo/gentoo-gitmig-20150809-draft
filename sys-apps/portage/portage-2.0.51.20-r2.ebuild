@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.51.20-r1.ebuild,v 1.1 2005/04/23 12:12:44 jstubbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.51.20-r2.ebuild,v 1.1 2005/04/23 14:57:19 jstubbs Exp $
 
 inherit toolchain-funcs
 
@@ -31,6 +31,7 @@ python_has_lchown() {
 
 src_unpack() {
 	unpack ${A}
+	patch -d ${S} -p0 -g0 < ${FILESDIR}/portage-fixes.patch
 	patch -d ${S} -p0 -g0 < ${FILESDIR}/dispatch-conf-fixes.patch
 	patch -d ${S} -p0 -g0 < ${FILESDIR}/repoman-fixes.patch
 }
