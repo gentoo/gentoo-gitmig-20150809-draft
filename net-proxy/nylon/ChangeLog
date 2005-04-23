@@ -1,6 +1,6 @@
-# ChangeLog for net-misc/nylon
+# ChangeLog for net-proxy/nylon
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/nylon/ChangeLog,v 1.1 2005/04/22 22:19:19 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/nylon/ChangeLog,v 1.2 2005/04/23 13:07:29 swegener Exp $
 
   22 Apr 2005; Alin Nastac <mrness@gentoo.org> +metadata.xml,
   -nylon-1.1.ebuild, -nylon-1.2.ebuild:

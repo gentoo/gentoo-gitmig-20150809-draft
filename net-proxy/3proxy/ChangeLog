@@ -1,6 +1,6 @@
-# ChangeLog for net-misc/3proxy
+# ChangeLog for net-proxy/3proxy
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/3proxy/ChangeLog,v 1.1 2005/04/22 21:40:29 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/3proxy/ChangeLog,v 1.2 2005/04/23 13:05:15 swegener Exp $
 
 *3proxy-0.5b (22 Apr 2005)
 

@@ -1,6 +1,6 @@
-# ChangeLog for www-proxy/paros
+# ChangeLog for net-proxy/paros
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/paros/ChangeLog,v 1.1 2005/04/22 19:15:11 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/paros/ChangeLog,v 1.2 2005/04/23 13:07:54 swegener Exp $
 
   22 Apr 2005; Alin Nastac <mrness@gentoo.org> :
   Rename category & herd www-proxy to net-proxy
