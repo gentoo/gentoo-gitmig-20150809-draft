@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/skktools/skktools-1.1.ebuild,v 1.6 2005/01/01 14:42:03 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/skktools/skktools-1.1.ebuild,v 1.7 2005/04/23 12:25:34 usata Exp $
 
-inherit elisp-common
+inherit elisp-common eutils
 
 DESCRIPTION="SKK utilities to manage dictionaries"
 HOMEPAGE="http://openlab.jp/skk/"
@@ -16,8 +16,14 @@ IUSE="ruby emacs"
 DEPEND="virtual/libc
 	>=dev-libs/glib-2"
 
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${P}-gentoo.diff
+}
+
 src_install() {
-	einstall || die
+	make DESTDIR=${D} install || die
 
 	use ruby && dobin saihenkan.rb
 	use emacs && elisp-site-file-install skk-xml.el

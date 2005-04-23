@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/skktools
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/skktools/ChangeLog,v 1.5 2005/01/01 14:42:03 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/skktools/ChangeLog,v 1.6 2005/04/23 12:25:34 usata Exp $
+
+  23 Apr 2005; <usata@gentoo.org> +files/skktools-1.1-gentoo.diff,
+  skktools-1.1.ebuild:
+  Added a patch to support DESTDIR; bug #72175.
 
   22 Jun 2004; Mamoru KOMACHI <usata@gentoo.org> skktools-1.1.ebuild:
   Marked as stable.

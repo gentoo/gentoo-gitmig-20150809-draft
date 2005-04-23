@@ -1,4 +1,5 @@
-MD5 c12a18b68eaa52b8e9d2813ed922e9ea ChangeLog 504
+MD5 b54ad752c843fc90b2908f0c34469503 skktools-1.1.ebuild 792
 MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
-MD5 19f47632ce3c06dec48371878a8c26f6 skktools-1.1.ebuild 696
+MD5 5116726010213db119ff977cc49fd8fe ChangeLog 638
 MD5 41b8a86b8e6866cccf2361aa68e5b86b files/digest-skktools-1.1 64
+MD5 047d7cb40f9c877538f8926f3af6b968 files/skktools-1.1-gentoo.diff 836
