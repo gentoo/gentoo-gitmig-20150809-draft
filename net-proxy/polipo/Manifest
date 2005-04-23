@@ -2,7 +2,7 @@
 Hash: SHA1
 
 MD5 b1f703231c1de66fceda9fa2846231f9 polipo-0.9.8.ebuild 1325
-MD5 838a9c130535248fcdd046fdeadd0874 ChangeLog 546
+MD5 7deafd503bc24a8ced8af09db0106fec ChangeLog 548
 MD5 c3de0bbc117c44cd0aad81e19a01094c metadata.xml 294
 MD5 15a13f10a2c408c2e448d0db6fe8d382 files/digest-polipo-0.9.8 64
 MD5 fdf9f12df918b0d2623ebe825a1aa705 files/config 167
@@ -12,7 +12,7 @@ MD5 5fb40a3a7fab1ebaffdc988b47d00646 files/polipo.initd 767
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCaVEYjiC39V7gKu0RAqJpAJ9Q8LzrX95qVXGrUVReODrcsBzM0wCfZ9ya
-6+/rUfHBiu9Bp5k6lRkdlus=
-=uH8E
+iD8DBQFCakjKI1lqEGTUzyQRAicWAKDLRy0o+1EnGr9xPAsMYZppRbnhXQCgolYF
+0bh9IjfCKQPossHzE2t8ftY=
+=WEW1
 -----END PGP SIGNATURE-----

@@ -2,7 +2,7 @@
 Hash: SHA1
 
 MD5 f30fec89787cc3f4ef6d82fd3ffde320 squidguard-1.2.0-r1.ebuild 1945
-MD5 50aeabf4f8fca709442e2edb4c941c4b ChangeLog 2704
+MD5 c02472aa7d069cb1ba2a572ab3f58e6d ChangeLog 2706
 MD5 6910c65b0c4ea4edfa1c7e642b16ef97 metadata.xml 353
 MD5 127270fbe0d0bfbc141ffaf56313f3e6 files/blockedsites 8
 MD5 0c3ba4835c98256ad8ee4bf3336eb277 files/squidGuard.conf.minimal 61
@@ -14,7 +14,7 @@ MD5 d639b977d8cfd92f19913f1d9fa12564 files/squidguard-1.2.0-db42.patch 1348
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCaVFPjiC39V7gKu0RAskJAJ9tgk4UMpd+Kdo2VAxxAWzLEcc1lACfWv5w
-4wWFz1o6DrGtRn0yWKTylD8=
-=+hvJ
+iD8DBQFCakj2I1lqEGTUzyQRAl4nAKC8Qn1zuKBdU8MOLZnd+W0qQub4lQCfawl3
+4gansJBiSvJMj5qUcwEhFyc=
+=LPwo
 -----END PGP SIGNATURE-----

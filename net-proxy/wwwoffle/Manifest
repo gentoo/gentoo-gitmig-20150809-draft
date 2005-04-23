@@ -3,7 +3,7 @@ Hash: SHA1
 
 MD5 6961cddf72275d06dba1d3a6de02dbc4 wwwoffle-2.8b.ebuild 4531
 MD5 0d848bda6692019ca436e884c602e0ec wwwoffle-2.7h.ebuild 1849
-MD5 1034dc09deb803834fc0c0b265c9d46d ChangeLog 6467
+MD5 45b06ce10981c6b579856c2e23496ca1 ChangeLog 6469
 MD5 2f092f7d958b226c98713d29cff08f9d metadata.xml 502
 MD5 b1aee99deed6d9b8fe4dd398c1172ba4 wwwoffle-2.8e.ebuild 5155
 MD5 7de5176c361139e468dd8ed1571c4c5e files/wwwoffled-online 510
@@ -18,7 +18,7 @@ MD5 5460db8b11a1189b90e0b88980fe4e2d files/wwwoffled 506
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCaVGTjiC39V7gKu0RAm45AJ4t3fAOoXPHHhixhbzEOrRZtPD+1ACg0HCC
-pClTPgBceXbkbzo2iYr1zbE=
-=4N4w
+iD8DBQFCakk4I1lqEGTUzyQRAmZ2AKCvvnY4vup6Byop+FFHJdUMdKTbhACdHfk3
+r5pCU04D9X5jjfFrvYmJRfM=
+=dfCy
 -----END PGP SIGNATURE-----

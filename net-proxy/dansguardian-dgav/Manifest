@@ -2,7 +2,7 @@
 Hash: SHA1
 
 MD5 ea6cdcfd4480cffc4718825850b9c207 dansguardian-dgav-6.3.8.ebuild 1669
-MD5 b2b66500309570d26a06c09692a1ae70 ChangeLog 1065
+MD5 87a9700c2e9b5b545ae522cadedfb9b7 ChangeLog 1067
 MD5 775fe3a71382d0807bfddb0235f35f30 metadata.xml 233
 MD5 bf8c351940c7a2c26da9395e7a494937 files/dansguardian.init 576
 MD5 dd34bc7952c9d271a3b5b25605afaafc files/digest-dansguardian-dgav-6.3.8 169
@@ -11,7 +11,7 @@ MD5 0fab1970b596ce0eb39925955884fa17 files/dgav-6.3.8-virus-response.patch 1083
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCaVB5jiC39V7gKu0RAkDiAKDL3UaNMT1+SlrAtm6QN1f8+MprYACeNsHr
-J1AZCV3ns5deLF0dLKvlGLQ=
-=un0o
+iD8DBQFCakhJI1lqEGTUzyQRAsahAJ9AVIfw73T50EbYAvPb5v5G4FiXSwCg15Pf
+KWeHSruQ7Yz0cJSeMvVkEkk=
+=8/zB
 -----END PGP SIGNATURE-----
