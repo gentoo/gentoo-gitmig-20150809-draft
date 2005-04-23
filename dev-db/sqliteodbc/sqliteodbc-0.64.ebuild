@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqliteodbc/sqliteodbc-0.64.ebuild,v 1.1 2005/04/22 20:27:44 arj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqliteodbc/sqliteodbc-0.64.ebuild,v 1.2 2005/04/23 12:41:47 swegener Exp $
 
 inherit eutils
 
@@ -14,9 +14,10 @@ KEYWORDS="~x86 ~amd64"
 IUSE=""
 
 DEPEND="=dev-db/sqlite-2*
-	|| ( >=dev-db/unixODBC-2 >=libiodbc-3.0.6 )"
-
-RDEPEND=${DEPEND}
+	|| (
+		>=dev-db/unixODBC-2
+		>=dev-db/libiodbc-3.0.6
+	)"
 
 src_unpack() {
 	unpack ${A}
