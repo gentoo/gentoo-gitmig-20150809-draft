@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/when
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/when/ChangeLog,v 1.12 2005/03/08 15:59:39 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/when/ChangeLog,v 1.13 2005/04/23 13:09:07 ka0ttic Exp $
+
+  23 Apr 2005; Aaron Walker <ka0ttic@gentoo.org> when-1.0.23.ebuild:
+  Stable on x86. Re-add ~amd64 that I accidentally dropped before kugelfang
+  notices :).
 
 *when-1.0.23 (08 Mar 2005)
 
