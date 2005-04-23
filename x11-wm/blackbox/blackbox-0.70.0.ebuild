@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/blackbox/blackbox-0.70.0.ebuild,v 1.1 2005/03/10 14:53:44 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/blackbox/blackbox-0.70.0.ebuild,v 1.2 2005/04/23 12:11:51 ka0ttic Exp $
 
 DESCRIPTION="A small, fast, full-featured window manager for X"
 HOMEPAGE="http://blackboxwm.sourceforge.net/"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/${PN}wm/${P}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc x86"
 IUSE="nls truetype debug"
 
 RDEPEND="virtual/x11
