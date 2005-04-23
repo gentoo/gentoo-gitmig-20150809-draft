@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/knetload
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/knetload/ChangeLog,v 1.21 2005/04/22 12:52:02 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/knetload/ChangeLog,v 1.22 2005/04/23 02:05:36 flameeyes Exp $
+
+  23 Apr 2005; Diego Pettenò <flameeyes@gentoo.org> knetload-2.3.ebuild:
+  Changed HOMEPAGE and SRC_URI as my old provider just died and those urls are
+  no more reachable.
 
 *knetload-3.0_alpha2 (22 Apr 2005)
 
