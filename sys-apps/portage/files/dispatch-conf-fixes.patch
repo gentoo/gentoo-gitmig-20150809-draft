@@ -1,0 +1,28 @@
+diff -u -r1.7.2.8 dispatch-conf
+--- bin/dispatch-conf	17 Apr 2005 09:01:55 -0000	1.7.2.8
++++ bin/dispatch-conf	23 Apr 2005 11:15:53 -0000
+@@ -186,7 +186,7 @@
+                 elif c == 'm':
+                     merged = SCRATCH_DIR+"/"+os.path.basename(conf['current'])
+                     print
+-                    os.system (conf['merge'] % (merged, conf ['current'], newconf))
++                    os.system (self.options['merge'] % (merged, conf ['current'], newconf))
+                     shutil.copyfile(merged, mrgconf)
+                     os.remove(merged)
+                     mystat = os.lstat(conf['new'])
+===================================================================
+diff -u -r1.3.2.2 dispatch_conf.py
+--- pym/dispatch_conf.py	17 Apr 2005 09:01:55 -0000	1.3.2.2
++++ pym/dispatch_conf.py	23 Apr 2005 11:15:54 -0000
+@@ -33,7 +33,10 @@
+ 
+     for key in mandatory_opts:
+         if not opts.has_key(key):
+-            print >> sys.stderr, 'dispatch-conf: Missing option "%s" in /etc/dispatch-conf.conf; fatal' % (key,)
++            if key == "merge":
++                opts["merge"] = "sdiff --suppress-common-lines --output=%s %s %s"
++            else:
++                print >> sys.stderr, 'dispatch-conf: Missing option "%s" in /etc/dispatch-conf.conf; fatal' % (key,)
+ 
+     if not os.path.exists(opts['archive-dir']):
+         os.mkdir(opts['archive-dir'])
