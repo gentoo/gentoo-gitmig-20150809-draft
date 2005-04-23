@@ -1,8 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/ponyprog/ponyprog-2.06c.ebuild,v 1.6 2005/01/01 17:56:11 eradicator Exp $
-
-RESTRICT="nomirror"
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/ponyprog/ponyprog-2.06c.ebuild,v 1.7 2005/04/23 23:49:34 robbat2 Exp $
 
 S=${WORKDIR}
 DESCRIPTION="EEprom e Pic Programmer"
