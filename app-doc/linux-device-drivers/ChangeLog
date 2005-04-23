@@ -1,6 +1,14 @@
 # ChangeLog for app-doc/linux-device-drivers
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/linux-device-drivers/ChangeLog,v 1.2 2005/04/21 22:13:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/linux-device-drivers/ChangeLog,v 1.3 2005/04/23 18:58:28 wormo Exp $
+
+  23 Apr 2005; Stephanie Lockwood-Childs <wormo@gentoo.org>
+  linux-device-drivers-2.ebuild, linux-device-drivers-3.ebuild:
+  took out sh from keywords since it has a missing dependency (unzip)
+
+  22 Apr 2005; Stephanie Lockwood-Childs <wormo@gentoo.org>
+  linux-device-drivers-2.ebuild, linux-device-drivers-3.ebuild:
+  stable on ppc
 
 *linux-device-drivers-3 (21 Apr 2005)
 
