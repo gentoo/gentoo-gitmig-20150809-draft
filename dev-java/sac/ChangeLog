@@ -1,0 +1,11 @@
+# ChangeLog for dev-java/sac
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sac/ChangeLog,v 1.1 2005/04/23 16:57:34 compnerd Exp $
+
+*sac-1.3 (23 Apr 2005)
+
+  23 Apr 2005; Saleem Abdulrasool <compnerd@gentoo.org> +files/build.xml,
+  +sac-1.3.ebuild:
+  Initial import. Resolves bug #85116. Modified ebuilds from Betelguese
+  <petteri.raty@welho.com>.
+
