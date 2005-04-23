@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/egroupware/egroupware-1.0.0.007.ebuild,v 1.4 2005/04/22 09:39:50 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/egroupware/egroupware-1.0.0.007.ebuild,v 1.5 2005/04/23 21:26:27 mholzer Exp $
 
 inherit webapp
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.eGroupWare.org/"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
-KEYWORDS="~x86 ppc alpha amd64 ~sparc ~hppa"
+KEYWORDS="x86 ppc alpha amd64 ~sparc ~hppa"
 IUSE="ldap"
 
 RDEPEND="virtual/php
