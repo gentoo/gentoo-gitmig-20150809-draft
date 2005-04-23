@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sac/sac-1.3.ebuild,v 1.1 2005/04/23 16:57:34 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sac/sac-1.3.ebuild,v 1.2 2005/04/23 17:06:57 compnerd Exp $
 
 inherit java-pkg
 
@@ -25,7 +25,7 @@ src_unpack() {
 	cp ${FILESDIR}/build.xml ${S}
 
 	cd ${S}
-	rm -fr sac.jar META-INF/
+	rm -rf sac.jar META-INF/
 
 	mkdir src
 	mv org src
@@ -35,16 +35,16 @@ src_compile() {
 	local antflags=""
 	use jikes && antflags="${antflags} -Dbuild.compiler=jikes"
 
-	ant || die "Compiling failed"
+	ant ${antflags} || die "Compiling failed"
 }
 
 src_install() {
 	dojar ${S}/dist/sac.jar
 
 	use doc && java-pkg_dohtml -r ${S}/dist/doc/*
-	dohtml COPYRIGHT.html
+	dohtml ${S}/COPYRIGHT.html
 
 	if use source; then
-		java-pkg_dosrc src/* || die "Failed to package sources"
+		java-pkg_dosrc ${S}/src/* || die "Failed to package sources"
 	fi
 }
