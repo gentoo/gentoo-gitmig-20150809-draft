@@ -1,6 +1,14 @@
 # ChangeLog for app-i18n/unicon
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/unicon/ChangeLog,v 1.6 2005/01/02 19:39:51 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/unicon/ChangeLog,v 1.7 2005/04/23 12:07:29 usata Exp $
+
+*unicon-3.0.4-r1 (23 Apr 2005)
+
+  23 Apr 2005; <usata@gentoo.org> +files/unicon-3.0.4-gcc34.patch,
+  +files/unicon.confd, +files/unicon.initd, +unicon-3.0.4-r1.ebuild:
+  Added missing virtual/x11 to DEPEND. Applied gcc-3.4 patch, submitted by
+  summoon1997 <sunmoon1997@gmail.com>; bug #74183. Thanks to Jackey Yang
+  <043936y@acadiau.ca>.
 
   02 Jan 2005; Daniel Drake <dsd@gentoo.org> unicon-3.0.4.ebuild:
   Change virtual/kernel to virtual/linux-sources

@@ -1,0 +1,34 @@
+#!/sbin/runscript
+# Copyright 1999-2005 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/unicon/files/unicon.initd,v 1.1 2005/04/23 12:07:29 usata Exp $
+
+depend() {
+	after modules
+}
+
+start() {
+	ebegin "Starting unicon"
+	/sbin/modprobe unikey
+
+	if [ -n "${UNICON_ENCODE}" ] ; then
+		ebegin "  Loading encode-${UNICON_ENCODE}"
+		/sbin/modprobe encode-"${UNICON_ENCODE}"
+		eend $?
+	fi
+
+	loadunimap /usr/lib/unicon/direct.uni
+
+	if [ -n "${UNICON_ENCODE}" ] ; then
+		for i in 0 1 2 3 4 5 6 ; do
+			/usr/bin/uniconctrl --"${UNICON_ENCODE}" tty$i
+		done
+	fi
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping unicon"
+	/sbin/modprobe -r unikey
+	eend $?
+}
