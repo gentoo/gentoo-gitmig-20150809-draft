@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/multiimonc
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/multiimonc/ChangeLog,v 1.13 2005/03/06 16:12:15 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/multiimonc/ChangeLog,v 1.14 2005/04/23 10:22:05 hansmi Exp $
+
+*multiimonc-0.3.6 (23 Apr 2005)
+
+  23 Apr 2005; Michael Hanselmann <hansmi@gentoo.org>
+  +multiimonc-0.3.6.ebuild:
+  New version 0.3.6. Fixes the problems with USE=unicode.
 
   06 Mar 2005; Michael Hanselmann <hansmi@gentoo.org>
   -files/UsagePlot-0.3.2.diff, -multiimonc-0.3.2.ebuild,
