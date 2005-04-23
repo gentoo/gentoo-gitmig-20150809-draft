@@ -16,4 +16,4 @@ RESUMECOMMAND="/usr/bin/curl --connect-timeout 15 -# -C - -o \${DISTDIR}/\${FILE
 
 FEATURES="-sandbox userpriv"
 
-USE="emboss -sandbox"
+USE="emboss"

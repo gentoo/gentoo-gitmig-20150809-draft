@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/make.defaults,v 1.7 2005/04/23 08:30:51 jstubbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/make.defaults,v 1.8 2005/04/23 16:25:07 jstubbs Exp $
 #
 # System-wide defaults for the Portage system
 # See portage(5) manpage
@@ -12,5 +12,3 @@ FEATURES="autoconfig strict"
 # discussion on gentoo-dev@gentoo.org. Flat profiles also need to
 # be updated appropriately.
 USE_EXPAND="VIDEO_CARDS INPUT_DEVICES LINGUAS"
-
-USE="sandbox"

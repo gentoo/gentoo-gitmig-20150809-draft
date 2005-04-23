@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-alpha-2004.0/make.defaults,v 1.12 2005/04/23 08:30:51 jstubbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-alpha-2004.0/make.defaults,v 1.13 2005/04/23 16:25:07 jstubbs Exp $
 # System-wide defaults for the Portage system on alpha
 
 #Experimental: trying to use these USE variables to build up from stage 2->3 
@@ -52,7 +52,6 @@ python
 qt
 quicktime
 readline
-sandbox
 sdl
 slang
 spell
