@@ -30,3 +30,6 @@ xvmc
 
 # Fixes bug #86787
 fusion
+
+# rar is binary-only
+rar
