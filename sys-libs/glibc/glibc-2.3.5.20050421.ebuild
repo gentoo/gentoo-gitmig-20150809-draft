@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.5.20050421.ebuild,v 1.1 2005/04/23 17:44:31 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.5.20050421.ebuild,v 1.2 2005/04/23 20:17:52 azarah Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -192,10 +192,11 @@ toolchain-glibc_src_unpack() {
 		unpack ${PN}-manpages-${GLIBC_MANPAGE_VERSION:-${GLIBC_RELEASE_VER}}.tar.bz2
 	fi
 
-	if [[ ${GLIBC_INFOPAGE_VERSION} != "none" ]] ; then
-		cd ${S}
-		unpack ${PN}-infopages-${GLIBC_INFOPAGE_VERSION:-${GLIBC_RELEASE_VER}}.tar.bz2
-	fi
+# FIXME: I updated the infopages, but forgot to regen th branch-update
+#	if [[ ${GLIBC_INFOPAGE_VERSION} != "none" ]] ; then
+#		cd ${S}
+#		unpack ${PN}-infopages-${GLIBC_INFOPAGE_VERSION:-${GLIBC_RELEASE_VER}}.tar.bz2
+#	fi
 
 	if [[ -n ${BRANCH_UPDATE} ]] ; then
 		cd ${WORKDIR}
@@ -210,6 +211,12 @@ toolchain-glibc_src_unpack() {
 		# Snapshot date patch
 		einfo "Patching version to display snapshot date ..."
 		sed -i -e "s:\(#define RELEASE\).*:\1 \"${BRANCH_UPDATE}\":" version.h
+	fi
+
+# FIXME: I updated the infopages, but forgot to regen th branch-update
+	if [[ ${GLIBC_INFOPAGE_VERSION} != "none" ]] ; then
+		cd ${S}
+		unpack ${PN}-infopages-${GLIBC_INFOPAGE_VERSION:-${GLIBC_RELEASE_VER}}.tar.bz2
 	fi
 
 	if [[ -n ${PATCH_VER} ]] ; then
