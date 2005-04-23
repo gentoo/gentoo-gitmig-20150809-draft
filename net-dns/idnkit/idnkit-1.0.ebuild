@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/idnkit/idnkit-1.0.ebuild,v 1.7 2005/04/23 14:17:14 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/idnkit/idnkit-1.0.ebuild,v 1.8 2005/04/23 14:18:29 carlo Exp $
 
 S="${WORKDIR}/${P}-src"
 
@@ -16,7 +16,7 @@ IUSE=""
 DEPEND="sys-libs/glibc"
 # non gnu systems need libiconv
 
-src_unpack() 
+src_unpack()
 {
 	unpack ${A} ; cd ${S}
 	sed -i -e "s:head -1:head -n 1:g" *
