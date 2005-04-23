@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1104 2005/04/23 15:20:09 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1105 2005/04/23 15:56:12 mrness Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -846,6 +846,7 @@ www-misc/nsxml:xslt - Enables xslt support
 net-proxy/squid:customlog - Add support for custom log file formats
 net-proxy/squid:logrotate - Use logrotate for rotating logs
 net-proxy/squid:underscores - Enables support for domain names containing underscores
+net-proxy/squid:zero-penalty-hit - Add Zero Penalty Hit patch
 net-proxy/tinyproxy:transparent-proxy - enable support for transparent proxies
 net-servers/fnord:diet - Compile and link with dietlibc
 net-servers/lighttpd:xattr - if you want extended attributes enabled
