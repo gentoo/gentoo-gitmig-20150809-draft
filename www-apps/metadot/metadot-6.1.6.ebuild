@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/metadot/metadot-6.1.6.ebuild,v 1.4 2004/09/03 17:17:20 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/metadot/metadot-6.1.6.ebuild,v 1.5 2005/04/23 01:39:03 mcummings Exp $
 
 inherit webapp
 MY_P=${P/-/}
@@ -40,7 +40,7 @@ RDEPEND="
 	dev-perl/Lingua-EN-NameParse
 	dev-perl/Number-Format
 	dev-perl/XML-Simple
-	dev-perl/Text-CSV
+	dev-perl/Text-CSV_XS
 	dev-perl/Archive-Zip
 "
 
