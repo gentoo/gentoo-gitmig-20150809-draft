@@ -122,7 +122,7 @@ diff -Nrup gdb-6.3.orig/gdb/printcmd.c gdb-6.3/gdb/printcmd.c
 +	    }
 +	    for (i = 0; i <= (nfetch - memsize); i++, addr++) {
 +	       int *pint;
-+	       (unsigned char *) pint = (unsigned char *) (data + i);
++	       pint = (unsigned char *) (data + i);
 +	       if (*pint == typi) {
 +		  printf_filtered("pattern match at ");
 +		  print_address_numeric((addr), 1, gdb_stdout);
@@ -165,7 +165,7 @@ diff -Nrup gdb-6.3.orig/gdb/printcmd.c gdb-6.3/gdb/printcmd.c
 +	       if (strncmp("0x", pattern, 2) == 0) {
 +		  sscanf(pattern, "0x%02x", &typc);
 +	       } else
-+		  (int) typc = atoi(pattern);
++		  typc = (unsigned char)atoi(pattern);
 +	    }
 +	    printf_filtered(">>>%0x2\n", (int) typc);
 +	    if (nfetch < memsize) {
