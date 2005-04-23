@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libxmlpp/libxmlpp-2.8.0.ebuild,v 1.4 2005/04/23 18:55:09 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libxmlpp/libxmlpp-2.10.0.ebuild,v 1.1 2005/04/23 18:55:09 ka0ttic Exp $
 
-inherit gnome2 multilib
+inherit gnome2 eutils
 
 MY_PN="${PN/pp/++}"
 MY_P="${MY_PN}-${PV}"
@@ -27,6 +27,16 @@ DEPEND="${RDEPEND}
 MAKEOPTS="${MAKEOPTS} -j1"
 DOCS="AUTHORS ChangeLog NEWS README*"
 
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${P}-use-correct-callback.diff
+
+	# don't waste time building the examples
+	sed -i 's/^\(SUBDIRS =.*\)examples\(.*\)$/\1\2/' Makefile.in || \
+		die "sed Makefile.in failed"
+}
+
 src_compile() {
 	gnome2_src_compile
 	if use doc ; then
@@ -39,5 +49,7 @@ src_install() {
 	gnome2_src_install
 	dosed -i 's|^\(Cflags.*-I.* \)-I.*$|\1|' \
 		/usr/$(get_libdir)/pkgconfig/${MY_PN}-${SLOT}.pc
+
+	rm -fr ${D}/usr/share/doc/libxml++*
 	use doc && dohtml docs/reference/${PV%.*}/html/*
 }

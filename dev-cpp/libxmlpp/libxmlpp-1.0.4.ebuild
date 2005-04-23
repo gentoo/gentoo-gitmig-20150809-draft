@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libxmlpp/libxmlpp-1.0.4.ebuild,v 1.4 2005/03/05 17:28:14 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libxmlpp/libxmlpp-1.0.4.ebuild,v 1.5 2005/04/23 18:55:09 ka0ttic Exp $
 
 IUSE=""
 
-inherit libtool
+inherit libtool multilib
 
 MY_P=${P/pp/++}
 
@@ -32,5 +32,7 @@ src_compile() {
 
 src_install() {
 	make DESTDIR="${D}" install || die "Install failed"
+	dosed -i 's|^\(Cflags.*-I.* \)-I.*$|\1|' \
+		/usr/$(get_libdir)/pkgconfig/${MY_P%.*}.pc
 	dodoc AUTHORS ChangeLog NEWS README*
 }

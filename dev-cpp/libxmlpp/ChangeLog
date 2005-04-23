@@ -1,6 +1,16 @@
 # ChangeLog for dev-cpp/libxmlpp
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libxmlpp/ChangeLog,v 1.21 2005/04/01 17:15:54 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libxmlpp/ChangeLog,v 1.22 2005/04/23 18:55:09 ka0ttic Exp $
+
+*libxmlpp-2.10.0 (23 Apr 2005)
+
+  23 Apr 2005; Aaron Walker <ka0ttic@gentoo.org>
+  -files/libxmlpp-1.0.4-pc.patch,
+  +files/libxmlpp-2.10.0-use-correct-callback.diff, metadata.xml,
+  libxmlpp-1.0.2.ebuild, libxmlpp-1.0.4.ebuild, libxmlpp-1.0.4-r1.ebuild,
+  libxmlpp-1.0.4-r2.ebuild, libxmlpp-2.8.0.ebuild, +libxmlpp-2.10.0.ebuild:
+  Version bump for bug 89694; added dosed to all src_installs correcting
+  cflags in pkgconfig file for bug 83794.
 
   01 Apr 2005; Simon Stelling <blubb@gentoo.org> libxmlpp-1.0.4-r2.ebuild:
   stable on amd64
