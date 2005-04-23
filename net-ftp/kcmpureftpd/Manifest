@@ -1,6 +1,16 @@
-MD5 adae0ebe01619737ded130cf012cdd24 ChangeLog 1483
-MD5 56005750e8490b5e8abdd9722175eaf4 kcmpureftpd-0.8.ebuild 479
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 371559ffad5671c0ef18bbcdd2423314 kcmpureftpd-0.9.1.ebuild 479
-MD5 ad07f828fb26ccdbf5bbb460f86dfe4a files/digest-kcmpureftpd-0.8 67
+MD5 56005750e8490b5e8abdd9722175eaf4 kcmpureftpd-0.8.ebuild 479
+MD5 35db255292c230221be03dd7db6b09d1 ChangeLog 1484
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 3a4d4d1bc445c06e127661d4897a2be8 files/digest-kcmpureftpd-0.9.1 70
+MD5 ad07f828fb26ccdbf5bbb460f86dfe4a files/digest-kcmpureftpd-0.8 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCakcqI1lqEGTUzyQRAnfnAKCcNQb/rPen/sFnz1i69Xp/BOYg9wCfZxja
+CUbU/s02dWO0nhcyEqbNEP8=
+=BCY0
+-----END PGP SIGNATURE-----

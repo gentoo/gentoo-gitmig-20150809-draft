@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 efdb940eb0630520176af1f43f377b35 linksys-tftp-1.2.1.ebuild 641
+MD5 8921f52baffa78a145ab1d221c0d8344 linksys-tftp-1.2.1.ebuild 639
 MD5 e4bbce2bb3ee6a7a58b2381dbee1ba29 ChangeLog 827
 MD5 875b4dd2e90e3ff68dd540ef7bf05eca metadata.xml 307
 MD5 2490b93e9a9ee969dff7103ffb8960bf files/digest-linksys-tftp-1.2.1 70
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCakf1I1lqEGTUzyQRAiXhAJ9anw0qmQUvFbNelD9EkVqhhAGyFwCfeQqD
-mwmV54YfHvTeXQx07zkVC4w=
-=pYyp
+iD8DBQFCakeqI1lqEGTUzyQRAkpoAKCwB+Hnmn4HGtZJZAdA2kSE8cczuACfZjp3
+Za3rDhoZi3sg0An8NNWtPzM=
+=ldza
 -----END PGP SIGNATURE-----

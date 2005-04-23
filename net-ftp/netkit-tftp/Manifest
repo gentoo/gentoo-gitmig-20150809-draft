@@ -1,3 +1,13 @@
-MD5 f7993bd13e0c986f7a472011d75de0f3 ChangeLog 1488
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 dcdee01698eb20e9cebe0bfa887217df netkit-tftp-0.17-r2.ebuild 727
+MD5 d7157beea10d5dbcfe26d7e67a6c3af3 ChangeLog 1489
 MD5 eca25f90f0875639d8b73f7f3cb4fc57 files/digest-netkit-tftp-0.17-r2 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCakfwI1lqEGTUzyQRAsGGAKCVnXd+qbTujOaS022TXBUKGjYftACgisDY
+74gCrVZKffyQH28xb6+XU1Y=
+=x9EI
+-----END PGP SIGNATURE-----
