@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/gwget
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gwget/ChangeLog,v 1.4 2004/11/04 08:52:35 obz Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gwget/ChangeLog,v 1.5 2005/04/23 11:49:11 allanonjl Exp $
+
+*gwget-0.94 (23 Apr 2005)
+
+  23 Apr 2005; John N. Laliberte <allanonjl@gentoo.org>
+  +files/gwget-0.94-epiphany-path-fix.patch, metadata.xml,
+  +gwget-0.94.ebuild:
+  Update for gwget. Patch fix for epiphany path. Fixes bugs #67719, #89882.
 
   05 Nov 2004; Mike Gardiner <obz@gentoo.org> gwget-0.14.ebuild:
   Fixed 0.14 dependency, it needs gtk+ 2.4 or greater, not gtk+ 2. See bug #67724
