@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/pcsc-lite-1.2.9_beta6.ebuild,v 1.2 2005/01/23 11:10:29 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/pcsc-lite-1.2.9_beta6.ebuild,v 1.3 2005/04/23 07:06:20 vapier Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SRC_URI="https://alioth.debian.org/download.php/${NUM}/${MY_P}.tar.gz"
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86 ~ppc64"
-IUSE="static"
+IUSE="static debug"
 
 RDEPEND="!static? ( virtual/libc dev-libs/libusb )"
 DEPEND="sys-devel/make
@@ -34,6 +34,7 @@ src_compile() {
 	econf \
 		--enable-usbdropdir=/usr/lib/readers/usb \
 		--enable-muscledropdir=/usr/share/pcsc/services \
+		$(use_enable debug) \
 		$(use_enable static) \
 		|| die "./configure failed"
 	emake || die
