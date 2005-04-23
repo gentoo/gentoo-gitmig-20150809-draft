@@ -1,6 +1,14 @@
 # ChangeLog for app-editors/qemacs
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/qemacs/ChangeLog,v 1.15 2005/04/21 18:27:01 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/qemacs/ChangeLog,v 1.16 2005/04/23 07:50:20 usata Exp $
+
+*qemacs-0.3.1-r2 (23 Apr 2005)
+
+  23 Apr 2005; Mamoru KOMACHI <usata@gentoo.org>
+  +files/qemacs-0.3.1-Makefile-gentoo.patch,
+  +files/qemacs-0.3.1-manpage-ref-fix.patch,
+  +files/qemacs-0.3.1-qemacs-datadir.patch, +qemacs-0.3.1-r2.ebuild:
+  Various patches from James Rowe <jnrowe@ukfsn.org>; bug #82915.
 
   21 Apr 2005; Simon Stelling <blubb@gentoo.org> qemacs-0.3.1.ebuild:
   stable on amd64
