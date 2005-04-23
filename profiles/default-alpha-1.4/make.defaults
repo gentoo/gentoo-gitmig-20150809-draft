@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-alpha-1.4/make.defaults,v 1.16 2005/03/09 00:35:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-alpha-1.4/make.defaults,v 1.17 2005/04/23 03:40:13 jstubbs Exp $
 
 USE="
 alpha
@@ -54,3 +54,9 @@ zlib
 
 ARCH="alpha"
 ACCEPT_KEYWORDS="alpha"
+
+# Env vars to expand into USE vars. Modifying this requires prior
+# discussion on gentoo-dev@gentoo.org. Flat profiles also need to
+# be updated appropriately.
+USE_EXPAND="VIDEO_CARDS INPUT_DEVICES LINGUAS"
+

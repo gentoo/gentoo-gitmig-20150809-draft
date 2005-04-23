@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-sparc-1.4/make.defaults,v 1.20 2005/03/09 00:35:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-sparc-1.4/make.defaults,v 1.21 2005/04/23 03:40:14 jstubbs Exp $
 # System-wide defaults for the Portage system
 
 ARCH="sparc"
@@ -29,4 +29,9 @@ USE="arts berkdb bitmap-fonts crypt cups fortran fbcon font-server foomaticdb gd
 # mmx, 3dnow, sse, svga, gpm,  
 
 ACCEPT_KEYWORDS="sparc"
+
+# Env vars to expand into USE vars. Modifying this requires prior
+# discussion on gentoo-dev@gentoo.org. Flat profiles also need to
+# be updated appropriately.
+USE_EXPAND="VIDEO_CARDS INPUT_DEVICES LINGUAS"
 

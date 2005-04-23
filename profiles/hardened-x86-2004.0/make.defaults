@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened-x86-2004.0/make.defaults,v 1.9 2005/01/12 22:49:19 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened-x86-2004.0/make.defaults,v 1.10 2005/04/23 03:40:14 jstubbs Exp $
 
 GRP_STAGE23_USE="x86 berkdb crypt readline nls ssl tcpd zlib pam pic pie hardened"
 
@@ -32,4 +32,9 @@ ACCEPT_KEYWORDS="x86"
 
 FEATURES="sandbox sfperms strict"
 #FEATURES="sandbox sfperms strict userpriv usersandbox"
+
+# Env vars to expand into USE vars. Modifying this requires prior
+# discussion on gentoo-dev@gentoo.org. Flat profiles also need to
+# be updated appropriately.
+USE_EXPAND="VIDEO_CARDS INPUT_DEVICES LINGUAS"
 

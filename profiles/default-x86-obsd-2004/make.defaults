@@ -25,3 +25,8 @@ CC="gcc"
 CXX="g++"
 USERLAND="BSD"
 
+# Env vars to expand into USE vars. Modifying this requires prior
+# discussion on gentoo-dev@gentoo.org. Flat profiles also need to
+# be updated appropriately.
+USE_EXPAND="VIDEO_CARDS INPUT_DEVICES LINGUAS"
+

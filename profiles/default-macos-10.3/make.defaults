@@ -15,3 +15,9 @@ USE=""
 PLATFORM=$CHOST
 
 FETCHCOMMAND="/usr/bin/curl --connect-timeout 15 -# -o \${DISTDIR}/\${FILE} \${URI}"
+
+# Env vars to expand into USE vars. Modifying this requires prior
+# discussion on gentoo-dev@gentoo.org. Flat profiles also need to
+# be updated appropriately.
+USE_EXPAND="VIDEO_CARDS INPUT_DEVICES LINGUAS"
+

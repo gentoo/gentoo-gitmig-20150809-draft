@@ -30,3 +30,9 @@ ACCEPT_KEYWORDS="mips ~mips"
 #export LDEMULATION=elf32btsmipn32
 #export GNUTARGET=elf32-ntradbigmips
 #EXTRA_ECONF="--libdir=/usr/lib32"
+
+# Env vars to expand into USE vars. Modifying this requires prior
+# discussion on gentoo-dev@gentoo.org. Flat profiles also need to
+# be updated appropriately.
+USE_EXPAND="VIDEO_CARDS INPUT_DEVICES LINGUAS"
+
