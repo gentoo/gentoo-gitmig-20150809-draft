@@ -1,6 +1,6 @@
-# ChangeLog for net-misc/linksys-tftp
+# ChangeLog for net-ftp/linksys-tftp
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/linksys-tftp/ChangeLog,v 1.1 2005/04/23 04:44:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/linksys-tftp/ChangeLog,v 1.2 2005/04/23 13:03:21 swegener Exp $
 
   05 Nov 2004; Travis Tilley <lv@gentoo.org> linksys-tftp-1.2.1.ebuild:
   added ~amd64 keyword
