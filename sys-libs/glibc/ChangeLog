@@ -1,6 +1,15 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.338 2005/04/13 20:51:22 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.339 2005/04/23 17:44:31 azarah Exp $
+
+*glibc-2.3.5.20050421 (23 Apr 2005)
+
+  23 Apr 2005; Martin Schlemmer <azarah@gentoo.org>
+  +glibc-2.3.5.20050421.ebuild:
+  CVS update for gcc-4.0.0 testing.  Added 5090_all_stubs-rule-fix.patch
+  to patches to fix:
+  
+    http://sources.redhat.com/ml/libc-alpha/2005-04/msg00098.html
 
   13 Apr 2005; Luca Barbato <lu_zero@gentoo.org> glibc-2.3.5.ebuild:
   Marked ~ppc
