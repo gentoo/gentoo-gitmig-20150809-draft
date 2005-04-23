@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 cb17334b88ce5b0f00d487805aef7efd ChangeLog 745
+MD5 4ffc64ca3afd05788de74f7f41d8ed65 ChangeLog 952
 MD5 f4d91f7617ad4c2a053060b0105e726d metadata.xml 549
+MD5 d9e51850c7088e04196c98321606bf73 selinux-ucspi-tcp-20050316.ebuild 405
 MD5 6d2ebc45bf4e9df44541ac5a8915361c selinux-ucspi-tcp-20041211.ebuild 401
-MD5 d735c57aafc6052c2994e9af07ee3760 selinux-ucspi-tcp-20041111.ebuild 401
+MD5 56328a8a5a770aaff2bf878513e95a68 files/digest-selinux-ucspi-tcp-20050316 76
 MD5 e8f3cc9a60eb09190f15cd32b5100cfa files/digest-selinux-ucspi-tcp-20041211 76
-MD5 ae5e0e5f0b8c77c03955315df16eaf80 files/digest-selinux-ucspi-tcp-20041111 76
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFB73jwGSBEIeh4AEYRAmWXAJsHJDn45hSiLk92NqrDZQt4zwGCWQCfYcAd
-NHk2FowdT6gnPDLDx40l9ow=
-=DKg/
+iD8DBQFCapYdGSBEIeh4AEYRAoR2AJ9CnIkf34u4z8nfBDwbzACijBsZrwCfT9zH
+c4O+0s/6jFZ/HeyjqNa9g5s=
+=Yz1U
 -----END PGP SIGNATURE-----
