@@ -1,0 +1,194 @@
+--- ./src/gdevpdff.h.org	2003-01-17 09:49:02.000000000 +0900
++++ ./src/gdevpdff.h	2003-09-18 23:42:38.000000000 +0900
+@@ -117,6 +117,12 @@
+     FONT_SUBSET_NO
+ } pdf_font_do_subset_t;
+ 
++typedef enum {
++    FONT_EMBED_STANDARD,	/* 14 standard fonts */
++    FONT_EMBED_NO,
++    FONT_EMBED_YES
++} pdf_font_embed_t;
++
+ struct pdf_font_descriptor_s {
+     pdf_resource_common(pdf_font_descriptor_t);
+     pdf_font_name_t FontName;
+@@ -198,6 +204,7 @@
+     gs_font *font;		/* non-0 iff font will notify us; */
+ 				/* should be a weak pointer */
+     int index;			/* in pdf_standard_fonts, -1 if not base 14 */
++    pdf_font_embed_t embed;	/* status of pdf_font_embed_status() */
+     gs_matrix orig_matrix;	/* FontMatrix of unscaled font for embedding */
+     bool is_MM_instance;	/* for Type 1/2 fonts, true iff the font */
+ 				/* is a Multiple Master instance */
+@@ -320,12 +327,6 @@
+ 
+ /* ---------------- Exported by gdevpdff.c ---------------- */
+ 
+-typedef enum {
+-    FONT_EMBED_STANDARD,	/* 14 standard fonts */
+-    FONT_EMBED_NO,
+-    FONT_EMBED_YES
+-} pdf_font_embed_t;
+-
+ typedef struct pdf_standard_font_s {
+     const char *fname;
+     gs_encoding_index_t base_encoding;
+--- ./src/gdevpdff.c.org	2003-01-17 09:49:02.000000000 +0900
++++ ./src/gdevpdff.c	2003-09-21 05:08:36.000000000 +0900
+@@ -276,6 +276,11 @@
+     const byte *chars = font->font_name.chars;
+     uint size = font->font_name.size;
+ 
++    /* CIDFonts has null string in font_name, key_name is used */
++    if (0 == size) {
++	chars = font->key_name.chars;
++	size = font->key_name.size;
++    }
+     /*
+      * The behavior of Acrobat Distiller changed between 3.0 (PDF 1.2),
+      * which will never embed the base 14 fonts, and 4.0 (PDF 1.3), which
+@@ -720,19 +725,22 @@
+ 	same &= ~FONT_SAME_METRICS;
+ 	break;
+     case FONT_EMBED_NO:
+-	/*
+-	 * Per the PDF 1.3 documentation, there are only 3 BaseEncoding
+-	 * values allowed for non-embedded fonts.  Pick one here.
+-	 */
+-	BaseEncoding =
+-	    ((const gs_font_base *)base_font)->nearest_encoding_index;
+-	switch (BaseEncoding) {
+-	default:
+-	    BaseEncoding = ENCODING_INDEX_WINANSI;
+-	case ENCODING_INDEX_WINANSI:
+-	case ENCODING_INDEX_MACROMAN:
+-	case ENCODING_INDEX_MACEXPERT:
+-	    break;
++	if (!(font->FontType == ft_CID_encrypted ||
++	      font->FontType == ft_CID_TrueType)) {
++	    /*
++	     * Per the PDF 1.3 documentation, there are only 3 BaseEncoding
++	     * values allowed for non-embedded fonts.  Pick one here.
++	     */
++	    BaseEncoding =
++	        ((const gs_font_base *)base_font)->nearest_encoding_index;
++	    switch (BaseEncoding) {
++	    default:
++	        BaseEncoding = ENCODING_INDEX_WINANSI;
++	    case ENCODING_INDEX_WINANSI:
++	    case ENCODING_INDEX_MACROMAN:
++	    case ENCODING_INDEX_MACEXPERT:
++	        break;
++	    }
+ 	}
+ 	code = pdf_compute_font_descriptor(pdev, &fdesc, font, NULL);
+ 	if (code < 0)
+@@ -888,6 +896,7 @@
+ 	memcpy(ppf->widths_known, ftemp_widths_known,
+ 	       sizeof(ftemp_widths_known));
+     }
++    ppf->embed = embed;
+     code = pdf_register_font(pdev, font, ppf);
+ 
+     *pppf = ppf;
+--- ./src/gdevpdfw.c.org	2003-01-17 09:49:02.000000000 +0900
++++ ./src/gdevpdfw.c	2003-09-25 17:50:54.000000000 +0900
+@@ -348,18 +348,19 @@
+     /* Use the most common width as DW. */
+ 
+     {
+-	ushort counts[1001];
++        ushort counts[1500*2]; /* histogram of (-1500..1500) */
+ 	int dw_count = 0, i;
+ 
+ 	memset(counts, 0, sizeof(counts));
+ 	while (!psf_enumerate_glyphs_next(&genum, &glyph)) {
+-	    int width = ppf->Widths[glyph - gs_min_cid_glyph];
++	    int cid = glyph - gs_min_cid_glyph;
++	    int width = ppf->Widths[cid];
+ 
+-	    counts[min(width, countof(counts) - 1)]++;
++	    counts[max(0,min(width+countof(counts)/2,countof(counts)-1))]++;
+ 	}
+-	for (i = 0; i < countof(counts); ++i)
++	for (i = 0; i < countof(counts); i++)
+ 	    if (counts[i] > dw_count)
+-		dw = i, dw_count = counts[i];
++		dw = i - countof(counts)/2, dw_count = counts[i];
+ 	if (dw != 0)
+ 	    pprintd1(s, "/DW %d\n", dw);
+     }
+@@ -496,14 +497,16 @@
+ 	if (pdf_has_subset_prefix(chars, size))
+ 	    chars += SUBSET_PREFIX_SIZE, size -= SUBSET_PREFIX_SIZE;
+ 	pdf_put_name(pdev, chars, size);
+-	if (pef->sub_font_type == ft_CID_encrypted &&
++	if ((pef->sub_font_type == ft_CID_encrypted ||
++	     pef->sub_font_type == ft_CID_TrueType) &&
+ 	    pef->cmapname[0] == '/'
+ 	    ) {
+ 	    stream_putc(s, '-');
+ 	    pdf_put_name_chars(pdev, (const byte*) (pef->cmapname + 1),
+ 			       strlen(pef->cmapname + 1));
+ 	}
+-	pprints1(s, "/Encoding %s", pef->cmapname);
++	pprints1(s, (pef->cmapname[0] == '/') ? "/Encoding%s" : "/Encoding %s",
++		 pef->cmapname);
+ 	pprintld1(s, "/DescendantFonts[%ld 0 R]",
+ 		pdf_resource_id((const pdf_resource_t *)pef->DescendantFont));
+ 	write_Widths = 0;
+@@ -563,8 +566,10 @@
+ 	break;
+     case -1:
+ 	pdf_write_CIDFont_widths(pdev, pef);
+-	if (pef->FontType == ft_CID_TrueType)
+-	    pdf_write_CIDToGIDMap(pdev, pef, &cidmap_id);
++	if (pef->FontType == ft_CID_TrueType) {
++	    if (pef->embed != FONT_EMBED_NO)
++	        pdf_write_CIDToGIDMap(pdev, pef, &cidmap_id);
++	}
+ 	break;
+     }
+     if (pef->Differences) {
+--- ./src/gdevpdfs.c.org	2003-09-20 00:11:16.000000000 +0900
++++ ./src/gdevpdfs.c	2003-09-25 17:44:10.000000000 +0900
+@@ -481,15 +481,21 @@
+ 
+ 	    if (cid < pfd->chars_count) {
+ 		int index = cid >> 3, mask = 0x80 >> (cid & 7);
++		int gid;
++
++		if (!(pfd->chars_used.data[index] & mask) ||
++		    !(psubf->widths_known[index] & mask)) {
+ 
+-		if (!(pfd->chars_used.data[index] & mask)) {
+-		    pfd->chars_used.data[index] |= mask;
+ 		    if (psubf->CIDToGIDMap) {
+ 			gs_font_cid2 *const subfont2 =
+ 			    (gs_font_cid2 *)subfont;
+-			int gid =
+-			    subfont2->cidata.CIDMap_proc(subfont2, glyph);
+ 
++			gid = subfont2->cidata.CIDMap_proc(subfont2, glyph);
++		    }
++		}
++		if (!(pfd->chars_used.data[index] & mask)) {
++		    pfd->chars_used.data[index] |= mask;
++		    if (psubf->CIDToGIDMap) {
+ 			if (gid >= 0) {
+ 			    psubf->CIDToGIDMap[cid] = gid;
+ 			    mark_glyphs_used(subfont, gid + gs_min_cid_glyph,
+@@ -500,7 +506,11 @@
+ 		if (!(psubf->widths_known[index] & mask)) {
+ 		    int width;
+ 
+-		    code = pdf_glyph_width(psubf, glyph, subfont, &width);
++		    if (psubf->CIDToGIDMap)
++			code = pdf_glyph_width(psubf, gid + gs_min_cid_glyph,
++					       subfont, &width);
++		    else
++		        code = pdf_glyph_width(psubf, glyph, subfont, &width);
+ 		    if (code == 0) {
+ 			psubf->Widths[cid] = width;
+ 			psubf->widths_known[index] |= mask;

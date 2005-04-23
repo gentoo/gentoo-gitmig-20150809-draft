@@ -1,6 +1,18 @@
 # ChangeLog for app-text/ghostscript
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ChangeLog,v 1.104 2005/04/18 16:54:53 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ChangeLog,v 1.105 2005/04/23 14:36:34 usata Exp $
+
+*ghostscript-7.07.1-r9 (23 Apr 2005)
+
+  23 Apr 2005; Mamoru KOMACHI <usata@gentoo.org>
+  +files/ghostscript-7.07-bigposttable.patch,
+  +files/ghostscript-7.07-coverage-glyphcount.patch,
+  +files/ghostscript-7.07-fix_cidfontname_Encoding_CIDToGIDMap_DW_W.patch,
+  +files/ghostscript-7.07-fix_rename_font_gs_cidfn.ps.patch,
+  +files/gs7.07.1-cjk.diff, +files/ghostscript-7.07-gsublookuptable.patch,
+  +ghostscript-7.07.1-r9.ebuild:
+  Removed problematic entries from CIDFnmap.CJK. Added patches for better CJK
+  handling. This closes bug #90009.
 
   18 Apr 2005; Michael Hanselmann <hansmi@gentoo.org>
   ghostscript-7.07.1-r8.ebuild:

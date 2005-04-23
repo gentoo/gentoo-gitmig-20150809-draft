@@ -1,0 +1,172 @@
+diff -urN espgs-7.07.1/lib/CIDFnmap espgs-7.07.1.patched/lib/CIDFnmap
+--- espgs-7.07.1/lib/CIDFnmap	2002-04-23 20:58:33.000000000 +0900
++++ espgs-7.07.1.patched/lib/CIDFnmap	2005-04-23 22:27:11.000000000 +0900
+@@ -135,14 +135,14 @@
+ % in particular, you must leave at least one space or tab between each
+ % field in the entry.  
+ 
+-%(CIDFnmap.Ore) .runlibfile
+-%(CIDFnmap.ARP) .runlibfile
+-%(CIDFnmap.Bae) .runlibfile
+-%(CIDFnmap.Koc) .runlibfile
++(CIDFnmap.Ore) .runlibfile
++(CIDFnmap.ARP) .runlibfile
++(CIDFnmap.Bae) .runlibfile
++(CIDFnmap.Koc) .runlibfile
+ %(CIDFnmap.Sol) .runlibfile
+ %(CIDFnmap.Win) .runlibfile
+ 
+-%(CIDFnmap.CJK) .runlibfile
++(CIDFnmap.CJK) .runlibfile
+ 
+ % native CIDFontName (BIG5) in traditional Chinese
+ %(CIDFnmap.b5) .runlibfile
+diff -urN espgs-7.07.1/lib/CIDFnmap.CJK espgs-7.07.1.patched/lib/CIDFnmap.CJK
+--- espgs-7.07.1/lib/CIDFnmap.CJK	2002-04-23 20:58:33.000000000 +0900
++++ espgs-7.07.1.patched/lib/CIDFnmap.CJK	2005-04-23 22:28:56.000000000 +0900
+@@ -24,51 +24,51 @@
+ % Fallback aliases for CJK PDF files
+ %
+ %/Adobe-CNS1		/MOESung-Regular	; % CIDFnmap.Ore
+-%/Adobe-CNS1		/ShanHeiSun-Light	; % CIDFnmap.ARP
++/Adobe-CNS1		/ShanHeiSun-Light	; % CIDFnmap.ARP
+ %/Adobe-CNS1		/ming			; % CIDFnmap.Sol
+ %/Adobe-CNS1		/MingLiU		; % CIDFnmap.Win
+ %/Adobe-CNS1		/SimSun-18030-Adobe-CNS1	; % CIDFnmap.Win
+ 
+-%/Adobe-GB1		/BousungEG-Light-GB	; % CIDFnmap.ARP
++/Adobe-GB1		/BousungEG-Light-GB	; % CIDFnmap.ARP
+ %/Adobe-GB1		/zycjksun		; % CIDFnmap.Sol
+ %/Adobe-GB1		/SimSun			; % CIDFnmap.Win
+ 
+ %/Adobe-Japan1		/WadaMin-Regular	; % CIDFnmap.Ore
+ %/Adobe-Japan1		/HG-MinchoL		; % CIDFnmap.Sol
+-%/Adobe-Japan1		/Kochi-Mincho		; % CIDFnmap.Koc
++/Adobe-Japan1		/Kochi-Mincho		; % CIDFnmap.Koc
+ %/Adobe-Japan1		/MS-Mincho		; % CIDFnmap.Win
+ 
+-%/Adobe-Japan2		/WadaMin-RegularH	; % CIDFnmap.Ore
++/Adobe-Japan2		/WadaMin-RegularH	; % CIDFnmap.Ore
+ %/Adobe-Japan2		/HeiseiMin-W3H		; % CIDFnmap.Sol
+ %/Adobe-Japan2		/MS-Mincho-Adobe-Japan2		; % CIDFnmap.Win
+ 
+ %/Adobe-Korea1		/Munhwa-Regular		; % CIDFnmap.Ore
+-%/Adobe-Korea1		/Baekmuk-Batang		; % CIDFnmap.Bae
++/Adobe-Korea1		/Baekmuk-Batang		; % CIDFnmap.Bae
+ %/Adobe-Korea1		/Myeongjo		; % CIDFnmap.Sol
+ %/Adobe-Korea1		/Batang			; % CIDFnmap.Win
+ 
+ %
+ % Convenient aliases for PS files on Traditional Chinese PostScript printer
+ %
+-%/MSung-Light		/MOESung-Regular	; % CIDFnmap.Ore
++/MSung-Light		/MOESung-Regular	; % CIDFnmap.Ore
+ %/MSung-Light		/SimSun-18030-Adobe-CNS1	; % CIDFnmap.Win
+-%/MSung-Medium		/ShanHeiSun-Light	; % CIDFnmap.ARP
+-%/MHei-Medium		/ShanHeiSun-Light	; % CIDFnmap.ARP
++/MSung-Medium		/ShanHeiSun-Light	; % CIDFnmap.ARP
++/MHei-Medium		/ShanHeiSun-Light	; % CIDFnmap.ARP
+ %/MHei-Medium		/hei			; % CIDFnmap.Sol
+-%/MKai-Medium		/ZenKai-Medium		; % CIDFnmap.ARP
++/MKai-Medium		/ZenKai-Medium		; % CIDFnmap.ARP
+ %/MKai-Medium		/kai			; % CIDFnmap.Sol
+ 
+ %
+ % Convenient aliases for PS files on Simplified Chinese PostScript printer
+ %
+-%/STSong-Light		/BousungEG-Light-GB	; % CIDFnmap.ARP
++/STSong-Light		/BousungEG-Light-GB	; % CIDFnmap.ARP
+ %/STSong-Light		/zycjksun		; % CIDFnmap.Sol
+ %/STSong-Light		/SimSun			; % CIDFnmap.Win
+ %/STFangsong-Light	/zycjkfangs		; % CIDFnmap.Sol
+ %/STFangsong-Light	/SimSun			; % CIDFnmap.Win
+ %/STHeiti-Regular	/zycjkhei		; % CIDFnmap.Sol
+ %/STHeiti-Regular	/SimHei			; % CIDFnmap.Win
+-%/STKaiti-Regular	/GBZenKai-Medium	; % CIDFnmap.ARP
++/STKaiti-Regular	/GBZenKai-Medium	; % CIDFnmap.ARP
+ %/STKaiti-Regular	/zycjkkai		; % CIDFnmap.Sol
+ 
+ %
+@@ -76,18 +76,18 @@
+ %
+ %/Ryumin-Light		/WadaMin-Regular	; % CIDFnmap.Ore
+ %/Ryumin-Light		/HG-MinchoL		; % CIDFnmap.Sol
+-%/Ryumin-Light		/Kochi-Mincho		; % CIDFnmap.Koc
++/Ryumin-Light		/Kochi-Mincho		; % CIDFnmap.Koc
+ %/Ryumin-Light		/MS-Mincho		; % CIDFnmap.Win
+ %/GothicBBB-Medium	/WadaGo-Bold		; % CIDFnmap.Ore
+ %/GothicBBB-Medium	/HG-GothicB		; % CIDFnmap.Sol
+-%/GothicBBB-Medium	/Kochi-Gothic		; % CIDFnmap.Koc
++/GothicBBB-Medium	/Kochi-Gothic		; % CIDFnmap.Koc
+ %/GothicBBB-Medium	/MS-Gothic		; % CIDFnmap.Win
+ %/HeiseiMin-W3		/MS-Mincho		; % CIDFnmap.Win
+ %/HeiseiKakuGo-W5	/MS-Gothic		; % CIDFnmap.Win
+ 
+-%/HeiseiMin-W3H		/WadaMin-RegularH	; % CIDFnmap.Ore
++/HeiseiMin-W3H		/WadaMin-RegularH	; % CIDFnmap.Ore
+ %/HeiseiMin-W3H		/MS-Mincho-Adobe-Japan2	; % CIDFnmap.Win
+-%/HeiseiKakuGo-W5H	/WadaMaruGo-RegularH	; % CIDFnmap.Ore
++/HeiseiKakuGo-W5H	/WadaMaruGo-RegularH	; % CIDFnmap.Ore
+ %/HeiseiKakuGo-W5H	/MS-Gothic-Adobe-Japan2	; % CIDFnmap.Win
+ 
+ %/KozMin-Regular	/MS-Mincho		; % CIDFnmap.Win
+@@ -97,17 +97,17 @@
+ % Convenient aliases for PS files on Korean PostScript printer
+ %
+ %/HYGoThic-Medium	/MunhwaGothic-Regular	; % CIDFnmap.Ore
+-%/HYGoThic-Medium	/Baekmuk-Dotum		; % CIDFnmap.Bae
++/HYGoThic-Medium	/Baekmuk-Dotum		; % CIDFnmap.Bae
+ %/HYGoThic-Medium	/Gothic			; % CIDFnmap.Sol
+ %/HYGoThic-Medium	/Dotum			; % CIDFnmap.Win
+ %/HYGungSo-Bold		/Gungsuh		; % CIDFnmap.Win
+-%/HYKHeadLine-Bold	/Baekmuk-Headline	; % CIDFnmap.Bae
+-%/HYKHeadLine-Medium	/Baekmuk-Headline	; % CIDFnmap.Bae
++/HYKHeadLine-Bold	/Baekmuk-Headline	; % CIDFnmap.Bae
++/HYKHeadLine-Medium	/Baekmuk-Headline	; % CIDFnmap.Bae
+ %/HYSMyeongJo-Medium	/Munhwa-Regular		; % CIDFnmap.Ore
+-%/HYSMyeongJo-Medium	/Baekmuk-Batang		; % CIDFnmap.Bae
++/HYSMyeongJo-Medium	/Baekmuk-Batang		; % CIDFnmap.Bae
+ %/HYSMyeongJo-Medium	/Myeongjo		; % CIDFnmap.Sol
+ %/HYSMyeongJo-Medium	/Batang			; % CIDFnmap.Win
+-%/HYRGoThic-Medium	/Baekmuk-Gulim		; % CIDFnmap.Bae
++/HYRGoThic-Medium	/Baekmuk-Gulim		; % CIDFnmap.Bae
+ %/HYRGoThic-Medium	/RoundedGothic		; % CIDFnmap.Sol
+ %/HYRGoThic-Medium	/Gulim			; % CIDFnmap.Win
+ 
+diff -urN espgs-7.07.1/lib/CIDFnmap.Koc espgs-7.07.1.patched/lib/CIDFnmap.Koc
+--- espgs-7.07.1/lib/CIDFnmap.Koc	2002-04-23 20:58:33.000000000 +0900
++++ espgs-7.07.1.patched/lib/CIDFnmap.Koc	2005-04-23 22:27:11.000000000 +0900
+@@ -30,8 +30,8 @@
+ %	Kochi-Mincho: Public domain, except for NAGA10 bitmap data
+ %	Kochi-Gothic: Wada Lab's font license, except for NAGA10 bitmap data
+ %
+-%/Kochi-Mincho	(kochi-mincho.ttf)	;
+-%/Kochi-Gothic	(kochi-gothic.ttf)	;
++/Kochi-Mincho	(kochi-mincho-subst.ttf)	;
++/Kochi-Gothic	(kochi-gothic-subst.ttf)	;
+ %
+ % Notice: In CID-keyed space of Kochi-Mincho, although you may find that
+ % CIDs 7611,7613-7625,7629,7630,11847,12041-12043 are incorrectly
+@@ -45,6 +45,6 @@
+ %	Kochi-Mincho: Public domain. Designed by Yasuyuki Furukawa.
+ %	Kochi-Gothic: Wada Lab's font license.
+ %
+-/Kochi-Mincho	(Kochi-Mincho)	;
+-/Kochi-Gothic	(Kochi-Gothic)	;
++%/Kochi-Mincho	(Kochi-Mincho)	;
++%/Kochi-Gothic	(Kochi-Gothic)	;
+ 
+diff -urN espgs-7.07.1/lib/gs_res.ps.in espgs-7.07.1.patched/lib/gs_res.ps.in
+--- espgs-7.07.1/lib/gs_res.ps.in	2002-10-05 01:35:24.000000000 +0900
++++ espgs-7.07.1.patched/lib/gs_res.ps.in	2005-04-23 22:27:11.000000000 +0900
+@@ -245,8 +245,8 @@
+   /pssystemparams 10 dict readonly def
+ } if
+ pssystemparams begin
+-  /FontResourceDir (@datadir@/ghostscript/fonts/) readonly .forcedef	% pssys'params is r-o
+-  /GenericResourceDir (@datadir@/ghostscript/) readonly .forcedef	% pssys'params is r-o
++  /FontResourceDir (@datadir@/ghostscript/Resource/Font/) readonly .forcedef	% pssys'params is r-o
++  /GenericResourceDir (@datadir@/ghostscript/Resource/) readonly .forcedef	% pssys'params is r-o
+   /GenericResourcePathSep (/) readonly .forcedef	% pssys'params is r-o
+ end
+ end
