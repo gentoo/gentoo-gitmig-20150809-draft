@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.17 2005/04/23 03:40:10 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.18 2005/04/23 10:29:51 liquidx Exp $
 #
 # Author: Alastair Tse <liquidx@gentoo.org>
 #
@@ -21,6 +21,22 @@ inherit alternatives
 
 ECLASS="python"
 INHERITED="$INHERITED $ECLASS"
+
+
+__python_eclass_test() {
+	__python_version_extract 2.3
+	echo -n "2.3 -> PYVER: $PYVER PYVER_MAJOR: $PYVER_MAJOR"
+	echo " PYVER_MINOR: $PYVER_MINOR PYVER_MICRO: $PYVER_MICRO"
+	__python_version_extract 2.3.4
+	echo -n "2.3.4 -> PYVER: $PYVER PYVER_MAJOR: $PYVER_MAJOR"
+	echo " PYVER_MINOR: $PYVER_MINOR PYVER_MICRO: $PYVER_MICRO"
+	__python_version_extract 2.3.5
+	echo -n "2.3.5 -> PYVER: $PYVER PYVER_MAJOR: $PYVER_MAJOR"
+	echo " PYVER_MINOR: $PYVER_MINOR PYVER_MICRO: $PYVER_MICRO"
+	__python_version_extract 2.4
+	echo -n "2.4 -> PYVER: $PYVER PYVER_MAJOR: $PYVER_MAJOR"
+	echo " PYVER_MINOR: $PYVER_MINOR PYVER_MICRO: $PYVER_MICRO"
+}
 
 #
 # name:   python_disable/enable_pyc
@@ -45,15 +61,21 @@ python_disable_pyc
 # desc:   run without arguments and it will export the version of python
 #         currently in use as $PYVER
 #
+
+__python_version_extract() {
+	verstr=$1
+	export PYVER_MAJOR=${verstr:0:1}
+	export PYVER_MINOR=${verstr:2:1}
+	export PYVER_MICRO=${verstr:4}
+	export PYVER="${PYVER_MAJOR}.${PYVER_MINOR}"	
+}
+
 python_version() {
 	local tmpstr
 	python=${python:-/usr/bin/python}
 	tmpstr="$(${python} -V 2>&1 )"
 	export PYVER_ALL="${tmpstr#Python }"
-	export PYVER_MAJOR=$(echo ${PYVER_ALL} | cut -d. -f1)
-	export PYVER_MINOR=$(echo ${PYVER_ALL} | cut -d. -f2)
-	export PYVER_MICRO=$(echo ${PYVER_ALL} | cut -d. -f3-)
-	export PYVER="${PYVER_MAJOR}.${PYVER_MINOR}"
+	__python_version_extract $PYVER_ALL
 }
 
 #
