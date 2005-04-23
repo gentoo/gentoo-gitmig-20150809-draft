@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 fd97f2dcb6d470c7f8b91870f570ed90 idnkit-1.0.ebuild 635
-MD5 8d3b39a3a85a31d6faa1a560c5cb23f5 ChangeLog 567
+MD5 54f42ac17f227904420baa99dfe75b88 idnkit-1.0.ebuild 756
+MD5 40a87a92def6f9a5f7e87abbd74ec3be ChangeLog 660
 MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
 MD5 f4b16764d0d170b15f5440741a20c45a files/digest-idnkit-1.0 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCZYAIV3J2n04EauwRAqucAKCQ8RTs6hWk7PUSqJIXL0pzeh3nGwCeP6A8
-um/yygfYPEw8cReEnClEgao=
-=lSdb
------END PGP SIGNATURE-----
