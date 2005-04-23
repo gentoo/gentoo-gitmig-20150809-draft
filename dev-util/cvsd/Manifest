@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 a91c8abd271d9610537e53c5628f7286 cvsd-1.0.2.ebuild 1104
 MD5 a8a049e9a05d19114cb396aa248fc095 cvsd-1.0.6.ebuild 1105
 MD5 165ec4909140f61291c97970acaf38db cvsd-1.0.3.ebuild 1104
@@ -7,3 +10,10 @@ MD5 1895b0d094b69acb00b56334067416b3 files/digest-cvsd-1.0.2 62
 MD5 44d4ac75b42c79116333e9ba5562e821 files/digest-cvsd-1.0.3 62
 MD5 82bccee1b9707bed0c806347028e80ba files/digest-cvsd-1.0.6 62
 MD5 99100bc796c1afe0cc7887b61038020b files/cvsd.rc6 477
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCaaI9EZCkKN40op4RAjepAKCts4145symil0Hg2vcWZzrbHVUTACgk3so
+h3V1PNSzDyW5ZBdojKbt1d4=
+=u4Z2
+-----END PGP SIGNATURE-----
