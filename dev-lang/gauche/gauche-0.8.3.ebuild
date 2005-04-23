@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gauche/gauche-0.8.3.ebuild,v 1.3 2005/04/01 04:00:35 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gauche/gauche-0.8.3.ebuild,v 1.4 2005/04/23 12:39:20 hattya Exp $
 
 inherit eutils flag-o-matic
 
@@ -25,6 +25,7 @@ src_unpack() {
 
 	cd ${S}
 	epatch ${FILESDIR}/${PN}-gdbm-gentoo.diff
+	epatch ${FILESDIR}/${PN}-aclocal.m4-1.31.diff
 	autoconf
 
 }
