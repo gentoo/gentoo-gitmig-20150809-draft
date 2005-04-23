@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.16 2005/04/20 15:43:37 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.17 2005/04/23 03:40:10 pythonhead Exp $
 #
 # Author: Alastair Tse <liquidx@gentoo.org>
 #
@@ -50,11 +50,10 @@ python_version() {
 	python=${python:-/usr/bin/python}
 	tmpstr="$(${python} -V 2>&1 )"
 	export PYVER_ALL="${tmpstr#Python }"
-
-	export PYVER="${PYVER_ALL%.*}"
-	export PYVER_MAJOR="${PYVER%.*}"
-	export PYVER_MINOR="${PYVER##*.}"
-	export PYVER_MICRO="${PYVER_ALL##*.}"
+	export PYVER_MAJOR=$(echo ${PYVER_ALL} | cut -d. -f1)
+	export PYVER_MINOR=$(echo ${PYVER_ALL} | cut -d. -f2)
+	export PYVER_MICRO=$(echo ${PYVER_ALL} | cut -d. -f3-)
+	export PYVER="${PYVER_MAJOR}.${PYVER_MINOR}"
 }
 
 #
