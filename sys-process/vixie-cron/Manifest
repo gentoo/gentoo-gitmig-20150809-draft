@@ -2,10 +2,10 @@
 Hash: SHA1
 
 MD5 da21751a527096452e591d8defac6026 vixie-cron-3.0.1-r4.ebuild 2024
-MD5 2765deb8b6de6400f80ee268ee4dbb35 vixie-cron-4.1-r7.ebuild 2673
+MD5 a57f3a3ce591d7fdfc483e4025d5a355 vixie-cron-4.1-r7.ebuild 2672
 MD5 09e2d4607c603eb1bedaceaa87bf92c6 vixie-cron-4.1-r4.ebuild 3300
 MD5 af45391149f90c6a9a7fca422e349727 vixie-cron-3.0.1-r5.ebuild 2208
-MD5 cc31b255187daf707d10c32941bd8e67 ChangeLog 13578
+MD5 e7965ca54d34cbabdfbf6082d174bcc6 ChangeLog 13678
 MD5 a4991c2bfe4f49dce6571193f07709a5 vixie-cron-4.1-r6.ebuild 2673
 MD5 0fcc78652b11c683f3fe76d614934379 metadata.xml 288
 MD5 2d67e6c187ebd062179a892d79466462 files/vixie-cron-4.1-cron.deny 220
@@ -27,9 +27,9 @@ MD5 b806ca293a6934a3965a063ec2fe0381 files/digest-vixie-cron-4.1-r6 143
 MD5 97c19ba5204c68115a2648856e685c0c files/digest-vixie-cron-4.1-r7 143
 MD5 1915f29deae7e87c569877f1dbbbec67 files/vixie-cron-3.0.1-selinux.diff.bz2 1853
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCOA/EEZCkKN40op4RAlqgAJ951KUQ11Bnod0DmSoV8H/NyQCpzwCeIGOL
-ZAVD+uHJM3QSarFgVNpshDA=
-=Z3sH
+iD8DBQFCam9UEZCkKN40op4RAra7AJ95fdtXeebAiwZOObySmyfR5cML7QCgk8PT
+k7iB4denDucLCQudTHrEWJQ=
+=e4Ul
 -----END PGP SIGNATURE-----
