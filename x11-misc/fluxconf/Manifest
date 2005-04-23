@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 4714b986014c3d4bf59dd60f08a38172 fluxconf-0.9.8.ebuild 747
+MD5 31c2a90346b938a0ad153ac66ac26ee3 fluxconf-0.9.8.ebuild 746
 MD5 f37accbdbef4b274aa557b5feb45960f fluxconf-0.9.7.ebuild 743
 MD5 a3596f828adaf84e313bbf625ad90be5 fluxconf-0.9.4.ebuild 779
-MD5 e71b9cd8baa446f2570f224b3adc10d4 ChangeLog 3146
+MD5 8996d4d5afa5d7d6eb2ffea0d77699b9 ChangeLog 3243
 MD5 22e52109947a82d41fad666ffc135b75 metadata.xml 243
 MD5 d56bde29e40d1f281eaf6f5ce458798c files/digest-fluxconf-0.9.4 66
 MD5 c9e8e7a1e8bd21c5236b64a73137f74f files/digest-fluxconf-0.9.7 66
 MD5 bc9d203a583f0fabf48d27fb76ca615c files/digest-fluxconf-0.9.8 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCRAidEZCkKN40op4RAtVWAKCTia5Quia1jhe0MAYqRlO3mgXXLwCfdr4F
-HqWLzRJkU5Sf8W7isxmM+vA=
-=OWKb
------END PGP SIGNATURE-----
