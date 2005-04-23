@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>no-herd</herd>
+
+<!-- portage lacks a herd.  correct this when we have one. -->
+
+<maintainer>
+  <email>dev-portage@gentoo.org</email>
+  <description>Primary contact</description>
+</maintainer>
+<maintainer>
+  <email>azarah@gentoo.org</email>
+  <description>Sandbox guru extraordinare</description>
+</maintainer>
+</pkgmetadata>

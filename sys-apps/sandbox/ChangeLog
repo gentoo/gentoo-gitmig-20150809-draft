@@ -1,0 +1,9 @@
+# ChangeLog for <CATEGORY>/<PACKAGE_NAME>
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sandbox/ChangeLog,v 1.1 2005/04/23 07:26:14 ferringb Exp $
+
+*sandbox-1.2 (Apr 23 2005)
+
+  23 Apr 2005; Brian Harring <ferringb@gentoo.org>; sandbox-1.2.ebuild
+  Initial import of cvs head sandbox code.  Multilib portion of it 
+  could stand testing.
