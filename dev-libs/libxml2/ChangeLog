@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libxml2
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/ChangeLog,v 1.113 2005/04/21 05:56:54 kito Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/ChangeLog,v 1.114 2005/04/23 18:42:30 azarah Exp $
+
+*libxml2-2.6.19 (23 Apr 2005)
+
+  23 Apr 2005; Martin Schlemmer <azarah@gentoo.org> +libxml2-2.6.19.ebuild:
+  Update version (mainly for gcc4 support).
 
   21 Apr 2005; Kito <kito@gentoo.org> libxml2-2.6.18.ebuild:
   ~ppc-macos keyword
