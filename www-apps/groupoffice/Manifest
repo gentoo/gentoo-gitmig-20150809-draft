@@ -1,7 +1,8 @@
-MD5 7ec0f838956dd234dc506ce475bd3626 ChangeLog 3733
+MD5 d9896f34dca2ac2d792763943b1dc17a ChangeLog 3891
 MD5 b04a05402ef560925b9358f13db57899 groupoffice-2.02.ebuild 1865
 MD5 ed5cc77434c59133d35e0c4714a5df57 groupoffice-2.04.ebuild 1864
 MD5 db3d765f32e22da52b933016fc38d493 groupoffice-2.10.ebuild 955
+MD5 9af82c8e056682b507eaf5e9ff95011a groupoffice-2.12.ebuild 956
 MD5 c339473e0ff43da76eb2f2607c441921 metadata.xml 280
 MD5 e9f8498d6bf6f5a848e20729343f85cb groupoffice-2.09.ebuild 955
 MD5 b417702e37814a93777fe92611ab3123 groupoffice-2.11a.ebuild 956
@@ -11,3 +12,5 @@ MD5 4de08382716b125fc1a27a1d5f6bb70b files/digest-groupoffice-2.09 73
 MD5 f26fd7d079d2d1b897e210d725f3f4e1 files/digest-groupoffice-2.10 73
 MD5 252288f5d0f5b81c836d57317005d1b7 files/postinstall-en.txt 403
 MD5 fb7074ba1a64d6bcecd6d5a55683497e files/digest-groupoffice-2.11a 74
+MD5 2ffc086e706637a4b29e375e2417a83b files/digest-groupoffice-2.12 73
+MD5 3317ef53fbef6909ac0bc88df8885842 files/postinstall2-en.txt 686
