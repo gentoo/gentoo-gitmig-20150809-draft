@@ -1,6 +1,13 @@
 # ChangeLog for app-text/gocr
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gocr/ChangeLog,v 1.23 2005/01/01 16:17:01 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gocr/ChangeLog,v 1.24 2005/04/23 15:29:16 usata Exp $
+
+*gocr-0.40 (23 Apr 2005)
+
+  23 Apr 2005; Mamoru KOMACHI <usata@gentoo.org>
+  -files/gocr-0.3.6-gentoo.diff, -gocr-0.3.6-r3.ebuild, -gocr-0.37.ebuild,
+  +gocr-0.40.ebuild:
+  Version bumped; bug #88736.
 
   19 Oct 2004; Dylan Carlson <absinthe@gentoo.org> gocr-0.39.ebuild:
   Stable on amd64.
