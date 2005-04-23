@@ -1,6 +1,11 @@
 # ChangeLog for dev-tcltk/otcl
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/otcl/ChangeLog,v 1.16 2005/04/03 13:47:58 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/otcl/ChangeLog,v 1.17 2005/04/23 22:44:36 matsuu Exp $
+
+  23 Apr 2005; MATSUU Takuto <matsuu@gentoo.org> -otcl-1.8-r1.ebuild,
+  -otcl-1.8-r2.ebuild, otcl-1.9.ebuild:
+  Fixed parallel make problem, Bug 90149.
+  Removed old versions.
 
 *otcl-1.9 (03 Apr 2005)
 

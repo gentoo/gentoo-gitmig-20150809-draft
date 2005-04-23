@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/otcl/otcl-1.9.ebuild,v 1.1 2005/04/03 13:47:58 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/otcl/otcl-1.9.ebuild,v 1.2 2005/04/23 22:44:36 matsuu Exp $
 
 inherit eutils
 
@@ -15,6 +15,8 @@ IUSE=""
 
 DEPEND=">=dev-lang/tcl-8.3.2
 	>=dev-lang/tk-8.3.2"
+
+MAKEOPTS="${MAKEOPTS} -j1"
 
 src_unpack() {
 	unpack ${A}
