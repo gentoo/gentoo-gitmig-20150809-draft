@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/kile
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/kile/ChangeLog,v 1.50 2005/03/05 13:19:55 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/kile/ChangeLog,v 1.51 2005/04/23 16:46:09 usata Exp $
+
+*kile-1.8_beta2 (23 Apr 2005)
+
+  23 Apr 2005; Mamoru KOMACHI <usata@gentoo.org> +kile-1.8_beta2.ebuild:
+  Version bumped. This closes bug #88737.
 
   05 Mar 2005; Gregorio Guidi <greg_g@gentoo.org> -kile-1.6.3.ebuild,
   kile-1.7.1.ebuild:
