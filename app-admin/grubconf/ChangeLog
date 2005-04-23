@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/grubconf
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/grubconf/ChangeLog,v 1.9 2005/04/03 18:12:50 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/grubconf/ChangeLog,v 1.10 2005/04/23 21:30:08 wormo Exp $
+
+  23 Apr 2005; Stephanie Lockwood-Childs <wormo@gentoo.org>
+  grubconf-0.4.ebuild, grubconf-0.5.1.ebuild, grubconf-0.5.ebuild:
+  marked -ppc
 
   03 Apr 2005; Simon Stelling <blubb@gentoo.org> grubconf-0.5.1.ebuild:
   added ~amd64
