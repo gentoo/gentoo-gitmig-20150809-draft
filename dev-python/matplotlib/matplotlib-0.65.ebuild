@@ -1,13 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/matplotlib-0.65.ebuild,v 1.3 2005/02/11 22:05:23 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/matplotlib-0.65.ebuild,v 1.4 2005/04/23 12:56:07 kloeri Exp $
 
 inherit distutils virtualx
 
 DESCRIPTION="matplotlib is a pure python plotting library designed to bring publication quality plotting to python with a syntax familiar to matlab users."
 HOMEPAGE="http://matplotlib.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
-RESTRICT="nomirror"
 
 IUSE="doc gtk"
 SLOT="0"

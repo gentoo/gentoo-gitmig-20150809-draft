@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pychecker
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pychecker/ChangeLog,v 1.21 2004/12/30 23:01:58 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pychecker/ChangeLog,v 1.22 2005/04/23 12:59:35 kloeri Exp $
+
+  23 Apr 2005; Bryan Østergaard <kloeri@gentoo.org>
+  pychecker-0.8.14.ebuild:
+  Remove RESTRICT="nomirror".
 
   30 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
