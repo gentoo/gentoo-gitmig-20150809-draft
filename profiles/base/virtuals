@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/virtuals,v 1.57 2005/04/18 11:06:19 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/virtuals,v 1.58 2005/04/23 03:37:40 solar Exp $
 
 # This file describes the packages that by default satisfy a certain virtual
 # That this file exists in the base profile implies that these packages will
@@ -11,6 +11,7 @@
 virtual/alsa				media-sound/alsa-driver
 virtual/antivirus			app-antivirus/clamav
 virtual/aspell-dict			app-dicts/aspell-en
+virtual/baselayout			sys-apps/baselayout
 virtual/bittorrent			net-p2p/bittorrent
 virtual/blackbox			x11-wm/blackbox
 virtual/blas				sci-libs/blas-atlas
@@ -75,4 +76,3 @@ virtual/winkernel			sys-kernel/win4lin-sources
 virtual/x11					x11-base/xorg-x11
 virtual/xemacs				app-editors/xemacs
 virtual/xft					x11-base/xorg-x11
-virtual/baselayout			sys-apps/baselayout
