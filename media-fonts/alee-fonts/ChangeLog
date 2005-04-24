@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/alee-fonts
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/alee-fonts/ChangeLog,v 1.5 2005/02/05 06:57:56 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/alee-fonts/ChangeLog,v 1.6 2005/04/24 15:40:13 flameeyes Exp $
+
+  24 Apr 2005; Diego Pettenò <flameeyes@gentoo.org> alee-fonts-4.1.ebuild:
+  Marked ~amd64.
 
 *alee-fonts-4.1 (05 Feb 2005)
 

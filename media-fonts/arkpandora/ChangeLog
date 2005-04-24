@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/arkpandora
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/arkpandora/ChangeLog,v 1.3 2004/12/14 16:43:50 corsair Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/arkpandora/ChangeLog,v 1.4 2005/04/24 15:42:23 flameeyes Exp $
+
+  24 Apr 2005; Diego Pettenò <flameeyes@gentoo.org> arkpandora-2.04.ebuild:
+  Marked ~amd64.
 
   14 Dec 2004; Markus Rothe <corsair@gentoo.org> arkpandora-2.04.ebuild:
   Stable on ppc64
