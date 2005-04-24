@@ -1,15 +1,15 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/digest-base/digest-base-1.05.ebuild,v 1.16 2004/10/16 23:57:25 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/digest-base/digest-base-1.05.ebuild,v 1.17 2005/04/24 14:12:04 mcummings Exp $
 
 inherit perl-module
 
 MY_P=Digest-${PV}
 S=${WORKDIR}/${MY_P}
 
-DESCRIPTION="MD5 message digest algorithm"
-HOMEPAGE="http://http://www.cpan.org/modules/by-authors/id/G/GA/GAAS/${MY_P}.readme"
-SRC_URI="http://www.cpan.org/modules/by-authors/id/G/GA/GAAS/${MY_P}.tar.gz"
+DESCRIPTION="Modules that calculate message digests"
+HOMEPAGE="http://search.cpan.org/~gaas/${MY_P}/"
+SRC_URI="mirror://cpan/authors/id/G/GA/GAAS/${MY_P}.tar.gz"
 
 LICENSE="|| ( Artistic GPL-2 )"
 SLOT="0"
