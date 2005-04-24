@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/popt/popt-1.7-r1.ebuild,v 1.19 2005/02/21 05:04:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/popt/popt-1.7-r1.ebuild,v 1.20 2005/04/24 05:44:22 kito Exp $
 
-inherit libtool eutils
+inherit libtool eutils flag-o-matic
 
 DESCRIPTION="Parse Options - Command line parser"
 HOMEPAGE="http://www.rpm.org/"
@@ -23,6 +23,7 @@ src_unpack() {
 }
 
 src_compile() {
+	use ppc-macos && append-ldflags -undefined dynamic_lookup
 	econf $(use_enable nls) || die
 	emake || die "emake failed"
 }
