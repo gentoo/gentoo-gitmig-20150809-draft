@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tinycobol/tinycobol-0.61.ebuild,v 1.6 2004/06/24 22:58:14 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tinycobol/tinycobol-0.61.ebuild,v 1.7 2005/04/24 12:35:36 hansmi Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/tiny-cobol/${P}.tar.gz"
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
 IUSE=""
-KEYWORDS="x86 ~ppc"
+KEYWORDS="x86 ppc"
 
 DEPEND=">=dev-libs/glib-2.0
 	sys-libs/db"

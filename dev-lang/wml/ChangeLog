@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/wml
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/wml/ChangeLog,v 1.16 2005/02/07 17:44:02 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/wml/ChangeLog,v 1.17 2005/04/24 12:36:36 hansmi Exp $
+
+  24 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> wml-2.0.9.ebuild:
+  Stable on ppc.
 
   07 Feb 2005; Simon Stelling <blubb@gentoo.org> wml-2.0.9.ebuild:
   added ~amd64
