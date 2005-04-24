@@ -1,18 +1,18 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test/Test-1.25.ebuild,v 1.7 2005/04/11 00:16:46 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test/Test-1.25.ebuild,v 1.8 2005/04/24 09:28:02 vapier Exp $
 
 inherit perl-module
 
 DESCRIPTION="Utilities for writing test scripts"
-SRC_URI="mirror://cpan/authors/id/S/SB/SBURKE/${P}.tar.gz"
 HOMEPAGE="http://www.cpan.org/modules/by-authors/Test/${P}.readme"
-IUSE=""
-SLOT="0"
-LICENSE="|| ( Artistic GPL-2 )"
-KEYWORDS="x86 amd64 ~alpha ~hppa ~mips ppc sparc ~ppc64"
+SRC_URI="mirror://cpan/authors/id/S/SB/SBURKE/${P}.tar.gz"
 
-SRC_TEST="do"
+LICENSE="|| ( Artistic GPL-2 )"
+SLOT="0"
+KEYWORDS="~alpha amd64 arm hppa ia64 ~mips ppc ~ppc64 s390 sparc x86"
+IUSE=""
 
 DEPEND="dev-perl/Test-Harness"
 
+SRC_TEST="do"
