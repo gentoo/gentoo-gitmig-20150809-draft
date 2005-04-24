@@ -2430,3 +2430,69 @@ diff -urp linux-2.6.10/include/linux/if_ppp.h linux-2.6.10-gentoo/include/linux/
  /* This should work for both 32 and 64 bit userland. */
  struct ethtool_cmd {
  	__u32	    cmd;
+diff -ur linux-2.6.11/include/asm-ia64/bitops.h linux-2.6.11-gentoo/include/asm-ia64/bitops.h
+--- linux-2.6.11/include/asm-ia64/bitops.h	2005-04-24 13:56:27.000000000 -0500
++++ linux-2.6.11-gentoo/include/asm-ia64/bitops.h	2005-04-24 13:48:38.120189000 -0500
+@@ -311,8 +311,6 @@
+ 	return result;
+ }
+ 
+-#ifdef __KERNEL__
+-
+ /*
+  * find_last_zero_bit - find the last zero bit in a 64 bit quantity
+  * @x: The value to search
+@@ -341,6 +339,8 @@
+  */
+ #define ffs(x)	__builtin_ffs(x)
+ 
++#ifdef __KERNEL__
++
+ /*
+  * hweightN: returns the hamming weight (i.e. the number
+  * of bits set) of a N-bit word
+diff -ur linux-2.6.11/include/asm-ia64/page.h linux-2.6.11-gentoo/include/asm-ia64/page.h
+--- linux-2.6.11/include/asm-ia64/page.h	2005-04-24 13:56:27.000000000 -0500
++++ linux-2.6.11-gentoo/include/asm-ia64/page.h	2005-04-24 13:46:03.891675000 -0500
+@@ -109,6 +109,8 @@
+ #define page_to_phys(page)	(page_to_pfn(page) << PAGE_SHIFT)
+ #define virt_to_page(kaddr)	pfn_to_page(__pa(kaddr) >> PAGE_SHIFT)
+ 
++#endif /* __KERNEL__ */
++
+ typedef union ia64_va {
+ 	struct {
+ 		unsigned long off : 61;		/* intra-region offset */
+@@ -130,6 +132,8 @@
+ #define REGION_NUMBER(x)	({ia64_va _v; _v.l = (long) (x); _v.f.reg;})
+ #define REGION_OFFSET(x)	({ia64_va _v; _v.l = (long) (x); _v.f.off;})
+ 
++#ifdef __KERNEL__
++
+ #define REGION_SIZE		REGION_NUMBER(1)
+ #define REGION_KERNEL		7
+ 
+diff -ur linux-2.6.11/include/asm-ia64/processor.h linux-2.6.11-gentoo/include/asm-ia64/processor.h
+--- linux-2.6.11/include/asm-ia64/processor.h	2005-04-24 13:56:27.000000000 -0500
++++ linux-2.6.11-gentoo/include/asm-ia64/processor.h	2005-04-24 13:53:40.383857000 -0500
+@@ -351,7 +353,7 @@
+  * do_basic_setup() and the timing is such that free_initmem() has
+  * been called already.
+  */
+-extern pid_t kernel_thread (int (*fn)(void *), void *arg, unsigned long flags);
++extern __kernel_pid_t kernel_thread (int (*fn)(void *), void *arg, unsigned long flags);
+ 
+ /* Get wait channel for task P.  */
+ extern unsigned long get_wchan (struct task_struct *p);
+diff -ur linux-2.6.11/include/asm-ia64/thread_info.h linux-2.6.11-gentoo/include/asm-ia64/thread_info.h
+--- linux-2.6.11/include/asm-ia64/thread_info.h	2005-04-24 13:56:27.000000000 -0500
++++ linux-2.6.11-gentoo/include/asm-ia64/thread_info.h	2005-04-24 13:54:00.893623000 -0500
+@@ -32,7 +32,7 @@
+ 		int code;
+ 		void __user *addr;
+ 		unsigned long start_time;
+-		pid_t pid;
++		__kernel_pid_t pid;
+ 	} sigdelayed;			/* Saved information for TIF_SIGDELAYED */
+ };
+ 
