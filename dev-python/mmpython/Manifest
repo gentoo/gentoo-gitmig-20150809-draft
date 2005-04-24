@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 4393956902af510ece23760d583b0bb5 ChangeLog 3002
+MD5 ae5e30c576934d391200e0e6d716870f ChangeLog 3092
 MD5 ae750297e34c9a0c4929184c72684260 metadata.xml 181
+MD5 57b2b6a0fa9c9cfe0a3ac430357ebf68 mmpython-0.4.7.ebuild 561
 MD5 9db51e255f9e3f2b4fd0a20136dd4ded mmpython-0.4.8.ebuild 562
-MD5 708495600920ec34c4b5d47483dcc4d9 mmpython-0.4.7.ebuild 561
-MD5 287823425bfb710ec6983e0e337a13f1 files/digest-mmpython-0.4.8 66
 MD5 84dd4700bcfc22c0b2169ebdd61e74a0 files/digest-mmpython-0.4.7 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCXrv5Kf2g/qXtneoRAjQ1AKCc0fhQWJ0ILQhI6TffyIBzoG55RACgqNBZ
-0OMIvkTZGIhPuqGAdbOjZ1A=
-=lQ9X
------END PGP SIGNATURE-----
+MD5 287823425bfb710ec6983e0e337a13f1 files/digest-mmpython-0.4.8 66
