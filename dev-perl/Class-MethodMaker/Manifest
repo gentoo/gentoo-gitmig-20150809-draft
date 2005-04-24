@@ -1,12 +1,16 @@
-MD5 3a12fdab9a8e0bc5657a6f71e9210ff0 Class-MethodMaker-2.05.ebuild 931
-MD5 c3906a462f3e92f442550ed7884c79d7 Class-MethodMaker-1.11.ebuild 538
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 8e7ace92670359de10b0bdf4cfebef84 ChangeLog 2742
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 241d26510c5a820b098dc0dd741de68d Class-MethodMaker-1.10.ebuild 514
-MD5 c8bc10900e356220ba134e1b219dde5a ChangeLog 2467
-MD5 d37b7c02cd417873641ec89ecb2fa0c8 Class-MethodMaker-1.08.ebuild 512
-MD5 6676ac22337b99de7c702b962e87d56b Class-MethodMaker-2.02.ebuild 544
+MD5 c3906a462f3e92f442550ed7884c79d7 Class-MethodMaker-1.11.ebuild 538
+MD5 ba3b690b3a6657c19898db4fdc52d4d3 Class-MethodMaker-2.07.ebuild 554
+MD5 8e850cd4da47af44dddb828b7d3f430e files/digest-Class-MethodMaker-2.07 73
 MD5 a2a1bcd1e4774ec6755462b1bc3795c2 files/digest-Class-MethodMaker-1.11 73
-MD5 b8c317ee192203633cb8e0634d749343 files/digest-Class-MethodMaker-1.10 73
-MD5 715bdadfc61331089c4e0c4969f6073e files/digest-Class-MethodMaker-2.05 73
-MD5 9e1c38162a91f8f66972a39f5fee00ca files/digest-Class-MethodMaker-1.08 73
-MD5 61c3ef15f761396251b0b8379337f543 files/digest-Class-MethodMaker-2.02 73
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCa9QWtG5z4I8BtQoRAuIQAJ9lwrME4sL3KwDzCs1pzINhddUU1gCcCFvC
+zDiPb4sOVN51GDiY2exlsy0=
+=vFqv
+-----END PGP SIGNATURE-----
