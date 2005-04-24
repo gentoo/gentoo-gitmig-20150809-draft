@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/watchdog
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/watchdog/ChangeLog,v 1.10 2005/01/01 11:34:17 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/watchdog/ChangeLog,v 1.11 2005/04/24 02:56:58 hansmi Exp $
+
+  24 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> watchdog-5.2.4.ebuild:
+  Stable on ppc.
 
   31 Aug 2004; David Holm <dholm@gentoo.org> watchdog-5.2.4.ebuild:
   Added to ~ppc.
