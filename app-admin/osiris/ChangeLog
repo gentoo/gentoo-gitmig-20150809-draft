@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/osiris
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/osiris/ChangeLog,v 1.9 2005/04/24 02:07:11 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/osiris/ChangeLog,v 1.10 2005/04/24 02:25:45 wormo Exp $
+
+*osiris-1.5.2-r1 (23 Apr 2005)
+
+  23 Apr 2005; Stephanie Lockwood-Childs <wormo@gentoo.org>
+  +osiris-1.5.2-r1.ebuild:
+  add doc useflag to install manual and example configs
 
   23 Apr 2005; Stephanie Lockwood-Childs <wormo@gentoo.org>
   osiris-1.5.2.ebuild:
