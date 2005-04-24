@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/laptop-mode-tools/laptop-mode-tools-1.04-r1.ebuild,v 1.1 2005/03/25 19:05:33 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/laptop-mode-tools/laptop-mode-tools-1.04-r1.ebuild,v 1.2 2005/04/24 16:11:18 brix Exp $
 
 inherit linux-info
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.xs4all.nl/~bsamwel/laptop_mode/tools/downloads/${MY_P}.tar.g
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 IUSE="acpi apm"
 
