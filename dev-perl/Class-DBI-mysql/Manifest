@@ -1,4 +1,14 @@
-MD5 9a08f2af7f9156d618928095936bd78f Class-DBI-mysql-0.23.ebuild 645
-MD5 07f3999e316e65ead61c615ed1a5e00f ChangeLog 613
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 f05adb5b2542cef72aa8f51b9a917ae8 ChangeLog 709
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 8e1e1461dc2a216c38b485754c34ae64 Class-DBI-mysql-0.23.ebuild 631
 MD5 335a45f8f36f5eb6adf9d648e90f6776 files/digest-Class-DBI-mysql-0.23 70
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCa8G5tG5z4I8BtQoRAmvFAJ4suUH6SNbVBoFCS1rTj63AGxjhbQCdEfd1
+COz1MSxawLj+Qtlj6TaK+3I=
+=gGk1
+-----END PGP SIGNATURE-----
