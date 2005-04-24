@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libmnote
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmnote/ChangeLog,v 1.5 2004/06/24 23:12:01 agriffis Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmnote/ChangeLog,v 1.6 2005/04/24 03:11:34 hansmi Exp $
+
+  24 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> libmnote-0.5.6.ebuild:
+  Stable on ppc.
 
   25 Apr 2004; Aron Griffis <agriffis@gentoo.org> libmnote-0.5.6.ebuild:
   Add die following econf for bug 48950
