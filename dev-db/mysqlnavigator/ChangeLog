@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/mysqlnavigator
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysqlnavigator/ChangeLog,v 1.13 2005/04/18 20:22:08 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysqlnavigator/ChangeLog,v 1.14 2005/04/24 12:26:55 hansmi Exp $
+
+  24 Apr 2005; Michael Hanselmann <hansmi@gentoo.org>
+  mysqlnavigator-1.4.1.ebuild:
+  Stable on ppc.
 
   18 Apr 2005; Jan Brinkmann <luckyduck@gentoo.org>
   mysqlnavigator-1.4.2.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/hk_classes/hk_classes-0.7.1.ebuild,v 1.5 2005/04/21 20:43:08 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/hk_classes/hk_classes-0.7.1.ebuild,v 1.6 2005/04/24 12:25:07 hansmi Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/hk-classes/${P}.tar.bz2
 
 SLOT="0"
 LICENSE="LGPL-2"
-KEYWORDS="x86 ~ppc amd64"
+KEYWORDS="x86 ppc amd64"
 IUSE="mysql postgres sqlite odbc doc"
 
 # At least one of the following is required
