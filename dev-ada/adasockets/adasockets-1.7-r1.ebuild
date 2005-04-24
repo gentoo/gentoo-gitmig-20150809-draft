@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/adasockets/adasockets-1.7-r1.ebuild,v 1.11 2005/02/23 16:16:30 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/adasockets/adasockets-1.7-r1.ebuild,v 1.12 2005/04/24 03:27:02 hansmi Exp $
 
 inherit gnat
 
@@ -14,7 +14,7 @@ DEPEND="<dev-lang/gnat-3.41
 RDEPEND=""
 SLOT="0"
 IUSE=""
-KEYWORDS="x86 ~ppc"
+KEYWORDS="x86 ppc"
 
 src_compile() {
 	econf --libdir=/usr/lib/ada/adalib \

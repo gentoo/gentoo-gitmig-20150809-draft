@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/adabindx/adabindx-0.7.2-r1.ebuild,v 1.1 2005/02/23 17:36:44 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/adabindx/adabindx-0.7.2-r1.ebuild,v 1.2 2005/04/24 03:30:34 hansmi Exp $
 #
 
 inherit eutils gnat
@@ -14,7 +14,7 @@ DEPEND=">=dev-lang/gnat-3.14p
 	virtual/x11
 	>=sys-apps/sed-4"
 RDEPEND=""
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ppc"
 SLOT="0"
 IUSE=""
 

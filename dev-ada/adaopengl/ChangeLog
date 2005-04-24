@@ -1,6 +1,9 @@
 # ChangeLog for dev-ada/adaopengl
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/adaopengl/ChangeLog,v 1.7 2005/01/01 17:22:56 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/adaopengl/ChangeLog,v 1.8 2005/04/24 03:30:31 hansmi Exp $
+
+  24 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> adaopengl-0.12.ebuild:
+  Stable on ppc.
 
   12 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> adaopengl-0.12.ebuild:
   Removing S=
