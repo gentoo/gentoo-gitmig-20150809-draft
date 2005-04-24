@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/lcms
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lcms/ChangeLog,v 1.38 2005/03/25 10:12:33 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lcms/ChangeLog,v 1.39 2005/04/24 18:10:40 azarah Exp $
+
+*lcms-1.13-r1 (24 Apr 2005)
+
+  24 Apr 2005; Martin Schlemmer <azarah@gentoo.org> +lcms-1.13-r1.ebuild:
+  We need to run libtoolize first, _then_ aclocal, else the macro and
+  ltmain.sh versions mismatch.
 
   25 Mar 2005; Hardave Riar <hardave@gentoo.org> lcms-1.13.ebuild:
   Stable on mips.
