@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/arp-sk
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arp-sk/ChangeLog,v 1.5 2005/02/25 12:24:20 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arp-sk/ChangeLog,v 1.6 2005/04/24 22:44:41 vanquirius Exp $
+
+  24 Apr 2005; Marcelo Goes <vanquirius@gentoo.org> -arp-sk-0.0.15.ebuild:
+  Removing old ebuild.
 
   25 Feb 2005; Aaron Walker <ka0ttic@gentoo.org> arp-sk-0.0.16.ebuild:
   Marked stable on x86.
