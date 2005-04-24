@@ -1,29 +1,24 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.2.5-r2.ebuild,v 1.1 2005/04/17 12:32:57 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.2.5-r2.ebuild,v 1.2 2005/04/24 09:21:10 vapier Exp $
 
-inherit eutils gnuconfig libtool
-
-IUSE="ssl ipv6 doc dlz postgres berkdb bind-mysql mysql odbc ldap selinux \
-	idn threads"
+inherit eutils libtool
 
 DESCRIPTION="BIND - Berkeley Internet Name Domain - Name Server"
+HOMEPAGE="http://www.isc.org/products/BIND/bind9.html"
 SRC_URI="ftp://ftp.isc.org/isc/bind9/${PV}/${P}.tar.gz
 	dlz? ( http://dev.gentoo.org/~voxus/dlz/dlz-${PV}.patch.bz2 )"
-HOMEPAGE="http://www.isc.org/products/BIND/bind9.html"
-
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~amd64 ~ppc64 ~mips"
 
 LICENSE="as-is"
 SLOT="0"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
+IUSE="ssl ipv6 doc dlz postgres berkdb bind-mysql mysql odbc ldap selinux idn threads"
 
 DEPEND="sys-apps/groff
 	sys-devel/autoconf
-	>=sys-apps/sed-4
 	ssl? ( >=dev-libs/openssl-0.9.6g )
 	mysql? ( >=dev-db/mysql-4 )
 	ldap? ( net-nds/openldap )"
-
 RDEPEND="${DEPEND}
 	selinux? ( sec-policy/selinux-bind )"
 
@@ -57,8 +52,6 @@ src_unpack() {
 
 	cp ${FILESDIR}/named.rc6 ${T}
 	cd ${T} && epatch ${FILESDIR}/named.rc6-smart_pid_fix
-
-	gnuconfig_update
 
 	# it should be installed by bind-tools
 	sed "s:nsupdate ::g" ${S}/bin/Makefile.in > ${T}/Makefile

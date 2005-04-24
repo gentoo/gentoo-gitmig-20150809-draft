@@ -1,32 +1,27 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.2.5.ebuild,v 1.10 2005/04/13 12:15:38 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.2.5.ebuild,v 1.11 2005/04/24 09:21:10 vapier Exp $
 
-inherit eutils gnuconfig libtool
-
-IUSE="ssl ipv6 doc dlz postgres berkdb bind-mysql mysql odbc ldap selinux \
-	idn caps"
+inherit eutils libtool
 
 DLZ_VER=0.7.0
 DESCRIPTION="BIND - Berkeley Internet Name Domain - Name Server"
+HOMEPAGE="http://www.isc.org/products/BIND/bind9.html"
 SRC_URI="ftp://ftp.isc.org/isc/bind9/${PV}/${P}.tar.gz
 	dlz? ( http://dev.gentoo.org/~voxus/dlz/dlz-${PV}.patch.bz2 )"
 #	dlz? ( mirror://sourceforge/bind-dlz/DLZ-${DLZ_VER}.tar.gz )"
-HOMEPAGE="http://www.isc.org/products/BIND/bind9.html"
-
-# this ebuild contains the very untested dlz extension, hard-masking it for now
-KEYWORDS="x86 ppc sparc alpha hppa amd64 ~ppc64 ~mips"
 
 LICENSE="as-is"
 SLOT="0"
+# this ebuild contains the very untested dlz extension, hard-masking it for now
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sparc x86"
+IUSE="ssl ipv6 doc dlz postgres berkdb bind-mysql mysql odbc ldap selinux idn caps"
 
 DEPEND="sys-apps/groff
 	sys-devel/autoconf
-	>=sys-apps/sed-4
 	ssl? ( >=dev-libs/openssl-0.9.6g )
 	mysql? ( >=dev-db/mysql-4 )
 	ldap? ( net-nds/openldap )"
-
 RDEPEND="${DEPEND}
 	selinux? ( sec-policy/selinux-bind )"
 
@@ -60,8 +55,6 @@ src_unpack() {
 
 	cp ${FILESDIR}/named.rc6 ${T}
 	cd ${T} && epatch ${FILESDIR}/named.rc6-pid_fix
-
-	gnuconfig_update
 
 	# it should be installed by bind-tools
 	sed "s:nsupdate ::g" ${S}/bin/Makefile.in > ${T}/Makefile
