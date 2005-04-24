@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/xpm
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xpm/ChangeLog,v 1.14 2005/04/04 18:56:25 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xpm/ChangeLog,v 1.15 2005/04/24 10:13:17 hansmi Exp $
+
+  24 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> xpm-3.4k-r2.ebuild:
+  Stable on ppc.
 
   04 Apr 2005; Jan Brinkmann <luckyduck@gentoo.org> xpm-3.4k-r2.ebuild:
   added ~amd64 to KEYWORDS, fixes #87861
