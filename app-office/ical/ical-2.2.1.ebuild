@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/ical/ical-2.2.1.ebuild,v 1.12 2005/01/01 15:34:12 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/ical/ical-2.2.1.ebuild,v 1.13 2005/04/24 11:26:22 hansmi Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SRC_URI="http://helios.dii.utk.edu/ftp/pub/tcl/apps/ical/${MY_P}.tar.bz2
 
 LICENSE="as-is GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="x86 ppc"
 IUSE=""
 
 RDEPEND="dev-lang/tcl

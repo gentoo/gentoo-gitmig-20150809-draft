@@ -1,6 +1,9 @@
 # ChangeLog for app-office/indeview
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/indeview/ChangeLog,v 1.8 2005/04/12 23:28:57 kanaka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/indeview/ChangeLog,v 1.9 2005/04/24 11:26:54 hansmi Exp $
+
+  24 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> indeview-0.6.6.ebuild:
+  Stable on ppc.
 
 *indeview-0.6.6 (12 Apr 2005)
 
