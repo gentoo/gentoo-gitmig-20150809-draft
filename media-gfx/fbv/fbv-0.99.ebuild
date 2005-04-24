@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbv/fbv-0.99.ebuild,v 1.7 2005/01/26 20:29:54 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbv/fbv-0.99.ebuild,v 1.8 2005/04/24 06:12:17 dragonheart Exp $
 
 inherit toolchain-funcs
 
@@ -19,7 +19,7 @@ DEPEND="gif? ( media-libs/libungif )
 
 src_compile() {
 	local myconf
-
+	sed -e 's/-lungif/-lgif/g' -i Makefile -i configure
 	use png || myconf="${myconf} --without-libpng"
 	use gif || myconf="${myconf} --without-libungif"
 	use jpeg || myconf="${myconf} --without-libjpeg"
