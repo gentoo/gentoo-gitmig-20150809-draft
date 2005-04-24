@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/pyrex
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyrex/ChangeLog,v 1.31 2005/04/21 19:00:53 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyrex/ChangeLog,v 1.32 2005/04/24 19:03:31 azarah Exp $
+
+*pyrex-0.9.3-r2 (24 Apr 2005)
+
+  24 Apr 2005; Martin Schlemmer <azarah@gentoo.org>
+  +files/pyrex-0.9.2.1-gcc4.patch, +pyrex-0.9.3-r2.ebuild:
+  Support for generating gcc4 compatible code (patch from Fedora).
 
   21 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> pyrex-0.9.3-r1.ebuild:
   Stable on ppc.
