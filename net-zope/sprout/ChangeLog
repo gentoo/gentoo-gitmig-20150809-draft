@@ -1,6 +1,11 @@
 # ChangeLog for net-zope/sprout
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/sprout/ChangeLog,v 1.5 2005/03/28 15:50:35 radek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/sprout/ChangeLog,v 1.6 2005/04/24 13:00:02 radek Exp $
+
+*sprout-0.5.1 (24 Apr 2005)
+
+  24 Apr 2005; Radoslaw Stachowiak <radek@gentoo.org> +sprout-0.5.1.ebuild:
+  new version for silva-1.1.4
 
 *sprout-0.6.1 (28 Mar 2005)
 
