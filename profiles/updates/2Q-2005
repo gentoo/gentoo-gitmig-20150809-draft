@@ -38,3 +38,4 @@ move dev-perl/Text-CSV dev-perl/Text-CSV_XS
 move net-misc/kcmpureftpd net-ftp/kcmpureftpd
 move net-misc/linksys-tftp net-ftp/linksys-tftp
 move net-misc/netkit-tftp net-ftp/netkit-tftp
+move net-p2p/donkey net-p2p/edonkey
