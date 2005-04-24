@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netpipe/netpipe-1.0.0_beta2.ebuild,v 1.7 2004/10/26 14:24:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netpipe/netpipe-1.0.0_beta2.ebuild,v 1.8 2005/04/24 03:04:30 hansmi Exp $
 
 DESCRIPTION="tool to reliably distribute binary data using UDP broadcasting techniques"
 HOMEPAGE="http://home.t-online.de/home/gerd.o/netpipe.html"
@@ -8,7 +8,7 @@ SRC_URI="http://home.t-online.de/home/gerd.o/netpipe.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~ppc x86"
+KEYWORDS="ppc x86"
 IUSE=""
 
 DEPEND="virtual/libc"
