@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/frodo
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/frodo/ChangeLog,v 1.4 2005/01/01 14:12:35 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/frodo/ChangeLog,v 1.5 2005/04/24 11:12:02 hansmi Exp $
+
+  24 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> frodo-4.1.ebuild:
+  Stable on ppc.
 
   29 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> frodo-4.1.ebuild:
   IUSE; don't RDEPEND on sys-devel/autoconf
