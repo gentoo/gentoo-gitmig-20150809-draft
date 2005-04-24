@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/linux-igd
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/linux-igd/ChangeLog,v 1.8 2004/06/24 23:54:20 agriffis Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/linux-igd/ChangeLog,v 1.9 2005/04/24 02:47:59 hansmi Exp $
+
+  24 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> linux-igd-0.75.ebuild:
+  Stable on ppc.
 
   23 Mar 2004; Martin Holzer <mholzer@gentoo.org> linux-igd-0.75.ebuild,
   linux-igd-0.92.ebuild:

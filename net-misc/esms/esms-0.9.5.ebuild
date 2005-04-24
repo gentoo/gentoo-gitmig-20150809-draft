@@ -1,11 +1,11 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/esms/esms-0.9.5.ebuild,v 1.16 2004/10/14 19:51:42 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/esms/esms-0.9.5.ebuild,v 1.17 2005/04/24 02:52:47 hansmi Exp $
 
 DESCRIPTION="A small console program to send messages to spanish cellular phones"
 SRC_URI="mirror://sourceforge/esms/${P}.tar.gz"
 HOMEPAGE="http://esms.sourceforge.net"
-KEYWORDS="x86 sparc ~ppc"
+KEYWORDS="x86 sparc ppc"
 IUSE=""
 LICENSE="GPL-2"
 SLOT="0"

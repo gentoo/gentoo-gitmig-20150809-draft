@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/upnp/upnp-1.0.4-r1.ebuild,v 1.8 2004/11/06 04:26:44 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/upnp/upnp-1.0.4-r1.ebuild,v 1.9 2005/04/24 02:47:41 hansmi Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/upnp/${PN}sdk-${PV}.tar.gz"
 RESTRICT="nomirror"
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="x86 sparc ~ppc ~amd64"
+KEYWORDS="x86 sparc ppc ~amd64"
 IUSE=""
 
 DEPEND="sys-fs/e2fsprogs"

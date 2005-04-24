@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/pimpd
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pimpd/ChangeLog,v 1.8 2004/06/27 10:59:13 dholm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pimpd/ChangeLog,v 1.9 2005/04/24 02:54:08 hansmi Exp $
+
+  24 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> pimpd-0.8.ebuild:
+  Stable on ppc.
 
   27 Jun 2004; David Holm <dholm@gentoo.org> pimpd-0.8.ebuild:
   Added to ~ppc.

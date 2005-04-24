@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/httptunnel
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/httptunnel/ChangeLog,v 1.8 2004/06/26 12:13:09 dholm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/httptunnel/ChangeLog,v 1.9 2005/04/24 02:52:25 hansmi Exp $
+
+  24 Apr 2005; Michael Hanselmann <hansmi@gentoo.org>
+  httptunnel-3.0.5.ebuild:
+  Stable on ppc.
 
   26 Jun 2004; David Holm <dholm@gentoo.org> httptunnel-3.0.5.ebuild:
   Added to ~ppc.
