@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/NetPacket/NetPacket-0.03.ebuild,v 1.6 2004/06/25 00:49:03 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/NetPacket/NetPacket-0.03.ebuild,v 1.7 2005/04/24 03:08:23 hansmi Exp $
 
 inherit perl-module
 
@@ -10,4 +10,4 @@ HOMEPAGE="http://www.cpan.org/modules/by-module/NetPacket/${P}.readme"
 IUSE=""
 SLOT="0"
 LICENSE="Artistic"
-KEYWORDS="x86 amd64 ~ppc"
+KEYWORDS="x86 amd64 ppc"
