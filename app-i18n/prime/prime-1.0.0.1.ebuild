@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/prime/prime-1.0.0.1.ebuild,v 1.3 2005/04/22 16:55:26 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/prime/prime-1.0.0.1.ebuild,v 1.4 2005/04/24 16:08:01 usata Exp $
 
 inherit ruby
 
@@ -10,7 +10,7 @@ SRC_URI="http://prime.sourceforge.jp/src/${P/_/-}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ppc ~x86 ~ppc64"
+KEYWORDS="~alpha ~amd64 ~ppc x86 ~ppc64"
 IUSE="emacs"
 
 DEPEND=">=app-dicts/prime-dict-1.0.0
@@ -18,7 +18,6 @@ DEPEND=">=app-dicts/prime-dict-1.0.0
 RDEPEND="${DEPEND}
 	dev-ruby/ruby-progressbar
 	dev-ruby/sary-ruby"
-PDEPEND="emacs? ( app-emacs/prime-el )"
 
 S="${WORKDIR}/${P/_/-}"
 
