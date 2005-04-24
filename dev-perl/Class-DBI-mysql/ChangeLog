@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Class-DBI-mysql
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-DBI-mysql/ChangeLog,v 1.4 2005/01/30 02:43:03 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-DBI-mysql/ChangeLog,v 1.5 2005/04/24 15:57:29 mcummings Exp $
+
+  24 Apr 2005; Michael Cummings <mcummings@gentoo.org>
+  Class-DBI-mysql-0.23.ebuild:
+  mirror
 
   30 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org>
   Class-DBI-mysql-0.23.ebuild:
