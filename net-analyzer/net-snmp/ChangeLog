@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/net-snmp
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.96 2005/04/20 21:18:33 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.97 2005/04/24 20:15:23 ka0ttic Exp $
+
+  24 Apr 2005; Aaron Walker <ka0ttic@gentoo.org> net-snmp-5.2.1.ebuild:
+  Removed || die after make test as there are legitimate reasons it might fail
+  (user doesnt already have a working config or an improperly configured/down
+  ethernet interface). Instead, display a message to the user explaining why 1
+  or 2 failed tests is ok.
 
   20 Apr 2005; Simon Stelling <blubb@gentoo.org> net-snmp-5.2.1.ebuild:
   stable on amd64

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.2.1.ebuild,v 1.11 2005/04/20 21:18:33 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.2.1.ebuild,v 1.12 2005/04/24 20:15:23 ka0ttic Exp $
 
 inherit eutils fixheadtails perl-module
 
@@ -111,7 +111,14 @@ src_compile() {
 
 src_test() {
 	cd testing
-	make test || die "make test failed"
+	if ! make test ; then
+		echo
+		einfo "Don't be alarmed if a few tests FAIL."
+		einfo "This could happen for several reasons:"
+		einfo "    - You don't already have a working configuration."
+		einfo "    - Your ethernet interface isn't properly configured."
+		echo
+	fi
 }
 
 src_install () {
