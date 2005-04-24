@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-qtimm/scim-qtimm-0.8.5-r1.ebuild,v 1.1 2005/03/28 05:24:59 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-qtimm/scim-qtimm-0.8.5-r1.ebuild,v 1.2 2005/04/24 11:20:13 hansmi Exp $
 
 inherit kde-functions
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/scim/${P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="x86 ppc"
 IUSE="nls arts"
 
 DEPEND=">=app-i18n/scim-1.1.3

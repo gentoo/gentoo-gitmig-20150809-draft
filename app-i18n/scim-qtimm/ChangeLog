@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/scim-qtimm
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-qtimm/ChangeLog,v 1.17 2005/03/28 05:24:59 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-qtimm/ChangeLog,v 1.18 2005/04/24 11:20:13 hansmi Exp $
+
+  24 Apr 2005; Michael Hanselmann <hansmi@gentoo.org>
+  scim-qtimm-0.8.5-r1.ebuild:
+  Stable on ppc.
 
 *scim-qtimm-0.8.5-r1 (28 Mar 2005)
 

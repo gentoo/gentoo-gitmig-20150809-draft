@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/nabi
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/nabi/ChangeLog,v 1.15 2005/04/12 15:12:09 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/nabi/ChangeLog,v 1.16 2005/04/24 11:18:36 hansmi Exp $
+
+  24 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> nabi-0.13.ebuild:
+  Stable on ppc.
 
   12 Apr 2005; Jan Brinkmann <luckyduck@gentoo.org> nabi-0.13.ebuild,
   nabi-0.14.ebuild:
