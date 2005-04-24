@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/pymacs
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/pymacs/ChangeLog,v 1.7 2005/04/21 18:44:48 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/pymacs/ChangeLog,v 1.8 2005/04/24 11:04:25 hansmi Exp $
+
+  24 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> pymacs-0.22.ebuild:
+  Stable on ppc.
 
   21 Apr 2005; Simon Stelling <blubb@gentoo.org> pymacs-0.22.ebuild:
   stable on amd64

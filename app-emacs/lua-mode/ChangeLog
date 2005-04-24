@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/lua-mode
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/lua-mode/ChangeLog,v 1.8 2005/04/21 18:36:59 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/lua-mode/ChangeLog,v 1.9 2005/04/24 11:01:38 hansmi Exp $
+
+  24 Apr 2005; Michael Hanselmann <hansmi@gentoo.org>
+  lua-mode-1.26-r1.ebuild:
+  Stable on ppc.
 
   21 Apr 2005; Simon Stelling <blubb@gentoo.org> lua-mode-1.26-r1.ebuild:
   stable on amd64

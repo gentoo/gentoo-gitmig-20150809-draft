@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/w3
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/w3/ChangeLog,v 1.13 2005/04/21 18:34:55 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/w3/ChangeLog,v 1.14 2005/04/24 11:08:47 hansmi Exp $
+
+  24 Apr 2005; Michael Hanselmann <hansmi@gentoo.org>
+  w3-4.0_pre47-r1.ebuild:
+  Stable on ppc.
 
   21 Apr 2005; Simon Stelling <blubb@gentoo.org> w3-4.0_pre47-r1.ebuild:
   stable on amd64

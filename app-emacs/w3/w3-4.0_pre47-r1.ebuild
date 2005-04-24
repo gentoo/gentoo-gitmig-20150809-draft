@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/w3/w3-4.0_pre47-r1.ebuild,v 1.12 2005/04/21 18:34:55 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/w3/w3-4.0_pre47-r1.ebuild,v 1.13 2005/04/24 11:08:47 hansmi Exp $
 
 inherit elisp
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.ibiblio.org/pub/packages/editors/xemacs/emacs-w3/${P/_pre/pre
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 sparc alpha ~ppc amd64"
+KEYWORDS="x86 sparc alpha ppc amd64"
 IUSE=""
 
 DEPEND="virtual/emacs"
