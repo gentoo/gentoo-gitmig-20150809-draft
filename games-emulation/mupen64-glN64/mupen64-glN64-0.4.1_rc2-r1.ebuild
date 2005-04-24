@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64-glN64/mupen64-glN64-0.4.1_rc2-r1.ebuild,v 1.3 2005/04/17 17:10:26 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64-glN64/mupen64-glN64-0.4.1_rc2-r1.ebuild,v 1.4 2005/04/24 00:34:33 morfic Exp $
 
 inherit eutils games
 
@@ -10,27 +10,33 @@ DESCRIPTION="An OpenGL graphics plugin for the mupen64 N64 emulator"
 SRC_URI="mirror://gentoo/glN64-0.4.1-rc2.tar.bz2"
 HOMEPAGE="http://deltaanime.ath.cx/~blight/n64/"
 
-KEYWORDS="x86"
+KEYWORDS="x86 ~amd64"
 LICENSE="as-is"
 SLOT="0"
-IUSE="asm"
+IUSE="asm gtk2"
 
-RDEPEND="media-libs/libsdl"
+RDEPEND="media-libs/libsdl
+	!gtk2? ( =x11-libs/gtk+-1.2* )
+	gtk2? ( =x11-libs/gtk+-2* )"
+DEPEND="${RDEPEND}
+	gtk2? ( dev-util/pkgconfig )"
 
 src_compile () {
-	epatch ${FILESDIR}/${PN}-compile.patch || die "icompile patch failed"
-	epatch ${FILESDIR}/${PN}-gtk2.patch || die "gtk2 patch failed"
-	epatch ${FILESDIR}/${PN}-ucode.patch || die "ucode patch failed"
-	if use x86; then
-		if use asm; then
-			einfo "using x86 asm where available"
-		else
-			epatch ${FILESDIR}/${PN}-noasm.patch
-		fi
+	epatch ${FILESDIR}/${PN}-compile.patch || die "compile patch failed"
+
+	if use gtk2; then
+		epatch ${FILESDIR}/${PN}-gtk2.patch || die "gtk2 patch failed"
 	fi
 
-	sed -i -e "s:CXXFLAGS.*=\(.*\):CXXFLAGS=\1 ${CXXFLAGS}:" Makefile ||  \
-		die "couldn't apply cflags"
+	epatch ${FILESDIR}/${PN}-ucode.patch || die "ucode patch failed"
+
+	if ! use asm; then
+		epatch ${FILESDIR}/${PN}-noasm.patch
+	fi
+
+	sed -i -e "s:CXXFLAGS.*=\(.*\):CXXFLAGS=\1 -fPIC ${CXXFLAGS}:" \
+		Makefile || die "couldn't apply cflags"
+
 	make || die
 }
 

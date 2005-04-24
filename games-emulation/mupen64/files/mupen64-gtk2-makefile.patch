@@ -83,11 +83,11 @@ diff -ru work/hack_azi_rsp_hle/Makefile work.new/hack_azi_rsp_hle/Makefile
 +++ hack_azi_rsp_hle/Makefile	2005-03-21 19:28:01.000000000 +0100
 @@ -1,7 +1,7 @@
  CC = gcc
--CFLAGS = -DUSE_GTK `gtk-config --cflags` -fPIC
-+CFLAGS = -DUSE_GTK `pkg-config gtk+-2.0 --cflags` -fPIC
+-CFLAGS = -fPIC -DUSE_GTK `gtk-config --cflags`
++CFLAGS = -fPIC -DUSE_GTK `pkg-config gtk+-2.0 --cflags`
  CXX = g++
--CXXFLAGS = -DUSE_GTK `gtk-config --cflags` -fPIC
-+CXXFLAGS = -DUSE_GTK `pkg-config gtk+-2.0 --cflags` -fPIC
+-CXXFLAGS = -fPIC -DUSE_GTK `gtk-config --cflags`
++CXXFLAGS = -fPIC -DUSE_GTK `pkg-config gtk+-2.0 --cflags`
  LD = g++
  LDFLAGS =
  
@@ -117,8 +117,8 @@ diff -ru work/mupen64_sound/Makefile work.new/mupen64_sound/Makefile
 +++ mupen64_sound/Makefile	2005-03-21 19:28:58.000000000 +0100
 @@ -1,7 +1,7 @@
  CC = gcc
--CFLAGS = `gtk-config --cflags` -DUSE_GTK
-+CFLAGS = `pkg-config gtk+-2.0 --cflags` -DUSE_GTK
+-CFLAGS = -fPIC `gtk-config --cflags` -DUSE_GTK
++CFLAGS = -fPIC `pkg-config gtk+-2.0 --cflags` -DUSE_GTK
  LD = gcc
 -LDFLAGS = -shared -Wl,-Bsymbolic `gtk-config --libs` -lpthread
 +LDFLAGS = -shared -Wl,-Bsymbolic `pkg-config gtk+-2.0 --libs` -lpthread

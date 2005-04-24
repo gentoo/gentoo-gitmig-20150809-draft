@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64/mupen64-0.4-r2.ebuild,v 1.1 2005/03/25 05:42:54 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64/mupen64-0.4-r2.ebuild,v 1.2 2005/04/24 00:35:19 morfic Exp $
 
 inherit games gcc eutils libtool
 
@@ -13,7 +13,7 @@ SRC_URI="http://mupen64.emulation64.com/files/${PV}/mupen64_src-${PV}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ~amd64"
 IUSE="avi gtk2 asm"
 
 RDEPEND="sys-libs/zlib
@@ -41,16 +41,13 @@ src_unpack() {
 	use gtk2 && epatch "${FILESDIR}/${PN}-gtk2-makefile.patch"
 	use avi && epatch "${FILESDIR}/${PN}-gentoo-avi.patch"
 
-	if use x86 ; then
-		if ! use asm ; then
-			epatch "${FILESDIR}/${PN}-noasm.patch"
-		fi
+	if ! use asm ; then
+		epatch "${FILESDIR}/${PN}-noasm.patch"
 	fi
 	sed -i \
-		-e "s:CFLAGS.*=\(.*\):CFLAGS=\1 ${CFLAGS}:" \
-		-e "s:CXXFLAGS.*=\(.*\):CXXFLAGS=\1 ${CXXFLAGS}:" \
-		*/Makefile \
-		|| die "sed failed"
+		-e "s:CFLAGS.*=\(.*\):CFLAGS=\1 -fPIC ${CFLAGS}:" \
+		-e "s:CXXFLAGS.*=\(.*\):CXXFLAGS=\1 -fPIC ${CXXFLAGS}:" \
+		*/Makefile || die "sed failed"
 }
 
 src_compile() {

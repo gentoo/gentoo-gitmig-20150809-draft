@@ -1,6 +1,11 @@
 # ChangeLog for games-emulation/mupen64
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64/ChangeLog,v 1.13 2005/04/18 05:52:31 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64/ChangeLog,v 1.14 2005/04/24 00:35:19 morfic Exp $
+
+  23 Apr 2005; Daniel Goller <morfic@gentoo.org>
+  files/mupen64-gtk2-makefile.patch, files/mupen64-makefiles.patch,
+  mupen64-0.4-r2.ebuild:
+  adding amd64
 
   18 Apr 2005; Michael Sterrett <mr_bones_@gentoo.org>
   -mupen64-0.4-r1.ebuild:

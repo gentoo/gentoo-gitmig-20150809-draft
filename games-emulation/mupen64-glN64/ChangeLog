@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/mupen64-glN64
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64-glN64/ChangeLog,v 1.7 2005/04/17 17:10:26 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64-glN64/ChangeLog,v 1.8 2005/04/24 00:34:33 morfic Exp $
+
+  23 Apr 2005; Daniel Goller <morfic@gentoo.org>
+  mupen64-glN64-0.4.1_rc2-r1.ebuild:
+  adding amd64
 
   17 Apr 2005; Daniel Goller <morfic@gentoo.org>
   +files/mupen64-glN64-ucode.patch, mupen64-glN64-0.4.1_rc2-r1.ebuild:
