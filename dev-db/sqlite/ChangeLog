@@ -1,7 +1,10 @@
 # ChangeLog for dev-db/sqlite
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.82 2005/04/24 10:27:19 arj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.83 2005/04/24 14:48:05 arj Exp $
 
+  24 Apr 2005; Anders Rune Jensen <arj@gentoo.org> files/sqlite-3.2.1-data-corruption.patch:
+  Fix patch to work with cvs.
+	
 *sqlite-3.2.1-r2 (24 Apr 2005)
 
   24 Apr 2005; Anders Rune Jensen <arj@gentoo.org> +sqlite-3.2.1-r2.ebuild:

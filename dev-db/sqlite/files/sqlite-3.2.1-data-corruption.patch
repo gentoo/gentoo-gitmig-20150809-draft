@@ -12,16 +12,7 @@ diff -uNr sqlite-3.2.1/src/vdbeaux.c sqlite-3.2.1-data-fix/src/vdbeaux.c
      if( u<=127 ) return 1;
 diff -uNr sqlite-3.2.1/test/misc5.test sqlite-3.2.1-data-fix/test/misc5.test
 --- sqlite-3.2.1/test/misc5.test	2005-03-17 04:15:40.000000000 +0100
-+++ sqlite-3.2.1-data-fix/test/misc5.test	2005-04-24 12:15:06.000000000 +0200
-@@ -13,7 +13,7 @@
- # This file implements tests for miscellanous features that were
- # left out of other test files.
- #
--# $Id: sqlite-3.2.1-data-corruption.patch,v 1.1 2005/04/24 10:27:19 arj Exp $
-+# $Id: sqlite-3.2.1-data-corruption.patch,v 1.1 2005/04/24 10:27:19 arj Exp $
- 
- set testdir [file dirname $argv0]
- source $testdir/tester.tcl
++++ sqlite-3.2.1-data-fix/test/misc5.test	2005-04-24 16:45:07.000000000 +0200
 @@ -41,4 +41,399 @@
    } {}
  }
