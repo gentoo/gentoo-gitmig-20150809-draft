@@ -1,6 +1,9 @@
 # ChangeLog for app-xemacs/calendar
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/calendar/ChangeLog,v 1.8 2005/01/01 16:58:30 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/calendar/ChangeLog,v 1.9 2005/04/24 03:18:18 hansmi Exp $
+
+  24 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> calendar-1.19.ebuild:
+  Stable on ppc.
 
   16 Dec 2004; Markus Rothe <corsair@gentoo.org> calendar-1.19.ebuild:
   Stable on ppc64

@@ -1,6 +1,9 @@
 # ChangeLog for app-xemacs/calc
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/calc/ChangeLog,v 1.8 2005/01/01 16:58:17 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/calc/ChangeLog,v 1.9 2005/04/24 03:18:02 hansmi Exp $
+
+  24 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> calc-1.23.ebuild:
+  Stable on ppc.
 
   16 Dec 2004; Markus Rothe <corsair@gentoo.org> calc-1.23.ebuild:
   Stable on ppc64

@@ -1,6 +1,9 @@
 # ChangeLog for app-xemacs/cc-mode
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/cc-mode/ChangeLog,v 1.7 2005/01/01 16:58:44 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/cc-mode/ChangeLog,v 1.8 2005/04/24 03:21:46 hansmi Exp $
+
+  24 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> cc-mode-1.32.ebuild:
+  Stable on ppc.
 
   09 Aug 2004; Tom Gall <tgall@gentoo.org> cc-mode-1.32.ebuild:
   stable on ppc64, bug #57174
