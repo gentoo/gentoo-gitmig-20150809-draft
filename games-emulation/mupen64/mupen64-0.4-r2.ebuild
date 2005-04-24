@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64/mupen64-0.4-r2.ebuild,v 1.2 2005/04/24 00:35:19 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64/mupen64-0.4-r2.ebuild,v 1.3 2005/04/24 19:55:58 morfic Exp $
 
 inherit games gcc eutils libtool
 
@@ -35,14 +35,18 @@ src_unpack() {
 	unpack ${A}
 
 	cd "${S}"
-	epatch "${FILESDIR}/${PN}-makefiles.patch"
-	epatch "${FILESDIR}/${PN}-confdir.patch"
+	epatch "${FILESDIR}/${PN}-makefiles.patch" || die "patch failed"
+	epatch "${FILESDIR}/${PN}-confdir.patch" || die "patch failed"
 	# gtk2 breaks some configuration dialogs (bug 56195 #35)
-	use gtk2 && epatch "${FILESDIR}/${PN}-gtk2-makefile.patch"
-	use avi && epatch "${FILESDIR}/${PN}-gentoo-avi.patch"
+	if use gtk2; then
+		epatch "${FILESDIR}/${PN}-gtk2-makefile.patch" || die "patch failed"
+	fi
+	if use avi; then
+		epatch "${FILESDIR}/${PN}-gentoo-avi.patch" || die "patch failed"
+	fi
 
 	if ! use asm ; then
-		epatch "${FILESDIR}/${PN}-noasm.patch"
+		epatch "${FILESDIR}/${PN}-noasm.patch" || die "patch failed"
 	fi
 	sed -i \
 		-e "s:CFLAGS.*=\(.*\):CFLAGS=\1 -fPIC ${CFLAGS}:" \
