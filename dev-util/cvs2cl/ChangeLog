@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cvs2cl
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs2cl/ChangeLog,v 1.10 2004/12/10 13:07:10 ka0ttic Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs2cl/ChangeLog,v 1.11 2005/04/24 12:47:45 hansmi Exp $
+
+  24 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> cvs2cl-2.58.ebuild:
+  Stable on ppc.
 
   10 Dec 2004; Aaron Walker <ka0ttic@gentoo.org> cvs2cl-2.58.ebuild:
   Marked stable on x86.

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/cmake-2.0.5.ebuild,v 1.2 2005/03/23 12:03:06 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/cmake-2.0.5.ebuild,v 1.3 2005/04/24 12:45:33 hansmi Exp $
 
 inherit debug flag-o-matic
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.cmake.org/files/v${SHORT_PV}/${P}.tar.gz"
 
 LICENSE="CMake"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc ~alpha ~amd64"
+KEYWORDS="x86 ppc ~sparc ~alpha ~amd64"
 IUSE=""
 
 DEPEND="virtual/libc"

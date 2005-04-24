@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/astyle
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/astyle/ChangeLog,v 1.11 2004/11/08 21:36:33 kloeri Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/astyle/ChangeLog,v 1.12 2005/04/24 12:41:17 hansmi Exp $
+
+  24 Apr 2005; Michael Hanselmann <hansmi@gentoo.org>
+  astyle-1.15.3-r1.ebuild:
+  Stable on ppc.
 
   08 Nov 2004; Bryan Østergaard <kloeri@gentoo.org>
   astyle-1.15.3-r1.ebuild, astyle-1.15.3.ebuild:

@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/anjuta
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/ChangeLog,v 1.46 2005/04/20 15:15:55 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/ChangeLog,v 1.47 2005/04/24 12:40:51 hansmi Exp $
+
+  24 Apr 2005; Michael Hanselmann <hansmi@gentoo.org>
+  anjuta-1.2.2-r1.ebuild:
+  Stable on ppc.
 
   20 Apr 2005; Simon Stelling <blubb@gentoo.org> anjuta-1.2.2-r1.ebuild:
   stable on amd64

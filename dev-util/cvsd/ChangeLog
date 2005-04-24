@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cvsd
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cvsd/ChangeLog,v 1.13 2005/04/21 14:17:26 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cvsd/ChangeLog,v 1.14 2005/04/24 12:48:44 hansmi Exp $
+
+  24 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> cvsd-1.0.3.ebuild:
+  Stable on ppc.
 
 *cvsd-1.0.6 (21 Apr 2005)
 

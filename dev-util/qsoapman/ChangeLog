@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/qsoapman
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/qsoapman/ChangeLog,v 1.4 2004/09/08 12:56:36 rl03 Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qsoapman/ChangeLog,v 1.5 2005/04/24 13:06:10 hansmi Exp $
+
+  24 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> qsoapman-0.3.ebuild:
+  Stable on ppc.
 
   08 Sep 2004; Renat Lumpau <rl03@gentoo.org> metadata.xml:
   Fixed herd name

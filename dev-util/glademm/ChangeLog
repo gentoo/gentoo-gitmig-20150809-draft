@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/glademm
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/glademm/ChangeLog,v 1.22 2004/12/15 05:17:09 joem Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/glademm/ChangeLog,v 1.23 2005/04/24 12:51:38 hansmi Exp $
+
+  24 Apr 2005; Michael Hanselmann <hansmi@gentoo.org>
+  glademm-2.0.0.1.ebuild:
+  Stable on ppc.
 
 *glademm-2.6.0 (14 Dec 2004)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pmd/pmd-1.5.ebuild,v 1.7 2005/04/21 14:47:32 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pmd/pmd-1.5.ebuild,v 1.8 2005/04/24 13:05:03 hansmi Exp $
 
 inherit java-pkg
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://pmd.sourceforge.net"
 SRC_URI="mirror://sourceforge/pmd/${PN}-src-${PV}.zip"
 LICENSE="pmd"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc"
+KEYWORDS="x86 ppc ~sparc"
 IUSE="doc"
 
 DEPEND=">=virtual/jdk-1.3
