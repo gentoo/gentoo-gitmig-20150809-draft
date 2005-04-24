@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/text-autoformat/text-autoformat-1.12.ebuild,v 1.9 2005/04/22 14:31:40 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/text-autoformat/text-autoformat-1.12.ebuild,v 1.10 2005/04/24 03:20:02 hansmi Exp $
 
 inherit perl-module
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.cpan.org/modules/by-module/Text/${MY_P}.readme"
 
 SLOT="0"
 LICENSE="|| ( Artistic GPL-2 )"
-KEYWORDS="x86 amd64 ~ppc sparc alpha ~hppa ppc64"
+KEYWORDS="x86 amd64 ppc sparc alpha ~hppa ppc64"
 IUSE=""
 
 DEPEND="${DEPEND}

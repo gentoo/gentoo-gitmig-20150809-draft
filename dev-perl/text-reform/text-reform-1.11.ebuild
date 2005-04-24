@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/text-reform/text-reform-1.11.ebuild,v 1.10 2005/04/22 14:31:28 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/text-reform/text-reform-1.11.ebuild,v 1.11 2005/04/24 03:19:39 hansmi Exp $
 
 inherit perl-module
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.cpan.org/modules/by-module/Text/${MY_P}.readme"
 
 SLOT="0"
 LICENSE="|| ( Artistic GPL-2 )"
-KEYWORDS="x86 amd64 ~ppc sparc alpha ~hppa s390 ppc64"
+KEYWORDS="x86 amd64 ppc sparc alpha ~hppa s390 ppc64"
 IUSE=""
 
 DEPEND="${DEPEND}"
