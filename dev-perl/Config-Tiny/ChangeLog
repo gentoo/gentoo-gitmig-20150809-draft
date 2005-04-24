@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/Config-Tiny
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Config-Tiny/ChangeLog,v 1.8 2005/03/30 17:45:20 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Config-Tiny/ChangeLog,v 1.9 2005/04/24 21:42:44 mcummings Exp $
+
+*Config-Tiny-2.01 (24 Apr 2005)
+
+  24 Apr 2005; Michael Cummings <mcummings@gentoo.org> Config-Tiny-1.ebuild,
+  -Config-Tiny-1.6.ebuild, -Config-Tiny-2.00.ebuild,
+  +Config-Tiny-2.01.ebuild:
+  bump and cleaning
 
   30 Mar 2005; Gustavo Zacarias <gustavoz@gentoo.org> Config-Tiny-1.ebuild:
   Stable on sparc
