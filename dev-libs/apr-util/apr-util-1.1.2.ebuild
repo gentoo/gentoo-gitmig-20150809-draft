@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr-util/apr-util-1.1.2.ebuild,v 1.1 2005/04/10 21:37:05 trapni Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr-util/apr-util-1.1.2.ebuild,v 1.2 2005/04/24 08:41:30 vapier Exp $
 
 
 DESCRIPTION="Apache Portable Runtime Library"
@@ -8,19 +8,17 @@ HOMEPAGE="http://apr.apache.org/"
 SRC_URI="mirror://apache/apr/${P}.tar.gz"
 
 LICENSE="Apache-2.0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sparc ~x86"
 SLOT="1"
-
-RESTRICT="maketest"
+RESTRICT="test"
 
 IUSE="berkdb gdbm ldap"
 
-DEPEND=">=sys-apps/sed-4
-		dev-libs/expat
-		>=dev-libs/apr-1.1.0
-		berkdb? ( sys-libs/db )
-		gdbm? ( sys-libs/gdbm )
-		ldap? ( =net-nds/openldap-2* )"
+DEPEND="dev-libs/expat
+	>=dev-libs/apr-1.1.0
+	berkdb? ( sys-libs/db )
+	gdbm? ( sys-libs/gdbm )
+	ldap? ( =net-nds/openldap-2* )"
 
 src_compile() {
 	myconf=""

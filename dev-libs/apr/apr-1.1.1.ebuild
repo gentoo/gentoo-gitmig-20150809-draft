@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr/apr-1.1.1.ebuild,v 1.1 2005/04/10 21:35:44 trapni Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr/apr-1.1.1.ebuild,v 1.2 2005/04/24 08:40:42 vapier Exp $
 
 inherit flag-o-matic
 
@@ -9,12 +9,11 @@ HOMEPAGE="http://apr.apache.org/"
 SRC_URI="mirror://apache/apr/${P}.tar.gz"
 
 LICENSE="Apache-2.0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sparc ~x86"
 SLOT="1"
-
-RESTRICT="maketest"
-
 IUSE="ipv6"
+RESTRICT="test"
+
 DEPEND=">=sys-apps/sed-4"
 
 # this function shall maybe go into flag-o-matic.eclass
