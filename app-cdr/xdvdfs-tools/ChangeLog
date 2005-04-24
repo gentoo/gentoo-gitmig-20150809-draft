@@ -1,6 +1,10 @@
 # ChangeLog for app-cdr/xdvdfs-tools
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/xdvdfs-tools/ChangeLog,v 1.6 2005/04/21 17:57:45 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/xdvdfs-tools/ChangeLog,v 1.7 2005/04/24 10:45:45 hansmi Exp $
+
+  24 Apr 2005; Michael Hanselmann <hansmi@gentoo.org>
+  xdvdfs-tools-1.0.ebuild:
+  Stable on ppc.
 
   21 Apr 2005; Simon Stelling <blubb@gentoo.org> xdvdfs-tools-1.0.ebuild:
   stable on amd64
