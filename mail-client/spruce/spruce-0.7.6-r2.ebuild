@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/spruce/spruce-0.7.6-r2.ebuild,v 1.5 2004/09/01 17:21:30 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/spruce/spruce-0.7.6-r2.ebuild,v 1.6 2005/04/24 03:00:27 hansmi Exp $
 
 inherit eutils
 
@@ -20,7 +20,7 @@ RDEPEND="nls? ( sys-devel/gettext )"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc ~ppc"
+KEYWORDS="x86 sparc ppc"
 
 src_unpack() {
 	unpack ${A}
