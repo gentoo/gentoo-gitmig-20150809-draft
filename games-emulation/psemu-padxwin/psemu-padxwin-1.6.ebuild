@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/psemu-padxwin/psemu-padxwin-1.6.ebuild,v 1.4 2004/06/24 22:34:47 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/psemu-padxwin/psemu-padxwin-1.6.ebuild,v 1.5 2005/04/24 03:31:48 hansmi Exp $
 
 inherit games eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://linuzappz.pcsx.net/downloads/padXwin-${PV}.tgz"
 
 LICENSE="freedist"
 SLOT="0"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="x86 ppc"
 IUSE=""
 
 DEPEND="=x11-libs/gtk+-1*"

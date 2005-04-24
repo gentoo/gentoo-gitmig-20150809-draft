@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/psemu-padxwin
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/psemu-padxwin/ChangeLog,v 1.4 2004/06/24 22:34:47 agriffis Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/psemu-padxwin/ChangeLog,v 1.5 2005/04/24 03:31:48 hansmi Exp $
+
+  24 Apr 2005; Michael Hanselmann <hansmi@gentoo.org>
+  psemu-padxwin-1.6.ebuild:
+  Stable on ppc.
 
   13 Feb 2004; David Holm <dholm@gentoo.org> psemu-padxwin-1.6.ebuild:
   Added to ~ppc.
