@@ -1,6 +1,10 @@
 # ChangeLog for app-pda/x70talk
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/x70talk/ChangeLog,v 1.6 2005/03/10 11:54:07 chrb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/x70talk/ChangeLog,v 1.7 2005/04/24 11:30:46 hansmi Exp $
+
+  24 Apr 2005; Michael Hanselmann <hansmi@gentoo.org>
+  x70talk-0.1.4-r1.ebuild:
+  Stable on ppc.
 
 *x70talk-0.1.4-r1 (10 Mar 2005)
 
