@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gqcam/gqcam-0.9.ebuild,v 1.13 2005/01/27 02:19:43 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gqcam/gqcam-0.9.ebuild,v 1.14 2005/04/24 02:53:28 hansmi Exp $
 
 DESCRIPTION="A V4L-compatible frame grabber - works with many webcams."
 SRC_URI="http://cse.unl.edu/~cluening/gqcam/download/${P}.tar.gz"
@@ -8,7 +8,7 @@ HOMEPAGE="http://cse.unl.edu/~cluening/gqcam/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~mips amd64 ~ppc ~sparc"
+KEYWORDS="x86 ~mips amd64 ppc ~sparc"
 IUSE=""
 
 DEPEND="=x11-libs/gtk+-1.2*
