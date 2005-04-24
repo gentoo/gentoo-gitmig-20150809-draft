@@ -1,6 +1,13 @@
 # ChangeLog for sys-devel/gdb
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/ChangeLog,v 1.63 2005/04/24 06:51:40 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/ChangeLog,v 1.64 2005/04/24 18:26:17 solar Exp $
+
+*gdb-6.3-r2 (24 Apr 2005)
+
+  24 Apr 2005; <solar@gentoo.org> +files/gdb-6.3-gdbinit-stat.patch,
+  +gdb-6.3-r2.ebuild:
+  - avoid executing arbitrary .gdbinit files in pwd that are not owned by the
+  current uid or that are world writeable. sec bug #88398
 
   24 Apr 2005; Markus Rothe <corsair@gentoo.org> gdb-6.3.ebuild:
   Stable on ppc64
