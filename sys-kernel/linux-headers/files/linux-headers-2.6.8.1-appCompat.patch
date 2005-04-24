@@ -1332,10 +1332,19 @@ diff -up linux-2.6.8.1/include/linux/list.h linux-2.6.8.1-gentoo/include/linux/l
  #include <linux/stddef.h>
  #include <linux/prefetch.h>
  #include <asm/system.h>
-@@ -38,20 +36,22 @@ struct list_head {
+@@ -38,20 +36,31 @@ struct list_head {
  	(ptr)->next = (ptr); (ptr)->prev = (ptr); \
  } while (0)
  
++/**
++ * list_empty - tests whether a list is empty
++ * @head: the list to test.
++ */
++static inline int list_empty(const struct list_head *head)
++{
++       return head->next == head;
++}
++
 +#if defined(__KERNEL__) || defined(__LINUX_KEYBOARD_H)
 +
  /*
@@ -1449,6 +1458,22 @@ diff -up linux-2.6.8.1/include/linux/list.h linux-2.6.8.1-gentoo/include/linux/l
  }
  
  /**
+@@ -244,15 +244,6 @@
+ }
+ 
+ /**
+- * list_empty - tests whether a list is empty
+- * @head: the list to test.
+- */
+-static inline int list_empty(const struct list_head *head)
+-{
+-	return head->next == head;
+-}
+-
+-/**
+  * list_empty_careful - tests whether a list is
+  * empty _and_ checks that no other CPU might be
+  * in the process of still modifying either member
 @@ -506,8 +506,8 @@ static inline int hlist_empty(const stru
  
  static inline void __hlist_del(struct hlist_node *n)
