@@ -6,6 +6,7 @@ app-editors/vim-core
 app-shells/zsh
 dev-libs/libxml2
 media-libs/a52dec
+net-misc/curl
 sys-apps/diffutils
 sys-apps/grep
 sys-apps/texinfo
