@@ -2419,3 +2419,14 @@ diff -urp linux-2.6.10/include/linux/if_ppp.h linux-2.6.10-gentoo/include/linux/
  static inline __be32 __cpu_to_be32p(const __u32 *p)
  {
  	return (__force __be32)__swab32p(p);
+--- linux-2.6.8.1/include/linux/ethtool.h	2005-04-13 13:39:08.000000000 -0700
++++ linux-2.6.8.1-gentoo/include/linux/ethtool.h	2005-04-13 13:35:31.000000000 -0700
+@@ -12,6 +12,8 @@
+ #ifndef _LINUX_ETHTOOL_H
+ #define _LINUX_ETHTOOL_H
+ 
++#include <linux/types.h>
++
+ /* This should work for both 32 and 64 bit userland. */
+ struct ethtool_cmd {
+ 	__u32	    cmd;
