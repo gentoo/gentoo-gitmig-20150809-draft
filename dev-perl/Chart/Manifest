@@ -1,8 +1,14 @@
-MD5 62e793d831022fd588b92b0fbbb91ef8 ChangeLog 1885
-MD5 96c7e8fe97c9e43edff34feca04e3df9 Chart-1.0.1-r1.ebuild 618
-MD5 e03480368897317bb576d745d2e62c4a Chart-1.0.1.ebuild 616
-MD5 9ca2f705977b1dc38ec457ba56dd2125 Chart-2.3.ebuild 630
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 2ba94b1941537fc64bcae4da5a388132 ChangeLog 2021
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 93d47fb19b14464859cedcd0c4d6fa86 files/digest-Chart-1.0.1 62
-MD5 93d47fb19b14464859cedcd0c4d6fa86 files/digest-Chart-1.0.1-r1 62
+MD5 518425e36d0371072ef6f6139eff2118 Chart-2.3.ebuild 606
 MD5 b332ecaa677e5b900c2b0ac44174d9de files/digest-Chart-2.3 61
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCa73mtG5z4I8BtQoRAmlgAJ9REp1SAnzSKHC6i9s8+zzEcyzzJwCfTUXn
+ar0xdTLBcX4aO/Uk+Uj/UPI=
+=jqLA
+-----END PGP SIGNATURE-----

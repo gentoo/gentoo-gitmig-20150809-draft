@@ -1,4 +1,14 @@
-MD5 acccb820323f18a5978306800d3778b7 Class-Accessor-0.19.ebuild 513
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 c6ef5eb2575bc5f763d7f3570974e09e ChangeLog 1002
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 1f9f673ef3e12d29f1bee8857bef3d32 ChangeLog 888
+MD5 d22c88d42f0784162dc70ef38bc99d80 Class-Accessor-0.19.ebuild 503
 MD5 b874a1b2ed882cdf3d5a098c741659ec files/digest-Class-Accessor-0.19 70
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCa76GtG5z4I8BtQoRAuT6AJ9LKr4RQurFw6B0DCIEKd7TibcYdQCdGo3N
+nIZiwPxEQjiQ4DZoxHZF7nU=
+=/cPR
+-----END PGP SIGNATURE-----
