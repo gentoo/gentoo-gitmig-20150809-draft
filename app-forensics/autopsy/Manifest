@@ -1,7 +1,19 @@
-MD5 f58f5b6d6c10e522b738483180b6a5b5 ChangeLog 2529
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 49ef1d12147f27e5b4efe77f5272f0f9 autopsy-2.05.ebuild 1467
+MD5 1e9cb75bff6594262f08636ca02bdcc4 ChangeLog 2743
+MD5 20ee07270b7eadc3659cd96a982e460f metadata.xml 230
 MD5 b6757d96a074933eb2fa50ca5353000c autopsy-2.01.ebuild 1446
 MD5 5ce3933378fb75a648e578c63c258f9a autopsy-2.03.ebuild 1447
-MD5 20ee07270b7eadc3659cd96a982e460f metadata.xml 230
+MD5 424d196219996c04c7d10d0fa801e247 files/digest-autopsy-2.05 64
 MD5 28529194353399823ebc1ae197c59063 files/autopsy.pl 692
 MD5 18d57e36340f7d07de759a1cc1b6bc79 files/digest-autopsy-2.01 64
 MD5 c8f162c1a97dac665f1b5fd943c831a4 files/digest-autopsy-2.03 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCazgHmdTrptrqvGERAlSDAJ4iQgoIYYiWliDqSEzN3vTH/rQ9DQCfYCRj
+1xNaIVvGvDZ4xE6u6KT6n/U=
+=cdKU
+-----END PGP SIGNATURE-----
