@@ -1,8 +1,14 @@
-MD5 8012411389fbbfcbe99f144726374605 Config-IniFiles-2.29.ebuild 527
-MD5 5ab888e11d177432100c94c1da42ace9 ChangeLog 1085
-MD5 97d1d2b7b455b65c7ec0c1aed493b5f2 Config-IniFiles-2.29-r1.ebuild 530
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 04ffc3ebb38e76acec995529d01f71ab ChangeLog 1256
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 d76902af01d0ee1c28c550b181094449 Config-IniFiles-2.38.ebuild 535
-MD5 c91fe1fc6b1b30c16cd77499f1c3426f files/digest-Config-IniFiles-2.29-r1 71
-MD5 c91fe1fc6b1b30c16cd77499f1c3426f files/digest-Config-IniFiles-2.29 71
+MD5 32a0d17a8a8980676d922544354ac4de Config-IniFiles-2.38.ebuild 497
 MD5 af6ee84956efe7a61d91477cebbc9f76 files/digest-Config-IniFiles-2.38 71
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCbA8qtG5z4I8BtQoRAqmmAJ4/ed5NNXKkrLzjMQbROMw/H5OfogCfQU1m
+EGT3Iex0XSjCP0u+5ZOJ3/8=
+=KZbw
+-----END PGP SIGNATURE-----
