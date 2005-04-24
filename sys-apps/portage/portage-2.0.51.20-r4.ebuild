@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.51.20-r3.ebuild,v 1.2 2005/04/24 09:24:35 jstubbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.51.20-r4.ebuild,v 1.1 2005/04/24 09:40:59 jstubbs Exp $
 
 inherit toolchain-funcs
 
@@ -43,7 +43,7 @@ src_compile() {
 	cd ${S}/src
 	$(tc-getCC) ${CFLAGS} -o tbz2tool tbz2tool.c
 
-	if ! python_has_lchown; then
+	if ! use ppc-macos && ! python_has_lchown; then
 		cd ${S}/src/python-missingos
 		./setup.py build || die "Failed to build missingos module"
 	fi
@@ -68,7 +68,7 @@ src_install() {
 		newins make.conf make.conf.example
 	fi
 
-	if ! python_has_lchown; then
+	if ! use ppc-macos && ! python_has_lchown; then
 		cd ${S}/src/python-missingos
 		./setup.py install --root ${D} || die "Failed to install missingos module"
 	fi

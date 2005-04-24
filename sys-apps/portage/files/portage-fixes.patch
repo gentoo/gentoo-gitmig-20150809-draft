@@ -1,5 +1,14 @@
 --- pym/portage.py	23 Apr 2005 07:26:04 -0000	1.524.2.59
 +++ pym/portage.py	23 Apr 2005 14:48:34 -0000
+@@ -4,7 +4,7 @@
+ # $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/files/portage-fixes.patch,v 1.2 2005/04/24 09:40:59 jstubbs Exp $
+ cvs_id_string="$Id: portage-fixes.patch,v 1.2 2005/04/24 09:40:59 jstubbs Exp $"[5:-2]
+ 
+-VERSION="2.0.51.20"
++VERSION="2.0.51.20-r4"
+ 
+ # ===========================================================================
+ # START OF IMPORTS -- START OF IMPORTS -- START OF IMPORTS -- START OF IMPORT
 @@ -1192,7 +1192,7 @@
  		if "maketest" in self.features and "test" not in self.features:
  			self.features.append("test")
