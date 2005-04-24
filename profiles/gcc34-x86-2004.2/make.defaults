@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/gcc34-x86-2004.2/make.defaults,v 1.15 2005/04/23 16:25:08 jstubbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/gcc34-x86-2004.2/make.defaults,v 1.16 2005/04/24 02:42:10 jstubbs Exp $
 # System-wide defaults for the >=gcc 3.2 Portage system
 
 #Experimental: trying to use these USE variables to build up from stage 2->3
@@ -24,4 +24,7 @@ CXXFLAGS="${CFLAGS}"
 # discussion on gentoo-dev@gentoo.org. Flat profiles also need to
 # be updated appropriately.
 USE_EXPAND="VIDEO_CARDS INPUT_DEVICES LINGUAS"
+
+CONFIG_PROTECT="/etc /var/qmail/control /usr/share/config /usr/kde/2/share/config /usr/kde/3/share/config"
+CONFIG_PROTECT_MASK="/etc/gconf"
 

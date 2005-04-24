@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-ppc-2004.3/make.defaults,v 1.10 2005/04/23 16:25:07 jstubbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-ppc-2004.3/make.defaults,v 1.11 2005/04/24 02:42:10 jstubbs Exp $
 # Gentoo Linux PowerPC system defaults
 
 ACCEPT_KEYWORDS="ppc"
@@ -17,4 +17,7 @@ USE="unicode pam dvd jpeg nls gif pam png truetype ppc fortran"
 # discussion on gentoo-dev@gentoo.org. Flat profiles also need to
 # be updated appropriately.
 USE_EXPAND="VIDEO_CARDS INPUT_DEVICES LINGUAS"
+
+CONFIG_PROTECT="/etc /var/qmail/control /usr/share/config /usr/kde/2/share/config /usr/kde/3/share/config"
+CONFIG_PROTECT_MASK="/etc/gconf"
 
