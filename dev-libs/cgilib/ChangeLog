@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/cgilib
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cgilib/ChangeLog,v 1.4 2005/04/21 01:41:47 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cgilib/ChangeLog,v 1.5 2005/04/24 20:56:35 kloeri Exp $
+
+  24 Apr 2005; Bryan Østergaard <kloeri@gentoo.org> cgilib-0.5.ebuild:
+  ~alpha keyword, bug 88697.
 
   21 Apr 2005; Jason Wever <weeve@gentoo.org> cgilib-0.5.ebuild:
   Added ~sparc keyword wrt bug #88697.
