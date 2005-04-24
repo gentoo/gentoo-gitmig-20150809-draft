@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 bdca5b930491ae644e6e30d41d53d17f pymetar-0.8.ebuild 659
-MD5 86cc7e1ce80df75a189bf637d2fda4bb pymetar-0.10.ebuild 641
-MD5 ff28abc58acf6b7684201b8bcc61eba3 pymetar-0.12.ebuild 648
-MD5 f49b8c93aa83d3440876d6b78c1b7eef ChangeLog 951
+MD5 6f0a92f2c490aa0043fa646c01e6ddea pymetar-0.8.ebuild 658
 MD5 3bfe9d3d3dec8eab7cc3c3092977fdcf metadata.xml 455
-MD5 e9de4b7454094ffc8836c1a4f12990a9 files/digest-pymetar-0.8 62
-MD5 3f0f2906c19c340032771201f035dc40 files/digest-pymetar-0.10 63
+MD5 86cc7e1ce80df75a189bf637d2fda4bb pymetar-0.10.ebuild 641
+MD5 a045bad27bcd13c095c0c197973df4af ChangeLog 1043
+MD5 ff28abc58acf6b7684201b8bcc61eba3 pymetar-0.12.ebuild 648
 MD5 862e5b24162434fa7a005774deb49f18 files/digest-pymetar-0.12 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBYEKvCHk4+ZoBpvsRAqjZAJwJVJWkcOc5KNhQn0z3TWELWPT0AACfVCAE
-bD/g9N6OROlbgBgO9ArsGbw=
-=GrUn
------END PGP SIGNATURE-----
+MD5 3f0f2906c19c340032771201f035dc40 files/digest-pymetar-0.10 63
+MD5 e9de4b7454094ffc8836c1a4f12990a9 files/digest-pymetar-0.8 62

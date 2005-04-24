@@ -1,4 +1,4 @@
 MD5 8a487db2af4fee760b23e1ac102047b0 metadata.xml 240
-MD5 766e9ce49f95a27917bc65e85aa914d2 pystatgrab-0.3.ebuild 578
-MD5 fd22b80c803879fd29104577de5da282 ChangeLog 348
+MD5 3a8aa25bd77bd0e8cefbdb35adf40050 ChangeLog 445
+MD5 f863e00fb4d0589bc2dab698bda0ecbb pystatgrab-0.3.ebuild 579
 MD5 5ddd8627cb6d33a7b8a7bc6025df8424 files/digest-pystatgrab-0.3 65
