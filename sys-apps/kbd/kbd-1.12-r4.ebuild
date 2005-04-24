@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kbd/kbd-1.12-r4.ebuild,v 1.2 2005/01/02 23:25:09 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kbd/kbd-1.12-r4.ebuild,v 1.3 2005/04/24 10:20:04 vapier Exp $
 
 inherit eutils toolchain-funcs
 
@@ -12,47 +12,47 @@ SRC_URI="ftp://ftp.cwi.nl/pub/aeb/kbd/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc x86"
 IUSE="nls"
 
-RDEPEND="virtual/libc"
+RDEPEND=""
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
 
 src_unpack() {
 	local a
-
 	# Workaround problem on JFS filesystems, see bug 42859
 	for a in ${A} ; do
 		echo ">>> Unpacking ${a} to ${WORKDIR}"
-		gzip -dc ${DISTDIR}/${a} | tar xf -
+		gzip -dc "${DISTDIR}"/${a} | tar xf -
+		assert
 	done
 
-	cd ${S}
+	cd "${S}"
 	sed -i \
 		-e "s:-O2:${CFLAGS}:g" \
 		-e 's:install -s:install:' \
 		src/Makefile.in
 
 	# Other patches from RH
-	epatch ${FILESDIR}/${PN}-1.08-terminal.patch
+	epatch "${FILESDIR}"/${PN}-1.08-terminal.patch
 
 	# Fixes a problem where loadkeys matches dvorak the dir, and not the
 	# .map inside
-	epatch ${FILESDIR}/${P}-find-map-fix.patch
+	epatch "${FILESDIR}"/${P}-find-map-fix.patch
 
 	# Sparc have not yet fixed struct kbd_rate to use 'period' and not 'rate'
-	epatch ${FILESDIR}/${P}-kbd_repeat-v2.patch
+	epatch "${FILESDIR}"/${P}-kbd_repeat-v2.patch
 
 	# misc fixes from debian
-	epatch ${FILESDIR}/${P}-debian.patch
+	epatch "${FILESDIR}"/${P}-debian.patch
 
 	# Provide a QWERTZ and QWERTY cz map #19010
 	cp data/keymaps/i386/{qwerty,qwertz}/cz.map || die "cz qwerty"
-	epatch ${FILESDIR}/${P}-cz-qwerty-map.patch
+	epatch "${FILESDIR}"/${P}-cz-qwerty-map.patch
 
 	# The italian keymap is missing euro support #75970
-	epatch ${FILESDIR}/${P}-it-euro-map.patch
+	epatch "${FILESDIR}"/${P}-it-euro-map.patch
 }
 
 src_compile() {
@@ -71,12 +71,12 @@ src_compile() {
 
 src_install() {
 	make DESTDIR="${D}" install || die
-	mv ${D}/usr/bin/setfont ${D}/bin/
+	mv "${D}"/usr/bin/setfont "${D}"/bin/
 	dosym /bin/setfont /usr/bin/setfont
 
 	dodoc CHANGES CREDITS README
 	dodir /usr/share/doc/${PF}/html
-	cp -dR doc/* ${D}/usr/share/doc/${PF}/html/
+	cp -dR doc/* "${D}"/usr/share/doc/${PF}/html/
 
 	if use nls ; then
 		cd ${WORKDIR}/mnt/e/SvorakLN
