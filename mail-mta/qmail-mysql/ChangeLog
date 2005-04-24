@@ -1,6 +1,10 @@
 # ChangeLog for mail-mta/qmail-mysql
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail-mysql/ChangeLog,v 1.6 2005/03/03 18:45:07 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail-mysql/ChangeLog,v 1.7 2005/04/24 03:06:43 hansmi Exp $
+
+  24 Apr 2005; Michael Hanselmann <hansmi@gentoo.org>
+  qmail-mysql-1.03.ebuild:
+  Stable on ppc.
 
   03 Mar 2005; Ciaran McCreesh <ciaranm@gentoo.org>
   qmail-mysql-1.03-r13.ebuild, qmail-mysql-1.03.ebuild:
