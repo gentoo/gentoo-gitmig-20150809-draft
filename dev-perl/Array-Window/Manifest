@@ -1,6 +1,14 @@
-MD5 cc35d2485f9d30d903c51eaf3b23239f Array-Window-0.1.ebuild 593
-MD5 e40d3df7f4ee07eb1d5c250e4711a19e Array-Window-0.4.ebuild 601
-MD5 b88dc9e2a1e8203cfffa36f1490ecd28 ChangeLog 1022
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 e08ffa0a96cd35ea5f4ab734fd145417 files/digest-Array-Window-0.1 67
+MD5 e40d3df7f4ee07eb1d5c250e4711a19e Array-Window-0.4.ebuild 601
+MD5 594fdb776593061776b84ce4a96b68c6 ChangeLog 1120
 MD5 385c5f983e29c1890b0869055a237b27 files/digest-Array-Window-0.4 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCa6qytG5z4I8BtQoRAmH8AJ9EQk2Bj1tc9CHiu9JSyJGKK9fYHQCeKaeG
+mWGzblrx5cpYd9VcTO4j9DE=
+=FrjH
+-----END PGP SIGNATURE-----
