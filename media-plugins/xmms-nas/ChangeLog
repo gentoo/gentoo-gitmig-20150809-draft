@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/xmms-nas
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-nas/ChangeLog,v 1.13 2004/11/23 03:34:51 eradicator Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-nas/ChangeLog,v 1.14 2005/04/24 03:00:51 hansmi Exp $
+
+  24 Apr 2005; Michael Hanselmann <hansmi@gentoo.org>
+  xmms-nas-0.2-r1.ebuild:
+  Stable on ppc.
 
   22 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org>
   xmms-nas-0.2-r1.ebuild:
