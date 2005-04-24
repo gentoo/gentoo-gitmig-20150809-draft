@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Period
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Period/ChangeLog,v 1.12 2004/06/25 00:53:48 agriffis Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Period/ChangeLog,v 1.13 2005/04/24 22:08:52 mcummings Exp $
+
+  24 Apr 2005; Michael Cummings <mcummings@gentoo.org>
+  -Period-1.20-r2.ebuild, Period-1.20-r3.ebuild:
+  cleaning
 
 *Period-1.20-r3 (21 Jun 2003)
  
