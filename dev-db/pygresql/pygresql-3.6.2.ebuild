@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pygresql/pygresql-3.4.ebuild,v 1.5 2005/01/01 17:42:20 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pygresql/pygresql-3.6.2.ebuild,v 1.1 2005/04/24 06:50:27 nakano Exp $
 
 inherit eutils distutils
 
@@ -9,9 +9,9 @@ DESCRIPTION="a Python interface for PostgreSQL database."
 SRC_URI="ftp://ftp.druid.net/pub/distrib/${MY_P}.tgz"
 HOMEPAGE="http://www.druid.net/pygresql/"
 LICENSE="as-is"
-DEPEND=">=dev-db/postgresql-7.3*
+DEPEND=">=dev-db/postgresql-7.3
 	dev-lang/python"
-KEYWORDS="x86 ppc sparc alpha amd64 hppa ia64 mips"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~amd64 ~hppa ~ia64 ~mips"
 IUSE=""
 SLOT="0"
 
@@ -21,3 +21,4 @@ src_unpack() {
 	unpack ${A}
 	epatch ${FILESDIR}/${P}-gentoo.patch
 }
+
