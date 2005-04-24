@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/esh
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/esh/ChangeLog,v 1.13 2005/01/01 15:58:23 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/esh/ChangeLog,v 1.14 2005/04/24 02:54:34 hansmi Exp $
+
+  24 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> esh-0.8.5.ebuild:
+  Stable on ppc.
 
   31 Dec 2004; Joseph Jezak <josejx@gentoo.org> esh-0.8.5.ebuild:
   Marked ~ppc, previous bug that forced -ppc is fixed.
