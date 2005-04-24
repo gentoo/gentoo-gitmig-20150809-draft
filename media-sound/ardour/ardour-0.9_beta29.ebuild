@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ardour-0.9_beta29.ebuild,v 1.1 2005/04/24 06:06:15 jnc Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ardour-0.9_beta29.ebuild,v 1.2 2005/04/24 09:16:02 jnc Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ RESTRICT="nomirror"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~amd64 ~ppc"
-IUSE="nls"
+IUSE="nls debug"
 
 RDEPEND="dev-util/pkgconfig
 	>=media-libs/liblrdf-0.3.6
@@ -36,7 +36,8 @@ S="${WORKDIR}/${P/_/}"
 src_compile() {
 	# Required for scons to "see" intermediate install location
 	mkdir -p ${D}
-	scons DESTDIR=${D} PREFIX=/usr KSI=0 -j2
+	DBUG=no ; if useq debug ; then DBUG=yes ; fi
+	scons DEBUG=${DBUG} DESTDIR=${D} PREFIX=/usr KSI=0 -j2
 }
 
 src_install() {
