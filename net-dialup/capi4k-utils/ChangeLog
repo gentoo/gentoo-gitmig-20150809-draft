@@ -1,6 +1,15 @@
 # ChangeLog for net-dialup/capi4k-utils
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-utils/ChangeLog,v 1.31 2005/04/09 14:35:00 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-utils/ChangeLog,v 1.32 2005/04/24 13:31:48 genstef Exp $
+
+*capi4k-utils-20050322-r1 (24 Apr 2005)
+
+  24 Apr 2005; Stefan Schweizer <genstef@gentoo.org> files/capi.blacklist,
+  files/capi.conf, files/capi.hotplug, files/capi.initd,
+  -capi4k-utils-20050322.ebuild, +capi4k-utils-20050322-r1.ebuild:
+  Some changes in the gentoo capi init scripts to support mISDN and
+  CIP(bluetooth) thanks to sbriesen, new revision to depend on it in the mISDN
+  ebuild. Removing old revision.
 
   09 Apr 2005; Stefan Schweizer <genstef@gentoo.org> files/capi.confd,
   files/capi.hotplug, files/capi.initd, +files/capi-isdn,

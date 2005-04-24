@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-utils/files/capi.hotplug,v 1.4 2005/04/09 14:35:00 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-utils/files/capi.hotplug,v 1.5 2005/04/24 13:31:48 genstef Exp $
 
 . /etc/conf.d/capi
 
@@ -71,7 +71,9 @@ case "${VENDID}" in
 		DRIVER="fxusb"
 		;;
 	"057c/2200") # BlueFRITZ!USB
+		LOADER="avmusb"
 		DRIVER="bfusb"
+		FIRMWARE="bfubase.frm"
 		;;
 	"057c/2300") # FRITZDSL!USB
 		LOADER="avmusb"

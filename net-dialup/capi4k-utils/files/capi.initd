@@ -1,12 +1,36 @@
 #!/sbin/runscript
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-utils/files/capi.initd,v 1.5 2005/04/09 14:35:00 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-utils/files/capi.initd,v 1.6 2005/04/24 13:31:48 genstef Exp $
 
 opts="info showconfig"
 
 depend() {
-	after coldplug hotplug isapnp pcmcia
+	after hotplug isapnp pcmcia bluetooth
+}
+
+drivers() {  # detecting loaded drivers
+	local DRV MISDN=0
+	while read DRV; do
+		case "$DRV" in
+			mISDN)	MISDN=1;;
+			?*)	echo "$DRV";;
+		esac
+	done < <(/bin/sed 2>/dev/null -n "s:^[0-9]\+ \+\([^ ]\+\).*\$:\1:p" /proc/capi/controller)
+	if [ $MISDN -gt 0 ]; then  # dirty hack to find loaded mISDN modules
+		local IFS=","
+		for DRV in $(/bin/sed 2>/dev/null -n "s:^mISDN_core \+[0-9]\+ \+[0-9]\+ \+\([^ ]\+\).*\$:\1:p" /proc/modules); do
+			case "$DRV" in
+				mISDN_*|l3udss1|faxl3) continue;;
+				?*) echo "$DRV";;
+			esac
+		done
+	fi
+}
+
+bluez_cip() {  # detecting bluetooth CIP connections
+	[ -x /usr/bin/ciptool ] &&  # net-wireless/bluez-utils \
+	/bin/sed 2>/dev/null -n "s:[0-9]\+ \+cmtp \+[^ ]\+ \+\([0-9A-F:]\+\) \+.*\$:\1:p" /proc/capi/controller
 }
 
 start() {
@@ -37,7 +61,7 @@ start() {
 }
 
 stop() {
-	local DRV RET FCNT=0 DRIVERS=$(/bin/cut 2>/dev/null -f1 -d' ' /proc/capi/driver)
+	local DRV CIP RET FCNT=0 DRIVERS=$(/bin/sort -u <(drivers))
 
 	# if some CAPI applications are still running, kill 'em
 	if /bin/fuser 2>/dev/null -s /dev/capi20; then
@@ -50,9 +74,16 @@ stop() {
 		[ $RET -eq 0 ] && eend 1 || eend 0
 	fi
 
+	# relase bluetooth CIP connections
+	for CIP in $(bluez_cip); do
+		ebegin "Release CIP connection to ${CIP}"
+		/usr/bin/ciptool release "$CIP"
+		eend
+	done
+
 	ebegin "Stopping CAPI"
 	[ "$CAPI_LOAD_CAPIDRV" = "yes" ] && /sbin/modprobe -sqr capidrv
-	[ "$CAPI_UNLOAD_CARDS" = "yes" ] && /usr/sbin/capiinit 2>/dev/null stop
+	[ "$CAPI_UNLOAD_CARDS" = "yes" ] && /usr/sbin/capiinit &>/dev/null stop
 	for DRV in $DRIVERS; do	/sbin/modprobe -sqr $DRV; done
 	/sbin/modprobe -sqr capi
 	eend 0

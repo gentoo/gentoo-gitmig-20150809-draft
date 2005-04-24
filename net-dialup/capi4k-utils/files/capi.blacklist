@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-utils/files/capi.blacklist,v 1.2 2005/03/29 22:16:07 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-utils/files/capi.blacklist,v 1.3 2005/04/24 13:31:48 genstef Exp $
 
 # CAPI USB is handled via /etc/hotplug/usb/capi.usermap
 fcusb
@@ -10,7 +10,7 @@ fxusb_CZ
 fcdslusb
 bfusb
 
-# CAPI modules are load from /etc/init.d/capi
+# CAPI modules are loaded via /etc/init.d/capi
 b1isa
 b1pci
 b1pcmcia
@@ -22,3 +22,11 @@ fcclassic
 fcdsl
 fcdsl2
 fcdslsl
+
+# mISDN modules (experimental)
+avmfritz
+hfcpci
+hfcsusb
+hfcmulti
+sedlfax
+w6692pci
