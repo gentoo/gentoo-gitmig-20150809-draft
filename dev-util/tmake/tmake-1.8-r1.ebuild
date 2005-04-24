@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/tmake/tmake-1.8-r1.ebuild,v 1.16 2005/04/01 05:41:24 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/tmake/tmake-1.8-r1.ebuild,v 1.17 2005/04/24 02:57:16 hansmi Exp $
 
 DESCRIPTION="A Cross platform Makefile tool"
 SRC_URI="ftp://ftp.trolltech.com/freebies/tmake/${P}.tar.gz"
@@ -10,7 +10,7 @@ RDEPEND="dev-lang/perl"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="x86 sparc alpha ia64 s390 ~ppc ~amd64"
+KEYWORDS="x86 sparc alpha ia64 s390 ppc ~amd64"
 IUSE=""
 
 src_install () {

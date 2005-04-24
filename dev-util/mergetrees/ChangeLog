@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/mergetrees
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mergetrees/ChangeLog,v 1.9 2004/06/28 06:00:25 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mergetrees/ChangeLog,v 1.10 2005/04/24 02:59:36 hansmi Exp $
+
+  24 Apr 2005; Michael Hanselmann <hansmi@gentoo.org>
+  mergetrees-0.9.3.ebuild:
+  Stable on ppc.
 
   28 Jun 2004; Ciaran McCreesh <ciaranm@gentoo.org> mergetrees-0.9.3.ebuild:
   QA: Add IUSE
