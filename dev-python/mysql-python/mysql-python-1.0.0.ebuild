@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mysql-python/mysql-python-1.0.0.ebuild,v 1.7 2005/04/21 18:58:14 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mysql-python/mysql-python-1.0.0.ebuild,v 1.8 2005/04/24 09:36:00 blubb Exp $
 
 inherit distutils
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/mysql-python/MySQL-python-${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="ppc x86 sparc ~amd64"
+KEYWORDS="ppc x86 sparc amd64"
 IUSE=""
 
 DEPEND="virtual/python

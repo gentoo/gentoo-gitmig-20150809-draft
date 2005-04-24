@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/mmpython
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mmpython/ChangeLog,v 1.20 2005/04/14 18:52:19 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mmpython/ChangeLog,v 1.21 2005/04/24 09:33:38 blubb Exp $
+
+  24 Apr 2005; Simon Stelling <blubb@gentoo.org> mmpython-0.4.7.ebuild:
+  stable on amd64
 
   14 Apr 2005; Bryan Østergaard <kloeri@gentoo.org> -mmpython-0.4.5.ebuild,
   -mmpython-0.4.6.ebuild:
