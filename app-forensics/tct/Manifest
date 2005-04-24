@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a463524a4cabcff71e86f20492ac7034 tct-1.15-r1.ebuild 2506
-MD5 58c1c4769d09bb1d5d449aa233725bf3 ChangeLog 1128
 MD5 41bbb72e2d5a56f8446b18931f49c48a metadata.xml 236
-MD5 c0948c285663f6861c03580bdd352d61 files/tct-1.15-gentoo.diff 5214
+MD5 f9b9ac0baa1e5d999e5a1325fea24576 ChangeLog 1219
+MD5 1e942678bda7d4730cd0d895e6d8ddbd tct-1.15-r1.ebuild 2504
 MD5 5a8ca858fffe912a24b5239392257ee4 files/tct-1.15-r1-gentoo.diff 5909
+MD5 c0948c285663f6861c03580bdd352d61 files/tct-1.15-gentoo.diff 5214
 MD5 149e3bd10ce891ee1dd2ad2522a705f0 files/digest-tct-1.15-r1 60
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFB/hXCEZCkKN40op4RAjY3AJ9ltvwY3llu+I4FLq/+fddnjBYcQACeLaI/
-yfv16CxgWOfKGq1zCaqG0/0=
-=PKq9
------END PGP SIGNATURE-----
