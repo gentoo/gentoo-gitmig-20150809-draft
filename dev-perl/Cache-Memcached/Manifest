@@ -1,3 +1,14 @@
-MD5 98b936246b8ae272253218570ca51ec5 Cache-Memcached-1.14.ebuild 637
-MD5 7b014fed8510a0ef70b416d324941367 ChangeLog 3023
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 7513650be27d36401e5c3f5ef8ce6872 Cache-Memcached-1.14.ebuild 552
+MD5 52028668c0d7f1ecdbad95b1f90d522c ChangeLog 3139
 MD5 0c33c2e7cf9de107d9a9d59d5ab77850 files/digest-Cache-Memcached-1.14 71
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCa7qWtG5z4I8BtQoRAo48AJ99ChYmnooHdIg+Z/b+XCTgfp6UoQCfSREE
+T0rJ5mJnu0kDur4BBHCb2qg=
+=Xldh
+-----END PGP SIGNATURE-----
