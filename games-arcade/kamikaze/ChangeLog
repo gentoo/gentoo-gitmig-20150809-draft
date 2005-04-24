@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/kamikaze
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/kamikaze/ChangeLog,v 1.5 2004/12/31 16:40:55 weeve Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/kamikaze/ChangeLog,v 1.6 2005/04/24 03:16:37 hansmi Exp $
+
+  24 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> kamikaze-0.1.0.ebuild:
+  Stable on ppc.
 
   31 Dec 2004; Jason Wever <weeve@gentoo.org> kamikaze-0.1.0.ebuild:
   Added ~sparc keyword.
