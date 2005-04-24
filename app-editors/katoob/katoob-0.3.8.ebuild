@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/katoob/katoob-0.3.8.ebuild,v 1.4 2005/01/01 13:29:23 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/katoob/katoob-0.3.8.ebuild,v 1.5 2005/04/24 10:57:59 hansmi Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/arabeyes/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="x86 ppc"
 IUSE="debug spell"
 
 RDEPEND="spell? ( app-text/aspell )
