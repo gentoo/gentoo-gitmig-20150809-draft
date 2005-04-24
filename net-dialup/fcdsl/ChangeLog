@@ -1,6 +1,11 @@
 # ChangeLog for net-dialup/fcdsl
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/fcdsl/ChangeLog,v 1.16 2005/04/15 20:05:48 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/fcdsl/ChangeLog,v 1.17 2005/04/24 10:24:25 genstef Exp $
+
+  24 Apr 2005; Stefan Schweizer <genstef@gentoo.org>
+  fcdsl-2.6.20.7-r4.ebuild:
+  Add USE_EXPAND to avoid downloading unneeded drivers. Thanks to tove for the
+  idea.
 
   15 Apr 2005; Stefan Schweizer <genstef@gentoo.org>
   fcdsl-2.6.20.7-r4.ebuild:

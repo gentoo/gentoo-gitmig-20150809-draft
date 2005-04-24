@@ -1,22 +1,39 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/fcdsl/fcdsl-2.6.20.7-r4.ebuild,v 1.7 2005/04/15 20:03:57 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/fcdsl/fcdsl-2.6.20.7-r4.ebuild,v 1.8 2005/04/24 10:24:25 genstef Exp $
 
 inherit linux-mod eutils
 
-FCDSL_SRC=("fritzcrd.dsl" "fritzcrd.dsl_v20" "fritzcrd.dsl_sl"
+DESCRIPTION="AVM FRITZ!Card DSL drivers for 2.6 kernel"
+HOMEPAGE="http://www.avm.de/"
+
+FCDSL_MODULES=("fcdsl" "fcdsl2" "fcdslsl" "fcdslusb" "fcdslslusb")
+FCDSL_NAMES=("AVM FRITZ!Card DSL" "AVM FRITZ!Card DSL v2.0" "AVM FRITZ!Card DSL SL" "AVM FRITZ!Card DSL USB" "AVM FRITZ!Card DSL SL USB")
+FCDSL_BUSTYPES=("pci" "pci" "pci" "usb" "usb")
+FCDSL_IDS=("1131:5402" "1244:2900" "1244:2700" "057c:2300" "057c:3500")
+FCDSL_FIRMWARES=("fdslbase.bin" "fds2base.bin" "fdssbase.bin" "fdsubase.frm" "fdlubase.frm")
+
+FCDSL_DIRS=("fritzcrd.dsl" "fritzcrd.dsl_v20" "fritzcrd.dsl_sl"
 	"fritzcrd.dsl_usb" "fritzcrd.dsl_sl_usb")
 FCDSL_FILES=("fcdsl-suse9.1-3.11-02" "fcdsl2-suse9.1-3.11-04"
 	"fcdslsl-suse9.1-3.11-04" "fcdslusb-suse9.1-3.11-02"
 	"fcdslslusb-suse9.1-3.11-04")
-
-DESCRIPTION="AVM FRITZ!Card DSL drivers for 2.6 kernel"
-HOMEPAGE="http://www.avm.de/"
-SRC_URI=""
-for ((CARD=0; CARD < ${#FCDSL_SRC[*]}; CARD++)); do
-	SRC_URI="${SRC_URI}
-	ftp://ftp.avm.de/cardware/${FCDSL_SRC[CARD]}/linux/suse.91/${FCDSL_FILES[CARD]}.tar.gz"
+for ((CARD=0; CARD < ${#FCDSL_MODULES[*]}; CARD++)); do
+	FCDSL_SRC[${CARD}]="ftp://ftp.avm.de/cardware/${FCDSL_DIRS[CARD]}/linux/suse.91/${FCDSL_FILES[CARD]}.tar.gz"
 done
+
+#specific selection
+for ((CARD=0; CARD < ${#FCDSL_MODULES[*]}; CARD++)); do
+	SRC_URI="${SRC_URI} fcdsl_cards_${FCDSL_MODULES[CARD]}? ( ${FCDSL_SRC[CARD]} )"
+done
+
+#in case nothing is selected take all SRC_URI's
+for ((CARD=0; CARD < ${#FCDSL_MODULES[*]}; CARD++)); do
+	BEGIN="${BEGIN} !fcdsl_cards_${FCDSL_MODULES[CARD]}? ("
+	MIDDLE="${MIDDLE} ${FCDSL_SRC[CARD]}"
+	END="${END} )"
+done
+SRC_URI="${SRC_URI}${BEGIN}${MIDDLE}${END}"
 
 LICENSE="LGPL-2"
 KEYWORDS="x86"
@@ -25,12 +42,6 @@ SLOT="0"
 S=${WORKDIR}/fritz
 
 RDEPEND=">=net-dialup/capi4k-utils-20040810"
-
-FCDSL_NAMES=("AVM FRITZ!Card DSL" "AVM FRITZ!Card DSL v2.0" "AVM FRITZ!Card DSL SL" "AVM FRITZ!Card DSL USB" "AVM FRITZ!Card DSL SL USB")
-FCDSL_BUSTYPES=("pci" "pci" "pci" "usb" "usb")
-FCDSL_IDS=("1131:5402" "1244:2900" "1244:2700" "057c:2300" "057c:3500")
-FCDSL_FIRMWARES=("fdslbase.bin" "fds2base.bin" "fdssbase.bin" "fdsubase.frm" "fdlubase.frm")
-FCDSL_MODULES=("fcdsl" "fcdsl2" "fcdslsl" "fcdslusb" "fcdslslusb")
 
 pkg_setup() {
 	CONFIG_CHECK="ISDN_CAPI_CAPI20"
@@ -60,19 +71,20 @@ pkg_setup() {
 	fi
 	BUILD_TARGETS="all"
 	BUILD_PARAMS="KDIR=${KV_DIR} LIBDIR=${S}"
-	NO_MODULESD="1"
 }
 
 src_unpack() {
 	for ((CARD=0; CARD < ${#FCDSL_MODULES[*]}; CARD++)); do
-		tar xzf ${DISTDIR}/${FCDSL_FILES[CARD]}.tar.gz
-		mv fritz ${FCDSL_MODULES[CARD]/fc/fritz.}
-		cd ${FCDSL_MODULES[CARD]/fc/fritz.}/src
-		[ -f ${FILESDIR}/${FCDSL_MODULES[CARD]}.diff ] && patch -p0 < ${FILESDIR}/${FCDSL_MODULES[CARD]}.diff
-		cd ../..
+		if [ -f ${DISTDIR}/${FCDSL_FILES[CARD]}.tar.gz ]; then
+			rm fritz
+			tar xzf ${DISTDIR}/${FCDSL_FILES[CARD]}.tar.gz
+			mv fritz ${FCDSL_MODULES[CARD]/fc/fritz.}
+			cd ${FCDSL_MODULES[CARD]/fc/fritz.}/src
+			[ -f ${FILESDIR}/${FCDSL_MODULES[CARD]}.diff ] && patch -p0 < ${FILESDIR}/${FCDSL_MODULES[CARD]}.diff
+			cd ../..
+			ln -s ${FCDSL_MODULES[CARD]/fc/fritz.} fritz
+		fi
 	done
-
-	ln -s ${FCDSL_MODULES[0]/fc/fritz.} fritz
 
 	# convert docs from latin1 to UTF-8
 	if useq utf8; then
