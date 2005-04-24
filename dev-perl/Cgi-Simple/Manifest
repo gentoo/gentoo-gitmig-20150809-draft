@@ -1,8 +1,14 @@
-MD5 b9527fe2d5f1706f24ef63afb81d776d Cgi-Simple-0.077.ebuild 516
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 588d95fd3ecd6324463489e0b06ebf76 ChangeLog 1571
-MD5 03cce0c123015d9d1f22c4837b7638d5 Cgi-Simple-0.075.ebuild 534
-MD5 5ec8ff5e10731c4f865d51821b0f01b9 Cgi-Simple-0.06.ebuild 514
-MD5 d18cb181078892142788055992f3a09b files/digest-Cgi-Simple-0.075 68
-MD5 60825ecec90e5b15b6e2a3b15646d435 files/digest-Cgi-Simple-0.06 67
+MD5 e328291fba8d86ee4896d2e8b65238bf Cgi-Simple-0.077.ebuild 550
+MD5 75efabd38324a4c7a5870b28d6f65b22 ChangeLog 1694
 MD5 c35cce0f59f2b47d8d59b5b605ba0f86 files/digest-Cgi-Simple-0.077 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCa7vwtG5z4I8BtQoRAppLAJ9QzSBgUoXaegZIIuHLAa1+PHql9QCeJWxe
+zYNY0vESkI+BGUhRsjCyUmA=
+=TwWi
+-----END PGP SIGNATURE-----
