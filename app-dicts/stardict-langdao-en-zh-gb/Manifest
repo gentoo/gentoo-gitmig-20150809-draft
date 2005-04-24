@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 41fe35d6962db319e88071287ee9ec91 stardict-langdao-en-zh-gb-2.4.2.ebuild 510
-MD5 50b98234f3711e3e63706d56c341525c ChangeLog 708
+MD5 c313c39e65a916b716f2019a23ca9bff stardict-langdao-en-zh-gb-2.4.2.ebuild 505
 MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
+MD5 c73b98a2627eff8348ad82954a335a53 ChangeLog 818
 MD5 92e85864176333dcfdf6996d624ce185 files/digest-stardict-langdao-en-zh-gb-2.4.2 82
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFB2rMf/UDVUK2NELYRAhtBAJ4z4dcx2jECJ0GQ47hfn4w0bT6gvQCg7ExZ
-heQkLvDodqtSEbWMKmciPhI=
-=PoWp
------END PGP SIGNATURE-----
