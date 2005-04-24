@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/ezmlm-idx/ezmlm-idx-0.40-r2.ebuild,v 1.15 2004/07/15 01:45:52 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/ezmlm-idx/ezmlm-idx-0.40-r2.ebuild,v 1.16 2005/04/24 10:19:58 hansmi Exp $
 
 # NOTE: ezmlm-idx, ezmlm-idx-mysql and ezmlm-idx-pgsql all supported by this single ebuild
 # (Please keep them in sync)
@@ -17,7 +17,7 @@ SRC_URI="http://gd.tuwien.ac.at/infosys/mail/qmail/ezmlm-patches/${PB}-${PV}.tar
 HOMEPAGE="http://www.ezmlm.org"
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="x86 alpha ~hppa ~amd64 ~ppc ~mips ~sparc"
+KEYWORDS="x86 alpha ~hppa ~amd64 ppc ~mips ~sparc"
 IUSE=""
 DEPEND="sys-apps/grep sys-apps/groff"
 RDEPEND="mail-mta/qmail"
