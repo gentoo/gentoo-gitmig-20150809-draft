@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pylirc
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pylirc/ChangeLog,v 1.9 2005/04/24 09:48:50 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pylirc/ChangeLog,v 1.10 2005/04/24 13:07:22 hansmi Exp $
+
+  24 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> pylirc-0.0.4.ebuild:
+  Stable on ppc.
 
   24 Apr 2005; Simon Stelling <blubb@gentoo.org> pylirc-0.0.4.ebuild:
   stable on amd64
