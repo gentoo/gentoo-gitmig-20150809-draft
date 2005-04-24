@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/sandbox
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sandbox/ChangeLog,v 1.4 2005/04/24 03:34:21 jstubbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sandbox/ChangeLog,v 1.5 2005/04/24 08:11:20 ferringb Exp $
+
+*sandbox-1.2.1 (24 Apr 2005)
+  24 Apr 2005; Brian Harring <ferringb@gentoo.org> +sandbox-1.2.1-r2.ebuild:
+  Amd64 fix for 90135.
 
 *sandbox-1.2.1 (24 Apr 2005)
 
