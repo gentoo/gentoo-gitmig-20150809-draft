@@ -6,5 +6,9 @@
 		<email>perl@gentoo.org</email>
 		<description>Primary Maintainer</description>
 	</maintainer>
+	<maintainer>
+		<email>lisa@gentoo.org</email>
+		<description>Original Importer</description>
+	</maintainer>
 	<longdescription></longdescription>
 </pkgmetadata>
