@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/watchfolder/watchfolder-0.3.1.1.ebuild,v 1.7 2005/01/01 11:34:34 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/watchfolder/watchfolder-0.3.1.1.ebuild,v 1.8 2005/04/24 05:25:45 wormo Exp $
 
 MY_PV="${PV:0:5}_p1"
 
@@ -10,7 +10,7 @@ SRC_URI="http://dstunrea.sdf-eu.org/files/${PN}-${MY_PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ~ppc"
 IUSE=""
 DEPEND=""
 #RDEPEND=""
