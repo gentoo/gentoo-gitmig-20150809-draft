@@ -3,12 +3,12 @@ Hash: SHA1
 
 MD5 1f7c59cacb90b0f672558e705fb31cab ChangeLog 657
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 fccb5f01b3034afe942e8f49b95319ba Test-Class-0.03.ebuild 686
+MD5 8643be749102e43eda519ded09ae80ca Test-Class-0.03.ebuild 665
 MD5 283ad34b3655fc277d7868c311799ffd files/digest-Test-Class-0.03 66
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCNZjGtG5z4I8BtQoRAiXsAJ9l7L/xqEJNZ3U9HzUEk5aIYZglKwCfRTAE
-vWjFt+ex/I8WWZUOmZRAK5I=
-=UTsn
+iD8DBQFCa8NmtG5z4I8BtQoRAoPiAKCBr3yKgM3bHjqLyfKrnYkEAtw5NgCfQuU0
+RjQnA3uxstDZuUtaQgsDCOs=
+=ihZq
 -----END PGP SIGNATURE-----
