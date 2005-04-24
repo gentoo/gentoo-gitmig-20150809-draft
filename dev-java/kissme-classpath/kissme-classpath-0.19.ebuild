@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/kissme-classpath/kissme-classpath-0.19.ebuild,v 1.16 2005/04/22 08:41:08 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/kissme-classpath/kissme-classpath-0.19.ebuild,v 1.17 2005/04/24 02:59:05 hansmi Exp $
 
 DESCRIPTION="GNU Classpath specifically tailored to kissme"
 SRC_URI="mirror://sourceforge/kissme/${P}.tar.gz"
@@ -11,7 +11,7 @@ DEPEND=">=virtual/jdk-1.3
 RDEPEND=""
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc amd64"
+KEYWORDS="x86 ppc amd64"
 IUSE="jikes"
 
 src_compile() {
