@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 29d59e9d3f95d65b72b66e2d7fa4b537 faac-1.24.ebuild 899
-MD5 be244107bee74141f7bf9cf21feea2f2 faac-1.23.5.ebuild 871
 MD5 eb96d297caef22e0634f8feb1d74532b ChangeLog 3440
-MD5 3c7304d2a11a89df8123f8c096d11725 files/digest-faac-1.23.5 63
-MD5 049efb5435eb21d0c652a01219932747 files/libsndfile-1.0.diff 1368
-MD5 927d4973537500e758398d0dd1daae88 files/digest-faac-1.24 61
+MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+MD5 be244107bee74141f7bf9cf21feea2f2 faac-1.23.5.ebuild 871
+MD5 cd9ec2df5cfebae6e3e251aa5c2f4ae5 faac-1.24.ebuild 899
 MD5 cdd79fb009d4c52796f1b1e31bf6ed20 files/fix-linefeeds.sh 122
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCaDFCmOfEJZHYOKcRAlH7AKCOlqz6jiHrgI3t9iCsh8o0RqM77QCgwnBS
-BAdr0ao6D//0vmXlJbl9l2s=
-=+Ix5
------END PGP SIGNATURE-----
+MD5 049efb5435eb21d0c652a01219932747 files/libsndfile-1.0.diff 1368
+MD5 3c7304d2a11a89df8123f8c096d11725 files/digest-faac-1.23.5 63
+MD5 927d4973537500e758398d0dd1daae88 files/digest-faac-1.24 61

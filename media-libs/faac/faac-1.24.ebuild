@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/faac/faac-1.24.ebuild,v 1.15 2005/04/21 23:03:13 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/faac/faac-1.24.ebuild,v 1.16 2005/04/24 08:31:20 vapier Exp $
 
 inherit libtool eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="amd64 arm ~hppa ~ia64 ~mips ppc ppc64 ppc-macos sparc x86"
+KEYWORDS="amd64 arm hppa ia64 ~mips ppc ppc64 ppc-macos sparc x86"
 IUSE=""
 
 RDEPEND=">=media-libs/libsndfile-1.0.0"
@@ -34,6 +34,6 @@ src_unpack() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die
 	dodoc AUTHORS ChangeLog INSTALL NEWS README TODO docs/libfaac.pdf
 }
