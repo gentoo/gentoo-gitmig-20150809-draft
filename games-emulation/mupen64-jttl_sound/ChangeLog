@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/mupen64-jttl_sound
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64-jttl_sound/ChangeLog,v 1.4 2005/01/20 04:24:27 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64-jttl_sound/ChangeLog,v 1.5 2005/04/24 07:53:30 morfic Exp $
+
+  24 Apr 2005; Daniel Goller <morfic@gentoo.org>
+  mupen64-jttl_sound-1.2.ebuild:
+  removed restriction
 
   19 Jan 2005; Daniel Goller <morfic@gentoo.org>
   mupen64-jttl_sound-1.2.ebuild:

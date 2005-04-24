@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64-riceplugin/mupen64-riceplugin-5.1.0.ebuild,v 1.6 2005/03/10 01:38:13 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64-riceplugin/mupen64-riceplugin-5.1.0.ebuild,v 1.7 2005/04/24 07:51:54 morfic Exp $
 
 inherit games gcc eutils libtool
 
@@ -9,8 +9,6 @@ IUSE="gtk2"
 DESCRIPTION="an graphics plugin for mupen64"
 SRC_URI="http://mupen64.emulation64.com/files/0.4/riceplugin.tar.bz2"
 HOMEPAGE="http://mupen64.emulation64.com/"
-
-RESTRICT="nomirror"
 
 LICENSE="GPL-2"
 SLOT="0"
