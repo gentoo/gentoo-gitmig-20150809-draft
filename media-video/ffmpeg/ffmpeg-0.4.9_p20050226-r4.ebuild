@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.4.9_p20050226-r4.ebuild,v 1.2 2005/04/22 13:12:58 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.4.9_p20050226-r4.ebuild,v 1.3 2005/04/24 19:00:21 flameeyes Exp $
 
 inherit eutils flag-o-matic gcc multilib toolchain-funcs
 
@@ -64,8 +64,7 @@ src_unpack() {
 		|| die "sed failed (HAVE_MMX)"
 
 	epatch ${FILESDIR}/${PN}-libdir-pic.patch
-
-	sed -i -e "s:\$ldl\ \$extralibs:\$ldl\ -la52\ \$extralibs:" configure || die "Unable to patch in -la52"
+	epatch ${FILESDIR}/${PN}-configure-extralibs.patch
 
 	cd ${S}
 	cp -R ${S_BASE} ${S_STATIC}

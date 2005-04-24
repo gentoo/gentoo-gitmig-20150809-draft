@@ -1,6 +1,10 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.69 2005/04/24 18:02:25 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.70 2005/04/24 19:00:21 flameeyes Exp $
+
+  24 Apr 2005; Diego Pettenò <flameeyes@gentoo.org>
+  +files/ffmpeg-configure-extralibs.patch, ffmpeg-0.4.9_p20050226-r4.ebuild:
+  Added patch to link to libdc1394 when ieee1394 is enabled. Fixes #90150.
 
   24 Apr 2005; Michael Hanselmann <hansmi@gentoo.org>
   ffmpeg-0.4.9_p20050226-r3.ebuild:
