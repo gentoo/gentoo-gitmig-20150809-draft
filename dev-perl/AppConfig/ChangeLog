@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/AppConfig
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/AppConfig/ChangeLog,v 1.17 2005/03/09 18:29:24 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/AppConfig/ChangeLog,v 1.18 2005/04/24 13:47:48 mcummings Exp $
+
+  24 Apr 2005; Michael Cummings <mcummings@gentoo.org>
+  -AppConfig-1.52.ebuild, -AppConfig-1.52-r1.ebuild,
+  AppConfig-1.56-r1.ebuild, AppConfig-1.56-r2.ebuild:
+  Cleaning up, fixing description, mirror syntax, removing old ebuilds
 
   09 Mar 2005; Markus Rothe <corsair@gentoo.org> AppConfig-1.56-r2.ebuild:
   Added ~ppc64 to KEYWORDS

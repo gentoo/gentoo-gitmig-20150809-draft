@@ -1,13 +1,19 @@
-MD5 8da4af3c060062e9d2b28d94237aeb3f AppConfig-1.52-r1.ebuild 618
-MD5 db902ffb577ac2ec36bafa9400c351fe AppConfig-1.52.ebuild 615
-MD5 c742e7ec86ebad31e404904f09f6f0fd AppConfig-1.56-r1.ebuild 629
-MD5 9ac0d82b668a7b69618ab0a4d6e7e202 AppConfig-1.56-r2.ebuild 1093
-MD5 4148101eba59da8c66a53cbf0b0b0b2e ChangeLog 1804
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 0b25c982375091b701905e2dadce5888 AppConfig-1.56-r1.ebuild 653
+MD5 825af251b9dd3a66218340ac7354cd7d AppConfig-1.56-r2.ebuild 1117
+MD5 703deee8002f1a653f033d20022e7116 ChangeLog 2040
 MD5 3ff95f843a1d73e04b9d80345b372343 files/AppConfig-1.52-gentoo.diff 2204
-MD5 7d66af0eceb608490f6fbc44a1c8407e files/blocksep.patch 3053
-MD5 66b0a09e217cd60ed3092e9836c749f3 files/blockwhitespace.patch 479
-MD5 06423780fb72eb65725a2491d4ffb753 files/digest-AppConfig-1.52 65
-MD5 06423780fb72eb65725a2491d4ffb753 files/digest-AppConfig-1.52-r1 65
 MD5 cd9d4e331a460c62cbefa6c1eac51119 files/digest-AppConfig-1.56-r1 65
 MD5 cd9d4e331a460c62cbefa6c1eac51119 files/digest-AppConfig-1.56-r2 65
+MD5 7d66af0eceb608490f6fbc44a1c8407e files/blocksep.patch 3053
+MD5 66b0a09e217cd60ed3092e9836c749f3 files/blockwhitespace.patch 479
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCa6NTtG5z4I8BtQoRAiJ3AJ9nA3PqSnStoR0fiQPQfaz90IbgJwCfSxHf
+I99pOLNG00rBd08WtMrSchI=
+=ZQqX
+-----END PGP SIGNATURE-----
