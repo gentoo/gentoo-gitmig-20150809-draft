@@ -27,6 +27,7 @@ MD5 ddb36dfd1d142b8a03850e3bee62a8c3 files/1.1.4/hardened-link.patch 576
 MD5 e08721c60cf0f7bc7ea0a714baeac120 files/1.1.4/getcompver.awk.patch 418
 MD5 964398ef88829e5a2935d0c0f8389c9d files/1.1.4/xooffice-wrapper-1.3 6091
 MD5 b2ea5c34d4a5e430c21a2da7426b9e39 files/1.1.4/cws-heapbug_CAN-2005-0941.diff 598
+MD5 6938dc2e28e840cebf4fdbde9d6e2d4b files/1.1.4/gentoo-1.3.10.patch 859
 MD5 6938dc2e28e840cebf4fdbde9d6e2d4b files/1.1.4/gentoo-1.3.9.patch 859
 MD5 3d3555a66a2d8a66613d4e4471701eb8 files/1.1.4/pthreadlink-fix.patch 1163
 MD5 3f008e2c5595512c7f6306b1a722612e files/1.1.4/nptl.patch 243
