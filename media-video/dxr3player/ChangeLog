@@ -1,6 +1,11 @@
 # ChangeLog for media-video/dxr3player
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dxr3player/ChangeLog,v 1.6 2005/03/21 16:57:02 arj Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dxr3player/ChangeLog,v 1.7 2005/04/24 14:15:45 arj Exp $
+
+*dxr3player-0.10 (24 Apr 2005)
+
+  24 Apr 2005; Anders Rune Jensen <arj@gentoo.org> dxr3player-0.10.ebuild:
+  New version.
 
   21 Mar 2005; Anders Rune Jensen <arj@gentoo.org>
   dxr3player-0.9.4.ebuild, dxr3player-0.9.ebuild:
