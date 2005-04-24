@@ -1,0 +1,10 @@
+# ChangeLog for app-dicts/freedict-eng-ita
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/freedict-eng-ita/ChangeLog,v 1.1 2005/04/24 13:23:38 arj Exp $
+
+*freedict-eng-ita-1.0 (24 Apr 2005)
+
+  24 Apr 2005; Anders Rune Jensen <arj@gentoo.org> 
+  +freedict-eng-ita-1.0.ebuild:
+  new freedict dictionary for english to italien translations. Fixes #52586
+
