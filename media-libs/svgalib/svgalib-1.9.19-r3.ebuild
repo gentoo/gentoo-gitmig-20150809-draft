@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/svgalib-1.9.19-r3.ebuild,v 1.2 2005/02/06 21:05:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/svgalib-1.9.19-r3.ebuild,v 1.3 2005/04/24 07:24:10 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs kernel-mod
 
@@ -45,10 +45,7 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-pci-get-class.patch
 
 	# devfs_mk_symlink no longer available #77186
-	epatch ${FILESDIR}/${P}-devfs.patch
-
-	# Fix building with gcc-4
-	epatch ${FILESDIR}/${P}-gcc4.patch
+	#epatch ${FILESDIR}/${P}-devfs.patch
 
 	# Link like the other packages
 	sed -i 's:$(FLAGS):$(CFLAGS) $(LDFLAGS):' demos/Makefile || die
