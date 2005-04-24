@@ -1,8 +1,8 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 0c3be7f2ab976e395e0da069d01b38b4 ChangeLog 2125
-MD5 904d53dff5b9edbc914981b08e760582 gnome-alsamixer-0.9.6.ebuild 1024
+MD5 349fb02ec51c5f5cbc40683b460f300f ChangeLog 2270
+MD5 cc6d1cd861a12dbccd852adf616cc0cf gnome-alsamixer-0.9.6.ebuild 1033
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 8ee992b81ac5ed728c89cea5addf5dff files/digest-gnome-alsamixer-0.9.6 72
 MD5 82b95a0df43429da5098b4da883f6bd0 files/gnome-alsamixer-0.9.6-gtk24.patch 699
@@ -11,7 +11,7 @@ MD5 70fddaa0dbd47bb15360b6bad9d496b7 files/gnome-alsamixer-0.9.6-fixpath.patch 1
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCZ3ZUArHZZzCEUG0RAtWmAJ9d1BG7F0C7xscy6sXXcWx5KkOUUQCcDp/N
-RL9+oO89midDdSjjBMnWZYk=
-=5G7o
+iD8DBQFCa+v3ArHZZzCEUG0RApduAJsE5m0FzHqdVKjXJQDgugxtqBGuoACfX/vh
+r1y0H+syjllbcim5UY9qdp8=
+=5s9s
 -----END PGP SIGNATURE-----

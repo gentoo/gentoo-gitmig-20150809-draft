@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gnome-alsamixer/gnome-alsamixer-0.9.6.ebuild,v 1.10 2005/04/21 09:45:35 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gnome-alsamixer/gnome-alsamixer-0.9.6.ebuild,v 1.11 2005/04/24 18:55:52 eradicator Exp $
 
-inherit eutils
+inherit eutils fdo-mime
 
 IUSE=""
 DESCRIPTION="Gnome 2 based ALSA Mixer"
