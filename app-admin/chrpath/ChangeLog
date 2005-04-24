@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/chrpath
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/chrpath/ChangeLog,v 1.2 2005/02/10 18:45:23 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/chrpath/ChangeLog,v 1.3 2005/04/24 06:43:35 wormo Exp $
+
+  23 Apr 2005; Stephanie Lockwood-Childs <wormo@gentoo.org>
+  chrpath-0.13.ebuild:
+  added ~ppc
 
 *chrpath-0.13 (10 Feb 2005)
 
