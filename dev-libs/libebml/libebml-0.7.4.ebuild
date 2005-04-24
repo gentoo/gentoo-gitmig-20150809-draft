@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libebml/libebml-0.7.1-r1.ebuild,v 1.6 2005/04/24 20:23:24 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libebml/libebml-0.7.4.ebuild,v 1.1 2005/04/24 20:23:24 flameeyes Exp $
 
 IUSE=""
 
@@ -8,11 +8,11 @@ inherit flag-o-matic eutils
 
 DESCRIPTION="Extensible binary format library (kinda like XML)"
 HOMEPAGE="http://www.matroska.org/"
-SRC_URI="http://www.bunkus.org/videotools/mkvtoolnix/sources/old/${P}.tar.bz2"
+SRC_URI="http://www.bunkus.org/videotools/mkvtoolnix/sources/${P}.tar.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~x86 ppc ~sparc ~mips ~alpha ~hppa ~amd64 ~ia64"
+KEYWORDS="~x86 ~sparc ~ppc64 ~alpha ~ppc ~ppc-macos ~amd64"
 
 DEPEND="virtual/libc"
 
@@ -20,7 +20,17 @@ src_unpack() {
 	unpack ${A}
 
 	cd ${S}
-	epatch ${FILESDIR}/libebml-shared.patch
+
+	if use ppc-macos; then
+		sed -i \
+			-e 's/\.so/\.dylib/g' \
+			-e 's/\.dylib.0/\.0.dylib/g' \
+			-e 's/$(CXX) -shared -Wl,-soname,$(LIBRARY_SO_VER)/$(LD)/' \
+			-e 's/LD=$(CXX)/LD=libtool/' ${S}/make/linux/Makefile \
+				|| die "sed Makefile failed"
+	fi
+
+	sed -i -e 's:CXXFLAGS=:CXXFLAGS+=:g' ${S}/make/linux/Makefile
 }
 
 src_compile() {
@@ -33,12 +43,11 @@ src_compile() {
 	# Travis Tilley <lv@gentoo.org>
 	append-flags -fPIC
 
-	sed -i -e 's/CXXFLAGS=/CXXFLAGS+=/g' Makefile
-	make PREFIX=/usr || die "make failed"
+	emake PREFIX=/usr || die "make failed"
 }
 
 src_install() {
 	cd ${S}/make/linux
 	einstall libdir="${D}/usr/$(get_libdir)" || die "make install failed"
-	dodoc ${S}/LICENSE.*
+	dodoc ${S}/ChangeLog
 }

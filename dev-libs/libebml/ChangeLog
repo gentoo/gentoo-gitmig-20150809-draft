@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/libebml
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libebml/ChangeLog,v 1.41 2005/04/22 15:12:42 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libebml/ChangeLog,v 1.42 2005/04/24 20:23:24 flameeyes Exp $
+
+*libebml-0.7.4 (24 Apr 2005)
+
+  24 Apr 2005; Diego Pettenò <flameeyes@gentoo.org> libebml-0.6.0.ebuild,
+  libebml-0.6.3.ebuild, libebml-0.6.4.ebuild, libebml-0.6.5.ebuild,
+  libebml-0.7.0.ebuild, libebml-0.7.1.ebuild, libebml-0.7.1-r1.ebuild,
+  libebml-0.7.2.ebuild, +libebml-0.7.4.ebuild:
+  Added new upstream version, Fixes #90221. Fixed urls for older versions.
 
   22 Apr 2005; Jan Brinkmann <luckyduck@gentoo.org> libebml-0.7.3.ebuild:
   stable on amd64 and x86

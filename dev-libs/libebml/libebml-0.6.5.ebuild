@@ -1,13 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libebml/libebml-0.6.5.ebuild,v 1.12 2005/03/13 16:36:24 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libebml/libebml-0.6.5.ebuild,v 1.13 2005/04/24 20:23:24 flameeyes Exp $
 
 IUSE=""
 
 inherit flag-o-matic eutils
 
 DESCRIPTION="Extensible binary format library (kinda like XML)"
-SRC_URI="http://matroska.free.fr/downloads/${PN}/${P}.tar.gz"
+SRC_URI="http://www.bunkus.org/videotools/mkvtoolnix/sources/old/${P}.tar.bz2"
 HOMEPAGE="http://www.matroska.org"
 
 SLOT="0"
