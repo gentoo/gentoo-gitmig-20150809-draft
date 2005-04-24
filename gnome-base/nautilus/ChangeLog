@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/nautilus
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/ChangeLog,v 1.129 2005/04/19 02:36:29 joem Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/ChangeLog,v 1.130 2005/04/24 21:27:33 foser Exp $
+
+  24 Apr 2005; foser <foser@gentoo.org> nautilus-2.10.1.ebuild :
+  Remove postinst warning (#89611)
 
 *nautilus-2.10.1 (18 Apr 2005)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-2.10.1.ebuild,v 1.1 2005/04/19 02:36:29 joem Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-2.10.1.ebuild,v 1.2 2005/04/24 21:27:33 foser Exp $
 
 inherit gnome2 eutils
 
@@ -81,11 +81,6 @@ src_unpack() {
 #		fi
 #	fi
 
-
-	#applied in 2.9.91
-	# patch to support libexif versions 0.5 and 0.6
-	#epatch ${FILESDIR}/${PN}-2.9.90-libexif.patch
-
 	# stop nautilus linking to cdda/paranoia
 	sed -i -e "/^CORE_LIBS/s/\$CDDA_LIBS//" configure.in
 
@@ -99,14 +94,4 @@ src_unpack() {
 	fi
 }
 
-pkg_postinst() {
-
-	gnome2_pkg_postinst
-
-	einfo "Nautilus moved to a new spatial browsing model."
-	einfo "If you are unhappy with this behaviour you can revert to the"
-	einfo "old browerslike behaviour by issueing the following command :"
-	einfo "gconftool-2  -s /apps/nautilus/preferences/always_use_browser -t bool TRUE"
-
-}
 USE_DESTDIR="1"
