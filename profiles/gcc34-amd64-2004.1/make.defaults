@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/gcc34-amd64-2004.1/make.defaults,v 1.15 2005/04/24 02:42:10 jstubbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/gcc34-amd64-2004.1/make.defaults,v 1.16 2005/04/24 10:05:04 genstef Exp $
 # System-wide defaults for the gcc 3.3 Portage system
 
 #Experimental: trying to use these USE variables to build up from stage 2->3
@@ -25,7 +25,7 @@ FEATURES="-sandbox"
 # Env vars to expand into USE vars. Modifying this requires prior
 # discussion on gentoo-dev@gentoo.org. Flat profiles also need to
 # be updated appropriately.
-USE_EXPAND="VIDEO_CARDS INPUT_DEVICES LINGUAS"
+USE_EXPAND="FRITZCAPI_CARDS FCDSL_CARDS VIDEO_CARDS INPUT_DEVICES LINGUAS"
 
 CONFIG_PROTECT="/etc /var/qmail/control /usr/share/config /usr/kde/2/share/config /usr/kde/3/share/config"
 CONFIG_PROTECT_MASK="/etc/gconf"

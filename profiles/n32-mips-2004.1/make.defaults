@@ -34,7 +34,7 @@ ACCEPT_KEYWORDS="mips ~mips"
 # Env vars to expand into USE vars. Modifying this requires prior
 # discussion on gentoo-dev@gentoo.org. Flat profiles also need to
 # be updated appropriately.
-USE_EXPAND="VIDEO_CARDS INPUT_DEVICES LINGUAS"
+USE_EXPAND="FRITZCAPI_CARDS FCDSL_CARDS VIDEO_CARDS INPUT_DEVICES LINGUAS"
 
 CONFIG_PROTECT="/etc /var/qmail/control /usr/share/config /usr/kde/2/share/config /usr/kde/3/share/config"
 CONFIG_PROTECT_MASK="/etc/gconf"
