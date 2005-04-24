@@ -1,6 +1,18 @@
 # ChangeLog for media-gfx/splashutils
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/ChangeLog,v 1.22 2005/03/28 20:52:45 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/ChangeLog,v 1.23 2005/04/24 20:19:59 spock Exp $
+
+*splashutils-1.1.9.4 (24 Apr 2005)
+
+  24 Apr 2005; Michał Januszewski <spock@gentoo.org>
+  +splashutils-1.1.9.4.ebuild:
+  A bugfix release (fixes bugs: #88461, #87113, #85531). It also introduces
+  support for new USE flags: png, truetype and kdgraphics. The first two of
+  them should probably be enabled to make sure all themes work correctly.
+  kdgraphics is a local USE flag which changes the way the silent splash image
+  is displayed. Please read the description in use.local.desc before enabling
+  it, as it has the potential to break things and it should probably be kept
+  disabled in all common situations.
 
 *splashutils-1.1.9.3 (28 Mar 2005)
 
