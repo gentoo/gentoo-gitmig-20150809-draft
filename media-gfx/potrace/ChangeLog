@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/potrace
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/potrace/ChangeLog,v 1.5 2005/03/01 09:05:15 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/potrace/ChangeLog,v 1.6 2005/04/24 17:35:01 usata Exp $
+
+*potrace-1.7 (24 Apr 2005)
+
+  24 Apr 2005; Mamoru KOMACHI <usata@gentoo.org> +potrace-1.7.ebuild:
+  Version bumped; bug #90227.
 
 *potrace-1.6 (01 Mar 2005)
 
