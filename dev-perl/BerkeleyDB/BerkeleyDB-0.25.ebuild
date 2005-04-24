@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/BerkeleyDB/BerkeleyDB-0.25.ebuild,v 1.10 2005/04/13 17:15:10 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/BerkeleyDB/BerkeleyDB-0.25.ebuild,v 1.11 2005/04/24 14:46:28 mcummings Exp $
 
 inherit perl-module eutils
 
 DESCRIPTION="This module provides Berkeley DB interface for Perl."
-HOMEPAGE="http://search.cpan.org/~pmqs/BerkeleyDB-0.25/"
-SRC_URI="http://www.cpan.org/modules/by-module/${PN}/${P}.tar.gz"
+HOMEPAGE="http://search.cpan.org/~pmqs/${P}"
+SRC_URI="mirror://cpan/authors/id/P/PM/PMQS/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
