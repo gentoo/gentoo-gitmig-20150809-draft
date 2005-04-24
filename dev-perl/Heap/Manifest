@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 faa4358ebd27f75789d4ff4d9b8b2f2b ChangeLog 1023
-MD5 28c1cd264f96cbbe8c99db567ffde92a Heap-0.50.ebuild 569
-MD5 0eb190b5cf8f8763ec595420fe4afffe Heap-0.70.ebuild 572
-MD5 f2b3be62d3fe35af2f27b3d1c6ede937 Heap-0.71.ebuild 579
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 b4f37786ecb7e3a2009d1b8520e9b033 files/digest-Heap-0.50 60
-MD5 8d26e602a9c4bbc1a1bb32fe4d9f4517 files/digest-Heap-0.70 60
+MD5 f2b3be62d3fe35af2f27b3d1c6ede937 Heap-0.71.ebuild 579
+MD5 2b2bb5542d23801b230815347f46f714 ChangeLog 1112
+MD5 0eb190b5cf8f8763ec595420fe4afffe Heap-0.70.ebuild 572
+MD5 0bae8c5a0a45f1101454bb6164bb8052 Heap-0.50.ebuild 566
 MD5 d50f48bfccf95e8fc9dcabd1b4761407 files/digest-Heap-0.71 60
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFCSyeaKRy60XGEcJIRAvARAKCU2uFcuo5QCgxkF68HsM30OSeJvQCfT+OE
-UzWtDcvoHcV+exd2Zi/kqsI=
-=sXbf
------END PGP SIGNATURE-----
+MD5 8d26e602a9c4bbc1a1bb32fe4d9f4517 files/digest-Heap-0.70 60
+MD5 b4f37786ecb7e3a2009d1b8520e9b033 files/digest-Heap-0.50 60
