@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 b95b5caa75ecaf16a2a3bafb10c7ba1f ChangeLog 1644
 MD5 44c39c6ad372a8e5a5e7ee3311f703a7 metadata.xml 160
-MD5 8f013814041cd7fb7b0d5210a7ede1c4 ninja-1.5.9_pre12.ebuild 678
+MD5 37454524592ab888b67efccad66c3619 ChangeLog 1742
+MD5 b96852930cb438f91691e69c8942a5bb ninja-1.5.9_pre12.ebuild 675
 MD5 fb1cc2d1a486b3113135d305d05e2292 files/digest-ninja-1.5.9_pre12 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBllrkI1lqEGTUzyQRAonAAKCsihNr0E/uhCCpzJi2zsGICXxENwCfZgk7
-CfAt6p5zMIjuwc2U4MkatuA=
-=OS0c
------END PGP SIGNATURE-----
