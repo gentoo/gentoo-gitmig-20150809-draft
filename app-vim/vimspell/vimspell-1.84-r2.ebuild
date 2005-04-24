@@ -1,13 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/vimspell/vimspell-1.84-r2.ebuild,v 1.6 2005/02/22 23:13:48 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/vimspell/vimspell-1.84-r2.ebuild,v 1.7 2005/04/24 12:22:22 hansmi Exp $
 
 inherit eutils vim-plugin
 
 DESCRIPTION="vim plugin: on-the-fly spell checking with aspell"
 HOMEPAGE="http://www.vim.org/scripts/script.php?script_id=465"
 LICENSE="|| ( GPL-1 GPL-2 )"
-KEYWORDS="x86 sparc alpha ia64 ~ppc amd64 mips"
+KEYWORDS="x86 sparc alpha ia64 ppc amd64 mips"
 IUSE=""
 
 VIM_PLUGIN_HELPFILES="vimspell"

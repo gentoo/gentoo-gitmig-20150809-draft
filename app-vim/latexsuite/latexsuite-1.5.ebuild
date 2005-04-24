@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/latexsuite/latexsuite-1.5.ebuild,v 1.12 2005/02/18 20:11:44 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/latexsuite/latexsuite-1.5.ebuild,v 1.13 2005/04/24 12:10:28 hansmi Exp $
 
 inherit vim-plugin
 
@@ -8,7 +8,7 @@ DESCRIPTION="vim plugin: Latex-Suite attempts to provide a comprehensive set of 
 HOMEPAGE="http://vim-latex.sourceforge.net/"
 
 LICENSE="vim"
-KEYWORDS="alpha amd64 ia64 ~ppc sparc x86"
+KEYWORDS="alpha amd64 ia64 ppc sparc x86"
 IUSE=""
 
 # We use this tar-ball as it's distributed instead of repackaging it.

@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/calendar
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/calendar/ChangeLog,v 1.16 2005/02/18 19:30:46 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/calendar/ChangeLog,v 1.17 2005/04/24 11:51:41 hansmi Exp $
+
+  24 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> calendar-1.4.ebuild:
+  Stable on ppc.
 
   18 Feb 2005; Tom Martin <slarti@gentoo.org> calendar-1.4.ebuild:
   amd64 stable.
