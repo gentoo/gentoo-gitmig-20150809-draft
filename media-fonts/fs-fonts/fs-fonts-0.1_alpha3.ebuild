@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/fs-fonts/fs-fonts-0.1_alpha3.ebuild,v 1.1 2004/10/22 09:46:12 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/fs-fonts/fs-fonts-0.1_alpha3.ebuild,v 1.2 2005/04/24 15:50:18 flameeyes Exp $
 
 inherit font
 
@@ -11,7 +11,7 @@ DESCRIPTION="Japanese TrueType fonts designed for screen and print"
 HOMEPAGE="http://x-tt.sourceforge.jp/fs_fonts/"
 SRC_URI="mirror://sourceforge.jp/x-tt/7862/${MY_P}.tar.gz"
 
-KEYWORDS="~x86 ~ppc-macos"
+KEYWORDS="~x86 ~ppc-macos ~amd64"
 LICENSE="public-domain"
 SLOT=0
 

@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/fs-fonts
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/fs-fonts/ChangeLog,v 1.1 2004/10/22 09:46:12 usata Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/fs-fonts/ChangeLog,v 1.2 2005/04/24 15:50:18 flameeyes Exp $
+
+  24 Apr 2005; Diego Pettenò <flameeyes@gentoo.org>
+  fs-fonts-0.1_alpha3.ebuild:
+  Marked ~amd64.
 
 *fs-fonts-0.1_alpha3 (22 Oct 2004)
 
