@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/scwoop
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/scwoop/ChangeLog,v 1.5 2004/11/06 15:40:37 pyrania Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/scwoop/ChangeLog,v 1.6 2005/04/24 10:59:19 blubb Exp $
+
+  24 Apr 2005; Simon Stelling <blubb@gentoo.org> scwoop-4.1.ebuild:
+  stable on amd64
 
   06 Nov 2004; <pyrania@gentoo.org> scwoop-4.1.ebuild:
   Marked stable on x86.

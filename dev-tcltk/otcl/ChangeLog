@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/otcl
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/otcl/ChangeLog,v 1.17 2005/04/23 22:44:36 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/otcl/ChangeLog,v 1.18 2005/04/24 10:58:37 blubb Exp $
+
+  24 Apr 2005; Simon Stelling <blubb@gentoo.org> otcl-1.8-r3.ebuild:
+  stable on amd64
 
   23 Apr 2005; MATSUU Takuto <matsuu@gentoo.org> -otcl-1.8-r1.ebuild,
   -otcl-1.8-r2.ebuild, otcl-1.9.ebuild:
