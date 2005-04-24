@@ -1,6 +1,10 @@
 # ChangeLog for app-text/man2html
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/man2html/ChangeLog,v 1.14 2005/01/02 22:29:18 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/man2html/ChangeLog,v 1.15 2005/04/24 11:39:42 hansmi Exp $
+
+  24 Apr 2005; Michael Hanselmann <hansmi@gentoo.org>
+  man2html-1.5l-r2.ebuild:
+  Stable on ppc.
 
   02 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance

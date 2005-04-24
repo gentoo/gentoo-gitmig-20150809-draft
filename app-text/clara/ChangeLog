@@ -1,6 +1,9 @@
 # ChangeLog for app-text/clara
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/clara/ChangeLog,v 1.6 2005/04/21 20:14:29 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/clara/ChangeLog,v 1.7 2005/04/24 11:34:10 hansmi Exp $
+
+  24 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> clara-20031214.ebuild:
+  Stable on ppc.
 
   21 Apr 2005; Simon Stelling <blubb@gentoo.org> clara-20031214.ebuild:
   stable on amd64
