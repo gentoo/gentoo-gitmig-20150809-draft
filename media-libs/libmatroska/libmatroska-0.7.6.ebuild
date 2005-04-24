@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmatroska/libmatroska-0.7.3-r1.ebuild,v 1.5 2005/04/24 21:27:38 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmatroska/libmatroska-0.7.6.ebuild,v 1.1 2005/04/24 21:27:38 flameeyes Exp $
 
 IUSE=""
 
@@ -8,19 +8,16 @@ inherit flag-o-matic gcc eutils
 
 DESCRIPTION="Extensible multimedia container format based on EBML"
 HOMEPAGE="http://www.matroska.org/"
-SRC_URI="http://www.bunkus.org/videotools/mkvtoolnix/sources/old/${P}.tar.bz2"
+SRC_URI="http://www.bunkus.org/videotools/mkvtoolnix/sources/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ppc ~sparc ~mips ~alpha ~hppa ~amd64 ~ia64"
+KEYWORDS="x86 ~sparc ppc64 ~ppc amd64"
 
-DEPEND=">=dev-libs/libebml-0.7.1-r1"
+DEPEND=">=dev-libs/libebml-0.7.3"
 
 src_unpack() {
 	unpack ${A}
-
-	cd ${S}
-	epatch ${FILESDIR}/libmatroska-shared.patch
 
 	cd ${S}/make/linux
 	sed -i -e 's/CXXFLAGS=/CXXFLAGS+=/g' Makefile
@@ -32,8 +29,7 @@ src_compile() {
 	# This is needed on amd64 to create shared libraries that make
 	# use of matroska, like libvlcplugin from vlc.
 	# Travis Tilley <lv@gentoo.org> 09 Apr 2004
-	use amd64 && append-flags -fPIC
-	use ppc && append-flags -fPIC
+	append-flags -fPIC
 
 	#fixes locale for gcc3.4.0 to close bug 52385
 	if [ "`gcc-major-version`" -ge "3" -a "`gcc-minor-version`" -ge "4" ]
@@ -41,7 +37,7 @@ src_compile() {
 		append-flags -finput-charset=ISO8859-15
 	fi
 
-	make PREFIX=/usr \
+	emake PREFIX=/usr \
 		LIBEBML_INCLUDE_DIR=/usr/include/ebml \
 		LIBEBML_LIB_DIR=/usr/$(get_libdir) || die "make failed"
 }
@@ -50,5 +46,5 @@ src_install() {
 	cd ${S}/make/linux
 
 	einstall libdir="${D}/usr/$(get_libdir)" || die "make install failed"
-	dodoc ../../ChangeLog
+	dodoc ${S}/ChangeLog
 }
