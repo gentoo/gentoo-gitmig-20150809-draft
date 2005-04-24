@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.51.20-r4.ebuild,v 1.1 2005/04/24 09:40:59 jstubbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.51.20-r4.ebuild,v 1.2 2005/04/24 18:26:42 eradicator Exp $
 
 inherit toolchain-funcs
 
@@ -13,7 +13,7 @@ LICENSE="GPL-2"
 SLOT="0"
 #KEYWORDS=" alpha  amd64  arm  hppa  ia64  mips  ppc  ppc-macos  ppc64  s390  sh  sparc  x86"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc-macos ~ppc64 ~s390 ~sh ~sparc ~x86"
-RESTRICT="nosandbox sandbox multilib-pkg-force"
+RESTRICT="nosandbox sandbox"
 
 # Disable the sandbox on portages that don't support RESTRICT="nosandbox"
 export SANDBOX_DISABLED="1"
