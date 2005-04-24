@@ -1,13 +1,16 @@
 # ChangeLog for dev-perl/Net-Telnet
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Telnet/ChangeLog,v 1.12 2004/06/25 00:51:04 agriffis Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Telnet/ChangeLog,v 1.13 2005/04/24 19:31:33 spyderous Exp $
+
+  24 Apr 2005; Donnie Berkholz <spyderous@gentoo.org>; :
+  s:04 Dev 2002:04 Dec 2002
 
   20 Mar 2004; Joshua Kinard <kumba@gentoo.org> Net-Telnet-3.03-r1.ebuild:
   Added ~mips to KEYWORDS.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
-  04 Dev 2002; Michael Cummings <mcummings@gentoo.org>
+  04 Dec 2002; Michael Cummings <mcummings@gentoo.org>
   Net-Telnet-3.03-r1
 
   added sparc (tested)
