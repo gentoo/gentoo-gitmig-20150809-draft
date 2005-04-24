@@ -1,11 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Cgi-Simple/Cgi-Simple-0.077.ebuild,v 1.7 2005/04/24 13:02:15 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Cgi-Simple/Cgi-Simple-0.077.ebuild,v 1.8 2005/04/24 15:32:48 mcummings Exp $
 
 inherit perl-module
 
 
-DESCRIPTION="The Perl CGI::Simple Module"
+DESCRIPTION="A Simple totally OO CGI interface that is CGI.pm compliant"
 SRC_URI="mirror://cpan/authors/id/J/JF/JFREEMAN/${P}.tar.gz"
 HOMEPAGE="http://search.cpan.org/author/JFREEMAN/${P}/"
 
