@@ -1,4 +1,16 @@
-MD5 e8bac573359dfbfc1d38a1538de33e18 donkey-0.53.3.ebuild 626
-MD5 19be61db81f4697d4b65c4237e7ccb9c ChangeLog 415
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 8c2c30da8bae6151c9aee1e48b8670d4 edonkey-1.0.2.ebuild 672
+MD5 3c815633a865b1a0eb7fcbbf99390e73 ChangeLog 441
+MD5 9cff552a4db62a565abeaec7e79ce435 edonkey-1.1.0.ebuild 673
 MD5 8aefbc0e49db723ca1ad02d0c409cd49 metadata.xml 160
-MD5 d6cc1cf8464aa3c6faa81dc55525766c files/digest-donkey-0.53.3 65
+MD5 4107178b7a8a6706b60d36a4a63e1032 files/digest-edonkey-1.0.2 70
+MD5 ddf7ec45dfb9d80511887793912ca9e3 files/digest-edonkey-1.1.0 70
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCbCYVevY57Fted3ERArxEAKCea+wI/hs2LlDKoKQACjPYHUonoQCePxTA
+D/TXwQXOa2M5bGRDT+jLvvk=
+=lPOX
+-----END PGP SIGNATURE-----

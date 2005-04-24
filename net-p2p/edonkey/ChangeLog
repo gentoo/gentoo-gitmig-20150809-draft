@@ -1,17 +1,11 @@
-# ChangeLog for net-p2p/donkey
+# ChangeLog for net-p2p/edonkey
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/edonkey/ChangeLog,v 1.1 2005/04/24 22:58:09 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/edonkey/ChangeLog,v 1.2 2005/04/24 23:04:42 lanius Exp $
 
-*edonkey-0.53.3 (24 Apr 2005)
+*edonkey-1.1.0 (24 Apr 2005)
+*edonkey-1.0.2 (24 Apr 2005)
 
-  24 Apr 2005; Heinrich Wendel <lanius@gentoo.org> +metadata.xml,
-  +edonkey-0.53.3.ebuild:
-  Moved from net-p2p/donkey to net-p2p/edonkey.
-
-*donkey-0.53.3 (05 Jul 2004)
-
-  05 Jul 2004; Jon Hood <squinky86@gentoo.org> +metadata.xml,
-  +donkey-0.53.3.ebuild:
-  Initial import, thanks to Alexandru Toma <flash3001@yahoo.com> in #50189 for
-  this ebuild
+  24 Apr 2005; Heinrich Wendel <lanius@gentoo.org> -edonkey-0.53.3.ebuild,
+  +edonkey-1.0.2.ebuild, +edonkey-1.1.0.ebuild:
+  move net-p2p/donkey to net-p2p/edonkey; version bump
 
