@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ff07782c6ce02a02d3592909abe8c958 hd2u-1.0.0.ebuild 645
-MD5 59e0116f33c8f919edb7e4d958a11242 hd2u-0.8.2.ebuild 684
-MD5 ccec87b74c9be9347cf3af5b96684038 hd2u-0.9.2.ebuild 638
-MD5 c3cbb5b34e46d0a21b856c3639667b16 ChangeLog 2642
 MD5 0c131a7201c4670302767f93643876fa metadata.xml 165
-MD5 ea34ca8330982c712c87f296ecab3d96 files/digest-hd2u-0.8.2 58
+MD5 8d0b5589a502f07a177610dc715748f8 hd2u-1.0.0.ebuild 643
+MD5 e56e4acd9b807c56a0271a4ff595852d ChangeLog 2732
+MD5 ccec87b74c9be9347cf3af5b96684038 hd2u-0.9.2.ebuild 638
+MD5 59e0116f33c8f919edb7e4d958a11242 hd2u-0.8.2.ebuild 684
 MD5 e6a53221382a074f10198242a30e99f5 files/digest-hd2u-0.9.2 58
+MD5 ea34ca8330982c712c87f296ecab3d96 files/digest-hd2u-0.8.2 58
 MD5 fcfebd4f8048e1f008179edbb134d30b files/digest-hd2u-1.0.0 58
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCakloEZCkKN40op4RAicTAJ4r8mW78GUxa8+AM4Hv88wNOWjqfQCgjzt2
-l1X12pwE/N5yAk+Kwpqj7Yw=
-=6+de
------END PGP SIGNATURE-----
