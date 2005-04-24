@@ -1,0 +1,12 @@
+# ChangeLog for net-dialup/misdn
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/misdn/ChangeLog,v 1.1 2005/04/24 13:37:58 genstef Exp $
+
+*misdn-20050409 (24 Apr 2005)
+
+  24 Apr 2005; Stefan Schweizer <genstef@gentoo.org>
+  +files/change-pci_find_subsys-to-pci_get_subsys.patch,
+  +files/misdn.modulesd, +metadata.xml, +misdn-20050409.ebuild:
+  New ebuild for the experimental mISDN driver, thanks to sbriesen and
+  strafbomber for testing
+
