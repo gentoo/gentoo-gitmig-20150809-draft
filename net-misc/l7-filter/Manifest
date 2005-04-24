@@ -1,20 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 0a3666b3b0e71fd35bc6058e79fe9630 l7-filter-1.1.ebuild 2050
 MD5 89edb769612add8464eb3c324f09e197 metadata.xml 374
-MD5 d739ec3b86094f6eafc0574999f81142 ChangeLog 1958
+MD5 a2d9668ead0fe7aa5d74218c8a378331 ChangeLog 2093
 MD5 5f9e3850e00952295020f159410dcbcc l7-filter-0.9.1-r1.ebuild 2358
-MD5 528fde16448d7ef5b735db3ab37659c5 l7-filter-1.0.ebuild 1857
 MD5 07bf1bffb5ea599211af550336651519 l7-filter-1.2.ebuild 2050
-MD5 1e7b9db5aede442a458cec1f3473e155 files/digest-l7-filter-1.1 72
 MD5 3b5e56dbb295b185a8c4dabd56868feb files/digest-l7-filter-0.9.1-r1 259
-MD5 3f59c20abb1b5831a039f43e8702662e files/digest-l7-filter-1.0 72
 MD5 69654182b56d25fafc1bd63eae5d35ee files/digest-l7-filter-1.2 72
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCZ5odmdTrptrqvGERAjONAJ0eDzXgVIWUEa2sULlkB8BoA9fmSACeLx3D
-PEOMLkwLfu6RlBeC3MzVzGo=
-=UqYO
+iD8DBQFCawvnmdTrptrqvGERAnmbAKCDvyGK9aoI5hm2u6BmPDDaWb+9IQCcDMY9
+NegaLkzYMDLkufxeTzLAwVg=
+=Jrxu
 -----END PGP SIGNATURE-----
