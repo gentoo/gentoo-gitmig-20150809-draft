@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.4.7-r2.ebuild,v 1.1 2005/04/17 19:02:48 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.4.7-r2.ebuild,v 1.2 2005/04/24 10:27:20 dsd Exp $
 
 inherit eutils python linux-info versionator flag-o-matic
 
@@ -34,16 +34,9 @@ DEPEND="${RDEPEND}
 # way to ensure that to some extent
 pkg_setup() {
 
-	if get_version; then
-		kernel_is ge 2 6 10 && break
-	else
-		RKV=$(uname -r)
-		RKV=${RKV//-*}
-		if version_is_at_least "2.6.10" ${RKV}; then
-			break
-		fi
-	fi
-	die "You need a 2.6.10 or newer kernel to build this pack"
+	linux-info_pkg_setup
+	kernel_is ge 2 6 10 \
+		|| die "You need a 2.6.10 or newer kernel to build this package"
 
 }
 
