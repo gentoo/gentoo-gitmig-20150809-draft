@@ -1,6 +1,12 @@
 # ChangeLog for net-www/gentoo-webroot-default
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/gentoo-webroot-default/ChangeLog,v 1.8 2005/04/11 18:45:19 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/gentoo-webroot-default/ChangeLog,v 1.9 2005/04/24 06:54:46 hollow Exp $
+
+*gentoo-webroot-default-0.2 (24 Apr 2005)
+
+  24 Apr 2005; Benedikt Boehm <hollow@gentoo.org>
+  +gentoo-webroot-default-0.2.ebuild:
+  bumped to 0.2 and fix bug 90156
 
   11 Apr 2005; Markus Rothe <corsair@gentoo.org>
   gentoo-webroot-default-0.1.ebuild:

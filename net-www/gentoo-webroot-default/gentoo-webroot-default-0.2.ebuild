@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/gentoo-webroot-default/gentoo-webroot-default-0.1.ebuild,v 1.13 2005/04/24 06:54:47 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/gentoo-webroot-default/gentoo-webroot-default-0.2.ebuild,v 1.1 2005/04/24 06:54:47 hollow Exp $
 
 DESCRIPTION="This is the default Gentoo WebServer content"
 HOMEPAGE="http://www.gentoo.org/"
@@ -16,6 +16,8 @@ DEPEND=""
 S=${WORKDIR}/${PF}
 
 src_install() {
+	keepdir /var/www/localhost
+
 	if useq no-htdocs; then
 		insinto /usr/share/doc/${PF}/webroot/
 	else
@@ -38,6 +40,6 @@ pkg_postinst() {
 
 pkg_config() {
 	ebegin "Installing webroot to /var/www/localhost"
-	cp -r /usr/share/doc/${PF}/webroot/htdocs /var/www/localhost
+	cp -r /usr/share/doc/${PF}/webroot/* /var/www/localhost/
 	eend $?
 }
