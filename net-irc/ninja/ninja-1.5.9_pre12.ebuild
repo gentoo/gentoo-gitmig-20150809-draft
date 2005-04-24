@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ninja/ninja-1.5.9_pre12.ebuild,v 1.3 2004/10/19 12:29:35 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ninja/ninja-1.5.9_pre12.ebuild,v 1.4 2005/04/24 13:15:57 hansmi Exp $
 
 S=${WORKDIR}/${P/_*/}
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://ninja.qoop.org/"
 SRC_URI="ftp://qoop.org/ninja/stable/${P/_/}.tar.gz"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 amd64 ~sparc ~ppc"
+KEYWORDS="x86 amd64 ~sparc ppc"
 IUSE="ncurses ipv6 ssl"
 
 DEPEND="virtual/libc

@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/irc-client
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irc-client/ChangeLog,v 1.8 2004/07/12 23:05:42 swegener Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irc-client/ChangeLog,v 1.9 2005/04/24 13:11:27 hansmi Exp $
+
+  24 Apr 2005; Michael Hanselmann <hansmi@gentoo.org>
+  irc-client-2.10.3_p3.ebuild:
+  Stable on ppc.
 
   13 Jul 2004; Sven Wegener <swegener@gentoo.org> irc-client-2.10.3_p3.ebuild:
   Updated SRC_URI.

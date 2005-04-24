@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/irc-server
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irc-server/ChangeLog,v 1.8 2004/10/09 20:37:52 swegener Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irc-server/ChangeLog,v 1.9 2005/04/24 13:12:22 hansmi Exp $
+
+  24 Apr 2005; Michael Hanselmann <hansmi@gentoo.org>
+  irc-server-2.10.3_p3.ebuild:
+  Stable on ppc.
 
   09 Oct 2004; Sven Wegener <swegener@gentoo.org> files/ircd.rc:
   Modified to 'use net' not 'need net' in init script. Closes bug #66467.

@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/emech
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/emech/ChangeLog,v 1.3 2004/09/04 03:51:54 swegener Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/emech/ChangeLog,v 1.4 2005/04/24 13:10:55 hansmi Exp $
+
+  24 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> emech-2.8.5.1.ebuild:
+  Stable on ppc.
 
   04 Sep 2004; Sven Wegener <swegener@gentoo.org> emech-2.8.5.1.ebuild:
   Marked stable on x86.
