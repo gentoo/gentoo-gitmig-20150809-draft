@@ -1,8 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/alsa-utils-1.0.8.ebuild,v 1.7 2005/03/29 18:55:13 corsair Exp $
-
-IUSE=""
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/alsa-utils-1.0.8.ebuild,v 1.8 2005/04/24 10:01:44 vapier Exp $
 
 MY_P=${P/_rc/rc}
 S=${WORKDIR}/${MY_P}
@@ -13,12 +11,12 @@ SRC_URI="mirror://alsaproject/utils/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0.9"
-KEYWORDS="~alpha amd64 hppa ~mips ppc ppc64 sparc x86"
+KEYWORDS="~alpha amd64 hppa ia64 ~mips ppc ppc64 sparc x86"
+IUSE=""
 
 DEPEND=">=sys-libs/ncurses-5.1
 	dev-util/dialog
 	>=media-libs/alsa-lib-1.0.8"
-
 RDEPEND="${DEPEND}
 	sys-apps/pciutils"
 
