@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/use.mask,v 1.9 2005/04/18 13:18:28 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/use.mask,v 1.10 2005/04/24 19:08:11 kumba Exp $
 
 # This file masks out USE flags that are simply NOT allowed in the default
 # profile for any architecture.  This works, for example, if a non-default
@@ -37,8 +37,6 @@ altivec
 # mips only:
 n32
 n64
-cobalt
-ip28
 
 # Only used by mips and old amd64 profiles
 multilib

@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/use.mask,v 1.28 2005/04/14 14:57:25 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/use.mask,v 1.29 2005/04/24 19:08:11 kumba Exp $
 
 # Stephen P. Becker <geoman@gentoo.org>
 # mad just spits out static on mips (ip22)
@@ -154,8 +154,6 @@ glitz
 # Unmask our instruction sets
 -n32
 -n64
--cobalt
--ip28
 
 # Using multilib USE flag until a proper multilib profile is created
 -multilib
