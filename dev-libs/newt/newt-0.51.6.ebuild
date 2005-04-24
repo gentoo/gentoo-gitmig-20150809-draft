@@ -1,17 +1,19 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/newt/newt-0.51.6.ebuild,v 1.5 2005/04/09 02:38:57 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/newt/newt-0.51.6.ebuild,v 1.6 2005/04/24 10:08:00 vapier Exp $
 
 inherit python toolchain-funcs eutils flag-o-matic
 
 DESCRIPTION="Redhat's Newt windowing toolkit development files"
+HOMEPAGE="http://www.redhat.com/"
 SRC_URI="mirror://gentoo/${P}.tar.gz
 	http://dev.gentoo.org/~xmerlin/misc/${P}.tar.gz"
-HOMEPAGE="http://www.redhat.com"
-SLOT="0"
+
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc ~hppa amd64 ~alpha ppc64"
+SLOT="0"
+KEYWORDS="~alpha amd64 arm hppa ia64 ppc ppc64 sparc x86"
 IUSE="uclibc gpm"
+
 DEPEND=">=sys-libs/slang-1.4
 	>=dev-libs/popt-1.6
 	dev-lang/python
