@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libmimedir
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmimedir/ChangeLog,v 1.5 2005/04/09 23:41:21 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmimedir/ChangeLog,v 1.6 2005/04/24 12:43:52 hansmi Exp $
+
+  24 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> libmimedir-0.3.ebuild:
+  Stable on ppc.
 
   10 Apr 2005; Danny van Dyk <kugelfang@gentoo.org> libmimedir-0.3.ebuild:
   Fixed to use $(get_libdir), BUG #87918. Marked ~amd64.

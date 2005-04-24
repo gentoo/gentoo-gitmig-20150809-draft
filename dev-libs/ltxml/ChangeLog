@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/ltxml
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ltxml/ChangeLog,v 1.5 2004/06/26 13:09:39 dholm Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ltxml/ChangeLog,v 1.6 2005/04/24 12:47:55 hansmi Exp $
+
+  24 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> ltxml-1.2.5.ebuild:
+  Stable on ppc.
 
   26 Jun 2004; David Holm <dholm@gentoo.org> ltxml-1.2.5.ebuild:
   Added to ~ppc.
