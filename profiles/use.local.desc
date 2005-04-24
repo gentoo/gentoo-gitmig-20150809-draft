@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1107 2005/04/24 00:58:29 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1108 2005/04/24 09:24:47 mrness Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -843,11 +843,11 @@ www-client/w3m:async - Enables asynchronous fetch
 www-client/w3m:imlib2 - If you want to link imlib2 instead of imlib against w3mimgdisplay
 www-client/w3m:lynxkeymap - If you prefer Lynx-like key binding
 www-misc/nsxml:xslt - Enables xslt support
-net-proxy/squid:customlog - Add support for custom log file formats
+net-proxy/squid:customlog - Adds support for custom log file formats
 net-proxy/squid:logrotate - Use logrotate for rotating logs
 net-proxy/squid:underscores - Enables support for domain names containing underscores
-net-proxy/squid:zero-penalty-hit - Add Zero Penalty Hit patch
-net-proxy/tinyproxy:transparent-proxy - enable support for transparent proxies
+net-proxy/squid:zero-penalty-hit - Adds Zero Penalty Hit patch
+net-proxy/tinyproxy:transparent-proxy - Enables support for transparent proxies
 net-servers/fnord:diet - Compile and link with dietlibc
 net-servers/lighttpd:xattr - if you want extended attributes enabled
 net-servers/pound:msdav - if you want the Microsoft DAV extensions enabled
