@@ -1,6 +1,11 @@
 # ChangeLog for app-forensics/sleuthkit
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/sleuthkit/ChangeLog,v 1.13 2005/04/21 18:48:32 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/sleuthkit/ChangeLog,v 1.14 2005/04/24 06:20:27 dragonheart Exp $
+
+*sleuthkit-2.01 (24 Apr 2005)
+
+  24 Apr 2005; Daniel Black <dragonheart@gentoo.org> +sleuthkit-2.01.ebuild:
+  Version bump as per bug #89978
 
   21 Apr 2005; Simon Stelling <blubb@gentoo.org> sleuthkit-1.73-r1.ebuild:
   stable on amd64
