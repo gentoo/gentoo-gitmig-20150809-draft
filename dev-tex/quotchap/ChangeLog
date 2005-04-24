@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/quotchap
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/quotchap/ChangeLog,v 1.5 2004/12/28 21:19:17 absinthe Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/quotchap/ChangeLog,v 1.6 2005/04/24 12:40:19 hansmi Exp $
+
+  24 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> quotchap-0.9f.ebuild:
+  Stable on ppc.
 
   28 Dec 2004; Dylan Carlson <absinthe@gentoo.org> quotchap-0.9f.ebuild:
   Keywords ~amd64.
