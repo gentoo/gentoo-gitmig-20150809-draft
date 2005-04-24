@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/regina-rexx/regina-rexx-3.0.1.ebuild,v 1.12 2005/03/29 00:18:16 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/regina-rexx/regina-rexx-3.0.1.ebuild,v 1.13 2005/04/24 02:48:22 hansmi Exp $
 
 S=${WORKDIR}
 HOMEPAGE="http://regina-rexx.sourceforge.net"
@@ -9,7 +9,7 @@ SRC_URI="mirror://sourceforge/regina-rexx/regina301.zip"
 
 SLOT="0"
 LICENSE="LGPL-2.1"
-KEYWORDS="x86 sparc"
+KEYWORDS="x86 sparc ppc"
 IUSE=""
 
 DEPEND="app-arch/unzip"

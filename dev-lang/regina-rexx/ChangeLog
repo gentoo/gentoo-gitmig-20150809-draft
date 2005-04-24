@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/regina-rexx
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/regina-rexx/ChangeLog,v 1.11 2005/03/29 00:18:16 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/regina-rexx/ChangeLog,v 1.12 2005/04/24 02:48:22 hansmi Exp $
+
+  24 Apr 2005; Michael Hanselmann <hansmi@gentoo.org>
+  regina-rexx-3.0.1.ebuild:
+  Stable on ppc.
 
   29 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org> regina-rexx-3.3.ebuild:
   added ~amd64 to KEYWORDS, fixes #73948
