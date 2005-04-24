@@ -1,7 +1,28 @@
-diff -Naurp file-4.05.orig/magic/Magdir/elf file-4.05/magic/Magdir/elf
---- file-4.05.orig/magic/Magdir/elf	2003-05-23 17:37:35.000000000 -0400
-+++ file-4.05/magic/Magdir/elf	2003-10-12 00:52:12.000000000 -0400
-@@ -23,10 +23,32 @@
+This tweaks the output format for mips binaries so things like 
+libtool don't barf all over the place when trying to parse it.
+
+BEFORE: cat: ELF 32-bit N32 MSB MIPS-IV executable, MIPS, version 1 (SYSV), for GNU/Linux 2.4.0, dynamically linked (uses shared libs), stripped
+AFTER:  cat: ELF 32-bit MSB executable, MIPS, N32 MIPS-IV version 1 (SYSV), for GNU/Linux 2.4.0, dynamically linked (uses shared libs), stripped
+
+Reference:
+http://lists.debian.org/debian-mips/2001/01/msg00065.html
+http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=83303
+
+--- magic/Magdir/elf
++++ magic/Magdir/elf
+@@ -11,22 +11,39 @@
+ 0	string		\177ELF		ELF
+ >4	byte		0		invalid class
+ >4	byte		1		32-bit
+-# only for MIPS - in the future, the ABI field of e_flags should be used.
+->>18	leshort		8
+->>>36	lelong		&0x20		N32
+->>18	leshort		10
+->>>36	lelong		&0x20		N32
+->>18	beshort		8
+->>>36	belong		&0x20		N32
+->>18	beshort		10
+->>>36	belong		&0x20		N32
  >4	byte		2		64-bit
  >5	byte		0		invalid byte order
  >5	byte		1		LSB
@@ -32,10 +53,14 @@ diff -Naurp file-4.05.orig/magic/Magdir/elf file-4.05/magic/Magdir/elf
  # say something if #10 is encountered, but only gory details for #8.
 ->>18    leshort		8
 +>>18	leshort		8		MIPS,
++>>>36	lelong		&0x20		N32
++>>18	leshort		10		MIPS,
++>>>36	lelong		&0x20		N32
++>>18	leshort		8
  # only for 32-bit
  >>>4	byte		1
  >>>>36  lelong&0xf0000000	0x00000000	MIPS-I
-@@ -49,29 +71,6 @@
+@@ -49,29 +66,6 @@
  >>>>48  lelong&0xf0000000	0x70000000	MIPS64 
  >>>>48  lelong&0xf0000000	0x80000000	MIPS32 rel2
  >>>>48  lelong&0xf0000000	0x90000000	MIPS64 rel2
@@ -65,7 +90,7 @@ diff -Naurp file-4.05.orig/magic/Magdir/elf file-4.05/magic/Magdir/elf
  >>18	leshort		9		Amdahl - invalid byte order,
  >>18	leshort		10		MIPS (deprecated),
  >>18	leshort		11		RS6000 - invalid byte order,
-@@ -110,8 +109,27 @@
+@@ -111,8 +105,31 @@
  >>20	lelong		1		version 1
  >>36	lelong		1		MathCoPro/FPU/MAU Required
  >5	byte		2		MSB
@@ -91,10 +116,14 @@ diff -Naurp file-4.05.orig/magic/Magdir/elf file-4.05/magic/Magdir/elf
  # only for MIPS - see comment in little-endian section above.
 ->>18    beshort		8
 +>>18	beshort		8		MIPS,
++>>>36	belong		&0x20		N32
++>>18	beshort		10		MIPS,
++>>>36	belong		&0x20		N32
++>>18	beshort		8
  # only for 32-bit
  >>>4	byte		1
  >>>>36  belong&0xf0000000	0x00000000	MIPS-I
-@@ -134,26 +152,6 @@
+@@ -135,26 +152,6 @@
  >>>>48	belong&0xf0000000	0x70000000	MIPS64 
  >>>>48	belong&0xf0000000	0x80000000	MIPS32 rel2
  >>>>48	belong&0xf0000000	0x90000000	MIPS64 rel2

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-4.13.ebuild,v 1.1 2005/04/01 19:25:14 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-4.13.ebuild,v 1.2 2005/04/24 17:46:45 vapier Exp $
 
 inherit flag-o-matic gnuconfig eutils distutils libtool toolchain-funcs
 
@@ -21,11 +21,9 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 
-	# (12 Oct 2003) <kumba@gentoo.org>
-	# This patch is for MIPS only.  It slightly changes the 'file' output
-	# on MIPS machines to a specific format so that other programs can
-	# recognize things.
-	use mips && epatch ${FILESDIR}/${PN}-4.xx-mips-gentoo.diff
+	# This tweaks the output format for mips binaries so things like 
+	# libtool don't barf all over the place when trying to parse it.
+	epatch ${FILESDIR}/${PN}-4.xx-mips-gentoo.patch
 
 	# The build process tries to run the compiled file ... not a good
 	# thing if file was cross compiled ;)
