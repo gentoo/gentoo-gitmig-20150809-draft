@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/egressor
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/egressor/ChangeLog,v 1.7 2005/01/29 05:12:50 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/egressor/ChangeLog,v 1.8 2005/04/24 03:24:46 hansmi Exp $
+
+  24 Apr 2005; Michael Hanselmann <hansmi@gentoo.org>
+  egressor-1.0-r1.ebuild:
+  Stable on ppc.
 
   29 Jan 2005; Daniel Black <dragonheart@gentoo.org> egressor-1.0-r1.ebuild,
   egressor-1.0.ebuild:
