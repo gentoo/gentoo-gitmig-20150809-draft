@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 5c5c95d8f3db71198df4fa50dcc12568 tmpreaper-1.5.1.ebuild 665
-MD5 bc014e80b7cdb47556f9d374405e792f ChangeLog 2233
 MD5 f8d10f350e91f30316ea4e1bd1e76470 metadata.xml 254
-MD5 26eeb8610f337c2f320bdc3f038c31fb tmpreaper-1.6.5.ebuild 676
-MD5 3721a56987b93cca79656d87d4f17dfd files/digest-tmpreaper-1.5.1 66
+MD5 9c8e910df4fe00980134a6cfbd1512de ChangeLog 2330
+MD5 659478f5100dfa807907e8c003cce00b tmpreaper-1.6.5.ebuild 674
+MD5 5c5c95d8f3db71198df4fa50dcc12568 tmpreaper-1.5.1.ebuild 665
 MD5 bed633d6699e6a4e3e4acb0000e951a0 files/digest-tmpreaper-1.6.5 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCakhKEZCkKN40op4RArjLAKDEpfJGZxndNxowaTDbGBhW+LQWDwCguKiE
-Vof7MpmBK9DPlq3c34rmxNM=
-=k07A
------END PGP SIGNATURE-----
+MD5 3721a56987b93cca79656d87d4f17dfd files/digest-tmpreaper-1.5.1 66

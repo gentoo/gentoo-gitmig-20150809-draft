@@ -1,4 +1,4 @@
-MD5 bbd085a39c90b8183362c0052b7fd114 ChangeLog 611
-MD5 85d8afdf8a5960e1a63ba681cb0c860b chroot_safe-1.3.ebuild 950
+MD5 cd685b91c35528bc751901cea4adac2e chroot_safe-1.3.ebuild 945
 MD5 f8d10f350e91f30316ea4e1bd1e76470 metadata.xml 254
+MD5 c422d84204f076e96c7ca5bae38c7fcb ChangeLog 705
 MD5 25232ac0b573af6c6bc853ce35190437 files/digest-chroot_safe-1.3 63
