@@ -1,6 +1,17 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.210 2005/04/24 18:42:21 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.211 2005/04/24 19:42:30 flameeyes Exp $
+
+*xine-lib-1.0-r4 (24 Apr 2005)
+
+  24 Apr 2005; Diego Pettenò <flameeyes@gentoo.org>
+  +files/xine-lib-1.0-wma.patch, +xine-lib-1.0-r4.ebuild:
+  Added vcd useflag which adds dependency on vcdimager as it's needed to 
+  view vcds. Fixes #90176.
+  Fixed location of documentation, now everything is installed in the 
+  right docdir and /usr/share/doc/xine is gone.
+  Added patch to support wma lossless fileformat (using win32codecs). Fixes
+  #90086.
 
   24 Apr 2005; Michael Hanselmann <hansmi@gentoo.org>
   xine-lib-1.0-r2.ebuild:
