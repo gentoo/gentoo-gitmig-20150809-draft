@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-0.99.19.ebuild,v 1.7 2005/01/30 10:18:00 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-0.99.19.ebuild,v 1.8 2005/04/24 09:49:43 vapier Exp $
 
 inherit gnome2 eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.hadess.net/totem.php3"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~amd64 ~sparc"
+KEYWORDS="~amd64 ia64 ~ppc ~sparc x86"
 IUSE="gstreamer lirc mad"
 
 RDEPEND=">=dev-libs/glib-2.1
