@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/pydict/pydict-0.2.5.1.ebuild,v 1.10 2005/01/01 12:57:25 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/pydict/pydict-0.2.5.1.ebuild,v 1.11 2005/04/24 03:26:38 hansmi Exp $
 
 DESCRIPTION="Chinese-English / English-Chinese dictionary"
 HOMEPAGE="http://sourceforge.net/projects/pydict"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/pydict/pyDict-${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="x86 ppc"
 IUSE=""
 
 DEPEND="virtual/python
