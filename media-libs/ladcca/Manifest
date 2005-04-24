@@ -1,16 +1,19 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
+MD5 466554f5ee216e749b2129bcaa68b35a ChangeLog 2253
 MD5 68d22685a30c84d0e6aa06acb29cf7ef ladcca-0.3.2.ebuild 653
 MD5 f65d2d9254d7040e722a20936ed1ceed ladcca-0.4.0.ebuild 933
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 fabe29a70af29a6d423433260b9a7cdb ChangeLog 2072
+MD5 01aea52fb03582fc92b5c2098d920d04 ladcca-0.4.0-r1.ebuild 1022
 MD5 77d4381b90cb0fe0444d1719764e76d4 files/digest-ladcca-0.3.2 64
 MD5 2c99d8df53e94e7be67d11fc9af00b0f files/digest-ladcca-0.4.0 64
+MD5 ad777e3385a1f80c38beb0699c86230b files/ladcca-0.4.0-depreciated_jackAPI.patch 501
+MD5 2c99d8df53e94e7be67d11fc9af00b0f files/digest-ladcca-0.4.0-r1 64
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFBomfwArHZZzCEUG0RAsrBAJ9XO+x667tqGvf/93SezCsrx/Z0QACbBbLc
-GksWhsyWmmN3k399c6FVVvA=
-=LbHW
+iD8DBQFCayB8+uC/ViVka/0RAnR1AJ9uFl9yaUVpLWgCN4Ers8tPBpeHEgCbBvH+
+Bz1WJAUsYA3S+fG+Jyrs6aA=
+=90qd
 -----END PGP SIGNATURE-----
