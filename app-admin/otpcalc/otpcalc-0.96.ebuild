@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/otpcalc/otpcalc-0.96.ebuild,v 1.10 2005/01/01 11:15:59 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/otpcalc/otpcalc-0.96.ebuild,v 1.11 2005/04/24 21:55:05 wormo Exp $
 
 DESCRIPTION="A One Time Password and S/Key calculator for X"
 HOMEPAGE="http://killa.net/infosec/otpCalc/"
@@ -8,7 +8,7 @@ SRC_URI="http://killa.net/infosec/otpCalc/otpCalc-${PV}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 alpha"
+KEYWORDS="x86 alpha ~ppc"
 IUSE=""
 
 DEPEND="=x11-libs/gtk+-1.2*

@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/otpcalc
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/otpcalc/ChangeLog,v 1.6 2005/01/01 11:15:59 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/otpcalc/ChangeLog,v 1.7 2005/04/24 21:55:05 wormo Exp $
+
+  24 Apr 2005; Stephanie Lockwood-Childs <wormo@gentoo.org>
+  otpcalc-0.96.ebuild:
+  mark ~ppc
 
   25 Mar 2004; Martin Holzer <mholzer@gentoo.org> otpcalc-0.96.ebuild:
   fixing depend. see 45343
