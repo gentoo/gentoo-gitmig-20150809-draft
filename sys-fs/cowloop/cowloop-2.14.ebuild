@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cowloop/cowloop-2.14.ebuild,v 1.1 2005/03/25 23:56:38 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cowloop/cowloop-2.14.ebuild,v 1.2 2005/04/24 03:30:59 dragonheart Exp $
 
-inherit linux-mod
+inherit linux-mod toolchain-funcs
 
 DESCRIPTION="A copy-on-write loop driver (block device) to be used on top of any other block driver"
 HOMEPAGE="http://www.atconsultancy.nl/cowloop/"
@@ -32,7 +32,7 @@ pkg_setup() {
 
 src_compile() {
 	linux-mod_src_compile
-	emake cowdev cowrepair cowsync cowlist || die "make failed"
+	CC="$(tc-getCC) ${CFLAGS}" emake cowdev cowrepair cowsync cowlist || die "make failed"
 }
 
 src_install() {
