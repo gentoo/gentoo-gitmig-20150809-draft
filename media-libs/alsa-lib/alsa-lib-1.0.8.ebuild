@@ -1,8 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-1.0.8.ebuild,v 1.9 2005/03/29 18:50:23 corsair Exp $
-
-IUSE="jack doc"
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-1.0.8.ebuild,v 1.10 2005/04/24 10:01:38 vapier Exp $
 
 inherit eutils
 
@@ -13,13 +11,13 @@ DESCRIPTION="Advanced Linux Sound Architecture Library"
 HOMEPAGE="http://www.alsa-project.org/"
 SRC_URI="mirror://alsaproject/lib/${MY_P}.tar.bz2"
 
-SLOT="0"
 LICENSE="GPL-2 LGPL-2.1"
-KEYWORDS="~alpha amd64 hppa ~ia64 ~mips ppc ppc64 sparc x86"
+SLOT="0"
+KEYWORDS="~alpha amd64 hppa ia64 ~mips ppc ppc64 sparc x86"
+IUSE="jack doc"
 
 RDEPEND="virtual/alsa
 	>=media-sound/alsa-headers-${PV}"
-
 DEPEND="${RDEPEND}
 	doc? ( >=app-doc/doxygen-1.2.6 )"
 
