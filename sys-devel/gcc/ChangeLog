@@ -1,6 +1,13 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.400 2005/04/21 20:56:37 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.401 2005/04/24 03:31:33 kumba Exp $
+
+  23 Apr 2005; Joshua Kinard <kumba@gentoo.org>
+  +files/3.4.2/gcc-3.4.2-mips-ip28_cache_barriers-v2.patch,
+  gcc-3.4.3-r1.ebuild, gcc-3.4.3.20050110-r1.ebuild,
+  gcc-3.4.3.20050110-r2.ebuild:
+  Update the gcc-3.4.3 ebuilds to use a newer IP28 cache barrier patch. Won't
+  affect mainstream Mips systems.
 
 *gcc-4.0.0 (21 Apr 2005)
 

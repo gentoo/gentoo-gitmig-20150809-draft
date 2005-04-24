@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.3-r1.ebuild,v 1.34 2005/03/28 00:16:19 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.3-r1.ebuild,v 1.35 2005/04/24 03:31:33 kumba Exp $
 
 MAN_VER="3.4.3"
 BRANCH_UPDATE="20041125"
@@ -133,7 +133,7 @@ src_unpack() {
 			# to be enabled by passing -mip28-cache-barrier.  Only used to build kernels, 
 			# There is the possibility it may be used for very specific userland apps too.
 			if use ip28; then
-				epatch ${FILESDIR}/3.4.2/gcc-3.4.2-mips-ip28_cache_barriers.patch
+				epatch ${FILESDIR}/3.4.2/gcc-3.4.2-mips-ip28_cache_barriers-v2.patch
 			fi
 			;;
 		amd64)
