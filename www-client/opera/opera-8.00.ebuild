@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-8.00.ebuild,v 1.2 2005/04/23 12:45:59 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-8.00.ebuild,v 1.3 2005/04/24 09:58:22 lanius Exp $
 
 IUSE="static spell"
 
@@ -36,7 +36,8 @@ RDEPEND="virtual/x11
 	spell? ( app-text/aspell )
 	amd64? ( static? ( app-emulation/emul-linux-x86-xlibs )
 	         !static? ( app-emulation/emul-linux-x86-qtlibs ) )
-	x86? ( !static? ( =x11-libs/qt-3* ) )"
+	x86? ( !static? ( =x11-libs/qt-3* ) )
+	media-libs/jpeg"
 
 SLOT="0"
 LICENSE="OPERA"
