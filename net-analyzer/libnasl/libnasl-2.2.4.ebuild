@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/libnasl/libnasl-2.2.4.ebuild,v 1.2 2005/04/09 08:39:57 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/libnasl/libnasl-2.2.4.ebuild,v 1.3 2005/04/24 23:56:39 vanquirius Exp $
 
 inherit toolchain-funcs
 
@@ -26,6 +26,6 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR=${D} install || die "Install failed libnasl"
+	make DESTDIR=${D} install || die "Install failed libnasl"
 	dodoc COPYING
 }
