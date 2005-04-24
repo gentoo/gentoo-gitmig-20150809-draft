@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Convert-ASN1/Convert-ASN1-0.18.ebuild,v 1.6 2005/04/01 04:42:22 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Convert-ASN1/Convert-ASN1-0.18.ebuild,v 1.7 2005/04/24 10:16:13 vapier Exp $
 
 inherit perl-module
 
@@ -10,7 +10,7 @@ SRC_URI="http://cpan.pair.com/modules/by-module/Convert/${P}.tar.gz"
 
 LICENSE="|| ( Artistic GPL-2 )"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha ~arm ~hppa ~amd64 ia64 ~s390 ppc64"
+KEYWORDS="~alpha amd64 arm hppa ia64 ~mips ~ppc ppc64 s390 ~sparc x86"
 IUSE=""
 
 SRC_TEST="do"
