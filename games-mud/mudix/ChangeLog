@@ -1,6 +1,9 @@
 # ChangeLog for games-mud/mudix
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/mudix/ChangeLog,v 1.8 2004/12/28 23:09:51 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-mud/mudix/ChangeLog,v 1.9 2005/04/24 02:57:35 hansmi Exp $
+
+  24 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> mudix-4.0.ebuild:
+  Stable on ppc.
 
   28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
