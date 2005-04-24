@@ -1,6 +1,13 @@
 # ChangeLog for app-antivirus/bitdefender-console
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/bitdefender-console/ChangeLog,v 1.7 2005/04/21 17:45:35 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/bitdefender-console/ChangeLog,v 1.8 2005/04/24 23:56:58 wormo Exp $
+
+  24 Apr 2005; Stephanie Lockwood-Childs <wormo@gentoo.org>
+  bitdefender-console-7.0.1.ebuild:
+  added -* keyword to indicate this is x86 specific (missing keywords can
+  mean untried on other architectures -- but this is distributed as x86
+  binaries so we KNOW it won't work except on platforms with x86 instructions
+  (i.e. x86 and amd64 using 32-bit support)
 
   21 Apr 2005; Simon Stelling <blubb@gentoo.org>
   bitdefender-console-7.0.1.ebuild:

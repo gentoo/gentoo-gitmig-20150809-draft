@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/bitdefender-console/bitdefender-console-7.0.1.ebuild,v 1.8 2005/04/21 17:45:35 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/bitdefender-console/bitdefender-console-7.0.1.ebuild,v 1.9 2005/04/24 23:56:58 wormo Exp $
 
 IUSE="emul-linux-x86"
 
@@ -19,7 +19,7 @@ PROVIDE="virtual/antivirus"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="x86 amd64"
+KEYWORDS="-* x86 amd64"
 
 src_unpack () {
 	#Extract the tgz achive contained in MY_P
