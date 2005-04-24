@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/guile
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/guile/ChangeLog,v 1.39 2005/04/06 20:20:19 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/guile/ChangeLog,v 1.40 2005/04/24 15:51:01 azarah Exp $
+
+  24 Apr 2005; Martin Schlemmer <azarah@gentoo.org>
+  +files/guile-1.6.7-gcc4.patch, guile-1.6.7.ebuild:
+  Fix to build with gcc-4.0.0.
 
   06 Apr 2005; Seemant Kulleen <seemant@gentoo.org> guile-1.6.4-r1.ebuild,
   guile-1.6.6.ebuild, guile-1.6.7.ebuild:
