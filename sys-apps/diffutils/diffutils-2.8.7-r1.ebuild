@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/diffutils/diffutils-2.8.7-r1.ebuild,v 1.4 2005/04/09 12:57:14 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/diffutils/diffutils-2.8.7-r1.ebuild,v 1.5 2005/04/24 10:14:38 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -11,23 +11,23 @@ SRC_URI="ftp://alpha.gnu.org/gnu/diffutils/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ppc64 ~s390 ~sh ~sparc ~x86 ~ppc-macos"
+KEYWORDS="~alpha amd64 arm hppa ia64 m68k ~mips ~ppc ppc64 ~ppc-macos s390 sh ~sparc x86"
 IUSE="nls static"
 
-RDEPEND="virtual/libc"
+RDEPEND=""
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	# Removes waitpid() call after pclose() on piped diff stream, closing
 	# bug #11728, thanks to D Wollmann <converter@dalnet-perl.org>
-	epatch ${FILESDIR}/diffutils-2.8.4-sdiff-no-waitpid.patch
+	epatch "${FILESDIR}"/diffutils-2.8.4-sdiff-no-waitpid.patch
 
 	# Fix utf8 support.  Patch from MDK. #71689
-	epatch ${WORKDIR}/${P}-i18n.patch
+	epatch "${WORKDIR}"/${P}-i18n.patch
 
 	# Make sure we don't try generating the manpages ... this requires 
 	# 'help2man' which is a perl app which is not available in a 
