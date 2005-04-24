@@ -1,6 +1,10 @@
 # ChangeLog for sci-electronics/electric
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/electric/ChangeLog,v 1.2 2004/12/27 20:53:52 swegener Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/electric/ChangeLog,v 1.3 2005/04/24 13:18:40 hansmi Exp $
+
+  24 Apr 2005; Michael Hanselmann <hansmi@gentoo.org>
+  electric-6.08-r1.ebuild:
+  Stable on ppc.
 
 *electric-7.00 (27 Dec 2004)
 
