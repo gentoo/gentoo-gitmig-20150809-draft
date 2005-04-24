@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/use.mask,v 1.16 2005/03/18 04:39:07 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/use.mask,v 1.17 2005/04/24 00:48:55 morfic Exp $
 
 # UNKNOWN - SECTION
 
@@ -8,6 +8,8 @@ afs
 drac
 
 # WON'T WORK - SECTION
+
+asm
 
 # 2005/03/18 - Danny van Dyk <kugelfang@gentoo.org>
 # net-libs/openslp doesn't pass make check. Security BUG #85347.
