@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/ash
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/ash/ChangeLog,v 1.14 2005/01/02 21:47:17 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/ash/ChangeLog,v 1.15 2005/04/24 03:05:56 hansmi Exp $
+
+  24 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> ash-1.6.ebuild:
+  Stable on ppc.
 
   02 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
