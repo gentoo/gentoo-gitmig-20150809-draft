@@ -1,4 +1,4 @@
-MD5 730bbe56d279513640ca13fcd7f632ac ChangeLog 2215
-MD5 2e5e03a8eb9285e4df5a3c9484b9d3cd zthread-2.3.1.ebuild 893
+MD5 0a75a96875091491bee3abefd9f2e832 ChangeLog 2310
+MD5 e6d03e8760b0917b08762eba9d8c8842 zthread-2.3.1.ebuild 893
 MD5 368ff02a9eb850ad51265d76953eb2e0 files/digest-zthread-2.3.1 65
 MD5 e7a8dff68ee9c400e82941b399176b6c files/zthread-gcc34.patch 819

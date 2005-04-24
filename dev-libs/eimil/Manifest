@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d842f2b95b6d1ef5cf7d747bde6a4aea ChangeLog 1093
-MD5 d0eb4f4e92dab782f71da85d22d6fb46 eimil-12.1_p2002.ebuild 783
-MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
 MD5 c0844b3a98f75cfa08c1431cfd33f35c eimil-11.4_p1467.ebuild 633
+MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
+MD5 1eca04d80f0c05e3113331ccbe521717 ChangeLog 1193
+MD5 5e4b4463fced6d36f5175f53b8971a91 eimil-12.1_p2002.ebuild 783
 MD5 de5dcfe76eb7086d4b90d73615622cd3 files/digest-eimil-11.4_p1467 74
 MD5 be37bb244b3081121d1781e5118f2443 files/digest-eimil-12.1_p2002 79
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCYQy0VWNWqTUmv+0RAq3tAJ9ZI8NmoyntkfF1xhyrFk3CAT5MSgCfTodf
-TC5JW4o/GSd6qw5IWaHiC8U=
-=5nDN
------END PGP SIGNATURE-----
