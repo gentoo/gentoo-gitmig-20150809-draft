@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/gnewspost/gnewspost-0.6.ebuild,v 1.3 2005/02/01 16:44:56 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/gnewspost/gnewspost-0.6.ebuild,v 1.4 2005/04/24 03:34:23 hansmi Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.vectorstar.net/~ash/files/${P}.tar.gz
 IUSE="nls"
 
 LICENSE="BSD"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="x86 ppc"
 SLOT="0"
 
 DEPEND="gnome-base/gnome-libs"

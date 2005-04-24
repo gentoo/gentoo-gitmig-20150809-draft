@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/newspost/newspost-2.1.1-r1.ebuild,v 1.1 2005/02/01 16:50:00 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/newspost/newspost-2.1.1-r1.ebuild,v 1.2 2005/04/24 03:32:50 hansmi Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ IUSE=""
 # NOTE: This package should work on PPC but not tested!
 # It also has a solaris make file but we don't do solaris.
 # but it should mean that it is 64bit clean.
-KEYWORDS="x86 ~amd64 ~ppc ~ppc-macos"
+KEYWORDS="x86 ~amd64 ppc ~ppc-macos"
 
 RDEPEND="virtual/libc"
 DEPEND="${RDEPEND}

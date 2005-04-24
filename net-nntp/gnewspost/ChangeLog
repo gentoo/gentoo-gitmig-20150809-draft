@@ -1,6 +1,9 @@
 # ChangeLog for net-nntp/gnewspost
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/gnewspost/ChangeLog,v 1.4 2005/02/01 16:44:56 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/gnewspost/ChangeLog,v 1.5 2005/04/24 03:34:23 hansmi Exp $
+
+  24 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> gnewspost-0.6.ebuild:
+  Stable on ppc.
 
   01 Feb 2005; Sven Wegener <swegener@gentoo.org> gnewspost-0.6.ebuild:
   Changed dependency on newspost from = to ~.
