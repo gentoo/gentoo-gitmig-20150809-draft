@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-hu/ispell-hu-0.99.4.ebuild,v 1.3 2005/01/01 12:54:32 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-hu/ispell-hu-0.99.4.ebuild,v 1.4 2005/04/24 10:50:45 hansmi Exp $
 
 MY_P=magyarispell-${PV}
 S=${WORKDIR}/${MY_P}
@@ -10,7 +10,7 @@ HOMEPAGE="http://magyarispell.sourceforge.net/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc sparc ~alpha ~mips ~hppa"
+KEYWORDS="x86 ppc sparc ~alpha ~mips ~hppa"
 
 DEPEND="app-text/ispell"
 IUSE=""
