@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-pango
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-pango/ChangeLog,v 1.17 2005/04/01 05:39:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-pango/ChangeLog,v 1.18 2005/04/24 10:21:40 blubb Exp $
+
+  24 Apr 2005; Simon Stelling <blubb@gentoo.org> ruby-pango-0.10.1.ebuild:
+  stable on amd64
 
   01 Apr 2005; Aron Griffis <agriffis@gentoo.org> ruby-pango-0.10.1.ebuild:
   stable on ia64
