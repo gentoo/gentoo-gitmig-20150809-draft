@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 375ba281168ad67920c9666d9b9bf824 ChangeLog 1243
+MD5 6557a5a2d100ef61b3960b4cfa390f1a ChangeLog 1342
 MD5 3eec9f3fe48b51f49dbc1f171a3b026f metadata.xml 157
-MD5 58dbe0c55af78d6ebd8dc71846d14d3d ruby-progressbar-0.8.ebuild 535
+MD5 5bd21bd0447e10e9c3c1fc8c7e8934c9 ruby-progressbar-0.8.ebuild 533
 MD5 a98ef2e9877ae090212cb188e3ea227b files/digest-ruby-progressbar-0.8 70
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFB+JaV60LfUIagIAkRAnwoAKCOxs4EkTzLEevda2efYPtKcwNAiwCfe5On
-zIpWo9RresnqzvFCIx3ykOo=
-=QH+k
------END PGP SIGNATURE-----
