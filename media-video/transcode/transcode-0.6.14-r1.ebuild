@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-0.6.14-r1.ebuild,v 1.3 2005/04/25 00:45:37 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-0.6.14-r1.ebuild,v 1.4 2005/04/25 18:14:16 flameeyes Exp $
 
 inherit libtool flag-o-matic eutils multilib
 
@@ -17,13 +17,11 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="X 3dnow a52 avi altivec divx4linux dv dvdread encode fame truetype \
-	gtk imagemagick jpeg lzo mjpeg mpeg mmx network oggvorbis pvm quicktime \
+	gtk imagemagick jpeg lzo mjpeg mpeg mmx network ogg vorbis pvm quicktime \
 	sdl sse sse2 theora v4l xvid xml2"
 
-DEPEND="a52? ( >=media-libs/a52dec-0.7.4 )
-	=sys-devel/gcc-3*
+RDEPEND="a52? ( >=media-libs/a52dec-0.7.4 )
 	dv? ( >=media-libs/libdv-0.99 )
-	x86? ( >=dev-lang/nasm-0.98.36 )
 	dvdread? ( >=media-libs/libdvdread-0.9.0 )
 	>=media-video/ffmpeg-0.4.9_pre1
 	xvid? ( >=media-libs/xvid-1.0.2 )
@@ -34,19 +32,29 @@ DEPEND="a52? ( >=media-libs/a52dec-0.7.4 )
 	media-libs/netpbm
 	media-libs/libexif
 	X? ( virtual/x11 )
-	avi? (	>=media-video/avifile-0.7.41.20041001 )
-	divx4linux? ( x86? ( >=media-libs/divx4linux-20030428 ) )
+	avi? ( >=media-video/avifile-0.7.41.20041001 )
+	divx4linux? ( >=media-libs/divx4linux-20030428 )
 	mpeg? ( media-libs/libmpeg3 )
 	encode? ( >=media-sound/lame-3.93 )
 	sdl? ( media-libs/libsdl )
 	quicktime? ( >=media-libs/libquicktime-0.9.3 )
-	oggvorbis? ( media-libs/libvorbis
-		    media-libs/libogg )
+	vorbis? ( media-libs/libvorbis )
+	ogg? ( media-libs/libogg )
 	theora? ( media-libs/libtheora )
 	jpeg? ( media-libs/jpeg )
 	gtk? ( =x11-libs/gtk+-1.2* )
 	truetype? ( >=media-libs/freetype-2 )
 	pvm? ( >=sys-cluster/pvm-3.4 )"
+
+DEPEND="${RDEPEND}
+	x86? ( >=dev-lang/nasm-0.98.36 )
+	=sys-devel/gcc-3*"
+
+pkg_setup() {
+	if has_version xorg-x11 && ! built_with_use xorg-x11 xv; then
+		die "You need xv support to compile transcode."
+	fi
+}
 
 src_unpack() {
 	unpack ${A}
@@ -65,7 +73,6 @@ src_unpack() {
 }
 
 src_compile() {
-
 	filter-flags -maltivec -mabi=altivec -momit-leaf-frame-pointer
 	use ppc && append-flags -U__ALTIVEC__
 
@@ -110,8 +117,8 @@ src_compile() {
 		$(use_enable mmx) \
 		$(use_enable mpeg libmpeg3) \
 		$(use_enable network netstream) \
-		$(use_enable oggvorbis ogg) \
-		$(use_enable oggvorbis vorbis) \
+		$(use_enable ogg) \
+		$(use_enable vorbis) \
 		$(use_enable quicktime libquicktime) \
 		$(use_enable sdl) \
 		$(use_enable sse) \
