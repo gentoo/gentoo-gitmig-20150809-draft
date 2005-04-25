@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/linuxtv-dvb
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/linuxtv-dvb/ChangeLog,v 1.12 2005/01/25 13:22:23 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/linuxtv-dvb/ChangeLog,v 1.13 2005/04/25 14:22:03 genstef Exp $
+
+  25 Apr 2005; Stefan Schweizer <genstef@gentoo.org>
+  -linuxtv-dvb-1.1.1.ebuild:
+  Finally clean out the last kmod ebuild
 
   25 Jan 2005; Thomas Raschbacher <lordvan@gentoo.org> linuxtv-dvb-1.1.1-r1.ebuild:
   renaming dvb-ttpci firmware to correct name.
