@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Video-Info
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Video-Info/ChangeLog,v 1.2 2005/04/19 15:42:58 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Video-Info/ChangeLog,v 1.3 2005/04/25 20:01:34 luckyduck Exp $
+
+  25 Apr 2005; Jan Brinkmann <luckyduck@gentoo.org> Video-Info-0.999.ebuild:
+  added ~ppc to KEYWORDS
 
   19 Apr 2005; Jan Brinkmann <luckyduck@gentoo.org> Video-Info-0.999.ebuild:
   added ~amd64 to KEYWORDS
