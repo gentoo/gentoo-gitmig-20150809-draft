@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3868 2005/04/24 23:24:25 herbs Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3869 2005/04/25 13:40:46 ferdy Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,13 @@
 ##
 ##   End example
 ##
+
+# Fernando J. Pereda <ferdy@gentoo.org> (25 April 2005)
+# mask these until the new mailwrapper/mailer-config scheme is ready
+# it is secure to unmask them to test
+net-mail/mailer-config
+=net-mail/mailwrapper-0.2.1-r1
+=mail-mta/nbsmtp-0.98-r1
 
 # Carsten Lohrke <carlo@gentoo.org> (23 April 2005)
 # Quanta crashes #86284
