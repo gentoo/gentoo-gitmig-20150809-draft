@@ -1,16 +1,16 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-FromText/HTML-FromText-2.05.ebuild,v 1.4 2004/10/16 23:57:22 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-FromText/HTML-FromText-2.05.ebuild,v 1.5 2005/04/25 17:22:51 mcummings Exp $
 
 inherit perl-module
 
 DESCRIPTION="Convert plain text to HTML."
 HOMEPAGE="http://search.cpan.org/~cwest/${P}/"
-SRC_URI="http://search.cpan.org/CPAN/authors/id/C/CW/CWEST/${P}.tar.gz"
+SRC_URI="mirror://cpan/authors/id/C/CW/CWEST/${P}.tar.gz"
 
 LICENSE="|| ( Artistic GPL-2 )"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~amd64"
+KEYWORDS="x86 ~ppc sparc ~alpha ~amd64"
 IUSE=""
 
 SRC_TEST="do"

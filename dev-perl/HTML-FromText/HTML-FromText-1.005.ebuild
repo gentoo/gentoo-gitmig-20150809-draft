@@ -1,12 +1,12 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-FromText/HTML-FromText-1.005.ebuild,v 1.9 2004/10/16 23:57:22 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-FromText/HTML-FromText-1.005.ebuild,v 1.10 2005/04/25 17:22:51 mcummings Exp $
 
 inherit perl-module
 
 DESCRIPTION="Mark up text as HTML"
 HOMEPAGE="http://www.cpan.org/modules/by-authors/id/G/GD/GDR/${P}.readme"
-SRC_URI="http://www.cpan.org/modules/by-authors/id/G/GD/GDR/${P}.tar.gz"
+SRC_URI="mirror://cpan/authors/id/G/GD/GDR/${P}.tar.gz"
 
 LICENSE="|| ( Artistic GPL-2 )"
 SLOT="0"
