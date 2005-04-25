@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/linux-mod.eclass,v 1.35 2005/04/22 19:10:32 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/linux-mod.eclass,v 1.36 2005/04/25 18:47:12 johnm Exp $
 
 # Description: This eclass is used to interface with linux-info in such a way
 #              to provide the functionality required and initial functions
@@ -84,7 +84,6 @@ ECLASS=linux-mod
 INHERITED="$INHERITED $ECLASS"
 EXPORT_FUNCTIONS pkg_setup pkg_postinst src_install src_compile
 
-IUSE="${IUSE} pcmcia"
 SLOT="0"
 DESCRIPTION="Based on the $ECLASS eclass"
 DEPEND="virtual/linux-sources
