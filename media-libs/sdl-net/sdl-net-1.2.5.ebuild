@@ -1,6 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-net/sdl-net-1.2.5.ebuild,v 1.11 2004/12/15 14:44:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-net/sdl-net-1.2.5.ebuild,v 1.12 2005/04/25 01:39:35 vapier Exp $
+
+inherit eutils
 
 MY_P=${P/sdl-/SDL_}
 DESCRIPTION="Simple Direct Media Layer Network Support Library"
@@ -15,6 +17,12 @@ IUSE=""
 DEPEND=">=media-libs/libsdl-1.2.5"
 
 S="${WORKDIR}/${MY_P}"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-extra-semi.patch
+}
 
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
