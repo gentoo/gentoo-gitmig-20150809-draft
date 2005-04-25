@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/mediawiki
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/ChangeLog,v 1.14 2005/04/25 08:24:23 trapni Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/ChangeLog,v 1.15 2005/04/25 08:51:42 trapni Exp $
+
+  25 Apr 2005; Christian Parpart <trapni@gentoo.org> :
+  version bump
 
 *mediawiki-1.4.1 (25 Apr 2005)
 
