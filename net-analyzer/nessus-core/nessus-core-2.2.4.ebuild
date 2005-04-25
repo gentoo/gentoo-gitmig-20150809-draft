@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-core/nessus-core-2.2.4.ebuild,v 1.2 2005/04/09 08:48:40 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-core/nessus-core-2.2.4.ebuild,v 1.3 2005/04/25 00:07:07 vanquirius Exp $
 
 inherit toolchain-funcs
 
@@ -35,7 +35,7 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR=${D} \
+	make DESTDIR=${D} \
 		install || die "Install failed nessus-core"
 	cd ${S}
 	dodoc README* UPGRADE_README CHANGES
