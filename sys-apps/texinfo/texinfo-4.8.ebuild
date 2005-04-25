@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/texinfo/texinfo-4.8.ebuild,v 1.8 2005/04/09 13:03:50 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/texinfo/texinfo-4.8.ebuild,v 1.9 2005/04/25 02:06:03 vapier Exp $
 
 inherit flag-o-matic eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gnu/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ~ppc ppc64 s390 sh sparc x86 ~ppc-macos"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ~ppc ppc64 ~ppc-macos s390 sh sparc x86"
 IUSE="nls build static"
 
 RDEPEND="!build? ( >=sys-libs/ncurses-5.2-r2 )"
@@ -38,7 +38,12 @@ src_compile() {
 	use static && append-ldflags -static
 
 	econf ${myconf} || die
-	emake || die
+
+	# work around broken dependency's in info/Makefile.am #85540
+	emake -C lib || die "emake lib"
+	emake -C info makedoc || die "emake makedoc"
+	emake -C info doc.c || die "emake doc.c"
+	emake || die "emake"
 }
 
 src_install() {

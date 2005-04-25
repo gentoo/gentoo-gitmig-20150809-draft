@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/texinfo
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/texinfo/ChangeLog,v 1.52 2005/04/09 13:03:50 corsair Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/texinfo/ChangeLog,v 1.53 2005/04/25 02:06:03 vapier Exp $
+
+  25 Apr 2005; Mike Frysinger <vapier@gentoo.org> texinfo-4.8.ebuild:
+  Add a workaround for broken dependencies until it can be fixed properly in
+  the makefile #85540.
 
   09 Apr 2005; Markus Rothe <corsair@gentoo.org> texinfo-4.8.ebuild:
   Stable on ppc64
