@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sandbox/sandbox-1.2.1-r3.ebuild,v 1.2 2005/04/24 18:24:31 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sandbox/sandbox-1.2.1-r3.ebuild,v 1.3 2005/04/25 00:19:09 vapier Exp $
 
 inherit eutils flag-o-matic eutils toolchain-funcs multilib
 #
@@ -8,13 +8,14 @@ inherit eutils flag-o-matic eutils toolchain-funcs multilib
 # period.
 #
 
-IUSE=""
 DESCRIPTION="sandbox'd LD_PRELOAD hack"
 SRC_URI="mirror://gentoo/${P}.tar.bz2
 	http://dev.gentoo.org/~azarah/sandbox/${P}.tar.bz2"
-DEPEND=""
+
 LICENSE="GPL-2"
-SLOT='0'
+SLOT="0"
+IUSE=""
+RESTRICT="multilib-pkg-force"
 
 #KEYWORDS="  alpha  amd64  arm  hppa  ia64  mips  ppc  ppc-macos  ppc64  s390  sh  sparc  x86"
 #KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc-macos ~ppc64 ~s390 ~sh ~sparc ~x86"
@@ -22,7 +23,7 @@ SLOT='0'
 # This revbump just fixes multilib on amd64's 2005.0
 KEYWORDS="~amd64"
 
-RESTRICT="multilib-pkg-force"
+DEPEND=""
 
 check_multilib() {
 	has_m32
@@ -56,6 +57,7 @@ src_unpack() {
 }
 
 src_compile() {
+	filter-lfs-flags #90228
 	if has_multilib_profile; then
 		OABI="${ABI}"
 		export CFLAGS="${CFLAGS} -DSB_HAVE_64BIT_ARCH"

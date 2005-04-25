@@ -1,22 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 034ac0d90bcd60acce9919a9f5dfe311 ChangeLog 939
 MD5 968e2965b0b6f620634dae6d28d8b4c4 metadata.xml 455
+MD5 47438c0ad7e347064cdaf223d6a5f042 sandbox-1.2.1.ebuild 1747
 MD5 fa4e917c828593f1c202fe11f019e2d3 sandbox-1.2.ebuild 1711
 MD5 23e070ffbbc6123cc5082bab1b9de240 sandbox-1.2.1-r1.ebuild 2131
 MD5 ff83893e146a467c718131e5f68ff52e sandbox-1.2.1-r2.ebuild 2110
-MD5 47438c0ad7e347064cdaf223d6a5f042 sandbox-1.2.1.ebuild 1747
-MD5 d0e0d96b101e01a7ce9986c9cb939d12 sandbox-1.2.1-r3.ebuild 2277
+MD5 6fcdfc54e50834549f956f92430059ff sandbox-1.2.1-r3.ebuild 2299
 MD5 06ad9881ad2610487c66565ee5b39389 files/digest-sandbox-1.2 64
 MD5 9b60e9e6d1e45533a0e719fdf023ec07 files/digest-sandbox-1.2.1 66
 MD5 9b60e9e6d1e45533a0e719fdf023ec07 files/digest-sandbox-1.2.1-r1 66
 MD5 9b60e9e6d1e45533a0e719fdf023ec07 files/digest-sandbox-1.2.1-r2 66
 MD5 9b60e9e6d1e45533a0e719fdf023ec07 files/digest-sandbox-1.2.1-r3 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCa+R5ArHZZzCEUG0RAraAAJ0aimfhGgju3UBKPHLNxZw4PX0jeQCfSapl
-CVIC6rA4gB9UBDsRWeB7lkQ=
-=0VDB
------END PGP SIGNATURE-----
