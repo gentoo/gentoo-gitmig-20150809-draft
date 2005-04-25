@@ -1,25 +1,26 @@
-diff -Naur rp-pppoe-3.5.orig/scripts/adsl-setup.in rp-pppoe-3.5/scripts/adsl-setup.in
+diff -Nru rp-pppoe-3.5.orig/scripts/adsl-setup.in rp-pppoe-3.5/scripts/adsl-setup.in
 --- rp-pppoe-3.5.orig/scripts/adsl-setup.in	2002-07-08 17:38:24.000000000 +0300
-+++ rp-pppoe-3.5/scripts/adsl-setup.in	2005-03-08 01:06:46.248252496 +0200
-@@ -86,12 +86,16 @@
++++ rp-pppoe-3.5/scripts/adsl-setup.in	2005-04-25 17:06:59.000000000 +0300
+@@ -86,12 +86,14 @@
      $ECHO "USER NAME"
      $ECHO ""
      $ECHO -n ">>> Enter your PPPoE user name (default $USER): "
 -    read U
+-
+-    if [ "$U" = "" ] ; then
+-	U="$USER"
 +    read Uu
 + 
-+    U=`echo $Uu | sed -e "s/&/\\\\\&/g"` ;
-+
- 
-     if [ "$U" = "" ] ; then
- 	U="$USER"
++    if [ "$Uu" = "" ] ; then
++	Uu="$USER"
      fi
  
++    U=`echo $Uu | sed -e "s/&/\\\\\&/g"` ;
 +    
      # Under Linux, "fix" the default interface if eth1 is not available
      if test `uname -s` = "Linux" ; then
  	$IFCONFIG $ETH > /dev/null 2>&1 || ETH=eth0
-@@ -221,7 +225,7 @@
+@@ -221,7 +223,7 @@
      $ECHO "** Summary of what you entered **"
      $ECHO ""
      $ECHO "Ethernet Interface: $E"
@@ -28,7 +29,7 @@ diff -Naur rp-pppoe-3.5.orig/scripts/adsl-setup.in rp-pppoe-3.5/scripts/adsl-set
      if [ "$D" = "no" ] ; then
  	$ECHO "Activate-on-demand: No"
      else
-@@ -288,7 +292,12 @@
+@@ -288,7 +290,12 @@
  fi
  
  # Some #$(*& ISP's use a slash in the user name...
@@ -42,7 +43,7 @@ diff -Naur rp-pppoe-3.5.orig/scripts/adsl-setup.in rp-pppoe-3.5/scripts/adsl-set
      -e "s&^ETH=.*&ETH='$E'&" \
      -e "s&^PIDFILE=.*&PIDFILE=\"$VARRUN/\$CF_BASE-adsl.pid\"&" \
      -e "s/^FIREWALL=.*/FIREWALL=$FIREWALL/" \
-@@ -337,10 +346,10 @@
+@@ -337,10 +344,10 @@
      cp /dev/null /etc/ppp/chap-secrets-bak
  fi
  
