@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libexif/libexif-0.6.12-r3.ebuild,v 1.1 2005/04/16 18:52:39 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libexif/libexif-0.6.12-r3.ebuild,v 1.2 2005/04/25 00:28:33 azarah Exp $
 
 inherit eutils
 
@@ -26,7 +26,11 @@ src_unpack() {
 	# be fixed in 0.6.13 at which point LIBEXIF_AGE should be removed here.
 	sed -i 's/^LIBEXIF_AGE=0$/LIBEXIF_AGE=2/' ${S}/configure
 	sed -i 's/^LIBEXIF_REVISION=0$/LIBEXIF_REVISION=2/' ${S}/configure
-	sed -i 's/^LIBEXIF_VERSION_INFO=.*$/LIBEXIF_VERSION_INFO=$LIBEXIF_CURRENT:$LIBEXIF_AGE:$LIBEXIF_REVISION/' ${S}/configure
+	sed -i 's/^LIBEXIF_VERSION_INFO=.*$/LIBEXIF_VERSION_INFO=$LIBEXIF_CURRENT:$LIBEXIF_AGE:$LIBEXIF_REVISION/' \
+		${S}/configure
+
+	# Fix gcc4 build
+	epatch ${FILESDIR}/${P}-gcc4.patch
 }
 
 src_compile() {

@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libexif
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libexif/ChangeLog,v 1.34 2005/04/16 18:52:39 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libexif/ChangeLog,v 1.35 2005/04/25 00:28:33 azarah Exp $
+
+  25 Apr 2005; Martin Schlemmer <azarah@gentoo.org>
+  +files/libexif-0.6.12-gcc4.patch, libexif-0.6.12-r3.ebuild:
+  Fix gcc4 build failure.  Patch from halcy0n's overlay.
 
 *libexif-0.6.12-r3 (16 Apr 2005)
 
