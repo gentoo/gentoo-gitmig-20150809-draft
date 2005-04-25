@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-cd-burner/nautilus-cd-burner-2.8.7.ebuild,v 1.2 2005/04/25 08:18:16 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-cd-burner/nautilus-cd-burner-2.8.7.ebuild,v 1.3 2005/04/25 08:30:49 obz Exp $
 
 inherit gnome2 eutils
 
@@ -35,7 +35,7 @@ USE_DESTDIR="1"
 pkg_setup() {
 
 	# Check for USE="unicode" cdrtools, see bug #80053
-	if built_with_use cdrtools unicode; then
+	if ! built_with_use cdrtools unicode; then
 		echo ""
 		eerror "mkisofs needs to support utf8 for ${P}"
 		einfo "Please remerge cdrtools with unicode (utf8) support,"
