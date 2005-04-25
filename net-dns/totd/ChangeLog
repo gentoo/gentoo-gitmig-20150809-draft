@@ -1,0 +1,17 @@
+# ChangeLog for net-misc/totd
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dns/totd/ChangeLog,v 1.1 2005/04/25 20:25:25 mrness Exp $
+
+*totd-1.5 (25 Apr 2005)
+
+  25 Apr 2005; Alin Nastac <mrness@gentoo.org> +metadata.xml,
+  +totd-1.5.ebuild:
+  Move from net-misc/totd to net-dns/totd. Version bump.
+
+*totd-1.3 (25 Jun 2003)
+
+  25 Jun 2003; Peter Johanson <latexer@gentoo.org> totd-1.3.ebuild,
+  files/totd:
+  Initial import. Combined with net-misc/ptrtd, you can now do fun 6to4 stuff
+  easily
+

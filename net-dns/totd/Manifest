@@ -1,0 +1,17 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 f2bb5b1f68316818020089ca47e51a6d totd-1.3.ebuild 839
+MD5 bcaf4d60a6429f5399a45a0974590165 ChangeLog 558
+MD5 560009d7d46941f6b7aa666ad01e37ff totd-1.5.ebuild 963
+MD5 3461f8e3858a3f7fcd05779a2a6b8f5a metadata.xml 371
+MD5 0215b0724a772565162a39729c941e8e files/totd 800
+MD5 b5d7da146bba4e657fc30595eab333b5 files/digest-totd-1.3 59
+MD5 0b7a6acb077c76ba59bac49d491dfe71 files/digest-totd-1.5 60
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCbVJQjiC39V7gKu0RAnkjAKCQbrLL6PTCaP17LJetfNlhX93jigCbB+4n
+1eY57Y+0SkauLqebF+6Ap7M=
+=WlVk
+-----END PGP SIGNATURE-----
