@@ -12,7 +12,6 @@ MD5 fdc36508749cec2850c94b4bff5cc0a2 files/digest-gst-plugins-0.8.2 71
 MD5 b34b0c2aff88ed12404f38ecc09f44f0 files/digest-gst-plugins-0.8.3 71
 MD5 1d2b17e15b2072757c3db8f184b7d174 files/digest-gst-plugins-0.8.7 71
 MD5 33cfc77852e050bbb91b003695c91131 files/digest-gst-plugins-0.8.8 71
-MD5 f7aac3ba492d4e54ae14ebeabc3299d4 files/libmpeg2.patch 878
 MD5 a440c49c40c858da65d86ca58adc280d files/gst-plugins-0.8.7-gcc2.patch 1565
 MD5 04bb0cdc1431b53db92b658a3c9fa6dd files/noppcasm.patch 1431
 MD5 187dd1210be84f747699a2d2bd11fd0b files/gst-plugins-0.8.5-tcp.patch 1059
