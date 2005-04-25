@@ -1,4 +1,14 @@
-MD5 8ddbf9a2fbccafa2e79ba4cb9bc5c34a HTTPD-User-Manage-1.61.ebuild 512
-MD5 6239ee3d4b182f7f52944a5ffd68bcf4 ChangeLog 404
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 61399607b185e8175b1864c2a93e7703 ChangeLog 505
+MD5 cdcddbe33a0b3353efcd6103ac6502f0 HTTPD-User-Manage-1.61.ebuild 506
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 a0e3eafd30d552d602fe46108cabbbd6 files/digest-HTTPD-User-Manage-1.61 74
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCbWCltG5z4I8BtQoRAp74AJ0ZvBsrLn+kP0/XCJcU9wD0DnGI5QCcD2EX
+6OkvxmPAXKGLZsTb2IJr0w8=
+=aJCn
+-----END PGP SIGNATURE-----

@@ -1,3 +1,13 @@
-MD5 cf66bf8d373cfb57bd41e5f89a5a628e HTTP-Cache-Transparent-0.5.ebuild 600
-MD5 36242f8b6dfa7ab2e7be59847c178d9b ChangeLog 409
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 535db3c146769fd6c252eb02a776c1b9 ChangeLog 518
+MD5 199206ceb79ff53e26328c1c99ff602f HTTP-Cache-Transparent-0.5.ebuild 590
 MD5 bc2ff7c77970db58f437698b244d71e8 files/digest-HTTP-Cache-Transparent-0.5 76
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCbWBRtG5z4I8BtQoRAlB1AJ4pHHzGcbSH3EQHVVhRI7RM7hnJKgCffBkl
+K643FwLTUv49894HslYQdMs=
+=i4h+
+-----END PGP SIGNATURE-----
