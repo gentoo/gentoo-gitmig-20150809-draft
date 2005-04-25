@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.4.9_p20050226-r4.ebuild,v 1.3 2005/04/24 19:00:21 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.4.9_p20050226-r4.ebuild,v 1.4 2005/04/25 14:05:26 azarah Exp $
 
 inherit eutils flag-o-matic gcc multilib toolchain-funcs
 
@@ -45,6 +45,10 @@ src_unpack() {
 
 	# for some reason it tries to #include <X11/Xlib.h>, but doesn't use it
 	sed -i s:\#define\ HAVE_X11:\#define\ HAVE_LINUX: ffplay.c
+
+	# Fix building with gcc4
+	EPATCH_OPTS="-l" \
+	epatch ${FILESDIR}/${P}-gcc4.patch
 
 	# make a52bin actually compile... adds the needed external lib
 	# and makes fprintf -> av_log like it's supposed to be...
