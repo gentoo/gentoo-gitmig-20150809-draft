@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/flac-1.1.2.ebuild,v 1.7 2005/04/15 18:01:27 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/flac-1.1.2.ebuild,v 1.8 2005/04/25 17:27:44 eradicator Exp $
 
 inherit libtool eutils flag-o-matic gcc
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/flac/${P}.tar.gz"
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~ppc-macos ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~ppc-macos sparc x86"
 IUSE="3dnow debug doc ogg sse xmms"
 
 RDEPEND="ogg? ( >=media-libs/libogg-1.0_rc2 )
