@@ -1,6 +1,13 @@
 # ChangeLog for net-wireless/madwifi-driver
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-driver/ChangeLog,v 1.21 2005/02/27 06:24:26 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-driver/ChangeLog,v 1.22 2005/04/25 15:16:23 solar Exp $
+
+*madwifi-driver-0.1_pre20050420 (25 Apr 2005)
+
+  25 Apr 2005; <solar@gentoo.org> -madwifi-driver-0.1_pre20041019.ebuild,
+  -madwifi-driver-0.1_pre20050106.ebuild,
+  +madwifi-driver-0.1_pre20050420.ebuild:
+  - remove older snapshots that were using kernel-mod.eclass and updated snapshot
 
 *madwifi-driver-0.1_pre20050224 (27 Feb 2005)
 
