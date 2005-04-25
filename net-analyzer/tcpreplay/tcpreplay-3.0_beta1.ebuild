@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpreplay/tcpreplay-3.0_beta1.ebuild,v 1.2 2005/04/05 15:52:49 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpreplay/tcpreplay-3.0_beta1.ebuild,v 1.3 2005/04/25 00:17:34 vanquirius Exp $
 
 MY_P=${PN}-${PV/_beta1/.beta1}
 S=${WORKDIR}/${MY_P}
@@ -40,7 +40,7 @@ src_test() {
 }
 
 src_install() {
-	emake DESTDIR=${D} install || die "emake install failed"
+	make DESTDIR=${D} install || die "emake install failed"
 	rm ${D}/usr/bin/man2html
 	dodoc docs/*
 }

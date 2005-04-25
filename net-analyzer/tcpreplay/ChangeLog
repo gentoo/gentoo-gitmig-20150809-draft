@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/tcpreplay
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpreplay/ChangeLog,v 1.12 2005/04/05 15:52:49 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpreplay/ChangeLog,v 1.13 2005/04/25 00:17:34 vanquirius Exp $
+
+  24 Apr 2005; Marcelo Goes <vanquirius@gentoo.org>
+  tcpreplay-3.0_beta1.ebuild:
+  Use make install instead of emake install.
 
   05 Apr 2005; Aaron Walker <ka0ttic@gentoo.org> tcpreplay-3.0_beta1.ebuild:
   Don't install their man2html, bug 88017.
