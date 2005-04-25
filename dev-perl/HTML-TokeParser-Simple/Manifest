@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 c349b98925200d493db515f3dae4a624 HTML-TokeParser-Simple-3.13.ebuild 665
-MD5 43647a72fb3c3fe36d71a3ddd41e46fa ChangeLog 860
-MD5 1c5f91b19723694c129a84161fae9e48 HTML-TokeParser-Simple-2.2.ebuild 604
+MD5 900506490abd6dad7758a1bedcf2b61b ChangeLog 1001
+MD5 43be88d044f9699c55589bae17e7be6f HTML-TokeParser-Simple-2.2.ebuild 602
+MD5 c17fa763cc648c0859f95d5476c695a1 HTML-TokeParser-Simple-3.13.ebuild 665
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 dc2779276afaa049d68c25ee1ee61b0f files/digest-HTML-TokeParser-Simple-2.2 76
 MD5 38a4e1797efe36039c5ebb5ed8a2f051 files/digest-HTML-TokeParser-Simple-3.13 78
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCVz4bKRy60XGEcJIRAuN8AKCkPnjpjVV4sNDWMYlfiA2oO6jmEgCdH2ey
-5e8ZfQUzQyH9BMiH/cUpT4c=
-=0Oum
+iD8DBQFCbV0VtG5z4I8BtQoRAu+bAKCG0dFjLXUzHrl1pPQ8hLi2bEtWHgCghO9Y
+zxgiWdozLfL7I4v6ZXR+NYM=
+=8cV7
 -----END PGP SIGNATURE-----
