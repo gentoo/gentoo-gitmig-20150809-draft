@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-SSLeay/Crypt-SSLeay-0.49.ebuild,v 1.14 2005/02/06 18:08:05 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-SSLeay/Crypt-SSLeay-0.49.ebuild,v 1.15 2005/04/25 11:09:16 mcummings Exp $
 
 inherit perl-module
 
 DESCRIPTION="Crypt::SSLeay module for perl"
-SRC_URI="http://www.cpan.org/modules/by-module/Crypt/${P}.tar.gz"
-HOMEPAGE="http://search.cpan.org/author/CHAMAS/Crypt-SSLeay-${PV}/"
+SRC_URI="mirror://cpan/authors/id/C/CH/CHAMAS/${P}.tar.gz"
+HOMEPAGE="http://search.cpan.org/~chamas/${P}/"
 IUSE=""
 SLOT="0"
 LICENSE="|| ( Artistic GPL-2 )"
