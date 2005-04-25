@@ -1,4 +1,14 @@
-MD5 fabe8213bd28ed94aaae6aa1e9b706c0 ChangeLog 561
-MD5 15d6c1a9483c102287b111b140820831 Date-Pcalc-1.2.ebuild 496
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 ffb117a721c947e2ead0a22c78cb648f ChangeLog 655
+MD5 07ba7fbadd8c307b9df2d3deb741c55d Date-Pcalc-1.2.ebuild 502
 MD5 481d88ccd478ad0f14fb6102be6c92c2 metadata.xml 157
 MD5 d4fd47f16bce3b016ca590c6b1dac721 files/digest-Date-Pcalc-1.2 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCbPSftG5z4I8BtQoRAhl1AKCEIF6r2fwDqbs8HzpHjGjkoyglegCfY+2W
+WfOpHLwuw6PTfO3I0OCc7v8=
+=wanK
+-----END PGP SIGNATURE-----
