@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.6.0.7.ebuild,v 1.4 2005/04/25 22:27:42 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.6.0.9.ebuild,v 1.1 2005/04/25 22:27:42 foser Exp $
 
 inherit gnome2 eutils
 
@@ -9,14 +9,15 @@ HOMEPAGE="http://www.jirka.org/gdm.html"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc ~sparc ~alpha ~hppa ~amd64 ~ia64 ~mips ~ppc64"
-IUSE="tcpd xinerama selinux ipv6"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~amd64 ~ia64 ~mips ~ppc64"
+IUSE="tcpd xinerama selinux ipv6 pam"
 
 SRC_URI="${SRC_URI}
 	mirror://gentoo/gentoo-gdm-theme-r2.tar.bz2"
 MY_V="${PV%.*}"
 
-RDEPEND=">=sys-libs/pam-0.72
+RDEPEND="pam? ( >=sys-libs/pam-0.72 )
+	!pam? ( sys-apps/shadow )
 	>=x11-libs/pango-1.4.1
 	>=x11-libs/gtk+-2.4
 	>=gnome-base/libglade-2
@@ -44,6 +45,9 @@ G2CONF="${G2CONF} \
 	`use_with xinerama` \
 	`use_with selinux`"
 
+use pam && G2CONF="${G2CONF} --with-pam-prefix=/etc --enable-authentication=pam" \
+	|| G2CONF="${G2CONF} --enable-console-helper=no --enable-authentication-scheme=shadow"
+
 src_unpack() {
 
 	unpack ${A}
@@ -56,8 +60,12 @@ src_unpack() {
 
 src_install() {
 
+	local pam_prefix
+
+	use pam && pam_prefix="PAM_PREFIX=${D}/etc"
+
 	gnome2_src_install \
-		PAM_PREFIX=${D}/etc \
+		${pam_prefix} \
 		sysconfdir=${D}/etc/X11 \
 		localstatedir=${D}/var
 
@@ -81,25 +89,25 @@ src_install() {
 	exeinto /etc/X11/dm/Sessions
 	doexe ${FILESDIR}/${MY_V}/custom.desktop
 
-	# We replace the pam stuff by our own
-	rm -f ${D}/etc/pam.d/gdm
+	if use pam ; then
+		# We replace the pam stuff by our own
+		rm -f ${D}/etc/pam.d/gdm
 
-	# pam startup
-	dodir /etc/pam.d
-	insinto /etc/pam.d
-	doins ${FILESDIR}/${MY_V}/pam.d/gdm
-	doins ${FILESDIR}/${MY_V}/pam.d/gdmconfig
-	doins ${FILESDIR}/${MY_V}/pam.d/gdm-autologin
+		# pam startup
+		dodir /etc/pam.d
+		insinto /etc/pam.d
+		doins ${FILESDIR}/${MY_V}/pam.d/gdm
+		doins ${FILESDIR}/${MY_V}/pam.d/gdmconfig
+		doins ${FILESDIR}/${MY_V}/pam.d/gdm-autologin
 
-	# pam security
-	dodir /etc/security/console.apps
-	insinto /etc/security/console.apps
-	doins ${FILESDIR}/${MY_V}/security/console.apps/gdmconfig
+		# pam security
+		dodir /etc/security/console.apps
+		insinto /etc/security/console.apps
+		doins ${FILESDIR}/${MY_V}/security/console.apps/gdmconfig
+	fi
 
 	# use graphical greeter local
 	dosed "s:#Greeter=/usr/bin/gdmlogin:Greeter=/usr/bin/gdmgreeter:" /etc/X11/gdm/gdm.conf
-	# use Gentoo theme
-#	dosed "s:#GraphicalTheme=circles:GraphicalTheme=gentoo-cow:" /etc/X11/gdm/gdm.conf
 
 	# Move Gentoo theme in
 	mv ${WORKDIR}/gentoo-*  ${D}/usr/share/gdm/themes
