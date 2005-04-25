@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/File-MMagic
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-MMagic/ChangeLog,v 1.21 2005/04/10 18:42:23 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-MMagic/ChangeLog,v 1.22 2005/04/25 15:45:26 mcummings Exp $
+
+  25 Apr 2005; Michael Cummings <mcummings@gentoo.org>
+  -File-MMagic-1.15-r1.ebuild, -File-MMagic-1.15.ebuild,
+  -File-MMagic-1.19.ebuild, File-MMagic-1.20.ebuild, File-MMagic-1.22.ebuild:
+  cleaning
 
   10 Apr 2005; Michael Hanselmann <hansmi@gentoo.org>
   File-MMagic-1.20.ebuild:

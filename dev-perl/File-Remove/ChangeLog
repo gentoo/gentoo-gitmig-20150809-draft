@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/File-Remove
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Remove/ChangeLog,v 1.8 2005/04/24 13:10:59 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Remove/ChangeLog,v 1.9 2005/04/25 15:52:06 mcummings Exp $
+
+*File-Remove-0.29 (25 Apr 2005)
+
+  25 Apr 2005; Michael Cummings <mcummings@gentoo.org>
+  File-Remove-0.20.ebuild, +File-Remove-0.29.ebuild:
+  cleaning
 
   24 Apr 2005; Michael Hanselmann <hansmi@gentoo.org>
   File-Remove-0.20.ebuild:

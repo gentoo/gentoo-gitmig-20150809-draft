@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/File-Which
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Which/ChangeLog,v 1.4 2004/12/14 16:35:37 corsair Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Which/ChangeLog,v 1.5 2005/04/25 15:58:39 mcummings Exp $
+
+  25 Apr 2005; Michael Cummings <mcummings@gentoo.org> File-Which-0.05.ebuild:
+  cleaning
 
   14 Dec 2004; Markus Rothe <corsair@gentoo.org> File-Which-0.05.ebuild:
   Stable on ppc64

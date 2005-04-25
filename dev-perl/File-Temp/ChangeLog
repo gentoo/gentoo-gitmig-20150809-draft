@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/File-Temp
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Temp/ChangeLog,v 1.14 2005/04/10 18:18:24 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Temp/ChangeLog,v 1.15 2005/04/25 15:57:54 mcummings Exp $
+
+  25 Apr 2005; Michael Cummings <mcummings@gentoo.org> -File-Temp-0.12.ebuild:
+  cleaning
 
   10 Apr 2005; Simon Stelling <blubb@gentoo.org> File-Temp-0.14.ebuild:
   stable on amd64
