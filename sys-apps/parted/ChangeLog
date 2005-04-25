@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/parted
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/ChangeLog,v 1.70 2005/04/09 13:01:56 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/ChangeLog,v 1.71 2005/04/25 06:45:08 kloeri Exp $
+
+  25 Apr 2005; Bryan Østergaard <kloeri@gentoo.org> parted-1.6.20.ebuild:
+  Stable on alpha.
 
   09 Apr 2005; Markus Rothe <corsair@gentoo.org> parted-1.6.20.ebuild:
   Stable on ppc64
