@@ -1,0 +1,11 @@
+--- libmpeg3-1.5.2/video/output.c.orig	2005-04-25 19:14:02.000000000 +0000
++++ libmpeg3-1.5.2/video/output.c	2005-04-25 19:14:15.000000000 +0000
+@@ -497,7 +497,7 @@
+ 	*data++ = 0;
+ 
+ #define STORE_PIXEL_RGB565 \
+-	*((unsigned short*)data)++ = \
++	*data++ = \
+ 		((CLIP(r_l) & 0xf8) << 8) | \
+ 		((CLIP(g_l) & 0xfc) << 3) | \
+ 		((CLIP(b_l) & 0xf8) >> 3);

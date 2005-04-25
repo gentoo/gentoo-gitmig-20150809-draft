@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg3/libmpeg3-1.5.2-r1.ebuild,v 1.5 2005/04/08 02:32:22 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg3/libmpeg3-1.5.2-r1.ebuild,v 1.6 2005/04/25 19:32:50 azarah Exp $
 
 inherit flag-o-matic eutils gcc
 
@@ -33,7 +33,10 @@ src_unpack() {
 	epatch ${FILESDIR}/${PV}-proper-c.patch
 	epatch ${FILESDIR}/${PV}-no-nasm.patch
 	epatch ${FILESDIR}/${PV}-gentoo-multilib.patch
-	[ "`gcc-version`" == "3.4" ] && epatch ${FILESDIR}/${PV}-gcc3.4.patch #49452
+	[ "`gcc-version`" == "3.4" -o "`gcc-major-version`" -ge 4 ] && \
+		epatch ${FILESDIR}/${PV}-gcc3.4.patch #49452
+	[ "`gcc-major-version`" -ge 4 ] && \
+		epatch ${FILESDIR}/${PV}-gcc4.patch
 	# remove a52 crap
 	echo > Makefile.a52
 	rm -rf a52dec-0.7.3/*
