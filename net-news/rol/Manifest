@@ -1,0 +1,18 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 8ac2e8af5578d1f8ca015b6d9e827306 rol-0.3.1.ebuild 677
+MD5 6731bcfe6f4a591a874ccf4c749f6340 rol-0.2.2.ebuild 721
+MD5 0ee3d58aca584f895e227b513e493403 rol-0.3.0.ebuild 677
+MD5 9050d1db720f07eee62d14d7b459766e ChangeLog 1503
+MD5 75df98b7a262ac163555aaffd02c9c5b metadata.xml 434
+MD5 51ce7cab4f972be6fa69e9aab3e1076d files/digest-rol-0.2.2 60
+MD5 a0268e3f16437b5b48df87a1745a76b2 files/digest-rol-0.3.0 60
+MD5 90edb27044fcdb863759e71c95528596 files/digest-rol-0.3.1 60
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCbT3jjiC39V7gKu0RAjJ1AJ0e+zNX56WabSeEiCPIPu26rd9IxgCfcvLu
+x/e7WVEzL/ec3ajblJyoSmw=
+=/z2g
+-----END PGP SIGNATURE-----
