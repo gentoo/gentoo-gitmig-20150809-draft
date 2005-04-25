@@ -1,6 +1,9 @@
 # ChangeLog for dev-lisp/sbcl
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/ChangeLog,v 1.58 2005/04/07 03:01:00 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/ChangeLog,v 1.59 2005/04/25 05:57:11 mkennedy Exp $
+
+  25 Apr 2005; Matthew Kennedy <mkennedy@gentoo.org> :
+  Use /usr/$(get_libdir) instead of hardcoding /usr/lib
 
   07 Apr 2005; Matthew Kennedy <mkennedy@gentoo.org> :
   New upstream version.
