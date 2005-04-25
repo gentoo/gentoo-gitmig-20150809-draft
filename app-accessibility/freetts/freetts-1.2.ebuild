@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/freetts/freetts-1.2.ebuild,v 1.1 2005/03/03 00:31:37 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/freetts/freetts-1.2.ebuild,v 1.2 2005/04/25 15:46:40 obz Exp $
 
 inherit java-pkg eutils
 
@@ -17,7 +17,7 @@ RDEPEND=">=virtual/jdk-1.3"
 
 LICENSE="sun-bcla-jsapi freetts"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~amd64"
+KEYWORDS="x86 ppc ~sparc ~amd64"
 IUSE="doc jikes mbrola"
 
 #S=${WORKDIR}
