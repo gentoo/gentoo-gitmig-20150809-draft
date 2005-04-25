@@ -1,13 +1,13 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Digest-Nilsimsa/Digest-Nilsimsa-0.06-r1.ebuild,v 1.11 2004/12/23 09:42:00 nigoro Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Digest-Nilsimsa/Digest-Nilsimsa-0.06-r1.ebuild,v 1.12 2005/04/25 14:35:42 mcummings Exp $
 
 inherit perl-module
 
 CATEGORY="dev-perl"
 DESCRIPTION="Digest::Nilsimsa - Perl version of Nilsimsa code"
 HOMEPAGE="http://www.cpan.org/modules/by-module/Digest/${P}.readme"
-SRC_URI="http://www.cpan.org/modules/by-module/Digest/${P}.tar.gz"
+SRC_URI="mirror://cpan/authors/id/V/VI/VIPUL/${P}.tar.gz"
 
 LICENSE="|| ( Artistic GPL-2 )"
 SLOT="0"

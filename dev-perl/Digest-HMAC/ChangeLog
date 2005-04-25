@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Digest-HMAC
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Digest-HMAC/ChangeLog,v 1.17 2004/07/22 02:23:11 tgall Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Digest-HMAC/ChangeLog,v 1.18 2005/04/25 14:34:20 mcummings Exp $
+
+  25 Apr 2005; Michael Cummings <mcummings@gentoo.org>
+  Digest-HMAC-1.01-r1.ebuild:
+  cleaning
 
   21 Jul 2004; Tom Gall <tgall@gentoo.org> Digest-HMAC-1.01-r1.ebuild:
   stable on ppc64 bug #57585
