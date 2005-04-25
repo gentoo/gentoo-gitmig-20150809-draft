@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/cfengine-2.1.13.ebuild,v 1.5 2005/04/20 21:34:23 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/cfengine-2.1.13.ebuild,v 1.6 2005/04/25 03:48:01 weeve Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.iu.hio.no/pub/cfengine/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 arm ppc ~sparc x86"
+KEYWORDS="~amd64 arm ppc sparc x86"
 IUSE=""
 
 DEPEND=">=sys-libs/db-3.2
