@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-0.6.11.ebuild,v 1.14 2005/03/20 17:26:03 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-0.6.11.ebuild,v 1.15 2005/04/25 02:17:26 flameeyes Exp $
 
 inherit libtool flag-o-matic eutils gcc
 
@@ -112,7 +112,8 @@ src_compile() {
 	[ -f ${ROOT}/usr/include/postproc/postprocess.h ] && \
 		myconf="${myconf} --with-libpostproc-builddir=${ROOT}/usr/lib"
 
-	econf ${myconf} CFLAGS="${CFLAGS} -DDCT_YUV_PRECISION=1" || die
+	append-flags -DDCT_YUV_PRECISION=1
+	econf ${myconf} || die
 
 	# Do not use emake !!
 	# export CFLAGS="${CFLAGS} -DDCT_YUV_PRECISION=1"

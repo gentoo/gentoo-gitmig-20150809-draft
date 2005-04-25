@@ -1,6 +1,11 @@
 # ChangeLog for media-video/transcode
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.95 2005/04/25 00:45:37 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.96 2005/04/25 02:17:26 flameeyes Exp $
+
+  25 Apr 2005; Diego Pettenò <flameeyes@gentoo.org>
+  transcode-0.6.11.ebuild:
+  Made transcode-0.6.11 use append-flags instead of passing CFLAGS to econf.
+  Fixes #84362
 
   25 Apr 2005; Diego Pettenò <flameeyes@gentoo.org>
   transcode-0.6.14-r1.ebuild:
