@@ -1,10 +1,20 @@
-MD5 e58bd907d4b4bad7f9baacebd37846c0 ChangeLog 2041
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 719fca84293a877b192bcd696f4ab8ed Net-Daemon-0.36-r1.ebuild 521
+MD5 f70ed97d058c1b71c2616f3cfcaa0832 ChangeLog 2138
+MD5 dc2c7174c6b1a10a977060e10664ba5f Net-Daemon-0.38.ebuild 551
+MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 26e7e539a850357f292447572a4907ec Net-Daemon-0.36.ebuild 513
 MD5 6fb1e134e366ef1d855cbfda318991f9 Net-Daemon-0.37.ebuild 548
-MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 e43dadf67ea0f5568e92b693216b7b37 Net-Daemon-0.38.ebuild 552
-MD5 9369c0b110db55b481c73d2a6c95767f files/digest-Net-Daemon-0.36 66
+MD5 32a7d3ae277afff805b5641a8d9e98cf files/digest-Net-Daemon-0.38 66
 MD5 9369c0b110db55b481c73d2a6c95767f files/digest-Net-Daemon-0.36-r1 66
 MD5 5815baff389f4302b61bb3704594263e files/digest-Net-Daemon-0.37 66
-MD5 32a7d3ae277afff805b5641a8d9e98cf files/digest-Net-Daemon-0.38 66
+MD5 9369c0b110db55b481c73d2a6c95767f files/digest-Net-Daemon-0.36 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCbKGmKf2g/qXtneoRAsKwAJ9bbEeFETHvVvSa3lEdrDFGDh7YZwCguWCV
+Mvu3ypqvE5f9IbZqQ8kahaI=
+=eLDt
+-----END PGP SIGNATURE-----
