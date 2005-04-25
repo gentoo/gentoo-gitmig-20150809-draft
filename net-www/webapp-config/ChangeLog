@@ -1,6 +1,12 @@
 # ChangeLog for net-www/webapp-config
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/webapp-config/ChangeLog,v 1.66 2004/12/29 21:14:23 ciaranm Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/webapp-config/ChangeLog,v 1.67 2005/04/25 13:50:28 ka0ttic Exp $
+
+*webapp-config-1.10-r12 (25 Apr 2005)
+
+  25 Apr 2005; Aaron Walker <ka0ttic@gentoo.org>
+  +webapp-config-1.10-r12.ebuild:
+  Revision bump. Use equery instead of deprecated qpkg for bug 73867.
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
