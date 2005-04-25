@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/mailer-config
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailer-config/ChangeLog,v 1.3 2005/04/25 18:42:50 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailer-config/ChangeLog,v 1.4 2005/04/25 19:44:04 slarti Exp $
+
+  25 Apr 2005; Tom Martin <slarti@gentoo.org> mailer-config-0.1.ebuild:
+  Add an einfo talking about CONFIG_PROTECT_MASK="/etc/mail/mailer.conf".
 
   25 Apr 2005; Fernando J. Pereda <ferdy@gentoo.org>
   mailer-config-0.1.ebuild:
