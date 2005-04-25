@@ -1,16 +1,16 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-Hierarchy/Data-Hierarchy-0.21.ebuild,v 1.3 2005/02/05 14:18:38 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-Hierarchy/Data-Hierarchy-0.21.ebuild,v 1.4 2005/04/25 13:26:39 mcummings Exp $
 
 inherit perl-module
 
 DESCRIPTION="Data::Hierarchy - Handle data in a hierarchical structure"
-SRC_URI="http://www.cpan.org/modules/by-module/Data/${P}.tar.gz"
+SRC_URI="mirror://cpan/authors/id/C/CL/CLKAO/${P}.tar.gz"
 HOMEPAGE="http://www.cpan.org/modules/by-module/Data/${P}.readme"
 
 SLOT="0"
 LICENSE="Artistic"
-KEYWORDS="~x86 ~sparc ~amd64"
+KEYWORDS="x86 ~sparc ~amd64 ~alpha ~mips ~ppc"
 IUSE=""
 
 SRC_TEST="do"

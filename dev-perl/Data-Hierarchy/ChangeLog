@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Data-Hierarchy
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-Hierarchy/ChangeLog,v 1.6 2005/02/05 14:18:38 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-Hierarchy/ChangeLog,v 1.7 2005/04/25 13:26:39 mcummings Exp $
+
+  25 Apr 2005; Michael Cummings <mcummings@gentoo.org>
+  -Data-Hierarchy-0.15.ebuild, -Data-Hierarchy-0.18.ebuild,
+  Data-Hierarchy-0.21.ebuild:
+  Cleaning
 
   05 Feb 2005; Dylan Carlson <absinthe@gentoo.org>
   Data-Hierarchy-0.21.ebuild:
