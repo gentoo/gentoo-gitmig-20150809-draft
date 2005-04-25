@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/udpcast
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/udpcast/ChangeLog,v 1.6 2005/03/24 16:41:25 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/udpcast/ChangeLog,v 1.7 2005/04/25 02:54:18 vanquirius Exp $
+
+  24 Apr 2005; Marcelo Goes <vanquirius@gentoo.org> udpcast-20050226.ebuild:
+  Marking x86 stable.
 
 *udpcast-20050226 (24 Mar 2005)
 
