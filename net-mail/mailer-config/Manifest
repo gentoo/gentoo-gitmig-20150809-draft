@@ -1,15 +1,15 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
+MD5 a15002712a9cb48c6fd938f5fb5b63ba mailer-config-0.1.ebuild 1046
 MD5 fcca2210c25441ab51164affb863450c ChangeLog 749
 MD5 6d3710235e6f3610b71104aa7ff64dac metadata.xml 349
-MD5 a15002712a9cb48c6fd938f5fb5b63ba mailer-config-0.1.ebuild 1046
+MD5 cd3c5bbc99b88b96682672267385287d files/digest-mailer-config-0.1 68
 MD5 3d61b3c4030a8b5a17862036c989d355 files/mailer.conf 282
-MD5 486380f005e990a939547f078ba8373d files/digest-mailer-config-0.1 68
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCbUieCHk4+ZoBpvsRAthUAKCrXlH2ddYmoG/yvDBvK62jgYKtXQCdF6OO
-dOKTXsVYnLLJt1EZjEYQe2Y=
-=rE4j
+iD8DBQFCbUzPViELBEf1JB0RArwTAJ43/zgyOuaeYZN5vedYhrQtmcMGJgCfeVib
+qdc9Ay8+owDzTU3sj/kgi2o=
+=C+xQ
 -----END PGP SIGNATURE-----
