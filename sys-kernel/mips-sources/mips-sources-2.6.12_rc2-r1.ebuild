@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.6.12_rc2.ebuild,v 1.1 2005/04/24 03:00:45 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.6.12_rc2-r1.ebuild,v 1.1 2005/04/25 05:07:36 kumba Exp $
 
 
 # INCLUDED:
@@ -21,7 +21,7 @@
 OKV=${PV/_/-}
 CVSDATE="20050423"			# Date of diff between kernel.org and lmo CVS
 SECPATCHVER="1.12"			# Tarball version for security patches
-GENPATCHVER="1.8"			# Tarball version for generic patches
+GENPATCHVER="1.9"			# Tarball version for generic patches
 EXTRAVERSION="-mipscvs-${CVSDATE}"
 KV="${OKV}${EXTRAVERSION}"
 USERC="yes"				# If set to "yes", then attempt to use an RC kernel
@@ -206,7 +206,7 @@ do_generic_patches() {
 		epatch ${MIPS_PATCHES}/misc-2.6.11-add-byteorder-to-proc.patch
 
 		# Ugly Hacks (Long Story, ask about it on IRC if you really want to know)
-		if ! use ip30 and ! use ip28; then
+		if ! use ip30 && ! use ip28; then
 			epatch ${MIPS_PATCHES}/misc-2.6.11-ugly-wrong-kphysaddr-hack.patch
 		fi
 	eend

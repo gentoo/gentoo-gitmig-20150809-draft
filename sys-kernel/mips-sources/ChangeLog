@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/mips-sources
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/ChangeLog,v 1.72 2005/04/24 03:00:45 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/ChangeLog,v 1.73 2005/04/25 05:07:36 kumba Exp $
+
+*mips-sources-2.6.12_rc2-r1 (25 Apr 2005)
+
+  25 Apr 2005; Joshua Kinard <kumba@gentoo.org>
+  +mips-sources-2.6.12_rc2-r1.ebuild, -mips-sources-2.6.12_rc2.ebuild:
+  The patch for IP28 was b0rked, and we had an incredibly stupid typo in the
+  ebuild. The kind that gets you laughed at by even novice bash coders.
 
 *mips-sources-2.4.28-r2 (23 Apr 2005)
 

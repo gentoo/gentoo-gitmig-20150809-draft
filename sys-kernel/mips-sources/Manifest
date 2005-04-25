@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ab0d8fcd1f7ca1c66e62e182717bbb80 mips-sources-2.4.28-r2.ebuild 3243
-MD5 68a6e329625d97e7ae39215040469e72 mips-sources-2.6.12_rc2.ebuild 10961
-MD5 f84bdf53e4d54b1836d261e9e0e9e19b ChangeLog 32110
+MD5 ff793074b693665fba559a146b6411c6 ChangeLog 32422
 MD5 ad25a2a0b6ade60c13ad8040f3c319c6 metadata.xml 378
+MD5 ab0d8fcd1f7ca1c66e62e182717bbb80 mips-sources-2.4.28-r2.ebuild 3243
 MD5 a7e3a069f437b9e065238f1fb15818da mips-sources-2.6.10-r2.ebuild 12293
+MD5 1462ecf60e2a1553ca82dfb715f16bb2 mips-sources-2.6.12_rc2-r1.ebuild 10963
 MD5 7139f9eed523313727ab1d5496b3ae55 files/digest-mips-sources-2.4.28-r2 388
 MD5 29d01362fffa6786332aa871bfae02f5 files/digest-mips-sources-2.6.10-r2 315
-MD5 13ef8a2829abb95cb1abb02ac86b921f files/digest-mips-sources-2.6.12_rc2 385
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCa6hdI1lqEGTUzyQRAhubAKCY1bhwaD2YOifcIZ/eHSBWRIGRKwCdGz+7
-clQ7Dz6vnoLEHsCaxztzkU0=
-=mt9u
------END PGP SIGNATURE-----
+MD5 1dfadb3e4f5be1ef7184b96b534ff4db files/digest-mips-sources-2.6.12_rc2-r1 385
