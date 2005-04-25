@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libsdl
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/ChangeLog,v 1.77 2005/04/24 02:59:06 kito Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/ChangeLog,v 1.78 2005/04/25 01:10:12 azarah Exp $
+
+  25 Apr 2005; Martin Schlemmer <azarah@gentoo.org> +files/1.2.8-gcc4.patch,
+  libsdl-1.2.8-r1.ebuild:
+  Fix for building with gcc4 (within bounds - here I need to
+  build with -O0 to get it done).  Patch from Fedora.
 
   23 Apr 2005; Kito <kito@gentoo.org> libsdl-1.2.8-r1.ebuild:
   ~ppc-macos keyword, fix for libgcc_s on darwin.

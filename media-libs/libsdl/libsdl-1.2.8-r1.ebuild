@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.8-r1.ebuild,v 1.8 2005/04/24 17:51:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.8-r1.ebuild,v 1.9 2005/04/25 01:10:12 azarah Exp $
 
 inherit flag-o-matic toolchain-funcs eutils gnuconfig
 
@@ -54,6 +54,9 @@ src_unpack() {
 	epatch "${FILESDIR}"/${PV}-linux26.patch #74608
 	#epatch "${FILESDIR}"/${PV}-direct-8bit-color.patch #76946
 	epatch "${FILESDIR}"/${PV}-amd64-endian.patch #77300
+	#fix for building with gcc4 (within bounds - here I need to
+	#build with -O0 to get it done)
+	epatch "${FILESDIR}"/${PV}-gcc4.patch
 
 	if use nas && ! use X ; then #32447
 		sed -i \
