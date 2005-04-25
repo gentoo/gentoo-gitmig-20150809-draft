@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateManip/DateManip-5.42a-r1.ebuild,v 1.15 2005/04/02 21:40:32 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateManip/DateManip-5.42a-r1.ebuild,v 1.16 2005/04/25 13:48:33 mcummings Exp $
 
 inherit perl-module eutils
 
 DESCRIPTION="Perl date manipulation routines."
 HOMEPAGE="http://www.perl.com/CPAN/authors/id/SBECK/${P}.readme"
-SRC_URI="http://www.cpan.org/modules/by-module/Date/SBECK/${P}.tar.gz"
+SRC_URI="mirror://cpan/authors/id/S/SB/SBECK/${P}.tar.gz"
 
 LICENSE="|| ( Artistic GPL-2 )"
 SLOT="0"
