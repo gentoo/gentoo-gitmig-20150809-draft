@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/linux-wlan-ng/linux-wlan-ng-0.2.0-r3.ebuild,v 1.7 2005/01/23 20:49:04 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/linux-wlan-ng/linux-wlan-ng-0.2.0-r3.ebuild,v 1.8 2005/04/25 19:22:31 brix Exp $
 
 inherit pcmcia
 
@@ -12,8 +12,8 @@ SRC_URI="${SRC_URI}
 		mirror://gentoo/${PN}-gentoo-init.gz"
 
 HOMEPAGE="http://linux-wlan.org"
-DEPEND="virtual/os-headers
-		dev-libs/openssl
+DEPEND="virtual/os-headers"
+RDEPEND="dev-libs/openssl
 		sys-apps/baselayout
 		>=sys-apps/sed-4.0*"
 
