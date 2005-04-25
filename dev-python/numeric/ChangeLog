@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/numeric
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numeric/ChangeLog,v 1.14 2005/04/25 17:15:12 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numeric/ChangeLog,v 1.15 2005/04/25 17:20:49 carlo Exp $
+
+*numeric-23.8 (25 Apr 2005)
+
+  25 Apr 2005; Carsten Lohrke <carlo@gentoo.org> -files/numeric-23.3.patch,
+  -numeric-23.0.ebuild, -numeric-23.3.ebuild, -numeric-23.6.ebuild,
+  +numeric-23.8.ebuild:
+  version bump, clean up
 
   25 Apr 2005; Carsten Lohrke <carlo@gentoo.org> numeric-23.7.ebuild:
   stable on x86
