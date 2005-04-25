@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.339 2005/04/23 17:44:31 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.340 2005/04/25 01:40:25 kumba Exp $
+
+  24 Apr 2005; Joshua Kinard <kumba@gentoo.org>
+  glibc-2.3.4.20050125-r1.ebuild, glibc-2.3.5.ebuild:
+  We're a bit dated on mips. Bump 2.3.4.20050125-r1 to stable, and 2.3.5 to
+  unstable.
 
 *glibc-2.3.5.20050421 (23 Apr 2005)
 
