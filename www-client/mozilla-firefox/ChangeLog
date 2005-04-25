@@ -1,6 +1,21 @@
 # ChangeLog for www-client/mozilla-firefox
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.22 2005/04/18 22:03:53 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.23 2005/04/25 21:14:10 agriffis Exp $
+
+*mozilla-firefox-1.0.3-r1 (25 Apr 2005)
+
+  25 Apr 2005; Aron Griffis <agriffis@gentoo.org>
+  -files/mozilla-firebird-amd64.patch,
+  +files/mozilla-firefox-1.0.3-ia64.patch,
+  +files/mozilla-firefox-1.0.3-prefs.patch, -files/firefox,
+  -files/mozilla-firefox-mousebuttons.patch, mozilla-firefox-1.0.3.ebuild,
+  +mozilla-firefox-1.0.3-r1.ebuild:
+  Mark 1.0.3 as non-working on ia64; add 1.0.3-r1 with ia64 patch, plus a patch
+  to set a few default preferences as Debian does: disable application updating
+  by default since we want to control it with portage, inherit LANG from env,
+  etc.  Did not add ~arches to 1.0.3-r1 since the rebuild is unnecessary for the
+  installed base.  Instead just plan to use 1.0.3-r1 as the basis for the next
+  ~arches-marked ebuild.  Remove some dead wood from files dir.  
 
   18 Apr 2005; Bryan Østergaard <kloeri@gentoo.org>
   mozilla-firefox-1.0.3.ebuild:

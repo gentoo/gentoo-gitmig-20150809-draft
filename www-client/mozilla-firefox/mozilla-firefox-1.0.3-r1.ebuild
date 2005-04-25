@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-1.0.3.ebuild,v 1.8 2005/04/25 21:14:10 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-1.0.3-r1.ebuild,v 1.1 2005/04/25 21:14:10 agriffis Exp $
 
 inherit makeedit flag-o-matic gcc nsplugins eutils mozconfig mozilla-launcher multilib
 
@@ -13,7 +13,7 @@ SRC_URI="http://ftp.mozilla.org/pub/mozilla.org/firefox/releases/${MY_PV}/source
 
 LICENSE="MPL-1.1 NPL-1.1"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm hppa -ia64 ppc sparc x86"
+KEYWORDS="ia64"
 IUSE="java mozsvg"
 
 # xrender.pc appeared for the first time in xorg-x11-6.7.0-r2
@@ -53,6 +53,16 @@ src_unpack() {
 
 	# patch to fix separate character on euro keyboards, bug 68995
 	epatch ${FILESDIR}/mozilla-firefox-1.0-kp_separator.patch
+
+	# some patches from Debian to set default preferences:
+	# - inherit LANG from env
+	# - shut off SSLv2 and 40-bit ciphers by default
+	# - disable application auto-updating
+	epatch ${FILESDIR}/mozilla-firefox-1.0.3-prefs.patch
+
+	# patch to solve segfaults on ia64, from Debian, originally from David
+	# Mosberger
+	epatch ${FILESDIR}/mozilla-firefox-1.0.3-ia64.patch
 
 	if has_version '>=x11-libs/cairo-0.3.0'; then
 		epatch ${FILESDIR}/svg-cairo-0.3.0-fix.patch
