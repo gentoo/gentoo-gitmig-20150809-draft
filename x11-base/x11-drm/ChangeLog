@@ -1,6 +1,9 @@
 # ChangeLog for x11-base/x11-drm
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/ChangeLog,v 1.13 2005/01/25 02:39:17 battousai Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/ChangeLog,v 1.14 2005/04/25 06:11:39 spyderous Exp $
+
+  25 Apr 2005; Donnie Berkholz <spyderous@gentoo.org>; metadata.xml:
+  Update herd to x11-drivers.
 
   24 Jan 2005; Bryan Stine <battousai@gentoo.org x11-drm-20050104.ebuild:
   Forgot to remove IUSE="gatos".
