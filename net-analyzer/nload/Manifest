@@ -1,5 +1,4 @@
-MD5 687c33ad099f5cd34203a8ab4777561b nload-0.6.0.ebuild 716
-MD5 fa6df504dc14daec651bf17a97b2f85b ChangeLog 2436
+MD5 170e43e985e30afe914dcdcb3956978b nload-0.6.0.ebuild 631
+MD5 8fdcb97c1c663fe7b0c6ab7d96f0a5af ChangeLog 2601
 MD5 973561a9f8af7319f312cc6cc86873fb metadata.xml 342
-MD5 46b4abff9907d2d0f7b5e980d2286a18 files/nload-0.5.0-gcc3-gentoo.patch 448
 MD5 87062647c5d50c2924833ed2e4cff7a4 files/digest-nload-0.6.0 63
