@@ -1,12 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 cee354a6ee1cbafd7cffe0872cfe85af ChangeLog 2746
+MD5 e4052124350079f99be09540735fa47f File-MMagic-1.22.ebuild 545
+MD5 21e19036241a926255d897b5c581180b File-MMagic-1.20.ebuild 523
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 501c6413c9a949fd813989283d18fd37 ChangeLog 2541
-MD5 993d3f481397aacd5d6d3b9108725c98 File-MMagic-1.20.ebuild 533
-MD5 3d13db98c4bf78c2a3608b468f4007e2 File-MMagic-1.22.ebuild 559
-MD5 a36f94efd282d9e0a13c6b523fdd34b1 File-MMagic-1.15.ebuild 525
-MD5 f08344c7e589e3e8ac8759d2689bd849 File-MMagic-1.19.ebuild 527
-MD5 e961b609a323f85897008299bd642147 File-MMagic-1.15-r1.ebuild 527
 MD5 2de3061fe344fbe9bafd13a72babc766 files/digest-File-MMagic-1.20 67
 MD5 2a95ea18ecad96d66550ed3dc6a4e063 files/digest-File-MMagic-1.22 67
-MD5 7e6a2e82d4b3c20ba4028ac75af6abb0 files/digest-File-MMagic-1.19 67
-MD5 01dd63c3e4f55fe970827ab1bf586728 files/digest-File-MMagic-1.15-r1 67
-MD5 01dd63c3e4f55fe970827ab1bf586728 files/digest-File-MMagic-1.15 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCbRCptG5z4I8BtQoRAjlOAJ96kfnWIvVnF8gWAc6pt6IEDrUYiACfTtYu
+ToUsjrVGm0jGJbS7r5D22KM=
+=BSa+
+-----END PGP SIGNATURE-----
