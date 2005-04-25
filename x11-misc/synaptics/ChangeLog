@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/synaptics
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/synaptics/ChangeLog,v 1.36 2005/03/15 03:32:18 battousai Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/synaptics/ChangeLog,v 1.37 2005/04/25 06:13:24 spyderous Exp $
+
+  25 Apr 2005; Donnie Berkholz <spyderous@gentoo.org>; metadata.xml:
+  Update herd to x11-drivers.
 
 *synaptics-0.14.1 (14 Mar 2005)
 
