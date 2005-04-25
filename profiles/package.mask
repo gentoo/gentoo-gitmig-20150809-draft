@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3870 2005/04/25 14:26:36 brix Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3871 2005/04/25 15:20:04 slarti Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -27,6 +27,7 @@
 net-mail/mailer-config
 =net-mail/mailwrapper-0.2.1-r1
 =mail-mta/nbsmtp-0.98-r1
+=mail-mta/msmtp-1.4.0-r1
 
 # Carsten Lohrke <carlo@gentoo.org> (23 April 2005)
 # Quanta crashes #86284
