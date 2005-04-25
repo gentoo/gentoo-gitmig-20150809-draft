@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/GDTextUtil
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/GDTextUtil/ChangeLog,v 1.10 2005/03/09 18:27:55 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/GDTextUtil/ChangeLog,v 1.11 2005/04/25 16:42:13 mcummings Exp $
+
+  25 Apr 2005; Michael Cummings <mcummings@gentoo.org> GDTextUtil-0.86.ebuild:
+  cleaning
 
   09 Mar 2005; Markus Rothe <corsair@gentoo.org> GDTextUtil-0.86.ebuild:
   Added ~ppc64 to KEYWORDS

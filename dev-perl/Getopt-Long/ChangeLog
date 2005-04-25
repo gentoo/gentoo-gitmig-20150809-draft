@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Getopt-Long
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Getopt-Long/ChangeLog,v 1.10 2005/03/19 15:46:05 nigoro Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Getopt-Long/ChangeLog,v 1.11 2005/04/25 16:45:25 mcummings Exp $
+
+  25 Apr 2005; Michael Cummings <mcummings@gentoo.org>
+  Getopt-Long-2.34.ebuild:
+  cleaning
 
   20 Mar 2005; Yuta SATOH <nigoro@gentoo.org> Getopt-Long-2.34.ebuild:
   Stable on ppc64
