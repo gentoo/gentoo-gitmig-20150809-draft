@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.211 2005/04/24 19:42:30 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.212 2005/04/25 14:45:20 azarah Exp $
+
+  25 Apr 2005; Martin Schlemmer <azarah@gentoo.org>
+  files/xine-lib-gcc4.patch:
+  Add another hunk required to build with gcc4.
 
 *xine-lib-1.0-r4 (24 Apr 2005)
 

@@ -189,3 +189,14 @@ diff -urN xine-lib-1.0.orig/src/post/audio/stretch.c xine-lib-1.0/src/post/audio
      this->num_frames += frames_to_copy;
      buf->num_frames -= frames_to_copy;
  
+--- xine-lib-1.0/src/libw32dll/wine/loader.h	2005-04-25 14:21:09.000000000 +0000
++++ xine-lib-1.0.az/src/libw32dll/wine/loader.h	2005-04-25 14:22:05.000000000 +0000
+@@ -17,7 +17,7 @@
+ extern "C" {
+ #endif
+ 
+-extern char* win32_codec_name;  // must be set before calling DrvOpen() !!!
++static char* win32_codec_name;  // must be set before calling DrvOpen() !!!
+ 
+ unsigned int _GetPrivateProfileIntA(const char* appname, const char* keyname, int default_value, const char* filename);
+ int _GetPrivateProfileStringA(const char* appname, const char* keyname,
