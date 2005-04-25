@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-1.1.0.3.ebuild,v 1.1 2005/04/25 12:25:57 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-1.1.0.3.ebuild,v 1.2 2005/04/25 20:03:10 herbs Exp $
 
 inherit eutils
 
@@ -19,10 +19,9 @@ KEYWORDS="~x86 ~amd64"
 IUSE="static arts esd"
 DEPEND=">=sys-apps/dbus-0.23.4
 	amd64? ( app-emulation/emul-linux-x86-glibc
-		app-emulation/emul-linux-x86-xlibs
-		app-emulation/emul-linux-x86-compat
-		app-emulation/emul-linux-x86-baselibs
-		!static? ( app-emulation/emul-linux-x86-qtlibs ))
+		>=app-emulation/emul-linux-x86-xlibs-1.2
+		>=app-emulation/emul-linux-x86-baselibs-2.1.1
+		!static? ( >=app-emulation/emul-linux-x86-qtlibs-1.1 ))
 	x86? ( !static? ( >=x11-libs/qt-3.2 )
 		>=sys-libs/glibc-2.2.5)"
 
