@@ -1,6 +1,10 @@
 # ChangeLog for net-print/gnome-cups-manager
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/gnome-cups-manager/ChangeLog,v 1.41 2005/04/01 22:15:31 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/gnome-cups-manager/ChangeLog,v 1.42 2005/04/25 06:26:51 kloeri Exp $
+
+  25 Apr 2005; Bryan Østergaard <kloeri@gentoo.org>
+  gnome-cups-manager-0.28.ebuild:
+  Stable on alpha.
 
   01 Apr 2005; Lars Weiler <pylon@gentoo.org>
   gnome-cups-manager-0.28.ebuild:
