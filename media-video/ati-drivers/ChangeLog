@@ -1,6 +1,9 @@
 # ChangeLog for media-video/ati-drivers
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ChangeLog,v 1.86 2005/04/18 06:49:42 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ChangeLog,v 1.87 2005/04/25 05:58:34 spyderous Exp $
+
+  25 Apr 2005; Donnie Berkholz <spyderous@gentoo.org>; metadata.xml:
+  Update herd to x11-drivers.
 
   18 Apr 2005; Jeremy Huddleston <eradicator@gentoo.org>
   ati-drivers-8.8.25-r3.ebuild:
