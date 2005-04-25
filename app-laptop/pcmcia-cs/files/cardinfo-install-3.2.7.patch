@@ -1,0 +1,24 @@
+diff -urN pcmcia-cs-3.2.7.orig/cardmgr/Makefile pcmcia-cs-3.2.7/cardmgr/Makefile
+--- pcmcia-cs-3.2.7.orig/cardmgr/Makefile	2004-08-30 14:16:45.860891080 -0500
++++ pcmcia-cs-3.2.7/cardmgr/Makefile	2004-08-30 14:17:58.787804504 -0500
+@@ -90,14 +90,14 @@
+ 	$(CC) $< -o $@ $(GTK_LIBS)
+ 
+ install-cardinfo: cardinfo
+-	@mkdir -p $(PREFIX)/usr/X11R6/bin
+-	cp -f cardinfo $(PREFIX)/usr/X11R6/bin
+-	chmod u+s $(PREFIX)/usr/X11R6/bin/cardinfo
++	@mkdir -p $(PREFIX)/usr/bin
++	cp -f cardinfo $(PREFIX)/usr/bin
++	chmod u+s $(PREFIX)/usr/bin/cardinfo
+ 
+ install-xcardinfo: xcardinfo
+-	@mkdir -p $(PREFIX)/usr/X11R6/bin
+-	cp -f xcardinfo $(PREFIX)/usr/X11R6/bin
+-	chmod u+s $(PREFIX)/usr/X11R6/bin/xcardinfo
++	@mkdir -p $(PREFIX)/usr/bin
++	cp -f xcardinfo $(PREFIX)/usr/bin
++	chmod u+s $(PREFIX)/usr/bin/xcardinfo
+ 
+ install-gpccard: gpccard
+ 	@mkdir -p $(PREFIX)/usr/bin
