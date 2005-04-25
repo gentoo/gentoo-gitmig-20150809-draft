@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/git/git-0.5.ebuild,v 1.1 2005/04/21 16:32:20 r3pek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/git/git-0.5.ebuild,v 1.2 2005/04/25 23:48:57 r3pek Exp $
 
 DESCRIPTION="GIT - the stupid content tracker"
 HOMEPAGE="http://www.kernel.org/pub/linux/kernel/people/torvalds/"
@@ -12,7 +12,8 @@ KEYWORDS="~x86"
 IUSE=""
 
 DEPEND="dev-libs/openssl
-		sys-libs/zlib"
+		sys-libs/zlib
+		!dev-util/git-pasky"
 
 src_compile() {
 	emake CFLAGS="${CFLAGS}" || die "make failed"
