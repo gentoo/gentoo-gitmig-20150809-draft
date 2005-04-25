@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/gtkcdlabel/gtkcdlabel-1.0_pre6.ebuild,v 1.6 2005/03/27 00:42:06 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/gtkcdlabel/gtkcdlabel-1.0_pre6.ebuild,v 1.7 2005/04/25 20:46:49 pylon Exp $
 
 MY_P=${P/_}
 DESCRIPTION="A GTK+ frontend to cdlabelgen for easy and fast cd cover creation"
@@ -13,7 +13,6 @@ IUSE=""
 KEYWORDS="x86 ppc sparc"
 
 RDEPEND=">=app-cdr/cdlabelgen-2.3.0
-	>=media-libs/libcdaudio-0.99.6
 	>=x11-libs/gtk+-2
 	>=gnome-base/libglade-2
 	>=gnome-base/libgnomeui-2*"

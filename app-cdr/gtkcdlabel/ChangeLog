@@ -1,6 +1,11 @@
 # ChangeLog for app-cdr/gtkcdlabel
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/gtkcdlabel/ChangeLog,v 1.17 2005/03/27 00:42:06 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/gtkcdlabel/ChangeLog,v 1.18 2005/04/25 20:46:49 pylon Exp $
+
+  25 Apr 2005; Lars Weiler <pylon@gentoo.org> metadata.xml,
+  gtkcdlabel-1.0_pre6.ebuild, gtkcdlabel-1.0_pre7.ebuild:
+  Removed libcdaudio-dependency; bug #87766. Added media-optical in metadata.
+  Removed old package.
 
   27 Mar 2005; Michael Hanselmann <hansmi@gentoo.org>
   gtkcdlabel-1.0_pre6.ebuild:
@@ -16,7 +21,7 @@
   -gtkcdlabel-0.9.4.ebuild, gtkcdlabel-1.0_pre3.ebuild,
   gtkcdlabel-1.0_pre6.ebuild, +gtkcdlabel-1.0_pre7.ebuild:
   Version bump. Remove old versions. Dependancy fix as per bug #78335 thanks to
-  Lars Schünzel <yahoo@l61.de>
+  Lars SchÃ¼nzel <yahoo@l61.de>
 
   05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   gtkcdlabel-1.0_pre3.ebuild:
@@ -56,4 +61,4 @@
   Added ppc keyword
 
   03 Aug 2002; Maik Schreiber <blizzy@gentoo.org> : Initial import.
-  ebuild submitted by Christian V. J. Brüssow <cvjb@epost.de>.
+  ebuild submitted by Christian V. J. BrÃ¼ssow <cvjb@epost.de>.
