@@ -1,0 +1,10 @@
+# ChangeLog for sci-biology/treeviewx
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/cbcanalyzer/ChangeLog,v 1.1 2005/04/25 19:46:25 apokorny Exp $
+
+*cbcanalyzer-1.0.0 (25 Apr 2005)
+
+  25 Apr 2005; Andreas Pokorny <apokorny@gentoo.org>
+  cbcanalyzer-1.0.0.ebuild, ChangeLog, metadata.xml:
+  Initial import 
+
