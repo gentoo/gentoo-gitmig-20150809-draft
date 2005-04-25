@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/rss-glx
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/rss-glx/ChangeLog,v 1.28 2005/04/20 14:37:23 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/rss-glx/ChangeLog,v 1.29 2005/04/25 11:47:10 liquidx Exp $
+
+  25 Apr 2005; Alastair Tse <liquidx@gentoo.org>
+  +files/rss-glx-0.8.0-assert.patch, rss-glx-0.8.0.ebuild:
+  patches for missing assert headers, plus typo fix in ebuild. thanks to Peter
+  Karlsson (#90177)
 
 *rss-glx-0.8.0 (20 Apr 2005)
 

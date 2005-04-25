@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/rss-glx/rss-glx-0.8.0.ebuild,v 1.1 2005/04/20 14:37:23 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/rss-glx/rss-glx-0.8.0.ebuild,v 1.2 2005/04/25 11:47:10 liquidx Exp $
 
 inherit flag-o-matic eutils
 
@@ -38,7 +38,8 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/${PN}-0.8.0-kdedesktop.patch
-	cp ${FILESDIR}/jwz-vroot.h ${S}/includes/vroot.h
+	epatch ${FILESDIR}/${PN}-0.8.0-assert.patch
+	cp ${FILESDIR}/jwz-vroot.h ${S}/include/vroot.h
 }
 
 src_compile() {
