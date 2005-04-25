@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/gstreamer
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/ChangeLog,v 1.98 2005/04/25 11:22:59 zaheerm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/ChangeLog,v 1.99 2005/04/25 14:50:00 zaheerm Exp $
+
+  25 Apr 2005; Zaheer Abbas Merali <zaheerm@gentoo.org>
+  -files/gnu_asm_fix.patch, -gstreamer-0.6.4.ebuild:
+  Removing 0.6.x
 
   25 Apr 2005; <zaheerm@gentoo.org> gstreamer-0.8.9-r3.ebuild:
   Stabilise on x86
