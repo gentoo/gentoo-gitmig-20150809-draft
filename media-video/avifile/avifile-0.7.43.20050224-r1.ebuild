@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.7.43.20050224-r1.ebuild,v 1.3 2005/04/22 01:34:42 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.7.43.20050224-r1.ebuild,v 1.4 2005/04/25 00:15:35 flameeyes Exp $
 
 inherit eutils flag-o-matic
 
@@ -46,6 +46,12 @@ DEPEND="${RDEPEND}
 	sys-devel/libtool"
 #	v4l needs linux headers
 #	v4l? ( virtual/os-headers )
+
+pkg_setup() {
+	if use qt && use dmalloc; then
+		die "Sorry, qt and dmalloc can't be enabled at the same time."
+	fi
+}
 
 src_unpack() {
 	unpack ${A}
