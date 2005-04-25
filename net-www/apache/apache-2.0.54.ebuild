@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.54.ebuild,v 1.3 2005/04/24 08:45:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.54.ebuild,v 1.4 2005/04/25 01:54:54 beu Exp $
 
 inherit eutils gnuconfig
 
@@ -28,7 +28,8 @@ RDEPEND="dev-lang/perl
 	app-misc/mime-types
 	sys-libs/zlib
 	ssl? ( dev-libs/openssl )
-	selinux? ( sec-policy/selinux-apache )"
+	selinux? ( sec-policy/selinux-apache )
+	!mips? ( ldap? ( =net-nds/openldap-2* ) )"
 DEPEND="${RDEPEND}
 	>=sys-devel/autoconf-2.59-r4"
 

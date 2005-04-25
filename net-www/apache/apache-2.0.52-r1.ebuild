@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.52-r1.ebuild,v 1.17 2005/04/09 21:46:40 trapni Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.52-r1.ebuild,v 1.18 2005/04/25 01:54:54 beu Exp $
 
 inherit flag-o-matic eutils fixheadtails gnuconfig
 
@@ -40,7 +40,7 @@ apache_setup_vars() {
 	einfo "USERDIR is set to: $USERDIR"
 }
 
-set_filter_flags () {
+set_filter_flags() {
 	CFLAGS="${CFLAGS/  / }"
 	has_version =sys-libs/glibc-2.2* && filter-flags -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE
 }
