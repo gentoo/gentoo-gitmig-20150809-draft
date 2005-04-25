@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-a52dec
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-a52dec/ChangeLog,v 1.16 2005/04/02 12:44:17 zaheerm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-a52dec/ChangeLog,v 1.17 2005/04/25 11:38:24 zaheerm Exp $
+
+  25 Apr 2005; Zaheer Abbas Merali <zaheerm@gentoo.org>
+  gst-plugins-a52dec-0.8.8.ebuild:
+  stabilise on x86
 
   02 Apr 2005; <zaheerm@gentoo.org> -gst-plugins-a52dec-0.6.4.ebuild:
   removing gstreamer 0.6.x
