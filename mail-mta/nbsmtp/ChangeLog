@@ -1,6 +1,13 @@
 # ChangeLog for mail-mta/nbsmtp
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/nbsmtp/ChangeLog,v 1.16 2005/01/17 19:25:42 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/nbsmtp/ChangeLog,v 1.17 2005/04/25 13:49:47 ferdy Exp $
+
+*nbsmtp-0.98-r1 (25 Apr 2005)
+
+  25 Apr 2005; Fernando J. Pereda <ferdy@gentoo.org> +files/mailer.conf,
+  +files/wrapper-nbsmtp, -nbsmtp-0.8.ebuild, -nbsmtp-0.96.ebuild,
+  -nbsmtp-0.97.ebuild, +nbsmtp-0.98-r1.ebuild:
+  cleanup and add 0.98-r1 to use mailer.eclass(masked)
 
   17 Jan 2005; Gustavo Zacarias <gustavoz@gentoo.org> nbsmtp-0.98.ebuild:
   Stable on sparc

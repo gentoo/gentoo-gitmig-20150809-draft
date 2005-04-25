@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+
+_newaliases() {
+	echo "${0}: nbSMTP does not support aliases"
+}
+
+case "${0##*/}" in
+	sendmail|sendmail.nbsmtp)
+		if [[ "${1}" = "-I" ]] ; then
+			_newaliases
+		else
+			nbsmtp
+		fi
+	;;
+	mailq|mailq.nbsmtp)
+		if [[ "${1}" = "-q" ]] ; then
+			nbqueue --flush
+		else
+			nbqueue --list
+		fi
+	;;
+	newaliases|newaliases.nbsmtp)
+		_newaliases
+	;;
+esac
+
+exit ${?}
