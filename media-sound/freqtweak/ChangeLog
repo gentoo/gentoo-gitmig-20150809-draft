@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/freqtweak
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/freqtweak/ChangeLog,v 1.15 2005/01/16 21:33:01 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/freqtweak/ChangeLog,v 1.16 2005/04/25 16:50:52 luckyduck Exp $
+
+*freqtweak-0.6.0-r1 (25 Apr 2005)
+
+  25 Apr 2005; Jan Brinkmann <luckyduck@gentoo.org> -freqtweak-0.4.7.ebuild,
+  -freqtweak-0.5.0.ebuild, -freqtweak-0.5.2.ebuild,
+  +freqtweak-0.6.0-r1.ebuild:
+  added modified ebuild for version 0.6.0, fixes #83999. Thanks to Rob Cakebread
+  <pythonhead@gentoo.org>
 
   16 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org> freqtweak-0.6.0.ebuild:
   fixed libsigc++ dependency to fix bug #75012.

@@ -1,11 +1,17 @@
-MD5 a4d180817606b143cc1596a963d61403 freqtweak-0.4.7.ebuild 1022
-MD5 4a5a61620b789e70e47a5517542db83d freqtweak-0.5.0.ebuild 1017
-MD5 d167352a0b9570bad37b9801282d8d09 freqtweak-0.5.2.ebuild 1016
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 73af02ea72b48ef2f99547d41bca8f06 freqtweak-0.6.0-r1.ebuild 1065
 MD5 d608a782a685e981370c23c50af796c3 freqtweak-0.6.0.ebuild 1141
-MD5 d574a177feebfee68a31eaf2ca9f092d ChangeLog 2022
+MD5 553787fb33d706b6eb7f0a1365b7beec ChangeLog 2324
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 5dc9fdc27751f76e8aa9caf5efc43eba files/digest-freqtweak-0.4.7 67
-MD5 89bdcb46c7ebe4bc985f05889f5d7aa1 files/digest-freqtweak-0.5.0 67
-MD5 1590a78b26ea35f3faf1a28abfa9d396 files/digest-freqtweak-0.5.2 67
+MD5 062012a13f18c48f506d4fb6597159fa files/digest-freqtweak-0.6.0-r1 67
 MD5 062012a13f18c48f506d4fb6597159fa files/digest-freqtweak-0.6.0 67
 MD5 74886188a273ea8c0fbe08d4f8c24cc4 files/freqtweak-0.6.0-gcc34.patch 583
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCbSAA06ebR+OMO78RAvrGAJwPjonFs1XrwIG2EHIdG++lshVOfQCglikX
+ba8U6Nkx+lNTEk52di5UkX4=
+=zBzh
+-----END PGP SIGNATURE-----
