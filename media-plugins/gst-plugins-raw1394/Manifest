@@ -1,6 +1,4 @@
 MD5 1577b6e548e46fcb10571decee7f9e89 gst-plugins-raw1394-0.8.8.ebuild 463
-MD5 e06577aeb687c99f2a98475c0834bf2f gst-plugins-raw1394-0.6.4.ebuild 324
-MD5 ca3a62736f05ff0bf9831798e7876e4c ChangeLog 676
+MD5 db05a70ab9960a08c505a8bbf23f7e89 ChangeLog 787
 MD5 6cf6f97e79b43eaf70fa938c431342a3 metadata.xml 181
-MD5 34e8dc19450d4a7bee008953e59314b0 files/digest-gst-plugins-raw1394-0.6.4 71
 MD5 33cfc77852e050bbb91b003695c91131 files/digest-gst-plugins-raw1394-0.8.8 71
