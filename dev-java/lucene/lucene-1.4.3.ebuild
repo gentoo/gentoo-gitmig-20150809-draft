@@ -1,34 +1,43 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/lucene/lucene-1.3-r1.ebuild,v 1.6 2005/02/03 17:35:26 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/lucene/lucene-1.4.3.ebuild,v 1.1 2005/04/25 15:20:01 luckyduck Exp $
 
 inherit java-pkg
 
 DESCRIPTION="High-performance, full-featured text search engine written entirely in Java"
 HOMEPAGE="http://jakarta.apache.org/lucene"
-SRC_URI="mirror://apache/jakarta/lucene/source/${P}-final-src.tar.gz"
+SRC_URI="mirror://apache/jakarta/lucene/source/${P}-src.tar.gz"
 LICENSE="Apache-1.1"
 SLOT="1"
 KEYWORDS="~x86 ~ppc ~amd64"
-IUSE="jikes doc"
+IUSE="jikes doc junit"
 DEPEND=">=virtual/jdk-1.2
-		>=dev-java/ant-1.5
-		jikes? ( dev-java/jikes )"
+	>=dev-java/ant-1.5
+	jikes? ( dev-java/jikes )
+	junit? ( dev-java/junit )"
 RDEPEND=">=virtual/jdk-1.2"
 
-S="${WORKDIR}/${P}-final"
+src_unpack() {
+	unpack ${A}
+	cd ${S}/lib
+	rm -f *.jar
+	java-pkg_jar-from junit
+}
+
 
 src_compile() {
 	local antflags="jar-core"
-	use jikes && antflags="${antflags} -Dbuild.compiler=jikes"
 	use doc && antflags="${antflags} javadocs"
+	use jikes && antflags="${antflags} -Dbuild.compiler=jikes"
+	use junit && antflags="${antflags} test"
 	ant ${antflags} || die "compilation failed"
 }
 
 src_install() {
 	dodoc CHANGES.txt README.txt
-	cd build
-	mv lucene-1.4-rc1-dev.jar ${PN}.jar
+	mv build/lucene-1.5-rc1-dev.jar ${PN}.jar
 	java-pkg_dojar ${PN}.jar
+
 	use doc && java-pkg_dohtml -r docs/*
+	use source && java-pkg_dosrc src/java/org
 }
