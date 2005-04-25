@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.238 2005/04/22 18:56:59 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.239 2005/04/25 14:16:44 brix Exp $
 
 # keep them sorted (excluding the special arch flags near the end).
 
@@ -219,7 +219,6 @@ neXt - Enable neXt toolkit
 nhc98 - Use the nhc98 Haskell compiler instead of GHC if the package supports it
 nis - Support for NIS/YP services
 nls - Adds Native Language Support (using gettext - GNU locale utilities)
-nocardbus - Disables cardbus support in pcmcia-cs
 nocd - Tells emerge to install all files required to run the application without a CD mounted
 nocxx - Disable support for C++ (DONT USE THIS UNLESS YOU KNOW WHAT YOU'RE DOING)
 nptl - Enable support for Native POSIX Threads Library, the new threading module (requires linux-2.6 or better usually)
@@ -248,7 +247,6 @@ php - Include support for php
 pic - Build Position Independent Code. Needed for prelink or the hardened toolchain
 plotutils - Adds plotutils support to gnuplot (library for 2-D vector graphics)
 png - Adds support for libpng (PNG images)
-pnp - Adds support for PNP in pcmcia-cs (Plug-N-Play)
 portaudio - Adds support for the crossplatform portaudio audio API
 posix - Adds support for POSIX-compatible functions
 postgres - Adds support for the postgresql database
@@ -309,7 +307,6 @@ tidy - Adds support for HTML Tidy
 tiff - Adds support for the tiff image format
 tokenizer - Adds support for the PHP file parser
 truetype - Adds support for FreeType and/or FreeType2 fonts
-trusted - used by pcmcia-cs to see if a regular user can add and remove pcmcia cards
 uclibc - Enable uclibc specific patches and build or link uclibc
 unicode - Adds support for Unicode
 usb - Adds USB support to applications that have optional USB support (e.g. cups)
@@ -322,7 +319,6 @@ videos - Tells portage to install optional video files (used in some games)
 vorbis - Adds support for the OggVorbis audio codec
 voodoo3 - Adds support for 3Dfx's Voodoo3 video chipset, else defaults to Voodoo4/5 support if not in USE.
 win32codecs - use win32codecs package for dll avi decoding support (wmv and what not)
-wavelan - Tells pcmcia-cs that you want to use the built-in wvlan drivers instead of the Orinoco drivers
 wddx - Adds support for WDDX
 wifi - Enable wireless network functions
 wmf - Adds support for the wmf vector image format
