@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/DBD-Pg
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-Pg/ChangeLog,v 1.23 2005/04/23 23:06:52 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-Pg/ChangeLog,v 1.24 2005/04/25 11:46:20 mcummings Exp $
+
+  25 Apr 2005; Michael Cummings <mcummings@gentoo.org> DBD-Pg-1.13-r1.ebuild,
+  -DBD-Pg-1.13.ebuild, DBD-Pg-1.22.ebuild, DBD-Pg-1.31.ebuild,
+  DBD-Pg-1.32.ebuild:
+  Cleaning
 
   24 Apr 2005; Guy Martin <gmsoft@gentoo.org> DBD-Pg-1.22.ebuild:
   Stable on hppa.

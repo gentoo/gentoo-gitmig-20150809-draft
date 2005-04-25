@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-Pg/DBD-Pg-1.31.ebuild,v 1.9 2005/02/06 18:27:11 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-Pg/DBD-Pg-1.31.ebuild,v 1.10 2005/04/25 11:46:20 mcummings Exp $
 
 inherit perl-module eutils
 
 DESCRIPTION="The Perl DBD::Pg Module"
-SRC_URI="http://cpan.org/modules/by-module/DBD/${P}.tar.gz"
-HOMEPAGE="http://cpan.org/modules/by-module/DBD/${P}.readme"
+SRC_URI="mirror://cpan/authors/id/R/RU/RUDY/${P}.tar.gz"
+HOMEPAGE="http://search.cpan.org/~rudy/${P}.readme"
 IUSE=""
 SLOT="0"
 LICENSE="|| ( Artistic GPL-2 )"
