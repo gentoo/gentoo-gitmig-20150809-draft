@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-1.0.1.ebuild,v 1.3 2005/04/24 09:49:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-1.0.1.ebuild,v 1.4 2005/04/25 17:14:33 zaheerm Exp $
 
 inherit gnome2 eutils
 
@@ -42,6 +42,7 @@ RDEPEND=">=dev-libs/glib-2.6.3
 		dvd? ( >=media-plugins/gst-plugins-a52dec-0.8.8
 			>=media-plugins/gst-plugins-dvdread-0.8.8
 			>=media-plugins/gst-plugins-mpeg2dec-0.8.8 )
+		win32codecs? ( >=media-plugins/gst-plugins-pitfdll-0.8.1 )
 		)
 	!gnome-extra/nautilus-media"
 
