@@ -1,6 +1,13 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.304 2005/04/21 11:34:00 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.305 2005/04/25 08:44:58 azarah Exp $
+
+  25 Apr 2005; Martin Schlemmer <azarah@gentoo.org>
+  +files/mplayer-1.0_pre7-gcc4.patch,
+  +files/mplayer-1.0_pre7-gcc_detection.patch, mplayer-1.0_pre7.ebuild:
+  Fix building with gcc4. Patch from Genady Okrain (Mafteah) 's overlay (plus
+  some added fixes to libvo/aclib_template.c that whoever seemed to have
+  missed).
 
   21 Apr 2005; Herbie Hopkins <herbs@gentoo.org> mplayer-1.0_pre7.ebuild:
   Same amd64 cleanup, new version.

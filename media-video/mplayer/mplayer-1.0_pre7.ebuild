@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre7.ebuild,v 1.4 2005/04/21 11:34:00 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre7.ebuild,v 1.5 2005/04/25 08:44:58 azarah Exp $
 
 inherit eutils flag-o-matic kernel-mod
 
@@ -169,9 +169,12 @@ src_unpack() {
 	use sparc && sed -i 's:#define __KERNEL__::' osdep/kerneltwosix.h
 	epatch ${FILESDIR}/${PN}-1.0_pre6-ppc64.patch
 
+	# Fix building with gcc4
+	epatch ${FILESDIR}/${P}-gcc4.patch
+
 	# fixes mplayer not seeing gcc 3.4-blahetc type
 	# gcc versions.  Half stolen from toolchain-funcs
-	epatch ${FILESDIR}/${PN}-gcc_detection.patch
+	epatch ${FILESDIR}/${P}-gcc_detection.patch
 }
 
 linguas_warn() {
