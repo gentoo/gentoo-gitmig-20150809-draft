@@ -40,3 +40,4 @@ move net-misc/linksys-tftp net-ftp/linksys-tftp
 move net-misc/netkit-tftp net-ftp/netkit-tftp
 move net-p2p/donkey net-p2p/edonkey
 move net-misc/rol net-news/rol
+move net-misc/multiimonc net-dialup/multiimonc
