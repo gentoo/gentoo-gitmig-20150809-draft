@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/plone/plone-2.0.5-r1.ebuild,v 1.2 2005/04/15 16:29:35 radek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/plone/plone-2.0.5-r1.ebuild,v 1.3 2005/04/25 13:05:44 radek Exp $
 
 SLOT="2.0"
 
@@ -18,7 +18,7 @@ RDEPEND="=net-zope/cmf-1.4*
 	>=net-zope/cmfactionicons-0.9
 	>=net-zope/cmfformcontroller-1.0.2
 	>=net-zope/cmfquickinstallertool-1.5.0
-	=net-zope/formulator-1.6*
+	>=net-zope/formulator-1.6.2
 	>=net-zope/groupuserfolder-2.0.1
 	>=net-zope/placelesstranslationservice-fork-1.0_rc7
 	>=net-zope/ploneerrorreporting-0.11
