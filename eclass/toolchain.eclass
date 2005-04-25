@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.142 2005/04/15 03:03:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.143 2005/04/25 07:28:59 gmsoft Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -904,8 +904,8 @@ gcc-compiler-configure() {
 		confgcc="${confgcc} --enable-java-awt=gtk"
 	fi
 
-	# Add --with-abi flags to enable respective MIPS ABIs
 	case $(tc-arch) in
+		# Add --with-abi flags to enable respective MIPS ABIs
 		mips)
 		if is_crosscompile && is_multilib; then
 			confgcc="${confgcc} --with-abi=32 --with-abi=n32 --with-abi=64"
@@ -914,6 +914,10 @@ gcc-compiler-configure() {
 			use n64 && confgcc="${confgcc} --with-abi=64"
 			use n32 && confgcc="${confgcc} --with-abi=n32"
 		fi
+		;;
+		# Enable sjlj exceptions for backward compatibility on hppa
+		hppa)
+			confgcc="${confgcc} --enable-sjlj-exceptions"
 		;;
 	esac
 
