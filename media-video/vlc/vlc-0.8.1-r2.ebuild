@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.1-r1.ebuild,v 1.6 2005/04/25 00:06:34 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.1-r2.ebuild,v 1.1 2005/04/25 00:06:34 flameeyes Exp $
 
 # Missing support for...
 #	tarkin - package not in portage yet - experimental
@@ -15,7 +15,7 @@ SRC_URI="http://download.videolan.org/pub/videolan/${PN}/${PV}/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
-IUSE="a52 3dfx nls unicode debug altivec httpd vlm gnutls live v4l cdio cddb cdda ogg matroska dvb dvd vcd ffmpeg aac dts flac mpeg vorbis theora X opengl freetype svg fbcon svga oss aalib ggi libcaca esd arts alsa wxwindows ncurses xosd lirc joystick mozilla hal stream mad xv bidi gtk2 sdl threads ssl"
+IUSE="a52 3dfx nls unicode debug altivec httpd vlm gnutls live v4l cdio cddb cdda ogg matroska dvb dvd vcd ffmpeg aac dts flac mpeg vorbis theora X opengl freetype svg fbcon svga oss aalib ggi libcaca esd arts alsa wxwindows ncurses xosd lirc joystick mozilla hal stream mad xv bidi gtk2 sdl ssl"
 
 DEPEND="hal? ( >=sys-apps/hal-0.2.97 )
 		cdio? ( >=dev-libs/libcdio-0.70 )
@@ -27,7 +27,7 @@ DEPEND="hal? ( >=sys-apps/hal-0.2.97 )
 				media-libs/libdvdplay )
 		esd? ( media-sound/esound )
 		ogg? ( media-libs/libogg )
-		matroska? ( media-libs/libmatroska )
+		matroska? ( >=media-libs/libmatroska-0.7.3-r1 )
 		mad? ( media-libs/libmad )
 		ffmpeg? ( >=media-video/ffmpeg-0.4.9_p20050226-r1 )
 		a52? ( media-libs/a52dec )
@@ -59,9 +59,10 @@ DEPEND="hal? ( >=sys-apps/hal-0.2.97 )
 		media-libs/libpng
 		media-libs/libdvbpsi
 		aac?( >=media-libs/faad2-2.0-r2 )
-		threads? ( dev-libs/pth )
 		sdl? ( >=media-libs/libsdl-1.2.8 )
 		ssl? ( net-libs/gnutls )"
+#		threads? ( dev-libs/pth )
+#		portaudio? ( >=media-libs/portaudio-0.19 )
 
 pkg_setup() {
 	if use wxwindows; then
@@ -83,10 +84,14 @@ src_unpack() {
 
 	# We only have glide v3 in portage
 	cd ${S}
-	sed -i \
-		-e "s:/usr/include/glide:/usr/include/glide3:" \
-		-e "s:glide2x:glide3:" \
-		configure
+
+	epatch ${FILESDIR}/${P}-matroska-shared.patch
+
+	./bootstrap
+
+	sed -i -e \
+		"s:/usr/include/glide:/usr/include/glide3:;s:glide2x:glide3:" \
+		configure || die "sed glibc failed."
 
 	# Fix the default font
 	sed -i -e "s:/usr/share/fonts/truetype/freefont/FreeSerifBold.ttf:/usr/share/fonts/ttf-bitstream-vera/VeraBd.ttf:" modules/misc/freetype.c
@@ -130,7 +135,7 @@ src_compile () {
 	fi
 
 	# Portaudio support needs at least v19
-
+	# pth (threads) support is quite unstable with latest ffmpeg/libmatroska.
 	econf \
 		$(use_enable altivec) \
 		$(use_enable unicode utf8) \
@@ -177,9 +182,9 @@ src_compile () {
 		$(use_enable mpeg libmpeg2) \
 		$(use_enable ggi) \
 		$(use_enable 3dfx glide) \
-		$(use_enable threads pth) \
 		$(use_enable sdl) \
 		$(use_enable ssl gnutls) \
+		--disable-pth \
 		--disable-portaudio \
 		${myconf} || die "configuration failed"
 

@@ -1,6 +1,20 @@
 # ChangeLog for media-video/vlc
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.79 2005/04/20 13:45:35 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.80 2005/04/25 00:06:34 flameeyes Exp $
+
+*vlc-0.8.1-r2 (24 Apr 2005)
+
+  24 Apr 2005; Diego Pettenò <flameeyes@gentoo.org>
+  +files/vlc-0.8.1-matroska-shared.patch, vlc-0.8.1-r1.ebuild,
+  +vlc-0.8.1-r2.ebuild:
+  Removed portaudio useflag, vlc needs portaudio v19 (development branch) 
+  which is not in portage.
+  Added 0.8.1-r2 version which depends in a recent libmatroska (0.7.3-r1 
+  at least) which builds .so version of the library, so to build a dynamic 
+  plugin instead of a static module (with the newly added patch to 
+  configure).
+  Disabled threads useflag from 0.8.1-r2 as it seems not mess up vlc with
+  at least latest ffmpeg and libmatroska.
 
   20 Apr 2005; Diego Pettenò <flameeyes@gentoo.org> vlc-0.6.2.ebuild,
   vlc-0.6.2-r1.ebuild, vlc-0.7.2.ebuild, vlc-0.8.1.ebuild,
