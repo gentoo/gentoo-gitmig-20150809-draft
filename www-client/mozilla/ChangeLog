@@ -1,6 +1,12 @@
 # ChangeLog for www-client/mozilla
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla/ChangeLog,v 1.24 2005/04/25 08:46:25 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla/ChangeLog,v 1.25 2005/04/25 16:00:22 brad Exp $
+
+*mozilla-1.7.7-r2 (25 Apr 2005)
+
+  25 Apr 2005; Brad Laue <brad@gentoo.org> +mozilla-1.7.7-r2.ebuild:
+  Keep development tools (xpidl, etc) in $MOZILLA_FIVE_HOME where they're 
+  expected.
 
 *mozilla-1.7.7-r1 (25 Apr 2005)
 
@@ -11,10 +17,10 @@
   19 Apr 2005; Markus Rothe <corsair@gentoo.org> mozilla-1.7.7.ebuild:
   Added ppc64 patch to ebuild and marked ~ppc64; bug #89305
 
-  18 Apr 2005; Bryan Østergaard <kloeri@gentoo.org> mozilla-1.7.7.ebuild:
+  18 Apr 2005; Bryan Ãstergaard <kloeri@gentoo.org> mozilla-1.7.7.ebuild:
   Stable on ia64, bug 89305.
 
-  18 Apr 2005; Bryan Østergaard <kloeri@gentoo.org> mozilla-1.7.7.ebuild:
+  18 Apr 2005; Bryan Ãstergaard <kloeri@gentoo.org> mozilla-1.7.7.ebuild:
   Stable on alpha, bug 89305.
 
   17 Apr 2005; Herbie Hopkins <herbs@gentoo.org> mozilla-1.7.7.ebuild:
@@ -158,7 +164,7 @@
   mozilla-1.7.5.ebuild:
   Added hppa support.
 
-  21 Dec 2004; Bryan Østergaard <kloeri@gentoo.org> mozilla-1.7.5.ebuild:
+  21 Dec 2004; Bryan Ãstergaard <kloeri@gentoo.org> mozilla-1.7.5.ebuild:
   Stable on alpha, bug 68976.
 
   21 Dec 2004; Olivier Crete <tester@gentoo.org> mozilla-1.7.5.ebuild:
