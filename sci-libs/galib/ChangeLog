@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/galib
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/galib/ChangeLog,v 1.2 2004/12/28 21:15:01 swegener Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/galib/ChangeLog,v 1.3 2005/04/25 12:25:59 phosphan Exp $
+
+*galib-2.4.6 (25 Apr 2005)
+
+  25 Apr 2005; Patrick Kursawe <phosphan@gentoo.org> +galib-2.4.6.ebuild:
+  Version bump, see bug 87602
 
 *galib-2.4.5 (28 Dec 2004)
 

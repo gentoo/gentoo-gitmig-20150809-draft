@@ -1,15 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 3a8940939a145ef865158dede2207a80 galib-2.4.5.ebuild 991
-MD5 89c12b493b68c2ef0f7dd449c366c28e ChangeLog 721
+MD5 785719c6c19ed8a8ad7b5d1c8456861b galib-2.4.6.ebuild 786
+MD5 ecd2bef5cf110ed3f53a5d463527c727 galib-2.4.5.ebuild 991
+MD5 0d119c2812db68cb73c6a71473ade357 ChangeLog 854
 MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
 MD5 e5d3346954cd2e5477fda23e6bc3c916 files/galib-2.4.5-gcc3.3.patch 438
 MD5 d2d902e9c308e59752fcd77e290a5b9d files/digest-galib-2.4.5 60
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFB0czbI1lqEGTUzyQRAsT0AKDG742GmtB7AwWCax+/3BYtlJBXIgCgqDTg
-b3yEcJQ2EhtDF4eHW8zlkBA=
-=boi0
------END PGP SIGNATURE-----
+MD5 9dd810dbc6aff5930c14ed8a4da6c6d3 files/digest-galib-2.4.6 57
