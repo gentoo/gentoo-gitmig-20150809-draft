@@ -2,10 +2,10 @@
 Hash: SHA1
 
 MD5 7b6e6cf3eaafa0480ab619fadfb37e2e metadata.xml 162
-MD5 4a500aab8e6feff16352060fc571da2a ChangeLog 14739
+MD5 b54b7cd644fe16d2870a0a57e7860089 ChangeLog 14845
 MD5 0101bf56e2017374f01c58dec71fca8f phpmyadmin-2.6.2_rc1.ebuild 2390
 MD5 6fa2bdf68166b9a6bf596e4ab4f4117a phpmyadmin-2.6.2.ebuild 2466
-MD5 9c487534f9e31310d62328e078988af3 phpmyadmin-2.6.2-r1.ebuild 2469
+MD5 4129a638552e112dd1ffde07fbff4289 phpmyadmin-2.6.2-r1.ebuild 2468
 MD5 182411f504d40f317a802da58ec5e176 files/digest-phpmyadmin-2.6.2 70
 MD5 c6a79ab6f3c9e6d657a5bee36b1f6565 files/phpmyadmin-config.patch 4857
 MD5 1a6c1907f5c2327b00453d7675c13178 files/mysql-setup.sql.in-2.5.6 3231
@@ -17,7 +17,7 @@ MD5 4c95d31af8becb428be471fcedf664a4 files/2.6.1_p2-no-wildcard-privs-for-you.pa
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCbM35jUHll2nfF60RAsk/AJ0TIASUHH6I1o/jC5ZkSTSVKgt6jQCfXRWv
-ga+R5ygYhM/XhnBjeb42FzU=
-=CJ/e
+iD8DBQFCbNJ5jUHll2nfF60RAnT5AJ9iwW/GoUllTHM/+XVJqjNWl6OQvQCfe7NK
+hvzlEvLlxwH/lNLY4AIoes0=
+=CMq+
 -----END PGP SIGNATURE-----
