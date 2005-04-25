@@ -1,6 +1,14 @@
 # ChangeLog for dev-db/phpmyadmin
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.102 2005/04/19 17:31:04 beu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.103 2005/04/25 11:00:38 beu Exp $
+
+*phpmyadmin-2.6.2-r1 (25 Apr 2005)
+
+  25 Apr 2005; Elfyn McBratney <beu@gentoo.org>
+  -phpmyadmin-2.6.1_p2-r1.ebuild, phpmyadmin-2.6.2.ebuild,
+  +phpmyadmin-2.6.2-r1.ebuild:
+  Drop old version and version bump (make sure the 'mysql create' script is not
+  world readable - it contains the initial pma@localhost password), bug #88831.
 
 *phpmyadmin-2.6.2 (19 Apr 2005)
 

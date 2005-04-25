@@ -2,22 +2,22 @@
 Hash: SHA1
 
 MD5 7b6e6cf3eaafa0480ab619fadfb37e2e metadata.xml 162
-MD5 201fa4e310cd8fdd78d7ea50dc1bea21 ChangeLog 14404
-MD5 be80e52ff2f5bf4da91c8eb07716f050 phpmyadmin-2.6.1_p2-r1.ebuild 2475
+MD5 4a500aab8e6feff16352060fc571da2a ChangeLog 14739
 MD5 0101bf56e2017374f01c58dec71fca8f phpmyadmin-2.6.2_rc1.ebuild 2390
-MD5 97d0f97cb1482b8d601369ae93f77cca phpmyadmin-2.6.2.ebuild 2345
+MD5 6fa2bdf68166b9a6bf596e4ab4f4117a phpmyadmin-2.6.2.ebuild 2466
+MD5 9c487534f9e31310d62328e078988af3 phpmyadmin-2.6.2-r1.ebuild 2469
 MD5 182411f504d40f317a802da58ec5e176 files/digest-phpmyadmin-2.6.2 70
 MD5 c6a79ab6f3c9e6d657a5bee36b1f6565 files/phpmyadmin-config.patch 4857
 MD5 1a6c1907f5c2327b00453d7675c13178 files/mysql-setup.sql.in-2.5.6 3231
 MD5 f7405589420f250cead2a0d7d3855164 files/postinstall-en.txt 458
 MD5 85a86432c3f64acb068a7d2cfab311a9 files/config.inc.php-2.5.6.patch 5525
 MD5 278c189dfbc22e4f95fcb1f2c8a7622a files/digest-phpmyadmin-2.6.2_rc1 74
+MD5 182411f504d40f317a802da58ec5e176 files/digest-phpmyadmin-2.6.2-r1 70
 MD5 4c95d31af8becb428be471fcedf664a4 files/2.6.1_p2-no-wildcard-privs-for-you.patch 3731
-MD5 22a63a92c01eef5a268311e15594367b files/digest-phpmyadmin-2.6.1_p2-r1 74
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCZUB+jUHll2nfF60RAiqYAJ9hkhE7x4wO9By16gW4q0bJn2LTuwCff9Nq
-UoTKNAAK/xcNEoxt4kbU3Vw=
-=TaHM
+iD8DBQFCbM35jUHll2nfF60RAsk/AJ0TIASUHH6I1o/jC5ZkSTSVKgt6jQCfXRWv
+ga+R5ygYhM/XhnBjeb42FzU=
+=CJ/e
 -----END PGP SIGNATURE-----

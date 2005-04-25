@@ -1,17 +1,15 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/phpmyadmin-2.6.1_p2-r1.ebuild,v 1.8 2005/03/29 14:57:06 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/phpmyadmin-2.6.2-r1.ebuild,v 1.1 2005/04/25 11:00:38 beu Exp $
 
 inherit eutils webapp
 
-MY_PV=${PV/_p/-pl}
-MY_PV=${MY_PV/_rc/-rc}
-MY_P=phpMyAdmin-${MY_PV}
+MY_P=phpMyAdmin-${PV}
 DESCRIPTION="Web-based administration for MySQL database in PHP"
 HOMEPAGE="http://www.phpmyadmin.net/"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2"
 LICENSE="GPL-2"
-KEYWORDS="alpha ppc hppa sparc x86 amd64 ~mips"
+KEYWORDS="~alpha ~ppc ~hppa ~sparc ~x86 ~amd64 ~mips"
 IUSE=""
 DEPEND=">=dev-db/mysql-3.23.32 <dev-db/mysql-5.1
 	virtual/httpd-php
@@ -23,9 +21,6 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/config.inc.php-2.5.6.patch
-
-	# security bug #83792
-	epatch ${FILESDIR}/${PV}-no-wildcard-privs-for-you.patch
 
 	# Remove .cvs* files and CVS directories
 	find ${S} -name .cvs\* -or \( -type d -name CVS -prune \) | xargs rm -rf
@@ -88,4 +83,7 @@ src_install() {
 	# now we let the eclass strut its stuff ;-)
 
 	webapp_src_install
+
+	# bug #88831, make sure the create script it's word-readable.
+	fperms 0600 ${MY_SQLSCRIPTSDIR}/mysql/${PVR}_create.sql
 }
