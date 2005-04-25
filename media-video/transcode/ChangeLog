@@ -1,6 +1,10 @@
 # ChangeLog for media-video/transcode
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.97 2005/04/25 18:14:16 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.98 2005/04/25 23:10:53 azarah Exp $
+
+  25 Apr 2005; Martin Schlemmer <azarah@gentoo.org>
+  +files/transcode-0.6.14-gcc4.patch, transcode-0.6.14-r1.ebuild:
+  Fix building with gcc4.
 
   25 Apr 2005; Diego Pettenò <flameeyes@gentoo.org>
   transcode-0.6.14-r1.ebuild:
