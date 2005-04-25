@@ -1,6 +1,10 @@
 # ChangeLog for gnome-base/gnome-volume-manager
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-volume-manager/ChangeLog,v 1.13 2005/04/12 15:57:09 joem Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-volume-manager/ChangeLog,v 1.14 2005/04/25 12:22:28 obz Exp $
+
+  25 Apr 2005; Mike Gardiner <obz@gentoo.org>
+  gnome-volume-manager-1.0.3.ebuild:
+  Keyworded ppc x86
 
 *gnome-volume-manager-1.2.1 (12 Apr 2005)
 
