@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/gst-plugins
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins/ChangeLog,v 1.98 2005/04/25 14:34:39 zaheerm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins/ChangeLog,v 1.99 2005/04/25 16:25:48 zaheerm Exp $
+
+*gst-plugins-0.8.8-r1 (25 Apr 2005)
+
+  25 Apr 2005; Zaheer Abbas Merali <zaheerm@gentoo.org>
+  +files/gst-plugins-0.8.8-qtdemux.diff, +gst-plugins-0.8.8-r1.ebuild:
+  Add upstream changes for qtdemux so that QDM2 with gst-plugins-pitfdll 
+  doesnt crash
 
   25 Apr 2005; Zaheer Abbas Merali <zaheerm@gentoo.org>
   -files/gst-plugins-0.6.4-gcc2_fix.patch, -gst-plugins-0.6.4.ebuild:
