@@ -1,6 +1,13 @@
 # ChangeLog for net-dialup/rp-pppoe
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/rp-pppoe/ChangeLog,v 1.54 2005/04/16 23:27:43 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/rp-pppoe/ChangeLog,v 1.55 2005/04/25 14:16:04 mrness Exp $
+
+*rp-pppoe-3.5-r10 (25 Apr 2005)
+
+  25 Apr 2005; Alin Nastac <mrness@gentoo.org>
+  files/rp-pppoe-3.5-username-charset.patch, -rp-pppoe-3.5-r9.ebuild,
+  +rp-pppoe-3.5-r10.ebuild:
+  Fix username-charset patch (#90219)
 
   16 Apr 2005; Alin Nastac <mrness@gentoo.org> -rp-pppoe-3.5-r7.ebuild,
   -rp-pppoe-3.5-r8.ebuild, rp-pppoe-3.5-r9.ebuild:
