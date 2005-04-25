@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/evolution
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.61 2005/04/07 15:34:38 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.62 2005/04/25 13:06:31 obz Exp $
+
+  25 Apr 2005; Mike Gardiner <obz@gentoo.org> evolution-2.0.4.ebuild:
+  Keyworded ppc x86
 
   07 Apr 2005; Simon Stelling <blubb@gentoo.org> evolution-2.0.3-r2.ebuild:
   stable on amd64
