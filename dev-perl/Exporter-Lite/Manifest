@@ -1,4 +1,14 @@
-MD5 78387d72884ac0ad1b78de78b9e586a7 ChangeLog 377
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 0491b1775caac43ff3ec8c25663109e1 ChangeLog 474
+MD5 f4e514920b27da4d5ce38860a41c67f2 Exporter-Lite-0.01.ebuild 521
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 9d043e0c394a0fda7beab81a1b1e6916 Exporter-Lite-0.01.ebuild 531
 MD5 1d8f3fac86ab93331815d2161ce5b68d files/digest-Exporter-Lite-0.01 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCbQbFtG5z4I8BtQoRAvtJAJ4tv1dN5EFedKcmE3KkM2y+ypoFeQCeN+w6
+8dtP7dOFvuC2pAP2bvutUbE=
+=5ljY
+-----END PGP SIGNATURE-----
