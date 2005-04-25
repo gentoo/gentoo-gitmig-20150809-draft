@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.14.4.ebuild,v 1.2 2005/04/20 04:41:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.14.4.ebuild,v 1.3 2005/04/25 00:33:25 vapier Exp $
 
 inherit flag-o-matic eutils toolchain-funcs mono libtool elisp-common
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc-macos ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="emacs nls"
 
-DEPEND=""
+DEPEND="|| ( sys-libs/glibc dev-libs/libiconv )"
 
 src_unpack() {
 	unpack ${A}
@@ -101,6 +101,7 @@ src_install() {
 		mv "${D}"/usr/doc/gettext "${D}"/usr/share/doc/${PF}/html
 		rm -r "${D}"/usr/doc
 	fi
+	use doc || rm -r "${D}"/usr/share/doc/${PF}/html
 
 	# Remove emacs site-lisp stuff if 'emacs' is not in USE
 	if use emacs ; then
