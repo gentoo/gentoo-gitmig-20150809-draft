@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.1-r2.ebuild,v 1.1 2005/04/25 00:06:34 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.1-r2.ebuild,v 1.2 2005/04/25 03:07:29 flameeyes Exp $
 
 # Missing support for...
 #	tarkin - package not in portage yet - experimental
@@ -17,7 +17,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="a52 3dfx nls unicode debug altivec httpd vlm gnutls live v4l cdio cddb cdda ogg matroska dvb dvd vcd ffmpeg aac dts flac mpeg vorbis theora X opengl freetype svg fbcon svga oss aalib ggi libcaca esd arts alsa wxwindows ncurses xosd lirc joystick mozilla hal stream mad xv bidi gtk2 sdl ssl"
 
-DEPEND="hal? ( >=sys-apps/hal-0.2.97 )
+RDEPEND="hal? ( >=sys-apps/hal-0.2.97 )
 		cdio? ( >=dev-libs/libcdio-0.70 )
 		cddb? ( >=media-libs/libcddb-0.9.4 )
 		live? ( >=media-plugins/live-2005.01.29 )
@@ -63,6 +63,14 @@ DEPEND="hal? ( >=sys-apps/hal-0.2.97 )
 		ssl? ( net-libs/gnutls )"
 #		threads? ( dev-libs/pth )
 #		portaudio? ( >=media-libs/portaudio-0.19 )
+
+DEPEND="${RDEPEND}
+	dev-util/cvs
+	>=sys-devel/gettext-0.11.5
+	=sys-devel/automake-1.6*
+	sys-devel/autoconf
+	dev-util/pkgconfig"
+
 
 pkg_setup() {
 	if use wxwindows; then
