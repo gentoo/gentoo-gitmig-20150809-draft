@@ -1,12 +1,12 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Festival-Client-Async/Festival-Client-Async-0.0303.ebuild,v 1.6 2004/09/23 15:12:36 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Festival-Client-Async/Festival-Client-Async-0.0303.ebuild,v 1.7 2005/04/25 15:13:02 mcummings Exp $
 
 inherit perl-module
 
 DESCRIPTION="Festival-Async -  Non-blocking interface to a Festival server."
-HOMEPAGE="http://www.cpan.org/"
-SRC_URI="http://www.cpan.org/modules/by-module/Festival/${P}.tar.gz"
+HOMEPAGE="http://search.cpan.org/~djhd/${P}/"
+SRC_URI="mirror://cpan/authors/id/D/DJ/DJHD/${P}.tar.gz"
 
 LICENSE="Artistic"
 SLOT="0"

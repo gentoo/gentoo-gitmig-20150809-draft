@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/Exception-Class
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Exception-Class/ChangeLog,v 1.15 2004/12/29 23:33:58 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Exception-Class/ChangeLog,v 1.16 2005/04/25 15:02:14 mcummings Exp $
+
+*Exception-Class-1.21 (25 Apr 2005)
+
+  25 Apr 2005; Michael Cummings <mcummings@gentoo.org>
+  -Exception-Class-1.12.ebuild, -Exception-Class-1.14.ebuild,
+  +Exception-Class-1.21.ebuild:
+  cleaning
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
