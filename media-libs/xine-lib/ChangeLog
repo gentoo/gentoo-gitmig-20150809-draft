@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.212 2005/04/25 14:45:20 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.213 2005/04/25 16:49:43 flameeyes Exp $
+
+*xine-lib-1_rc6-r2 (25 Apr 2005)
+
+  25 Apr 2005; Diego Pettenò <flameeyes@gentoo.org>
+  +files/xine-lib-1_rc6-XSA-2004-8.patch, +xine-lib-1_rc6-r2.ebuild:
+  Backported XSA-2004-8 patch to 1_rc6 as 1.0 doesn't work on sparc.
 
   25 Apr 2005; Martin Schlemmer <azarah@gentoo.org>
   files/xine-lib-gcc4.patch:
