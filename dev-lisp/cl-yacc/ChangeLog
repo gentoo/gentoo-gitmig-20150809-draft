@@ -1,0 +1,10 @@
+# ChangeLog for dev-lisp/cl-yacc
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-yacc/ChangeLog,v 1.1 2005/04/25 02:19:41 mkennedy Exp $
+
+*cl-yacc-0.1 (25 Apr 2005)
+
+  25 Apr 2005; Matthew Kennedy <mkennedy@gentoo.org> +metadata.xml,
+  +cl-yacc-0.1.ebuild:
+  Initial port. Ebuild contributed by Matthew Kennedy <mkennedy@gentoo.org>
+
