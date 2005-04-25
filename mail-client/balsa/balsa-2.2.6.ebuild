@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/balsa/balsa-2.2.6.ebuild,v 1.9 2005/04/25 12:23:47 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/balsa/balsa-2.2.6.ebuild,v 1.10 2005/04/25 12:25:23 allanonjl Exp $
 
 inherit gnome2 eutils
 
@@ -27,7 +27,7 @@ RDEPEND=">=gnome-base/libgnome-2.0
 	virtual/aspell-dict
 	ssl? ( dev-libs/openssl )
 	pcre? ( >=dev-libs/libpcre-3.4 )
-	gtkhtml? || ( 
+	gtkhtml? || (
 					=gnome-extra/libgtkhtml-3.2*
 					=gnome-extra/libgtkhtml-3.0*
 					=gnome-extra/libgtkhtml-2*
