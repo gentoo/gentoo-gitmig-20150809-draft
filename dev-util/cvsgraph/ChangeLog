@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/cvsgraph
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cvsgraph/ChangeLog,v 1.7 2004/09/10 08:55:07 tigger Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cvsgraph/ChangeLog,v 1.8 2005/04/25 11:43:05 ka0ttic Exp $
+
+*cvsgraph-1.5.1 (25 Apr 2005)
+
+  25 Apr 2005; Aaron Walker <ka0ttic@gentoo.org> +metadata.xml,
+  +cvsgraph-1.5.1.ebuild:
+  Version bump; added metadata.xml for cvs-utils herd.
 
 *cvsgraph-1.4.1 (10 Sep 2004)
 
