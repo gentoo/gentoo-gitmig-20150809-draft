@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/id3lib
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/id3lib/ChangeLog,v 1.31 2004/12/29 21:56:32 morfic Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/id3lib/ChangeLog,v 1.32 2005/04/25 17:23:58 luckyduck Exp $
+
+  25 Apr 2005; Jan Brinkmann <luckyduck@gentoo.org> id3lib-3.8.3-r3.ebuild:
+  removed no-deprecated from cppflags, not needed any longer. therefor
+  src_compile is gone, the default one is sufficient
 
   29 Dec 2004; Daniel Goller <morfic@gentoo.org>
   +files/id3lib-3.8.3-test_io.patch, id3lib-3.8.3-r3.ebuild:
