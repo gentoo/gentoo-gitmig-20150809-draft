@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/xfsdump
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsdump/ChangeLog,v 1.18 2005/04/20 21:47:08 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsdump/ChangeLog,v 1.19 2005/04/25 06:51:10 kloeri Exp $
+
+  25 Apr 2005; Bryan Østergaard <kloeri@gentoo.org> xfsdump-2.2.25.ebuild:
+  Stable on alpha.
 
   20 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> xfsdump-2.2.25.ebuild:
   Stable on ppc.
