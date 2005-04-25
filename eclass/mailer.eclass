@@ -1,9 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mailer.eclass,v 1.4 2005/04/25 18:55:56 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mailer.eclass,v 1.5 2005/04/25 20:11:27 ferdy Exp $
 
 #
-# Original Author: Fernando J. Pereda <ferdy@gentoo.org>
+# Original Authors: Fernando J. Pereda <ferdy@gentoo.org>
+#					Tom Martin <slarti@gentoo.org>
 # Purpose: eclass to intarface with net-mail/mailer-config, used to manage
 # multiple MTA's installed on a Gentoo system.
 #
@@ -67,10 +68,7 @@ mailer_wipe_confs() {
 
 			[[ ${i} == ${P} ]] && continue
 			[[ ${i} == "default" ]] && continue
-
-			if ! has_version '=mail-mta/${i}*' ; then
-				rm ${x}
-			fi
+			has_version "=mail-mta/${i}*" || rm ${x}
 		done
 	eend 0
 }
