@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/libgnome
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnome/ChangeLog,v 1.75 2005/04/02 04:35:37 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnome/ChangeLog,v 1.76 2005/04/25 12:47:27 obz Exp $
+
+  25 Apr 2005; Mike Gardiner <obz@gentoo.org> libgnome-2.8.1.ebuild:
+  Keyworded ppc x86
 
   02 Apr 2005; Stephen P. Becker <geoman@gentoo.org> libgnome-2.8.0.ebuild:
   stable on mips
