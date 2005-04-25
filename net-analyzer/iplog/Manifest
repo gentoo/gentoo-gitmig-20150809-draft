@@ -1,20 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 17d1eec489e07915f7b9323bee45dc5f ChangeLog 1914
-MD5 1dfd121cf539860cd85d854c90dd1cdd iplog-2.2.3-r1.ebuild 805
 MD5 51805d95a2b7c297728d9b1672b9e798 iplog-2.2.3-r2.ebuild 867
-MD5 ea452d952fc1985ad2a4f0c3c61d1c28 iplog-2.2.3.ebuild 705
+MD5 e724b0de2796414419be966a18b0efb8 ChangeLog 2037
 MD5 8fc559ff5d9e3b70a355489f442eab25 metadata.xml 227
-MD5 48e8dfa989139e578e0ce8c35a090e39 files/2.2.3-DLT_LINUX_SSL.patch 7611
-MD5 9b2831dc3b6c9860cc6857ec5d8ed088 files/digest-iplog-2.2.3 63
-MD5 9b2831dc3b6c9860cc6857ec5d8ed088 files/digest-iplog-2.2.3-r1 63
-MD5 9b2831dc3b6c9860cc6857ec5d8ed088 files/digest-iplog-2.2.3-r2 63
 MD5 2189edd34b8ddf9bba2d97ba127b18c7 files/iplog.rc6 886
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFB+xtbmdTrptrqvGERAkyfAJ4ho/mtZy1EtYbKMhyKPF+paSP0KwCdGrFd
-NKgD+oF9l02PmMSPGMCLkdQ=
-=Sw11
------END PGP SIGNATURE-----
+MD5 9b2831dc3b6c9860cc6857ec5d8ed088 files/digest-iplog-2.2.3-r2 63
+MD5 48e8dfa989139e578e0ce8c35a090e39 files/2.2.3-DLT_LINUX_SSL.patch 7611
