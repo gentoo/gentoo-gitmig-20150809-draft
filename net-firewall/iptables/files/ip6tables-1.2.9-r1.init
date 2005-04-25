@@ -1,9 +1,9 @@
 #!/sbin/runscript
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/files/ip6tables-1.2.9-r1.init,v 1.3 2004/08/18 22:08:21 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/files/ip6tables-1.2.9-r1.init,v 1.4 2005/04/25 00:27:47 vapier Exp $
 
-opts="start stop save reload"
+opts="save reload"
 
 depend() {
 	before net
@@ -20,7 +20,7 @@ checkrules() {
 }
 
 start() {
-	checkrules || return 1	
+	checkrules || return 1
 	ebegin "Loading ip6tables state and starting firewall"
 	einfo "Restoring ip6tables ruleset"
 		/sbin/ip6tables-restore ${SAVE_RESTORE_OPTIONS} < ${IP6TABLES_SAVE}
@@ -28,48 +28,46 @@ start() {
 }
 
 stop() {
-        if [ "${SAVE_ON_STOP}" = "yes" ]; then
-                save || return 1
-        fi
+	if [ "${SAVE_ON_STOP}" = "yes" ]; then
+		save || return 1
+	fi
 	ebegin "Stopping firewall"
-		for a in `cat /proc/net/ip6_tables_names`; do
-			ip6tables -F -t $a
-			ip6tables -X -t $a
+	for a in `cat /proc/net/ip6_tables_names`; do
+		ip6tables -F -t $a
+		ip6tables -X -t $a
 
-			if [ $a == nat ]; then
-				/sbin/ip6tables -t nat -P PREROUTING ACCEPT
-				/sbin/ip6tables -t nat -P POSTROUTING ACCEPT
-				/sbin/ip6tables -t nat -P OUTPUT ACCEPT
-			elif [ $a == mangle ]; then
-				/sbin/ip6tables -t mangle -P PREROUTING ACCEPT
-				/sbin/ip6tables -t mangle -P INPUT ACCEPT
-				/sbin/ip6tables -t mangle -P FORWARD ACCEPT
-				/sbin/ip6tables -t mangle -P OUTPUT ACCEPT
-				/sbin/ip6tables -t mangle -P POSTROUTING ACCEPT
-			elif [ $a == filter ]; then
-				/sbin/ip6tables -t filter -P INPUT ACCEPT
-				/sbin/ip6tables -t filter -P FORWARD ACCEPT
-				/sbin/ip6tables -t filter -P OUTPUT ACCEPT
-			fi
-		done
+		if [ $a == nat ]; then
+			/sbin/ip6tables -t nat -P PREROUTING ACCEPT
+			/sbin/ip6tables -t nat -P POSTROUTING ACCEPT
+			/sbin/ip6tables -t nat -P OUTPUT ACCEPT
+		elif [ $a == mangle ]; then
+			/sbin/ip6tables -t mangle -P PREROUTING ACCEPT
+			/sbin/ip6tables -t mangle -P INPUT ACCEPT
+			/sbin/ip6tables -t mangle -P FORWARD ACCEPT
+			/sbin/ip6tables -t mangle -P OUTPUT ACCEPT
+			/sbin/ip6tables -t mangle -P POSTROUTING ACCEPT
+		elif [ $a == filter ]; then
+			/sbin/ip6tables -t filter -P INPUT ACCEPT
+			/sbin/ip6tables -t filter -P FORWARD ACCEPT
+			/sbin/ip6tables -t filter -P OUTPUT ACCEPT
+		fi
+	done
 	eend $?
 }
 
 reload() {
 	ebegin "Flushing firewall"
-		for a in `cat /proc/net/ip_tables_names`; do
-			/sbin/ip6tables -F -t $a
-			/sbin/ip6tables -X -t $a
-		done;
+	for a in `cat /proc/net/ip_tables_names`; do
+		/sbin/ip6tables -F -t $a
+		/sbin/ip6tables -X -t $a
+	done
 	eend $?
 
 	start
 }
 
-
 save() {
-        ebegin "Saving ip6tables state"
-        /sbin/ip6tables-save ${SAVE_RESTORE_OPTIONS} > ${IP6TABLES_SAVE}
-        eend $?
+	ebegin "Saving ip6tables state"
+	/sbin/ip6tables-save ${SAVE_RESTORE_OPTIONS} > ${IP6TABLES_SAVE}
+	eend $?
 }
-

@@ -1,9 +1,9 @@
 #!/sbin/runscript
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/files/iptables-1.2.9-r1.init,v 1.3 2004/08/18 22:08:21 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/files/iptables-1.2.9-r1.init,v 1.4 2005/04/25 00:27:47 vapier Exp $
 
-opts="start stop save reload"
+opts="save reload"
 
 depend() {
 	before net
@@ -20,10 +20,10 @@ checkrules() {
 }
 
 start() {
-	checkrules || return 1	
+	checkrules || return 1
 	ebegin "Loading iptables state and starting firewall"
 	einfo "Restoring iptables ruleset"
-		/sbin/iptables-restore ${SAVE_RESTORE_OPTIONS} < ${IPTABLES_SAVE}
+	/sbin/iptables-restore ${SAVE_RESTORE_OPTIONS} < ${IPTABLES_SAVE}
 	eend $?
 }
 
@@ -32,43 +32,42 @@ stop() {
 		save || return 1
 	fi
 	ebegin "Stopping firewall"
-		for a in `cat /proc/net/ip_tables_names`; do
-			/sbin/iptables -F -t $a
-			/sbin/iptables -X -t $a
-	
-			if [ $a == nat ]; then
-				/sbin/iptables -t nat -P PREROUTING ACCEPT
-				/sbin/iptables -t nat -P POSTROUTING ACCEPT
-				/sbin/iptables -t nat -P OUTPUT ACCEPT
-			elif [ $a == mangle ]; then
-				/sbin/iptables -t mangle -P PREROUTING ACCEPT
-				/sbin/iptables -t mangle -P INPUT ACCEPT
-				/sbin/iptables -t mangle -P FORWARD ACCEPT
-				/sbin/iptables -t mangle -P OUTPUT ACCEPT
-				/sbin/iptables -t mangle -P POSTROUTING ACCEPT
-			elif [ $a == filter ]; then
-				/sbin/iptables -t filter -P INPUT ACCEPT
-				/sbin/iptables -t filter -P FORWARD ACCEPT
-				/sbin/iptables -t filter -P OUTPUT ACCEPT
-			fi
-		done
+	for a in `cat /proc/net/ip_tables_names`; do
+		/sbin/iptables -F -t $a
+		/sbin/iptables -X -t $a
+
+		if [ $a == nat ]; then
+			/sbin/iptables -t nat -P PREROUTING ACCEPT
+			/sbin/iptables -t nat -P POSTROUTING ACCEPT
+			/sbin/iptables -t nat -P OUTPUT ACCEPT
+		elif [ $a == mangle ]; then
+			/sbin/iptables -t mangle -P PREROUTING ACCEPT
+			/sbin/iptables -t mangle -P INPUT ACCEPT
+			/sbin/iptables -t mangle -P FORWARD ACCEPT
+			/sbin/iptables -t mangle -P OUTPUT ACCEPT
+			/sbin/iptables -t mangle -P POSTROUTING ACCEPT
+		elif [ $a == filter ]; then
+			/sbin/iptables -t filter -P INPUT ACCEPT
+			/sbin/iptables -t filter -P FORWARD ACCEPT
+			/sbin/iptables -t filter -P OUTPUT ACCEPT
+		fi
+	done
 	eend $?
 }
 
 reload() {
 	ebegin "Flushing firewall"
-		for a in `cat /proc/net/ip_tables_names`; do
-			/sbin/iptables -F -t $a
-			/sbin/iptables -X -t $a
-		done;
-        eend $?
+	for a in `cat /proc/net/ip_tables_names`; do
+		/sbin/iptables -F -t $a
+		/sbin/iptables -X -t $a
+	done;
+	eend $?
 
 	start
 }
 
 save() {
-        ebegin "Saving iptables state"
-        /sbin/iptables-save ${SAVE_RESTORE_OPTIONS} > ${IPTABLES_SAVE}
-        eend $?
+	ebegin "Saving iptables state"
+	/sbin/iptables-save ${SAVE_RESTORE_OPTIONS} > ${IPTABLES_SAVE}
+	eend $?
 }
-
