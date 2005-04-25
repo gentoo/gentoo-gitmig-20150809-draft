@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Convert-TNEF
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Convert-TNEF/ChangeLog,v 1.10 2005/04/24 22:20:06 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Convert-TNEF/ChangeLog,v 1.11 2005/04/25 19:20:25 beu Exp $
+
+  25 Apr 2005; Elfyn McBratney <beu@gentoo.org> :
+  Digest fix.
 
   24 Apr 2005; Michael Cummings <mcummings@gentoo.org>
   -Convert-TNEF-0.17.ebuild, -Convert-TNEF-0.17-r1.ebuild,
