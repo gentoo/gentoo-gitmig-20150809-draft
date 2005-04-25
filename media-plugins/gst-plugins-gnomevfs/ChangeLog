@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-gnomevfs
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-gnomevfs/ChangeLog,v 1.40 2005/04/03 04:32:37 zaheerm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-gnomevfs/ChangeLog,v 1.41 2005/04/25 11:54:55 zaheerm Exp $
+
+  25 Apr 2005; Zaheer Abbas Merali <zaheerm@gentoo.org>
+  gst-plugins-gnomevfs-0.8.8.ebuild:
+  stabilise on x86
 
   03 Apr 2005; <zaheerm@gentoo.org> -gst-plugins-gnomevfs-0.6.4.ebuild:
   removing gstreamer 0.6.x
