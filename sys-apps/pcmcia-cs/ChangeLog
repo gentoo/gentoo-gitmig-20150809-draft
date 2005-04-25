@@ -1,6 +1,19 @@
 # ChangeLog for sys-apps/pcmcia-cs
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/ChangeLog,v 1.81 2005/04/15 14:19:33 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/ChangeLog,v 1.82 2005/04/25 12:09:18 brix Exp $
+
+*pcmcia-cs-3.2.8 (25 Apr 2005)
+
+  25 Apr 2005; <brix@gentoo.org> +files/pcmcia-cs-3.2.8-conf.d,
+  +files/pcmcia-cs-3.2.8-includes.patch, +files/pcmcia-cs-3.2.8-init.d,
+  +files/pcmcia-cs-3.2.8-ldflags.patch,
+  +files/pcmcia-cs-3.2.8-man-pages.patch,
+  +files/pcmcia-cs-3.2.8-move-pnp-ids.patch, +files/pcmcia-cs-3.2.8-network,
+  +files/pcmcia-cs-3.2.8-ppc.config.opts,
+  +files/pcmcia-cs-3.2.8-tools-only.patch, +files/pcmcia-cs-3.2.8-x11.patch,
+  +pcmcia-cs-3.2.8.ebuild:
+  Version bump. Fixes bug #28130, bug #60291, bug #61356, bug #67722, bug
+  #69293, bug #72551, bug #78276, bug #86109 and bug #88959.
 
   15 Apr 2005; <brix@gentoo.org> -pcmcia-cs-3.2.5.ebuild,
   -pcmcia-cs-3.2.5-r1.ebuild, -pcmcia-cs-3.2.7.ebuild,
