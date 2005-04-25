@@ -1,8 +1,16 @@
-MD5 663e13490abb7bb132855c2b1b7a6899 ChangeLog 1049
-MD5 ae363e8c2fb55eed9772faeb6f87c32d FileHandle-Unget-0.11.ebuild 532
-MD5 127a6cb0ca743c4c3277a4a3a0f5776e FileHandle-Unget-0.14.ebuild 568
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 75512da8f8b5af304a4cb7909f78010f ChangeLog 1258
+MD5 ac25210860fa4efa514852e8f5961787 FileHandle-Unget-0.14.ebuild 557
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 50f243fc63b047e2d8c26e23a4aae39e FileHandle-Unget-0.1621.ebuild 416
-MD5 e4ef0eb254c65a903cefa458b922a37b files/digest-FileHandle-Unget-0.11 72
+MD5 7d07be43e15380b3e2273bd964ae29c4 FileHandle-Unget-0.1621.ebuild 537
 MD5 26d00edd7142bbcaf03c965bdb69df69 files/digest-FileHandle-Unget-0.14 72
 MD5 02ce7c8a64c066ae4fcdb198b238a96f files/digest-FileHandle-Unget-0.1621 74
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCbRmetG5z4I8BtQoRAh6QAJ9+y/n/HxAT9din/oI7OqUy98Mi1wCfYASy
+Bbe1ka5ywSq47/hispfW/+c=
+=V1Ny
+-----END PGP SIGNATURE-----

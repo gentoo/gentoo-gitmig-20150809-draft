@@ -1,6 +1,14 @@
-MD5 5c3ad786ebe36c3df9e8cd5fb1da78ed FreezeThaw-0.43-r1.ebuild 541
-MD5 247f386a96b7d7f8d36f0cda47717706 FreezeThaw-0.43.ebuild 528
-MD5 b5d3121bb08739eaf2843e81e4b9f27c ChangeLog 1083
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 585ba779913f450c355e4dd792078618 ChangeLog 1205
+MD5 d9607e57da1117941a9579227c0b05e7 FreezeThaw-0.43-r1.ebuild 536
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 18d84137fbd0fd8b8b620e46b53a24c6 files/digest-FreezeThaw-0.43-r1 66
-MD5 18d84137fbd0fd8b8b620e46b53a24c6 files/digest-FreezeThaw-0.43 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCbRrTtG5z4I8BtQoRAszPAJ99lsbl0lq3zGIj6NAljH0HzMNfZQCeJhUy
+qqyHeb5jkPWtCg52XFO/hdg=
+=gLcc
+-----END PGP SIGNATURE-----
