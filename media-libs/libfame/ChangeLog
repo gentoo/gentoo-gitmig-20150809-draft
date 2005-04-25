@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/libfame
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libfame/ChangeLog,v 1.23 2005/01/04 10:01:36 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libfame/ChangeLog,v 1.24 2005/04/25 15:39:27 luckyduck Exp $
+
+*libfame-0.9.1-r1 (25 Apr 2005)
+
+  25 Apr 2005; Jan Brinkmann <luckyduck@gentoo.org> +metadata.xml,
+  +files/libfame-0.9.1-pic.patch, +libfame-0.9.1-r1.ebuild:
+  added a gift from the "pic gods", yet another pic patch :). for detals see
+  #90318. also added a metadata.xml
 
   04 Jan 2005; Hardave Riar <hardave@gentoo.org> libfame-0.9.1.ebuild:
   Stable on mips, dep of bug #74475.
