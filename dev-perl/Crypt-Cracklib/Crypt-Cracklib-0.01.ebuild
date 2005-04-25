@@ -1,13 +1,13 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-Cracklib/Crypt-Cracklib-0.01.ebuild,v 1.6 2004/08/14 14:38:50 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-Cracklib/Crypt-Cracklib-0.01.ebuild,v 1.7 2005/04/25 10:35:44 mcummings Exp $
 
 inherit perl-module
 
 AUTHOR="DANIEL"
 DESCRIPTION="Perl interface to Alec Muffett's Cracklib"
-HOMEPAGE="http://search.cpan.org/author/${AUTHOR}/${P}/"
-SRC_URI_BASE="http://search.cpan.org/CPAN/authors/id/${AUTHOR:0:1}/${AUTHOR:0:2}/${AUTHOR}/"
+HOMEPAGE="http://search.cpan.org/~daniel/${P}/"
+SRC_URI_BASE="mirror://cpan/authors/id/${AUTHOR:0:1}/${AUTHOR:0:2}/${AUTHOR}/"
 SRC_URI="${SRC_URI_BASE}/${P}.tar.gz"
 
 SLOT="0"
