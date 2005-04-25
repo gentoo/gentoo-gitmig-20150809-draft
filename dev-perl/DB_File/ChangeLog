@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/DB_File
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DB_File/ChangeLog,v 1.33 2005/04/02 05:18:33 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DB_File/ChangeLog,v 1.34 2005/04/25 13:14:35 mcummings Exp $
+
+  25 Apr 2005; Michael Cummings <mcummings@gentoo.org>
+  -DB_File-1.803-r1.ebuild, -DB_File-1.803-r2.ebuild, -DB_File-1.803.ebuild,
+  -DB_File-1.807.ebuild, -DB_File-1.808.ebuild:
+  cleaning
 
   02 Apr 2005; Stephen P. Becker <geoman@gentoo.org> DB_File-1.811.ebuild:
   stable on mips
