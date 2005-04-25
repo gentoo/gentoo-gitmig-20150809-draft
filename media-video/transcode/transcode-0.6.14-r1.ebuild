@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-0.6.14-r1.ebuild,v 1.2 2005/04/17 21:39:44 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-0.6.14-r1.ebuild,v 1.3 2005/04/25 00:45:37 flameeyes Exp $
 
 inherit libtool flag-o-matic eutils multilib
 
@@ -57,16 +57,17 @@ src_unpack() {
 
 	# apply amd64 and mmx patches from upstream CVS
 	epatch ${FILESDIR}/${P}-amd64_mmx.patch
+
+	libtoolize --copy --force || die "libtoolize failed"
+	autoreconf -i || die "autoreconf failed"
+
+	elibtoolize	# fix invalid paths in .la files of plugins
 }
 
 src_compile() {
-	libtoolize --copy --force
-	autoreconf || die "autoreconf failed"
 
 	filter-flags -maltivec -mabi=altivec -momit-leaf-frame-pointer
 	use ppc && append-flags -U__ALTIVEC__
-	# fix invalid paths in .la files of plugins
-	elibtoolize
 
 	if use pvm; then
 		if use sparc; then
@@ -133,5 +134,5 @@ src_install () {
 		DESTDIR=${D} \
 		install || die
 
-	dodoc AUTHORS COPYING ChangeLog README TODO
+	dodoc AUTHORS ChangeLog README TODO
 }
