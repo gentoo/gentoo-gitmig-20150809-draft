@@ -1,11 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mailer.eclass,v 1.2 2005/04/25 16:15:21 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mailer.eclass,v 1.3 2005/04/25 16:20:45 slarti Exp $
 
 #
 # Original Author: Fernando J. Pereda <ferdy@gentoo.org>
 # Purpose: eclass to intarface with net-mail/mailer-config, used to manage
-# multiple MTA's installed on a Gentoo system. 
+# multiple MTA's installed on a Gentoo system.
 #
 
 ECLASS="mailer"
@@ -13,9 +13,9 @@ INHERITED="$INHERITED $ECLASS"
 IUSE="${IUSE} mailwrapper"
 RDEPEND="${RDEPEND}
 	mailwrapper? ( net-mail/mailer-config
-					>=net-mail/mailwrapper-0.2.1-r1 )
+		>=net-mail/mailwrapper-0.2.1-r1 )
 	!mailwrapper? ( !virtual/mta )"
-PROVIDE="virtual/mta"
+PROVIDE="${PROVIDE} virtual/mta"
 
 EXPORT_FUNCTIONS pkg_postinst pkg_postrm
 
