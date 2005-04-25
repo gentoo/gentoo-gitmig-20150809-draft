@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-libraries/nessus-libraries-2.2.3.ebuild,v 1.1 2005/02/26 03:08:48 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-libraries/nessus-libraries-2.2.3.ebuild,v 1.2 2005/04/25 00:01:46 vanquirius Exp $
 
 inherit eutils toolchain-funcs
 
@@ -23,6 +23,6 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR=${D} install || die "failed to install"
+	make DESTDIR=${D} install || die "failed to install"
 	dodoc README*
 }
