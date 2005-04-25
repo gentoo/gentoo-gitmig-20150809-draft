@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Event/Event-0.87.ebuild,v 1.8 2005/04/19 18:19:58 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Event/Event-0.87.ebuild,v 1.9 2005/04/25 14:56:52 mcummings Exp $
 
 inherit perl-module
 
 CATEGORY="dev-perl"
 DESCRIPTION="fast, generic event loop"
-SRC_URI="http://www.cpan.org/modules/by-module/Event/${P}.tar.gz"
+SRC_URI="mirror://cpan/authors/id/J/JP/JPRIT/${P}.tar.gz"
 HOMEPAGE="http://www.cpan.org/modules/by-module/Event/${P}.readme"
 
 SLOT="0"
