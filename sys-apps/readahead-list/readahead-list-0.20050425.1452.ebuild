@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/readahead-list/readahead-list-0.20050323.0658.ebuild,v 1.4 2005/04/25 22:26:08 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/readahead-list/readahead-list-0.20050425.1452.ebuild,v 1.1 2005/04/25 22:26:08 robbat2 Exp $
 
 DESCRIPTION="Preloads files into the page cache to accelerate program loading."
 
@@ -14,6 +14,8 @@ IUSE="doc"
 # I'm not entirely certain about this
 # need to check if other libc variants provide readahead(2)
 RDEPEND="virtual/libc"
+# the blocked headers are broken
+# they don't compile properly!
 DEPEND="${RDEPEND}
 		virtual/os-headers"
 
@@ -28,6 +30,7 @@ src_install() {
 	# init scripts
 	cd ${S}/contrib/init/gentoo/
 	newinitd init.d-readahead-list readahead-list
+	newinitd init.d-readahead-list-early readahead-list-early
 	newconfd conf.d-readahead-list readahead-list
 
 	# default config
@@ -43,6 +46,15 @@ src_install() {
 	if use doc; then
 		docinto scripts
 		dodoc contrib/scripts/*
-		rm ${D}/usr/contrib/scripts/Makefile*
 	fi
+	# clean up a bit
+	find ${D}/usr/share/doc/${PF}/ -type f -name 'Makefile*' -exec rm -f \{} \;
+}
+
+pkg_postinst() {
+	einfo "You should add readahead-list to your runlevels:"
+	einfo "  rc-update add readahead-list-early boot"
+	einfo "  rc-update add readahead-list boot"
+	einfo "Also consider customizing the lists in /etc/readahead-list"
+	einfo "for maximum performance gain."
 }

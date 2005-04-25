@@ -1,11 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/readahead-list/readahead-list-0.20050328.0142.ebuild,v 1.2 2005/04/19 05:44:54 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/readahead-list/readahead-list-0.20050328.0142.ebuild,v 1.3 2005/04/25 22:26:08 robbat2 Exp $
 
 DESCRIPTION="Preloads files into the page cache to accelerate program loading."
 
 HOMEPAGE="http://www.orbis-terrarum.net"
-SRC_URI="${HOMEPAGE}/custom-software/${PN}/${P}.tar.bz2"
+SRC_URI="http://tirpitz.iat.sfu.ca/custom-software/${PN}/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
