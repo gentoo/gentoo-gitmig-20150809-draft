@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Font-AFM
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Font-AFM/ChangeLog,v 1.4 2005/04/09 01:59:49 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Font-AFM/ChangeLog,v 1.5 2005/04/25 16:28:06 mcummings Exp $
+
+  25 Apr 2005; Michael Cummings <mcummings@gentoo.org> Font-AFM-1.19.ebuild:
+  cleaning
 
   09 Apr 2005; Gustavo Zacarias <gustavoz@gentoo.org> Font-AFM-1.19.ebuild:
   Keyworded ~sparc
