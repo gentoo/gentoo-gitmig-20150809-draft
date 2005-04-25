@@ -1,6 +1,13 @@
 # ChangeLog for media-video/dvdrip
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/ChangeLog,v 1.36 2005/04/23 21:28:57 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/ChangeLog,v 1.37 2005/04/25 02:57:14 flameeyes Exp $
+
+*dvdrip-0.52.3-r1 (25 Apr 2005)
+
+  25 Apr 2005; Diego Pettenò <flameeyes@gentoo.org>
+  +dvdrip-0.52.3-r1.ebuild:
+  Added subtitles useflag which adds runtime dependency on subtitleripper
+  which provides subtitle2pgm. Fixes #90101.
 
   23 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> dvdrip-0.52.3.ebuild:
   Added to ~ppc.
