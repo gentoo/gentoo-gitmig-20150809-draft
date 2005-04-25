@@ -1,0 +1,11 @@
+# ChangeLog for games-fps/ut2004-airbuccaneers
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-airbuccaneers/ChangeLog,v 1.1 2005/04/25 13:02:40 wolf31o2 Exp $
+
+*ut2004-airbuccaneers-1.5 (25 Apr 2005)
+
+  25 Apr 2005; Chris Gianelloni <wolf31o2@gentoo.org> +metadata.xml,
+  +ut2004-airbuccaneers-1.5.ebuild:
+  Initial import. Ebuild by Radek Podgorny <radek@podgorny.cz>. Closing bug
+  #88207.
+
