@@ -1,6 +1,6 @@
 # ChangeLog for dev-python/twisted-docs
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-docs/ChangeLog,v 1.15 2005/04/24 03:29:21 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-docs/ChangeLog,v 1.16 2005/04/25 21:27:16 agriffis Exp $
 
   24 Apr 2005; Michael Hanselmann <hansmi@gentoo.org>
   twisted-docs-1.2.0.ebuild:
@@ -35,7 +35,7 @@
   22 Apr 2004; Bryan Østergaard <kloeri@gentoo.org> twisted-docs-1.2.0.ebuild:
   Added ~alpha to keywords.
 
-  29 Mar 1004; Thomas Raschbacher <lordvan@gentoo.org>
+  29 Mar 2004; Thomas Raschbacher <lordvan@gentoo.org>
   twisted-docs-1.1.0.ebuild, twisted-docs-1.1.1.ebuild,
   twisted-docs-1.2.0.ebuild:
   changed KEYWORDS to match with dev-python/twisted ebuilds
