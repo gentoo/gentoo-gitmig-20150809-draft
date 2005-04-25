@@ -1,0 +1,6 @@
+MD5 ad77f7192445c0795e63e6338bfe1acd pcmcia-cs-modules-3.2.8.ebuild 2871
+MD5 32f299f2dbf216aefb61576adf4ac5fe ChangeLog 487
+MD5 b280eebc74d70d85e664debf1adce2c3 metadata.xml 255
+MD5 6e7a371dbbc428966bcfda0029a7b6ef files/pcmcia-cs-3.2.8-modules-only.patch 1165
+MD5 29a2be33a201c160660048fb2f119915 files/digest-pcmcia-cs-modules-3.2.8 131
+MD5 791ff98a3aedc7a9c1c179156ed8fc7c files/pcmcia-cs-3.2.8-orinoco-gcc34.patch 753

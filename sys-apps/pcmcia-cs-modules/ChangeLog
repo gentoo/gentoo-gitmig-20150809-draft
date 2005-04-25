@@ -1,0 +1,11 @@
+# ChangeLog for sys-apps/pcmcia-cs-modules
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs-modules/ChangeLog,v 1.1 2005/04/25 12:00:25 brix Exp $
+
+*pcmcia-cs-modules-3.2.8 (25 Apr 2005)
+
+  25 Apr 2005; <brix@gentoo.org> +files/pcmcia-cs-3.2.8-modules-only.patch,
+  +files/pcmcia-cs-3.2.8-orinoco-gcc34.patch, +metadata.xml,
+  +pcmcia-cs-modules-3.2.8.ebuild:
+  Initial check-in, split from sys-apps/pcmcia-cs.
+
