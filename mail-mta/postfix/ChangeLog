@@ -1,6 +1,10 @@
 # ChangeLog for mail-mta/postfix
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.64 2005/04/05 17:37:13 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.65 2005/04/25 16:55:52 ferdy Exp $
+
+  25 Apr 2005; Fernando J. Pereda <ferdy@gentoo.org>
+  postfix-2.2.2-r1.ebuild:
+  Updated the 'postfix running' check
 
 *postfix-2.2.2-r1 (05 Apr 2005)
 

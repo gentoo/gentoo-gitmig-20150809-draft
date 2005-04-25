@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.2.2-r1.ebuild,v 1.1 2005/04/05 17:37:13 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.2.2-r1.ebuild,v 1.2 2005/04/25 16:55:52 ferdy Exp $
 
 inherit eutils ssl-cert toolchain-funcs flag-o-matic
 IUSE="ipv6 pam ldap mysql postgres ssl sasl mailwrapper mbox nis vda selinux hardened"
@@ -53,7 +53,7 @@ group_user_check() {
 
 pkg_setup() {
 	# do not upgrade from postfix-2.1. logic to fix bug #53324
-	if [[ $(ps h -u postfix) ]]; then
+	if [[ -f /var/lib/init.d/started/postfix ]] ; then
 		if has_version '<mail-mta/postfix-2.2' ; then
 			if [ "${FORCE_UPGRADE}" ]; then
 				echo
