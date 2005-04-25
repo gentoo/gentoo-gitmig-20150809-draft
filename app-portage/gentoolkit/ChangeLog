@@ -1,6 +1,16 @@
 # ChangeLog for app-portage/gentoolkit
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.35 2005/01/01 15:52:50 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.36 2005/04/25 04:20:40 genone Exp $
+
+*gentoolkit-0.2.1_pre1 (25 Apr 2005)
+
+  25 Apr 2005; Marius Mauch <genone@gentoo.org>
+  -gentoolkit-0.2.0_pre8-r1.ebuild, -gentoolkit-0.2.0_pre10-r1.ebuild,
+  -gentoolkit-0.2.0_rc1.ebuild, -gentoolkit-0.2.0_rc1-r1.ebuild,
+  gentoolkit-0.2.0.ebuild, +gentoolkit-0.2.1_pre1.ebuild:
+  Finally getting this bugfix release out, should fix the following bugs:
+  #71136, #74344, #75233, #75525, #79819 and #84521 (and probably a few more).
+  Thanks to everyone who helped solving these and sorry for the long delay.
 
 *gentoolkit-0.2.0 (13 Dec 2004)
 
