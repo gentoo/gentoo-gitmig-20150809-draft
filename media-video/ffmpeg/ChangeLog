@@ -1,6 +1,11 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.71 2005/04/25 14:05:26 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.72 2005/04/25 21:37:12 azarah Exp $
+
+  25 Apr 2005; Martin Schlemmer <azarah@gentoo.org>
+  files/ffmpeg-0.4.9_p20050226-gcc4.patch, ffmpeg-0.4.9_p20050226-r4.ebuild:
+  Fixup mafteah's patch the other way around, else it breaks avifile among
+  things.
 
   25 Apr 2005; Martin Schlemmer <azarah@gentoo.org>
   +files/ffmpeg-0.4.9_p20050226-gcc4.patch,
