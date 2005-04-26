@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Email-Valid
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-Valid/ChangeLog,v 1.9 2005/04/26 19:47:48 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-Valid/ChangeLog,v 1.10 2005/04/26 20:42:24 kloeri Exp $
+
+  26 Apr 2005; Bryan Østergaard <kloeri@gentoo.org>
+  Email-Valid-0.15.ebuild:
+  ~ia64 keyword.
 
   26 Apr 2005; Bryan Østergaard <kloeri@gentoo.org>
   Email-Valid-0.15.ebuild:
