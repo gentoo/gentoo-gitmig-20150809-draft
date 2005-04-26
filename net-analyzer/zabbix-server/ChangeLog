@@ -1,0 +1,56 @@
+# ChangeLog for net-analyzer/zabbix-server
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix-server/ChangeLog,v 1.1 2005/04/26 22:06:07 iggy Exp $
+
+*zabbix-server-1.1_alpha7 (26 Apr 2005)
+*zabbix-server-1.0 (26 Apr 2005)
+
+  26 Apr 2005; Brian Jackson <iggy@gentoo.org>
+  +files/1.0/conf.d/zabbix-suckerd, +files/1.0/conf.d/zabbix-trapperd,
+  +files/1.0/init.d/zabbix-suckerd, +files/1.0/init.d/zabbix-trapperd,
+  +files/1.0/zabbix_suckerd.conf, +files/1.0/zabbix_trapper.conf,
+  +files/1.1_alpha7/conf.d/zabbix-server, +files/1.0/zabbix_trapperd.conf,
+  +files/1.1_alpha7/init.d/zabbix-server,
+  +files/1.1_alpha7/zabbix-snmpv3.fix.patch,
+  +files/1.1_alpha7/zabbix_server.conf,
+  +files/1.1_alpha7/zabbix_trapper.conf, +metadata.xml,
+  +zabbix-server-1.0.ebuild, +zabbix-server-1.1_alpha7.ebuild:
+  Initial commit to Gentoo's cvs, huge thanks to Norguhtar
+  <sauronATinfocentr.ru> (bug #90005), and all the people on bug #58123
+
+*zabbix-server-1.0-r1 (22 Apr 2005)
+
+  22 Apr 2005; Anatoly Shipitsin <sauron@infocentr.ru> zabbix-server-1.0-r1.ebuild :
+  Revision bump; Remove installation frontend. Now frontend porvide by zabbix-frontend.
+
+*zabbix-server-1.1_alpha7-r1 (15 Apr 2005)
+
+  15 Apr 2005; Anatoly Shipitsin <sauron@infocentr.ru> zabbix-server-1.1_alpha7-r1.ebuild :
+  Revision bump; Remove installation frontend. Now frontend porvide by zabbix-frontend.
+
+  21 Mar 2005; Kirill Tikhonov zabbix-agent-1.1_alpha7.ebuild:
+  Add ~sparc to KEYWORD.
+
+*zabbix-server-1.1_alpha7 (21 Mar 2005)
+
+  21 Mar 2005; Anatoly Shipitsin <sauron@infocentr.ru> zabbix-server-1.1_alpha7.ebuild :
+  Version bump.
+
+  20 Mar 2005; Anatoly Shipitsin <sauron@infocentr.ru> zabbix-server-1.0.ebuild, zabbix-server-1.1_alpha5.ebuild:
+  Portage tree now contains only net-snmp change depends from virtual/snmp to net-analyzer/net-snmp.
+  Fix bugs on reemerge.
+
+*zabbix-server-1.1_alpha5-r1 (16 Feb 2005)
+
+  16 Mar 2005; Kirill Tikhonov zabbix-server-1.1_alpha5-r1.ebuild:
+  Add ~sparc to KEYWORD.
+
+*zabbix-server-1.1_alpha5 (8 Feb 2005)
+
+  8 Feb 2005; Anatoly Shipitsin <sauron@infocentr.ru> zabbix-server-1.1_alpha5.ebuild :
+  Version bump.
+
+*zabbix-server-1.0 (7 Feb 2005)
+
+  7 Feb 2005; Anatoly Shipitsin <sauron@infocentr.ru> zabbix-server-1.0.ebuild :
+  Initial import. Ebuild submitted by Anatoly Shipitsin <sauron@infocentr.ru>.

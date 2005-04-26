@@ -1,0 +1,21 @@
+#!/sbin/runscript
+# Copyright 1999-2004 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header:
+
+opts="${opts} reload"
+
+depend() {
+		need net mysql
+}
+
+start() {
+	ebegin "Starting Zabbix suckerd"
+	start-stop-daemon --start --exec /usr/sbin/zabbix_suckerd
+	eend
+}
+stop() {
+	ebegin "Stopping Zabbix suckerd"
+	start-stop-daemon  --stop --pid $PID
+	eend
+}
