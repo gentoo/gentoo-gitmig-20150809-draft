@@ -1,12 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/mips64/n32/2004.2/make.defaults,v 1.10 2005/03/09 00:35:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/mips64/n32/2004.2/make.defaults,v 1.11 2005/04/26 18:50:02 kumba Exp $
 
 ARCH="mips"
-
-# This is ugly and evil. hopefully to be removed... soon. replaced by
-# STAGE1_USE in bootstrap-cascade.sh
-ABI="n32"
 
 # n32 is a type of 32bit userland that can only be built with
 # a 64bit compiler, thus we technically use a 64bit userland.
