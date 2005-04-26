@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/files/opengl-update-2.2.0,v 1.2 2005/04/26 19:57:46 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/files/opengl-update-2.2.0,v 1.3 2005/04/26 20:22:15 eradicator Exp $
 # Author:  Martin Schlemmer <azarah@gentoo.org>
 # Further modifications by Donnie Berkholz <spyderous@gentoo.org>
 # Further modifications based off submissions to bug #54984 <cyfred@gentoo.org>
@@ -173,6 +173,9 @@ set-new-implementation() {
 
 	check_version
 	check_user
+
+	# Set a sane umask... bug #83115
+	umask 022
 
 	if ! hasq ${GL_IMPLEM} ${AVAIL_IMPLEMS}; then
 		eerror "Invalid profile selected."
