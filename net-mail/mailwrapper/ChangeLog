@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/mailwrapper
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailwrapper/ChangeLog,v 1.22 2005/04/25 13:47:56 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailwrapper/ChangeLog,v 1.23 2005/04/26 11:29:53 ferdy Exp $
+
+  26 Apr 2005; Fernando J. Pereda <ferdy@gentoo.org>
+  mailwrapper-0.2.1-r1.ebuild:
+  Add /usr/lib/sendmail symlink
 
 *mailwrapper-0.2.1-r1 (25 Apr 2005)
 

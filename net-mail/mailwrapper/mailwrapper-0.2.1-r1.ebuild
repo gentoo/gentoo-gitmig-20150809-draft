@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailwrapper/mailwrapper-0.2.1-r1.ebuild,v 1.1 2005/04/25 13:47:56 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailwrapper/mailwrapper-0.2.1-r1.ebuild,v 1.2 2005/04/26 11:29:53 ferdy Exp $
 
 inherit gcc
 
@@ -24,7 +24,8 @@ src_compile() {
 
 src_install() {
 	newsbin mailwrapper sendmail || die "mailwrapper binary not installed"
-	newbin mailwrapper newaliases
-	newbin mailwrapper mailq
+	dohard /usr/sbin/mailwrapper /usr/bin/newaliases
+	dohard /usr/sbin/mailwrapper /usr/bin/mailq
+	dosym /usr/sbin/mailwrapper /usr/lib/sendmail
 	doman mailer.conf.5 mailwrapper.8
 }
