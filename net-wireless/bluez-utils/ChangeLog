@@ -1,6 +1,16 @@
 # ChangeLog for net-wireless/bluez-utils
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/ChangeLog,v 1.37 2005/04/20 21:37:29 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/ChangeLog,v 1.38 2005/04/26 15:02:48 liquidx Exp $
+
+*bluez-utils-2.16 (26 Apr 2005)
+
+  26 Apr 2005; Alastair Tse <liquidx@gentoo.org>
+  +files/2.15-bluepin.patch,
+  +files/2.16/bluetooth.rc, -bluez-utils-2.7.ebuild,
+  -bluez-utils-2.12.ebuild, -bluez-utils-2.15.ebuild,
+  +bluez-utils-2.16.ebuild:
+  version bump. incorporated fixes for pcmcia (#86492), hid2hci (#75255),
+  bluepin (#66255) and dbus support.
 
   20 Apr 2005; Michael Hanselmann <hansmi@gentoo.org>
   bluez-utils-2.10-r1.ebuild:
