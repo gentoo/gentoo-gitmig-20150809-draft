@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 2be66ba65c5a33644b65772dd3aa4bca ChangeLog 2513
-MD5 2b3de634ed7b28e714bca6c9fcd828ea Date-Calc-5.3.ebuild 573
-MD5 f8f6a682dd2367d7626e563e99013780 Date-Calc-5.4.ebuild 608
+MD5 e6868466e4e49a393a2d5a0fdb9de382 ChangeLog 2605
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 b35419f9e744f26fb3daf10f603c98b1 files/digest-Date-Calc-5.3 65
+MD5 5025846ab492d510b7420da99060bcf0 Date-Calc-5.4.ebuild 604
+MD5 2b3de634ed7b28e714bca6c9fcd828ea Date-Calc-5.3.ebuild 573
 MD5 0befe708d7a6c4d533d46c6253b694ed files/digest-Date-Calc-5.4 65
+MD5 b35419f9e744f26fb3daf10f603c98b1 files/digest-Date-Calc-5.3 65
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCbPGRtG5z4I8BtQoRAtzxAJ9egnEtb/XAK/A+2ZfICdkrjkzVswCfTV6+
-K1SKXVKDAYx7TW/9kyU6tbM=
-=vP0I
+iD8DBQFCbprFKf2g/qXtneoRAnHSAJ49G1xzyBjv1PbprDc9vroZS5nQbgCdFNoz
+mga0cQ0VgR1lPTfqkAi9U+0=
+=wVWU
 -----END PGP SIGNATURE-----

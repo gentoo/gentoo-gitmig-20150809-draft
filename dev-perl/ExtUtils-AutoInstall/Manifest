@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 cda100ed2493ff9030da7604db86b985 ChangeLog 2376
-MD5 cbb97890018fbaf04f5a665024cd0255 ExtUtils-AutoInstall-0.56.ebuild 660
-MD5 d70b6ca83b6727ae9554718e48758027 ExtUtils-AutoInstall-0.61.ebuild 674
+MD5 ca4cab1e0d657eb00ef2b12214f25780 ChangeLog 2482
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 ae17c3e8f0740f3e9aca7d19f8531375 files/digest-ExtUtils-AutoInstall-0.56 76
+MD5 cbb97890018fbaf04f5a665024cd0255 ExtUtils-AutoInstall-0.56.ebuild 660
+MD5 eca098d57cc219f9ae15efcd3bcd8bd5 ExtUtils-AutoInstall-0.61.ebuild 670
 MD5 187e239dd7240eb1e0eae883452903c1 files/digest-ExtUtils-AutoInstall-0.61 76
+MD5 ae17c3e8f0740f3e9aca7d19f8531375 files/digest-ExtUtils-AutoInstall-0.56 76
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCbQfHtG5z4I8BtQoRAvvSAJ9t3RfzezfJyWiTICP0k8mxHPsLqwCfWKel
-TbdWicNUe5UhduxnSlPoyl4=
-=hyGr
+iD8DBQFCbps1Kf2g/qXtneoRAufAAKCAfHsgL8A7X92EahjapSaaq0aLJQCcCZv6
+9dHFV504442X7ossh38auUw=
+=cr8L
 -----END PGP SIGNATURE-----
