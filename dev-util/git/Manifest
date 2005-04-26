@@ -1,6 +1,4 @@
 MD5 9ec3fd175d1a11b521bfdc0a06c6e75a ChangeLog 606
-MD5 9d44da3c8e5d772bced7fa2dda9b4fd2 git-0.5.ebuild 964
-MD5 0745985a95d95b863ee99de30f529001 git-0.6.ebuild 965
+MD5 ea1112efd10477c896898c0223c86133 git-0.6.ebuild 972
 MD5 78c1b34edd1399c24d7d9e59212bc17a metadata.xml 221
-MD5 7e37a5be54393792343eeec02ff19c1e files/digest-git-0.5 59
 MD5 de534f487139436b19b4f0d8a27153ed files/digest-git-0.6 59
