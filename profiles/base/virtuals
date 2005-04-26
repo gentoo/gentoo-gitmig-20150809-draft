@@ -1,6 +1,6 @@
-# Copyright 2004 Gentoo Foundation.
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/virtuals,v 1.58 2005/04/23 03:37:40 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/virtuals,v 1.59 2005/04/26 22:58:40 vapier Exp $
 
 # This file describes the packages that by default satisfy a certain virtual
 # That this file exists in the base profile implies that these packages will
@@ -25,7 +25,6 @@ virtual/emacs				app-editors/emacs
 virtual/fam					app-admin/fam
 virtual/flim				app-emacs/flim
 virtual/gsasl				net-libs/libgsasl
-virtual/gentoo-stats			app-portage/basc
 virtual/ghc					dev-lang/ghc-bin
 virtual/ghostscript			app-text/ghostscript
 virtual/glu					x11-base/xorg-x11
@@ -37,7 +36,7 @@ virtual/imap-c-client		net-libs/c-client
 virtual/imapUW				net-mail/uw-imap
 virtual/imapd				net-mail/courier-imap
 virtual/inetd				sys-apps/xinetd
-virtual/jabber-server			net-im/jabberd
+virtual/jabber-server		net-im/jabberd
 virtual/jack				media-sound/jack-audio-connection-kit
 virtual/jdk					dev-java/blackdown-jdk
 virtual/jre					dev-java/blackdown-jre
@@ -47,14 +46,14 @@ virtual/libc				sys-libs/glibc
 virtual/libpcap				net-libs/libpcap
 virtual/logger				app-admin/metalog
 virtual/lpr					net-print/cups
-virtual/m3					dev-lang/cm3
+virtual/m3					dev-lang/cm3-bin
 virtual/mailx				mail-client/mailx
 virtual/mda					mail-filter/procmail
 virtual/modutils			sys-apps/module-init-tools
 virtual/motif				x11-libs/openmotif
 virtual/mpg123				media-sound/mpg123
 virtual/mta					mail-mta/ssmtp
-virtual/ooo				app-office/openoffice-bin
+virtual/ooo					app-office/openoffice-bin
 virtual/opengl				x11-base/xorg-x11
 virtual/pdfviewer			app-text/xpdf
 virtual/php					dev-php/mod_php
