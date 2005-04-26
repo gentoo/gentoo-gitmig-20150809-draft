@@ -1,6 +1,10 @@
 # ChangeLog for app-text/wv
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wv/ChangeLog,v 1.24 2005/01/01 16:42:22 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wv/ChangeLog,v 1.25 2005/04/26 09:14:49 azarah Exp $
+
+  26 Apr 2005; Martin Schlemmer <azarah@gentoo.org>
+  +files/wv-1.0.3-gcc4.patch, wv-1.0.3.ebuild:
+  Fix building with gcc4 (namespace collide with libxml2).
 
 *wv-1.0.3 (01 Dec 2004)
 

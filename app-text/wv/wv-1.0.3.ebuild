@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wv/wv-1.0.3.ebuild,v 1.2 2005/01/01 16:42:22 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wv/wv-1.0.3.ebuild,v 1.3 2005/04/26 09:14:49 azarah Exp $
 
 inherit eutils
 
@@ -21,6 +21,16 @@ RDEPEND="sys-libs/zlib
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
+
+src_unpack() {
+
+	unpack ${A}
+
+	cd ${S}
+	# Fix building with gcc4 (namespace collide with libxml2)
+	epatch ${FILESDIR}/${P}-gcc4.patch
+
+}
 
 src_compile() {
 
