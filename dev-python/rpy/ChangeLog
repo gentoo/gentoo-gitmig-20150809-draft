@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/rpy
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/rpy/ChangeLog,v 1.7 2005/04/26 13:27:34 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rpy/ChangeLog,v 1.8 2005/04/26 15:03:01 liquidx Exp $
+
+*rpy-0.4.1 (26 Apr 2005)
+
+  26 Apr 2005; Alastair Tse <liquidx@gentoo.org> +files/90rpy,
+  +rpy-0.4.1.ebuild:
+  version bump. added env.d file to add libpath for R libraries (needed for
+  rpy to work properly)
 
 *rpy-0.3.5-r1 (26 Apr 2005)
 
