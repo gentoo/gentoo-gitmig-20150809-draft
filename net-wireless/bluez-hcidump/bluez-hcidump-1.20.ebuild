@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-hcidump/bluez-hcidump-1.16.ebuild,v 1.1 2004/12/20 20:06:43 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-hcidump/bluez-hcidump-1.20.ebuild,v 1.1 2005/04/26 15:34:58 liquidx Exp $
 
 DESCRIPTION="bluetooth HCI package analyzer"
 HOMEPAGE="http://bluez.sourceforge.net/"
@@ -11,7 +11,7 @@ SLOT="0"
 KEYWORDS="~x86 ~sparc ~ppc"
 IUSE=""
 
-DEPEND=">=net-wireless/bluez-libs-2.12"
+DEPEND=">=net-wireless/bluez-libs-2.16"
 
 src_compile() {
 	econf || die "econf failed"
