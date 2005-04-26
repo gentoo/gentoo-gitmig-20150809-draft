@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/javacup
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/javacup/ChangeLog,v 1.7 2005/02/13 22:43:03 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/javacup/ChangeLog,v 1.8 2005/04/26 01:42:25 gustavoz Exp $
+
+  26 Apr 2005; Gustavo Zacarias <gustavoz@gentoo.org> javacup-0.10k.ebuild:
+  Stable on sparc
 
   13 Feb 2005; Jan Brinkmann <luckyduck@gentoo.org> javacup-0.10k.ebuild:
   stable on amd64 and x86.

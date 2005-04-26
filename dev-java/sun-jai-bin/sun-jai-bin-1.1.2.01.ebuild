@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jai-bin/sun-jai-bin-1.1.2.01.ebuild,v 1.1 2004/12/23 11:56:50 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jai-bin/sun-jai-bin-1.1.2.01.ebuild,v 1.2 2005/04/26 01:40:57 gustavoz Exp $
 
 inherit java-pkg
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://java.sun.com/products/java-media/jai/"
 SRC_URI="jai-${PV//./_}-lib-linux-i586.tar.gz"
 LICENSE="sun-bcla-jai"
 SLOT="0"
-KEYWORDS="x86 ~sparc ~ppc amd64"
+KEYWORDS="x86 sparc ~ppc amd64"
 DEPEND="app-arch/unzip"
 RDEPEND=">=virtual/jdk-1.3"
 IUSE=""
