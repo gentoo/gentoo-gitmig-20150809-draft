@@ -1,6 +1,17 @@
 # ChangeLog for x11-terms/xterm
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.77 2005/04/20 22:02:56 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.78 2005/04/26 21:31:33 seemant Exp $
+
+*xterm-201 (26 Apr 2005)
+
+  26 Apr 2005; Seemant Kulleen <seemant@gentoo.org>
+  +files/xterm-no-toolbar-by-default.patch, +xterm-201.ebuild:
+  Version bump thanks to Donnie in irc. I don't like the way this one does the
+  prompts -- makes it hard to read and stuff. If anyone has fixes for it,
+  contact me via email or irc please. Also, toolbars are now enabled by
+  default -- not USE based anymore. run xterm -tb to enable them if you want.
+  The default resource files causes toolbars to be disabled as per expected
+  behaviour
 
   20 Apr 2005; Bryan Østergaard <kloeri@gentoo.org> xterm-200-r1.ebuild:
   Stable on alpha + ia64, requested by seemant.
