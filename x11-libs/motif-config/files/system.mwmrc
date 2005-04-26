@@ -1,125 +1,71 @@
-! 
-! @OPENGROUP_COPYRIGHT@
-! COPYRIGHT NOTICE
-! Copyright (c) 1990, 1991, 1992, 1993 Open Software Foundation, Inc.
-! Copyright (c) 1996, 1997, 1998, 1999, 2000 The Open Group
-! ALL RIGHTS RESERVED (MOTIF). See the file named COPYRIGHT.MOTIF for
-! the full copyright text.
-! 
-! This software is subject to an open license. It may only be
-! used on, with or for operating systems which are themselves open
-! source systems. You must contact The Open Group for a license
-! allowing distribution and sublicensing of this software on, with,
-! or for operating systems which are not Open Source programs.
-! 
-! See http://www.opengroup.org/openmotif/license for full
-! details of the license agreement. Any use, reproduction, or
-! distribution of the program constitutes recipient's acceptance of
-! this agreement.
-! 
-! EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS
-! PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-! KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY
-! WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY
-! OR FITNESS FOR A PARTICULAR PURPOSE
-! 
-! EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT
-! NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,
-! INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
-! DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED
-! AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
-! LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
-! ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
-! EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE
-! POSSIBILITY OF SUCH DAMAGES.
-! 
-! $XConsortium: system.mwmrc /main/9 1996/10/25 11:45:42 drk $
-!
-! HISTORY
-! 
-
 !!
-!!  DEFAULT Mwm RESOURCE DESCRIPTION FILE (system.mwmrc)
+!! $Id: system.mwmrc,v 1.2 2005/04/26 13:56:50 lanius Exp $
+!! Root Menu Description
 !!
-!!  NOTE: To personalize this file, copy this file before editing it.
-!!  	  Personalize copies of the Mwm resource file typically
-!!	  reside as:
-!!
-!!		$HOME/.mwmrc
-!!
-
-!!
-!! Root Menu Description (this menu must be explicitly posted via f.menu)
-!!
-
 Menu DefaultRootMenu
 {
-	"Root Menu"		f.title
-	"New Window"		f.exec "xterm &"
+	"Root Menu"			f.title
+	"New Window"		f.exec "xterm -e /bin/bash &"
 	"Shuffle Up"		f.circle_up
 	"Shuffle Down"		f.circle_down
-	"Refresh"		f.refresh
+	"Refresh"			f.refresh
 	"Pack Icons"		f.pack_icons
-!	"Toggle Behavior..."	f.set_behavior
-	 no-label		f.separator
+	"Toggle Behavior..."	f.set_behavior
+	 no-label			f.separator
 	"Restart..."		f.restart
-	"Quit..."		f.quit_mwm
-
-}
-
-Menu RootMenu_1.1
-{
-	"Root Menu"		f.title
-	"New Window"		f.exec "xterm &"
-	"Shuffle Up"		f.circle_up
-	"Shuffle Down"		f.circle_down
-	"Refresh"		f.refresh
-!	"Pack Icons"		f.pack_icons
-!	"Toggle Behavior"	f.set_behavior
-	no-label		f.separator
-	"Restart..."		f.restart
+	"Restart fvwm"		f.restart - "fvwm"
+	"Screen next"		f.screen - "next"
+	"Screen prev"		f.screen - "prev"
+	"Screen back"		f.screen - "back"
+	"Screen 0"			f.screen - "0"
+	"Screen 1"			f.screen - "1"
+	"Screen 3"			f.screen - "3"
+	"Screen -1"			f.screen - "-1"
+	"Quit..."			f.quit_mwm
 }
 
 !!
-!! Default Window Menu Description
+!! Default Window Menu
 !!
-
 Menu DefaultWindowMenu
 {
 	Restore		_R	Alt<Key>F5	f.restore
-	Move		_M	Alt<Key>F7	f.move
-	Size		_S	Alt<Key>F8	f.resize
-	Minimize	_n	Alt<Key>F9	f.minimize
-	Maximize	_x	Alt<Key>F10	f.maximize
-	Lower		_L	Alt<Key>F3	f.lower
+	Move			_M	Alt<Key>F7	f.move
+	Size			_S	Alt<Key>F8	f.resize
+	Minimize		_n	Alt<Key>F9	f.minimize
+	Maximize		_x	Alt<Key>F10	f.maximize
+	Raise			_a	Alt<Key>F2	f.raise
+	Lower			_L	Alt<Key>F3	f.lower
 	no-label				f.separator
-	Close		_C	Alt<Key>F4	f.kill
+	Close			_C	Alt<Key>F4	f.kill
 }
 
 
 !!
-!! Key Binding Description
+!! Default Key Bindings
 !!
-
 Keys DefaultKeyBindings
 {
-	Shift<Key>Escape	window|icon		f.post_wmenu
-	Alt<Key>space		window|icon		f.post_wmenu
-	Alt<Key>Tab		root|icon|window	f.next_key
-	Alt Shift<Key>Tab	root|icon|window	f.prev_key
-	Alt<Key>Escape		root|icon|window	f.circle_down
-	Alt Shift<Key>Escape	root|icon|window	f.circle_up
+	Shift<Key>Escape		window|icon			f.post_wmenu
+	Alt<Key>space		window|icon			f.post_wmenu
+	Alt<Key>Tab			root|icon|window		f.next_key
+	Alt Shift<Key>Tab		root|icon|window		f.prev_key
+	Alt<Key>Escape		root|icon|window		f.circle_down
+	Alt Shift<Key>Escape	root|icon|window		f.circle_up
 	Alt Shift Ctrl<Key>exclam root|icon|window	f.set_behavior
-	Alt<Key>F6		window			f.next_key transient
-	Alt Shift<Key>F6	window			f.prev_key transient
-	Shift<Key>F10		icon			f.post_wmenu
-!	Alt Shift<Key>Delete	root|icon|window	f.restart
+	Alt<Key>F6			window			f.next_key transient
+	Alt Shift<Key>F6		window			f.prev_key transient
+	Shift<Key>F10		icon				f.post_wmenu
+	Alt Shift<Key>Delete	root|icon|window		f.restart
+	<Key>F11			root|icon|window		f.screen - "next"
+	Alt<Key>F11			root|icon|window		f.screen - "prev"
 }
 
 !!
 !! Button Binding Description(s)
 !!
-
+!! These can be used anywhere
+!!
 Buttons DefaultButtonBindings
 {
 	<Btn1Down>	icon|frame	f.raise
@@ -127,30 +73,34 @@ Buttons DefaultButtonBindings
 	<Btn3Down>	root		f.menu	DefaultRootMenu
 }
  
-Buttons ExplicitButtonBindings
-{
-	<Btn1Down>	frame|icon	f.raise
-	<Btn3Down>	frame|icon	f.post_wmenu
-	<Btn3Down>	root		f.menu	DefaultRootMenu
-!	<Btn1Up>	icon		f.restore
-	Alt<Btn1Down>	window|icon	f.lower
-!	Alt<Btn2Down>	window|icon	f.resize
-!	Alt<Btn3Down>	window|icon	f.move
-
-}
- 
-Buttons PointerButtonBindings
-{
-	<Btn1Down>	frame|icon	f.raise
-	<Btn3Down>	frame|icon	f.post_wmenu
-	<Btn3Down>	root		f.menu	DefaultRootMenu
-	<Btn1Down>	window		f.raise
-!	<Btn1Up>	icon		f.restore
-	Alt<Btn1Down>	window|icon	f.lower
-!	Alt<Btn2Down>	window|icon	f.resize
-!	Alt<Btn3Down>	window|icon	f.move
-}
-
 !!
-!!  END OF mwm RESOURCE DESCRIPTION FILE
+!! These are some example bindings that you might use if your
+!! keyboardFocusPolicy is "explicit".  Note that to use these, you'll
+!! have to change the Mwm*buttonBindings resource in Mwm to
+!! ExplicitButtonBindings instead of DefaultButtonBindings.
 !!
+!!Buttons ExplicitButtonBindings
+!!{
+!!	<Btn3Down>		frame|icon	f.post_wmenu
+!!	<Btn1Up>		icon		f.restore
+!!	Alt<Btn1Down>	window|icon	f.lower
+!!	Alt<Btn2Down>	window|icon	f.resize
+!!	Alt<Btn3Down>	window|icon	f.move
+!!}
+!!
+!! These are some example bindings that you might use if your
+!! keyboardFocusPolicy is "pointer".  Note that to use these, you'll
+!! have to change the Mwm*buttonBindings resource in Mwm to
+!! PointerButtonBindings instead of DefaultButtonBindings.
+!!
+!!Buttons PointerButtonBindings
+!!{
+!!	<Btn1Down>		frame|icon	f.raise
+!!	<Btn3Down>		frame|icon	f.post_wmenu
+!!	<Btn3Down>		root		f.menu	DefaultRootMenu
+!!	<Btn1Down>		window	f.raise
+!!	<Btn1Up>		icon		f.restore
+!!	Alt<Btn1Down>	window|icon	f.lower
+!!	Alt<Btn2Down>	window|icon	f.resize
+!!	Alt<Btn3Down>	window|icon	f.move
+!!}

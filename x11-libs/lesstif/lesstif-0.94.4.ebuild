@@ -1,9 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/lesstif/lesstif-0.94.4.ebuild,v 1.1 2005/04/26 13:56:47 lanius Exp $
-
-# disable sandbox, needed for motif-config
-SANDBOX_DISABLED="1"
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/lesstif/lesstif-0.94.4.ebuild,v 1.2 2005/04/26 13:58:54 lanius Exp $
 
 inherit libtool flag-o-matic multilib
 
