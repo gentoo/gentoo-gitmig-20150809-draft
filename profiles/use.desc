@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.239 2005/04/25 14:16:44 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.240 2005/04/26 21:05:05 fvdpol Exp $
 
 # keep them sorted (excluding the special arch flags near the end).
 
@@ -232,6 +232,7 @@ openal - Adds support for the Open Audio Library
 opengl - Adds support for OpenGL
 oracle7 - Adds support for Oracle 7
 oracle - Enable oracle support
+osc - Enables support for Open Sound Control
 oscar - Enable Oscar (AIM/ICQ) IM protocol support
 oss - Adds support for OSS (Open Sound System)
 ovrimos - Adds support for the Ovrimos Database engine
