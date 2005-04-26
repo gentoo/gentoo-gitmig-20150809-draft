@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1115 2005/04/26 20:12:24 r3pek Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1116 2005/04/26 22:33:23 swegener Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -232,13 +232,13 @@ dev-scheme/bigloo-lib:ipcs - enable ipcs support
 dev-scheme/gauche-gtk:glgd - enable GL graph draw
 dev-tex/preview-latex:xemacs - Adds support for XEmacs
 dev-util/catalyst:ccache - Enables ccache support
+dev-util/cogito:mozsha1 - Make use of a bundled routine commit with Mozilla that should be fast on non-x86 archs 
+dev-util/cogito:ppcsha1 - Make use of a bundled routine that is optimized for the PPC arc
 dev-util/eclipse-sdk:nodoc - Don't include documentation
 dev-util/eclipse-sdk:nosrc - Don't include source code
 dev-util/eric:idl - Enable omniorb support
 dev-util/git-pasky:mozsha1 - Make use of a bundled routine commit with Mozilla that should be fast on non-x86 archs
 dev-util/git-pasky:ppcsha1 - Make use of a bundled routine that is optimized for the PPC arc
-dev-util/cogito:mozsha1 - Make use of a bundled routine commit with Mozilla that should be fast on non-x86 archs 
-dev-util/cogito:ppcsha1 - Make use of a bundled routine that is optimized for the PPC arc
 dev-util/glade:gnomedb - Enable gnomedb widgets for Glade.
 dev-util/global:vim - vim funny stuff for global
 dev-util/kdevelop:ada - Enable support for the ada programming language
@@ -460,8 +460,8 @@ media-video/gpac:amr - Adaptive Multi-Rate Audio support (commonly used in telep
 media-video/kmplayer:koffice-plugin - Install KOffice part
 media-video/lives:libvisual - Enable libvisual support
 media-video/mjpegtools:yv12 - Enables support for the YV12 pixel format
-media-video/mkvtoolnix:lzo - Enables support for lzo compression
 media-video/mkvtoolnix:bzip2 - Enables support for bzip2 compression
+media-video/mkvtoolnix:lzo - Enables support for lzo compression
 media-video/motiontrack:libgd - Enables gd library support for debug purposes
 media-video/motiontrack:multiprocess - Enables multi-proccess support (SMP/cluster) for motiontrack programs
 media-video/mpeg4ip:v4l2 - Enable video4linux2 support
@@ -606,8 +606,8 @@ net-irc/xchat-xsys:uptimed - Enables optional uptime records through uptimed
 net-irc/xchat:xchatdccserver - Enables support for the /dccserver command via a patch
 net-irc/xchat:xchatnogtk - Disables building the GTK front end to XChat
 net-irc/xchat:xchattext - Enables the text/console front end to XChat
-net-libs/gecko-sdk:moznoxft - Disable XFT support
 net-libs/gecko-sdk:moznomail - Do not compile mail
+net-libs/gecko-sdk:moznoxft - Disable XFT support
 net-libs/libpri:bri - Enable ISDN BRI support (bristuff)
 net-libs/libsoup:gnutls - Use GnuTLS instead of OpenSSL for SSL support
 net-libs/libvncserver:no24bpp - disable 24bpp support
@@ -675,6 +675,16 @@ net-nntp/inn:inntaggedhash - Use tagged hash table for history (disables large f
 net-nntp/slrn:uudeview - Add support for yEnc coding and more using dev-libs/uulib
 net-p2p/amule:remote - enable remote controlling of the client
 net-p2p/amule:stats - enable statistic reporting
+net-proxy/squid:customlog - Adds support for custom log file formats
+net-proxy/squid:logrotate - Use logrotate for rotating logs
+net-proxy/squid:underscores - Enables support for domain names containing underscores
+net-proxy/squid:zero-penalty-hit - Adds Zero Penalty Hit patch
+net-proxy/tinyproxy:transparent-proxy - Enables support for transparent proxies
+net-servers/fnord:diet - Compile and link with dietlibc
+net-servers/lighttpd:xattr - if you want extended attributes enabled
+net-servers/pound:msdav - if you want the Microsoft DAV extensions enabled
+net-servers/pound:unsafe - if you want the 'unsafe' characters passed through to the web servers
+net-servers/skunkweb:apache1 - enable apache1 support if internal server and apache2 support not wanted
 net-wireless/kdebluetooth:irmc - Enable the kitchensync(Multisynk)'s IrMCSync konnector
 net-wireless/ndiswrapper:4kstacks - Allow the use of 4kstacks in ndiswrapper for some users
 net-wireless/wireless-tools:multicall - Build the most commonly used tools as one binary
@@ -784,10 +794,10 @@ sys-kernel/gentoo-sources:ultra1 - If you have a SUN Ultra 1 with a HME interfac
 sys-kernel/gentoo-sources:usagi - adds USAGI (Linux IPv6 Development Project) support drops {superfreeswan/patch-int/loop-jari}
 sys-kernel/mips-headers:cobalt - Enables support for Cobalt Microserver hardware (Qube2/RaQ2)
 sys-kernel/mips-headers:ip30 - Enables support for SGI Octane (IP30, 'Speedracer')
+sys-kernel/mips-sources:cobalt - Enables support for Cobalt Microserver hardware (Qube2/RaQ2)
 sys-kernel/mips-sources:ip27 - Enables support for SGI Origin (IP27)
 sys-kernel/mips-sources:ip28 - Enables support for SGI Indigo2 Impact R10000
 sys-kernel/mips-sources:ip30 - Enables support for SGI Octane (IP30, 'Speedracer')
-sys-kernel/mips-sources:cobalt - Enables support for Cobalt Microserver hardware (Qube2/RaQ2)
 sys-kernel/ppc-development-sources:extlib - If you want to use gcloop a external lib is needed
 sys-kernel/ppc64-sources:extlib - If you want to use gcloop a external lib is needed
 sys-kernel/sparc-sources:ultra1 - If you have a SUN Ultra 1 with a HME interface
@@ -853,16 +863,6 @@ www-client/w3m:async - Enables asynchronous fetch
 www-client/w3m:imlib2 - If you want to link imlib2 instead of imlib against w3mimgdisplay
 www-client/w3m:lynxkeymap - If you prefer Lynx-like key binding
 www-misc/nsxml:xslt - Enables xslt support
-net-proxy/squid:customlog - Adds support for custom log file formats
-net-proxy/squid:logrotate - Use logrotate for rotating logs
-net-proxy/squid:underscores - Enables support for domain names containing underscores
-net-proxy/squid:zero-penalty-hit - Adds Zero Penalty Hit patch
-net-proxy/tinyproxy:transparent-proxy - Enables support for transparent proxies
-net-servers/fnord:diet - Compile and link with dietlibc
-net-servers/lighttpd:xattr - if you want extended attributes enabled
-net-servers/pound:msdav - if you want the Microsoft DAV extensions enabled
-net-servers/pound:unsafe - if you want the 'unsafe' characters passed through to the web servers
-net-servers/skunkweb:apache1 - enable apache1 support if internal server and apache2 support not wanted
 x11-base/kdrive:fbdev - Enables framebuffer kdrive server
 x11-base/kdrive:font-server - Enables font server support
 x11-base/kdrive:freetype - Enables Freetype font support

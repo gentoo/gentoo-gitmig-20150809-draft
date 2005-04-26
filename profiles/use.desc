@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.240 2005/04/26 21:05:05 fvdpol Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.241 2005/04/26 22:33:23 swegener Exp $
 
 # keep them sorted (excluding the special arch flags near the end).
 
@@ -317,11 +317,11 @@ vanilla - Do not add extra patches which change default behaviour
 vcd - Video CD support
 vhosts - Adds support for installing web-based applications into a virtual-hosting environment
 videos - Tells portage to install optional video files (used in some games)
-vorbis - Adds support for the OggVorbis audio codec
 voodoo3 - Adds support for 3Dfx's Voodoo3 video chipset, else defaults to Voodoo4/5 support if not in USE.
-win32codecs - use win32codecs package for dll avi decoding support (wmv and what not)
+vorbis - Adds support for the OggVorbis audio codec
 wddx - Adds support for WDDX
 wifi - Enable wireless network functions
+win32codecs - use win32codecs package for dll avi decoding support (wmv and what not)
 wmf - Adds support for the wmf vector image format
 wxwindows - Adds support for wxWindows/wxGTK
 xface - Adds xface support used to allow a small image of xface format to be included in an email via the header 'X-Face'.
