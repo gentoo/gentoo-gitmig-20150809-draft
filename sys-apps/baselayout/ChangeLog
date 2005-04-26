@@ -1,9 +1,19 @@
 # ChangeLog for sys-apps/baselayout
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.234 2005/04/21 09:39:02 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.235 2005/04/26 22:39:39 uberlord Exp $
 
 # See the gentoo-src rc-scripts ChangeLog for up-to-date release information:
 # http://www.gentoo.org/cgi-bin/viewcvs.cgi/rc-scripts/ChangeLog?rev=HEAD&cvsroot=gentoo-src&content-type=text/vnd.viewcvs-markup
+
+*baselayout-1.12.0_alpha2-r1 (26 Apr 2005)
+*baselayout-1.11.11-r2 (26 Apr 2005)
+
+  26 Apr 2005; Roy Marples <uberlord@gentoo.org>
+  +files/baselayout-1.11.11-wpa_supplicant.patch,
+  +files/baselayout-1.12.0-alpha2-netscripts-1.patch,
+  +baselayout-1.11.11-r2.ebuild, +baselayout-1.12.0_alpha2-r1.ebuild:
+  Add support for wpa_supplicant-0.4.0
+  Hopefully fix an obscure iwconfig bug
 
 *baselayout-1.11.11-r1 (21 Apr 2005)
 
