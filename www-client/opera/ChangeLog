@@ -1,6 +1,9 @@
 # ChangeLog for www-client/opera
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.5 2005/04/24 09:58:22 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.6 2005/04/26 17:39:20 lanius Exp $
+
+  26 Apr 2005; Heinrich Wendel <lanius@gentoo.org> files/opera.desktop:
+  add Application to opera.desktop to show up in GNOME, bug #90508
 
   23 Apr 2005; Sven Wegener <swegener@gentoo.org> opera-8.00.ebuild:
   Fixed invalid atoms in *DEPEND. Added missing digest entries.

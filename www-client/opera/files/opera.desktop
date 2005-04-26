@@ -5,4 +5,4 @@ Exec=opera
 Icon=opera.xpm
 Terminal=0
 Type=Application
-Categories=Qt;Network;WebBrowser;
+Categories=Application;Qt;Network;WebBrowser;
