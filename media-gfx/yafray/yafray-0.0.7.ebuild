@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/yafray/yafray-0.0.7.ebuild,v 1.5 2005/03/22 14:23:13 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/yafray/yafray-0.0.7.ebuild,v 1.6 2005/04/26 19:55:03 lu_zero Exp $
 
-inherit gcc eutils
+inherit gcc eutils python
 
 DESCRIPTION="Yet Another Free Raytracer"
 HOMEPAGE="http://www.yafray.org/"
