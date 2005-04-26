@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.14a.ebuild,v 1.1 2005/04/26 21:25:27 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.14a.ebuild,v 1.2 2005/04/26 21:32:56 seemant Exp $
 
 inherit eutils versionator
 
@@ -218,7 +218,7 @@ src_install() {
 	newconfd ${FILESDIR}/samba-conf samba
 	if use ldap; then
 		insinto /etc/openldap/schema
-		doins ${S}/examples/LDAP/samba.schema
+		doins ${S2}/examples/LDAP/samba.schema
 	fi
 
 	# dirs
