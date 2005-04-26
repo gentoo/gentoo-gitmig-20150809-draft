@@ -1,5 +1,5 @@
-MD5 b06ab0ff492e7bcc16ba3e35e2f2a87b ChangeLog 337
-MD5 a7b9b0cf4a1b43298324eef8b4bc39cc git-pasky-0.7.ebuild 896
+MD5 4efd1b43972e810d9f05df92c4859576 ChangeLog 512
+MD5 2bde98930dce94f2f88eb1d2a4f8bc6c git-pasky-0.7.ebuild 1045
 MD5 78c1b34edd1399c24d7d9e59212bc17a metadata.xml 221
 MD5 1a35829a7608cc88ae10ede9b2cc2630 files/Makefile.patch 674
 MD5 6bf7a8b9b7d8cc7c3473bd48fa9ba5b1 files/commit-id.patch 216

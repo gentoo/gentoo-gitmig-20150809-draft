@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/git-pasky
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/git-pasky/ChangeLog,v 1.1 2005/04/26 00:48:28 r3pek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/git-pasky/ChangeLog,v 1.2 2005/04/26 20:30:34 r3pek Exp $
+
+*git-pasky-0.7 (26 Apr 2005)
+
+  26 Apr 2005; Carlos Silva <r3pek@gentoo.org> git-pasky-0.7.ebuild:
+  Addind ~amd64 keyword and add a einfo saying the git-pasky is deprecated
 
   26 Apr 2005; Carlos Silva <r3pek@gentoo.org> +metadata.xml,
   +files/Makefile.patch, +files/commit-id.patch:

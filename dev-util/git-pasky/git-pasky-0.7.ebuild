@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/git-pasky/git-pasky-0.7.ebuild,v 1.1 2005/04/26 00:48:28 r3pek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/git-pasky/git-pasky-0.7.ebuild,v 1.2 2005/04/26 20:30:34 r3pek Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://kernel.org/pub/software/scm/cogito/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 IUSE="mozsha1 ppcsha1"
 
 DEPEND="dev-libs/openssl
@@ -36,4 +36,9 @@ src_compile() {
 
 src_install() {
 	einstall || die "einstall failed"
+}
+
+pkg_postinst() {
+	einfo "git-pasky is deprecated in favor of cogito."
+	einfo "If you dont really need git-pasky, you should emerge cogito"
 }
