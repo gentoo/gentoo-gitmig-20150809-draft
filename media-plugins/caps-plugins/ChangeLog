@@ -1,6 +1,13 @@
 # ChangeLog for media-plugins/caps-plugins
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/caps-plugins/ChangeLog,v 1.10 2005/04/19 08:20:21 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/caps-plugins/ChangeLog,v 1.11 2005/04/26 20:38:06 fvdpol Exp $
+
+*caps-plugins-0.2.1-r1 (26 Apr 2005)
+
+  26 Apr 2005; Frank van de Pol <fvdpol@gentoo.org>
+  +caps-plugins-0.2.1-r1.ebuild:
+  Fix ladspa plugin installation. Thanks to Sean Bolton <smbolton@jps.net>.
+  Closes bug #83980
 
   19 Apr 2005; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
   Remove retired developer from metadata.xml.
