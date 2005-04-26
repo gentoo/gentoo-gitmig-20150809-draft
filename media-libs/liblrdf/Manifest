@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 c79a0dc84256502e269e8ef3cf55187b liblrdf-0.3.7.ebuild 689
+MD5 51278bef306a03c44cd9ad24abf1db7f ChangeLog 2945
 MD5 c306ebf3bc38bdbdcd79fef4e7c01d7b liblrdf-0.4.0.ebuild 693
-MD5 fb764795b8669010bb0f359e895f3f2a ChangeLog 2822
+MD5 de405b2c800f9031f3f9ab2bdaaffaa1 liblrdf-0.3.7.ebuild 688
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 dde030724ea1ce700421e5220ee41268 files/digest-liblrdf-0.3.7 65
 MD5 3898d0bcc7da8ba222a2c0eceb3b5915 files/digest-liblrdf-0.4.0 65
+MD5 dde030724ea1ce700421e5220ee41268 files/digest-liblrdf-0.3.7 65
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCYA8i06ebR+OMO78RAuJ6AJ97VxsMlrqqMTIoEtHTpV6rE+QU3gCfV40P
-4pDyuBGIhudN5t+XfVILumg=
-=4M3D
+iD8DBQFCbqDNvpz1081QvMkRAqbDAJ4o+zIQT2UtXVEMQb9Yu8vKCtxAgQCgnbTA
+/O+WMP8XDB0auT/u02pgUos=
+=EGhM
 -----END PGP SIGNATURE-----
