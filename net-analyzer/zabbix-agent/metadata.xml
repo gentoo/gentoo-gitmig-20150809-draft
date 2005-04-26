@@ -4,7 +4,7 @@
 <pkgmetadata>
 <herd>no-herd</herd>
   <maintainer>
-    <email>swtaylor@gentoo.org</email>
+    <email>iggy@gentoo.org</email>
   </maintainer>
   <longdescription>ZABBIX is software for monitoring of your applications, network and servers.</longdescription>
 </pkgmetadata>
