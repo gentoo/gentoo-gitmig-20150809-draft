@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.14.4.ebuild,v 1.4 2005/04/25 01:00:35 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.14.4.ebuild,v 1.5 2005/04/26 23:00:45 vapier Exp $
 
 inherit flag-o-matic eutils toolchain-funcs mono libtool elisp-common
 
@@ -68,10 +68,7 @@ src_install() {
 	make install DESTDIR="${D}" || die "install failed"
 	use nls || rm -r "${D}"/usr/share/locale
 	dosym msgfmt /usr/bin/gmsgfmt #43435
-
-	exeopts -m0755
-	exeinto /usr/bin
-	doexe gettext-tools/misc/gettextize || die "doexe"
+	dobin gettext-tools/misc/gettextize || die "gettextize"
 
 	# remove stuff that glibc handles
 	if has_version sys-libs/glibc ; then
@@ -97,17 +94,18 @@ src_install() {
 		fi
 	fi
 
-	if [[ -d ${D}/usr/doc/gettext ]] ; then
-		mv "${D}"/usr/doc/gettext "${D}"/usr/share/doc/${PF}/html
-		rm -r "${D}"/usr/doc
+	if ! use doc ; then
+		rm -r "${D}"/usr/share/doc/${PF}/html
+		rm -r "${D}"/usr/share/doc/${PF}/{csharpdoc,examples,javadoc2,javadoc1}
 	fi
-	use doc || rm -r "${D}"/usr/share/doc/${PF}/html
+	dohtml "${D}"/usr/share/doc/${PF}/*.html
+	rm -f "${D}"/usr/share/doc/${PF}/*.html
 
 	# Remove emacs site-lisp stuff if 'emacs' is not in USE
 	if use emacs ; then
-		elisp-site-file-install ${FILESDIR}/50po-mode-gentoo.el
+		elisp-site-file-install "${FILESDIR}"/50po-mode-gentoo.el
 	else
-		rm -rf ${D}/usr/share/emacs
+		rm -rf "${D}"/usr/share/emacs
 	fi
 
 	dodoc AUTHORS BUGS ChangeLog DISCLAIM NEWS README* THANKS TODO
