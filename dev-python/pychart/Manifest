@@ -3,12 +3,12 @@ Hash: SHA1
 
 MD5 63639eb2aebae570a6b7635baf6765c2 ChangeLog 1014
 MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
-MD5 6c67fa7122e5359e510e60f676c32fbe pychart-1.37.ebuild 818
+MD5 1fc0815f4544a6c236ef3fca5fbfec60 pychart-1.37.ebuild 814
 MD5 83aa0eb64f507550e1768ead86b82fea files/digest-pychart-1.37 64
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCY+WVz2gxt1z4IGYRAqQLAJ45taRopiLlHW4WJfcpOLxu+arRZwCePWGK
-jtWQV80mt4OsfQhmXTWNJDM=
-=oMmI
+iD8DBQFCbipsTM53OX+9xmMRAv+6AJ92AdToJzCJLP72x4eCKotPO97beQCgx0G5
++QWfwuPuhoFWl7VXWWRGixM=
+=SfKo
 -----END PGP SIGNATURE-----

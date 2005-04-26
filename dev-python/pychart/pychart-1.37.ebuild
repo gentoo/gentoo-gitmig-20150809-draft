@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pychart/pychart-1.37.ebuild,v 1.1 2005/04/18 16:51:02 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pychart/pychart-1.37.ebuild,v 1.2 2005/04/26 11:46:30 liquidx Exp $
 
 
 inherit distutils
@@ -12,7 +12,7 @@ SRC_URI="http://download.gna.org/pychart/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc"
 IUSE=""
 
 DEPEND=">=dev-lang/python-2.2.2
