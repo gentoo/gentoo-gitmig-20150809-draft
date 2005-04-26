@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/imagemagick
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/ChangeLog,v 1.134 2005/04/20 14:47:43 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/ChangeLog,v 1.135 2005/04/26 19:58:41 sekretarz Exp $
+
+*imagemagick-6.2.2.0 (26 Apr 2005)
+
+  26 Apr 2005; Karol Wojtaszek <sekretarz@gentoo.org>
+  +imagemagick-6.2.2.0.ebuild:
+  Version bump, this release fixes heap-overflow vulnerability reported by
+  Damian Put (http://www.overflow.pl/adv/imheapoverflow.txt)
 
 *imagemagick-6.2.1.5 (20 Apr 2005)
 
