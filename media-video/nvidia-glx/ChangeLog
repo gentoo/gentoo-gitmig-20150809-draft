@@ -1,6 +1,13 @@
 # ChangeLog for media-video/nvidia-glx
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/ChangeLog,v 1.88 2005/04/25 05:10:46 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/ChangeLog,v 1.89 2005/04/26 02:43:45 eradicator Exp $
+
+*nvidia-glx-1.0.7174-r2 (26 Apr 2005)
+
+  26 Apr 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  +nvidia-glx-1.0.7174-r2.ebuild:
+  Hopefully solve bug #90047 which causes havoc with different
+  nptl/linuxthreads/tls configurations.
 
   25 Apr 2005; Donnie Berkholz <spyderous@gentoo.org>; metadata.xml:
   Update maintainer to x11-drivers.
