@@ -1,4 +1,14 @@
-MD5 f25d427958989bf87769d7d4f77bf636 ChangeLog 1344
-MD5 cc22e45861993a9d666591cf1ea276f3 beep-1.2.2.ebuild 675
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 cfca3d57caa467965e5615e2e07f18dd ChangeLog 1421
+MD5 336805e635281ce4a925ff680ddb09f6 beep-1.2.2.ebuild 678
 MD5 dd3d9cc0fdfaa622a04cb071b1074feb metadata.xml 262
 MD5 32c9843b54fcfb0268d6d8f197f84f4d files/digest-beep-1.2.2 61
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCbjmK60LfUIagIAkRApQiAJ93iRsNwEWxOEM8CrmCTjujTyKafQCgn2X6
+L5bdUL0+FTT7iWBchQGt4yY=
+=nOZO
+-----END PGP SIGNATURE-----
