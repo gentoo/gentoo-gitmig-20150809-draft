@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/blender
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.53 2005/04/07 23:40:16 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.54 2005/04/26 20:04:10 lu_zero Exp $
+
+  26 Apr 2005; Luca Barbato <lu_zero@gentoo.org> blender-2.36-r1.ebuild:
+  inheriting python eclass
 
   07 Apr 2005; Marcus D. Hanwell <cryos@gentoo.org> blender-2.36-r1.ebuild:
   Added ~amd64 back into KEYWORDS.

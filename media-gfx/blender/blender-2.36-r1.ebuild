@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.36-r1.ebuild,v 1.7 2005/04/07 23:40:16 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.36-r1.ebuild,v 1.8 2005/04/26 20:04:10 lu_zero Exp $
 
-inherit flag-o-matic eutils
+inherit flag-o-matic eutils python
 
 #IUSE="sdl jpeg png mozilla truetype static fmod"
 IUSE="nls"  #blender-game" # blender-plugin"
