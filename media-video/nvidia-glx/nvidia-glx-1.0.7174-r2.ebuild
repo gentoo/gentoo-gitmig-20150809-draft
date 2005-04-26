@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/nvidia-glx-1.0.7174-r2.ebuild,v 1.2 2005/04/26 02:44:26 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/nvidia-glx-1.0.7174-r2.ebuild,v 1.3 2005/04/26 20:23:50 eradicator Exp $
 
 inherit eutils multilib versionator
 
@@ -258,4 +258,8 @@ nptl_in_tlsdir() {
 	built_with_use sys-libs/glibc nptlonly && return 1
 
 	built_with_use sys-libs/glibc nptl
+}
+
+pkg_postrm() {
+        opengl-update --use-old xorg-x11
 }

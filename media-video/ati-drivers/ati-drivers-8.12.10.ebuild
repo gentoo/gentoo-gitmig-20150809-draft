@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-8.12.10.ebuild,v 1.5 2005/04/11 11:39:25 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-8.12.10.ebuild,v 1.6 2005/04/26 20:24:01 eradicator Exp $
 
 IUSE="opengl"
 
@@ -247,3 +247,8 @@ pkg_postinst() {
 	# DRM module
 	update-modules
 }
+
+pkg_postrm() {
+	opengl-update --use-old xorg-x11
+}
+
