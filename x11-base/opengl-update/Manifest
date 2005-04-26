@@ -1,16 +1,19 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 3b7b8632e4d597c52ac1b7e4588ecedf ChangeLog 15908
+MD5 68f0d484f931a75d6b84139bc275ca91 ChangeLog 16366
 MD5 f4a810bc95a74e27b27973e4e948a937 metadata.xml 358
+MD5 a399ad7683bf54daf28aa9a6cc8383c5 opengl-update-2.2.0.ebuild 2772
 MD5 7acbfac090d4bdc3b7ec492bc35b917d opengl-update-2.1.1-r1.ebuild 2420
+MD5 219a292f64caeaa46b333eecde2197f2 files/digest-opengl-update-2.2.0 116
+MD5 d52698bb4f88165617816cb56b45e993 files/opengl-update-2.2.0 9426
 MD5 91d9c17541be018d065a7838d7149c86 files/opengl-update-2.1.1 9110
 MD5 bbec0e16e4f45a464cec5b4feeecaa9b files/digest-opengl-update-2.1.1-r1 116
 MD5 ca73e0f8c9b114553216930eb0eb601a files/glxext.h-inttypes.patch 677
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCYESGArHZZzCEUG0RAiZrAJ0SgSQaRruwNyHEWsi/djhA6Jdg7QCfXh3T
-eCM63q9LvZvcF8CWr8OmtKE=
-=Ujn5
+iD8DBQFCbagRArHZZzCEUG0RAln2AJ4tW0srDdjEVuVuPO9SXExhj3M9VwCeKUxB
+t8n/zr5XWbSQ9dtRESLZt4A=
+=RtBx
 -----END PGP SIGNATURE-----
