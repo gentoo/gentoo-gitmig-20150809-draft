@@ -1,0 +1,14 @@
+diff -x '*~' -ur xine-lib-1.0.1-configure/configure.ac xine-lib-1.0.1-configure-bis/configure.ac
+--- xine-lib-1.0.1-configure/configure.ac	2005-04-26 21:41:10.965118216 +0200
++++ xine-lib-1.0.1-configure-bis/configure.ac	2005-04-26 21:39:19.363084304 +0200
+@@ -1039,7 +1039,9 @@
+ dnl ---------------------------------------------
+ AC_ARG_ENABLE([speex],
+   AC_HELP_STRING([--disable-speex], [do not build speex support]),
+-  [with_speex=$enableval], [with_flac=yes])
++  [with_speex=$enableval], [with_speex=yes])
++
++no_speex=yes
+ 
+ if test "x$with_speex" = "xyes"; then
+   PKG_CHECK_MODULES(SPEEX, speex, [

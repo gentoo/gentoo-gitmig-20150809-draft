@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.0.1.ebuild,v 1.1 2005/04/26 13:17:45 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.0.1.ebuild,v 1.2 2005/04/26 20:08:28 flameeyes Exp $
 
 inherit eutils flag-o-matic gcc libtool
 
@@ -58,6 +58,7 @@ src_unpack() {
 
 	# Adds --disable- params
 	epatch ${DISTDIR}/${P}-configure-checks.patch.bz2
+	epatch ${FILESDIR}/${P}-configurebis.patch
 
 	# plasmaroo: Kernel 2.6 headers patch
 	epatch ${FILESDIR}/${PN}-1_rc7-2.6.patch
