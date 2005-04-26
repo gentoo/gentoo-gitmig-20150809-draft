@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3875 2005/04/26 11:55:19 ferdy Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3876 2005/04/26 22:28:53 swegener Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -260,10 +260,6 @@ net-print/pdq
 # Rob Holland <tigger@gentoo.org> (21 March 2005)
 # marked due to bad code #84659
 net-misc/dyndnsupdate
-
-# Sven Wegener <swegener@gentoo.org> (20 Mar 2005)
-# pre-release versions that need testing
->=net-irc/ptlink-services-3.0.0_pre0
 
 # Aaron Walker <ka0ttic@gentoo.org> (18 Mar 2005)
 # buffer overflows galore; pending removal.
