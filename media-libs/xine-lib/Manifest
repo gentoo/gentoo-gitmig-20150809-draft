@@ -6,8 +6,9 @@ MD5 60f92c0bf2f960ee5fe72cfd8b60e60b xine-lib-1_rc8-r1.ebuild 5688
 MD5 85910e7a6aab4d7728ccdd55c1f0664b xine-lib-1.0-r2.ebuild 7506
 MD5 9415e56720946429be1cd7c6142f4351 xine-lib-1.0-r3.ebuild 7578
 MD5 79cd4ff146e065a636eae4001b6d0b6a xine-lib-1.0-r4.ebuild 7845
-MD5 1406a002f16e83afedca5c76703f29e6 ChangeLog 5067
+MD5 a75ab7810b28d78a4c9aafe6f24fa372 ChangeLog 5306
 MD5 d55745ddf67346fde75c395be629afe0 xine-lib-1_rc6-r2.ebuild 5698
+MD5 adcea5f4bf522daca64270e63f43f01a xine-lib-1.0.1.ebuild 7652
 MD5 bcd5f2b8999f92c2f7215009f5ae1490 files/configure-64bit-define.patch 221
 MD5 1780c88522c9a26856effa70a0e27b50 files/digest-xine-lib-1.0 65
 MD5 1780c88522c9a26856effa70a0e27b50 files/digest-xine-lib-1.0-r1 65
@@ -36,7 +37,6 @@ MD5 bf2bb27a1f0433ea77571175f2b59885 files/xine-lib-1_rc7-pic.patch 2655
 MD5 3704271d4339b919569b4ea416a4c34e files/xine-lib-1_rc8-configure.ac.patch 2825
 MD5 5ddf5d90566965b047828407dcc0f5d1 files/xine-lib-1rc4-libtool1.5.6.shrext_cmds.patch 331
 MD5 a52bac7d568413597e0c7932b164e58c files/xine-lib-2.6.patch 594
-MD5 08c1c3433fe4230c788156a2e625962a files/xine-lib-configure-checks.patch 11823
 MD5 d0a2aa9bcd1263077cd8e3fe974b6910 files/xine-lib-configure-xvmc-header.patch 901
 MD5 d8f3138ae2260f7c98bf46ae7159be11 files/xine-lib-configure.ac.patch 926
 MD5 0cf698a9ff87a3595140d92df7b900b6 files/xine-lib-configure.patch 342
@@ -53,3 +53,5 @@ MD5 1780c88522c9a26856effa70a0e27b50 files/digest-xine-lib-1.0-r4 65
 MD5 665e9af72fa8604db8d82231f484c230 files/xine-lib-1.0-wma.patch 1741
 MD5 2af79240f045a98737726ddca302c374 files/xine-lib-1_rc6-XSA-2004-8.patch 1515
 MD5 082b3ed1c96543704d604199047b1dee files/digest-xine-lib-1_rc6-r2 68
+MD5 ede6afa1de160c2e6511c4075013d216 files/digest-xine-lib-1.0.1 151
+MD5 08c1c3433fe4230c788156a2e625962a files/xine-lib-configure-checks.patch 11823

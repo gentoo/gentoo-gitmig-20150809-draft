@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.213 2005/04/25 16:49:43 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.214 2005/04/26 13:17:45 flameeyes Exp $
+
+*xine-lib-1.0.1 (26 Apr 2005)
+
+  26 Apr 2005; Diego Pettenò <flameeyes@gentoo.org> +xine-lib-1.0.1.ebuild:
+  Added new upstream version 1.0.1, with new configure patch. Dropped patches
+  applied upstream. Made speex useflag be honoured.
 
 *xine-lib-1_rc6-r2 (25 Apr 2005)
 
