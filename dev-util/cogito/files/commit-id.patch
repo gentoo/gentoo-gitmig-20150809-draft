@@ -1,0 +1,11 @@
+--- commit-id.old	2005-04-26 21:01:20.300139824 +0100
++++ commit-id	2005-04-26 21:02:10.335884208 +0100
+@@ -32,7 +32,7 @@
+ 	exit 1
+ fi
+ 
+-if [ "$(cat-file -t "$id")" != "commit" ]; then
++if [ "$(./cat-file -t "$id")" != "commit" ]; then
+ 	echo "Invalid id: $id" >&2
+ 	exit 1
+ fi
