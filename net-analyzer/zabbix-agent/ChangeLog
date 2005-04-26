@@ -1,0 +1,40 @@
+# ChangeLog for net-analyzer/zabbix-agent
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix-agent/ChangeLog,v 1.1 2005/04/26 21:46:18 iggy Exp $
+
+*zabbix-agent-1.1_alpha7 (26 Apr 2005)
+*zabbix-agent-1.0 (26 Apr 2005)
+
+  26 Apr 2005; Brian Jackson <iggy@gentoo.org>
+  +files/1.0/conf.d/zabbix-agentd, +files/1.0/init.d/zabbix-agentd,
+  +files/1.0/zabbix_agent.conf, +files/1.1_alpha7/conf.d/zabbix-agentd,
+  +files/1.0/zabbix_agentd.conf, +files/1.1_alpha7/init.d/zabbix-agentd,
+  +files/1.1_alpha7/zabbix_agent.conf, +files/1.1_alpha7/zabbix_agentd.conf,
+  +metadata.xml, +zabbix-agent-1.0.ebuild, +zabbix-agent-1.1_alpha7.ebuild:
+  Initial commit to Gentoo's cvs, huge thanks to Norguhtar
+  <sauronATinfocentr.ru> (bug #90005\), and all the people on bug #58123
+
+  21 Mar 2005; Kirill Tikhonov zabbix-agent-1.1_alpha7.ebuild:
+  Add ~sparc to KEYWORD.
+
+*zabbix-agent-1.1_alpha7 (21 Mar 2005)
+
+  21 Mar 2005; Anatoly Shipitsin <sauron@infocentr.ru> zabbix-agent-1.1_alpha7.ebuild :
+  Version bump.
+
+  20 Mar 2005; Anatoly Shipitsin <sauron@infocentr.ru> zabbix-agent-1.0.ebuild, zabbix-agent-1.1_alpha5.ebuild,
+  zabbix-agent-1.1_alpha5-r1.ebuild:
+  Fix bugs on reemerge.
+
+*zabbix-agent-1.1_alpha5-r1 (16 Feb 2005)
+
+  8 Feb 2005; Anatoly Shipitsin <sauron@infocentr.ru> zabbix-agent-1.0.ebuild :
+  Version Bump.
+
+  16 Mar 2005; Kirill Tikhonov zabbix-agent-1.1_alpha5.ebuild, zabbix-agent-1.1_alpha5-r1.ebuild:
+  Add ~sparc to KEYWORD. Fixed shell from /bin/nologin to /bin/false.
+
+*zabbix-agent-1.0 (7 Feb 2005)
+
+  7 Feb 2005; Anatoly Shipitsin <sauron@infocentr.ru> zabbix-agent-1.0.ebuild :
+  Initial import. Ebuild submitted by Anatoly Shipitsin <sauron@infocentr.ru>

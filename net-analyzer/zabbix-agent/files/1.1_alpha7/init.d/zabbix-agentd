@@ -1,0 +1,22 @@
+#!/sbin/runscript
+# Copyright 1999-2004 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header:
+
+opts="${opts} reload"
+
+depend() {
+		need net
+		provide zabbix-agent
+}
+
+start() {
+	ebegin "Starting Zabbix agent"
+	start-stop-daemon --start --exec /usr/sbin/zabbix_agentd
+	eend
+}
+stop() {
+	ebegin "Stopping Zabbix agent"
+	start-stop-daemon  --stop --pid $PID
+	eend
+}

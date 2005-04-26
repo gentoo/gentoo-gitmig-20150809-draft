@@ -1,0 +1,7 @@
+# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix-agent/files/1.0/conf.d/zabbix-agentd,v 1.1 2005/04/26 21:46:18 iggy Exp $
+
+# Config file for /etc/conf.d/zabbix-agentd
+
+PID="/var/run/zabbix/zabbix_agentd.pid"
