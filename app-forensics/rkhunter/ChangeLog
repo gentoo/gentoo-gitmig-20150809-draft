@@ -1,6 +1,15 @@
 # ChangeLog for app-forensics/rkhunter
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/rkhunter/ChangeLog,v 1.37 2005/04/25 19:25:43 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/rkhunter/ChangeLog,v 1.38 2005/04/26 11:45:49 ka0ttic Exp $
+
+*rkhunter-1.2.4 (26 Apr 2005)
+
+  26 Apr 2005; Aaron Walker <ka0ttic@gentoo.org>
+  -files/rkhunter-1.1.9-specify-logfile.patch,
+  -files/rkhunter-1.2.0-specify-logfile.patch, -rkhunter-1.1.9.ebuild,
+  -rkhunter-1.2.1.ebuild, -rkhunter-1.2.3.ebuild, +rkhunter-1.2.4.ebuild:
+  Version bump; still suffers from sec bug 90007, so use taviso's patch. Tidy
+  old ebuilds.
 
   25 Apr 2005; Bryan Østergaard <kloeri@gentoo.org>
   rkhunter-1.2.3-r1.ebuild:
