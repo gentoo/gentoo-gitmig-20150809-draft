@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/amd64/use.mask,v 1.3 2004/09/01 20:25:25 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/amd64/use.mask,v 1.4 2005/04/26 00:51:02 solar Exp $
 
 #unknowns
 afs
@@ -78,3 +78,6 @@ pfpro
 solid
 sybase
 sybase-ct
+
+# Breaks reverse deps. USE="-*" emerge -pve --tree dbus
+mono
