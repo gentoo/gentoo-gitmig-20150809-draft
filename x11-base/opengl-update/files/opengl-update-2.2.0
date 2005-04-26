@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/files/opengl-update-2.2.0,v 1.1 2005/04/26 02:31:27 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/files/opengl-update-2.2.0,v 1.2 2005/04/26 19:57:46 eradicator Exp $
 # Author:  Martin Schlemmer <azarah@gentoo.org>
 # Further modifications by Donnie Berkholz <spyderous@gentoo.org>
 # Further modifications based off submissions to bug #54984 <cyfred@gentoo.org>
@@ -84,11 +84,11 @@ print_usage() {
 Usage: ${0##*/} [<options>] <GL implementation>
        Set the opengl implementation.
        Valid options:
-       --use-old: only change the implementation if isn't already set.
-       --prefix: set the source prefix (default: /usr)
-       --dst-prefix: set the destination prefix (default: /usr)
-       --impl-headers: Use headers provided by this implementation to
-                       override golbal ones provided by opengl-update.
+       --use-old:          If an implementation is already set, use that one.
+       --prefix=<val>:     Set the source prefix (default: /usr)
+       --dst-prefix=<val>: Set the destination prefix (default: /usr)
+       --impl-headers:     Use headers provided by this implementation to
+                           override golbal ones provided by opengl-update.
 
 Usage: ${0##*/} --get-implementation
        Print the current implementaion
@@ -122,7 +122,7 @@ parse_options() {
 					eerror "Invalid usage."
 				else
 					if [[ -n "${CURRENT_GL_IMPLEM}" ]] && hasq ${CURRENT_GL_IMPLEM} ${AVAIL_IMPLEMS}; then
-						ACTION="nothing"
+						ACTION="old-implementation"
 					fi
 				fi				
 			;;
@@ -332,6 +332,10 @@ case ${ACTION} in
 		else
 			exit 2
 		fi
+	;;
+	old-implementation)
+		set-new-implementation ${CURRENT_GL_IMPLEM}
+		exit $?
 	;;
 	set-implementation)
 		if [[ -n "${NEW_GL_IMPLEM}" ]]; then
