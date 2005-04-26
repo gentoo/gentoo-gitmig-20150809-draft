@@ -1,9 +1,19 @@
 # ChangeLog for dev-python/rpy
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/rpy/ChangeLog,v 1.6 2004/12/31 00:34:54 ciaranm Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rpy/ChangeLog,v 1.7 2005/04/26 13:27:34 liquidx Exp $
+
+*rpy-0.3.5-r1 (26 Apr 2005)
+
+  26 Apr 2005; Alastair Tse <liquidx@gentoo.org>
+  +files/rpy-0.3.5-cvs_backport.patch, rpy-0.3.5.ebuild,
+  +rpy-0.3.5-r1.ebuild:
+  revision bump to compile with R-2.0.0 via some ugly hack
 
   31 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
+
+  19 Oct 2004; Alastair Tse <liquidx@gentoo.org> rpy-0.3.5.ebuild:
+  pegging dep on dev-lang/R-1.91 because 2.0.0 doesn't work with these bindings
 
   18 Oct 2004; Alastair Tse <liquidx@gentoo.org> rpy-0.3.5.ebuild:
   fix problem with undefined reference to MAIN__ if using libf2c
