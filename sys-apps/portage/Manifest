@@ -3,24 +3,21 @@ Hash: SHA1
 
 MD5 30d382e0a20f8b25e643e0e4ac60e949 ChangeLog 806
 MD5 c697b628359c7055961817876804f0a6 metadata.xml 221
-MD5 f9fd4371c2fb44b47a0a5d3cfd4f118c portage-2.0.51.18.ebuild 13211
 MD5 b169f143c9eb3069924e41f10e8d40ac portage-2.0.51-r15.ebuild 13133
+MD5 f9fd4371c2fb44b47a0a5d3cfd4f118c portage-2.0.51.18.ebuild 13211
 MD5 985b398e1a2d623efa13c1c1fbe18119 portage-2.0.51.19.ebuild 13211
-MD5 2409c3aefb8aba120ea09d6654b86f19 portage-2.0.51.20-r4.ebuild 6276
+MD5 dda3e1390650b36d3600e8a4aa91c15e portage-2.0.51.20-r5.ebuild 6063
 MD5 a754ca9e2eea9f8484bf5f93d339043a files/README.RESCUE 1911
+MD5 99e1115b7cb92bf81695feace57456da files/digest-portage-2.0.51-r15 71
 MD5 4458663c2aa36fb828981a89ffcaac97 files/digest-portage-2.0.51.18 70
 MD5 f8627c17a73d8568e94f92ea15c69360 files/digest-portage-2.0.51.19 70
-MD5 5f2f342d78aec333f4136420afd6a31f files/digest-portage-2.0.51.20-r4 70
-MD5 47a7436ab36074e8d1c7db19edb2c65a files/dispatch-conf-fixes.patch 1244
 MD5 8c6ba58bbfddca72824b15dacbed69ec files/gcc-2.95-libsandbox.patch 1163
-MD5 99e1115b7cb92bf81695feace57456da files/digest-portage-2.0.51-r15 71
-MD5 77b9bad3d53c36ce5ef3ecdf16554d5a files/emerge-fixes.patch 685
-MD5 a144de1dc5bb195a0a71fd2a5fd572fd files/portage-fixes.patch 1012
-MD5 502ca546fcf8ca5141435a9edee6a57f files/repoman-fixes.patch 417
+MD5 5f2f342d78aec333f4136420afd6a31f files/digest-portage-2.0.51.20-r5 70
+MD5 6e8c5fcce08e1dff0adc43bacec164c4 files/2.0.51.20-fixes.patch 8265
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCa+T7ArHZZzCEUG0RAg7VAJ47ZWxoxRA9LWp4jw2QZfGoBH/RJQCeJy2W
-b2jfgLRtuePUYEAWBBiVGHU=
-=vk0f
+iD8DBQFCbizdxvWNPsk/ZP4RArWvAKCyvIxFdnUalpVp+/o0gexM7XuLMwCbB2i+
+2n5XfBMp7fAQny9t1fxppeI=
+=qbdl
 -----END PGP SIGNATURE-----

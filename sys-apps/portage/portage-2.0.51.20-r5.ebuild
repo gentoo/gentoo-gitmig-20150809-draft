@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.51.20-r4.ebuild,v 1.2 2005/04/24 18:26:42 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.51.20-r5.ebuild,v 1.1 2005/04/26 11:58:51 jstubbs Exp $
 
 inherit toolchain-funcs
 
@@ -13,10 +13,6 @@ LICENSE="GPL-2"
 SLOT="0"
 #KEYWORDS=" alpha  amd64  arm  hppa  ia64  mips  ppc  ppc-macos  ppc64  s390  sh  sparc  x86"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc-macos ~ppc64 ~s390 ~sh ~sparc ~x86"
-RESTRICT="nosandbox sandbox"
-
-# Disable the sandbox on portages that don't support RESTRICT="nosandbox"
-export SANDBOX_DISABLED="1"
 
 IUSE="build selinux"
 DEPEND=""
@@ -31,10 +27,7 @@ python_has_lchown() {
 
 src_unpack() {
 	unpack ${A}
-	patch -d ${S} -p0 -g0 < ${FILESDIR}/emerge-fixes.patch
-	patch -d ${S} -p0 -g0 < ${FILESDIR}/portage-fixes.patch
-	patch -d ${S} -p0 -g0 < ${FILESDIR}/dispatch-conf-fixes.patch
-	patch -d ${S} -p0 -g0 < ${FILESDIR}/repoman-fixes.patch
+	patch -d ${S} -p1 -g0 < ${FILESDIR}/2.0.51.20-fixes.patch
 }
 
 src_compile() {
@@ -119,6 +112,9 @@ pkg_preinst() {
 		mv ${IMAGE}/usr/lib/portage/bin/tbz2tool ${T}
 		rm -rf ${IMAGE}/usr/lib/portage/bin/*
 		mv ${T}/tbz2tool ${IMAGE}/usr/lib/portage/bin/
+	else
+		rm /usr/lib/portage/pym/*.pyc >& /dev/null
+		rm /usr/lib/portage/pym/*.pyo >& /dev/null
 	fi
 }
 
