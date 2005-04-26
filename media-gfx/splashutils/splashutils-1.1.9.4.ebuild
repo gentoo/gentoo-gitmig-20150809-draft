@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.1.9.4.ebuild,v 1.1 2005/04/24 20:19:59 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.1.9.4.ebuild,v 1.2 2005/04/26 12:26:40 spock Exp $
 
 MISCSPLASH="miscsplashutils-0.1.3"
 GENTOOSPLASH="splashutils-gentoo-0.1.8"
@@ -141,7 +141,6 @@ src_install() {
 
 	dodir /etc/splash/{emergence,gentoo}
 	cp -pR ${WORKDIR}/{emergence,gentoo} ${D}/etc/splash
-	ln -s emergence ${D}/etc/splash/default
 	dodoc docs/* README AUTHORS
 
 	if [ ! -e ${ROOT}/etc/splash/default ]; then
@@ -151,7 +150,7 @@ src_install() {
 
 pkg_postinst() {
 	ewarn "Due to a change in the splash protocol you will have to rebuild"
-	ewarn "all initrds created with splashutils < 1.1.9. This can be done "
+	ewarn "all initrds created with splashutils < 1.1.9. This can be done"
 	ewarn "with the splash_geninitramsfs script."
 	echo ""
 	einfo "For best effects, this new version of splashutils requires some"
