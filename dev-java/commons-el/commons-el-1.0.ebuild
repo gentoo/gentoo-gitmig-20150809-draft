@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-el/commons-el-1.0.ebuild,v 1.9 2005/04/14 21:17:00 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-el/commons-el-1.0.ebuild,v 1.10 2005/04/26 14:06:09 luckyduck Exp $
 
 inherit java-pkg
 
@@ -47,5 +47,5 @@ src_install () {
 	dodoc LICENSE.txt RELEASE-NOTES.txt
 	dohtml STATUS.html PROPOSAL.html
 
-	use source && java-pkg_dosrc
+	use source && java-pkg_dosrc src/java/org
 }
