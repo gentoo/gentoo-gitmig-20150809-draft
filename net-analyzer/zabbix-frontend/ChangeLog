@@ -1,0 +1,11 @@
+# ChangeLog for net-analyzer/zabbix-frontend
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix-frontend/ChangeLog,v 1.1 2005/04/26 22:17:42 iggy Exp $
+
+*zabbix-frontend-1.1_alpha7 (26 Apr 2005)
+
+  26 Apr 2005; Brian Jackson <iggy@gentoo.org> +metadata.xml,
+  +zabbix-frontend-1.1_alpha7.ebuild:
+  Initial commit to Gentoo's cvs, huge thanks to Norguhtar
+  <sauronATinfocentr.ru> (bug #90005), and all the people on bug #58123
+
