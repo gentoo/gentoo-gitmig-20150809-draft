@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/a52dec/a52dec-0.7.4-r4.ebuild,v 1.6 2005/04/24 09:14:07 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/a52dec/a52dec-0.7.4-r4.ebuild,v 1.7 2005/04/26 01:20:52 eradicator Exp $
 
 inherit eutils flag-o-matic libtool
 
@@ -10,7 +10,7 @@ SRC_URI="http://liba52.sourceforge.net/files/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 ~ppc-macos ~sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 ~ppc-macos sparc x86"
 IUSE="oss djbfft"
 
 DEPEND=">=sys-devel/autoconf-2.5
