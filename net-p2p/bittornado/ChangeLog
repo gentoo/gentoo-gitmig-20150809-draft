@@ -1,6 +1,12 @@
 # ChangeLog for net-p2p/bittornado
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittornado/ChangeLog,v 1.34 2005/04/09 12:48:04 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittornado/ChangeLog,v 1.35 2005/04/26 21:54:48 sekretarz Exp $
+
+*bittornado-0.3.12 (26 Apr 2005)
+
+  26 Apr 2005; Karol Wojtaszek <sekretarz@gentoo.org>
+  +bittornado-0.3.12.ebuild:
+  Version bump, bug #88772
 
   09 Apr 2005; Markus Rothe <corsair@gentoo.org> bittornado-0.3.10.ebuild:
   Stable on ppc64
