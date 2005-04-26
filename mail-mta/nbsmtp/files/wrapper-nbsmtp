@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 _newaliases() {
-	echo "${0}: nbSMTP does not support aliases"
+	echo "newaliases: nbSMTP does not support aliases"
 }
 
 case "${0##*/}" in
@@ -24,4 +24,4 @@ case "${0##*/}" in
 	;;
 esac
 
-exit ${?}
+exit $?

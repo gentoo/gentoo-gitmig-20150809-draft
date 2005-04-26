@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/nbsmtp/nbsmtp-0.98-r1.ebuild,v 1.2 2005/04/25 16:35:07 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/nbsmtp/nbsmtp-0.98-r1.ebuild,v 1.3 2005/04/26 18:16:41 ferdy Exp $
 
 inherit mailer
 
@@ -28,12 +28,13 @@ src_compile() {
 }
 
 src_install() {
-	dodir /usr/bin
+	dodir /usr/bin /usr/sbin /usr/lib
 	dobin nbsmtp
 	doman nbsmtprc.5 nbsmtp.8
 	dodoc INSTALL DOCS Doxyfile
 
 	dobin ${FILESDIR}/wrapper-nbsmtp
+	dobin ${FILESDIR}/nbqueue
 
 	if use mailwrapper ; then
 		dohard /usr/bin/wrapper-nbsmtp /usr/bin/sendmail.nbsmtp
@@ -43,8 +44,8 @@ src_install() {
 	else
 		dohard /usr/bin/wrapper-nbsmtp /usr/bin/sendmail
 		dohard /usr/bin/wrapper-nbsmtp /usr/sbin/sendmail
+		dohard /usr/bin/wrapper-nbsmtp /usr/lib/sendmail
 		dohard /usr/bin/wrapper-nbsmtp /usr/bin/mailq
 		dohard /usr/bin/wrapper-nbsmtp /usr/bin/newaliases
 	fi
-
 }
