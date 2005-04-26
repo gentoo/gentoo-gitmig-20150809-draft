@@ -7,11 +7,11 @@ MD5 f7cb8cb9f3865b8490784699e92bbc6c ChangeLog 1594
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
 MD5 c99a26bd6ed6b3b450d77f9c3ef0e823 files/digest-esmtp-0.5.0-r1 64
 MD5 c99a26bd6ed6b3b450d77f9c3ef0e823 files/digest-esmtp-0.5.0-r2 64
-MD5 1288d6fd07e3533a4a77d3ce14964442 files/mailer.conf 294
+MD5 42fb8e733cb3c85a6d1de97c8f27df34 files/mailer.conf 290
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCbiu/ViELBEf1JB0RAsKBAJ0UF5DIy9zm+ePIG6EbGCyu7sTsPACfcct7
-xwM0KoBj7kdlVLWDvd2+ALc=
-=9lbO
+iD8DBQFCboMzViELBEf1JB0RAhFQAJ41ydVupEyy5boL7Ko8bg4ul4c/wACeJ4li
+PAMkIrP8KvGTzspByt+YkpA=
+=QqN3
 -----END PGP SIGNATURE-----
