@@ -2,48 +2,41 @@ Patch taken from upstream cvs to fix funky blue tinting.
 
 --- src/pixmap.c
 +++ src/pixmap.c
-@@ -1649,12 +1649,12 @@
-                 int r, g, b;
+@@ -54,2 +54,7 @@
  
- # ifdef WORDS_BIGENDIAN
--                r = (ptr[x + 1] * rm) >> 8;
--                g = (ptr[x + 2] * gm) >> 8;
--                b = (ptr[x + 3] * bm) >> 8;
--                ptr[x + 1] = r;
--                ptr[x + 2] = g;
--                ptr[x + 3] = b;
-+                r = (ptr[x + 6] * rm) >> 8;
-+                g = (ptr[x + 5] * gm) >> 8;
-+                b = (ptr[x + 4] * bm) >> 8;
-+                ptr[x + 6] = r;
-+                ptr[x + 5] = g;
-+                ptr[x + 4] = b;
- # else
-                 r = (ptr[x + 2] * rm) >> 8;
-                 g = (ptr[x + 1] * gm) >> 8;
-@@ -1672,9 +1672,9 @@
-                 int r, g, b;
++/* FIXME:  Workaround for older versions of libast. */
++#ifndef WORDS_BIGENDIAN
++#  define WORDS_BIGENDIAN 0
++#endif
++
+ /* Assembler routines */
+@@ -1636,3 +1641,3 @@
  
- # ifdef WORDS_BIGENDIAN
--                r = (ptr[x + 1] * rm) >> 8;
--                g = (ptr[x + 2] * gm) >> 8;
--                b = (ptr[x + 3] * bm) >> 8;
-+                r = (ptr[x + 6] * rm) >> 8;
-+                g = (ptr[x + 5] * gm) >> 8;
-+                b = (ptr[x + 4] * bm) >> 8;
- # else
-                 r = (ptr[x + 2] * rm) >> 8;
-                 g = (ptr[x + 1] * gm) >> 8;
-@@ -1684,9 +1684,9 @@
-                 g |= (!(g >> 8) - 1);
+-# ifdef WORDS_BIGENDIAN
++# if WORDS_BIGENDIAN
+                 r = (ptr[x + 1] * rm) >> 8;
+@@ -1659,3 +1664,3 @@
+ 
+-# ifdef WORDS_BIGENDIAN
++# if WORDS_BIGENDIAN
+                 r = (ptr[x + 1] * rm) >> 8;
+@@ -1671,3 +1676,3 @@
                  b |= (!(b >> 8) - 1);
- # ifdef WORDS_BIGENDIAN
--                ptr[x + 1] = r;
--                ptr[x + 2] = g;
--                ptr[x + 3] = b;
-+                ptr[x + 6] = r;
-+                ptr[x + 5] = g;
-+                ptr[x + 4] = b;
- # else
-                 ptr[x + 2] = r;
-                 ptr[x + 1] = g;
+-# ifdef WORDS_BIGENDIAN
++# if WORDS_BIGENDIAN
+                 ptr[x + 1] = r;
+@@ -1701,3 +1706,3 @@
+ 
+-# ifdef WORDS_BIGENDIAN
++# if WORDS_BIGENDIAN
+                 r = (ptr[x + 0] * rm) >> 8;
+@@ -1724,3 +1729,3 @@
+ 
+-# ifdef WORDS_BIGENDIAN
++# if WORDS_BIGENDIAN
+                 r = (ptr[x + 0] * rm) >> 8;
+@@ -1736,3 +1741,3 @@
+                 b |= (!(b >> 8) - 1);
+-# ifdef WORDS_BIGENDIAN
++# if WORDS_BIGENDIAN
+                 ptr[x + 0] = r;
