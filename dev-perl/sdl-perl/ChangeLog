@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/sdl-perl
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/sdl-perl/ChangeLog,v 1.18 2005/03/16 16:07:43 mcummings Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/sdl-perl/ChangeLog,v 1.19 2005/04/26 23:47:06 vapier Exp $
+
+*sdl-perl-1.20.3-r1 (26 Apr 2005)
+
+  26 Apr 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/sdl-perl-1.20.3-pie-typo.patch, +sdl-perl-1.20.3-r1.ebuild:
+  Fix filledpie typo #30599 by Ryan Egesdahl.
 
   16 Mar 2005; Michael Cummings <mcummings@gentoo.org>
   sdl-perl-2.1.2-r1.ebuild:
