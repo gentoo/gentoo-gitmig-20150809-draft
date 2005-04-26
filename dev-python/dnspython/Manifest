@@ -2,15 +2,15 @@
 Hash: SHA1
 
 MD5 bcc31339c5c737fb52ef51b77326ce36 ChangeLog 1746
-MD5 9212256e2d9ce5aff7f56d269e30ef3b metadata.xml 654
-MD5 4a447e4d680e5b32ee6efb225542f82f dnspython-1.3.3.ebuild 948
 MD5 5c6716def3b559f745ada456bf396a1d dnspython-1.3.2.ebuild 925
-MD5 3b52da045415784241fc9ae4d169de85 files/digest-dnspython-1.3.3 66
+MD5 9212256e2d9ce5aff7f56d269e30ef3b metadata.xml 654
+MD5 5c3991e86b469fe90a6700c6e23e1272 dnspython-1.3.3.ebuild 948
 MD5 ec5b0f4a9cb24f7812f360d7aeae2f81 files/digest-dnspython-1.3.2 66
+MD5 3b52da045415784241fc9ae4d169de85 files/digest-dnspython-1.3.3 66
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCQxMRugEuf3OQ0akRAnO2AJsH2QwHPJHOCqKGXSYaVU11jxaoegCgnZ15
-WBHH2h27QfGiEqMdMTrcwts=
-=zncP
+iD8DBQFCbi4ETM53OX+9xmMRAopwAKCgTLPZgV+TndloRoDxiazOXJdYLgCfZeK7
+oMREFgKYTi4g9YIg/eSgceE=
+=0opg
 -----END PGP SIGNATURE-----
