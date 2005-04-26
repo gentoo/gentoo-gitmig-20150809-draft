@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jss/jss-3.4.ebuild,v 1.3 2005/03/23 14:28:03 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jss/jss-3.4.ebuild,v 1.4 2005/04/26 01:26:45 gustavoz Exp $
 
 inherit eutils java-pkg
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.mozilla.org/pub/mozilla.org/security/${PN}/releases/${RTM_NAM
 
 LICENSE="MPL-1.1"
 SLOT="3.4"
-KEYWORDS="x86 amd64 ~sparc"
+KEYWORDS="x86 amd64 sparc"
 IUSE=""
 
 S=${WORKDIR}/${P}-src
