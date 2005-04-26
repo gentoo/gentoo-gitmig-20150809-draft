@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/cm3-bin/cm3-bin-5.2.7_pre050331.ebuild,v 1.1 2005/04/02 04:11:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/cm3-bin/cm3-bin-5.2.7_pre050331.ebuild,v 1.2 2005/04/26 19:48:58 agriffis Exp $
 
 inherit toolchain-funcs
 
@@ -17,6 +17,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND="amd64? ( app-emulation/emul-linux-x86-glibc )"
+PROVIDE="virtual/m3"
 
 S=${WORKDIR}
 

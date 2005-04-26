@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/cm3-bin/cm3-bin-5.2.6.ebuild,v 1.8 2004/10/26 13:36:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/cm3-bin/cm3-bin-5.2.6.ebuild,v 1.9 2005/04/26 19:48:58 agriffis Exp $
 
 inherit toolchain-funcs
 
@@ -13,6 +13,8 @@ LICENSE="CMASS-M3 DEC-M3"
 KEYWORDS="x86 ppc"
 SLOT="0"
 IUSE=""
+
+PROVIDE="virtual/m3"
 
 S=${WORKDIR}
 

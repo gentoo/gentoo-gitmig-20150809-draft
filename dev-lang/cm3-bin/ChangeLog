@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/cm3-bin
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/cm3-bin/ChangeLog,v 1.4 2005/04/02 04:11:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/cm3-bin/ChangeLog,v 1.5 2005/04/26 19:48:58 agriffis Exp $
+
+  26 Apr 2005; Aron Griffis <agriffis@gentoo.org> cm3-bin-5.2.6.ebuild,
+  cm3-bin-5.2.7_pre050331.ebuild:
+  add PROVIDE=virtual/m3
 
 *cm3-bin-5.2.7_pre050331 (02 Apr 2005)
 
