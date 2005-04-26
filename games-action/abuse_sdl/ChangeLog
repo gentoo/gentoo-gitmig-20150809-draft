@@ -1,6 +1,11 @@
 # ChangeLog for games-action/abuse_sdl
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/abuse_sdl/ChangeLog,v 1.5 2004/12/28 22:49:12 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/abuse_sdl/ChangeLog,v 1.6 2005/04/26 12:51:06 fmccor Exp $
+
+  26 Apr 2005; Ferris McCormick <fmccor@gentoo.org>
+  abuse_sdl-0.7.0-r2.ebuild:
+  Add ~sparc keyword at user's request: Bug 90460.  Builds and runs; even looks
+  like it might be fun.
 
   28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
