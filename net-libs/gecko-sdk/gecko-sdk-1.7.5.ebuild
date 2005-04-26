@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gecko-sdk/gecko-sdk-1.7.5.ebuild,v 1.4 2005/04/16 13:14:40 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gecko-sdk/gecko-sdk-1.7.5.ebuild,v 1.5 2005/04/26 10:06:22 azarah Exp $
 
 unset ALLOWED_FLAGS  # stupid extra-functions.sh ... bug 49179
 inherit flag-o-matic gcc eutils nsplugins mozilla-launcher mozconfig makeedit multilib
@@ -76,6 +76,9 @@ src_unpack() {
 	if has_version '>=x11-libs/cairo-0.3.0'; then
 		epatch ${PORTDIR}/www-client/mozilla/files/svg-cairo-0.3.0-fix.patch
 	fi
+
+	# Fix building with gcc4
+	epatch ${FILESDIR}/${P}-gcc4.patch
 
 	# Fix scripts that call for /usr/local/bin/perl #51916
 	ebegin "Patching smime to call perl from /usr/bin"

@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/gecko-sdk
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gecko-sdk/ChangeLog,v 1.9 2005/04/16 13:14:40 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gecko-sdk/ChangeLog,v 1.10 2005/04/26 10:06:22 azarah Exp $
+
+  26 Apr 2005; Martin Schlemmer <azarah@gentoo.org>
+  +files/gecko-sdk-1.7.5-gcc4.patch, gecko-sdk-1.7.5.ebuild:
+  Fix building with gcc4.  Patch from halcy0n's overlay.
 
   15 Apr 2005; Joseph Jezak <josejx@gentoo.org> -gecko-sdk-1.7.3.ebuild,
   gecko-sdk-1.7.5.ebuild:
