@@ -1,6 +1,10 @@
 # ChangeLog for sys-power/acpid
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/acpid/ChangeLog,v 1.3 2005/04/24 16:21:45 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/acpid/ChangeLog,v 1.4 2005/04/26 10:32:12 azarah Exp $
+
+  26 Apr 2005; Martin Schlemmer <azarah@gentoo.org>
+  +files/acpid-1.0.4-gcc4.patch, acpid-1.0.4-r1.ebuild:
+  Fix building with gcc4.  Use proper compiler.
 
 *acpid-1.0.4-r1 (24 Apr 2005)
 

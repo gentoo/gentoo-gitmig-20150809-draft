@@ -1,6 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/acpid/acpid-1.0.4-r1.ebuild,v 1.1 2005/04/24 16:21:45 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/acpid/acpid-1.0.4-r1.ebuild,v 1.2 2005/04/26 10:32:12 azarah Exp $
+
+inherit eutils toolchain-funcs
 
 DESCRIPTION="Daemon for Advanced Configuration and Power Interface"
 HOMEPAGE="http://acpid.sourceforge.net"
@@ -15,18 +17,26 @@ DEPEND="virtual/libc
 		virtual/linux-sources"
 RDEPEND="virtual/libc"
 
+src_unpack() {
+	unpack ${A}
+
+	cd ${S}
+	# Fix building with gcc4
+	epatch ${FILESDIR}/${P}-gcc4.patch
+}
+
 src_compile() {
 	# DO NOT COMPILE WITH OPTIMISATIONS (bug #22365)
 	# That is a note to the devs.  IF you are a user, go ahead and optimise
 	# if you want, but we won't support bugs associated with that.
-	make INSTPREFIX=${D} || die
+	make CC="$(tc-getCC)" INSTPREFIX="${D}" || die
 }
 
 src_install() {
 	# needed since the Makefile doesn't do 'mkdir -p $(BINDIR)'
 	dodir /usr/bin
 
-	make INSTPREFIX=${D} install || die
+	make INSTPREFIX="${D}" install || die
 
 	exeinto /etc/acpi
 	newexe ${FILESDIR}/${P}-default.sh default.sh || die
