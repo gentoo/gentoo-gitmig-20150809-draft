@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 c5c84227fd64a223fed623a9788e8beb Email-Find-0.09.ebuild 591
-MD5 efc6f74705f308ebc3555ae3cb5bafb5 ChangeLog 551
+MD5 193bf91166a375ca1241fdec45f6c409 Email-Find-0.09.ebuild 597
+MD5 b693f2a1df7c31ec6964855dd38d50c2 ChangeLog 646
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 182c96618f0e54edceae8ca6fa25f3ec files/digest-Email-Find-0.09 66
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCbpyhKf2g/qXtneoRAoKJAJ99eELLuNKJXJkg69UlknWJHHLBiQCfS+D1
-J0aLbQWN8gAgXGBJiQk0GJg=
-=Svic
+iD8DBQFCbqf/Kf2g/qXtneoRAl1TAKC92Q/Pn5qNhw8DKhXc2rOW1e7VpACcDni9
+FPIiSt/s+GYDIYiA442cM88=
+=9ONF
 -----END PGP SIGNATURE-----
