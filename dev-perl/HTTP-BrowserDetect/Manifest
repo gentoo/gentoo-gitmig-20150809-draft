@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 71b2600750cebe3999469918522270f6 HTTP-BrowserDetect-0.98.ebuild 553
-MD5 0db52fb71021b195185f56343352cb5e ChangeLog 982
-MD5 f1c83a51a968f3d4f0e19bb78b231fa5 HTTP-BrowserDetect-0.97.ebuild 552
+MD5 51efd3dd372ec49ed30ba4c044eb7f3f ChangeLog 1087
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 f1c83a51a968f3d4f0e19bb78b231fa5 HTTP-BrowserDetect-0.97.ebuild 552
+MD5 16c3fbee328a33c3fc5b065ede792766 HTTP-BrowserDetect-0.98.ebuild 550
 MD5 32d22f90b2a841c8f3aa6ef707dc0346 files/digest-HTTP-BrowserDetect-0.97 73
 MD5 7d2c38eafd35d73f31def894d848fdd0 files/digest-HTTP-BrowserDetect-0.98 74
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCbZfhKRy60XGEcJIRAuWWAJ9VGbyXYs3RBGtTy34vnsLduezAjgCeLdDr
-lW4vLZ5vDj7Q34JfFz/TGGQ=
-=tShM
+iD8DBQFCbqHmKf2g/qXtneoRAsfBAJwKkwuWxi+2jsjYdFmkbqyVNHvCAQCgo95Z
+64i5zizZDuRbM42nGUqTuHY=
+=beMj
 -----END PGP SIGNATURE-----
