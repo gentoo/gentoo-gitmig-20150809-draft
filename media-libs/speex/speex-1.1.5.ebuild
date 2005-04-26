@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/speex/speex-1.1.5.ebuild,v 1.6 2005/01/04 09:46:36 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/speex/speex-1.1.5.ebuild,v 1.7 2005/04/26 13:02:56 flameeyes Exp $
 
-IUSE="oggvorbis sse"
+IUSE="ogg sse"
 
 MY_P=${P/_/}
 S=${WORKDIR}/${MY_P}
@@ -16,11 +16,11 @@ LICENSE="BSD as-is"
 KEYWORDS="~x86 ~hppa ~amd64 ~alpha ~ia64 ~ppc ~sparc ppc64"
 
 DEPEND="virtual/libc
-	oggvorbis? ( >=media-libs/libogg-1.0 )"
+	ogg? ( >=media-libs/libogg-1.0 )"
 
 src_compile() {
 	local myconf
-	use oggvorbis && myconf="--enable-ogg=yes --with-ogg-dir=/usr" \
+	use ogg && myconf="--enable-ogg=yes --with-ogg-dir=/usr" \
 		|| myconf="--enable-ogg=no"
 	if [ "${ARCH}" != "amd64" ]
 	then
