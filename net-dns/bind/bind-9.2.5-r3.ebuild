@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.2.5-r2.ebuild,v 1.2 2005/04/24 09:21:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.2.5-r3.ebuild,v 1.1 2005/04/26 09:17:52 voxus Exp $
 
 inherit eutils libtool
 
@@ -18,6 +18,7 @@ DEPEND="sys-apps/groff
 	sys-devel/autoconf
 	ssl? ( >=dev-libs/openssl-0.9.6g )
 	mysql? ( >=dev-db/mysql-4 )
+	odbc? ( >=dev-db/unixODBC-2.2.6 )
 	ldap? ( net-nds/openldap )"
 RDEPEND="${DEPEND}
 	selinux? ( sec-policy/selinux-bind )"
@@ -40,10 +41,24 @@ src_unpack() {
 
 	if use bind-mysql; then
 		if use dlz; then
-			epatch ${FILESDIR}/${P}-dlz-mysql.patch
+			MP=${P}-dlz-mysql.patch
 		else
-			epatch ${FILESDIR}/${P}-mysql.patch
+			MP=${P}-mysql.patch
 		fi
+
+		ebegin "Fixing mysql patch"
+		eindent
+
+		cp ${FILESDIR}/${MP} ${T}/${MP}
+
+		sed -e "s:-I/usr/local/include:`mysql_config --include`:" \
+			-e "s:-L/usr/local/lib/mysql -lmysqlclient:`mysql_config --libs`:" \
+			-i ${T}/${MP}
+
+		epatch ${T}/${MP}
+
+		eoutdent
+		eend $?
 	fi
 
 	if use idn; then
@@ -236,4 +251,3 @@ pkg_config() {
 		einfo
 	fi
 }
-
