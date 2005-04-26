@@ -1,9 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.2.3-r6.ebuild,v 1.5 2005/04/19 11:23:10 lanius Exp $
-
-# disable sandbox, needed for motif-config
-SANDBOX_DISABLED="1"
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.2.3-r7.ebuild,v 1.1 2005/04/26 13:56:43 lanius Exp $
 
 inherit eutils libtool flag-o-matic multilib
 
@@ -22,10 +19,10 @@ DEPEND="virtual/libc
 	>=sys-apps/sed-4
 	!ppc-macos? ( =sys-devel/automake-1.4* )
 	=sys-devel/autoconf-2.5*
-	>=x11-libs/motif-config-0.6"
+	>=x11-libs/motif-config-0.9"
 RDEPEND="virtual/libc
 	virtual/x11
-	>=x11-libs/motif-config-0.6"
+	>=x11-libs/motif-config-0.9"
 
 PROVIDE="virtual/motif"
 SLOT="2.2"
@@ -33,15 +30,9 @@ SLOT="2.2"
 pkg_setup() {
 	# multilib includes don't work right in this package...
 	[ -n "${ABI}" ] && append-flags "-I/usr/include/gentoo-multilib/${ABI}"
-
-	# profile stuff
-	#if has_version =x11-libs/openmotif-2.2*; then touch /tmp/openmotif-2.2; fi
 }
 
 src_unpack() {
-	# profile stuff
-	motif-config --start-install
-
 	unpack ${A}
 	cd ${S}
 
@@ -136,15 +127,17 @@ src_install() {
 	dodoc README RELEASE RELNOTES
 	dodoc BUGREPORT TODO
 
-	# finish installation
-	motif-config --finish-install
+	# profile stuff
+	dodir /etc/env.d
+	echo "LDPATH=/usr/lib/openmotif-2.2" > ${D}/etc/env.d/15openmotif-2.2
+	dodir /usr/$(get_libdir)/motif
+	echo "PROFILE=openmotif-2.2" > ${D}/usr/$(get_libdir)/motif/openmotif-2.2
 }
 
-# Profile stuff
 pkg_postinst() {
-	motif-config --install openmotif-2.2
+	/usr/bin/motif-config -s
 }
 
-#pkg_prerm() {
-#	[ -f /tmp/openmotif-2.2 ] && rm -f /tmp/openmotif-2.2 || motif-config --uninstall openmotif-2.2
-#}
+pkg_postrm() {
+	/usr/bin/motif-config -s
+}

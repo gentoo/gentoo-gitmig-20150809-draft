@@ -1,6 +1,14 @@
 # ChangeLog for x11-libs/openmotif
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/ChangeLog,v 1.105 2005/03/27 00:07:34 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/ChangeLog,v 1.106 2005/04/26 13:56:43 lanius Exp $
+
+*openmotif-2.2.3-r7 (26 Apr 2005)
+*openmotif-2.1.30-r13 (26 Apr 2005)
+
+  26 Apr 2005; Heinrich Wendel <lanius@gentoo.org>
+  -openmotif-2.1.30-r12.ebuild, +openmotif-2.1.30-r13.ebuild,
+  -openmotif-2.2.3-r6.ebuild, +openmotif-2.2.3-r7.ebuild:
+  update to motif-config-0.9
 
   27 Mar 2005; Michael Hanselmann <hansmi@gentoo.org>
   openmotif-2.1.30-r9.ebuild:

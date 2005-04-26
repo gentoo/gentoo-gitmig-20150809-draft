@@ -1,9 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.1.30-r12.ebuild,v 1.5 2005/04/19 11:23:10 lanius Exp $
-
-# disable sandbox, needed for motif-config
-SANDBOX_DISABLED="1"
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.1.30-r13.ebuild,v 1.1 2005/04/26 13:56:43 lanius Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -21,16 +18,13 @@ PROVIDE="virtual/motif"
 
 RDEPEND="virtual/libc
 	virtual/x11
-	>=x11-libs/motif-config-0.5"
+	>=x11-libs/motif-config-0.9"
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4"
 
 SLOT="2.1"
 
 src_unpack() {
-	# profile stuff
-	motif-config --start-install
-
 	local cfg="${S}/config/cf/site.def"
 
 	unpack ${A}
@@ -163,18 +157,16 @@ src_install() {
 	dodoc BUGREPORT OPENBUGS CLOSEDBUGS
 
 	# profile stuff
-	motif-config --finish-install
+	dodir /etc/env.d
+	echo "LDPATH=/usr/lib/openmotif-2.1" > ${D}/etc/env.d/15openmotif-2.1
+	dodir /usr/$(get_libdir)/motif
+	echo "PROFILE=openmotif-2.1" > ${D}/usr/$(get_libdir)/motif/openmotif-2.1
 }
-
-# Profile stuff
-#pkg_setup() {
-#	if has_version =x11-libs/openmotif-2.1*; then touch /tmp/openmotif-2.1; fi
-#}
 
 pkg_postinst() {
-	motif-config --install openmotif-2.1
+	/usr/bin/motif-config -s
 }
 
-#pkg_prerm() {
-#	[ -f /tmp/openmotif-2.1 ] && rm -f /tmp/openmotif-2.1 || motif-config --uninstall openmotif-2.1
-#}
+pkg_postrm() {
+	/usr/bin/motif-config -s
+}
