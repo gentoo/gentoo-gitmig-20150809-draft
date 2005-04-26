@@ -2,8 +2,8 @@
 <!DOCTYPE catmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <catmetadata>
 	<longdescription lang="en">
-		The dev-python category contains libraries and utilities relevant to the
-		Python programming language.
+		The dev-python category contains libraries, utilities or
+		bindings written in or for the Python programming language. 
 	</longdescription>
 	<longdescription lang="de">
 		Die Kategorie dev-python enthÃ¤lt Bibliotheken und Werkzeuge fÃ¼r die
