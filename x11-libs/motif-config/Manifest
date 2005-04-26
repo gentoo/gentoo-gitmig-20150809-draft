@@ -1,7 +1,10 @@
-MD5 358a8ada853297e474f8fd40cd130705 motif-config-0.9.ebuild 2404
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 748db357a2799edddade0020ebd3eea6 motif-config-0.9.ebuild 2404
 MD5 33bcba9885d6419bbb4e22eed35676ab motif-config-0.6.ebuild 1239
 MD5 f18c8f14b63a3439113068b5a89e193b motif-config-0.8.ebuild 1239
-MD5 47dbf9f52c73b0c93cf1cdc53fef61ad ChangeLog 2836
+MD5 c910e82e8f237d1732ad261370a97ea2 ChangeLog 2836
 MD5 503ccb1138f9c49f0855884d830988a6 metadata.xml 253
 MD5 b57f5a2346d07273acd7e675d3f5d8cc motif-config-0.7.ebuild 1239
 MD5 76af3b1b80127315546ef5ea7f5875e1 files/bindings.tbz2 5342
@@ -9,10 +12,17 @@ MD5 ea7dd0dd1e039ef38db246c23f4d9422 files/motif-config-0.6 7347
 MD5 850befc48daae3dd492f9e263c6dfd4a files/motif-config-0.7 7014
 MD5 a4ba585f1a15d0800a1906e20659c1ce files/motif-config-0.8 7166
 MD5 3a565c0fb8345038591f50aa943aed1b files/motif-config-0.9 5403
-MD5 d46916eb64babb223c9c511cf7d042a6 files/system.mwmrc 2964
+MD5 f9acef531655ae685de204817c6b3c7a files/system.mwmrc 2960
 MD5 aaf04376f7011a2f68b7961100f611fb files/Mwm.defaults 536
 MD5 b4cca983e552045606f845e17a00e1d6 files/bitmaps.tbz2 3165
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-motif-config-0.6 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-motif-config-0.7 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-motif-config-0.8 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-motif-config-0.9 0
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCbkkEevY57Fted3ERArn8AKDDQaZzItMwmcAVQBWb+oAYIcjL5ACgxn/4
+M2tJIyqs86KbeieW2d/6guA=
+=Q99w
+-----END PGP SIGNATURE-----
