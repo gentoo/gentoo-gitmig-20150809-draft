@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/jbidwatcher/jbidwatcher-0.9.6.ebuild,v 1.2 2005/04/26 15:28:58 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/jbidwatcher/jbidwatcher-0.9.7_pre2.ebuild,v 1.1 2005/04/26 15:28:58 luckyduck Exp $
 
 inherit java-pkg
 
 DESCRIPTION="Ebay Bidder Tools for Sniping"
 HOMEPAGE="http://jbidwatcher.sf.net/"
-SRC_URI="mirror://sourceforge/jbidwatcher/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/jbidwatcher/${P/_/}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~x86 ~amd64 ~ppc"
@@ -17,6 +17,8 @@ DEPEND=">=virtual/jdk-1.4
 	jikes? ( dev-java/jikes )"
 RDEPEND=">=virtual/jre-1.4"
 
+S=${WORKDIR}/${P/_/}
+
 src_compile() {
 	sed -i 's:${user.home}/.jbidwatcher:.:' build.xml
 	sed -i 's:jikes:modern:' build.xml
@@ -26,15 +28,15 @@ src_compile() {
 
 	local antflags="jar"
 	use jikes && antflags="${antflags} -Dbuild.compiler=jikes"
-	ant ${antflags}
+	ant ${antflags} || die "compilation failed"
 }
 
 src_install() {
-	java-pkg_dojar *.jar
+	mv *.jar ${PN}.jar
+	java-pkg_dojar ${PN}.jar
 
 	echo "#!/bin/sh" > ${PN}
-	echo "cd /usr/share/"${PN} >> ${PN}
-	echo '${JAVA_HOME}'/bin/java -jar lib/JBidWatcher-${PV/_/}.jar '$*' >> ${PN}
+	echo '$(java-config -J) -jar $(java-config -p jbidwatcher) $*' >> ${PN}
 
 	dobin ${PN}
 }
