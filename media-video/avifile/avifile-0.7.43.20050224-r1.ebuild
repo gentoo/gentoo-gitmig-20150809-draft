@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.7.43.20050224-r1.ebuild,v 1.4 2005/04/25 00:15:35 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.7.43.20050224-r1.ebuild,v 1.5 2005/04/26 08:34:14 azarah Exp $
 
 inherit eutils flag-o-matic
 
@@ -56,6 +56,7 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 
+	cd ${S}
 	# fixes mad FPM detection
 	epatch ${FILESDIR}/${PN}-mad.patch
 
@@ -64,6 +65,9 @@ src_unpack() {
 	epatch ${FILESDIR}/avifile-0.7.43.20050224-sdllibs.patch
 	# fixes bug #86320
 	epatch ${FILESDIR}/${P}-fixlabels.patch
+	# fix building with gcc4
+	# http://debian-amd64.alioth.debian.org/gcc-3.4/patches/avifile_0.7.43.20050224-1.0.0.1.gcc4.patch
+	epatch ${FILESDIR}/${P}-1.0.0.1.gcc4.patch
 
 	if ! use qt ; then
 		sed -i -e 's/qtvidcap\ qtrecompress//g' \
