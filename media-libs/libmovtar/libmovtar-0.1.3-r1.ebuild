@@ -1,10 +1,10 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmovtar/libmovtar-0.1.3-r1.ebuild,v 1.12 2004/07/14 20:11:13 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmovtar/libmovtar-0.1.3-r1.ebuild,v 1.13 2005/04/26 13:45:37 azarah Exp $
 
 IUSE="mmx"
 
-inherit libtool
+inherit eutils libtool
 
 DESCRIPTION="Movtar tools and library for MJPEG video"
 SRC_URI="http://download.sourceforge.net/mjpeg/${P}.tar.gz"
@@ -26,6 +26,9 @@ src_unpack() {
 	cp ${FILESDIR}/jpegint.h .
 	cp movtar_play.c movtar_play.c.orig
 	sed -e "s:#include <jinclude.h>::" movtar_play.c.orig > movtar_play.c
+
+	# Fix building with gcc4
+	epatch ${FILESDIR}/${P}-gcc4.patch
 
 }
 
