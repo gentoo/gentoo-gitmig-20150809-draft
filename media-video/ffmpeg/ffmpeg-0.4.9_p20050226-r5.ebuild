@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.4.9_p20050226-r2.ebuild,v 1.4 2005/03/30 07:58:44 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.4.9_p20050226-r5.ebuild,v 1.1 2005/04/26 01:21:53 eradicator Exp $
 
 inherit eutils flag-o-matic gcc multilib toolchain-funcs
 
@@ -14,22 +14,29 @@ S_SHARED=${S_BASE}-shared
 
 SRC_URI="mirror://sourceforge/ffmpeg/${MY_P}.tbz2"
 
-LICENSE="LGPL-2"
+LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~amd64 ~ia64 ~ppc64 ~arm ~mips ~hppa"
-IUSE="aac altivec debug doc dv dvd encode imlib mmx oggvorbis oss threads truetype v4l xvid"
+# ~alpha need to test aac useflag
+# ~ia64 ~arm ~mips ~hppa 
+KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
+IUSE="aac altivec debug doc ieee1394 a52 encode imlib mmx ogg vorbis oss threads truetype v4l xvid dts network zlib sdl"
 
-DEPEND="imlib? (media-libs/imlib2)
-		truetype? (>=media-libs/freetype-2)
-		sdl? (>=media-libs/libsdl-1.2.1)
-		doc? (app-text/texi2html)
-		encode? (media-sound/lame)
-		oggvorbis? (media-libs/libvorbis
-					media-libs/libogg)
-		!alpha? ( aac? (media-libs/faad2 media-libs/faac) )
-		dvd? (>=media-libs/a52dec-0.7.4-r4)
-		xvid? (media-libs/xvid)
-		"
+# Theora support has switch but there's no oggtheora.c sourcefile...
+
+DEPEND="imlib? ( media-libs/imlib2 )
+	truetype? ( >=media-libs/freetype-2 )
+	sdl? ( >=media-libs/libsdl-1.2.1 )
+	doc? ( app-text/texi2html )
+	encode? ( media-sound/lame )
+	ogg? ( media-libs/libogg )
+	vorbis? ( media-libs/libvorbis )
+	aac? (media-libs/faad2 media-libs/faac)
+	a52? ( >=media-libs/a52dec-0.7.4-r4 )
+	xvid? ( >=media-libs/xvid-1.0 )
+	zlib? ( sys-libs/zlib )
+	dts? ( media-libs/libdts )
+	ieee1394? ( media-plugins/libdc1394
+	            sys-libs/libraw1394 )"
 
 src_unpack() {
 	unpack ${A} || die
@@ -38,25 +45,20 @@ src_unpack() {
 	# for some reason it tries to #include <X11/Xlib.h>, but doesn't use it
 	sed -i s:\#define\ HAVE_X11:\#define\ HAVE_LINUX: ffplay.c
 
-	# make a52bin actually compile... adds the needed external lib
-	# and makes fprintf -> av_log like it's supposed to be...
-	epatch ${FILESDIR}/gentoo-${PN}001.patch
+	# Fix building with gcc4
+	epatch ${FILESDIR}/${P}-gcc4.patch
 
 	#ffmpeg doesn'g use libtool, so the condition for PIC code
 	#is __PIC__, not PIC.
-	sed -i -e 's/#if\(\(.*def *\)\|\(.*defined *\)\)PIC/#if\1__PIC__/' \
-		libavcodec/i386/dsputil_mmx{.c,_rnd.h} \
+	sed -i -e 's/#\(\(.*def *\)\|\(.*defined *\)\|\(.*defined(*\)\)PIC/#\1__PIC__/' \
+		libavcodec/i386/dsputil_mmx{.c,_rnd.h,_avg.h} \
 		libavcodec/msmpeg4.c \
+		libavcodec/common.h \
 		|| die "sed failed (__PIC__)"
 
-	#fixup liba52 to respect the --disable-mmx configure option
-	sed -i -e 's/#ifdef ARCH_X86/#ifdef HAVE_MMX/' \
-		libavcodec/liba52/resample.c \
-		|| die "sed failed (HAVE_MMX)"
-
 	epatch ${FILESDIR}/${PN}-libdir-pic.patch
-
-	sed -i -e "s:\$ldl\ \$extralibs:\$ldl\ -la52\ \$extralibs:" configure || die "Unable to patch in -la52"
+	epatch ${FILESDIR}/${PN}-a52.patch
+	epatch ${FILESDIR}/${PN}-missing_links.patch
 
 	cd ${S}
 	cp -R ${S_BASE} ${S_STATIC}
@@ -72,43 +74,40 @@ src_compile() {
 
 	#disable mmx accelerated code if not requirested, or if PIC is required
 	# as the provided asm decidedly isn't PIC.
-	if has_pic || use !mmx; then
-		myconf="${myconf} --disable-mmx"
-	else
+	if ( ! has_pic && use mmx ) || use amd64; then
 		myconf="${myconf} --enable-mmx"
-	fi
-
-	use encode && use aac && myconf="${myconf} --enable-faac"
-
-	if use oggvorbis ; then
-		myconf="${myconf} --enable-ogg --enable-vorbis"
 	else
-		myconf="${myconf} --disable-ogg --disable-theora"
+		myconf="${myconf} --disable-mmx"
 	fi
-
-	use !alpha && myconf="${myconf} $(use_enable aac faad) $(use_enable aac faac) $(use_enable aac faadbin)"
 
 	myconf="${myconf}
 		$(use_enable altivec) \
 		$(use_enable debug) \
 		$(use_enable encode mp3lame) \
-		$(use_enable dvd a52) $(use_enable dvd a52bin) \
+		$(use_enable a52) --disable-a52bin \
 		$(use_enable oss audio-oss) \
 		$(use_enable v4l) \
-		$(use_enable dv dv1394) \
+		$(use_enable ieee1394 dv1394) $(use_enable ieee1394 dc1394) \
 		$(use_enable threads pthreads) \
 		$(use_enable xvid) \
+		$(use_enable ogg) \
+		$(use_enable vorbis) \
+		$(use_enable dts) \
+		$(use_enable network) \
+		$(use_enable zlib) \
+		$(use_enable sdl ffplay) \
+		$(use_enable aac faad) $(use_enable aac faac) --disable-faadbin \
 		--enable-gpl \
 		--enable-pp \
-		--disable-optimize"
+		--disable-opts"
 
 	cd ${S_STATIC}
 	econf --disable-shared-pp --disable-shared --enable-static ${myconf} || die "Configure failed"
-	emake CC="$(tc-getCC)" || die
+	emake CC="$(tc-getCC)" || die "static failed"
 
 	cd ${S_SHARED}
 	econf --enable-shared-pp --enable-shared --disable-static ${myconf} || die "Configure failed"
-	emake CC="$(tc-getCC)" || die
+	emake CC="$(tc-getCC)" || die "shared failed"
 }
 
 src_install() {
