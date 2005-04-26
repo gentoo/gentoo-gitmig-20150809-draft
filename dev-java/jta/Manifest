@@ -1,4 +1,14 @@
-MD5 2b22d761f42e3482f542cea3425b8edb ChangeLog 855
-MD5 87c89bc7a7b82922433762d2e6991a1a jta-1.0.1.ebuild 1709
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 890f67928c421cab17644104ab975cc3 ChangeLog 947
+MD5 5606a28a3dc3ca676bf8a8ff3a4d0b0e jta-1.0.1.ebuild 1709
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 fbfe56b346327c85a8960db3c5667cbe files/digest-jta-1.0.1 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCbZlxKRy60XGEcJIRAo4OAKCyatx+ysd3uaJ6NomfJuJ0ZNl98gCfbw1a
+exFWK4ZFJX0QjUpUzHyQsz4=
+=mkNZ
+-----END PGP SIGNATURE-----
