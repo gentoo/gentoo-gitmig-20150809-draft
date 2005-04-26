@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipset/ipset-2.1.0.20050119.ebuild,v 1.1 2005/03/10 09:56:57 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipset/ipset-2.1.0.20050119.ebuild,v 1.2 2005/04/26 16:30:23 ticho Exp $
 
 inherit eutils flag-o-matic versionator
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://people.netfilter.org/kadlec/ipset/"
 SRC_URI="${HOMEPAGE}/${MY_P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 IUSE=""
 RDEPEND=">=net-firewall/iptables-1.3*"
 DEPEND="${RDEPEND}

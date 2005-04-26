@@ -1,6 +1,9 @@
 # ChangeLog for net-firewall/ipset
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipset/ChangeLog,v 1.1 2005/03/10 09:56:57 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipset/ChangeLog,v 1.2 2005/04/26 16:30:23 ticho Exp $
+
+  26 Apr 2005; Andrej Kacian <ticho@gentoo.org> ipset-2.1.0.20050119.ebuild:
+  Added ~amd64 keyword.
 
 *ipset-2.1.0.20050119 (10 Mar 2005)
 
