@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/tar
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/ChangeLog,v 1.46 2005/04/08 10:48:23 corsair Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/ChangeLog,v 1.47 2005/04/27 03:35:29 vapier Exp $
+
+  27 Apr 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/tar-1.15.1-dont-abort-long-names.patch, tar-1.15.1.ebuild:
+  Dont abort with long file names in archives #87540 by Jim Faulkner.
 
   08 Apr 2005; Markus Rothe <corsair@gentoo.org> tar-1.15.1.ebuild:
   Stable on ppc64

@@ -1,0 +1,26 @@
+Add a workaround for invalid aborts until the next tar release 
+which has this fixed properly.  Thanks to Jim Faulkner for 
+reporting and tracking this down !
+
+http://lists.gnu.org/archive/html/bug-tar/2005-04/msg00012.html
+http://bugs.gentoo.org/show_bug.cgi?id=87540
+
+Index: src/buffer.c
+===================================================================
+RCS file: /cvsroot/tar/tar/src/buffer.c,v
+retrieving revision 1.81
+retrieving revision 1.82
+diff -u -r1.81 -r1.82
+--- src/buffer.c	4 Apr 2005 18:21:55 -0000	1.81
++++ src/buffer.c	7 Apr 2005 17:26:11 -0000	1.82
+@@ -653,8 +653,8 @@
+ 	record_start++;
+ 
+       if (strlen (real_s_name) > NAME_FIELD_SIZE)
+-	FATAL_ERROR ((0, 0,
+-		      _("%s: file name too long to be stored in a GNU multivolume header"),
++	WARN ((0, 0,
++	      _("%s: file name too long to be stored in a GNU multivolume header, truncated"),
+ 		      quotearg_colon (real_s_name)));
+ 
+       memset (record_start, 0, BLOCKSIZE);
