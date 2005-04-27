@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/gnusound
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gnusound/ChangeLog,v 1.7 2004/11/23 02:55:21 eradicator Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gnusound/ChangeLog,v 1.8 2005/04/27 16:55:56 luckyduck Exp $
+
+*gnusound-0.7 (27 Apr 2005)
+
+  27 Apr 2005; Jan Brinkmann <luckyduck@gentoo.org>
+  +files/gnusound-0.7-destdir.patch, +gnusound-0.7.ebuild:
+  new upstream version, fixes #90560. added ~amd64 back, seems to work now.
 
   22 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org>
   +files/gnusound-0.6.2-destdir.patch, +files/gnusound-0.6.2-gcc34.patch,

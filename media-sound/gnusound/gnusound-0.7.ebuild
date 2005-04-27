@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gnusound/gnusound-0.6.2.ebuild,v 1.6 2005/04/27 16:55:56 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gnusound/gnusound-0.7.ebuild,v 1.1 2005/04/27 16:55:56 luckyduck Exp $
 
 IUSE="libsamplerate"
 
@@ -8,12 +8,13 @@ inherit gnuconfig eutils
 
 DESCRIPTION="GNUsound is a sound editor for Linux/x86"
 HOMEPAGE="http://gnusound.sourceforge.net/"
-SRC_URI="http://gnusound.sourceforge.net/${P}.tar.bz2"
+SRC_URI="ftp://ftp.gnu.org/gnu/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
 # -amd64, -sparc: 0.6.2 - eradicator - segfault on startup
-KEYWORDS="-amd64 x86 -sparc"
+# added ~amd64 , seems to work now (0.7)
+KEYWORDS="~amd64 ~x86 -sparc"
 
 DEPEND=">=gnome-base/libglade-2.0.1
 	gnome-base/gnome-libs
@@ -28,23 +29,20 @@ src_unpack() {
 	rm -f modules/Makefile || die "could not remove modules Makefile"
 	sed -i "s:docrootdir:datadir:" doc/Makefile.in
 
-	# Bug #54980
-	epatch ${FILESDIR}/${P}-gtkdep.patch
-
-	# Bug #68345
-	epatch ${FILESDIR}/${P}-gcc34.patch
-
 	epatch ${FILESDIR}/${P}-destdir.patch
 
 	gnuconfig_update
 }
 
 src_compile() {
-	econf `use_with libsamplerate` --enable-optimization || die "Configure failure"
+	econf \
+		$(use_with libsamplerate) \
+		--enable-optimization \
+		|| die "Configure failure"
 	emake || die "Make failure"
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die
+	make DESTDIR="${D}" install || die "make install failed"
 	dodoc README NOTES TODO CHANGES
 }
