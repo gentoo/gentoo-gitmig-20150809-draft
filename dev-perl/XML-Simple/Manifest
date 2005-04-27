@@ -1,8 +1,18 @@
-MD5 fd416224df0e8ac190bcec39efb51590 ChangeLog 2485
-MD5 2d86e82d1ed1fbc6b42925bc0d86de75 XML-Simple-2.14.ebuild 576
-MD5 5f43dd7032cee60a989eda5daedbd491 XML-Simple-2.12.ebuild 692
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 b4f82d60b6c6cf380f11aaf8a2465656 ChangeLog 2748
+MD5 0575bb2eb84054d09b732039109cfda6 XML-Simple-2.14.ebuild 683
+MD5 02d6e5bc06c4adec458c37650b6f86ab XML-Simple-2.12.ebuild 695
 MD5 30788bfbbda2c3a0121971ae4b0b8574 XML-Simple-2.09.ebuild 676
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 3309f85b0471925e7f9ddc335eb757de files/digest-XML-Simple-2.14 66
 MD5 006b896508c68ff9caa4480d1329931b files/digest-XML-Simple-2.09 66
 MD5 b50187a560070334bde47f64ba3f73cb files/digest-XML-Simple-2.12 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCb7rDtG5z4I8BtQoRAnScAJ9OpHmLtqJ7xb+e/lGsGstbP0IWJgCbBhDn
+rEr8pxilB7HBwTVZTH1NK0g=
+=ur9Q
+-----END PGP SIGNATURE-----
