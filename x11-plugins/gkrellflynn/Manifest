@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 2ceb3d8f43e328fad4338ffc487724e2 gkrellflynn-0.7.ebuild 999
-MD5 ccc349e10ca7763a1a7e529e71425ce4 gkrellflynn-0.6.ebuild 913
-MD5 c9eb5523dfeec68a3e050fbd44a98768 ChangeLog 1301
+MD5 022ea515f08cd7d00e1de64ce70689af gkrellflynn-0.6.ebuild 910
+MD5 d2e043dff6cd6617f54747b1927d168a ChangeLog 1302
 MD5 de35d8f600d3d75d8075a8d848787013 metadata.xml 223
 MD5 ae2f270e3dab3e54a727b08293af3ae8 files/digest-gkrellflynn-0.6 66
 MD5 2eb583a49bc9f3e97d018b606b216e09 files/digest-gkrellflynn-0.7 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCcAXA2G5bA0cA/ScRArgQAKDogFb+7gVzotJEquIWYqm40S9RCACePdHI
+tC0JHkuHAG1MXkStW9/wVEA=
+=yyX0
+-----END PGP SIGNATURE-----
