@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/gkrellkam
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellkam/ChangeLog,v 1.10 2005/03/25 16:43:09 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellkam/ChangeLog,v 1.11 2005/04/27 21:18:38 herbs Exp $
+
+  27 Apr 2005; Herbie Hopkins <herbs@gentoo.org> gkrellkam-2.0.0.ebuild:
+  multilib fixes
 
   25 Mar 2005; Danny van Dyk <kugelfang@gentoo.org> gkrellkam-2.0.0.ebuild:
   Marked stable on amd64.
