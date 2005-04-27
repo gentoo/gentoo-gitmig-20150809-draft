@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/gkrellm-2.2.5.ebuild,v 1.2 2005/04/01 22:53:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/gkrellm-2.2.5.ebuild,v 1.3 2005/04/27 16:45:38 herbs Exp $
 
 inherit eutils
 
@@ -25,10 +25,16 @@ S=${WORKDIR}/${P/a/}
 src_compile() {
 	local myconf
 	if ! use nls; then
-		sed -i "s:enable_nls=1:enable_nls=0:" Makefile
+		sed -i "s:enable_nls=1:enable_nls=0:" Makefile || die
 	fi
 
-	sed -i 's:INSTALLROOT ?= /usr/local:INSTALLROOT ?= ${D}/usr:' Makefile
+	sed -i -e 's:INSTALLROOT ?= /usr/local:INSTALLROOT ?= ${D}/usr:' \
+		-e "s:\(PKGCONFIGDIR ?= \$(INSTALLROOT)/\)lib:\1$(get_libdir):" \
+		Makefile || die
+
+	sed -i -e "s:/usr/lib:/usr/$(get_libdir):" \
+		-e "s:/usr/local/lib:/usr/local/$(get_libdir):" \
+		src/gkrellm.h || die
 
 	if use X
 	then
@@ -46,14 +52,14 @@ src_install() {
 	if use X
 	then
 		keepdir /usr/share/gkrellm2/themes
-		keepdir /usr/lib/gkrellm2/plugins
+		keepdir /usr/$(get_libdir)/gkrellm2/plugins
 
 		make DESTDIR=${D} install \
 			INSTALLDIR=${D}/usr/bin \
 			MANDIR=${D}/usr/share/man/man1 \
 			INCLUDEDIR=${D}/usr/include \
 			LOCALEDIR=${D}/usr/share/locale \
-			PKGCONFIGDIR=${D}/usr/lib/pkgconfig
+			PKGCONFIGDIR=${D}/usr/$(get_libdir)/pkgconfig
 
 		cd ${S}
 		mv gkrellm.1 gkrellm2.1
