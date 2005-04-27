@@ -1,4 +1,14 @@
-MD5 5ec6b587fea7b2cc01316ff97a25586d gkrellmoon-0.6.ebuild 704
-MD5 91f1ec4da02dbc2045fd7622e152f302 ChangeLog 1356
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 4c83f53d4c88a5bf73f21dd94eb87635 gkrellmoon-0.6.ebuild 702
+MD5 b9356d54c6d24565c37463d7c3aa3321 ChangeLog 1353
 MD5 de35d8f600d3d75d8075a8d848787013 metadata.xml 223
 MD5 8a609e41089285f7d58fb47c22ac80aa files/digest-gkrellmoon-0.6 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCb/Bk2G5bA0cA/ScRAiwrAJ43cOWT0Rp/K6sOBEtRUSo1RTJ3eACg6gW9
+xjB2wKshAFMkzcX98liI2B4=
+=g4cN
+-----END PGP SIGNATURE-----
