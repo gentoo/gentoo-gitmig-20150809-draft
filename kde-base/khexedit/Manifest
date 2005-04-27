@@ -1,5 +1,5 @@
+MD5 da334f1336cc23a52c79b4284ebd55f2 ChangeLog 1466
+MD5 def7dd38cfa437523d0327d23529b38a khexedit-3.4.0.ebuild 436
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-MD5 d5f4fcba1c960e32bdc850d22d2d680b khexedit-3.4.0.ebuild 427
-MD5 92401c9a3b74bbb2778094bc2949435a ChangeLog 1364
 MD5 dbade662a75a6b44c890deef5400485f files/digest-khexedit-3.4.0 68
 MD5 e47625e9b59633298d5be5ff567712b7 files/khexedit-configure-magic.diff 462
