@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/gst-plugins
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins/ChangeLog,v 1.99 2005/04/25 16:25:48 zaheerm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins/ChangeLog,v 1.100 2005/04/27 09:10:28 zaheerm Exp $
+
+*gst-plugins-0.8.8-r2 (27 Apr 2005)
+
+  27 Apr 2005; Zaheer Abbas Merali <zaheerm@gentoo.org>
+  +files/gst-plugins-0.8.8-gstplaybin_subfont.patch,
+  +gst-plugins-0.8.8-r2.ebuild:
+  added patch so subtitle font selection is possible in totem 1.1.x
 
 *gst-plugins-0.8.8-r1 (25 Apr 2005)
 
