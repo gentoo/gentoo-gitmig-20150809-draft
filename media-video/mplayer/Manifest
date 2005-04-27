@@ -23,7 +23,7 @@ MD5 62d91cee9c8499fb0186fd7597c725f7 files/digest-mplayer-1.0_pre7 428
 MD5 42733acde24d84c1482db03c777360ab files/mplayer-1.0_pre5-help_mp-ro.h.patch 3267
 MD5 1479661ba42d9647f03f2029efcc8565 files/mplayer-1.0_pre5-bio2jack.patch 2691
 MD5 7f52d1618f675149115ecf8d313b497e files/mplayer-1.0_pre5-yuv2rgb_fix.patch 19505
-MD5 8835cc7f498cc976ccc98c4b5ed0f318 files/mplayer-1.0_pre7-gcc4.patch 6475
+MD5 3d94fd5886df3b60fe2606c4dee9d1dd files/mplayer-1.0_pre7-gcc4.patch 6412
 MD5 a71fc9832d953424652af1125fb7ea64 files/mplayer-0.90-coreutils-fixup.patch 1857
 MD5 f2d6c259271fd9abc036acd72a26d376 files/mplayer-1.0_pre5-r4-ppc64.patch 597
 MD5 a657a67a5658b998acc23a00ffa3951e files/mplayer-1.0_pre5-r5-configure.patch 613
@@ -53,7 +53,7 @@ MD5 e614f6546020b77ced4ba12c36e5b51e files/strl.c 950
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCbK8U1ZcsMnZjRyIRAvJNAKCuDkPJAK77EwtFT3QFTCxGfP4KngCdGzD2
-2xW/qdz+khKrcPSWqFvbbr4=
-=Ei5k
+iD8DBQFCb48P1ZcsMnZjRyIRAtbmAJ9W1l7enCJhPTLh2VQHaJ5HqP+EHACgkcDW
+DGrlHwh3hwLoqtFdYtzw8Wg=
+=3STf
 -----END PGP SIGNATURE-----

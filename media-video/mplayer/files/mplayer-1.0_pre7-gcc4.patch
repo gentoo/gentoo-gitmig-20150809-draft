@@ -169,8 +169,8 @@ diff -bBur MPlayer-20050413-orig/postproc/swscale_template.c MPlayer-20050413/po
  		:: "r" (from), "r" (to) : "memory");
 -		((const unsigned char *)from)+=64;
 -		((unsigned char *)to)+=64;
-+		from+=64;
-+		to+=64;
++		from=((const unsigned char *)from)+64;
++		to=((unsigned char *)to)+64;
  	}
  
  //	printf(" %d %d\n", (int)from&1023, (int)to&1023);
@@ -180,8 +180,8 @@ diff -bBur MPlayer-20050413-orig/postproc/swscale_template.c MPlayer-20050413/po
  		:: "r" (from), "r" (to) : "memory");
 -		((const unsigned char *)from)+=64;
 -		((unsigned char *)to)+=64;
-+		from+=64;
-+		to+=64;
++		from=((const unsigned char *)from)+64;
++		to=((unsigned char *)to)+64;
  	}
  
  #endif /* Have SSE */
