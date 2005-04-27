@@ -1,10 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 d8d8df9fa1d27db4e838fe5f88469c37 gst-plugins-0.8.7.ebuild 2013
 MD5 b0df605d5bba6c16eb7c94ad9859630c gst-plugins-0.8.2.ebuild 1871
 MD5 b02d9d0f103e964960fd97b2f107fae9 gst-plugins-0.8.8-r2.ebuild 2168
 MD5 4d7330ab641498e301c9b0697bc9c8bf gst-plugins-0.8.1.ebuild 2253
 MD5 cc26e45cd840601105c37359fc434a8c gst-plugins-0.8.5-r1.ebuild 2020
-MD5 e46f6557e0c82de5ece0463b52dc707e ChangeLog 13890
-MD5 7ef797bd19a0b87a1badeebed3a89f08 gst-plugins-0.8.8.ebuild 1941
+MD5 f8a29a25984483986755f2d2ee718609 ChangeLog 13989
+MD5 75afc15ce6c1b59be2a2d63f3e1ef754 gst-plugins-0.8.8.ebuild 1942
 MD5 3e6a724afd82f75a69f551d4b976303b gst-plugins-0.8.3.ebuild 1869
 MD5 6cf6f97e79b43eaf70fa938c431342a3 metadata.xml 181
 MD5 d4dde2cb238164f6f0e2a4b64ae52daa gst-plugins-0.8.8-r1.ebuild 2037
@@ -22,3 +25,10 @@ MD5 047909fa0e548bb37041ef3b534f7a30 files/gst-plugins-0.8.8-gstplaybin_subfont.
 MD5 187dd1210be84f747699a2d2bd11fd0b files/gst-plugins-0.8.5-tcp.patch 1059
 MD5 c6e69d419de61401529c6e3000271e1b files/gst-plugins-0.8.0-audioconvert_stereo.patch 4437
 MD5 2a2cbe69a3c199ac03a66ae707700d70 files/gst-plugins-0.8.8-qtdemux.diff.gz 5379
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCb4Ae06ebR+OMO78RAgixAJ0YBi0e11ZJNJUi7Ljf7XBui7MfZgCbBKFx
+C9pmgCnT1Pypjobs7FSyEAQ=
+=Pfv8
+-----END PGP SIGNATURE-----
