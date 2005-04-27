@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 9c5f5d31c9d20ac335959fc731cbb502 gst-plugins-esd-0.8.5.ebuild 372
 MD5 ede1bc810a62e63e3a0b09de2fdd36d9 gst-plugins-esd-0.8.7.ebuild 370
 MD5 5039f34f2540ebdc1601d121cc140ab4 gst-plugins-esd-0.8.2.ebuild 371
@@ -14,11 +11,4 @@ MD5 fdc36508749cec2850c94b4bff5cc0a2 files/digest-gst-plugins-esd-0.8.2 71
 MD5 b34b0c2aff88ed12404f38ecc09f44f0 files/digest-gst-plugins-esd-0.8.3 71
 MD5 acf565d7ba42d81f95f66ad754ab8be9 files/digest-gst-plugins-esd-0.8.5 71
 MD5 1d2b17e15b2072757c3db8f184b7d174 files/digest-gst-plugins-esd-0.8.7 71
-MD5 774aaa9800817b5baa14bfa1b0b3cbc2 files/digest-gst-plugins-esd-0.8.8 70
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCb33p06ebR+OMO78RAhTUAJ9yAb5KdXQZqafmtS43VOE8bFNG1ACfWWC8
-aSVHHpNIithkbLzpz3ywRkk=
-=o3gP
------END PGP SIGNATURE-----
+MD5 33cfc77852e050bbb91b003695c91131 files/digest-gst-plugins-esd-0.8.8 71
