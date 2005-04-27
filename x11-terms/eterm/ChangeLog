@@ -1,13 +1,14 @@
 # ChangeLog for x11-terms/eterm
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/eterm/ChangeLog,v 1.30 2005/04/26 23:20:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/eterm/ChangeLog,v 1.31 2005/04/27 03:22:47 vapier Exp $
 
 *eterm-0.9.3-r3 (26 Apr 2005)
 
   26 Apr 2005; Mike Frysinger <vapier@gentoo.org>
   files/eterm-0.9.3-pixmap-colmod.patch, -eterm-0.9.3-r2.ebuild,
   +eterm-0.9.3-r3.ebuild:
-  Properly fix weird blue tinting with a diff upstream patch #90547.
+  Properly fix weird blue tinting with a diff upstream patch by Tres 
+  Melton #90547.
 
 *eterm-0.9.3-r2 (20 Apr 2005)
 
