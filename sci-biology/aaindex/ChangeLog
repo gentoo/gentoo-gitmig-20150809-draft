@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/aaindex
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/aaindex/ChangeLog,v 1.4 2005/02/23 03:59:50 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/aaindex/ChangeLog,v 1.5 2005/04/27 07:34:45 corsair Exp $
+
+  27 Apr 2005; Markus Rothe <corsair@gentoo.org> aaindex-6.0.ebuild:
+  Added ~ppc64 to KEYWORDS; bug #89856
 
   22 Feb 2005; Olivier Fisette <ribosome@gentoo.org> aaindex-6.0.ebuild:
   Added support for the "emboss" and "minimal" "USE" flags.

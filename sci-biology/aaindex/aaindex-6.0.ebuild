@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/aaindex/aaindex-6.0.ebuild,v 1.5 2005/03/02 19:55:26 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/aaindex/aaindex-6.0.ebuild,v 1.6 2005/04/27 07:34:45 corsair Exp $
 
 DESCRIPTION="Amino acid indices and similarity matrices"
 HOMEPAGE="http://www.genome.ad.jp/aaindex"
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.genome.ad.jp/pub/db/genomenet/${PN}/${PN}.doc
 	ftp://ftp.genome.ad.jp/pub/db/genomenet/${PN}/list_of_indices"
 LICENSE="public-domain"
 SLOT="0"
-KEYWORDS="x86 ~ppc ppc-macos"
+KEYWORDS="x86 ~ppc ppc-macos ~ppc64"
 IUSE="emboss minimal"
 # Minimal build keeps only the indexed files (if applicable) and the documentation.
 # The non-indexed database is not installed.
