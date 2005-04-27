@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/albumart
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/albumart/ChangeLog,v 1.10 2005/04/18 19:54:03 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/albumart/ChangeLog,v 1.11 2005/04/27 13:48:33 luckyduck Exp $
+
+  27 Apr 2005; Jan Brinkmann <luckyduck@gentoo.org> :
+  fixed #90378
 
 *albumart-1.5.0 (18 Apr 2005)
 
