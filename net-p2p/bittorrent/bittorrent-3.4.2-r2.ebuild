@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent/bittorrent-3.4.2-r2.ebuild,v 1.5 2005/03/09 01:04:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent/bittorrent-3.4.2-r2.ebuild,v 1.6 2005/04/27 15:06:43 blubb Exp $
 
 inherit distutils
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.zip"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 arm ppc sparc x86"
+KEYWORDS="~alpha amd64 arm ppc sparc x86"
 IUSE="X"
 
 RDEPEND="X? ( <dev-python/wxpython-2.5* )
