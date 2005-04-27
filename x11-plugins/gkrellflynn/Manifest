@@ -1,6 +1,16 @@
-MD5 adc848e7bdb4232046b215b6b1d7df7a ChangeLog 1102
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 2ceb3d8f43e328fad4338ffc487724e2 gkrellflynn-0.7.ebuild 999
 MD5 0b9b058f2582af2a83f62d54dbad9ca8 gkrellflynn-0.6.ebuild 914
-MD5 cefa616bc2d0818ad13378470efd5ce8 gkrellflynn-0.7.ebuild 913
+MD5 cd7151c7782328991acc35f281e69396 ChangeLog 1208
 MD5 de35d8f600d3d75d8075a8d848787013 metadata.xml 223
 MD5 ae2f270e3dab3e54a727b08293af3ae8 files/digest-gkrellflynn-0.6 66
 MD5 2eb583a49bc9f3e97d018b606b216e09 files/digest-gkrellflynn-0.7 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCcASZ2G5bA0cA/ScRAi6QAJ0VsSQ02RNUsMboxHhFBMZ7Ah3BpQCg6HiT
+L3YKy0/gcGLNtzPHCjyVcgw=
+=y1Ee
+-----END PGP SIGNATURE-----
