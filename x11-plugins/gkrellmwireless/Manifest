@@ -1,7 +1,17 @@
-MD5 deed0e65551b32cf0c52269077b7e00d ChangeLog 2777
-MD5 2f5a968a81a8a3d2a83868f6a6668860 gkrellmwireless-0.2.2.ebuild 705
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 9a6231c579a29fde7bab373f7f50f603 gkrellmwireless-2.0.2.ebuild 685
-MD5 d749d4100f8d4d966e7eb12c9f16c44f gkrellmwireless-2.0.3.ebuild 692
+MD5 2f5a968a81a8a3d2a83868f6a6668860 gkrellmwireless-0.2.2.ebuild 705
+MD5 0954b8bbb9a9f7de6d107263aca8f450 ChangeLog 2874
+MD5 0c5e33c8b3a5c35d192152a32a6007f6 gkrellmwireless-2.0.3.ebuild 718
 MD5 e84b1204cacc43c4e51aeb705b81602f files/digest-gkrellmwireless-0.2.2 71
 MD5 300c3609b079066884f9f19ad56bb580 files/digest-gkrellmwireless-2.0.2 71
 MD5 f151e44fd464be109f592f28637a7ad3 files/digest-gkrellmwireless-2.0.3 71
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCb9OU2G5bA0cA/ScRAm8oAKCjmNxsJou9sLVVBGwNKB9guxnvfQCeOJAq
+8flOvWhTiuksTpxdowmv2gQ=
+=S09M
+-----END PGP SIGNATURE-----

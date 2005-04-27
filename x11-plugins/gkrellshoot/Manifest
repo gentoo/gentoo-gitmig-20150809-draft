@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 c21a34cba9de2eabde00ec6e55a59ead gkrellshoot-0.4.1.ebuild 773
+MD5 9ef5a617314fc5dd4f013be679394d6e gkrellshoot-0.4.1.ebuild 770
 MD5 11185b877789340094b9e30873fbd687 gkrellshoot-0.4.3.ebuild 801
-MD5 f0378443be99a18bf121796e87d93983 ChangeLog 1981
+MD5 127c55717595d270fd645dbb89c62524 ChangeLog 2076
 MD5 a4938b72df3a15af2f29b59bdb567aa4 gkrellshoot-0.3.2.ebuild 792
 MD5 1b94315da93e6a9ea08d07f726fccc58 files/digest-gkrellshoot-0.3.2 68
 MD5 2ddc84839a8d815f0163cd6cf58992f4 files/digest-gkrellshoot-0.4.1 68
@@ -11,7 +11,7 @@ MD5 f23fea3e8df4c393b9d16c4ccfbcf244 files/digest-gkrellshoot-0.4.3 68
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCb9I92G5bA0cA/ScRAjIXAKDllDH2EAQDjW48N+6CRdUdPNsUggCfVO8S
-DebhY3fGfV9GfjnJqjlHGaM=
-=F0Vt
+iD8DBQFCb9KP2G5bA0cA/ScRArZMAJ0Qr2ayzIcJSibAo0foasNH8deEvgCfc2CZ
+5G4HFWxs6/dYtPCYZLi7p0I=
+=gWxI
 -----END PGP SIGNATURE-----
