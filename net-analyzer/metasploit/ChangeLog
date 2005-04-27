@@ -1,6 +1,14 @@
 # ChangeLog for net-analyzer/metasploit
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/ChangeLog,v 1.5 2005/03/13 10:44:04 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/ChangeLog,v 1.6 2005/04/27 12:01:41 ka0ttic Exp $
+
+*metasploit-2.3-r2 (27 Apr 2005)
+
+  27 Apr 2005; Aaron Walker <ka0ttic@gentoo.org> +files/msfweb.confd,
+  files/msfweb.initd, -metasploit-2.3.ebuild, -metasploit-2.3-r1.ebuild,
+  +metasploit-2.3-r2.ebuild:
+  Revision bump; add conf.d file and init.d enhancements. Thanks once again to
+  soulse in bug 90543. Tidy old ebuilds.
 
   13 Mar 2005; Luca Barbato <lu_zero@gentoo.org> :
   Fixed ChangeLog as requersted by reporter in bug #75532
