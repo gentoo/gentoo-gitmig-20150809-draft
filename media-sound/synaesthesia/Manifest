@@ -1,6 +1,16 @@
-MD5 b074c30ba75a63c79e447a6c307a10d3 synaesthesia-2.2.ebuild 849
-MD5 eadf110c530e1b8ca6173bd6977faeda synaesthesia-2.1.ebuild 820
-MD5 8ff11b9adab4a83c0f4aab281b86b049 ChangeLog 936
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 79254eba251d34f4371ff779b468b841 ChangeLog 1059
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+MD5 23a33fa2728f7ac91df5a885894454a0 synaesthesia-2.1.ebuild 818
+MD5 13474e5a295e82c7173e0a080a5c9070 synaesthesia-2.2.ebuild 842
 MD5 a7c23dfe64d4d66b7748b6948a9ac8e8 files/digest-synaesthesia-2.1 68
 MD5 8406064a7b709f1db47d6ae809de7820 files/digest-synaesthesia-2.2 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCb0ULvpz1081QvMkRAohWAJ9KXdRSQhSwWzx8sWbuAvKLIilNAgCdEzWl
+uY2maE81tr/h+paSYIF748Y=
+=sTS5
+-----END PGP SIGNATURE-----
