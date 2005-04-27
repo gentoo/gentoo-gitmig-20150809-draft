@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/dia/dia-0.94-r1.ebuild,v 1.6 2005/04/17 04:26:16 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/dia/dia-0.94-r1.ebuild,v 1.7 2005/04/27 18:09:35 liquidx Exp $
 
 inherit eutils gnome2
 
@@ -37,6 +37,10 @@ DOCS="AUTHORS ChangeLog KNOWN_BUGS NEWS README RELEASE-PROCESS THANKS TODO"
 src_unpack() {
 	unpack ${A}
 	cd ${S}
+	# Disable python -c 'import gtk' during compile to prevent using
+	# X being involved (#31589)
+	epatch ${FILESDIR}/${PV}-disable_python_gtk_import.patch
+	autoconf
 
 	# Disable buggy font cache. See bug #81227.
 	epatch ${FILESDIR}/${P}-no_font_cache.patch
