@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/TermReadKey
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/TermReadKey/ChangeLog,v 1.14 2005/01/04 13:53:44 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/TermReadKey/ChangeLog,v 1.15 2005/04/27 17:57:07 mcummings Exp $
+
+*TermReadKey-2.30 (27 Apr 2005)
+
+  27 Apr 2005; Michael Cummings <mcummings@gentoo.org>
+  TermReadKey-2.21.ebuild, +TermReadKey-2.30.ebuild:
+  Package gone upstream. Put on mirror, bumped to the latest greatest on cpan.
+  Looks like all of our ebuilds are missing real SRC's now upstream except 2.30.
 
   04 Jan 2005; Michael Cummings <mcummings@gentoo.org>
   TermReadKey-2.19-r1.ebuild, TermReadKey-2.19.ebuild,
