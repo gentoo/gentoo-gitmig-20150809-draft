@@ -1,6 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellaclock/gkrellaclock-0.3.2.1.ebuild,v 1.7 2004/11/14 19:58:53 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellaclock/gkrellaclock-0.3.2.1.ebuild,v 1.8 2005/04/27 21:40:04 herbs Exp $
+
+inherit multilib
 
 IUSE=""
 S=${WORKDIR}/${P/a/A}
@@ -12,7 +14,7 @@ DEPEND=">=app-admin/gkrellm-2*"
 
 SLOT="2"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc alpha ppc ~amd64"
+KEYWORDS="x86 sparc alpha ppc amd64"
 
 src_compile() {
 	export CFLAGS="${CFLAGS/-O?/}"
@@ -20,7 +22,7 @@ src_compile() {
 }
 
 src_install () {
-	insinto /usr/lib/gkrellm2/plugins
+	insinto /usr/$(get_libdir)/gkrellm2/plugins
 	doins gkrellaclock.so
 	dodoc README ChangeLog
 }
