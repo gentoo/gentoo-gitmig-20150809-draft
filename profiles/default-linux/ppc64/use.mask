@@ -11,6 +11,7 @@ icc
 icc-pgo
 ifc
 krb4
+lm_sensors
 mplayer
 pcmcia
 pda
