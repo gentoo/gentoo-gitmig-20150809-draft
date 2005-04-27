@@ -1,16 +1,19 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ivtv-0.2.0_rc3-r4.ebuild,v 1.1 2005/04/26 23:32:20 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ivtv-0.2.0_rc3-r4.ebuild,v 1.2 2005/04/27 21:29:36 iggy Exp $
+
+# TODO: make this thing 0.3.x friendly so people will stop asking me to put 0.3 in portage
 
 inherit eutils linux-mod
 
 DESCRIPTION="ivtv driver for Hauppauge PVR[23]50 cards"
-HOMEPAGE="http://205.209.168.201/~ckennedy/ivtv/"
+HOMEPAGE="http://ivtv.writeme.ch"
 
 MY_P="${P/_/-}j"
 FW_VER="pvr_1.18.21.22168_inf.zip"
 
 SRC_URI="http://www.ivtv.tv/releases/ivtv-0.2/${MY_P}.tgz
+	http://www.ivtv.tv/releases/ivtv-0.2/ivtv-0.2.0-rc/${MY_P}.tgz
 	ftp://ftp.shspvr.com/download/wintv-pvr_250-350/inf/${FW_VER}"
 
 RESTRICT="nomirror"
@@ -89,7 +92,19 @@ pkg_postinst() {
 	linux-mod_pkg_postinst
 
 	einfo "You now have the driver for the Hauppauge PVR-[23]50 cards."
-	einfo "Add ivtv to /etc/modules.autoload.d/kernel-2.X"
+	echo
+	einfo "In general, the following instructions suffice to conclude the"
+	einfo "installation. For more detailed instructions, please refer to the"
+	einfo "ivtv wiki listed as the home page of this ebuild."
+	echo
+	einfo "1) Ignore the above commands, only add 'ivtv' to /etc/modules.autoload.d/kernel-2.X"
+	echo
+	einfo "2) Also add a files called 'ivtv' to /etc/modules.d which contains"
+	einfo "   the two lines:"
+	einfo "     alias char-major-81 videodev"
+	einfo "     alias char-major-81-0 ivtv"
+	echo
+	einfo "3) Then perform a 'update-modules'."
 	echo
 	einfo "To get the ir remote working, you'll need to emerge lirc"
 	einfo "with the following set:"
@@ -106,6 +121,6 @@ pkg_postinst() {
 
 	if [ -f "${ROOT}/lib/modules/${KV_FULL}/kernel/drivers/media/video/msp3400.ko" ] ; then
 		ewarn "You have the msp3400 module that comes with the kernel. It isn't compatible"
-		ewarn "with ivtv. You need to back it up to somewhere else, then run update-modules"
+		ewarn "with ivtv. You need to back it up to somewhere else, then run 'update-modules'"
 	fi
 }

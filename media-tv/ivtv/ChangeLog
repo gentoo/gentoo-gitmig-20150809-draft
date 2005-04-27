@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/ivtv
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ChangeLog,v 1.24 2005/04/26 23:32:20 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ChangeLog,v 1.25 2005/04/27 21:29:36 iggy Exp $
+
+  27 Apr 2005; Brian Jackson <iggy@gentoo.org> ivtv-0.2.0_rc3-r4.ebuild:
+  a few fixes from bug #90535, thanks to Andreas Weder
+  <andreas.wederAThispeed.ch>
 
 *ivtv-0.2.0_rc3-r4 (26 Apr 2005)
 
