@@ -1,6 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellweather/gkrellweather-2.0.6.ebuild,v 1.10 2004/07/09 23:50:16 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellweather/gkrellweather-2.0.6.ebuild,v 1.11 2005/04/27 16:52:09 herbs Exp $
+
+inherit multilib
 
 IUSE=""
 DESCRIPTION="GKrellM2 Plugin that monitors a METAR station and displays weather
@@ -37,7 +39,7 @@ src_install () {
 	exeinto /usr/bin
 	newexe GrabWeather GrabWeather2
 
-	insinto /usr/lib/gkrellm2/plugins
+	insinto /usr/$(get_libdir)/gkrellm2/plugins
 	doins gkrellweather.so
 	dodoc README ChangeLog COPYING
 }
