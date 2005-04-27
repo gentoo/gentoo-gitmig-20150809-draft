@@ -1,4 +1,14 @@
-MD5 bca19e5759ac135a8e7cf55ef3f0c7d8 gst-plugins-faac-0.8.8.ebuild 324
-MD5 72dad7010969937b24cf2176610b9d0f ChangeLog 583
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 59e515b04d20399466cbdb632e9ce3aa gst-plugins-faac-0.8.8.ebuild 326
+MD5 a51428e5961b916fd2d138f823273e8a ChangeLog 585
 MD5 6050196ef420c3e4025029ebee5a813f metadata.xml 162
 MD5 33cfc77852e050bbb91b003695c91131 files/digest-gst-plugins-faac-0.8.8 71
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCb4Qr06ebR+OMO78RAhu7AJ92CcdfhP1rmy3psXb8kN6lP4IkpwCeJ+Ve
+FQ4B2iCUhDpAAGMIZZ5DY98=
+=KQNp
+-----END PGP SIGNATURE-----
