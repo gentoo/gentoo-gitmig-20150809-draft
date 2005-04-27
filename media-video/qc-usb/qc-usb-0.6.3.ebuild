@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/qc-usb/qc-usb-0.6.3.ebuild,v 1.1 2005/04/18 09:08:46 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/qc-usb/qc-usb-0.6.3.ebuild,v 1.2 2005/04/27 17:27:59 liquidx Exp $
 
 inherit linux-mod eutils
 
@@ -16,7 +16,7 @@ KEYWORDS="x86 ~ppc"
 DEPEND="virtual/linux-sources"
 
 src_compile() {
-	emake KERNEL_DIR=${KERNEL_DIR} all || die
+	emake LINUX_DIR=${KERNEL_DIR} all || die
 }
 
 src_install() {
