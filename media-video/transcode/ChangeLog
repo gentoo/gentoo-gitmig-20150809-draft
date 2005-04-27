@@ -1,6 +1,23 @@
 # ChangeLog for media-video/transcode
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.98 2005/04/25 23:10:53 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.99 2005/04/27 11:14:34 flameeyes Exp $
+
+*transcode-1.0.0_beta3 (27 Apr 2005)
+*transcode-0.6.14-r2 (27 Apr 2005)
+
+  27 Apr 2005; Diego Pettenò <flameeyes@gentoo.org>
+  -files/transcode-0.6.14-amd64_mmx.patch,
+  -files/transcode-0.6.14-gcc4.patch,
+  -files/transcode-0.6.14-libquicktime094.patch,
+  -transcode-0.6.14-r1.ebuild, +transcode-0.6.14-r2.ebuild,
+  +transcode-1.0.0_beta3.ebuild:
+  Removed gcc4 patch as it screw up logic both with old and new gcc, bumped to
+  0.6.14-r2 so that all the users who compiled with that patch will recompile
+  without it. The new -r2 also uses a patch tarball instead of having the
+  patches in files/.
+  
+  Added the latest upstream version (1.0.0_beta3) but still p.masked as it's
+  beta-quality software which needs testing.
 
   25 Apr 2005; Martin Schlemmer <azarah@gentoo.org>
   +files/transcode-0.6.14-gcc4.patch, transcode-0.6.14-r1.ebuild:

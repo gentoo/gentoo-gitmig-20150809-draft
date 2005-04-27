@@ -1,8 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-0.6.14-r1.ebuild,v 1.5 2005/04/25 23:10:53 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-0.6.14-r2.ebuild,v 1.1 2005/04/27 11:14:34 flameeyes Exp $
 
 inherit libtool flag-o-matic eutils multilib
+
+PATCH_VER=${PVR}
 
 MY_P="${P/_pre/.}"
 S=${WORKDIR}/${MY_P}
@@ -11,7 +13,9 @@ HOMEPAGE="http://www.transcoding.org/cgi-bin/transcode"
 SRC_URI="http://www.jakemsr.com/transcode/${P}.tar.gz
 	http://www.ligo.caltech.edu/~pehrens/${P}.tar.gz
 	http://www.kraymer.de/mirroring/${P}.tar.gz
-	http://rebels.plukwa.net/linux-video/${PN}/${P}.tar.gz"
+	http://rebels.plukwa.net/linux-video/${PN}/${P}.tar.gz
+
+	http://dev.gentoo.org/~flameeyes/distfiles/${PN}-patches-${PATCH_VER}.tbz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -60,14 +64,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 
-	# needed for libquicktime >= 0.9.4, see #85865
-	epatch ${FILESDIR}/${P}-libquicktime094.patch
-
-	# apply amd64 and mmx patches from upstream CVS
-	epatch ${FILESDIR}/${P}-amd64_mmx.patch
-
-	# fix building with gcc4
-	epatch ${FILESDIR}/${P}-gcc4.patch
+	EPATCH_SUFFIX="patch" epatch ${WORKDIR}/${PATCH_VER}/
 
 	libtoolize --copy --force || die "libtoolize failed"
 	autoreconf -i || die "autoreconf failed"
@@ -130,19 +127,18 @@ src_compile() {
 		$(use_enable v4l) \
 		$(use_enable xml2 libxml2) \
 		${myconf} \
-		|| die
+		|| die "econf failed"
 
-	emake -j1 all || die
+	emake -j1 all || die "emake failed"
 
 	if use pvm; then
-		sed -i -e "s:\${exec_prefix}/bin/pvmgs:\$(DESTDIR)/\${exec_prefix}/bin/pvmgs:" ${S}/pvm3/Makefile || die
+		sed -i -e "s:\${exec_prefix}/bin/pvmgs:\$(DESTDIR)/\${exec_prefix}/bin/pvmgs:" \
+			${S}/pvm3/Makefile || die "sed failed"
 	fi
 }
 
 src_install () {
-	make \
-		DESTDIR=${D} \
-		install || die
+	make DESTDIR=${D} install || die "make install failed"
 
 	dodoc AUTHORS ChangeLog README TODO
 }
