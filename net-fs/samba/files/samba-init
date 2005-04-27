@@ -1,14 +1,14 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/files/samba-init,v 1.9 2005/03/24 09:28:43 satya Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/files/samba-init,v 1.10 2005/04/27 13:29:23 satya Exp $
 
 opts="${opts} reload"
 
 depend() {
 	after slapd
 	need net
-	use cupsd
+	#use cupsd  #removed due to bug #89956
 }
 
 function signal_do {
