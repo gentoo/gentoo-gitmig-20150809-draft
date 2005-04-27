@@ -1,6 +1,9 @@
 # ChangeLog for media-video/kyro-drivers
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kyro-drivers/ChangeLog,v 1.8 2005/04/25 06:09:09 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kyro-drivers/ChangeLog,v 1.9 2005/04/27 05:52:29 spyderous Exp $
+
+  27 Apr 2005; Donnie Berkholz <spyderous@gentoo.org>; metadata.xml:
+  Add myself as maintainer so I don't have to be on the alias.
 
   25 Apr 2005; Donnie Berkholz <spyderous@gentoo.org>; metadata.xml:
   Update herd to x11-drivers.
