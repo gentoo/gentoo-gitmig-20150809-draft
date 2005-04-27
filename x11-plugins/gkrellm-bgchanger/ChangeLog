@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/gkrellm-bgchanger
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-bgchanger/ChangeLog,v 1.8 2004/09/02 18:22:39 pvdabeel Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-bgchanger/ChangeLog,v 1.9 2005/04/27 21:12:44 herbs Exp $
+
+  27 Apr 2005; Herbie Hopkins <herbs@gentoo.org>
+  gkrellm-bgchanger-0.1.2.ebuild:
+  multilib fixes
 
   02 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   gkrellm-bgchanger-0.1.0.ebuild:
