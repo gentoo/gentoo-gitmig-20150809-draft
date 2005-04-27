@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Net-Daemon
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Daemon/ChangeLog,v 1.24 2005/04/25 15:43:14 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Daemon/ChangeLog,v 1.25 2005/04/27 16:27:26 mcummings Exp $
+
+  27 Apr 2005; Michael Cummings <mcummings@gentoo.org>
+  -Net-Daemon-0.36-r1.ebuild, -Net-Daemon-0.36.ebuild, Net-Daemon-0.38.ebuild:
+  Cleaning
 
   25 Apr 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   Net-Daemon-0.38.ebuild:
