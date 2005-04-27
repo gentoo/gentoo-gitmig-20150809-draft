@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/nvidia-glx-1.0.7174-r2.ebuild,v 1.3 2005/04/26 20:23:50 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/nvidia-glx-1.0.7174-r3.ebuild,v 1.1 2005/04/27 21:31:05 eradicator Exp $
 
 inherit eutils multilib versionator
 
@@ -133,32 +133,28 @@ src_install-libs() {
 	dosym libGLcore.so.${PV} ${NV_ROOT}/lib/libGLcore.so
 	dosym libGLcore.so.${PV} ${NV_ROOT}/lib/libGLcore.so.1
 
-	local TLS_LT_ROOT="/usr/${inslibdir}/opengl/nvidia/tls-lt"
-	dodir ${TLS_LT_ROOT}
-	exeinto ${TLS_LT_ROOT}
+	local NO_TLS_ROOT="/usr/${inslibdir}/opengl/nvidia/no-tls"
+	dodir ${NO_TLS_ROOT}
+	exeinto ${NO_TLS_ROOT}
 	doexe usr/${pkglibdir}/libnvidia-tls.so.${PV}
-	dosym libnvidia-tls.so.${PV} ${TLS_LT_ROOT}/libnvidia-tls.so
-	dosym libnvidia-tls.so.${PV} ${TLS_LT_ROOT}/libnvidia-tls.so.1
+	dosym libnvidia-tls.so.${PV} ${NO_TLS_ROOT}/libnvidia-tls.so
+	dosym libnvidia-tls.so.${PV} ${NO_TLS_ROOT}/libnvidia-tls.so.1
 
-	local TLS_NPTL_ROOT="/usr/${inslibdir}/opengl/nvidia/tls-nptl"
-	dodir ${TLS_NPTL_ROOT}
-	exeinto ${TLS_NPTL_ROOT}
+	local TLS_ROOT="/usr/${inslibdir}/opengl/nvidia/tls"
+	dodir ${TLS_ROOT}
+	exeinto ${TLS_ROOT}
 	doexe usr/${pkglibdir}/tls/libnvidia-tls.so.${PV}
-	dosym libnvidia-tls.so.${PV} ${TLS_NPTL_ROOT}/libnvidia-tls.so
-	dosym libnvidia-tls.so.${PV} ${TLS_NPTL_ROOT}/libnvidia-tls.so.1
+	dosym libnvidia-tls.so.${PV} ${TLS_ROOT}/libnvidia-tls.so
+	dosym libnvidia-tls.so.${PV} ${TLS_ROOT}/libnvidia-tls.so.1
 
-	if nptl_in_basedir ; then
-		dosym ../tls-nptl/libnvidia-tls.so ${NV_ROOT}/lib
-		dosym ../tls-nptl/libnvidia-tls.so.1 ${NV_ROOT}/lib
-		dosym ../tls-nptl/libnvidia-tls.so.${PV} ${NV_ROOT}/lib
+	if want_tls ; then
+		dosym ../tls/libnvidia-tls.so ${NV_ROOT}/lib
+		dosym ../tls/libnvidia-tls.so.1 ${NV_ROOT}/lib
+		dosym ../tls/libnvidia-tls.so.${PV} ${NV_ROOT}/lib
 	else
-		dosym ../tls-lt/libnvidia-tls.so ${NV_ROOT}/lib
-		dosym ../tls-lt/libnvidia-tls.so.1 ${NV_ROOT}/lib
-		dosym ../tls-lt/libnvidia-tls.so.${PV} ${NV_ROOT}/lib
-	fi
-
-	if nptl_in_tlsdir ; then
-		dosym ../tls-nptl ${NV_ROOT}/lib/tls
+		dosym ../no-tls/libnvidia-tls.so ${NV_ROOT}/lib
+		dosym ../no-tls/libnvidia-tls.so.1 ${NV_ROOT}/lib
+		dosym ../no-tls/libnvidia-tls.so.${PV} ${NV_ROOT}/lib
 	fi
 
 	# Not sure whether installing the .la file is neccessary;
@@ -230,34 +226,20 @@ pkg_postinst() {
 	einfo "output of /usr/bin/nvidia-bug-report.sh included."
 }
 
-nptl_in_basedir() {
+want_tls() {
 	# For uclibc or anything non glibc, return false
 	has_version sys-libs/glibc || return 1
 
-	# Old versions of glibc were lt only
+	# Old versions of glibc were lt/no-tls only
 	has_version '<sys-libs/glibc-2.3.2' && return 1
 
-	if has_version '<sys-libs/glibc-2.3.4.20040928' ; then
-		built_with_use sys-libs/glibc nptl
-	else
-		built_with_use sys-libs/glibc nptl nptlonly
-	fi
-}
+	# If we've got nptl, we've got tls
+	built_with_use sys-libs/glibc nptl && return 0
 
-nptl_in_tlsdir() {
-	# For uclibc or anything non glibc, return false
-	has_version sys-libs/glibc || return 1
+	# These versions built linuxthreads version to support tls, too
+	has_version '>=sys-libs/glibc-2.3.4.20040619-r2' && return 0
 
-	# Old versions of glibc were lt only
-	has_version '<sys-libs/glibc-2.3.2' && return 1
-
-	# These all put nptl in the base libdir
-	has_version '<sys-libs/glibc-2.3.4.20040928' && return 1
-
-	# nptlonly makes it install in the base libdir
-	built_with_use sys-libs/glibc nptlonly && return 1
-
-	built_with_use sys-libs/glibc nptl
+	return 1
 }
 
 pkg_postrm() {

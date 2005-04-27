@@ -1,6 +1,13 @@
 # ChangeLog for media-video/nvidia-glx
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/ChangeLog,v 1.90 2005/04/26 20:23:50 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/ChangeLog,v 1.91 2005/04/27 21:31:05 eradicator Exp $
+
+*nvidia-glx-1.0.7174-r3 (27 Apr 2005)
+
+  27 Apr 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  -nvidia-glx-1.0.7174-r2.ebuild, +nvidia-glx-1.0.7174-r3.ebuild:
+  Fix for bug #90047. We check if glibc was built with --with-tls and install
+  the correct libnvidia-tls.so.
 
   26 Apr 2005; Jeremy Huddleston <eradicator@gentoo.org>
   nvidia-glx-1.0.7174-r2.ebuild:
