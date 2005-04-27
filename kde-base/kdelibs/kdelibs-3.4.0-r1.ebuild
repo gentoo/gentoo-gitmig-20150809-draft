@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.4.0-r1.ebuild,v 1.1 2005/04/20 22:07:12 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.4.0-r1.ebuild,v 1.2 2005/04/27 17:16:18 corsair Exp $
 
-inherit kde eutils
+inherit kde eutils flag-o-matic
 set-qtdir 3
 set-kdedir 3.4
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://kde/stable/3.4/src/${P}.tar.bz2"
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="3.4"
-KEYWORDS="~x86 ~amd64 ~sparc ~ppc"
+KEYWORDS="~x86 ~amd64 ~sparc ~ppc ~ppc64"
 IUSE="alsa arts cups doc jpeg2k kerberos openexr spell ssl tiff zeroconf"
 
 # kde.eclass has kdelibs in DEPEND, and we can't have that in here.
@@ -57,6 +57,9 @@ src_unpack() {
 	# Fix forms with images (kde bug 59701). Applied for 3.4.1.
 	epatch "${FILESDIR}/${P}-imagemap.patch"
 
+	# see bug #63529.
+	epatch ${FILESDIR}/${PN}-3.3.2-ppc64.patch
+
 	# kimgio input validation errors, bug 88862
 	cd ${S}/kimgio && patch -p0 < "${FILESDIR}/post-3.4.0-kdelibs-kimgio.diff"
 }
@@ -72,6 +75,9 @@ src_compile() {
 	use kerberos || myconf="${myconf} --with-gssapi=no"
 
 	use x86 && myconf="${myconf} --enable-fast-malloc=full"
+
+	# fix bug 58179, 85593
+	use ppc64 && append-flags "-fno-gcse"
 
 	kde_src_compile
 
