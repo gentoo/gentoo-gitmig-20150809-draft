@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/musicbrainz
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/musicbrainz/ChangeLog,v 1.45 2005/02/22 08:47:39 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/musicbrainz/ChangeLog,v 1.46 2005/04/27 07:17:13 flameeyes Exp $
+
+*musicbrainz-2.1.1-r1 (27 Apr 2005)
+
+  27 Apr 2005; Diego Pettenò <flameeyes@gentoo.org>
+  +files/musicbrainz-2.1.1-gcc4.patch, +musicbrainz-2.1.1-r1.ebuild:
+  Added patch to compile with gcc 4.0, fixes #90478. Revision bump because the
+  previous was stable and this can change the behaviour on 64-bit systems.
 
   22 Feb 2005; Hardave Riar <hardave@gentoo.org> musicbrainz-2.1.1.ebuild:
   Marked ~mips
