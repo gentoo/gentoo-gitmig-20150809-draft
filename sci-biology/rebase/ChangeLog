@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/rebase
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/rebase/ChangeLog,v 1.14 2005/04/27 17:20:15 dams Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/rebase/ChangeLog,v 1.15 2005/04/27 17:24:28 j4rg0n Exp $
+
+  27 Apr 2005; Lina Pezzella <j4rg0n@gentoo.org> rebase-503.ebuild:
+  Stable ppc-macos
 
   27 Apr 2005; <dams@gentoo.org> rebase-503.ebuild:
   there is no emboss marked as stable, so rebase cannot be marked as stable.
