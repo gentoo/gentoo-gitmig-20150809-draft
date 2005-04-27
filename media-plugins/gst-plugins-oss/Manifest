@@ -14,11 +14,11 @@ MD5 fdc36508749cec2850c94b4bff5cc0a2 files/digest-gst-plugins-oss-0.8.2 71
 MD5 b34b0c2aff88ed12404f38ecc09f44f0 files/digest-gst-plugins-oss-0.8.3 71
 MD5 acf565d7ba42d81f95f66ad754ab8be9 files/digest-gst-plugins-oss-0.8.5 71
 MD5 1d2b17e15b2072757c3db8f184b7d174 files/digest-gst-plugins-oss-0.8.7 71
-MD5 774aaa9800817b5baa14bfa1b0b3cbc2 files/digest-gst-plugins-oss-0.8.8 70
+MD5 33cfc77852e050bbb91b003695c91131 files/digest-gst-plugins-oss-0.8.8 71
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFCb30Q06ebR+OMO78RArEXAJwK2AMhYB+StVILP0gqZmLbAZND1ACfUFtY
-rrVIhCpgzIetA+n9aD+4Eek=
-=SSQS
+iD8DBQFCb4Bj06ebR+OMO78RAnvUAKCWwhQOg0EaZMMMSsawA7nJ+I7bjgCfcnFg
+SYzE1QJ4LceBoSOLnboqDao=
+=T+m2
 -----END PGP SIGNATURE-----
