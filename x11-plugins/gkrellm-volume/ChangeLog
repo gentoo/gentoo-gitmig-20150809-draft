@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/gkrellm-volume
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-volume/ChangeLog,v 1.21 2005/03/22 18:04:18 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-volume/ChangeLog,v 1.22 2005/04/27 20:22:33 herbs Exp $
+
+  27 Apr 2005; Herbie Hopkins <herbs@gentoo.org>
+  gkrellm-volume-2.1.13.ebuild:
+  multilib fixes
 
 *gkrellm-volume-2.1.13 (22 Mar 2005)
 

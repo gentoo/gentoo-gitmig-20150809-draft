@@ -1,6 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-wifi/gkrellm-wifi-0.9.12.ebuild,v 1.8 2005/03/25 16:55:54 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-wifi/gkrellm-wifi-0.9.12.ebuild,v 1.9 2005/04/27 20:18:37 herbs Exp $
+
+inherit multilib
 
 DESCRIPTION="A GKrellM2 plug-in for monitoring the link quality of your wireless LAN cards"
 HOMEPAGE="http://dev.gentoo.org/files/gkrellm-wifi/"
@@ -19,7 +21,7 @@ src_compile() {
 }
 
 src_install() {
-	exeinto /usr/lib/gkrellm2/plugins
+	exeinto /usr/$(get_libdir)/gkrellm2/plugins
 	doexe gkrellm-wifi.so
 	dodoc AUTHORS COPYING ChangeLog INSTALL NEWS README THEMING TODO
 }
