@@ -1,6 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrelltop/gkrelltop-2.2.4.ebuild,v 1.5 2005/03/25 16:53:52 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrelltop/gkrelltop-2.2.4.ebuild,v 1.6 2005/04/27 17:29:06 herbs Exp $
+
+inherit multilib
 
 DESCRIPTION="a GKrellM2 plugin which displays the top three processes"
 SRC_URI="http://psychology.rutgers.edu/~zaimi/html/${PN}/${PN}.${PV}.tgz"
@@ -27,6 +29,6 @@ src_compile() {
 
 src_install() {
 	dodoc README
-	insinto /usr/lib/gkrellm2/plugins
+	insinto /usr/$(get_libdir)/gkrellm2/plugins
 	doins gkrelltop2.so
 }
