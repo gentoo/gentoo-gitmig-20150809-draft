@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/vpopmail
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/ChangeLog,v 1.50 2005/04/17 23:07:00 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/ChangeLog,v 1.51 2005/04/27 15:46:33 ferdy Exp $
+
+  27 Apr 2005; Fernando J. Pereda <ferdy@gentoo.org>
+  vpopmail-5.4.9-r1.ebuild:
+  fix IUSE and use append-flag, wrt #90621
 
 *vpopmail-5.4.9-r1 (17 Apr 2005)
 

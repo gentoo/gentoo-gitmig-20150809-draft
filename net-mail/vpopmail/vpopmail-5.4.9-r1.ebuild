@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/vpopmail-5.4.9-r1.ebuild,v 1.2 2005/04/19 01:11:48 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/vpopmail-5.4.9-r1.ebuild,v 1.3 2005/04/27 15:46:33 ferdy Exp $
 
 inherit eutils gnuconfig fixheadtails flag-o-matic
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~sparc ~amd64 ~ppc"
-IUSE="mysql ipalias clearpasswd amd64"
+IUSE="mysql ipalias clearpasswd"
 # vpopmail will NOT build if non-root.
 RESTRICT="nouserpriv"
 DEPEND_COMMON="mail-mta/qmail
@@ -30,9 +30,6 @@ RDEPEND="${DEPEND_COMMON}
 # Define vpopmail home dir in /etc/password if different
 VPOP_DEFAULT_HOME="/var/vpopmail"
 VPOP_HOME="$VPOP_DEFAULT_HOME"
-
-# So -fPIC is used which allows courier-authlib to build on amd64 bug #81605
-if use amd64; then export CFLAGS="${CFLAGS} -fPIC"; fi
 
 # This makes sure the variable is set, and that it isn't null.
 vpopmail_set_homedir() {
@@ -98,6 +95,9 @@ src_compile() {
 	use clearpasswd \
 		&& myopts="${myopts} --enable-clear-passwd=y" \
 		|| myopts="${myopts} --enable-clear-passwd=n"
+
+	# So -fPIC is used which allows courier-authlib to build on amd64 bug #81605
+	use amd64 && append-flags -fPIC
 
 	econf \
 		${myopts} \
