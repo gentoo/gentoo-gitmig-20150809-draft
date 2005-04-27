@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/synaesthesia/synaesthesia-2.2.ebuild,v 1.5 2005/04/27 07:54:14 fvdpol Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/synaesthesia/synaesthesia-2.2.ebuild,v 1.6 2005/04/27 07:55:56 eradicator Exp $
 
 DESCRIPTION="a nice graphical accompaniment to music"
-HOMEPAGE="http://www.logarithmic.net/pfh/synaesthesia/"
-SRC_URI="http://www.logarithmic.net/pfh/Synaesthesia/${P}.tar.gz"
+HOMEPAGE="http://www.logarithmic.net/pfh/synaesthesia"
+SRC_URI="http://www.logarithmic.net/pfh-files/synaesthesia/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
