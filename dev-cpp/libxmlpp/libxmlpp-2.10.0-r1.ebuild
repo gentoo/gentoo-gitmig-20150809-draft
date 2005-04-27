@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libxmlpp/libxmlpp-2.10.0.ebuild,v 1.1 2005/04/23 18:55:09 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libxmlpp/libxmlpp-2.10.0-r1.ebuild,v 1.1 2005/04/27 11:50:46 ka0ttic Exp $
 
 inherit gnome2 eutils
 

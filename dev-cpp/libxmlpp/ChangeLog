@@ -1,6 +1,17 @@
 # ChangeLog for dev-cpp/libxmlpp
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libxmlpp/ChangeLog,v 1.22 2005/04/23 18:55:09 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libxmlpp/ChangeLog,v 1.23 2005/04/27 11:50:46 ka0ttic Exp $
+
+*libxmlpp-2.10.0-r1 (27 Apr 2005)
+*libxmlpp-2.8.0-r1 (27 Apr 2005)
+
+  27 Apr 2005; Aaron Walker <ka0ttic@gentoo.org>
+  +files/libxmlpp-2.8.0-use-correct-callback.diff,
+  files/libxmlpp-2.10.0-use-correct-callback.diff, -libxmlpp-2.8.0.ebuild,
+  +libxmlpp-2.8.0-r1.ebuild, -libxmlpp-2.10.0.ebuild,
+  +libxmlpp-2.10.0-r1.ebuild:
+  Dual revision bumps; fix 2.10.0 patch and added a counterpart patch for
+  2.8.0 since it suffers from the same bug.
 
 *libxmlpp-2.10.0 (23 Apr 2005)
 
