@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Ima-DBI
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Ima-DBI/ChangeLog,v 1.5 2005/01/30 00:20:56 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Ima-DBI/ChangeLog,v 1.6 2005/04/27 13:36:53 mcummings Exp $
+
+  27 Apr 2005; Michael Cummings <mcummings@gentoo.org> Ima-DBI-0.33.ebuild:
+  Cleaning
 
   30 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org> Ima-DBI-0.33.ebuild:
   added ~amd64 to KEYWORDS.
