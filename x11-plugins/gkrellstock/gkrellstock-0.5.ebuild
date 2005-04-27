@@ -1,6 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellstock/gkrellstock-0.5.ebuild,v 1.10 2004/07/09 23:44:54 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellstock/gkrellstock-0.5.ebuild,v 1.11 2005/04/27 17:44:03 herbs Exp $
+
+inherit multilib
 
 IUSE=""
 S=${WORKDIR}/${P/s/S}
@@ -21,9 +23,9 @@ src_compile() {
 }
 
 src_install () {
-	insinto /usr/lib/gkrellm2/plugins
+	insinto /usr/$(get_libdir)/gkrellm2/plugins
 	doins gkrellstock.so
-	exeinto /usr/X11R6/bin
+	exeinto /usr/bin
 	doexe GetQuote2
 	dodoc README ChangeLog COPYING
 }
