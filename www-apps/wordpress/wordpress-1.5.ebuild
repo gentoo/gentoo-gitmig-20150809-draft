@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/wordpress/wordpress-1.5.ebuild,v 1.2 2005/04/20 19:02:03 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/wordpress/wordpress-1.5.ebuild,v 1.3 2005/04/27 01:37:12 gustavoz Exp $
 
 inherit webapp eutils
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://wordpress.org/"
 #Download is renamed by HTTP Header as wordpress-1.2.2.tar.gz
 SRC_URI="http://wordpress.org/latest-1.5.tar.gz"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc ~sparc"
+KEYWORDS="x86 ppc sparc"
 IUSE=""
 RDEPEND=">=dev-php/mod_php-4.1
 	 >=dev-db/mysql-3.23.23"
