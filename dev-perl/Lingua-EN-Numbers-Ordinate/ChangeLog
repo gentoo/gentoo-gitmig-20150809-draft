@@ -1,6 +1,14 @@
 # ChangeLog for dev-perl/Lingua-EN-Numbers-Ordinate
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Lingua-EN-Numbers-Ordinate/ChangeLog,v 1.3 2004/06/25 00:42:42 agriffis Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Lingua-EN-Numbers-Ordinate/ChangeLog,v 1.4 2005/04/27 14:31:39 mcummings Exp $
+
+*Lingua-EN-Numbers-Ordinate-1.02 (27 Apr 2005)
+
+  27 Apr 2005; Michael Cummings <mcummings@gentoo.org>
+  -Lingua-EN-Numbers-Ordinate-0.01.ebuild,
+  +Lingua-EN-Numbers-Ordinate-1.02.ebuild:
+  Cleaning up. Author rebundled code in a cpan-friendly way and bumped the
+  number, but there is NO code change between this version and the last.
 
   08 Jun 2003; <rac@gentoo.org> Lingua-EN-Numbers-Ordinate-0.01.ebuild:
   Fix header, stabilize URL, add IUSE
