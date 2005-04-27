@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3876 2005/04/26 22:28:53 swegener Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3877 2005/04/27 03:02:21 eradicator Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,11 +20,6 @@
 ##
 ##   End example
 ##
-
-# Jeremy Huddleston <eradicator@gentoo.org> (25 Apr 2005)
-# In testing and looking for regressions...
->=x11-base/opengl-update-2.2.0
->=media-video/nvidia-glx-1.0.7174-r2
 
 # Marius Mauch <genone@gentoo.org> (26 April 2005)
 # CVS is still broken :( Masking till I'm sure it's fixed.
