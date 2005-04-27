@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/files/2.16/bluetooth.rc,v 1.1 2005/04/26 15:02:48 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/files/2.16/bluetooth.rc,v 1.2 2005/04/27 12:40:04 liquidx Exp $
 
 UART_CONF="/etc/bluetooth/uart"
 
@@ -22,6 +22,13 @@ stop_uarts() {
 
 start() {
    	ebegin "Starting Bluetooth"
+
+	if [ "${HID2HCI_ENABLE}" = "true" -a -x /usr/sbin/hid2hci ]; then
+		ebegin "    Running hid2hci"
+		/usr/sbin/hid2hci -0 -q    #be quiet
+		/bin/sleep 1 # delay for hid's to be detected by hotplug
+		eend $?
+	fi
 
 	if [ "${HCID_ENABLE}" = "true" -a -x /usr/sbin/hcid ]; then
 		if [ -f "${HCID_CONFIG}" ]; then
@@ -46,14 +53,6 @@ start() {
 		ebegin "    Starting hidd"
 		start-stop-daemon --start --quiet \
 			--exec /usr/bin/hidd -- ${HIDD_OPTIONS} --server
-		eend $?
-	fi
-
-
-	if [ "${HID2HCI_ENABLE}" = "true" -a -x /usr/sbin/hid2hci ]; then
-		ebegin "    Running hid2hci"
-		/usr/sbin/hid2hci -0 -q    #be quiet
-		/bin/sleep 1 # delay for hid's to be detected by hotplug
 		eend $?
 	fi
 
