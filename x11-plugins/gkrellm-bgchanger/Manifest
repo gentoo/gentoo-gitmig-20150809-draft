@@ -4,8 +4,8 @@ Hash: SHA1
 MD5 1236fcc908abc7dad61cf14cc02e7ff7 gkrellm-bgchanger-0.1.2.ebuild 795
 MD5 0e3785ed199ca1387385aa8bdebed1b4 gkrellm-bgchanger-0.0.8.ebuild 761
 MD5 cabf00dacdad9f3b3116777c433a0f96 gkrellm-bgchanger-0.0.4-r1.ebuild 750
-MD5 c733bf7dfbaac7ae85f69c4eefa1dba8 gkrellm-bgchanger-0.1.0.ebuild 771
-MD5 1ed216af763fdb4f8c73d8e41d996611 ChangeLog 1517
+MD5 a6676364c22e07b8bcb916dcaeb09524 gkrellm-bgchanger-0.1.0.ebuild 767
+MD5 44fcdba84ad63a8ef7225d0cc6ed42fc ChangeLog 1621
 MD5 de35d8f600d3d75d8075a8d848787013 metadata.xml 223
 MD5 7de90264d9b99bfd592fe92171d93d9b gkrellm-bgchanger-0.0.9.ebuild 760
 MD5 bdad4dc3616d5aabd89e322f3219ac05 files/digest-gkrellm-bgchanger-0.0.4-r1 68
@@ -16,7 +16,7 @@ MD5 b2d1066375450fa477bd730196b9e6e7 files/digest-gkrellm-bgchanger-0.1.2 70
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCcABX2G5bA0cA/ScRAnIOAJ9bDQErgKto1Gy4J5gR616Z8XEbjACg1dBu
-EKeA7R5fTdJ1R+1iNdM5hso=
-=RZsi
+iD8DBQFCcADV2G5bA0cA/ScRAsoXAKCvAysVNt6VTcmhMlnAdis5AD92HwCgjLUJ
+nEuo3WTceTsd0GGjFQzk0LE=
+=pdXy
 -----END PGP SIGNATURE-----

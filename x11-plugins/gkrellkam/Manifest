@@ -1,15 +1,15 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 85d490cf00828086413d75de0ae14b48 ChangeLog 1459
+MD5 ddda4c219caee1358451d7e51c2b49f0 gkrellkam-2.0.0.ebuild 690
+MD5 267184392da245820e45db0a2c39bd0b ChangeLog 1546
 MD5 18603b8a8e2fbdae13a37879d96da704 gkrellkam-0.3.4.ebuild 639
-MD5 a58619b6477507469dcac678eec5ddcc gkrellkam-2.0.0.ebuild 666
 MD5 003cc4de0a739a28af21074bff0b63cd files/digest-gkrellkam-0.3.4 66
 MD5 92da7650bdbd91e8256c259310a1efb3 files/digest-gkrellkam-2.0.0 66
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCRECu5mJXAu5GbtIRApy7AJ9zDyINXPRleu6J6vxWxIYSCXWnCQCdFUFB
-0ylYLl/foy9Je8JE5MkYvmk=
-=i1zO
+iD8DBQFCcAG62G5bA0cA/ScRAidhAJ9wdhMFYPYWwd2A51Stgf7Vcb48tQCcCPk1
+q1iUTNVIUWCU2IzQKir0kXY=
+=y8Rk
 -----END PGP SIGNATURE-----
