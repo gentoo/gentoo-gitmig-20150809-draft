@@ -1,6 +1,14 @@
 # ChangeLog for net-fs/samba
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.165 2005/04/27 13:29:23 satya Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.166 2005/04/27 19:52:09 seemant Exp $
+
+*samba-3.0.14a-r1 (27 Apr 2005)
+
+  27 Apr 2005; Seemant Kulleen <seemant@gentoo.org>
+  +samba-3.0.14a-r1.ebuild:
+  replace with -r1, which has improved patches, and a ChangeLog for the
+  patchset. No more /usr/bin/mount.cifs.old and stuff in this. A lot cleaner
+  now
 
   27 Apr 2005; Christian Andreetta <satya@gentoo.org> files/samba-init:
   'use cupsd' removed due to bug #89956

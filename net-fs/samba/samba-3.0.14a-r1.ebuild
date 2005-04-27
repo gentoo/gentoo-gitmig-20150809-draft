@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.14a.ebuild,v 1.2 2005/04/26 21:32:56 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.14a-r1.ebuild,v 1.1 2005/04/27 19:52:09 seemant Exp $
 
 inherit eutils versionator
 
@@ -9,7 +9,7 @@ IUSE="acl cups doc kerberos ldap mysql pam postgres python quotas readline
 winbind xml xml2 libclamav oav selinux"
 
 VSCAN_VER=0.3.6
-PATCH_VER=0.3
+PATCH_VER=0.3.1
 MY_P=${PN}-${PV/_/}
 MY_PP=${PN}-$(get_major_version)-gentoo-patches-${PATCH_VER}
 S2=${WORKDIR}/${MY_P}
@@ -44,6 +44,7 @@ DEPEND="${RDEPEND}
 	>=sys-apps/sed-4"
 
 PRIVATE_DST=/var/lib/samba/private
+PATCHDIR=${WORKDIR}/gentoo/patches
 
 src_unpack() {
 	unpack ${A}; cd ${S2}
@@ -51,10 +52,10 @@ src_unpack() {
 	rm -rf ${S2}/examples.ORIG
 
 	export EPATCH_SUFFIX="patch"
-	epatch ${WORKDIR}/gentoo/patches/general
+	epatch ${PATCHDIR}/general
 	if use oav ; then
 		cp -a ${WORKDIR}/${PFVSCAN} ${S2}/examples/VFS
-		epatch ${WORKDIR}/gentoo/patches/vscan
+		epatch ${PATCHDIR}/vscan
 	fi
 }
 
@@ -111,17 +112,7 @@ src_compile() {
 		$(use_with quotas) $(use_with quotas sys-quotas) \
 		${myconf} || die
 
-	# Show install dirs
-	einfo "Dir conf:"
-	emake showlayout
-	# serialized headers make
-	make proto || die
-
-	# Compile main SAMBA pieces
-	einfo "make everything"
-	emake \
-		LAZYLDFLAGS="-Wl,-z,now" \
-		everything || die "SAMBA make everything error"
+	emake everything || die "SAMBA make everything error"
 
 	einfo "make rpctorture"
 	emake rpctorture || ewarn "rpctorture didn't build"
@@ -130,7 +121,7 @@ src_compile() {
 		python python/setup.py build
 	fi
 
-	# Build selected samba-vscan plugins
+	# Build samba-vscan plugins
 	if use oav; then
 		cd ${S2}/examples/VFS/${PFVSCAN}
 		econf \
@@ -146,7 +137,6 @@ src_install() {
 	local extra_bins="rpctorture"
 
 	make DESTDIR=${D} install-everything || die
-	make DESTDIR=${D} INSTALLPERMS=4555 installsubin || die
 
 	# Extra rpctorture progs
 	exeinto /usr/bin
@@ -154,6 +144,9 @@ src_install() {
 		[ -x ${S}/bin/${i} ] && doexe ${S}/bin/${i}
 		einfo "Extra binaries: ${i}"
 	done
+
+	# remove .old stuff from /usr/bin:
+	rm -f ${D}/usr/bin/*.old
 
 	# Nsswitch extensions. Make link for wins and winbind resolvers
 	dolib.so ${S}/nsswitch/libnss_wins.so
@@ -251,6 +244,9 @@ src_install() {
 		rm -rf ${D}/usr/share/doc/${PF}/swat/help/{guide,howto,devel}
 		rm -rf ${D}/usr/share/doc/${PF}/swat/using_samba
 	fi
+
+	docinto gentoo
+	dodoc ${PATCHDIR}/ChangeLog
 }
 
 pkg_preinst() {
