@@ -1,11 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 77aa6329fd39d9e364f1fdd20d3966ec gst-plugins-libpng-0.8.7.ebuild 406
 MD5 04353c06b2620732f1dc7e0e15ddd6ee gst-plugins-libpng-0.8.2.ebuild 410
 MD5 47ede18c71656004d8fe46e9f370f147 gst-plugins-libpng-0.8.1.ebuild 413
 MD5 6948d3f85486b3f81936163af135ae76 gst-plugins-libpng-0.8.8.ebuild 413
 MD5 bcaf7b9b184b97da46cb944d0530c922 gst-plugins-libpng-0.8.3.ebuild 416
-MD5 59b44ad561f5dddfad13478e4e21cc68 gst-plugins-libpng-0.8.8-r1.ebuild 539
+MD5 dfec39276ad9056615ae52850ca5b50c gst-plugins-libpng-0.8.8-r1.ebuild 541
 MD5 4cf73ec2fb9a79fa0b86420755580ef4 gst-plugins-libpng-0.8.5.ebuild 411
-MD5 c0f4e57ee6ef2f13e7561f4e66160c82 ChangeLog 4569
+MD5 adb59d59b28ff8a5161a70f84e650275 ChangeLog 4571
 MD5 6cf6f97e79b43eaf70fa938c431342a3 metadata.xml 181
 MD5 33cfc77852e050bbb91b003695c91131 files/digest-gst-plugins-libpng-0.8.8-r1 71
 MD5 f82346e916492119a7dc784aefc418a6 files/gst-plugins-libpng-0.8.8-colorspace.patch 592
@@ -15,3 +18,10 @@ MD5 b34b0c2aff88ed12404f38ecc09f44f0 files/digest-gst-plugins-libpng-0.8.3 71
 MD5 acf565d7ba42d81f95f66ad754ab8be9 files/digest-gst-plugins-libpng-0.8.5 71
 MD5 1d2b17e15b2072757c3db8f184b7d174 files/digest-gst-plugins-libpng-0.8.7 71
 MD5 33cfc77852e050bbb91b003695c91131 files/digest-gst-plugins-libpng-0.8.8 71
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCb4pi06ebR+OMO78RAhYAAKCMHDChBRAaxeIq6Ba4zpKJB6krIACbBmKe
+MqSi1W0sJtXyq7mwRl4Te8U=
+=sKlY
+-----END PGP SIGNATURE-----
