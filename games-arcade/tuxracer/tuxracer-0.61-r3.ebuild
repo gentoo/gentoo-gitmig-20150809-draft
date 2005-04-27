@@ -1,8 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/tuxracer/tuxracer-0.61-r3.ebuild,v 1.11 2004/12/15 09:46:50 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/tuxracer/tuxracer-0.61-r3.ebuild,v 1.12 2005/04/27 23:24:45 vapier Exp $
 
-inherit eutils gcc flag-o-matic gnuconfig games
+inherit eutils flag-o-matic games
 
 DESCRIPTION="take on the role of Tux, the Linux Penguin, as he races down steep, snow-covered mountains"
 HOMEPAGE="http://tuxracer.sourceforge.net/"
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/tuxracer/${PN}-data-${PV}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc alpha amd64"
+KEYWORDS="alpha amd64 ppc x86"
 IUSE="stencil-buffer"
 
 DEPEND="virtual/opengl
@@ -25,11 +25,14 @@ src_unpack() {
 	unpack ${PN}-data-${PV}.tar.gz
 
 	# braindead check in configure fails - hack approach
-	epatch "${FILESDIR}/${PV}-configure.in.patch"
-	epatch "${FILESDIR}/${PV}-gcc3.patch"
+	epatch "${FILESDIR}"/${PV}-configure.in.patch
+	epatch "${FILESDIR}"/${PV}-gcc3.patch
 
-	gnuconfig_update
-	autoconf || die "autoconf failed"
+	export WANT_AUTOCONF=2.5
+	aclocal && \
+	autoheader && \
+	automake && \
+	autoconf || die "autotools failed"
 }
 
 src_compile() {
