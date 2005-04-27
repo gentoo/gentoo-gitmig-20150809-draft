@@ -1,6 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellmwireless/gkrellmwireless-2.0.3.ebuild,v 1.6 2005/04/02 02:55:34 hparker Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellmwireless/gkrellmwireless-2.0.3.ebuild,v 1.7 2005/04/27 18:01:31 herbs Exp $
+
+inherit multilib
 
 IUSE=""
 S=${WORKDIR}/${PN}
@@ -22,7 +24,7 @@ src_compile() {
 }
 
 src_install () {
-	insinto /usr/lib/gkrellm2/plugins
+	insinto /usr/$(get_libdir)/gkrellm2/plugins
 	doins wireless.so
 	dodoc README Changelog
 }
