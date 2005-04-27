@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/enlightenment.eclass,v 1.45 2005/04/10 03:29:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/enlightenment.eclass,v 1.46 2005/04/27 03:26:03 vapier Exp $
 #
 # Author: vapier@gentoo.org
 
@@ -99,7 +99,6 @@ enlightenment_src_unpack() {
 
 enlightenment_src_compile() {
 	if [[ ${ECVS_STATE} != "release" ]] || [[ ! -e configure ]] ; then
-		[[ ! -z ${EHACKAUTOGEN} ]] && sed -i 's:.*configure.*::' autogen.sh
 		export WANT_AUTOMAKE=${EAUTOMAKE:-1.8}
 		env \
 			PATH="${T}:${PATH}" \
