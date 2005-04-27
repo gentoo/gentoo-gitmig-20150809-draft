@@ -1,0 +1,10 @@
+# ChangeLog for app-cdr/tkdvd
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/tkdvd/ChangeLog,v 1.1 2005/04/27 00:07:16 pylon Exp $
+
+*tkdvd-3.4 (27 Apr 2005)
+
+  27 Apr 2005; Lars Weiler <pylon@gentoo.org> +metadata.xml,
+  +tkdvd-3.4.ebuild:
+  New ebuild.  Thanks to James Le Cuirot in Bug #90447.
+
