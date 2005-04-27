@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/sane-backends
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/ChangeLog,v 1.64 2005/04/08 17:28:57 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/ChangeLog,v 1.65 2005/04/27 08:08:38 phosphan Exp $
+
+*sane-backends-1.0.15-r1 (27 Apr 2005)
+
+  27 Apr 2005; Patrick Kursawe <phosphan@gentoo.org>
+  +files/sane-backend-1.0.15-gt68xx-update67.patch,
+  +sane-backends-1.0.15-r1.ebuild:
+  Fixes for gt68xx-based scanners (bug #90442)
 
   08 Apr 2005; Markus Rothe <corsair@gentoo.org>
   sane-backends-1.0.15.ebuild:
