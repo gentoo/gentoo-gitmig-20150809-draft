@@ -1,6 +1,14 @@
 # ChangeLog for dev-perl/XML-Simple
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Simple/ChangeLog,v 1.21 2005/04/15 16:53:06 nigoro Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Simple/ChangeLog,v 1.22 2005/04/27 16:15:44 mcummings Exp $
+
+*XML-Simple-2.14 (27 Apr 2005)
+
+  27 Apr 2005; Michael Cummings <mcummings@gentoo.org>
+  -XML-Simple-1.08-r1.ebuild, -XML-Simple-1.08.ebuild,
+  -XML-Simple-2.05.ebuild, -XML-Simple-2.07.ebuild, XML-Simple-2.12.ebuild,
+  +XML-Simple-2.14.ebuild:
+  Cleaning up
 
   16 Apr 2005; <nigoro@gentoo.org> XML-Simple-2.12.ebuild:
   added ~ppc64

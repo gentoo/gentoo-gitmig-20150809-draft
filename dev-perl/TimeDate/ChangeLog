@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/TimeDate
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/TimeDate/ChangeLog,v 1.20 2005/04/02 21:37:23 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/TimeDate/ChangeLog,v 1.21 2005/04/27 16:15:14 mcummings Exp $
+
+  27 Apr 2005; Michael Cummings <mcummings@gentoo.org>
+  -TimeDate-1.11-r1.ebuild, -TimeDate-1.11-r2.ebuild, TimeDate-1.16.ebuild:
+  Cleaning up
 
   02 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> TimeDate-1.16.ebuild:
   Stable on ppc.
