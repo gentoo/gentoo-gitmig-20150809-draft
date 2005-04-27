@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/groff
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/ChangeLog,v 1.56 2005/01/02 23:19:04 ciaranm Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/ChangeLog,v 1.57 2005/04/27 03:47:17 vapier Exp $
+
+  27 Apr 2005; Mike Frysinger <vapier@gentoo.org>
+  files/groff-1.18-no-netpbm-depend.patch, groff-1.19.1-r2.ebuild:
+  Update the netpbm to work with shells that suck (like on SunOS) #89174.
 
   02 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
