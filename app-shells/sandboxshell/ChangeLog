@@ -1,6 +1,12 @@
 # ChangeLog for app-shells/sandboxshell
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/sandboxshell/ChangeLog,v 1.5 2005/01/01 15:59:45 eradicator Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-shells/sandboxshell/ChangeLog,v 1.6 2005/04/27 03:12:53 vapier Exp $
+
+*sandboxshell-0.1-r2 (27 Apr 2005)
+
+  27 Apr 2005; Mike Frysinger <vapier@gentoo.org> files/sandboxshell,
+  +sandboxshell-0.1-r2.ebuild:
+  Newer sandboxes install into /usr/lib instead of /lib.
 
 *sandboxshell-0.1-r1 (23 Jun 2004)
 

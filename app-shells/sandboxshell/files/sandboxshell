@@ -1,7 +1,7 @@
 #!/bin/bash
 # Written by vapier@gentoo.org
 # public-domain code ... z0r ...
-# $Header: /var/cvsroot/gentoo-x86/app-shells/sandboxshell/files/sandboxshell,v 1.1 2003/07/09 14:53:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/sandboxshell/files/sandboxshell,v 1.2 2005/04/27 03:12:53 vapier Exp $
 
 . /sbin/functions.sh
 . /etc/profile
@@ -12,8 +12,11 @@ cd ${PWD} || {
 	exit 1
 }
 
-export LD_PRELOAD=/lib/libsandbox.so
-export SANDBOX_LIB=/lib/libsandbox.so
+for SANDBOX_LIB in /lib /usr/lib ; do
+	SANDBOX_LIB=${SANDBOX_LIB}/libsandbox.so
+	[ -e ${SANDBOX_LIB} ] && break
+done
+export LD_PRELOAD=${SANDBOX_LIB}
 export SANDBOX_LOG="/tmp/sandboxme-$(date '+%d.%m.%Y-%H.%M.%S').log"
 export SANDBOX_DEBUG_LOG="${SANDBOX_LOG}.debug"
 export SANDBOX_DENY=""
