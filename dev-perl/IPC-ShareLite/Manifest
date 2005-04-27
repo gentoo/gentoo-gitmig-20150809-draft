@@ -1,6 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 a19ddb9a2fb8afe6c58c8ef0bff57c70 ChangeLog 1552
+MD5 1976305822e76d4cbb7b03eb80df9fbb IPC-ShareLite-0.09.ebuild 612
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 ac9dc565949e2e00b7f8a1ceb1a4d290 ChangeLog 1425
-MD5 2ef8d7e6dff353f6fa3eec0ac1120846 IPC-ShareLite-0.09.ebuild 615
-MD5 df56459d5094b9a7ce802fe5c6f3a568 IPC-ShareLite-0.08.ebuild 611
 MD5 0ce98d6be329415eabf9a27cff530c7a files/digest-IPC-ShareLite-0.09 69
-MD5 84eeca614c892009f2639e044741ae36 files/digest-IPC-ShareLite-0.08 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCb5GDtG5z4I8BtQoRApcEAJ9dsmJhVrdqdYFSujDCNJPFbFxo4wCdH/YY
+m43EVPHydyBsj8iIQ5l23As=
+=4Iw5
+-----END PGP SIGNATURE-----
