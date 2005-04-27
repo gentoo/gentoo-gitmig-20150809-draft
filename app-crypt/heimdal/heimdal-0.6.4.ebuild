@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/heimdal-0.6.4.ebuild,v 1.4 2005/04/27 08:19:35 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/heimdal-0.6.4.ebuild,v 1.5 2005/04/27 18:20:01 seemant Exp $
 
 inherit libtool eutils
 
@@ -14,7 +14,7 @@ SRC_URI="ftp://ftp.pdc.kth.se/pub/heimdal/src/${P}.tar.gz
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="alpha amd64 ~hppa ia64 mips ~sparc ppc ~x86"
+KEYWORDS="alpha amd64 ~hppa ia64 mips ~sparc ppc x86"
 IUSE="ssl berkdb ipv6 krb4 ldap"
 
 RDEPEND="ssl? ( dev-libs/openssl )
