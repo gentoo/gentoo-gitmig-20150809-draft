@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/mDNSResponder
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mDNSResponder/ChangeLog,v 1.5 2005/03/19 07:02:16 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mDNSResponder/ChangeLog,v 1.6 2005/04/27 17:10:40 corsair Exp $
+
+  27 Apr 2005; Markus Rothe <corsair@gentoo.org> mDNSResponder-98.ebuild:
+  Added ~ppc64 to KEYWORDS
 
   19 Mar 2005; Daniel Goller <morfic@gentoo.org> mDNSResponder-98.ebuild:
   added to ~ppc
