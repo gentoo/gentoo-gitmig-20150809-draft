@@ -1,13 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kig/kig-3.4.0.ebuild,v 1.4 2005/03/25 01:51:10 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kig/kig-3.4.0.ebuild,v 1.5 2005/04/27 22:30:18 corsair Exp $
 KMNAME=kdeedu
 MAXKDEVER=$PV
 KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta
 
 DESCRIPTION="KDE Interactive Geometry tool"
-KEYWORDS="~x86 ~amd64 ~ppc ~sparc"
+KEYWORDS="~x86 ~amd64 ~ppc ~sparc ~ppc64"
 IUSE="kig-scripting"
 DEPEND="kig-scripting? ( >=dev-libs/boost-1.32 )"
 

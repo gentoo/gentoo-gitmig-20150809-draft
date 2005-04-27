@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kopete
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.8 2005/04/03 23:46:26 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.9 2005/04/27 21:46:16 corsair Exp $
+
+  27 Apr 2005; Markus Rothe <corsair@gentoo.org> kopete-3.4.0-r1.ebuild:
+  Added ~ppc64 to KEYWORDS
 
 *kopete-3.4.0-r1 (03 Apr 2005)
 

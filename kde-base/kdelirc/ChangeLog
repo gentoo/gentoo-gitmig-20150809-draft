@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdelirc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelirc/ChangeLog,v 1.5 2005/03/18 16:34:58 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelirc/ChangeLog,v 1.6 2005/04/27 22:15:41 corsair Exp $
+
+  27 Apr 2005; Markus Rothe <corsair@gentoo.org> kdelirc-3.4.0.ebuild:
+  Added ~ppc64 to KEYWORDS
 
   18 Mar 2005; Daniel Goller <morfic@gentoo.org> kdelirc-3.4.0.ebuild:
   Added to ~ppc

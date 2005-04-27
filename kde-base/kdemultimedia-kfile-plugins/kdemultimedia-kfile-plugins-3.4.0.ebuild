@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia-kfile-plugins/kdemultimedia-kfile-plugins-3.4.0.ebuild,v 1.4 2005/03/26 00:32:25 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia-kfile-plugins/kdemultimedia-kfile-plugins-3.4.0.ebuild,v 1.5 2005/04/27 20:04:37 corsair Exp $
 
 KMNAME=kdemultimedia
 KMMODULE=kfile-plugins
@@ -9,7 +9,7 @@ KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta eutils
 
 DESCRIPTION="kfile plugins from kdemultimedia package"
-KEYWORDS="~x86 ~amd64 ~ppc ~sparc"
+KEYWORDS="~x86 ~amd64 ~ppc ~sparc ~ppc64"
 IUSE="oggvorbis theora"
 DEPEND="media-libs/taglib
 	oggvorbis? ( media-libs/libvorbis )

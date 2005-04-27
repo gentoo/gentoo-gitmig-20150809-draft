@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdeartwork-iconthemes
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-iconthemes/ChangeLog,v 1.7 2005/03/25 01:34:57 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-iconthemes/ChangeLog,v 1.8 2005/04/27 20:41:45 corsair Exp $
+
+  27 Apr 2005; Markus Rothe <corsair@gentoo.org>
+  kdeartwork-iconthemes-3.4.0.ebuild:
+  Added ~ppc64 to KEYWORDS
 
   25 Mar 2005; Jason Wever <weeve@gentoo.org>
   kdeartwork-iconthemes-3.4.0.ebuild:
