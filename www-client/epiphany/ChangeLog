@@ -1,6 +1,9 @@
 # ChangeLog for www-client/epiphany
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.8 2005/04/25 13:11:42 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.9 2005/04/27 17:34:12 kloeri Exp $
+
+  27 Apr 2005; Bryan Østergaard <kloeri@gentoo.org> epiphany-1.4.8.ebuild:
+  Stable on alpha.
 
   25 Apr 2005; Mike Gardiner <obz@gentoo.org> epiphany-1.4.8.ebuild:
   Keyworded ppc x86
