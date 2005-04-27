@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.5.ebuild,v 1.9 2005/04/25 01:40:25 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.5.ebuild,v 1.10 2005/04/27 06:13:31 eradicator Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -230,6 +230,10 @@ toolchain-glibc_src_unpack() {
 toolchain-glibc_src_compile() {
 	# Set gconvdir to /usr/$(get_libdir)/gconv on archs with multiple ABIs
 	has_multilib_profile && MAKEFLAGS="gconvdir=$(alt_usrlibdir)/gconv"
+
+	# -fomit-frame-pointer gets stripped in setup_flags, so we do this
+	# now to cache the value
+	want_omitfp
 
 	if want_linuxthreads ; then
 		glibc_do_configure linuxthreads
@@ -602,10 +606,6 @@ alt_usrlibdir() {
 }
 
 setup_flags() {
-	# If the user wants to use -fomit-frame-pointer, let the build system
-	# determine when it's safe
-	is-flag -fomit-frame-pointer && EXTRA_ECONF="--enable-omitfp ${EXTRA_ECONF}"
-
 	# Over-zealous CFLAGS can often cause problems.  What may work for one
 	# person may not work for another.  To avoid a large influx of bugs
 	# relating to failed builds, we strip most CFLAGS out to ensure as few
@@ -801,6 +801,30 @@ want__thread() {
 	return ${WANT__THREAD}
 }
 
+# Under what conditions should we optimize glibc with --enable-omitfp.
+# We strip -fomit-frame-pointer from CFLAGS and let the build system decide
+# where it's safe to use
+want_omitfp() {
+	[[ -n ${WANT_OMITFP} ]] && return ${WANT_OMITFP}
+
+	WANT_OMITFP=1
+	if is-flag -fomit-frame-pointer && ! use debug; then
+		case $(tc-arch) in
+			x86)
+				case ${CTARGET/-*} in
+					i386|i486|i586)	WANT_OMITFP=1 ;;
+					*) WANT_OMITFP=0 ;;
+				esac
+			;;
+			*)
+				WANT_OMITFP=0
+			;;
+		esac
+	fi
+
+	return ${WANT_OMITFP}
+}
+
 install_locales() {
 	unset LANGUAGE LANG LC_ALL
 	cd ${WORKDIR}/${MYMAINBUILDDIR} || die "${WORKDIR}/${MYMAINBUILDDIR}"
@@ -850,6 +874,8 @@ glibc_do_configure() {
 
 	use nls || myconf="${myconf} --disable-nls"
 	use erandom || myconf="${myconf} --disable-dev-erandom"
+
+	want_omitfp && myconf="${myconf} --enable-omitfp"
 
 	if [ "$1" == "linuxthreads" ] ; then
 		if want_tls ; then
