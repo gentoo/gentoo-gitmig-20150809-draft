@@ -1,8 +1,18 @@
-MD5 5e2df4106847928a911efc170381df96 gkrellsun-0.12.2.ebuild 712
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 4035daf38658d8f835a3c6d7907efdee gkrellsun-0.12.2.ebuild 740
 MD5 8444f07c50cf9150959f5b8a2e6522fe gkrellsun-0.9.1.ebuild 990
 MD5 aa486a2d208d4165da384c1bdd250be1 gkrellsun-0.12.1.ebuild 713
-MD5 a4a2b24524b1bdf018ac5c51ef744e19 ChangeLog 1783
+MD5 562d4396a3538781d3f738c307603f88 ChangeLog 1872
 MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
 MD5 6c463d4862a23490e2170516013f753b files/digest-gkrellsun-0.12.1 67
 MD5 ffec2833db4cbf8e1e115b2c8bd22531 files/digest-gkrellsun-0.12.2 67
 MD5 72aa7ba3f8586925a58b6c48db102e85 files/digest-gkrellsun-0.9.1 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCb81z2G5bA0cA/ScRAqfcAJ9yjiZ0GauJsDcZzKoHAZ7XEXOPZACePDl0
+sEp8IH9WO41211REbHFgLC0=
+=v0nS
+-----END PGP SIGNATURE-----

@@ -1,6 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellsun/gkrellsun-0.12.2.ebuild,v 1.1 2005/01/22 19:01:27 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellsun/gkrellsun-0.12.2.ebuild,v 1.2 2005/04/27 17:35:22 herbs Exp $
+
+inherit multilib
 
 IUSE=""
 DESCRIPTION="A GKrellM plugin that shows sunrise and sunset times."
@@ -23,6 +25,6 @@ src_install () {
 	dodoc README AUTHORS COPYING
 
 	cd ${S}/src20
-	insinto /usr/lib/gkrellm2/plugins
+	insinto /usr/$(get_libdir)/gkrellm2/plugins
 	doins gkrellsun.so
 }
