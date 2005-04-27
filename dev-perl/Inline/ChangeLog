@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Inline
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Inline/ChangeLog,v 1.21 2005/02/01 11:07:42 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Inline/ChangeLog,v 1.22 2005/04/27 13:51:02 mcummings Exp $
+
+  27 Apr 2005; Michael Cummings <mcummings@gentoo.org> -Inline-0.43-r1.ebuild,
+  -Inline-0.43.ebuild, Inline-0.44-r1.ebuild:
+  Cleaning
 
   01 Feb 2005; Michael Cummings <mcummings@gentoo.org> -Inline-0.44.ebuild:
   Removing old 0.44 ebuild
