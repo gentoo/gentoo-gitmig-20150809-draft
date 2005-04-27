@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/gkrellm-leds
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-leds/ChangeLog,v 1.14 2005/01/28 16:58:12 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-leds/ChangeLog,v 1.15 2005/04/27 20:43:55 herbs Exp $
+
+  27 Apr 2005; Herbie Hopkins <herbs@gentoo.org> gkrellm-leds-0.8.1.ebuild:
+  Stable on amd64.
 
   28 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org> gkrellm-leds-0.8.1.ebuild:
   added ~amd64 to KEYWORDS. fixes #79781

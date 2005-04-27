@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/gkrellm-mailwatch
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-mailwatch/ChangeLog,v 1.19 2004/09/02 18:22:39 pvdabeel Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-mailwatch/ChangeLog,v 1.20 2005/04/27 20:39:26 herbs Exp $
+
+  27 Apr 2005; Herbie Hopkins <herbs@gentoo.org>
+  gkrellm-mailwatch-2.4.3.ebuild:
+  Stable on amd64.
 
   02 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   gkrellm-mailwatch-2.4.3.ebuild:
