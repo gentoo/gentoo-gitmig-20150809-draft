@@ -1,6 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-hddtemp/gkrellm-hddtemp-0.2_beta.ebuild,v 1.15 2004/09/06 01:30:50 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-hddtemp/gkrellm-hddtemp-0.2_beta.ebuild,v 1.16 2005/04/27 20:52:45 herbs Exp $
+
+inherit multilib
 
 IUSE=""
 MY_P=${P/_beta/-beta}
@@ -41,12 +43,12 @@ src_install() {
 	dodoc README COPYING
 	if [ $GKRELLM1 = 1 ]; then
 		einfo "Installing plugin for gkrellm-1.*"
-		insinto /usr/lib/gkrellm/plugins
+		insinto /usr/$(get_libdir)/gkrellm/plugins
 		doins gkrellm-hddtemp.so
 	fi
 	if [ $GKRELLM2 = 1 ]; then
 		einfo "Installing plugin for gkrellm-2.*"
-		insinto /usr/lib/gkrellm2/plugins
+		insinto /usr/$(get_libdir)/gkrellm2/plugins
 		doins gkrellm-hddtemp.so
 	fi
 }
