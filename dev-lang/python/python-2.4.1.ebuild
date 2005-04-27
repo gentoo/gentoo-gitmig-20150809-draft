@@ -1,24 +1,26 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.4-r1.ebuild,v 1.2 2005/03/01 18:07:27 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.4.1.ebuild,v 1.1 2005/04/27 12:18:26 liquidx Exp $
 
 # NOTE about python-portage interactions :
 # - Do not add a pkg_setup() check for a certain version of portage
 #   in dev-lang/python. It _WILL_ stop people installing from
 #   Gentoo 1.4 images.
 
-inherit eutils flag-o-matic python
+inherit eutils flag-o-matic python multilib
 
+# we need this so that we don't depends on python.eclass
 PYVER_MAJOR="`echo ${PV%_*} | cut -d '.' -f 1`"
 PYVER_MINOR="`echo ${PV%_*} | cut -d '.' -f 2`"
 PYVER="${PYVER_MAJOR}.${PYVER_MINOR}"
+
 MY_P="Python-${PV}"
 S="${WORKDIR}/${MY_P}"
-DESCRIPTION="A really great language"
-SRC_URI="http://www.python.org/ftp/python/${PYVER}/${MY_P}.tar.bz2"
+DESCRIPTION="Python is an interpreted, interactive, object-orientated programming language."
+SRC_URI="http://www.python.org/ftp/python/${PV}/${MY_P}.tar.bz2"
 HOMEPAGE="http://www.python.org"
 
-IUSE="ncurses gdbm ssl readline tcltk berkdb bootstrap ipv6 build ucs2 doc X"
+IUSE="ncurses gdbm ssl readline tcltk berkdb bootstrap ipv6 build ucs2 doc X uclibc"
 LICENSE="PSF-2.2"
 SLOT="2.4"
 
@@ -26,6 +28,7 @@ KEYWORDS="~x86 ~ppc ~sparc ~arm ~hppa ~amd64 ~s390 ~alpha ~ia64 ~mips"
 
 DEPEND="virtual/libc
 	>=sys-libs/zlib-1.1.3
+	!dev-python/cjkcodecs
 	!build? (
 		X? ( tcltk? ( >=dev-lang/tk-8.0 ) )
 		ncurses? ( >=sys-libs/ncurses-5.2 readline? ( >=sys-libs/readline-4.1 ) )
@@ -36,30 +39,44 @@ DEPEND="virtual/libc
 		dev-libs/expat
 	)"
 
-RDEPEND="${DEPEND} dev-python/python-fchksum"
+# NOTE: The dev-python/python-fchksum RDEPEND is needed so that this python 
+#       provides the functionality expected from previous pythons.
 
-# The dev-python/python-fchksum RDEPEND is needed to that this python provides
-# the functionality expected from previous pythons.
+# NOTE: python-fchksum is only a RDEPEND and not a DEPEND since we don't need
+#       it to compile python. We just need to ensure that when we install
+#       python, we definitely have fchksum support. - liquidx
+
+RDEPEND="${DEPEND} 	dev-python/python-fchksum"
 
 PROVIDE="virtual/python"
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	#Fixes security vulnerability in XML-RPC server - pythonhead (06 Feb 05)
-	#http://www.python.org/security/PSF-2005-001/
-	epatch ${FILESDIR}/${PN}-2.4-xmlrpc.patch
-	# prepends /usr/lib/portage/pym to sys.path
-	epatch ${FILESDIR}/${PN}-${PYVER}-add_portage_search_path.patch
+
+	# unnecessary termcap dep in readline (#79013)
+	epatch ${FILESDIR}/${PN}-2.4.1-readline.patch
+	# db4.2 support
+	epatch ${FILESDIR}/${PN}-2.4.1-db4.patch
+
 	# adds support for PYTHON_DONTCOMPILE shell environment to
 	# supress automatic generation of .pyc and .pyo files - liquidx (08 Oct 03)
 	epatch ${FILESDIR}/${PN}-${PYVER}-gentoo_py_dontcompile.patch
 	epatch ${FILESDIR}/${PN}-${PYVER}-disable_modules_and_ssl.patch
 	epatch ${FILESDIR}/${PN}-${PYVER}-mimetypes_apache.patch
-	epatch ${FILESDIR}/${PN}-${PYVER}-db4.2.patch
-	# installs to lib64
-	#This needs testing, lib64 people:
-	[ "${CONF_LIBDIR}" == "lib64" ] && epatch ${FILESDIR}/python-${PYVER}-lib64.patch
+
+	# prepends /usr/lib/portage/pym to sys.path
+	epatch ${FILESDIR}/${PN}-${PYVER}-add_portage_search_path.patch
+
+	epatch ${FILESDIR}/${PN}-2.4.1-libdir.patch
+	sed -i -e "s:@@GENTOO_LIBDIR@@:$(get_libdir):g" \
+		Lib/distutils/command/install.py \
+		Lib/distutils/sysconfig.py \
+		Lib/site.py \
+		Makefile.pre.in \
+		Modules/Setup.dist \
+		Modules/getpath.c \
+		setup.py
 }
 
 src_configure() {
@@ -138,23 +155,14 @@ src_install() {
 
 	# seems like the build do not install Makefile.pre.in anymore
 	# it probably shouldn't - use DistUtils, people!
-	if [ "${CONF_LIBDIR}" == "lib64" ] ;then
-		insinto /usr/lib64/python${PYVER}/config
-	else
-		insinto /usr/lib/python${PYVER}/config
-	fi
+	insinto /usr/$(get_libdir)/python${PYVER}/config
 	doins ${S}/Makefile.pre.in
 
 	# While we're working on the config stuff... Let's fix the OPT var
 	# so that it doesn't have any opts listed in it. Prevents the problem
 	# with compiling things with conflicting opts later.
-	if [ "${CONF_LIBDIR}" == "lib64" ] ;then
-		dosed -e 's:^OPT=.*:OPT=-DNDEBUG:' \
-				/usr/lib64/python${PYVER}/config/Makefile
-	else
-		dosed -e 's:^OPT=.*:OPT=-DNDEBUG:' \
-				/usr/lib/python${PYVER}/config/Makefile
-	fi
+	dosed -e 's:^OPT=.*:OPT=-DNDEBUG:' \
+			/usr/$(get_libdir)/python${PYVER}/config/Makefile
 
 	# install python-updater in /usr/sbin
 	dosbin ${FILESDIR}/python-updater
@@ -166,24 +174,25 @@ src_install() {
 		use berkdb || rm -rf ${D}/usr/lib/python${PYVER}/bsddb
 		( use !X || use !tcltk ) && rm -rf ${D}/usr/lib/python${PYVER}/lib-tk
 	fi
+
+	prep_ml_includes usr/include/python${PYVER}
 }
 
 pkg_postrm() {
 	python_makesym
 	python_mod_cleanup /usr/lib/python${PYVER}
-	[ "${CONF_LIBDIR}" == "lib64" ] && python_mod_cleanup /usr/lib64/python${PYVER}
+	[[ "$(get_libdir)" == "lib" ]] || python_mod_cleanup /usr/$(get_libdir)/python${PYVER}
 }
 
 pkg_postinst() {
 	local myroot
 	myroot=$(echo $ROOT | sed 's:/$::')
 
-
 	python_makesym
 	python_mod_optimize
 	python_mod_optimize -x site-packages -x test ${myroot}/usr/lib/python${PYVER}
-	[ "${CONF_LIBDIR}" == "lib64" ] && \
-		python_mod_optimize -x site-packages -x test ${myroot}/usr/lib64/python${PYVER}
+	[[ "$(get_libdir)" == "lib" ]] || python_mod_optimize -x site-packages -x test ${myroot}/usr/$(get_libdir)/python${PYVER}
+
 
 	# workaround possible python-upgrade-breaks-portage situation
 	if [ ! -f ${myroot}/usr/lib/portage/pym/portage.py ]; then
@@ -194,6 +203,11 @@ pkg_postinst() {
 			python_mod_optimize ${myroot}/usr/lib/portage/pym
 		fi
 	fi
+
+	# try to upgrade to new python automatically - something to think about
+	#if [ "${ROOT}" = "/" ]; then
+	#	/usr/sbin/python-updater
+	#fi
 
 	echo
 	ewarn

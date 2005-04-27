@@ -1,6 +1,15 @@
 # ChangeLog for dev-lang/python
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.137 2005/04/20 18:48:48 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.138 2005/04/27 12:18:26 liquidx Exp $
+
+*python-2.4.1 (27 Apr 2005)
+
+  27 Apr 2005; Alastair Tse <liquidx@gentoo.org>
+  +files/python-2.4.1-db4.patch, +files/python-2.4.1-libdir.patch,
+  +files/python-2.4.1-readline.patch, files/python-2.4-readline.patch,
+  -python-2.3.3-r2.ebuild, python-2.3.5.ebuild, -python-2.4-r1.ebuild,
+  -python-2.4-r2.ebuild, +python-2.4.1.ebuild:
+  version bump for 2.4.1, clean up readling, db4 and libdir patch for 2.4.1.
 
   20 Apr 2005; Alastair Tse <liquidx@gentoo.org> python-2.3.5.ebuild,
   python-2.4-r3.ebuild:
