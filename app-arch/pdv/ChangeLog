@@ -1,6 +1,12 @@
 # ChangeLog for app-arch/pdv
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/pdv/ChangeLog,v 1.6 2005/01/01 11:53:56 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/pdv/ChangeLog,v 1.7 2005/04/27 00:55:35 wormo Exp $
+
+  26 Apr 2005; Stephanie Lockwood-Childs <wormo@gentoo.org>
+  +files/pdv-1.5.1-early-free.patch, +files/pdv-1.5.1-opt.patch:
+  Fixed a bug in command line parsing: end of args overlooked due to type 
+  mismatch in the loop comparison
+  Fixed a bug in locating the pvm stub: re-use of a ptr after it was freed
 
   01 Jun 2004; Aron Griffis <agriffis@gentoo.org> pdv-1.5.1.ebuild:
   Fix use invocation
