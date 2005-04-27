@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/heimdal-0.6.4.ebuild,v 1.5 2005/04/27 18:20:01 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/heimdal-0.6.4.ebuild,v 1.6 2005/04/27 19:37:21 seemant Exp $
 
 inherit libtool eutils
 
@@ -58,7 +58,7 @@ src_compile() {
 		--libexecdir=/usr/sbin"
 
 	use krb4 \
-		&& myconf="${myconf} --with-krb4 --with-krb4-config=/usr/athena/bin/krb4-config"
+		&& myconf="${myconf} --with-krb4-config=/usr/athena/bin/krb4-config"
 
 	use ldap && myconf="${myconf} --with-openldap=/usr"
 
