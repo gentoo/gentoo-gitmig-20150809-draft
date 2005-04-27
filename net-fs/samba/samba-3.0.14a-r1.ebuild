@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.14a-r1.ebuild,v 1.1 2005/04/27 19:52:09 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.14a-r1.ebuild,v 1.2 2005/04/27 19:53:34 seemant Exp $
 
 inherit eutils versionator
 
@@ -244,7 +244,8 @@ src_install() {
 		rm -rf ${D}/usr/share/doc/${PF}/swat/help/{guide,howto,devel}
 		rm -rf ${D}/usr/share/doc/${PF}/swat/using_samba
 	fi
-
+	
+	# Patch ChangeLog
 	docinto gentoo
 	dodoc ${PATCHDIR}/ChangeLog
 }
