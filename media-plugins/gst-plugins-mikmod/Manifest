@@ -1,4 +1,14 @@
-MD5 3297afa85687ea8329e9d9f8741c4fea gst-plugins-mikmod-0.8.8.ebuild 323
-MD5 57c0c8aebb8c04e5d76677bce005166b ChangeLog 506
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 42ec4dce7388fce112791706ecf569b9 gst-plugins-mikmod-0.8.8.ebuild 332
+MD5 4bb4da2fd84b800a077868708447f7a3 ChangeLog 623
 MD5 6cf6f97e79b43eaf70fa938c431342a3 metadata.xml 181
 MD5 33cfc77852e050bbb91b003695c91131 files/digest-gst-plugins-mikmod-0.8.8 71
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCb4u606ebR+OMO78RAl+wAJ9buv8dDn9TQ1vb1/T5IBm1RkJv7ACfXsRQ
++DVPSi09WWNGlKimbI1dYwc=
+=3Xbg
+-----END PGP SIGNATURE-----
