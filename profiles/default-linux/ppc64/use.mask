@@ -63,5 +63,8 @@ cairo
 # dietlibc
 diet
 
+#pyste has untested/unkeyworded deps on ppc64
+pyste
+
 # Unmask our instruction sets
 -altivec

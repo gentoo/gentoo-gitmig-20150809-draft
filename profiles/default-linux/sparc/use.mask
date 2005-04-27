@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/use.mask,v 1.32 2005/04/18 13:18:28 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/use.mask,v 1.33 2005/04/27 00:08:19 morfic Exp $
 
 # This file contains a list of useflags that cannot be used on sparc.
 
@@ -65,6 +65,9 @@ zaptel
 # Mono doesn't work on sparc
 # eradicator@gentoo.org
 mono
+
+# pyste has untested/unkeyworded deps on sparc
+pyste
 
 # see email to gentoo-dev with subject "use.mask and PHP5's crazy IUSE"
 # Dated Sat, 31 Jul 2004 14:49:28 -0700, from robbat2@gentoo.org
