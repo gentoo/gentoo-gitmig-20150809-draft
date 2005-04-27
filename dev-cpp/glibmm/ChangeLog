@@ -1,6 +1,13 @@
 # ChangeLog for dev-cpp/glibmm
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/glibmm/ChangeLog,v 1.24 2005/04/10 22:39:34 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/glibmm/ChangeLog,v 1.25 2005/04/27 11:44:57 ka0ttic Exp $
+
+*glibmm-2.4.7-r1 (27 Apr 2005)
+
+  27 Apr 2005; Aaron Walker <ka0ttic@gentoo.org> -glibmm-2.4.7.ebuild,
+  +glibmm-2.4.7-r1.ebuild:
+  Revision bump; don't build the examples, only install API reference if
+  USE=doc and even then at least install it in the right place.
 
   10 Apr 2005; Marcus D. Hanwell <cryos@gentoo.org> glibmm-2.4.7.ebuild,
   glibmm-2.6.1.ebuild:
