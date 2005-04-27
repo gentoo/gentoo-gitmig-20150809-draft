@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/e2fsprogs-1.37.ebuild,v 1.3 2005/03/22 23:55:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/e2fsprogs-1.37.ebuild,v 1.4 2005/04/27 03:36:47 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -29,6 +29,8 @@ src_unpack() {
 	chmod u+w po/*.po # Userpriv fix #27348
 	# Clean up makefile to suck less
 	epatch "${FILESDIR}"/e2fsprogs-1.36-makefile.patch
+	# Fix tests to work #88570
+	epatch "${FILESDIR}"/e2fsprogs-1.37-e2p-test.patch
 
 	# kernel headers use the same defines as e2fsprogs and can cause issues #48829
 	sed -i \
