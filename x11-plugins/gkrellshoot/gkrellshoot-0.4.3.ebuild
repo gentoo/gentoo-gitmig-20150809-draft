@@ -1,6 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellshoot/gkrellshoot-0.4.3.ebuild,v 1.1 2005/01/02 01:59:22 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellshoot/gkrellshoot-0.4.3.ebuild,v 1.2 2005/04/27 17:55:48 herbs Exp $
+
+inherit multilib
 
 S=${WORKDIR}/${P/s/S}
 DESCRIPTION="GKrellm2 plugin to take screen shots and lock screen"
@@ -23,7 +25,7 @@ src_compile() {
 }
 
 src_install () {
-	insinto /usr/lib/gkrellm2/plugins
+	insinto /usr/$(get_libdir)/gkrellm2/plugins
 	doins gkrellshoot.so
 	dodoc README ChangeLog
 }
