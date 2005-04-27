@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/ktnef
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ktnef/ChangeLog,v 1.9 2005/03/25 00:59:16 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ktnef/ChangeLog,v 1.10 2005/04/27 18:14:08 corsair Exp $
+
+  27 Apr 2005; Markus Rothe <corsair@gentoo.org> ktnef-3.4.0.ebuild:
+  Added ~ppc64 to KEYWORDS
 
   25 Mar 2005; Jason Wever <weeve@gentoo.org> ktnef-3.4.0.ebuild:
   Added ~sparc keyword.
