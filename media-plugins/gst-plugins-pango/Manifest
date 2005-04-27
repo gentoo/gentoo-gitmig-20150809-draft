@@ -1,7 +1,17 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 6f59ae92dbb0b81b182584e892ba7501 gst-plugins-pango-0.8.8.ebuild 336
-MD5 511ea97d316d75f6fc421f42ed519677 gst-plugins-pango-0.8.8-r1.ebuild 475
-MD5 115418c8d8571a23b04c96b749e6b34b ChangeLog 1019
+MD5 208f32c2d148647e7b150089d85c85b4 gst-plugins-pango-0.8.8-r1.ebuild 477
+MD5 2d9c3a7dfd4804aab6e04bd3f3d52c5f ChangeLog 1021
 MD5 6050196ef420c3e4025029ebee5a813f metadata.xml 162
 MD5 33cfc77852e050bbb91b003695c91131 files/digest-gst-plugins-pango-0.8.8 71
 MD5 33cfc77852e050bbb91b003695c91131 files/digest-gst-plugins-pango-0.8.8-r1 71
 MD5 ed95a2d8b0c203bc1b8b72118101a97b files/gst-plugins-pango-0.8.8-sub_position.patch 1648
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCb45l06ebR+OMO78RAv+9AJ9cKBTQ9PMsB4INnmz/FbO90TUd0QCggR9G
+b+tWYjvfFXNc7ddHI3FGiKA=
+=WKux
+-----END PGP SIGNATURE-----
