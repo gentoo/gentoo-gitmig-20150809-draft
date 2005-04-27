@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/rocksndiamonds/rocksndiamonds-3.1.0.ebuild,v 1.3 2004/11/11 18:44:15 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/rocksndiamonds/rocksndiamonds-3.1.0.ebuild,v 1.4 2005/04/27 21:38:54 mr_bones_ Exp $
 
 inherit flag-o-matic games
 
@@ -8,6 +8,7 @@ DESCRIPTION="A Boulderdash clone"
 HOMEPAGE="http://www.artsoft.org/rocksndiamonds/"
 SRC_URI="http://www.artsoft.org/RELEASES/unix/rocksndiamonds/${P}.tar.gz
 	http://www.artsoft.org/RELEASES/rocksndiamonds/levels/BD2K3-1.0.0.zip
+	http://www.artsoft.org/RELEASES/rocksndiamonds/levels/rnd-contrib-1.0.0.tar.gz
 	http://www.artsoft.org/RELEASES/unix/rocksndiamonds/levels/rockslevels-emc-1.0.tar.gz
 	http://www.artsoft.org/RELEASES/unix/rocksndiamonds/levels/rockslevels-sp-1.0.tar.gz
 	http://www.artsoft.org/RELEASES/unix/rocksndiamonds/levels/rockslevels-dx-1.0.tar.gz
@@ -45,6 +46,7 @@ src_unpack() {
 	cd levels
 	unpack rnd_jue-v5.zip
 	unpack BD2K3-1.0.0.zip
+	unpack rnd-contrib-1.0.0.tar.gz
 }
 
 src_compile() {
