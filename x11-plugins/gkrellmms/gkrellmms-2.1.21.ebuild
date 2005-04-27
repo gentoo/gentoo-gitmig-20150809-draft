@@ -1,6 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellmms/gkrellmms-2.1.21.ebuild,v 1.4 2005/04/07 17:09:00 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellmms/gkrellmms-2.1.21.ebuild,v 1.5 2005/04/27 20:07:11 herbs Exp $
+
+inherit multilib
 
 IUSE=""
 S=${WORKDIR}/${PN}
@@ -20,7 +22,7 @@ src_compile() {
 }
 
 src_install () {
-	exeinto /usr/lib/gkrellm2/plugins
+	exeinto /usr/$(get_libdir)/gkrellm2/plugins
 	newexe gkrellmms.so gkrellmms2.so
 	dodoc README Changelog FAQ Themes
 }

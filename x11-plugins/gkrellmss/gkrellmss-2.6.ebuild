@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellmss/gkrellmss-2.6.ebuild,v 1.1 2005/01/02 02:13:45 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellmss/gkrellmss-2.6.ebuild,v 1.2 2005/04/27 20:01:46 herbs Exp $
 
 inherit eutils
 
@@ -29,7 +29,7 @@ src_compile() {
 }
 
 src_install () {
-	exeinto /usr/lib/gkrellm2/plugins
+	exeinto /usr/$(get_libdir)/gkrellm2/plugins
 	doexe src/gkrellmss.so
 	dodoc README Changelog Themes
 }

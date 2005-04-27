@@ -1,6 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellmoon/gkrellmoon-0.6.ebuild,v 1.8 2004/07/20 17:08:34 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellmoon/gkrellmoon-0.6.ebuild,v 1.9 2005/04/27 20:04:25 herbs Exp $
+
+inherit multilib
 
 IUSE=""
 DESCRIPTION="A GKrellM2 plugin of the famous wmMoonClock dockapp"
@@ -19,7 +21,7 @@ src_compile() {
 }
 
 src_install () {
-	insinto /usr/lib/gkrellm2/plugins
+	insinto /usr/$(get_libdir)/gkrellm2/plugins
 	doins gkrellmoon.so
 	dodoc README AUTHORS COPYING ChangeLog
 }
