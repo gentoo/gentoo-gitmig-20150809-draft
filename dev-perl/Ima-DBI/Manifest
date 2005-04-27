@@ -1,4 +1,14 @@
-MD5 ae658ddebad3425fb09a56dce55cc9e4 ChangeLog 643
-MD5 4cf782d10f0d8b85666d09ff2f2461ab Ima-DBI-0.33.ebuild 587
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 e029eef774d8d216dff5252ded4d338c ChangeLog 731
+MD5 7a95a17c03410c4e5654b4ec5d05a698 Ima-DBI-0.33.ebuild 587
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 c9bd5a407251dcb0558de7fbfcae04f4 files/digest-Ima-DBI-0.33 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCb5WGtG5z4I8BtQoRAkVkAKCTxQ0LgQdkfAQWpCY29TILrtGiMgCfUedL
+BV+Xo+gEkCsfUFDIwnhUh94=
+=SCHk
+-----END PGP SIGNATURE-----
