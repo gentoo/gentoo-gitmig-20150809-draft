@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/arpd
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/arpd/ChangeLog,v 1.6 2005/01/29 21:21:15 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/arpd/ChangeLog,v 1.7 2005/04/27 00:31:14 iggy Exp $
+
+  27 Apr 2005; Brian Jackson <iggy@gentoo.org> +files/arpd.c.patch,
+  arpd-0.2.ebuild:
+  patch from bug #76833, thanks to those guys, also works on amd64
 
   30 Jan 2005; Daniel Black <dragonheart@gentoo.org> arpd-0.2.ebuild:
   Transition dependancy from net-libs/libpcap to virtual/libpcap
