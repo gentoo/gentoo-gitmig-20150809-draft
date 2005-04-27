@@ -1,13 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/silky/silky-0.5.4.ebuild,v 1.1 2005/03/20 01:59:16 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/silky/silky-0.5.4.ebuild,v 1.2 2005/04/27 13:29:38 ticho Exp $
 
 IUSE=""
 
 DESCRIPTION="Simple and easy to use GTK+ based os-independent SILC client."
 HOMEPAGE="http://silky.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
-KEYWORDS="~x86 ~ppc ~sparc"
+KEYWORDS="x86 ~ppc ~sparc"
 LICENSE="GPL-2"
 
 SLOT="0"
