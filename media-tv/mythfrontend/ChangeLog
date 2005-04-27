@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/mythfrontend
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythfrontend/ChangeLog,v 1.34 2005/04/25 23:22:26 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythfrontend/ChangeLog,v 1.35 2005/04/27 02:54:37 eradicator Exp $
+
+  27 Apr 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  mythfrontend-0.18.ebuild:
+  PDEPEND on myththemes.
 
   25 Apr 2005; Jeremy Huddleston <eradicator@gentoo.org>
   mythfrontend-0.18.ebuild:
