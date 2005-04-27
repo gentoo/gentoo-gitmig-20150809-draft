@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.1.5-r2.ebuild,v 1.11 2005/03/22 18:51:12 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.1.5-r2.ebuild,v 1.12 2005/04/27 17:36:59 ferdy Exp $
 
 inherit eutils ssl-cert toolchain-funcs
 
@@ -51,7 +51,7 @@ pkg_setup() {
 	fi
 
 	# logic to fix bug #53324
-	if [[ -n $(pidof master) ]] ; then
+	if [[ -f /var/lib/init.d/started/postfix ]] ; then
 		if has_version '<mail-mta/postfix-2.1.3' ; then
 			echo
 			eerror "You are upgrading from the incompatible version."
