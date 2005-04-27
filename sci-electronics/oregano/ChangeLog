@@ -1,6 +1,10 @@
 # ChangeLog for sci-electronics/oregano
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/oregano/ChangeLog,v 1.10 2005/04/22 02:41:50 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/oregano/ChangeLog,v 1.11 2005/04/27 13:09:48 gustavoz Exp $
+
+  27 Apr 2005; Gustavo Zacarias <gustavoz@gentoo.org>
+  -files/oregano-0.40.1-gtk2.6.patch, -oregano-0.40.2.ebuild:
+  Retiring old
 
   22 Apr 2005; Gustavo Zacarias <gustavoz@gentoo.org> oregano-0.40.3.ebuild:
   Gnome 2.10 workaround
