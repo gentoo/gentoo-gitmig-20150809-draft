@@ -2,14 +2,14 @@
 Hash: SHA1
 
 MD5 95d79bd0d8491f18b358369a72b643a2 gkrellstock-0.4.ebuild 723
-MD5 a5cc6b0cb133cb25ee1f86c11b5a5079 gkrellstock-0.5.ebuild 754
-MD5 0f4a7298920ba6f2f66822c325c8442e ChangeLog 933
+MD5 d48dd5651050f8807a46cbb9b832e29f gkrellstock-0.5.ebuild 753
+MD5 b3dbc5c72550d886ff2ace7cefe40e1c ChangeLog 1026
 MD5 39486a7dd45163fa00f17106b8588ecf files/digest-gkrellstock-0.4 66
 MD5 21a515056c296f8cc9cdba966f4d8550 files/digest-gkrellstock-0.5 66
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCb8982G5bA0cA/ScRAuJkAJ9Hb+Nlc4mjJUCHhR02A0l9vcDiSgCfYrWv
-4qk3yXiP4pXg3NpHbRml1ck=
-=Kcsj
+iD8DBQFCb9El2G5bA0cA/ScRAqH2AKCJ/M5RABzdHExsUEL78qnahKtHqQCg3vc7
+QYBZg7c6/fzjZQ7BDKUC+AI=
+=pivD
 -----END PGP SIGNATURE-----
