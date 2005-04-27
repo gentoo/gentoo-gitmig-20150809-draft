@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/files/opengl-update-2.2.0,v 1.3 2005/04/26 20:22:15 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/files/opengl-update-2.2.0,v 1.4 2005/04/27 09:01:17 eradicator Exp $
 # Author:  Martin Schlemmer <azarah@gentoo.org>
 # Further modifications by Donnie Berkholz <spyderous@gentoo.org>
 # Further modifications based off submissions to bug #54984 <cyfred@gentoo.org>
@@ -80,6 +80,8 @@ print_usage() {
 		IMPLEM_PLURAL="s"
 	fi
 
+	print_version
+
 	cat << FOO
 Usage: ${0##*/} [<options>] <GL implementation>
        Set the opengl implementation.
@@ -146,6 +148,9 @@ parse_options() {
 			;;
 			--help|-h|-?)
 				ACION="usage"
+			;;
+			--version)
+				ACTION="version"
 			;;
 			*)
 				if hasq ${opt} ${AVAIL_IMPLEMS}; then
