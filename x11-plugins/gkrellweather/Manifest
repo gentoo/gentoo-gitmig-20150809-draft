@@ -2,15 +2,15 @@
 Hash: SHA1
 
 MD5 e38379346d149459c341c58e182267c9 gkrellweather-0.2.7-r2.ebuild 997
-MD5 bba5c42f7906d5b52621110c8e646436 ChangeLog 3365
+MD5 c122ae90cf207078b9b6e73ca6ea18f7 ChangeLog 3462
 MD5 de35d8f600d3d75d8075a8d848787013 metadata.xml 223
-MD5 0b1b30c658ad91b321c0879f9c50614e gkrellweather-2.0.6.ebuild 1031
+MD5 4487ed3cece27562fd5da7e7ac069f3a gkrellweather-2.0.6.ebuild 1030
 MD5 7a8cb4e990a4380049aeb67f5a05f5f4 files/digest-gkrellweather-0.2.7-r2 142
 MD5 d31faae71487ebf3fcf81bf89cb7861f files/digest-gkrellweather-2.0.6 67
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCb8NR2G5bA0cA/ScRAg2WAJ0e02D29Gb35eYvfzD8w3kJ87+GJgCdHiDU
-LoMf4JbLIRvqw4pN8ly+56k=
-=5QJ3
+iD8DBQFCb8Ol2G5bA0cA/ScRAhyqAJ4+cBCmGRDz225YTwEgObwvujnkvgCgnI3Q
+hl/ySsgdUKjiBekpLB2XOgM=
+=l2je
 -----END PGP SIGNATURE-----
