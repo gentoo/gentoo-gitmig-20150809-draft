@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 431f967320e5f44bb05e163ca0fc9fef gkrellm-reminder-0.3.5.ebuild 686
-MD5 c3e9f271b7f2339fa8d471feff12df73 ChangeLog 1899
-MD5 454e5d69a93ff7346bf475f6a06df970 gkrellm-reminder-2.0.0.ebuild 654
+MD5 34ad7d34662b7298d563063f497a1034 ChangeLog 1898
+MD5 ade671a31a0da86af3cb53ad78b9bb85 gkrellm-reminder-2.0.0.ebuild 653
 MD5 d042144fa195e9b3058d5d950fadebf3 files/digest-gkrellm-reminder-0.3.5 65
 MD5 27fc8389ef51f891924671711028a81f files/digest-gkrellm-reminder-2.0.0 73
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCb/dI2G5bA0cA/ScRAqieAJ4tr144qfEfBD6tX8cK4rGnIMui1gCg4IKg
+aQBAGKdV46ykcJFwGUEWSfI=
+=hNGB
+-----END PGP SIGNATURE-----

@@ -1,7 +1,17 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 3e06f4b2dfdd5f4e5fd225f077f717b9 gkrellm-leds-0.8.0.ebuild 713
 MD5 89d6bdd9bc71f147aff9b3ab05d9b718 gkrellm-leds-0.6.1.ebuild 706
-MD5 e4fe1cc5618378a21ad567deae574c4c ChangeLog 2030
-MD5 48e4589ad3542fc9ee1c0df75527e57a gkrellm-leds-0.8.1.ebuild 755
+MD5 d426f45029094da4f0b13f0929bcd0cd ChangeLog 2026
+MD5 9353cb00281a79a57bcc7af154e3daa1 gkrellm-leds-0.8.1.ebuild 752
 MD5 852f969308b8f2fe57e7c3bc92c78ef6 files/digest-gkrellm-leds-0.6.1 63
 MD5 33b4c88351c4535432e6eb17dc257d00 files/digest-gkrellm-leds-0.8.0 63
 MD5 4c7f0317bf9bca196926345960809413 files/digest-gkrellm-leds-0.8.1 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCb/mn2G5bA0cA/ScRAg1/AKDGr9sgdLPCeSkkab0thM7ODwRcCgCfcRsV
+hPUEnyShW0kNoeeoXOPF7js=
+=/pVe
+-----END PGP SIGNATURE-----

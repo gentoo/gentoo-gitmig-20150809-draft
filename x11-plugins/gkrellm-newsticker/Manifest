@@ -1,5 +1,15 @@
-MD5 73ba8be5105636f72866007ab3e7d8a0 gkrellm-newsticker-0.3.5.ebuild 750
-MD5 effa6a4b19853f81c71d9b12398349b9 ChangeLog 1162
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 dd4e216ccc4cae4aaef671cf39242ae3 gkrellm-newsticker-0.3.5.ebuild 748
+MD5 4f95c2a9df73244daec1d365682d5ba8 ChangeLog 1161
 MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
 MD5 3d1d661599157d8361811d193a0a941f files/digest-gkrellm-newsticker-0.3.5 76
 MD5 a01e567f0e82ce184ff9f30803232a45 files/rdf-sources 1593
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCb/fp2G5bA0cA/ScRAkvHAJ0dDh6pz5L0KZe+ozLjdu+rZ5MY4QCdH2ud
+YUgsdW3AYLAFEXP2zan3Rok=
+=JJD5
+-----END PGP SIGNATURE-----
