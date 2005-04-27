@@ -1,5 +1,15 @@
-MD5 218d755daa9c47d706e373422b5063ed gkrellmlaunch-0.5.ebuild 650
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 7bcd0580206bad3b459f8f963a0d5ff3 gkrellmlaunch-0.5.ebuild 649
 MD5 6bb3705d4e249a7d03d6c0342dec25ce gkrellmlaunch-0.4.ebuild 612
-MD5 f3cf6ba2b8c85d0b4e9ca006f7d539ed ChangeLog 1916
+MD5 42849c6eaf611240d6969edef98504c9 ChangeLog 1915
 MD5 f5612c6c92732d8c60edc06ddfd1ff2b files/digest-gkrellmlaunch-0.4 68
 MD5 12b4663e40e1867076514714378b834b files/digest-gkrellmlaunch-0.5 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCb/JA2G5bA0cA/ScRAkVHAJ9Z2ynq3SzGz35AWisxEUT1vZpYMACeNvXt
+w2v5MVE7yIVsOb+6Jp8BbxM=
+=ErPj
+-----END PGP SIGNATURE-----
