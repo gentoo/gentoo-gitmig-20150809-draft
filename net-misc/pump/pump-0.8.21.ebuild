@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pump/pump-0.8.19-r1.ebuild,v 1.5 2005/04/27 00:37:30 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pump/pump-0.8.21.ebuild,v 1.1 2005/04/27 00:37:30 iggy Exp $
 
 DESCRIPTION="This is the DHCP/BOOTP client written by RedHat"
 HOMEPAGE="http://ftp.debian.org/debian/pool/main/p/pump/"
