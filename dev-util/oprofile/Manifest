@@ -1,8 +1,19 @@
-MD5 a0d951f9e535e67f0b8cc76e790e4555 oprofile-0.8.2.ebuild 1869
-MD5 3d4a085e59f4ef22017d52452649205b metadata.xml 310
-MD5 c14603d84920837365efc204946db9f7 ChangeLog 1735
-MD5 0fc56ce4adc0619ba4ad4fc88c969e55 oprofile-0.8.ebuild 1859
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 48d1398de573ec0b230a5c6ec4863d2e oprofile-0.8.2.ebuild 1966
+MD5 b6c2150c26ad772ad66a916d725f16d9 ChangeLog 1920
 MD5 0740dd6f2af79164df7499027b89593d oprofile-0.8.1.ebuild 1861
+MD5 0fc56ce4adc0619ba4ad4fc88c969e55 oprofile-0.8.ebuild 1859
+MD5 3d4a085e59f4ef22017d52452649205b metadata.xml 310
 MD5 26253b92a26a505d340c30e8bd9be1d3 files/digest-oprofile-0.8.1 66
 MD5 c2c6ccfba6b301b507f80d5b1d595cf9 files/digest-oprofile-0.8.2 66
 MD5 c90612912e77016c9aa69bb752907940 files/digest-oprofile-0.8 64
+MD5 37dee2be2710a99023888aa0be7f00cd files/oprofile-0.8.2.patch 669
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCb8y7chej4aZK9/cRAtd2AJ96SGWIxkuGYBdMkpdLH/uXKorWIQCdFajR
+gKifV2gVhvHWfGv1Dxne9A4=
+=kzQJ
+-----END PGP SIGNATURE-----
