@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Mail-POP3Client
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-POP3Client/ChangeLog,v 1.11 2005/04/10 18:42:46 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-POP3Client/ChangeLog,v 1.12 2005/04/28 17:37:28 mcummings Exp $
+
+  28 Apr 2005; Michael Cummings <mcummings@gentoo.org>
+  -Mail-POP3Client-2.7-r2.ebuild, Mail-POP3Client-2.16.ebuild:
+  Cleaning
 
   10 Apr 2005; Michael Hanselmann <hansmi@gentoo.org>
   Mail-POP3Client-2.15.ebuild:
