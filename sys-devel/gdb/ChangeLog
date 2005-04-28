@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gdb
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/ChangeLog,v 1.65 2005/04/25 06:48:16 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/ChangeLog,v 1.66 2005/04/28 21:16:46 gustavoz Exp $
+
+  28 Apr 2005; Gustavo Zacarias <gustavoz@gentoo.org> gdb-6.3.ebuild:
+  Stable on sparc
 
   25 Apr 2005; Bryan Østergaard <kloeri@gentoo.org> gdb-6.3.ebuild:
   Stable on alpha.
