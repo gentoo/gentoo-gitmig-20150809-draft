@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/xfsdump
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsdump/ChangeLog,v 1.19 2005/04/25 06:51:10 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsdump/ChangeLog,v 1.20 2005/04/28 16:00:30 agriffis Exp $
+
+  28 Apr 2005; Aron Griffis <agriffis@gentoo.org> -xfsdump-2.2.21.ebuild,
+  xfsdump-2.2.25.ebuild:
+  Update dep to >=sys-apps/attr-2.4.19 since xfsdump doesn't build with older
+  versions. Trim older version.
 
   25 Apr 2005; Bryan Østergaard <kloeri@gentoo.org> xfsdump-2.2.25.ebuild:
   Stable on alpha.

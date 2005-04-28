@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsdump/xfsdump-2.2.25.ebuild,v 1.4 2005/04/25 06:51:10 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsdump/xfsdump-2.2.25.ebuild,v 1.5 2005/04/28 16:00:30 agriffis Exp $
 
 inherit eutils
 
@@ -16,7 +16,7 @@ IUSE="debug static"
 DEPEND="sys-fs/e2fsprogs
 	sys-fs/xfsprogs
 	sys-apps/dmapi
-	sys-apps/attr"
+	>=sys-apps/attr-2.4.19"
 
 src_unpack() {
 	unpack ${A}
