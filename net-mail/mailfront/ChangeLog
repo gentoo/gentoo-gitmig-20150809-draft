@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/mailfront
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailfront/ChangeLog,v 1.15 2005/02/13 06:37:26 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailfront/ChangeLog,v 1.16 2005/04/28 21:02:25 anarchy Exp $
+
+*mailfront-0.93 (28 Apr 2005)
+
+  28 Apr 2005; Jory A. Pratt <anarchy@gentoo.org> +mailfront-0.93.ebuild:
+  cleanup and version bump, bug #90076
 
 *mailfront-0.92 (12 Feb 2005)
 
