@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/files/gcc-config-1.3.10,v 1.8 2005/04/09 18:37:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/files/gcc-config-1.3.10,v 1.9 2005/04/28 01:44:44 vapier Exp $
 
 trap ":" INT QUIT TSTP
 
@@ -62,23 +62,24 @@ find_path() {
 cmd_setup() {
 	# Sourcing /etc/env.d/gcc/${CC_COMP} is going to mess up
 	# PATH among things...
-	CP="$(find_path cp)"
-	RM="$(find_path rm)"
-	MV="$(find_path mv)"
-	LN="$(find_path ln)"
-	CAT="$(find_path cat)"
-	AWK="$(find_path gawk)"
-	GREP="$(find_path grep)"
-	FIND="$(find_path find)"
-	CHMOD="$(find_path chmod)"
-	TOUCH="$(find_path touch)"
-	ENV_UPDATE="$(find_path env-update)"
+	CP=$(find_path cp)
+	RM=$(find_path rm)
+	MV=$(find_path mv)
+	LN=$(find_path ln)
+	CAT=$(find_path cat)
+	AWK=$(find_path gawk)
+	GREP=$(find_path grep)
+	FIND=$(find_path find)
+	CHMOD=$(find_path chmod)
+	TOUCH=$(find_path touch)
+	PORTAGEQ=$(find_path portageq)
+	ENV_UPDATE=$(find_path env-update)
 }
 
 get_real_chost() {
 	[[ -n ${REAL_CHOST} ]] && return 0
 
-	export REAL_CHOST="$(env -u CHOST portageq envvar CHOST)"
+	export REAL_CHOST=$(env -u CHOST ${PORTAGEQ} envvar CHOST)
 
 	if [[ -z ${REAL_CHOST} ]] ; then
 		eerror "$0: Could not get portage CHOST!"
@@ -207,13 +208,13 @@ switch_profile() {
 		if [[ -x ${ref} ]] ; then
 			${CP} -f "${ROOT}/usr/lib/misc/gcc-config" \
 			         "${ROOT}/usr/bin/${x}"
-			touch -r "${ref}" "${ROOT}/usr/bin/${x}"
+			${TOUCH} -r "${ref}" "${ROOT}/usr/bin/${x}"
 
 			# Install 32bit and 64bit wrappers if need be
 			# This should probably get folded back into the wrapper ...
 			if [[ ${x:${#x}-3} == "gcc" ]] || [[ ${x:${#x}-3} == "g++" ]] ; then
 				for bits in ${GCCBITS} ; do
-					cp -f "${ROOT}/usr/lib/misc/gcc-config" \
+					${CP} -f "${ROOT}/usr/lib/misc/gcc-config" \
 						"${ROOT}/usr/bin/${x}${bits}"
 				done
 			fi
@@ -241,8 +242,8 @@ switch_profile() {
 			libdir="lib/$(${ROOT}/${GCC_BIN_PATH}/gcc ${multiarg} -print-multi-os-directory)"
 			for gcclib in gcc_s unwind ; do
 				if [[ -e ${ROOT}/${LDPATH}/${multildir}/lib${gcclib}.so ]]; then
-					rm -f "${ROOT}/${libdir}"/lib${gcclib}.so*
-					cp -a "${ROOT}/${LDPATH}/${multilibdir}"/lib${gcclib}.so* "${ROOT}/${libdir}"/
+					${RM} -f "${ROOT}/${libdir}"/lib${gcclib}.so*
+					${CP} -a "${ROOT}/${LDPATH}/${multilibdir}"/lib${gcclib}.so* "${ROOT}/${libdir}"/
 				fi
 			done
 		done
