@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/fetchmail-6.2.5-r1.ebuild,v 1.4 2005/04/28 18:22:34 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/fetchmail-6.2.5-r2.ebuild,v 1.1 2005/04/28 18:22:34 ticho Exp $
 
 inherit eutils gnuconfig
 
@@ -10,16 +10,16 @@ SRC_URI="http://www.catb.org/~esr/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2 public-domain"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sparc ~x86 ~mips"
-IUSE="ssl nls ipv6 kerberos krb4"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~sparc ~x86"
+IUSE="ssl nls ipv6 kerberos krb4 hesiod"
 
 DEPEND="virtual/libc
+	hesiod? ( net-dns/hesiod )
 	ssl? ( >=dev-libs/openssl-0.9.6 )
-	nls? ( sys-devel/gettext )
 	kerberos? ( virtual/krb5 )
 	krb4? ( app-crypt/kth-krb )
+	sys-devel/gettext
 	sys-devel/autoconf"
-
 
 src_unpack() {
 	unpack ${A}
@@ -30,25 +30,22 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-fetchsizelimit.patch || die
 	# this patch fixes bug #34788 (ticho@gentoo.org 2004-09-03)
 	epatch ${FILESDIR}/${P}-broken-headers.patch || die
+
+	autoconf
+	gnuconfig_update
 }
 
 src_compile() {
-	autoconf
-
-	gnuconfig_update
-
-	local myconf
-
-	use ssl && myconf="${myconf} --with-ssl"
-	use nls || myconf="${myconf} --disable-nls"
-	use ipv6 && myconf="${myconf} --enable-inet6"
-	use kerberos && myconf="${myconf} --with-gssapi --with-kerberos5"
-	use krb4 && myconf="${myconf} --with-kerberos"
-
-	econf \
+	econf  --disable-dependency-tracking \
 		--enable-RPA \
 		--enable-NTLM \
 		--enable-SDPS \
+		$(use_enable nls) \
+		$(use_enable ipv6 inet6) \
+		$(use_with kerberos gssapi) $(use_with kerberos kerberos5) \
+		$(use_with krb4 kerberos) \
+		$(use_with ssl) \
+		$(use_with hesiod) \
 		${myconf} || die "Configuration failed."
 	# wont compile reliably on smp (mkennedy@gentoo.org 2003-11-12)
 	make || die "Compilation failed."
@@ -65,11 +62,8 @@ src_install() {
 	doman ${D}/usr/share/man/*.1
 	rm -f ${D}/usr/share/man/*.1
 
-	exeinto /etc/init.d
-	doexe ${FILESDIR}/fetchmail
-
-	insinto /etc/conf.d
-	newins ${FILESDIR}/conf.d-fetchmail fetchmail
+	newinitd ${FILESDIR}/fetchmail fetchmail
+	newconfd ${FILESDIR}/conf.d-fetchmail fetchmail
 
 	docinto contrib
 	local f
