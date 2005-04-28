@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/dirvish
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/dirvish/ChangeLog,v 1.1 2005/04/08 23:40:45 ramereth Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/dirvish/ChangeLog,v 1.2 2005/04/28 09:09:52 dragonheart Exp $
+
+*dirvish-1.2.1 (28 Apr 2005)
+
+  28 Apr 2005; Daniel Black <dragonheart@gentoo.org> metadata.xml,
+  dirvish-1.2.ebuild, +dirvish-1.2.1.ebuild:
+  revision bump. Corrected license to OSL-2.0. Added herd app-backup to metadata
 
 *dirvish-1.2 (08 Apr 2005)
 
