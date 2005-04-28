@@ -1,9 +1,19 @@
-MD5 4747717c905c1a82ad9d5dc23a704536 Tk-TableMatrix-1.1-r1.ebuild 642
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 612c8bb923ef4a6b2a879a0c20bfe26a ChangeLog 2420
+MD5 26a220589dab25ea1235b4b74c7c06ff Tk-TableMatrix-1.1-r1.ebuild 631
+MD5 e8c7f71b78c4f6f31cd64e0f86ccc02e Tk-TableMatrix-1.1.ebuild 630
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 a34a1dc6c1ceac753b270d279a73599d ChangeLog 2197
-MD5 a0f7c5f68a596244ffb8bcf6932f1c10 Tk-TableMatrix-1.01.ebuild 643
-MD5 9902d19e2c9f36549ddc086ef80272d6 Tk-TableMatrix-1.1.ebuild 644
-MD5 3ffd4efa32772749767d1d8834c5dd09 files/digest-Tk-TableMatrix-1.1-r1 70
+MD5 b63bbcfb7a76f3e18b337f3f65df49ac Tk-TableMatrix-1.2.ebuild 648
+MD5 3ddffb3bdb84ba1e7436a167f2c7c063 files/digest-Tk-TableMatrix-1.2 70
 MD5 3ffd4efa32772749767d1d8834c5dd09 files/digest-Tk-TableMatrix-1.1 70
-MD5 89f24085a2e7ef5b505d409705a6afbe files/digest-Tk-TableMatrix-1.01 71
+MD5 3ffd4efa32772749767d1d8834c5dd09 files/digest-Tk-TableMatrix-1.1-r1 70
 MD5 8a54e8fee478628d727c66043ddef456 files/patch.diff 566
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCcUA4tG5z4I8BtQoRAuP5AJ9+2/Aa1/tN0I2pCc79s/672Q4FrACdHX3n
+PLRLOrjGlC6y64cQagsZPdc=
+=BrkH
+-----END PGP SIGNATURE-----
