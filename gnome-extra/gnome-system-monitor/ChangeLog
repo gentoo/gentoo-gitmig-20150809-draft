@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/gnome-system-monitor
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-system-monitor/ChangeLog,v 1.71 2005/04/28 09:13:58 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-system-monitor/ChangeLog,v 1.72 2005/04/28 22:45:41 foser Exp $
+
+  29 Apr 2005; foser <foser@gentoo.org> gnome-system-monitor-2.10.{0,1}.ebuild :
+  Add 2 line fix to supress warnings (#84831)
 
   28 Apr 2005; Bryan Østergaard <kloeri@gentoo.org>
   gnome-system-monitor-2.8.3.ebuild:
