@@ -1,6 +1,14 @@
 # ChangeLog for dev-perl/Locale-gettext
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Locale-gettext/ChangeLog,v 1.14 2005/04/28 16:39:31 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Locale-gettext/ChangeLog,v 1.15 2005/04/28 21:53:48 mcummings Exp $
+
+  28 Apr 2005; Michael Cummings <mcummings@gentoo.org>
+  Locale-gettext-1.04.ebuild:
+  Disabling tests in 1.04 - sad. Should finish bug 90756
+
+  28 Apr 2005; Michael Cummings <mcummings@gentoo.org>
+  Locale-gettext-1.04.ebuild:
+  Tests
 
 *Locale-gettext-1.04 (28 Apr 2005)
 
