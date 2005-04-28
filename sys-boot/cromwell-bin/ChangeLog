@@ -1,6 +1,13 @@
 # ChangeLog for sys-boot/cromwell-bin
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/cromwell-bin/ChangeLog,v 1.1 2004/10/16 15:24:27 chrb Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/cromwell-bin/ChangeLog,v 1.2 2005/04/28 19:31:59 wormo Exp $
+
+  28 Apr 2005; Stephanie Lockwood-Childs <wormo@gentoo.org>
+  cromwell-bin-2.31.ebuild:
+  add -* to keywords because this package is only applicable to xbox 
+  which is only available in x86 architecture
+  Also added metadata.xml based on the one in cromwell package since 
+  it has the same maintainer
 
 *cromwell-bin-2.31 (16 Oct 2004)
 
