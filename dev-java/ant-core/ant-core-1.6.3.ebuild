@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-core/ant-core-1.6.3_beta1.ebuild,v 1.2 2005/04/03 20:29:22 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-core/ant-core-1.6.3.ebuild,v 1.1 2005/04/28 20:41:25 axxo Exp $
 
 inherit java-pkg eutils
 
@@ -10,12 +10,11 @@ MY_PV=${PV/_/}
 
 DESCRIPTION="Java-based build tool similar to 'make' that uses XML configuration files."
 HOMEPAGE="http://ant.apache.org/"
-#SRC_URI="mirror://apache/ant/source/apache-${MY_PN}-${PV}-src.tar.bz2"
-SRC_URI="http://cvs.apache.org/dist/ant/v${MY_PV}/src/apache-ant-${MY_PV}-src.tar.bz2"
+SRC_URI="mirror://apache/ant/source/apache-${MY_PN}-${PV}-src.tar.bz2"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="x86 amd64 ppc sparc ppc64"
+KEYWORDS="~x86 ~amd64 ~ppc ~sparc ~ppc64"
 IUSE="doc"
 
 DEPEND="virtual/libc

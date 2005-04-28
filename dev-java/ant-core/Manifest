@@ -1,8 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 3fc14c36e9ebd0c74a87e2560d6219f3 ant-core-1.6.2-r2.ebuild 2019
 MD5 447224265535a82681e60fdcefd7f179 ant-core-1.6.3_beta1.ebuild 1991
+MD5 8c1042dc133182af875973d72402f748 ant-core-1.6.3.ebuild 1903
 MD5 e9577f39414ff99938fdadbd15ce5359 ant-core-1.5.4-r2.ebuild 3054
 MD5 8e729af8f39194688017b7d44a29d554 ChangeLog 16562
 MD5 123cf9440c1d4ac78f2caba1624765f9 metadata.xml 158
@@ -15,10 +13,4 @@ MD5 55ece9ccf573b244b3dff966839528c5 files/rpmbuild.patch.gz 1164
 MD5 8d86f265f37d0d73cdd2e8a3fd2ff6eb files/digest-ant-core-1.5.4-r2 70
 MD5 aac477e88787ed6f0ad5cabe0f6a001a files/digest-ant-core-1.6.2-r2 74
 MD5 8c69a473b88559829069ac80730f2f1b files/1.6.2-scp.patch 877
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCZRDd/rLF9B432nYRAiruAJwIpv1bz4wux4jOJX+y8bDLO2vatQCbB7pH
-NfzXvJSaBJYg/gxtMnRBov4=
-=Iyiz
------END PGP SIGNATURE-----
+MD5 4abd275148cde1e1c88e8ff4097cbcd8 files/digest-ant-core-1.6.3 74

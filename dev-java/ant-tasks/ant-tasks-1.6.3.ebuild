@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-tasks/ant-tasks-1.6.3_beta1.ebuild,v 1.3 2005/04/10 19:23:32 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-tasks/ant-tasks-1.6.3.ebuild,v 1.1 2005/04/28 20:42:26 axxo Exp $
 
 inherit java-pkg eutils
 
@@ -9,8 +9,7 @@ MY_P=${PN}-${MY_PV}
 
 DESCRIPTION="Apache ANT Optional Tasks Jar Files"
 HOMEPAGE="http://ant.apache.org/"
-#SRC_URI="mirror://apache/ant/source/apache-ant-${PV}-src.tar.bz2"
-SRC_URI="http://cvs.apache.org/dist/ant/v${MY_PV}/src/apache-ant-${MY_PV}-src.tar.bz2"
+SRC_URI="mirror://apache/ant/source/apache-ant-${PV}-src.tar.bz2"
 
 LICENSE="Apache-2.0"
 SLOT="0"
