@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/RPM
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/RPM/ChangeLog,v 1.13 2004/06/25 00:57:41 agriffis Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/RPM/ChangeLog,v 1.14 2005/04/28 19:04:58 mcummings Exp $
+
+  28 Apr 2005; Michael Cummings <mcummings@gentoo.org> -RPM-0.32-r1.ebuild,
+  -RPM-0.32-r2.ebuild, -RPM-0.40.ebuild, RPM-0.40-r1.ebuild:
+  Cleaning up
 
   06 Oct 2003; Michael Cummings <mcummings@gentoo.org> RPM-0.40-r1.ebuild:
   Locked to a particular version of RPM; bug 25788, brandy@g.o did the leg work
