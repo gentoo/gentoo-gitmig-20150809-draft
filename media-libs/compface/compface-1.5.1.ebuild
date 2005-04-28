@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/compface/compface-1.5.1.ebuild,v 1.1 2005/01/26 12:32:20 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/compface/compface-1.5.1.ebuild,v 1.2 2005/04/28 14:39:53 hattya Exp $
 
 IUSE=""
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.xemacs.org/Download/optLibs.html"
 SRC_URI="http://ftp.xemacs.org/pub/xemacs/aux/${P}.tar.gz"
 
 LICENSE="MIT"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc-macos ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc-macos ~ppc64 ~sparc x86"
 SLOT="0"
 
 DEPEND="virtual/libc"
