@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/bins
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/bins/ChangeLog,v 1.30 2005/01/02 21:08:35 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/bins/ChangeLog,v 1.31 2005/04/28 21:05:44 mcummings Exp $
+
+  28 Apr 2005; Michael Cummings <mcummings@gentoo.org>
+  bins-1.1.23-r1.ebuild, bins-1.1.23-r2.ebuild, bins-1.1.26-r1.ebuild,
+  bins-1.1.26-r2.ebuild, bins-1.1.27.ebuild:
+  Now that the new imagemagick is stable, removing dep on the old perlmagick
 
   02 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance

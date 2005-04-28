@@ -1,15 +1,25 @@
-MD5 5f22e6388fd9daf1e68a9a9845df4a87 bins-1.1.26-r1.ebuild 1421
-MD5 4818427b325174dca27e0a19bcdb1e6e bins-1.1.23-r1.ebuild 1132
-MD5 ec63f8d32eedad010122074716e3aa71 ChangeLog 4514
-MD5 822f5458acbfb00dd60a50404273d80f bins-1.1.23-r2.ebuild 1296
-MD5 5b7a69f7682e3f7ecd7293a48f295476 bins-1.1.27.ebuild 1760
-MD5 f6f25d9e9a80ebea076822b7998b15f3 bins-1.1.26-r2.ebuild 1418
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 251b775d402cf3cc6d1ce199c8ca439f ChangeLog 4765
+MD5 6ef0b85f1f1ae0dec555a5ab08f20bc6 bins-1.1.23-r1.ebuild 1100
+MD5 e5bfdaef07d583a365698978eb12fb36 bins-1.1.23-r2.ebuild 1264
+MD5 1c478378cde1056fc549e05abbcbad45 bins-1.1.26-r1.ebuild 1389
+MD5 118106148dd9c88244c4cae86f3731e6 bins-1.1.26-r2.ebuild 1386
+MD5 f7c400d47fd0a9b6240b67497540961f bins-1.1.27.ebuild 1728
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 904b594ebfa89adf9b522cf9cfb56bd5 files/bins-1.1.23-install.patch 2321
+MD5 32e520c705416104518b2cf5324b75f1 files/bins-1.1.26-install.patch 1878
+MD5 32e520c705416104518b2cf5324b75f1 files/bins-1.1.27-install.patch 1878
+MD5 e691d4766973f8fa705055f6d6664ce8 files/digest-bins-1.1.23-r1 63
+MD5 e691d4766973f8fa705055f6d6664ce8 files/digest-bins-1.1.23-r2 63
 MD5 9bf07881d8a8267c11b383bb0ed22d31 files/digest-bins-1.1.26-r1 63
 MD5 9bf07881d8a8267c11b383bb0ed22d31 files/digest-bins-1.1.26-r2 63
-MD5 904b594ebfa89adf9b522cf9cfb56bd5 files/bins-1.1.23-install.patch 2321
 MD5 d81e2220c9111d78f8698232f7a622c8 files/digest-bins-1.1.27 63
-MD5 32e520c705416104518b2cf5324b75f1 files/bins-1.1.27-install.patch 1878
-MD5 e691d4766973f8fa705055f6d6664ce8 files/digest-bins-1.1.23-r2 63
-MD5 e691d4766973f8fa705055f6d6664ce8 files/digest-bins-1.1.23-r1 63
-MD5 32e520c705416104518b2cf5324b75f1 files/bins-1.1.26-install.patch 1878
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCcU/OtG5z4I8BtQoRArGBAJ9W/cRKusD7b7fLFPooT4PQlq/WVQCfTWzT
+FprWl8V6IrePW+e0kEiNLLQ=
+=K9xK
+-----END PGP SIGNATURE-----

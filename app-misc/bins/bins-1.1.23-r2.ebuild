@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/bins/bins-1.1.23-r2.ebuild,v 1.7 2005/01/01 14:53:20 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/bins/bins-1.1.23-r2.ebuild,v 1.8 2005/04/28 21:05:44 mcummings Exp $
 
 inherit eutils
 
@@ -15,7 +15,6 @@ IUSE="gtk"
 
 DEPEND=">=dev-lang/perl-5.6.1-r6
 	>=media-gfx/imagemagick-5.5.5.3
-	>=dev-perl/perlmagick-5.5.5.3
 	>=dev-perl/ImageSize-2.99
 	>=dev-perl/ImageInfo-1.04-r1
 	>=dev-perl/IO-String-1.01-r1
