@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.14a-r1.ebuild,v 1.4 2005/04/27 20:03:54 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.14a-r1.ebuild,v 1.5 2005/04/28 10:53:59 seemant Exp $
 
 inherit eutils versionator
 
@@ -101,7 +101,7 @@ src_compile() {
 		--with-syslog \
 		--with-idmap \
 		--without-ldapsam \
-		$(use_with acl) \
+		$(use_with acl acl-support) \
 		$(use_enable cups) \
 		$(use_with kerberos krb5) \
 		$(use_with ldap) \
