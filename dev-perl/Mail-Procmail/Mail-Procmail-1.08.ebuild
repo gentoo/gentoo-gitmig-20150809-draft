@@ -1,16 +1,17 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-Procmail/Mail-Procmail-1.05.ebuild,v 1.5 2004/07/14 18:54:52 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-Procmail/Mail-Procmail-1.08.ebuild,v 1.1 2005/04/28 17:42:33 mcummings Exp $
 
 inherit perl-module
 
 DESCRIPTION="Mail sorting/delivery module for Perl."
-SRC_URI="http://www.cpan.org/modules/by-module/Mail/${P}.tar.gz"
+SRC_URI="mirror://cpan/authors/id/J/JV/JV/${P}.tar.gz"
 HOMEPAGE="http://www.cpan.org/modules/by-module/Mail/${P}.readme"
 
+SRC_TEST="do"
 SLOT="0"
 LICENSE="Artistic"
-KEYWORDS="x86 amd64 ~ppc sparc ~alpha"
+KEYWORDS="~x86 ~amd64 ~ppc ~sparc ~alpha"
 IUSE=""
 
 DEPEND="${DEPEND}
