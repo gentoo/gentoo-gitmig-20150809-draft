@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/module-info
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/module-info/ChangeLog,v 1.13 2005/03/12 10:45:19 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/module-info/ChangeLog,v 1.14 2005/04/28 19:16:27 mcummings Exp $
+
+*module-info-0.28 (28 Apr 2005)
+
+  28 Apr 2005; Michael Cummings <mcummings@gentoo.org>
+  -module-info-0.24.ebuild, module-info-0.26.ebuild,
+  +module-info-0.28.ebuild:
+  Cleaning
 
   12 Mar 2005; Markus Rothe <corsair@gentoo.org> module-info-0.26.ebuild:
   Stable on ppc64
