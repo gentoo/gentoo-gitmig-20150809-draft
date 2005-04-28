@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.2.1.ebuild,v 1.12 2005/04/24 20:15:23 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.2.1.ebuild,v 1.13 2005/04/28 12:32:11 ka0ttic Exp $
 
 inherit eutils fixheadtails perl-module
 
@@ -29,8 +29,7 @@ DEPEND="virtual/libc
 	elf? ( dev-libs/elfutils )"
 
 RDEPEND="${DEPEND}
-	dev-perl/TermReadKey
-	perl? ( X? ( dev-perl/perl-tk ) )
+	perl? ( X? ( dev-perl/perl-tk ) !minimal? ( dev-perl/TermReadKey ) )
 	selinux? ( sec-policy/selinux-snmpd )"
 
 DEPEND="${DEPEND}

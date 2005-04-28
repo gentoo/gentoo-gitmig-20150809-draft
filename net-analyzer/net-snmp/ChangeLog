@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/net-snmp
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.97 2005/04/24 20:15:23 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.98 2005/04/28 12:32:11 ka0ttic Exp $
+
+  28 Apr 2005; Aaron Walker <ka0ttic@gentoo.org> net-snmp-5.2.1.ebuild:
+  Only dep on TermReadKey if perl and !minimal. Thanks to solar for pointing
+  this out.
 
   24 Apr 2005; Aaron Walker <ka0ttic@gentoo.org> net-snmp-5.2.1.ebuild:
   Removed || die after make test as there are legitimate reasons it might fail
