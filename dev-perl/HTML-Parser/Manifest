@@ -1,20 +1,22 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 ae41046160bd3a04664e871c5a510a89 ChangeLog 4922
-MD5 1d485c5a3158390cd4ecfb745af66551 HTML-Parser-3.45.ebuild 834
-MD5 2150a246b3cd28e0b79eea61eed027b3 HTML-Parser-3.34-r1.ebuild 826
-MD5 9e1a5ebf67e0802daaa456bbc2d5e066 HTML-Parser-3.36-r1.ebuild 903
-MD5 76a8cbcf455cafa7208c31c247532063 HTML-Parser-3.36.ebuild 833
+MD5 f6a2b5d50e8786b344414c5fa748fcd6 ChangeLog 5234
+MD5 b2197711aee95360010a23e290722c5e HTML-Parser-3.28.ebuild 661
+MD5 50516caef9690db5537cb7b7cd688ae7 HTML-Parser-3.34-r1.ebuild 832
+MD5 cb8804ff022642d16735ed2276f49380 HTML-Parser-3.36-r1.ebuild 907
+MD5 1192d41c24e06a42b88f0303e3847458 HTML-Parser-3.36.ebuild 840
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 3aa6ad736b6a561df25f2cfde7966c6e files/digest-HTML-Parser-3.45 67
+MD5 8df5e3417a33b4c1bbfaf66a1860a4e4 HTML-Parser-3.45.ebuild 840
+MD5 efe35730ae75ad200be2482606e13068 files/digest-HTML-Parser-3.28 67
 MD5 50cf283f97b61262556f01ff3413faba files/digest-HTML-Parser-3.34-r1 67
-MD5 af0ff1f0a3657e83a07e968fc2a52fb0 files/digest-HTML-Parser-3.36 67
 MD5 af0ff1f0a3657e83a07e968fc2a52fb0 files/digest-HTML-Parser-3.36-r1 67
+MD5 af0ff1f0a3657e83a07e968fc2a52fb0 files/digest-HTML-Parser-3.36 67
+MD5 3aa6ad736b6a561df25f2cfde7966c6e files/digest-HTML-Parser-3.45 67
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCbSk4tG5z4I8BtQoRAgMiAKCMrpvmAfD7AB0evHayhqBwYZ24vgCfXWnR
-ID5ocCXMu8C+fgOo8aCmVEU=
-=s0mU
+iD8DBQFCcN9ktG5z4I8BtQoRAtIdAKCPN3oAPtOj5jHTFI5IH2Bm5rVhdwCcDKmQ
+KkWq8PjaRiIXfF9DwGW/aKo=
+=25E9
 -----END PGP SIGNATURE-----
