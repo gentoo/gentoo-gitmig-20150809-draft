@@ -1,21 +1,17 @@
---- aalib-1.4.0/configure.in~	Tue Apr 24 16:00:02 2001
-+++ aalib-1.4.0/configure.in	Sun May  6 20:37:32 2001
-@@ -83,10 +83,10 @@
- 	fi
- ])
- AC_ARG_WITH(gpm-mouse, 
--	[  --with-gpm-mouse=base-dir  Specifies the base gpm directory],
--	if test x$withval = xyes
-+	[  --with-gpm-mouse=base-dir/no  Specifies the base gpm directory],
-+	if test x$withval = xno
- 	then 
--		AC_MSG_WARN(Usage is: --with-gpm-mouse=base-dir)
-+		gpm_mousedriver_test=no
- 	else
- 		LIBS="$LIBS -L$withval/lib -lgpm"
-                 AC_DEFINE(GPM_MOUSEDRIVER)
---- aalib-1.4.0/configure.orig	Sun May  6 20:38:23 2001
-+++ aalib-1.4.0/configure	Sun May  6 20:38:26 2001
+Fix --with-gpm-mouse usage to not be so freaky.  Don't patch 
+configure.in that way we avoid having to run autotools.
+
+  AC_ARG_WITH(gpm-mouse, 
+ -	[  --with-gpm-mouse=base-dir  Specifies the base gpm directory],
+ -	if test x$withval = xyes
+ +	[  --with-gpm-mouse=base-dir/no  Specifies the base gpm directory],
+ +	if test x$withval = xno
+  	then 
+ -		AC_MSG_WARN(Usage is: --with-gpm-mouse=base-dir)
+ +		gpm_mousedriver_test=no
+  	else
+--- aalib-1.4.0/configure
++++ aalib-1.4.0/configure
 @@ -28,7 +28,7 @@
  ac_help="$ac_help
    --with-curses-driver=no/yes Used to disable/force curses driver"
