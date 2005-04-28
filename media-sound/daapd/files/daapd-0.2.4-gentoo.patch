@@ -1,0 +1,43 @@
+diff -uprN daapd-0.2.4.orig/makefile daapd-0.2.4/makefile
+--- daapd-0.2.4.orig/makefile	2005-04-28 17:35:27.000000000 +0200
++++ daapd-0.2.4/makefile	2005-04-28 17:36:49.000000000 +0200
+@@ -11,19 +11,19 @@ MPEG4_ENABLE = 0
+ CC = g++
+ MAKE = $(MAKE_COMMAND)
+ TARGET = daapd
+-DEPS = daaplib_ libhttpd_
++DEPS = 
+ OBJS = daapd.o db.o dboutput.o songcache.o parsemp3.o util.o
+ LIBS = -ldaaplib -lhttpd-persistent -lid3tag -lz
+-LIBPATH = -L. -L./daaplib/src -L./libhttpd/src  -L/usr/local/lib
+-INCPATH = -I. -I./daaplib/include -I./libhttpd/src  -I/usr/local/include
+-DEPLOY = /usr/local
++LIBPATH = -L. -L/usr/lib
++INCPATH = -I. -I/usr/include
++DEPLOY = /usr
+ CFLAGS = -Wall -Wno-multichar
+ 
+ # HOWL
+ ifeq ($(HOWL_ENABLE),1)
+-	HOWLDIRS := $(sort $(wildcard /usr/local/include/howl*) )
++	HOWLDIRS := $(sort $(wildcard /usr/include/howl*) )
+ ifeq ($(words $(HOWLDIRS) ), 0)
+-$(error howl not found in /usr/local/include. Install howl or disable it in the makefile)
++$(error howl not found in /usr/include. Install howl or disable it in the makefile)
+ endif
+ 	HOWLRECENT := $(word $(words $(HOWLDIRS)),$(HOWLDIRS) )
+ 	INCPATH := $(INCPATH) -I$(HOWLRECENT)
+diff -uprN daapd-0.2.4.orig/types.h daapd-0.2.4/types.h
+--- daapd-0.2.4.orig/types.h	2005-04-28 17:35:27.000000000 +0200
++++ daapd-0.2.4/types.h	2005-04-28 17:37:15.000000000 +0200
+@@ -20,6 +20,10 @@
+ 	Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+ */
+ 
++#ifndef UINT64_TO_DOUBLE
++#define UINT64_TO_DOUBLE(a) ((double)((int64_t)(a)))
++#endif
++
+ #ifndef DAAP_TYPES_H
+ #define DAAP_TYPES_H
+ 
