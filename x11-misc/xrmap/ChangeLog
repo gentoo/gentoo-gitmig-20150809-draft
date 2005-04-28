@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xrmap
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xrmap/ChangeLog,v 1.7 2005/04/04 19:53:59 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xrmap/ChangeLog,v 1.8 2005/04/28 18:32:36 wormo Exp $
+
+  28 Apr 2005; Stephanie Lockwood-Childs <wormo@gentoo.org> xrmap-2.29.ebuild:
+  mark ~ppc
 
   04 Apr 2005; Jan Brinkmann <luckyduck@gentoo.org> xrmap-2.29.ebuild:
   added ~amd64 to KEYWORDS. fixes #87862
