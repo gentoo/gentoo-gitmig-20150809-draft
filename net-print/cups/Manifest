@@ -2,11 +2,11 @@
 Hash: SHA1
 
 MD5 b3c4731f265417590856a617196e07bb cups-1.1.23-r1.ebuild 3855
-MD5 b3bc83f0d793cda5c5da45997c7888c6 ChangeLog 16406
+MD5 c9be922136c82f1f1845ba21d8362eb0 ChangeLog 16531
 MD5 26b4b081d538c195dc39bcb2ec8e6f3a metadata.xml 161
 MD5 85bc20d893f097ef0f13947179c3838c files/cups-1.1.22-xpdf2-underflow.patch 2301
 MD5 a097b6a9c53c9ef50a6f3662d802cdfa files/xpdf-pl3.patch 348
-MD5 f5a136105ce5ea502313aa383f4f0579 files/cupsd.rc6 524
+MD5 b8f1408209550c9746d4153bc2469982 files/cupsd.rc6 513
 MD5 7242b8a2000fe4c5a2b398e6602f7f1c files/cups.pam 234
 MD5 eb02b2008717b62447ec2d2ac1e37d5a files/digest-cups-1.1.23-r1 72
 MD5 7bce495a238ee9dbebb61496f3b3ae51 files/disable-strip.patch 422
@@ -15,7 +15,7 @@ MD5 b041836e6ee51876ca7ec86869643018 files/cups.xinetd 368
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCah8NevY57Fted3ERAuQSAJsHTfx1e1YibKmO83pnA6W858n/awCcDBBD
-PpaZkDTV9vWutQ53hPjXXLc=
-=2K2K
+iD8DBQFCcPVvevY57Fted3ERArYUAKCvyV6nw0Ma5rF+YSG+IU/axeUr/gCfctsp
+LQeEtfIlRkeuuOULuQMr920=
+=1kkK
 -----END PGP SIGNATURE-----
