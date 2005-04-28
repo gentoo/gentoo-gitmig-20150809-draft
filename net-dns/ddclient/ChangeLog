@@ -1,6 +1,11 @@
 # ChangeLog for net-dns/ddclient
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/ddclient/ChangeLog,v 1.19 2005/04/11 19:23:58 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/ddclient/ChangeLog,v 1.20 2005/04/28 12:27:23 seemant Exp $
+
+  28 Apr 2005; Seemant Kulleen <seemant@gentoo.org> ddclient-3.6.3.ebuild,
+  ddclient-3.6.6.ebuild:
+  HOMEPAGE and SRC_URI fixes, thanks to: Urriellu <urriellu@asturlinux.org> in
+  bug #89695
 
   11 Apr 2005; Seemant Kulleen <seemant@gentoo.org> ddclient-3.6.6.ebuild:
   Added a blurb about making the user change perms, and referencing the bug
