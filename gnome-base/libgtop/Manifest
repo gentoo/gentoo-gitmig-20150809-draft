@@ -2,8 +2,8 @@
 Hash: SHA1
 
 MD5 8d7dedf2a6f031ad86b2f272ecdbf629 libgtop-2.0.8.ebuild 589
-MD5 afcf89d347e9cf9d644e0c7493a41b5d libgtop-2.8.3.ebuild 592
-MD5 dfc7d1b233eae13ccaabeb8919491889 ChangeLog 8628
+MD5 7194803dc3204423f518ad9b68567974 libgtop-2.8.3.ebuild 591
+MD5 a6183638f0715eac1d1dba96070b3946 ChangeLog 8723
 MD5 10535e0f0d28bb1c0c5154109989ab1d libgtop-1.0.13-r2.ebuild 1500
 MD5 7cb42f0775110ca85e3842293b349312 libgtop-2.8.1.ebuild 587
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
@@ -29,7 +29,7 @@ MD5 51a8192dea5d51a0ba39cb2753af8b84 files/libgtop-1.0.13-guile-compile.patch 11
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCb9IMKf2g/qXtneoRAlkpAJ0WUKuOxLu1f0E6Yo2fkw6hnpaxLwCgoIHk
-w6miJ1DdU29ZX6HWcEjslTg=
-=5dbV
+iD8DBQFCcKdqKf2g/qXtneoRAiA3AKCZiH8pUv6rAictLOInfjHbfupHgACePeq9
+zs5qWkrMAH7N7dQ/XN8d2Q0=
+=p8hn
 -----END PGP SIGNATURE-----
