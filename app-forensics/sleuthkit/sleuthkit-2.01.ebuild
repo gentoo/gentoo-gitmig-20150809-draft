@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/sleuthkit/sleuthkit-2.01.ebuild,v 1.2 2005/04/24 15:15:46 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/sleuthkit/sleuthkit-2.01.ebuild,v 1.3 2005/04/28 19:46:33 config Exp $
 
 inherit toolchain-funcs eutils
 
@@ -29,6 +29,9 @@ src_unpack() {
 	sed -i '63,69d' src/timeline/config-perl || die "sed config-perl failed"
 	sed -i 's:`cd ../..; pwd`:/usr:' src/sorter/install \
 		|| die "sed install failed"
+	if use amd64; then
+		epatch ${FILESDIR}/${P}-include_fix.patch
+	fi
 }
 
 src_compile() {
