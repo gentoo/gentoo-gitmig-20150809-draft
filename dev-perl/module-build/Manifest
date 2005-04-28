@@ -1,12 +1,16 @@
-MD5 b92837a00e44aa1cb6c505d730aa2a8f ChangeLog 3532
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 e587e134990b9c16aaf205629a435186 ChangeLog 3794
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 8b93fc80b41b231f800b44431649ade4 module-build-0.18.ebuild 683
-MD5 3e8c039739f64ee4bc2e7d7f80d6cb08 module-build-0.19.ebuild 682
-MD5 b3b12c419690f5ecd3c33c698c1e4ae6 module-build-0.22.ebuild 668
+MD5 3a8577282ec116df62383cf94cf4c1e5 module-build-0.26.10.ebuild 699
 MD5 d6ed4f5a70e7dd12c5eaa9719e964cc0 module-build-0.25.ebuild 654
-MD5 e2ff6f71973905e69f0a3d0906ea4c6e module-build-0.26.08.ebuild 696
-MD5 46c83a840d25a11c761e0cbceae27a95 files/digest-module-build-0.18 68
-MD5 0d078cff23ce12c13c3e9525bff85314 files/digest-module-build-0.19 68
-MD5 804380d9ccfd232c890ace70f8539d70 files/digest-module-build-0.22 68
+MD5 c6b9381a0113c337f6074a192e6c195f files/digest-module-build-0.26.10 71
 MD5 02fe7753001f89b0f496f0669d31a1da files/digest-module-build-0.25 69
-MD5 4437a751386b276892ed352096cf5d8c files/digest-module-build-0.26.08 71
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCcTXMtG5z4I8BtQoRAt26AJ9DboM9g0REsydXa6N8r8G5+9sziwCfexXT
+ul6XRZdgnyfAXXwwvp57ZUc=
+=H+yP
+-----END PGP SIGNATURE-----

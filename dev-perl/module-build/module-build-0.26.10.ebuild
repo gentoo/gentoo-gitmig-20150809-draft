@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/module-build/module-build-0.26.08.ebuild,v 1.4 2005/03/18 23:49:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/module-build/module-build-0.26.10.ebuild,v 1.1 2005/04/28 19:14:37 mcummings Exp $
 
 inherit perl-module
 
-MY_PV=${PV/26.08/2608}
+MY_PV=${PV/26.10/2610}
 MY_P="Module-Build-${MY_PV}"
 S=${WORKDIR}/${MY_P}
 DESCRIPTION="Build and install Perl modules"
