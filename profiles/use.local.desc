@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1122 2005/04/28 23:32:51 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1123 2005/04/28 23:39:36 allanonjl Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -666,6 +666,7 @@ net-misc/quagga:ospfapi - Enable OSPFAPI support for client applications accessi
 net-misc/quagga:tcpmd5 - Enable TCP MD5 checksumming
 net-misc/ssh:openssh - Allow ssh and openssh to be installed side by side
 net-misc/vnc:server - Build VNC client
+net-misc/gwget:epiphany - Build epiphany extensions
 net-misc/yate:fax - Build fax plugin
 net-misc/yate:gsm - Build gsm codec plugin
 net-misc/yate:h323 - Build H.323 Channel plugin
