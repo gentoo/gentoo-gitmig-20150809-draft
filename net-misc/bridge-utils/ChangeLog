@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/bridge-utils
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bridge-utils/ChangeLog,v 1.17 2004/07/01 20:48:28 squinky86 Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bridge-utils/ChangeLog,v 1.18 2005/04/28 08:33:10 robbat2 Exp $
+
+  28 Apr 2005; Robin H. Johnson <robbat2@gentoo.org>
+  bridge-utils-1.0.4.ebuild:
+  Fix bug #69292, missing dep.
 
   01 Jul 2004; Jon Hood <squinky86@gentoo.org> bridge-utils-0.9.6-r1.ebuild,
   bridge-utils-0.9.6.ebuild, bridge-utils-1.0.4.ebuild:
