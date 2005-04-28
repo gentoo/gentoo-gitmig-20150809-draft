@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/files/gcc-config-1.3.10,v 1.10 2005/04/28 01:47:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/files/gcc-config-1.3.10,v 1.11 2005/04/28 23:42:25 vapier Exp $
 
 trap ":" INT QUIT TSTP
 
@@ -79,7 +79,7 @@ cmd_setup() {
 get_real_chost() {
 	[[ -n ${REAL_CHOST} ]] && return 0
 
-	export REAL_CHOST=$(env -u CHOST ${PORTAGEQ} envvar CHOST)
+	export REAL_CHOST=$(env -i ${PORTAGEQ} envvar CHOST)
 
 	if [[ -z ${REAL_CHOST} ]] ; then
 		eerror "$0: Could not get portage CHOST!"
