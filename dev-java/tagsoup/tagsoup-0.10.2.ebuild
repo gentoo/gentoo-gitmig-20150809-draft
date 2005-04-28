@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/tagsoup/tagsoup-0.10.2.ebuild,v 1.5 2004/11/03 11:38:50 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/tagsoup/tagsoup-0.10.2.ebuild,v 1.6 2005/04/28 19:13:05 luckyduck Exp $
 
 inherit java-pkg
 
@@ -12,16 +12,19 @@ HOMEPAGE="http://mercury.ccil.org/~cowan/XML/tagsoup/"
 SRC_URI="http://mercury.ccil.org/~cowan/XML/tagsoup/${P}-src.zip"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~amd64"
-IUSE="doc"
+KEYWORDS="x86 ppc amd64"
+IUSE="doc jikes source"
 DEPEND=">=virtual/jdk-1.4
-		app-arch/unzip
-		dev-java/ant"
+	app-arch/unzip
+	dev-java/ant-core
+	jikes? ( dev-java/jikes )
+	source? ( app-arch/zip )"
 RDEPEND=">=virtual/jre-1.4"
 
 src_compile() {
 	local antflags="dist"
 	use doc && antflags="${antflags} docs-api"
+	use jikes && antflags="${antflags} -Dbuild.compiler=jikes"
 	ant ${antflags} || die "compile failed"
 }
 
@@ -31,4 +34,5 @@ src_install() {
 
 	dodoc CHANGES LICENSE README TODO
 	use doc && java-pkg_dohtml -r docs/*
+	use source && java-pkg_dosrc src/java/*
 }
