@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/samba
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.170 2005/04/28 13:39:15 satya Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.171 2005/04/28 14:39:49 lanius Exp $
+
+  28 Apr 2005; Heinrich Wendel <lanius@gentoo.org> files/samba-init:
+  revert 'use cupsd' again, it was the wrong way around
 
   28 Apr 2005; Christian Andreetta <satya@gentoo.org> samba-3.0.10.ebuild:
   exaples permissions issue fixed (bug #90002)
