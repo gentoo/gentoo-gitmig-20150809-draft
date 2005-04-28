@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1119 2005/04/28 18:21:45 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1120 2005/04/28 23:01:03 mr_bones_ Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -254,8 +254,8 @@ dev-util/subversion:nowebdav - Disables WebDAV support via neon library
 games-action/d2x:cdinstall - Enables copying files from the CD
 games-arcade/tuxracer:stencil-buffer - Enables use of stencil-buffer
 games-board/crafty:no-opts - Don't try to enable crazy CFLAG options
-games-emulation/mupen64:asm - Enable use of asm routines to improve performance
 games-emulation/mupen64-glN64:asm - Enable use of asm routines to improve performance
+games-emulation/mupen64:asm - Enable use of asm routines to improve performance
 games-emulation/xmame:net - Add network support
 games-emulation/xmess:net - Add network support
 games-engines/exult:timidity - Add sound support (timidity)
@@ -685,8 +685,6 @@ net-proxy/squid:zero-penalty-hit - Adds Zero Penalty Hit patch
 net-proxy/tinyproxy:transparent-proxy - Enables support for transparent proxies
 net-servers/fnord:diet - Compile and link with dietlibc
 net-servers/lighttpd:xattr - if you want extended attributes enabled
-net-servers/pound:msdav - if you want the Microsoft DAV extensions enabled
-net-servers/pound:unsafe - if you want the 'unsafe' characters passed through to the web servers
 net-servers/skunkweb:apache1 - enable apache1 support if internal server and apache2 support not wanted
 net-wireless/kdebluetooth:irmc - Enable the kitchensync(Multisynk)'s IrMCSync konnector
 net-wireless/ndiswrapper:4kstacks - Allow the use of 4kstacks in ndiswrapper for some users
@@ -750,11 +748,11 @@ sys-apps/memtest86+:serial - Compile with serial console support
 sys-apps/memtest86:serial - Compile with serial console support
 sys-apps/module-init-tools:no-old-linux - Don't support modules for Linux 2.4 and older
 sys-apps/parted:noreiserfs - Do not include reiserfs support
+sys-apps/pcmcia-cs-modules:cardbus - Enable 32bit CardBus support
 sys-apps/pcmcia-cs:nocardbus - Disable 32bit CardBus support
 sys-apps/pcmcia-cs:pnp - Add support for PNP (Plug-N-Play)
 sys-apps/pcmcia-cs:trusted - Assume all users are trusted (Build unsafe user-space tools)
 sys-apps/pcmcia-cs:xforms - Enable building the xforms based cardinfo binary
-sys-apps/pcmcia-cs-modules:cardbus - Enable 32bit CardBus support
 sys-apps/tcng:tcsim - enable traffic simulator
 sys-apps/tinylogin:make-symlinks - Create all the appropriate symlinks in /bin and /sbin
 sys-apps/util-linux:old-crypt - build support for the older cryptoapi that earlier util-linux's included
@@ -866,6 +864,8 @@ www-client/w3m:async - Enables asynchronous fetch
 www-client/w3m:imlib2 - If you want to link imlib2 instead of imlib against w3mimgdisplay
 www-client/w3m:lynxkeymap - If you prefer Lynx-like key binding
 www-misc/nsxml:xslt - Enables xslt support
+www-servers/pound:msdav - if you want the Microsoft DAV extensions enabled
+www-servers/pound:unsafe - if you want the 'unsafe' characters passed through to the web servers
 x11-base/kdrive:fbdev - Enables framebuffer kdrive server
 x11-base/kdrive:font-server - Enables font server support
 x11-base/kdrive:freetype - Enables Freetype font support
