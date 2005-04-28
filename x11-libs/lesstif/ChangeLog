@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/lesstif
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/lesstif/ChangeLog,v 1.62 2005/04/27 04:53:54 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/lesstif/ChangeLog,v 1.63 2005/04/28 22:50:01 lanius Exp $
+
+  28 Apr 2005; Heinrich Wendel <lanius@gentoo.org> lesstif-0.94.4.ebuild:
+  remove motif-config, bug #90774
 
   27 Apr 2005; Heinrich Wendel <lanius@gentoo.org> -lesstif-0.94.0.ebuild:
   cleanup
