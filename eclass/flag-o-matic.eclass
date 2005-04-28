@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.85 2005/04/06 23:29:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.86 2005/04/28 20:06:00 solar Exp $
 
 ECLASS=flag-o-matic
 INHERITED="$INHERITED $ECLASS"
@@ -62,6 +62,18 @@ inherit eutils toolchain-funcs multilib
 # when a package is filtering -fstack-protector, -fstack-protector-all
 # notice: modern automatic specs files will also suppress -fstack-protector-all
 # when only -fno-stack-protector is given
+#
+#### has_pic ####
+# Returns true if the compiler by default or with current CFLAGS
+# builds position-independent code.
+#
+#### has_ssp_all ####
+# Returns true if the compiler by default or with current CFLAGS
+# generates stack smash protections for all functions
+#
+#### has_ssp ####
+# Returns true if the compiler by default or with current CFLAGS
+# generates stack smash protections for most vulnerable functions
 #
 
 # C[XX]FLAGS that we allow in strip-flags
@@ -326,7 +338,6 @@ has_pic() {
 	[ "${CFLAGS/-fPIC}" != "${CFLAGS}" ] && return 0
 	[ "${CFLAGS/-fpic}" != "${CFLAGS}" ] && return 0
 	[ "$(echo | $(tc-getCC) ${CFLAGS} -E -dM - | grep __PIC__)" ] && return 0
-	test_version_info pie && return 0
 	return 1
 }
 
@@ -337,6 +348,14 @@ has_pie() {
 	[ "$(echo | $(tc-getCC) ${CFLAGS} -E -dM - | grep __PIE__)" ] && return 0
 	# test PIC while waiting for specs to be updated to generate __PIE__
 	[ "$(echo | $(tc-getCC) ${CFLAGS} -E -dM - | grep __PIC__)" ] && return 0
+	return 1
+}
+
+# indicate whether code for SSP is being generated for all functions
+has_ssp_all() {
+	# note; this matches only -fstack-protector-all
+	[ "${CFLAGS/-fstack-protector-all}" != "${CFLAGS}" ] && return 0
+	[ "$(echo | $(tc-getCC) ${CFLAGS} -E -dM - | grep __SSP_ALL__)" ] && return 0
 	return 1
 }
 
