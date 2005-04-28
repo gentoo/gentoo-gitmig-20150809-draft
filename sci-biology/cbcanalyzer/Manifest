@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 1e0e9e82e0c41f595b339a53e56c6402 cbcanalyzer-1.0.0.ebuild 860
+MD5 cf93a146a10f22b4bd55e1700e55162c ChangeLog 380
 MD5 098b7b16e103a67726d7c71c07685b5e metadata.xml 1617
-MD5 da2e37d1a7cb36aad84368cdae219a9c ChangeLog 378
 MD5 f69a329aa4d9ac75cae676a247c6fa52 files/digest-cbcanalyzer-1.0.0 70
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCcTD1I1lqEGTUzyQRAhBTAKCuwiJ3rz9akgP1QY775ACNU4v5gwCggcVX
+QLgqn5HQJAz0aG96y7ZnY5c=
+=aNQK
+-----END PGP SIGNATURE-----
