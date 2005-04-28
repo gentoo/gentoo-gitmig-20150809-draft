@@ -1,15 +1,15 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-XUpdate-LibXML/XML-XUpdate-LibXML-0.5.0.ebuild,v 1.3 2004/10/16 23:57:24 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-XUpdate-LibXML/XML-XUpdate-LibXML-0.5.0.ebuild,v 1.4 2005/04/28 19:29:48 mcummings Exp $
 
 IUSE=""
 inherit perl-module
 DESCRIPTION="Process XUpdate commands over an XML document."
-SRC_URI="http://search.cpan.org/CPAN/modules/by-module/XML/${P}.tar.gz"
+SRC_URI="mirror://cpan/authors/id/P/PA/PAJAS/${P}.tar.gz"
 HOMEPAGE="http:/search.cpan.org/~pajas/${P}/"
 SLOT="0"
 LICENSE="|| ( Artistic GPL-2 )"
-KEYWORDS="~x86 ~ppc ~sparc"
+KEYWORDS="x86 ~ppc sparc ~amd64"
 
 SRC_TEST="do"
 
