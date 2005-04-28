@@ -1,6 +1,13 @@
 # ChangeLog for sys-libs/pam
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.70 2005/03/25 01:30:30 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.71 2005/04/28 15:22:17 azarah Exp $
+
+  28 Apr 2005; Martin Schlemmer <azarah@gentoo.org> pam-0.77.ebuild,
+  pam-0.77-r1.ebuild, pam-0.77-r2.ebuild, pam-0.77-r3.ebuild,
+  pam-0.77-r4.ebuild, pam-0.77-r6.ebuild, pam-0.77-r7.ebuild,
+  pam-0.77-r8.ebuild, pam-0.78.ebuild, pam-0.78-r1.ebuild,
+  pam-0.78-r2.ebuild:
+  Add virtual.
 
   25 Mar 2005; Jeremy Huddleston <eradicator@gentoo.org> pam-0.78-r2.ebuild:
   Use proper toolchain compiler.

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.78-r2.ebuild,v 1.5 2005/03/25 01:30:30 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.78-r2.ebuild,v 1.6 2005/04/28 15:22:17 azarah Exp $
 
 FORCE_SYSTEMAUTH_UPDATE="no"
 
@@ -50,6 +50,8 @@ DEPEND="${RDEPEND}
 
 # Have python sandbox issues currently ...
 #	doc? ( app-text/sgmltools-lite )
+
+PROVIDE="virtual/pam"
 
 #inherit needs to be after DEPEND definition to protect RDEPEND
 inherit toolchain-funcs eutils flag-o-matic gnuconfig
