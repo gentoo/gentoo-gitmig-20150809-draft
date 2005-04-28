@@ -1,8 +1,14 @@
-MD5 1e99f24ec6c5613c8328ac7d0fe37f47 xom-1.0_beta6.ebuild 1431
-MD5 95d9bde9f22c6fe0c5a9e4d720596b0b xom-1.0.ebuild 1490
-MD5 0b4defa280611a12a53ee4969e10996a xom-1.0_beta5.ebuild 1414
-MD5 c2a7455886cc25da7e3b669432b41c09 ChangeLog 1597
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 7866e8c6dc49ccf24a48fe9c0e8fd27e xom-1.0.ebuild 1583
+MD5 7206982dc9421acb1a9f123a24150133 ChangeLog 1815
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
-MD5 a5d63e4795719a77ec4ed37989972163 files/digest-xom-1.0_beta5 59
-MD5 af8e4185c36e77a42b75df927966d03b files/digest-xom-1.0_beta6 59
 MD5 deb2f00f818f16deba73b81503a0a169 files/digest-xom-1.0 60
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCcTdM06ebR+OMO78RAkijAJ4pBhxDyEBylxdaerta/PBVMIhtgACfbbf+
+Ca+Pfhe1H3PaNHjV7E6dqPs=
+=+VFM
+-----END PGP SIGNATURE-----
