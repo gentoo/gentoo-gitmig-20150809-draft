@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/bins/bins-1.1.23-r2.ebuild,v 1.8 2005/04/28 21:05:44 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/bins/bins-1.1.23-r2.ebuild,v 1.9 2005/04/28 21:08:37 mcummings Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ KEYWORDS="x86 ~sparc alpha ppc amd64"
 IUSE="gtk"
 
 DEPEND=">=dev-lang/perl-5.6.1-r6
-	>=media-gfx/imagemagick-5.5.5.3
+	>=media-gfx/imagemagick-6.2.2.0
 	>=dev-perl/ImageSize-2.99
 	>=dev-perl/ImageInfo-1.04-r1
 	>=dev-perl/IO-String-1.01-r1

@@ -2,11 +2,11 @@
 Hash: SHA1
 
 MD5 251b775d402cf3cc6d1ce199c8ca439f ChangeLog 4765
-MD5 6ef0b85f1f1ae0dec555a5ab08f20bc6 bins-1.1.23-r1.ebuild 1100
-MD5 e5bfdaef07d583a365698978eb12fb36 bins-1.1.23-r2.ebuild 1264
-MD5 1c478378cde1056fc549e05abbcbad45 bins-1.1.26-r1.ebuild 1389
-MD5 118106148dd9c88244c4cae86f3731e6 bins-1.1.26-r2.ebuild 1386
-MD5 f7c400d47fd0a9b6240b67497540961f bins-1.1.27.ebuild 1728
+MD5 7834ed91c70ea1742ea1035101c2b976 bins-1.1.23-r1.ebuild 1100
+MD5 bbf349786c3983f39bfc2d3de7bb9b29 bins-1.1.23-r2.ebuild 1264
+MD5 c428bbd3a0d8fc29b4ab8f32ce60cc29 bins-1.1.26-r1.ebuild 1389
+MD5 72942608fb5ce719dd6282ddf08105a2 bins-1.1.26-r2.ebuild 1386
+MD5 4d8fa0551cbf7b4417fb3e4b7a9f74bc bins-1.1.27.ebuild 1728
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 904b594ebfa89adf9b522cf9cfb56bd5 files/bins-1.1.23-install.patch 2321
 MD5 32e520c705416104518b2cf5324b75f1 files/bins-1.1.26-install.patch 1878
@@ -19,7 +19,7 @@ MD5 d81e2220c9111d78f8698232f7a622c8 files/digest-bins-1.1.27 63
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCcU/OtG5z4I8BtQoRArGBAJ9W/cRKusD7b7fLFPooT4PQlq/WVQCfTWzT
-FprWl8V6IrePW+e0kEiNLLQ=
-=K9xK
+iD8DBQFCcVBztG5z4I8BtQoRAgthAJ0d5aqh55FI3lPjl0F0gv2iWs99CgCfclfQ
+84mheyW0GJgxXW5Ck1qSRJQ=
+=qcTW
 -----END PGP SIGNATURE-----
