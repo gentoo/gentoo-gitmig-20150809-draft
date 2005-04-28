@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/rsbac-admin/rsbac-admin-1.2.4.ebuild,v 1.4 2005/04/04 16:32:35 kang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/rsbac-admin/rsbac-admin-1.2.4.ebuild,v 1.5 2005/04/28 13:40:18 kang Exp $
 
 inherit eutils
 
-IUSE="debug"
+IUSE="debug pam"
 
 # RSBAC Adming packet name
 ADMIN=rsbac-admin-v${PV}
@@ -19,7 +19,7 @@ KEYWORDS="x86"
 NSS="1.2.4"
 
 DEPEND="dev-util/dialog
-	sys-libs/pam
+	pam? sys-libs/pam
 	sys-apps/baselayout
 	|| ( >=sys-kernel/rsbac-sources-2.4.29-r1
 	>=sys-kernel/rsbac-dev-sources-2.6.10-r3 )"
@@ -47,7 +47,9 @@ src_compile() {
 	LD="../../src/librsbac.so.$NSS" econf  || die "cannot conf nss_rsbac"
 	cd ${WORKDIR}/${ADMIN}
 	emake -C contrib/nss_rsbac || die "cannot make nss_rsbac"
-	emake -C contrib/pam_rsbac || die "cannot make pam_rsbac"
+	use pam && {
+		emake -C contrib/pam_rsbac || die "cannot make pam_rsbac"
+	}
 	if use debug; then
 		emake -C contrib/regression || die "cannot make regression"
 	fi
@@ -66,9 +68,10 @@ src_install() {
 	newins ${FILESDIR}/rsbac.conf rsbac.conf ${FILESDIR}/nsswitch.conf
 	exeinto /etc/init.d
 	newinitd ${FILESDIR}/rklogd.init rklogd
-	insinto /lib/security
-	newins ${WORKDIR}/${ADMIN}/contrib/pam_rsbac/pam_rsbac.so
-
+	use pam && {
+		insinto /lib/security
+		newins ${WORKDIR}/${ADMIN}/contrib/pam_rsbac/pam_rsbac.so pam_rsbac.so
+	}
 	dodir /secoff
 	keepdir /secoff
 	dodir /secoff/log
