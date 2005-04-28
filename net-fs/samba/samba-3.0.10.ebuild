@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.10.ebuild,v 1.15 2005/03/03 10:55:50 mglauche Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.10.ebuild,v 1.16 2005/04/28 13:39:15 satya Exp $
 
 inherit eutils flag-o-matic
 #---------------------------------------------------------------------------
@@ -344,6 +344,9 @@ src_install() {
 	dodoc ${FILESDIR}/nsswitch.conf-wins
 	use winbind && dodoc ${FILESDIR}/nsswitch.conf-winbind
 	cp -a ${S}/examples.ORIG/* ${D}/usr/share/doc/${PF}/examples
+	# examples permissions: bug #90002
+	chmod -R 755 `find ${D}/usr/share/doc/${PF}/examples -type d`
+	chmod -R 644 `find ${D}/usr/share/doc/${PF}/examples ! -type d`
 	if use oav; then
 		docinto ${PN}-vscan-${VSCAN_VER}
 		cd ${WORKDIR}/${PN}-vscan-${VSCAN_VER}
