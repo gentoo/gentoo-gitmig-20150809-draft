@@ -1,11 +1,11 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 16fd6637c04d6bf9a021682284f7a30e ChangeLog 12026
+MD5 c17dc24a23e606e2322b886f3fe99a51 ChangeLog 12127
 MD5 4ef3192dbf304004312d4a8a5873c008 gnome-games-2.8.1.ebuild 1986
 MD5 c6766eecd4786d616b2f7a672f93ef85 gnome-games-2.6.2.ebuild 1429
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 bd87b030c31cd5f4c9f7898eec439caa gnome-games-2.8.3.ebuild 1978
+MD5 ea3048e229963d9a16152a17ad618c69 gnome-games-2.8.3.ebuild 1977
 MD5 b625d11fbeb9ed516b36bb678c0e9a07 gnome-games-2.10.1.ebuild 2050
 MD5 f02a05514168bad80a360c1c3211900f gnome-games-1.4.0.3-r3.ebuild 1272
 MD5 b2b15c347cc321cc75d84ebdf5f26116 gnome-games-2.8.2.ebuild 1973
@@ -28,7 +28,7 @@ MD5 05ba368f9e9d4b208ecf3e839ffba4a0 files/gnome-games-2.9.6-nohowl.patch 953
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCb9HLKf2g/qXtneoRAkxtAKCv2u/3XTmgt8wkYqQ+/aTPU0yt6ACeOgGo
-zDPblEqU+TK4XCXlrAmRSxw=
-=6igT
+iD8DBQFCcKkyKf2g/qXtneoRAga6AKCGaSqOEmONU78VWp1CqWTaXcIVrQCfQ3T6
+r/jbGAVciInE4/7n4igwchs=
+=syVY
 -----END PGP SIGNATURE-----
