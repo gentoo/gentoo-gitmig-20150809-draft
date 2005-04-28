@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.77-r1.ebuild,v 1.15 2005/04/28 15:22:17 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.77-r1.ebuild,v 1.16 2005/04/28 15:52:12 azarah Exp $
 
 PATCH_LEVEL="1.2"
 BDB_VER="4.1.25"
@@ -20,8 +20,6 @@ DEPEND="$RDEPEND
 
 # Have python sandbox issues currently ...
 #	doc? ( app-text/sgmltools-lite )
-
-PROVIDE="virtual/pam"
 
 # BDB is internalized to get a non-threaded lib for pam_userdb.so to
 # be built with.  The runtime-only dependency on BDB suggests the user

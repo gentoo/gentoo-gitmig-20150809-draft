@@ -1,6 +1,13 @@
 # ChangeLog for sys-libs/pam
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.71 2005/04/28 15:22:17 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.72 2005/04/28 15:52:12 azarah Exp $
+
+  28 Apr 2005; Martin Schlemmer <azarah@gentoo.org> pam-0.77.ebuild,
+  pam-0.77-r1.ebuild, pam-0.77-r2.ebuild, pam-0.77-r3.ebuild,
+  pam-0.77-r4.ebuild, pam-0.77-r6.ebuild, pam-0.77-r7.ebuild,
+  pam-0.77-r8.ebuild:
+  Only add the virtual to the >=0.78 series, as we want to use it for the
+  'include' directive to have bsd support.
 
   28 Apr 2005; Martin Schlemmer <azarah@gentoo.org> pam-0.77.ebuild,
   pam-0.77-r1.ebuild, pam-0.77-r2.ebuild, pam-0.77-r3.ebuild,

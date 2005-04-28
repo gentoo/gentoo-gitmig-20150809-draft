@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 afb9e226414eabd05e1f387ab3ab4cfc pam-0.77-r3.ebuild 7836
-MD5 4b332427d7b070b86cee50a2b159c93b pam-0.77-r1.ebuild 7503
-MD5 b42b78d50fd25b1f339b0a00603df7c5 ChangeLog 11399
-MD5 19cddb532651952f12bac55dc020e6c0 pam-0.77.ebuild 7452
-MD5 75b97dbe2f5dede319e3e54412e0e541 pam-0.77-r4.ebuild 7837
-MD5 65a442c0a8823d6412653560472145f6 pam-0.77-r7.ebuild 8071
-MD5 b175fcf6fcac384d680e49fb943e02a3 pam-0.77-r6.ebuild 7867
+MD5 cc651dd7ee955356111091bafdeb56f9 pam-0.77-r3.ebuild 7813
+MD5 707627fea800ffecc2285e350e23f30c pam-0.77-r1.ebuild 7480
+MD5 a494683ee34f63bc7458e127ac3c17d4 ChangeLog 11732
+MD5 af47e564b258499b629b3ea37792d7f2 pam-0.77.ebuild 7429
+MD5 bd01a0d8066f1b4c0d7ea9c18d4faf29 pam-0.77-r4.ebuild 7814
+MD5 b48cfbd70e6f6d850bb746b7e0e2c2ad pam-0.77-r7.ebuild 8048
+MD5 2c03d49853d6a6a4e68e5ffda3d66227 pam-0.77-r6.ebuild 7844
 MD5 1d05f0436f1c273d7862099f309afe4d metadata.xml 156
-MD5 7c4252520911cd602951e1ee6b4a1bdd pam-0.77-r8.ebuild 8235
-MD5 f8d9103b337b7a2d5319eb5eaf6df48a pam-0.77-r2.ebuild 7787
+MD5 6ab79fdc8912ba6d8b0ed9300d0c0d63 pam-0.77-r8.ebuild 8212
+MD5 b90ab8e4ae2f8672b64827050cb845c0 pam-0.77-r2.ebuild 7764
 MD5 69a4a4be5cef7ce7e1030bd6b3f175cd pam-0.78.ebuild 9559
 MD5 e1140ad83218d1690b689eda439bfc9d pam-0.78-r2.ebuild 10981
 MD5 2bc1e4ded4090bbac7a0d092cc265df9 pam-0.78-r1.ebuild 9906
@@ -36,7 +36,7 @@ MD5 1baa646400c4a596290e9d4b9e1c09b2 files/pam.d/system-auth 491
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCcQDZ1ZcsMnZjRyIRAowJAKCIg2Hq890ocRzNEe/beM7Vn1BARwCfUYHi
-zRc8hKEtigF5IgKbr40UNZI=
-=0LT6
+iD8DBQFCcQfc1ZcsMnZjRyIRAlh/AKCsu0twC3FoJo8aOn2xCKK+Q+pzYgCglcDg
+eBqRfXTOwxIeE2eCgLKj2XY=
+=fK6p
 -----END PGP SIGNATURE-----
