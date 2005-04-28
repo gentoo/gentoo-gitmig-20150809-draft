@@ -1,6 +1,6 @@
-# ChangeLog for net-misc/totd
+# ChangeLog for net-dns/totd
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/totd/ChangeLog,v 1.1 2005/04/25 20:25:25 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/totd/ChangeLog,v 1.2 2005/04/28 18:51:33 swegener Exp $
 
 *totd-1.5 (25 Apr 2005)
 
