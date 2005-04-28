@@ -1,13 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-0.7.0.ebuild,v 1.1 2005/04/28 13:26:38 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-0.7.0.ebuild,v 1.2 2005/04/28 21:05:54 mr_bones_ Exp $
 
 inherit eutils flag-o-matic linux-mod
 
 DESCRIPTION="Multi-platform & multi-targets cpu emulator and dynamic translator"
 HOMEPAGE="http://fabrice.bellard.free.fr/qemu/"
 SRC_URI="http://fabrice.bellard.free.fr/qemu/${P}.tar.gz
-         kqemu? ( http://fabrice.bellard.free.fr/qemu/kqemu-0.6.2-1.tar.gz )"
+	kqemu? ( http://fabrice.bellard.free.fr/qemu/kqemu-0.6.2-1.tar.gz )"
 #qvm86? ( http://dev.gentoo.org/~lu_zero/distfiles/qvm86-20050409.tar.bz2 )"
 #kqemu? ( http://fabrice.bellard.free.fr/qemu/kqemu-${PV%.*}-1.tar.gz )
 
@@ -21,7 +21,6 @@ DEPEND="virtual/libc
 	sdl? ( media-libs/libsdl )
 	app-text/texi2html"
 RDEPEND="sdl? ( media-libs/libsdl )"
-
 
 MODULE_NAMES=""
 use kqemu && MODULE_NAMES=$MODULE_NAMES" kqemu(misc:${S}/kqemu)"
@@ -44,7 +43,7 @@ src_unpack() {
 	unpack ${A}
 
 	use kqemu &&
-	
+
 	(
 	einfo "QEMU Accelerator enabled"
 	einfo "kqemu actually is a closed source software"
@@ -74,7 +73,7 @@ src_unpack() {
 src_compile() {
 	#Let the application set it's cflags
 	unset CFLAGS
-	
+
 	myconf=""
 	set_target_list
 #		--interp-prefix=${RUNTIME_PATH}/qemu-%M
@@ -97,9 +96,9 @@ src_install() {
 		datadir=${D}/usr/share/qemu \
 		docdir=${D}/usr/share/doc/${P} \
 		mandir=${D}/usr/share/man || die
-	
+
 	chmod -x ${D}/usr/share/man/*/*
-	
+
 	if use kqemu ; then
 #if use kqemu || use qvm86; then
 		linux-mod_src_install
