@@ -1,15 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 dfc11be0b6268691bbe67d4e61871994 samba-3.0.11.ebuild 8766
-MD5 dde473d4519c83ca5e81ce51466117f2 samba-3.0.13.ebuild 15542
 MD5 dba6533a0f625f4ae8e69e5f3c0cd181 samba-3.0.10.ebuild 16541
 MD5 6fc9264ddb0441d8f563f1fe18974376 samba-3.0.14a-r1.ebuild 8772
-MD5 8048e0bddb2da7507e0a7cce6d9165a6 ChangeLog 30623
+MD5 0841e4b62c97def60cbd8f16fabe7a70 ChangeLog 30928
 MD5 41299f246433a1a55c8fccc77ccd709e metadata.xml 491
 MD5 fa1dcd2c95a81c22c2ad68de6698a85e files/digest-samba-3.0.10 206
 MD5 498babc5e33f61369f42201f25eb35c0 files/digest-samba-3.0.11 215
-MD5 b2d8f41a9dad89b3e073259680a517cf files/digest-samba-3.0.13 136
 MD5 e89b19f1e62e257cbaa23a44a0362a58 files/swat.xinetd 527
 MD5 def157a63ec14450df82373617c7dc4b files/samba-3.0.11-gcc4.patch 485
 MD5 e17a1638ad9f30f2e39db4c8981a2fcd files/vscan-0.3.5-libclamav.patch 523
@@ -28,10 +23,3 @@ MD5 239ef0e21552896faeef21c685561245 files/smb.conf.example-samba3.gz 7808
 MD5 3685eadb817d185b06476eca6c0c15c4 files/smbusers 204
 MD5 09195dd8ab25ce77ac51c0c05b4ab93c files/system-auth-winbind 869
 MD5 b6cdc1468e45f92f19873e0c6c5b6e94 files/samba.pam 332
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCcPYrevY57Fted3ERAg1kAKCq3oGd9nGQiaZaIGoU4Kj249sD7QCgoErl
-tnf9++6Q9AGmmjtSlIMF2lQ=
-=I8G0
------END PGP SIGNATURE-----
