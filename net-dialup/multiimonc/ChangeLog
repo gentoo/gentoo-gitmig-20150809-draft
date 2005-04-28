@@ -1,6 +1,6 @@
-# ChangeLog for net-misc/multiimonc
+# ChangeLog for net-dialup/multiimonc
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/multiimonc/ChangeLog,v 1.1 2005/04/25 19:48:38 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/multiimonc/ChangeLog,v 1.2 2005/04/28 18:51:05 swegener Exp $
 
   25 Apr 2005; Alin Nastac <mrness@gentoo.org> metadata.xml,
   -multiimonc-0.3.4.ebuild:
