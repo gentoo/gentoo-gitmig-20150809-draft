@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/nvu
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nvu/ChangeLog,v 1.4 2005/04/19 10:22:44 beu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nvu/ChangeLog,v 1.5 2005/04/28 21:55:50 anarchy Exp $
+
+*nvu-0.90-r1 (28 Apr 2005)
+
+  28 Apr 2005; Jory A. Pratt <anarchy@gentoo.org> +nvu-0.90-r1.ebuild:
+  marking stable test being requested for other archs
 
   19 Apr 2005; Elfyn McBratney <beu@gentoo.org> metadata.xml:
   Remove retired developer from metadata.xml.
