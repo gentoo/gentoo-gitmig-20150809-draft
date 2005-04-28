@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1120 2005/04/28 23:01:03 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1121 2005/04/28 23:02:33 mr_bones_ Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -684,8 +684,6 @@ net-proxy/squid:underscores - Enables support for domain names containing unders
 net-proxy/squid:zero-penalty-hit - Adds Zero Penalty Hit patch
 net-proxy/tinyproxy:transparent-proxy - Enables support for transparent proxies
 net-servers/fnord:diet - Compile and link with dietlibc
-net-servers/lighttpd:xattr - if you want extended attributes enabled
-net-servers/skunkweb:apache1 - enable apache1 support if internal server and apache2 support not wanted
 net-wireless/kdebluetooth:irmc - Enable the kitchensync(Multisynk)'s IrMCSync konnector
 net-wireless/ndiswrapper:4kstacks - Allow the use of 4kstacks in ndiswrapper for some users
 net-wireless/wireless-tools:multicall - Build the most commonly used tools as one binary
@@ -864,8 +862,10 @@ www-client/w3m:async - Enables asynchronous fetch
 www-client/w3m:imlib2 - If you want to link imlib2 instead of imlib against w3mimgdisplay
 www-client/w3m:lynxkeymap - If you prefer Lynx-like key binding
 www-misc/nsxml:xslt - Enables xslt support
+www-servers/lighttpd:xattr - if you want extended attributes enabled
 www-servers/pound:msdav - if you want the Microsoft DAV extensions enabled
 www-servers/pound:unsafe - if you want the 'unsafe' characters passed through to the web servers
+www-servers/skunkweb:apache1 - enable apache1 support if internal server and apache2 support not wanted
 x11-base/kdrive:fbdev - Enables framebuffer kdrive server
 x11-base/kdrive:font-server - Enables font server support
 x11-base/kdrive:freetype - Enables Freetype font support
