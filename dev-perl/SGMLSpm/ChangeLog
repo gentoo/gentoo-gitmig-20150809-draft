@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/SGMLSpm
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SGMLSpm/ChangeLog,v 1.29 2004/12/30 00:23:30 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SGMLSpm/ChangeLog,v 1.30 2005/04/28 18:49:04 mcummings Exp $
+
+  28 Apr 2005; Michael Cummings <mcummings@gentoo.org>
+  -SGMLSpm-1.03-r3.ebuild, -SGMLSpm-1.03-r4.ebuild, SGMLSpm-1.03-r5.ebuild:
+  Cleaning for mirror
 
   30 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
