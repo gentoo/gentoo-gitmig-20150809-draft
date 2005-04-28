@@ -1,6 +1,14 @@
 # ChangeLog for media-plugins/gst-plugins-pitfdll
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-pitfdll/ChangeLog,v 1.1 2005/04/25 16:40:34 zaheerm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-pitfdll/ChangeLog,v 1.2 2005/04/28 23:41:50 zaheerm Exp $
+
+*gst-plugins-pitfdll-0.8.1 (29 Apr 2005)
+
+  29 Apr 2005; Zaheer Abbas Merali <zaheerm@gentoo.org>
+  +files/gst-plugins-pitfdll-0.8.1-mutex.patch,
+  -files/gst-plugins-pitfdll.0.8.1-mutex.patch,
+  gst-plugins-pitfdll-0.8.1.ebuild:
+  fix cock-up
 
   25 Apr 2005; Zaheer Abbas Merali <zaheerm@gentoo.org> :
   New package thanks to Ed Catmur for the ebuild - fixes bug #90082

@@ -1,6 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-pitfdll/gst-plugins-pitfdll-0.8.1.ebuild,v 1.1 2005/04/25 16:40:34 zaheerm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-pitfdll/gst-plugins-pitfdll-0.8.1.ebuild,v 1.2 2005/04/28 23:41:50 zaheerm Exp $
+
+inherit eutils
 
 DESCRIPTION="GStreamer plugin for Win32 DLL loading"
 HOMEPAGE="http://ronald.bitfreak.net/pitfdll.php"
@@ -28,7 +30,7 @@ RDEPEND="$DEPEND
 src_unpack() {
 	unpack ${A}
 	cd ${S}/ext/pitfdll
-	epatch ${FILESDIR}/${MY_P}-mutex.patch
+	epatch ${FILESDIR}/${P}-mutex.patch
 }
 
 src_install() {
