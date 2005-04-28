@@ -1,12 +1,12 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-Audit/Mail-Audit-2.1-r1.ebuild,v 1.10 2004/07/14 18:53:59 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-Audit/Mail-Audit-2.1-r1.ebuild,v 1.11 2005/04/28 17:22:00 mcummings Exp $
 
 inherit perl-module
 
 CATEGORY="dev-perl"
 DESCRIPTION="Mail sorting/delivery module for Perl."
-SRC_URI="http://www.cpan.org/modules/by-module/Mail/${P}.tar.gz"
+SRC_URI="mirror://cpan/authors/id/S/SI/SIMON/${P}.tar.gz"
 HOMEPAGE="http://www.cpan.org/modules/by-module/Mail/${P}.readme"
 
 LICENSE="Artistic"
