@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/procinfo
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/procinfo/ChangeLog,v 1.12 2005/03/18 23:33:20 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/procinfo/ChangeLog,v 1.13 2005/04/28 07:53:58 blubb Exp $
+
+  28 Apr 2005; Simon Stelling <blubb@gentoo.org> procinfo-18-r1.ebuild:
+  added ~amd64
 
   18 Mar 2005; Sven Wegener <swegener@gentoo.org> procinfo-18-r1.ebuild:
   Fixed double .patch in epatch line.
