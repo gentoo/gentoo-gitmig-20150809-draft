@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/xom
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xom/ChangeLog,v 1.12 2005/01/21 17:24:14 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xom/ChangeLog,v 1.13 2005/04/28 19:19:18 luckyduck Exp $
+
+  28 Apr 2005; Jan Brinkmann <luckyduck@gentoo.org> xom-1.0.ebuild,
+  -xom-1.0_beta5.ebuild, -xom-1.0_beta6.ebuild:
+  1.0 stable on amd64, ppc and x86. did some cleanup and introduced support for
+  the source useflag
 
 *xom-1.0 (21 Jan 2005)
 
