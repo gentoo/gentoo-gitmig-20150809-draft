@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/file-roller-2.10.0-r1.ebuild,v 1.4 2005/03/29 10:20:26 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/file-roller-2.10.0-r1.ebuild,v 1.5 2005/04/28 22:03:01 foser Exp $
 
 inherit gnome2 eutils
 
@@ -42,6 +42,9 @@ src_unpack() {
 	epatch ${FILESDIR}/${PN}-2.10-use_fr_rpm2cpio.patch
 	#allow filenames with whitespaces
 	epatch ${FILESDIR}/${P}-fix_whitespace.patch
+	# fix unrar not working #89531
+	epatch ${FILESDIR}/${PN}-2.10.2-fix_unrar.patch
+
 }
 
 src_install() {
@@ -50,4 +53,5 @@ src_install() {
 	dobin ${FILESDIR}/rpm2cpio-file-roller
 
 }
+
 USE_DESTDIR="1"

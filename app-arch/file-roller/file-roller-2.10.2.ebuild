@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/file-roller-2.10.2.ebuild,v 1.1 2005/04/17 13:53:43 joem Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/file-roller-2.10.2.ebuild,v 1.2 2005/04/28 22:03:01 foser Exp $
 
 inherit gnome2 eutils
 
@@ -40,6 +40,9 @@ src_unpack() {
 	epatch ${FILESDIR}/${PN}-2.10.2-use_bin_tar.patch
 	# use a local rpm2cpio script to avoid the dep
 	epatch ${FILESDIR}/${PN}-2.10-use_fr_rpm2cpio.patch
+	# fix unrar #89531
+	epatch ${FILESDIR}/${PN}-2.10.2-fix_unrar.patch
+
 }
 
 src_install() {
@@ -48,4 +51,5 @@ src_install() {
 	dobin ${FILESDIR}/rpm2cpio-file-roller
 
 }
+
 USE_DESTDIR="1"
