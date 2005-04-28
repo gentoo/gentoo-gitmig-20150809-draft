@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus-bin/azureus-bin-2.2.0.2.ebuild,v 1.5 2005/04/03 12:03:55 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus-bin/azureus-bin-2.2.0.2.ebuild,v 1.6 2005/04/28 19:53:37 sekretarz Exp $
 
 inherit eutils java-pkg
 
@@ -63,12 +63,6 @@ src_unpack() {
 				echo
 			fi
 		fi
-	fi
-
-	if use amd64 ; then
-		cd ${S}
-		unpack swt-3.0-linux-gtk-amd64.zip
-		cd ${WORKDIR}
 	fi
 
 	cp ${FILESDIR}/${PN}-gentoo.sh ${MY_PN}/azureus || die "failed to copy wrapper"
