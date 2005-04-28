@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/gail
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gail/ChangeLog,v 1.70 2005/04/25 12:29:54 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gail/ChangeLog,v 1.71 2005/04/28 09:00:04 kloeri Exp $
+
+  28 Apr 2005; Bryan Østergaard <kloeri@gentoo.org> gail-1.8.2-r1.ebuild:
+  Stable on alpha + ia64.
 
   25 Apr 2005; Mike Gardiner <obz@gentoo.org> gail-1.8.2-r1.ebuild:
   Keyworded ppc x86
