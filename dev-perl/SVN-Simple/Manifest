@@ -1,4 +1,16 @@
-MD5 b16ec4504c26732a09b22b6642c12ce7 SVN-Simple-0.26.ebuild 794
-MD5 f7a0f2a7b605a48f21735db3329d2a1c ChangeLog 430
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 08b0c14facabd385a6ca79f6e6a185c7 ChangeLog 584
+MD5 88321c7f2f524bd7e60cbace25b65f45 SVN-Simple-0.26.ebuild 789
 MD5 1e7dded402e236d45bd25a38c70c995c metadata.xml 223
+MD5 592d6fdd7a9e60a83e6ab50d14e9d4b4 SVN-Simple-0.27.ebuild 789
 MD5 ce306e01ec4f1705c0e02aa8eed27f0b files/digest-SVN-Simple-0.26 65
+MD5 a5fab07846309ef2402b4025fa31e64f files/digest-SVN-Simple-0.27 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCcTIwtG5z4I8BtQoRAq4CAJ9vKdp21XX10mrtkxTSyXjx/brdOgCfTvds
+vgprTkLzmNdOzx0l06YAUJw=
+=8/kP
+-----END PGP SIGNATURE-----
