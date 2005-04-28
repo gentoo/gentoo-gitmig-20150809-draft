@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/jfsutils/jfsutils-1.1.4.ebuild,v 1.10 2005/04/01 17:22:46 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/jfsutils/jfsutils-1.1.4.ebuild,v 1.11 2005/04/28 17:27:07 dsd Exp $
 
 inherit eutils
 
 DESCRIPTION="IBM's Journaling Filesystem (JFS) Utilities"
-HOMEPAGE="http://www-124.ibm.com/developerworks/oss/jfs/index.html"
-SRC_URI="http://www10.software.ibm.com/developer/opensource/jfs/project/pub/${P}.tar.gz"
+HOMEPAGE="http://jfs.sourceforge.net/"
+SRC_URI="http://jfs.sourceforge.net/project/pub/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -14,12 +14,6 @@ KEYWORDS="x86 ppc ~sparc mips hppa amd64 ia64"
 IUSE=""
 
 DEPEND="virtual/libc"
-
-#src_unpack() {
-#	unpack ${A}
-#	cd ${S}
-#	epatch ${FILESDIR}/${P}-gentoo.diff || die "patch failed"
-#}
 
 src_compile() {
 	econf \
