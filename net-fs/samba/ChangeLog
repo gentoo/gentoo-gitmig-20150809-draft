@@ -1,6 +1,10 @@
 # ChangeLog for net-fs/samba
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.167 2005/04/28 10:53:59 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.168 2005/04/28 11:13:09 seemant Exp $
+
+  28 Apr 2005; Seemant Kulleen <seemant@gentoo.org> :
+  Apparently, I missed the version bump request from: b52 <b52@entrap.de> in
+  bug #89664
 
   28 Apr 2005; Seemant Kulleen <seemant@gentoo.org> samba-3.0.14a-r1.ebuild:
   fix for the use acl configure option, thanks to: Chris Smith
