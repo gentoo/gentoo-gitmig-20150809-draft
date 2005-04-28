@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/csync2/csync2-1.16.ebuild,v 1.2 2005/04/27 21:19:34 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/csync2/csync2-1.16.ebuild,v 1.3 2005/04/28 00:40:10 xmerlin Exp $
 
 DESCRIPTION="Cluster synchronization tool."
 SRC_URI="http://oss.linbit.com/csync2/${P}.tar.gz"
@@ -35,3 +35,23 @@ src_install() {
 	dodoc AUTHORS COPYING ChangeLog INSTALL NEWS README TODO
 }
 
+pkg_postinst() {
+	echo
+	einfo "After you setup your conf file, edit the xinetd"
+	einfo "entry in /etc/xinetd.d/${PN} to enable, then"
+	einfo "start xinetd: /etc/init.d/xinetd start"
+	echo
+	einfo "To add ${PN} to your services file just run"
+	einfo "this command after you install:"
+	echo
+	einfo "ebuild /var/db/pkg/${CATEGORY}/${PF}/${PF}.ebuild config"
+}
+
+pkg_config() {
+	einfo "Updating /etc/services"
+	{ grep -v ^${PN} /etc/services;
+	echo "csync2  30865/tcp"
+	} > /etc/services.new
+	mv -f /etc/services.new /etc/services
+
+}
