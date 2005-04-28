@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmmsg
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmsg/ChangeLog,v 1.5 2004/11/24 23:28:21 weeve Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmsg/ChangeLog,v 1.6 2005/04/28 21:20:37 wormo Exp $
+
+  28 Apr 2005; Stephanie Lockwood-Childs <wormo@gentoo.org> wmmsg-1.0.ebuild:
+  mark ~ppc
 
   24 Nov 2004; Jason Wever <weeve@gentoo.org> wmmsg-1.0.ebuild:
   Added ~sparc keyword.
