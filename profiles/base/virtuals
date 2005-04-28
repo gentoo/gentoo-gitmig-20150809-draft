@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/virtuals,v 1.60 2005/04/28 15:17:32 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/virtuals,v 1.61 2005/04/28 15:53:40 azarah Exp $
 
 # This file describes the packages that by default satisfy a certain virtual
 # That this file exists in the base profile implies that these packages will
@@ -55,7 +55,9 @@ virtual/mpg123				media-sound/mpg123
 virtual/mta					mail-mta/ssmtp
 virtual/ooo					app-office/openoffice-bin
 virtual/opengl				x11-base/xorg-x11
-virtual/pam				sys-libs/pam
+# Only have this for >=pam-0.78, as we want to make use of the 'include'
+# directive to phase out pam_stack.
+virtual/pam				>=sys-libs/pam-0.78
 virtual/pdfviewer			app-text/xpdf
 virtual/php					dev-php/mod_php
 virtual/psviewer			app-text/gv
