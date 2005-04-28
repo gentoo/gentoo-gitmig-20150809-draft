@@ -1,6 +1,13 @@
 # ChangeLog for games-arcade/criticalmass
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/criticalmass/ChangeLog,v 1.8 2004/12/28 22:55:30 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/criticalmass/ChangeLog,v 1.9 2005/04/28 23:17:43 mr_bones_ Exp $
+
+*criticalmass-0.9.11 (28 Apr 2005)
+
+  28 Apr 2005; Michael Sterrett <mr_bones_@gentoo.org>
+  +criticalmass-0.9.11.ebuild, -criticalmass-0.98.ebuild,
+  -criticalmass-0.99.ebuild:
+  version bump (bug #90761)
 
   28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
