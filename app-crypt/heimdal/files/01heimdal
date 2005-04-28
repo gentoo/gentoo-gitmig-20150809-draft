@@ -1,5 +1,0 @@
-PATH=/usr/heimdal/bin
-ROOTPATH=/usr/heimdal/sbin
-LDPATH=/usr/heimdal/lib
-MANPATH=/usr/heimdal/man
-INFOPATH=/usr/heimdal/info

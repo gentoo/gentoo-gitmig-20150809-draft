@@ -1,6 +1,16 @@
 # ChangeLog for app-crypt/heimdal
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/ChangeLog,v 1.67 2005/04/28 01:00:45 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/ChangeLog,v 1.68 2005/04/28 18:54:19 seemant Exp $
+
+  28 Apr 2005; Seemant Kulleen <seemant@gentoo.org>
+  -files/heimdal-0.6.3-berkdb.patch.bz2,
+  -files/heimdal-0.6.3-ldap-subtree.patch.bz2,
+  -files/heimdal-0.6.3-rxapps.patch.bz2, -files/01heimdal,
+  -files/heimdal-0.6.3-fPIC.patch.bz2,
+  -files/heimdal-0.6.3-no_libedit.patch.bz2,
+  -files/heimdal-0.6.3-suid_fix.patch.bz2, -files/heimdal-0.6.3.all.patch,
+  -heimdal-0.6.3-r1.ebuild:
+  Getting rid of cruft. Thanks arch teams for stabling this so quick :)
 
   28 Apr 2005; Gustavo Zacarias <gustavoz@gentoo.org> heimdal-0.6.4.ebuild:
   Stable on sparc wrt #89861
