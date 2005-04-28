@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/grsec-sources
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/grsec-sources/ChangeLog,v 1.53 2005/04/22 14:05:40 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/grsec-sources/ChangeLog,v 1.54 2005/04/28 21:22:14 gustavoz Exp $
+
+  28 Apr 2005; Gustavo Zacarias <gustavoz@gentoo.org>
+  grsec-sources-2.4.30.2.1.5.ebuild:
+  Sparc stable
 
   22 Apr 2005; <solar@gentoo.org> grsec-sources-2.4.30.2.1.5.ebuild:
   - stable x86
