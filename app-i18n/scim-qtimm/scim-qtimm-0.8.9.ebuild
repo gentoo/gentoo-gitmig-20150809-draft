@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-qtimm/scim-qtimm-0.8.5.ebuild,v 1.4 2005/03/22 16:39:22 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-qtimm/scim-qtimm-0.8.9.ebuild,v 1.1 2005/04/28 19:01:13 usata Exp $
 
 inherit kde-functions
 
@@ -13,10 +13,10 @@ SRC_URI="mirror://sourceforge/scim/${P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~x86 ~ppc"
 IUSE="nls arts"
 
-DEPEND=">=app-i18n/scim-1.1.3
+DEPEND=">=app-i18n/scim-1.2.2
 	nls? ( sys-devel/gettext )
 	arts? ( kde-base/arts )"
 
@@ -31,9 +31,12 @@ src_compile() {
 	# bug #84369
 	if which kde-config >/dev/null 2>&1 ; then
 		export KDEDIR=$(kde-config --prefix)
+		export kde_kcfgdir=/usr/share/config.kcfg
+		export kde_servicesdir=/usr/share/services
 	fi
 
-	econf $(use_enable nls) \
+	econf --enable-mt \
+		$(use_enable nls) \
 		$(use_with arts) || die
 	emake -j1 || die "make failed."
 }
