@@ -1,6 +1,10 @@
 # ChangeLog for sys-cluster/keepalived
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/keepalived/ChangeLog,v 1.22 2005/04/29 16:29:28 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/keepalived/ChangeLog,v 1.23 2005/04/29 18:04:10 luckyduck Exp $
+
+  29 Apr 2005; Jan Brinkmann <luckyduck@gentoo.org>
+  keepalived-1.1.11.ebuild:
+  stable on amd64 wrt #90501
 
   29 Apr 2005; Markus Rothe <corsair@gentoo.org> keepalived-1.1.11.ebuild:
   Added ~ppc64 to KEYWORDS; bug #90501
