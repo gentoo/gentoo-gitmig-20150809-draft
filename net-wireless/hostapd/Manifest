@@ -11,5 +11,5 @@ MD5 3cb68569c34f2c059da88220513d9af4 files/digest-hostapd-0.3.7 150
 MD5 e3ffdcd25f6e6c941ad878a0f71a7645 files/digest-hostapd-0.4.0 150
 MD5 cf287b50f0ccd832a08fb3031281cd4f files/hostapd.init.d 858
 MD5 e3ffdcd25f6e6c941ad878a0f71a7645 files/digest-hostapd-0.4.0-r1 150
-MD5 34f92882ba2c9834e9bd023604b45662 files/hostapd-0.4.0-conf.d 424
+MD5 13619655135f469a5538e99c1d17efa6 files/hostapd-0.4.0-conf.d 425
 MD5 91e2e21afb898a103e2ac8fd7656b78d files/hostapd-0.4.0-init.d 982

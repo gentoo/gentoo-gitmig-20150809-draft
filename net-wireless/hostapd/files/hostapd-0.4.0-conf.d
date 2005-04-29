@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/files/hostapd-0.4.0-conf.d,v 1.1 2005/04/29 19:49:37 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/files/hostapd-0.4.0-conf.d,v 1.2 2005/04/29 21:27:37 brix Exp $
 
-# List of interface which needs to be started before hostapd
+# List of interfaces which needs to be started before hostapd
 INTERFACES="wlan0"
 
 # List of configuration files
