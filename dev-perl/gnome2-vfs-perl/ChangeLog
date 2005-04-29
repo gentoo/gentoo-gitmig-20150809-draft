@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/gnome2-vfs-perl
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-vfs-perl/ChangeLog,v 1.6 2005/04/22 13:15:41 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-vfs-perl/ChangeLog,v 1.7 2005/04/29 17:14:20 mcummings Exp $
+
+*gnome2-vfs-perl-1.021 (29 Apr 2005)
+
+  29 Apr 2005; Michael Cummings <mcummings@gentoo.org>
+  -gnome2-vfs-perl-0.05.ebuild, gnome2-vfs-perl-1.00.ebuild,
+  +gnome2-vfs-perl-1.021.ebuild:
+  Cleaning for mirror syntax
 
   22 Apr 2005; Simon Stelling <blubb@gentoo.org>
   gnome2-vfs-perl-1.00.ebuild:

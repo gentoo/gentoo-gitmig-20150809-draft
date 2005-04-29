@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/gnome2-gconf
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-gconf/ChangeLog,v 1.2 2004/09/28 00:36:24 swegener Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-gconf/ChangeLog,v 1.3 2005/04/29 17:06:49 mcummings Exp $
+
+  29 Apr 2005; Michael Cummings <mcummings@gentoo.org>
+  gnome2-gconf-1.000.ebuild:
+  Cleaning for mirror syntax
 
   28 Sep 2004; Sven Wegener <swegener@gentoo.org> :
   Gentoo Technologies, Inc. -> Gentoo Foundation

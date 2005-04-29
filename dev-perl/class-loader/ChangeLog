@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/class-loader
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/class-loader/ChangeLog,v 1.7 2005/04/22 12:43:43 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/class-loader/ChangeLog,v 1.8 2005/04/29 16:54:01 mcummings Exp $
+
+  29 Apr 2005; Michael Cummings <mcummings@gentoo.org>
+  class-loader-2.02.ebuild:
+  Cleaning for mirror
 
   22 Apr 2005; Simon Stelling <blubb@gentoo.org> class-loader-2.02.ebuild:
   stable on amd64

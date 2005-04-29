@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/digest-md2
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/digest-md2/ChangeLog,v 1.9 2005/04/22 12:52:15 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/digest-md2/ChangeLog,v 1.10 2005/04/29 17:02:39 mcummings Exp $
+
+  29 Apr 2005; Michael Cummings <mcummings@gentoo.org>
+  digest-md2-2.03.ebuild:
+  Cleaning for mirror
 
   22 Apr 2005; Simon Stelling <blubb@gentoo.org> digest-md2-2.03.ebuild:
   stable on amd64

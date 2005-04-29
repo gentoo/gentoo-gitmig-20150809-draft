@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/crypt-dsa
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/crypt-dsa/ChangeLog,v 1.4 2005/03/23 00:39:20 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/crypt-dsa/ChangeLog,v 1.5 2005/04/29 17:00:56 mcummings Exp $
+
+  29 Apr 2005; Michael Cummings <mcummings@gentoo.org>
+  crypt-dsa-0.12.ebuild:
+  Cleaning for mirror
 
   22 Mar 2005; Michael Cummings <mcummings@gentoo.org>
   crypt-dsa-0.12.ebuild:

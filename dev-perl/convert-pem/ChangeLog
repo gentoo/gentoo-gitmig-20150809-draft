@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/convert-pem
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/convert-pem/ChangeLog,v 1.9 2005/04/22 12:46:17 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/convert-pem/ChangeLog,v 1.10 2005/04/29 16:56:56 mcummings Exp $
+
+  29 Apr 2005; Michael Cummings <mcummings@gentoo.org>
+  convert-pem-0.06.ebuild:
+  Cleaning for mirror
 
   22 Apr 2005; Simon Stelling <blubb@gentoo.org> convert-pem-0.06.ebuild:
   stable on amd64

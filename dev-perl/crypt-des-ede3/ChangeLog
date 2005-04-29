@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/crypt-des-ede3
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/crypt-des-ede3/ChangeLog,v 1.9 2005/04/22 12:46:14 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/crypt-des-ede3/ChangeLog,v 1.10 2005/04/29 16:59:34 mcummings Exp $
+
+  29 Apr 2005; Michael Cummings <mcummings@gentoo.org>
+  crypt-des-ede3-0.01.ebuild:
+  Cleaning for mirror syntax
 
   22 Apr 2005; Simon Stelling <blubb@gentoo.org> crypt-des-ede3-0.01.ebuild:
   stable on amd64

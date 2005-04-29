@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/crypt-dh
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/crypt-dh/ChangeLog,v 1.5 2005/04/22 12:48:45 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/crypt-dh/ChangeLog,v 1.6 2005/04/29 17:00:37 mcummings Exp $
+
+  29 Apr 2005; Michael Cummings <mcummings@gentoo.org> crypt-dh-0.03.ebuild:
+  Cleaning for mirror syntax
 
   22 Apr 2005; Simon Stelling <blubb@gentoo.org> crypt-dh-0.03.ebuild:
   stable on amd64
