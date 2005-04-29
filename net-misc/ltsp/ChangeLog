@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/ltsp
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ltsp/ChangeLog,v 1.9 2005/04/13 18:31:20 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ltsp/ChangeLog,v 1.10 2005/04/29 11:30:20 lanius Exp $
+
+*ltsp-4.1.1 (29 Apr 2005)
+
+  29 Apr 2005; Heinrich Wendel <lanius@gentoo.org>
+  +files/ltsp-4.1.1-usb-config.patch, ltsp-4.1-r1.ebuild,
+  +ltsp-4.1.1.ebuild:
+  version bump; fix /etc/ltsp.conf; fix dev-perl/libwww-perl dependency; add
+  usb configure option
 
   13 Apr 2005; Heinrich Wendel <lanius@gentoo.org> ltsp-4.1-r1.ebuild:
   fix pxe file location

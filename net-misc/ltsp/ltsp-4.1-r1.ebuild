@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ltsp/ltsp-4.1-r1.ebuild,v 1.9 2005/04/13 18:31:20 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ltsp/ltsp-4.1-r1.ebuild,v 1.10 2005/04/29 11:30:20 lanius Exp $
 
 IUSE="X debug nas esd audiofile snmp"
 
@@ -15,7 +15,8 @@ RDEPEND="X? ( virtual/x11 )
 	sys-apps/xinetd
 	net-misc/dhcp
 	net-fs/nfs-utils
-	net-nds/portmap"
+	net-nds/portmap
+	dev-perl/libwww-perl"
 
 SLOT="0"
 LICENSE="GPL-2"
@@ -143,6 +144,7 @@ src_install() {
 	# config stuff
 	cd ltsp-utils
 	dosbin ltspcfg
+	dodir /etc
 	echo "LTSP_DIR=/opt/ltsp-4.1" > ${D}/etc/ltsp.conf
 	dosbin ltspinfo
 	dosbin ltspadmin
