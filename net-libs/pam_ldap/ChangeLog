@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/pam_ldap
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/pam_ldap/ChangeLog,v 1.22 2005/02/05 11:03:31 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/pam_ldap/ChangeLog,v 1.23 2005/04/29 22:46:29 robbat2 Exp $
+
+*pam_ldap-178 (29 Apr 2005)
+
+  29 Apr 2005; Robin H. Johnson <robbat2@gentoo.org> +pam_ldap-178.ebuild:
+  Version bump.
 
   05 Feb 2005; Michael Hanselmann <hansmi@gentoo.org> pam_ldap-176.ebuild:
   Stable on ppc.
