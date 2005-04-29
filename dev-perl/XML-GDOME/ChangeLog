@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/XML-GDOME
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-GDOME/ChangeLog,v 1.7 2005/04/14 10:25:31 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-GDOME/ChangeLog,v 1.8 2005/04/29 15:54:16 mcummings Exp $
+
+  29 Apr 2005; Michael Cummings <mcummings@gentoo.org>
+  XML-GDOME-0.85.ebuild, XML-GDOME-0.86.ebuild:
+  Cleaning for mirror syntax
 
   14 Apr 2005; Jan Brinkmann <luckyduck@gentoo.org> XML-GDOME-0.86.ebuild:
   added ~amd64 to KEYWORDS, fixes #88637

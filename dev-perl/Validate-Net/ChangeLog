@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Validate-Net
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Validate-Net/ChangeLog,v 1.5 2004/12/30 00:51:11 ciaranm Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Validate-Net/ChangeLog,v 1.6 2005/04/29 15:52:31 mcummings Exp $
+
+  29 Apr 2005; Michael Cummings <mcummings@gentoo.org>
+  Validate-Net-0.4.ebuild, Validate-Net-0.5.ebuild:
+  Cleaning for mirror
 
   30 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance

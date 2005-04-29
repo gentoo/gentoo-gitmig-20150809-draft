@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Unix-Syslog
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Unix-Syslog/ChangeLog,v 1.11 2005/02/06 18:22:35 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Unix-Syslog/ChangeLog,v 1.12 2005/04/29 15:44:20 mcummings Exp $
+
+  29 Apr 2005; Michael Cummings <mcummings@gentoo.org>
+  -Unix-Syslog-0.100.ebuild, Unix-Syslog-0.100-r1.ebuild:
+  Cleaning for mirror syntax
 
   06 Feb 2005; Markus Rothe <corsair@gentoo.org> Unix-Syslog-0.100-r1.ebuild:
   Stable on ppc64
