@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Test-SimpleUnit
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-SimpleUnit/ChangeLog,v 1.2 2004/06/25 01:03:37 agriffis Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-SimpleUnit/ChangeLog,v 1.3 2005/04/29 14:27:11 mcummings Exp $
+
+  29 Apr 2005; Michael Cummings <mcummings@gentoo.org>
+  Test-SimpleUnit-1.21.ebuild:
+  Cleaning mirror syntax
 
 *Test-SimpleUnit-1.21 (29 Mar 2004)
 

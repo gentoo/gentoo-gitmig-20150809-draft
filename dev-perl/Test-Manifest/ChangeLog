@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Test-Manifest
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Manifest/ChangeLog,v 1.10 2005/02/18 17:28:20 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Manifest/ChangeLog,v 1.11 2005/04/29 14:19:31 mcummings Exp $
+
+*Test-Manifest-1.14 (29 Apr 2005)
+
+  29 Apr 2005; Michael Cummings <mcummings@gentoo.org> :
+  Cleaning mirror syntax
 
   18 Feb 2005; Jan Brinkmann <luckyduck@gentoo.org> :
   added ~amd64 to KEYWORDS. fixes #82458

@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Test-Pod
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Pod/ChangeLog,v 1.12 2005/04/07 20:49:09 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Pod/ChangeLog,v 1.13 2005/04/29 14:24:29 mcummings Exp $
+
+  29 Apr 2005; Michael Cummings <mcummings@gentoo.org>
+  -Test-Pod-1.08.ebuild, -Test-Pod-1.16.ebuild:
+  Cleaning for mirror syntax
 
   07 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> Test-Pod-1.20.ebuild:
   Stable on ppc.

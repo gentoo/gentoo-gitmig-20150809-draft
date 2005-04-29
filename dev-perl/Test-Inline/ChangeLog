@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Test-Inline
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Inline/ChangeLog,v 1.13 2004/06/25 01:02:57 agriffis Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Inline/ChangeLog,v 1.14 2005/04/29 14:20:42 mcummings Exp $
+
+  29 Apr 2005; Michael Cummings <mcummings@gentoo.org>
+  -Test-Inline-0.15.ebuild, Test-Inline-0.16.ebuild:
+  Cleaning for mirror syntax
 
 *Test-Inline-0.16 (05 Jun 2004)
 
