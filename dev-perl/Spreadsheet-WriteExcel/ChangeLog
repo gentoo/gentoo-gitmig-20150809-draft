@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/Spreadsheet-WriteExcel
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Spreadsheet-WriteExcel/ChangeLog,v 1.5 2005/03/25 14:53:08 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Spreadsheet-WriteExcel/ChangeLog,v 1.6 2005/04/29 13:19:36 mcummings Exp $
+
+*Spreadsheet-WriteExcel-2.13 (29 Apr 2005)
+
+  29 Apr 2005; Michael Cummings <mcummings@gentoo.org>
+  Spreadsheet-WriteExcel-2.04.ebuild, Spreadsheet-WriteExcel-2.11.ebuild,
+  +Spreadsheet-WriteExcel-2.13.ebuild:
+  Cleaning up for mirrors; new version on cpan
 
   25 Mar 2005; <blubb@gentoo.org> Spreadsheet-WriteExcel-2.11.ebuild:
   added ~amd64
