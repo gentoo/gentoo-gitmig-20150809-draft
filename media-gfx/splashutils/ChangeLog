@@ -1,6 +1,18 @@
 # ChangeLog for media-gfx/splashutils
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/ChangeLog,v 1.24 2005/04/26 12:26:40 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/ChangeLog,v 1.25 2005/04/29 23:06:25 spock Exp $
+
+*splashutils-1.1.9.5 (29 Apr 2005)
+
+  29 Apr 2005; Michał Januszewski <spock@gentoo.org>
+  +splashutils-1.1.9.5.ebuild:
+  Yet another bugfix release. Includes fixes for 16bpp modes, and complete or
+  partial fixes for bugs: #90307, #90331, #90483, #90556. There have also been
+  some important changes in the ebuild. The sample Gentoo themes have been
+  removed from this package and are now available in
+  media-gfx/splash-themes-gentoo. Some additional sanity checks (/dev/tty1
+  presence, GCC_SPEC checking) have been added to make it easier to fix common
+  problems.
 
   26 Apr 2005; Michał Januszewski <spock@gentoo.org>
   splashutils-1.1.9.4.ebuild:
