@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/hesiod
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/hesiod/ChangeLog,v 1.11 2004/07/01 22:11:53 eradicator Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dns/hesiod/ChangeLog,v 1.12 2005/04/29 16:09:28 corsair Exp $
+
+  29 Apr 2005; Markus Rothe <corsair@gentoo.org> hesiod-3.0.2-r1.ebuild:
+  Added ~ppc64 to KEYWORDS; bug #90750
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   hesiod-3.0.2-r1.ebuild, hesiod-3.0.2.ebuild:
