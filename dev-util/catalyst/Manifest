@@ -1,8 +1,18 @@
-MD5 a75f4890bbd2b507ca982ac7f356a53d catalyst-1.1.1.ebuild 1589
-MD5 866fa4eb863ea9a2db451afa7c7228ec catalyst-1.1.8.ebuild 2034
-MD5 9267dde0d0254fac4ea00d24a917c353 ChangeLog 8108
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 c2be7bfcff0ee52dc0c24c4d3dfd3e5c catalyst-1.1.8.ebuild 2034
+MD5 9bb1cb8b948bebd9954ee0aa652e5360 ChangeLog 8209
 MD5 8c971ca7e043237b69754a9d88238bd4 metadata.xml 223
 MD5 20f9a42fe703c5b7273a468f6a818ee5 catalyst-1.1.9.ebuild 2328
+MD5 a75f4890bbd2b507ca982ac7f356a53d catalyst-1.1.1.ebuild 1589
 MD5 76eb9537d8e02bedf4ed278bd049623d files/digest-catalyst-1.1.1 67
-MD5 14abb8360b3461b8c42a780aa0f94157 files/digest-catalyst-1.1.8 67
 MD5 a080f3b13f1dbba1cf67faf9c5fdcb2f files/digest-catalyst-1.1.9 67
+MD5 14abb8360b3461b8c42a780aa0f94157 files/digest-catalyst-1.1.8 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCcpLrKf2g/qXtneoRAh2eAJ9mBF0p92idV0EPv1WkFiaN2R2ggQCgjbu+
+nHq43r6gKpnIM3YqpkGwcx8=
+=Zq1y
+-----END PGP SIGNATURE-----
