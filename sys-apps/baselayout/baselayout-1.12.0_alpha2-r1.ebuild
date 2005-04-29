@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.12.0_alpha2-r1.ebuild,v 1.1 2005/04/26 22:39:39 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.12.0_alpha2-r1.ebuild,v 1.2 2005/04/29 23:58:54 vapier Exp $
 
 inherit flag-o-matic eutils toolchain-funcs multilib
 
@@ -32,6 +32,11 @@ PROVIDE="virtual/baselayout"
 src_unpack() {
 	unpack ${A}
 	cd ${S}
+
+	# Moved to sys-apps/util-linux
+	rm -f etc/conf.d/crypto-loop init.d/crypto-loop
+	# Moved to app-shells/bash
+	rm -f etc/skel/.bash*
 
 	# Bring net-scripts upto CVS 2005-04-26
 	# This fixes a few things, but mainly adds support for wpa_supplicant-0.4.0
