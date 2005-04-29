@@ -1,4 +1,6 @@
 MD5 69e3ef1c6f5afafa17fc8e9d8fc237a2 ChangeLog 613
-MD5 94077c1ebf7053bb6d38ac356ebf62d9 PatchReader-0.9.4.ebuild 630
+MD5 d9da3bc3a518f569eeff56f1a7f6c1fa PatchReader-0.9.4.ebuild 611
 MD5 f03b964e1dd8a672cf61d248e9f6ae27 metadata.xml 219
+MD5 267807e82ccf01ba11afa9c6ab134e8e PatchReader-0.9.5.ebuild 506
 MD5 dc9202534c66c51d9d4192baa6a777b6 files/digest-PatchReader-0.9.4 67
+MD5 0ed34809ba0b11bccf5229dc39887035 files/digest-PatchReader-0.9.5 67
