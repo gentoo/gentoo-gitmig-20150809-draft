@@ -1,8 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmikmod/libmikmod-3.1.11-r1.ebuild,v 1.10 2004/11/13 05:26:33 kito Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmikmod/libmikmod-3.1.11-r1.ebuild,v 1.11 2005/04/29 00:11:10 vapier Exp $
 
-inherit gnuconfig flag-o-matic eutils libtool
+inherit flag-o-matic eutils libtool
 
 DESCRIPTION="A library to play a wide range of module formats"
 HOMEPAGE="http://mikmod.raphnet.net/"
@@ -17,31 +17,27 @@ DEPEND=">=media-libs/audiofile-0.2.3
 	alsa? ( >=media-libs/alsa-lib-0.5.9 )
 	esd? ( >=media-sound/esound-0.2.19 )"
 
-src_compile() {
-	local myconf
-
-	myconf="--enable-af" # include AudioFile driver
-	myconf="${myconf} $(use_enable esd)"
-	myconf="${myconf} $(use_enable alsa)"
-	myconf="${myconf} $(use_enable oss)"
-
-	# alpha, amd64 and ia64 (at least) need gnuconfig_update
-	gnuconfig_update
-
-	# patch for 64bit arch defs for amd64/x86_64
-	use amd64 && epatch ${FILESDIR}/${P}-amd64-archdef.patch
-
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-m4.patch
+	epatch "${FILESDIR}"/${P}-amd64-archdef.patch
 	use ppc-macos && elibtoolize
-
 	filter-flags -Os
+}
 
-	econf ${myconf} || die
+src_compile() {
+	econf \
+		--enable-af \
+		$(use_enable esd) \
+		$(use_enable alsa) \
+		$(use_enable oss) \
+		|| die
 	emake || die
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
-
+	make DESTDIR="${D}" install || die
 	dodoc AUTHORS NEWS README TODO
 	dohtml docs/*.html
 }
