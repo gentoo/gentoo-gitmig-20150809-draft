@@ -1,6 +1,18 @@
 # ChangeLog for sys-kernel/hardened-sources
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.53 2005/04/22 01:33:43 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.54 2005/04/29 12:28:27 solar Exp $
+
+  29 Apr 2005; <solar@gentoo.org> -files/2.4.27-CAN-2004-0394.patch,
+  -files/2.4.27-cmdline-race.patch,
+  -files/2.4.28-grsec-2.1.0-pax-mmap-pgtables.patch,
+  -files/2.4.28-grsec-binfmt_a.out.patch,
+  -files/2.4.28-grsec-cmdline-race.patch,
+  -files/2.4.28-selinux-binfmt_a.out.patch,
+  -files/2.4.28-selinux-cmdline-race.patch,
+  -hardened-sources-2.4.28-r5.ebuild, -hardened-sources-2.4.29.ebuild,
+  hardened-sources-2.4.30-r1.ebuild, -hardened-sources-2.4.30.ebuild:
+  - mark .30-r1 stable and remove older vuln ebuilds from the tree. filesdir
+  cleanup..
 
 *hardened-sources-2.4.30-r1 (21 Apr 2005)
 
