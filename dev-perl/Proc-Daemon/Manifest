@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 c59f9c388cff407b8c4519181cefd6bf ChangeLog 1023
-MD5 be1721976c61ea9a56eeb8dbf028dd48 Proc-Daemon-0.03.ebuild 498
+MD5 40756fc21b43bd202a1f0f80b9845945 ChangeLog 1128
+MD5 059d051af28289368c9718ba9d06831c Proc-Daemon-0.03.ebuild 504
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 7a4d8cf71bef4348440c2111de584d8b files/digest-Proc-Daemon-0.03 66
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCNpREArHZZzCEUG0RAkJFAJ4yymMQoos1FwChvLSWsnA0mCp+BwCePjpu
-+AS0iD1eAZpXvnRuk+NpkaI=
-=n9qk
+iD8DBQFCciUetG5z4I8BtQoRAl64AJ0bcIHtjkaUGLK9vMuCfv0JXubNBgCfQHKL
+91TrEW9m6JtpOnr/jwFfpeA=
+=oD3f
 -----END PGP SIGNATURE-----

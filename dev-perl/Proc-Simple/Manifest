@@ -1,4 +1,14 @@
-MD5 bdfdf63ce5c46079ef899ec6c66fb12b ChangeLog 753
-MD5 70936560af762185a52541cfe1c00295 Proc-Simple-1.21.ebuild 532
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 c3b7b701b25230b98547a7581b15fc53 ChangeLog 883
+MD5 9765d4c1b3a2a2f7b1b8cd6e45947372 Proc-Simple-1.21.ebuild 531
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 bf41c6a42d9469b25897fd3707e3bd92 files/digest-Proc-Simple-1.21 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCciaMtG5z4I8BtQoRArNIAJ4v9piBevVrLtD2t1ril76UGZkuxgCfW+tO
+ufs8FdMR4tRTrsZEgbOQutU=
+=cCyz
+-----END PGP SIGNATURE-----

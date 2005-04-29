@@ -1,6 +1,14 @@
-MD5 f8042676e47e19a1b3ae506fd9fd638e ChangeLog 694
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 61f435abb682987f0a3bdbba366f2a18 ChangeLog 837
+MD5 641a2ec8aadab390a69eeae89fc8796f PostScript-Simple-0.06.ebuild 554
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 0d939840b2453a643ed6dc9a3ae28a43 PostScript-Simple-0.05.ebuild 560
-MD5 973bf41a3e65d032161d95d0f3bc1c83 PostScript-Simple-0.06.ebuild 560
-MD5 0200dc4fc3c56cbb5bd9dfa76c4c67ba files/digest-PostScript-Simple-0.05 73
 MD5 4804fa680c2a888daee83e9121216934 files/digest-PostScript-Simple-0.06 73
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCciSztG5z4I8BtQoRAmNRAJ9xM4ovJAtgkI837hPb9u3L+nXX3QCfSFIb
+VNKJIUf4pDMmgdYzuyEZ3u8=
+=rfOm
+-----END PGP SIGNATURE-----
