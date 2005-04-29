@@ -1,14 +1,17 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/sleuthkit/sleuthkit-1.72.ebuild,v 1.4 2005/01/01 14:24:27 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/sleuthkit/sleuthkit-1.73-r2.ebuild,v 1.1 2005/04/29 23:50:31 dragonheart Exp $
+
+inherit toolchain-funcs eutils
 
 DESCRIPTION="A collection of file system and media management forensic analysis tools"
 HOMEPAGE="http://www.sleuthkit.org/sleuthkit/"
-SRC_URI="mirror://sourceforge/sleuthkit/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/sleuthkit/${P}.tar.gz
+	mirror://gentoo/${P}_dbtool.patch.bz2"
 
 LICENSE="GPL-2 IBM"
 SLOT="0"
-KEYWORDS="arm hppa ppc s390 sparc x86"
+KEYWORDS="amd64 arm hppa ppc s390 sparc x86"
 IUSE=""
 
 RDEPEND="dev-lang/perl
@@ -21,13 +24,14 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
+	epatch ${P}_dbtool.patch || die "patch failed"
 	cd ${S}
-	sed -i '63,69d' src/timeline/config-perl
-	sed -i 's:`cd ../..; pwd`:/usr:' src/sorter/install
+	sed -i 's:`cd ../..; pwd`:/usr:' src/sorter/install \
+		|| die "sed install failed"
 }
 
 src_compile() {
-	export OPT="${CFLAGS}"
+	export CC="$(tc-getCC)" OPT="${CFLAGS}"
 	env -u CFLAGS \
 		emake -e no-perl sorter mactime || die "make failed"
 }
@@ -45,7 +49,7 @@ src_compile() {
 #}
 
 src_install() {
-	dobin bin/* || die
+	dobin bin/* || die "dobin failed"
 	dodoc docs/*
 	docinto tct.docs
 	dodoc tct.docs/*

@@ -1,11 +1,19 @@
-MD5 ccb84c363f657682eee1f5adc5d891ab sleuthkit-1.72.ebuild 1452
-MD5 5c778b1a0701118feaaa3edade1b0c3a sleuthkit-1.73.ebuild 1583
-MD5 87e8f2ff240e50d377692059d759239e ChangeLog 3683
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 fcf39dc5f1a3e3636c9000ebbb6b8454 ChangeLog 3959
 MD5 20ee07270b7eadc3659cd96a982e460f metadata.xml 230
-MD5 85e50f10edfdeeeaed0c487e22d05a23 sleuthkit-1.73-r1.ebuild 1671
+MD5 5c778b1a0701118feaaa3edade1b0c3a sleuthkit-1.73.ebuild 1583
 MD5 e3256bd3aa379cd76d163f017e923129 sleuthkit-2.01.ebuild 1742
-MD5 02411e8cd1953fcea0e99626e5d0d8b7 files/digest-sleuthkit-1.72 66
-MD5 cfe26f775d27b7e4baebd43ff9ed706a files/digest-sleuthkit-1.73 66
-MD5 225e6c10daf5b8802c4fb1f833a48fe6 files/digest-sleuthkit-1.73-r1 140
+MD5 0f2ff0722ddf4ab26abcf067667c1bdf sleuthkit-1.73-r2.ebuild 1603
 MD5 422648eade250754bfb34f33e6cfe368 files/digest-sleuthkit-2.01 66
 MD5 8978f054c0edcc527fc8c8954774c9a9 files/sleuthkit-2.01-include_fix.patch 291
+MD5 cfe26f775d27b7e4baebd43ff9ed706a files/digest-sleuthkit-1.73 66
+MD5 225e6c10daf5b8802c4fb1f833a48fe6 files/digest-sleuthkit-1.73-r2 140
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCcshQmdTrptrqvGERArmSAJ9l/ubI3+bVL+RmAgGaOv5DQC5XzQCeKD+1
+ekmjOMGj+0Ysl46Dx1bUfdM=
+=KZ7u
+-----END PGP SIGNATURE-----
