@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/net-sftp
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/net-sftp/ChangeLog,v 1.3 2004/06/25 00:50:03 agriffis Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/net-sftp/ChangeLog,v 1.4 2005/04/29 18:43:47 mcummings Exp $
+
+*net-sftp-0.09 (29 Apr 2005)
+
+  29 Apr 2005; Michael Cummings <mcummings@gentoo.org>
+  -net-sftp-0.05.ebuild, net-sftp-0.08.ebuild, +net-sftp-0.09.ebuild:
+  Cleaning for mirror
 
 *net-sftp-0.08 (29 Mar 2004)
 
