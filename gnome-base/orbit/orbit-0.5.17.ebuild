@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/orbit/orbit-0.5.17.ebuild,v 1.6 2005/04/19 23:18:36 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/orbit/orbit-0.5.17.ebuild,v 1.7 2005/04/29 01:00:23 vapier Exp $
 
-inherit gnome.org libtool gnuconfig multilib
+inherit gnome.org libtool gnuconfig eutils multilib
 
 MY_P="ORBit-${PV}"
 PVP=(${PV//[-\._]/ })
@@ -14,7 +14,7 @@ SRC_URI="mirror://gnome/sources/ORBit/${PVP[0]}.${PVP[1]}/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="1"
-KEYWORDS="x86 sparc alpha mips hppa amd64 ppc ia64 ppc64 arm"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 sparc x86"
 IUSE=""
 
 DEPEND="sys-devel/gettext
@@ -22,15 +22,19 @@ DEPEND="sys-devel/gettext
 	=dev-libs/glib-1.2*"
 RDEPEND="=dev-libs/glib-1.2*"
 
-src_compile() {
-	# Detect mips systems properly
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-m4.patch
 	gnuconfig_update
-
 	# Libtoolize to fix "relink bug" in older libtool's distributed
 	# with packages.
 	elibtoolize
+}
 
-	./configure --host=${CHOST} \
+src_compile() {
+	./configure \
+		--host=${CHOST} \
 		--prefix=/usr \
 		--libdir=/usr/$(get_libdir) \
 		--infodir=/usr/share/info \
@@ -49,16 +53,16 @@ src_install() {
 		localstatedir=${D}/var/lib \
 		install || die
 
-	dodoc AUTHORS COPYING* ChangeLog README NEWS TODO
+	dodoc AUTHORS ChangeLog README NEWS TODO
 	dodoc docs/*.txt docs/IDEA1
 
 	docinto idl
 	cd libIDL
-	dodoc AUTHORS BUGS COPYING NEWS README*
+	dodoc AUTHORS BUGS NEWS README*
 
 	docinto popt
 	cd ../popt
-	dodoc CHANGES COPYING README
+	dodoc CHANGES README
 
 	sed -i -e 's:-I/usr/include":-I/usr/include/libIDL-1.0":' \
 		${D}/usr/$(get_libdir)/libIDLConf.sh || die
