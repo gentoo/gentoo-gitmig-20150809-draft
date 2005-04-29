@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Scalar-List-Utils
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Scalar-List-Utils/ChangeLog,v 1.17 2005/04/26 20:36:27 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Scalar-List-Utils/ChangeLog,v 1.18 2005/04/29 12:25:26 mcummings Exp $
+
+  29 Apr 2005; Michael Cummings <mcummings@gentoo.org>
+  -Scalar-List-Utils-1.08.ebuild, -Scalar-List-Utils-1.11.ebuild:
+  Cleaning for mirror
 
   26 Apr 2005; Bryan Østergaard <kloeri@gentoo.org>
   Scalar-List-Utils-1.14.ebuild:
