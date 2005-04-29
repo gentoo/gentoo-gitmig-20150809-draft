@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rake/rake-0.5.3.ebuild,v 1.3 2005/04/21 19:05:58 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rake/rake-0.5.3.ebuild,v 1.4 2005/04/29 01:08:27 vapier Exp $
 
 inherit ruby gems
 
@@ -13,14 +13,14 @@ SRC_URI="http://rubyforge.org/frs/download.php/3875/${P}.gem
 	http://rubyforge.org/frs/download.php/3876/${P}.tgz"
 
 LICENSE="MIT"
-KEYWORDS="x86 ppc"
 SLOT="0"
+KEYWORDS="~amd64 ppc x86"
 IUSE=""
-
+RESTRICT="test"
 
 src_unpack() {
 	gems_src_unpack
-	unpack ${P}.tgz || die "couldn't unpack ${P}.tgz"
+	unpack ${P}.tgz
 }
 
 src_install() {
@@ -29,9 +29,3 @@ src_install() {
 	cd ${WORKDIR}/${P}
 	DESTDIR="$D" ruby install.rb || die
 }
-
-src_test() {
-	einfo "Skipping test. Rake can't seem to test itself."
-}
-
-
