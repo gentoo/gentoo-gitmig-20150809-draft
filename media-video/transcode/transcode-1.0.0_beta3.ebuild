@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-1.0.0_beta3.ebuild,v 1.1 2005/04/27 11:14:34 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-1.0.0_beta3.ebuild,v 1.2 2005/04/29 21:06:12 flameeyes Exp $
 
 inherit libtool flag-o-matic eutils multilib
 
@@ -46,7 +46,6 @@ RDEPEND="a52? ( >=media-libs/a52dec-0.7.4 )
 	|| ( sys-libs/glibc dev-libs/libiconv )"
 
 DEPEND="${RDEPEND}
-	x86? ( >=dev-lang/nasm-0.98.36 )
 	=sys-devel/gcc-3*"
 
 pkg_setup() {
