@@ -1,6 +1,9 @@
 # ChangeLog for net-zope/calendarx
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/calendarx/ChangeLog,v 1.3 2005/04/22 18:05:59 radek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/calendarx/ChangeLog,v 1.4 2005/04/29 14:36:11 luckyduck Exp $
+
+  29 Apr 2005; Jan Brinkmann <luckyduck@gentoo.org> calendarx-0.6.0.ebuild:
+  added ~amd64 to KEYWORDS, fixes #90691
 
 *calendarx-0.6.0 (22 Apr 2005)
 
