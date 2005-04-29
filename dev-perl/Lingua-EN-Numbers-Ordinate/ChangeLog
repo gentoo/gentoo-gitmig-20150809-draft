@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Lingua-EN-Numbers-Ordinate
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Lingua-EN-Numbers-Ordinate/ChangeLog,v 1.5 2005/04/29 12:30:17 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Lingua-EN-Numbers-Ordinate/ChangeLog,v 1.6 2005/04/29 12:55:15 mcummings Exp $
+
+  29 Apr 2005; Michael Cummings <mcummings@gentoo.org> :
+  Bad file on the mirrors was why we had a bad digest. Reposting. Again :)
 
   29 Apr 2005; Michael Cummings <mcummings@gentoo.org> :
   Bad digest
