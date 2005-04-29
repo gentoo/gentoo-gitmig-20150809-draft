@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/IO-Multiplex
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Multiplex/ChangeLog,v 1.1 2005/04/29 00:18:54 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Multiplex/ChangeLog,v 1.2 2005/04/29 08:12:07 ticho Exp $
+
+  29 Apr 2005; Andrej Kacian <ticho@gentoo.org> IO-Multiplex-1.08.ebuild:
+  Added ~amd64 keyword.
 
 *IO-Multiplex-1.08 (29 Apr 2005)
 
