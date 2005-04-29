@@ -1,6 +1,12 @@
 # ChangeLog for games-arcade/penguin-command
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/penguin-command/ChangeLog,v 1.10 2004/12/28 22:58:18 ciaranm Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/penguin-command/ChangeLog,v 1.11 2005/04/29 22:50:01 vapier Exp $
+
+*penguin-command-1.6.9 (29 Apr 2005)
+
+  29 Apr 2005; Mike Frysinger <vapier@gentoo.org>
+  +penguin-command-1.6.9.ebuild:
+  Add back in sound support since changelog says they fixed some things.
 
   28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
