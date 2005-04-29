@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/ntodo
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/ntodo/ChangeLog,v 1.6 2004/08/27 21:49:58 tgall Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/ntodo/ChangeLog,v 1.7 2005/04/29 21:08:40 wormo Exp $
+
+  29 Apr 2005; Stephanie Lockwood-Childs <wormo@gentoo.org> ntodo-1.0.ebuild:
+  mark ~ppc
 
   27 Aug 2004; Tom Gall <tgall@gentoo.org> ntodo-1.0.ebuild:
   stable on ppc64, bug#59379
