@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cogito/cogito-0.8.ebuild,v 1.1 2005/04/26 20:19:11 r3pek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cogito/cogito-0.8.ebuild,v 1.2 2005/04/29 13:48:10 r3pek Exp $
 
 inherit eutils
 
@@ -14,8 +14,9 @@ KEYWORDS="~x86 ~amd64"
 IUSE="mozsha1 ppcsha1"
 
 DEPEND="dev-libs/openssl
-		sys-libs/zlib"
-RDEPEND="dev-util/git"
+		sys-libs/zlib
+		!dev-util/git
+		!dev-util/git-pasky"
 
 src_unpack() {
 	unpack ${A}
