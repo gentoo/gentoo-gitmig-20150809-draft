@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.12i-r1.ebuild,v 1.14 2005/04/08 23:47:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.12i-r1.ebuild,v 1.15 2005/04/29 23:54:25 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -108,6 +108,9 @@ src_install() {
 	make install DESTDIR="${D}" || die "install failed"
 	dosbin partx/{addpart,delpart,partx} || die "dosbin"
 	use perl || rm -f "${D}"/usr/bin/chkdupexe
+
+	newinitd "${FILESDIR}"/crypto-loop.initd crypto-loop
+	newconfd "${FILESDIR}"/crypto-loop.confd crypto-loop
 
 	# man-pages installs renice(1p) but util-linux does renice(8)
 	dosym ../man8/renice.8 /usr/share/man/man1/renice.1
