@@ -1,4 +1,14 @@
-MD5 82c5667e7c0a0d6ae5e68e641ba8c909 ChangeLog 471
-MD5 35e3c1b7ff19f591f1741d6d0853d516 Number-Format-1.45.ebuild 523
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 3b15a35a686d5bbfd1e56efafe84b7ad ChangeLog 582
+MD5 edb9b37e94c5e7060450769fbc60de86 Number-Format-1.45.ebuild 511
 MD5 481d88ccd478ad0f14fb6102be6c92c2 metadata.xml 157
 MD5 0c056bca18340369ca4bcefebe37fc98 files/digest-Number-Format-1.45 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCcY/5tG5z4I8BtQoRAlaIAJ9GD8UQQ3ZAfhzsj/tzBhqYQc5qRACfWM8s
+Q6xYyknGNP0xyAjmTuFpqq0=
+=Q26N
+-----END PGP SIGNATURE-----
