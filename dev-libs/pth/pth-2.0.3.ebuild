@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pth/pth-2.0.3.ebuild,v 1.5 2005/02/09 10:19:15 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pth/pth-2.0.3.ebuild,v 1.6 2005/04/29 00:22:02 vapier Exp $
 
-inherit fixheadtails
+inherit eutils fixheadtails
 
 DESCRIPTION="GNU Portable Threads"
 HOMEPAGE="http://www.gnu.org/software/pth/"
@@ -10,14 +10,16 @@ SRC_URI="mirror://gnu/${PN}/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ia64 ~ppc ~ppc-macos ~sparc ~x86 ~ppc64"
+KEYWORDS="~alpha ~amd64 ~hppa ia64 ~ppc ~ppc64 ~ppc-macos ~sparc ~x86"
 IUSE=""
 
-DEPEND="virtual/libc"
+DEPEND=""
 
 src_unpack() {
 	unpack ${A}
-	ht_fix_file ${S}/configure
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-m4.patch
+	ht_fix_file configure
 }
 
 src_compile() {
@@ -28,6 +30,6 @@ src_compile() {
 }
 
 src_install() {
-	emake -j1 DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die
 	dodoc ANNOUNCE AUTHORS ChangeLog NEWS README THANKS USERS
 }
