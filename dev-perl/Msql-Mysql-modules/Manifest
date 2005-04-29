@@ -1,6 +1,14 @@
-MD5 0adf3d78421b82c850ee3008b645e496 Msql-Mysql-modules-1.2219.ebuild 763
-MD5 a460095b3aaab3cc73b727e806b17b3a Msql-Mysql-modules-1.2219-r1.ebuild 765
-MD5 ef67435477e2e3509a74e792873c226c ChangeLog 1335
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 4b0d0d98392a81ef3da2365d5328946b ChangeLog 1490
+MD5 6419bc486d1cc3eeee196c0e3f9b7aa0 Msql-Mysql-modules-1.2219-r1.ebuild 759
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 4205254337c1fad2c0dd36642a92e662 files/digest-Msql-Mysql-modules-1.2219-r1 77
-MD5 4205254337c1fad2c0dd36642a92e662 files/digest-Msql-Mysql-modules-1.2219 77
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCcYwAtG5z4I8BtQoRAn5/AJ97buW4NOJOvBSG4UcSLrP7bh3aDgCgjs5C
+VMS4EbFfJbBSEmqlNOMj86Y=
+=5QC0
+-----END PGP SIGNATURE-----
