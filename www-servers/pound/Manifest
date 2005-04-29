@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 58381d244ff695065b7eeb214c2900bc pound-1.8.3.ebuild 1082
 MD5 05792285ec2b1c8a753313e5d1574eb4 pound-1.7.ebuild 1149
-MD5 41fa5adfd202d4d4f8a6041263fab883 ChangeLog 2082
 MD5 f61bfa064e3acdfcd826e4a38b121196 metadata.xml 161
-MD5 887a882063050c34c66dcfb8091711bf files/pound.init 583
-MD5 1b3ef0c3cf70a54e0ea0c16066ea3261 files/digest-pound-1.8.3 60
+MD5 2eeecef524512699b89a9ef75d0d0bde ChangeLog 2173
+MD5 7c02e4c8d294a34240a61d584d349563 pound-1.8.3.ebuild 1080
 MD5 a5bfd8880ab9b367f5333083252548db files/digest-pound-1.7 58
+MD5 1b3ef0c3cf70a54e0ea0c16066ea3261 files/digest-pound-1.8.3 60
 MD5 4c7b6277bb33061b615ac9059c74cf62 files/pound.cfg 830
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCcknTEZCkKN40op4RArD4AKDERMHAExuQPEXoeolDI7Z3BnvdlACfV1Rr
-Xt4iaxg5OIQg4nzcZx3Jgzc=
-=dCVR
------END PGP SIGNATURE-----
+MD5 887a882063050c34c66dcfb8091711bf files/pound.init 583

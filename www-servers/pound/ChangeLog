@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/pound
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/pound/ChangeLog,v 1.5 2005/04/29 14:50:19 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/pound/ChangeLog,v 1.6 2005/04/29 17:23:38 hansmi Exp $
+
+  29 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> pound-1.8.3.ebuild:
+  Stable on ppc.
 
 *pound-1.8.3 (29 Apr 2005)
 
