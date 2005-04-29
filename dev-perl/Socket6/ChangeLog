@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Socket6
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Socket6/ChangeLog,v 1.8 2005/04/29 13:10:55 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Socket6/ChangeLog,v 1.9 2005/04/29 19:30:46 gustavoz Exp $
+
+  29 Apr 2005; Gustavo Zacarias <gustavoz@gentoo.org> Socket6-0.17.ebuild:
+  Stable on sparc
 
 *Socket6-0.18 (29 Apr 2005)
 
