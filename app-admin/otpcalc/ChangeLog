@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/otpcalc
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/otpcalc/ChangeLog,v 1.7 2005/04/24 21:55:05 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/otpcalc/ChangeLog,v 1.8 2005/04/29 22:29:49 taviso Exp $
+
+  29 Apr 2005; Tavis Ormandy <taviso@gentoo.org> :
+  fixing #90900, bump new version
 
   24 Apr 2005; Stephanie Lockwood-Childs <wormo@gentoo.org>
   otpcalc-0.96.ebuild:
