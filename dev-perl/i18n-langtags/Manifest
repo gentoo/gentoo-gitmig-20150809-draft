@@ -1,18 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 2c57ce5d31a7c0a4c3e2e6f80ca17f62 ChangeLog 2150
-MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 1c24d6c8b0142be54a23d5ac53c6a0ef i18n-langtags-0.30.ebuild 698
-MD5 9103801994c57c1b87964c722f6240e2 i18n-langtags-0.28.ebuild 672
+MD5 a3cd274d36043def6053ab8871d80a80 ChangeLog 2289
 MD5 4b24a1bfff9999696aa22bbf8e997df7 i18n-langtags-0.35.ebuild 611
-MD5 f47e1446864e6d734ce097235c45d6dd files/digest-i18n-langtags-0.30 69
-MD5 44b10439560c951ef0f91f7afbdf1607 files/digest-i18n-langtags-0.28 69
+MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 bea0042056964503f6c79cf18ddaf666 files/digest-i18n-langtags-0.35 69
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCbKOnKf2g/qXtneoRAr04AJ0R293Ch/rjDthRLj5/k8a2rAsWQgCgrnYB
-8Lypda97Mcxl/Kvz6uKW8zs=
-=cjss
+iD8DBQFCcm5QtG5z4I8BtQoRAs3zAJ0d27xvi1tuo2Q3lXjzTj8DSRq6FwCbBizv
+BoHXpADEl2GNXgKCCWg++sY=
+=l5oa
 -----END PGP SIGNATURE-----
