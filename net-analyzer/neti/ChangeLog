@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/neti
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/neti/ChangeLog,v 1.7 2005/01/29 19:26:00 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/neti/ChangeLog,v 1.8 2005/04/29 22:47:24 dragonheart Exp $
+
+*neti-1.01-r1 (29 Apr 2005)
+
+  29 Apr 2005; Daniel Black <dragonheart@gentoo.org> files/neti-init,
+  -neti-1.01.ebuild, +neti-1.01-r1.ebuild:
+  Corrected init scripts as per bug #90415. Thanks to Marco Morales
+  <soulN0SPAMse@gmail.com>
 
   30 Jan 2005; Daniel Black <dragonheart@gentoo.org> neti-1.01.ebuild:
   Change to virtual/libpcap dependancy

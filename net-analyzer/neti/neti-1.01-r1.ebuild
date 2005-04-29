@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/neti/neti-1.01.ebuild,v 1.7 2005/01/29 19:26:00 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/neti/neti-1.01-r1.ebuild,v 1.1 2005/04/29 22:47:24 dragonheart Exp $
 
 DESCRIPTION="NETI@Home research project from GATech"
 HOMEPAGE="http://www.neti.gatech.edu"
@@ -22,6 +22,13 @@ DEPEND="java? ( >=virtual/jdk-1.2 )
 	sys-devel/autoconf
 	sys-devel/automake
 	sys-devel/gcc"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	# start-stop-daemon asks for this
+	sed -i -e "1i\#\!/bin/sh" NETIStart || die "sed NETIStart failed"
+}
 
 src_compile() {
 	econf \
