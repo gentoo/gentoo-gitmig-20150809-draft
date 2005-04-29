@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/dar/dar-2.1.5-r1.ebuild,v 1.5 2005/03/03 17:56:46 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dar/dar-2.1.5-r1.ebuild,v 1.6 2005/04/29 00:04:27 matsuu Exp $
 
 inherit flag-o-matic libtool
 
@@ -13,9 +13,12 @@ SLOT="0"
 KEYWORDS="x86 ppc sparc amd64"
 IUSE="acl"
 
-DEPEND=">=sys-libs/zlib-1.1.3
+RDEPEND=">=sys-libs/zlib-1.1.3
 	>=app-arch/bzip2-1.0.2
 	acl? ( sys-apps/attr )"
+
+DEPEND="${RDEPEND}
+	>=sys-devel/autoconf-2.59"
 
 src_unpack() {
 	unpack ${A}
