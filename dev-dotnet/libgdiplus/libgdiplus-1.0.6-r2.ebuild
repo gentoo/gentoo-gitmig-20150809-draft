@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/libgdiplus/libgdiplus-1.0.6-r2.ebuild,v 1.1 2005/04/07 23:52:19 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/libgdiplus/libgdiplus-1.0.6-r2.ebuild,v 1.2 2005/04/29 01:59:30 latexer Exp $
 
 inherit libtool eutils
 
@@ -17,6 +17,7 @@ KEYWORDS="~x86 ~ppc"
 IUSE="tiff gif jpeg png"
 
 DEPEND="sys-devel/libtool
+		virtual/x11
 		>=x11-libs/cairo-0.3.0
 		tiff? ( media-libs/tiff )
 		gif? ( media-libs/giflib )
