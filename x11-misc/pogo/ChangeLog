@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/pogo
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/pogo/ChangeLog,v 1.7 2005/03/25 15:30:26 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/pogo/ChangeLog,v 1.8 2005/04/29 00:27:06 wormo Exp $
+
+  28 Apr 2005; Stephanie Lockwood-Childs <wormo@gentoo.org> pogo-2.2.ebuild:
+  added ~ppc
 
   25 Mar 2005; <blubb@gentoo.org> pogo-2.2.ebuild:
   added ~amd64
