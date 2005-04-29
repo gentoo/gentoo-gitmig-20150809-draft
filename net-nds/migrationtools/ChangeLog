@@ -1,6 +1,10 @@
 # ChangeLog for net-nds/migrationtools
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/migrationtools/ChangeLog,v 1.15 2005/04/08 18:02:47 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/migrationtools/ChangeLog,v 1.16 2005/04/29 14:45:45 luckyduck Exp $
+
+  29 Apr 2005; Jan Brinkmann <luckyduck@gentoo.org>
+  migrationtools-46.ebuild:
+  stable on amd64, fixes #90195
 
   08 Apr 2005; Michael Hanselmann <hansmi@gentoo.org>
   migrationtools-46.ebuild:
