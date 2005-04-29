@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-1.2.10-r5.ebuild,v 1.41 2005/04/07 19:09:38 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-1.2.10-r5.ebuild,v 1.42 2005/04/29 00:53:10 vapier Exp $
 
-inherit libtool flag-o-matic eutils gnuconfig
+inherit libtool flag-o-matic eutils
 
 DESCRIPTION="The GLib library of C routines"
 HOMEPAGE="http://www.gtk.org/"
@@ -11,32 +11,24 @@ SRC_URI="ftp://ftp.gtk.org/pub/gtk/v1.2/${P}.tar.gz
 
 LICENSE="LGPL-2.1"
 SLOT="1"
-KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 ppc-macos s390 sh sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 ppc-macos s390 sh sparc x86"
 IUSE="hardened"
 
-DEPEND="virtual/libc"
+DEPEND=""
 
 src_unpack() {
 	unpack ${A}
+	cd "${S}"
+
+	epatch "${FILESDIR}"/${P}-m4.patch
 
 	# Allow glib to build with gcc-3.4.x #47047
-	epatch ${FILESDIR}/${P}-gcc34-fix.patch
-
-	use ppc64 && gnuconfig_update
+	epatch "${FILESDIR}"/${P}-gcc34-fix.patch
 
 	uclibctoolize
-
-	if use ppc-macos; then
-		darwintoolize
-		gnuconfig_update
-	fi
-
-	if use ppc64 && use hardened; then
-		replace-flags -O[2-3] -O1
-	fi
-
+	use ppc-macos && darwintoolize
+	use ppc64 && use hardened && replace-flags -O[2-3] -O1
 	append-ldflags -ldl
-
 }
 
 src_compile() {
@@ -60,7 +52,7 @@ src_install() {
 	dodoc AUTHORS ChangeLog README* INSTALL NEWS
 	dohtml -r docs
 
-	cd ${D}/usr/$(get_libdir) || die
+	cd "${D}"/usr/$(get_libdir) || die
 	if use ppc-macos ; then
 		chmod 755 libgmodule-1.2.*.dylib
 	else
