@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Test-Class
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Class/ChangeLog,v 1.4 2005/03/14 11:47:55 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Class/ChangeLog,v 1.5 2005/04/29 14:09:57 mcummings Exp $
+
+*Test-Class-0.11 (29 Apr 2005)
+
+  29 Apr 2005; Michael Cummings <mcummings@gentoo.org>
+  Test-Class-0.03.ebuild, +Test-Class-0.11.ebuild:
+  Cleaning up, version bump
 
   14 Mar 2005; Michael Cummings <mcummings@gentoo.org> Test-Class-0.03.ebuild:
   Removing dep for Attribute-Handlers as the version installed with perl >=5.8.4

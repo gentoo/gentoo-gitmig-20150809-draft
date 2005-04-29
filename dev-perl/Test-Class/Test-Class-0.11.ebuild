@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Class/Test-Class-0.03.ebuild,v 1.8 2005/04/29 14:09:57 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Class/Test-Class-0.11.ebuild,v 1.1 2005/04/29 14:09:57 mcummings Exp $
 
 inherit perl-module
 
@@ -10,11 +10,13 @@ SRC_URI="mirror://cpan/authors/id/A/AD/ADIE/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~x86"
 IUSE=""
 
+SRC_TEST="do"
+
 DEPEND=">=dev-perl/Storable-2*
-		<dev-perl/Test-Simple-0.48
+		dev-perl/module-build
 		dev-perl/Test-Builder-Tester
 		dev-perl/Test-Differences
 		dev-perl/Test-Exception
