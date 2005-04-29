@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/gtk2-spell
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-spell/ChangeLog,v 1.7 2005/04/22 13:34:51 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-spell/ChangeLog,v 1.8 2005/04/29 17:22:24 mcummings Exp $
+
+  29 Apr 2005; Michael Cummings <mcummings@gentoo.org>
+  gtk2-spell-1.03.ebuild:
+  Cleaning for mirror
 
   22 Apr 2005; Simon Stelling <blubb@gentoo.org> gtk2-spell-1.03.ebuild:
   stable on amd64
