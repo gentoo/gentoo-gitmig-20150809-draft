@@ -1,6 +1,16 @@
 # ChangeLog for net-misc/openvpn
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/ChangeLog,v 1.24 2005/02/05 16:59:59 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/ChangeLog,v 1.25 2005/04/29 17:03:07 luckyduck Exp $
+
+*openvpn-2.0 (29 Apr 2005)
+
+  29 Apr 2005; Jan Brinkmann <luckyduck@gentoo.org> metadata.xml,
+  -openvpn-1.1.0.ebuild, -openvpn-1.3.1.ebuild, -openvpn-1.3.2.ebuild,
+  -openvpn-1.3.2-r1.ebuild, -openvpn-1.4.2.ebuild, -openvpn-1.5.0.ebuild,
+  +openvpn-2.0.ebuild:
+  added ebuild for 2.0, fixes #50767. also updated metadata.xml, took over
+  maintainership. did some cleanup, removed older versions. introduced support
+  for the examples useflag.
 
   05 Feb 2005; <solar@gentoo.org> openvpn-1.5.0-r1.ebuild,
   openvpn-1.6.0.ebuild:
