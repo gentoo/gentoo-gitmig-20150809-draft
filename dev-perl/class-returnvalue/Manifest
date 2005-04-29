@@ -1,6 +1,14 @@
-MD5 9c18527b0156eaa768320a701ac3c1f5 ChangeLog 1103
-MD5 d9da5a207bcde430c3ace725a7ccb93a class-returnvalue-0.51.ebuild 814
-MD5 d7544d529fe0b7de2bd60b3eec7a0e2f class-returnvalue-0.52.ebuild 677
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 c99a4fd4ef5df2951227193c6b5d7082 ChangeLog 1257
+MD5 a66db3d720be221cbd3f818c7778ccc6 class-returnvalue-0.52.ebuild 673
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 097e141324966c0a8e2c300bde2cbd0f files/digest-class-returnvalue-0.51 72
 MD5 87a17806ec77b0474478b5b445894dbe files/digest-class-returnvalue-0.52 73
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCcmcMtG5z4I8BtQoRAl8wAKCNe0VDE59U/M16KBwJqZWoLeZmQQCdHmXJ
+qxjLHFb4/qhnEpYaxTpzyUI=
+=LGlD
+-----END PGP SIGNATURE-----

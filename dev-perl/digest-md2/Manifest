@@ -1,4 +1,14 @@
-MD5 64a33cf1a84bbfb074550ac58c7c1171 ChangeLog 1158
-MD5 2e0a45a1324fa7d3c8ff1b136b669b1c digest-md2-2.03.ebuild 587
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 2cc1f11c55bae6db174c8cc3d9d184af ChangeLog 1267
+MD5 2124044f4fa6f441c1e9a4e1c4450f0c digest-md2-2.03.ebuild 576
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 9fd7bae06b66b8a5ecd51e2aa6aecde1 files/digest-digest-md2-2.03 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCcmjBtG5z4I8BtQoRAlGwAJ9ETB8Yp8dW/Jb2s3wVsQYCpWPVrgCdEK+R
+WsP0hyTNB2nXOByqz+GTauc=
+=z2+v
+-----END PGP SIGNATURE-----

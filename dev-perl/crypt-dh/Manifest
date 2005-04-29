@@ -1,4 +1,14 @@
-MD5 626bb3683137590bd18d454e2af10f52 ChangeLog 634
-MD5 c025885623fc9b25d98af9581aa39c35 crypt-dh-0.03.ebuild 637
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 259c6498280e89869291f12c47f325af ChangeLog 745
+MD5 c5d3e698f02862d00f6feb3dcdef0ab4 crypt-dh-0.03.ebuild 627
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 e24b736b06fbbd3af02f1546ee6befd2 files/digest-crypt-dh-0.03 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCcmhHtG5z4I8BtQoRAiXwAJ4ryS10M4tfNiXlATTZMMSsQZJkkwCfc4s2
+MOkgnoHSNH7auViQRcMbOyg=
+=XsxH
+-----END PGP SIGNATURE-----
