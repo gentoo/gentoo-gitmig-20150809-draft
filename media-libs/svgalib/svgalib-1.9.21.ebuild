@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/svgalib-1.9.21.ebuild,v 1.1 2005/04/24 07:52:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/svgalib-1.9.21.ebuild,v 1.2 2005/04/29 22:56:42 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs linux-mod
 
@@ -35,6 +35,9 @@ src_unpack() {
 
 	# Don't let the ebuild screw around with ld.so.conf #64829
 	epatch "${FILESDIR}"/${PN}-1.9.19-dont-touch-ld.conf.patch
+
+	# Don't strip stuff, let portage do it
+	sed -i '/^INSTALL_PROGRAM/s: -s ::' Makefile.cfg
 }
 
 src_compile() {
