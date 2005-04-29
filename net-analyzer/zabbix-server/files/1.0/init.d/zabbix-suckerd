@@ -6,7 +6,8 @@
 opts="${opts} reload"
 
 depend() {
-		need net mysql
+	need net
+	use mysql postgresql
 }
 
 start() {
