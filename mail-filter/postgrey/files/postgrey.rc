@@ -1,12 +1,11 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/postgrey/files/postgrey.rc,v 1.1 2005/04/29 00:28:44 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/postgrey/files/postgrey.rc,v 1.2 2005/04/29 08:39:45 ticho Exp $
 
 depend() {
 	need net
-	before mta
-	use mta
+	use postfix
 }
 
 checkconfig() {
