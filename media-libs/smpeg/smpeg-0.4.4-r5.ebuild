@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/smpeg/smpeg-0.4.4-r5.ebuild,v 1.1 2005/03/29 06:55:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/smpeg/smpeg-0.4.4-r5.ebuild,v 1.2 2005/04/29 01:01:56 vapier Exp $
 
 inherit eutils toolchain-funcs
 
@@ -21,6 +21,7 @@ DEPEND=">=media-libs/libsdl-1.2.0
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+	epatch "${FILESDIR}"/${P}-m4.patch
 	epatch "${FILESDIR}"/${P}-gnu-stack.patch
 	sed -i \
 		-e 's:-mcpu=ev4 -Wa,-mall::' \
