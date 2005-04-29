@@ -1,6 +1,15 @@
 # ChangeLog for media-plugins/xmms-imms
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-imms/ChangeLog,v 1.26 2005/04/09 17:18:07 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-imms/ChangeLog,v 1.27 2005/04/29 15:26:31 luckyduck Exp $
+
+*xmms-imms-2.0.3 (29 Apr 2005)
+
+  29 Apr 2005; Jan Brinkmann <luckyduck@gentoo.org>
+  -files/xmms-imms-1.0.1-gcc34.patch, -files/xmms-imms-1.0.1-makefile.patch,
+  +files/2.0.3-xorg.patch, -xmms-imms-1.0.1.ebuild, -xmms-imms-1.2a.ebuild,
+  xmms-imms-2.0.2.ebuild, +xmms-imms-2.0.3.ebuild:
+  new upstream version, fixes #90655. marked 2.0.2 stable on amd64 and x86,
+  did some cleanup.
 
   09 Apr 2005; Jan Brinkmann <luckyduck@gentoo.org> -files/2.0.1-gentoo.patch,
   +files/2.0.2-xorg.patch, -xmms-imms-2.0.1.ebuild, xmms-imms-2.0.2.ebuild:
