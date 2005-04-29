@@ -1,4 +1,14 @@
-MD5 912746c30d5ac588cd1013636b08ce17 ChangeLog 931
-MD5 97edf7907f930021aca8c2114c39be09 locale-maketext-fuzzy-0.02.ebuild 619
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 e977b5f9de9cc860d3eb7eb8216e50b3 ChangeLog 1050
+MD5 36a53920944c87eaa735be90b8aaa3a2 locale-maketext-fuzzy-0.02.ebuild 617
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 e8b3425808acd39d27d458b937ec0192 files/digest-locale-maketext-fuzzy-0.02 76
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCcnHZtG5z4I8BtQoRAqahAJ4yyCvdZjiNplV/mjSjyvQWXC3DNQCeKw9j
+IDu1ZMypuZHGibzrsec69Yo=
+=6fpU
+-----END PGP SIGNATURE-----

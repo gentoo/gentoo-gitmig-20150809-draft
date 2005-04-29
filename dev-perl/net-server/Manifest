@@ -1,6 +1,16 @@
-MD5 0739fec2ddc73a739b37bd9730151cec ChangeLog 1010
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 ee8a03fd0da9a620f10541adf9723103 ChangeLog 1142
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 191aaf51b6f45806b5efeaebb304d9e4 net-server-0.85.ebuild 619
-MD5 6d714503c190673862d7bdcc285408d1 net-server-0.87.ebuild 605
+MD5 cbae4d74fd537f0662251b1677b5011c net-server-0.85.ebuild 607
+MD5 7f518e0e22eaa659b1446300b006c66d net-server-0.87.ebuild 593
 MD5 792d1ec217d44781e9d154e69f665156 files/digest-net-server-0.85 66
 MD5 8fc233c7ca183bb3aedc37e423b3fc8b files/digest-net-server-0.87 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCcnLytG5z4I8BtQoRAmqFAJ9HoljUgh0sfVb1QlwoWQNXQIYECgCfWWb2
+Evy5WsqIBwC4Wt2iU4essD0=
+=kyaK
+-----END PGP SIGNATURE-----
