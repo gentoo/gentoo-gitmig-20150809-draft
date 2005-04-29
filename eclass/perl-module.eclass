@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.67 2005/03/14 18:28:04 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.68 2005/04/29 00:54:37 mcummings Exp $
 #
 # Author: Seemant Kulleen <seemant@gentoo.org>
 # Maintained by the Perl herd <perl@gentoo.org>
@@ -14,6 +14,13 @@ INHERITED="${INHERITED} ${ECLASS}"
 EXPORT_FUNCTIONS pkg_setup pkg_preinst pkg_postinst pkg_prerm pkg_postrm \
 	src_compile src_install src_test \
 	perlinfo updatepod
+
+# 2005.04.28 mcummings
+# Mounting problems with src_test functions has forced me to make the
+# compilation of perl modules honor the FEATURES maketest flag rather than what
+# is generally necessary. I've left a block to make sure we still need to set
+# the SRC_TEST="do" flag on the suspicion that otherwise we will face 10 times
+# as many bug reports as we have lately.
 
 # 2004.05.10 rac
 # block on makemaker versions earlier than that in the 5.8.2 core. in
@@ -100,18 +107,16 @@ perl-module_src_compile() {
 		make ${mymake} || die "compilation failed"
 	fi
 
-	if [ "${SRC_TEST}" == "do" ]; then
-		perl-module_src_test || die "test failed"
-		SRC_TEST="done"
-	fi
 }
 
 perl-module_src_test() {
-	perlinfo
-	if [ -z ${BUILDER_VER} ]; then
-		make test
-	else
-		perl ${S}/Build  test
+	if [ "${SRC_TEST}" == "do" ]; then
+		perlinfo
+		if [ -z ${BUILDER_VER} ]; then
+			make test || die "test failed"
+		else
+			perl ${S}/Build  test || die "test failed"
+		fi
 	fi
 }
 
