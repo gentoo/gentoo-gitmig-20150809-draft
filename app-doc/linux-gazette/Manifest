@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 f7363d9dd41c6a55a1545eb3ccc467fb ChangeLog 385
+MD5 4c1f4a8bba7a1d0d5d41f8666cbdd6a2 ChangeLog 381
 MD5 ed1780b85dcde3dfcccd0f49c962660a linux-gazette-01.ebuild 607
 MD5 0b2a28f66d359f08caffcf4368d4c7a0 linux-gazette-02.ebuild 460
 MD5 d1cf8775d862a9e3f0cc558e0f7647f0 linux-gazette-03.ebuild 460
@@ -107,6 +104,14 @@ MD5 a800d260de69fb3fb039b39d237e0bbb linux-gazette-102.ebuild 611
 MD5 9739e1ef511550fe9cf4d381a84ca939 linux-gazette-103.ebuild 611
 MD5 6b616a357f298547fdeaeec741105cdc linux-gazette-104.ebuild 611
 MD5 8c88c59067c3d0bddbcca10a893e8ea5 linux-gazette-105.ebuild 611
+MD5 c6756600569bb4b047b4fb9bf5d1980d linux-gazette-106.ebuild 607
+MD5 3ef6a7d1128478c8297d70af69bbaf35 linux-gazette-107.ebuild 607
+MD5 52f5928c9b1adc15d312a9764f2e7e58 linux-gazette-108.ebuild 607
+MD5 c84bfb053b51ad7a57874a7fc1300362 linux-gazette-109.ebuild 607
+MD5 f0d2396b0695e1de486d83a6f57523e4 linux-gazette-110.ebuild 607
+MD5 7c933007ed58ed9924605fee232ea48a linux-gazette-111.ebuild 607
+MD5 a9d5334b7c875afd0927a87f2bd236b3 linux-gazette-112.ebuild 607
+MD5 af0c4b08fe1f9ed0e8296dce5a2cb648 linux-gazette-113.ebuild 607
 MD5 6cafbaa1942c0f68fc0f1dd74e3ba1ff files/digest-linux-gazette-01 67
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-linux-gazette-02 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-linux-gazette-03 0
@@ -212,10 +217,11 @@ MD5 e20bacba53aa0d3b6e0b0ea09a545b5f files/digest-linux-gazette-102 59
 MD5 39ffe71997e59b10afb8dcf5ec1be6ea files/digest-linux-gazette-103 58
 MD5 37c3d1f5b0e9c011b70605bc9a89267c files/digest-linux-gazette-104 59
 MD5 5d93b4c839789be794c2cfc097f2aa94 files/digest-linux-gazette-105 59
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFB2hXZroRuSHgZdywRAo7wAJ0dK/b3YrwJT2ccOosaqI4vmKDpNwCfeKVq
-mSkaT+cCLlzJ6EmlmcB+6Ss=
-=jPdV
------END PGP SIGNATURE-----
+MD5 8d657185ee7525babd4ce1b0705a2812 files/digest-linux-gazette-106 59
+MD5 e04afb9d20a4dedbb3452558ee8ab63a files/digest-linux-gazette-107 58
+MD5 09efe958f3204a94e0ff15d5251d8c2a files/digest-linux-gazette-108 58
+MD5 fe379074e40c59e714f1bd2aed8e0563 files/digest-linux-gazette-109 59
+MD5 e470297da1c8972e359b0b06392d1056 files/digest-linux-gazette-110 58
+MD5 95bd3cea0f2e8e0965938207a8957e9a files/digest-linux-gazette-111 59
+MD5 4a4d9fc24dfaf5fa51bb72792a8d15d6 files/digest-linux-gazette-112 59
+MD5 edd3cff1256159fd938e812cc510b2a8 files/digest-linux-gazette-113 59
