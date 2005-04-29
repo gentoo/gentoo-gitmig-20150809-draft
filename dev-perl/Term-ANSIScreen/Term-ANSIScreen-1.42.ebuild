@@ -1,17 +1,17 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Term-ANSIScreen/Term-ANSIScreen-1.42.ebuild,v 1.5 2004/12/19 06:07:35 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Term-ANSIScreen/Term-ANSIScreen-1.42.ebuild,v 1.6 2005/04/29 13:40:42 mcummings Exp $
 
 IUSE=""
 
 inherit perl-module
 
 DESCRIPTION="Terminal control using ANSI escape sequences."
-SRC_URI="http://www.cpan.org/authors/id/A/AU/AUTRIJUS/${P}.tar.gz"
+SRC_URI="mirror://cpan/authors/id/A/AU/AUTRIJUS/${P}.tar.gz"
 HOMEPAGE="http://www.cpan.org/CPAN/data/ANSIScreen/ANSIScreen.html"
 
 SLOT="0"
 LICENSE="|| ( Artistic GPL-2 )"
-KEYWORDS="~x86 ~amd64 ~ppc ~sparc"
+KEYWORDS="x86 ~amd64 ~ppc ~sparc"
 
 SRC_TEST="do"
