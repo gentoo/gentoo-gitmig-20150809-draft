@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.0-r3.ebuild,v 1.1 2005/04/22 17:21:20 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.0-r3.ebuild,v 1.2 2005/04/29 03:01:46 flameeyes Exp $
 
 inherit eutils flag-o-matic gcc libtool
 
@@ -8,9 +8,12 @@ inherit eutils flag-o-matic gcc libtool
 MY_PKG_SUFFIX=""
 MY_P=${PN}-${PV/_/-}${MY_PKG_SUFFIX}
 
+PATCHLEVEL="0"
+
 DESCRIPTION="Core libraries for Xine movie player"
 HOMEPAGE="http://xine.sourceforge.net/"
-SRC_URI="mirror://sourceforge/xine/${MY_P}.tar.gz"
+SRC_URI="mirror://sourceforge/xine/${MY_P}.tar.gz
+	http://dev.gentoo.org/~flameeyes/distfiles/${PN}-patches-${PATCHLEVEL}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="1"
@@ -52,28 +55,9 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 
-	# Adds --disable- params
-	epatch ${FILESDIR}/${PN}-configure-checks.patch
-
-	# Fix check for location of XvMC.h file
-	epatch ${FILESDIR}/${PN}-configure-xvmc-header.patch
-
-	# plasmaroo: Kernel 2.6 headers patch
-	epatch ${FILESDIR}/${PN}-1_rc7-2.6.patch
-
-	# fixes bad configure stuff
-	# for xv handling
-	epatch ${FILESDIR}/${PN}-configure.ac.patch
-
-	epatch ${FILESDIR}/${PN}-1_rc7-pic.patch
-
-	# Fix detection of sparc64 systems
-	use sparc && epatch ${FILESDIR}/xine-lib-1_rc7-configure-sparc.patch
-
-	epatch ${FILESDIR}/${PN}-XSA-2004-8.patch
-
-	# Fix support for gcc 4
-	epatch ${FILESDIR}/${PN}-gcc4.patch
+	# Exclude patch added in later revisions
+	EPATCH_EXCLUDE="07_all_wmalossless.patch"
+	EPATCH_SUFFIX="patch" epatch ${WORKDIR}/${PV}/
 
 	elibtoolize
 
@@ -85,9 +69,6 @@ src_unpack() {
 	autoheader || die "autoheader failed"
 	automake -afc || die "automake failed"
 	autoconf || die "autoconf failed"
-
-	# Fix detection of hppa2.0 and hppa1.1 CHOST
-	use hppa && sed -e 's/hppa-/hppa*-linux-/' -i ${S}/configure
 
 	libtoolize --copy --force || die "libtoolize failed"
 }

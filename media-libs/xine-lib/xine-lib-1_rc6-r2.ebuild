@@ -1,15 +1,18 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_rc6-r2.ebuild,v 1.2 2005/04/26 17:01:28 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_rc6-r2.ebuild,v 1.3 2005/04/29 03:01:46 flameeyes Exp $
 
 inherit eutils flag-o-matic gcc libtool
 
 # This should normally be empty string, unless a release has a suffix.
 MY_PKG_SUFFIX="a"
 
+PATCHLEVEL="rc6"
+
 DESCRIPTION="Core libraries for Xine movie player"
 HOMEPAGE="http://xine.sourceforge.net/"
-SRC_URI="mirror://sourceforge/xine/${PN}-${PV/_/-}${MY_PKG_SUFFIX}.tar.gz"
+SRC_URI="mirror://sourceforge/xine/${PN}-${PV/_/-}${MY_PKG_SUFFIX}.tar.gz
+	http://dev.gentoo.org/~flameeyes/distfiles/${PN}-patches-${PATCHLEVEL}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="1"
@@ -55,25 +58,10 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 
-	# preserve CFLAGS added by drobbins, -O3 isn't as good as -O2 most of the time
-	epatch ${FILESDIR}/protect-CFLAGS.patch-${PV}
-	# plasmaroo: Kernel 2.6 headers patch
-	epatch ${FILESDIR}/${P}-2.6.patch
-	# force 32 bit userland
-	[ ${ARCH} = "sparc" ] && epatch ${FILESDIR}/${P}-configure-sparc.patch
-
-	# Fix building on amd64, #49569
-	#use amd64 && epatch ${FILESDIR}/configure-64bit-define.patch
-
-	epatch ${FILESDIR}/${P}-pic.patch
-	epatch ${FILESDIR}/${P}-mmx.patch
-	epatch ${FILESDIR}/${P}-XSA-2004-8.patch
+	EPATCH_SUFFIX="patch" epatch ${WORKDIR}/${PV}/
 
 	# Fix detection of hppa2.0 and hppa1.1 CHOST
 	use hppa && sed -e 's/hppa-/hppa*-linux-/' -i ${S}/configure.ac
-
-	# Fix security bug #74475
-	epatch ${FILESDIR}/djb_demux_aiff.patch
 
 	# Makefile.ams and configure.ac get patched, so we need to rerun
 	# autotools

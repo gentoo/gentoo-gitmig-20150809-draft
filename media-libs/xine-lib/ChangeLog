@@ -1,6 +1,24 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.218 2005/04/29 02:07:06 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.219 2005/04/29 03:01:46 flameeyes Exp $
+
+  29 Apr 2005; Diego Pettenò <flameeyes@gentoo.org>
+  -files/protect-CFLAGS.patch-1_rc6,
+  -files/xine-lib-1_rc6-configure-sparc.patch,
+  -files/xine-lib-1_rc6-mmx.patch, -files/xine-lib-1_rc6-2.6.patch,
+  -files/xine-lib-1_rc6-pic.patch, -files/xine-lib-1_rc7-2.6.patch,
+  -files/xine-lib-1_rc7-configure-sparc.patch,
+  -files/xine-lib-1_rc7-mmx.patch, -files/xine-lib-1_rc7-pic.patch,
+  -files/xine-lib-1.0-wma.patch, -files/xine-lib-1_rc6-XSA-2004-8.patch,
+  -files/xine-lib-1_rc8-configure.ac.patch,
+  -files/xine-lib-XSA-2004-8.patch, -files/djb_demux_aiff.patch,
+  -files/xine-lib-configure.ac.patch,
+  -files/xine-lib-configure-checks.patch,
+  -files/xine-lib-configure-xvmc-header.patch, -files/xine-lib-gcc4.patch,
+  -files/xine-lib-hardened-mmx.patch, -files/xine-lib-x11.patch,
+  xine-lib-1_rc6-r2.ebuild, xine-lib-1_rc8-r1.ebuild,
+  xine-lib-1.0-r2.ebuild, xine-lib-1.0-r3.ebuild, xine-lib-1.0-r4.ebuild:
+  Removed all the patches from FILESDIR and moved them on patch tarballs.
 
 *xine-lib-1.0.1-r1 (29 Apr 2005)
 

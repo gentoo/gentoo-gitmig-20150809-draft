@@ -1,15 +1,18 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_rc8-r1.ebuild,v 1.20 2005/02/14 19:10:19 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_rc8-r1.ebuild,v 1.21 2005/04/29 03:01:46 flameeyes Exp $
 
 inherit eutils flag-o-matic gcc libtool
 
 # This should normally be empty string, unless a release has a suffix.
 MY_PKG_SUFFIX=""
 
+PATCHLEVEL="rc8"
+
 DESCRIPTION="Core libraries for Xine movie player"
 HOMEPAGE="http://xine.sourceforge.net/"
-SRC_URI="mirror://sourceforge/xine/${PN}-${PV/_/-}${MY_PKG_SUFFIX}.tar.gz"
+SRC_URI="mirror://sourceforge/xine/${PN}-${PV/_/-}${MY_PKG_SUFFIX}.tar.gz
+	http://dev.gentoo.org/~flameeyes/distfiles/${PN}-patches-${PATCHLEVEL}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="1"
@@ -55,32 +58,12 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 
-	# plasmaroo: Kernel 2.6 headers patch
-	epatch ${FILESDIR}/${PN}-1_rc7-2.6.patch
+	use pic || EPATCH_EXCLUDE="${EPATCH_EXCLUDE} 04_all_pic.patch 05_x86_hardened-mmx.patch"
 
-	# fixes #74475 security bug
-	epatch ${FILESDIR}/djb_demux_aiff.patch
-
-	# fixes bad X11 directories
-	epatch ${FILESDIR}/${PN}-x11.patch
-
-	# fixes bad xv checking
-	epatch ${FILESDIR}/${P}-configure.ac.patch
-
-	# Fix building on amd64, #49569
-	#use amd64 && epatch ${FILESDIR}/configure-64bit-define.patch
-
-	use pic && epatch ${FILESDIR}/${PN}-1_rc7-pic.patch
-	if use pic && use x86
-	then
-		epatch ${FILESDIR}/${PN}-hardened-mmx.patch
-	fi
+	EPATCH_SUFFIX="patch" epatch ${WORKDIR}/${PV}/
 
 	# Fix detection of hppa2.0 and hppa1.1 CHOST
 	use hppa && sed -e 's/hppa-/hppa*-linux-/' -i ${S}/configure.ac
-
-	# Fix detection of sparc64 systems
-	use sparc && epatch ${FILESDIR}/xine-lib-1_rc7-configure-sparc.patch
 
 	# Makefile.ams and configure.ac get patched, so we need to rerun
 	# autotools
