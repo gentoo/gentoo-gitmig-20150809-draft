@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/synaesthesia
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/synaesthesia/ChangeLog,v 1.8 2005/04/27 07:55:56 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/synaesthesia/ChangeLog,v 1.9 2005/04/29 16:16:54 luckyduck Exp $
+
+  29 Apr 2005; Jan Brinkmann <luckyduck@gentoo.org>
+  +files/synaesthesia-2.2-gcc3.4.patch, -synaesthesia-2.1.ebuild,
+  synaesthesia-2.2.ebuild:
+  added patch to fix compilation with the gcc3.4.x. thanks to Alex Rostovtsev
+  <tetromino@gmail.com> for the contribution. fixes #90561. also added ~amd64
+  to KEYWORDS and did some cleanup.
 
   27 Apr 2005; Jeremy Huddleston <eradicator@gentoo.org>
   synaesthesia-2.1.ebuild, synaesthesia-2.2.ebuild:
