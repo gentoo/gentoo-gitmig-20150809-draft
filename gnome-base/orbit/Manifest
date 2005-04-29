@@ -18,4 +18,4 @@ MD5 54d4643035be77ed8362225823cd7b60 files/libIDLConf.sh-gentoo.diff 462
 MD5 733dcc9642be4e30137d76a4014742cd files/orbit2-alignment-fix.patch 510
 MD5 37466577b20f8ae228826573b3346263 files/digest-orbit-2.12.1 66
 MD5 66a18f0f92e9cd0f658690bf1e5c862c files/digest-orbit-2.12.2 66
-MD5 db2306180fb086b6761784cff8544abf files/orbit-0.5.17-m4.patch 233
+MD5 7105f3bdc076c48f0458e20ea8eaba34 files/orbit-0.5.17-m4.patch 472
