@@ -3,4 +3,13 @@
 <pkgmetadata>
 <herd>apache</herd>
 <herd>dotnet</herd>
+    <maintainer>
+        <email>ramereth@gentoo.org</email>
+        <name>Lance Albertson</name>
+    </maintainer>
+	<longdescription lang="en">
+		The module allows Apache (http://httpd.apache.org) to serve ASP.NET
+		pages by proxying the requests to a slightly modified version of our XSP
+		called mod-mono-server that is installed along with XSP.
+	</longdescription>
 </pkgmetadata>

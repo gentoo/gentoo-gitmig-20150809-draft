@@ -1,6 +1,14 @@
 # ChangeLog for www-apache/mod_mono
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_mono/ChangeLog,v 1.16 2005/03/11 03:23:00 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_mono/ChangeLog,v 1.17 2005/04/29 20:56:59 ramereth Exp $
+
+*mod_mono-1.0.8-r1 (29 Apr 2005)
+*mod_mono-1.0.8 (29 Apr 2005)
+
+  29 Apr 2005; Lance Albertson <ramereth@gentoo.org>
+  +files/mod_mono-1.0.8-70_mod_mono.conf, metadata.xml,
+  +mod_mono-1.0.8.ebuild, +mod_mono-1.0.8-r1.ebuild:
+  version bump, added new apache config
 
   10 Mar 2005; Peter Johanson <latexer@gentoo.org> mod_mono-1.0.2-r1.ebuild,
   mod_mono-1.0.2.ebuild, mod_mono-1.0.4.ebuild, mod_mono-1.0.5-r1.ebuild,
