@@ -1,4 +1,14 @@
-MD5 40dc3dcc5256f18f2da4dfc01ff4073b ChangeLog 836
-MD5 12dd65eac734c5ed88355b08d7d253bc Text-Diff-0.35.ebuild 515
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 3e637d27c2278b9df36d879596983fe7 ChangeLog 940
+MD5 46ae584ca60342fc389e19fead6770c7 Text-Diff-0.35.ebuild 516
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 81be5a11342996d93baeaa183a5b2375 files/digest-Text-Diff-0.35 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCck0XtG5z4I8BtQoRAjqjAJ9pAgNFVNSVamb/yNfa9xdj0n4JaACfXJH3
+nnXE/Cxq7/3r0XpFbeUDK80=
+=hDeG
+-----END PGP SIGNATURE-----
