@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.374 2005/04/27 08:55:11 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.375 2005/04/29 11:33:14 corsair Exp $
+
+  29 Apr 2005; Markus Rothe <corsair@gentoo.org> xorg-x11-6.8.2-r2.ebuild,
+  xorg-x11-6.8.99.3.ebuild:
+  Added ~ppc64 to 6.8.2-r2; Added -ppc64 to 6.8.99.3: won't start..
 
   27 Apr 2005; Jeremy Huddleston <eradicator@gentoo.org>
   xorg-x11-6.8.99.3.ebuild:
