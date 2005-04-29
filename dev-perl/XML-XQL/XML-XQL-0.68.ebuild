@@ -1,15 +1,12 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-XQL/XML-XQL-0.68.ebuild,v 1.8 2004/10/05 13:21:33 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-XQL/XML-XQL-0.68.ebuild,v 1.9 2005/04/29 00:38:43 mcummings Exp $
 
 inherit perl-module
 
-MY_P="${P/_/}"
-S=${WORKDIR}/${MY_P}
-
 DESCRIPTION="A Perl module that allows you to perform XQL queries on XML trees"
-HOMEPAGE="http://cpan.org/modules/by-module/XML/${MY_P}.readme"
-SRC_URI="http://cpan.org/modules/by-module/XML/${MY_P}.tar.gz"
+HOMEPAGE="http://search.cpan.org/~tjmather/${P}"
+SRC_URI="mirror://cpan/authors/id/T/TJ/TJMATHER/${P}.tar.gz"
 
 LICENSE="Artistic"
 SLOT="0"
