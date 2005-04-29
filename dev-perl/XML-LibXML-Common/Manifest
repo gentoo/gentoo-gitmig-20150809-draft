@@ -1,4 +1,14 @@
-MD5 e4e27c1b34781a9d78060427c98913e3 ChangeLog 1009
-MD5 87d7c5713847a8be88d5ead3c25616d1 XML-LibXML-Common-0.13.ebuild 612
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 fdaadb6e521ae6b01be780cb391a1de4 ChangeLog 1130
+MD5 0f7edd0c5e180060ffa9c288c07f73c5 XML-LibXML-Common-0.13.ebuild 609
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 cac292b8eab4e5fb9fadfc77fb671b8f files/digest-XML-LibXML-Common-0.13 73
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCclmytG5z4I8BtQoRAr7mAJ9/gvJqCHfM+mCQoh5ZwC5SgXM/VwCfehyK
+ly4dJxmQbTqLxOOcMAKqS9s=
+=V/nz
+-----END PGP SIGNATURE-----
