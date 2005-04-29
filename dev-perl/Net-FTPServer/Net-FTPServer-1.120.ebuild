@@ -1,12 +1,12 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-FTPServer/Net-FTPServer-1.120.ebuild,v 1.4 2004/08/03 11:49:17 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-FTPServer/Net-FTPServer-1.120.ebuild,v 1.5 2005/04/29 01:23:40 mcummings Exp $
 
 inherit perl-module
 
 DESCRIPTION="A secure, extensible and configurable Perl FTP server"
 HOMEPAGE="http://search.cpan.org/~rwmj/${P}/"
-SRC_URI="http://www.cpan.org/authors/id/R/RW/RWMJ/${P}.tar.gz"
+SRC_URI="mirror://cpan/authors/id/R/RW/RWMJ/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
