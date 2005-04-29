@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.11.ebuild,v 1.7 2005/04/28 13:28:59 satya Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.11.ebuild,v 1.8 2005/04/29 21:07:10 seemant Exp $
 
 inherit eutils versionator
 
@@ -180,7 +180,7 @@ src_install() {
 	# make the smb backend symlink for cups printing support..
 	if use cups; then
 		dodir /usr/$(get_libdir)/cups/backend
-		dosym ../bin/smbspool /usr/$(get_libdir)/cups/backend/smb
+		dosym ../../../bin/smbspool /usr/$(get_libdir)/cups/backend/smb
 	fi
 
 	# VFS plugin modules

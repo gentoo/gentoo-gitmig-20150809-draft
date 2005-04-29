@@ -2,7 +2,7 @@ MD5 41299f246433a1a55c8fccc77ccd709e metadata.xml 491
 MD5 ccfaefc7832a8f0558b7480d7f494757 ChangeLog 31118
 MD5 f6a911411b7e724c85f53e4b3fa88897 samba-3.0.14a-r1.ebuild 8778
 MD5 dba6533a0f625f4ae8e69e5f3c0cd181 samba-3.0.10.ebuild 16541
-MD5 dfc11be0b6268691bbe67d4e61871994 samba-3.0.11.ebuild 8766
+MD5 82365d515a7f7b7f5811220f6dadeaa9 samba-3.0.11.ebuild 8774
 MD5 fa1dcd2c95a81c22c2ad68de6698a85e files/digest-samba-3.0.10 206
 MD5 def157a63ec14450df82373617c7dc4b files/samba-3.0.11-gcc4.patch 485
 MD5 519576a9448b86f1a7baab18204533a5 files/lmhosts 126
