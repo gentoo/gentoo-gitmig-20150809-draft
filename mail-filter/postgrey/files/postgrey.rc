@@ -1,0 +1,39 @@
+#!/sbin/runscript
+# Copyright 1999-2004 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/postgrey/files/postgrey.rc,v 1.1 2005/04/29 00:28:44 ticho Exp $
+
+depend() {
+	need net
+	before mta
+	use mta
+}
+
+checkconfig() {
+if [ -z "${POSTGREY_PORT}" ] || [ -z "${POSTGREY_HOST}" ] || [ -z "${POSTGREY_PID}" ]
+	then
+		einfo "The following entries are missing in /etc/conf.d/postgrey:"
+		[ -z "${POSTGREY_HOST}" ] && einfo "  - POSTGREY_HOST"
+		[ -z "${POSTGREY_PORT}" ] && einfo "  - POSTGREY_PORT"
+		[ -z "${POSTGREY_PID}" ] && einfo "  - POSTGREY_PID"
+		eerror "You need to setup variables in /etc/conf.d/postgrey first"
+		return 1
+	fi
+}
+start() {
+	checkconfig || return 1
+	ebegin "Starting Postgrey"
+	start-stop-daemon --start --quiet --background \
+		--exec /usr/sbin/postgrey -- \
+		--inet=${POSTGREY_HOST}:${POSTGREY_PORT} \
+		--daemonize \
+		--pidfile=${POSTGREY_PID} \
+		${POSTGREY_OPTS}
+	eend ${?}
+}
+
+stop() {
+	ebegin "Stopping Postgrey"
+	start-stop-daemon --stop --quiet --pidfile ${POSTGREY_PID}
+	eend ${?}
+}

@@ -1,0 +1,10 @@
+# ChangeLog for mail-filter/postgrey
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/postgrey/ChangeLog,v 1.1 2005/04/29 00:28:44 ticho Exp $
+
+*postgrey-1.21 (28 Apr 2005)
+
+  28 Apr 2005; Andrej Kacian <ticho@gentoo.org> +files/postgrey.conf,
+  +files/postgrey.rc, +metadata.xml, +postgrey-1.21.ebuild:
+  Initial import. Ebuild provided by steveb <tp22a@softhome.net>, bug #59691.
+
