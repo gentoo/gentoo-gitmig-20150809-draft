@@ -1,17 +1,19 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 f75bd0f103976176cbc911a7f468c259 ChangeLog 6985
+MD5 6c26b444f4123c87123ddd1593340dac ChangeLog 7170
 MD5 b379ecb012e58dcb29c4feee0f5219f2 metadata.xml 180
 MD5 174713b7a47ec08aa89ba36656948abe pan-0.14.2.91.ebuild 1498
 MD5 6225c7c8a053c3b857b7b6ca504bd4f9 pan-0.14.2.ebuild 1388
+MD5 9949abbd77f7cc88660a73188a1730e2 pan-0.14.2.91-r1.ebuild 1501
 MD5 179a6776627498e226a1cc2d6bdc33d2 files/digest-pan-0.14.2 64
 MD5 bc715242bd05043ca432fb54b03e2fdf files/digest-pan-0.14.2.91 67
-MD5 30ecc2fad79b171cb54e441dfd8d41f8 files/pan-0.14.2.91-gcc4.patch 494
+MD5 daf4b06f3fce576fbf35e97bcffa9305 files/pan-0.14.2.91-gcc4.patch 698
+MD5 bc715242bd05043ca432fb54b03e2fdf files/digest-pan-0.14.2.91-r1 67
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCbRv51ZcsMnZjRyIRAhoWAJ90JjlxI+zi305GzGYwVmn0CFGPVgCfeZXT
-UgfvV+HGbmdZXQd/YdeYZPo=
-=RLcy
+iD8DBQFCcjcN1ZcsMnZjRyIRAtv0AJ4ixcxIT4WPH6sn9nZgkHug0EkTQgCaAoIS
+1SIggJ18Fl70wfZ6xbweWxY=
+=ChUl
 -----END PGP SIGNATURE-----

@@ -6,18 +6,18 @@
  				--n1;
 -				*((unsigned long int *) tmp)++ =
 -					*((unsigned long int *) b1)++;
-+				*tmp = *b1;
-+				tmp++;
-+				b1++;
++				*((unsigned long int *) tmp) = *((unsigned long int *) b1);
++				tmp += sizeof(unsigned long int);
++				b1 += sizeof(unsigned long int);
  			}
  			else
  			{
  				--n2;
 -				*((unsigned long int *) tmp)++ =
 -					*((unsigned long int *) b2)++;
-+				*tmp = *b2;
-+				tmp++;
-+				b1++;
++				*((unsigned long int *) tmp) = *((unsigned long int *) b2);
++				tmp += sizeof(unsigned long int);
++				b1 += sizeof(unsigned long int);
  			}
  		}
  	else
