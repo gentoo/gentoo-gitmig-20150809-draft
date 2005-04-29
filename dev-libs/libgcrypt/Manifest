@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 5aedf0dc905531e10058fcec024d29b4 ChangeLog 6959
+MD5 4c592c73c090e7b0f348fc9ca445345d ChangeLog 7050
 MD5 d7afc8024da44bc7a81cf54e540323f5 libgcrypt-1.1.12.ebuild 1135
-MD5 74bd55ea06685d7dfacb598434b4ffe4 libgcrypt-1.2.1.ebuild 1140
+MD5 ad52609ab57ec1b2da7a7e30dd4560c9 libgcrypt-1.2.1.ebuild 1139
 MD5 ad5a9b1b5878019b461d3e468de268d5 libgcrypt-1.1.91.ebuild 777
 MD5 918a1b851dd53568897b4fc7c503912e metadata.xml 276
 MD5 9bdc42d985f158c2b7da92ef568cdcdb libgcrypt-1.1.92.ebuild 988
@@ -24,7 +24,7 @@ MD5 1c871fcf508869ff09d46782655c3ca5 files/digest-libgcrypt-1.2.1 67
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCcWAomdTrptrqvGERAlfYAKCUEPlPMQvDZljgWsLVSW6lQiFwcgCfR6Mu
-B26LGd1VaQX34zpz9gxRQB8=
-=II/1
+iD8DBQFCcjK4mdTrptrqvGERAretAJ0bk+sY9CLINxtqTIWM+Hf0BGBlYQCfVLtU
+GIMPLdxZkojYyb4pUNZ0WPg=
+=Rwc7
 -----END PGP SIGNATURE-----
