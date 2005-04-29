@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/set-scalar
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/set-scalar/ChangeLog,v 1.8 2005/01/13 14:19:04 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/set-scalar/ChangeLog,v 1.9 2005/04/29 19:37:56 mcummings Exp $
+
+  29 Apr 2005; Michael Cummings <mcummings@gentoo.org>
+  set-scalar-1.17.ebuild, set-scalar-1.19.ebuild:
+  Cleaning and bumping for deps
 
   13 Jan 2005; Gustavo Zacarias <gustavoz@gentoo.org> set-scalar-1.17.ebuild:
   Stable on sparc
