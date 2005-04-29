@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20050419.ebuild,v 1.2 2005/04/21 12:12:49 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20050419.ebuild,v 1.3 2005/04/29 02:56:15 vapier Exp $
 
-inherit eutils flag-o-matic
+inherit eutils flag-o-matic multilib
 
-DESCRIPTION="free implementation of Windows(tm) on Unix - CVS snapshot"
+DESCRIPTION="free implementation of Windows(tm) on Unix"
 HOMEPAGE="http://www.winehq.com/"
 SRC_URI="mirror://sourceforge/${PN}/Wine-${PV}.tar.gz"
 
@@ -84,7 +84,7 @@ src_compile() {
 	config_cache lcms header_lcms_h
 
 	strip-flags
-	use lcms && append-flags -I${ROOT}/usr/include/lcms
+	use lcms && append-flags -I"${ROOT}"/usr/include/lcms
 
 	if ! built_with_use app-text/docbook-sgml-utils tetex ; then
 		export DB2PDF=true
