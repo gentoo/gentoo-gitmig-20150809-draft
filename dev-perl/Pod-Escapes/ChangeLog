@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Pod-Escapes
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Pod-Escapes/ChangeLog,v 1.9 2005/04/07 20:48:55 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Pod-Escapes/ChangeLog,v 1.10 2005/04/29 01:59:33 mcummings Exp $
+
+  29 Apr 2005; Michael Cummings <mcummings@gentoo.org>
+  -Pod-Escapes-1.03.ebuild:
+  Cleaning for mirror
 
   07 Apr 2005; Michael Hanselmann <hansmi@gentoo.org>
   Pod-Escapes-1.04.ebuild:
