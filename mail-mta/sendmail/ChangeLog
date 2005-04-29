@@ -1,6 +1,10 @@
 # ChangeLog for mail-mta/sendmail
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/sendmail/ChangeLog,v 1.29 2005/04/06 08:55:12 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/sendmail/ChangeLog,v 1.30 2005/04/29 18:55:32 g2boojum Exp $
+
+  29 Apr 2005; Grant Goodyear <g2boojum@gentoo.org> files/site.config.m4:
+  New site.config.m4 file that prevents the 'lazy binding' QA warnings when
+  installing the setgid binary.  Thanks to lcars!
 
   06 Apr 2005; Bryan Østergaard <kloeri@gentoo.org> sendmail-8.13.3.ebuild:
   Stable on alpha, bug 88038.
