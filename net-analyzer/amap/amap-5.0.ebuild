@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/amap/amap-5.0.ebuild,v 1.1 2005/04/27 12:19:01 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/amap/amap-5.0.ebuild,v 1.2 2005/04/29 22:38:07 vanquirius Exp $
 
 inherit eutils
 
@@ -20,6 +20,8 @@ DEPEND="virtual/libc
 src_unpack() {
 	unpack ${A}
 	cd ${S}
+	sed -i -e "s:etc/:share/amap/:g" \
+		amap-lib.c || die "sed amap-lib.c failed"
 	sed -i 's:/usr/local:/usr:' amap.h || die "sed amap.h failed"
 	sed -i '/DATADIR/s:/etc:/share/amap:' \
 		Makefile.am || die "sed Makefile.am failed"
