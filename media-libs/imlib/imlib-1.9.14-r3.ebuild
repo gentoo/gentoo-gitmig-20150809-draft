@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib/imlib-1.9.14-r3.ebuild,v 1.8 2004/12/06 03:09:54 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib/imlib-1.9.14-r3.ebuild,v 1.9 2005/04/29 00:03:13 vapier Exp $
 
 inherit gnome.org libtool eutils
 
@@ -20,28 +20,33 @@ DEPEND="=x11-libs/gtk+-1.2*
 
 src_unpack() {
 	unpack ${A}
-	# fix config script   bug 3425
-	cd ${S}
-	mv imlib-config.in imlib-config.in.bad
-	sed -e "49,51D" -e "55,57D" imlib-config.in.bad > imlib-config.in
+	cd "${S}"
+
+	# fix config script #3425
+	sed -i \
+		-e "49,51D" \
+		-e "55,57D" \
+		imlib-config.in
 
 	# Security fix per bug #62487
-	epatch ${FILESDIR}/${P}-bound.patch
-
+	epatch "${FILESDIR}"/${P}-bound.patch
 	#Security fix for bug #72681
-	epatch ${FILESDIR}/${P}-sec2.patch
+	epatch "${FILESDIR}"/${P}-sec2.patch
+	# shutup aclocal
+	epatch "${FILESDIR}"/${P}-m4.patch
+
+	elibtoolize
 }
 
 src_compile() {
-	elibtoolize
 	econf --sysconfdir=/etc/imlib || die
 	emake || die
 }
 
 src_install() {
 	einstall \
-		includedir=${D}/usr/include \
-		sysconfdir=${D}/etc/imlib \
+		includedir="${D}"/usr/include \
+		sysconfdir="${D}"/etc/imlib \
 		|| die
 	preplib /usr
 
