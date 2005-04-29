@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.2.5-r3.ebuild,v 1.1 2005/04/26 09:17:52 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.2.5-r4.ebuild,v 1.1 2005/04/29 09:39:19 voxus Exp $
 
 inherit eutils libtool
 
@@ -89,7 +89,27 @@ src_compile() {
 		use odbc  && myconf="${myconf} --with-dlz-odbc"
 	}
 
-	use threads && myconf="${myconf} --enable-linux-caps --enable-threads"
+	if use threads; then
+		if use dlz && use mysql; then
+			echo
+			ewarn ""
+			einfo "MySQL uses thread local storage in its C api. Thus MySQL"
+			einfo "requires that each thread of an application execute a MySQL"
+			einfo "\"thread initialization\" to setup the thread local storage."
+			einfo "This is impossible to do safely while staying within the DLZ"
+			einfo "driver API. This is a limitation caused by MySQL, and not the"
+			einfo "DLZ API."
+			ewarn "Because of this BIND MUST only run with a single thread when"
+			ewarn "using the MySQL driver."
+			echo
+			myconf="${myconf} --disable-threads"
+			einfo "Threading support disabled"
+			epause 10
+		else
+			myconf="${myconf} --enable-linux-caps --enable-threads"
+			einfo "Threading support enabled"
+		fi
+	fi
 
 	econf \
 		--sysconfdir=/etc/bind \
@@ -189,20 +209,6 @@ pkg_postinst() {
 	echo
 	einfo "	zone "com" IN { type delegation-only; };"
 	einfo "	zone "net" IN { type delegation-only; };"
-
-	if use dlz && use mysql; then
-		echo
-		ewarn ""
-		einfo "MySQL uses thread local storage in its C api. Thus MySQL"
-		einfo "requires that each thread of an application execute a MySQL"
-		einfo "\"thread initialization\" to setup the thread local storage."
-		einfo "This is impossible to do safely while staying within the DLZ"
-		einfo "driver API. This is a limitation caused by MySQL, and not the"
-		einfo "DLZ API."
-		ewarn "Because of this BIND MUST only run with a single thread when"
-		ewarn "using the MySQL driver."
-		echo
-	fi
 
 	echo
 	ewarn "BIND >=9.2.5 makes the priority argument to MX records mandatory"
