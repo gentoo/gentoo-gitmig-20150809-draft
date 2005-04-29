@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libtasn1
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtasn1/ChangeLog,v 1.18 2005/04/24 12:46:42 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtasn1/ChangeLog,v 1.19 2005/04/29 22:38:09 gustavoz Exp $
+
+  29 Apr 2005; Gustavo Zacarias <gustavoz@gentoo.org>
+  libtasn1-0.2.13.ebuild:
+  Stable on sparc wrt #90726
 
   24 Apr 2005; Michael Hanselmann <hansmi@gentoo.org>
   libtasn1-0.2.13.ebuild:
