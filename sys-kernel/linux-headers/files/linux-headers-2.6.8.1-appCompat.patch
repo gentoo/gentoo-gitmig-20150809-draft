@@ -1332,7 +1332,7 @@ diff -up linux-2.6.8.1/include/linux/list.h linux-2.6.8.1-gentoo/include/linux/l
  #include <linux/stddef.h>
  #include <linux/prefetch.h>
  #include <asm/system.h>
-@@ -38,20 +36,31 @@ struct list_head {
+@@ -38,20 +36,33 @@ struct list_head {
  	(ptr)->next = (ptr); (ptr)->prev = (ptr); \
  } while (0)
  
@@ -1340,10 +1340,12 @@ diff -up linux-2.6.8.1/include/linux/list.h linux-2.6.8.1-gentoo/include/linux/l
 + * list_empty - tests whether a list is empty
 + * @head: the list to test.
 + */
++#if (defined(_LINUX_WAIT_H) || defined (__KERNEL__)) && !defined(LIST_INIT)
 +static inline int list_empty(const struct list_head *head)
 +{
 +       return head->next == head;
 +}
++#endif
 +
 +#if defined(__KERNEL__) || defined(__LINUX_KEYBOARD_H)
 +
