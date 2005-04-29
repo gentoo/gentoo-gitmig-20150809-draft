@@ -1,42 +1,28 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/pound/pound-1.6.ebuild,v 1.1 2004/08/08 17:59:18 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/pound/pound-1.8.3.ebuild,v 1.1 2005/04/29 14:50:19 ka0ttic Exp $
 
-MY_P=${P/p/P}
-
+MY_P="${P/p/P}"
 DESCRIPTION="A http/https reverse-proxy and load-balancer."
 SRC_URI="http://www.apsis.ch/pound/${MY_P}.tgz"
 HOMEPAGE="http://www.apsis.ch/pound/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~mips ~hppa"
-IUSE="ssl"
+KEYWORDS="x86 ~ppc ~sparc ~alpha ~mips ~hppa"
+IUSE="ssl msdav unsafe"
 
 DEPEND="virtual/libc
 	ssl? ( dev-libs/openssl )"
 
-S=${WORKDIR}/${MY_P}
+S="${WORKDIR}/${MY_P}"
 
 src_compile() {
-	local myconf
-
-	## check for ssl-support:
-	if use ssl; then
-		myconf="${myconf} --with-ssl"
-	else
-		myconf="${myconf} --without-ssl"
-	fi
-
-	## TODO: how to handle the missing "syslog" USE-flag?
-	## check for syslog-support:
-	#if use syslog; then
-	#	myconf="${myconf} --with-log="
-	#else
-	#	myconf="${myconf} --without-log"
-	#fi
-
-	econf ${myconf} || die "configure failed"
+	econf \
+		$(use_with ssl) \
+		$(use_enable msdav) \
+		$(use_enable unsafe) \
+		|| die "configure failed"
 	emake || die "compile failed"
 }
 
@@ -46,8 +32,7 @@ src_install() {
 
 	dodoc README
 
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/pound.init pound
+	newinitd ${FILESDIR}/${PN}.init ${PN}
 
 	insinto /etc
 	doins ${FILESDIR}/pound.cfg
