@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/netstat-nat
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netstat-nat/ChangeLog,v 1.14 2005/02/25 12:07:50 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netstat-nat/ChangeLog,v 1.15 2005/04/29 15:04:26 vanquirius Exp $
+
+*netstat-nat-1.4.5 (29 Apr 2005)
+
+  29 Apr 2005; Marcelo Goes <vanquirius@gentoo.org> -netstat-nat-1.4.3.ebuild,
+  +netstat-nat-1.4.5.ebuild:
+  Version bump, remove old version.
 
   25 Feb 2005; Aaron Walker <ka0ttic@gentoo.org> netstat-nat-1.4.4.ebuild:
   Marked stable on x86.
