@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.11.11-r2.ebuild,v 1.1 2005/04/26 22:39:39 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.11.11-r2.ebuild,v 1.2 2005/04/29 03:37:11 vapier Exp $
 
 inherit flag-o-matic eutils toolchain-funcs multilib
 
@@ -33,9 +33,6 @@ PROVIDE="virtual/baselayout"
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-
-	# Move bashrc to /etc/bashrc
-	epatch ${FILESDIR}/${PN}-1.11.10-bashrc.patch
 
 	# Support wpa_supplicant-0.4.0 and hopefully fix an obscure iwconfig bug
 	epatch ${FILESDIR}/${P}-wpa_supplicant.patch
