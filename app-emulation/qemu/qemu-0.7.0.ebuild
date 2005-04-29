@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-0.7.0.ebuild,v 1.3 2005/04/29 13:59:00 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-0.7.0.ebuild,v 1.4 2005/04/29 22:27:37 lu_zero Exp $
 
 inherit eutils flag-o-matic linux-mod
 
@@ -35,16 +35,14 @@ set_target_list() {
 
 pkg_setup() {
 #	( use kqemu || use qvm86 ) && linux-mod_pkg_setup
-	( use kqemu ) && linux-mod_pkg_setup
+	use kqemu && linux-mod_pkg_setup
 }
 
 #RUNTIME_PATH="/emul/gnemul/"
 src_unpack() {
 	unpack ${A}
 
-	use kqemu &&
-
-	(
+	if use kqemu ; then
 	einfo "QEMU Accelerator enabled"
 	einfo "kqemu actually is a closed source software"
 	einfo "Please read carefully the KQEMU license"
@@ -53,7 +51,8 @@ src_unpack() {
 	mv ${S}/../kqemu ${S}
 	cd ${S}/kqemu
 	epatch ${FILESDIR}/kqemu-sysfs.patch
-	)
+	fi
+
 #	if use qvm86; then
 #		mv ${WORKDIR}/qvm86 ${S}
 #		cd ${S}
@@ -81,12 +80,13 @@ src_compile() {
 		--prefix=/usr \
 		--target-list="${TARGET_LIST}" \
 		--enable-slirp \
+		--kernel-path=${KV_DIR} \
 		$(use_enable kqemu) \
 		${myconf} \
 		`use_enable sdl`\
 		|| die "could not configure"
-	make || die "make failed"
-#		$(use_enable qvm86) \
+
+	emake || die "make failed"
 }
 
 src_install() {
@@ -100,7 +100,7 @@ src_install() {
 	chmod -x ${D}/usr/share/man/*/*
 
 	if use kqemu ; then
-#if use kqemu || use qvm86; then
+
 		linux-mod_src_install
 
 		# udev rule
@@ -118,14 +118,14 @@ src_install() {
 pkg_postinst() {
 	einfo "You will need the Universal TUN/TAP driver compiled into"
 	einfo "kernel or as a module to use the virtual network device."
-	use softmmu || \
-	(
+	if use ! softmmu ; then
 		ewarn ""
 		ewarn "You have the softmmu useflag disabled."
 		ewarn "In order to have the full system emulator (qemu) you have"
 		ewarn "to emerge qemu again with the softmmu useflag enabled."
-	)
-	if use kqemu; then
+		ewarn ""
+	fi
+	if use kqemu ; then
 		einfo "kqemu actually is a closed source software"
 		einfo "Please read carefully the KQEMU license"
 		einfo "and http://fabrice.bellard.free.fr/qemu/qemu-accel.html"
