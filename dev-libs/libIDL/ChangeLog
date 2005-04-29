@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libIDL
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libIDL/ChangeLog,v 1.37 2005/04/25 12:58:37 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libIDL/ChangeLog,v 1.38 2005/04/29 23:24:56 gustavoz Exp $
+
+  29 Apr 2005; Gustavo Zacarias <gustavoz@gentoo.org> libIDL-0.8.5.ebuild:
+  Stable on sparc
 
   25 Apr 2005; Mike Gardiner <obz@gentoo.org> libIDL-0.8.5.ebuild:
   Keyworded ppc x86
