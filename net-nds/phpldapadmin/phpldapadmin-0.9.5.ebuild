@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/phpldapadmin/phpldapadmin-0.9.5.ebuild,v 1.1 2005/02/22 23:49:26 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/phpldapadmin/phpldapadmin-0.9.5.ebuild,v 1.2 2005/04/29 10:50:19 mholzer Exp $
 
 inherit webapp
 
@@ -23,7 +23,7 @@ src_unpack() {
 src_install() {
 	webapp_src_preinst
 
-	local docs="INSTALL LICENSE VERSION doc/CREDITS doc/ChangeLog doc/INSTALL-de.txt doc/INSTALL-es.txt doc/INSTALL-fr.txt doc/ROADMAP"
+	local docs="INSTALL LICENSE doc/CREDITS doc/ChangeLog doc/INSTALL-de.txt doc/INSTALL-es.txt doc/INSTALL-fr.txt doc/ROADMAP"
 
 	dodoc ${docs}
 	for doc in ${docs} INSTALL; do
