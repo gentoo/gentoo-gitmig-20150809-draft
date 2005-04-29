@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/remind
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/remind/ChangeLog,v 1.3 2004/06/24 22:31:35 agriffis Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/remind/ChangeLog,v 1.4 2005/04/29 00:15:54 wormo Exp $
+
+  28 Apr 2005; Stephanie Lockwood-Childs <wormo@gentoo.org>
+  remind-03.00.22.ebuild:
+  mark ~ppc
 
   11 Apr 2004; Markus Nigbur <pyrania@gentoo.org> remind-03.00.22.ebuild:
   Marked stable.
