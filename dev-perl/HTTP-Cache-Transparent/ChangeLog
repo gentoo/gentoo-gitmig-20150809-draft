@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/HTTP-Cache-Transparent
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTTP-Cache-Transparent/ChangeLog,v 1.2 2005/04/25 21:26:49 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTTP-Cache-Transparent/ChangeLog,v 1.3 2005/04/29 23:18:11 mcummings Exp $
+
+  29 Apr 2005; Michael Cummings <mcummings@gentoo.org> +metadata.xml:
+  Metadata
 
   25 Apr 2005; Michael Cummings <mcummings@gentoo.org>
   HTTP-Cache-Transparent-0.5.ebuild:
