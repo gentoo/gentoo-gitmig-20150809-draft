@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/itext/itext-1.2.1.ebuild,v 1.1 2005/01/17 10:04:32 mglauche Exp $
+# $Header $
 
 inherit java-pkg
 
@@ -14,7 +14,7 @@ IUSE="doc jikes"
 
 LICENSE="MPL-1.1"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 
 DEPEND=">=virtual/jdk-1.4
 	>=dev-java/ant-1.4
