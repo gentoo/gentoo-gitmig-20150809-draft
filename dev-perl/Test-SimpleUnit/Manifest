@@ -1,4 +1,14 @@
-MD5 05716866d5959bb365abb8baf86a5287 ChangeLog 401
-MD5 58aed0b076aa9eb1789a937a2d80a886 Test-SimpleUnit-1.21.ebuild 539
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 990c933e848949e872d0b1d6124af9a4 ChangeLog 514
+MD5 1a80adff39d9e4d0a78193e0bf5bdc68 Test-SimpleUnit-1.21.ebuild 540
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 a87941a246d705efa1ee581969d49130 files/digest-Test-SimpleUnit-1.21 71
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCckRQtG5z4I8BtQoRArPlAJ911dTDJgBMs8TIywFiFZpUn2WQlwCgkJ4M
+to26UzNJXwy5rdGQtBAwJ0M=
+=wuGj
+-----END PGP SIGNATURE-----

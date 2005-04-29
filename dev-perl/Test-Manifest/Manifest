@@ -1,6 +1,16 @@
-MD5 1a0dfc364834143ddadae8c1226af731 ChangeLog 1207
-MD5 bee0eee5970e40aa41e00175bdd9b0a4 Test-Manifest-1.14.ebuild 399
-MD5 c490d34b562791082786e61ac30987ad Test-Manifest-1.11.ebuild 509
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 4cef75fe004139c1a04f42279c62744b ChangeLog 1325
+MD5 172195d0a2d8c8da2174baf39cef7f0a Test-Manifest-1.14.ebuild 512
+MD5 f59af0d24970f19ec021eb328d13666a Test-Manifest-1.11.ebuild 509
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 68e7515cc2589623aad5e92dff691aea files/digest-Test-Manifest-1.14 68
 MD5 5c037060210fd4b2b883737c288ffb4b files/digest-Test-Manifest-1.11 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCckKPtG5z4I8BtQoRAo+vAJ9XL9Na6lxahBjA541JGsmULI7clQCfUMuF
+K/+rmwN5FOeDudXq+i0Cn8w=
+=6dnZ
+-----END PGP SIGNATURE-----
