@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wifiscanner/wifiscanner-0.9.6.ebuild,v 1.1 2005/02/26 17:39:35 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wifiscanner/wifiscanner-0.9.6.ebuild,v 1.2 2005/04/29 11:20:00 dragonheart Exp $
 
 MY_P=WifiScanner-${PV}
 S=${WORKDIR}/${MY_P}
@@ -14,7 +14,7 @@ IUSE=""
 KEYWORDS="~x86"
 DEPEND="sys-libs/zlib
 	sys-libs/ncurses
-	net-libs/libpcap
+	virtual/libpcap
 	dev-libs/glib"
 
 src_install () {
