@@ -4,11 +4,11 @@ Hash: SHA1
 MD5 72c92b21cb2b71f085159e2c971a0d21 gst-plugins-alsa-0.8.5-r1.ebuild 462
 MD5 0f71d71b4b888eb559ff3dc9b23a7371 gst-plugins-alsa-0.8.1.ebuild 507
 MD5 205d9a376872e199ed8c682a0131be04 gst-plugins-alsa-0.8.7-r1.ebuild 540
-MD5 1280ba2b9612c3685a178478a70ae711 gst-plugins-alsa-0.8.8.ebuild 377
+MD5 957aeda4ccf7c5bcf3affe589c4241b0 gst-plugins-alsa-0.8.8.ebuild 375
 MD5 db08a3078046ed430d0774778ac5c0dc gst-plugins-alsa-0.8.3.ebuild 524
 MD5 783a1d3294bd8b858a49ea990e7fe6fc gst-plugins-alsa-0.8.2-r1.ebuild 664
 MD5 2998af3921e68f38a033b8cce90d562a gst-plugins-alsa-0.8.5.ebuild 528
-MD5 51e86ce8a2067d05a13145fa0a272113 ChangeLog 4198
+MD5 8155c67404cde39c03eba6972dcb2e1a ChangeLog 4303
 MD5 6cf6f97e79b43eaf70fa938c431342a3 metadata.xml 181
 MD5 d454a981aba7bfc51b76556d18ef0357 files/digest-gst-plugins-alsa-0.8.1 71
 MD5 b34b0c2aff88ed12404f38ecc09f44f0 files/digest-gst-plugins-alsa-0.8.3 71
@@ -21,9 +21,9 @@ MD5 2f0d0555805bf8c87467d40987b7aa72 files/gst-plugins-alsa-0.8.5-cvs_fixes.patc
 MD5 629efc20767a1bd436ba6d55c28220d8 files/gst-plugins-alsa-0.8.7-alsa_deadlock.patch 1371
 MD5 41606d2ca893d5ca7b2bb16b7ef3fef0 files/gst-plugins-alsa-0.8.2-alsasink_seek_fix.patch 1274
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCb4El06ebR+OMO78RAirgAJ9WH6dStNuI3crARvSxM6DgPwSsGACfZiuy
-iaKdup7uRF4vS2f55S/PCEA=
-=QUTQ
+iD8DBQFCcrvoKRy60XGEcJIRAiYGAKCKyBbVuWBqxxS2vjNMWikruiNc9QCdFG2E
+iwFFYDyC+5lX+Dm5dLCqodc=
+=rVEL
 -----END PGP SIGNATURE-----
