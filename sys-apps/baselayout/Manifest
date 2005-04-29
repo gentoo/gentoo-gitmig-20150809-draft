@@ -7,7 +7,7 @@ MD5 b2f81239029e8bdbe76fe4deb2694f9a baselayout-1.11.11-r2.ebuild 18588
 MD5 c1996677fc298d37f0b92281ab134d90 baselayout-1.9.4-r6.ebuild 16997
 MD5 f90b7865e3d0207b26c2e1f4bf9e0ca3 baselayout-1.9.4-r7.ebuild 18003
 MD5 e02bb32cac91dad28d3c05b731b37b04 metadata.xml 385
-MD5 e205d46cf3ab3fbc7d45b4c7898b1091 baselayout-1.11.11-r3.ebuild 18588
+MD5 2f9cafc3e65c99cbad0d971e997a4111 baselayout-1.11.11-r3.ebuild 18589
 MD5 83173fc495d5b40d07fba4a28156bc76 baselayout-1.11.10-r7.ebuild 17390
 MD5 4e6a023b9ee92289da1614eebfe9c590 baselayout-1.12.0_alpha2-r1.ebuild 18645
 MD5 50ccc6f432f5e941daec74f31f2d2a53 files/digest-baselayout-1.11.11-r3 70
