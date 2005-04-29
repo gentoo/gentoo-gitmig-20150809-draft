@@ -1,8 +1,16 @@
-MD5 c7059048ee25c61452cd5473bfc4d44f Net-RawIP-0.2.ebuild 1545
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 c43c6aef77c3560954bc94b8841486df ChangeLog 1346
+MD5 e5b469ab1eb4e43bc5a722e8de0a676d Net-RawIP-0.1.ebuild 1547
+MD5 e9012de9249daa7ca97f319ba4f19967 Net-RawIP-0.2.ebuild 1546
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 9eae5a1d127345f1c8453b3043fddcbd ChangeLog 1193
-MD5 4de1063eb292e8948a41b7770e71b369 Net-RawIP-0.09d.ebuild 1534
-MD5 cb7a03950f80ca24532b4a5b4816193d Net-RawIP-0.1.ebuild 1551
-MD5 e04c3fa53d9d22a11b1deb98b8fca6f1 files/digest-Net-RawIP-0.09d 66
-MD5 1ff7bc542d0a1b4c0efcefc1d1d1358a files/digest-Net-RawIP-0.2 64
 MD5 ddbdc35d582bfa957c8346ece75890f5 files/digest-Net-RawIP-0.1 64
+MD5 1ff7bc542d0a1b4c0efcefc1d1d1358a files/digest-Net-RawIP-0.2 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCcY1stG5z4I8BtQoRArQEAJ4iulojGk0xgrwYQ0U8Y6jOhah+JQCeLVGh
+49K+jZRteDAcu8CH7Jgz+Q8=
+=t16I
+-----END PGP SIGNATURE-----
