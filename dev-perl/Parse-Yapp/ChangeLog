@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Parse-Yapp
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Parse-Yapp/ChangeLog,v 1.14 2004/12/30 00:18:07 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Parse-Yapp/ChangeLog,v 1.15 2005/04/29 01:48:28 mcummings Exp $
+
+  29 Apr 2005; Michael Cummings <mcummings@gentoo.org>
+  -Parse-Yapp-1.05.ebuild, Parse-Yapp-1.05-r1.ebuild:
+  cleaning for mirror syntax
 
   30 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance

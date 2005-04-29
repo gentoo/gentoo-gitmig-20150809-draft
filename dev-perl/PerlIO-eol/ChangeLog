@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/PerlIO-eol
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PerlIO-eol/ChangeLog,v 1.2 2005/02/05 14:29:50 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PerlIO-eol/ChangeLog,v 1.3 2005/04/29 01:53:20 mcummings Exp $
+
+  29 Apr 2005; Michael Cummings <mcummings@gentoo.org>
+  PerlIO-eol-0.13.ebuild:
+  cleaning for mirror syntax
 
   05 Feb 2005; Dylan Carlson <absinthe@gentoo.org> PerlIO-eol-0.13.ebuild:
   Keywords ~amd64.
