@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libfame/libfame-0.9.1-r1.ebuild,v 1.1 2005/04/25 15:39:27 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libfame/libfame-0.9.1-r1.ebuild,v 1.2 2005/04/29 00:28:46 vapier Exp $
 
-inherit flag-o-matic gnuconfig gcc eutils
+inherit flag-o-matic gcc eutils
 
 DESCRIPTION="MPEG-1 and MPEG-4 video encoding library"
 HOMEPAGE="http://fame.sourceforge.net/"
@@ -13,29 +13,26 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="mmx sse"
 
-DEPEND="virtual/libc"
+DEPEND=""
 
 src_unpack() {
 	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-m4.patch
 
-	cd ${S}
 	# Do not add -march=i586, bug #41770.
 	sed -i -e 's:-march=i[345]86 ::g' configure
 
 	#closing bug #45736
 	if [ "`gcc-major-version`" -ge "3" -a "`gcc-minor-version`" -ge "4" ]
 	then
-		epatch ${FILESDIR}/${P}-mmx_configure.patch
-		epatch ${FILESDIR}/${P}-gcc34.patch
+		epatch "${FILESDIR}"/${P}-mmx_configure.patch
+		epatch "${FILESDIR}"/${P}-gcc34.patch
 	fi
 
 	# yet another pic patch, thanks to the 'pic gods' ;-)
 	# see #90318
-	epatch ${FILESDIR}/${P}-pic.patch
-
-	# This is needed for alpha and probably other newer arches (amd64)
-	# (13 Jan 2004 agriffis)
-	gnuconfig_update
+	epatch "${FILESDIR}"/${P}-pic.patch
 }
 
 src_compile() {

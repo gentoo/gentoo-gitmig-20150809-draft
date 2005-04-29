@@ -1,25 +1,16 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a3448605a548cc3385b88768dd9fc4b8 libfame-0.9.0-r1.ebuild 1075
-MD5 2120445221c8a91f1b31eca9501cd737 libfame-0.9.0.ebuild 1022
-MD5 9e501b7e4b89f84f344b8094941e7b09 libfame-0.8.10.ebuild 798
 MD5 fd8ddfeba933ea80684913805e08888c ChangeLog 2822
+MD5 9e501b7e4b89f84f344b8094941e7b09 libfame-0.8.10.ebuild 798
+MD5 2120445221c8a91f1b31eca9501cd737 libfame-0.9.0.ebuild 1022
+MD5 a3448605a548cc3385b88768dd9fc4b8 libfame-0.9.0-r1.ebuild 1075
+MD5 00020efe0315ee1cc85dec7802edc32e libfame-0.9.1.ebuild 1137
+MD5 305ca5d7dd6c362974d8eb8fd97b406d libfame-0.9.1-r1.ebuild 1306
 MD5 7300a7b361fa9f48e37722c6952bd432 metadata.xml 158
-MD5 7d2f186002fb669f3b718e4197a7dea7 libfame-0.9.1-r1.ebuild 1400
-MD5 7cd527b68124bb20b260a4d9b5d17f7d libfame-0.9.1.ebuild 1269
 MD5 c3a2bb99aa1812617fb10c1738955aad files/digest-libfame-0.8.10 66
-MD5 1833e1c064e17bf9a9d0588a72aa9be6 files/libfame-0.9.1-gcc34.patch 629
-MD5 792f81a3c9fe0a8f9d215eb02ed8659a files/libfame-0.9.1-pic.patch 19202
-MD5 a51e496784f3b72b161e5b53f191f1f5 files/libfame-0.9.1-mmx_configure.patch 873
-MD5 0631609809520953d425ea1b77009300 files/digest-libfame-0.9.0-r1 65
-MD5 ee02d656f68ae66ef4fe16890e05e3ac files/digest-libfame-0.9.1-r1 65
 MD5 0631609809520953d425ea1b77009300 files/digest-libfame-0.9.0 65
+MD5 0631609809520953d425ea1b77009300 files/digest-libfame-0.9.0-r1 65
 MD5 ee02d656f68ae66ef4fe16890e05e3ac files/digest-libfame-0.9.1 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCbQ9C06ebR+OMO78RAnPJAJ9UWJ44DduigwGKTVurqlElN1Wc9ACeJpSC
-K6MYLYAqOFlz2LyyMYgasvk=
-=ZhbH
------END PGP SIGNATURE-----
+MD5 1833e1c064e17bf9a9d0588a72aa9be6 files/libfame-0.9.1-gcc34.patch 629
+MD5 a51e496784f3b72b161e5b53f191f1f5 files/libfame-0.9.1-mmx_configure.patch 873
+MD5 ee02d656f68ae66ef4fe16890e05e3ac files/digest-libfame-0.9.1-r1 65
+MD5 792f81a3c9fe0a8f9d215eb02ed8659a files/libfame-0.9.1-pic.patch 19202
+MD5 578c866bfd1a2180b97f3a5c8ab12fcb files/libfame-0.9.1-m4.patch 248

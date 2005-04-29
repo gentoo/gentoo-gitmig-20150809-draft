@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libfame/libfame-0.9.1.ebuild,v 1.5 2005/01/04 10:01:36 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libfame/libfame-0.9.1.ebuild,v 1.6 2005/04/29 00:28:46 vapier Exp $
 
-inherit flag-o-matic gnuconfig gcc eutils
+inherit flag-o-matic gcc eutils
 
 DESCRIPTION="MPEG-1 and MPEG-4 video encoding library"
 HOMEPAGE="http://fame.sourceforge.net/"
@@ -13,29 +13,25 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 mips ~ppc ppc64 ~sparc ~x86"
 IUSE="mmx sse"
 
-DEPEND="virtual/libc"
+DEPEND=""
 
 src_unpack() {
 	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-m4.patch
 
-	cd ${S}
 	# Do not add -march=i586, bug #41770.
 	sed -i -e 's:-march=i[345]86 ::g' configure
 
 	#closing bug #45736
 	if [ "`gcc-major-version`" -ge "3" -a "`gcc-minor-version`" -ge "4" ]
 	then
-		epatch ${FILESDIR}/${P}-mmx_configure.patch
-		epatch ${FILESDIR}/${P}-gcc34.patch
+		epatch "${FILESDIR}"/${P}-mmx_configure.patch
+		epatch "${FILESDIR}"/${P}-gcc34.patch
 	fi
-
-	# This is needed for alpha and probably other newer arches (amd64)
-	# (13 Jan 2004 agriffis)
-	gnuconfig_update
 }
 
 src_compile() {
-#	filter-flags -fprefetch-loop-arrays
 	econf $(use_enable mmx) $(use_enable sse) || die
 	emake || die
 }
