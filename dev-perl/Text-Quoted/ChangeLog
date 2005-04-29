@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Text-Quoted
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-Quoted/ChangeLog,v 1.4 2005/04/12 02:31:59 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-Quoted/ChangeLog,v 1.5 2005/04/29 15:14:24 mcummings Exp $
+
+*Text-Quoted-1.8 (29 Apr 2005)
+
+  29 Apr 2005; Michael Cummings <mcummings@gentoo.org>
+  Text-Quoted-1.7.ebuild, +Text-Quoted-1.8.ebuild:
+  Cleaning for mirror
 
   12 Apr 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   Text-Quoted-1.7.ebuild:

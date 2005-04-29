@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Text-Diff
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-Diff/ChangeLog,v 1.7 2005/04/26 01:56:45 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-Diff/ChangeLog,v 1.8 2005/04/29 15:04:38 mcummings Exp $
+
+  29 Apr 2005; Michael Cummings <mcummings@gentoo.org>
+  Text-Diff-0.35.ebuild:
+  Cleaning for mirror
 
   26 Apr 2005; Gustavo Zacarias <gustavoz@gentoo.org> Text-Diff-0.35.ebuild:
   Stable on sparc

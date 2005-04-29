@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Text-Aspell
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-Aspell/ChangeLog,v 1.8 2005/04/22 12:41:48 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-Aspell/ChangeLog,v 1.9 2005/04/29 15:01:51 mcummings Exp $
+
+  29 Apr 2005; Michael Cummings <mcummings@gentoo.org>
+  -Text-Aspell-0.02.ebuild, Text-Aspell-0.03.ebuild,
+  Text-Aspell-0.04.ebuild:
+  Cleaning for mirror syntax
 
   22 Apr 2005; Simon Stelling <blubb@gentoo.org> Text-Aspell-0.03.ebuild:
   stable on amd64

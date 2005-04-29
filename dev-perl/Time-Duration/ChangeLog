@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Time-Duration
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Time-Duration/ChangeLog,v 1.4 2004/12/23 10:20:00 nigoro Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Time-Duration/ChangeLog,v 1.5 2005/04/29 15:18:32 mcummings Exp $
+
+  29 Apr 2005; Michael Cummings <mcummings@gentoo.org>
+  Time-Duration-1.02.ebuild:
+  Cleaning for mirror syntax
 
   23 Dec 2004; Yuta SATOH <nigoro@gentoo.org> Time-Duration-1.02.ebuild:
   added ~ppc64

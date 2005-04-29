@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Text-Shellwords
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-Shellwords/ChangeLog,v 1.9 2005/04/24 03:14:57 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-Shellwords/ChangeLog,v 1.10 2005/04/29 15:14:47 mcummings Exp $
+
+  29 Apr 2005; Michael Cummings <mcummings@gentoo.org>
+  Text-Shellwords-1.00.ebuild, Text-Shellwords-1.07.ebuild:
+  Cleaning for mirror syntax
 
   24 Apr 2005; Michael Hanselmann <hansmi@gentoo.org>
   Text-Shellwords-1.00.ebuild:

@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Text-Glob
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-Glob/ChangeLog,v 1.9 2005/03/16 16:12:29 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-Glob/ChangeLog,v 1.10 2005/04/29 15:05:27 mcummings Exp $
+
+  29 Apr 2005; Michael Cummings <mcummings@gentoo.org>
+  -Text-Glob-0.05.ebuild:
+  Cleaning for mirror syntax
 
   16 Mar 2005; Michael Cummings <mcummings@gentoo.org> Text-Glob-0.06.ebuild:
   module-build dep
