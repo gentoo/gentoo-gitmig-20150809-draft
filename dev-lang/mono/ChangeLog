@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/mono
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/ChangeLog,v 1.41 2005/04/14 23:34:13 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/ChangeLog,v 1.42 2005/04/29 01:59:05 latexer Exp $
+
+  29 Apr 2005; Peter Johanson <latexer@gentoo.org> mono-1.1.4.ebuild,
+  mono-1.1.5-r1.ebuild, mono-1.1.6.ebuild, mono-1.1.6-r1.ebuild:
+  Make the libgdiplus dep optional, using the X use flag, as libgdiplus pulls
+  that in.
 
 *mono-1.1.6-r1 (14 Apr 2005)
 

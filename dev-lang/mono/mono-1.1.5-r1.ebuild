@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-1.1.5-r1.ebuild,v 1.3 2005/04/08 00:08:09 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-1.1.5-r1.ebuild,v 1.4 2005/04/29 01:59:05 latexer Exp $
 
 inherit eutils mono flag-o-matic
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.go-mono.com/archive/${PV}/${P}.tar.gz"
 LICENSE="|| ( GPL-2 LGPL-2 X11)"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~amd64"
-IUSE="nptl icu"
+IUSE="nptl icu X"
 
 DEPEND="virtual/libc
 	>=dev-libs/glib-2.0
@@ -23,7 +23,7 @@ DEPEND="virtual/libc
 		>=sys-libs/glibc-2.3.3_pre20040420
 	)"
 RDEPEND="${DEPEND}
-	>=dev-dotnet/libgdiplus-1.1.4
+	X? ( >=dev-dotnet/libgdiplus-1.1.4 )
 	dev-util/pkgconfig
 	dev-libs/libxml2"
 
