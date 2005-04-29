@@ -1,15 +1,15 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gdk-pixbuf/gdk-pixbuf-0.22.0-r4.ebuild,v 1.1 2005/03/30 09:51:37 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gdk-pixbuf/gdk-pixbuf-0.22.0-r4.ebuild,v 1.2 2005/04/29 01:13:48 vapier Exp $
 
-inherit virtualx libtool gnome.org gnuconfig eutils
+inherit virtualx libtool gnome.org eutils
 
 DESCRIPTION="GNOME Image Library"
 HOMEPAGE="http://www.gtk.org/"
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 IUSE="doc mmx"
 
 RDEPEND="media-libs/jpeg
@@ -25,30 +25,27 @@ DEPEND="${RDEPEND}
 	doc? ( dev-util/gtk-doc )"
 
 src_unpack() {
-
 	unpack ${A}
-
-	cd ${S}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-m4.patch
 	# security fix (#64230)
-	epatch ${FILESDIR}/${P}-bmp_secure.patch
-	epatch ${FILESDIR}/${P}-loaders.patch
+	epatch "${FILESDIR}"/${P}-bmp_secure.patch
+	epatch "${FILESDIR}"/${P}-loaders.patch
 	# reject corrupt bmps (#64230)
-	epatch ${FILESDIR}/${P}-bmp_reject_corrupt.patch
+	epatch "${FILESDIR}"/${P}-bmp_reject_corrupt.patch
 
+	#update libtool, else we get the "relink bug"
+	elibtoolize
 }
 
 src_compile() {
-	#allow to build on mipslinux systems
-	gnuconfig_update
-
-	local myconf
-	#update libtool, else we get the "relink bug"
-	elibtoolize
-
-	use doc && myconf="--enable-gtk-doc" \
-		|| myconf="--disable-gtk-doc"
+	local myconf=""
 	use mmx || myconf="${myconf} --disable-mmx"
-	econf --sysconfdir=/etc/X11/gdk-pixbuf ${myconf}  || die
+	econf \
+		--sysconfdir=/etc/X11/gdk-pixbuf \
+		$(use_enable doc gtk-doc) \
+		${myconf} \
+		|| die
 
 	#build needs to be able to
 	#connect to an X display.
@@ -64,5 +61,5 @@ src_install() {
 	chmod a+rx ${D}/usr/$(get_libdir)/gdk-pixbuf/loaders
 	chmod a+r ${D}/usr/$(get_libdir)/gdk-pixbuf/loaders/*
 
-	dodoc AUTHORS COPYING* ChangeLog INSTALL README NEWS TODO
+	dodoc AUTHORS ChangeLog INSTALL README NEWS TODO
 }
