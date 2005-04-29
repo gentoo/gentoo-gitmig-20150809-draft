@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/XML-Grove
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Grove/ChangeLog,v 1.13 2005/04/29 15:56:00 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Grove/ChangeLog,v 1.14 2005/04/29 22:25:10 swegener Exp $
+
+  29 Apr 2005; Sven Wegener <swegener@gentoo.org>
+  XML-Grove-0.46_alpha-r1.ebuild:
+  Fixed SRC_URI.
 
   29 Apr 2005; Michael Cummings <mcummings@gentoo.org>
   -XML-Grove-0.46_alpha.ebuild, XML-Grove-0.46_alpha-r1.ebuild:
