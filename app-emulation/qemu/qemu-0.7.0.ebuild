@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-0.7.0.ebuild,v 1.2 2005/04/28 21:05:54 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-0.7.0.ebuild,v 1.3 2005/04/29 13:59:00 lu_zero Exp $
 
 inherit eutils flag-o-matic linux-mod
 
@@ -102,10 +102,16 @@ src_install() {
 	if use kqemu ; then
 #if use kqemu || use qvm86; then
 		linux-mod_src_install
-	fi
-	if use kqemu ; then
+
+		# udev rule
+		dodir /etc/udev/rules.d/
+		echo 'KERNEL="kqemu*",           NAME="%k", GROUP="qemu", MODE="0660"' \
+			> ${D}/etc/udev/rules.d/48-qemu.rules
+		enewgroup qemu
+
 		# Module doc
 		dodoc ${S}/kqemu/README
+
 	fi
 }
 
@@ -125,7 +131,6 @@ pkg_postinst() {
 		einfo "and http://fabrice.bellard.free.fr/qemu/qemu-accel.html"
 		einfo "if you want it released under GPL"
 		linux-mod_pkg_postinst
-		einfo "make sure you have the kernel module loaded before running"
-		einfo "qemu"
+		einfo "make sure you have the kernel module loaded before running qemu"
 	fi
 }
