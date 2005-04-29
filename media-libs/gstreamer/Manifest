@@ -4,12 +4,12 @@ Hash: SHA1
 MD5 ac832308ff65da62e5106207d991c87c gstreamer-0.8.1.ebuild 2182
 MD5 fba41fba3e573b788bab61d24c36af1f gstreamer-0.8.9-r1.ebuild 2808
 MD5 648d0d2817efa61471dc0c28ee7a27d9 gstreamer-0.8.8.ebuild 2193
-MD5 65503dea2c991279e8e4dfd54ca3fdd4 gstreamer-0.8.9-r3.ebuild 3012
+MD5 1ebae132c765e0ec3ae8b2f3bc2983f4 gstreamer-0.8.9-r3.ebuild 3010
 MD5 5e025d896f851f83d6fb44b6658b74a4 gstreamer-0.8.5.ebuild 2191
 MD5 abf62d66d038341af9fd3f7baae1003a gstreamer-0.8.7.ebuild 2156
 MD5 898c7bf46170e72b9e6945a6401aebab gstreamer-0.8.3-r1.ebuild 2287
 MD5 6f1c0340861bed0ad970748e211f5a73 gstreamer-0.8.9-r2.ebuild 2910
-MD5 83b1f4896fd3c32f5d4a3545bd1de7ab ChangeLog 13693
+MD5 c76cee2da2654e1b18479532a5c5f2c4 ChangeLog 13794
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 d219e0115125181e4730a98f86ca463b files/digest-gstreamer-0.8.3-r1 69
 MD5 7f5ad30642cb2c0af9d64ac11c9dabb2 files/digest-gstreamer-0.8.9-r1 69
@@ -25,9 +25,9 @@ MD5 26c3b4e584edb9b835fbe421dc950ea3 files/digest-gstreamer-0.8.5 69
 MD5 b37a41b09ac79fad924ab6233b4724f5 files/digest-gstreamer-0.8.7 69
 MD5 825ffa19cfde6dde54aca626be3a8b11 files/digest-gstreamer-0.8.8 69
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCb3yW06ebR+OMO78RAmvsAJ4r/6J18ie4wLEYvMfHqEzuZJZHNQCfS6Pb
-kyG1xVTeB5KnVsPV2jMfR20=
-=PW/n
+iD8DBQFCcrq7KRy60XGEcJIRArMGAJ93+oeqrqDf0bZffByebcqsvfH+UACgmapj
+eDu45uYuK5vFbrrlibih96I=
+=OVKj
 -----END PGP SIGNATURE-----

@@ -6,8 +6,8 @@ MD5 b0df605d5bba6c16eb7c94ad9859630c gst-plugins-0.8.2.ebuild 1871
 MD5 b02d9d0f103e964960fd97b2f107fae9 gst-plugins-0.8.8-r2.ebuild 2168
 MD5 4d7330ab641498e301c9b0697bc9c8bf gst-plugins-0.8.1.ebuild 2253
 MD5 cc26e45cd840601105c37359fc434a8c gst-plugins-0.8.5-r1.ebuild 2020
-MD5 f8a29a25984483986755f2d2ee718609 ChangeLog 13989
-MD5 75afc15ce6c1b59be2a2d63f3e1ef754 gst-plugins-0.8.8.ebuild 1942
+MD5 b4f1517b6c0fb08d6cd4db98d8b6aefb ChangeLog 14089
+MD5 4930984217ac3a7494d05654ae0d41ac gst-plugins-0.8.8.ebuild 1940
 MD5 3e6a724afd82f75a69f551d4b976303b gst-plugins-0.8.3.ebuild 1869
 MD5 6cf6f97e79b43eaf70fa938c431342a3 metadata.xml 181
 MD5 d4dde2cb238164f6f0e2a4b64ae52daa gst-plugins-0.8.8-r1.ebuild 2037
@@ -26,9 +26,9 @@ MD5 187dd1210be84f747699a2d2bd11fd0b files/gst-plugins-0.8.5-tcp.patch 1059
 MD5 c6e69d419de61401529c6e3000271e1b files/gst-plugins-0.8.0-audioconvert_stereo.patch 4437
 MD5 2a2cbe69a3c199ac03a66ae707700d70 files/gst-plugins-0.8.8-qtdemux.diff.gz 5379
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCb4Ae06ebR+OMO78RAgixAJ0YBi0e11ZJNJUi7Ljf7XBui7MfZgCbBKFx
-C9pmgCnT1Pypjobs7FSyEAQ=
-=Pfv8
+iD8DBQFCcruKKRy60XGEcJIRAv2/AJ0bxBHH/GeHkzzV36XutmTnE5kELACfdI6Y
+/b7DmOEpGq4fnYKWPLhZ/Lg=
+=aAOg
 -----END PGP SIGNATURE-----
