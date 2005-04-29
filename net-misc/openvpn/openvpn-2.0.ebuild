@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/openvpn-2.0.ebuild,v 1.1 2005/04/29 17:03:08 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/openvpn-2.0.ebuild,v 1.2 2005/04/29 18:22:57 luckyduck Exp $
 
 inherit gnuconfig
 
@@ -61,4 +61,13 @@ src_install() {
 		cp -r sample-{config-files,keys,scripts} ${D}${sampledir}
 		cp -r contrib/ ${D}${sampledir}
 	fi
+}
+
+pkg_postinst() {
+	einfo "The init.d script that comes with OpenVPN now expects"
+	einfo "configuration files and all supporting files such as keys"
+	einfo "in /etc/openvpn."
+	ewarn "This version of OpenVPN is NOT COMPATIBLE with older versions!"
+	ewarn "If you need compatibility with a version < 2 please emerge"
+	ewarn "that one."
 }
