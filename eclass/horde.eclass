@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/horde.eclass,v 1.17 2005/04/22 21:42:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/horde.eclass,v 1.18 2005/04/29 22:17:53 vapier Exp $
 #
 # Help manage the horde project http://www.horde.org/
 #
@@ -80,7 +80,7 @@ horde_pkg_setup() {
 			HORDE_PHP_FEATURES=${HORDE_PHP_FEATURES:2}
 		fi
 		if ! built_with_use ${param} mod_php ${HORDE_PHP_FEATURES} ; then
-			eerror "You MUST re-emerge ${phpver} with at least one of"
+			eerror "You MUST re-emerge mod_php with at least one of"
 			eerror "the following options in your USE:"
 			eerror " ${HORDE_PHP_FEATURES}"
 			die "current mod_php install cannot support ${HORDE_PN}"
