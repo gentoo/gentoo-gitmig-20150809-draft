@@ -1,6 +1,16 @@
-MD5 86b300ae848430ebae6b87a242870257 ChangeLog 614
-MD5 12e6c9d02d98854a8f555334d5d175df Term-ANSIColor-1.08.ebuild 589
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 90dfaf6ad16de2485553d6a669f64b23 ChangeLog 793
+MD5 2dee62a3cda472610e2e2a1ba2f28ab1 Term-ANSIColor-1.08.ebuild 589
 MD5 67b6799b738b7a84d037805b17ff7ec1 metadata.xml 416
-MD5 369beeff86833f2f71743ebc50dfccdb Term-ANSIColor-1.09.ebuild 476
+MD5 b82308e670b94cc8456d06f729b4095b Term-ANSIColor-1.09.ebuild 591
 MD5 0020fd9df00e62086c3af62f4df9956f files/digest-Term-ANSIColor-1.08 65
 MD5 bb7940ecd96a935d61fcc35e5b36bee7 files/digest-Term-ANSIColor-1.09 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCcjiFtG5z4I8BtQoRAp7YAJ9OPbZS1yVGcqcjbyZ3Y20JGaUFlwCeN27p
+v2DJPa6uD2OKdm0mUtDif2M=
+=oLas
+-----END PGP SIGNATURE-----
