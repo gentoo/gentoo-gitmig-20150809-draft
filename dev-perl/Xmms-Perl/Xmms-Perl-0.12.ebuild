@@ -1,12 +1,12 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Xmms-Perl/Xmms-Perl-0.12.ebuild,v 1.9 2004/09/14 07:29:43 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Xmms-Perl/Xmms-Perl-0.12.ebuild,v 1.10 2005/04/29 16:11:13 mcummings Exp $
 
 inherit perl-module eutils
 
 DESCRIPTION="A Perl extension interface to XMMS"
 HOMEPAGE="http://www.cpan.org/modules/by-module/Xmms/${P}.readme"
-SRC_URI="http://www.cpan.org/modules/by-module/Xmms/${P}.tar.gz"
+SRC_URI="mirror://cpan/authors/id/D/DO/DOUGM/${P}.tar.gz"
 
 LICENSE="Artistic"
 SLOT="0"

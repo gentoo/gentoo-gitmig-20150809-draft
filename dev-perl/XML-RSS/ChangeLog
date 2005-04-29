@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/XML-RSS
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-RSS/ChangeLog,v 1.9 2005/03/09 18:40:18 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-RSS/ChangeLog,v 1.10 2005/04/29 16:07:06 mcummings Exp $
+
+*XML-RSS-1.05 (29 Apr 2005)
+
+  29 Apr 2005; Michael Cummings <mcummings@gentoo.org> -XML-RSS-1.02.ebuild,
+  XML-RSS-1.04.ebuild, +XML-RSS-1.05.ebuild:
+  Cleaning for mirror syntax
 
   09 Mar 2005; Markus Rothe <corsair@gentoo.org> XML-RSS-1.04.ebuild:
   Added ~ppc64 to KEYWORDS
