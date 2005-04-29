@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.5.20050421.ebuild,v 1.4 2005/04/28 08:07:44 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.5.20050421.ebuild,v 1.5 2005/04/29 16:20:01 corsair Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -1043,18 +1043,16 @@ crosscompile_setup() {
 			powerpc64*)
 				export CFLAGS_ppc="${CFLAGS_ppc--m32}"
 				export CHOST_ppc="powerpc-unknown-linux-gnu"
-				export CDEFINE_ppc=""
+				export CDEFINE_ppc="__powerpc__"
 				export LIBDIR_ppc="lib"
 
 				export CFLAGS_ppc64="${CFLAGS_ppc64--m64}"
 				export CHOST_ppc64="powerpc64-unknown-linux-gnu"
-				export CDEFINE_ppc64=""
+				export CDEFINE_ppc64="__powerpc64__"
 				export LIBDIR_ppc64="lib64"
 
 				export MULTILIB_ABIS="ppc64"
 				export DEFAULT_ABI="ppc64"
-
-				die "ppc64 crosscompile not yet supported.  Bug a ppc64 dev to fill in the CDEFINE values in the glibc ebuild."
 			;;
 			sparc64*)
 				export CFLAGS_sparc32="${CFLAGS_sparc--m32}"

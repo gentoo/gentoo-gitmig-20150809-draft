@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.342 2005/04/28 08:07:44 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.343 2005/04/29 16:20:01 corsair Exp $
+
+  29 Apr 2005; Markus Rothe <corsair@gentoo.org>
+  glibc-2.3.4.20050125.ebuild, glibc-2.3.4.20050125-r1.ebuild,
+  glibc-2.3.5.ebuild, glibc-2.3.5.20050421.ebuild:
+  Filed in the values for CDEFINE on ppc64; bug #88749
 
   28 Apr 2005; Markus Rothe <corsair@gentoo.org> glibc-2.3.5.ebuild,
   glibc-2.3.5.20050421.ebuild:
