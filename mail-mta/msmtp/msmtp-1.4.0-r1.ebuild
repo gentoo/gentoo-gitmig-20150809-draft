@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/msmtp/msmtp-1.4.0-r1.ebuild,v 1.1 2005/04/25 15:22:29 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/msmtp/msmtp-1.4.0-r1.ebuild,v 1.2 2005/04/29 22:47:37 slarti Exp $
 
 inherit mailer
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/msmtp/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~amd64 ~sparc ~ppc64 ~alpha"
-IUSE="ssl gnutls sasl mailwrapper doc"
+IUSE="ssl gnutls sasl doc"
 DEPEND="virtual/libc
 	dev-util/pkgconfig
 	ssl? (
@@ -18,9 +18,6 @@ DEPEND="virtual/libc
 		!gnutls? ( >=dev-libs/openssl-0.9.6 )
 	)
 	sasl? ( >=virtual/gsasl-0.2.4 )"
-RDEPEND="mailwrapper? ( >=net-mail/mailwrapper-0.2 )
-	!mailwrapper? ( !virtual/mta )"
-PROVIDE="virtual/mta"
 
 src_compile () {
 	local myconf
