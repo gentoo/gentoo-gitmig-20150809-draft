@@ -2,7 +2,15 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>dotnet</herd>
-<maintainer>
-  <email>latexer@gentoo.org</email>
-</maintainer>
+	<maintainer>
+		<email>latexer@gentoo.org</email>
+	</maintainer>
+	<maintainer>
+		<email>ramereth@gentoo.org</email>
+		<name>Lance Albertson</name>
+	</maintainer>
+	<longdescription lang="en">
+		XSP is a standalone web server written in C# that can be used to run
+		your ASP.NET applications.
+	</longdescription>
 </pkgmetadata>
