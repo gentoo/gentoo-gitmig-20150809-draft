@@ -1,14 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a4d1237c65c38a4998ffd4aed03a0346 libmcrypt-2.5.7.ebuild 890
 MD5 9d54578085d1f25a278f9464995f3211 ChangeLog 3748
+MD5 06711d40f1c409cb8c3daf7d5b888794 libmcrypt-2.5.7.ebuild 876
 MD5 b0d485ea1a51fb83c70daedef2599272 metadata.xml 279
 MD5 2bd84b4dd5ae60eb157dd0972ccda77e files/digest-libmcrypt-2.5.7 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFCGRIqM+I1L6GK/u4RAoLRAKCEXkUjSklB3zMzItacyflBOXDxEgCeO0C9
-dMETBq0ojlgMVbDK1wWzo0M=
-=oWpW
------END PGP SIGNATURE-----
+MD5 4addd4c629433b66b873addcdf8f6cbb files/libmcrypt-2.5.7-m4.patch 274
