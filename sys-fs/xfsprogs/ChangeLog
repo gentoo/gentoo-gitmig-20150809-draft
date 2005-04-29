@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/xfsprogs
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsprogs/ChangeLog,v 1.33 2005/04/29 08:45:46 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsprogs/ChangeLog,v 1.34 2005/04/29 15:42:34 corsair Exp $
+
+  29 Apr 2005; Markus Rothe <corsair@gentoo.org> xfsprogs-2.6.25.ebuild:
+  Stable on ppc64
 
   29 Apr 2005; Hanno Boeck <hanno@gentoo.org> +files/xfsprogs_gcc4.gz,
   xfsprogs-2.6.25.ebuild:
