@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/paralogger
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/paralogger/ChangeLog,v 1.5 2004/12/05 15:57:26 pyrania Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/paralogger/ChangeLog,v 1.6 2005/04/29 21:00:06 wormo Exp $
+
+  29 Apr 2005; Stephanie Lockwood-Childs <wormo@gentoo.org>
+  paralogger-1.0.3.ebuild:
+  mark ~ppc
 
   05 Dec 2004; Markus Nigbur <pyrania@gentoo.org> paralogger-1.0.3.ebuild:
   HOMEPAGE updated.

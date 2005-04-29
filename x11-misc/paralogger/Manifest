@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 0bb2ddbecb07ef421e09271be12f2975 ChangeLog 697
-MD5 17283265457e18fd3367f89a82e454bb paralogger-1.0.3.ebuild 927
+MD5 bbb6a5b55bb788f37177ecfbf08a64cf ChangeLog 795
 MD5 854ad93ffa90b305b1f1f87592698ed8 metadata.xml 167
+MD5 1eabfeca713030eb391c91b5db39a76e paralogger-1.0.3.ebuild 930
 MD5 d29c92dfb9085213d2f0f1916b91a119 files/digest-paralogger-1.0.3 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBsy/wI7fK2cqeyXkRAmDtAKDyixBYWf7t9pyCFPerk0+GusAqMACeNTOU
-Wv2b4FzOMQZ4YB4ANi1KyUU=
-=pXsN
------END PGP SIGNATURE-----

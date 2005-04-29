@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/paralogger/paralogger-1.0.3.ebuild,v 1.5 2004/12/05 15:57:26 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/paralogger/paralogger-1.0.3.ebuild,v 1.6 2005/04/29 21:00:06 wormo Exp $
 
 DESCRIPTION="Bourne shell script to "tail" the system log(s) in borderless transparent Eterm(s)"
 HOMEPAGE="http://gtk.no/paralogger"
@@ -9,7 +9,7 @@ SRC_URI="http://freshmeat.net/redir/paralogger/12441/url_tgz/paralogger-1.0.3.ta
 LICENSE="GPL-2"
 SLOT="0"
 
-KEYWORDS="x86"
+KEYWORDS="x86 ~ppc"
 IUSE=""
 DEPEND="x11-terms/eterm
 	app-misc/colortail"
