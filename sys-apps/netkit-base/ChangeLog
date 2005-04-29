@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/netkit-base
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/netkit-base/ChangeLog,v 1.24 2004/06/30 22:11:03 agriffis Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/netkit-base/ChangeLog,v 1.25 2005/04/29 10:42:33 azarah Exp $
+
+  29 Apr 2005; Martin Schlemmer <azarah@gentoo.org>
+  +files/003_all_netkit-base-0.17-gcc4.patch.bz2,
+  +files/004_all_netkit-base-0.17-misc-fixes.patch.bz2:
+  Add gcc4 patch from bug #89345.  Add some other misc fixes from my own.
 
   30 Jun 2004; Aron Griffis <agriffis@gentoo.org> netkit-base-0.17-r8.ebuild:
   sync IUSE (+build)

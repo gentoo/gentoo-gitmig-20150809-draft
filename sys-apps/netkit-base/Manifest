@@ -1,7 +1,19 @@
-MD5 b1f0c4dba54a7f9d25442b92c8a4589b ChangeLog 3982
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 16f9f6cfe937e7f3bcf6a52d9d1c2f17 ChangeLog 4213
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 e1fb4407613c7df9285bc22e6903d869 netkit-base-0.17-r8.ebuild 1311
 MD5 a6d426736cbb3c0534504a6e2d041b36 files/001_alpha_netkit-base-0.17-ping-fix.patch.bz2 686
-MD5 93d4bc3300be01ea835abfc46863d005 files/002_all_netkit-base-0.17-wrong-byte-fix.patch.bz2 425
 MD5 a770366b91d1b0e666ed61ccfff827bc files/digest-netkit-base-0.17-r8 67
+MD5 93d4bc3300be01ea835abfc46863d005 files/002_all_netkit-base-0.17-wrong-byte-fix.patch.bz2 425
 MD5 9fd363583a8d1e68d34ff81fcf74c034 files/inetd.rc6 580
+MD5 809c07c7f0ff80b272ee8e2b1249c63c files/004_all_netkit-base-0.17-misc-fixes.patch.bz2 722
+MD5 1e5771fef89d824942c9b812bf03a4cf files/003_all_netkit-base-0.17-gcc4.patch.bz2 286
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCchDG1ZcsMnZjRyIRAtQpAKCGU595cNFRC08QcD0wsTH/ZVa0cwCfYcnR
+xVc606Qs6PQ1i+DcsXc+GCo=
+=GZz9
+-----END PGP SIGNATURE-----
