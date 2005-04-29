@@ -1,0 +1,11 @@
+# ChangeLog for sci-electronics/qucs
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/qucs/ChangeLog,v 1.1 2005/04/29 18:29:54 cryos Exp $
+
+*qucs-0.0.5 (29 Apr 2005)
+
+  29 Apr 2005; Marcus D. Hanwell <cryos@gentoo.org> +metadata.xml,
+  +qucs-0.0.5.ebuild:
+  Initial import, based on the ebuild submitted by Samir van de Sand
+  <s.vandesand@web.de>, closing bug 53119.
+

@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 73f19a3c6b8be37a24f18f2fd22fe089 qucs-0.0.5.ebuild 626
+MD5 f8bb1913b738953e3a348850ebbdfbe3 ChangeLog 441
+MD5 be48e2112e63800bb96299dd194e44dd metadata.xml 589
+MD5 45116807536e2f6afe44270a834734cd files/digest-qucs-0.0.5 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD4DBQFCcn1XntT9W3vfTuoRArIlAJdZhl2qAl9X093gluQyor0e0cRuAKCovRkb
+afY+dZLuH4aQU0QmK6I3WA==
+=Kr0E
+-----END PGP SIGNATURE-----
