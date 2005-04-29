@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-tools/madwifi-tools-0.1_pre20050420.ebuild,v 1.1 2005/04/26 21:38:36 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-tools/madwifi-tools-0.1_pre20050420.ebuild,v 1.2 2005/04/29 18:14:37 solar Exp $
 
 DESCRIPTION="Wireless tools for Atheros chipset a/b/g cards"
 HOMEPAGE="http://madwifi.sourceforge.net/"
@@ -22,7 +22,7 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	sed -i -e 's/err(1, ifr.ifr_name);/err(1, "%s", ifr.ifr_name);'/g tools/athstats.c
+	sed -i -e 's/err(1, ifr.ifr_name);/err(1, "%s", ifr.ifr_name);'/g ${S}/athstats.c
 }
 
 src_install() {
