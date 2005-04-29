@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/resin-3.0.12.ebuild,v 1.2 2005/04/19 14:03:56 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/resin-3.0.12.ebuild,v 1.3 2005/04/29 14:31:00 luckyduck Exp $
 
 inherit java-pkg eutils
 
@@ -21,6 +21,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/${PV}/wrapper.pl.diff
+	epatch ${FILESDIR}/${PV}/gentoo.diff
 }
 
 pkg_preinst() {
@@ -40,8 +41,8 @@ pkg_preinst() {
 }
 
 src_compile() {
-	./configure --prefix=${D}${RESIN_HOME}
-	make
+	./configure --prefix=${D}${RESIN_HOME} || die "configure failed"
+	make || die "make failed"
 }
 
 src_install() {
