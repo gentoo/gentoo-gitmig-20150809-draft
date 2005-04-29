@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.167 2005/04/16 07:05:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.168 2005/04/29 03:59:15 vapier Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -176,7 +176,6 @@ epatch() {
 	if [ "$#" -gt 1 ]
 	then
 		local m=""
-		einfo "${#} patches to apply ..."
 		for m in "$@" ; do
 			epatch "${m}"
 		done
