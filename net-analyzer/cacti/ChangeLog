@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/cacti
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/ChangeLog,v 1.41 2005/03/15 14:00:06 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/ChangeLog,v 1.42 2005/04/29 17:44:39 mholzer Exp $
+
+*cacti-0.8.6d (29 Apr 2005)
+
+  29 Apr 2005; Martin Holzer <mholzer@gentoo.org> +cacti-0.8.6d.ebuild:
+  Version bumped.
 
   15 Mar 2005; Aaron Walker <ka0ttic@gentoo.org> files/postinstall-en.txt:
   More updates to postinst-en.txt for bug 83673. Thanks to Jakub Moc for

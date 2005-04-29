@@ -28,7 +28,10 @@ Upgrading
    shell> mysqldump -l --add-drop-table cacti > mysql.cacti
 2. Backup your rra/ directory and any custom scripts in your scripts/
    directory.
-3. Edit ${MY_INSTALLDIR}/include/config.php, and confirm that the MySQL user,
+3. Copy ${MY_INSTALLDIR}/include/config-sample.php to config.php
+   And modify the MySQL user, password and database for your cacti
+   configuration.
+4. Edit ${MY_INSTALLDIR}/include/config.php, and confirm that the MySQL user,
    password and database is correct for your cacti configuration.
    
    Example:
@@ -36,7 +39,7 @@ Upgrading
         \$database_hostname = "localhost";
         \$database_username = "cactiuser";
         \$database_password = "cacti";
-4. Point your web browser to: http://your-server/cacti/
+5. Point your web browser to: http://your-server/cacti/
    Select "Upgrade:.
    Make sure to fill in all of the path variables carefully and
    correctly on the following screen.
