@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/libao
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libao/ChangeLog,v 1.47 2005/03/26 03:00:40 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libao/ChangeLog,v 1.48 2005/04/29 21:35:00 flameeyes Exp $
+
+*libao-0.8.6-r1 (29 Apr 2005)
+
+  29 Apr 2005; Diego Pettenò <flameeyes@gentoo.org> +libao-0.8.6-r1.ebuild:
+  Added a new revision for libao which builds fine on systems where dlopen()
+  is not in libdl.
 
   25 Mar 2005; Hardave Riar <hardave@gentoo.org> libao-0.8.5.ebuild:
   Stable on mips.
