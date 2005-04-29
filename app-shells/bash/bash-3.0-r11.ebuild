@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-3.0-r10.ebuild,v 1.1 2005/04/29 04:16:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-3.0-r11.ebuild,v 1.1 2005/04/29 22:21:50 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -50,8 +50,6 @@ src_unpack() {
 	# the environment because INPUTRC will override even after the
 	# user creates a ~/.inputrc
 	epatch "${FILESDIR}"/${P}-etc-inputrc.patch
-	# Add preexec support #31414
-	epatch "${DISTDIR}"/bash-2.05b-preexec-0.3.diff.gz
 	# Fix network tests on Darwin #79124
 	epatch "${FILESDIR}"/${P}-darwin-conn.patch
 	# A bunch of fixes from fedora
