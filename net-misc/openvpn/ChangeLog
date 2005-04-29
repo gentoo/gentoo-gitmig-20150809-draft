@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/openvpn
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/ChangeLog,v 1.26 2005/04/29 18:22:57 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/ChangeLog,v 1.27 2005/04/29 18:35:44 luckyduck Exp $
+
+  29 Apr 2005; Jan Brinkmann <luckyduck@gentoo.org> metadata.xml:
+  herd -> secure-tunneling
 
   29 Apr 2005; Jan Brinkmann <luckyduck@gentoo.org> openvpn-2.0.ebuild:
   added a compatibility warning.
