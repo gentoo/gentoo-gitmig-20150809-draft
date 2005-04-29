@@ -1,18 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ca89dd7bcc6c382c590ef5540abd4eba locale-maketext-1.09.ebuild 654
 MD5 589d1c9686af2f6b3d2ae24239fb3f3e ChangeLog 2132
+MD5 ca89dd7bcc6c382c590ef5540abd4eba locale-maketext-1.09.ebuild 654
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 80bc12d9559df133e62d2691bad27dba locale-maketext-1.08.ebuild 732
-MD5 20cb2e3c1b4fe7925dd8436710b91ab0 locale-maketext-1.06.ebuild 731
-MD5 8279355d476ffd80e57623938958f690 files/digest-locale-maketext-1.06 71
-MD5 8a975fbff9a95e168dc4d2c029617d4f files/digest-locale-maketext-1.08 71
 MD5 a3b5536c5be2c15a2cc26f8cf4271ddc files/digest-locale-maketext-1.09 71
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCbKVXKf2g/qXtneoRAu9JAJwMU2GDmJD3BkusDi2qbnmiXUhXIgCfVlnY
-aHwzGidbC/92kIyGSontrbw=
-=jsH9
------END PGP SIGNATURE-----

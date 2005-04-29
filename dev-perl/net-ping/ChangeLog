@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/net-ping
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/net-ping/ChangeLog,v 1.7 2004/12/30 19:04:59 ciaranm Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/net-ping/ChangeLog,v 1.8 2005/04/29 17:45:21 mcummings Exp $
+
+  29 Apr 2005; Michael Cummings <mcummings@gentoo.org> net-ping-2.31.ebuild:
+  Cleaning for mirror syntax
 
   30 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance

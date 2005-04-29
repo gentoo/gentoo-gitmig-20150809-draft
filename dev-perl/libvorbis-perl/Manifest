@@ -1,4 +1,6 @@
 MD5 1240fd564dbfab756a203a6cf77eeb5c ChangeLog 892
-MD5 126aadac8e47c0b90bcfa0d15d90d49c libvorbis-perl-0.04.ebuild 600
+MD5 0935346edab036442af8c61a345e8f2a libvorbis-perl-0.04.ebuild 583
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 696bbd1ca05f4ca2ba757e3c02a3a671 libvorbis-perl-0.05.ebuild 474
 MD5 c58c3fd7d4ebf456c65599b3bf8afe6c files/digest-libvorbis-perl-0.04 70
+MD5 90394f0d8c0914758d8f598c9a805c68 files/digest-libvorbis-perl-0.05 70
