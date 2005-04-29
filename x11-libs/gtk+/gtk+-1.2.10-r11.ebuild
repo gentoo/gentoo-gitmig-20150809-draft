@@ -1,9 +1,9 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-1.2.10-r11.ebuild,v 1.17 2005/03/21 03:42:32 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-1.2.10-r11.ebuild,v 1.18 2005/04/29 01:02:18 vapier Exp $
 
 GNOME_TARBALL_SUFFIX="gz"
-inherit gnome.org eutils libtool gnuconfig toolchain-funcs
+inherit gnome.org eutils libtool toolchain-funcs
 
 DESCRIPTION="The GIMP Toolkit"
 HOMEPAGE="http://www.gtk.org/"
@@ -11,7 +11,7 @@ SRC_URI="${SRC_URI} http://www.ibiblio.org/gentoo/distfiles/gtk+-1.2.10-r8-gento
 
 LICENSE="LGPL-2.1"
 SLOT="1"
-KEYWORDS="x86 ppc ~sparc mips alpha arm hppa amd64 ia64 ppc64"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 ~sparc x86"
 IUSE="nls debug"
 
 RDEPEND="virtual/x11
@@ -22,26 +22,24 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${P}.tar.gz
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-m4.patch
 
-	cd ${S}/..
-	epatch ${DISTDIR}/gtk+-1.2.10-r8-gentoo.diff.bz2
+	cd "${S}"/..
+	epatch "${DISTDIR}"/gtk+-1.2.10-r8-gentoo.diff.bz2
 
 	# locale fix by sbrabec@suse.cz
-	cd ${S}
-	epatch ${FILESDIR}/${PN}-1.2-locale_fix.patch
+	cd "${S}"
+	epatch "${FILESDIR}"/${PN}-1.2-locale_fix.patch
 
-	# Required for Mac OS X
-	gnuconfig_update
+	elibtoolize
 }
 
 src_compile() {
-	elibtoolize
-
 	local myconf=
 	use nls || myconf="${myconf} --disable-nls"
 
-	if use debug
-	then
+	if use debug ; then
 		myconf="${myconf} --enable-debug=yes"
 	else
 		myconf="${myconf} --enable-debug=minimum"
@@ -57,7 +55,7 @@ src_compile() {
 }
 
 src_install() {
-	make install DESTDIR=${D} || die
+	make install DESTDIR="${D}" || die
 
 	preplib /usr
 
@@ -70,7 +68,7 @@ src_install() {
 
 	#install nice, clean-looking gtk+ style
 	insinto /usr/share/themes/Gentoo/gtk
-	doins ${FILESDIR}/gtkrc
+	doins "${FILESDIR}"/gtkrc
 }
 
 pkg_postinst() {
