@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/ImageInfo/ImageInfo-1.16.ebuild,v 1.7 2005/04/27 13:38:21 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/ImageInfo/ImageInfo-1.16.ebuild,v 1.8 2005/04/29 14:13:10 gustavoz Exp $
 
 inherit perl-module
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.cpan.org/modules/by-module/Image/${MY_P}.readme"
 
 SLOT="0"
 LICENSE="Artistic"
-KEYWORDS="x86 ~amd64 ppc ~sparc alpha ~ppc64"
+KEYWORDS="x86 ~amd64 ppc sparc alpha ~ppc64"
 IUSE=""
 
 DEPEND="${DEPEND}
