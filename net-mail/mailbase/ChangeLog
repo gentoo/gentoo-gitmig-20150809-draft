@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/mailbase
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailbase/ChangeLog,v 1.44 2005/04/11 17:20:30 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailbase/ChangeLog,v 1.45 2005/04/29 16:37:33 ferdy Exp $
+
+  29 Apr 2005; Fernando J. Pereda <ferdy@gentoo.org> mailbase-1.ebuild:
+  make it respect USE pam, wrt #90870. Reported by: Nuno Alexandre
+  <ikaro@fluxbox.org>
 
 *mailbase-0.00-r9 (11 Apr 2005)
 

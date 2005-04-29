@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailbase/mailbase-1.ebuild,v 1.1 2005/04/29 13:07:50 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailbase/mailbase-1.ebuild,v 1.2 2005/04/29 16:37:33 ferdy Exp $
 
 DESCRIPTION="MTA layout package"
 SRC_URI=""
@@ -11,7 +11,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~ppc-macos ~s390 ~sparc ~x86"
 IUSE="pam"
 
-RDEPEND="virtual/pam"
+RDEPEND="pam? ( virtual/pam )"
 
 S=${WORKDIR}
 
