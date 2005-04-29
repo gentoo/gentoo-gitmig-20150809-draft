@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/PlRPC
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PlRPC/ChangeLog,v 1.17 2004/06/25 00:55:28 agriffis Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PlRPC/ChangeLog,v 1.18 2005/04/29 01:58:27 mcummings Exp $
+
+*PlRPC-0.2018 (29 Apr 2005)
+
+  29 Apr 2005; Michael Cummings <mcummings@gentoo.org> -PlRPC-0.2016.ebuild,
+  +PlRPC-0.2018.ebuild:
+  cleaning for mirror syntax
 
   01 Jun 2004; Tom Gall <tgall@gentoo.org> PlRPC-0.2016-r1.ebuild:
   stable on ppc64, bug #52701
