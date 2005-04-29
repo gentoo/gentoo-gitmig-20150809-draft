@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/xfsprogs
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsprogs/ChangeLog,v 1.32 2005/03/30 00:25:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsprogs/ChangeLog,v 1.33 2005/04/29 08:45:46 hanno Exp $
+
+  29 Apr 2005; Hanno Boeck <hanno@gentoo.org> +files/xfsprogs_gcc4.gz,
+  xfsprogs-2.6.25.ebuild:
+  Add patch to compile with gcc4 (from upstream cvs).
 
   30 Mar 2005; Mike Frysinger <vapier@gentoo.org> xfsprogs-2.6.25.ebuild:
   Clean up and add ppc64 KEYWORDS.

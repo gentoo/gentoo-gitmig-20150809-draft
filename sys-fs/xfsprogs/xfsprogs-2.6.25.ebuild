@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsprogs/xfsprogs-2.6.25.ebuild,v 1.11 2005/03/30 00:25:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsprogs/xfsprogs-2.6.25.ebuild,v 1.12 2005/04/29 08:45:46 hanno Exp $
 
 inherit flag-o-matic eutils
 
@@ -20,6 +20,8 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	cd ${S}
+
+	epatch ${FILESDIR}/xfsprogs_gcc4.gz
 
 	# temp work around till a _syscall6() exists. bug #73855
 	use uclibc && epatch ${FILESDIR}/2.6.25-uclibc-fadvise.patch
