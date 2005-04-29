@@ -1,18 +1,18 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/net-ssh-perl/net-ssh-perl-1.23.ebuild,v 1.8 2004/10/16 23:57:25 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/net-ssh-perl/net-ssh-perl-1.27.ebuild,v 1.1 2005/04/29 19:23:28 mcummings Exp $
 
 inherit perl-module
 
 MY_P=Net-SSH-Perl-${PV}
 S=${WORKDIR}/${MY_P}
 DESCRIPTION="Perl client Interface to SSH"
-SRC_URI="http://www.cpan.org/modules/by-authors/id/B/BT/BTROTT/${MY_P}.tar.gz"
-HOMEPAGE="http://www.cpan.org/modules/by-authors/id/B/BT/BTROTT/${MY_P}.readme"
+HOMEPAGE="http://search.cpan.org/~drolsky/${MY_P}.tar.gz"
+SRC_URI="http://search.cpan.org/CPAN/authors/id/D/DB/DBROBINS/${MY_P}.tar.gz"
 
 SLOT="0"
 LICENSE="|| ( Artistic GPL-2 )"
-KEYWORDS="x86 ~alpha ~ppc ~sparc ~mips"
+KEYWORDS="~x86 ~alpha ~ppc ~sparc ~mips"
 IUSE=""
 
 DEPEND="dev-perl/Math-GMP

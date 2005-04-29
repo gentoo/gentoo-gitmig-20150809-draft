@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/net-ssh-perl
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/net-ssh-perl/ChangeLog,v 1.5 2004/06/25 00:50:43 agriffis Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/net-ssh-perl/ChangeLog,v 1.6 2005/04/29 19:23:28 mcummings Exp $
+
+*net-ssh-perl-1.27 (29 Apr 2005)
+
+  29 Apr 2005; Michael Cummings <mcummings@gentoo.org>
+  -net-ssh-perl-1.23.ebuild, net-ssh-perl-1.25.ebuild,
+  +net-ssh-perl-1.27.ebuild:
+  Cleaning for mirror syntax
 
 *net-ssh-perl-1.25 (29 Mar 2004)
 
