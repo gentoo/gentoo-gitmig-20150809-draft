@@ -1,6 +1,10 @@
 # ChangeLog for sys-process/psmisc
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/psmisc/ChangeLog,v 1.8 2005/04/09 13:23:40 corsair Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-process/psmisc/ChangeLog,v 1.9 2005/04/29 23:06:25 vapier Exp $
+
+  29 Apr 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/psmisc-21.6-scanf.patch, psmisc-21.6.ebuild:
+  Add a patch to use valid C98/C99 scanf (i.e. fix pstree for uClibc).
 
   09 Apr 2005; Markus Rothe <corsair@gentoo.org> psmisc-21.5.ebuild:
   Stable on ppc64
