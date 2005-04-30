@@ -1,6 +1,11 @@
 # ChangeLog for dev-php/mod_php
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/ChangeLog,v 1.224 2005/04/23 23:28:28 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/ChangeLog,v 1.225 2005/04/30 15:36:12 beu Exp $
+
+  30 Apr 2005; Elfyn McBratney <beu@gentoo.org>
+  files/4.3.11-r2/70_mod_php.conf:
+  Fix syntax in files/4.3.11-r2/70_mod_php.conf (arguments must be file names
+  not extensions).
 
   24 Apr 2005; Guy Martin <gmsoft@gentoo.org> mod_php-4.3.11.ebuild:
   Stable on hppa.
