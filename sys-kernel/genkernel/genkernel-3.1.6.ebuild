@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-3.1.6.ebuild,v 1.1 2005/04/01 03:22:14 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-3.1.6.ebuild,v 1.2 2005/04/30 23:50:44 plasmaroo Exp $
 
 VERSION_DMAP='1.00.17'
 VERSION_DMRAID='1.0.0.rc6'
@@ -16,7 +16,7 @@ SRC_URI="http://dev.gentoo.org/~plasmaroo/patches/kernel/genkernel/${P}.tar.bz2
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64 s390 ppc64"
-IUSE="bootsplash livecd"
+IUSE="bootsplash livecd ibm"
 
 DEPEND="sys-fs/e2fsprogs
 	x86? ( bootsplash? ( media-gfx/bootsplash ) )
@@ -31,6 +31,7 @@ src_install() {
 	cp ${S}/genkernel.conf ${D}/etc
 
 	dodir /usr/share/genkernel
+	use ibm && cp ${S}/ppc64/kernel-2.6-pSeries ${S}/ppc64/kernel-2.6 || cp ${S}/ppc64/kernel-2.6.g5 ${S}/ppc64/kernel-2.6
 	cp -Rp ${S}/* ${D}/usr/share/genkernel
 
 	dodir /usr/bin
