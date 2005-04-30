@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-linux-tools/vmware-linux-tools-4.5.2.ebuild,v 1.2 2005/04/30 21:26:48 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-linux-tools/vmware-linux-tools-5.0.0.ebuild,v 1.1 2005/04/30 21:26:48 stuart Exp $
 
 inherit eutils
 
@@ -9,7 +9,8 @@ HOMEPAGE="http://www.vmware.com/"
 
 # the vmware-tools sources are part of the vmware virtual machine;
 # they must be installed by hand
-SRC_URI="http://www.vmware/com/${PN}.tar.gz"
+MY_PN="VMwareTools-5.0.0-13124"
+SRC_URI="http://www.vmware.com/${MY_PN}.tar.gz"
 LICENSE="vmware"
 SLOT="0"
 KEYWORDS="~x86"

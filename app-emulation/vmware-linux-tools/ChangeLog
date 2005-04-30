@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/vmware-linux-tools
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-linux-tools/ChangeLog,v 1.1 2005/02/18 00:38:09 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-linux-tools/ChangeLog,v 1.2 2005/04/30 21:26:48 stuart Exp $
+
+*vmware-linux-tools-5.0.0 (30 Apr 2005)
+
+  30 Apr 2005; Stuart Herbert <stuart@gentoo.org> +files/5.0.0/locations,
+  +files/5.0.0/vmware-linux-tools, +files/5.0.0/xorg.conf,
+  vmware-linux-tools-4.5.2.ebuild, +vmware-linux-tools-5.0.0.ebuild:
+  Initial import
 
 *vmware-linux-tools-4.5.2 (18 Feb 2005)
 
