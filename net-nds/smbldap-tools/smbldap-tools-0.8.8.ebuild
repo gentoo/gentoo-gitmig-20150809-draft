@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/smbldap-tools/smbldap-tools-0.8.6.ebuild,v 1.2 2005/04/30 16:25:48 satya Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/smbldap-tools/smbldap-tools-0.8.8.ebuild,v 1.1 2005/04/30 16:25:48 satya Exp $
 
 
 inherit eutils
@@ -39,8 +39,6 @@ src_install() {
 	exeinto /etc/samba ; doexe smbldap_tools.pm
 	eval `perl '-V:installarchlib'`
 	dodir ${installarchlib}
-	#dosym /etc/samba/smbldap_conf.pm ${installarchlib}
-	#dosym /etc/samba/smbldap_conf.pm ${sbin_dir}
 	dosym /etc/samba/smbldap_tools.pm ${installarchlib}
 	dosym /etc/samba/smbldap_tools.pm ${sbin_dir}
 	#scripts
@@ -51,6 +49,7 @@ src_install() {
 	#docs
 	dodoc CONTRIBUTORS COPYING ChangeLog FILES INFRA INSTALL README TODO
 }
+
 pkg_postinst() {
 	draw_line "                                                           "
 	einfo "A good howto is found on http://samba.idealx.org"
