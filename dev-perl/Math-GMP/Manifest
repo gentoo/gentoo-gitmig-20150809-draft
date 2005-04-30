@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 4c1d630be3feee1b25ee66e7fe8cc1a7 ChangeLog 1221
 MD5 f5b0b3a069d09670af72bea648c9f84d Math-GMP-2.03.ebuild 550
-MD5 0b19c078abfd4e5509c0a39e4f3aab31 Math-GMP-2.04.ebuild 522
+MD5 893c03baf9e9e6804ee8623a23bb07ee ChangeLog 1313
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 1411e5c6d34ada7c6fb14086237edb48 files/digest-Math-GMP-2.03 64
+MD5 093b0fdf9c4f53fcfb1b2fee738bb3b1 Math-GMP-2.04.ebuild 518
 MD5 38263f076c31e00d03395879c7d25a82 files/digest-Math-GMP-2.04 64
+MD5 1411e5c6d34ada7c6fb14086237edb48 files/digest-Math-GMP-2.03 64
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCcXv1tG5z4I8BtQoRAlV5AKCNOEwV6eo7t0183y2IMPzzvktRpACeICTI
-do2TmwFrSMMwB9hzxZpw0Dw=
-=/vzB
+iD8DBQFCc2xqKf2g/qXtneoRAq3KAKCjx0pbMs1a6eUzD6whteXVGPUrwQCfekuG
+RoVHHvg/tLMW3/yUXz1329A=
+=Yj2d
 -----END PGP SIGNATURE-----

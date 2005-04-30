@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 12938316e7e76361dc50fe85d2bd6374 ChangeLog 1236
-MD5 e238b0f7549210c5014e7bc67d6f8a0a Text-Shellwords-1.00.ebuild 682
-MD5 3df95a4711b20441e7b304da9f118261 Text-Shellwords-1.07.ebuild 661
+MD5 44a24bfcfff1b11804b02eff7b136a15 ChangeLog 1337
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 42cc7633a9defc28bf0f42d610bb987e files/digest-Text-Shellwords-1.00 70
+MD5 a2310fc2ed0bf6abffa8d35f124699fd Text-Shellwords-1.07.ebuild 657
+MD5 e238b0f7549210c5014e7bc67d6f8a0a Text-Shellwords-1.00.ebuild 682
 MD5 9f5fdc9ff2b09670e75a64150fbf09e1 files/digest-Text-Shellwords-1.07 70
+MD5 42cc7633a9defc28bf0f42d610bb987e files/digest-Text-Shellwords-1.00 70
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCck95tG5z4I8BtQoRAqozAJ9LLjVSRhvZ2aR1xGDyALCgZZGuwwCfQu3N
-AzMn10WnCEhQz9oTJuHHDek=
-=KSEK
+iD8DBQFCc2VfKf2g/qXtneoRAgdMAJ4yLuzahOEOWz3WCYYtBeIWTmWYkQCeKYTn
+MbgTxoZ5DaHN46w3acbPZZk=
+=fviv
 -----END PGP SIGNATURE-----
