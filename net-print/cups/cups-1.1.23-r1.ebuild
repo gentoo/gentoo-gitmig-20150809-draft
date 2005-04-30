@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.1.23-r1.ebuild,v 1.8 2005/02/07 03:44:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.1.23-r1.ebuild,v 1.9 2005/04/30 09:15:31 blubb Exp $
 
 inherit eutils flag-o-matic
 
@@ -36,6 +36,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/disable-strip.patch
+	use amd64 && epatch ${FILESDIR}/cups-gcc4-amd64.patch #79791
 	( cd pdftops; epatch ${FILESDIR}/xpdf-goo-sizet.patch )
 	( cd pdftops; epatch ${FILESDIR}/cups-1.1.22-xpdf2-underflow.patch )
 	( cd pdftops; epatch ${FILESDIR}/xpdf-pl3.patch )

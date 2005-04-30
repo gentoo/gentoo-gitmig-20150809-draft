@@ -1,6 +1,10 @@
 # ChangeLog for net-print/cups
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.127 2005/04/28 14:38:15 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.128 2005/04/30 09:15:31 blubb Exp $
+
+  30 Apr 2005; Simon Stelling <blubb@gentoo.org>
+  +files/cups-gcc4-amd64.patch, cups-1.1.23-r1.ebuild:
+  added DieMumiee's patch to fix bug #79791
 
   28 Apr 2005; Heinrich Wendel <lanius@gentoo.org> files/cupsd.rc6:
   revert 'use samba' again, it was the wrong way around
