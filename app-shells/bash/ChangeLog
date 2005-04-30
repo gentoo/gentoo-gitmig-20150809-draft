@@ -1,6 +1,10 @@
 # ChangeLog for app-shells/bash
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.62 2005/04/30 00:08:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.63 2005/04/30 07:00:26 vapier Exp $
+
+  30 Apr 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/bash-3.0-trap-fg-signals.patch, bash-3.0-r11.ebuild:
+  Add patch to handle trapped signals in scripts better.
 
   30 Apr 2005; Mike Frysinger <vapier@gentoo.org> +files/dot-bash_logout,
   +files/dot-bash_profile, +files/dot-bashrc, bash-3.0-r11.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-3.0-r11.ebuild,v 1.2 2005/04/30 00:08:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-3.0-r11.ebuild,v 1.3 2005/04/30 07:00:26 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -56,6 +56,8 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-{afs,crash,jobs,manpage,pwd,read-e-segfault,ulimit}.patch
 	# Fix read-builtin and the -u pipe option #87093
 	epatch "${FILESDIR}"/${P}-read-builtin-pipe.patch
+	# Don't barf on handled signals in scripts
+	epatch "${FILESDIR}"/${P}-trap-fg-signals.patch
 
 	# Enable SSH_SOURCE_BASHRC (#24762)
 	echo '#define SSH_SOURCE_BASHRC' >> config-top.h
