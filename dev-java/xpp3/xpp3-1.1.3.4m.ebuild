@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xpp3/xpp3-1.1.3.4m.ebuild,v 1.1 2005/03/08 14:40:55 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xpp3/xpp3-1.1.3.4m.ebuild,v 1.2 2005/04/30 21:05:25 luckyduck Exp $
 
 inherit java-pkg
 
@@ -13,15 +13,14 @@ SRC_URI="http://www.extreme.indiana.edu/dist/java-repository/xpp3/distributions/
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64 ~ppc"
 IUSE="doc jikes junit"
 
 DEPEND=">=virtual/jdk-1.4
-		app-arch/unzip
-		junit? ( dev-java/junit )
-		jikes? ( dev-java/jikes )
-		dev-java/ant"
-
+	app-arch/unzip
+	junit? ( dev-java/junit )
+	jikes? ( dev-java/jikes )
+	dev-java/ant"
 RDEPEND=">=virtual/jre-1.4"
 
 S=${WORKDIR}/${MY_P}
@@ -37,7 +36,7 @@ src_compile() {
 src_install() {
 	cp build/${MY_P}.jar ${PN}.jar
 	java-pkg_dojar ${PN}.jar
-	if use doc; then
-		java-pkg_dohtml -r doc/
-	fi
+
+	use doc && java-pkg_dohtml -r doc/
+	use source && java-pkg_dosrc src/java/*
 }
