@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/libquicktime-0.9.4.ebuild,v 1.6 2005/04/29 22:42:28 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/libquicktime-0.9.4.ebuild,v 1.7 2005/04/30 16:14:37 flameeyes Exp $
 
 inherit libtool eutils
 
@@ -28,7 +28,7 @@ DEPEND=">=sys-apps/sed-4.0.5
 PROVIDE="virtual/quicktime"
 
 pkg_setup() {
-	if has_version xorg-x11 && ! built_with_use xorg-x11 xv; then
+	if has_version xorg-x11 && ! built_with_use xorg-x11 opengl; then
 		die "You need xv support to compile ${PN}."
 	fi
 }
