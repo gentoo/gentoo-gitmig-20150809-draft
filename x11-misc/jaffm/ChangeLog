@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/jaffm
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/jaffm/ChangeLog,v 1.5 2004/06/24 22:25:43 agriffis Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/jaffm/ChangeLog,v 1.6 2005/04/30 16:37:15 pythonhead Exp $
+
+  30 Apr 2005; Rob Cakebread <pythonhead@gentoo.org> jaffm-0.9.7.ebuild,
+  jaffm-1.0.ebuild:
+  Fixed dependency for wxGTK
 
   11 Apr 2004; Markus Nigbur <pyrania@gentoo.org> jaffm-0.9.7.ebuild,
   jaffm-1.0.ebuild:
