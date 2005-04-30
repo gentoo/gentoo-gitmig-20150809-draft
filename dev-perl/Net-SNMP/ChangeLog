@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Net-SNMP
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-SNMP/ChangeLog,v 1.21 2005/04/08 18:16:29 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-SNMP/ChangeLog,v 1.22 2005/04/30 11:24:08 kloeri Exp $
+
+  30 Apr 2005; Bryan Østergaard <kloeri@gentoo.org> Net-SNMP-5.0.0.ebuild:
+  Stable on alpha.
 
   08 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> Net-SNMP-4.1.2.ebuild:
   Stable on ppc.

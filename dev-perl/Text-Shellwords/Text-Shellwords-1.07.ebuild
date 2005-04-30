@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-Shellwords/Text-Shellwords-1.07.ebuild,v 1.5 2005/04/29 15:14:47 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-Shellwords/Text-Shellwords-1.07.ebuild,v 1.6 2005/04/30 11:00:32 kloeri Exp $
 
 IUSE=""
 
@@ -16,6 +16,6 @@ HOMEPAGE="http://search.cpan.org/~lds/${P}"
 
 SLOT="0"
 LICENSE="|| ( Artistic GPL-2 )"
-KEYWORDS="x86 ~amd64 ~ppc sparc ~alpha"
+KEYWORDS="x86 ~amd64 ~ppc sparc alpha"
 
 SRC_TEST="do"

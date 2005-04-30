@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-DNS/Net-DNS-0.48.ebuild,v 1.3 2005/04/29 00:33:10 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-DNS/Net-DNS-0.48.ebuild,v 1.4 2005/04/30 11:28:41 kloeri Exp $
 
 inherit perl-module
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://search.cpan.org/~crein/${P}/"
 
 SLOT="0"
 LICENSE="Artistic"
-KEYWORDS="x86 ~amd64 ~ppc sparc ~alpha ~ia64 ~hppa ~ppc64"
+KEYWORDS="x86 ~amd64 ~ppc sparc alpha ~ia64 ~hppa ~ppc64"
 IUSE=""
 
 SRC_TEST="do"

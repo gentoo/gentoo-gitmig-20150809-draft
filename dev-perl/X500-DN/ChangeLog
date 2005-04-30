@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/X500-DN
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/X500-DN/ChangeLog,v 1.4 2005/04/28 18:41:13 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/X500-DN/ChangeLog,v 1.5 2005/04/30 11:18:17 kloeri Exp $
+
+  30 Apr 2005; Bryan Østergaard <kloeri@gentoo.org> X500-DN-0.28.ebuild:
+  Stable on alpha.
 
   28 Apr 2005; Michael Cummings <mcummings@gentoo.org> X500-DN-0.28.ebuild:
   Bumping for x86 and sparc

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Netmask/Net-Netmask-1.9011.ebuild,v 1.5 2005/04/28 17:47:41 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Netmask/Net-Netmask-1.9011.ebuild,v 1.6 2005/04/30 11:26:20 kloeri Exp $
 
 inherit perl-module
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://search.cpan.org/author/MUIR/${P}/"
 
 SLOT="0"
 LICENSE="Artistic"
-KEYWORDS="x86 ~amd64 ~ppc sparc ~alpha ~mips"
+KEYWORDS="x86 ~amd64 ~ppc sparc alpha ~mips"
 IUSE=""
 
 mydoc="TODO"
