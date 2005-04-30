@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/bogofilter/bogofilter-0.94.4.ebuild,v 1.1 2005/04/13 21:02:28 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/bogofilter/bogofilter-0.94.6.ebuild,v 1.1 2005/04/30 09:33:56 tove Exp $
 
 inherit eutils
 
@@ -67,10 +67,14 @@ src_install() {
 
 
 pkg_postinst() {
+	ewarn ""
 	ewarn "Incompatible changes in bogofilter-0.93 and -0.94:"
 	ewarn "Please read the documentation (RELEASE.NOTES, README.db)!"
-	einfo "If you need ${ROOT}use/bin/bf_tar please install app-arch/pax."
+	ewarn ""
 	ebeep
+	einfo "If you need ${ROOT}usr/bin/bf_tar please install app-arch/pax."
+	einfo ""
 	einfo "Contributed tools and documentation is in ${ROOT}usr/share/${PN}/contrib"
 	einfo "beside documentation in ${ROOT}usr/share/doc/${PF}."
+	einfo ""
 }
