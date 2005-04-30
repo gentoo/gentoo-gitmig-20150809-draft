@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/net-server
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/net-server/ChangeLog,v 1.9 2005/04/29 17:46:08 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/net-server/ChangeLog,v 1.10 2005/04/30 13:21:30 mcummings Exp $
+
+*net-server-0.87-r1 (30 Apr 2005)
+
+  30 Apr 2005; Michael Cummings <mcummings@gentoo.org>
+  net-server-0.85.ebuild, +net-server-0.87-r1.ebuild:
+  Added dep for IO-Multiplex, bug 71536
 
   29 Apr 2005; Michael Cummings <mcummings@gentoo.org>
   net-server-0.85.ebuild, net-server-0.87.ebuild:

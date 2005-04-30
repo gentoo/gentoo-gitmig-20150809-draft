@@ -1,16 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 ee8a03fd0da9a620f10541adf9723103 ChangeLog 1142
+MD5 25469d787b6a0a555aabf97a5749020d ChangeLog 1328
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 cbae4d74fd537f0662251b1677b5011c net-server-0.85.ebuild 607
+MD5 3fabf39e6151989447295930d75c99f7 net-server-0.85.ebuild 608
 MD5 7f518e0e22eaa659b1446300b006c66d net-server-0.87.ebuild 593
+MD5 8c578d4ba9d278c2d384def79c8b4731 net-server-0.87-r1.ebuild 598
 MD5 792d1ec217d44781e9d154e69f665156 files/digest-net-server-0.85 66
 MD5 8fc233c7ca183bb3aedc37e423b3fc8b files/digest-net-server-0.87 66
+MD5 8fc233c7ca183bb3aedc37e423b3fc8b files/digest-net-server-0.87-r1 66
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCcnLytG5z4I8BtQoRAmqFAJ9HoljUgh0sfVb1QlwoWQNXQIYECgCfWWb2
-Evy5WsqIBwC4Wt2iU4essD0=
-=kyaK
+iD8DBQFCc4ZitG5z4I8BtQoRAsnsAKCF/CFSkxFcl6pQgYaFhBAyC0bfgwCfayt+
+7rSkcefjhE5c52FaxAcyqpQ=
+=mhxj
 -----END PGP SIGNATURE-----
