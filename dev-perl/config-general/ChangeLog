@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/config-general
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/config-general/ChangeLog,v 1.10 2005/04/28 19:25:23 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/config-general/ChangeLog,v 1.11 2005/04/30 10:22:52 kloeri Exp $
+
+  30 Apr 2005; Bryan Østergaard <kloeri@gentoo.org>
+  config-general-2.27.ebuild:
+  Stable on alpha.
 
   28 Apr 2005; Michael Cummings <mcummings@gentoo.org>
   -config-general-2.26.ebuild, config-general-2.27.ebuild:
