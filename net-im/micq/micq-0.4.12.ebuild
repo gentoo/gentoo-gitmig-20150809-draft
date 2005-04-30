@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/micq/micq-0.4.12.ebuild,v 1.5 2005/04/25 06:06:20 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/micq/micq-0.4.12.ebuild,v 1.6 2005/04/30 09:15:47 luckyduck Exp $
 
 IUSE="tcltk ssl"
 
@@ -11,22 +11,21 @@ HOMEPAGE="http://www.micq.org/"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="x86 alpha sparc ~ppc ~amd64"
+KEYWORDS="x86 alpha sparc ~ppc amd64"
 DEPEND="virtual/libc
 	ssl? ( >=net-libs/gnutls-0.8.10
 		dev-libs/openssl )"
 
 src_compile() {
-
-	econf `use_enable tcltk tcl` \
-		`use_enable ssl` \
+	econf \
+		$(use_enable tcltk tcl) \
+		$(use_enable ssl) \
 		|| die "econf failed"
-	emake || die
+	emake || die "make failed"
 }
 
 src_install() {
+	make DESTDIR=${D} install || die "make install failed"
 
-	make DESTDIR=${D} install || die
-
-	dodoc COPYING AUTHORS ChangeLog FAQ INSTALL NEWS README TODO
+	dodoc AUTHORS ChangeLog FAQ INSTALL NEWS README TODO
 }
