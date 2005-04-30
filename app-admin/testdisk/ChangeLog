@@ -1,6 +1,15 @@
 # ChangeLog for app-admin/testdisk
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/testdisk/ChangeLog,v 1.9 2005/03/02 08:30:16 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/testdisk/ChangeLog,v 1.10 2005/04/30 02:05:43 dragonheart Exp $
+
+*testdisk-5.7 (30 Apr 2005)
+
+  30 Apr 2005; Daniel Black <dragonheart@gentoo.org> testdisk-5.2.ebuild,
+  -testdisk-5.3.ebuild, -testdisk-5.5.ebuild, testdisk-5.6.ebuild,
+  +testdisk-5.7.ebuild:
+  Version bump. better descriptions added. old versions removed. added
+  reiserfs USE flag to include/exclude a reiserfs libs as per bug
+  #84514 by Alexey Maximov <amax@mail.ru>.
 
 *testdisk-5.6 (02 Mar 2005)
 

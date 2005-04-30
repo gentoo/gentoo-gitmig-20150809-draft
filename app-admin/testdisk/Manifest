@@ -1,20 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 cb834051313b104105ec1b68b8fa35f0 ChangeLog 1296
-MD5 9686c8002b3424dcdf6593002043f3a5 testdisk-5.2.ebuild 846
-MD5 a5818ffbec80e52fcf6d5f3931cbdc74 testdisk-5.3.ebuild 852
+MD5 6d293e7f0d874710e6dbf854f4770faa ChangeLog 1672
+MD5 3b5ab848512552ec85c39ad4cc8f5e58 testdisk-5.2.ebuild 888
 MD5 e18eb10540dc80dac5f436b82cd48528 metadata.xml 398
-MD5 e441337bd103cb8235ded2d18548fed0 testdisk-5.5.ebuild 828
-MD5 42675d5e3d1c83dc0db64ac4a68d2f6e testdisk-5.6.ebuild 828
+MD5 fd5d2716e87ec07b3ed10ad791c03fd1 testdisk-5.6.ebuild 869
+MD5 2ad80f3c5129cee2c5639203c25b6196 testdisk-5.7.ebuild 1017
 MD5 c20ec4c0b429ad420cd79fa49b334e24 files/digest-testdisk-5.2 64
-MD5 ae3fa6940aea5b018c3377fbcdae2981 files/digest-testdisk-5.3 64
-MD5 2bc23dc07ae34d8c00f3f33a0be0968e files/digest-testdisk-5.5 64
 MD5 4f353df18ee5ea31402682ab6df29f39 files/digest-testdisk-5.6 64
+MD5 38ac24202d2e5ac3b576956cca428e4e files/digest-testdisk-5.7 64
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCJXmemdTrptrqvGERAmlDAJ4yuuBjRxTNG8/J99qNu2ByTVdw6QCfTUjN
-rtN6R/uuENiot1yzArHCfDw=
-=6pF0
+iD8DBQFCcugBmdTrptrqvGERAiN3AJ4nuTArlCC5X7kRBgObqq+zAu0GWwCgmyjz
+lI3Rq96ItCysahcX5cmKEXM=
+=IQMB
 -----END PGP SIGNATURE-----

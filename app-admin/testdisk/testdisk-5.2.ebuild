@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/testdisk/testdisk-5.2.ebuild,v 1.4 2005/01/01 11:31:34 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/testdisk/testdisk-5.2.ebuild,v 1.5 2005/04/30 02:05:43 dragonheart Exp $
 
-DESCRIPTION="Multi-platform tool to check and undelete partition, supports reiserfs, ntfs, fat32, ext2/3 and many others"
+DESCRIPTION="Multi-platform tool to check and undelete partition, supports reiserfs, ntfs, fat32, ext2/3 and many others. Also includes PhotoRec to recover pictures from digital camera memory."
 HOMEPAGE="http://www.cgsecurity.org/index.html?testdisk.html"
 SRC_URI="http://www.cgsecurity.org/${P}.tar.gz"
 LICENSE="GPL-2"
@@ -10,7 +10,6 @@ SLOT="0"
 KEYWORDS="x86"
 IUSE=""
 DEPEND=">=sys-fs/ntfsprogs-1.9.0
-	>=sys-fs/reiserfsprogs-3.6.13
 	>=sys-fs/e2fsprogs-1.35"
 
 src_compile() {
