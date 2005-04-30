@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/gdome2
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gdome2/ChangeLog,v 1.14 2005/04/22 09:28:06 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gdome2/ChangeLog,v 1.15 2005/04/30 10:44:08 kloeri Exp $
+
+  30 Apr 2005; Bryan Østergaard <kloeri@gentoo.org> gdome2-0.8.1-r1.ebuild:
+  ~alpha keyword.
 
   22 Apr 2005; Simon Stelling <blubb@gentoo.org> gdome2-0.8.1.ebuild:
   stable on amd64
