@@ -1,6 +1,6 @@
-# ChangeLog for dev-java/jsr088-bin
+# ChangeLog for dev-java/sun-j2ee-deployment-bin
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-j2ee-deployment-bin/ChangeLog,v 1.1 2005/04/30 15:42:35 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-j2ee-deployment-bin/ChangeLog,v 1.2 2005/04/30 18:23:27 swegener Exp $
 
 *jsr088-bin-1.1 (30 Apr 2005)
 
