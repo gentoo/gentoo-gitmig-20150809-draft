@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/hibernate-script/hibernate-script-1.07.ebuild,v 1.2 2005/04/30 14:15:50 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/hibernate-script/hibernate-script-1.07.ebuild,v 1.3 2005/04/30 15:21:16 brix Exp $
 
 inherit eutils
 
@@ -8,7 +8,7 @@ inherit eutils
 MY_P=${PN}-${PV/_/-}
 S=${WORKDIR}/${MY_P}
 
-DESCRIPTION="Hibernate script supporting suspend-to-ram and suspend-to-disk"
+DESCRIPTION="Hibernate script for suspend-to-ram and suspend-to-disk"
 
 HOMEPAGE="http://www.suspend2.net"
 SRC_URI="http://www.suspend2.net/downloads/all/${MY_P}.tar.gz"
@@ -41,9 +41,6 @@ src_unpack() {
 	# this 'hack' is needed in most cases
 	sed -i -e "s:^# \(SwitchToTextMode\):\1:" \
 		${S}/hibernate.conf
-
-	# let our init script handle informational messages
-	sed -i -e "s:^\(echo\):# \1:" ${S}/init.d/hibernate-cleanup.sh
 }
 
 src_install() {
