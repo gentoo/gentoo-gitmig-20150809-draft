@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/loudmouth
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/loudmouth/ChangeLog,v 1.25 2005/04/02 00:32:42 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/loudmouth/ChangeLog,v 1.26 2005/04/30 16:04:23 spider Exp $
+
+  30 Apr 2005; Spider <spider@gentoo.org> loudmouth-0.17.2-r2.ebuild:
+  bump to stable x86 to follow gnutls
 
   02 Apr 2005; Jason Wever <weeve@gentoo.org> loudmouth-0.17.1.ebuild:
   Stable on SPARC.
