@@ -1,4 +1,14 @@
-MD5 8b13574574f94851e5b8c9dcf2b54d4d ChangeLog 436
-MD5 050da9157ffd987b6a9fb729a48b34fe biblestudy-1.0.ebuild 914
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 410a469cb3915b0d437b3712e71e6d44 ChangeLog 549
+MD5 bd74af740ef529e01f39d7b9275fea0d biblestudy-1.0.ebuild 912
 MD5 76790bc57ed641dc79ad018411b179cf metadata.xml 224
 MD5 4ce3856aabaac60d563fce705a065065 files/digest-biblestudy-1.0 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCc7Uiz2gxt1z4IGYRAoUPAKC2et+XkJsY3MlGAA1yKpBNRwn/uACfTSO0
+pn31cdKMUa7svaVs3ZBf7TA=
+=tT/1
+-----END PGP SIGNATURE-----
