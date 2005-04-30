@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-icculus/quake2-icculus-0.16.1.ebuild,v 1.3 2005/04/29 02:32:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-icculus/quake2-icculus-0.16.1.ebuild,v 1.4 2005/04/30 06:14:20 vapier Exp $
 
 inherit eutils games
 
@@ -34,6 +34,8 @@ S=${WORKDIR}/${MY_P}
 src_unpack() {
 	unpack ${MY_P}.tar.gz
 	cd "${S}"
+	sed -i -e 's:BUILD_SOFTX:BUILD_X11:' Makefile
+	epatch "${FILESDIR}"/${P}-amd64.patch # make sure this is still needed in future versions
 	epatch "${FILESDIR}"/0.16-Makefile-gentoo-opts.patch
 	epatch "${FILESDIR}"/0.16-gentoo-path.patch
 	cat << EOF > src/linux/gentoo-paths.h
