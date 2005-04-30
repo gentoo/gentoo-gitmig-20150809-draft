@@ -1,0 +1,19 @@
+# ChangeLog for app-portage/g-cpan
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/g-cpan/ChangeLog,v 1.1 2005/04/30 22:19:39 mcummings Exp $
+
+*g-cpan-0.12 (30 Apr 2005)
+
+  30 Apr 2005; Michael Cummings <mcummings@gentoo.org> +metadata.xml,
+  +g-cpan-0.12.ebuild:
+  Initial import. Previously this package has lived inside the portage
+  tarball, but with a growing need to be able to push out changes quickly, we
+  can no longer afford for it to be tied to the development schedule of
+  portage (that and the portage devs don't like being asked hourly when the
+  next release of portage is going out just because I have a change in
+  g-cpan). Since until this point g-cpan has gone out with portage, which 
+  is keyworded for absolutely everything, I've imported the keywords for 
+  Digest::MD5, which for the time being we will make a dep. For those interested
+  in helping with g-cpan, send email to perl@gentoo.org or mcummings@gentoo.org.
+  I'd like to get rid of the dep on a configured CPAN :)
+
