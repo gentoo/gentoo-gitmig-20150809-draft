@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-3.0-r11.ebuild,v 1.1 2005/04/29 22:21:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-3.0-r11.ebuild,v 1.2 2005/04/30 00:08:01 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -122,6 +122,10 @@ src_install() {
 
 	insinto /etc/bash
 	doins "${FILESDIR}"/{bashrc,bash_logout}
+	insinto /etc/skel
+	for f in bash{_logout,_profile,rc} ; do
+		newins "${FILESDIR}"/dot-${f} .${f}
+	done
 
 	if use build ; then
 		rm -rf "${D}"/usr
