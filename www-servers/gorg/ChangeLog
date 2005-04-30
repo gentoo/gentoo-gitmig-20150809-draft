@@ -1,0 +1,10 @@
+# ChangeLog for www-servers/gorg
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-servers/gorg/ChangeLog,v 1.1 2005/04/30 06:02:23 ramereth Exp $
+
+*gorg-0.5 (30 Apr 2005)
+
+  30 Apr 2005; Lance Albertson <ramereth@gentoo.org> +metadata.xml,
+  +gorg-0.5.ebuild:
+  initial commit, thanks neysx for the initial ebuild
+
