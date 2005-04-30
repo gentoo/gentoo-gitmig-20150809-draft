@@ -44,7 +44,7 @@ diff -u -r1.23 pstree.c
                 * with the rest */
                /*printf("readbuf: %s\n", readbuf);*/
 -              if (sscanf(readbuf, "%*d (%15c", comm) == 1)
-+              if (sscanf(readbuf, "%*d (%[^)]", comm) == 1)
++              if (sscanf(readbuf, "%*d (%15[^)]", comm) == 1)
                {
                  /*printf("tmpptr: %s\n", tmpptr+2);*/
                  if (sscanf(tmpptr+2, "%*c %d", &ppid) == 1)

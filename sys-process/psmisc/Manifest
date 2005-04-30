@@ -11,4 +11,4 @@ MD5 277920d9195611033bc0e32e98474466 files/psmisc-21.5-selinux.diff.bz2 7783
 MD5 6f859fa9957d5cbc362d55aa098dfd0b files/digest-psmisc-21.6 63
 MD5 70563076a6e89ee1471085d19884f8c5 files/psmisc-21.6-nonls.patch 388
 MD5 b82b550c4133bb8a25ab43316ca04fc4 files/psmisc-21.6-selinux.diff.bz2 7709
-MD5 52e44060d281ae2aee5e7dfaaef1c2d3 files/psmisc-21.6-scanf.patch 1858
+MD5 c02f21e37725ecf3815688b08fb8606a files/psmisc-21.6-scanf.patch 1860
