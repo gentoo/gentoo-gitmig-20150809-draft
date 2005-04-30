@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cgkit/cgkit-2.0.0_alpha3-r1.ebuild,v 1.1 2005/04/22 12:11:44 chrb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cgkit/cgkit-2.0.0_alpha3-r2.ebuild,v 1.1 2005/04/30 17:32:11 chrb Exp $
 
 inherit distutils flag-o-matic
 
@@ -8,8 +8,6 @@ MY_P=${P/_/}
 DESCRIPTION="Python library for creating 3D images"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 HOMEPAGE="http://cgkit.sourceforge.net"
-# note: this could be split into depend/rdepend if someone takes the time
-# also many of these are optional. local use flags would be nice.
 DEPEND="dev-lang/python
 	dev-python/pyrex
 	dev-util/scons
@@ -29,9 +27,8 @@ S=${WORKDIR}/${MY_P}
 
 src_unpack() {
 	unpack ${A}
-	append-flags -fPIC
-	sed -i -e "s/CFLAGS = \"\"/CFLAGS = \"${CFLAGS}\"/" ${S}/supportlib/SConstruct
 	cd ${S}
+	sed -i -e "s/fPIC/fPIC\",\"${CFLAGS// /\",\"}/" supportlib/SConstruct
 	cp config_template.cfg config.cfg
 	echo 'LIBS += ["GL", "GLU", "glut"]' >> config.cfg
 	if use 3ds; then
@@ -39,6 +36,9 @@ src_unpack() {
 	fi
 	if use ogre; then
 		echo 'OGRE_AVAILABLE = True' >> config.cfg
+		echo 'INC_DIRS += ["/usr/include/OGRE"]' >> config.cfg
+		echo 'MACROS += [("EXT_HASH", None),("GCC_3_1",None)]' >> config.cfg
+		sed -i -e "s/#include <Math.h>//" wrappers/ogre/OgreCore.h
 	fi
 }
 

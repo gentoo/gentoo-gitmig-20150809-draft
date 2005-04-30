@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/cgkit
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cgkit/ChangeLog,v 1.7 2005/04/22 12:11:44 chrb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cgkit/ChangeLog,v 1.8 2005/04/30 17:32:11 chrb Exp $
+
+*cgkit-2.0.0_alpha3-r2 (30 Apr 2005)
+
+  30 Apr 2005; Chris Bainbridge <chrb@gentoo.org>
+  -cgkit-2.0.0_alpha3.ebuild, -cgkit-2.0.0_alpha3-r1.ebuild,
+  +cgkit-2.0.0_alpha3-r2.ebuild:
+  Fixed problems building with lib3ds and ogre support.
 
 *cgkit-2.0.0_alpha3-r1 (22 Apr 2005)
 
