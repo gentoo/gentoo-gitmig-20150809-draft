@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xsane/xsane-0.97.ebuild,v 1.1 2005/01/22 23:10:05 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xsane/xsane-0.97.ebuild,v 1.2 2005/04/30 09:17:33 kloeri Exp $
 
 DESCRIPTION="graphical scanning frontend"
 SRC_URI="http://www.xsane.org/download/${P}.tar.gz"
@@ -8,7 +8,7 @@ HOMEPAGE="http://www.xsane.org/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~amd64 ~sparc ~ppc64"
+KEYWORDS="~x86 ~ppc ~amd64 ~sparc ~ppc64 ~alpha"
 IUSE="gtk2 nls jpeg png tiff"
 
 DEPEND="media-gfx/sane-backends
