@@ -1,6 +1,40 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.134 2005/04/30 15:41:32 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.135 2005/04/30 16:04:42 dsd Exp $
+
+  30 Apr 2005; Daniel Drake <dsd@gentoo.org>
+  -files/gentoo-sources-2.4.20.78362.patch,
+  -files/gentoo-sources-2.4.20-CAN-2004-0685.patch,
+  -files/gentoo-sources-2.4.CAN-2004-0001.patch,
+  -files/gentoo-sources-2.4.20-CAN-2004-1056.patch,
+  -files/gentoo-sources-2.4.20-PaX-84167.patch,
+  -files/gentoo-sources-2.4.20-cs46xx-gcc33.patch,
+  -files/gentoo-sources-2.4.20-devfs-snd-fix.patch,
+  -files/gentoo-sources-2.4.20-fix-proc-mm.patch,
+  -files/gentoo-sources-2.4.20-gcc33.patch,
+  -files/gentoo-sources-2.4.20-grsec-datasize_fix.patch,
+  -files/gentoo-sources-2.4.20-grsec-disabled.patch,
+  -files/gentoo-sources-2.4.20-ipt-realm.patch,
+  -files/gentoo-sources-2.4.20-ipt-route.patch,
+  -files/gentoo-sources-2.4.20-mdcount.patch,
+  -files/gentoo-sources-2.4.20-munmap.patch,
+  -files/gentoo-sources-2.4.20-rtc_fix.patch,
+  -files/gentoo-sources-2.4.20-sched-interrupt.patch,
+  -files/gentoo-sources-2.4.20-smbfs.patch,
+  -files/gentoo-sources-2.4.CAN-2004-0010.patch,
+  -files/gentoo-sources-2.4.22-CAN-2004-0075.patch,
+  -files/gentoo-sources-2.4.I2C_Limits.patch,
+  -files/gentoo-sources-2.4.22-CAN-2004-1016.patch,
+  -files/gentoo-sources-2.4.22-kmsgdump.patch,
+  -files/gentoo-sources-2.4.22-rtc_fix.patch,
+  -files/gentoo-sources-2.4.22-vma.patch,
+  -files/gentoo-sources-2.4.CAN-2003-0643.patch,
+  -files/gentoo-sources-2.4.26-OpenSWAN-CompileFix.patch,
+  -files/gentoo-sources-2.4.CAN-2003-0985.patch,
+  -files/gentoo-sources-2.4.munmap.patch, -files/do_brk_fix.patch,
+  -files/security.patch1, -files/security.patch2, -files/security.patch3,
+  -files/security.patch4, -gentoo-sources-2.4.20-r33.ebuild:
+  Remove 2.4.20 and cleanout files/
 
 *gentoo-sources-2.6.11-r7 (30 Apr 2005)
 
