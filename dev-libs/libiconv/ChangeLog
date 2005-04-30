@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/libiconv
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libiconv/ChangeLog,v 1.9 2005/04/18 22:15:09 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libiconv/ChangeLog,v 1.10 2005/04/30 03:22:28 flameeyes Exp $
+
+*libiconv-1.9.2-r1 (30 Apr 2005)
+
+  30 Apr 2005; Diego Pettenò <flameeyes@gentoo.org> libiconv-1.9.2.ebuild,
+  +libiconv-1.9.2-r1.ebuild:
+  Added a new revision which is masked on fbsd systems and which uses chrpath
+  to remove rpath from iconv binary.
 
 *libiconv-1.9.2 (18 Apr 2005)
 
