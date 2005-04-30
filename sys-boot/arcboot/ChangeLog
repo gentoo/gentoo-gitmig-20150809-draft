@@ -1,6 +1,14 @@
 # ChangeLog for sys-boot/arcboot
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/arcboot/ChangeLog,v 1.5 2004/10/27 06:30:48 kumba Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/arcboot/ChangeLog,v 1.6 2005/04/30 05:21:02 kumba Exp $
+
+*arcboot-0.3.8.6 (30 Apr 2005)
+
+  30 Apr 2005; Joshua Kinard <kumba@gentoo.org> -files/arcboot-gentoo.patch,
+  -arcboot-0.3.8.2.ebuild, +arcboot-0.3.8.6.ebuild:
+  New arcboot revision with added patch from Onion that adds in an Interactive
+  shell (-i), isofs/romfs support, what appears to be compressed kernel support,
+  and other odd bits.
 
 *arcboot-0.3.8.4-r1 (27 Oct 2004)
 
