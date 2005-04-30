@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/trac
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/trac/ChangeLog,v 1.9 2005/04/20 21:49:00 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/trac/ChangeLog,v 1.10 2005/04/30 17:12:03 trapni Exp $
+
+  30 Apr 2005; Christian Parpart <trapni@gentoo.org> trac-0.8.1.ebuild:
+  stable on x86 and amd64
 
   20 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> trac-0.8.ebuild:
   Stable on ppc.
