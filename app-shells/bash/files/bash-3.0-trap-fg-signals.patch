@@ -14,7 +14,7 @@ patch by Martin Schlemmer <azarah@gentoo.org>
 -		  if (termsig && WIFSIGNALED (s) && termsig != SIGINT && termsig != SIGPIPE)
 -#endif
 +		  if (termsig && WIFSIGNALED (s) && termsig != SIGINT &&
-+#if !defined (DONT_REPORT_SIGPIPE)
++#if defined (DONT_REPORT_SIGPIPE)
 +		  termsig != SIGPIPE &&
 +#endif
 +		  signal_is_trapped (termsig) == 0)
