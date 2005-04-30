@@ -5,7 +5,7 @@ MD5 7f7feb247c305544c899366672599232 bash-3.0-r7.ebuild 4060
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 ded385d3c69da943b2f408c18b4c6c21 bash-3.0-r8.ebuild 3949
 MD5 761160a21f9a69be631b044d0be387e5 bash-3.0-r9.ebuild 4267
-MD5 98888d6d4c8955013e7da087b1ed3f99 bash-3.0-r11.ebuild 4828
+MD5 426f6a04533a1d5d9e1e7a4885051bbe bash-3.0-r11.ebuild 4761
 MD5 edf95b873162f4548435c379e4998b4e files/bash-2.05b-empty-herestring.patch 836
 MD5 90ba92c981c1d26e45d88ecd23a1fbf5 files/bash-2.05b-multibyte-locale.patch 1897
 MD5 3b905c7c9341c9009bd68f14c047815e files/bash-2.05b-rbash.patch 804
@@ -32,7 +32,7 @@ MD5 ccc195288edb06eb44f4d5e2a9c1da62 files/bash-3.0-crash.patch 1191
 MD5 edac0c7e2accd7f60d64d6361913db6e files/bash-3.0-darwin-conn.patch 983
 MD5 b3345c5274b7b08ce50dc5ec0aa11197 files/bash-3.0-read-e-segfault.patch 825
 MD5 00cd6ee276de4810e2209dc426b133e4 files/bash-3.0-ulimit.patch 2659
-MD5 09faf4bbe7fd8abc594b7f7225199cf7 files/digest-bash-3.0-r11 1049
+MD5 13a88fae79fed8f76999ec8fdca2f085 files/digest-bash-3.0-r11 976
 MD5 eea55a33e84dc42b1683592dc8113400 files/bash-3.0-afs.patch 428
 MD5 46c2816ee5909e997477063cdc050620 files/bash-3.0-manpage.patch 533
 MD5 4af330b479f27337b6e77fff11d6c468 files/bash_logout 132

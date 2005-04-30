@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-3.0-r11.ebuild,v 1.3 2005/04/30 07:00:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-3.0-r11.ebuild,v 1.4 2005/04/30 07:33:36 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -14,7 +14,6 @@ HOMEPAGE="http://cnswww.cns.cwru.edu/~chet/bash/bashtop.html"
 SRC_URI="mirror://gnu/bash/${P}.tar.gz
 	ftp://ftp.cwru.edu/pub/bash/${P}.tar.gz
 	mirror://gentoo/${P}-gentoo.diff.bz2
-	ftp://progn.org/pub/software/tools/bash-2.05b-preexec-0.3.diff.gz
 	$(for ((i=1; i<=PLEVEL; i++)); do
 		printf 'ftp://ftp.cwru.edu/pub/bash/bash-%s-patches/bash%s-%03d\n' \
 			${PV} ${PV/\.} ${i}
