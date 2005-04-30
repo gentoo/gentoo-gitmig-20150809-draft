@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 1b28047305edae924d4226cdc7c5610d File-MMagic-1.22.ebuild 541
-MD5 c6581d20061d588933af78db1e66641c ChangeLog 2843
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 a4ac26a3f8e3f2eb4416de2766d26d00 ChangeLog 2942
 MD5 21e19036241a926255d897b5c581180b File-MMagic-1.20.ebuild 523
-MD5 2a95ea18ecad96d66550ed3dc6a4e063 files/digest-File-MMagic-1.22 67
+MD5 2ee1497aa1cd8b836fad013657a28386 File-MMagic-1.22.ebuild 540
 MD5 2de3061fe344fbe9bafd13a72babc766 files/digest-File-MMagic-1.20 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCbptyKf2g/qXtneoRAv4CAKCp9YWDBRe/S5vyTRSmMvx8PKid6wCfe24W
-2uft85J7p6iyU3fnSzg34M0=
-=Fne1
------END PGP SIGNATURE-----
+MD5 2a95ea18ecad96d66550ed3dc6a4e063 files/digest-File-MMagic-1.22 67

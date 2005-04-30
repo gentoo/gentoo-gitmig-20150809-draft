@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 de9e153556628bf2ee68bd2ebfe06bd4 ChangeLog 4006
+MD5 05fb6a68082ed3516b87617a7e0360ab DBD-mysql-2.9003.ebuild 575
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 252c282718a3dced25e68033d664fc38 DBD-mysql-2.9003.ebuild 576
+MD5 8ad50673bef167a821b24da5543c04de ChangeLog 4105
 MD5 a6ae96f1686c621af79bc868a36a7415 DBD-mysql-2.1027.ebuild 562
 MD5 5cff6a3b35e40faf94472d7d9b11ed7b DBD-mysql-2.9006.ebuild 572
-MD5 5213da48718338e1d1164d1c5479d18b files/digest-DBD-mysql-2.9003 68
 MD5 7ecc1256ea43958c453832e0e11e5d1e files/digest-DBD-mysql-2.9006 68
 MD5 f40eecb7d598ce677826cb398539758f files/digest-DBD-mysql-2.1027 67
 MD5 1e7e8cdcdfe45851d63691a85f463762 files/makemaker.patch 398
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCbqWyKf2g/qXtneoRAnNbAJ94D6GfOS8pfXAcYvTWVhq4gg9OewCfbFuE
-p/Df0l3MJ1skpKfRgsJOTIM=
-=Fynt
------END PGP SIGNATURE-----
+MD5 5213da48718338e1d1164d1c5479d18b files/digest-DBD-mysql-2.9003 68
