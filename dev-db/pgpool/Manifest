@@ -1,21 +1,11 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 0dbae1ba89bba75dd017f188cc15cb84 pgpool-2.5.2.ebuild 902
-MD5 27a25ef82626990648a5173b737b83d0 pgpool-2.4.ebuild 871
-MD5 c3b7def1be4c6b94620361cda498a780 pgpool-2.5.1.ebuild 870
+MD5 7fb220a722778e440dfa9217f46ffd66 pgpool-2.5.2.ebuild 899
 MD5 f668ca138b20e0822cf44528b8ef4409 pgpool-2.5.ebuild 874
-MD5 571442fb925a8a834e6bbcb3d7ef3f2c ChangeLog 3408
 MD5 f8d3d207746da2a3cd14dcaab8daab76 metadata.xml 163
+MD5 553f81996f8ee2fa96fa4a32233bb56b ChangeLog 3499
+MD5 c3b7def1be4c6b94620361cda498a780 pgpool-2.5.1.ebuild 870
+MD5 27a25ef82626990648a5173b737b83d0 pgpool-2.4.ebuild 871
 MD5 8a60b75889b4ce03b548a1f3b2ed9711 files/pgpool.init 522
-MD5 b2a7353f5e93e8f27e73e36f78daf80a files/digest-pgpool-2.5.1 64
 MD5 ff7259ac67f0e172df7e51f0242c9db3 files/digest-pgpool-2.5.2 64
-MD5 bbb2f39537ff394ba22bb5f289e98092 files/digest-pgpool-2.4 62
 MD5 4632b93decc87a60d66cc18aa2dd20d2 files/digest-pgpool-2.5 62
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCcsOYKRy60XGEcJIRAuZzAJ9WmcnBi2RREoO7Bi84pl4+mw9DQgCglWD8
-EkNkKmxUM7lrlv5XUb4PLdc=
-=s1zo
------END PGP SIGNATURE-----
+MD5 bbb2f39537ff394ba22bb5f289e98092 files/digest-pgpool-2.4 62
+MD5 b2a7353f5e93e8f27e73e36f78daf80a files/digest-pgpool-2.5.1 64
