@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/jedit
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jedit/ChangeLog,v 1.52 2005/04/18 16:49:55 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jedit/ChangeLog,v 1.53 2005/04/30 00:31:41 compnerd Exp $
+
+  30 Apr 2005; Saleem Abdulrasool <compnerd@gentoo.org> jedit-4.2-r1.ebuild:
+  Changed dependency from ant to ant-core for 4.2-r1
 
   18 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> jedit-4.2.ebuild:
   Stable on ppc.
