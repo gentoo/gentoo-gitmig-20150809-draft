@@ -1,6 +1,12 @@
 # ChangeLog for net-nntp/pan
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/pan/ChangeLog,v 1.5 2005/04/29 13:25:49 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/pan/ChangeLog,v 1.6 2005/04/30 16:09:16 azarah Exp $
+
+*pan-0.14.2.91-r2 (30 Apr 2005)
+
+  30 Apr 2005; Martin Schlemmer <azarah@gentoo.org>
+  +files/pan-0.14.2.91-gcc4-2.patch, +pan-0.14.2.91-r2.ebuild:
+  Fix typo in gcc4 patch, bug #90943.
 
 *pan-0.14.2.91-r1 (29 Apr 2005)
 
