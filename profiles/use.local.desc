@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1126 2005/04/30 02:05:33 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1127 2005/04/30 04:57:04 kumba Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -760,6 +760,9 @@ sys-apps/tcng:tcsim - enable traffic simulator
 sys-apps/tinylogin:make-symlinks - Create all the appropriate symlinks in /bin and /sbin
 sys-apps/util-linux:old-crypt - build support for the older cryptoapi that earlier util-linux's included
 sys-block/partimage:nologin - Do not include login support
+sys-boot/arcboot:ip27 - Disables support for SGI Origin (IP27)
+sys-boot/arcboot:ip28 - Disables support for SGI Indigo2 Impact R10000 (IP28)
+sys-boot/arcboot:ip30 - Disables support for SGI Octane (IP30)
 sys-boot/arcboot:cobalt - Disables support for Cobalt Microserver hardware (Qube2/RaQ2)
 sys-boot/lilo:devmap - Compile with support for device-mapper
 sys-boot/lilo:pxeserial - Avoid character echo on PXE serial console
@@ -770,11 +773,11 @@ sys-cluster/ocfs:aio - Add aio support
 sys-cluster/util-vserver:glibc - Compile with glibc instead of dietlibc
 sys-devel/binutils:multislot - Allow for multiple versions of binutils to be emerged at once for same CTARGET
 sys-devel/binutils:multitarget - Adds support to binutils for cross compiling (does not work with gas)
-sys-devel/gcc-mips64:ip28 - Enable building a compiler capable of building an SGI IP28 kernel
+sys-devel/gcc-mips64:ip28 - Enable building a compiler capable of building a kernel for SGI Indigo2 Impact R10000 (IP28)
 sys-devel/gcc:boundschecking - enable HTB (Haj Ten Brugge) runtime bounds checking (disables PIE and SSP building in gcc)
 sys-devel/gcc:fortran - Build support for the fortran language
 sys-devel/gcc:hardened - activate default PIE (position independent executables) and SSP (stack smashing protector)
-sys-devel/gcc:ip28 - Enable building a compiler capable of building an SGI IP28 kernel
+sys-devel/gcc:ip28 - Enable building a compiler capable of building a kernel for SGI Indigo2 Impact R10000 (IP28)
 sys-devel/gcc:multislot - Allow for SLOTs to include minor version (3.3.4 instead of just 3.3)
 sys-devel/gcc:n32 - Enable n32 ABI support on mips
 sys-devel/gcc:n64 - Enable n64 ABI support on mips
@@ -800,7 +803,7 @@ sys-kernel/mips-headers:cobalt - Enables support for Cobalt Microserver hardware
 sys-kernel/mips-headers:ip30 - Enables support for SGI Octane (IP30, 'Speedracer')
 sys-kernel/mips-sources:cobalt - Enables support for Cobalt Microserver hardware (Qube2/RaQ2)
 sys-kernel/mips-sources:ip27 - Enables support for SGI Origin (IP27)
-sys-kernel/mips-sources:ip28 - Enables support for SGI Indigo2 Impact R10000
+sys-kernel/mips-sources:ip28 - Enables support for SGI Indigo2 Impact R10000 (IP28)
 sys-kernel/mips-sources:ip30 - Enables support for SGI Octane (IP30, 'Speedracer')
 sys-kernel/ppc-development-sources:extlib - If you want to use gcloop a external lib is needed
 sys-kernel/ppc64-sources:extlib - If you want to use gcloop a external lib is needed
