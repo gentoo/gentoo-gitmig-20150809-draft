@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1128 2005/04/30 05:27:27 ramereth Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1129 2005/04/30 17:36:25 chrb Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -223,6 +223,8 @@ dev-perl/perlmagick:graphviz - enable graphviz support compat with installed ima
 dev-perl/perlmagick:jbig - enable jbig support to be compat with installed imagemagick
 dev-php/PEAR-Log:pear-db - Use the PEAR-DB package
 dev-python/bicyclerepair:vim - enable vim with bicyclerepair support
+dev-python/cgkit:3ds - enable support for importing 3D Studio models
+dev-python/cgkit:ogre - enable support for Ogre rendering
 dev-python/docutils:glep - Install support for GLEPs
 dev-python/epydoc:pdf - enable support for exporting to pdf
 dev-python/ipython:gnuplot - enable gnuplot support
