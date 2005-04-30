@@ -1,6 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/hibernate-script/hibernate-script-1.07.ebuild,v 1.1 2005/04/30 13:50:42 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/hibernate-script/hibernate-script-1.07.ebuild,v 1.2 2005/04/30 14:15:50 brix Exp $
+
+inherit eutils
 
 # The following works with both pre-releases and releases
 MY_P=${PN}-${PV/_/-}
@@ -22,6 +24,9 @@ RDEPEND=""
 
 src_unpack() {
 	unpack ${A}
+
+	cd ${S}
+	epatch ${FILESDIR}/${P}-gentoo.patch
 
 	# use /sys/power/state instead of swsusp2
 	sed -i \
@@ -45,12 +50,10 @@ src_install() {
 	BASE_DIR=${D} PREFIX=/usr MAN_DIR=${D}/usr/share/man \
 		${S}/install.sh
 
-	# hibernate-sleep will default to using sleep.conf
+	# hibernate-ram will default to using ram.conf
 	dosym /usr/sbin/hibernate /usr/sbin/hibernate-ram
 
-	into /
-	dosbin ${S}/init.d/hibernate-cleanup.sh
-	newinitd ${FILESDIR}/${P}-init.d hibernate-cleanup
+	newinitd ${S}/init.d/hibernate-cleanup.sh hibernate-cleanup
 
 	# other ebuilds can install scriplets to this dir
 	keepdir /etc/hibernate/scriptlets.d/
