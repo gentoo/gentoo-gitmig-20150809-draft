@@ -1,4 +1,14 @@
-MD5 4264a8ab137800dde2f26fb1a364b8ac ChangeLog 1080
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 99b135fa5f18eb8ffb662f23e4b35a53 tagunit-1.0.1.ebuild 1181
+MD5 acee7b2ce5d25af68e97e4aa49dd01a2 ChangeLog 1227
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
-MD5 0615e7adcdbfbb06f6aac01f98c727ca tagunit-1.0.1.ebuild 1100
 MD5 093a30f20c5f98ded756bced1a87cf9e files/digest-tagunit-1.0.1 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCc/Xk06ebR+OMO78RAgM2AJ9m5Gkwx1NKv1odY7KQm2jw1g2F5wCfVohL
+7IlLGvpYQb/Y9DlwkAuWnok=
+=y5kQ
+-----END PGP SIGNATURE-----
