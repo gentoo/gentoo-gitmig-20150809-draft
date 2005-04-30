@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/xterm-200-r1.ebuild,v 1.2 2005/04/20 22:02:56 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/xterm-200-r1.ebuild,v 1.3 2005/04/30 16:20:57 agriffis Exp $
 
 inherit eutils flag-o-matic
 
@@ -16,6 +16,12 @@ IUSE="truetype Xaw3d unicode toolbar"
 DEPEND="virtual/x11
 	sys-apps/utempter
 	Xaw3d? ( x11-libs/Xaw3d )"
+
+src_unpack() {
+	unpack ${A}
+	# Workaround problem where some bash versions treat $CMD specially
+	sed -i 's/\<CMD\>/LINK_CMD/g' ${S}/plink.sh
+}
 
 src_compile() {
 
