@@ -1,8 +1,18 @@
-MD5 73f58968c04441dfd039ec31901d93f2 ChangeLog 3605
-MD5 612a98daac1092ec3924be8fda8386dd gossip-0.8.ebuild 868
-MD5 9a9ed8f43621c860f0323fcd365a2dbf metadata.xml 271
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 fefc392b3af36cf23c3dbd277684f950 ChangeLog 3712
 MD5 9629b65413873bf3701936c9601cfc82 gossip-0.7.6.ebuild 850
 MD5 437d9a126a558753c5c800a575c64c6d gossip-0.7.8.ebuild 894
-MD5 8f16fde24fd9fe4c80d9aa70a0674dec files/digest-gossip-0.8 63
+MD5 9a9ed8f43621c860f0323fcd365a2dbf metadata.xml 271
+MD5 5b7d708eccc0225644cf9d66b144fcc5 gossip-0.8.ebuild 868
 MD5 4050efbfb3d0d651099c4786b55eed9d files/digest-gossip-0.7.6 65
 MD5 8306015f92ba6d545883f19eaf3baa4d files/digest-gossip-0.7.8 65
+MD5 8f16fde24fd9fe4c80d9aa70a0674dec files/digest-gossip-0.8 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCc6yqZS9CZTi033kRAnbaAKCJ1ZRiskxWkVUbtf+vgvaLpsEkwACggcA6
+epCt1+wjfJ+qhxYywWGMtLg=
+=C9SL
+-----END PGP SIGNATURE-----
