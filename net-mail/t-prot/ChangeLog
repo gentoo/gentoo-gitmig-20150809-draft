@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/t-prot
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/t-prot/ChangeLog,v 1.6 2005/04/13 22:22:05 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/t-prot/ChangeLog,v 1.7 2005/04/30 10:32:44 slarti Exp $
+
+  30 Apr 2005; Tom Martin <slarti@gentoo.org> t-prot-1.99.1.ebuild:
+  Marked ~amd64.
 
 *t-prot-1.99.1 (13 Apr 2005)
 
