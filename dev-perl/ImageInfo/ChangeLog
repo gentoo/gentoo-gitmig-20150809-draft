@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/ImageInfo
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/ImageInfo/ChangeLog,v 1.21 2005/04/29 14:13:10 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/ImageInfo/ChangeLog,v 1.22 2005/04/30 12:21:52 mcummings Exp $
+
+  30 Apr 2005; Michael Cummings <mcummings@gentoo.org> :
+  Manifest was reported bad in bug 90963 - regenerating, confirmed file
+  downloaded was a real tarball
 
   29 Apr 2005; Gustavo Zacarias <gustavoz@gentoo.org> ImageInfo-1.16.ebuild:
   Stable on sparc
