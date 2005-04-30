@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/commons-digester
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-digester/ChangeLog,v 1.22 2005/04/09 15:58:49 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-digester/ChangeLog,v 1.23 2005/04/30 19:17:28 hansmi Exp $
+
+  30 Apr 2005; Michael Hanselmann <hansmi@gentoo.org>
+  commons-digester-1.6.ebuild:
+  Stable on ppc.
 
   09 Apr 2005; Markus Rothe <corsair@gentoo.org>
   commons-digester-1.6.ebuild:
