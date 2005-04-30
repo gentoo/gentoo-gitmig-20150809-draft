@@ -1,24 +1,14 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 0c6938b90889ccf1ef5bfcf4c719cd1e gst-plugins-cdparanoia-0.8.7.ebuild 361
-MD5 0c8c718071395fb7288ba207abcff3c9 gst-plugins-cdparanoia-0.8.2.ebuild 357
-MD5 85580c7d17321c347f84284e6929be69 gst-plugins-cdparanoia-0.8.1.ebuild 360
-MD5 230c685ad9b6b56e74b25a33449d0bb8 gst-plugins-cdparanoia-0.8.8.ebuild 365
-MD5 839f21d111af0328036f963314ece95a gst-plugins-cdparanoia-0.8.3.ebuild 362
 MD5 86cd09925e85033cdd39eb416073afda gst-plugins-cdparanoia-0.8.5.ebuild 364
-MD5 10752307ab0a9ca692755d2599bb8649 ChangeLog 3625
+MD5 839f21d111af0328036f963314ece95a gst-plugins-cdparanoia-0.8.3.ebuild 362
+MD5 05d141a1167efa38eba55b4c73d9a273 gst-plugins-cdparanoia-0.8.8.ebuild 362
+MD5 85580c7d17321c347f84284e6929be69 gst-plugins-cdparanoia-0.8.1.ebuild 360
 MD5 6cf6f97e79b43eaf70fa938c431342a3 metadata.xml 181
-MD5 d454a981aba7bfc51b76556d18ef0357 files/digest-gst-plugins-cdparanoia-0.8.1 71
+MD5 42d4e7c9b92becfe9767f447592b707d ChangeLog 3734
+MD5 0c8c718071395fb7288ba207abcff3c9 gst-plugins-cdparanoia-0.8.2.ebuild 357
+MD5 0c6938b90889ccf1ef5bfcf4c719cd1e gst-plugins-cdparanoia-0.8.7.ebuild 361
 MD5 fdc36508749cec2850c94b4bff5cc0a2 files/digest-gst-plugins-cdparanoia-0.8.2 71
-MD5 b34b0c2aff88ed12404f38ecc09f44f0 files/digest-gst-plugins-cdparanoia-0.8.3 71
-MD5 acf565d7ba42d81f95f66ad754ab8be9 files/digest-gst-plugins-cdparanoia-0.8.5 71
-MD5 1d2b17e15b2072757c3db8f184b7d174 files/digest-gst-plugins-cdparanoia-0.8.7 71
 MD5 33cfc77852e050bbb91b003695c91131 files/digest-gst-plugins-cdparanoia-0.8.8 71
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCcr0aKRy60XGEcJIRAirlAJ9pUBg0vdno5arUkGp2Nakl0PmJEgCeMDbz
-pnaYsnQ+6EnfA7G2skxYO1I=
-=QZg0
------END PGP SIGNATURE-----
+MD5 acf565d7ba42d81f95f66ad754ab8be9 files/digest-gst-plugins-cdparanoia-0.8.5 71
+MD5 d454a981aba7bfc51b76556d18ef0357 files/digest-gst-plugins-cdparanoia-0.8.1 71
+MD5 1d2b17e15b2072757c3db8f184b7d174 files/digest-gst-plugins-cdparanoia-0.8.7 71
+MD5 b34b0c2aff88ed12404f38ecc09f44f0 files/digest-gst-plugins-cdparanoia-0.8.3 71
