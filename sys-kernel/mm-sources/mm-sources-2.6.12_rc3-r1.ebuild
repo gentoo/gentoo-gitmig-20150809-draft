@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/mm-sources-2.6.12_rc3-r1.ebuild,v 1.1 2005/04/30 14:23:29 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/mm-sources-2.6.12_rc3-r1.ebuild,v 1.2 2005/04/30 20:08:09 chainsaw Exp $
 
 K_PREPATCHED="yes"
 UNIPATCH_STRICTORDER="yes"
@@ -8,7 +8,7 @@ UNIPATCH_STRICTORDER="yes"
 ETYPE="sources"
 inherit kernel-2
 detect_version
-UNIPATCH_LIST="${DISTDIR}/${KV_FULL}.bz2"
+UNIPATCH_LIST="${DISTDIR}/${KV_FULL}.bz2 ${FILESDIR}/${KV_FULL}-uniprocessor-fixes.patch"
 K_NOSETEXTRAVERSION="don't_set_it"
 RESTRICT="nomirror"
 DESCRIPTION="Andrew Morton's kernel, mostly fixes for 2.6 vanilla, some vm stuff too"
