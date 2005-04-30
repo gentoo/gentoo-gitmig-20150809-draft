@@ -1,0 +1,9 @@
+# ChangeLog for sys-apps/vbetool
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/vbetool/ChangeLog,v 1.1 2005/04/30 01:10:46 robbat2 Exp $
+
+*vbetool-0.2 (29 Apr 2005)
+
+  29 Apr 2005; Robin H. Johnson <robbat2@gentoo.org> +vbetool-0.2.ebuild:
+  Initial commit. Original ebuild submitted by alex f <acid.punk@gmx.net>.
+
