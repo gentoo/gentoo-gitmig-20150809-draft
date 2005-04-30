@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/herdstat/herdstat-1.1.0_rc2.ebuild,v 1.1 2005/04/28 17:37:49 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/herdstat/herdstat-1.1.0_rc2.ebuild,v 1.2 2005/04/30 16:35:50 ka0ttic Exp $
 
 inherit bash-completion
 
@@ -13,9 +13,9 @@ SLOT="0"
 KEYWORDS="~x86 ~amd64 ~ppc ~alpha ~hppa"
 IUSE="debug"
 
-RDEPEND=">=dev-cpp/libxmlpp-2.6
+RDEPEND=">=dev-cpp/libxmlpp-2.8.0-r1
 	net-misc/wget"
-DEPEND=">=dev-cpp/libxmlpp-2.6
+DEPEND=">=dev-cpp/libxmlpp-2.8.0-r1
 	>=sys-apps/sed-4"
 
 src_compile() {
