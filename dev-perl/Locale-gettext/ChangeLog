@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Locale-gettext
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Locale-gettext/ChangeLog,v 1.16 2005/04/30 09:59:43 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Locale-gettext/ChangeLog,v 1.17 2005/04/30 19:27:25 hansmi Exp $
+
+  30 Apr 2005; Michael Hanselmann <hansmi@gentoo.org>
+  Locale-gettext-1.03.ebuild:
+  Stable on ppc.
 
   30 Apr 2005; Bryan Østergaard <kloeri@gentoo.org>
   Locale-gettext-1.03.ebuild:

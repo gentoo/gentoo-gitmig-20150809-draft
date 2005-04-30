@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/File-Tail
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Tail/ChangeLog,v 1.15 2005/04/26 19:50:46 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Tail/ChangeLog,v 1.16 2005/04/30 19:24:43 hansmi Exp $
+
+  30 Apr 2005; Michael Hanselmann <hansmi@gentoo.org>
+  File-Tail-0.99.1.ebuild:
+  Stable on ppc.
 
   26 Apr 2005; Bryan Østergaard <kloeri@gentoo.org>
   File-Tail-0.99.1.ebuild:

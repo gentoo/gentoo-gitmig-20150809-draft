@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/OpenCA-CRL
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/OpenCA-CRL/ChangeLog,v 1.12 2005/04/30 11:20:17 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/OpenCA-CRL/ChangeLog,v 1.13 2005/04/30 19:31:35 hansmi Exp $
+
+  30 Apr 2005; Michael Hanselmann <hansmi@gentoo.org>
+  OpenCA-CRL-0.9.17.ebuild:
+  Stable on ppc.
 
   30 Apr 2005; Bryan Østergaard <kloeri@gentoo.org>
   OpenCA-CRL-0.9.17.ebuild:
