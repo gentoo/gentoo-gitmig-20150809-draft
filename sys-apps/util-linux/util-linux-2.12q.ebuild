@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.12q.ebuild,v 1.4 2005/04/29 23:54:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.12q.ebuild,v 1.5 2005/04/30 06:50:44 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -63,6 +63,9 @@ src_unpack() {
 	#
 	# <azarah@gentoo.org> (17 Jul 2003)
 	epatch ${FILESDIR}/${PN}-2.11z-agetty-domainname-option.patch
+
+	# Fix french translation typo #75693
+	epatch ${FILESDIR}/${P}-i18n-update.patch
 
 	# Add NFS4 support (kernel 2.5/2.6)
 	epatch ${FILESDIR}/${PN}-2.12i-nfsv4.patch
