@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/gstreamer
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/ChangeLog,v 1.102 2005/04/29 22:52:34 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/ChangeLog,v 1.103 2005/04/30 10:26:13 zaheerm Exp $
+
+  30 Apr 2005; Zaheer Abbas Merali <zaheerm@gentoo.org>
+  +files/gstreamer-0.8.9-fixpluginload.patch, gstreamer-0.8.9-r3.ebuild:
+  mark ~ppc-macos with plugin loading fix just for os x...works for all
+  platforms but only needed on os x
 
   29 Apr 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   gstreamer-0.8.9-r3.ebuild:
