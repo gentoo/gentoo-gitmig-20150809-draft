@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/frontier-rpc
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/frontier-rpc/ChangeLog,v 1.4 2004/10/23 15:18:56 weeve Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/frontier-rpc/ChangeLog,v 1.5 2005/04/30 13:25:37 mcummings Exp $
+
+  30 Apr 2005; Michael Cummings <mcummings@gentoo.org>
+  frontier-rpc-0.07_beta4.ebuild:
+  Missing dep for libwww-perl, thanks Tupone Alfredo <alfredo@tupone.it> for
+  pointing it out in bug 71661
 
   23 Oct 2004; Jason Wever <weeve@gentoo.org>
   frontier-rpc-0.07_beta4.ebuild:
