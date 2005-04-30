@@ -1,4 +1,14 @@
-MD5 702154a610c84434026f218d10a1ff95 javassist-2.6.ebuild 948
-MD5 f4431e09fc3660ba2747f0502945ffb1 ChangeLog 525
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 8de4165280df4b95e0386cf58c9988f1 javassist-2.6.ebuild 1046
+MD5 fadd85c7de0e05233e2f94991770fc3a ChangeLog 696
 MD5 123cf9440c1d4ac78f2caba1624765f9 metadata.xml 158
 MD5 c04c68f317b36fc0ce724e3b003c1bf3 files/digest-javassist-2.6 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCc+Ot06ebR+OMO78RAneyAJ9ZDVFthUY3nspX80LluBg8U2+2mgCfSib7
+P2WgiNYYujsq0qKiRcH+PhA=
+=QKD+
+-----END PGP SIGNATURE-----
