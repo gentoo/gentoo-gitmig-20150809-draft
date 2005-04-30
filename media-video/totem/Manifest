@@ -4,10 +4,12 @@ MD5 f210826edebfeaa8929396a01b8d220e totem-1.0.1.ebuild 2613
 MD5 9f2858f2d0308b9b48262eb99a4efbd3 totem-0.99.15.1.ebuild 1589
 MD5 38094138149f74a6c9c95872696b8267 totem-1.0.ebuild 2690
 MD5 3160fc8b78ee5a74a654521257b0234c totem-0.100-r2.ebuild 1990
-MD5 f2d00a5bfba779334a21a437c6ce45cc ChangeLog 7355
+MD5 200cbacf3a996e4bc6842d3984adcbb8 totem-1.0.2.ebuild 2625
+MD5 9417b88517516432d9e318eb4a8707a2 ChangeLog 7475
 MD5 74b9bd3cc5015b286abc33eb51408252 metadata.xml 521
 MD5 50a343412446e05871e042a7b5958c93 files/totem-0.100-fix_desktop_item.patch 558
 MD5 cae0d48bbd06a51476128dbfbefb4a5f files/digest-totem-1.0.1 65
+MD5 7e5a2048d71f5bd98866aba5531f9012 files/digest-totem-1.0.2 65
 MD5 8dd0c2a14c9603045fb2eebd0ee50534 files/digest-totem-0.100-r2 65
 MD5 8dd0c2a14c9603045fb2eebd0ee50534 files/digest-totem-0.100-r3 65
 MD5 8ab6b544e88eb5901e71820c8b41a477 files/totem-0.100-cdrom_include.patch 413
