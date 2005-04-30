@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jrexx
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jrexx/ChangeLog,v 1.1 2004/10/30 20:32:43 axxo Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jrexx/ChangeLog,v 1.2 2005/04/30 19:52:05 luckyduck Exp $
+
+  30 Apr 2005; Jan Brinkmann <luckyduck@gentoo.org> jrexx-1.1.1.ebuild:
+  added ~ppc to KEYWORDS and introduced support for the source useflag. stable
+  on amd64 and x86.
 
 *jrexx-1.1.1 (30 Oct 2004)
 
