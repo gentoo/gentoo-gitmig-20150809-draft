@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cgkit/cgkit-2.0.0_alpha3-r2.ebuild,v 1.1 2005/04/30 17:32:11 chrb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cgkit/cgkit-2.0.0_alpha3-r2.ebuild,v 1.2 2005/04/30 21:51:41 chrb Exp $
 
 inherit distutils flag-o-matic
 
@@ -20,7 +20,7 @@ DEPEND="dev-lang/python
 	3ds? media-libs/lib3ds
 	ogre? dev-games/ogre"
 SLOT="0"
-LICENSE="GPL-2"
+LICENSE="LGPL-2.1"
 KEYWORDS="~x86 ~ppc"
 IUSE="3ds ogre"
 S=${WORKDIR}/${MY_P}
