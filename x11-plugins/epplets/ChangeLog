@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/epplets
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/epplets/ChangeLog,v 1.6 2004/11/08 05:24:53 vapier Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/epplets/ChangeLog,v 1.7 2005/04/30 09:32:01 kloeri Exp $
+
+  30 Apr 2005; Bryan Østergaard <kloeri@gentoo.org> epplets-0.7-r1.ebuild:
+  ~alpha keyword.
 
 *epplets-0.7-r1 (08 Nov 2004)
 
