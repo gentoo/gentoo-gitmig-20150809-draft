@@ -1,6 +1,22 @@
 # ChangeLog for sys-kernel/ck-sources
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ChangeLog,v 1.92 2005/04/09 05:42:15 marineam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ChangeLog,v 1.93 2005/04/30 16:06:55 dsd Exp $
+
+  30 Apr 2005; Daniel Drake <dsd@gentoo.org>
+  -files/ck-sources-2.4.28.77094.patch,
+  -files/ck-sources-2.4.28.CAN-2004-1137.patch,
+  -files/ck-sources-2.4.28.77666.patch,
+  -files/ck-sources-2.4.28.78362.patch,
+  -files/ck-sources-2.4.28.78363.patch,
+  -files/ck-sources-2.4.28.CAN-2004-1016.patch,
+  -files/ck-sources-2.4.28.81106.patch,
+  -files/ck-sources-2.4.28.CAN-2004-1056.patch,
+  -files/ck-sources-2.4.28.binfmt_a.out.patch,
+  -files/ck-sources-2.4.28.brk-locked.patch,
+  -files/ck-sources-2.4.28.cmdlineLeak.patch,
+  -files/ck-sources-2.4.28.compileFix.patch,
+  -files/ck-sources-2.4.28.vma.patch, -ck-sources-2.4.28-r3.ebuild:
+  Remove ck-sources-2.4
 
 *ck-sources-2.6.11-r4 (09 Apr 2005)
 
