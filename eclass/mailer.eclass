@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mailer.eclass,v 1.6 2005/04/27 19:25:39 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mailer.eclass,v 1.7 2005/05/01 21:59:29 ferdy Exp $
 
 #
 # Original Authors: Fernando J. Pereda <ferdy@gentoo.org>
@@ -77,7 +77,7 @@ mailer_wipe_confs() {
 
 			[[ ${i} == ${P} ]] && continue
 			[[ ${i} == "default" ]] && continue
-			has_version "=mail-mta/${i}*" || rm ${x}
+			has_version "~mail-mta/${i}" || rm ${x}
 		done
 	eend 0
 }
