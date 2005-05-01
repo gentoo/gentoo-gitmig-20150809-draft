@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Sort-Versions
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sort-Versions/ChangeLog,v 1.10 2005/04/26 19:55:50 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sort-Versions/ChangeLog,v 1.11 2005/05/01 13:35:02 gmsoft Exp $
+
+  01 May 2005; Guy Martin <gmsoft@gentoo.org> Sort-Versions-1.5.ebuild:
+  Stable on hppa.
 
   26 Apr 2005; Bryan Østergaard <kloeri@gentoo.org>
   Sort-Versions-1.5.ebuild:
