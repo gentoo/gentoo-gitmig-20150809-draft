@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/sourcenav/sourcenav-5.1.4.ebuild,v 1.7 2004/07/15 00:11:08 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/sourcenav/sourcenav-5.1.4.ebuild,v 1.8 2005/05/01 18:21:57 hansmi Exp $
 
 S=${WORKDIR}/build
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://sourcenav.sourceforge.net"
 
 SLOT="0"
 LICENSE="GPL-2 LGPL-2"
-KEYWORDS="x86 ~sparc ~ppc"
+KEYWORDS="x86 ~sparc ppc"
 IUSE=""
 DEPEND=">=sys-libs/glibc-2.2.4"
 SN="/opt/sourcenav"
