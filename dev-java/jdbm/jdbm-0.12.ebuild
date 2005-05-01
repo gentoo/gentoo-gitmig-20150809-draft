@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbm/jdbm-0.12.ebuild,v 1.1 2005/02/05 23:12:09 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbm/jdbm-0.12.ebuild,v 1.2 2005/05/01 17:49:54 luckyduck Exp $
 
 inherit eutils java-pkg
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}-src.zip"
 
 LICENSE="BSD"
 SLOT="1"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86 ~ppc"
 IUSE="doc jikes"
 
 DEPEND=">=virtual/jdk-1.4
@@ -43,4 +43,5 @@ src_compile() {
 src_install() {
 	java-pkg_dojar dist/${PN}.jar
 	use doc && java-pkg_dohtml -r build/doc/javadoc/*
+	use source && java-pkg_dosrc src/main/*
 }
