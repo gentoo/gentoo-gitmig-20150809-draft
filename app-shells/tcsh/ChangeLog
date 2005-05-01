@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/tcsh
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/tcsh/ChangeLog,v 1.34 2005/04/21 19:59:08 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/tcsh/ChangeLog,v 1.35 2005/05/01 10:00:25 slarti Exp $
+
+  01 May 2005; Tom Martin <slarti@gentoo.org> tcsh-6.13-r1.ebuild:
+  Stable on amd64.
 
   21 Apr 2005; Gustavo Zacarias <gustavoz@gentoo.org> tcsh-6.13-r1.ebuild:
   Stable on sparc
