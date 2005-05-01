@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/gnutls
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.64 2005/05/01 02:29:28 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.65 2005/05/01 04:13:01 dragonheart Exp $
+
+  01 May 2005; Daniel Black <dragonheart@gentoo.org>
+  -files/gnutls-1.0.14-extra.h.patch, -files/gnutls-1.1.23-extra.h.patch,
+  -gnutls-1.0.17.ebuild, -gnutls-1.0.23.ebuild, -gnutls-1.2.0.ebuild,
+  -gnutls-1.2.1.ebuild:
+  prune potentially vulnerable versions
 
   01 May 2005; Daniel Black <dragonheart@gentoo.org> gnutls-1.2.3.ebuild:
   Removed crypt flag due to bug #90976. Thanks to Alex Murray
