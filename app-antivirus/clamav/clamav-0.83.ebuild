@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/clamav-0.83.ebuild,v 1.10 2005/04/08 10:41:44 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/clamav-0.83.ebuild,v 1.11 2005/05/01 18:09:54 ticho Exp $
 
 inherit eutils flag-o-matic
 
@@ -55,8 +55,8 @@ src_compile() {
 src_install() {
 	make DESTDIR=${D} install || die
 	dodoc AUTHORS BUGS NEWS README ChangeLog TODO FAQ INSTALL
-	exeinto /etc/init.d ; newexe ${FILESDIR}/clamd.rc clamd
-	insinto /etc/conf.d ; newins ${FILESDIR}/clamd.conf clamd
+	newinitd ${FILESDIR}/clamd.rc clamd
+	newconfd ${FILESDIR}/clamd.conf clamd
 	dodoc ${FILESDIR}/clamav-milter.README.gentoo
 }
 
