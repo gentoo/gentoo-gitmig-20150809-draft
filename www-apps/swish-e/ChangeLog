@@ -1,6 +1,14 @@
 # ChangeLog for www-apps/swish-e
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/swish-e/ChangeLog,v 1.6 2004/12/29 01:51:25 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/swish-e/ChangeLog,v 1.7 2005/05/01 15:33:20 mcummings Exp $
+
+*swish-e-2.4.3 (01 May 2005)
+
+  01 May 2005; Michael Cummings <mcummings@gentoo.org>
+  +swish-e-2.4.3.ebuild:
+  New version of swish-e, which means bug 37165 can finally be closed.
+  Revamped the ebuild a ton - a lot of optional perl modules now, as well as a
+  few I have no good use flag for enabling. Test and let me know :)
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance

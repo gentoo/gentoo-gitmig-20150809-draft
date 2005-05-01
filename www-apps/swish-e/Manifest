@@ -1,3 +1,16 @@
-MD5 11c774f13e831b09173b4108ebef4e54 ChangeLog 1216
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 452f4b74893e211cfda0c130c14feece ChangeLog 1547
 MD5 fd29a2ea594430a7274c8d61f1182bb1 swish-e-2.2.2-r1.ebuild 898
+MD5 b9556bd730ff4631983bfad590fd2834 swish-e-2.4.3.ebuild 1570
+MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 fc5a8d65b3761bfbd7f7744fda4c324e files/digest-swish-e-2.2.2-r1 65
+MD5 0af7d0e3bdf537f307d8f2e7df0bd924 files/digest-swish-e-2.4.3 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCdPbAtG5z4I8BtQoRAmDvAKCTVJfL6+Y/dWEU6v/6HfR27FiyuACZARC2
+BK2B61wZvl5IJ9cclZ1r/cs=
+=NDSB
+-----END PGP SIGNATURE-----
