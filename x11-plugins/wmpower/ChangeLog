@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmpower
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmpower/ChangeLog,v 1.17 2005/04/20 21:28:02 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmpower/ChangeLog,v 1.18 2005/05/01 18:21:39 hansmi Exp $
+
+  01 May 2005; Michael Hanselmann <hansmi@gentoo.org> wmpower-0.4.1.ebuild:
+  Stable on ppc.
 
   20 Apr 2005; Simon Stelling <blubb@gentoo.org> wmpower-0.4.1.ebuild:
   stable on amd64
