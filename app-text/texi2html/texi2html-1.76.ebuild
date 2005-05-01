@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texi2html/texi2html-1.76.ebuild,v 1.7 2005/04/22 19:28:36 kito Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/texi2html/texi2html-1.76.ebuild,v 1.8 2005/05/01 07:55:39 vapier Exp $
 
 DESCRIPTION="Perl script that converts Texinfo to HTML"
 HOMEPAGE="https://texi2html.cvshome.org/"
@@ -8,15 +8,14 @@ SRC_URI="https://texi2html.cvshome.org/files/documents/70/758/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm ~hppa ~ia64 ~mips ppc sparc x86 ~ppc64 ~ppc-macos"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ~ppc64 ~ppc-macos sparc x86"
 IUSE=""
 
-DEPEND="virtual/libc
-	>=dev-lang/perl-5.6.1"
+DEPEND=">=dev-lang/perl-5.6.1"
 
 src_install() {
 	#yes, htmldir line is correct, no ${D}
-	make DESTDIR=${D} \
+	make DESTDIR="${D}" \
 		htmldir=/usr/share/doc/${PF}/html \
 		install || die "Installation Failed"
 
@@ -24,5 +23,5 @@ src_install() {
 }
 
 pkg_preinst() {
-	rm -f ${ROOT}usr/bin/texi2html
+	rm -f "${ROOT}"/usr/bin/texi2html
 }
