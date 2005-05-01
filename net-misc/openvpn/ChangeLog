@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/openvpn
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/ChangeLog,v 1.27 2005/04/29 18:35:44 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/ChangeLog,v 1.28 2005/05/01 09:02:35 luckyduck Exp $
+
+  01 May 2005; Jan Brinkmann <luckyduck@gentoo.org> openvpn-1.5.0-r1.ebuild,
+  openvpn-1.6.0.ebuild:
+  marked 1.6.0 stable on amd64 and x86, some cosmetic changes.
 
   29 Apr 2005; Jan Brinkmann <luckyduck@gentoo.org> metadata.xml:
   herd -> secure-tunneling
