@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/mcl/mcl-0.53.00.ebuild,v 1.11 2004/12/02 09:27:56 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/mcl/mcl-0.53.00.ebuild,v 1.12 2005/05/01 17:20:51 hansmi Exp $
 
 inherit eutils gnuconfig games
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.andreasen.org/mcl/dist/${P}-src.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 amd64 ~ppc"
+KEYWORDS="x86 amd64 ppc"
 IUSE="python perl"
 
 DEPEND="virtual/libc
