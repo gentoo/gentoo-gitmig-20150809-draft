@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/HTML-FillInForm
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-FillInForm/ChangeLog,v 1.1 2005/05/01 13:42:21 mcummings Exp $
+
+*HTML-FillInForm-1.05 (01 May 2005)
+
+  01 May 2005; Michael Cummings <mcummings@gentoo.org> +metadata.xml,
+  +HTML-FillInForm-1.05.ebuild:
+  Dep for new swish-e
+
