@@ -1,11 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gda-sharp/gda-sharp-1.0.6.ebuild,v 1.3 2005/03/23 01:29:03 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gda-sharp/gda-sharp-1.0.6.ebuild,v 1.4 2005/05/01 18:24:29 hansmi Exp $
 
 inherit gtk-sharp-component
 
 SLOT="1"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="x86 ppc"
 IUSE=""
 
 DEPEND="${DEPEND}
