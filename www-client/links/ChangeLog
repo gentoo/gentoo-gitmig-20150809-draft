@@ -1,6 +1,10 @@
 # ChangeLog for www-client/links
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/links/ChangeLog,v 1.8 2005/05/01 10:16:04 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/links/ChangeLog,v 1.9 2005/05/01 17:18:30 hansmi Exp $
+
+  01 May 2005; Michael Hanselmann <hansmi@gentoo.org>
+  links-2.1_pre17.ebuild:
+  Stable on ppc.
 
   01 May 2005; Tom Martin <slarti@gentoo.org> links-2.1_pre17.ebuild:
   Stable on amd64.
