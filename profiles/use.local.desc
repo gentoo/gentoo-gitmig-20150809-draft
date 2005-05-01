@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1134 2005/05/01 11:44:58 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1135 2005/05/01 15:32:33 mcummings Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -836,6 +836,7 @@ www-apps/dspam-web:virtual-users  - Build with virtual-users support
 www-apps/horde-passwd:clearpasswd - Enables cleartext password storage in the vpopmail files
 www-apps/mediawiki:math - Adds math rendering support
 www-apps/nut:cgi - Add CGI script support
+www-apps/swish-e:pdf - enable support for exporting to pdf
 www-apps/websvn:enscript - Add enscript support to colourize code stored in the repository
 www-client/elinks:lua - enable lua support
 www-client/galeon:firefox - build against firefox instead of mozilla
