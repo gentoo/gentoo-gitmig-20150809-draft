@@ -1,6 +1,25 @@
 # ChangeLog for sys-kernel/wolk-sources
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/wolk-sources/ChangeLog,v 1.65 2005/03/26 18:41:50 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/wolk-sources/ChangeLog,v 1.66 2005/05/01 22:46:17 dsd Exp $
+
+  01 May 2005; Daniel Drake <dsd@gentoo.org>
+  -files/wolk-sources-4.9s.CAN-2004-1056.patch,
+  -files/wolk-sources-4.9s.77666.patch,
+  -files/wolk-sources-4.9s.CAN-2004-0010.patch,
+  -files/wolk-sources-4.9s.CAN-2004-0685.patch,
+  -files/wolk-sources-4.9s.brk-locked.patch,
+  -files/wolk-sources-4.9s.munmap.patch,
+  -files/wolk-sources-4.9s.rtc_fix.patch, -files/wolk-4.9s-page.h.patch,
+  -files/wolk-4.9s-setup.c.patch, -files/wolk-4.9s-speedstep.c.patch,
+  -files/wolk-sources.CAN-2003-0643.patch,
+  -files/wolk-sources.CAN-2003-0985.patch,
+  -files/wolk-sources.CAN-2004-0109.patch,
+  -files/wolk-sources.CAN-2004-0177.patch,
+  -files/wolk-sources.CAN-2004-0178.patch,
+  -files/wolk-sources.CAN-2004-0427.patch, -files/do_brk_fix.patch,
+  -files/patches.txt, -wolk-sources-4.9-r21.ebuild,
+  -wolk-sources-4.11-r17.ebuild:
+  Remove stale versions
 
 *wolk-sources-4.14-r14 (26 Mar 2005)
 
