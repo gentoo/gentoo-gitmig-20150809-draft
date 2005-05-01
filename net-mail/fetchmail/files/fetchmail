@@ -1,6 +1,7 @@
 #!/sbin/runscript
 
 depend() {
+	need net
 	use mta
 }
 
