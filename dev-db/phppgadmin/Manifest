@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 86abe018bcaf60e139c4574121c2f0a5 metadata.xml 183
+MD5 8c05332043586029d9d1417154cda2fc metadata.xml 185
 MD5 1c45ce041998444bc79c7dcbb80aeb09 ChangeLog 4742
 MD5 1bda5fb828fd66355a74972890b7384a phppgadmin-3.5.1.ebuild 1412
 MD5 ae064473edbf2b53fba429e5969d115f phppgadmin-3.5.3.ebuild 1417
@@ -13,7 +13,7 @@ MD5 185c92eb84018e2da326625e44814224 files/digest-phppgadmin-3.5.2 69
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCdS1FjUHll2nfF60RAnTOAKCGYDRXJl4xVRkh7EMVtzstfnhLvgCeNxqo
-RreNVRrdX5SyvxexXMTlgEY=
-=tchx
+iD8DBQFCdS5XjUHll2nfF60RApu/AKCN+D7gICWL+l2cPIvZyX1h5b06CwCgnG4p
+Y6/tVJjlvlNrpDJcFm+gr+8=
+=8MGR
 -----END PGP SIGNATURE-----
