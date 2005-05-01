@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-1.2.3.ebuild,v 1.6 2005/04/30 00:04:26 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-1.2.3.ebuild,v 1.7 2005/05/01 02:29:28 dragonheart Exp $
 
 inherit eutils gnuconfig
 
@@ -20,12 +20,15 @@ KEYWORDS="x86 sparc ppc amd64 ~mips alpha ppc64 ~ia64"
 #  ~ia64 ~hppa
 
 RDEPEND=">=dev-libs/libgcrypt-1.2.0
-	crypt? ( >=app-crypt/opencdk-0.5.5 )
+	>=app-crypt/opencdk-0.5.5
 	zlib? ( >=sys-libs/zlib-1.1 )
 	virtual/libc
 	>=dev-libs/lzo-1.0
 	>=dev-libs/libtasn1-0.2.11
 	dev-libs/libgpg-error"
+
+
+#	crypt? ( >=app-crypt/opencdk-0.5.5 )
 
 DEPEND="${RDEPEND}
 	sys-apps/gawk
@@ -43,7 +46,7 @@ src_compile() {
 	gnuconfig_update
 
 	local myconf=""
-	use crypt || myconf="${myconf} --disable-extra-pki --disable-openpgp-authentication"
+	# use crypt || myconf="${myconf} --disable-extra-pki --disable-openpgp-authentication"
 
 	econf  \
 		`use_with zlib` \
