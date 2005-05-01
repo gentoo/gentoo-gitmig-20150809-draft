@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/XML-GDOME
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-GDOME/ChangeLog,v 1.10 2005/04/30 22:21:53 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-GDOME/ChangeLog,v 1.11 2005/05/01 18:26:40 slarti Exp $
+
+  01 May 2005; Tom Martin <slarti@gentoo.org> XML-GDOME-0.86.ebuild:
+  Stable on amd64.
 
   30 Apr 2005; Gustavo Zacarias <gustavoz@gentoo.org> XML-GDOME-0.86.ebuild:
   Stable on sparc

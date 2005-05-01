@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Socket6/Socket6-0.17.ebuild,v 1.8 2005/04/30 19:33:05 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Socket6/Socket6-0.17.ebuild,v 1.9 2005/05/01 18:17:48 slarti Exp $
 
 IUSE=""
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://search.cpan.org/author/UMEMOTO/${P}/"
 
 SLOT="0"
 LICENSE="|| ( Artistic GPL-2 )"
-KEYWORDS="x86 ~amd64 ppc sparc alpha"
+KEYWORDS="x86 amd64 ppc sparc alpha"
 
 SRC_TEST="do"
 

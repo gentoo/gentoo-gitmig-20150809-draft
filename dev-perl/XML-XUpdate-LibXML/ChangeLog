@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/XML-XUpdate-LibXML
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-XUpdate-LibXML/ChangeLog,v 1.12 2005/04/30 10:47:49 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-XUpdate-LibXML/ChangeLog,v 1.13 2005/05/01 18:28:09 slarti Exp $
+
+  01 May 2005; Tom Martin <slarti@gentoo.org>
+  XML-XUpdate-LibXML-0.5.0.ebuild:
+  Stable on amd64.
 
   30 Apr 2005; Bryan Østergaard <kloeri@gentoo.org>
   XML-XUpdate-LibXML-0.5.0.ebuild:
