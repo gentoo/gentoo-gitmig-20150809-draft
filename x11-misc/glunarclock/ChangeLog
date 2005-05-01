@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/glunarclock
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/glunarclock/ChangeLog,v 1.10 2005/05/01 12:08:45 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/glunarclock/ChangeLog,v 1.11 2005/05/01 17:14:28 hansmi Exp $
+
+  01 May 2005; Michael Hanselmann <hansmi@gentoo.org>
+  glunarclock-0.32.3.ebuild:
+  Stable on ppc.
 
   01 May 2005; Daniel Drake <dsd@gentoo.org> glunarclock-0.32.1.ebuild:
   Same fix for 0.32.1
