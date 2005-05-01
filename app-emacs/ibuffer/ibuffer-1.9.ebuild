@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ibuffer/ibuffer-1.9.ebuild,v 1.7 2005/01/01 13:49:11 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ibuffer/ibuffer-1.9.ebuild,v 1.8 2005/05/01 16:46:09 hansmi Exp $
 
 inherit elisp
 
@@ -13,7 +13,7 @@ HOMEPAGE="ftp://ftp.cis.ohio-state.edu/pub/emacs-lisp/archive/"
 SRC_URI="mirror://gentoo/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="x86 ppc"
 
 DEPEND="virtual/emacs"
 
