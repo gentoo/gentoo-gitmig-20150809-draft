@@ -1,6 +1,10 @@
 # ChangeLog for net-firewall/firestarter
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/firestarter/ChangeLog,v 1.18 2004/12/29 03:03:44 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/firestarter/ChangeLog,v 1.19 2005/05/01 17:04:26 hansmi Exp $
+
+  01 May 2005; Michael Hanselmann <hansmi@gentoo.org>
+  firestarter-0.9.2-r1.ebuild:
+  Stable on ppc.
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
