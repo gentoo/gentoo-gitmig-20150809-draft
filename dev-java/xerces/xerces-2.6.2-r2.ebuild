@@ -1,18 +1,17 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xerces/xerces-2.6.2-r2.ebuild,v 1.3 2005/03/21 23:38:35 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xerces/xerces-2.6.2-r2.ebuild,v 1.4 2005/05/01 17:34:00 luckyduck Exp $
 
 inherit java-pkg eutils
 
-IUSE="doc jikes examples source"
-
-S=${WORKDIR}/xerces-${PV//./_}
 DESCRIPTION="The next generation of high performance, fully compliant XML parsers in the Apache Xerces family"
 HOMEPAGE="http://xml.apache.org/xerces2-j/index.html"
 SRC_URI="mirror://apache/xml/xerces-j/Xerces-J-src.${PV}.tar.gz"
+
 LICENSE="Apache-1.1"
 SLOT="2"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="x86 amd64 ~ppc"
+IUSE="doc jikes examples source"
 
 DEPEND=">=virtual/jdk-1.3
 	jikes? ( >=dev-java/jikes-1.21 )
@@ -23,6 +22,7 @@ RDEPEND=">=virtual/jre-1.3
 	>=dev-java/xml-commons-1.0_beta2
 	>=dev-java/xml-commons-resolver-1.1
 	>=dev-java/xjavac-20041208"
+S=${WORKDIR}/xerces-${PV//./_}
 
 src_unpack() {
 	unpack ${A}
@@ -56,7 +56,7 @@ src_compile() {
 src_install() {
 	java-pkg_dojar build/x*.jar
 
-	dodoc TODO STATUS README ISSUES LICENSE
+	dodoc TODO STATUS README ISSUES
 	java-pkg_dohtml Readme.html
 
 	use doc && java-pkg_dohtml -r build/docs/javadocs
