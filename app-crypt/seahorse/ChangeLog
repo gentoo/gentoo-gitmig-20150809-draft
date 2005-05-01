@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/seahorse
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/ChangeLog,v 1.35 2005/04/21 18:06:27 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/ChangeLog,v 1.36 2005/05/01 06:55:25 joem Exp $
+
+*seahorse-0.7.7 (01 May 2005)
+
+  01 May 2005; Joe McCann <joem@gentoo.org> +seahorse-0.7.7.ebuild:
+  new version, closes 90085
 
   21 Apr 2005; Simon Stelling <blubb@gentoo.org> seahorse-0.6.3-r1.ebuild:
   stable on amd64
