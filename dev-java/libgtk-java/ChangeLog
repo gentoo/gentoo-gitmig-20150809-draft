@@ -1,6 +1,14 @@
 # ChangeLog for dev-java/libgtk-java
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/libgtk-java/ChangeLog,v 1.8 2005/03/12 20:58:16 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/libgtk-java/ChangeLog,v 1.9 2005/05/01 16:20:48 karltk Exp $
+
+*libgtk-java-2.6.2-r1 (01 May 2005)
+*libgtk-java-2.4.9 (01 May 2005)
+
+  01 May 2005; Karl Trygve Kalleberg <karltk@gentoo.org>
+  +libgtk-java-2.4.9.ebuild, +libgtk-java-2.6.2-r1.ebuild:
+  Added new upstream ebuilds by Andrew Cowie 
+  <andrew@operationaldynamics.com>, partial fix for #87978.
 
   12 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org>
   libgtk-java-2.4.6-r2.ebuild:
