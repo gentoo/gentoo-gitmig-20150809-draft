@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Tail/File-Tail-0.99.1.ebuild,v 1.4 2005/04/30 19:24:43 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Tail/File-Tail-0.99.1.ebuild,v 1.5 2005/05/01 17:45:51 slarti Exp $
 
 inherit perl-module
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.cpan.org/authors/id/MGRABNAR/${P}.readme"
 
 SLOT="0"
 LICENSE="|| ( Artistic GPL-2 )"
-KEYWORDS="x86 ~amd64 ppc sparc alpha"
+KEYWORDS="x86 amd64 ppc sparc alpha"
 IUSE=""
 
 DEPEND="dev-perl/Time-HiRes"
