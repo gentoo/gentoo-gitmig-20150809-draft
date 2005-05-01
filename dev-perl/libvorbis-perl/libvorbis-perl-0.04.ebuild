@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/libvorbis-perl/libvorbis-perl-0.04.ebuild,v 1.12 2005/04/29 17:40:48 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/libvorbis-perl/libvorbis-perl-0.04.ebuild,v 1.13 2005/05/01 17:06:07 hansmi Exp $
 
 inherit perl-module
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://synthcode.com/code/vorbis/"
 
 SLOT="0"
 LICENSE="Artistic"
-KEYWORDS="x86 sparc ~ppc amd64"
+KEYWORDS="x86 sparc ppc amd64"
 IUSE=""
 
 DEPEND="${DEPEND}
