@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/xterm-201.ebuild,v 1.3 2005/04/30 16:20:57 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/xterm-201.ebuild,v 1.4 2005/05/01 03:57:11 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -20,8 +20,6 @@ DEPEND="virtual/x11
 src_unpack() {
 	unpack ${A}; cd ${S}
 	epatch ${FILESDIR}/${PN}-no-toolbar-by-default.patch
-	# Workaround problem where some bash versions treat $CMD specially
-	sed -i 's/\<CMD\>/LINK_CMD/g' ${S}/plink.sh
 }
 
 src_compile() {
