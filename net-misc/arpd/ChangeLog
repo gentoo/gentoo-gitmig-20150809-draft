@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/arpd
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/arpd/ChangeLog,v 1.7 2005/04/27 00:31:14 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/arpd/ChangeLog,v 1.8 2005/05/01 17:25:07 hansmi Exp $
+
+  01 May 2005; Michael Hanselmann <hansmi@gentoo.org> arpd-0.2.ebuild:
+  Stable on ppc.
 
   27 Apr 2005; Brian Jackson <iggy@gentoo.org> +files/arpd.c.patch,
   arpd-0.2.ebuild:

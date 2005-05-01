@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/aggregate
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/aggregate/ChangeLog,v 1.7 2004/12/29 03:31:09 ciaranm Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/aggregate/ChangeLog,v 1.8 2005/05/01 17:26:05 hansmi Exp $
+
+  01 May 2005; Michael Hanselmann <hansmi@gentoo.org> aggregate-1.6.ebuild:
+  Stable on ppc.
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance

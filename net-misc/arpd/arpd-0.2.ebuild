@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/arpd/arpd-0.2.ebuild,v 1.10 2005/04/27 00:31:14 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/arpd/arpd-0.2.ebuild,v 1.11 2005/05/01 17:25:07 hansmi Exp $
 
 DESCRIPTION="ARP reply daemon enables a single host to claim all unassigned addresses on a LAN for network monitoring or simulation"
 HOMEPAGE="http://www.citi.umich.edu/u/provos/honeyd/"
@@ -8,7 +8,7 @@ SRC_URI="http://www.citi.umich.edu/u/provos/honeyd/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="x86 ~sparc ~ppc hppa ~amd64"
+KEYWORDS="x86 ~sparc ppc hppa ~amd64"
 IUSE=""
 
 inherit eutils
