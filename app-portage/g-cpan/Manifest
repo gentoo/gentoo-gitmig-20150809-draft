@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 ab37011f88a2a6ec0a158aa8649e5860 g-cpan-0.12.ebuild 1107
+MD5 0e113485988d104cd921ccd5e3ab5cc5 g-cpan-0.12.ebuild 1178
 MD5 1700933eaee6584200f19dcb29306ba5 metadata.xml 420
-MD5 d430f021ad4249a84edc964646f1f8df ChangeLog 1070
+MD5 edd71f89aeba28cf8698a85cc1c6a3c7 ChangeLog 1258
 MD5 bdf27604ec34f22b22d6351dd576caaa files/digest-g-cpan-0.12 61
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCdAR1tG5z4I8BtQoRAhQgAKCTbBq8biFzUgx3FwoRv74lSgASmQCfe+xZ
-EsbuK6aKwPywTT3NCImsAck=
-=ryj0
+iD8DBQFCdNFItG5z4I8BtQoRArurAJ4zaOk7CkTVvKkTjhcZigs4xQoGaQCgi6yA
+uB3pkmMkXgDSBjLfAJ1L3qw=
+=HcHb
 -----END PGP SIGNATURE-----

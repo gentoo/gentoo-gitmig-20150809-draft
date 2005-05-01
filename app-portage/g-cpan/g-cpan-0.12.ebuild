@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/g-cpan/g-cpan-0.12.ebuild,v 1.1 2005/04/30 22:19:39 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/g-cpan/g-cpan-0.12.ebuild,v 1.2 2005/05/01 12:53:25 mcummings Exp $
 
 DESCRIPTION="g-cpan: generate and install CPAN modules using portage"
 HOMEPAGE="http://dev.gentoo.org/~mcummings/"
@@ -8,11 +8,12 @@ SRC_URI="mirorr://gentoo/${P}.tar.gz"
 
 LICENSE="|| ( Artistic GPL-2 )"
 SLOT="0"
-KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64 s390 ppc64"
+#KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64 s390 ppc64"
+KEYWORDS=" alpha  amd64  arm  hppa  ia64  mips  ppc  ppc-macos  ppc64  s390  sh  sparc
+x86"
 IUSE=""
 
-DEPEND="dev-lang/perl
-		dev-perl/Digest-MD5"
+DEPEND="dev-lang/perl"
 
 pkg_setup() {
 	if hasq collision-protect $FEATURES; then
