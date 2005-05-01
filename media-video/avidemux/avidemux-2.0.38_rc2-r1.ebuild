@@ -1,14 +1,16 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.0.38_rc2-r1.ebuild,v 1.5 2005/04/29 21:03:43 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.0.38_rc2-r1.ebuild,v 1.6 2005/05/01 21:50:08 flameeyes Exp $
 
 inherit eutils flag-o-matic
 
 MY_P=${P/_/}
+PATCHLEVEL="1"
+
 DESCRIPTION="Great Video editing/encoding tool"
 HOMEPAGE="http://fixounet.free.fr/avidemux/"
 SRC_URI="http://download.berlios.de/${PN}/${MY_P}b.tar.gz
-	mirror://gentoo/${PF}-patches.tar.bz2"
+	http://digilander.libero.it/dgp85/gentoo/${PN}-patches-${PATCHLEVEL}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="2"
@@ -24,7 +26,6 @@ RDEPEND="xv? ( virtual/x11 )
 	       >=media-libs/faad2-2.0-r5 )
 	mad? ( media-libs/libmad )
 	xvid? ( >=media-libs/xvid-1.0.0 )
-	x86? ( dev-lang/nasm )
 	nls? ( >=sys-devel/gettext-0.12.1 )
 	vorbis? ( >=media-libs/libvorbis-1.0.1 )
 	arts? ( >=kde-base/arts-1.2.3 )
@@ -34,6 +35,7 @@ RDEPEND="xv? ( virtual/x11 )
 # media-sound/toolame is supported as well
 
 DEPEND="$RDEPEND
+	x86? ( dev-lang/nasm )
 	dev-util/pkgconfig
 	>=sys-devel/autoconf-2.58
 	>=sys-devel/automake-1.8.3"
@@ -49,12 +51,9 @@ src_unpack() {
 	unpack ${A}
 	cd ${S} || die
 
-	EPATCH_SUFFIX="patch"
-	epatch ${WORKDIR}/${PVR}/patches/
+	EPATCH_SUFFIX="patch" epatch ${WORKDIR}/${PV}/patches/
 
-	cp ${WORKDIR}/${PVR}/m4/* ${S}/m4 || die "cp m4 failed"
-	epatch ${FILESDIR}/${P}-aclocal.patch
-	epatch ${FILESDIR}/${P}-mmx_altivec.patch
+	cp ${WORKDIR}/${PV}/m4/* ${S}/m4 || die "cp m4 failed"
 
 	make -f Makefile.dist || die "autotools failed."
 }
