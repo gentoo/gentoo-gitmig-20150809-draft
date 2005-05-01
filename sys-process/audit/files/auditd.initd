@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/audit/files/auditd.initd,v 1.1 2005/05/01 02:19:00 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/audit/files/auditd.initd,v 1.2 2005/05/01 02:19:48 robbat2 Exp $
 
 start() {
 	ebegin "Starting auditd"
@@ -12,7 +12,7 @@ start() {
 	eend $ret
 	if [ $ret -eq 0 -a -n "${rulefile}" -a -f "${rulefile}" ]; then
 		einfo "Loading audit rules from ${rulefile}"
-		/sbin/auditctl -R "${rulefile}"
+		/usr/sbin/auditctl -R "${rulefile}"
 		ret=$?
 	fi
 	return $ret

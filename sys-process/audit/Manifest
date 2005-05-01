@@ -5,4 +5,4 @@ MD5 4028de99a5b2e8ae083e2b2da72a4ce6 metadata.xml 227
 MD5 55e18ec35f409c781ee0b974f0006239 files/digest-audit-0.7 60
 MD5 bf5a8a780a21b8072984968db475969e files/digest-audit-0.7.1 62
 MD5 d0c04da868c3fe0dff941187f054ecf6 files/auditd.confd 474
-MD5 ff488634acfe98b2aeb6737938987801 files/auditd.initd 704
+MD5 7c1f1f14a4750e7d8bbc1de62b3fcf59 files/auditd.initd 708
