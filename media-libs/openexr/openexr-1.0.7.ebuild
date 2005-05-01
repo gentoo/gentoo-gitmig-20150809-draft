@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openexr/openexr-1.0.7.ebuild,v 1.7 2005/02/16 01:45:56 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openexr/openexr-1.0.7.ebuild,v 1.8 2005/05/01 07:17:47 lu_zero Exp $
 
 inherit eutils
 
@@ -26,7 +26,7 @@ src_unpack() {
 }
 
 src_compile() {
-	./configure \
+	econf \
 		--disable-fltktest \
 		--enable-imfexamples \
 		|| die "configure failed"
