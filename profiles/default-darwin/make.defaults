@@ -17,3 +17,7 @@ RESUMECOMMAND="/usr/bin/curl --connect-timeout 15 -# -C - -o \${DISTDIR}/\${FILE
 FEATURES="-sandbox userpriv"
 
 USE="emboss"
+
+USERLAND="BSD"
+KERNEL="Darwin"
+LIBC="Darwin"

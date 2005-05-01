@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-ppc-2004.2/make.defaults,v 1.14 2005/04/24 10:05:03 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-ppc-2004.2/make.defaults,v 1.15 2005/05/01 01:54:49 spb Exp $
 # Gentoo Linux PowerPC system defaults
 
 ACCEPT_KEYWORDS="ppc"
@@ -16,8 +16,11 @@ USE="dvd jpeg nls gif png truetype ppc fortran"
 # Env vars to expand into USE vars. Modifying this requires prior
 # discussion on gentoo-dev@gentoo.org. Flat profiles also need to
 # be updated appropriately.
-USE_EXPAND="FRITZCAPI_CARDS FCDSL_CARDS VIDEO_CARDS INPUT_DEVICES LINGUAS"
+USE_EXPAND="FRITZCAPI_CARDS FCDSL_CARDS VIDEO_CARDS INPUT_DEVICES LINGUAS USERLAND KERNEL LIBC"
 
 CONFIG_PROTECT="/etc /var/qmail/control /usr/share/config /usr/kde/2/share/config /usr/kde/3/share/config"
 CONFIG_PROTECT_MASK="/etc/gconf"
 
+USERLAND=GNU
+KERNEL=linux
+LIBC=glibc

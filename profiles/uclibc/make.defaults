@@ -7,6 +7,8 @@ CXXFLAGS="${CFLAGS}"
 
 PORTAGE_LIBC="uClibc"
 
+LIBC=uclibc
+
 # 
 # FEATURES are settings that affect the functionality of portage. Most of
 #     these settings are for developer use, but some are available to non-
