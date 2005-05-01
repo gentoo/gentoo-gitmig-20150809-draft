@@ -1,6 +1,10 @@
 # ChangeLog for dev-cpp/libxmlpp
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libxmlpp/ChangeLog,v 1.23 2005/04/27 11:50:46 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libxmlpp/ChangeLog,v 1.24 2005/05/01 18:07:33 hansmi Exp $
+
+  01 May 2005; Michael Hanselmann <hansmi@gentoo.org>
+  libxmlpp-1.0.4-r2.ebuild:
+  Stable on ppc.
 
 *libxmlpp-2.10.0-r1 (27 Apr 2005)
 *libxmlpp-2.8.0-r1 (27 Apr 2005)
