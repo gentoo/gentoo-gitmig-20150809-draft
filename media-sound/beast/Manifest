@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 3d2228c69c0428b0fdb688d91d1bd2f4 beast-0.6.5.ebuild 1115
-MD5 3c5543d2a67889f77b7d956088041383 beast-0.6.4.ebuild 1108
-MD5 e581c86604ab0e006b19d7370b2f1e1f ChangeLog 2641
 MD5 b263ff7675308d90b75a170acae3f5ff metadata.xml 177
+MD5 f20e6bb6d3697f5d55e1d0c3acbc68f4 ChangeLog 2730
+MD5 2dea516fd48d57d9fd1edbfe3f0beffc beast-0.6.4.ebuild 1104
 MD5 0b77b5cbace4f1933b8a5f3fa5375b6f files/digest-beast-0.6.4 64
 MD5 4b4e3a3330b9a7ee302a339373a41a22 files/digest-beast-0.6.5 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCXX7D06ebR+OMO78RAkFFAJ42M5CKzSgGNfdi655LC+kaHbcS7wCaAndz
-qji7d3lrWwTChAb71OxarIY=
-=ZvuU
------END PGP SIGNATURE-----
