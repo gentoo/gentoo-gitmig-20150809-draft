@@ -1,6 +1,9 @@
 # ChangeLog for net-im/psi
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psi/ChangeLog,v 1.61 2005/04/26 23:08:35 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psi/ChangeLog,v 1.62 2005/05/01 02:00:14 weeve Exp $
+
+  01 May 2005; Jason Wever <weeve@gentoo.org> psi-0.9.3-r2.ebuild:
+  Stable on SPARC.
 
   26 Apr 2005; Gustavo Felisberto <humpback@gentoo.org>;
   psi-0.9.3-r2.ebuild:
