@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/xmms-synaesthesia
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-synaesthesia/ChangeLog,v 1.10 2005/03/23 18:59:00 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-synaesthesia/ChangeLog,v 1.11 2005/05/01 17:16:35 hansmi Exp $
+
+  01 May 2005; Michael Hanselmann <hansmi@gentoo.org>
+  xmms-synaesthesia-0.0.3_rc3-r1.ebuild:
+  Stable on ppc.
 
 *xmms-synaesthesia-0.0.3_rc3-r1 (23 Mar 2005)
 

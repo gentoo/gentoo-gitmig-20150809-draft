@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-synaesthesia/xmms-synaesthesia-0.0.3_rc3-r1.ebuild,v 1.1 2005/03/23 18:59:00 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-synaesthesia/xmms-synaesthesia-0.0.3_rc3-r1.ebuild,v 1.2 2005/05/01 17:16:35 hansmi Exp $
 
 IUSE=""
 
@@ -18,7 +18,7 @@ RDEPEND=""
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc sparc amd64"
+KEYWORDS="x86 ppc sparc amd64"
 
 src_unpack() {
 	unpack ${A}
