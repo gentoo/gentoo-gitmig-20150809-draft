@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/email
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/email/ChangeLog,v 1.10 2005/04/27 13:27:18 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/email/ChangeLog,v 1.11 2005/05/01 16:14:42 slarti Exp $
+
+  01 May 2005; Tom Martin <slarti@gentoo.org> email-2.3.4.ebuild:
+  Stable on amd64.
 
   27 Apr 2005; Andrej Kacian <ticho@gentoo.org> email-2.3.3.ebuild,
   email-2.3.4.ebuild:
