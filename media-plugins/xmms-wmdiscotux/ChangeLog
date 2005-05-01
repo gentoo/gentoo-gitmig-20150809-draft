@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/xmms-wmdiscotux
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-wmdiscotux/ChangeLog,v 1.5 2004/09/15 19:32:27 eradicator Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-wmdiscotux/ChangeLog,v 1.6 2005/05/01 17:24:10 hansmi Exp $
+
+  01 May 2005; Michael Hanselmann <hansmi@gentoo.org>
+  xmms-wmdiscotux-1.3.ebuild:
+  Stable on ppc.
 
   15 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org>
   xmms-wmdiscotux-1.3.ebuild:
