@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vm-pop3d/vm-pop3d-1.1.6-r1.ebuild,v 1.3 2005/03/04 20:18:00 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vm-pop3d/vm-pop3d-1.1.6-r1.ebuild,v 1.4 2005/05/01 18:23:04 hansmi Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.ibiblio.org/pub/Linux/system/mail/pop/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 sparc ~ppc"
+KEYWORDS="x86 sparc ppc"
 IUSE="pam debug"
 
 DEPEND="virtual/libc

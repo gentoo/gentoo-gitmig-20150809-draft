@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/dovecot
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.23 2005/04/09 21:12:27 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.24 2005/05/01 18:21:12 hansmi Exp $
+
+  01 May 2005; Michael Hanselmann <hansmi@gentoo.org>
+  dovecot-0.99.14-r1.ebuild:
+  Stable on ppc.
 
   09 Apr 2005; Andrej Kacian <ticho@gentoo.org> dovecot-0.99.14-r1.ebuild:
   Stable on x86. Closes #87676, reported by Daniel Webert <rockoo@gmail.com>.
