@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/garlic/garlic-3.15p-r1.ebuild,v 1.6 2005/01/01 17:24:38 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/garlic/garlic-3.15p-r1.ebuild,v 1.7 2005/05/01 17:19:30 hansmi Exp $
 
 inherit gnat
 
@@ -14,7 +14,7 @@ DEPEND="<dev-lang/gnat-5.0"
 RDEPEND=""
 SLOT="0"
 IUSE=""
-KEYWORDS="x86 ~ppc"
+KEYWORDS="x86 ppc"
 
 src_compile() {
 	local CFLAGS="${ADACFLAGS} -fPIC"
