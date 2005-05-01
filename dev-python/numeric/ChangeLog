@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/numeric
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numeric/ChangeLog,v 1.16 2005/04/26 02:35:28 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numeric/ChangeLog,v 1.17 2005/05/01 16:07:57 gmsoft Exp $
+
+  01 May 2005; Guy Martin <gmsoft@gentoo.org> numeric-23.7.ebuild:
+  Stable on hppa.
 
   26 Apr 2005; Gustavo Zacarias <gustavoz@gentoo.org> numeric-23.7.ebuild:
   Stable on sparc
