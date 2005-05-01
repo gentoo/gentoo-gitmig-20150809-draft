@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gnome-system-tools/gnome-system-tools-1.2.0.ebuild,v 1.4 2005/03/20 03:07:46 kingtaco Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gnome-system-tools/gnome-system-tools-1.2.0.ebuild,v 1.5 2005/05/01 02:21:46 joem Exp $
 
 inherit gnome2 eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.gnome.org/projects/gst/"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~ppc ~x86 ~amd64 ~sparc"
-IUSE=""
+IUSE="nfs samba"
 
 RDEPEND="net-misc/openssh
 	sys-apps/shadow
@@ -20,7 +20,9 @@ RDEPEND="net-misc/openssh
 	>=gnome-base/gconf-2.2
 	>=dev-libs/libxml2-2.4.12
 	>=gnome-base/nautilus-2.9.90
-	>=app-admin/system-tools-backends-${PV}"
+	>=app-admin/system-tools-backends-${PV}
+	nfs? ( net-fs/nfs-utils )
+	samba? ( >=net-fs/samba-3 )"
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
@@ -33,3 +35,6 @@ USE_DESTDIR="1"
 # --enable-disks is not (still) supported for Gentoo
 G2CONF="${G2CONF} --enable-boot --enable-services"
 
+if ! use nfs && ! use samba; then
+	G2CONF="${G2CONF} --disable-shares"
+fi
