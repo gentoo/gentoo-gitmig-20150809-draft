@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-libart
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-libart/ChangeLog,v 1.9 2004/06/25 02:01:00 agriffis Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-libart/ChangeLog,v 1.10 2005/05/01 18:09:12 hansmi Exp $
+
+  01 May 2005; Michael Hanselmann <hansmi@gentoo.org>
+  ruby-libart-0.34.ebuild:
+  Stable on ppc.
 
   24 Jun 2004; Ferris McCormick <fmccor@gentoo.org> ruby-libart-0.34.ebuild:
   Add ~sparc keyword. (Part of ruby-gnome-all; needs same version of ruby-gtk.)

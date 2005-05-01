@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-libglade
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-libglade/ChangeLog,v 1.15 2004/12/31 01:10:39 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-libglade/ChangeLog,v 1.16 2005/05/01 18:09:30 hansmi Exp $
+
+  01 May 2005; Michael Hanselmann <hansmi@gentoo.org>
+  ruby-libglade-0.34.ebuild:
+  Stable on ppc.
 
   31 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
