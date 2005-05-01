@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/wxwidgets.eclass,v 1.5 2005/01/11 00:02:00 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/wxwidgets.eclass,v 1.6 2005/05/01 20:55:42 pythonhead Exp $
 #
 # Author Rob Cakebread <pythonhead@gentoo.org>
 
@@ -9,12 +9,14 @@
 
 # FUNCTIONS:
 # need-wxwidgets:
-#   Arguments: gtk, gtk2 or unicode
+#   Arguments:
+#     2.4: gtk gtk2 unicode
+#     2.6: gtk gtk2 gtk2-unicode base base-unicode mac mac-unicode
 #
 #
 # set-wxconfig
 #   Arguments: (wxGTK 2.4) wxgtk, wxgtk2, or wxgtk2u
-#   Arguments: (wxGTK 2.5 and 2.6) gtk, gtk2, or unicode
+#   Arguments: (wxGTK 2.6) gtk-ansi gtk2-ansi gtk2-unicode base-ansi base-unicode mac-ansi mac-unicode
 #   Note: Don't call this function directly from ebuilds
 
 ECLASS=wxwidgets
@@ -22,13 +24,18 @@ INHERITED="$INHERITED $ECLASS"
 
 need-wxwidgets() {
 	debug-print-function $FUNCNAME $*
-	#If you want to use wxGTK-2.5* export WX_GTK_VER in your ebuild:
-	if [ "${WX_GTK_VER}" = "2.5" ]; then
+	#If you want to use wxGTK-2.6* export WX_GTK_VER in your ebuild:
+	if [ "${WX_GTK_VER}" = "2.6" ]; then
 		case $1 in
 			gtk)		set-wxconfig gtk-ansi;;
 			gtk2)		set-wxconfig gtk2-ansi;;
-			unicode)	set-wxconfig gtk2-unicode;;
-			*)		echo "!!! $FUNCNAME: Error: unrecognized wxconfig version $1 requested"
+			gtk2-unicode)	set-wxconfig gtk2-unicode;;
+			base)		set-wxconfig base-ansi;;
+			base-unicode)	set-wxconfig base-unicode;;
+			mac)		set-wxconfig mac-ansi;;
+			mac-unicode)	set-wxconfig mac-unicode;;
+			*)		echo "!!! $FUNCNAME: Error: wxGTK was not comipled with $1."
+					echo "!!! Adjust your USE flags or re-emerge wxGTK with version you want."
 			exit 1;;
 		esac
 
@@ -38,7 +45,8 @@ need-wxwidgets() {
 			gtk)		set-wxconfig wxgtk;;
 			gtk2)		set-wxconfig wxgtk2;;
 			unicode)	set-wxconfig wxgtk2u;;
-			*)		echo "!!! $FUNCNAME: Error: unrecognized wxconfig version $1 requested"
+			*)		echo "!!! $FUNCNAME: Error: wxGTK was not comipled with $1."
+					echo "!!! Adjust your USE flags or re-emerge wxGTK with version you want."
 			exit 1;;
 		esac
 	fi
@@ -49,7 +57,7 @@ set-wxconfig() {
 
 	debug-print-function $FUNCNAME $*
 
-	if [ "${WX_GTK_VER}" = "2.5" ] ; then
+	if [ "${WX_GTK_VER}" = "2.6" ] ; then
 		wxconfig_prefix="/usr/lib/wx/config"
 		wxconfig_name="${1}-release-${WX_GTK_VER}"
 		wxconfig="${wxconfig_prefix}/${wxconfig_name}"
@@ -79,10 +87,10 @@ set-wxconfig() {
 		echo "!!! $FUNCNAME:         ${wxconfig} not found"
 		echo "!!! $FUNCNAME:         ${wxconfig_debug} not found"
 		case $1 in
-			wxgtk)	 echo "!!! You need to emerge wxGTK with -no_wxgtk1 in your USE";;
-			wxgtkd)	 echo "!!! You need to emerge wxGTK with -no_wxgtk1 in your USE";;
-			gtk-ansi)  echo "!!! You need to emerge wxGTK with -no_wxgtk1 in your USE";;
-			gtkd-ansi) echo "!!! You need to emerge wxGTK with -no_wxgtk1 in your USE";;
+			wxgtk)	 echo "!!! You need to emerge wxGTK with wxgtk1 in your USE";;
+			wxgtkd)	 echo "!!! You need to emerge wxGTK with wxgtk1 in your USE";;
+			gtk-ansi)  echo "!!! You need to emerge wxGTK with wxgtk1 in your USE";;
+			gtkd-ansi) echo "!!! You need to emerge wxGTK with wxgtk1 in your USE";;
 
 			wxgtk2)	 echo "!!! You need to emerge wxGTK with gtk2 in your USE";;
 			wxgtk2d) echo "!!! You need to emerge wxGTK with gtk2 in your USE";;
