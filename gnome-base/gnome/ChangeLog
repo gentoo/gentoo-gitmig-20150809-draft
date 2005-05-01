@@ -1,6 +1,11 @@
 # ChangeLog for gnome-base/gnome
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/ChangeLog,v 1.156 2005/04/30 04:24:12 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/ChangeLog,v 1.157 2005/05/01 04:44:31 joem Exp $
+
+*gnome-2.10 (01 May 2005)
+
+  01 May 2005; Joe McCann <joem@gentoo.org> +gnome-2.10.ebuild:
+  move 2.10 from p.mask to ~arch
 
   30 Apr 2005; Mike Gardiner <obz@gentoo.org> gnome-2.8.3-r1.ebuild:
   Marked x86/ppc
