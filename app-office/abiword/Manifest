@@ -1,22 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 9ba3c56a7ac3936cbf08b6f956b1ce2f abiword-2.2.2.ebuild 2262
-MD5 6cffb87e1a6d35fc213dddb2c970e17f ChangeLog 14578
-MD5 95ddde920319d2ddcab841258017fada abiword-2.2.7.ebuild 2377
+MD5 93ec5ad283980e798f82c5361da84904 ChangeLog 14665
 MD5 728e85c3f04c02a833f996e3a6ecfbdf abiword-2.0.10.ebuild 2440
-MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 ec506ce08f1838e08eed1d132f253558 abiword-2.2.5.ebuild 2282
+MD5 9ba3c56a7ac3936cbf08b6f956b1ce2f abiword-2.2.2.ebuild 2262
 MD5 1b49e3803b78910475de9628cee03272 abiword-2.2.3.ebuild 2341
-MD5 05bd382bc17a222b7d38e46dd90350c0 files/digest-abiword-2.2.5 68
+MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+MD5 e6db7765c211a23397424573e92c2dc9 abiword-2.2.5.ebuild 2281
+MD5 95ddde920319d2ddcab841258017fada abiword-2.2.7.ebuild 2377
 MD5 4b3719f3158acf5c443b4739886272f4 files/digest-abiword-2.0.10 69
-MD5 18acb96f28cede2da43044aaa82a6f94 files/digest-abiword-2.2.7 68
 MD5 3b6aacecf03d65d9c41833afe9d29687 files/digest-abiword-2.2.2 68
 MD5 b99de998f7d17ea36a6f83bea33406be files/digest-abiword-2.2.3 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCbTmhKf2g/qXtneoRAkrKAJ4772+1lad9LxzrHJopDUG+siqxEgCdEtXH
-KfXN18frQg6NkuSncFezrns=
-=fq0y
------END PGP SIGNATURE-----
+MD5 05bd382bc17a222b7d38e46dd90350c0 files/digest-abiword-2.2.5 68
+MD5 18acb96f28cede2da43044aaa82a6f94 files/digest-abiword-2.2.7 68
