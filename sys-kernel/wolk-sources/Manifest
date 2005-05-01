@@ -27,12 +27,11 @@ MD5 d4a740ae56c2049247083af387a22a85 files/wolk-sources.CAN-2004-0394.patch 350
 MD5 3bdf00d5f80fe9dfbfe8220e076cd04c files/wolk-sources.CAN-2004-0497.patch 707
 MD5 0f93b46ae17cbd0fc9b4d1cf5d704296 files/wolk-sources.81106.patch 2243
 MD5 370cc17582bbb17605090009d24eba51 files/wolk-sources.CAN-2004-1016.patch 2168
-MD5 2ca46d61e534cfd18a965e9ae8e870e2 files/binfmt_elf.patch 2347
 MD5 6ed89b8ac0b47a4c25d3a616ef9245cc files/wolk-sources.vma.patch 11369
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCdV1KiJcSIUGNthERAk3gAJ486C/0FhuBv4vvDEnasxA1kwuSNQCeLFuN
-Da28iJ4JcETSkHjo9v8jzSQ=
-=nXmg
+iD8DBQFCdWAfiJcSIUGNthERAsd2AKCAyGpStIu8wNGFeGb7cCrdIyXuBQCeJ+uC
+/qk0D10YvJKk6AO3Qf4JLyA=
+=YMQQ
 -----END PGP SIGNATURE-----
