@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/osiris
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/osiris/ChangeLog,v 1.10 2005/04/24 02:25:45 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/osiris/ChangeLog,v 1.11 2005/05/01 18:17:42 hansmi Exp $
+
+  01 May 2005; Michael Hanselmann <hansmi@gentoo.org> osiris-1.5.2.ebuild:
+  Stable on ppc.
 
 *osiris-1.5.2-r1 (23 Apr 2005)
 
