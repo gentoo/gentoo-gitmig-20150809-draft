@@ -4,14 +4,14 @@ Hash: SHA1
 MD5 c339473e0ff43da76eb2f2607c441921 metadata.xml 280
 MD5 d95c0c4751466d60d6be7792123788a3 ChangeLog 6767
 MD5 033749b6b1a992827071bc327a387f18 gallery-1.4.4_p6.ebuild 1219
-MD5 38b758b9fae6459399bddb7fd2888a76 gallery-1.5.ebuild 1189
+MD5 6986ecf9d49a6dc3b0e117c003a4450d gallery-1.5.ebuild 1195
 MD5 1a10c9a2ede35b5bfcfcedc4d90373e3 files/postinstall-en.txt 287
 MD5 3485f6f6f43d72b5c119d09d0db3f7ca files/digest-gallery-1.5 64
 MD5 a8729b1e72b2703178d00a546bc8a925 files/digest-gallery-1.4.4_p6 70
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCdIdYjUHll2nfF60RAttpAJ9jYdpkCJvdqjV9T56tZ/x4imLzRQCeMDqE
-x037I+t6AJLWXSBrrATF5MU=
-=MIaG
+iD4DBQFCdJUWjUHll2nfF60RAmXBAJiMsjI7nZAsnuBzyZcvw20CkeRzAKCPAPAa
+TaGN6ERP8BcyGCsShrzmcg==
+=kbOQ
 -----END PGP SIGNATURE-----
