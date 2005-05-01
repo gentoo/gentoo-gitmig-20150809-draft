@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/lib765
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/lib765/ChangeLog,v 1.5 2005/01/01 14:13:51 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/lib765/ChangeLog,v 1.6 2005/05/01 16:48:31 hansmi Exp $
+
+  01 May 2005; Michael Hanselmann <hansmi@gentoo.org> lib765-0.3.1.1.ebuild:
+  Stable on ppc.
 
   07 Jun 2004; Daniel Black <dragonheart@gentoo.org> +metadata.xml,
   lib765-0.3.1.1.ebuild:
