@@ -1,6 +1,10 @@
 # ChangeLog for sec-policy/selinux-base-policy
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base-policy/ChangeLog,v 1.36 2005/03/23 00:31:01 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base-policy/ChangeLog,v 1.37 2005/05/01 22:58:53 spb Exp $
+
+  01 May 2005; Stephen Bennett <spb@gentoo.org>
+  selinux-base-policy-20050322.ebuild:
+  Added ~mips.
 
 *selinux-base-policy-20050322 (23 Mar 2005)
 
