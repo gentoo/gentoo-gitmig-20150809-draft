@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a86ba82fd8db173e1dceee1df70b45ea ChangeLog 671
-MD5 79a49b83e1a02770d4bbe2df49b2dd0b mrouted-3.9_beta3.ebuild 980
-MD5 b063cfdcd78a545936175411c2da590e files/mrouted.rc 712
+MD5 83ee66b59d4d3346bb4896728c2e679c mrouted-3.9_beta3.ebuild 978
+MD5 45e2aa4d3c0b34d2fc8ef7e98b0ef9b9 ChangeLog 770
 MD5 fef0562a211b6b834bfd82d55d548c4e files/digest-mrouted-3.9_beta3 144
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBjPaTI7fK2cqeyXkRArKZAJ9B/AN0fHYCeCJwj4Ktnr5lP/qd9wCgw1Hl
-2UjYnWMuoItilqrd/yTOaiQ=
-=lrqJ
------END PGP SIGNATURE-----
+MD5 b063cfdcd78a545936175411c2da590e files/mrouted.rc 712
