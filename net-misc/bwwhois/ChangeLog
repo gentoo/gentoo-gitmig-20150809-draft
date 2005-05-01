@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/bwwhois
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bwwhois/ChangeLog,v 1.10 2004/12/29 03:32:43 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bwwhois/ChangeLog,v 1.11 2005/05/01 18:16:56 hansmi Exp $
+
+  01 May 2005; Michael Hanselmann <hansmi@gentoo.org> bwwhois-3.4.ebuild:
+  Stable on ppc.
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance

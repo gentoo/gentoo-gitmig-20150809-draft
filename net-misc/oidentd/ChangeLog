@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/oidentd
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/oidentd/ChangeLog,v 1.23 2004/11/08 01:50:30 josejx Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/oidentd/ChangeLog,v 1.24 2005/05/01 18:16:19 hansmi Exp $
+
+  01 May 2005; Michael Hanselmann <hansmi@gentoo.org>
+  oidentd-2.0.7-r1.ebuild:
+  Stable on ppc.
 
   08 Nov 2004; Joseph Jezak <josejx@gentoo.org> oidentd-2.0.7-r1.ebuild:
   Added ~ppc.
