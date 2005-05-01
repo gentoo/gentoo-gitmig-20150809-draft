@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/getdate
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/getdate/ChangeLog,v 1.7 2005/02/17 19:18:08 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/getdate/ChangeLog,v 1.8 2005/05/01 17:04:51 hansmi Exp $
+
+  01 May 2005; Michael Hanselmann <hansmi@gentoo.org> getdate-1.2.ebuild:
+  Stable on ppc.
 
   17 Feb 2005; Michael Hanselmann <hansmi@gentoo.org> getdate-1.2.ebuild:
   Added to ~ppc, bug 82045.

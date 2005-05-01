@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/mrouted
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mrouted/ChangeLog,v 1.5 2004/11/06 16:06:39 pyrania Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mrouted/ChangeLog,v 1.6 2005/05/01 17:08:30 hansmi Exp $
+
+  01 May 2005; Michael Hanselmann <hansmi@gentoo.org>
+  mrouted-3.9_beta3.ebuild:
+  Stable on ppc.
 
   06 Nov 2004; <pyrania@gentoo.org> mrouted-3.9_beta3.ebuild:
   Marked stable on x86.
