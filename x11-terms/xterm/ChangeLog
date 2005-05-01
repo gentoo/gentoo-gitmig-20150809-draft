@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/xterm
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.80 2005/04/30 16:20:56 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.81 2005/05/01 07:54:15 gmsoft Exp $
+
+  01 May 2005; Guy Martin <gmsoft@gentoo.org> xterm-200-r1.ebuild:
+  Stable on hppa.
 
   30 Apr 2005; Aron Griffis <agriffis@gentoo.org> xterm-200-r1.ebuild,
   xterm-201.ebuild:
