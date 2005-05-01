@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/qmail-1.03-r16.ebuild,v 1.16 2005/03/03 18:43:27 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/qmail-1.03-r16.ebuild,v 1.17 2005/05/01 12:46:05 hansmi Exp $
 
 inherit toolchain-funcs eutils fixheadtails
 
-IUSE="ssl noauthcram notlsbeforeauth selinux"
+IUSE="ssl noauthcram notlsbeforeauth selinux logmail"
 DESCRIPTION="A modern replacement for sendmail which uses maildirs and includes SSL/TLS, AUTH SMTP, and queue optimization"
 HOMEPAGE="http://www.qmail.org/
 	http://members.elysium.pl/brush/qmail-smtpd-auth/
@@ -266,6 +266,12 @@ src_unpack() {
 	EPATCH_SINGLE_MSG="Applying fix for a special case with courier-imapd" \
 	epatch ${FILESDIR}/${PVR}/famd-dnotify.patch
 
+	# See bug #90631
+	if use logmail; then
+		EPATCH_SINGLE_MSG='Enabling logging of all mails via ~alias/.qmail-log' \
+		epatch ${FILESDIR}/${PVR}/qmail-logmail.patch
+	fi
+
 	echo -n "$(tc-getCC) ${CFLAGS}" >${S}/conf-cc
 	if use ssl; then
 		einfo "Enabling SSL/TLS functionality"
@@ -488,6 +494,12 @@ buildtcprules() {
 }
 
 pkg_postinst() {
+	if [[ ! -x /var/qmail/bin/queue-fix ]]; then
+		eerror "Can't find /var/qmail/bin/queue-fix -- have you rm -rf'd /var/qmail?"
+		einfo "Please remerge net-mail/queue-fix and don't do that again!"
+		die "Can't find /var/qmail/bin/queue-fix"
+	fi
+
 	einfo "Setting up the message queue hierarchy ..."
 	# queue-fix makes life easy!
 	/var/qmail/bin/queue-fix ${ROOT}/var/qmail/queue >/dev/null
@@ -523,6 +535,14 @@ pkg_postinst() {
 	einfo "  -- qmail/vpopmail Virtual Mail Hosting System Guide"
 	einfo "http://www.lifewithqmail.com/"
 	einfo "  -- Life with qmail"
+
+	if use logmail; then
+		echo
+		einfo "You've enabled the logmail USE flag. To really use it, please"
+		einfo "follow those URLs:"
+		einfo "http://cr.yp.to/qmail/faq/admin.html#copies"
+		einfo "http://www.cyber-sentry.com/index.php?id=35"
+	fi
 }
 
 pkg_preinst() {
