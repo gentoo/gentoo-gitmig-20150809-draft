@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/GnuPG-Interface
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/GnuPG-Interface/ChangeLog,v 1.8 2005/04/22 12:34:57 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/GnuPG-Interface/ChangeLog,v 1.9 2005/05/01 17:00:58 hansmi Exp $
+
+  01 May 2005; Michael Hanselmann <hansmi@gentoo.org>
+  GnuPG-Interface-0.34.ebuild:
+  Stable on ppc.
 
   22 Apr 2005; Simon Stelling <blubb@gentoo.org>
   GnuPG-Interface-0.34.ebuild:
