@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/logging
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/logging/ChangeLog,v 1.7 2005/04/24 09:25:13 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/logging/ChangeLog,v 1.8 2005/05/01 17:09:49 hansmi Exp $
+
+  01 May 2005; Michael Hanselmann <hansmi@gentoo.org> logging-0.4.7.ebuild:
+  Stable on ppc.
 
   24 Apr 2005; Simon Stelling <blubb@gentoo.org> logging-0.4.7.ebuild:
   stable on amd64
