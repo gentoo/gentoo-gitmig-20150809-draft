@@ -1,13 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 4cde5e1eebe1f82a43a1c517f4b381f0 ChangeLog 1253
 MD5 bde634b0f2d00e6df282e99cd379243e usbview-1.0-r1.ebuild 644
+MD5 b81ab9f6bca22dfa1acb815f23464b9b usbview-1.0-r2.ebuild 707
+MD5 786ed52b9e31ceecfa3d53c1c035e908 ChangeLog 1429
+MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 df63a1e8011f281dcbde1e693cb32f35 files/digest-usbview-1.0-r1 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCSwNGugEuf3OQ0akRAtDNAKCgr377jkb1STLHJdPp+NVOG+4t1wCePY0H
-ZmdPy0cE7A+scowWVHrkfHQ=
-=hulE
------END PGP SIGNATURE-----
+MD5 df63a1e8011f281dcbde1e693cb32f35 files/digest-usbview-1.0-r2 63
