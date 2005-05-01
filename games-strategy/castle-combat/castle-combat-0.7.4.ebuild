@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/castle-combat/castle-combat-0.7.4.ebuild,v 1.6 2004/11/08 01:37:37 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/castle-combat/castle-combat-0.7.4.ebuild,v 1.7 2005/05/01 18:24:10 hansmi Exp $
 
 inherit games
 
@@ -10,7 +10,7 @@ SRC_URI="http://user.cs.tu-berlin.de/~karlb/castle-combat/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="x86 ppc"
 IUSE=""
 
 RDEPEND="virtual/libc

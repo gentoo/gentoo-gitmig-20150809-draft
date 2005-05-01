@@ -1,6 +1,10 @@
 # ChangeLog for games-strategy/castle-combat
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/castle-combat/ChangeLog,v 1.5 2004/11/08 01:37:37 josejx Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/castle-combat/ChangeLog,v 1.6 2005/05/01 18:24:10 hansmi Exp $
+
+  01 May 2005; Michael Hanselmann <hansmi@gentoo.org>
+  castle-combat-0.7.4.ebuild:
+  Stable on ppc.
 
   08 Nov 2004; Joseph Jezak <josejx@gentoo.org> castle-combat-0.7.4.ebuild:
   Added ~ppc.
