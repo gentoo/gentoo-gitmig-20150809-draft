@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/trac
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/trac/ChangeLog,v 1.10 2005/04/30 17:12:03 trapni Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/trac/ChangeLog,v 1.11 2005/05/01 02:57:02 trapni Exp $
+
+  01 May 2005; Christian Parpart <trapni@gentoo.org> trac-0.8.1.ebuild:
+  went amd64 back to ~amd64, silvercity needs to stabelize before
 
   30 Apr 2005; Christian Parpart <trapni@gentoo.org> trac-0.8.1.ebuild:
   stable on x86 and amd64
