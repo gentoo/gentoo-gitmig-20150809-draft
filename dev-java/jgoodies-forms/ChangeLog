@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jgoodies-forms
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jgoodies-forms/ChangeLog,v 1.5 2005/04/03 10:32:48 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jgoodies-forms/ChangeLog,v 1.6 2005/05/01 17:05:36 luckyduck Exp $
+
+  01 May 2005; Jan Brinkmann <luckyduck@gentoo.org>
+  jgoodies-forms-1.0.5-r1.ebuild:
+  stable on amd64, ppc and x86
 
 *jgoodies-forms-1.0.5-r1 (03 Apr 2005)
 
