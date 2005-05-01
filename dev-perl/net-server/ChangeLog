@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/net-server
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/net-server/ChangeLog,v 1.10 2005/04/30 13:21:30 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/net-server/ChangeLog,v 1.11 2005/05/01 18:26:54 hansmi Exp $
+
+  01 May 2005; Michael Hanselmann <hansmi@gentoo.org>
+  net-server-0.85.ebuild:
+  Stable on ppc.
 
 *net-server-0.87-r1 (30 Apr 2005)
 
