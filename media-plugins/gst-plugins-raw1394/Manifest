@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 989bbc545135cc4dedf6cbaedad647c1 gst-plugins-raw1394-0.8.8.ebuild 464
-MD5 b71e9ebc7e7c51995aec90951c35ce7f ChangeLog 896
 MD5 6cf6f97e79b43eaf70fa938c431342a3 metadata.xml 181
+MD5 d7748abbf01d6811e746ec704503244c ChangeLog 1001
+MD5 45102293caba91b1105aa2d8b3397637 gst-plugins-raw1394-0.8.8.ebuild 460
 MD5 33cfc77852e050bbb91b003695c91131 files/digest-gst-plugins-raw1394-0.8.8 71
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCb5H106ebR+OMO78RAqCUAJ9OvhwNmqFZrtW5MxqZrmKFxe+j7gCeIQdT
-pM3nH0EkHoZYOye06OpZ3L0=
-=ULqd
------END PGP SIGNATURE-----
