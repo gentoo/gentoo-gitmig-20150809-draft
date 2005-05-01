@@ -1,0 +1,11 @@
+# ChangeLog for x11-libs/libgksu
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libgksu/ChangeLog,v 1.1 2005/05/01 04:58:47 dragonheart Exp $
+
+*libgksu-1.2.5 (01 May 2005)
+
+  01 May 2005; Daniel Black <dragonheart@gentoo.org> +metadata.xml,
+  +libgksu-1.2.5.ebuild:
+  Initial import to satisify gksu version bump in bug #88850. Ebuild by Kalle
+  Kotte <xake@telia.com>.
+
