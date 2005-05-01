@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/nx-x11
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nx-x11/ChangeLog,v 1.8 2005/02/19 10:11:54 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nx-x11/ChangeLog,v 1.9 2005/05/01 18:25:39 hansmi Exp $
+
+  01 May 2005; Michael Hanselmann <hansmi@gentoo.org>
+  nx-x11-1.4.0-r4.ebuild:
+  Stable on ppc.
 
 *nx-x11-1.4.0-r4 (19 Feb 2005)
 
