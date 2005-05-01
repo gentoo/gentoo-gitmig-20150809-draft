@@ -1,6 +1,9 @@
 # ChangeLog for games-sports/gracer
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/gracer/ChangeLog,v 1.9 2004/11/15 18:14:43 gustavoz Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-sports/gracer/ChangeLog,v 1.10 2005/05/01 18:13:15 hansmi Exp $
+
+  01 May 2005; Michael Hanselmann <hansmi@gentoo.org> gracer-0.1.5.ebuild:
+  Stable on ppc.
 
   15 Nov 2004; Gustavo Zacarias <gustavoz@gentoo.org> gracer-0.1.5.ebuild:
   Stable on sparc
