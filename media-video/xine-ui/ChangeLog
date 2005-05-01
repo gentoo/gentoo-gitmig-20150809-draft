@@ -1,6 +1,21 @@
 # ChangeLog for media-video/xine-ui
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/ChangeLog,v 1.75 2005/04/22 17:55:25 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/ChangeLog,v 1.76 2005/05/01 23:33:55 flameeyes Exp $
+
+  01 May 2005; Diego Pettenò <flameeyes@gentoo.org>
+  -files/preserve-CFLAGS-0.9.23.diff, -files/preserve-CFLAGS-0.99.1.diff,
+  -files/preserve-CFLAGS-0.99.2.diff, -files/implicit-config.patch,
+  -files/preserve-CFLAGS.diff, -files/symlink-bug.patch,
+  -files/true-false.patch, -files/xine.desktop,
+  -files/xine-ui-configure.patch, -files/xine-ui-configure-checks.patch,
+  -files/xine-ui-gcc4.patch, -files/xine-ui-gentoo.diff,
+  -xine-ui-0.9.21-r1.ebuild, -xine-ui-0.9.22-r1.ebuild,
+  -xine-ui-0.9.22-r2.ebuild, -xine-ui-0.9.23-r1.ebuild,
+  xine-ui-0.9.23-r2.ebuild, xine-ui-0.99.1.ebuild, xine-ui-0.99.2.ebuild,
+  xine-ui-0.99.3_pre20041022.ebuild, xine-ui-0.99.3_pre20041022-r1.ebuild,
+  xine-ui-0.99.3.ebuild, xine-ui-0.99.3-r1.ebuild:
+  Removed old versions and orphan files. Moved all the patches into patch
+  tarballs.
 
   22 Apr 2005; Diego Pettenò <flameeyes@gentoo.org>
   +files/xine-ui-gcc4.patch, xine-ui-0.99.3-r1.ebuild:

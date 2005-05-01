@@ -1,12 +1,14 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/xine-ui-0.99.3-r1.ebuild,v 1.3 2005/04/22 17:55:25 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/xine-ui-0.99.3-r1.ebuild,v 1.4 2005/05/01 23:33:55 flameeyes Exp $
 
 inherit eutils
 
+PATCHLEVEL="1"
 DESCRIPTION="Xine movie player"
 HOMEPAGE="http://xine.sourceforge.net/"
-SRC_URI="mirror://sourceforge/xine/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/xine/${P}.tar.gz
+	http://digilander.libero.it/dgp85/gentoo/${PN}-patches-${PATCHLEVEL}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -27,13 +29,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 
-	# Detects CFLAGS set in make.conf without this patch
-	#epatch ${FILESDIR}/preserve-CFLAGS-${PV}.diff
-
-	epatch ${FILESDIR}/true-false.patch
-	epatch ${FILESDIR}/${PN}-configure-checks.patch
-	epatch ${FILESDIR}/${PN}-desktop-fixes.patch
-	epatch ${FILESDIR}/${PN}-gcc4.patch
+	EPATCH_SUFFIX="patch" epatch ${WORKDIR}/${PV}
 
 	export WANT_AUTOCONF=2.5
 	export WANT_AUTOMAKE=1.7

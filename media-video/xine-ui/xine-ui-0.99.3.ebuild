@@ -1,12 +1,14 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/xine-ui-0.99.3.ebuild,v 1.4 2005/03/27 02:33:03 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/xine-ui-0.99.3.ebuild,v 1.5 2005/05/01 23:33:55 flameeyes Exp $
 
 inherit eutils
 
+PATCHLEVEL="1"
 DESCRIPTION="Xine movie player"
 HOMEPAGE="http://xine.sourceforge.net/"
-SRC_URI="mirror://sourceforge/xine/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/xine/${P}.tar.gz
+	http://digilander.libero.it/dgp85/gentoo/${PN}-patches-${PATCHLEVEL}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -26,10 +28,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 
-	# Detects CFLAGS set in make.conf without this patch
-	#epatch ${FILESDIR}/preserve-CFLAGS-${PV}.diff
-
-	epatch ${FILESDIR}/true-false.patch
+	epatch ${WORKDIR}/${PV}/01_all_true-false.patch
 	use directfb || sed -i "s:dfb::" src/Makefile.in
 	sed -i "s:LDFLAGS =:LDFLAGS = -L/lib :" src/xitk/Makefile.in
 }
@@ -56,5 +55,5 @@ src_install() {
 	rm ${D}/usr/share/xine/desktop/xine.desktop
 
 	insinto /usr/share/applications
-	doins ${FILESDIR}/xine.desktop
+	doins ${WORKDIR}/${PV}/xine.desktop
 }
