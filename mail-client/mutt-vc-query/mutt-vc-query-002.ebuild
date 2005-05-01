@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt-vc-query/mutt-vc-query-002.ebuild,v 1.3 2005/01/29 21:58:02 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt-vc-query/mutt-vc-query-002.ebuild,v 1.4 2005/05/01 18:17:22 hansmi Exp $
 
 MY_PN="mutt_vc_query"
 DESCRIPTION="vCard query for mutt (aka rolo)"
@@ -10,7 +10,7 @@ RESTRICT="nomirror"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc alpha ~amd64"
+KEYWORDS="x86 ppc ~sparc alpha ~amd64"
 IUSE=""
 
 DEPEND="dev-libs/libvc"
