@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/verynice
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/verynice/ChangeLog,v 1.8 2005/04/26 19:28:58 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/verynice/ChangeLog,v 1.9 2005/05/01 17:15:23 hansmi Exp $
+
+  01 May 2005; Michael Hanselmann <hansmi@gentoo.org> verynice-1.1.ebuild:
+  Stable on ppc.
 
   24 Apr 2005; Stephanie Lockwood-Childs <wormo@gentoo.org>
   verynice-1.1.ebuild:
