@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 f27ef5ef50880a5bef58f246fe066ae3 unrealircd-3.2.3.ebuild 3416
-MD5 cf3395bdad21ef6b5b645a11ba7ba411 ChangeLog 4653
 MD5 44c39c6ad372a8e5a5e7ee3311f703a7 metadata.xml 160
-MD5 d9a803f03c66dbd732f2ffb356cb589a files/unrealircd.confd 499
+MD5 623f55ff5f86dc65a1546af9dbf32278 ChangeLog 4750
+MD5 a0e31c30795135f4f29871a274ecf426 unrealircd-3.2.3.ebuild 3413
 MD5 0c44732c1496b1645f59af5da99b3bb4 files/digest-unrealircd-3.2.3 64
+MD5 d9a803f03c66dbd732f2ffb356cb589a files/unrealircd.confd 499
 MD5 9758629d4e608b7a45c17c340c9b4f13 files/unrealircd.rc 640
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCbr3SI1lqEGTUzyQRAojfAJ4p+uIyBfPZb8arKsnesm9PSfGigQCfdeaD
-RH3V4pOxz8kGE5uTiw23JWY=
-=Xgni
------END PGP SIGNATURE-----

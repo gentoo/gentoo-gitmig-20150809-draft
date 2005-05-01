@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/unrealircd
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/ChangeLog,v 1.31 2005/04/26 22:16:43 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/ChangeLog,v 1.32 2005/05/01 17:28:57 hansmi Exp $
+
+  01 May 2005; Michael Hanselmann <hansmi@gentoo.org>
+  unrealircd-3.2.3.ebuild:
+  Stable on ppc.
 
   26 Apr 2005; Sven Wegener <swegener@gentoo.org> unrealircd-3.2.3.ebuild:
   Set ownership of configuration files the right way. Fixes bug #90075.
