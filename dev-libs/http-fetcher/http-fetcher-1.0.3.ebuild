@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/http-fetcher/http-fetcher-1.0.3.ebuild,v 1.7 2005/04/22 09:29:03 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/http-fetcher/http-fetcher-1.0.3.ebuild,v 1.8 2005/05/01 17:09:28 hansmi Exp $
 
 MY_P="${P/-/_}"
 S="${WORKDIR}/${MY_P}"
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 RESTRICT="nomirror"
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="x86 amd64 alpha ~ppc"
+KEYWORDS="x86 amd64 alpha ppc"
 IUSE=""
 
 RDEPEND="virtual/libc"
