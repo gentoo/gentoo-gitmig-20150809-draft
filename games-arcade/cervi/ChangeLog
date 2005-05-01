@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/cervi
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/cervi/ChangeLog,v 1.3 2004/12/21 13:30:56 josejx Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/cervi/ChangeLog,v 1.4 2005/05/01 17:14:03 hansmi Exp $
+
+  01 May 2005; Michael Hanselmann <hansmi@gentoo.org> cervi-0.0.3.ebuild:
+  Stable on ppc.
 
   22 Dec 2004; Joseph Jezak <josejx@gentoo.org> cervi-0.0.3.ebuild:
   Marked ~ppc.
