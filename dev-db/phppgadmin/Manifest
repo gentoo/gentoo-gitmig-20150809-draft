@@ -1,9 +1,19 @@
-MD5 ae064473edbf2b53fba429e5969d115f phppgadmin-3.5.3.ebuild 1417
-MD5 f8d3d207746da2a3cd14dcaab8daab76 metadata.xml 163
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 86abe018bcaf60e139c4574121c2f0a5 metadata.xml 183
 MD5 1c45ce041998444bc79c7dcbb80aeb09 ChangeLog 4742
 MD5 1bda5fb828fd66355a74972890b7384a phppgadmin-3.5.1.ebuild 1412
+MD5 ae064473edbf2b53fba429e5969d115f phppgadmin-3.5.3.ebuild 1417
 MD5 c860be45ac80a1b88c7c1052b10a4e27 phppgadmin-3.5.2.ebuild 1417
-MD5 0352c1231276349786959b22c40c84a9 files/digest-phppgadmin-3.5.3 69
 MD5 a6948e041a57a6f252acd7bdb96216ba files/postinstall-en.txt 152
+MD5 0352c1231276349786959b22c40c84a9 files/digest-phppgadmin-3.5.3 69
 MD5 57dc515981d12ae05c3100e100657ba4 files/digest-phppgadmin-3.5.1 69
 MD5 185c92eb84018e2da326625e44814224 files/digest-phppgadmin-3.5.2 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCdS1FjUHll2nfF60RAnTOAKCGYDRXJl4xVRkh7EMVtzstfnhLvgCeNxqo
+RreNVRrdX5SyvxexXMTlgEY=
+=tchx
+-----END PGP SIGNATURE-----
