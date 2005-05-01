@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/liteamp/liteamp-0.2.3.2.ebuild,v 1.9 2004/09/14 16:38:26 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/liteamp/liteamp-0.2.3.2.ebuild,v 1.10 2005/05/01 18:19:13 hansmi Exp $
 
 IUSE=""
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://liteamp.kldp.net"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc sparc amd64"
+KEYWORDS="x86 ppc sparc amd64"
 
 DEPEND=">=x11-libs/gtk+-2.0.0
 	>=gnome-base/libgnomeui-2.0

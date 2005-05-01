@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/sweep
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sweep/ChangeLog,v 1.13 2004/11/21 18:12:11 fvdpol Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sweep/ChangeLog,v 1.14 2005/05/01 18:19:54 hansmi Exp $
+
+  01 May 2005; Michael Hanselmann <hansmi@gentoo.org> sweep-0.8.2-r1.ebuild:
+  Stable on ppc.
 
 *sweep-0.8.3 (21 Nov 2004)
 
