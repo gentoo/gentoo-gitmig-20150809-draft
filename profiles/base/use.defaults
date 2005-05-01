@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.defaults,v 1.19 2005/05/01 04:33:20 joem Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.defaults,v 1.20 2005/05/01 13:40:23 flameeyes Exp $
 
 aalib				media-libs/aalib
 adns				net-libs/adns
@@ -81,6 +81,7 @@ tiff				media-libs/tiff
 ungif				media-libs/ungif
 vorbis				media-libs/libvorbis
 X					virtual/x11
+xine				media-libs/xine-lib
 xml					dev-libs/libxml
 xml2				dev-libs/libxml2
 xmms				media-sound/xmms
