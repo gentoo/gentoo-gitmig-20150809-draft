@@ -1,18 +1,18 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/fesi/fesi-1.1.8.ebuild,v 1.4 2005/04/03 13:52:35 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/fesi/fesi-1.1.8.ebuild,v 1.5 2005/05/01 10:00:30 luckyduck Exp $
 
 inherit eutils java-pkg
 
 DESCRIPTION="JavaScript Interpreter written in Java"
-SRC_URI="http://dev.gentoo.org/~karltk/projects/java/distfiles/${P}.gentoo.tar.bz2"
+SRC_URI="mirror://gentoo/${P}.gentoo.tar.bz2"
 HOMEPAGE="http://www.lugrin.ch/fesi"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~ppc"
+KEYWORDS="amd64 x86 ppc"
 IUSE="doc examples jikes source"
 DEPEND=">=virtual/jdk-1.3
-	>=dev-java/ant-core-1.4
+	dev-java/ant-core
 	jikes? ( >=dev-java/jikes-1.21 )
 	source? ( app-arch/zip )"
 RDEPEND=">=virtual/jdk-1.3
@@ -45,7 +45,7 @@ src_compile() {
 }
 
 src_install() {
-	java-pkg_dojar lib/fesi.jar
+	java-pkg_dojar lib/${PN}.jar
 
 	if use doc; then
 		dodoc License.txt Readme.txt
