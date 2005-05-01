@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-realrandom/xmms-realrandom-0.2.ebuild,v 1.8 2004/09/15 19:27:52 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-realrandom/xmms-realrandom-0.2.ebuild,v 1.9 2005/05/01 18:25:47 hansmi Exp $
 
 IUSE=""
 
@@ -12,7 +12,7 @@ SRC_URI="http://kingleo.home.pages.at/development/stuff/${MY_P}.tar.gz"
 HOMEPAGE="http://kingleo.home.pages.at/index.php?show=/development/stuff"
 
 LICENSE="GPL-2"
-KEYWORDS="x86 amd64 ~ppc sparc"
+KEYWORDS="x86 amd64 ppc sparc"
 SLOT="0"
 
 DEPEND="media-sound/xmms"
