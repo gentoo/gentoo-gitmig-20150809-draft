@@ -1,15 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 b286c1e466b08e974a547121747a83f0 ChangeLog 1472
-MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 c48113d242293a78f159fc716f8a94f0 gnomesu-0.3.1.ebuild 800
-MD5 d82bf746f24d99997d12c517f8741242 files/digest-gnomesu-0.3.1 65
+MD5 e01d72bdebb90de40301938797177852 ChangeLog 1714
+MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+MD5 a2aaad8fdd4bbc7d8dcdec29f48f903a gnomesu-0.3.1-r1.ebuild 925
 MD5 6a9d98cc7e10e1a9355d93dcc2590019 files/gnomesu-0.3.1-desktopfix.patch 361
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCbI1sKf2g/qXtneoRApUgAJsFHwgw+Wb0iAdHrQKpQ99jS85gpACeJCpE
-obg7qTWXwcT61qHGb+ayhlA=
-=PNe7
------END PGP SIGNATURE-----
+MD5 b05babeec19a7c9703e18c9eb55740ae files/gnomesu-0.3.1-r1-desktopfix.patch 873
+MD5 d82bf746f24d99997d12c517f8741242 files/digest-gnomesu-0.3.1 65
+MD5 d82bf746f24d99997d12c517f8741242 files/digest-gnomesu-0.3.1-r1 65
