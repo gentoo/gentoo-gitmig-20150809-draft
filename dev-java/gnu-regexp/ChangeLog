@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/gnu-regexp
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-regexp/ChangeLog,v 1.9 2005/02/13 22:46:18 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-regexp/ChangeLog,v 1.10 2005/05/01 09:58:42 luckyduck Exp $
+
+  01 May 2005; Jan Brinkmann <luckyduck@gentoo.org> gnu-regexp-1.1.4.ebuild:
+  stabe on ppc
 
   13 Feb 2005; Jan Brinkmann <luckyduck@gentoo.org> gnu-regexp-1.1.4.ebuild:
   stable on amd64
