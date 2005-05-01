@@ -1,6 +1,10 @@
 # ChangeLog for games-kids/childsplay
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/childsplay/ChangeLog,v 1.4 2004/12/16 13:21:31 josejx Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-kids/childsplay/ChangeLog,v 1.5 2005/05/01 18:03:58 hansmi Exp $
+
+  01 May 2005; Michael Hanselmann <hansmi@gentoo.org>
+  childsplay-0.68.ebuild:
+  Stable on ppc.
 
   17 Dec 2004; Joseph Jezak <josejx@gentoo.org> childsplay-0.68.ebuild:
   Marked ~ppc.
