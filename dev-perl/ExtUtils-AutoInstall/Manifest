@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 ca4cab1e0d657eb00ef2b12214f25780 ChangeLog 2482
+MD5 f12fe4a66d0553f55b4c237650a3964f ChangeLog 2584
+MD5 f1f6e0afa134e968b705d2ae48f386bb ExtUtils-AutoInstall-0.61.ebuild 669
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 cbb97890018fbaf04f5a665024cd0255 ExtUtils-AutoInstall-0.56.ebuild 660
-MD5 eca098d57cc219f9ae15efcd3bcd8bd5 ExtUtils-AutoInstall-0.61.ebuild 670
-MD5 187e239dd7240eb1e0eae883452903c1 files/digest-ExtUtils-AutoInstall-0.61 76
 MD5 ae17c3e8f0740f3e9aca7d19f8531375 files/digest-ExtUtils-AutoInstall-0.56 76
+MD5 187e239dd7240eb1e0eae883452903c1 files/digest-ExtUtils-AutoInstall-0.61 76
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCbps1Kf2g/qXtneoRAufAAKCAfHsgL8A7X92EahjapSaaq0aLJQCcCZv6
-9dHFV504442X7ossh38auUw=
-=cr8L
+iD8DBQFCdRAZCHk4+ZoBpvsRAniRAJ4sOLwEz0IGadR0eh8e+EWrqb2kzwCgmFdu
+L4eEhA5m4FcdluCxdUWVQ58=
+=yeoR
 -----END PGP SIGNATURE-----
