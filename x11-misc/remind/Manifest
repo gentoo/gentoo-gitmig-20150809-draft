@@ -1,4 +1,14 @@
-MD5 e84b1edb9c2e5a0e154a0c1481b5db04 ChangeLog 534
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 0b104cf1f121e1e9e3b6e96374cb8ca6 remind-03.00.22.ebuild 556
+MD5 229367d484530be306137e0c22beaea0 ChangeLog 630
 MD5 854ad93ffa90b305b1f1f87592698ed8 metadata.xml 167
-MD5 7a040ae5fe9757ebb84532a9fb7aa5b3 remind-03.00.22.ebuild 554
 MD5 375c9caf7bde9ce5f35f13bdeda4ca17 files/digest-remind-03.00.22 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCdF0VBXaUFmZvwyMRAjQzAJ9tGqW73QCIviIq/2ZBE130LYeTnQCglN29
+QmBXUjMGBpWvzIdE8GBNXP4=
+=Ed98
+-----END PGP SIGNATURE-----
