@@ -2,7 +2,7 @@
 Hash: SHA1
 
 MD5 7a2556b95496bf7e5e0d50be6cd48535 torsmo-0.17.ebuild 1340
-MD5 4115f16ffd4556c3c276f63353528c36 ChangeLog 4949
+MD5 4f9f5c75d3f6581ea9ce752aca222e8c ChangeLog 5012
 MD5 e62755aeb2fcd53a4426e99d3af550ed metadata.xml 549
 MD5 54314b9d79bb7baa1a44fac3b66b6317 torsmo-0.17-r1.ebuild 1481
 MD5 b153c962309ce33f402b26076b8310a5 torsmo-0.18-r1.ebuild 1450
@@ -21,7 +21,7 @@ MD5 19932267a722d71554454bb3779a9ae0 files/digest-torsmo-0.18-r3 62
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCdOSPmdTrptrqvGERAnOnAJ0Sex9CwuECCJPByG6lntmiEI1xMgCgkY4a
-wDvIql9KBSbsA73jJPBatGU=
-=7tSW
+iD8DBQFCdOTqmdTrptrqvGERArvzAJ0XBDrpz2rQnUGyUe4dyEXUaoK1tgCfdx2/
+9r779I9oC5N8iLpIoAoMh0A=
+=LiJq
 -----END PGP SIGNATURE-----
