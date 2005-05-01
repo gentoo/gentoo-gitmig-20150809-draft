@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent-stats/bittorrent-stats-3.2.1b-r4.ebuild,v 1.5 2004/07/03 12:18:04 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent-stats/bittorrent-stats-3.2.1b-r4.ebuild,v 1.6 2005/05/01 17:00:30 hansmi Exp $
 
 inherit distutils eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://bitconjurer.org/BitTorrent/${MY_P}.tar.gz"
 HOMEPAGE="http://bitconjurer.org/BitTorrent"
 SLOT="0"
 LICENSE="MIT"
-KEYWORDS="x86 ~ppc alpha ~sparc"
+KEYWORDS="x86 ppc alpha ~sparc"
 
 IUSE="X"
 
