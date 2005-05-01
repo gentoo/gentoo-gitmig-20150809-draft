@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Test-Exception
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Exception/ChangeLog,v 1.7 2005/04/09 02:25:40 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Exception/ChangeLog,v 1.8 2005/05/01 18:00:53 slarti Exp $
+
+  01 May 2005; Tom Martin <slarti@gentoo.org> Test-Exception-0.20.ebuild:
+  Marked ~amd64.
 
   09 Apr 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   Test-Exception-0.20.ebuild:

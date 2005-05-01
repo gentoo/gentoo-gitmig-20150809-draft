@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Sub-Override
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sub-Override/ChangeLog,v 1.3 2005/04/25 21:12:26 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sub-Override/ChangeLog,v 1.4 2005/05/01 18:01:14 slarti Exp $
+
+  01 May 2005; Tom Martin <slarti@gentoo.org> Sub-Override-0.05.ebuild:
+  Marked ~amd64.
 
   25 Apr 2005; Michael Cummings <mcummings@gentoo.org>
   Sub-Override-0.05.ebuild:
