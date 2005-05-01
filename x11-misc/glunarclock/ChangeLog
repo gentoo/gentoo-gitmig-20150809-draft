@@ -1,6 +1,13 @@
 # ChangeLog for x11-misc/glunarclock
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/glunarclock/ChangeLog,v 1.8 2005/03/29 11:38:52 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/glunarclock/ChangeLog,v 1.9 2005/05/01 12:06:32 dsd Exp $
+
+*glunarclock-0.32.4 (01 May 2005)
+
+  01 May 2005; Daniel Drake <dsd@gentoo.org>
+  +files/glunarclock-i18n-gentoo.patch, -glunarclock-0.32.2.ebuild,
+  glunarclock-0.32.3.ebuild, +glunarclock-0.32.4.ebuild:
+  Bump to 0.32.4, add i18n fixes. Closes bugs 85384 and 90332
 
 *glunarclock-0.32.3 (29 Mar 2005)
 
