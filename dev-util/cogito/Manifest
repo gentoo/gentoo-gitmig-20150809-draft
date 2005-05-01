@@ -1,6 +1,5 @@
 MD5 3a306bacdedebc354a2c1a3525dee1bd ChangeLog 378
-MD5 51edf5f138f45537383042ce6c00ab29 cogito-0.8.ebuild 952
+MD5 224466ad720cb403a4f2e205ed80443b cogito-0.8.ebuild 913
 MD5 78c1b34edd1399c24d7d9e59212bc17a metadata.xml 221
 MD5 9902774a3ff269d4f0aa6698fb14605c files/Makefile.patch 563
-MD5 f3e0d72ecb025d059a41a2fba712fce9 files/commit-id.patch 279
 MD5 3fb5a5b1fe10d2236e605bb52b514d3a files/digest-cogito-0.8 63
