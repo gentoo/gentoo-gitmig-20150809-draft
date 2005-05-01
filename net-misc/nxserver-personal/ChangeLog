@@ -1,6 +1,15 @@
 # ChangeLog for net-misc/nxserver-personal
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-personal/ChangeLog,v 1.15 2005/01/02 09:48:38 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-personal/ChangeLog,v 1.16 2005/05/01 02:06:39 stuart Exp $
+
+*nxserver-personal-1.4.0-r2 (30 Apr 2005)
+
+  30 Apr 2005; Stuart Herbert <stuart@gentoo.org>
+  +nxserver-personal-1.4.0-r2.ebuild:
+  Version bump
+
+  30 Apr 2005; Stuart Herbert <stuart@gentoo.org> :
+  Version bump
 
 *nxserver-personal-1.4.0-r1 (02 Jan 2005)
 
