@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1131 2005/04/30 23:49:24 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1132 2005/05/01 02:19:51 joem Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -13,6 +13,7 @@ app-accessibility/gnome-speech:freetts - Adds support for the freetts speech dri
 app-accessibility/gnopernicus:brltty - Adds support for braille displays using brltty
 app-admin/amanda:xfs - Support for backing up raw XFS filesystems using xfsdump
 app-admin/apg:cracklib - Support for cracklib strong password checking
+app-admin/gnome-system-tools:nfs - Adds support for NFS shares
 app-admin/lcap:lids - If you have the Linux Intrusion Detection System
 app-admin/sdsc-syslog:beep - Use beep libraries (net-libs/roadrunner)
 app-admin/testdisk:reiserfs - include reiserfs capabilities
