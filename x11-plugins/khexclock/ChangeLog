@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/khexclock
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/khexclock/ChangeLog,v 1.6 2004/09/02 18:22:39 pvdabeel Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/khexclock/ChangeLog,v 1.7 2005/05/01 20:14:19 carlo Exp $
+
+  01 May 2005; Carsten Lohrke <carlo@gentoo.org> khexclock-0.0.4.ebuild:
+  QA: replaced ebuild - using econf/emake is not valid for kde apps, #90883
 
   02 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   khexclock-0.0.4.ebuild:
