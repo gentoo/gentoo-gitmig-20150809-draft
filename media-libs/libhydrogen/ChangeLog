@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libhydrogen
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libhydrogen/ChangeLog,v 1.12 2005/03/20 20:44:42 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libhydrogen/ChangeLog,v 1.13 2005/05/01 17:03:20 hansmi Exp $
+
+  01 May 2005; Michael Hanselmann <hansmi@gentoo.org>
+  libhydrogen-0.8.1_beta5.ebuild:
+  Stable on ppc.
 
   20 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org> +metadata.xml,
   libhydrogen-0.8.1_beta5.ebuild:
