@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/bmf
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/bmf/ChangeLog,v 1.5 2004/11/30 21:57:55 swegener Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/bmf/ChangeLog,v 1.6 2005/05/01 18:20:18 hansmi Exp $
+
+  01 May 2005; Michael Hanselmann <hansmi@gentoo.org> bmf-0.9.4.ebuild:
+  Stable on ppc.
 
   30 Nov 2004; Sven Wegener <swegener@gentoo.org> bmf-0.9.4.ebuild:
   Fixed invalid atoms in *DEPEND.
