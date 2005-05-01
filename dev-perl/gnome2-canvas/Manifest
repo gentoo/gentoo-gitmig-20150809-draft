@@ -1,4 +1,14 @@
-MD5 09b7f472dd10652a8418ec72b7a735f1 ChangeLog 2020
-MD5 13a98dd4b22fe8a19b42e2886d047c49 gnome2-canvas-1.00.ebuild 737
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 bfd0b841a6159501b8998b10825fc8aa ChangeLog 2113
+MD5 892b2bb77394d6cc94b874a05e92b753 gnome2-canvas-1.00.ebuild 736
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 13d7b2fc768be35add585a8e7facd48f files/digest-gnome2-canvas-1.00 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCdSFZCHk4+ZoBpvsRAukTAJ0RiNpQulrVPdsrAcOmGZhtIzz9wQCaA11Q
+DlVmFy3u4HdmLGdWLhSQaV8=
+=qvTJ
+-----END PGP SIGNATURE-----

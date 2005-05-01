@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 d5dab8c1807e43bdfa5355be470be013 ChangeLog 681
+MD5 cb0c5e5744ccf4e223feac43c8adf471 ChangeLog 768
+MD5 7e77a1c605447e0a4a1dec4d865b4080 X500-DN-0.28.ebuild 591
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 5b067773b5e6dbaf2bdc81e1ed37ba2b X500-DN-0.28.ebuild 592
 MD5 95efcf54e6aa53868cb572d026e72033 files/digest-X500-DN-0.28 62
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCc2mJKf2g/qXtneoRAsK9AKDEUKvxCkGzR1ZAgZr/7RTanTyTJwCdEeXh
-y8nFojujAzyk6YGUgfzTcvs=
-=m2lZ
+iD8DBQFCdRzgCHk4+ZoBpvsRAnTXAJ4+4blW0SBX1KbIYEXSi5Ylf5pzKwCglWeM
+oMknT4gzT64G/uVSzWrPDaE=
+=uJPp
 -----END PGP SIGNATURE-----

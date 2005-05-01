@@ -1,18 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 9ba5b2565560bd6706256512bc81f90c ChangeLog 1487
-MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 5d22bf0f150dea9840c7335373d1f025 XML-XUpdate-LibXML-0.5.0.ebuild 634
-MD5 bcb477bf3b8432cfff4ffcba889d6b6d XML-XUpdate-LibXML-0.4.0.ebuild 591
+MD5 b177d4b81cc749e6f84a6f320e25d7bf ChangeLog 1588
 MD5 4b5bd5aa517b8b31df9dddcf1af2968f XML-XUpdate-LibXML-0.4.0-r1.ebuild 597
+MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 bcb477bf3b8432cfff4ffcba889d6b6d XML-XUpdate-LibXML-0.4.0.ebuild 591
+MD5 63109d837bb02bb722ab364a37cc6f89 XML-XUpdate-LibXML-0.5.0.ebuild 633
 MD5 9f735d7edb5df63ef43d3842fe4a921c files/digest-XML-XUpdate-LibXML-0.4.0 74
 MD5 9f735d7edb5df63ef43d3842fe4a921c files/digest-XML-XUpdate-LibXML-0.4.0-r1 74
 MD5 f5eb1cfc50809d69fdd1c244f71ab912 files/digest-XML-XUpdate-LibXML-0.5.0 74
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCc2JkKf2g/qXtneoRAg0CAKCmBZQa9mE5d8gKUCJQB6EiWYKpzACeKtqh
-GJ+xMzQl7/M8P3uBT9sIqm0=
-=4t5B
+iD8DBQFCdR/RCHk4+ZoBpvsRAhuCAKCfvTMy7J3lo/zfSNbIDsufVaWk5QCeIjbn
+s1nbSIzf28/uMPJhJJNQI8k=
+=l8NI
 -----END PGP SIGNATURE-----
