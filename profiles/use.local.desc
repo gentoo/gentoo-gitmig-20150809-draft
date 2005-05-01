@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1132 2005/05/01 02:19:51 joem Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1133 2005/05/01 04:33:20 joem Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -294,7 +294,6 @@ games-strategy/wesnoth:nomusic - Lite install
 games-strategy/wesnoth:server - Enable compilation of server
 games-strategy/wesnoth:tools - Enable compilation of translation tools
 games-util/xqf:bzip2 - use bzip2 for data compression
-gnome-base/gnome-panel:eds - Enable Evolution Data Server (EDS) support
 gnome-extra/evolution-data-server:nntp - Add suppoort fot nntp
 gnome-extra/gnome-games:artworkextra - Add extra Artwork to gnome-games
 gnome-extra/libgda:mdb - Enable Microsoft Access DB support for GnomeDB.
@@ -590,7 +589,6 @@ net-im/ejabberd:mod_pubsub - Pubsub support in ejabberd
 net-im/ejabberd:web - Web support in ejabberd
 net-im/ekg2:gsm - Enable gsm plugin
 net-im/ekg2:nogg - Disable Gadu-Gadu plugin
-net-im/gaim:eds - Enable Evolution Data Server (EDS) support
 net-im/gaim:gnutls - Use GnuTLS for SSL support
 net-im/gaim:silc - Enable SILC protocol support
 net-im/gaim:xscreensaver - Enables xscreensaver support for status

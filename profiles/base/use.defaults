@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.defaults,v 1.18 2005/04/11 19:28:23 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.defaults,v 1.19 2005/05/01 04:33:20 joem Exp $
 
 aalib				media-libs/aalib
 adns				net-libs/adns
@@ -16,6 +16,7 @@ cscope				dev-util/cscope
 cups				net-print/cups
 curl				net-misc/curl
 directfb			dev-libs/DirectFB
+eds					gnome-extra/evolution-data-server
 emboss				sci-biology/emboss
 esd					media-sound/esound
 fam					app-admin/fam
