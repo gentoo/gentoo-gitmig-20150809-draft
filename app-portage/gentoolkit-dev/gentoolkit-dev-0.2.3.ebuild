@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit-dev/gentoolkit-dev-0.2.3.ebuild,v 1.6 2005/04/16 16:49:51 gongloo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit-dev/gentoolkit-dev-0.2.3.ebuild,v 1.7 2005/05/01 23:14:57 kumba Exp $
 
 DESCRIPTION="Collection of developer scripts for Gentoo"
 HOMEPAGE="http://www.gentoo.org/~karltk/projects/gentoolkit/"
@@ -10,7 +10,7 @@ SRC_URI="http://dev.gentoo.org/~karltk/projects/gentoolkit/releases/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 #KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha ~arm ~hppa ~amd64 ~ia64 ~ppc64 ~s390 ~ppc-macos"
-KEYWORDS="x86 ppc sparc ~mips alpha ~arm ~hppa amd64 ia64 ppc64 ~s390 ppc-macos"
+KEYWORDS="x86 ppc sparc mips alpha ~arm ~hppa amd64 ia64 ppc64 ~s390 ppc-macos"
 IUSE=""
 
 DEPEND=">=sys-apps/portage-2.0.50
