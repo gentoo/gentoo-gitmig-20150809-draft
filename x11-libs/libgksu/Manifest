@@ -1,2 +1,14 @@
-MD5 046c5d073926339aa85589503931d84c libgksu-1.2.5.ebuild 662
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 c3813f71e73e96c4d77ea9b7e4d9fdac libgksu-1.2.5.ebuild 776
+MD5 f84c4419718f522eb1ae37aa894ac49c metadata.xml 367
+MD5 7258b92fc92a319747db10bc0baeb4db ChangeLog 438
 MD5 5d296f2600cabbe9bef711e33ef6e9ab files/digest-libgksu-1.2.5 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCdGITmdTrptrqvGERAgBWAKCAQ1d/5Dp7U4K3HaCAYKjEYWLjPgCfdxwC
+EY9k8fgwrPxHonEUzkoqyrI=
+=Gbbc
+-----END PGP SIGNATURE-----

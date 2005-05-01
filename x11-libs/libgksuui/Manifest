@@ -1,2 +1,14 @@
-MD5 af027f6bcb0c7177397b010bf05bcfa7 libgksuui-1.0.3.ebuild 532
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 6a2b65eae661efa0a55256a008ed03b8 libgksuui-1.0.3.ebuild 640
+MD5 f84c4419718f522eb1ae37aa894ac49c metadata.xml 367
+MD5 ec03ec9015722673d6a226a9417b6671 ChangeLog 407
 MD5 7d13138419ea174293a2795f3434aa62 files/digest-libgksuui-1.0.3 70
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCdGLEmdTrptrqvGERAv1+AJ9zM5BTMvJqdvkq0xe1apT+VPrlVQCffNeR
+DvqxaOApbbD4DsUBlNRYrvE=
+=QxtC
+-----END PGP SIGNATURE-----
