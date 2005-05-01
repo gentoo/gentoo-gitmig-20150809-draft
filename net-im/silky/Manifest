@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 71786a01707937aa8075318e25902497 ChangeLog 1865
 MD5 b9fdb558af0dc40960d563eb57947c0f metadata.xml 221
-MD5 d230bb3cc0080f892afd800a849c8a16 silky-0.5.4.ebuild 800
-MD5 95d2f6925cd1116a28c6321d776ae382 silky-0.5.1.ebuild 914
+MD5 16075041be504ec047871dfff0bf92db ChangeLog 1958
 MD5 6d1f626cefd6e273bf77537e8d0f03e1 silky-0.5.2.ebuild 914
+MD5 95d2f6925cd1116a28c6321d776ae382 silky-0.5.1.ebuild 914
+MD5 f04074a3bef29e8e6a52bcdff807d541 silky-0.5.4.ebuild 800
+MD5 900486724c3fdb64a030bf3ac331fa2c files/digest-silky-0.5.2 63
 MD5 64b0ff9aabc431d9800b93cfcb98002a files/digest-silky-0.5.4 63
 MD5 503565a71edccf299762fa80d5242be0 files/digest-silky-0.5.1 63
-MD5 900486724c3fdb64a030bf3ac331fa2c files/digest-silky-0.5.2 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCb5PWQlM6RnzZP+IRArJuAJ47QdxpuL2CYo2cYoD/bG7ETjxz8ACgiZvG
-+OYlqtWeXdjIy/a+fpX+Gbs=
-=ufco
------END PGP SIGNATURE-----
