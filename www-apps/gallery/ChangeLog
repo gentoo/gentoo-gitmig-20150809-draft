@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/gallery
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/ChangeLog,v 1.18 2005/02/08 02:26:27 swtaylor Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/ChangeLog,v 1.19 2005/05/01 07:37:24 beu Exp $
+
+*gallery-1.5 (01 May 2005)
+
+  01 May 2005; Elfyn McBratney <beu@gentoo.org> +gallery-1.5.ebuild:
+  Version bump, closes bug #89698.
 
 *gallery-1.4.4_p6 (07 Feb 2005)
 
