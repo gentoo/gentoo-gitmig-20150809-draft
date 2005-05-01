@@ -1,20 +1,20 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 2d6160679c83b6931d9730fce0b5b737 glurp-0.11.3.ebuild 684
-MD5 dc3a8fcabee1d2838a6e32ea8cb5bfad glurp-0.11.2.ebuild 682
-MD5 a7ebebe894a505a0cb788034207771ef ChangeLog 1585
+MD5 4d9b1126792b4e5424498506348dc054 ChangeLog 1673
+MD5 e1180c288ea49e235f3a3601e91233cb glurp-0.11.5.ebuild 681
 MD5 e529b2748c93ef894dbaeda8ce87a8f2 glurp-0.11.4.ebuild 681
+MD5 dc3a8fcabee1d2838a6e32ea8cb5bfad glurp-0.11.2.ebuild 682
 MD5 39ca3cc9726f35001924ecf3baea20d1 metadata.xml 219
-MD5 c3a67e9e2e45ba8d3755623d31a2f3ee glurp-0.11.5.ebuild 681
-MD5 2a49f08ff1678ec9effead8ae42a1675 files/digest-glurp-0.11.4 64
-MD5 ac9e071393589dec888716d4cdb12d81 files/digest-glurp-0.11.2 63
+MD5 2d6160679c83b6931d9730fce0b5b737 glurp-0.11.3.ebuild 684
 MD5 ea7e81fd74d0a020a28c17bb293bb394 files/digest-glurp-0.11.5 64
+MD5 ac9e071393589dec888716d4cdb12d81 files/digest-glurp-0.11.2 63
 MD5 e89720d903388dd91903baea27dd2aa3 files/digest-glurp-0.11.3 63
+MD5 2a49f08ff1678ec9effead8ae42a1675 files/digest-glurp-0.11.4 64
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCb5RCQlM6RnzZP+IRAv/QAJ91G6AwmkzUT9st0dMIuRudr8j9YQCgvoDL
-7E9qdB7F48NaM4Cb3I9aJRE=
-=5fdw
+iD8DBQFCdO96CHk4+ZoBpvsRAhkmAKCJLOrd9ymbfT0bAGNwdhoJBsU1NACdG9BG
+8RC78QNUf6mSmjfH3/lVJwo=
+=h1mL
 -----END PGP SIGNATURE-----
