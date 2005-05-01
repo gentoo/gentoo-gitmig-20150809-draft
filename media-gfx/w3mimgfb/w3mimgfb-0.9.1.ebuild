@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/w3mimgfb/w3mimgfb-0.9.1.ebuild,v 1.6 2004/09/08 14:24:52 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/w3mimgfb/w3mimgfb-0.9.1.ebuild,v 1.7 2005/05/01 18:04:33 hansmi Exp $
 
 inherit gcc
 
@@ -10,7 +10,7 @@ SRC_URI="http://homepage3.nifty.com/slokar/fb/${P}.tar.gz"
 
 LICENSE="w3m BSD"
 SLOT="0"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="x86 ppc"
 IUSE=""
 
 DEPEND=">=media-libs/stimg-0.1.0
