@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/ufed/ufed-0.38.ebuild,v 1.1 2005/04/30 07:50:38 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/ufed/ufed-0.39.ebuild,v 1.1 2005/05/01 11:28:25 truedfx Exp $
 
 DESCRIPTION="Gentoo Linux USE flags editor"
 HOMEPAGE="http://www.gentoo.org/"
