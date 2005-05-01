@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/gwcc
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gwcc/ChangeLog,v 1.8 2005/01/01 11:04:50 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gwcc/ChangeLog,v 1.9 2005/05/01 23:47:29 allanonjl Exp $
+
+*gwcc-0.9.8 (01 May 2005)
+
+  01 May 2005; John N. Laliberte <allanonjl@gentoo.org>
+  +files/gwcc-0.9.8-errno.patch, +metadata.xml, +gwcc-0.9.8.ebuild:
+  version bump, fixes bug #75586. thanks to <vanquirius@gentoo.org> for the
+  patch.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
