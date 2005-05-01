@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/amrita/amrita-1.8.2-r1.ebuild,v 1.12 2004/12/16 09:37:26 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/amrita/amrita-1.8.2-r1.ebuild,v 1.13 2005/05/01 17:26:30 hansmi Exp $
 
 inherit ruby
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.brain-tokyo.jp/research/amrita/${P}.tar.gz"
 LICENSE="Ruby"
 SLOT="0"
 USE_RUBY="ruby16 ruby18 ruby19"
-KEYWORDS="alpha hppa mips sparc x86 ~ppc ppc64"
+KEYWORDS="alpha hppa mips sparc x86 ppc ppc64"
 DEPEND="|| ( >=dev-lang/ruby-1.8.0
 	dev-ruby/shim-ruby18
 	dev-lang/ruby-cvs )"
