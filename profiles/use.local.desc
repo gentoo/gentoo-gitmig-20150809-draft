@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1133 2005/05/01 04:33:20 joem Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1134 2005/05/01 11:44:58 hansmi Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -371,6 +371,7 @@ mail-mta/exim:lmtp - Adds support for lmtp
 mail-mta/exim:syslog - defines syslog as the default log path if none is specified in the conf file.
 mail-mta/exim:wildlsearch - Adds support for Wildcarded Linear searches
 mail-mta/postfix:vda - Adds support for virtual delivery agent quota enforcing
+mail-mta/qmail:logmail - Enable logging all E-Mails via ~alias/.qmail-log
 mail-mta/qmail:noauthcram - If you do NOT want AUTHCRAM to be available
 mail-mta/qmail:notlsbeforeauth - If you do NOT want to require STARTTLS before offering AUTH
 mail-mta/ssmtp:md5sum - Enables MD5 summing for ssmtp
