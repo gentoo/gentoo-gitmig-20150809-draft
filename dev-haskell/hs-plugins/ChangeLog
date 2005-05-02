@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/hs-plugins
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hs-plugins/ChangeLog,v 1.5 2005/02/23 09:45:59 kosmikus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hs-plugins/ChangeLog,v 1.6 2005/05/02 15:00:27 kosmikus Exp $
+
+  02 May 2005; Andres Loeh <kosmikus@gentoo.org> hs-plugins-0.9.6.ebuild,
+  hs-plugins-0.9.8.ebuild:
+  Currently, hs-plugins is not compatible with ghc-6.4 (bug #90957).
 
 *hs-plugins-0.9.8 (23 Feb 2005)
 
