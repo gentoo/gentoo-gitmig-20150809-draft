@@ -1,0 +1,12 @@
+# ChangeLog for dev-perl/wxperl
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/wxperl/ChangeLog,v 1.1 2005/05/02 23:33:36 mcummings Exp $
+
+*wxperl-0.22 (02 May 2005)
+
+  02 May 2005; Michael Cummings <mcummings@gentoo.org> +metadata.xml,
+  +wxperl-0.22.ebuild:
+  Initial import, bug 74111. This package provides the perl bindings used by
+  code generated in wxglade. Original ebuild courtesy of James Le Cuirot
+  <chewi@ffaura.com>
+
