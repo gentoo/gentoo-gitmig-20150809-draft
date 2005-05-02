@@ -1,4 +1,6 @@
+MD5 ab876ee02a0b36ee8306849ba188ffde lksctp-tools-1.0.2.ebuild 879
 MD5 c453aef4ac1b2a7823320515c53cc3de lksctp-tools-1.0.1.ebuild 878
-MD5 e7fd2ff6fefde4161f10106894e460f6 ChangeLog 694
+MD5 5bc8161f630dd731d82b06af4e1d0494 ChangeLog 829
 MD5 b0d485ea1a51fb83c70daedef2599272 metadata.xml 279
 MD5 bfc154edf9f162d5dbb3bfff4034c354 files/digest-lksctp-tools-1.0.1 70
+MD5 038fd0a35e5638ef6683dbfb6c94da8b files/digest-lksctp-tools-1.0.2 70
