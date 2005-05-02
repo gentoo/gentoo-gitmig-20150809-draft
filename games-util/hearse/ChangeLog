@@ -1,6 +1,11 @@
 # ChangeLog for games-util/hearse
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/hearse/ChangeLog,v 1.5 2004/06/24 23:31:41 agriffis Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-util/hearse/ChangeLog,v 1.6 2005/05/02 04:47:09 mr_bones_ Exp $
+
+*hearse-1.5 (02 May 2005)
+
+  02 May 2005; Michael Sterrett <mr_bones_@gentoo.org> +hearse-1.5.ebuild:
+  version bump
 
   23 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> hearse-1.4.ebuild:
   don't rdepend on sed
