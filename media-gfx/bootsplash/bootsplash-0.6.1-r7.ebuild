@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/bootsplash/bootsplash-0.6.1-r7.ebuild,v 1.4 2005/04/07 15:40:37 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/bootsplash/bootsplash-0.6.1-r7.ebuild,v 1.5 2005/05/02 12:59:08 spock Exp $
 
 inherit eutils
 
@@ -44,7 +44,7 @@ src_install() {
 	doexe utils/fbtruetype/fbtruetype{,.static}
 	doexe misc/bootsplash_resize
 	newexe utils/splashutils/splash splash.bin
-	doexe misc/splash
+	doexe misc/{splash,bootanim}
 	doexe utils/splashutils/{fbresolution,getkey,progress,splashpbm}
 
 	insinto /sbin
