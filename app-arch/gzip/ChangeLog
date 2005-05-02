@@ -1,6 +1,17 @@
 # ChangeLog for app-arch/gzip
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/gzip/ChangeLog,v 1.45 2005/01/04 19:28:14 vapier Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/gzip/ChangeLog,v 1.46 2005/05/02 22:00:50 vapier Exp $
+
+*gzip-1.3.5-r6 (02 May 2005)
+
+  02 May 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/gzip-1.3.5-asm-execstack.patch, +files/gzip-1.3.5-debian.patch,
+  +files/gzip-1.3.5-gunzip-dir.patch, +files/gzip-1.3.5-gzip-perm.patch,
+  +files/gzip-1.3.5-infodir.patch, +files/gzip-1.3.5-rsync.patch,
+  +files/gzip-1.3.5-zgrep-sed.patch, -files/gzip-1.3.5-znew-tempfile.patch,
+  +gzip-1.3.5-r6.ebuild:
+  Add a bunch of patches from Redhat, break up the Debian patch we used, and
+  add fixes for security #89946 and #90626.
 
 *gzip-1.3.5-r5 (04 Jan 2005)
 
