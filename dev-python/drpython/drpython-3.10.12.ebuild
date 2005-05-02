@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/drpython/drpython-3.10.6.ebuild,v 1.1 2005/02/19 13:36:26 radek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/drpython/drpython-3.10.12.ebuild,v 1.1 2005/05/02 19:52:06 pythonhead Exp $
 
 inherit eutils distutils
 
