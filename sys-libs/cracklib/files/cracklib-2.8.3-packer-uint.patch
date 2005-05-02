@@ -1,0 +1,51 @@
+--- cracklib-2.8.3.orig/lib/packer.h	2005-05-02 15:48:26.000000000 -0400
++++ cracklib-2.8.3/lib/packer.h	2005-05-02 15:20:01.000000000 -0400
+@@ -31,18 +31,18 @@
+ #if defined(HAVE_STDINT_H)
+ #include <stdint.h>
+ #else
+-typedef unsigned int uint32_t;
+-typedef unsigned short uint16_t;
++typedef unsigned int u_int32_t;
++typedef unsigned short u_int16_t;
+ #endif
+ #endif
+ 
+ 
+ struct pi_header
+ {
+-    uint32_t pih_magic;
+-    uint32_t pih_numwords;
+-    uint16_t pih_blocklen;
+-    uint16_t pih_pad;
++    u_int32_t pih_magic;
++    u_int32_t pih_numwords;
++    u_int16_t pih_blocklen;
++    u_int16_t pih_pad;
+ };
+ 
+ typedef struct
+@@ -51,12 +51,12 @@
+     FILE *dfp;
+     FILE *wfp;
+ 
+-    uint32_t flags;
++    u_int32_t flags;
+ #define PFOR_WRITE	0x0001
+ #define PFOR_FLUSH	0x0002
+ #define PFOR_USEHWMS	0x0004
+ 
+-    uint32_t hwms[256];
++    u_int32_t hwms[256];
+ 
+     struct pi_header header;
+ 
+@@ -68,7 +68,7 @@
+ #define PIH_MAGIC 0x70775631
+ 
+ /* Internal routines */
+-extern char *GetPW(PWDICT *pwp, uint32_t number);
++extern char *GetPW(PWDICT *pwp, u_int32_t number);
+ 
+ #else
+ 
