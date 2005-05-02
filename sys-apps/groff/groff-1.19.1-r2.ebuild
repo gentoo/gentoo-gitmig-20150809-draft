@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/groff-1.19.1-r2.ebuild,v 1.14 2005/05/02 03:44:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/groff-1.19.1-r2.ebuild,v 1.15 2005/05/02 14:29:11 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -56,7 +56,7 @@ src_unpack() {
 	fi
 	# Only build X stuff if we have X installed, but do 
 	# not depend on it, else we get circular deps :(
-	if ! use X && [[ -n $(type -p xmkmf) ]] ; then
+	if ! use X || [[ -z $(type -p xmkmf) ]] ; then
 		touch .dont-build-X
 	fi
 }
