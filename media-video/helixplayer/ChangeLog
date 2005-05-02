@@ -1,6 +1,18 @@
 # ChangeLog for media-video/helixplayer
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/helixplayer/ChangeLog,v 1.10 2005/04/21 16:29:20 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/helixplayer/ChangeLog,v 1.11 2005/05/02 00:13:31 flameeyes Exp $
+
+  02 May 2005; Diego Pettenò <flameeyes@gentoo.org>
+  -files/helixplayer-1.0.1-bif.patch, -files/helixplayer-1.0.1-sem_t.patch,
+  -files/helixplayer-1.0.3-bif.patch, -files/50helix,
+  -files/helixplayer-1.0.3-sem_t.patch,
+  -files/helixplayer-1.0_beta1-bif.patch, -files/buildrc,
+  -files/gcc_versioncheck.patch, -files/gentoo_bif.patch,
+  -files/installer-naming.patch, -helixplayer-1.0_beta1.ebuild,
+  -helixplayer-1.0.1.ebuild, -helixplayer-1.0.3-r1.ebuild,
+  helixplayer-1.0.4.ebuild:
+  Removed vulnerable versions and related files. Moved patch and files for
+  latest version into a patchset tarball.
 
   21 Apr 2005; Olivier Crête <tester@gentoo.org> helixplayer-1.0.4.ebuild:
   Mark ~x86 per security bug #89862
