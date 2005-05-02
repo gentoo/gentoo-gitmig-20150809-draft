@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/x86info
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/x86info/ChangeLog,v 1.6 2004/10/13 23:36:18 vapier Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/x86info/ChangeLog,v 1.7 2005/05/02 20:35:09 tester Exp $
+
+*x86info-1.13 (02 May 2005)
+
+  02 May 2005; Olivier Crête <tester@gentoo.org> +x86info-1.13.ebuild:
+  Version bump (bug #91211)
 
   13 Oct 2004; Mike Frysinger <vapier@gentoo.org> x86info-1.12b.ebuild:
   Add a pic patch to fix #67365.
