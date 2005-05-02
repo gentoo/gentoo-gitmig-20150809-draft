@@ -6,18 +6,17 @@ MD5 c697b628359c7055961817876804f0a6 metadata.xml 221
 MD5 b169f143c9eb3069924e41f10e8d40ac portage-2.0.51-r15.ebuild 13133
 MD5 f9fd4371c2fb44b47a0a5d3cfd4f118c portage-2.0.51.18.ebuild 13211
 MD5 985b398e1a2d623efa13c1c1fbe18119 portage-2.0.51.19.ebuild 13211
-MD5 dda3e1390650b36d3600e8a4aa91c15e portage-2.0.51.20-r5.ebuild 6063
+MD5 41c117da4ca9677b88151355edf34adf portage-2.0.51.21.ebuild 5629
 MD5 a754ca9e2eea9f8484bf5f93d339043a files/README.RESCUE 1911
 MD5 99e1115b7cb92bf81695feace57456da files/digest-portage-2.0.51-r15 71
 MD5 4458663c2aa36fb828981a89ffcaac97 files/digest-portage-2.0.51.18 70
 MD5 f8627c17a73d8568e94f92ea15c69360 files/digest-portage-2.0.51.19 70
 MD5 8c6ba58bbfddca72824b15dacbed69ec files/gcc-2.95-libsandbox.patch 1163
-MD5 5f2f342d78aec333f4136420afd6a31f files/digest-portage-2.0.51.20-r5 70
-MD5 6e8c5fcce08e1dff0adc43bacec164c4 files/2.0.51.20-fixes.patch 8265
+MD5 3fac4cafcb4ac61518899a75b420cf7b files/digest-portage-2.0.51.21 70
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCbizdxvWNPsk/ZP4RArWvAKCyvIxFdnUalpVp+/o0gexM7XuLMwCbB2i+
-2n5XfBMp7fAQny9t1fxppeI=
-=qbdl
+iD8DBQFCdYM9xvWNPsk/ZP4RAsXZAJ93LIERJqIkcZwb+sG3WyFogNIHMQCgvJD8
+RmZMFAuJaowDQTDJP70D8Ws=
+=sH9+
 -----END PGP SIGNATURE-----

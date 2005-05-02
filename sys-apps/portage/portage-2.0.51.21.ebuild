@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.51.20-r5.ebuild,v 1.1 2005/04/26 11:58:51 jstubbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.51.21.ebuild,v 1.1 2005/05/02 01:32:35 jstubbs Exp $
 
 inherit toolchain-funcs
 
@@ -27,7 +27,6 @@ python_has_lchown() {
 
 src_unpack() {
 	unpack ${A}
-	patch -d ${S} -p1 -g0 < ${FILESDIR}/2.0.51.20-fixes.patch
 }
 
 src_compile() {
@@ -94,7 +93,6 @@ src_install() {
 	dosym ../lib/portage/bin/portageq /usr/bin/portageq
 	dosym ../lib/portage/bin/ebuild /usr/bin/ebuild
 	dosym ../lib/portage/bin/quickpkg /usr/bin/quickpkg
-	dosym ../lib/portage/bin/g-cpan.pl /usr/bin/g-cpan.pl
 
 	dosym ../lib/portage/bin/env-update /usr/sbin/env-update
 	dosym ../lib/portage/bin/ebuild /usr/sbin/ebuild
@@ -122,19 +120,6 @@ pkg_postinst() {
 	local x
 
 	[ -f "${ROOT}etc/make.conf" ] || touch ${ROOT}etc/make.conf
-
-	#disable global sandbox if it's active (it's been deprecated)
-	if [ -f /etc/ld.so.preload ] ; then
-		cp /etc/ld.so.preload ${T}
-		grep -v libsandbox ${T}/ld.so.preload > /etc/ld.so.preload
-	fi
-
-	#yank old cache files
-	if [ -d /var/cache/edb ]
-	then
-		rm -f /var/cache/edb/xcache.p
-		rm -f /var/cache/edb/mtimes
-	fi
 
 	install -o root -g portage -m 0755 -d "${ROOT}/etc/portage"
 
