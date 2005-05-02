@@ -1,6 +1,15 @@
 # ChangeLog for sys-boot/lilo
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/lilo/ChangeLog,v 1.32 2005/03/27 20:40:40 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/lilo/ChangeLog,v 1.33 2005/05/02 00:58:27 chainsaw Exp $
+
+*lilo-22.7 (02 May 2005)
+
+  02 May 2005; Tony Vroon <chainsaw@gentoo.org>
+  +files/lilo-22.7-correct-usage-info.patch,
+  +files/lilo-22.7-create-install-dirs.patch,
+  +files/lilo-22.7-devmapper_gentoo.patch, +files/lilo-22.7-novga.patch,
+  lilo-22.6.1-r1.ebuild, +lilo-22.7.ebuild:
+  Version bump. 22.6.1-r1 stable on x86.
 
   27 Mar 2005; Tony Vroon <chainsaw@gentoo.org>
   files/lilo-22.6.1-devmapper_gentoo.patch:

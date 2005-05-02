@@ -1,0 +1,413 @@
+diff -Nur lilo-22.6.1.orig/geometry.c lilo-22.6.1/geometry.c
+--- lilo-22.6.1.orig/geometry.c	2004-11-16 08:11:03.000000000 +0100
++++ lilo-22.6.1/geometry.c	2005-03-15 00:13:42.761215192 +0100
+@@ -15,6 +15,9 @@
+ #include <stdio.h>
+ #include <fcntl.h>
+ #include <errno.h>
++#include <stdlib.h>
++#include <limits.h>
++#include <ctype.h>
+ #include <sys/types.h>
+ 
+ #ifdef LCF_REISERFS
+@@ -27,6 +30,10 @@
+ 
+ #include <string.h>
+ 
++#ifdef LCF_DEVMAPPER
++#include <libdevmapper.h>
++#endif
++
+ #include "config.h"
+ #include "lilo.h"
+ #include "common.h"
+@@ -61,6 +68,25 @@
+ #endif
+ #endif
+ 
++#ifdef LCF_DEVMAPPER
++typedef struct _dm_target {
++    struct _dm_target *next;
++    uint64_t start,length,offset;
++    int device;
++} DM_TARGET;
++
++typedef struct _dm_table {
++    struct _dm_table *next;
++    int device;
++    struct _dm_target *target;
++} DM_TABLE;
++
++int dm_version_nr = 0;
++int dm_major_list[16];
++int dm_major_nr = 0;
++DM_TABLE *dmtab = NULL;
++#endif
++
+ #ifdef LCF_LVM
+ struct lv_bmap {
+     __u32 lv_block;
+@@ -115,6 +141,12 @@
+ {
+     FILE *file;
+     char line[MAX_LINE+1];
++#ifdef LCF_DEVMAPPER
++    struct dm_task *dmt;
++    char major_name[32];
++    char dm_version[32];
++    int major;
++#endif
+     char *here;
+     DT_ENTRY *entry;
+     int disk_section,items;
+@@ -123,29 +155,69 @@
+ 	if ((file = fopen(name,"r")) == NULL)
+ 	    die("open %s: %s",name,strerror(errno));
+     }
+-    else if ((file = fopen(DFL_DISKTAB,"r")) == NULL) return;
+-    disk_section = !!disktab;
+-    while (fgets(line,MAX_LINE,file)) {
+-	here = strchr(line,'\n');
+-	if (here) *here = 0;
+-	here = strchr(line,'#');
+-	if (here) *here = 0;
+-	if (strspn(line," \t") != strlen(line)) {
+-	    entry = alloc_t(DT_ENTRY);
+-	    items = sscanf(line,"0x%x 0x%x %d %d %d %d",&entry->device,
+-	      &entry->bios,&entry->sectors,&entry->heads,&entry->cylinders,
+-	      &entry->start);
+-	    if (items == 5) entry->start = -1;
+-	    if (items < 5)
+-		die("Invalid line in %s:\n\"%s\"",name ? name : DFL_DISKTAB,
+-		  line);
+-	    entry->next = disktab;
+-	    disktab = entry;
+-	    if (disk_section) die("DISKTAB and DISK are mutually exclusive");
+-	    old_disktab = 1;
++    if (name || (file = fopen(DFL_DISKTAB,"r")) != NULL) {
++	disk_section = !!disktab;
++	while (fgets(line,MAX_LINE,file)) {
++	    here = strchr(line,'\n');
++	    if (here) *here = 0;
++	    here = strchr(line,'#');
++	    if (here) *here = 0;
++	    if (strspn(line," \t") != strlen(line)) {
++		entry = alloc_t(DT_ENTRY);
++		items = sscanf(line,"0x%x 0x%x %d %d %d %d",&entry->device,
++		  &entry->bios,&entry->sectors,&entry->heads,&entry->cylinders,
++		  &entry->start);
++		if (items == 5) entry->start = -1;
++		if (items < 5)
++		    die("Invalid line in %s:\n\"%s\"",name ? name : DFL_DISKTAB,
++		      line);
++		entry->next = disktab;
++		disktab = entry;
++		if (disk_section) die("DISKTAB and DISK are mutually exclusive");
++		old_disktab = 1;
++	    }
+ 	}
++	(void) fclose(file);
+     }
++
++#ifdef LCF_DEVMAPPER
++    if (!(dmt = dm_task_create(DM_DEVICE_VERSION)))
++	return;
++    if (!dm_task_run(dmt))
++	return;
++    if (!dm_task_get_driver_version(dmt, dm_version, sizeof dm_version))
++	return;
++
++    /*
++     * to not confuse returned device number formats %02x:%02x and %d:%d
++     * we assume here that the %02x:%02x format is only found in the ioctl
++     * interface version < 4 (this is really getting ugly...)
++     */
++    dm_version_nr = atoi(dm_version);
++
++    dm_task_destroy(dmt);
++
++    dm_major_nr = 0;
++    file = fopen("/proc/devices", "r");
++    if (!file) return;
++
++    do {
++	if (!fgets(line, (sizeof line)-1, file)) {
++	    (void) fclose(file);
++	    return;
++	}
++	line[(sizeof line)-1] = 0;
++    } while(strncmp(line, "Block", 5) != 0);
++
++    while(fgets(line, (sizeof line)-1, file)) {
++	if (sscanf(line, "%d %31s\n", &major, major_name) != 2) continue;
++	if (strcmp(major_name, "device-mapper") != 0) continue;
++	dm_major_list[dm_major_nr] = major;
++	if (++dm_major_nr > (sizeof dm_major_list)/(sizeof dm_major_list[0])) break;
++    }
++
+     (void) fclose(file);
++#endif
+ }
+ 
+ 
+@@ -777,6 +849,161 @@
+ {
+     DT_ENTRY *walk;
+     int inherited,keep_cyls,is_raid=0;
++#ifdef LCF_DEVMAPPER
++    int i;
++
++    for(i = 0; i < dm_major_nr; i++)
++	if (MAJOR(device) == dm_major_list[i])
++	    break;
++    while (i < dm_major_nr) {
++	DM_TABLE *dm_table;
++
++	for(dm_table = dmtab; dm_table; dm_table = dm_table->next)
++	    if (dm_table->device == device)
++		break;
++
++	if (dm_table) {
++	    DM_TARGET *target;
++
++	     device = 0;
++	    for(target = dm_table->target; target; target = target->next)
++		device = target->device;
++	} else {
++	    DEVICE dev;
++	    struct dm_task *dmt;
++	    void *next = NULL;
++	    char dmdev[PATH_MAX+1];
++	    char buf[PATH_MAX+1];
++	    char *slash;
++	    int result;
++
++	    dev_open(&dev, device, -1);
++	    strncpy(dmdev, dev.name, PATH_MAX);
++	    dmdev[PATH_MAX] = 0;
++	    do {
++		memset(buf, 0, PATH_MAX + 1);
++		if ((result = readlink(dmdev, buf, PATH_MAX)) < 0 && errno != EINVAL)
++		    die("device-mapper: readlink(\"%s\") failed with: %s",buf,
++			strerror(errno));
++		if (result >= 0) {
++		    if (buf[0] != '/' && (slash = strrchr(dmdev, '/')) != NULL)
++			slash++;
++		    else
++			slash = dmdev;
++		    strncpy(slash, buf, PATH_MAX - (slash-dmdev));
++		}
++		if (realpath(dmdev, buf) == NULL)
++		    die("device-mapper: realpath(\"%s\") failed with: %s",dmdev,
++			strerror(errno));
++		strncpy(dmdev, buf, PATH_MAX);
++	    } while (result >= 0);
++	    dmdev[PATH_MAX] = 0;
++
++	    if (!(dmt = dm_task_create(DM_DEVICE_TABLE)))
++		die("device-mapper: dm_task_create(DM_DEVICE_TABLE) failed");
++	    slash = strrchr(dmdev, '/');
++		if (slash)
++	    slash++;
++		else
++	    slash = dmdev;
++	    if (!dm_task_set_name(dmt, slash))
++		die("device-mapper: dm_task_set_name(\"%s\") failed",dmdev);
++	    if (!dm_task_run(dmt))
++		die("device-mapper: dm_task_run(DM_DEVICE_TABLE) failed");
++
++	    dm_table = alloc_t(DM_TABLE);
++	    dm_table->device = device;
++	    dm_table->target = NULL;
++	    dm_table->next = dmtab;
++	    dmtab = dm_table;
++
++	    device = 0;
++
++	    do {
++		DM_TARGET *target;
++		uint64_t start,length;
++		int major,minor;
++		char *target_type,*params;
++		char *p;
++
++		next = dm_get_next_target(dmt, next, &start, &length,
++		  &target_type, &params);
++
++		if (!target_type) continue;
++
++		if (strcmp(target_type, "linear") != 0)
++		    die("device-mapper: only linear boot device supported");
++
++		target = alloc_t(DM_TARGET);
++		target->start = start;
++		target->length = length;
++		if (dm_version_nr < 4 &&
++		    isxdigit(params[0]) &&
++		    isxdigit(params[1]) &&
++		    params[2] == ':' &&
++		    isxdigit(params[3]) &&
++		    isxdigit(params[4])) { /* old 2.4 format */
++		    if (sscanf(params, "%02x:%02x %"PRIu64, &major, &minor, &target->offset) != 3)
++			die("device-mapper: parse error in linear params (\"%s\")", params);
++		} else if (isdigit(params[0]) &&
++			   strchr(params, ':')) { /* dm_bdevname/format_dev_t (>= 2.6.0-test4?) format */
++		    if (sscanf(params, "%u:%u %"PRIu64, &major, &minor, &target->offset) != 3)
++			die("device-mapper: parse error in linear params (\"%s\")", params);
++		} else { /* >= 2.5.69 format, this should go away soon */
++		    struct stat st;
++		    FILE *file;
++
++		    p = strrchr(params, ' ');
++		    if (p == NULL)
++			die("device-mapper: parse error in linear params (\"%s\")", params);
++		    *p = 0;
++		    sprintf(buf, "/dev/%s", params);	/* let's hope it's there */
++		    if (stat(buf, &st) == 0) {
++			if (!S_ISBLK(st.st_mode))
++			    die("device-mapper: %s is not a valid block device", buf);
++			major = MAJOR(st.st_rdev);
++			minor = MINOR(st.st_rdev);
++		    } else {				/* let's try sysfs */
++			int dev;
++			sprintf(buf, "/sys/block/%s/dev", params);
++			file = fopen(buf, "r");
++ 			if (!file)
++			    die("device-mapper: \"%s\" could not be opened. /sys mounted?", buf);
++			if (!fgets(buf, PATH_MAX, file))
++			    die("device-mapper: read error from \"/sys/block/%s/dev\"", params);
++			if (sscanf(buf, "%u:%u", &major, &minor) != 2) {
++			    if (sscanf(buf, "%x", &dev) != 1)
++				die("device-mapper: error getting device from \"%s\"", buf);
++			    major = MAJOR(dev);
++			    minor = MINOR(dev);
++			}
++			(void) fclose(file);
++		    }
++		    *p = ' ';
++		    if (sscanf(p+1, "%"PRIu64, &target->offset) != 1)
++			die("device-mapper: parse error in linear params (\"%s\")", params);
++		}
++		target->device = (major << 8) | minor;
++		if (!device)
++		    device = target->device;
++		target->next = dm_table->target;
++		dm_table->target = target;
++	    } while(next);
++
++	    dm_task_destroy(dmt);
++
++	    dev_close(&dev);
++	}
++
++	if (!device)
++	    die("device-mapper: Error finding real device");
++	geo->base_dev = device;
++
++	for(i = 0; i < dm_major_nr; i++)
++	    if (MAJOR(device) == dm_major_list[i])
++		break;
++    }
++#endif
+ 
+     if (verbose>=5) printf("geo_get: device %04X, all=%d\n", device, all);
+ #ifdef LCF_LVM
+@@ -1154,14 +1381,50 @@
+             die("EVMS boot volume cannot be on multiple disks.\n");
+         sector = ebm.rsector + ((offset/SECTOR_SIZE) % geo->spb) + geo->start;
+     }
+-    else {
+-        sector = block*geo->spb+((offset/SECTOR_SIZE) % geo->spb);
+-        sector += geo->start;
+-    }
+-#else
+-    sector = block*geo->spb+((offset/SECTOR_SIZE) % geo->spb);
+-    sector += geo->start;
++    else
++#endif
++    {
++#ifdef LCF_DEVMAPPER 
++	int dev = geo->dev;
++	int i;
++#endif
++	sector = block*geo->spb+((offset/SECTOR_SIZE) % geo->spb);
++#ifdef LCF_DEVMAPPER 
++	for(i = 0; i < dm_major_nr; i++)
++	    if (MAJOR(dev) == dm_major_list[i])
++		break;
++	while (i < dm_major_nr) {
++	    DM_TABLE *dm_table;
++	    DM_TARGET *dm_target;
++
++	    for(dm_table = dmtab; dm_table; dm_table = dm_table->next)
++		if (dm_table->device == dev)
++		    break;
++	    if (!dm_table)
++		die("device-mapper: Mapped device suddenly lost? (%d)", dev);
++
++	    for(dm_target = dm_table->target; dm_target; dm_target = dm_target->next)
++		if (dm_target->start <= sector && sector < (dm_target->start+dm_target->length))
++		    break;
++	    if (!dm_target)
++		die("device-mapper: Sector outside mapped device? (%d: %u/%"PRIu64")",
++		    geo->base_dev, sector, (uint64_t)(dm_table->target ?
++		      (dm_table->target->start+dm_table->target->length) : 0));
++
++	    dev = dm_target->device;
++	    sector = dm_target->offset+(sector-dm_target->start);
++
++	    for(i = 0; i < dm_major_nr; i++)
++		if (MAJOR(dev) == dm_major_list[i])
++		    break;
++	}
++
++	if (dev != geo->dev && dev != geo->base_dev)
++	    die("device-mapper: mapped boot device cannot be on multiple real devices\n");
+ #endif
++	sector += geo->start;
++    }
++
+  /*   DON'T always use CHS addressing on floppies:     JRC   */
+ /*    if ((geo->device & 0x80) && (linear || lba32)) {	*/
+     if ((linear || lba32)) {
+diff -Nur lilo-22.6.1.orig/Makefile lilo-22.6.1/Makefile
+--- lilo-22.6.1.orig/Makefile	2004-11-17 19:41:56.000000000 +0100
++++ lilo-22.6.1/Makefile	2005-03-15 00:14:28.277295696 +0100
+@@ -59,7 +59,7 @@
+ #   XL_SECS=n	  Support for extra large (non-standard) floppies.
+ 
+ CONFIG=-DBDATA -DDSECS=3 -DEVMS -DIGNORECASE -DLVM -DONE_SHOT -DPASS160 \
+-   -DREISERFS -DREWRITE_TABLE -DSOLO_CHAIN -DVERSION -DVIRTUAL
++   -DREISERFS -DREWRITE_TABLE -DSOLO_CHAIN -DVERSION -DVIRTUAL -DDEVMAPPER
+ 
+ # set the compiler optimization level
+ 
+@@ -101,6 +101,8 @@
+ LDFLAGS=#-Xlinker -qmagic
+ LIBS=
+ 
++DEVMAPPER=-ldevmapper
++
+ OBJS=lilo.o raid.o map.o geometry.o boot.o device.o common.o bsect.o cfg.o \
+   partition.o identify.o probe.o shs2.o edit.o temp.o
+ 
+@@ -291,10 +293,18 @@
+ 		cp -p dparam.S dparam.s
+ 
+ lilo:		$(OBJS)
++ifneq (,$(findstring DEVMAPPER,$(CONFIG)))
++		$(CC) -o lilo $(LDFLAGS) $(OBJS) $(LIBS) $(DEVMAPPER)
++else
+ 		$(CC) -o lilo $(LDFLAGS) $(OBJS) $(LIBS)
++endif
+ 
+ lilo-static:	$(OBJS)
++ifneq (,$(findstring DEVMAPPER,$(CONFIG)))
++		$(CC) -o lilo-static -static $(LDFLAGS) $(OBJS) $(LIBS) $(DEVMAPPER)
++else
+ 		$(CC) -o lilo-static -static $(LDFLAGS) $(OBJS) $(LIBS)
++endif
+ 
+ boot-text.b:	first.b second.b
+ 		(dd if=first.b bs=512 conv=sync; dd if=second.b) >boot-text.b
