@@ -1,6 +1,17 @@
 # ChangeLog for kde-base/kdewebdev
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdewebdev/ChangeLog,v 1.48 2005/04/20 23:56:39 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdewebdev/ChangeLog,v 1.49 2005/05/02 23:13:20 carlo Exp $
+
+*kdewebdev-3.4.0-r2 (02 May 2005)
+*kdewebdev-3.3.2-r2 (02 May 2005)
+
+  02 May 2005; Carsten Lohrke <carlo@gentoo.org>
+  +files/quanta-3.4.0-vpl.patch, -files/post-3.4-kdewebdev.diff,
+  +files/post-3.4-kdewebdev-2.diff, +kdewebdev-3.3.2-r2.ebuild,
+  -kdewebdev-3.4.0.ebuild, -kdewebdev-3.4.0-r1.ebuild,
+  +kdewebdev-3.4.0-r2.ebuild:
+  new Kommander patch, fixing a bug in the previous one; fix for Quanta vpl
+  editor
 
   20 Apr 2005; Lars Weiler <pylon@gentoo.org> kdewebdev-3.3.2-r1.ebuild:
   Stable on ppc; bug #89092.
