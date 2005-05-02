@@ -1,6 +1,6 @@
 # ChangeLog for dev-python/wxpython
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/ChangeLog,v 1.17 2005/05/02 18:29:01 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/ChangeLog,v 1.18 2005/05/02 18:31:52 pythonhead Exp $
 
 *wxpython-2.6.0.0 (02 May 2005)
 *wxpython-2.4.2.4-r2 (02 May 2005)
@@ -9,7 +9,7 @@
   +files/scripts-multiver-2.6.0.0.diff, files/wxpy-config.py,
   +wxpython-2.4.2.4-r2.ebuild, -wxpython-2.5.3.1.ebuild,
   +wxpython-2.6.0.0.ebuild:
-  Version bump. Now using SLOTs
+  Version bump. Now using SLOTs.
 
   25 Jan 2005; Rob Cakebread <pythonhead@gentoo.org>
   wxpython-2.4.2.4.ebuild:
