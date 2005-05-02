@@ -1,6 +1,13 @@
 # ChangeLog for app-cdr/bin2iso
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/bin2iso/ChangeLog,v 1.17 2005/01/01 12:08:00 eradicator Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/bin2iso/ChangeLog,v 1.18 2005/05/02 04:32:47 vapier Exp $
+
+*bin2iso-19b-r2 (02 May 2005)
+
+  02 May 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/bin2iso-19b-sanity-checks.patch, -bin2iso-19b-r1.ebuild,
+  +bin2iso-19b-r2.ebuild:
+  Fix segfaults due to lack of error checking #90540 by Tiago Freire.
 
   03 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> bin2iso-19b-r1.ebuild:
   Adding amd64 keyword, closing #46530.
