@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/penguin-command/penguin-command-1.6.9.ebuild,v 1.1 2005/04/29 22:50:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/penguin-command/penguin-command-1.6.9.ebuild,v 1.2 2005/05/02 14:25:02 mr_bones_ Exp $
 
 inherit games
 
@@ -16,13 +16,8 @@ IUSE="nls"
 DEPEND="media-libs/libpng
 	media-libs/jpeg
 	>=media-libs/libsdl-1.1.5
-	media-libs/sdl-mixer"
-
-#src_unpack() {
-#	unpack ${A}
-#	cd "${S}"
-#	sed -i 's:-DUSE_SOUND::' configure
-#}
+	media-libs/sdl-mixer
+	media-libs/sdl-image"
 
 src_install() {
 	make install DESTDIR="${D}" || die
