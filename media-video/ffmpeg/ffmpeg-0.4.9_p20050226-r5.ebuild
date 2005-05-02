@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.4.9_p20050226-r5.ebuild,v 1.1 2005/04/26 01:21:53 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.4.9_p20050226-r5.ebuild,v 1.2 2005/05/02 09:39:38 lu_zero Exp $
 
 inherit eutils flag-o-matic gcc multilib toolchain-funcs
 
@@ -41,6 +41,9 @@ DEPEND="imlib? ( media-libs/imlib2 )
 src_unpack() {
 	unpack ${A} || die
 	cd ${S_BASE}
+
+	#Append -fomit-frame-pointer to avoid some common issues
+	use debug || append-flags "-fomit-frame-pointer"
 
 	# for some reason it tries to #include <X11/Xlib.h>, but doesn't use it
 	sed -i s:\#define\ HAVE_X11:\#define\ HAVE_LINUX: ffplay.c
