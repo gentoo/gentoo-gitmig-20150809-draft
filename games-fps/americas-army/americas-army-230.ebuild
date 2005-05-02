@@ -1,13 +1,16 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/americas-army/americas-army-230.ebuild,v 1.2 2005/04/07 20:13:26 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/americas-army/americas-army-230.ebuild,v 1.3 2005/05/02 18:41:23 wolf31o2 Exp $
 
 inherit eutils games
 
 MY_P="armyops${PV}-linux.run"
 DESCRIPTION="America's Army: Special Forces - military simulations by the U.S. Army to provide civilians with insights on soldiering"
 HOMEPAGE="http://www.americasarmy.com/"
-SRC_URI="mirror://3dgamers/pub/3dgamers/games/${PN/-/}/${MY_P}"
+SRC_URI="mirror://3dgamers/pub/3dgamers/games/${PN/-/}/${MY_P}
+	dedicated? (
+		http://dev.gentoo.org/~wolf31o2/sources/dump/${PN}-all-0.1.tar.bz2
+		mirror://gentoo/${PN}-all-0.1.tar.bz2 )"
 
 LICENSE="Army-EULA"
 SLOT="0"
@@ -38,6 +41,9 @@ pkg_setup() {
 src_unpack() {
 	unpack_makeself ${DISTDIR}/${MY_P} || die "unpacking game"
 	tar -zxf setupstuff.tar.gz || die
+	if use dedicated; then
+		unpack armyops-all-support.tar.bz2 || die
+	fi
 }
 
 src_install() {
@@ -57,8 +63,8 @@ src_install() {
 	doexe bin/armyops || die "doexe failed"
 
 	if use dedicated; then
-		exeinto /etc/init.d ; newexe ${FILESDIR}/armyops-ded.init armyops-ded
-		insinto /etc/conf.d ; newins ${FILESDIR}/armyops-ded.conf armyops-ded
+		newinitd ${S}/armyops-ded.rc armyops-ded
+		newconfd ${S}/armyops-ded.conf. armyops-ded
 		games_make_wrapper armyops-ded ./server-bin ${dir}/System
 	fi
 
