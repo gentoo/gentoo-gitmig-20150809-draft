@@ -1,6 +1,13 @@
 # ChangeLog for media-video/nvidia-glx
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/ChangeLog,v 1.91 2005/04/27 21:31:05 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/ChangeLog,v 1.92 2005/05/02 22:31:34 eradicator Exp $
+
+*nvidia-glx-1.0.7174-r4 (02 May 2005)
+
+  02 May 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  -nvidia-glx-1.0.7174-r3.ebuild, +nvidia-glx-1.0.7174-r4.ebuild:
+  Don't use tls enabled lib when the user has CHOST=i386 USE=nptl since they
+  really DON'T have nptl. Bug #91137.
 
 *nvidia-glx-1.0.7174-r3 (27 Apr 2005)
 

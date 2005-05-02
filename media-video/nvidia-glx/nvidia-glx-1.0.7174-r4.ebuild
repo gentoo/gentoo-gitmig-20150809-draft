@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/nvidia-glx-1.0.7174-r3.ebuild,v 1.2 2005/04/28 21:11:22 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/nvidia-glx-1.0.7174-r4.ebuild,v 1.1 2005/05/02 22:31:34 eradicator Exp $
 
 inherit eutils multilib versionator
 
@@ -28,6 +28,10 @@ RDEPEND="virtual/libc
 	>=x11-base/opengl-update-2.2.0
 	~media-video/nvidia-kernel-${PV}
 	!app-emulation/emul-linux-x86-nvidia"
+
+#	!<sys-libs/glibc-2.3.4.20040619-r2"
+# The !<sys-libs/glibc-2.3.4.20040619-r2 is to ensure our glibc has tls
+# support if we are atleast CHOST=i486.
 
 PROVIDE="virtual/opengl"
 export _POSIX2_VERSION="199209"
@@ -232,6 +236,16 @@ want_tls() {
 
 	# Old versions of glibc were lt/no-tls only
 	has_version '<sys-libs/glibc-2.3.2' && return 1
+
+	local valid_chost="true"
+	if use x86 ; then
+		case ${CHOST/-*} in
+			i486|i586|i686) ;;
+			*) valid_chost="false"
+		esac
+	fi
+
+	[[ ${valid_chost} == "false" ]] && return 1
 
 	# If we've got nptl, we've got tls
 	built_with_use sys-libs/glibc nptl && return 0
