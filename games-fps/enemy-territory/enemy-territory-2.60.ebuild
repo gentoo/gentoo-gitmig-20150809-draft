@@ -1,13 +1,16 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/enemy-territory/enemy-territory-2.60.ebuild,v 1.3 2005/04/20 14:08:37 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/enemy-territory/enemy-territory-2.60.ebuild,v 1.4 2005/05/02 19:10:04 wolf31o2 Exp $
 
 inherit eutils games
 
 DESCRIPTION="Return to Castle Wolfenstein: Enemy Territory - standalone multi-player game based on Return to Castle Wolfenstein"
 HOMEPAGE="http://www.idsoftware.com/"
 SRC_URI="mirror://3dgamers/pub/3dgamers4/games/wolfensteinet/et-linux-${PV}.x86.run
-	mirror://3dgamers/pub/3dgamers/games/wolfensteinet/et-linux-${PV}.x86.run"
+	mirror://3dgamers/pub/3dgamers/games/wolfensteinet/et-linux-${PV}.x86.run
+	dedicated? (
+		http://dev.gentoo.org/~wolf31o2/sources/dump/${PN}-all-0.1.tar.bz2
+		mirror://gentoo/${PN}-all-0.1.tar.bz2 )"
 
 LICENSE="RTCW-ETEULA"
 SLOT="0"
@@ -31,7 +34,10 @@ pkg_setup() {
 }
 
 src_unpack() {
-	unpack_makeself
+	unpack_makeself et-linux-${PV}.x86.run
+	if use dedicated; then
+		unpack ${PN}-all-0.1.tar.bz2 || die
+	fi
 }
 
 src_install() {
@@ -48,10 +54,10 @@ src_install() {
 	if use dedicated ; then
 		doexe bin/Linux/x86/etded.x86 || die "doexe failed"
 		games_make_wrapper et-ded ./etded.x86 ${dir}
-		newinitd ${FILESDIR}/et-ded.rc et-ded || die "newinitd failed"
+		newinitd ${S}/et-ded.rc et-ded || die "newinitd failed"
 		dosed "s:GAMES_USER_DED:${GAMES_USER_DED}:" /etc/init.d/et-ded
 		dosed "s:GENTOO_DIR:${GAMES_BINDIR}:" /etc/init.d/et-ded
-		newconfd ${FILESDIR}/et-ded.conf.d et-ded || die "newconfd failed"
+		newconfd ${S}/et-ded.conf.d et-ded || die "newconfd failed"
 	fi
 
 	# TODO: move this to /var/ perhaps ?
