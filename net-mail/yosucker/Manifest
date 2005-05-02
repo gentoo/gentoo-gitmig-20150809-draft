@@ -1,7 +1,19 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 21a48639c13d96d2b04d8122b3cef7cd yosucker-65.ebuild 1028
-MD5 7f8bbdab0fe46ee3810ffeb3c67b3efa metadata.xml 483
-MD5 d53f13ecf6ed612742bb7626bbe0c6b5 ChangeLog 3596
 MD5 8f2da82888af0dbfa09c3ad7f2d38c86 yosucker-67.ebuild 1035
-MD5 a070bc593829b9eb0f24beb3a4b5a4c1 files/digest-yosucker-67 64
+MD5 559d781ddb6fa5f404e4cbe13a38b603 yosucker-69.ebuild 1026
+MD5 09545c7656682e2163034ede34c64a32 ChangeLog 3779
+MD5 7f8bbdab0fe46ee3810ffeb3c67b3efa metadata.xml 483
 MD5 2becf6f4c1360409202a109b2a0fe85e files/sputnik.patch 1173
 MD5 bab3922e12b2782c674f152bbe022fdf files/digest-yosucker-65 64
+MD5 a070bc593829b9eb0f24beb3a4b5a4c1 files/digest-yosucker-67 64
+MD5 c80a8bac90b2d1186412529e4c8d5c4b files/digest-yosucker-69 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCdeLHQlM6RnzZP+IRAnLJAKCzqBSSCextwWTb3J62MGmSyyN3LgCeMokl
+zt8vp6SQ4ag6BvACRlt11Zs=
+=FWdH
+-----END PGP SIGNATURE-----
