@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/ghc-bin
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc-bin/ChangeLog,v 1.22 2005/02/19 18:53:42 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc-bin/ChangeLog,v 1.23 2005/05/02 14:50:50 kosmikus Exp $
+
+*ghc-bin-6.4 (02 May 2005)
+
+  02 May 2005; Andres Loeh <kosmikus@gentoo.org> +ghc-bin-6.4.ebuild:
+  Added a first x86 binary for ghc-6.4. More arches to follow. The binary
+  version of ghc-6.4 will remain masked as long as dev-lang/ghc-6.4 is masked.
 
   19 Feb 2005; Jason Wever <weeve@gentoo.org> ghc-bin-6.0.ebuild,
   ghc-bin-6.2.1.ebuild:
