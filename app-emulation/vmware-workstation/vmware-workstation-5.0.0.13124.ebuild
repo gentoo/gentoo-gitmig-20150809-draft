@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-5.0.0.13124.ebuild,v 1.2 2005/04/11 15:35:59 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-5.0.0.13124.ebuild,v 1.3 2005/05/02 19:02:01 wolf31o2 Exp $
 
 # Unlike many other binary packages the user doesn't need to agree to a licence
 # to download VMWare. The agreeing to a licence is part of the configure step
@@ -74,6 +74,10 @@ src_install() {
 	chmod u+s ${Ddir}/lib/bin/vmware-vmx
 
 	dodoc doc/* || die "dodoc"
+	# Fix for bug #91191
+	dodir ${dir}/doc
+	insinto ${dir}/doc
+	doins doc/EULA || die "copying EULA"
 
 	doman ${S}/man/man1/vmware.1.gz || die "doman"
 

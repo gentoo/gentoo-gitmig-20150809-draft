@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/vmware-workstation
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.84 2005/04/11 21:51:41 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.85 2005/05/02 19:02:01 wolf31o2 Exp $
+
+  02 May 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  vmware-workstation-3.2.1.2242-r3.ebuild,
+  vmware-workstation-4.5.2.8848-r6.ebuild,
+  vmware-workstation-5.0.0.13124.ebuild:
+  Adding EULA and closing bug #91191.
 
   11 Apr 2005; Chris Gianelloni <wolf31o2@gentoo.org>
   vmware-workstation-3.2.1.2242-r3.ebuild:
