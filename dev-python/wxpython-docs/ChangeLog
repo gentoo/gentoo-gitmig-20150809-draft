@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/wxpython-docs
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython-docs/ChangeLog,v 1.13 2005/05/02 19:02:13 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython-docs/ChangeLog,v 1.14 2005/05/02 20:47:44 pythonhead Exp $
+
+  02 May 2005; Rob Cakebread <pythonhead@gentoo.org>
+  +files/viewdocs-2.4.2.4.patch, +files/demo-2.6.0.0-version.patch,
+  +files/viewdocs-2.6.0.0.patch, wxpython-docs-2.4.2.4-r1.ebuild,
+  wxpython-docs-2.6.0.0.ebuild:
+  Fixed viewdocs.py thanks Ivan Todoroski <grnch@gmx.net> bug# 86625
 
 *wxpython-docs-2.6.0.0 (02 May 2005)
 *wxpython-docs-2.4.2.4-r1 (02 May 2005)
