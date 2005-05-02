@@ -1,6 +1,9 @@
 # ChangeLog for app-office/gnotime
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnotime/ChangeLog,v 1.9 2005/01/01 15:32:54 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnotime/ChangeLog,v 1.10 2005/05/02 19:53:41 astinus Exp $
+
+  02 May 2005; Alex Howells <astinus@gentoo.org> gnotime-2.1.7.ebuild:
+  Keywording ~amd64 with regards to Bug:91202
 
   19 Jun 2004; Jason Wever <weeve@gentoo.org> gnotime-2.1.7.ebuild:
   Stable on sparc.
