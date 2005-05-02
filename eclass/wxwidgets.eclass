@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/wxwidgets.eclass,v 1.6 2005/05/01 20:55:42 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/wxwidgets.eclass,v 1.7 2005/05/02 16:43:58 pythonhead Exp $
 #
 # Author Rob Cakebread <pythonhead@gentoo.org>
 
