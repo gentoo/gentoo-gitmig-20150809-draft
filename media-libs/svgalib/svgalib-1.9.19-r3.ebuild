@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/svgalib-1.9.19-r3.ebuild,v 1.4 2005/04/29 22:56:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/svgalib-1.9.19-r3.ebuild,v 1.5 2005/05/02 02:47:00 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs kernel-mod
 
@@ -48,7 +48,7 @@ src_unpack() {
 	#epatch ${FILESDIR}/${P}-devfs.patch
 
 	# Don't strip stuff, let portage do it
-	sed -i '/^INSTALL_PROGRAM/s: -s ::' Makefile.cfg
+	sed -i '/^INSTALL_PROGRAM/s: -s : :' Makefile.cfg
 
 	# Link like the other packages
 	sed -i 's:$(FLAGS):$(CFLAGS) $(LDFLAGS):' demos/Makefile || die
