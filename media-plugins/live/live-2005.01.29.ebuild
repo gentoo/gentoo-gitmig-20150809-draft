@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/live/live-2005.01.29.ebuild,v 1.3 2005/02/02 10:33:13 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/live/live-2005.01.29.ebuild,v 1.4 2005/05/02 18:28:32 flameeyes Exp $
 
 IUSE=""
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.live.com/liveMedia/public/${MY_P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~amd64 ~mips"
+KEYWORDS="x86 ~ppc ~sparc ~alpha ~hppa amd64 ~mips"
 
 DEPEND="virtual/libc"
 
