@@ -1,15 +1,15 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 24bcaa4bfc3e1ebe430860388ecbb2c6 sarg-1.4.1-r2.ebuild 1124
-MD5 478f248116aba43db143b2bbc46abbe2 ChangeLog 1585
+MD5 2969a97b43e7764f8030ffe20db97c9c sarg-1.4.1-r2.ebuild 1116
+MD5 6efc452414b54a88e3817bdbb0f83750 ChangeLog 1741
 MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
 MD5 4ce75e6dba68e51c94d8fb4b47a5ed9f files/sarg-1.4.1-2.6.fix.patch 1556
 MD5 c1d5675a58b98064b57ce771a2ecd4b8 files/digest-sarg-1.4.1-r2 132
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFCaVImjiC39V7gKu0RAktwAKCb+ZKmCsWe/vQgJQhult0HHr5OGACguXQj
-H7s2Re1blovEr7iifzCVzlg=
-=UlhG
+iD8DBQFCdhRWT+MN7JbqCpMRAhrTAJ4nQ8faSBjryX3XX1pa/9CTofPtbwCgiHJQ
+4ob/VKRcSAf/gAXMGA4bF7w=
+=RH+Z
 -----END PGP SIGNATURE-----

@@ -1,12 +1,12 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sarg/sarg-1.4.1-r2.ebuild,v 1.7 2005/04/22 19:35:44 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sarg/sarg-1.4.1-r2.ebuild,v 1.8 2005/05/02 11:51:10 eldad Exp $
 
 inherit eutils
 
 DESCRIPTION="Sarg (Squid Analysis Report Generator) is a tool that allows you to view where your users are going to on the Internet."
-HOMEPAGE="http://web.onda.com.br/orso/sarg.html"
-SRC_URI="http://web.onda.com.br/orso/${P}.tar.gz http://web.onda.com.br/orso/patches/sarg-1.4.1-index.sort.patch"
+HOMEPAGE="http://sarg.sourceforge.net/"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz http://dev.gentoo.org/~eldad/distfiles/sarg-1.4.1-index.sort.patch"
 
 LICENSE="GPL-2"
 SLOT="0"
