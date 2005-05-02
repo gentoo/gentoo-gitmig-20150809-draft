@@ -1,0 +1,8 @@
+# ChangeLog for app-doc/single-unix-specification
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-doc/single-unix-specification/ChangeLog,v 1.1 2005/05/02 04:45:46 vapier Exp $
+
+*single-unix-specification-3 (02 May 2005)
+
+  02 May 2005; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by me.
