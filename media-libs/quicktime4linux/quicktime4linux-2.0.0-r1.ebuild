@@ -1,12 +1,14 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/quicktime4linux/quicktime4linux-2.0.0-r1.ebuild,v 1.9 2005/01/16 16:57:57 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/quicktime4linux/quicktime4linux-2.0.0-r1.ebuild,v 1.10 2005/05/02 08:45:26 flameeyes Exp $
 
 inherit flag-o-matic gcc eutils
 
+PATCHLEVEL="3"
 DESCRIPTION="quicktime library for linux"
 HOMEPAGE="http://heroinewarrior.com/quicktime.php3"
-SRC_URI="mirror://sourceforge/heroines/${P}-src.tar.bz2"
+SRC_URI="mirror://sourceforge/heroines/${P}-src.tar.bz2
+	http://digilander.libero.it/dgp85/${PN}-patches-${PATCHLEVEL}.tar.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
@@ -33,8 +35,9 @@ src_unpack() {
 	rm -rf decore2 encore2 ffmpeg-0.4.6 jpeg jpeg-mmx-0.1.4 \
 		lame-3.93.1 libdv-0.99 libogg-1.0 libvorbis-1.0
 	ln -s /usr/include jpeg
-	epatch ${FILESDIR}/${PV}-external-libs.patch
-	[ `gcc-major-version` -eq 2 ] && epatch ${FILESDIR}/${PV}-gcc2.patch
+
+	[ `gcc-major-version` -eq 2 ] || EPATCH_EXCLUDE="00_all_gcc2.patch"
+	EPATCH_SUFFIX="patch" epatch ${WORKDIR}/${PV}
 }
 
 src_compile() {

@@ -1,12 +1,14 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/quicktime4linux/quicktime4linux-1.6.2.ebuild,v 1.10 2005/01/16 16:57:57 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/quicktime4linux/quicktime4linux-1.6.2.ebuild,v 1.11 2005/05/02 08:45:26 flameeyes Exp $
 
 inherit flag-o-matic eutils
 
+PATCHLEVEL="2"
 DESCRIPTION="quicktime library for linux"
 HOMEPAGE="http://heroinewarrior.com/quicktime.php3"
-SRC_URI="mirror://sourceforge/heroines/${P}-src.tar.bz2"
+SRC_URI="mirror://sourceforge/heroines/${P}-src.tar.bz2
+	http://digilander.libero.it/dgp85/${PN}-patches-${PATCHLEVEL}.tar.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
@@ -22,9 +24,12 @@ PROVIDE="virtual/quicktime"
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/${PV}-gentoo-libmpeg3.patch
-	epatch ${FILESDIR}/${PV}-gentoo-sharedlib.patch
-	[ "${ARCH}" == "ppc" ] && sed -i 's:-mno-ieee-fp::g' `find -name 'Makefile*' -o -name 'configure*'`
+	EPATCH_SUFFIX="patch" epatch ${WORKDIR}/${PV}
+
+	if [[ "${ARCH}" == "ppc" ]]; then
+		find ${S} -name 'Makefile*' -o -name 'configure*' | \
+			xargs sed -i -e 's:-mno-ieee-fp::g'
+	fi
 }
 
 src_compile() {

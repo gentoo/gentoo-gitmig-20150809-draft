@@ -1,6 +1,15 @@
 # ChangeLog for media-libs/quicktime4linux
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/quicktime4linux/ChangeLog,v 1.24 2005/01/23 03:15:07 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/quicktime4linux/ChangeLog,v 1.25 2005/05/02 08:45:26 flameeyes Exp $
+
+  02 May 2005; Diego Pettenò <flameeyes@gentoo.org>
+  -files/2.0.0-gcc2.patch, -files/quicktime4linux-1.5.5-fPIC.patch,
+  -files/2.0.0-gentoo-sharedlib.patch, -files/1.6.2-gentoo-libmpeg3.patch,
+  -files/1.6.2-gentoo-sharedlib.patch, -files/2.0.0-external-libs.patch,
+  -files/quicktime_makefile.patch, quicktime4linux-1.5.5-r1.ebuild,
+  quicktime4linux-1.6.2.ebuild, quicktime4linux-2.0.0.ebuild,
+  quicktime4linux-2.0.0-r1.ebuild:
+  Moved patches into patchsets (when needed/better).
 
 *quicktime4linux-2.0.4 (23 Jan 2005)
 

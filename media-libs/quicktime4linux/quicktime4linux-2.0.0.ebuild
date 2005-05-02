@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/quicktime4linux/quicktime4linux-2.0.0.ebuild,v 1.7 2005/01/16 16:57:57 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/quicktime4linux/quicktime4linux-2.0.0.ebuild,v 1.8 2005/05/02 08:45:26 flameeyes Exp $
 
 inherit flag-o-matic eutils
 
@@ -23,12 +23,9 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/${PV}-gentoo-libmpeg3.patch
-#	epatch ${FILESDIR}/${PV}-gentoo-sharedlib.patch
-#	[ "${ARCH}" == "ppc" ] && sed -i 's:-mno-ieee-fp::g' `find -name 'Makefile*' -o -name 'configure*'`
 }
 
 src_compile() {
-#	append-flags -I${S}/libdv-0.98/libdv -I${S}/libdv-0.98
 	make || die
 	make util || die
 }
