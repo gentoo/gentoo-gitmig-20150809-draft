@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/drupal/drupal-4.6.0.ebuild,v 1.1 2005/04/20 14:41:27 st_lim Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/drupal/drupal-4.6.0.ebuild,v 1.2 2005/05/02 12:31:41 st_lim Exp $
 
 inherit webapp eutils
 
@@ -22,361 +22,508 @@ src_unpack() {
 
 	if ! use minimal ; then
 		cd ${S}/modules
-
 		einfo "Unpacking album"
-		wget http://www.drupal.org/files/projects/album-${PV}.tar.gz
-		tar xfz album-${PV}.tar.gz
+		wget -q http://www.drupal.org/files/projects/album-4.6.0.tar.gz
+		tar xfz album-4.6.0.tar.gz
 
 		einfo "Unpacking amazontools"
-		wget http://www.drupal.org/files/projects/amazontools-${PV}.tar.gz
-		tar xfz amazontools-${PV}.tar.gz
+		wget -q http://www.drupal.org/files/projects/amazontools-4.6.0.tar.gz
+		tar xfz amazontools-4.6.0.tar.gz
+
+		einfo "Unpacking amazonsearch"
+		wget -q http://www.drupal.org/files/projects/amazonsearch-4.6.0.tar.gz
+		tar xfz amazonsearch-4.6.0.tar.gz
 
 		einfo "Unpacking article"
-		wget http://www.drupal.org/files/projects/article-${PV}.tar.gz
-		tar xfz article-${PV}.tar.gz
+		wget -q http://www.drupal.org/files/projects/article-4.6.0.tar.gz
+		tar xfz article-4.6.0.tar.gz
 
 		einfo "Unpacking attachment"
-		wget http://www.drupal.org/files/projects/attachment-${PV}.tar.gz
-		tar xfz attachment-${PV}.tar.gz
+		wget -q http://www.drupal.org/files/projects/attachment-4.6.0.tar.gz
+		tar xfz attachment-4.6.0.tar.gz
 
 		einfo "Unpacking bookreview"
-		wget http://www.drupal.org/files/projects/bookreview-${PV}.tar.gz
-		tar xfz bookreview-${PV}.tar.gz
+		wget -q http://www.drupal.org/files/projects/bookreview-4.6.0.tar.gz
+		tar xfz bookreview-4.6.0.tar.gz
+
+		einfo "Unpacking bookmarks"
+		wget -q http://www.drupal.org/files/projects/bookmarks-4.6.0.tar.gz
+		tar xfz bookmarks-4.6.0.tar.gz
 
 		einfo "Unpacking buddylist"
-		wget http://www.drupal.org/files/projects/buddylist-${PV}.tar.gz
-		tar xfz buddylist-${PV}.tar.gz
+		wget -q http://www.drupal.org/files/projects/buddylist-4.6.0.tar.gz
+		tar xfz buddylist-4.6.0.tar.gz
+
+		einfo "Unpacking chatbox"
+		wget -q http://www.drupal.org/files/projects/chatbox-4.6.0.tar.gz
+		tar xfz chatbox-4.6.0.tar.gz
 
 		einfo "Unpacking codefilter"
-		wget http://www.drupal.org/files/projects/codefilter-${PV}.tar.gz
-		tar xfz codefilter-${PV}.tar.gz
+		wget -q http://www.drupal.org/files/projects/codefilter-4.6.0.tar.gz
+		tar xfz codefilter-4.6.0.tar.gz
 
 		einfo "Unpacking commentcloser"
-		wget http://www.drupal.org/files/projects/commentcloser-${PV}.tar.gz
-		tar xfz commentcloser-${PV}.tar.gz
+		wget -q http://www.drupal.org/files/projects/commentcloser-4.6.0.tar.gz
+		tar xfz commentcloser-4.6.0.tar.gz
+
+		einfo "Unpacking contact_dir"
+		wget -q http://www.drupal.org/files/projects/contact_dir-4.6.0.tar.gz
+		tar xfz contact_dir-4.6.0.tar.gz
 
 		einfo "Unpacking contextlinks"
-		wget http://www.drupal.org/files/projects/contextlinks-${PV}.tar.gz
-		tar xfz contextlinks-${PV}.tar.gz
+		wget -q http://www.drupal.org/files/projects/contextlinks-4.6.0.tar.gz
+		tar xfz contextlinks-4.6.0.tar.gz
 
 		einfo "Unpacking customerror"
-		wget http://www.drupal.org/files/projects/customerror-${PV}.tar.gz
-		tar xfz customerror-${PV}.tar.gz
+		wget -q http://www.drupal.org/files/projects/customerror-4.6.0.tar.gz
+		tar xfz customerror-4.6.0.tar.gz
 
 		einfo "Unpacking daily"
-		wget http://www.drupal.org/files/projects/daily-${PV}.tar.gz
-		tar xfz daily-${PV}.tar.gz
+		wget -q http://www.drupal.org/files/projects/daily-4.6.0.tar.gz
+		tar xfz daily-4.6.0.tar.gz
 
 		einfo "Unpacking dba"
-		wget http://www.drupal.org/files/projects/dba-${PV}.tar.gz
-		tar xfz dba-${PV}.tar.gz
+		wget -q http://www.drupal.org/files/projects/dba-4.6.0.tar.gz
+		tar xfz dba-4.6.0.tar.gz
 
 		einfo "Unpacking diff"
-		wget http://www.drupal.org/files/projects/diff-${PV}.tar.gz
-		tar xfz diff-${PV}.tar.gz
+		wget -q http://www.drupal.org/files/projects/diff-4.6.0.tar.gz
+		tar xfz diff-4.6.0.tar.gz
 
 		einfo "Unpacking download_counter"
-		wget http://www.drupal.org/files/projects/download_counter-${PV}.tar.gz
-		tar xfz download_counter-${PV}.tar.gz
+		wget -q http://www.drupal.org/files/projects/download_counter-4.6.0.tar.gz
+		tar xfz download_counter-4.6.0.tar.gz
+
+		einfo "Unpacking event"
+		wget -q http://www.drupal.org/files/projects/event-4.6.0.tar.gz
+		tar xfz event-4.6.0.tar.gz
+
+		einfo "Unpacking excerpt"
+		wget -q http://www.drupal.org/files/projects/excerpt-4.6.0.tar.gz
+		tar xfz excerpt-4.6.0.tar.gz
 
 		einfo "Unpacking ezmlm"
-		wget http://www.drupal.org/files/projects/ezmlm-${PV}.tar.gz
-		tar xfz ezmlm-${PV}.tar.gz
+		wget -q http://www.drupal.org/files/projects/ezmlm-4.6.0.tar.gz
+		tar xfz ezmlm-4.6.0.tar.gz
+
+		einfo "Unpacking fckeditor"
+		wget -q http://www.drupal.org/files/projects/fckeditor-4.6.0.tar.gz
+		tar xfz fckeditor-4.6.0.tar.gz
 
 		einfo "Unpacking feedback"
-		wget http://www.drupal.org/files/projects/feedback-${PV}.tar.gz
-		tar xfz feedback-${PV}.tar.gz
+		wget -q http://www.drupal.org/files/projects/feedback-4.6.0.tar.gz
+		tar xfz feedback-4.6.0.tar.gz
 
 		einfo "Unpacking filemanager"
-		wget http://www.drupal.org/files/projects/filemanager-${PV}.tar.gz
-		tar xfz filemanager-${PV}.tar.gz
+		wget -q http://www.drupal.org/files/projects/filemanager-4.6.0.tar.gz
+		tar xfz filemanager-4.6.0.tar.gz
 
 		einfo "Unpacking flexinode"
-		wget http://www.drupal.org/files/projects/flexinode-${PV}.tar.gz
-		tar xfz flexinode-${PV}.tar.gz
+		wget -q http://www.drupal.org/files/projects/flexinode-4.6.0.tar.gz
+		tar xfz flexinode-4.6.0.tar.gz
 
 		einfo "Unpacking foaf"
-		wget http://www.drupal.org/files/projects/foaf-${PV}.tar.gz
-		tar xfz foaf-${PV}.tar.gz
+		wget -q http://www.drupal.org/files/projects/foaf-4.6.0.tar.gz
+		tar xfz foaf-4.6.0.tar.gz
 
 		einfo "Unpacking folksonomy"
-		wget http://www.drupal.org/files/projects/folksonomy-${PV}.tar.gz
-		tar xfz folksonomy-${PV}.tar.gz
+		wget -q http://www.drupal.org/files/projects/folksonomy-4.6.0.tar.gz
+		tar xfz folksonomy-4.6.0.tar.gz
 
 		einfo "Unpacking fontsize"
-		wget http://www.drupal.org/files/projects/fontsize-${PV}.tar.gz
-		tar xfz fontsize-${PV}.tar.gz
+		wget -q http://www.drupal.org/files/projects/fontsize-4.6.0.tar.gz
+		tar xfz fontsize-4.6.0.tar.gz
 
 		einfo "Unpacking forms"
-		wget http://www.drupal.org/files/projects/forms-${PV}.tar.gz
-		tar xfz forms-${PV}.tar.gz
+		wget -q http://www.drupal.org/files/projects/forms-4.6.0.tar.gz
+		tar xfz forms-4.6.0.tar.gz
 
 		einfo "Unpacking form_mail"
-		wget http://www.drupal.org/files/projects/form_mail-${PV}.tar.gz
-		tar xfz form_mail-${PV}.tar.gz
+		wget -q http://www.drupal.org/files/projects/form_mail-4.6.0.tar.gz
+		tar xfz form_mail-4.6.0.tar.gz
 
 		einfo "Unpacking freelinking"
-		wget http://www.drupal.org/files/projects/freelinking-${PV}.tar.gz
-		tar xfz freelinking-${PV}.tar.gz
+		wget -q http://www.drupal.org/files/projects/freelinking-4.6.0.tar.gz
+		tar xfz freelinking-4.6.0.tar.gz
 
 		einfo "Unpacking front"
-		wget http://www.drupal.org/files/projects/front-${PV}.tar.gz
-		tar xfz front-${PV}.tar.gz
+		wget -q http://www.drupal.org/files/projects/front-4.6.0.tar.gz
+		tar xfz front-4.6.0.tar.gz
 
 		einfo "Unpacking gallery"
-		wget http://www.drupal.org/files/projects/gallery-${PV}.tar.gz
-		tar xfz gallery-${PV}.tar.gz
+		wget -q http://www.drupal.org/files/projects/gallery-4.6.0.tar.gz
+		tar xfz gallery-4.6.0.tar.gz
 
 		einfo "Unpacking glossary"
-		wget http://www.drupal.org/files/projects/glossary-${PV}.tar.gz
-		tar xfz glossary-${PV}.tar.gz
+		wget -q http://www.drupal.org/files/projects/glossary-4.6.0.tar.gz
+		tar xfz glossary-4.6.0.tar.gz
 
 		einfo "Unpacking hof"
-		wget http://www.drupal.org/files/projects/hof-${PV}.tar.gz
-		tar xfz hof-${PV}.tar.gz
+		wget -q http://www.drupal.org/files/projects/hof-4.6.0.tar.gz
+		tar xfz hof-4.6.0.tar.gz
+
+		einfo "Unpacking helpedit"
+		wget -q http://www.drupal.org/files/projects/helpedit-4.6.0.tar.gz
+		tar xfz helpedit-4.6.0.tar.gz
 
 		einfo "Unpacking htmlcorrector"
-		wget http://www.drupal.org/files/projects/htmlcorrector-${PV}.tar.gz
-		tar xfz htmlcorrector-${PV}.tar.gz
+		wget -q http://www.drupal.org/files/projects/htmlcorrector-4.6.0.tar.gz
+		tar xfz htmlcorrector-4.6.0.tar.gz
 
 		einfo "Unpacking htmlarea"
-		wget http://www.drupal.org/files/projects/htmlarea-${PV}.tar.gz
-		tar xfz htmlarea-${PV}.tar.gz
+		wget -q http://www.drupal.org/files/projects/htmlarea-4.6.0.tar.gz
+		tar xfz htmlarea-4.6.0.tar.gz
 
 		einfo "Unpacking image"
-		wget http://www.drupal.org/files/projects/image-${PV}.tar.gz
-		tar xfz image-${PV}.tar.gz
+		wget -q http://www.drupal.org/files/projects/image-4.6.0.tar.gz
+		tar xfz image-4.6.0.tar.gz
 
 		einfo "Unpacking img_assist"
-		wget http://www.drupal.org/files/projects/img_assist-${PV}.tar.gz
-		tar xfz img_assist-${PV}.tar.gz
+		wget -q http://www.drupal.org/files/projects/img_assist-4.6.0.tar.gz
+		tar xfz img_assist-4.6.0.tar.gz
+
+		einfo "Unpacking i18n"
+		wget -q http://www.drupal.org/files/projects/i18n-4.6.0.tar.gz
+		tar xfz i18n-4.6.0.tar.gz
+
+		einfo "Unpacking interwiki"
+		wget -q http://www.drupal.org/files/projects/interwiki-4.6.0.tar.gz
+		tar xfz interwiki-4.6.0.tar.gz
 
 		einfo "Unpacking livediscussions"
-		wget http://www.drupal.org/files/projects/livediscussions-${PV}.tar.gz
-		tar xfz livediscussions-${PV}.tar.gz
+		wget -q http://www.drupal.org/files/projects/livediscussions-4.6.0.tar.gz
+		tar xfz livediscussions-4.6.0.tar.gz
 
 		einfo "Unpacking mailalias"
-		wget http://www.drupal.org/files/projects/mailalias-${PV}.tar.gz
-		tar xfz mailalias-${PV}.tar.gz
+		wget -q http://www.drupal.org/files/projects/mailalias-4.6.0.tar.gz
+		tar xfz mailalias-4.6.0.tar.gz
 
 		einfo "Unpacking mailhandler"
-		wget http://www.drupal.org/files/projects/mailhandler-${PV}.tar.gz
-		tar xfz mailhandler-${PV}.tar.gz
+		wget -q http://www.drupal.org/files/projects/mailhandler-4.6.0.tar.gz
+		tar xfz mailhandler-4.6.0.tar.gz
 
 		einfo "Unpacking marksmarty"
-		wget http://www.drupal.org/files/projects/marksmarty-${PV}.tar.gz
-		tar xfz marksmarty-${PV}.tar.gz
+		wget -q http://www.drupal.org/files/projects/marksmarty-4.6.0.tar.gz
+		tar xfz marksmarty-4.6.0.tar.gz
 
 		einfo "Unpacking massmailer"
-		wget http://www.drupal.org/files/projects/massmailer-${PV}.tar.gz
-		tar xfz massmailer-${PV}.tar.gz
+		wget -q http://www.drupal.org/files/projects/massmailer-4.6.0.tar.gz
+		tar xfz massmailer-4.6.0.tar.gz
 
 		einfo "Unpacking members"
-		wget http://www.drupal.org/files/projects/members-${PV}.tar.gz
-		tar xfz members-${PV}.tar.gz
+		wget -q http://www.drupal.org/files/projects/members-4.6.0.tar.gz
+		tar xfz members-4.6.0.tar.gz
 
 		einfo "Unpacking menu_otf"
-		wget http://www.drupal.org/files/projects/menu_otf-${PV}.tar.gz
-		tar xfz menu_otf-${PV}.tar.gz
+		wget -q http://www.drupal.org/files/projects/menu_otf-4.6.0.tar.gz
+		tar xfz menu_otf-4.6.0.tar.gz
 
 		einfo "Unpacking nodewords"
-		wget http://www.drupal.org/files/projects/nodewords-${PV}.tar.gz
-		tar xfz nodewords-${PV}.tar.gz
+		wget -q http://www.drupal.org/files/projects/nodewords-4.6.0.tar.gz
+		tar xfz nodewords-4.6.0.tar.gz
+
+		einfo "Unpacking nodelist"
+		wget -q http://www.drupal.org/files/projects/nodelist-4.6.0.tar.gz
+		tar xfz nodelist-4.6.0.tar.gz
 
 		einfo "Unpacking nmoderation"
-		wget http://www.drupal.org/files/projects/nmoderation-${PV}.tar.gz
-		tar xfz nmoderation-${PV}.tar.gz
+		wget -q http://www.drupal.org/files/projects/nmoderation-4.6.0.tar.gz
+		tar xfz nmoderation-4.6.0.tar.gz
+
+		einfo "Unpacking node_privacy_byrole"
+		wget -q http://www.drupal.org/files/projects/node_privacy_byrole-4.6.0.tar.gz
+		tar xfz node_privacy_byrole-4.6.0.tar.gz
 
 		einfo "Unpacking node_import"
-		wget http://www.drupal.org/files/projects/node_import-${PV}.tar.gz
-		tar xfz node_import-${PV}.tar.gz
+		wget -q http://www.drupal.org/files/projects/node_import-4.6.0.tar.gz
+		tar xfz node_import-4.6.0.tar.gz
+
+		einfo "Unpacking notify"
+		wget -q http://www.drupal.org/files/projects/notify-4.6.0.tar.gz
+		tar xfz notify-4.6.0.tar.gz
 
 		einfo "Unpacking og"
-		wget http://www.drupal.org/files/projects/og-${PV}.tar.gz
-		tar xfz og-${PV}.tar.gz
+		wget -q http://www.drupal.org/files/projects/og-4.6.0.tar.gz
+		tar xfz og-4.6.0.tar.gz
 
 		einfo "Unpacking pathauto"
-		wget http://www.drupal.org/files/projects/pathauto-${PV}.tar.gz
-		tar xfz pathauto-${PV}.tar.gz
+		wget -q http://www.drupal.org/files/projects/pathauto-4.6.0.tar.gz
+		tar xfz pathauto-4.6.0.tar.gz
 
 		einfo "Unpacking paypal_framework"
-		wget http://www.drupal.org/files/projects/paypal_framework-${PV}.tar.gz
-		tar xfz paypal_framework-${PV}.tar.gz
+		wget -q http://www.drupal.org/files/projects/paypal_framework-4.6.0.tar.gz
+		tar xfz paypal_framework-4.6.0.tar.gz
 
 		einfo "Unpacking paypal_subscription"
-		wget http://www.drupal.org/files/projects/paypal_subscription-${PV}.tar.gz
-		tar xfz paypal_subscription-${PV}.tar.gz
+		wget -q http://www.drupal.org/files/projects/paypal_subscription-4.6.0.tar.gz
+		tar xfz paypal_subscription-4.6.0.tar.gz
 
 		einfo "Unpacking poormanscron"
-		wget http://www.drupal.org/files/projects/poormanscron-${PV}.tar.gz
-		tar xfz poormanscron-${PV}.tar.gz
+		wget -q http://www.drupal.org/files/projects/poormanscron-4.6.0.tar.gz
+		tar xfz poormanscron-4.6.0.tar.gz
+
+		einfo "Unpacking privatemsg"
+		wget -q http://www.drupal.org/files/projects/privatemsg-4.6.0.tar.gz
+		tar xfz privatemsg-4.6.0.tar.gz
+
+		einfo "Unpacking quote"
+		wget -q http://www.drupal.org/files/projects/quote-4.6.0.tar.gz
+		tar xfz quote-4.6.0.tar.gz
 
 		einfo "Unpacking quotes"
-		wget http://www.drupal.org/files/projects/quotes-${PV}.tar.gz
-		tar xfz quotes-${PV}.tar.gz
+		wget -q http://www.drupal.org/files/projects/quotes-4.6.0.tar.gz
+		tar xfz quotes-4.6.0.tar.gz
 
 		einfo "Unpacking recipe"
-		wget http://www.drupal.org/files/projects/recipe-${PV}.tar.gz
-		tar xfz recipe-${PV}.tar.gz
+		wget -q http://www.drupal.org/files/projects/recipe-4.6.0.tar.gz
+		tar xfz recipe-4.6.0.tar.gz
 
 		einfo "Unpacking rsvp"
-		wget http://www.drupal.org/files/projects/rsvp-${PV}.tar.gz
-		tar xfz rsvp-${PV}.tar.gz
+		wget -q http://www.drupal.org/files/projects/rsvp-4.6.0.tar.gz
+		tar xfz rsvp-4.6.0.tar.gz
+
+		einfo "Unpacking scheduler"
+		wget -q http://www.drupal.org/files/projects/scheduler-4.6.0.tar.gz
+		tar xfz scheduler-4.6.0.tar.gz
+
+		einfo "Unpacking securesite"
+		wget -q http://www.drupal.org/files/projects/securesite-4.6.0.tar.gz
+		tar xfz securesite-4.6.0.tar.gz
 
 		einfo "Unpacking series"
-		wget http://www.drupal.org/files/projects/series-${PV}.tar.gz
-		tar xfz series-${PV}.tar.gz
+		wget -q http://www.drupal.org/files/projects/series-4.6.0.tar.gz
+		tar xfz series-4.6.0.tar.gz
+
+		einfo "Unpacking sidecontent"
+		wget -q http://www.drupal.org/files/projects/sidecontent-4.6.0.tar.gz
+		tar xfz sidecontent-4.6.0.tar.gz
 
 		einfo "Unpacking simpletest"
-		wget http://www.drupal.org/files/projects/simpletest-${PV}.tar.gz
-		tar xfz simpletest-${PV}.tar.gz
+		wget -q http://www.drupal.org/files/projects/simpletest-4.6.0.tar.gz
+		tar xfz simpletest-4.6.0.tar.gz
+
+		einfo "Unpacking site_map"
+		wget -q http://www.drupal.org/files/projects/site_map-4.6.0.tar.gz
+		tar xfz site_map-4.6.0.tar.gz
 
 		einfo "Unpacking sitemenu"
-		wget http://www.drupal.org/files/projects/sitemenu-${PV}.tar.gz
-		tar xfz sitemenu-${PV}.tar.gz
+		wget -q http://www.drupal.org/files/projects/sitemenu-4.6.0.tar.gz
+		tar xfz sitemenu-4.6.0.tar.gz
 
 		einfo "Unpacking smartypants"
-		wget http://www.drupal.org/files/projects/smartypants-${PV}.tar.gz
-		tar xfz smartypants-${PV}.tar.gz
+		wget -q http://www.drupal.org/files/projects/smartypants-4.6.0.tar.gz
+		tar xfz smartypants-4.6.0.tar.gz
+
+		einfo "Unpacking smileys"
+		wget -q http://www.drupal.org/files/projects/smileys-4.6.0.tar.gz
+		tar xfz smileys-4.6.0.tar.gz
 
 		einfo "Unpacking spam"
-		wget http://www.drupal.org/files/projects/spam-${PV}.tar.gz
-		tar xfz spam-${PV}.tar.gz
+		wget -q http://www.drupal.org/files/projects/spam-4.6.0.tar.gz
+		tar xfz spam-4.6.0.tar.gz
 
 		einfo "Unpacking statistics_filter"
-		wget http://www.drupal.org/files/projects/statistics_filter-${PV}.tar.gz
-		tar xfz statistics_filter-${PV}.tar.gz
+		wget -q http://www.drupal.org/files/projects/statistics_filter-4.6.0.tar.gz
+		tar xfz statistics_filter-4.6.0.tar.gz
 
 		einfo "Unpacking stock"
-		wget http://www.drupal.org/files/projects/stock-${PV}.tar.gz
-		tar xfz stock-${PV}.tar.gz
+		wget -q http://www.drupal.org/files/projects/stock-4.6.0.tar.gz
+		tar xfz stock-4.6.0.tar.gz
+
+		einfo "Unpacking subscriptions"
+		wget -q http://www.drupal.org/files/projects/subscriptions-4.6.0.tar.gz
+		tar xfz subscriptions-4.6.0.tar.gz
 
 		einfo "Unpacking summary"
-		wget http://www.drupal.org/files/projects/summary-${PV}.tar.gz
-		tar xfz summary-${PV}.tar.gz
+		wget -q http://www.drupal.org/files/projects/summary-4.6.0.tar.gz
+		tar xfz summary-4.6.0.tar.gz
 
 		einfo "Unpacking survey"
-		wget http://www.drupal.org/files/projects/survey-${PV}.tar.gz
-		tar xfz survey-${PV}.tar.gz
+		wget -q http://www.drupal.org/files/projects/survey-4.6.0.tar.gz
+		tar xfz survey-4.6.0.tar.gz
 
 		einfo "Unpacking sxip"
-		wget http://www.drupal.org/files/projects/sxip-${PV}.tar.gz
-		tar xfz sxip-${PV}.tar.gz
+		wget -q http://www.drupal.org/files/projects/sxip-4.6.0.tar.gz
+		tar xfz sxip-4.6.0.tar.gz
 
 		einfo "Unpacking syndication"
-		wget http://www.drupal.org/files/projects/syndication-${PV}.tar.gz
-		tar xfz syndication-${PV}.tar.gz
+		wget -q http://www.drupal.org/files/projects/syndication-4.6.0.tar.gz
+		tar xfz syndication-4.6.0.tar.gz
+
+		einfo "Unpacking taxonomy_access"
+		wget -q http://www.drupal.org/files/projects/taxonomy_access-4.6.0.tar.gz
+		tar xfz taxonomy_access-4.6.0.tar.gz
 
 		einfo "Unpacking taxonomy_block"
-		wget http://www.drupal.org/files/projects/taxonomy_block-${PV}.tar.gz
-		tar xfz taxonomy_block-${PV}.tar.gz
+		wget -q http://www.drupal.org/files/projects/taxonomy_block-4.6.0.tar.gz
+		tar xfz taxonomy_block-4.6.0.tar.gz
 
 		einfo "Unpacking taxonomy_browser"
-		wget http://www.drupal.org/files/projects/taxonomy_browser-${PV}.tar.gz
-		tar xfz taxonomy_browser-${PV}.tar.gz
+		wget -q http://www.drupal.org/files/projects/taxonomy_browser-4.6.0.tar.gz
+		tar xfz taxonomy_browser-4.6.0.tar.gz
 
 		einfo "Unpacking taxonomy_dhtml"
-		wget http://www.drupal.org/files/projects/taxonomy_dhtml-${PV}.tar.gz
-		tar xfz taxonomy_dhtml-${PV}.tar.gz
+		wget -q http://www.drupal.org/files/projects/taxonomy_dhtml-4.6.0.tar.gz
+		tar xfz taxonomy_dhtml-4.6.0.tar.gz
+
+		einfo "Unpacking taxonomy_xml"
+		wget -q http://www.drupal.org/files/projects/taxonomy_xml-4.6.0.tar.gz
+		tar xfz taxonomy_xml-4.6.0.tar.gz
 
 		einfo "Unpacking taxonomy_menu"
-		wget http://www.drupal.org/files/projects/taxonomy_menu-${PV}.tar.gz
-		tar xfz taxonomy_menu-${PV}.tar.gz
+		wget -q http://www.drupal.org/files/projects/taxonomy_menu-4.6.0.tar.gz
+		tar xfz taxonomy_menu-4.6.0.tar.gz
 
 		einfo "Unpacking taxonomy_multi_edit"
-		wget http://www.drupal.org/files/projects/taxonomy_multi_edit-${PV}.tar.gz
-		tar xfz taxonomy_multi_edit-${PV}.tar.gz
+		wget -q http://www.drupal.org/files/projects/taxonomy_multi_edit-4.6.0.tar.gz
+		tar xfz taxonomy_multi_edit-4.6.0.tar.gz
 
 		einfo "Unpacking textile"
-		wget http://www.drupal.org/files/projects/textile-${PV}.tar.gz
-		tar xfz textile-${PV}.tar.gz
+		wget -q http://www.drupal.org/files/projects/textile-4.6.0.tar.gz
+		tar xfz textile-4.6.0.tar.gz
 
 		einfo "Unpacking theme_editor"
-		wget http://www.drupal.org/files/projects/theme_editor-${PV}.tar.gz
-		tar xfz theme_editor-${PV}.tar.gz
+		wget -q http://www.drupal.org/files/projects/theme_editor-4.6.0.tar.gz
+		tar xfz theme_editor-4.6.0.tar.gz
 
 		einfo "Unpacking tinymce"
-		wget http://www.drupal.org/files/projects/tinymce-${PV}.tar.gz
-		tar xfz tinymce-${PV}.tar.gz
+		wget -q http://www.drupal.org/files/projects/tinymce-4.6.0.tar.gz
+		tar xfz tinymce-4.6.0.tar.gz
 
 		einfo "Unpacking urlfilter"
-		wget http://www.drupal.org/files/projects/urlfilter-${PV}.tar.gz
-		tar xfz urlfilter-${PV}.tar.gz
+		wget -q http://www.drupal.org/files/projects/urlfilter-4.6.0.tar.gz
+		tar xfz urlfilter-4.6.0.tar.gz
 
 		einfo "Unpacking variable"
-		wget http://www.drupal.org/files/projects/variable-${PV}.tar.gz
-		tar xfz variable-${PV}.tar.gz
+		wget -q http://www.drupal.org/files/projects/variable-4.6.0.tar.gz
+		tar xfz variable-4.6.0.tar.gz
+
+		einfo "Unpacking vimcolor"
+		wget -q http://www.drupal.org/files/projects/vimcolor-4.6.0.tar.gz
+		tar xfz vimcolor-4.6.0.tar.gz
 
 		einfo "Unpacking webform"
-		wget http://www.drupal.org/files/projects/webform-${PV}.tar.gz
-		tar xfz webform-${PV}.tar.gz
+		wget -q http://www.drupal.org/files/projects/webform-4.6.0.tar.gz
+		tar xfz webform-4.6.0.tar.gz
 
 		einfo "Unpacking webserver_auth"
-		wget http://www.drupal.org/files/projects/webserver_auth-${PV}.tar.gz
-		tar xfz webserver_auth-${PV}.tar.gz
+		wget -q http://www.drupal.org/files/projects/webserver_auth-4.6.0.tar.gz
+		tar xfz webserver_auth-4.6.0.tar.gz
 
 		einfo "Unpacking week"
-		wget http://www.drupal.org/files/projects/week-${PV}.tar.gz
-		tar xfz week-${PV}.tar.gz
+		wget -q http://www.drupal.org/files/projects/week-4.6.0.tar.gz
+		tar xfz week-4.6.0.tar.gz
 
 		cd ${S}/themes
+		einfo "Unpacking adc"
+		wget -q http://www.drupal.org/files/projects/adc-4.6.0.tar.gz
+		tar xfz adc-4.6.0.tar.gz
+
 		einfo "Unpacking blix"
-		wget http://www.drupal.org/files/projects/blix-${PV}.tar.gz
-		tar xfz blix-${PV}.tar.gz
+		wget -q http://www.drupal.org/files/projects/blix-4.6.0.tar.gz
+		tar xfz blix-4.6.0.tar.gz
 
 		einfo "Unpacking bluemarine"
-		wget http://www.drupal.org/files/projects/bluemarine-${PV}.tar.gz
-		tar xfz bluemarine-${PV}.tar.gz
+		wget -q http://www.drupal.org/files/projects/bluemarine-4.6.0.tar.gz
+		tar xfz bluemarine-4.6.0.tar.gz
 
 		einfo "Unpacking democratica"
-		wget http://www.drupal.org/files/projects/democratica-${PV}.tar.gz
-		tar xfz democratica-${PV}.tar.gz
+		wget -q http://www.drupal.org/files/projects/democratica-4.6.0.tar.gz
+		tar xfz democratica-4.6.0.tar.gz
 
 		einfo "Unpacking friendselectric"
-		wget http://www.drupal.org/files/projects/friendselectric-${PV}.tar.gz
-		tar xfz friendselectric-${PV}.tar.gz
+		wget -q http://www.drupal.org/files/projects/friendselectric-4.6.0.tar.gz
+		tar xfz friendselectric-4.6.0.tar.gz
 
 		einfo "Unpacking gespaa"
-		wget http://www.drupal.org/files/projects/gespaa-${PV}.tar.gz
-		tar xfz gespaa-${PV}.tar.gz
+		wget -q http://www.drupal.org/files/projects/gespaa-4.6.0.tar.gz
+		tar xfz gespaa-4.6.0.tar.gz
+
+		einfo "Unpacking goofy"
+		wget -q http://www.drupal.org/files/projects/goofy-4.6.0.tar.gz
+		tar xfz goofy-4.6.0.tar.gz
 
 		einfo "Unpacking greenmarinee"
-		wget http://www.drupal.org/files/projects/greenmarinee-${PV}.tar.gz
-		tar xfz greenmarinee-${PV}.tar.gz
+		wget -q http://www.drupal.org/files/projects/greenmarinee-4.6.0.tar.gz
+		tar xfz greenmarinee-4.6.0.tar.gz
+
+		einfo "Unpacking interlaced"
+		wget -q http://www.drupal.org/files/projects/interlaced-4.6.0.tar.gz
+		tar xfz interlaced-4.6.0.tar.gz
 
 		einfo "Unpacking leaf"
-		wget http://www.drupal.org/files/projects/leaf-${PV}.tar.gz
-		tar xfz leaf-${PV}.tar.gz
+		wget -q http://www.drupal.org/files/projects/leaf-4.6.0.tar.gz
+		tar xfz leaf-4.6.0.tar.gz
 
 		einfo "Unpacking lincolns_revenge"
-		wget http://www.drupal.org/files/projects/lincolns_revenge-${PV}.tar.gz
-		tar xfz lincolns_revenge-${PV}.tar.gz
+		wget -q http://www.drupal.org/files/projects/lincolns_revenge-4.6.0.tar.gz
+		tar xfz lincolns_revenge-4.6.0.tar.gz
+
+		einfo "Unpacking marvinclassic"
+		wget -q http://www.drupal.org/files/projects/marvinclassic-4.6.0.tar.gz
+		tar xfz marvinclassic-4.6.0.tar.gz
 
 		einfo "Unpacking rdc"
-		wget http://www.drupal.org/files/projects/rdc-${PV}.tar.gz
-		tar xfz rdc-${PV}.tar.gz
+		wget -q http://www.drupal.org/files/projects/rdc-4.6.0.tar.gz
+		tar xfz rdc-4.6.0.tar.gz
+
+		einfo "Unpacking slash"
+		wget -q http://www.drupal.org/files/projects/slash-4.6.0.tar.gz
+		tar xfz slash-4.6.0.tar.gz
+
+		einfo "Unpacking slurpee"
+		wget -q http://www.drupal.org/files/projects/slurpee-4.6.0.tar.gz
+		tar xfz slurpee-4.6.0.tar.gz
 
 		einfo "Unpacking spreadfirefox"
-		wget http://www.drupal.org/files/projects/spreadfirefox-${PV}.tar.gz
-		tar xfz spreadfirefox-${PV}.tar.gz
+		wget -q http://www.drupal.org/files/projects/spreadfirefox-4.6.0.tar.gz
+		tar xfz spreadfirefox-4.6.0.tar.gz
 
-		cd ${S}
+		einfo "Unpacking sunflower"
+		wget -q http://www.drupal.org/files/projects/sunflower-4.6.0.tar.gz
+		tar xfz sunflower-4.6.0.tar.gz
+
+		einfo "Unpacking unconed"
+		wget -q http://www.drupal.org/files/projects/unconed-4.6.0.tar.gz
+		tar xfz unconed-4.6.0.tar.gz
+
+		cd ${S}/includes
+		einfo "Unpacking pt-br"
+		wget -q http://www.drupal.org/files/projects/pt-br-4.6.0.tar.gz
+		tar xfz pt-br-4.6.0.tar.gz
+
+		einfo "Unpacking fr"
+		wget -q http://www.drupal.org/files/projects/fr-4.6.0.tar.gz
+		tar xfz fr-4.6.0.tar.gz
+
 		einfo "Unpacking hu"
-		wget http://www.drupal.org/files/projects/hu-${PV}.tar.gz
-		tar xfz hu-${PV}.tar.gz
+		wget -q http://www.drupal.org/files/projects/hu-4.6.0.tar.gz
+		tar xfz hu-4.6.0.tar.gz
 
 		einfo "Unpacking ja"
-		wget http://www.drupal.org/files/projects/ja-${PV}.tar.gz
-		tar xfz ja-${PV}.tar.gz
+		wget -q http://www.drupal.org/files/projects/ja-4.6.0.tar.gz
+		tar xfz ja-4.6.0.tar.gz
 
-		einfo "Unpacking drupal-pot"
-		wget http://www.drupal.org/files/projects/drupal-pot-${PV}.tar.gz
-		tar xfz drupal-pot-${PV}.tar.gz
+		einfo "Unpacking pl"
+		wget -q http://www.drupal.org/files/projects/pl-4.6.0.tar.gz
+		tar xfz pl-4.6.0.tar.gz
+
+		einfo "Unpacking pt-pt"
+		wget -q http://www.drupal.org/files/projects/pt-pt-4.6.0.tar.gz
+		tar xfz pt-pt-4.6.0.tar.gz
+
+		einfo "Unpacking es"
+		wget -q http://www.drupal.org/files/projects/es-4.6.0.tar.gz
+		tar xfz es-4.6.0.tar.gz
 
 		cd ${S}/themes/engines
+		einfo "Unpacking drupal-pot"
+		wget -q http://www.drupal.org/files/projects/drupal-pot-4.6.0.tar.gz
+		tar xfz drupal-pot-4.6.0.tar.gz
+
 		einfo "Unpacking phptemplate"
-		wget http://www.drupal.org/files/projects/phptemplate-${PV}.tar.gz
-		tar xfz phptemplate-${PV}.tar.gz
+		wget -q http://www.drupal.org/files/projects/phptemplate-4.6.0.tar.gz
+		tar xfz phptemplate-4.6.0.tar.gz
 
 		find ${S} -name "*.tar.gz" -exec rm -rf {} \;
 		find ${S} -type f -exec chmod 644 {} \;

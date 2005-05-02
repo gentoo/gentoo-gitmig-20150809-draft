@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/drupal
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/drupal/ChangeLog,v 1.10 2005/04/27 12:32:11 yoswink Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/drupal/ChangeLog,v 1.11 2005/05/02 12:31:41 st_lim Exp $
+
+  02 May 2005; Lim Swee Tat <st_lim@gentoo.org> drupal-4.6.0.ebuild:
+  Updated modules to today's list
 
   27 Apr 2005; Jose Luis Rivero <yoswink@gentoo.org> drupal-4.5.2.ebuild:
   keyworded ~alpha
