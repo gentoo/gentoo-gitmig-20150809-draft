@@ -1,6 +1,10 @@
 # ChangeLog for media-video/usb-pwc-re
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/usb-pwc-re/ChangeLog,v 1.8 2005/04/26 06:21:44 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/usb-pwc-re/ChangeLog,v 1.9 2005/05/02 08:03:20 phosphan Exp $
+
+  02 May 2005; Patrick Kursawe <phosphan@gentoo.org> usb-pwc-re-10.0.7.ebuild:
+  Getting kernel source detection from linux-info.eclass, overriding detection
+  in the Makefile (bug #90869)
 
 *usb-pwc-re-10.0.7 (26 Apr 2005)
 

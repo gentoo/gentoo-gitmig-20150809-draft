@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/usb-pwc-re/usb-pwc-re-10.0.7.ebuild,v 1.1 2005/04/26 06:21:44 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/usb-pwc-re/usb-pwc-re-10.0.7.ebuild,v 1.2 2005/05/02 08:03:20 phosphan Exp $
 
 
 inherit linux-info toolchain-funcs eutils
@@ -18,7 +18,7 @@ S=${WORKDIR}/pwc-${PV}
 
 src_compile() {
 	export ARCH="$(tc-arch-kernel)"
-	emake || die "make failed"
+	emake KSRC="${KERNEL_DIR}" || die "make failed"
 }
 
 src_install() {
