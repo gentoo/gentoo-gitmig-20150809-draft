@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/cacti-cactid
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti-cactid/ChangeLog,v 1.3 2005/05/01 22:16:56 ramereth Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti-cactid/ChangeLog,v 1.4 2005/05/02 16:55:52 weeve Exp $
+
+  02 May 2005; Jason Wever <weeve@gentoo.org> cacti-cactid-0.8.6d-r1.ebuild:
+  Added ~sparc keyword.
 
 *cacti-cactid-0.8.6d-r1 (01 May 2005)
 
