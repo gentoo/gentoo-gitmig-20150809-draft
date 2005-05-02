@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/aterm/aterm-1.00_beta2.ebuild,v 1.3 2005/04/07 13:26:27 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/aterm/aterm-1.00_beta2.ebuild,v 1.4 2005/05/02 11:09:25 spock Exp $
 
 inherit eutils flag-o-matic
 
@@ -25,6 +25,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/aterm-0.4.2-scroll-double-free.patch
+	epatch ${FILESDIR}/aterm-1.00-beta2-bgfix.patch
 }
 
 src_compile() {

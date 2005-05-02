@@ -1,6 +1,10 @@
 # ChangeLog for x11-terms/aterm
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/aterm/ChangeLog,v 1.66 2005/04/23 09:19:04 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/aterm/ChangeLog,v 1.67 2005/05/02 11:09:25 spock Exp $
+
+  02 May 2005; Michał Januszewski <spock@gentoo.org>
+  +files/aterm-1.00-beta2-bgfix.patch, aterm-1.00_beta2.ebuild:
+  Added a fix for bug #79397.
 
 *aterm-0.4.2-r13 (23 Apr 2005)
 
