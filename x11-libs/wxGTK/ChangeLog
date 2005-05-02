@@ -1,6 +1,13 @@
 # ChangeLog for x11-libs/wxGTK
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.71 2005/03/26 22:54:49 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.72 2005/05/02 17:57:03 pythonhead Exp $
+
+*wxGTK-2.6.0 (02 May 2005)
+*wxGTK-2.4.2-r4 (02 May 2005)
+
+  02 May 2005; Rob Cakebread <pythonhead@gentoo.org> wxGTK-2.4.2-r2.ebuild,
+  wxGTK-2.4.2-r3.ebuild, +wxGTK-2.4.2-r4.ebuild, +wxGTK-2.6.0.ebuild:
+  Version bump. Marked 2.4.2-r3 stable. Added gcc4 patch bug# 89937. Thanks flameeyes for wxlib.eclass and dirtyepic@metawire.org Ryan Hill for gcc4 fix. Changed evil no_wxgtk1 USE flag to wxgtk1
 
   26 Mar 2005; Jeremy Huddleston <eradicator@gentoo.org>
   wxGTK-2.4.2-r3.ebuild, wxGTK-2.5.3.ebuild:
