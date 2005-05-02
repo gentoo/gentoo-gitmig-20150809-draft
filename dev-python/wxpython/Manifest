@@ -3,18 +3,19 @@ Hash: SHA1
 
 MD5 3b06f1e87549af51d78bb7bfa33728b5 metadata.xml 182
 MD5 4244376f39c8e3a598d28c20115c235d wxpython-2.4.2.4.ebuild 2429
-MD5 73c3f065e90b500d53bf3c2059516c5c wxpython-2.5.3.1.ebuild 3395
-MD5 eb2a54d7bf1d45ef05b22c7f6d7c3d55 ChangeLog 8852
-MD5 adcd9bb8ba7589a9509d8c17044c7989 wxpython-2.4.2.4-r1.ebuild 3565
-MD5 d1efabd4c6bcd5edd9e61ca070e20ff0 files/digest-wxpython-2.4.2.4-r1 73
-MD5 83d82d05e77457e559cf175012f538e7 files/digest-wxpython-2.5.3.1 74
+MD5 fd878449f24a74a20a8dbaeeabf06398 wxpython-2.6.0.0.ebuild 3840
+MD5 5cfbb99ed1b3d6082c8d5b4604904ba4 ChangeLog 9153
+MD5 39bba46ef07af4bb261187c6964ea13d wxpython-2.4.2.4-r2.ebuild 3848
+MD5 d1efabd4c6bcd5edd9e61ca070e20ff0 files/digest-wxpython-2.4.2.4-r2 73
+MD5 a286125e4aefdde3f9adebd4f5ab6ff3 files/digest-wxpython-2.6.0.0 74
 MD5 49c68d8febf658844a392bd0108fdf10 files/wxversion.py 14404
 MD5 d1efabd4c6bcd5edd9e61ca070e20ff0 files/digest-wxpython-2.4.2.4 73
-MD5 960f9cf74312ac4829b96c63739fcfe9 files/wxpy-config.py 3275
+MD5 3966851c4cfba6f57e620747f1630523 files/wxpy-config.py 3265
+MD5 d69bb360ce49f76f26ef1ae017f4bc31 files/scripts-multiver-2.6.0.0.diff 3373
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFB9w2mz2gxt1z4IGYRAtdoAJ4wJ9B9Wg9SUCBFie4BCp4QnqdTQQCgxFAH
-2msZYBQ67FbX3o/qoeW1stQ=
-=Be4m
+iD8DBQFCdnGLz2gxt1z4IGYRAvzUAJ4o/6wkHfu+5uJgr5q00Xx1jwQ88QCfbxeO
+vSC86KqoyWBvuTszhpQ4sWY=
+=aPzi
 -----END PGP SIGNATURE-----

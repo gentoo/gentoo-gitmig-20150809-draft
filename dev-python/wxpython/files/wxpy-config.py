@@ -13,17 +13,17 @@
 
  Examples:
 
-    wx-2.4.2-gtk2-ansi
-    wx-2.4.2-gtk2-unicode
-    wx-2.5.3-gtk
+    wx-2.4-gtk2-ansi
+    wx-2.4-gtk2-unicode
+    wx-2.6-gtk
 
  It is strongly suggested you use a 2.4* version as the system default
  because most stable wxPython applications are known to work with it.
- Applications that only work with 2.5* can use this code to
- select 2.5*
+ Applications that only work with 2.6* can use this code to
+ select 2.6*
 
      import wxversion
-     wxversion.select("2.5")
+     wxversion.select("2.6")
      import wx
 
  See this documentation for more info if you're a wxPython developer:
@@ -40,7 +40,7 @@ PYVER = sys.version[0:3]
 SITE_PKGS = "/usr/lib/python%s/site-packages" % PYVER
 
 ENCODINGS = ["gtk2-ansi", "gtk2-unicode", "gtk-ansi"]
-WX_VERSIONS = ["2.4.2", "2.5.3"]
+WX_VERSIONS = ["2.4", "2.6"]
 
 
 def versions_installed():
