@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3897 2005/05/02 18:42:34 pythonhead Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3898 2005/05/02 19:53:25 pythonhead Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -696,10 +696,6 @@ media-video/bcast
 # need to fix bug #71366
 =app-text/docbook-xml-simple-dtd-4.1.2.4-r1
 =app-text/docbook-xml-simple-dtd-1.0-r1
-
-# <lucass@gentoo.org> (15 Nov 2004)
-# Masking due to dependency on wxpython-2.5
-dev-python/drpython
 
 # <pythonhead@gentoo.org (13 Nov 2004)
 # 2.6.0 is now in portage but will remove this soon as deps in other ebuilds are fixed
