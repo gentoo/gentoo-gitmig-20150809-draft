@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/groff-1.19.1-r2.ebuild,v 1.13 2005/04/27 03:47:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/groff-1.19.1-r2.ebuild,v 1.14 2005/05/02 03:44:13 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -23,26 +23,25 @@ src_unpack() {
 
 	# Fix the info pages to have .info extensions,
 	# else they do not get gzipped.
-	epatch ${FILESDIR}/groff-1.18-infoext.patch
+	epatch "${FILESDIR}"/groff-1.18-infoext.patch
 
 	# Do not generate example files that require us to
 	# depend on netpbm.
-	epatch ${FILESDIR}/groff-1.18-no-netpbm-depend.patch
+	epatch "${FILESDIR}"/groff-1.18-no-netpbm-depend.patch
 
 	# Make dashes the same as minus on the keyboard so that you
 	# can search for it. Fixes #17580 and #16108
 	# Thanks to James Cloos <cloos@jhcloos.com>
-	epatch ${FILESDIR}/${PN}-man-UTF-8.diff
+	epatch "${FILESDIR}"/${PN}-man-UTF-8.diff
 
 	# Fix stack limit (inifite loop) #64117
-	epatch ${FILESDIR}/${P}-stack.patch
+	epatch "${FILESDIR}"/${P}-stack.patch
 
 	# Fix tempfile usage #68404
-	epatch ${FILESDIR}/${P}-tmpfile.patch
+	epatch "${FILESDIR}"/${P}-tmpfile.patch
 
 	# Fix make dependencies so we can build in parallel
-	epatch ${FILESDIR}/${P}-parallel-make.patch
-
+	epatch "${FILESDIR}"/${P}-parallel-make.patch
 
 	# Make sure we can cross-compile this puppy
 	if tc-is-cross-compiler ; then
@@ -57,7 +56,7 @@ src_unpack() {
 	fi
 	# Only build X stuff if we have X installed, but do 
 	# not depend on it, else we get circular deps :(
-	if ! use X || [ ! -x /usr/X11R6/bin/xmkmf ] ; then
+	if ! use X && [[ -n $(type -p xmkmf) ]] ; then
 		touch .dont-build-X
 	fi
 }

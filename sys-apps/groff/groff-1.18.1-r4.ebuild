@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/groff-1.18.1-r4.ebuild,v 1.9 2005/01/02 23:19:04 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/groff-1.18.1-r4.ebuild,v 1.10 2005/05/02 03:44:13 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -12,11 +12,10 @@ SRC_URI="ftp://groff.ffii.org/pub/groff/old/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc mips alpha hppa amd64 ia64 ppc64"
+KEYWORDS="alpha amd64 hppa ia64 mips ppc ppc64 sparc x86"
 IUSE="X cjk"
 
-DEPEND="virtual/libc
-	>=sys-apps/texinfo-4.0"
+DEPEND=">=sys-apps/texinfo-4.0"
 PDEPEND=">=sys-apps/man-1.5k-r1"
 
 src_unpack() {
@@ -83,8 +82,7 @@ src_compile() {
 
 	# Only build X stuff if we have X installed, but do
 	# not depend on it, else we get circular deps.
-	if use X && [ -x /usr/X11R6/bin/xmkmf ]
-	then
+	if use X && [[ -n $(type -p xmkmf) ]] ; then
 		cd ${S}/src/xditview
 		xmkmf || die
 		make depend all || die
@@ -99,8 +97,7 @@ src_install() {
 		docdir=${D}/usr/share/doc/${PF} \
 		install || die
 
-	if use X && [ -x /usr/X11R6/bin/xmkmf ]
-	then
+	if use X && [[ -n $(type -p xmkmf) ]] ; then
 		cd ${S}/src/xditview
 		make DESTDIR=${D} \
 			BINDIR=/usr/bin \
