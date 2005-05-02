@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/yosucker
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/yosucker/ChangeLog,v 1.23 2005/05/02 08:23:03 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/yosucker/ChangeLog,v 1.24 2005/05/02 09:08:43 hansmi Exp $
+
+  02 May 2005; Michael Hanselmann <hansmi@gentoo.org> yosucker-69.ebuild:
+  Stable on ppc.
 
   02 May 2005; Andrej Kacian <ticho@gentoo.org> yosucker-69.ebuild:
   Stable on x86, upstream claims that previous versions can corrupt messages.
