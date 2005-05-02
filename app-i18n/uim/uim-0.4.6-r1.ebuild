@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-0.4.6-r1.ebuild,v 1.1 2005/03/30 05:16:55 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-0.4.6-r1.ebuild,v 1.2 2005/05/02 13:25:03 matsuu Exp $
 
 inherit eutils kde-functions
 
@@ -34,6 +34,10 @@ DEPEND="${RDEPEND}
 	dev-perl/XML-Parser
 	>=sys-apps/sed-4
 	nls? ( sys-devel/gettext )"
+
+# An arch specific config directory is used on multilib systems
+has_multilib_profile && GTK2_CONFDIR="/etc/gtk-2.0/${CHOST}"
+GTK2_CONFDIR=${GTK2_CONFDIR:=/etc/gtk-2.0/}
 
 src_unpack() {
 	unpack ${A}
@@ -103,9 +107,9 @@ pkg_postinst() {
 	ewarn "or uim-im-switcher-qt."
 	ewarn
 
-	use gtk && gtk-query-immodules-2.0 > ${ROOT}/etc/gtk-2.0/gtk.immodules
+	use gtk && gtk-query-immodules-2.0 > ${ROOT}/${GTK2_CONFDIR}/gtk.immodules
 }
 
 pkg_postrm() {
-	use gtk && gtk-query-immodules-2.0 > ${ROOT}/etc/gtk-2.0/gtk.immodules
+	use gtk && gtk-query-immodules-2.0 > ${ROOT}/${GTK2_CONFDIR}/gtk.immodules
 }
