@@ -1,6 +1,9 @@
 # ChangeLog for media-video/xine-ui
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/ChangeLog,v 1.76 2005/05/01 23:33:55 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/ChangeLog,v 1.77 2005/05/02 08:18:33 dholm Exp $
+
+  02 May 2005; David Holm <dholm@gentoo.org> xine-ui-0.99.3-r1.ebuild:
+  Added to ~ppc.
 
   01 May 2005; Diego Pettenò <flameeyes@gentoo.org>
   -files/preserve-CFLAGS-0.9.23.diff, -files/preserve-CFLAGS-0.99.1.diff,
