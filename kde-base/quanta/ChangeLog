@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/quanta
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/quanta/ChangeLog,v 1.6 2005/03/18 17:46:34 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/quanta/ChangeLog,v 1.7 2005/05/02 22:53:46 carlo Exp $
+
+*quanta-3.4.0-r1 (02 May 2005)
+
+  02 May 2005; Carsten Lohrke <carlo@gentoo.org>
+  +files/quanta-3.4.0-vpl.patch, +quanta-3.4.0-r1.ebuild:
+  fix for vpl editor crash
 
   18 Mar 2005; Daniel Goller <morfic@gentoo.org> quanta-3.4.0.ebuild:
   Added to ~ppc
