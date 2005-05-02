@@ -1,31 +1,14 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 0ab22dbda7a5b1920820f47f951ffa1f totem-1.0.ebuild 2628
-MD5 b70db40b374d9fb14fc5db7d51286d6d ChangeLog 7738
-MD5 74b9bd3cc5015b286abc33eb51408252 metadata.xml 521
-MD5 1d1a1ef3556ca36856465aa7557f3a86 totem-0.100-r2.ebuild 1929
 MD5 6b31f6f81a14885c7cbf0180642cafd9 totem-0.100-r3.ebuild 2034
-MD5 9f2858f2d0308b9b48262eb99a4efbd3 totem-0.99.15.1.ebuild 1589
 MD5 6da1f545a8db0c4f35b6c2e2727f1b1d totem-0.99.19.ebuild 1747
-MD5 f11111052b772529398930d3ad3fbaca totem-1.0.1.ebuild 2626
-MD5 db4fa93e888a082d65b9265a17c45297 totem-1.0.2.ebuild 2638
-MD5 3d9e7881aa0ec7d110c1487cd95d6c40 files/digest-totem-0.99.15.1 69
-MD5 eeba2ab1c3ed87a4a630addd709262ea files/digest-totem-0.99.19 67
+MD5 14d46a2fa6e6e1a126de632dce5bdd99 totem-1.0.2-r1.ebuild 2718
+MD5 126236c553f7bcfd5bcffa0d016524a1 ChangeLog 7929
+MD5 74b9bd3cc5015b286abc33eb51408252 metadata.xml 521
 MD5 50a343412446e05871e042a7b5958c93 files/totem-0.100-fix_desktop_item.patch 558
-MD5 8dd0c2a14c9603045fb2eebd0ee50534 files/digest-totem-0.100-r2 65
-MD5 8ab6b544e88eb5901e71820c8b41a477 files/totem-0.100-cdrom_include.patch 413
-MD5 83330cc2d2cf195da778271af666079f files/digest-totem-1.0 63
-MD5 cae0d48bbd06a51476128dbfbefb4a5f files/digest-totem-1.0.1 65
+MD5 7e5a2048d71f5bd98866aba5531f9012 files/digest-totem-1.0.2-r1 65
 MD5 8dd0c2a14c9603045fb2eebd0ee50534 files/digest-totem-0.100-r3 65
-MD5 572a285ceed98dcaa61cf9520e7e59f7 files/totem-0.99.22-x_includes.patch 1330
-MD5 7e5a2048d71f5bd98866aba5531f9012 files/digest-totem-1.0.2 65
+MD5 8ab6b544e88eb5901e71820c8b41a477 files/totem-0.100-cdrom_include.patch 413
+MD5 eeba2ab1c3ed87a4a630addd709262ea files/digest-totem-0.99.19 67
 MD5 62cbcd8c86010195b8b70ee4d9703e84 files/totem-0.100-gst_backend_fixes-r1.patch 1036
 MD5 665f89e5e0d268567a54c9acd6026a90 files/totem-0.100-xine_backend-nocdrom.patch 601
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFCdox3KRy60XGEcJIRAkMjAJ9phA9szem0HtsoW+Mn5ocY8SE/BgCeJ4Qg
-UneAtEQXyP9zJt5C6mEkvpQ=
-=FzKL
------END PGP SIGNATURE-----
+MD5 572a285ceed98dcaa61cf9520e7e59f7 files/totem-0.99.22-x_includes.patch 1330
+MD5 35a6d2e3ca24f11ad967a671a008b488 files/totem-1.0.2-xine_no_xxmc.patch 360
