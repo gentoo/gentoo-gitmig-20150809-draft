@@ -1,14 +1,14 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/wxlib.eclass,v 1.1 2005/05/01 20:55:42 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/wxlib.eclass,v 1.2 2005/05/02 16:44:24 pythonhead Exp $
 
 # Author Diego Pettenò <flameeyes@gentoo.org>
-# Maintained by wxwindows herd
+# Maintained by wxwidgets herd
 
 # This eclass is used by wxlib-based packages (wxGTK, wxMotif, wxBase, wxMac) to share code between
 # them.
 
-inherit eutils gnuconfig 
+inherit flag-o-matic eutils gnuconfig multilib toolchain-funcs
 
 ECLASS="wxlib"
 INHERITED="${INHERITED} ${ECLASS}"
@@ -33,7 +33,7 @@ SRC_URI="mirror://sourceforge/wxwindows/wxWidgets-${PV}.tar.bz2
 S=${WORKDIR}/wxWidgets-${PV}
 
 # Verify wxWidget-2.6 tarball still has this hardcoded: pythonhead aprl 24 2005
-# Removes hard-coded -O2 optimization from configure
+# Removes -O2 optimization from configure
 wxlib_src_unpack() {
 	unpack ${A}
 	cd ${S}
@@ -54,21 +54,21 @@ configure_build() {
 	cd ${S}/$1_build
 	# odbc works with ansi only:
 	subconfigure $3 $(use_with odbc) || die "odbc does not work with unicode"
-	emake -j5 || die "emake failed"
+	emake -j1 CXX="$(tc-getCXX)" CC="$(tc-getCC)" || die "emake failed"
 	#wxbase has no contrib:
 	if [[ -e contrib/src ]]; then
 		cd contrib/src
-		emake -j5 || die "emake contrib failed"
+		emake -j1 CXX="$(tc-getCXX)" CC="$(tc-getCC)" || die "emake contrib failed"
 	fi
 
 	if [[ "$2" == "unicode" ]] && use unicode; then
 		mkdir ${S}/$1_build_unicode
 		cd ${S}/$1_build_unicode
 		subconfigure $3 --enable-unicode
-		emake -j5 || die "Unicode emake failed"
+		emake -j1 CXX="$(tc-getCXX)" CC="$(tc-getCC)" || die "Unicode emake failed"
 		if [[ -e contrib/src ]]; then
 			cd contrib/src
-			emake -j5 || die "Unicode emake contrib failed"
+			emake -j1 CXX="$(tc-getCXX)" CC="$(tc-getCC)" || die "Unicode emake contrib failed"
 		fi
 	fi
 }
@@ -84,12 +84,14 @@ subconfigure() {
 		debug_conf="${debug_conf} `use_with dmalloc`"
 	fi
 	${S}/configure --enable-monolithic \
+		--host=${CHOST} \
+		--libdir=/usr/$(get_libdir) \
 		--prefix=/usr \
 		--infodir=/usr/share/info \
 		--mandir=/usr/share/man \
 		`use_with zlib` \
 		${debug_conf} \
-		$*
+		$* || die "./configure failed"
 }
 
 # Installs a build
@@ -97,14 +99,14 @@ subconfigure() {
 # see configure_build function
 install_build() {
 	cd ${S}/$1_build
-	einstall || die "Install failed"
+	einstall libdir="${D}/usr/$(get_libdir)" || die "Install failed"
 	cd contrib/src
-	einstall || die "Install contrib failed"
+	einstall libdir="${D}/usr/$(get_libdir)" || die "Install contrib failed"
 	if [[ -e ${S}/$1_build_unicode ]]; then
 		cd ${S}/$1_build_unicode
-		einstall || die "Unicode install failed"
+		einstall libdir="${D}/usr/$(get_libdir)" || die "Unicode install failed"
 		cd contrib/src
-		einstall || die "Unicode install contrib failed"
+		einstall libdir="${D}/usr/$(get_libdir)" || die "Unicode install contrib failed"
 	fi
 }
 
