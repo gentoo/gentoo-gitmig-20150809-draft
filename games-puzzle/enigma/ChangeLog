@@ -1,6 +1,11 @@
 # ChangeLog for games-puzzle/enigma
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/enigma/ChangeLog,v 1.17 2004/12/28 15:39:58 josejx Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/enigma/ChangeLog,v 1.18 2005/05/02 23:20:06 mr_bones_ Exp $
+
+*enigma-0.91 (02 May 2005)
+
+  02 May 2005; Michael Sterrett <mr_bones_@gentoo.org> +enigma-0.91.ebuild:
+  version bump (bug #91090)
 
   29 Dec 2004; Joseph Jezak <josejx@gentoo.org> enigma-0.81.ebuild:
   Marked ppc stable.
