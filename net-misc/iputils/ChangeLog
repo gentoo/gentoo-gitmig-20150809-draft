@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/iputils
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/ChangeLog,v 1.37 2005/01/19 01:09:46 vapier Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/ChangeLog,v 1.38 2005/05/02 22:02:57 vapier Exp $
+
+  02 May 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/iputils-021109-bindnow.patch, -files/021109-gcc34.patch,
+  +files/iputils-021109-gcc34.patch, iputils-021109-r3.ebuild:
+  Update the gcc-inline patch by Dave Stahl #80969 and fix lazy bindings for
+  setuid apps #77526.
 
   18 Jan 2005; Mike Frysinger <vapier@gentoo.org>
   -files/iputils-021109-pfkey.patch, iputils-021109-r3.ebuild:

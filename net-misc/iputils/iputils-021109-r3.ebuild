@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/iputils-021109-r3.ebuild,v 1.20 2005/01/21 00:17:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/iputils-021109-r3.ebuild,v 1.21 2005/05/02 22:02:57 vapier Exp $
 
-inherit flag-o-matic gnuconfig eutils toolchain-funcs
+inherit flag-o-matic eutils toolchain-funcs
 
 DESCRIPTION="Network monitoring tools including ping and ping6"
 HOMEPAGE="ftp://ftp.inr.ac.ru/ip-routing"
@@ -14,35 +14,30 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sh sparc x86"
 IUSE="static ipv6 uclibc doc"
 
-DEPEND="virtual/libc
-	virtual/os-headers
-	dev-libs/openssl
-	sys-devel/autoconf
+DEPEND="virtual/os-headers
 	doc? (
 		app-text/openjade
 		dev-perl/SGMLSpm
 		app-text/docbook-sgml-dtd
 		app-text/docbook-sgml-utils
 	)"
-RDEPEND="virtual/libc"
+RDEPEND=""
 
 S=${WORKDIR}/${PN}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-gcc34.patch
+	epatch "${FILESDIR}"/${PV}-no-pfkey-search.patch
+	epatch "${FILESDIR}"/${PV}-ipg-linux-2.6.patch #71756
+	epatch "${FILESDIR}"/${PV}-syserror.patch
+	epatch "${FILESDIR}"/${PV}-uclibc-no-ether_ntohost.patch
+	epatch "${FILESDIR}"/${P}-bindnow.patch #77526
+	# make iputils work with newer glibc snapshots
+	epatch "${FILESDIR}"/${P}-linux-udp-header.patch
 
 	use static && append-ldflags -static
-
-	epatch ${FILESDIR}/${PV}-gcc34.patch
-	epatch ${FILESDIR}/${PV}-no-pfkey-search.patch
-	epatch ${FILESDIR}/${PV}-ipg-linux-2.6.patch #71756
-	epatch ${FILESDIR}/${PV}-syserror.patch
-	epatch ${FILESDIR}/${PV}-uclibc-no-ether_ntohost.patch
-
-	# make iputils work with newer glibc snapshots
-	epatch ${FILESDIR}/${P}-linux-udp-header.patch
-
 	sed -i \
 		-e "/^CCOPT=/s:-O2:${CFLAGS}:" \
 		-e "/^CC=/s:.*::" \
@@ -69,16 +64,16 @@ src_compile() {
 
 src_install() {
 	into /
-	dobin ping
+	dobin ping || die "ping"
 	use ipv6 && dobin ping6
-	dosbin arping
+	dosbin arping || die "arping"
 	into /usr
-	dosbin tracepath
+	dosbin tracepath || die "tracepath"
 	use ipv6 && dosbin trace{path,route}6
-	dosbin clockdiff rarpd rdisc ipg tftpd
+	dosbin clockdiff rarpd rdisc ipg tftpd || die "misc sbin"
 
 	fperms 4711 /bin/ping
-	use ipv6 && fperms 4711 /bin/ping6
+	use ipv6 && fperms 4711 /bin/ping6 /usr/sbin/traceroute6
 
 	dodoc INSTALL RELNOTES
 
