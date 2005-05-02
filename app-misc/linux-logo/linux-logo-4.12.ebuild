@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/linux-logo/linux-logo-4.12.ebuild,v 1.1 2005/05/01 20:31:36 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/linux-logo/linux-logo-4.12.ebuild,v 1.2 2005/05/02 04:47:12 vapier Exp $
 
 inherit eutils
 
@@ -12,20 +12,19 @@ SRC_URI="http://www.deater.net/weave/vmwprod/linux_logo/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~sparc ~mips ~hppa ~amd64 ~ppc"
+KEYWORDS="~amd64 ~hppa ~mips ~ppc ~sparc ~x86"
 IUSE="nls"
 
-DEPEND="virtual/libc
-	>=sys-apps/sed-4"
+DEPEND=""
 RDEPEND="nls? ( sys-devel/gettext )"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	echo "./logos/gentoo.logo" >> logo_config
-	cp ${FILESDIR}/gentoo.logo ${S}/logos/.
+	cp "${FILESDIR}"/gentoo.logo "${S}"/logos/
 
-	epatch ${FILESDIR}/${PN}-4.07-gentoo-logo.patch
+	epatch "${FILESDIR}"/${PN}-4.07-gentoo-logo.patch
 	sed -i -e 's:.*Trying to open .*::' linux_logo.c
 
 	if ! use nls ; then
@@ -45,14 +44,11 @@ src_install() {
 
 	if use nls ; then
 		dodir /usr/share/locale
-		make INSTALLDIR=${D}/usr/share/locale -C po install || die
+		make INSTALLDIR="${D}"/usr/share/locale -C po install || die
 	fi
 
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/${PN}.initscript ${PN}
-
-	insinto /etc/conf.d
-	newins ${FILESDIR}/${PN}.conf ${PN}
+	newinitd ${FILESDIR}/${PN}.initscript ${PN}
+	newconfd ${FILESDIR}/${PN}.conf ${PN}
 }
 
 pkg_postinst() {
