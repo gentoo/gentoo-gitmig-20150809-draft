@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freecnc/freecnc-0.2.0.ebuild,v 1.4 2004/06/24 23:27:21 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freecnc/freecnc-0.2.0.ebuild,v 1.5 2005/05/02 23:22:26 vapier Exp $
 
 inherit games flag-o-matic eutils
 
@@ -34,11 +34,13 @@ src_unpack() {
 	epatch ${FILESDIR}/${PV}-makefile-cflags.patch
 	epatch ${FILESDIR}/${PV}-remove-root.patch
 	epatch ${FILESDIR}/${PV}-gentoo-paths.patch
+	epatch "${FILESDIR}"/${P}-endian.patch
+	rm -f src/include/endian.h
 	sed -i \
 		-e "s:GENTOO_LOGDIR:${GAMES_LOGDIR}:" \
 		-e "s:GENTOO_CONFDIR:${GAMES_SYSCONFDIR}/${PN}/:" \
 		-e "s:GENTOO_DATADIR:${GAMES_DATADIR}/${PN}/:" \
-		src/{freecnc,vfs/vfs}.cpp
+		src/freecnc.cpp src/vfs/vfs.cpp
 }
 
 src_compile() {
