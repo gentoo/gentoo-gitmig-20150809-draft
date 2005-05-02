@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/csh/csh-1.29-r3.ebuild,v 1.14 2005/05/01 16:52:00 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/csh/csh-1.29-r3.ebuild,v 1.15 2005/05/02 18:31:46 spb Exp $
 
 inherit flag-o-matic eutils ccc
 
@@ -91,7 +91,7 @@ src_compile() {
 	# pmake is a portage binary as well, so specify full path.
 	# if yours isnt in /usr/bin, you can set PMAKE_PATH.
 	einfo "Starting build..."
-	${PMAKE_PATH:-/usr/bin/}pmake || die "compile failed."
+	${PMAKE_PATH:-/usr/bin/}pmake LIBC='' || die "compile failed."
 
 	echo
 	size csh
