@@ -1,8 +1,16 @@
-MD5 ab7c64d1bf56bf881d82567617b0c8e5 ChangeLog 1852
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 284dff0eab5d76821e02a51da1e11405 ChangeLog 2215
 MD5 3b06f1e87549af51d78bb7bfa33728b5 metadata.xml 182
-MD5 1fc522baf8856106715f40af497e010e wxpython-docs-2.4.0.7.ebuild 684
-MD5 17cb6fdb5a1129a233fcde430652bb05 wxpython-docs-2.4.1.2.ebuild 684
-MD5 76238780fb5574017c7876c66829e2e2 wxpython-docs-2.4.2.4.ebuild 685
-MD5 52f0f1eee85a5d6f1988758ac11c7a71 files/digest-wxpython-docs-2.4.0.7 73
-MD5 faca6b36631fc49721584435a37f2ee6 files/digest-wxpython-docs-2.4.1.2 73
-MD5 b0fe04f82390f60887781f76d1ebbff2 files/digest-wxpython-docs-2.4.2.4 73
+MD5 036257b95ad62e8247c6dc14f04e8273 wxpython-docs-2.4.2.4-r1.ebuild 1042
+MD5 9c758eca8750f9a1f84940bc78369428 wxpython-docs-2.6.0.0.ebuild 1475
+MD5 2911f08ca57d7ce8297146ffd74e5fca files/digest-wxpython-docs-2.4.2.4-r1 146
+MD5 2e16d6b640e3678d8d85abe15dfbc3b0 files/digest-wxpython-docs-2.6.0.0 225
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCdnlPz2gxt1z4IGYRAswQAKCz63OmL+suq2T6Ly1AN4XE1d5HiACggXcj
+b3nr91uRTTWdr7pUI30J1c4=
+=YI+b
+-----END PGP SIGNATURE-----
