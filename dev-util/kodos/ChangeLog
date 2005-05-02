@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/kodos
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kodos/ChangeLog,v 1.8 2005/02/22 18:08:37 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kodos/ChangeLog,v 1.9 2005/05/02 20:01:53 astinus Exp $
+
+  02 May 2005; Alex Howells <astinus@gentoo.org> kodos-2.4.5.ebuild:
+  Marking ~amd64 with reference to Bug:91199
 
 *kodos-2.4.5-r1 (22 Feb 2005)
 
