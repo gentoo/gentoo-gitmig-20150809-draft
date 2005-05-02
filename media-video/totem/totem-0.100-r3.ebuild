@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-0.100-r3.ebuild,v 1.2 2005/04/26 14:40:12 zaheerm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-0.100-r3.ebuild,v 1.3 2005/05/02 20:24:01 gustavoz Exp $
 
 inherit gnome2 eutils
 
@@ -20,17 +20,15 @@ RDEPEND=">=dev-libs/glib-2.2
 	<gnome-extra/nautilus-cd-burner-2.9
 	>=gnome-base/gnome-desktop-2.2
 	lirc? ( app-misc/lirc )
-	!gstreamer? ( >=media-libs/xine-lib-1_rc7
-			>=gnome-base/gconf-2 )
-	sparc? ( >=media-libs/xine-lib-1_rc7
-		>=gnome-base/gconf-2 )
-	!sparc? ( gstreamer? ( >=media-libs/gstreamer-0.8.7
+	!sparc? ( !gstreamer? ( >=media-libs/xine-lib-1_rc7
+			>=gnome-base/gconf-2 ) )
+	gstreamer? ( >=media-libs/gstreamer-0.8.7
 				>=media-libs/gst-plugins-0.8.5
 				>=media-plugins/gst-plugins-gnomevfs-0.8.5
 				>=media-plugins/gst-plugins-xvideo-0.8.5
 				>=media-plugins/gst-plugins-ffmpeg-0.8.3
 				mad? ( >=media-plugins/gst-plugins-mad-0.8.5 )
-				) )"
+				)"
 
 DEPEND="${RDEPEND}
 	app-text/scrollkeeper

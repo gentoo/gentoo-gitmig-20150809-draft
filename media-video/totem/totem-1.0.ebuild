@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-1.0.ebuild,v 1.2 2005/04/19 10:23:15 zaheerm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-1.0.ebuild,v 1.3 2005/05/02 20:24:01 gustavoz Exp $
 
 inherit gnome2 eutils
 
@@ -21,11 +21,9 @@ RDEPEND=">=dev-libs/glib-2.6.3
 	>=gnome-base/libgnomeui-2.4
 	gnome? ( >=gnome-base/nautilus-2.10 )
 	lirc? ( app-misc/lirc )
-	xine? ( >=media-libs/xine-lib-1_rc7
-			>=gnome-base/gconf-2 )
-	sparc? ( >=media-libs/xine-lib-1_rc7
-		>=gnome-base/gconf-2 )
-	!sparc? ( !xine? ( >=media-libs/gstreamer-0.8.9
+	!sparc? ( xine? ( >=media-libs/xine-lib-1_rc7
+			>=gnome-base/gconf-2 ) )
+	!xine? ( >=media-libs/gstreamer-0.8.9
 			>=media-libs/gst-plugins-0.8.8
 			>=media-plugins/gst-plugins-gnomevfs-0.8.8
 			>=media-plugins/gst-plugins-xvideo-0.8.8
@@ -44,7 +42,7 @@ RDEPEND=">=dev-libs/glib-2.6.3
 			dvd? ( >=media-plugins/gst-plugins-a52dec-0.8.8
 				>=media-plugins/gst-plugins-dvdread-0.8.8
 				>=media-plugins/gst-plugins-mpeg2dec-0.8.8 )
-			) )
+			)
 	!gnome-extra/nautilus-media"
 
 DEPEND="${RDEPEND}

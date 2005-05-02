@@ -1,6 +1,12 @@
 # ChangeLog for media-video/totem
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.52 2005/04/30 11:58:18 zaheerm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.53 2005/05/02 20:24:01 gustavoz Exp $
+
+  02 May 2005; Gustavo Zacarias <gustavoz@gentoo.org> totem-0.100-r2.ebuild,
+  totem-0.100-r3.ebuild, totem-1.0.ebuild, totem-1.0.1.ebuild,
+  totem-1.0.2.ebuild:
+  We really want gst for backend on sparc since newer xines are broken, so
+  adjusting accordingly
 
 *totem-1.0.2 (30 Apr 2005)
 
