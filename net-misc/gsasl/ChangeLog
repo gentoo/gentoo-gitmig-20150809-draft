@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/gsasl
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gsasl/ChangeLog,v 1.16 2005/04/19 17:15:08 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gsasl/ChangeLog,v 1.17 2005/05/02 15:03:36 slarti Exp $
+
+  02 May 2005; Tom Martin <slarti@gentoo.org> gsasl-0.2.4.ebuild:
+  Fix a typing error, preventing the ebuild from installing anything but docs.
 
   19 Apr 2005; Tom Martin <slarti@gentoo.org> gsasl-0.2.4.ebuild:
   Stable on amd64 and sparc.

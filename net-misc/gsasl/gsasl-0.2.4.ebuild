@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gsasl/gsasl-0.2.4.ebuild,v 1.3 2005/04/19 17:15:08 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gsasl/gsasl-0.2.4.ebuild,v 1.4 2005/05/02 15:03:36 slarti Exp $
 
 DESCRIPTION="The GNU SASL client, server, and library"
 HOMEPAGE="http://www.gnu.org/software/gsasl/"
@@ -30,13 +30,13 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} || die "einstall failed"
+	make DESTDIR=${D} install || die "einstall failed"
 	dodoc ABOUT-NLS AUTHORS ChangeLog NEWS README README-alpha THANKS
 	doman doc/gsasl.1
 
 	if use doc; then
 		dodoc doc/*.{eps,ps,pdf}
-		dohtml doc/*
+		dohtml doc/*.html
 		docinto examples
 		dodoc examples/*.c
 	fi
