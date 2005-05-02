@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.4.2-r2.ebuild,v 1.8 2005/05/02 17:57:03 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.4.2-r2.ebuild,v 1.9 2005/05/02 20:04:10 pythonhead Exp $
 
 inherit flag-o-matic eutils gnuconfig
 
@@ -88,7 +88,7 @@ src_compile() {
 		einfo "Building gtk2 version"
 		mkdir build_gtk2
 		cd build_gtk2
-		../configure ${myconf} \
+		../configure ${myconf} `use_with odbc` \
 			--host=${CHOST} \
 			--prefix=/usr \
 			--infodir=/usr/share/info \
