@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/cacti-0.8.6b.ebuild,v 1.7 2005/03/09 12:23:35 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/cacti-0.8.6b.ebuild,v 1.8 2005/05/02 11:23:48 eldad Exp $
 
 inherit eutils webapp
 
@@ -44,14 +44,13 @@ src_install() {
 
 	dodoc docs/{CHANGELOG,CONTRIB,INSTALL,README,REQUIREMENTS,UPGRADE}
 	rm -rf docs
-	#Don't overwrite old config
-	mv include/config.php include/config-sample.php
 
 	edos2unix `find -type f -name '*.php'`
 
 	dodir ${MY_HTDOCSDIR}
 	cp -r . ${D}${MY_HTDOCSDIR}
 
+	webapp_configfile ${MY_HTDOCSDIR}/include/config.php
 	webapp_postinst_txt en ${FILESDIR}/postinstall-en.txt
 
 	webapp_src_install
