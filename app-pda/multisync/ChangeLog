@@ -1,6 +1,12 @@
 # ChangeLog for app-pda/multisync
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/multisync/ChangeLog,v 1.22 2005/05/01 23:12:51 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/multisync/ChangeLog,v 1.23 2005/05/02 11:19:54 johnm Exp $
+
+*multisync-0.83_pre20050414-r1 (02 May 2005)
+
+  02 May 2005; John Mylchreest <johnm@gentoo.org>
+  -multisync-0.83_pre20050414.ebuild, +multisync-0.83_pre20050414-r1.ebuild:
+  fix bug #82422
 
 *multisync-0.83_pre20050414 (01 May 2005)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/multisync/multisync-0.83_pre20050414.ebuild,v 1.1 2005/05/01 23:12:51 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/multisync/multisync-0.83_pre20050414-r1.ebuild,v 1.1 2005/05/02 11:19:54 johnm Exp $
 
 inherit versionator
 
@@ -98,6 +98,6 @@ src_install() {
 	einstall || die "Multisync install failed!"
 	for plugin_dir in ${PLUGINS}; do
 		cd ${S}/plugins/${plugin_dir}
-		einstall || die "${plugin_dir} make install failed!"
+		make install DESTDIR=${D} || die "${plugin_dir} make install failed!"
 	done
 }
