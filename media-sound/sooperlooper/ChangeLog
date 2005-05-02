@@ -1,0 +1,11 @@
+# ChangeLog for media-sound/sooperlooper
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sooperlooper/ChangeLog,v 1.1 2005/05/02 23:12:17 fvdpol Exp $
+
+*sooperlooper-1.0.3 (03 May 2005)
+
+  03 May 2005; Frank van de Pol <fvdpol@gentoo.org>
+  +sooperlooper-1.0.3.ebuild:
+  New ebuild for Sooperlooper. Submitted by Gerald Berger <gerry.berger@aon.at>
+  Closes bug#89422.
+
