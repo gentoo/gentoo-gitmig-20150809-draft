@@ -1,9 +1,0 @@
-Fix aclocal warnings:
-/usr/share/aclocal/libfame.m4:6: warning: underquoted definition of AM_PATH_LIBFAME
---- libfame-0.9.1/libfame.m4
-+++ libfame-0.9.1/libfame.m4
-@@ -5,3 +5,3 @@
- dnl
--AC_DEFUN(AM_PATH_LIBFAME,
-+AC_DEFUN([AM_PATH_LIBFAME],
- [dnl 

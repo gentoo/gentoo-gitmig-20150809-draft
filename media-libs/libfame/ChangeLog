@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/libfame
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libfame/ChangeLog,v 1.25 2005/04/29 16:06:43 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libfame/ChangeLog,v 1.26 2005/05/02 09:44:49 flameeyes Exp $
+
+  02 May 2005; Diego Pettenò <flameeyes@gentoo.org>
+  -files/libfame-0.9.1-gcc34.patch, -files/libfame-0.9.1-m4.patch,
+  -files/libfame-0.9.1-mmx_configure.patch, -files/libfame-0.9.1-pic.patch,
+  libfame-0.9.1.ebuild, libfame-0.9.1-r1.ebuild:
+  Moved patches into patchset.
 
   29 Apr 2005; Markus Rothe <corsair@gentoo.org> libfame-0.9.1-r1.ebuild:
   Added ~ppc64 to KEYWORDS; bug #90318
