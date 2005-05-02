@@ -10,7 +10,7 @@
 
 shopt -s nullglob
 
-QUEUEDIR=~/.nbsmtp/.queue
+QUEUEDIR=${QUEUEDIR:-~/.nbsmtp/.queue}
 
 messageid() {
 	sed -n -e '1,/^$/ {

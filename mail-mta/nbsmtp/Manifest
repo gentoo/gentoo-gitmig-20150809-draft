@@ -2,18 +2,22 @@
 Hash: SHA1
 
 MD5 62a08f03f2896feac3b7547606c7ddf4 nbsmtp-0.98.ebuild 849
+MD5 9dd2e50dc83a84f395ea49d77562ca65 nbsmtp-0.99-r1.ebuild 1356
 MD5 d0974b01a66d78f685f38dcffbd0144f nbsmtp-0.98-r1.ebuild 1364
-MD5 11ffe6fde57a0ebe0405643bff700aaa ChangeLog 3962
+MD5 1e1cbe100e36e2cae045805c6f29974a nbsmtp-0.99.ebuild 874
+MD5 bc7944d88302be0728abb7885dc59c38 ChangeLog 4193
 MD5 2fc9863fa18fa7e25fedaa87a92a3c43 metadata.xml 259
 MD5 961b6dc8a63bc79755fec60255097c0e files/wrapper-nbsmtp 380
-MD5 9df65f85c5e05c46b39f0594b40677cb files/nbqueue 1743
+MD5 58c75e9e9d9e915802e95794f16c2f32 files/nbqueue 1756
 MD5 200a5cc8c73df6a5a37a3cd5c34ab0b4 files/digest-nbsmtp-0.98-r1 63
+MD5 3533060b1f277b5d74140ebf8c87a9ad files/digest-nbsmtp-0.99-r1 64
 MD5 02906beafefaf79dd565570de5541a06 files/mailer.conf 348
 MD5 200a5cc8c73df6a5a37a3cd5c34ab0b4 files/digest-nbsmtp-0.98 63
+MD5 3533060b1f277b5d74140ebf8c87a9ad files/digest-nbsmtp-0.99 64
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCboWjViELBEf1JB0RAgIVAJ0RWvF4Cjicj60H3g1ARp0CZnJjagCdE+66
-mDmsjCgqzo1SshFtiRDQJtQ=
-=DVWA
+iD8DBQFCdrtAViELBEf1JB0RAs5eAJ4ntLnOdzfV7YzGx1JO0ygJSQQlWwCfZGDS
+Jv2ZJl2eeR9NDCVPm/RRUds=
+=Q/pC
 -----END PGP SIGNATURE-----
