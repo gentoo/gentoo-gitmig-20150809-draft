@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nessus-libraries
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-libraries/ChangeLog,v 1.53 2005/04/25 00:51:04 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-libraries/ChangeLog,v 1.54 2005/05/02 00:17:12 weeve Exp $
+
+  02 May 2005; Jason Wever <weeve@gentoo.org> nessus-libraries-2.2.4.ebuild:
+  Stable on SPARC.
 
   24 Apr 2005; Marcelo Goes <vanquirius@gentoo.org>
   -nessus-libraries-2.2.2a.ebuild, -nessus-libraries-2.2.3.ebuild,
