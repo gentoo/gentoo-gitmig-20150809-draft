@@ -1,13 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PEAR/PEAR-PEAR-1.3.5-r1.ebuild,v 1.6 2005/03/18 08:17:38 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PEAR/PEAR-PEAR-1.3.5-r1.ebuild,v 1.7 2005/05/02 05:10:21 vapier Exp $
 
 ARCHIVE_TAR="1.2"
 CONSOLE_GETOPT="1.2"
 PEAR="1.3.5"
 XML_RPC="1.2.0"
 
-DESCRIPTION="PEAR Base System."
+DESCRIPTION="PEAR Base System"
 HOMEPAGE="http://pear.php.net/"
 SRC_URI="http://pear.php.net/get/Archive_Tar-${ARCHIVE_TAR}.tgz
 	http://pear.php.net/get/Console_Getopt-${CONSOLE_GETOPT}.tgz
@@ -16,12 +16,13 @@ SRC_URI="http://pear.php.net/get/Archive_Tar-${ARCHIVE_TAR}.tgz
 
 LICENSE="PHP"
 SLOT="0"
-KEYWORDS="~x86 ~amd64 ~ppc64 ~ppc ~ia64 ~sparc ~alpha ~hppa"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
+
 DEPEND="virtual/php dev-php/php"
 PDEPEND=">=dev-php/PEAR-Archive_Tar-1.1
-		>=dev-php/PEAR-Console_Getopt-1.2
-		>=dev-php/PEAR-XML_RPC-1.0.4"
+	>=dev-php/PEAR-Console_Getopt-1.2
+	>=dev-php/PEAR-XML_RPC-1.0.4"
 
 pkg_preinst() {
 	if [[ -d "${ROOT}"/usr/lib/php ]] && [[ ! -e "${ROOT}"/usr/share/php ]] ; then
