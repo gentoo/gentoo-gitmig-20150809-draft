@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.143 2005/04/25 07:28:59 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.144 2005/05/02 22:42:51 vapier Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -817,7 +817,7 @@ gcc-library_src_unpack() {
 	:
 }
 gcc_src_unpack() {
-	local release_version="Gentoo Linux ${PVR}"
+	local release_version="Gentoo ${PVR}"
 
 	gcc_quick_unpack
 	exclude_gcc_patches
