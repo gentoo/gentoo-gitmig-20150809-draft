@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.35 2005/03/11 02:03:55 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.36 2005/05/02 22:42:59 vapier Exp $
 #
 # Author: Toolchain Ninjas <ninjas@gentoo.org>
 #
@@ -76,7 +76,7 @@ tc-getBUILD_CC() {
 tc-export() {
 	local var
 	for var in "$@" ; do
-		eval tc-get${var}
+		eval tc-get${var} > /dev/null
 	done
 }
 
