@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3909 2005/05/03 19:20:12 joem Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3910 2005/05/03 20:30:18 eradicator Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -374,10 +374,6 @@ app-admin/qtsvc
 # Jeremy Huddleston <eradicator@gentoo.org> (01 Mar 2005)
 # Still in development.  Doesn't work right.  I know it doesn't work right.  Don't use it.  Also, it triggers a sandbox bug.
 =sys-devel/gcc-config-1.4.0
-
-# Luca Barbato <lu_zero@gentoo.org> (01 Mar 2005)
-# double free and other issues
-=media-libs/flac-1.1.2
 
 # Paul de Vrieze <pauldv@gentoo.org> (27 Feb 2005)
 # This whole module should be deleted. It overlaps subversion
