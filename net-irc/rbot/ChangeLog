@@ -1,6 +1,13 @@
 # ChangeLog for net-irc/rbot
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/rbot/ChangeLog,v 1.8 2005/04/22 15:08:20 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/rbot/ChangeLog,v 1.9 2005/05/03 19:30:24 swegener Exp $
+
+  03 May 2005; Sven Wegener <swegener@gentoo.org> rbot-0.9.6.ebuild,
+  rbot-0.9.7.ebuild:
+  Adjusted dependencies to not pull in dev-ruby/rexml. Instead we depend (by
+  default) on >=virtual/ruby-1.8 that already includes rexml, but the
+  combination of =virtual/ruby-1.6* with dev-ruby/shim-ruby18 or
+  dev-ruby/rexml is also fine. Closes bug #89164.
 
   22 Apr 2005; Sven Wegener <swegener@gentoo.org> rbot-0.9.7.ebuild:
   Marked stable on x86.
