@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Technologies, Inc.
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/mathematica-fonts/mathematica-fonts-4.2.ebuild,v 1.1 2005/05/03 15:13:23 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/mathematica-fonts/mathematica-fonts-4.2.ebuild,v 1.2 2005/05/03 20:32:56 mr_bones_ Exp $
 
 inherit font
 
@@ -30,7 +30,7 @@ pkg_nofetch() {
 	einfo "and download "
 	if use truetype; then
 		einfo ${DOWNLOAD_URI}${TRUETYPE_FILE}
-	else 
+	else
 		einfo ${DOWNLOAD_URI}${TYPE1_FILE}
 	fi
 	einfo "Then just put the file in ${DISTDIR}"
