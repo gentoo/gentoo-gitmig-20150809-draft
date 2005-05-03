@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gtk-sharp-component.eclass,v 1.7 2005/03/02 00:04:09 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gtk-sharp-component.eclass,v 1.8 2005/05/03 22:21:46 latexer Exp $
 
 # Author : Peter Johanson <latexer@gentoo.org>
 # Based off of original work in gst-plugins.eclass by <foser@gentoo.org>
@@ -62,12 +62,46 @@ DEPEND="${DEPEND}
 # public functions
 ###
 
-gtk-sharp-component_src_unpack() {
+gtk-sharp-component_fix_makefiles() {
 	GAPI_DIR="${ROOT}/usr/share/gapi${GTK_SHARP_COMPONENT_SLOT_DEC}"
 	GAPI_FIXUP="gapi${GTK_SHARP_COMPONENT_SLOT}-fixup"
 	GAPI_CODEGEN="gapi${GTK_SHARP_COMPONENT_SLOT}-codegen"
 	GTK_SHARP_LIB_DIR="${ROOT}/usr/$(get_libdir)/mono/gtk-sharp${GTK_SHARP_COMPONENT_SLOT_DEC}"
 
+	# Changes specific to 1.9.3
+	if [ "${PV}" == "1.9.3" ] ; then
+		einfo "Got 1.9.3 version"
+		sed -i -e "s:\$(API) \$(top_builddir)/parser/gapi-fixup.exe:\$(API):" \
+			-e "s:\$(API) \$(top_builddir)/generator/gapi_codegen.exe:\$(API):" \
+			-e "s:\$(RUNTIME) \$(top_builddir)/parser/gapi-fixup.exe:${GAPI_FIXUP}:" \
+			-e "s:\$(RUNTIME) \$(top_builddir)/generator/gapi_codegen.exe:${GAPI_CODEGEN}:" \
+			$(find ${S} -name Makefile.in) || die "Failed to fix the gtk-sharp makefiles"
+	fi
+
+	# Changes only in 1.0.x or 1.9.x, respectively
+	if [ "${PV:0:3}" == "1.9" ] ; then
+		sed -i -e "s;\.\./[[:alpha:]]*/\([[:alpha:]]*-[[:alpha:]]*\).dll;${GTK_SHARP_LIB_DIR}/\1.dll;g" \
+			$(find ${S} -name Makefile.in) || die "Failed to fix the gtk-sharp makefiles"
+	elif [ "${PV:0:3}" == "1.0" ] ; then
+		sed -i -e "s;/r:\(\.\./\)*[[:alpha:]]*/\([[:alpha:]]*-[[:alpha:]]*\).dll;/r:${GTK_SHARP_LIB_DIR}/\2.dll;g" \
+			$(find ${S} -name Makefile.in) || die "Failed to fix the gtk-sharp makefiles"
+	fi
+
+	# Changes universal up to and including 1.9.2
+	if [ "${PV}" == "1.9.2" ] || [ "${PV:0:3}" = "1.0" ] ; then
+		sed -i -e "s:\$(RUNTIME) \.\./parser/gapi-fixup.exe:${GAPI_FIXUP}:" \
+			-e "s:\$(RUNTIME) \.\./generator/gapi_codegen.exe:${GAPI_CODEGEN}:" \
+			-e "s: \.\./generator/gapi_codegen.exe::" \
+			$(find ${S} -name Makefile.in) || die "Failed to fix the gtk-sharp makefiles"
+	fi
+
+	# Universal changes needed for all versions
+	sed -i -e "s;\(\.\.\|\$(top_srcdir)\)/[[:alpha:]]*/\([[:alpha:]]*-[[:alpha:]]*\).xml;${GAPI_DIR}/\2.xml;g" \
+			$(find ${S} -name Makefile.in) || die "Failed to fix the gtk-sharp makefiles"
+}
+
+	
+gtk-sharp-component_src_unpack() {
 	unpack ${A}
 	cd ${S}
 
@@ -84,23 +118,7 @@ gtk-sharp-component_src_unpack() {
 
 	cd ${S}/${GTK_SHARP_COMPONENT_BUILD_DIR}
 
-	# Change references like "/r:../glib/glib-sharp.dll" ->
-	# "/r:${GTK_SHARP_LIB_DIR}/glib-sharp.dll" and references like
-	# "../glib/glib-sharp.xml" or "$(top_srcdir)/glib/glib-sharp.xml" ->
-	# "${GAPI_DIR}/glib-sharp.xml"
-	#
-	# We also make sure to call the installed gapi-fixup and gapi-codegen
-	# and not the ones that would be built locally
-	for makefile in $(find . -name Makefile.in)
-	do
-		sed -i -e "s;/r:\(\.\./\)*[[:alpha:]]*/\([[:alpha:]]*-[[:alpha:]]*\).dll;/r:${GTK_SHARP_LIB_DIR}/\2.dll;g" \
-			-e "s;\.\./[[:alpha:]]*/\([[:alpha:]]*-[[:alpha:]]*\).dll;${GTK_SHARP_LIB_DIR}/\1.dll;g" \
-			-e "s;\(\.\.\|\$(top_srcdir)\)/[[:alpha:]]*/\([[:alpha:]]*-[[:alpha:]]*\).xml;${GAPI_DIR}/\2.xml;g" \
-			-e "s:\$(RUNTIME) \.\./parser/gapi-fixup.exe:${GAPI_FIXUP}:" \
-			-e "s:\$(RUNTIME) \.\./generator/gapi_codegen.exe:${GAPI_CODEGEN}:" \
-			-e "s: \.\./generator/gapi_codegen.exe::" \
-			${makefile} || die "Failed to sed"
-	done
+	gtk-sharp-component_fix_makefiles
 }
 
 gtk-sharp-component_src_configure() {
