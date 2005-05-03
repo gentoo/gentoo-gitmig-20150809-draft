@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gpm/gpm-1.20.1-r4.ebuild,v 1.9 2005/05/03 04:50:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gpm/gpm-1.20.1-r4.ebuild,v 1.10 2005/05/03 11:54:00 usata Exp $
 
-inherit eutils toolchain-funcs
+inherit eutils toolchain-funcs elisp-common
 
 PATCH_VER="1.3"
 DESCRIPTION="Console-based mouse driver"
@@ -14,7 +14,7 @@ SRC_URI="ftp://arcana.linux.it/pub/gpm/${P}.tar.bz2
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86"
-IUSE="selinux"
+IUSE="selinux emacs"
 
 DEPEND="sys-libs/ncurses"
 RDEPEND="selinux? ( sec-policy/selinux-gpm )"
@@ -34,17 +34,29 @@ src_compile() {
 		CC=$(tc-getCC) \
 		AR=$(tc-getAR) \
 		RANLIB=$(tc-getRANLIB) \
+		EMACS=: \
 		|| die "emake failed"
+
+	local lisp="emacs/t-mouse.el emacs/t-mouse.elc"
+	if use emacs ; then
+		cd ${S}/contrib ; make clean
+		make EMACS=emacs ELISP="${lisp}" || die
+	fi
 }
 
 src_install() {
-	make install DESTDIR="${D}" || die "make install failed"
+	make install DESTDIR="${D}" EMACS=: ELISP="" || die "make install failed"
 	# fix lib symlinks since the default is missing/bogus
 	dosym libgpm.so.1.19.0 /$(get_libdir)/libgpm.so.1
 	dosym libgpm.so.1 /$(get_libdir)/libgpm.so
 	dodir /usr/$(get_libdir)
 	mv "${D}"/$(get_libdir)/*.a "${D}"/usr/$(get_libdir)/
 	gen_usr_ldscript libgpm.so
+
+	if use emacs ; then
+		cd ${S}/contrib/emacs
+		elisp-install . t-mouse*
+	fi
 
 	insinto /etc/gpm
 	doins conf/gpm-*.conf
