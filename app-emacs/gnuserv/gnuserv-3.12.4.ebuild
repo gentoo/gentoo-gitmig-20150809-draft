@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/gnuserv/gnuserv-3.12.4.ebuild,v 1.7 2005/01/01 13:47:05 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/gnuserv/gnuserv-3.12.4.ebuild,v 1.8 2005/05/03 11:01:57 usata Exp $
 
 inherit elisp
 
@@ -19,10 +19,8 @@ DEPEND="virtual/libc
 SITEFILE=50gnuserv-gentoo.el
 
 src_compile() {
-	./configure --host=${CHOST} \
-		--prefix=/usr \
-		--infodir=/usr/share/info \
-		--mandir=/usr/share/man || die "./configure failed"
+	unset LDFLAGS
+	econf || die
 	emake || die
 }
 
@@ -37,12 +35,4 @@ src_install() {
 	elisp-site-file-install ${FILESDIR}/${SITEFILE}
 
 	dodoc ChangeLog INSTALL README README.orig
-}
-
-pkg_postinst() {
-	elisp-site-regen
-}
-
-pkg_postrm() {
-	elisp-site-regen
 }
