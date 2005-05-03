@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.4.20050319.ebuild,v 1.1 2005/04/28 23:08:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.4.20050319.ebuild,v 1.2 2005/05/03 04:48:55 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -35,6 +35,7 @@ src_unpack() {
 	cd "${S}"
 	epatch "${WORKDIR}"/${MY_P}-${PV_SNAP}-patch.sh
 	epatch "${FILESDIR}"/${MY_P}-share-sed.patch #42336
+	epatch "${FILESDIR}"/${MY_P}-c++-templates.patch #90819
 }
 
 src_compile() {
