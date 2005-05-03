@@ -1,12 +1,13 @@
 # ChangeLog for dev-util/jam
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/jam/ChangeLog,v 1.10 2004/10/16 21:23:27 gongloo Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/jam/ChangeLog,v 1.11 2005/05/03 03:22:06 vapier Exp $
 
-  16 Oct 2004; <gongloo@gentoo.org> jam-2.5.ebuild:
-  Keyworded ~ppc-macos.
+*jam-2.5-r1 (03 May 2005)
 
-  18 Jul 2004; Daniel Ahlberg <aliz@gentoo.org> jam-2.5.ebuild:
-  Added amd64 keyword, closing #57341.
+  03 May 2005; Mike Frysinger <vapier@gentoo.org> +files/jam-2.5-cxx.patch,
+  +jam-2.5-r1.ebuild:
+  Make the default C++ compiler c++ instead of cc and add support for .cxx
+  #87974 by Krzysiek Pawlik.
 
   01 May 2004; Jeremy Huddleston <eradicator@gentoo.org> jam-2.5.ebuild:
   blocking on !dev-util/boost-jam
