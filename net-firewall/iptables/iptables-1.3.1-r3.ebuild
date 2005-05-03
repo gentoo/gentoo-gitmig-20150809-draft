@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.3.1-r2.ebuild,v 1.2 2005/05/03 09:40:10 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.3.1-r3.ebuild,v 1.1 2005/05/03 09:40:10 robbat2 Exp $
 
-inherit eutils flag-o-matic toolchain-funcs
+inherit eutils flag-o-matic toolchain-funcs linux-info
 
 #extensions versions
 
@@ -33,13 +33,14 @@ pkg_setup() {
 	if use extensions; then
 		einfo "WARNING: 3rd party extensions has been enabled."
 		einfo "This means that iptables will use your currently installed"
-		einfo "kernel in /usr/src/linux as headers for iptables."
+		einfo "kernel in ${KERNEL_DIR} as headers for iptables."
 		einfo ""
 		einfo "You may have to patch your kernel to allow iptables to build."
 		einfo "Please check http://ftp.netfilter.org/pub/patch-o-matic-ng/snapshot/ for patches"
 		einfo "for your kernel."
 		einfo ""
 		einfo "For layer 7 support emerge net-misc/l7-filter-${L7_PV} before this"
+		linux-info_pkg_setup
 	fi
 }
 
@@ -50,9 +51,11 @@ src_unpack() {
 	cd ${S}
 
 	EPATCH_OPTS="-p0" \
-	epatch ${FILESDIR}/${PV}-files/install_ipv6_apps.patch.bz2
+	epatch ${FILESDIR}/${PV}-files/install_ipv6_apps.patch.bz2 \
+	|| die "epatch install_ipv6_apps.patch.bz2"
 	EPATCH_OPTS="-p1" \
-	epatch ${FILESDIR}/${PV}-files/install_all_dev_files.patch-${PV}.bz2
+	epatch ${FILESDIR}/${PV}-files/install_all_dev_files.patch-${PV}.bz2 \
+	|| die "epatch install_all_dev_files.patch-${PV}.bz2"
 
 	# Both of these have been merged upstream
 	# EPATCH_OPTS="-p1" epatch ${FILESDIR}/${PV}-files/round-robin.patch
@@ -61,15 +64,22 @@ src_unpack() {
 
 	# this provide's grsec's stealth match
 	EPATCH_OPTS="-p0" \
-	epatch ${FILESDIR}/${PV}-files/grsecurity-1.2.8-iptables.patch-${PV}.bz2
-	sed -i "s/PF_EXT_SLIB:=/PF_EXT_SLIB:=stealth /g" extensions/Makefile
+	epatch ${FILESDIR}/${PV}-files/grsecurity-1.2.8-iptables.patch-${PV}.bz2 \
+	|| die "epatch grsecurity-1.2.8-iptables.patch-${PV}.bz2"
+
+	
+	sed -i "s/PF_EXT_SLIB:=/PF_EXT_SLIB:=stealth /g" extensions/Makefile \
+	|| die "failed to enable stealth extension"
 
 	EPATCH_OPTS="-p1" \
-	epatch ${FILESDIR}/${PV}-files/${P}-compilefix.patch
+	epatch ${FILESDIR}/${PV}-files/${P}-compilefix.patch \
+	|| die "epatch ${P}-compilefix.patch"
 
 	if use extensions; then
-		EPATCH_OPTS="-p1" epatch ${DISTDIR}/${IMQ_PATCH}
-		EPATCH_OPTS="-p1" epatch ${WORKDIR}/${L7_P}/${L7_PATCH}
+		EPATCH_OPTS="-p1" epatch ${DISTDIR}/${IMQ_PATCH} \
+		|| die "epatch ${IMQ_PATCH}"
+		EPATCH_OPTS="-p1" epatch ${WORKDIR}/${L7_P}/${L7_PATCH} \
+		|| die "epatch ${L7_PATCH}"
 		chmod +x extensions/{.IMQ-test*,.childlevel-test*,.layer7-test*}
 	fi
 }
@@ -95,8 +105,9 @@ src_defs() {
 
 src_compile() {
 	src_defs
-	replace-flags -O0 -O2
 
+	# iptables will NOT work correctly unless -O[123] are present!
+	replace-flags -O0 -O2
 	if [ -z `get-flag O` ]; then
 		append-flags -O2
 	fi
@@ -105,23 +116,14 @@ src_compile() {
 	# http://bugs.gentoo.org/show_bug.cgi?id=23645
 	filter-flags "-fstack-protector"
 
-
 	if use extensions; then
-		# Only check_KV if /usr/src/linux exists
-		if [ -L ${ROOT}/usr/src/linux -o -d ${ROOT}/usr/src/linux ]; then
-			check_KV
-		else
-			ewarn "You don't have kernel sources available at /usr/src/linux."
-			ewarn "Iptables will be built against linux-headers."
-		fi
-
 		make COPT_FLAGS="${CFLAGS}" ${myconf} \
-			KERNEL_DIR=/usr/src/linux \
+			KERNEL_DIR="${KERNEL_DIR}" \
 			CC="$(tc-getCC)" \
 			|| die "${diemsg}"
 	else
 		make COPT_FLAGS="${CFLAGS}" ${myconf} \
-			KERNEL_DIR=/usr \
+			KERNEL_DIR="/usr" \
 			CC="$(tc-getCC)" \
 			|| die
 	fi
@@ -129,38 +131,30 @@ src_compile() {
 
 src_install() {
 	src_defs
-	myconf="DESTDIR=${D} ${myconf}"
 	if use extensions; then
 		make ${myconf} \
-			KERNEL_DIR=/usr/src/linux \
-			install || die "${diemsg}"
-
-		make ${myconf} \
-			KERNEL_DIR=/usr/src/linux \
-			install-devel || die "${diemsg}"
+			DESTDIR="${D}" \
+			KERNEL_DIR="${KERNEL_DIR}" \
+			install install-devel || die "${diemsg}"
 	else
 		make ${myconf} \
-			KERNEL_DIR=/usr \
-			install || die
-
-		make ${myconf} \
-			KERNEL_DIR=/usr \
-			install-devel || die
+			DESTDIR="${D}" \
+			KERNEL_DIR="/usr" \
+			install install-devel || die
 	fi
+
+	dodir /usr/lib
+	mv -f ${D}/lib/*.a ${D}/usr/lib
 
 	dodoc COPYING
 	keepdir /var/lib/iptables
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/${PN}-1.2.9-r1.init iptables
-	insinto /etc/conf.d
-	newins ${FILESDIR}/${PN}-1.2.9-r1.confd iptables
+	newinitd ${FILESDIR}/${PN}-1.2.9-r1.init iptables
+	newconfd ${FILESDIR}/${PN}-1.2.9-r1.confd iptables
 
 	if use ipv6; then
 		keepdir /var/lib/ip6tables
-		exeinto /etc/init.d
-		newexe ${FILESDIR}/${PN/iptables/ip6tables}-1.2.9-r1.init ip6tables
-		insinto /etc/conf.d
-		newins ${FILESDIR}/${PN/iptables/ip6tables}-1.2.9-r1.confd ip6tables
+		newinitd ${FILESDIR}/${PN/iptables/ip6tables}-1.2.9-r1.init ip6tables
+		newconfd ${FILESDIR}/${PN/iptables/ip6tables}-1.2.9-r1.confd ip6tables
 	fi
 }
 
