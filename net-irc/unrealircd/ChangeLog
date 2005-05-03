@@ -1,6 +1,13 @@
 # ChangeLog for net-irc/unrealircd
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/ChangeLog,v 1.32 2005/05/01 17:28:57 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/ChangeLog,v 1.33 2005/05/03 22:17:13 swegener Exp $
+
+*unrealircd-3.2.3-r1 (03 May 2005)
+
+  03 May 2005; Sven Wegener <swegener@gentoo.org>
+  +unrealircd-3.2.3-r1.ebuild:
+  Revision bump. Added support for the curl USE flag that allows
+  network-based configuration includes. Closes bug #86307.
 
   01 May 2005; Michael Hanselmann <hansmi@gentoo.org>
   unrealircd-3.2.3.ebuild:
