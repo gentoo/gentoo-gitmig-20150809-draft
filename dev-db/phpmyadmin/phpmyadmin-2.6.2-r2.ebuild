@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/phpmyadmin-2.6.2-r1.ebuild,v 1.7 2005/04/27 07:09:55 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/phpmyadmin-2.6.2-r2.ebuild,v 1.1 2005/05/03 00:56:46 ka0ttic Exp $
 
 inherit eutils webapp
 
@@ -84,6 +84,8 @@ src_install() {
 
 	webapp_src_install
 
+	fperms 0640 ${MY_HTDOCSDIR}/config.inc.php
+	fowners root:apache ${MY_HTDOCSDIR}/config.inc.php
 	# bug #88831, make sure the create script it's word-readable.
 	fperms 0600 ${MY_SQLSCRIPTSDIR}/mysql/${PVR}_create.sql
 }
