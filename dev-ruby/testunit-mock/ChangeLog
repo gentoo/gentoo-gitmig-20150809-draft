@@ -1,0 +1,10 @@
+# ChangeLog for dev-ruby/testunit-mock
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/testunit-mock/ChangeLog,v 1.1 2005/05/03 10:09:23 citizen428 Exp $
+
+*testunit-mock-0.03 (03 May 2005)
+
+  03 May 2005; Michael Kohl <citizen428@gentoo.org> +metadata.xml,
+  +testunit-mock-0.03.ebuild:
+  Initial import; submitted by awk <glawk01@awks.org> in bug #59050
+
