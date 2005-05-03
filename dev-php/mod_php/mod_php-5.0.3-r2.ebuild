@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-5.0.3-r2.ebuild,v 1.1 2005/03/13 22:19:13 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-5.0.3-r2.ebuild,v 1.2 2005/05/03 02:03:25 vapier Exp $
 
 IUSE="${IUSE} apache2"
 
@@ -53,6 +53,7 @@ src_unpack() {
 		einfo "Rebuilding configure script"
 		WANT_AUTOCONF=2.5 \
 		autoconf -W no-cross || die "Unable to regenerate configure script"
+		uclibctoolize
 	fi
 }
 
