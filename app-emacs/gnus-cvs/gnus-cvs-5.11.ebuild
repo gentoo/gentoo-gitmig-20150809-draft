@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/gnus-cvs/gnus-cvs-5.11.ebuild,v 1.7 2005/01/09 10:43:34 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/gnus-cvs/gnus-cvs-5.11.ebuild,v 1.8 2005/05/03 10:08:17 usata Exp $
 
 ECVS_SERVER="cvs.gnus.org:/usr/local/cvsroot"
 ECVS_MODULE="gnus"
@@ -40,7 +40,8 @@ src_compile() {
 		--with-lispdir=/usr/share/emacs/site-lisp/gnus-cvs \
 		--with-etcdir=/usr/share/emacs/etc \
 		${myconf} || die "econf failed"
-	emake || die
+	# bug #75325
+	emake -j1 || die
 }
 
 src_install() {
