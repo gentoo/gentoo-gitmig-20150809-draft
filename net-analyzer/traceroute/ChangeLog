@@ -1,6 +1,18 @@
 # ChangeLog for net-analyzer/traceroute
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traceroute/ChangeLog,v 1.22 2004/12/05 03:43:07 obz Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traceroute/ChangeLog,v 1.23 2005/05/03 01:22:29 vapier Exp $
+
+*traceroute-1.4_p12-r3 (03 May 2005)
+
+  03 May 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/traceroute-1.4a12-LDFLAGS.patch,
+  +files/traceroute-1.4a5-bigpacklen.patch,
+  +files/traceroute-1.4a5-droproot.patch,
+  +files/traceroute-1.4a5-llanfairpwllgwyngyllgogerychwyrndrobwllllantysilio
+  gogogoch.patch, +files/traceroute-1.4a5-lsrr.patch,
+  +files/traceroute-1.4a5-secfix.patch,
+  +files/traceroute-1.4a5-unaligned.patch, +traceroute-1.4_p12-r3.ebuild:
+  Add a bunch of misc patches from Redhat.
 
   05 Dec 2004; Mike Gardiner <obz@gentoo.org> traceroute-1.4_p12-r2.ebuild:
   Keyworded hppa and ia64, after SpankY's testing
