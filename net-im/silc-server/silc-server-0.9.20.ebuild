@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/silc-server/silc-server-0.9.18.ebuild,v 1.4 2005/05/03 20:15:36 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/silc-server/silc-server-0.9.20.ebuild,v 1.1 2005/05/03 20:15:36 swegener Exp $
 
 inherit eutils
 
@@ -18,20 +18,25 @@ DEPEND="!<=net-im/silc-toolkit-0.9.12-r1
 
 src_compile() {
 	econf \
-		--sysconfdir=/etc/${PN} \
+		--sysconfdir=/etc/silc \
 		--with-docdir=/usr/share/doc/${PF} \
 		--with-helpdir=/usr/share/${PN}/help \
 		--with-logsdir=/var/log/${PN} \
-		--with-simdir=/usr/lib/${PN} \
 		--with-mandir=/usr/share/man \
+		--with-silcd-pid-file=/var/run/silcd.pid \
+		--with-simdir=/usr/$(get_libdir)/${PN} \
+		--without-silc-libs \
 		$(use_enable ipv6) \
 		$(use_enable debug) \
 		|| die "econf failed"
-	emake -j1 all || die "emake failed"
+	emake -j1 || die "emake failed"
 }
 
 src_install() {
 	make DESTDIR=${D} install || die "make install failed"
+
+	insinto /usr/share/doc/${PF}/examples
+	doins doc/examples/*.conf
 
 	fperms 600 /etc/${PN}
 	keepdir /var/log/${PN}
@@ -39,23 +44,29 @@ src_install() {
 	rm -rf \
 		${D}/usr/libsilc* \
 		${D}/usr/include \
-		${D}/etc/${PN}/silcd.{pub,prv}
+		${D}/etc/silc/silcd.{pub,prv}
 
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/silc-server.rc6 silc-server
+	newinitd ${FILESDIR}/silcd.rc6 silcd
 
 	sed -i \
-		-e 's:/var/lib/silcd.pid:/var/run/silcd.pid:' \
-		-e 's:ip = "10.2.1.6";:ip = "0.0.0.0";:' \
+		-e 's:10.2.1.6:0.0.0.0:' \
 		-e 's:User = "nobody";:User = "silcd";:' \
-		${D}/etc/${PN}/silcd.conf
+		-e 's:${D}::g' \
+		${D}/etc/silc/silcd.conf
 }
 
 pkg_postinst() {
 	enewuser silcd
 
 	if [ ! -f ${ROOT}/etc/${PN}/silcd.prv ] ; then
-		einfo "Creating key pair in ${ROOT}/etc/${PN}"
-		silcd -C ${ROOT}/etc/${PN}
+		einfo "Creating key pair in ${ROOT}etc/silc"
+		silcd -C ${ROOT}etc/silc
 	fi
+
+	ewarn
+	ewarn "Configuration and server keys have been moved to /etc/silc, please check"
+	ewarn "your files."
+	ewarn
+	ewarn "Initscript name has changed from silc-server to silcd in this version."
+	ewarn
 }
