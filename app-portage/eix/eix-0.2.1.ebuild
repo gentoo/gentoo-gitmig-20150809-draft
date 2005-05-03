@@ -1,11 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/eix-0.2.1.ebuild,v 1.6 2005/04/01 03:36:21 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/eix-0.2.1.ebuild,v 1.7 2005/05/03 16:14:52 hollow Exp $
 
 inherit eutils flag-o-matic
 
 DESCRIPTION="Small utility for searching ebuilds with indexing for fast results"
-HOMEPAGE="http://sourceforge.net/projects/eix"
+HOMEPAGE="http://eixwiki.unfoog.de"
 SRC_URI="mirror://sourceforge/eix/${PN}-${PV}.tar.bz2"
 
 LICENSE="GPL-2"
