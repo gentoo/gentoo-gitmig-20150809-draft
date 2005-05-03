@@ -8,7 +8,7 @@
  linux*) host=`echo $host | sed 's/^\(.*-.*-linux\)\(.*\)$/\1-gnu\2/'`
  esac
  
-@@ -1259,6 +1260,24 @@
+@@ -1259,6 +1260,25 @@
    fi
    ;;
  
@@ -21,6 +21,7 @@
 +  finish_cmds='PATH="\$PATH:/sbin" ldconfig -n $libdir'
 +  shlibpath_var=LD_LIBRARY_PATH
 +  shlibpath_overrides_runpath=no
++  deplibs_check_method=pass_all
 +  # This implies no fast_install, which is unacceptable.
 +  # Some rework will be needed to allow for fast_install
 +  # before this can be enabled.

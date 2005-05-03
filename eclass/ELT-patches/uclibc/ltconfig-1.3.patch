@@ -8,7 +8,7 @@
  linux*) host=`echo $host | sed 's/^\(.*-.*-linux\)\(.*\)$/\1-gnu\2/'`
  esac
  
-@@ -1259,6 +1260,24 @@
+@@ -1259,6 +1260,28 @@
    dynamic_linker='GNU/Linux ld.so'
    ;;
  
@@ -21,6 +21,10 @@
 +  finish_cmds='PATH="\$PATH:/sbin" ldconfig -n $libdir'
 +  shlibpath_var=LD_LIBRARY_PATH
 +  shlibpath_overrides_runpath=no
++  # deplibs_check_method=pass_all
++  deplibs_check_method='file_magic ELF [0-9][0-9]*-bit [LM]SB (shared object|dynamic lib )'
++  file_magic_cmd=/usr/bin/file
++  file_magic_test_file=`echo /lib/libuClibc-*.so`
 +  # This implies no fast_install, which is unacceptable.
 +  # Some rework will be needed to allow for fast_install
 +  # before this can be enabled.
