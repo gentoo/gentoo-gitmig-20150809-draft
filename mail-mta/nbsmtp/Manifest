@@ -4,8 +4,8 @@ Hash: SHA1
 MD5 62a08f03f2896feac3b7547606c7ddf4 nbsmtp-0.98.ebuild 849
 MD5 9dd2e50dc83a84f395ea49d77562ca65 nbsmtp-0.99-r1.ebuild 1356
 MD5 d0974b01a66d78f685f38dcffbd0144f nbsmtp-0.98-r1.ebuild 1364
-MD5 1e1cbe100e36e2cae045805c6f29974a nbsmtp-0.99.ebuild 874
-MD5 bc7944d88302be0728abb7885dc59c38 ChangeLog 4193
+MD5 3375d094fd32d69efc9baf3c94106413 nbsmtp-0.99.ebuild 881
+MD5 6e1b6bd11aa1c2fe8455c2bab0c2291c ChangeLog 4291
 MD5 2fc9863fa18fa7e25fedaa87a92a3c43 metadata.xml 259
 MD5 961b6dc8a63bc79755fec60255097c0e files/wrapper-nbsmtp 380
 MD5 58c75e9e9d9e915802e95794f16c2f32 files/nbqueue 1756
@@ -17,7 +17,7 @@ MD5 3533060b1f277b5d74140ebf8c87a9ad files/digest-nbsmtp-0.99 64
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCdrtAViELBEf1JB0RAs5eAJ4ntLnOdzfV7YzGx1JO0ygJSQQlWwCfZGDS
-Jv2ZJl2eeR9NDCVPm/RRUds=
-=Q/pC
+iD8DBQFCd2ecViELBEf1JB0RAt1QAJ9AUyPcfLOggvXdV32GC3bp6hmb7ACeIEDd
+emIE1BgwrZXWm7K6NAHKlHk=
+=FeIG
 -----END PGP SIGNATURE-----
