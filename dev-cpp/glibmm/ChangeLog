@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/glibmm
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/glibmm/ChangeLog,v 1.25 2005/04/27 11:44:57 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/glibmm/ChangeLog,v 1.26 2005/05/03 11:56:50 ka0ttic Exp $
+
+  03 May 2005; Aaron Walker <ka0ttic@gentoo.org> glibmm-2.6.1.ebuild:
+  Apply changes (doc fixes) previously made to 2.4.7-r1 to the 2.6.1 ebuild.
 
 *glibmm-2.4.7-r1 (27 Apr 2005)
 
