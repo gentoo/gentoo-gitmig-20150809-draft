@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/cracklib-2.8.3-r1.ebuild,v 1.1 2005/04/16 05:41:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/cracklib-2.8.3-r1.ebuild,v 1.2 2005/05/03 01:47:06 vapier Exp $
 
 inherit eutils toolchain-funcs
 
@@ -23,6 +23,7 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}"/cracklib-2.8.3-dictname.patch
 	epatch "${FILESDIR}"/cracklib-2.8.3-packer-defines.patch
+	epunt_cxx
 }
 
 src_compile() {
