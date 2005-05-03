@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.1.4-r1.ebuild,v 1.5 2005/04/15 21:59:19 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.1.4-r1.ebuild,v 1.6 2005/05/03 06:12:00 suka Exp $
 
 # Notes:
 #
@@ -299,6 +299,7 @@ get_EnvSet() {
 
 src_compile() {
 
+	unset LIBC
 	addpredict /bin
 	addpredict /root/.gconfd
 	export MYCONF=""
