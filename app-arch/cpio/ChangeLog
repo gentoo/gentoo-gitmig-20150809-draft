@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/cpio
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/cpio/ChangeLog,v 1.20 2005/05/02 21:46:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/cpio/ChangeLog,v 1.21 2005/05/03 12:40:42 luckyduck Exp $
+
+  03 May 2005; Jan Brinkmann <luckyduck@gentoo.org> cpio-2.6-r3.ebuild:
+  stable on amd64 wrt #90619
 
 *cpio-2.6-r3 (02 May 2005)
 
