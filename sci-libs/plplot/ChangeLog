@@ -1,6 +1,13 @@
 # ChangeLog for sci-libs/plplot
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/plplot/ChangeLog,v 1.2 2005/04/08 19:27:21 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/plplot/ChangeLog,v 1.3 2005/05/03 15:59:00 cryos Exp $
+
+*plplot-5.5.2 (03 May 2005)
+
+  03 May 2005; Marcus D. Hanwell <cryos@gentoo.org>
+  files/plplot-5.5.1-gcc-3.4-fix.patch, plplot-5.5.1.ebuild,
+  +plplot-5.5.2.ebuild:
+  Version bump. Changed the octave patch to apply more generically.
 
 *plplot-5.5.1 (08 Apr 2005)
 

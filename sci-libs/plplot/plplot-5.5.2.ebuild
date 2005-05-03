@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/plplot/plplot-5.5.1.ebuild,v 1.2 2005/05/03 15:59:00 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/plplot/plplot-5.5.2.ebuild,v 1.1 2005/05/03 15:59:00 cryos Exp $
 
 inherit eutils
 
@@ -56,7 +56,7 @@ src_unpack() {
 	cd ${S}
 	# Fix compilation problems on GCC 3.4 and the octave bindings, thanks to the
 	# patch from Debian's BTS bug 274359.
-	epatch ${FILESDIR}/${P}-gcc-3.4-fix.patch
+	epatch ${FILESDIR}/${PN}-5.5.1-gcc-3.4-fix.patch
 }
 
 src_compile() {
