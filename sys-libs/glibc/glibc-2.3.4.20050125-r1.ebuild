@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20050125-r1.ebuild,v 1.43 2005/04/29 16:20:01 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20050125-r1.ebuild,v 1.44 2005/05/03 05:12:54 vapier Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -488,11 +488,15 @@ toolchain-glibc_src_install() {
 	doins ${FILESDIR}/2.3.4/host.conf
 
 	# simple test to make sure our new glibc isnt completely broken.
-	# for now, skip the multilib scenario.
+	# for now, skip the multilib scenario.  also make sure we don't
+	# test with statically built binaries since they will fail.
 	[[ $(get_libdir) != "lib" ]] && return 0
 	for x in date env ls true uname ; do
 		x=$(type -p ${x})
 		[[ -z ${x} ]] && continue
+		striptest=$(file -L ${x} 2>/dev/null)
+		[[ -z ${striptest} ]] && continue
+		[[ ${striptest/statically linked} != "${striptest}" ]] && continue
 		"${D}"/$(get_libdir)/ld-*.so \
 			--library-path "${D}"/$(get_libdir) \
 			${x} > /dev/null \

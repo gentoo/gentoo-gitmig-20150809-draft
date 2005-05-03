@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20041102-r1.ebuild,v 1.8 2005/04/22 23:04:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20041102-r1.ebuild,v 1.9 2005/05/03 05:12:54 vapier Exp $
 
 inherit eutils multilib flag-o-matic toolchain-funcs versionator
 
@@ -1008,11 +1008,15 @@ EOF
 	doins ${FILESDIR}/2.3.4/host.conf
 
 	# simple test to make sure our new glibc isnt completely broken.
-	# for now, skip the multilib scenario.
+	# for now, skip the multilib scenario.  also make sure we don't
+	# test with statically built binaries since they will fail.
 	[[ $(get_libdir) != "lib" ]] && return 0
 	for x in date env ls true uname ; do
 		x=$(type -p ${x})
 		[[ -z ${x} ]] && continue
+		striptest=$(file -L ${x} 2>/dev/null)
+		[[ -z ${striptest} ]] && continue
+		[[ ${striptest/statically linked} != "${striptest}" ]] && continue
 		"${D}"/$(get_libdir)/ld-*.so \
 			--library-path "${D}"/$(get_libdir) \
 			${x} > /dev/null \
