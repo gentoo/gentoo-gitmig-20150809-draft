@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-2.05b-r9.ebuild,v 1.28 2005/01/01 15:56:24 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-2.05b-r9.ebuild,v 1.29 2005/05/03 02:53:27 vapier Exp $
 
-inherit eutils flag-o-matic gnuconfig gcc
+inherit eutils flag-o-matic toolchain-funcs
 
 # Official patches
 PLEVEL="x002 x003 x004 x005 x006 x007"
@@ -15,8 +15,8 @@ SRC_URI="mirror://gnu/bash/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sh sparc x86"
-IUSE="nls build uclibc"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc x86"
+IUSE="nls build minimal"
 
 # we link statically with ncurses
 DEPEND=">=sys-libs/ncurses-5.2-r2"
@@ -61,8 +61,6 @@ src_unpack() {
 	# especially easy with 2.6 kernels.
 	echo '#define PGRP_PIPE 1' >> config-bot.h
 
-	gnuconfig_update
-
 	sed -i 's:-lcurses:-lncurses:' configure || die "sed configure"
 }
 
@@ -85,7 +83,7 @@ src_compile() {
 	use nls || myconf="${myconf} --disable-nls"
 
 	echo 'int main(){}' > ${T}/term-test.c
-	if ! $(gcc-getCC) -static -lncurses ${T}/term-test.c 2> /dev/null ; then
+	if ! $(tc-getCC) -static -lncurses ${T}/term-test.c 2> /dev/null ; then
 		export bash_cv_termcap_lib=gnutermcap
 	else
 		export bash_cv_termcap_lib=libcurses
@@ -109,7 +107,7 @@ src_install() {
 	dosym bash /bin/sh
 	dosym bash /bin/rbash
 
-	use uclibc && rm -f ${D}/usr/bin/bashbug ${D}/usr/share/man*/bashbug*
+	use minimal && rm -f ${D}/usr/bin/bashbug ${D}/usr/share/man*/bashbug*
 
 	use build \
 		&& rm -rf ${D}/usr \
