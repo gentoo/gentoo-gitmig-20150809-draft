@@ -1,6 +1,17 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.376 2005/05/02 18:09:04 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.377 2005/05/03 10:33:57 spyderous Exp $
+
+*xorg-x11-6.8.99.5 (03 May 2005)
+
+  03 May 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  +xorg-x11-6.8.99.5.ebuild:
+  New snapshot. Fix find syntax, as we fixed the xfs init script a while ago.
+  Pull BuildLinuxDocText from USE=doc, because it's only useful for sgml
+  building. (#63548, fd.o #3182) Add
+  9020_all_6.8.99.5-fix-dmx-doc-build.patch: fix USE="dmx doc" build. (#fd.o
+  3192) Add 9030_all_6.8.99.5-theatre200_reg.h-doesnt-exist.patch:
+  RageTheatre200 support added in 6.8.99.4 broke the SDK install.
 
   02 May 2005; Stephen P. Becker <geoman@gentoo.org>
   xorg-x11-6.8.2-r2.ebuild:
