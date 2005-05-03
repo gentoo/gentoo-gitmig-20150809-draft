@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cook/cook-2.24.ebuild,v 1.3 2004/07/14 22:54:29 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cook/cook-2.24.ebuild,v 1.4 2005/05/03 12:17:12 dholm Exp $
 
 DESCRIPTION="tool for constructing files; a drop in replacement for make"
 SRC_URI="http://www.canb.auug.org.au/~millerp/cook/${P}.tar.gz"
@@ -8,7 +8,7 @@ HOMEPAGE="http://www.canb.auug.org.au/~millerp/cook/cook.html"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~sparc"
+KEYWORDS="~x86 ~sparc ~ppc"
 IUSE=""
 
 DEPEND="sys-devel/bison"
