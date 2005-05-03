@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/bwmon
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bwmon/ChangeLog,v 1.7 2004/07/08 16:45:27 eldad Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bwmon/ChangeLog,v 1.8 2005/05/03 18:26:01 herbs Exp $
+
+  03 May 2005; Herbie Hopkins <herbs@gentoo.org> bwmon-1.3.ebuild:
+  Marked ~amd64 wrt bug #91331.
 
   08 Jul 2004; Eldad Zack <eldad@gentoo.org> bwmon-1.3.ebuild:
   added metadata
