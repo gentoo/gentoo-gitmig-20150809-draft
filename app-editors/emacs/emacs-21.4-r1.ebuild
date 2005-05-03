@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.4-r1.ebuild,v 1.3 2005/04/12 21:28:03 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.4-r1.ebuild,v 1.4 2005/05/03 10:54:12 usata Exp $
 
 inherit flag-o-matic eutils alternatives toolchain-funcs
 
@@ -72,6 +72,9 @@ src_compile() {
 	if [ "$(gcc-major-version)" -ge 3 -a "$(gcc-minor-version)" -ge 4 ] ; then
 		replace-flags -O[3-9] -O2
 	fi
+
+	# -march is known to cause signal 6 on some environment
+	filter-flags "-march=*"
 
 	export WANT_AUTOCONF=2.1
 	autoconf

@@ -4,5 +4,5 @@ Comment=Emacs is the extensible, customizable, self-documenting real-time displa
 Icon=gnome-emacs.png
 Terminal=0
 Type=Application
-Categories=Application;Utility;TextEditor;
+Categories=Application;Development;
 Exec=/usr/bin/emacs-22.0.50

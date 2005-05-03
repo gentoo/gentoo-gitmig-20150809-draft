@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/emacs
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.61 2005/04/12 21:28:03 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.62 2005/05/03 10:54:12 usata Exp $
+
+  03 May 2005; Mamoru KOMACHI <usata@gentoo.org> files/emacs-21.desktop,
+  files/emacs-22.0.50.desktop, -files/emacs.desktop, emacs-21.4-r1.ebuild:
+  Make desktop entry consistent between emacs and emacs-cvs; bug #89757.
 
   12 Apr 2005; Jeremy Huddleston <eradicator@gentoo.org>
   emacs-21.4-r1.ebuild, emacs-22.0.50_pre20050225.ebuild:
