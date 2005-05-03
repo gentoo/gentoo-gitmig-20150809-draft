@@ -2,13 +2,15 @@
 Hash: SHA1
 
 MD5 b7e6d82ddd49a5b2c8618d2844994c71 ruby-mp3info-0.3.ebuild 536
-MD5 826581766554efcec3a18a4cdd0bf3b0 ChangeLog 541
+MD5 3c0bea31dcaeec61d3367fb0b43aed08 ruby-mp3info-0.4.ebuild 592
+MD5 e153bbf5a8c8e8829de3664f7fa7b6dd ChangeLog 689
 MD5 b522b82d2c47bc548a6607f0f577ab5e metadata.xml 158
 MD5 db5fcc2d2fab4bb45d880bcfb890e8e7 files/digest-ruby-mp3info-0.3 68
+MD5 fd1fae456fdc2ebfc1ffede0e16d75d8 files/digest-ruby-mp3info-0.4 68
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCMw8f/UDVUK2NELYRAsBDAKCAOZky8fV+WUyT4aoenLqi8cvR0QCg7Z+F
-A9ybZtF1B/z4PxbVivqBYtM=
-=sYaf
+iD8DBQFCdzUBehlBotwFZuQRAsw5AJ0cXYN9GNis4hbtvHbxKs0SYTk8JgCeOQJ7
+lHE2DOTT3suKHyH097/w7dw=
+=Os+N
 -----END PGP SIGNATURE-----
