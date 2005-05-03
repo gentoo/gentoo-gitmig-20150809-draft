@@ -1,0 +1,10 @@
+# ChangeLog for sys-kernel/module-rebuild
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/module-rebuild/ChangeLog,v 1.1 2005/05/03 22:53:37 johnm Exp $
+
+*module-rebuild-0.1 (03 May 2005)
+
+  03 May 2005; John Mylchreest <johnm@gentoo.org> +files/module-rebuild-0.1,
+  +metadata.xml, +module-rebuild-0.1.ebuild:
+  Initial Import. fixes bug #34921, thanks go to Paul Varner for inspiration
+
