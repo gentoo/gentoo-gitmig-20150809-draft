@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/flac-1.1.2.ebuild,v 1.9 2005/04/25 17:58:41 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/flac-1.1.2-r1.ebuild,v 1.1 2005/05/03 20:24:01 eradicator Exp $
 
 inherit libtool eutils flag-o-matic gcc
 
@@ -23,7 +23,9 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	if ! use xmms ; then
+	if use xmms ; then
+		epatch "${FILESDIR}"/${P}-xmms-config.patch
+	else
 		sed -i -e '/^@FLaC__HAS_XMMS_TRUE/d' src/Makefile.in || die
 	fi
 
@@ -55,15 +57,15 @@ src_compile() {
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
 	dodoc AUTHORS README
-
-	# Keep around old lib
-	preserve_old_lib /usr/$(get_libdir)/libFLAC.so.4
-	preserve_old_lib /usr/$(get_libdir)/libFLAC++.so.2
 }
 
 pkg_postinst() {
-	preserve_old_lib_notify /usr/$(get_libdir)/libFLAC.so.4
-	preserve_old_lib_notify /usr/$(get_libdir)/libFLAC++.so.2
+	ewarn "If you've upgraded from a previous version of flac, you may need to run"
+	ewarn "one or more of the following:"
+	ewarn "revdep-rebuild --soname libFLAC.so.4"
+	ewarn "revdep-rebuild --soname libFLAC++.so.2"
+	ewarn "revdep-rebuild --soname libFLAC.so.6"
+	ewarn "revdep-rebuild --soname libFLAC++.so.4"
 }
 
 # see #59482

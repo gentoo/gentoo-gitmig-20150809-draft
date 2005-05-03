@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/flac
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/ChangeLog,v 1.56 2005/04/30 18:01:24 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/ChangeLog,v 1.57 2005/05/03 20:24:01 eradicator Exp $
+
+*flac-1.1.2-r1 (03 May 2005)
+
+  03 May 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  +files/flac-1.1.2-xmms-config.patch, -flac-1.1.0-r1.ebuild,
+  -flac-1.1.2.ebuild, +flac-1.1.2-r1.ebuild:
+  Revbump to fix xmms bug.  Closes bug #82622.
 
   30 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> flac-1.1.1.ebuild:
   Stable on ppc.
