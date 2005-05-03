@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/linux-mod.eclass,v 1.36 2005/04/25 18:47:12 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/linux-mod.eclass,v 1.37 2005/05/03 22:55:03 johnm Exp $
 
 # Description: This eclass is used to interface with linux-info in such a way
 #              to provide the functionality required and initial functions
@@ -82,8 +82,9 @@
 inherit linux-info
 ECLASS=linux-mod
 INHERITED="$INHERITED $ECLASS"
-EXPORT_FUNCTIONS pkg_setup pkg_postinst src_install src_compile
+EXPORT_FUNCTIONS pkg_setup pkg_postinst src_install src_compile pkg_postrm
 
+IUSE="${IUSE} pcmcia"
 SLOT="0"
 DESCRIPTION="Based on the $ECLASS eclass"
 DEPEND="virtual/linux-sources
@@ -184,6 +185,24 @@ update_modules() {
 		ebegin "Updating modules.conf"
 		/sbin/modules-update
 		eend $?
+	fi
+}
+
+update_moduledb() {
+	if [[ ! -f ${ROOT}/usr/share/module-rebuild/moduledb ]]; then
+		[[ ! -d ${ROOT}/usr/share/module-rebuild/ ]] && mkdir ${ROOT}/usr/share/module-rebuild/
+		touch ${ROOT}/usr/share/module-rebuild/moduledb
+	fi
+	if [[ -z $(grep ${CATEGORY}/${PN}-${PVR} ${ROOT}/usr/share/module-rebuild/moduledb) ]]; then
+		einfo "Adding module to moduledb."
+		echo "a:1:${CATEGORY}/${PN}-${PVR}" >> ${ROOT}/usr/share/module-rebuild/moduledb
+	fi	
+}
+
+remove_moduledb() {
+	if [[ -n $(grep ${CATEGORY}/${PN}-${PVR} ${ROOT}/usr/share/module-rebuild/moduledb) ]]; then
+		einfo "Removing ${CATEGORY}/${PN}-${PVR} from moduledb."
+		sed -ie "/.*${CATEGORY}\/${P}.*/d" ${ROOT}/usr/share/module-rebuild/moduledb
 	fi
 }
 
@@ -493,5 +512,10 @@ linux-mod_src_install() {
 linux-mod_pkg_postinst() {
 	update_depmod;
 	update_modules;
+	update_moduledb;
 	display_postinst;
+}
+
+linux-mod_pkg_postrm() {
+	remove_moduledb;
 }
