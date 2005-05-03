@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/gnuserv/gnuserv-3.12.5.ebuild,v 1.8 2005/05/03 11:01:57 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/gnuserv/gnuserv-3.12.5.ebuild,v 1.9 2005/05/03 11:42:38 usata Exp $
 
-inherit elisp
+inherit elisp eutils
 
 DESCRIPTION="attach to an already running Emacs"
 HOMEPAGE="http://meltin.net/hacks/emacs/"
@@ -22,16 +22,15 @@ src_compile() {
 	# bug #83112
 	unset LDFLAGS
 
-	econf || die
+	econf \
+		--x-includes=/usr/X11R6/include \
+		--x-libraries=/usr/X11R6/lib || die
 	emake || die
 }
 
 src_install() {
 	dodir /usr/share/man/man1
-	make prefix=${D}/usr \
-		man1dir=${D}/usr/share/man/man1 \
-		infodir=${D}/usr/share/info \
-		install || die
+	einstall man1dir=${D}/usr/share/man/man1 || die
 
 	elisp-install ${PN} *.el *.elc
 	elisp-site-file-install ${FILESDIR}/${SITEFILE}
