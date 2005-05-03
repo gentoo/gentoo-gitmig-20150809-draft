@@ -11,7 +11,7 @@ MD5 45bb97671264e772e7c5711ffd5e39be gentoo-sources-2.6.10-r7.ebuild 1620
 MD5 fdbf1f1944b017fafc0bb0a9e44faf8c gentoo-sources-2.4.25-r17.ebuild 2002
 MD5 3229d029559913e76e4a92d8bacb5941 gentoo-sources-2.4.28-r8.ebuild 1307
 MD5 cd14a3055fad29bf0256428a774ea70d gentoo-sources-2.6.7-r19.ebuild 1455
-MD5 b3b83e4b186b452b6c2d23f9e86970c9 gentoo-sources-2.6.11-r7.ebuild 1630
+MD5 f1eccb6d2c06d2ecaf19e44477012f4d gentoo-sources-2.6.11-r7.ebuild 1624
 MD5 fb66bd5497f574c00a8ba4d5f798dc00 files/Changelog-2.4.bz2 6590
 MD5 b09e0ad41a8658a3e1309e5ab3ad652b files/gentoo-sources-2.4.28.77181.patch 295
 MD5 0694ed26023de7664f6d3658f04c4bbe files/digest-gentoo-sources-2.6.7-r19 221
@@ -57,7 +57,7 @@ MD5 b1f723b1661a3fcbe79e921ddfe40584 files/gentoo-sources-2.4.PaX-84167.patch 12
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCdyu4ArHZZzCEUG0RAmH9AJ98y8E3eRXuh1qL5Q2ZqgUAbUlmCgCfXp1/
-+HWJLZ8m0yU68VYwseb6xZA=
-=8z36
+iD8DBQFCdywMArHZZzCEUG0RAoJEAJ4xHSQq/w5Nxufz5GqNLqpoYtXzkwCfdVBP
+2ZpaVdhK05TJCS4nNLFa7Zo=
+=SVOZ
 -----END PGP SIGNATURE-----
