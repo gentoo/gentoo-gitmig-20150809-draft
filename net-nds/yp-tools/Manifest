@@ -1,6 +1,17 @@
-MD5 f3e2f4201981d00fef0cce0ccdaca464 yp-tools-2.7-r1.ebuild 1086
-MD5 2a106c26c00335716cb0d8c335f36300 yp-tools-2.8.ebuild 1129
-MD5 79aa64953078e370eb9017bc2e359f61 ChangeLog 3146
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 60eb46a0a8d8490c6a079f957fb8b9cc ChangeLog 3442
 MD5 ab59365f7f92becce9ea574af606ca09 metadata.xml 270
+MD5 2a106c26c00335716cb0d8c335f36300 yp-tools-2.8.ebuild 1129
+MD5 84d90792e6ff3091557f17461fd5fdb4 yp-tools-2.8-r1.ebuild 1231
 MD5 2b599af2b4904c58b39a22d7043d4de0 files/digest-yp-tools-2.8 65
-MD5 8a4aadbeac31db4a5bf80b9506607d41 files/digest-yp-tools-2.7-r1 65
+MD5 dc93b4cab3c4ad02f965961251138248 files/yp-tools-2.8-bsd.patch 2245
+MD5 2b599af2b4904c58b39a22d7043d4de0 files/digest-yp-tools-2.8-r1 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCd+NxArHZZzCEUG0RArjDAJ9sXcoWBepXtllKSCc9RNJNfcdnhgCfaH6u
+CZLi+Seh9adFN0Ebt17hEvM=
+=WUAb
+-----END PGP SIGNATURE-----
