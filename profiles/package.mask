@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3908 2005/05/03 18:35:30 cryos Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3909 2005/05/03 19:20:12 joem Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -317,7 +317,7 @@ media-video/qce-ga
 #Gnome-2.10.1 mask
 >=www-client/epiphany-extensions-1.6.3
 >=www-client/epiphany-1.6.3
->=gnome-base/gnome-2.10.1
+=gnome-base/gnome-2.10.1_pre0
 >=gnome-base/gnome-light-2.10.1
 >=gnome-base/gnome-volume-manager-1.2.1
 >=gnome-base/gnome-vfs-2.10.1
