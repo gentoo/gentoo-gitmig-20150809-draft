@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/xmms
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.170 2005/04/16 00:44:55 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.171 2005/05/03 20:56:30 eradicator Exp $
+
+  03 May 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  xmms-1.2.10-r14.ebuild:
+  Fixed compilation with gcc2. Closes bug #86469 thanks to Matt Taylor
+  <liverbugg@juno.com>.  Stable amd64, sparc, x86.
 
 *xmms-1.2.10-r14 (16 Apr 2005)
 
