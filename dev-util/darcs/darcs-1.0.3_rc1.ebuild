@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/darcs/darcs-1.0.3_rc1.ebuild,v 1.1 2005/05/02 18:03:18 kosmikus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/darcs/darcs-1.0.3_rc1.ebuild,v 1.2 2005/05/03 14:40:56 kosmikus Exp $
 
 DESCRIPTION="David's Advanced Revision Control System is yet another replacement for CVS"
 HOMEPAGE="http://abridgegame.org/darcs"
@@ -13,12 +13,14 @@ IUSE="doc"
 # disabled wxwindows use flag for now, as I got build errors
 
 DEPEND=">=net-misc/curl-7.10.2
+	virtual/mta
 	>=virtual/ghc-6.2
 	doc?  ( virtual/tetex
 		dev-tex/latex2html )"
 #	wxwindows?  ( dev-haskell/wxhaskell )
 
-RDEPEND=">=net-misc/curl-7.10.2"
+RDEPEND=">=net-misc/curl-7.10.2
+	virtual/mta"
 #	wxwindows?  ( dev-haskell/wxhaskell )"
 
 S=${WORKDIR}/${P/_rc/rc}
