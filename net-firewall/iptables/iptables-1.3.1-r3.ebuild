@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.3.1-r3.ebuild,v 1.5 2005/05/03 14:43:25 omkhar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.3.1-r3.ebuild,v 1.6 2005/05/03 22:48:54 herbs Exp $
 
 inherit eutils flag-o-matic toolchain-funcs linux-info
 
@@ -87,7 +87,7 @@ src_unpack() {
 src_defs() {
 	# these are used in both of src_compile and src_install
 	myconf="${myconf} PREFIX="
-	myconf="${myconf} LIBDIR=/lib"
+	myconf="${myconf} LIBDIR=/$(get_libdir)"
 	myconf="${myconf} BINDIR=/sbin"
 	myconf="${myconf} MANDIR=/usr/share/man"
 	myconf="${myconf} INCDIR=/usr/include"
@@ -142,8 +142,8 @@ src_install() {
 			install install-devel || die
 	fi
 
-	dodir /usr/lib
-	mv -f ${D}/lib/*.a ${D}/usr/lib
+	dodir /usr/$(get_libdir)
+	mv -f ${D}/$(get_libdir)/*.a ${D}/usr/$(get_libdir)
 
 	keepdir /var/lib/iptables
 	newinitd ${FILESDIR}/${PN}-1.2.9-r1.init iptables
