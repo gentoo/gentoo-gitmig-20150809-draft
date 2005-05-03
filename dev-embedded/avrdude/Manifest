@@ -1,4 +1,4 @@
-MD5 c4e596a24f58659a6dcebe62f05fae99 ChangeLog 516
-MD5 c5cb2f715db0f2577bda1633fa6d60dd avrdude-4.4.0.ebuild 684
+MD5 d747d3b11564ff1762d32959fa4714d1 ChangeLog 596
+MD5 84cd4ec546fd8285c5ceff5dfb0f69ff avrdude-4.4.0.ebuild 684
 MD5 61dd990d46d9043e65248d672b9e217e metadata.xml 265
 MD5 dfbaf205065b44ca16000f2fac812136 files/digest-avrdude-4.4.0 65
