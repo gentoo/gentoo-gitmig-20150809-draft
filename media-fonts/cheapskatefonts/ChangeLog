@@ -1,0 +1,10 @@
+# ChangeLog for media-fonts/cheapskatefonts
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/cheapskatefonts/ChangeLog,v 1.1 2005/05/03 15:57:50 usata Exp $
+
+*cheapskatefonts-1.0 (03 May 2005)
+
+  03 May 2005; Mamoru KOMACHI <usata@gentoo.org> +metadata.xml,
+  +cheapskatefonts-1.0.ebuild:
+  Initial import. Ebuild submitted by Alex C <ajc30@cwru.edu>; bug #75270.
+
