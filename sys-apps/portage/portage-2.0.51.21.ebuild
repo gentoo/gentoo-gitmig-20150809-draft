@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.51.21.ebuild,v 1.1 2005/05/02 01:32:35 jstubbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.51.21.ebuild,v 1.2 2005/05/03 04:24:22 jstubbs Exp $
 
 inherit toolchain-funcs
 
@@ -37,11 +37,13 @@ src_compile() {
 
 	if ! use ppc-macos && ! python_has_lchown; then
 		cd ${S}/src/python-missingos
+		chmod +x setup.py
 		./setup.py build || die "Failed to build missingos module"
 	fi
 
 	if use x86-fbsd; then
 		cd ${S}/src/bsd-flags
+		chmod +x setup.py
 		./setup.py build || die "Failed to install bsd-chflags module"
 	fi
 }
