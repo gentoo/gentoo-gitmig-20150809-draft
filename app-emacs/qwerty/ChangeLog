@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/qwerty
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/qwerty/ChangeLog,v 1.5 2005/04/24 11:04:57 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/qwerty/ChangeLog,v 1.6 2005/05/03 09:03:18 usata Exp $
+
+  03 May 2005; Mamoru KOMACHI <usata@gentoo.org> qwerty-1.1.ebuild:
+  Fixed invalid HOMEPAGE; bug #90542.
 
   24 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> qwerty-1.1.ebuild:
   Stable on ppc.
