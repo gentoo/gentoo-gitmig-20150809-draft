@@ -1,12 +1,22 @@
-MD5 f70830cbd6b8132c9595fd7f13d0cc66 cpio-2.6-r2.ebuild 1117
-MD5 5a434bc120f8aac9ec3652c3b01c543b cpio-2.6-r3.ebuild 1376
-MD5 806eefb6963e1d8098c4045e457cab9e ChangeLog 5115
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 7894f923500cbeeb0b36117e08049b5d files/2.6-rili-big-files.patch 2709
+MD5 1ea6a83f0ef16a35810813971107873d cpio-2.6-r3.ebuild 1375
+MD5 07f6bf2139a3d32056c4af2f38af4da3 ChangeLog 5226
+MD5 f70830cbd6b8132c9595fd7f13d0cc66 cpio-2.6-r2.ebuild 1117
 MD5 08647cfda931b161030477956f57b03b files/cpio-2.6-chmodRaceC.patch 4153
-MD5 e5b0619beac9b1fe4490c3424e903f1f files/2.6-umask.patch 1382
 MD5 c1efb6f13ac85b99cf4f468083101b53 files/cpio-2.6-gcc4-tests.patch 542
-MD5 898f15e2e1a554916e69e9397f130e81 files/digest-cpio-2.6-r2 61
+MD5 e5b0619beac9b1fe4490c3424e903f1f files/2.6-umask.patch 1382
+MD5 7894f923500cbeeb0b36117e08049b5d files/2.6-rili-big-files.patch 2709
 MD5 898f15e2e1a554916e69e9397f130e81 files/digest-cpio-2.6-r3 61
-MD5 527f6d401d12741d17a7ac7761a6d2d7 files/2.6-isnumber.patch 861
 MD5 ae93625090241de60fb662d4dd0153dc files/2.6-lstat.patch 843
+MD5 527f6d401d12741d17a7ac7761a6d2d7 files/2.6-isnumber.patch 861
+MD5 898f15e2e1a554916e69e9397f130e81 files/digest-cpio-2.6-r2 61
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCd6/rmOfEJZHYOKcRAup1AJ95z9G/GTI4un0CND4NvrfTuVRLbACgoDah
+Ky+FX6QPm7zZiuIsHUv2viQ=
+=/h81
+-----END PGP SIGNATURE-----
