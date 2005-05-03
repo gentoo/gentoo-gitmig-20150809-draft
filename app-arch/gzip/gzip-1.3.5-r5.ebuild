@@ -1,22 +1,20 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/gzip/gzip-1.3.5-r5.ebuild,v 1.1 2005/01/04 19:28:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/gzip/gzip-1.3.5-r5.ebuild,v 1.2 2005/05/03 01:49:00 vapier Exp $
 
 inherit eutils flag-o-matic
 
 DESCRIPTION="Standard GNU compressor"
 HOMEPAGE="http://www.gnu.org/software/gzip/gzip.html"
-# This is also available from alpha.gnu.org, but that site has very limited
-# bandwidth and often isn't accessible
-SRC_URI="mirror://debian/pool/main/g/gzip/gzip_${PV}.orig.tar.gz
+SRC_URI="mirror://gentoo/${P}.tar.gz
 	mirror://gentoo/${P}-deb.patch.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sh sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc x86"
 IUSE="nls build static pic"
 
-RDEPEND="virtual/libc"
+RDEPEND=""
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
 PROVIDE="virtual/gzip"
