@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/oops/oops-1.5.24_pre20050403.ebuild,v 1.1 2005/05/03 22:33:25 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/oops/oops-1.5.24_pre20050503.ebuild,v 1.1 2005/05/03 22:59:04 mrness Exp $
 
 inherit eutils
 

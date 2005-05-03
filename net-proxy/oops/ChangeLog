@@ -1,11 +1,11 @@
 # ChangeLog for net-proxy/oops
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/oops/ChangeLog,v 1.3 2005/05/03 22:33:25 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/oops/ChangeLog,v 1.4 2005/05/03 22:59:04 mrness Exp $
 
-*oops-1.5.24_pre20050403 (03 May 2005)
+*oops-1.5.24_pre20050503 (03 May 2005)
 
   03 May 2005; Alin Nastac <mrness@gentoo.org> +files/oops.initd,
-  +oops-1.5.24_pre20050403.ebuild:
+  +oops-1.5.24_pre20050503.ebuild:
   Version bumped to current 1.5.24 pre-release. This version fixes security
   bug #91303 and have an init script.
 
