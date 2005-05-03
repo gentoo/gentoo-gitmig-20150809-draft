@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/zynaddsubfx/zynaddsubfx-2.1.1-r1.ebuild,v 1.1 2005/01/09 03:43:10 jnc Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/zynaddsubfx/zynaddsubfx-2.2.1.ebuild,v 1.1 2005/05/03 23:09:41 jnc Exp $
 
 inherit eutils
 
@@ -26,7 +26,7 @@ S="${WORKDIR}/${MY_P}"
 
 src_unpack() {
 	unpack ${MY_P}.tar.bz2 || die
-	epatch ${FILESDIR}/${P}-*.patch
+#	epatch ${FILESDIR}/${P}-*.patch
 }
 
 src_compile() {
