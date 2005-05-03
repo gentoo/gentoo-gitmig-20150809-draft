@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.3.1-r3.ebuild,v 1.6 2005/05/03 22:48:54 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.3.1-r3.ebuild,v 1.7 2005/05/03 22:55:13 wormo Exp $
 
 inherit eutils flag-o-matic toolchain-funcs linux-info
 
@@ -10,7 +10,7 @@ DESCRIPTION="Linux kernel (2.4+) firewall, NAT and packet mangling tools"
 HOMEPAGE="http://www.iptables.org/"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~sparc ~ppc64"
+KEYWORDS="~amd64 ~x86 ~sparc ~ppc64 ~ppc"
 IUSE="ipv6 static extensions"
 
 DEPEND="virtual/os-headers
