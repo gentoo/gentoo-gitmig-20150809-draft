@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphicsmagick/graphicsmagick-1.1.4.ebuild,v 1.5 2005/01/24 21:58:57 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphicsmagick/graphicsmagick-1.1.6.ebuild,v 1.1 2005/05/03 22:44:04 kloeri Exp $
 
 inherit libtool flag-o-matic perl-module
 replace-flags k6-3 i586
@@ -19,7 +19,7 @@ HOMEPAGE="http://www.graphicsmagick.org/"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="~x86 ppc"
+KEYWORDS="x86 ~ppc"
 
 DEPEND=">=sys-apps/sed-4
 	>=app-arch/bzip2-1
@@ -47,7 +47,7 @@ src_compile() {
 	myconf="${myconf} $(use_enable lzw)"
 	myconf="${myconf} $(use_with png)"
 	myconf="${myconf} $(use_with tiff)"
-	myconf="${myconf} $(use_with ttf)"
+	myconf="${myconf} $(use_with truetype ttf)"
 	myconf="${myconf} $(use_with wmf)"
 	myconf="${myconf} $(use_with xml2 xml)"
 
@@ -55,6 +55,7 @@ src_compile() {
 	sed -i 's:netscape:mozilla:g' configure
 
 	econf \
+		--with-gs-font-dir=/usr/share/fonts/default/ghostscript \
 		--enable-shared \
 		--with-quantum-depth=16 \
 		--with-threads \
