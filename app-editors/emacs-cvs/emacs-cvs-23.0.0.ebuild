@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-23.0.0.ebuild,v 1.3 2005/03/05 14:21:32 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-23.0.0.ebuild,v 1.4 2005/05/03 10:02:09 usata Exp $
 
 ECVS_AUTH="ext"
 export CVS_RSH="ssh"
@@ -28,7 +28,7 @@ RESTRICT="$RESTRICT nostrip"
 DEPEND=">=sys-libs/ncurses-5.3
 	spell? ( || ( app-text/ispell app-text/aspell ) )
 	X? ( virtual/x11
-		gif? ( >=media-libs/libungif-4.1.0.1b )
+		gif? ( >=media-libs/giflib-4.1.0.1b )
 		jpeg? ( >=media-libs/jpeg-6b )
 		tiff? ( >=media-libs/tiff-3.5.7 )
 		png? ( >=media-libs/libpng-1.2.5 )
@@ -55,6 +55,8 @@ src_compile() {
 
 	epatch ${FILESDIR}/emacs-subdirs-el-gentoo.diff
 	use ppc-macos && epatch ${FILESDIR}/emacs-cvs-21.3.50-nofink.diff
+
+	sed -i -e "s/-lungif/-lgif/g" configure* src/Makefile* || die
 
 	local myconf
 
@@ -137,7 +139,7 @@ src_install () {
 	dodoc BUGS ChangeLog README
 
 	if use gnome; then
-		insinto /usr/share/gnome/apps/Application
+		insinto /usr/share/applications
 		doins ${FILESDIR}/${DFILE} || die "install desktop file failed"
 	fi
 }

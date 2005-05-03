@@ -1,6 +1,14 @@
 # ChangeLog for app-editors/emacs-cvs
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/ChangeLog,v 1.34 2005/03/05 14:21:32 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/ChangeLog,v 1.35 2005/05/03 10:02:09 usata Exp $
+
+  03 May 2005; Mamoru KOMACHI <usata@gentoo.org>
+  files/emacs-22.0.50.desktop, files/emacs-23.0.0.desktop,
+  -files/emacs.desktop, emacs-cvs-22.0.50.ebuild, emacs-cvs-23.0.0.ebuild:
+  Install desktop entry to /usr/share/applications, under
+  Categories=Appliation;Development;. Thanks to Akos Ladanyi
+  <ladanyi@tmit.bme.hu>; bug #89757. Use giflib instead of libungif;
+  bug #85720.
 
   05 Mar 2005; Mamoru KOMACHI <usata@gentoo.org> -emacs-cvs-21.3.50.ebuild,
   emacs-cvs-22.0.50.ebuild, emacs-cvs-23.0.0.ebuild:
