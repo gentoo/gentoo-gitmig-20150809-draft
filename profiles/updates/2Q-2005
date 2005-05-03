@@ -42,3 +42,4 @@ move net-p2p/donkey net-p2p/edonkey
 move net-misc/rol net-news/rol
 move net-misc/multiimonc net-dialup/multiimonc
 move net-misc/totd net-dns/totd
+slotmove =dev-libs/libsigc++-2.0.5 1.3 2
