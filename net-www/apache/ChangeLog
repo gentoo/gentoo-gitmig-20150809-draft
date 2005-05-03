@@ -1,6 +1,14 @@
 # ChangeLog for net-www/apache
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.345 2005/04/25 01:54:54 beu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.346 2005/05/03 16:00:53 beu Exp $
+
+*apache-1.3.33-r4 (03 May 2005)
+*apache-1.3.33-r3 (03 May 2005)
+
+  03 May 2005; Elfyn McBratney <beu@gentoo.org> +apache-1.3.33-r3.ebuild,
+  +apache-1.3.33-r4.ebuild:
+  More bumps - the -r1 and -r2 bumps didn't play nicely together what with -r1
+  existing as new- and old-style with the same name.
 
   25 Apr 2005; Elfyn McBratney <beu@gentoo.org> apache-2.0.51.ebuild,
   apache-2.0.52.ebuild, apache-2.0.52-r1.ebuild, apache-2.0.52-r3.ebuild,
