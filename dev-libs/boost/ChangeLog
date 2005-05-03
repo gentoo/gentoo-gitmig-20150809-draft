@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/boost
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.51 2005/04/27 00:10:17 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.52 2005/05/03 23:21:01 morfic Exp $
+
+*boost-1.32.0-r4 (04 May 2005)
+
+  04 May 2005; Daniel Goller <morfic@gentoo.org> +boost-1.32.0-r4.ebuild:
+  added USE=doc and fixed creation of -toolset- links
 
   24 Apr 2005; Daniel Goller <morfic@gentoo.org> :
   adding pyste support, adding bsd compatability and preliminary OSX
