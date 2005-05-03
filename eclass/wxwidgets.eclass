@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/wxwidgets.eclass,v 1.7 2005/05/02 16:43:58 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/wxwidgets.eclass,v 1.8 2005/05/03 07:55:17 pythonhead Exp $
 #
 # Author Rob Cakebread <pythonhead@gentoo.org>
 
@@ -29,7 +29,7 @@ need-wxwidgets() {
 		case $1 in
 			gtk)		set-wxconfig gtk-ansi;;
 			gtk2)		set-wxconfig gtk2-ansi;;
-			gtk2-unicode)	set-wxconfig gtk2-unicode;;
+			unicode)	set-wxconfig gtk2-unicode;;
 			base)		set-wxconfig base-ansi;;
 			base-unicode)	set-wxconfig base-unicode;;
 			mac)		set-wxconfig mac-ansi;;
