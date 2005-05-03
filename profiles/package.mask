@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3900 2005/05/03 00:39:53 carlo Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3901 2005/05/03 01:24:55 latexer Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ##
+
+# Peter Johanson <latexer@gentoo.org> (02 May 2005)
+# Masking as it is broken against newer wine versions,
+# and completely abandoned upstream
+dev-dotnet/winelib
 
 # Andres Loeh <kosmikus@gentoo.org> (02 May 2005)
 # waiting for Haskell packages to get ported to ghc-6.4
