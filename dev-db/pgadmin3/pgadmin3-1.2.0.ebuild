@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pgadmin3/pgadmin3-1.2.0.ebuild,v 1.1 2005/03/25 20:15:44 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pgadmin3/pgadmin3-1.2.0.ebuild,v 1.2 2005/05/03 02:42:51 nakano Exp $
 
 inherit eutils libtool wxwidgets
 
-IUSE="unicode gtk2 postgres"
+IUSE="unicode gtk2"
 
 RESTRICT="nomirror"
 DESCRIPTION="wxWindows GUI for PostgreSQL"
@@ -16,7 +16,7 @@ LICENSE="Artistic"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha ~amd64"
 
 # Need 2.4.1-r1 for the extras in contrib
-DEPEND=">=x11-libs/wxGTK-2.5.3
+DEPEND=">=x11-libs/wxGTK-2.6
 	|| ( >=dev-db/postgresql-7.3.5 >=dev-db/postgresql-7.4.1-r2 )
 	>=sys-apps/sed-4
 	>=x11-libs/gtk+-2.4.9"
