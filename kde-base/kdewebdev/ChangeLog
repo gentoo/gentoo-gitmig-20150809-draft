@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdewebdev
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdewebdev/ChangeLog,v 1.49 2005/05/02 23:13:20 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdewebdev/ChangeLog,v 1.50 2005/05/03 15:05:23 luckyduck Exp $
+
+  03 May 2005; Jan Brinkmann <luckyduck@gentoo.org>
+  kdewebdev-3.3.2-r2.ebuild:
+  stable on amd64 wrt #89092
 
 *kdewebdev-3.4.0-r2 (02 May 2005)
 *kdewebdev-3.3.2-r2 (02 May 2005)

@@ -1,7 +1,10 @@
-MD5 ee8c765de6cd87e7dd99120a296a8cd7 kdewebdev-3.3.2-r2.ebuild 514
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 b7b661210e632c071d25c68d43396a91 kdewebdev-3.3.2-r2.ebuild 518
 MD5 b6eea2c9df42f2942855739fea29718a kdewebdev-3.3.2-r1.ebuild 506
 MD5 699c1e7ec3d93f5b056456b4df31ab2b kdewebdev-3.4.0-r2.ebuild 581
-MD5 ee3db2bc17b1d2303ace35a521e6c15e ChangeLog 5995
+MD5 d6585dd19d8f44634753e7ea7c64ee95 ChangeLog 6110
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 d8da4dc9bcb492f4f27562f6746840e7 kdewebdev-3.3.2.ebuild 429
 MD5 5c18da2078103b3b7c13439cc5980e13 files/digest-kdewebdev-3.3.2-r1 69
@@ -10,3 +13,10 @@ MD5 a6863fd743a5d77407c2de68efec9b90 files/digest-kdewebdev-3.4.0-r2 69
 MD5 d0fe799b425a893d05d633cd6afb32a8 files/quanta-3.4.0-vpl.patch 8115
 MD5 64933746cbdc378bd6d40e0b56eac91f files/post-3.4-kdewebdev-2.diff 2703
 MD5 5c18da2078103b3b7c13439cc5980e13 files/digest-kdewebdev-3.3.2 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCd5NH06ebR+OMO78RApSrAJ0f7ql3dKZdRWE+4ho1OIBVLEjtIgCgjZDt
+xmR/vNOeI/B793skF44T5D4=
+=Uy7b
+-----END PGP SIGNATURE-----
