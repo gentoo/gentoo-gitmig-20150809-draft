@@ -1,6 +1,11 @@
 # ChangeLog for app-emacs/python-mode
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/python-mode/ChangeLog,v 1.15 2005/05/03 08:55:58 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/python-mode/ChangeLog,v 1.16 2005/05/03 09:37:13 usata Exp $
+
+*python-mode-4.70 (03 May 2005)
+
+  03 May 2005; Mamoru KOMACHI <usata@gentoo.org> +python-mode-4.70.ebuild:
+  Version bumped. This closes bug #88704.
 
   03 May 2005; Mamoru KOMACHI <usata@gentoo.org> +files/setup.py,
   python-mode-4.63-r1.ebuild:
