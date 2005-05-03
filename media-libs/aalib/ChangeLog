@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/aalib
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/aalib/ChangeLog,v 1.17 2005/04/09 22:00:32 j4rg0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/aalib/ChangeLog,v 1.18 2005/05/03 20:35:45 eradicator Exp $
+
+*aalib-1.4_rc5 (03 May 2005)
+
+  03 May 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  +aalib-1.4_rc5.ebuild:
+  Version bump and now correctly install both static and shared libs.
 
   09 Apr 2005; Lina Pezzella <j4rg0n@gentoo.org> +files/aalib-osx.patch,
   aalib-1.4_rc4-r2.ebuild:
