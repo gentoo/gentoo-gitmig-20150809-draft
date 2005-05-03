@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/conveysdl
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/conveysdl/ChangeLog,v 1.1 2005/02/19 05:31:47 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/conveysdl/ChangeLog,v 1.2 2005/05/03 08:41:51 dholm Exp $
+
+  03 May 2005; David Holm <dholm@gentoo.org> conveysdl-1.ebuild:
+  Added to ~ppc.
 
 *conveysdl-1 (19 Feb 2005)
 
