@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.6.0.ebuild,v 1.1 2005/05/02 17:57:03 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.6.0.ebuild,v 1.2 2005/05/03 02:06:53 pythonhead Exp $
 
 inherit wxlib
 
@@ -8,7 +8,7 @@ DESCRIPTION="GTK+ version of wxWidgets, a cross-platform C++ GUI toolkit"
 
 SLOT="2.6"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha ~arm ~amd64 ~ia64 ~hppa ~ppc64"
-IUSE="gnome gtk2 jpeg joystick odbc opengl png sdl tiff wxgtk1 xpm"
+IUSE="gnome gtk2 jpeg joystick odbc opengl png sdl tiff wxgtk1"
 
 RDEPEND="${RDEPEND}
 	opengl? ( virtual/opengl )
@@ -19,7 +19,6 @@ RDEPEND="${RDEPEND}
 	png? ( media-libs/libpng )
 	jpeg? ( media-libs/jpeg )
 	tiff? ( media-libs/tiff )
-	xpm? ( virtual/x11 )
 	odbc? ( dev-db/unixODBC )
 	!mips? ( !arm? ( !hppa? ( !ia64? ( !ppc64? ( !alpha? ( !sparc? ( sdl? ( media-libs/sdl-sound ))))))))"
 
@@ -42,7 +41,6 @@ src_compile() {
 		$(use_with png libpng)
 		$(use_with jpeg libjpeg)
 		$(use_with tiff libtiff)
-		$(use_with xpm libxpm) $(use_enable xpm)
 		$(use_with opengl)
 		$(use_with gnome gnomeprint)
 		$(use_with sdl)
