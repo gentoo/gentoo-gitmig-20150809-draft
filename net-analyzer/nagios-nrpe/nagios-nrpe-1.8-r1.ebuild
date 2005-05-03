@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-nrpe/nagios-nrpe-1.8-r1.ebuild,v 1.8 2005/04/13 11:43:00 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-nrpe/nagios-nrpe-1.8-r1.ebuild,v 1.9 2005/05/03 16:35:38 eldad Exp $
 inherit eutils
 
 DESCRIPTION="Nagios $PV NRPE - Nagios Remote Plugin Executor"
@@ -47,6 +47,8 @@ src_install() {
 	fowners nagios:nagios /usr/nagios/libexec/check_nrpe
 	exeinto /etc/init.d
 	newexe ${FILESDIR}/nrpe-1.8 nrpe
+
+	fperms 0750 /usr/nagios/libexec/check_nrpe /usr/nagios/bin/nrpe
 }
 pkg_postinst() {
 	einfo

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-nrpe/nagios-nrpe-2.0.ebuild,v 1.10 2005/04/13 11:43:00 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-nrpe/nagios-nrpe-2.0.ebuild,v 1.11 2005/05/03 16:35:38 eldad Exp $
 
 inherit eutils
 
@@ -57,12 +57,11 @@ src_install() {
 	exeinto /usr/nagios/bin
 	doexe src/nrpe
 
-	fowners nagios:nagios /usr/nagios/bin/nrpe
-
 	exeinto /usr/nagios/libexec
 	doexe src/check_nrpe
 
-	fowners nagios:nagios /usr/nagios/libexec/check_nrpe
+	fowners nagios:nagios	/usr/nagios/libexec/check_nrpe /usr/nagios/bin/nrpe
+	fperms 0750		/usr/nagios/libexec/check_nrpe /usr/nagios/bin/nrpe
 
 	exeinto /etc/init.d
 	newexe ${FILESDIR}/nrpe-${PV} nrpe
