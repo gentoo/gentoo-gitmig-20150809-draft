@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/natch/natch-2.3.ebuild,v 1.1 2005/03/27 00:40:40 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/natch/natch-2.3.ebuild,v 1.2 2005/05/03 10:07:33 dholm Exp $
 
 inherit games
 
@@ -11,7 +11,7 @@ SRC_URI="http://natch.free.fr/Natch/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ~ppc"
 IUSE=""
 
 DEPEND="sys-libs/ncurses"
