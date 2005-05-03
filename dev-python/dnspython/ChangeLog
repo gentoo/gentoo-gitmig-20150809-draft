@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/dnspython
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/dnspython/ChangeLog,v 1.12 2005/03/24 19:19:43 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/dnspython/ChangeLog,v 1.13 2005/05/03 14:44:01 blubb Exp $
+
+  03 May 2005; Simon Stelling <blubb@gentoo.org> dnspython-1.3.3.ebuild:
+  stable on amd64
 
   24 Mar 2005; Bryan Østergaard <kloeri@gentoo.org> dnspython-1.3.3.ebuild:
   Add ~alpha keyword, bug 86127.
