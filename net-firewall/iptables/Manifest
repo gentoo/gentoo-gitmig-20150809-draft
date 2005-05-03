@@ -1,15 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 cdf47a369303ed0da3bb2f6888dc1aa8 iptables-1.2.7a-r3.ebuild 1982
-MD5 e195d8579d63b717ddeebe089995bf1b iptables-1.3.1-r3.ebuild 5556
+MD5 3f606fa23b084a33172afb53e20b97b0 iptables-1.3.1-r3.ebuild 5560
 MD5 c3b7afaef1230c12fc9afbfadd53472b iptables-1.2.11-r3.ebuild 5514
 MD5 e2158f065e3c8a603eb424a8ff613e4e iptables-1.2.9-r4.ebuild 5435
 MD5 20d154d66f67db6a04208bda433d9823 iptables-1.2.9.ebuild 2805
 MD5 85308a3a1261a0d23035c6869c5b922c iptables-1.3.1-r2.ebuild 5542
 MD5 d8db7c69648295e17016d8bbe4c55c07 iptables-1.2.9-r1.ebuild 3526
 MD5 5c9fe97964cdb981c75f43f20ba48c15 iptables-1.2.11-r2.ebuild 5379
-MD5 076975144c6a74354d1958ecd8df8b45 ChangeLog 17309
+MD5 b8280d2ea79ed75f0e02ad3351fb57d7 ChangeLog 17419
 MD5 37236013e0d26d43c6bff35a8a48e8ec metadata.xml 220
 MD5 f876be872ec78bc824f2503059338d8d files/iptables.confd 382
 MD5 6fcbeff4b5ce0f79f66265cb8af3d55f files/ip6tables.init 2020
@@ -52,10 +49,3 @@ MD5 e501a7bffac71e8c86aa8c62414d1621 files/1.2.11-files/install_all_dev_files.pa
 MD5 3e4bb17303647ee7a43279f6aa6f0d61 files/1.2.11-files/iptables-1.2.9-imq1.diff.bz2 1420
 MD5 1d104ede1329b4433cd31e2bf734aaaa files/1.2.11-files/grsecurity-1.2.8-iptables.patch.bz2 763
 MD5 756f721b4c0c0646a174993befa199c4 files/1.2.11-files/CAN-2004-0986.patch 1365
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCd4AC06ebR+OMO78RAvohAKCA0e6iJkjM5mM41c+/im3pvr5NHwCgiN+f
-1E4byTr6im+tJUAuvu49//g=
-=BaNt
------END PGP SIGNATURE-----
