@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.3.9-r1.ebuild,v 1.5 2005/04/21 07:42:44 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.3.9-r1.ebuild,v 1.6 2005/05/03 06:18:24 suka Exp $
 
 # Notes:
 #
@@ -344,6 +344,7 @@ get_EnvSet() {
 
 src_compile() {
 
+	unset LIBC
 	addpredict "/bin"
 	addpredict "/root/.gconfd"
 	addpredict "/root/.gnome"
