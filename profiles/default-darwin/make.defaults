@@ -20,4 +20,4 @@ USE="emboss"
 
 USERLAND="BSD"
 KERNEL="Darwin"
-LIBC="Darwin"
+ELIBC="Darwin"
