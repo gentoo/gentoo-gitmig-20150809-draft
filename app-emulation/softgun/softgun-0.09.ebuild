@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/softgun/softgun-0.09.ebuild,v 1.1 2005/04/06 23:58:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/softgun/softgun-0.09.ebuild,v 1.2 2005/05/04 18:48:17 dholm Exp $
 
 inherit toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~ppc"
 IUSE=""
 
 src_unpack() {
