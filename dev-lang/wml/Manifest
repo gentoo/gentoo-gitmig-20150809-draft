@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 664f75065d8dda0d19a0c2fccd223abe ChangeLog 1920
 MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
-MD5 6e51e18e3ee25cfad5b56e243ba60cb8 ChangeLog 1834
-MD5 fc0d2ff27f01af6015d6aec67327f53a wml-2.0.9.ebuild 1168
-MD5 aefa456b69c01c50eca3fe8b497c1f59 files/2.0.9-fix-configure.in.patch 1411
+MD5 68d3173aab21e04ddc33145dbf24de70 wml-2.0.9.ebuild 1189
 MD5 ea584f051a470445242165526961b55d files/digest-wml-2.0.9 62
+MD5 aefa456b69c01c50eca3fe8b497c1f59 files/2.0.9-fix-configure.in.patch 1411
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCeMct2G5bA0cA/ScRAj3nAKDjzPhcCNsIlgyq9PRZ2NC9iJ1L9ACfQk06
+aTwRtvgwx6dSPOAc8IQSc7k=
+=nkoa
+-----END PGP SIGNATURE-----

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/wml/wml-2.0.9.ebuild,v 1.19 2005/04/24 12:36:36 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/wml/wml-2.0.9.ebuild,v 1.20 2005/05/04 12:59:00 herbs Exp $
 
 inherit fixheadtails eutils
 
@@ -41,7 +41,7 @@ src_compile() {
 		unset CC
 		unset CFLAGS
 	fi
-	econf || die "./configure failed"
+	econf --libdir=/usr/lib/wml || die "./configure failed"
 	emake || die "emake failed"
 }
 
