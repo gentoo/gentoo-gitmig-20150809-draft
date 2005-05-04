@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/lxdvdrip/lxdvdrip-1.42.ebuild,v 1.1 2005/02/23 18:05:45 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/lxdvdrip/lxdvdrip-1.42.ebuild,v 1.2 2005/05/04 14:16:30 dholm Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://download.berlios.de/lxdvdrip/${MY_P}.tgz"
 HOMEPAGE="http://developer.berlios.de/projects/lxdvdrip/"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~x86 ~amd64 ~ppc"
 IUSE=""
 DEPEND=">=media-video/dvdauthor-0.6.9"
 
