@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/ipw2200
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw2200/ChangeLog,v 1.29 2005/04/28 15:04:29 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw2200/ChangeLog,v 1.30 2005/05/04 11:17:46 brix Exp $
+
+  04 May 2005; <brix@gentoo.org> ipw2200-1.0.3.ebuild:
+  Stable on x86.
 
   28 Apr 2005; <brix@gentoo.org> ipw2200-1.0.2-r1.ebuild:
   Stable on x86.
