@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/scilab/scilab-3.0-r1.ebuild,v 1.1 2005/03/02 17:23:52 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/scilab/scilab-3.0-r1.ebuild,v 1.2 2005/05/04 14:28:08 dholm Exp $
 
 inherit eutils
 
@@ -10,12 +10,12 @@ HOMEPAGE="http://www.scilab.org/"
 
 LICENSE="scilab"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 IUSE="ifc tcltk atlas gtk gtk2 Xaw3d"
 
 RDEPEND="virtual/x11
 	sys-libs/ncurses
-	atlas? ( sci-libs/atlas )
+	!ppc? ( atlas? ( sci-libs/atlas ) )
 	gtk? (
 		media-libs/jpeg
 		media-libs/libpng
