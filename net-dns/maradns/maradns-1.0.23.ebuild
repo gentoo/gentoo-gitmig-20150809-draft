@@ -1,24 +1,25 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/maradns/maradns-1.0.23.ebuild,v 1.5 2004/07/14 23:26:32 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/maradns/maradns-1.0.23.ebuild,v 1.6 2005/05/04 00:40:33 vapier Exp $
 
 inherit eutils
 
 DESCRIPTION="Proxy DNS server with permanent caching"
-HOMEPAGE="http://www.maradns.org"
+HOMEPAGE="http://www.maradns.org/"
 SRC_URI="http://www.maradns.org/download/${P}.tar.bz2"
 
-SLOT="0"
 LICENSE="public-domain"
-KEYWORDS="~x86 ~amd64 ~sparc ~ppc"
+SLOT="0"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE=""
 
-DEPEND="virtual/libc"
+DEPEND=""
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	sed -i -e "s:PREFIX/man:PREFIX/share/man:" \
+	cd "${S}"
+	sed -i \
+		-e "s:PREFIX/man:PREFIX/share/man:" \
 		-e "s:PREFIX/doc/maradns-\$VERSION:PREFIX/share/doc/${PF}:" \
 		build/install.locations || die
 }
@@ -43,7 +44,7 @@ src_install() {
 		MAN8=${D}/usr/share/man/man8 \
 		install || die
 
-	exeinto /etc/init.d/; newexe ${FILESDIR}/maradns.rc6 maradns
+	newinitd ${FILESDIR}/maradns.rc6 maradns
 }
 
 pkg_postinst() {
