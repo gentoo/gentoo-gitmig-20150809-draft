@@ -1,0 +1,10 @@
+# ChangeLog for app-misc/beancounter
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/beancounter/ChangeLog,v 1.1 2005/05/04 08:02:51 satya Exp $
+
+*beancounter-0.8.1 (04 May 2005)
+
+  04 May 2005; Christian Andreetta <satya@gentoo.org> +metadata.xml,
+  +beancounter-0.8.1.ebuild:
+  initial submission
+

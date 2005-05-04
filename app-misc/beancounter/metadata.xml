@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<herd>noherd</herd>
+	<maintainer>
+		<email>satya@gentoo.org</email>
+		<description>Primary Maintainer</description>
+	</maintainer>
+	<longdescription>Finance performance calculation engine with data acquisition (Yahoo! Finance) and SQL backend support</longdescription>
+</pkgmetadata>
