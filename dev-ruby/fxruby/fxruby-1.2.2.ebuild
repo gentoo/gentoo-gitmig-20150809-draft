@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fxruby/fxruby-1.2.2.ebuild,v 1.6 2005/04/14 18:44:43 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fxruby/fxruby-1.2.2.ebuild,v 1.7 2005/05/04 12:03:59 gmsoft Exp $
 
 inherit ruby
 
@@ -8,7 +8,7 @@ IUSE=""
 
 MY_P=FXRuby-${PV}
 
-KEYWORDS="sparc x86 ~ppc alpha"
+KEYWORDS="sparc x86 ~ppc alpha hppa"
 DESCRIPTION="Ruby language binding to the FOX GUI toolkit"
 HOMEPAGE="http://www.fxruby.org/"
 SRC_URI="http://rubyforge.org/frs/download.php/1612/${P}.tar.gz"

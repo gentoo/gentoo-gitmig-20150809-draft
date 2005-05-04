@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ri/ri-1.8b-r1.ebuild,v 1.6 2005/04/01 18:17:56 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ri/ri-1.8b-r1.ebuild,v 1.7 2005/05/04 12:07:46 gmsoft Exp $
 
 DESCRIPTION="Ruby Interactive reference"
 HOMEPAGE="http://www.pragmaticprogrammer.com/ruby/downloads/ri.html"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/rdoc/${P}.tgz"
 
 SLOT="0"
 LICENSE="Ruby"
-KEYWORDS="alpha ~hppa mips sparc x86 ppc amd64"
+KEYWORDS="alpha hppa mips sparc x86 ppc amd64"
 
 IUSE=""
 DEPEND="=dev-lang/ruby-1.6*"

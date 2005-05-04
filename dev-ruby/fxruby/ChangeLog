@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/fxruby
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fxruby/ChangeLog,v 1.22 2005/04/14 18:44:43 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fxruby/ChangeLog,v 1.23 2005/05/04 12:03:59 gmsoft Exp $
+
+  04 May 2005; Guy Martin <gmsoft@gentoo.org> fxruby-1.2.2.ebuild:
+  Stable on hppa.
 
   14 Apr 2005; Bryan Østergaard <kloeri@gentoo.org> fxruby-1.2.2.ebuild:
   Stable on alpha.
