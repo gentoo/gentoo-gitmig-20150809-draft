@@ -1,6 +1,10 @@
 # ChangeLog for app-shells/bash
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.63 2005/04/30 07:00:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.64 2005/05/04 05:28:44 vapier Exp $
+
+  04 May 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/bash-3.0-bash-logger.patch, bash-3.0-r11.ebuild:
+  Add support for logging in the shell #91327 by Kevin Landreth.
 
   30 Apr 2005; Mike Frysinger <vapier@gentoo.org>
   +files/bash-3.0-trap-fg-signals.patch, bash-3.0-r11.ebuild:
