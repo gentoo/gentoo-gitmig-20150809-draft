@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.3.2-r9.ebuild,v 1.1 2005/05/03 23:16:37 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.3.2-r9.ebuild,v 1.2 2005/05/04 03:08:17 mr_bones_ Exp $
 
 inherit kde eutils flag-o-matic
 set-kdedir 3.3
@@ -65,7 +65,7 @@ src_unpack() {
 
 	# see bug #81110.
 	epatch ${FILESDIR}/post-3.3.2-kdelibs-idn-2.patch
-	
+
 	# kimgio input validation errors, see bug #88862
 	cd ${S}/kimgio && patch -p0 < "${FILESDIR}/post-3.3.2-kdelibs-kimgio-2.diff"
 }
@@ -118,7 +118,6 @@ LDPATH=${PREFIX}/lib
 CONFIG_PROTECT=\"${PREFIX}/share/config ${PREFIX}/env ${PREFIX}/shutdown\"" > ${D}/etc/env.d/47kdepaths-3.3.1 # number goes down with version upgrade
 
 	fi
-
 }
 
 pkg_postinst() {
