@@ -1,13 +1,18 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/swt-3.1_pre2.ebuild,v 1.2 2005/05/04 11:52:54 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/swt-3.1_pre5.ebuild,v 1.1 2005/05/04 11:52:54 luckyduck Exp $
 
 inherit eutils java-pkg
 
 DESCRIPTION="SWT Library"
 HOMEPAGE="http://www.eclipse.org/"
-SRC_URI="x86? ( http://download.eclipse.org/downloads/drops/S-3.1M2-200409240800/swt-3.1M2-linux-gtk.zip )
-	amd64? ( http://download.eclipse.org/downloads/drops/S-3.1M2-200409240800/swt-3.1M2-linux-gtk-amd64.zip )"
+
+MY_PV="3.1M5a"
+MY_PVA="${MY_PV}-200502191500"
+
+SRC_URI="x86? ( http://download.eclipse.org/downloads/drops/S-${MY_PVA}/swt-${MY_PV}-linux-gtk.zip )
+	amd64? ( http://download.eclipse.org/downloads/drops/S-${MY_PVA}/swt-${MY_PV}-linux-gtk-x86_64.zip )"
+
 LICENSE="CPL-1.0 LGPL-2.1 MPL-1.1"
 KEYWORDS="~x86 ~amd64"
 SLOT="3"

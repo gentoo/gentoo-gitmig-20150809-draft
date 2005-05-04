@@ -1,6 +1,14 @@
 # ChangeLog for dev-java/swt
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/ChangeLog,v 1.12 2005/04/09 12:19:51 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/ChangeLog,v 1.13 2005/05/04 11:52:54 luckyduck Exp $
+
+*swt-3.1_pre5 (04 May 2005)
+
+  04 May 2005; Jan Brinkmann <luckyduck@gentoo.org>
+  +files/build-3.1_pre5.xml, swt-3.1_pre2.ebuild, +swt-3.1_pre5.ebuild:
+  new upstream version. also fixed segfault problem on amd64, the wrong
+  distfile was used for amd64. thanks to Ricardo Correia
+  <gentoo-bugs@wizy.org> for his effort.
 
 *swt-3.1_pre2 (09 Apr 2005)
 

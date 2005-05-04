@@ -1,0 +1,17 @@
+<project name="SWT" default="jar" basedir=".">
+	<property name="src" location="src"/>
+	<property name="bin" location="class"/>
+	
+	<target name="init">
+		<tstamp/>
+		<mkdir dir="${bin}"/>
+	</target>
+	
+	<target name="compile" depends="init" description="compile the source">
+		<javac srcdir="${src}" destdir="${bin}" />
+	</target>
+
+	<target name="jar" depends="compile">
+		<jar destfile="swt.jar" basedir="${bin}" />
+	</target>
+</project>
