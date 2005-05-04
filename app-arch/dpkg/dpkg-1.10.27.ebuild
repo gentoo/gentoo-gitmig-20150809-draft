@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/dpkg-1.10.23.ebuild,v 1.5 2005/01/30 18:25:14 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/dpkg-1.10.27.ebuild,v 1.1 2005/05/04 06:24:12 lanius Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://debian/pool/main/d/dpkg/${P/-/_}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc sparc ~arm amd64"
+KEYWORDS="~amd64 ~arm ~ppc ~sparc ~x86"
 IUSE=""
 
 RDEPEND=">=dev-lang/perl-5.6.0
@@ -23,7 +23,7 @@ src_compile() {
 	cd main
 	ln -s ../archtable
 	cd ..
-	epatch ${FILESDIR}/${P}.patch
+	epatch ${FILESDIR}/${PN}-1.10.26.patch
 	./configure || die
 	make || die
 }
@@ -34,4 +34,6 @@ src_install() {
 	rm -f ${D}/usr/bin/md5sum
 	mv ${D}/usr/etc ${D}/
 	dodoc ChangeLog INSTALL THANKS TODO
+	keepdir /usr/lib/db/methods/{mnt,floppy,disk}
+	keepdir /usr/lib/db/{alternatives,info,methods,parts,updates}
 }

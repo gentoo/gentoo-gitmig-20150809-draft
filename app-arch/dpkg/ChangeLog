@@ -1,6 +1,13 @@
 # ChangeLog for app-arch/dpkg
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/ChangeLog,v 1.29 2005/03/27 00:36:47 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/ChangeLog,v 1.30 2005/05/04 06:24:12 lanius Exp $
+
+*dpkg-1.10.27 (04 May 2005)
+
+  04 May 2005; Heinrich Wendel <lanius@gentoo.org>
+  -files/dpkg-1.10.18.patch, -files/dpkg-1.10.23.patch,
+  -dpkg-1.10.20.ebuild, -dpkg-1.10.23.ebuild, +dpkg-1.10.27.ebuild:
+  version bump; remove old versions
 
   27 Mar 2005; Michael Hanselmann <hansmi@gentoo.org> dpkg-1.10.26.ebuild:
   Stable on ppc.
