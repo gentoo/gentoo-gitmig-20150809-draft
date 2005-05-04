@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/win32codecs/win32codecs-20050115.ebuild,v 1.4 2005/03/29 04:06:17 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/win32codecs/win32codecs-20050216.ebuild,v 1.5 2005/05/04 21:49:21 luckyduck Exp $
 
 
 DESCRIPTION="Win32 binary codecs for video and audio playback support"
@@ -16,21 +16,31 @@ S=${WORKDIR}/all-${PV}
 src_install() {
 	cd ${S}
 
-	mkdir -p ${D}/usr/lib/win32
+	# see #83221
+	insopts -m0644
+	dodir /usr/lib/win32
 
 	if use real
 	then
-		mkdir -p ${D}/usr/lib/real
-		mv *so.6.0 ${D}/usr/lib/real
+		dodir /usr/lib/real
+		insinto /usr/lib/real
+		doins *so.6.0
+
+		# copy newly introduced codecs from realplayer10
+		# see the ChangeLog online
+		doins *.so
 
 		# fix bug #80321
 		ln -s ${D}/usr/lib/real/* ${D}/usr/lib/win32/
 	fi
 
+	insinto /usr/lib/win32
 	if use quicktime
 	then
-		mv *.qtx *.qts qtmlClient.dll  ${D}/usr/lib/win32
+		doins *.qtx *.qts qtmlClient.dll
 	fi
 
-	mv *.dll *.ax *.xa *.acm *.vwp *.drv *.DLL ${D}/usr/lib/win32
+	doins *.dll *.ax *.xa *.acm *.vwp *.drv *.DLL
+
+	dodoc README
 }
