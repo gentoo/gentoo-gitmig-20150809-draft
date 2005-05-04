@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/fcdsl/fcdsl-2.6.20.7-r4.ebuild,v 1.8 2005/04/24 10:24:25 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/fcdsl/fcdsl-2.6.20.7-r4.ebuild,v 1.9 2005/05/04 20:51:26 genstef Exp $
 
 inherit linux-mod eutils
 
@@ -37,7 +37,7 @@ SRC_URI="${SRC_URI}${BEGIN}${MIDDLE}${END}"
 
 LICENSE="LGPL-2"
 KEYWORDS="x86"
-IUSE="utf8"
+IUSE="unicode"
 SLOT="0"
 S=${WORKDIR}/fritz
 
@@ -87,7 +87,7 @@ src_unpack() {
 	done
 
 	# convert docs from latin1 to UTF-8
-	if useq utf8; then
+	if useq unicode; then
 		for i in fritz/compile-help-german.txt; do
 			einfo "Converting '${i##*/}' to UTF-8"
 			iconv -f latin1 -t utf8 -o "${i}~" "${i}" && mv -f "${i}~" "${i}" || rm -f "${i}~"

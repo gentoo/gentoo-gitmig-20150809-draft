@@ -1,6 +1,11 @@
 # ChangeLog for net-dialup/fcdsl
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/fcdsl/ChangeLog,v 1.17 2005/04/24 10:24:25 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/fcdsl/ChangeLog,v 1.18 2005/05/04 20:51:26 genstef Exp $
+
+  04 May 2005; Stefan Schweizer <genstef@gentoo.org>
+  fcdsl-2.6.20.7-r4.ebuild:
+  Change utf8 use-flag to unicode, thanks to SpanKY <vapier@gentoo.org> in bug
+  91388
 
   24 Apr 2005; Stefan Schweizer <genstef@gentoo.org>
   fcdsl-2.6.20.7-r4.ebuild:
