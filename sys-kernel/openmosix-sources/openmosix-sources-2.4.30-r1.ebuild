@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openmosix-sources/openmosix-sources-2.4.30.ebuild,v 1.1 2005/04/12 13:38:28 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openmosix-sources/openmosix-sources-2.4.30-r1.ebuild,v 1.1 2005/05/04 09:12:52 voxus Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 ETYPE="sources"
@@ -12,7 +12,8 @@ S=${WORKDIR}/linux-${KV}
 
 DESCRIPTION="Full sources for the Gentoo openMosix Linux kernel, including shared memory migration patch (migshm)"
 SRC_URI="mirror://kernel/linux/kernel/v2.4/linux-${PV}.tar.bz2
-		http://dev.gentoo.org/~voxus/om/patch-${PV}-om-migshm-no-mfs-${TIMESTAMP}.bz2"
+		http://dev.gentoo.org/~voxus/om/patch-${PV}-om-migshm-no-mfs-${TIMESTAMP}.bz2
+		http://dev.gentoo.org/~voxus/om/patch-${PV}-om-migshm-copy_unconf.patch"
 PROVIDE="virtual/linux-sources"
 HOMEPAGE="http://www.kernel.org/
 		http://www.openmosix.org/
@@ -28,6 +29,7 @@ src_unpack() {
 	mv linux-${PV} linux-${KV}
 	cd linux-${KV}
 	epatch ${DISTDIR}/patch-${PV}-om-migshm-no-mfs-${TIMESTAMP}.bz2 || die "openMosix patch failed."
+	epatch ${DISTDIR}/patch-${PV}-om-migshm-copy_unconf.patch
 
 	unpack_2_4
 }
