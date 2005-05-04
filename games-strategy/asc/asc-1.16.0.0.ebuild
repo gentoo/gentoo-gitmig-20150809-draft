@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/asc/asc-1.16.0.0.ebuild,v 1.1 2005/05/04 01:40:39 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/asc/asc-1.16.0.0.ebuild,v 1.2 2005/05/04 02:35:28 vapier Exp $
 
 inherit games
 
@@ -13,11 +13,10 @@ SRC_URI="mirror://sourceforge/asc-hq/asc-source-${PV}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND="virtual/libc
-	app-arch/bzip2
+RDEPEND="app-arch/bzip2
 	media-libs/jpeg
 	>=media-libs/libsdl-1.2.2
 	media-libs/sdl-image
@@ -27,8 +26,11 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 src_unpack() {
-	unpack ${A}
-	cp "${DISTDIR}/"*mp3 "${S}/data/music" || die "cp music failed"
+	unpack asc-source-${PV}.tar.bz2
+	for a in ${A} ; do
+		[[ ${a##*.} == "mp3" ]] \
+			&& cp "${DISTDIR}"/${a} "${S}"/data/music
+	done
 }
 
 src_compile() {
