@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/mmix
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mmix/ChangeLog,v 1.7 2004/07/02 04:28:55 eradicator Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mmix/ChangeLog,v 1.8 2005/05/04 17:59:23 dholm Exp $
+
+  04 May 2005; David Holm <dholm@gentoo.org> mmix-20020216.ebuild:
+  Added to ~ppc.
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> mmix-20020216.ebuild:
   virtual/glibc -> virtual/libc
