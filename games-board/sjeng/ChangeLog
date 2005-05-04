@@ -1,6 +1,10 @@
 # ChangeLog for games-board/sjeng
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/sjeng/ChangeLog,v 1.7 2005/03/09 19:49:26 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/sjeng/ChangeLog,v 1.8 2005/05/04 21:34:37 mr_bones_ Exp $
+
+  04 May 2005; Michael Sterrett <mr_bones_@gentoo.org> -sjeng-11.2.ebuild,
+  sjeng-11.2-r1.ebuild:
+  fix deps for bug #90894; tidy
 
   09 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org> sjeng-11.2-r1.ebuild:
   added ~amd64 KEYWORD, fixes #72704
