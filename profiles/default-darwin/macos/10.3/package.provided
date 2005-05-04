@@ -13,7 +13,7 @@ app-misc/srm-1.2.6
 app-shells/bash-2.05b-r2
 app-shells/tcsh-6.12
 app-shells/zsh-4.1.1
-app-text/enscript-1.6.3
+app-text/enscript-1.6.1
 app-text/rcs-5.7
 app-text/texi2html-1.57
 dev-java/javascriptcore-96
