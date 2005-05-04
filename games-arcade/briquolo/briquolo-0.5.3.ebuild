@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/briquolo/briquolo-0.5.1.ebuild,v 1.1 2005/02/02 06:24:15 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/briquolo/briquolo-0.5.3.ebuild,v 1.1 2005/05/04 02:46:53 mr_bones_ Exp $
 
-inherit games
+inherit eutils games
 
 DESCRIPTION="Breakout with 3D representation based on OpenGL"
 HOMEPAGE="http://briquolo.free.fr/en/index.html"
@@ -16,8 +16,19 @@ IUSE="nls"
 DEPEND="virtual/opengl
 	media-libs/libsdl
 	media-libs/sdl-mixer
+	media-libs/sdl-ttf
 	media-libs/libpng
 	nls? ( sys-devel/gettext )"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	# no thanks we'll take care of it.
+	sed -i \
+		-e '/^SUBDIRS/s/desktop//' \
+		Makefile.in \
+		|| die "sed failed"
+}
 
 src_compile() {
 	egamesconf \
@@ -29,5 +40,7 @@ src_compile() {
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
 	dodoc AUTHORS ChangeLog README
+	doicon desktop/briquolo.svg
+	make_desktop_entry briquolo Briquolo briquolo.svg
 	prepgamesdirs
 }
