@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-8.12.10.ebuild,v 1.6 2005/04/26 20:24:01 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-8.12.10.ebuild,v 1.7 2005/05/04 09:38:09 lu_zero Exp $
 
 IUSE="opengl"
 
@@ -45,8 +45,8 @@ pkg_setup(){
 	ewarn "will not work."
 	fi
 	ebegin "Checking for DRM support disabled"
-	linux_chkconfig_present DRM
-	eend ${!?}
+	! linux_chkconfig_present DRM
+	eend $?
 	if [[ $? -ne 0 ]] ; then
 	ewarn "You have DRM support enabled, the direct rendering"
 	ewarn "will not work."
