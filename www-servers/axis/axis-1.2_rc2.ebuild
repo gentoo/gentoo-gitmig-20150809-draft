@@ -1,16 +1,21 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/axis/axis-1.2_rc2.ebuild,v 1.4 2005/04/04 15:01:05 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/axis/axis-1.2_rc2.ebuild,v 1.5 2005/05/04 22:18:37 luckyduck Exp $
 
 inherit eutils java-pkg
 
-DESCRIPTION="Apache Axis SOAP implementation"
-HOMEPAGE="http://ws.apache.org/axis/"
 MY_PV="${PV//./_}"
 MY_PV="${MY_PV/_rc2/RC2}"
 MY_P="${PN}-${MY_PV}"
 SRCFILE="${MY_P}-src.tar.gz"
+DESCRIPTION="Apache Axis SOAP implementation"
+HOMEPAGE="http://ws.apache.org/axis/"
 SRC_URI="mirror://apache/ws/${PN}/${MY_PV}/${SRCFILE}"
+
+LICENSE="Apache-1.1"
+SLOT="1"
+KEYWORDS="x86 amd64"
+IUSE="debug doc jikes"
 
 RDEPEND=">=virtual/jre-1.4"
 DEPEND=">=virtual/jdk-1.4
@@ -29,10 +34,6 @@ DEPEND=">=virtual/jdk-1.4
 		dev-java/sun-jaf-bin
 		dev-java/sun-javamail-bin
 		jikes? ( >=dev-java/jikes-1.21 )"
-LICENSE="Apache-1.1"
-SLOT="1"
-KEYWORDS="~x86 ~amd64"
-IUSE="debug doc jikes"
 S=${WORKDIR}/${MY_P}
 
 src_unpack() {
