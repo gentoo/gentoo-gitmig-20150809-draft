@@ -1,6 +1,11 @@
 # ChangeLog for www-servers/ncsa-httpd
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/ncsa-httpd/ChangeLog,v 1.2 2004/09/05 09:43:04 swegener Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-servers/ncsa-httpd/ChangeLog,v 1.3 2005/05/04 12:31:53 ka0ttic Exp $
+
+  04 May 2005; Aaron Walker <ka0ttic@gentoo.org>
+  +files/ncsa-httpd-1.5.2a-gdbm_compat.patch, ncsa-httpd-1.5.2a.ebuild:
+  Link against -lgdbm_compat now that it has been broken out. Thanks to Ryan
+  Finnie <gentoo-bugzilla@arrrrrr.com> in bug 91275 for the patch.
 
   05 Sep 2004; Sven Wegener <swegener@gentoo.org> ncsa-httpd-1.5.2a.ebuild:
   Fixed ChangeLog header. Added missing IUSE.
