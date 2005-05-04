@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/attr/attr-2.4.19.ebuild,v 1.13 2005/02/07 04:02:10 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/attr/attr-2.4.19.ebuild,v 1.14 2005/05/04 23:43:45 vapier Exp $
 
 inherit eutils
 
@@ -15,11 +15,9 @@ KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sh sparc x86"
 IUSE="nls debug"
 
 DEPEND=">=sys-apps/portage-2.0.47-r10
-	>=sys-apps/sed-4.0.5
-	virtual/libc
 	nls? ( sys-devel/gettext )
 	sys-devel/libtool"
-RDEPEND="virtual/libc"
+RDEPEND=""
 
 src_unpack() {
 	unpack ${A}
@@ -27,7 +25,6 @@ src_unpack() {
 
 	sed -i \
 		-e "/^PKG_DOC_DIR/s:=.*:= /usr/share/doc/${PF}:" \
-		-e '/^PKG_[[:upper:]]*_DIR/s:= := $(DESTDIR):' \
 		include/builddefs.in \
 		|| die "failed to update builddefs"
 
@@ -59,5 +56,6 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install install-lib install-dev || die
+	make DIST_ROOT="${D}" install install-lib install-dev || die
+	prepalldocs
 }
