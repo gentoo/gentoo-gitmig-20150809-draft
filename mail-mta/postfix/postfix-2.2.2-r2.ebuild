@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.2.2-r2.ebuild,v 1.1 2005/05/04 09:52:10 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.2.2-r2.ebuild,v 1.2 2005/05/04 21:10:59 ferdy Exp $
 
 inherit eutils ssl-cert toolchain-funcs flag-o-matic mailer
 IUSE="ipv6 pam ldap mysql postgres ssl sasl mbox nis vda selinux hardened"
@@ -21,7 +21,7 @@ LICENSE="IPL-1"
 SLOT="0"
 KEYWORDS="~x86 ~sparc ~ppc ~alpha ~amd64 ~s390 ~mips ~hppa ~ppc64"
 
-PROVIDE="virtual/mda"
+PROVIDE="${PROVIDE} virtual/mda"
 DEPEND=">=sys-libs/db-3.2
 	>=dev-libs/libpcre-3.4
 	>=sys-apps/sed-4
