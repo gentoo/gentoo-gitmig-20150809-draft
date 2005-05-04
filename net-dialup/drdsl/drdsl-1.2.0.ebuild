@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/drdsl/drdsl-1.2.0.ebuild,v 1.1 2005/04/15 18:49:22 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/drdsl/drdsl-1.2.0.ebuild,v 1.2 2005/05/04 20:43:54 genstef Exp $
 
 DESCRIPTION="AVM DSL Assistant for autodetecting DSL values (VPI, VCI, VPP) for 'fcdsl' based cards"
 HOMEPAGE="ftp://ftp.in-berlin.de/pub/capi4linux/"
@@ -9,7 +9,7 @@ SRC_URI="ftp://ftp.in-berlin.de/pub/capi4linux/drdsl/${P}.tar.gz"
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="~x86"
-IUSE="utf8"
+IUSE="unicode"
 
 DEPEND="sys-apps/coreutils"
 RDEPEND="sys-libs/glibc
@@ -25,7 +25,7 @@ src_unpack() {
 	done
 
 	# convert 'latin1' to 'utf8'
-	if useq utf8; then
+	if useq unicode; then
 		for i in drdsl.ini; do
 			einfo "Converting '${i}' to UTF-8"
 			iconv -f latin1 -t utf8 -o "${i}~" "${i}" && mv -f "${i}~" "${i}" || rm -f "${i}~"
