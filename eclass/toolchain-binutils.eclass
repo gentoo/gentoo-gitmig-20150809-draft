@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.35 2005/04/17 07:35:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.36 2005/05/04 01:12:44 vapier Exp $
 
 # We install binutils into CTARGET-VERSION specific directories.  This lets 
 # us easily merge multiple versions for multiple targets (if we wish) and 
@@ -21,7 +21,8 @@ fi
 DESCRIPTION="Tools necessary to build programs"
 HOMEPAGE="http://sources.redhat.com/binutils/"
 SRC_URI="mirror://kernel/linux/devel/binutils/${P}.tar.bz2
-	mirror://kernel/linux/devel/binutils/test/${P}.tar.bz2"
+	mirror://kernel/linux/devel/binutils/test/${P}.tar.bz2
+	mirror://gnu/binutils/${P}.tar.bz2"
 [[ -n ${PATCHVER} ]] && \
 	SRC_URI="${SRC_URI} mirror://gentoo/${P}-patches-${PATCHVER}.tar.bz2"
 [[ -n ${UCLIBC_PATCHVER} ]] && \
