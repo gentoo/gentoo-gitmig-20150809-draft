@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/amavisd-new-2.2.1-r2.ebuild,v 1.1 2005/05/04 18:44:42 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/amavisd-new-2.2.1-r2.ebuild,v 1.2 2005/05/04 18:53:14 ticho Exp $
 
 inherit eutils
 
@@ -90,9 +90,12 @@ src_install() {
 
 	dosbin amavisd amavisd-agent amavisd-nanny
 
+	# install config file with proper permissons/owners
 	insinto /etc
 	insopts -m0600
 	newins amavisd.conf-sample amavisd.conf
+	fowners root:amavis /etc/amavisd.conf
+	fperms 640 /etc/amavisd.conf
 	dosed "s:^#\\?\\\$MYHOME[^;]*;:\$MYHOME = '$AMAVIS_ROOT';:" \
 		/etc/amavisd.conf
 	if [ "$(domainname)" = "(none)" ] ; then
