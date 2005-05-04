@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/wxlib.eclass,v 1.3 2005/05/02 17:40:39 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/wxlib.eclass,v 1.4 2005/05/04 02:15:56 pythonhead Exp $
 
 # Author Diego Pettenò <flameeyes@gentoo.org>
 # Maintained by wxwidgets herd
@@ -85,6 +85,7 @@ subconfigure() {
 	fi
 	${S}/configure --enable-monolithic \
 		--host=${CHOST} \
+		--disable-debugreport \
 		--libdir=/usr/$(get_libdir) \
 		--prefix=/usr \
 		--infodir=/usr/share/info \
