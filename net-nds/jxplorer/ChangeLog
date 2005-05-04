@@ -1,6 +1,12 @@
 # ChangeLog for net-nds/jxplorer
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/jxplorer/ChangeLog,v 1.5 2005/01/22 15:35:19 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/jxplorer/ChangeLog,v 1.6 2005/05/04 22:24:03 luckyduck Exp $
+
+*jxplorer-3.1 (04 May 2005)
+
+  04 May 2005; Jan Brinkmann <luckyduck@gentoo.org>
+  -jxplorer-3.1_beta1.ebuild, jxplorer-3.1_rc4.ebuild, +jxplorer-3.1.ebuild:
+  new upstream version, marked rc4 stable on amd64 and x86. did some cleanup
 
 *jxplorer-3.1_rc4 (22 Jan 2005)
 

@@ -1,16 +1,16 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/jxplorer/jxplorer-3.1_rc4.ebuild,v 1.2 2005/05/04 22:24:03 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/jxplorer/jxplorer-3.1.ebuild,v 1.1 2005/05/04 22:24:03 luckyduck Exp $
 
 inherit eutils java-pkg
 
 DESCRIPTION="A fully functional ldap browser written in java."
 HOMEPAGE="http://jxplorer.org/"
-SRC_URI="mirror://sourceforge/${PN}/JXv${PV/_/}src.tar.bz2
-	mirror://sourceforge/${PN}/JXv${PV/_/}deploy.tar.bz2"
+SRC_URI="mirror://sourceforge/${PN}/JXv${PV}src.tar.bz2
+	mirror://sourceforge/${PN}/JXv${PV}deploy.tar.bz2"
 LICENSE="CAOSL"
 SLOT="0"
-KEYWORDS="x86 amd64"
+KEYWORDS="~x86 ~amd64"
 IUSE="doc"
 DEPEND=">=virtual/jdk-1.4"
 RDEPEND=">=virtual/jre-1.4
@@ -22,7 +22,7 @@ RDEPEND=">=virtual/jre-1.4
 	>=dev-java/sun-dsml-bin-2.1.2_pre1
 	>=dev-java/sun-jaf-bin-1.0.2
 	>=dev-java/sun-javamail-bin-1.3.1
-	=www-servers/axis-1*"
+	>=www-servers/axis-1.1"
 RESTRICT="nomirror"
 
 S=${WORKDIR}/${PN}
