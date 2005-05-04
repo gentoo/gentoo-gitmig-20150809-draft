@@ -1,6 +1,9 @@
 # ChangeLog for net-zope/silva
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/silva/ChangeLog,v 1.10 2005/03/28 16:29:55 radek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/silva/ChangeLog,v 1.11 2005/05/04 13:10:22 dholm Exp $
+
+  04 May 2005; David Holm <dholm@gentoo.org> silva-1.2.ebuild:
+  Added to ~ppc.
 
 *silva-1.2 (28 Mar 2005)
 
