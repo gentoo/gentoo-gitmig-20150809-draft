@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/mockmaker
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/mockmaker/ChangeLog,v 1.2 2005/04/15 16:35:44 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/mockmaker/ChangeLog,v 1.3 2005/05/04 20:06:36 luckyduck Exp $
+
+  04 May 2005; Jan Brinkmann <luckyduck@gentoo.org>
+  mockmaker-1.12.0_p20050104.ebuild:
+  stable on amd64, ppc and x86
 
   15 Apr 2005; Jan Brinkmann <luckyduck@gentoo.org>
   mockmaker-1.12.0_p20050104.ebuild:
