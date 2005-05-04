@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jgoodies-looks/jgoodies-looks-1.2.2.ebuild,v 1.5 2005/03/30 18:57:41 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jgoodies-looks/jgoodies-looks-1.2.2.ebuild,v 1.6 2005/05/04 18:18:02 luckyduck Exp $
 
 inherit java-pkg
 
@@ -10,13 +10,13 @@ SRC_URI="http://www.jgoodies.com/download/libraries/looks-1_2_2.zip"
 
 LICENSE="BSD"
 SLOT="1.2"
-KEYWORDS="~x86 ~amd64 ~ppc"
+KEYWORDS="x86 amd64 ppc"
 IUSE="doc jikes"
 
 DEPEND=">=virtual/jdk-1.4.2
-		>=dev-java/ant-core-1.4
-		  app-arch/unzip
-		jikes? ( >=dev-java/jikes-1.21 )"
+	dev-java/ant-core
+	app-arch/unzip
+	jikes? ( >=dev-java/jikes-1.21 )"
 RDEPEND=">=virtual/jre-1.4.2"
 
 S="${WORKDIR}/looks-1.2.2"
@@ -40,8 +40,6 @@ src_compile() {
 src_install() {
 	java-pkg_dojar looks.jar
 
-	dodoc LICENSE.txt RELEASE-NOTES.txt
-	if use doc ; then
-		java-pkg_dohtml -r build/doc
-	fi
+	dodoc RELEASE-NOTES.txt
+	use doc && java-pkg_dohtml -r build/doc
 }
