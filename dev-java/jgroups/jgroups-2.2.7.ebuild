@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jgroups/jgroups-2.2.7.ebuild,v 1.3 2005/01/20 19:45:11 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jgroups/jgroups-2.2.7.ebuild,v 1.4 2005/05/04 22:39:04 luckyduck Exp $
 
 inherit java-pkg
 
@@ -9,20 +9,20 @@ SRC_URI="mirror://sourceforge/javagroups/JGroups-${PV}.src.zip"
 HOMEPAGE="http://www.jgroups.org/javagroupsnew/docs/"
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
-RDEPEND="	=virtual/jre-1.4*
-		dev-java/concurrent-util
-		dev-java/jms"
+KEYWORDS="x86 amd64 ~ppc"
+RDEPEND=">=virtual/jre-1.4
+	dev-java/concurrent-util
+	dev-java/jms"
 DEPEND="${RDEPEND}
-		=virtual/jdk-1.4*
-		>=dev-java/ant-core-1.5
-		app-arch/unzip
-		junit? (
-			dev-java/commons-logging
-			dev-java/junit
-			dev-java/log4j
-		)
-		jikes? ( dev-java/jikes )"
+	=virtual/jdk-1.4*
+	>=dev-java/ant-core-1.5
+	app-arch/unzip
+	junit? (
+		dev-java/commons-logging
+		dev-java/junit
+		dev-java/log4j
+	)
+	jikes? ( dev-java/jikes )"
 IUSE="doc junit jikes"
 
 src_unpack() {
