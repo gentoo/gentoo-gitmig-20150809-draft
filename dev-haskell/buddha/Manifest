@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ae35b0d25267263f7e8fecb0d3e2b6eb buddha-1.2.ebuild 1062
-MD5 4430534a7404911477fbff71df09a0dc ChangeLog 464
+MD5 78ff01fb2e74b0c68cd0457c6bcc998b ChangeLog 542
+MD5 f37c8bdb72c0a8ac61937d8e8b2c5760 buddha-1.2.ebuild 1063
 MD5 a769ecfcd1cdd2d40986627df7dfb249 metadata.xml 224
 MD5 ff5f12ec48ad5095e488cf40b56e4964 files/digest-buddha-1.2 62
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCWIXY06ebR+OMO78RAmoTAJ9Z5FDbM6WndUGhuM3haDa3XidPoQCdHTG4
-Ux24NuMvW7UPwlwbNKp2fHY=
-=600f
------END PGP SIGNATURE-----
