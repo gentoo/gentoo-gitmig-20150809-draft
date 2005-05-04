@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/projectx/projectx-0.81.7.ebuild,v 1.7 2005/03/26 16:58:12 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/projectx/projectx-0.81.7.ebuild,v 1.8 2005/05/04 09:30:12 luckyduck Exp $
 
 inherit java-pkg
 
@@ -37,7 +37,7 @@ src_compile() {
 
 src_install() {
 	# create shellscript wrapper
-	echo -e "#!/bin/sh\nexec \${JAVA_HOME}/bin/java -jar /usr/share/${PN}/${P}.jar \"\$@\"" > ${MY_PN}
+	echo -e "#!/bin/sh\nexec \${JAVA_HOME}/bin/java -Xms32m -Xmx512m -jar /usr/share/${PN}/${P}.jar \"\$@\"" > ${MY_PN}
 
 	insinto "/usr/share/${PN}"
 	doins dist/lib/*.jar ac3.bin
