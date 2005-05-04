@@ -1,19 +1,21 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/javahelp-bin/javahelp-bin-2.0.02-r1.ebuild,v 1.1 2005/03/16 20:03:07 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/javahelp-bin/javahelp-bin-2.0.02-r1.ebuild,v 1.2 2005/05/04 22:22:39 luckyduck Exp $
 
 inherit java-pkg
 
 DESCRIPTION="JavaHelp software is a full-featured, platform-independent, extensible help system that enables you to incorporate online help in applets, components, applications, operating systems, and devices."
 HOMEPAGE="http://java.sun.com/products/javahelp/"
+SRC_URI="javahelp-${PV//./_}.zip"
+
 LICENSE="sun-j2sl"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~amd64"
+KEYWORDS="x86 ppc amd64"
+IUSE="doc"
+
 DEPEND=">=app-arch/unzip-5.50-r1"
 RDEPEND=">=virtual/jdk-1.3"
 RESTRICT="fetch"
-SRC_URI="javahelp-${PV//./_}.zip"
-IUSE="doc"
 
 S="${WORKDIR}/jh2.0"
 
