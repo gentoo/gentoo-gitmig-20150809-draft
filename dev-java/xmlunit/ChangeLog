@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/xmlunit
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xmlunit/ChangeLog,v 1.3 2005/03/16 16:59:03 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xmlunit/ChangeLog,v 1.4 2005/05/04 17:55:26 luckyduck Exp $
+
+  04 May 2005; Jan Brinkmann <luckyduck@gentoo.org> xmlunit-1.0.ebuild:
+  added ~ppc to KEYWORDS
 
   16 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org>
   files/xmlunit-1.0-gentoo.patch, xmlunit-1.0.ebuild:
