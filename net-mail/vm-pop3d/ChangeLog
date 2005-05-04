@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/vm-pop3d
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vm-pop3d/ChangeLog,v 1.14 2005/05/01 18:23:04 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vm-pop3d/ChangeLog,v 1.15 2005/05/04 08:44:09 ferdy Exp $
+
+  04 May 2005; Fernando J. Pereda <ferdy@gentoo.org> -vm-pop3d-1.1.6.ebuild:
+  remove old ebuild, since it is not usable anymore
 
   01 May 2005; Michael Hanselmann <hansmi@gentoo.org>
   vm-pop3d-1.1.6-r1.ebuild:
