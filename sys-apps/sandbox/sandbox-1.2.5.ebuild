@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sandbox/sandbox-1.2.5.ebuild,v 1.2 2005/05/04 22:51:07 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sandbox/sandbox-1.2.5.ebuild,v 1.3 2005/05/04 22:53:27 azarah Exp $
 
 #
 # don't monkey with this ebuild unless contacting portage devs.
@@ -71,12 +71,12 @@ src_compile() {
 			cd ${S}-${ABI}
 			einfo "Configuring sandbox for ABI=${ABI}..."
 			econf --libdir="/usr/$(get_libdir)" || {
-				abi_fail_check
+				abi_fail_check "${ABI}"
 				die "econf failed for ${ABI}"
 			}
 			einfo "Building sandbox for ABI=${ABI}..."
 			emake || {
-				abi_fail_check
+				abi_fail_check "${ABI}"
 				die "emake failed for ${ABI}"
 			}
 		done
