@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-8.00.ebuild,v 1.3 2005/04/24 09:58:22 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-8.00.ebuild,v 1.4 2005/05/04 06:21:19 lanius Exp $
 
 IUSE="static spell"
 
@@ -52,6 +52,7 @@ src_unpack() {
 	       -e "s:/usr/share/icons:${D}/usr/share/icons:g" \
 	       -e "s:/etc/X11:${D}/etc/X11:g" \
 	       -e "s:/usr/share/gnome:${D}/usr/share/gnome:g" \
+	       -e "s:/opt/gnome/share:${D}/opt/gnome/share:g" \
 	       -e 's:#\(OPERA_FORCE_JAVA_ENABLED=\):\1:' \
 	       -e 's:#\(export LD_PRELOAD OPERA_FORCE_JAVA_ENABLED\):\1:' \
 		   -e 's:read str_answer:return 0:' \

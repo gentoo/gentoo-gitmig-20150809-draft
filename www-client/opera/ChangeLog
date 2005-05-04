@@ -1,6 +1,9 @@
 # ChangeLog for www-client/opera
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.6 2005/04/26 17:39:20 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.7 2005/05/04 06:21:19 lanius Exp $
+
+  04 May 2005; Heinrich Wendel <lanius@gentoo.org> opera-8.00.ebuild:
+  bug #90575
 
   26 Apr 2005; Heinrich Wendel <lanius@gentoo.org> files/opera.desktop:
   add Application to opera.desktop to show up in GNOME, bug #90508
