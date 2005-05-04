@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/gstreamer
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/ChangeLog,v 1.104 2005/04/30 17:57:46 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/ChangeLog,v 1.105 2005/05/04 13:19:49 zaheerm Exp $
+
+  04 May 2005; Zaheer Abbas Merali <zaheerm@gentoo.org> :
+  version bump
 
   30 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> :
   Stable on ppc.
