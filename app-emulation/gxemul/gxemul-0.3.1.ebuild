@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/gxemul/gxemul-0.3.1.ebuild,v 1.1 2005/04/11 21:50:17 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/gxemul/gxemul-0.3.1.ebuild,v 1.2 2005/05/04 19:06:53 dholm Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://gavare.se/gxemul/src/${P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~amd64 ~mips ~sparc ~x86"
+KEYWORDS="~amd64 ~mips ~sparc ~x86 ~ppc"
 IUSE="X cacheemu delays mips16"
 
 DEPEND="X? ( virtual/x11 )"

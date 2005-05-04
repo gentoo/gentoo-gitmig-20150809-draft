@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/coldfire
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/coldfire/ChangeLog,v 1.1 2005/03/17 01:19:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/coldfire/ChangeLog,v 1.2 2005/05/04 19:02:33 dholm Exp $
+
+  04 May 2005; David Holm <dholm@gentoo.org> coldfire-0.2.2.ebuild:
+  Added to ~ppc.
 
 *coldfire-0.2.2 (16 Mar 2004)
 
