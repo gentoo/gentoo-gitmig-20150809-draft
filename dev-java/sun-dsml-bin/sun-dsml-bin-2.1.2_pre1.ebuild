@@ -1,19 +1,21 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-dsml-bin/sun-dsml-bin-2.1.2_pre1.ebuild,v 1.1 2005/01/15 19:16:27 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-dsml-bin/sun-dsml-bin-2.1.2_pre1.ebuild,v 1.2 2005/05/04 21:58:04 luckyduck Exp $
 
 inherit java-pkg
 
 At="dsmlv2-1_2-ea1.zip"
 DESCRIPTION="Java Naming and Directory Interface (JNDI) DSML Service Provider"
-SRC_URI="${At}"
 HOMEPAGE="http://java.sun.com/developer/earlyAccess/jndi/"
-KEYWORDS="~x86 ~amd64"
+SRC_URI="${At}"
+
 LICENSE="sun-bcla-dsml"
 SLOT="2"
+KEYWORDS="x86 amd64 ~ppc"
+IUSE="doc"
+
 DEPEND=">=app-arch/unzip-5.50-r1"
 RDEPEND=">=virtual/jre-1.4"
-IUSE="doc"
 RESTRICT="fetch"
 
 S=${WORKDIR}
@@ -57,7 +59,7 @@ src_compile() {
 }
 
 src_install() {
-	dodoc COPYRIGHT README-DSMLv2.txt
+	dodoc README-DSMLv2.txt
 	if use doc; then
 		java-pkg_dohtml -r docs/*
 	fi
