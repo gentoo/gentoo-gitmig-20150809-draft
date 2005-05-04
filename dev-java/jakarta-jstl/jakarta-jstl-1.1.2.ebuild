@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jakarta-jstl/jakarta-jstl-1.1.2.ebuild,v 1.1 2005/04/17 17:05:42 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jakarta-jstl/jakarta-jstl-1.1.2.ebuild,v 1.2 2005/05/04 09:05:25 luckyduck Exp $
 
 inherit java-pkg
 
@@ -18,7 +18,8 @@ DEPEND=">=virtual/jdk-1.4.2
 	jikes? ( dev-java/jikes )
 	source? ( app-arch/zip )"
 RDEPEND=">=virtual/jre-1.4.2
-	>=www-servers/tomcat-5"
+	>=www-servers/tomcat-5
+	=dev-java/servletapi-2.4*"
 
 S=${WORKDIR}/jakarta-taglibs-standard-${PV}-src/standard
 
