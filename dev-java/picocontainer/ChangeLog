@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/picocontainer
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/picocontainer/ChangeLog,v 1.10 2004/10/22 10:02:14 absinthe Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/picocontainer/ChangeLog,v 1.11 2005/05/04 16:53:36 luckyduck Exp $
+
+  04 May 2005; Jan Brinkmann <luckyduck@gentoo.org>
+  -files/build-1.0_beta3.xml, -picocontainer-1.0_beta3.ebuild,
+  picocontainer-1.0_beta4.ebuild:
+  stable on amd64, ppc and x86
 
   22 Oct 2004; Dylan Carlson <absinthe@gentoo.org>
   picocontainer-1.0_beta4.ebuild:
