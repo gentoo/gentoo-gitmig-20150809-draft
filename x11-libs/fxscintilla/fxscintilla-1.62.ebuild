@@ -1,13 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fxscintilla/fxscintilla-1.62.ebuild,v 1.3 2005/04/14 18:43:46 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fxscintilla/fxscintilla-1.62.ebuild,v 1.4 2005/05/04 11:57:54 gmsoft Exp $
 
 DESCRIPTION="A free source code editing component for the FOX-Toolkit"
 HOMEPAGE="http://www.nongnu.org/fxscintilla"
 SRC_URI="http://savannah.nongnu.org/download/fxscintilla/${P}.tar.gz"
 
 SLOT="0"
-KEYWORDS="x86 ~ppc sparc ~amd64 alpha"
+KEYWORDS="x86 ~ppc sparc ~amd64 alpha hppa"
 LICENSE="LGPL-2.1"
 IUSE=""
 

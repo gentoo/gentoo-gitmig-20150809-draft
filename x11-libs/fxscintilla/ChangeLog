@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/fxscintilla
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fxscintilla/ChangeLog,v 1.12 2005/04/14 18:43:46 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fxscintilla/ChangeLog,v 1.13 2005/05/04 11:57:54 gmsoft Exp $
+
+  04 May 2005; Guy Martin <gmsoft@gentoo.org> fxscintilla-1.62.ebuild:
+  Stable on hppa.
 
   14 Apr 2005; Bryan Østergaard <kloeri@gentoo.org>
   fxscintilla-1.62.ebuild:
