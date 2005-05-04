@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/pysoulseek/pysoulseek-1.2.5.ebuild,v 1.9 2005/05/04 07:44:39 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/pysoulseek/pysoulseek-1.2.6.ebuild,v 1.1 2005/05/04 07:44:39 pythonhead Exp $
 
 inherit eutils distutils
 
@@ -17,7 +17,7 @@ SRC_URI="http://www.sensi.org/~ak/pyslsk/${MY_P}.tar.gz "
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc hppa ~amd64"
+KEYWORDS="~x86 ~ppc ~sparc ~hppa ~amd64"
 
 DEPEND=">=dev-lang/python-2.1
 	=dev-python/wxpython-2.4*
@@ -33,6 +33,6 @@ src_install() {
 
 pkg_postinst() {
 	echo
-	einfo "The hydriant patch no longer is, check nicotine from the same people"
+	einfo "The hydriant patch no longer is, checkout net-p2p/nicotine from the same people"
 	echo
 }
