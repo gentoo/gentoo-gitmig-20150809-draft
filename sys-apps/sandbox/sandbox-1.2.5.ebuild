@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sandbox/sandbox-1.2.5.ebuild,v 1.3 2005/05/04 22:53:27 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sandbox/sandbox-1.2.5.ebuild,v 1.4 2005/05/04 23:25:00 vapier Exp $
 
 #
 # don't monkey with this ebuild unless contacting portage devs.
@@ -22,19 +22,13 @@ RESTRICT="multilib-pkg-force"
 
 DEPEND="virtual/libc"
 
-check_multilib() {
-	has_m32
-	if [ "$?" == 0 ] ; then
-		einfo "Found valid multilib environment."
-		einfo "Building with multilib support."
-		export MULTILIB="1"
+has_old_amd64_multilib() {
+	if has_m32 && [[ ${CONF_MULTILIBDIR} == "lib32" ]] ; then
+		export SANDBOX_MULTILIB=0
 	else
-		ewarn "No valid multilib environment found!"
-		ewarn "Building without multilib support. If"
-		ewarn "you want to have multilib support,"
-		ewarn "emerge gcc with \"multilib\" in your"
-		ewarn "useflags."
+		export SANDBOX_MULTILIB=1
 	fi
+	return ${SANDBOX_MULTILIB}
 }
 
 src_unpack() {
@@ -46,6 +40,10 @@ src_unpack() {
 			mv ${S} ${S%/}-${ABI} || die "failed moving \$S to ${ABI}"
 		done
 	else
+		if has_old_amd64_multilib ; then
+			unpack ${A}
+			mv ${S} lib32
+		fi
 		unpack ${A}
 	fi
 }
@@ -81,13 +79,17 @@ src_compile() {
 			}
 		done
 		ABI="${OABI}"
+
 	else
-		if useq amd64 ; then
-			check_multilib
-			export HAVE_64BIT_ARCH="${MULTILIB}"
-		fi
 		econf || die "econf failed"
 		emake || die "emake failed"
+
+		if has_old_amd64_multilib ; then
+			cd ${WORKDIR}/lib32
+			append-flags -m32
+			econf --libdir=/usr/${CONF_MULTILIBDIR} || die "econf m32 failed"
+			emake || die "emake m32 failed"
+		fi
 	fi
 }
 
@@ -102,6 +104,9 @@ src_install() {
 		done
 		ABI="${OABI}"
 	else
-		make install DESTDIR="${D}" || die "einstalled failed"
+		if has_old_amd64_multilib ; then
+			make install DESTDIR="${D}" -C ${WORKDIR}/lib32 || die "install m32 failed"
+		fi
+		make install DESTDIR="${D}" || die "install failed"
 	fi
 }

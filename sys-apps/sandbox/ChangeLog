@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/sandbox
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sandbox/ChangeLog,v 1.10 2005/05/04 15:16:00 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sandbox/ChangeLog,v 1.11 2005/05/04 23:25:00 vapier Exp $
+
+  04 May 2005; Mike Frysinger <vapier@gentoo.org> sandbox-1.2.5.ebuild:
+  Fix multilib building on amd64/2004.3 profiles.
 
 *sandbox-1.2.5 (04 May 2005)
 
