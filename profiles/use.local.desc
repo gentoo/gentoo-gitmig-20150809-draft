@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1141 2005/05/03 22:22:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1142 2005/05/04 04:27:46 vapier Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -124,7 +124,6 @@ dev-db/postgresql:pg-intdatetime - Enables --enable-integer-datetimes configure 
 dev-db/postgresql:pg-vacuumdelay - Adds in the vacuum inter-page delay feature.
 dev-db/rekall:xbase - Support for the Xbase db family, covering dBase, Clipper, FoxPro, Visual dBase/Objects/FoxPro plus some older products.
 dev-db/sqlite:nothreadsafe - turn off thread safe operation of sqlite
-dev-db/sqlite:utf8 - Enable UTF8 encoding
 dev-dotnet/gtk-sharp:gnomedb - Enable gnomedb support
 dev-games/cegui:devil - image loading support with DevIL
 dev-games/clanlib:clanJavaScript - Enables javascript support in clanlib
@@ -516,7 +515,6 @@ media-video/vlc:freetype - Enables freetype font support
 media-video/vlc:httpd - Enables a web based interface for vlc
 media-video/vlc:live - Enables LIVE.com support
 media-video/vlc:stream - Enables vlc to stream video
-media-video/vlc:utf8 - Enables utf8 support
 media-video/vlc:vlm - New videolan (media) manager (vlm), a little manager designed to launch and manage multiple streams from within one instance of VLC.
 media-video/winki:css - Enables ripping of encrypted dvds
 net-analyzer/aimsniff:http - Install the WAS (Web AIM Sniff) frontend
