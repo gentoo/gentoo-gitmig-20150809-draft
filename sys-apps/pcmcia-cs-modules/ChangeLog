@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/pcmcia-cs-modules
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs-modules/ChangeLog,v 1.1 2005/04/25 12:00:25 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs-modules/ChangeLog,v 1.2 2005/05/04 09:41:51 brix Exp $
+
+  04 May 2005; <brix@gentoo.org> pcmcia-cs-modules-3.2.8.ebuild:
+  Bail out if linux-2.6.x detected.
 
 *pcmcia-cs-modules-3.2.8 (25 Apr 2005)
 

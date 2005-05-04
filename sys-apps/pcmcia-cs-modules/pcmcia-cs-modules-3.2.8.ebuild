@@ -1,13 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs-modules/pcmcia-cs-modules-3.2.8.ebuild,v 1.1 2005/04/25 12:00:25 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs-modules/pcmcia-cs-modules-3.2.8.ebuild,v 1.2 2005/05/04 09:41:51 brix Exp $
 
 inherit eutils flag-o-matic toolchain-funcs linux-info
 
 MY_P=${P/-modules/}
 S=${WORKDIR}/${MY_P}
 
-DESCRIPTION="PCMCIA modules for Linux"
+DESCRIPTION="PCMCIA modules for Linux 2.4.x"
 HOMEPAGE="http://pcmcia-cs.sourceforge.net"
 SRC_URI="mirror://sourceforge/pcmcia-cs/${MY_P}.tar.gz
 		http://ozlabs.org/people/dgibson/dldwd/monitor-0.13e.patch"
@@ -26,11 +26,11 @@ pkg_setup() {
 	linux-info_pkg_setup
 
 	if kernel_is gt 2 4; then
-		ewarn
-		ewarn "The recommended PCMCIA configuration for linux-2.6.x is to"
-		ewarn "use the in-kernel PCMCIA drivers."
-		ewarn
-		ebeep 5
+		eerror
+		eerror "This package only works with linux-2.4.x"
+		eerror "For newer kernels, please use the in-kernel PCMCIA drivers."
+		eerror
+		die "linux-${KV_FULL} detected"
 	fi
 
 	if (linux_chkconfig_present PCMCIA || linux_chkconfig_present PCCARD); then
