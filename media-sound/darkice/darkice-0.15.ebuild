@@ -1,20 +1,20 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/darkice/darkice-0.15.ebuild,v 1.1 2005/04/25 16:34:54 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/darkice/darkice-0.15.ebuild,v 1.2 2005/05/04 15:52:08 luckyduck Exp $
 
-
-DESCRIPTION="IceCast live streamer delivering Ogg and mp3 streams simultaneously to multiple hosts."
+DESCRIPTION="IceCast live streamer, delivering ogg and mp3 streams simultaneously to multiple hosts."
 HOMEPAGE="http://darkice.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~amd64"
-IUSE="encode vorbis alsa"
+IUSE="alsa encode jack vorbis"
 
 DEPEND="encode?	( >=media-sound/lame-1.89 )
 	vorbis? ( >=media-libs/libvorbis-1.0 )
-	alsa? ( >=media-libs/alsa-lib-1.0.0 )"
+	alsa? ( >=media-libs/alsa-lib-1.0.0 )
+	jack? ( media-sound/jack-audio-connection-kit )"
 
 src_compile() {
 	if ! use encode && ! use vorbis
@@ -31,8 +31,8 @@ src_compile() {
 
 	econf $(use_with alsa) \
 	      $(use_with encode lame) \
+		  $(use_with jack) \
 	      $(use_with vorbis) || die "configuration failed"
-
 	emake || die "Compilation failed"
 }
 
