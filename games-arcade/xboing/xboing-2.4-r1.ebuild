@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/xboing/xboing-2.4-r1.ebuild,v 1.6 2005/05/03 09:47:35 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/xboing/xboing-2.4-r1.ebuild,v 1.7 2005/05/04 00:59:17 vapier Exp $
 
 inherit games eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.techrescue.org/xboing/${PN}${PV}.tar.gz
 
 LICENSE="xboing"
 SLOT="0"
-KEYWORDS="x86 sparc ~ppc"
+KEYWORDS="ppc sparc x86"
 IUSE=""
 
 DEPEND="virtual/x11"
@@ -20,8 +20,9 @@ S=${WORKDIR}/${PN}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${WORKDIR}/xboing-${PV}-debian.patch
+	cd "${S}"
+	epatch "${WORKDIR}"/xboing-${PV}-debian.patch
+	sed -i '/^#include/s:xpm\.h:X11/xpm.h:' *.c
 }
 
 src_compile() {
