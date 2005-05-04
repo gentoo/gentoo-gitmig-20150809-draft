@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/wsdl4j
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/wsdl4j/ChangeLog,v 1.6 2005/02/03 17:32:50 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/wsdl4j/ChangeLog,v 1.7 2005/05/04 17:50:48 luckyduck Exp $
+
+  04 May 2005; Jan Brinkmann <luckyduck@gentoo.org> wsdl4j-1.4.ebuild:
+  added ~ppc to KEYWORDS, introduced support for the source useflag.
 
   03 Feb 2005; Jan Brinkmann <luckyduck@gentoo.org> wsdl4j-1.4.ebuild:
   stable on x86 and amd64.
