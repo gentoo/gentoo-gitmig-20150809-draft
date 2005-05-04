@@ -1,15 +1,15 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 2b308cf4d0a4d11005bec22d9406afc6 ChangeLog 512
-MD5 dc55d790314bf3dd4051873c0568552f dtdparser-1.21.ebuild 1085
+MD5 4dc50ea684e6e7ce1bff329fbd4c1f7f ChangeLog 639
+MD5 27be20bc806f4deace83fed31a1b8e88 dtdparser-1.21.ebuild 1030
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 977b4c772bc01096ee71c8df9d288eb9 files/buildfile.patch 1180
 MD5 f9c01d5670a79a1b953e4666b76dd579 files/digest-dtdparser-1.21 63
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFCOHh106ebR+OMO78RAmohAJ0XSLIgwxrb0Y493496RaWYHB7C8gCgiGIV
-H/rEfq8CDvRyWYp8OzNtWWY=
-=Np9a
+iD8DBQFCeQ4/06ebR+OMO78RAl5HAJ9hY12YErJBHpx1nRWg0i1l3zcwggCgj4rO
+g5fKzuycJivwEjwWAUhJ1ro=
+=9NCt
 -----END PGP SIGNATURE-----
