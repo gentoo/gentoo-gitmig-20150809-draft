@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/poi
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/poi/ChangeLog,v 1.8 2005/02/06 01:06:21 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/poi/ChangeLog,v 1.9 2005/05/04 20:27:19 luckyduck Exp $
+
+  04 May 2005; Jan Brinkmann <luckyduck@gentoo.org>
+  -files/poi-2.0-jikes-fix.patch, -poi-2.0.ebuild, poi-2.5-r1.ebuild:
+  stable on ppc
 
   06 Feb 2005; Jan Brinkmann <luckyduck@gentoo.org> poi-2.5-r1.ebuild,
   -poi-2.5.ebuild:
