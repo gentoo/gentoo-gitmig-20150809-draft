@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/vice
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/ChangeLog,v 1.23 2005/04/24 11:15:49 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/ChangeLog,v 1.24 2005/05/04 16:11:40 hanno Exp $
+
+  04 May 2005; Hanno Boeck <hanno@gentoo.org> +files/vice_gcc4_patch.gz,
+  vice-1.16.ebuild:
+  GCC 4 fix (from Debian, already applied by upstream devs).
 
   24 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> vice-1.14-r1.ebuild:
   Stable on ppc.

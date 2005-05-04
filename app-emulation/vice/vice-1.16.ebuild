@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/vice-1.16.ebuild,v 1.2 2005/02/14 09:17:52 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/vice-1.16.ebuild,v 1.3 2005/05/04 16:11:40 hanno Exp $
 
 inherit games
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.funet.fi/pub/cbm/crossplatform/emulators/VICE/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="arts gnome nls sdl X Xaw3d"
+IUSE="arts gnome nls sdl X Xaw3d readline"
 
 # FIXME: esound is required until configure.in is patched.
 DEPEND="virtual/libc
@@ -24,6 +24,12 @@ DEPEND="virtual/libc
 	sdl? ( media-libs/libsdl )
 	X? ( virtual/x11 )
 	Xaw3d? ( x11-libs/Xaw3d )"
+
+src_unpack() {
+	unpack ${A}
+	epatch ${FILESDIR}/vice_gcc4_patch.gz
+}
+
 
 src_compile() {
 	# disabled ffmpeg support since ffmpeg isn't slotted and later
