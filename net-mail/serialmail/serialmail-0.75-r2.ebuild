@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/serialmail/serialmail-0.75-r2.ebuild,v 1.8 2005/03/03 18:29:50 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/serialmail/serialmail-0.75-r2.ebuild,v 1.9 2005/05/04 09:03:55 ferdy Exp $
 
 inherit eutils
 
@@ -35,7 +35,7 @@ src_unpack() {
 }
 
 src_compile() {
-	grep -v man hier.c | grep -v doc > hier.c
+	grep -v man hier.c | grep -v doc > hier.c.tmp ; mv hier.c.tmp hier.c
 	emake it man || die
 }
 
