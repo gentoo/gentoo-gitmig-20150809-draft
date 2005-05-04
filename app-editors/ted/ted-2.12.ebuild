@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/ted/ted-2.12.ebuild,v 1.11 2005/01/01 13:34:41 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/ted/ted-2.12.ebuild,v 1.12 2005/05/04 01:02:31 vapier Exp $
 
 DESCRIPTION="X-based rich text editor."
 HOMEPAGE="http://www.nllgg.nl/Ted"
@@ -40,13 +40,9 @@ src_compile() {
 }
 
 src_install() {
-	cd ${BUILDDIR}
-
 	mkdir ${T}/pkg
 	cd ${T}/pkg || die "Couldn't cd to package"
 	tar --use=gzip -xvf ${S}/tedPackage/Ted*.tar.gz || die "couldnt unpack tedPackage/Ted*.tar.gz"
-
-	cd ${BUILDDIR}
 
 	dodir /usr/share/Ted
 	cp -R ${T}/pkg/afm ${D}/usr/share/Ted/afm || die "couldnt cp temp/pkg/afm"

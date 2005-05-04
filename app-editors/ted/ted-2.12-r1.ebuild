@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/ted/ted-2.12-r1.ebuild,v 1.1 2005/03/28 22:41:06 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/ted/ted-2.12-r1.ebuild,v 1.2 2005/05/04 01:02:31 vapier Exp $
 
 DESCRIPTION="X-based rich text editor."
 HOMEPAGE="http://www.nllgg.nl/Ted"
@@ -44,13 +44,10 @@ src_compile() {
 src_install() {
 	# This is a fix for userpriv &| usersandbox. 
 	export RPM_BUILD_ROOT="${S}"
-	cd ${BUILDDIR}
 
 	mkdir ${T}/pkg
 	cd ${T}/pkg || die "Couldn't cd to package"
 	tar --use=gzip -xvf ${S}/tedPackage/Ted*.tar.gz || die "couldnt unpack tedPackage/Ted*.tar.gz"
-
-	cd ${BUILDDIR}
 
 	dodir /usr/share/Ted
 	cp -R ${T}/pkg/afm ${D}/usr/share/Ted/afm || die "couldnt cp temp/pkg/afm"

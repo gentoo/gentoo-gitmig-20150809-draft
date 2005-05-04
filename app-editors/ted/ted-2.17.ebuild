@@ -1,15 +1,15 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/ted/ted-2.17.ebuild,v 1.1 2005/03/31 09:01:43 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/ted/ted-2.17.ebuild,v 1.2 2005/05/04 01:02:31 vapier Exp $
 
-DESCRIPTION="X-based rich text editor."
+DESCRIPTION="X-based rich text editor"
 HOMEPAGE="http://www.nllgg.nl/Ted"
 SRC_URI="ftp://ftp.nluug.nl/pub/editors/ted/${P}.src.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
+KEYWORDS="~ppc ~sparc ~x86"
 IUSE=""
-KEYWORDS="~x86 ~ppc ~sparc"
 
 DEPEND="x11-libs/openmotif
 	>=media-libs/tiff-3.5.7
@@ -20,9 +20,10 @@ S="${WORKDIR}/Ted-${PV}"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}/Ted
-	mv makefile.in makefile.in.orig
-	sed 's@^CFLAGS=@CFLAGS= -DDOCUMENT_DIR=\\"/usr/share/doc/${PF}/Ted/\\"@' makefile.in.orig > makefile.in
+	cd "${S}"/Ted
+	sed -i \
+		-e 's@^CFLAGS=@CFLAGS= -DDOCUMENT_DIR=\\"/usr/share/doc/${PF}/Ted/\\"@' \
+		makefile.in
 }
 
 src_compile() {
@@ -36,21 +37,20 @@ src_compile() {
 	# The makefile doesn't really allow parallel make, but it does
 	# no harm either.
 	cd ${S}
-	emake DEF_AFMDIR=-DAFMDIR=\\\"/usr/share/Ted/afm\\\" \
+	emake \
+		DEF_AFMDIR=-DAFMDIR=\\\"/usr/share/Ted/afm\\\" \
 		DEF_INDDIR=-DINDDIR=\\\"/usr/share/Ted/ind\\\" \
-		package.shared || die "couldnt emake"
+		package.shared \
+		|| die "couldnt emake"
 }
 
 src_install() {
 	# This is a fix for userpriv &| usersandbox. 
 	export RPM_BUILD_ROOT="${S}"
-	cd ${BUILDDIR}
 
 	mkdir ${T}/pkg
 	cd ${T}/pkg || die "Couldn't cd to package"
 	tar --use=gzip -xvf ${S}/tedPackage/Ted*.tar.gz || die "couldnt unpack tedPackage/Ted*.tar.gz"
-
-	cd ${BUILDDIR}
 
 	dodir /usr/share/Ted
 	cp -R ${T}/pkg/afm ${D}/usr/share/Ted/afm || die "couldnt cp temp/pkg/afm"
