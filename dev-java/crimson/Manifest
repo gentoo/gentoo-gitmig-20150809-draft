@@ -1,4 +1,14 @@
-MD5 1355f85f725edd070820743e2e783434 crimson-1.1.3.ebuild 953
-MD5 60da6fdb3bb2fabddedb3e4926aaff6b ChangeLog 1034
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 ba5be00c31e49b30db07127ae0de3eff crimson-1.1.3.ebuild 1157
+MD5 7d87de9275c404f85423975575dd6356 ChangeLog 1185
 MD5 5031f2db9b4dfa814dfebcb2736307d8 metadata.xml 864
 MD5 732dadf55f415b36663513d7abf926d2 files/digest-crimson-1.1.3 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCeTID06ebR+OMO78RAmZCAJ9wbJwwxt/Mw8veofJQNIMfKpFuPgCbBuEQ
+zPqahRYWnhFTpT/Icdn5lBQ=
+=LsWm
+-----END PGP SIGNATURE-----
