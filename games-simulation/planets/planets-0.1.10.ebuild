@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/planets/planets-0.1.10.ebuild,v 1.8 2004/12/16 15:57:35 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/planets/planets-0.1.10.ebuild,v 1.9 2005/05/04 16:17:53 luckyduck Exp $
 
 inherit games
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://planets.homedns.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc ~sparc"
+KEYWORDS="x86 ppc ~sparc ~amd64"
 IUSE=""
 
 RDEPEND="dev-lang/tcl
@@ -20,7 +20,7 @@ DEPEND="${RDEPEND}
 
 src_compile() {
 	make clean
-	make planets || die
+	make planets || die "make failed"
 }
 
 src_install() {
