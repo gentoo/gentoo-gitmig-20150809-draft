@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php5-sapi-r2.eclass,v 1.1 2005/03/27 17:23:44 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php5-sapi-r2.eclass,v 1.2 2005/05/04 23:39:15 stuart Exp $
 #
 # eclass/php5-sapi-r2.eclass
 #               Eclass for building different php5 SAPI instances
@@ -29,7 +29,7 @@ if [ "${PHP_PACKAGE}" = 1 ]; then
 	HOMEPAGE="http://www.php.net/"
 	LICENSE="PHP-3"
 	SRC_URI="http://www.php.net/distributions/${MY_PHP_P}.tar.bz2"
-	S="${WORKDIR}/${MY_P}"
+	S="${WORKDIR}/${MY_PHP_P}"
 fi
 
 IUSE="${IUSE} adabas bcmath berkdb birdstep bzlib calendar cdb cpdflib crypt ctype curl curlwrappers db2 dba dbase dbm dbmaker dbx debug dio empress empress-bcs esoob exif fam frontbase fdftk flatfile filepro ftp gd gd-external gdbm gmp hyperwave-api imap inifile iconv informix ingres interbase iodbc jpeg kerberos ldap libedit mcve memlimit mhash mime ming mnogosearch msession msql mssql mysql mysqli ncurses nls nis oci8 odbc oracle7 ovrimos pcntl pcre pfpro png postgres posix qdbm readline recode sapdb sasl session sharedext sharedmem simplexml snmp soap sockets solid spell spl sqlite ssl sybase sybase-ct sysvipc threads tidy tiff tokenizer truetype wddx xsl xml2 xmlrpc xpm zlib"
@@ -346,7 +346,7 @@ php5-sapi-r2_src_unpack() {
 	chmod 755 configure
 
 	[ "${ARCH}" == "sparc" ] && epatch ${FILESDIR}/php-5.0-stdint.diff
-	epatch ${FILESDIR}/${MY_PHP_P}-missing-arches.patch
+	# epatch ${FILESDIR}/${MY_PHP_P}-missing-arches.patch
 }
 
 php5-sapi-r2_src_compile() {
