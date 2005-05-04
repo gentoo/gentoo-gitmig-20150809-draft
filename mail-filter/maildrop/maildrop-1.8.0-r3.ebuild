@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/maildrop/maildrop-1.8.0-r3.ebuild,v 1.1 2005/03/10 18:25:40 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/maildrop/maildrop-1.8.0-r3.ebuild,v 1.2 2005/05/04 20:26:17 ferdy Exp $
 
 inherit eutils gnuconfig
 
@@ -14,7 +14,7 @@ S="${WORKDIR}/${P%%_pre}"
 SLOT="0"
 LICENSE="GPL-2"
 # not in keywords due to missing dependencies: ~arm ~s390 ~ppc64
-KEYWORDS="~x86 ~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~sparc"
+KEYWORDS="x86 ~alpha ~amd64 ~ia64 ~ppc ~sparc"
 IUSE="mysql ldap gdbm berkdb uclibc debug postgres"
 
 PROVIDE="virtual/mda"
@@ -105,11 +105,22 @@ src_install() {
 	doins ${FILESDIR}/maildroprc
 
 	insinto /etc/maildrop
-	if use mysql
-	then
+	insopts -m0640
+	if use mysql ; then
 		sed -e "s:/var/lib/mysql/mysql.sock:/var/run/mysqld/mysqld.sock:" \
 		 	${S}/maildropmysql.config > ${S}/maildropmysql.cf
 		newins ${S}/maildropmysql.cf maildropmysql.cf
 	fi
 	use ldap && newins ${S}/maildropldap.config maildropldap.cf
+}
+
+pkg_postinst() {
+	echo
+	ewarn
+	ewarn "Due to a security bug (#91465) you should change the permissions of:"
+	use ldap && ewarn "   /etc/maildrop/maildropldap.cf"
+	use mysql && ewarn "   /etc/maildrop/maildropmysql.cf"
+	ewarn "  by running chmod 0640 on them."
+	ewarn
+	echo
 }
