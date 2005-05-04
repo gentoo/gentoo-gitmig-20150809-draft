@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.235 2005/05/03 23:16:37 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.236 2005/05/04 16:30:41 corsair Exp $
+
+  04 May 2005; Markus Rothe <corsair@gentoo.org> kdelibs-3.3.2-r9.ebuild:
+  Stable on ppc64; bug #88862
 
 *kdelibs-3.4.0-r2 (03 May 2005)
 *kdelibs-3.3.2-r9 (03 May 2005)
