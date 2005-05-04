@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ogre-1.0.1.ebuild,v 1.1 2005/05/03 22:19:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ogre-1.0.1.ebuild,v 1.2 2005/05/04 04:08:32 swegener Exp $
 
 inherit eutils libtool
 
@@ -19,7 +19,7 @@ RDEPEND=">=dev-libs/zziplib-0.13.36
 	devil? ( >=media-libs/devil-1.5 )
 	openexr? ( >=media-libs/openexr-1.2 )
 	sdl? ( >=media-libs/libsdl-1.2.6 )
-	!sdl? ( !opengl (
+	!sdl? ( !opengl? (
 		=dev-cpp/gtkglextmm-1.0*
 		=dev-cpp/libglademm-2.2*
 	) )
