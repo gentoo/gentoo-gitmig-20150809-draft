@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/drift/drift-2.1.0.ebuild,v 1.1 2005/03/09 08:44:53 araujo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/drift/drift-2.1.0.ebuild,v 1.2 2005/05/04 16:43:03 dholm Exp $
 
 inherit ghc-package
 
@@ -13,7 +13,7 @@ SRC_URI="http://repetae.net/john/computer/haskell/${MY_PN}/drop/${MY_P}.tar.gz"
 LICENSE="MIT"
 SLOT="0"
 
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 
 IUSE=""
 
