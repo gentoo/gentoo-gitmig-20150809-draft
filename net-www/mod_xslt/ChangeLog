@@ -1,6 +1,9 @@
 # ChangeLog for net-www/mod_xslt
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_xslt/ChangeLog,v 1.15 2005/02/25 12:35:16 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_xslt/ChangeLog,v 1.16 2005/05/04 12:24:18 dholm Exp $
+
+  04 May 2005; David Holm <dholm@gentoo.org> mod_xslt-2.0.4.ebuild:
+  Readded to ~ppc. Please don't remove it without filing a proper bugreport.
 
   25 Feb 2005; Benedikt Boehm <hollow@gentoo.org> mod_xslt-2.0.4.ebuild:
   added MOD_DEFINE
