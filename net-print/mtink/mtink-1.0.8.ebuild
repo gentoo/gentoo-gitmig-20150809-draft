@@ -1,13 +1,13 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/mtink/mtink-1.0.1.ebuild,v 1.6 2004/10/03 21:52:43 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/mtink/mtink-1.0.8.ebuild,v 1.1 2005/05/04 05:45:18 lanius Exp $
 
 DESCRIPTION="mtink is a status monitor and inkjet cartridge changer for some Epson printers"
 HOMEPAGE="http://xwtools.automatix.de/"
 SRC_URI="http://xwtools.automatix.de/files/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~amd64"
+KEYWORDS="~x86 ~amd64"
 IUSE="doc cups"
 
 DEPEND="x11-libs/openmotif
@@ -42,6 +42,9 @@ src_install() {
 }
 
 pkg_postinst() {
+	# see #70310
+	chmod 700 /var/mtink /var/run/mtink 2>/dev/null
+
 	einfo
 	einfo "mtink needs correct permissions to access printer device."
 	einfo "To do this you either need to run the following chmod command:"
