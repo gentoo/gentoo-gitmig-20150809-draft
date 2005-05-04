@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/flac-1.1.2-r1.ebuild,v 1.1 2005/05/03 20:24:01 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/flac-1.1.2-r1.ebuild,v 1.2 2005/05/04 02:19:52 eradicator Exp $
 
 inherit libtool eutils flag-o-matic gcc
 
@@ -60,12 +60,9 @@ src_install() {
 }
 
 pkg_postinst() {
-	ewarn "If you've upgraded from a previous version of flac, you may need to run"
-	ewarn "one or more of the following:"
-	ewarn "revdep-rebuild --soname libFLAC.so.4"
-	ewarn "revdep-rebuild --soname libFLAC++.so.2"
-	ewarn "revdep-rebuild --soname libFLAC.so.6"
-	ewarn "revdep-rebuild --soname libFLAC++.so.4"
+	ewarn "If you've upgraded from a previous version of flac, you may need to re-emerge"
+	ewarn "packages that linked against flac by running:"
+	ewarn "revdep-rebuild"
 }
 
 # see #59482
