@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/nagios-plugins-1.3.1-r1.ebuild,v 1.16 2004/12/11 16:37:06 config Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/nagios-plugins-1.3.1-r1.ebuild,v 1.17 2005/05/04 11:55:57 eldad Exp $
 
 inherit eutils
 
@@ -73,6 +73,8 @@ src_install() {
 	mv ${S}/contrib ${D}/usr/nagios/libexec/contrib
 
 	chown -R nagios:nagios ${D}/usr/nagios/libexec || die "Failed Chown of ${D}/usr/nagios/libexec"
+
+	find ${D}/usr/nagios/libexec -type d | xargs chmod 0755 || die "Failed Chmod of ${D}/usr/nagios/libexec (dirs)"
 }
 
 pkg_postinst() {
