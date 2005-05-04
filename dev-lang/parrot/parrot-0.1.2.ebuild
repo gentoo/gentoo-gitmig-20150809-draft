@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/parrot/parrot-0.1.2.ebuild,v 1.2 2005/04/21 22:26:13 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/parrot/parrot-0.1.2.ebuild,v 1.3 2005/05/04 18:16:27 dholm Exp $
 
 inherit base eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://cpan/authors/id/L/LT/LTOETSCH/${S}.tar.gz"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="~x86 ~sparc ~amd64"
+KEYWORDS="~x86 ~sparc ~amd64 ~ppc"
 IUSE="test"
 
 #this ebuild has been tested with the given perl
