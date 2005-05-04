@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.9.3-r3.ebuild,v 1.2 2005/04/18 03:26:27 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.9.3-r3.ebuild,v 1.3 2005/05/04 20:11:51 omkhar Exp $
 
 inherit eutils
 
@@ -52,7 +52,7 @@ SRC_URI="mirror://sourceforge/psi/${MY_P}.tar.bz2
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~hppa ~amd64 ~sparc"
+KEYWORDS="~x86 ~ppc ~hppa ~amd64 ~sparc ~ppc64"
 
 #After final relase we do not need this
 S="${WORKDIR}/${MY_P}"
