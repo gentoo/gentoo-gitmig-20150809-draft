@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/nvidia-glx-1.0.6629-r1.ebuild,v 1.3 2005/01/17 08:47:43 cyfred Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/nvidia-glx-1.0.6629-r1.ebuild,v 1.4 2005/05/04 21:32:06 eradicator Exp $
 
 inherit eutils
 
@@ -34,6 +34,7 @@ IUSE="multilib"
 DEPEND="virtual/libc
 	virtual/x11
 	>=x11-base/opengl-update-1.8.1
+	<x11-base/opengl-update-2.2.0
 	~media-video/nvidia-kernel-${PV}"
 
 PDEPEND="amd64? ( multilib? ( >=app-emulation/emul-linux-x86-nvidia-${PV} ) )"

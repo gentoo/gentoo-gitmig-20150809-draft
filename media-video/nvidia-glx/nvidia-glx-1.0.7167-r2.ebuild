@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/nvidia-glx-1.0.7174-r1.ebuild,v 1.2 2005/04/02 16:03:44 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/nvidia-glx-1.0.7167-r2.ebuild,v 1.1 2005/05/04 21:32:06 eradicator Exp $
 
 inherit eutils multilib versionator
 
-X86_PKG_V="pkg0"
+X86_PKG_V="pkg1"
 AMD64_PKG_V="pkg2"
 NV_V="${PV/1.0./1.0-}"
 X86_NV_PACKAGE="NVIDIA-Linux-x86-${NV_V}"
@@ -18,15 +18,14 @@ SRC_URI="x86? ( ftp://download.nvidia.com/XFree86/Linux-x86/${NV_V}/${X86_NV_PAC
 LICENSE="NVIDIA"
 SLOT="0"
 
-# Just amd64 2005.0 fixes in this revbump
-KEYWORDS="-* ~x86 ~amd64"
+KEYWORDS="-* ~amd64 ~x86"
 
 RESTRICT="nostrip multilib-pkg-force"
 IUSE=""
 
 DEPEND="virtual/libc
 	virtual/x11
-	>=x11-base/opengl-update-2.1.0
+	>=x11-base/opengl-update-2.2.0
 	~media-video/nvidia-kernel-${PV}
 	!app-emulation/emul-linux-x86-nvidia"
 
@@ -68,11 +67,11 @@ src_unpack() {
 	# Patchs go below here, add breif description
 	cd ${S}
 	# nVidia wants us to use nvidia-installer, removing warning.
-	epatch ${NV_PATCH_PREFIX//$(get_version_component_range 3)/6629}-makefile.patch
+	epatch ${NV_PATCH_PREFIX//7167/6629}-makefile.patch
 	# Use the correct defines to make gtkglext build work
-	epatch ${NV_PATCH_PREFIX//$(get_version_component_range 3)/6629}-defines.patch
+	epatch ${NV_PATCH_PREFIX//7167/6629}-defines.patch
 	# Use some more sensible gl headers and make way for new glext.h
-	epatch ${NV_PATCH_PREFIX//$(get_version_component_range 3)/6629}-glheader.patch
+	epatch ${NV_PATCH_PREFIX//7167/6629}-glheader.patch
 
 	# Closing bug #37517 by letting virtual/x11 provide system wide glext.h
 	# 16 July 2004, opengl-update is now supplying glext.h for system wide
@@ -103,12 +102,6 @@ src_install() {
 
 	is_final_abi || return 0
 
-	# Install tls_test
-	dodir /usr/libexec/misc
-	exeinto /usr/libexec/misc
-	doexe usr/bin/tls_test
-	doexe usr/bin/tls_test_dso.so
-
 	# Docs, remove nvidia-settings as provided by media-video/nvidia-settings
 	rm -f usr/share/doc/nvidia-settings*
 	dodoc usr/share/doc/*
@@ -133,15 +126,19 @@ src_install-libs() {
 
 	# The GLX libraries
 	exeinto ${NV_ROOT}/lib
-	doexe usr/${pkglibdir}/libGL.so.${PV} \
-	      usr/${pkglibdir}/libGLcore.so.${PV} \
-		  usr/${pkglibdir}/libnvidia-tls.so.${PV}
+	doexe usr/${pkglibdir}/libGL.so.${PV}
+	doexe usr/${pkglibdir}/libGLcore.so.${PV}
 	dosym libGL.so.${PV} ${NV_ROOT}/lib/libGL.so
 	dosym libGL.so.${PV} ${NV_ROOT}/lib/libGL.so.1
 	dosym libGLcore.so.${PV} ${NV_ROOT}/lib/libGLcore.so
 	dosym libGLcore.so.${PV} ${NV_ROOT}/lib/libGLcore.so.1
-	dosym libnvidia-tls.so.${PV} ${NV_ROOT}/lib/libnvidia-tls.so
-	dosym libnvidia-tls.so.${PV} ${NV_ROOT}/lib/libnvidia-tls.so.1
+
+	local NO_TLS_ROOT="/usr/${inslibdir}/opengl/nvidia/no-tls"
+	dodir ${NO_TLS_ROOT}
+	exeinto ${NO_TLS_ROOT}
+	doexe usr/${pkglibdir}/libnvidia-tls.so.${PV}
+	dosym libnvidia-tls.so.${PV} ${NO_TLS_ROOT}/libnvidia-tls.so
+	dosym libnvidia-tls.so.${PV} ${NO_TLS_ROOT}/libnvidia-tls.so.1
 
 	local TLS_ROOT="/usr/${inslibdir}/opengl/nvidia/tls"
 	dodir ${TLS_ROOT}
@@ -150,8 +147,15 @@ src_install-libs() {
 	dosym libnvidia-tls.so.${PV} ${TLS_ROOT}/libnvidia-tls.so
 	dosym libnvidia-tls.so.${PV} ${TLS_ROOT}/libnvidia-tls.so.1
 
-	# Old opengl-updates don't always make this
-	keepdir /usr/${inslibdir}/tls
+	if want_tls ; then
+		dosym ../tls/libnvidia-tls.so ${NV_ROOT}/lib
+		dosym ../tls/libnvidia-tls.so.1 ${NV_ROOT}/lib
+		dosym ../tls/libnvidia-tls.so.${PV} ${NV_ROOT}/lib
+	else
+		dosym ../no-tls/libnvidia-tls.so ${NV_ROOT}/lib
+		dosym ../no-tls/libnvidia-tls.so.1 ${NV_ROOT}/lib
+		dosym ../no-tls/libnvidia-tls.so.${PV} ${NV_ROOT}/lib
+	fi
 
 	# Not sure whether installing the .la file is neccessary;
 	# this is adopted from the `nvidia' ebuild
@@ -220,4 +224,34 @@ pkg_postinst() {
 	echo
 	einfo "nVidia have requested that any bug reports submitted have the"
 	einfo "output of /usr/bin/nvidia-bug-report.sh included."
+}
+
+want_tls() {
+	# For uclibc or anything non glibc, return false
+	has_version sys-libs/glibc || return 1
+
+	# Old versions of glibc were lt/no-tls only
+	has_version '<sys-libs/glibc-2.3.2' && return 1
+
+	local valid_chost="true"
+	if use x86 ; then
+		case ${CHOST/-*} in
+			i486|i586|i686) ;;
+			*) valid_chost="false"
+		esac
+	fi
+
+	[[ ${valid_chost} == "false" ]] && return 1
+
+	# If we've got nptl, we've got tls
+	built_with_use sys-libs/glibc nptl && return 0
+
+	# These versions built linuxthreads version to support tls, too
+	has_version '>=sys-libs/glibc-2.3.4.20040619-r2' && return 0
+
+	return 1
+}
+
+pkg_postrm() {
+	opengl-update --use-old xorg-x11
 }
