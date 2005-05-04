@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kmp/kmp-0.01.ebuild,v 1.7 2005/05/04 16:04:18 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kmp/kmp-0.5.ebuild,v 1.1 2005/05/04 16:04:18 luckyduck Exp $
 
 inherit eutils kde-functions
 
@@ -15,10 +15,7 @@ SLOT="0"
 KEYWORDS="amd64 ~ppc sparc x86"
 IUSE=""
 
-src_unpack() {
-	unpack ${A}
-	epatch ${FILESDIR}/kmp-0.01-gcc34.patch
-}
+S=${WORKDIR}/${PN}
 
 src_compile() {
 	echo QMAKE_CFLAGS_RELEASE=${CFLAGS} >> kmp.pro
