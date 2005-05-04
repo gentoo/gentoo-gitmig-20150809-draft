@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/wxGTK
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.74 2005/05/03 02:06:53 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.75 2005/05/04 02:09:24 gustavoz Exp $
+
+  04 May 2005; Gustavo Zacarias <gustavoz@gentoo.org> wxGTK-2.4.2-r3.ebuild:
+  Stable on sparc
 
   03 May 2005; Rob Cakebread <pythonhead@gentoo.org> wxGTK-2.6.0.ebuild:
   Enable xpm by default because wxpython needs it. bug# 91252
