@@ -1,21 +1,24 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/hsqldb/hsqldb-1.7.3.1.ebuild,v 1.5 2005/04/03 08:33:59 sejo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/hsqldb/hsqldb-1.7.3.1.ebuild,v 1.6 2005/05/04 20:20:37 luckyduck Exp $
 
 inherit java-pkg eutils
 
 DESCRIPTION="HSQLDB is the leading SQL relational database engine written in Java."
-SRC_URI="mirror://sourceforge/${PN}/${PN}_${PV//./_}.zip"
 HOMEPAGE="http://hsqldb.sourceforge.net"
+SRC_URI="mirror://sourceforge/${PN}/${PN}_${PV//./_}.zip"
+
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~x86 ~amd64 ~ppc64 ~sparc ~ppc"
-IUSE="jikes doc"
+KEYWORDS="x86 amd64 ~ppc64 ~sparc ppc"
+IUSE="doc jikes source"
+
 DEPEND=">=virtual/jdk-1.4
-		app-arch/unzip
-		dev-java/ant-core
-		=dev-java/servletapi-2.3*
-		jikes? ( dev-java/jikes )"
+	app-arch/unzip
+	dev-java/ant-core
+	=dev-java/servletapi-2.3*
+	jikes? ( dev-java/jikes )
+	source? ( app-arch/zip )"
 RDEPEND=">=virtual/jre-1.4"
 
 S=${WORKDIR}/${PN}
@@ -47,18 +50,21 @@ src_unpack() {
 }
 
 src_compile() {
-	local antflags="-f build/build.xml"
-	use jikes && antflags="${antflags} -Dbuild.compiler=jikes"
-	antflags="${antflags} jar jarclient jarsqltool"
+	local antflags="jar jarclient jarsqltool"
 	use doc && antflags="${antflags} javadocdev"
-	einfo "Starting compilation..."
-	ant -q ${antflags} || die "Compilation failed."
+	use jikes && antflags="${antflags} -Dbuild.compiler=jikes"
+	ant -f build/build.xml ${antflags} || die "Compilation failed."
 }
 
 src_install() {
 	dojar lib/hsql*.jar
-	dodoc doc/*.txt
-	use doc && dohtml -r doc/src
+
+	if use doc; then
+		dodoc doc/*.txt
+		java-pkg_dohtml -r doc/guide
+		java-pkg_dohtml -r doc/src
+	fi
+	use source && java-pkg_dosrc src/*
 
 	doinitd ${FILESDIR}/hsqldb
 	doconfd conf/hsqldb
@@ -66,7 +72,6 @@ src_install() {
 	insopts -m 0600
 	doins conf/server.properties
 	doins conf/sqltool.rc
-
 
 	dodir /var/lib/hsqldb/bin
 	keepdir /var/lib/hsqldb
