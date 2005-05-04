@@ -1,6 +1,10 @@
 # ChangeLog for dev-cpp/libxmlpp
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libxmlpp/ChangeLog,v 1.26 2005/05/04 11:54:38 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libxmlpp/ChangeLog,v 1.27 2005/05/04 17:13:23 gustavoz Exp $
+
+  04 May 2005; Gustavo Zacarias <gustavoz@gentoo.org>
+  libxmlpp-2.8.0-r1.ebuild:
+  Stable on sparc
 
   04 May 2005; Guy Martin <gmsoft@gentoo.org> libxmlpp-2.10.0-r1.ebuild:
   Stamped ~hppa.
