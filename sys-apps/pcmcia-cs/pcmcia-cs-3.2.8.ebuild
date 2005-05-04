@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/pcmcia-cs-3.2.8.ebuild,v 1.1 2005/04/25 12:09:18 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/pcmcia-cs-3.2.8.ebuild,v 1.2 2005/05/04 09:40:04 brix Exp $
 
 inherit eutils flag-o-matic toolchain-funcs linux-info
 
@@ -20,6 +20,26 @@ RDEPEND="X? ( virtual/x11
 						   dev-util/pkgconfig )
 				    !gtk2? ( =x11-libs/gtk+-1* ))
 			xforms? ( x11-libs/xforms ))"
+
+
+pkg_setup() {
+	linux-info_pkg_setup
+
+	if kernel_is lt 2 5 && linux_chkconfig_present PCMCIA; then
+		ewarn
+		ewarn "The recommended configuration for linux-2.4.x is to disable"
+		ewarn "CONFIG_PCMCIA in the kernel and use the drivers from"
+		ewarn "sys-apps/pcmcia-cs-modules."
+		ewarn
+	elif kernel_is gt 2 4 && ! (linux_chkconfig_present PCMCIA || linux_chkconfig_present PCCARD); then
+		eerror
+		eerror "The package requires the in-kernel PCMCIA drivers to be enabled"
+		eerror "for kernel 2.6.x."
+		eerror
+		die "linux-${KV_FULL} without PCMCIA support detected"
+	fi
+}
+
 
 src_unpack() {
 	unpack ${A}
@@ -123,19 +143,4 @@ src_install () {
 
 	dodoc BUGS CHANGES MAINTAINERS README README-2.4 \
 		SUPPORTED.CARDS doc/*
-}
-
-pkg_postinst() {
-	if kernel_is lt 2 5; then
-		einfo
-		einfo "The recommended configuration for linux-2.4.x is to disable"
-		einfo "CONFIG_PCMCIA in the kernel and use the drivers from"
-		einfo "sys-apps/pcmcia-cs-modules."
-		einfo
-	else
-		einfo
-		einfo "The recommended configuration for linux-2.6.x is to use"
-		einfo "the in-kernel PCMCIA drivers."
-		einfo
-	fi
 }

@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/pcmcia-cs
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/ChangeLog,v 1.83 2005/04/29 12:24:37 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/ChangeLog,v 1.84 2005/05/04 09:40:04 brix Exp $
+
+  04 May 2005; <brix@gentoo.org> pcmcia-cs-3.2.8.ebuild:
+  Require in-kernel PCMCIA support for 2.6.x, warn users about in-kernel
+  PCMCIA support under 2.4.x
 
   29 Apr 2005; <brix@gentoo.org> files/pcmcia-cs-3.2.8-ppc.config.opts:
   Fixed bug #90463.
