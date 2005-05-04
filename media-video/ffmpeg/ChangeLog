@@ -1,6 +1,14 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.74 2005/05/02 09:39:38 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.75 2005/05/04 01:13:37 j4rg0n Exp $
+
+*ffmpeg-0.4.9_pre1-r1 (04 May 2005)
+
+  04 May 2005; Lina Pezzella <j4rg0n@gentoo.org> +files/ffmpeg-osx.patch,
+  +ffmpeg-0.4.9_pre1-r1.ebuild:
+  Re-added the pre1 ebuild since there are extensive patches made against it
+  that do not yet work with upstream's CVS. We're working on the latter, but
+  I'm not going to hold up ffmpeg any longer.
 
   02 May 2005; Luca Barbato <lu_zero@gentoo.org>
   ffmpeg-0.4.9_p20050226-r5.ebuild:
