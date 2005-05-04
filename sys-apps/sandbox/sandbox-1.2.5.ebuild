@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sandbox/sandbox-1.2.5.ebuild,v 1.1 2005/05/04 15:16:00 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sandbox/sandbox-1.2.5.ebuild,v 1.2 2005/05/04 22:51:07 azarah Exp $
 
 #
 # don't monkey with this ebuild unless contacting portage devs.
@@ -50,6 +50,17 @@ src_unpack() {
 	fi
 }
 
+abi_fail_check() {
+	local ABI=$1
+	if [[ ${ABI} == "x86" ]] ; then
+		echo
+		eerror "Building failed for ABI=x86!.  This usually means a broken"
+		eerror "multilib setup.  Please fix that before filling a bugreport"
+		eerror "against sandbox."
+		echo
+	fi
+}
+
 src_compile() {
 	filter-lfs-flags #90228
 	if has_multilib_profile ; then
@@ -59,16 +70,13 @@ src_compile() {
 			export ABI
 			cd ${S}-${ABI}
 			einfo "Configuring sandbox for ABI=${ABI}..."
-			econf --libdir="/usr/$(get_libdir)" || die "econf failed for ${ABI}"
+			econf --libdir="/usr/$(get_libdir)" || {
+				abi_fail_check
+				die "econf failed for ${ABI}"
+			}
 			einfo "Building sandbox for ABI=${ABI}..."
 			emake || {
-				if [[ ${ABI} == "x86" ]] ; then
-					echo
-					eerror "Building failed for ABI=x86!.  This usually means a broken"
-					eerror "multilib setup.  Please fix that before filling a bugreport"
-					eerror "against sandbox."
-					echo
-				fi
+				abi_fail_check
 				die "emake failed for ${ABI}"
 			}
 		done
