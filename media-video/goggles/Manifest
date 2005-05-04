@@ -2,20 +2,18 @@
 Hash: SHA1
 
 MD5 1b659496cb500a93c103964f9fdf27f9 goggles-0.7.10.ebuild 1304
-MD5 4797c2c05ed335e126d2cbcc1020c13c goggles-0.7.4-r1.ebuild 1215
+MD5 2c763b28bf6001bfa667d2819a298e74 goggles-0.7.4-r1.ebuild 1213
 MD5 505f964c8e01ffaa3a7c1d51b7d68fe0 goggles-0.8.0-r1.ebuild 1298
-MD5 b6f6b657065a7502507918605f88d396 ChangeLog 1156
+MD5 252916eb2f8e40738cd74b322d83a9af ChangeLog 1285
 MD5 7300a7b361fa9f48e37722c6952bd432 metadata.xml 158
-MD5 5915541c79f66f14470adffd489009e2 goggles-0.7.4.ebuild 940
 MD5 5f4a7441d17566f5347a2e65d589e863 files/goggles-0.7.4-gentoo.patch 874
-MD5 24eefdf711e3a7ce5e095b5b989741b8 files/digest-goggles-0.7.4 66
 MD5 24eefdf711e3a7ce5e095b5b989741b8 files/digest-goggles-0.7.4-r1 66
 MD5 564d5b86d27c7e0186d0f3f91a1ea6e8 files/digest-goggles-0.8.0-r1 66
 MD5 b831562bf7983a728b4d8f8ef78158c4 files/digest-goggles-0.7.10 67
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFCUZGg06ebR+OMO78RAkfZAJ4pB0vRGsIckwKhYRNN49MgZmZbLwCfUImQ
-fwUyQSBw4+Dic3uKBliH65A=
-=K6FL
+iD8DBQFCeQ8F06ebR+OMO78RAsMHAJ9ZqGvxPX/OS1O01hl2RIJf4Zxm5ACeOO6l
+kg8sIvJXR4mWHgV9a6BBToo=
+=whgG
 -----END PGP SIGNATURE-----

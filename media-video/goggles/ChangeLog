@@ -1,6 +1,10 @@
 # ChangeLog for media-video/goggles
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/goggles/ChangeLog,v 1.6 2005/04/04 19:12:10 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/goggles/ChangeLog,v 1.7 2005/05/04 18:05:36 luckyduck Exp $
+
+  04 May 2005; Jan Brinkmann <luckyduck@gentoo.org> -goggles-0.7.4.ebuild,
+  goggles-0.7.4-r1.ebuild:
+  stable on amd64 and x86
 
 *goggles-0.8.0-r1 (04 Apr 2005)
 
