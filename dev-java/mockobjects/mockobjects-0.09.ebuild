@@ -1,16 +1,18 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/mockobjects/mockobjects-0.09.ebuild,v 1.10 2005/04/22 08:43:22 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/mockobjects/mockobjects-0.09.ebuild,v 1.11 2005/05/04 20:10:39 luckyduck Exp $
 
 inherit eutils java-pkg
 
 DESCRIPTION="Test-first development process for building object-oriented software"
 HOMEPAGE="http://mockobjects.sf.net"
 SRC_URI="http://dev.gentoo.org/~karltk/java/distfiles/mockobjects-java-${PV}-gentoo.tar.bz2"
+
 LICENSE="Apache-1.1"
 SLOT="0"
-KEYWORDS="x86 ~ppc amd64"
+KEYWORDS="x86 ppc amd64"
 IUSE="doc jikes junit source"
+
 DEPEND=">=virtual/jdk-1.4
 	junit? ( =dev-java/junit-3.8* )
 	jikes? ( >=dev-java/jikes-1.21 )
@@ -45,10 +47,6 @@ src_install() {
 	java-pkg_dojar out/*.jar
 	dodoc doc/README
 
-	if use doc; then
-		java-pkg_dohtml -r out/doc/javadoc/*
-	fi
-	if use source; then
-		java-pkg_dosrc ${S}/src/*
-	fi
+	use doc && java-pkg_dohtml -r out/doc/javadoc/*
+	use source && java-pkg_dosrc ${S}/src/*
 }
