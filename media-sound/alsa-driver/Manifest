@@ -1,6 +1,9 @@
-MD5 35e65de3b0b68324263b13ef7dd40760 ChangeLog 24881
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 faecc680a4473be6e5a77ba8e474e4dd ChangeLog 24881
 MD5 3c0f4daec01807f3cce65c8fff87ff3f alsa-driver-1.0.3.ebuild 3366
-MD5 e52da7d8203fbe062373e471923e61cf alsa-driver-1.0.9_rc3.ebuild 4402
+MD5 13eab1abd6e32da978f5cb85fee1d382 alsa-driver-1.0.9_rc3.ebuild 4402
 MD5 9ea52b4adac3f201b06229c3fa431da9 alsa-driver-1.0.7-r4.ebuild 4692
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 6f09dc63bc18f2d9e3369dc425211b62 alsa-driver-1.0.8.ebuild 4634
@@ -22,3 +25,10 @@ MD5 14b6c8d954e36bb9d40c97cf051220f0 files/digest-alsa-driver-1.0.8 71
 MD5 27ccbe36406f145c1d63725a53517233 files/makefile.patch 1122
 MD5 5445a523e0e8aa31b9f293b1ac380b37 files/1.0.8-msi_audigyls.patch 1771
 MD5 b2791ec892d9be6952fe139cc2309abf files/xbox-1.0.8.patch 1525
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCelpBArHZZzCEUG0RAq92AJ4u7AEKdgY6mkFp3JWyPSKCKtBAjwCcDWHg
+jvySw19IxXDzIb9KP804+k0=
+=5UKT
+-----END PGP SIGNATURE-----
