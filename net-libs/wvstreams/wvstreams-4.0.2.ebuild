@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/wvstreams-4.0.2.ebuild,v 1.4 2005/04/04 21:05:26 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/wvstreams-4.0.2.ebuild,v 1.5 2005/05/05 23:20:17 swegener Exp $
 
 inherit eutils
 
@@ -29,7 +29,7 @@ RDEPEND="virtual/libc
 	dev-libs/openssl
 	doc? ( app-doc/doxygen )
 	fftw? ( sci-libs/fftw )
-	tcltk? ( >=dev-lang/tcl-8.4* dev-lang/swig )"
+	tcltk? ( >=dev-lang/tcl-8.4 dev-lang/swig )"
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig

@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/wvstreams
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/ChangeLog,v 1.53 2005/05/01 18:14:25 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/ChangeLog,v 1.54 2005/05/05 23:20:17 swegener Exp $
+
+  05 May 2005; Sven Wegener <swegener@gentoo.org> wvstreams-4.0.1-r2.ebuild,
+  wvstreams-4.0.2.ebuild:
+  Removed * postfix from <, <=, >= and > dependencies.
 
   01 May 2005; Michael Hanselmann <hansmi@gentoo.org>
   wvstreams-4.0.1-r2.ebuild:
