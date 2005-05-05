@@ -1,9 +1,13 @@
 # ChangeLog for sys-apps/portage
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.35 2005/02/18 11:43:28 eradicator Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.36 2005/05/05 00:04:54 vapier Exp $
 
 # See the gentoo-src Portage ChangeLog for up-to-date release information:
 # http://www.gentoo.org/cgi-bin/viewcvs.cgi/portage/ChangeLog?rev=HEAD&cvsroot=gentoo-src&content-type=text/vnd.viewcvs-markup
+
+  05 May 2005; Mike Frysinger <vapier@gentoo.org> portage-2.0.51.21.ebuild:
+  Move quickpkg from /usr/bin/ to /usr/sbin/ since only root users can access
+  all of / to make proper packages #37271.
 
 *portage-2.0.51-r15 (18 Feb 2005)
 

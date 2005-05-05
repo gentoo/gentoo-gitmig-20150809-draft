@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.51.21.ebuild,v 1.2 2005/05/03 04:24:22 jstubbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.51.21.ebuild,v 1.3 2005/05/05 00:04:54 vapier Exp $
 
 inherit toolchain-funcs
 
@@ -94,7 +94,7 @@ src_install() {
 	dosym ../lib/portage/bin/tbz2tool /usr/bin/tbz2tool
 	dosym ../lib/portage/bin/portageq /usr/bin/portageq
 	dosym ../lib/portage/bin/ebuild /usr/bin/ebuild
-	dosym ../lib/portage/bin/quickpkg /usr/bin/quickpkg
+	dosym ../lib/portage/bin/quickpkg /usr/sbin/quickpkg
 
 	dosym ../lib/portage/bin/env-update /usr/sbin/env-update
 	dosym ../lib/portage/bin/ebuild /usr/sbin/ebuild
