@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdauthor/dvdauthor-0.6.10.ebuild,v 1.12 2005/02/04 19:00:40 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdauthor/dvdauthor-0.6.10.ebuild,v 1.13 2005/05/05 02:41:00 vapier Exp $
 
-inherit eutils 64-bit
+inherit eutils
 
 DESCRIPTION="Tools for generating DVD files to be played on standalone DVD players"
 HOMEPAGE="http://dvdauthor.sourceforge.net/"
@@ -22,7 +22,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/${P}-gcc34.patch
-	64-bit && epatch ${FILESDIR}/${P}-utf8.patch
+	epatch ${FILESDIR}/${P}-utf8.patch
 	epatch ${FILESDIR}/${P}-im6.patch
 
 	# see #62836
