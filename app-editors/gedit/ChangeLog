@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/gedit
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.95 2005/04/25 12:20:53 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.96 2005/05/05 23:34:52 agriffis Exp $
+
+  05 May 2005; Aron Griffis <agriffis@gentoo.org> gedit-2.8.3.ebuild:
+  stable on ia64
 
   25 Apr 2005; Mike Gardiner <obz@gentoo.org> gedit-2.8.3.ebuild:
   Keyworded ppc x86
