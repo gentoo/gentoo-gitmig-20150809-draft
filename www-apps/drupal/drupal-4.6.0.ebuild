@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/drupal/drupal-4.6.0.ebuild,v 1.3 2005/05/05 15:46:47 st_lim Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/drupal/drupal-4.6.0.ebuild,v 1.4 2005/05/05 18:39:25 mr_bones_ Exp $
 
 inherit webapp eutils
 
@@ -22,7 +22,7 @@ src_unpack() {
 
 	if ! use minimal ; then
 
-		for i in modules themes engines language; do 
+		for i in modules themes engines language; do
 			cd ${S}/$i
 			[ "$i" == "engines" ] && cd ${S}/themes/$i
 			[ "$i" == "language" ] && cd ${S}/includes
@@ -41,7 +41,7 @@ src_unpack() {
 }
 
 src_compile() {
-	#Default compile hangs!            
+	#Default compile hangs!
 	echo "Nothing to compile"
 }
 
