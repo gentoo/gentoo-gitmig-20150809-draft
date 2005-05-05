@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lshw/lshw-02.03b.ebuild,v 1.3 2005/05/02 02:34:01 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lshw/lshw-02.03b.ebuild,v 1.4 2005/05/05 23:11:39 vapier Exp $
 
 inherit flag-o-matic eutils toolchain-funcs
 
@@ -27,7 +27,7 @@ src_unpack() {
 	cd "${S}"
 
 	sed -i \
-		-e "/^CXXFLAGS/s/-Os/${CXXFLAGS}/" \
+		-e "/^CXXFLAGS/s:-Os:${CXXFLAGS}:" \
 		-e '/^CXX=/d' -e '/^CC=/d' \
 		src/{gui/,core/,}/Makefile \
 		|| die "sed failed"
