@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gabber/gabber-0.8.8.ebuild,v 1.18 2005/04/02 02:23:27 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gabber/gabber-0.8.8.ebuild,v 1.19 2005/05/05 23:17:31 swegener Exp $
 
 inherit flag-o-matic gcc eutils
 
@@ -20,7 +20,7 @@ RDEPEND=">=gnome-base/gnome-libs-1.4.1.7
 	<dev-cpp/gtkmm-1.3.0
 	ssl? ( >=dev-libs/openssl-0.9.6 )
 	crypt? ( >=app-crypt/gnupg-1.0.5 )
-	xmms? ( >=media-sound/xmms-1.2.7* )"
+	xmms? ( >=media-sound/xmms-1.2.7 )"
 
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4

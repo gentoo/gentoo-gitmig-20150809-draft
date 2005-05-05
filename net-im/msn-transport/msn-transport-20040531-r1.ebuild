@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/msn-transport/msn-transport-20040531-r1.ebuild,v 1.4 2005/04/02 18:03:42 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/msn-transport/msn-transport-20040531-r1.ebuild,v 1.5 2005/05/05 23:18:25 swegener Exp $
 
 MY_PV="2004-05-31"
 #Ugly, msn-transport weired version numbers
@@ -15,7 +15,7 @@ KEYWORDS="x86 ~ppc hppa sparc ~amd64 ~alpha"
 IUSE=""
 SLOT="0"
 
-DEPEND=">=net-im/jabberd-1.4*
+DEPEND=">=net-im/jabberd-1.4
 		net-misc/curl"
 
 src_compile() {
