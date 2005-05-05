@@ -1,6 +1,14 @@
 # ChangeLog for app-misc/tomboy
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tomboy/ChangeLog,v 1.8 2005/03/15 01:10:25 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tomboy/ChangeLog,v 1.9 2005/05/05 17:51:24 latexer Exp $
+
+*tomboy-0.3.2 (05 May 2005)
+
+  05 May 2005; Peter Johanson <latexer@gentoo.org>
+  +files/tomboy-0.3.2-1.1.x-compat.diff,
+  +files/tomboy-0.3.2-mono-1.1.7-compat.diff, tomboy-0.3.1.ebuild,
+  +tomboy-0.3.2.ebuild:
+  Bump, and include some fixes for compilation with stricter mono-1.1.7
 
   14 Mar 2005; Peter Johanson <latexer@gentoo.org> tomboy-0.2.2-r1.ebuild,
   -tomboy-0.2.2.ebuild, tomboy-0.3.1.ebuild:
