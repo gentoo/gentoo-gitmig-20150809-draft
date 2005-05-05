@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-jack/alsa-jack-1.0.9_rc2.ebuild,v 1.1 2005/03/31 03:41:10 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-jack/alsa-jack-1.0.9_rc3.ebuild,v 1.1 2005/05/05 17:51:21 eradicator Exp $
 
 IUSE=""
 
