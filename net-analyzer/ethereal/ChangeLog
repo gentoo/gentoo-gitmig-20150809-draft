@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/ethereal
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ChangeLog,v 1.117 2005/05/05 05:50:29 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ChangeLog,v 1.118 2005/05/05 12:02:35 dragonheart Exp $
+
+  05 May 2005; Daniel Black <dragonheart@gentoo.org>
+  ethereal-0.10.11.ebuild:
+  ppc stable and unmasked (was own machine problem)
 
 *ethereal-0.10.11 (05 May 2005)
 
