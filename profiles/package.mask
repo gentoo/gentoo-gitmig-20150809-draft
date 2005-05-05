@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3918 2005/05/05 05:44:42 dragonheart Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3919 2005/05/05 12:05:21 dragonheart Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -21,11 +21,6 @@
 ##   End example
 ##
 
-
-# Daniel Black <dragonheart@gentoo.org> (05 May 2005)
-# security version bump that has grsec issues (bug #90539
-# ethereal: error while loading shared libraries: cannot make segment writable for relocation: Permission denied
-=net-analyzer/ethereal-0.10.11
 
 # Mike Frysinger <vapier@gentoo.org> (04 May 2005)
 # need upstream release to fix security issue #91421
