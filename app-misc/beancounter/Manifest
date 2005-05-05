@@ -1,4 +1,14 @@
-MD5 1bc06621153ed5552b502066a0fdcb89 beancounter-0.8.1.ebuild 840
-MD5 cfb8ad70c8f6e8b0b3cca272bcdad83c ChangeLog 366
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 77a1dd4586548e1b6590c7e4621e0bb2 beancounter-0.8.1.ebuild 838
+MD5 7e49fb364d37bff19607f70287bf185a ChangeLog 462
 MD5 c2c6c97769a798b1ad45c509e5f2d7d3 metadata.xml 409
 MD5 07b323f61f3c1c625beb0befddab61b5 files/digest-beancounter-0.8.1 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCej32I1lqEGTUzyQRAgr3AJ0TGk6lygPnW0kciwW1voea/czfKQCgsUB0
+q35b5KU8JX05nhHFLVsB9AU=
+=nAVI
+-----END PGP SIGNATURE-----

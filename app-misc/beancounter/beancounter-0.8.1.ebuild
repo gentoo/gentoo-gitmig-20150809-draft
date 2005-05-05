@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/beancounter/beancounter-0.8.1.ebuild,v 1.2 2005/05/04 08:19:30 satya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/beancounter/beancounter-0.8.1.ebuild,v 1.3 2005/05/05 15:38:08 swegener Exp $
 
 inherit perl-module
 
@@ -18,8 +18,8 @@ DEPEND=">=dev-lang/perl-5
 	dev-perl/Statistics-Descriptive
 	dev-perl/Finance-YahooQuote
 	dev-perl/libwww-perl
-	( mysql?    dev-perl/DBD-mysql )
-	( sqlite?   dev-perl/DBD-SQLite )
-	( postgres? dev-perl/DBD-Pg )"
+	mysql? ( dev-perl/DBD-mysql )
+	sqlite? ( dev-perl/DBD-SQLite )
+	postgres? ( dev-perl/DBD-Pg )"
 
 mydoc="BUGS THANKS TODO example.* *.txt"
