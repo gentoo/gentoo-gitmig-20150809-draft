@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/drupal
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/drupal/ChangeLog,v 1.11 2005/05/02 12:31:41 st_lim Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/drupal/ChangeLog,v 1.12 2005/05/05 15:46:47 st_lim Exp $
+
+  05 May 2005; Lim Swee Tat <st_lim@gentoo.org> +files/4.6.0/engines,
+  +files/4.6.0/language, +files/4.6.0/modules, +files/4.6.0/themes,
+  drupal-4.6.0.ebuild:
+  Devised new method of getting the modules themes and others
 
   02 May 2005; Lim Swee Tat <st_lim@gentoo.org> drupal-4.6.0.ebuild:
   Updated modules to today's list
