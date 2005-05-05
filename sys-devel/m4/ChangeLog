@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/m4
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/m4/ChangeLog,v 1.38 2005/05/05 03:06:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/m4/ChangeLog,v 1.39 2005/05/05 03:32:45 vapier Exp $
+
+  05 May 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/m4-1.4.3-pointer.patch, m4-1.4.3.ebuild:
+  Fix 64bit issues where pointers are stored in types which are too small
+  #87873 by Matt Hargett.
 
   05 May 2005; Mike Frysinger <vapier@gentoo.org> m4-1.4.3.ebuild:
   Install as gm4 by default and drop in a m4 symlink on GNU systems #90858.
