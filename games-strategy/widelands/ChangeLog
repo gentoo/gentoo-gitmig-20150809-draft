@@ -1,6 +1,9 @@
 # ChangeLog for games-strategy/widelands
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/widelands/ChangeLog,v 1.1 2005/05/05 02:49:53 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/widelands/ChangeLog,v 1.2 2005/05/05 11:14:39 wolf31o2 Exp $
+
+  05 May 2005; Chris Gianelloni <wolf31o2@gentoo.org> :
+  Added Manifest (bad wolfie) and closing bug #91537.
 
 *widelands-0.0.9 (05 May 2005)
 
