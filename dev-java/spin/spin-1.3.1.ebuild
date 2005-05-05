@@ -1,16 +1,18 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/spin/spin-1.3.1.ebuild,v 1.5 2005/04/03 09:13:13 sejo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/spin/spin-1.3.1.ebuild,v 1.6 2005/05/05 12:30:13 luckyduck Exp $
 
 inherit java-pkg
 
-DESCRIPTION="Spin is a transparent threading solution for non-freezing Swing applications."
+DESCRIPTION="Transparent threading solution for non-freezing Swing applications."
 HOMEPAGE="http://spin.sourceforge.net"
 SRC_URI="mirror://sourceforge/${PN}/${P}.zip"
+
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~x86 ~amd64 ~sparc ~ppc"
+KEYWORDS="x86 amd64 ~sparc ppc"
 IUSE=""
+
 DEPEND=">=virtual/jdk-1.4
 	dev-java/ant
 	app-arch/unzip"
