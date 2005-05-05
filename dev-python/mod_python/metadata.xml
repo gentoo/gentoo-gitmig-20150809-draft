@@ -2,6 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>python</herd>
+<herd>apache</herd>
 <longdescription>
 Mod_python is an Apache module that embeds the Python interpreter within
 the server. With mod_python you can write web-based applications in Python
