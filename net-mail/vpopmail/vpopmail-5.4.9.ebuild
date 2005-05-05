@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/vpopmail-5.4.9.ebuild,v 1.1 2005/04/09 05:04:37 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/vpopmail-5.4.9.ebuild,v 1.2 2005/05/05 22:40:10 swegener Exp $
 
 inherit eutils gnuconfig fixheadtails
 
@@ -18,7 +18,7 @@ IUSE="mysql ipalias clearpasswd"
 # vpopmail will NOT build if non-root.
 RESTRICT="nouserpriv"
 DEPEND_COMMON="mail-mta/qmail
-	mysql? ( >=dev-db/mysql-3.23* )"
+	mysql? ( >=dev-db/mysql-3.23 )"
 DEPEND="sys-apps/sed
 	sys-apps/ucspi-tcp
 	${DEPEND_COMMON}"

@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/vpopmail
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/ChangeLog,v 1.52 2005/04/29 22:05:46 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/ChangeLog,v 1.53 2005/05/05 22:40:10 swegener Exp $
+
+  05 May 2005; Sven Wegener <swegener@gentoo.org> vpopmail-5.2.2-r1.ebuild,
+  vpopmail-5.4.6-r1.ebuild, vpopmail-5.4.9.ebuild, vpopmail-5.4.9-r1.ebuild:
+  Fixed [<>]=cat/pkg-ver* dependencies.
 
   29 Apr 2005; Jory A. Pratt <anarchy@gentoo.org>
   +files/vpopmail-cdb-Makefile.patch, vpopmail-5.4.9-r1.ebuild:
