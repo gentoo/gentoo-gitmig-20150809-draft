@@ -1,6 +1,10 @@
 # ChangeLog for app-cdr/gtkcdlabel
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/gtkcdlabel/ChangeLog,v 1.18 2005/04/25 20:46:49 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/gtkcdlabel/ChangeLog,v 1.19 2005/05/05 22:38:00 swegener Exp $
+
+  05 May 2005; Sven Wegener <swegener@gentoo.org>
+  gtkcdlabel-1.0_pre6.ebuild, gtkcdlabel-1.0_pre7.ebuild:
+  Fixed [<>]=cat/pkg-ver* dependencies.
 
   25 Apr 2005; Lars Weiler <pylon@gentoo.org> metadata.xml,
   gtkcdlabel-1.0_pre6.ebuild, gtkcdlabel-1.0_pre7.ebuild:
