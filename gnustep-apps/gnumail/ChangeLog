@@ -1,6 +1,10 @@
 # ChangeLog for gnustep-apps/gnumail
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gnumail/ChangeLog,v 1.16 2005/04/15 05:09:36 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gnumail/ChangeLog,v 1.17 2005/05/05 15:44:43 swegener Exp $
+
+  05 May 2005; Sven Wegener <swegener@gentoo.org>
+  gnumail-1.2.0_pre20050312.ebuild, gnumail-1.2.0_pre20050414.ebuild:
+  Added missing parentheses to *DEPEND.
 
 *gnumail-1.2.0_pre20050414 (15 Apr 2005)
 
