@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/mandrake-artwork/mandrake-artwork-1.0.0.ebuild,v 1.4 2004/06/24 23:35:11 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/mandrake-artwork/mandrake-artwork-1.0.0.ebuild,v 1.5 2005/05/05 23:00:14 swegener Exp $
 
 inherit eutils kde-functions kde
 
@@ -20,7 +20,7 @@ DEPEND="app-arch/rpm2targz
 	>=x11-libs/gtk+-2.0
 	>=media-libs/gdk-pixbuf-0.2.5
 	=x11-libs/gtk+-1.2*
-	kde? ( >=kde-base/kdebase-3.1* )"
+	kde? ( >=kde-base/kdebase-3.1 )"
 
 src_unpack() {
 	rpm2targz ${DISTDIR}/${A}
