@@ -1,6 +1,10 @@
 # ChangeLog for games-action/trackballs
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/trackballs/ChangeLog,v 1.10 2005/01/26 01:04:42 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/trackballs/ChangeLog,v 1.11 2005/05/05 23:11:33 swegener Exp $
+
+  05 May 2005; Sven Wegener <swegener@gentoo.org> trackballs-1.0.0.ebuild,
+  trackballs-1.0.0-r1.ebuild:
+  Removed * postfix from <, <=, >= and > dependencies.
 
 *trackballs-1.0.0-r1 (25 Jan 2005)
 
