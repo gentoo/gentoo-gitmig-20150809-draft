@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/cracklib-2.8.3-r1.ebuild,v 1.2 2005/05/03 01:47:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/cracklib-2.8.3-r1.ebuild,v 1.3 2005/05/05 00:16:41 vapier Exp $
 
 inherit eutils toolchain-funcs
 
@@ -43,6 +43,7 @@ src_install() {
 	mv "${D}"/usr/$(get_libdir)/*.so* "${D}"/$(get_libdir)/ || die "could not move shared"
 	gen_usr_ldscript libcrack.so
 
+	echo -n "Generating cracklib dicts ... "
 	insinto /usr/share/dict
 	doins dicts/cracklib-small || die "word dict"
 	tc-is-cross-compiler \
