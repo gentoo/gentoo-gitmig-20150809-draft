@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libfame
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libfame/ChangeLog,v 1.26 2005/05/02 09:44:49 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libfame/ChangeLog,v 1.27 2005/05/05 18:24:58 luckyduck Exp $
+
+  05 May 2005; Jan Brinkmann <luckyduck@gentoo.org>
+  +files/libfame-0.9.1-underquoted-m4.patch, libfame-0.9.1-r1.ebuild:
+  added patch to fix aclocal warning
 
   02 May 2005; Diego Pettenò <flameeyes@gentoo.org>
   -files/libfame-0.9.1-gcc34.patch, -files/libfame-0.9.1-m4.patch,
