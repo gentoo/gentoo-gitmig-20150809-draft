@@ -4,7 +4,9 @@ MD5 d100b5f511581142bd1caf33563b1311 glade-sharp-1.0.8.ebuild 381
 MD5 bcf4b5362093b46695c31f80b6913207 ChangeLog 1848
 MD5 a60fdfbce7c7cfc52187ff86a7f8bbf8 metadata.xml 222
 MD5 f661adb6416959565769471e15801f82 glade-sharp-1.0.4.ebuild 416
+MD5 8e6d0eb2b933e76f411cdcaa5497d87c glade-sharp-1.9.3.ebuild 408
 MD5 b63c29f6761c048a9d7943713c15c78c files/digest-glade-sharp-1.0.4 147
 MD5 ff5a2a47c3e1d785fc179c922857e409 files/digest-glade-sharp-1.0.6 147
 MD5 3af46f2e9fbd6a7f642bc1ef502d50ca files/digest-glade-sharp-1.0.8 147
 MD5 d1dddb54802e684259aedfd27a11af15 files/digest-glade-sharp-1.9.2 147
+MD5 284fbaa2e02c9f1dca27440457411e0b files/digest-glade-sharp-1.9.3 147
