@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/elinks/elinks-0.10.4.ebuild,v 1.1 2005/04/08 22:38:54 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/elinks/elinks-0.10.4.ebuild,v 1.2 2005/05/05 22:43:31 swegener Exp $
 
 IUSE="gpm zlib ssl ipv6 X lua guile"
 
@@ -16,14 +16,14 @@ LICENSE="GPL-2"
 KEYWORDS="~x86 ~ppc ~sparc ~amd64 ~alpha"
 
 DEPEND="virtual/libc
-	>=app-arch/bzip2-1.0.2*
-	>=dev-libs/expat-1.95.4*
+	>=app-arch/bzip2-1.0.2
+	>=dev-libs/expat-1.95.4
 	>=sys-apps/portage-2.0.45-r3
 	ssl? ( >=dev-libs/openssl-0.9.6g )
 	X? ( virtual/x11 )
 	zlib? ( >=sys-libs/zlib-1.1.4 )
-	lua? ( >=dev-lang/lua-4* )
-	gpm? ( >=sys-libs/ncurses-5.2* >=sys-libs/gpm-1.20.0-r5 )
+	lua? ( >=dev-lang/lua-4 )
+	gpm? ( >=sys-libs/ncurses-5.2 >=sys-libs/gpm-1.20.0-r5 )
 	guile? ( >=dev-util/guile-1.6.4-r1 )"
 PROVIDE="virtual/textbrowser"
 
