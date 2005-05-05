@@ -1,17 +1,14 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 c3d7eb23db1afd9b0bd570a85b458c05 cairo-0.3.0.ebuild 899
-MD5 360b5aa2fb32123518fdcd48e3ec7a59 cairo-0.1.18-r1.ebuild 753
-MD5 40c0451436ced800fe45bcbbd5874f93 cairo-0.1.23.ebuild 827
-MD5 d54df31f2d5dbcc402342773a0e1a2dd cairo-0.4.0.ebuild 1044
-MD5 7676e7360434287ab90a1f7ddd16c6a0 cairo-0.3.0-r2.ebuild 1048
-MD5 76a45d7df9ac7e3d11daa75fc9abd356 cairo-0.2.0-r1.ebuild 950
-MD5 a3129c141d344c1d19875265de2ca3c3 cairo-0.1.23-r1.ebuild 810
-MD5 229a74eb9493e4aeee08d6aa60282ac4 cairo-0.1.18.ebuild 784
-MD5 c038c76abc4d8e2fc4d00e676c49ecfe cairo-0.3.0-r1.ebuild 951
-MD5 58a10ca5b9c2eb6100fab04c5bd06248 cairo-0.2.0.ebuild 899
-MD5 6d7bf5addbe67a0cafbee045f1825207 ChangeLog 4747
+MD5 0c79281b7a522934fa419bd83f191994 cairo-0.3.0.ebuild 846
+MD5 b3c7457b7cd79bcb1f482989a0f44ea5 cairo-0.1.18-r1.ebuild 700
+MD5 89b3424208cfab9960dd1cd378bc40bd cairo-0.1.23.ebuild 798
+MD5 7596ee20d8abb8cec077a7d503af5eb4 cairo-0.4.0.ebuild 989
+MD5 39a1bfa4dd3a33d04887dc16db68aca5 cairo-0.3.0-r2.ebuild 993
+MD5 0a152cc88392976576329e27b34861cf cairo-0.2.0-r1.ebuild 895
+MD5 3a4cce771cdc4714c6931467622c9ddc cairo-0.1.23-r1.ebuild 757
+MD5 6530e3394d4bd4331548a567e79b060d cairo-0.1.18.ebuild 755
+MD5 8c638d567411d38e1237596b91a517d8 cairo-0.3.0-r1.ebuild 896
+MD5 f4d2f2c6da53a8412387d1d18d281217 cairo-0.2.0.ebuild 847
+MD5 a24a8b2bed352c87072b3d7ea7141f12 ChangeLog 5080
 MD5 65d1d5c2aa536148fb35cee02b3a8428 metadata.xml 337
 MD5 4df3bcd9171f83ca24b03ab0f8eefb24 files/cairo-0.3.0-header-fix.diff 697
 MD5 cd449933066600e3ac62fa22651a8120 files/xrender.pc 151
@@ -26,10 +23,3 @@ MD5 8045b9ac7481eb952f3c2fdfda944c65 files/digest-cairo-0.1.23-r1 64
 MD5 ee0e0ddbf61c280106ae3683503054a8 files/digest-cairo-0.2.0-r1 63
 MD5 2a0e4de10c4b8aacdb9b5991825b30d5 files/digest-cairo-0.3.0-r1 63
 MD5 2a0e4de10c4b8aacdb9b5991825b30d5 files/digest-cairo-0.3.0-r2 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCeqI7I1lqEGTUzyQRAs7CAJ9Yr8lgwA9wlN6oON89aFD0hDHJ1wCgnD9f
-uxU+G+dHkz7boAuqhqU2Sxk=
-=4Cz1
------END PGP SIGNATURE-----
