@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jedit/jedit-4.2-r1.ebuild,v 1.3 2005/04/30 00:31:41 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jedit/jedit-4.2-r1.ebuild,v 1.4 2005/05/05 10:24:52 corsair Exp $
 
 inherit java-pkg eutils
 
@@ -11,7 +11,7 @@ DESCRIPTION="Programmer's editor written in Java"
 HOMEPAGE="http://www.jedit.org"
 SRC_URI="mirror://sourceforge/jedit/jedit${MY_PV}source.tar.gz"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~sparc ~ppc ~amd64"
+KEYWORDS="~x86 ~sparc ~ppc ~amd64 ~ppc64"
 SLOT="0"
 IUSE="doc jikes"
 
