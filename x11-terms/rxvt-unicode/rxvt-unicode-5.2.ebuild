@@ -1,10 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/rxvt-unicode-5.2.ebuild,v 1.5 2005/04/09 13:46:16 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/rxvt-unicode-5.2.ebuild,v 1.6 2005/05/05 02:53:44 vapier Exp $
 
-inherit 64-bit eutils flag-o-matic
-
-IUSE="xgetdefault tabs"
+inherit eutils flag-o-matic
 
 DESCRIPTION="rxvt clone with XFT and Unicode support"
 HOMEPAGE="http://software.schmorp.de/"
@@ -13,6 +11,7 @@ SRC_URI="http://dist.schmorp.de/rxvt-unicode/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~sparc ~amd64 ~ppc ~ppc64"
+IUSE="xgetdefault tabs"
 
 DEPEND="virtual/libc
 	dev-util/pkgconfig

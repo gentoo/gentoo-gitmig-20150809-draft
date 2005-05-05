@@ -1,8 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/rxvt-unicode-3.0.ebuild,v 1.11 2005/02/27 00:13:26 latexer Exp $
-
-IUSE="xgetdefault"
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/rxvt-unicode-3.0.ebuild,v 1.12 2005/05/05 02:53:44 vapier Exp $
 
 DESCRIPTION="rxvt clone with XFT and Unicode support"
 HOMEPAGE="http://software.schmorp.de/"
@@ -11,9 +9,9 @@ SRC_URI="http://rxvt-unicode-dist.plan9.de/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 sparc amd64 ppc ppc64"
+IUSE="xgetdefault"
 
-DEPEND="virtual/libc
-	dev-util/pkgconfig
+DEPEND="dev-util/pkgconfig
 	sys-devel/libtool
 	virtual/x11"
 
