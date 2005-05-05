@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/freepops/freepops-0.0.26.ebuild,v 1.2 2005/04/16 07:32:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/freepops/freepops-0.0.26.ebuild,v 1.3 2005/05/05 23:20:58 swegener Exp $
 
 DESCRIPTION="WebMail->POP3 converter and more"
 HOMEPAGE="http://freepops.sourceforge.net/"
@@ -15,7 +15,7 @@ RDEPEND=">=net-misc/curl-7.10.8"
 DEPEND="${RDEPEND}
 	>=sys-apps/portage-2.0.51
 	doc? (
-		>=app-doc/doxygen-1.3*
+		>=app-doc/doxygen-1.3
 		app-text/tetex
 		app-text/ghostscript
 	)"
