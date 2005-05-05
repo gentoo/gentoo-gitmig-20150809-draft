@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pork/pork-0.99.7.ebuild,v 1.1 2005/01/03 15:46:10 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pork/pork-0.99.7.ebuild,v 1.2 2005/05/05 13:25:34 rizzo Exp $
 
 DESCRIPTION="Console based AIM client that looks like ircII"
 HOMEPAGE="http://dev.ojnk.net/"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/ojnk/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~alpha ~sparc ~ppc ~amd64"
+KEYWORDS="x86 ~alpha ~sparc ~ppc ~amd64"
 IUSE="perl"
 
 DEPEND="perl? ( dev-lang/perl )
