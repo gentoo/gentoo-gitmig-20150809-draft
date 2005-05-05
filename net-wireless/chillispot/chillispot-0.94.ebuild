@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/chillispot/chillispot-0.94.ebuild,v 1.4 2005/01/12 21:12:24 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/chillispot/chillispot-0.94.ebuild,v 1.5 2005/05/05 22:41:06 swegener Exp $
 
 inherit eutils flag-o-matic
 
@@ -12,7 +12,7 @@ SLOT="0"
 KEYWORDS="~x86 ~mips ~sparc"
 IUSE="pic"
 
-DEPEND="virtual/libc >=sys-apps/sed-4*"
+DEPEND="virtual/libc >=sys-apps/sed-4"
 
 src_unpack() {
 	unpack ${A}

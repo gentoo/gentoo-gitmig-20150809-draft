@@ -1,23 +1,21 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 7f582097861e437223c45ecb8c6e4aff chillispot-0.97.ebuild 1039
-MD5 465eb3e54a1e443280e7fe35938a9698 chillispot-0.99.ebuild 1039
-MD5 6e61f7401e5234c74b93118baf946814 chillispot-0.94.ebuild 861
-MD5 93117b9542dca8c269bac91cc6428d41 ChangeLog 1000
+MD5 243957a466e4dbacc22d0e4974714dd9 chillispot-0.97.ebuild 1041
+MD5 bbb0f91f381fa05b160c8ef5a427c542 chillispot-0.99.ebuild 1041
+MD5 80bb2170007f3e7696cfade7dae5e7ad chillispot-0.94.ebuild 863
+MD5 7b15462ff5b747ea49949b5fd113b64c ChangeLog 1192
 MD5 86dbc1c8f833da6ec3297a3ab4667c30 metadata.xml 651
-MD5 4be365c102819edfc883863470b32099 chillispot-0.95.ebuild 1000
+MD5 b743a3e2edc762c5218fa1fd74b940a7 chillispot-0.95.ebuild 1002
 MD5 26d2ac4fac2590c68ffd003625f7994a files/chillispot-0.94-src.patch 2196
 MD5 034ae1319d1349b4aa3e6cea36d3f4db files/digest-chillispot-0.94 67
 MD5 c1d19e485f18faa28ef122b6f46e6dc6 files/digest-chillispot-0.95 67
 MD5 40d410ecc13681fdb79960bf43f8e7d7 files/digest-chillispot-0.97 67
 MD5 5718ef8b1369dc44135cbf9765c605b6 files/digest-chillispot-0.99 67
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iQCVAwUBQeWSDp4WFLgrx1GWAQLevAP+Pj4mpZi9HsSP6NKtvjw+6pfQPNfAO1qx
-7y+45DUyIxUYD/NoCpTHMy0C2rEQjvhcp/PMmBDtDwMTO16w0MJFoNLc/xJ3XWiC
-QwMHI+VEXvyEPEcOqmJD1tvYWngaOJL3PCzfQMLLTcNOw3WElKrenA/76t1vrIlj
-nJGkekCSs4U=
-=fBcN
+iD8DBQFCeqEJI1lqEGTUzyQRAogJAKDdaUiVyfgg2DrDsaf7Uptepd4mXgCfas38
+AhsUIitmMmVFqpA8f45e+I4=
+=VQAc
 -----END PGP SIGNATURE-----
