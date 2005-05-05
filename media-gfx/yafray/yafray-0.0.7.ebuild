@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/yafray/yafray-0.0.7.ebuild,v 1.6 2005/04/26 19:55:03 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/yafray/yafray-0.0.7.ebuild,v 1.7 2005/05/05 23:46:13 swegener Exp $
 
 inherit gcc eutils python
 
@@ -16,7 +16,7 @@ IUSE=""
 RDEPEND="media-libs/jpeg
 	sys-libs/zlib"
 DEPEND="${RDEPEND}
-	>=sys-devel/gcc-3.3*
+	>=sys-devel/gcc-3.3
 	>=sys-apps/sed-4
 	dev-util/scons"
 
