@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.3.6-r2.ebuild,v 1.5 2005/04/13 11:09:46 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.3.6-r2.ebuild,v 1.6 2005/05/05 23:04:01 swegener Exp $
 
 inherit gnuconfig flag-o-matic
 
@@ -24,7 +24,7 @@ DEPEND="virtual/libc
 	tcltk? ( >=dev-lang/tcl-8 >=dev-lang/tk-8.3.3-r1 )
 	perl? ( >=dev-lang/perl-5.6.1-r2 )
 	python? ( >=dev-lang/python-2.2 dev-python/egenix-mx-base )
-	java? ( >=virtual/jdk-1.3* >=dev-java/ant-1.3
+	java? ( >=virtual/jdk-1.3 >=dev-java/ant-1.3
 		dev-java/java-config )
 	ssl? ( >=dev-libs/openssl-0.9.6-r1 )
 	nls? ( sys-devel/gettext )"
@@ -35,7 +35,7 @@ RDEPEND="virtual/libc
 	tcltk? ( >=dev-lang/tcl-8 )
 	perl? ( >=dev-lang/perl-5.6.1-r2 )
 	python? ( >=dev-lang/python-2.2 )
-	java? ( >=virtual/jdk-1.3* )
+	java? ( >=virtual/jdk-1.3 )
 	ssl? ( >=dev-libs/openssl-0.9.6-r1 )"
 
 PG_DIR="/var/lib/postgresql"

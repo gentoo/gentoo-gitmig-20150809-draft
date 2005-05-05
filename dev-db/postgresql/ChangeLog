@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/postgresql
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.202 2005/04/22 14:31:10 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.203 2005/05/05 23:04:01 swegener Exp $
+
+  05 May 2005; Sven Wegener <swegener@gentoo.org>
+  postgresql-7.3.6-r2.ebuild, postgresql-7.3.9-r1.ebuild,
+  postgresql-7.4.7-r1.ebuild:
+  Removed trailing * from <, <=, >= and > dependencies.
 
   22 Apr 2005; Bryan Østergaard <kloeri@gentoo.org>
   postgresql-8.0.1-r2.ebuild:
