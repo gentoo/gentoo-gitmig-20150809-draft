@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/rsbac-admin/rsbac-admin-1.2.4.ebuild,v 1.5 2005/04/28 13:40:18 kang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/rsbac-admin/rsbac-admin-1.2.4.ebuild,v 1.6 2005/05/05 15:57:06 swegener Exp $
 
 inherit eutils
 
@@ -19,11 +19,12 @@ KEYWORDS="x86"
 NSS="1.2.4"
 
 DEPEND="dev-util/dialog
-	pam? sys-libs/pam
+	pam? ( sys-libs/pam )
 	sys-apps/baselayout
-	|| ( >=sys-kernel/rsbac-sources-2.4.29-r1
-	>=sys-kernel/rsbac-dev-sources-2.6.10-r3 )"
-
+	|| (
+		>=sys-kernel/rsbac-sources-2.4.29-r1
+		>=sys-kernel/rsbac-dev-sources-2.6.10-r3
+	)"
 
 RDEPEND=">=sys-libs/ncurses-5.2"
 

@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/rsbac-admin
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/rsbac-admin/ChangeLog,v 1.16 2005/04/28 13:40:18 kang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/rsbac-admin/ChangeLog,v 1.17 2005/05/05 15:57:06 swegener Exp $
+
+  05 May 2005; Sven Wegener <swegener@gentoo.org> rsbac-admin-1.2.4.ebuild:
+  Added missing parentheses to *DEPEND.
 
   28 Apr 2005; Guillaume Destuynder <kang@gentoo.org>
   rsbac-admin-1.2.4.ebuild:
