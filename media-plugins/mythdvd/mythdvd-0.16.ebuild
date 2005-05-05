@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythdvd/mythdvd-0.16.ebuild,v 1.3 2005/01/22 08:11:28 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythdvd/mythdvd-0.16.ebuild,v 1.4 2005/05/05 23:15:06 swegener Exp $
 
 inherit myth
 
@@ -14,7 +14,7 @@ KEYWORDS="x86 ~amd64"
 IUSE="transcode debug nls"
 
 DEPEND=">=sys-apps/sed-4
-	>=media-plugins/mythvideo-${PV}*
+	>=media-plugins/mythvideo-${PV}
 	media-libs/libdvdread
 	transcode? ( media-video/transcode )
 	|| ( media-video/mplayer media-video/xine-ui media-video/ogle )
