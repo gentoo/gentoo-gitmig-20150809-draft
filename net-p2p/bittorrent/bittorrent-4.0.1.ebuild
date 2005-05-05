@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent/bittorrent-4.0.1.ebuild,v 1.1 2005/03/31 12:30:36 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent/bittorrent-4.0.1.ebuild,v 1.2 2005/05/05 23:27:49 swegener Exp $
 
 inherit distutils
 
@@ -17,8 +17,10 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86 ~sparc ~alpha"
 IUSE="X"
 
-RDEPEND="X? ( >=x11-libs/gtk+-2.4* \
-	>=dev-python/pygtk-2.4*)
+RDEPEND="X? (
+		>=x11-libs/gtk+-2.4
+		>=dev-python/pygtk-2.4
+	)
 	>=dev-lang/python-2.3
 	!virtual/bittorrent"
 DEPEND="${RDEPEND}

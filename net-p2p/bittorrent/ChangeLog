@@ -1,6 +1,12 @@
 # ChangeLog for net-p2p/bittorrent
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent/ChangeLog,v 1.45 2005/04/27 15:06:43 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent/ChangeLog,v 1.46 2005/05/05 23:27:49 swegener Exp $
+
+  05 May 2005; Sven Wegener <swegener@gentoo.org> bittorrent-3.4.1a.ebuild,
+  bittorrent-3.4.2.ebuild, bittorrent-3.4.2-r1.ebuild,
+  bittorrent-3.4.2-r2.ebuild, bittorrent-4.0.0.ebuild,
+  bittorrent-4.0.1.ebuild:
+  Removed * postfix from <, <=, >= and > dependencies.
 
   27 Apr 2005; Simon Stelling <blubb@gentoo.org> bittorrent-3.4.2-r2.ebuild:
   stable on amd64
