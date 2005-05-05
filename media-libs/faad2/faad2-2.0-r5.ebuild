@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/faad2/faad2-2.0-r5.ebuild,v 1.1 2005/03/25 23:52:56 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/faad2/faad2-2.0-r5.ebuild,v 1.2 2005/05/05 11:39:40 luckyduck Exp $
 
 inherit eutils libtool flag-o-matic
 
@@ -27,7 +27,6 @@ S=${WORKDIR}/${PN}
 DOCS="AUTHORS ChangeLog INSTALL NEWS README README.linux TODO"
 
 src_unpack() {
-
 	unpack ${A}
 
 	cd ${S}
@@ -35,11 +34,11 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-configure-mpeg4ip.patch
 	epatch ${FILESDIR}/${P}-gcc34.patch
 
-	# merged version of the noext and amd64 patch, see #61528
-	epatch ${FILESDIR}/${P}-amd64_noext.patch
-
 	cd ${S}/common/mp4v2
 	epatch ${FILESDIR}/mp4atom-sliver.patch
+
+	cd ${S}/plugins/xmms/src
+	epatch ${FILESDIR}/${P}-noext.patch
 
 	# Get the xmms plugin to behave
 	cd ${S}
@@ -48,7 +47,6 @@ src_unpack() {
 }
 
 src_compile() {
-
 	# see #34392
 	filter-flags -mfpmath=sse
 
@@ -75,7 +73,6 @@ src_compile() {
 }
 
 src_install() {
-
 	make DESTDIR=${D} install || die
 
 	dodoc ${DOCS}
