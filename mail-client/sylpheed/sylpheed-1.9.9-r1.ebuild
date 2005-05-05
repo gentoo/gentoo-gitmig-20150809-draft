@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed/sylpheed-1.9.9.ebuild,v 1.1 2005/04/23 12:52:37 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed/sylpheed-1.9.9-r1.ebuild,v 1.1 2005/05/05 14:08:14 hattya Exp $
 
 inherit eutils
 
@@ -61,13 +61,9 @@ src_install() {
 	insinto /usr/share/pixmaps
 	doins *.png
 
-	if use gnome
-	then
-		dodir /usr/share/gnome/apps/Internet
-		insinto /usr/share/gnome/apps/Internet
-		doins sylpheed.desktop
-	fi
+	insinto /usr/share/applications
+	doins sylpheed.desktop
 
-	dodoc [A-Z][A-Z]* ChangeLog*
+	dodoc AUTHORS COPYING ChangeLog* INSTALL* NEWS* README* TODO*
 
 }
