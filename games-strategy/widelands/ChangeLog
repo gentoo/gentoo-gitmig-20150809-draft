@@ -1,0 +1,13 @@
+# ChangeLog for games-strategy/widelands
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/widelands/ChangeLog,v 1.1 2005/05/05 02:49:53 wolf31o2 Exp $
+
+*widelands-0.0.9 (05 May 2005)
+
+  05 May 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  +files/widelands-0.0.9-amd64.patch, +metadata.xml,
+  +widelands-0.0.9.ebuild:
+  Initial import. Original ebuild by Elias Kunnas <elias_kunnas@welho.com>.
+  Ebuild modified by Christoph Brill <egore@gmx.de> and by myself. Original
+  amd64 patch idea by Peter Roozemaal <mathfox@xs4all.nl>. Closing bug #59674.
+
