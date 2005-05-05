@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/anthy-ss/anthy-ss-6131.ebuild,v 1.2 2005/02/05 14:34:48 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/anthy-ss/anthy-ss-6504.ebuild,v 1.1 2005/05/05 14:25:31 hattya Exp $
 
-inherit elisp-common
+inherit elisp-common eutils
 
 IUSE="emacs ucs4"
 
@@ -10,7 +10,7 @@ MY_P="${P/-ss/}"
 
 DESCRIPTION="Anthy -- free and secure Japanese input system"
 HOMEPAGE="http://anthy.sourceforge.jp/"
-SRC_URI="mirror://sourceforge.jp/anthy/13203/${MY_P}.tar.gz"
+SRC_URI="mirror://sourceforge.jp/anthy/14562/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~ppc"
@@ -19,6 +19,15 @@ S="${WORKDIR}/${MY_P}"
 
 DEPEND="emacs? ( virtual/emacs )
 	!app-i18n/anthy"
+
+src_unpack() {
+
+	unpack ${A}
+
+	cd ${S}
+	epatch ${FILESDIR}/${PN}-mkdic-gcc34.diff
+
+}
 
 src_compile() {
 
@@ -51,7 +60,10 @@ src_install() {
 
 	use emacs && elisp-site-file-install ${FILESDIR}/50anthy-gentoo.el
 
-	dodoc [A-Z][A-Z]* ChangeLog doc/[A-Z0-9][A-Z0-9]* doc/protocol.txt
+	rm doc/Makefile*
+
+	dodoc AUTHORS COPYING DIARY INSTALL NEWS README ChangeLog
+	dodoc doc/*
 
 }
 
