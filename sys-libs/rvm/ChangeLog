@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/rvm
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/rvm/ChangeLog,v 1.13 2005/04/20 21:47:26 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/rvm/ChangeLog,v 1.14 2005/05/05 13:20:14 griffon26 Exp $
+
+*rvm-1.11 (05 May 2005)
+
+  05 May 2005; Maurice van der Pot <griffon26@gentoo.org> +rvm-1.11.ebuild:
+  Added new release.
 
   20 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> rvm-1.10.ebuild:
   Stable on ppc.
@@ -32,7 +37,7 @@
   12 May 2004; Daniel Black <dragonheart@gentoo.org> metadata.xml,
   rvm-1.8.ebuild, +rvm-1.9.ebuild:
   version bump. 1.8 x86 stable. Maintainer changed to me/net-fs herd.
-  thanks to Sebastian Dröge <sebastian.droege@gmx.de> in bug #50632.
+  thanks to Sebastian DrÃ¶ge <sebastian.droege@gmx.de> in bug #50632.
 
   26 Apr 2004; Aron Griffis <agriffis@gentoo.org> rvm-1.6.ebuild:
   Add die following econf for bug 48950
