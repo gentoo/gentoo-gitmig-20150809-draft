@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.51.21.ebuild,v 1.3 2005/05/05 00:04:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.51.21-r1.ebuild,v 1.1 2005/05/05 04:36:25 jstubbs Exp $
 
 inherit toolchain-funcs
 
@@ -27,6 +27,8 @@ python_has_lchown() {
 
 src_unpack() {
 	unpack ${A}
+	cd ${S}
+	patch -p1 < ${FILESDIR}/portage-2.0.51.21-fixes.patch
 }
 
 src_compile() {
@@ -94,13 +96,13 @@ src_install() {
 	dosym ../lib/portage/bin/tbz2tool /usr/bin/tbz2tool
 	dosym ../lib/portage/bin/portageq /usr/bin/portageq
 	dosym ../lib/portage/bin/ebuild /usr/bin/ebuild
-	dosym ../lib/portage/bin/quickpkg /usr/sbin/quickpkg
 
 	dosym ../lib/portage/bin/env-update /usr/sbin/env-update
 	dosym ../lib/portage/bin/ebuild /usr/sbin/ebuild
 	dosym ../lib/portage/bin/etc-update /usr/sbin/etc-update
 	dosym ../lib/portage/bin/dispatch-conf /usr/sbin/dispatch-conf
 	dosym ../lib/portage/bin/archive-conf /usr/sbin/archive-conf
+	dosym ../lib/portage/bin/quickpkg /usr/sbin/quickpkg
 	dosym ../lib/portage/bin/fixpackages /usr/sbin/fixpackages
 	dosym ../lib/portage/bin/regenworld /usr/sbin/regenworld
 	dosym ../lib/portage/bin/emerge-webrsync /usr/sbin/emerge-webrsync
