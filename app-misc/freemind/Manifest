@@ -1,8 +1,18 @@
-MD5 a4b9b6ab3cd7c1972f7973110ea88f90 ChangeLog 2279
-MD5 a6b7c3b1a5ce10cdd42b1f3107e5b80d freemind-0.7.1.ebuild 1085
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 3e389c9f82a942661b2b2f3c62aba606 freemind-0.8.0_rc2.ebuild 1302
+MD5 6683b632a5406ec1cbb895e077abcec7 freemind-0.7.1.ebuild 1083
+MD5 b1d8ccb95a5599d315ced71f1cf54a93 freemind-0.7.1-r1.ebuild 1277
+MD5 da188e9976e7fbe195c93a063d45fbfb ChangeLog 2470
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
-MD5 037d53e1128d67ef6ce34bd3633b4440 freemind-0.7.1-r1.ebuild 1279
-MD5 73482fadc5029f8d2a74803f85e9a934 freemind-0.8.0_rc2.ebuild 1297
-MD5 615ccb469eb93e22c5e84358d55e6c0f files/digest-freemind-0.7.1 70
 MD5 615ccb469eb93e22c5e84358d55e6c0f files/digest-freemind-0.7.1-r1 70
+MD5 615ccb469eb93e22c5e84358d55e6c0f files/digest-freemind-0.7.1 70
 MD5 4aa9844e77246a548def155d68fd8395 files/digest-freemind-0.8.0_rc2 72
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCeqW1I1lqEGTUzyQRAmRGAJ0fcXAeC6/vhsUwK0GLw4Bp5graTwCeN7Yz
+ZBgDTrO7jNIHLmOA7edbih4=
+=7zFD
+-----END PGP SIGNATURE-----
