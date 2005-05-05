@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/chrony
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/chrony/ChangeLog,v 1.20 2005/05/01 17:05:34 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/chrony/ChangeLog,v 1.21 2005/05/05 22:31:41 hansmi Exp $
+
+  05 May 2005; Michael Hanselmann <hansmi@gentoo.org> chrony-1.20-r1.ebuild:
+  Added to ~hppa.
 
   01 May 2005; Michael Hanselmann <hansmi@gentoo.org> chrony-1.20.ebuild:
   Stable on ppc.
