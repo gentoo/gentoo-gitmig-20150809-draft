@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/xdrawchem/xdrawchem-1.7.8.ebuild,v 1.2 2005/01/02 15:54:19 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/xdrawchem/xdrawchem-1.7.8.ebuild,v 1.3 2005/05/05 22:42:01 swegener Exp $
 
 inherit flag-o-matic
 
@@ -19,7 +19,7 @@ IUSE=""
 
 DEPEND=">=x11-libs/qt-3.1.0
 	dev-util/pkgconfig
-	>=sci-chemistry/openbabel-1.100.2*"
+	>=sci-chemistry/openbabel-1.100.2"
 
 src_compile() {
 	# make sure we use moc from Qt, not from eg media-sound/moc
