@@ -1,4 +1,14 @@
-MD5 f2666bced1ac589733e422ce30ad0e2d openhpi-2.0.3.ebuild 1937
-MD5 17ef50529c2958e307b1f64ed4daa9d2 ChangeLog 397
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 b74fe92bb07cb5f45c69f5490faf7d5b openhpi-2.0.3.ebuild 1937
+MD5 efc8dcc6e9c6b3c608bef92b2b600c1d ChangeLog 527
 MD5 21cd68602737d7c996bceabf6e62c468 metadata.xml 223
 MD5 9133e404874f16420d387266a9ee914a files/digest-openhpi-2.0.3 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCeqUOI1lqEGTUzyQRAuuZAJ4548TOpaQEo8weQlX2y5PSJ3jXcgCgkrn1
+c9yohdzYn5PoZIhoLQi5pzM=
+=buV+
+-----END PGP SIGNATURE-----
