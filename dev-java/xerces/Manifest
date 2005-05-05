@@ -1,24 +1,24 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 7e68e1dc687f5c7b99751d58fc6fbf3d xerces-1.3.1-r1.ebuild 1200
-MD5 07a68860222c286330f357cf12112585 xerces-2.6.2-r2.ebuild 1868
-MD5 5f31b30f5151e5aa754bfd669a4a62f9 xerces-2.3.0-r1.ebuild 1687
-MD5 be18f82f884ae7e8e5aa1e8cf8faf872 xerces-2.6.2-r1.ebuild 1940
-MD5 64c0435dc67fb889130c6d2f433ad28c ChangeLog 7613
+MD5 3040d924321e1aefa58515e5d92a17f4 ChangeLog 7705
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
-MD5 75b2cfa2eff39aa21e17c8b2ed40b6b6 files/xerces-2.6.2-r2-gentoo.patch 1342
-MD5 37e61d014a2f8f79909f6d0775c1959b files/digest-xerces-2.3.0-r1 71
+MD5 be18f82f884ae7e8e5aa1e8cf8faf872 xerces-2.6.2-r1.ebuild 1940
+MD5 7e68e1dc687f5c7b99751d58fc6fbf3d xerces-1.3.1-r1.ebuild 1200
+MD5 5f31b30f5151e5aa754bfd669a4a62f9 xerces-2.3.0-r1.ebuild 1687
+MD5 0b88905a44b43b78ef4e48ef2de47327 xerces-2.6.2-r2.ebuild 1874
 MD5 202c6353e68e489ff4ca668a0999534d files/digest-xerces-2.6.2-r1 144
+MD5 b0ae8698b0ae0ee1e309b38ba1f81141 files/digest-xerces-1.3.1-r1 70
+MD5 37e61d014a2f8f79909f6d0775c1959b files/digest-xerces-2.3.0-r1 71
 MD5 b0ce49e162a5ad60941af4594c938eda files/digest-xerces-2.6.2-r2 71
-MD5 70a862e66b1ea35b680b716d2c58a954 files/xerces-2.6.2-javadoc.patch 595
 MD5 a00b411ba35267075fda1f96c4867caf files/xerces-1.3.1-build.xml 1680
 MD5 4f14802b02f3ee092ebcf99c004af474 files/xerces-2.3.0-gentoo.patch 2684
-MD5 b0ae8698b0ae0ee1e309b38ba1f81141 files/digest-xerces-1.3.1-r1 70
+MD5 75b2cfa2eff39aa21e17c8b2ed40b6b6 files/xerces-2.6.2-r2-gentoo.patch 1342
+MD5 70a862e66b1ea35b680b716d2c58a954 files/xerces-2.6.2-javadoc.patch 595
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFCdRMc06ebR+OMO78RAnjaAJwPG8rDXQ8XzpD5DiTPH4f7AGn8MwCfVtAa
-7u0olpETDz7SQ0g5a4gFwKE=
-=5c/Q
+iD8DBQFCepzbKRy60XGEcJIRAvbbAJ9FlH5YwKshQTOng8aqY91at+Hq4QCeLxrl
+kO9EuC9lWV4LFlKm9nmt0ls=
+=77BT
 -----END PGP SIGNATURE-----
