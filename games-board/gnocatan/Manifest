@@ -1,6 +1,16 @@
-MD5 9a0e257907af70e65f3d4db8912f92a9 ChangeLog 5948
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 b5287c508478ba0026b3e9fae329fc02 gnocatan-0.8.1.59.ebuild 1101
+MD5 c80df21612bb4a8e66b8e88b2dda5c4a gnocatan-0.8.1.54.ebuild 1100
+MD5 9c8661ce0ee208a3c23ae1280281d353 ChangeLog 6111
 MD5 cfd29f58e6f9fb057c83c8eb26c1a101 metadata.xml 315
-MD5 54304709b0efe9a98bf6a8bb6ea929e3 gnocatan-0.8.1.54.ebuild 1098
-MD5 40d01dfddd45a20fe8b1af2fc27d4965 gnocatan-0.8.1.59.ebuild 1099
-MD5 4e3c392ec0eb6076e0c6105856db8540 files/digest-gnocatan-0.8.1.59 70
 MD5 f5cbb9df7d1f26c804a8e8886dc901de files/digest-gnocatan-0.8.1.54 70
+MD5 4e3c392ec0eb6076e0c6105856db8540 files/digest-gnocatan-0.8.1.59 70
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCerDnI1lqEGTUzyQRApBHAKDI+VXcFiK2mRoXTt03QzFJtLNMLgCfYYrg
+mJ9jNisLRlykd3GW2UHPzPM=
+=jbBo
+-----END PGP SIGNATURE-----
