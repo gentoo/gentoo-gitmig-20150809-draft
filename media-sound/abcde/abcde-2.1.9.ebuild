@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/abcde/abcde-2.1.9.ebuild,v 1.8 2005/03/12 16:08:25 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/abcde/abcde-2.1.9.ebuild,v 1.9 2005/05/05 23:16:37 swegener Exp $
 
 inherit eutils
 
@@ -18,7 +18,7 @@ DEPEND=">=media-sound/id3-0.12
 	>=media-sound/cdparanoia-3.9.7
 	>=media-sound/vorbis-tools-1.0_rc3
 	media-sound/id3v2
-	>=media-libs/flac-1*
+	>=media-libs/flac-1
 	>=media-sound/normalize-0.7.4"
 
 src_unpack() {
