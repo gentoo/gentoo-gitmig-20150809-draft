@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-1.0.9_rc2-r1.ebuild,v 1.2 2005/04/21 09:17:00 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-1.0.9_rc3.ebuild,v 1.1 2005/05/05 17:50:53 eradicator Exp $
 
 IUSE="jack doc"
 
@@ -24,13 +24,6 @@ DEPEND="${RDEPEND}
 	doc? ( >=app-doc/doxygen-1.2.6 )"
 
 PDEPEND="jack? ( =media-plugins/alsa-jack-${PV}* )"
-
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${P}-gcc4.patch
-	epatch ${FILESDIR}/${P}-87099.patch
-}
 
 src_compile() {
 	local myconf=""
