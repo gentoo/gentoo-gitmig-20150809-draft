@@ -1,27 +1,17 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 c4ff22b128a02944998399998e8bfe37 apcupsd-3.10.17.ebuild 2574
+MD5 ce58378336c8c030fdd761f3ce384ca3 ChangeLog 11189
+MD5 90addc3e3ec4f77230cd7f491e1da84a apcupsd-3.10.15-r1.ebuild 2421
+MD5 4080a872f94b93a8e92d1b446c9c6d64 apcupsd-3.10.16-r3.ebuild 2627
 MD5 27ae5add10fc42e77804f1ecd768df87 metadata.xml 226
-MD5 35e63883c8d2d78acee1bdffdaf68fb4 apcupsd-3.10.15-r1.ebuild 2392
-MD5 7c0185e34e97fe5ff3b0c95e77e00947 ChangeLog 10985
-MD5 0509bd921593dc1b57efc30501492fb0 apcupsd-3.10.16-r3.ebuild 2598
+MD5 fa8c4988501225d5763b770d88f81102 apcupsd-3.10.17.ebuild 2588
+MD5 ec48a12c6d8b56aeffbeaa629f8835ad files/digest-apcupsd-3.10.15-r1 68
 MD5 ed12d329ca566b8f2632d425828ea5d7 files/digest-apcupsd-3.10.16-r3 68
 MD5 659d5670233b274842418c62ef15aafb files/digest-apcupsd-3.10.17 68
-MD5 ec48a12c6d8b56aeffbeaa629f8835ad files/digest-apcupsd-3.10.15-r1 68
-MD5 8f1a2aa4fd0307c2cfe3733e8454d3c2 files/3.10.17/smtp.patch 2663
-MD5 27ad4b6b56ea3aef2a89dded4c19b656 files/3.10.17/apache.conf 163
-MD5 2a93b5c4f2574caa199b3d93cf838e8c files/3.10.17/apcupsd.in.patch 315
-MD5 8f1a2aa4fd0307c2cfe3733e8454d3c2 files/3.10.16/smtp.patch 2663
-MD5 69cfaea0e3937c778c710b8120cbd379 files/3.10.16/apache.conf 157
-MD5 2a93b5c4f2574caa199b3d93cf838e8c files/3.10.16/apcupsd.in.patch 315
-MD5 8f1a2aa4fd0307c2cfe3733e8454d3c2 files/3.10.15/smtp.patch 2663
 MD5 69cfaea0e3937c778c710b8120cbd379 files/3.10.15/apache.conf 157
 MD5 2a93b5c4f2574caa199b3d93cf838e8c files/3.10.15/apcupsd.in.patch 315
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCSE9sKtJO8LeSoosRAgWIAJ4q1yT9h/XmvVWTIaygF4aaDYth8ACdGo7C
-zT6X8fDzNkObfWDG4l+CJSo=
-=5xBK
------END PGP SIGNATURE-----
+MD5 8f1a2aa4fd0307c2cfe3733e8454d3c2 files/3.10.15/smtp.patch 2663
+MD5 69cfaea0e3937c778c710b8120cbd379 files/3.10.16/apache.conf 157
+MD5 2a93b5c4f2574caa199b3d93cf838e8c files/3.10.16/apcupsd.in.patch 315
+MD5 8f1a2aa4fd0307c2cfe3733e8454d3c2 files/3.10.16/smtp.patch 2663
+MD5 27ad4b6b56ea3aef2a89dded4c19b656 files/3.10.17/apache.conf 163
+MD5 2a93b5c4f2574caa199b3d93cf838e8c files/3.10.17/apcupsd.in.patch 315
+MD5 8f1a2aa4fd0307c2cfe3733e8454d3c2 files/3.10.17/smtp.patch 2663

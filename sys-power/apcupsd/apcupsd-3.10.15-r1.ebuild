@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/apcupsd/apcupsd-3.10.15-r1.ebuild,v 1.1 2005/03/14 23:27:27 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/apcupsd/apcupsd-3.10.15-r1.ebuild,v 1.2 2005/05/05 02:31:30 vapier Exp $
 
 inherit eutils
 
@@ -66,6 +66,7 @@ src_compile() {
 
 src_install () {
 	make DESTDIR=${D} install || die "installed failed"
+	rm -f "${D}"/etc/init.d/halt
 
 	use apache2 || insinto /etc/apache/conf/addon-modules
 	use apache2 || newins  ${FILESDIR}/${PV}/apache.conf apcupsd.conf

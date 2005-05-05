@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/apcupsd/apcupsd-3.10.17.ebuild,v 1.2 2005/03/28 18:39:11 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/apcupsd/apcupsd-3.10.17.ebuild,v 1.3 2005/05/05 02:31:30 vapier Exp $
 
 inherit eutils depend.apache
 
@@ -12,11 +12,10 @@ SRC_URI="mirror://sourceforge/apcupsd/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64 ~ppc ~sparc"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="doc snmp usb apache2 cgi threads ncurses nls"
 
-DEPEND="virtual/libc
-	snmp? ( net-analyzer/net-snmp )
+DEPEND="snmp? ( net-analyzer/net-snmp )
 	cgi? ( >=media-libs/gd-1.8.4
 		net-www/apache )
 	ncurses? ( sys-libs/ncurses )
@@ -66,8 +65,9 @@ src_compile() {
 	make || die
 }
 
-src_install () {
+src_install() {
 	make DESTDIR=${D} install || die "installed failed"
+	rm -f "${D}"/etc/init.d/halt
 
 	if use cgi; then
 		insinto ${APACHE_MODULEDIR}
