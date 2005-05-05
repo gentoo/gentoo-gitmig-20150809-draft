@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-0.4.0.ebuild,v 1.1 2005/04/11 20:48:08 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-0.4.0.ebuild,v 1.2 2005/05/05 22:46:11 swegener Exp $
 
 inherit eutils
 
@@ -19,7 +19,7 @@ DEPEND="X? (
 			|| ( >=x11-base/xfree-4.3.0-r7 x11-base/xorg-x11 )
 		)
 		media-libs/fontconfig
-		>=media-libs/freetype-2*
+		>=media-libs/freetype-2
 		>=media-libs/libpixman-0.1.4
 		glitz? ( =media-libs/glitz-0.4.0* )
 		png? ( media-libs/libpng )"
