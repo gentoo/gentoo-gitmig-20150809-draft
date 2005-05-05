@@ -1,6 +1,26 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.305 2005/04/25 08:44:58 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.306 2005/05/05 15:26:40 luckyduck Exp $
+
+  05 May 2005; Jan Brinkmann <luckyduck@gentoo.org>
+  -files/mplayer-0.90-coreutils-fixup.patch, -files/mplayer-1.0-gtk2.patch,
+  -files/mplayer-1.0_pre5-alsa-gcc34.patch,
+  -files/mplayer-1.0_pre5-bio2jack.patch,
+  -files/mplayer-1.0_pre5-configure.patch,
+  -files/mplayer-1.0_pre5-gcc_detection.patch,
+  -files/mplayer-1.0_pre5-help_mp-ro.h.patch,
+  -files/mplayer-1.0_pre5-live.patch,
+  -files/mplayer-1.0_pre5-mga-kernel-2.6.patch,
+  -files/mplayer-1.0_pre5-mips64.patch,
+  -files/mplayer-1.0_pre5-r1-conf_locale.patch,
+  -files/mplayer-1.0_pre5-r4-ppc64.patch,
+  -files/mplayer-1.0_pre5-r5-configure.patch,
+  -files/mplayer-1.0_pre5-yuv2rgb_fix.patch, -files/cachefill.patch,
+  -files/gui_vuln_code.patch, -files/mplayer-gif.patch,
+  -files/mplayer-odml.patch, -files/mplayer-x11.patch,
+  -files/real_demux.patch, -files/str_undefined.patch, -files/strl.c,
+  -files/vuln02-fix.diff, -mplayer-1.0_pre5-r5.ebuild:
+  removed old vulnerable version and unneeded patches.
 
   25 Apr 2005; Martin Schlemmer <azarah@gentoo.org>
   +files/mplayer-1.0_pre7-gcc4.patch,
