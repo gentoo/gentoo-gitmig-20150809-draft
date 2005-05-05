@@ -67,3 +67,6 @@ smartcard
 bash-completion
 crypt
 doc
+
+emacs
+xemacs

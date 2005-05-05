@@ -37,3 +37,6 @@ fdftk
 djbfft
 qdbm
 mzscheme
+
+emacs
+xemacs
