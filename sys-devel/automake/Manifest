@@ -6,7 +6,7 @@ MD5 f8941fa37804f154576df4982f9bf060 automake-1.8.5-r3.ebuild 1527
 MD5 cf475079291abe4fb62357998afa72d0 automake-1.7.9-r1.ebuild 1530
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 3d0edd727dd2a47abda8139f29245fdf automake-1.9.4.ebuild 1425
-MD5 091d1ff3342fc5abb8380add35e5c809 automake-1.9.5.ebuild 1437
+MD5 6046836f4a1eb5385597ae400c2675ee automake-1.9.5.ebuild 1424
 MD5 a56b2416416ab1f0bdc71cb7ab0454d6 files/automake-1.5-slot.patch 1191
 MD5 252f1212a83cc74c42cd557bc3f65e32 files/digest-automake-1.4_p6 67
 MD5 91bfbe9a39ed2eee6bfa0254bad56d5d files/automake-1.4-libtoolize.patch 542
