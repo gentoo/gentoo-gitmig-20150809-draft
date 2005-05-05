@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/crack-attack/crack-attack-1.1.13-r1.ebuild,v 1.1 2005/04/25 01:01:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/crack-attack/crack-attack-1.1.13-r1.ebuild,v 1.2 2005/05/05 23:00:41 vapier Exp $
 
 inherit eutils flag-o-matic games
 
@@ -35,7 +35,7 @@ src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
 	dodoc AUTHORS ChangeLog README
 	dohtml -A xpm doc/*
-	doicon "${FILESDIR}"/crack-attack.xpm
+	doicon data/crack-attack.xpm
 	make_desktop_entry crack-attack Crack-attack crack-attack.xpm
 	prepgamesdirs
 }
