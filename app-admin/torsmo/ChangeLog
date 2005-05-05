@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/torsmo
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/torsmo/ChangeLog,v 1.27 2005/05/01 14:16:55 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/torsmo/ChangeLog,v 1.28 2005/05/05 22:36:05 swegener Exp $
+
+  05 May 2005; Sven Wegener <swegener@gentoo.org> torsmo-0.18-r2.ebuild,
+  torsmo-0.18-r3.ebuild:
+  Fixed [<>]=cat/pkg-ver* dependencies.
 
   01 May 2005; Daniel Black <dragonheart@gentoo.org> torsmo-0.18-r3.ebuild:
   Added Seti support as per bug #85633. Thanks to mike will
