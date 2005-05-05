@@ -1,6 +1,13 @@
 # ChangeLog for app-editors/hteditor
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/hteditor/ChangeLog,v 1.14 2005/05/04 11:43:37 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/hteditor/ChangeLog,v 1.15 2005/05/05 07:28:32 dragonheart Exp $
+
+*hteditor-0.8.0-r2 (05 May 2005)
+
+  05 May 2005; Daniel Black <dragonheart@gentoo.org>
+  +hteditor-0.8.0-r2.ebuild:
+  New version from cvs snapshot that includes other fixes. Thanks to Tavis for
+  requesting it
 
 *hteditor-0.8.0-r1 (04 May 2005)
 
