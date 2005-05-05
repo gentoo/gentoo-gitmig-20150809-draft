@@ -1,6 +1,12 @@
 # ChangeLog for media-video/nvidia-glx
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/ChangeLog,v 1.93 2005/05/04 21:32:06 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/ChangeLog,v 1.94 2005/05/05 23:29:24 eradicator Exp $
+
+*nvidia-glx-1.0.6111-r2 (05 May 2005)
+
+  05 May 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  +nvidia-glx-1.0.6111-r2.ebuild:
+  Added an opengl-update-2.2 version of nvidia-glx-1.0.6111 by request.
 
 *nvidia-glx-1.0.7167-r2 (04 May 2005)
 *nvidia-glx-1.0.6629-r6 (04 May 2005)
