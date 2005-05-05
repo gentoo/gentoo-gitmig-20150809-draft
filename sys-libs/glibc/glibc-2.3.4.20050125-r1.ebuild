@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20050125-r1.ebuild,v 1.44 2005/05/03 05:12:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20050125-r1.ebuild,v 1.45 2005/05/05 12:28:53 azarah Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -387,6 +387,9 @@ toolchain-glibc_src_install() {
 	# now, strip everything but the thread libs #46186
 	mkdir -p ${T}/thread-backup
 	mv -f ${D}$(alt_libdir)/lib{pthread,thread_db}* ${T}/thread-backup/
+	# Also, don't strip the dynamic linker, else we cannot set breakpoints
+	# in shared libraries.  Fix by Lonnie Princehouse.
+	mv -f ${D}/$(get_libdir)/ld-* ${T}/thread-backup/
 	if want_linuxthreads && want_nptl ; then
 		mkdir -p ${T}/thread-backup/tls
 		mv -f ${D}$(alt_libdir)/tls/lib{pthread,thread_db}* ${T}/thread-backup/tls

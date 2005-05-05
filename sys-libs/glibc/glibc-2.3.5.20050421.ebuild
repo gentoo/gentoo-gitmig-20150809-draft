@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.5.20050421.ebuild,v 1.6 2005/05/03 05:12:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.5.20050421.ebuild,v 1.7 2005/05/05 12:28:53 azarah Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -187,25 +187,16 @@ toolchain-glibc_src_unpack() {
 		unpack ${PN}-${PATCH_GLIBC_VER:-${GLIBC_RELEASE_VER}}-patches-${PATCH_VER}.tar.bz2
 	fi
 
-	if [[ ${GLIBC_MANPAGE_VERSION} != "none" ]] ; then
-		cd ${WORKDIR}
-		unpack ${PN}-manpages-${GLIBC_MANPAGE_VERSION:-${GLIBC_RELEASE_VER}}.tar.bz2
-	fi
-
-# FIXME: I updated the infopages, but forgot to regen th branch-update
-#	if [[ ${GLIBC_INFOPAGE_VERSION} != "none" ]] ; then
-#		cd ${S}
-#		unpack ${PN}-infopages-${GLIBC_INFOPAGE_VERSION:-${GLIBC_RELEASE_VER}}.tar.bz2
-#	fi
-
+	# XXX: We should do the branchupdate, before extracting the manpages and
+	# infopages else it does not help much (mtimes change if there is a change
+	# to them with branchupdate)
 	if [[ -n ${BRANCH_UPDATE} ]] ; then
 		cd ${WORKDIR}
 		unpack ${PN}-${GLIBC_RELEASE_VER}-branch-update-${BRANCH_UPDATE}.patch.bz2
 	fi
 
-	cd ${S}
-
 	if [[ -n ${BRANCH_UPDATE} ]] ; then
+		cd ${S}
 		epatch ${WORKDIR}/${PN}-${GLIBC_RELEASE_VER}-branch-update-${BRANCH_UPDATE}.patch
 
 		# Snapshot date patch
@@ -213,7 +204,11 @@ toolchain-glibc_src_unpack() {
 		sed -i -e "s:\(#define RELEASE\).*:\1 \"${BRANCH_UPDATE}\":" version.h
 	fi
 
-# FIXME: I updated the infopages, but forgot to regen th branch-update
+	if [[ ${GLIBC_MANPAGE_VERSION} != "none" ]] ; then
+		cd ${WORKDIR}
+		unpack ${PN}-manpages-${GLIBC_MANPAGE_VERSION:-${GLIBC_RELEASE_VER}}.tar.bz2
+	fi
+
 	if [[ ${GLIBC_INFOPAGE_VERSION} != "none" ]] ; then
 		cd ${S}
 		unpack ${PN}-infopages-${GLIBC_INFOPAGE_VERSION:-${GLIBC_RELEASE_VER}}.tar.bz2
@@ -225,6 +220,7 @@ toolchain-glibc_src_unpack() {
 		OLD_ARCH="${ARCH}"
 		ARCH="$(tc-arch)"
 
+		cd ${S}
 		einfo "Applying Gentoo Glibc Patches: ${PATCH_GLIBC_VER:-${GLIBC_RELEASE_VER}}-${PATCH_VER}"
 		epatch ${WORKDIR}/patches
 
@@ -399,6 +395,9 @@ toolchain-glibc_src_install() {
 	# now, strip everything but the thread libs #46186
 	mkdir -p ${T}/thread-backup
 	mv -f ${D}$(alt_libdir)/lib{pthread,thread_db}* ${T}/thread-backup/
+	# Also, don't strip the dynamic linker, else we cannot set breakpoints
+	# in shared libraries.  Fix by Lonnie Princehouse.
+	mv -f ${D}/$(get_libdir)/ld-* ${T}/thread-backup/
 	if want_linuxthreads && want_nptl ; then
 		mkdir -p ${T}/thread-backup/tls
 		mv -f ${D}$(alt_libdir)/tls/lib{pthread,thread_db}* ${T}/thread-backup/tls
