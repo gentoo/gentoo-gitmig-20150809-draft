@@ -1,6 +1,9 @@
 # ChangeLog for app-text/estraier
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/estraier/ChangeLog,v 1.24 2005/05/05 14:41:08 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/estraier/ChangeLog,v 1.25 2005/05/05 14:43:59 hattya Exp $
+
+  05 May 2005; Akinori Hattori <hattya@gentoo.org> estraier-1.2.26.ebuild:
+  stable on x86.
 
 *estraier-1.2.28 (05 May 2005)
 
