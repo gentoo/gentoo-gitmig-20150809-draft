@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-perl/gtk2-perl-1.062.ebuild,v 1.6 2005/04/22 13:15:37 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-perl/gtk2-perl-1.062.ebuild,v 1.7 2005/05/05 23:53:29 swegener Exp $
 
 inherit perl-module
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="x86 ppc sparc ~alpha ~hppa amd64 ppc64"
 IUSE=""
 
-DEPEND=">=x11-libs/gtk+-2*
-	>=dev-perl/glib-perl-1.062*
-	>=dev-perl/extutils-depends-0.205*
-	>=dev-perl/extutils-pkgconfig-1.07*"
+DEPEND=">=x11-libs/gtk+-2
+	>=dev-perl/glib-perl-1.062
+	>=dev-perl/extutils-depends-0.205
+	>=dev-perl/extutils-pkgconfig-1.07"
