@@ -1,6 +1,11 @@
 # ChangeLog for net-dialup/ppp
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.104 2005/04/16 10:10:42 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.105 2005/05/05 20:01:23 mrness Exp $
+
+*ppp-2.4.3-r2 (05 May 2005)
+
+  05 May 2005; Alin Nastac <mrness@gentoo.org> +ppp-2.4.3-r2.ebuild:
+  Import fixes from upstream CVS (#74093).
 
   16 Apr 2005; Alin Nastac <mrness@gentoo.org> files/net.ppp0:
   Fix net.ppp0 script regarding default route removal (#89017).

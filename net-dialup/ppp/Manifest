@@ -1,10 +1,11 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
+MD5 7fabd0811dbf88750b8a7cd65f1b7cb2 ppp-2.4.3-r2.ebuild 5673
 MD5 f498fcc5704e842bdd3a13e71626f676 ppp-2.4.3.ebuild 5712
 MD5 c4e90e104aa550d26d90ee354e7a2136 ppp-2.4.1-r14.ebuild 4702
 MD5 558237b810ac812265ad87bb956270de ppp-2.4.3-r1.ebuild 5799
-MD5 326398064e16853ec98f5c39e2df540f ChangeLog 17851
+MD5 c85c44da12f935460b715d9a45746851 ChangeLog 17993
 MD5 ec2f84816306825d125d0c01bd86758d metadata.xml 163
 MD5 4dce8b15c7a47d9a225b1047fda9870e ppp-2.4.2-r10.ebuild 5899
 MD5 4e62cdeb360ca0a22becbd2deb6f2dac files/pon 957
@@ -22,6 +23,7 @@ MD5 c032ff6a0c137f4996b7a5bf60e19a0a files/ppp-sys_error_to_strerror.patch 4920
 MD5 8368eb79ad4618c3c6753801b5c4c689 files/gcc3.3-multiline.patch 1673
 MD5 01ed8667e00028ff1c6a8ac4a0d7e1dc files/digest-ppp-2.4.3 194
 MD5 01ed8667e00028ff1c6a8ac4a0d7e1dc files/digest-ppp-2.4.3-r1 194
+MD5 3e67d7c036e1e23ae4aa96ad043cb3e8 files/digest-ppp-2.4.3-r2 195
 MD5 5d83af7b897082a0b1ecd70a2cc2a0c7 files/modules.ppp 268
 MD5 5a554e2a04b9e11bb5bea839213bf97c files/ip-down 931
 MD5 f0ad3e0c62aec1771536caf00e28b9c6 files/pppoe.html 7605
@@ -53,7 +55,7 @@ MD5 f0ad3e0c62aec1771536caf00e28b9c6 files/2.4.3/pppoe.html 7605
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCYOTnjiC39V7gKu0RAlefAKCM18q8ZlRc+HEdUM4v2Vgd21UZIACfSgV0
-u5MgoV2gC0bYsMgACz7BS70=
-=j6CA
+iD8DBQFCenuujiC39V7gKu0RAjr6AKDHnHa/FRL6PpLnV5eIB+dW9T3VJgCgj0I2
+7yEogJwahT4v46/OCZGH5fo=
+=sRjQ
 -----END PGP SIGNATURE-----
