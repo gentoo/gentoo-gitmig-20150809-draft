@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/slashem/slashem-0.0.760.ebuild,v 1.3 2005/01/27 20:38:46 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/slashem/slashem-0.0.760.ebuild,v 1.4 2005/05/05 01:22:51 vapier Exp $
 
 inherit eutils flag-o-matic games
 
@@ -17,18 +17,16 @@ SRC_URI="mirror://sourceforge/slashem/${SE_PN}
 
 LICENSE="nethack"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="X qt gnome sdl opengl"
+KEYWORDS="amd64 ppc x86"
+IUSE="X gnome sdl opengl"
 
-RDEPEND="virtual/libc
-	>=sys-libs/ncurses-5.2-r5
+#	qt? ( =x11-libs/qt-2* ) this version has overflow bugs #79720
+RDEPEND=">=sys-libs/ncurses-5.2-r5
 	X? ( virtual/x11 )
-	qt? ( =x11-libs/qt-2* )
 	gnome? ( >=gnome-base/gnome-libs-1.4.1.4-r2 )
 	opengl? ( virtual/opengl )
 	sdl? ( media-libs/libsdl )"
 DEPEND="${RDEPEND}
-	>=sys-apps/sed-4
 	dev-util/yacc"
 
 HACKDIR=${GAMES_STATEDIR}/${PN}
@@ -59,7 +57,7 @@ src_unpack() {
 
 	if use X ; then
 		./config X11 ../.. || die "X config"
-		for v in qt gnome sdl opengl ; do
+		for v in gnome sdl opengl ; do #qt
 			use ${v} && { ./config ${v} ../.. || die "${v} config"; }
 		done
 	fi
@@ -133,7 +131,7 @@ src_install() {
 
 	local windowtypes="tty"
 	use gnome  && windowtypes="${windowtypes} gnome"
-	use qt     && windowtypes="${windowtypes} qt"
+	#use qt     && windowtypes="${windowtypes} qt"
 	use X      && windowtypes="${windowtypes} x11"
 	use sdl    && windowtypes="${windowtypes} sdl"
 	use opengl && windowtypes="${windowtypes} gl"
