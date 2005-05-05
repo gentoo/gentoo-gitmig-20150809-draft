@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/waimea/waimea-0.5.0_pre040506.ebuild,v 1.8 2005/04/06 14:19:42 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/waimea/waimea-0.5.0_pre040506.ebuild,v 1.9 2005/05/05 02:47:10 vapier Exp $
 
-inherit eutils 64-bit
+inherit eutils
 
 MY_P="${P%_pre*}"	# 0.5.0_pre040506 -> 0.5.0
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://www.waimea.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~amd64 ~sparc"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="truetype xinerama svg"
 
 DEPEND="virtual/x11
@@ -26,7 +26,7 @@ PROVIDE="virtual/blackbox"
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	64-bit && epatch ${FILESDIR}/${MY_P}-64bit-clean.patch
+	epatch ${FILESDIR}/${MY_P}-64bit-clean.patch
 	epatch ${FILESDIR}/${MY_P}-font.patch
 	if has_version '>=x11-libs/cairo-0.3' ; then
 		epatch ${FILESDIR}/${MY_P}-includes.patch
