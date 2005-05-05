@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python/gnome-python-2.0.0-r1.ebuild,v 1.11 2005/04/16 23:36:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python/gnome-python-2.0.0-r1.ebuild,v 1.12 2005/05/05 23:51:25 swegener Exp $
 
 inherit gnome2 python
 
@@ -13,7 +13,7 @@ KEYWORDS="alpha amd64 ia64 ppc sparc x86"
 IUSE="gtkhtml"
 
 RDEPEND=">=dev-lang/python-2.2
-	>=dev-python/pygtk-${PV}*
+	>=dev-python/pygtk-${PV}
 	>=dev-python/pyorbit-2.0
 	>=dev-libs/glib-2
 	>=x11-libs/gtk+-2

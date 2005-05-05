@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python/gnome-python-2.0.0.ebuild,v 1.11 2005/03/23 14:27:19 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python/gnome-python-2.0.0.ebuild,v 1.12 2005/05/05 23:51:25 swegener Exp $
 
 # devel version - debug
 inherit gnome2 debug
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.pygtk.org/"
 LICENSE="LGPL-2"
 
 RDEPEND=">=dev-lang/python-2.2
-	>=dev-python/pygtk-${PV}*
+	>=dev-python/pygtk-${PV}
 	>=dev-python/pyorbit-2.0
 	>=dev-libs/glib-2
 	>=x11-libs/gtk+-2
