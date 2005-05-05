@@ -1,6 +1,19 @@
 # ChangeLog for media-sound/alsa-driver
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/ChangeLog,v 1.143 2005/05/05 17:38:47 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/ChangeLog,v 1.144 2005/05/05 17:41:27 eradicator Exp $
+
+  05 May 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  -files/alsa-driver-1.0.4-devfix.patch,
+  -files/alsa-driver-1.0.5-devfix.patch,
+  -files/alsa-driver-1.0.5a-cs46xx-passthrough.patch,
+  -files/alsa-driver-1.0.5a-xbox-ac97.patch,
+  -files/alsa-driver-1.0.6a-emu10k1-passthrough.patch,
+  -files/alsa-driver-1.0.6a-kbuild.patch,
+  -files/alsa-driver-1.0.7-audigy71.patch,
+  -files/alsa-driver-1.0.7-configure.patch,
+  -files/alsa-driver-1.0.7-ioctl32.patch-r2,
+  -files/alsa-driver-1.0.7-xbox.patch, -alsa-driver-1.0.7-r4.ebuild:
+  Removing old version and cleaning out unused patches.
 
 *alsa-driver-1.0.9_rc3 (05 May 2005)
 
