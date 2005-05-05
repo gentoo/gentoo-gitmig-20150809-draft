@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/gentoolkit-dev
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit-dev/ChangeLog,v 1.24 2005/05/01 23:14:57 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit-dev/ChangeLog,v 1.25 2005/05/05 21:39:02 hansmi Exp $
+
+  05 May 2005; Michael Hanselmann <hansmi@gentoo.org>
+  gentoolkit-dev-0.2.3.ebuild:
+  Stable on hppa.
 
   01 May 2005; Joshua Kinard <kumba@gentoo.org> gentoolkit-dev-0.2.3.ebuild:
   Marked stable on mips.
