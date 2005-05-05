@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/dpkg
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/ChangeLog,v 1.30 2005/05/04 06:24:12 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/ChangeLog,v 1.31 2005/05/05 18:18:21 lanius Exp $
+
+  05 May 2005; Heinrich Wendel <lanius@gentoo.org>
+  +files/dpkg-1.10.27.gcc4.patch, dpkg-1.10.27.ebuild:
+  ebuild cleanups; gcc-4 patch
 
 *dpkg-1.10.27 (04 May 2005)
 

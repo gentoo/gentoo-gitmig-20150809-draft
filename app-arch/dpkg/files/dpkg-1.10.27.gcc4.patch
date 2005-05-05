@@ -1,0 +1,33 @@
+--- lib/mlib.c~	2005-02-10 16:24:17.000000000 +0100
++++ lib/mlib.c	2005-05-04 16:13:58.000000000 +0200
+@@ -189,7 +189,7 @@
+   switch(data->type) {
+     case BUFFER_WRITE_BUF:
+       memcpy(data->data.ptr, buf, length);
++      data->data.ptr = (char*)data->data.ptr + length;
+-      (char*)data->data.ptr += length;
+       break;
+     case BUFFER_WRITE_VBUF:
+       varbufaddbuf((struct varbuf *)data->data.ptr, buf, length);
+--- lib/parse.c~	2005-02-10 16:24:17.000000000 +0100
++++ lib/parse.c	2005-05-04 16:13:25.000000000 +0200
+@@ -39,7 +39,7 @@
+ #include <sys/mman.h>
+ #endif
+ 
++const struct fieldinfo *fieldinfos = {
+-const struct fieldinfo fieldinfos[]= {
+   /* NB: capitalisation of these strings is important. */
+   { "Package",          f_name,            w_name                                     },
+   { "Essential",        f_boolean,         w_booleandefno,   PKGIFPOFF(essential)     },
+--- include/parsedump.h~	2005-02-10 16:24:17.000000000 +0100
++++ include/parsedump.h	2005-05-04 16:13:36.000000000 +0200
+@@ -30,7 +30,7 @@
+   const char *canon;
+ };
+ 
++extern const struct fieldinfo *fieldinfos;
+-extern const struct fieldinfo fieldinfos[];
+ extern const struct nickname nicknames[];
+ extern const int nfields; /* = elements in fieldinfos, including the sentinels */
+ 

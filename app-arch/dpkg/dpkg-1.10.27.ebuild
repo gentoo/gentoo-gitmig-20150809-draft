@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/dpkg-1.10.27.ebuild,v 1.1 2005/05/04 06:24:12 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/dpkg-1.10.27.ebuild,v 1.2 2005/05/05 18:18:21 lanius Exp $
 
 inherit eutils
 
@@ -19,11 +19,14 @@ RDEPEND=">=dev-lang/perl-5.6.0
 DEPEND="${RDEPEND}
 	>=sys-devel/gettext-0.11.5"
 
-src_compile() {
-	cd main
-	ln -s ../archtable
-	cd ..
+src_unpack() {
+	unpack ${A} && cd ${S} || die "unpack failed"
+	ln -s ../archtable main/archtable
 	epatch ${FILESDIR}/${PN}-1.10.26.patch
+	epatch ${FILESDIR}/${PN}-1.10.27.gcc4.patch
+}
+
+src_compile() {
 	./configure || die
 	make || die
 }
