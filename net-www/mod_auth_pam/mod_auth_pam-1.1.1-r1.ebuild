@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_auth_pam/mod_auth_pam-1.1.1-r1.ebuild,v 1.6 2005/02/25 17:51:41 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_auth_pam/mod_auth_pam-1.1.1-r1.ebuild,v 1.7 2005/05/05 15:55:07 swegener Exp $
 
 inherit eutils apache-module
 
@@ -30,8 +30,8 @@ DOCFILES="INSTALL README doc/*"
 
 need_apache
 
-SRC_URI="apache2?  http://pam.sourceforge.net/mod_auth_pam/dist/${PN}-2.0-${PV}.tar.gz
-	 !apache2? http://pam.sourceforge.net/mod_auth_pam/dist/${PN}-${PV}.tar.gz"
+SRC_URI="apache2? ( http://pam.sourceforge.net/mod_auth_pam/dist/${PN}-2.0-${PV}.tar.gz )
+	 !apache2? ( http://pam.sourceforge.net/mod_auth_pam/dist/${PN}-${PV}.tar.gz )"
 
 useq apache2 && S=${WORKDIR}/${PN}
 
