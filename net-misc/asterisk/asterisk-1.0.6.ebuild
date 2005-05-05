@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.0.6.ebuild,v 1.2 2005/03/11 15:03:41 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.0.6.ebuild,v 1.3 2005/05/05 15:52:23 swegener Exp $
 
 IUSE="alsa doc gtk mmx mysql pri zaptel uclibc debug postgres vmdbmysql vmdbpostgres bri hardened speex"
 
@@ -13,7 +13,7 @@ DESCRIPTION="Asterisk: A Modular Open Source PBX System"
 HOMEPAGE="http://www.asterisk.org/"
 SRC_URI="ftp://ftp.asterisk.org/pub/telephony/${PN}/${P}.tar.gz
 	 ftp://ftp.asterisk.org/pub/telephony/${PN}/${PN}-addons-${ADDONS_VERSION}.tar.gz
-	 bri? http://www.junghanns.net/${PN}/downloads/bristuff-${BRI_VERSION}.tar.gz"
+	 bri? ( http://www.junghanns.net/${PN}/downloads/bristuff-${BRI_VERSION}.tar.gz )"
 
 S=${WORKDIR}/${P}
 S_ADDONS=${WORKDIR}/${PN}-addons-${ADDONS_VERSION}
