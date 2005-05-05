@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/mit-krb5-1.3.6-r2.ebuild,v 1.10 2005/04/08 05:51:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/mit-krb5-1.3.6-r2.ebuild,v 1.11 2005/05/05 02:31:46 vapier Exp $
 
-inherit eutils 64-bit
+inherit eutils
 
 MY_P=${PN/mit-}-${PV}
 S=${WORKDIR}/${MY_P}/src
@@ -26,7 +26,7 @@ src_unpack() {
 	unpack ${A}
 	tar -zxf ${MY_P}.tar.gz
 	cd ${S}
-	64-bit && epatch ${FILESDIR}/${P}-64bit.patch
+	epatch ${FILESDIR}/${P}-64bit.patch
 	epatch ${FILESDIR}/${P}-telnet.patch.bz2
 }
 
