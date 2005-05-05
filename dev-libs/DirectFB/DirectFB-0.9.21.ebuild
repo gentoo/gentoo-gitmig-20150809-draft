@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/DirectFB-0.9.21.ebuild,v 1.3 2005/03/02 01:07:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/DirectFB-0.9.21.ebuild,v 1.4 2005/05/05 02:35:04 vapier Exp $
 
-inherit eutils 64-bit flag-o-matic gcc
+inherit eutils flag-o-matic gcc
 
 IUSE_VIDEO_CARDS="ati128 cle266 cyber5k i810 mach64 matrox neomagic nsc nvidia radeon savage sis315 tdfx unichrome"
 
