@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.52-r1.ebuild,v 1.18 2005/04/25 01:54:54 beu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.52-r1.ebuild,v 1.19 2005/05/05 12:13:05 kloeri Exp $
 
 inherit flag-o-matic eutils fixheadtails gnuconfig
 
@@ -10,7 +10,7 @@ DESCRIPTION="Apache Web Server, Version 2.0.x"
 HOMEPAGE="http://www.apache.org/"
 SRC_URI="mirror://apache/httpd/httpd-${PV}.tar.gz
 	http://dev.gentoo.org/~urilith/apache/apache-patches-${PVR}.tar.bz2
-	mirror://gentoo/apache2-conf.tar.bz2"
+	http://dev.gentoo.org/~kloeri/apache_patches/apache2-conf.tar.bz2"
 
 LICENSE="Apache-2.0"
 SLOT="2"

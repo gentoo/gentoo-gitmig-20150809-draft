@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-1.3.29-r2.ebuild,v 1.9 2005/04/09 21:55:46 trapni Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-1.3.29-r2.ebuild,v 1.10 2005/05/05 12:13:05 kloeri Exp $
 
 inherit eutils fixheadtails
 
@@ -14,7 +14,7 @@ DESCRIPTION="The Apache Web Server"
 HOMEPAGE="http://www.apache.org http://www.modssl.org"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~amd64 ~ia64 mips"
 SRC_URI="http://httpd.apache.org/dist/httpd/apache_${PV}.tar.gz
-	mirror://gentoo/${P}-gentoo.diff.bz2
+	http://dev.gentoo.org/~kloeri/apache_patches/${P}-gentoo.diff.bz2
 	ftp://ftp.modssl.org/source/mod_ssl-${mod_ssl_ver}-${PV}.tar.gz"
 
 # The mod_ssl archive is only for providing the EAPI patch in here.
