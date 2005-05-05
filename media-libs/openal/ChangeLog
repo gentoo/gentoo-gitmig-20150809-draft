@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/openal
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/ChangeLog,v 1.37 2005/03/29 16:58:09 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/ChangeLog,v 1.38 2005/05/05 00:12:09 eradicator Exp $
+
+*openal-20050504 (05 May 2005)
+
+  05 May 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  +files/openal-20050504-alsa_capture.patch,
+  +files/openal-20050504-destdir.patch, +openal-20050504.ebuild:
+  Version bump to correct bug #81658.
 
   29 Mar 2005; Chris Gianelloni <wolf31o2@gentoo.org>
   -files/openal-20040303-alsa_capture.diff, -openal-20020127.ebuild,
