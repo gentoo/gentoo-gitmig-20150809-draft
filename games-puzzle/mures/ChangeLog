@@ -1,0 +1,12 @@
+# ChangeLog for games-puzzle/mures
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/mures/ChangeLog,v 1.1 2005/05/05 11:40:51 wolf31o2 Exp $
+
+*mures-0.5 (05 May 2005)
+
+  05 May 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  +files/mures-0.5-save.patch, +files/mures-0.5-screenshot.patch,
+  +metadata.xml, +mures-0.5.ebuild:
+  Initial import. Ebuild by Alexandru Toma <flash3001@yahoo.com>. Closing bug
+  #52723.
+
