@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/castor
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/castor/ChangeLog,v 1.6 2005/03/29 15:23:04 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/castor/ChangeLog,v 1.7 2005/05/05 15:41:38 luckyduck Exp $
+
+  05 May 2005; Jan Brinkmann <luckyduck@gentoo.org> castor-0.9.5.3.ebuild:
+  stable on amd64 and x86
 
   29 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org> castor-0.9.5.3.ebuild:
   moved from dev-java/oro to dev-java/jakarta-oro dependency. see #71337.
