@@ -1,6 +1,10 @@
 # ChangeLog for net-www/mod_vdbh
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_vdbh/ChangeLog,v 1.10 2005/01/09 00:13:00 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_vdbh/ChangeLog,v 1.11 2005/05/05 23:41:06 swegener Exp $
+
+  05 May 2005; Sven Wegener <swegener@gentoo.org> mod_vdbh-1.0.2-r1.ebuild,
+  mod_vdbh-1.0.3.ebuild, mod_vdbh-1.0.3-r1.ebuild:
+  Removed * postfix from <, <=, >= and > dependencies.
 
 *mod_vdbh-1.0.3-r1 (09 Jan 2005)
 
