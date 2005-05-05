@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/mpd
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.54 2005/04/04 23:40:55 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.55 2005/05/05 14:31:56 luckyduck Exp $
+
+  05 May 2005; Jan Brinkmann <luckyduck@gentoo.org> files/mpd.rc6:
+  added option to stop() in the initscript, see #89180 for details
 
   04 Apr 2005; Thomas Matthijs <axxo@gentoo.org> files/mpd.rc6:
   add use alsasound to init script
