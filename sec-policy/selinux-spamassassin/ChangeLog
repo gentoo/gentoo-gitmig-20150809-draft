@@ -1,6 +1,13 @@
 # ChangeLog for sec-policy/selinux-spamassassin
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-spamassassin/ChangeLog,v 1.6 2005/04/23 19:09:59 kaiowas Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-spamassassin/ChangeLog,v 1.7 2005/05/05 19:09:31 kaiowas Exp $
+
+*selinux-spamassassin-20050502 (05 May 2005)
+
+  05 May 2005; petre rodan <kaiowas@gentoo.org>
+  -selinux-spamassassin-20050408.ebuild,
+  +selinux-spamassassin-20050502.ebuild:
+  small policy fixes
 
 *selinux-spamassassin-20050408 (23 Apr 2005)
 
