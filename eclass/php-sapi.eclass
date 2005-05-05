@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-sapi.eclass,v 1.57 2005/04/10 20:46:31 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-sapi.eclass,v 1.58 2005/05/05 16:44:06 swegener Exp $
 # Author: Robin H. Johnson <robbat2@gentoo.org>
 
 inherit eutils flag-o-matic multilib
@@ -285,7 +285,7 @@ supports-lfs() {
 	# for some reason (I do not know who wrote this) we do not want LFS on glibc-2.2
 	# maybe it's broken then
 
-	has_version '>=sys-libs/glibc-2.3*' && return 0
+	has_version '>=sys-libs/glibc-2.3' && return 0
 	has_version '=sys-libs/glibc-2.2*'  && return 1
 	return 0
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnustep.eclass,v 1.23 2005/04/15 04:27:43 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnustep.eclass,v 1.24 2005/05/05 16:44:06 swegener Exp $
 
 inherit gnustep-funcs eutils flag-o-matic
 
@@ -62,7 +62,7 @@ GNUSTEP_GUI_DEPEND="${GNUSTEP_BASE_DEPEND}
 GS_DEPEND="gnustep-base/gnustep-env"
 DEBUG_DEPEND="debug? ( >=sys-devel/gdb-6.0 )"
 DOC_RDEPEND="doc? ( sys-apps/man
-	>=sys-apps/texinfo-4.6* )"
+	>=sys-apps/texinfo-4.6 )"
 GS_RDEPEND="${GS_DEPEND}
 	${DEBUG_DEPEND}
 	${DOC_RDEPEND}"
