@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/subversion.eclass,v 1.18 2005/01/20 09:53:16 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/subversion.eclass,v 1.19 2005/05/05 14:55:23 hattya Exp $
 
 ## --------------------------------------------------------------------------- #
 # Author: Akinori Hattori <hattya@gentoo.org>
@@ -228,6 +228,10 @@ function subversion_bootstrap() {
 ## -- subversion_src_unpack() ------------------------------------------------ #
 
 function subversion_src_unpack() {
+
+	if [ "${A}" != "" ]; then
+		unpack ${A}
+	fi
 
 	subversion_svn_fetch || die "${ESVN}: unknown problem in subversion_svn_fetch()."
 	subversion_bootstrap || die "${ESVN}: unknown problem in subversion_bootstrap()."
