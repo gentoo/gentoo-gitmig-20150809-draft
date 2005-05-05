@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/cgkit
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cgkit/ChangeLog,v 1.9 2005/04/30 21:51:41 chrb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cgkit/ChangeLog,v 1.10 2005/05/05 15:43:17 swegener Exp $
+
+  05 May 2005; Sven Wegener <swegener@gentoo.org>
+  cgkit-2.0.0_alpha3-r2.ebuild:
+  Added missing parentheses to *DEPEND.
 
   30 Apr 2005; Chris Bainbridge <chrb@gentoo.org>
   cgkit-2.0.0_alpha3-r2.ebuild:
