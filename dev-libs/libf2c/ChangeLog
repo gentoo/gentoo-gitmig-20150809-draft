@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libf2c
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libf2c/ChangeLog,v 1.16 2005/02/17 21:55:21 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libf2c/ChangeLog,v 1.17 2005/05/05 21:22:16 kugelfang Exp $
+
+  05 May 2005; Danny van Dyk <kugelfang@gentoo.org>
+  libf2c-20021004-r1.ebuild, -libf2c-20021004.ebuild:
+  Removed libf2c-20021004. Fixed DEPEND in -r1, (thx to Jeremy Warren).
 
   17 Feb 2005; Bryan Østergaard <kloeri@gentoo.org>
   libf2c-20021004-r1.ebuild:
