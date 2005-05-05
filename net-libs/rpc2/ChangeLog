@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/rpc2
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/rpc2/ChangeLog,v 1.16 2005/02/05 14:34:53 griffon26 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/rpc2/ChangeLog,v 1.17 2005/05/05 13:19:23 griffon26 Exp $
+
+*rpc2-1.27 (05 May 2005)
+
+  05 May 2005; Maurice van der Pot <griffon26@gentoo.org> +rpc2-1.27.ebuild:
+  Added new release.
 
   05 Feb 2005; Maurice van der Pot <griffon26@gentoo.org> rpc2-1.25.ebuild:
   Stable on x86
@@ -34,7 +39,7 @@
 
   12 May 2004; Daniel Black <dragonheart@gentoo.org> +metadata.xml,
   rpc2-1.19.ebuild, rpc2-1.20.ebuild, +rpc2-1.22.ebuild:
-  Version bump. Thanks to Sebastian Dröge <sebastian.droege@gmx.de> in bug
+  Version bump. Thanks to Sebastian DrÃ¶ge <sebastian.droege@gmx.de> in bug
   #50632. Maintainer changed to me/net-fs.
 
   26 Apr 2004; Aron Griffis <agriffis@gentoo.org> rpc2-1.13.ebuild:
