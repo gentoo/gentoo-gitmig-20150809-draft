@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libast/libast-0.5-r2.ebuild,v 1.10 2005/03/06 11:01:49 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libast/libast-0.5-r2.ebuild,v 1.11 2005/05/05 02:46:23 vapier Exp $
 
-inherit 64-bit eutils
+inherit eutils
 
 DESCRIPTION="LIBrary of Assorted Spiffy Things"
 HOMEPAGE="http://www.eterm.org/download/"
@@ -21,7 +21,7 @@ DEPEND="virtual/x11
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	64-bit && epatch ${FILESDIR}/libast-64bit.patch
+	epatch ${FILESDIR}/libast-64bit.patch
 }
 
 src_compile() {
