@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.9_rc2.ebuild,v 1.3 2005/04/12 07:51:35 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.9_rc3.ebuild,v 1.1 2005/05/05 17:38:47 eradicator Exp $
 
 IUSE="oss doc"
 inherit linux-mod flag-o-matic eutils
@@ -55,12 +55,6 @@ pkg_setup() {
 	fi
 
 	linux-mod_pkg_setup
-
-	if [[ "$(tc-arch)" == "sparc" && "$(tc-arch-kernel)" == "sparc64" ]] ; then
-		export CROSS_COMPILE="sparc64-unknown-linux-gnu-"
-		export CBUILD="sparc-unknown-linux-gnu"
-		export CHOST="sparc64-unknown-linux-gnu"
-	fi
 }
 
 src_unpack() {
