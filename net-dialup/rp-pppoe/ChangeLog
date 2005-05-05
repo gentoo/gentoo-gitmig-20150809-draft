@@ -1,6 +1,12 @@
 # ChangeLog for net-dialup/rp-pppoe
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/rp-pppoe/ChangeLog,v 1.55 2005/04/25 14:16:04 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/rp-pppoe/ChangeLog,v 1.56 2005/05/05 21:38:59 mrness Exp $
+
+*rp-pppoe-3.5-r11 (05 May 2005)
+
+  05 May 2005; Alin Nastac <mrness@gentoo.org>
+  +files/rp-pppoe-3.5-on-demand-with-plugin.patch, +rp-pppoe-3.5-r11.ebuild:
+  Fix order of pppd parameters when DEMAND & LINUX_PLUGIN are used (#89609).
 
 *rp-pppoe-3.5-r10 (25 Apr 2005)
 
