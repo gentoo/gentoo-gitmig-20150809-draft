@@ -1,4 +1,4 @@
-MD5 619b149eb84c6da6b7b5a2e2c549628d ChangeLog 1438
+MD5 82ceb0b59b1be481e6819f4546550945 ChangeLog 1626
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 12921d4d5f77eaf2a7b387641870e763 gtkballs-3.1.5.ebuild 930
-MD5 308cc023f2ff713cdbb3d0a106a47426 files/digest-gtkballs-3.1.5 67
+MD5 728638dd9cbc9411a906dbc48f512331 gtkballs-3.1.5-r1.ebuild 1057
+MD5 308cc023f2ff713cdbb3d0a106a47426 files/digest-gtkballs-3.1.5-r1 67

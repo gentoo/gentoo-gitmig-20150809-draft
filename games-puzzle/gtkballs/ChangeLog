@@ -1,6 +1,12 @@
 # ChangeLog for games-puzzle/gtkballs
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gtkballs/ChangeLog,v 1.10 2005/04/02 07:06:25 mr_bones_ Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gtkballs/ChangeLog,v 1.11 2005/05/05 01:14:08 vapier Exp $
+
+*gtkballs-3.1.5-r1 (05 May 2005)
+
+  05 May 2005; Mike Frysinger <vapier@gentoo.org> -gtkballs-3.1.5.ebuild,
+  +gtkballs-3.1.5-r1.ebuild:
+  Add fixes by Kir Kolyshkin so locales work #91494.
 
 *gtkballs-3.1.5 (02 Apr 2005)
 
