@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-base/gnustep-base-1.10.1-r1.ebuild,v 1.6 2005/04/04 20:34:01 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-base/gnustep-base-1.10.1-r1.ebuild,v 1.7 2005/05/05 17:54:58 swegener Exp $
 
 inherit gnustep
 
@@ -17,13 +17,13 @@ DEPEND="${GNUSTEP_CORE_DEPEND}
 	~gnustep-base/gnustep-make-1.10.0
 	|| (
 		gcc-libffi? ( >=sys-devel/gcc-3.3.2 )
-		>=dev-libs/libffi-3*
+		>=dev-libs/libffi-3
 	)
-	>=dev-libs/libxml2-2.6*
-	>=dev-libs/libxslt-1.1*
-	>=dev-libs/gmp-4.1*
-	>=dev-libs/openssl-0.9.7*
-	>=sys-libs/zlib-1.2*
+	>=dev-libs/libxml2-2.6
+	>=dev-libs/libxslt-1.1
+	>=dev-libs/gmp-4.1
+	>=dev-libs/openssl-0.9.7
+	>=sys-libs/zlib-1.2
 	sys-apps/sed
 	${DOC_DEPEND}"
 RDEPEND="${DEPEND}

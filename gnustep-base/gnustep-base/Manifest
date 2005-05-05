@@ -1,16 +1,26 @@
-MD5 cbc6307323e9cbd7916aab901857e049 ChangeLog 8219
-MD5 7ed5343ad46462095179bcd75fb9b23f gnustep-base-1.10.1-r1.ebuild 2980
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 0ceb217bf55ab62f7ffbd8a5b1631903 gnustep-base-1.10.3.ebuild 2996
+MD5 a8ff035244a3446f02254d5189a462ad gnustep-base-1.10.2_pre20050312.ebuild 3359
+MD5 203de462a749fe35be96547e50aeb84d gnustep-base-1.10.2-r1.ebuild 3057
+MD5 6f47dd2e168c43ec9a8f6cd88d92db01 gnustep-base-1.10.2.ebuild 2979
+MD5 bc7c604a29503f7eaa51220c8919f118 gnustep-base-1.10.1-r1.ebuild 2974
+MD5 77ec3351fc76f8d410b7c40c8672cd98 ChangeLog 8476
 MD5 6054f8e4a94313852ff8e1294c8abd88 metadata.xml 670
-MD5 5df9b5e4421c16ba6354be299aed2c87 gnustep-base-1.10.3.ebuild 2999
-MD5 b0817074d5c7b4ccfd32c617971f9b7e gnustep-base-1.10.2_pre20050312.ebuild 3363
-MD5 af0d675eaab7f127c36c6171c3d15088 gnustep-base-1.10.2-r1.ebuild 3060
-MD5 7b00ec9cd7731b9c3844c6ac00959344 gnustep-base-1.10.2.ebuild 2982
-MD5 1e1e21f737b0d25c8faabb89bd286988 files/base-user-defaults.patch-1.10.0 1069
-MD5 efda24cf74398ac3ddce6cba6071561a files/config-gnustep-base.sh 559
-MD5 3a635544722f08220cbdfe346c41c125 files/base-user-defaults.patch-1.10.2_pre20050312 1096
 MD5 deded00aa5a335854582a82255ddc2f3 files/digest-gnustep-base-1.10.1-r1 72
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gnustep-base-1.10.2_pre20050312 0
-MD5 1d0f2a1118d08b617edef7ae05c4001e files/digest-gnustep-base-1.10.2 72
-MD5 ec6765fbba5bf4048f63898acc20ce6e files/base-path.patch-gsstartup-0.10.2 487
 MD5 1d0f2a1118d08b617edef7ae05c4001e files/digest-gnustep-base-1.10.2-r1 72
+MD5 efda24cf74398ac3ddce6cba6071561a files/config-gnustep-base.sh 559
+MD5 ec6765fbba5bf4048f63898acc20ce6e files/base-path.patch-gsstartup-0.10.2 487
+MD5 1d0f2a1118d08b617edef7ae05c4001e files/digest-gnustep-base-1.10.2 72
 MD5 353cee9163437665f9a7e18d77ba6a65 files/digest-gnustep-base-1.10.3 72
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gnustep-base-1.10.2_pre20050312 0
+MD5 3a635544722f08220cbdfe346c41c125 files/base-user-defaults.patch-1.10.2_pre20050312 1096
+MD5 1e1e21f737b0d25c8faabb89bd286988 files/base-user-defaults.patch-1.10.0 1069
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCel4HI1lqEGTUzyQRAsb1AJ9djAWJ0G1X3G+ua9zM3NM1fVMdCwCfROLB
+MOYQSc1WtZZEc8PSse5/ONY=
+=n9wh
+-----END PGP SIGNATURE-----
