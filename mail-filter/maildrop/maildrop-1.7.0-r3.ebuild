@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/maildrop/maildrop-1.7.0-r3.ebuild,v 1.1 2005/05/04 19:40:31 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/maildrop/maildrop-1.7.0-r3.ebuild,v 1.2 2005/05/05 23:42:19 swegener Exp $
 
 
 inherit eutils
@@ -16,7 +16,7 @@ KEYWORDS="x86 ~sparc ~alpha ~amd64 ~ia64"
 
 DEPEND="dev-lang/perl
 	virtual/mta
-	berkdb? ( >=sys-libs/db-3* )
+	berkdb? ( >=sys-libs/db-3 )
 	gdbm? ( >=sys-libs/gdbm-1.8.0 )
 	mysql? ( >=dev-db/mysql-3.23.51 )
 	ldap? ( >=net-nds/openldap-2.0.23 )"

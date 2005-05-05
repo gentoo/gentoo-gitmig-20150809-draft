@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/maildrop/maildrop-1.8.0-r3.ebuild,v 1.4 2005/05/05 14:35:48 jforman Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/maildrop/maildrop-1.8.0-r3.ebuild,v 1.5 2005/05/05 23:42:19 swegener Exp $
 
 inherit eutils gnuconfig
 
@@ -20,7 +20,7 @@ IUSE="mysql ldap gdbm berkdb uclibc debug postgres"
 PROVIDE="virtual/mda"
 
 DEPEND="gdbm? ( >=sys-libs/gdbm-1.8.0 )
-	!gdbm? ( berkdb? ( >=sys-libs/db-3* ) )
+	!gdbm? ( berkdb? ( >=sys-libs/db-3 ) )
 	mysql? ( net-libs/courier-authlib )
 	postgres? ( net-libs/courier-authlib )
 	ldap? ( net-libs/courier-authlib )"
