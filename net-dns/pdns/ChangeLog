@@ -1,6 +1,11 @@
 # ChangeLog for net-dns/pdns
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/ChangeLog,v 1.14 2005/02/12 11:35:41 jhhudso Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/ChangeLog,v 1.15 2005/05/05 17:58:51 seemant Exp $
+
+  05 May 2005; Seemant Kulleen <seemant@gentoo.org> -pdns-2.9.8.ebuild,
+  -pdns-2.9.12.ebuild, -pdns-2.9.12-r1.ebuild, -pdns-2.9.15.ebuild,
+  -pdns-2.9.16.ebuild:
+  removed old crusty ebuilds
 
   12 Feb 2005; Jared Hudson <jhhudso@gentoo.org>
   +files/pdns-2.9.17-amd64-fix.diff:
