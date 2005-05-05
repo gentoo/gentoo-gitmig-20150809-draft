@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 c39a94043b9286242c946206ceef0951 bittornado-0.3.6.ebuild 1860
-MD5 a280080c7da35bec80c3c6c0524935bf bittornado-0.3.1.ebuild 1736
+MD5 b47f552b1f1b285f0b2e5c4de29f7b5b bittornado-0.3.6.ebuild 1860
+MD5 b815f62ec5f5fe5a8664d63eef7f437d bittornado-0.3.1.ebuild 1736
 MD5 fab6140f73f7f4ebc0a38f1d1bcf69ec bittornado-0.3.8.ebuild 2051
 MD5 e55622238d809d99529c4b18eeafcc72 bittornado-0.3.10.ebuild 2063
 MD5 e08c7cf02e666f3ef2af1a0bcc95de9c bittornado-0.3.12.ebuild 2066
-MD5 8e94a810811bf44beddafd7f0b762215 ChangeLog 5038
+MD5 8a90f71c58605e799700e0494646f993 ChangeLog 5220
 MD5 8aefbc0e49db723ca1ad02d0c409cd49 metadata.xml 160
-MD5 38beab6d33f03f2cb738ad89a4e2cddb bittornado-0.3.7.ebuild 2059
+MD5 ea43698a964f86af57312853ca56bb68 bittornado-0.3.7.ebuild 2059
 MD5 7779a7eaf51eb9f84da8a588050f53fa files/favicon.ico 1406
 MD5 c7977a11c1bf8a5d7afb8772202af87d files/bittornado-wxpython-pre2.5-fix.patch 297
 MD5 a706406b4513eb97a4715be7a4b3cfd7 files/bttrack.rc 631
@@ -22,7 +22,7 @@ MD5 68ff80aa60200feb7a3c22a3ad17bbea files/digest-bittornado-0.3.8 68
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCbri4Z/iYVBmujdURAmdSAKDcfkHSA2FuAwuyAW02AhJxksue7ACdGhzG
-DbJ9xSCoJ02EoUMbAJsCTw4=
-=7AVH
+iD8DBQFCeqsiI1lqEGTUzyQRAmX/AJ9cLUctr4tq9teqeCla3iIOWAfXLwCdFNkW
+f0CP/IHqgypgD+aZT9EnUgA=
+=Hghz
 -----END PGP SIGNATURE-----

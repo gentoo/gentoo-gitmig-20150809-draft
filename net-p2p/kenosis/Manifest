@@ -1,18 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 bb1ebf170d6c58ddf1b92c554fc5bf04 kenosis-0.941.ebuild 797
+MD5 7cc3215fda52816b46880b514bff1625 kenosis-0.95.ebuild 793
+MD5 f477fa75038d02ed95741072fc22b796 kenosis-0.941.ebuild 794
+MD5 327ed0691d50678b22e7ae406b020d29 kenosis-0.92-r1.ebuild 1509
+MD5 784fbeb2c007ff3a4e773fe6f161e492 ChangeLog 983
 MD5 9987e8bf9bdb45aa63f4f0f20c83494c metadata.xml 260
-MD5 b05c19cbae802ec2172c5f4eb2c643a3 ChangeLog 810
-MD5 da387629644054028511d0f0613114d1 kenosis-0.92-r1.ebuild 1512
-MD5 6b484cac6e78a7daf1b52b3ee0036a65 kenosis-0.95.ebuild 796
 MD5 3c5b1b91bb0c3f0df1944275718412d3 files/digest-kenosis-0.92-r1 64
 MD5 da1b7827d94f03061477cceb85c58796 files/digest-kenosis-0.941 65
 MD5 cb04a6b45ae51a2ed6161b807bc07259 files/digest-kenosis-0.95 64
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCY+pAz2gxt1z4IGYRAvCsAKClz2Lt3tw3b3dqZhqJpPm5z1itcACfWr4i
-exWFw4NXC/Os7fhhLgNzUyA=
-=+bbw
+iD8DBQFCeq0NI1lqEGTUzyQRArWrAJ9i3lchMUlnbNF6Ppo72fECUGgFlwCgoVlE
+7XbDtDGwBQSbKWj85rrqLFI=
+=FQLe
 -----END PGP SIGNATURE-----
