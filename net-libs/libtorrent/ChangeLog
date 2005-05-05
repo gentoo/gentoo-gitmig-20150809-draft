@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/libtorrent
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libtorrent/ChangeLog,v 1.6 2004/11/23 21:55:44 squinky86 Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libtorrent/ChangeLog,v 1.7 2005/05/05 11:35:33 flameeyes Exp $
+
+*libtorrent-0.6.2 (05 May 2005)
+
+  05 May 2005; Diego Pettenò <flameeyes@gentoo.org> metadata.xml,
+  +libtorrent-0.6.2.ebuild:
+  New upstream version, close #86259. Now the rtorrent console client is in
+  net-p2p/rtorrent.
 
 *libtorrent-0.4.1 (23 Nov 2004)
 
