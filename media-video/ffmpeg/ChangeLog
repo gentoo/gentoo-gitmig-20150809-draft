@@ -1,6 +1,10 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.75 2005/05/04 01:13:37 j4rg0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.76 2005/05/05 04:45:47 spyderous Exp $
+
+  05 May 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  +files/0.4.8-gcc3.4-magicF2W.patch:
+  Re-add missing patch.
 
 *ffmpeg-0.4.9_pre1-r1 (04 May 2005)
 
