@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/hteditor
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/hteditor/ChangeLog,v 1.16 2005/05/05 14:36:09 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/hteditor/ChangeLog,v 1.17 2005/05/05 15:03:24 tester Exp $
+
+  05 May 2005; Olivier Crête <tester@gentoo.org> hteditor-0.8.0-r2.ebuild:
+  Stable on x86 per bug #91569
 
   05 May 2005; Michael Hanselmann <hansmi@gentoo.org>
   hteditor-0.8.0-r2.ebuild:
