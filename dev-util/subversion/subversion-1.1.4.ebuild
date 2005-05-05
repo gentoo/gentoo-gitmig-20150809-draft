@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.1.4.ebuild,v 1.4 2005/04/21 12:51:45 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.1.4.ebuild,v 1.5 2005/05/05 15:33:26 pauldv Exp $
 
 inherit elisp-common libtool python eutils bash-completion flag-o-matic depend.apache
 
@@ -172,11 +172,12 @@ src_install () {
 
 	# Install apache module config
 	if useq apache2; then
+		MOD="${APACHE2_MODULESDIR/${APACHE2_BASEDIR}\//}"
 		mkdir -p ${D}/${APACHE2_MODULES_CONFDIR}
 		cat <<EOF >${D}/${APACHE2_MODULES_CONFDIR}/47_mod_dav_svn.conf
 <IfDefine SVN>
 	<IfModule !mod_dav_svn.c>
-		LoadModule dav_svn_module	modules/mod_dav_svn.so
+		LoadModule dav_svn_module	${MOD}/mod_dav_svn.so
 	</IfModule>
 	<Location /svn/repos>
 		DAV svn
@@ -188,7 +189,7 @@ src_install () {
 	</Location>
 	<IfDefine SVN_AUTHZ>
 		<IfModule !mod_authz_svn.c>
-			LoadModule authz_svn_module	${APACHE2_MODULESDIR/${APACHE2_BASEDIR}\/}/mod_authz_svn.so
+			LoadModule authz_svn_module	${MOD}/mod_authz_svn.so
 		</IfModule>
 	</IfDefine>
 </IfDefine>
