@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw2100/ipw2100-1.1.0.ebuild,v 1.2 2005/04/28 15:03:36 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw2100/ipw2100-1.1.0.ebuild,v 1.3 2005/05/05 19:55:41 brix Exp $
 
-inherit linux-mod eutils
+inherit eutils linux-mod
 
 FW_VERSION="1.3"
 
@@ -20,7 +20,6 @@ RDEPEND="=net-wireless/ipw2100-firmware-${FW_VERSION}
 		>=net-wireless/wireless-tools-27_pre23
 		!net-wireless/ipw2200"
 
-BUILD_PARAMS="KSRC=${KV_DIR}"
 BUILD_TARGETS="all"
 
 MODULE_NAMES="ipw2100(net:)
@@ -32,11 +31,11 @@ MODULE_NAMES="ipw2100(net:)
 MODULESD_IPW2100_DOCS="README.ipw2100"
 
 CONFIG_CHECK="NET_RADIO CRYPTO_ARC4 CRYPTO_MICHAEL_MIC FW_LOADER CRC32"
-NET_RADIO_ERROR="${P} requires support for Wireless LAN drivers (non-hamradio) & Wireless Extensions (CONFIG_NET_RADIO)."
-CRYPTO_ARC4_ERROR="${P} requires support for ARC4 cipher algorithm (CONFIG_CRYPTO_ARC4)."
-CRYPTO_MICHAEL_MIC_ERROR="${P} requires support for Michael MIC keyed digest algorithm (CONFIG_CRYPTO_MICHAEL_MIC)."
-FW_LOADER_ERROR="${P} requires Hotplug firmware loading support (CONFIG_FW_LOADER)."
-CRC32_ERROR="${P} requires support for CRC32 functions (CONFIG_CRC32)."
+ERROR_NET_RADIO="${P} requires support for Wireless LAN drivers (non-hamradio) & Wireless Extensions (CONFIG_NET_RADIO)."
+ERROR_CRYPTO_ARC4="${P} requires support for ARC4 cipher algorithm (CONFIG_CRYPTO_ARC4)."
+ERROR_CRYPTO_MICHAEL_MIC="${P} requires support for Michael MIC keyed digest algorithm (CONFIG_CRYPTO_MICHAEL_MIC)."
+ERROR_FW_LOADER="${P} requires Hotplug firmware loading support (CONFIG_FW_LOADER)."
+ERROR_CRC32="${P} requires support for CRC32 functions (CONFIG_CRC32)."
 
 pkg_setup() {
 	if kernel_is 2 4; then
@@ -50,12 +49,17 @@ pkg_setup() {
 	fi
 
 	linux-mod_pkg_setup
+
+	BUILD_PARAMS="KSRC=${KV_DIR}"
 }
 
 src_unpack() {
 	local debug="n"
 
 	unpack ${A}
+
+	cd ${S}
+	epatch ${FILESDIR}/${P}-suspend2.patch
 
 	use debug && debug="y"
 	sed -i \
