@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/kasablanca/kasablanca-0.4.0.1.ebuild,v 1.5 2005/03/24 02:10:10 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/kasablanca/kasablanca-0.4.0.1.ebuild,v 1.6 2005/05/05 02:42:41 vapier Exp $
 
-inherit kde 64-bit eutils
+inherit kde eutils
 
 DESCRIPTION="a graphical ftp client for kde. among its features are support for ssl/tls encryption (both commands and data using auth tls, not sftp), fxp (direct ftp to ftp transfer) bookmarks, and queues."
 HOMEPAGE="http://kasablanca.berlios.de/"
@@ -49,9 +49,7 @@ need-kde 3.1
 
 src_unpack() {
 	unpack ${A}
-	if 64-bit ; then
-		epatch ${FILESDIR}/${P}-64bit.patch
-	fi
+	epatch ${FILESDIR}/${P}-64bit.patch
 }
 
 src_install() {
