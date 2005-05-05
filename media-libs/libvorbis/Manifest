@@ -1,6 +1,16 @@
-MD5 7d91cda2891452c78341284d4e1face8 ChangeLog 7027
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 c40c9d650f541147b75f0429bdf2c051 libvorbis-1.0.1-r2.ebuild 2126
-MD5 50e48fc92006e299e55920870a72918e libvorbis-1.1.0.ebuild 2485
+MD5 5c42bc1a6feefbe6c4b8f0247e652576 libvorbis-1.1.0.ebuild 2490
+MD5 adc8ee640c7f727672193070fdd5f25c ChangeLog 7143
 MD5 527dcfe3ce0f0b53c6b6aa8b82eb930c metadata.xml 252
-MD5 fa4a831d30804a9840476e2e65c42241 files/digest-libvorbis-1.0.1-r2 68
 MD5 55835dd2e7b0020ab52064c9f7dc4ff8 files/digest-libvorbis-1.1.0 136
+MD5 fa4a831d30804a9840476e2e65c42241 files/digest-libvorbis-1.0.1-r2 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCekC7I1lqEGTUzyQRAtRYAKCQIg4/N4Cr1sFSBeu9AALjbFgkygCgltPH
+h3CFj2EA2w2uIVb8NmabfuI=
+=6xh8
+-----END PGP SIGNATURE-----

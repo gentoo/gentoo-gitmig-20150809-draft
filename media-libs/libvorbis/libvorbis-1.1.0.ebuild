@@ -1,13 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvorbis/libvorbis-1.1.0.ebuild,v 1.13 2005/04/08 19:26:51 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvorbis/libvorbis-1.1.0.ebuild,v 1.14 2005/05/05 15:49:59 swegener Exp $
 
 inherit libtool flag-o-matic eutils toolchain-funcs
 
 DESCRIPTION="the Ogg Vorbis sound file format library"
 HOMEPAGE="http://www.xiph.org/ogg/vorbis/index.html"
 SRC_URI="http://downloads.xiph.org/releases/vorbis/${P}.tar.gz
-		aotuv? mirror://gentoo/libvorbis-aotuv-b3.patch"
+		aotuv? ( mirror://gentoo/libvorbis-aotuv-b3.patch )"
 
 LICENSE="BSD"
 SLOT="0"
