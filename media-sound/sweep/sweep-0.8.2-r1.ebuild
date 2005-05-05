@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sweep/sweep-0.8.2-r1.ebuild,v 1.12 2005/05/01 18:19:54 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sweep/sweep-0.8.2-r1.ebuild,v 1.13 2005/05/05 23:59:37 swegener Exp $
 
 inherit eutils
 
@@ -13,8 +13,8 @@ SLOT="0"
 KEYWORDS="x86 ppc sparc ~alpha amd64"
 IUSE="oggvorbis alsa nls"
 
-DEPEND=">=media-libs/libsndfile-1.0*
-		>=x11-libs/gtk+-1.2*
+DEPEND=">=media-libs/libsndfile-1.0
+		>=x11-libs/gtk+-1.2
 		>=media-sound/madplay-0.14.2b
 		dev-libs/tdb
 		media-libs/libsamplerate

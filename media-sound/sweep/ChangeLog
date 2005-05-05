@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/sweep
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sweep/ChangeLog,v 1.14 2005/05/01 18:19:54 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sweep/ChangeLog,v 1.15 2005/05/05 23:59:37 swegener Exp $
+
+  05 May 2005; Sven Wegener <swegener@gentoo.org> sweep-0.8.2-r1.ebuild,
+  sweep-0.8.3.ebuild:
+  Removed * postfix from <, <=, >= and > dependencies.
 
   01 May 2005; Michael Hanselmann <hansmi@gentoo.org> sweep-0.8.2-r1.ebuild:
   Stable on ppc.
