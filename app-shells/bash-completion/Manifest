@@ -2,12 +2,12 @@
 Hash: SHA1
 
 MD5 6eeb1d7aba8dbb67d3909a7f2f35da08 bash-completion-20050121-r1.ebuild 2695
-MD5 fdecfd1c6e03f73b6e407d9edb3f42ea ChangeLog 19991
+MD5 08ccc3fa8558634d8e4aed02f3d5e00c bash-completion-20050121-r8.ebuild 1879
+MD5 07b511dc1bea0626241e435d51928799 ChangeLog 20282
 MD5 08ab540760a142dbc2af127d5f71be07 metadata.xml 1019
-MD5 1ef56d1b4ea7fbb95686a7cf933d3c6d bash-completion-20050121-r7.ebuild 1879
 MD5 4406981db9a6c4f413d3f9f4b14eae91 files/gentoo-bashcomp-20050117-equery.diff 3329
 MD5 35fc8232b26ca995623692bea7df2e5d files/digest-bash-completion-20050121-r1 152
-MD5 8872557b2357f405c7c702497b2fdf68 files/digest-bash-completion-20050121-r7 76
+MD5 8872557b2357f405c7c702497b2fdf68 files/digest-bash-completion-20050121-r8 76
 MD5 3b7f1d6155d6deff5812264ef6bc4c07 files/bash-completion 724
 MD5 64ca0b5063d0874c6104a4b174cb0d40 files/20050121-gentoo.diff 1894
 MD5 d53ba451ff7064515327649c28ec37fb files/20050121/08_all_lvm.diff 868
@@ -18,10 +18,11 @@ MD5 5a5965b5055a1d6ee5d7ae884bc0cc18 files/20050121/07_all_find.diff 947
 MD5 ffcc2a25851c78eed228d5bf9a34a471 files/20050121/03_all_timidity.diff 844
 MD5 49c5f3ad15cbf56b194b4fa56bbe8342 files/20050121/06_all_tar.diff 347
 MD5 a68ebcc5af6af06535fcc9895b6066b3 files/20050121/04_all_mplayer.diff 974
+MD5 bb517a3e3dea3755291f4629330481f2 files/20050121/09_all_command.diff 492
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCZpmTEZCkKN40op4RAkEOAKCduCU1HK2B5q3Ap4gbukkXcdz+4gCff1Lk
-9f/T5fFBUBxyOoGMVZ7LNzs=
-=5XyP
+iD8DBQFCe2wBEZCkKN40op4RAv1LAKCcnXV3vAh6kJkDEGhbKrxDHeAVZgCeNSo7
+D6/Gv/B5nqm03xlAJ9ROYKE=
+=p7Pj
 -----END PGP SIGNATURE-----
