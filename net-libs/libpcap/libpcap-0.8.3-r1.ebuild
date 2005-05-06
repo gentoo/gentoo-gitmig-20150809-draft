@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/libpcap-0.8.3-r1.ebuild,v 1.19 2005/05/06 13:00:50 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/libpcap-0.8.3-r1.ebuild,v 1.20 2005/05/06 13:43:50 flameeyes Exp $
 
 inherit eutils multilib toolchain-funcs
 
@@ -37,7 +37,8 @@ src_compile() {
 src_install() {
 	einstall || die "make install failed"
 
-	if use x86-fbsd ; then
+	# We need this to build pppd on G/FBSD systems
+	if [[ "${USERLAND}" == "BSD" ]]; then
 		insinto /usr/include
 		doins pcap-int.h || die "failed to install pcap-int.h"
 	fi

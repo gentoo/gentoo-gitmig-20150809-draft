@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 4ffbaa7f9a6057fd441df93b022bd9f0 libpcap-0.8.3-r1.ebuild 1448
-MD5 849a067731d2a6e42b575f371b96c297 ChangeLog 5117
+MD5 175bf61ab9422148c0d259b2e887df5f ChangeLog 5249
+MD5 983b4605b4e6f3f36132432c5265879c libpcap-0.8.3-r1.ebuild 1513
 MD5 50057505c6cef15415ae8f8ca7378d82 metadata.xml 261
 MD5 aa690ff148a4b4bbb5a59276fbb583a8 files/digest-libpcap-0.8.3-r1 65
 MD5 29710cca211a266690d649eff1ffe287 files/libpcap-0.8.1-fPIC.patch 298
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCe2qTEZCkKN40op4RAsrqAJ4z/Qr3WsTNSxkGeonzxk8tig2ymQCeIxW6
-OXi4qo4boDQ1OgVPxs09C8U=
-=wstD
------END PGP SIGNATURE-----
