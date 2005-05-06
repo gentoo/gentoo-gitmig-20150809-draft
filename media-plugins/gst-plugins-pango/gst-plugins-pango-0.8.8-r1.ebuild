@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-pango/gst-plugins-pango-0.8.8-r1.ebuild,v 1.4 2005/05/04 04:29:49 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-pango/gst-plugins-pango-0.8.8-r1.ebuild,v 1.5 2005/05/06 12:05:59 corsair Exp $
 
 inherit gst-plugins
 
-KEYWORDS="x86 ~ppc amd64 ~sparc ~ia64"
+KEYWORDS="x86 ~ppc amd64 ~sparc ~ia64 ~ppc64"
 
 IUSE=""
 DEPEND="x11-libs/pango"
