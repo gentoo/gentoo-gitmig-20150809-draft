@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-SOAP
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-SOAP/ChangeLog,v 1.7 2005/04/06 19:28:53 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-SOAP/ChangeLog,v 1.8 2005/05/06 20:33:48 gustavoz Exp $
+
+  06 May 2005; Gustavo Zacarias <gustavoz@gentoo.org>
+  PEAR-SOAP-0.8.1.ebuild:
+  Stable on sparc
 
   06 Apr 2005; Markus Rothe <corsair@gentoo.org> PEAR-SOAP-0.8.1.ebuild:
   Stable on ppc64
