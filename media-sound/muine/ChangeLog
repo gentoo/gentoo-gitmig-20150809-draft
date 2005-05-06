@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/muine
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/muine/ChangeLog,v 1.16 2005/04/19 10:47:07 zaheerm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/muine/ChangeLog,v 1.17 2005/05/06 13:29:43 latexer Exp $
+
+*muine-0.8.3 (06 May 2005)
+
+  06 May 2005; Peter Johanson <latexer@gentoo.org> +muine-0.8.3.ebuild:
+  Bump.
 
   19 Apr 2005; <zaheerm@gentoo.org> metadata.xml, muine-0.6.3-r2.ebuild,
   muine-0.6.3-r3.ebuild, muine-0.8.2.ebuild:
