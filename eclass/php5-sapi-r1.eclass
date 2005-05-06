@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php5-sapi-r1.eclass,v 1.4 2005/05/05 16:44:06 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php5-sapi-r1.eclass,v 1.5 2005/05/06 09:19:20 sebastian Exp $
 #
 # eclass/php5-sapi.eclass
 #               Eclass for building different php5 SAPI instances
@@ -32,7 +32,7 @@ DEPEND="$DEPEND
 	bzlib? ( app-arch/bzip2 )
 	cpdflib? ( >=media-libs/clibpdf-2 )
 	crypt? ( >=dev-libs/libmcrypt-2.4 )
-	curl? ( >=net-misc/curl-7.10.2 )
+	curl? ( >=net-misc/curl-7.10.5 )
 	fam? ( virtual/fam )
 	fdftk? ( app-text/fdftk )
 	firebird? ( dev-db/firebird  )
