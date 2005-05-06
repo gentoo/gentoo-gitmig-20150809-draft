@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/zoneminder/zoneminder-0.9.12.ebuild,v 1.3 2004/11/22 12:24:18 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/zoneminder/zoneminder-0.9.12.ebuild,v 1.4 2005/05/06 10:33:23 swegener Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc"
 IUSE="mpeg"
 
-DEPEND=">=dev-db/mysql-3*
+DEPEND=">=dev-db/mysql-3
 	>=media-libs/jpeg-6b
 	>=net-www/apache-1.3.27-r3
 	dev-lang/perl"

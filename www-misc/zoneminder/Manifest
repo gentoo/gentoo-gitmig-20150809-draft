@@ -1,13 +1,13 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 84551880d20f9cba6ae3c02c9c008519 ChangeLog 1409
-MD5 2143067b28d3d7ddcc1a7dfddb6379e1 zoneminder-0.9.12.ebuild 2023
+MD5 b16c6293690c9289b1d703d84d79b132 zoneminder-0.9.12.ebuild 2019
+MD5 8d09d3e7f8430ec7bbdd3a5985d10ae2 ChangeLog 1538
 MD5 cf91c423242d440d538cec3f4cd0940b files/digest-zoneminder-0.9.12 129
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFBodp5mdTrptrqvGERAqsdAKCTK71GvjTh3qGjtXYIT5x5BREvdgCaA3W0
-YAog6q+UfaJ9H76bWiJwQzg=
-=RxWu
+iD8DBQFCe0gDI1lqEGTUzyQRArbmAJ4ouv+9hLdVryPyb24oByz+AEctyACg0UmN
+n6q36vs9eZJ5Wkg6elVNb9A=
+=/0aN
 -----END PGP SIGNATURE-----
