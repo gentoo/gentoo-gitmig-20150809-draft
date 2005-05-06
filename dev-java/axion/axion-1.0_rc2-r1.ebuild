@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/axion/axion-1.0_rc2-r1.ebuild,v 1.2 2005/04/02 19:19:28 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/axion/axion-1.0_rc2-r1.ebuild,v 1.3 2005/05/06 09:51:09 swegener Exp $
 
 inherit java-pkg eutils
 
@@ -12,9 +12,9 @@ SLOT="0"
 KEYWORDS="x86 ~amd64"
 IUSE="doc jikes source"
 RDEPEND=">=dev-java/commons-collections-2.1
-	>=dev-java/commons-primitives-1.0*
-	>=dev-java/commons-codec-1.2*
-	>=dev-java/log4j-1.2*
+	>=dev-java/commons-primitives-1.0
+	>=dev-java/commons-codec-1.2
+	>=dev-java/log4j-1.2
 	=dev-java/jakarta-regexp-1.3*"
 DEPEND="${RDEPEND}
 	jikes? ( >=dev-java/jikes-1.19 )
