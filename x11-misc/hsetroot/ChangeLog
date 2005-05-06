@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/hsetroot
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/hsetroot/ChangeLog,v 1.2 2004/12/05 09:13:36 swegener Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/hsetroot/ChangeLog,v 1.3 2005/05/06 10:31:51 swegener Exp $
+
+  06 May 2005; Sven Wegener <swegener@gentoo.org> hsetroot-1.0.2.ebuild:
+  Removed * postfix from <, <=, >= and > dependencies.
 
   05 Dec 2004; Sven Wegener <swegener@gentoo.org> hsetroot-1.0.2.ebuild:
   Fixed invalid atoms in *DEPEND. Added missing DESCRIPTION to ebuild.
