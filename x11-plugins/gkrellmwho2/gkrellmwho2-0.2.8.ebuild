@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellmwho2/gkrellmwho2-0.2.8.ebuild,v 1.5 2005/04/27 18:25:04 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellmwho2/gkrellmwho2-0.2.8.ebuild,v 1.6 2005/05/06 00:21:31 swegener Exp $
 
 inherit multilib
 
@@ -10,7 +10,7 @@ DESCRIPTION="This plugin displays currently logged in users in the scrolling lin
 SRC_URI="http://shisha.spb.ru/debian/${PN}_${PV}.orig.tar.gz"
 HOMEPAGE="http://shisha.spb.ru/projects/GkrellmWHO2"
 
-DEPEND=">=app-admin/gkrellm-2*"
+DEPEND=">=app-admin/gkrellm-2"
 
 SLOT="2"
 LICENSE="GPL-2"

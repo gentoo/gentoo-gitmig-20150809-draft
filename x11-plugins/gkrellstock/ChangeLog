@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/gkrellstock
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellstock/ChangeLog,v 1.8 2005/04/27 17:51:08 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellstock/ChangeLog,v 1.9 2005/05/06 00:23:55 swegener Exp $
+
+  06 May 2005; Sven Wegener <swegener@gentoo.org> gkrellstock-0.5.ebuild:
+  Removed * postfix from <, <=, >= and > dependencies.
 
   27 Apr 2005; Herbie Hopkins <herbs@gentoo.org> gkrellstock-0.5.ebuild:
   Stable on amd64.

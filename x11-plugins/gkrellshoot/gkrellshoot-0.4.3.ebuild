@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellshoot/gkrellshoot-0.4.3.ebuild,v 1.2 2005/04/27 17:55:48 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellshoot/gkrellshoot-0.4.3.ebuild,v 1.3 2005/05/06 00:22:59 swegener Exp $
 
 inherit multilib
 
@@ -15,7 +15,7 @@ KEYWORDS="~x86 ~sparc ~alpha ~amd64 ~ppc"
 IUSE=""
 
 DEPEND="=x11-libs/gtk+-2*
-	>=app-admin/gkrellm-2*"
+	>=app-admin/gkrellm-2"
 RDEPEND="${DEPEND}
 	media-gfx/imagemagick"
 

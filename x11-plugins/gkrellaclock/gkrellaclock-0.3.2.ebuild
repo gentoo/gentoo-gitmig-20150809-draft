@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellaclock/gkrellaclock-0.3.2.ebuild,v 1.11 2004/06/24 22:53:03 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellaclock/gkrellaclock-0.3.2.ebuild,v 1.12 2005/05/06 00:16:03 swegener Exp $
 
 IUSE=""
 S=${WORKDIR}/${P/a/A}
@@ -8,7 +8,7 @@ DESCRIPTION="Nice analog clock for GKrellM2"
 SRC_URI="http://www.geocities.com/m_muthukumar/${P}.tar.gz"
 HOMEPAGE="http://www.geocities.com/m_muthukumar/gkrellaclock.html"
 
-DEPEND=">=app-admin/gkrellm-2*"
+DEPEND=">=app-admin/gkrellm-2"
 
 SLOT="2"
 LICENSE="GPL-2"

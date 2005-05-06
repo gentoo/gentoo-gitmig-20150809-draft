@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellmitime/gkrellmitime-1.0.1.ebuild,v 1.10 2005/04/27 20:16:25 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellmitime/gkrellmitime-1.0.1.ebuild,v 1.11 2005/05/06 00:20:13 swegener Exp $
 
 inherit multilib
 
@@ -13,7 +13,7 @@ LICENSE="GPL-2"
 SLOT="2"
 KEYWORDS="x86 ppc sparc alpha amd64"
 
-DEPEND=">=app-admin/gkrellm-2*"
+DEPEND=">=app-admin/gkrellm-2"
 
 src_compile() {
 	make || die

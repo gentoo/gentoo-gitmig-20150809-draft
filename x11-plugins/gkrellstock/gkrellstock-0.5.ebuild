@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellstock/gkrellstock-0.5.ebuild,v 1.12 2005/04/27 17:51:08 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellstock/gkrellstock-0.5.ebuild,v 1.13 2005/05/06 00:23:55 swegener Exp $
 
 inherit multilib
 
@@ -10,7 +10,7 @@ DESCRIPTION="Get Stock quotes plugin for Gkrellm2"
 SRC_URI="mirror://sourceforge/gkrellstock/${P}.tar.gz"
 HOMEPAGE="http://gkrellstock.sourceforge.net/"
 
-DEPEND=">=app-admin/gkrellm-2*
+DEPEND=">=app-admin/gkrellm-2
 	dev-perl/libwww-perl
 	dev-perl/Finance-Quote"
 

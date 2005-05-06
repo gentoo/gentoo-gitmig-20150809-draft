@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/gkrellmitime
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellmitime/ChangeLog,v 1.15 2005/04/27 20:16:25 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellmitime/ChangeLog,v 1.16 2005/05/06 00:20:13 swegener Exp $
+
+  06 May 2005; Sven Wegener <swegener@gentoo.org> gkrellmitime-1.0.ebuild,
+  gkrellmitime-1.0.1.ebuild:
+  Removed * postfix from <, <=, >= and > dependencies.
 
   27 Apr 2005; Herbie Hopkins <herbs@gentoo.org> gkrellmitime-1.0.1.ebuild:
   Stable on amd64.
