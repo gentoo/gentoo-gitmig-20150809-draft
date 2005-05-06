@@ -1,5 +1,6 @@
+# ChangeLog for net-p2p/pysoulseek
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/pysoulseek/ChangeLog,v 1.43 2005/05/04 07:44:39 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/pysoulseek/ChangeLog,v 1.44 2005/05/06 10:08:11 swegener Exp $
 
 *pysoulseek-1.2.6 (04 May 2005)
 
