@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-canvas/gnome2-canvas-1.00.ebuild,v 1.6 2005/05/01 18:34:41 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-canvas/gnome2-canvas-1.00.ebuild,v 1.7 2005/05/06 00:27:31 swegener Exp $
 
 inherit perl-module
 
@@ -17,8 +17,8 @@ IUSE=""
 
 
 DEPEND="${DEPEND}
-	>=x11-libs/gtk+-2*
-	>=gnome-base/libgnomecanvas-2*
+	>=x11-libs/gtk+-2
+	>=gnome-base/libgnomecanvas-2
 	>=dev-perl/glib-perl-1.040
 	>=dev-perl/gtk2-perl-1.040
 	>=dev-perl/extutils-pkgconfig-1.03

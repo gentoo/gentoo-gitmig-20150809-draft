@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-print/gnome2-print-0.61.ebuild,v 1.3 2004/07/14 17:40:42 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-print/gnome2-print-0.61.ebuild,v 1.4 2005/05/06 00:33:57 swegener Exp $
 
 inherit perl-module
 
@@ -16,8 +16,8 @@ KEYWORDS="x86 ~sparc ~ppc ~alpha"
 IUSE=""
 
 DEPEND="${DEPEND}
-	>=x11-libs/gtk+-2*
+	>=x11-libs/gtk+-2
 	dev-perl/glib-perl
-	>=gnome-base/libgnome-2*
-	>=gnome-base/libgnomeprint-2*
+	>=gnome-base/libgnome-2
+	>=gnome-base/libgnomeprint-2
 	>=dev-perl/gtk2-perl-${PV}"

@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/gnome2-canvas
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-canvas/ChangeLog,v 1.12 2005/05/01 18:34:41 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-canvas/ChangeLog,v 1.13 2005/05/06 00:27:31 swegener Exp $
+
+  06 May 2005; Sven Wegener <swegener@gentoo.org> gnome2-canvas-1.00.ebuild:
+  Removed * postfix from <, <=, >= and > dependencies.
 
   01 May 2005; Tom Martin <slarti@gentoo.org> gnome2-canvas-1.00.ebuild:
   Stable on amd64.

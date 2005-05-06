@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-vfs-perl/gnome2-vfs-perl-1.00.ebuild,v 1.6 2005/04/29 17:14:20 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-vfs-perl/gnome2-vfs-perl-1.00.ebuild,v 1.7 2005/05/06 00:34:33 swegener Exp $
 
 inherit perl-module
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="x86 ~sparc ~ppc ~alpha hppa amd64"
 IUSE=""
 
-DEPEND=">=dev-perl/extutils-depends-0.2*
+DEPEND=">=dev-perl/extutils-depends-0.2
 	dev-perl/extutils-pkgconfig
 	>=gnome-base/gnome-vfs-2
 	>=dev-perl/glib-perl-1.04
