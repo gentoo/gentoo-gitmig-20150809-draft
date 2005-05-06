@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/c-jdbc/c-jdbc-1.0.4-r1.ebuild,v 1.2 2005/04/17 15:00:19 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/c-jdbc/c-jdbc-1.0.4-r1.ebuild,v 1.3 2005/05/06 15:07:54 swegener Exp $
 
 inherit java-pkg eutils
 
@@ -22,7 +22,7 @@ RDEPEND=">=virtual/jre-1.3
 	=dev-java/jaxen-1.1_beta2*
 	>=dev-java/jcommon-0.9.7
 	>=dev-java/jdepend-2.6
-	>=dev-java/jdbc2-stdext-2.0*
+	>=dev-java/jdbc2-stdext-2.0
 	>=dev-java/jgroups-2.2.7
 	=dev-java/jfreechart-0.9.21*
 	>=dev-java/kunststoff-2.0.2
