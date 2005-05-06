@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/argouml/argouml-0.16.1.ebuild,v 1.1 2004/11/24 17:48:27 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/argouml/argouml-0.16.1.ebuild,v 1.2 2005/05/06 14:40:23 swegener Exp $
 
 inherit java-pkg
 
@@ -16,7 +16,7 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc ~amd64"
 RESTRICT="nomirror"
 IUSE="doc"
-RDEPEND=">=virtual/jre-1.3*"
+RDEPEND=">=virtual/jre-1.3"
 S=${WORKDIR}
 
 src_compile() { :; }
