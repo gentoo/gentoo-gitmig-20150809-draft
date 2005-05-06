@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/dc-gui/dc-gui-0.80.ebuild,v 1.6 2005/02/21 21:24:44 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/dc-gui/dc-gui-0.80.ebuild,v 1.7 2005/05/06 14:51:31 swegener Exp $
 
 MY_P=${PN/-/_}2-${PV}
 DESCRIPTION="GUI for dctc"
@@ -15,7 +15,7 @@ IUSE="nls"
 DEPEND="=dev-libs/glib-2*
 	=x11-libs/gtk+-2*
 	=gnome-base/libgnomeui-2*
-	>=sys-libs/db-3.2*
+	>=sys-libs/db-3.2
 	>=net-p2p/dctc-0.85.9"
 RDEPEND="${DEPEND}
 	nls? ( sys-devel/gettext )"
