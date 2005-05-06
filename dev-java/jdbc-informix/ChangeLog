@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jdbc-informix
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-informix/ChangeLog,v 1.9 2005/04/22 08:35:26 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-informix/ChangeLog,v 1.10 2005/05/06 13:28:30 gustavoz Exp $
+
+  06 May 2005; Gustavo Zacarias <gustavoz@gentoo.org>
+  jdbc-informix-221-r4.ebuild, jdbc-informix-221-r5.ebuild:
+  Unkeyworded sparc, none tested this, bad keywording
 
   22 Apr 2005; Simon Stelling <blubb@gentoo.org>
   jdbc-informix-221-r5.ebuild:
