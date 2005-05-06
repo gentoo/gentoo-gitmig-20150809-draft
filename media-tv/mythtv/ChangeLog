@@ -1,6 +1,9 @@
 # ChangeLog for media-tv/mythtv
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.51 2005/04/27 02:53:53 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.52 2005/05/06 18:28:39 eradicator Exp $
+
+  06 May 2005; Jeremy Huddleston <eradicator@gentoo.org> mythtv-0.16.ebuild:
+  Update 0.16 ebuild to depend on <qt-3.3.4 since it breaks DST
 
   27 Apr 2005; Jeremy Huddleston <eradicator@gentoo.org> mythtv-0.18.ebuild:
   PDEPEND on myththemes.

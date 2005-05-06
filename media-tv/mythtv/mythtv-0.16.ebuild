@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.16.ebuild,v 1.11 2005/01/18 20:11:18 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.16.ebuild,v 1.12 2005/05/06 18:28:39 eradicator Exp $
 
 inherit myth flag-o-matic eutils
 
@@ -15,7 +15,7 @@ IUSE="alsa arts dvb directfb lcd lirc nvidia cle266 opengl X xv oss debug mmx nl
 
 DEPEND=">=media-libs/freetype-2.0
 	>=media-sound/lame-3.93.1
-	X? ( >=x11-libs/qt-3.1 )
+	X? ( >=x11-libs/qt-3.1 <x11-libs/qt-3.3.4 )
 	directfb? ( dev-libs/DirectFB >=x11-libs/qt-embedded-3.1 )
 	dev-db/mysql
 	alsa? ( >=media-libs/alsa-lib-0.9 )
