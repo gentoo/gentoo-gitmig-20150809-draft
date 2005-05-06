@@ -1,6 +1,10 @@
 # ChangeLog for app-office/magicpoint
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/magicpoint/ChangeLog,v 1.17 2005/04/21 19:57:06 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/magicpoint/ChangeLog,v 1.18 2005/05/06 04:35:58 usata Exp $
+
+  06 May 2005; Mamoru KOMACHI <usata@gentoo.org>
+  +files/magicpoint-1.11b-mng_optional.patch, magicpoint-1.11b.ebuild:
+  Fixed mng dep. Thanks to James Rowe <jnrowe@ukfsn.org>; bug #91644.
 
   21 Apr 2005; Simon Stelling <blubb@gentoo.org> magicpoint-1.11b.ebuild:
   stable on amd64
