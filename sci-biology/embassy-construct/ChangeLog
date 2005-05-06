@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/embassy-construct
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/embassy-construct/ChangeLog,v 1.1 2005/03/22 22:40:39 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/embassy-construct/ChangeLog,v 1.2 2005/05/06 12:58:22 dholm Exp $
+
+  06 May 2005; David Holm <dholm@gentoo.org> embassy-construct-1.0.0.ebuild:
+  Added to ~ppc.
 
 *embassy-construct-1.0.0 (22 Mar 2005)
 
