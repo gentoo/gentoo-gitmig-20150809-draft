@@ -1,6 +1,13 @@
 # ChangeLog for dev-dotnet/gtk-sharp
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtk-sharp/ChangeLog,v 1.25 2005/05/05 02:15:26 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtk-sharp/ChangeLog,v 1.26 2005/05/06 16:26:30 latexer Exp $
+
+*gtk-sharp-1.9.3-r1 (06 May 2005)
+
+  06 May 2005; Peter Johanson <latexer@gentoo.org>
+  +gtk-sharp-1.9.3-r1.ebuild:
+  Add a revision bump that provides the option to install the monodoc
+  documentation.
 
 *gtk-sharp-1.9.3 (05 May 2005)
 
