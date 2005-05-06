@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 080920bc0d28d3d83029eb9a0247862b libhtmlparse-0.1.12.ebuild 735
-MD5 3766cc3facec24ebddb694a14cec681c libhtmlparse-0.1.13.ebuild 994
-MD5 afaa6ca480bf617ee4d1b7261e85ae37 ChangeLog 917
+MD5 dd1f8c479bc2a17255f72525708d4527 libhtmlparse-0.1.13.ebuild 994
+MD5 20fd4625f490cfc86537a24363464a8a ChangeLog 917
 MD5 d4c8b46f106b5227d676a585a0f84063 metadata.xml 255
 MD5 8bf931eaee75e56dbe72364c31b40f25 files/digest-libhtmlparse-0.1.12 71
 MD5 2bfb4c882626be5269ce314523f7f6f4 files/digest-libhtmlparse-0.1.13 71
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCe13/EZCkKN40op4RAi1fAJ97XE3Iu8Poa/8QTchIaxsF3gy+zACfTKX8
+mZioTU8XDd9XgOH/7N9heKQ=
+=wrpc
+-----END PGP SIGNATURE-----

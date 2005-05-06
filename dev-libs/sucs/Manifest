@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 72743ff7fa2bcfffef6b42e7feec254e sucs-0.7.0.ebuild 631
-MD5 2c1cb0290f9d3491919c8b12eb211580 sucs-1.0.0.ebuild 631
-MD5 35009ab1a0ae5f5524a55c00747890df ChangeLog 570
+MD5 ef39e7fdb28e0f3aab8d7a7b66c5655e sucs-1.0.0.ebuild 631
+MD5 ae8e9bb985d5cc826d3b017c514c737f ChangeLog 570
 MD5 a62a06505b24b910fea16c550e803cee metadata.xml 514
 MD5 23febb6cf0c7963a23a80652c3e5dbb6 files/digest-sucs-0.7.0 62
 MD5 dd729e71d475544c9f595aa46e3c4a83 files/digest-sucs-1.0.0 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCe1yWEZCkKN40op4RAjJAAJ9x7KlzGl1XYmgZnn8VqqFM+7GMkACfbXqj
+pIR2KmEBRZu94WnU28e8d6E=
+=zoCb
+-----END PGP SIGNATURE-----

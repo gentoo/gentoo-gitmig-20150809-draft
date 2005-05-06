@@ -1,5 +1,15 @@
-MD5 743b7e15d7aaa4318e1e3cb3f3fa897e argtable-2.4.ebuild 974
-MD5 e8abd9c65df882f820726d1688a82c30 ChangeLog 567
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 30e58a338cea7cc58a9714a08bec8ac7 argtable-2.4.ebuild 976
+MD5 9c9a2e16a3b96e410f5500db1486d322 ChangeLog 569
 MD5 f8d10f350e91f30316ea4e1bd1e76470 metadata.xml 254
 MD5 bf46c97bce21ea2091f29bba304d9271 files/argtable-2.4-fix-makefile.diff 1999
 MD5 c743145bef7a99baaa82470de4c30d53 files/digest-argtable-2.4 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCe16rEZCkKN40op4RAjGaAKCfug/oZrZw+nVwCpqRhTbDVu8eIgCgnJ2R
+kiP3nOil6jnkYJc4fHmru6Y=
+=9epU
+-----END PGP SIGNATURE-----
