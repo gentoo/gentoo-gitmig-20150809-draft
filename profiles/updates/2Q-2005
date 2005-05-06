@@ -44,3 +44,4 @@ move net-misc/multiimonc net-dialup/multiimonc
 move net-misc/totd net-dns/totd
 slotmove =dev-libs/libsigc++-2.0.5 1.3 2
 move dev-java/dbunit-bin dev-java/dbunit
+move games-misc/xcruise games-misc/xcruiser
