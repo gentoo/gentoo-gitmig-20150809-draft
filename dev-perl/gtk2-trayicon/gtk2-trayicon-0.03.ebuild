@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-trayicon/gtk2-trayicon-0.03.ebuild,v 1.5 2005/04/29 17:25:21 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-trayicon/gtk2-trayicon-0.03.ebuild,v 1.6 2005/05/06 09:57:57 swegener Exp $
 
 inherit perl-module
 
@@ -16,8 +16,8 @@ KEYWORDS="x86"
 IUSE=""
 
 DEPEND="${DEPEND}
-	>=x11-libs/gtk+-2*
-	>=gnome-base/libglade-2*
+	>=x11-libs/gtk+-2
+	>=gnome-base/libglade-2
 	>=dev-perl/glib-perl-1.012
 	>=dev-perl/gtk2-perl-1.012
 	dev-perl/extutils-depends
