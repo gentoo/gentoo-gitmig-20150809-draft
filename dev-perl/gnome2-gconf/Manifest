@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 5d24ffcf96e69f5b9f8e3a97bf34562f ChangeLog 664
-MD5 21e5c6b786e8fb29d4abc1c71684cdd8 gnome2-gconf-1.000.ebuild 764
+MD5 c693a598bbb86a3c5a09a5aa7b3b6ccb gnome2-gconf-1.000.ebuild 761
+MD5 1dcc9b279035a75f796994fdb87de1ac ChangeLog 796
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 feb643d838d1168b5328744758d72870 files/digest-gnome2-gconf-1.000 69
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCcmm7tG5z4I8BtQoRAqB7AJ46hgh+Nfc3YHaEBVzadcei6zVleQCggzFm
-PjgrHii7vY0InKv6Q/3phPo=
-=xfhY
+iD8DBQFCerq9I1lqEGTUzyQRAkMPAJ9sXvQrOc0Xoru5L4MGKBcD+UH81QCfTcH0
+gGARNIGXZYZHAz6+OaUHQQw=
+=1N42
 -----END PGP SIGNATURE-----
