@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/tomboy
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tomboy/ChangeLog,v 1.9 2005/05/05 17:51:24 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tomboy/ChangeLog,v 1.10 2005/05/06 02:19:23 latexer Exp $
+
+  06 May 2005; Peter Johanson <latexer@gentoo.org>
+  files/tomboy-0.3.2-1.1.x-compat.diff:
+  Fix to patch to work on mono-1.0.x
 
 *tomboy-0.3.2 (05 May 2005)
 

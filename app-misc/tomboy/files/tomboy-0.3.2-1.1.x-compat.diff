@@ -7,7 +7,7 @@ diff -aur tomboy-0.3.2-orig/Tomboy/Applet.cs tomboy-0.3.2/Tomboy/Applet.cs
  					   menu_verbs);
 +			// This is needed as on mono-1.1.4, the whole
 +			// applet gets reaped, including needed menu_verbs
-+			GLib.Timeout.Add(1000, ImALIVE);
++			GLib.Timeout.Add(1000, new GLib.TimeoutHandler(ImALIVE));
 +		}
 +
 +		bool ImALIVE()
