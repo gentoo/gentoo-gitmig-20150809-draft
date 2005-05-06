@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gdb
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/ChangeLog,v 1.73 2005/05/06 16:24:45 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/ChangeLog,v 1.74 2005/05/06 19:07:42 kloeri Exp $
+
+  06 May 2005; Bryan Østergaard <kloeri@gentoo.org> gdb-6.3-r3.ebuild:
+  Stable on alpha, bug 91654.
 
   06 May 2005; <solar@gentoo.org>
   +files/gdb-6.2.1-200-uclibc-readline-conf.patch,
