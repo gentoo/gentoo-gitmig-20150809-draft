@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-gui/gnustep-gui-0.9.5_pre20050312.ebuild,v 1.2 2005/05/05 17:49:14 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-gui/gnustep-gui-0.9.5_pre20050312.ebuild,v 1.3 2005/05/06 10:05:47 swegener Exp $
 
 ECVS_CVS_COMMAND="cvs -q"
 ECVS_SERVER="savannah.gnu.org:/cvsroot/gnustep"
@@ -26,7 +26,7 @@ DEPEND="${GNUSTEP_BASE_DEPEND}
 	>=gnustep-base/gnustep-base-1.10.2_pre20050312
 	virtual/x11
 	>=media-libs/tiff-3
-	jpeg? ( >=media-libs/jpeg-6b* )
+	jpeg? ( >=media-libs/jpeg-6b )
 	gif? ( >=media-libs/libungif-4.1 )
 	png? ( >=media-libs/libpng-1.2 )
 	gsnd? ( >=media-libs/audiofile-0.2 )
