@@ -1,6 +1,13 @@
 # ChangeLog for sys-boot/elilo
-# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/elilo/ChangeLog,v 1.8 2005/03/30 19:50:57 plasmaroo Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/elilo/ChangeLog,v 1.9 2005/05/06 04:03:50 vapier Exp $
+
+*elilo-3.4-r2 (06 May 2005)
+
+  06 May 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/elilo-3.4-proc-sigsetjmp.patch, +elilo-3.4-r2.ebuild:
+  Fix building with newer binutils and clean up the src_install to use Gentoo
+  style install.
 
 *elilo-3.4-r1 (30 Mar 2005)
 
