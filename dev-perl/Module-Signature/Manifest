@@ -1,4 +1,14 @@
-MD5 fbbd08b3c82c5882d73e9e9320ac87a1 ChangeLog 1233
-MD5 683a8794a3b51e01ac33b72cd853ae4b Module-Signature-0.44.ebuild 989
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 89bb4e87d5a546ec01f90b95b623ac20 Module-Signature-0.44.ebuild 990
+MD5 090fe0712f31dfe55de983392970d096 ChangeLog 1373
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 2328811171112f6090c1ee376eebb70f files/digest-Module-Signature-0.44 72
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCesK1I1lqEGTUzyQRAmkLAJ9xEzVCveXzB459T/Yka6luNghCGACcDCok
+WXNuHq5jlZrrSYs4wmfgPhA=
+=tR8s
+-----END PGP SIGNATURE-----
