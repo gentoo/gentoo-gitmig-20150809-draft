@@ -1,4 +1,14 @@
-MD5 1dae7c9330c9bacb927ed512fc8ec14e glpk-4.7.ebuild 901
-MD5 08392eb96aaa32ca8fed76a79f47a179 ChangeLog 1329
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 47f5d8fd834df318af1e0bfe10f9ce70 glpk-4.7.ebuild 901
+MD5 2996b3523bbdaa98b7ccc7db8fffddb5 ChangeLog 1453
 MD5 f9b985eff5cf629c334273be8fbdee5c metadata.xml 219
 MD5 8b0aabaae9e61d7aa12c4bb982b2a996 files/digest-glpk-4.7 60
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCe0ixI1lqEGTUzyQRAtJ3AKCTXbnZoquYFGqzBlOgS+udH9T+0gCfVCQh
+N7EHzINZrmrWs/csVt4FmK8=
+=FJiE
+-----END PGP SIGNATURE-----
