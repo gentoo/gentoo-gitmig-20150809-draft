@@ -1,5 +1,15 @@
-MD5 ae30ef8069e628a92c53a2d9f7eeaff5 ChangeLog 562
-MD5 693a6ec2cb51aa0c54dd087bac58642f bub-n-bros-1.1.ebuild 1694
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 95db1b051d32d99270b81c9a38206cb0 bub-n-bros-1.1.ebuild 1696
+MD5 ef93afaad6d4926384272f88d9d13ce2 ChangeLog 694
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 MD5 37372966f62c7ba6a5ea751469f1c031 files/bubnbros-server 45
 MD5 73a5fcc499ac4695104f1c74668cae54 files/digest-bub-n-bros-1.1 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCe0DfI1lqEGTUzyQRAl5OAKDWWxBON2rLq3WswAEETPB4iiehaQCeMcQA
+RPWtly9m2OG4gwG9pGXlb+0=
+=Drlm
+-----END PGP SIGNATURE-----
