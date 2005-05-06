@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gplcver/gplcver-1.10j.ebuild,v 1.1 2004/12/27 19:22:27 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gplcver/gplcver-1.10j.ebuild,v 1.2 2005/05/06 14:04:26 dholm Exp $
 
 MY_PN=gpl-cver
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.pragmatic-c.com/${MY_PN}/"
 SRC_URI="http://www.pragmatic-c.com/${MY_PN}/downloads/${P}.src.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 IUSE=""
 S=${WORKDIR}/${P}.src
 
