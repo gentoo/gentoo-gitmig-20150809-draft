@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/tclreadline
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclreadline/ChangeLog,v 1.10 2005/04/30 09:18:15 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclreadline/ChangeLog,v 1.11 2005/05/06 10:00:25 swegener Exp $
+
+  06 May 2005; Sven Wegener <swegener@gentoo.org> tclreadline-2.1.0.ebuild:
+  Removed * postfix from <, <=, >= and > dependencies.
 
   30 Apr 2005; Simon Stelling <blubb@gentoo.org> tclreadline-2.1.0.ebuild:
   added ~amd64
