@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nomad/nomad-0.3.2.ebuild,v 1.2 2005/03/15 01:05:06 angusyoung Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nomad/nomad-0.3.2.ebuild,v 1.3 2005/05/06 14:47:49 swegener Exp $
 
 DESCRIPTION="Nomad is a network mapping program that uses SNMP to automatically discover a local network"
 HOMEPAGE="http://netmon.ncl.ac.uk/"
@@ -16,8 +16,8 @@ DEPEND="=gnome-base/gconf-1*
 	=x11-libs/gtk+-1.2*
 	>=dev-libs/libxml-1.8.14
 	=gnome-base/libglade-0*
-	>=gnome-base/gnome-libs-1*
-	>=net-analyzer/net-snmp-5*
+	>=gnome-base/gnome-libs-1
+	>=net-analyzer/net-snmp-5
 	net-analyzer/fping"
 
 src_compile() {
