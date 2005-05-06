@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/gnome-mag
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-mag/ChangeLog,v 1.43 2005/03/31 23:41:22 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-mag/ChangeLog,v 1.44 2005/05/06 11:07:25 corsair Exp $
+
+  06 May 2005; Markus Rothe <corsair@gentoo.org> gnome-mag-0.12.0.ebuild:
+  Added ~ppc64 to KEYWORDS
 
   31 Mar 2005; Aron Griffis <agriffis@gentoo.org> gnome-mag-0.11.14.ebuild:
   stable on ia64
