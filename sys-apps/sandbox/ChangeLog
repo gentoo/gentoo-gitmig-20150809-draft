@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/sandbox
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sandbox/ChangeLog,v 1.11 2005/05/04 23:25:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sandbox/ChangeLog,v 1.12 2005/05/06 09:48:15 eradicator Exp $
+
+*sandbox-1.2.5-r1 (06 May 2005)
+
+  06 May 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  +sandbox-1.2.5-r1.ebuild:
+  Revbump to fix problems with amd64 2004.3's multilib. Cleaned up multilib
+  handling in general. 2004.3 amd64 users should have working 32bit sandbox
+  again.
 
   04 May 2005; Mike Frysinger <vapier@gentoo.org> sandbox-1.2.5.ebuild:
   Fix multilib building on amd64/2004.3 profiles.
