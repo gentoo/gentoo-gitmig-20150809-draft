@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/embassy.eclass,v 1.7 2005/03/22 22:20:09 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/embassy.eclass,v 1.8 2005/05/06 00:14:59 swegener Exp $
 
 # Author Olivier Fisette <ribosome@gentoo.org>
 
@@ -32,7 +32,7 @@ SRC_URI="ftp://ftp.uk.embnet.org/pub/EMBOSS/EMBOSS-${EBOV}.tar.gz
 SLOT="0"
 IUSE="X png"
 
-DEPEND="=sci-biology/emboss-${EBOV}*
+DEPEND="=sci-biology/emboss-${EBOV}
 	X? ( virtual/x11 )
 	png? ( sys-libs/zlib
 		media-libs/libpng
