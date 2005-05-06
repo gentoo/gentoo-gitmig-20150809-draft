@@ -1,15 +1,15 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 0eb7eec9114a09a2991368d2eb146852 xml-commons-1.0_beta2.ebuild 1243
-MD5 ffdffa4854ae4555e3bd191ebe588f71 ChangeLog 1336
+MD5 919022c4d10b5231eff616eca1e7d9cd ChangeLog 1440
 MD5 6c508e5bd6d1f3926eef63565d0f2cef metadata.xml 577
-MD5 55bd514ef86d8fcec1e605bb9eddea1f files/1.0_beta2-jdk15.patch 1784
+MD5 0f7c6f7b6ea8c8806a774a0b3ec755b5 xml-commons-1.0_beta2.ebuild 1242
 MD5 ff3ac9f3ff42eef7ede2b379c9b25340 files/digest-xml-commons-1.0_beta2 71
+MD5 55bd514ef86d8fcec1e605bb9eddea1f files/1.0_beta2-jdk15.patch 1784
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFCYnzV06ebR+OMO78RAkqRAKCFExmTDFBwBoZYsTrU+7H2lr4lFgCfdKu9
-gI9/Usr+pjO4LqY7+X+xSK8=
-=JSlX
+iD8DBQFCe3H+KRy60XGEcJIRAuRGAKCJbvxzuDcg5CrPWUmQoCaADgVm3ACfb2aA
+B/qmMe2pjC2ohWh03yBD200=
+=4VBE
 -----END PGP SIGNATURE-----
