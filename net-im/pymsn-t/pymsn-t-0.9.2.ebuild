@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pymsn-t/pymsn-t-0.9.2.ebuild,v 1.1 2005/04/18 11:35:36 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pymsn-t/pymsn-t-0.9.2.ebuild,v 1.2 2005/05/06 12:11:12 humpback Exp $
 
 # Based on net-im/pyicq-t ebuild by Karl-Johan Karlsson
 inherit eutils
@@ -32,10 +32,8 @@ src_install()
 	enewgroup jabber
 	enewuser pymsn-t -1 /bin/false /var/run/pymsn-t jabber
 
-	insinto /usr/lib/${PN}/src
-	doins src/*
-
-	dodir /var/log/pymsn-t
+	#Dont like this, have to find way to do recursive copy with doins
+	cp -r src/* ${D}usr/lib/${PN}/src/
 
 	exeinto /usr/lib/${PN}
 	newexe PyMSNt pymsn-t
