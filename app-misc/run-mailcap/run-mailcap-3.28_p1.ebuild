@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/run-mailcap/run-mailcap-3.28_p1.ebuild,v 1.5 2005/01/01 15:22:30 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/run-mailcap/run-mailcap-3.28_p1.ebuild,v 1.6 2005/05/06 03:30:00 swegener Exp $
 
 MY_PV="${PV/_p/-}"
 DESCRIPTION="Execute programs via entries in the mailcap file"
@@ -11,7 +11,7 @@ SLOT="0"
 KEYWORDS="x86 ~ppc ~sparc ~mips alpha hppa ~amd64"
 IUSE=""
 DEPEND=""
-RDEPEND=">=dev-lang/perl-5.6*
+RDEPEND=">=dev-lang/perl-5.6
 	app-misc/mime-types"
 
 S=${WORKDIR}/mime-support
