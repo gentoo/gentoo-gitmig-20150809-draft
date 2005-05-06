@@ -1,12 +1,16 @@
 # ChangeLog for net-analyzer/tcpdump
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/ChangeLog,v 1.35 2005/05/06 22:16:12 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/ChangeLog,v 1.36 2005/05/06 22:39:41 dragonheart Exp $
+
+  06 May 2005; Daniel Black <dragonheart@gentoo.org>
+  tcpdump-3.8.3-r2.ebuild:
+  ppc stable as per bug #90541
 
 *tcpdump-3.8.3-r2 (06 May 2005)
 
   06 May 2005; Marcelo Goes <vanquirius@gentoo.org>
   +files/tcpdump-3.8.3-gentoo.patch, +tcpdump-3.8.3-r2.ebuild:
-  Adding security patch.
+  Adding security patch derived from debian to solve bug #90541
 
   31 Jan 2005; Daniel Black <dragonheart@gentoo.org> tcpdump-3.8.3-r1.ebuild:
   virtual/libpcap transition
