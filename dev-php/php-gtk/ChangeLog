@@ -1,6 +1,12 @@
 # ChangeLog for dev-php/php-gtk
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php-gtk/ChangeLog,v 1.6 2004/08/07 20:19:10 robbat2 Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php-gtk/ChangeLog,v 1.7 2005/05/06 08:39:41 sebastian Exp $
+
+*php-gtk-1.0.1 (06 May 2005)
+
+  06 May 2005; Sebastian Bergmann <sebastian@gentoo.org>
+  php-gtk-1.0.0.ebuild, +php-gtk-1.0.1.ebuild:
+  Version bump. DEPEND on PHP 4 as PHP-GTK 1.X does not work with PHP 5.
 
   07 Aug 2004; Robin H. Johnson <robbat2@gentoo.org> php-gtk-1.0.0.ebuild:
   force the correct php.

@@ -1,4 +1,16 @@
-MD5 1d5bb4320b1c0bd6558a0040de3db863 ChangeLog 844
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 fe6ac10112cd82aa1b01404289248dd1 php-gtk-1.0.1.ebuild 1068
+MD5 eb5857021667c96e536dcb3663804bec php-gtk-1.0.0.ebuild 1069
+MD5 a1e4c9991a262a295451e056d3f43283 ChangeLog 1054
 MD5 833f815fef51afce0d4a615f4a278f97 metadata.xml 157
-MD5 e19b99d23871a48f4695a2bc0e151f43 php-gtk-1.0.0.ebuild 1060
 MD5 feb056de93765e6bdbf62d0c53dde204 files/digest-php-gtk-1.0.0 65
+MD5 a853ebaa18576e08fffb8ce14b7d0681 files/digest-php-gtk-1.0.1 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCey1faGfFFLhbXWkRAo8XAJ9HBAr8ka+1RQHmw3R8QkFz89gxqACcCJap
+jyegHdRRkPB4QLgXG2luIKA=
+=ciZO
+-----END PGP SIGNATURE-----
