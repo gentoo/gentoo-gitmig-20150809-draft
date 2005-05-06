@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mindi/mindi-0.86.ebuild,v 1.11 2005/01/22 10:24:42 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mindi/mindi-0.86.ebuild,v 1.12 2005/05/06 10:35:30 swegener Exp $
 
 inherit eutils
 
@@ -21,7 +21,7 @@ DEPEND=">=app-arch/bzip2-1.0.1
 		>=sys-boot/syslinux-1.7
 		>=sys-boot/lilo-22
 		>=sys-fs/dosfstools-2.8
-		>=sys-apps/mindi-kernel-1*"
+		>=sys-apps/mindi-kernel-1"
 
 src_unpack() {
 	for i in ${FEATURES} ; do
