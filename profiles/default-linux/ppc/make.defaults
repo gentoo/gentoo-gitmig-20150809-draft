@@ -1,13 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ppc/make.defaults,v 1.3 2005/04/15 19:05:46 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ppc/make.defaults,v 1.4 2005/05/06 21:48:31 vapier Exp $
 
 ARCH="ppc"
 ACCEPT_KEYWORDS="ppc"
 
 GRP_STAGE23_USE="ipv6 pam tcpd readline nls ssl gpm perl python berkdb ncurses"
 
-USE="unicode pam bitmap-fonts dvd gif jpeg mp3 nls png ppc xv truetype truetype-fonts type1-fonts fortran xprint opengl emboss"
+USE="unicode pam bitmap-fonts dvd gif jpeg mp3 nls png xv truetype truetype-fonts type1-fonts fortran xprint opengl emboss"
 
 CHOST="powerpc-unknown-linux-gnu"
 

@@ -1,5 +1,5 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ppc/2004.2/make.defaults,v 1.15 2005/03/09 00:35:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ppc/2004.2/make.defaults,v 1.16 2005/05/06 21:48:31 vapier Exp $
 
-USE="bitmap-fonts dvd font-server gif jpeg nls png ppc truetype truetype-fonts type1-fonts fortran"
+USE="bitmap-fonts dvd font-server gif jpeg nls png truetype truetype-fonts type1-fonts fortran"
