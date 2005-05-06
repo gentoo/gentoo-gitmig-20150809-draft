@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/tuxnes/tuxnes-0.75.ebuild,v 1.4 2004/09/27 15:04:28 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/tuxnes/tuxnes-0.75.ebuild,v 1.5 2005/05/06 02:07:05 vapier Exp $
 
 inherit flag-o-matic eutils
 
@@ -19,36 +19,26 @@ DEPEND=">=media-libs/netpbm-9.12
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-
-	epatch ${FILESDIR}/configure.in-${P}-gentoo.diff
-
-	#gcc-3.4 fix
-	epatch ${FILESDIR}/${P}-gcc34.patch
-
-	autoreconf &>/dev/null
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-configure.in.patch
+	epatch "${FILESDIR}"/${P}-gcc34.patch
+	export WANT_AUTOCONF=2.5
+	aclocal && automake && autoconf || die "autoconf failed"
 }
 
 src_compile() {
 	replace-flags "-O?" "-O"
-
-	# Don't even bother checking for W windows
 	econf \
 		--without-w \
-		`use_with ggi` \
-		`use_with X x` \
+		$(use_with ggi) \
+		$(use_with X x) \
 		|| die
 	emake || die
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
-
-	# Install pixmaps
-	dodir /usr/share/pixmaps
+	make DESTDIR="${D}" install || die
 	insinto /usr/share/pixmaps
 	doins tuxnes.xpm tuxnes2.xpm
-
-	# Install documentation
 	dodoc AUTHORS BUGS ChangeLog CHANGES INSTALL NEWS README THANKS
 }
