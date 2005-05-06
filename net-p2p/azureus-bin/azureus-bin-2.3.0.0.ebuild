@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus-bin/azureus-bin-2.3.0.0.ebuild,v 1.1 2005/05/04 18:15:59 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus-bin/azureus-bin-2.3.0.0.ebuild,v 1.2 2005/05/06 18:15:02 herbs Exp $
 
 inherit eutils java-pkg
 
@@ -35,7 +35,7 @@ RDEPEND="${DEPEND}
 	>=virtual/jre-1.4"
 
 # Where to install the package
-PROGRAM_DIR="/usr/lib/${MY_PN}"
+PROGRAM_DIR="/usr/$(get_libdir)/${MY_PN}"
 
 src_unpack() {
 	if ! use kde; then
