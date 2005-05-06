@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre6-r6.ebuild,v 1.5 2005/05/05 21:22:56 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre6-r6.ebuild,v 1.6 2005/05/06 22:30:52 lu_zero Exp $
 
 inherit eutils flag-o-matic kernel-mod
 
@@ -487,7 +487,6 @@ src_compile() {
 		--prefix=/usr \
 		--confdir=/usr/share/mplayer \
 		--datadir=/usr/share/mplayer \
-		--disable-runtime-cpudetection \
 		--enable-largefiles \
 		--enable-menu \
 		--enable-network --enable-ftp \

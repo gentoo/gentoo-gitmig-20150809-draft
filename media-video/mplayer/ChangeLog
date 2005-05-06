@@ -1,6 +1,11 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.307 2005/05/05 21:22:56 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.308 2005/05/06 22:30:52 lu_zero Exp $
+
+  06 May 2005; Luca Barbato <lu_zero@gentoo.org> mplayer-1.0_pre6-r6.ebuild,
+  mplayer-1.0_pre7.ebuild:
+  Fix the ebuilds to enable cpudetection correctly, thanks to Emanuele
+  Giaquinta <emanuele.giaquinta@gmail.com>
 
   05 May 2005; Aron Griffis <agriffis@gentoo.org> mplayer-1.0_pre6-r5.ebuild,
   mplayer-1.0_pre6-r6.ebuild, mplayer-1.0_pre7.ebuild:
