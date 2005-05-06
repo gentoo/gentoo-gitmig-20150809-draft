@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/m4/m4-1.4.3.ebuild,v 1.4 2005/05/05 03:32:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/m4/m4-1.4.3.ebuild,v 1.5 2005/05/06 05:03:40 vapier Exp $
 
 inherit eutils toolchain-funcs
 
@@ -25,16 +25,17 @@ src_unpack() {
 }
 
 src_compile() {
+	local myconf=""
+	[[ ${USERLAND} != "GNU" ]] && myconf="--program-prefix=g"
 	econf \
 		$(use_enable nls) \
 		--enable-changeword \
-		--program-prefix=g \
+		${myconf} \
 		|| die
 	emake AR="$(tc-getAR)" || die
 }
 
 src_install() {
 	make install DESTDIR="${D}" || die
-	[[ ${USERLAND} == "GNU" ]] && dosym gm4 /usr/bin/m4
 	dodoc BACKLOG ChangeLog NEWS README* THANKS TODO
 }
