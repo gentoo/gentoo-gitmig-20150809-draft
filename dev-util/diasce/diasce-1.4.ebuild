@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/diasce/diasce-1.4.ebuild,v 1.8 2004/08/21 16:16:23 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/diasce/diasce-1.4.ebuild,v 1.9 2005/05/06 22:31:22 dholm Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://diasce.es.gnome.org/downloads/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~sparc ~amd64"
+KEYWORDS="~x86 ~sparc ~amd64 ~ppc"
 IUSE="nls"
 
 RDEPEND=">=dev-libs/libxml2-2.4
@@ -28,6 +28,7 @@ RDEPEND=">=dev-libs/libxml2-2.4
 	>=gnome-base/libgnomecanvas-2"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
+	net-libs/linc
 	nls? ( sys-devel/gettext )"
 
 src_unpack() {
