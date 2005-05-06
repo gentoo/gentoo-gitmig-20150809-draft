@@ -30,7 +30,7 @@
  * Copyright 1999-2004 Gentoo Foundation
  * Distributed under the terms of the GNU General Public License v2
  * Author:  Martin Schlemmer <azarah@gentoo.org>, Nov 2002
- * $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/files/filefuncs/filefuncs.c,v 1.2 2004/09/28 01:52:18 swegener Exp $
+ * $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/files/filefuncs/filefuncs.c,v 1.3 2005/05/06 01:35:53 vapier Exp $
  * 
  * Extended with: do_symlink()
  *                do_unlink()
@@ -44,7 +44,6 @@
 #include "awk.h"
 
 #include <unistd.h>
-#include <sys/sysmacros.h>
 
 /*  do_chdir --- provide dynamically loaded chdir() builtin for gawk */
 
