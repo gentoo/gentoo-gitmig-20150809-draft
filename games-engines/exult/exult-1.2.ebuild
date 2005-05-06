@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/exult/exult-1.2.ebuild,v 1.3 2005/02/17 17:47:07 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/exult/exult-1.2.ebuild,v 1.4 2005/05/06 15:03:17 swegener Exp $
 
 inherit games
 
@@ -15,12 +15,12 @@ SLOT="0"
 KEYWORDS="x86 ppc ~sparc ~amd64"
 IUSE="timidity zlib mmx 3dnow"
 
-RDEPEND=">=media-libs/libsdl-1.2*
+RDEPEND=">=media-libs/libsdl-1.2
 	>=media-libs/sdl-mixer-1.2.4
 	media-libs/smpeg
 	media-libs/libogg
 	media-libs/libvorbis
-	timidity? ( >=media-sound/timidity++-2* )
+	timidity? ( >=media-sound/timidity++-2 )
 	zlib? ( sys-libs/zlib )"
 DEPEND="${RDEPEND}
 	app-arch/unzip"
