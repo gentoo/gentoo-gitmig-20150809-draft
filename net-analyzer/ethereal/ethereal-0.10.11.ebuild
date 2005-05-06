@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ethereal-0.10.11.ebuild,v 1.5 2005/05/05 15:35:43 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ethereal-0.10.11.ebuild,v 1.6 2005/05/06 08:32:25 dragonheart Exp $
 
 inherit libtool flag-o-matic eutils
 
@@ -95,4 +95,17 @@ src_install() {
 	insinto /usr/share/icons/hicolor/48x48/apps
 	newins ${S}/image/hi48-app-ethereal.png ethereal.png
 	make_desktop_entry ethereal "Ethereal" ethereal
+}
+
+pkg_postinst() {
+	ewarn "Due to the significant history of security flaws in this piece of software may be riddled with more flaws."
+	ewarn "To protect yourself against malicious damage due to potential future flaws in this product we recommend"
+	ewarn "you take the following security precautions when running ethereal:"
+	ewarn "do no run any longer than you need to;"
+	ewarn "use in a root jail - prefereably one that has been hardened with grsec like rootjail protections;"
+	ewarn "use a hardened operating system;"
+	ewarn "do not listen to addition interfaces;"
+	ewarn "if possible, run behind a firewall;"
+	ewarn "take a capture with tcpdump and analylize the contents offline running as a the least priviledged user; and"
+	ewarn "subscribe to ethereal's announce list for new vulnerabilities."
 }
