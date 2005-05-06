@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/WWW-Bugzilla
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/WWW-Bugzilla/ChangeLog,v 1.7 2005/04/29 15:48:26 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/WWW-Bugzilla/ChangeLog,v 1.8 2005/05/06 01:06:59 swegener Exp $
+
+  06 May 2005; Sven Wegener <swegener@gentoo.org> WWW-Bugzilla-0.4.ebuild:
+  Removed * postfix from <, <=, >= and > dependencies.
 
   29 Apr 2005; Michael Cummings <mcummings@gentoo.org>
   WWW-Bugzilla-0.2.ebuild, WWW-Bugzilla-0.4.ebuild:

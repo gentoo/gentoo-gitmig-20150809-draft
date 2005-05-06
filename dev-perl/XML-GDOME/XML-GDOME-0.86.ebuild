@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-GDOME/XML-GDOME-0.86.ebuild,v 1.9 2005/05/01 18:26:40 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-GDOME/XML-GDOME-0.86.ebuild,v 1.10 2005/05/06 01:08:06 swegener Exp $
 
 inherit perl-module
 
@@ -13,6 +13,6 @@ LICENSE="|| ( Artistic GPL-2 )"
 KEYWORDS="x86 sparc ~ppc amd64 ~alpha"
 IUSE=""
 
-DEPEND=">=dev-libs/gdome2-0.7.2*
+DEPEND=">=dev-libs/gdome2-0.7.2
 		dev-perl/XML-LibXML-Common
 		dev-perl/XML-SAX"

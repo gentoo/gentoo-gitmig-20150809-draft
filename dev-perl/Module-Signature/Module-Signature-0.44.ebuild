@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Module-Signature/Module-Signature-0.44.ebuild,v 1.2 2005/04/11 20:21:19 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Module-Signature/Module-Signature-0.44.ebuild,v 1.3 2005/05/06 01:04:44 swegener Exp $
 
 inherit perl-module
 
@@ -26,7 +26,7 @@ DEPEND="dev-perl/MIME-Base64
 		dev-perl/convert-ascii-armour
 		dev-perl/data-buffer
 		dev-perl/digest-md2
-		>=dev-perl/math-pari-2.010603*
+		>=dev-perl/math-pari-2.010603
 		dev-perl/crypt-random
 		dev-perl/crypt-primes
 		dev-perl/Crypt-DES_EDE3

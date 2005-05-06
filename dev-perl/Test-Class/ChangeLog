@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Test-Class
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Class/ChangeLog,v 1.5 2005/04/29 14:09:57 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Class/ChangeLog,v 1.6 2005/05/06 01:06:18 swegener Exp $
+
+  06 May 2005; Sven Wegener <swegener@gentoo.org> Test-Class-0.03.ebuild,
+  Test-Class-0.11.ebuild:
+  Removed * postfix from <, <=, >= and > dependencies.
 
 *Test-Class-0.11 (29 Apr 2005)
 

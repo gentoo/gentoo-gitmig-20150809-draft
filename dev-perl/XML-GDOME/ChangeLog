@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/XML-GDOME
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-GDOME/ChangeLog,v 1.11 2005/05/01 18:26:40 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-GDOME/ChangeLog,v 1.12 2005/05/06 01:08:06 swegener Exp $
+
+  06 May 2005; Sven Wegener <swegener@gentoo.org> XML-GDOME-0.86.ebuild:
+  Removed * postfix from <, <=, >= and > dependencies.
 
   01 May 2005; Tom Martin <slarti@gentoo.org> XML-GDOME-0.86.ebuild:
   Stable on amd64.
