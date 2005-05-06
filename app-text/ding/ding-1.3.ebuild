@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ding/ding-1.3.ebuild,v 1.4 2005/01/01 16:08:42 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ding/ding-1.3.ebuild,v 1.5 2005/05/06 03:31:49 swegener Exp $
 
 DESCRIPTION="Tk based dictionary (German-English) (incl. dictionary itself)"
 HOMEPAGE="http://www-user.tu-chemnitz.de/~fri/ding/"
@@ -11,8 +11,8 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~amd64"
 IUSE=""
 
-RDEPEND=">=dev-lang/tk-8*
-	>=sys-apps/grep-2*"
+RDEPEND=">=dev-lang/tk-8
+	>=sys-apps/grep-2"
 
 src_install() {
 	dobin ding

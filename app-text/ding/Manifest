@@ -1,17 +1,17 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 154fa95262291bed59559255634280da ding-1.2.ebuild 748
+MD5 b7fb1b86ca699823a4f1b49e84d6d31c ding-1.2.ebuild 748
 MD5 877a262d530121eb88f7db17b81163fb ding-1.4.ebuild 815
-MD5 2b5c5f95f9f5d455c3feb3ab9ecb65c5 ChangeLog 790
-MD5 b1a7ac5df148c9510755d161bf6c98c8 ding-1.3.ebuild 837
+MD5 7364e67106ffa313b1c8dc5fe17703af ChangeLog 937
+MD5 a8c3f2daa825bc10aedc1be3770b08d3 ding-1.3.ebuild 833
 MD5 02bac7944b3b02c4392f7e114cfc2ba4 files/digest-ding-1.2 61
 MD5 1ecbab9edd2d9044bec08bb2b9fcc06e files/digest-ding-1.3 61
 MD5 1be0a64edb5832ed24e85d38160aa773 files/digest-ding-1.4 61
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCeen2V3J2n04EauwRAg1qAJ9yO8gxVDvfqrAWznXD4snpdxHVgQCg0b4M
-M17eobXjfvSXk0joSo9gO90=
-=0RxU
+iD8DBQFCeuUwI1lqEGTUzyQRAvVYAKCxtHY0s9ezOEUlslsaGFvkqV+O8QCgow+c
+wL05Xu5bXOMC4hBi2kZ1Rxk=
+=daD/
 -----END PGP SIGNATURE-----
