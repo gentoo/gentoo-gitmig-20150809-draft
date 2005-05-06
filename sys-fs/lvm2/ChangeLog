@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/lvm2
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.34 2005/04/15 20:52:59 rocket Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.35 2005/05/06 18:19:17 rocket Exp $
+
+  06 May 2005; Eric Edgar <rocket@gentoo.org> lvm2-2.01.09.ebuild:
+  Marking stable on x86.  appears to fix bug 89681
 
   15 Apr 2005; Eric Edgar <rocket@gentoo.org> : +lvm2-2.01.09.ebuild:
   Modified ebuild to depend on newer version of device mapper.  bug #89214
