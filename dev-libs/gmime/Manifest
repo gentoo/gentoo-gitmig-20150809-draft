@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 af8976aafca2bf3f8a4fed1142967543 gmime-2.1.9-r1.ebuild 1248
-MD5 f88cf6ef297e0902adabe50350135f11 gmime-2.1.14.ebuild 1628
-MD5 1b9912f45d5dd96786eb96ae17ba3218 ChangeLog 3425
+MD5 2f196bcaf2769ffbda114c8ed02a6fac ChangeLog 3571
+MD5 8242862bf76fadaa0d949519be623c80 gmime-2.1.14.ebuild 1640
+MD5 f870dc6d113a8688fe7163243a2a237d gmime-2.1.9-r1.ebuild 1250
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
 MD5 154afc14cd94dc661729bf4e4d8af00d files/digest-gmime-2.1.14 64
 MD5 6d73d42404a0463371ca8623b16a5869 files/digest-gmime-2.1.9-r1 63
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFCb2+mViELBEf1JB0RAhg6AJ4wrIe+icl/u1ZkPxPGzKDbFVjuJACeN1SD
-l4XtpG5O9zV64VT/zpFyP9I=
-=Hv4E
+iD8DBQFCe5SfKRy60XGEcJIRAlf+AJ9HlEJ5ZwIBFSOwAQ9JiPaKvfp8sgCbBlen
+IykVsQakBX8/xmE5ROFJ5jo=
+=jZUB
 -----END PGP SIGNATURE-----

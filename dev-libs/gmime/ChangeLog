@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/gmime
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/ChangeLog,v 1.20 2005/04/27 10:55:03 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/ChangeLog,v 1.21 2005/05/06 16:00:15 gustavoz Exp $
+
+  06 May 2005; Gustavo Zacarias <gustavoz@gentoo.org> gmime-2.1.9-r1.ebuild,
+  gmime-2.1.14.ebuild:
+  2.1.9-r1 sparc stable, 2.1.14 to ~sparc
 
   27 Apr 2005; Fernando J. Pereda <ferdy@gentoo.org> gmime-2.1.9-r1.ebuild:
   keyworded ~alpha wrt #86732
