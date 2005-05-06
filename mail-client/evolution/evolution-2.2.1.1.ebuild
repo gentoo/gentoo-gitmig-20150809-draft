@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.2.1.1.ebuild,v 1.2 2005/03/23 16:17:35 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.2.1.1.ebuild,v 1.3 2005/05/06 10:43:20 corsair Exp $
 
 inherit eutils gnome2 flag-o-matic alternatives
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://ximian.com/products/evolution/"
 
 LICENSE="GPL-2"
 SLOT="2.0"
-KEYWORDS="~x86 ~amd64 ~ppc ~sparc ~ia64"
+KEYWORDS="~x86 ~amd64 ~ppc ~sparc ~ia64 ~ppc64"
 IUSE="ssl mozilla ldap doc spell ipv6 kerberos crypt nntp debug pda gstreamer mono"
 
 # Top stanza are ximian deps
