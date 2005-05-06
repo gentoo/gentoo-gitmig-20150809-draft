@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/wmii/wmii-0.20050504.ebuild,v 1.1 2005/05/04 20:26:25 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/wmii/wmii-0.20050506.ebuild,v 1.1 2005/05/06 18:29:18 tove Exp $
 
 #inherit toolchain-funcs distutils
 inherit toolchain-funcs
@@ -30,7 +30,7 @@ src_unpack() {
 
 	sed -i \
 		-e "/^CFLAGS/s/-O0 -g/${CFLAGS}/" \
-		-e "/^LDFLAGS/s/-g -Wl/${LDFLAGS}/" \
+		-e "/^LDFLAGS/s/-g/${LDFLAGS}/" \
 		"${S}"/config.mk
 
 	if useq cairo; then
