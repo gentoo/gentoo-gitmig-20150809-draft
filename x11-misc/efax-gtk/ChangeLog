@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/efax-gtk
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/efax-gtk/ChangeLog,v 1.13 2004/11/07 13:26:28 pyrania Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/efax-gtk/ChangeLog,v 1.14 2005/05/06 03:36:09 swegener Exp $
+
+  06 May 2005; Sven Wegener <swegener@gentoo.org> efax-gtk-2.0.7.ebuild,
+  efax-gtk-2.2.4.ebuild, efax-gtk-2.2.5a.ebuild, efax-gtk-2.2.9.ebuild:
+  Removed * postfix from <, <=, >= and > dependencies.
 
 *efax-gtk-2.2.9 (07 Nov 2004)
 
