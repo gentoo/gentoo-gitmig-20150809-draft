@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 9214f5d5f06a3b872780769649343237 ChangeLog 664
-MD5 b9ac45cbde9f8d40b65bb92bea06a616 gtk2-trayicon-0.03.ebuild 698
+MD5 620dc4014832008eef5c2319e3140ee6 gtk2-trayicon-0.03.ebuild 695
+MD5 8662c6c45c9a48ffad9f7755969b4b79 ChangeLog 796
 MD5 854ad93ffa90b305b1f1f87592698ed8 metadata.xml 167
 MD5 a962167e64c72b7923ae7d54b22b1afd files/digest-gtk2-trayicon-0.03 68
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCcm4StG5z4I8BtQoRAl3SAJ9QPu2cCA6gN/wGGYOuj56ltkSGyQCbBy5/
-oy4Rk6b7DtpnUd/+gwL+flQ=
-=39ts
+iD8DBQFCez+1I1lqEGTUzyQRAh1gAJ9V1PNiUWnkh1dghDPiLCaX9yj6fQCdEn06
++iHrb+QQCDW/zRYV6gyIMiI=
+=9k7K
 -----END PGP SIGNATURE-----
