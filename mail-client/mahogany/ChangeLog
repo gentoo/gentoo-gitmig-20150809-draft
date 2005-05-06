@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/mahogany
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mahogany/ChangeLog,v 1.3 2005/03/04 15:37:51 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mahogany/ChangeLog,v 1.4 2005/05/06 11:38:14 swegener Exp $
+
+  06 May 2005; Sven Wegener <swegener@gentoo.org> mahogany-0.65.ebuild:
+  Removed * postfix from <, <=, >= and > dependencies.
 
   04 Mar 2005; Andrej Kacian <ticho@gentoo.org> mahogany-0.65.ebuild:
   Change wxGTK depend atom to depend on 2.4.x, since it won't work on 2.6.
