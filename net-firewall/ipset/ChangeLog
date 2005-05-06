@@ -1,6 +1,10 @@
 # ChangeLog for net-firewall/ipset
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipset/ChangeLog,v 1.3 2005/05/03 08:54:38 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipset/ChangeLog,v 1.4 2005/05/06 14:34:48 swegener Exp $
+
+  06 May 2005; Sven Wegener <swegener@gentoo.org>
+  ipset-2.1.0.20050119.ebuild, ipset-2.1.0.20050119-r1.ebuild:
+  Removed * postfix from <, <=, >= and > dependencies.
 
 *ipset-2.1.0.20050119-r1 (03 May 2005)
 
