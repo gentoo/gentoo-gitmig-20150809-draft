@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libxklavier
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxklavier/ChangeLog,v 1.38 2005/04/24 23:41:19 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxklavier/ChangeLog,v 1.39 2005/05/06 10:25:13 corsair Exp $
+
+  06 May 2005; Markus Rothe <corsair@gentoo.org> libxklavier-2.0.ebuild:
+  Added ~ppc64 to KEYWORDS
 
   24 Apr 2005; Martin Schlemmer <azarah@gentoo.org>
   +files/libxklavier-1.14-werror.patch, libxklavier-2.0.ebuild:
