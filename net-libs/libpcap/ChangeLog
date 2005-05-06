@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libpcap
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/ChangeLog,v 1.34 2005/01/29 00:37:20 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/ChangeLog,v 1.35 2005/05/06 13:00:50 ka0ttic Exp $
+
+  06 May 2005; Aaron Walker <ka0ttic@gentoo.org> libpcap-0.8.3-r1.ebuild:
+  Install pcap-int.h on fbsd.
 
   29 Jan 2005; Daniel Black <dragonheart@gentoo.org> libpcap-0.8.3-r1.ebuild:
   new PROVIDE - virtual/libpcap

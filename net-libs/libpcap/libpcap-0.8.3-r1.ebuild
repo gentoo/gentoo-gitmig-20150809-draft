@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/libpcap-0.8.3-r1.ebuild,v 1.18 2005/01/29 00:37:20 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/libpcap-0.8.3-r1.ebuild,v 1.19 2005/05/06 13:00:50 ka0ttic Exp $
 
 inherit eutils multilib toolchain-funcs
 
@@ -26,7 +26,7 @@ src_unpack() {
 }
 
 src_compile() {
-	econf `use_enable ipv6` || die "bad configure"
+	econf $(use_enable ipv6) || die "bad configure"
 	emake || die "compile problem"
 
 	# no provision for this in the Makefile, so...
@@ -35,7 +35,12 @@ src_compile() {
 }
 
 src_install() {
-	einstall || die
+	einstall || die "make install failed"
+
+	if use x86-fbsd ; then
+		insinto /usr/include
+		doins pcap-int.h || die "failed to install pcap-int.h"
+	fi
 
 	insopts -m 755
 	insinto /usr/$(get_libdir) ; doins libpcap.so.${PV:0:3}
