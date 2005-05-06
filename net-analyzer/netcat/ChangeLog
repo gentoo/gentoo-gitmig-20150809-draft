@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/netcat
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netcat/ChangeLog,v 1.27 2005/04/15 01:46:07 tgall Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netcat/ChangeLog,v 1.28 2005/05/06 22:26:53 vapier Exp $
+
+*netcat-110-r8 (06 May 2005)
+
+  06 May 2005; Mike Frysinger <vapier@gentoo.org> +netcat-110-r8.ebuild:
+  Move to standard patch tarball style and sync against latest Debian patchset.
 
   14 Apr 2005; Tom Gall <tgall@gentoo.org> netcat-110-r7.ebuild:
   added ~ppc64 bug#89110
