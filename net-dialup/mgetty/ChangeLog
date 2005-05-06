@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/mgetty
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/mgetty/ChangeLog,v 1.46 2005/04/19 20:43:50 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/mgetty/ChangeLog,v 1.47 2005/05/06 11:40:59 swegener Exp $
+
+  06 May 2005; Sven Wegener <swegener@gentoo.org> mgetty-1.1.31-r1.ebuild,
+  mgetty-1.1.33.ebuild:
+  Removed * postfix from <, <=, >= and > dependencies.
 
 *mgetty-1.1.33 (19 Apr 2005)
 

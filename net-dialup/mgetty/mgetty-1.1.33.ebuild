@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/mgetty/mgetty-1.1.33.ebuild,v 1.2 2005/04/19 21:11:48 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/mgetty/mgetty-1.1.33.ebuild,v 1.3 2005/05/06 11:40:59 swegener Exp $
 
 inherit toolchain-funcs flag-o-matic eutils
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://alpha.greenie.net/mgetty/"
 RDEPEND="virtual/libc"
 
 DEPEND="${RDEPEND}
-	>=sys-apps/sed-4*
+	>=sys-apps/sed-4
 	doc? ( virtual/tetex )
 	sys-apps/gawk
 	sys-apps/groff
