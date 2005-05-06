@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-pear.eclass,v 1.8 2005/03/14 16:52:18 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-pear.eclass,v 1.9 2005/05/06 04:38:05 sebastian Exp $
 #
 # Author: Tal Peer <coredumb@gentoo.org>
 #
@@ -42,6 +42,7 @@ S="${WORKDIR}/${PEAR_PN}"
 php-pear_src_install () {
 	# SNMP is nuts sometimes
 	addpredict /usr/share/snmp/mibs/.index
+	addpredict /var/lib/net-snmp/
 
 	cd ${S}
 	mv ${WORKDIR}/package.xml ${S}
