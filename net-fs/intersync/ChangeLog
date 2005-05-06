@@ -1,6 +1,10 @@
 # ChangeLog for net-fs/intersync
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/intersync/ChangeLog,v 1.10 2004/12/21 21:51:45 karltk Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-fs/intersync/ChangeLog,v 1.11 2005/05/06 00:03:06 swegener Exp $
+
+  06 May 2005; Sven Wegener <swegener@gentoo.org> intersync-0.9.5.ebuild,
+  intersync-0.9.5_p2.ebuild:
+  Removed * postfix from <, <=, >= and > dependencies.
 
   05 Sep 2004; Sven Wegener <swegener@gentoo.org> :
   Fixed ChangeLog header.

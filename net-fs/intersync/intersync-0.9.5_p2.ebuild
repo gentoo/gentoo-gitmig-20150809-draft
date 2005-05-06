@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/intersync/intersync-0.9.5_p2.ebuild,v 1.5 2004/07/14 23:52:33 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/intersync/intersync-0.9.5_p2.ebuild,v 1.6 2005/05/06 00:03:06 swegener Exp $
 
 DESCRIPTION="advanced replicating networked filesystem"
 HOMEPAGE="http://www.inter-mezzo.org/"
@@ -13,7 +13,7 @@ IUSE=""
 
 DEPEND="net-misc/curl
 	media-gfx/transfig
-	>=dev-libs/glib-2*
+	>=dev-libs/glib-2
 	>=gnome-base/libghttp-1.0.9-r3
 	>=sys-kernel/linux-headers-2.4"
 
