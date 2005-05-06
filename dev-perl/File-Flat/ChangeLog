@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/File-Flat
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Flat/ChangeLog,v 1.10 2005/04/25 15:43:24 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Flat/ChangeLog,v 1.11 2005/05/06 00:56:58 swegener Exp $
+
+  06 May 2005; Sven Wegener <swegener@gentoo.org> File-Flat-0.94.ebuild,
+  File-Flat-0.95.ebuild:
+  Removed * postfix from <, <=, >= and > dependencies.
 
 *File-Flat-0.95 (25 Apr 2005)
 

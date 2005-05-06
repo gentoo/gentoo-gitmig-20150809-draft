@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Image-Imlib2/Image-Imlib2-1.03.ebuild,v 1.2 2005/03/16 16:04:04 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Image-Imlib2/Image-Imlib2-1.03.ebuild,v 1.3 2005/05/06 00:58:03 swegener Exp $
 
 inherit perl-module
 
@@ -13,5 +13,5 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
 IUSE=""
 
-DEPEND=">=media-libs/imlib2-1*
+DEPEND=">=media-libs/imlib2-1
 	>=dev-perl/module-build-0.22"
