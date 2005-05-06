@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/plone/plone-2.0.4.ebuild,v 1.4 2004/10/20 11:20:04 radek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/plone/plone-2.0.4.ebuild,v 1.5 2005/05/06 03:35:24 swegener Exp $
 
 SLOT="2.0"
 
@@ -13,7 +13,7 @@ LICENSE="GPL-2"
 KEYWORDS="x86 ppc"
 IUSE=""
 RDEPEND=">=net-zope/cmf-1.4.7
-	>=net-zope/zope-2.7*
+	>=net-zope/zope-2.7
 	>=net-zope/btreefolder2-1.0.1
 	>=net-zope/cmfactionicons-0.9
 	>=net-zope/cmfformcontroller-1.0.2
