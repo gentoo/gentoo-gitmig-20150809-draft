@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gdb
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/ChangeLog,v 1.67 2005/05/06 00:09:46 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/ChangeLog,v 1.68 2005/05/06 07:34:01 hansmi Exp $
+
+  06 May 2005; Michael Hanselmann <hansmi@gentoo.org> gdb-6.3-r3.ebuild:
+  Stable on ppc.
 
 *gdb-6.3-r3 (05 May 2005)
 
