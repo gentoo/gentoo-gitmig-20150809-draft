@@ -1,4 +1,14 @@
-MD5 ce24be081ae8c9aa532a65df7fb4726f nomad-0.3.2.ebuild 1197
-MD5 600f85adb88e41b8caf7b758423b1399 ChangeLog 531
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 41aac16eea00d1aa5e1f2ec181d2dfdb nomad-0.3.2.ebuild 1193
+MD5 318b496549ca0b9732e94d22c9f91e97 ChangeLog 655
 MD5 ac3074aa551da20b321f380c591f0847 metadata.xml 256
 MD5 6cf900aa2cd63d74d519415bf71561a3 files/digest-nomad-0.3.2 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCe4OoI1lqEGTUzyQRAu60AKDDfTp2Iee8JYwQ+PvM5zsIPTC1rgCgmGsc
+Jy6A9zspG06ChX/3mOOAQkk=
+=YUYs
+-----END PGP SIGNATURE-----
