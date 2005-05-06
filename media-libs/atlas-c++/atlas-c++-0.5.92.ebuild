@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/atlas-c++/atlas-c++-0.5.92.ebuild,v 1.1 2005/02/04 08:19:43 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/atlas-c++/atlas-c++-0.5.92.ebuild,v 1.2 2005/05/06 11:36:02 swegener Exp $
 
 inherit eutils
 
@@ -17,7 +17,7 @@ KEYWORDS="~x86 ~ppc"
 IUSE=""
 
 DEPEND="virtual/libc
-	>=dev-libs/libsigc++-1.2*"
+	>=dev-libs/libsigc++-1.2"
 
 src_install() {
 	make DESTDIR=${D} install || die
