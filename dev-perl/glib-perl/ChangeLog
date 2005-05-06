@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/glib-perl
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/glib-perl/ChangeLog,v 1.29 2005/04/29 17:24:20 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/glib-perl/ChangeLog,v 1.30 2005/05/06 03:33:51 swegener Exp $
+
+  06 May 2005; Sven Wegener <swegener@gentoo.org> glib-perl-1.062.ebuild,
+  glib-perl-1.081.ebuild:
+  Removed * postfix from <, <=, >= and > dependencies.
 
 *glib-perl-1.081 (29 Apr 2005)
 
