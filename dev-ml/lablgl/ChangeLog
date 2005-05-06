@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/lablgl
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgl/ChangeLog,v 1.33 2005/04/01 04:37:21 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgl/ChangeLog,v 1.34 2005/05/06 00:43:24 swegener Exp $
+
+  06 May 2005; Sven Wegener <swegener@gentoo.org> lablgl-1.00.ebuild:
+  Removed * postfix from <, <=, >= and > dependencies.
 
   01 Apr 2005; Aron Griffis <agriffis@gentoo.org> lablgl-1.00.ebuild:
   stable on ia64

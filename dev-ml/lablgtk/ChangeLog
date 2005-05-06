@@ -1,6 +1,10 @@
 # ChangeLog for dev-ml/lablgtk
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgtk/ChangeLog,v 1.29 2005/04/06 18:41:37 mattam Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgtk/ChangeLog,v 1.30 2005/05/06 00:44:37 swegener Exp $
+
+  06 May 2005; Sven Wegener <swegener@gentoo.org> lablgtk-2.2.0.ebuild,
+  lablgtk-2.4.0.ebuild:
+  Removed * postfix from <, <=, >= and > dependencies.
 
   06 Apr 2005; Matthieu Sozeau <mattam@gentoo.org> lablgtk-2.2.0.ebuild,
   lablgtk-2.4.0.ebuild:
