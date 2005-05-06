@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/trac/trac-0.8.ebuild,v 1.2 2005/04/20 21:49:00 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/trac/trac-0.8.ebuild,v 1.3 2005/05/06 10:34:26 swegener Exp $
 
 inherit distutils webapp
 
@@ -16,7 +16,7 @@ DEPEND="$DEPEND
 	>=dev-lang/python-2.3
 	>=dev-python/docutils-0.3.3
 	=dev-db/sqlite-2.8*
-	<=dev-python/pysqlite-1.0*
+	<=dev-python/pysqlite-1.0
 	>=dev-libs/clearsilver-0.9.3
 	app-text/silvercity
 	>=dev-util/subversion-1.0.3"
