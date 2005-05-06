@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/moagg/moagg-0.18.ebuild,v 1.1 2005/04/17 23:22:29 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/moagg/moagg-0.18.ebuild,v 1.2 2005/05/06 10:04:08 swegener Exp $
 
 inherit games
 
@@ -21,7 +21,7 @@ DEPEND=">=media-libs/libsdl-1.2.6
 	sys-libs/zlib
 	>=dev-libs/expat-1.95.6
 	=media-libs/paragui-1.0*
-	!>=media-libs/paragui-1.1*"
+	!>=media-libs/paragui-1.1"
 
 src_unpack() {
 	unpack ${A}
