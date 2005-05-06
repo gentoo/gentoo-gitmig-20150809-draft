@@ -1,5 +1,5 @@
---- build~~	2003-07-15 01:01:27.000000000 +0200
-+++ build	2003-07-15 01:00:27.000000000 +0200
+--- build
++++ build
 @@ -1,9 +1,10 @@
  #!/bin/sh
  
@@ -7,8 +7,8 @@
 -APPDEFAULTS=/usr/lib/X11/app-defaults
 -BINDIR=/usr/games/bin
 -LIBDIR=/usr/games/lib/scrabble
-+APPDEFAULTS=$DESTDIR/usr/X11R6/lib/X11/app-defaults
-+REAL_APPDEFAULTS=/usr/X11R6/lib/X11/app-defaults
++APPDEFAULTS=$DESTDIR/usr/$LIBDIR/X11/app-defaults
++REAL_APPDEFAULTS=/usr/$LIBDIR/X11/app-defaults
 +BINDIR=$DESTDIR/usr/games/bin
 +LIBDIR=$DESTDIR/usr/share/games/xscrabble
  
