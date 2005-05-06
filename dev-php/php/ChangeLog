@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/php
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php/ChangeLog,v 1.154 2005/05/06 09:09:45 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php/ChangeLog,v 1.155 2005/05/06 09:44:27 sebastian Exp $
+
+  06 May 2005; Sebastian Bergmann <sebastian@gentoo.org>
+  +files/php-4.3.11-flash.patch, php-4.3.11.ebuild:
+  Fix bug #88756.
 
   06 May 2005; Sebastian Bergmann <sebastian@gentoo.org>
   +files/php-4.3.11-gmp.patch, php-4.3.11.ebuild:

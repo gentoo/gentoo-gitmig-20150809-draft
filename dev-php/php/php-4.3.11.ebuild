@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php/php-4.3.11.ebuild,v 1.11 2005/05/06 09:09:46 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php/php-4.3.11.ebuild,v 1.12 2005/05/06 09:44:27 sebastian Exp $
 
 PHPSAPI="cli"
 inherit php-sapi eutils
@@ -13,6 +13,9 @@ IUSE=""
 src_unpack() {
 	php-sapi_src_unpack
 	[ "${ARCH}" == "amd64" ] && epatch ${FILESDIR}/php-4.3.4-amd64hack.diff
+
+	# Bug 88756
+	use flash && epatch ${FILESDIR}/php-4.3.11-flash.patch
 
 	# Bug 88795
 	use gmp && epatch ${FILESDIR}/php-4.3.11-gmp.patch
