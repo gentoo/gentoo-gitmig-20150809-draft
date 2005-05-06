@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/dcfldd
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dcfldd/ChangeLog,v 1.2 2004/06/24 22:02:20 agriffis Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dcfldd/ChangeLog,v 1.3 2005/05/06 22:33:21 vapier Exp $
+
+*dcfldd-1.2.2 (06 May 2005)
+
+  06 May 2005; Mike Frysinger <vapier@gentoo.org> +dcfldd-1.2.2.ebuild:
+  Version bump #91581 by Ken Garland.
 
 *dcfldd-1.0 (21 Feb 2004)
 
