@@ -1,6 +1,10 @@
 # ChangeLog for app-text/chasen
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/chasen/ChangeLog,v 1.18 2005/03/05 08:55:04 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/chasen/ChangeLog,v 1.19 2005/05/06 14:47:13 gustavoz Exp $
+
+  06 May 2005; Gustavo Zacarias <gustavoz@gentoo.org>
+  chasen-2.3.3-r3.ebuild:
+  Stable on sparc
 
   05 Mar 2005; Markus Rothe <corsair@gentoo.org> chasen-2.4.0_pre1-r1.ebuild:
   Stable on ppc64

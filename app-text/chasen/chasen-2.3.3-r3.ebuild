@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/chasen/chasen-2.3.3-r3.ebuild,v 1.4 2005/01/01 16:05:27 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/chasen/chasen-2.3.3-r3.ebuild,v 1.5 2005/05/06 14:47:13 gustavoz Exp $
 
 inherit perl-module flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="http://chasen.aist-nara.ac.jp/stable/chasen/${P}.tar.gz"
 
 LICENSE="chasen"
 SLOT="0"
-KEYWORDS="x86 amd64 ~sparc ppc"
+KEYWORDS="x86 amd64 sparc ppc"
 IUSE="perl"
 
 RDEPEND=">=dev-libs/darts-0.2"
