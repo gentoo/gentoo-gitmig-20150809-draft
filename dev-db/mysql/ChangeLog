@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.195 2005/04/23 23:54:38 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.196 2005/05/06 09:48:14 swegener Exp $
+
+  06 May 2005; Sven Wegener <swegener@gentoo.org> mysql-4.1.8.ebuild,
+  mysql-4.1.8-r1.ebuild:
+  Removed * postfix from <, <=, >= and > dependencies.
 
   23 Apr 2005; Robin H. Johnson <robbat2@gentoo.org>
   -mysql-3.23.52-r1.ebuild, -mysql-3.23.56.ebuild, -mysql-3.23.57.ebuild,
