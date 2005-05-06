@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.169 2005/05/04 22:06:36 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.170 2005/05/06 04:14:17 vapier Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -120,7 +120,8 @@ EPATCH_SOURCE="${WORKDIR}/patch"
 EPATCH_SUFFIX="patch.bz2"
 # Default options for patch
 # Set -g0 to keep RCS, ClearCase, Perforce and SCCS happy. Bug #24571
-EPATCH_OPTS="-g0"
+# Set --no-backup-if-mismatch so we don't leave '.orig' files behind.
+EPATCH_OPTS="-g0 --no-backup-if-mismatch"
 # List of patches not to apply.  Not this is only file names,
 # and not the full path ..
 EPATCH_EXCLUDE=""
