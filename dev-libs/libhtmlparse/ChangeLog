@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libhtmlparse
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libhtmlparse/ChangeLog,v 1.6 2005/02/11 11:55:43 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libhtmlparse/ChangeLog,v 1.7 2005/05/06 12:06:14 ka0ttic Exp $
+
+  06 May 2005; Aaron Walker <ka0ttic@gentoo.org> libhtmlparse-0.1.13.ebuild:
+  Stable on x86.
 
 *libhtmlparse-0.1.13 (11 Feb 2005)
 
