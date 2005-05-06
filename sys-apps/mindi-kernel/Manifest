@@ -1,6 +1,16 @@
-MD5 cc62cd934e6914d17db207948b97d536 mindi-kernel-1.0.ebuild 617
-MD5 a4a3df02c92f6887f30a522855a13878 ChangeLog 809
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 02a6dc57a111d77ba1bf3a508d94cc98 mindi-kernel-1.0.ebuild 616
+MD5 231f8d191199ae8d61ac2022a99b2b57 ChangeLog 941
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 9ed05c2e557e47b6b138ce49b391d54b mindi-kernel-1.0-r1.ebuild 623
 MD5 7207a622f730721a218a5432c9fa015b files/digest-mindi-kernel-1.0-r1 66
 MD5 7207a622f730721a218a5432c9fa015b files/digest-mindi-kernel-1.0 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCe4X+I1lqEGTUzyQRAmdaAKC2cFS8IVi0wI0iijBorAF2WdCuBACfe90G
+NU91gcvgFldAV6zTUSZVDs8=
+=UxhO
+-----END PGP SIGNATURE-----
