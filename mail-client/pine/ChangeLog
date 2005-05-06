@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/pine
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/pine/ChangeLog,v 1.50 2005/05/05 23:25:15 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/pine/ChangeLog,v 1.51 2005/05/06 07:17:05 ticho Exp $
+
+  06 May 2005; Andrej Kacian <ticho@gentoo.org> pine-4.63.ebuild:
+  Stable on x86, security bug #88836.
 
 *pine-4.63 (05 May 2005)
 
