@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/linux-wlan-ng/linux-wlan-ng-0.2.0-r3.ebuild,v 1.8 2005/04/25 19:22:31 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/linux-wlan-ng/linux-wlan-ng-0.2.0-r3.ebuild,v 1.9 2005/05/06 14:38:45 swegener Exp $
 
 inherit pcmcia
 
@@ -15,7 +15,7 @@ HOMEPAGE="http://linux-wlan.org"
 DEPEND="virtual/os-headers"
 RDEPEND="dev-libs/openssl
 		sys-apps/baselayout
-		>=sys-apps/sed-4.0*"
+		>=sys-apps/sed-4.0"
 
 SLOT="0"
 LICENSE="MPL-1.1"
