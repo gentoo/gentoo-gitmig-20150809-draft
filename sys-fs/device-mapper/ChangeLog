@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/device-mapper
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/device-mapper/ChangeLog,v 1.3 2005/03/02 19:22:59 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/device-mapper/ChangeLog,v 1.4 2005/05/06 18:16:16 azarah Exp $
+
+  06 May 2005; Martin Schlemmer <azarah@gentoo.org>
+  device-mapper-1.01.00.ebuild:
+  Stable on x86.
 
 *device-mapper-1.01.00 (01 Mar 2005)
 
