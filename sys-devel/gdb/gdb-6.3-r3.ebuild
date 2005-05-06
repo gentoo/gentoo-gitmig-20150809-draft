@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-6.3-r3.ebuild,v 1.6 2005/05/06 15:51:03 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-6.3-r3.ebuild,v 1.7 2005/05/06 16:24:45 solar Exp $
 
 inherit flag-o-matic eutils
 
@@ -48,6 +48,11 @@ src_unpack() {
 	epatch "${FILESDIR}"/gdb-6.3-gdbinit-stat.patch
 	# sec bug 91398
 	epatch "${FILESDIR}"/bfd-malloc-wrap.patch
+
+	epatch ${FILESDIR}/gdb-6.2.1-200-uclibc-readline-conf.patch
+	epatch ${FILESDIR}/gdb-6.2.1-400-mips-coredump.patch
+	epatch ${FILESDIR}/gdb-6.2.1-libiberty-pic.patch
+	epatch ${FILESDIR}/gdb-6.3-pass_all-uclibc.patch
 
 	strip-linguas -u bfd/po opcodes/po
 }

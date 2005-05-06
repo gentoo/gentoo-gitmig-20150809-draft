@@ -1,6 +1,13 @@
 # ChangeLog for sys-devel/gdb
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/ChangeLog,v 1.72 2005/05/06 15:51:03 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/ChangeLog,v 1.73 2005/05/06 16:24:45 solar Exp $
+
+  06 May 2005; <solar@gentoo.org>
+  +files/gdb-6.2.1-200-uclibc-readline-conf.patch,
+  +files/gdb-6.2.1-400-mips-coredump.patch,
+  +files/gdb-6.2.1-libiberty-pic.patch, +files/gdb-6.3-pass_all-uclibc.patch,
+  gdb-6.3-r3.ebuild:
+  - minor touch ups for mips/x86/uclibc/pic
 
   06 May 2005; Gustavo Zacarias <gustavoz@gentoo.org> gdb-6.3-r3.ebuild:
   Stable on sparc wrt #91654
