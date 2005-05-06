@@ -3,10 +3,10 @@ Hash: SHA1
 
 MD5 832c9f70b38243ed07208cf01a547dbe gkrellmms-0.5.6.ebuild 673
 MD5 5501ba1300cfb20d4e05256536ec9a66 gkrellmms-0.5.8.ebuild 663
-MD5 a67111a4b5d1a3d792451325589841eb gkrellmms-2.1.15.ebuild 697
-MD5 0a4a81ef426d0c06a903be30fe535778 ChangeLog 5812
+MD5 cd96a4dce8ca72ec64f972fa9d8294f5 gkrellmms-2.1.15.ebuild 697
+MD5 71518ce1689f412adfc61d91c883b1cf ChangeLog 5973
 MD5 de35d8f600d3d75d8075a8d848787013 metadata.xml 223
-MD5 0d5d8d609b351d04aa4329605b7b9745 gkrellmms-2.1.21.ebuild 725
+MD5 20fb7dada1ddc6ffe3a875c07a95fb5f gkrellmms-2.1.21.ebuild 727
 MD5 cb1a862a255479deb2b1e80dd39fd1ba files/digest-gkrellmms-2.1.15 67
 MD5 28292acdeda41917477cff7da333acf6 files/digest-gkrellmms-2.1.21 67
 MD5 ac569c5ef1a94fe768b2a043f1d5c7c6 files/digest-gkrellmms-0.5.6 66
@@ -14,7 +14,7 @@ MD5 09b80fad84214e723be0b9f8867c4479 files/digest-gkrellmms-0.5.8 66
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCb/EK2G5bA0cA/ScRAp3NAKDJwrU4TF18LlHv/CCGa6KHkWm1+wCeLnNo
-yv3+AWRYGOVw6kg5j9PILHE=
-=BsXe
+iD8DBQFCerhyI1lqEGTUzyQRAv0ZAJ9f3g6g3UltCSWKdEgk5eCNRJdMkgCg24a3
++7jkg7C+KZPtGK/FuL2xXhA=
+=uyYK
 -----END PGP SIGNATURE-----

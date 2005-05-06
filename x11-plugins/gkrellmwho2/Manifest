@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 67f7dae3bc18e997504deaa72b275c11 gkrellmwho2-0.2.8.ebuild 826
-MD5 3f929a18b86521c9cfa7f93d111ef4d3 ChangeLog 554
+MD5 52e535264fa2f7203aab09784e720bb3 gkrellmwho2-0.2.8.ebuild 828
+MD5 af27f42b1f310cf464a3ba2c45deb6db ChangeLog 689
 MD5 de35d8f600d3d75d8075a8d848787013 metadata.xml 223
 MD5 f53ce7fd6f861503148d7178b101abec files/digest-gkrellmwho2-0.2.8 73
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCb9kZ2G5bA0cA/ScRAg9wAJ4kl2dY7hz+LYJW0jaiDgr8CaMAFQCg1NTK
-riIDB0u8zg3dTdxtDpE3rMY=
-=/3g+
+iD8DBQFCeriTI1lqEGTUzyQRAuYBAKDJ8/0pN4vGat7tsCTmw84DS8EO7wCglgH9
+H01f7FOHXouPSgc2SUjqMxY=
+=Uur8
 -----END PGP SIGNATURE-----

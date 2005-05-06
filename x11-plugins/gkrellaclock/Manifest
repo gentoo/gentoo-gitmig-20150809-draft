@@ -1,17 +1,17 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 751d6f377daf1d66ff7c5bf82ff200d1 gkrellaclock-0.3.2.ebuild 695
-MD5 44757896ea13b73d9ed9c40e23b23ace gkrellaclock-0.3.2.1.ebuild 727
+MD5 f80a130f0bb6dffbb7e9f76f1bca0737 gkrellaclock-0.3.2.ebuild 694
+MD5 ab6b8b81abe52ca78c664db40a0bcfda gkrellaclock-0.3.2.1.ebuild 729
 MD5 37079d64cb1ad077e6cd9b5f56ec7967 gkrellaclock-0.2.1.ebuild 686
-MD5 316815e4592c562eb02921845b150fdd ChangeLog 1848
+MD5 c39763118b029520628025918ee4e835 ChangeLog 2015
 MD5 0ed63877aea75f4150337326535bdf77 files/digest-gkrellaclock-0.2.1 68
 MD5 c9dbdb43a9e9c1479a59d00e6f856886 files/digest-gkrellaclock-0.3.2 68
 MD5 8e15775e4d6f6afcb9a0c6a71ca9029a files/digest-gkrellaclock-0.3.2.1 70
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCcAbA2G5bA0cA/ScRAobZAJ4lELb2CF+Z9xca7vn0HOQOh5ZoogCgwsf7
-z024W9KVvOiztVhTWG3NhJo=
-=AnUQ
+iD8DBQFCerdLI1lqEGTUzyQRAvuQAKDet1bvkCBP8AW/h/p9AVP5p1bXYwCfSsNW
+3KhGJxPnk0Db9etJ1QcS62Y=
+=S8G6
 -----END PGP SIGNATURE-----
