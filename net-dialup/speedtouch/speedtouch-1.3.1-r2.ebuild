@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/speedtouch/speedtouch-1.3.1-r2.ebuild,v 1.1 2004/12/22 21:42:05 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/speedtouch/speedtouch-1.3.1-r2.ebuild,v 1.2 2005/05/06 04:54:51 mrness Exp $
 
 inherit flag-o-matic
 
@@ -75,8 +75,8 @@ pkg_postinst() {
 	ewarn "Read and subscribe vendor's licence to download the microcode"
 	ewarn "You can get it from: "
 	ewarn "  1) vendor's site: http://www.speedtouchdsl.com/dvrreg_lx.htm"
-	ewarn "  2) a windows system: c:\windows\system\alcaudsl.sys"
-	ewarn "  3) the CD provided: X:\Driver\alcaudsl.sys"
+	ewarn "  2) a windows system: c:\\\\windows\\\\system\\\\alcaudsl.sys"
+	ewarn "  3) the CD provided: X:\\\\Driver\\\\alcaudsl.sys"
 	ewarn "Then you should set its path in the /etc/conf.d/speedtouch file"
 	ewarn "edit and rename 'adsl.sample' to 'adsl' in /etc/ppp/peers/adsl and"
 	ewarn "bring up your adsl line using the /etc/init.d/speedtouch script"
