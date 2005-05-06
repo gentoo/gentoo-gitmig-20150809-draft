@@ -1,8 +1,8 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 5fe01d538e08fb67af14401d5eb82b3a ChangeLog 1046
-MD5 5c676e1a5f7067498e1027ce3c617763 Text-ChaSen-1.03-r1.ebuild 721
+MD5 2cfb6817b7beabe2b1a4d0b7df541751 ChangeLog 1149
+MD5 f4814fd1a4d1fbf9da2fc77128ec460f Text-ChaSen-1.03-r1.ebuild 720
 MD5 b18ee782e0873562e3ecb1ba3d10406a Text-ChaSen-1.03.ebuild 654
 MD5 f361e12b1c294f16004a07fa4e3b3246 metadata.xml 176
 MD5 74fcef12ba542f4ac99686511df858a1 files/digest-Text-ChaSen-1.03 135
@@ -10,7 +10,7 @@ MD5 74fcef12ba542f4ac99686511df858a1 files/digest-Text-ChaSen-1.03-r1 135
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFCWyy7KRy60XGEcJIRAm3QAJ9BC+2vGhMoFIuT3DHEAoAHYHfmvwCeIb/q
-CdLTxadDnk0HFtMFHnDzhgo=
-=tfrW
+iD8DBQFCe4QaKRy60XGEcJIRAl9rAJ9Zk9zIKBi6MrVJvB7ZLAn+DYZEpQCfcnVz
+5a9bJvv/Prdq5xJabmHSLNU=
+=/9X4
 -----END PGP SIGNATURE-----
