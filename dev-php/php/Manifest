@@ -26,19 +26,19 @@ MD5 4792b645fe6b66cd3f1b1ec88d4d20e8 files/digest-php-5.0.2-r1 63
 MD5 89a3a3b437e24b7ccc044376843d8446 files/digest-php-5.0.3-r1 63
 MD5 273799e60d5a41a1e6f5ac53781a152f files/php5_soap_persistence_session.diff 1976
 MD5 ae48d9701424c6ba150e00304b5d84b1 files/digest-php-4.3.8 208
-MD5 b4787473c5b65d10113edd1635711e08 files/digest-php-4.3.9 131
+MD5 205c1cd94cbb81c772fa366163faff0a files/digest-php-4.3.9 208
 MD5 11f305b98b753ee023da8503a360762a files/digest-php-5.0.0 63
 MD5 14d868f33e29b3c9a70b118e9da58dd0 files/digest-php-5.0.1 63
 MD5 4792b645fe6b66cd3f1b1ec88d4d20e8 files/digest-php-5.0.2 63
 MD5 89a3a3b437e24b7ccc044376843d8446 files/digest-php-5.0.3 63
 MD5 b2aa5952d5c805b3e57a5a6bf0f0b8d0 files/php-4.3.11-gmp.patch 925
-MD5 541741db181f5a324ab6061ffd2ac424 files/digest-php-4.3.10 132
-MD5 8182230ef883009b51552da518ea4103 files/digest-php-4.3.11 132
+MD5 8c692a66d1aeba1f84a35386e6bec47e files/digest-php-4.3.10 210
+MD5 e1385dbdad960ad1d13116d33814dacd files/digest-php-4.3.11 210
 MD5 cdec3284251432935f950c2d15a405b7 files/php-4.3.11-flash.patch 694
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCezyLaGfFFLhbXWkRAqBhAJ0b8G24wHj0WJde+KJlelOQ11xptgCgltuc
-zgc7s202Att2a89dabl7ufw=
-=T3Md
+iD8DBQFCe0YAI1lqEGTUzyQRAlouAJ9IfrtC5xkFFowzAe8jLlk3nDUduwCfZ3xv
+qRHTSDccsw+SsyhPX1DlDNw=
+=Apmi
 -----END PGP SIGNATURE-----
