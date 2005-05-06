@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-1.1.7.ebuild,v 1.1 2005/05/05 02:48:32 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-1.1.7.ebuild,v 1.2 2005/05/06 14:28:48 latexer Exp $
 
 inherit eutils mono flag-o-matic
 
@@ -54,17 +54,22 @@ src_compile() {
 	strip-flags
 	local myconf="--with-preview=yes"
 
-	if use nptl && have_NPTL
+	# Force __thread on amd64. See bug #83770
+	if use amd64
 	then
 		myconf="${myconf} --with-tls=__thread"
 	else
-		myconf="${myconf} --with-tls=pthread"
+		if use nptl && have_NPTL
+		then
+			myconf="${myconf} --with-tls=__thread"
+		else
+			myconf="${myconf} --with-tls=pthread"
+		fi
 	fi
 
 	econf ${myconf} $(use_with icu) || die
 	emake -j1 || die "MONO compilation failure"
 }
-
 
 src_install() {
 	make DESTDIR=${D} install || die
