@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/xvid
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xvid/ChangeLog,v 1.41 2005/05/01 09:46:49 warpzero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xvid/ChangeLog,v 1.42 2005/05/07 13:39:04 herbs Exp $
+
+  07 May 2005; Herbie Hopkins <herbs@gentoo.org> xvid-1.1.0_beta2.ebuild:
+  Added amd64 depend on yasm, bug #79990
 
 *xvid-1.1.0_beta2 (01 May 2005)
 
