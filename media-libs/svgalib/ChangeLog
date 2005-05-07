@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/svgalib
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/ChangeLog,v 1.57 2005/04/25 21:23:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/ChangeLog,v 1.58 2005/05/07 08:13:31 vapier Exp $
+
+  07 May 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/svgalib.udev.perms.d, +files/svgalib.udev.rules.d,
+  svgalib-1.9.21.ebuild:
+  Install permission files for udev only with older versions; use rules files
+  for newer versions #91733 by John Mylchreest.
 
 *svgalib-1.9.21 (24 Apr 2005)
 
