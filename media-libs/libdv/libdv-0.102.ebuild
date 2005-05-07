@@ -1,12 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdv/libdv-0.102.ebuild,v 1.10 2005/05/01 17:25:50 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdv/libdv-0.102.ebuild,v 1.11 2005/05/07 10:18:41 mholzer Exp $
 
 inherit eutils
 
 DESCRIPTION="Software codec for dv-format video (camcorders etc)."
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
-RESTRICT="nomirror"
 HOMEPAGE="http://libdv.sourceforge.net/"
 
 LICENSE="GPL-2"
