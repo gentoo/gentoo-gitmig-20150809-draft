@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/poc/poc-0.4.1.ebuild,v 1.1 2005/05/07 08:42:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/poc/poc-0.4.1.ebuild,v 1.2 2005/05/07 08:47:29 vapier Exp $
 
 inherit eutils
 
@@ -25,6 +25,7 @@ src_unpack() {
 		-e '/^PREFIX/s:/local::' \
 		Makefile
 	epatch "${FILESDIR}"/${P}-fec-pkt-prototype.patch
+	epatch "${FILESDIR}"/${P}-file-perms.patch
 }
 
 src_install() {
