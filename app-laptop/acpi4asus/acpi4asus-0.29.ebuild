@@ -1,23 +1,37 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/acpi4asus/acpi4asus-0.27.ebuild,v 1.4 2005/01/01 14:44:59 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/acpi4asus/acpi4asus-0.29.ebuild,v 1.1 2005/05/07 18:43:40 genstef Exp $
 
-DESCRIPTION="Acpi daemon to control ASUS Laptop Hotkeys"
+inherit linux-mod
+
+DESCRIPTION="Acpi daemon and kernel module to control ASUS Laptop Hotkeys"
 HOMEPAGE="http://sourceforge.net/projects/acpi4asus"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
-LICENSE="GPL-1"
+LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
 IUSE=""
+MODULE_NAMES="asus_acpi(acpi:${S}/driver)"
+BUILD_TARGETS=" "
+RDEPEND="sys-power/acpid"
 
-src_compile() {
-	make -C asus_acpid || die
-	make -C asus_acpid man || die
+pkg_setup() {
+	linux-mod_pkg_setup
+	BUILD_PARAMS="KERNELSRC=${KV_DIR}"
 }
 
+src_compile() {
+	linux-mod_src_compile
+
+	emake -C asus_acpid
+}
+
+
 src_install() {
+	linux-mod_src_install
+
 	dobin asus_acpid/asus_acpid
-	doman asus_acpid/asus_acpid.8.gz
+	doman asus_acpid/asus_acpid.8
 
 	dodoc README Changelog
 
@@ -31,9 +45,9 @@ src_install() {
 }
 
 pkg_postinst() {
+	linux-mod_pkg_postinst
 	einfo
 	einfo "Don't forget to create your ~/.asus_acpi,"
-	einfo "see /ush/share/docs/${P}/README for details"
-	ewarn "You mast have 'ASUS/Medion Laptop Extras' kernel modules"
+	einfo "see /ush/share/doc/${PF}/README.gz for details"
 	einfo
 }
