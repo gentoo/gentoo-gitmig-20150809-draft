@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3923 2005/05/05 21:24:42 tove Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3924 2005/05/07 14:06:31 beu Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# Elfyn McBratney <beu@gentoo.org> (07 May 2005)
+# Fixes for bugs ##88831 and #87708.  Needs testing as one of the changed
+# _could_ break webapp.eclass'd packages.
+=net-www/webapp-config-1.10-r13
 
 # Rob Cakebread <pythonhead@gentoo.org> (05 May 2005)
 # Need to fix SLOT issues with wxGTK/wxMacOS etc bug# 91574
