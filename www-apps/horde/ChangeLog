@@ -1,6 +1,13 @@
 # ChangeLog for www-apps/horde
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horde/ChangeLog,v 1.10 2005/04/26 02:52:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde/ChangeLog,v 1.11 2005/05/07 23:28:54 vapier Exp $
+
+*horde-3.0.4-r1 (07 May 2005)
+
+  07 May 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/horde-3.0.4-freebusy.patch, +horde-3.0.4-r1.ebuild:
+  Add patch from upstream to fix Free/Busy information #89227 by Jeffrey
+  Crawford.
 
 *horde-2.2.8 (26 Apr 2005)
 
