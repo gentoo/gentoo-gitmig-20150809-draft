@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/elfkickers/elfkickers-2.0a.ebuild,v 1.12 2005/03/29 23:54:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/elfkickers/elfkickers-2.0a.ebuild,v 1.13 2005/05/07 11:32:14 dholm Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.muppetlabs.com/~breadbox/pub/software/${MY_PN}-${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 hppa ~mips sparc x86"
+KEYWORDS="amd64 hppa ~mips sparc x86 ~ppc"
 IUSE="doc"
 
 DEPEND=""
