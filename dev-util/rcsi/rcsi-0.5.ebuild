@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/rcsi/rcsi-0.5.ebuild,v 1.1 2005/02/13 03:46:18 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/rcsi/rcsi-0.5.ebuild,v 1.2 2005/05/07 17:02:04 dholm Exp $
 
 inherit eutils toolchain-funcs
 DESCRIPTION="A program to give information about RCS files"
@@ -9,7 +9,7 @@ HOMEPAGE="${URI_BASE}/rcsi.README.html"
 SRC_URI="${URI_BASE}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 IUSE=""
 DEPEND="sys-apps/sed"
 RDEPEND=">=app-text/rcs-5.7-r2"
