@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.3.5.ebuild,v 1.11 2005/05/07 16:30:24 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.3.5.ebuild,v 1.12 2005/05/07 16:36:19 kloeri Exp $
 
 # NOTE about python-portage interactions :
 # - Do not add a pkg_setup() check for a certain version of portage
@@ -134,33 +134,6 @@ src_compile() {
 	emake || die "Parallel make failed"
 }
 
-src_test() {
-	local skip_tests="import sax"
-	#Move known bad tests out of the way while we run good ones
-	for test in ${skip_tests} ; do
-		mv ${S}/Lib/test/test_${test}.py ${T}
-	done
-
-	make test || die "make test failed"
-
-	#Move bad tests back so they get emerged
-	for test in ${skip_tests} ; do
-		mv ${T}/test_${test}.py ${S}/Lib/test/test_${test}.py
-	done
-
-	einfo "Portage skipped the following tests which aren't able to run from emerge:"
-	for test in ${skip_tests} ; do
-		einfo "test_${test}.py"
-	done
-	einfo "These tests normally pass when not run from emerge."
-	einfo "If you'd like to run them, you may:"
-	einfo "cd /usr/lib/python${PYVER}/test"
-	einfo "and run the tests separately."
-	einfo "See bug# 67970"
-	ebeep 2
-}
-
-
 src_install() {
 	dodir /usr
 	src_configure
@@ -240,7 +213,7 @@ src_test() {
 
 	#skip all tests that fail during emerge but pass without emerge:
 	#(See bug# 67970)
-	local skip_tests="sax subprocess tcl urllib urllib2"
+	local skip_tests="subprocess tcl urllib urllib2"
 
 	for test in ${skip_tests} ; do
 		mv ${S}/Lib/test/test_${test}.py ${T}
