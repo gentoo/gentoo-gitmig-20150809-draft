@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/qemu
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.31 2005/04/29 22:27:37 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.32 2005/05/07 09:23:26 lu_zero Exp $
+
+  07 May 2005; Luca Barbato <lu_zero@gentoo.org> qemu-0.7.0.ebuild:
+  Some fixes here and there, thanks to Sok Ann Yap <sokann@gmail.com>
 
   29 Apr 2005; Luca Barbato <lu_zero@gentoo.org> qemu-0.7.0.ebuild:
   Retouches and corrections, thanks to genstef as usual

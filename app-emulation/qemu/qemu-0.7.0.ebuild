@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-0.7.0.ebuild,v 1.4 2005/04/29 22:27:37 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-0.7.0.ebuild,v 1.5 2005/05/07 09:23:26 lu_zero Exp $
 
 inherit eutils flag-o-matic linux-mod
 
@@ -83,7 +83,7 @@ src_compile() {
 		--kernel-path=${KV_DIR} \
 		$(use_enable kqemu) \
 		${myconf} \
-		`use_enable sdl`\
+		$(use_enable sdl)\
 		|| die "could not configure"
 
 	emake || die "make failed"
@@ -118,7 +118,7 @@ src_install() {
 pkg_postinst() {
 	einfo "You will need the Universal TUN/TAP driver compiled into"
 	einfo "kernel or as a module to use the virtual network device."
-	if use ! softmmu ; then
+	if ! use softmmu ; then
 		ewarn ""
 		ewarn "You have the softmmu useflag disabled."
 		ewarn "In order to have the full system emulator (qemu) you have"
