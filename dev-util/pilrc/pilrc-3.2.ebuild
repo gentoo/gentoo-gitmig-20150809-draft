@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pilrc/pilrc-3.2.ebuild,v 1.1 2005/01/26 11:47:10 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pilrc/pilrc-3.2.ebuild,v 1.2 2005/05/07 16:53:15 dholm Exp $
 
 DESCRIPTION="PalmOS Resource Compiler and Viewer"
 HOMEPAGE="http://www.ardiri.com/index.php?redir=palm&cat=pilrc"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/pilrc/pilrc-${PV}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~sparc"
+KEYWORDS="~x86 ~sparc ~ppc"
 IUSE="gtk"
 
 RDEPEND="gtk? ( =x11-libs/gtk+-1.2* )"

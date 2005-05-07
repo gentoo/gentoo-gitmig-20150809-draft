@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/pharmacy
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pharmacy/ChangeLog,v 1.7 2004/06/25 02:43:11 agriffis Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pharmacy/ChangeLog,v 1.8 2005/05/07 16:52:39 dholm Exp $
+
+  07 May 2005; David Holm <dholm@gentoo.org> pharmacy-0.3-r2.ebuild:
+  Added to ~ppc.
 
   12 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> pharmacy-0.3-r2.ebuild:
   Don't assign default to S; header fix
