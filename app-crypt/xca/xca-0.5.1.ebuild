@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/xca/xca-0.5.1.ebuild,v 1.2 2005/03/01 18:59:04 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/xca/xca-0.5.1.ebuild,v 1.3 2005/05/07 21:25:03 dholm Exp $
 
 inherit eutils kde toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/xca/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 IUSE=""
 
 DEPEND=">=dev-libs/openssl-0.9.6
