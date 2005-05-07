@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/slurm
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/slurm/ChangeLog,v 1.10 2005/04/25 02:50:45 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/slurm/ChangeLog,v 1.11 2005/05/07 21:48:05 vanquirius Exp $
+
+  07 May 2005; Marcelo Goes <vanquirius@gentoo.org>
+  -files/slurm-0.2.2-altcolors-gentoo.patch,
+  -files/slurm-0.2.2-fix-gentoo.patch, -files/slurm-0.2.3-theme.patch,
+  -slurm-0.2.3.ebuild, slurm-0.3.3.ebuild:
+  Removing old ebuild, marking 0.3.3 x86 stable.
 
   24 Apr 2005; Marcelo Goes <vanquirius@gentoo.org> -slurm-0.2.2.ebuild,
   slurm-0.3.2.ebuild:
