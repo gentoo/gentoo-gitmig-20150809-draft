@@ -8,5 +8,8 @@
 		La categoría net-zope contiene todo el software relacionado con Zope
 		(zope.org) incluyendo herramientas y módulos de terceros.
 	</longdescription>
+	<longdescription lang="nl">
+		De net-zope categorie bevat alle Zope (zope.org) gerelateerde applicaties.
+	</longdescription>
 </catmetadata>
 
