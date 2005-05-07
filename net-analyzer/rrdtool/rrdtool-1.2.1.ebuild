@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.2.1.ebuild,v 1.1 2005/05/03 23:04:43 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.2.1.ebuild,v 1.2 2005/05/07 12:27:55 ka0ttic Exp $
 
 inherit perl-module flag-o-matic gnuconfig eutils
 
@@ -43,16 +43,16 @@ src_compile() {
 	filter-flags -ffast-math
 
 	local myconf
-	myconf="${myconf} --datadir=/usr/share --enable-shared"
+	myconf="--datadir=/usr/share --enable-shared"
 
 	use tcltk \
 		&& myconf="${myconf} --with-tcllib=/usr/lib" \
 		|| myconf="${myconf} --without-tcllib"
 
-	if use perl; then
+	if use perl ; then
 		econf ${myconf} --with-perl-options='PREFIX=/usr INSTALLDIRS=vendor DESTDIR=${D}' || die "econf failed"
 	else
-		econf ${myconf} || die "econf failed"
+		econf ${myconf} --disable-perl || die "econf failed"
 	fi
 
 	make || die "make failed"

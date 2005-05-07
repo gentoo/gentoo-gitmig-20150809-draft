@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/rrdtool
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/ChangeLog,v 1.53 2005/05/03 23:04:43 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/ChangeLog,v 1.54 2005/05/07 12:27:55 ka0ttic Exp $
+
+  07 May 2005; Aaron Walker <ka0ttic@gentoo.org> rrdtool-1.2.0.ebuild,
+  rrdtool-1.2.1.ebuild:
+  Add --disable-perl if USE=-perl; closes bug 91638.
 
 *rrdtool-1.2.1 (03 May 2005)
 
