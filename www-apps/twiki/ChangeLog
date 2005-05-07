@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/twiki
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/twiki/ChangeLog,v 1.9 2005/03/01 15:45:24 beu Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/twiki/ChangeLog,v 1.10 2005/05/07 15:44:10 beu Exp $
+
+  07 May 2005; Elfyn McBratney <beu@gentoo.org> twiki-20030201.ebuild,
+  twiki-20040901.ebuild, twiki-20040902.ebuild, twiki-20040902-r1.ebuild:
+  Update LICENSE (twiki is GPL-licensed), bug #76782.
 
   01 Mar 2005; Elfyn McBratney <beu@gentoo.org> twiki-20030201.ebuild,
   twiki-20040901.ebuild, twiki-20040902-r1.ebuild, twiki-20040902.ebuild:

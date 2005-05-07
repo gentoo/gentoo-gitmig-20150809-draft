@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/twiki/twiki-20030201.ebuild,v 1.4 2005/03/01 15:45:24 beu Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/twiki/twiki-20030201.ebuild,v 1.5 2005/05/07 15:44:10 beu Exp $
 
 inherit webapp-apache
 
@@ -8,7 +8,7 @@ DESCRIPTION="A Web Based Collaboration Platform"
 HOMEPAGE="http://twiki.org/"
 SRC_URI="http://twiki.org/swd/TWiki${PV}.tar.gz"
 
-LICENSE="LGPL-2.1"
+LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ppc"
 
