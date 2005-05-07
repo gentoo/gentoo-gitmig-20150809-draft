@@ -36,3 +36,5 @@ rar
 
 # Unmask ppcsha1 that is a dev-util/git-pasky local flag
 -ppcsha1
+
+uml
