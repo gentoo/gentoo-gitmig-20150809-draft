@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-1.0.0_beta3.ebuild,v 1.2 2005/04/29 21:06:12 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-1.0.0_beta3.ebuild,v 1.3 2005/05/07 14:19:51 herbs Exp $
 
 inherit libtool flag-o-matic eutils multilib
 
@@ -83,14 +83,20 @@ src_compile() {
 	use xvid \
 		&& myconf="${myconf} --with-default-xvid=xvid4"
 
+	# Hardenable SIMD extensions on amd64
+	if use amd64; then
+		myconf="${myconf} --enable-mmx --enable-3dnow \
+				--enable-sse --enable-sse2"
+	elif use x86; then
+		myconf="${myconf} $(use_enable mmx) \
+				$(use_enable 3dnow) \
+				$(use_enable sse) \
+				$(use_enable sse2)"
+	fi
+
 	append-flags -DDCT_YUV_PRECISION=1
 	econf \
-		$(use_enable mmx) \
-		$(use_enable 3dnow) \
-		$(use_enable sse) \
-		$(use_enable sse2) \
 		$(use_enable altivec) \
-		\
 		$(use_enable network netstream) \
 		$(use_enable truetype freetype2) \
 		$(use_enable v4l) \

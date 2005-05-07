@@ -1,6 +1,10 @@
 # ChangeLog for media-video/transcode
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.100 2005/04/29 21:06:12 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.101 2005/05/07 14:19:51 herbs Exp $
+
+  07 May 2005; Herbie Hopkins <herbs@gentoo.org>
+  transcode-1.0.0_beta3.ebuild:
+  Enable SIMD extensions on amd64, bug #79990
 
   29 Apr 2005; Diego Pettenò <flameeyes@gentoo.org>
   transcode-0.6.14-r2.ebuild, transcode-1.0.0_beta3.ebuild:
