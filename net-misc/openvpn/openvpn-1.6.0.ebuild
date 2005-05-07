@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/openvpn-1.6.0.ebuild,v 1.8 2005/05/01 09:02:35 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/openvpn-1.6.0.ebuild,v 1.9 2005/05/07 02:48:00 jforman Exp $
 
 inherit gnuconfig
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://openvpn.sourceforge.net/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc ~alpha ~ppc-macos amd64"
+KEYWORDS="x86 ~ppc sparc ~alpha ~ppc-macos amd64"
 IUSE="ssl threads"
 
 RDEPEND=">=dev-libs/lzo-1.07

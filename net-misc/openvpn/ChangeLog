@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/openvpn
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/ChangeLog,v 1.28 2005/05/01 09:02:35 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/ChangeLog,v 1.29 2005/05/07 02:48:00 jforman Exp $
+
+  07 May 2005; Jeffrey Forman <jforman@gentoo.org> openvpn-1.6.0.ebuild:
+  openvpn-1.6.0 stable on sparc
 
   01 May 2005; Jan Brinkmann <luckyduck@gentoo.org> openvpn-1.5.0-r1.ebuild,
   openvpn-1.6.0.ebuild:
