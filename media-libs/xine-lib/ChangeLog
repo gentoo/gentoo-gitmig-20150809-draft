@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.221 2005/04/30 13:40:40 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.222 2005/05/07 01:54:25 flameeyes Exp $
+
+  07 May 2005; Diego Pettenò <flameeyes@gentoo.org>
+  xine-lib-1.0.1-r1.ebuild:
+  Add patch to fix vidix compilation with gcc4. Fixes #90868.
 
   30 Apr 2005; Diego Pettenò <flameeyes@gentoo.org>
   xine-lib-1.0.1-r1.ebuild:
