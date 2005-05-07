@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/STLport
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/STLport/ChangeLog,v 1.19 2004/07/06 22:03:58 vapier Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/STLport/ChangeLog,v 1.20 2005/05/07 23:03:12 josejx Exp $
+
+  07 May 2005; Joseph Jezak <josejx@gentoo.org> +files/STLport-vector.patch,
+  STLport-4.6.2-r2.ebuild:
+  Added compile fix for ppc.
 
 *STLport-4.6.2-r2 (06 Jul 2004)
 

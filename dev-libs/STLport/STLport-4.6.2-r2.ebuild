@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/STLport/STLport-4.6.2-r2.ebuild,v 1.2 2004/07/14 02:06:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/STLport/STLport-4.6.2-r2.ebuild,v 1.3 2005/05/07 23:03:12 josejx Exp $
 
 inherit eutils
 
@@ -21,6 +21,9 @@ src_unpack() {
 	epatch ${FILESDIR}/${PV}-optimize.patch
 	epatch ${FILESDIR}/${PV}-gcc-includes.patch
 	sed -i 's:-D_STLP_REAL_LOCALE_IMPLEMENTED::' src/gcc-linux.mak
+	if use ppc; then
+		epatch ${FILESDIR}/STLport-vector.patch
+	fi
 }
 
 src_compile() {
