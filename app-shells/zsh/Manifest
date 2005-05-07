@@ -1,24 +1,14 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 f23e92cd210a28cea9feae046f9a88cc ChangeLog 13626
-MD5 28ed8ea6cdccb353e2e8ad783eb51f5b metadata.xml 506
+MD5 1217f6490150d4237ca65ef0a4c79ccc zsh-4.2.5.ebuild 4315
 MD5 28ae3771eb1a6ebb64171197c8d390e7 zsh-4.0.9-r4.ebuild 2893
-MD5 82dcbbd800f84949b8aac6110f454b32 zsh-4.2.5.ebuild 4316
 MD5 94f8381cc21da147fc0975a5d208f637 zsh-4.2.4.ebuild 4307
-MD5 9001ff5324448d902a296276500ac3fb files/digest-zsh-4.2.4 199
-MD5 1710d7b038f0aac2aca3520bb546659c files/digest-zsh-4.2.5 199
-MD5 de58f149f41740c394800ba8d2cdf361 files/digest-zsh-4.0.9-r4 199
+MD5 7bbd6160fc6ca1afd314079ed3c4bf98 ChangeLog 13712
+MD5 28ed8ea6cdccb353e2e8ad783eb51f5b metadata.xml 506
+MD5 81e325aacd554d2c5f6d14efe45d1ffd files/zsh-strncmp.diff 354
 MD5 ab8716ecc62780da37e48f910bd34ed0 files/prompt_gentoo_setup 1222
-MD5 5f0bb4d1bbe63c42a104eb0cab8a28d3 files/zprofile 403
+MD5 de58f149f41740c394800ba8d2cdf361 files/digest-zsh-4.0.9-r4 199
 MD5 e6a9690e5c9b23757e887e14da621c9c files/zsh-4.2.1-gentoo.diff 735
 MD5 eaa2f7dff9e7ca62087f9786cea84897 files/zsh-init.d-gentoo.diff 1389
-MD5 81e325aacd554d2c5f6d14efe45d1ffd files/zsh-strncmp.diff 354
+MD5 5f0bb4d1bbe63c42a104eb0cab8a28d3 files/zprofile 403
 MD5 de0db046f0f40cb1cc3cd3f6e6b2645a files/zshenv 318
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFCepdfKRy60XGEcJIRAjn5AJ9/pWucFdysMqIZXt+0gHo86TRA1wCgil2z
-xasHOGcL7AuD7F8iAu/SscQ=
-=3LbK
------END PGP SIGNATURE-----
+MD5 9001ff5324448d902a296276500ac3fb files/digest-zsh-4.2.4 199
+MD5 1710d7b038f0aac2aca3520bb546659c files/digest-zsh-4.2.5 199
