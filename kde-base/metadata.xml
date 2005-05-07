@@ -10,5 +10,8 @@
 	<longdescription lang="es">
 		La categoría kde-base contiene los paquetes base de KDE.
 	</longdescription>
+	<longdescription lang="nl">
+		De kde-base categorie bevat de basispakketten van KDE.
+	</longdescription>
 </catmetadata>
 
