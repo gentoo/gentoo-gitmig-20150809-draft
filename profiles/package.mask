@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3926 2005/05/07 17:34:03 brix Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3927 2005/05/07 19:31:27 rphillips Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,23 @@
 ##
 ##   End example
 ##
+
+# Ryan Phillips <rphillips@gentoo.org> (07 May 2005)
+# New fox layout.  In testing
+=x11-libs/fox-1.0.53
+=x11-libs/fox-1.2.15
+=x11-libs/fox-1.4.12
+=x11-libs/fox-1.5.4
+=dev-ruby/fxruby-1.2.6
+=dev-ruby/fxruby-1.2.5
+=dev-ruby/fxruby-1.0.29-r1
+>=x11-libs/fxscintilla-1.62-r1
+>=dev-python/fxpy-1.0.5-r1
+app-editors/adie
+dev-util/reswrap
+x11-libs/fox-wrapper
+x11-misc/shutterbug
+sci-calculators/calculator
 
 # Henrik Brix Andersen <brix@gentoo.org (07 May 2005)
 
