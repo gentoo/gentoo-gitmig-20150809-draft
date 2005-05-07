@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1149 2005/05/07 00:52:22 kingtaco Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1150 2005/05/07 09:34:51 vapier Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -423,6 +423,7 @@ media-libs/ploticus:cpulimit - Limit cpu usage when generating graphics
 media-libs/ploticus:svgz - Compressed svg graphics support
 media-libs/sdif:ftruncate - Enables usage of ftruncate v. truncate
 media-libs/sdl-sound:physfs - Enable physfs support
+media-libs/svgalib:no-helper - Do not build the helper kernel module
 media-libs/tiff:lzw-tiff - Enable external lzw compression support
 media-libs/tiff:private - Install additional "private" headers
 media-libs/win32codecs:real - Installs the real video codecs
