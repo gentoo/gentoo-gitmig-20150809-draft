@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 f71f1d00bc05b2ea6be12939ffabda3c ChangeLog 580
-MD5 25c01713b0cb76eaec5e8f797085708e dhcpd-syntax-20030825.ebuild 634
+MD5 2f91507053f13ad0d8a44b39069f7300 dhcpd-syntax-20030825.ebuild 634
+MD5 4cbc56c9bd282b0768deb492db438bd4 ChangeLog 681
 MD5 1d0cf23dd4dba6f2021d0c89eedb1ec5 metadata.xml 455
 MD5 d884667583c2bf9ce0adaa2701391ce3 files/dhcpd-syntax-20030825-multiple-addresses.patch 589
 MD5 4e6bf368188c17f891bc68fbab9cd9bc files/digest-dhcpd-syntax-20030825 72
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCZT+VLLFUmVNQ7rkRAohjAKCWwLUigqORcXC92xWhc2a0Ejl9FQCeJZhX
-HqhKYZZPCV33lLSC0YbxAaE=
-=jlph
------END PGP SIGNATURE-----
