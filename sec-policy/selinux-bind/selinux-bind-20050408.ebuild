@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-bind/selinux-bind-20050408.ebuild,v 1.1 2005/04/23 17:09:38 kaiowas Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-bind/selinux-bind-20050408.ebuild,v 1.2 2005/05/07 06:44:06 kaiowas Exp $
 
 inherit selinux-policy
 
@@ -11,5 +11,5 @@ RDEPEND=">=sec-policy/selinux-base-policy-20050224"
 
 DESCRIPTION="SELinux policy for BIND"
 
-KEYWORDS="~x86 ~ppc ~sparc ~amd64"
+KEYWORDS="x86 ppc sparc amd64"
 

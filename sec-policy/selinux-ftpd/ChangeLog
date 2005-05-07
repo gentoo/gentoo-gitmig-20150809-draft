@@ -1,6 +1,10 @@
 # ChangeLog for sec-policy/selinux-ftpd
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-ftpd/ChangeLog,v 1.4 2005/04/23 17:59:59 kaiowas Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-ftpd/ChangeLog,v 1.5 2005/05/07 06:50:22 kaiowas Exp $
+
+  07 May 2005; petre rodan <kaiowas@gentoo.org>
+  -selinux-ftpd-20041120.ebuild, selinux-ftpd-20050408.ebuild:
+  mark stable
 
 *selinux-ftpd-20050408 (23 Apr 2005)
 
