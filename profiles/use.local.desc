@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1150 2005/05/07 09:34:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1151 2005/05/07 16:16:51 mrness Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -555,10 +555,12 @@ net-analyzer/snort:snortsam - patches snort for use with snortsam
 net-analyzer/tcpreplay:pcapnav - Enable if you want the jump to byte offset feature via libpcapnav
 net-dialup/drdsl:utf8 - Enable UTF8 encoding
 net-dialup/fcdsl:utf8 - Enable UTF8 encoding
-net-dialup/freeradius:frascend - Enable ascend binary mode
+net-dialup/freeradius:edirectory - Enable Novell eDirectory integration
+net-dialup/freeradius:frascend - Enable Ascend binary mode
 net-dialup/freeradius:frlargefiles - Enable large file support
 net-dialup/freeradius:frnothreads - Disable thread support
-net-dialup/freeradius:frxp - enable experimental modules
+net-dialup/freeradius:frxp - Enable experimental modules
+net-dialup/freeradius:udpfromto - Compile in UDPFROMTO support
 net-dialup/gammu:irda - Enable infrared support
 net-dialup/gnokii:irda - Enable infrared support
 net-dialup/gnokii:sms - Enable SMS support
