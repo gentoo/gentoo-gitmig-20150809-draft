@@ -1,16 +1,16 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/slune/slune-0.6.1.ebuild,v 1.8 2004/06/24 21:59:15 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/slune/slune-0.6.1.ebuild,v 1.9 2005/05/07 23:40:16 vapier Exp $
 
 inherit distutils
 
 DESCRIPTION="A 3D action game with multiplayer mode and amazing graphics"
-HOMEPAGE="http://oomadness.nekeme.net/en/slune/"
+HOMEPAGE="http://oomadness.tuxfamily.org/en/slune/"
 SRC_URI="http://oomadness.nekeme.net/downloads/Slune-${PV}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE=""
 
 DEPEND="virtual/x11
