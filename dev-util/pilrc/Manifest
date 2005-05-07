@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 bf9bc393a84d459a8594b9bd76f7bf9d ChangeLog 962
+MD5 c22cf3d35dc12ec17364ae6f69c987f4 ChangeLog 1041
 MD5 747a53a20da10d38a530d8887ca5a3c0 metadata.xml 392
 MD5 58a0898fb4d313751b61aa5140e9d94f pilrc-2.9.ebuild 651
 MD5 4bd1d5a2780e634b18d0bf6fbe9b1e6d pilrc-2.9_p10.ebuild 1407
-MD5 ee4c8ccbb3df6d9e41ecb8c20f03e575 pilrc-3.2.ebuild 967
+MD5 b76a6477027c374804d8c8cead9bcc60 pilrc-3.2.ebuild 970
 MD5 3517914d02e194b18e11f1065c0a5e6a files/digest-pilrc-2.9 58
 MD5 7d35f6095414cf27317061ed4942f497 files/digest-pilrc-2.9_p10 120
 MD5 5ac794f0876673039e0e95dc18229a74 files/pilrc-2.9_p10-Makefile.patch 238
 MD5 4b4b88371990883e807b2b9d3592fd0a files/digest-pilrc-3.2 61
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFB94NHRkyva5PS18kRApjaAKCyC6Ul8Kh2om2gpZSx6KuFDn4ykACgowDD
-4Z2NXBE0t16CGdkJuLRm0XE=
-=xInl
------END PGP SIGNATURE-----
