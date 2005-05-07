@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/par
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/par/ChangeLog,v 1.1 2005/03/01 11:31:44 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/par/ChangeLog,v 1.2 2005/05/07 16:20:30 dholm Exp $
+
+  07 May 2005; David Holm <dholm@gentoo.org> par-00.05.01.ebuild:
+  Added to ~ppc.
 
 *par-00.05.01 (01 Mar 2005)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mcvs/mcvs-1.0.13.ebuild,v 1.3 2004/06/25 02:39:55 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mcvs/mcvs-1.0.13.ebuild,v 1.4 2005/05/07 16:15:34 dholm Exp $
 
 inherit common-lisp-common eutils
 
@@ -13,7 +13,7 @@ SRC_URI="http://users.footprints.net/~kaz/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ~ppc"
 IUSE=""
 
 DEPEND=">=dev-lisp/clisp-2.32
