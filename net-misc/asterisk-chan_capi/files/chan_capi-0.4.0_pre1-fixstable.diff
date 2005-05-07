@@ -1,0 +1,19 @@
+--- chan_capi-0.4.0-PRE1/chan_capi.c.orig	2005-05-07 19:55:01.000000000 +0200
++++ chan_capi-0.4.0-PRE1/chan_capi.c	2005-05-07 19:55:28.000000000 +0200
+@@ -2643,6 +2643,7 @@ static int change_callingpres(struct ast
+     return 0;
+ }
+ 
++#ifdef CVS_HEAD
+ static const struct ast_channel_tech capi_tech = {
+ 	.type = type,
+ 	.description = tdesc,
+@@ -2665,7 +2666,7 @@ static const struct ast_channel_tech cap
+ 	.fixup = capi_fixup,
+ 	.setoption = NULL,
+ };
+-								
++#endif
+ 
+ int load_module(void)
+ {
