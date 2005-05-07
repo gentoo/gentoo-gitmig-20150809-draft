@@ -1,6 +1,10 @@
 # ChangeLog for media-video/xine-ui
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/ChangeLog,v 1.78 2005/05/03 13:48:58 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/ChangeLog,v 1.79 2005/05/07 23:44:59 hansmi Exp $
+
+  07 May 2005; Michael Hanselmann <hansmi@gentoo.org>
+  xine-ui-0.99.3-r1.ebuild:
+  Added to ~hppa.
 
   03 May 2005; Jan Brinkmann <luckyduck@gentoo.org> xine-ui-0.99.3.ebuild:
   stable on amd64 and x86
