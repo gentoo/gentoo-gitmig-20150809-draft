@@ -1,6 +1,12 @@
 # ChangeLog for www-client/elinks
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/elinks/ChangeLog,v 1.8 2005/05/06 12:28:19 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/elinks/ChangeLog,v 1.9 2005/05/07 17:53:44 spock Exp $
+
+*elinks-0.10.5 (07 May 2005)
+
+  07 May 2005; Michał Januszewski <spock@gentoo.org> elinks-0.10.3.ebuild,
+  elinks-0.10.4.ebuild, +elinks-0.10.5.ebuild:
+  Version bump. Marked 0.10.3 and 0.10.4 stable on x86.
 
   06 May 2005; Markus Rothe <corsair@gentoo.org> elinks-0.10.4.ebuild:
   Added ~ppc64 to KEYWORDS
