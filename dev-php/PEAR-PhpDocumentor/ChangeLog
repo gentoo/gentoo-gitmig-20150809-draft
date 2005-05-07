@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-PhpDocumentor
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PhpDocumentor/ChangeLog,v 1.7 2005/04/22 14:46:29 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PhpDocumentor/ChangeLog,v 1.8 2005/05/07 19:08:13 weeve Exp $
+
+  07 May 2005; Jason Wever <weeve@gentoo.org>
+  PEAR-PhpDocumentor-1.3.0_rc3.ebuild:
+  Added ~sparc keyword wrt bug #91533.
 
   22 Apr 2005; Simon Stelling <blubb@gentoo.org>
   PEAR-PhpDocumentor-1.3.0_rc3.ebuild:
