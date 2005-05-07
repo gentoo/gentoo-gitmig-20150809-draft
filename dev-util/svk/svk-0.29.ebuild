@@ -11,7 +11,7 @@ HOMEPAGE="http://svk.elixus.org/"
 
 SLOT="0"
 LICENSE="Artistic"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~x86 ~amd64 ~ppc"
 SRC_TEST="do"
 IUSE="crypt"
 S=${WORKDIR}/${MP}

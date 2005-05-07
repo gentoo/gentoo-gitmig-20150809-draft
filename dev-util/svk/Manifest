@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 cb1b15215767ccdce8a6b5238684d0ba svk-0.26.ebuild 1110
-MD5 51ee34305fec4e4fcac6b1a43e7ca333 ChangeLog 658
+MD5 7f79d9d555150e2c10a448c911cab6b2 ChangeLog 734
 MD5 485d18e156f1c6e59aab585f2c9c2c4d metadata.xml 226
-MD5 b0e4f3fe870c836d52c5d32801a7dc51 svk-0.29.ebuild 1392
+MD5 cb1b15215767ccdce8a6b5238684d0ba svk-0.26.ebuild 1110
+MD5 cf88f1182758c1f2af00dc443deccc9c svk-0.29.ebuild 1397
 MD5 ec9b89197dc5c3b9b72e433945f57e79 files/digest-svk-0.26 60
 MD5 4d7450c27b4aceec01881e2932973997 files/digest-svk-0.29 60
 MD5 84769a42d8df0a121f9cf266c397afb9 files/svk-0.29-nognupgtest.patch 318
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCTt2qtG5z4I8BtQoRAuO0AJ9qkbO1uCGxozY6x201/7wcEHAjlACfb9mW
-2O7fwTrVKnfwdyzcMz30tx0=
-=4IVz
------END PGP SIGNATURE-----
