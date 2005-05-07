@@ -1,0 +1,10 @@
+# ChangeLog for sys-power/ncpufreqd
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-power/ncpufreqd/ChangeLog,v 1.1 2005/05/07 14:34:23 sekretarz Exp $
+
+*ncpufreqd-1.7 (07 May 2005)
+
+  07 May 2005; Karol Wojtaszek <sekretarz@gentoo.org> +metadata.xml,
+  +ncpufreqd-1.7.ebuild:
+  Initial add, thanks to nelchael for app and ebuild, bug #68953
+
