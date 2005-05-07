@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmovtar/libmovtar-0.1.3-r1.ebuild,v 1.13 2005/04/26 13:45:37 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmovtar/libmovtar-0.1.3-r1.ebuild,v 1.14 2005/05/07 00:20:16 flameeyes Exp $
 
 IUSE="mmx"
 
@@ -20,7 +20,6 @@ DEPEND="=dev-libs/glib-1.2*
 	x86? ( mmx? ( media-libs/jpeg-mmx ) )"
 
 src_unpack() {
-
 	unpack ${A}
 	cd ${S}
 	cp ${FILESDIR}/jpegint.h .
@@ -29,22 +28,18 @@ src_unpack() {
 
 	# Fix building with gcc4
 	epatch ${FILESDIR}/${P}-gcc4.patch
-
+	epatch ${FILESDIR}/${P}-m4.patch
 }
 
 src_compile() {
-
 	elibtoolize
-	econf || die
+	econf --disable-dependency-tracking || die
 	emake || die
-
 }
 
 
 src_install() {
-
 	einstall || die
 
-	dodoc AUTHORS COPYING README* NEWS
-
+	dodoc AUTHORS README* NEWS
 }
