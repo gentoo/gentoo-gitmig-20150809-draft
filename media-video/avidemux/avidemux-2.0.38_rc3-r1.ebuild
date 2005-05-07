@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.0.38_rc3.ebuild,v 1.1 2005/05/02 08:45:48 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.0.38_rc3-r1.ebuild,v 1.1 2005/05/07 17:29:33 flameeyes Exp $
 
 inherit eutils flag-o-matic
 
@@ -23,7 +23,7 @@ RDEPEND="xv? ( virtual/x11 )
 	>=dev-libs/libxml2-2.6.7
 	>=x11-libs/gtk+-2.4.1
 	aac? ( >=media-libs/faac-1.23.5
-	       >=media-libs/faad2-2.0-r5 )
+	       >=media-libs/faad2-2.0-r6 )
 	mad? ( media-libs/libmad )
 	xvid? ( >=media-libs/xvid-1.0.0 )
 	nls? ( >=sys-devel/gettext-0.12.1 )
@@ -50,6 +50,8 @@ src_unpack() {
 	unpack ${A}
 	cd ${S} || die
 
+	# This is no more needed from ffad2-2.0-r6
+	EPATCH_EXCLUDE="00_all_faadfix.patch"
 	EPATCH_SUFFIX="patch" epatch ${WORKDIR}/${PV}/patches/
 
 	cp ${WORKDIR}/${PV}/m4/* ${S}/m4 || die "cp m4 failed"

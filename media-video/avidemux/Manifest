@@ -3,11 +3,11 @@ MD5 0aed1a48ceb9c6c76092b0799433077a avidemux-2.0.36.ebuild 2539
 MD5 f18fa403fee71aa513005f27bbcc4fd7 avidemux-2.0.38_rc2.ebuild 2639
 MD5 955f56e990f8c32d705708b4cc4db089 metadata.xml 251
 MD5 090c20151f2d741a8e17ee2f8db435f9 avidemux-2.0.38_rc2-r1.ebuild 2557
-MD5 cea545a5fb5dd639a9d389ec8bb1869a ChangeLog 14443
-MD5 27378d646460e4b18ea7e16fcb29bb45 avidemux-2.0.38_rc3.ebuild 2528
+MD5 9e405e53870489f65f4ca22997c29564 ChangeLog 14668
+MD5 1b4690b2c45aeb4324219ccdc03de16d avidemux-2.0.38_rc3-r1.ebuild 2614
 MD5 4b0dc1a0f1e81197582e817410f8d180 files/2.0.38_rc2-fix-faad.patch 759
 MD5 03b785183df3226642178240a15f5a25 files/digest-avidemux-2.0.24 68
 MD5 82846937f7ffde09813d938fe907c5e7 files/digest-avidemux-2.0.36 68
 MD5 fa51202c1d7fc830fcd290028cb4a203 files/digest-avidemux-2.0.38_rc2 72
 MD5 3b83c791427e172d3c509c6516baa4b1 files/digest-avidemux-2.0.38_rc2-r1 142
-MD5 9d18590dacfa35033ef113ddc3f02beb files/digest-avidemux-2.0.38_rc3 141
+MD5 9d18590dacfa35033ef113ddc3f02beb files/digest-avidemux-2.0.38_rc3-r1 141
