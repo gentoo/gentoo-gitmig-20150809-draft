@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/httpup/httpup-0.3.2.ebuild,v 1.1 2005/02/19 18:07:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/httpup/httpup-0.3.2.ebuild,v 1.2 2005/05/07 14:48:18 dholm Exp $
 
 DESCRIPTION="synchronisation tool for http file repositories"
 HOMEPAGE="http://clc.berlios.de/projects/httpup/"
@@ -8,7 +8,7 @@ SRC_URI="http://jw.tks6.net/files/crux/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~ppc"
 IUSE=""
 
 DEPEND="net-misc/curl"
