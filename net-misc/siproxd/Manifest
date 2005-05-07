@@ -1,0 +1,6 @@
+MD5 976bc2f92a57578b6a7c40354eae6d02 siproxd-0.5.11.ebuild 1069
+MD5 44cf247f04cc83413fcb40ed59d0847a metadata.xml 248
+MD5 05c652b58a146afcab7f351fe606434d ChangeLog 408
+MD5 eb5e5c29a59c1c289dcd3df96e8020f1 files/siproxd-0.5.11-configure-docs.diff 1023
+MD5 87000c1cc09cb31d97afac8baa62ebc6 files/digest-siproxd-0.5.11 66
+MD5 c4519dc11cd1b75d122dfd166bf373f9 files/siproxd.rc6 675
