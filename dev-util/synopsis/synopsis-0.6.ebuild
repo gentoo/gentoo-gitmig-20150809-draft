@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/synopsis/synopsis-0.6.ebuild,v 1.4 2004/07/15 00:12:06 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/synopsis/synopsis-0.6.ebuild,v 1.5 2005/05/07 19:32:50 dholm Exp $
 
 inherit distutils
 
@@ -17,7 +17,7 @@ RDEPEND="${DEPEND}
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 IUSE=""
 
 src_compile() {
