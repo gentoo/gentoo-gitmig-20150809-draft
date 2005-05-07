@@ -1,6 +1,9 @@
 # ChangeLog for net-nntp/leafnode
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/leafnode/ChangeLog,v 1.12 2005/05/05 14:41:48 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/leafnode/ChangeLog,v 1.13 2005/05/07 17:16:37 swegener Exp $
+
+  07 May 2005; Sven Wegener <swegener@gentoo.org> -leafnode-1.11.0.ebuild:
+  Removed old vulnerable ebuilds.
 
   05 May 2005; Michael Hanselmann <hansmi@gentoo.org>
   leafnode-1.11.2.ebuild:
