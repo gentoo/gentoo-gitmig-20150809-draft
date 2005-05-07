@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sys-Hostname-Long/Sys-Hostname-Long-1.2.ebuild,v 1.2 2004/10/14 19:58:25 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sys-Hostname-Long/Sys-Hostname-Long-1.2.ebuild,v 1.3 2005/05/07 03:18:34 gustavoz Exp $
 
 inherit perl-module
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://search.cpan.org/~scott/${P}/"
 
 SLOT="0"
 LICENSE="Artistic"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ~ppc ~sparc"
 IUSE=""
 
 mydoc="TODO"
