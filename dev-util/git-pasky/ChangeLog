@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/git-pasky
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/git-pasky/ChangeLog,v 1.2 2005/04/26 20:30:34 r3pek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/git-pasky/ChangeLog,v 1.3 2005/05/07 14:09:31 dholm Exp $
+
+  07 May 2005; David Holm <dholm@gentoo.org> git-pasky-0.7.ebuild:
+  Added to ~ppc.
 
 *git-pasky-0.7 (26 Apr 2005)
 
