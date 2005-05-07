@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/silc-client/silc-client-1.0.1.ebuild,v 1.8 2005/04/22 20:59:42 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/silc-client/silc-client-1.0.2.ebuild,v 1.1 2005/05/07 17:48:26 swegener Exp $
 
 DESCRIPTION="IRSSI-based text client for Secure Internet Live Conferencing"
 SRC_URI="http://www.silcnet.org/download/client/sources/${P}.tar.bz2"
@@ -8,38 +8,46 @@ HOMEPAGE="http://silcnet.org/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc ~sparc amd64"
-IUSE="ipv6 perl socks5"
+KEYWORDS="~x86 ~ppc ~sparc ~amd64"
+IUSE="ipv6 perl debug"
 
 DEPEND="=dev-libs/glib-1.2*
-	perl? ( dev-lang/perl )
-	socks5? ( net-proxy/dante )
-	sys-libs/ncurses"
+	perl? (
+		dev-lang/perl
+		!net-irc/irssi
+		!net-irc/irssi-cvs
+	)
+	sys-libs/ncurses
+	!<=net-im/silc-toolkit-0.9.12-r1"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+
+	sed -i \
+		-e "s:-g -O2:${CFLAGS}:g" \
+		configure
+}
 
 src_compile() {
-	local myconf
-	use ipv6 && myconf="${myconf} --enable-ipv6"
-	use socks5 && myconf="${myconf} --with-socks5"
-
 	econf \
-		--prefix=/usr \
-		--datadir=/usr/share/${PN} \
+		--datadir=/usr/share \
 		--with-datadir=/usr/share/${PN} \
-		--with-docdir=/usr/share/doc/${PN} \
+		--with-docdir=/usr/share/doc/${PF} \
 		--with-helpdir=/usr/share/${PN}/help \
-		--with-logsdir=/var/log/${PN} \
 		--with-simdir=/usr/lib/${PN} \
 		--with-mandir=/usr/share/man \
 		--with-ncurses \
 		--without-silcd \
-		${myconf} \
-		|| die "./configure failed"
-
-	make || die "make failed"
+		$(use_enable ipv6) \
+		$(use_enable debug) \
+		|| die "econf failed"
+	emake -j1 || die "emake failed"
 }
 
 src_install() {
-	myflags=""
+	local myflags=""
+
 	if use perl
 	then
 		R1="s/installsitearch='//"
@@ -52,13 +60,6 @@ src_install() {
 	fi
 
 	make DESTDIR=${D} ${myflags} install || die "make install failed"
-	mv ${D}/usr/libsilc.a ${D}/usr/lib/
-	mv ${D}/usr/libsilcclient.a ${D}/usr/lib/
-	mv ${D}/usr/libsilcclient.la ${D}/usr/lib/
-	mv ${D}/usr/libsilc.la ${D}/usr/lib/
-	rmdir ${D}/usr/share/silc/
-	rmdir ${D}/usr/include
 
-	dodir /usr/share/man
-	mv ${D}/man1 ${D}/usr/share/man
+	rm -rf ${D}/etc ${D}/usr/libsilc* ${D}/usr/include
 }

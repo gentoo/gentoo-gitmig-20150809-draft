@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/silc-client/silc-client-1.0.1-r1.ebuild,v 1.4 2004/10/19 10:54:33 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/silc-client/silc-client-1.0.1-r1.ebuild,v 1.5 2005/05/07 17:48:26 swegener Exp $
 
 DESCRIPTION="IRSSI-based text client for Secure Internet Live Conferencing"
 SRC_URI="http://www.silcnet.org/download/client/sources/${P}.tar.bz2"
@@ -39,14 +39,15 @@ src_compile() {
 		--with-mandir=/usr/share/man \
 		--with-ncurses \
 		--without-silcd \
-		`use_enable ipv6` \
-		`use_enable debug` \
+		$(use_enable ipv6) \
+		$(use_enable debug) \
 		|| die "econf failed"
 	emake -j1 || die "emake failed"
 }
 
 src_install() {
 	local myflags=""
+
 	if use perl
 	then
 		R1="s/installsitearch='//"
