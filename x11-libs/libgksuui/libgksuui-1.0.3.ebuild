@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libgksuui/libgksuui-1.0.3.ebuild,v 1.2 2005/05/04 14:59:58 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libgksuui/libgksuui-1.0.3.ebuild,v 1.3 2005/05/07 09:26:52 lu_zero Exp $
 
 MY_PN="${PN}1.0"
 MY_P="${MY_PN}-${PV}"
@@ -16,7 +16,9 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc"
 IUSE="nls"
 
-DEPEND=">=x11-libs/gtk+-2.0.0"
+DEPEND=">=x11-libs/gtk+-2.0.0
+		nls? ( >=sys-devel/gettext-0.14.1 )
+		>=dev-util/gtk-doc-1.2-r1"
 
 src_compile() {
 	econf `use_enable nls`|| die
