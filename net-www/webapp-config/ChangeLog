@@ -1,6 +1,12 @@
 # ChangeLog for net-www/webapp-config
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/webapp-config/ChangeLog,v 1.67 2005/04/25 13:50:28 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/webapp-config/ChangeLog,v 1.68 2005/05/07 14:35:00 beu Exp $
+
+*webapp-config-1.10-r13 (07 May 2005)
+
+  07 May 2005; Elfyn McBratney <beu@gentoo.org>
+  +files/webapp-config_unfeck-perms.patch, +webapp-config-1.10-r13.ebuild:
+  Revision bump with a patch to finally kill bug #88831, and close bug #87708.
 
 *webapp-config-1.10-r12 (25 Apr 2005)
 
