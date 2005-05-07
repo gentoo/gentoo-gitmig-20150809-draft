@@ -14,4 +14,7 @@
 	<longdescription lang="sk">
 		Kategória mail-mta obsahuje serverové balíky pre prenos elektronickej pošty (MTA).
 	</longdescription>
+	<longdescription lang="nl">
+		De mail-mta categorie bevat Mail Transport Agents, zoals sendmail & postfix.
+	</longdescription>
 </catmetadata>
