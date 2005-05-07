@@ -1,6 +1,9 @@
 # ChangeLog for app-text/tuxcards
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tuxcards/ChangeLog,v 1.8 2005/02/02 18:05:59 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tuxcards/ChangeLog,v 1.9 2005/05/07 21:06:09 dholm Exp $
+
+  07 May 2005; David Holm <dholm@gentoo.org> tuxcards-1.2.ebuild:
+  Added to ~ppc.
 
   02 Feb 2005; Jan Brinkmann <luckyduck@gentoo.org> tuxcards-1.2.ebuild:
   added ~amd64 to KEYWORDS. fixes #80445
