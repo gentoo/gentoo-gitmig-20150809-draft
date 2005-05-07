@@ -1,6 +1,14 @@
 # ChangeLog for net-wireless/ndiswrapper
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ndiswrapper/ChangeLog,v 1.21 2005/03/05 22:40:55 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ndiswrapper/ChangeLog,v 1.22 2005/05/07 07:52:08 cardoe Exp $
+
+*ndiswrapper-1.1-r1 (07 May 2005)
+
+  07 May 2005; <cardoe@gentoo.org> ndiswrapper-1.1.ebuild,
+  +ndiswrapper-1.1-r1.ebuild:
+  marked 1.1 and 1.1-r1 as stable
+  1.1-r1 automatically reinstalls the Windows drivers.
+  cleaned up some bash-ness
 
 *ndiswrapper-1.1 (05 Mar 2005)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ndiswrapper/ndiswrapper-1.1.ebuild,v 1.2 2005/05/07 07:52:08 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ndiswrapper/ndiswrapper-1.1-r1.ebuild,v 1.1 2005/05/07 07:52:08 cardoe Exp $
 
 inherit linux-mod eutils
 
@@ -11,16 +11,10 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 KEYWORDS="x86 ~amd64"
 
-IUSE="debug 4kstacks"
+IUSE="debug"
 DEPEND="sys-apps/pciutils"
 S=${WORKDIR}/${P}
 
-if use !4kstacks
-then
-	CONFIG_CHECK="!4KSTACKS"
-fi
-
-#4KSTACKS_ERROR="CONFIG_4KSTACKS should not be set.\nIf you feel really confident that 4K Stacks will work for you, add '4kstacks' to your USE flags. But don't expect any support from Gentoo."
 
 CONFIG_CHECK="${CONFIG_CHECK} NET_RADIO"
 
@@ -80,20 +74,20 @@ pkg_postinst() {
 	einfo "Once done, please run 'update-modules'."
 	echo
 	einfo "check http://ndiswrapper.sf.net/phpwiki/index.php/List for drivers"
-	I=`lspci -n | egrep 'Class (0280|0200):' |  cut -d' ' -f4`
+	I=$(lspci -n | egrep 'Class (0280|0200):' |  cut -d' ' -f4)
 	einfo "Look for the following on that page for your driver:"
-	einfo ${I}
+	einfo "Possible Hardware: ${I}"
 	echo
 	einfo "Please have a look at http://ndiswrapper.sourceforge.net/wiki/"
 	einfo "for the FAQ, HowTos, Tips, Configuration, and installation"
 	einfo "information."
 	echo
-	ewarn "IF UPGRADING FROM PRE-1.0!!!"
-	ewarn "You MUST re-install your Windows drivers."
-	ewarn "Best way to do this is to run the following commands"
-	ewarn "mv /etc/ndiswrapper/{driver} /tmp"
-	ewarn "ndiswrapper -i /tmp/{driver}/{driver}.inf"
-	ebeep
-	ebeep
-	ebeep
+	ewarn "Attempting to automatically reinstall any Windows drivers"
+	ewarn "you might already have."
+	for driver in $(ls /etc/ndiswrapper)
+	do
+		einfo "Driver: ${driver}"
+		mv /etc/ndiswrapper/${driver} /tmp
+		ndiswrapper -i /tmp/${driver}/${driver}.inf
+	done
 }
