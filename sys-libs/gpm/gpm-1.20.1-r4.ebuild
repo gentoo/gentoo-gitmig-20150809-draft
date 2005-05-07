@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gpm/gpm-1.20.1-r4.ebuild,v 1.10 2005/05/03 11:54:00 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gpm/gpm-1.20.1-r4.ebuild,v 1.11 2005/05/07 23:30:45 usata Exp $
 
 inherit eutils toolchain-funcs elisp-common
 
@@ -16,7 +16,8 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86"
 IUSE="selinux emacs"
 
-DEPEND="sys-libs/ncurses"
+DEPEND="sys-libs/ncurses
+	emacs? ( virtual/emacs )"
 RDEPEND="selinux? ( sec-policy/selinux-gpm )"
 
 src_unpack() {
