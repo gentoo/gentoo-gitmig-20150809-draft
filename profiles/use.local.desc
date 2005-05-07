@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1151 2005/05/07 16:16:51 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1152 2005/05/07 16:27:55 mrness Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -557,7 +557,6 @@ net-dialup/drdsl:utf8 - Enable UTF8 encoding
 net-dialup/fcdsl:utf8 - Enable UTF8 encoding
 net-dialup/freeradius:edirectory - Enable Novell eDirectory integration
 net-dialup/freeradius:frascend - Enable Ascend binary mode
-net-dialup/freeradius:frlargefiles - Enable large file support
 net-dialup/freeradius:frnothreads - Disable thread support
 net-dialup/freeradius:frxp - Enable experimental modules
 net-dialup/freeradius:udpfromto - Compile in UDPFROMTO support
