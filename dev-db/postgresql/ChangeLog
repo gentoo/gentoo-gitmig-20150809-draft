@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/postgresql
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.209 2005/05/07 17:11:47 omkhar Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.210 2005/05/07 20:09:05 agriffis Exp $
+
+  07 May 2005; Aron Griffis <agriffis@gentoo.org>
+  postgresql-7.4.7-r2.ebuild:
+  stable on ia64
 
   07 May 2005; Omkhar Arasaratnam <omkhar@gentoo.org>
   postgresql-7.4.7-r2.ebuild, postgresql-8.0.1-r3.ebuild:
@@ -37,11 +41,11 @@
   postgresql-7.4.7-r1.ebuild:
   Removed trailing * from <, <=, >= and > dependencies.
 
-  22 Apr 2005; Bryan Østergaard <kloeri@gentoo.org>
+  22 Apr 2005; Bryan ÃÂstergaard <kloeri@gentoo.org>
   postgresql-8.0.1-r2.ebuild:
   Stable on ia64.
 
-  14 Apr 2005; Bryan Østergaard <kloeri@gentoo.org>
+  14 Apr 2005; Bryan ÃÂstergaard <kloeri@gentoo.org>
   postgresql-8.0.1-r2.ebuild:
   Stable on alpha.
 
@@ -163,7 +167,7 @@
   postgresql-7.3.9-r1.ebuild, postgresql-7.4.7-r1.ebuild:
   stable on amd64. see #81350
 
-  13 Feb 2005; Bryan Østergaard <kloeri@gentoo.org>
+  13 Feb 2005; Bryan ÃÂstergaard <kloeri@gentoo.org>
   postgresql-7.3.9-r1.ebuild, postgresql-7.4.7-r1.ebuild:
   Stable on alpha, bug 81350.
 
@@ -287,7 +291,7 @@
   +files/postgresql-8.0.0_rc2-gentoo.patch, +postgresql-8.0.0_rc2.ebuild:
   Version bump.
 
-  20 Dec 2004; Bryan Østergaard <kloeri@gentoo.org>
+  20 Dec 2004; Bryan ÃÂstergaard <kloeri@gentoo.org>
   postgresql-7.4.6.ebuild:
   Stable on alpha.
 
@@ -370,7 +374,7 @@
   14 Oct 2004; Jason Wever <weeve@gentoo.org> postgresql-7.3.7-r2.ebuild:
   Stable on sparc wrt security bug #66371.
 
-  14 Oct 2004; Bryan Østergaard <kloeri@gentoo.org>
+  14 Oct 2004; Bryan ÃÂstergaard <kloeri@gentoo.org>
   postgresql-7.3.7-r2.ebuild:
   Stable on alpha, bug 66371.
 
@@ -404,7 +408,7 @@
   postgresql-8.0.0_beta3.ebuild:
   fixed typo. dev-db/pygresq -> dev-db/pygresql. #66887.
 
-  09 Oct 2004; Bryan Østergaard <kloeri@gentoo.org>
+  09 Oct 2004; Bryan ÃÂstergaard <kloeri@gentoo.org>
   postgresql-7.4.5-r2.ebuild:
   Stable on alpha, bug 66371.
 
@@ -417,7 +421,7 @@
   08 Oct 2004; MATSUU Takuto <matsuu@gentoo.org> +postgresql-7.4.5-r2.ebuild:
   Security update. #66371.
 
-  06 Oct 2004; Bryan Østergaard <kloeri@gentoo.org> postgresql-7.4.5.ebuild:
+  06 Oct 2004; Bryan ÃÂstergaard <kloeri@gentoo.org> postgresql-7.4.5.ebuild:
   Stable on alpha.
 
 *postgresql-7.3.7-r1 (03 Oct 2004)
@@ -455,7 +459,7 @@
   06 Sep 2004; Masatomo Nakano <nakano@gentoo.org> postgresql-7.4.5.ebuild:
   Marked stable on x86.
 
-  06 Sep 2004; Bryan Østergaard <kloeri@gentoo.org>
+  06 Sep 2004; Bryan ÃÂstergaard <kloeri@gentoo.org>
   postgresql-7.4.3-r1.ebuild:
   Stable on alpha.
 
