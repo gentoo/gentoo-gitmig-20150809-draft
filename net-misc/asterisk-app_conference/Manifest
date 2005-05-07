@@ -1,0 +1,6 @@
+MD5 de41c503f05f5f99a8635b0e333729a5 metadata.xml 217
+MD5 89d4428b98119921badcbc8ae0f7f9e8 ChangeLog 523
+MD5 804134de50fca682580b3a964da0f4e8 asterisk-app_conference-0.0.1_pre20050506.ebuild 973
+MD5 3cc109eef44163decd10f40e584bad31 files/app_conference-20050506-astcfg.diff 3042
+MD5 4e492775c6eb781c35f6aa1b7aa8abf5 files/app_conference-20050506-compile.patch 1771
+MD5 8e53afd35a0921d1ad2e852eaaf89d70 files/digest-asterisk-app_conference-0.0.1_pre20050506 84
