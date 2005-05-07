@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/leo/leo-4.2.ebuild,v 1.3 2005/03/01 02:05:36 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/leo/leo-4.2.ebuild,v 1.4 2005/05/07 17:48:16 wormo Exp $
 
 inherit eutils python
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://leo.sourceforge.net/"
 SRC_URI="mirror://sourceforge/leo/${MY_P}.zip"
 LICENSE="PYTHON"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ~ppc"
 IUSE=""
 DEPEND="virtual/python
 	dev-lang/tk"
