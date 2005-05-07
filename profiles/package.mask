@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3925 2005/05/07 14:28:19 beu Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3926 2005/05/07 17:34:03 brix Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,12 @@
 ##
 ##   End example
 ##
+
+# Henrik Brix Andersen <brix@gentoo.org (07 May 2005)
+
+# sys-power/speedfreq is deprecated in favor of sys-power/cpufreqd due
+# to unresolved bugs and lack of upstream activity.
+sys-power/speedfreq
 
 # Elfyn McBratney <beu@gentoo.org> (07 May 2005)
 # Fixes for bugs #88831 and #87708.  Needs testing as one of the changed
