@@ -11,5 +11,8 @@
 		La categoría net-firewall contiene programas relacionados con
 		cortafuegos de redes.
 	</longdescription>
+	<longdescription lang="nl">
+		De net-firewall categorie bevat firewall-software.
+	</longdescription>
 </catmetadata>
 
