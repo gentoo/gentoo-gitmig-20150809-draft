@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/svgalib-1.9.21.ebuild,v 1.5 2005/05/07 08:13:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/svgalib-1.9.21.ebuild,v 1.6 2005/05/07 09:33:42 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs linux-mod
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.arava.co.il/matan/${PN}/${P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="-* ~x86"
-IUSE="build"
+IUSE="build no-helper"
 
 DEPEND=""
 
@@ -72,7 +72,7 @@ src_compile() {
 	make OPTIMIZE="${CFLAGS} -I../gl" LDFLAGS='-L../sharedlib' \
 		demoprogs || die "Failed to build demoprogs!"
 
-	use build || linux-mod_src_compile
+	! use build && ! use no-helper && linux-mod_src_compile
 }
 
 src_install() {
@@ -83,7 +83,7 @@ src_install() {
 	make \
 		TOPDIR="${D}" OPTIMIZE="${CFLAGS}" INSTALLMODULE="" \
 		install || die "Failed to install svgalib!"
-	use build || linux-mod_src_install
+	! use build && ! use no-helper && linux-mod_src_install
 
 	insinto /usr/include
 	doins gl/vgagl.h
@@ -131,7 +131,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	linux-mod_pkg_postinst
+	! use build && ! use no-helper && linux-mod_pkg_postinst
 	[[ ${ROOT} != "/" ]] && return 0
 
 	if [[ -e /dev/.devfsd ]] ; then
