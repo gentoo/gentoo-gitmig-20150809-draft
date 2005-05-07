@@ -1,18 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 cbf5c8619a7775691a16c1e62c2e6737 httping-0.0.95.ebuild 750
+MD5 22027fd2cb4ec7dc8b4d7e3615d2db54 httping-0.0.95.ebuild 751
+MD5 98bf776e83db85134c3370f4b90f1a41 httping-1.0.4.ebuild 802
 MD5 0eb374a414c75d55ede2c59da6d369cf httping-1.0.1.ebuild 799
-MD5 ad4a493ee0b1776ad4d0a4a2105f5992 httping-0.0.94-r1.ebuild 740
-MD5 8a6ec22b3a5202e934aefb6c9178e35c ChangeLog 1713
+MD5 2f2fdf2db7a8a8614975c40332bafc43 httping-0.0.94-r1.ebuild 741
+MD5 3b501365e7e149384a5f559d0c3c4d06 ChangeLog 1838
 MD5 61da3c68a3ae57136cdc2a17fbaedfaf metadata.xml 223
 MD5 ae2b0648bc9a639b7129d5297c8ad680 files/digest-httping-0.0.95 61
 MD5 13c81336e88f4d24d12adb47c9195811 files/digest-httping-1.0.1 60
+MD5 41294b5dc0391f0afde3ceb72f595a2e files/digest-httping-1.0.4 60
 MD5 e09a4c048a540ff768f9be969e7fa62c files/digest-httping-0.0.94-r1 61
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCUnqCEZCkKN40op4RAr5oAJ0UOtnoQgZxyTHIJUYGXZBAAJlHAwCfTzTn
-V4c2VXjaudciEqNhU+lI4OE=
-=CoyI
------END PGP SIGNATURE-----
