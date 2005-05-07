@@ -1,0 +1,11 @@
+# ChangeLog for app-editors/adie
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/adie/ChangeLog,v 1.1 2005/05/07 20:01:45 rphillips Exp $
+
+*adie-1.2.15 (07 May 2005)
+
+  07 May 2005; <rphillips@gentoo.org> +adie-1.0.53.ebuild,
+  +adie-1.2.15.ebuild, +adie-1.4.12.ebuild, +adie-1.5.4.ebuild:
+  Added Yaakov Selkowitz's eclass based fox ebuilds for testing.
+  Fixes #88924
+
