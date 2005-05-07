@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/silc-server/silc-server-0.9.20.ebuild,v 1.1 2005/05/03 20:15:36 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/silc-server/silc-server-0.9.21.ebuild,v 1.1 2005/05/07 17:56:54 swegener Exp $
 
 inherit eutils
 
@@ -38,7 +38,7 @@ src_install() {
 	insinto /usr/share/doc/${PF}/examples
 	doins doc/examples/*.conf
 
-	fperms 600 /etc/${PN}
+	fperms 600 /etc/silc
 	keepdir /var/log/${PN}
 
 	rm -rf \
@@ -58,9 +58,9 @@ src_install() {
 pkg_postinst() {
 	enewuser silcd
 
-	if [ ! -f ${ROOT}/etc/${PN}/silcd.prv ] ; then
-		einfo "Creating key pair in ${ROOT}etc/silc"
-		silcd -C ${ROOT}etc/silc
+	if [ ! -f ${ROOT}/etc/silc/silcd.prv ] ; then
+		einfo "Creating key pair in /etc/silc"
+		silcd -C ${ROOT}/etc/silc
 	fi
 
 	ewarn
