@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 4d5ac2e420b8ed46eb5ac9607e5eacfc ChangeLog 1220
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 7751ab5a4fb80a00d188e0098a7f178e viruskiller-0.9.ebuild 1292
+MD5 3264de53e691dfba4bdc5495b9e90926 viruskiller-0.9.ebuild 1448
 MD5 7aed6b4a5ef035f812b711d9b650f0e0 files/digest-viruskiller-0.9 70
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFB1ySYroRuSHgZdywRAgXCAJ4ss0wyFo8AW2ctgNCQ1LLCvlmaqQCeP8bp
-/0w4qDeiVCCVkWUcWWh+gv4=
-=UnUg
------END PGP SIGNATURE-----

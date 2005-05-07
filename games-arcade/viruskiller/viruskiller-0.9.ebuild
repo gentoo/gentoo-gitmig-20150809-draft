@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/viruskiller/viruskiller-0.9.ebuild,v 1.9 2005/01/01 22:30:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/viruskiller/viruskiller-0.9.ebuild,v 1.10 2005/05/07 23:47:16 vapier Exp $
 
 inherit games flag-o-matic
 
@@ -14,11 +14,12 @@ KEYWORDS="amd64 ppc x86"
 IUSE=""
 RESTRICT="fetch"
 
-DEPEND="media-libs/libsdl
+RDEPEND="media-libs/libsdl
 	media-libs/sdl-mixer
 	media-libs/sdl-image
 	media-libs/sdl-ttf
-	dev-libs/zziplib
+	dev-libs/zziplib"
+DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 pkg_nofetch() {
@@ -29,7 +30,7 @@ pkg_nofetch() {
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	sed -i \
 		-e "/^BINDIR = /s:/$:/bin/:" \
 		-e "/^DOCDIR = /s:doc/.*:doc/${PF}/html/:" \
@@ -44,8 +45,13 @@ src_compile() {
 }
 
 src_install() {
-	emake install DESTDIR=${D} || die
-	rm ${D}/usr/share/doc/${PF}/html/{README,LICENSE}
+	make \
+		DESTDIR="${D}" \
+		ICONDIR="${D}"/usr/share/pixmaps/ \
+		KDE="${D}"/usr/share/applications/ \
+		GNOME="${D}"/usr/share/applications/ \
+		install || die
+	rm -f "${D}"/usr/share/doc/${PF}/html/{README,LICENSE}
 	dodoc doc/README
 	prepgamesdirs
 }
