@@ -1,0 +1,26 @@
+diff -urn ../fxpy-1.0.5.orig/setup.py ./setup.py
+--- ../fxpy-1.0.5.orig/setup.py	2002-04-02 16:29:06.000000000 -0600
++++ ./setup.py	2003-05-10 11:39:02.000000000 -0500
+@@ -7,8 +7,8 @@
+     FXLIBDIR = r'..\fox-1.0.5\lib'
+     FXINCDIR = r'..\fox-1.0.5\include'
+ else:
+-    FXLIBDIR = '/usr/local/lib'
+-    FXINCDIR = '/usr/local/include/fox'
++    FXLIBDIR = '/usr/lib'
++    FXINCDIR = '/usr/include/fox'
+ 
+ # Location of X libraries
+ if sys.platform == 'win32':
+
+--- ./fxpy-1.0.5-orig/setup.py	2005-01-16 11:57:48.000000000 -0500
++++ ./setup.py	2005-01-16 11:57:16.000000000 -0500
+@@ -70,7 +70,7 @@
+ if sys.platform == 'win32':
+     foxlibname = 'fox.lib'
+ else:
+-    foxlibname = 'libFOX.a'
++    foxlibname = 'libFOX.la'
+ 
+ if not os.path.exists(os.path.join(FXLIBDIR, foxlibname)):
+     print """I couldn't find the file "%s" in this directory:""" % foxlibname

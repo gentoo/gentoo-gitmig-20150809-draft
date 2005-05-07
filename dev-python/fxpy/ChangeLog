@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/fxpy
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/fxpy/ChangeLog,v 1.6 2004/12/30 21:38:01 ciaranm Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/fxpy/ChangeLog,v 1.7 2005/05/07 19:59:51 rphillips Exp $
+
+*fxpy-1.0.5-r1 (07 May 2005)
+
+  07 May 2005; <rphillips@gentoo.org> +files/fxpy-1.0.5-r1-gentoo.diff,
+  +fxpy-1.0.5-r1.ebuild:
+  Added Yaakov Selkowitz's eclass based fox ebuilds for testing.
+  Fixes #88924
 
   30 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
