@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nethogs/nethogs-0.6.0.ebuild,v 1.1 2005/04/03 17:20:23 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nethogs/nethogs-0.6.0.ebuild,v 1.2 2005/05/07 03:39:17 vanquirius Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ DESCRIPTION="A small 'net top' tool, grouping bandwidth by process"
 
 LICENSE="GPL-1"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE=""
 DEPEND="virtual/libpcap"
 
