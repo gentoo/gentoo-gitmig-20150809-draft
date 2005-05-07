@@ -2,8 +2,8 @@
 Hash: SHA1
 
 MD5 1bf725f1e46685699f62d97f7ca0e821 postgresql-7.3.9-r1.ebuild 8078
-MD5 4fd450b66f3a3643673309a4289284db postgresql-8.0.1-r3.ebuild 7785
-MD5 eda84b441956eb3daf82fcb3ab071fe9 ChangeLog 39587
+MD5 0b70c546fd4986361ee6a065538c189a postgresql-8.0.1-r3.ebuild 7784
+MD5 17a0224a6605fa4ea98509b509191385 ChangeLog 39700
 MD5 f8d3d207746da2a3cd14dcaab8daab76 metadata.xml 163
 MD5 3ccd9f609f0cdc19cb5d5472d05e832d postgresql-8.0.2-r1.ebuild 7870
 MD5 b97f1ff215bab634316e5cf9cee6598e postgresql-7.3.6-r2.ebuild 7869
@@ -49,7 +49,7 @@ MD5 fe44693b90eef9cf0b6118edb258da16 files/postgresql.init-8.0.1 1279
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCfSTVKf2g/qXtneoRAmeuAJ9lQkM/ySjTsnWxkEpmW1ng2F97wQCgkgxP
-/VEmYi5Obh6jdvCxpI2betU=
-=lRde
+iD8DBQFCfSUmKf2g/qXtneoRAmKzAKCbafU9Zo+b5hCa84OnrUJ96o3PAwCgkKMu
+YKNIA/VGzDUdNyRY+ooyUPA=
+=X2GY
 -----END PGP SIGNATURE-----
