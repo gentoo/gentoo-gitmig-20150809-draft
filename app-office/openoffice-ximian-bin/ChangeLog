@@ -1,6 +1,14 @@
 # ChangeLog for app-office/openoffice-ximian-bin
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian-bin/ChangeLog,v 1.9 2005/01/01 15:39:36 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian-bin/ChangeLog,v 1.10 2005/05/07 16:33:14 suka Exp $
+
+*openoffice-ximian-bin-1.3.11 (07 May 2005)
+
+  07 May 2005; Andreas Proschofsky <suka@gentoo.org>
+  +files/1.1.4/xooffice-wrapper-1.3, +openoffice-ximian-bin-1.3.11.ebuild:
+  Finally a new version of openoffice-ximian-bin. This is as up-to-date as
+  possible and should make both kde and gnome fans happy. Binary is taken from
+  Novell, so don't be scared by the splash.
 
   12 Nov 2004; suka@gentoo.org openoffice-ximian-bin-1.1.53.ebuild:
   fix ewarn issues

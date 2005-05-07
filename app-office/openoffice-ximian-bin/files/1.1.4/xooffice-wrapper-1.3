@@ -1,0 +1,200 @@
+#!/bin/sh
+#
+# Wrapper script for openoffice
+#
+# (C) Peter 'Nidd' Novodvorsky, 2001,2002
+# (C) Martin 'empty' Quinson, 2002.
+#     Modifications by Chris Halls
+#     Modifications by Lucien Saviot
+
+# This program is free software; you can redistribute it and/or modify         
+# it under the terms of the GNU General Public License as published by         
+# the Free Software Foundation; either version 2 of the License, or            
+# (at your option) any later version.                                          
+#                                                                             
+# This program is distributed in the hope that it will be useful,              
+# but WITHOUT ANY WARRANTY; without even the implied warranty of               
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU             
+# General Public License for more details.                                     
+#                                                                             
+# You should have received a copy of the GNU General Public License            
+# along with this program; if not, write to the Free Software                  
+# Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA      
+
+# this string should be exactly as in ~/.xversionrc
+PV=<pv>
+OOVERSION="OpenOffice.org ${PV}"
+
+##
+## Source system configuration file
+##
+[ -r /etc/openoffice/openoffice.conf ] && . /etc/openoffice/openoffice.conf
+
+# Migration to new user install dir
+if [ -d "$HOME/.xopenoffice/1.1.1" ] ; then
+     mv $HOME/.xopenoffice/1.1.1 $HOME/.xopenoffice/1.1.4
+     sed -i -e s/1.1.1/1.1.4/g $HOME/.xversionrc
+     sed -i -e s/1.1.1/1.1.4/g $HOME/.xopenoffice/1.1.4/user/basic/*.xlc
+     echo "Your user install dir has been moved over to the new version"
+fi
+
+if [ ! -f "/proc/version" ] ; then
+    echo "--- Warning - OO.o will not work without a mounted /proc filesystem ---"
+fi
+
+###
+### Get user settings directory from ~/.xversionrc and echo directory name to stdout
+### get_settings_dir <Version>
+### return: 0 - directory found, 
+###         1 - ~/.xversionrc non existent
+###         2 - entry exists in ~/.xversionrc but directory not found
+###         3 - ~/.xversionrc exists but no entry found
+get_settings_dir()
+{
+  [ -r ${HOME}/.xversionrc ] || exit 1
+  # warning, .xversionrc is DOS encoded so strip ^M
+  settings_dir="`tr -d  '\r' < ~/.xversionrc | sed -n "/^$1=/s%^$1=file://\(.*\)$%\1%p"`"
+  echo "$settings_dir"
+  [ -n "$settings_dir" ] || exit 3
+  [ -d "$settings_dir" ] || exit 2
+}
+
+##
+## where does OO live for this user ?
+##
+OOHOME="`get_settings_dir "$OOVERSION"`"
+if [ $? -eq 2 ] ; then
+  # .xversionrc contains a version yet the directory does not exist
+    echo "I'm confused because I can't find OpenOffice's user files."
+    echo "Your ~/.xversionrc file tells they should be under $OOHOME,"
+    echo "but they are not. Please fix the situation manually."
+    echo "You may want to edit ~/.xversionrc to indicate where is OO"
+    echo "installed, or remove it if you did remove your installation"
+    echo "directory manually (you bad one)."
+    exit 1
+fi
+
+## search LOCALE
+if [ -n "$LC_ALL" ]; then
+  LOCALE="$LC_ALL"
+  # OOo doesn't understand LC_ALL, so set LANG
+  LANG="$LC_ALL"
+elif [ -n "$LANG" ]; then
+  LOCALE="$LANG"
+elif [ -n "$LC_MESSAGES" ]; then
+  LOCALE="$LC_MESSAGES"
+  LANG="$LC_MESSAGES"
+else
+  LOCALE="en_US"
+fi
+
+# Set locale to en_US if locale is C
+if [ "x$LOCALE" = "xC" ] ; then LOCALE="en_US"; fi
+
+LOCALEOO=`echo $LOCALE | sed 's/_/-/'`
+
+##
+## install OO for this user if needed
+##
+if [ -z "$OOHOME" ] ; then
+  if [ -e /etc/ximian-openoffice/autoresponse-<pv>.conf ] && \
+    grep -q DESTINATIONPATH /etc/ximian-openoffice/autoresponse-<pv>.conf ; then
+
+      # first install
+      OOHOME=`grep DESTINATIONPATH /etc/ximian-openoffice/autoresponse-<pv>.conf | \
+             sed -e 's/DESTINATIONPATH=//' -e "s|<home>|$HOME|"`
+
+      if [ -d "$OOHOME" ]; then
+        echo "openoffice.org:  You have no entry for $OOVERSION in ~/.xversionrc, "
+        echo "yet the directory $OOHOME exists." 
+        echo "Please remove $OOHOME and try again."
+        exit 1
+      fi
+
+      echo "running openoffice.org setup..."
+      if ! /opt/Ximian-OpenOffice/program/setup -R:/etc/ximian-openoffice/autoresponse-<pv>.conf >& /dev/null; then
+        echo "setup failed.. abort"
+        exit 1
+      fi
+ 
+    echo "Setup complete.  Running openoffice.org..."
+
+else
+    echo "openoffice.org: Damnit! I can't find OpenOffice's user files. Did you break"
+    echo "the /etc/ximian-openoffice/autoresponse-<pv>.conf file manually ?"
+    echo "This file should contain DESTINATIONPATH"
+    exit 1
+  fi
+fi
+
+#Which icon set do we want to use?
+
+if [ -n "\$GNOME_DESKTOP_SESSION_ID" -a -d "/opt/Ximian-OpenOffice/program/resource.gnome" ]; then
+    icon_set="gnome"
+elif [ -n "\$KDE_FULL_SESSION" -a -d "/opt/Ximian-OpenOffice/program/resource.kde" ]; then
+    icon_set="kde"
+fi
+
+if [ -z "\$icon_set" ]; then
+    if [ -d "/opt/Ximian-OpenOffice/program/resource.default" ]; then
+	icon_set="default"
+    elif [ -d "/opt/Ximian-OpenOffice/program/resource.kde" ]; then
+	icon_set="kde"
+    elif [ -d "/opt/Ximian-OpenOffice/program/resource.gnome" ]; then
+	icon_set="gnome"
+    else
+	icon_set="default"
+    fi
+fi
+    
+if [ -d "/opt/Ximian-OpenOffice/program/resource.\$icon_set" ]; then
+    OOO_PREFERRED_RESOURCE_PATH="/opt/Ximian-OpenOffice/program/resource.\$icon_set"
+    export OOO_PREFERRED_RESOURCE_PATH
+fi
+
+##
+## If no file is specified on the command line, which application to start?  
+## The wrapper can be called from several links in /usr/bin
+##
+if [ $# = 0 ]; then
+  case `basename $0` in
+    xoocalc) set -- private:factory/scalc;;
+    xoodraw) set -- private:factory/sdraw;;
+    xooimpress) set -- private:factory/simpress;;
+    xoomath) set -- private:factory/smath;;
+    xooweb) set -- private:factory/swriter/web;;
+    xoowriter) set -- private:factory/swriter;;
+    xoomaster) set -- private:factory/swriter/Global;;
+  esac
+fi
+
+## Previous dead installation?
+[ -d $HOME/.xopenoffice/user ] && echo "Warning: you have a user settings directory from 1.0.0 in ~/.xopenoffice/user - this is no longer used"
+
+if [ ! -s $OOHOME/setup ]; then
+	echo "${OOHOME}/setup links to nothing, resetting link"
+	ln -sf /opt/Ximian-OpenOffice/program/setup ${OOHOME}/setup
+fi
+if [ ! -s $OOHOME/soffice ]; then
+	echo "${OOHOME}/soffice links to nothing, resetting link"
+	ln -sf /opt/Ximian-OpenOffice/program/soffice ${OOHOME}/soffice
+fi
+if [ ! -s $OOHOME/spadmin ]; then
+	echo "${OOHOME}/spadmin links to nothing, resetting link"
+	ln -sf /opt/Ximian-OpenOffice/program/soffice ${OOHOME}/spadmin
+fi
+
+
+##
+## That's it. Launch the beast (with the given args)
+##
+LANG=$LOCALE
+export LANG
+case `basename $0` in
+    xoosetup) exec "$OOHOME/setup"
+    ;;
+    xoopadmin) exec "$OOHOME/spadmin"
+    ;;
+    *) exec "$OOHOME/soffice" "$@"
+    ;;
+esac
