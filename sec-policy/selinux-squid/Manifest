@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 c882a2841d5fabfa71def02602a2fd94 ChangeLog 1741
+MD5 d17f0ca9285269bc69da5593b8b98185 ChangeLog 1837
 MD5 24c0cb2d4ce8da969c77f6ada1f8e60c metadata.xml 530
 MD5 3dd14ccc7f971d9186b70e7a6875f6af selinux-squid-20050219.ebuild 433
-MD5 5c65bbafc48f5cd28da933af1368e559 selinux-squid-20050408.ebuild 437
+MD5 242f0799cff7da9ca5c0fa99ba470663 selinux-squid-20050408.ebuild 433
 MD5 7c0e7cb107511ece967aad7ee227d280 files/digest-selinux-squid-20050219 73
 MD5 49200417d4aa7b1e43ec9d41aad4a057 files/digest-selinux-squid-20050408 73
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFCapU3GSBEIeh4AEYRAmMcAJ0SxiuL4fUa7vNZgy6bKfoRWkS+7QCghhp9
-brOnVJCe18/0K+1bJCdRR8o=
-=GabV
+iD8DBQFCfGb8GSBEIeh4AEYRAk1cAJsGjofXZJ6O5hs+KvtNwzZZ56KcxQCfbR8m
+RSC8SPCRweChzavxEz+8JuU=
+=4yKm
 -----END PGP SIGNATURE-----
