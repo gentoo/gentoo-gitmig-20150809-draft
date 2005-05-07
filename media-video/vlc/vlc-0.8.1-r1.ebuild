@@ -1,10 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.1-r1.ebuild,v 1.7 2005/05/02 18:32:20 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.1-r1.ebuild,v 1.8 2005/05/07 12:21:53 flameeyes Exp $
 
 # Missing support for...
 #	tarkin - package not in portage yet - experimental
 #	tremor - package not in portage yet - experimental
+#	ncurses - needs a patch which is applied in -r2, disabled here
 
 inherit libtool gcc eutils wxwidgets
 
@@ -15,7 +16,7 @@ SRC_URI="http://download.videolan.org/pub/videolan/${PN}/${PV}/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ~ppc ~sparc x86"
-IUSE="a52 3dfx nls unicode debug altivec httpd vlm gnutls live v4l cdio cddb cdda ogg matroska dvb dvd vcd ffmpeg aac dts flac mpeg vorbis theora X opengl freetype svg fbcon svga oss aalib ggi libcaca esd arts alsa wxwindows ncurses xosd lirc joystick mozilla hal stream mad xv bidi gtk2 sdl threads ssl"
+IUSE="a52 3dfx nls unicode debug altivec httpd vlm gnutls live v4l cdio cddb cdda ogg matroska dvb dvd vcd ffmpeg aac dts flac mpeg vorbis theora X opengl freetype svg fbcon svga oss aalib ggi libcaca esd arts alsa wxwindows xosd lirc joystick mozilla hal stream mad xv bidi gtk2 sdl threads ssl"
 
 DEPEND="hal? ( >=sys-apps/hal-0.2.97 )
 		cdio? ( >=dev-libs/libcdio-0.70 )
@@ -47,7 +48,6 @@ DEPEND="hal? ( >=sys-apps/hal-0.2.97 )
 		arts? ( kde-base/arts )
 		alsa? ( virtual/alsa )
 		wxwindows? ( =x11-libs/wxGTK-2.4* )
-		ncurses? ( sys-libs/ncurses )
 		xosd? ( x11-libs/xosd )
 		lirc? ( app-misc/lirc )
 		mozilla? ( www-client/mozilla )
@@ -164,7 +164,6 @@ src_compile () {
 		$(use_enable arts) \
 		$(use_enable alsa) \
 		$(use_enable wxwindows) \
-		$(use_enable ncurses) \
 		$(use_enable xosd) \
 		$(use_enable lirc) \
 		$(use_enable joystick) \
@@ -180,7 +179,7 @@ src_compile () {
 		$(use_enable threads pth) \
 		$(use_enable sdl) \
 		$(use_enable ssl gnutls) \
-		--disable-portaudio \
+		--disable-ncurses --disable-portaudio \
 		${myconf} || die "configuration failed"
 
 	if [[ $(gcc-major-version) == 2 ]]; then

@@ -1,6 +1,12 @@
 # ChangeLog for media-video/vlc
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.82 2005/05/02 18:32:20 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.83 2005/05/07 12:21:53 flameeyes Exp $
+
+  07 May 2005; Diego Pettenò <flameeyes@gentoo.org>
+  +files/vlc-0.8.1-bool.patch, vlc-0.8.1-r1.ebuild, vlc-0.8.1-r2.ebuild:
+  Added patch to compile ncurses support on -r2. Fixes #91603. Removed ncurses
+  useflag and disabled it on -r1 as it's stable and better not add patches to
+  it.
 
   02 May 2005; Diego Pettenò <flameeyes@gentoo.org> -files/vlc.desktop,
   -vlc-0.8.1.ebuild, vlc-0.8.1-r1.ebuild:
