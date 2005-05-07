@@ -1,14 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 f4a8082c518284ded7a55ae6de0ffea4 rcsi-0.5.ebuild 876
-MD5 b2d123579adf8c8941b3ce435f880eca ChangeLog 370
+MD5 e15cf96ca5ea80dc967dfa6cbb787c09 ChangeLog 448
+MD5 34ff19831fa4c03e4ac7d6c63bff2278 rcsi-0.5.ebuild 879
 MD5 1fde70c65deabeb01c56a58f3b563fc6 files/digest-rcsi-0.5 59
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-Comment: Robbat2 @ Orbis-Terrarum Networks
-
-iD8DBQFCDs2XPpIsIjIzwiwRAsCMAJ9kdSQ3mv0H2Hnpd7tQf8lXLYIzhgCg3yRB
-U6c1SQwarDzDNfXSRXMFEuc=
-=EBt2
------END PGP SIGNATURE-----
