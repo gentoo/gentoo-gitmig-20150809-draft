@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/kiso/kiso-0.7b.ebuild,v 1.3 2005/01/01 12:16:37 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/kiso/kiso-0.7b.ebuild,v 1.4 2005/05/07 19:09:37 carlo Exp $
 
 inherit kde eutils
 
@@ -16,7 +16,7 @@ KEYWORDS="~x86 ~amd64 ~ppc"
 SLOT="0"
 IUSE=""
 
-DEPEND=">=dev-libs/libcdio-0.70"
+DEPEND=">=dev-libs/libcdio-0.73"
 RDEPEND="${DEPEND}
 	app-cdr/cdrtools
 	app-admin/sudo"
