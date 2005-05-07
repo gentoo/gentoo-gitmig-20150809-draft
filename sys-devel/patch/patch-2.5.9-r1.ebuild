@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/patch/patch-2.5.9-r1.ebuild,v 1.6 2005/04/01 17:12:45 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/patch/patch-2.5.9-r1.ebuild,v 1.7 2005/05/07 09:39:40 vapier Exp $
 
 inherit flag-o-matic eutils
 
@@ -19,8 +19,8 @@ DEPEND=""
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${PV}-deb-cr.patch
+	cd "${S}"
+	epatch "${FILESDIR}"/${PV}-deb-cr.patch
 }
 
 src_compile() {
@@ -28,7 +28,9 @@ src_compile() {
 	append-flags -DLINUX -D_XOPEN_SOURCE=500
 	use static && append-ldflags -static
 
-	ac_cv_sys_long_file_names=yes econf || die
+	local myconf=""
+	[[ ${USERLAND} != "GNU" ]] && myconf="--program-prefix=g"
+	ac_cv_sys_long_file_names=yes econf ${myconf} || die
 
 	emake || die "emake failed"
 }
