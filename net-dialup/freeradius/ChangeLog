@@ -1,6 +1,13 @@
 # ChangeLog for net-dialup/freeradius
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/ChangeLog,v 1.30 2005/04/14 20:48:21 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/ChangeLog,v 1.31 2005/05/07 16:59:46 mrness Exp $
+
+*freeradius-1.0.2-r3 (07 May 2005)
+
+  07 May 2005; Alin Nastac <mrness@gentoo.org>
+  +files/freeradius-1.0.2-sql-escape.patch, +freeradius-1.0.2-r3.ebuild:
+  Fixed SQL injection & buffer overflow vulnerabilities(#91736). Add support
+  for Novell eDirectory through edirectory USE flag (#90171). Add udpfromto USE flag.
 
   14 Apr 2005; Alin Nastac <mrness@gentoo.org> freeradius-1.0.1.ebuild,
   -freeradius-1.0.2-r1.ebuild, freeradius-1.0.2-r2.ebuild:

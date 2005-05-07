@@ -1,20 +1,23 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
+MD5 fc3e6cb6b2d9b81681ca2f2b41323e07 freeradius-1.0.2-r3.ebuild 3254
 MD5 6b9232a327e596bba17869f2557b5c36 freeradius-1.0.1.ebuild 2799
 MD5 95a47b2087d7293bb941d6e886446a13 freeradius-1.0.2-r2.ebuild 3015
-MD5 d3e5fea484ce19a67182201e22901f85 ChangeLog 4293
+MD5 ea619788ba69a4331d29e3b809d34698 ChangeLog 4613
 MD5 1542bf76e28581e9d6bcfdc75e46f33d metadata.xml 252
 MD5 fc6693f3df5a0694610110287a28568a files/radius.conf 129
 MD5 50b0d44ee0e5313901606e2749dfdd34 files/radius.init 1006
 MD5 5a26f9881af51aed070957e5fc4ed808 files/digest-freeradius-1.0.2-r2 69
+MD5 5a26f9881af51aed070957e5fc4ed808 files/digest-freeradius-1.0.2-r3 69
 MD5 9f0188ba482e825cf2a89584f8caa813 files/digest-freeradius-1.0.1 69
 MD5 3c2119ec1d8d807fe5ed14944747f0f8 files/freeradius-1.0.1-gcc34.patch 715
 MD5 6b0efd384f551fab6b82794e91dbb4d5 files/freeradius-1.0.2-whole-archive-gentoo.patch 1728
+MD5 503ac5a922de5a21fde5487e339220f7 files/freeradius-1.0.2-sql-escape.patch 3157
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCXtcxjiC39V7gKu0RAl7cAKCFkDwrvxP3iptVyufdho4KLWNjwwCfRmZw
-YXCGOuhy8Ssr/bCCKVavdPg=
-=JM1p
+iD8DBQFCfPQbjiC39V7gKu0RAnj+AJ9R/HoBNmY33tH57+MQkoLdAgxj7QCdFnHq
+OPYYTw5IF3xv7jckcWqy6Ao=
+=UjqF
 -----END PGP SIGNATURE-----
