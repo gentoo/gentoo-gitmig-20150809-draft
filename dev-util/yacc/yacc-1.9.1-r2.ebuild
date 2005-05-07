@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/yacc/yacc-1.9.1-r2.ebuild,v 1.6 2005/04/28 04:04:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/yacc/yacc-1.9.1-r2.ebuild,v 1.7 2005/05/07 11:23:04 beu Exp $
 
 inherit eutils toolchain-funcs
 
-DESCRIPTION="Yacc"
+DESCRIPTION="Yacc: Yet Another Compiler-Compiler"
 HOMEPAGE="http://dinosaur.compilertools.net/#yacc"
 SRC_URI="ftp://metalab.unc.edu/pub/Linux/devel/compiler-tools/${P}.tar.Z"
 
