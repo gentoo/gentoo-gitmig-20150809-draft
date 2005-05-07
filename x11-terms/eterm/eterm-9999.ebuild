@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/eterm/eterm-9999.ebuild,v 1.1 2005/04/18 23:50:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/eterm/eterm-9999.ebuild,v 1.2 2005/05/07 23:17:15 vapier Exp $
 
 ECVS_MODULE="eterm/Eterm"
 ECVS_SERVER="cvs.sourceforge.net:/cvsroot/enlightenment"
@@ -15,7 +15,7 @@ SRC_URI=""
 #	mirror://sourceforge/eterm/${MY_P}.tar.gz
 #	mirror://sourceforge/eterm/Eterm-bg-${PV}.tar.gz"
 
-LICENSE="GPL-2"
+LICENSE="BSD"
 SLOT="0"
 KEYWORDS="-*"
 IUSE="mmx etwin escreen"
