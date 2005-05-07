@@ -1,0 +1,5 @@
+#
+# devfs rules for zaptel
+#
+REGISTER     zap	PERMISSIONS root.asterisk rwxrwx---
+REGISTER     zap/.*     PERMISSIONS root.asterisk rw-rw----
