@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.00-r3.ebuild,v 1.1 2005/05/01 22:07:25 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.00-r3.ebuild,v 1.2 2005/05/07 13:15:18 solar Exp $
 
 inherit eutils
 
@@ -21,8 +21,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~mips ~ppc ~ppc64 ~sparc ~x86"
 IUSE="debug uclibc static savedconfig netboot floppyboot make-symlinks"
 
-DEPEND="virtual/libc
-	>=sys-apps/sed-4"
+DEPEND="virtual/libc"
 RDEPEND="!static? ( virtual/libc )"
 
 S=${WORKDIR}/${MY_P}
@@ -67,7 +66,8 @@ src_unpack() {
 	if use savedconfig ; then
 		[ -r .config ] && rm .config
 		for conf in ${PN}-${PV}-${PR} ${PN}-${PV} ${PN}; do
-			configfile=/etc/${PN}/${CHOST}/${conf}.config
+			configfile=${ROOT}/etc/${PN}/${CHOST}/${conf}.config
+			[ -r ${configfile} ] ||	configfile=/etc/${PN}/${CHOST}/${conf}.config
 			if [ -r ${configfile} ]; then
 				cp ${configfile} ${S}/.config
 				break;
