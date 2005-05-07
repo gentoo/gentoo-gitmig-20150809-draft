@@ -1,6 +1,13 @@
 # ChangeLog for x11-libs/fox
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox/ChangeLog,v 1.40 2005/04/09 15:50:19 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox/ChangeLog,v 1.41 2005/05/07 19:37:06 rphillips Exp $
+
+*fox-1.2.15 (07 May 2005)
+
+  07 May 2005; <rphillips@gentoo.org> +fox-1.0.53.ebuild, +fox-1.2.15.ebuild,
+  +fox-1.4.12.ebuild, +fox-1.5.4.ebuild:
+  Added Yaakov Selkowitz's eclass based fox ebuilds for testing.
+  Fixes #88924
 
   09 Apr 2005; Markus Rothe <corsair@gentoo.org> fox-1.4.11.ebuild:
   Added ~ppc64 to KEYWORDS
