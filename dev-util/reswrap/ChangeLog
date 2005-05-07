@@ -1,0 +1,11 @@
+# ChangeLog for dev-util/reswrap
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/reswrap/ChangeLog,v 1.1 2005/05/07 19:43:22 rphillips Exp $
+
+*reswrap-1.0.4 (07 May 2005)
+
+  07 May 2005; <rphillips@gentoo.org> +reswrap-1.0.4.ebuild,
+  +reswrap-3.1.0.ebuild, +reswrap-3.2.0.ebuild:
+  Added Yaakov Selkowitz's eclass based fox ebuilds for testing.
+  Fixes #88924
+
