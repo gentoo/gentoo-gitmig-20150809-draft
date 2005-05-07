@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/commons-modeler
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-modeler/ChangeLog,v 1.9 2005/04/09 15:59:24 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-modeler/ChangeLog,v 1.10 2005/05/07 17:12:49 weeve Exp $
+
+  07 May 2005; Jason Wever <weeve@gentoo.org> commons-modeler-1.1.ebuild:
+  Added ~sparc keyword.
 
   09 Apr 2005; Markus Rothe <corsair@gentoo.org> commons-modeler-1.1.ebuild:
   Added ~ppc64 to KEYWORDS
