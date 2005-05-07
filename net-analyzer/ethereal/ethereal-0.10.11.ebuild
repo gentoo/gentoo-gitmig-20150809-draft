@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ethereal-0.10.11.ebuild,v 1.9 2005/05/06 16:24:58 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ethereal-0.10.11.ebuild,v 1.10 2005/05/07 11:04:19 dragonheart Exp $
 
 inherit libtool flag-o-matic eutils
 
@@ -106,6 +106,6 @@ pkg_postinst() {
 	ewarn "use a hardened operating system;"
 	ewarn "do not listen to addition interfaces;"
 	ewarn "if possible, run behind a firewall;"
-	ewarn "take a capture with tcpdump and analylize the contents offline running as a the least priviledged user; and"
+	ewarn "take a capture with tcpdump and analyze the contents offline running as a the least priviledged user; and"
 	ewarn "subscribe to ethereal's announce list for new vulnerabilities."
 }
