@@ -1,0 +1,21 @@
+diff -aur blam-1.6.1-orig/src/FeedUpdater.cs blam-1.6.1/src/FeedUpdater.cs
+--- blam-1.6.1-orig/src/FeedUpdater.cs	2004-10-20 20:21:46.000000000 -0400
++++ blam-1.6.1/src/FeedUpdater.cs	2005-05-07 11:23:01.000000000 -0400
+@@ -22,9 +22,14 @@
+ 		string lastModified;
+ 		string eTag;
+ 
+-		WebRequest req = WebRequest.Create(channel.Url);
+-		req.Headers.Add("If-Modified-Since", channel.LastModified);
+-		req.Headers.Add("If-None-Match", channel.ETag);
++		HttpWebRequest req = (HttpWebRequest) WebRequest.Create(channel.Url);
++		if (channel.LastModified != "") {
++			req.IfModifiedSince = DateTime.Parse(channel.LastModified);
++		}
++
++		if (channel.ETag != "") {
++			req.Headers.Add("If-None-Match", channel.ETag);
++		}
+ 	
+ 		req.Timeout = 20000;
+ 		WebResponse res = null;
