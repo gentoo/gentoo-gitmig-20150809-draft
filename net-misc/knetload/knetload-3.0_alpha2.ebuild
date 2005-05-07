@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/knetload/knetload-3.0_alpha2.ebuild,v 1.1 2005/04/22 12:52:02 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/knetload/knetload-3.0_alpha2.ebuild,v 1.2 2005/05/07 17:54:56 flameeyes Exp $
 
 inherit kde
 
@@ -23,5 +23,8 @@ S=${WORKDIR}/${MY_P}
 
 need-kde 3.2
 
-myconf="--enable-libsuffix= $(use_with snmp libksnmp)"
+src_compile() {
+	myconf="--enable-libsuffix= $(use_with snmp libksnmp)"
 
+	kde_src_compile
+}
