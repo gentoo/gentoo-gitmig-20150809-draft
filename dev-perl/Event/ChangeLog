@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Event
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Event/ChangeLog,v 1.18 2005/04/25 14:56:52 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Event/ChangeLog,v 1.19 2005/05/07 13:43:16 beu Exp $
+
+  07 May 2005; Elfyn McBratney <beu@gentoo.org> Event-0.87.ebuild:
+  Move distfile to mirror://gentoo/.
 
   25 Apr 2005; Michael Cummings <mcummings@gentoo.org> -Event-0.85-r1.ebuild,
   -Event-0.85-r2.ebuild, Event-0.87.ebuild, Event-1.00.ebuild:
