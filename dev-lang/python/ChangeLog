@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/python
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.141 2005/05/01 15:28:15 spb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.142 2005/05/07 16:30:24 kloeri Exp $
+
+  07 May 2005; Bryan Østergaard <kloeri@gentoo.org> python-2.3.5.ebuild,
+  python-2.4.1.ebuild:
+  Fix FEATURES=test using slightly modified patch by Rob Cakebread, bug 67970.
 
   01 May 2005; Stephen Bennett <spb@gentoo.org> python-2.3.4-r1.ebuild,
   python-2.3.5.ebuild, python-2.4.1.ebuild:
