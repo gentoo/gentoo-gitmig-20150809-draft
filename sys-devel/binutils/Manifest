@@ -1,42 +1,32 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 6c9e007f1435b83e0c5d7c6e912014f6 binutils-2.15.92.0.2-r1.ebuild 4877
-MD5 0680ca6de3b49aa48861d46a14a759e7 binutils-2.14.ebuild 298
 MD5 13c310f53b4f28b7439150755ed8294b binutils-2.15.97.ebuild 351
-MD5 1c493cb3ecbc051258d0f8ec2decbbef binutils-2.15.92.0.2-r8.ebuild 367
-MD5 ea15e7e289eb1db7c2b55838feff3529 binutils-2.15.90.0.3-r4.ebuild 325
-MD5 452d0808d03dcb4827846f8197a4be4e binutils-2.16.ebuild 342
-MD5 abac4a242d2593eb5ff815448be073dd binutils-2.14.90.0.8-r2.ebuild 366
-MD5 34845fef35e059f1064a24110b9f9655 binutils-2.14.90.0.6-r8.ebuild 359
-MD5 0040741a30eab06f8f1e3a1c5ea7ad6b binutils-2.15.90.0.1.1-r4.ebuild 512
-MD5 a8cdc77285334eed4e87d8c9ce08c2de binutils-2.16.90.0.2.ebuild 364
-MD5 fae6ef750b66a27f9161bfd414a7353f binutils-2.15.94.0.2.2.ebuild 328
-MD5 b7885f24c980245c1980c23d6d2ce57f binutils-2.15.92.0.2-r7.ebuild 350
-MD5 ca9093a8284573ae2c8ba1a4ed70c07e binutils-2.15.ebuild 295
-MD5 0c764f380e63596c427a2376e78e9f7e ChangeLog 42566
+MD5 f7f59936d5e2f873c1f3080e0db26984 binutils-2.15.92.0.2-r8.ebuild 363
 MD5 38c695e22db7e5b5d499c93448fc20cb binutils-2.15.91.0.2-r1.ebuild 454
-MD5 567094e03359ffc1c95af7356395228d metadata.xml 162
 MD5 20b105729469ce3d60ebff735b11ba55 binutils-2.16.90.0.1.ebuild 362
-MD5 7b0c1e491cb6bc7058193b4443071071 files/digest-binutils-2.15.90.0.1.1-r4 255
-MD5 8eb329031367e27415875f3e2986362c files/digest-binutils-2.16.90.0.1 249
-MD5 5a40289e704e1bd414e1c44bce85e474 files/digest-binutils-2.16.90.0.2 249
-MD5 3cd074b9670edeb82964360e6525c9ee files/digest-binutils-2.15.90.0.3-r4 248
-MD5 c21439c7d3b1c16b0521e1bcc234cc10 files/digest-binutils-2.14 145
-MD5 6c06201fe991e098f44f6f75dd5d53f4 files/digest-binutils-2.15 68
-MD5 c1d4154e6f3e2f63d89a66e34461cdf9 files/digest-binutils-2.16 228
-MD5 4839babc8ab974f4c7600fc5a207e28a files/digest-binutils-2.15.94.0.2.2 255
-MD5 1b43962f0560663b6b0f58ffa918a8ff files/digest-binutils-2.15.92.0.2-r1 242
-MD5 69adda34b85750d837854efcb68104f3 files/digest-binutils-2.15.92.0.2-r7 249
-MD5 fca235f9468f9bb7405bc3048d61db2c files/digest-binutils-2.15.92.0.2-r8 249
-MD5 bce6e94a306210a3a46ff8a78ad85df1 files/digest-binutils-2.14.90.0.6-r8 249
-MD5 aed408762a54261cd9d1e3168c657bda files/digest-binutils-2.14.90.0.8-r2 249
-MD5 bca1085b0a2aa37066729f7df49c80aa files/digest-binutils-2.15.97 237
+MD5 567094e03359ffc1c95af7356395228d metadata.xml 162
+MD5 abac4a242d2593eb5ff815448be073dd binutils-2.14.90.0.8-r2.ebuild 366
+MD5 baf9a1276f9bc9156b17ee03c5284717 ChangeLog 42670
+MD5 0040741a30eab06f8f1e3a1c5ea7ad6b binutils-2.15.90.0.1.1-r4.ebuild 512
+MD5 452d0808d03dcb4827846f8197a4be4e binutils-2.16.ebuild 342
+MD5 a8cdc77285334eed4e87d8c9ce08c2de binutils-2.16.90.0.2.ebuild 364
+MD5 ca9093a8284573ae2c8ba1a4ed70c07e binutils-2.15.ebuild 295
+MD5 0680ca6de3b49aa48861d46a14a759e7 binutils-2.14.ebuild 298
+MD5 b7885f24c980245c1980c23d6d2ce57f binutils-2.15.92.0.2-r7.ebuild 350
+MD5 ea15e7e289eb1db7c2b55838feff3529 binutils-2.15.90.0.3-r4.ebuild 325
+MD5 34845fef35e059f1064a24110b9f9655 binutils-2.14.90.0.6-r8.ebuild 359
+MD5 fae6ef750b66a27f9161bfd414a7353f binutils-2.15.94.0.2.2.ebuild 328
 MD5 d2dfe61bd330d130043365ee51c2c7b4 files/digest-binutils-2.15.91.0.2-r1 159
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCfSFT06ebR+OMO78RAoBBAJ9SGM2eXC/IdznNO2/dA2c/EKRW7ACgl0z2
-hTM7tyZsz5eS6dn3XBldzX4=
-=z75v
------END PGP SIGNATURE-----
+MD5 5a40289e704e1bd414e1c44bce85e474 files/digest-binutils-2.16.90.0.2 249
+MD5 c21439c7d3b1c16b0521e1bcc234cc10 files/digest-binutils-2.14 145
+MD5 3cd074b9670edeb82964360e6525c9ee files/digest-binutils-2.15.90.0.3-r4 248
+MD5 1b43962f0560663b6b0f58ffa918a8ff files/digest-binutils-2.15.92.0.2-r1 242
+MD5 7b0c1e491cb6bc7058193b4443071071 files/digest-binutils-2.15.90.0.1.1-r4 255
+MD5 fca235f9468f9bb7405bc3048d61db2c files/digest-binutils-2.15.92.0.2-r8 249
+MD5 6c06201fe991e098f44f6f75dd5d53f4 files/digest-binutils-2.15 68
+MD5 bca1085b0a2aa37066729f7df49c80aa files/digest-binutils-2.15.97 237
+MD5 c1d4154e6f3e2f63d89a66e34461cdf9 files/digest-binutils-2.16 228
+MD5 aed408762a54261cd9d1e3168c657bda files/digest-binutils-2.14.90.0.8-r2 249
+MD5 bce6e94a306210a3a46ff8a78ad85df1 files/digest-binutils-2.14.90.0.6-r8 249
+MD5 4839babc8ab974f4c7600fc5a207e28a files/digest-binutils-2.15.94.0.2.2 255
+MD5 8eb329031367e27415875f3e2986362c files/digest-binutils-2.16.90.0.1 249
+MD5 69adda34b85750d837854efcb68104f3 files/digest-binutils-2.15.92.0.2-r7 249
