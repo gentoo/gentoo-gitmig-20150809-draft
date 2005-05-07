@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/atk
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/atk/ChangeLog,v 1.67 2005/04/25 10:22:16 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/atk/ChangeLog,v 1.68 2005/05/07 20:16:49 agriffis Exp $
+
+  07 May 2005; Aron Griffis <agriffis@gentoo.org> atk-1.8.0-r1.ebuild:
+  stable on ia64
 
   26 Apr 2005; Mike Gardiner <obz@gentoo.org> atk-1.8.0-r1.ebuild:
   Keyworded x86 ppc
