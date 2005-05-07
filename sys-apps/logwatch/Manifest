@@ -3,7 +3,7 @@ MD5 4e550750cdcb0a6432c46d259d38e4db logwatch-4.3.2.ebuild 1345
 MD5 70cb3442dbd2bafb307ea09f5eea8d03 logwatch-5.0.ebuild 1398
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 8eb1d712eab6b882df0d6d9e490d73db logwatch-5.2.2.ebuild 1404
-MD5 053a25ce35664e8005c30d2c8a778887 logwatch-6.0.2.ebuild 1345
+MD5 ea7d9d5b4ba13bf8be8fb325b870a619 logwatch-6.0.2.ebuild 1340
 MD5 cf548a7143dce1aba3792d0647ae4f90 files/digest-logwatch-4.3.2 65
 MD5 4a5e8c25106385b7e823785f6c61855d files/digest-logwatch-5.0 63
 MD5 e8d38d01460c2fcf26e92e8853bf6c84 files/digest-logwatch-5.2.2 66
