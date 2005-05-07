@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/tcl
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/ChangeLog,v 1.49 2005/03/21 18:57:49 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/ChangeLog,v 1.50 2005/05/07 05:58:35 matsuu Exp $
+
+  07 May 2005; MATSUU Takuto <matsuu@gentoo.org> tcl-8.4.9.ebuild:
+  Stable on x86.
 
   21 Mar 2005; Lars Weiler <pylon@gentoo.org> tcl-8.4.6-r1.ebuild,
   tcl-8.4.9.ebuild:
