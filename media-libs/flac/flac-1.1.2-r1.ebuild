@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/flac-1.1.2-r1.ebuild,v 1.2 2005/05/04 02:19:52 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/flac-1.1.2-r1.ebuild,v 1.3 2005/05/07 01:09:22 flameeyes Exp $
 
 inherit libtool eutils flag-o-matic gcc
 
@@ -27,13 +27,15 @@ src_unpack() {
 		epatch "${FILESDIR}"/${P}-xmms-config.patch
 	else
 		sed -i -e '/^@FLaC__HAS_XMMS_TRUE/d' src/Makefile.in || die
+		sed -i -e '/AM_PATH_XMMS/d' configure.in || die
 	fi
 
-	epatch "${FILESDIR}"/${P}-m4.patch
-	epatch "${FILESDIR}"/${P}-libtool.patch
-	epatch "${FILESDIR}"/${P}-gas.patch
-	epatch "${FILESDIR}"/${P}-makefile.patch
-	./autogen.sh
+	epatch "${FILESDIR}/${P}-m4.patch"
+	epatch "${FILESDIR}/${P}-libtool.patch"
+	epatch "${FILESDIR}/${P}-gas.patch"
+	epatch "${FILESDIR}/${P}-makefile.patch"
+	epatch "${FILESDIR}/${P}-noogg.patch"
+	./autogen.sh || die "autogen failed"
 	libtoolize --copy --force
 	elibtoolize --reverse-deps
 }
@@ -41,7 +43,7 @@ src_unpack() {
 src_compile() {
 	use doc || export ac_cv_prog_DOXYGEN=''
 	econf \
-		$(use_with ogg ogg /usr) \
+		$(use_enable ogg) \
 		$(use_enable sse) \
 		$(use_enable 3dnow) \
 		$(use_enable debug) \
