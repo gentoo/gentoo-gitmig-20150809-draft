@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythmusic/mythmusic-0.18.ebuild,v 1.1 2005/04/18 08:11:13 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythmusic/mythmusic-0.18.ebuild,v 1.2 2005/05/07 08:20:36 cardoe Exp $
 
 inherit myth flag-o-matic toolchain-funcs eutils
 
@@ -38,6 +38,9 @@ src_unpack() {
 	fi
 
 	myth_src_unpack || die "unpack failed"
+
+	cd ${S}/${PN}
+	epatch ${FILESDIR}/${PN}-0.17-sample_rate_type.patch
 }
 
 src_compile() {
