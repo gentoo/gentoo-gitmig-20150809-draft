@@ -1,9 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/2004.1/sparc64/use.mask,v 1.5 2004/11/06 17:53:09 pebenito Exp $
-
-# disallow posix acl since this is SELinux
-acl
+# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/2004.1/sparc64/use.mask,v 1.6 2005/05/08 23:37:08 pebenito Exp $
 
 # This file contains a list of USE
 # flags that cannot be used on SPARC.
@@ -18,4 +15,3 @@ pic
 sse
 svga
 voodoo3
-uclibc

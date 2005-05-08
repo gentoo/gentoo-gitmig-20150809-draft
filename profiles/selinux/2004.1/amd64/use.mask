@@ -1,9 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/2004.1/amd64/use.mask,v 1.4 2005/01/08 20:47:35 eradicator Exp $
-
-# disallow posix acl since this is SELinux
-acl
+# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/2004.1/amd64/use.mask,v 1.5 2005/05/08 23:37:08 pebenito Exp $
 
 #unknowns
 afs
@@ -23,10 +20,6 @@ firebird
 # 2004/06/22 - Taken from 2004.0 profile
 # x86 binary only, used by php
 fdftk
-
-# 2004/06/22 - Danny van Dyk <kugelfang@gentoo.org>
-# version in portage does not work on amd64 yet
-uclibc
 
 # 2004/06/22 - Taken from 2004.0 profile
 # versions that are in portage do not support amd64,
@@ -55,12 +48,6 @@ mmx2
 sse
 sse2
 3dnow
-
-# 2004/06/25 - Danny van Dyk <kugelfang@gentoo.org>
-# Known BUGs (#54760) + lack of brain/man power to maintain "hardened" in the
-# default profile. Use the hardened profile instead.
-hardened
-uclibc
 
 # altivec is a ppc instruction set.
 altivec

@@ -1,12 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/2005.1/mips/use.mask,v 1.1 2005/05/01 21:51:21 spb Exp $
-
-# disallow posix acl since this is SELinux
-acl
-
-# use a uclibc profile
-uclibc
+# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/2005.1/mips/use.mask,v 1.2 2005/05/08 23:37:08 pebenito Exp $
 
 # PPC instructions
 altivec
