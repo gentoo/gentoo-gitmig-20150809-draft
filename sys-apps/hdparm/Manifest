@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 1e7bb4287211b6959462391bc7e8cfc5 ChangeLog 8327
-MD5 803559e520839aab6628c91b1139b083 hdparm-5.9.ebuild 1217
-MD5 c5148ad98cdcbfee1a0583c845c5c65b hdparm-6.1.ebuild 1155
-MD5 534e2c86e335e259648958664ba278a6 hdparm-5.7-r1.ebuild 1248
+MD5 9c1e9442b22f94281c9300009ec87301 hdparm-5.9.ebuild 1010
+MD5 5cd3124fe15997a9dc57e53c00398d45 hdparm-6.1.ebuild 938
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+MD5 5f0d10c4141916ba16ef6a173f417c99 hdparm-5.7-r1.ebuild 1042
 MD5 f76a3e6a488511f6064448be47b6ae47 files/digest-hdparm-5.9 61
+MD5 5246893ec7894ece9bf7a851d11fa18d files/hdparm-conf.d.3 491
 MD5 9bab2bbbb6f1f3d23a72da1834b7ce64 files/digest-hdparm-6.1 61
 MD5 5f8df0f54a44a97ccf131b4336698128 files/digest-hdparm-5.7-r1 61
-MD5 5246893ec7894ece9bf7a851d11fa18d files/hdparm-conf.d.3 491
 MD5 f6e1664cbc73c956c98ba69f05c23615 files/hdparm-init-7 2708
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFCe6r1KRy60XGEcJIRAsDgAJ9JZIFt1K9dBwgN5sM+bT4dW+X0xwCgqNDo
-kEJ90MunePZmUOHYFcODSqs=
-=dcFx
------END PGP SIGNATURE-----

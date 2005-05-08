@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hdparm/hdparm-6.1.ebuild,v 1.1 2005/04/24 22:40:35 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hdparm/hdparm-6.1.ebuild,v 1.2 2005/05/08 23:24:50 vapier Exp $
 
 inherit toolchain-funcs
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
 IUSE=""
 
-DEPEND="virtual/libc"
+DEPEND=""
 
 src_unpack() {
 	unpack ${A}
@@ -34,10 +34,4 @@ src_install() {
 
 	doman hdparm.8
 	dodoc hdparm.lsm Changelog README.acoustic hdparm-sysconfig
-}
-
-pkg_postinst() {
-	einfo "The rc-script for hdparm has been updated, so make sure "
-	einfo "that you etc-update.  The script is much more configurable"
-	einfo "for details please see /etc/conf.d/hdparm"
 }

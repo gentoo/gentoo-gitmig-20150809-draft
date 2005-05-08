@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hdparm/hdparm-5.7-r1.ebuild,v 1.10 2005/02/19 20:50:51 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hdparm/hdparm-5.7-r1.ebuild,v 1.11 2005/05/08 23:24:50 vapier Exp $
 
 inherit gcc eutils
 
@@ -39,10 +39,4 @@ src_install() {
 
 	doman hdparm.8
 	dodoc hdparm.lsm Changelog README.acoustic hdparm-sysconfig
-}
-
-pkg_postinst() {
-	einfo "The rc-script for hdparm has been updated, so make sure "
-	einfo "that you etc-update.  The script is much more configurable"
-	einfo "for details please see /etc/conf.d/hdparm"
 }
