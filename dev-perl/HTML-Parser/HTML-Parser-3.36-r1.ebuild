@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Parser/HTML-Parser-3.36-r1.ebuild,v 1.8 2005/05/01 17:51:12 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Parser/HTML-Parser-3.36-r1.ebuild,v 1.9 2005/05/08 22:24:08 agriffis Exp $
 
 inherit perl-module
 
@@ -9,7 +9,7 @@ SRC_URI="http://cpan.org/modules/by-module/HTML/${P}.tar.gz"
 HOMEPAGE="http://cpan.org/modules/by-module/HTML/${P}.readme"
 SLOT="0"
 LICENSE="Artistic"
-KEYWORDS="x86 amd64 ppc sparc alpha hppa ~ia64 ~ppc64 ~mips"
+KEYWORDS="alpha amd64 hppa ia64 ~mips ppc ~ppc64 sparc x86"
 IUSE="unicode"
 DEPEND=">=dev-perl/HTML-Tagset-3.03"
 mydoc="ANNOUNCEMENT TODO"

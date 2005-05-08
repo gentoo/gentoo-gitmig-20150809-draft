@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 7acb090a599115dd603618b455df1461 Scalar-List-Utils-1.14.ebuild 517
 MD5 d1dc78481acf2fa2ee9bdcec85e63236 ChangeLog 1967
-MD5 d0c117a0af85860df1e2a3462a70a042 Scalar-List-Utils-1.14.ebuild 518
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 1c6a66ee2aca9d7e7c6edc2eca5a65e0 files/digest-Scalar-List-Utils-1.14 73
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCcifGtG5z4I8BtQoRAv5cAJ90726vc582wPlQfoZzNifW+9Ib6ACffpR2
-NhMYhItVo36T2KOTi0+8g0k=
-=KTFt
------END PGP SIGNATURE-----

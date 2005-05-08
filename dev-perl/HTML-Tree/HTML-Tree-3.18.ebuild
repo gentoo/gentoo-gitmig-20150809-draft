@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Tree/HTML-Tree-3.18.ebuild,v 1.7 2005/04/30 09:03:25 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Tree/HTML-Tree-3.18.ebuild,v 1.8 2005/05/08 22:24:49 agriffis Exp $
 
 inherit perl-module
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.perl.com/CPAN/authors/id/S/SB/SBURKE/"
 
 SLOT="0"
 LICENSE="Artistic"
-KEYWORDS="~x86 ~amd64 ~ppc ~sparc ~alpha ppc64 ~ia64"
+KEYWORDS="~alpha ~amd64 ia64 ~ppc ppc64 ~sparc ~x86"
 IUSE=""
 
 SRC_TEST="do"
