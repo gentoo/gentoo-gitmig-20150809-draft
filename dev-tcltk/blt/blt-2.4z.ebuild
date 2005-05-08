@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/blt/blt-2.4z.ebuild,v 1.15 2005/05/01 18:23:45 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/blt/blt-2.4z.ebuild,v 1.16 2005/05/08 22:00:30 herbs Exp $
 
 inherit eutils
 
@@ -23,16 +23,21 @@ src_unpack() {
 		# From blt-2.4z-6mdk.src.rpm
 		epatch ${FILESDIR}/blt2.4z-64bit.patch
 	fi
+
+	# Set the correct libdir
+	sed -i -e "s:\(^libdir=\${exec_prefix}/\)lib:\1$(get_libdir):" \
+		${S}/configure || die "sed failed"
 }
 
 src_compile() {
 	cd ${S}
 	./configure --host=${CHOST} \
 				--prefix=/usr \
+				--libdir=/usr/$(get_libdir) \
 				--mandir=/usr/share/man \
 				--infodir=/usr/share/info \
 				--with-x \
-				--with-tcl=/usr/lib || die "./configure failed"
+				--with-tcl=/usr/$(get_libdir) || die "./configure failed"
 
 	emake -j1 CFLAGS="${CFLAGS}" || die "emake failed"
 }

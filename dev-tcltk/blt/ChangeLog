@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/blt
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/blt/ChangeLog,v 1.14 2005/05/01 18:23:45 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/blt/ChangeLog,v 1.15 2005/05/08 22:00:30 herbs Exp $
+
+  08 May 2005; Herbie Hopkins <herbs@gentoo.org> blt-2.4z.ebuild:
+  Multilib fixes.
 
   01 May 2005; Michael Hanselmann <hansmi@gentoo.org> blt-2.4z.ebuild:
   Stable on ppc.
