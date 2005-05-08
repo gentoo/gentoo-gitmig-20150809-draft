@@ -1,13 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/tla/tla-1.3.1_p1.ebuild,v 1.3 2005/05/08 19:47:34 arj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/tla/tla-1.3.2.ebuild,v 1.1 2005/05/08 19:47:34 arj Exp $
 
-inherit eutils
-
-MY_P="${P/_p/-fix-}"
-S="${WORKDIR}/${MY_P}/src/=build"
+S="${WORKDIR}/${P}/src/=build"
 DESCRIPTION="Revision control system ideal for widely distributed development"
-SRC_URI="mirror://gnu/gnu-arch/${MY_P}.tar.gz
+SRC_URI="mirror://gnu/gnu-arch/${P}.tar.gz
 	http://dev.gentoo.org/~arj/tla.1.gz"
 HOMEPAGE="http://savannah.gnu.org/projects/gnu-arch http://wiki.gnuarch.org/ http://arch.quackerhead.com/~lord/"
 
@@ -27,11 +24,11 @@ DEPEND="sys-apps/coreutils
 	sys-devel/make"
 
 src_unpack() {
-	unpack ${MY_P}.tar.gz
+	unpack ${P}.tar.gz
 	unpack tla.1.gz
 	mkdir "${S}"
-	cd "${WORKDIR}/${MY_P}"
-	epatch ${FILESDIR}/tla-1.3-gcc-4-fix.patch
+	cd "${WORKDIR}/${P}"
+	sed -i 's:/home/lord/{install}:/usr:g' "${WORKDIR}/${P}/src/tla/=gpg-check.awk"
 }
 
 src_compile() {
@@ -58,4 +55,7 @@ src_install () {
 	dohtml -r html/
 	cd ${WORKDIR}
 	doman tla.1
+
+	chmod 755 "${WORKDIR}/${P}/src/tla/=gpg-check.awk"
+	cp -a "${WORKDIR}/${P}/src/tla/=gpg-check.awk" "${D}/usr/bin/tla-gpg-check.awk"
 }

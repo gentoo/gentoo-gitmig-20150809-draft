@@ -1,8 +1,14 @@
 # ChangeLog for dev-util/tla
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/tla/ChangeLog,v 1.25 2005/05/01 21:31:04 arj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/tla/ChangeLog,v 1.26 2005/05/08 19:47:34 arj Exp $
 
-  01 Mar 2005; Anders Rune Jensen <arj@gentoo.org> tla-1.3.1_p1.ebuild:
+*tla-1.3.2 (08 May 2005)
+
+  08 May 2005; Anders Rune Jensen <arj@gentoo.org> +tla-1.3.2.ebuild, 
+  tla-1.3.1_p1.ebuild:
+  Version bump. Fix 1.3.1_p1 to patch correctly. Fix #77682.
+
+  01 May 2005; Anders Rune Jensen <arj@gentoo.org> tla-1.3.1_p1.ebuild:
   GCC 4.0 patch. Fixes #91073
 
   21 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> tla-1.3.ebuild:
