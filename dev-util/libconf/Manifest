@@ -1,4 +1,4 @@
-MD5 0ece5a033fb34044c6059a5543b44943 ChangeLog 2766
+MD5 b676fdeeed3f03060f3f9eb923558ced ChangeLog 2872
 MD5 9341b96d6af9732211a44e381e25aa77 libconf-0.28.ebuild 675
 MD5 9cee0094c2ce2a7aa9b334645faec1e2 libconf-0.29.ebuild 714
 MD5 f6935415c13bd6ef7565c4a347ec3629 libconf-0.39.1.ebuild 714
@@ -17,6 +17,7 @@ MD5 10a3dc7179e627bc52f1736fe4238570 libconf-0.39.9.ebuild 714
 MD5 8ac4709b79735b0f8a99809d55ff2294 libconf-0.39_alpha.ebuild 718
 MD5 5f1c3b9a62f513d6a4802b57677c23bf metadata.xml 284
 MD5 17a2fdbdf13dc4a001e4324bc83efe48 libconf-0.39.14.ebuild 715
+MD5 59a3960533f9c4a9622af1baae361200 libconf-0.39.15.ebuild 715
 MD5 705119e17deb58b46fa93460207fff7a files/digest-libconf-0.28 70
 MD5 813fffddc48e3fecaa47ad5c4674454b files/digest-libconf-0.29 70
 MD5 98f61655f831f3426abbda2d00bce6b4 files/digest-libconf-0.39.1 72
@@ -34,3 +35,4 @@ MD5 3d5b20ef2bbf9bf394c5fd940234d800 files/digest-libconf-0.39.8 72
 MD5 d12971ef42d8e51ca94457dff285481e files/digest-libconf-0.39.9 72
 MD5 7c60f6a0a7374ffaa0f1148bc523f66b files/digest-libconf-0.39_alpha 76
 MD5 d66666ab8c6c32400fc6a2585e3c5ca5 files/digest-libconf-0.39.14 73
+MD5 455869982003cc96715c4b62c476e039 files/digest-libconf-0.39.15 73

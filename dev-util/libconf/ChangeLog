@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/libconf
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/libconf/ChangeLog,v 1.21 2005/05/07 22:59:15 dams Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/libconf/ChangeLog,v 1.22 2005/05/08 02:15:41 dams Exp $
+
+*libconf-0.39.15 (08 May 2005)
+
+  08 May 2005; <dams@gentoo.org> +libconf-0.39.15.ebuild:
+  version bump
 
 *libconf-0.39.14 (07 May 2005)
 
