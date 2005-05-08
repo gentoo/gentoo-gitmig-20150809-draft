@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 19e2730098ca5395a35796629412ad23 eclectic-0.9.1.ebuild 996
-MD5 9a62f317c0ea253958d00d743c9ed2f3 ChangeLog 350
+MD5 3a7da5e7c6d576686030a73e622dd986 eclectic-0.9.2.ebuild 849
+MD5 0fca1fd972edcf75839824a3eaaa498f ChangeLog 497
 MD5 75a24622ebfeeb52a3ab749d648e203b metadata.xml 227
-MD5 1af62ea0480a2d7a06b479a80219ab16 files/digest-eclectic-0.9.1 66
+MD5 482b5e3fdc1b2118142ec689c872588c files/digest-eclectic-0.9.2 66
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCfXIoEZCkKN40op4RAsOwAKDDm65cWJtUnWU5K+9iVSO880jqvgCcD1Bx
-lDb7NVa39UxjD0o8zGOA9TM=
-=GqjT
+iD8DBQFCflmqEZCkKN40op4RAhZ6AJ9p3ADySyTaMoQckaxtuF0TVBFvcQCeM8CH
+iaae+SSUjwzChOqQ+wHMzFE=
+=YtIp
 -----END PGP SIGNATURE-----
