@@ -1,7 +1,17 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 95435e3570ffe12188b57fa25792ff6b aewm++-1.0.22.ebuild 641
-MD5 65c0b57d8fbd7684afaffffdc59ce8e9 aewm++-1.0.24.ebuild 725
-MD5 8f0a98036fb7cf5a9e418881533b80e1 ChangeLog 910
+MD5 e654002a9feb564748e308bc0c7686d8 aewm++-1.0.24.ebuild 721
+MD5 e9f3fba2cec417204b42968109ba236a ChangeLog 909
 MD5 e6947c959196876d1192553a30343522 metadata.xml 378
 MD5 a0b78e5966e37ff6486a378446e92602 files/digest-aewm++-1.0.22 65
 MD5 22ae4dfeaf792eeab219e40b773e7bf8 files/digest-aewm++-1.0.24 65
 MD5 946a878c80fa1dcb5179316f2777de7b files/gcc-3.4.patch 329
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCfivh2G5bA0cA/ScRAizWAKCCp6a/+df06QXWWPrKpkziVdLiHgCg7gIQ
+6Q0QKZ7YRlSOhYa1b+pMS0M=
+=PVEB
+-----END PGP SIGNATURE-----

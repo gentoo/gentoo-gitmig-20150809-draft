@@ -1,7 +1,10 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 287288130d5926f4a5d4e9b455056e0e blackbox-0.65.0-r4.ebuild 1089
-MD5 ada90c9c99b4656243de5ee86940d187 blackbox-0.70.0.ebuild 1172
+MD5 69c37cff7c73acd580bbd7b77c5d73ef blackbox-0.70.0.ebuild 1171
 MD5 5102f22f6b5846e5cbfd3e2310c5e5be blackbox-0.65.0-r3.ebuild 1041
-MD5 ca15ec17f981c5dff7b42642c9174190 ChangeLog 6661
+MD5 b6e517161f49e5f1365631042d718e9e ChangeLog 6660
 MD5 f08ee46f534b31a6aeb54f5a129e3842 metadata.xml 409
 MD5 c57a8dbbd253deec063d772021065169 files/digest-blackbox-0.70.0 68
 MD5 7dc8c76692461cd5acad10bef25ed108 files/blackbox-0.65.0-mousewheel_focus-workspace.patch 12929
@@ -11,3 +14,10 @@ MD5 144d82741971ed0b95a2bbb6c8f11dd5 files/blackbox.desktop 143
 MD5 366397f56a481c78e646748c12bda976 files/digest-blackbox-0.65.0-r3 67
 MD5 366397f56a481c78e646748c12bda976 files/digest-blackbox-0.65.0-r4 67
 MD5 d3a006919ef6641fd6e9326d741acb49 files/blackbox-gcc.patch 1115
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCfi242G5bA0cA/ScRAgRbAKCxfBR244R3IE2ulsWpFQ3z4l5BagCZATg0
++zZVyAVJY4GFg0EGkU6Epag=
+=3jBR
+-----END PGP SIGNATURE-----

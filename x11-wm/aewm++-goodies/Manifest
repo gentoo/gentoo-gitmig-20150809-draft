@@ -1,5 +1,15 @@
-MD5 77cc135a4f81a577c51e90f13c9a3140 aewm++-goodies-1.0.ebuild 929
-MD5 f6b0984a5f40599e1525d5de8b4ba5c1 ChangeLog 718
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 06ef34d8aa10f10832671d881cdcc85f aewm++-goodies-1.0.ebuild 926
+MD5 2abebfde9efa93cc945bca7b0b2cf386 ChangeLog 715
 MD5 1b1b80021822585d8dbfbbe2cdbde62e metadata.xml 395
 MD5 e9d990dafb164f214da2cad9563f5579 files/digest-aewm++-goodies-1.0 70
 MD5 c72a6ef4c8e075663a670c412947b7c7 files/aewm++-goodies-gcc3-gentoo.patch 2878
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCfiwq2G5bA0cA/ScRAkA8AKCRfs6DsEolvQ9hjyy3QczNpkK8FACaApiu
+lV6f6NEw0e4WE/63Bgwg+/A=
+=++5b
+-----END PGP SIGNATURE-----
