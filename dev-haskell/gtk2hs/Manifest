@@ -1,4 +1,6 @@
-MD5 f30d4d3c20e28f4532c6dfc8097eed62 .ChangeLog.swp 12288
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 ff647f8a6baf0b0d28d61438722a1e4b gtk2hs-0.9.7.ebuild 2864
 MD5 789207cdd739886542144a970d8e7698 ChangeLog 1423
 MD5 5cf11c08544b065d0144e11273f0000d metadata.xml 223
@@ -6,3 +8,10 @@ MD5 785d6c4be9c0d72fcc6f890a83cf601d gtk2hs-0.9.6-r1.ebuild 2698
 MD5 690f4192d427c43531d990e34ff0ad0b files/gtk2hs-0.9.7-ghc64.patch.gz 6986
 MD5 6f7aca1981bfbd6384c83cea70a1e20c files/digest-gtk2hs-0.9.7 64
 MD5 96674cbaf4f6bddf1517166b6e6f13a5 files/digest-gtk2hs-0.9.6-r1 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCflqGI1lqEGTUzyQRAhRPAJ9sj6747TW+11qgGjCex8qyObgjJQCg1PqE
+Y50NuV1U3Ezia32CLDtYtig=
+=5aOs
+-----END PGP SIGNATURE-----
