@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/ppp
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.106 2005/05/08 14:07:40 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.107 2005/05/08 14:45:44 tove Exp $
+
+  08 May 2005; Torsten Veller <tove@gentoo.org> ppp-2.4.3-r3.ebuild:
+  using toolchain-funcs
 
 *ppp-2.4.3-r3 (08 May 2005)
 

@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.3-r3.ebuild,v 1.1 2005/05/08 14:07:41 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.3-r3.ebuild,v 1.2 2005/05/08 14:45:44 tove Exp $
 
-inherit eutils gnuconfig flag-o-matic
+inherit eutils flag-o-matic toolchain-funcs
 
 DESCRIPTION="Point-to-Point Protocol (PPP)"
 HOMEPAGE="http://www.samba.org/ppp"
@@ -70,12 +70,14 @@ src_unpack() {
 		sed -i "s/-O2/${CFLAGS} -fPIC/" ${S}/pppd/plugins/dhcp/Makefile.linux
 		epatch ${FILESDIR}/ppp-sys_error_to_strerror.patch || die
 	}
+
+	find ${S} -type f -name Makefile.linux \
+		-exec sed -i -e '/^CC[[:space:]]*=/d' {} \;
 }
 
 src_compile() {
-	#export WANT_AUTOCONF=2.1
-	#gnuconfig_update
-	# compile radius better than their makefile does
+	export CC="$(tc-getCC)"
+	export AR="$(tc-getAR)"
 	append-ldflags -Wl,-z,now
 	econf || die "configuration failed"
 	emake COPTS="${CFLAGS}" || die "compile failed"
