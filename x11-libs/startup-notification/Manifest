@@ -2,10 +2,10 @@
 Hash: SHA1
 
 MD5 8dd11f34f3d6ab048febaa26a731a438 startup-notification-0.6.ebuild 724
-MD5 167ee2ba1a11028126cba27e3cffa547 startup-notification-0.8.ebuild 661
+MD5 feee918acc28a0110347daf2582abd98 startup-notification-0.8.ebuild 657
 MD5 f77b0d833438ec55b12a076b2a16a223 startup-notification-0.5.ebuild 746
 MD5 73bf667419819dfeeb326d8ef0e077c9 startup-notification-0.7.ebuild 638
-MD5 525a6f8ebecf36eb4445f0fa900f77bb ChangeLog 4325
+MD5 acf07e1b0f552b71d368e7c3274cf7fb ChangeLog 4426
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 3b9bcf62731bd8eda8cada7164f49162 files/digest-startup-notification-0.5 76
 MD5 4f1a2fff8f80e9d7f7f20da60251f36c files/digest-startup-notification-0.6 77
@@ -14,7 +14,7 @@ MD5 f78d0a1f0a150e24879f2979bd6e2059 files/digest-startup-notification-0.8 77
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCcr7YKRy60XGEcJIRAnCxAJ9RUrg66Jn5+OGbl+Pc+u/6tzQdZwCeIzhA
-0/077LKKoRpBiZg1HRV3WPo=
-=KkNo
+iD8DBQFCfiGH2G5bA0cA/ScRAiAvAJ9cGGGp75pgHXf8w4hFw4i8Kxv9hgCgqBmR
+B6qI4nd+wMiEgjtBlgiJ5uU=
+=Kn5T
 -----END PGP SIGNATURE-----
