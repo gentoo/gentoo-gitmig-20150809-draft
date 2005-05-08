@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gnome-system-tools/gnome-system-tools-1.2.0.ebuild,v 1.6 2005/05/06 11:38:07 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gnome-system-tools/gnome-system-tools-1.2.0.ebuild,v 1.7 2005/05/08 22:46:29 agriffis Exp $
 
 inherit gnome2 eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnome.org/projects/gst/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~ppc ~x86 ~amd64 ~sparc ~ppc64"
+KEYWORDS="~ppc ~x86 ~amd64 ~sparc ~ppc64 ~ia64"
 IUSE="nfs samba"
 
 RDEPEND="net-misc/openssh
