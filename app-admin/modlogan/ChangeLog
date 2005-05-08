@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/modlogan
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/modlogan/ChangeLog,v 1.26 2005/04/18 16:45:24 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/modlogan/ChangeLog,v 1.27 2005/05/08 21:54:30 agriffis Exp $
+
+  08 May 2005; Aron Griffis <agriffis@gentoo.org> modlogan-0.8.13.ebuild:
+  stable on ia64
 
   18 Apr 2005; Michael Hanselmann <hansmi@gentoo.org>
   modlogan-0.8.13.ebuild:
