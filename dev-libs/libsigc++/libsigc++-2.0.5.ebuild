@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigc++/libsigc++-2.0.5.ebuild,v 1.11 2005/05/03 11:53:44 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigc++/libsigc++-2.0.5.ebuild,v 1.12 2005/05/08 01:47:06 cryos Exp $
 
-inherit eutils
+inherit eutils flag-o-matic
 
 DESCRIPTION="Typesafe callback system for standard C++"
 HOMEPAGE="http://libsigc.sourceforge.net/"
@@ -21,6 +21,7 @@ src_unpack() {
 	epatch ${FILESDIR}/gcc-3.4.patch
 }
 src_compile() {
+	filter-flags -fno-exceptions
 	local myconf
 	use debug \
 		&& myconf="--enable-debug=yes" \

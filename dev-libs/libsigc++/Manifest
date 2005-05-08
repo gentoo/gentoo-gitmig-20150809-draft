@@ -4,9 +4,9 @@ Hash: SHA1
 MD5 e48c7bb1105948b286784f27e30fa66d libsigc++-1.2.3.ebuild 1041
 MD5 3e93e1ff1a6bb2b55765ce141b599548 libsigc++-1.2.5.ebuild 1474
 MD5 401a2c3b3020ab9d031f9ea40fe45045 libsigc++-1.2.2.ebuild 1042
-MD5 d29c023999cc94d7c8b01d41f8bcaf84 libsigc++-2.0.11.ebuild 1256
-MD5 82e180f8266a35cf275e3af98215d89a ChangeLog 6593
-MD5 f3eadc6267773e4c6958087624247ad8 libsigc++-2.0.5.ebuild 1405
+MD5 5c6a7c61aaf93494b658851913613980 libsigc++-2.0.11.ebuild 1285
+MD5 6f3cad3d815aa26b7958c4d066a79203 ChangeLog 6788
+MD5 6b17a879fe86bc2b447e8d3c6489f0c6 libsigc++-2.0.5.ebuild 1446
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 09db05165ade799adc26846ff7c3eb5f libsigc++-1.0.4-r2.ebuild 1568
 MD5 1dafc199015856931c135a0a15a757c1 files/digest-libsigc++-1.2.2 67
@@ -19,7 +19,7 @@ MD5 628fd3eec229a5ec7bdf9751004f9b46 files/digest-libsigc++-1.0.4-r2 67
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCd2ZcEZCkKN40op4RAkA9AJ4gbpyvYCA0F8yUFHaEYgaHORFGVgCfeN3l
-ZrWfjG6ayFDiwuzsDg9PqBk=
-=WpmK
+iD8DBQFCfW/BntT9W3vfTuoRAnvaAKCDd69pI4g+E6syXr+OiepzmsZS+QCaAl3F
+bcIZeKk5P4z+7AiXRJ9N9k8=
+=vDLz
 -----END PGP SIGNATURE-----
