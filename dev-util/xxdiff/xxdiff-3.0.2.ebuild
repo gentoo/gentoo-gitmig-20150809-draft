@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/xxdiff/xxdiff-3.0.2.ebuild,v 1.12 2004/10/10 00:24:02 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/xxdiff/xxdiff-3.0.2.ebuild,v 1.13 2005/05/08 22:31:42 agriffis Exp $
 
 inherit eutils
 
@@ -17,7 +17,7 @@ RDEPEND="sys-apps/diffutils"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ia64 alpha ~ppc ~amd64 ~sparc"
+KEYWORDS="alpha ~amd64 ia64 ~ppc ~sparc ~x86"
 IUSE="kde"
 
 src_unpack()
