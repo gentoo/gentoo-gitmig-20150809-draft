@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/valknut/valknut-0.3.7.ebuild,v 1.1 2005/04/25 20:35:40 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/valknut/valknut-0.3.7.ebuild,v 1.2 2005/05/08 09:53:06 greg_g Exp $
 
-inherit kde
+inherit kde-functions
 
 DESCRIPTION="Qt based client for DirectConnect"
 HOMEPAGE="http://dcgui.berlios.de/"
@@ -15,17 +15,15 @@ IUSE="ssl"
 
 DEPEND=">=dev-libs/libxml2-2.4.22
 	~net-p2p/dclib-${PV}
-	ssl? ( dev-libs/openssl )
-	>=x11-libs/qt-3"
+	ssl? ( dev-libs/openssl )"
+
+need-qt 3
 
 src_compile() {
-	addwrite "$QTDIR/etc/settings"
-	addpredict "$QTDIR/etc/settings"
-
 	econf \
 		`use_with ssl` \
 		--with-libdc=/usr \
-		--with-qt-dir=/usr/qt/3 \
+		--with-qt-dir=${QTDIR} \
 		|| die
 	emake || die
 }

@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/valknut
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/valknut/ChangeLog,v 1.12 2005/05/07 11:49:20 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/valknut/ChangeLog,v 1.13 2005/05/08 09:53:06 greg_g Exp $
+
+  08 May 2005; Gregorio Guidi <greg_g@gentoo.org> valknut-0.3.7.ebuild:
+  Fix usage of kde eclasses.
 
   07 May 2005; David Holm <dholm@gentoo.org> valknut-0.3.5.ebuild:
   Stable on ppc.
