@@ -5,11 +5,11 @@ MD5 61130fde8f9beb2e2ab4b9da8fb150d6 gtkmm-2.2.11.ebuild 764
 MD5 15dce54c645dfb25774b946e53309cf4 gtkmm-2.6.2.ebuild 636
 MD5 a05b77394de48651646adb328cf764db gtkmm-2.4.8.ebuild 621
 MD5 7da18e5d2b0e2cd0d521b0eb3a521f9e gtkmm-2.2.10.ebuild 764
-MD5 8c86d94ef9058d5358cd1c6e7ef63e98 gtkmm-2.4.11.ebuild 635
+MD5 3b2d3ea084e41d5b36e377d4932936aa gtkmm-2.4.11.ebuild 633
 MD5 9cf6c1ebf6f3f544efe3f57344dade2a gtkmm-2.2.12.ebuild 767
 MD5 286b665f00ff46b5b7309d4754a063e9 gtkmm-1.2.9-r2.ebuild 1288
 MD5 a0fac3c5daca5845f06dcf898b72d016 gtkmm-2.2.8.ebuild 699
-MD5 37dad80a752e5daaf68d70d351958187 ChangeLog 10118
+MD5 f19f9b75caca7183a33c1abb86ccb6dd ChangeLog 10226
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 f824eb6aaffd23a260a89d01e9c0a4e6 files/digest-gtkmm-2.2.10 66
 MD5 70de761424783ad1859efffddb40b848 files/digest-gtkmm-2.2.11 66
@@ -24,7 +24,7 @@ MD5 e94dace49157531976d52e48b24e620d files/gtkmm-1.2.9-gcc3.4-gentoo.patch 2197
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCd7lUntT9W3vfTuoRAuRKAKCDcGG4f5mjVoFdY1s9oAJRjjXXFwCgtMgr
-8m8KJ92Y/WPgHrKX3YFDR0M=
-=uJnx
+iD8DBQFCfXG9ntT9W3vfTuoRAkr5AJ4iy4/WwTClG3/wxBNv3LWBhJr4CgCgsiMg
+ZnVhlvPIxRrfw78GG6n7d44=
+=vsfH
 -----END PGP SIGNATURE-----
