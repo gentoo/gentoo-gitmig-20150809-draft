@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/libgnomedb
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgnomedb/ChangeLog,v 1.28 2005/04/15 18:20:12 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgnomedb/ChangeLog,v 1.29 2005/05/08 20:42:02 agriffis Exp $
+
+  08 May 2005; Aron Griffis <agriffis@gentoo.org> libgnomedb-1.0.4.ebuild:
+  stable on ia64
 
   15 Apr 2005; Simon Stelling <blubb@gentoo.org> libgnomedb-1.0.4.ebuild:
   stable on amd64
