@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Email-Find
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-Find/ChangeLog,v 1.7 2005/05/08 02:45:01 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-Find/ChangeLog,v 1.8 2005/05/08 11:35:53 nigoro Exp $
+
+  08 May 2005; Yuta SATOH <nigoro@gentoo.org> Email-Find-0.09.ebuild:
+  added ~ppc64
 
   07 May 2005; Aron Griffis <agriffis@gentoo.org> Email-Find-0.09.ebuild:
   stable on ia64
