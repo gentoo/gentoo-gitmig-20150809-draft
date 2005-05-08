@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/MailTools
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MailTools/ChangeLog,v 1.28 2005/05/01 18:08:53 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MailTools/ChangeLog,v 1.29 2005/05/08 02:41:17 agriffis Exp $
+
+  08 May 2005; Aron Griffis <agriffis@gentoo.org> MailTools-1.65.ebuild:
+  stable on ia64
 
   01 May 2005; Tom Martin <slarti@gentoo.org> MailTools-1.65.ebuild:
   Stable on amd64.
