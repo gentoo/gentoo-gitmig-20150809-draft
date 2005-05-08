@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd-svn/mpd-svn-20050408.ebuild,v 1.1 2005/04/07 23:56:06 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd-svn/mpd-svn-20050408.ebuild,v 1.2 2005/05/08 01:28:55 ticho Exp $
 
 IUSE="oggvorbis mad aac audiofile ipv6 flac mikmod alsa unicode icecast ao"
 
@@ -56,6 +56,7 @@ src_install() {
 	dodir /var/run/mpd
 	fowners mpd:audio /var/run/mpd
 	fperms 750 /var/run/mpd
+	keepdir /var/run/mpd
 
 	emake install DESTDIR=${D} || die
 	rm -rf ${D}/usr/share/doc/mpd/

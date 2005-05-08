@@ -1,26 +1,26 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
+MD5 e7f3e335924e2b9efad414e4f269076d mpd-svn-20041207.ebuild 3111
+MD5 a949f2738fb9b8c36a256ac9531fda4d mpd-svn-20050312.ebuild 3738
+MD5 fd2c2dd25dc00071a4f48bc07eb8fca4 mpd-svn-20050308.ebuild 3497
+MD5 02fed60e83a2a4fa97ffb270283f346b mpd-svn-20050131.ebuild 3196
+MD5 d11cec98d13ab49a23ef8a4c99f41558 mpd-svn-20050328.ebuild 3738
+MD5 ae8a4ba48ef1f24a3257efe8c47ea820 mpd-svn-20050408.ebuild 3827
 MD5 8a3cabba8c61c811df59e84a2c3a223a ChangeLog 2285
 MD5 28ed49040b6ddc36def2c2a536394b37 metadata.xml 251
-MD5 d11cec98d13ab49a23ef8a4c99f41558 mpd-svn-20050328.ebuild 3738
-MD5 a949f2738fb9b8c36a256ac9531fda4d mpd-svn-20050312.ebuild 3738
-MD5 02fed60e83a2a4fa97ffb270283f346b mpd-svn-20050131.ebuild 3196
-MD5 e7f3e335924e2b9efad414e4f269076d mpd-svn-20041207.ebuild 3111
-MD5 985ae3e466228b71b4f583997c0ff6a9 mpd-svn-20050408.ebuild 3805
-MD5 fd2c2dd25dc00071a4f48bc07eb8fca4 mpd-svn-20050308.ebuild 3497
-MD5 22e3fa9684ff58f754a41fb785c8b32a files/digest-mpd-svn-20050131 69
-MD5 02158d2f5c411a78b65c7f692fb81405 files/mpd.pidfile.rc6 717
 MD5 4e6ca0e3263baccca8dbe560cb7304da files/mpd.rc6 881
-MD5 9d06583bf2f3ca00fa9a5ae6c01cab9b files/digest-mpd-svn-20050312 69
-MD5 c5dbcf547c18db7bc2f46dfcc877190b files/digest-mpd-svn-20050408 69
-MD5 51916f6bb6ff487021c4c26f76a1d8e7 files/digest-mpd-svn-20050308 69
-MD5 e236710f9d5c01c3f97b53f1c2013a19 files/digest-mpd-svn-20050328 69
 MD5 a7cc5b5be644089b25d206fe9b71ebd1 files/digest-mpd-svn-20041207 69
+MD5 22e3fa9684ff58f754a41fb785c8b32a files/digest-mpd-svn-20050131 69
+MD5 51916f6bb6ff487021c4c26f76a1d8e7 files/digest-mpd-svn-20050308 69
+MD5 9d06583bf2f3ca00fa9a5ae6c01cab9b files/digest-mpd-svn-20050312 69
+MD5 e236710f9d5c01c3f97b53f1c2013a19 files/digest-mpd-svn-20050328 69
+MD5 c5dbcf547c18db7bc2f46dfcc877190b files/digest-mpd-svn-20050408 69
+MD5 02158d2f5c411a78b65c7f692fb81405 files/mpd.pidfile.rc6 717
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCVcikQlM6RnzZP+IRAvG2AJ4ponEolQURonPuIff1xBpRlLVZzQCfdaE0
-dU8aTjOuX7C5shD3SRI/buc=
-=cvl0
+iD8DBQFCfWtjQlM6RnzZP+IRAjVxAJ9QNbekcSCVy0ysk9h38NhcYk3qTwCeIWO2
+BiIWc02kGdihNf0HHn1TDOA=
+=p2i5
 -----END PGP SIGNATURE-----
