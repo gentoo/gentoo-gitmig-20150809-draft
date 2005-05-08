@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-8.0.2-r2.ebuild,v 1.1 2005/05/08 20:39:27 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-8.0.2-r2.ebuild,v 1.2 2005/05/08 21:26:59 nakano Exp $
 
 inherit eutils gnuconfig flag-o-matic multilib toolchain-funcs
 
@@ -37,7 +37,6 @@ DEPEND="virtual/libc
 	kerberos? ( virtual/krb5 )"
 RDEPEND="virtual/libc
 	=dev-db/libpq-4.0
-	app-admin/sudo
 	zlib? ( >=sys-libs/zlib-1.1.3 )
 	tcltk? ( >=dev-lang/tcl-8 )
 	perl? ( >=dev-lang/perl-5.6.1-r2 )
@@ -214,7 +213,7 @@ pkg_config() {
 			eerror "Temporary setting this value to ${SEMMNI_MIN} while creating the initial database."
 			echo ${SEM} ${SEMMNI_MIN} > /proc/sys/kernel/sem
 		fi
-		sudo -u postgres /usr/bin/initdb --pgdata ${PG_DIR}/data
+		su postgres -c "/usr/bin/initdb --pgdata ${PG_DIR}/data"
 
 		if [ ! `sysctl -n kernel.sem | cut -f4` -eq ${SEMMNI} ] ; then
 			echo ${SEM} ${SEMMNI} > /proc/sys/kernel/sem
