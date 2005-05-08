@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/golem
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/golem/ChangeLog,v 1.10 2004/06/28 23:48:54 agriffis Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/golem/ChangeLog,v 1.11 2005/05/08 15:44:47 herbs Exp $
+
+  08 May 2005; Herbie Hopkins <herbs@gentoo.org> golem-0.0.5-r1.ebuild:
+  Build shared libs with -fPIC, stable on amd64.
 
   28 Jun 2004; Aron Griffis <agriffis@gentoo.org> golem-0.0.5-r1.ebuild:
   glibc -> libc
