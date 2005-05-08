@@ -1,6 +1,6 @@
 diff -ur -x '*~' xvidcore-1.1.0-beta2/build/generic/configure.in xvidcore-1.1.0-beta2-fixaltivec/build/generic/configure.in
 --- xvidcore-1.1.0-beta2/build/generic/configure.in	2005-04-03 22:39:45.000000000 +0200
-+++ xvidcore-1.1.0-beta2-fixaltivec/build/generic/configure.in	2005-05-08 14:28:08.645473320 +0200
++++ xvidcore-1.1.0-beta2-fixaltivec/build/generic/configure.in	2005-05-08 14:38:42.920048928 +0200
 @@ -426,8 +426,18 @@
  dnl * The vector definition is handled in portab.h thx to
  dnl   HAVE_PARENTHESES/BRACES_ALTIVEC_DECL
@@ -13,11 +13,11 @@ diff -ur -x '*~' xvidcore-1.1.0-beta2/build/generic/configure.in xvidcore-1.1.0-
 -if test "$ARCHITECTURE" = "PPC" ; then
 +AC_MSG_CHECKING([if altivec support has to be activated])
 +
-+if test "$ARCHITECTURE" = "PPC" && test "$want_altivec" = no; then
-+   AC_MSG_RESULT([no]) dnl if altivec support has to be activated
++if test "$ARCHITECTURE" = "PPC" && test "$want_altivec" = "no"; then
++   AC_MSG_RESULT([no])
 +   ARCHITECTURE="GENERIC"
 +elif test "$ARCHITECTURE" = "PPC"; then
-+   AC_MSG_RESULT([yes]) dnl if altivec support has to be activated
++   AC_MSG_RESULT([yes])
     AS="\$(CC)"
     AFLAGS=""
     ASSEMBLY_EXTENSION=".s"
@@ -26,7 +26,7 @@ diff -ur -x '*~' xvidcore-1.1.0-beta2/build/generic/configure.in xvidcore-1.1.0-
  
     rm -f conftest.*
 +else
-+   AC_MSG_RESULT([no]) dnl if altivec support has to be activated
++   AC_MSG_RESULT([no])
  fi
  
  dnl
