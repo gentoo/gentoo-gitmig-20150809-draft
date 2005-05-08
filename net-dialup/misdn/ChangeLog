@@ -1,6 +1,11 @@
 # ChangeLog for net-dialup/misdn
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/misdn/ChangeLog,v 1.1 2005/04/24 13:37:58 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/misdn/ChangeLog,v 1.2 2005/05/08 21:10:40 genstef Exp $
+
+*misdn-20050508 (08 May 2005)
+
+  08 May 2005; Stefan Schweizer <genstef@gentoo.org> +misdn-20050508.ebuild:
+  version bump thanks to sbriesen
 
 *misdn-20050409 (24 Apr 2005)
 
