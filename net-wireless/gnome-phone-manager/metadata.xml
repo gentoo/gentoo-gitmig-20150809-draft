@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>mobile</herd>
+<herd>net-dialup</herd>
 <herd>gnome</herd>
 <longdescription>Phone Manager is a program created to allow you 
 to control aspects of your mobile phone from your GNOME 2 desktop.</longdescription>
