@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3932 2005/05/08 17:33:49 vanquirius Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3933 2005/05/08 17:59:51 cardoe Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ##
+
+# Doug Goldstein <cardoe@gentoo.org> (08 May 2005)
+# Masked cause it needs to get out of the tree
+# it stanks so bad it makes me want to gag
+gnome-extra/power-applet
 
 # Marcelo Goes <vanquirius@gentoo.org> (08 May 2005)
 # Masked for testing
