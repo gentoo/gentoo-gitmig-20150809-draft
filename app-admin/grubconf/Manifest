@@ -1,9 +1,19 @@
-MD5 2fd25fd50109f2ee291b664067ac968e ChangeLog 1357
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 13202138e485c4e8a532180f63960f58 grubconf-0.4.ebuild 613
-MD5 3b084a63cafd2133e81d590fc1d17ffd grubconf-0.5.1.ebuild 808
+MD5 30a92c8d7e6cf5a9e243d80212233afd grubconf-0.5.1.ebuild 808
 MD5 51ad77bc249bda8e8eb86d062595e118 grubconf-0.5.ebuild 613
+MD5 c2bdcffc6f9792cafe9479b41f00d6df ChangeLog 1449
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 08c6011d144ab2883d563772631cfd0d files/Makefile.in.in.patch 418
 MD5 814692e187e763f982ff196aa8b2089a files/digest-grubconf-0.4 64
 MD5 8e834ff21d70df2e213ad7ce43570d43 files/digest-grubconf-0.5 64
 MD5 19a3d6a86f2314d2064b9cf32a56c8f4 files/digest-grubconf-0.5.1 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCfqUt2G5bA0cA/ScRAupxAJwMVGgpv4iLHWqLef993VnvOWb5fQCghNrD
+zZPXHpQ9AvGl0fPLgaJEqHc=
+=TVaz
+-----END PGP SIGNATURE-----

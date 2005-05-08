@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/grubconf/grubconf-0.5.1.ebuild,v 1.9 2005/04/23 21:30:08 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/grubconf/grubconf-0.5.1.ebuild,v 1.10 2005/05/08 23:47:10 herbs Exp $
 
 inherit gnome2 eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/grubconf/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~amd64 -ppc"
+KEYWORDS="x86 amd64 -ppc"
 IUSE=""
 
 RDEPEND=">=app-text/scrollkeeper-0.3.11
