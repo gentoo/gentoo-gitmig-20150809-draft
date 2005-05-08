@@ -5,8 +5,9 @@ MD5 7fabd0811dbf88750b8a7cd65f1b7cb2 ppp-2.4.3-r2.ebuild 5673
 MD5 f498fcc5704e842bdd3a13e71626f676 ppp-2.4.3.ebuild 5712
 MD5 c4e90e104aa550d26d90ee354e7a2136 ppp-2.4.1-r14.ebuild 4702
 MD5 558237b810ac812265ad87bb956270de ppp-2.4.3-r1.ebuild 5799
-MD5 c85c44da12f935460b715d9a45746851 ChangeLog 17993
-MD5 ec2f84816306825d125d0c01bd86758d metadata.xml 163
+MD5 523121d79b628d22b2b17b8d589b54df ppp-2.4.3-r3.ebuild 5907
+MD5 ff05a186ddf5cdcef66e3dde407ed813 ChangeLog 18180
+MD5 e6fdfdc4317d7fe324c50bd0477ca3f8 metadata.xml 295
 MD5 4dce8b15c7a47d9a225b1047fda9870e ppp-2.4.2-r10.ebuild 5899
 MD5 4e62cdeb360ca0a22becbd2deb6f2dac files/pon 957
 MD5 86cdaf133f7a79fb464f02d83afc7734 files/plog 146
@@ -24,6 +25,7 @@ MD5 8368eb79ad4618c3c6753801b5c4c689 files/gcc3.3-multiline.patch 1673
 MD5 01ed8667e00028ff1c6a8ac4a0d7e1dc files/digest-ppp-2.4.3 194
 MD5 01ed8667e00028ff1c6a8ac4a0d7e1dc files/digest-ppp-2.4.3-r1 194
 MD5 3e67d7c036e1e23ae4aa96ad043cb3e8 files/digest-ppp-2.4.3-r2 195
+MD5 3e67d7c036e1e23ae4aa96ad043cb3e8 files/digest-ppp-2.4.3-r3 195
 MD5 5d83af7b897082a0b1ecd70a2cc2a0c7 files/modules.ppp 268
 MD5 5a554e2a04b9e11bb5bea839213bf97c files/ip-down 931
 MD5 f0ad3e0c62aec1771536caf00e28b9c6 files/pppoe.html 7605
@@ -50,12 +52,13 @@ MD5 93217f52392558608bbf223aa22a483d files/2.4.3/killaddr-smarter.patch 4573
 MD5 fa2a5b8df496922fa2fb592115953b6b files/2.4.3/options-pppoe 53
 MD5 561a149f78198208724ab4527837eb8c files/2.4.3/mpls.patch 10470
 MD5 d166dfb51a6e7fa6a5a05120817dbccd files/2.4.3/fixes-from-upstream-cvs.patch 2862
+MD5 1fd88dda7f4996799c69a9501d42cc23 files/2.4.3/README.mpls 530
 MD5 5d83af7b897082a0b1ecd70a2cc2a0c7 files/2.4.3/modules.ppp 268
 MD5 f0ad3e0c62aec1771536caf00e28b9c6 files/2.4.3/pppoe.html 7605
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCenuujiC39V7gKu0RAjr6AKDHnHa/FRL6PpLnV5eIB+dW9T3VJgCgj0I2
-7yEogJwahT4v46/OCZGH5fo=
-=sRjQ
+iD8DBQFCfh1IjiC39V7gKu0RAm7JAKCVOjROlMmqg78fntuIHfyTsqlkmQCdGk2M
+VDK/+dG2FgdpGKTV2/1NmWs=
+=FmaV
 -----END PGP SIGNATURE-----
