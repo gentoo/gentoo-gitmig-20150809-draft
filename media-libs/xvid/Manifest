@@ -21,5 +21,5 @@ MD5 a508fb244e68f01cbf06e590abbee04e files/digest-xvid-1.0.3 67
 MD5 b2f1f286ed22acfa893dae382f47fee2 files/xvid-1.0.1-64bit-clean.patch 1723
 MD5 666fc1f16bf35b48d500b495509b07b2 files/xvid-1.0-ia64.patch 264
 MD5 0d3933d54c7cd6f3b8a0ff039c73d2de files/digest-xvid-1.1.0_beta2 73
-MD5 d9759861a1f0ba2c9238f987d4e261f5 files/xvid-1.1.0_beta2-altivec.patch 800
+MD5 6bafa47c81095fa8a7190a8973c9318a files/xvid-1.1.0_beta2-altivec.patch 1197
 MD5 0d3933d54c7cd6f3b8a0ff039c73d2de files/digest-xvid-1.1.0_beta2-r1 73
