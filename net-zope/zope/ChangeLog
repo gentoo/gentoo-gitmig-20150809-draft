@@ -1,6 +1,13 @@
 # ChangeLog for net-zope/zope
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/ChangeLog,v 1.65 2005/04/21 14:23:24 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/ChangeLog,v 1.66 2005/05/08 20:03:47 radek Exp $
+
+*zope-2.7.6 (08 May 2005)
+
+  08 May 2005; Radoslaw Stachowiak <radek@gentoo.org>
+  +files/2.7.6/i18n-1.0.0.patch, zope-2.7.5.ebuild, +zope-2.7.6.ebuild:
+  2.7.5 stable on x86
+  version bump
 
   21 Apr 2005; Simon Stelling <blubb@gentoo.org> zope-2.7.2-r2.ebuild:
   stable on amd64
@@ -149,7 +156,7 @@
   zope-2.5.1.ebuild:
   QA - fix use invocation
 
-  24 May 2004; Bryan Ăstergaard <kloeri@gentoo.org> zope-2.6.4-r1.ebuild:
+  24 May 2004; Bryan ÄÂstergaard <kloeri@gentoo.org> zope-2.6.4-r1.ebuild:
   Keyworded ~alpha, requested in bug #51550.
 
   11 Apr 2004; Jason Wever <weeve@gentoo.org> zope-2.6.4-r1.ebuild:
