@@ -1,6 +1,13 @@
 # ChangeLog for mail-client/nail
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/nail/ChangeLog,v 1.23 2005/04/01 05:57:03 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/nail/ChangeLog,v 1.24 2005/05/08 20:21:32 ferdy Exp $
+
+*nail-11.22 (08 May 2005)
+
+  08 May 2005; Fernando J. Pereda <ferdy@gentoo.org> -nail-9.30.ebuild,
+  -nail-10.7.ebuild, -nail-10.8.ebuild, -nail-11.1.ebuild,
+  -nail-11.1-r1.ebuild, -nail-11.18.ebuild, +nail-11.22.ebuild:
+  Bump nail and clean out old ebuilds
 
   01 Apr 2005; Aron Griffis <agriffis@gentoo.org> nail-11.20.ebuild:
   stable on ia64
