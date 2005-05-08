@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/gcalctool
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gcalctool/ChangeLog,v 1.56 2005/05/06 11:59:40 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gcalctool/ChangeLog,v 1.57 2005/05/08 13:52:58 herbs Exp $
+
+  08 May 2005; Herbie Hopkins <herbs@gentoo.org> gcalctool-4.4.22.ebuild:
+  Stable on amd64.
 
   06 May 2005; Markus Rothe <corsair@gentoo.org> gcalctool-5.5.41.ebuild:
   Added ~ppc64 to KEYWORDS

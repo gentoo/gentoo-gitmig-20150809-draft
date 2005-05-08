@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/gnome-games
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/ChangeLog,v 1.103 2005/05/06 10:18:53 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/ChangeLog,v 1.104 2005/05/08 13:56:21 herbs Exp $
+
+  08 May 2005; Herbie Hopkins <herbs@gentoo.org> gnome-games-2.8.3.ebuild:
+  Stable on amd64.
 
   06 May 2005; Markus Rothe <corsair@gentoo.org> gnome-games-2.10.0.ebuild,
   gnome-games-2.10.1.ebuild:
