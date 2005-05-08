@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/amavisd-new-2.3.0.ebuild,v 1.4 2005/05/06 22:50:51 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/amavisd-new-2.3.0.ebuild,v 1.5 2005/05/08 09:03:31 ticho Exp $
 
 inherit eutils
 
@@ -165,8 +165,7 @@ pkg_postinst() {
 		einfo "@bypass_virus_checks_maps = (1); in /etc/amavisd.conf."
 	fi
 	echo
-	ewarn "You should set permissions for /etc/amavisd.conf to 640, and owner to"
-	ewarn "root:amavis manually, since portage is unable to modify these attributes"
-	ewarn "for existing files in protected directories, such as /etc."
-	ewarn "Sorry for the inconvenience."
+	ewarn "Adjusting permissions for /etc/amavisd.conf (0 for world, owner root:amavis)"
+	chmod o-rwx /etc/amavisd.conf
+	chown root:amavis /etc/amavisd.conf
 }

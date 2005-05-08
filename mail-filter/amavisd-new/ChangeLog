@@ -1,6 +1,11 @@
 # ChangeLog for mail-filter/amavisd-new
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/ChangeLog,v 1.28 2005/05/06 22:50:51 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/ChangeLog,v 1.29 2005/05/08 09:03:31 ticho Exp $
+
+  08 May 2005; Andrej Kacian <ticho@gentoo.org> amavisd-new-2.2.1-r2.ebuild,
+  amavisd-new-2.3.0.ebuild:
+  Added amavisd.conf permission/ownership change to pkg_postinst(), as
+  suggested by Marius Mauch <genone@gentoo.org>.
 
   06 May 2005; Andrej Kacian <ticho@gentoo.org> amavisd-new-2.2.1-r2.ebuild,
   amavisd-new-2.3.0.ebuild:
