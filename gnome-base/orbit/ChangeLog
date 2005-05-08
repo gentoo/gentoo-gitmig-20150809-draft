@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/orbit
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/orbit/ChangeLog,v 1.18 2005/04/28 09:06:47 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/orbit/ChangeLog,v 1.19 2005/05/08 13:54:17 herbs Exp $
+
+  08 May 2005; Herbie Hopkins <herbs@gentoo.org> orbit-2.12.1.ebuild:
+  Stable on amd64.
 
   28 Apr 2005; Bryan Østergaard <kloeri@gentoo.org> orbit-2.12.1.ebuild:
   Stable on alpha + ia64.

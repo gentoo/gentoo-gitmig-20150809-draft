@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/libbonoboui
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libbonoboui/ChangeLog,v 1.80 2005/04/27 20:37:44 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libbonoboui/ChangeLog,v 1.81 2005/05/08 13:55:17 herbs Exp $
+
+  08 May 2005; Herbie Hopkins <herbs@gentoo.org> libbonoboui-2.8.1.ebuild:
+  Stable on amd64.
 
   27 Apr 2005; Bryan Østergaard <kloeri@gentoo.org>
   libbonoboui-2.8.1.ebuild:
