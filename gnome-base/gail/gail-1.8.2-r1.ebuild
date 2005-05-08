@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gail/gail-1.8.2-r1.ebuild,v 1.5 2005/04/29 23:07:02 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gail/gail-1.8.2-r1.ebuild,v 1.6 2005/05/08 13:35:37 herbs Exp $
 
 inherit gnome2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://developer.gnome.org/projects/gap"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc alpha sparc ~hppa ~amd64 ia64 ~mips ~ppc64 ~arm"
+KEYWORDS="x86 ppc alpha sparc ~hppa amd64 ia64 ~mips ~ppc64 ~arm"
 IUSE="doc static"
 
 USE_DESTDIR="1"
