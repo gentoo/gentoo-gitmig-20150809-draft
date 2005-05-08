@@ -2,11 +2,11 @@
 Hash: SHA1
 
 MD5 fd508993ba497efbbe023f0b257528f5 ntp-4.2.0-r2.ebuild 3734
+MD5 dbfc76eb3a2153fa2a4baed98aeb2d76 ntp-4.2.0.20040617-r2.ebuild 4251
 MD5 9ceb922f98c6b88a28c7942e0eacfd75 ntp-4.2.0.20040617.ebuild 3989
 MD5 5ee4f3f57c18aad3ceece869d567c9c8 ntp-4.1.2.ebuild 3167
-MD5 648980148c9aecca80395b6065033df4 ChangeLog 8177
+MD5 03cb65a5d159014d2d77958ef4c7f9be ChangeLog 8472
 MD5 aa73d5edf312beeab44fa9d58a603ad4 metadata.xml 636
-MD5 912ba7835f9cdcf266a15ac2d51ecea8 ntp-4.2.0.20040617-r1.ebuild 4167
 MD5 b8fc232f85be1313aee4c5a6f0048ca7 files/ntp-client-4.1.2.rc 840
 MD5 5fc28af5c2a508eeb67a4d5d0ffab341 files/digest-ntp-4.2.0-r2 135
 MD5 83dde3b948b28c278d496252494c935f files/ntpd.confd 393
@@ -18,13 +18,14 @@ MD5 20c344cec35350fe17773665094b2e57 files/ntp-4.2.0-gcc4.patch 1607
 MD5 87951141777f50b2e4a2347a96f987b8 files/ntpd-4.1.2.rc 806
 MD5 047fe77e01bc9335b07bcc5d963d8683 files/4.1.2-droproot.patch 12672
 MD5 59c70b7499e588d6a24901a951c1bcd8 files/digest-ntp-4.2.0.20040617 166
+MD5 4404af9ccf7ecc7005c46dc43d9ae80a files/4.2.0.20040617-debug-fix.patch 430
 MD5 0ce27073d67a016693a77314b6bfd4f5 files/ntpd.rc 741
 MD5 2965cff99d89c28ae19c1a967f697777 files/ntp-client.rc 925
 MD5 5bd3924f5720b97837969ec4ec4d5e09 files/ntp.conf 1451
 MD5 abb390de7ada49ef21ae18598b5eddb2 files/4.2.0.20040617-errno-fix.patch 685
 MD5 d07dbc58315f577cc6d1dd8614f95cb1 files/4.2.0-ntpdate-quiet.patch 1117
 MD5 af48491e8d6820a3d8eba16a771e5c26 files/digest-ntp-4.1.2 129
-MD5 59c70b7499e588d6a24901a951c1bcd8 files/digest-ntp-4.2.0.20040617-r1 166
+MD5 59c70b7499e588d6a24901a951c1bcd8 files/digest-ntp-4.2.0.20040617-r2 166
 MD5 0c3a6df816f448a870e070797c22f72e files/4.2.0.20040617-hostname.patch 8476
 MD5 c51a9f2f2c85ab3bcdc54a1a9e3bedb6 files/4.2.0.20040617-ipv6-fixes.patch 2541
 MD5 4e13c1a5fa0fa54e3b65ec311dd7270a files/broadcastclient.patch 451
@@ -33,7 +34,7 @@ MD5 dded11ceec4b8f2c1b140341a357f507 files/linux-config-phone.patch 747
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCe6ItI1lqEGTUzyQRAp3bAKCqVgq/O7yNT2MJ3fOnpZ5nT/OJ9QCfcKuQ
-ts4rhitXilp4ZtPP2/vM7i4=
-=L1di
+iD8DBQFCfaemI1lqEGTUzyQRAjwSAKDTkajrimXfhrGT71QgURZAWRNgvQCguqBr
+fTh7NmsoHSACCmgBNFXG0BA=
+=oJ77
 -----END PGP SIGNATURE-----

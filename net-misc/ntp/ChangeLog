@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/ntp
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ChangeLog,v 1.55 2005/05/06 16:57:58 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ChangeLog,v 1.56 2005/05/08 05:45:59 swegener Exp $
+
+*ntp-4.2.0.20040617-r2 (08 May 2005)
+
+  08 May 2005; Sven Wegener <swegener@gentoo.org>
+  +files/4.2.0.20040617-debug-fix.patch, -ntp-4.2.0.20040617-r1.ebuild,
+  +ntp-4.2.0.20040617-r2.ebuild:
+  Another revision bump. Added support for the debug USE flag which was
+  previously always enabled.
 
 *ntp-4.2.0.20040617-r1 (06 May 2005)
 

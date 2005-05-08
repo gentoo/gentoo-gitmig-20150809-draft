@@ -1,0 +1,13 @@
+diff -Nur ntp-stable-4.2.0a-20040617/ntpd/ntp_proto.c ntp-stable-4.2.0a-20040617-debug-fix/ntpd/ntp_proto.c
+--- ntp-stable-4.2.0a-20040617/ntpd/ntp_proto.c	2004-05-25 11:02:24.000000000 +0000
++++ ntp-stable-4.2.0a-20040617-debug-fix/ntpd/ntp_proto.c	2005-05-07 22:32:30.973867197 +0000
+@@ -2293,8 +2293,8 @@
+ 			if (debug > 1)
+ 				printf("select: prefer offset %.6f\n",
+ 				    sys_offset);
+-		}
+ #endif
++		}
+ 	} else {
+ 
+ 		/*
