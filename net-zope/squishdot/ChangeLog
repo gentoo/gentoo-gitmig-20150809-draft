@@ -1,6 +1,11 @@
 # ChangeLog for net-zope/squishdot
-# Copyright 2003-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/squishdot/ChangeLog,v 1.4 2004/06/25 01:25:21 agriffis Exp $
+# Copyright 2003-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/squishdot/ChangeLog,v 1.5 2005/05/08 03:03:35 nerdboy Exp $
+
+  07 May 2005; Steve Arnold <nerdboy@gentoo.org> squishdot-1.5.0.ebuild
+  +squishdot-1.5.0-r1.ebuild:
+  keyworded for ~sparc, works just fine here with zope 2.7x; plus
+  long overdue stable bump for x86
 
   26 Jun 2003; Jason Shoemaker <kutsuya@gentoo.org> squishdot-1.5.0.ebuild:
   Added $MYDOC.
