@@ -1,7 +1,10 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 670ac1b343b68583bd99f4adc39765eb tk-8.3.4-r1.ebuild 2413
-MD5 15b4289b937d83839783fb94f77da7e9 tk-8.4.9.ebuild 2781
+MD5 49fb377f926958d7f9e417a89aeefbb2 tk-8.4.9.ebuild 2777
 MD5 bccf47b736485ce7e8a457e6ce9a1a81 tk-8.4.6.ebuild 2385
-MD5 c8e69da214ad4d06ece31f9bcb626893 ChangeLog 7092
+MD5 c43bbce443c509cc80baeb8bdff04001 ChangeLog 7178
 MD5 37d9be6d753633a1cb6704052776ab1f metadata.xml 159
 MD5 ecb6bd0ebe1e4441cccf70144b2e6104 tk-8.4.6-r1.ebuild 2762
 MD5 60b4e7758ce769df141b81b19c338f34 files/digest-tk-8.3.4-r1 60
@@ -13,3 +16,10 @@ MD5 76d0b4599f29136b31e902d15566e8c8 files/digest-tk-8.4.9 64
 MD5 3e8db8239fe4e68f5107a7a1d4f2f85b files/remove-control-v.diff 400
 MD5 f4d1359d10fdb4a572e9da8f9896c603 files/tk-8.4.9-man.patch 800
 MD5 e662e61449ea86b439ceb41463762cdc files/remove-control-v-8.4.diff 449
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCff+MntT9W3vfTuoRAv6WAJ9EtLn8y2w1D5wwIK5JCKESY4SangCfSHU4
+/BbBI/dx9ilr92GcW/6bacA=
+=dTD+
+-----END PGP SIGNATURE-----
