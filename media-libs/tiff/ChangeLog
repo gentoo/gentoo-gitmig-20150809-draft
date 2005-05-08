@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/tiff
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/ChangeLog,v 1.52 2005/05/08 18:20:12 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/ChangeLog,v 1.53 2005/05/08 23:20:10 eradicator Exp $
+
+  08 May 2005; Jeremy Huddleston <eradicator@gentoo.org> tiff-3.7.2.ebuild:
+  Stable amd64, sparc for security bug #91584.
 
 *tiff-3.7.2 (08 May 2005)
 
