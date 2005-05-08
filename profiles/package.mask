@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3929 2005/05/08 14:43:58 chainsaw Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3930 2005/05/08 15:34:16 brix Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -636,12 +636,6 @@ dev-php/asp2php
 # <chriswhite@gentoo.org> (30 Dec 2004)
 # Junkie being masked per security bug #74696
 net-ftp/junkie
-
-# <brix@gentoo.org> (29 Dec 2004)
-# Masking net-wireless/waproamd since it is no longer
-# actively maintained.
-# It's is superseded by net-wireless/wpa_supplicant.
-net-wireless/waproamd
 
 # <gmsoft@gentoo.org> (27 Dec 2004)
 # Masking 2.4 kernel sources on hppa.
