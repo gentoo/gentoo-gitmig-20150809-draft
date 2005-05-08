@@ -5,10 +5,10 @@ MD5 a7405d9c839482fff8b76a3312842a59 gdm-2.6.0.3.ebuild 3371
 MD5 ea62033494a3e02a75bd72d3dbd6c986 gdm-2.4.4.7-r1.ebuild 3410
 MD5 c4d34959dd6c05056e5852277f76d250 gdm-2.2.5.4-r5.ebuild 4413
 MD5 d53dd7b184e898d50c7e5cc31bfd7036 gdm-2.6.0.4-r1.ebuild 3268
-MD5 32c6620c949c9c51aadeaafa080a8214 gdm-2.6.0.7.ebuild 3275
+MD5 63ea14c85dce7f1fcc8aabaf795a2a75 gdm-2.6.0.7.ebuild 3271
 MD5 d979d4d7e5b2ec03f8384d1d8db37f1d gdm-2.4.1.7-r1.ebuild 5270
 MD5 eeac0e502b80000e26f08caeaf2e07c1 gdm-2.6.0.9.ebuild 3478
-MD5 d35f8e4ce952139738a50593a579675b ChangeLog 12023
+MD5 1b39df273d4a2ce5f7be9b2b5e935167 ChangeLog 12109
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 5c125bf4007ea485ca626cab96d4f6a7 gdm-2.6.0.6.ebuild 3243
 MD5 80ecdc9dea675084c39d7d30876acf5b files/digest-gdm-2.2.5.4-r5 65
@@ -44,7 +44,7 @@ MD5 114395565e31f41b44d31d731f1478b0 files/2.6.0/security/console.apps/gdmconfig
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCcsHrKRy60XGEcJIRAkK3AJ9WginfRkdGewEywywDTZr0tAayyQCeIs6K
-b6BDh78xkkXUeG/XnwYGvJQ=
-=jDpF
+iD8DBQFCfhzH2G5bA0cA/ScRAg3TAKDkfDxWEjbUic0wT/38lUs6ZoaPTACfTuCy
+aVwS3O1ApeRFlq/z038KTrQ=
+=AHeJ
 -----END PGP SIGNATURE-----
