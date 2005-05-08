@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/libpq/libpq-4.0.ebuild,v 1.1 2005/05/08 17:45:47 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/libpq/libpq-4.0.ebuild,v 1.2 2005/05/08 23:00:24 nakano Exp $
 
 inherit eutils gnuconfig flag-o-matic multilib toolchain-funcs
 
@@ -12,7 +12,7 @@ MY_P="postgresql"-${POSTGRESQL_VER}
 SRC_URI="mirror://postgresql/source/v${POSTGRESQL_VER}/postgresql-base-${POSTGRESQL_VER}.tar.bz2"
 
 LICENSE="POSTGRESQL"
-SLOT="3"
+SLOT="4"
 KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha ~arm ~hppa ~amd64 ~ia64 ~s390 ~ppc64"
 IUSE="ssl nls pam readline zlib kerberos"
 #pg-hier"
@@ -77,8 +77,12 @@ src_install() {
 	cd ${S}
 	dodoc README HISTORY COPYRIGHT INSTALL
 
-	dosym /usr/lib/${P}.a /usr/lib/libpq.a
+	cp src/include/postgres_ext.h ${D}/usr/include/postgresql/libpq-${SLOT}
+
+	dosym /usr/lib/libpq-${SLOT}.a /usr/lib/libpq.a
 	dodir /usr/include/postgresql/internal/
 	dosym /usr/include/postgresql/libpq-${SLOT}/libpq-fe.h /usr/include/
-	dosym /usr/include/postgresql/libpq-${SLOT}/internal/*.h /usr/include/postgresql/internal/
+	dosym /usr/include/postgresql/libpq-${SLOT}/postgres_ext.h /usr/include/
+	dosym /usr/include/postgresql/libpq-${SLOT}/internal/libpq-int.h /usr/include/postgresql/internal/
+	dosym /usr/include/postgresql/libpq-${SLOT}/internal/pqexpbuffer.h /usr/include/postgresql/internal/
 }
