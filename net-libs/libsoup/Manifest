@@ -4,8 +4,8 @@ Hash: SHA1
 MD5 b85e689ae1865138ae9ff41428dfc77b libsoup-2.2.1.ebuild 815
 MD5 86a2d2159c10db806616c13db4b70d02 libsoup-2.2.3.ebuild 730
 MD5 b958bc1738b685810de6d8ae87acac9a libsoup-2.2.0.ebuild 719
-MD5 67d739b0228d35c91157cdb5824fa5e3 libsoup-2.2.2.ebuild 807
-MD5 0dc0339080d827524b49b0be32d30cf9 ChangeLog 6306
+MD5 a9ef5f1922661813b2da73490f622953 libsoup-2.2.2.ebuild 803
+MD5 92dada1666d5a7825cb704bbff33f9ec ChangeLog 6394
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 2f900fb0cd5029c807dfc460b8b2c07c libsoup-1.99.28.ebuild 1388
 MD5 09a0c3f27613d90ffeb8abb875598ace files/libsoup-1.99.26-with_ssl.patch 2861
@@ -20,7 +20,7 @@ MD5 6c44713499ec52c81ca81ed58a6286bf files/digest-libsoup-1.99.28 68
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCcr+IKRy60XGEcJIRAuYRAKCwvl+5Tb9flhIFKGjinvngAXjU7wCfaQTK
-67c6fhD65sg60uiXttu1m6Q=
-=vXSW
+iD8DBQFCfhct2G5bA0cA/ScRAv4YAKClLlM+juYNn/Vp1SgDWHtZj/N5aQCfRVJD
+wgvgfmJbk/pfShjsHu5001U=
+=DWnZ
 -----END PGP SIGNATURE-----
