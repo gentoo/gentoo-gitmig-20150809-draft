@@ -1,0 +1,36 @@
+--- lib/drivers/OssDriver.cpp.bak	2005-05-07 20:13:45.000000000 -0400
++++ lib/drivers/OssDriver.cpp	2005-05-07 20:16:06.000000000 -0400
+@@ -241,7 +241,9 @@
+ 	// prepare the 2-channel array of short
+ 	for (uint i = 0; i < (unsigned)oss_driver_bufferSize; i++) {
+ 		audioBuffer[i * 2] = (short)(out_L[i] * 32768.0);
++		be_swap_short(&audioBuffer[i * 2]);
+ 		audioBuffer[i * 2 + 1] = (short)(out_R[i] * 32768.0);
++		be_swap_short(&audioBuffer[i * 2 + 1]);
+ 	}
+ 
+ 	unsigned long written = ::write(fd, audioBuffer, size * 2);
+@@ -253,7 +255,13 @@
+ }
+ 
+ 
++void be_swap_short(short *s){
++	unsigned char swap;
+ 
++	swap = (char)(*s & 0xFF);
++	*s = *s >> 8;
++	*s = (swap << 8) | *s;
++}
+ 
+ 
+ int OssDriver::log2(int n) {
+--- lib/drivers/OssDriver.h.bak	2005-05-07 20:28:24.000000000 -0400
++++ lib/drivers/OssDriver.h	2005-05-07 20:29:09.000000000 -0400
+@@ -31,6 +31,7 @@
+ // check if OSS support is enabled
+ #ifdef OSS_SUPPORT
+ 
++void be_swap_short(short *s);
+ 
+ #ifdef __NetBSD__
+ 	#include <soundcard.h>

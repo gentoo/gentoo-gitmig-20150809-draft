@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/hydrogen
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/hydrogen/ChangeLog,v 1.30 2005/04/11 13:55:30 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/hydrogen/ChangeLog,v 1.31 2005/05/08 01:54:55 josejx Exp $
+
+  08 May 2005; Joseph Jezak <josejx@gentoo.org> +files/0.9.1-OSS.patch,
+  hydrogen-0.9.1.ebuild:
+  Added patch to fix white noise when using OSS on ppc.
 
 *hydrogen-0.9.1 (11 Apr 2005)
 

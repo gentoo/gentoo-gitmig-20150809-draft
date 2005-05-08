@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/hydrogen/hydrogen-0.9.1.ebuild,v 1.1 2005/04/11 13:55:30 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/hydrogen/hydrogen-0.9.1.ebuild,v 1.2 2005/05/08 01:54:55 josejx Exp $
 
 IUSE="alsa jack ladspa"
 
@@ -23,6 +23,14 @@ DEPEND=">=media-libs/libsndfile-1.0.0
 	jack? ( media-sound/jack-audio-connection-kit )
 	ladspa? ( media-libs/liblrdf )
 	>=x11-libs/qt-3"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	if use ppc; then
+		epatch ${FILESDIR}/${PV}-OSS.patch
+	fi
+}
 
 src_compile() {
 	need-autoconf 2.5
