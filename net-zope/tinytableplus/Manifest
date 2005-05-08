@@ -1,14 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 4428f05f342744c25a29dd8dcd903b51 ChangeLog 530
+MD5 6737a8a7ed16265bfbe051ae30b07e30 ChangeLog 782
 MD5 7890d88c5c6d189fbe6b187a3ebb6532 metadata.xml 161
-MD5 555df815f9cc530012f81080fe9dd452 tinytableplus-0.9.ebuild 593
+MD5 66d1800f8aaf3890bf32b63ebdb07996 tinytableplus-0.9.ebuild 591
+MD5 b41baf1e1b3bc966dc366c1cc166d8b0 tinytableplus-0.9-r1.ebuild 601
 MD5 e9d35289dc985764f9b23b60bddbaf6d files/digest-tinytableplus-0.9 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
-
-iD8DBQFBHigiI1lqEGTUzyQRAnvzAJ0S9fRmwEMaBHbSIiOEO8iuyZfcqACggKEW
-qVq2DvXLiq3WC8PkHh5rOTo=
-=ubXp
------END PGP SIGNATURE-----
+MD5 e9d35289dc985764f9b23b60bddbaf6d files/digest-tinytableplus-0.9-r1 65

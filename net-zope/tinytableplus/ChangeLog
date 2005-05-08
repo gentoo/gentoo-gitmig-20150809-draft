@@ -1,6 +1,13 @@
 # ChangeLog for net-zope/tinytableplus
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/tinytableplus/ChangeLog,v 1.3 2004/08/14 14:55:13 swegener Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/tinytableplus/ChangeLog,v 1.4 2005/05/08 02:56:13 nerdboy Exp $
+
+*tinytableplus-0.9-r1 (07 May 2005)
+
+  07 May 2005; Steve Arnold <nerdboy@gentoo.org> +tinytableplus-0.9-r1.ebuild
+  tinytableplus-0.9.ebuild:
+  keyworded for ~sparc, works just fine here with squishdot and zope 2.7x
+  long overdue stable bump for x86
 
   14 Aug 2004; Sven Wegener <swegener@gentoo.org> tinytableplus-0.9.ebuild:
   Trimmed trailing whitespace and added IUSE="".
