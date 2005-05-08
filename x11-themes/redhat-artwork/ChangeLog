@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/redhat-artwork
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/ChangeLog,v 1.55 2005/04/10 18:40:25 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/ChangeLog,v 1.56 2005/05/08 10:34:34 greg_g Exp $
+
+  08 May 2005; Gregorio Guidi <greg_g@gentoo.org>
+  redhat-artwork-0.122.1-r1.ebuild:
+  Stable on x86.
 
   10 Apr 2005; Simon Stelling <blubb@gentoo.org> redhat-artwork-0.96.ebuild:
   stable on amd64
