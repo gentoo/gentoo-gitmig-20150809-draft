@@ -1,11 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 366357f2dd6112dcc288c34b689413d0 orbit-2.12.2.ebuild 1038
 MD5 7d02190487c1313dff1df9488041e832 orbit-2.10.3.ebuild 1033
 MD5 6f6fa3795d0324df35315d2215d55248 orbit-0.5.17.ebuild 1650
 MD5 09b07bbdb8993d01fd0400ff70d22050 orbit-2.10.0.ebuild 992
-MD5 3992be577b46aee04795d3c1c1705bb5 orbit-2.12.1.ebuild 1035
+MD5 3708249113de8d4af49a6c5b20340a43 orbit-2.12.1.ebuild 1034
 MD5 adf6161afabb12a91544845a5a8b23d6 orbit-2.10.2.ebuild 1400
 MD5 e2bfa71161d4ccf806402d532f8ce614 orbit-2.10.4.ebuild 1023
-MD5 7971d0dd273557ac0b2ed9b1333a59f3 ChangeLog 2314
+MD5 1713d2adc2c0c085de71a82f381ad2db ChangeLog 2313
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 7e3741e3b63851e23c3ef0ae2e9c4fcd orbit-2.12.0.ebuild 1126
 MD5 51bfc1efb763de186ee1b1f1e594891a files/digest-orbit-0.5.17 66
@@ -19,3 +22,10 @@ MD5 66a18f0f92e9cd0f658690bf1e5c862c files/digest-orbit-2.12.2 66
 MD5 54d4643035be77ed8362225823cd7b60 files/libIDLConf.sh-gentoo.diff 462
 MD5 7105f3bdc076c48f0458e20ea8eaba34 files/orbit-0.5.17-m4.patch 472
 MD5 733dcc9642be4e30137d76a4014742cd files/orbit2-alignment-fix.patch 510
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCfho72G5bA0cA/ScRAhlLAKCF9IeJPA13JVurrAV+hTvh0huxNwCfQN1C
+nbx8tgQkEvby1AavOlY0PnA=
+=+RyP
+-----END PGP SIGNATURE-----
