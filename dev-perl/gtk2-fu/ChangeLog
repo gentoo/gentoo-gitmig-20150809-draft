@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/gtk2-fu
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-fu/ChangeLog,v 1.9 2005/04/19 14:18:48 dams Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-fu/ChangeLog,v 1.10 2005/05/08 00:33:11 dams Exp $
+
+*gtk2-fu-0.06 (07 May 2005)
+
+  07 May 2005; <dams@gentoo.org> +gtk2-fu-0.06.ebuild:
+  version bump
 
   19 Apr 2005; <dams@gentoo.org> gtk2-fu-0.05-r1.ebuild:
   added dependancy on gtk2-perl
