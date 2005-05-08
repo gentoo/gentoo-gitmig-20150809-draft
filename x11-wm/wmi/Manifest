@@ -1,7 +1,17 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 276c8a86034d064720d9196a9fe4201d wmi-9.ebuild 1046
-MD5 2998d63d10c83a0bcbfe4ee11c6cba42 wmi-10.ebuild 1069
-MD5 c223da094f4c21fda2d6d2001b9be578 ChangeLog 2148
+MD5 65061256ce24b9ad0322a9e657805917 wmi-10.ebuild 1069
+MD5 14542bcab32f2ee3c25aeb3fecfa81cd ChangeLog 2148
 MD5 3113eb62900633d059d2bcbad0ef8f7e metadata.xml 343
 MD5 607f0418f6681898ac8da1fbe4e8b6e7 files/wmi.desktop 112
 MD5 f7f19525d1f04d7c2f698e824bca26b8 files/digest-wmi-9 57
 MD5 1bc69f6a689f8553a641ce0309ac1311 files/digest-wmi-10 58
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCfiUr2G5bA0cA/ScRAo4tAJwIVTmbu0juTAAlwzdI47pUFfKsrgCbBBD4
+4P4sZwc/5REAu2/xeBs4Rjs=
+=vRm+
+-----END PGP SIGNATURE-----

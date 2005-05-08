@@ -1,7 +1,10 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 9fce0206f901711e9be3dc5976ea01a7 waimea-0.3.5.ebuild 1091
-MD5 ae147acabe797dd641df61482f3b99ac waimea-0.4.0-r1.ebuild 1421
+MD5 d221529816942aa8a8a06985d2a26a55 waimea-0.4.0-r1.ebuild 1421
 MD5 2bababce3cfd608b02cec6e50a9756e4 waimea-0.5.0_pre040506.ebuild 1458
-MD5 c11f2fefd1ca8ab9753ac0a93fb242de ChangeLog 3548
+MD5 58ac289f9fdb06f45cfca422d5e1bfb8 ChangeLog 3548
 MD5 e7307c1653035014c1e36a27ca8ccb45 metadata.xml 163
 MD5 0758305291041d80fbe400709b949105 files/digest-waimea-0.5.0_pre040506 71
 MD5 82e8f766a7716339198e54c6f799964e files/waimea-0.5.0-64bit-clean.patch 420
@@ -9,3 +12,10 @@ MD5 5be07af92d4d63686b6950ce357c89f7 files/digest-waimea-0.4.0-r1 135
 MD5 c5470d472bc8e9202a34e0ba037cb21c files/waimea-0.5.0-includes.patch 1340
 MD5 99a5f21810e1a4df6ae645f27a60203a files/digest-waimea-0.3.5 64
 MD5 c6c8d4b24a44c45b680bf1c1190de166 files/waimea-0.5.0-font.patch 489
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCfidC2G5bA0cA/ScRApKLAKCezaGA/VnzEkumg7Ujexlh1iGx8gCgjoWb
+fnQVELG5vGxECwT1QuE1sk4=
+=8fpF
+-----END PGP SIGNATURE-----

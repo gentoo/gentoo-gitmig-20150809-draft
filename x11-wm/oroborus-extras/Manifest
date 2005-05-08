@@ -1,7 +1,17 @@
-MD5 25b3cd819ec9ae014fbf23294b3ab1a4 oroborus-extras-2.0.13.ebuild 1865
-MD5 510731d2bfb9239190b6ea00b887c1d3 ChangeLog 1953
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 5454b5918c85484a389ade19888f684d oroborus-extras-2.0.13.ebuild 1862
+MD5 23672c1689fd38b8cf22c477b63ef9e7 ChangeLog 1950
 MD5 5de8629cd1384223e1488866817fd3e7 oroborus-extras-2.0.1-r1.ebuild 1555
 MD5 854214750cff48f735632b86e10d0d1a metadata.xml 246
 MD5 879a225be542f6afcf35e4c0fcd33083 files/digest-oroborus-extras-2.0.13 204
 MD5 0b46f8d494534927c52ccd8066b42190 files/digest-oroborus-extras-2.0.1-r1 197
 MD5 558cdeffe81f3bde49f1db05cface261 files/deskmenu-1.4.0-string.patch 527
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCfiZL2G5bA0cA/ScRAqAVAKCVtqtfwm2yaSl9nOiNzKR3l4OOeACg7pKb
++Tr77BNyD04CsXYYwZdZYyA=
+=19vm
+-----END PGP SIGNATURE-----
