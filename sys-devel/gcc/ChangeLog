@@ -1,6 +1,12 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.401 2005/04/24 03:31:33 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.402 2005/05/08 23:53:14 halcy0n Exp $
+
+*gcc-4.0.1_beta20050507 (08 May 2005)
+
+  08 May 2005; Mark Loeser <halcy0n@gentoo.org>
+  -gcc-4.0.0_beta20050416.ebuild, +gcc-4.0.1_beta20050507.ebuild:
+  Version bump to the newest GCC4 snapshot.
 
   23 Apr 2005; Joshua Kinard <kumba@gentoo.org>
   +files/3.4.2/gcc-3.4.2-mips-ip28_cache_barriers-v2.patch,
