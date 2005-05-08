@@ -1,6 +1,17 @@
 # ChangeLog for dev-libs/libprelude
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libprelude/ChangeLog,v 1.16 2005/05/07 20:00:54 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libprelude/ChangeLog,v 1.17 2005/05/08 12:11:38 ka0ttic Exp $
+
+*libprelude-0.9.0_rc5-r1 (08 May 2005)
+
+  08 May 2005; Aaron Walker <ka0ttic@gentoo.org>
+  -libprelude-0.9.0_rc2.ebuild, -libprelude-0.9.0_rc5.ebuild,
+  +libprelude-0.9.0_rc5-r1.ebuild:
+  Revision bump; removed ssl from IUSE as libprelude no longer offers a
+  --enable-openssl configure option. Also added perl/python to IUSE to
+  conditionally install the respective bindings instead of unconditionally
+  installing them. Make use of perl-module.eclass to prevent the resulting
+  perllocal.pod collision. Tidy old ebuilds.
 
 *libprelude-0.9.0_rc5 (07 May 2005)
 
