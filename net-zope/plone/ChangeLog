@@ -1,6 +1,6 @@
 # ChangeLog for net-zope/plone
 # Copyright 2003-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/plone/ChangeLog,v 1.25 2005/05/06 03:35:24 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/plone/ChangeLog,v 1.26 2005/05/08 23:29:00 batlogg Exp $
 
   06 May 2005; Sven Wegener <swegener@gentoo.org> plone-2.0.4.ebuild,
   plone-2.0.5.ebuild, plone-2.0.5-r1.ebuild:
@@ -33,7 +33,7 @@
   cleaning unneeded ebuilds.
 
   24 Sep 2004; Jodok Batlogg <batlogg@gentoo.org>; plone-2.0.4.ebuild:
-  marked as stable on x86 and ppc
+  marked as stable on x86 and ppc.
 
 *plone-2.0.4 (12 Sep 2004)
 
