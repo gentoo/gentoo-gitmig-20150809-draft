@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/links/links-2.1_pre17-r1.ebuild,v 1.2 2005/05/05 21:41:10 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/links/links-2.1_pre17-r1.ebuild,v 1.3 2005/05/08 00:11:43 vanquirius Exp $
 
 inherit eutils
 
@@ -87,16 +87,20 @@ src_compile (){
 
 	export LANG=C
 
+	if use fbcon || use livecd; then
+		myconf="${myconf} --with-fb"
+	else
+		myconf="${myconf} --without-fb"
+	fi
+
 	econf \
 		$(use_with X x) \
 		$(use_with png libpng) \
 		$(use_with jpeg libjpeg) \
 		$(use_with tiff libtiff) \
 		$(use_with svga svgalib) \
-		$(use_with fbcon fb) \
 		$(use_with directfb) \
 		$(use_with livecd libjpeg) \
-		$(use_with livecd fb) \
 		$(use_with ssl) \
 		$(use_enable javascript) \
 		${myconf} || die "configure failed"

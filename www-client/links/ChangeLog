@@ -1,6 +1,10 @@
 # ChangeLog for www-client/links
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/links/ChangeLog,v 1.11 2005/05/05 21:41:10 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/links/ChangeLog,v 1.12 2005/05/08 00:11:43 vanquirius Exp $
+
+  07 May 2005; Marcelo Goes <vanquirius@gentoo.org> links-2.1_pre17-r1.ebuild:
+  Fix bug with livecd USE flag and --with-fb. Thanks to j-kidd and Mamour on the
+  Forums.
 
   05 May 2005; Michael Hanselmann <hansmi@gentoo.org>
   links-2.1_pre17-r1.ebuild:
