@@ -1,6 +1,12 @@
 # ChangeLog for sys-libs/libselinux
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libselinux/ChangeLog,v 1.30 2005/05/01 22:11:02 spb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libselinux/ChangeLog,v 1.31 2005/05/08 23:02:28 pebenito Exp $
+
+*libselinux-1.22-r1 (08 May 2005)
+
+  08 May 2005; Chris PeBenito <pebenito@gentoo.org>
+  +files/libselinux-1.22.diff, +libselinux-1.22-r1.ebuild:
+  A couple fixes, including one for bug #91921.
 
   01 May 2005; Stephen Bennett <spb@gentoo.org> libselinux-1.22.ebuild:
   Mark ~mips.

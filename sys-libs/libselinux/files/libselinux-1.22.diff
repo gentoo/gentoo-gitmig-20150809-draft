@@ -1,0 +1,55 @@
+--- libselinux-1.22.orig/src/matchpathcon.c	2005-04-04 15:01:14.000000000 +0200
++++ libselinux-1.22/src/matchpathcon.c	2005-04-04 15:01:23.000000000 +0200
+@@ -29,7 +29,10 @@
+ 
+ void set_matchpathcon_printf(void (*f)(const char *fmt, ...))
+ {
+-	myprintf = f;
++	if (f)
++		myprintf = f;
++	else
++		myprintf = &default_printf;
+ }
+ 
+ static int default_invalidcon(const char *path, unsigned lineno, char *context)
+@@ -45,7 +48,10 @@
+ 
+ void set_matchpathcon_invalidcon(int (*f)(const char *p, unsigned l, char *c))
+ {
+-	myinvalidcon = f;
++	if (f)
++		myinvalidcon = f;
++	else
++		myinvalidcon = &default_invalidcon;
+ }
+ 
+ /*
+@@ -324,6 +324,9 @@
+ 	file_spec_t *fl, *tmp;
+ 	int h;
+ 
++	if (!fl_head)
++		return;
++
+ 	for (h = 0; h < HASH_BUCKETS; h++) {
+ 		fl = fl_head[h].next;
+ 		while (fl) {
+diff -rNu libselinux-1.22.orig/utils/getconlist.c libselinux-1.22/utils/getconlist.c
+--- libselinux-1.22.orig/utils/getconlist.c	2004-11-01 15:21:46.000000000 +0100
++++ libselinux-1.22/utils/getconlist.c	2005-03-29 13:13:13.000000000 +0200
+@@ -38,10 +38,12 @@
+ 
+ 	/* Get the list and print it */
+ 	ret = get_ordered_context_list(argv[1], cur_context, &list);
+-	for (i = 0; list[i]; i++)
+-		puts (list[i]);
++	if(ret != -1) {
++		for (i = 0; list[i]; i++)
++			puts (list[i]);
++		freeconary(list);
++	}
+ 
+-	freeconary(list);
+ 	free(usercon);
+ 
+ 	return 0;
