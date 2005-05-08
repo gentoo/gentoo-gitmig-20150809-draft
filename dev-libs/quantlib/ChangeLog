@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/quantlib
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/quantlib/ChangeLog,v 1.11 2005/05/08 20:33:02 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/quantlib/ChangeLog,v 1.12 2005/05/08 21:02:50 vanquirius Exp $
+
+  08 May 2005; Marcelo Goes <vanquirius@gentoo.org> :
+  To give credit where it's due: thanks to Pablo De Nápoli <pdenapo@yahoo.com>
+  and Max <m.e.bruche@lse.ac.uk> for reporting the bump.
 
 *quantlib-0.3.9 (08 May 2005)
 
