@@ -1,0 +1,12 @@
+# ChangeLog for dev-db/libpq
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/libpq/ChangeLog,v 1.1 2005/05/08 17:45:47 nakano Exp $
+
+*libpq-4.0 (08 May 2005)
+*libpq-3.2 (08 May 2005)
+
+  08 May 2005; Masatomo Nakano <nakano@gentoo.org>
+  +files/libpq-3.2-gentoo.patch, +files/libpq-4.0-gentoo.patch,
+  +metadata.xml, +libpq-3.2.ebuild, +libpq-4.0.ebuild:
+  Initial import.
+
