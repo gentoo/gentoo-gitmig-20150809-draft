@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/R
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.42 2005/04/29 18:54:00 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.43 2005/05/08 01:13:59 cryos Exp $
+
+  08 May 2005; Marcus D. Hanwell <cryos@gentoo.org> -R-1.9.1.ebuild,
+  -R-2.0.0.ebuild, R-2.0.1.ebuild, -R-2.1.0.ebuild, R-2.1.0-r1.ebuild:
+  Marked 2.0.1 stable on amd64 and x86, cleaned out old ebuilds. Added new 64
+  bit detection code to 2.1.0-r1 as per bug 91512.
 
 *R-2.1.0-r1 (29 Apr 2005)
 

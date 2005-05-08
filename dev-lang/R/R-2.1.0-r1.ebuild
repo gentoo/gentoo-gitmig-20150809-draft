@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.1.0-r1.ebuild,v 1.1 2005/04/29 18:54:00 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.1.0-r1.ebuild,v 1.2 2005/05/08 01:13:59 cryos Exp $
 
-inherit 64-bit fortran
+inherit fortran toolchain-funcs
 
 IUSE="blas jpeg nls png readline tcltk X"
 DESCRIPTION="R is GNU S - A language and environment for statistical computing and graphics."
@@ -21,9 +21,17 @@ DEPEND="virtual/libc
 SLOT="0"
 LICENSE="GPL-2 LGPL-2.1"
 KEYWORDS="~x86 ~sparc ~ppc ~ppc64 ~amd64"
-64-bit || FORTRAN="g77" # No f2c on 64-bit archs anymore.
 
 src_compile() {
+	# Test for a 64 bit architecture - f2c won't work on 64 bit archs with R.
+	# Thanks to vapier for providing the test.
+	echo 'int main(){}' > test.c
+	$(tc-getCC) -c test.c -o test.o
+	if file test.o | grep -qs 64-bit ; then
+		einfo "64 bit architecture detected, using g77."
+		FORTRAN="g77"
+	fi
+
 	local myconf="--enable-R-profiling --enable-R-shlib --enable-linux-lfs"
 
 	if use tcltk; then
