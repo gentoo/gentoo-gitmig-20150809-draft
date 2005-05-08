@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 14d19b9e5b23e40a04496c573d37c431 ChangeLog 1429
-MD5 fe0baf8d1353c54c399eb83906f81e62 commons-daemon-1.0.ebuild 1292
+MD5 f8eec1306bf10ac85fd1d38efcdbb287 ChangeLog 1523
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
+MD5 2699704d66118f2695ab255a4010061f commons-daemon-1.0.ebuild 1295
 MD5 594ef90d87023327ed87ea6bad1ce322 files/digest-commons-daemon-1.0 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFCXD5h06ebR+OMO78RAnSUAJ9OkkATy1MaFDfIvYxw+rEY77k74wCcD/yk
-xdYZ+NTG0RyuAqIgP16B4hA=
-=924J
------END PGP SIGNATURE-----
