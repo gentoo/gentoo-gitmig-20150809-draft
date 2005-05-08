@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/quantlib
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/quantlib/ChangeLog,v 1.10 2005/04/24 12:50:57 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/quantlib/ChangeLog,v 1.11 2005/05/08 20:33:02 vanquirius Exp $
+
+*quantlib-0.3.9 (08 May 2005)
+
+  08 May 2005; Marcelo Goes <vanquirius@gentoo.org> +metadata.xml,
+  +quantlib-0.3.9.ebuild:
+  Version bump for bug 76396. Dropped alpha, mips and hppa because of
+  dev-libs/boost dependency. Also, taking over maintenance of this package.
 
   24 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> quantlib-0.3.0.ebuild:
   Stable on ppc.
