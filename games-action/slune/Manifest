@@ -1,4 +1,6 @@
-MD5 8b2fc1a3bfd6a5b503c7402c932a90de ChangeLog 1065
+MD5 7f8cb7af9fdf7e4ce3706d8951b0aa2b ChangeLog 1211
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 MD5 555cbaf5132d4d1899963a237bf0748a slune-0.6.1.ebuild 710
+MD5 14b94f592b2d5885f2e8d24fbb268dc7 slune-1.0.7.ebuild 722
+MD5 7c826f48259510ba19d56174f02f1509 files/digest-slune-1.0.7 65
 MD5 43218db3680e6fd1fa3a908301e4192a files/digest-slune-0.6.1 65
