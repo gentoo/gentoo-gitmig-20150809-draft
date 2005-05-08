@@ -1,18 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 c1fc2c03fb22b624c59c2ae6bcdf89c2 ChangeLog 1911
-MD5 6d796b061ed1c1337ef157a5f74dab35 metadata.xml 403
-MD5 1fd7199bad6c72e4bd3d1ee8c2884413 libstatgrab-0.11.1.ebuild 969
-MD5 97577bc5e6b9fec29b7c633b7e661052 libstatgrab-0.10.3.ebuild 967
 MD5 819855219663d48b16ab3cfd8b09ac02 libstatgrab-0.11.ebuild 967
+MD5 b23896c82e95406d4582a2e239470593 ChangeLog 2014
+MD5 6d796b061ed1c1337ef157a5f74dab35 metadata.xml 403
+MD5 97577bc5e6b9fec29b7c633b7e661052 libstatgrab-0.10.3.ebuild 967
+MD5 eb8f174bdd78a1523c63d1549ffe3f3f libstatgrab-0.11.1.ebuild 970
 MD5 cd6c9ca0e32d060a34829d66c2a83a2a files/digest-libstatgrab-0.11 68
-MD5 fc3acae8170ce00d097746d81f21e961 files/digest-libstatgrab-0.11.1 70
 MD5 ecd8e09b4add7c415c7136be9085c1a7 files/digest-libstatgrab-0.10.3 70
+MD5 fc3acae8170ce00d097746d81f21e961 files/digest-libstatgrab-0.11.1 70
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCZ3HGmdTrptrqvGERAo1aAJoCrjgn/Bbw94C/kaHgb8p8lAfkoQCeJAwj
-cAElJTWAbbBgraV3o8gmXuc=
-=3BkY
+iD8DBQFCfoPF2G5bA0cA/ScRApwiAJ9I+EsgBfsFr1PC17bkah1xoM30QgCeL3qh
+0sq8IES0grQyzKeU0VCgvbI=
+=i5Vx
 -----END PGP SIGNATURE-----

@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/libstatgrab
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstatgrab/ChangeLog,v 1.11 2005/04/21 09:26:14 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstatgrab/ChangeLog,v 1.12 2005/05/08 21:24:40 herbs Exp $
+
+  08 May 2005; Herbie Hopkins <herbs@gentoo.org> libstatgrab-0.11.1.ebuild:
+  Marked ~amd64 wrt bug #90658.
 
 *libstatgrab-0.11.1 (21 Apr 2005)
 
