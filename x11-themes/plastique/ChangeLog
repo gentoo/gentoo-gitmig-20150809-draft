@@ -1,0 +1,11 @@
+# ChangeLog for x11-themes/plastique
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/plastique/ChangeLog,v 1.1 2005/05/08 00:40:46 cryos Exp $
+
+*plastique-0.3 (08 May 2005)
+
+  08 May 2005; Marcus D. Hanwell <cryos@gentoo.org> +metadata.xml,
+  +plastique-0.3.ebuild:
+  Initial import, based on the ebuilds by Krzysiek Pawlik
+  <krzysiek.pawlik@people.pl>. Closes bug 82416.
+

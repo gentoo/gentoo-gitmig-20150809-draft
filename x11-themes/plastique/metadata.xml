@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <herd>kde</herd>
+  <maintainer>
+    <email>cryos@gentoo.org</email>
+  </maintainer>
+  <longdescription>
+    Plastique is a port of KDE style Plastik, which does not depend on any KDE
+	libraries. This means, that you only need QT 3.x to make your QT
+	applications look as if you had KDE installed.
+  </longdescription>
+</pkgmetadata>
