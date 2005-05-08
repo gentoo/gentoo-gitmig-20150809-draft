@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/mouseemu
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mouseemu/ChangeLog,v 1.6 2005/03/05 11:37:10 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mouseemu/ChangeLog,v 1.7 2005/05/08 23:46:10 pylon Exp $
+
+*mouseemu-0.15 (08 May 2005)
+
+  08 May 2005; Lars Weiler <pylon@gentoo.org> +mouseemu-0.15.ebuild:
+  Version bump.
 
 *mouseemu-0.14 (05 Mar 2005)
 
