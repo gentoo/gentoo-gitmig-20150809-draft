@@ -1,6 +1,9 @@
 # ChangeLog for net-zope/photo
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/photo/ChangeLog,v 1.8 2004/12/29 21:18:08 ciaranm Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/photo/ChangeLog,v 1.9 2005/05/08 04:58:38 nerdboy Exp $
+
+  07 May 2005; Steve Arnold <nerdboy@gentoo.org> photo-1.2.3.ebuild:
+  keyworded for sparc (decided it was better not to bump)
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
