@@ -1,6 +1,18 @@
 # ChangeLog for net-analyzer/snort
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/ChangeLog,v 1.66 2005/05/07 12:21:35 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/ChangeLog,v 1.67 2005/05/08 17:43:03 vanquirius Exp $
+
+*snort-2.3.3-r1 (08 May 2005)
+
+  08 May 2005; Marcelo Goes <vanquirius@gentoo.org> +snort-2.3.3-r1.ebuild,
+  +snort-2.4.20050508.ebuild:
+  Prelude patching fun. Making snort-2.3.3-r1 depend on >=libprelude-0.9.0_rc1
+  and using patch from their mailing list, as pointed out by Yoann
+  Vandoorselaere <yoann@prelude-ids.org>. Also, I made a cvs snapshot of
+  snort-2.4, which does not require patching anymore, since prelude patches were
+  accepted in snort. Of course, both new ebuilds are in package.mask for testing
+  - I expect unexpected borks. This hopefully fixes bug 91820. Thanks to dago
+  <dago158@bluewin.ch> for reporting.
 
 *snort-2.3.3 (07 May 2005)
 
