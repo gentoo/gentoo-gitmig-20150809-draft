@@ -6,7 +6,7 @@ MD5 d332fc92996c01572c8f514106f41c6d xvid-1.0.0_rc4.ebuild 1074
 MD5 12796f897e8656ae363eee47d96a4e59 xvid-1.0.1.ebuild 1291
 MD5 684af8a8c5e487d5e197b2b0f7793cec xvid-1.0.2.ebuild 1212
 MD5 f184c3cf02cd241edbeacdab5b92a9e4 xvid-1.0.3.ebuild 1153
-MD5 d0cdd48956ff43f468e355cbd8ebfc69 xvid-1.1.0_beta2-r1.ebuild 1469
+MD5 8307164c6d0ad9a17b44342581eff764 xvid-1.1.0_beta2-r1.ebuild 1484
 MD5 b9df0b3dd75c05b7440daac11468ab83 xvid-1.1.0_beta2.ebuild 1203
 MD5 8c100445a64d960693db8424931ff0eb files/1.0.0_rc4-DESTDIR.patch 1450
 MD5 8c100445a64d960693db8424931ff0eb files/1.0.1-DESTDIR.patch 1450
