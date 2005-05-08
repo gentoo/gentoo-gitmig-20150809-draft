@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 549c0bb78af8d643dfe96f9f268e9d86 plastique-0.3.ebuild 951
-MD5 070f969dd4715ed2e1ac0110b1103582 ChangeLog 442
+MD5 ee9c51944e6d2fcc2fe6a67d67f040c9 plastique-0.3.ebuild 929
+MD5 0574eff49e02843ba9d6dc51911db824 ChangeLog 557
 MD5 352e9b23db43fe35a2e4db896c3812b5 metadata.xml 459
 MD5 050e1a6a624d0fb5dc9eff1163b144f0 files/digest-plastique-0.3 66
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCfWA2ntT9W3vfTuoRAgP9AJ9+aQn9SHh9M93Ta0W5250oTISljgCfRYV9
-07TU+hrRCPkjMOogVY4r0hE=
-=mhcp
+iD8DBQFCfhlAntT9W3vfTuoRAk1AAKCU+1TvNqcj76FJmo7cSRJnYdFAmACgmPxZ
+aJG8SfY0u4s73T++waTPoXI=
+=9hzK
 -----END PGP SIGNATURE-----

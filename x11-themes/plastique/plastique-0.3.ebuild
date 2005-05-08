@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/plastique/plastique-0.3.ebuild,v 1.1 2005/05/08 00:40:46 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/plastique/plastique-0.3.ebuild,v 1.2 2005/05/08 13:50:04 cryos Exp $
 
 inherit kde-functions
 
@@ -12,9 +12,6 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
 IUSE="mmx sse2"
-
-DEPEND=""
-RDEPEND=""
 
 need-qt 3.3
 
