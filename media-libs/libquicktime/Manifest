@@ -1,10 +1,20 @@
-MD5 b06a9a64b2c7f5aedce133779934d96b ChangeLog 5387
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 a60c1726ee674c1e03f9428cd54d341f libquicktime-0.9.4.ebuild 1449
+MD5 34411b50fc69d3d36604d87d85312a61 ChangeLog 5486
+MD5 955f56e990f8c32d705708b4cc4db089 metadata.xml 251
 MD5 04c6e7d4ccb20b4bd86e3f5052a2a115 libquicktime-0.9.2.ebuild 1575
 MD5 b4c78b88026393e1b3e1fefb26137865 libquicktime-0.9.3-r1.ebuild 1547
-MD5 182c77c3235f01c3c57f87e92cd078b9 libquicktime-0.9.4.ebuild 1453
-MD5 955f56e990f8c32d705708b4cc4db089 metadata.xml 251
-MD5 abf06ed2bfc6e4b130b44e3818ec0c99 files/digest-libquicktime-0.9.2 70
-MD5 2945e87a4f7f7263e45ea3c392895011 files/digest-libquicktime-0.9.3-r1 70
-MD5 6bfb85c4c74898adf195a803d4715b03 files/digest-libquicktime-0.9.4 70
-MD5 7431f4892f67adb233bef504876078db files/libquicktime-0.9.2-amd64.patch 2861
 MD5 a1721b9ba48b6453245fce4f3fe04e0b files/libquicktime-0.9.4-cflags.patch 1455
+MD5 abf06ed2bfc6e4b130b44e3818ec0c99 files/digest-libquicktime-0.9.2 70
+MD5 6bfb85c4c74898adf195a803d4715b03 files/digest-libquicktime-0.9.4 70
+MD5 2945e87a4f7f7263e45ea3c392895011 files/digest-libquicktime-0.9.3-r1 70
+MD5 7431f4892f67adb233bef504876078db files/libquicktime-0.9.2-amd64.patch 2861
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCffkIKf2g/qXtneoRApajAKCFRC2LhEzvfsipsV33Rqe4C/t6wwCeLlyn
+EyDbVEt0o807iuJbyqFgLSc=
+=hHC7
+-----END PGP SIGNATURE-----
