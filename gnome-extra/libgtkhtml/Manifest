@@ -1,5 +1,5 @@
 MD5 8eb7d73f7ddc4b82bf6f9a25dab630d4 libgtkhtml-2.6.0.ebuild 933
-MD5 53a8015d215013a71f90ad5389229eb8 libgtkhtml-3.2.5.ebuild 1185
+MD5 76670a969e297d247d28be5cf9de9e9a libgtkhtml-3.2.5.ebuild 1184
 MD5 5b295166b6ea6acaf33c471fb15b3717 libgtkhtml-3.6.0.ebuild 1107
 MD5 4412eea3538c99bfb62745bdf47850ae libgtkhtml-2.6.2.ebuild 947
 MD5 0b5667b6e8a680f3446112c2dd0c4b85 libgtkhtml-3.0.10-r1.ebuild 1332
@@ -7,7 +7,7 @@ MD5 358f703a115fc7f2c81746edbef5d1df libgtkhtml-3.2.4.ebuild 1181
 MD5 4e12417cd487cc2755a296a5e679ccf3 libgtkhtml-2.6.1.ebuild 935
 MD5 98da75c588779566337471ea8e1dbb82 libgtkhtml-3.6.1.ebuild 1107
 MD5 2143c3a27dcdfb81ed15ec8d93b1816b libgtkhtml-2.6.3.ebuild 945
-MD5 664e39dd93549de2c4eef4574c3497d5 ChangeLog 15435
+MD5 5a16d4492e324585ef9c5476249d0c84 ChangeLog 15529
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 0c37e3ffa931ead9868867fe88b9499f libgtkhtml-3.0.10.ebuild 1199
 MD5 c802878860f7a2692df330e54e635c0c files/libgtkhtml-3.0.7-libtool.patch 656
