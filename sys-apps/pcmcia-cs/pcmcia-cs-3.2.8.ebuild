@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/pcmcia-cs-3.2.8.ebuild,v 1.2 2005/05/04 09:40:04 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/pcmcia-cs-3.2.8.ebuild,v 1.3 2005/05/08 08:16:36 brix Exp $
 
 inherit eutils flag-o-matic toolchain-funcs linux-info
 
@@ -45,6 +45,7 @@ src_unpack() {
 	unpack ${A}
 
 	cd ${S}
+	epatch ${FILESDIR}/${P}-gcc4.patch
 	epatch ${FILESDIR}/${P}-includes.patch
 	epatch ${FILESDIR}/${P}-ldflags.patch
 	epatch ${FILESDIR}/${P}-move-pnp-ids.patch
