@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/tcl
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/ChangeLog,v 1.51 2005/05/07 20:14:07 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/ChangeLog,v 1.52 2005/05/08 11:59:52 cryos Exp $
+
+  08 May 2005; Marcus D. Hanwell <cryos@gentoo.org> tcl-8.4.9.ebuild:
+  Stable on amd64.
 
   07 May 2005; Aron Griffis <agriffis@gentoo.org> tcl-8.4.9.ebuild:
   stable on ia64
