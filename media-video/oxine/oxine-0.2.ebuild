@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/oxine/oxine-0.2.ebuild,v 1.8 2004/11/25 15:12:32 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/oxine/oxine-0.2.ebuild,v 1.9 2005/05/08 22:34:22 flameeyes Exp $
 
 inherit eutils
 
@@ -11,6 +11,7 @@ LICENSE="GPL-2"
 DEPEND=">=media-libs/xine-lib-1_beta8
 	lirc? ( app-misc/lirc )
 	nls? ( sys-devel/gettext )
+	dev-libs/popt
 	virtual/x11"
 
 IUSE="nls lirc"
@@ -45,5 +46,5 @@ src_install() {
 		docsdir=/usr/share/doc/${PF} \
 		install || die
 
-	dodoc AUTHORS ChangeLog COPYING INSTALL NEWS README TODO
+	dodoc AUTHORS ChangeLog INSTALL NEWS README TODO
 }

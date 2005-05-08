@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 65efea2e95205c466a8a2423c17de3ca ChangeLog 996
+MD5 75ec4fb524ac90a01c66eeee1e99726c ChangeLog 1142
 MD5 7300a7b361fa9f48e37722c6952bd432 metadata.xml 158
 MD5 1c34db7343eb1c80190a58d13b5f4a12 oxine-0.1.ebuild 857
-MD5 a5b085bf45ea88d233b7449f2a76745d oxine-0.2.ebuild 1000
-MD5 9ab0e63d2e2f9d4695a1771a4def9e97 files/oxine-0.2-gcc34.patch 252
-MD5 e668a8d14c492a155a090b1d1723ea74 files/oxine-0.2-xtst.patch 406
+MD5 ecca197c2ee96fc071fec0852cefc38a oxine-0.2.ebuild 1007
 MD5 f9b749ab60b5a8684925d6a457352b92 files/digest-oxine-0.1 61
 MD5 a8f4b0ba961236d5de5b57a6271cc333 files/digest-oxine-0.2 61
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCZMqMKf2g/qXtneoRAhT/AJ93QSz0omsC/vyv8hftZSLiP1b7QQCeL+Mu
-Nqrt8cP8xPMkQNifKEVoGKk=
-=EVVh
------END PGP SIGNATURE-----
+MD5 9ab0e63d2e2f9d4695a1771a4def9e97 files/oxine-0.2-gcc34.patch 252
+MD5 e668a8d14c492a155a090b1d1723ea74 files/oxine-0.2-xtst.patch 406
