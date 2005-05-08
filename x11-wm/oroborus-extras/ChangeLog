@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/oroborus-extras
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/oroborus-extras/ChangeLog,v 1.13 2005/03/07 15:21:24 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/oroborus-extras/ChangeLog,v 1.14 2005/05/08 14:45:43 herbs Exp $
+
+  08 May 2005; Herbie Hopkins <herbs@gentoo.org>
+  oroborus-extras-2.0.13.ebuild:
+  Stable on amd64.
 
   07 Mar 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   oroborus-extras-2.0.13.ebuild:
