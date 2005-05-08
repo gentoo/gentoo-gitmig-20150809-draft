@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/blackbox
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/blackbox/ChangeLog,v 1.45 2005/05/01 18:07:36 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/blackbox/ChangeLog,v 1.46 2005/05/08 15:17:23 herbs Exp $
+
+  08 May 2005; Herbie Hopkins <herbs@gentoo.org> blackbox-0.70.0.ebuild:
+  Stable on amd64.
 
   01 May 2005; Michael Hanselmann <hansmi@gentoo.org>
   blackbox-0.70.0.ebuild:

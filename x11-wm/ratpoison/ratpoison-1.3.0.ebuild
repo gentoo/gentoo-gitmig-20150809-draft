@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ratpoison/ratpoison-1.3.0.ebuild,v 1.5 2004/12/12 04:52:36 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ratpoison/ratpoison-1.3.0.ebuild,v 1.6 2005/05/08 15:07:35 herbs Exp $
 
 inherit elisp-common eutils
 
@@ -11,7 +11,7 @@ LICENSE="GPL-2"
 SRC_URI="http://savannah.nongnu.org/download/${PN}/${P}.tar.gz"
 
 SLOT="0"
-KEYWORDS="x86 sparc ppc ~amd64"
+KEYWORDS="x86 sparc ppc amd64"
 IUSE="emacs"
 
 DEPEND="virtual/x11

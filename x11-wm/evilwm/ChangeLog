@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/evilwm
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/evilwm/ChangeLog,v 1.25 2004/12/28 22:37:14 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/evilwm/ChangeLog,v 1.26 2005/05/08 15:13:02 herbs Exp $
+
+  08 May 2005; Herbie Hopkins <herbs@gentoo.org> evilwm-0.99.17.ebuild:
+  Stable on amd64.
 
   28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
