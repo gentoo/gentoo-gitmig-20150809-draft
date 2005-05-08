@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/nemerle
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/nemerle/ChangeLog,v 1.4 2005/03/15 00:49:46 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/nemerle/ChangeLog,v 1.5 2005/05/08 03:37:33 latexer Exp $
+
+*nemerle-0.3.1 (08 May 2005)
+
+  08 May 2005; Peter Johanson <latexer@gentoo.org>
+  +files/nemerle-0.3.1-pathfix.diff, +nemerle-0.3.1.ebuild:
+  Bump.
 
   14 Mar 2005; Peter Johanson <latexer@gentoo.org> nemerle-0.2.1-r1.ebuild,
   nemerle-0.2.1-r2.ebuild:
