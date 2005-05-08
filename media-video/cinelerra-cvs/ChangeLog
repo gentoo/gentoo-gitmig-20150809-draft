@@ -1,6 +1,11 @@
 # ChangeLog for media-video/cinelerra-cvs
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra-cvs/ChangeLog,v 1.7 2005/03/30 10:49:39 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra-cvs/ChangeLog,v 1.8 2005/05/08 11:09:47 zypher Exp $
+
+*cinelerra-cvs-20050506 (06 May 2005)
+
+  06 May 2005; Marc Hildebrand <zypher@gentoo.org> cinelerra-cvs-20050506.ebuild:
+  Version bump.
 
   30 Mar 2005; Luca Barbato <lu_zero@gentoo.org>
   cinelerra-cvs-20050315.ebuild:
