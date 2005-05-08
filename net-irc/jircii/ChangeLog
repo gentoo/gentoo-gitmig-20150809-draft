@@ -1,6 +1,12 @@
 # ChangeLog for net-irc/jircii
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/jircii/ChangeLog,v 1.23 2005/05/03 19:01:44 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/jircii/ChangeLog,v 1.24 2005/05/08 05:52:50 swegener Exp $
+
+*jircii-34 (08 May 2005)
+
+  08 May 2005; Sven Wegener <swegener@gentoo.org> -jircii-24.ebuild,
+  -jircii-33.ebuild, +jircii-34.ebuild:
+  Version bump.
 
 *jircii-33 (03 May 2005)
 
