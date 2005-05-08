@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/xvid
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xvid/ChangeLog,v 1.42 2005/05/07 13:39:04 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xvid/ChangeLog,v 1.43 2005/05/08 12:09:38 flameeyes Exp $
+
+*xvid-1.1.0_beta2-r1 (08 May 2005)
+
+  08 May 2005; Diego Pettenò <flameeyes@gentoo.org>
+  +files/xvid-1.1.0_beta2-altivec.patch, +xvid-1.1.0_beta2-r1.ebuild:
+  New revision for xvid which adds altivec useflag and a patch to
+  enable/disable altivec support at request. Fixes #91875. Removed ~ppc
+  keyword for testing.
 
   07 May 2005; Herbie Hopkins <herbs@gentoo.org> xvid-1.1.0_beta2.ebuild:
   Added amd64 depend on yasm, bug #79990
