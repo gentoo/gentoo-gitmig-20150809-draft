@@ -1,6 +1,13 @@
 # ChangeLog for sys-boot/grub
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.38 2005/04/20 15:49:39 spb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.39 2005/05/08 02:55:53 swegener Exp $
+
+*grub-0.96-r2 (08 May 2005)
+
+  08 May 2005; Sven Wegener <swegener@gentoo.org>
+  +files/grub-0.96-xfs-writable-string.patch, +grub-0.96-r2.ebuild:
+  Revision bump to pull in my writable-string patch I submitted to upstream.
+  Closes bug #90845.
 
   20 Apr 2005; Stephen Bennett <spb@gentoo.org> grub-0.96-r1.ebuild:
   Stable x86; older versions break with hardened gcc.
