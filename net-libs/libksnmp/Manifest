@@ -1,4 +1,4 @@
 MD5 b0ffbf580d1e24034c2f2cfbd21a0692 metadata.xml 350
-MD5 5a6658253a8e651a5f00040102c0b384 ChangeLog 520
-MD5 ac196d2fa755e1e00ce653e7ed199bd2 libksnmp-0.3.ebuild 757
+MD5 a7e719e4cf5f70743b26abc7a873da1e libksnmp-0.3.ebuild 696
+MD5 b5e158e5515cbe9b2c95b899a4984c90 ChangeLog 613
 MD5 d47188a90249e0d000d5495a123582e1 files/digest-libksnmp-0.3 66
