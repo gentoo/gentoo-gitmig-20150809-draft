@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3930 2005/05/08 15:34:16 brix Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3931 2005/05/08 17:21:46 nakano Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Masatomo Nakano <nakano@gentoo.org> (08 May 2005)
+# Masked for testing.
+dev-db/libpq
 
 # Tony Vroon <chainsaw@gentoo.org> (08 May 2005)
 # Unversioned perlscript, unresponsive upstream. Pending removal from the tree.
