@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3934 2005/05/08 19:20:46 nakano Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3935 2005/05/08 22:19:41 araujo Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Luis F. Araujo <araujo@gentoo.org> (08 May 2005)
+# Masked until we unmask ghc-6.4
+=dev-haskell/hsshellscript-2.6.0
 
 # Masatomo Nakano <nakano@gentoo.org> (08 May 2005)
 # Masked for testing.
