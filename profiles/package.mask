@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3928 2005/05/08 09:41:01 axxo Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3929 2005/05/08 14:43:58 chainsaw Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Tony Vroon <chainsaw@gentoo.org> (08 May 2005)
+# Unversioned perlscript, unresponsive upstream. Pending removal from the tree.
+media-sound/ogg2mp3
 
 # Ryan Phillips <rphillips@gentoo.org> (07 May 2005)
 # New fox layout.  In testing
