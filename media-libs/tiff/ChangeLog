@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/tiff
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/ChangeLog,v 1.51 2005/01/05 02:11:53 j4rg0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/ChangeLog,v 1.52 2005/05/08 18:20:12 nerdboy Exp $
+
+*tiff-3.7.2 (08 May 2005)
+
+  08 May 2005; Steve Arnold <nerdboy@gentoo.org>
+  +files/tiff-3.7.2-buffer_check.patch, -tiff-3.7.0.ebuild,
+  -tiff-3.7.1.ebuild, +tiff-3.7.2.ebuild:
+  bump, cleanup, and patch for bug 91584
 
   04 Jan 2005; Lina Pezzella <j4rg0n@gentoo.org> tiff-3.7.1-r1.ebuild:
   Stable ppc-macos.
