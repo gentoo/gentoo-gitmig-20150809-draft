@@ -1,5 +1,18 @@
-MD5 5a7d725563e4528f28a22d751c6e8fb2 ChangeLog 931
-MD5 816a0d3da505a8f9955d9b8ce3937a7b dvcgi-0.5.10.ebuild 597
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 bdf863f25a0f7f4094eb77e746b99ba0 dvcgi-0.5.13.ebuild 958
 MD5 c85ce74dce768b74e0ade32543632cb1 dvcgi-0.5.8.ebuild 595
+MD5 00d16c86a19f5e03bf531d03d2b10540 ChangeLog 1207
+MD5 816a0d3da505a8f9955d9b8ce3937a7b dvcgi-0.5.10.ebuild 597
+MD5 d4c8b46f106b5227d676a585a0f84063 metadata.xml 255
 MD5 666d0940ec049dbbb35c7beabc1f225b files/digest-dvcgi-0.5.10 64
+MD5 6bbbb6863a650f35404249af00135699 files/digest-dvcgi-0.5.13 64
 MD5 50db820e94b28f2d6cae4cc3bbd56d85 files/digest-dvcgi-0.5.8 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCfg9cEZCkKN40op4RAjSeAKCXt2H9M1ZL18WUmeS3KSNBu3dmxACfc9xu
+8wpJGW7SkWjA6MmcixIoB6o=
+=ji8W
+-----END PGP SIGNATURE-----
