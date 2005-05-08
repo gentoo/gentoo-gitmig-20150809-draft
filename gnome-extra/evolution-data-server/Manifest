@@ -1,28 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 4dbe4199e9831b2797fb93b7a19c42fb evolution-data-server-1.2.0-r1.ebuild 2365
-MD5 0ae06d7f48eddd31b74f7230179302e3 evolution-data-server-1.0.4.ebuild 989
-MD5 0f9409d3e4001cbb19e0b3f598820a46 ChangeLog 5115
 MD5 368efaf736537929d3c127b9608a1ae2 evolution-data-server-1.0.3.ebuild 983
-MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+MD5 1788b80b93b7c9abbad4daf1ef997a05 evolution-data-server-1.2.1.ebuild 2369
 MD5 98bdbed2d5ce2bec87868d9a46b5f3b0 evolution-data-server-1.0.2.ebuild 1065
+MD5 4dbe4199e9831b2797fb93b7a19c42fb evolution-data-server-1.2.0-r1.ebuild 2365
+MD5 89ea458e495dd07187b437a87b3a2c4c evolution-data-server-1.0.4.ebuild 988
 MD5 1097e1ac343ae36a49a3da3824b3d624 evolution-data-server-1.2.0.ebuild 1249
 MD5 e5e2dd7e8c0e613975275ddc9d74be6f evolution-data-server-1.0.1.ebuild 887
-MD5 1788b80b93b7c9abbad4daf1ef997a05 evolution-data-server-1.2.1.ebuild 2369
-MD5 bbc32ff03cbc0bac1c13b71aacbcdf80 files/digest-evolution-data-server-1.2.0 81
+MD5 02e691ba12cbdfc02de77a04d09571db ChangeLog 5222
+MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 bbc32ff03cbc0bac1c13b71aacbcdf80 files/digest-evolution-data-server-1.2.0-r1 81
-MD5 c93bb2769f43f6e88e5fcb385a0ab498 files/evolution-data-server-1.0.2-amd64_mutex.patch 1114
 MD5 9d35355b61cdb08f0f918e3f106ce953 files/digest-evolution-data-server-1.0.1 81
 MD5 e72d151eb141e23240770c222c39e317 files/digest-evolution-data-server-1.0.2 81
-MD5 ab9f8a22a7b870a6e1e2edc463949c82 files/evolution-data-server-1.2.0-gentoo_etc_services.patch 815
-MD5 677d10afd2898cc22305dd302a01d2e7 files/digest-evolution-data-server-1.0.4 81
 MD5 dfc34218a032bcd275fc5fb09376abea files/digest-evolution-data-server-1.0.3 81
+MD5 677d10afd2898cc22305dd302a01d2e7 files/digest-evolution-data-server-1.0.4 81
+MD5 bbc32ff03cbc0bac1c13b71aacbcdf80 files/digest-evolution-data-server-1.2.0 81
 MD5 b916b7c2e1730287c5e37f6c1707ff04 files/digest-evolution-data-server-1.2.1 81
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCcKiCKf2g/qXtneoRAsAmAKC2OpGrvjw0kycXq5YDQ4WiDYl7igCfdv7Z
-M/4VLSZuR1hPLe0saNqwgMI=
-=t8f0
------END PGP SIGNATURE-----
+MD5 ab9f8a22a7b870a6e1e2edc463949c82 files/evolution-data-server-1.2.0-gentoo_etc_services.patch 815
+MD5 c93bb2769f43f6e88e5fcb385a0ab498 files/evolution-data-server-1.0.2-amd64_mutex.patch 1114
