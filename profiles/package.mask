@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3935 2005/05/08 22:19:41 araujo Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3936 2005/05/08 23:43:14 latexer Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Peter Johanson <latexer@gentoo.org> (08 May 2005)
+# New blam requires mono-1.1.x, so mask for now
+=new-news/blam-1.8.0
 
 # Luis F. Araujo <araujo@gentoo.org> (08 May 2005)
 # Masked until we unmask ghc-6.4
