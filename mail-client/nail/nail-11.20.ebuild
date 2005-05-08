@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/nail/nail-11.20.ebuild,v 1.4 2005/04/01 05:57:03 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/nail/nail-11.20.ebuild,v 1.5 2005/05/08 20:57:56 ferdy Exp $
 
 inherit eutils
 DESCRIPTION="Nail is a mail user agent derived from Berkeley Mail 8.1 and contains builtin support for MIME messages."
@@ -39,10 +39,6 @@ src_install () {
 }
 
 pkg_postinst () {
-	echo
-	einfo "NOTE: The nail mailer does _not_ support maildir format."
-	einfo "      It is best to use nail only for outgoing mail, and"
-	einfo "      really only use it for scripts that require it."
 	echo
 	einfo "NOTE: This build has ~/.maildir compiled in as the"
 	einfo "      mail spool directory (for incoming mail)."
