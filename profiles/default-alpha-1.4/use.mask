@@ -18,6 +18,9 @@ pcmcia
 # doesn't compile
 alsa
 
+# avifile is broken atm
+avi
+
 # No hardware to test
 pda
 
