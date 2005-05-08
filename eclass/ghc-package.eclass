@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ghc-package.eclass,v 1.9 2005/04/08 01:13:39 araujo Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ghc-package.eclass,v 1.10 2005/05/08 14:49:25 dcoutts Exp $
 #
 # Author: Andres Loeh <kosmikus@gentoo.org>
 #
@@ -89,21 +89,19 @@ ghc-makeghcilib() {
 ghc-setup-pkg() {
 	local localpkgconf
 	localpkgconf="${S}/$(ghc-localpkgconf)"
-	echo '[' > ${localpkgconf}
-	while [ -n "$1" ]; do
-		cat "$1" >> ${localpkgconf}
-		shift
-		[ -n "$1" ] && echo ',' >> ${localpkgconf}
+	echo '[]' > ${localpkgconf}
+	for pkg in $*; do
+		$(ghc-getghcpkgbin) -f ${localpkgconf} -u --force \
+			< ${pkg}
 	done
-	echo ']' >> ${localpkgconf}
 }
 
 # fixes the library and import directories path
 # of the package configuration file
 ghc-fixlibpath() {
-    sed -i "s|$1|$(ghc-libdir)|" ${S}/$(ghc-localpkgconf)
+    sed -i "s|$1|$(ghc-libdir)|g" ${S}/$(ghc-localpkgconf)
 	if [[ -n "$2" ]]; then
-		sed -i "s|$2|$(ghc-libdir)/imports|" ${S}/$(ghc-localpkgconf)
+		sed -i "s|$2|$(ghc-libdir)/imports|g" ${S}/$(ghc-localpkgconf)
 	fi
 }
 
@@ -111,7 +109,7 @@ ghc-fixlibpath() {
 # file to its final destination
 ghc-install-pkg() {
 	mkdir -p ${D}/$(ghc-confdir)
-	cat ${S}/$(ghc-localpkgconf) | sed "s:${D}::" \
+	cat ${S}/$(ghc-localpkgconf) | sed "s|${D}||g" \
 		> ${D}/$(ghc-confdir)/$(ghc-localpkgconf)
 }
 
