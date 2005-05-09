@@ -1,8 +1,18 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 bfd8798ca6fee15ea7402c5c7974b184 ChangeLog 3428
 MD5 a2cf34195dbecbc00dc4b4478b5b65ac glibmm-2.6.1.ebuild 1082
-MD5 d138984644f00b8ce8ee0cbf0b697bc1 glibmm-2.4.7-r1.ebuild 1049
 MD5 59de08ba1f65a18d2b7e8d4a4050a5d1 glibmm-2.4.4.ebuild 537
-MD5 77e5fb467d7a79f0be3111465a0d2c87 ChangeLog 3329
 MD5 09d3293038c3ef6ba2ff98ef6609680a metadata.xml 252
-MD5 d645a289371e18df9c33719baa37d25d files/digest-glibmm-2.4.7-r1 65
-MD5 6228c75d9e841f3fc6883a344a98e7c3 files/digest-glibmm-2.4.4 65
+MD5 fbc27574a46a562d3c23548c325ce606 glibmm-2.4.7-r1.ebuild 1048
 MD5 df31c402a8203f95b628cad41a9bafa0 files/digest-glibmm-2.6.1 66
+MD5 6228c75d9e841f3fc6883a344a98e7c3 files/digest-glibmm-2.4.4 65
+MD5 d645a289371e18df9c33719baa37d25d files/digest-glibmm-2.4.7-r1 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFCf51wKRy60XGEcJIRAnDAAJsE/ymZUE7v4cNt3jpypjwrlk/NbwCfcj2p
+F93Yk3KxWR8TPAkx7lgVKMs=
+=FozN
+-----END PGP SIGNATURE-----
