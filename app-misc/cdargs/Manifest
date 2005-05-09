@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 2d44d536b89136c56f27ec70fbcc68ba cdargs-1.31.ebuild 1527
-MD5 22df0d6e8e764f272ee9e1ca1ac59468 ChangeLog 473
+MD5 f8370496602abc35f2cbf658c0666cba ChangeLog 566
+MD5 8fcda11eec4bc67883071adc8f41e59c cdargs-1.31.ebuild 1530
 MD5 0c131a7201c4670302767f93643876fa metadata.xml 165
 MD5 003ee1abc0d68de5c012e8fcb85334e7 files/digest-cdargs-1.31 62
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCCLU7EZCkKN40op4RAtorAJ4yO7G3z5PStjWtyBR8PIn9PlL5WgCdGxol
-5oSNbwBWgujMFUjvHC6+wE0=
-=KKcZ
------END PGP SIGNATURE-----
