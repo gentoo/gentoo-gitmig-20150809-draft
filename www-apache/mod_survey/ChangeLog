@@ -1,6 +1,9 @@
 # ChangeLog for www-apache/mod_survey
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_survey/ChangeLog,v 1.4 2004/11/30 22:31:30 swegener Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_survey/ChangeLog,v 1.5 2005/05/09 10:25:17 beu Exp $
+
+  09 May 2005; Elfyn McBratney <beu@gentoo.org> mod_survey-3.2.0.ebuild:
+  dev-perl/mod_perl -> www-apache/mod_perl
 
   30 Nov 2004; Sven Wegener <swegener@gentoo.org> mod_survey-3.2.0.ebuild:
   Fixed invalid atoms in *DEPEND.
