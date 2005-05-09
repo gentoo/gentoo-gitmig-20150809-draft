@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.112 2005/05/02 17:54:37 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.113 2005/05/09 06:38:59 vapier Exp $
+
+  09 May 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/gentoo.config-0.9.7g, openssl-0.9.7g.ebuild:
+  Add cross-compiling support #85344.
 
   02 May 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   openssl-0.9.7e-r1.ebuild:

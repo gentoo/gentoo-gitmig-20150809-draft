@@ -1,0 +1,48 @@
+#!/bin/bash
+# Copyright 1999-2005 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/files/gentoo.config-0.9.7g,v 1.1 2005/05/09 06:38:59 vapier Exp $
+
+# Openssl doesn't play along nicely with cross-compiling 
+# like autotools based projects, so let's teach it new tricks.
+
+# Review the bundled 'config' script to see why kind of targets 
+# we can pass to the 'Configure' script.
+
+
+system="linux"
+#case ${CHOST##*-}
+#	uclibc*)  system="linux"
+#	gnu*)     system="linux"
+#esac
+
+machine=""
+case ${CHOST%%-*} in
+	alphaev56*)   machine=alpha+bwx;;
+	alphaev[67]*) machine=alpha+bwx;;
+	alpha*)       machine=alpha;;
+	arm*eb*)      machine="elf-arm -DB_ENDIAN";;
+	arm*)         machine="elf-arm -DL_ENDIAN";;
+#	hppa64*)      machine=parisc64;;
+	hppa*)        machine=parisc;;
+	i[0-5]86*)    machine=elf;;
+	i[6-9]86*)    machine=pentium;;
+	ia64*)        machine=ia64;;
+	m68*)         machine=m68k;;
+	mips*el*)     machine=mipsel;;
+	mips*)        machine=mips;;
+	powerpc64*)   machine=ppc64;;
+	powerpc*)     machine=ppc;;
+	sh64*)        machine=elf;;
+	sh*)          machine=elf;;
+	sparc*v7*)    machine=sparcv7;;
+	sparc64*)     machine=sparcv9;;
+	sparc*)       machine=sparcv8;;
+	s390x*)       machine=s390x;;
+	s390*)        machine=s390;;
+	x86_64*)      machine=x86_64;;
+esac
+
+if [ -n "${machine}" ] ; then
+	echo ${system}-${machine}
+fi
