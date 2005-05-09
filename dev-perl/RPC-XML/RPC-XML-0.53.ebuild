@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/RPC-XML/RPC-XML-0.53.ebuild,v 1.8 2005/04/07 20:36:14 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/RPC-XML/RPC-XML-0.53.ebuild,v 1.9 2005/05/09 10:30:30 beu Exp $
 
 inherit perl-module
 
@@ -16,4 +16,4 @@ IUSE=""
 DEPEND="${DEPEND}
 	dev-perl/libwww-perl
 	dev-perl/XML-Parser
-	dev-perl/mod_perl"
+	www-apache/mod_perl"

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SOAP/SOAP-0.28-r2.ebuild,v 1.9 2005/01/04 13:34:23 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SOAP/SOAP-0.28-r2.ebuild,v 1.10 2005/05/09 10:28:57 beu Exp $
 
 inherit perl-module
 
@@ -16,4 +16,4 @@ IUSE=""
 DEPEND="${DEPEND}
 	dev-perl/libwww-perl
 	>=dev-perl/XML-Parser-2.29
-	>=dev-perl/mod_perl-1.24"
+	>=www-apache/mod_perl-1.24"

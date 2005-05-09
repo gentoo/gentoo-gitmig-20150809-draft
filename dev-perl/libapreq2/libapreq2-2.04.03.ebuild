@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/libapreq2/libapreq2-2.04.03.ebuild,v 1.3 2005/04/11 02:02:35 trapni Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/libapreq2/libapreq2-2.04.03.ebuild,v 1.4 2005/05/09 10:33:07 beu Exp $
 
 inherit libtool eutils flag-o-matic
 
@@ -21,7 +21,7 @@ DEPEND="${DEPEND}
 	>=sys-apps/sed-4
 	dev-perl/Apache-Test
 	>=net-www/apache-2.0.46
-	>=dev-perl/mod_perl-1.99
+	>=www-apache/mod_perl-1.99
 	>=dev-perl/ExtUtils-XSBuilder-0.23"
 
 mydoc="TODO"

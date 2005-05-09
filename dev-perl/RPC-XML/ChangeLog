@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/RPC-XML
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/RPC-XML/ChangeLog,v 1.18 2005/05/06 09:56:32 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/RPC-XML/ChangeLog,v 1.19 2005/05/09 10:30:30 beu Exp $
+
+  09 May 2005; Elfyn McBratney <beu@gentoo.org> RPC-XML-0.40.ebuild,
+  RPC-XML-0.40-r1.ebuild, RPC-XML-0.53.ebuild, RPC-XML-0.54.ebuild:
+  dev-perl/mod_perl -> www-apache/mod_perl
 
   06 May 2005; Sven Wegener <swegener@gentoo.org> RPC-XML-0.54.ebuild:
   Removed * postfix from <, <=, >= and > dependencies.

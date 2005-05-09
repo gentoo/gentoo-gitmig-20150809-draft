@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/libapreq/libapreq-1.2-r1.ebuild,v 1.6 2005/04/19 18:31:27 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/libapreq/libapreq-1.2-r1.ebuild,v 1.7 2005/05/09 10:32:09 beu Exp $
 
 inherit perl-module eutils
 
@@ -15,7 +15,7 @@ IUSE=""
 
 DEPEND=">=sys-apps/sed-4
 	dev-perl/Apache-Test
-	<dev-perl/mod_perl-1.99"
+	<www-apache/mod_perl-1.99"
 
 mydoc="TODO"
 

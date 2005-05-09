@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/RPC-XML/RPC-XML-0.54.ebuild,v 1.5 2005/05/06 09:56:32 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/RPC-XML/RPC-XML-0.54.ebuild,v 1.6 2005/05/09 10:30:30 beu Exp $
 
 inherit perl-module
 
@@ -17,14 +17,14 @@ SRC_TEST="do"
 
 DEPEND="dev-perl/libwww-perl
 	>=dev-perl/XML-Parser-2.31
-	!apache2? ( <dev-perl/mod_perl-1.99 )"
+	!apache2? ( <www-apache/mod_perl-1.99 )"
 
 pkg_postinst() {
 	perl-module_pkg_postinst
 
 	SETWARN=0
 	has_version '=net-www/apache-2*' && HAVE_APACHE2=1
-	has_version '>=dev-perl/mod_perl-1.99' && HAVE_MP2=2
+	has_version '>=www-apache/mod_perl-1.99' && HAVE_MP2=2
 
 	[ -n "${HAVE_APACHE2}" ] && SETWARN=1
 	[ -n "${HAVE_MP2}" ] && SETWARN=1
