@@ -1,17 +1,17 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 03e60048a22bff8b752f718107dcd2a3 gnome2-vfs-perl-1.021.ebuild 733
-MD5 99faded71fb8c842289f37e2d690889e gnome2-vfs-perl-1.00.ebuild 747
-MD5 c427f451de302c20eb297375eb4feb6d ChangeLog 1408
+MD5 c62c047097099942db3b3ce82b7ff751 ChangeLog 1512
+MD5 264f2c0b0c5f5e814c2b341d6601e017 gnome2-vfs-perl-1.00.ebuild 746
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 e1e4aaad0f99f8c88b4a71311bcdfda1 files/vfs.typemap 417
+MD5 03e60048a22bff8b752f718107dcd2a3 gnome2-vfs-perl-1.021.ebuild 733
 MD5 9cc08a81f72fc3c67a30a58d7b3fa76d files/digest-gnome2-vfs-perl-1.021 67
 MD5 aa354e0aaaf380c87630956862202409 files/digest-gnome2-vfs-perl-1.00 66
+MD5 e1e4aaad0f99f8c88b4a71311bcdfda1 files/vfs.typemap 417
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFCeruhI1lqEGTUzyQRAiHFAKCXh6RuqX6hQCTLqW0XoCd47naU8ACgtuEl
-RgZ0/bmTIOX5fQ960LfVe/w=
-=moA7
+iD8DBQFCf6OjKRy60XGEcJIRAkewAKClWudlU42Ux1XjHTYlmO1ysViH4ACePQeu
+JzHqrSYpck1hMZNxdr2IP5s=
+=+TGv
 -----END PGP SIGNATURE-----
