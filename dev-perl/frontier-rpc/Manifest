@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a2ac7e47a52744abe5d8387bc3f837da ChangeLog 929
-MD5 88832f58e3e77f8eba0dfa7fe78ebbb2 frontier-rpc-0.07_beta4.ebuild 660
+MD5 76d09f17ae48ccefaae9e257e751918d ChangeLog 1021
+MD5 5578b62957989290f4813806c8ab8d21 frontier-rpc-0.07_beta4.ebuild 662
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 996260b909ea6f5eb6b40fa0144e5f40 files/digest-frontier-rpc-0.07_beta4 70
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFCfCgOKRy60XGEcJIRAo35AJ4rhIokzOMX4Ij5dctRs/IJP+D3FgCeIVWg
-x5D5YigeAhpJdrqKYhuoGzw=
-=AMIT
------END PGP SIGNATURE-----
