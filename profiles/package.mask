@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3945 2005/05/09 15:01:37 beu Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3946 2005/05/09 16:56:42 r3pek Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -1106,3 +1106,6 @@ app-text/sgml2x
 
 # broken
 >=media-video/mpeg2-movie-1.5
+
+# Will be removed shortly
+dev-util/git-pasky
