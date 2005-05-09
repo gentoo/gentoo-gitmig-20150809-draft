@@ -1,11 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/ceferino/ceferino-0.94.ebuild,v 1.1 2005/05/09 18:32:34 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/ceferino/ceferino-0.94.ebuild,v 1.2 2005/05/09 23:18:04 mr_bones_ Exp $
 
 inherit eutils games
 
 DESCRIPTION="Super-Pang clone (destroy bouncing balloons with your grapnel)"
-HOMEPAGE="http://www.loosersjuegos.com.ar/pagina.php?nombre=proyecto_don_ceferino"
+HOMEPAGE="http://www.loosersjuegos.com.ar/pagina.php?nombre=proyecto_don_ceferino..."
 SRC_URI="http://www.loosersjuegos.com.ar/descargas/${P}.tar.gz"
 
 LICENSE="GPL-2"
