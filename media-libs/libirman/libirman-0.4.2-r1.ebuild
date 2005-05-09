@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libirman/libirman-0.4.2-r1.ebuild,v 1.5 2004/09/24 10:06:36 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libirman/libirman-0.4.2-r1.ebuild,v 1.6 2005/05/09 01:01:30 agriffis Exp $
 
 IUSE=""
 inherit eutils
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.evation.com/libirman/libirman.html"
 
 SLOT="0"
 LICENSE="GPL-2 LGPL-2"
-KEYWORDS="x86 sparc alpha ~ia64 amd64 ~ppc"
+KEYWORDS="alpha amd64 ia64 ~ppc sparc x86"
 
 DEPEND="virtual/libc"
 

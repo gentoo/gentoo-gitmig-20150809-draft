@@ -1,25 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 7c5920167551f2210fd20d05c3f41d6b ChangeLog 7812
+MD5 64582011cec6b9ceeafa1e7e5f303203 ChangeLog 8085
 MD5 085bf925a1dc6f9756f484ac688a92f9 metadata.xml 447
-MD5 9b3a1e0834cc4a7f5507d508a733d065 tiff-3.6.1-r2.ebuild 2191
 MD5 ab3519ae0f7d0763b8869d9156cdc68c tiff-3.7.1-r1.ebuild 1029
-MD5 f2ad2f3433a278cf764d3defe7adffc7 tiff-3.7.2.ebuild 967
-MD5 eb56b1622d6a778c616bfb2453471ce1 files/config.site 488
-MD5 46287dce0914479f229a719830ab3fb3 files/digest-tiff-3.6.1-r2 378
+MD5 ecb8982b7574f66af189fae5578cf5d0 tiff-3.7.2.ebuild 900
 MD5 9bd055973e8798d783f0e87f5d6c160d files/digest-tiff-3.7.2 63
-MD5 0d970257da4fc0fba7ae38016e4655d6 files/digest-tiff-3.7.1-r1 63
-MD5 dca7d9db2819ce30468b1a44b7575aaa files/tiff-3.6.1-r1-man.so.patch 364
-MD5 c20fc7c59038d011ff51cae0d1c2e9cc files/tiff-3.7.0-sharedlibsnamefix.patch 938
-MD5 7fb04eea18fc47d8211f3bfaf71e5491 files/tiff-3.7.0-tiff2ps_float.patch 675
 MD5 6a9a255a3b89908c05b1f8bbde260e26 files/tiff-3.7.1-tiffdump.patch 439
+MD5 0d970257da4fc0fba7ae38016e4655d6 files/digest-tiff-3.7.1-r1 63
 MD5 4bffd94510b6a669790656394f2d0302 files/tiff-3.7.1-trans.patch 479
 MD5 f0b2abf65d2e777bb249d460fc54cd87 files/tiff-3.7.2-buffer_check.patch 2093
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCfp63ArHZZzCEUG0RAp3bAJ0cEAfizLaJOGF/AjATdKcA2A+IXACdFq8d
-AIvbGcXFP77IGwiQJswWt/A=
-=vWcn
------END PGP SIGNATURE-----
