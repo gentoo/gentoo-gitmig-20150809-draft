@@ -1,0 +1,10 @@
+# ChangeLog for games-arcade/ceferino
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/ceferino/ChangeLog,v 1.1 2005/05/09 18:32:34 mr_bones_ Exp $
+
+*ceferino-0.94 (09 May 2005)
+
+  09 May 2005; Michael Sterrett <mr_bones_@gentoo.org> +metadata.xml,
+  +ceferino-0.94.ebuild:
+  initial commit - ebuild submitted by TGL via bug #90888
+
