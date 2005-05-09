@@ -1,6 +1,17 @@
 # ChangeLog for media-gfx/sane-backends
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/ChangeLog,v 1.65 2005/04/27 08:08:38 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/ChangeLog,v 1.66 2005/05/09 09:45:49 phosphan Exp $
+
+*sane-backends-1.0.15-r2 (09 May 2005)
+
+  09 May 2005; Patrick Kursawe <phosphan@gentoo.org>
+  -sane-backends-1.0.14-r3.ebuild, -sane-backends-1.0.14-r6.ebuild,
+  +sane-backends-1.0.15-r2.ebuild:
+  Compiling (almost) only selected backends using $SANE_BACKENDS now.
+  See bug #90598.
+  The patch by Diego (flameeyes@gentoo.org) also does some cleanups and adds
+  parallel port support for amd64.
+  Cleaning up unused versions.
 
 *sane-backends-1.0.15-r1 (27 Apr 2005)
 
@@ -24,7 +35,7 @@
   sane-backends-1.0.15.ebuild:
   Fixed BUG #86354 (multilib-strict). Marked stable on amd64.
 
-  21 Jan 2005; Bryan Østergaard <kloeri@gentoo.org>
+  21 Jan 2005; Bryan Ãstergaard <kloeri@gentoo.org>
   sane-backends-1.0.15.ebuild:
   Stable on alpha.
 
@@ -45,7 +56,7 @@
   sane-backends-1.0.14-r6.ebuild, sane-backends-1.0.15.ebuild:
   Update homepage to http://www.sane-project.org/
 
-  23 Nov 2004; Bryan Østergaard <kloeri@gentoo.org>
+  23 Nov 2004; Bryan Ãstergaard <kloeri@gentoo.org>
   sane-backends-1.0.15.ebuild:
   ~alpha keyword.
 
