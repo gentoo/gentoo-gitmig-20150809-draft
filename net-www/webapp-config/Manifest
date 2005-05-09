@@ -1,16 +1,26 @@
-MD5 e44e7797f189dcc401b74f664a18b6be ChangeLog 10569
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 45a4d79c3352b04e5d7fc15c3b35a732 ChangeLog 10687
 MD5 4defd726d2b03decc5b7ff21b0aac1a3 metadata.xml 225
 MD5 396fd3dfd7a18fa33e569a53ae89fc8e webapp-config-1.10-r10.ebuild 1414
 MD5 2c2641fbea8ae821af716c5ad547ab2b webapp-config-1.10-r11.ebuild 1438
-MD5 1b3a7af5aab43121eee269209e3982c4 webapp-config-1.10-r12.ebuild 1647
 MD5 3aecf070ae2672567d75e58551b58557 webapp-config-1.10-r6.ebuild 1406
 MD5 801b740d19b4a680780bc6c016a0eceb webapp-config-1.9-r2.ebuild 1145
-MD5 880a4dfa7e02e695bec1ad6cbf88347e webapp-config-1.10-r14.ebuild 2052
+MD5 1b3a7af5aab43121eee269209e3982c4 webapp-config-1.10-r12.ebuild 1647
+MD5 46b8463dde614d39e8fa98ce15efca92 webapp-config-1.10-r14.ebuild 2052
 MD5 ad4be087a0a4be0991e124d97fe377ac files/digest-webapp-config-1.10-r10 74
 MD5 72b2e4879ffabdc297ea4fd9ae4c3184 files/digest-webapp-config-1.10-r11 74
-MD5 72b2e4879ffabdc297ea4fd9ae4c3184 files/digest-webapp-config-1.10-r12 74
 MD5 675f730140fb4b7303082b203e27ba0b files/digest-webapp-config-1.10-r6 73
 MD5 0c1ae4fd2fcc6de80a24f04993a63d80 files/digest-webapp-config-1.9-r2 72
+MD5 72b2e4879ffabdc297ea4fd9ae4c3184 files/digest-webapp-config-1.10-r12 74
 MD5 72b2e4879ffabdc297ea4fd9ae4c3184 files/digest-webapp-config-1.10-r14 74
 MD5 e605a4d1868a4a3e17cd2ecd474f7076 files/webapp-config_fixperms.patch 2786
 MD5 b9efc67836c3d94009bea1f83cc92027 files/webapp-config_improved-tmpfile-handling.patch 973
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFCf4AdKRy60XGEcJIRAhCTAJ4ztjY3T7uX6cOYngcNwmK1MRQfkwCgpUZg
+dTtOVMbZNGnWnE3az2kMWBM=
+=HdRi
+-----END PGP SIGNATURE-----
