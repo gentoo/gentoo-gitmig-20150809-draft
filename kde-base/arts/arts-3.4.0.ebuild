@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-3.4.0.ebuild,v 1.6 2005/04/27 17:13:37 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-3.4.0.ebuild,v 1.7 2005/05/09 04:12:21 agriffis Exp $
 
 inherit kde flag-o-matic eutils
 set-qtdir 3
@@ -15,7 +15,7 @@ SRC_URI="mirror://kde/stable/3.4/src/${PN}-${MY_PV}.tar.bz2"
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="3.4"
-KEYWORDS="~x86 ~amd64 ~sparc ~ppc ~ppc64"
+KEYWORDS="~x86 ~amd64 ~sparc ~ppc ~ppc64 ~ia64"
 IUSE="alsa oggvorbis esd artswrappersuid jack mad hardened"
 
 DEPEND="alsa? ( media-libs/alsa-lib virtual/alsa )
