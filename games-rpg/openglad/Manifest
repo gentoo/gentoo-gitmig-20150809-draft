@@ -1,5 +1,5 @@
-MD5 50852b8b2d597f762df8dc9084929ae7 openglad-0.98.ebuild 1058
-MD5 ad04d182e75b6b814772b9a9b03bab28 ChangeLog 660
+MD5 3208bfdfde69f640ef15c79a5601aba7 ChangeLog 742
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+MD5 96987d17d7080a6f07949a5cf1542350 openglad-0.98.ebuild 1060
 MD5 af773a3d54c961efd0baea7d788c249b files/0.98-gladpack.c.patch 516
 MD5 7b1d4e4756879ee76a905e09f5d454ab files/digest-openglad-0.98 120
