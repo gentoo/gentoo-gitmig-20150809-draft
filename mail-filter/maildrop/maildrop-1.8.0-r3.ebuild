@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/maildrop/maildrop-1.8.0-r3.ebuild,v 1.5 2005/05/05 23:42:19 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/maildrop/maildrop-1.8.0-r3.ebuild,v 1.6 2005/05/09 00:02:52 agriffis Exp $
 
 inherit eutils gnuconfig
 
@@ -14,7 +14,7 @@ S="${WORKDIR}/${P%%_pre}"
 SLOT="0"
 LICENSE="GPL-2"
 # not in keywords due to missing dependencies: ~arm ~s390 ~ppc64
-KEYWORDS="x86 alpha ~amd64 ~ia64 ~ppc sparc"
+KEYWORDS="alpha ~amd64 ia64 ~ppc sparc x86"
 IUSE="mysql ldap gdbm berkdb uclibc debug postgres"
 
 PROVIDE="virtual/mda"
