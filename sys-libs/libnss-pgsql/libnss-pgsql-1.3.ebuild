@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libnss-pgsql/libnss-pgsql-1.3.ebuild,v 1.1 2005/05/09 00:36:32 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libnss-pgsql/libnss-pgsql-1.3.ebuild,v 1.2 2005/05/09 15:29:39 nakano Exp $
 
 inherit eutils
 
@@ -13,11 +13,13 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
 DEPEND="virtual/libc
-	dev-db/libpq"
+	dev-db/libpq
+	app-text/xmlto"
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}
+	epatch ${FILESDIR}/${P}-gentoo.patch
 }
 
 src_compile() {
