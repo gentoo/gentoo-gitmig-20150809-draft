@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.310 2005/05/09 15:42:55 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.311 2005/05/09 19:06:01 lu_zero Exp $
+
+  09 May 2005; Luca Barbato <lu_zero@gentoo.org> mplayer-1.0_pre6-r6.ebuild,
+  mplayer-1.0_pre7.ebuild:
+  Purge problematic cflag
 
   09 May 2005; Luca Barbato <lu_zero@gentoo.org>
   files/mplayer-gcc_detection.patch:
