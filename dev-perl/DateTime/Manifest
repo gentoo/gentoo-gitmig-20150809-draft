@@ -1,18 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 bd598318c37fb26b6058477e2c8f0f44 DateTime-0.20.ebuild 610
+MD5 cfeb10e0bc1733230def73a9c65872aa ChangeLog 1585
 MD5 8dfbc0bf54cb3caebd95f22daa58fcdc DateTime-0.22.ebuild 670
-MD5 5ede99291e39233bad43da7140a6931e ChangeLog 1413
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 e607ecb622b74649cc8ff06353eeca73 DateTime-0.21.ebuild 646
-MD5 ccdd957266e3fce31d460aeb9c7b60ba files/digest-DateTime-0.20 64
-MD5 3871a45b77c0a2bd97a76914dfe68c4c files/digest-DateTime-0.21 64
+MD5 f7b4ad2d73cd934ccc8a5c364467220d DateTime-0.28.ebuild 623
 MD5 d7c7660dc0f548de6f62457d363ecd58 files/digest-DateTime-0.22 64
+MD5 e3898473328fd1c50847118377dbfdd1 files/digest-DateTime-0.28 64
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFB5JG1Z/iYVBmujdURAo7AAKC6WtiE87vsFh+XsGy9phRDXd+zEwCfSMnA
-Ygw66OLBme9+bS5XwyYDSOM=
-=BKzt
+iD8DBQFCf2MDtG5z4I8BtQoRAjoEAJ4nku2mDoE0yXTZs1G5yf9oQD247wCeL0Xs
+Dvug09f+2stoMldWX7ahZ+Y=
+=gKTq
 -----END PGP SIGNATURE-----

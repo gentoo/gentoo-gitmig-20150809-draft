@@ -1,6 +1,16 @@
-MD5 75dc08dddbe57433623477afcf70d0aa ImageSize-2.99-r1.ebuild 566
-MD5 3a28942ecf2677fbc3212d13d6650370 ChangeLog 996
-MD5 3f8ae279950dadcb278d3e053a7ffa67 ImageSize-2.99.ebuild 559
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 10cf6acfd9245ec565769de46d58e569 ChangeLog 1178
+MD5 60ca251ed82ebbd495617df18917a195 ImageSize-2.99-r1.ebuild 561
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 3bda0444eb92208d01d79517c53b3ef1 files/digest-ImageSize-2.99 67
+MD5 7fe6c6ef42309dce9d715c1c11c6f74d ImageSize-2.992.ebuild 563
+MD5 22434ed52e38ff1372bd78d634294b87 files/digest-ImageSize-2.992 68
 MD5 3bda0444eb92208d01d79517c53b3ef1 files/digest-ImageSize-2.99-r1 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCf2NNtG5z4I8BtQoRAnO9AJsGVXiL7RWiDDTsaI4gb0SAs2qgnACfWPdN
+dqDEsa0TAdNxQUFW0rLAobE=
+=cUqS
+-----END PGP SIGNATURE-----
