@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/nail
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/nail/ChangeLog,v 1.25 2005/05/08 20:57:56 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/nail/ChangeLog,v 1.26 2005/05/09 09:27:42 ferdy Exp $
+
+  09 May 2005; Fernando J. Pereda <ferdy@gentoo.org> nail-11.22.ebuild:
+  keyworded alpha ~hppa x86
 
   08 May 2005; Fernando J. Pereda <ferdy@gentoo.org> nail-11.20.ebuild,
   nail-11.22.ebuild:
