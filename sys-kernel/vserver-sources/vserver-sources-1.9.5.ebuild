@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vserver-sources/vserver-sources-1.9.5.ebuild,v 1.1 2005/03/29 14:15:38 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vserver-sources/vserver-sources-1.9.5.ebuild,v 1.2 2005/05/09 08:19:09 hollow Exp $
 
 ETYPE="sources"
 CKV="2.6.11.6"
@@ -18,7 +18,7 @@ DESCRIPTION="vserver patched sources for the ${KV_MAJOR}.${KV_MINOR} kernel bran
 HOMEPAGE="http://www.linux-vserver.org"
 SRC_URI="${KERNEL_URI} 	mirror://gentoo/vspatches-${VSPV}-${PATCHR}.tar.bz2"
 
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE="ngnet"
 
 UNIPATCH_LIST="${DISTDIR}/vspatches-${VSPV}-${PATCHR}.tar.bz2"
