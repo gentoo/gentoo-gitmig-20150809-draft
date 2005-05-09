@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/keepalived
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/keepalived/ChangeLog,v 1.23 2005/04/29 18:04:10 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/keepalived/ChangeLog,v 1.24 2005/05/09 04:38:53 agriffis Exp $
+
+  09 May 2005; Aron Griffis <agriffis@gentoo.org> keepalived-1.1.11.ebuild:
+  add ~ia64
 
   29 Apr 2005; Jan Brinkmann <luckyduck@gentoo.org>
   keepalived-1.1.11.ebuild:
