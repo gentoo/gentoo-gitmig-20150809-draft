@@ -1,6 +1,0 @@
-MD5 85344ba52dbade8505a921262091cb99 ChangeLog 1852
-MD5 6525c48ba09d08599432ea6c299e52f4 metadata.xml 354
-MD5 c82a4057fc4d169624a3f41e15387519 XWine-0.3.2-r1.ebuild 1013
-MD5 1a3b9953738fd3b0df84b1e7d030932c files/digest-XWine-0.3.2-r1 66
-MD5 1b20eb4a1777e134f251c7bcb1e12f9c files/0.3.2-missing-paren.patch 556
-MD5 59f359ff56f14985bce984e558787c20 files/0.3.2-wine-update.patch 750
