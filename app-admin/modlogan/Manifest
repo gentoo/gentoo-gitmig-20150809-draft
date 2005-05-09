@@ -1,12 +1,17 @@
-MD5 dce93af158fc65e43cf77899f36cb8f5 modlogan-0.8.10-r1.ebuild 2983
-MD5 f3b14cfbf6d30e101f497673f65db9f5 modlogan-0.8.13.ebuild 2576
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 4be9093e862d813f6f4bb614910e87f5 ChangeLog 4180
 MD5 8f906ffe0aa837e5e26fe03af3043461 metadata.xml 219
+MD5 f3b14cfbf6d30e101f497673f65db9f5 modlogan-0.8.13.ebuild 2576
 MD5 9be382a2d0a56eec829a69bfc7fc2a42 files/digest-modlogan-0.8.13 140
-MD5 eff845321cd889ffb7be6eaabc38205d files/digest-modlogan-0.8.10-r1 199
-MD5 c95a2f59d42ca578ae23355f467743ba files/0.8/modlogan.conf 189
-MD5 cd845b930a3a89ad0e76c33a95ba385d files/0.8/sample.conf 2913
-MD5 8215abd50a0724bf4042c01821cd5dff files/0.8/sample.def.conf 11586
 MD5 c95a2f59d42ca578ae23355f467743ba files/0.8.13/modlogan.conf 189
 MD5 cd845b930a3a89ad0e76c33a95ba385d files/0.8.13/sample.conf 2913
 MD5 ebdfbd95c53173652997f659bb11a04a files/0.8.13/sample.def.conf 11436
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCf0O9TM53OX+9xmMRAgw+AJ0ZqFn4kAIzDYEn/8YNuWQO25Nz4QCffevx
+Jyrsxhtteg/goVYAKfZp6ZY=
+=esHX
+-----END PGP SIGNATURE-----
