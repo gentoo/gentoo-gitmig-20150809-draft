@@ -1,12 +1,16 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre7.ebuild,v 1.7 2005/05/06 22:30:52 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre7.ebuild,v 1.8 2005/05/09 15:24:52 lu_zero Exp $
 
 inherit eutils flag-o-matic kernel-mod
 
 RESTRICT="nostrip"
-IUSE="3dfx 3dnow 3dnowext aac aalib alsa altivec arts avi bidi bl cpudetection
-custom-cflags debug dga divx4linux doc dts dvb cdparanoia directfb dvd dv dvdread edl encode esd fbcon gif ggi gtk i8x0 ipv6 jack joystick jpeg libcaca lirc live lzo mad matroska matrox mmx mmxext mythtv nas nls nvidia vorbis opengl oss png real rtc samba sdl sse sse2 svga tga theora truetype v4l v4l2 X xanim xinerama xmms xv xvid xvmc"
+IUSE="3dfx 3dnow 3dnowext aac aalib alsa altivec arts bidi bl cpudetection
+custom-cflags debug dga divx4linux doc dts dvb cdparanoia directfb dvd dv
+dvdread edl encode esd fbcon gif ggi gtk i8x0 ipv6 jack joystick jpeg libcaca
+lirc live lzo mad matroska matrox mmx mmxext mythtv nas nls nvidia vorbis opengl
+oss png real rtc samba sdl sse sse2 svga tga theora truetype v4l v4l2
+win32codecs X xanim xinerama xmms xv xvid xvmc"
 
 BLUV=1.4
 SVGV=1.9.17
@@ -28,11 +32,9 @@ HOMEPAGE="http://www.mplayerhq.hu/"
 
 # 'encode' in USE for MEncoder.
 RDEPEND="xvid? ( >=media-libs/xvid-0.9.0 )
-	x86? (
-		divx4linux? (  >=media-libs/divx4linux-20030428 )
-		avi? ( >=media-libs/win32codecs-20040916 )
-		real? ( >=media-video/realplayer-10.0.3 )
-		)
+	divx4linux? (  >=media-libs/divx4linux-20030428 )
+	win32codecs? ( >=media-libs/win32codecs-20040916 )
+	x86? ( real? ( >=media-video/realplayer-10.0.3 ) )
 	aalib? ( media-libs/aalib )
 	alsa? ( media-libs/alsa-lib )
 	arts? ( kde-base/arts )
@@ -334,7 +336,7 @@ src_compile() {
 	myconf="${myconf} $(use_enable xmms)"
 	myconf="${myconf} $(use_enable xvid)"
 	use x86 && myconf="${myconf} $(use_enable real)"
-	use x86 && myconf="${myconf} $(use_enable avi win32)"
+	myconf="${myconf} $(use_enable win32codecs win32)"
 
 	#############
 	# Video Output #
