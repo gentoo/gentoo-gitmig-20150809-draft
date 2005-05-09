@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/drwright/drwright-0.17.ebuild,v 1.9 2005/02/24 19:30:24 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/drwright/drwright-0.17.ebuild,v 1.10 2005/05/09 17:22:13 dholm Exp $
 
 inherit gnome2 flag-o-matic gcc
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.imendio.com/projects/drwright/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~amd64 sparc"
+KEYWORDS="x86 ~amd64 sparc ~ppc"
 IUSE=""
 
 RDEPEND=">=x11-libs/gtk+-2.0.4
