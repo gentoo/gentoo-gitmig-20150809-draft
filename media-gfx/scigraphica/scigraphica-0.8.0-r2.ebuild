@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/scigraphica/scigraphica-0.8.0-r2.ebuild,v 1.1 2004/12/24 02:52:44 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/scigraphica/scigraphica-0.8.0-r2.ebuild,v 1.2 2005/05/09 18:04:34 dholm Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://scigraphica.sourceforge.net/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ~ppc"
 IUSE="gnome"
 
 DEPEND=">=x11-libs/gtk+extra-0.99.17

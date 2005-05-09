@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 05317c973981c215b906170ad2da5c34 scigraphica-0.8.0-r2.ebuild 2399
-MD5 0d1cb80a20cf1e75ecc980052aca8d75 ChangeLog 1670
+MD5 0e3518eb6b6f1b3d45ec1a7e25fdc412 ChangeLog 1759
 MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
+MD5 f4cca834d7f146ab0df88409126bdc0b scigraphica-0.8.0-r2.ebuild 2401
 MD5 c2d9cfaee160e764e5ea4eef6864b114 files/digest-scigraphica-0.8.0-r2 69
 MD5 a268a921bce77204066be75a284df252 files/gcc3.4.patch 464
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBzHLJI1lqEGTUzyQRAvOgAKDeLy9mSn7uUEWoePVOiEoS+LLcrwCfdZgy
-jfCVqYSJqE4f0FcESmxF4Wo=
-=F+2q
------END PGP SIGNATURE-----
