@@ -1,6 +1,19 @@
 # ChangeLog for sys-kernel/rsbac-sources
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/rsbac-sources/ChangeLog,v 1.35 2005/05/01 20:30:47 kang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/rsbac-sources/ChangeLog,v 1.36 2005/05/09 23:06:54 kang Exp $
+
+*rsbac-sources-2.6.99 (09 May 2005)
+*rsbac-sources-2.4.99 (09 May 2005)
+
+  09 May 2005; Guillaume Destuynder <kang@gentoo.org>
+  +rsbac-sources-2.4.99.ebuild, +rsbac-sources-2.6.99.ebuild:
+  Added 2.4 and 2.6 SVN live ebuilds. Thoses are hardmasked and never change
+  that. It is meant to help users testing the latest version of RSBAC in case
+  of problems. This kind of help isn't supported by gentoo (we are hardmasked,
+  means, use at your very own risks), but will often be suggested by RSBAC for
+  testing out fixes or testing the latest version. Until now, users had to
+  checkout by hand but most prefered gragging thoses two ebuilds.
+  Be sure to use SVN version of rsbac-admin with thoses!
 
 *rsbac-sources-2.6.11-r3 (01 May 2005)
 
