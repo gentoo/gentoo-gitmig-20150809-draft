@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/staden/staden-1.5.3.ebuild,v 1.7 2005/03/10 03:01:59 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/staden/staden-1.5.3.ebuild,v 1.8 2005/05/09 21:22:05 ribosome Exp $
 
 inherit eutils toolchain-funcs
 
@@ -84,13 +84,13 @@ src_unpack() {
 
 	# The original iwidgetsrc crashes...
 	einfo 'Replacing broken iwidgetsrc'
-	cp ${FILESDIR}/${PN}-1.4.1-iwidgetsrc.new ${S}/tables/iwidgetsrc
+	cp ${FILESDIR}/${P}-iwidgetsrc.new ${S}/tables/iwidgetsrc
 
 	# Netscape is not a good default browser (security masked in Portage).
 	# Use documentation.html rather than staden_home.html as the top-level
 	# hypertext documentation file.
 	einfo 'Replacing old staden_help script.'
-	cp ${FILESDIR}/${PN}-1.4.1-staden_help.new ${S}/src/scripts/staden_help
+	cp ${FILESDIR}/${P}-staden_help.new ${S}/src/scripts/staden_help
 	chmod +x ${S}/src/scripts/staden_help
 
 	# The documentation building process is broken on Gentoo, mainly because
@@ -234,7 +234,7 @@ src_install() {
 
 	# "env" file for setting paths to Staden Package root, libraries, tables...
 	insinto /etc/env.d
-	newins ${FILESDIR}/${PN}-1.4.1-env 27${PN}
+	newins ${FILESDIR}/${P}-env 27${PN}
 
 	# Basic documentation
 	insinto /opt/${PN}/doc
