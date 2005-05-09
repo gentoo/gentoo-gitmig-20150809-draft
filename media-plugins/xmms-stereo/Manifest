@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 5a8290e44006ccff0dff3094555d6366 metadata.xml 257
-MD5 4275100d7b91e8c2ee948fe03fe60428 xmms-stereo-1.2.10.ebuild 431
+MD5 b4a4003caebb5cc7fc0798011e02999b xmms-stereo-1.2.10.ebuild 430
 MD5 1e5b33a5b3f10864bc6e3bd3c46159cc ChangeLog 533
+MD5 5a8290e44006ccff0dff3094555d6366 metadata.xml 257
 MD5 f930420b092ea660e8da0c4b24e0f6a4 files/digest-xmms-stereo-1.2.10 142
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCN8tsArHZZzCEUG0RAqlOAJ9OmJFQ1285UltuRGZsMUuA7kvFOwCfbnA1
-zVwIL955H+oblTU4L7D7Xv0=
-=CzNr
------END PGP SIGNATURE-----

@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 5a8290e44006ccff0dff3094555d6366 metadata.xml 257
-MD5 6ebdc7b345e9314ee680ac91ecb94ad4 xmms-sanalyzer-1.2.10.ebuild 440
+MD5 f6ecca3d6365e1fac7f580866bcf91e7 xmms-sanalyzer-1.2.10.ebuild 439
 MD5 c88ad71c426002902e2f0dd61536efad ChangeLog 548
+MD5 5a8290e44006ccff0dff3094555d6366 metadata.xml 257
 MD5 f930420b092ea660e8da0c4b24e0f6a4 files/digest-xmms-sanalyzer-1.2.10 142
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCN8r5ArHZZzCEUG0RApJ9AJ0Y51u57y5TEtuUTETA//b4CMPX/wCfem5f
-LFhcmiKTIoPkoZjA1hFOUj0=
-=TlIf
------END PGP SIGNATURE-----

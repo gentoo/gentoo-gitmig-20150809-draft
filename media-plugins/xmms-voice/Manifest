@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 5a8290e44006ccff0dff3094555d6366 metadata.xml 257
-MD5 89b23187de52b50172ccffd07fc39e96 xmms-voice-1.2.10.ebuild 421
+MD5 87c3471cae4a9454f850df25e08bcdf9 xmms-voice-1.2.10.ebuild 420
 MD5 27341059c5d218ccacf94d041ae3e09a ChangeLog 528
+MD5 5a8290e44006ccff0dff3094555d6366 metadata.xml 257
 MD5 f930420b092ea660e8da0c4b24e0f6a4 files/digest-xmms-voice-1.2.10 142
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCN8shArHZZzCEUG0RAuVTAJ4kjQVy/GANbCh7ALCe0xecDxbyFACgic3X
-N8SaLpGCzpEgoLP3+zc1pZo=
-=CJtO
------END PGP SIGNATURE-----

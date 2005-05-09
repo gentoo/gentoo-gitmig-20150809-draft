@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 5a8290e44006ccff0dff3094555d6366 metadata.xml 257
-MD5 c3cbcb406933855f58a399f94c08a84d xmms-tonegen-1.2.10.ebuild 426
+MD5 f8f8e1e3d252894bf5061a4742fd1337 xmms-tonegen-1.2.10.ebuild 425
 MD5 83c9e446a1fd5b3cab5e92d9589dc70d ChangeLog 538
+MD5 5a8290e44006ccff0dff3094555d6366 metadata.xml 257
 MD5 f930420b092ea660e8da0c4b24e0f6a4 files/digest-xmms-tonegen-1.2.10 142
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCN8sWArHZZzCEUG0RAuGgAKCBuOkO1q/RaiG/50XZG65sq89LdwCfT0op
-oc5lP8TpYpeBP1AC054sgEo=
-=KOeE
------END PGP SIGNATURE-----

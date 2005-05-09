@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 5a8290e44006ccff0dff3094555d6366 metadata.xml 257
-MD5 aa08488537427e1abc13417f2a0f94ae ChangeLog 552
-MD5 babf26c308027ae5f44a5e84e78800ef xmms-wav-1.2.10-r1.ebuild 436
+MD5 67c70e5e95bb2be4cf32accd099bb8ef xmms-wav-1.2.10-r1.ebuild 435
 MD5 036965e65ff69357e89531fd2d653b66 xmms-wav-1.2.10.ebuild 417
+MD5 aa08488537427e1abc13417f2a0f94ae ChangeLog 552
+MD5 5a8290e44006ccff0dff3094555d6366 metadata.xml 257
 MD5 f930420b092ea660e8da0c4b24e0f6a4 files/digest-xmms-wav-1.2.10 142
 MD5 29189a07ebf2ac1578898c2234dc1bce files/digest-xmms-wav-1.2.10-r1 227
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCN8rMArHZZzCEUG0RAvaTAJ0UZjJUH7oU6BV5g1BP1EKc0tqZAACdFjrZ
-Ri8ihHTP/BlE22Jafba9wEc=
-=A7j4
------END PGP SIGNATURE-----
