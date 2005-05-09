@@ -1,22 +1,22 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/usbutils-0.11-r4.ebuild,v 1.2 2005/03/14 14:49:59 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/usbutils-0.11-r6.ebuild,v 1.1 2005/05/09 11:09:28 liquidx Exp $
 
 inherit eutils gnuconfig
 
 # note: update these regularly from http://www.linux-usb.org/usb.ids
 #       and upload to gentoo mirrors - <liquidx@gentoo.org>
-USB_IDS_VER="20040902"
+USB_IDS_VER="20050408"
 
 DESCRIPTION="USB enumeration utilities"
+HOMEPAGE="http://usb.cs.tum.edu/"
 SRC_URI="http://usb.cs.tum.edu/download/usbutils/${P}.tar.gz
 	mirror://gentoo/usb.ids-${USB_IDS_VER}.gz"
-HOMEPAGE="http://usb.cs.tum.edu/"
 
-KEYWORDS="~x86 ~amd64 ~ppc ~sparc ~hppa ~alpha ~ia64 ~ppc64 ~mips"
-IUSE=""
-SLOT="0"
 LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
+IUSE=""
 
 DEPEND="virtual/libc"
 
@@ -31,6 +31,8 @@ src_unpack() {
 
 	# Fix endian-issues
 	( cd "${S}" && epatch "${FILESDIR}/0.11/lsusb-endian.patch" )
+
+	epatch ${FILESDIR}/usbutils-0.11-fix-usb-ids-man-page-ref.patch	#bug #62786
 }
 
 src_compile() {
@@ -45,6 +47,6 @@ src_install() {
 
 	# we don't need libusb.* from usbutils because it conflicts
 	# with dev-libs/libusb
-	rm -rf ${D}/usr/lib
+	rm -rf ${D}/usr/lib*
 	rm -rf ${D}/usr/include
 }
