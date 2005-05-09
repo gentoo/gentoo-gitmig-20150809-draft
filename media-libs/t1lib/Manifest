@@ -1,7 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 5d7e1d037377129e2cde5cb595e91802 t1lib-5.0.2.ebuild 1628
+MD5 54d8fcca7093f3b12abc50c805842185 t1lib-5.0.2.ebuild 1627
 MD5 de8049a9df4d3f57b7fd2b7fa71aeaba t1lib-5.0.1.ebuild 1531
 MD5 35648ba7f30da0dd70f62b377c0f43c5 t1lib-1.3.1.ebuild 1499
 MD5 2c0e7f6225b1ebadd371eb0a4425603d ChangeLog 5623
@@ -12,10 +9,3 @@ MD5 564c11663ec99286c576cedef39a854e files/t1lib-5.0.2-gentoo.diff 2619
 MD5 817757abf473e739c3314daca2aecea2 files/digest-t1lib-1.3.1 64
 MD5 60bcc4bc9f1f21b6f445e2dc1f462171 files/digest-t1lib-5.0.1 64
 MD5 31349cc7c0045a650519549f365906a9 files/digest-t1lib-5.0.2 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFCGUkPM+I1L6GK/u4RApQrAJ46kjrGfXMouAH18uvhfzRkVHGBLgCeN/Hw
-M6Ub/L2ESO8iol8Xp7E/StE=
-=fhSK
------END PGP SIGNATURE-----

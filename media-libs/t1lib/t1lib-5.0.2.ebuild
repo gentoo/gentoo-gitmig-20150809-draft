@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/t1lib/t1lib-5.0.2.ebuild,v 1.16 2005/02/21 02:37:47 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/t1lib/t1lib-5.0.2.ebuild,v 1.17 2005/05/09 01:18:55 agriffis Exp $
 
 inherit eutils gnuconfig flag-o-matic libtool
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://sunsite.unc.edu/pub/Linux/libs/graphics/${P}.tar.gz"
 
 LICENSE="LGPL-2 GPL-2"
 SLOT="5"
-KEYWORDS="x86 ~ppc sparc alpha arm ~hppa amd64 ~ia64 s390 ppc64 ppc-macos mips"
+KEYWORDS="alpha amd64 arm ~hppa ia64 mips ~ppc ppc-macos ppc64 s390 sparc x86"
 IUSE="X doc"
 
 DEPEND="X? ( virtual/x11 )"

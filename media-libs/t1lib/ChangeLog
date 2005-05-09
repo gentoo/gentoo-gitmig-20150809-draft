@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/t1lib
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/t1lib/ChangeLog,v 1.40 2005/02/21 02:37:47 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/t1lib/ChangeLog,v 1.41 2005/05/09 01:18:55 agriffis Exp $
+
+  09 May 2005; Aron Griffis <agriffis@gentoo.org> t1lib-5.0.2.ebuild:
+  stable on ia64
 
   20 Feb 2005; Hardave Riar <hardave@gentoo.org> t1lib-5.0.2.ebuild:
   Stable on mips
