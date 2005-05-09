@@ -1,19 +1,31 @@
-Taken from upstream:
+Based on upstream patch:
 http://www.frozen-bubble.org/perl-SDL.patch
 
 To fix:
 http://bugs.gentoo.org/show_bug.cgi?id=74844
+http://bugs.gentoo.org/show_bug.cgi?id=87502
+
+This version of the patch works with both sdl-perl-1.x and sdl-perl-2.x
 
 --- frozen-bubble
 +++ frozen-bubble
-@@ -161,6 +161,15 @@
+@@ -90,3 +90,4 @@
+ 
+ $version = '1.0.0';
++$SDL_VER = substr($SDL::VERSION, 0, 1); # Extract sdl-perl's major num
+ 
+@@ -161,6 +161,19 @@
  
  #- ----------- sound related stuff ----------------------------------------
  
 +sub get_sound {
 +	my ($sound) = @_;
-+	if (ref($sound) eq 'HASH') {
-+		return $sound{$_}{-data};
++	if ($SDL_VER eq 1) {
++		if (ref($sound) eq 'SDL::Sound') {
++			return $sound{$_}{-data};
++		} else {
++			return $sound->{-data};
++		}
 +	} else {
 +		return $$sound;
 +	}
@@ -52,13 +64,16 @@ http://bugs.gentoo.org/show_bug.cgi?id=74844
  	    $sound{$_}->volume(80);
  	} else {
  	    print STDERR "Warning, could not create new sound from `$sound_path'.\n";
-@@ -233,6 +233,11 @@
+@@ -233,6 +233,14 @@
  
  #- ----------- graphics related stuff --------------------------------------
  
-+# Perhaps this should be exported by SDL::SFont
 +sub SDL_TEXTWIDTH {
-+	SDL::SFont::SDL_TEXTWIDTH(@_);
++	if (defined(&SDL::App::SDL_TEXTWIDTH)) {
++		SDL::App::SDL_TEXTWIDTH(@_);   # perl-sdl-1.x
++	} else {
++		SDL::SFont::SDL_TEXTWIDTH(@_); # perl-sdl-2.x
++	}
 +}
 +
  sub add_default_rect($) {
@@ -112,3 +127,61 @@ http://bugs.gentoo.org/show_bug.cgi?id=74844
      }
  
      $display_on_app_disabled = 0;
+--- c_stuff/lib/FBLE.pm
++++ c_stuff/lib/FBLE.pm
+@@ -86,6 +86,25 @@
+ 
+ #- ----------- bubbles processing/drawing -----------------------------------------
+ 
++sub surf {
++    my ($surface) = @_;
++    if (ref($surface) eq 'HASH') {
++        return $surface->{-surface};
++    } else {
++        return $$surface;
++    }
++}
++
++sub rect {
++    my ($rect) = @_;
++    if (ref($rect) eq 'HASH') {
++        return $rect->{-rect};
++    } else {
++        return $$rect;
++    }
++}
++
++
+ # subroutine to calculate the left corner x of the given bubble option column (based on 0 start)
+ sub bubble_optionx {
+     my ($col) = @_;
+@@ -1094,11 +1113,11 @@
+     $rect{screenshot} = SDL::Rect->new(-x => $POS_1P{p1}{left_limit} - 40, '-y' => 0, 
+ 				       -width => $POS_1P{p1}{right_limit} - $POS_1P{p1}{left_limit} + 80,
+ 				       -height => $POS_1P{bottom_limit} - $POS_1P{init_top_limit} + 190);
+-    fb_c_stuff::shrink($app->{-surface},
+-		       $file_browser_screenshots[$list_browser_highlight_offset]->display_format()->{-surface},
++    fb_c_stuff::shrink(surf($app),
++		       surf($file_browser_screenshots[$list_browser_highlight_offset]->display_format()),
+ 		       $rect{middle}->x + $rect{middle}->width - $rect{screenshot}->width/4 - 12,
+ 		       $rect{middle}->y + $rect{middle}->height/2 - $rect{screenshot}->height/8 - 3,
+-		       $rect{screenshot}{-rect}, 4);
++		       rect($rect{screenshot}), 4);
+ }
+ 
+ 
+@@ -1366,6 +1366,14 @@
+     print_dialog_list_arrow($do_highlight, 'up');
+ }
+ 
++sub SDL_TEXTWIDTH {
++	if (defined(&SDL::App::SDL_TEXTWIDTH)) {
++		SDL::App::SDL_TEXTWIDTH(@_);   # perl-sdl-1.x
++	} else {
++		SDL::SFont::SDL_TEXTWIDTH(@_); # perl-sdl-2.x
++	}
++}
++
+ # subroutine to print out the levelset name at the top of the screen
+ sub print_levelset_name {
+     $rect{ls_name_erase} = SDL::Rect->new(-x => 195, '-y' => 0, -width => 445-195, -height => 35);
