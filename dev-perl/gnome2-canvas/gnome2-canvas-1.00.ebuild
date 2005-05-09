@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-canvas/gnome2-canvas-1.00.ebuild,v 1.7 2005/05/06 00:27:31 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-canvas/gnome2-canvas-1.00.ebuild,v 1.8 2005/05/09 17:46:30 gustavoz Exp $
 
 inherit perl-module
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://cpan/authors/id/R/RM/RMCFARLA/Gtk2-Perl/${MY_P}.tar.gz"
 HOMEPAGE="http://gtk2-perl.sf.net/"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 amd64 ~ppc ~sparc ~alpha hppa"
+KEYWORDS="x86 amd64 ~ppc sparc ~alpha hppa"
 IUSE=""
 
 
