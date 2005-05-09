@@ -1,13 +1,23 @@
-MD5 9c10e61ae51b31e09f79e920fa0556af AxKit-1.6.2.ebuild 1351
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 90144697425e4835f01cf5a90d836ca8 AxKit-1.6-r1.ebuild 1066
+MD5 20666b8f0fb3f93d24e99c0cc1da64ca AxKit-1.6-r2.ebuild 1115
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 cb930238140315c16f4580e4ffc0e5d5 ChangeLog 3939
-MD5 878e0bc09ef1ce38040cc33754e54bcf AxKit-1.6-r1.ebuild 1066
-MD5 3fd8d7b1be2df14aa3f1e37ad69531c5 AxKit-1.5.2-r1.ebuild 1063
-MD5 4bd32dc39947e65f16beb707112ac2f3 AxKit-1.6.1.ebuild 1342
-MD5 47d1d5b80bfaae5b75b59dfcbdfc3619 AxKit-1.6-r2.ebuild 1113
+MD5 d828de0c482bf72e558e619d9e2e55da ChangeLog 4091
+MD5 5025abe8a14a3144191dfe60f657cfc4 AxKit-1.6.1.ebuild 1341
+MD5 a36efb21ad16931b12b4bccae71046de AxKit-1.5.2-r1.ebuild 1063
+MD5 4df0afd1361cc9d61f18ddf1b393e89c AxKit-1.6.2.ebuild 1350
+MD5 90031157da075816689bc0d214197ebe files/httpd.axkit 318
 MD5 0a88a5c00b9b9b0262587ce82d9cde15 files/digest-AxKit-1.6.1 63
-MD5 3c31fe175ce3f998c1724be46b2c38bf files/digest-AxKit-1.6.2 63
 MD5 67281027c1b40bcb89dd38285e084c44 files/digest-AxKit-1.6-r1 61
 MD5 67281027c1b40bcb89dd38285e084c44 files/digest-AxKit-1.6-r2 61
-MD5 90031157da075816689bc0d214197ebe files/httpd.axkit 318
 MD5 081f9607cc3aa7538bf5e67b8e1f067a files/digest-AxKit-1.5.2-r1 63
+MD5 3c31fe175ce3f998c1724be46b2c38bf files/digest-AxKit-1.6.2 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCfzs+jUHll2nfF60RAleHAKCkNG07eApDne5mBhwQxBb78HI38gCfRGIZ
+G+AMh7japfnK1IPaRsYVrnw=
+=2x0B
+-----END PGP SIGNATURE-----

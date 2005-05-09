@@ -1,6 +1,16 @@
-MD5 0235db948e02db2f1e0c7bd9b26c9a6b ChangeLog 581
-MD5 e1ff3265310f716f8185185ace9da99c libapreq2-2.04.03.ebuild 2916
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 2325e3ef515318bda1fe9573339ec3f8 ChangeLog 696
+MD5 99ae10d9820d1eb1665fe3bf4dc36059 libapreq2-2.04.03.ebuild 2915
+MD5 b6b2398e58512016392bd02a5bd2b548 files/libapreq2-2.0-binloc.patch 3154
 MD5 1fad30fc51874d46cd39dd7ada8d17d8 files/digest-libapreq2-2.04.03 73
 MD5 7e7f7ff87f41a04bb85b1bf4792eafd5 files/libapreq2-2.0-sandbox.patch 1169
-MD5 b6b2398e58512016392bd02a5bd2b548 files/libapreq2-2.0-binloc.patch 3154
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCfzxyjUHll2nfF60RAuQ8AJ0SdmsZF0AJ2r1Oej4wyBZzVn6hDwCfWBbl
+nb5/fVQhdnHUa6k8LkMhJrQ=
+=nMQd
+-----END PGP SIGNATURE-----
