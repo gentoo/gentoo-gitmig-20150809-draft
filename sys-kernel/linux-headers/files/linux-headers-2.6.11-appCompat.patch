@@ -1705,9 +1705,9 @@ diff -ur linux-2.6.8.1/include/asm-ppc64/processor.h linux-2.6.8.1-gentoo/includ
  	unsigned long	vrsave;
  	int		used_vr;	/* set if process has used altivec */
  #endif /* CONFIG_ALTIVEC */
-diff -ur linux-2.6.8.1/include/asm-ppc64/spinlock.h linux-2.6.8.1-gentoo/include/asm-ppc64/spinlock.h
---- linux-2.6.8.1/include/asm-ppc64/spinlock.h	2004-09-28 16:56:15.948477920 +0100
-+++ linux-2.6.8.1-gentoo/include/asm-ppc64/spinlock.h	2004-09-28 16:55:30.463392000 +0100
+diff -ur linux-2.6.11/include/asm-ppc64/spinlock.h linux-2.6.11-gentoo/include/asm-ppc64/spinlock.h
+--- linux-2.6.11/include/asm-ppc64/spinlock.h	2004-09-28 16:56:15.948477920 +0100
++++ linux-2.6.11-gentoo/include/asm-ppc64/spinlock.h	2004-09-28 16:55:30.463392000 +0100
 @@ -20,9 +20,10 @@
  	volatile unsigned int lock;
  } spinlock_t;
@@ -1723,35 +1723,43 @@ diff -ur linux-2.6.8.1/include/asm-ppc64/spinlock.h linux-2.6.8.1-gentoo/include
 diff -ur linux-2.6.8.1/include/asm-ppc64/page.h linux-2.6.8.1-gentoo/include/asm-ppc64/page.h
 --- linux-2.6.8.1/include/asm-ppc64/page.h	2004-07-10 01:47:34.000000000 +0100
 +++ linux-2.6.8.1-gentoo/include/asm-ppc64/page.h	2004-10-03 14:09:31.434460808 +0100
-@@ -91,6 +91,12 @@
+@@ -91,6 +91,14 @@
  /* to align the pointer to the (next) page boundary */
  #define PAGE_ALIGN(addr)	_ALIGN(addr, PAGE_SIZE)
  
 +#ifdef STRICT_MM_TYPECHECKS
 +typedef struct { unsigned long pte; } pte_t;
++typedef struct { unsigned int  pgd; } pgd_t;
 +#else
 +typedef unsigned long pte_t;
++typedef unsigned long pgd_t;
 +#endif
 +
  #ifdef __KERNEL__
  #ifndef __ASSEMBLY__
  #include <asm/naca.h>
-@@ -129,7 +135,6 @@
+@@ -129,10 +135,8 @@
   * These are used to make use of C type-checking.  
   * Entries in the pte table are 64b, while entries in the pgd & pmd are 32b.
   */
 -typedef struct { unsigned long pte; } pte_t;
  typedef struct { unsigned int  pmd; } pmd_t;
- typedef struct { unsigned int  pgd; } pgd_t;
+-typedef struct { unsigned int  pgd; } pgd_t;
  typedef struct { unsigned long pgprot; } pgprot_t;
-@@ -148,7 +153,6 @@
+ 
+ #define pte_val(x)	((x).pte)
+ #define pmd_val(x)	((x).pmd)
+@@ -148,10 +153,8 @@
  /*
   * .. while these make it easier on the compiler
   */
 -typedef unsigned long pte_t;
  typedef unsigned int  pmd_t;
- typedef unsigned int  pgd_t;
+-typedef unsigned int  pgd_t;
  typedef unsigned long pgprot_t;
+ 
+ #define pte_val(x)	(x)
+ #define pmd_val(x)	(x)
 diff -ur linux-2.6.8.1/include/asm-sparc64/signal.h linux-2.6.8.1-gentoo/include/asm-sparc64/signal.h
 --- linux-2.6.8.1/include/asm-sparc64/signal.h	2004-07-10 01:47:34.000000000 +0100
 +++ linux-2.6.8.1-gentoo/include/asm-sparc64/signal.h	2004-10-03 14:09:31.434460808 +0100
