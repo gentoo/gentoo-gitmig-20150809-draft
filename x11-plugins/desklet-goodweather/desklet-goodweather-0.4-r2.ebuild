@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-goodweather/desklet-goodweather-0.4-r2.ebuild,v 1.1 2005/04/23 04:27:05 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-goodweather/desklet-goodweather-0.4-r2.ebuild,v 1.2 2005/05/09 18:42:16 dholm Exp $
 
 inherit gdesklets
 
@@ -17,7 +17,7 @@ LICENSE="as-is"
 
 SLOT="0"
 IUSE=""
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 
 RDEPEND=">=gnome-extra/gdesklets-core-0.34.3"
 
