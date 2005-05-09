@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mplayerplug-in/mplayerplug-in-2.80.ebuild,v 1.4 2005/04/21 01:57:19 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mplayerplug-in/mplayerplug-in-2.80.ebuild,v 1.5 2005/05/09 04:58:28 agriffis Exp $
 
 inherit nsplugins toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ppc ~x86 ~sparc"
+KEYWORDS="~amd64 ppc ~x86 ~sparc ~ia64"
 IUSE="gtk2"
 
 DEPEND="
