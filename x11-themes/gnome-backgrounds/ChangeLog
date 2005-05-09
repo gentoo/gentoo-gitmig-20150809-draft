@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/gnome-backgrounds
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-backgrounds/ChangeLog,v 1.6 2005/05/06 11:49:56 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-backgrounds/ChangeLog,v 1.7 2005/05/09 01:50:40 agriffis Exp $
+
+  08 May 2005; Aron Griffis <agriffis@gentoo.org>
+  gnome-backgrounds-2.10.0.ebuild, gnome-backgrounds-2.10.1.ebuild:
+  add ~ia64
 
   06 May 2005; Markus Rothe <corsair@gentoo.org>
   gnome-backgrounds-2.10.0.ebuild, gnome-backgrounds-2.10.1.ebuild:
