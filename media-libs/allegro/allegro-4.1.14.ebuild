@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/allegro-4.1.14.ebuild,v 1.12 2005/01/19 00:43:00 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/allegro-4.1.14.ebuild,v 1.13 2005/05/09 00:36:29 agriffis Exp $
 
 IUSE="static mmx sse oss alsa esd arts X fbcon svga tetex doc"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/alleg/${P}.tar.gz"
 
 LICENSE="Allegro"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ia64 ppc ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ia64 ppc ~sparc ~x86"
 
 RDEPEND="alsa? ( media-libs/alsa-lib )
 	esd? ( media-sound/esound )
