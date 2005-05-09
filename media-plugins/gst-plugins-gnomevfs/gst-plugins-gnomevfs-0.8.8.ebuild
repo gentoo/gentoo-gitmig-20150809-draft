@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-gnomevfs/gst-plugins-gnomevfs-0.8.8.ebuild,v 1.6 2005/05/06 12:05:11 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-gnomevfs/gst-plugins-gnomevfs-0.8.8.ebuild,v 1.7 2005/05/09 03:59:34 agriffis Exp $
 
 inherit gst-plugins
 
-KEYWORDS="x86 ppc sparc ~alpha ~hppa amd64 ~ia64 ~mips ~arm ~ppc64"
+KEYWORDS="~alpha amd64 ~arm ~hppa ia64 ~mips ppc ~ppc64 sparc x86"
 IUSE=""
 
 DEPEND=">=gnome-base/gnome-vfs-2"

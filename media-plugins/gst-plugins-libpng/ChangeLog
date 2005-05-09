@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-libpng
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-libpng/ChangeLog,v 1.43 2005/04/30 18:01:45 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-libpng/ChangeLog,v 1.44 2005/05/09 04:01:52 agriffis Exp $
+
+  09 May 2005; Aron Griffis <agriffis@gentoo.org>
+  gst-plugins-libpng-0.8.8-r1.ebuild:
+  stable on ia64
 
   30 Apr 2005; Michael Hanselmann <hansmi@gentoo.org>
   gst-plugins-libpng-0.8.8-r1.ebuild:
