@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3940 2005/05/09 05:02:37 beu Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3941 2005/05/09 08:19:17 hollow Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -215,10 +215,6 @@ www-client/netscape
 # Marius Mauch <genone@gentoo.org> (17 Apr 2005)
 # Site is dead.
 app-portage/basc
-
-# Benedikt Boehm <hollow@gentoo.org> (17 Apr 2005)
-# Masked for testing
-=sys-kernel/vserver-sources-2.0_pre1
 
 # Konstantin Arkhipov <voxus@gentoo.org> (15 Apr 2005)
 # Masked until arrival of userland tools. At least.
