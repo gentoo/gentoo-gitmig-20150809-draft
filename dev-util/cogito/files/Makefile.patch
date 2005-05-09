@@ -1,0 +1,14 @@
+Makefile: needs update
+Index: Makefile
+===================================================================
+--- 3974261da777f55a7a11aff6e02f584bbfe2b475/Makefile  (mode:100644)
++++ uncommitted/Makefile  (mode:100644)
+@@ -25,7 +25,7 @@
+ CFLAGS+=-Wall $(DEFINES)
+ 
+ # Should be changed to /usr/local
+-prefix?=$(HOME)
++prefix?=/usr
+ 
+ bindir?=$(prefix)/bin
+ libdir?=$(prefix)/lib/cogito
