@@ -1,6 +1,6 @@
-diff -Nup -Nrup webapp-config-1.10-r11.old/config/webapp-config webapp-config-1.10-r11.patched/config/webapp-config
---- webapp-config-1.10-r11.old/config/webapp-config	2003-07-21 15:52:49.000000000 +0100
-+++ webapp-config-1.10-r11.patched/config/webapp-config	2005-05-07 10:13:10.000000000 +0100
+diff -Nup -Nrup webapp-config-1.10-r11.orig/config/webapp-config webapp-config-1.10-r11.patched-1/config/webapp-config
+--- webapp-config-1.10-r11.orig/config/webapp-config	2003-07-21 15:52:49.000000000 +0100
++++ webapp-config-1.10-r11.patched-1/config/webapp-config	2005-05-09 05:30:51.000000000 +0100
 @@ -94,7 +94,8 @@ VHOST_CONFIG_UID="`id -nu`"
  #
  # you can override this setting by using the -g switch to webapp-config
@@ -20,9 +20,9 @@ diff -Nup -Nrup webapp-config-1.10-r11.old/config/webapp-config webapp-config-1.
  
  VHOST_PERM_DEFAULTOWNED_DIR=755
  
-diff -Nup -Nrup webapp-config-1.10-r11.old/sbin/webapp-config webapp-config-1.10-r11.patched/sbin/webapp-config
---- webapp-config-1.10-r11.old/sbin/webapp-config	2003-07-21 15:52:49.000000000 +0100
-+++ webapp-config-1.10-r11.patched/sbin/webapp-config	2005-05-07 13:06:50.000000000 +0100
+diff -Nup -Nrup webapp-config-1.10-r11.orig/sbin/webapp-config webapp-config-1.10-r11.patched-1/sbin/webapp-config
+--- webapp-config-1.10-r11.orig/sbin/webapp-config	2003-07-21 15:52:49.000000000 +0100
++++ webapp-config-1.10-r11.patched-1/sbin/webapp-config	2005-05-09 05:30:12.000000000 +0100
 @@ -77,7 +77,7 @@ G_PN=
  G_PVR=
  G_HOSTNAME="${VHOST_HOSTNAME:-localhost}"
@@ -41,27 +41,6 @@ diff -Nup -Nrup webapp-config-1.10-r11.old/sbin/webapp-config webapp-config-1.10
  G_PERMS_VIRTUAL_DIR="${VHOST_PERMS_VIRTUALOWNED_DIR:-755}"
  G_PERMS_VIRTUAL_FILE="${VHOST_PERMS_VIRTUALOWNED_FILE:-o-w}"
  G_PERMS_INSTALLDIR="${VHOST_PERMS_INSTALLDIR:-755}"
-@@ -1967,9 +1967,9 @@ fn_mkfile ()
- 			# config-owned files are copied in, and then are
- 			# owned by $G_CONFIG_UID:$G_CONFIG_GID
- 
--			libsh_erun cp "$MY_APPDIR/$1/$2" "$3/$my_file"
-+			libsh_erun cp -a "$MY_APPDIR/$1/$2" "$3/$my_file"
- 			libsh_erun chown "$G_CONFIG_UID:$G_CONFIG_GID" "$3/$my_file"
--			libsh_erun chmod "$G_PERMS_CONFIGOWNED_FILE" "$3/$my_file"
-+			#libsh_erun chmod "$G_PERMS_CONFIGOWNED_FILE" "$3/$my_file"
- 			fn_add_contents "$MY_INSTALLCONTENTS" "file" "$my_type" "$3" "$2" "$4"
- 			;;
- 		virtual)
-@@ -1991,7 +1991,7 @@ fn_mkfile ()
- 			my_contenttype="${G_LINK_TYPE}"
- 			ln ${G_LINK_OPTIONS} "$MY_APPDIR/$1/$2" "$3/$my_file" 2> /dev/null
- 			if [ "$?" != 0 ]; then
--				libsh_erun cp "$MY_APPDIR/$1/$2" "$3/$my_file"
-+				libsh_erun cp -a "$MY_APPDIR/$1/$2" "$3/$my_file"
- 				my_contenttype="file"
- 			fi
- 
 @@ -3048,6 +3048,17 @@ main ()
  
  #        echo $G_WORK
@@ -74,8 +53,8 @@ diff -Nup -Nrup webapp-config-1.10-r11.old/sbin/webapp-config webapp-config-1.10
 +	# directories mode, and warn the user that this has been done.  Ugh.
 +	libsh_einfo "Checking permissions on web site and document root directories .."
 +	find `dirname ${VHOST_ROOT}` -maxdepth 2 -type d -perm -o=w |while read d; do
-+		libsh_ewarn "Removing 'others write' bit from directory ${d}"
-+		chmod o-w "$d"
++	  libsh_ewarn "Removing 'others write' bit from directory ${d}"
++	  chmod o-w "$d"
 +	done
  }
  
