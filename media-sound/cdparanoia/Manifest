@@ -1,5 +1,5 @@
 MD5 7c0b49404fb4dcb22efe13eed6b545cf cdparanoia-3.9.8-r1.ebuild 1228
-MD5 f2e67ef439f47be578ade6f5c0cb0ec4 cdparanoia-3.9.8-r2.ebuild 1457
+MD5 1306dd238b7b44af245a2f256c4dd68a cdparanoia-3.9.8-r2.ebuild 1456
 MD5 d4eb5d9b5b4109978da4913080c33ada ChangeLog 3008
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 0c381b5b41380f5a4a92f3e018fe16fe files/cdparanoia-3.9.8-identify_crash.patch 536

@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 a111a97612771f851a14960a841321b5 alsaplayer-0.99.76-r1.ebuild 1976
 MD5 4e87045ab3a58c2590f76ccd12782ecf ChangeLog 5931
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 755083e2575be7bed95e7a7d6e4aa3d4 alsaplayer-0.99.76.ebuild 1606
+MD5 8fcd4b6c5014475dff7d8250a8158d20 alsaplayer-0.99.76.ebuild 1605
 MD5 4d1180a1109044fb119335839a357f95 files/alsaplayer-endian.patch 1143
 MD5 53bd2804a0e111a7f5fd3e65e8ccd493 files/digest-alsaplayer-0.99.76-r1 71
 MD5 53bd2804a0e111a7f5fd3e65e8ccd493 files/digest-alsaplayer-0.99.76 71
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCZql706ebR+OMO78RAjfYAJ0ZXf53G2sD4SjoyPddvEJfEaMdogCbBlu9
-liMkUTvLsejQY3j26Okxy8M=
-=JBPj
------END PGP SIGNATURE-----

@@ -1,23 +1,13 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ddbd62f76e0cf8a226d663a7344b7d09 ChangeLog 10919
+MD5 f0827e76ff76f7f81eb8b263f1f7908b jack-audio-connection-kit-0.99.0-r1.ebuild 2403
 MD5 0d56eae2a04a15dbe5e7ca024a87a097 jack-audio-connection-kit-0.80.0.ebuild 1771
 MD5 4ee3c27feb88ab9f33c934e0262fbc45 jack-audio-connection-kit-0.98.1-r1.ebuild 2116
-MD5 f0827e76ff76f7f81eb8b263f1f7908b jack-audio-connection-kit-0.99.0-r1.ebuild 2403
-MD5 0e89a055a3e9a8dcf58f9790c26a619a jack-audio-connection-kit-0.99.0-r2.ebuild 2469
+MD5 5e8c86327e5c53449cc8d7d8687fd919 jack-audio-connection-kit-0.99.0-r2.ebuild 2468
+MD5 ddbd62f76e0cf8a226d663a7344b7d09 ChangeLog 10919
 MD5 bf663ce8a92c2873735ff360edf99f5a metadata.xml 220
-MD5 e1e0561e8f67b2f527014a57f5eb7a05 files/digest-jack-audio-connection-kit-0.99.0-r2 84
-MD5 9068d5fd09d15355ad0ff859b82f5038 files/digest-jack-audio-connection-kit-0.80.0 84
-MD5 e1e0561e8f67b2f527014a57f5eb7a05 files/digest-jack-audio-connection-kit-0.99.0-r1 84
 MD5 1081e2f37f20874fb10b5a9c183df0b4 files/digest-jack-audio-connection-kit-0.98.1-r1 84
-MD5 b029501b88782a0cca9e2f3d64812e63 files/jack-audio-connection-kit-0.80.0-alsalib-fix.patch 575
+MD5 e1e0561e8f67b2f527014a57f5eb7a05 files/digest-jack-audio-connection-kit-0.99.0-r1 84
+MD5 e1e0561e8f67b2f527014a57f5eb7a05 files/digest-jack-audio-connection-kit-0.99.0-r2 84
 MD5 b5dc5c728b1bdc6c5ebf5e54dc3ca246 files/jack-audio-connection-kit-0.98.1-configure.patch 1459
 MD5 0ad8a4c606e807460bce497d044044ef files/jack-audio-connection-kit-doc-option.patch 1103
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCdpEQvpz1081QvMkRAmXcAKCWY5dwYzPvhmP3q2qpMV/tMm9+kQCgiC0W
-neyXyk1diSUR7JcOcsfAzRs=
-=YIfu
------END PGP SIGNATURE-----
+MD5 b029501b88782a0cca9e2f3d64812e63 files/jack-audio-connection-kit-0.80.0-alsalib-fix.patch 575
+MD5 9068d5fd09d15355ad0ff859b82f5038 files/digest-jack-audio-connection-kit-0.80.0 84
