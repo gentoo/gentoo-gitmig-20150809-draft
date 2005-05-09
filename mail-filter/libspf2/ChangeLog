@@ -1,6 +1,11 @@
 # ChangeLog for mail-filter/libspf2
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/libspf2/ChangeLog,v 1.1 2004/07/25 15:53:26 pfeifer Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/libspf2/ChangeLog,v 1.2 2005/05/09 23:46:07 pfeifer Exp $
+
+*libspf2-1.2.5 (09 May 2005)
+
+  09 May 2005; Jay Pfeifer <pfeifer@gentoo.org> +libspf2-1.2.5.ebuild:
+  Version bump closing bug 91884.
 
 *libspf2-1.0.4 (24 Jul 2004)
 
