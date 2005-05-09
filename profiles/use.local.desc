@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1154 2005/05/09 11:51:31 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1155 2005/05/09 13:54:25 humpback Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -615,7 +615,7 @@ net-im/kadu:mail - Enables mail module in kadu
 net-im/kadu:pheaders - Enables precompiled headers in kadu
 net-im/kadu:speech - Enables speech module in kadu
 net-im/kadu:voice - Enables voice chat in kadu
-net-im/psi:extras - Refrain from adding non official patches
+net-im/psi:extras - Enables extra non official patches
 net-im/silc-toolkit:client - Enables silc client
 net-im/silc-toolkit:server - Enables silc server
 net-irc/bitchx:cdrom - Enables CD-ROM support
