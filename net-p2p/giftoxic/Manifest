@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 8aefbc0e49db723ca1ad02d0c409cd49 metadata.xml 160
-MD5 b6324719f6210bf89ea3a9bfd36b485e ChangeLog 1117
 MD5 f721b4b02384272cd5c7f2753623124c giftoxic-0.0.9.ebuild 669
-MD5 d245dd891e08a3f063cc90fcb7e5e995 giftoxic-0.0.10.ebuild 682
+MD5 a656c6754aae94f4f4223c9231e5cfcf ChangeLog 1210
+MD5 0721b753a1b8aecf5c79e3f374158943 giftoxic-0.0.10.ebuild 681
 MD5 0fd919936f5d83d7f5ddab14cd8b99c4 files/digest-giftoxic-0.0.9 66
 MD5 6a901b01966d306ead4de3b1fabaf70f files/digest-giftoxic-0.0.10 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCftGpmOfEJZHYOKcRAkwyAKCKs6MaN2SNYyx0lrYTBj8x32kLTQCgstMU
+je3fPlmnNlNtJ9KlnmyYXm0=
+=zZLX
+-----END PGP SIGNATURE-----
