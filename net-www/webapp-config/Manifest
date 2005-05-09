@@ -2,7 +2,7 @@
 Hash: SHA1
 
 MD5 4defd726d2b03decc5b7ff21b0aac1a3 metadata.xml 225
-MD5 4d5bac279fa4af06c3a7fc129d7c0251 ChangeLog 10447
+MD5 52ccbe152e249df9f78a5566e971acf3 ChangeLog 10464
 MD5 801b740d19b4a680780bc6c016a0eceb webapp-config-1.9-r2.ebuild 1145
 MD5 3aecf070ae2672567d75e58551b58557 webapp-config-1.10-r6.ebuild 1406
 MD5 b1f250c424aa91c81e8f6082a683b189 webapp-config-1.10-r14.ebuild 2049
@@ -20,7 +20,7 @@ MD5 b9efc67836c3d94009bea1f83cc92027 files/webapp-config_improved-tmpfile-handli
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCfu6vjUHll2nfF60RApP/AJ9ewdI1w+gLSwCKEnQUTZ9mIyZnEwCfVgID
-H/PhgYqeN+dmr5cQf4uSyA8=
-=uZnj
+iD8DBQFCfu+WjUHll2nfF60RAty4AJ9inkSTVfuHP2GT403owy0hFlcS/QCeLhWq
+gO77OOtq56uEktQ91QtaCNM=
+=Sqb0
 -----END PGP SIGNATURE-----
