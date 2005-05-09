@@ -1,6 +1,11 @@
 # ChangeLog for www-client/links
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/links/ChangeLog,v 1.12 2005/05/08 00:11:43 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/links/ChangeLog,v 1.13 2005/05/09 20:41:50 vanquirius Exp $
+
+  09 May 2005; Marcelo Goes <vanquirius@gentoo.org> links-2.1_pre17-r1.ebuild:
+  This ebuild is broken (see bug 91946) and should have been tested in the first
+  place. It was my mistake to put it as stable and I apologize for it. Marked
+  ~arches, added to package.mask.
 
   07 May 2005; Marcelo Goes <vanquirius@gentoo.org> links-2.1_pre17-r1.ebuild:
   Fix bug with livecd USE flag and --with-fb. Thanks to j-kidd and Mamour on the
