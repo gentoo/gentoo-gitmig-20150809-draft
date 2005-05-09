@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gnome-doc-utils/gnome-doc-utils-0.1.3.ebuild,v 1.6 2005/05/06 11:46:54 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gnome-doc-utils/gnome-doc-utils-0.1.3.ebuild,v 1.7 2005/05/09 03:03:01 agriffis Exp $
 
 inherit gnome2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnome.org"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~amd64 ~sparc ~hppa ~ppc64"
+KEYWORDS="~x86 ~ppc ~amd64 ~sparc ~hppa ~ppc64 ~ia64"
 IUSE=""
 
 RDEPEND=">=dev-libs/libxml2-2.6.12
