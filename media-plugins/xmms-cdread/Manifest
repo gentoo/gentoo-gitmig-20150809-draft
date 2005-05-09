@@ -1,5 +1,5 @@
-MD5 ac7df248339ac962c9240b99b3ba77f0 xmms-cdread-0.14a-r2.ebuild 1051
-MD5 07c839402d186fe660b320e6066339d5 ChangeLog 2311
+MD5 583d161fc1cf4eaa8dbe0fbbc465c9c7 xmms-cdread-0.14a-r2.ebuild 1049
+MD5 2acf4a01e7eac4c1e1ed61c895a83678 ChangeLog 2408
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 cb6038b1520b8423427d76ee312cff3a files/xmms-cdread-0.14a-xmms-1.2.8.patch 486
 MD5 ec795dadb3aa7147e8cb97de01fc67b1 files/endian.patch 962
