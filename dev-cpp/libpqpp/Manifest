@@ -2,7 +2,7 @@ MD5 d46771dfdc1943739cfd8a5db0fe2585 libpqpp-4.0-r3.ebuild 1215
 MD5 94ca1cd6213b52ce3e52688bdb4fa21e libpqpp-4.0-r5.ebuild 919
 MD5 ad4af0f11384bf56f14833595a485bd9 libpqpp-4.0-r2.ebuild 1151
 MD5 b2adc3145af4fc65e56e4907c4467a44 libpqpp-4.0-r4.ebuild 1210
-MD5 002608ebe43920e13bd60b609e8cd139 libpqpp-4.0-r6.ebuild 905
+MD5 bc6e5d8e2f3ff4b074dedcd973de3351 libpqpp-4.0-r6.ebuild 906
 MD5 a2e3e0e32b0b40f4c088de4b94c9b5b4 ChangeLog 2358
 MD5 f8d3d207746da2a3cd14dcaab8daab76 metadata.xml 163
 MD5 69fc4a69b78cb8cf9b4f69bb49e71363 files/libpqpp-4.0-PIC.patch 941
