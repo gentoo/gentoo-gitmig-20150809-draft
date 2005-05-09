@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 04ffc3ebb38e76acec995529d01f71ab ChangeLog 1256
+MD5 d00f41d07e0a1b74bc9c25c191ea5adc Config-IniFiles-2.38.ebuild 504
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 32a0d17a8a8980676d922544354ac4de Config-IniFiles-2.38.ebuild 497
 MD5 af6ee84956efe7a61d91477cebbc9f76 files/digest-Config-IniFiles-2.38 71
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCbA8qtG5z4I8BtQoRAqmmAJ4/ed5NNXKkrLzjMQbROMw/H5OfogCfQU1m
-EGT3Iex0XSjCP0u+5ZOJ3/8=
-=KZbw
------END PGP SIGNATURE-----
