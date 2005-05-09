@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/tiff-3.7.2.ebuild,v 1.2 2005/05/08 23:20:10 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/tiff-3.7.2.ebuild,v 1.3 2005/05/09 01:09:06 nerdboy Exp $
 
 inherit eutils
 
@@ -30,8 +30,4 @@ src_compile() {
 src_install() {
 	make install DESTDIR="${D}" || die "make install failed"
 	dodoc README TODO VERSION
-}
-
-pkg_postinst() {
-	einfo "Latest tiff with bug #91584 fixes."
 }
