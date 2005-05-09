@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-finespectrum/xmms-finespectrum-1.0.1_alpha1.ebuild,v 1.9 2004/11/27 20:22:11 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-finespectrum/xmms-finespectrum-1.0.1_alpha1.ebuild,v 1.10 2005/05/09 04:47:10 agriffis Exp $
 
 IUSE=""
 
@@ -15,7 +15,7 @@ RESTRICT="nomirror"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 amd64 ~ia64 ~ppc sparc ~ppc64"
+KEYWORDS="amd64 ia64 ~ppc ~ppc64 sparc x86"
 
 DEPEND="media-sound/xmms"
 
