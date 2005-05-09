@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/cmatrix/cmatrix-1.2a.ebuild,v 1.15 2005/04/21 19:08:32 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/cmatrix/cmatrix-1.2a.ebuild,v 1.16 2005/05/09 01:24:26 wormo Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.asty.org/${PN}/dist/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 amd64 sparc ~alpha"
+KEYWORDS="x86 amd64 sparc ~alpha ~ppc"
 IUSE="X"
 
 DEPEND="X? ( virtual/x11 )

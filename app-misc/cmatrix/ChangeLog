@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/cmatrix
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/cmatrix/ChangeLog,v 1.9 2005/04/21 19:08:32 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/cmatrix/ChangeLog,v 1.10 2005/05/09 01:24:26 wormo Exp $
+
+  08 May 2005; Stephanie Lockwood-Childs <wormo@gentoo.org>
+  cmatrix-1.2a.ebuild:
+  mark ~ppc
 
   21 Apr 2005; Simon Stelling <blubb@gentoo.org> cmatrix-1.2a.ebuild:
   stable on amd64
