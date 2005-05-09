@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/pgpool
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pgpool/ChangeLog,v 1.27 2005/04/30 19:14:39 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pgpool/ChangeLog,v 1.28 2005/05/09 00:29:24 nakano Exp $
+
+*pgpool-2.5.2-r1 (08 May 2005)
+
+  08 May 2005; Masatomo Nakano <nakano@gentoo.org> +pgpool-2.5.2-r1.ebuild:
+  Added libpq dependency version.
 
   30 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> pgpool-2.5.2.ebuild:
   Stable on ppc.
