@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/nasm/nasm-0.98.39.ebuild,v 1.3 2005/04/11 05:57:27 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/nasm/nasm-0.98.39.ebuild,v 1.4 2005/05/09 21:07:29 mr_bones_ Exp $
 
 inherit toolchain-funcs
 
@@ -17,24 +17,32 @@ DEPEND="!build? ( dev-lang/perl )
 	doc? ( virtual/ghostscript
 		sys-apps/texinfo )
 	sys-devel/gcc"
-RDEPEND="virtual/libc"
+RDEPEND=""
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	if [ "$(gcc-major-version)" -eq "2" ] ; then
+		sed -i \
+			-e 's:-std=c99::g' \
+			configure \
+			|| die "sed failed"
+	fi
+
+}
 
 src_compile() {
-	[ "$(gcc-major-version)" -eq "2" ] && \
-		sed -i -e 's:-std=c99::g' ${S}/configure
-
-	./configure --prefix=/usr || die
+	econf || die
 
 	if use build; then
 		emake nasm || die "emake failed"
 	else
 		emake all || die "emake failed"
 		emake rdf || die "emake failed"
-		if use doc; then
+		if use doc ; then
 			emake doc || die "emake failed"
 		fi
 	fi
-
 }
 
 src_install() {
