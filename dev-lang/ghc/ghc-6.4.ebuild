@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.4.ebuild,v 1.4 2005/03/25 17:53:04 kosmikus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.4.ebuild,v 1.5 2005/05/09 16:00:09 corsair Exp $
 
 # Brief explanation of the bootstrap logic:
 #
@@ -32,7 +32,7 @@ SRC_URI="http://www.haskell.org/ghc/dist/${EXTRA_SRC_URI}/${MY_P}-src.tar.bz2"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~x86 ~ppc -alpha ~amd64 -sparc"
+KEYWORDS="-alpha ~amd64 ~ppc ~ppc64 -sparc ~x86"
 
 S="${WORKDIR}/${MY_P}"
 
@@ -94,6 +94,10 @@ pkg_setup() {
 src_unpack() {
 	base_src_unpack
 
+	if use ppc64; then
+		epatch ${FILESDIR}/ghc-6.4-powerpc.patch
+	fi
+
 	# hardened-gcc needs to be disabled, because the
 	# mangler doesn't accept its output; yes, the 6.2 version
 	# should do ...
@@ -153,8 +157,8 @@ src_compile() {
 	echo "ArSupportsInput:=" >> mk/build.mk
 
 	# Required for some architectures, because they don't support ghc fully ...
-	use ppc || use amd64 && echo "SplitObjs=NO" >> mk/build.mk
-	use amd64 && echo "GhcWithInterpreter=NO" >> mk/build.mk
+	use ppc || use ppc64 || use amd64 && echo "SplitObjs=NO" >> mk/build.mk
+	use amd64 || use ppc64 && echo "GhcWithInterpreter=NO" >> mk/build.mk
 
 	# (--enable-threaded-rts is no longer needed)
 	econf ${myconf} || die "econf failed"
