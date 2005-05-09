@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/hdparm
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hdparm/ChangeLog,v 1.63 2005/05/06 17:35:31 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hdparm/ChangeLog,v 1.64 2005/05/09 20:21:57 pylon Exp $
+
+  09 May 2005; Lars Weiler <pylon@gentoo.org> hdparm-5.9.ebuild:
+  Stable on ppc.
 
   06 May 2005; Gustavo Zacarias <gustavoz@gentoo.org> hdparm-5.9.ebuild:
   Stable on sparc
