@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ff92e372081ee57a031978e4a36a44f2 majesty-demo-1.0.0.ebuild 1252
-MD5 438dac339ee0085b6ab84e13ad3cffe5 ChangeLog 417
+MD5 9739551f78f6bc5d5796959d9a65a6ac ChangeLog 504
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+MD5 9b61f43f13c0eb11c5492a55ff91f2a3 majesty-demo-1.0.0.ebuild 1247
 MD5 bbebeb38c7936145c78bc62c84dd672d files/digest-majesty-demo-1.0.0 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCHEx7I1lqEGTUzyQRAsFQAKCky6Fs7IebmmXTMmoqabDDLlBdHwCgwHaJ
-QauvyPra6GeJgCDKFh9ublE=
-=JUw+
------END PGP SIGNATURE-----
