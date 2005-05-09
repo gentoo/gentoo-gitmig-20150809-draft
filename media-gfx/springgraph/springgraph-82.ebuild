@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/springgraph/springgraph-82.ebuild,v 1.9 2004/10/19 10:33:21 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/springgraph/springgraph-82.ebuild,v 1.10 2005/05/09 00:31:07 agriffis Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://debian/pool/main/${PN:0:1}/${PN}/${SRC_FILE}
 		 mirror://debian/pool/main/${PN:0:1}/${PN}/${SRC_DEBIAN_PATCH}"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 alpha hppa ~mips ppc sparc ~ia64 amd64"
+KEYWORDS="alpha amd64 hppa ia64 ~mips ppc sparc x86"
 IUSE=""
 DEPEND=""
 RDEPEND="dev-perl/GD"
