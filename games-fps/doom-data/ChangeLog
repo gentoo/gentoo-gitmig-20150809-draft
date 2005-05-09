@@ -1,6 +1,9 @@
 # ChangeLog for games-fps/doom-data
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doom-data/ChangeLog,v 1.3 2004/09/28 00:44:33 swegener Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doom-data/ChangeLog,v 1.4 2005/05/09 00:47:46 malc Exp $
+
+  08 May 2005; Malcolm Lashley <malc@gentoo.org> doom-data-1.ebuild:
+  Add ~amd64 - tested with prboom, closes bug #88507
 
   28 Sep 2004; Sven Wegener <swegener@gentoo.org> :
   Gentoo Technologies, Inc. -> Gentoo Foundation
