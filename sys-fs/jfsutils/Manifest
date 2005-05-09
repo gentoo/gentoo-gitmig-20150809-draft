@@ -2,9 +2,9 @@
 Hash: SHA1
 
 MD5 44adb2ea3aefb87a1e87aacf933e84f3 jfsutils-1.1.5.ebuild 783
-MD5 750a6a803945f9aaf1fbb8e0c9d2d188 jfsutils-1.1.7.ebuild 789
+MD5 c70c4abe6b248f440f8361b45f00b28f jfsutils-1.1.7.ebuild 788
 MD5 71a09d8ebab002be97b27d33d240772f jfsutils-1.1.4.ebuild 796
-MD5 c082871d14673ff2896f518d20099b74 ChangeLog 5944
+MD5 975498bdafb22cde9ac6b42f65769343 ChangeLog 6029
 MD5 11bb989151c2c670d2d486f9b27de9e0 metadata.xml 414
 MD5 4df4526cfdbfa31fa559382139284491 jfsutils-1.1.8.ebuild 792
 MD5 fbaccd19a284782bf35b685c7d838b26 files/digest-jfsutils-1.1.4 66
@@ -15,7 +15,7 @@ MD5 5b66e6bd95c97fa48f19547a0a59f802 files/jfsutils-1.1.3-gentoo.diff 563
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCf5kciJcSIUGNthERAtZvAKCHM9iSQjDK6yodDgjboqKBp+QlugCfe9uK
-ZOiHWXZD7W/fDpOCHKXeaVU=
-=/6lz
+iD8DBQFCf5muiJcSIUGNthERAmZ5AKCExnQnolRW7ku7TGk+VDmOdOLUigCgxrL8
+AU/equj9bkdSeLxgHVId/kw=
+=oBgK
 -----END PGP SIGNATURE-----
