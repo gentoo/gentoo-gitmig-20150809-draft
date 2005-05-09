@@ -1,6 +1,12 @@
 # ChangeLog for dev-db/pgeasy
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pgeasy/ChangeLog,v 1.6 2005/01/01 17:40:18 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pgeasy/ChangeLog,v 1.7 2005/05/09 00:31:41 nakano Exp $
+
+*pgeasy-3.0.4 (09 May 2005)
+
+  09 May 2005; Masatomo Nakano <nakano@gentoo.org> +metadata.xml,
+  +pgeasy-3.0.4.ebuild:
+  Added depended libpq version.
 
   01 Oct 2004; <pyrania@gentoo.org> pgeasy-3.0.1.ebuild:
   Made epatch aware.
