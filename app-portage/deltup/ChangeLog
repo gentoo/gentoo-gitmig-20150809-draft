@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/deltup
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/deltup/ChangeLog,v 1.8 2005/04/28 10:03:17 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/deltup/ChangeLog,v 1.9 2005/05/09 20:03:06 genstef Exp $
+
+  09 May 2005; Stefan Schweizer <genstef@gentoo.org> -deltup-0.4.2.ebuild,
+  deltup-0.4.2-r1.ebuild:
+  Change DEPEND to allow usage with bdelta, thanks to blackpenguin
 
 *deltup-0.4.2-r1 (28 Apr 2005)
 

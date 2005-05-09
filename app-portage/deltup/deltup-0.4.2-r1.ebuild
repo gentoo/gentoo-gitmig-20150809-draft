@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/deltup/deltup-0.4.2-r1.ebuild,v 1.1 2005/04/28 10:03:17 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/deltup/deltup-0.4.2-r1.ebuild,v 1.2 2005/05/09 20:03:06 genstef Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -18,7 +18,7 @@ DEPEND="dev-libs/openssl
 	>=app-arch/bzip2-1.0.0
 	virtual/libc"
 RDEPEND="${DEPEND}
-	>=dev-util/xdelta-1.1.3
+	|| ( dev-util/bdelta >=dev-util/xdelta-1.1.3 )
 	>=app-arch/bzip2-1.0.3"
 
 src_unpack () {
