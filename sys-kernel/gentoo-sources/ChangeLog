@@ -1,6 +1,14 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.136 2005/05/03 07:43:33 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.137 2005/05/09 16:45:27 dsd Exp $
+
+*gentoo-sources-2.6.11-r8 (09 May 2005)
+
+  09 May 2005; Daniel Drake <dsd@gentoo.org>
+  +gentoo-sources-2.6.11-r8.ebuild:
+  Fix potential AIO DoS. Fix sparc64 SMP. Fix Invalid MAC on 3x59x network.
+  Fix LBA48 DMA. Add support for VIA VT6410 IDE. Revert broken SCSI TAPE
+  security fix.
 
   03 May 2005; Jeremy Huddleston <eradicator@gentoo.org>
   gentoo-sources-2.6.11-r7.ebuild:
