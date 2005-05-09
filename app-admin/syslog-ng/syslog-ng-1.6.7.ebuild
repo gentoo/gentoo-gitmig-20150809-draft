@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/syslog-ng-1.6.7.ebuild,v 1.5 2005/05/09 12:34:50 jforman Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/syslog-ng-1.6.7.ebuild,v 1.6 2005/05/09 14:47:16 mr_bones_ Exp $
 
 DESCRIPTION="syslog replacement with advanced filtering features"
 HOMEPAGE="http://www.balabit.com/products/syslog_ng/"
@@ -40,7 +40,7 @@ src_install() {
 	dodoc AUTHORS ChangeLog INSTALL NEWS PORTS README \
 		doc/{syslog-ng.conf.sample,syslog-ng.conf.demo,stresstest.sh} \
 		doc/sgml/{syslog-ng.dvi,syslog-ng.ps,syslog-ng.sgml,syslog-ng.txt} \
-		contrib/syslog2ng "${FILESDIR}/syslog-ng.conf.debian"
+		contrib/syslog2ng "${FILESDIR}/syslog-ng.conf."*
 	dohtml doc/sgml/syslog-ng.html/*
 
 	# Install default configuration
