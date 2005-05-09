@@ -1,6 +1,12 @@
 # ChangeLog for app-i18n/nabi
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/nabi/ChangeLog,v 1.16 2005/04/24 11:18:36 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/nabi/ChangeLog,v 1.17 2005/05/09 14:39:01 usata Exp $
+
+*nabi-0.15 (09 May 2005)
+
+  09 May 2005; Mamoru KOMACHI <usata@gentoo.org> metadata.xml,
+  nabi-0.14.ebuild, +nabi-0.15.ebuild:
+  Version bumped. Requested by Choe Hwanjin ;) This closes bug #91844.
 
   24 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> nabi-0.13.ebuild:
   Stable on ppc.
