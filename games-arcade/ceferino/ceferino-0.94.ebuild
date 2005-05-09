@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/ceferino/ceferino-0.94.ebuild,v 1.2 2005/05/09 23:18:04 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/ceferino/ceferino-0.94.ebuild,v 1.3 2005/05/09 23:44:23 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -26,7 +26,8 @@ src_unpack() {
 		-e '/^install-data-am/s:install-docDATA::' Makefile.in \
 		|| die "sed failed"
 	sed -i \
-		-e '/^datadir/ s:=.*:= /usr/share:' po/Makefile.in.in \
+		-e '/^\(gnu\)\?localedir /s:= .*:= /usr/share/locale:' \
+		po/Makefile.in.in src/Makefile.in \
 		|| die "sed failed"
 }
 
