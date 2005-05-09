@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/pmake
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/pmake/ChangeLog,v 1.20 2005/05/07 01:41:51 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/pmake/ChangeLog,v 1.21 2005/05/09 03:21:05 agriffis Exp $
+
+  09 May 2005; Aron Griffis <agriffis@gentoo.org> pmake-1.98.ebuild:
+  stable on ia64
 
   07 May 2005; Gustavo Zacarias <gustavoz@gentoo.org> pmake-1.98.ebuild:
   Stable on sparc

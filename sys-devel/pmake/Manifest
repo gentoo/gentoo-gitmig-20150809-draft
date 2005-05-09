@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 6f897382831307b424b3dee894a5396e pmake-1.98.ebuild 1902
+MD5 c3010dbdeac90bd3280bf57b0865a5de pmake-1.45-r4.ebuild 1706
 MD5 b9b64a77730348b1cb134a4051879cb5 ChangeLog 2670
 MD5 f452b142802fc6ec5d75004af15d01e6 metadata.xml 258
-MD5 236f4f1a3ffdad485bb107200864afc5 pmake-1.98.ebuild 1903
-MD5 c3010dbdeac90bd3280bf57b0865a5de pmake-1.45-r4.ebuild 1706
-MD5 090bfd2a45a464588a47793b37bc75d3 files/digest-pmake-1.98 131
-MD5 1095ca9c07bda375bf9674fe20d79ba6 files/02_all_mktemp.patch 406
 MD5 32a9d3f1baee80b6b3dfa6afd27e3b75 files/pmake-1.98-skipdots.patch 513
-MD5 aa2eb71443dc4352bdf910fcbaf9f05e files/digest-pmake-1.45-r4 65
+MD5 1095ca9c07bda375bf9674fe20d79ba6 files/02_all_mktemp.patch 406
+MD5 090bfd2a45a464588a47793b37bc75d3 files/digest-pmake-1.98 131
 MD5 456fc1935fead6cfc1235eddf6259847 files/skipdots.patch 677
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFCfBzlKRy60XGEcJIRAvpSAKCfAL82hIHFmzyRrQxAbzlziZEBWgCgmtH5
-XFVzYrRPVpsnYvnltyVBUCg=
-=5f5h
------END PGP SIGNATURE-----
+MD5 aa2eb71443dc4352bdf910fcbaf9f05e files/digest-pmake-1.45-r4 65
