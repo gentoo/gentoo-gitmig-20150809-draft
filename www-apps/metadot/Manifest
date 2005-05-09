@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 322a8ccaacd6d3049218355ea4f552cf metadot-6.1.6.ebuild 1376
-MD5 c10c629da3226b382ea6a0a4bb68127c ChangeLog 841
 MD5 f61bfa064e3acdfcd826e4a38b121196 metadata.xml 161
+MD5 cced52cefa486a36b449b0960dbdbe28 ChangeLog 949
+MD5 c71e59006ea06b43bf6142c0329db449 metadot-6.1.6.ebuild 1372
+MD5 c7ad307b2475e81f9e5a15c731185dd4 files/reconfig 337
 MD5 04f2425090275b79624c2ef14ef107ff files/digest-metadot-6.1.6 65
 MD5 20d7f02a98e7e1bdd83cc868dc128863 files/postinstall-en.txt 1567
-MD5 c7ad307b2475e81f9e5a15c731185dd4 files/reconfig 337
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCaacKtG5z4I8BtQoRAsQWAJ9+KSr3XpvRHwm88KRTzIeg7b1ZTQCfai0d
-r+MWlp2n9BDHHNb4A84UMRc=
-=VcZ6
+iD8DBQFCfz0gjUHll2nfF60RAknKAJ4iX8Bfi16IxKP3FXQEBuzL7lUjvQCeIlMW
+MVlX21rX4YH3XrV0X9I/dKA=
+=0GK4
 -----END PGP SIGNATURE-----
