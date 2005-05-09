@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/mpd-svn
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd-svn/ChangeLog,v 1.9 2005/04/07 23:56:06 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd-svn/ChangeLog,v 1.10 2005/05/09 11:48:02 ticho Exp $
+
+*mpd-svn-20050408-r1 (09 May 2005)
+
+  09 May 2005; Andrej Kacian <ticho@gentoo.org> +mpd-svn-20050408-r1.ebuild:
+  Added ~amd64 keyword. Added support for musepack, suggested by Nuno
+  Alexandre <ikaro@fluxbox.org>. Closes bug #91993.
 
 *mpd-svn-20050408 (07 Apr 2005)
 
