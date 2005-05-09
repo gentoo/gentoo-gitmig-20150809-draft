@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3937 2005/05/08 23:45:50 latexer Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3938 2005/05/09 00:20:47 dsd Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Danie Drake <dsd@gentoo.org> (09 May 2005)
+# Facing removal due to lack of development upstream
+sys-kernel/wolk-sources
 
 # Peter Johanson <latexer@gentoo.org> (08 May 2005)
 # New blam requires mono-1.1.x, so mask for now
