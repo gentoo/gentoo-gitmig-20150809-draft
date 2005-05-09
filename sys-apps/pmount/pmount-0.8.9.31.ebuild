@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pmount/pmount-0.8.9.31.ebuild,v 1.1 2005/05/09 18:31:28 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pmount/pmount-0.8.9.31.ebuild,v 1.2 2005/05/09 18:49:22 cardoe Exp $
 
 inherit eutils
 
@@ -18,6 +18,8 @@ IUSE=""
 RDEPEND=""
 
 DEPEND="${RDEPEND}
+	>=sys-apps/dbus-0.33
+	>=sys-apps/hal-0.5.1
 	>=sys-fs/sysfsutils-1.0"
 
 DOCS="AUTHORS GPL CHANGES README"
