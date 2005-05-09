@@ -2,7 +2,7 @@ MD5 cf93b43a7c6f6d4987fbbe331073f39b pcmcia-cs-3.2.5-r2.ebuild 4452
 MD5 bd45772ec06d2e6c5df4922ee1b65d28 pcmcia-cs-3.2.7-r3.ebuild 4900
 MD5 885c9f8c19c380442a5224f94d45afc4 pcmcia-cs-3.2.8.ebuild 3694
 MD5 9c24e6836b1acf3a9ed1830e6f5d505a pcmcia-cs-3.2.5-r3.ebuild 5269
-MD5 afa02faca65cc8c5af742ec5ce52d40b ChangeLog 18429
+MD5 5fd42ce8bed10f524a3940df68861242 ChangeLog 18548
 MD5 b280eebc74d70d85e664debf1adce2c3 metadata.xml 255
 MD5 338830e2d0514d080a684e34404424a7 pcmcia-cs-3.2.7-r4.ebuild 4946
 MD5 f8f190b2ddbf95e58f3abf55fc303d27 files/digest-pcmcia-cs-3.2.5-r2 150
@@ -14,7 +14,7 @@ MD5 33c110d98480f8c994d902995356cda2 files/pcmcia-cs-3.2.8-move-pnp-ids.patch 16
 MD5 c913e8e351070fda2dd49be2802d9128 files/pcmcia-cs-3.2.8-ldflags.patch 944
 MD5 adfa3588f2c81c2c97fa0fffa18c6bed files/pcmcia-cs-3.2.8-conf.d 524
 MD5 693d508b7dd24e64735b5ba4a16e699b files/pcmcia.rc 2038
-MD5 29a080ad739a275eeb1337526a40e6b4 files/pcmcia-cs-3.2.8-init.d 2216
+MD5 2303a317f3ab3ae698cd51fadaa7d998 files/pcmcia-cs-3.2.8-init.d 2244
 MD5 89130d20833db1421e8f624c90d19516 files/digest-pcmcia-cs-3.2.8 68
 MD5 da3f5dc50768f0a5d9868dd5bd227329 files/network 768
 MD5 fb59203b176eea34b5969d465efb85a9 files/ppc.config.opts 1687

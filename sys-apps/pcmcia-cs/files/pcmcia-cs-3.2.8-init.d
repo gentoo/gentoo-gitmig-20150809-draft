@@ -1,10 +1,14 @@
 #!/sbin/runscript
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/files/pcmcia-cs-3.2.8-init.d,v 1.1 2005/04/25 12:09:18 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/files/pcmcia-cs-3.2.8-init.d,v 1.2 2005/05/09 08:57:55 brix Exp $
 
 RUN=/var/run
 SCHEME_FILE=${RUN}/pcmcia-scheme
+
+depend() {
+	use coldplug
+}
 
 cleanup() {
 	while read SN CLASS MOD INST DEV EXTRA; do
