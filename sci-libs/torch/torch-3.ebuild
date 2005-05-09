@@ -1,8 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/torch/torch-3.ebuild,v 1.1 2004/12/29 00:44:27 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/torch/torch-3.ebuild,v 1.2 2005/05/09 11:21:27 herbs Exp $
 
-inherit toolchain-funcs
+inherit toolchain-funcs multilib
 
 DESCRIPTION="machine-learning library, written in simple C++"
 HOMEPAGE="http://www.torch.ch/"
@@ -11,7 +11,7 @@ SRC_URI="http://www.torch.ch/archives/Torch${PV}src.tgz
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ~amd64"
 IUSE="doc debug"
 
 DEPEND="virtual/libc"
@@ -23,11 +23,13 @@ torch_packages="convolutions datasets decoder distributions gradients kernels ma
 src_compile() {
 	local shalldebug="OPT"
 	use debug && shalldebug="DBG"
+	# -malign-double makes no sense on a 64-bit arch
+	use amd64 || extraflags="-malign-double"
 	cp config/Makefile_options_Linux .
 	sed -i \
 		-e "s:^PACKAGES.*:PACKAGES = ${torch_packages}:" \
 		-e "s:^DEBUG.*:DEBUG = ${shalldebug}:" \
-		-e "s:^CFLAGS_OPT_FLOAT.*:CFLAGS_OPT_FLOAT = -Wall ${CFLAGS} -ffast-math -malign-double:" \
+		-e "s:^CFLAGS_OPT_FLOAT.*:CFLAGS_OPT_FLOAT = -Wall ${CFLAGS} -ffast-math ${extraflags}:" \
 		Makefile_options_Linux
 
 	make depend
@@ -43,7 +45,7 @@ src_install() {
 	done
 	# prepare the options Makefile
 	sed -i \
-		-e 's:^LIBS_DIR.*:LIBS_DIR=/usr/lib:' \
+		-e "s:^LIBS_DIR.*:LIBS_DIR=/usr/$(get_libdir):" \
 		-e 's|^INCS := .*|INCS := -I /usr/include/torch $(MYINCS)|' \
 		-e '/^INCS +=/c\' \
 		Makefile_options_Linux
