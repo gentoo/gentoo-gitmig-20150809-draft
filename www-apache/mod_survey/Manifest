@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 d4999109ea5fd3c28ce2283e005e05f2 ChangeLog 771
 MD5 0d18f0fe5d603b41b988373892caf195 metadata.xml 226
-MD5 16080eb784eaa8119b24bb6e6b2daf57 mod_survey-3.2.0.ebuild 1896
-MD5 14d833e6ab31ed6765dd0116b0576876 files/digest-mod_survey-3.2.0 67
-MD5 6e46d5897e70491662270bc3de8c0236 files/postinstall-en.txt 407
+MD5 bbe3dad4479df481213dcef15a69ce23 ChangeLog 883
+MD5 6bd331f50128b7552645224b6847417e mod_survey-3.2.0.ebuild 1895
 MD5 c778b2cb7c0d593c715c3be9020d4d24 files/reconfig 218
+MD5 6e46d5897e70491662270bc3de8c0236 files/postinstall-en.txt 407
+MD5 14d833e6ab31ed6765dd0116b0576876 files/digest-mod_survey-3.2.0 67
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCFT8UjUHll2nfF60RAlDlAJ9//64RgfvtYbHySkMozVIGYIez7gCfdaTI
-FuwvUEA00T1jfFrqOnY4xy0=
-=GpO6
+iD8DBQFCfzqdjUHll2nfF60RAvRTAJ9Yjto32socnCss44bkYHlbMdKhKwCfVIoh
+mBGG8Vk6y7uAvKhi9AuSSp0=
+=ytf/
 -----END PGP SIGNATURE-----
