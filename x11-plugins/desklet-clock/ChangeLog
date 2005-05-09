@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/desklet-clock
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-clock/ChangeLog,v 1.11 2005/04/21 20:26:23 nixphoeni Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-clock/ChangeLog,v 1.12 2005/05/09 18:32:32 dholm Exp $
+
+  09 May 2005; David Holm <dholm@gentoo.org> desklet-clock-0.40.ebuild:
+  Readded to ~ppc. Please don't remove it without filing a proper bug report.
 
 *desklet-clock-0.40 (21 Apr 2005)
 
