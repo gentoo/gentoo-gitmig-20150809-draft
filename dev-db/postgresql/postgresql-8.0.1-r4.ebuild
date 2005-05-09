@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-8.0.1-r4.ebuild,v 1.2 2005/05/08 21:26:59 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-8.0.1-r4.ebuild,v 1.3 2005/05/09 02:18:47 nakano Exp $
 
 inherit eutils gnuconfig flag-o-matic multilib toolchain-funcs
 
@@ -167,6 +167,8 @@ src_install() {
 	insinto /etc/conf.d/
 	newins ${FILESDIR}/postgresql.conf-${PV} postgresql || die
 	newins ${FILESDIR}/pg_autovacuum.conf-${PV} pg_autovacuum || die
+
+	rm ${D}/usr/include/postgres_ext.h
 }
 
 pkg_postinst() {
