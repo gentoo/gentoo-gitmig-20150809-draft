@@ -1,6 +1,10 @@
 # ChangeLog for net-www/webapp-config
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/webapp-config/ChangeLog,v 1.73 2005/05/09 17:07:08 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/webapp-config/ChangeLog,v 1.74 2005/05/09 17:17:53 hansmi Exp $
+
+  09 May 2005; Michael Hanselmann <hansmi@gentoo.org>
+  webapp-config-1.10-r14.ebuild:
+  Stable on ppc.
 
   09 May 2005; Rene Nussbaumer <killerfox@gentoo.org>
   webapp-config-1.10-r14.ebuild:
