@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.48 2005/05/07 18:35:35 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.49 2005/05/09 16:57:09 stkn Exp $
+
+  09 May 2005; Stefan Knoblich <stkn@gentoo.org> asterisk-1.0.7-r1.ebuild:
+  Added warning messages, some minor tweaks
 
 *asterisk-1.0.7-r1 (07 May 2005)
 
