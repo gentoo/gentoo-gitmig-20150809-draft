@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a742d22730e4acb79860592cf304c7a7 mac-robber-1.00.ebuild 726
-MD5 1e9937a862e19cdf3f8b0838c48c2ce5 metadata.xml 1434
 MD5 abf9fc83ec8c2163c7878770832de2df ChangeLog 392
+MD5 72785bcfeedeeae5f1492e66608185df mac-robber-1.00.ebuild 731
+MD5 1e9937a862e19cdf3f8b0838c48c2ce5 metadata.xml 1434
 MD5 df98bdff9227fef4cff867355797b655 files/digest-mac-robber-1.00 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFB9wP6mdTrptrqvGERAip1AKCKuUqbjHDmZPsDSKziFmeLoZ13tgCfVDK9
-E0QmRFpbLe/WNmysMbMLAQ4=
-=53Wq
------END PGP SIGNATURE-----
