@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/libpq/libpq-3.2.ebuild,v 1.2 2005/05/08 23:00:24 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/libpq/libpq-3.2.ebuild,v 1.3 2005/05/09 21:38:07 nakano Exp $
 
 inherit eutils gnuconfig flag-o-matic multilib toolchain-funcs
 
@@ -74,15 +74,25 @@ src_install() {
 	cd ${S}/src/interfaces/libpq
 	make DESTDIR=${D} LIBDIR=${D}/usr/lib install || die
 
+	cd ${S}/src/include
+	make DESTDIR=${D} install || die
+
 	cd ${S}
 	dodoc README HISTORY COPYRIGHT INSTALL
 
-	cp src/include/postgres_ext.h ${D}/usr/include/postgresql/libpq-${SLOT}
-
 	dosym /usr/lib/libpq-${SLOT}.a /usr/lib/libpq.a
-	dodir /usr/include/postgresql/internal/
-	dosym /usr/include/postgresql/libpq-${SLOT}/libpq-fe.h /usr/include/
-	dosym /usr/include/postgresql/libpq-${SLOT}/postgres_ext.h /usr/include/
-	dosym /usr/include/postgresql/libpq-${SLOT}/internal/libpq-int.h /usr/include/postgresql/internal/
-	dosym /usr/include/postgresql/libpq-${SLOT}/internal/pqexpbuffer.h /usr/include/postgresql/internal/
+
+	ln -s ${D}/usr/include/postgresql/libpq-${SLOT}/*.h ${D}/usr/include/
+
+	dodir /usr/include/libpq
+	ln -s ${D}/usr/include/postgresql/libpq-${SLOT}/libpq/*.h ${D}/usr/include/libpq
+
+	cd ${D}/usr/include/postgresql/libpq-${SLOT}
+	for f in $(find . -name '*.h' -print) ; do
+		destdir=$(dirname $f)
+		if [ ! -d "${D}/usr/include/postgresql/${destdir}" ]; then
+			mkdir -p ${D}/usr/include/postgresql/${destdir}
+		fi
+		ln -s ${D}/usr/include/postgresql/libpq-${SLOT}/${f} ${D}/usr/include/postgresql/${destdir}/
+	done
 }
