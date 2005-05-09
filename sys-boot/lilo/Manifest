@@ -1,27 +1,27 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 b42e977318d9032045ca4a2f26b373fb lilo-22.6.1-r1.ebuild 5121
 MD5 eeee4743c4e463eeed3a7a4c15380e0d metadata.xml 254
 MD5 66f12349ca9414f901d929091e8dfe92 lilo-22.6.1.ebuild 4771
-MD5 0503a86fd6efb3d83ba3a1d7afcc2953 ChangeLog 3646
-MD5 e7ca063f0b1a9e49beeaa2d777fdfafe lilo-22.7.ebuild 5110
-MD5 2419c22323e1cfdbbc1ca149cb05e74d files/lilo-22.7-create-install-dirs.patch 970
-MD5 2419c22323e1cfdbbc1ca149cb05e74d files/lilo-22.6.1-create-install-dirs.patch 970
+MD5 0fe46ff76e44ce1479354fa5635a2543 ChangeLog 3755
+MD5 b42e977318d9032045ca4a2f26b373fb lilo-22.6.1-r1.ebuild 5121
+MD5 9d618ecef3e710eedba5448007234558 lilo-22.7.ebuild 5115
 MD5 c3e5c4bfabecddb7a57c3cdce9e21c3a files/lilo-22.6.1-devmapper_gentoo.patch 12072
-MD5 fff6910b2180128e251d89f31221b683 files/digest-lilo-22.6.1-r1 128
 MD5 ab2657bc635313522eb791e30b1166ef files/lilo-22.6.1-correct-usage-info.patch 683
-MD5 de6a5065fca97cf5df35c8bc9bebfafc files/lilo-22.7-correct-usage-info.patch 557
-MD5 78f9720430dac90363e7b5120a262a3a files/lilo-22.7-novga.patch 936
-MD5 c3e5c4bfabecddb7a57c3cdce9e21c3a files/lilo-22.7-devmapper_gentoo.patch 12072
-MD5 78f9720430dac90363e7b5120a262a3a files/lilo-22.6.1-novga.patch 936
-MD5 5f2172291cc1252b30f5a60981a51ac4 files/lilo.conf 1722
 MD5 fff6910b2180128e251d89f31221b683 files/digest-lilo-22.6.1 128
+MD5 2419c22323e1cfdbbc1ca149cb05e74d files/lilo-22.6.1-create-install-dirs.patch 970
+MD5 5f2172291cc1252b30f5a60981a51ac4 files/lilo.conf 1722
+MD5 fff6910b2180128e251d89f31221b683 files/digest-lilo-22.6.1-r1 128
 MD5 3caa133b51ca935f818fd53102b0b62a files/digest-lilo-22.7 126
+MD5 78f9720430dac90363e7b5120a262a3a files/lilo-22.6.1-novga.patch 936
+MD5 de6a5065fca97cf5df35c8bc9bebfafc files/lilo-22.7-correct-usage-info.patch 557
+MD5 2419c22323e1cfdbbc1ca149cb05e74d files/lilo-22.7-create-install-dirs.patch 970
+MD5 c3e5c4bfabecddb7a57c3cdce9e21c3a files/lilo-22.7-devmapper_gentoo.patch 12072
+MD5 78f9720430dac90363e7b5120a262a3a files/lilo-22.7-novga.patch 936
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCdXs0p5vW4rUFj5oRAlSDAJ9mKS0BTlQ0fJkB2DDw7gYNrHEHsACfb0aV
-YRfET4LKoLo4uWqMfcR81Sc=
-=vUym
+iD8DBQFCfscHmOfEJZHYOKcRAk9qAKCQiRNKB2NeLPESekQ1zLai6IdfMgCgsBOm
+PXvpjYZ8us9gubsd0NAWqrA=
+=e7zI
 -----END PGP SIGNATURE-----
