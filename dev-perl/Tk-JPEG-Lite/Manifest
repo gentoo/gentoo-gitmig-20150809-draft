@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 d0a9e3c127bd04f1b9ad4ab5b26e635c ChangeLog 503
-MD5 02a88a3a01bc0f8e87be9cf47b96bd65 Tk-JPEG-Lite-2.01403.ebuild 536
+MD5 30f793edc84cbd7ffc34dd54a50e1fcd ChangeLog 607
+MD5 ef0dfcf905fb943d9a3543fa457f6763 Tk-JPEG-Lite-2.01403.ebuild 542
 MD5 36a5291cb827562683e4f0a454b07a50 metadata.xml 158
 MD5 f6ade2cecc0d798cacbbb75626109c1f files/digest-Tk-JPEG-Lite-2.01403 71
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFCclSatG5z4I8BtQoRAo5UAJ0Ug1zc3Em/xboZ/wz5ykfDI/3cdgCfeiqZ
-fypZlz9l93C8Rm2wWhYxmM8=
-=ERng
+iD8DBQFCf6BUKRy60XGEcJIRAjlzAJ9LkunUME905BGPgmUsMPnDD0ENowCgprf/
+Ar8LKCgGm858Li1QcXBsYLY=
+=DiSk
 -----END PGP SIGNATURE-----
