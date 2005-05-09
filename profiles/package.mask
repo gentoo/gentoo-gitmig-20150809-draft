@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3941 2005/05/09 08:19:17 hollow Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3942 2005/05/09 08:38:34 ferdy Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -159,7 +159,6 @@ www-apps/wordpress
 # it is secure to unmask them to test
 net-mail/mailer-config
 =net-mail/mailwrapper-0.2.1-r1
-=mail-mta/nbsmtp-0.98-r1
 =mail-mta/nbsmtp-0.99-r1
 =mail-mta/msmtp-1.4.0-r1
 =mail-mta/ssmtp-2.61-r1
