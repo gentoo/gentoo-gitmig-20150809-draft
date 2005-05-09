@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-8.0.2-r2.ebuild,v 1.3 2005/05/09 02:18:47 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-8.0.2-r2.ebuild,v 1.4 2005/05/09 21:55:20 nakano Exp $
 
 inherit eutils gnuconfig flag-o-matic multilib toolchain-funcs
 
@@ -140,9 +140,6 @@ src_install() {
 	dodoc contrib/adddepend/*
 
 	exeinto /usr/bin
-
-	dodir /usr/include/postgresql/pgsql
-	cp ${D}/usr/include/*.h ${D}/usr/include/postgresql/pgsql
 
 	cd ${S}/doc
 	dodoc FAQ* README.* TODO bug.template
