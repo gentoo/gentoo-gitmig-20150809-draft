@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 71dc7b2c7db84b39fc7bd0804c14ce34 tilda-0.02.ebuild 667
 MD5 1831ceb15ebb45a1f2e51fe72533ce55 ChangeLog 406
-MD5 b569bfa4bf7e5a21b59def541bb4ae83 metadata.xml 369
+MD5 71da003bb2109fed15aff6635287c6a6 metadata.xml 222
 MD5 5324e1fef08127c93c017c51aaf9b9e5 files/digest-tilda-0.02 61
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCf2PLI1lqEGTUzyQRAixGAKCaIi/puHH8a6xH4IqVkkwjrAs9cgCeMyXw
+5PNoKn3R1kIq8p/EdITGXEE=
+=lXg0
+-----END PGP SIGNATURE-----
