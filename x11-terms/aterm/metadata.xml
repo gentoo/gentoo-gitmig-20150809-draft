@@ -3,7 +3,9 @@
 <pkgmetadata>
 <herd>no-herd</herd>
 <maintainer>
-  <email>spock@gentoo.org</email>
-  <name>Michal Januszewski</name>
+  <email>kloeri@gentoo.org</email>
+</maintainer>
+<maintainer>
+  <email>ka0ttic@gentoo.org</email>
 </maintainer>
 </pkgmetadata>
