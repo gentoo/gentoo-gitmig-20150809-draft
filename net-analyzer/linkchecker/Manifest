@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 324e8a97380eccb75e196de6daf6b75f linkchecker-1.12.1.ebuild 660
-MD5 8c7b6c9d0adc38a96d515e440d52a7e1 linkchecker-2.9.ebuild 527
-MD5 b0d728897ad9bcd3e6f20a6315e4f290 ChangeLog 2331
+MD5 6bec1bfb4571958a2cffe0ce0f0e68e5 ChangeLog 2419
+MD5 cba6642890d7458662f063ff839b9858 linkchecker-1.12.1.ebuild 657
 MD5 6bc2db5b1e135821863e91fa8658ad48 metadata.xml 255
+MD5 8c7b6c9d0adc38a96d515e440d52a7e1 linkchecker-2.9.ebuild 527
 MD5 fe51c9bc36ce4ce1967c3abf0898dfe3 files/digest-linkchecker-1.12.1 70
 MD5 8c210bfa131669665f6f926a107d92c7 files/digest-linkchecker-2.9 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCakrcEZCkKN40op4RAq6hAKCXPmV3QA080AATzTT3hJgJcUQvJgCfbEdi
-K8uMGifNXzTfUoQySYCZJ/U=
-=eRra
------END PGP SIGNATURE-----
