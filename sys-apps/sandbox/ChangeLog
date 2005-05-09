@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/sandbox
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sandbox/ChangeLog,v 1.12 2005/05/06 09:48:15 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sandbox/ChangeLog,v 1.13 2005/05/09 19:36:30 eradicator Exp $
+
+*sandbox-1.2.5-r2 (09 May 2005)
+
+  09 May 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  +sandbox-1.2.5-r2.ebuild:
+  On some versions of portage, CFLAGS_* do not survive across ebuild.sh
+  stages, so we must ensure the multilib setup always gets rerun for each
+  stage.
 
 *sandbox-1.2.5-r1 (06 May 2005)
 
