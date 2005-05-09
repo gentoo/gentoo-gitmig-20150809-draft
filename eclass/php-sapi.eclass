@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-sapi.eclass,v 1.59 2005/05/06 05:10:41 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-sapi.eclass,v 1.60 2005/05/09 13:43:32 beu Exp $
 # Author: Robin H. Johnson <robbat2@gentoo.org>
 
 inherit eutils flag-o-matic multilib
@@ -278,27 +278,6 @@ php-sapi_src_unpack() {
 }
 
 
-# this function shall maybe go into flag-o-matic.eclass
-lfs-flags() {
-	echo -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE
-}
-
-# returns true, if LFS is supported (and supposed to be bugfree ;) by current system
-supports-lfs() {
-	# for some reason (I do not know who wrote this) we do not want LFS on glibc-2.2
-	# maybe it's broken then
-
-	has_version '>=sys-libs/glibc-2.3' && return 0
-	has_version '=sys-libs/glibc-2.2*'  && return 1
-	return 0
-}
-
-set_filter_flags() {
-	CFLAGS="${CFLAGS/  / }"
-
-	supports-lfs && append-lfs-flags || filter-lfs-flags
-}
-
 php-sapi_src_compile() {
 	# cache this
 	libdir="$(get_libdir)"
@@ -523,14 +502,12 @@ php-sapi_src_compile() {
 
 	myconf="${myconf}  --libdir=/usr/${libdir}/php"
 
-	if ! supports-lfs
-	then
-		#shall still fix bug #24373
-		filter-flags "-D_FILE_OFFSET_BITS=64"
-		filter-flags "-D_FILE_OFFSET_BITS=32"
-		filter-flags "-D_LARGEFILE_SOURCE=1"
-		filter-flags "-D_LARGEFILE_SOURCE"
-	fi
+	# filter the following from C[XX]FLAGS regardless, as apache won't be
+	# supporting LFS until 2.2 is released and in the tree.  Fixes bug #24373.
+	filter-flags "-D_FILE_OFFSET_BITS=64"
+	filter-flags "-D_FILE_OFFSET_BITS=32"
+	filter-flags "-D_LARGEFILE_SOURCE=1"
+	filter-flags "-D_LARGEFILE_SOURCE"
 
 	#fixes bug #14067
 	# changed order to run it in reverse for bug #32022 and #12021 
