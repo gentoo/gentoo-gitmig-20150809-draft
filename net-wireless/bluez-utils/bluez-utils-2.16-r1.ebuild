@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/bluez-utils-2.16-r1.ebuild,v 1.1 2005/04/27 12:40:04 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/bluez-utils-2.16-r1.ebuild,v 1.2 2005/05/09 11:30:57 liquidx Exp $
 
 IUSE="gtk alsa cups pcmcia dbus"
 
@@ -20,7 +20,7 @@ RDEPEND=">=net-wireless/bluez-libs-2.16
 	gtk? ( >=dev-python/pygtk-2.2 )
 	alsa? ( media-libs/alsa-lib )
 	cups? ( net-print/cups )
-	dbus? ( >=sys-apps/dbus-0.23 )
+	dbus? ( =sys-apps/dbus-0.23* )
 	pcmcia? ( sys-apps/pcmcia-cs sys-apps/setserial )"
 
 DEPEND="sys-devel/bison
