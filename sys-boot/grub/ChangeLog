@@ -1,6 +1,11 @@
 # ChangeLog for sys-boot/grub
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.39 2005/05/08 02:55:53 swegener Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.40 2005/05/09 05:10:51 vapier Exp $
+
+  09 May 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/grub-0.96-netboot-pic.patch, grub-0.96-r2.ebuild:
+  Add patch by the PaX Team to fix PIC/PIE issues in the netboot code and
+  remove the chpax/paxctl stuff since the nxstack patch fixes hardened issues.
 
 *grub-0.96-r2 (08 May 2005)
 

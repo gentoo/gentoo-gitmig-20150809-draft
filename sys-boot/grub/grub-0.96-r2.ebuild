@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.96-r2.ebuild,v 1.1 2005/05/08 02:55:53 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.96-r2.ebuild,v 1.2 2005/05/09 05:10:51 vapier Exp $
 
 inherit mount-boot eutils flag-o-matic toolchain-funcs
 
@@ -62,7 +62,10 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-xfs-writable-string.patch
 
 	# gcc4 patches; bug #85016
-	epatch ${FILESDIR}/${P}-r1-gcc4.patch
+	epatch "${FILESDIR}"/${P}-r1-gcc4.patch
+
+	# fix PIC issues in netboot code #85566
+	epatch "${FILESDIR}"/${P}-netboot-pic.patch
 
 	# a bunch of patches apply to raw autotool files
 	autoconf || die "autoconf failed"
@@ -159,10 +162,6 @@ pkg_postinst() {
 	for x in /lib/grub/*/* /usr/lib/grub/*/* ; do
 		[[ -f ${x} ]] && cp -p ${x} /boot/grub
 	done
-
-	# hardened voodoo
-	[[ -x /sbin/chpax ]] && /sbin/chpax -spme /sbin/grub
-	[[ -x /sbin/paxctl ]] && /sbin/paxctl -spme /sbin/grub
 
 	[[ -e /boot/grub/grub.conf ]] \
 		&& /sbin/grub \
