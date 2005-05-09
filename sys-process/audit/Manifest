@@ -6,8 +6,10 @@ MD5 72f1c8a16118107f7f189d9640c4315a audit-0.7.1.ebuild 1120
 MD5 84124fe920f0d72eac925d160de3bde3 audit-0.7.ebuild 1036
 MD5 b7ae6b273342ab1c9a026a88c13cafa1 audit-0.7.2-r1.ebuild 1571
 MD5 5b827f7378df0f835535406269d5d301 metadata.xml 296
-MD5 21e73558f914130b2d3a4d440662ecef ChangeLog 932
+MD5 5c69b843b1b326d608d2e168d258d351 ChangeLog 1046
 MD5 7ebd55762c36ef60780e1553f2eee200 audit-0.7.2.ebuild 1116
+MD5 800dc38b7b284025611145ab70338ae7 audit-0.7.4.ebuild 1564
+MD5 5c9d503ee28782e29f1c87f4cf9efc3a files/digest-audit-0.7.4 62
 MD5 bf5a8a780a21b8072984968db475969e files/digest-audit-0.7.1 62
 MD5 7c1f1f14a4750e7d8bbc1de62b3fcf59 files/auditd.initd 708
 MD5 402bf22e8e90b45f8a8349314cd61068 files/auditd.confd-0.7.2-r1 483
@@ -20,7 +22,7 @@ MD5 acc06693c8205b28388a54f7812a5738 files/digest-audit-0.7.2 62
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCfGj0jUHll2nfF60RApX6AJ9kHU1eYXs9pHyIdnC3EpusFo3cYwCfZhiT
-T+fiaM8QpEFqs+nUYLAumfo=
-=dEly
+iD8DBQFCfvkDjUHll2nfF60RAqWbAKCB+msLPql6iF/uq7n4FxDLJKN0AACgg+jp
+sJm2hlzl2R5I4KwzyqqdsHA=
+=KWkX
 -----END PGP SIGNATURE-----
