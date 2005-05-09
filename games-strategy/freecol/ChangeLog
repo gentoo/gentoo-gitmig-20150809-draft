@@ -1,6 +1,9 @@
 # ChangeLog for games-strategy/freecol
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freecol/ChangeLog,v 1.1 2004/12/09 08:30:06 mr_bones_ Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freecol/ChangeLog,v 1.2 2005/05/09 14:57:05 dholm Exp $
+
+  09 May 2005; David Holm <dholm@gentoo.org> freecol-0.3.0.ebuild:
+  Added to ~ppc.
 
 *freecol-0.3.0 (09 Dec 2004)
 
