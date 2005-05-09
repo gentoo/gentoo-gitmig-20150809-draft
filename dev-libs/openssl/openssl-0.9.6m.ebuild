@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.6m.ebuild,v 1.6 2005/02/07 00:30:29 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.6m.ebuild,v 1.7 2005/05/09 06:37:07 vapier Exp $
 
 inherit eutils
 
@@ -8,12 +8,12 @@ DESCRIPTION="Toolkit for SSL v2/v3 and TLS v1"
 HOMEPAGE="http://www.openssl.org/"
 SRC_URI="mirror://openssl/source/${P}.tar.gz"
 
-LICENSE="as-is"
+LICENSE="openssl"
 SLOT="0"
-KEYWORDS="x86 ppc alpha sparc mips hppa -amd64"
+KEYWORDS="alpha -amd64 hppa mips ppc sparc x86"
 IUSE=""
 
-RDEPEND="virtual/libc"
+RDEPEND=""
 DEPEND="${RDEPEND}
 	>=dev-lang/perl-5"
 
