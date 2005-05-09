@@ -7,7 +7,7 @@ MD5 abf62d66d038341af9fd3f7baae1003a gstreamer-0.8.7.ebuild 2156
 MD5 898c7bf46170e72b9e6945a6401aebab gstreamer-0.8.3-r1.ebuild 2287
 MD5 6f1c0340861bed0ad970748e211f5a73 gstreamer-0.8.9-r2.ebuild 2910
 MD5 8ac96627a0134d8f9c3df6a352303b07 ChangeLog 14179
-MD5 052011ffec4ed956c441d50febf35f79 gstreamer-0.8.10.ebuild 2818
+MD5 aa9ecda40f48f6d7ae691dde35cdcf23 gstreamer-0.8.10.ebuild 2817
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 d219e0115125181e4730a98f86ca463b files/digest-gstreamer-0.8.3-r1 69
 MD5 7f5ad30642cb2c0af9d64ac11c9dabb2 files/digest-gstreamer-0.8.9-r1 69

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdts/libdts-0.0.2-r1.ebuild,v 1.4 2005/05/05 19:17:51 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdts/libdts-0.0.2-r1.ebuild,v 1.5 2005/05/09 00:52:13 agriffis Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.videolan.org/pub/videolan/${PN}/${PV}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ppc ~sparc ~amd64 ~hppa ~ppc64 ~alpha ~ia64"
+KEYWORDS="~alpha ~amd64 ~hppa ia64 ppc ~ppc64 ~sparc ~x86"
 IUSE="oss debug"
 
 RDEPEND="virtual/libc"

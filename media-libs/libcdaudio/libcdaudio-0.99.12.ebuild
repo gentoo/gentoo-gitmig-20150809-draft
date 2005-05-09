@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcdaudio/libcdaudio-0.99.12.ebuild,v 1.2 2005/05/04 16:09:30 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcdaudio/libcdaudio-0.99.12.ebuild,v 1.3 2005/05/09 00:50:54 agriffis Exp $
 
 IUSE=""
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/libcdaudio/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc x86"
+KEYWORDS="~alpha amd64 ~hppa ia64 ~mips ~ppc ~ppc64 ~sparc x86"
 
 src_unpack() {
 	unpack ${A}

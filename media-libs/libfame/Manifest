@@ -1,22 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 a3448605a548cc3385b88768dd9fc4b8 libfame-0.9.0-r1.ebuild 1075
 MD5 2120445221c8a91f1b31eca9501cd737 libfame-0.9.0.ebuild 1022
 MD5 9e501b7e4b89f84f344b8094941e7b09 libfame-0.8.10.ebuild 798
 MD5 a89ce716c4c844113c9852dd63133ff2 ChangeLog 3213
 MD5 7300a7b361fa9f48e37722c6952bd432 metadata.xml 158
 MD5 3a16e7e75cd73364d30d92b61d0d8c44 libfame-0.9.1-r1.ebuild 1278
-MD5 75f4adfefad7c698f7e3f0cd5ceb51cd libfame-0.9.1.ebuild 1260
+MD5 aa943ae2e2107d394f60ab0c22f1cbd1 libfame-0.9.1.ebuild 1259
 MD5 c3a2bb99aa1812617fb10c1738955aad files/digest-libfame-0.8.10 66
 MD5 0631609809520953d425ea1b77009300 files/digest-libfame-0.9.0-r1 65
 MD5 275232f27240b6980578d85b8b3d66ff files/digest-libfame-0.9.1-r1 133
 MD5 0631609809520953d425ea1b77009300 files/digest-libfame-0.9.0 65
 MD5 275232f27240b6980578d85b8b3d66ff files/digest-libfame-0.9.1 133
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCemZB06ebR+OMO78RAli9AJ0S5R7ZGMbl2jkB2J0Dwh6aDICdpQCeLuOG
-uomhgqctrMDxafIoTnbSnDE=
-=RWdQ
------END PGP SIGNATURE-----
