@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3943 2005/05/09 10:17:34 beu Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3944 2005/05/09 10:51:48 beu Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -799,7 +799,6 @@ sys-kernel/config-kernel
 # there are some deep-seated issues here.  The Mason ebuild will go
 # in, but without the apache2 USE.  Also must decide whether or not to
 # depend on ApacheHandler2.
->=dev-perl/mod_perl-1.99.16
 >=www-apache/mod_perl-1.99.16
 dev-perl/libapreq2
 
