@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 0df4b17800f60eca3e9c79ce8eac9518 cups-1.1.23-r2.ebuild 4024
+MD5 9ed3d5f241e1c197d5cc8b4518b9ca08 cups-1.1.23-r2.ebuild 4025
 MD5 e36ac7a30dd61a5a58142aaec1fc6ddb cups-1.1.23-r1.ebuild 3916
 MD5 9546ca17ecbbca786b25ac58100598d6 ChangeLog 16894
 MD5 26b4b081d538c195dc39bcb2ec8e6f3a metadata.xml 161
@@ -18,7 +18,7 @@ MD5 b041836e6ee51876ca7ec86869643018 files/cups.xinetd 368
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCgN4TevY57Fted3ERAu1GAJ4sG2cekA+HkKoHGBqycJ8CioC4egCeMJMx
-NY2UC1AyW3X8QFLUAx8i3sY=
-=wYdI
+iD8DBQFCgN7hevY57Fted3ERAlwPAJwP48GfSLNhN3W6wqNVJzvxHUbmrQCbBlEi
+XlEtqCQbPQBwxtjNgvbO15U=
+=TniM
 -----END PGP SIGNATURE-----
