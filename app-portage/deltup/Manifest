@@ -1,5 +1,5 @@
-MD5 c822b1be80d088c1272282e94c3d6539 ChangeLog 962
+MD5 8f0d3a1f03af0c8d94258231f6ce3461 ChangeLog 1099
 MD5 8b3c0a00d01e47f2b1eddab5aa68eca7 metadata.xml 271
-MD5 b03aff5c8464826a382025a604da1aa3 deltup-0.4.2-r1.ebuild 1351
+MD5 440f2ed8100033ef1562ca9ffec8ae03 deltup-0.4.2-r1.ebuild 1358
 MD5 065889a05aed13c33d8d81b75dffa429 files/digest-deltup-0.4.2-r1 126
 MD5 378e8d34dd95cc65b7f65565df5d85f7 files/bzip2-1.0.2-makefile-CFLAGS.patch 841
