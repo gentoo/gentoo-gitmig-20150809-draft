@@ -1,0 +1,48 @@
+
+           oooo   o8o   .o8        .oooooo..o ooooooooo.   oooooooooooo
+           `888   `"'  "888       d8P'    `Y8 `888   `Y88. `888'     `8
+            888  oooo   888oooo.  Y88bo.       888   .d88'  888
+            888  `888   d88' `88b  `"Y8888o.   888ooo88P'   888oooo8
+            888   888   888   888      `"Y88b  888          888    "
+            888   888   888   888 oo     .d8P  888          888
+           o888o o888o  `Y8bod8P' 8""88888P'  o888o        o888o
+
+--------------------------------------------------------------------------------
+            An ANSI C Implementation of the Sender Policy Framework
+--------------------------------------------------------------------------------
+
+/*
+*  License:
+*
+*  The libspf Software License, Version 1.0
+*
+*  Copyright (c) 2004 James Couzens & Sean Comeau  All rights reserved. 
+*
+*  Redistribution and  use  in source and  binary forms, with or without
+*  modification, are  permitted  provided that  the following conditions
+*  are met:
+*
+*  1. Redistributions  of  source code must  retain  the above copyright
+*     notice, this list of conditions and the following disclaimer.
+*
+*  2. Redistributions  in binary form must reproduce the above copyright
+*     notice,  this list of conditions  and the following  disclaimer in
+*     the   documentation  and/or  other  materials  provided  with  the
+*     distribution.
+*
+*  THIS SOFTWARE  IS  PROVIDED  ``AS IS''  AND ANY  EXPRESSED OR IMPLIED
+*  WARRANTIES,  INCLUDING,  BUT  NOT  LIMITED TO, THE IMPLIED WARRANTIES
+*  OF   MERCHANTABILITY  AND  FITNESS  FOR  A  PARTICULAR   PURPOSE  ARE
+*  DISCLAIMED.  IN NO EVENT SHALL THE AUTHORS MAKING USE OF THIS LICENSE 
+*  OR ITS CONTRIBUTORS BE  LIABLE FOR ANY  DIRECT, INDIRECT, INCIDENTAL,
+*  SPECIAL,  EXEMPLARY, OR   CONSEQUENTIAL DAMAGES  (INCLUDING, BUT  NOT
+*  LIMITED  TO,  PROCUREMENT OF SUBSTITUTE  GOODS OR  SERVICES; LOSS  OF
+*  USE, DATA,  OR PROFITS;  OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
+*  ON ANY THEORY OF LIABILITY,  WHETHER IN  CONTRACT, STRICT  LIABILITY,
+*  OR TORT (INCLUDING  NEGLIGENCE OR  OTHERWISE)  ARISING IN ANY WAY OUT
+*  OF THE USE OF THIS SOFTWARE,  EVEN IF  ADVISED OF  THE POSSIBILITY OF
+*  SUCH DAMAGE.
+*
+*/
+
+EOF
