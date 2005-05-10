@@ -8,7 +8,7 @@ MD5 26aeecc4289a4d8982052af3d229704a apache-1.3.31-r2.ebuild 6931
 MD5 87370fee7054a7c4cfa0efb3a320c34b apache-2.0.50.ebuild 12902
 MD5 a419841198cd6a94b9dcf2e07f3c15b7 metadata.xml 617
 MD5 a04435ee78d579ba5aa3856b4b32d57c apache-1.3.33-r4.ebuild 8649
-MD5 0ad952c552a01b527eb22bbf4b83ceda ChangeLog 60480
+MD5 175b0bb25c8ebf2bd57589e892862635 ChangeLog 60545
 MD5 9ef3cdc19c9f3d025461cb26a226f82e apache-1.3.33-r1.ebuild 6942
 MD5 b34b4d92bab51e4eab58fd5021beb7c2 apache-2.0.54.ebuild 12084
 MD5 57a7be187470abfa52773b81151a38a6 apache-2.0.52.ebuild 12877
@@ -41,7 +41,7 @@ MD5 baf37cd1bc61f76ac73edd301f52decb files/digest-apache-2.0.52 201
 MD5 bb9ffec6d5f5d409b6705a2d8c19bc6a files/digest-apache-1.3.33-r3 212
 MD5 bb36b429c433a5cbf2712605a76ce8fb files/digest-apache-1.3.31 139
 MD5 2b4457530debe71160f56ae68ea4c9c8 files/apache.rc6 1078
-MD5 9f8463b7a1d940fe1eb3904804678e0b files/digest-apache-2.0.54-r1 150
+MD5 0f8432388d7a76db46d14868bb5eb88b files/digest-apache-2.0.54-r1 150
 MD5 44fc8ddc9a05a056d8a08e6d843c997c files/digest-apache-2.0.52-r1 204
 MD5 b7c4fabdcb3845c4218b770acb792f73 files/apache-2.0.49-gentoo.diff 6316
 MD5 ed50404f07dbf0f82bd84de866aa90c3 files/digest-apache-1.3.33-r4 286
@@ -114,7 +114,7 @@ MD5 3c0dfc9f2dc93ae46eb6382cf9533f18 files/patches/1.3.31-r1/00_gentoo_base.patc
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCgRC2jUHll2nfF60RAvu0AJ9HLwLlPUF1HUkFZKL/LD2qg5GutgCfYBg4
-1aagqtN/R7loECnM5ypk31M=
-=CkA9
+iD8DBQFCgSZUjUHll2nfF60RAlNhAKC0E2KF39nQqog1hZL1JRYX3EvHMACeO9Sh
+YaJtmHGPINaax/XMMtU1mHw=
+=2Pm4
 -----END PGP SIGNATURE-----

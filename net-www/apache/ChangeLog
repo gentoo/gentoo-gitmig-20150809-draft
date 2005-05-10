@@ -1,6 +1,9 @@
 # ChangeLog for net-www/apache
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.353 2005/05/10 19:50:45 beu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.354 2005/05/10 21:23:25 beu Exp $
+
+  10 May 2005; Elfyn McBratney <beu@gentoo.org> :
+  Fix digest.
 
   10 May 2005; Bret Curtis <psi29a@gentoo.org> apache-2.0.52-r3.ebuild:
   marked for testing, ~mips
