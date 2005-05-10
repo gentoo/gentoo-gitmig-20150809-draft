@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-sounds/asterisk-sounds-1.0.7.ebuild,v 1.1 2005/03/21 00:52:30 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-sounds/asterisk-sounds-1.0.7.ebuild,v 1.2 2005/05/10 12:51:18 dholm Exp $
 
 IUSE=""
 
@@ -12,7 +12,7 @@ S=${WORKDIR}/${P}
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~sparc ~hppa ~amd64"
+KEYWORDS="~x86 ~sparc ~hppa ~amd64 ~ppc"
 
 DEPEND="net-misc/asterisk"
 

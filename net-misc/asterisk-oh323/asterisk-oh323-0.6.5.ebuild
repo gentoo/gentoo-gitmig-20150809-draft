@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-oh323/asterisk-oh323-0.6.5.ebuild,v 1.1 2005/03/10 01:44:19 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-oh323/asterisk-oh323-0.6.5.ebuild,v 1.2 2005/05/10 12:49:37 dholm Exp $
 
 inherit eutils flag-o-matic
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.inaccessnetworks.com/projects/asterisk-oh323/"
 SRC_URI="http://www.inaccessnetworks.com/projects/asterisk-oh323/download/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 DEPEND="~dev-libs/pwlib-1.6.6
 	~net-libs/openh323-1.13.5
 	>=net-misc/asterisk-1.0.0"
