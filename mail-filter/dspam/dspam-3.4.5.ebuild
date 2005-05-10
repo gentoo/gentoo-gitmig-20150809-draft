@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.4.5.ebuild,v 1.1 2005/04/27 17:26:04 st_lim Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.4.5.ebuild,v 1.2 2005/05/10 15:56:29 st_lim Exp $
 
 inherit eutils
 
@@ -69,9 +69,9 @@ pkg_setup() {
 		ewarn "(Control-C to abort)..."
 		epause 30
 	fi
-	has_version sys-kernel/linux26-headers || (
+	has_version ">sys-kernel/linux-headers-2.6" || (
 		einfo "To use the new DSPAM deamon mode, you need to emerge"
-		einfo "sys-kernel/linux26-headers and rebuild glibc to support NPTL"
+		einfo ">sys-kernel/linux-headers-2.6 and rebuild glibc to support NPTL"
 		echo
 		ewarn "Waiting 30 seconds before starting..."
 		ewarn "(Control-C to abort)..."
@@ -107,7 +107,7 @@ src_compile() {
 		myconf="${myconf} --with-mysql-libraries=/usr/lib/mysql"
 		myconf="${myconf} --enable-preferences-extension"
 
-		if has_version sys-kernel/linux26-headers; then
+		if has_version ">sys-kernel/linux-headers-2.6"; then
 			myconf="${myconf} --enable-daemon"
 		fi
 
@@ -120,7 +120,7 @@ src_compile() {
 		myconf="${myconf} --with-pgsql-libraries=/usr/lib/postgresql"
 		myconf="${myconf} --enable-preferences-extension"
 
-		if has_version sys-kernel/linux26-headers; then
+		if has_version ">sys-kernel/linux-headers-2.6"; then
 			myconf="${myconf} --enable-daemon"
 		fi
 
@@ -175,7 +175,8 @@ src_install () {
 	keepdir ${LOGDIR}
 	insinto ${LOGDIR}
 	touch ${T}/empty.file
-	newins ${T}/empty.file system.log
+	doins ${T}/empty.file system.log
+	chown dspam:dspam ${D}/${LOGDIR}/system.log
 	dosym ${LOGDIR}/system.log ${HOMEDIR}/system.log
 
 	# ${HOMEDIR}/data is a symlink to ${DATADIR}
@@ -232,7 +233,7 @@ src_install () {
 			-i ${T}/dspam.conf
 	fi
 	if use mysql || use postgres; then
-		if has_version sys-kernel/linux26-headers; then
+		if has_version ">sys-kernel/linux-headers-2.6"; then
 			# keeps dspam socket for deamon in /var/run/dspam
 			diropts -m0775 -o dspam -g dspam
 			dodir /var/run/dspam
@@ -416,7 +417,7 @@ pkg_postinst() {
 		einfo "ebuild /var/db/pkg/${CATEGORY}/${PF}/${PF}.ebuild config"
 	fi
 	if use mysql || use postgres; then
-		if has_version sys-kernel/linux26-headers; then
+		if has_version ">sys-kernel/linux-headers-2.6"; then
 			einfo "If you want to run DSPAM in the new deamon mode. Remember"
 			einfo "to make the DSPAM daemon start durig boot:"
 			einfo "  rc-update add dspam default"
