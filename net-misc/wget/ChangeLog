@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/wget
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/ChangeLog,v 1.54 2005/03/14 18:23:44 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/ChangeLog,v 1.55 2005/05/10 12:25:16 seemant Exp $
+
+  10 May 2005; Seemant Kulleen <seemant@gentoo.org> wget-1.9.1-r3.ebuild:
+  make sure to RDEPEND on a socks5 implementation -- dante is the only one I
+  can figure out that does implement it. Closing bug #89523 by Mihai Limbasan
+  <mihailim@gmail.com>
 
   14 Mar 2005; Hardave Riar <hardave@gentoo.org> wget-1.9.1-r3.ebuild:
   Stable on mips, bug #74008.
