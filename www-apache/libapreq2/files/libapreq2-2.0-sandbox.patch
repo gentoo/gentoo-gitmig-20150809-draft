@@ -1,0 +1,33 @@
+*** env/Makefile.am.orig	Fri Nov  7 10:55:14 2003
+--- env/Makefile.am	Mon Apr  5 17:41:46 2004
+***************
+*** 3,8 ****
+--- 3,12 ----
+  TEST_CONFIG_SCRIPT = package Apache::TestMM; filter_args(); generate_script("t/TEST")
+  EXTRA_DIST = t c-modules
+  
++ INSTDSO = $(shell $(APR_CONFIG) --installbuilddir)/instdso.sh
++ SHLIBTOOL = $(shell $(APR_CONFIG) --installbuilddir)/libtool
++ APACHE2MODS = /usr/lib/apache2/extramodules
++ 
+  check_PROGRAMS = test_cgi
+  
+  if BUILD_HTTPD
+***************
+*** 31,37 ****
+  mod_apreq_la_LDFLAGS = -export-dynamic -module -avoid-version -rpath $(APACHE2_MODULES)
+  
+  install-exec-local: mod_apreq.la
+! 	@APACHE2_APXS@ -i -a -n apreq mod_apreq.la
+  
+  t/TEST : Makefile.am t/TEST.PL
+  	@PERL@ -MApache::TestMM -e '$(TEST_CONFIG_SCRIPT)' -- -apxs @APACHE2_APXS@
+--- 35,42 ----
+  mod_apreq_la_LDFLAGS = -export-dynamic -module -avoid-version -rpath $(APACHE2_MODULES)
+  
+  install-exec-local: mod_apreq.la
+! 	mkdir -p $(DESTDIR)$(APACHE2MODS)
+! 	$(INSTDSO) SH_LIBTOOL=$(SHLIBTOOL) mod_apreq.la $(DESTDIR)$(APACHE2MODS)
+  
+  t/TEST : Makefile.am t/TEST.PL
+  	@PERL@ -MApache::TestMM -e '$(TEST_CONFIG_SCRIPT)' -- -apxs @APACHE2_APXS@
