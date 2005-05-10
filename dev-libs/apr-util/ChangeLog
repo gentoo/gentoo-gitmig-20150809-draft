@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/apr-util
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr-util/ChangeLog,v 1.19 2005/05/10 19:17:13 psi29a Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr-util/ChangeLog,v 1.20 2005/05/10 23:54:36 beu Exp $
+
+*apr-util-0.9.6-r2 (10 May 2005)
+*apr-util-0.9.5-r1 (10 May 2005)
+
+  10 May 2005; Elfyn McBratney <beu@gentoo.org> +apr-util-0.9.5-r1.ebuild,
+  +apr-util-0.9.6-r2.ebuild:
+  Rev bumps to pick up on the LFS-removal from apr.
 
   10 May 2005; Bret Curtis <psi29a@gentoo.org> apr-util-0.9.5.ebuild:
   marked for testing, ~mips
