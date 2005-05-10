@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/svgalib-1.9.21.ebuild,v 1.7 2005/05/09 06:58:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/svgalib-1.9.21.ebuild,v 1.8 2005/05/10 23:05:41 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs linux-mod
 
@@ -100,7 +100,7 @@ src_install() {
 	doins src/vga.h gl/vgagl.h src/mouse/vgamouse.h src/joystick/vgajoystick.h
 	doins src/keyboard/vgakeyboard.h
 
-	if best_version '>=sys-fs/udev-052' ; then
+	if best_version '>=sys-fs/udev-045' ; then
 		dodir /etc/udev/rules.d
 		newins "${FILESDIR}"/svgalib.udev.rules.d 30-svgalib
 	elif best_version sys-fs/udev ; then
