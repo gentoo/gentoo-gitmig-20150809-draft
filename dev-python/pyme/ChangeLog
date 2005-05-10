@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyme
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyme/ChangeLog,v 1.10 2005/02/07 04:53:36 fserb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyme/ChangeLog,v 1.11 2005/05/10 17:24:14 liquidx Exp $
+
+  10 May 2005; Alastair Tse <liquidx@gentoo.org> :
+  fixed SRC_URI for 0.5.1
 
   07 Feb 2005; Fernando Serboncini <fserb@gentoo.org> pyme-0.5.1.ebuild:
   stable on x86

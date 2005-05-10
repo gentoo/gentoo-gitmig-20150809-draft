@@ -1,13 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyme/pyme-0.5.1.ebuild,v 1.12 2005/02/07 04:53:36 fserb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyme/pyme-0.5.1.ebuild,v 1.13 2005/05/10 17:24:14 liquidx Exp $
 
 inherit distutils
 
 MY_P=${P/-/_}
 DESCRIPTION="GPGME Interface for Python"
-SRC_URI="http://gopher.quux.org:70/devel/pyme/${MY_P}.tar.gz"
-HOMEPAGE="http://gopher.quux.org:70/devel/pyme"
+SRC_URI="http://quux.org/devel/pyme/${MY_P}.tar.gz"
+HOMEPAGE="http://pyme.sf.net/"
 SLOT="0"
 KEYWORDS="x86 ~sparc ppc"
 LICENSE="GPL-2"
