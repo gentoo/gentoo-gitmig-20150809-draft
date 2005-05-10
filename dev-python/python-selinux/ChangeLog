@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/python-selinux
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-selinux/ChangeLog,v 1.23 2005/05/01 22:28:47 spb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-selinux/ChangeLog,v 1.24 2005/05/10 18:33:41 spb Exp $
+
+  10 May 2005; Stephen Bennett <spb@gentoo.org> python-selinux-2.15.ebuild:
+  mips stable
 
   01 May 2005; Stephen Bennett <spb@gentoo.org> python-selinux-2.15.ebuild:
   Added ~mips.
