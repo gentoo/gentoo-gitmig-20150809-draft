@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/aalib/aalib-1.4_rc5.ebuild,v 1.1 2005/05/03 20:35:45 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/aalib/aalib-1.4_rc5.ebuild,v 1.2 2005/05/10 04:02:01 j4rg0n Exp $
 
 inherit eutils libtool toolchain-funcs
 
@@ -28,7 +28,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${PN}-1.4_rc4-m4.patch
 	if use ppc-macos; then
 		cd src
-		epatch "${FILESDIR}"/${PN}-osx.patch
+		epatch "${FILESDIR}"/${P}-osx.patch
 	fi
 }
 

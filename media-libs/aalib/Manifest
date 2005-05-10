@@ -1,19 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 660fa7ac0109114cc58977c167da7db5 ChangeLog 2410
-MD5 ac183cd88c5b0926e6c8738ed2f3cf74 aalib-1.4_rc4-r2.ebuild 1116
+MD5 d9f92308bf9dc71c07e218c1135185ee ChangeLog 2583
+MD5 39011cf6d523134026d20090897d1144 aalib-1.4_rc4-r2.ebuild 1115
 MD5 c1e212329f9083e2405b16dd382d6632 metadata.xml 259
-MD5 190604eec8497c65c4fcfc029bf2e786 aalib-1.4_rc5.ebuild 1146
-MD5 da57c040ac70e4ac57714131aaaeb6c6 files/digest-aalib-1.4_rc5 64
-MD5 ffa1e1a7420535a1fe146ae5145ddbd6 files/digest-aalib-1.4_rc4-r2 64
-MD5 b59998ef8f5e2f1740b1e6ed0b22bb4b files/aalib-osx.patch 3399
+MD5 bd3f74a38d8989cbf43e998376ee90d5 aalib-1.4_rc5.ebuild 1141
 MD5 4aff44ab71184e49f997a1b6f0593b83 files/aalib-1.4_rc4-gentoo.patch 1245
+MD5 ffa1e1a7420535a1fe146ae5145ddbd6 files/digest-aalib-1.4_rc4-r2 64
 MD5 224b7aa8488763f7d7b4bfa63948adef files/aalib-1.4_rc4-m4.patch 241
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCd+C8ArHZZzCEUG0RAs/7AJ9TcXLmxbNySAtqkgfJElcdlu7pHQCfXATb
-JZKXl5AVUnidFdkdRcoW2Qw=
-=l+Wu
------END PGP SIGNATURE-----
+MD5 b59998ef8f5e2f1740b1e6ed0b22bb4b files/aalib-osx.patch 3399
+MD5 da57c040ac70e4ac57714131aaaeb6c6 files/digest-aalib-1.4_rc5 64
+MD5 09587da2537886441b0d5590bfd45d47 files/aalib-1.4_rc5-osx.patch 3121
