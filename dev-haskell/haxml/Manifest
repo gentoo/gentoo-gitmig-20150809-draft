@@ -1,5 +1,15 @@
-MD5 a2014da53daa93596d1a25a5e8e4ca18 ChangeLog 734
-MD5 d312e68849c1954cee0cbb36b8db8762 haxml-1.12.ebuild 1844
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 386a074846793ff119c69d2c413c206e haxml-1.12.ebuild 1817
+MD5 133efbb2b76ac8938edb08bc56b24d56 ChangeLog 882
 MD5 a4de292547a7d4fbe157a4ecb4ce2193 metadata.xml 821
-MD5 476d33ecdff810bd374443f26fdd7d9b files/HaXml-1.12.cabal 1095
 MD5 7f9a42c4c18a163851e48c1d330940bf files/digest-haxml-1.12 62
+MD5 e227a216a5fd9a3e2caa1b975e528731 files/HaXml-1.12.cabal 1144
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCgOAmOKSBj1ObwosRAsaMAJ90mrE52ML/WeUQqGZWfDRP3LDjwwCgiobD
+q18s8kxnwQjHoomWDU5VBPc=
+=YSbG
+-----END PGP SIGNATURE-----

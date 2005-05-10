@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haxml/haxml-1.12.ebuild,v 1.3 2005/05/04 17:04:21 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haxml/haxml-1.12.ebuild,v 1.4 2005/05/10 16:22:26 kosmikus Exp $
 
 inherit ghc-package fixheadtails
 
@@ -51,7 +51,7 @@ src_compile() {
 		ghc-setup-pkg ${S}/obj/ghc/pkg.conf
 	fi
 	# make sure the libdir is correct
-	sed -i "s:\$libdir:$(ghc-libdir):" $(ghc-localpkgconf)
+	ghc-fixlibpath '$libdir'
 }
 
 src_install() {
