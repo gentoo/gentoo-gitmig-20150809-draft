@@ -1,4 +1,14 @@
-MD5 06ece652e2acfe6eb5e891ac98d47b1d ChangeLog 2120
-MD5 2fc42f898304ef8750673dd4df9ea7eb ebuilder-0.4-r1.ebuild 757
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 d4749ffd3a0a3784c4e101f4de76f10c ChangeLog 2036
 MD5 fbb6fe345e65c9b7fa51b2ae10f85067 metadata.xml 166
+MD5 2fc42f898304ef8750673dd4df9ea7eb ebuilder-0.4-r1.ebuild 757
 MD5 0e44a34815059ff233baa6d65a6d0c49 files/digest-ebuilder-0.4-r1 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCgJIJI1lqEGTUzyQRAvUTAKCDQfNNGnOTUqEyRLaGjnZ1MkSKoQCfUZRJ
+hQ+a+aTDhiiBdr1nys7spBc=
+=lOaO
+-----END PGP SIGNATURE-----
