@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/spamassassin-3.0.3.ebuild,v 1.1 2005/05/04 12:17:11 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/spamassassin-3.0.3.ebuild,v 1.2 2005/05/10 01:24:59 swegener Exp $
 
 inherit perl-module
 
@@ -23,7 +23,6 @@ IUSE="berkdb qmail ssl doc"
 # dev-perl/Time-HiRes
 # DB support? mysql, postgres, etc.
 
-
 DEPEND=">=dev-lang/perl-5.8.2-r1
 	>=dev-perl/PodParser-1.22
 	dev-perl/MIME-Base64
@@ -39,61 +38,6 @@ DEPEND=">=dev-lang/perl-5.8.2-r1
 		dev-perl/DB_File
 	)"
 
-
-# - Set SYSCONFDIR explicitly so we can't get bitten by bug 48205 again
-#   (just to be sure, nobody knows how it could happen in the first place).
-myconf="SYSCONFDIR=/etc DATADIR=/usr/share/spamassassin"
-
-# If ssl is enabled, spamc can be built with ssl support
-if use ssl; then
-	myconf="${myconf} ENABLE_SSL=yes"
-else
-	myconf="${myconf} ENABLE_SSL=no"
-fi
-
-# Set the path to the Perl executable explictly.  This will be used to
-# create the initial sharpbang line in the scripts and might cause
-# a versioned app name end in there, see
-# <http://bugs.gentoo.org/show_bug.cgi?id=62276>
-myconf="${myconf} PERL_BIN=/usr/bin/perl"
-
-# If you are going to enable taint mode, make sure that the bug where
-# spamd doesn't start when the PATH contains . is addressed, and make
-# sure you deal with versions of razor <2.36-r1 not being taint-safe.
-# <http://bugzilla.spamassassin.org/show_bug.cgi?id=2511> and
-# <http://spamassassin.org/released/Razor2.patch>.
-myconf="${myconf} PERL_TAINT=no"
-
-# No settings needed for 'make all'.
-mymake=""
-
-# Neither for 'make install'.
-myinst=""
-
-# Some more files to be installed (README* and Changes are already
-# included per default)
-mydoc="NOTICE
-	TRADEMARK
-	LICENSE
-	CREDITS
-	INSTALL
-	UPGRADE
-	BUGS
-	USAGE
-	README.spamd
-	README.sql
-	README.ldap
-	procmailrc.example
-	sample-nonspam.txt
-	sample-spam.txt
-	STATISTICS.set0
-	STATISTICS.set1
-	STATISTICS.set2
-	STATISTICS.set3"
-
-use qmail && mydoc="${mydoc} README.qmail"
-
-
 src_move_doc() {
 	echo "Renaming $1 to $2"
 	mv $1 $2 || die failed to move documentation
@@ -105,6 +49,59 @@ src_append_doc() {
 }
 
 src_compile() {
+	# - Set SYSCONFDIR explicitly so we can't get bitten by bug 48205 again
+	#   (just to be sure, nobody knows how it could happen in the first place).
+	myconf="SYSCONFDIR=/etc DATADIR=/usr/share/spamassassin"
+
+	# If ssl is enabled, spamc can be built with ssl support
+	if use ssl; then
+		myconf="${myconf} ENABLE_SSL=yes"
+	else
+		myconf="${myconf} ENABLE_SSL=no"
+	fi
+
+	# Set the path to the Perl executable explictly.  This will be used to
+	# create the initial sharpbang line in the scripts and might cause
+	# a versioned app name end in there, see
+	# <http://bugs.gentoo.org/show_bug.cgi?id=62276>
+	myconf="${myconf} PERL_BIN=/usr/bin/perl"
+
+	# If you are going to enable taint mode, make sure that the bug where
+	# spamd doesn't start when the PATH contains . is addressed, and make
+	# sure you deal with versions of razor <2.36-r1 not being taint-safe.
+	# <http://bugzilla.spamassassin.org/show_bug.cgi?id=2511> and
+	# <http://spamassassin.org/released/Razor2.patch>.
+	myconf="${myconf} PERL_TAINT=no"
+
+	# No settings needed for 'make all'.
+	mymake=""
+
+	# Neither for 'make install'.
+	myinst=""
+
+	# Some more files to be installed (README* and Changes are already
+	# included per default)
+	mydoc="NOTICE
+		TRADEMARK
+		LICENSE
+		CREDITS
+		INSTALL
+		UPGRADE
+		BUGS
+		USAGE
+		README.spamd
+		README.sql
+		README.ldap
+		procmailrc.example
+		sample-nonspam.txt
+		sample-spam.txt
+		STATISTICS.set0
+		STATISTICS.set1
+		STATISTICS.set2
+		STATISTICS.set3"
+
+	use qmail && mydoc="${mydoc} README.qmail"
+
 	# Add Gentoo tag to make it easier for the upstream devs to spot
 	# possible modifications or patches.
 	version_tag="g${PV:6}${PR}"
@@ -153,27 +150,21 @@ src_install () {
 
 	# Move spamd to sbin where it belongs.
 	dodir /usr/sbin
-	mv ${D}/usr/bin/spamd ${D}/usr/sbin/spamd  || die
+	mv "${D}"/usr/bin/spamd "${D}"/usr/sbin/spamd  || die
 
 	if use qmail; then
-		into /usr
 		dobin spamc/qmail-spamc
 	fi
 
-	# Add the init and config scripts.
-	dodir /etc/init.d /etc/conf.d
-	insinto /etc/init.d
-	newins ${FILESDIR}/3.0.0-spamd.init spamd
-	fperms 755 /etc/init.d/spamd
-	insinto /etc/conf.d
-	newins ${FILESDIR}/3.0.0-spamd.conf spamd
 	dosym /etc/mail/spamassassin /etc/spamassassin
+
+	# Add the init and config scripts.
+	newinitd "${FILESDIR}"/3.0.0-spamd.init spamd
+	newconfd "${FILESDIR}"/3.0.0-spamd.conf spamd
 
 	if use doc; then
 		dodoc spamd/PROTOCOL
-		for f in doc/*.html; do
-			dodoc $f
-		done
+		dohtml doc/*.html
 	fi
 }
 

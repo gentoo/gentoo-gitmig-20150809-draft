@@ -1,6 +1,13 @@
 # ChangeLog for mail-filter/spamassassin
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/ChangeLog,v 1.30 2005/05/04 12:17:11 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/ChangeLog,v 1.31 2005/05/10 01:24:59 swegener Exp $
+
+  10 May 2005; Sven Wegener <swegener@gentoo.org> files/3.0.0-spamd.conf,
+  files/3.0.0-spamd.init, files/spamd.conf, files/spamd.init,
+  spamassassin-3.0.3.ebuild:
+  Moved the declaration of the pid file location from init.d script to conf.d
+  file. Overriding the value might be needed if we run spamd as non-root. Some
+  general ebuild cleanup.
 
 *spamassassin-3.0.3 (04 May 2005)
 
