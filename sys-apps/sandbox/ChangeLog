@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/sandbox
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sandbox/ChangeLog,v 1.13 2005/05/09 19:36:30 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sandbox/ChangeLog,v 1.14 2005/05/10 07:20:07 azarah Exp $
+
+*sandbox-1.2.6 (10 May 2005)
+
+  10 May 2005; Martin Schlemmer <azarah@gentoo.org> +sandbox-1.2.6.ebuild:
+  Workaround for tsocks incompatability, bug #91541.
 
 *sandbox-1.2.5-r2 (09 May 2005)
 
