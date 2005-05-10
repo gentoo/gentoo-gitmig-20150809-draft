@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/sdf2-bundle
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/sdf2-bundle/ChangeLog,v 1.8 2004/12/29 22:42:02 ciaranm Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/sdf2-bundle/ChangeLog,v 1.9 2005/05/10 23:52:01 karltk Exp $
+
+*sdf2-bundle-2.3 (10 May 2005)
+
+  10 May 2005; Karl Trygve Kalleberg <karltk@gentoo.org>
+  +sdf2-bundle-2.3.ebuild:
+  New upstream release.
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
