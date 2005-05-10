@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/note/note-1.2.5-r1.ebuild,v 1.6 2005/04/21 19:31:52 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/note/note-1.2.5-r1.ebuild,v 1.7 2005/05/10 23:44:52 wormo Exp $
 
 inherit perl-module
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.daemon.de/scip/Apps/note/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 amd64"
+KEYWORDS="x86 amd64 ~ppc"
 IUSE="crypt mysql"
 
 DEPEND="dev-perl/TermReadKey
