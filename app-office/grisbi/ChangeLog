@@ -1,6 +1,9 @@
 # ChangeLog for app-office/grisbi
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/grisbi/ChangeLog,v 1.13 2005/04/11 20:15:01 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/grisbi/ChangeLog,v 1.14 2005/05/10 11:39:23 seemant Exp $
+
+  10 May 2005; Seemant Kulleen <seemant@gentoo.org> grisbi-0.5.5.ebuild:
+  get the doc.patch business out of SRC_URI, it's breaking things
 
 *grisbi-0.5.5.20050410 (11 Apr 2005)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/grisbi/grisbi-0.5.5.ebuild,v 1.2 2005/04/11 20:15:01 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/grisbi/grisbi-0.5.5.ebuild,v 1.3 2005/05/10 11:39:23 seemant Exp $
 
 inherit eutils
 
@@ -8,8 +8,7 @@ IUSE="print nls ofx"
 
 DESCRIPTION="Grisbi is a personal accounting application for Linux"
 HOMEPAGE="http://www.grisbi.org"
-SRC_URI="mirror://sourceforge/grisbi/${P}.tar.bz2
-	mirror://gentoo/doc.patch.bz2"
+SRC_URI="mirror://sourceforge/grisbi/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
