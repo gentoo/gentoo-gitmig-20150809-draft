@@ -1,6 +1,11 @@
 # ChangeLog for net-print/cups-pdf
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups-pdf/ChangeLog,v 1.15 2004/12/20 20:45:52 lanius Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups-pdf/ChangeLog,v 1.16 2005/05/10 16:03:21 lanius Exp $
+
+*cups-pdf-1.7.0a (10 May 2005)
+
+  10 May 2005; Heinrich Wendel <lanius@gentoo.org> +cups-pdf-1.7.0a.ebuild:
+  version bump
 
   20 Dec 2004; Heinrich Wendel <lanius@gentoo.org> cups-pdf-1.6.4.ebuild:
   fix borken output, bug #44906
