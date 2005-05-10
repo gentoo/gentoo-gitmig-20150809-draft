@@ -1,6 +1,6 @@
 # Copyright 2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header:
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-darwin/virtuals,v 1.10 2005/05/10 02:14:20 swegener Exp $
 
 # virtual/kernel and virtual/os-headers should actually be sys-kernel/xnu
 # but we have to wait until its in the tree
