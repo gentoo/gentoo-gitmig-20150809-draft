@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/br2684ctl/br2684ctl-20040226.ebuild,v 1.2 2005/05/10 10:58:01 swegener Exp $
 
 inherit gcc eutils
 
