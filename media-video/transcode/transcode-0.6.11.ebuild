@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-0.6.11.ebuild,v 1.17 2005/05/07 22:55:15 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-0.6.11.ebuild,v 1.18 2005/05/10 15:49:26 flameeyes Exp $
 
 inherit libtool flag-o-matic eutils gcc
 
@@ -32,7 +32,9 @@ DEPEND=">=media-libs/a52dec-0.7.4
 	mpeg? ( media-libs/libmpeg3 )
 	encode? ( >=media-sound/lame-3.93 )
 	sdl? ( media-libs/libsdl )
-	quicktime? ( virtual/quicktime )"
+	quicktime? ( =media-libs/libquicktime-0.9.2 )"
+# We can't use virtual/quicktime as libquicktime-0.9.4 breaks compilation
+# and links. So just depend on a safe libquicktime version to fix.
 
 src_unpack() {
 	unpack ${A}
