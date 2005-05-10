@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/Apache-Gallery/Apache-Gallery-0.8.ebuild,v 1.5 2005/05/09 10:34:42 beu Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/Apache-Gallery/Apache-Gallery-0.8.ebuild,v 1.6 2005/05/10 00:21:00 beu Exp $
 
 inherit perl-module
 
@@ -15,7 +15,7 @@ IUSE=""
 
 
 DEPEND="${DEPEND}
-	>=dev-perl/libapreq-1.0
+	>=www-apache/libapreq-1.0
 	>=media-libs/imlib2-1.0.6-r1
 	>=www-apache/mod_perl-1.27-r1
 	>=dev-perl/ImageInfo-1.04-r2

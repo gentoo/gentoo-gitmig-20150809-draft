@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/otrs
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/otrs/ChangeLog,v 1.7 2004/10/23 16:19:02 rl03 Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/otrs/ChangeLog,v 1.8 2005/05/10 00:25:43 beu Exp $
+
+  10 May 2005; Elfyn McBratney <beu@gentoo.org> otrs-1.3.1.ebuild:
+  dev-perl/libapreq{,2} -> www-apache
 
   23 Oct 2004; Renat Lumpau <rl03@gentoo.org> files/reconfig-1.3.1:
   Disabled clean part of reconfig, see bug #65850

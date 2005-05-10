@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/rt
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/ChangeLog,v 1.6 2004/09/03 15:18:17 dholm Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/ChangeLog,v 1.7 2005/05/10 00:24:12 beu Exp $
+
+  10 May 2005; Elfyn McBratney <beu@gentoo.org> rt-3.2.1.ebuild:
+  dev-perl/libapreq{,2} -> www-apache
 
   03 Sep 2004; David Holm <dholm@gentoo.org> rt-3.2.1.ebuild:
   Added to ~ppc.
