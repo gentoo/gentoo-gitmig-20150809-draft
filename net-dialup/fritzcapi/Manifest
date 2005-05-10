@@ -1,5 +1,5 @@
-MD5 b40a67f5d4b7b2735bc2e358f57f2c12 fritzcapi-2.6.32.ebuild 5733
-MD5 c2455efc748178f7d7736fa1a1f85848 ChangeLog 2766
+MD5 dab0ebe36c3f705e735942416d88df80 fritzcapi-2.6.32.ebuild 5793
+MD5 5d73c54b4b9ec03172c261cdb452f2b2 ChangeLog 2948
 MD5 0498b76c69caf75c82ab7115df4cd4f8 metadata.xml 319
 MD5 5485d246d87e5397761c0395b02c20e9 files/digest-fritzcapi-2.6.32 443
 MD5 9944aebce0f4b12843c5312ac4ba90b5 files/fritzcapi-fix-for-2.6.10.patch 473

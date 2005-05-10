@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/fritzcapi/fritzcapi-2.6.32.ebuild,v 1.7 2005/04/24 10:09:29 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/fritzcapi/fritzcapi-2.6.32.ebuild,v 1.8 2005/05/10 15:55:41 genstef Exp $
 
 inherit linux-mod rpm eutils
 
@@ -113,7 +113,9 @@ pkg_setup() {
 }
 
 src_unpack() {
-	[ -e ${DISTDIR}/km_${P/2.6./2.6-}.i586.rpm ] && rpm_unpack ${DISTDIR}/km_${P/2.6./2.6-}.i586.rpm
+	if [ -e ${DISTDIR}/km_${P/2.6./2.6-}.i586.rpm ]; then
+		rpm_unpack ${DISTDIR}/km_${P/2.6./2.6-}.i586.rpm
+	else mkdir -p ${S}; fi
 	cd ${S}
 	for ((CARD=0; CARD < ${#AVM_SRC[*]}; CARD++)); do
 		if [ -e ${DISTDIR}/${AVM_FILES[CARD]}.tar.gz ]; then
@@ -121,7 +123,7 @@ src_unpack() {
 			CRD_NAME=${AVM_FILES[CARD]/-*}
 			CRD_NAME=${CRD_NAME/fc}
 			CRD_NAME=${CRD_NAME/f}
-			mv fritz.${CRD_NAME} fritz.${CRD_NAME}.orig
+			[ -e fritz.${CRD_NAME} ] && mv fritz.${CRD_NAME} fritz.${CRD_NAME}.orig
 			mv fritz fritz.${CRD_NAME}
 		fi
 	done
