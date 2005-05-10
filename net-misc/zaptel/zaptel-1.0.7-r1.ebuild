@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/zaptel-1.0.7-r1.ebuild,v 1.1 2005/05/07 18:24:31 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/zaptel-1.0.7-r1.ebuild,v 1.2 2005/05/10 01:47:52 stkn Exp $
 
 IUSE="devfs26 bri florz"
 
 inherit toolchain-funcs eutils linux-mod
 
-BRI_VERSION="0.2.0-RC8a"
+BRI_VERSION="0.2.0-RC8c"
 FLORZ_VERSION="0.2.0-RC8a_florz-6"
 
 DESCRIPTION="Drivers for Digium and ZapataTelephony cards"
@@ -171,10 +171,8 @@ src_install() {
 	fi
 
 	# install init script
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/zaptel.rc6 zaptel
-	insinto /etc/conf.d
-	newins ${FILESDIR}/zaptel.confd zaptel
+	newinitd ${FILESDIR}/zaptel.rc6 zaptel
+	newconfd ${FILESDIR}/zaptel.confd zaptel
 
 	# install devfsd rule file
 	insinto /etc/devfs.d
@@ -232,14 +230,11 @@ pkg_config() {
 	read x
 
 	if [[ "$x" = "y" ]] || [[ "$x" = "Y" ]]; then
-		# yes, this is needed :(
-		enewgroup asterisk
-
 		einfo "Fixing permissions and ownerships"
 
 		# fix permissions if there's no udev / devfs around
 		if [[ -d ${D}/dev/zap ]]; then
-			chown -R root:asterisk  ${D}/dev/zap
+			chown -R root:dialout  ${D}/dev/zap
 			chmod -R u=rwX,g=rwX,o= ${D}/dev/zap
 		fi
 	else
