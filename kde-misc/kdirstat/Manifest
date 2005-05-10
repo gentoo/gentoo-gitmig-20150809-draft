@@ -1,8 +1,18 @@
-MD5 824d7ff6a111969a2571debae773826f kdirstat-2.4.3.ebuild 550
-MD5 27d966db6b39f7611f1b6f4f90c485f8 ChangeLog 3060
-MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 079149ceb5324b9e959fcf4c14039cc7 ChangeLog 3159
+MD5 cbd3eb3c22f5ba1c51199e0fc20514cc kdirstat-2.4.3.ebuild 553
 MD5 a8423100af3161f925a1d8eead03da8a kdirstat-2.4.0.ebuild 654
-MD5 50612723fa9ed6e09e2f2b300d07aa1b files/digest-kdirstat-2.4.0 67
+MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 133b737a305e4f7562dce60ec961dfb0 files/digest-kdirstat-2.4.3 67
+MD5 50612723fa9ed6e09e2f2b300d07aa1b files/digest-kdirstat-2.4.0 67
 MD5 12d1a6dba51fffa13b56b37b8c58b68a files/kdirstat-2.4.0-configure.patch 3569
 MD5 1293616790e16b7e5814d2a9b6a975be files/kdirstatapp.h.fix.patch 248
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFCgRvPKRy60XGEcJIRAvK1AJ9D4MHI11btCS8In5Mu0XIvHxT+CgCcD6qp
+Gob6RrIuaOWGJIRsCzR61Ik=
+=FeOx
+-----END PGP SIGNATURE-----

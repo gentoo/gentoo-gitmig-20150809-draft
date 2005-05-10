@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/kdirstat
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdirstat/ChangeLog,v 1.7 2005/05/01 16:38:16 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdirstat/ChangeLog,v 1.8 2005/05/10 20:38:13 gustavoz Exp $
+
+  10 May 2005; Gustavo Zacarias <gustavoz@gentoo.org> kdirstat-2.4.3.ebuild:
+  Stable on sparc
 
   01 May 2005; Carsten Lohrke <carlo@gentoo.org> kdirstat-2.4.3.ebuild:
   stable on x86
