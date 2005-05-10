@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.0.1.ebuild,v 1.2 2005/05/08 01:13:59 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.0.1.ebuild,v 1.3 2005/05/10 13:35:07 gustavoz Exp $
 
 inherit 64-bit fortran
 
@@ -32,7 +32,7 @@ DEPEND="virtual/libc
 			>=media-libs/audiofile-0.2.1 )"
 SLOT="0"
 LICENSE="GPL-2 LGPL-2.1"
-KEYWORDS="x86 ~sparc ~ppc ppc64 amd64"
+KEYWORDS="x86 sparc ~ppc ppc64 amd64"
 64-bit || FORTRAN="g77" # No f2c on 64-bit archs anymore.
 
 src_unpack() {
