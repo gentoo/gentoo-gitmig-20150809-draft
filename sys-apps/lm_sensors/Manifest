@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 10d02598027e3c452d8a3866c0941227 ChangeLog 12614
+MD5 967ebff616afecf775b26117b3d0c003 ChangeLog 12697
 MD5 62a0e0181b13d4b79f5c613e23a06447 lm_sensors-2.8.7.ebuild 5061
-MD5 23e4717f0c825c802e5c32190a29065c lm_sensors-2.9.0.ebuild 4810
+MD5 41128e761de7b69895ab7aaea17ee916 lm_sensors-2.9.0.ebuild 4810
 MD5 b280eebc74d70d85e664debf1adce2c3 metadata.xml 255
 MD5 311fc2ac49c876ff12c485cb2a53d9ac files/digest-lm_sensors-2.8.7 68
 MD5 7f118aec7c81c482c292c7d228c80119 files/digest-lm_sensors-2.9.0 68
 MD5 596bd3e0fc473e83d13e6c194e50a3f2 files/lm_sensors-2.8.7-sensors-detect-gentoo.diff 4815
 MD5 62d5eaa6c0f7bec20849a635b32616b6 files/lm_sensors-2.8.8-sensors-detect-gentoo.diff 4843
 MD5 6caf3a2ef7bd1503aac7e3c8129c88a8 files/rc 2332
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCJMyWArHZZzCEUG0RApiUAJ9jqREtszDm+nOwZ4ZVgmrBh8wD6QCfZ8vW
-PplbSgTJyhRWdXVJ2TPJyu0=
-=uwFN
------END PGP SIGNATURE-----
