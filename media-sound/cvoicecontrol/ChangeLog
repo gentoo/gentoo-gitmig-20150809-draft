@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/cvoicecontrol
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cvoicecontrol/ChangeLog,v 1.9 2004/11/12 08:24:59 eradicator Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cvoicecontrol/ChangeLog,v 1.10 2005/05/10 13:12:10 dholm Exp $
+
+  10 May 2005; David Holm <dholm@gentoo.org> cvoicecontrol-0.9_alpha.ebuild:
+  Added to ~ppc.
 
   12 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org>
   cvoicecontrol-0.9_alpha.ebuild:
