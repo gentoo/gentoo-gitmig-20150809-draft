@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/AxKit/AxKit-1.6-r2.ebuild,v 1.14 2005/05/09 10:27:59 beu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/AxKit/AxKit-1.6-r2.ebuild,v 1.15 2005/05/10 00:19:32 beu Exp $
 
 inherit perl-module
 
@@ -13,7 +13,7 @@ LICENSE="|| ( Artistic GPL-2 )"
 KEYWORDS="x86 amd64 alpha sparc ~ppc"
 IUSE="gnome"
 
-DEPEND=">=dev-perl/libapreq-1.0
+DEPEND=">=www-apache/libapreq-1.0
 	>=dev-perl/Compress-Zlib-1.10
 	>=dev-perl/Error-0.13
 	gnome? ( >=dev-perl/HTTP-GHTTP-1.06 )

@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/HTML-Mason
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Mason/ChangeLog,v 1.24 2004/12/29 23:44:52 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Mason/ChangeLog,v 1.25 2005/05/10 00:17:44 beu Exp $
+
+  10 May 2005; Elfyn McBratney <beu@gentoo.org> HTML-Mason-1.20.ebuild,
+  HTML-Mason-1.22.ebuild, HTML-Mason-1.25.ebuild, HTML-Mason-1.26.ebuild:
+  dev-perl/libapreq{,2} -> www-apache
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
