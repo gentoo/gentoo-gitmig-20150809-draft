@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre7.ebuild,v 1.10 2005/05/09 19:13:15 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre7.ebuild,v 1.11 2005/05/10 20:42:03 lu_zero Exp $
 
 inherit eutils flag-o-matic kernel-mod
 
@@ -357,7 +357,7 @@ src_compile() {
 		myconf="${myconf} --disable-dvbhead"
 	fi
 
-	myconf="${myconf} $(use_enable aalib aa)"
+	use aalib || myconf="${myconf} --disable-aa"
 	myconf="${myconf} $(use_enable directfb)"
 	myconf="${myconf} $(use_enable fbcon fbdev)"
 	myconf="${myconf} $(use_enable ggi)"
