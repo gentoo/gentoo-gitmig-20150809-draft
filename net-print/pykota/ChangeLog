@@ -1,6 +1,13 @@
 # ChangeLog for net-print/pykota
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/pykota/ChangeLog,v 1.4 2005/04/04 12:30:34 satya Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/pykota/ChangeLog,v 1.5 2005/05/10 11:55:24 satya Exp $
+
+*pykota-1.22_p1548 (10 May 2005)
+
+  10 May 2005; Christian Andreetta <satya@gentoo.org>
+  +pykota-1.22_p1548.ebuild, -pykota-20041105.ebuild,
+  -pykota-20041204.ebuild, -pykota-20050126.ebuild, -pykota-20050404.ebuild:
+  cvs snapshot of version 1.22 final. New ebuild versioning schema
 
 *pykota-20050404 (04 Apr 2005)
 
