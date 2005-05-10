@@ -1,26 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 eb96a013e4e739b4d3fff72e6399c9b1 wget-1.9.1-r2.ebuild 1635
-MD5 11770f5823ecbab503908a148814305a wget-1.8.2-r3.ebuild 1863
-MD5 482a45240b83bd1041d5d4e822eb55fe wget-1.9.1-r3.ebuild 1708
-MD5 fa1f319d6557c3d1b198a9a6530ca89b wget-1.9-r2.ebuild 1615
 MD5 830b0e0b23f7b18f64cb1e36c6698bca ChangeLog 8803
 MD5 d8da3021a3e635af9c4511b2a55b5633 metadata.xml 343
-MD5 4dcb05d1f54b53a2aed7a21663352952 files/wget-1.9.1-locale.patch 322
-MD5 a48195a152f8913a82d743f3136f3d95 files/wget-1.9.1+ipvmisc.patch 25622
-MD5 e38837d2e6b898527d0a5b7167b68e81 files/wget-CAN-2004-1487.patch 1551
-MD5 cb7be837f683bbf0b328e3f5513d8775 files/digest-wget-1.9-r2 131
-MD5 987b30c931a50d2dc02a905c29f84821 files/wget-1.8.2-gentoo.diff 1549
-MD5 f91472025c987d7159170dee736d35e6 files/wget-1.8.2-2Glimit.diff 23388
-MD5 daf2955489495fca41ecca68b4e65114 files/wget-1.9-uclibc.patch 2951
-MD5 28f004e72194fae0e65365e48b867c83 files/digest-wget-1.8.2-r3 221
-MD5 3ae4d064cf6e6d112fe89fd8e3fa389c files/digest-wget-1.9.1-r2 63
+MD5 482a45240b83bd1041d5d4e822eb55fe wget-1.9.1-r3.ebuild 1708
 MD5 3ae4d064cf6e6d112fe89fd8e3fa389c files/digest-wget-1.9.1-r3 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFCNdYuM+I1L6GK/u4RAgFlAJ0bNWXMWwGZmsUfVTy8xu0LzSbg/wCeJVVS
-tXudWRt/3TCwxNtmjNzR/pk=
-=HMP3
------END PGP SIGNATURE-----
+MD5 f91472025c987d7159170dee736d35e6 files/wget-1.8.2-2Glimit.diff 23388
+MD5 987b30c931a50d2dc02a905c29f84821 files/wget-1.8.2-gentoo.diff 1549
+MD5 daf2955489495fca41ecca68b4e65114 files/wget-1.9-uclibc.patch 2951
+MD5 a48195a152f8913a82d743f3136f3d95 files/wget-1.9.1+ipvmisc.patch 25622
+MD5 4dcb05d1f54b53a2aed7a21663352952 files/wget-1.9.1-locale.patch 322
+MD5 e38837d2e6b898527d0a5b7167b68e81 files/wget-CAN-2004-1487.patch 1551
