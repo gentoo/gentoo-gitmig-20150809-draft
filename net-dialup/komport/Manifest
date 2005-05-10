@@ -1,4 +1,5 @@
+MD5 bcadf39170c734433170728c4191a011 komport-0.5.9.ebuild 566
+MD5 41bcf80b399b7ce487cec25f08d518b4 ChangeLog 852
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-MD5 eadd42def9a62aa7dee69d38b2c40b36 ChangeLog 701
-MD5 0690846c3b7ccd05f8decc2611126546 komport-0.5.9.ebuild 487
 MD5 4f3fd78f4486d4772bc9b0f79755b559 files/digest-komport-0.5.9 65
+MD5 50f57a07e20a6c00d06873c77ef3b9b0 files/komport-0.5.9-configure-arts.diff 3131
