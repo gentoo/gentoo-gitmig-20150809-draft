@@ -1,14 +1,17 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/wget-1.9.1-r3.ebuild,v 1.12 2005/05/10 13:21:56 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/wget-1.9.1-r3.ebuild,v 1.13 2005/05/10 13:51:20 seemant Exp $
 
 inherit gnuconfig eutils flag-o-matic
 
 IUSE="build debug ipv6 nls socks5 ssl static"
 
+PATCHVER=0.1
 DESCRIPTION="Network utility to retrieve files from the WWW"
 HOMEPAGE="http://wget.sunsite.dk/"
-SRC_URI="mirror://gnu/wget/${P}.tar.gz"
+SRC_URI="mirror://gnu/wget/${P}.tar.gz
+	mirror://gentoo/${P}-gentoo-${PATCHVER}.tar.bz2
+	http://dev.gentoo.org/~seemant/distfiles/${P}-gentoo-${PATCHVER}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -23,11 +26,12 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A} ; cd ${S}
-	epatch ${FILESDIR}/${P}+ipvmisc.patch
-	epatch ${FILESDIR}/${PN}-1.9-uclibc.patch
-	epatch ${FILESDIR}/${P}-locale.patch
-	# security patch for bug 74008
-	epatch ${FILESDIR}/${PN}-CAN-2004-1487.patch
+	EPATCH_SUFFIX="patch" epatch ${WORKDIR}/gentoo
+#	epatch ${FILESDIR}/${P}+ipvmisc.patch
+#	epatch ${FILESDIR}/${PN}-1.9-uclibc.patch
+#	epatch ${FILESDIR}/${P}-locale.patch
+#	# security patch for bug 74008
+#	epatch ${FILESDIR}/${PN}-CAN-2004-1487.patch
 }
 
 src_compile() {

@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/wget
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/ChangeLog,v 1.56 2005/05/10 13:21:56 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/ChangeLog,v 1.57 2005/05/10 13:51:20 seemant Exp $
+
+  10 May 2005; Seemant Kulleen <seemant@gentoo.org>
+  -files/wget-1.9.1+ipvmisc.patch, -files/wget-1.9.1-locale.patch,
+  -files/wget-1.9-uclibc.patch, -files/wget-CAN-2004-1487.patch,
+  wget-1.9.1-r3.ebuild:
+  move patches to a tarball on the mirrors.  No more 25K things in files
 
   10 May 2005; Seemant Kulleen <seemant@gentoo.org>
   -files/wget-1.8.2-2Glimit.diff, -files/wget-1.8.2-gentoo.diff,
