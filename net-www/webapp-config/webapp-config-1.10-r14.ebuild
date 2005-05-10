@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/webapp-config/webapp-config-1.10-r14.ebuild,v 1.8 2005/05/10 22:18:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/webapp-config/webapp-config-1.10-r14.ebuild,v 1.9 2005/05/10 22:51:58 beu Exp $
 
 inherit eutils
 
@@ -24,7 +24,10 @@ RDEPEND="sys-apps/grep
 
 S=${WORKDIR}/${P}-r11
 
-src_compile() {
+src_unpack() {
+	unpack ${A} || die "unpack failed"
+	cd "${S}" || die "cd '${S}' failed"
+
 	# Have webapp-config fixup permissions on site and document root directories
 	# that are/have previously been installed with mode 777 (word-writable).
 	# Bugs #88831 and #87708.
