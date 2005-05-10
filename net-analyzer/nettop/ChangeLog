@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/nettop
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nettop/ChangeLog,v 1.10 2005/05/01 17:24:41 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nettop/ChangeLog,v 1.11 2005/05/10 16:04:59 ticho Exp $
+
+  10 May 2005; Andrej Kacian <ticho@gentoo.org> nettop-0.2.3.ebuild:
+  Added ~amd64 keyword. Closes #92114, reported by Chris Chance
+  <cchance@gmail.com>.
 
   01 May 2005; Michael Hanselmann <hansmi@gentoo.org> nettop-0.2.3.ebuild:
   Stable on ppc.
