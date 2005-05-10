@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/deltup/deltup-0.4.2-r1.ebuild,v 1.2 2005/05/09 20:03:06 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/deltup/deltup-0.4.2-r1.ebuild,v 1.3 2005/05/10 18:38:16 genstef Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz
 		http://www.bzip.org/1.0.2/bzip2-1.0.2.tar.gz"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc"
+KEYWORDS="~x86 ~amd64 ~ppc ~sparc"
 IUSE=""
 
 DEPEND="dev-libs/openssl
