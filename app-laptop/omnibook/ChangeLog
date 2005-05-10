@@ -1,6 +1,10 @@
 # ChangeLog for app-laptop/omnibook
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/omnibook/ChangeLog,v 1.6 2005/04/21 07:18:56 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/omnibook/ChangeLog,v 1.7 2005/05/10 17:21:27 genstef Exp $
+
+  10 May 2005; Stefan Schweizer <genstef@gentoo.org>
+  -omnibook-20040916.ebuild, omnibook-20050217.ebuild:
+  Fix portage-cvs-linux-mod-problem and remove old version
 
   21 Apr 2005; Stephanie Lockwood-Childs <wormo@gentoo.org>
   omnibook-20040916.ebuild, omnibook-20050217.ebuild:
