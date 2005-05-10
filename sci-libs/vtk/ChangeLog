@@ -1,0 +1,10 @@
+# ChangeLog for sci-libs/vtk
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/ChangeLog,v 1.1 2005/05/10 15:35:52 pkdawson Exp $
+
+*vtk-4.2.6 (10 May 2005)
+
+  10 May 2005; Patrick Dawson <pkdawson@gentoo.org>
+  +files/vtk-4.2.6-gcc34.patch, +vtk-4.2.6.ebuild:
+  Initial import. See bug #25335.
+
