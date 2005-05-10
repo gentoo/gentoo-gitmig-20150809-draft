@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 1c5125371a5cf507963a6ffeb71c5dd3 flwm-1.00-r4.ebuild 1783
-MD5 629c4b47c2cd694b24ac572a2805bc73 ChangeLog 1453
+MD5 c1a03bc77b5227cf1769fe650b8dcad7 ChangeLog 1538
+MD5 30933394c20b0f292a72e514a1ad763a flwm-1.00-r4.ebuild 1783
 MD5 70b93a47cb23b5eec6774b7dbc9ad702 metadata.xml 330
-MD5 153d0f044aec18fbaa1ea5a6ca417551 files/fltk1.1.patch 376
 MD5 bcffe93a535c096964afbd7e789560d5 files/digest-flwm-1.00-r4 57
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCfjVi2G5bA0cA/ScRAt5EAJ9QkJHC9MWl6YysDvLY+BONK948zQCg7aMC
-eoYDYYjPB5ab6RqfQMB8DFA=
-=SM0C
------END PGP SIGNATURE-----
+MD5 153d0f044aec18fbaa1ea5a6ca417551 files/fltk1.1.patch 376
