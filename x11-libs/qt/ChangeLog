@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/qt
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.211 2005/05/01 07:56:11 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.212 2005/05/10 14:59:48 carlo Exp $
+
+  10 May 2005; Carsten Lohrke <carlo@gentoo.org> -qt-2.3.2-r1.ebuild,
+  -qt-2.3.2-r2.ebuild:
+  we don't support qt-2 anymore, #79720
 
   01 May 2005; Guy Martin <gmsoft@gentoo.org> qt-3.3.4-r3.ebuild:
   Stable on hppa.
