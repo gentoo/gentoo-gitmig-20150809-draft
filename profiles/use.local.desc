@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1156 2005/05/09 22:38:52 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1157 2005/05/10 01:46:37 swegener Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -74,8 +74,8 @@ app-i18n/scim-cvs:immqt - Enable immodule for Qt support (binary incompatible)
 app-i18n/scim-cvs:immqt-bc - Enable immodule for Qt support (binary compatible)
 app-i18n/scim:immqt - Enable immodule for Qt support (binary incompatible)
 app-i18n/scim:immqt-bc - Enable immodule for Qt support (binary compatible)
-app-i18n/uim-svn:eb - Enable EB support
 app-i18n/uim-svn:dict - Build uim-dict (a dictionary utility for uim)
+app-i18n/uim-svn:eb - Enable EB support
 app-i18n/uim-svn:fep - Build uim-fep
 app-i18n/uim-svn:immqt - Enable immodule for Qt support
 app-i18n/uim:immqt - Enable immodule for Qt support (binary incompatible)
@@ -213,6 +213,7 @@ dev-libs/opensc:pcsc-lite - build with pcsc-lite instead of openct
 dev-libs/pwlib:v4l2 - Enable video4linux2 support
 dev-libs/qsa:examples - build the examples that come with qsa
 dev-libs/qsa:ide - enable the qsa ide
+dev-libs/wxbase:dmalloc - Enable support for the Debug Malloc Library
 dev-lisp/cl-sql:sqlite3 - build support for sqlite3
 dev-lisp/cmucl:nosource - don't include source code for CMUCL in installation
 dev-lisp/gcl-cvs:custreloc - build a GCL which uses custom GCL code for linking
@@ -779,10 +780,10 @@ sys-apps/tcng:tcsim - enable traffic simulator
 sys-apps/tinylogin:make-symlinks - Create all the appropriate symlinks in /bin and /sbin
 sys-apps/util-linux:old-crypt - build support for the older cryptoapi that earlier util-linux's included
 sys-block/partimage:nologin - Do not include login support
+sys-boot/arcboot:cobalt - Disables support for Cobalt Microserver hardware (Qube2/RaQ2)
 sys-boot/arcboot:ip27 - Disables support for SGI Origin (IP27)
 sys-boot/arcboot:ip28 - Disables support for SGI Indigo2 Impact R10000 (IP28)
 sys-boot/arcboot:ip30 - Disables support for SGI Octane (IP30)
-sys-boot/arcboot:cobalt - Disables support for Cobalt Microserver hardware (Qube2/RaQ2)
 sys-boot/lilo:devmap - Compile with support for device-mapper
 sys-boot/lilo:pxeserial - Avoid character echo on PXE serial console
 sys-boot/yaboot-static:ibm - Indicate the usage of ibm based ppc64 hardware
@@ -910,10 +911,9 @@ x11-libs/fox:truetype - Enable freetype support (allows for antialiased fonts)
 x11-libs/gtkmathview:t1lib - Enable t1lib support
 x11-libs/qt:immqt -Enable binary incompatible version of immodule for Qt
 x11-libs/qt:immqt-bc - Enable binary compatible version of immodule for Qt
+x11-libs/wxGTK:dmalloc - Enable support for the Debug Malloc Library
 x11-libs/wxGTK:no_wxgtk1 - Disable gtk support. Must be used in combination with gtk2
 x11-libs/wxGTK:wxgtk1 - Add gtk1 support in addition to optional gtk2ansi and gtk2unicode
-x11-libs/wxGTK:dmalloc - Enable support for the Debug Malloc Library
-dev-libs/wxbase:dmalloc - Enable support for the Debug Malloc Library
 x11-misc/linuxwacom:sdk - Builds wacom X11 driver against installed X11 SDK
 x11-misc/rss-glx:xscreensaver - Enable detection of xscreensavers
 x11-misc/vnc2swf:x11vnc - Install script that depends on x11vnc
