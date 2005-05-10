@@ -1,6 +1,13 @@
 # ChangeLog for x11-terms/xterm
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.81 2005/05/01 07:54:15 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.82 2005/05/10 11:58:08 seemant Exp $
+
+*xterm-202 (10 May 2005)
+
+  10 May 2005; Seemant Kulleen <seemant@gentoo.org> +xterm-202.ebuild:
+  version bump which should fix a few issues from 201. I'll wait to hear in
+  each bug report and then mention that as the issues are resolved. For a few
+  bugs, we need to wait for 203, actually
 
   01 May 2005; Guy Martin <gmsoft@gentoo.org> xterm-200-r1.ebuild:
   Stable on hppa.
