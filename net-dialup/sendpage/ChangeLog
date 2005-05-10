@@ -1,6 +1,6 @@
-# ChangeLog for net-misc/sendpage
+# ChangeLog for net-dialup/sendpage
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/sendpage/ChangeLog,v 1.1 2005/05/10 21:14:44 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/sendpage/ChangeLog,v 1.2 2005/05/10 21:15:40 mrness Exp $
 
   10 May 2005; Alin Nastac <mrness@gentoo.org> metadata.xml:
   Moved from net-misc/sendpage to net-dialup/sendpage.
