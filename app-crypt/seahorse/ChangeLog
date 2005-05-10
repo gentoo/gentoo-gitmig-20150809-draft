@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/seahorse
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/ChangeLog,v 1.37 2005/05/06 12:32:43 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/ChangeLog,v 1.38 2005/05/10 01:12:34 joem Exp $
+
+*seahorse-0.7.8 (10 May 2005)
+
+  10 May 2005; Joe McCann <joem@gentoo.org> +seahorse-0.7.8.ebuild:
+  New upstream release...lots of little bug fixes
 
   06 May 2005; Markus Rothe <corsair@gentoo.org> seahorse-0.7.7.ebuild:
   Added ~ppc64 to KEYWORDS
