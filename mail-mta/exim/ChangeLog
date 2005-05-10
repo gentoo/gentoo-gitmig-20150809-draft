@@ -1,6 +1,10 @@
 # ChangeLog for mail-mta/exim
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.28 2005/03/08 20:00:06 peitolm Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.29 2005/05/10 01:33:45 pfeifer Exp $
+
+  10 May 2005; Jay Pfeifer <pfeifer@gentoo.org> exim-4.50-r1.ebuild:
+  Bring forward ~amd64 from 4.43 stuff.
+  Been running 4.50-r1 on 4 different amd64 systems for about 6 weeks now.
 
 *exim-4.50-r1 (08 Mar 2005)
 
