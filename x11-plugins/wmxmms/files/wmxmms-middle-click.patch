@@ -1,7 +1,8 @@
+Common subdirectories: ../WMxmms-0.1.4.orig/src/.xvpics and src/.xvpics
 diff -u ../WMxmms-0.1.4.orig/src/xmms_func.c src/xmms_func.c
---- ../WMxmms-0.1.4.orig/src/xmms_func.c	2005-03-21 11:51:47.375860272 -0700
-+++ src/xmms_func.c	2005-03-21 11:42:37.106513928 -0700
-@@ -113,17 +113,31 @@
+--- ../WMxmms-0.1.4.orig/src/xmms_func.c	2003-03-31 10:40:23.000000000 -0700
++++ src/xmms_func.c	2005-04-28 15:55:08.000000000 -0600
+@@ -110,17 +110,39 @@
  {
         char *command;
         int status;
@@ -24,12 +25,20 @@ diff -u ../WMxmms-0.1.4.orig/src/xmms_func.c src/xmms_func.c
 -        }
 -       while (!xmms_remote_is_running(xmms_session))
 +
-+       while (!xmms_remote_is_running(xmms_session) && count < 30) {
++       while (!xmms_remote_is_running(xmms_session) && count < 1800) {
         		usleep(10000L);
 +		count++;
++		if( (count % 60) == 0 )
++		  {
++		    fprintf(stderr,
++			    "There may be a problem starting XMMS, or the "
++			    "XMMS remote is not running. Sleeping for 5 "
++			    "seconds and checking for the remote again.\n");
++		    sleep(5);
++		  }
 +       }
 +
-+       if( (count == 30) && status){
++       if( (count == 1800) && status){
 +      		fprintf(stderr, 
 +			"status(%d) XMMS can't be launched, exiting...\n",
 +			status);
@@ -39,6 +48,3 @@ diff -u ../WMxmms-0.1.4.orig/src/xmms_func.c src/xmms_func.c
         free(command);
  }
  
-Only in ../WMxmms-0.1.4.orig/src: xmms_func.c.orig
-Only in src: .xmms_func.c.swp
-Common subdirectories: ../WMxmms-0.1.4.orig/src/.xvpics and src/.xvpics

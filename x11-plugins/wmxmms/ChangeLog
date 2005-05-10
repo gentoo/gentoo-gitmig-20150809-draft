@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmxmms
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmxmms/ChangeLog,v 1.6 2005/04/11 08:52:04 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmxmms/ChangeLog,v 1.7 2005/05/10 09:22:40 s4t4n Exp $
+
+  10 May 2005; Michele Noberasco <s4t4n@gentoo.org> wmxmms-0.1.4-r1.ebuild:
+  Updating middle-click patch, following feedback on bug #88280.
 
 *wmxmms-0.1.4-r1 (11 Apr 2005)
 
