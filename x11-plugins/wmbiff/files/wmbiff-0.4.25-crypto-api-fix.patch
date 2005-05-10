@@ -1,0 +1,14 @@
+diff -Naur wmbiff-0.4.25-orig/wmbiff/tlsComm.c wmbiff-0.4.25/wmbiff/tlsComm.c
+--- wmbiff-0.4.25-orig/wmbiff/tlsComm.c	2004-06-23 17:44:45.000000000 -0400
++++ wmbiff-0.4.25/wmbiff/tlsComm.c	2005-03-17 13:07:28.643262198 -0500
+@@ -407,10 +407,6 @@
+ 							"server's certificate is invalid or not X.509.\n"
+ 							"there may be a problem with the certificate stored in your certfile\n");
+ 		}
+-	} else if (certstat & GNUTLS_CERT_NOT_TRUSTED) {
+-		TDM(DEBUG_INFO, "server's certificate is not trusted.\n");
+-		TDM(DEBUG_INFO,
+-			"to verify that a certificate is trusted, use the certfile option.\n");
+ 	}
+ 
+ 	if (gnutls_x509_crt_init(&cert) < 0) {

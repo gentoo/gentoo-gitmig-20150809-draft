@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbiff/wmbiff-0.4.20.ebuild,v 1.5 2004/06/24 23:05:24 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbiff/wmbiff-0.4.25-r1.ebuild,v 1.1 2005/05/10 08:34:04 s4t4n Exp $
 
 inherit eutils
 
@@ -9,15 +9,16 @@ SRC_URI="mirror://sourceforge/wmbiff/${P}.tar.gz"
 HOMEPAGE="http://sourceforge.net/projects/wmbiff/"
 
 DEPEND="virtual/x11
-		crypt? ( net-libs/gnutls
-			dev-libs/libgcrypt )"
+		crypt? ( >=net-libs/gnutls-1.0.4
+			>=dev-libs/libgcrypt-1.1.94 )"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc amd64 ppc"
+KEYWORDS="~x86 ~sparc ~amd64 ~ppc"
 IUSE="crypt"
 
-src_unpack() {
+src_unpack()
+{
 	unpack ${A}
 	cd ${S}
 	if use crypt; then
@@ -27,7 +28,8 @@ src_unpack() {
 	fi
 }
 
-src_compile() {
+src_compile()
+{
 	local myconf
 	if ! use crypt; then
 			myconf="--disable-crypto"
@@ -36,7 +38,8 @@ src_compile() {
 	emake || die
 }
 
-src_install () {
+src_install()
+{
 	make DESTDIR="${D}" install || die
-	dodoc ChangeLog  FAQ NEWS  README  README.licq  TODO
+	dodoc ChangeLog  FAQ NEWS  README  README.licq  TODO  wmbiff/sample.wmbiffrc
 }
