@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/wget
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/ChangeLog,v 1.55 2005/05/10 12:25:16 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/ChangeLog,v 1.56 2005/05/10 13:21:56 seemant Exp $
+
+  10 May 2005; Seemant Kulleen <seemant@gentoo.org>
+  -files/wget-1.8.2-2Glimit.diff, -files/wget-1.8.2-gentoo.diff,
+  wget-1.9.1-r3.ebuild:
+  remove unused patches
 
   10 May 2005; Seemant Kulleen <seemant@gentoo.org> wget-1.9.1-r3.ebuild:
   make sure to RDEPEND on a socks5 implementation -- dante is the only one I
