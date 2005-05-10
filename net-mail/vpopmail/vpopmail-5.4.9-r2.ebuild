@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/vpopmail-5.4.9.ebuild,v 1.2 2005/05/05 22:40:10 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/vpopmail-5.4.9-r2.ebuild,v 1.1 2005/05/10 02:03:17 anarchy Exp $
 
-inherit eutils gnuconfig fixheadtails
+inherit eutils gnuconfig fixheadtails flag-o-matic
 
 # TODO: all ldap, sybase support
 #MY_PV=${PV/_/-}
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 sparc ~amd64 ppc"
+KEYWORDS="~x86 ~sparc ~amd64 ~ppc"
 IUSE="mysql ipalias clearpasswd"
 # vpopmail will NOT build if non-root.
 RESTRICT="nouserpriv"
@@ -52,8 +52,7 @@ pkg_setup() {
 }
 
 src_unpack() {
-	# cd ${WORKDIR}
-	# unpack ${MY_P}.tar.gz
+
 	unpack ${A}
 	cd ${S}
 
@@ -72,6 +71,8 @@ src_unpack() {
 	gnuconfig_update
 	autoconf || die "reconfigure failed."
 	ht_fix_file ${S}/cdb/Makefile || die "failed to fix file"
+	epatch ${FILESDIR}/vpopmail-cdb-Makefile.patch || die "failed to patch cdb Makefile"
+	epatch ${FILESDIR}/${P}-Makefile.patch || die "failed to patch Makefile.am"
 }
 
 src_compile() {
@@ -121,8 +122,7 @@ src_compile() {
 	# TCPRULES for relaying is now considered obsolete, use relay-ctrl instead
 	#--enable-tcprules-prog=/usr/bin/tcprules --enable-tcpserver-file=/etc/tcp.smtp \
 	#--enable-roaming-users=y --enable-relay-clear-minutes=60 \
-	#--disable-rebuild-tcpserver-file \
-
+	#--disable-rebuild-tcpserver-file \	
 	emake || die "Make failed."
 }
 

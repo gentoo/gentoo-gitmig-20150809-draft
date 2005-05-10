@@ -1,0 +1,12 @@
+--- Makefile.am.orig	2005-05-09 21:51:12.464218936 -0400
++++ Makefile.am	2005-05-09 21:51:46.631024792 -0400
+@@ -16,7 +16,8 @@
+ MYSQLCONF=$(DESTDIR)@vpopmaildir@/etc/vpopmail.mysql
+ VLIMITS=$(DESTDIR)@vpopmaildir@/etc/vlimits.default
+ 
+-libvpopmail_a_SOURCES=$(COMMONSOURCES) 
++libvpopmail_a_SOURCES=$(COMMONSOURCES)
++libvpopmail_a_CFLAGS= $CFLAGS -fPIC 
+ libvpopmail_a_LIBADD =  cdb/*.o
+ 
+ vpopmailbindir=@vpopmaildir@/bin
