@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/ncurses
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ChangeLog,v 1.94 2005/05/01 17:17:56 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ChangeLog,v 1.95 2005/05/10 01:01:15 vapier Exp $
+
+  10 May 2005; Mike Frysinger <vapier@gentoo.org>
+  ncurses-5.4.20050319.ebuild:
+  Install libraries into /usr/lib on Darwin #92018.
 
   01 May 2005; Michael Hanselmann <hansmi@gentoo.org> ncurses-5.4-r6.ebuild:
   Stable on ppc.

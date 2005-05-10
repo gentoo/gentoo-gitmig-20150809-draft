@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.4.20050319.ebuild,v 1.2 2005/05/03 04:48:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.4.20050319.ebuild,v 1.3 2005/05/10 01:01:15 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -65,11 +65,14 @@ src_compile() {
 do_compile() {
 	ECONF_SOURCE=${S}
 
+	local mylibprefix=""
+	[[ ${USERLAND} == "Darwin" ]] && mylibprefix="/usr"
+
 	# We need the basic terminfo files in /etc, bug #37026.  We will
 	# add '--with-terminfo-dirs' and then populate /etc/terminfo in
 	# src_install() ...
 	econf \
-		--libdir=/$(get_libdir) \
+		--libdir=${mylibprefix}/$(get_libdir) \
 		--with-terminfo-dirs="/etc/terminfo:/usr/share/terminfo" \
 		--disable-termcap \
 		--with-shared \
@@ -102,12 +105,14 @@ src_install() {
 	cd "${WORKDIR}"/narrowc
 	make DESTDIR="${D}" install || die "make narrowc install failed"
 
-	# Move static and extraneous ncurses libraries out of /lib
-	dodir /usr/$(get_libdir)
-	cd "${D}"/$(get_libdir)
-	mv libform* libmenu* libpanel* *.a "${D}"/usr/$(get_libdir)/
-	gen_usr_ldscript lib{,n}curses.so
-	use unicode && gen_usr_ldscript lib{,n}cursesw.so
+	if [[ ${USERLAND} != "Darwin" ]] ; then
+		# Move static and extraneous ncurses libraries out of /lib
+		dodir /usr/$(get_libdir)
+		cd "${D}"/$(get_libdir)
+		mv lib{form,menu,panel}.so* *.a "${D}"/usr/$(get_libdir)/
+		gen_usr_ldscript lib{,n}curses.so
+		use unicode && gen_usr_ldscript lib{,n}cursesw.so
+	fi
 
 	# We need the basic terminfo files in /etc, bug #37026
 	einfo "Installing basic terminfo files in /etc..."
