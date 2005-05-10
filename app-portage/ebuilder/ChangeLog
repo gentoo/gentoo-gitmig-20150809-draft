@@ -1,6 +1,6 @@
 # ChangeLog for app-portage/ebuilder
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/ebuilder/ChangeLog,v 1.6 2005/01/01 15:51:19 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/ebuilder/ChangeLog,v 1.7 2005/05/10 10:50:28 swegener Exp $
 
   14 Jul 2004; Sven Wegener <swegener@gentoo.org> ebuilder-0.4-r1.ebuild:
   Removed S="${WORKDIR}/${P}" and RDEPEND="${DEPEND}"
@@ -45,7 +45,7 @@
 
   A revision number can now be added to the package name.
 
-  Changed the fourth line in the ebuilds to "$Header: /var/cvsroot/gentoo-x86/app-portage/ebuilder/ChangeLog,v 1.6 2005/01/01 15:51:19 eradicator Exp $".
+  Changed the fourth line in the ebuilds to include CVS Header keyword.
 
 
 *ebuilder-0.3 (04 May 2002)
