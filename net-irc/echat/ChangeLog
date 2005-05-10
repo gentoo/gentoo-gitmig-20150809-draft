@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/echat
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/echat/ChangeLog,v 1.8 2004/07/08 23:28:59 swegener Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/echat/ChangeLog,v 1.9 2005/05/10 22:36:39 swegener Exp $
+
+  10 May 2005; Sven Wegener <swegener@gentoo.org> echat-0.02-r1.ebuild,
+  echat-0.04_beta1.ebuild:
+  Updated SRC_URI and HOMEPAGE to new upstream location.
 
   09 Jul 2004; Sven Wegener <swegener@gentoo.org> echat-0.02-r1.ebuild,
   echat-0.04_beta1.ebuild:

@@ -1,13 +1,14 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/echat/echat-0.04_beta1.ebuild,v 1.6 2004/07/08 23:28:59 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/echat/echat-0.04_beta1.ebuild,v 1.7 2005/05/10 22:36:40 swegener Exp $
 
 inherit eutils
 
+MY_P=${P/_}
+
 DESCRIPTION="Console vypress chat clone for *nix like systems."
-HOMEPAGE="http://deep.perm.ru/echat/"
-SRC_URI="http://files.akl.lt/~x11/${P}.tar.gz
-	    http://gsk.vtu.lt:8080/~arturaz/soft/${P}.tar.gz"
+HOMEPAGE="http://echat.deep.perm.ru/"
+SRC_URI="http://echat.deep.perm.ru/files/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~s390 ~ppc"
@@ -16,6 +17,8 @@ IUSE=""
 RDEPEND="sys-libs/ncurses"
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4"
+
+S=${WORKDIR}/${MY_P}
 
 src_unpack() {
 	unpack ${A}
