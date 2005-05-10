@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-sapi.eclass,v 1.60 2005/05/09 13:43:32 beu Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-sapi.eclass,v 1.61 2005/05/10 08:10:00 sebastian Exp $
 # Author: Robin H. Johnson <robbat2@gentoo.org>
 
 inherit eutils flag-o-matic multilib
@@ -500,7 +500,8 @@ php-sapi_src_compile() {
 
 	php-sapi_is_providerbuild || myconf="${myconf} --without-pear"
 
-	myconf="${myconf}  --libdir=/usr/${libdir}/php"
+	myconf="${myconf} --libdir=/usr/${libdir}/php"
+	myconf="${myconf} --with-pear=/usr/lib/php"
 
 	# filter the following from C[XX]FLAGS regardless, as apache won't be
 	# supporting LFS until 2.2 is released and in the tree.  Fixes bug #24373.
