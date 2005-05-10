@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 90ff5c5e869a9b511111ceb6643c874b ChangeLog 358
-MD5 5b59e41d6c094b0f4dfade05ae786751 cgterm-1.6.ebuild 698
+MD5 36913c2ff9098740deaa8f37a91d196a ChangeLog 439
+MD5 2b912c44aa346be7e160f416ae334ef1 cgterm-1.6.ebuild 702
 MD5 e2197bbca51952701bf182a7c4740f74 metadata.xml 218
 MD5 72f130f1f8a86de3f6f10ec6807189ef files/digest-cgterm-1.6 61
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBuzd7ugEuf3OQ0akRAp3uAKCh6X6kFXmjhl51/gXXid7Bu2tcaACgjLzq
-PSZ5DBb4DH/33rIUbem6ZPU=
-=MHLy
------END PGP SIGNATURE-----

@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 2de0233855d0dd664c962c3c6a367e91 ChangeLog 592
-MD5 9a51c2dc970be2c98ba6e7689537f385 bopm-3.1.2.ebuild 1525
+MD5 cc605c81837a3ccbe27174500daae6f0 ChangeLog 673
+MD5 61eca8c85b4594170c51e900f298fc76 bopm-3.1.2.ebuild 1529
 MD5 44c39c6ad372a8e5a5e7ee3311f703a7 metadata.xml 160
+MD5 e334c2d6c57447e4f29405c29d30534f files/bopm.conf.d 266
 MD5 e10e245bd3f7f06551943ff5bf2a51dd files/bopm.init.d 557
 MD5 36f48b28d0fc536e21e69aa648526fee files/digest-bopm-3.1.2 62
-MD5 e334c2d6c57447e4f29405c29d30534f files/bopm.conf.d 266
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBxbiPugEuf3OQ0akRAgddAKCFKvMJHZUrH6qAUIpQmkH1uYWa7ACferp4
-YDJ0dUbuYaRF5jnFzQWjtS0=
-=M7PH
------END PGP SIGNATURE-----
