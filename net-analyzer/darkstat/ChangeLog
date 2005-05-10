@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/darkstat
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/darkstat/ChangeLog,v 1.11 2005/01/29 05:12:50 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/darkstat/ChangeLog,v 1.12 2005/05/10 21:32:37 herbs Exp $
+
+  10 May 2005; Herbie Hopkins <herbs@gentoo.org> darkstat-2.6-r1.ebuild:
+  Marked ~amd64 wrt bug #92148.
 
   29 Jan 2005; Daniel Black <dragonheart@gentoo.org> darkstat-2.6-r1.ebuild,
   darkstat-2.6.ebuild:

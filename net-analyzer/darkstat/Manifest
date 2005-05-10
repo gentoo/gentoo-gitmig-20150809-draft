@@ -1,19 +1,19 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 871cbd49eed2100cff809bc511c5c25b ChangeLog 1564
+MD5 d3c0749eaaaa6f061a602863a6275870 darkstat-2.6-r1.ebuild 1077
 MD5 098a7a9831abba744b14b28f72e6e010 darkstat-2.6.ebuild 1011
+MD5 74ee18725ab2765e76114ab89a968847 ChangeLog 1664
 MD5 e9cd01f31fc31ef1849ad5b87358345a metadata.xml 218
-MD5 b409fe6be12532df81723f4b7bd5ecc3 darkstat-2.6-r1.ebuild 1076
-MD5 44483f0b13561a54b68949145198339f files/darkstat-confd 214
-MD5 4f9e9fe82455fe072de4dda411802936 files/darkstat-init 568
 MD5 65647b954a76c7c35eef2f47dfdb5355 files/digest-darkstat-2.6 64
 MD5 65647b954a76c7c35eef2f47dfdb5355 files/digest-darkstat-2.6-r1 64
+MD5 44483f0b13561a54b68949145198339f files/darkstat-confd 214
+MD5 4f9e9fe82455fe072de4dda411802936 files/darkstat-init 568
 MD5 178efb20612f2c23ec93b9f9a3ddb69c files/ipcheck.patch 3003
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFB+xtbmdTrptrqvGERAiv6AJ99L1yD1ITMQEbyqgGlS/6WV+CcxwCePhqE
-NpgB9fjD5nLbrOghSCho6ws=
-=fv7X
+iD8DBQFCgSiK2G5bA0cA/ScRAiuhAJ9L1MH6N9sXwaijKAQfSfnkbdb82ACfTglQ
+KbO7scVVv5ujkdcVHLbneps=
+=tHlJ
 -----END PGP SIGNATURE-----
