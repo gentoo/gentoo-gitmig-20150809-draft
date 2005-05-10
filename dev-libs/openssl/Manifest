@@ -3,7 +3,7 @@ MD5 37236013e0d26d43c6bff35a8a48e8ec metadata.xml 220
 MD5 685c33f8a3f1980105944ab3c23a346c openssl-0.9.6m.ebuild 3074
 MD5 e59c3cc3221269d3ae08609d821b6b21 openssl-0.9.7c-r1.ebuild 7019
 MD5 a217f5a3406e3fd1cf335c3c11760657 openssl-0.9.7e-r1.ebuild 8518
-MD5 d0bb15f4b4d7199037e43adacf14eaf3 openssl-0.9.7g.ebuild 5150
+MD5 c50f7db979ea16a00e71f7a71079d4f5 openssl-0.9.7g.ebuild 5151
 MD5 9cb8d8cba8c65d3b422a780141041867 openssl-0.9.7d-r2.ebuild 8960
 MD5 8a6bfea1784fd62ac3a143586b24fd59 openssl-0.9.7e.ebuild 7844
 MD5 744b358cd3b68b2ca6561c214c541fc0 files/addppc64support.diff 1327
