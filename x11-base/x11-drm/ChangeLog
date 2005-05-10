@@ -1,6 +1,9 @@
 # ChangeLog for x11-base/x11-drm
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/ChangeLog,v 1.18 2005/05/03 18:10:57 battousai Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/ChangeLog,v 1.19 2005/05/10 00:46:26 battousai Exp $
+
+  10 May 2005; Bryan Stine <battousai@gentoo.org> -x11-drm-20050104.ebuild:
+  Goodbye, 20050104. You piece of crap.
 
 *x11-drm-20050502 (03 May 2005)
 
