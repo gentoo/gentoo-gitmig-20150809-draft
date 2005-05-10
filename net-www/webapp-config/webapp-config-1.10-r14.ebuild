@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/webapp-config/webapp-config-1.10-r14.ebuild,v 1.7 2005/05/09 23:18:17 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/webapp-config/webapp-config-1.10-r14.ebuild,v 1.8 2005/05/10 22:18:10 vapier Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://dev.gentoo.org/~stuart/${PN}/${P}-r11.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~arm alpha amd64 hppa ia64 ~mips ppc ppc64 ~s390 sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sparc x86"
 IUSE=""
 
 DEPEND=""
@@ -28,12 +28,11 @@ src_compile() {
 	# Have webapp-config fixup permissions on site and document root directories
 	# that are/have previously been installed with mode 777 (word-writable).
 	# Bugs #88831 and #87708.
-	epatch ${FILESDIR}/webapp-config_fixperms.patch || die "epatch failed"
+	epatch ${FILESDIR}/webapp-config_fixperms.patch
 
 	# Improve temporary file handling code with the use of mktemp(1), bug
 	# #91785.
-	epatch ${FILESDIR}/webapp-config_improved-tmpfile-handling.patch || \
-		die "epatch failed"
+	epatch ${FILESDIR}/webapp-config_improved-tmpfile-handling.patch
 }
 
 src_install() {
