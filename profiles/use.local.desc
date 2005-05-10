@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1157 2005/05/10 01:46:37 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1158 2005/05/10 15:34:13 pkdawson Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -745,6 +745,7 @@ sci-libs/hdf5:hlapi - Enables support for high-level library
 sci-libs/plplot:fortran - Support for FORTRAN bindings.
 sci-libs/plplot:itcl - Support for itcl bindings.
 sci-libs/plplot:octave - Support for Octave bindings.
+sci-libs/vtk:patented - Builds patented classes.
 sci-mathematics/coq:ide - Build the Coq IDE, a clone of proof general using lablgtk2.
 sci-mathematics/coq:norealanalysis - Do not build real analysis modules (faster compilation).
 sci-mathematics/coq:translator - Install the translator script from coq-7.4 to coq-8.0, and its documentation if doc is set too.
