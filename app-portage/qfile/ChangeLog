@@ -1,0 +1,11 @@
+# ChangeLog for app-portage/qfile
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/qfile/ChangeLog,v 1.1 2005/05/10 12:41:51 solar Exp $
+
+*qfile-0.0.1 (10 May 2005)
+
+  10 May 2005; <solar@gentoo.org> +metadata.xml, +files/qfile.c,
+  +qfile-0.0.1.ebuild:
+  - initial creation of qfile package. A very small and fast c implementation of
+  portage query file tool
+

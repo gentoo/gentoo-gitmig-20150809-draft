@@ -1,0 +1,17 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 bb58db9e6afb2b03fc57b04345f64838 qfile-0.0.1.ebuild 716
+MD5 9b7f399ea5e48954cd0d08fca393590d ChangeLog 430
+MD5 01cd2009d0c8237db444e250643f9438 metadata.xml 248
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-qfile-0.0.1 0
+MD5 f49c1d6373c58e87b464f4a21802dde0 files/qfile.c 4450
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iQCVAwUBQoCrrJ4WFLgrx1GWAQLAtAQAjBTNsCir/+5cjvLzELfeFrTRf8q2yTmn
+H0zznVZ7KHey2v52EbYzKFNOentyb4cMEhfj4i9MYXolIb4+sIzMme+Dgux6gNbN
+pcjxHMfVqZnr/+g4huLKg7J+x89/KrQwCS1GyMLHjLokUmlC6/0wLjTZhavvUk5r
+pWx1QpQY2b8=
+=C3ia
+-----END PGP SIGNATURE-----
