@@ -1,14 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 eb65fb620b681feb59a39173ec2bbaeb ChangeLog 668
-MD5 26d7d704ca382b7d9271064f1011385b metadata.xml 855
 MD5 f367b6d77406960c7d3d3b8151f25712 urwid-0.8.6.ebuild 747
+MD5 26d7d704ca382b7d9271064f1011385b metadata.xml 855
+MD5 eb65fb620b681feb59a39173ec2bbaeb ChangeLog 668
+MD5 157e61a375f04048c535cceffaa9af0e urwid-0.8.7.ebuild 757
 MD5 84b7b6bba847f6a4f3c63695b607eb8a files/digest-urwid-0.8.6 62
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCIaJt2jLqHNfbg2URAjpnAKDAn+c61ZRKbWEpQWF3XXJnQH/swQCdHfUK
-tt8Nsx/Bvfaz9f4TXeFQmBc=
-=pdJA
------END PGP SIGNATURE-----
+MD5 f8967397e1d9508b8cc6df9fc17a0e75 files/digest-urwid-0.8.7 62
