@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/libprelude
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libprelude/ChangeLog,v 1.17 2005/05/08 12:11:38 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libprelude/ChangeLog,v 1.18 2005/05/10 13:43:23 ka0ttic Exp $
+
+*libprelude-0.8.10-r1 (10 May 2005)
+
+  10 May 2005; Aaron Walker <ka0ttic@gentoo.org>
+  +libprelude-0.8.10-r1.ebuild:
+  Revision bump for security bug 91467.
 
 *libprelude-0.9.0_rc5-r1 (08 May 2005)
 
