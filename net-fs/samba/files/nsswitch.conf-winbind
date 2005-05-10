@@ -1,4 +1,4 @@
-# Header: $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/files/nsswitch.conf-winbind,v 1.2 2005/05/10 10:55:59 swegener Exp $
 passwd:      files winbind
 group:       files winbind
 

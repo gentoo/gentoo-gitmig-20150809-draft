@@ -1,25 +1,35 @@
-MD5 41299f246433a1a55c8fccc77ccd709e metadata.xml 491
-MD5 ccfaefc7832a8f0558b7480d7f494757 ChangeLog 31118
-MD5 f6a911411b7e724c85f53e4b3fa88897 samba-3.0.14a-r1.ebuild 8778
-MD5 dba6533a0f625f4ae8e69e5f3c0cd181 samba-3.0.10.ebuild 16541
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 82365d515a7f7b7f5811220f6dadeaa9 samba-3.0.11.ebuild 8774
+MD5 dba6533a0f625f4ae8e69e5f3c0cd181 samba-3.0.10.ebuild 16541
+MD5 f6a911411b7e724c85f53e4b3fa88897 samba-3.0.14a-r1.ebuild 8778
+MD5 ccfaefc7832a8f0558b7480d7f494757 ChangeLog 31118
+MD5 41299f246433a1a55c8fccc77ccd709e metadata.xml 491
 MD5 fa1dcd2c95a81c22c2ad68de6698a85e files/digest-samba-3.0.10 206
-MD5 def157a63ec14450df82373617c7dc4b files/samba-3.0.11-gcc4.patch 485
-MD5 519576a9448b86f1a7baab18204533a5 files/lmhosts 126
-MD5 5d3129a0f6bcbec6ec91d217881a34e1 files/nsswitch.conf-winbind 298
-MD5 7ee5edc70bf80888c776f5808f865996 files/nsswitch.conf-wins 392
-MD5 0c0364e7f0bc4cc48d8f9b103e606a93 files/samba-2.2.8-statfs.patch 239
-MD5 3cff882704d5ba84a75a76fc4262b3d3 files/digest-samba-3.0.14a-r1 216
 MD5 498babc5e33f61369f42201f25eb35c0 files/digest-samba-3.0.11 215
-MD5 b836e258befae9d6c66cb3f158769b25 files/samba-3.0.x-libdirsymlink.patch 592
-MD5 e75c2316eced1d80cb2161848581c6a3 files/samba-3.0.x-python-setup.patch 1094
-MD5 8ea7b443dd580aaaaf7e9e896eba54f2 files/samba-3.0.x-smbumount-uid32.patch 425
+MD5 e89b19f1e62e257cbaa23a44a0362a58 files/swat.xinetd 527
+MD5 def157a63ec14450df82373617c7dc4b files/samba-3.0.11-gcc4.patch 485
+MD5 e17a1638ad9f30f2e39db4c8981a2fcd files/vscan-0.3.5-libclamav.patch 523
+MD5 7ee5edc70bf80888c776f5808f865996 files/nsswitch.conf-wins 392
 MD5 341521b710d02d57a70acd49b1d4c06b files/samba-conf 1291
 MD5 a1bbdaf99b7a3819a219a9450fa3dd0a files/samba-init 1104
-MD5 b6cdc1468e45f92f19873e0c6c5b6e94 files/samba.pam 332
+MD5 b836e258befae9d6c66cb3f158769b25 files/samba-3.0.x-libdirsymlink.patch 592
+MD5 12df1953c039c5a93939497b0bc0ffba files/nsswitch.conf-winbind 403
+MD5 519576a9448b86f1a7baab18204533a5 files/lmhosts 126
+MD5 e75c2316eced1d80cb2161848581c6a3 files/samba-3.0.x-python-setup.patch 1094
+MD5 3cff882704d5ba84a75a76fc4262b3d3 files/digest-samba-3.0.14a-r1 216
+MD5 0c0364e7f0bc4cc48d8f9b103e606a93 files/samba-2.2.8-statfs.patch 239
+MD5 8ea7b443dd580aaaaf7e9e896eba54f2 files/samba-3.0.x-smbumount-uid32.patch 425
 MD5 bf268fdddc8ef677b6fa78661a094eac files/samba.schema 16044
 MD5 239ef0e21552896faeef21c685561245 files/smb.conf.example-samba3.gz 7808
 MD5 3685eadb817d185b06476eca6c0c15c4 files/smbusers 204
-MD5 e89b19f1e62e257cbaa23a44a0362a58 files/swat.xinetd 527
 MD5 09195dd8ab25ce77ac51c0c05b4ab93c files/system-auth-winbind 869
-MD5 e17a1638ad9f30f2e39db4c8981a2fcd files/vscan-0.3.5-libclamav.patch 523
+MD5 b6cdc1468e45f92f19873e0c6c5b6e94 files/samba.pam 332
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCgJNRI1lqEGTUzyQRAp9kAJ9YCI4QarekjuFIUriQK7juQVZnHACfVwSo
+Seq/0+w/ZM/BvZQHLx7atSI=
+=Xmpo
+-----END PGP SIGNATURE-----
