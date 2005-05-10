@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.3-r3.ebuild,v 1.2 2005/05/08 14:45:44 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.3-r3.ebuild,v 1.3 2005/05/10 15:12:16 herbs Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -71,6 +71,10 @@ src_unpack() {
 		epatch ${FILESDIR}/ppp-sys_error_to_strerror.patch || die
 	}
 
+	# Set correct libdir
+	sed -i -e "s:/lib/pppd:/$(get_libdir)/pppd:" \
+		${S}/pppd/{pathnames.h,pppd.8} || die
+
 	find ${S} -type f -name Makefile.linux \
 		-exec sed -i -e '/^CC[[:space:]]*=/d' {} \;
 }
@@ -130,7 +134,7 @@ src_install() {
 	insopts -m0600
 	newins ${FILESDIR}/confd.ppp0 net.ppp0
 
-	local PLUGINS_DIR=/usr/lib/pppd/$(awk -F '"' '/VERSION/ {print $2}' pppd/patchlevel.h)
+	local PLUGINS_DIR=/usr/$(get_libdir)/pppd/$(awk -F '"' '/VERSION/ {print $2}' pppd/patchlevel.h)
 	#closing " for sintax coloring
 	dodir ${PLUGINS_DIR}
 	insinto ${PLUGINS_DIR}
