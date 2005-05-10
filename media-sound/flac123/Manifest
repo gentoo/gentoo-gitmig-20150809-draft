@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 e3c48dc1f08fcc848c5c746d3964e194 ChangeLog 943
 MD5 19250c51801bb2a36200ccc941a5b20d flac123-0.0.7.ebuild 614
 MD5 5a8290e44006ccff0dff3094555d6366 metadata.xml 257
-MD5 13caa2217e8698686daecfb8bdb011e1 ChangeLog 861
-MD5 e1c53452c6b3cf9a31058074574fc65a flac123-0.0.8.ebuild 619
-MD5 616f4d5d8ec1aaafd68c0fb6d90a53d1 files/digest-flac123-0.0.8 64
+MD5 519d6d82485b3655d9e2f11ffd8cbb9d flac123-0.0.8.ebuild 621
 MD5 708afe0f2fd79d27b976776a01a1d07f files/digest-flac123-0.0.7 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFCJfB3p5vW4rUFj5oRArIDAJ0aAnwjfPzkRPUTBAox8+P9yKCySgCfdKl5
-vIR4ZlW+vPoZcVPLskVQTmo=
-=0mNu
------END PGP SIGNATURE-----
+MD5 616f4d5d8ec1aaafd68c0fb6d90a53d1 files/digest-flac123-0.0.8 64
