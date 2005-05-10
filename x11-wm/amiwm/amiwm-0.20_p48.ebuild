@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/amiwm/amiwm-0.20_p48.ebuild,v 1.4 2004/07/24 17:54:29 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/amiwm/amiwm-0.20_p48.ebuild,v 1.5 2005/05/10 09:06:04 dholm Exp $
 
 MY_P="${PN}${PV/_p/pl}"
 DESCRIPTION="Windowmanager ala Amiga(R) Workbench(R)"
@@ -9,7 +9,7 @@ SRC_URI="ftp://ftp.lysator.liu.se/pub/X11/wm/amiwm/${MY_P}.tar.gz"
 
 LICENSE="amiwm"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 IUSE=""
 
 DEPEND="virtual/x11"
