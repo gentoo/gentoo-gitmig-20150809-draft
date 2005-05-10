@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.18.ebuild,v 1.4 2005/04/27 02:53:53 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.18.ebuild,v 1.5 2005/05/10 01:35:48 herbs Exp $
 
 inherit myth flag-o-matic eutils toolchain-funcs
 
@@ -97,6 +97,9 @@ src_compile() {
 		$(use_enable X x11)"
 
 	# $(use_enable ieee1394 firewire)
+
+	# Distcc causes some tests in the configure script to fail, bug #90185
+	myconf="${myconf} --disable-distcc"
 
 	myth_src_compile
 }
