@@ -1,0 +1,22 @@
+diff -u pglogd-2.3/Makefile.orig pglogd-2.3/Makefile
+--- pglogd-2.3/Makefile.orig	2003-11-05 19:41:01.000000000 +0100
++++ pglogd-2.3/Makefile	2005-04-24 13:53:25.000000000 +0200
+@@ -31,7 +31,7 @@
+ #
+ 
+ # Change this to your PostgreSQL install directroy.
+-PGDIR = /usr/local/pgsql
++PGDIR = /usr
+ 
+ 
+ ### NO NEED TO EDIT BELOW THIS LINE ###
+@@ -39,8 +39,8 @@
+ CC = gcc
+ COPTS = -O -Wall
+ LIBS = -lpq
+-CFLAGS = -I${PGDIR}/include
++CFLAGS = -I${PGDIR}/include/postgres
+ LDFLAGS = -L${PGDIR}/lib
+ 
+ 
+ SRCS_LOG = pglogd.c

@@ -1,0 +1,20 @@
+#!/sbin/runscript
+# Copyright 1999-2005 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/www-misc/pglogd/files/pglogd.init,v 1.1 2005/05/10 05:07:57 nakano Exp $
+
+depend() {
+	before apache apache2
+}
+
+start() {
+	ebegin "Starting pglogd"
+	start-stop-daemon --start --quiet --make-pidfile --pidfile /var/run/pglogd.pid --exec /usr/sbin/pglogd -- -c /etc/pglogd.conf
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping pglogd"
+	start-stop-daemon --stop --quiet --pidfile /var/run/pglogd.pid
+	eend $?
+}
