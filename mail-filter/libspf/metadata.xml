@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>net-mail</herd>
+<maintainer>
+  <email>pfeifer@gentoo.org</email>
+  <name>Jay Pfeifer</name>
+</maintainer>
+<longdescription>An ANSI C Implementation of the Sender Policy Framework (SPF). SPF is a mechanism to stop e-mail forgery.</longdescription>
+</pkgmetadata>

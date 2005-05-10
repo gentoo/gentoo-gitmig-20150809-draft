@@ -1,0 +1,10 @@
+# ChangeLog for mail-filter/libspf
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/libspf/ChangeLog,v 1.1 2005/05/10 01:19:32 pfeifer Exp $
+
+*libspf-1.0.0_p3 (10 May 2005)
+
+  10 May 2005; Jay Pfeifer <pfeifer@gentoo.org> +metadata.xml,
+  +libspf-1.0.0_p3.ebuild:
+  Initial import closing bug 59096.
+
