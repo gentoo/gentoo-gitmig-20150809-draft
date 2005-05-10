@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 53d7c20f63aea0f604a112cc68af2c63 ChangeLog 6060
-MD5 06a2fa1e0308f065f818db6fae959fe9 metadata.xml 257
-MD5 76d3c02a6fa76799d07d0c885b4434ba libol-0.3.15.ebuild 808
+MD5 7ffb2d5fa915adc3f0fa61031bf012a6 ChangeLog 6156
 MD5 8f4bb0158cf07734f9746358b3b1af6c libol-0.3.14.ebuild 813
-MD5 97641a59419d9cb5551d1a2f00cc4f42 files/digest-libol-0.3.14 64
+MD5 e820f46228c75733fa100d2771ef512e libol-0.3.15.ebuild 809
+MD5 06a2fa1e0308f065f818db6fae959fe9 metadata.xml 257
 MD5 2d94f0190f9dabe682e52944f6d0f07c files/digest-libol-0.3.15 64
+MD5 97641a59419d9cb5551d1a2f00cc4f42 files/digest-libol-0.3.14 64
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFCfeW0Kf2g/qXtneoRAmmuAJ9iE35LILdY+vIBlHiCAyH8D3vwRACeIv3P
-nZtcsBVMvPP/18OcbpnZ00c=
-=V2cs
+iD8DBQFCgR4EKRy60XGEcJIRAgcqAKCyL6v91KBtWedEXWKakMcktK0RFQCglLD+
+8B7Pgdi0hvKDS/cvukAdMIQ=
+=CLVz
 -----END PGP SIGNATURE-----
