@@ -1,13 +1,23 @@
-MD5 701ffa0a03c07892f770bf5419333da4 amap-4.7.ebuild 1393
-MD5 efcb18c389e941702ae40b9278bb095f amap-4.8-r1.ebuild 1476
-MD5 b0265c3d76a497de4fe39103e10973ca amap-5.0.ebuild 1543
-MD5 3585cd0d6bcd5b413d9e8d317632127f ChangeLog 4071
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 14bbafa9c3df1948a03a7669b17942f2 ChangeLog 4162
 MD5 f34e3c8858756da0001b12d2d3fa1af2 metadata.xml 159
-MD5 0650e1a8429fc7f1febbffe8435ed1c4 files/digest-amap-4.7 60
-MD5 e557979284a669fda0ca792fc9fc7ad5 files/digest-amap-5.0 60
+MD5 701ffa0a03c07892f770bf5419333da4 amap-4.7.ebuild 1393
+MD5 b16ae3332918a64ea29f825c5d31e051 amap-4.8-r1.ebuild 1473
+MD5 b0265c3d76a497de4fe39103e10973ca amap-5.0.ebuild 1543
 MD5 c1c1d543f5427e6ccf71fe8648a6b322 files/4.7-system-pcre.patch 1155
-MD5 6a77a9ce3b2272dff2d409eccdf38833 files/digest-amap-4.8-r1 60
-MD5 b078c53b085eba48231c7df7123766b5 files/amap-5.0-gcc4.patch 15883
-MD5 cc27dde4b08677a49290c397dc162be8 files/amap-4.8-gcc4.patch 2460
+MD5 0650e1a8429fc7f1febbffe8435ed1c4 files/digest-amap-4.7 60
 MD5 a11774428cb7e97a81107a22682d1798 files/4.8-system-pcre.patch 1232
 MD5 36fabda09cbfbb3c4c9eab818e99a501 files/amap-4.8-fix-icky-lvalue-casts.diff 7058
+MD5 cc27dde4b08677a49290c397dc162be8 files/amap-4.8-gcc4.patch 2460
+MD5 6a77a9ce3b2272dff2d409eccdf38833 files/digest-amap-4.8-r1 60
+MD5 b078c53b085eba48231c7df7123766b5 files/amap-5.0-gcc4.patch 15883
+MD5 e557979284a669fda0ca792fc9fc7ad5 files/digest-amap-5.0 60
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFCgQi/KRy60XGEcJIRAvl6AKCppiGPgMasLm3RobnQPIwqSuZ5IwCffQWe
+1c/MPbhVClykGQrRypQ6apk=
+=grIM
+-----END PGP SIGNATURE-----
