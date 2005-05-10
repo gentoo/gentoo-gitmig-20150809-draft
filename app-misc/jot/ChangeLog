@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/jot
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/jot/ChangeLog,v 1.8 2005/04/21 19:25:55 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/jot/ChangeLog,v 1.9 2005/05/10 06:21:18 wormo Exp $
+
+  09 May 2005; Stephanie Lockwood-Childs <wormo@gentoo.org> jot-9.0.ebuild:
+  mark ~ppc
 
   21 Apr 2005; Simon Stelling <blubb@gentoo.org> jot-9.0.ebuild:
   stable on amd64
