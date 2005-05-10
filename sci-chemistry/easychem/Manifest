@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 7292e4c8d12c92aaeda7dc0317430b98 ChangeLog 498
+MD5 fc322249626c78b259d69826fb04c996 easychem-0.6.ebuild 754
+MD5 71f1a598d90b9bddd7848066c9d207fb ChangeLog 642
 MD5 afd70742f32372087e2db1cf363ca22b metadata.xml 640
-MD5 307f71a411ccf4fa07b8d9e20b5e6da2 easychem-0.5.ebuild 754
-MD5 6423a5e6b02bf485764e8a004630d586 files/digest-easychem-0.5 64
+MD5 76d915c577137894c2a53e45fc31963f files/digest-easychem-0.6 64
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCZS4gntT9W3vfTuoRAlojAJ9r9fz637Nr5iciGU48ADr32GDUTwCfUT/o
-jE7PJPuG8jg4CQuei1AMoww=
-=QrVR
+iD8DBQFCgIMWntT9W3vfTuoRApr4AJ9zVSjMJF2Gt3clnImFujlO6YH9WwCfaCCU
+RSenPoYL09StlVXTmk9AZik=
+=ttLh
 -----END PGP SIGNATURE-----

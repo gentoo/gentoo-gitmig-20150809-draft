@@ -1,6 +1,12 @@
 # ChangeLog for sci-chemistry/easychem
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/easychem/ChangeLog,v 1.1 2005/04/19 16:12:45 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/easychem/ChangeLog,v 1.2 2005/05/10 09:46:43 cryos Exp $
+
+*easychem-0.6 (10 May 2005)
+
+  10 May 2005; Marcus D. Hanwell <cryos@gentoo.org> -easychem-0.5.ebuild,
+  +easychem-0.6.ebuild:
+  Version bump.
 
 *easychem-0.5 (19 Apr 2005)
 
