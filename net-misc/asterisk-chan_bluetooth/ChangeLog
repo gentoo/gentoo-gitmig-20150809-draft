@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/asterisk-chan_bluetooth
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-chan_bluetooth/ChangeLog,v 1.1 2005/02/15 20:41:28 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-chan_bluetooth/ChangeLog,v 1.2 2005/05/10 12:09:36 dholm Exp $
+
+  10 May 2005; David Holm <dholm@gentoo.org>
+  asterisk-chan_bluetooth-0.0.1_pre20050212.ebuild:
+  Added to ~ppc.
 
 *asterisk-chan_bluetooth-0.0.1_pre20050212 (15 Feb 2005)
 
