@@ -1,4 +1,4 @@
-MD5 1d87173ff7ea540875e640466c44a184 ChangeLog 1613
+MD5 88156f4694eb5712d63e51db9e978afa ChangeLog 1758
 MD5 7b1c828d8c9a9cca5440fa70caea5680 cedega-4.0.ebuild 1905
 MD5 6525c48ba09d08599432ea6c299e52f4 metadata.xml 354
 MD5 e4a39117202b3744850c0592dc7f2177 cedega-4.0.1.ebuild 1905
@@ -8,6 +8,7 @@ MD5 d3ab1da6188cb7a94d2a52cdc4c402f4 cedega-4.1.ebuild 1902
 MD5 f978efe446d0c5d2595f9671b85307f6 cedega-4.3.1.ebuild 1925
 MD5 0bd75fd1ef9fa58c1c01ad47fb472d41 cedega-4.2.1.ebuild 1904
 MD5 33441edac7d54fe5bc520f90b115f444 cedega-4.2-r1.ebuild 1913
+MD5 3de043ceb8147c323d0e5476bdfd24a9 cedega-4.3.2.ebuild 1925
 MD5 7eccc393a8bb2164b799f66650fc2b54 files/digest-cedega-4.0 67
 MD5 0ec2c4d5f2aa15fadf20a22ae70f6188 files/digest-cedega-4.0.1 69
 MD5 ffb176a2f0e413c04ab3ea5e50ead483 files/digest-cedega-4.1 67
@@ -16,3 +17,4 @@ MD5 e890dc2d0ab9f443ea98d5844990e38b files/digest-cedega-4.3 67
 MD5 6f2852701a274200e814a6412c9b52e9 files/digest-cedega-4.2-r1 75
 MD5 072ec142c269f7fb3c0d9add36d905eb files/digest-cedega-4.2.1 69
 MD5 076b966c6ab4b5f76ea6ca54b81abeac files/digest-cedega-4.3.1 69
+MD5 82100436be2c12a1f6f45e6024c04c90 files/digest-cedega-4.3.2 69
