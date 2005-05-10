@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 c65379e0c2248ea64bbdb243828069bd ChangeLog 2042
-MD5 c2f2bd970b57b0c59b3bb3b84be49353 Test-Builder-Tester-1.01.ebuild 578
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 71fdccca1c959948ea373e72489ab7f1 ChangeLog 2139
+MD5 df2a73fc2fa45c9215a2541cae8ea270 Test-Builder-Tester-1.01.ebuild 577
 MD5 f62ca2af33b110d3d6e8555b44183f04 files/digest-Test-Builder-Tester-1.01 74
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCcj6utG5z4I8BtQoRAlF3AJwPW/5bvAAtQ6NiH5yqP2otwB+Z8QCeKEhk
-7UJt9yJuFh0BzNe3OyTlY/c=
-=ynrH
+iD8DBQFCgN4Y60LfUIagIAkRAtoQAKD9ZcgL6aJiilbh9o7KEEsXlq6N7wCg0RM/
+AIVtHrOr4tlgz7b6CRdEbjc=
+=XNsx
 -----END PGP SIGNATURE-----
