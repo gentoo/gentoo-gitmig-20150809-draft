@@ -1,6 +1,12 @@
 # ChangeLog for app-portage/kuroo
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/kuroo/ChangeLog,v 1.4 2005/03/15 18:11:27 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/kuroo/ChangeLog,v 1.5 2005/05/10 16:36:15 cryos Exp $
+
+*kuroo-0.60.0 (10 May 2005)
+
+  10 May 2005; Marcus D. Hanwell <cryos@gentoo.org> -kuroo-0.54.0.ebuild,
+  +kuroo-0.60.0.ebuild:
+  Version bump, closes bug 91404.
 
 *kuroo-0.54.0 (15 Mar 2005)
 
