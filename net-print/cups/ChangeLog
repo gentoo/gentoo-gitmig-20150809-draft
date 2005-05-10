@@ -1,6 +1,12 @@
 # ChangeLog for net-print/cups
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.128 2005/04/30 09:15:31 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.129 2005/05/10 16:14:47 lanius Exp $
+
+*cups-1.1.23-r2 (10 May 2005)
+
+  10 May 2005; Heinrich Wendel <lanius@gentoo.org> +cups-1.1.23-r2.ebuild:
+  remove filter-fomit-frame-poitner; change coldplug to boot runlevel; add
+  info regarding printing guide
 
   30 Apr 2005; Simon Stelling <blubb@gentoo.org>
   +files/cups-gcc4-amd64.patch, cups-1.1.23-r1.ebuild:
