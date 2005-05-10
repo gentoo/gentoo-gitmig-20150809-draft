@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.2.1.ebuild,v 1.24 2005/04/09 09:31:17 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.2.1.ebuild,v 1.25 2005/05/10 22:16:52 agriffis Exp $
 
 inherit python flag-o-matic libtool eutils
 
@@ -27,7 +27,6 @@ RDEPEND="=sys-libs/db-3.2*
 src_unpack() {
 	unpack ${A}
 	epatch ${FILESDIR}/rpm-4.2.1-python2.3.diff
-	epatch ${FILESDIR}/${P}-lib64.patch
 }
 
 src_compile() {

@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/rpm
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/ChangeLog,v 1.45 2005/04/09 09:31:17 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/ChangeLog,v 1.46 2005/05/10 22:16:52 agriffis Exp $
+
+  10 May 2005; Aron Griffis <agriffis@gentoo.org> rpm-4.2.1.ebuild:
+  Revert blubb's patch which breaks rpm run-time on all arches
 
   09 Apr 2005; Simon Stelling <blubb@gentoo.org>
   +files/rpm-4.2.1-lib64.patch, rpm-4.2.1.ebuild:
