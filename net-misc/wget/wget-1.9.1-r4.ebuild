@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/wget-1.9.1-r3.ebuild,v 1.14 2005/05/10 15:56:47 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/wget-1.9.1-r4.ebuild,v 1.1 2005/05/10 15:56:47 seemant Exp $
 
 inherit gnuconfig eutils flag-o-matic
 
 IUSE="build debug ipv6 nls socks5 ssl static"
 
-PATCHVER=0.1
+PATCHVER=0.2
 DESCRIPTION="Network utility to retrieve files from the WWW"
 HOMEPAGE="http://wget.sunsite.dk/"
 SRC_URI="mirror://gnu/wget/${P}.tar.gz
@@ -24,9 +24,13 @@ DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )
 	sys-devel/autoconf"
 
+
+PATCHDIR="${WORKDIR}/patches"
+
 src_unpack() {
 	unpack ${A} ; cd ${S}
-	EPATCH_SUFFIX="patch" epatch ${WORKDIR}/gentoo
+	EPATCH_SUFFIX="patch" epatch ${PATCHDIR}/gentoo
+	EPATCH_SUFFIX="patch" epatch ${PATCHDIR}/mandrake
 }
 
 src_compile() {
@@ -57,6 +61,7 @@ src_install() {
 		dobin ${S}/src/wget
 		return
 	fi
+
 	make DESTDIR=${D} install || die
 	dodoc AUTHORS COPYING ChangeLog MACHINES MAILING-LIST NEWS README TODO
 	dodoc doc/sample.wgetrc

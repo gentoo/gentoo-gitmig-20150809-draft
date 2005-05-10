@@ -1,6 +1,18 @@
 # ChangeLog for net-misc/wget
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/ChangeLog,v 1.57 2005/05/10 13:51:20 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/ChangeLog,v 1.58 2005/05/10 15:56:47 seemant Exp $
+
+*wget-1.9.1-r4 (10 May 2005)
+
+  10 May 2005; Seemant Kulleen <seemant@gentoo.org> wget-1.9.1-r3.ebuild,
+  +wget-1.9.1-r4.ebuild:
+  revision bump which now adds patches from mandrake's source rpm to handle
+  large files properly and other misc. fixes: french and german translations;
+  proper handling of username/passwords in urls; spelling referrer correctly,
+  printing out the percentage in the output, removing rpath from the binary,
+  and finally in wgetrc: passive ftp is the default (closing bug #89814 by Tor
+  Klingberg <tor.klingberg@gmx.net>), and the references to /usr/local/etc now
+  point to /etc instead
 
   10 May 2005; Seemant Kulleen <seemant@gentoo.org>
   -files/wget-1.9.1+ipvmisc.patch, -files/wget-1.9.1-locale.patch,
