@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libfame
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libfame/ChangeLog,v 1.30 2005/05/10 16:44:13 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libfame/ChangeLog,v 1.31 2005/05/10 20:13:18 dertobi123 Exp $
+
+  10 May 2005; Tobias Scherbaum <dertobi123@gentoo.org>
+  libfame-0.9.1.ebuild, libfame-0.9.1-r1.ebuild:
+  Marked 0.9.1 stable on PPC; added ~ppc keyword to 0.9.1-r1 (#90318)
 
   10 May 2005; Diego Pettenò <flameeyes@gentoo.org>
   libfame-0.9.1-r1.ebuild:
