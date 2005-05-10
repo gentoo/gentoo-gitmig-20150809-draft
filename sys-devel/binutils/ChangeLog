@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/binutils
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.204 2005/05/07 20:30:34 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.205 2005/05/10 18:42:00 pylon Exp $
+
+  10 May 2005; Lars Weiler <pylon@gentoo.org>
+  binutils-2.15.92.0.2-r1.ebuild, binutils-2.15.92.0.2-r7.ebuild,
+  binutils-2.15.92.0.2-r8.ebuild:
+  Downgrading and masking on ppc due to compile errors; bug #91887.
 
   07 May 2005; Michael Hanselmann <hansmi@gentoo.org>
   binutils-2.15.92.0.2-r8.ebuild:
