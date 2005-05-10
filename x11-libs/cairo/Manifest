@@ -1,4 +1,4 @@
-MD5 0c79281b7a522934fa419bd83f191994 cairo-0.3.0.ebuild 846
+MD5 31449cff0a3a0a5dd221fea22695cce0 cairo-0.3.0.ebuild 846
 MD5 b3c7457b7cd79bcb1f482989a0f44ea5 cairo-0.1.18-r1.ebuild 700
 MD5 89b3424208cfab9960dd1cd378bc40bd cairo-0.1.23.ebuild 798
 MD5 7596ee20d8abb8cec077a7d503af5eb4 cairo-0.4.0.ebuild 989
@@ -8,7 +8,7 @@ MD5 3a4cce771cdc4714c6931467622c9ddc cairo-0.1.23-r1.ebuild 757
 MD5 6530e3394d4bd4331548a567e79b060d cairo-0.1.18.ebuild 755
 MD5 8c638d567411d38e1237596b91a517d8 cairo-0.3.0-r1.ebuild 896
 MD5 f4d2f2c6da53a8412387d1d18d281217 cairo-0.2.0.ebuild 847
-MD5 a24a8b2bed352c87072b3d7ea7141f12 ChangeLog 5080
+MD5 844b900fc77f4bc91008dc357dea202c ChangeLog 5169
 MD5 65d1d5c2aa536148fb35cee02b3a8428 metadata.xml 337
 MD5 4df3bcd9171f83ca24b03ab0f8eefb24 files/cairo-0.3.0-header-fix.diff 697
 MD5 cd449933066600e3ac62fa22651a8120 files/xrender.pc 151
