@@ -1,0 +1,20 @@
+# ChangeLog for net-misc/sendpage
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/sendpage/ChangeLog,v 1.1 2005/05/10 21:14:44 mrness Exp $
+
+  10 May 2005; Alin Nastac <mrness@gentoo.org> metadata.xml:
+  Moved from net-misc/sendpage to net-dialup/sendpage.
+
+  30 Nov 2004; Sven Wegener <swegener@gentoo.org> sendpage-0.9.14.ebuild:
+  Fixed invalid atoms in *DEPEND.
+
+  14 Jun 2004; David Holm <dholm@gentoo.org> sendpage-0.9.14.ebuild:
+  Added to ~ppc.
+
+*sendpage-0.9.14 (13 Jun 2004)
+
+  13 Jun 2004; Michael Cummings <mcummings@gentoo.org> metadata.xml,
+  sendpage-0.9.14.ebuild:
+  ebuild submitted by Russell Adams <rladams@kelsey-seybold.com> in bug 19405;
+  cleaned up
+
