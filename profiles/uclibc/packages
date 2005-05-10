@@ -1,4 +1,4 @@
-# $Header : $
+# $Header: /var/cvsroot/gentoo-x86/profiles/uclibc/packages,v 1.25 2005/05/10 11:01:02 swegener Exp $
 
 # core
 *>=sys-apps/portage-2.0.51
