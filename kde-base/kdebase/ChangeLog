@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdebase
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.194 2005/05/10 03:30:54 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.195 2005/05/10 15:46:26 carlo Exp $
+
+  10 May 2005; Carsten Lohrke <carlo@gentoo.org> kdebase-3.4.0.ebuild:
+  corrected dbus and hal dependencies, #91903
 
   10 May 2005; Aron Griffis <agriffis@gentoo.org> kdebase-3.4.0.ebuild:
   add ~ia64

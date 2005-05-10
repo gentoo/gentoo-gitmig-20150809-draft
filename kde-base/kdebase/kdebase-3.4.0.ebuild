@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.4.0.ebuild,v 1.4 2005/05/10 03:30:54 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.4.0.ebuild,v 1.5 2005/05/10 15:46:26 carlo Exp $
 
 inherit kde-dist eutils
 
@@ -21,8 +21,8 @@ DEPEND="arts? ( ~kde-base/arts-${PV} )
 	lm_sensors? ( sys-apps/lm_sensors )
 	logitech-mouse? ( >=dev-libs/libusb-0.1.10a )
 	ieee1394? ( sys-libs/libraw1394 )
-	hal? ( >=sys-apps/dbus-0.22-r3
-	       >=sys-apps/hal-0.4 )"
+	hal? ( =sys-apps/dbus-0.23*
+	       =sys-apps/hal-0.4* )"
 
 RDEPEND="${DEPEND}
 	java? ( || ( virtual/jdk virtual/jre ) )
