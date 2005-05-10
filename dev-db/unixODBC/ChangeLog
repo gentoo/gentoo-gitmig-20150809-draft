@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/unixODBC
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/ChangeLog,v 1.38 2005/04/08 08:37:01 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/ChangeLog,v 1.39 2005/05/10 15:29:27 carlo Exp $
+
+  10 May 2005; Carsten Lohrke <carlo@gentoo.org> unixODBC-2.0.8.ebuild:
+  removed Qt 2 support
 
   08 Apr 2005; Spider <spider@gentoo.org> unixODBC-2.2.6.ebuild:
   Ugh, Dumb fix. Commited from the wrong overlay :(
