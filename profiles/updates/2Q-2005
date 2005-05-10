@@ -48,3 +48,4 @@ move games-misc/xcruise games-misc/xcruiser
 move dev-perl/mod_perl www-apache/mod_perl
 move dev-perl/libapreq www-apache/libapreq
 move dev-perl/libapreq2 www-apache/libapreq2
+move net-misc/sendpage net-dialup/sendpage
