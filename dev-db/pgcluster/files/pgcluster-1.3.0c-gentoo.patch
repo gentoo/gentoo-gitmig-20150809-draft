@@ -1,0 +1,42 @@
+diff -Naru pgcluster-1.3.0c.org/src/bin/initdb/initdb.c pgcluster-1.3.0c/src/bin/initdb/initdb.c
+--- pgcluster-1.3.0c.org/src/bin/initdb/initdb.c	2004-11-29 03:05:03.000000000 +0000
++++ pgcluster-1.3.0c/src/bin/initdb/initdb.c	2004-12-04 18:02:43.757485824 +0000
+@@ -2617,13 +2617,7 @@
+ 	get_parent_directory(bin_dir);
+ 	
+ 	printf(_("\nSuccess. You can now start the database server using:\n\n"
+-			 "    %s%s%s%spostmaster -D %s%s%s\n"
+-			 "or\n"
+-			 "    %s%s%s%spg_ctl -D %s%s%s -l logfile start\n\n"),
+-	  QUOTE_PATH, bin_dir, QUOTE_PATH, (strlen(bin_dir) > 0) ? DIR_SEP : "",
+-	  QUOTE_PATH, pg_data_native, QUOTE_PATH,
+-	  QUOTE_PATH, bin_dir, QUOTE_PATH, (strlen(bin_dir) > 0) ? DIR_SEP : "",
+-	  QUOTE_PATH, pg_data_native, QUOTE_PATH);
++		   "/etc/init.d/pgcluster start\n\n"));
+ 
+ 	return 0;
+ }
+diff -Naru pgcluster-1.3.0c.org/src/pgcluster/pglb/Makefile pgcluster-1.3.0c/src/pgcluster/pglb/Makefile
+--- pgcluster-1.3.0c.org/src/pgcluster/pglb/Makefile	2005-02-17 22:59:50.000000000 +0000
++++ pgcluster-1.3.0c/src/pgcluster/pglb/Makefile	2005-02-21 06:58:22.184685524 +0000
+@@ -8,7 +8,7 @@
+ top_builddir = ../../..
+ include $(top_builddir)/src/Makefile.global
+ 
+-confdir := ${exec_prefix}/etc
++confdir := /etc/pgcluster
+ 
+ OBJS= child.o cluster_table.o load_balance.o main.o pool_auth.o \
+ 	pool_connection_pool.o pool_process_query.o pool_stream.o \
+diff -Naru pgcluster-1.3.0c.org/src/pgcluster/pgrp/Makefile pgcluster-1.3.0c/src/pgcluster/pgrp/Makefile
+--- pgcluster-1.3.0c.org/src/pgcluster/pgrp/Makefile	2005-02-17 22:59:49.000000000 +0000
++++ pgcluster-1.3.0c/src/pgcluster/pgrp/Makefile	2005-02-21 05:46:56.000000000 +0000
+@@ -8,7 +8,7 @@
+ top_builddir = ../../..
+ include $(top_builddir)/src/Makefile.global
+ 
+-confdir := ${exec_prefix}/etc
++confdir := /etc/pgcluster
+ 
+ OBJS= cascade.o conf.o main.o recovery.o replicate.o rlog.o
+ 
