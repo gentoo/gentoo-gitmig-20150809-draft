@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/br2684ctl
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/br2684ctl/ChangeLog,v 1.1 2005/04/04 19:07:51 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/br2684ctl/ChangeLog,v 1.2 2005/05/10 11:29:46 dholm Exp $
+
+  10 May 2005; David Holm <dholm@gentoo.org> br2684ctl-20040226.ebuild:
+  Added to ~ppc.
 
 *br2684ctl-20040226 (04 Apr 2005)
 

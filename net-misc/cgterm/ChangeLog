@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/cgterm
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cgterm/ChangeLog,v 1.1 2004/12/11 18:07:46 kloeri Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cgterm/ChangeLog,v 1.2 2005/05/10 11:30:00 dholm Exp $
+
+  10 May 2005; David Holm <dholm@gentoo.org> cgterm-1.6.ebuild:
+  Added to ~ppc.
 
 *cgterm-1.6 (11 Dec 2004)
 
