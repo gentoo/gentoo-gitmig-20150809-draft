@@ -1,9 +1,9 @@
-MD5 50049b34a65204f5ad2f2a18e85386a5 ChangeLog 18076
+MD5 3ee006e824f975c20a6afa7468e56b59 ChangeLog 18402
 MD5 37236013e0d26d43c6bff35a8a48e8ec metadata.xml 220
 MD5 685c33f8a3f1980105944ab3c23a346c openssl-0.9.6m.ebuild 3074
 MD5 e59c3cc3221269d3ae08609d821b6b21 openssl-0.9.7c-r1.ebuild 7019
-MD5 e66229368631edc108b736b76936b550 openssl-0.9.7e-r1.ebuild 8336
-MD5 9f3507124b9baf7639163fc5f7fffeff openssl-0.9.7g.ebuild 4885
+MD5 a217f5a3406e3fd1cf335c3c11760657 openssl-0.9.7e-r1.ebuild 8518
+MD5 2e0c25839a4f00e25e947ab90ac60cbb openssl-0.9.7g.ebuild 4996
 MD5 9cb8d8cba8c65d3b422a780141041867 openssl-0.9.7d-r2.ebuild 8960
 MD5 8a6bfea1784fd62ac3a143586b24fd59 openssl-0.9.7e.ebuild 7844
 MD5 744b358cd3b68b2ca6561c214c541fc0 files/addppc64support.diff 1327
@@ -17,6 +17,7 @@ MD5 b901850df9952252974316e78775673b files/openssl-0.9.6-mips.diff 1487
 MD5 cebd09d1819c07b0fab14ad90b0da884 files/openssl-0.9.6m-gentoo.diff 1591
 MD5 f8ff492f66404c732e4661cc4443a2e8 files/openssl-0.9.7-alpha-default-gcc.patch 533
 MD5 bef2724dccc11edf27916526d9c08576 files/openssl-0.9.7-arm-big-endian.patch 1074
+MD5 ef2c8d5afa47da8a58e464f43e6ecc67 files/openssl-0.9.7g-mem-clr-ptr-cast.patch 637
 MD5 7483d6f0412e857e9063dce4aecf2991 files/openssl-0.9.7c-gentoo.diff 936
 MD5 f804ea4df3b388d22451cde6e9458f2b files/openssl-0.9.7c-tempfile.patch 2178
 MD5 7483d6f0412e857e9063dce4aecf2991 files/openssl-0.9.7d-gentoo.diff 936
@@ -26,3 +27,6 @@ MD5 acab4ad88a6c249a7cde0511a0961a2c files/digest-openssl-0.9.7e-r1 134
 MD5 53599279769faf50e5247b68d2907b10 files/openssl-0.9.7e-no-fips.patch 1344
 MD5 90fac5947e771433132723442dc90ab0 files/openssl-0.9.7g-no-fips.patch 333
 MD5 cccc21f217f5222053228e88605a1869 files/gentoo.config-0.9.7g 1415
+MD5 cde67bc688a59d0178f1a6e1bb1db7cf files/openssl-0.9.7g-ptr-casting.patch 714
+MD5 86106e28e408bdd53dd64ad0ecab7f1d files/openssl-0.9.7e-x86_64-bn-asm.patch 3881
+MD5 82e3908837b5066c7ec907812de8da25 files/openssl-0.9.7e-ptr-casting.patch 440

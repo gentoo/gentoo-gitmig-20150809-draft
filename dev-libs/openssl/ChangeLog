@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.113 2005/05/09 06:38:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.114 2005/05/10 02:25:18 vapier Exp $
+
+  10 May 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/openssl-0.9.7e-ptr-casting.patch,
+  +files/openssl-0.9.7e-x86_64-bn-asm.patch,
+  +files/openssl-0.9.7g-mem-clr-ptr-cast.patch,
+  +files/openssl-0.9.7g-ptr-casting.patch, openssl-0.9.7e-r1.ebuild,
+  openssl-0.9.7g.ebuild:
+  Some misc pointer/asm fixes from upstream.
 
   09 May 2005; Mike Frysinger <vapier@gentoo.org>
   +files/gentoo.config-0.9.7g, openssl-0.9.7g.ebuild:

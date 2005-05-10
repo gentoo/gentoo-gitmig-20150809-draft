@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.7e-r1.ebuild,v 1.10 2005/05/02 17:54:37 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.7e-r1.ebuild,v 1.11 2005/05/10 02:25:18 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -30,13 +30,16 @@ src_unpack() {
 	# openssl-0.9.7
 	cd ${WORKDIR}/${P}
 
-	epatch ${FILESDIR}/${PN}-0.9.7c-tempfile.patch
-	[[ $(tc-arch) == "ppc64" ]] && epatch ${FILESDIR}/addppc64support.diff
-	epatch ${FILESDIR}/${PN}-0.9.7e-gentoo.patch
-	epatch ${FILESDIR}/${PN}-0.9.7-arm-big-endian.patch
-	epatch ${FILESDIR}/${PN}-0.9.7-hppa-fix-detection.patch
-	epatch ${FILESDIR}/${PN}-0.9.7-alpha-default-gcc.patch
-	epatch ${FILESDIR}/${PN}-0.9.7e-no-fips.patch
+	epatch "${FILESDIR}"/${PN}-0.9.7c-tempfile.patch
+	[[ $(tc-arch) == "ppc64" ]] && epatch "${FILESDIR}"/addppc64support.diff
+	epatch "${FILESDIR}"/${PN}-0.9.7e-gentoo.patch
+	epatch "${FILESDIR}"/${PN}-0.9.7-arm-big-endian.patch
+	epatch "${FILESDIR}"/${PN}-0.9.7-hppa-fix-detection.patch
+	epatch "${FILESDIR}"/${PN}-0.9.7-alpha-default-gcc.patch
+	epatch "${FILESDIR}"/${PN}-0.9.7e-no-fips.patch
+	epatch "${FILESDIR}"/${PN}-0.9.7e-ptr-casting.patch
+	epatch "${FILESDIR}"/${PN}-0.9.7g-mem-clr-ptr-cast.patch
+	epatch "${FILESDIR}"/${PN}-0.9.7e-x86_64-bn-asm.patch
 
 	case $(gcc-version) in
 		3.2)
@@ -84,11 +87,11 @@ src_unpack() {
 	test -f ${ROOT}/usr/lib/libssl.so.0.9.6 && {
 		cd ${WORKDIR}/${OLD_096_P}
 
-		epatch ${FILESDIR}/${OLD_096_P}-gentoo.diff
+		epatch "${FILESDIR}"/${OLD_096_P}-gentoo.diff
 
 		case ${ARCH} in
 		mips)
-			epatch ${FILESDIR}/openssl-0.9.6-mips.diff
+			epatch "${FILESDIR}"/openssl-0.9.6-mips.diff
 		;;
 		arm)
 			# patch linker to add -ldl or things linking aginst libcrypto fail
