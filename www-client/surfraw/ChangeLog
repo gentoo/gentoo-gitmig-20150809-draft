@@ -1,6 +1,11 @@
 # ChangeLog for www-client/surfraw
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/surfraw/ChangeLog,v 1.3 2005/04/19 14:19:19 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/surfraw/ChangeLog,v 1.4 2005/05/10 12:17:31 seemant Exp $
+
+*surfraw-2.1.0.1 (10 May 2005)
+
+  10 May 2005; Seemant Kulleen <seemant@gentoo.org> +surfraw-2.1.0.1.ebuild:
+  Version bump thanks to: James Rowe <jnrowe@ukfsn.org> in bug #90968
 
 *surfraw-2.0.2.1 (19 Apr 2005)
 
