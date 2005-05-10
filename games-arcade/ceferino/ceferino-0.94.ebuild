@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/ceferino/ceferino-0.94.ebuild,v 1.3 2005/05/09 23:44:23 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/ceferino/ceferino-0.94.ebuild,v 1.4 2005/05/10 15:43:05 dertobi123 Exp $
 
 inherit eutils games
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.loosersjuegos.com.ar/descargas/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ~ppc"
 IUSE="nls"
 
 RDEPEND=">=media-libs/libsdl-1.2
