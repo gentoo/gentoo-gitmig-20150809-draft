@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 8dbd9d163ac531a2d57bb561b69bc1f1 ChangeLog 1177
+MD5 6876e865bdf0777169918e5e49a3aea7 ChangeLog 1323
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 5a59b640d49c4bdd27cec064f2f205ce p5-Palm-1.2.4-r1.ebuild 499
-MD5 946127e07e0bd45b4b1bf3c79c6511ce p5-Palm-1.3.0.ebuild 501
+MD5 4150933f81417ce8c52df67e7de53f2f p5-Palm-1.3.0.ebuild 616
 MD5 b6fcdfe096ca68ed5bc1303ea8888e0c files/digest-p5-Palm-1.3.0 64
 MD5 caec143dba9662ac2dcb28dee292c932 files/digest-p5-Palm-1.2.4-r1 64
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFCcopttG5z4I8BtQoRAofRAJ9dSxQutkpjc4Q7fqBy+oPiOoAZiACePPhh
-jhqNLGHqDcRYfvVVPEtLYy0=
-=CieZ
+iD8DBQFCgJBntG5z4I8BtQoRAnUwAJ4mlr7qWRXiJ5dEh43YC5Dl77ttVQCeO84M
+N9XQ4W0+4TirwYjMTf1EcN4=
+=Z9Qt
 -----END PGP SIGNATURE-----
