@@ -1,6 +1,10 @@
 # ChangeLog for sci-mathematics/drgeo
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/drgeo/ChangeLog,v 1.5 2005/04/08 14:40:31 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/drgeo/ChangeLog,v 1.6 2005/05/10 09:36:49 cryos Exp $
+
+  10 May 2005; Marcus D. Hanwell <cryos@gentoo.org> metadata.xml,
+  drgeo-1.0.0.ebuild:
+  Stable on amd64 and x86. Updated metadata.
 
 *drgeo-1.0.0 (08 Apr 2005)
 
