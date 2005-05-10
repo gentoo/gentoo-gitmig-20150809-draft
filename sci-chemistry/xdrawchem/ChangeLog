@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/xdrawchem
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/xdrawchem/ChangeLog,v 1.9 2005/05/06 07:25:49 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/xdrawchem/ChangeLog,v 1.10 2005/05/10 13:37:01 gustavoz Exp $
+
+  10 May 2005; Gustavo Zacarias <gustavoz@gentoo.org>
+  xdrawchem-1.9.4.ebuild:
+  Stable on sparc
 
 *xdrawchem-1.9.5 (06 May 2005)
 
