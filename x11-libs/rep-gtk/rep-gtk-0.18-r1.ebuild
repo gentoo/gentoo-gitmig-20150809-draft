@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/rep-gtk/rep-gtk-0.18-r1.ebuild,v 1.2 2005/03/14 04:17:50 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/rep-gtk/rep-gtk-0.18-r1.ebuild,v 1.3 2005/05/10 04:25:19 agriffis Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 HOMEPAGE="http://rep-gtk.sourceforge.net/"
 SLOT="gtk-2.0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~alpha ~ia64 ~amd64 ~sparc ~ppc"
+KEYWORDS="alpha amd64 ia64 ~ppc ~sparc x86"
 
 DEPEND="virtual/libc
 	>=dev-util/pkgconfig-0.12.0
