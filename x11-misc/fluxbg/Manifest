@@ -1,4 +1,14 @@
-MD5 574cc9a29788cf357caa1f305168eb2b ChangeLog 1074
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 ea1244f3fe51c99824bd50211d1233d6 fluxbg-0.7.ebuild 660
+MD5 3355ee7738ac5e5c94e5160cf7f5c34e ChangeLog 980
 MD5 42aa402e6683427ce35fb509283b5c1f metadata.xml 238
 MD5 1bd79397bbe71432f9ffba3b2f4d93ac files/digest-fluxbg-0.7 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCgJJqI1lqEGTUzyQRAsQEAJ9/LEtIsjPHvCLOXm01QuCKnvZWaACfc22R
+i3WDnk41003stFbn0bM8WIg=
+=fY3z
+-----END PGP SIGNATURE-----
