@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Compress-Zlib
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Compress-Zlib/ChangeLog,v 1.28 2005/03/12 10:55:25 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Compress-Zlib/ChangeLog,v 1.29 2005/05/10 01:28:49 beu Exp $
+
+*Compress-Zlib-1.34 (10 May 2005)
+
+  10 May 2005; Elfyn McBratney <beu@gentoo.org> +Compress-Zlib-1.34.ebuild:
+  Version bump.
 
   12 Mar 2005; Markus Rothe <corsair@gentoo.org> Compress-Zlib-1.33.ebuild:
   Stable on ppc64
