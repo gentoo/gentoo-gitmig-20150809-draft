@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 31f5e4c022e7498687138af7bdf6fa70 xfce4-sensors-0.3.0.ebuild 361
-MD5 70bb5eafbfd7ca459fad1365c44a25e0 ChangeLog 516
+MD5 aa1e7450cbb5354a4a2701656314fb99 ChangeLog 608
 MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
+MD5 66d94519e6ec5f14660e0dbe4bd38a1d xfce4-sensors-0.3.0.ebuild 367
 MD5 275580f04cb4adf0947f2db17499a4ff files/digest-xfce4-sensors-0.3.0 78
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCIeKVI1lqEGTUzyQRAimxAKDToLJP1zjV/P4hGLO5KeNG2nMcFQCghOj8
-wvZJlJqEl1drqxsQZs/HdWk=
-=AUkJ
------END PGP SIGNATURE-----
