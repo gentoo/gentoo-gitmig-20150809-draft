@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/multisync/multisync-0.83_pre20050414-r1.ebuild,v 1.1 2005/05/02 11:19:54 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/multisync/multisync-0.83_pre20050414-r2.ebuild,v 1.1 2005/05/10 19:12:33 johnm Exp $
 
-inherit versionator
+inherit versionator kde-functions
 
 CVS_VERSION="${PV/*_pre/}"
 S=${WORKDIR}/${PN}
@@ -69,8 +69,17 @@ run_compile() {
 	autoheader || die "Failed during autoheader!"
 	automake --add-missing --gnu || die "Failed during automake!"
 	autoconf || die "Failed during autoconf!"
-	econf || die "Failed during econf!"
+	econf CPPFLAGS="${myInc} ${CPPFLAGS}" || die "Failed during econf!"
 	make || die "Failed during make!"
+}
+
+pkg_setup() {
+	if use kdepim; then
+		set-qtdir 3
+		set-kdedir 3
+		myInc="-I${KDEDIR}/include ${myInc}"
+	fi
+	use pda && myInc="-I/usr/include/libpisock ${myInc}"
 }
 
 src_compile() {
@@ -82,9 +91,7 @@ src_compile() {
 	done
 
 	cd ${S}
-	EXTRA_ECONF="CPPFLAGS=-I/usr/include/libpisock"
 	run_compile;
-
 	for plugin_dir in ${PLUGINS}; do
 		einfo "Building ${plugin_dir}"
 		cd ${S}/plugins/${plugin_dir}

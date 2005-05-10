@@ -1,19 +1,19 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 b149e063d5d9cf98b5eaaab5f3076a56 multisync-0.83_pre20050414-r1.ebuild 2987
 MD5 7cd2e05eacfffa423533551916cf5cc7 multisync-0.82.ebuild 2258
-MD5 4b383c23babd926373ab28a9bf5d1642 ChangeLog 3791
+MD5 2dd62b82aaf47570203c8c8c030da5d0 multisync-0.83_pre20050414-r2.ebuild 3147
+MD5 cc0527b5f418d9622761cf101964cecc ChangeLog 3993
 MD5 98c2170b9baad0146d1dc1e74a2bb445 metadata.xml 454
 MD5 8dcfd4b620831bf876a1a0f84469597e files/multisync-0.82-bluetooth-sdp.patch 714
 MD5 9caf6f63fb6ecf15986fb4752ffd5ffa files/multisync-0.81-gentoo.patch 902
 MD5 94a424df4dc4575edbb2a91c5ff4eaa3 files/digest-multisync-0.82 68
 MD5 d39bdf982f04d4b0ae776c3d1b2f2eba files/multisync-0.82-bluetooth-sdp-2.patch 814
-MD5 c668aca6eec704faa03632e0588bbe3e files/digest-multisync-0.83_pre20050414-r1 71
+MD5 c668aca6eec704faa03632e0588bbe3e files/digest-multisync-0.83_pre20050414-r2 71
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCdgz6z7mlh8wQzGMRAnnsAJ0WpqYlad/krEHD1wdcSbRCwjKz2gCfT2+J
-xqxZqcTaomlDlKEHdOhiWIE=
-=9hvt
+iD8DBQFCgQe5z7mlh8wQzGMRAnteAJ4zMKDdSTmFPOXeuwjTO5AONL5ibACff8kQ
+yusQ9zX1f5jws75NXY7HlXo=
+=oFnZ
 -----END PGP SIGNATURE-----
