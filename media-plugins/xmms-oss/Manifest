@@ -3,14 +3,14 @@ Hash: SHA1
 
 MD5 5a8290e44006ccff0dff3094555d6366 metadata.xml 257
 MD5 65397a3be70db31fd58bbe2bb0bee252 xmms-oss-1.2.10.ebuild 483
-MD5 31e644b1119c4202fab8a7cb9abdcb63 ChangeLog 1139
-MD5 5cd8ba4dbeeeb19c89c11ef17e484df9 xmms-oss-1.2.10-r1.ebuild 462
+MD5 04e580268c64fb1faf272eba50edc043 ChangeLog 1337
+MD5 b9d9fd62baf0d5670cbfd8b2d940494c xmms-oss-1.2.10-r2.ebuild 462
 MD5 f930420b092ea660e8da0c4b24e0f6a4 files/digest-xmms-oss-1.2.10 142
-MD5 85bfccb66ec444c33dc7ecd557452d05 files/digest-xmms-oss-1.2.10-r1 227
+MD5 811c43df33f2405a4d3fbf0ab0089287 files/digest-xmms-oss-1.2.10-r2 227
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCYOZxArHZZzCEUG0RAjQoAKCANTUKgH8lOoJdNmKjO4EpzbSoOACeKGqV
-axqXMi0wQnPIL7y8urHH1Yg=
-=1jdg
+iD8DBQFCgP++ArHZZzCEUG0RAmnMAJ0VX6zoZUVKqGA1eaix43h2ApOa8QCfVNnW
+qm6MFh9bGVQZ6qiT/2EcDdY=
+=2FoL
 -----END PGP SIGNATURE-----
