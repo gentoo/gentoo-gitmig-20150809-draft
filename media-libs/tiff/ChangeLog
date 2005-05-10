@@ -1,9 +1,9 @@
 # ChangeLog for media-libs/tiff
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/ChangeLog,v 1.56 2005/05/10 16:47:09 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/ChangeLog,v 1.57 2005/05/10 17:10:48 taviso Exp $
 
   10 May 2005; Tavis Ormandy <taviso@gentoo.org> tiff-3.7.2.ebuild:
-  stable on x86
+  stable on x86 and alpha
 
   09 May 2005; Aron Griffis <agriffis@gentoo.org> tiff-3.7.2.ebuild:
   stable on ia64
