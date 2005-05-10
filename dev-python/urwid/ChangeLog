@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/urwid
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/urwid/ChangeLog,v 1.6 2005/05/10 00:33:45 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/urwid/ChangeLog,v 1.7 2005/05/10 04:18:50 pythonhead Exp $
+
+  10 May 2005; Rob Cakebread <pythonhead@gentoo.org>
+  +files/urwid-0.8.7-input.diff, urwid-0.8.7.ebuild:
+  Added down key patch from upstream. bug# 91338
 
 *urwid-0.8.7 (10 May 2005)
 
