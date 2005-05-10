@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sysvinit/sysvinit-2.86.ebuild,v 1.5 2005/02/21 15:31:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sysvinit/sysvinit-2.86.ebuild,v 1.6 2005/05/10 02:58:04 vapier Exp $
 
 inherit eutils toolchain-funcs
 
@@ -20,7 +20,10 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
-	cd "${S}"/src
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-docs.patch
+	epatch "${FILESDIR}"/${P}-shutdown-usage.patch
+	cd src
 	epatch "${FILESDIR}"/${PV}-gentoo.patch
 	use selinux && epatch "${FILESDIR}"/${PV}-selinux.patch
 }
