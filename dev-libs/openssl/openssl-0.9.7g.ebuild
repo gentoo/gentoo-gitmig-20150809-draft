@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.7g.ebuild,v 1.3 2005/05/10 02:25:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.7g.ebuild,v 1.4 2005/05/10 05:38:26 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://openssl/source/${P}.tar.gz"
 
 LICENSE="openssl"
 SLOT="0"
-KEYWORDS="-*" # seems to cause segfaults with openssh ...
+KEYWORDS="~alpha ~amd64 ~arm ~hppa -ia64 ~m68k -mips ~ppc -ppc64 ~s390 ~sh -sparc ~x86"
 IUSE="emacs test bindist"
 
 RDEPEND=""
@@ -30,6 +30,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${PN}-0.9.7g-no-fips.patch
 	epatch "${FILESDIR}"/${PN}-0.9.7g-ptr-casting.patch
 	epatch "${FILESDIR}"/${PN}-0.9.7g-mem-clr-ptr-cast.patch
+	epatch "${FILESDIR}"/${PN}-0.9.7g-ABI-compat.patch
 
 	# allow openssl to be cross-compiled
 	cp "${FILESDIR}"/gentoo.config-0.9.7g gentoo.config || die "cp cross-compile failed"
@@ -103,6 +104,9 @@ src_compile() {
 		AR="$(tc-getAR) r" \
 		RANLIB="$(tc-getRANLIB)" \
 		all || die "make all failed"
+
+	# force until we get all the gentoo.config kinks worked out
+	src_test
 }
 
 src_test() {

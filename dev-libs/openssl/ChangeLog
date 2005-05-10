@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.114 2005/05/10 02:25:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.115 2005/05/10 05:38:26 vapier Exp $
+
+  10 May 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/openssl-0.9.7g-ABI-compat.patch, openssl-0.9.7g.ebuild:
+  Add patch to fix amd64 ABI breakage #86358. Thanks to Daniel Gryniewicz for
+  tracking this down.
 
   10 May 2005; Mike Frysinger <vapier@gentoo.org>
   +files/openssl-0.9.7e-ptr-casting.patch,
