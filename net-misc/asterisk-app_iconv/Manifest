@@ -1,5 +1,5 @@
+MD5 665fd644e8a75579771e9f74dd62ead8 ChangeLog 616
+MD5 a0fe2f1c35cf0618ab55239bf196e60e asterisk-app_iconv-0.8.ebuild 845
 MD5 de41c503f05f5f99a8635b0e333729a5 metadata.xml 217
-MD5 6e13d1189d4116fa8a7009fd85530e1c asterisk-app_iconv-0.8.ebuild 839
-MD5 ff0ecb1ae07319c02da021cbe84fb1a3 ChangeLog 521
 MD5 1d9290f7bf08909942aec614e4b8d2a8 files/app_iconv-0.8-astcfg.diff 717
 MD5 9f6ac556f86bdaf7b54d9e022a542eeb files/digest-asterisk-app_iconv-0.8 60
