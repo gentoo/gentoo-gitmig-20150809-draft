@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/rdesktop
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rdesktop/ChangeLog,v 1.49 2005/04/14 12:59:07 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rdesktop/ChangeLog,v 1.50 2005/05/10 14:16:20 wolf31o2 Exp $
+
+*rdesktop-1.4.1 (10 May 2005)
+
+  10 May 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  rdesktop-1.4.0-r1.ebuild, +rdesktop-1.4.1.ebuild:
+  Version bumped to 1.4.1, marking 1.4.0 stable on x86 and amd64, and closing
+  bug #91932.
 
 *rdesktop-1.4.0-r1 (14 Apr 2005)
 
