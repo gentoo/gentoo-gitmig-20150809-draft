@@ -1,6 +1,16 @@
-MD5 9faf4be586e661adaf43ac17255650d3 ChangeLog 1206
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 1c784be45b571bfad5f6d6a78b9ed335 rt-3.2.1.ebuild 4204
 MD5 224c312cc23d02aa06c26a4da3cc1f90 metadata.xml 221
-MD5 3a265ee2fb61512f020c5b13db819538 rt-3.2.1.ebuild 4202
-MD5 5f5c3f76ea4676e743612e38341780fe files/digest-rt-3.2.1 61
-MD5 15fc088b37155656e008679f3c07eea7 files/postinstall-en.txt 1648
+MD5 a79d23444d0ee433c185c009b834bbe2 ChangeLog 1308
 MD5 0706d6edcd1c4e23f526d611c9c6b531 files/reconfig 1170
+MD5 15fc088b37155656e008679f3c07eea7 files/postinstall-en.txt 1648
+MD5 5f5c3f76ea4676e743612e38341780fe files/digest-rt-3.2.1 61
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCf/81jUHll2nfF60RAnNvAJ9b2ErLZ9uxNwkdo0obShBJAXgdlQCgneDo
+udF057AwzHl7rjxGp1cvDaA=
+=gjQ8
+-----END PGP SIGNATURE-----
