@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 398d5b2459964351fd302178c99b8a69 zabbix-server-1.0.ebuild 3108
 MD5 f2e62324e4a6d7f38384c4fa79ff63b2 ChangeLog 2575
 MD5 7336ce4cfc26231004431efa51887468 zabbix-server-1.1_alpha7.ebuild 2924
@@ -12,7 +15,14 @@ MD5 9832a81e134c8e2c11e2a06b7adbf88f files/1.1_alpha7/zabbix_trapper.conf 762
 MD5 cdfb81599cdbef1978ae712aba19d878 files/1.1_alpha7/zabbix_server.conf 2063
 MD5 ee29fececd9e7e7b108b691b854020b0 files/1.0/conf.d/zabbix-suckerd 334
 MD5 982b22f8da53a2810028d9561177fdbb files/1.0/conf.d/zabbix-trapperd 337
-MD5 f7f8e7b46c4955faac2f3b4427637b6d files/1.0/init.d/zabbix-suckerd 406
-MD5 9298aa0bbe60957a10548d41c15fe977 files/1.0/init.d/zabbix-trapperd 409
+MD5 5bcc174b701a0bb701392c2cb7e692e8 files/1.0/init.d/zabbix-suckerd 530
+MD5 f7c6c922206cf9c162a9ab5a7aa66514 files/1.0/init.d/zabbix-trapperd 534
 MD5 e4dd6d5b2b1a84b5b1f74ab450e2b50b files/1.1_alpha7/conf.d/zabbix-server 338
-MD5 d0a3819193ef72273ab77082ccfdb89b files/1.1_alpha7/init.d/zabbix-server 404
+MD5 eecfecec3c84a8972e98068fbe981b50 files/1.1_alpha7/init.d/zabbix-server 534
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCgJCOI1lqEGTUzyQRAuHFAJ0e0llRVMhl72T3rhsiat7Qd1iRdQCfSmgp
+9rovs6AkHi2mhKmPf9Wj8Bc=
+=O3fd
+-----END PGP SIGNATURE-----

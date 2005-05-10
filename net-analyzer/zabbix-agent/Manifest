@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 80ff384524561533482492cd99da3348 zabbix-agent-1.0.ebuild 1701
 MD5 5a53d6cf13397dc7f124aeaa1803789f zabbix-agent-1.1_alpha7.ebuild 1737
 MD5 f2aa6aacd7fb5df8192f22b849ea9a38 ChangeLog 1829
@@ -9,6 +12,13 @@ MD5 6a60283a6c3b457428af0c79ce1774b3 files/1.0/zabbix_agentd.conf 1956
 MD5 dca8d533925687d02825a5401e723c3d files/1.1_alpha7/zabbix_agent.conf 1129
 MD5 03be35f02a504402ea6355782675b139 files/1.1_alpha7/zabbix_agentd.conf 1961
 MD5 3d23f2a55281f4dee207ba003058583b files/1.0/conf.d/zabbix-agentd 330
-MD5 6426b1212530786e6fef78039605e1fb files/1.0/init.d/zabbix-agentd 403
+MD5 c98787ba2f94c526ecfef18318b2cbb4 files/1.0/init.d/zabbix-agentd 525
 MD5 3c18418797fcdcbc7d1f20f3bea2591f files/1.1_alpha7/conf.d/zabbix-agentd 337
-MD5 6426b1212530786e6fef78039605e1fb files/1.1_alpha7/init.d/zabbix-agentd 403
+MD5 d7e8783f3e9d21287a92ed332dd5dc09 files/1.1_alpha7/init.d/zabbix-agentd 532
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCgJEyI1lqEGTUzyQRAojYAKCtq3aPoiMJvqvR3wbuDFxUS12LpQCglyPb
+tswPC4PnUyddj2Xt2Un9pg0=
+=IoRd
+-----END PGP SIGNATURE-----
