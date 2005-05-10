@@ -1,6 +1,10 @@
 # ChangeLog for dev-cpp/glibmm
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/glibmm/ChangeLog,v 1.30 2005/05/09 17:26:47 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/glibmm/ChangeLog,v 1.31 2005/05/10 18:16:56 ka0ttic Exp $
+
+  10 May 2005; Aaron Walker <ka0ttic@gentoo.org> glibmm-2.4.7-r1.ebuild,
+  glibmm-2.6.1.ebuild:
+  Depend on >=dev-libs/libsifc++-2.0.11. Closes bug 88867.
 
   09 May 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   glibmm-2.4.7-r1.ebuild:
