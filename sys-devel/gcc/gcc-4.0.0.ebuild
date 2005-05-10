@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.0.0.ebuild,v 1.1 2005/04/21 20:56:38 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.0.0.ebuild,v 1.2 2005/05/10 18:10:37 azarah Exp $
 
 ETYPE="gcc-compiler"
 
@@ -39,10 +39,19 @@ fi
 DEPEND="${RDEPEND}
 	>=sys-apps/texinfo-4.2-r4
 	>=sys-devel/bison-1.875
-	>=sys-devel/binutils-2.15.90.0.1.1-r1"
+	>=sys-devel/binutils-2.15.97"
 
 PDEPEND="sys-devel/gcc-config
 	!nocxx? ( !n32? ( !n64? ( !uclibc? ( !build? ( sys-libs/libstdc++-v3 ) ) ) ) )"
+
+src_unpack() {
+	gcc_src_unpack
+
+	cd ${S}
+	for x in $(cat /tmp/gcc4/list); do
+		[[ -f /tmp/gcc4/${x} ]] && epatch "/tmp/gcc4/${x}"
+	done
+}
 
 pkg_postinst() {
 	toolchain_pkg_postinst

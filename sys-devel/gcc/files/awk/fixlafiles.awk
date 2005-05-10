@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/files/awk/fixlafiles.awk,v 1.12 2005/01/18 01:58:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/files/awk/fixlafiles.awk,v 1.13 2005/05/10 18:10:37 azarah Exp $
 
 #
 # Helper functions
@@ -119,7 +119,7 @@ BEGIN {
 	#
 	# Get line from gcc's output containing CHOST
 	#
-	pipe = "gcc -v 2>&1 | egrep '^Reading specs' 2>/dev/null"
+	pipe = "gcc -print-file-name=libgcc.a 2>/dev/null"
 	if ((!((pipe) | getline TMP_CHOST)) || (TMP_CHOST == "")) {
 		close(pipe)
 

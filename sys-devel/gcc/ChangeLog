@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.402 2005/05/08 23:53:14 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.403 2005/05/10 18:10:37 azarah Exp $
+
+  10 May 2005; Martin Schlemmer <azarah@gentoo.org>
+  files/awk/fixlafiles.awk, gcc-4.0.0.ebuild, gcc-4.0.1_beta20050507.ebuild:
+  Fixup fixlafiles.awk detecting of gcc CHOST.
 
 *gcc-4.0.1_beta20050507 (08 May 2005)
 
