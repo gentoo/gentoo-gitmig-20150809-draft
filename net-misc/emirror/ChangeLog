@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/emirror
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/emirror/ChangeLog,v 1.4 2004/06/24 23:43:05 agriffis Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/emirror/ChangeLog,v 1.5 2005/05/10 10:20:43 dholm Exp $
+
+  10 May 2005; David Holm <dholm@gentoo.org> emirror-2.1.21.ebuild:
+  Added to ~ppc.
 
   19 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> emirror-2.1.21.ebuild:
   fix depend (bug #45110); tidy

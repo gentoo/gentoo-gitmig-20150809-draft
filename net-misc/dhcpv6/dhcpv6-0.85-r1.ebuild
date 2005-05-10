@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpv6/dhcpv6-0.85-r1.ebuild,v 1.7 2004/06/24 23:41:39 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpv6/dhcpv6-0.85-r1.ebuild,v 1.8 2005/05/10 10:22:23 dholm Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/dhcpv6/${MY_P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 hppa"
+KEYWORDS="~x86 hppa ~ppc"
 IUSE="static"
 
 DEPEND=""
