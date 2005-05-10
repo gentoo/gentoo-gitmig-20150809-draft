@@ -1,5 +1,10 @@
---- gcc-3.4.2-r1/gcc/gcc.c	2004-09-13 14:30:15.995139424 +0000
-+++ gcc-3.4.2-r1/gcc/gcc.c.new	2004-09-13 14:38:58.731671392 +0000
+Add support for external spec file via the GCC_SPECS env var.  This 
+allows us to easily control pie/ssp defaults with gcc-config profiles.
+
+Patch by Rob Holland.
+
+--- gcc-3/gcc/gcc.c
++++ gcc-3/gcc/gcc.c
 @@ -6421,6 +6421,21 @@
  
    /* Process any user specified specs in the order given on the command
