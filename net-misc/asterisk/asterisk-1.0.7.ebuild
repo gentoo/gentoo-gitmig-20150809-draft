@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.0.7.ebuild,v 1.6 2005/05/05 15:52:23 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.0.7.ebuild,v 1.7 2005/05/10 11:53:32 dholm Exp $
 
 IUSE="alsa doc gtk mmx mysql pri zaptel uclibc debug postgres vmdbmysql vmdbpostgres bri hardened speex resperl"
 
@@ -20,7 +20,7 @@ S_ADDONS=${WORKDIR}/${PN}-addons-${ADDONS_VERSION}
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~sparc ~hppa ~amd64"
+KEYWORDS="~x86 ~sparc ~hppa ~amd64 ~ppc"
 
 DEPEND="dev-libs/newt
 	media-sound/mpg123
