@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/jwm/jwm-0.21.ebuild,v 1.1 2005/03/05 14:07:13 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/jwm/jwm-0.21.ebuild,v 1.2 2005/05/10 09:26:08 dholm Exp $
 
 IUSE=""
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://joewing.net/programs/jwm/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 
 DEPEND="virtual/x11"
 
