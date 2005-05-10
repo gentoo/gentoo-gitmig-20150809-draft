@@ -1,4 +1,7 @@
-MD5 18702065580b3b924dac2b7d5bebe971 itext-1.3.ebuild 1086
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 9e4dac6b069d934d0ef35b123966f949 itext-1.3.ebuild 1182
 MD5 0b52f45395efef85acac443529294d5b itext-1.2.3.ebuild 1183
 MD5 1e13a2fe03acc5647edb77d4cccd89a3 itext-1.1.4.ebuild 1176
 MD5 814ad079a5e0ce79dc2909211b7d6109 ChangeLog 1596
@@ -6,3 +9,10 @@ MD5 f4bcbe202d039f3aeef294666a30e5fb metadata.xml 366
 MD5 9efb9a777cb4b6f8d0125f5140432bdf files/digest-itext-1.3 176
 MD5 3a34469b63997a2c29009457ef4639ba files/digest-itext-1.1.4 178
 MD5 c90c9fb4765b01afdd1fb33582805da1 files/digest-itext-1.2.3 178
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCgJQmI1lqEGTUzyQRAgT8AJ40dQK/HtK4twwWE28dYBJoQSXz9wCfdon0
+/8ZZJ/mYUkaJ6x5tL/FBl78=
+=KnGa
+-----END PGP SIGNATURE-----
