@@ -1,30 +1,20 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 c1088729bb4739443814df9b343d34d5 apr-0.9.6-r3.ebuild 1531
-MD5 0d18f0fe5d603b41b988373892caf195 metadata.xml 226
-MD5 5fc2ae7d29f5e743817535ed28b2de2d apr-0.9.6-r2.ebuild 2344
-MD5 6f7741bc16050cd42dcfbd1e7eab2baf ChangeLog 3761
-MD5 068e4d83429849cbae32d8194086efb2 apr-0.9.6.ebuild 2176
-MD5 c949c5d1ead25fc80f948329f8f33372 apr-0.9.5-r3.ebuild 1531
-MD5 099d69afb7c9798380d1432561aacdc7 apr-1.1.1.ebuild 2001
-MD5 2e4a61ffb43df4b4f63ac0317a3660a9 apr-0.9.5-r2.ebuild 2344
+MD5 fa3e63480dfd5db82e02381c0791693a ChangeLog 3858
 MD5 86a4c96972b87a34fd0b2159e9f336cf apr-0.9.5-r1.ebuild 2237
+MD5 2e4a61ffb43df4b4f63ac0317a3660a9 apr-0.9.5-r2.ebuild 2344
+MD5 c949c5d1ead25fc80f948329f8f33372 apr-0.9.5-r3.ebuild 1531
+MD5 b18707d779d87f9e275fe8f990ae520e apr-0.9.5.ebuild 2184
 MD5 aadbec5bc76c5f1060218e1625157190 apr-0.9.6-r1.ebuild 2237
-MD5 19f34b3d8f4335951410787ed733718e apr-0.9.5.ebuild 2180
-MD5 a90539853bca24e2f0e77192d41e5a01 files/digest-apr-0.9.5-r2 62
-MD5 2b9c5f7ab799254e5738997732c9be8c files/digest-apr-0.9.6-r2 62
+MD5 5fc2ae7d29f5e743817535ed28b2de2d apr-0.9.6-r2.ebuild 2344
+MD5 c1088729bb4739443814df9b343d34d5 apr-0.9.6-r3.ebuild 1531
+MD5 068e4d83429849cbae32d8194086efb2 apr-0.9.6.ebuild 2176
+MD5 099d69afb7c9798380d1432561aacdc7 apr-1.1.1.ebuild 2001
+MD5 0d18f0fe5d603b41b988373892caf195 metadata.xml 226
 MD5 a90539853bca24e2f0e77192d41e5a01 files/digest-apr-0.9.5 62
 MD5 a90539853bca24e2f0e77192d41e5a01 files/digest-apr-0.9.5-r1 62
+MD5 a90539853bca24e2f0e77192d41e5a01 files/digest-apr-0.9.5-r2 62
 MD5 a90539853bca24e2f0e77192d41e5a01 files/digest-apr-0.9.5-r3 62
-MD5 2b9c5f7ab799254e5738997732c9be8c files/digest-apr-0.9.6-r1 62
 MD5 2b9c5f7ab799254e5738997732c9be8c files/digest-apr-0.9.6 62
-MD5 7a3bbbaa94fd0f5b9f33afc40db8f618 files/digest-apr-1.1.1 62
+MD5 2b9c5f7ab799254e5738997732c9be8c files/digest-apr-0.9.6-r1 62
+MD5 2b9c5f7ab799254e5738997732c9be8c files/digest-apr-0.9.6-r2 62
 MD5 2b9c5f7ab799254e5738997732c9be8c files/digest-apr-0.9.6-r3 62
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCf3dmjUHll2nfF60RAoc5AJ4yLuRDaXECxjq2zU4AFxxKkdFNIACguoNf
-F7CIcUmgn85wBcDk0uGbtzs=
-=aVXN
------END PGP SIGNATURE-----
+MD5 7a3bbbaa94fd0f5b9f33afc40db8f618 files/digest-apr-1.1.1 62
