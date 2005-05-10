@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/unfoo
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/unfoo/ChangeLog,v 1.9 2005/04/21 17:10:42 nigoro Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/unfoo/ChangeLog,v 1.10 2005/05/10 11:37:38 seemant Exp $
+
+  10 May 2005; Seemant Kulleen <seemant@gentoo.org> unfoo-1.0.4.ebuild:
+  homepage/src_uri fix thanks to AllanonJL in #gentoo-desktop
 
   21 Apr 2005; Yuta SATOH <nigoro@gentoo.org> unfoo-1.0.4.ebuild:
   Stable on ppc64
