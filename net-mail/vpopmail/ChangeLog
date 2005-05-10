@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/vpopmail
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/ChangeLog,v 1.54 2005/05/10 02:03:17 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/ChangeLog,v 1.55 2005/05/10 02:07:43 anarchy Exp $
+
+  10 May 2005; <anarchy@gentoo.org> -files/vpopmail-5.4.9-Makefile.patch,
+  -vpopmail-5.4.9-r2.ebuild:
+  wrong ebuilds and patches were added OOPS
 
 *vpopmail-5.4.9-r2 (10 May 2005)
 
