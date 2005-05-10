@@ -2,12 +2,15 @@
 Hash: SHA1
 
 MD5 90d5b27f5bdf0c609345c61a0ca41612 dvenv-0.2.2.ebuild 693
-MD5 1f6584b0508d029477dc10c44fee766c ChangeLog 689
+MD5 7e39279e72fed59dc20bcb736ff9f88b ChangeLog 941
+MD5 f8d10f350e91f30316ea4e1bd1e76470 metadata.xml 254
+MD5 359a293796bb39e672719e056a01ab15 dvenv-0.2.2-r1.ebuild 839
+MD5 c42cc75097a337cb937538324a491c7f files/digest-dvenv-0.2.2-r1 63
 MD5 c42cc75097a337cb937538324a491c7f files/digest-dvenv-0.2.2 63
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFB+HG4gMUyd/cdjWsRAhOGAJ9r6daGojW5rZ75xIinc5R6DMimHQCfWx3x
-IpGvryvNGsPUcn6HmnFZHyk=
-=4zDx
+iD8DBQFCgL9AEZCkKN40op4RAoJtAJ4sQ/7xydahbxijzQnndCvEKqlZ8gCgwxd4
+D2h1cUW98jIN9yFl7zxA6qA=
+=Qpuj
 -----END PGP SIGNATURE-----
