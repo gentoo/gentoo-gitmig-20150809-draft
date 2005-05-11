@@ -1,17 +1,17 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 7ee3a8505e5c27a92cb86e9f90df010f dump-0.4.39.ebuild 1545
-MD5 f35af6680e95aa6a8b8569321a060833 ChangeLog 5752
+MD5 25cc42e94f81cb70c75521c954523a60 ChangeLog 5845
 MD5 7b798cbea6e9a29ae22ece46ce51b41e dump-0.4.37.ebuild 1540
+MD5 7e985c938e1895fe4989fff860279f7b dump-0.4.39.ebuild 1544
 MD5 38c2ce8037af26dc753862a61eb59e4f dump-0.4.40.ebuild 1549
 MD5 15319d17b124480af1cb76202c5cb78d files/digest-dump-0.4.37 63
-MD5 68a2aca891a2c4b0f855df69ae2727f9 files/digest-dump-0.4.40 63
 MD5 918243abb15a1cf0df32c00b42d77b50 files/digest-dump-0.4.39 63
+MD5 68a2aca891a2c4b0f855df69ae2727f9 files/digest-dump-0.4.40 63
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFCgUNJBXaUFmZvwyMRApejAKC/mEfvZfSV2ZdaWrfeqJKpRugnsQCg0w0Y
-+DLJCAvIykU4N2xzk89fxto=
-=4Uj6
+iD8DBQFCggNbKRy60XGEcJIRAnp7AKCsq57gBptp/ZUC0SzQfGtETU3kGQCghLxe
+FuB2/OXU7pG+OS6U37m35lM=
+=b4zt
 -----END PGP SIGNATURE-----
