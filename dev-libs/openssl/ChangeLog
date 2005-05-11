@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.115 2005/05/10 05:38:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.116 2005/05/11 00:27:59 gustavoz Exp $
+
+  11 May 2005; Gustavo Zacarias <gustavoz@gentoo.org> openssl-0.9.7g.ebuild:
+  Back to ~sparc wrt #92075
 
   10 May 2005; Mike Frysinger <vapier@gentoo.org>
   +files/openssl-0.9.7g-ABI-compat.patch, openssl-0.9.7g.ebuild:
