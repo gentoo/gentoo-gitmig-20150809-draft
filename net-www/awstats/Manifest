@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 0b56bf509337f3f5697eaa6924d40fb0 awstats-6.3-r2.ebuild 4038
-MD5 ef6d37e607f5a4ea476b6b254ef8f0bb awstats-6.4.ebuild 3867
-MD5 97693dd640c89e3971ee30307eaf22f2 ChangeLog 3025
+MD5 4732d4c420db27d2588352c9fff128b8 awstats-6.3-r2.ebuild 4039
+MD5 49141cd3989de828cbdbc846123725c3 awstats-6.4.ebuild 3897
+MD5 115161a383bd8164d455a0466e60d37f ChangeLog 3197
 MD5 6bc2db5b1e135821863e91fa8658ad48 metadata.xml 255
 MD5 803faa3640a7aadd2fadbbd05968a45e files/digest-awstats-6.4 60
 MD5 70a086a2f452243a500aa67b1df7f26f files/digest-awstats-6.3-r2 135
@@ -13,7 +13,7 @@ MD5 8f8b0ad336b5066db17452db770ed878 files/awstats-6.3-CAN-2005-0363.diff 1243
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCajO9EZCkKN40op4RAqPxAJ9vjQNRlb5hyyXSuuOuaOia91dJgwCggMe6
-hA9BUBCwlX1xUnlFjNU2Khs=
-=8zLE
+iD8DBQFCgg3DEZCkKN40op4RAnZHAJ0fsHYtZh2ojIBYYeZcB/mvBG4cDQCfdi+A
+dZNcGt9xizyDt27NOZWc0lU=
+=On76
 -----END PGP SIGNATURE-----

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/awstats/awstats-6.3-r2.ebuild,v 1.3 2005/03/21 13:36:21 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/awstats/awstats-6.3-r2.ebuild,v 1.4 2005/05/11 13:49:41 ka0ttic Exp $
 
 inherit eutils webapp versionator
 
@@ -44,7 +44,7 @@ src_unpack() {
 	done
 
 	local apachever=$(best_version net-www/apache)
-	apachever="$(get_major_version ${apachever##*-})"
+	apachever="$(get_major_version ${apachever#*/*-})"
 	[[ ${apachever} == "1" ]] && apachever=""
 
 	# set default values for directories
