@@ -1,23 +1,13 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 6d4278d3a9dd14bc0acf40064d219cda ChangeLog 2561
 MD5 ee6413156271ea03a992ad5d9c04d58f karchiver-3.0.10.ebuild 596
-MD5 b09ce2752a84694ecad228ace6892532 karchiver-3.0.3.ebuild 517
+MD5 2ea7c0b6ff370f53881ebfa5d95c2882 karchiver-3.1.1-r1.ebuild 673
+MD5 a2dfd9198217b096aafb402e66059d04 ChangeLog 2651
 MD5 208f51b0104b7a25ed17d240aa28431a karchiver-3.0.8.ebuild 518
+MD5 b09ce2752a84694ecad228ace6892532 karchiver-3.0.3.ebuild 517
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 dedea93a4fc05a6add84dbe527acae2c karchiver-3.1.1.ebuild 518
-MD5 c0b4e64bcc440cef1b48938349c94814 karchiver-3.1.1-r1.ebuild 677
+MD5 3c648853b6ccbb1930932e4822f92b38 files/karchiver-3.0.10-gcc3.4.patch 270
 MD5 7f788e67bbe98edcd4a5e70d09dfd0ce files/digest-karchiver-3.0.10 69
 MD5 e410da025f23012ddbe6c1bde93fa54f files/digest-karchiver-3.0.3 68
 MD5 3b5e6930a4850dbba4fa65864cebdd3b files/digest-karchiver-3.0.8 68
-MD5 3c648853b6ccbb1930932e4822f92b38 files/karchiver-3.0.10-gcc3.4.patch 270
 MD5 e2b5f2ff231e408d4238aa6098148da1 files/digest-karchiver-3.1.1 69
 MD5 e2b5f2ff231e408d4238aa6098148da1 files/digest-karchiver-3.1.1-r1 69
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFCgPv8KRy60XGEcJIRAm3PAJ9EBs/rYzGgvQZKl2jJifTtT5RpZgCcD1oI
-zIYPXeclyTKieHdrfuIJFHw=
-=gyPY
------END PGP SIGNATURE-----
