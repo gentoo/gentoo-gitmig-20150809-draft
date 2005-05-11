@@ -1,4 +1,14 @@
-MD5 175417196fd2981f6bde64fdbd3cf5fb jpeg-mmx-1.1.2-r1.ebuild 1622
-MD5 2c7c34f8f1319a5d5966cb140d6b8b93 ChangeLog 1733
-MD5 a181e5f992363d0ce9d6114abc2cac96 files/1.1.2-gcc34.patch 10438
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 ca6cd71a7cea2ea6956fd457968594cb jpeg-mmx-1.1.2-r1.ebuild 1721
+MD5 36c2560c30d981947b61959ff6224d3a ChangeLog 1910
 MD5 0562da8a4f2d6f76b4058e3df63735a5 files/digest-jpeg-mmx-1.1.2-r1 66
+MD5 a181e5f992363d0ce9d6114abc2cac96 files/1.1.2-gcc34.patch 10438
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCgiON1ZcsMnZjRyIRAreMAJ0bQZhnKkjm5LJTnov3lYGC/qAU5wCfQbfY
+Jz4nBQ270hWc5wbofbDybKg=
+=p+/7
+-----END PGP SIGNATURE-----

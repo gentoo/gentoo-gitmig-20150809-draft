@@ -1,8 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg-mmx/jpeg-mmx-1.1.2-r1.ebuild,v 1.17 2004/07/01 08:35:07 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg-mmx/jpeg-mmx-1.1.2-r1.ebuild,v 1.18 2005/05/11 15:18:09 azarah Exp $
 
-inherit libtool flag-o-matic eutils
+inherit flag-o-matic eutils
 
 DESCRIPTION="JPEG library with mmx enhancements"
 HOMEPAGE="http://mjpeg.sourceforge.net/"
@@ -32,7 +32,10 @@ src_compile() {
 	is-flag "-march=k6-2" && strip-flags "-fomit-frame-pointer"
 	is-flag "-march=k6" && strip-flags "-fomit-frame-pointer"
 
-	elibtoolize
+	# Do not elibtoolize, as it uses libtool-1.2, and is really too ancient
+	# for any of our patches to apply.
+	#elibtoolize
+
 	econf --enable-shared || die "configure failed"
 	emake || die "make failed"
 }
