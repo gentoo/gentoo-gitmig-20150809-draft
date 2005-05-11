@@ -1,0 +1,4 @@
+MD5 fbc67d240812136a9842bc1f2a217b7a php-4.3.11.tar.bz2 4012575
+MD5 912ff94309b762563d0542db5187315f php-4.3.2-fopen-url-secure.patch 416
+MD5 fbb6b365f4c0263b1dfd498aef092a77 php-4.3.6-includepath.diff 285
+MD5 c649f58458a39532889ed82f1aebee34 hardened-php-4.3.11-0.2.7.patch.gz 22724

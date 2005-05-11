@@ -1,6 +1,12 @@
 # ChangeLog for dev-php/php-cgi
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php-cgi/ChangeLog,v 1.65 2005/05/06 09:46:49 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php-cgi/ChangeLog,v 1.66 2005/05/11 05:29:30 sebastian Exp $
+
+*php-cgi-4.3.11-r1 (11 May 2005)
+
+  11 May 2005; Sebastian Bergmann <sebastian@gentoo.org>
+  +php-cgi-4.3.11-r1.ebuild:
+  Fix bug #87457.
 
   06 May 2005; Sebastian Bergmann <sebastian@gentoo.org>
   +files/php-4.3.11-flash.patch, php-cgi-4.3.11.ebuild:
