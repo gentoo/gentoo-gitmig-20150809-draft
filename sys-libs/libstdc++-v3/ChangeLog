@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/libstdc++-v3
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstdc++-v3/ChangeLog,v 1.31 2005/02/07 08:25:28 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstdc++-v3/ChangeLog,v 1.32 2005/05/11 10:33:39 flameeyes Exp $
+
+  11 May 2005; Diego Pettenò <flameeyes@gentoo.org>
+  libstdc++-v3-3.3.4.ebuild:
+  Make libstdc++ depend on glibc only on glibc systems.
 
   07 Feb 2005; Markus Rothe <corsair@gentoo.org> libstdc++-v3-3.3.4.ebuild:
   Fix typo in ppc64 CFLAGS-filter
