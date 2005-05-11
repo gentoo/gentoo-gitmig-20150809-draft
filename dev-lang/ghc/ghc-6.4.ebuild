@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.4.ebuild,v 1.5 2005/05/09 16:00:09 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.4.ebuild,v 1.6 2005/05/11 21:53:11 kosmikus Exp $
 
 # Brief explanation of the bootstrap logic:
 #
@@ -32,7 +32,8 @@ SRC_URI="http://www.haskell.org/ghc/dist/${EXTRA_SRC_URI}/${MY_P}-src.tar.bz2"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="-alpha ~amd64 ~ppc ~ppc64 -sparc ~x86"
+# re-add ~ppc64 once dependencies are fulfilled
+KEYWORDS="-alpha ~amd64 ~ppc -sparc ~x86"
 
 S="${WORKDIR}/${MY_P}"
 
