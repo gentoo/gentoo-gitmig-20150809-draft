@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.6.0-r1.ebuild,v 1.1 2005/05/11 19:35:37 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.6.0-r1.ebuild,v 1.2 2005/05/11 23:43:34 pythonhead Exp $
 
 inherit wxlib gnuconfig
 
@@ -30,9 +30,6 @@ S=${WORKDIR}/wxWidgets-${PV}
 
 pkg_setup() {
 	einfo "To install only wxbase (non-gui libs) use -gtk2 -wxgtk1"
-	if use unicode; then
-		! use gtk2 && die "You must put gtk2 in your USE if you need unicode support"
-	fi
 }
 
 src_compile() {
