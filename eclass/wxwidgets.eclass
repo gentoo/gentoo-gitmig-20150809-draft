@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/wxwidgets.eclass,v 1.8 2005/05/03 07:55:17 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/wxwidgets.eclass,v 1.9 2005/05/11 23:45:18 pythonhead Exp $
 #
 # Author Rob Cakebread <pythonhead@gentoo.org>
 
@@ -11,12 +11,12 @@
 # need-wxwidgets:
 #   Arguments:
 #     2.4: gtk gtk2 unicode
-#     2.6: gtk gtk2 gtk2-unicode base base-unicode mac mac-unicode
+#     2.6: gtk gtk2 unicode base base-unicode mac mac-unicode
 #
 #
 # set-wxconfig
 #   Arguments: (wxGTK 2.4) wxgtk, wxgtk2, or wxgtk2u
-#   Arguments: (wxGTK 2.6) gtk-ansi gtk2-ansi gtk2-unicode base-ansi base-unicode mac-ansi mac-unicode
+#   Arguments: (wxGTK 2.6) gtk-ansi gtk2-ansi unicode base-ansi base-unicode mac-ansi mac-unicode
 #   Note: Don't call this function directly from ebuilds
 
 ECLASS=wxwidgets
