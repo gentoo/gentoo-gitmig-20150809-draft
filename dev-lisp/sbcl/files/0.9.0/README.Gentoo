@@ -1,0 +1,44 @@
+-*- outline -*- $Id: README.Gentoo,v 1.1 2005/05/11 07:47:09 mkennedy Exp $
+
+Gentoo GNU/Linux specific notes for SBCL
+----------------------------------------
+
+This is the README.Gentoo file from /usr/share/doc/@PF@/ directory.
+
+  * The Gentoo port uses patches from the Debian project's SBCL port.
+
+  * An SBCL with support for multi-threading on GNU/Linux for x86 is available
+    with 'USE="threads" emerge dev-lisp/sbcl'
+
+  * asdf-install is installed as sbcl-asdf-install (the man-page is similarly
+    named).
+
+  * Support for the Common Lisp Controller is available.
+
+  * If "nosource" is in your USE flags, then SBCL's source will not be installed
+    (in /usr/lib/sbcl/src).
+
+  * If "unicode" is in your USE flags, then support for SBCL
+    Unicode will be included.
+
+  * If "ldb" is in your USE flags, then support for the SBCL low-level debugger
+    will be included.
+
+  * If "callbacks" is in your USE flags, then support for foreign callbacks will
+    be included.  This is useful for libraries such as Lambda-GTK.  
+ 
+    NOTE: callback support is implemented using Thomas Burdick's SBCL-AF patch
+    which is distributed outside of SBCL.  This will NOT be the final API SBCL
+    uses.  See also:
+
+        http://article.gmane.org/gmane.lisp.steel-bank.devel/4279
+        http://article.gmane.org/gmane.lisp.steel-bank.devel/4341
+
+    Ports which require callbacks in SBCL:
+
+        cl-zeroconf
+	lambda-gtk
+
+If you encounter any problems or have suggestions, use http://bugs.gentoo.org.
+Please don't bother the upstream authors unless you are absolutely certain it is
+not Gentoo-related.

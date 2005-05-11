@@ -1,0 +1,88 @@
+diff -ur --exclude '*~' sbcl-0.9.0.orig/contrib/sb-bsd-sockets/sb-bsd-sockets.asd sbcl-0.9.0/contrib/sb-bsd-sockets/sb-bsd-sockets.asd
+--- sbcl-0.9.0.orig/contrib/sb-bsd-sockets/sb-bsd-sockets.asd	2004-08-02 06:42:56.000000000 -0500
++++ sbcl-0.9.0/contrib/sb-bsd-sockets/sb-bsd-sockets.asd	2005-04-25 11:08:42.000000000 -0500
+@@ -102,15 +102,3 @@
+ 
+ (defmethod perform :after ((o load-op) (c (eql (find-system :sb-bsd-sockets))))
+   (provide 'sb-bsd-sockets))
+-
+-(defmethod perform ((o test-op) (c (eql (find-system :sb-bsd-sockets))))
+-  (operate 'load-op 'sb-bsd-sockets-tests)
+-  (operate 'test-op 'sb-bsd-sockets-tests))
+-
+-(defsystem sb-bsd-sockets-tests
+-  :depends-on (sb-rt sb-bsd-sockets sb-posix)
+-  :components ((:file "tests")))
+-
+-(defmethod perform ((o test-op) (c (eql (find-system :sb-bsd-sockets-tests))))
+-  (or (funcall (intern "DO-TESTS" (find-package "SB-RT")))
+-      (error "test-op failed")))
+diff -ur --exclude '*~' sbcl-0.9.0.orig/contrib/sb-posix/posix-tests.lisp sbcl-0.9.0/contrib/sb-posix/posix-tests.lisp
+--- sbcl-0.9.0.orig/contrib/sb-posix/posix-tests.lisp	2005-01-06 06:47:57.000000000 -0600
++++ sbcl-0.9.0/contrib/sb-posix/posix-tests.lisp	2005-04-25 11:06:50.000000000 -0500
+@@ -96,7 +96,7 @@
+       (sb-posix:syscall-errno c)))
+   #.sb-posix::eexist)
+ 
+-(deftest mkdir.error.2
++#+nil (deftest mkdir.error.2
+   (handler-case
+       (sb-posix:mkdir "/" 0)
+     (sb-posix:syscall-error (c)
+@@ -149,7 +149,7 @@
+       (sb-posix:syscall-errno c)))
+   #.sb-posix::enotdir)
+ 
+-(deftest rmdir.error.3
++#+nil (deftest rmdir.error.3
+   (handler-case
+       (sb-posix:rmdir "/")
+     (sb-posix:syscall-error (c)
+diff -ur --exclude '*~' sbcl-0.9.0.orig/contrib/sb-posix/sb-posix.asd sbcl-0.9.0/contrib/sb-posix/sb-posix.asd
+--- sbcl-0.9.0.orig/contrib/sb-posix/sb-posix.asd	2004-08-04 05:54:18.000000000 -0500
++++ sbcl-0.9.0/contrib/sb-posix/sb-posix.asd	2005-04-25 11:10:09.000000000 -0500
+@@ -88,33 +88,5 @@
+ 		  :package :sb-posix :depends-on  ("defpackage"))
+ 		 (:file "interface" :depends-on ("constants" "macros" "designator" "alien"))))
+ 
+-(defsystem sb-posix-tests
+-    :depends-on (sb-rt)
+-    :components ((:file "posix-tests")))
+-
+ (defmethod perform :after ((o load-op) (c (eql (find-system :sb-posix))))
+   (provide 'sb-posix))
+-
+-(defmethod perform ((o test-op) (c (eql (find-system :sb-posix))))
+-  (operate 'load-op 'sb-posix-tests)
+-  (operate 'test-op 'sb-posix-tests))
+-
+-(defmethod perform ((o test-op) (c (eql (find-system :sb-posix-tests))))
+-  (funcall (intern "DO-TESTS" (find-package "SB-RT")))
+-  (let ((failures (funcall (intern "PENDING-TESTS" "SB-RT")))
+-	(ignored-failures (loop for sym being the symbols of :sb-posix-tests
+-			        if (search ".ERROR" (symbol-name sym))
+-			        collect sym)))
+-    (cond
+-      ((null failures)
+-       t)	     
+-      ((null (set-difference failures ignored-failures))
+-       (warn "~@<some POSIX implementations return incorrect error values for ~
+-              failing calls, but there is legitimate variation between ~
+-              implementations too.  If you think the errno ~
+-              from your platform is valid, please contact the sbcl ~
+-              developers; otherwise, please submit a bug report to your ~
+-              kernel distributor~@:>")
+-       t)
+-      (t
+-       (error "non-errno tests failed!")))))
+diff -ur --exclude '*~' sbcl-0.9.0.orig/src/runtime/GNUmakefile sbcl-0.9.0/src/runtime/GNUmakefile
+--- sbcl-0.9.0.orig/src/runtime/GNUmakefile	2005-04-10 10:34:59.000000000 -0500
++++ sbcl-0.9.0/src/runtime/GNUmakefile	2005-04-25 11:06:50.000000000 -0500
+@@ -33,6 +33,7 @@
+ # symlink to Config-foo.
+ include Config
+ 
++CFLAGS += -DSBCL_HOME='"/usr/lib/sbcl"'
+ 
+ C_SRCS = alloc.c backtrace.c breakpoint.c coreparse.c \
+ 	dynbind.c gc-common.c globals.c interr.c interrupt.c \
