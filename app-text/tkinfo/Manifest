@@ -1,3 +1,13 @@
-MD5 7573d5f50f1ddd8427fb49c0eb62f527 ChangeLog 1232
-MD5 77254d378a7d4a029548aada82237a6a tkinfo-2.6.ebuild 695
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 4537f9abc8a6923d94d44c301abfb2e4 ChangeLog 1318
+MD5 45c649ac27b253763137efe1cf0490f4 tkinfo-2.6.ebuild 699
 MD5 cb4ded9d1e42265978329fc19e480e6f files/digest-tkinfo-2.6 61
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCglVeBXaUFmZvwyMRAi1wAKCJvgPA7iEpEprtaarNweEPLIbYjgCeK0Pq
+GhkH9BA3j3oEjxWqqr3dGMY=
+=b9Ps
+-----END PGP SIGNATURE-----
