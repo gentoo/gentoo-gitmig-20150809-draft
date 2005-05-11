@@ -1,24 +1,24 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 f90cbb228fd625553650f501fd4d04ac ChangeLog 8925
-MD5 075cbba2ab28ccbee5836290bb874012 elinks-0.10.4.ebuild 3197
-MD5 6ea6b66b701a92460771bc83faf03885 elinks-0.10.2.ebuild 3186
 MD5 cc608dd1c0f7b525296b4830621c796f elinks-0.10.3.ebuild 3186
-MD5 e12d0d41aa58ac199f7996e491739504 elinks-0.9.1-r1.ebuild 3348
 MD5 7b2c41a8d830a54a9eb6fab918fe3256 elinks-0.9.2.ebuild 3058
 MD5 7fd7e3d1a08b9cfbda31280e7b2b1827 elinks-0.10.5.ebuild 3196
+MD5 e12d0d41aa58ac199f7996e491739504 elinks-0.9.1-r1.ebuild 3348
+MD5 6ea6b66b701a92460771bc83faf03885 elinks-0.10.2.ebuild 3186
+MD5 cdfcfed0352baba11b6d247ea33d6215 ChangeLog 9016
+MD5 bd701b1c6ddffb1e1e4f83194d862869 elinks-0.10.4.ebuild 3193
 MD5 d94d306da3804e41296e1bf04c7c9cae metadata.xml 255
-MD5 3a034044f65e503bf253636b844d5845 files/digest-elinks-0.10.4 132
+MD5 8d417e936e8b11e07900bb9986a612f0 files/digest-elinks-0.9.2 130
+MD5 40264c1b77fa85cf762b84c042837d8f files/digest-elinks-0.9.1-r1 130
 MD5 65d9de39657dcfae706f0094ace2eb29 files/digest-elinks-0.10.2 131
 MD5 e6446a6518b45e9c5726c66694459bea files/digest-elinks-0.10.3 131
-MD5 40264c1b77fa85cf762b84c042837d8f files/digest-elinks-0.9.1-r1 130
-MD5 8d417e936e8b11e07900bb9986a612f0 files/digest-elinks-0.9.2 130
+MD5 3a034044f65e503bf253636b844d5845 files/digest-elinks-0.10.4 132
 MD5 db4038d1a62b31535db38c97c40928d8 files/digest-elinks-0.10.5 132
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCgNK5KRy60XGEcJIRAmB1AKCNp7rA8BdofSVc2CkWi2g1Uw0uBgCfdlAM
-oJDnHq0XzAeVFB8O0kAS3RY=
-=Hq41
+iD8DBQFCgmt9ntT9W3vfTuoRAvogAJ9e6QdXj4P6KqTGn1SzRNcvcbSLrgCdGbPR
+R9jZqeo2O/W0GZc15318Cbg=
+=g2xh
 -----END PGP SIGNATURE-----
