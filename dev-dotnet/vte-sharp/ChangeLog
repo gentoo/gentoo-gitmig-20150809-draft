@@ -1,6 +1,9 @@
 # ChangeLog for dev-dotnet/vte-sharp
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/vte-sharp/ChangeLog,v 1.14 2005/05/05 02:17:51 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/vte-sharp/ChangeLog,v 1.15 2005/05/11 17:53:58 latexer Exp $
+
+  11 May 2005; Peter Johanson <latexer@gentoo.org> vte-sharp-1.9.3.ebuild:
+  Fix for vte-sharp not installing things (again).
 
 *vte-sharp-1.9.3 (05 May 2005)
 
