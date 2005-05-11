@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kdenetwork
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/ChangeLog,v 1.135 2005/04/03 23:37:27 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/ChangeLog,v 1.136 2005/05/11 19:33:47 greg_g Exp $
+
+*kdenetwork-3.4.0-r2 (11 May 2005)
+
+  11 May 2005; Gregorio Guidi <greg_g@gentoo.org>
+  +files/kdenetwork-3.4.0-kopete-tabbed-windows.patch,
+  +kdenetwork-3.4.0-r2.ebuild:
+  Add patch to fix crash in kopete chatwindow (#91423).
 
 *kdenetwork-3.4.0-r1 (03 Apr 2005)
 

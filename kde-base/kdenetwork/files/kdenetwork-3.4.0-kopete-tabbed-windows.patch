@@ -1,0 +1,18 @@
+diff -Nur kdenetwork-3.4.0.orig/kopete/kopete/chatwindow/kopetechatwindow.cpp kdenetwork-3.4.0/kopete/kopete/chatwindow/kopetechatwindow.cpp
+--- kdenetwork-3.4.0.orig/kopete/kopete/chatwindow/kopetechatwindow.cpp	2005-02-23 11:30:49.000000000 +0100
++++ kdenetwork-3.4.0/kopete/kopete/chatwindow/kopetechatwindow.cpp	2005-04-04 00:12:30.000000000 +0200
+@@ -1085,6 +1085,5 @@ void KopeteChatWindow::closeEvent( QClos
+	KopeteApplication *app = static_cast<KopeteApplication *>( kapp );
+	if ( KopetePrefs::prefs()->showTray() && !app->isShuttingDown() && !app->sessionSaving() ) {
+-		hide();
+-/*		// BEGIN of code borrowed from KMainWindow::closeEvent
++		// BEGIN of code borrowed from KMainWindow::closeEvent
+		// Save settings if auto-save is enabled, and settings have changed
+		if ( settingsDirty() && autoSaveSettings() )
+@@ -1094,5 +1093,5 @@ void KopeteChatWindow::closeEvent( QClos
+			e->accept();
+		}
+-		// END of code borrowed from KMainWindow::closeEvent*/
++		// END of code borrowed from KMainWindow::closeEvent
+	}
+	else
