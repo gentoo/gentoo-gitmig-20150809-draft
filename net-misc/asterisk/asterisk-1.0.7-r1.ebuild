@@ -1,13 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.0.7-r1.ebuild,v 1.2 2005/05/09 16:57:09 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.0.7-r1.ebuild,v 1.3 2005/05/11 11:57:33 stkn Exp $
 
 IUSE="alsa doc gtk mmx mysql pri zaptel uclibc debug postgres vmdbmysql vmdbpostgres bri hardened speex resperl"
 
 inherit eutils perl-module
 
 ADDONS_VERSION="1.0.7"
-BRI_VERSION="0.2.0-RC8a"
+BRI_VERSION="0.2.0-RC8c"
 
 DESCRIPTION="Asterisk: A Modular Open Source PBX System"
 HOMEPAGE="http://www.asterisk.org/"
@@ -96,9 +96,11 @@ pkg_setup() {
 	ewarn "     http://bugs.gentoo.org/show_bug.cgi?id=88732"
 	ewarn "     http://www.voip-info.org/wiki-Asterisk+non-root"
 	echo
-	einfo "! New permissions will be automatically used for new installations, !"
-	einfo "! use \"ebuild /usr/portage/net-misc/${PN}/${PF}.ebuild config\" to !"
-	einfo "! fix permissions if you are upgrading                              !"
+	eerror "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+	eerror "! NEW PERMISSIONS WILL BE AUTOMATICALLY SET DURING INSTALLATION !"
+	eerror "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+	echo
+	einfo "Press Ctrl+C to abort"
 	echo
 
 	n=30
@@ -240,12 +242,6 @@ src_unpack() {
 		cd ${S}
 		einfo "Patching asterisk w/ BRI stuff"
 
-		# fix patch for new asterisk version...
-		# and fix a watchdog bug
-		sed -i 	-e "s:^\([+-]\)1.0.6:\1${PV}:" \
-			-e "s:woof->fd, \"+\", 1);:woof->fd, \"PING\\\\n\", 1);:" \
-			${WORKDIR}/bristuff-${BRI_VERSION}/patches/asterisk.patch
-
 		epatch ${WORKDIR}/bristuff-${BRI_VERSION}/patches/asterisk.patch
 	fi
 
@@ -295,16 +291,14 @@ src_install() {
 	dosbin contrib/scripts/addmailbox
 	dosbin contrib/scripts/astgenkey
 
-	exeinto /etc/init.d
-	newexe  ${FILESDIR}/1.0.0/asterisk.rc6.sec asterisk
-
-	insinto /etc/conf.d
-	newins  ${FILESDIR}/1.0.0/asterisk.confd.sec asterisk
+	newinitd ${FILESDIR}/1.0.0/asterisk.rc6.sec asterisk
+	newconfd ${FILESDIR}/1.0.0/asterisk.confd.sec asterisk
 
 	# don't delete these, even if they are empty
 	keepdir /var/spool/asterisk/voicemail/default/1234/INBOX
 	keepdir /var/spool/asterisk/tmp
 	keepdir /var/log/asterisk/cdr-csv
+	keepdir /var/run/asterisk
 
 	# install standard docs...
 	dodoc BUGS CREDITS LICENSE ChangeLog HARDWARE README README.fpm
@@ -325,9 +319,7 @@ src_install() {
 
 	insinto /usr/share/doc/${PF}/cgi
 	doins contrib/scripts/vmail.cgi
-	for i in "images/*.gif"; do
-		doins $i
-	done
+	doins images/*.gif
 
 	#
 	# add-ons
@@ -428,26 +420,11 @@ pkg_postinst() {
 	ewarn "     http://www.voip-info.org/wiki-Asterisk+non-root"
 	echo
 	echo
-	einfo "! New permissions will be automatically used for new installations, !"
-	einfo "! use \"ebuild /usr/portage/net-misc/${PN}/${PF}.ebuild config\" to !"
-	einfo "! fix permissions if you are upgrading                              !"
-}
 
-pkg_config() {
 	#
 	# Change permissions and ownerships of asterisk
 	# directories and files
 	#
-	if [[ ! -d ${ROOT}/var/run/asterisk ]]; then
-		mkdir -p ${ROOT}/var/run/asterisk
-	fi
-
-	if [[ -z "$(egetent passwd asterisk)" ]]; then
-		einfo "Adding asterisk user and group"
-		enewgroup asterisk
-		enewuser asterisk -1 /bin/false /var/lib/asterisk asterisk
-	fi
-
 	einfo "Fixing permissions and ownerships"
 	# fix permissions
 	for x in spool run lib log; do
@@ -467,18 +444,6 @@ pkg_config() {
 			${ROOT}/etc/asterisk/asterisk.conf.bak >\
 			${ROOT}/etc/asterisk/asterisk.conf
 		einfo "Backup has been saved as ${ROOT}/etc/asterisk/asterisk.conf.bak"
-	fi
-
-	if [[ -f ${ROOT}/usr/bin/asterisk-config ]] && \
-	   [[ -z "$(grep "/var/run/asterisk" ${ROOT}/usr/bin/asterisk-config)" ]]
-	then
-		einfo "Fixing ASTVARRUNDIR in ${ROOT}/usr/bin/asterisk-config"
-		mv -f ${ROOT}/usr/bin/asterisk-config \
-			${ROOT}/usr/bin/asterisk-config.bak
-		sed -e "s:/var/run:/var/run/asterisk:" \
-			${ROOT}/usr/bin/asterisk-config.bak >\
-			${ROOT}/usr/bin/asterisk-config
-		einfo "Backup has been saved as ${ROOT}/usr/bin/asterisk-config.bak"
 	fi
 }
 
