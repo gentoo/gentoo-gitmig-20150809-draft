@@ -1,13 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.0.7-r1.ebuild,v 1.3 2005/05/11 11:57:33 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.0.7-r1.ebuild,v 1.4 2005/05/11 23:27:57 stkn Exp $
 
 IUSE="alsa doc gtk mmx mysql pri zaptel uclibc debug postgres vmdbmysql vmdbpostgres bri hardened speex resperl"
 
 inherit eutils perl-module
 
 ADDONS_VERSION="1.0.7"
-BRI_VERSION="0.2.0-RC8c"
+BRI_VERSION="0.2.0-RC8d"
 
 DESCRIPTION="Asterisk: A Modular Open Source PBX System"
 HOMEPAGE="http://www.asterisk.org/"
@@ -43,6 +43,46 @@ DEPEND="dev-libs/newt
 		   >=net-misc/zaptel-1.0.7-r1 )"
 
 pkg_setup() {
+	local n
+
+	#
+	# Warning about security changes...
+	#
+	ewarn "****************** Important changes warning! *********************"
+	ewarn
+	ewarn "- Asterisk runs as user asterisk, group asterisk by default"
+	ewarn
+	ewarn "- Permissions of /etc/asterisk have been changed to root:asterisk"
+	ewarn "  750 (directories) / 640 (files)"
+	ewarn
+	ewarn "- Permissions of /var/{log,lib,run,spool}/asterisk have been changed"
+	ewarn "  to asterisk:asterisk 750 (directories) / 640 (files)"
+	ewarn
+	ewarn "- Asterisk's unix socket and pidfile are now in /var/run/astrisk"
+	ewarn
+	ewarn "- More information at the end of this emerge"
+	ewarn
+	ewarn "     http://bugs.gentoo.org/show_bug.cgi?id=88732"
+	ewarn "     http://www.voip-info.org/wiki-Asterisk+non-root"
+	ewarn
+	eerror "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+	eerror "! NEW PERMISSIONS WILL BE AUTOMATICALLY SET DURING INSTALLATION !"
+	eerror "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+	echo
+	einfo "Press Ctrl+C to abort"
+	echo
+	ebeep
+
+	n=20
+	while [[ $n -gt 0 ]]; do
+		echo -en "  Waiting $n seconds...\r"
+		sleep 1
+		(( n-- ))
+	done
+
+	#
+	# Regular checks
+	#
 	einfo "Running some pre-flight checks..."
 	if use resperl; then
 		# res_perl pre-flight check...
@@ -75,40 +115,6 @@ pkg_setup() {
 			die "Libpri without bri support detected"
 		fi
 	fi
-
-	#
-	# Warning about security changes...
-	#
-	ewarn "****************** Important changes warning! *********************"
-	echo
-	ewarn "- Asterisk runs as user asterisk, group asterisk by default"
-	echo
-	ewarn "- Permissions of /etc/asterisk have been changed to root:asterisk"
-	ewarn "  750 (directories) / 640 (files)"
-	echo
-	ewarn "- Permissions of /var/{log,lib,run,spool}/asterisk have been changed"
-	ewarn "  to asterisk:asterisk 750 (directories) / 640 (files)"
-	echo
-	ewarn "- Asterisk's unix socket and pidfile are now in /var/run/astrisk"
-	echo
-	ewarn "- More information at the end of this emerge"
-	echo
-	ewarn "     http://bugs.gentoo.org/show_bug.cgi?id=88732"
-	ewarn "     http://www.voip-info.org/wiki-Asterisk+non-root"
-	echo
-	eerror "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
-	eerror "! NEW PERMISSIONS WILL BE AUTOMATICALLY SET DURING INSTALLATION !"
-	eerror "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
-	echo
-	einfo "Press Ctrl+C to abort"
-	echo
-
-	n=30
-	while [[ $n -lt 0 ]]; do
-		echo -en "  Waiting $n seconds...\r"
-		sleep 1
-		(( $n-- ))
-	done
 }
 
 src_unpack() {
@@ -258,6 +264,8 @@ src_unpack() {
 	cd ${S}
 	sed -i -e "s:^\(ASTVARRUNDIR=\).*:\1\$(INSTALL_PREFIX)/var/run/asterisk:" \
 		Makefile
+
+	epatch ${FILESDIR}/1.0.0/${P}-scripts.diff
 }
 
 src_compile() {
@@ -396,25 +404,25 @@ pkg_postinst() {
 	# Warning about security changes...
 	#
 	ewarn "*********************** Important changes **************************"
-	echo
+	ewarn
 	ewarn "- Asterisk runs as user asterisk, group asterisk by default"
 	ewarn "  Use usermod -G to make the asterisk user a member of additional"
 	ewarn "  groups if necessary."
-	echo
+	ewarn
 	ewarn "- Permissions of /etc/asterisk have been changed to root:asterisk"
 	ewarn "  750 (rwxr-x--- directories) / 640 (rw-r----- files)"
-	echo
+	ewarn
 	ewarn "- Permissions of /var/{log,lib,run,spool}/asterisk have been changed"
 	ewarn "  to asterisk:asterisk 750 / 640"
-	echo
+	ewarn
 	ewarn "- Asterisk's unix socket and pidfile are now in /var/run/astrisk"
-	echo
+	ewarn
 	ewarn "- Asterisk cannot set the IP ToS bits when run as user,"
 	ewarn "  use something like this to make iptables set them for you:"
 	ewarn "  \"iptables -A OUTPUT -t mangle -p udp -m udp --dport 5060 -j DSCP --set-dscp 0x28\""
 	ewarn "  \"iptables -A OUTPUT -t mangle -p udp -m udp --sport 10000:20000 -j DSCP --set-dscp 0x28\""
 	ewarn "  (taken from voip-info.org comments (see below), thanks andrewid)"
-	echo
+	ewarn
 	ewarn "For more details:"
 	ewarn "     http://bugs.gentoo.org/show_bug.cgi?id=88732"
 	ewarn "     http://www.voip-info.org/wiki-Asterisk+non-root"

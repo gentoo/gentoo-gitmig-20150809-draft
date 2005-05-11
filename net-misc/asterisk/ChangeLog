@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.52 2005/05/11 12:47:06 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.53 2005/05/11 23:27:57 stkn Exp $
+
+  12 May 2005; Stefan Knoblich <stkn@gentoo.org>
+  +files/1.0.0/asterisk-1.0.7-scripts.diff, asterisk-1.0.7-r1.ebuild:
+  Added non-root changes to addmailbox and astgenkey, fixed warning
+  countdown and bristuff update.
 
   11 May 2005; Stefan Knoblich <stkn@gentoo.org>
   files/1.0.0/asterisk.confd.sec:
