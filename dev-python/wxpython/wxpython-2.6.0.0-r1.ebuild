@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/wxpython-2.6.0.0.ebuild,v 1.1 2005/05/02 18:29:01 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/wxpython-2.6.0.0-r1.ebuild,v 1.1 2005/05/11 20:08:38 pythonhead Exp $
 
 inherit python wxwidgets eutils
 
@@ -62,7 +62,7 @@ src_compile() {
 		need-wxwidgets gtk2
 	fi
 
-	mypyconf="${mypyconf} MONOLITHIC=1 WX_CONFIG=${WX_CONFIG}"
+	mypyconf="${mypyconf} WX_CONFIG=${WX_CONFIG}"
 	use opengl \
 		&& 	mypyconf="${mypyconf} BUILD_GLCANVAS=1" \
 		|| mypyconf="${mypyconf} BUILD_GLCANVAS=0"
