@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/zaptel-1.0.7-r1.ebuild,v 1.2 2005/05/10 01:47:52 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/zaptel-1.0.7-r1.ebuild,v 1.3 2005/05/11 23:22:04 stkn Exp $
 
 IUSE="devfs26 bri florz"
 
 inherit toolchain-funcs eutils linux-mod
 
-BRI_VERSION="0.2.0-RC8c"
+BRI_VERSION="0.2.0-RC8d"
 FLORZ_VERSION="0.2.0-RC8a_florz-6"
 
 DESCRIPTION="Drivers for Digium and ZapataTelephony cards"
@@ -222,23 +222,10 @@ pkg_postinst() {
 		einfo "    zapata.conf.doubleE1"
 		echo
 	fi
-}
 
-pkg_config() {
-	einfo "Bla... [y/N]"
-
-	read x
-
-	if [[ "$x" = "y" ]] || [[ "$x" = "Y" ]]; then
-		einfo "Fixing permissions and ownerships"
-
-		# fix permissions if there's no udev / devfs around
-		if [[ -d ${D}/dev/zap ]]; then
-			chown -R root:dialout  ${D}/dev/zap
-			chmod -R u=rwX,g=rwX,o= ${D}/dev/zap
-		fi
-	else
-		einfo "Aborted"
+	# fix permissions if there's no udev / devfs around
+	if [[ -d ${ROOT}/dev/zap ]]; then
+		chown -R root:dialout  ${ROOT}/dev/zap
+		chmod -R u=rwX,g=rwX,o= ${ROOT}/dev/zap
 	fi
-
 }

@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/zaptel
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/ChangeLog,v 1.40 2005/05/11 12:36:55 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/ChangeLog,v 1.41 2005/05/11 23:22:04 stkn Exp $
+
+  12 May 2005; Stefan Knoblich <stkn@gentoo.org>
+  -files/zaptel-bristuff-0.2.0-RC8c.patch,
+  +files/zaptel-bristuff-0.2.0-RC8d.patch, zaptel-1.0.7-r1.ebuild:
+  Bristuff update and moved pkg_config permission bits to pkg_postinst.
 
   11 May 2005; Stefan Knoblich <stkn@gentoo.org> files/zaptel.devfsd,
   files/zaptel.rc6:
