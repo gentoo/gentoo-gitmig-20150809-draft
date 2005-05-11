@@ -1,25 +1,15 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ccd0cce5a8125c689239903ffc84e86e gnome-system-monitor-2.8.3.ebuild 920
-MD5 3c182a30e9f499a465b5131cbd9faf9d gnome-system-monitor-2.10.1.ebuild 934
+MD5 feeba14a729495e78beae70371791bbb ChangeLog 9679
+MD5 8484eabb9b350eca2a46cebc3d5368a6 gnome-system-monitor-2.10.0.ebuild 921
 MD5 20135b67c1073e61cc6d59c23799cc26 gnome-system-monitor-2.8.0.ebuild 890
 MD5 f8aa0bbc0d750b9302c6c68ecdee4a8c gnome-system-monitor-2.8.1-r1.ebuild 1024
-MD5 8484eabb9b350eca2a46cebc3d5368a6 gnome-system-monitor-2.10.0.ebuild 921
-MD5 0d0c23ad03c3358de789a659b0b3164f ChangeLog 9576
+MD5 e74803be3696eaded48a69da69acf8f5 gnome-system-monitor-2.8.3.ebuild 920
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 1717d3423ff0c95f21dd6037d93a26cf files/gnome-system-monitor-2.10.1-icon_warning.patch 503
-MD5 998687db7f5ab05119833a0131a25b11 files/digest-gnome-system-monitor-2.8.1-r1 79
-MD5 9948d4c847a49ac1a9db168f46c0d376 files/gnome-system-monitor-execlp.patch 365
-MD5 cb821d6a95343091a60060f653b8ae00 files/gnome-system-monitor-2.8.1-usermem.patch 889
-MD5 67bd440a0a6bbd96815b8a68d623ea28 files/digest-gnome-system-monitor-2.8.0 79
-MD5 7c28214b448264bb2db48c93401651ae files/digest-gnome-system-monitor-2.8.3 79
+MD5 3c182a30e9f499a465b5131cbd9faf9d gnome-system-monitor-2.10.1.ebuild 934
 MD5 23d046a3eb3b6f9c2b9ec078e73f3d5d files/digest-gnome-system-monitor-2.10.0 80
+MD5 1717d3423ff0c95f21dd6037d93a26cf files/gnome-system-monitor-2.10.1-icon_warning.patch 503
+MD5 67bd440a0a6bbd96815b8a68d623ea28 files/digest-gnome-system-monitor-2.8.0 79
+MD5 998687db7f5ab05119833a0131a25b11 files/digest-gnome-system-monitor-2.8.1-r1 79
+MD5 7c28214b448264bb2db48c93401651ae files/digest-gnome-system-monitor-2.8.3 79
+MD5 cb821d6a95343091a60060f653b8ae00 files/gnome-system-monitor-2.8.1-usermem.patch 889
+MD5 9948d4c847a49ac1a9db168f46c0d376 files/gnome-system-monitor-execlp.patch 365
 MD5 4ce03a83c4231e4b30b504c9e3e8faf2 files/digest-gnome-system-monitor-2.10.1 80
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCfheu2G5bA0cA/ScRAp6dAKDin1aZmG+xSjZaPxa06M9Ft0QG4gCdEYOG
-o+e/ST5Q+T5X0qvcXwTW9ZQ=
-=QhUA
------END PGP SIGNATURE-----
