@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pgadmin3/pgadmin3-1.2.1-r1.ebuild,v 1.1 2005/05/09 00:31:15 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pgadmin3/pgadmin3-1.2.1-r1.ebuild,v 1.2 2005/05/11 22:18:38 nakano Exp $
 
 inherit eutils libtool wxwidgets
 
@@ -20,7 +20,7 @@ DEPEND=">=x11-libs/wxGTK-2.6.0
 	>=sys-apps/sed-4"
 
 pkg_setup() {
-	if [ ! -e /usr/lib/wx/config/gtk2-unicode-release-2.6 ] ; then
+	if ! built_with_use '>=x11-libs/wxGTK-2.6.0' unicode ; then
 		die "${PN} requires >=x11-libs/wxGTK-2.6.0 emerged with USE='unicode'"
 	fi
 }
