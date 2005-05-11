@@ -1,6 +1,14 @@
 # ChangeLog for x11-libs/wxGTK
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.76 2005/05/08 14:30:50 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.77 2005/05/11 19:35:37 pythonhead Exp $
+
+*wxGTK-2.6.0-r1 (11 May 2005)
+
+  11 May 2005; Rob Cakebread <pythonhead@gentoo.org>
+  -files/wxGTK-2.4.2-gcc4.patch, -files/wxGTK-2.6.0-gcc4.patch,
+  -wxGTK-2.4.2-r4.ebuild, -wxGTK-2.6.0.ebuild, +wxGTK-2.6.0-r1.ebuild:
+  Removed gcc4 patch, it breaks apps bug# 91443. wxbase can now be built with
+  -gtk2 -wxgtk1 also multilib builds instead of monolithic bug# 91574
 
   08 May 2005; Herbie Hopkins <herbs@gentoo.org> wxGTK-2.4.2-r3.ebuild:
   Stable on amd64.
