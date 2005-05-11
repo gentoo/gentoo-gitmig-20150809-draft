@@ -1,0 +1,7 @@
+MD5 fc9875a1d50f991786c7ca99ad4142f0 slony1-1.1.0_beta4.ebuild 1039
+MD5 961ceeee7bf51a4193a0042226f86839 ChangeLog 424
+MD5 f8d3d207746da2a3cd14dcaab8daab76 metadata.xml 163
+MD5 c2cc8353a0c2c29dbef6270a8d171456 files/slony1.conf 338
+MD5 49cfd44cfeff125989087bd693197d3d files/slony1.init 707
+MD5 9b6f21cd1c27bef01c23ccfa2049b8cb files/digest-slony1-1.1.0_beta4 70
+MD5 1e14c40195d02127e32f8369db843873 files/slony1_remove_jave.patch 1431
