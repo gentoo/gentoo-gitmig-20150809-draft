@@ -2,13 +2,15 @@
 Hash: SHA1
 
 MD5 5b6dd438f81019e56fa641841c0c13fe metadata.xml 501
+MD5 432df22df897b8c6818826ae368ae35d ChangeLog 969
 MD5 3e10d1ffdd37b89952b5a565c195ccd3 visitors-0.2a.ebuild 812
-MD5 b46d44fd9857e2830aab2a3ba09c1c49 ChangeLog 845
+MD5 70af466d87e595db863d3a907e0e9a40 visitors-0.5.ebuild 807
 MD5 a85e3fdb5e561462134f69ce18711652 files/digest-visitors-0.2a 64
+MD5 6f8f04ea357d209e7defb103934ab358 files/digest-visitors-0.5 63
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFBOtlJI1lqEGTUzyQRAppAAJ9zJrUpaf/dGFsMPjQisrVyoQqIowCfQDut
-bcYc+6D/BBjFwxuzQjU/Bk4=
-=T1E9
+iD8DBQFCgZFgjUHll2nfF60RAnvCAJ43Z/wSbKegXSMjQXjkdnyKutWL/ACgwTz0
+tj3i7ER917g0slU/I9VUlLA=
+=f1sl
 -----END PGP SIGNATURE-----
