@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/libtool.eclass,v 1.44 2005/03/23 18:03:21 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/libtool.eclass,v 1.45 2005/05/11 11:10:31 azarah Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -227,8 +227,16 @@ elibtoolize() {
 								die "Portage patch requested, but failed to apply!"
 							fi
 						else
-							ewarn "  Could not apply portage.patch!"
-							ewarn "  Please verify that it is not needed."
+							if [[ -n $(grep 'We do not want portage' "${x}/ltmain.sh") ]] ; then
+								ewarn "  Portage patch seems to be already applied."
+								ewarn "  Please verify that it is not needed."
+							else
+								echo
+								eerror "Portage patch failed to apply!"
+								die "Portage patch failed to apply!"
+							fi
+							# We do not want to run libtoolize ...
+							ELT_APPLIED_PATCHES="portage"
 						fi
 						;;
 				esac
