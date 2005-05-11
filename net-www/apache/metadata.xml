@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <herd>apache</herd>
-  <maintainer restrict="&lt;apache-2">
-    <email>hollow@gentoo.org</email>
-    <name>Benedikt Boehm</name>
-  </maintainer>
   <longdescription>
     The Apache HTTP Server Project is an effort to develop and maintain an
     open-source HTTP server for modern operating systems. The goal of this
