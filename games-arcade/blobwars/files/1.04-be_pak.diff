@@ -1,0 +1,32 @@
+--- src/pak.cpp.bak	2005-05-11 14:54:04.000000000 -0400
++++ src/pak.cpp	2005-05-11 14:55:16.000000000 -0400
+@@ -200,12 +200,18 @@
+ 	
+ 	unsigned int numberOfFiles = totalFiles;
+ 
++	/* Make sure we've got it in LE format */
++#if SDL_BYTEORDER == SDL_BIG_ENDIAN
++	pos = SDL_Swap32(pos);
++	numberOfFiles = SDL_Swap32(numberOfFiles);
++#endif	
++	
+ 	fwrite(&pos, sizeof(unsigned int), 1, pak);
+ 	fwrite(&numberOfFiles, sizeof(unsigned int), 1, pak);
+ 
+ 	fclose(pak);
+ 
+-	printf("\nPak: All Done. Added %d files\n", numberOfFiles);
++	printf("\nPak: All Done. Added %d files\n", totalFiles);
+ 
+ 	return 0;
+ }
+--- src/pak.h.bak	2005-05-11 14:53:59.000000000 -0400
++++ src/pak.h	2005-05-11 14:54:18.000000000 -0400
+@@ -20,6 +20,7 @@
+ 
+ #include "zlib.h"
+ #include "SDL/SDL_endian.h"
++#include "SDL/SDL_byteorder.h"
+ #include "CFileData.h"
+ 
+ #include <dirent.h>

@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/blobwars
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/blobwars/ChangeLog,v 1.20 2005/04/27 01:39:33 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/blobwars/ChangeLog,v 1.21 2005/05/11 19:40:47 josejx Exp $
+
+  11 May 2005; Joseph Jezak <josejx@gentoo.org> +files/1.04-be_pak.diff,
+  blobwars-1.04.ebuild:
+  Added endian patch for pak file generation, bug #92259.
 
 *blobwars-1.04 (27 Apr 2005)
 
