@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/moodss
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/moodss/ChangeLog,v 1.6 2005/02/20 13:55:56 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/moodss/ChangeLog,v 1.7 2005/05/11 22:30:43 matsuu Exp $
+
+*moodss-20.0 (11 May 2005)
+
+  11 May 2005; MATSUU Takuto <matsuu@gentoo.org> metadata.xml,
+  +moodss-20.0.ebuild:
+  Version bumped.
+  Added ~amd64.
 
 *moodss-19.6 (20 Feb 2005)
 
