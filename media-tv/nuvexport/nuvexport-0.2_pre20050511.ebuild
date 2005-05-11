@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/nuvexport/nuvexport-0.2_pre20050502.ebuild,v 1.1 2005/05/07 06:45:48 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/nuvexport/nuvexport-0.2_pre20050511.ebuild,v 1.1 2005/05/11 07:39:34 cardoe Exp $
 
 S=${WORKDIR}/nuvexport-0.2
 DESCRIPTION="Export from mythtv recorded NuppelVideo files"
 HOMEPAGE="http://www.forevermore.net/mythtv/"
-SRC_URI="http://www.forevermore.net/files/nuvexport/nuvexport-0.2-0.20050502.cvs.tar.bz2
-	http://www.forevermore.net/files/nuvexport/archive/nuvexport-0.2-0.20050502.cvs.tar.bz2"
+SRC_URI="http://www.forevermore.net/files/nuvexport/nuvexport-0.2-0.20050511.cvs.tar.bz2
+	http://www.forevermore.net/files/nuvexport/archive/nuvexport-0.2-0.20050511.cvs.tar.bz2"
 LICENSE="as-is"
 SLOT="0"
 

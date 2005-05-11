@@ -1,18 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 eea027624dc9c985aa0ee5f40b762adc ChangeLog 4320
+MD5 8eafb2a695eca22ed9c0ea4b75ee88e0 ChangeLog 4571
 MD5 20e2255501865de5b568424821abf69d metadata.xml 161
-MD5 36927c6e6b7cde13dae099e02c28ab08 nuvexport-0.2_pre20050317.ebuild 1859
-MD5 1ba3639cc879a3fedd0653e31501411a nuvexport-0.2_pre20050331.ebuild 1867
-MD5 1fe1510407811d79c257d275333b5caa nuvexport-0.2_pre20050502.ebuild 1881
-MD5 9be30f695f6c8a08b7e74a56a98afa8f files/digest-nuvexport-0.2_pre20050317 80
-MD5 ff662feec6d87ad0ea150e2b47d86ab6 files/digest-nuvexport-0.2_pre20050331 80
-MD5 9a0091cd8272a2c9e1dad881b2e25d10 files/digest-nuvexport-0.2_pre20050502 80
+MD5 379f2535117c07c04721c56cb17ebe63 nuvexport-0.2_pre20050511.ebuild 1881
+MD5 8b1003b5750d269771bdc36c5277f26b files/digest-nuvexport-0.2_pre20050511 80
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCfGQtBtvusYtCZMsRAkYHAKCMYhwbn6khld2Zl/sGs01QzpVSfwCfY/Wc
-2pKrYthUdKQMhL80/XAikyo=
-=rYlN
+iD8DBQFCgbbGBtvusYtCZMsRAlPhAJ0X70U8oAqFMe2C7U1caS3carxidACfVvTe
+qfIZ4k2vFLISI/b1C1atGrI=
+=Kj6q
 -----END PGP SIGNATURE-----
