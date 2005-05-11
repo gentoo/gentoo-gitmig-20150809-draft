@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/mg4j
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/mg4j/ChangeLog,v 1.9 2005/04/15 13:20:23 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/mg4j/ChangeLog,v 1.10 2005/05/11 06:36:56 compnerd Exp $
+
+  11 May 2005; Saleem Abdulrasool <compnerd@gentoo.org> mg4j-0.9.1.ebuild:
+  Fixing broken digests
 
   15 Apr 2005; Jan Brinkmann <luckyduck@gentoo.org> mg4j-0.9.1.ebuild:
   added support for the source useflag, cosmetic changes.

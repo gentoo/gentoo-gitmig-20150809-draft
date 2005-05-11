@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/mg4j/mg4j-0.9.1.ebuild,v 1.4 2005/04/15 13:20:23 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/mg4j/mg4j-0.9.1.ebuild,v 1.5 2005/05/11 06:36:56 compnerd Exp $
 
 inherit eutils java-pkg
 
@@ -51,4 +51,3 @@ src_install() {
 	use doc && java-pkg_dohtml -r docs/*
 	use source && java-pkg_dosrc java/it
 }
-
