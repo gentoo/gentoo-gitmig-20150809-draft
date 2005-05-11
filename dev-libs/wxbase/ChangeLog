@@ -1,9 +1,0 @@
-# ChangeLog for dev-libs/wxbase
-# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/wxbase/ChangeLog,v 1.1 2005/05/02 18:07:19 pythonhead Exp $
-
-*wxbase-2.6.0 (02 May 2005)
-
-  02 May 2005; Rob Cakebread <pythonhead@gentoo.org> +wxbase-2.6.0.ebuild:
-  Initial commit. Thanks Diego <flameeyes@gentoo.org> for ebuild and wxlib.eclass
-
