@@ -1,6 +1,10 @@
 # ChangeLog for app-accessibility/speech-tools
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-tools/ChangeLog,v 1.22 2005/04/27 17:59:40 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-tools/ChangeLog,v 1.23 2005/05/11 21:54:10 agriffis Exp $
+
+  11 May 2005; Aron Griffis <agriffis@gentoo.org>
+  speech-tools-1.2.3-r2.ebuild:
+  add ~ia64
 
   27 Apr 2005; Markus Rothe <corsair@gentoo.org>
   speech-tools-1.2.3-r2.ebuild:
