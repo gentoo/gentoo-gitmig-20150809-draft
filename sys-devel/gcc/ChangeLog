@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.403 2005/05/10 18:10:37 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.404 2005/05/11 10:22:10 flameeyes Exp $
+
+  11 May 2005; Diego Pettenò <flameeyes@gentoo.org>
+  gcc-3.4.3.20050110-r2.ebuild, gcc-4.0.1_beta20050507.ebuild:
+  Make latest gcc (3.4 and 4) depend on glibc just for glibc systems.
 
   10 May 2005; Martin Schlemmer <azarah@gentoo.org>
   files/awk/fixlafiles.awk, gcc-4.0.0.ebuild, gcc-4.0.1_beta20050507.ebuild:
