@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/djbdns
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/ChangeLog,v 1.57 2005/05/06 06:42:37 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/ChangeLog,v 1.58 2005/05/11 13:29:33 ka0ttic Exp $
+
+  11 May 2005; Aaron Walker <ka0ttic@gentoo.org> djbdns-1.05-r14.ebuild:
+  Stable on x86 for bug 90782.
 
   06 May 2005; Michael Hanselmann <hansmi@gentoo.org>
   djbdns-1.05-r14.ebuild:
