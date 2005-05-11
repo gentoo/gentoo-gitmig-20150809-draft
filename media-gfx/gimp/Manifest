@@ -1,27 +1,37 @@
-MD5 b3fb5e1d6f43034d0b9182f097b2df11 gimp-2.0.0.ebuild 2654
-MD5 6e30693ee2b8125d5dfadf3a72625397 gimp-2.2.6.ebuild 3660
-MD5 0c8f35412e83518ba717b652b05e4c85 gimp-2.0.2.ebuild 2569
-MD5 405d2674bac45813485d5abed39d6eb3 gimp-2.2.3.ebuild 3740
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 0fa3db8c9de10eb6b80c303e17db7424 ChangeLog 15986
 MD5 77ea6e18335093980ca0521510f64183 gimp-1.2.5.ebuild 3202
+MD5 b3fb5e1d6f43034d0b9182f097b2df11 gimp-2.0.0.ebuild 2654
+MD5 0c8f35412e83518ba717b652b05e4c85 gimp-2.0.2.ebuild 2569
 MD5 f4ee70356bf8aa8f588d0d41e194c584 gimp-2.0.4.ebuild 3203
-MD5 542c10ced4b60c3b5f6d181da2c008d4 gimp-2.2.0.ebuild 3512
-MD5 23321eb2aa740463c9181ddcacb2c9bd gimp-2.0.6.ebuild 3247
-MD5 f4e3f252d4f2568afa6d10998b34fda0 gimp-2.2.6-r1.ebuild 4232
-MD5 73ab565fbfa32728dcc2ca58d1c15507 ChangeLog 15892
-MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 7878202fbf35cdba9a2907b735cbf90c gimp-2.0.5.ebuild 3216
-MD5 be326cb198ec1f1f6c21a5a5a1460415 files/gimp-2.0.0-gcc34.patch 1148
-MD5 f2b58299eceabecfe5df955198c267d6 files/psd_save.c 49151
-MD5 12ff6c7c980ee34dc7d4d94aa40059b0 files/ltmain_sh-1.5.0-fix-relink.patch 1718
-MD5 9696bde4a1b70dd2816d46bed477ebc0 files/gimp.desktop 2404
-MD5 8bf83fb83ce1c66006a27a7d9ec29dd7 files/pygimp-logo.png 19823
-MD5 5bd6fc067eba3828be1e3a49b4aa1c44 files/digest-gimp-2.2.6-r1 134
+MD5 23321eb2aa740463c9181ddcacb2c9bd gimp-2.0.6.ebuild 3247
+MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+MD5 542c10ced4b60c3b5f6d181da2c008d4 gimp-2.2.0.ebuild 3512
+MD5 405d2674bac45813485d5abed39d6eb3 gimp-2.2.3.ebuild 3740
+MD5 6e30693ee2b8125d5dfadf3a72625397 gimp-2.2.6.ebuild 3660
+MD5 a9e47bc0cfd8449bfa0cb7763b8f576b gimp-2.2.6-r1.ebuild 4230
 MD5 662e7b51f4c882429b73dea3263b39de files/digest-gimp-1.2.5 65
 MD5 568ba885fc51613466e3b0039e21946c files/digest-gimp-2.0.0 65
 MD5 1f2afa6b0785b0547e956d5aff63cf4d files/digest-gimp-2.0.2 65
 MD5 0d3108f9120d6976ce4ccb29a131aea7 files/digest-gimp-2.0.4 133
 MD5 397055832117d5c76e873af50a2e6f30 files/digest-gimp-2.0.5 134
 MD5 bbe7cd6ece5455900adcaeed9b467679 files/digest-gimp-2.0.6 134
+MD5 be326cb198ec1f1f6c21a5a5a1460415 files/gimp-2.0.0-gcc34.patch 1148
+MD5 9696bde4a1b70dd2816d46bed477ebc0 files/gimp.desktop 2404
+MD5 12ff6c7c980ee34dc7d4d94aa40059b0 files/ltmain_sh-1.5.0-fix-relink.patch 1718
+MD5 f2b58299eceabecfe5df955198c267d6 files/psd_save.c 49151
 MD5 204a8065e28141810fbda423e4118b9e files/digest-gimp-2.2.0 134
 MD5 675541af3f64fc4acdd1bd3e759b607d files/digest-gimp-2.2.3 134
+MD5 8bf83fb83ce1c66006a27a7d9ec29dd7 files/pygimp-logo.png 19823
 MD5 5bd6fc067eba3828be1e3a49b4aa1c44 files/digest-gimp-2.2.6 134
+MD5 5bd6fc067eba3828be1e3a49b4aa1c44 files/digest-gimp-2.2.6-r1 134
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFCgVDpKRy60XGEcJIRAooJAJ9pN2pVvjgthbaUNyLoEcvCmdAWAACgr1vA
+NpLrH9IeACGETbMjGNsuqRA=
+=i88j
+-----END PGP SIGNATURE-----
