@@ -4,7 +4,7 @@ app-arch/cpio-2.6
 app-arch/gzip-1.2.4
 app-arch/tar-1.13.25
 app-arch/unzip-5.20
-app-crypt/mit-krb5
+app-crypt/mit-krb5-1.4
 app-editors/emacs-21.2
 app-editors/pico-0.0.1
 app-editors/vim-6.2
