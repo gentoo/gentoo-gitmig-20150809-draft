@@ -1,19 +1,19 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 a9e1f1a5676d3aa15e8a440f2f3e7d2b lbdb-0.29-r1.ebuild 1306
-MD5 496ffcfce3a83dd0fc8d0c1e2dc1acfa lbdb-0.29.ebuild 723
+MD5 8d6dfefd49ccf85015b15aece6c41dba ChangeLog 2466
 MD5 5b169ca190f236691e352065d2b603f2 lbdb-0.30.ebuild 1160
-MD5 8796c16e9522bbd0b5e44a4405ca16a0 ChangeLog 2369
+MD5 496ffcfce3a83dd0fc8d0c1e2dc1acfa lbdb-0.29.ebuild 723
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
+MD5 ed1e9bdbfec6168e38c869ffbe64fb5d lbdb-0.29-r1.ebuild 1308
+MD5 1c694e739dd9620446174390df003997 files/digest-lbdb-0.30 61
+MD5 b4016292f88d51a3b8a6fe5e982597c8 files/digest-lbdb-0.29 60
 MD5 b4016292f88d51a3b8a6fe5e982597c8 files/digest-lbdb-0.29-r1 60
 MD5 181739eb24d5fd4227cc06e8ee243ded files/lbdb-configure-in.patch 2380
-MD5 b4016292f88d51a3b8a6fe5e982597c8 files/digest-lbdb-0.29 60
-MD5 1c694e739dd9620446174390df003997 files/digest-lbdb-0.30 61
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFCf7lTViELBEf1JB0RAhDEAJ43Phejjb4MpUXZi9zmEwW/L3632gCdFnrD
-0NPkqSWQksN4o9brXunp3nQ=
-=jbHA
+iD8DBQFCggawKRy60XGEcJIRAvidAKCjVqtLKoYvutepaLGlK+Pgy81NOwCfS9Y5
+daA9yuhsfC08ZAsnaRJcmSI=
+=t7VI
 -----END PGP SIGNATURE-----
