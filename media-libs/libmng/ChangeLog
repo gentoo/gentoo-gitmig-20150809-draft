@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libmng
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmng/ChangeLog,v 1.22 2005/04/22 01:43:38 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmng/ChangeLog,v 1.23 2005/05/11 15:54:23 greg_g Exp $
+
+  11 May 2005; Gregorio Guidi <greg_g@gentoo.org> libmng-1.0.8-r1.ebuild:
+  Fix bug #90514 by manually running autoreconf.
 
   22 Apr 2005; Diego Pettenò <flameeyes@gentoo.org> libmng-1.0.8.ebuild,
   libmng-1.0.8-r1.ebuild:

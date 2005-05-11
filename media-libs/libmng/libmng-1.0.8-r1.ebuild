@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmng/libmng-1.0.8-r1.ebuild,v 1.2 2005/04/22 01:43:38 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmng/libmng-1.0.8-r1.ebuild,v 1.3 2005/05/11 15:54:23 greg_g Exp $
 
 DESCRIPTION="Multiple Image Networkgraphics lib (animated png's)"
 HOMEPAGE="http://www.libmng.com/"
@@ -25,11 +25,15 @@ src_unpack() {
 
 	sed -i -e 's:\(#include\) "lcms.h":\1 <lcms/lcms.h>:' libmng_types.h
 	sed -i -e 's:lcms\.h:lcms/lcms\.h:' makefiles/configure.in
-
-	sh autogen.sh
 }
 
 src_compile() {
+	ln -s makefiles/configure.in .
+	ln -s makefiles/Makefile.am .
+
+	export WANT_AUTOMAKE="1.9"
+	autoreconf --force --install
+
 	econf --with-lcms || die
 	emake || die
 }
