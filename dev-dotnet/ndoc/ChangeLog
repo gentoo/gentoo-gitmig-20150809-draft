@@ -1,6 +1,11 @@
 # ChangeLog for dev-dotnet/ndoc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/ndoc/ChangeLog,v 1.4 2005/04/03 07:35:39 urilith Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/ndoc/ChangeLog,v 1.5 2005/05/11 10:13:50 urilith Exp $
+
+*ndoc-1.3.1-r2 (11 May 2005)
+
+  11 May 2005; <urilith@gentoo.org> +ndoc-1.3.1-r2.ebuild:
+  Fixed some warnings showing up as errors.
 
 *ndoc-1.3.1-r1 (03 Apr 2005)
 
