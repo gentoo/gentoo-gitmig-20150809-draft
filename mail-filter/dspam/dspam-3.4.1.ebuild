@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.4.1.ebuild,v 1.4 2005/05/10 15:56:29 st_lim Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.4.1.ebuild,v 1.5 2005/05/11 05:24:15 st_lim Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://dspam.nuclearelephant.com/sources/${PN}-${PV}.tar.gz
 HOMEPAGE="http://dspam.nuclearelephant.com/"
 LICENSE="GPL-2"
 
-IUSE="cyrus daemon debug exim mysql maildrop neural oci8 postgres procmail sqlite sqlite3 large-domain virtual-users"
+IUSE="cyrus debug exim mysql maildrop neural oci8 postgres procmail sqlite sqlite3 large-domain virtual-users"
 DEPEND="exim? ( >=mail-mta/exim-4.34 )
 		mysql? ( >=dev-db/mysql-3.23 ) || ( >=sys-libs/db-4.0 )
 		maildrop? ( >=mail-filter/maildrop-1.5.3 )
