@@ -1,6 +1,12 @@
 # ChangeLog for x11-terms/eterm
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/eterm/ChangeLog,v 1.32 2005/05/06 10:31:08 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/eterm/ChangeLog,v 1.33 2005/05/11 00:31:48 vapier Exp $
+
+*eterm-0.9.3-r4 (11 May 2005)
+
+  11 May 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/eterm-0.9.3-deadkeys.patch, +eterm-0.9.3-r4.ebuild:
+  Grab fix from upstream cvs to fix deadkey usages #91878 by Tobias Vogel.
 
   06 May 2005; Sven Wegener <swegener@gentoo.org> eterm-0.9.2-r6.ebuild:
   Removed * postfix from <, <=, >= and > dependencies.

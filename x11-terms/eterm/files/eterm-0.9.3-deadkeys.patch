@@ -1,0 +1,127 @@
+http://bugs.gentoo.org/91878
+
+ Tue Mar 15 16:44:09 2005                        Michael Jennings (mej)
+
+ Reverted part of a patch from Chris Schoeneman <crs23@bigfoot.com>
+ (changelog entry "Fri Jun 25 17:48:24 2004") which broke dead keys and
+ compose-key sequences.
+
+ Fixed error in saving of cut_chars attribute.
+
+Index: src/misc.c
+===================================================================
+RCS file: /cvsroot/enlightenment/eterm/Eterm/src/misc.c,v
+retrieving revision 1.25
+retrieving revision 1.26
+diff -u -r1.25 -r1.26
+--- src/misc.c	11 Jan 2004 22:10:29 -0000	1.25
++++ src/misc.c	15 Mar 2005 21:48:02 -0000	1.26
+@@ -223,6 +223,53 @@
+     return (pnew - str);
+ }
+ 
++spif_charptr_t
++escape_string(spif_charptr_t str, spif_char_t quote, spif_int32_t maxlen)
++{
++    spif_charptr_t buff, s = str, pbuff;
++
++    D_STRINGS(("escape_string(%s %c %ld)\n", (char *) str, quote, maxlen));
++    if (! quote) {
++        quote = '\"';
++    }
++
++    /* The escaped string will be at most twice the length of the original. */
++    buff = SPIF_CAST(charptr) MALLOC(strlen(SPIF_CAST_PTR(char) str) * 2 + 1);
++
++    /* Copy and escape the string from str into buff. */
++    for (pbuff = buff; (*s); s++, pbuff++) {
++        if (*s == quote) {
++            D_STRINGS(("Double-escaping \'%c\' at position %d\n", *s, s - str));
++            *pbuff = '\\';
++            pbuff++;
++            *pbuff = '\\';
++            pbuff++;
++        } else {
++            if (quote == '\"') {
++                if ((*s == '\\') || (*s == '`')) {
++                    D_STRINGS(("Escaping \'%c\' at position %d\n", *s, s - str));
++                    *pbuff = '\\';
++                    pbuff++;
++                }
++            }
++        }
++        D_STRINGS(("Copying \'%c\' at position %d\n", *s, s - str));
++        *pbuff = *s;
++    }
++    *pbuff = 0;
++
++    if (maxlen) {
++        /* Given maxlen, we know "str" can hold at least "maxlen" chars. */
++        if (!spiftool_safe_strncpy(str, buff, maxlen)) {
++            str[maxlen] = 0;
++        }
++        FREE(buff);
++        return str;
++    } else {
++        return buff;
++    }
++}
++
+ char *
+ safe_print_string(const char *str, unsigned long len)
+ {
+Index: src/misc.h
+===================================================================
+RCS file: /cvsroot/enlightenment/eterm/Eterm/src/misc.h,v
+retrieving revision 1.15
+retrieving revision 1.16
+diff -u -r1.15 -r1.16
+--- src/misc.h	11 Jan 2004 22:10:29 -0000	1.15
++++ src/misc.h	15 Mar 2005 21:48:02 -0000	1.16
+@@ -40,6 +40,7 @@
+ extern unsigned long str_leading_match(register const char *, register const char *);
+ extern char *str_trim(char *str);
+ extern int parse_escaped_string(char *str);
++extern spif_charptr_t escape_string(spif_charptr_t str, spif_char_t quote, spif_int32_t maxlen);
+ extern char *safe_print_string(const char *buff, unsigned long len);
+ extern unsigned long add_carriage_returns(unsigned char *buff, unsigned long cnt);
+ extern unsigned char mkdirhier(const char *);
+Index: src/options.c
+===================================================================
+RCS file: /cvsroot/enlightenment/eterm/Eterm/src/options.c,v
+retrieving revision 1.135
+retrieving revision 1.136
+diff -u -r1.135 -r1.136
+--- src/options.c	23 Feb 2005 20:38:19 -0000	1.135
++++ src/options.c	15 Mar 2005 21:48:02 -0000	1.136
+@@ -3850,7 +3863,10 @@
+     }
+ #ifdef CUTCHAR_OPTION
+     if (rs_cutchars) {
+-        fprintf(fp, "    cut_chars '%s'\n", rs_cutchars);
++        spif_charptr_t cut_chars_escaped;
++
++        cut_chars_escaped = escape_string(SPIF_CAST(charptr) rs_cutchars, '\"', 0);
++        fprintf(fp, "    cut_chars \"%s\"\n", (char *) cut_chars_escaped);
+     }
+ #endif
+     fprintf(fp, "end misc\n\n");
+Index: src/windows.c
+===================================================================
+RCS file: /cvsroot/enlightenment/eterm/Eterm/src/windows.c,v
+retrieving revision 1.68
+retrieving revision 1.69
+diff -u -r1.68 -r1.69
+--- src/windows.c	14 Dec 2004 23:24:33 -0000	1.68
++++ src/windows.c	15 Mar 2005 21:48:12 -0000	1.69
+@@ -473,9 +473,7 @@
+         XClearWindow(Xdisplay, TermWin.vt);
+     }
+     XDefineCursor(Xdisplay, TermWin.vt, TermWin_cursor);
+-    TermWin.mask = (KeyPressMask | EnterWindowMask | LeaveWindowMask | ExposureMask
+-                    | ButtonPressMask | ButtonReleaseMask | Button1MotionMask
+-                    | Button2MotionMask | Button3MotionMask);
++    TermWin.mask = (EnterWindowMask | LeaveWindowMask | ExposureMask | ButtonPressMask | ButtonReleaseMask | Button1MotionMask | Button2MotionMask | Button3MotionMask);
+     XSelectInput(Xdisplay, TermWin.vt, TermWin.mask);
+ 
+     /* If the user wants a specific desktop, tell the WM that */
