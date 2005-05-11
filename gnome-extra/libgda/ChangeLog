@@ -1,7 +1,19 @@
 # ChangeLog for gnome-extra/libgda
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/ChangeLog,v 1.56 2005/05/08 20:39:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/ChangeLog,v 1.57 2005/05/11 22:47:00 leonardop Exp $
 
+  11 May 2005; Leonardo Boshell <leonardop@gentoo.org> libgda-1.0.4.ebuild:
+  Stable on x86.
+
+  11 May 2005; Leonardo Boshell <leonardop@gentoo.org> libgda-1.0.2.ebuild,
+  files/libgda-1.0.2-gcc3.4_fix.patch, files/libgda-1.0.2-freetds_fix.patch,
+  files/libgda-1.0.2-firebird_fix.patch:
+  Added a patch to fix compilation with gcc-3.4 (bug #87545). Added a patch
+  and updated the freetds dependency to version >= 0.62 to fix a compilation
+  problem due to API changes (bug #81724). Added a patch to fix compilation
+  of the firebird provider. Apply patch from libgda-1.0.3 to fix docbook
+  documentation.
+  
   08 May 2005; Aron Griffis <agriffis@gentoo.org> libgda-1.0.4.ebuild:
   stable on ia64
 

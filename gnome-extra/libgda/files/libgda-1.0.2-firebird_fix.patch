@@ -1,0 +1,11 @@
+diff -NurdB libgda-1.0.2/providers/firebird/gda-firebird-provider.c libgda-1.0.2-firebird-fix/providers/firebird/gda-firebird-provider.c
+--- libgda-1.0.2/providers/firebird/gda-firebird-provider.c	2003-01-15 19:10:29.000000000 -0500
++++ libgda-1.0.2-firebird-fix/providers/firebird/gda-firebird-provider.c	2005-05-11 15:24:29.000000000 -0500
+@@ -29,6 +29,7 @@
+ #define TRANSACTION_DATA "GDA_Firebird_TransactionData"
+ #define STATEMENT_DATA "GDA_Firebird_StatementData"
+ 
++static isc_tr_handle *gda_firebird_command_get_transaction (GdaCommand *cmd);
+ static void gda_firebird_provider_class_init (GdaFirebirdProviderClass *klass);
+ static void gda_firebird_provider_init       (GdaFirebirdProvider *provider,
+ 					       GdaFirebirdProviderClass *klass);
