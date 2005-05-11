@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 44b539db77764f44e5ae45454b6c950e libprelude-0.8.10-r1.ebuild 1101
-MD5 cc2a40935b6a19e96deb784a29407e68 ChangeLog 3397
+MD5 98ee08bafd949666e9d6657fe6345ef2 ChangeLog 3509
+MD5 d790c989d61d8862d844cf701798be53 libprelude-0.8.10.ebuild 933
 MD5 58ac7b9f0648503cb1ef46d0e5c96a12 metadata.xml 224
 MD5 7771ee6876ec561c7b9c1709446045ff libprelude-0.9.0_rc5-r1.ebuild 1264
-MD5 d790c989d61d8862d844cf701798be53 libprelude-0.8.10.ebuild 933
+MD5 5530b51e2aabfdddb68f05ba69c95171 libprelude-0.8.10-r1.ebuild 1099
 MD5 4df78be1fea7023bd39fa475deb50465 files/digest-libprelude-0.8.10 69
-MD5 4df78be1fea7023bd39fa475deb50465 files/digest-libprelude-0.8.10-r1 69
 MD5 2e52e413f2b090525e839f992b2613ef files/digest-libprelude-0.9.0_rc5-r1 73
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCgVFXKf2g/qXtneoRAl2yAJ95MeCMdMYVq8mPUn/81GYRgWHhwgCgxNmO
-LMsFNKL9bsFzBxjNxswpi1U=
-=/ZjR
------END PGP SIGNATURE-----
+MD5 4df78be1fea7023bd39fa475deb50465 files/digest-libprelude-0.8.10-r1 69
