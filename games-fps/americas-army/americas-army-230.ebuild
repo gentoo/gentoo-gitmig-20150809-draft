@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/americas-army/americas-army-230.ebuild,v 1.3 2005/05/02 18:41:23 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/americas-army/americas-army-230.ebuild,v 1.4 2005/05/11 21:32:03 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -42,7 +42,7 @@ src_unpack() {
 	unpack_makeself ${DISTDIR}/${MY_P} || die "unpacking game"
 	tar -zxf setupstuff.tar.gz || die
 	if use dedicated; then
-		unpack armyops-all-support.tar.bz2 || die
+		unpack ${PN}-all-0.1.tar.bz2 || die
 	fi
 }
 
