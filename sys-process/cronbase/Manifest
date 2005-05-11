@@ -1,8 +1,11 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 d608177619361b5cf07109d7e45bf726 cronbase-0.3.1.ebuild 789
 MD5 6eaaa244afa1aa0b96112382e643d6f6 cronbase-0.3.ebuild 795
-MD5 469d96116e017f9913a5b8c7069efb68 cronbase-0.3.2.ebuild 801
+MD5 f3238b8e45d3598a21b70c3ba905b51b cronbase-0.3.2.ebuild 797
 MD5 cb008353dea555fdac9dde6d43a47dbe cronbase-0.2.1-r3.ebuild 800
-MD5 f3ef5d8c5625184687dc3801756ab089 ChangeLog 4368
+MD5 f4304d822c49cfc6aaad2ab5788d7554 ChangeLog 4460
 MD5 9c8fdf815ce980c230d763b496d4d088 metadata.xml 158
 MD5 b24a8cee126be26a019b3e31b072f226 files/run-crons-0.3 2641
 MD5 8a5efc0f1ab99d6942692ea684cd72c5 files/run-crons-0.2.1 1962
@@ -13,3 +16,10 @@ MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-cronbase-0.3 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-cronbase-0.2.1-r3 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-cronbase-0.3.1 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-cronbase-0.3.2 0
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCgmp4ntT9W3vfTuoRAhw4AJ9VE/vZ5e7DDjdkm90O4OzRjgYYzgCfesz5
+IRCcR/SHBk+IFqhzE5b8T6g=
+=tknN
+-----END PGP SIGNATURE-----
