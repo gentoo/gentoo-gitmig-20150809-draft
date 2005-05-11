@@ -1,4 +1,6 @@
-MD5 1ffa268b94d38cc3d43bf675aec8ab33 ChangeLog 2101
+MD5 387e51b0ef60211ada0dc96561e146fa ChangeLog 2228
+MD5 b4013e87ebca4bee1b9324b313310b16 cl-gd-0.4.7.ebuild 1850
 MD5 30a9bc8500295971e1228982268c3d9f metadata.xml 420
 MD5 10e66bf96c0763353cd06b85292b92ee cl-gd-0.4.6.ebuild 1850
+MD5 d3c2a927176118e02eb90821de5e6264 files/digest-cl-gd-0.4.7 68
 MD5 7c479798b51caee04f0de6198b6f1123 files/digest-cl-gd-0.4.6 68
