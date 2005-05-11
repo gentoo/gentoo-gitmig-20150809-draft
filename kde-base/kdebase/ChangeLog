@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kdebase
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.195 2005/05/10 15:46:26 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.196 2005/05/11 19:57:42 greg_g Exp $
+
+*kdebase-3.4.0-r1 (11 May 2005)
+
+  11 May 2005; Gregorio Guidi <greg_g@gentoo.org>
+  +files/kdebase-3.4.0-r1-startkde-gentoo.patch, +kdebase-3.4.0-r1.ebuild:
+  Better handling of config files migration (#40698). Fix conflict with the
+  menu from gnome 2.10 (#89870).
 
   10 May 2005; Carsten Lohrke <carlo@gentoo.org> kdebase-3.4.0.ebuild:
   corrected dbus and hal dependencies, #91903
