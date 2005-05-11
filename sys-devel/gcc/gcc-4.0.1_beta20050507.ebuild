@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.0.1_beta20050507.ebuild,v 1.3 2005/05/11 10:22:10 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.0.1_beta20050507.ebuild,v 1.4 2005/05/11 11:18:10 azarah Exp $
 
 ETYPE="gcc-compiler"
 
@@ -16,10 +16,7 @@ RDEPEND="virtual/libc
 	>=sys-devel/gcc-config-1.3.1
 	>=sys-libs/zlib-1.1.4
 	!sys-devel/hardened-gcc
-	elibc_glibc? (
-		>=sys-libs/glibc-2.3.3_pre20040420-r1
-		hardened? ( >=sys-libs/glibc-2.3.3_pre20040529 )
-	)
+	elibc_glibc? ( >=sys-libs/glibc-2.3.5 )
 	amd64? ( multilib? ( >=app-emulation/emul-linux-x86-glibc-1.1 ) )
 	fortran? ( dev-libs/gmp )
 	!build? (
@@ -39,19 +36,10 @@ fi
 DEPEND="${RDEPEND}
 	>=sys-apps/texinfo-4.2-r4
 	>=sys-devel/bison-1.875
-	>=sys-devel/binutils-2.15.90.0.1.1-r1"
+	>=sys-devel/binutils-2.15.97"
 
 PDEPEND="sys-devel/gcc-config
 	!nocxx? ( !n32? ( !n64? ( !uclibc? ( !build? ( sys-libs/libstdc++-v3 ) ) ) ) )"
-
-src_unpack() {
-	gcc_src_unpack
-
-	cd ${S}
-	for x in $(cat /tmp/gcc4/list2); do
-		[[ -f /tmp/gcc4/${x} ]] && epatch "/tmp/gcc4/${x}"
-	done
-}
 
 pkg_postinst() {
 	toolchain_pkg_postinst
