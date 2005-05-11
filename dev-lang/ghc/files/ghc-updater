@@ -178,19 +178,24 @@ eloginfo "Calculating Upgrade Package List .."
 
 PKGS_OK=""
 PKGS_MASKED=""
+PKGS_BLOCKED=""
 PKGS_MISSING=""
 
 MASKED_STRING="been masked"
+BLOCKED_STRING="is blocking"
 MISSING_STRING="there are no masked or unmasked ebuilds to satisfy"
 
 for pkg in ${PKGS_TO_REMERGE}; do
-   emerge_output="$(emerge -p \~$pkg 2>&1)"
+   emerge_output="$(emerge -p '>='$pkg 2>&1)"
    if $(echo "${emerge_output}" | grep "${MASKED_STRING}" > /dev/null); then
       PKGS_MASKED="${PKGS_MASKED} $pkg"
-	  elogecho "$pkg is masked"	  
+	  elogecho ">=$pkg is masked"
+   elif $(echo "${emerge_output}" | grep "${BLOCKED_STRING}" > /dev/null); then
+      PKGS_BLOCKED="${PKGS_BLOCKED} $pkg"
+	  elogecho ">=$pkg is blocked"
    elif $(echo "${emerge_output}" | grep "${MISSING_STRING}" > /dev/null); then
       PKGS_MISSING="${PKGS_MISSING} $pkg"
-	  elogecho "$pkg is missing from portage"
+	  elogecho ">=$pkg is missing from portage"
    else
       PKGS_OK="${PKGS_OK} $pkg"
 	  PKGS_COUNT_REMERGE=$((PKGS_COUNT_REMERGE + 1))
@@ -207,7 +212,7 @@ PKGS_OK_SORTED="$(${PORTAGE_PYTHON} ${PORTDIR}/dev-lang/python/files/depreorder.
 
 eloginfo "Preparing to merge these packages in this order:"
 for pkg in $PKGS_OK_SORTED; do
-	elogecho "$pkg"
+	elogecho ">=$pkg"
 done
 
 # we emerge each package seperately to ensure we know exactly which ones might
@@ -218,7 +223,7 @@ PKGS_FAILED=""
 if [ "${PRETEND}" != "1" ]; then
 	for pkg in ${PKGS_OK_SORTED}; do
 		eloginfo "Starting to merge ($COUNT/$PKGS_COUNT_REMERGE) $pkg .."
-		if ! emerge --oneshot --nodeps \~$pkg; then
+		if ! emerge --oneshot --nodeps '>='$pkg; then
 			PKGS_FAILED="${PKGS_FAILED} $pkg"
 			elogerr "Failed merging $pkg ($COUNT/$PKGS_COUNT_REMERGE)!"
 		fi
@@ -228,11 +233,13 @@ fi
 
 # final output stuff
 OUTPUT_PKGS_MASKED=""
-for pkg in ${PKGS_MASKED}; do OUTPUT_PKGS_MASKED="${OUTPUT_PKGS_MASKED} \~$pkg"; done
+for pkg in ${PKGS_MASKED}; do OUTPUT_PKGS_MASKED="${OUTPUT_PKGS_MASKED} '>='$pkg"; done
+OUTPUT_PKGS_BLOCKED=""
+for pkg in ${PKGS_BLOCKED}; do OUTPUT_PKGS_BLOCKED="${OUTPUT_PKGS_BLOCKED} $pkg"; done
 OUTPUT_PKGS_MISSING=""
 for pkg in ${PKGS_MISSING}; do OUTPUT_PKGS_MISSING="${OUTPUT_PKGS_MISSING} $pkg"; done
 OUTPUT_PKGS_FAILED=""
-for pkg in ${PKGS_FAILED}; do OUTPUT_PKGS_FAILED="${OUTPUT_PKGS_FAILED} \~$pkg"; done
+for pkg in ${PKGS_FAILED}; do OUTPUT_PKGS_FAILED="${OUTPUT_PKGS_FAILED} '>='$pkg"; done
 
 if [ -n "${PKGS_FAILED}" -o -n "${PKGS_MISSING}" -o -n "${PKGS_MASKED}" ]; then
    echo
@@ -250,12 +257,24 @@ if [ -n "${PKGS_FAILED}" -o -n "${PKGS_MISSING}" -o -n "${PKGS_MASKED}" ]; then
       ewarn " emerge -p ${OUTPUT_PKGS_MASKED}"
       echo
    fi
+   if [ -n "${OUTPUT_PKGS_BLOCKED}" ]; then
+      echo
+      ewarn " Blocked Packages:"
+	  ewarn " -----------------"
+      ewarn " These packages are currently blocked; they might not yet"
+      ewarn " be compatible with the current ghc. You can run ghc-updater"
+      ewarn " again at a later time."
+      echo
+      for x in ${OUTPUT_PKGS_BLOCKED}; do 
+         echo "   ${x}"
+      done
+   fi
    if [ -n "${OUTPUT_PKGS_MISSING}" ]; then
       echo
       ewarn " Missing Packages:"
 	  ewarn " -----------------"
-      ewarn " These packages need to be updated because their versions do"
-      ewarn " not exist in portage anymore."
+      ewarn " These packages cannot be updated because they do not exist"
+      ewarn " in portage anymore."
       echo
       for x in ${OUTPUT_PKGS_MISSING}; do 
          echo "   ${x}"

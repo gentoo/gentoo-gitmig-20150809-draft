@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/ghc
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.58 2005/05/09 16:00:09 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.59 2005/05/11 21:36:02 kosmikus Exp $
+
+  11 May 2005; Andres Loeh <kosmikus@gentoo.org> files/ghc-updater:
+  Changes to ghc-updater, to make it a bit more useful for the update to ghc-6.4.
 
   09 May 2005; Markus Rothe <corsair@gentoo.org>
   +files/ghc-6.4-powerpc.patch, ghc-6.4.ebuild:
