@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdissert/kdissert-0.9.0.ebuild,v 1.1 2005/05/11 16:31:15 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdissert/kdissert-0.9.0.ebuild,v 1.2 2005/05/11 16:33:35 carlo Exp $
 
 inherit kde
 
@@ -29,7 +29,7 @@ src_unpack() {
 src_compile() {
 	local myconf="kdeincludes=$(kde-config --prefix)/include prefix=/usr"
 	use amd64 && myconf="${myconf} libsuffix=64"
-	
+
 	scons configure ${myconf} || die "configure failed"
 	scons ${MAKEOPTS} || die "scons failed"
 }
