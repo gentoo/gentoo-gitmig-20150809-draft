@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/bogofilter/bogofilter-0.94.8.ebuild,v 1.1 2005/05/04 13:53:30 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/bogofilter/bogofilter-0.94.11.ebuild,v 1.1 2005/05/11 05:43:11 tove Exp $
 
 inherit eutils
 
@@ -21,15 +21,6 @@ RDEPEND="virtual/libc
 
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4"
-
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-	DB_SLOT="$(best_version sys-libs/db | sed -e 's/sys-libs\/db-\(3\|4\.[123]\|4\).*/\1/' )"
-	sed -i -e "s/db_\(checkpoint\|archive\|stat\|recover\)/db${DB_SLOT}_\1/g" \
-		src/bf_compact src/bf_copy src/bf_tar src/bf_resize \
-		|| die "sed failed - DB_SLOT ${DB_SLOT}"
-}
 
 src_compile() {
 	local myconf=""
