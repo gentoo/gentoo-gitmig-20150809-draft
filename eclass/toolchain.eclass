@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.144 2005/05/02 22:42:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.145 2005/05/11 11:11:37 azarah Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -867,7 +867,9 @@ gcc_src_unpack() {
 	# done to keep our gcc backwards compatible with binutils. 
 	# gcc 3.4.1 cvs has patches that need back porting.. 
 	# http://gcc.gnu.org/bugzilla/show_bug.cgi?id=14992 (May 3 2004)
-	sed -i -e s/HAVE_LD_AS_NEEDED/USE_LD_AS_NEEDED/g ${S}/gcc/config.in
+	if [[ ${GCCMAJOR} -lt 4 ]] ; then
+		sed -i -e s/HAVE_LD_AS_NEEDED/USE_LD_AS_NEEDED/g ${S}/gcc/config.in
+	fi
 
 	# Fixup libtool to correctly generate .la files with portage
 	cd ${S}
