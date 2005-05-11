@@ -1,6 +1,6 @@
 # ChangeLog for net-misc/wget
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/ChangeLog,v 1.58 2005/05/10 15:56:47 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/ChangeLog,v 1.59 2005/05/11 12:09:16 seemant Exp $
 
 *wget-1.9.1-r4 (10 May 2005)
 
@@ -12,7 +12,7 @@
   printing out the percentage in the output, removing rpath from the binary,
   and finally in wgetrc: passive ftp is the default (closing bug #89814 by Tor
   Klingberg <tor.klingberg@gmx.net>), and the references to /usr/local/etc now
-  point to /etc instead
+  point to /etc instead.  The de and fr patches should fix bug #77138 by: Sven <skoehler@upb.de>
 
   10 May 2005; Seemant Kulleen <seemant@gentoo.org>
   -files/wget-1.9.1+ipvmisc.patch, -files/wget-1.9.1-locale.patch,
