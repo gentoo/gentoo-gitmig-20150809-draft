@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3958 2005/05/11 08:45:40 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3959 2005/05/11 21:56:52 kosmikus Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -42,10 +42,6 @@ sys-kernel/wolk-sources
 # Peter Johanson <latexer@gentoo.org> (08 May 2005)
 # New blam requires mono-1.1.x, so mask for now
 =net-news/blam-1.8.0
-
-# Luis F. Araujo <araujo@gentoo.org> (08 May 2005)
-# Masked until we unmask ghc-6.4
-=dev-haskell/hsshellscript-2.6.0
 
 # Masatomo Nakano <nakano@gentoo.org> (08 May 2005)
 # Masked for testing with new libpq package.
@@ -132,10 +128,6 @@ www-apps/interchange
 # Masking as it is broken against newer wine versions,
 # and completely abandoned upstream
 dev-dotnet/winelib
-
-# Andres Loeh <kosmikus@gentoo.org> (02 May 2005)
-# waiting for Haskell packages to get ported to ghc-6.4
->=dev-lang/ghc-bin-6.3
 
 # Karl Trygve Kalleberg <karltk@gentoo.org> (1 May 2005)
 # GNOME 2.10 mask
@@ -382,10 +374,6 @@ net-analyzer/nomad
 # Alastair Tse <liquidx@gentoo.org> (09 Mar 2005)
 # Unsupported upstream, superceded by qc-usb.
 media-video/qce-ga
-
-# Andres Loeh <kosmikus@gentoo.org> (09 Mar 2005)
-# waiting for Haskell packages to get ported to ghc-6.4
->=dev-lang/ghc-6.3
 
 # Joe McCann <joem@gentoo.org> (30 April 2005)
 #Gnome-2.10.1 mask
