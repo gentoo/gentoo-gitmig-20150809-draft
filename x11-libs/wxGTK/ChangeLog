@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/wxGTK
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.77 2005/05/11 19:35:37 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.78 2005/05/11 21:35:43 pythonhead Exp $
+
+  11 May 2005; Rob Cakebread <pythonhead@gentoo.org> wxGTK-2.4.2-r3.ebuild:
+  Removed gtk USE flag.
 
 *wxGTK-2.6.0-r1 (11 May 2005)
 
