@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ghc-package.eclass,v 1.10 2005/05/08 14:49:25 dcoutts Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ghc-package.eclass,v 1.11 2005/05/11 21:26:04 kosmikus Exp $
 #
 # Author: Andres Loeh <kosmikus@gentoo.org>
 #
@@ -92,7 +92,7 @@ ghc-setup-pkg() {
 	echo '[]' > ${localpkgconf}
 	for pkg in $*; do
 		$(ghc-getghcpkgbin) -f ${localpkgconf} -u --force \
-			< ${pkg}
+			< ${pkg} || die "failed to register ${pkg}"
 	done
 }
 
