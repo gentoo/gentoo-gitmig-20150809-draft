@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.51 2005/05/11 11:57:33 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.52 2005/05/11 12:47:06 stkn Exp $
+
+  11 May 2005; Stefan Knoblich <stkn@gentoo.org>
+  files/1.0.0/asterisk.confd.sec:
+  Fixed asterisk.confd.sec
 
   11 May 2005; Stefan Knoblich <stkn@gentoo.org> asterisk-1.0.7-r1.ebuild:
   Changed ebuild to fix permissions on live-filesystem during pkg_postinst,

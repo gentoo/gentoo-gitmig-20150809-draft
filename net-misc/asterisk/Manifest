@@ -7,7 +7,7 @@ MD5 9af7f719e9db949d2d7870e01cd6faa1 asterisk-1.0.3.ebuild 5845
 MD5 867bae5d74f56337feec21310c14ecca asterisk-1.0.5-r1.ebuild 7170
 MD5 0a9506b97103f05fdd15df48db9b3506 asterisk-1.0.3-r1.ebuild 5865
 MD5 6201814863e121c6cae9a8209b0b9a27 asterisk-1.0.0.ebuild 3394
-MD5 08135b3f597c7f4d0876428c0a67dfae ChangeLog 9304
+MD5 d791b9c3575967e5f76b9923e611cf83 ChangeLog 9415
 MD5 b551ce4bb8eb4a03cb0e551c279ab02c asterisk-0.9.0.ebuild 3161
 MD5 465f444622b40abb34bbb311b571ed24 asterisk-1.0.2.ebuild 5585
 MD5 1f0cf9681436a84a7be9a324e8375ef3 asterisk-1.0.6.ebuild 8622
@@ -31,7 +31,7 @@ MD5 920f8ae54f895cfa46a8a037c865e59a files/1.0.0/asterisk.rc6 517
 MD5 f0fe0308b464c71f83cf2483388c8058 files/1.0.0/asterisk-1.0.1-linux26.diff 474
 MD5 08d718c04e911f465f867577d649d204 files/1.0.0/asterisk-1.0.5-uclibc-dns.diff 304
 MD5 edf12407ea851d46ced85276149aedf1 files/1.0.0/asterisk.rc6.sec 760
-MD5 266ffa04819c5fa35b157b23d29a8ca2 files/1.0.0/asterisk.confd.sec 762
+MD5 e82caefb3c418cc276a2f5c253852b10 files/1.0.0/asterisk.confd.sec 419
 MD5 93d2e0533a32a38e21f99f278f635266 files/1.0.0/asterisk-1.0.5-speex.diff 1214
 MD5 5b7ebf09c4c7988bd16cadaaad08d8f6 files/0.9.0/asterisk.confd 290
 MD5 da4846c3843d6f94b278c687d3b2ad21 files/0.9.0/asterisk.rc6 465

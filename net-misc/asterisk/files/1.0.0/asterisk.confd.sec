@@ -1,28 +1,18 @@
-#!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/files/1.0.0/asterisk.confd.sec,v 1.1 2005/05/07 18:35:35 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/files/1.0.0/asterisk.confd.sec,v 1.2 2005/05/11 12:47:06 stkn Exp $
 
-depend() {
-	need net logger
-	after zaptel
-}
+#
+# see "asterisk -h" for a list of options
+#
+ASTERISK_OPTS=""
 
-start() {
-	if [[ -n "${ASTERISK_USER}" ]]; then
-		ebegin "Starting asterisk PBX (as ${ASTERISK_USER})"
-		start-stop-daemon --start --exec /usr/sbin/asterisk \
-			--chuid ${ASTERISK_USER} -- ${ASTERISK_OPTS}
-	else
-		ebegin "Starting asterisk PBX (as root)"
-		start-stop-daemon --start --exec /usr/sbin/asterisk -- \
-			${ASTERISK_OPTS}
-	fi
-	eend $?
-}
-
-stop() {
-	ebegin "Stopping asterisk PBX"
-	start-stop-daemon --stop --pidfile /var/run/asterisk/asterisk.pid
-	eend $?
-}
+#
+# User to run asterisk as
+#
+# Examples:
+#    "user:group" 
+#    "user"
+#    "" for root
+#
+ASTERISK_USER="asterisk:asterisk"
