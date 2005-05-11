@@ -1,0 +1,11 @@
+--- SConstruct.orig	2005-05-11 17:24:58.000000000 +0200
++++ SConstruct	2005-05-11 17:27:38.000000000 +0200
+@@ -7,7 +7,7 @@
+ if 'configure' in COMMAND_LINE_TARGETS:
+         env.Exit(0)
+ 
+-env.AppendUnique( ENV = {'PATH' : os.environ['PATH'], 'HOME' : os.environ['HOME']} )
++env.AppendUnique( ENV = os.environ )
+ 
+ ## The target make dist requires the python module shutil which is in 2.3
+ env.EnsurePythonVersion(2, 3)
