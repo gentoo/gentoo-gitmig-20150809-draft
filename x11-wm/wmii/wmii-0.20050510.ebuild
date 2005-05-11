@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/wmii/wmii-0.20050506.ebuild,v 1.1 2005/05/06 18:29:18 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/wmii/wmii-0.20050510.ebuild,v 1.1 2005/05/11 05:58:26 tove Exp $
 
 #inherit toolchain-funcs distutils
 inherit toolchain-funcs
