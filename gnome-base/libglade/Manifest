@@ -1,28 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 41d476cb20de77b38b7837a21510a45b libglade-2.0.1.ebuild 1469
+MD5 d30b6c4c4f806728a3be463bfe8cc52b ChangeLog 8228
 MD5 14d2734b43f9ce99125ab553b071c126 libglade-0.17-r6.ebuild 1436
-MD5 20ee65091a3be331967c8afff5b180d2 libglade-2.5.1.ebuild 1365
-MD5 a9cb8bca42de24626f531a5b07868233 libglade-2.4.0.ebuild 1276
-MD5 e4324bae29e25ffe4c17ee1f1d489fd2 libglade-2.4.2.ebuild 1366
-MD5 6a5c86c19508707ad8755b265c521390 libglade-2.5.0.ebuild 1363
-MD5 ba5fa26dc01401d7fbc631365e59b69a ChangeLog 8139
+MD5 41d476cb20de77b38b7837a21510a45b libglade-2.0.1.ebuild 1469
 MD5 803571fc65c43835143381bf72a599e6 libglade-2.3.6.ebuild 1272
+MD5 a9cb8bca42de24626f531a5b07868233 libglade-2.4.0.ebuild 1276
+MD5 66bd122dbfe586f54c68952b001882b9 libglade-2.4.2.ebuild 1366
+MD5 6a5c86c19508707ad8755b265c521390 libglade-2.5.0.ebuild 1363
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+MD5 20ee65091a3be331967c8afff5b180d2 libglade-2.5.1.ebuild 1365
+MD5 f9bf50cb0d304288f8fe07db3385bdeb files/Makefile.in.am-2.4.2-xmlcatalog.patch 1331
+MD5 ba2eb9b8a5caed325917e267ef33d8ac files/Makefile.in.am-xmlcatalog.patch 958
+MD5 6876e5db1b80846b82a289a82b44408b files/digest-libglade-0.17-r6 65
 MD5 77fafb164d53dc862957a5bd2b7511e4 files/digest-libglade-2.0.1 67
 MD5 0e14f0bbde2cbecd9f66ac06ff331b5b files/digest-libglade-2.3.6 67
 MD5 a3f0933d4f32dd139bedca018221f4dd files/digest-libglade-2.4.0 67
 MD5 9d6cbd7dc0868d35f0267d4937606a99 files/digest-libglade-2.4.2 67
 MD5 225998fcdfb3607e5908dfb6178d849b files/digest-libglade-2.5.0 67
 MD5 ff81ecaaaec02a4578b6c4ee3234f2c2 files/digest-libglade-2.5.1 67
-MD5 f9bf50cb0d304288f8fe07db3385bdeb files/Makefile.in.am-2.4.2-xmlcatalog.patch 1331
-MD5 6876e5db1b80846b82a289a82b44408b files/digest-libglade-0.17-r6 65
-MD5 ba2eb9b8a5caed325917e267ef33d8ac files/Makefile.in.am-xmlcatalog.patch 958
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCfhWI2G5bA0cA/ScRAkEuAJkB/gqW1XV5oL+rEySRdGWh+dewGwCgo3Kg
-0t2M4Q5CbT04AtP7zicQWB8=
-=d4oS
------END PGP SIGNATURE-----
