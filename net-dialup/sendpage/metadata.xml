@@ -2,10 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>perl</herd>
-	<maintainer>
-		<email>perl@gentoo.org</email>
-		<description>Primary Maintainer</description>
-	</maintainer>
+	<herd>net-dialup</herd>
 	<longdescription>To send alphanumeric pages to a pager, if an email gateway is unavailable or undesirable, 
 software is needed to control a modem which will dial a "Paging Central", and deliver the pages using 
 an ASCII delivery system known as "TAP".
