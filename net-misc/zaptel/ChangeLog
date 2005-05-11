@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/zaptel
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/ChangeLog,v 1.39 2005/05/10 01:47:52 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/ChangeLog,v 1.40 2005/05/11 12:36:55 stkn Exp $
+
+  11 May 2005; Stefan Knoblich <stkn@gentoo.org> files/zaptel.devfsd,
+  files/zaptel.rc6:
+  Fixed init script and devfs.d file for 1.0.7-r1.
 
   10 May 2005; Stefan Knoblich <stkn@gentoo.org>
   -files/zaptel-bristuff-0.2.0-RC8a.patch,
