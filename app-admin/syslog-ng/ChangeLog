@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/syslog-ng
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/ChangeLog,v 1.89 2005/05/09 20:17:32 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/ChangeLog,v 1.90 2005/05/11 19:59:52 cryos Exp $
+
+  11 May 2005; Marcus D. Hanwell <cryos@gentoo.org> syslog-ng-1.6.7.ebuild:
+  Stable on amd64.
 
   09 May 2005; Lars Weiler <pylon@gentoo.org> syslog-ng-1.6.7.ebuild:
   Stable on ppc.
