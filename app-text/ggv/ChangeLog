@@ -1,6 +1,9 @@
 # ChangeLog for app-text/ggv
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ggv/ChangeLog,v 1.90 2005/05/08 13:48:37 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ggv/ChangeLog,v 1.91 2005/05/11 16:37:52 gmsoft Exp $
+
+  11 May 2005; Guy Martin <gmsoft@gentoo.org> ggv-2.8.3.ebuild:
+  Stable on hppa.
 
   08 May 2005; Herbie Hopkins <herbs@gentoo.org> ggv-2.8.3.ebuild:
   Stable on amd64.
