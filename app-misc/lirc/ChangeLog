@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/lirc
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.66 2005/04/22 17:37:34 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.67 2005/05/11 12:15:36 lanius Exp $
+
+  11 May 2005; Heinrich Wendel <lanius@gentoo.org> lirc-0.7.1.ebuild:
+  always apply the xbox patch, it still has to be enabled
 
 *lirc-0.7.1 (22 Apr 2005)
 
