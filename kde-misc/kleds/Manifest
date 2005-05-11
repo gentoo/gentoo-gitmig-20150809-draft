@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 127802478ccc08ef9ec6a55a4a697f50 kleds-0.8.0.ebuild 520
+MD5 bc2f6487ab0e919d04ea6f086979c4ce ChangeLog 1240
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-MD5 889c86b9a4a3a1f3373cbcfe02d48835 kleds-0.8.0.ebuild 521
-MD5 7dc849400b30d0852cb2f40efe92abf9 ChangeLog 1148
 MD5 709c615f4d607c9e89425efddef91c02 files/digest-kleds-0.8.0 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCgnQIntT9W3vfTuoRAihKAJ9tEBYWTvYLx1kvofzmEJqLJLWN7wCdFrbd
+sUMaKOI8+9vNy3Qctelcqqg=
+=TBjt
+-----END PGP SIGNATURE-----
