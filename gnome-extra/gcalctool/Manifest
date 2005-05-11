@@ -1,27 +1,17 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d2b7e84dc811182f68e6572d63ee23d0 gcalctool-5.5.41.ebuild 885
+MD5 4a14911bf90edecf1aaedd585fe763ac ChangeLog 6289
+MD5 6ee5ac4a31370541620060dcc70f4e97 gcalctool-4.3.51.ebuild 791
+MD5 5001c86e3363b5511d0fed6176a77bc4 gcalctool-4.4.16.ebuild 801
 MD5 59245093ed20b81a4f0f984afe46ffcf gcalctool-4.4.19.ebuild 943
 MD5 5fc2d9d6abb21e1596c3195a5a59cbbf gcalctool-4.4.20.ebuild 951
-MD5 5001c86e3363b5511d0fed6176a77bc4 gcalctool-4.4.16.ebuild 801
-MD5 19fb68a16ade1145ae9622987afa6ac6 gcalctool-4.4.22.ebuild 961
-MD5 4cd4102b6d56e5a2bc87f068d8237ed5 gcalctool-5.5.42.ebuild 885
-MD5 6ee5ac4a31370541620060dcc70f4e97 gcalctool-4.3.51.ebuild 791
-MD5 72dfd70dbf893f82f3d8332187d8db45 ChangeLog 6198
+MD5 cc720c10bdff6249e8bdf586b0d282a1 gcalctool-4.4.22.ebuild 961
+MD5 d2b7e84dc811182f68e6572d63ee23d0 gcalctool-5.5.41.ebuild 885
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+MD5 4cd4102b6d56e5a2bc87f068d8237ed5 gcalctool-5.5.42.ebuild 885
 MD5 6e1a0ae918c3fb626ab667e5a27dec34 files/digest-gcalctool-4.3.51 69
 MD5 4a20fd94b78401437382338647dde37d files/digest-gcalctool-4.4.16 69
 MD5 1dd84ed53f6ee664f736d2462b7dc50d files/digest-gcalctool-4.4.19 69
 MD5 16a23e780e431cedcd5a78e64aab35c3 files/digest-gcalctool-4.4.20 69
 MD5 d25091f431080032c9f203ea97882402 files/digest-gcalctool-4.4.22 69
 MD5 804e74faec2cab4025478c0bfc0e4bfd files/digest-gcalctool-5.5.41 70
-MD5 65a63bafe87741895d52ee30ab304b93 files/digest-gcalctool-5.5.42 70
 MD5 84697b19eaf743396f6d59b86a058b66 files/gcalctool-4.4.20-remove_disable_deprecated.patch 1289
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCfhns2G5bA0cA/ScRAu9nAKDkYAa/eBPTrMAm9fMay60+Vd1YQACePFs/
-dnRQq15b6R5GViMC/oTDN9E=
-=fXxm
------END PGP SIGNATURE-----
+MD5 65a63bafe87741895d52ee30ab304b93 files/digest-gcalctool-5.5.42 70
