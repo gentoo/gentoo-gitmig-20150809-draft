@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/phpdbg/phpdbg-2.11.32.ebuild,v 1.1 2005/02/19 15:04:20 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/phpdbg/phpdbg-2.11.32.ebuild,v 1.2 2005/05/11 05:14:42 sebastian Exp $
 
 PHP_EXT_NAME="dbg"
 PHP_EXT_ZENDEXT="no"
@@ -36,13 +36,12 @@ src_compile() {
 src_install () {
 	php-ext-source_src_install
 	dodoc AUTHORS COPYING INSTALL
+	php-ext-base_addtoinifiles "[Debugger]"
+	php-ext-base_addtoinifiles "debugger.enabled" "on"
+	php-ext-base_addtoinifiles "debugger.profiler_enabled" "on"			
 }
 
 pkg_postinst() {
-	php-ext-base_addtoinifiles "extension" "/etc/php4/lib/dbg.so"
-	php-ext-base_addtoinifiles "[Debugger]"
-	php-ext-base_addtoinifiles "debugger.enabled" "on"
-	php-ext-base_addtoinifiles "debugger.profiler_enabled" "on"
 	einfo "Please reload Apache to activate the changes"
 }
 
