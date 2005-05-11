@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 1f394b7fd9daf0baff83d52d94da8643 IO-Multiplex-1.08.ebuild 479
-MD5 b881e10f7863cbd990a9cddbef35cb7d ChangeLog 472
+MD5 c6c9eb9f9cc41176f0dd732ec53779cd IO-Multiplex-1.08.ebuild 486
+MD5 73e872418f7f5fc1217e72662f084a76 ChangeLog 584
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 f31966022c9147ea2a688f406ff19399 files/digest-IO-Multiplex-1.08 68
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCcexoQlM6RnzZP+IRAiNtAKCsOW5sXwn2Rpx7IWVeTwn3bb5CNACglz9H
-RnYg8r/ML5VEeUx8jnpbw3k=
-=AaVO
+iD8DBQFCgoiCViELBEf1JB0RAut9AJ4w9dvwcUlV8sY9RrdR54ztWU3IyACbBtHt
+QL0yN17Nc+clMFhbVWrxGag=
+=AYU6
 -----END PGP SIGNATURE-----
