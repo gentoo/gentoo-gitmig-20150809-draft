@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/udev
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.101 2005/03/26 07:50:30 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.102 2005/05/11 07:42:54 gregkh Exp $
+
+  11 May 2005; Greg Kroah-Hartman <gregkh@gentoo.org> udev-056.ebuild:
+  Marked 056 stable on x86 (finally...)  This fixes a whole lot of reported bugs.
+  But please be careful about changes in the rule structures if you had any
+  custom rules written for older versions of udev.
 
   26 Mar 2005; Joseph Jezak <josejx@gentoo.org> udev-045.ebuild:
   Marked ppc stable.
