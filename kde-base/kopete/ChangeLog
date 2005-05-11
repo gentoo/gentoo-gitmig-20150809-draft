@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kopete
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.9 2005/04/27 21:46:16 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.10 2005/05/11 19:36:10 greg_g Exp $
+
+*kopete-3.4.0-r2 (11 May 2005)
+
+  11 May 2005; Gregorio Guidi <greg_g@gentoo.org>
+  +files/kdenetwork-3.4.0-kopete-tabbed-windows.patch,
+  +kopete-3.4.0-r2.ebuild:
+  Add patch to fix crash in chatwindow (#91423).
 
   27 Apr 2005; Markus Rothe <corsair@gentoo.org> kopete-3.4.0-r1.ebuild:
   Added ~ppc64 to KEYWORDS
