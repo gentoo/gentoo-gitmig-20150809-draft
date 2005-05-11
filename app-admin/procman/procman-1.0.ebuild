@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/procman/procman-1.0.ebuild,v 1.23 2005/01/01 11:19:40 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/procman/procman-1.0.ebuild,v 1.24 2005/05/11 03:47:03 halcy0n Exp $
 
-inherit flag-o-matic
+inherit flag-o-matic eutils
 
 DESCRIPTION="Process viewer for GNOME"
 HOMEPAGE="http://www.personal.psu.edu/kfv101/procman"
@@ -16,6 +16,12 @@ IUSE="nls"
 DEPEND="<gnome-extra/gal-1.99
 	=gnome-base/libgtop-1.0*"
 RDEPEND="nls? ( sys-devel/gettext )"
+
+src_unpack() {
+	unpack ${A}
+
+	epatch ${FILESDIR}/${P}-gcc34.patch
+}
 
 src_compile() {
 	append-flags $(gdk-pixbuf-config --cflags)

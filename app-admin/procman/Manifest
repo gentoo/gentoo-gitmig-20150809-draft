@@ -1,3 +1,14 @@
-MD5 2909adb77ff1c89b1ea6c4bb77e099fd ChangeLog 1337
-MD5 331fdb8221377f521c5bda0c2b50e0f0 procman-1.0.ebuild 812
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 739710c2c92b8b1dc89dbc3d24988851 ChangeLog 1476
+MD5 8bd54941e5d0150a309ce74ef48ca707 procman-1.0.ebuild 885
 MD5 4e43867867179e603fbf302b06e33d0d files/digest-procman-1.0 63
+MD5 06e3ae75aca760ec40a82ec1ba6f7c48 files/procman-1.0-gcc34.patch 1275
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCgYBECRZPokWLroQRAp8UAKDIKg5vpyxfmRe2msC+5DVy2fv1dQCgkdXt
+HyHJqD6rCz4ZP5vZsRm4Jy4=
+=fa0b
+-----END PGP SIGNATURE-----
