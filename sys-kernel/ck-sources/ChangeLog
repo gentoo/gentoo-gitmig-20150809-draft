@@ -1,9 +1,19 @@
 # ChangeLog for sys-kernel/ck-sources
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ChangeLog,v 1.96 2005/05/10 22:28:32 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ChangeLog,v 1.97 2005/05/11 07:52:10 marineam Exp $
 
   10 May 2005; Daniel Drake <dsd@gentoo.org> -ck-sources-2.6.11-r4.ebuild:
   Remove old version
+
+*ck-sources-2.6.11_p7-r1 (11 May 2005)
+
+  11 May 2005; Micheal Marineau <marineam@gentoo.org>
+  +files/ck-sources-2.6.11-85795.patch,
+  +files/ck-sources-2.6.11-87913.patch, +ck-sources-2.6.11_p7-r1.ebuild:
+  Security fix for bugs #85795 and #87913.  Also, be aware that the 
+  version system has now changed. Ck versions are noted by the patch level,
+  ie 2.6.11_p7 is ck7, while the revision number, ie -r1 in this case, now 
+  are used only for Gentoo releases between ck releases.
 
 *ck-sources-2.6.11-r7 (03 May 2005)
 

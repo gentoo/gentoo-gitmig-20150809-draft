@@ -1,0 +1,24 @@
+
+ROSE wasn't verifying the ndigis argument of a new route resulting in a
+minor security hole.
+
+Signed-off-by: David S. Miller <davem@davemloft.net>
+---
+
+ net/rose/rose_route.c |    3 ++-
+ 1 files changed, 2 insertions(+), 1 deletion(-)
+
+diff -puN net/rose/rose_route.c~rose-fix-ndigis net/rose/rose_route.c
+--- linux-2.6.11/net/rose/rose_route.c~rose-fix-ndigis	2005-05-01 21:38:21.420553912 +0200
++++ linux-2.6.11-lorenzo/net/rose/rose_route.c	2005-05-01 21:38:21.424553304 +0200
+@@ -727,7 +727,8 @@ int rose_rt_ioctl(unsigned int cmd, void
+ 		}
+ 		if (rose_route.mask > 10) /* Mask can't be more than 10 digits */
+ 			return -EINVAL;
+-
++		if (rose_route.ndigis > 8) /* No more than 8 digipeats */
++			return -EINVAL;
+ 		err = rose_add_node(&rose_route, dev);
+ 		dev_put(dev);
+ 		return err;
+_

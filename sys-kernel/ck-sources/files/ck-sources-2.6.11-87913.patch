@@ -1,0 +1,191 @@
+# origin: daniel (BitKeeper)
+# cset: 1.2181.39.4 (2.6) key=4248c8c0es30_4YVdwa6vteKi7h_nw
+# URL: http://linux.bkbits.net:8080/linux-2.6/cset@4248c8c0es30_4YVdwa6vteKi7h_nw
+# inclusion: upstream
+# descrition: [PATCH] ppc64: fix AIO panic on PPC64 caused by is_hugepage_only_range()
+# revision date: Fri, 01 Apr 2005 17:59:58 +0900
+#
+# S rset: ChangeSet|1.2181.39.3..1.2181.39.4
+# I rset: include/asm-ppc64/page.h|1.42..1.43
+# I rset: include/asm-ia64/page.h|1.33..1.34
+# I rset: include/linux/hugetlb.h|1.33..1.34
+# I rset: arch/ppc64/mm/hugetlbpage.c|1.41..1.42
+# I rset: mm/mmap.c|1.168..1.169
+#
+# Key:
+# S: Skipped  ChangeSet file only
+# O: Original Followed by Updated
+# U: Updated  Included with updated range of versions
+# I: Included Included verbatim
+# E: Excluded Excluded on request from user
+# D: Deleted  Manually deleted by subsequent user edit
+# R: Revised  Manually revised by subsequent user edit
+#
+#
+# This is a BitKeeper generated diff -Nru style patch.
+#
+# ChangeSet
+#   2005/03/28 19:17:20-08:00 daniel@osdl.org 
+#   [PATCH] ppc64: fix AIO panic on PPC64 caused by is_hugepage_only_range()
+#   
+#   When testing AIO on PPC64 (a power5 machine) running 2.6.11 with
+#   CONFIG_HUGETLB_PAGE=y, I ran into a kernel panic when a process exits that has
+#   done AIO (io_queue_init()) but has not done the io_queue_release().  The
+#   exit_aio() code is cleaning up and panicking when trying to free the aio ring
+#   buffer.
+#   
+#   I tracked this down to is_hugepage_only_range() (include/asm-ppc64/page.h)
+#   which is doing a touches_hugepage_low_range() which is checking
+#   current->mm->context.htlb_segs.  The problem is that exit_mm() cleared tsk->mm
+#   before doing the mmput() which leads to the exit_aio() and then the panic. 
+#   Looks like is_hugepage_only_range() is only used in ia64 and ppc64.  Fix is to
+#   change is_hugepage_only_range() to take an 'mm' as a parameter as well as
+#   'addr' and 'len' and then the ppc64 code could change to use 'mm'.  It looks
+#   like it has been broken for quite a while.
+#   
+#   Signed-off-by: Daniel McNeil <daniel@osdl.org>
+#   Acked-by: David Gibson <dwg@au1.ibm.com>
+#   Acked-by: "Luck, Tony" <tony.luck@intel.com>
+#   Signed-off-by: Andrew Morton <akpm@osdl.org>
+#   Signed-off-by: Linus Torvalds <torvalds@osdl.org>
+# 
+# mm/mmap.c
+#   2005/03/28 14:43:15-08:00 daniel@osdl.org +2 -2
+#   ppc64: fix AIO panic on PPC64 caused by is_hugepage_only_range()
+# 
+# include/linux/hugetlb.h
+#   2005/03/28 14:21:16-08:00 daniel@osdl.org +2 -2
+#   ppc64: fix AIO panic on PPC64 caused by is_hugepage_only_range()
+# 
+# include/asm-ppc64/page.h
+#   2005/03/28 14:21:16-08:00 daniel@osdl.org +4 -4
+#   ppc64: fix AIO panic on PPC64 caused by is_hugepage_only_range()
+# 
+# include/asm-ia64/page.h
+#   2005/03/28 14:21:16-08:00 daniel@osdl.org +1 -1
+#   ppc64: fix AIO panic on PPC64 caused by is_hugepage_only_range()
+# 
+# arch/ppc64/mm/hugetlbpage.c
+#   2005/03/28 14:43:14-08:00 daniel@osdl.org +4 -4
+#   ppc64: fix AIO panic on PPC64 caused by is_hugepage_only_range()
+# 
+#
+===== include/asm-ppc64/page.h 1.42 vs 1.43 =====
+--- 1.42/include/asm-ppc64/page.h	2005-03-17 17:31:09 +09:00
++++ 1.43/include/asm-ppc64/page.h	2005-03-29 07:21:16 +09:00
+@@ -48,8 +48,8 @@
+ #define ARCH_HAS_HUGEPAGE_ONLY_RANGE
+ #define ARCH_HAS_PREPARE_HUGEPAGE_RANGE
+ 
+-#define touches_hugepage_low_range(addr, len) \
+-	(LOW_ESID_MASK((addr), (len)) & current->mm->context.htlb_segs)
++#define touches_hugepage_low_range(mm, addr, len) \
++	(LOW_ESID_MASK((addr), (len)) & mm->context.htlb_segs)
+ #define touches_hugepage_high_range(addr, len) \
+ 	(((addr) > (TASK_HPAGE_BASE-(len))) && ((addr) < TASK_HPAGE_END))
+ 
+@@ -61,9 +61,9 @@
+ #define within_hugepage_high_range(addr, len) (((addr) >= TASK_HPAGE_BASE) \
+ 	  && ((addr)+(len) <= TASK_HPAGE_END) && ((addr)+(len) >= (addr)))
+ 
+-#define is_hugepage_only_range(addr, len) \
++#define is_hugepage_only_range(mm, addr, len) \
+ 	(touches_hugepage_high_range((addr), (len)) || \
+-	  touches_hugepage_low_range((addr), (len)))
++	  touches_hugepage_low_range((mm), (addr), (len)))
+ #define HAVE_ARCH_HUGETLB_UNMAPPED_AREA
+ 
+ #define in_hugepage_area(context, addr) \
+===== include/asm-ia64/page.h 1.33 vs 1.34 =====
+--- 1.33/include/asm-ia64/page.h	2005-02-09 18:53:37 +09:00
++++ 1.34/include/asm-ia64/page.h	2005-03-29 07:21:16 +09:00
+@@ -137,7 +137,7 @@ typedef union ia64_va {
+ # define htlbpage_to_page(x)	(((unsigned long) REGION_NUMBER(x) << 61)			\
+ 				 | (REGION_OFFSET(x) >> (HPAGE_SHIFT-PAGE_SHIFT)))
+ # define HUGETLB_PAGE_ORDER	(HPAGE_SHIFT - PAGE_SHIFT)
+-# define is_hugepage_only_range(addr, len)		\
++# define is_hugepage_only_range(mm, addr, len)		\
+ 	 (REGION_NUMBER(addr) == REGION_HPAGE &&	\
+ 	  REGION_NUMBER((addr)+(len)) == REGION_HPAGE)
+ extern unsigned int hpage_shift;
+===== include/linux/hugetlb.h 1.33 vs 1.34 =====
+--- 1.33/include/linux/hugetlb.h	2004-08-08 15:43:40 +09:00
++++ 1.34/include/linux/hugetlb.h	2005-03-29 07:21:16 +09:00
+@@ -36,7 +36,7 @@ extern const unsigned long hugetlb_zero,
+ extern int sysctl_hugetlb_shm_group;
+ 
+ #ifndef ARCH_HAS_HUGEPAGE_ONLY_RANGE
+-#define is_hugepage_only_range(addr, len)	0
++#define is_hugepage_only_range(mm, addr, len)	0
+ #define hugetlb_free_pgtables(tlb, prev, start, end) do { } while (0)
+ #endif
+ 
+@@ -71,7 +71,7 @@ static inline unsigned long hugetlb_tota
+ #define is_aligned_hugepage_range(addr, len)	0
+ #define prepare_hugepage_range(addr, len)	(-EINVAL)
+ #define pmd_huge(x)	0
+-#define is_hugepage_only_range(addr, len)	0
++#define is_hugepage_only_range(mm, addr, len)	0
+ #define hugetlb_free_pgtables(tlb, prev, start, end) do { } while (0)
+ #define alloc_huge_page()			({ NULL; })
+ #define free_huge_page(p)			({ (void)(p); BUG(); })
+===== arch/ppc64/mm/hugetlbpage.c 1.41 vs 1.42 =====
+--- 1.41/arch/ppc64/mm/hugetlbpage.c	2005-03-15 15:27:33 +09:00
++++ 1.42/arch/ppc64/mm/hugetlbpage.c	2005-03-29 07:43:14 +09:00
+@@ -513,7 +513,7 @@ unsigned long arch_get_unmapped_area(str
+ 		vma = find_vma(mm, addr);
+ 		if (((TASK_SIZE - len) >= addr)
+ 		    && (!vma || (addr+len) <= vma->vm_start)
+-		    && !is_hugepage_only_range(addr,len))
++		    && !is_hugepage_only_range(mm, addr,len))
+ 			return addr;
+ 	}
+ 	start_addr = addr = mm->free_area_cache;
+@@ -523,7 +523,7 @@ full_search:
+ 	while (TASK_SIZE - len >= addr) {
+ 		BUG_ON(vma && (addr >= vma->vm_end));
+ 
+-		if (touches_hugepage_low_range(addr, len)) {
++		if (touches_hugepage_low_range(mm, addr, len)) {
+ 			addr = ALIGN(addr+1, 1<<SID_SHIFT);
+ 			vma = find_vma(mm, addr);
+ 			continue;
+@@ -584,7 +584,7 @@ arch_get_unmapped_area_topdown(struct fi
+ 		vma = find_vma(mm, addr);
+ 		if (TASK_SIZE - len >= addr &&
+ 				(!vma || addr + len <= vma->vm_start)
+-				&& !is_hugepage_only_range(addr,len))
++				&& !is_hugepage_only_range(mm, addr,len))
+ 			return addr;
+ 	}
+ 
+@@ -597,7 +597,7 @@ try_again:
+ 	addr = (mm->free_area_cache - len) & PAGE_MASK;
+ 	do {
+ hugepage_recheck:
+-		if (touches_hugepage_low_range(addr, len)) {
++		if (touches_hugepage_low_range(mm, addr, len)) {
+ 			addr = (addr & ((~0) << SID_SHIFT)) - len;
+ 			goto hugepage_recheck;
+ 		} else if (touches_hugepage_high_range(addr, len)) {
+===== mm/mmap.c 1.168 vs 1.169 =====
+--- 1.168/mm/mmap.c	2005-03-10 17:38:22 +09:00
++++ 1.169/mm/mmap.c	2005-03-29 07:43:15 +09:00
+@@ -1316,7 +1316,7 @@ get_unmapped_area(struct file *file, uns
+ 			 * reserved hugepage range.  For some archs like IA-64,
+ 			 * there is a separate region for hugepages.
+ 			 */
+-			ret = is_hugepage_only_range(addr, len);
++			ret = is_hugepage_only_range(current->mm, addr, len);
+ 		}
+ 		if (ret)
+ 			return -EINVAL;
+@@ -1687,7 +1687,7 @@ static void unmap_region(struct mm_struc
+ 	unmap_vmas(&tlb, mm, vma, start, end, &nr_accounted, NULL);
+ 	vm_unacct_memory(nr_accounted);
+ 
+-	if (is_hugepage_only_range(start, end - start))
++	if (is_hugepage_only_range(mm, start, end - start))
+ 		hugetlb_free_pgtables(tlb, prev, start, end);
+ 	else
+ 		free_pgtables(tlb, prev, start, end);
