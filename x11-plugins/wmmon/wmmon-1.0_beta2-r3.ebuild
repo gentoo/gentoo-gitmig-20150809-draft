@@ -1,12 +1,14 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmon/wmmon-1.0_beta2-r1.ebuild,v 1.14 2005/04/28 20:16:39 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmon/wmmon-1.0_beta2-r3.ebuild,v 1.1 2005/05/11 07:45:03 s4t4n Exp $
 
-S="${WORKDIR}/wmmon.app"
+inherit eutils
+
+S="${WORKDIR}/${PN}.app"
 IUSE=""
 DESCRIPTION="Dockable system resources monitor applet for WindowMaker"
 WMMON_VERSION=1_0b2
-SRC_URI="http://rpig.dyndns.org/~anstinus/Linux/wmmon-${WMMON_VERSION}.tar.gz"
+SRC_URI="http://rpig.dyndns.org/~anstinus/Linux/${PN}-${WMMON_VERSION}.tar.gz"
 HOMEPAGE="http://www.bensinclair.com/dockapp/"
 
 DEPEND="virtual/x11
@@ -14,15 +16,16 @@ DEPEND="virtual/x11
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc amd64"
+KEYWORDS="~x86 ~sparc ~amd64 ~ppc"
 
 src_unpack() {
-	unpack ${A} ; cd ${S}/wmmon
+	unpack ${A} ; cd ${S}/${PN}
+	epatch ${FILESDIR}/${P}-kernel26-v2.patch
 	sed -i -e "s|-O2|${CFLAGS}|" Makefile
 }
 
 src_compile() {
-	emake -C wmmon || die
+	emake -C ${PN} || die
 }
 
 src_install () {

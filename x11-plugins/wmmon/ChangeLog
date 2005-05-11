@@ -1,6 +1,15 @@
 # ChangeLog for x11-plugins/wmmon
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmon/ChangeLog,v 1.15 2005/04/28 20:16:39 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmon/ChangeLog,v 1.16 2005/05/11 07:45:03 s4t4n Exp $
+
+*wmmon-1.0_beta2-r3 (11 May 2005)
+
+  11 May 2005; Michele Noberasco <s4t4n@gentoo.org>
+  wmmon-1.0_beta2-r3.ebuild, files/wmmon-1.0_beta2-kernel26-v2.patch:
+  Replaced patch to make memory monitoring work with kernel 2.6 with
+  a new, improved, one, submitted by Ivan Heffner. Closes bug #89130.
+  wmmon-1.0_beta2-r1.ebuild:
+  Removed older ebuild.
 
   28 Apr 2005; Stephanie Lockwood-Childs <wormo@gentoo.org>
   wmmon-1.0_beta2-r2.ebuild:
