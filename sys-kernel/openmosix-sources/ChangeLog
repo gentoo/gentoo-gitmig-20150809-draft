@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/openmosix-sources
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openmosix-sources/ChangeLog,v 1.87 2005/05/10 20:06:42 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openmosix-sources/ChangeLog,v 1.88 2005/05/11 08:26:27 voxus Exp $
+
+*openmosix-2.6.11.564-r1 (11 May 2005)
+
+  11 May 2005; Konstantin Arkhipov <voxus@gentoo.org>
+  -openmosix-sources-2.6.11.564.ebuild,
+  +openmosix-sources-2.6.11.564-r1.ebuild:
+  Bump of gentoo's patchset.
 
   10 May 2005; Konstantin Arkhipov <voxus@gentoo.org>
   -openmosix-sources-2.4.30-r1.ebuild,
@@ -20,7 +27,7 @@
   Fixed compilation issue, whel aout and/or elf configured as modules.
   Thanks to Wim Vandersmissen <wim@bofh.be> for pointing that.
 
-*openmosix-sources-2.6.11.564.ebuild (15 Apr 2005)
+*openmosix-sources-2.6.11.564 (15 Apr 2005)
 
   15 Apr 2005; Konstantin Arkhipov <voxus@gentoo.org>
   +openmosix-sources-2.6.11.564.ebuild:
