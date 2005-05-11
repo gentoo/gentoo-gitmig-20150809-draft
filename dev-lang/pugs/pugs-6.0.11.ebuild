@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/pugs/pugs-6.0.11.ebuild,v 1.3 2005/05/04 18:25:55 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/pugs/pugs-6.0.11.ebuild,v 1.4 2005/05/11 10:12:30 mcummings Exp $
 
 inherit perl-module
 
@@ -19,5 +19,5 @@ KEYWORDS="~x86 ~amd64 ~ppc"
 IUSE=""
 
 DEPEND="dev-perl/Term-ReadLine-Perl
-		||( >=dev-lang/ghc-bin-6.2.1 >=dev-lang/ghc-6.2.1 ) "
+		virtual/ghc"
 
