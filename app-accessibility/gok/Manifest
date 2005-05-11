@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ec6407adffdd51daa147c060df6cc814 gok-0.11.16.ebuild 983
-MD5 bc250dc6702ed444620028ae52d7861b gok-1.0.3.ebuild 1000
+MD5 496c63a34b83ca94ce6e79ae3874e77e ChangeLog 5767
 MD5 95c6970e93593832e83f6356b66cfc37 gok-0.10.2.ebuild 996
-MD5 7bde6ede1b5db34b549ffe879d2b45ba gok-0.11.17.ebuild 986
-MD5 d49b7bacec107119f76cb4f7177d0a4e ChangeLog 5681
+MD5 ec6407adffdd51daa147c060df6cc814 gok-0.11.16.ebuild 983
+MD5 4fbe737d12dac557cd469a4819144661 gok-0.11.17.ebuild 986
 MD5 d213a9003c11bcd3849f289e4806deff metadata.xml 472
+MD5 bc250dc6702ed444620028ae52d7861b gok-1.0.3.ebuild 1000
+MD5 3c8578ed2f4f158e41f17b3c8e3ec7a8 files/digest-gok-0.10.2 64
 MD5 ddcd710b5ca6e8bf715e69dd6d2b615b files/digest-gok-0.11.16 65
 MD5 42517b8968a7bce2914a9217ae23ddf5 files/digest-gok-0.11.17 65
 MD5 4f6c470a2283ad29619d1accb58e4f3d files/digest-gok-1.0.3 63
-MD5 3c8578ed2f4f158e41f17b3c8e3ec7a8 files/digest-gok-0.10.2 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCfhPv2G5bA0cA/ScRAjf5AKCed9yCvc3pniVdiKekDIKUAOo5CQCeMv45
-5AgJxh0aUu2gaHbVf3Tu2fc=
-=5E+x
------END PGP SIGNATURE-----
