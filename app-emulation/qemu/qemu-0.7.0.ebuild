@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-0.7.0.ebuild,v 1.5 2005/05/07 09:23:26 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-0.7.0.ebuild,v 1.6 2005/05/12 09:13:55 lu_zero Exp $
 
-inherit eutils flag-o-matic linux-mod
+inherit eutils flag-o-matic linux-mod toolchain-funcs
 
 DESCRIPTION="Multi-platform & multi-targets cpu emulator and dynamic translator"
 HOMEPAGE="http://fabrice.bellard.free.fr/qemu/"
@@ -34,6 +34,9 @@ set_target_list() {
 }
 
 pkg_setup() {
+	if [ "$(gcc-major-version)" == "4" ]; then
+		ewarn "Qemu could not build with GCC 4"
+	fi
 #	( use kqemu || use qvm86 ) && linux-mod_pkg_setup
 	use kqemu && linux-mod_pkg_setup
 }
@@ -60,7 +63,8 @@ src_unpack() {
 #	fi
 	cd ${S}
 	# Alter target makefiles to accept CFLAGS set via flag-o.
-	sed -i 's/^CFLAGS=-Wall -O2 -g/CFLAGS+=-Wall/' Makefile Makefile.target
+	sed -i 's/^\(C\|OP_C\|HELPER_C\)FLAGS=/\1FLAGS+=/' \
+		Makefile Makefile.target tests/Makefile
 	# Ensure mprotect restrictions are relaxed for emulator binaries
 	[[ -x /sbin/paxctl ]] && \
 		sed -i 's/^VL_LDFLAGS=$/VL_LDFLAGS=-Wl,-z,execheap/' \
@@ -70,8 +74,11 @@ src_unpack() {
 }
 
 src_compile() {
-	#Let the application set it's cflags
+	#Let the application set its cflags
 	unset CFLAGS
+
+	# Switch off hardened tech
+	filter-flags -fpie -fstack-protector
 
 	myconf=""
 	set_target_list
