@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 66d8f1811a1eb34dd6aaa87f52dd0089 ChangeLog 7332
+MD5 b65b3a7a5e4d33afb368ee2e9987bf6f povray-3.6.1-r1.ebuild 1274
+MD5 5045b5e5a560ba8b2333618836e1ad1d ChangeLog 7421
 MD5 48eaa040015831c1b8e6bc2e0e6ce522 metadata.xml 262
-MD5 69d0ed8027ac692adb512862b388c1c0 povray-3.6.1-r1.ebuild 1265
 MD5 c46bc643339b324f376236e2a9df237b files/digest-povray-3.6.1-r1 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFB70xbUpKYMelfdYERAlzrAJ9L8veiF+VnzlYRCjyOtAUsMft3agCfSstz
-OmxQ6sIG2lglbAZ4DNXyjJ4=
-=WdYp
------END PGP SIGNATURE-----

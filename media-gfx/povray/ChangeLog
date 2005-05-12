@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/povray
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/ChangeLog,v 1.43 2005/01/20 06:11:52 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/ChangeLog,v 1.44 2005/05/12 16:06:29 agriffis Exp $
+
+  12 May 2005; Aron Griffis <agriffis@gentoo.org> povray-3.6.1-r1.ebuild:
+  add ~ia64
 
   20 Jan 2005; Daniel Goller <morfic@gentoo.org> -files/README.ICC-PGO,
   -files/gentoo-3.5.patch, -files/gentoo.patch,
