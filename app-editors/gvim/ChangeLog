@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/gvim
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.128 2005/05/05 23:48:41 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.129 2005/05/12 20:28:04 corsair Exp $
+
+  12 May 2005; Markus Rothe <corsair@gentoo.org>
+  gvim-7.0_alpha20050326.ebuild:
+  Added ~ppc64 to KEYWORDS
 
   05 May 2005; Aron Griffis <agriffis@gentoo.org> gvim-6.3.068.ebuild:
   stable on ia64
