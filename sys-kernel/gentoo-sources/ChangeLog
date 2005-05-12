@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.139 2005/05/11 16:35:53 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.140 2005/05/12 02:34:26 agriffis Exp $
+
+  12 May 2005; Aron Griffis <agriffis@gentoo.org>
+  gentoo-sources-2.6.11-r8.ebuild:
+  Mark 2.6.11-r8 stable on ia64 #87913
 
   11 May 2005; Markus Rothe <corsair@gentoo.org>
   gentoo-sources-2.6.11-r8.ebuild:
