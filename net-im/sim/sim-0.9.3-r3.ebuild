@@ -1,25 +1,28 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/sim/sim-0.9.3-r3.ebuild,v 1.4 2005/04/08 08:56:18 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/sim/sim-0.9.3-r3.ebuild,v 1.5 2005/05/12 22:38:58 greg_g Exp $
 
 inherit eutils kde-functions
 
-LICENSE="GPL-2"
-DESCRIPTION="An ICQ v8 Client. Supports File Transfer, Chat, Server-Side Contactlist, ..."
-SRC_URI="mirror://sourceforge/sim-icq/${P}-2.tar.gz"
-RESTRICT="nomirror"
+DESCRIPTION="An ICQ v8 Client. Supports File Transfer, Chat, Server-Side Contactlist."
 HOMEPAGE="http://sim-icq.sourceforge.net"
-KEYWORDS="~x86 ~ppc ~amd64"
+SRC_URI="mirror://sourceforge/sim-icq/${P}-2.tar.gz"
+LICENSE="GPL-2"
+
 SLOT="0"
+KEYWORDS="~x86 ~ppc ~amd64"
 IUSE="ssl kde debug"
 
-RDEPEND="ssl? ( dev-libs/openssl )
-	!kde? ( x11-libs/qt )
-	app-text/sablotron
-	sys-devel/flex
-	>=sys-devel/automake-1.7
-	>=sys-devel/autoconf-2.5
+RDEPEND="x11-libs/qt
+	kde? ( || ( kde-base/kdebase-data kde-base/kdebase ) )
+	ssl? ( dev-libs/openssl )
 	dev-libs/libxslt"
+# kdebase-data provides the icon "licq.png"
+
+DEPEND="${RDEPEND}
+	sys-devel/flex
+	=sys-devel/automake-1.7*
+	=sys-devel/autoconf-2.5*"
 
 src_compile() {
 	epatch ${FILESDIR}/${P}-gcc34.diff
@@ -41,6 +44,6 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
-	dodoc TODO README ChangeLog COPYING AUTHORS
+	make DESTDIR="${D}" install || die
+	dodoc TODO README ChangeLog AUTHORS
 }
