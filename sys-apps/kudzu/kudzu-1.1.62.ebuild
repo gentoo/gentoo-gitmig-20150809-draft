@@ -1,12 +1,12 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kudzu/kudzu-1.1.62.ebuild,v 1.2 2004/09/30 13:26:01 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kudzu/kudzu-1.1.62.ebuild,v 1.3 2005/05/12 19:07:12 wolf31o2 Exp $
 
 DESCRIPTION="Red Hat Hardware detection tools"
 SRC_URI="http://www.ibiblio.org/onebase/devbase/app-packs/${P}.tar.bz2"
 HOMEPAGE="http://www.knopper.net"
 
-KEYWORDS="~x86 ~amd64 -ppc ~alpha -sparc -mips"
+KEYWORDS="x86 amd64 -ppc alpha -sparc -mips"
 SLOT="0"
 LICENSE="GPL-2"
 IUSE=""
@@ -21,7 +21,7 @@ DEPEND="$RDEPEND
 src_compile() {
 	emake  || die
 
-	if [ "${ARCH}" = "x86" -o "${ARCH}" = "ppc" -o "${ARCH}" = "amd64" ]
+	if use x86
 	then
 		cd ddcprobe || die
 		emake || die
@@ -32,7 +32,15 @@ src_install() {
 	einstall install-program DESTDIR=${D} PREFIX=/usr MANDIR=/usr/share/man \
 		|| die "Install failed"
 
-	if [ "${ARCH}" = "x86" -o "${ARCH}" = "ppc" -o "${ARCH}" = "amd64" ]
+	# Init script isn't appropriate
+	rm -rf ${D}/etc/rc.d
+
+	# Add our own init scripts
+	newinitd ${FILESDIR}/${PN}.rc ${PN} || die
+	newconfd ${FILESDIR}/${PN}.conf.d ${PN} || die
+
+
+	if use x86
 	then
 		cd ${S}/ddcprobe || die
 		dosbin ddcxinfo ddcprobe || die

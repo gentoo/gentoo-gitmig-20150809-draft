@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/kudzu
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kudzu/ChangeLog,v 1.15 2004/09/30 13:26:01 wolf31o2 Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kudzu/ChangeLog,v 1.16 2005/05/12 19:07:12 wolf31o2 Exp $
+
+  12 May 2005; Chris Gianelloni <wolf31o2@gentoo.org> +files/kudzu.conf.d,
+  +files/kudzu.rc, -kudzu-0.99.66.ebuild, kudzu-0.99.99.ebuild,
+  -kudzu-1.1.43.ebuild, kudzu-1.1.62.ebuild:
+  Closing bugs #20684 and #61978. Removing old ebuilds. Performing general QA
+  cleanup.
 
   30 Sep 2004; Chris Gianelloni <wolf31o2@gentoo.org> kudzu-0.99.66.ebuild,
   kudzu-0.99.99.ebuild, kudzu-1.1.43.ebuild, kudzu-1.1.62.ebuild:

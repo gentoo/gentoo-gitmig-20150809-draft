@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kudzu/kudzu-0.99.99.ebuild,v 1.8 2004/09/30 13:26:01 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kudzu/kudzu-0.99.99.ebuild,v 1.9 2005/05/12 19:07:12 wolf31o2 Exp $
 
 DESCRIPTION="Red Hat Hardware detection tools"
 SRC_URI="mirror://gentoo/${P}.tar.gz"
@@ -21,7 +21,7 @@ DEPEND="$RDEPEND
 src_compile() {
 	emake  || die
 
-	if [ "${ARCH} = "x86" -o "${ARCH} = "ppc" ]
+	if use x86
 	then
 		cd ddcprobe || die
 		emake || die
@@ -29,8 +29,17 @@ src_compile() {
 }
 
 src_install() {
-	einstall install-program DESTDIR=${D} PREFIX=/usr MANDIR=/usr/share/man || die "Install failed"
-	if [ "${ARCH} = "x86" -o "${ARCH} = "ppc" ]
+	einstall install-program DESTDIR=${D} PREFIX=/usr MANDIR=/usr/share/man \
+		|| die "Install failed"
+
+	# Init script isn't appropriate
+	rm -rf ${D}/etc/rc.d
+
+	# Add our own init scripts
+	newinitd ${FILESDIR}/${PN}.rc ${PN} || die
+	newconfd ${FILESDIR}/${PN}.conf.d ${PN} || die
+
+	if use x86
 	then
 		cd ${S}/ddcprobe || die
 		dosbin svgamodes modetest ddcxinfo ddcprobe || die
