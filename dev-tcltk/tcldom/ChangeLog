@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/tcldom
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tcldom/ChangeLog,v 1.4 2004/11/06 15:37:35 pyrania Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tcldom/ChangeLog,v 1.5 2005/05/12 03:31:24 tester Exp $
+
+  12 May 2005; Olivier Crête <tester@gentoo.org> tcldom-2.6.ebuild:
+  Marking ~amd64
 
   06 Nov 2004; <pyrania@gentoo.org> tcldom-2.6.ebuild:
   Stable on x86.
