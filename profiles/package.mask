@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3959 2005/05/11 21:56:52 kosmikus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3960 2005/05/12 17:44:14 pythonhead Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -97,10 +97,6 @@ sci-calculators/calculator
 # sys-power/speedfreq is deprecated in favor of sys-power/cpufreqd due
 # to unresolved bugs and lack of upstream activity.
 sys-power/speedfreq
-
-# Rob Cakebread <pythonhead@gentoo.org> (05 May 2005)
-# Need to fix SLOT issues with wxGTK/wxMacOS etc bug# 91574
-dev-libs/wxbase
 
 # Sven Wegener <swegener@gentoo.org> (05 May 2005)
 # Development versions, without this mask users will not get the upstream
