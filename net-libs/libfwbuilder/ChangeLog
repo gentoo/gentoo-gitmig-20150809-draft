@@ -1,6 +1,15 @@
 # ChangeLog for net-libs/libfwbuilder
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libfwbuilder/ChangeLog,v 1.46 2005/04/17 03:28:45 jnc Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libfwbuilder/ChangeLog,v 1.47 2005/05/12 23:32:21 carlo Exp $
+
+*libfwbuilder-2.0.7 (12 May 2005)
+
+  12 May 2005; Carsten Lohrke <carlo@gentoo.org>
+  -libfwbuilder-1.0.2-r1.ebuild, -libfwbuilder-2.0.0.ebuild,
+  -libfwbuilder-2.0.1.ebuild, -libfwbuilder-2.0.2.ebuild,
+  -libfwbuilder-2.0.3.ebuild, -libfwbuilder-2.0.4.ebuild,
+  -libfwbuilder-2.0.5.ebuild, +libfwbuilder-2.0.7.ebuild:
+  version bump, clean up
 
   17 Apr 2005; Eric Shattow <jnc@gentoo.org> libfwbuilder-2.0.6.ebuild:
   Stable on x86; Bug #85580

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libfwbuilder/libfwbuilder-2.0.3.ebuild,v 1.3 2005/02/21 02:20:37 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libfwbuilder/libfwbuilder-2.0.7.ebuild,v 1.1 2005/05/12 23:32:21 carlo Exp $
 
 DESCRIPTION="Firewall Builder 2.0 API library and compiler framework"
 HOMEPAGE="http://www.fwbuilder.org/"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/fwbuilder/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~amd64 ~sparc ~ppc"
+KEYWORDS="~x86 ~amd64 ~sparc ~ppc ~ppc64"
 IUSE="snmp ssl"
 
 DEPEND=">=dev-libs/libxml2-2.4.10
