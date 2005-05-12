@@ -1,6 +1,9 @@
 # ChangeLog for app-text/jing
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/jing/ChangeLog,v 1.11 2005/01/17 18:31:08 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/jing/ChangeLog,v 1.12 2005/05/12 21:45:48 luckyduck Exp $
+
+  12 May 2005; Jan Brinkmann <luckyduck@gentoo.org> jing-20030619-r1.ebuild:
+  stable on amd64, added ~ppc to KEYWORDS
 
   17 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org> jing-20030619-r1.ebuild:
   fixed dependency problem. fixes bug #78312.
