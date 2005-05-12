@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/vifm
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/vifm/ChangeLog,v 1.8 2005/05/06 03:18:21 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/vifm/ChangeLog,v 1.9 2005/05/12 23:24:27 wormo Exp $
+
+  12 May 2005; Stephanie Lockwood-Childs <wormo@gentoo.org> vifm-0.2a.ebuild:
+  mark ~ppc
 
   06 May 2005; Sven Wegener <swegener@gentoo.org> vifm-0.2a.ebuild:
   Removed * postfix from <, <=, >= and > dependencies.

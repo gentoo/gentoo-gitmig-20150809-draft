@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 f3d78989c67f8890a33e28f6a02b6ea6 vifm-0.2.ebuild 1268
-MD5 40644fc67bd5e60a6348c4da8fdc7f7a ChangeLog 919
-MD5 316b7fda2358bac26a54bea575a41536 vifm-0.2a.ebuild 1186
 MD5 ac6aed932b8c8d21163f179660793895 metadata.xml 253
-MD5 1e458fd71566f5247cbcbf36f0d01118 files/digest-vifm-0.2a 60
+MD5 f3d78989c67f8890a33e28f6a02b6ea6 vifm-0.2.ebuild 1268
+MD5 81796499f0635abe05686eff71701246 ChangeLog 1007
+MD5 1d3a204c44d85c882b3e16e834bbdbc7 vifm-0.2a.ebuild 1188
 MD5 2e1cb4fe666e2594a05352c0605da798 files/digest-vifm-0.2 59
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCeuIPI1lqEGTUzyQRAl2vAKCsPoR6vaZ6qrg9W2m2k+Rs7MJWkwCdGLwg
-fm8Y9S22pZFm3/KKyJMRGoU=
-=TJpG
------END PGP SIGNATURE-----
+MD5 1e458fd71566f5247cbcbf36f0d01118 files/digest-vifm-0.2a 60
