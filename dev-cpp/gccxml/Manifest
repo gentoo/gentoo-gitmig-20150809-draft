@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 34719dc62b57667a35e876cc90b1eb62 gccxml-0.6.0.ebuild 793
-MD5 3d4e95fd51305ba54a59679d6b56ad32 ChangeLog 470
+MD5 aea1532a0d73b8890c6bf8d0b679e69b gccxml-0.6.0.ebuild 801
+MD5 ec9401012815f3290ccae67ec7b2ec3a ChangeLog 556
 MD5 56a06f7f4c67369042ee8c3cad5605cb metadata.xml 205
 MD5 e0b7d3d4f37a51b160e97d6b2f6c4fce files/digest-gccxml-0.6.0 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCbB+5UpKYMelfdYERAmRVAJ9w1pzWrNWZBaau/6Me+KtLrw6jJwCfagDe
-InvXsCsRtLwFn4c9iBnkekE=
-=4Jvr
------END PGP SIGNATURE-----

@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/gccxml
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gccxml/ChangeLog,v 1.3 2005/04/24 22:44:13 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gccxml/ChangeLog,v 1.4 2005/05/12 17:31:35 agriffis Exp $
+
+  12 May 2005; Aron Griffis <agriffis@gentoo.org> gccxml-0.6.0.ebuild:
+  add ~ia64
 
   24 Apr 2005; Daniel Goller <morfic@gentoo.org> gccxml-0.6.0.ebuild:
   add ~ppc
