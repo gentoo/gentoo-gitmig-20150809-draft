@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/unreal-tournament/unreal-tournament-436.ebuild,v 1.9 2005/04/15 13:31:43 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/unreal-tournament/unreal-tournament-436.ebuild,v 1.10 2005/05/12 12:15:39 wolf31o2 Exp $
 
-inherit games eutils
+inherit eutils games
 
 DESCRIPTION="Futuristic FPS"
 HOMEPAGE="http://www.unrealtournament.com/"
@@ -12,11 +12,11 @@ SRC_URI="ftp://ftp.lokigames.com/pub/patches/ut/ut-install-${PV}.run
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="-* x86"
-IUSE="3dfx X"
+IUSE="3dfx"
 
 DEPEND="app-arch/unzip
 	!games-fps/unreal-tournament-goty"
-RDEPEND="X? ( virtual/x11 )"
+RDEPEND="virtual/x11"
 
 S=${WORKDIR}
 

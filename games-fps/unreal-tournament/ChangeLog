@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/unreal-tournament
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/unreal-tournament/ChangeLog,v 1.8 2005/04/15 13:31:43 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/unreal-tournament/ChangeLog,v 1.9 2005/05/12 12:15:39 wolf31o2 Exp $
+
+  12 May 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  unreal-tournament-436.ebuild, unreal-tournament-451.ebuild:
+  Made X a hard dependency and closing bug #92255.
 
   15 Apr 2005; Jan Brinkmann <luckyduck@gentoo.org>
   unreal-tournament-451.ebuild:

@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/unreal-tournament-goty
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/unreal-tournament-goty/ChangeLog,v 1.4 2004/06/24 22:48:21 agriffis Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/unreal-tournament-goty/ChangeLog,v 1.5 2005/05/12 12:13:34 wolf31o2 Exp $
+
+  12 May 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  unreal-tournament-goty-436.ebuild, unreal-tournament-goty-451.ebuild:
+  Made X a hard dependency and closing bug #92255.
 
   03 Jun 2004; Aron Griffis <agriffis@gentoo.org>
   unreal-tournament-goty-436.ebuild, unreal-tournament-goty-451.ebuild:
