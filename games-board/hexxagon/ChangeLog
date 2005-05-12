@@ -1,6 +1,9 @@
 # ChangeLog for games-board/hexxagon
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/hexxagon/ChangeLog,v 1.13 2005/05/03 00:13:00 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/hexxagon/ChangeLog,v 1.14 2005/05/12 16:56:09 luckyduck Exp $
+
+  12 May 2005; Jan Brinkmann <luckyduck@gentoo.org> hexxagon-1.0.ebuild:
+  stable on amd64
 
 *hexxagon-0.3.3 (03 May 2005)
 
