@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1159 2005/05/11 08:45:40 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1160 2005/05/12 02:51:38 leonardop Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -310,6 +310,7 @@ games-util/xqf:bzip2 - use bzip2 for data compression
 gnome-extra/evolution-data-server:nntp - Add suppoort fot nntp
 gnome-extra/gnome-games:artworkextra - Add extra Artwork to gnome-games
 gnome-extra/libgda:mdb - Enable Microsoft Access DB support for GnomeDB.
+gnome-extra/libgda:xbase - Enable support for xbase databases (dBase, FoxPro, etc)
 gnustep-apps/gnumail:emoticon - Enable extra Emoticon Bundle to see smiley's in e-mail messages.
 gnustep-apps/gworkspace:imagekits - Enable support for ImageKits Bundle (mainly for PDF previewing) (soon obsolecsed by 'pdfkit')
 gnustep-apps/gworkspace:pdfkit - Enable support for PDFKit Bundle
