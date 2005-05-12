@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmame/xmame-0.96.ebuild,v 1.1 2005/05/12 05:54:06 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmame/xmame-0.96.ebuild,v 1.2 2005/05/12 14:27:55 mr_bones_ Exp $
 
 inherit flag-o-matic gcc eutils games
 
@@ -10,7 +10,7 @@ DESCRIPTION="Multiple Arcade Machine Emulator for X11"
 HOMEPAGE="http://x.mame.net/"
 SRC_URI="http://x.mame.net/download/xmame-${PV}.tar.bz2"
 
-LICENSE="xmame"
+LICENSE="XMAME"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~sparc ~x86"
 IUSE="alsa arts dga esd expat ggi joystick lirc mmx net opengl sdl svga X xv"
