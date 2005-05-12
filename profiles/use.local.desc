@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1161 2005/05/12 10:46:05 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1162 2005/05/12 13:22:39 sebastian Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -236,11 +236,8 @@ dev-python/cgkit:ogre - enable support for Ogre rendering
 dev-python/docutils:glep - Install support for GLEPs
 dev-python/epydoc:pdf - enable support for exporting to pdf
 dev-python/ipython:gnuplot - enable gnuplot support
-<<<<<<< use.local.desc
 dev-python/numeric:lapack - enable lapack library support
-=======
 dev-python/pycairo:numeric - enable Numeric support
->>>>>>> 1.1016
 dev-python/pykde:kjs - include the kjs module (don't enable, if unsure)
 dev-python/soya:ode - include support for Open Dynamics Engine
 dev-ruby/ruby-sdl:image - enable sdl-image support
