@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1162 2005/05/12 13:22:39 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1163 2005/05/12 13:31:30 sebastian Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -229,7 +229,6 @@ dev-lisp/sbcl:nosource - don't include source code for SBCL in the installation
 dev-ml/lablgtk:glade - Enable libglade bindings compilation.
 dev-ml/ocamlsdl:noimage - Disable sdl-image support
 dev-ml/ocamlsdl:nomixer - Disable sdl-mixer support
-dev-php/PEAR-Log:pear-db - Use the PEAR-DB package
 dev-python/bicyclerepair:vim - enable vim with bicyclerepair support
 dev-python/cgkit:3ds - enable support for importing 3D Studio models
 dev-python/cgkit:ogre - enable support for Ogre rendering
