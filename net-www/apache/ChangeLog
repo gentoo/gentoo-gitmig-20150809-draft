@@ -1,6 +1,14 @@
 # ChangeLog for net-www/apache
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.355 2005/05/11 21:35:24 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.356 2005/05/12 01:18:38 beu Exp $
+
+*apache-2.0.54-r3 (12 May 2005)
+*apache-2.0.54-r2 (12 May 2005)
+
+  12 May 2005; Elfyn McBratney <beu@gentoo.org> +apache-2.0.54-r2.ebuild,
+  +apache-2.0.54-r3.ebuild:
+  Revision bumps to satisfy security bug #91737. 2.0.54-r2 is the (old-style)
+  ebuild going stable, 2.0.54-r3 is the new-style ebuild. -r2 stable on x86.
 
   11 May 2005; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
   apache is a group effort so remove Hollow as maintainer.
