@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd-svn/mpd-svn-20050408-r1.ebuild,v 1.2 2005/05/11 01:19:24 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd-svn/mpd-svn-20050408-r1.ebuild,v 1.3 2005/05/12 10:48:24 ticho Exp $
 
-IUSE="oggvorbis mad aac audiofile ipv6 flac mikmod alsa unicode icecast ao mpc"
+IUSE="oggvorbis mad aac audiofile ipv6 flac mikmod alsa unicode icecast ao musepack"
 
 inherit eutils
 
@@ -27,7 +27,7 @@ DEPEND="!media-sound/mpd
 	sys-libs/zlib
 	dev-util/gperf
 	icecast? ( media-libs/libshout )
-	mpc? ( >=media-libs/libmusepack-1.1 )"
+	musepack? ( >=media-libs/libmusepack-1.1 )"
 
 pkg_setup() {
 	enewuser mpd '' '' '' audio || die "problem adding user mpd"
@@ -49,7 +49,7 @@ src_compile() {
 		`use_enable mikmod mod` \
 		`use_enable ao` \
 		`use_enable icecast shout` \
-		`use_enable mpc` || die "could not configure"
+		`use_enable musepack mpc` || die "could not configure"
 
 	emake || die "emake failed"
 }
