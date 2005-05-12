@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 b13c7b017cc4a99ccf33bfda64d2e488 ChangeLog 1977
 MD5 f850dd3cf3903808e6667ee323770796 ucl-1.01-r1.ebuild 755
 MD5 4827db0c2d03aa0271393403c1f2a434 ucl-1.02.ebuild 759
-MD5 2de576b9a7aa164dedd151b59b563b4b ucl-1.03.ebuild 794
-MD5 bfaf4c0eb6ba1220fbc9d67e749ea39c files/digest-ucl-1.02 60
+MD5 81a8775215079175e9256af98d60df2f ucl-1.03.ebuild 797
+MD5 b13c7b017cc4a99ccf33bfda64d2e488 ChangeLog 1977
 MD5 b6bd20c267625c3e0f31d141bdcc466a files/digest-ucl-1.01-r1 60
 MD5 a5868e3843867e4deda371d0e18dff02 files/digest-ucl-1.03 60
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.14 (GNU/Linux)
-
-iD8DBQFB5KRJroRuSHgZdywRAoCaAJ9KWm9wS4Yr+wtIIxbWHBBkBp1EVwCeIHJX
-/pVSlfQyTZWndce3Melahmg=
-=mz91
------END PGP SIGNATURE-----
+MD5 bfaf4c0eb6ba1220fbc9d67e749ea39c files/digest-ucl-1.02 60
