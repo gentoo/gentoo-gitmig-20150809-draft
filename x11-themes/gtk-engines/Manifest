@@ -1,18 +1,19 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 20594e39f1255e33ccbfe342219b7911 ChangeLog 2193
+MD5 19f25729b9527215179d7ca781fcb0d2 ChangeLog 2432
 MD5 6cd7ff72e48107fa069441689b024f85 gtk-engines-2.2.0.ebuild 1333
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 61856b17d8718689c4f28d2f4f33d0ff gtk-engines-2.6.2.ebuild 1561
-MD5 4bd6c9bb06ed4ede7d5d4c0fda2a25fc gtk-engines-2.6.3.ebuild 1561
+MD5 1a062a3e7c06a8759e53e48fe037b0ad gtk-engines-2.6.3.ebuild 1609
 MD5 a22505e95c33a32563029339fbe873dd files/digest-gtk-engines-2.2.0 137
 MD5 e999393997fca9836ef5d38a7e147e1a files/digest-gtk-engines-2.6.2 138
 MD5 5c9d7246937d4b75354237464ca035fb files/digest-gtk-engines-2.6.3 138
+MD5 cd6c6ed17e724aa3ae5aea4dd904477e files/gtk-engines-2.6.3-fix_clearlooks_path.patch 1136
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCZGW9XjcVihsel0ERAi4pAJ9WD1bJqynXzmxCmHoL1sUrXS76PwCgtNkl
-0ld3Qu/b1/ypB5++wiu9ozM=
-=RLOm
+iD8DBQFCg4wKXjcVihsel0ERAld5AKCm9sEUN9kUYVIvVNTnR+6L5jLpyACeIejO
+hfHE6CaySjsVSh9trsjST30=
+=jCvb
 -----END PGP SIGNATURE-----

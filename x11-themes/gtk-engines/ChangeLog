@@ -1,6 +1,12 @@
 # ChangeLog for x11-themes/gtk-engines
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines/ChangeLog,v 1.21 2005/04/19 01:59:28 joem Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines/ChangeLog,v 1.22 2005/05/12 17:01:19 joem Exp $
+
+  12 May 2005; Joe McCann <joem@gentoo.org>
+  +files/gtk-engines-2.6.3-fix_clearlooks_path.patch,
+  gtk-engines-2.6.3.ebuild:
+  Add patch from bug 89626 to install clearlooks engine in proper location.
+  Thanks to Gad Kadoshfor reporting
 
 *gtk-engines-2.6.3 (18 Apr 2005)
 
