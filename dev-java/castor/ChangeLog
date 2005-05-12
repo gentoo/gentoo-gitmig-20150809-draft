@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/castor
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/castor/ChangeLog,v 1.8 2005/05/06 13:43:23 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/castor/ChangeLog,v 1.9 2005/05/12 17:42:37 luckyduck Exp $
+
+  12 May 2005; Jan Brinkmann <luckyduck@gentoo.org> castor-0.9.5.3.ebuild:
+  introduced support for the postgres useflag, fixes #92271
 
   06 May 2005; Gustavo Zacarias <gustavoz@gentoo.org> castor-0.9.5.3.ebuild:
   Stable on sparc

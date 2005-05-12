@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/castor/castor-0.9.5.3.ebuild,v 1.8 2005/05/06 13:43:23 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/castor/castor-0.9.5.3.ebuild,v 1.9 2005/05/12 17:42:37 luckyduck Exp $
 
 inherit eutils java-pkg
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://castor.exolab.org/"
 LICENSE="Exolab"
 KEYWORDS="x86 amd64 sparc"
 SLOT="0.9"
-IUSE="doc jikes source"
+IUSE="doc jikes postgres source"
 
 DEPEND=">=virtual/jdk-1.4
 	${RDEPEND}"
@@ -27,7 +27,7 @@ RDEPEND=">=virtual/jre-1.4
 	>=dev-java/log4j-1.2.8
 	=dev-java/servletapi-2.3*
 	=dev-java/xerces-1.3*
-	=dev-java/jdbc2-postgresql-7.3*"
+	postgres? ( =dev-java/jdbc2-postgresql-7.3* )"
 
 src_unpack() {
 	unpack ${A}
@@ -50,7 +50,7 @@ src_unpack() {
 	java-pkg_jar-from servletapi-2.3
 	java-pkg_jar-from xerces-1.3
 	java-pkg_jar-from ldapsdk-4.1 ldapjdk.jar
-	java-pkg_jar-from jdbc2-postgresql-5
+	use postgres && java-pkg_jar-from jdbc2-postgresql-5
 }
 
 
