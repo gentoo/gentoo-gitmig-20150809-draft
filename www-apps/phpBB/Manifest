@@ -1,24 +1,14 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 62eb0c5e752dc4bae9bca0801433d889 ChangeLog 3723
+MD5 c339473e0ff43da76eb2f2607c441921 metadata.xml 280
+MD5 96ee6722890ad3b08496c34ac1c638f5 phpBB-2.0.10.ebuild 876
 MD5 09711e03016948cb54513cc1b19259d3 phpBB-2.0.11.ebuild 876
 MD5 95eedcf9c286f66331c8c551c5807cf6 phpBB-2.0.13.ebuild 876
-MD5 9e5375256737c2c266b572230c2320fa phpBB-2.0.15.ebuild 879
-MD5 96ee6722890ad3b08496c34ac1c638f5 phpBB-2.0.10.ebuild 876
 MD5 55a70c3dbb9ff06be87101457b9ec529 phpBB-2.0.14.ebuild 877
-MD5 0882a4375e090dca158c9359258c6eff ChangeLog 3628
-MD5 c339473e0ff43da76eb2f2607c441921 metadata.xml 280
+MD5 81d8894bf20d29674c80d976969ba1f0 phpBB-2.0.15.ebuild 876
+MD5 b86d0d59ff98fc4f56b7cf9f4efcea57 files/2.0.10-postinstall-en.txt 197
 MD5 e91be9c94d3c82fb8b3b1b11c6470b34 files/digest-phpBB-2.0.10 65
+MD5 91b2f3b66dfab63e7ffc7e269064bb73 files/2.0.11-postinstall-en.txt 197
 MD5 f6eea42c123f03c3c7b8024b9105e50d files/digest-phpBB-2.0.11 65
 MD5 621c3467e34dda88e979e7f188048379 files/digest-phpBB-2.0.13 65
 MD5 1fd4f3465ca6d722831a4cb80a70780b files/digest-phpBB-2.0.14 65
 MD5 bac6ea0f8af7bc2b8ba050d0f5b8765b files/digest-phpBB-2.0.15 65
-MD5 b86d0d59ff98fc4f56b7cf9f4efcea57 files/2.0.10-postinstall-en.txt 197
-MD5 91b2f3b66dfab63e7ffc7e269064bb73 files/2.0.11-postinstall-en.txt 197
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCfhICEZCkKN40op4RAl56AJ43KW0tGwFjbEW7IxkQDWd1kXNX5QCgoEri
-kPO5cXGrGjoryNv+5R8JTQs=
-=TrOA
------END PGP SIGNATURE-----
