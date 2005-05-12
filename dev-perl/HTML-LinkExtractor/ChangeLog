@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/HTML-LinkExtractor
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-LinkExtractor/ChangeLog,v 1.8 2005/04/25 17:25:54 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-LinkExtractor/ChangeLog,v 1.9 2005/05/12 16:24:46 luckyduck Exp $
+
+  12 May 2005; Jan Brinkmann <luckyduck@gentoo.org>
+  HTML-LinkExtractor-0.12.1.ebuild:
+  stable on amd64
 
 *HTML-LinkExtractor-0.13 (25 Apr 2005)
 
