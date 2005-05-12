@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/t-coffee/t-coffee-2.03.ebuild,v 1.1 2005/03/03 18:41:31 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/t-coffee/t-coffee-2.50.ebuild,v 1.1 2005/05/12 00:22:36 ribosome Exp $
 
 inherit toolchain-funcs
 
@@ -35,25 +35,17 @@ src_compile() {
 
 src_install() {
 	cd ${TCDIR}/bin
-	dobin t_coffee \
-		blast_aln2fasta_aln.pl \
-		extract_from_pdb \
-		fasta_aln2fasta_aln_unique_name.pl \
-		fugue_client \
-		msf_aln2fasta_aln.pl \
-		t_coffee_dpa \
-		t_coffee_dpa2
+	dobin t_coffee
 	insinto /usr/share/${PN}/lib
 	doins ${TCDIR}/html
 
 	dodoc ${TCDIR}/doc/README4T-COFFEE
 	insinto /usr/share/doc/${PF}
 	doins ${TCDIR}/doc/t_coffee{_doc.{doc,pdf},.pdf}
+	doins ${TCDIR}/doc/*.txt
 
-	insinto /usr/share/${PN}/example/seq
-	doins ${TCDIR}/example/seq/*
-	insinto /usr/share/${PN}/example/test
-	doins ${TCDIR}/example/test/*.{aln,pep}
+	insinto /usr/share/${PN}/example
+	doins ${TCDIR}/example/*
 }
 
 src_test() {
