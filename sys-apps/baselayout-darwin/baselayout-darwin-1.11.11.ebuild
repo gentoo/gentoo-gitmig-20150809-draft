@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout-darwin/baselayout-darwin-1.11.11.ebuild,v 1.1 2005/05/12 06:11:18 josejx Exp $ 
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout-darwin/baselayout-darwin-1.11.11.ebuild,v 1.2 2005/05/12 06:21:45 josejx Exp $
 
 DESCRIPTION="Baselayout and init scripts (eventually)"
 HOMEPAGE="http://www.gentoo.org/"
