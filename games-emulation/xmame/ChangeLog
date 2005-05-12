@@ -1,6 +1,11 @@
 # ChangeLog for games-emulation/xmame
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmame/ChangeLog,v 1.38 2005/04/01 16:35:05 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmame/ChangeLog,v 1.39 2005/05/12 05:54:06 mr_bones_ Exp $
+
+*xmame-0.96 (12 May 2005)
+
+  12 May 2005; Michael Sterrett <mr_bones_@gentoo.org> +xmame-0.96.ebuild:
+  version bump
 
   01 Apr 2005; Michael Sterrett <mr_bones_@gentoo.org> xmame-0.95.ebuild:
   add lirc support (bug #87501); tidy
