@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3960 2005/05/12 17:44:14 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3961 2005/05/12 17:48:10 ka0ttic Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -134,11 +134,6 @@ dev-dotnet/winelib
 # Elfyn McBratney <beu@gentoo.org> (28 Apr 2005)
 # Masked for testing.
 app-admin/filewatcher
-
-# Aaron Walker <ka0ttic@gentoo.org> (28 Apr 2005)
-# masked for testing. keeping masked until glib bug can be
-# fixed (gnome bug 301935).
->=app-portage/herdstat-1.1.0_rc2
 
 # Elfyn McBratney <beu@gentoo.org> (27 Apr 2005)
 # Security mask, see bug #88926.
