@@ -9,7 +9,7 @@ MD5 a4b925aafabf9fb9d585715dfc41f2d3 mod_php-5.0.3-r2.ebuild 2051
 MD5 8dcccea239186458cae823a2b62b80d0 mod_php-5.0.1.ebuild 4244
 MD5 38fe937e954ab7109395cefa86fcd2d4 metadata.xml 384
 MD5 7999fcc8d826c787aaa0978b8ef8bcde mod_php-4.3.11-r1.ebuild 6422
-MD5 9aaa19494b32f5b90dcb1de405b70c91 ChangeLog 39984
+MD5 010e08cbfb5a4e3350c9d06565667360 ChangeLog 40151
 MD5 5357393f40a578f7be2663a74f23640f mod_php-5.0.3.ebuild 4378
 MD5 c5bd5fbac60304b8f50ec2e2e6253342 mod_php-4.3.11.ebuild 6205
 MD5 7af9bd1afc22d61d294ba1e7bd63ec88 mod_php-4.3.10.ebuild 6128
@@ -18,7 +18,7 @@ MD5 49a1348af9be874f0aa64c74078900a8 mod_php-4.3.9_rc1.ebuild 6066
 MD5 c8a2506e4b3126a82c44c63d7b5116e3 mod_php-5.0.4.ebuild 2093
 MD5 4862fd4457f3657f73b51018c8062c26 mod_php-4.3.8.ebuild 5957
 MD5 5f347443c2b80bb26a91346b99501aca mod_php-5.0.3-r1.ebuild 4296
-MD5 6722bb055a96501dc2bf0e1c814cb599 mod_php-4.3.11-r2.ebuild 6428
+MD5 20622e44bf2aab5b2c35a7a8edc38e2c mod_php-4.3.11-r2.ebuild 6422
 MD5 bcd8d899123d7e3390034829682bada2 mod_php-4.3.10-r1.ebuild 6346
 MD5 7515e9b1dc298a0fb1c12d35a58c265d files/mod_php-4.3.4-amd64hack.diff 1028
 MD5 f7a7898637874593f519c336db79fa45 files/mod_php-5.0.3-missing-arches.patch 524
@@ -56,7 +56,7 @@ MD5 2dfe55aa49dbca0c3316e859f8bebcb1 files/4.3.11-r2/70_mod_php.conf 1125
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCg6zGjUHll2nfF60RAthwAJsFrwIYzHzS+5qXVXECjwrARDwEUwCfSU7D
-JshoeIVCAzw8B7FzqBSYEF4=
-=JfH3
+iD8DBQFCg7P7jUHll2nfF60RAt8dAKC1sAyAEcq48RBfSwZWA3d/I+A1sQCfceOO
+UqcTyL5KqIBt5PpAueRnE3M=
+=CNoJ
 -----END PGP SIGNATURE-----
