@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1164 2005/05/12 13:40:06 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1165 2005/05/12 23:19:02 carlo Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -23,7 +23,8 @@ app-arch/dar:dar32 - Enables --enable-mode=32 option, which replace infinint by 
 app-arch/dar:dar64 - Enables --enable-mode=64 option, which replace infinint by 64 bits integers.
 app-arch/kdar:dar32 - Support libdar32.so to use.
 app-arch/kdar:dar64 - Support libdar64.so to use.
-app-cdr/k3b:monkey - Enable support for Monkey's audio codec
+app-cdr/k3b:css - Enables ripping of encrypted dvds
+app-cdr/k3b:musepack - Enable support for musepack files
 app-cdr/ogmrip:subp - Subtitle ripping preliminary support
 app-crypt/gnupg:bzip2 - use transparent bzip2 compression
 app-crypt/gnupg:ecc - Use elliptic curve cryptosystem patch
