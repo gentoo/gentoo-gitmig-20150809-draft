@@ -3,4 +3,7 @@
 <pkgmetadata>
 <herd>base-system</herd>
 <herd>X11</herd>
+<maintainer>
+  <email>seemant@gentoo.org</email>
+</maintainer>
 </pkgmetadata>
