@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mozconfig.eclass,v 1.9 2005/03/24 02:46:12 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mozconfig.eclass,v 1.10 2005/05/12 14:49:26 weeve Exp $
 #
 # mozconfig.eclass: the new mozilla.eclass
 
@@ -195,7 +195,7 @@ mozconfig_init() {
 	fi
 
 	# Here is a strange one...
-	if is-flag '-mcpu=ultrasparc*'; then
+	if is-flag '-mcpu=ultrasparc*' || is-flag '-mtune=ultrasparc*'; then
 		mozconfig_annotate "building on ultrasparc" --enable-js-ultrasparc
 	fi
 
