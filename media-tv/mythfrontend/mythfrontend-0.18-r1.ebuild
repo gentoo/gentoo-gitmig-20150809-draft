@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythfrontend/mythfrontend-0.18-r1.ebuild,v 1.1 2005/05/11 20:49:53 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythfrontend/mythfrontend-0.18-r1.ebuild,v 1.2 2005/05/12 07:08:55 cardoe Exp $
 
 inherit flag-o-matic eutils debug
 
@@ -34,6 +34,8 @@ DEPEND=">=media-libs/freetype-2.0
 
 RDEPEND="${DEPEND}
 	!media-tv/mythtv"
+
+S="${WORKDIR}/mythtv-${PV}"
 
 pkg_setup() {
 

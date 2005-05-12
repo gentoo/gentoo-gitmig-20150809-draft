@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/mythfrontend
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythfrontend/ChangeLog,v 1.36 2005/05/11 20:49:53 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythfrontend/ChangeLog,v 1.37 2005/05/12 07:08:55 cardoe Exp $
+
+  12 May 2005; Doug Goldstein <cardoe@gentoo.org>
+  mythfrontend-0.18-r1.ebuild:
+  a little boo boo
 
 *mythfrontend-0.18-r1 (11 May 2005)
 
