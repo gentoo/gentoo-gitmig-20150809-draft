@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libglade/libglade-0.17-r6.ebuild,v 1.28 2005/02/12 11:06:20 joem Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libglade/libglade-0.17-r6.ebuild,v 1.29 2005/05/12 19:52:19 leonardop Exp $
 
 #provide Xmake and Xemake
 
 inherit libtool virtualx gnome.org
 
-DESCRIPTION="allow programs to load their UIs from an XMLS description at runtime."
+DESCRIPTION="Allow programs to load their UIs from an XML description at runtime."
 HOMEPAGE="http://developer.gnome.org/doc/API/libglade/libglade.html"
 SRC_URI="ftp://ftp.gnome.org/pub/GNOME/sources/${PN}/${PV}/${P}.tar.gz"
 
