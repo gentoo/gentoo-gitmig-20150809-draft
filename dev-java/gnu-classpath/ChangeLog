@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/gnu-classpath
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/ChangeLog,v 1.29 2005/04/22 08:28:01 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/ChangeLog,v 1.30 2005/05/12 15:41:56 luckyduck Exp $
+
+*gnu-classpath-0.15 (12 May 2005)
+
+  12 May 2005; Jan Brinkmann <luckyduck@gentoo.org>
+  -gnu-classpath-0.12.ebuild, gnu-classpath-0.13.ebuild,
+  +gnu-classpath-0.15.ebuild:
+  new upstream version, fixes #92070. marked 0.13 stable on amd64, ppc and x86
 
   22 Apr 2005; Simon Stelling <blubb@gentoo.org> gnu-classpath-0.12.ebuild:
   stable on amd64
