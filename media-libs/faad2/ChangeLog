@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/faad2
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/faad2/ChangeLog,v 1.45 2005/05/05 11:49:26 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/faad2/ChangeLog,v 1.46 2005/05/12 23:43:26 tester Exp $
+
+  12 May 2005; Olivier Crête <tester@gentoo.org>
+  +files/faad2-2.0-amd64.patch, faad2-2.0-r6.ebuild:
+  Put fixed patch back in, thanks to Tyler Montbriand <tsm@accesscomm.ca>
 
 *faad2-2.0-r6 (05 May 2005)
 
