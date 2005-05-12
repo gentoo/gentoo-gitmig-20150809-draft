@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 5e328d2b2aee18d0c6dd9d2af5017969 konverter-0.6.ebuild 637
-MD5 5d3b886a60903c2f1fef30e7a8883a9a ChangeLog 1028
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-MD5 7d55adb124b11e7407684e3749616685 konverter-0.92_beta1.ebuild 663
-MD5 94ac335c777d2ab382f81d53ab7d34ff files/digest-konverter-0.6 65
+MD5 67a9c294cdeadc37370e8c3e496f0965 konverter-0.92_beta1.ebuild 573
+MD5 9c12d5972c3564aa2f46dce5ae26ef12 ChangeLog 1146
+MD5 5e328d2b2aee18d0c6dd9d2af5017969 konverter-0.6.ebuild 637
 MD5 1a1c26300ff0c3992e2a957be7b1b70c files/digest-konverter-0.92_beta1 72
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCZWYs06ebR+OMO78RAgu6AJ9knkY0jSH2Dz7wUY/+eQTWcR59HwCaAg2L
-Jo2I8SkI3Fa0DF7yI0zqDP0=
-=vzPX
------END PGP SIGNATURE-----
+MD5 94ac335c777d2ab382f81d53ab7d34ff files/digest-konverter-0.6 65
