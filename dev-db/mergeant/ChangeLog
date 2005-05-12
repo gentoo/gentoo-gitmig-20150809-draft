@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/mergeant
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mergeant/ChangeLog,v 1.7 2005/01/01 17:35:52 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mergeant/ChangeLog,v 1.8 2005/05/12 03:07:45 leonardop Exp $
+
+  11 May 2005; Leonardo Boshell <leonardop@gentoo.org> mergeant-0.12.1.ebuild:
+  Stable on x86.
 
 *mergeant-0.12.1 (16 Jun 2003)
 
