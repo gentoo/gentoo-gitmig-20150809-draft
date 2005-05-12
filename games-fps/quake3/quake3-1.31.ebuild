@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3/quake3-1.31.ebuild,v 1.17 2005/04/20 14:07:14 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3/quake3-1.31.ebuild,v 1.18 2005/05/12 12:38:40 wolf31o2 Exp $
 
-inherit games
+inherit eutils games
 
 DESCRIPTION="Quake III Arena - 3rd installment of the classic id 3D first-person shooter"
 HOMEPAGE="http://www.idsoftware.com/"
@@ -11,20 +11,20 @@ SRC_URI="ftp://ftp.idsoftware.com/idstuff/quake3/linux/linuxq3apoint-${PV}.x86.r
 LICENSE="Q3AEULA"
 SLOT="0"
 KEYWORDS="-* amd64 x86"
-IUSE="X dedicated opengl"
+IUSE="dedicated opengl"
 RESTRICT="nostrip"
 
 RDEPEND="virtual/libc
-	opengl? ( virtual/opengl )
-	X? ( virtual/x11 )
+	opengl? ( virtual/opengl
+		virtual/x11 )
 	dedicated? ( app-misc/screen )
 	amd64? (
 		app-emulation/emul-linux-x86-baselibs
-		app-emulation/emul-linux-x86-xlibs
-		|| ( >=media-video/nvidia-glx-1.0.6629-r3
-		app-emulation/emul-linux-x86-nvidia
-		>=media-video/ati-drivers-8.8.25-r1 )
-	)"
+		opengl? (
+			app-emulation/emul-linux-x86-xlibs
+			|| ( >=media-video/nvidia-glx-1.0.6629-r3
+			app-emulation/emul-linux-x86-nvidia
+			>=media-video/ati-drivers-8.8.25-r1 ) ) )"
 
 S=${WORKDIR}
 dir=${GAMES_PREFIX_OPT}/${PN}
@@ -40,11 +40,9 @@ src_unpack() {
 }
 
 src_install() {
-	dodir ${dir}
-
 	insinto ${dir}/baseq3
 	doins baseq3/*.pk3
-	mv Help ${Ddir}/
+	mv Help ${Ddir}
 	insinto ${dir}/missionpack
 	doins missionpack/*.pk3
 
@@ -55,10 +53,9 @@ src_install() {
 	games_make_wrapper quake3 ./quake3.x86 ${dir}
 	games_make_wrapper q3ded ./q3ded ${dir}
 
-	exeinto /etc/init.d ; newexe ${FILESDIR}/q3ded.rc q3ded
-	insinto /etc/conf.d ; newins ${FILESDIR}/q3ded.conf.d q3ded
-	insinto /usr/share/pixmaps
-	doins quake3.xpm
+	newinitd ${FILESDIR}/q3ded.rc q3ded
+	newconfd ${FILESDIR}/q3ded.conf.d q3ded
+	doicon quake3.xpm
 
 	prepgamesdirs
 	make_desktop_entry quake3 "Quake III Arena" quake3.xpm
@@ -67,15 +64,17 @@ src_install() {
 pkg_postinst() {
 	games_pkg_postinst
 	echo
-	ewarn "There are two possible security bugs in this package, both causing a	denial of"
-	ewarn "service.  One affects the game when running a server, the other when	running as"
-	ewarn "a client.  For more information, see bug #82149."
+	ewarn "There are two possible security bugs in this package, both causing a	denial"
+	ewarn "of service.  One affects the game when running a server, the other when running"
+	ewarn "as a client.  For more information, see bug #82149."
 	echo
 	einfo "You need to copy pak0.pk3 from your Quake3 CD into ${dir}/baseq3."
 	einfo "Or if you have got a Window installation of Q3 make a symlink to save space."
 	echo
-	einfo "To start a dedicated server, run"
-	einfo "\t/etc/init.d/q3ded start"
-	echo
-	einfo "The dedicated server is started under the ${GAMES_USER_DED} user account."
+	if use dedicated; then
+		einfo "To start a dedicated server, run"
+		einfo "\t/etc/init.d/q3ded start"
+		echo
+		einfo "The dedicated server is started under the ${GAMES_USER_DED} user account."
+	fi
 }

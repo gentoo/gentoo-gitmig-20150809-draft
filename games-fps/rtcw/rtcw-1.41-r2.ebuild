@@ -1,15 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/rtcw/rtcw-1.41-r2.ebuild,v 1.4 2005/04/20 14:03:31 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/rtcw/rtcw-1.41-r2.ebuild,v 1.5 2005/05/12 12:41:34 wolf31o2 Exp $
 
-inherit games
+inherit eutils games
 
 DESCRIPTION="Return to Castle Wolfenstein - Long awaited sequel to Wolfenstein 3D"
 HOMEPAGE="http://games.activision.com/games/wolfenstein/"
-SRC_URI="mirror://3dgamers/pub/3dgamers5/games/returnwolfenstein/Missions/wolf-linux-goty-maps.x86.run
-	mirror://3dgamers/pub/3dgamers/games/returnwolfenstein/Missions/wolf-linux-goty-maps.x86.run
-	mirror://3dgamers/pub/3dgamers5/games/returnwolfenstein/wolf-linux-1.41-3.x86.run
-	mirror://3dgamers/pub/3dgamers/games/returnwolfenstein/wolf-linux-1.41-3.x86.run"
+SRC_URI="mirror://3dgamers/pub/3dgamers/games/returnwolfenstein/Missions/wolf-linux-goty-maps.x86.run
+	mirror://3dgamers/pub/3dgamers/games/returnwolfenstein/wolf-linux-${PV}-3.x86.run"
 
 LICENSE="RTCW"
 SLOT="0"
@@ -35,7 +33,7 @@ pkg_setup() {
 
 src_unpack() {
 	unpack_makeself wolf-linux-goty-maps.x86.run
-	unpack_makeself wolf-linux-1.41-3.x86.run
+	unpack_makeself wolf-linux-${PV}-3.x86.run
 }
 
 src_install() {
@@ -49,8 +47,7 @@ src_install() {
 	games_make_wrapper wolfmp ./wolf.x86 ${dir}
 	games_make_wrapper wolfsp ./wolfsp.x86 ${dir}
 
-	if use dedicated;
-	then
+	if use dedicated; then
 		games_make_wrapper wolf-ded ./wolfded.x86 ${dir}
 		exeinto /etc/init.d
 		newexe ${FILESDIR}/wolf-ded.rc wolf-ded
@@ -59,8 +56,7 @@ src_install() {
 
 	insinto ${dir}
 	doins WolfMP.xpm WolfSP.xpm INSTALL QUICKSTART CHANGES RTCW-README-1.4.txt
-	insinto /usr/share/pixmaps
-	doins WolfMP.xpm WolfSP.xpm
+	doicon WolfMP.xpm WolfSP.xpm
 
 	prepgamesdirs
 	make_desktop_entry wolfmp "Return to Castle Wolfenstein (MP)" WolfMP.xpm
@@ -70,9 +66,9 @@ src_install() {
 pkg_postinst() {
 	games_pkg_postinst
 	echo
-	ewarn "There are two possible security bugs in this package, both causing a denial of"
-	ewarn "service.  One affects the game when running a server, the other when	running as"
-	ewarn "a client.  For more information, see bug #82149."
+	ewarn "There are two possible security bugs in this package, both causing a denial"
+	ewarn "of service.  One affects the game when running a server, the other when running"
+	ewarn "as a client.  For more information, see bug #82149."
 	echo
 	einfo "You need to copy pak0.pk3, mp_pak0.pk3, mp_pak1.pk3, mp_pak2.pk3,"
 	einfo "sp_pak1.pk3 and sp_pak2.pk3 from a Window installation into ${dir}/main/"
