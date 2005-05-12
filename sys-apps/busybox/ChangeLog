@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/busybox
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.64 2005/05/07 13:15:18 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.65 2005/05/12 16:58:02 ferdy Exp $
+
+  12 May 2005; Fernando J. Pereda <ferdy@gentoo.org> busybox-1.00-r1.ebuild:
+  alpha stable wrt #73241
 
   07 May 2005; <solar@gentoo.org> busybox-1.00-r3.ebuild:
   - have savedconfig look in ROOT first then fallback to / if nothing is found

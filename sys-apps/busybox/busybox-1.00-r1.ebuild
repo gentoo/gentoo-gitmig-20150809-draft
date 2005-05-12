@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.00-r1.ebuild,v 1.14 2005/04/08 18:37:44 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.00-r1.ebuild,v 1.15 2005/05/12 16:58:02 ferdy Exp $
 
 inherit eutils
 
@@ -18,7 +18,7 @@ fi
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 arm hppa ~mips ppc sparc x86 ~ppc64"
+KEYWORDS="alpha amd64 arm hppa ~mips ppc sparc x86 ~ppc64"
 IUSE="debug uclibc static savedconfig netboot floppyboot make-symlinks"
 
 DEPEND="virtual/libc
