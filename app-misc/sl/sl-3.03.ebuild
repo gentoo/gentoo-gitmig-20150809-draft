@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/sl/sl-3.03.ebuild,v 1.13 2005/02/02 16:40:15 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/sl/sl-3.03.ebuild,v 1.14 2005/05/12 19:03:23 gmsoft Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ SRC_URI="http://www.tkl.iis.u-tokyo.ac.jp/~toyoda/sl/${PN}.tar
 
 LICENSE="freedist"
 SLOT="0"
-KEYWORDS="x86 alpha sparc ppc64 ppc ppc-macos ~amd64"
+KEYWORDS="x86 alpha sparc ppc64 ppc ppc-macos ~amd64 hppa"
 IUSE="cjk"
 
 DEPEND="virtual/libc
