@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/gimp
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.109 2005/05/11 00:25:03 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.110 2005/05/12 16:28:54 killerfox Exp $
+
+  12 May 2005; Rene Nussbaumer <killerfox@gentoo.org> gimp-2.2.6-r1.ebuild:
+  Stable on hppa
 
   11 May 2005; Gustavo Zacarias <gustavoz@gentoo.org> gimp-2.2.6-r1.ebuild:
   Stable on sparc
