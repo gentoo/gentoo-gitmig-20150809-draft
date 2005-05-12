@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/nmrview
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/nmrview/ChangeLog,v 1.4 2005/02/04 18:47:35 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/nmrview/ChangeLog,v 1.5 2005/05/12 19:10:41 ribosome Exp $
+
+  12 May 2005; Olivier Fisette <ribosome@gentoo.org>
+  nmrview-5.2.2-r2.ebuild:
+  Added to x86.
 
   04 Feb 2005; Olivier Fisette <ribosome@gentoo.org> files/nmrview.sh:
   Fixed tcl and tk libraries paths. (See bug #80675.)

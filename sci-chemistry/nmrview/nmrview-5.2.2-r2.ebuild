@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/nmrview/nmrview-5.2.2-r2.ebuild,v 1.2 2005/02/03 21:52:35 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/nmrview/nmrview-5.2.2-r2.ebuild,v 1.3 2005/05/12 19:10:41 ribosome Exp $
 
-DESCRIPTION="NMRView - Visualisation and analysis of processed NMR data"
+DESCRIPTION="Visualisation and analysis of processed NMR data"
 LICENSE="as-is"
 HOMEPAGE="http://www.onemoonscientific.com/nmrview/"
 SRC_URI="${PN}${PV}.lib.tar.gz
@@ -11,7 +11,7 @@ RESTRICT="fetch"
 
 SLOT="0"
 IUSE=""
-KEYWORDS="-* ~x86"
+KEYWORDS="-* x86"
 
 RDEPEND="virtual/x11"
 
