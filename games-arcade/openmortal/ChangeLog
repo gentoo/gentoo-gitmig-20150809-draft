@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/openmortal
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/openmortal/ChangeLog,v 1.9 2004/06/24 22:09:34 agriffis Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/openmortal/ChangeLog,v 1.10 2005/05/12 23:44:33 mr_bones_ Exp $
+
+  12 May 2005; Michael Sterrett <mr_bones_@gentoo.org>
+  -openmortal-0.5.ebuild, -openmortal-0.6.ebuild:
+  clean older ebuilds
 
 *openmortal-0.7 (30 Apr 2004)
 
