@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/libpcre-5.0.ebuild,v 1.10 2005/04/18 17:01:52 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/libpcre-5.0.ebuild,v 1.11 2005/05/12 11:34:29 vapier Exp $
 
-inherit libtool flag-o-matic eutils gnuconfig
+inherit libtool flag-o-matic eutils
 
 DESCRIPTION="Perl-compatible regular expression library"
 HOMEPAGE="http://www.pcre.org/"
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/pcre-${PV}.tar.bz
 
 LICENSE="BSD"
 SLOT="3"
-KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 ppc-macos s390 sh sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 ppc-macos s390 sh sparc x86"
 IUSE=""
 
 DEPEND=""
@@ -23,22 +23,23 @@ src_unpack() {
 	epatch "${FILESDIR}"/pcre-5.0-uclibc-tuple.patch
 	epatch "${FILESDIR}"/pcre-4.2-link.patch
 	use ppc-macos && epatch "${FILESDIR}"/pcre-5.0-macos.patch
+
 	# position-independent code must used for all shared objects.
 	append-flags -fPIC
 	elibtoolize
-	gnuconfig_update
+	epunt_cxx
 }
 
 src_compile() {
 	econf --enable-utf8 || die
-	make || die
+	emake || die
 }
 
 src_install() {
 	make DESTDIR="${D}" install || die
 
 	if use ppc-macos; then
-		cd ${D}/usr/lib
+		cd "${D}"/usr/lib
 		for i in libpcre{,.0.0.1,.0} libpcreposix{,.0.0.0,.0}; do
 			mv $i $i.dylib
 		done
@@ -49,7 +50,6 @@ src_install() {
 	fi
 
 	dodoc AUTHORS INSTALL NON-UNIX-USE
-	dodoc doc/*.txt
-	dodoc doc/Tech.Notes
-	dohtml -r doc
+	dodoc doc/*.txt doc/Tech.Notes
+	dohtml -r doc/*
 }
