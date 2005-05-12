@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/tkpasman
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tkpasman/ChangeLog,v 1.7 2005/04/21 19:44:27 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tkpasman/ChangeLog,v 1.8 2005/05/12 23:39:59 wormo Exp $
+
+  12 May 2005; Stephanie Lockwood-Childs <wormo@gentoo.org>
+  tkpasman-2.2a.ebuild:
+  mark ~ppc
 
   21 Apr 2005; Simon Stelling <blubb@gentoo.org> tkpasman-2.2a.ebuild:
   stable on amd64
