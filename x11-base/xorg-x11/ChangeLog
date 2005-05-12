@@ -1,6 +1,11 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.379 2005/05/12 21:26:09 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.380 2005/05/12 21:31:53 spyderous Exp $
+
+  12 May 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  xorg-x11-6.8.99.5.ebuild:
+  Remove big warning about /usr/lib move, because everything in portage does
+  it now.
 
   12 May 2005; Donnie Berkholz <spyderous@gentoo.org>;
   xorg-x11-6.8.99.5.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.99.5.ebuild,v 1.2 2005/05/12 21:26:09 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.99.5.ebuild,v 1.3 2005/05/12 21:31:53 spyderous Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -1963,15 +1963,6 @@ print_info() {
 	einfo "To enable it, edit /usr/bin/startx."
 	echo
 
-	echo
-	ewarn "BEWARE:"
-	ewarn "/usr/X11R6/$(get_libdir) has MOVED"
-	ewarn "to /usr/$(get_libdir)"
-	ewarn "Run etc-update to update your config files."
-	ewarn "Old locations for anything in /usr/X11R6/$(get_libdir)"
-	ewarn "are deprecated."
-	echo
-
 	einfo "If you have a Radeon, set this option for direct rendering:"
 	einfo "Option \"ColorTiling\" \"false\""
 	einfo "The Mesa in these developmental snapshots is out of date."
@@ -1981,7 +1972,7 @@ print_info() {
 	einfo "Visit http://www.gentoo.org/doc/en/index.xml?catid=desktop"
 	einfo "for more information on configuring X."
 
-	# Try to get people to read /usr/X11R6/libdir move
+	# Try to get people to read this, pending #11359
 	ebeep 5
 	epause 10
 }
