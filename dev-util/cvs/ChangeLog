@@ -1,6 +1,14 @@
 # ChangeLog for dev-util/cvs
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs/ChangeLog,v 1.83 2005/04/20 21:45:42 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs/ChangeLog,v 1.84 2005/05/12 17:46:31 ka0ttic Exp $
+
+*cvs-1.12.12-r1 (12 May 2005)
+
+  12 May 2005; Aaron Walker <ka0ttic@gentoo.org> +files/cvs.pam-include,
+  +cvs-1.12.12-r1.ebuild:
+  Revision bump; use pam include directives instead of pam_stack so that it
+  works on bsd as well. Also updated to use virtual/pam. Thanks to Diego in
+  bug 92361.
 
   20 Apr 2005; Bryan Østergaard <kloeri@gentoo.org> cvs-1.11.20.ebuild:
   Stable on alpha + ia64, bug 89579.
