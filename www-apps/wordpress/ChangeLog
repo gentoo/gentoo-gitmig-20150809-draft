@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/wordpress
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/wordpress/ChangeLog,v 1.13 2005/04/27 01:37:12 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/wordpress/ChangeLog,v 1.14 2005/05/12 07:35:45 superlag Exp $
+
+  12 May 2005; Aaron Kulbe <superlag@gentoo.org> wordpress-1.5.ebuild:
+  Keywording for ~amd64
 
   27 Apr 2005; Gustavo Zacarias <gustavoz@gentoo.org> wordpress-1.5.ebuild:
   Stable on sparc wrt #88926
