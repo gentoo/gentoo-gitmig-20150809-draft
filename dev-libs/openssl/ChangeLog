@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.116 2005/05/11 00:27:59 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.117 2005/05/12 08:29:05 kloeri Exp $
+
+  12 May 2005; Bryan Østergaard <kloeri@gentoo.org> openssl-0.9.7g.ebuild:
+  -alpha as configure is broken.
 
   11 May 2005; Gustavo Zacarias <gustavoz@gentoo.org> openssl-0.9.7g.ebuild:
   Back to ~sparc wrt #92075
