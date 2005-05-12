@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kaddressbook/kaddressbook-3.4.0.ebuild,v 1.4 2005/04/27 19:03:07 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kaddressbook/kaddressbook-3.4.0.ebuild,v 1.5 2005/05/12 21:12:47 greg_g Exp $
 
 KMNAME=kdepim
 MAXKDEVER=$PV
@@ -19,8 +19,7 @@ DEPEND="$(deprange $PV $MAXKDEVER kde-base/libkdepim)
 $(deprange $PV $MAXKDEVER kde-base/libkcal)
 $(deprange $PV $MAXKDEVER kde-base/certmanager)
 $(deprange $PV $MAXKDEVER kde-base/libkdenetwork)
-$(deprange $PV $MAXKDEVER kde-base/kontact)
-$(deprange $PV $MAXKDEVER kde-base/akregator)"
+$(deprange $PV $MAXKDEVER kde-base/kontact)"
 
 KMCOPYLIB="
 	libkdepim libkdepim
