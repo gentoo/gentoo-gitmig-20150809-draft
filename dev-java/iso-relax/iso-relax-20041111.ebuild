@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/iso-relax/iso-relax-20041111.ebuild,v 1.3 2005/02/17 17:27:52 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/iso-relax/iso-relax-20041111.ebuild,v 1.4 2005/05/12 21:45:23 luckyduck Exp $
 
 inherit java-pkg
 
@@ -9,11 +9,11 @@ SRC_URI="mirror://sourceforge/${PN}/isorelax.${PV}.zip"
 HOMEPAGE="http://iso-relax.sourceforge.net/"
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="x86 amd64"
+KEYWORDS="x86 amd64 ~ppc"
 IUSE="jikes"
 DEPEND=">=virtual/jdk-1.4
-	>=dev-java/ant-1.4
 	app-arch/unzip
+	dev-java/ant-core
 	jikes? ( >=dev-java/jikes-1.21 )"
 RDEPEND=">=virtual/jre-1.4"
 
