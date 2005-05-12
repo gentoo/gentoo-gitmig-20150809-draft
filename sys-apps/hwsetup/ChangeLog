@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/hwsetup
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwsetup/ChangeLog,v 1.17 2005/04/06 18:52:38 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwsetup/ChangeLog,v 1.18 2005/05/12 20:01:20 wolf31o2 Exp $
+
+  12 May 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  -hwsetup-1.0-r1.ebuild, hwsetup-1.0-r2.ebuild:
+  Changing DEPEND to allow for either kudzu-knoppix or kudzu and cleaning up
+  older ebuild.
 
   06 Apr 2005; Markus Rothe <corsair@gentoo.org> hwsetup-1.0-r2.ebuild:
   Stable on ppc64
