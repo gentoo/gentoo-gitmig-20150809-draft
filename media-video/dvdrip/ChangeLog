@@ -1,6 +1,11 @@
 # ChangeLog for media-video/dvdrip
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/ChangeLog,v 1.38 2005/04/25 03:25:33 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/ChangeLog,v 1.39 2005/05/12 17:16:26 luckyduck Exp $
+
+  12 May 2005; Jan Brinkmann <luckyduck@gentoo.org> -dvdrip-0.50.16.ebuild,
+  -dvdrip-0.50.16-r1.ebuild, -dvdrip-0.50.17.ebuild, -dvdrip-0.50.18.ebuild,
+  dvdrip-0.52.0.ebuild:
+  0.52.0 stable on amd64 and x86, fixes #92360 . did some cleanup.
 
   25 Apr 2005; Diego Pettenò <flameeyes@gentoo.org> dvdrip-0.50.18.ebuild:
   Added check for at least transcode 0.6.14 before checking if it was built
