@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xmltv/xmltv-0.5.37.ebuild,v 1.1 2005/01/01 13:34:40 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xmltv/xmltv-0.5.39.ebuild,v 1.1 2005/05/12 06:24:42 cardoe Exp $
 
 inherit perl-module
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/xmltv/${P}.tar.bz2"
 IUSE=""
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~x86 ~amd64 ~ppc"
 
 # NOTE: you can customize the xmltv installation by
 #       defining a XMLTV_OPTS variable which contains
@@ -59,6 +59,7 @@ RDEPEND=">=dev-perl/libwww-perl-5.65
 	>=dev-perl/Term-ProgressBar-2.03
 	dev-perl/Compress-Zlib
 	dev-perl/Unicode-String
+	dev-perl/TermReadKey
 	>=dev-lang/perl-5.6.1"
 
 DEPEND="${RDEPEND}

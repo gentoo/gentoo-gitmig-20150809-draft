@@ -1,12 +1,18 @@
-MD5 abf83f9a4eb4ddff09b7b3841ed63b9e ChangeLog 8024
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 4cea363b15cd270396c17e22258608db ChangeLog 8178
 MD5 20e2255501865de5b568424821abf69d metadata.xml 161
 MD5 c38b2dde0396417d8fa05319598193bc xmltv-0.5.34.ebuild 6712
-MD5 e660be74d7bc39bc26e56b41f5339dc1 xmltv-0.5.34-r1.ebuild 6868
-MD5 498f0f901f7bf06a0229227c45784870 xmltv-0.5.35.ebuild 7160
-MD5 d7ef72e276c9d6aa3c1d4e9a9e663675 xmltv-0.5.37.ebuild 7474
-MD5 ce2561b3bd4e62b91189360a6b2cbfa0 xmltv-0.5.37-r1.ebuild 7505
+MD5 45472f2276d7c485a4a42eea955b9022 xmltv-0.5.37-r1.ebuild 7505
+MD5 1ce3c664d0919eac3371634998159952 xmltv-0.5.39.ebuild 7503
 MD5 7e68f2515597e3cd1b0a2b1d49fda10e files/digest-xmltv-0.5.34 65
-MD5 7e68f2515597e3cd1b0a2b1d49fda10e files/digest-xmltv-0.5.34-r1 65
-MD5 66039fc50c23ea7e5af7df53e774accf files/digest-xmltv-0.5.35 65
-MD5 1b972dd0ced1a3531dcccd0e0c845310 files/digest-xmltv-0.5.37 65
 MD5 1b972dd0ced1a3531dcccd0e0c845310 files/digest-xmltv-0.5.37-r1 65
+MD5 a07cdda6552e4a0870baea3d2be062a4 files/digest-xmltv-0.5.39 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCgvdKBtvusYtCZMsRAjz6AJ9Z0pu4QbMxADZmH4Nf6zVtDtg45gCePGka
+ozMRIP0uGKPgpFBfq3eYjks=
+=gvda
+-----END PGP SIGNATURE-----

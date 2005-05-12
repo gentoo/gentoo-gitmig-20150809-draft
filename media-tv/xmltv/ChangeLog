@@ -1,6 +1,11 @@
 # ChangeLog for media-tv/xmltv
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xmltv/ChangeLog,v 1.31 2005/05/04 16:09:28 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xmltv/ChangeLog,v 1.32 2005/05/12 06:24:42 cardoe Exp $
+
+*xmltv-0.5.39 (12 May 2005)
+
+  12 May 2005; <cardoe@gentoo.org> +xmltv-0.5.39.ebuild:
+  let's hope this rev bump fixes bug #91439. nuke old ebuilds too
 
   04 May 2005; David Holm <dholm@gentoo.org> xmltv-0.5.37-r1.ebuild:
   Readded to ~ppc. Please don't remove it without filing a proper bug report.
