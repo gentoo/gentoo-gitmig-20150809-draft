@@ -1,16 +1,16 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.2.1.ebuild,v 1.26 2005/05/12 13:26:04 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.2-r1.ebuild,v 1.1 2005/05/12 13:26:04 herbs Exp $
 
 inherit python flag-o-matic libtool eutils
 
 DESCRIPTION="Red Hat Package Management Utils"
 HOMEPAGE="http://www.rpm.org/"
-SRC_URI="mirror://gentoo/rpm-4.2.1.tar.gz"
+SRC_URI="mirror://gentoo/rpm-4.2.tar.gz"
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
-KEYWORDS="alpha -amd64 arm hppa ia64 ppc s390 sparc -x86 ~mips ppc64"
+KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~ppc ~s390 ~sparc ~x86"
 IUSE="nls python doc"
 
 RDEPEND="=sys-libs/db-3.2*
@@ -19,14 +19,22 @@ RDEPEND="=sys-libs/db-3.2*
 	>=dev-libs/popt-1.7
 	>=app-crypt/gnupg-1.2
 	dev-libs/elfutils
-	>=dev-libs/beecrypt-3.1.0-r1
+	!dev-libs/beecrypt
 	nls? ( sys-devel/gettext )
 	python? ( >=dev-lang/python-2.2 )
 	doc? ( app-doc/doxygen )"
 
 src_unpack() {
 	unpack ${A}
-	epatch ${FILESDIR}/rpm-4.2.1-python2.3.diff
+	epatch ${FILESDIR}/rpm-4.2-python2.3.diff
+	epatch ${FILESDIR}/rpm-4.2-pic.patch
+
+	# Disable the configue scripts handling of multilib libdirs
+	# since econf already sets --libdir correctly
+	sed -i -e 's:MARK64=64:MARK64=:' \
+		${S}/{,file,popt,beecrypt}/configure  || die "sed failed"
+	sed -i -e 's:$(libdir)/rpm:$(prefix)/lib/rpm:' \
+		${S}/Makefile.in || die "sed failed"
 }
 
 src_compile() {
@@ -57,7 +65,7 @@ src_install() {
 	# There is a /usr/lib/rpm/rpmpopt-4.1 now
 	# the symlink is still created incorrectly. ???
 	rm -f ${D}/usr/lib/rpmpopt
-	rm -f ${D}/usr/lib/libpopt*
+	rm -f ${D}/usr/$(get_libdir)/libpopt*
 	rm -f ${D}/usr/include/popt.h
 	use nls && rm -f  ${D}/usr/share/locale/*/LC_MESSAGES/popt.mo
 	rm -f ${D}/usr/share/man/man3/popt*
@@ -86,7 +94,7 @@ pkg_postinst() {
 	fi
 
 	python_version
-	python_mod_optimize /usr/lib/python${PYVER}/site-packages/rpmdb
+	python_mod_optimize /usr/$(get_libdir)/python${PYVER}/site-packages/rpmdb
 }
 
 pkg_postrm() {

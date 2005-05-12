@@ -1,6 +1,12 @@
 # ChangeLog for app-arch/rpm
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/ChangeLog,v 1.46 2005/05/10 22:16:52 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/ChangeLog,v 1.47 2005/05/12 13:26:04 herbs Exp $
+
+*rpm-4.2-r1 (12 May 2005)
+
+  12 May 2005; Herbie Hopkins <herbs@gentoo.org> +rpm-4.2-r1.ebuild,
+  rpm-4.2.1.ebuild:
+  4.2-r1 fixes bug #81982, marked 4.2.1 -amd64 per cretins request.
 
   10 May 2005; Aron Griffis <agriffis@gentoo.org> rpm-4.2.1.ebuild:
   Revert blubb's patch which breaks rpm run-time on all arches
