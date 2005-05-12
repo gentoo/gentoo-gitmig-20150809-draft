@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/module-init-tools-3.2_pre4.ebuild,v 1.1 2005/05/11 13:52:44 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/module-init-tools-3.2_pre4.ebuild,v 1.2 2005/05/12 22:10:58 solar Exp $
 
 inherit flag-o-matic eutils gnuconfig toolchain-funcs
 
@@ -55,8 +55,8 @@ src_unpack() {
 
 	cd ${S}
 	# make sure we don't try to regen the manpages
-	cp ${FILESDIR}/${PV}-modprobe.d.5.bz2 modprobe.d.5.bz2
-	bunzip2 modprobe.d.5.bz2
+	cp ${FILESDIR}/3.1-modprobe.d.5.bz2 modprobe.d.5.bz2 || die
+	bunzip2 modprobe.d.5.bz2 || die
 	touch *.5
 
 	rm -f missing
