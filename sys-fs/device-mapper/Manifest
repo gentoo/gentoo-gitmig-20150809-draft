@@ -1,8 +1,11 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 f362fc580199f7c495a54da707803ec1 device-mapper-1.00.17-r1.ebuild 1191
 MD5 f051c5ddc506fc6a65c4644d7ee3352d device-mapper-1.00.19-r2.ebuild 1170
 MD5 d2c409f5510e1f9291ec1939f0c3692a device-mapper-1.00.21.ebuild 1179
-MD5 c2943f42c1326eb4c52403dc89094d5f device-mapper-1.01.00.ebuild 1179
-MD5 237afa746da1a288a79acd53a7261bd0 ChangeLog 5327
+MD5 5b3715ab07c120b0ce941b163a505135 device-mapper-1.01.00.ebuild 1175
+MD5 ac05629de2bbd700367b352d74a46916 ChangeLog 5428
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 aaf96e8a4fd3711078f75fe3fac2072b files/dmtab 426
 MD5 a60628a7ac701c252155b3f5d32004c4 files/digest-device-mapper-1.00.21 70
@@ -10,3 +13,10 @@ MD5 5f73ee137a6bfb893f1ec3a691dbf614 files/digest-device-mapper-1.01.00 70
 MD5 3722791187466d3005f5b7f129c3ed7a files/digest-device-mapper-1.00.17-r1 70
 MD5 b5dd92354fb75caa4956a92d5aa2e0ea files/digest-device-mapper-1.00.19-r2 70
 MD5 4da8149fc2d10e2e95f680184c3a08d8 files/dm-start.sh 1941
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCg7yVntT9W3vfTuoRAvqVAJ9FiPBGWnR9jEq74NvE/X8D1FAplQCfbU8y
+4qqm2GuJCAGTboGh85UVGaU=
+=/gbe
+-----END PGP SIGNATURE-----
