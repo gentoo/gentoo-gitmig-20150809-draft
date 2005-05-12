@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-bin/mozilla-bin-1.7.6-r1.ebuild,v 1.5 2005/03/30 20:05:36 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-bin/mozilla-bin-1.7.8.ebuild,v 1.1 2005/05/12 13:25:11 agriffis Exp $
 
 inherit nsplugins eutils mozilla-launcher
 
@@ -15,12 +15,10 @@ MY_PN=${PN/-bin/}
 S=${WORKDIR}/mozilla
 DESCRIPTION="Mozilla Application Suite - web browser, email, HTML editor, IRC"
 HOMEPAGE="http://www.mozilla.org"
-# Mirrors have it in one of the following places, depending on what
-# mirror you check and when you check it... :-(
 SRC_URI="http://ftp.mozilla.org/pub/mozilla.org/mozilla/releases/mozilla${PV}/mozilla-i686-pc-linux-gnu-${PV}.tar.gz"
 RESTRICT="nostrip"
 
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 SLOT="0"
 LICENSE="MPL-1.1 NPL-1.1"
 
