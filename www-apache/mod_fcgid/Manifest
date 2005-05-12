@@ -1,5 +1,15 @@
-MD5 95da883d1a62fc55e80c8ea63b0f0975 mod_fcgid-1.05-r2.ebuild 1184
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 b04c3f93349f84b2bc615931f1c1d6c9 metadata.xml 483
-MD5 68d73a59f849c0446dd9075f5a895dae ChangeLog 966
-MD5 2f3017d748d633af44a9d82fa83cdef7 files/20_mod_fcgid.conf 197
+MD5 1efc1e93007bef81503788bec9cd3de9 ChangeLog 1054
+MD5 bea4314b41fef71db296f66a09a1dc22 mod_fcgid-1.05-r2.ebuild 1179
 MD5 2d8046826f8e5dd7cc5256d4e8337275 files/digest-mod_fcgid-1.05-r2 65
+MD5 2f3017d748d633af44a9d82fa83cdef7 files/20_mod_fcgid.conf 197
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCg6ZXjUHll2nfF60RAjUeAKCm6WyXZdr4IvLoetqqVdz70ZiwzgCeOjQk
+O4HdXKC4rfsWDSeMU9Mlyyg=
+=RlIp
+-----END PGP SIGNATURE-----
