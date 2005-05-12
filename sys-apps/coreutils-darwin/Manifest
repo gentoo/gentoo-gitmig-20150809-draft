@@ -1,14 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ff4274c8a1c213bd12bab3dbf7a337ba coreutils-darwin-5.0.ebuild 5065
-MD5 1ac933b0480704003dd26a9b47498f06 ChangeLog 374
+MD5 a743bf190b80662eb81aa66d8a81c73d ChangeLog 521
 MD5 fc76b60032187aa3e2029ee04b00e773 metadata.xml 156
+MD5 ff4274c8a1c213bd12bab3dbf7a337ba coreutils-darwin-5.0.ebuild 5065
+MD5 449ca38c72c7d258465e044a912925e6 coreutils-darwin-5.3.0.ebuild 3214
 MD5 e80d3d87cfbe40bc56636167ae5b4768 files/digest-coreutils-darwin-5.0 141
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCgyEZI1lqEGTUzyQRAt9JAJ49fAGYpMpf5alNZJv8mbKrcUo+mQCfdVnT
-C0MVD1XlaJHXzqOQD9IrXzE=
-=Nv2L
------END PGP SIGNATURE-----
+MD5 fadcaa23c9484df6bd9dd2eefce42003 files/digest-coreutils-darwin-5.3.0 69

@@ -1,0 +1,55 @@
+diff -urp --ignore-space-change kudzu-1.1.36/hwconf.c kudzu-1.1.36-nonls/hwconf.c
+--- kudzu-1.1.36/hwconf.c	2004-01-14 23:58:52.000000000 -0500
++++ kudzu-1.1.36-nonls/hwconf.c	2005-04-14 09:36:46.000000000 -0400
+@@ -26,12 +26,14 @@
+ #include <sys/stat.h>
+ #include <sys/utsname.h>
+ 
+-#include <libintl.h>
+ #include <locale.h>
+ 
+ #include <newt.h>
+ #include <popt.h>
+ 
++#ifndef __USE_GNU_GETTEXT
++#define gettext(String) (String)
++#endif
+ #define _(String) gettext((String))
+ #define N_(String) (String)
+ 
+@@ -1876,9 +1878,11 @@ int main(int argc, char **argv) 
+ 		{ 0, 0, 0, 0, 0, 0 }
+ 	};
+ 
++#ifdef __USE_GNU_GETTEXT
+ 	setlocale(LC_ALL, "");
+ 	bindtextdomain("kudzu", "/usr/share/locale");
+ 	textdomain("kudzu");
++#endif
+ 	
+ 	context = poptGetContext("kudzu", argc, argv, options, 0);
+ 	while ((rc = poptGetNextOpt(context)) > 0) {
+diff -urp --ignore-space-change kudzu-1.1.36/Makefile kudzu-1.1.36-nonls/Makefile
+--- kudzu-1.1.36/Makefile	2004-01-14 23:58:52.000000000 -0500
++++ kudzu-1.1.36-nonls/Makefile	2005-04-13 13:23:46.000000000 -0400
+@@ -81,10 +81,10 @@ libkudzu.a: $(OBJS) $(VBEOBJS)
+ 	$(AR) cr libkudzu.a $(OBJS) $(VBEOBJS)
+ 	$(RANLIB) libkudzu.a
+ 
+-kudzu: libkudzu.a $(KUDOBJS) po
++kudzu: libkudzu.a $(KUDOBJS)
+ 	$(CC) $(CFLAGS) $(LDFLAGS) $(KUDOBJS) -o kudzu -L. -lkudzu -L. -lpci -lnewt -lpopt
+ 
+-updfstab: libkudzu.a updfstab.o po
++updfstab: libkudzu.a updfstab.o
+ 	$(CC) $(CFLAGS) $(LDFLAGS) updfstab.o -o updfstab -L. -lkudzu -lpci -lpopt
+ 
+ module_upgrade: libkudzu.a module_upgrade.c
+@@ -129,7 +129,6 @@ install-program: kudzu module_upgrade up
+ 	for header in $(HEADERS) ; do \
+ 		install -m 644 $$header $(includedir)/kudzu/$$header ; \
+ 	done
+-	make -C po instroot=$(prefix) install
+ 
+ install: installdata _kudzumodule.so
+ 	for ver in $(PYTHONVERS) ; do \
