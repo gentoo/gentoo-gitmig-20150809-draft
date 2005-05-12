@@ -1,0 +1,13 @@
+diff -ruN elfutils-0.94.orig/libelf/elf_begin.c elfutils-0.94/libelf/elf_begin.c
+--- elfutils-0.94.orig/libelf/elf_begin.c	2003-12-25 18:34:27.000000000 +0000
++++ elfutils-0.94/libelf/elf_begin.c	2005-05-07 18:43:41.000000000 +0100
+@@ -220,7 +220,8 @@
+ 
+   /* Determine the number of sections.  */
+   scncnt = get_shnum (map_address, e_ident, fildes, offset, maxsize);
+-  if (scncnt == (size_t) -1l)
++  if ((scncnt == (size_t) -1l) ||
++		  (sizeof (Elf_Scn) * scncnt / sizeof (Elf_Scn) != scncnt))
+     /* Could not determine the number of sections.  */
+     return NULL;
+ 
