@@ -1,42 +1,42 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 e007e390d22e9f70d515e5a73c72c50f vanilla-sources-2.6.10.ebuild 486
-MD5 2b03b5303004069d236540fff82d3077 vanilla-sources-2.6.7.ebuild 456
-MD5 e0eed2176bcf3844f67bf7a99eb5dfc9 vanilla-sources-2.6.11.8.ebuild 550
-MD5 2898ef0375f57a5dba22a8fb6827de57 metadata.xml 452
 MD5 e972c9af7411740d2ec181ecc74f15b0 vanilla-sources-2.4.29.ebuild 480
-MD5 e70baef64d79cbf0075e576d700fd5c8 ChangeLog 14167
-MD5 2c68cb981b55b922fb8c2d17afafcd9e vanilla-sources-2.6.12_rc4.ebuild 560
-MD5 3fb748ca0cad20084827d786e3ee3fdf vanilla-sources-2.4.30.ebuild 478
-MD5 1b0bfa0114e892a7f294531c22c7084c vanilla-sources-2.6.5.ebuild 450
-MD5 1e484778430c5f28cb2b5b494e684840 vanilla-sources-2.0.40-r1.ebuild 2748
-MD5 40bc4b3b5e2930b5940c0f23ad815a36 vanilla-sources-2.6.11.7.ebuild 546
-MD5 44a196ac8ce211d2ba81c0278daf4cf5 vanilla-sources-2.6.12_rc3.ebuild 559
-MD5 7fd084c8e807a3d8b7a26921764e4687 vanilla-sources-2.4.21.ebuild 565
 MD5 c4587894159ec84c6d62a242691efaed vanilla-sources-2.6.12_rc2.ebuild 552
+MD5 44a196ac8ce211d2ba81c0278daf4cf5 vanilla-sources-2.6.12_rc3.ebuild 559
+MD5 78dc05d4b78be1bae0e413877d7e8508 ChangeLog 14270
 MD5 957d045ed53b618813f4ea241093b1e3 vanilla-sources-2.2.26-r1.ebuild 2747
+MD5 40bc4b3b5e2930b5940c0f23ad815a36 vanilla-sources-2.6.11.7.ebuild 546
+MD5 2c68cb981b55b922fb8c2d17afafcd9e vanilla-sources-2.6.12_rc4.ebuild 560
+MD5 7fd084c8e807a3d8b7a26921764e4687 vanilla-sources-2.4.21.ebuild 565
 MD5 97ebbee3ab02255ccaa15c4280e8ace2 vanilla-sources-2.4.28.ebuild 472
-MD5 9854e47afccae85e887bcb970fc68890 files/digest-vanilla-sources-2.4.21 67
-MD5 e637c6fa41097ea2c4693d0766f2e1c5 files/do_brk_fix.patch 242
-MD5 6228c1417a2403fb6ea20450802429b1 files/digest-vanilla-sources-2.4.28 67
-MD5 82d39bde23ad557a99042d4948e93513 files/digest-vanilla-sources-2.6.12_rc2 133
+MD5 2b03b5303004069d236540fff82d3077 vanilla-sources-2.6.7.ebuild 456
+MD5 2898ef0375f57a5dba22a8fb6827de57 metadata.xml 452
+MD5 e007e390d22e9f70d515e5a73c72c50f vanilla-sources-2.6.10.ebuild 486
+MD5 1b0bfa0114e892a7f294531c22c7084c vanilla-sources-2.6.5.ebuild 450
+MD5 64a4be570c51f0162b5bb42708dd485d vanilla-sources-2.6.11.8.ebuild 549
+MD5 3fb748ca0cad20084827d786e3ee3fdf vanilla-sources-2.4.30.ebuild 478
+MD5 1e484778430c5f28cb2b5b494e684840 vanilla-sources-2.0.40-r1.ebuild 2748
+MD5 540f005bf2e835b9162ff2e2b9876c74 files/digest-vanilla-sources-2.6.12_rc3 133
 MD5 556c7008fbfdf81750bbd4ab2beb111e files/digest-vanilla-sources-2.2.26-r1 67
 MD5 78b4470aebd0088d0560ca3f88387b83 files/digest-vanilla-sources-2.6.10 67
-MD5 33d51532d0f696fefa15593b2cf2f6de files/digest-vanilla-sources-2.0.40-r1 66
 MD5 bf2b609e8cab6460d220b1267db09826 files/vanilla-sources-2.4.24.CAN-2004-0001.patch 982
-MD5 b405a908c2cc1e6ed3e25f030c41f4c4 files/digest-vanilla-sources-2.6.7 66
-MD5 f3b8c52392a556b488e756b0a93abfc8 files/digest-vanilla-sources-2.4.30 67
+MD5 82d39bde23ad557a99042d4948e93513 files/digest-vanilla-sources-2.6.12_rc2 133
+MD5 be1c6992a333928dc84ea2d708a949ba files/digest-vanilla-sources-2.6.11.7 129
 MD5 0c40e3512bb71ce6e1581275735fe4b0 files/digest-vanilla-sources-2.4.29 67
+MD5 e637c6fa41097ea2c4693d0766f2e1c5 files/do_brk_fix.patch 242
+MD5 6228c1417a2403fb6ea20450802429b1 files/digest-vanilla-sources-2.4.28 67
+MD5 b405a908c2cc1e6ed3e25f030c41f4c4 files/digest-vanilla-sources-2.6.7 66
+MD5 a8c4e44a323fbde21b9de3940e2ca5ef files/digest-vanilla-sources-2.6.5 66
 MD5 565873d025499242590ea66080fc516a files/digest-vanilla-sources-2.6.11.8 129
 MD5 eea36e09b65cbc7815317d8ab632d5d5 files/digest-vanilla-sources-2.6.12_rc4 133
-MD5 540f005bf2e835b9162ff2e2b9876c74 files/digest-vanilla-sources-2.6.12_rc3 133
-MD5 a8c4e44a323fbde21b9de3940e2ca5ef files/digest-vanilla-sources-2.6.5 66
-MD5 be1c6992a333928dc84ea2d708a949ba files/digest-vanilla-sources-2.6.11.7 129
+MD5 f3b8c52392a556b488e756b0a93abfc8 files/digest-vanilla-sources-2.4.30 67
+MD5 33d51532d0f696fefa15593b2cf2f6de files/digest-vanilla-sources-2.0.40-r1 66
+MD5 9854e47afccae85e887bcb970fc68890 files/digest-vanilla-sources-2.4.21 67
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFCfJIGp5vW4rUFj5oRAo7qAJ4mo8aV8t7eEK6aTuYUTrQOU04R5gCfXLRs
-fUCiVdHQ5BMk4xEIdjazsdM=
-=+ZtT
+iD8DBQFCg9G3BXaUFmZvwyMRAu1GAKCQdlCESFNhTrg6ARbr7jsVu86VOQCgg6jj
+DtACplO6p/guHmFUsd0iWLs=
+=ZgHz
 -----END PGP SIGNATURE-----
