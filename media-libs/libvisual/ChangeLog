@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libvisual
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvisual/ChangeLog,v 1.11 2005/04/15 14:35:31 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvisual/ChangeLog,v 1.12 2005/05/12 09:46:17 eldad Exp $
+
+  12 May 2005; Eldad Zack <eldad@gentoo.org>
+  +files/libvisual-0.2.0-movd.patch, libvisual-0.2.0.ebuild:
+  Fixed assembler movd misuse. Patch provided by Nickolay Kolchin-Semyonov
+  <nbkolchin@yandex.ru>. Closes Bug 86859.
 
   15 Apr 2005; Jan Brinkmann <luckyduck@gentoo.org> libvisual-0.1.6.ebuild:
   dont make use of the pic useflag any longer

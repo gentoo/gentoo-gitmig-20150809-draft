@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvisual/libvisual-0.2.0.ebuild,v 1.2 2005/04/06 20:13:43 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvisual/libvisual-0.2.0.ebuild,v 1.3 2005/05/12 09:46:17 eldad Exp $
 
 inherit eutils
 
@@ -19,6 +19,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/${PV}-ppc.patch
+	epatch ${FILESDIR}/${P}-movd.patch
 }
 
 src_compile() {
