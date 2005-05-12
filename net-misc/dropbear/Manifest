@@ -1,23 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e04d6d1a2d9446a46cd96f9c65a9d934 dropbear-0.45.ebuild 1827
-MD5 8bd2e66c29adf48cfee62e3875a9ba0a dropbear-0.44.ebuild 1426
-MD5 eca949c2fcf358c97cbf8071bf15e3ae dropbear-0.43.ebuild 1685
 MD5 1217cfad219fac8646640126f899b1a7 ChangeLog 2318
 MD5 ef25f543b5438ee7595e2ae0f98a5093 metadata.xml 671
+MD5 eca949c2fcf358c97cbf8071bf15e3ae dropbear-0.43.ebuild 1685
+MD5 50c1b5bee24ebe1a65e1b26a46000a96 dropbear-0.45.ebuild 1839
+MD5 c3634543250cd9f910161b351bb15ccc files/digest-dropbear-0.43 67
+MD5 c9381e8354263ae69eda6efabca753ad files/digest-dropbear-0.45 67
+MD5 2f5c2ef2e357aa5225c9044f33fa2512 files/dropbear-0.45-urandom.patch 1887
 MD5 64abc6b82756a97391c12d730c8da084 files/dropbear.conf.d 352
 MD5 34fea1c967596ebcd6d10d38444f2b92 files/dropbear.init.d 913
-MD5 2f5c2ef2e357aa5225c9044f33fa2512 files/dropbear-0.45-urandom.patch 1887
-MD5 c3634543250cd9f910161b351bb15ccc files/digest-dropbear-0.43 67
-MD5 80f623a0803053ed01024f1419ba608c files/digest-dropbear-0.44 67
-MD5 c9381e8354263ae69eda6efabca753ad files/digest-dropbear-0.45 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iQCVAwUBQi4U9J4WFLgrx1GWAQLuTwP/Q+aRgl3W2E+xBQYkh69JT3TS39gJ0wGU
-II53DIfJQeMCCLRAe9gaV1WusKqH3G4K1PUSUHk07TmQkuelWmxZLR+YvNkSEhUk
-9jxum2runUVOy02llue0TjTs7ADdmg5CL7vV/S66cI33kL7yUYFE54JUXVaVm2Lh
-NYChh5cEzV0=
-=uOhs
------END PGP SIGNATURE-----

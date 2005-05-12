@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbear/dropbear-0.45.ebuild,v 1.1 2005/03/08 21:10:02 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbear/dropbear-0.45.ebuild,v 1.2 2005/05/12 23:31:30 vapier Exp $
 
 inherit eutils
 
@@ -44,6 +44,7 @@ src_compile() {
 src_install() {
 	set_options
 	make install DESTDIR="${D}" ${makeopts} PROGRAMS="${progs}" || die "make install failed"
+	doman *.8
 	newinitd ${FILESDIR}/dropbear.init.d dropbear
 	newconfd ${FILESDIR}/dropbear.conf.d dropbear
 	dodoc CHANGES README TODO SMALL MULTI
