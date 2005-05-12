@@ -1,6 +1,12 @@
 # ChangeLog for dev-php/mod_php
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/ChangeLog,v 1.229 2005/05/10 19:20:25 psi29a Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/ChangeLog,v 1.230 2005/05/12 19:21:20 beu Exp $
+
+  12 May 2005; Elfyn McBratney <beu@gentoo.org> mod_php-4.3.8.ebuild,
+  mod_php-4.3.9_rc1.ebuild, mod_php-4.3.9.ebuild, mod_php-4.3.10.ebuild,
+  mod_php-4.3.10-r1.ebuild, mod_php-4.3.11.ebuild, mod_php-4.3.11-r1.ebuild,
+  mod_php-4.3.11-r2.ebuild:
+  Update *DEPEND.
 
   10 May 2005; Bret Curtis <psi29a@gentoo.org> mod_php-4.3.11-r2.ebuild:
   marked for testing, ~mips
