@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/nkf
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/nkf/ChangeLog,v 1.23 2005/04/20 16:44:43 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/nkf/ChangeLog,v 1.24 2005/05/12 19:00:56 gmsoft Exp $
+
+  12 May 2005; Guy Martin <gmsoft@gentoo.org> nkf-2.0.5-r1.ebuild:
+  Stable on hppa.
 
 *nkf-2.0.5-r1 (20 Apr 2005)
 
