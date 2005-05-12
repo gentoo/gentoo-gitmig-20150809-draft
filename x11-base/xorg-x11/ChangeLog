@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.377 2005/05/03 10:33:57 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.378 2005/05/12 18:44:47 spyderous Exp $
+
+  12 May 2005; Donnie Berkholz <spyderous@gentoo.org>; :
+  Make ChangeLog more human-readable by replacing PATCH_VER and FILES_VER with
+  patchset and fileset.
 
 *xorg-x11-6.8.99.5 (03 May 2005)
 
@@ -94,7 +98,7 @@
 
   14 Apr 2005; Donnie Berkholz <spyderous@gentoo.org>;
   +xorg-x11-6.8.2-r2.ebuild:
-  New revision, with a bunch of updates. PATCH_VER 0.1.3. (#85363, fd.o #1765)
+  New revision, with a bunch of updates. Patchset 0.1.3. (#85363, fd.o #1765)
   Add 0487_all_6.8.2-add-relocation-type-10-to-elfloader.patch: Add another
   relocation type to the ELF loader. (#82039) Add
   5137_all_6.8.2-fix-r128-undefined-write-depth.patch: Fix direct rendering on
@@ -277,7 +281,7 @@
 
   07 Feb 2005; Donnie Berkholz <spyderous@gentoo.org>;
   xorg-x11-6.8.1.904.ebuild:
-  PATCH_VER 0.1.3. Add
+  Patchset 0.1.3. Add
   9250_all_6.8.1.904-respect-xfree86configtools-setting.patch -- respect
   whether configuration tools are desired. Also some other USE=minimal
   enhancements: Stop building unneeded static libraries, the DPS libraries,
@@ -294,14 +298,14 @@
 
   04 Feb 2005; Donnie Berkholz <spyderous@gentoo.org>;
   xorg-x11-6.8.1.904.ebuild:
-  FILES_VER 0.2. Remove PATH and ROOTPATH from /etc/env.d/10xorg, as
+  Fileset 0.2. Remove PATH and ROOTPATH from /etc/env.d/10xorg, as
   everything's in /usr/bin now. Also remove LIBGL_DRIVERS_PATH. I was told
   this was necessary if they weren't in /usr/X11R6/lib/modules/dri, but really
   it seems it's only if they aren't in the compile-time UsrLibDir.
 
   04 Feb 2005; Donnie Berkholz <spyderous@gentoo.org>;
   xorg-x11-6.8.0-r4.ebuild:
-  PATCH_VER 0.2.11.3. (#79497, #80736) Add
+  Patchset 0.2.11.3. (#79497, #80736) Add
   9380_all_6.8.1.904-fix-duplicate-cfb-symbols-v2.patch. xorgcfg / X
   -configure produce a bunch of unresolved cfb symbols. This can also break
   the build in some cases. (#78147, #80736) Add
@@ -310,7 +314,7 @@
 
   04 Feb 2005; Donnie Berkholz <spyderous@gentoo.org>;
   xorg-x11-6.8.1.904.ebuild:
-  PATCH_VER 0.1.2. (#79497) Update
+  Patchset 0.1.2. (#79497) Update
   9370_all_6.8.1.904-fix-duplicate-cfb-symbols-v2.patch. Use more correct
   version committed to HEAD rather than from our Bugzilla. (#78147, #80736)
   Add 9375_all_6.8.1.904-fix-duplicate-mfb-symbols.patch. Build can break
@@ -506,13 +510,13 @@
 
   20 Jan 2005; Donnie Berkholz <spyderous@gentoo.org>;
   xorg-x11-6.8.0-r4.ebuild:
-  PATCH_VER 0.2.11.2. Backport fixes from 6.8.1.902 for #76356, #38549, fd.o
+  Patchset 0.2.11.2. Backport fixes from 6.8.1.902 for #76356, #38549, fd.o
   #1895 and #38549. See its ChangeLog entry for more details on them.
-  FILES_VER 0.7. Backport fix for #76356, again from 6.8.1.902.
+  Fileset 0.7. Backport fix for #76356, again from 6.8.1.902.
 
   20 Jan 2005; Donnie Berkholz <spyderous@gentoo.org>;
   xorg-x11-6.8.1.902.ebuild:
-  FILES_VER 0.3. The fix for #76356 was incorrect.
+  Fileset 0.3. The fix for #76356 was incorrect.
 
   20 Jan 2005; Donnie Berkholz <spyderous@gentoo.org>;
   xorg-x11-6.8.0-r4.ebuild, xorg-x11-6.8.1.901-r1.ebuild,
@@ -530,10 +534,10 @@
 
   19 Jan 2005; Donnie Berkholz <spyderous@gentoo.org>;
   xorg-x11-6.8.1.902.ebuild:
-  PATCH_VER 0.1.2. (fd.o #1895, #38549) Add
+  Patchset 0.1.2. (fd.o #1895, #38549) Add
   2000_all_6.8.0-fb-convert-rgb-to-bgr-when-needed.patch: DIX didn't always
   convert RGB to BGR. (#38549) Bump 5200_all_6.8.0-newport-accel-v4.patch: The
-  color problem was actually because of fd.o #1895. FILES_VER 0.2. (#76356)
+  color problem was actually because of fd.o #1895. Fileset 0.2. (#76356)
   Add "redundant" LDPATH=/usr/lib to /etc/env.d/10xorg because nomachine
   provides a duplicate libX11 with changes that break pretty much everything,
   and we need to trump it.
@@ -593,7 +597,7 @@
 
   12 Jan 2005; Donnie Berkholz <spyderous@gentoo.org>;
   +xorg-x11-6.8.1.901-r1.ebuild:
-  PATCH_VER 0.3.4. (#70712) Add 9865_all_add-nodeadkeys-to-gb.patch. Enable
+  Patchset 0.3.4. (#70712) Add 9865_all_add-nodeadkeys-to-gb.patch. Enable
   deadkeys for gb keymap. They got lost sometime between XFree86 4.3.0 and
   X.Org 6.8.0. (#76537, probably others) Also, do some work on the migration
   function that should fix things up for amd64 users and anyone else with a
@@ -654,7 +658,7 @@
 
   23 Dec 2004; Donnie Berkholz <spyderous@gentoo.org>;
   xorg-x11-6.8.0-r4.ebuild:
-  PATCH_VER 0.2.11.1. (fd.o #2114, #66223) Add
+  Patchset 0.2.11.1. (fd.o #2114, #66223) Add
   9370_all_6.7.0-ppc64-linux26-headers-v2.patch. See when it was added to
   6.8.1.901 for a further description.
 
@@ -673,7 +677,7 @@
 
   22 Dec 2004; Donnie Berkholz <spyderous@gentoo.org>;
   xorg-x11-6.8.1.901.ebuild:
-  PATCH_VER 0.3.3. (#75174) 9370_all_6.7.0-ppc64-linux26-headers-v2.patch was
+  Patchset 0.3.3. (#75174) 9370_all_6.7.0-ppc64-linux26-headers-v2.patch was
   in a generic PPC section when it needed to apply only for PPC64.
 
   20 Dec 2004; Donnie Berkholz <spyderous@gentoo.org>;
@@ -683,13 +687,13 @@
 
   19 Dec 2004; Donnie Berkholz <spyderous@gentoo.org>;
   xorg-x11-6.8.1.901.ebuild:
-  PATCH_VER 0.3.2. (#66223) Add 9370_all_6.7.0-ppc64-linux26-headers.patch.
+  Patchset 0.3.2. (#66223) Add 9370_all_6.7.0-ppc64-linux26-headers.patch.
   Architectures with arch-specific eieio() routines require this. PPC64 is one
   example, with >=linux-headers-2.6.
 
   19 Dec 2004; Donnie Berkholz <spyderous@gentoo.org>;
   xorg-x11-6.8.1.901.ebuild:
-  PATCH_VER 0.3.1. This should help out PPC users on Radeon and Rage128.
+  Patchset 0.3.1. This should help out PPC users on Radeon and Rage128.
   
   (fd.o #2064) Add 5160_all_6.8.1-benh-radeon-ppc-fixes.patch, with tons of
   changes:
@@ -768,7 +772,7 @@
 
   13 Dec 2004; Donnie Berkholz <spyderous@gentoo.org>;
   xorg-x11-6.8.0-r4.ebuild:
-  PATCH_VER 0.2.11. (fd.o #1934, #47922) Add the highly demanded fix for DPMS
+  Patchset 0.2.11. (fd.o #1934, #47922) Add the highly demanded fix for DPMS
   problems: 9830_all_6.8.0-fix-random-dpms-blanks.patch. Fix
   0455_all_6.8.0-prevent-keyboard-hardware-repeat-v2.patch with new code from
   upstream (fd.o #1651 comment #9). Add three sparc patches: (#fd.o #1114,
@@ -848,7 +852,7 @@
 
   04 Dec 2004; Donnie Berkholz <spyderous@gentoo.org>;
   xorg-x11-6.8.0-r4.ebuild:
-  PATCH_VER 0.2.10. Add 0450_all_6.8.0-set-default-xkbmodel-to-pc105.patch. In
+  Patchset 0.2.10. Add 0450_all_6.8.0-set-default-xkbmodel-to-pc105.patch. In
   the old 'keyboard' driver, pc105 was the default. Restore the new 'kbd'
   driver to the same. This is from upstream CVS. It may fix some bugs relating
   to certain keys not working. Add
@@ -923,7 +927,7 @@
 
   20 Nov 2004; Donnie Berkholz <spyderous@gentoo.org>;
   xorg-x11-6.8.0-r4.ebuild:
-  PATCH_VER 0.2.9. Add 1110_all_6.8.0-force-build-font-utils-if-needed.patch.
+  Patchset 0.2.9. Add 1110_all_6.8.0-force-build-font-utils-if-needed.patch.
   USE=minimal will now start successfully, because enough fonts are built.
   When BuildClients is off and BuildFonts is on, mkfontscale and mkfontdir
   aren't built. But mkfontscale is used during the build process and mkfontdir
@@ -970,7 +974,7 @@
 
   17 Nov 2004; Donnie Berkholz <spyderous@gentoo.org>;
   xorg-x11-6.8.0-r4.ebuild:
-  PATCH_VER 0.2.8. Update Newport acceleration patch to
+  Patchset 0.2.8. Update Newport acceleration patch to
   5200_all_6.8.0-newport-accel-v3.patch (#38549). This fixes a red/blue swap
   for applications using RENDER acceleration such as gnome-terminal, gvim and
   xchat2.
@@ -1002,7 +1006,7 @@
 
   16 Nov 2004; Donnie Berkholz <spyderous@gentoo.org>;
   xorg-x11-6.8.0-r2.ebuild:
-  PATCH_VER 0.2.7. Update Newport acceleration patch to
+  Patchset 0.2.7. Update Newport acceleration patch to
   5200_all_6.8.0-newport-accel-v2.patch. This fixes an error "structure has no
   member named `PUToScreenTextureDstFormats'," which should start with CPU,
   not PU. It also moves the autoloading of the xaa module around (#38549).
@@ -1105,7 +1109,7 @@
 
   03 Nov 2004; Donnie Berkholz <spyderous@gentoo.org>;
   xorg-x11-6.8.0-r2.ebuild:
-  PATCH_VER 0.2.6. Add 9990_x86_6.8.0-xbox-20041024.patch for the Xbox's
+  Patchset 0.2.6. Add 9990_x86_6.8.0-xbox-20041024.patch for the Xbox's
   nvidia driver (#68726). Add 1100_all_6.8.0-build-all-lucida-fonts.patch
   (#68414). The 75dpi and 100dpi fonts weren't being built. This is from
   upstream CVS. Add 5200_all_6.8.0-newport-accel.patch (#38549). Hopefully
@@ -1115,7 +1119,7 @@
   properly. Add
   0440_all_6.8.0-support-cymotion-master-and-ibm-space-saver-keyboards.patch
   (#63767). This adds support for the Cherry CyMotion Master XPress and the
-  IBM Space Saver keyboards. It's from upstream CVS. FILES_VER 0.6. Add
+  IBM Space Saver keyboards. It's from upstream CVS. Fileset 0.6. Add
   xprint.init, a Gentoo-style init-script wrapper for the RH-style init script
   provided by xorg, and install it on USE=xprint (#68316). In addition, fix
   the function for migration from /usr/X11R6/libdir to /usr/libdir,
@@ -1176,12 +1180,12 @@
 
   20 Oct 2004; Donnie Berkholz <spyderous@gentoo.org>;
   xorg-x11-6.8.0-r2.ebuild:
-  FILES_VER 0.5. Update /etc/env.d/10xorg to reflect shift from
+  Fileset 0.5. Update /etc/env.d/10xorg to reflect shift from
   /usr/X11R6/{lib,lib64} to parallel in /usr/lib.
 
   20 Oct 2004; Donnie Berkholz <spyderous@gentoo.org>;
   xorg-x11-6.8.0-r2.ebuild:
-  PATCH_VER 0.2.5. Add 6000_all_6.8.0-libgl-double-free.patch to stop a libGL
+  Patchset 0.2.5. Add 6000_all_6.8.0-libgl-double-free.patch to stop a libGL
   segfault when /dev/dri/card* is not readable for a user (fd.o #1501).
 
   20 Oct 2004; Donnie Berkholz <spyderous@gentoo.org>;
@@ -1272,17 +1276,17 @@
 
   12 Oct 2004; Donnie Berkholz <spyderous@gentoo.org>;
   xorg-x11-6.8.0-r1.ebuild:
-  PATCH_VER 0.2.2.1. Add 9940_all_6.8.0-libX11-stack-overflow.patch to fix a
+  Patchset 0.2.2.1. Add 9940_all_6.8.0-libX11-stack-overflow.patch to fix a
   non-exploitable problem (fd.0 #1459). Add 5140_all_6.8.0-radeon-swsusp.patch
-  to fix software suspend on Radeons (fd.o #1220). FILES_VER 0.4. Add
+  to fix software suspend on Radeons (fd.o #1220). Fileset 0.4. Add
   /usr/X11R6/lib64 to LDPATH in /etc/env.d/10xorg, so things work for
   architectures that install to there.
 
   12 Oct 2004; Donnie Berkholz <spyderous@gentoo.org>;
   xorg-x11-6.8.0-r2.ebuild:
-  PATCH_VER 0.2.4. Add 9940_all_6.8.0-libX11-stack-overflow.patch to fix a
+  Patchset 0.2.4. Add 9940_all_6.8.0-libX11-stack-overflow.patch to fix a
   non-exploitable problem (fd.0 #1459). Add 5140_all_6.8.0-radeon-swsusp.patch
-  to fix software suspend on Radeons (fd.o #1220). FILES_VER 0.4. Add
+  to fix software suspend on Radeons (fd.o #1220). Fileset 0.4. Add
   /usr/X11R6/lib64 to LDPATH in /etc/env.d/10xorg, so things work for
   architectures that install to there.
 
@@ -1292,18 +1296,18 @@
 
   11 Oct 2004; Donnie Berkholz <spyderous@gentoo.org>;
   xorg-x11-6.8.0-r2.ebuild:
-  PATCH_VER 0.2.3. Add 9910_all_use-nonow-ldflag-for-hardenedgccspecs.patch. In
+  Patchset 0.2.3. Add 9910_all_use-nonow-ldflag-for-hardenedgccspecs.patch. In
   combination with HardenedGccSpecs YES, this will fix up a lot of the
   unresolved symbol problems with dlloader (#64618). Patch is by Adam Jackson
   <ajax@nwnk.net> with some mods by solar, applied to vanilla 6.8.0 by swtaylor
   and to ours by me. Pull 9970_all_dlloader-imake-fix.patch. Its functionality
-  was pulled into patch 9910. Also bump to FILES_VER 0.3.
+  was pulled into patch 9910. Also bump to fileset 0.3.
 
   11 Oct 2004; Donnie Berkholz <spyderous@gentoo.org>;
   xorg-x11-6.8.0-r1.ebuild:
-  PATCH_VER 0.2.2. Update 9001_all_4.3.0-lnx-evdev-keyboard-v2.patch to restore
+  Patchset 0.2.2. Update 9001_all_4.3.0-lnx-evdev-keyboard-v2.patch to restore
   case insensitivity of Option "Protocol" "Standard" for keyboard by Alan
-  Swanson <swanson@ukfsn.org> (#63568). FILES_VER 0.3. Fix xfs lockup so it's
+  Swanson <swanson@ukfsn.org> (#63568). Fileset 0.3. Fix xfs lockup so it's
   usable again (#61737). Also, fix xdm init script for empty DISPLAYMANAGER in
   /etc/rc.conf (#65586).
 
@@ -1401,7 +1405,7 @@
 
   22 Sep 2004; Donnie Berkholz <spyderous@gentoo.org>;
   xorg-x11-6.8.0-r1.ebuild:
-  PATCH_VER 0.2.1. Add
+  Patchset 0.2.1. Add
   0430_all_6.8.0-sparc-add-mach64-to-devel-dri-drivers.patch (#63994). This plus
   other ebuild modifications from that bug should enable sparc guys to use
   6.8.0-r1. Ebuild mods include adding hardened flag for sparc to append
@@ -1442,14 +1446,14 @@
 
   16 Sep 2004; Donnie Berkholz <spyderous@gentoo.org>;
   +xorg-x11-6.8.0-r1.ebuild:
-  PATCH_VER 0.2. Security release. Add
+  Patchset 0.2. Security release. Add
   9925_all_6.7.0-libXpm-CAN-2004-0687-CAN-2004-0688.patch to fix stack and
   integer overflows in libXpm (Chris Evans, Alan Coopersmith, Matthiew Herrb)
   (#64152).
 
   15 Sep 2004; Donnie Berkholz <spyderous@gentoo.org>;
   xorg-x11-6.7.0-r2.ebuild:
-  PATCH_VER 1.3. Security release. Add
+  Patchset 1.3. Security release. Add
   9925_all_6.7.0-libXpm-CAN-2004-0687-CAN-2004-0688.patch to fix stack and
   integer overflows in libXpm (Chris Evans, Alan Coopersmith, Matthiew Herrb)
   (#64152). Also add 5170_all_6.7.0-xvideo-allocation.patch (#64092, fd.o #474),
@@ -1460,7 +1464,7 @@
   Fix SRC_URI inconsistency issues (#64117).
 
   14 Sep 2004; Donnie Berkholz <spyderous@gentoo.org>; xorg-x11-6.8.0.ebuild:
-  FILES_VER 0.2. Support any future display managers (#23957) and update MANPATH
+  Fileset 0.2. Support any future display managers (#23957) and update MANPATH
   (#63645).
 
   14 Sep 2004; Stephen P. Becker <geoman@gentoo.org> xorg-x11-6.8.0.ebuild:
@@ -1591,7 +1595,7 @@
   fc-cache -f breaks the font eclass, according to foser.
 
   02 Aug 2004; Donnie Berkholz <spyderous@gentoo.org>; :
-  Note that the last commit was FILES_VER 0.3.
+  Note that the last commit was fileset 0.3.
 
   02 Aug 2004; Donnie Berkholz <spyderous@gentoo.org>;
   xorg-x11-6.7.0-r1.ebuild, xorg-x11-6.7.0-r2.ebuild:
@@ -1650,7 +1654,7 @@
 
   16 Jul 2004; Donnie Berkholz <spyderous@gentoo.org>;
   +xorg-x11-6.7.0-r2.ebuild:
-  PATCH_VER 1.2. Add
+  Patchset 1.2. Add
   9395_all_6.7.0-savage-disable-xrandr-for-shadowfb-rotate.patch, given to Tim
   Roberts by anonymous user, posted to devel@xfree86.org mailing list. Without
   this patch, an attempt to use Xrandr with shadowFB-based rotation will result
@@ -1701,7 +1705,7 @@
 
   06 Jul 2004; Donnie Berkholz <spyderous@gentoo.org>;
   xorg-x11-6.7.0-r1.ebuild:
-  PATCH_VER 1.1.1. Move ppc64 patch over from its formerly bad placement as a
+  Patchset 1.1.1. Move ppc64 patch over from its formerly bad placement as a
   separate file into the patchball as
   9360_all_6.7.0-ppc64-support-updates.patch. Add
   4152_all_4.3.0-allow-xdm-server-quotes.patch from xfree-4.3.0-r7 (#38232).
@@ -1780,7 +1784,7 @@
 
   11 Jun 2004; Donnie Berkholz <spyderous@gentoo.org>;
   +xorg-x11-6.7.0-r1.ebuild:
-  PATCH_VER 1.1. Add 9920_all_6.7.0-xdm-open-chooserfd-CAN-2004-0419.patch to
+  Patchset 1.1. Add 9920_all_6.7.0-xdm-open-chooserfd-CAN-2004-0419.patch to
   stop xdm from ignoring its "DisplayManager.requestPort" setting. xdm opens its
   "chooserFd" TCP socket on all network interfaces without this patch (xf86
   #1376). Update 9840_all_4.3.0-SDK-add-missing-includes-for-gatos-v2.patch for
@@ -1826,7 +1830,7 @@
   Add credit for netwinder.org ARM patch.
 
   03 Jun 2004; Donnie Berkholz <spyderous@gentoo.org>; xorg-x11-6.7.0.ebuild:
-  PATCH_VER 1.0. This patchset should get xorg-x11-6.7.0 ready to go stable on
+  Patchset 1.0. This patchset should get xorg-x11-6.7.0 ready to go stable on
   all archs that have tested it. Many of them have already stabled it, so I'm
   holding some non-crucial patches out for 6.7.0-r1.
   
@@ -1882,7 +1886,7 @@
   default to old behavior.
 
   28 May 2004; Donnie Berkholz <spyderous@gentoo.org>; xorg-x11-6.7.0.ebuild:
-  PATCH_VER 0.7. Add 9860_all_xorg-xkb_winkeys.patch to fix broken windows keys
+  Patchset 0.7. Add 9860_all_xorg-xkb_winkeys.patch to fix broken windows keys
   (#48307).
 
   12 May 2004; Alexander Gabert <pappy@gentoo.org> xorg-x11-6.7.0.ebuild:
@@ -1903,7 +1907,7 @@
   Add ~alpha and ~ia64
 
   19 Apr 2004; Donnie Berkholz <spyderous@gentoo.org>; xorg-x11-6.7.0.ebuild:
-  PATCH_VER 0.6. Add 9200_all_6.7.0-fix-zh-cn-utf8-crashes.patch, which fixes
+  Patchset 0.6. Add 9200_all_6.7.0-fix-zh-cn-utf8-crashes.patch, which fixes
   crashes when using core fonts in the zh_CN.UTF-8 locale. See fd.o bug #368.
 
   19 Apr 2004; Donnie Berkholz <spyderous@gentoo.org>; xorg-x11-6.7.0.ebuild:
@@ -1940,12 +1944,12 @@
   ~hppa at gmsoft's request.
 
   12 Apr 2004; Donnie Berkholz <spyderous@gentoo.org>; xorg-x11-6.7.0.ebuild:
-  PATCH_VER 0.5. Add 9500_all_6.7.0-hppa-fixes.patch so it builds on HPPA. Add
+  Patchset 0.5. Add 9500_all_6.7.0-hppa-fixes.patch so it builds on HPPA. Add
   HPPA fixes to 5900_all_6.7.0-acecad-v2.patch. Thanks to Guy Martin
   <gmsoft@gentoo.org> for these.
 
   12 Apr 2004; Donnie Berkholz <spyderous@gentoo.org>; xorg-x11-6.7.0.ebuild:
-  PATCH_VER 0.4. Add 9300_all_4.3.0-ncurses-xf86cfg-bool-conflict.patch to avoid
+  Patchset 0.4. Add 9300_all_4.3.0-ncurses-xf86cfg-bool-conflict.patch to avoid
   conflict of bool between ncurses-5.4 and xf86cfg (#43491).
 
   11 Apr 2004; Donnie Berkholz <spyderous@gentoo.org>; xorg-x11-6.7.0.ebuild:
@@ -1961,7 +1965,7 @@
   Add sys-apps/util-linux to DEPEND, reported by IceD^ in Freenode #gentoo.
 
   09 Apr 2004; Donnie Berkholz <spyderous@gentoo.org>; xorg-x11-6.7.0.ebuild:
-  PATCH_VER 0.3. Add 9110_all_xorg-6.7.0-pci-domains.patch to close #43630. This
+  Patchset 0.3. Add 9110_all_xorg-6.7.0-pci-domains.patch to close #43630. This
   makes 2.6 kernels, sparc and X work together.
 
   09 Apr 2004; Luca Barbato <lu_zero@gentoo.org> xorg-x11-6.7.0.ebuild:
@@ -1971,7 +1975,7 @@
   Drop extra quote in OptimizedCplusplusDebugFlags.
 
   08 Apr 2004; Donnie Berkholz <spyderous@gentoo.org>; xorg-x11-6.7.0.ebuild:
-  Add PATCH_VER to XVendorString. It could come in handy.
+  Add patchset to XVendorString. It could come in handy.
 
   08 Apr 2004; Donnie Berkholz <spyderous@gentoo.org>; xorg-x11-6.7.0.ebuild:
   Change XVendorString to be compatible with upstream so people can strstr for
@@ -1994,7 +1998,7 @@
   Use gcc-getCC instead of manual hack.
 
   07 Apr 2004; Donnie Berkholz <spyderous@gentoo.org>; xorg-x11-6.7.0.ebuild:
-  PATCH_VER 0.2. Added 9400_all_4.3.0-mkcfm-FHS-install.patch to fix hard-coded
+  Patchset 0.2. Added 9400_all_4.3.0-mkcfm-FHS-install.patch to fix hard-coded
   path. Rework 9113_all_4.3.0-xterm-make-optional.patch to apply to xorg.cf
   instead of xfree86.cf and rename it
   9113_all_6.7.0-xterm-make-optional-v2.patch (#47100).
@@ -2006,7 +2010,7 @@
   Change blocker on xfree to blocker on other virtual/x11.
 
   07 Apr 2004; Donnie Berkholz <spyderous@gentoo.org>; xorg-x11-6.7.0.ebuild:
-  FILES_VER 0.2. Fix libGL.la path -- #47100.
+  Fileset 0.2. Fix libGL.la path -- #47100.
 
   07 Apr 2004; Donnie Berkholz <spyderous@gentoo.org>; xorg-x11-6.7.0.ebuild:
   Drop references to xterm since we're going external now.
