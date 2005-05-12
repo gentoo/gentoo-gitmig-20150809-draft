@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgnomedb/libgnomedb-1.0.4.ebuild,v 1.7 2005/05/08 20:42:02 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgnomedb/libgnomedb-1.0.4.ebuild,v 1.8 2005/05/12 04:37:12 leonardop Exp $
 
 inherit gnome2 eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnome-db.org/"
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ia64 ~ppc ~sparc ~x86"
+KEYWORDS="~alpha amd64 ia64 ~ppc ~sparc x86"
 IUSE="doc"
 
 RDEPEND=">=gnome-extra/libgda-1.0.0
