@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/xterm
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.83 2005/05/10 12:01:28 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.84 2005/05/12 22:57:42 spyderous Exp $
+
+  12 May 2005; Donnie Berkholz <spyderous@gentoo.org>; metadata.xml:
+  Stick Seemant in as primary maintainer.
 
 *xterm-202 (10 May 2005)
 
