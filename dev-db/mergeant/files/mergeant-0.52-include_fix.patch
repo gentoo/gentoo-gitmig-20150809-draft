@@ -1,0 +1,12 @@
+diff -NurdB mergeant-0.52/libmergeant/mg-query.c mergeant-0.52-sql-header/libmergeant/mg-query.c
+--- mergeant-0.52/libmergeant/mg-query.c	2004-08-08 10:20:06.000000000 -0500
++++ mergeant-0.52-sql-header/libmergeant/mg-query.c	2005-05-12 12:11:53.000000000 -0500
+@@ -44,7 +44,7 @@
+ #include "mg-server-aggregate.h"
+ #include "mg-data-handler.h"
+ 
+-#include <libgda/sql/sql_parser.h>
++#include <sql/sql_parser.h>
+ #include "mg-qf-func.h"
+ 
+ /* 

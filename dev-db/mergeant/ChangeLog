@@ -1,6 +1,14 @@
 # ChangeLog for dev-db/mergeant
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mergeant/ChangeLog,v 1.8 2005/05/12 03:07:45 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mergeant/ChangeLog,v 1.9 2005/05/12 18:36:21 leonardop Exp $
+
+*mergeant-0.52 (12 May 2005)
+
+  12 May 2005; Leonardo Boshell <leonardop@gentoo.org> mergeant-0.52.ebuild,
+  files/mergeant-0.52-include_fix.patch:
+  New release. Includes a patch to correct the location of a header file.
+  Added support for 'debug' and 'static' USE flags. Style corrections and
+  updated dependencies. Resolves bug #47347.
 
   11 May 2005; Leonardo Boshell <leonardop@gentoo.org> mergeant-0.12.1.ebuild:
   Stable on x86.
