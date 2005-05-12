@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/enemy-territory/enemy-territory-2.60.ebuild,v 1.4 2005/05/02 19:10:04 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/enemy-territory/enemy-territory-2.60.ebuild,v 1.5 2005/05/12 12:30:01 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -72,9 +72,9 @@ src_install() {
 pkg_postinst() {
 	games_pkg_postinst
 	echo
-	ewarn "There are two possible security bugs in this package, both causing a	denial of"
-	ewarn "service.  One affects the game when running a server, the other when	running as"
-	ewarn "a client.  For more information, see bug #82149."
+	ewarn "There are two possible security bugs in this package, both causing a denial"
+	ewarn "of service.  One affects the game when running a server, the other when running"
+	ewarn "as a client.  For more information, see bug #82149."
 	echo
 	einfo "To play the game run:"
 	einfo " et"

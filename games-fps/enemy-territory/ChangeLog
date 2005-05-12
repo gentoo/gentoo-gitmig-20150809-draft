@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/enemy-territory
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/enemy-territory/ChangeLog,v 1.22 2005/05/02 19:10:04 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/enemy-territory/ChangeLog,v 1.23 2005/05/12 12:30:01 wolf31o2 Exp $
+
+  12 May 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  enemy-territory-2.60.ebuild:
+  Fixing warning about bug #82149.
 
   02 May 2005; Chris Gianelloni <wolf31o2@gentoo.org> -files/et,
   -files/et-ded, -files/et-ded.conf.d, -files/et-ded.rc,
