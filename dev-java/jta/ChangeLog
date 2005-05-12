@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jta
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jta/ChangeLog,v 1.8 2005/04/26 01:29:08 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jta/ChangeLog,v 1.9 2005/05/12 16:13:12 luckyduck Exp $
+
+  12 May 2005; Jan Brinkmann <luckyduck@gentoo.org> jta-1.0.1.ebuild:
+  stable on ppc
 
   26 Apr 2005; Gustavo Zacarias <gustavoz@gentoo.org> jta-1.0.1.ebuild:
   Stable on sparc
