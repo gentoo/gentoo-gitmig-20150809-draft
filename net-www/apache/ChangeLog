@@ -1,6 +1,9 @@
 # ChangeLog for net-www/apache
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.356 2005/05/12 01:18:38 beu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.357 2005/05/12 06:41:57 corsair Exp $
+
+  12 May 2005; Markus Rothe <corsair@gentoo.org> apache-2.0.54-r2.ebuild:
+  Stable on ppc64; bug #91737
 
 *apache-2.0.54-r3 (12 May 2005)
 *apache-2.0.54-r2 (12 May 2005)
