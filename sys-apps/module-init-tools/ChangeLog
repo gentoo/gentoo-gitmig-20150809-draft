@@ -1,9 +1,9 @@
 # ChangeLog for sys-apps/module-init-tools
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/ChangeLog,v 1.80 2005/05/12 22:10:58 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/ChangeLog,v 1.81 2005/05/12 22:12:34 solar Exp $
 
   12 May 2005; <solar@gentoo.org> module-init-tools-3.2_pre4.ebuild:
-  - fix typo in in patch, only 3.1 exists.. add die statements around file i/o
+  - fix typo in patch, only 3.1 exists.. add die statements around file i/o
   statements to keep this bug from happening again
 
 *module-init-tools-3.2_pre4 (11 May 2005)
