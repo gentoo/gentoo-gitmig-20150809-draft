@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php-cgi/php-cgi-5.0.3-r1.ebuild,v 1.1 2005/05/11 05:33:34 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php-cgi/php-cgi-5.0.3-r1.ebuild,v 1.2 2005/05/12 13:41:42 sebastian Exp $
 
 PHPSAPI="cgi"
 MY_P="php-${PV}"
@@ -9,6 +9,7 @@ inherit php5-sapi eutils
 
 DESCRIPTION="PHP CGI"
 SLOT="0"
+IUSE="${IUSE} force-cgi-redirect"
 KEYWORDS="~ia64 ~ppc ~x86 ~ppc64 ~sparc ~amd64"
 
 # provides all base PHP extras (eg PEAR, extension building stuff)
@@ -29,8 +30,11 @@ src_compile() {
 	my_conf="${my_conf} \
 		--enable-cgi \
 		--enable-cli \
-		--enable-fastcgi \
-		--enable-force-cgi-redirect"
+		--enable-fastcgi"
+
+	if use force-cgi-redirect; then
+		my_conf="${my_conf} --enable-force-cgi-redirect"
+	fi
 
 	php5-sapi_src_compile
 }

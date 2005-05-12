@@ -11,12 +11,12 @@ MD5 b111e59f0466214c01cf46a4980d9381 php-cgi-5.0.0-r1.ebuild 896
 MD5 4e5fd8a7135193edde701a23138ee86d php-cgi-5.0.0.ebuild 750
 MD5 995d2b6f08fa5ebedf30f745ca6943d7 php-cgi-4.3.9.ebuild 794
 MD5 2788b6019736f9603fd672003a28d064 php-cgi-4.3.10.ebuild 926
-MD5 50b485156776a0148908937264d1c21e php-cgi-5.0.3-r1.ebuild 1123
+MD5 13d1f3385fd83acbb423882f84045a46 php-cgi-5.0.3-r1.ebuild 1214
 MD5 6b3e4c8344f38a158e4e83281834ba31 php-cgi-4.3.9-r1.ebuild 812
 MD5 d24f0d011ce7638d022cfac155ef1e10 php-cgi-5.0.2.ebuild 908
 MD5 e6fa2ef86d4e0aa473f8fb35fcf5dc91 php-cgi-4.3.9_rc1-r1.ebuild 882
-MD5 9f21b4438dd24d5e7b837cd0971641cc php-cgi-4.3.11-r1.ebuild 1037
-MD5 2b90e7e5a8696af41d8470e5a01fecb3 ChangeLog 8698
+MD5 954ff66ecc2b29494de3c2777db5fd42 php-cgi-4.3.11-r1.ebuild 1128
+MD5 4451d9b19204b12eacf7dbb2552f375f ChangeLog 8844
 MD5 38fe937e954ab7109395cefa86fcd2d4 metadata.xml 384
 MD5 11f305b98b753ee023da8503a360762a files/digest-php-cgi-5.0.0-r1 63
 MD5 89a3a3b437e24b7ccc044376843d8446 files/digest-php-cgi-5.0.3-r1 63
@@ -42,7 +42,7 @@ MD5 cdec3284251432935f950c2d15a405b7 files/php-4.3.11-flash.patch 694
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCgZk7aGfFFLhbXWkRAqaYAJ4yIrEbvBBPrUsT9kevpd2Wg6mjhACfdsoD
-0x8+C0NQ8SzBH9SRP3zU9OY=
-=5l+A
+iD8DBQFCg10paGfFFLhbXWkRApCnAJ42qgTkUGUbQ3iZZkDGYu4FFQikkACfSl2R
+ZUPbXSOygQvfZD8fjSlFInA=
+=TbaW
 -----END PGP SIGNATURE-----
