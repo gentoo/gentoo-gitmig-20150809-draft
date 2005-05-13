@@ -1,6 +1,10 @@
 # ChangeLog for sci-biology/biopython
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/biopython/ChangeLog,v 1.4 2005/02/20 01:16:50 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/biopython/ChangeLog,v 1.5 2005/05/13 03:13:26 ribosome Exp $
+
+  13 May 2005; Olivier Fisette <ribosome@gentoo.org> -biopython-1.10.ebuild,
+  -biopython-1.21.ebuild, -biopython-1.23.ebuild, biopython-1.40b.ebuild:
+  Removed obsolete versions. Added 1.40b to x86.
 
 *biopython-1.40b (19 Feb 2005)
 
