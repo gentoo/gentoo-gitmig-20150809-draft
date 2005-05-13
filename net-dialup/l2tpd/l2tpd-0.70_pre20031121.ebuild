@@ -1,11 +1,11 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/l2tpd/l2tpd-0.70_pre20031121.ebuild,v 1.2 2004/12/05 09:43:26 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/l2tpd/l2tpd-0.70_pre20031121.ebuild,v 1.3 2005/05/13 04:25:09 mrness Exp $
 
 inherit eutils
 
 DESCRIPTION="Layer 2 Tunnelling Protocol Daemon"
-HOMEPAGE="http://www.l2tpd.org/"
+HOMEPAGE="http://l2tpd.snapgear.org/"
 MY_P="l2tpd_0.70-pre20031121"
 S="${WORKDIR}/${P/_/-}.orig"
 SRC_URI="http://ftp.debian.org/debian/pool/main/l/l2tpd/${MY_P}.orig.tar.gz
