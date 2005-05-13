@@ -1,6 +1,11 @@
 # ChangeLog for gnome-base/gail
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gail/ChangeLog,v 1.74 2005/05/11 16:06:48 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gail/ChangeLog,v 1.75 2005/05/13 19:56:23 leonardop Exp $
+
+*gail-1.8.4 (13 May 2005)
+
+  13 May 2005; Leonardo Boshell <leonardop@gentoo.org> gail-1.8.4.ebuild:
+  New release.
 
   11 May 2005; Guy Martin <gmsoft@gentoo.org> gail-1.8.2-r1.ebuild:
   Stable on hppa.
