@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/sam2p
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sam2p/ChangeLog,v 1.8 2004/07/01 10:50:26 eradicator Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sam2p/ChangeLog,v 1.9 2005/05/13 19:54:45 twp Exp $
+
+  13 May 2005; Tom Payne <twp@gentoo.org> -sam2p-0.43.ebuild,
+  sam2p-0.44.ebuild:
+  Update to use toolchain-funcs. Remove old version.
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> sam2p-0.43.ebuild:
   virtual/glibc -> virtual/libc
