@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/embassy/embassy-2.10.0.ebuild,v 1.3 2005/05/06 13:00:36 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/embassy/embassy-2.10.0.ebuild,v 1.4 2005/05/13 03:07:00 ribosome Exp $
 
 DESCRIPTION="A meta-package for installing all EMBASSY packages (EMBOSS add-ons)"
 HOMEPAGE="http://www.emboss.org/"
@@ -8,7 +8,7 @@ SRC_URI=""
 LICENSE="GPL-2 freedist"
 
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc"
 IUSE=""
 
 # IUSE="no-conflict"
