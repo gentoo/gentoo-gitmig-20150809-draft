@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/wm-icons
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/wm-icons/ChangeLog,v 1.10 2004/08/08 01:09:21 slarti Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/wm-icons/ChangeLog,v 1.11 2005/05/13 08:53:41 taviso Exp $
+
+  13 May 2005; Tavis Ormandy <taviso@gentoo.org>
+  wm-icons-0.4.0_pre1-r1.ebuild:
+  fix #91764
 
   08 Aug 2004; Tom Martin <slarti@gentoo.org> :
   Typo in DESCRIPTION: beutiful -> beautiful. Bug 59717.

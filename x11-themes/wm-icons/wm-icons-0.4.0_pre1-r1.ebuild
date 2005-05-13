@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/wm-icons/wm-icons-0.4.0_pre1-r1.ebuild,v 1.4 2004/07/15 01:07:11 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/wm-icons/wm-icons-0.4.0_pre1-r1.ebuild,v 1.5 2005/05/13 08:53:41 taviso Exp $
 
 inherit gnuconfig
 
@@ -23,6 +23,10 @@ src_unpack() {
 	unpack ${A}
 
 	sed -i 's#$(bindir)/wm-icons-config#true#g' ${S}/Makefile.am
+    # duplication of bin/Makefile in configure.in #91764
+	sed -i '132s/bin\/Makefile//' ${S}/configure.in
+	# non-portable comment bombs automake.
+	sed -i 's/\t#/#/' ${S}/Makefile.am
 	gnuconfig_update
 }
 
