@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.170 2005/05/06 04:14:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.171 2005/05/13 00:30:33 vapier Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -367,51 +367,6 @@ epatch() {
 	then
 		einfo "Done with patching"
 	fi
-}
-
-# This function return true if we are using the NPTL pthreads
-# implementation.
-#
-# <azarah@gentoo.org> (06 March 2003)
-#
-have_NPTL() {
-	cat > ${T}/test-nptl.c <<-"END"
-		#define _XOPEN_SOURCE
-		#include <unistd.h>
-		#include <stdio.h>
-
-		int main()
-		{
-		  char buf[255];
-		  char *str = buf;
-
-		  confstr(_CS_GNU_LIBPTHREAD_VERSION, str, 255);
-		  if (NULL != str) {
-		    printf("%s\n", str);
-		    if (NULL != strstr(str, "NPTL"))
-		      return 0;
-		  }
-
-		  return 1;
-		}
-	END
-
-	einfon "Checking for _CS_GNU_LIBPTHREAD_VERSION support in glibc ..."
-	if gcc -o ${T}/nptl ${T}/test-nptl.c &> /dev/null
-	then
-		echo "yes"
-		einfon "Checking what PTHREADS implementation we have ..."
-		if ${T}/nptl
-		then
-			return 0
-		else
-			return 1
-		fi
-	else
-		echo "no"
-	fi
-
-	return 1
 }
 
 # This function check how many cpu's are present, and then set
