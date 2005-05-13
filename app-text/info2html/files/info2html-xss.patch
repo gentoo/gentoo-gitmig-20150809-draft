@@ -1,0 +1,51 @@
+Index: info2html1.1/info2html
+===================================================================
+--- info2html1.1.orig/info2html
++++ info2html1.1/info2html
+@@ -47,7 +47,7 @@ $FTAG          = '[^\)]+';         #-- p
+ # not accessible.
+ #---------------------------------------------------------
+ sub DieFileNotFound{
+-  local($FileName) = @_;
++  local($FileName) = &XssEscape(@_);
+   #-- TEXT : error message if a file could not be opened
+   print <<EOF;
+ <head>
+@@ -110,6 +110,28 @@ sub DeEscape{
+ }
+ 
+ #----------------------------------------------------------
++#                   XssEscape
++#----------------------------------------------------------
++sub XssEscape {
++  local($Tag) = @_;
++  #-- output escaping is required to protect browser
++  #   against `cross site' and `cross frame scripting'
++
++  $Tag =~ s/&/&amp;/gs;		# ampersand
++  $Tag =~ s/#/&#35;/gs;
++  $Tag =~ s/;/&#59;/gs;
++  $Tag =~ s/[\000-\037\200-\237]/&iquest;/gs;
++  $Tag =~ s/</&lt;/gs;		# less-than symbol
++  $Tag =~ s/>/&gt;/gs;		# greater-than symbol
++  $Tag =~ s/"/&quot;/gs;	# double quote
++  $Tag =~ s/\240/&nbsp;/gs;	# non-breaking space
++  $Tag =~ s/\255/&shy;/gs;	# soft hyphen
++				# the rest is interpreted
++				# as ISO 8859-1
++  $Tag;
++}
++
++#----------------------------------------------------------
+ #                   ParsHeaderToken
+ #----------------------------------------------------------
+ # Parses the heaer line of an info node for a specific 
+@@ -470,6 +492,8 @@ EOF
+ #----------------------------------------------------------
+ sub ReplyNotFoundMessage{
+   local($FileName,$Tag) = @_;
++  $FileName = &XssEscape($FileName);
++  $Tag      = &XssEscape($Tag);
+   print <<EOF;
+ <head>
+ <title>Info Files  -  Error Message</title>

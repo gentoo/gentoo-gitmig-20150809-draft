@@ -1,6 +1,18 @@
 # ChangeLog for app-text/info2html
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/info2html/ChangeLog,v 1.8 2005/04/21 20:22:40 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/info2html/ChangeLog,v 1.9 2005/05/13 19:03:44 twp Exp $
+
+*info2html-1.4-r1 (13 May 2005)
+
+  13 May 2005; Tom Payne <twp@gentoo.org> +files/info2html-xss.patch,
+  +info2html-1.4-r1.ebuild:
+  Security fix. Bug # 91354.
+
+*info2html-1.4-r1 (13 May 2005)
+
+  13 May 2005; Tom Payne <twp@gentoo.org> +files/info2html-xss.patch,
+  +info2html-1.4-r1.ebuild:
+  Security fix. Bug # 91354.
 
   21 Apr 2005; Simon Stelling <blubb@gentoo.org> info2html-1.4.ebuild:
   stable on amd64
