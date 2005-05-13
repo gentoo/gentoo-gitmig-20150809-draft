@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.92 2005/04/03 07:26:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.93 2005/05/13 06:20:11 vapier Exp $
 #
 # devlist: {vapier,wolf31o2,mr_bones_}@gentoo.org -> games@gentoo.org
 #
@@ -147,7 +147,17 @@ games_pkg_setup() {
 	[[ ${GAMES_USER_DED} != "root" ]] \
 		&& enewuser "${GAMES_USER_DED}" 36 /bin/bash /usr/games "${GAMES_GROUP}"
 
-	# Dear carpaski and portage-dev team, we are so sorry.  Lots of love, games team
+	# Make sure SDL was built in a certain way
+	if [[ -n ${GAMES_USE_SDL} ]] ; then
+		if built_with_use -o media-libs/libsdl ${GAMES_USE_SDL} ; then
+			eerror "You built libsdl with wrong USE flags."
+			eerror "Make sure you rebuild it like this:"
+			eerror "USE='-${GAMES_USE_SDL// / -}'"
+			die "your libsdl sucks"
+		fi
+	fi
+
+	# Dear portage team, we are so sorry.  Lots of love, games team.
 	# See Bug #61680
 	[[ $(getent passwd "${GAMES_USER_DED}" | cut -f7 -d:) == "/bin/false" ]] \
 		&& usermod -s /bin/bash "${GAMES_USER_DED}" 
