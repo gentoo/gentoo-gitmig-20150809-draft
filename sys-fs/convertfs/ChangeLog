@@ -1,6 +1,14 @@
 # ChangeLog for sys-fs/convertfs
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/convertfs/ChangeLog,v 1.6 2004/09/03 19:16:58 pvdabeel Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/convertfs/ChangeLog,v 1.7 2005/05/13 18:46:53 twp Exp $
+
+*convertfs-20050113 (13 May 2005)
+
+  13 May 2005; Tom Payne <twp@gentoo.org>
+  -files/convertfs-20020318-convertfs-paths.patch,
+  -convertfs-20020318.ebuild, -convertfs-20020318-r1.ebuild,
+  +convertfs-20050113.ebuild:
+  Version bump. Removed old version. Bug # 88510.
 
   03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   convertfs-20020318-r1.ebuild:
