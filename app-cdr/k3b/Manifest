@@ -1,6 +1,9 @@
-MD5 9fceef6bd503a025d9671457e712d024 k3b-0.12_beta1.ebuild 3662
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 0c4745d03fae201cb5e8067570efda14 k3b-0.12_beta1.ebuild 3666
 MD5 1150cc0633c21032294eeffff138f880 k3b-0.11.24.ebuild 3081
-MD5 fd79b4383de2943dd3f62a1ab66774fe ChangeLog 15096
+MD5 7eddee6967293b4de5cd269cada6b799 ChangeLog 15203
 MD5 f4e8aaaad243ce6f84523bc506aefcf7 k3b-0.11.23-r2.ebuild 3135
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
 MD5 b12238d3e73ff4d638de303cc9094442 files/digest-k3b-0.12_beta1 67
@@ -8,3 +11,10 @@ MD5 fcb8d7651ef3f8e8edbb1407b9b26a87 files/digest-k3b-0.11.23-r2 132
 MD5 513df86e2c91f7c1209b63cea7d41b84 files/k3b-0.11.17-noarts.patch 893
 MD5 0bbd13530f9ac2f53e62c69518c08970 files/digest-k3b-0.11.24 132
 MD5 5f469d8bb9067596d861b4a9a0a450a1 files/k3b-dvdrip-transcode.patch 1999
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFChG1JI1lqEGTUzyQRAlDyAJwMlo8/4aasEYepNQYvN4j/Qz2U6ACfaPKj
+EbgemyzlOI6fjE07Jxu6iVk=
+=6E7F
+-----END PGP SIGNATURE-----
