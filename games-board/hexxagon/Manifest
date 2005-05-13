@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 e0cca93b38a5c61f184e09fb2156f046 ChangeLog 1793
 MD5 5f0a3a0a15cd92fa693026a9ffca7e5a hexxagon-0.3.3.ebuild 619
-MD5 578c8f4fa5ad776237c8f4b33dbbd828 hexxagon-1.0.ebuild 649
-MD5 30e05001e0608c64d2ade50b2b71c041 ChangeLog 1705
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 f64da571147470c047a9e2ec3077d091 files/digest-hexxagon-1.0 66
+MD5 9cd2242bcd1e92a51ca710f9123f2512 hexxagon-1.0.ebuild 645
 MD5 19d6b2bd6c1a339d097764ddfb5b05c3 files/digest-hexxagon-0.3.3 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCg4q906ebR+OMO78RAqW0AJ4zq+MdJalTuEjJoV2H5Xesb5jesgCfVhY7
-Mv68TMnSCFpYpO+xbI22ISI=
-=sQ0Z
------END PGP SIGNATURE-----
+MD5 f64da571147470c047a9e2ec3077d091 files/digest-hexxagon-1.0 66
