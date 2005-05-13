@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/glade
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/ChangeLog,v 1.37 2005/04/24 12:51:11 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/ChangeLog,v 1.38 2005/05/13 23:02:11 kloeri Exp $
+
+  13 May 2005; Bryan Østergaard <kloeri@gentoo.org> glade-2.6.8.ebuild:
+  ~ia64 keyword.
 
   24 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> glade-2.6.8.ebuild:
   Stable on ppc.

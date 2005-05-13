@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/gperf
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gperf/ChangeLog,v 1.23 2004/12/31 01:57:45 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gperf/ChangeLog,v 1.24 2005/05/13 23:00:00 kloeri Exp $
+
+  13 May 2005; Bryan Østergaard <kloeri@gentoo.org> gperf-3.0.1.ebuild:
+  ~ia64 keyword.
 
   31 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
