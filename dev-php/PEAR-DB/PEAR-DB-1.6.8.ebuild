@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-DB/PEAR-DB-1.6.8.ebuild,v 1.10 2005/05/06 20:12:21 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-DB/PEAR-DB-1.6.8.ebuild,v 1.11 2005/05/13 01:17:46 vapier Exp $
 
 inherit php-pear
 
@@ -8,5 +8,5 @@ DESCRIPTION="Database abstraction layer for PHP"
 
 LICENSE="PHP"
 SLOT="0"
-KEYWORDS="x86 ppc sparc alpha hppa amd64 ia64 ppc64"
+KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 s390 sparc x86"
 IUSE=""
