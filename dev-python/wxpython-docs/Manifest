@@ -8,13 +8,12 @@ MD5 d13b75fb9e517c6eacbef6f82dd15ee2 wxpython-docs-2.6.0.0-r1.ebuild 1509
 MD5 2911f08ca57d7ce8297146ffd74e5fca files/digest-wxpython-docs-2.4.2.4-r1 146
 MD5 f98b398d5de65497f6e213f8a2dec801 files/demo-2.6.0.0-version.patch 219
 MD5 875e8ee40a9db65f42134928d4fd8e09 files/viewdocs-2.4.2.4.patch 329
-MD5 429fab69a37d5ee455fc7d734b5297d7 files/viewdocs-2.6.0.0.patch 561
 MD5 f451c42589546a9015ae771ca742a53f files/wxpython-docs-2.6.0.0-writable.patch 1342
 MD5 2e16d6b640e3678d8d85abe15dfbc3b0 files/digest-wxpython-docs-2.6.0.0-r1 225
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFChQDEHOCQyz1WCXYRAj0dAJ0bl5d9UMx5psse/ymwdIqHW8GXdACgxK5O
-yEDRsFNRi9pwcynQaUzCxWE=
-=F4L4
+iD8DBQFChQElHOCQyz1WCXYRAm6vAJ93gH3BVzIMxCkD815Cr6T3sbwZbACgiDd3
+yjfhh1xgaa9sKMj8OnoTnAU=
+=4U3f
 -----END PGP SIGNATURE-----
