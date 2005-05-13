@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/xterm-197.ebuild,v 1.8 2005/03/10 22:47:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/xterm-197.ebuild,v 1.9 2005/05/13 21:10:34 seemant Exp $
 
 inherit eutils flag-o-matic
 
@@ -14,7 +14,7 @@ KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ~ppc64 sparc x86"
 IUSE="truetype Xaw3d unicode"
 
 DEPEND="virtual/x11
-	sys-apps/utempter
+	virtual/utempter
 	Xaw3d? ( x11-libs/Xaw3d )"
 
 src_unpack() {

@@ -1,6 +1,10 @@
 # ChangeLog for x11-terms/xterm
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.84 2005/05/12 22:57:42 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.85 2005/05/13 21:10:34 seemant Exp $
+
+  13 May 2005; Seemant Kulleen <seemant@gentoo.org> xterm-197.ebuild,
+  xterm-199.ebuild, xterm-200-r1.ebuild, xterm-202.ebuild:
+  change the dependency to virtual/utempter instead
 
   12 May 2005; Donnie Berkholz <spyderous@gentoo.org>; metadata.xml:
   Stick Seemant in as primary maintainer.
