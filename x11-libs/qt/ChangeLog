@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.214 2005/05/12 20:23:43 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.215 2005/05/13 21:13:24 kloeri Exp $
+
+  13 May 2005; Bryan Østergaard <kloeri@gentoo.org> qt-3.3.4-r3.ebuild:
+  Stable on ia64.
 
   12 May 2005; Markus Rothe <corsair@gentoo.org> qt-3.3.4-r3.ebuild:
   Stable on ppc64
