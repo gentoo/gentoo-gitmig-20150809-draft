@@ -1,6 +1,10 @@
 # ChangeLog for dev-dotnet/glade-sharp
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/glade-sharp/ChangeLog,v 1.23 2005/05/13 01:07:08 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/glade-sharp/ChangeLog,v 1.24 2005/05/13 01:19:00 latexer Exp $
+
+  13 May 2005; Peter Johanson <latexer@gentoo.org>
+  -glade-sharp-1.0.4.ebuild:
+  Clean up a bit.
 
 *glade-sharp-1.9.3.1 (13 May 2005)
 
