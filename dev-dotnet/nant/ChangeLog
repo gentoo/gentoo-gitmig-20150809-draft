@@ -1,6 +1,9 @@
 # ChangeLog for dev-dotnet/nant
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/nant/ChangeLog,v 1.2 2005/05/13 00:45:12 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/nant/ChangeLog,v 1.3 2005/05/13 02:27:09 latexer Exp $
+
+  13 May 2005; Peter Johanson <latexer@gentoo.org> nant-0.85_rc3.ebuild:
+  Upping the mono dep to at least 1.1.4. nant has issues on mono-1.0.x
 
 *nant-0.85_rc3 (13 May 2005)
 

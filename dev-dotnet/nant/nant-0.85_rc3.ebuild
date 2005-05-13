@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/nant/nant-0.85_rc3.ebuild,v 1.1 2005/05/13 00:45:12 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/nant/nant-0.85_rc3.ebuild,v 1.2 2005/05/13 02:27:09 latexer Exp $
 
 inherit mono eutils
 
@@ -14,7 +14,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
-DEPEND="dev-lang/mono"
+DEPEND=">=dev-lang/mono-1.1.4"
 
 S=${WORKDIR}/${MY_P}
 
