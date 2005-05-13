@@ -1,9 +1,17 @@
-MD5 610f55bb083e3df82c57780512ab65cb ChangeLog 1048
-MD5 af253d3ec5ae232bf13c9841026692d2 dvssl-0.5.2.ebuild 643
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 5d677fd2e7e2437e6e89fc77418bf22e dvssl-0.5.3.ebuild 725
-MD5 35ecec37f1aae95c3618847b061d7375 dvssl-0.5.4.ebuild 794
-MD5 4460b8a61d8ecb9aeee0bccc6df23249 dvssl-0.5.4-r1.ebuild 606
+MD5 af253d3ec5ae232bf13c9841026692d2 dvssl-0.5.2.ebuild 643
+MD5 610f55bb083e3df82c57780512ab65cb ChangeLog 1048
+MD5 0fcc142ac790a0d0fa2afae09c9def7e dvssl-0.5.4-r1.ebuild 606
 MD5 7f3368008fd615dc0434aa56d0ae06f3 files/digest-dvssl-0.5.2 63
 MD5 2cb53d863845f9d7d16f1d0cccc6666d files/digest-dvssl-0.5.3 63
-MD5 6fc413579541d12f915b550265f91394 files/digest-dvssl-0.5.4 63
 MD5 f1e05e8523d4380060962702200d4e5b files/digest-dvssl-0.5.4-r1 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFChG7PI1lqEGTUzyQRAsf5AJ98OVrnK4gOnZMHr/pI+U5ZzBu8ZgCeJ9u9
++LvvZEAis2DM9aZt1UVQHsg=
+=dUtU
+-----END PGP SIGNATURE-----
