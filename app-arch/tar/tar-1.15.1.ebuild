@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/tar-1.15.1.ebuild,v 1.9 2005/04/27 03:35:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/tar-1.15.1.ebuild,v 1.10 2005/05/13 02:50:50 vapier Exp $
 
 inherit flag-o-matic eutils
 
@@ -26,7 +26,7 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}"/${PV}-flex-arg.patch
 	epatch "${FILESDIR}"/${P}-gcc4-test.patch
-	epatch "${FILESDIR}"/${P}-dont-abort-long-names.patch
+	epatch "${FILESDIR}"/${P}-dont-abort-long-names.patch && touch tests/testsuite
 }
 
 src_compile() {
