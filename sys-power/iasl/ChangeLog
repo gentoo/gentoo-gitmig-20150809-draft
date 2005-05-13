@@ -1,6 +1,9 @@
 # ChangeLog for sys-power/iasl
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/iasl/ChangeLog,v 1.1 2005/05/13 00:32:18 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/iasl/ChangeLog,v 1.2 2005/05/13 19:14:21 robbat2 Exp $
+
+  13 May 2005; Robin H. Johnson <robbat2@gentoo.org> iasl-20050309.ebuild:
+  Bug #92504, not parallel make safe.
 
 *iasl-20050309 (13 May 2005)
 
