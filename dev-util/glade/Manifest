@@ -1,18 +1,28 @@
-MD5 4797b5125d8cc7785653ac0da873bec8 glade-2.0.1.ebuild 1563
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 50c4259f41642d840187f3c54cd9e861 ChangeLog 4820
 MD5 f4713bbf77ae895c7ff6c022a7a2f542 metadata.xml 222
-MD5 8add42801cf069b013847f184449aa21 glade-2.6.0.ebuild 1594
-MD5 b76e5396722fdf3047d03ef3b11a0c47 ChangeLog 4729
-MD5 327eb455169e2977a4daffcaa9d10d87 glade-2.0.0-r1.ebuild 1522
-MD5 bfacfd79854f2d22ef23e55b05bf6739 glade-2.6.7.ebuild 1071
 MD5 1fea94dcb5009c782224628fd0784992 glade-0.6.4.ebuild 994
-MD5 d8e2188ecbdc077ef3ed1cb7f86b2205 glade-2.6.8.ebuild 1120
+MD5 8add42801cf069b013847f184449aa21 glade-2.6.0.ebuild 1594
+MD5 327eb455169e2977a4daffcaa9d10d87 glade-2.0.0-r1.ebuild 1522
 MD5 32c61923a3b42d14e252f584e1a267be glade-2.10.0.ebuild 1059
-MD5 83ae3a0bfcaa3facf31dc3a5c0428f82 files/digest-glade-2.6.0 65
-MD5 586cc933cce3a4d1a505e94094908b0a files/digest-glade-2.0.1 65
-MD5 5a2537a4609ee178e84e4e7472ee93a6 files/glade-2.0.0-scrollkeeper.patch 490
+MD5 4797b5125d8cc7785653ac0da873bec8 glade-2.0.1.ebuild 1563
+MD5 4b97cec03b41b21a009ca2ea6037ae55 glade-2.6.8.ebuild 1126
+MD5 bfacfd79854f2d22ef23e55b05bf6739 glade-2.6.7.ebuild 1071
 MD5 0ce7c126900c5a06b6d7fc538b3b3565 files/digest-glade-2.10.0 66
 MD5 2dded5c0f37d35bf9726e4c0d8cd76f9 files/glade-0.6.4-autogen.sh.patch 1935
-MD5 17d8efe19b102587befe386f30a1cda9 files/digest-glade-2.6.7 65
+MD5 586cc933cce3a4d1a505e94094908b0a files/digest-glade-2.0.1 65
+MD5 83ae3a0bfcaa3facf31dc3a5c0428f82 files/digest-glade-2.6.0 65
 MD5 bdb747f97ecaff8678cd803113e17bf0 files/digest-glade-2.6.8 65
+MD5 5a2537a4609ee178e84e4e7472ee93a6 files/glade-2.0.0-scrollkeeper.patch 490
 MD5 50067e4babaab978522bedc50c41258c files/digest-glade-2.0.0-r1 65
+MD5 17d8efe19b102587befe386f30a1cda9 files/digest-glade-2.6.7 65
 MD5 b947cc014b4212b215eaaa95590ef136 files/digest-glade-0.6.4 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFChTH6Kf2g/qXtneoRAqlIAJ97EwvBOcs4woWWAftCtUSHJ8e9cgCfTpZA
+1ZVgEcoHD0cWmwi7k5kg2zo=
+=qSFo
+-----END PGP SIGNATURE-----
