@@ -1,0 +1,49 @@
+--- docs/viewdocs.pyorg	2005-05-13 12:09:33.394994952 -0700
++++ docs/viewdocs.py	2005-05-13 12:10:23.778335520 -0700
+@@ -15,33 +15,19 @@
+     basePath = '.'
+ 
+ 
+-# test for write access
+-if os.access(basePath, os.W_OK):
++# setup the args
++args = ['',
++	'--cache=/tmp',
++	os.path.join(basePath, 'wx.zip'),
++	os.path.join(basePath, 'ogl.zip'),
++	]
++
++# add any other .zip files found
++for file in glob.glob(os.path.join(basePath, "*.zip")):
++	if file not in args:
++		args.append(file)
+ 
+-    # setup the args
+-    args = ['',
+-        '--cache='+basePath,
+-        os.path.join(basePath, 'wx.zip'),
+-        os.path.join(basePath, 'ogl.zip'),
+-        ]
+-
+-    # add any other .zip files found
+-    for file in glob.glob(os.path.join(basePath, "*.zip")):
+-        if file not in args:
+-            args.append(file)
+-
+-    # launch helpviewer
+-    helpviewer.main(args)
+-
+-else:
+-    app = wx.PySimpleApp()
+-    dlg = wx.MessageDialog(None,
+-        "The wxDocs need to be located in a directory that is writable by you.  "
+-        "I am unable to start the viewer in its current location.",
+-                           "Error!", wx.OK|wx.ICON_EXCLAMATION)
+-    dlg.ShowModal()
+-    dlg.Destroy()
+-    app.MainLoop()
++# launch helpviewer
++helpviewer.main(args)
+ 
+-#---------------------------------------------------------------------------
+ 
