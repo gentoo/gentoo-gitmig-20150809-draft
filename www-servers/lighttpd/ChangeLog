@@ -1,6 +1,15 @@
 # ChangeLog for www-servers/lighttpd
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.15 2005/03/22 16:36:25 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.16 2005/05/13 13:49:34 ka0ttic Exp $
+
+*lighttpd-1.3.13-r1 (13 May 2005)
+
+  13 May 2005; Aaron Walker <ka0ttic@gentoo.org>
+  +files/lighttpd-1.3.13-no-mysql-means-no-mysql.diff,
+  +files/lighttpd-1.3.13-zope-deserves-lovins-too.diff,
+  +lighttpd-1.3.13-r1.ebuild:
+  Revision bump; added patch by tigger^ to make lighttpd+zope happy. added
+  patch by me to not install mod_mysql_vhost if USE=-mysql.
 
   22 Mar 2005; <blubb@gentoo.org> lighttpd-1.3.10-r1.ebuild:
   added ~amd64
