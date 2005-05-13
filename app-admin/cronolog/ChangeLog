@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/cronolog
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/cronolog/ChangeLog,v 1.13 2005/04/19 10:10:51 beu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/cronolog/ChangeLog,v 1.14 2005/05/13 15:10:05 ramereth Exp $
+
+*cronolog-1.6.2-r2 (13 May 2005)
+
+  13 May 2005; Lance Albertson <ramereth@gentoo.org> metadata.xml,
+  +cronolog-1.6.2-r2.ebuild:
+  Fixed issue in #76953
 
   19 Apr 2005; Elfyn McBratney <beu@gentoo.org> metadata.xml:
   Remove retired developer from metadata.xml.

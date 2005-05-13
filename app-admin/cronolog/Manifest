@@ -1,21 +1,13 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
-MD5 bff9d197bc34e0fc6f3551b1a30af088 ChangeLog 1638
+MD5 f0a7afb5e985c5568769840728bd9ca4 ChangeLog 1798
 MD5 abd68529709b540a2604e9b4fdb364d0 cronolog-1.6.2-r1.ebuild 647
 MD5 deea6e88a09864ed0fbc6f8f516e40e1 cronolog-1.6.2.ebuild 578
-MD5 5e264c6bb03335a86c800e45dd133305 files/digest-cronolog-1.6.2-r1 66
+MD5 d984ee9342f0865610868c3255da9c06 metadata.xml 728
+MD5 a1f04ebf584e599f80907fac0b36aa4c cronolog-1.6.2-r2.ebuild 718
 MD5 5e264c6bb03335a86c800e45dd133305 files/digest-cronolog-1.6.2 66
+MD5 5e264c6bb03335a86c800e45dd133305 files/digest-cronolog-1.6.2-r1 66
+MD5 5e264c6bb03335a86c800e45dd133305 files/digest-cronolog-1.6.2-r2 66
 MD5 1009a1741b750fd048916cbeca5488c9 files/1.6.2-patches/cronolog-large-file-patch.txt 820
-MD5 3bb527ff2ddb625b77e3ec16b33c60ec files/1.6.2-patches/cronolog-sigusr1-patch.txt 1150
-MD5 97a9c592017c453f2e579909e5027e87 files/1.6.2-patches/cronolog-setugid-patch.txt 12375
-MD5 9b8c142d13843a88256261e7adb07402 files/1.6.2-patches/cronolog-strftime-patch.txt 465
 MD5 e7f35aecaec790a630abcc28e7d6cb99 files/1.6.2-patches/cronolog-missing-symlink-patch.txt 323
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCZNlWjUHll2nfF60RAkqFAJ4rseuH6/6AyQ6TvLprvrRcmvlKswCgqVQH
-tjM3o4d1gG/Q/Ux7b3nLtJg=
-=kwPB
------END PGP SIGNATURE-----
+MD5 97a9c592017c453f2e579909e5027e87 files/1.6.2-patches/cronolog-setugid-patch.txt 12375
+MD5 3bb527ff2ddb625b77e3ec16b33c60ec files/1.6.2-patches/cronolog-sigusr1-patch.txt 1150
+MD5 9b8c142d13843a88256261e7adb07402 files/1.6.2-patches/cronolog-strftime-patch.txt 465
