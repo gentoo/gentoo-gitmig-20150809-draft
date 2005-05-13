@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils-darwin/coreutils-darwin-5.3.0.ebuild,v 1.2 2005/05/13 01:51:35 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils-darwin/coreutils-darwin-5.3.0.ebuild,v 1.3 2005/05/13 18:51:36 josejx Exp $
 
 inherit eutils
 
@@ -60,7 +60,7 @@ src_install() {
 	rm -rf usr/lib
 
 	cd bin
-	if [ "$MACOSX_DEPOYMENT_TARGET" == "10.4" ]; then
+	if [ "$MACOSX_DEPLOYMENT_TARGET" == "10.4" ]; then
 		rm ${TENFOUR}
 	fi
 
