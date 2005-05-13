@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/aalib/aalib-1.4_rc5.ebuild,v 1.2 2005/05/10 04:02:01 j4rg0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/aalib/aalib-1.4_rc5.ebuild,v 1.3 2005/05/13 05:11:22 j4rg0n Exp $
 
 inherit eutils libtool toolchain-funcs
 
@@ -37,6 +37,9 @@ src_compile() {
 		$(use_with slang slang-driver) \
 		$(use_with X x11-driver) \
 		|| die
+	if [ use ppc-macos && use X ]; then
+		sed -i -e 's:aafire_LDFLAGS =:aafire_LDFLAGS = -undefined define_a_way:' ${S}/src/Makefile || die "Failed to edit Makefile for X compatibility"
+	fi
 	emake CC="$(tc-getCC)" || die
 }
 
