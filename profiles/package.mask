@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3963 2005/05/12 23:14:30 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3964 2005/05/13 01:45:52 latexer Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -42,10 +42,6 @@
 # Danie Drake <dsd@gentoo.org> (09 May 2005)
 # Facing removal due to lack of development upstream
 sys-kernel/wolk-sources
-
-# Peter Johanson <latexer@gentoo.org> (08 May 2005)
-# New blam requires mono-1.1.x, so mask for now
-=net-news/blam-1.8.0
 
 # Masatomo Nakano <nakano@gentoo.org> (08 May 2005)
 # Masked for testing with new libpq package.
@@ -304,11 +300,6 @@ net-print/pdq
 =dev-dotnet/gtk-sharp-1.9*
 =dev-dotnet/rsvg-sharp-1.9*
 =dev-dotnet/vte-sharp-1.9*
-
-# Peter Johanson <latexer@gentoo.org> (31 Mar 2005)
-# Masking all 1.1* releases of mono and libgdiplus.
-=dev-lang/mono-1.1*
-=dev-dotnet/libgdiplus-1.1*
 
 # Andreas Proschofsky <suka@gentoo.org> (30 Mar 2005)
 # Pre-Release, use on your own risk
