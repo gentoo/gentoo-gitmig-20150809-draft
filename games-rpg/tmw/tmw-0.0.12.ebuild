@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/tmw/tmw-0.0.12.ebuild,v 1.1 2005/05/05 01:09:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/tmw/tmw-0.0.12.ebuild,v 1.2 2005/05/13 01:53:26 vapier Exp $
 
 inherit eutils games
 
@@ -18,6 +18,13 @@ DEPEND=">=dev-games/physfs-1.0.0
 	media-libs/sdl-mixer
 	media-libs/sdl-image
 	>=dev-games/guichan-0.3.0"
+
+pkg_setup() {
+	if ! built_with_use dev-games/guichan sdl ; then
+		eerror "dev-games/guichan needs to be built with USE=sdl"
+		die "please re-emerge guichan with USE=sdl"
+	fi
+}
 
 src_unpack() {
 	unpack ${A}
