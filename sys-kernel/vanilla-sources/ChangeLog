@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/vanilla-sources
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.67 2005/05/13 19:13:30 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.68 2005/05/13 22:23:33 kloeri Exp $
+
+  13 May 2005; Bryan Østergaard <kloeri@gentoo.org>
+  vanilla-sources-2.4.30.ebuild, vanilla-sources-2.6.11.8.ebuild:
+  Bump stable kernels on alpha.
 
 *vanilla-sources-2.6.11.9 (13 May 2005)
 
