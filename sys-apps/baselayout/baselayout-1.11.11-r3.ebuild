@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.11.11-r3.ebuild,v 1.4 2005/05/04 22:47:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.11.11-r3.ebuild,v 1.5 2005/05/13 01:39:11 vapier Exp $
 
 inherit flag-o-matic eutils toolchain-funcs multilib
 
@@ -38,6 +38,8 @@ src_unpack() {
 	rm -f etc/conf.d/crypto-loop init.d/crypto-loop
 	# Moved to app-shells/bash
 	rm -f etc/skel/.bash*
+	# Moved to appropriate packages
+	rm -r etc/pam.d
 
 	# Support wpa_supplicant-0.4.0 and hopefully fix an obscure iwconfig bug
 	epatch ${FILESDIR}/${P}-wpa_supplicant.patch
