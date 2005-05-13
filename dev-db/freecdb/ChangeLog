@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/freecdb
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/freecdb/ChangeLog,v 1.11 2005/01/03 00:12:46 j4rg0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/freecdb/ChangeLog,v 1.12 2005/05/13 07:03:19 mr_bones_ Exp $
+
+  13 May 2005; Michael Sterrett <mr_bones_@gentoo.org> freecdb-0.62.ebuild:
+  remove bogus PROVIDE; tidy
 
   02 Jan 2005; Lina Pezzella <j4rg0n@gentoo.org> freecdb-0.62.ebuild:
   Stable ppc-macos
