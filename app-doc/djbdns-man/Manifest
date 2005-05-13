@@ -1,6 +1,16 @@
-MD5 8aa9d2032dd804a734c1ec11bd812735 djbdns-man-20031023.ebuild 618
-MD5 c448931b20b482956f5df537c2a20475 djbdns-man-20020130.ebuild 595
-MD5 d88acdd52c07037f4ddd52cca9801b90 ChangeLog 1338
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 1eed366cf7e69bb5f715e396dd7c2aea ChangeLog 1441
 MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
+MD5 c448931b20b482956f5df537c2a20475 djbdns-man-20020130.ebuild 595
+MD5 9de93c2b8f0275591eadf10faa5739a6 djbdns-man-20031023.ebuild 617
 MD5 1a9aca2510c1cf516671a2693245e207 files/digest-djbdns-man-20020130 75
 MD5 8724d866832954347301d188c6dbab39 files/digest-djbdns-man-20031023 75
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFChHXNKf2g/qXtneoRAiMHAJ4qJuZaZkOnjL0+tQ0QguSRieGIYgCfV4Zh
+xom3zCSWnhShmitw73ruXmw=
+=Ao2x
+-----END PGP SIGNATURE-----

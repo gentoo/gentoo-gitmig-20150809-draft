@@ -1,6 +1,10 @@
 # ChangeLog for app-doc/djbdns-man
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/djbdns-man/ChangeLog,v 1.16 2005/03/20 09:40:59 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/djbdns-man/ChangeLog,v 1.17 2005/05/13 09:39:04 kloeri Exp $
+
+  13 May 2005; Bryan Østergaard <kloeri@gentoo.org>
+  djbdns-man-20031023.ebuild:
+  Stable on alpha.
 
   20 Mar 2005; Michael Hanselmann <hansmi@gentoo.org>
   djbdns-man-20031023.ebuild:
