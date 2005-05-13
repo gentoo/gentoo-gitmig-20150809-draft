@@ -1,6 +1,18 @@
 # ChangeLog for net-misc/stunnel
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/ChangeLog,v 1.37 2005/02/11 20:58:27 kaiowas Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/ChangeLog,v 1.38 2005/05/13 21:45:29 ramereth Exp $
+
+*stunnel-4.09 (13 May 2005)
+
+  13 May 2005; Lance Albertson <ramereth@gentoo.org>
+  +files/stunnel-4.09-gentoo.diff, +files/stunnel.conf.4.09,
+  +files/stunnel.rc6.4.09, metadata.xml, +stunnel-4.09.ebuild:
+  Several cleanups in the ebuild, and version bump
+  * fixed init scripts to use proper /var/run/stunnel location
+  * made the build more in line with upstream
+  * fixed cert generation
+  * added ipv6 useflag / took out static
+  * Updated metadata.xml
 
   11 Feb 2005; petre rodan <kaiowas@gentoo.org> stunnel-3.22-r2.ebuild,
   stunnel-3.26.ebuild, stunnel-4.04-r1.ebuild, stunnel-4.04-r2.ebuild,
