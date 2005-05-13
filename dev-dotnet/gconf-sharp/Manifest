@@ -2,10 +2,10 @@ MD5 c33a9235c7e60e6d4cb11f3fb478005d gconf-sharp-1.0.4.ebuild 826
 MD5 1ebee71a1c318e69375a7d8a72ab59de gconf-sharp-1.9.2.ebuild 821
 MD5 c79a338b20f93bfb8dc4fac66c859383 gconf-sharp-1.0.6.ebuild 791
 MD5 9d3e1ac71981c1c6cf4f657c10644baf gconf-sharp-1.0.8.ebuild 794
-MD5 ad0051e20de6db5a340f42fb153a7180 ChangeLog 1585
+MD5 cf1e14d9b7aabbe36704b1b84ae0febd ChangeLog 1709
 MD5 a60fdfbce7c7cfc52187ff86a7f8bbf8 metadata.xml 222
 MD5 5a625581cb6d9c09db5a6d7277f16b88 gconf-sharp-1.9.3.ebuild 821
-MD5 1ebee71a1c318e69375a7d8a72ab59de gconf-sharp-1.9.3.1.ebuild 821
+MD5 096bfa70f8619659a0e54e372384af8e gconf-sharp-1.9.3.1.ebuild 823
 MD5 b63c29f6761c048a9d7943713c15c78c files/digest-gconf-sharp-1.0.4 147
 MD5 ff5a2a47c3e1d785fc179c922857e409 files/digest-gconf-sharp-1.0.6 147
 MD5 3af46f2e9fbd6a7f642bc1ef502d50ca files/digest-gconf-sharp-1.0.8 147
