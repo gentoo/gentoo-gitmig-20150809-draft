@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/bzip2/bzip2-1.0.3.ebuild,v 1.2 2005/04/29 22:19:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/bzip2/bzip2-1.0.3.ebuild,v 1.3 2005/05/13 02:25:01 vapier Exp $
 
 inherit multilib toolchain-funcs flag-o-matic
 
@@ -65,7 +65,7 @@ src_install() {
 	else
 		into /
 		dobin bzip2 || die "dobin bzip2"
-		dosym bzip2 /bin/bzcat
-		dosym bzip2 /bin/bunzip2
 	fi
+	dosym bzip2 /bin/bzcat
+	dosym bzip2 /bin/bunzip2
 }
