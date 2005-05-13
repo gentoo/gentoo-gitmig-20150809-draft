@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/utempter
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/utempter/ChangeLog,v 1.30 2005/05/12 23:00:46 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/utempter/ChangeLog,v 1.31 2005/05/13 21:06:42 seemant Exp $
+
+  13 May 2005; Seemant Kulleen <seemant@gentoo.org>
+  utempter-0.5.5.5-r1.ebuild, utempter-0.5.5.6.ebuild:
+  this will now provide virtual/utempter as well as sys-libs/libutempter
 
   12 May 2005; Donnie Berkholz <spyderous@gentoo.org>; metadata.xml:
   Stick Seemant in as primary maintainer.
