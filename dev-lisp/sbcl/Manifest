@@ -17,7 +17,7 @@ MD5 910f47ccbe38fb0a5f5e396c708ec60c files/digest-sbcl-0.8.19 469
 MD5 512426af57bd3f80459b5e4994072c0f files/digest-sbcl-0.8.20 620
 MD5 ee6131f03df732a0cf74557827efdf8c files/digest-sbcl-0.8.21 619
 MD5 da9d9fc53951b9ebed59706771ae6b78 files/digest-sbcl-0.8.21-r1 624
-MD5 043f9541e58dbcc10b044581e29f4f78 files/digest-sbcl-0.9.0 618
+MD5 d72864a6031e3c533eab3c9276e510fc files/digest-sbcl-0.9.0 623
 MD5 8fbb2dee1025c012114183e5567e05c6 files/0.8.20/README.Gentoo 1602
 MD5 683427165f7d0717333bbb9762972b8d files/0.8.20/customize-target-features.lisp-prefix 95
 MD5 7b753c4f6f63f1fc8630f3c9100a8ca9 files/0.8.20/customize-target-features.lisp-suffix 8

@@ -1,6 +1,9 @@
 # ChangeLog for dev-lisp/sbcl
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/ChangeLog,v 1.60 2005/05/11 07:47:09 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/ChangeLog,v 1.61 2005/05/13 20:10:41 mkennedy Exp $
+
+  13 May 2005; Matthew Kennedy <mkennedy@gentoo.org> :
+  Digest fix.
 
   25 Apr 2005; Matthew Kennedy <mkennedy@gentoo.org> :
   Use /usr/$(get_libdir) instead of hardcoding /usr/lib; Resolves Bug #87849
