@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-1.1.6-r1.ebuild,v 1.2 2005/04/29 01:59:05 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-1.1.6-r1.ebuild,v 1.3 2005/05/13 00:29:15 latexer Exp $
 
 inherit eutils mono flag-o-matic
 
@@ -65,7 +65,7 @@ src_compile() {
 	strip-flags
 	local myconf="--with-preview=yes"
 
-	if use nptl && have_NPTL
+	if use nptl
 	then
 		myconf="${myconf} --with-tls=__thread"
 	else
