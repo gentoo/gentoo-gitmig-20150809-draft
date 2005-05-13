@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/elfutils
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/ChangeLog,v 1.49 2005/05/13 13:24:59 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/ChangeLog,v 1.50 2005/05/13 15:12:36 killerfox Exp $
+
+  13 May 2005; Rene Nussbaumer <killerfox@gentoo.org>
+  elfutils-0.94-r2.ebuild:
+  Stable on hppa; bug #91817
 
   13 May 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   elfutils-0.94-r2.ebuild:
