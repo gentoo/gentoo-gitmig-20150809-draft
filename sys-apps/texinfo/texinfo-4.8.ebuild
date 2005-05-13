@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/texinfo/texinfo-4.8.ebuild,v 1.9 2005/04/25 02:06:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/texinfo/texinfo-4.8.ebuild,v 1.10 2005/05/13 01:51:55 vapier Exp $
 
 inherit flag-o-matic eutils
 
@@ -19,11 +19,12 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-freebsd.patch
 
-	cd "${S}"/doc
+	cd doc
 	# Get the texinfo info page to have a proper name of texinfo.info
 	sed -i 's:setfilename texinfo:setfilename texinfo.info:' texinfo.txi
-
 	sed -i \
 		-e 's:INFO_DEPS = texinfo:INFO_DEPS = texinfo.info:' \
 		-e 's:texinfo\::texinfo.info\::' \

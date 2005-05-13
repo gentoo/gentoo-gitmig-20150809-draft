@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/texinfo
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/texinfo/ChangeLog,v 1.53 2005/04/25 02:06:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/texinfo/ChangeLog,v 1.54 2005/05/13 01:51:55 vapier Exp $
+
+  13 May 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/texinfo-4.8-freebsd.patch, texinfo-4.8.ebuild:
+  Add a FreeBSD compatibility patch by Diego Pettenò #92434.
 
   25 Apr 2005; Mike Frysinger <vapier@gentoo.org> texinfo-4.8.ebuild:
   Add a workaround for broken dependencies until it can be fixed properly in
