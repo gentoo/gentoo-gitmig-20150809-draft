@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/nginx-0.1.28-r1.ebuild,v 1.2 2005/04/28 10:35:16 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/nginx-0.1.29.ebuild,v 1.1 2005/05/13 10:41:07 voxus Exp $
 
 inherit eutils
 
@@ -10,22 +10,15 @@ HOMEPAGE="http://sysoev.ru/nginx/"
 SRC_URI="http://sysoev.ru/nginx/${P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 x86"
-IUSE="ssl zlib threads"
+KEYWORDS="~amd64 ~x86"
+IUSE="debug fastcgi threads ssl zlib"
 
 DEPEND="dev-lang/perl
 	ssl? ( dev-libs/openssl )
 	zlib? ( sys-libs/zlib )"
 
-src_unpack() {
-	unpack ${A}
-	cd ${S} && epatch ${FILESDIR}/${P}-bad_backend_header.patch
-}
-
 src_compile() {
 	local myconf
-
-	use ssl				&& myconf="${myconf} --with-http_ssl_module"
 
 	if use threads; then
 		einfo
@@ -35,10 +28,12 @@ src_compile() {
 		myconf="${myconf} --with-threads"
 	fi
 
-	use zlib			|| myconf="${myconf} --without-http_gzip_module"
+	use fastcgi	|| myconf="${myconf} --without-http_fastcgi_module"
+	use zlib	|| myconf="${myconf} --without-http_gzip_module"
+	use debug	&& myconf="${myconf} --with-debug"
+	use ssl		&& myconf="${myconf} --with-http_ssl_module"
 
-	cd ${S}
-	./configure												\
+	cd ${S} && ./configure									\
 		--prefix=/usr										\
 		--conf-path=/etc/${PN}/${PN}.conf					\
 		--http-log-path=/var/log/${PN}/access_log			\
@@ -48,7 +43,7 @@ src_compile() {
 		--http-proxy-temp-path=/var/tmp/${PN}/proxy			\
 		--http-fastcgi-temp-path=/var/tmp/${PN}/fastcgi		\
 		--with-md5-asm										\
-		${myconf}
+		${myconf} || die "configure failed"
 
 	emake || "failed to compile"
 }
