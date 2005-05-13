@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/bmp-docklet
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/bmp-docklet/ChangeLog,v 1.1 2005/05/11 22:37:40 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/bmp-docklet/ChangeLog,v 1.2 2005/05/13 23:12:34 chainsaw Exp $
+
+  13 May 2005; Tony Vroon <chainsaw@gentoo.org> bmp-docklet-1.2.ebuild:
+  Add ~ppc keyword.
 
 *bmp-docklet-1.2 (11 May 2005)
 
