@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/dvenv
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvenv/ChangeLog,v 1.7 2005/05/10 14:02:21 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvenv/ChangeLog,v 1.8 2005/05/13 11:44:52 ka0ttic Exp $
+
+  13 May 2005; Aaron Walker <ka0ttic@gentoo.org>
+  +files/dvenv-0.2.2-virtual-dtors.diff, dvenv-0.2.2-r1.ebuild:
+  Classes with virtual functions require virtual destructors.
 
 *dvenv-0.2.2-r1 (10 May 2005)
 
