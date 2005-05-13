@@ -1,0 +1,121 @@
+--- src/http/ngx_http_core_module.c	Sat Apr 30 13:48:14 2005
++++ src/http/ngx_http_core_module.c	Fri May 13 13:26:28 2005
+@@ -144,6 +144,13 @@
+       offsetof(ngx_http_core_srv_conf_t, restrict_host_names),
+       &ngx_http_restrict_host_names },
+ 
++    { ngx_string("ignore_invalid_headers"),
++      NGX_HTTP_MAIN_CONF|NGX_HTTP_SRV_CONF|NGX_CONF_TAKE1,
++      ngx_conf_set_flag_slot,
++      NGX_HTTP_SRV_CONF_OFFSET,
++      offsetof(ngx_http_core_srv_conf_t, ignore_invalid_headers),
++      NULL },
++
+     { ngx_string("location"),
+       NGX_HTTP_SRV_CONF|NGX_HTTP_LOC_CONF|NGX_CONF_BLOCK|NGX_CONF_TAKE12,
+       ngx_http_core_location,
+@@ -1578,6 +1588,7 @@
+     cscf->client_header_timeout = NGX_CONF_UNSET_MSEC;
+     cscf->client_header_buffer_size = NGX_CONF_UNSET_SIZE;
+     cscf->restrict_host_names = NGX_CONF_UNSET_UINT;
++    cscf->ignore_invalid_headers = NGX_CONF_UNSET;
+ 
+     return cscf;
+ }
+@@ -1662,6 +1673,9 @@
+ 
+     ngx_conf_merge_unsigned_value(conf->restrict_host_names,
+                               prev->restrict_host_names, 0);
++
++    ngx_conf_merge_value(conf->ignore_invalid_headers,
++                              prev->ignore_invalid_headers, 1);
+ 
+     return NGX_CONF_OK;
+ }
+--- src/http/ngx_http_core_module.h	Fri Apr 22 23:02:01 2005
++++ src/http/ngx_http_core_module.h	Fri May 13 13:22:57 2005
+@@ -87,6 +87,8 @@
+     ngx_msec_t                 client_header_timeout;
+ 
+     ngx_uint_t                 restrict_host_names;
++
++    ngx_flag_t                 ignore_invalid_headers;
+ } ngx_http_core_srv_conf_t;
+ 
+ 
+--- src/http/ngx_http_parse.c	Mon May  2 23:49:06 2005
++++ src/http/ngx_http_parse.c	Fri May 13 13:02:47 2005
+@@ -529,6 +529,8 @@
+ 
+         /* first char */
+         case sw_start:
++            r->invalid_header = 0;
++
+             switch (ch) {
+             case CR:
+                 r->header_end = p;
+@@ -552,6 +554,8 @@
+                     break;
+                 }
+ 
++                r->invalid_header = 1;
++
+                 break;
+ 
+             }
+@@ -605,6 +609,8 @@
+                 state = sw_ignore_line;
+                 break;
+             }
++
++            r->invalid_header = 1;
+ 
+             break;
+ 
+--- src/http/ngx_http_request.c	Wed May  4 12:08:43 2005
++++ src/http/ngx_http_request.c	Fri May 13 13:42:48 2005
+@@ -725,6 +725,7 @@
+     ngx_connection_t           *c;
+     ngx_http_header_t          *hh;
+     ngx_http_request_t         *r;
++    ngx_http_core_srv_conf_t   *cscf;
+     ngx_http_core_main_conf_t  *cmcf;
+ 
+     c = rev->data;
+@@ -742,6 +743,7 @@
+     }
+ 
+     cmcf = ngx_http_get_module_main_conf(r, ngx_http_core_module);
++    cscf = ngx_http_get_module_srv_conf(r, ngx_http_core_module);
+     hh = (ngx_http_header_t *) cmcf->headers_in_hash.buckets;
+ 
+     rc = NGX_AGAIN;
+@@ -783,8 +785,7 @@
+ 
+         if (rc == NGX_OK) {
+ 
+-#if 0
+-            if (r->invalid_header) {
++            if (r->invalid_header && cscf->ignore_invalid_headers) {
+ 
+                 /* there was error while a header line parsing */
+ 
+@@ -796,7 +797,6 @@
+                               &header);
+                 continue;
+             }
+-#endif
+ 
+             /* a header line has been parsed successfully */
+ 
+--- src/http/ngx_http_request.h	Mon May  2 23:41:21 2005
++++ src/http/ngx_http_request.h	Fri May 13 12:16:38 2005
+@@ -336,6 +337,8 @@
+ 
+     /* URI with "\0" or "%00" */
+     unsigned                          zero_in_uri:1;
++
++    unsigned                          invalid_header:1;
+ 
+     unsigned                          valid_location:1;
+     unsigned                          valid_unparsed_uri:1;
