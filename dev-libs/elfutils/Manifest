@@ -1,27 +1,27 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
+MD5 d9986e74abca6d4e65ee426a8ffe420f ChangeLog 6012
 MD5 17eff246a734b8a44781417a12ec4ea9 elfutils-0.94-r1.ebuild 1842
-MD5 7b94d8a842a02bed78d77c0315f95068 elfutils-0.101-r1.ebuild 1588
-MD5 04a401fa9d9b08752dbb0224974817e6 elfutils-0.97-r1.ebuild 1477
-MD5 1c5255251ca86c894b299c606c3bad3c elfutils-0.101.ebuild 1531
 MD5 822a1e6582def7c62c7ae773ca491143 elfutils-0.97.ebuild 1420
-MD5 278914d508e7ec4c99cf9701b11789f8 elfutils-0.94-r2.ebuild 1914
-MD5 2be92bd1a44b1c84149b0b15f4303f72 ChangeLog 5902
+MD5 1c5255251ca86c894b299c606c3bad3c elfutils-0.101.ebuild 1531
+MD5 7b94d8a842a02bed78d77c0315f95068 elfutils-0.101-r1.ebuild 1588
+MD5 6adc036e261ca9833e06f3a414946d33 elfutils-0.94-r2.ebuild 1912
+MD5 04a401fa9d9b08752dbb0224974817e6 elfutils-0.97-r1.ebuild 1477
+MD5 98e005817217428fef7c200faec78382 files/digest-elfutils-0.94-r1 65
 MD5 25da57fec6a38ed0c69ec6682b595398 files/elfutils-0.94-alpha-mips-atime.diff 699
+MD5 696196044decee0b8d782d08b3e907aa files/digest-elfutils-0.97 65
+MD5 68f794575cd890d5131853a4ca7ee9f3 files/digest-elfutils-0.101 66
 MD5 1e6460efdb609828aa57b5874813972a files/elfutils-0.101-bswap.patch 849
 MD5 40321e776b95020f2e51e5f481b3486e files/elfutils-0.101-portability.patch 6052
-MD5 98e005817217428fef7c200faec78382 files/digest-elfutils-0.94-r1 65
+MD5 68f794575cd890d5131853a4ca7ee9f3 files/digest-elfutils-0.101-r1 66
 MD5 98e005817217428fef7c200faec78382 files/digest-elfutils-0.94-r2 65
 MD5 696196044decee0b8d782d08b3e907aa files/digest-elfutils-0.97-r1 65
-MD5 696196044decee0b8d782d08b3e907aa files/digest-elfutils-0.97 65
-MD5 68f794575cd890d5131853a4ca7ee9f3 files/digest-elfutils-0.101-r1 66
-MD5 68f794575cd890d5131853a4ca7ee9f3 files/digest-elfutils-0.101 66
 MD5 51c01230a938c5b39a545e0611170b0f files/elfutils-sections-heap-overflow.diff 574
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFChJnd06ebR+OMO78RAsxrAJ9N9A1Qv+/+FUFI8U+SgDYCUNk+JACfdyTE
-G8jz2NbeGzyHHKnppjO+Uug=
-=EAYD
+iD8DBQFChKq9KRy60XGEcJIRAo4eAKCMO3ujkLOnyJyH9lmOaIFV07u6pgCghKhD
+m0CaMrv3M2UpUpq2+GC/hEc=
+=p1+k
 -----END PGP SIGNATURE-----
