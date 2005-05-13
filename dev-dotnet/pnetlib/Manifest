@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 ac5cb4c98639a7a5e71ad96d43dce514 pnetlib-0.6.10.ebuild 862
-MD5 10647367700fa461bda94abc4fa37fc9 pnetlib-0.6.12.ebuild 1181
-MD5 ffc3ec06feafc9d8d2a4e0e82c3b9564 ChangeLog 3591
+MD5 487469862514f3fa2725ff0481204357 pnetlib-0.6.12.ebuild 1209
+MD5 c11f150725891808e7c95f661aef6851 ChangeLog 3759
 MD5 76b314cc7b7b79b298dd4889dff8c9cd metadata.xml 159
 MD5 d41d3bba0e845a33aee40504dd5b8631 files/digest-pnetlib-0.6.10 67
 MD5 82854df0fe6e2698163ff953a55fe761 files/digest-pnetlib-0.6.12 67
 MD5 1b3d4d2a65f581b39e06269baf380594 files/configure-freetype.patch 391
 MD5 7a91fa4737dbff178231abf061f83052 files/0.6.12-resgen.patch 538
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCBkBYPgS8WLD64cERAikyAKCQsuL6V5zi7ouNPH3UpAKMDfOgDwCfQecY
-CMSDCghAiy77EFSix5fqYuI=
-=5Bbf
------END PGP SIGNATURE-----

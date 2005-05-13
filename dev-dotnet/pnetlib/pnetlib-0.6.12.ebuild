@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/pnetlib/pnetlib-0.6.12.ebuild,v 1.3 2005/02/06 16:04:38 scandium Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/pnetlib/pnetlib-0.6.12.ebuild,v 1.4 2005/05/13 14:45:08 latexer Exp $
 
-inherit eutils libtool
+inherit eutils
 
 DESCRIPTION="Portable.NET C# library"
 HOMEPAGE="http://www.dotgnu.org/"
@@ -32,8 +32,9 @@ src_compile() {
 	local lib_profile="default1.1"
 	einfo "Using profile: ${lib_profile}"
 
+	libtoolize --force --copy || die
+	aclocal || die
 	WANT_AUTOCONF=2.5 ./auto_gen.sh
-	elibtoolize
 	econf --with-profile=${lib_profile} \
 		`use_enable truetype xft` || die
 	emake || die

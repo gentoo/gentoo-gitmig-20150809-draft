@@ -1,6 +1,10 @@
 # ChangeLog for dev-dotnet/pnetlib
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/pnetlib/ChangeLog,v 1.22 2005/02/06 16:04:38 scandium Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/pnetlib/ChangeLog,v 1.23 2005/05/13 14:45:08 latexer Exp $
+
+  13 May 2005; Peter Johanson <latexer@gentoo.org> pnetlib-0.6.12.ebuild:
+  Remove extraneous elibtoolize call, and use libtoolize + aclocal instead.
+  See bug #92426.
 
   06 Feb 2005; Rainer Groesslinger <scandium@gentoo.org>
   pnetlib-0.6.12.ebuild:
