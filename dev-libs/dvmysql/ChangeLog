@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/dvmysql
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvmysql/ChangeLog,v 1.7 2004/07/02 04:38:01 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvmysql/ChangeLog,v 1.8 2005/05/13 01:40:29 pvdabeel Exp $
+
+*dvmysql-0.4.11 (13 May 2005)
+  13 May 2005; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  new version
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   dvmysql-0.4.10.ebuild, dvmysql-0.4.8.ebuild:
