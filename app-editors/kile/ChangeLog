@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/kile
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/kile/ChangeLog,v 1.51 2005/04/23 16:46:09 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/kile/ChangeLog,v 1.52 2005/05/13 10:31:05 greg_g Exp $
+
+  13 May 2005; Gregorio Guidi <greg_g@gentoo.org> kile-1.8_beta2.ebuild:
+  Correct dependencies (#91219).
 
 *kile-1.8_beta2 (23 Apr 2005)
 
