@@ -1,6 +1,10 @@
 # ChangeLog for dev-dotnet/libgdiplus
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/libgdiplus/ChangeLog,v 1.29 2005/05/12 17:09:38 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/libgdiplus/ChangeLog,v 1.30 2005/05/13 00:00:01 trapni Exp $
+
+  12 May 2005; Christian Parpart <trapni@gentoo.org>
+  libgdiplus-1.1.7.ebuild:
+  added ~amd64 to keywords
 
 *libgdiplus-1.1.7 (12 May 2005)
 
