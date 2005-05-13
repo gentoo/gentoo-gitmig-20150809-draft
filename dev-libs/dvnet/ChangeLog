@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/dvnet
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvnet/ChangeLog,v 1.9 2005/04/07 03:07:58 pvdabeel Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvnet/ChangeLog,v 1.10 2005/05/13 11:42:11 ka0ttic Exp $
+
+*dvnet-0.9.11-r1 (13 May 2005)
+
+  13 May 2005; Aaron Walker <ka0ttic@gentoo.org> +metadata.xml,
+  +dvnet-0.9.11-r1.ebuild:
+  Revision bump; only install API docs if USE=doc and even then at least
+  install them in the correct place. Added metadata.xml.
 
 *dvnet-0.9.11 (07 Apr 2005)
 
