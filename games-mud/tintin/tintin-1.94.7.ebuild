@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/tintin/tintin-1.94.6.ebuild,v 1.1 2005/05/08 16:04:14 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/tintin/tintin-1.94.7.ebuild,v 1.1 2005/05/13 06:28:26 mr_bones_ Exp $
 
 inherit games
 
