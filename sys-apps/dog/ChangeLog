@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/dog
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dog/ChangeLog,v 1.11 2005/03/28 20:01:38 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dog/ChangeLog,v 1.12 2005/05/13 12:46:31 ka0ttic Exp $
+
+*dog-1.7-r1 (13 May 2005)
+
+  13 May 2005; Aaron Walker <ka0ttic@gentoo.org>
+  +files/dog-1.7-check-ctime.diff, +dog-1.7-r1.ebuild:
+  Revision bump; added patch to fix missing check on ctime return value (was
+  using strcpy(buf, ctime(...))). Also use socklen_t over int as it should be
+  (fixes gcc-4 warning as well).
 
   28 Mar 2005; Ciaran McCreesh <ciaranm@gentoo.org> metadata.xml:
   Move from base-system to shell-tools
