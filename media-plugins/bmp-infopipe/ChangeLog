@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/bmp-infopipe
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/bmp-infopipe/ChangeLog,v 1.3 2005/01/17 22:04:38 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/bmp-infopipe/ChangeLog,v 1.4 2005/05/13 23:24:58 chainsaw Exp $
+
+  13 May 2005; Tony Vroon <chainsaw@gentoo.org> bmp-infopipe-1.3.ebuild:
+  Add ~ppc keyword.
 
   17 Jan 2005; Jeremy Huddleston <eradicator@gentoo.org>
   bmp-infopipe-1.3.ebuild:
