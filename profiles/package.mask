@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3964 2005/05/13 01:45:52 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3965 2005/05/13 08:52:39 sebastian Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -626,10 +626,6 @@ net-p2p/napshare
 # <hansmi@gentoo.org> (02 Jan 2005)
 # Masked for testing
 =mail-mta/qmail-1.03-r16
-
-# <stuart@gentoo.org> (30 Dec 2004)
-# asp2php masked per security bug #74698
-dev-php/asp2php
 
 # <chriswhite@gentoo.org> (30 Dec 2004)
 # Junkie being masked per security bug #74696
