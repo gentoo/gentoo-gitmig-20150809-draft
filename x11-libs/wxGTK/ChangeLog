@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/wxGTK
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.79 2005/05/11 23:43:34 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.80 2005/05/13 22:35:55 kloeri Exp $
+
+  13 May 2005; Bryan Østergaard <kloeri@gentoo.org> wxGTK-2.4.2-r3.ebuild:
+  Stable on ia64.
 
   11 May 2005; Rob Cakebread <pythonhead@gentoo.org> wxGTK-2.6.0-r1.ebuild:
   Removed check for -gtk2 unicode combo since wxbase will work with that.
