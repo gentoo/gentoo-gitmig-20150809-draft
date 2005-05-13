@@ -1,4 +1,4 @@
-MD5 38c40f2bd5667d2e7c4f4bdbaa5d7cc0 initng-0.0.10.ebuild 859
-MD5 ee5ca89da913cc30f20fad4094cea03a ChangeLog 627
+MD5 540da6a3a8b81f9bd79df426eb77b0ee ChangeLog 770
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 4fb57db372a844a356ff11956b190553 files/digest-initng-0.0.10 66
+MD5 3ede83a1b150e8e758191fe09c86352f initng-0.0.15.ebuild 859
+MD5 004720c2eb79e813896fdfec561e2156 files/digest-initng-0.0.15 66
