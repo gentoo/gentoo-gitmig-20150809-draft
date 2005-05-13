@@ -1,0 +1,14 @@
+# ChangeLog for sys-libs/libutempter
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libutempter/ChangeLog,v 1.1 2005/05/13 21:05:13 seemant Exp $
+
+*libutempter-1.1.2.1 (13 May 2005)
+
+  13 May 2005; Seemant Kulleen <seemant@gentoo.org>
+  +libutempter-1.1.2.1.ebuild:
+  New package as a replacement for sys-apps/utempter. This seems to be the
+  package we will move to as the preferred utempter, as it works better for
+  freebsd, and also mike harris of redhat/freedesktop is rumoured to be
+  rejumping the development of this.  At any rate, at least Flameeyes will
+  be happy.
+
