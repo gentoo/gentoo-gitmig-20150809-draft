@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/fuse
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/ChangeLog,v 1.20 2005/04/20 16:49:17 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/ChangeLog,v 1.21 2005/05/13 17:19:03 genstef Exp $
+
+  13 May 2005; Stefan Schweizer <genstef@gentoo.org> fuse-2.2.1.ebuild:
+  Change homepage to make rockoo happy, bug 92509
 
   20 Apr 2005; Stefan Schweizer <genstef@gentoo.org>
   -files/fuse-1.4-kernel-2.6.10.patch, -fuse-1.4.ebuild, -fuse-2.1.ebuild,

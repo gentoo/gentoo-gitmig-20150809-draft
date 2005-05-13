@@ -1,5 +1,5 @@
-MD5 07c8ce0ef888832b5795de0b06c4cc0e ChangeLog 3161
+MD5 89c37a07b49930ee088893c997ad3c21 ChangeLog 3284
 MD5 6e89ba8198764bfd079a0cfa18dca593 metadata.xml 264
-MD5 000054cd63f56e2782b2b521d1cb6197 fuse-2.2.1.ebuild 1461
+MD5 fbd7831da8d8db45f441da829fccdf48 fuse-2.2.1.ebuild 1454
 MD5 c1ef6366ba5892111ddef08887328663 files/fuse-fix-lazy-binding.patch 398
 MD5 284d19ad73b57b715f272b123c439f3f files/digest-fuse-2.2.1 62
