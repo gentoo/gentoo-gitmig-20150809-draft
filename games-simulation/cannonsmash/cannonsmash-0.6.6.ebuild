@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/cannonsmash/cannonsmash-0.6.6.ebuild,v 1.6 2004/12/16 15:55:43 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/cannonsmash/cannonsmash-0.6.6.ebuild,v 1.7 2005/05/13 02:06:58 vapier Exp $
 
 inherit games
 
@@ -12,26 +12,25 @@ SRC_URI="mirror://sourceforge/cannonsmash/csmash-${PV}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc"
+KEYWORDS="amd64 ppc x86"
 IUSE="oggvorbis nls"
 
-RDEPEND="virtual/libc
-	virtual/x11
+DEPEND="virtual/x11
 	virtual/opengl
 	>=media-libs/libsdl-1.2.4
 	>=media-libs/sdl-mixer-1.2.3
 	>=media-libs/sdl-image-1.2.2
 	=x11-libs/gtk+-1.2*"
-DEPEND="${RDEPEND}
-	oggvorbis? ( >=sys-apps/sed-4 )"
 
-S="${WORKDIR}/csmash-${PV}"
+S=${WORKDIR}/csmash-${PV}
 
 src_unpack() {
 	unpack csmash-${PV}.tar.gz
 	cd "${S}"
+	epatch "${FILESDIR}"/${P}-x-inc.patch
+	epatch "${FILESDIR}"/${P}-sizeof-cast.patch
 	if use oggvorbis ; then
-		cp "${DISTDIR}/${MY_OGG}" "${S}/" || die "cp failed"
+		cp "${DISTDIR}"/${MY_OGG} "${S}"/ || die "cp failed"
 		sed -i \
 			-e "s:${MY_OGG}:${GAMES_DATADIR}/csmash/${MY_OGG}:" ttinc.h \
 			|| die "setting ogg loc"
@@ -51,8 +50,8 @@ src_compile() {
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
 	if use oggvorbis ; then
-		insinto "${GAMES_DATADIR}/csmash"
-		doins "${MY_OGG}"
+		insinto "${GAMES_DATADIR}"/csmash
+		doins ${MY_OGG}
 	fi
 	dodoc AUTHORS CREDITS README*
 	prepgamesdirs
