@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/dvthread
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvthread/ChangeLog,v 1.7 2004/07/02 04:38:41 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvthread/ChangeLog,v 1.8 2005/05/13 01:32:15 pvdabeel Exp $
+
+
+*dvthread-0.4.7-r1 (13 May 2005)
+  13 May 2005; Pieter Van den Abeele <pvdabeel@gentoo.org>:+dvthread-0.4.7-r1.ebuild:
+  revision bumped, small upstream change
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   dvthread-0.4.4.ebuild, dvthread-0.4.6a.ebuild, dvthread-0.4.7.ebuild:
