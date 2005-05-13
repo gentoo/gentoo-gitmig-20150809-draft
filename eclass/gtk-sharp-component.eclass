@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gtk-sharp-component.eclass,v 1.9 2005/05/05 01:55:33 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gtk-sharp-component.eclass,v 1.10 2005/05/13 00:53:41 latexer Exp $
 
 # Author : Peter Johanson <latexer@gentoo.org>
 # Based off of original work in gst-plugins.eclass by <foser@gentoo.org>
@@ -14,6 +14,10 @@ LICENSE="LGPL-2"
 
 HOMEPAGE="http://gtk-sharp.sourceforge.net/"
 LICENSE="LGPL-2.1"
+
+[ ${PV} == "1.9.3.1" ] && \
+	SOURCE_SERVER="http://www.go-mono.com/sources/gtk-sharp-2.0/" || \
+	SOURCE_SERVER="mirror://sourceforge/gtk-sharp/"
 
 ###
 # variable declarations
@@ -45,7 +49,7 @@ GTK_SHARP_COMPONENT_BUILD_DEPS=""
 GTK_SHARP_COMPONENT_BUILD_DIR=${PN/-sharp/}
 
 DESCRIPTION="${GTK_SHARP_COMPONENT_BUILD} component of gtk-sharp"
-SRC_URI="mirror://sourceforge/gtk-sharp/${MY_P}.tar.gz
+SRC_URI="${SOURCE_SERVER}/${MY_P}.tar.gz
 		mirror://gentoo/${MY_P}-configurable.diff.gz"
 
 S=${WORKDIR}/${MY_P}
@@ -74,8 +78,7 @@ gtk-sharp-component_fix_makefiles() {
 			$(find ${S} -name Makefile.in) || die "Failed to fix the gtk-sharp makefiles"
 
 	# Changes specific to 1.9.3
-	if [ "${PV}" == "1.9.3" ] ; then
-		einfo "Got 1.9.3 version"
+	if [ "${PV:0:5}" == "1.9.3" ] ; then
 		sed -i -e "s:\$(API) \$(top_builddir)/parser/gapi-fixup.exe:\$(API):" \
 			-e "s:\$(API) \$(top_builddir)/generator/gapi_codegen.exe:\$(API):" \
 			-e "s:\$(RUNTIME) \$(top_builddir)/parser/gapi-fixup.exe:${GAPI_FIXUP}:" \
