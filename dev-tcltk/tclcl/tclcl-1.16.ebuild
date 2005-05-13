@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclcl/tclcl-1.16.ebuild,v 1.1 2005/04/03 13:56:05 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclcl/tclcl-1.16.ebuild,v 1.2 2005/05/13 22:21:45 matsuu Exp $
 
 inherit eutils
 
@@ -17,6 +17,12 @@ IUSE=""
 DEPEND=">=dev-lang/tcl-8.3.2
 	>=dev-lang/tk-8.3.2
 	>=dev-tcltk/otcl-1.0.8"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${P}-http.patch
+}
 
 src_compile() {
 	local tclv tkv myconf

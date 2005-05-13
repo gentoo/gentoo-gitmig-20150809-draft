@@ -1,0 +1,22 @@
+diff -Naur tclcl-1.16.orig/conf/configure.in.tcl tclcl-1.16/conf/configure.in.tcl
+--- tclcl-1.16.orig/conf/configure.in.tcl	2005-01-04 06:33:01.000000000 +0900
++++ tclcl-1.16/conf/configure.in.tcl	2005-05-14 07:02:53.000000000 +0900
+@@ -178,6 +178,7 @@
+ tcl_http_places=" \
+ 	$V_LIBRARY_TCL \
+ 	$V_LIBRARY_TCL/http \
++	$V_LIBRARY_TCL/http2.5 \
+ 	$V_LIBRARY_TCL/http2.4 \
+ 	$V_LIBRARY_TCL/http2.3 \
+ 	$V_LIBRARY_TCL/http2.1 \
+diff -Naur tclcl-1.16.orig/configure tclcl-1.16/configure
+--- tclcl-1.16.orig/configure	2005-01-20 05:58:48.000000000 +0900
++++ tclcl-1.16/configure	2005-05-14 07:03:06.000000000 +0900
+@@ -5531,6 +5531,7 @@
+ tcl_http_places=" \
+ 	$V_LIBRARY_TCL \
+ 	$V_LIBRARY_TCL/http \
++	$V_LIBRARY_TCL/http2.5 \
+ 	$V_LIBRARY_TCL/http2.4 \
+ 	$V_LIBRARY_TCL/http2.3 \
+ 	$V_LIBRARY_TCL/http2.1 \
