@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/solarwolf/solarwolf-1.5.ebuild,v 1.6 2005/05/12 17:48:14 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/solarwolf/solarwolf-1.5.ebuild,v 1.7 2005/05/13 00:23:30 mr_bones_ Exp $
 
-inherit games
+inherit eutils games
 
 DESCRIPTION="action/arcade recreation of SolarFox"
 HOMEPAGE="http://www.pygame.org/shredwheat/solarwolf/"
@@ -19,7 +19,7 @@ DEPEND=">=dev-python/pygame-1.5.6
 
 src_unpack() {
 	unpack ${A}
-	find "${S}" -name .xvpics -print0 | xargs -0 rm -r
+	find "${S}" -name .xvpics -print0 | xargs -0 rm -fr
 }
 
 src_install() {
@@ -27,9 +27,8 @@ src_install() {
 	doman dist/solarwolf.6.gz
 	dodir "${GAMES_LIBDIR}/${PN}"
 	cp -r code/ data/ *py "${D}/${GAMES_LIBDIR}/${PN}/" || die "cp failed"
-	games_make_wrapper solarwolf "python ./solarwolf.py" ${GAMES_LIBDIR}/${PN}
-	insinto /usr/share/icons
-	doins dist/solarwolf.png
+	games_make_wrapper solarwolf "python ./solarwolf.py" "${GAMES_LIBDIR}/${PN}"
+	doicon dist/solarwolf.png
 	make_desktop_entry solarwolf
 	prepgamesdirs
 }
