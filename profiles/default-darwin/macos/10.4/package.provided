@@ -17,3 +17,6 @@ dev-php/php-4.3.10
 dev-util/cvs-1.11.18
 media-libs/freetype-2.1.4
 sys-devel/gdb-6.1.20040303
+
+# gongloo: addin the latest version of freebsd-stat in here, not sure on the actual version, but 10.4 does provide stat.
+sys-apps/freebsd-stat-5.3_p20050202
