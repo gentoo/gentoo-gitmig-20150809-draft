@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/tiff
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/ChangeLog,v 1.58 2005/05/10 19:55:20 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/ChangeLog,v 1.59 2005/05/13 20:58:05 killerfox Exp $
+
+  13 May 2005; Rene Nussbaumer <killerfox@gentoo.org> tiff-3.7.2.ebuild:
+  stable on hppa
 
   10 May 2005; Joseph Jezak <josejx@gentoo.org> :
   Marked ppc stable for bug #91584.
