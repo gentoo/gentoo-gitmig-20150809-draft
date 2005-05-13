@@ -1,24 +1,34 @@
-MD5 0a8433e2e5b93e20a626cdd3f38f90e7 fox-1.2.15.ebuild 931
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 195b2a16cf2a3ec4dea46d435b8eece2 fox-1.4.12.ebuild 931
+MD5 bbd8ab695e65d4d3678a32a7068a3457 ChangeLog 4882
+MD5 059733ad92a101895ce18a1120b6eb55 metadata.xml 225
 MD5 042d23061d212f553c3b44d3e99f6a99 fox-1.0.43.ebuild 1146
 MD5 f793254a74b6b00db3cc044bae1f2f62 fox-1.2.4.ebuild 1207
+MD5 4096e936967a7b83572707bc89816afb fox-1.5.4.ebuild 930
+MD5 d859eab1b76e952316741b414ef8acf6 fox-1.0.49.ebuild 1177
+MD5 5141afce9474b431ebc2be62b4fe35f1 fox-1.0.53.ebuild 843
+MD5 0a8433e2e5b93e20a626cdd3f38f90e7 fox-1.2.15.ebuild 931
 MD5 0bb4491c29bb77c182a1b05c0fc2d896 fox-1.4.11.ebuild 1486
 MD5 69b033422e3ef99c4104449924a1c735 fox-1.2.6-r3.ebuild 1337
 MD5 a5f1167fb465b82c2c240f208d924c3d fox-1.0.40.ebuild 1146
-MD5 966e6344d9604197999a8415e2fb8874 fox-1.2.6-r2.ebuild 1449
-MD5 5141afce9474b431ebc2be62b4fe35f1 fox-1.0.53.ebuild 843
-MD5 d859eab1b76e952316741b414ef8acf6 fox-1.0.49.ebuild 1177
-MD5 195b2a16cf2a3ec4dea46d435b8eece2 fox-1.4.12.ebuild 931
-MD5 7c26633829ef2510f86c13a7f04372aa ChangeLog 4793
-MD5 4096e936967a7b83572707bc89816afb fox-1.5.4.ebuild 930
-MD5 059733ad92a101895ce18a1120b6eb55 metadata.xml 225
-MD5 e66ac5665267aa76e1efc8da12cc8928 files/digest-fox-1.0.40 63
+MD5 648fb00018cb91ab77eaaec950d052d3 fox-1.2.6-r2.ebuild 1455
 MD5 fb1e5d65f9c5bfd6f2f4e1b710c857d3 files/digest-fox-1.0.43 63
-MD5 70f3d73defc6189bbc075d615bde3594 files/digest-fox-1.0.49 63
-MD5 0095a83c05118d9e346dd2d8ba18bb4f files/digest-fox-1.0.53 63
-MD5 d54a926d81530863bfe613992128d46d files/digest-fox-1.2.15 63
-MD5 f9d9e432dde17dda3e7caeb01768d25f files/digest-fox-1.4.11 63
-MD5 8facf84e5d62d38f0aee44efd517f615 files/digest-fox-1.4.12 63
 MD5 dfa6f7b6f4106903b051128fd8838422 files/digest-fox-1.2.4 62
-MD5 ef6bd59b06837347451172daa73db79f files/digest-fox-1.5.4 62
+MD5 70f3d73defc6189bbc075d615bde3594 files/digest-fox-1.0.49 63
+MD5 8facf84e5d62d38f0aee44efd517f615 files/digest-fox-1.4.12 63
+MD5 d54a926d81530863bfe613992128d46d files/digest-fox-1.2.15 63
 MD5 7a002248b0d876eef33d56604799ab64 files/digest-fox-1.2.6-r2 62
+MD5 f9d9e432dde17dda3e7caeb01768d25f files/digest-fox-1.4.11 63
+MD5 e66ac5665267aa76e1efc8da12cc8928 files/digest-fox-1.0.40 63
 MD5 7a002248b0d876eef33d56604799ab64 files/digest-fox-1.2.6-r3 62
+MD5 ef6bd59b06837347451172daa73db79f files/digest-fox-1.5.4 62
+MD5 0095a83c05118d9e346dd2d8ba18bb4f files/digest-fox-1.0.53 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFChSFiKf2g/qXtneoRAiSmAKC4H0IgF2tvON38vOpXeW6I8bb2qwCgl7//
+XxMlgDICPY+MA/KZbWL1sfA=
+=O7pc
+-----END PGP SIGNATURE-----
