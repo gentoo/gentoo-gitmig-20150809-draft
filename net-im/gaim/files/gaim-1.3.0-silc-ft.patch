@@ -1,0 +1,19 @@
+Index: ft.c
+===================================================================
+RCS file: /cvsroot/gaim/gaim/src/protocols/silc/ft.c,v
+retrieving revision 1.5.2.1
+diff -u -r1.5.2.1 ft.c
+--- ft.c	10 Feb 2005 00:07:35 -0000	1.5.2.1
++++ ft.c	13 May 2005 15:11:38 -0000
+@@ -363,11 +363,6 @@
+ 	if (!silc_parse_userfqdn(name, &nickname, NULL))
+ 		return;
+ 
+-#ifndef _WIN32
+-	silc_debug = TRUE;
+-	silc_log_set_debug_string("*client*,*ftp*");
+-#endif
+-
+ 	/* Find client entry */
+ 	clients = silc_client_get_clients_local(client, conn, nickname, name,
+ 						&clients_count);

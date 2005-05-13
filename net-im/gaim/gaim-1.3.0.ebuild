@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-1.3.0.ebuild,v 1.6 2005/05/11 23:17:42 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-1.3.0.ebuild,v 1.7 2005/05/13 21:16:30 rizzo Exp $
 
 inherit flag-o-matic eutils gcc debug
 
@@ -90,6 +90,13 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	use cjk && epatch ${FILESDIR}/gaim-0.76-xinput.patch
+
+	# Fix silc building
+	if use silc ; then
+		cd ${S}/src/protocols/silc
+		epatch ${FILESDIR}/gaim-1.3.0-silc-ft.patch
+		cd ${S}
+	fi
 }
 
 src_compile() {
