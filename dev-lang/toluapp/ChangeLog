@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/toluapp
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/toluapp/ChangeLog,v 1.6 2005/04/24 12:36:15 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/toluapp/ChangeLog,v 1.7 2005/05/13 18:31:53 twp Exp $
+
+*toluapp-1.0.5_p1 (13 May 2005)
+
+  13 May 2005; Tom Payne <twp@gentoo.org> +toluapp-1.0.5_p1.ebuild:
+  Version bump. Bug # 91573.
 
   24 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> toluapp-1.0.2.ebuild:
   Stable on ppc.
