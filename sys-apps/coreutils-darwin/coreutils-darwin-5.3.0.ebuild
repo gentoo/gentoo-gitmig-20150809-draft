@@ -1,6 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils-darwin/coreutils-darwin-5.3.0.ebuild,v 1.1 2005/05/12 20:03:31 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils-darwin/coreutils-darwin-5.3.0.ebuild,v 1.2 2005/05/13 01:51:35 josejx Exp $
+
+inherit eutils
 
 DESCRIPTION="Standard GNU file utilities, text utilities, and shell utilities missing from Darwin."
 HOMEPAGE="http://www.gnu.org/software/coreutils/"
@@ -32,6 +34,7 @@ EXISTINGBIN="cat chmod cp date dd df echo expr ln ls mkdir mv pwd rm rmdir sleep
 EXISTINGUSBIN="chown chroot"
 EXISTINGSBIN="mknod"
 DONTLINK="[ kill hostname"
+TENFOUR="link unlink csplit nl pathchk"
 
 src_compile() {
 	cd ${S}
@@ -40,12 +43,10 @@ src_compile() {
 		--bindir=/bin \
 		`use_enable nls` || die
 
-	if use static
-	then
-		emake LDFLAGS="${LDFLAGS} -static" || die
-	else
-		emake || die
+	if use static; then
+		append-ldflags -static
 	fi
+	emake || die
 }
 
 src_install() {
@@ -59,6 +60,10 @@ src_install() {
 	rm -rf usr/lib
 
 	cd bin
+	if [ "$MACOSX_DEPOYMENT_TARGET" == "10.4" ]; then
+		rm ${TENFOUR}
+	fi
+
 	rm ${EXISTINGBIN} ${EXISTINGUSR} ${EXISTINGUSBIN} ${EXISTINGSBIN} ${DONTLINK}
 
 	# Move the non-critical pacakges to /usr/bin
