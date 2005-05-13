@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/hmmer/hmmer-2.3.2-r1.ebuild,v 1.2 2005/03/06 15:12:13 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/hmmer/hmmer-2.3.2-r1.ebuild,v 1.3 2005/05/13 03:16:23 ribosome Exp $
 
 DESCRIPTION="Sequence analysis using profile hidden Markov models"
 LICENSE="GPL-2"
@@ -9,7 +9,7 @@ SRC_URI="ftp://ftp.genetics.wustl.edu/pub/eddy/${PN}/${PV}/${P}.tar.gz"
 
 SLOT="0"
 IUSE="pvm threads"
-KEYWORDS="~x86 ~amd64 ~ppc ~ppc-macos"
+KEYWORDS="x86 ~amd64 ~ppc ~ppc-macos"
 
 DEPEND="virtual/libc
 	pvm? ( sys-cluster/pvm )"
