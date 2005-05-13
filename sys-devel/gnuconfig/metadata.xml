@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>base-system</herd>
-<maintainer>
-<email>kumba@gentoo.org</email>
-</maintainer>
-
 <longdescription>
 Updated config.{sub,guess} files from upstream cvs to properly detect various system types.
 </longdescription>
