@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 64a78e4c54acdf62925f66e2632b6c9f ChangeLog 3068
-MD5 5015f7e54404d64974a4a4829cf8e6fc PEAR-Net_Socket-1.0.1-r1.ebuild 371
 MD5 34b376f52ca199fffb4e52b83169574a metadata.xml 156
-MD5 d3fa50c02bce400894ed3341e4b15402 PEAR-Net_Socket-1.0.5.ebuild 386
+MD5 5015f7e54404d64974a4a4829cf8e6fc PEAR-Net_Socket-1.0.1-r1.ebuild 371
+MD5 bab6a394be77eede86dbe1f2d221ec98 PEAR-Net_Socket-1.0.5.ebuild 389
 MD5 1e3fb090d5a7053f58557783f2c114c7 files/digest-PEAR-Net_Socket-1.0.1-r1 63
 MD5 c5da95fc0e50b850db1d691af4123319 files/digest-PEAR-Net_Socket-1.0.5 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFCe9F+KRy60XGEcJIRAnADAJwIP9Rfr+a17t0r/9P2Q3P6pxkogACcD9qj
-2TtDZq5B7Dm6xLkliUxLQbA=
-=P+aF
------END PGP SIGNATURE-----
