@@ -1,6 +1,13 @@
 # ChangeLog for dev-dotnet/nant
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/nant/ChangeLog,v 1.1 2005/03/16 18:52:38 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/nant/ChangeLog,v 1.2 2005/05/13 00:45:12 latexer Exp $
+
+*nant-0.85_rc3 (13 May 2005)
+
+  13 May 2005; Peter Johanson <latexer@gentoo.org>
+  +files/nant-0.85-rc3-mono-1.1.7-compat.diff, +nant-0.85_rc3.ebuild:
+  Bump. Includes fixes to make nant compile on mono-1.1.7, and now builds
+  with the 2.0 profile if on mono-1.1.x
 
 *nant-0.85_rc2 (16 Mar 2005)
 
