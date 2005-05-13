@@ -1,6 +1,11 @@
 # ChangeLog for app-arch/bzip2
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/bzip2/ChangeLog,v 1.22 2005/04/06 23:04:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/bzip2/ChangeLog,v 1.23 2005/05/13 02:25:39 vapier Exp $
+
+*bzip2-1.0.3-r1 (13 May 2005)
+
+  13 May 2005; Mike Frysinger <vapier@gentoo.org> +bzip2-1.0.3-r1.ebuild:
+  Install the shared version of bzip into / along with libbz2.so.
 
 *bzip2-1.0.3 (06 Apr 2005)
 
