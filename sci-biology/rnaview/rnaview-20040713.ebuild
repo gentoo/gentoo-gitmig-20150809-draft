@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/rnaview/rnaview-1.ebuild,v 1.3 2005/01/30 17:14:13 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/rnaview/rnaview-20040713.ebuild,v 1.1 2005/05/13 01:16:49 ribosome Exp $
 
 inherit toolchain-funcs
 
