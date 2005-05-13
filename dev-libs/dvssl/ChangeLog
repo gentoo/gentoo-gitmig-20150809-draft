@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/dvssl
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvssl/ChangeLog,v 1.8 2004/07/02 04:38:27 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvssl/ChangeLog,v 1.9 2005/05/13 01:35:40 pvdabeel Exp $
+
+*dvssl-0.5.4-r1 (13 May 2005) 
+  13 May 2005; Pieter Van den Abeele <pvdabeel@gentoo.org> dvssl-0.5.4-r1.ebuild,
+  revision bump
+
+*dvssl-0.5.4 (07 Apr 2005)
+  07 Apr 2005; Pieter Van den Abeele <pvdabeel@gentoo.org> dvssl-0.5.4.ebuild,
+  new version
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> dvssl-0.5.2.ebuild,
   dvssl-0.5.3.ebuild, dvssl-0.5.4.ebuild:
