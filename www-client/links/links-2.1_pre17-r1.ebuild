@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/links/links-2.1_pre17-r1.ebuild,v 1.4 2005/05/09 20:41:50 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/links/links-2.1_pre17-r1.ebuild,v 1.5 2005/05/13 16:18:21 vanquirius Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ SRC_URI="${HOMEPAGE}/download/${MY_P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="2"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~ppc-macos ~s390 ~sparc ~x86"
 IUSE="directfb ssl javascript png X gpm tiff fbcon svga jpeg unicode livecd"
 
 # Note: if X or fbcon usegflag are enabled, links will be built in graphic
@@ -36,9 +36,10 @@ RDEPEND="ssl? ( >=dev-libs/openssl-0.9.6c )
 	directfb? ( dev-libs/DirectFB )
 	fbcon? ( >=media-libs/libpng-1.2.1
 		sys-libs/gpm )
-	livecd? ( >=media-libs/jpeg-6b
+	!ppc-macos? ( livecd?
+		( >=media-libs/jpeg-6b
 		>=media-libs/libpng-1.2.1
-		sys-libs/gpm )
+		sys-libs/gpm ))
 	sys-libs/zlib
 	virtual/libc
 	sys-libs/ncurses"
@@ -93,6 +94,10 @@ src_compile (){
 		myconf="${myconf} --without-fb"
 	fi
 
+	if use livecd; then
+		myconf="${myconf} --with-libjpeg"
+	fi
+
 	econf \
 		$(use_with X x) \
 		$(use_with png libpng) \
@@ -100,7 +105,6 @@ src_compile (){
 		$(use_with tiff libtiff) \
 		$(use_with svga svgalib) \
 		$(use_with directfb) \
-		$(use_with livecd libjpeg) \
 		$(use_with ssl) \
 		$(use_enable javascript) \
 		${myconf} || die "configure failed"

@@ -1,6 +1,10 @@
 # ChangeLog for www-client/links
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/links/ChangeLog,v 1.13 2005/05/09 20:41:50 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/links/ChangeLog,v 1.14 2005/05/13 16:18:21 vanquirius Exp $
+
+  13 May 2005; Marcelo Goes <vanquirius@gentoo.org> links-2.1_pre17-r1.ebuild:
+  Changed RDEPEND to allow ppc-macos to work again, changed src_compile to fix
+  bug 91946 regarding failure to display jpeg images.
 
   09 May 2005; Marcelo Goes <vanquirius@gentoo.org> links-2.1_pre17-r1.ebuild:
   This ebuild is broken (see bug 91946) and should have been tested in the first
