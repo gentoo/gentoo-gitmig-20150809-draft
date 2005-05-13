@@ -1,4 +1,4 @@
-MD5 b243da769eb5d4b986d5efc316bcdcfc ChangeLog 386
-MD5 ef40c0285190194bfbf23773f2d9d3a1 baselayout-darwin-1.11.11.ebuild 2197
+MD5 74582a2b01f982b22695517175786d31 baselayout-darwin-1.11.11.ebuild 2194
 MD5 fc76b60032187aa3e2029ee04b00e773 metadata.xml 156
+MD5 b5eb4ad1af9d6d9932e681f842b22e92 ChangeLog 510
 MD5 195cf81f844cac1211a1b29cb1528bde files/digest-baselayout-darwin-1.11.11 76

@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/baselayout-darwin
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout-darwin/ChangeLog,v 1.1 2005/05/12 06:11:18 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout-darwin/ChangeLog,v 1.2 2005/05/13 20:14:16 gongloo Exp $
+
+  13 May 2005; <gongloo@gentoo.org> baselayout-darwin-1.11.11.ebuild:
+  Fixed xargs command-line argument (--null to -0).
 
 *baselayout-darwin-1.11.11 (12 May 2005)
 
