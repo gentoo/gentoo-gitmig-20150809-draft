@@ -2,5 +2,7 @@ MD5 c576c77299841f3a620ff633c5dd1886 ChangeLog 568
 MD5 3df553e94423a0075a61a43a56dc6726 metadata.xml 256
 MD5 a60ba3dc16213e44edc0adbd29f4a371 gnomevfs-sharp-1.9.2.ebuild 419
 MD5 8cdf5defa8cbe01106275a90e6fdfbd9 gnomevfs-sharp-1.9.3.ebuild 419
+MD5 a60ba3dc16213e44edc0adbd29f4a371 gnomevfs-sharp-1.9.3.1.ebuild 419
 MD5 d1dddb54802e684259aedfd27a11af15 files/digest-gnomevfs-sharp-1.9.2 147
 MD5 284fbaa2e02c9f1dca27440457411e0b files/digest-gnomevfs-sharp-1.9.3 147
+MD5 fe4e7ed3578050079793d30322ad8a6c files/digest-gnomevfs-sharp-1.9.3.1 151
