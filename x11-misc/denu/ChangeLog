@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/denu
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/denu/ChangeLog,v 1.6 2005/05/01 17:23:41 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/denu/ChangeLog,v 1.7 2005/05/13 17:13:43 blubb Exp $
+
+  13 May 2005; Simon Stelling <blubb@gentoo.org> denu-2.3.2.ebuild:
+  stable on hppa
 
   01 May 2005; Michael Hanselmann <hansmi@gentoo.org> denu-2.3.2.ebuild:
   Stable on ppc.
