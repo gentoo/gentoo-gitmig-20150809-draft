@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/initng/initng-0.0.15.ebuild,v 1.1 2005/05/13 01:23:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/initng/initng-0.0.16.ebuild,v 1.1 2005/05/13 01:29:13 vapier Exp $
 
 DESCRIPTION="A next generation init replacement"
 HOMEPAGE="http://jw.dyndns.org/initng/"
-SRC_URI="http://jw.dyndns.org/initng/${P}.tar.bz2"
+SRC_URI="http://jw.dyndns.org/initng/download/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
