@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/evkeyd
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/evkeyd/ChangeLog,v 1.6 2004/09/03 21:03:23 pvdabeel Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/evkeyd/ChangeLog,v 1.7 2005/05/14 18:25:32 plasmaroo Exp $
+
+  14 May 2005; <plasmaroo@gentoo.org> evkeyd-0.1_pre7.ebuild:
+  Fix compile on 2.6 headers; bug #91131.
 
   03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   evkeyd-0.1_pre2.ebuild, evkeyd-0.1_pre3.ebuild, evkeyd-0.1_pre7.ebuild:
