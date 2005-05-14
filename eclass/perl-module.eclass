@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.68 2005/04/29 00:54:37 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.69 2005/05/14 14:06:39 mcummings Exp $
 #
 # Author: Seemant Kulleen <seemant@gentoo.org>
 # Maintained by the Perl herd <perl@gentoo.org>
@@ -105,6 +105,8 @@ perl-module_src_compile() {
 	[ "${SRC_PREP}" != "yes" ] && perl-module_src_prep
 	if [ -z ${BUILDER_VER} ]; then
 		make ${mymake} || die "compilation failed"
+	else
+		perl ${S}/Build build
 	fi
 
 }
