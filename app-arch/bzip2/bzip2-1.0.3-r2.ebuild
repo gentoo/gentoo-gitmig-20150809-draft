@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/bzip2/bzip2-1.0.3-r1.ebuild,v 1.1 2005/05/13 02:25:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/bzip2/bzip2-1.0.3-r2.ebuild,v 1.1 2005/05/14 17:36:14 vapier Exp $
 
 inherit multilib toolchain-funcs flag-o-matic
 
@@ -23,8 +23,6 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-saneso.patch
 	epatch "${FILESDIR}"/${PN}-1.0.2-progress.patch
 	sed -i -e 's:\$(PREFIX)/man:\$(PREFIX)/share/man:g' Makefile || die "sed manpath"
-
-	use static && append-flags -static
 
 	# - Generate symlinks instead of hardlinks
 	# - pass custom variables to control libdir
@@ -49,6 +47,7 @@ src_compile() {
 	if ! use build ; then
 		emake ${makeopts} -f Makefile-libbz2_so all || die "Make failed libbz2"
 	fi
+	use static && append-flags -static
 	emake ${makeopts} all || die "Make failed"
 }
 
@@ -59,7 +58,9 @@ src_install() {
 		# move bzip2 binaries to / and use the shared libbz2.so
 		mv "${D}"/usr/bin "${D}"/
 		into /
-		newbin bzip2-shared bzip2 || die "dobin shared"
+		if ! use static ; then
+			newbin bzip2-shared bzip2 || die "dobin shared"
+		fi
 		dolib.so "${S}"/libbz2.so.${PV} || die "dolib shared"
 		for v in ${PV%%.*} ${PV%.*} ; do
 			dosym libbz2.so.${PV} /$(get_libdir)/libbz2.so.${v}
