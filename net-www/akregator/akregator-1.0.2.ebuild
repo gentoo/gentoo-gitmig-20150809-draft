@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/akregator/akregator-1.0.2.ebuild,v 1.1 2005/03/24 18:35:31 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/akregator/akregator-1.0.2.ebuild,v 1.2 2005/05/14 09:58:45 greg_g Exp $
 
 inherit kde
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://akregator.sourceforge.net/"
 LICENSE="GPL-2"
 
 IUSE=""
-KEYWORDS="~x86 ~amd64 ~ppc ~sparc"
+KEYWORDS="x86 ~amd64 ~ppc ~sparc"
 SLOT="0"
 
 DEPEND="!kde-base/akregator
