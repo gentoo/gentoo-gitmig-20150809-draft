@@ -1,0 +1,16 @@
+# ChangeLog for app-mobilephone/vmoconv
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/vmoconv/ChangeLog,v 1.1 2005/05/14 14:59:52 mrness Exp $
+
+  14 May 2005; Alin Nastac <mrness@gentoo.org> metadata.xml:
+  Moved from app-misc/vmoconv to app-mobilephone/vmoconv.
+
+  07 Feb 2005; Andrej Kacian <ticho@gentoo.org> vmoconv-1.0.ebuild:
+  Stable on x86.
+
+*vmoconv-1.0 (08 Jan 2005)
+
+  08 Jan 2005; Andrej Kacian <ticho@gentoo.org> +metadata.xml,
+  +vmoconv-1.0.ebuild:
+  Initial import.
+
