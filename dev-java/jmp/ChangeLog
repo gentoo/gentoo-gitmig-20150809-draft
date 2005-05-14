@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jmp
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jmp/ChangeLog,v 1.7 2005/03/28 17:59:56 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jmp/ChangeLog,v 1.8 2005/05/14 21:46:40 luckyduck Exp $
+
+  14 May 2005; Jan Brinkmann <luckyduck@gentoo.org> jmp-0.46.ebuild:
+  stable on amd64, ppc and x86
 
 *jmp-0.46 (28 Mar 2005)
 
