@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/gnu-jaxp
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-jaxp/ChangeLog,v 1.12 2005/04/26 01:33:13 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-jaxp/ChangeLog,v 1.13 2005/05/14 20:46:20 luckyduck Exp $
+
+  14 May 2005; Jan Brinkmann <luckyduck@gentoo.org>
+  -gnu-jaxp-1.0_beta1.ebuild, gnu-jaxp-1.0_beta1-r1.ebuild:
+  stable on ppc
 
   26 Apr 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   gnu-jaxp-1.0_beta1-r1.ebuild:
