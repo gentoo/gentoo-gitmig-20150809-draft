@@ -1,0 +1,17 @@
+# ChangeLog for app-mobilephone/gnome-phone-manager
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnome-phone-manager/ChangeLog,v 1.1 2005/05/14 12:07:02 mrness Exp $
+
+*gnome-phone-manager-0.4 (14 May 2005)
+
+  14 May 2005; Alin Nastac <mrness@gentoo.org> metadata.xml:
+  Moved from net-wireless/gnome-phone-manager to
+  app-mobilephone/gnome-phone-manager.
+
+*gnome-phone-manager-0.4 (08 May 2005)
+
+  08 May 2005; Alin Nastac <mrness@gentoo.org>
+  +files/gnome-phone-manager-0.4-gcc3.patch, +metadata.xml,
+  +gnome-phone-manager-0.4.ebuild:
+  Initial import from bug #54448.
+
