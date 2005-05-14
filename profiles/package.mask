@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3967 2005/05/14 13:41:33 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3968 2005/05/14 14:50:54 vanquirius Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -39,10 +39,6 @@
 # Jory A. Pratt <anarchy@penguin-geek.com> (09 May 2005)
 # masked until -fPIC is on libs only
 >=net-mail/vpopmail-5.4.9-r1
-
-# Marcelo Goes <vanquirius@gentoo.org> (09 May 2005)
-# Broken ebuild, pending fix
-=www-client/links-2.1_pre17-r1
 
 # Masatomo Nakano <nakano@gentoo.org> (08 May 2005)
 # Masked for testing with new libpq package.
