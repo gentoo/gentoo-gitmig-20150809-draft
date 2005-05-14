@@ -1,4 +1,14 @@
-MD5 735f096f44f3121f4c1c2ca826168216 ChangeLog 640
-MD5 6b480ab5be5dfe7182a3f1729cea04a8 doom-data-1.ebuild 712
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 586657c5746006ff72f83d53da2ed8bd doom-data-1.ebuild 715
+MD5 da1ef7c5fb0f856f301557a6d608278a ChangeLog 733
 MD5 664d393ce2c056c10b77f1de646532fc metadata.xml 258
 MD5 0920d5e9930b81ddde508b24d23595ff files/digest-doom-data-1 59
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFChV8FBXaUFmZvwyMRAsiaAKCahy9XITo+Ue7wG3mTiJ2ZcRcmXQCg3EFA
+WnJsRzfOFbDtFEOdAaUGBkI=
+=I1nS
+-----END PGP SIGNATURE-----
