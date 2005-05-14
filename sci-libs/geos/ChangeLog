@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/geos
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/geos/ChangeLog,v 1.1 2005/05/11 23:39:21 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/geos/ChangeLog,v 1.2 2005/05/14 04:19:22 matsuu Exp $
+
+  14 May 2005; MATSUU Takuto <matsuu@gentoo.org> geos-2.1.1.ebuild:
+  mark ~amd64
 
 *geos-2.1.1 (11 May 2005)
 
