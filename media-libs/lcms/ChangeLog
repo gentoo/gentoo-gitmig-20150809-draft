@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/lcms
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lcms/ChangeLog,v 1.39 2005/04/24 18:10:40 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lcms/ChangeLog,v 1.40 2005/05/14 14:22:37 lanius Exp $
+
+*lcms-1.14 (14 May 2005)
+
+  14 May 2005; Heinrich Wendel <lanius@gentoo.org> lcms-1.13-r1.ebuild,
+  +lcms-1.14.ebuild:
+  version bump; 1.13-r1 stable on amd64, x86
 
 *lcms-1.13-r1 (24 Apr 2005)
 
