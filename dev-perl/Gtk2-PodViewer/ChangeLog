@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/Gtk2-PodViewer
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Gtk2-PodViewer/ChangeLog,v 1.1 2005/05/14 01:39:52 mcummings Exp $
+
+*Gtk2-PodViewer-0.09 (13 May 2005)
+
+  13 May 2005; Michael Cummings <mcummings@gentoo.org> +metadata.xml,
+  +Gtk2-PodViewer-0.09.ebuild:
+  Initial import, bug 55662
+
