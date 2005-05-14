@@ -1,6 +1,11 @@
 # ChangeLog for net-irc/scrollz
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/scrollz/ChangeLog,v 1.16 2005/04/07 16:42:08 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/scrollz/ChangeLog,v 1.17 2005/05/14 17:50:56 swegener Exp $
+
+*scrollz-1.9.5 (14 May 2005)
+
+  14 May 2005; Sven Wegener <swegener@gentoo.org> +scrollz-1.9.5.ebuild:
+  Version bump, bug #92618.
 
   07 Apr 2005; Simon Stelling <blubb@gentoo.org> scrollz-1.9.4-r1.ebuild:
   stable on amd64
