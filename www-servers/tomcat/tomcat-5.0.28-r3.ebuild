@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.0.28-r2.ebuild,v 1.7 2005/05/07 17:19:45 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.0.28-r3.ebuild,v 1.1 2005/05/14 16:13:34 luckyduck Exp $
 
 inherit eutils java-pkg
 
@@ -15,7 +15,7 @@ DEPEND="sys-apps/sed
 	   >=virtual/jdk-1.4
 	   ${RDEPEND}"
 RDEPEND=">=virtual/jdk-1.4
-	   >=dev-java/commons-beanutils-1.7.0
+	   =dev-java/commons-beanutils-1.7*
 	   >=dev-java/commons-collections-3.1
 	   >=dev-java/commons-daemon-1.0
 	   >=dev-java/commons-dbcp-1.2.1
@@ -77,7 +77,7 @@ src_unpack() {
 	java-pkg_jar-from servletapi-2.4
 
 	mkdir -p ../../server/lib && cd ../../server/lib
-	java-pkg_jar-from commons-beanutils commons-beanutils.jar
+	java-pkg_jar-from commons-beanutils-1.7 commons-beanutils.jar
 	java-pkg_jar-from commons-digester
 	java-pkg_jar-from commons-fileupload
 	java-pkg_jar-from commons-modeler
@@ -102,7 +102,7 @@ src_compile(){
 	antflags="${antflags} -Dlog4j.jar=$(java-config -p log4j)"
 	antflags="${antflags} -Dregexp.jar=$(java-config -p jakarta-regexp-1.3)"
 	antflags="${antflags} -Dstruts.jar=$(java-pkg_getjar struts struts.jar)"
-	antflags="${antflags} -Dcommons-beanutils.jar=$(java-pkg_getjar	commons-beanutils commons-beanutils.jar)"
+	antflags="${antflags} -Dcommons-beanutils.jar=$(java-pkg_getjar commons-beanutils-1.7 commons-beanutils.jar)"
 	antflags="${antflags} -Dcommons-logging.jar=$(java-pkg_getjar commons-logging commons-logging.jar)"
 	antflags="${antflags} -Dcommons-logging-api.jar=$(java-pkg_getjar commons-logging commons-logging-api.jar)"
 	antflags="${antflags} -Djaxen.jar=$(java-pkg_getjar jaxen jaxen-full.jar)"

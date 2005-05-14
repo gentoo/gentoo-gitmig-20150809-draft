@@ -1,6 +1,12 @@
 # ChangeLog for www-servers/tomcat
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.28 2005/05/07 17:19:45 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.29 2005/05/14 16:13:34 luckyduck Exp $
+
+*tomcat-5.0.28-r3 (14 May 2005)
+
+  14 May 2005; Jan Brinkmann <luckyduck@gentoo.org>
+  -tomcat-5.0.28-r2.ebuild, +tomcat-5.0.28-r3.ebuild:
+  updated commons-beanutils dependency to reflect new slotting. see #71952
 
   07 May 2005; Jason Wever <weeve@gentoo.org> tomcat-5.0.28-r2.ebuild:
   Added ~sparc keyword.
