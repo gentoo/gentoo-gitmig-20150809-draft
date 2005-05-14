@@ -1,0 +1,15 @@
+diff -uprN glame-2.0.1.orig/configure.ac glame-2.0.1/configure.ac
+--- glame-2.0.1.orig/configure.ac	2005-05-14 11:53:46.000000000 +0200
++++ glame-2.0.1/configure.ac	2005-05-14 11:56:48.000000000 +0200
+@@ -57,7 +57,10 @@ if test "$swdebug" = "yes" -o "$glame_de
+ 	glame_debug_gcc_cflags="-O -g"
+ elif test "$glame_debug" = "no"; then
+ 	AC_DEFINE(NDEBUG,, [disable debugging code])
+-	glame_debug_gcc_cflags="-O3 -funroll-loops -ffast-math -fomit-frame-pointer"
++	if test -z "$CFLAGS"; then
++		CFLAGS="-O2 -ffast-math"
++	fi
++	glame_debug_gcc_cflags="$CFLAGS"
+ else
+ 	glame_debug_gcc_cflags="-O2 -g -ffast-math"
+ fi
