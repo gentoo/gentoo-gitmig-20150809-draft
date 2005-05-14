@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/anthy-ss/anthy-ss-6504.ebuild,v 1.1 2005/05/05 14:25:31 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/anthy-ss/anthy-ss-6504.ebuild,v 1.2 2005/05/14 08:20:35 blubb Exp $
 
 inherit elisp-common eutils
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://anthy.sourceforge.jp/"
 SRC_URI="mirror://sourceforge.jp/anthy/14562/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ~ppc ~amd64"
 SLOT="0"
 S="${WORKDIR}/${MY_P}"
 
