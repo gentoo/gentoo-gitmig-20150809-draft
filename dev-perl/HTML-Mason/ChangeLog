@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/HTML-Mason
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Mason/ChangeLog,v 1.25 2005/05/10 00:17:44 beu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Mason/ChangeLog,v 1.26 2005/05/14 02:03:42 mcummings Exp $
+
+*HTML-Mason-1.28 (13 May 2005)
+
+  13 May 2005; Michael Cummings <mcummings@gentoo.org>
+  +HTML-Mason-1.28.ebuild:
+  Bug 81253, thanks to Matthew Philips <mattphilips@hotmail.com> for some
+  updates to the ebuild
 
   10 May 2005; Elfyn McBratney <beu@gentoo.org> HTML-Mason-1.20.ebuild,
   HTML-Mason-1.22.ebuild, HTML-Mason-1.25.ebuild, HTML-Mason-1.26.ebuild:
