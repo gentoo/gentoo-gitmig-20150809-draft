@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 32d6a18133a8244c6496953e017bc8de ChangeLog 3807
+MD5 f17d1977aeaf8245f9d7a45a9f23dcc1 pyrex-0.9.3-r2.ebuild 1062
+MD5 f1ddee2048a559758998ff81fc4227c9 ChangeLog 3927
 MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
-MD5 80ec654c644c5d0407debcbb871f73a7 pyrex-0.9.3-r1.ebuild 984
-MD5 da6cd51743392829b2d111680e9b9215 pyrex-0.9.3-r2.ebuild 1053
-MD5 1bbfae8705264d80f234c7e386329e56 files/digest-pyrex-0.9.3-r1 63
+MD5 4f19925ace07ad6349aca094f9a3e216 pyrex-0.9.3-r1.ebuild 993
 MD5 c587d86c063eda8fb02e18b9b1c83aec files/pyrex-0.9.3-python24_distutils.patch 622
+MD5 1bbfae8705264d80f234c7e386329e56 files/digest-pyrex-0.9.3-r1 63
 MD5 1bbfae8705264d80f234c7e386329e56 files/digest-pyrex-0.9.3-r2 63
 MD5 b5bb4ba679c6de2f55651b7c6af8f013 files/pyrex-0.9.2.1-gcc4.patch 2877
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCbihSTM53OX+9xmMRAsdRAJ9EGG0KqG/qUUpC0kg/DZiJBQTrfwCgmmTC
-9uk2+ADVDVaCwr8ac3VJD3E=
-=FR5N
------END PGP SIGNATURE-----
