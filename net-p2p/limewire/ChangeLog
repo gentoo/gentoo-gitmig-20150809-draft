@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/limewire
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/limewire/ChangeLog,v 1.16 2005/04/19 13:20:22 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/limewire/ChangeLog,v 1.17 2005/05/14 14:21:11 luckyduck Exp $
+
+  14 May 2005; Jan Brinkmann <luckyduck@gentoo.org> limewire-4.8.1.ebuild:
+  4.8.1 stable on amd64
 
   19 Apr 2005; Karol Wojtaszek <sekretarz@gentoo.org> limewire-4.8.1.ebuild:
   Changed startscript, bug #89327
