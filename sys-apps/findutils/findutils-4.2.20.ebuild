@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/findutils-4.2.20.ebuild,v 1.2 2005/03/18 01:38:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/findutils-4.2.20.ebuild,v 1.3 2005/05/14 20:35:15 ciaranm Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -42,12 +42,15 @@ src_compile() {
 	export CPPFLAGS="${CXXFLAGS}"
 	use static && append-ldflags -static
 
-	econf $(use_enable nls) || die
+	local myconf=""
+	[[ ${USERLAND} != "GNU" ]] && myconf="--program-prefix=g"
+
+	econf $(use_enable nls) ${myconf} || die
 	emake libexecdir=/usr/lib/find AR="$(tc-getAR)" || die
 }
 
 src_install() {
-	einstall libexecdir=${D}/usr/lib/find || die
+	make DESTDIR="${D}" libexecdir=${D}/usr/lib/find install || die
 	prepallman
 
 	rm -rf ${D}/usr/var

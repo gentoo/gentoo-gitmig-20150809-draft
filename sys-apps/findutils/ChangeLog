@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/findutils
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/ChangeLog,v 1.42 2005/03/17 23:10:06 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/ChangeLog,v 1.43 2005/05/14 20:35:15 ciaranm Exp $
+
+  14 May 2005; Ciaran McCreesh <ciaranm@gentoo.org> findutils-4.2.20.ebuild:
+  Add in *bsd things, bug #92588. Change to not use einstall.
 
 *findutils-4.2.20 (17 Mar 2005)
 
