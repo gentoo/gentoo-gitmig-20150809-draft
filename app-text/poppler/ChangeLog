@@ -1,6 +1,12 @@
 # ChangeLog for app-text/poppler
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/ChangeLog,v 1.2 2005/04/23 10:12:51 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/ChangeLog,v 1.3 2005/05/14 18:31:30 lanius Exp $
+
+*poppler-0.3.1 (14 May 2005)
+
+  14 May 2005; Heinrich Wendel <lanius@gentoo.org> poppler-0.3.0.ebuild,
+  +poppler-0.3.1.ebuild:
+  version bump; 0.3.0 stable on x86/amd64
 
 *poppler-0.3.0 (23 Apr 2005)
 
