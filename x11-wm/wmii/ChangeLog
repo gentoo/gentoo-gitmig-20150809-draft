@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/wmii
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/wmii/ChangeLog,v 1.4 2005/05/11 05:58:26 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/wmii/ChangeLog,v 1.5 2005/05/14 20:16:47 killerfox Exp $
+
+  14 May 2005; Rene Nussbaumer <killerfox@gentoo.org>
+  wmii-0.20050510.ebuild:
+  added ~hppa
 
 *wmii-0.20050510 (11 May 2005)
 

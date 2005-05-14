@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/wmii/wmii-0.20050510.ebuild,v 1.1 2005/05/11 05:58:26 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/wmii/wmii-0.20050510.ebuild,v 1.2 2005/05/14 20:16:47 killerfox Exp $
 
 #inherit toolchain-funcs distutils
 inherit toolchain-funcs
@@ -13,7 +13,7 @@ SRC_URI="http://wmi.modprobe.de/snaps/${MY_P}.tar.bz2"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~hppa"
 IUSE="python cairo"
 
 DEPEND=">=sys-apps/sed-4
