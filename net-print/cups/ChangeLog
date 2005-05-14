@@ -1,6 +1,9 @@
 # ChangeLog for net-print/cups
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.129 2005/05/10 16:14:47 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.130 2005/05/14 14:17:09 lanius Exp $
+
+  14 May 2005; Heinrich Wendel <lanius@gentoo.org> files/cupsd.rc6:
+  remove use vmware, bug #89956
 
 *cups-1.1.23-r2 (10 May 2005)
 
