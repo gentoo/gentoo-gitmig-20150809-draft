@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/xmille/xmille-2.0-r1.ebuild,v 1.5 2004/12/22 01:44:26 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/xmille/xmille-2.0-r1.ebuild,v 1.6 2005/05/14 21:57:37 mr_bones_ Exp $
 
 inherit eutils games
 
 DEB_PATCH_VER="10"
 DESCRIPTION="Mille Bournes card game"
-HOMEPAGE=""
+HOMEPAGE="http://www.milleborne.info/"
 SRC_URI="mirror://debian/pool/main/x/xmille/${PN}_${PV}.orig.tar.gz
 	mirror://debian/pool/main/x/xmille/${PN}_${PV}-${DEB_PATCH_VER}.diff.gz"
 
