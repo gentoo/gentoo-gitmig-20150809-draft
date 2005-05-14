@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/devilspie/devilspie-0.4.ebuild,v 1.1 2004/07/03 13:31:29 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/devilspie/devilspie-0.4.ebuild,v 1.2 2005/05/14 06:48:34 tester Exp $
 
 DESCRIPTION="A Window Matching utility similar to Sawfish's Matched Windows feature"
 HOMEPAGE="http://www.burtonini.com/blog/computers/devilspie"
@@ -8,7 +8,7 @@ SRC_URI="http://www.burtonini.com/computing/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc ~alpha sparc ~amd64"
+KEYWORDS="x86 ppc ~alpha sparc amd64"
 IUSE=""
 
 RDEPEND="dev-lang/perl
