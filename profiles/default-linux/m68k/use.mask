@@ -40,3 +40,5 @@ mzscheme
 
 emacs
 xemacs
+
+afs
