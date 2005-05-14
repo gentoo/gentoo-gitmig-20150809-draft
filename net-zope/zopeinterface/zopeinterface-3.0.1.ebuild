@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zopeinterface/zopeinterface-3.0.1.ebuild,v 1.4 2005/04/30 10:25:15 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zopeinterface/zopeinterface-3.0.1.ebuild,v 1.5 2005/05/14 17:34:24 halcy0n Exp $
 
 inherit distutils
 
@@ -18,6 +18,12 @@ IUSE="doc"
 RDEPEND=">=dev-lang/python-2.3"
 
 S="${WORKDIR}/${MY_PN}-${PV}"
+
+src_unpack() {
+	unpack ${A}
+
+	epatch ${FILESDIR}/${P}-gcc4.patch
+}
 
 src_install() {
 
