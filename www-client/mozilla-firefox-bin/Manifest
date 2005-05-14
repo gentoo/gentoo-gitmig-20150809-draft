@@ -1,9 +1,19 @@
-MD5 82504f9d0bcb6029517d9fb9e0d38c69 ChangeLog 7680
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 ce23390351fe8020387d93ee29e09a3d metadata.xml 160
-MD5 12a3fafb1eed865284efa3b924ec3829 mozilla-firefox-bin-1.0.4.ebuild 2744
 MD5 0df78657d80094373006fc5bbdd3a482 mozilla-firefox-bin-1.0.3.ebuild 2747
-MD5 0f6ec7910d51929d526e7e7c49b31922 files/digest-mozilla-firefox-bin-1.0.4 66
-MD5 291a8a65c02b70fb8d44e7721881895e files/digest-mozilla-firefox-bin-1.0.3 66
+MD5 eb91d8def359eee162d3022a283147aa ChangeLog 7808
+MD5 3324456de38fb09efa41080297ef342c mozilla-firefox-bin-1.0.4.ebuild 2744
 MD5 7b6378c14fc0f9bd858c2ac9abbca109 files/firefox-bin-0.9-init.tar.bz2 3327
+MD5 291a8a65c02b70fb8d44e7721881895e files/digest-mozilla-firefox-bin-1.0.3 66
+MD5 0f6ec7910d51929d526e7e7c49b31922 files/digest-mozilla-firefox-bin-1.0.4 66
 MD5 bff260036c5dcca45da3218517fb33d8 files/icon/mozillafirefox-bin-icon.png 3979
 MD5 dc62e3f15845b0343d1513abada402d7 files/icon/mozillafirefox-bin.desktop 203
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFChjhwmOfEJZHYOKcRAi+xAJ9+YMToRmPNIML1ZovyZ7cYk6IFtgCgnS3Y
+eSoQlqE5oZ1rK55OSmqrrpk=
+=265V
+-----END PGP SIGNATURE-----

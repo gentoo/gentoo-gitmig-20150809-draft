@@ -1,8 +1,18 @@
-MD5 398e8b349e1f803c34cc7d403c63d463 ChangeLog 3341
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 ce23390351fe8020387d93ee29e09a3d metadata.xml 160
-MD5 5b64c750c45b3f03c27f6ae0f3e5d619 mozilla-bin-1.7.8.ebuild 2446
 MD5 712e86e65e872be610e6bb326943c4a0 mozilla-bin-1.7.7.ebuild 2561
-MD5 81b8c7f06b94f097490dbf02e98a2449 files/digest-mozilla-bin-1.7.8 85
+MD5 157ffbf6098c759f9e39a85793b13298 ChangeLog 3459
+MD5 3761b007ea4b9fd740c7590df9bb79bb mozilla-bin-1.7.8.ebuild 2446
 MD5 0a9038db6a51fe374f3ed16e1d67b169 files/digest-mozilla-bin-1.7.7 85
 MD5 6d52ff4ce4567db1cad08ea40157a65d files/mozilla-bin-icon.png 2350
+MD5 81b8c7f06b94f097490dbf02e98a2449 files/digest-mozilla-bin-1.7.8 85
 MD5 d364a8d78e0bde072fc1b38931778760 files/mozilla-bin.desktop 188
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFChjj/mOfEJZHYOKcRAmbzAJ9zZXPtsr4rxQn2gCdzAo89ASCY3ACdEEMH
+/4D9HXBD3GikIF83i7KA/ms=
+=qvTA
+-----END PGP SIGNATURE-----
