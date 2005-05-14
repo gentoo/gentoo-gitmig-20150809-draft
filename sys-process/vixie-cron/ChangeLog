@@ -1,6 +1,13 @@
 # ChangeLog for sys-process/vixie-cron
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/vixie-cron/ChangeLog,v 1.10 2005/05/14 11:08:30 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/vixie-cron/ChangeLog,v 1.11 2005/05/14 16:58:07 ka0ttic Exp $
+
+*vixie-cron-4.1-r8 (14 May 2005)
+
+  14 May 2005; Aaron Walker <ka0ttic@gentoo.org> +files/pamd.compatible,
+  +vixie-cron-4.1-r8.ebuild:
+  Revision bump; added new pam.d file that's compatible witn openpam. Also
+  updated deps to use virtual/pam. bug 92592.
 
   14 May 2005; Guy Martin <gmsoft@gentoo.org> vixie-cron-4.1-r7.ebuild:
   Stable on hppa.
