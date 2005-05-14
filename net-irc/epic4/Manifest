@@ -1,21 +1,11 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 f4ff980b18af6e35353925edd56b72c9 ChangeLog 8712
+MD5 f288c61ad476852923ece9c8e8edf267 ChangeLog 8793
 MD5 f7c12be41b15e9674f48d07ea84c953f epic4-1.1.16-r1.ebuild 2071
 MD5 1c369d7d62b8f45cdc9ca842f24095a2 epic4-2.0-r1.ebuild 2333
+MD5 c5be77741f74e39d4162c7738417a932 epic4-2.2.ebuild 2192
 MD5 44c39c6ad372a8e5a5e7ee3311f703a7 metadata.xml 160
-MD5 3e598aa449855f3dad55cbdcb5439848 epic4-2.2.ebuild 2195
 MD5 202b467aa8e4fa72afb00aa40b4f423d files/2.0-toggle-stop-screen.patch 1628
 MD5 8668b72bb8d4af8c83ddcbb8fc606022 files/digest-epic4-1.1.16-r1 136
 MD5 cbb9caa10a6573474c6e18ca5e01b85e files/digest-epic4-2.0-r1 133
 MD5 5d98357a61d5adf165c257471d1d41b3 files/digest-epic4-2.2 133
 MD5 a0a06abf43f925f0472c026573bf622f files/epic-defaultserver.patch 620
 MD5 1d5075abb862c8b98c2b16df96e37407 files/local 21043
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFCbVN8KRy60XGEcJIRAlcJAKCfjsDLrwWLQEdn2ONRwUoOJTcuQgCcCGN0
-jtLkpvjPv6rRseUBhkp7uiI=
-=ZMZt
------END PGP SIGNATURE-----
