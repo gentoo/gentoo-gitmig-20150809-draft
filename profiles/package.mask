@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3966 2005/05/13 22:52:01 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3967 2005/05/14 13:41:33 dsd Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -43,10 +43,6 @@
 # Marcelo Goes <vanquirius@gentoo.org> (09 May 2005)
 # Broken ebuild, pending fix
 =www-client/links-2.1_pre17-r1
-
-# Danie Drake <dsd@gentoo.org> (09 May 2005)
-# Facing removal due to lack of development upstream
-sys-kernel/wolk-sources
 
 # Masatomo Nakano <nakano@gentoo.org> (08 May 2005)
 # Masked for testing with new libpq package.
