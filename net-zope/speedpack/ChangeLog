@@ -1,0 +1,10 @@
+# ChangeLog for net-zope/speedpack
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/speedpack/ChangeLog,v 1.1 2005/05/14 12:25:50 radek Exp $
+
+*speedpack-0.3 (14 May 2005)
+
+  14 May 2005; Radoslaw Stachowiak <radek@gentoo.org> +metadata.xml,
+  +speedpack-0.3.ebuild:
+  initial version, closes #92505
+
