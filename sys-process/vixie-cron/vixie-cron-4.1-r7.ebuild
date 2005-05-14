@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/vixie-cron/vixie-cron-4.1-r7.ebuild,v 1.8 2005/05/09 03:59:21 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/vixie-cron/vixie-cron-4.1-r7.ebuild,v 1.9 2005/05/14 11:08:30 gmsoft Exp $
 
 inherit cron toolchain-funcs debug
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2
 	mirror://gentoo/${P}-gentoo-${GENTOO_PATCH_REV}.patch.bz2"
 
 LICENSE="as-is"
-KEYWORDS="alpha amd64 ~arm ~hppa ia64 ~mips ppc ~ppc64 sparc x86"
+KEYWORDS="alpha amd64 ~arm hppa ia64 ~mips ppc ~ppc64 sparc x86"
 IUSE="selinux pam debug"
 
 DEPEND=">=sys-apps/portage-2.0.47-r10
