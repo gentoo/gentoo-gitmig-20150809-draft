@@ -1,6 +1,9 @@
 # ChangeLog for net-firewall/shorewall
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/ChangeLog,v 1.68 2005/05/07 01:15:37 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/ChangeLog,v 1.69 2005/05/14 13:53:20 gmsoft Exp $
+
+  14 May 2005; Guy Martin <gmsoft@gentoo.org> shorewall-2.2.4.ebuild:
+  Stable on hppa.
 
 *shorewall-2.2.4 (06 May 2005)
 
