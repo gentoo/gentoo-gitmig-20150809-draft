@@ -51,3 +51,4 @@ move dev-perl/libapreq2 www-apache/libapreq2
 move net-misc/sendpage net-dialup/sendpage
 move net-misc/serlook net-dialup/serlook
 move net-wireless/gnome-phone-manager app-mobilephone/gnome-phone-manager
+move net-dialup/gnokii app-mobilephone/gnokii

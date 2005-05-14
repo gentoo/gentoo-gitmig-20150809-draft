@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1166 2005/05/14 03:46:31 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1167 2005/05/14 12:29:42 mrness Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -89,6 +89,8 @@ app-misc/towitoko:moneyplex - Makes libtowitoko work for the moneyplex home bank
 app-misc/workrave:distribution - Enable networking. See http://www.workrave.org/features/
 app-misc/workrave:noexercises - Disable exercises support
 app-misc/workrave:noexperimental - Compile without experimental features
+app-mobilephone/gnokii:irda - Enable infrared support
+app-mobilephone/gnokii:sms - Enable SMS support
 app-office/gnucash:chipcard - Enable support for chipcard reading and processing.
 app-office/gnucash:hbci - Enable HBCI support, for connecting to some internet banks
 app-office/gnucash:quotes - Enable Online Stock Quote retrieval.
@@ -565,8 +567,6 @@ net-dialup/freeradius:frnothreads - Disable thread support
 net-dialup/freeradius:frxp - Enable experimental modules
 net-dialup/freeradius:udpfromto - Compile in UDPFROMTO support
 net-dialup/gammu:irda - Enable infrared support
-net-dialup/gnokii:irda - Enable infrared support
-net-dialup/gnokii:sms - Enable SMS support
 net-dialup/ivcall:softfax - Enable soft fax support
 net-dialup/ppp:activefilter - Enable activefilter support
 net-dialup/ppp:atm - Enable support for pppoatm
