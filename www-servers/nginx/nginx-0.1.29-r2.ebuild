@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/nginx-0.1.29-r1.ebuild,v 1.1 2005/05/13 12:38:44 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/nginx-0.1.29-r2.ebuild,v 1.1 2005/05/14 11:51:28 voxus Exp $
 
 inherit eutils
 
@@ -19,7 +19,7 @@ DEPEND="dev-lang/perl
 
 src_unpack() {
 	unpack ${A}
-	cd ${S} && epatch ${FILESDIR}/${P}-ignore_invalid_headers.patch
+	cd ${S} && epatch ${FILESDIR}/${P}-*
 }
 
 src_compile() {

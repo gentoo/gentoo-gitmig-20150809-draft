@@ -1,6 +1,13 @@
 # ChangeLog for www-servers/nginx
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/ChangeLog,v 1.18 2005/05/13 12:38:44 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/ChangeLog,v 1.19 2005/05/14 11:51:28 voxus Exp $
+
+*nginx-0.1.29-r2 (14 May 2005)
+
+  14 May 2005; Konstantin Arkhipov <voxus@gentoo.org> -nginx-0.1.29.ebuild,
+  -nginx-0.1.29-r1.ebuild, +files/nginx-0.1.29-500_bytes_long.patch:
+  Fixed 500 http response, when lenght of backend response 500 bytes long.
+  Patch from author.
 
 *nginx-0.1.29-r1 (13 May 2005)
 
