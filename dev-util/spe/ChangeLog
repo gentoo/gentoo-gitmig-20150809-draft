@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/spe
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/spe/ChangeLog,v 1.15 2005/04/20 05:53:10 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/spe/ChangeLog,v 1.16 2005/05/14 13:31:57 kloeri Exp $
+
+*spe-0.7.3a (14 May 2005)
+
+  14 May 2005; Bryan Østergaard <kloeri@gentoo.org> +spe-0.7.3a.ebuild:
+  Bump version.
 
 *spe-0.7.1a (20 Apr 2005)
 
