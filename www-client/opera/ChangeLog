@@ -1,6 +1,10 @@
 # ChangeLog for www-client/opera
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.7 2005/05/04 06:21:19 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.8 2005/05/14 14:38:47 lanius Exp $
+
+  14 May 2005; Heinrich Wendel <lanius@gentoo.org> +files/opera-qt.patch,
+  opera-8.00.ebuild:
+  add kde/qt style by default, bug #92391
 
   04 May 2005; Heinrich Wendel <lanius@gentoo.org> opera-8.00.ebuild:
   bug #90575

@@ -1,8 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-8.00.ebuild,v 1.4 2005/05/04 06:21:19 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-8.00.ebuild,v 1.5 2005/05/14 14:38:47 lanius Exp $
 
-IUSE="static spell"
+inherit eutils
+
+IUSE="static spell qt kde"
 
 OPERAVER="8.0-20050415"
 OPERAFTPDIR="800/final/en"
@@ -105,6 +107,11 @@ src_install() {
 			use sparc && DIR=$OPERAVER.2 || DIR=$OPERAVER.5
 		fi
 		echo "Spell Check Engine=/opt/opera/lib/opera/${DIR}/spellcheck.so" >> ${D}/opt/opera/share/opera/ini/spellcheck.ini
+	fi
+
+	if use qt || use kde; then
+		cd ${D}/opt/opera/bin
+		epatch ${FILESDIR}/opera-qt.patch
 	fi
 }
 

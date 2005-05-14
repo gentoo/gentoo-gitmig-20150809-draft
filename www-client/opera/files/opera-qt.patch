@@ -1,0 +1,13 @@
+--- opera.org	2005-05-14 16:28:03.000000000 +0200
++++ opera	2005-05-14 16:28:46.000000000 +0200
+@@ -195,6 +195,9 @@
+     fi
+ done
+ 
++QTSTYLE=$(cat ~/.qt/qtrc | grep style=)
++STYLE=${QTSTYLE:6}
++
+ # Running Opera
+-eval exec "'${OPERA_BINARYDIR}opera' $passflags"
++eval exec "'${OPERA_BINARYDIR}opera' $passflags -style $STYLE"
+ 
