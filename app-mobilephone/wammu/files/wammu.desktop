@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Wammu
+Comment=Application for mobile phones - frontend for gammu
+Comment[pl]=Aplikacja do obsługi telefonów komórkowych - nakładka graficzna dla gammu
+Exec=wammu
+Icon=/usr/share/pixmaps/wammu.png
+Terminal=false
+Type=Application
+Encoding=UTF-8
+Categories=Application;Utility;

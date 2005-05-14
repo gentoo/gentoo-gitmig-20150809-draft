@@ -1,0 +1,20 @@
+# ChangeLog for app-mobilephone/wammu
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/wammu/ChangeLog,v 1.1 2005/05/14 12:57:39 mrness Exp $
+
+  14 May 2005; Alin Nastac <mrness@gentoo.org> metadata.xml:
+  Moved from net-dialup/wammu to app-mobilephone/wammu.
+
+  16 Apr 2005; Alin Nastac <mrness@gentoo.org> wammu-0.8.ebuild:
+  Stable on x86
+
+  15 Mar 2005; Alin Nastac <mrness@gentoo.org> wammu-0.8.ebuild:
+  Fix RDEPEND (#85309).
+
+*wammu-0.8 (12 Nov 2004)
+
+  12 Nov 2004; Alin Nastac <mrness@gentoo.org>
+  +wammu-0.8.ebuild, +files/wammu.desktop, +files/wammu.png:
+  Initial import. Thanks goes to Przemyslaw Maciag <p_maciag@wp.pl>
+  and tove <bugs@veller.net>. Closing #61982.
+
