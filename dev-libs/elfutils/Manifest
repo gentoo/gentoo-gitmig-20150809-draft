@@ -1,17 +1,27 @@
-MD5 3dfb63c1e286870d7ee2a722a77b6e5f ChangeLog 6124
-MD5 822a1e6582def7c62c7ae773ca491143 elfutils-0.97.ebuild 1420
-MD5 1c5255251ca86c894b299c606c3bad3c elfutils-0.101.ebuild 1531
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 17eff246a734b8a44781417a12ec4ea9 elfutils-0.94-r1.ebuild 1842
-MD5 04a401fa9d9b08752dbb0224974817e6 elfutils-0.97-r1.ebuild 1477
-MD5 ff4eb4b624ca509a5efb676660189d30 elfutils-0.94-r2.ebuild 1912
+MD5 1c5255251ca86c894b299c606c3bad3c elfutils-0.101.ebuild 1531
+MD5 8b9e009ae74234d92dc803f4ada57aa5 ChangeLog 6237
+MD5 822a1e6582def7c62c7ae773ca491143 elfutils-0.97.ebuild 1420
 MD5 7b94d8a842a02bed78d77c0315f95068 elfutils-0.101-r1.ebuild 1588
-MD5 68f794575cd890d5131853a4ca7ee9f3 files/digest-elfutils-0.101 66
-MD5 696196044decee0b8d782d08b3e907aa files/digest-elfutils-0.97 65
+MD5 850a64929dcb43aa8c2f336732bee546 elfutils-0.94-r2.ebuild 1908
+MD5 04a401fa9d9b08752dbb0224974817e6 elfutils-0.97-r1.ebuild 1477
 MD5 1e6460efdb609828aa57b5874813972a files/elfutils-0.101-bswap.patch 849
-MD5 98e005817217428fef7c200faec78382 files/digest-elfutils-0.94-r2 65
-MD5 51c01230a938c5b39a545e0611170b0f files/elfutils-sections-heap-overflow.diff 574
-MD5 68f794575cd890d5131853a4ca7ee9f3 files/digest-elfutils-0.101-r1 66
 MD5 40321e776b95020f2e51e5f481b3486e files/elfutils-0.101-portability.patch 6052
 MD5 98e005817217428fef7c200faec78382 files/digest-elfutils-0.94-r1 65
-MD5 696196044decee0b8d782d08b3e907aa files/digest-elfutils-0.97-r1 65
 MD5 25da57fec6a38ed0c69ec6682b595398 files/elfutils-0.94-alpha-mips-atime.diff 699
+MD5 696196044decee0b8d782d08b3e907aa files/digest-elfutils-0.97 65
+MD5 68f794575cd890d5131853a4ca7ee9f3 files/digest-elfutils-0.101 66
+MD5 68f794575cd890d5131853a4ca7ee9f3 files/digest-elfutils-0.101-r1 66
+MD5 98e005817217428fef7c200faec78382 files/digest-elfutils-0.94-r2 65
+MD5 696196044decee0b8d782d08b3e907aa files/digest-elfutils-0.97-r1 65
+MD5 51c01230a938c5b39a545e0611170b0f files/elfutils-sections-heap-overflow.diff 574
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFChjqTmOfEJZHYOKcRAptSAJ0bZ3djDYe9OCFTG7JcmFAdvg/J/ACfRvm9
+vxfe5y/+8lgghSFBEgoB+Rg=
+=+rQZ
+-----END PGP SIGNATURE-----
