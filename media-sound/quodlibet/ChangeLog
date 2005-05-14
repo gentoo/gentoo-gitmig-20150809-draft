@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/quodlibet
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/quodlibet/ChangeLog,v 1.6 2005/02/18 01:07:07 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/quodlibet/ChangeLog,v 1.7 2005/05/14 03:10:51 weeve Exp $
+
+  14 May 2005; Jason Wever <weeve@gentoo.org> quodlibet-0.8.1.ebuild:
+  Added ~sparc keyword.
 
   17 Feb 2005; Michael Sterrett <mr_bones_@gentoo.org> quodlibet-0.8.1.ebuild:
   sparc needs deps first
