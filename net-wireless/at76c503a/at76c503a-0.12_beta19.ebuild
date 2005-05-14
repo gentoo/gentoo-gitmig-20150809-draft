@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/at76c503a/at76c503a-0.12_beta19.ebuild,v 1.2 2005/03/24 20:11:10 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/at76c503a/at76c503a-0.12_beta19.ebuild,v 1.3 2005/05/14 09:01:43 genstef Exp $
 
 inherit linux-mod eutils
 
@@ -22,11 +22,15 @@ S=${WORKDIR}/${MY_P/_/-}.orig
 MODULE_NAMES="at76_usbdfu(net:) at76c503-i3861(net:) at76c503-i3863(net:)
 	at76c503-rfmd-acc(net:) at76c503-rfmd(net:) at76c503(net:) at76c505-rfmd(net:)
 	at76c505-rfmd2958(net:) at76c505a-rfmd2958(net:)"
-BUILD_PARAMS="KSRC=${KV_DIR}"
 BUILD_TARGETS="all"
 
 CONFIG_CHECK="NET_RADIO"
 NET_RADIO_ERROR="${P} requires support for Wireless LAN drivers (non-hamradio) & Wireless Extensions (CONFIG_NET_RADIO)."
+
+pkg_setup() {
+	linux-mod_pkg_setup
+	BUILD_PARAMS="KSRC=${KV_DIR}"
+}
 
 src_unpack() {
 	unpack ${A}
