@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 a29984c2b1f6a54af5f35b5469ca107d ChangeLog 515
-MD5 3030e5a9e0582b7902d4b02419e6595e bmp-docklet-1.2.ebuild 753
+MD5 c2dd112f3ecf4ea02c115bf09d117132 bmp-docklet-1.2.ebuild 761
+MD5 4ad02b9de9be73a293653b0dd5067282 ChangeLog 635
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 15d272c1db5294b95c0046ba6213aafc files/digest-bmp-docklet-1.2 68
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFChTTCp5vW4rUFj5oRAvcxAJ9e++mGGrTN01go0RxLJSmaaAb7qgCdFQn4
-tRJ+mRpjfEVvARFJlmKnW8w=
-=PkPV
+iD8DBQFChggx06ebR+OMO78RAhpWAKCYiRKeY7I0eebil/XoxRD0SAcd+gCfcHIl
+Zo18nb+6kZT6R3/wKge5tXA=
+=Sqeu
 -----END PGP SIGNATURE-----
