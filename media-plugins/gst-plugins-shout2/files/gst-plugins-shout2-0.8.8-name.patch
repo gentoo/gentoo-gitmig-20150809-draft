@@ -1,0 +1,89 @@
+===================================================================
+RCS file: /cvs/gstreamer/gst-plugins/ext/shout2/gstshout2.c,v
+rcsdiff: /cvs/gstreamer/gst-plugins/ext/shout2/gstshout2.c,v: warning: Unknown phrases like `commitid ...;' are present.
+retrieving revision 1.22.4.1
+retrieving revision 1.22.4.2
+diff -u -r1.22.4.1 -r1.22.4.2
+--- gstshout2.c	2005/02/27 11:36:51	1.22.4.1
++++ gstshout2.c	2005/04/20 17:15:18	1.22.4.2
+@@ -52,7 +52,7 @@
+   ARG_PORT,                     /* the encoder port number on the server */
+   ARG_PASSWORD,                 /* the encoder password on the server */
+   ARG_PUBLIC,                   /* is this stream public? */
+-  ARG_NAME,                     /* Name of the stream */
++  ARG_STREAMNAME,               /* Name of the stream */
+   ARG_DESCRIPTION,              /* Description of the stream */
+   ARG_GENRE,                    /* Genre of the stream */
+ 
+@@ -183,7 +183,7 @@
+   g_object_class_install_property (G_OBJECT_CLASS (klass), ARG_PASSWORD, g_param_spec_string ("password", "password", "password", NULL, G_PARAM_READWRITE));    /* CHECKME */
+ 
+   /* metadata */
+-  g_object_class_install_property (G_OBJECT_CLASS (klass), ARG_NAME, g_param_spec_string ("name", "name", "name", NULL, G_PARAM_READWRITE));    /* CHECKME */
++  g_object_class_install_property (G_OBJECT_CLASS (klass), ARG_STREAMNAME, g_param_spec_string ("streamname", "streamname", "name of the stream", NULL, G_PARAM_READWRITE));    /* CHECKME */
+ 
+   g_object_class_install_property (G_OBJECT_CLASS (klass), ARG_DESCRIPTION, g_param_spec_string ("description", "description", "description", NULL, G_PARAM_READWRITE));        /* CHECKME */
+ 
+@@ -234,7 +234,7 @@
+   shout2send->ip = g_strdup ("127.0.0.1");
+   shout2send->port = 8000;
+   shout2send->password = g_strdup ("hackme");
+-  shout2send->name = g_strdup ("");
++  shout2send->streamname = g_strdup ("");
+   shout2send->description = g_strdup ("");
+   shout2send->genre = g_strdup ("");
+   shout2send->mount = g_strdup ("");
+@@ -448,10 +448,10 @@
+       shout2send->password = g_strdup (g_value_get_string (value));
+       break;
+ 
+-    case ARG_NAME:             /* Name of the stream */
+-      if (shout2send->name)
+-        g_free (shout2send->name);
+-      shout2send->name = g_strdup (g_value_get_string (value));
++    case ARG_STREAMNAME:       /* Name of the stream */
++      if (shout2send->streamname)
++        g_free (shout2send->streamname);
++      shout2send->streamname = g_strdup (g_value_get_string (value));
+       break;
+ 
+     case ARG_DESCRIPTION:      /* Description of the stream */
+@@ -511,8 +511,8 @@
+       g_value_set_string (value, shout2send->password);
+       break;
+ 
+-    case ARG_NAME:             /* Name of the stream */
+-      g_value_set_string (value, shout2send->name);
++    case ARG_STREAMNAME:       /* Name of the stream */
++      g_value_set_string (value, shout2send->streamname);
+       break;
+ 
+     case ARG_DESCRIPTION:      /* Description of the stream */
+@@ -632,8 +632,8 @@
+       }
+ 
+       if (shout_set_name (shout2send->conn,
+-              shout2send->name) != SHOUTERR_SUCCESS) {
+-        g_error ("Error setting name: %s\n",
++              shout2send->streamname) != SHOUTERR_SUCCESS) {
++        g_error ("Error setting stream name: %s\n",
+             shout_get_error (shout2send->conn));
+       }
+ 
+===================================================================
+RCS file: /cvs/gstreamer/gst-plugins/ext/shout2/gstshout2.h,v
+rcsdiff: /cvs/gstreamer/gst-plugins/ext/shout2/gstshout2.h,v: warning: Unknown phrases like `commitid ...;' are present.
+retrieving revision 1.7
+retrieving revision 1.7.4.1
+diff -u -r1.7 -r1.7.4.1
+--- gstshout2.h	2004/07/28 20:26:31	1.7
++++ gstshout2.h	2005/04/20 17:15:18	1.7.4.1
+@@ -50,7 +50,7 @@
+   gchar *ip;
+   guint port;
+   gchar *password;
+-  gchar *name;
++  gchar *streamname;
+   gchar *description;
+   gchar *genre;
+   gchar *mount;

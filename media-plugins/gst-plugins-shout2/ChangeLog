@@ -1,6 +1,13 @@
 # ChangeLog for media-plugins/gst-plugins-shout2
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-shout2/ChangeLog,v 1.8 2005/04/27 13:20:06 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-shout2/ChangeLog,v 1.9 2005/05/14 10:59:21 zaheerm Exp $
+
+*gst-plugins-shout2-0.8.8-r1 (14 May 2005)
+
+  14 May 2005; Zaheer Abbas Merali <zaheerm@gentoo.org>
+  +files/gst-plugins-shout2-0.8.8-name.patch,
+  +gst-plugins-shout2-0.8.8-r1.ebuild:
+  Fix bug, exposed by gstreamer 0.8.10
 
   27 Apr 2005; Jan Brinkmann <luckyduck@gentoo.org>
   gst-plugins-shout2-0.8.8.ebuild:
