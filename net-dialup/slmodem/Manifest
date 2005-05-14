@@ -1,6 +1,7 @@
 MD5 3637c7e3fe4b31081f97768434376210 slmodem-2.9.9a-r2.ebuild 3882
 MD5 a00ccc69b5e8d9b83d5502eec87b264a slmodem-2.9.9b.ebuild 3604
-MD5 fde30f3c01cc74a29519b8511af65b57 ChangeLog 10305
+MD5 fdbea616c29a7613411ed5cc77fbed61 slmodem-2.9.9d.ebuild 3518
+MD5 b4d8a4f235848084fac4fa06c8df1ec5 ChangeLog 10459
 MD5 93dd8a9d0c0f815e8445d9f0c1fc0910 metadata.xml 578
 MD5 a5c2c40e3a6c4665033c97bb9088f03d files/slusb.hotplug 262
 MD5 8834a62c67909059cef10887bfbcc853 files/slmodem-2.9.modules 494
@@ -8,6 +9,7 @@ MD5 0eddf6239c6536fc043144a9ea06fa2a files/slmodem-2.9.9a-alsa.patch 1040
 MD5 1a0b854bbe34e01e918b855b7c81ffba files/slmodem-2.9.conf 649
 MD5 6b1353dad0548404d5a468d4e6f5a18c files/slmodem-2.9.init 2679
 MD5 abbaebc2245cf7223d65772abf782842 files/digest-slmodem-2.9.9b 66
+MD5 fd55ef399408a109742263cd5b4a5219 files/digest-slmodem-2.9.9d 66
 MD5 ef9ad53b66480e01974b9f183e4edbc8 files/digest-slmodem-2.9.9a-r2 66
 MD5 c80ecf5c3d5605220e4b0055850260a5 files/slmodem-2.9.devfs 786
 MD5 026f2e2fae1fbd999455b36630164a88 files/slmodem-usb_endpoint_halted-gentoo.patch 830
