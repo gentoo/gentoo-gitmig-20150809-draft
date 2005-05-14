@@ -1,5 +1,5 @@
-MD5 8f039249fc420843d70c0f589ceb788a jcifs-1.1.5.ebuild 1012
-MD5 c50a894557dc0f08c77d4c29a493ace3 ChangeLog 562
+MD5 e9175f553d68ebae8a86075331c0effa jcifs-1.1.5.ebuild 1017
+MD5 657fb9ac2b06118affd91224df09eb1e ChangeLog 660
 MD5 5f01bbf16601baa7a84696af22677e1b metadata.xml 476
 MD5 8f76e601c230b2b96ca413ef3f9feae8 files/digest-jcifs-1.1.5 60
 MD5 b01860bd82de6b504fa59392a812a565 files/build-xml.patch 1272
