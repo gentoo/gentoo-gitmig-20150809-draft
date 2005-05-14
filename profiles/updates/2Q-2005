@@ -56,3 +56,4 @@ move net-dialup/gammu app-mobilephone/gammu
 move net-dialup/wammu app-mobilephone/wammu
 move app-misc/scmxx app-mobilephone/scmxx
 move app-misc/gscmxx app-mobilephone/gscmxx
+move app-misc/vmoconv app-mobilephone/vmoconv
