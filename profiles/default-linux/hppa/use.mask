@@ -1,3 +1,7 @@
+# 14 May 2005 Guy Martin <gmsoft@gentoo.org>
+# kde-base/libkcal doesn't compile yet on hppa and is a needed dep
+irmc
+
 # 25 Mar 2005 Guy Martin <gmsoft@gentoo.org>
 # Masking lapck not yet tested
 lapack
