@@ -1,0 +1,99 @@
+# ChangeLog for app-mobilephone/gammu
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gammu/ChangeLog,v 1.1 2005/05/14 12:56:50 mrness Exp $
+
+  14 May 2005; Alin Nastac <mrness@gentoo.org> metadata.xml:
+  Moved from net-dialup/gammu to app-mobilephone/gammu.
+
+*gammu-1.01.0 (14 Apr 2005)
+
+  14 Apr 2005; Alin Nastac <mrness@gentoo.org> -gammu-0.99.22.ebuild,
+  gammu-1.00.04.ebuild, +gammu-1.01.0.ebuild:
+  Version bump; remove obsolete version; update homepage.
+
+  28 Feb 2005; Alin Nastac <mrness@gentoo.org> gammu-0.99.22.ebuild,
+  gammu-1.00.04.ebuild:
+  Move virtual/os-headers from RDEPEND to DEPEND (#82449).
+
+  21 Feb 2005; Simon Stelling <blubb@gentoo.org> gammu-1.00.04.ebuild:
+  added ~amd64
+
+*gammu-1.00.04 (14 Feb 2005)
+
+  14 Feb 2005; Lim Swee Tat <st_lim@gentoo.org> +gammu-1.00.04.ebuild:
+  Version bump
+
+  06 Feb 2005; Alin Nastac <mrness@gentoo.org> -gammu-0.98.0.ebuild,
+  -gammu-0.98.9.ebuild, gammu-0.99.22.ebuild:
+  Remove obsolete ebuilds.
+
+*gammu-0.99.22 (17 Jan 2005)
+
+  17 Jan 2005; Lim Swee Tat <st_lim@gentoo.org> +gammu-0.99.22.ebuild:
+  Version bump at long last.
+
+  19 Nov 2004; Alin Nastac <mrness@gentoo.org> gammu-0.98.9.ebuild:
+  Stable on x86.
+
+  06 Nov 2004; Lars Weiler <pylon@gentoo.org> gammu-0.98.9.ebuild:
+  Stable on ppc.
+
+*gammu-0.98.9 (14 Oct 2004)
+
+  14 Oct 2004; Lim Swee Tat <st_lim@gentoo.org> -gammu-0.94.4.ebuild,
+  -gammu-0.95.0.ebuild, -gammu-0.96.0.ebuild, -gammu-0.97.0.ebuild,
+  gammu-0.98.0.ebuild, +gammu-0.98.9.ebuild:
+  Version bump for gammu to the latest test version.
+
+*gammu-0.98.0 (30 Sep 2004)
+
+  30 Sep 2004; Lim Swee Tat <st_lim@gentoo.org> gammu-0.98.0.ebuild:
+  Modified to solve the problem with -lsdp.
+
+  26 Sep 2004; Lim Swee Tat <st_lim@gentoo.org> :
+  Version bumped. I think the bluetooth portion is not working. Can someone with
+  bluetooth try compiling this?
+
+  09 Aug 2004; Lim Swee Tat <st_lim@gentoo.org> :
+  Version bump
+
+*gammu-0.96.0 (09 Jul 2004)
+
+  09 Jul 2004; Travis Tilley <lv@gentoo.org> gammu-0.94.4.ebuild,
+  gammu-0.95.0.ebuild, gammu-0.96.0.ebuild:
+  switch linux-headers dependency to virtual/os-headers
+
+  17 Jun 2004; Lim Swee Tat <st_lim@gentoo.org> :
+  Upped the version. Pleasantly surprised that Marcin has finally fixed the
+  problem we had to patch all this time.
+
+*gammu-0.95.0 (05 May 2004)
+
+  05 May 2004; Lim Swee Tat <st_lim@gentoo.org>
+  files/gammu-0.94.4-LastCalendar.patch:
+  Version bump ^^ This version allows mysql storage of SMS
+
+  13 Apr 2004; David Holm <dholm@gentoo.org> gammu-0.94.4.ebuild:
+  Added to ~ppc.
+
+*gammu-0.94.4 (12 Apr 2004)
+
+  12 Apr 2004; Lim Swee Tat <st_lim@gentoo.org> gammu-0.94.0.ebuild,
+  gammu-0.94.2.ebuild, gammu-0.94.4.ebuild,
+  files/gammu-0.94.0-LastCalendar.patch,
+  files/gammu-0.94.2-LastCalendar.patch,
+  files/gammu-0.94.4-LastCalendar.patch:
+  Bug #47493 - There is no 94.2 in the ftp anymore.
+  Thanks to David Holm <dholm@gentoo.org>
+  Removing 0.94.2 and 0.94.0
+
+*gammu-0.94.2 (11 Apr 2004)
+
+  11 Apr 2004; Lim Swee Tat <st_lim@gentoo.org> gammu-0.94.2.ebuild:
+  Updated from Marcin
+
+*gammu-0.94.0 (13 Mar 2004)
+
+  13 Mar 2004; Lim Swee Tat <st_lim@gentoo.org> :
+  First release
+
