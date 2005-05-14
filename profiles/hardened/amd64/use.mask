@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/amd64/use.mask,v 1.4 2005/04/26 00:51:02 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/amd64/use.mask,v 1.5 2005/05/14 20:39:54 pebenito Exp $
 
 #unknowns
 afs
@@ -49,11 +49,6 @@ mmx
 sse
 sse2
 3dnow
-
-# 2004/06/22 - Taken from 2004.0 profile
-# Chris PeBenito <pebenito@gentoo.org>
-# must use a SELinux profile
-selinux
 
 # altivec is a ppc instruction set.
 altivec

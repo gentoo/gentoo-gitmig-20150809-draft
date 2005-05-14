@@ -1,13 +1,12 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/use.mask,v 1.12 2005/05/09 10:26:34 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/use.mask,v 1.13 2005/05/14 20:36:44 pebenito Exp $
 
 # This file masks out USE flags that are simply NOT allowed in the default
 # profile for any architecture.  This works, for example, if a non-default
 # profile (such as the selinux profiles) have a USE flag associated with
 # them.
 
-selinux
 uclibc
 
 # aqua USE flag is only valid on Mac OS X

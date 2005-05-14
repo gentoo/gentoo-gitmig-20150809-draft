@@ -1,6 +1,6 @@
 # Copyright 2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/ppc/use.mask,v 1.1 2005/01/06 21:32:00 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/ppc/use.mask,v 1.2 2005/05/14 20:39:54 pebenito Exp $
 
 3dfx
 3dnow
@@ -28,7 +28,6 @@ ingres
 mmx
 mmx2
 pfpro
-selinux
 solid
 sse
 sse2

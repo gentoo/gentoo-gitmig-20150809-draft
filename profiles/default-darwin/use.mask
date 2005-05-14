@@ -23,7 +23,6 @@ icc-pgo
 mmx
 mmx2
 oss
-selinux
 solid
 sse
 sse2
