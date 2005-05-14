@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbear/dropbear-0.45.ebuild,v 1.2 2005/05/12 23:31:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbear/dropbear-0.45.ebuild,v 1.3 2005/05/14 18:31:17 vapier Exp $
 
 inherit eutils
 
@@ -29,7 +29,7 @@ set_options() {
 
 src_unpack() {
 	unpack ${A}
-	epatch ${FILESDIR}/dropbear-0.45-urandom.patch || die
+	epatch "${FILESDIR}"/dropbear-0.45-urandom.patch
 }
 
 src_compile() {
@@ -45,8 +45,8 @@ src_install() {
 	set_options
 	make install DESTDIR="${D}" ${makeopts} PROGRAMS="${progs}" || die "make install failed"
 	doman *.8
-	newinitd ${FILESDIR}/dropbear.init.d dropbear
-	newconfd ${FILESDIR}/dropbear.conf.d dropbear
+	newinitd "${FILESDIR}"/dropbear.init.d dropbear
+	newconfd "${FILESDIR}"/dropbear.conf.d dropbear
 	dodoc CHANGES README TODO SMALL MULTI
 
 	# The multi install target does not install the links
@@ -61,4 +61,6 @@ src_install() {
 		dosym ../bin/dropbearmulti /usr/sbin/dropbear
 		cd "${S}"
 	fi
+
+	mv "${D}"/usr/bin/{,db}scp
 }
