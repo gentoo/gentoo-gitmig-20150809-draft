@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclcl/tclcl-1.15.ebuild,v 1.8 2004/10/26 22:05:33 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclcl/tclcl-1.15.ebuild,v 1.9 2005/05/14 18:20:29 matsuu Exp $
 
 inherit eutils
 
@@ -32,7 +32,7 @@ src_compile() {
 	tkv=$(grep TK_VER /usr/include/tk.h | sed 's/^.*"\(.*\)".*/\1/')
 	local myconf="--with-tcl-ver=${tclv} --with-tk-ver=${tkv}"
 	econf ${myconf} || die "econf failed"
-	sed 's|$(LIBRARY_TCL)/http.*/http.tcl|$(LIBRARY_TCL)/http2.4/http.tcl|g' \
+	sed 's|$(LIBRARY_TCL)/http.*/http.tcl|$(LIBRARY_TCL)/http2.5/http.tcl|g' \
 		-i Makefile || die "sed failed"
 	emake || die "emake failed"
 }
