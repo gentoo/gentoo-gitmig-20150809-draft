@@ -52,3 +52,5 @@ move net-misc/sendpage net-dialup/sendpage
 move net-misc/serlook net-dialup/serlook
 move net-wireless/gnome-phone-manager app-mobilephone/gnome-phone-manager
 move net-dialup/gnokii app-mobilephone/gnokii
+move net-dialup/gammu app-mobilephone/gammu
+move net-dialup/wammu app-mobilephone/wammu
