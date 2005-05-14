@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/wxlib.eclass,v 1.6 2005/05/12 18:01:38 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/wxlib.eclass,v 1.7 2005/05/14 15:36:45 pythonhead Exp $
 
 # Author Diego Pettenò <flameeyes@gentoo.org>
 # Maintained by wxwidgets herd
@@ -13,7 +13,7 @@ inherit flag-o-matic eutils multilib toolchain-funcs
 ECLASS="wxlib"
 INHERITED="${INHERITED} ${ECLASS}"
 
-IUSE="doc debug unicode dmalloc"
+IUSE="doc debug unicode"
 
 LICENSE="wxWinLL-3"
 
@@ -21,7 +21,6 @@ LICENSE="wxWinLL-3"
 #         has its own implementation of it
 # Note 2: PCX support is enabled if the correct libraries are detected.
 #         There is no USE flag for this.
-RDEPEND="!hppa? ( !alpha? ( !ppc64? ( !amd64? ( !arm? ( !mips? ( dmalloc? ( dev-libs/dmalloc ) ) ) ) ) ) )"
 
 DEPEND="${RDEPEND}
 	sys-libs/zlib
@@ -73,7 +72,6 @@ subconfigure() {
 	debug_conf=""
 	if use debug; then
 		debug_conf="--enable-debug --enable-debug_gdb"	
-		debug_conf="${debug_conf} `use_with dmalloc`"
 	fi
 	${S}/configure \
 		--host=${CHOST} \
