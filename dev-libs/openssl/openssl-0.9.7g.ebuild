@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.7g.ebuild,v 1.7 2005/05/12 08:29:05 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.7g.ebuild,v 1.8 2005/05/14 17:37:46 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -10,7 +10,8 @@ SRC_URI="mirror://openssl/source/${P}.tar.gz"
 
 LICENSE="openssl"
 SLOT="0"
-KEYWORDS="-alpha ~amd64 ~arm ~hppa -ia64 ~m68k -mips ~ppc -ppc64 ~s390 ~sh ~sparc ~x86"
+# ia64 is ABI incompat atm, do not change the KEYWORD
+KEYWORDS="~alpha ~amd64 ~arm ~hppa -ia64 ~m68k -mips ~ppc -ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="emacs test bindist"
 
 RDEPEND=""
