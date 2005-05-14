@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/lirc
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.67 2005/05/11 12:15:36 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.68 2005/05/14 14:14:27 lanius Exp $
+
+  14 May 2005; Heinrich Wendel <lanius@gentoo.org> lirc-0.7.0-r1.ebuild,
+  lirc-0.7.1.ebuild:
+  make xbox patch default in 0.7.0; uncomment it in 0.7.1, is doesn't work there
 
   11 May 2005; Heinrich Wendel <lanius@gentoo.org> lirc-0.7.1.ebuild:
   always apply the xbox patch, it still has to be enabled

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.7.1.ebuild,v 1.2 2005/05/11 12:15:36 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.7.1.ebuild,v 1.3 2005/05/14 14:14:27 lanius Exp $
 
 inherit eutils linux-mod flag-o-matic
 
@@ -66,7 +66,7 @@ SRC_URI="mirror://sourceforge/lirc/${P}.tar.bz2"
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/lirc-0.7.0-xbox.patch.bz2
+	#epatch ${FILESDIR}/lirc-0.7.0-xbox.patch.bz2
 
 	filter-flags -Wl,-O1
 	sed	-i -e "s:-O2 -g:${CFLAGS}:" configure configure.in
