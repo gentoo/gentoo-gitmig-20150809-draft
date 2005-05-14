@@ -54,3 +54,5 @@ move net-wireless/gnome-phone-manager app-mobilephone/gnome-phone-manager
 move net-dialup/gnokii app-mobilephone/gnokii
 move net-dialup/gammu app-mobilephone/gammu
 move net-dialup/wammu app-mobilephone/wammu
+move app-misc/scmxx app-mobilephone/scmxx
+move app-misc/gscmxx app-mobilephone/gscmxx
