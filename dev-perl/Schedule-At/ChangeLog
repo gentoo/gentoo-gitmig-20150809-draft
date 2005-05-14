@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/Schedule-At
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Schedule-At/ChangeLog,v 1.1 2005/05/14 17:42:23 mcummings Exp $
+
+*Schedule-At-1.05 (14 May 2005)
+
+  14 May 2005; Michael Cummings <mcummings@gentoo.org> +metadata.xml,
+  +Schedule-At-1.05.ebuild:
+  Bug 88118 - portknock dep
+
