@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-3.0-r8.ebuild,v 1.1 2005/02/10 02:53:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-3.0-r8.ebuild,v 1.2 2005/05/14 18:55:09 vapier Exp $
 
-inherit eutils flag-o-matic gnuconfig gcc
+inherit eutils flag-o-matic toolchain-funcs
 
 # Official patchlevel
 # See ftp://ftp.cwru.edu/pub/bash/bash-3.0-patches/
@@ -71,8 +71,6 @@ src_unpack() {
 	# especially easy with 2.6 kernels.
 	echo '#define PGRP_PIPE 1' >> config-bot.h
 
-	gnuconfig_update
-
 	sed -i 's:-lcurses:-lncurses:' configure || die "sed configure"
 }
 
@@ -95,7 +93,7 @@ src_compile() {
 	use nls || myconf="${myconf} --disable-nls"
 
 	echo 'int main(){}' > ${T}/term-test.c
-	if ! $(gcc-getCC) -static -lncurses ${T}/term-test.c 2> /dev/null ; then
+	if ! $(tc-getCC) -static -lncurses ${T}/term-test.c 2> /dev/null ; then
 		export bash_cv_termcap_lib=gnutermcap
 	else
 		export bash_cv_termcap_lib=libcurses
