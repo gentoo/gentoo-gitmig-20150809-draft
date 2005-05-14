@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/irssi
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/ChangeLog,v 1.61 2005/04/22 21:02:08 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/ChangeLog,v 1.62 2005/05/14 23:12:18 swegener Exp $
+
+  14 May 2005; Sven Wegener <swegener@gentoo.org> irssi-0.8.9-r1.ebuild,
+  irssi-0.8.10_rc5-r1.ebuild:
+  Added blocker for net-irc/irssi-svn
 
   22 Apr 2005; Alin Nastac <mrness@gentoo.org> irssi-0.8.9-r1.ebuild,
   irssi-0.8.10_rc5-r1.ebuild:
