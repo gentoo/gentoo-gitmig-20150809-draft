@@ -1,5 +1,15 @@
-MD5 e0e9273a49dd6a4acd3a661cef3b57de mindterm-2.4.2.ebuild 1359
-MD5 57818e2dfc2a4686d50c2c1673c90cad ChangeLog 458
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 ac2b636623de13513c8238e2327cb5e9 mindterm-2.4.2.ebuild 1343
+MD5 e62640a586450bd72667c48c54eda17b ChangeLog 565
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 dadd3c7dad54c71db8facb7891677489 files/digest-mindterm-2.4.2 67
 MD5 26c0b1cebcbecee86d841d777d59f8b1 files/2.4.2-buildxml.patch 1225
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFChndy06ebR+OMO78RAti2AJ9pwIJppIEdFgRsKautHwePpUJ4CQCePTrY
+8RQC1WWe+XeQjCDrxg2s12Y=
+=3NgM
+-----END PGP SIGNATURE-----
