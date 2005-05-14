@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/cron.eclass,v 1.4 2005/03/16 10:51:16 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/cron.eclass,v 1.5 2005/05/14 16:44:37 ka0ttic Exp $
 
 # Original Author: Aaron Walker <ka0ttic@gentoo.org>
 #
@@ -78,7 +78,7 @@ docrondir() {
 #     docron crond -m 0110
 
 docron() {
-	local cron="cron" perms="-m 0750 -o root -g root"
+	local cron="cron" perms="-m 0750 -o root -g wheel"
 
 	if [[ -n "$1" ]] ; then
 		case "$1" in
