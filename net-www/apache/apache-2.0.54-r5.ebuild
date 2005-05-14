@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.54-r5.ebuild,v 1.1 2005/05/12 18:47:51 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.54-r5.ebuild,v 1.2 2005/05/14 21:42:20 kloeri Exp $
 
 inherit eutils gnuconfig
 
@@ -285,9 +285,9 @@ src_install () {
 	keepdir /etc/apache2/vhosts.d
 	keepdir /etc/apache2/modules.d
 
-	 fix bug 92348
-	perms 755 /usr/sbin/apache2logserverstatus
-	perms 755 /usr/sbin/apache2splitlogfile
+	# fix bug 92348
+	fperms 755 /usr/sbin/apache2logserverstatus
+	fperms 755 /usr/sbin/apache2splitlogfile
 
 	# empty dirs
 	for i in /var/lib/dav /var/log/apache2 /var/cache/apache2; do
