@@ -1,6 +1,14 @@
-MD5 13e0085829057a3de11fb61f23e4690b ChangeLog 1491
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 3fd3d9799d8d7bc796beeaca10bb893b jasperreports-0.6.1-r3.ebuild 1832
+MD5 ebbae9766887548f05ae06163712d478 ChangeLog 1759
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
-MD5 b5b029ee917890d393fa3714e49741b5 jasperreports-0.6.1-r1.ebuild 1183
-MD5 4c29d38584b076d5c02b3ae3f60715be jasperreports-0.6.1-r2.ebuild 1874
-MD5 7c129dc0ae90126adb4848378fe1b872 files/digest-jasperreports-0.6.1-r1 78
-MD5 7c129dc0ae90126adb4848378fe1b872 files/digest-jasperreports-0.6.1-r2 78
+MD5 7c129dc0ae90126adb4848378fe1b872 files/digest-jasperreports-0.6.1-r3 78
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFChiK606ebR+OMO78RAiNGAJ9G0JJPxNCSNf5fl1sg0honpiHR7gCfbA0c
+5ZvsWBAYUU27uPfO1UZyUb4=
+=RbLQ
+-----END PGP SIGNATURE-----

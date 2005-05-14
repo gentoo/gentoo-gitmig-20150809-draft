@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/jasperreports/jasperreports-0.6.1-r2.ebuild,v 1.3 2005/01/20 16:02:31 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/jasperreports/jasperreports-0.6.1-r3.ebuild,v 1.1 2005/05/14 16:09:11 luckyduck Exp $
 
 inherit java-pkg
 
@@ -19,7 +19,7 @@ RDEPEND=">=virtual/jre-1.4
 	dev-java/gnu-jaxp
 	>=dev-java/itext-1.02
 	>=dev-java/bsh-1.99
-	>=dev-java/commons-beanutils-1.6.1
+	=dev-java/commons-beanutils-1.6*
 	>=dev-java/commons-collections-3.1
 	>=dev-java/commons-digester-1.5
 	>=dev-java/commons-logging-1.0.4
@@ -39,7 +39,7 @@ src_unpack() {
 	java-pkg_jar-from itext iText.jar
 	java-pkg_jar-from ant-core ant.jar
 	java-pkg_jar-from bsh bsh.jar
-	java-pkg_jar-from commons-beanutils commons-beanutils.jar
+	java-pkg_jar-from commons-beanutils-1.6
 	java-pkg_jar-from commons-collections
 	java-pkg_jar-from commons-digester
 	java-pkg_jar-from commons-logging
@@ -58,6 +58,6 @@ src_compile() {
 }
 
 src_install() {
-	java-pkg_dojar dist/*.jar || die "Missing jars"
+	java-pkg_dojar dist/*.jar
 	use doc && java-pkg_dohtml -r docs/*
 }
