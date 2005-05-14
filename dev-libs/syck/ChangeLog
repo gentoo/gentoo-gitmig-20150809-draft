@@ -1,0 +1,10 @@
+# ChangeLog for dev-libs/syck
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/syck/ChangeLog,v 1.4 2005/05/14 16:59:49 mcummings Exp $
+
+*syck-0.53 (14 May 2005)
+
+  14 May 2005; Michael Cummings <mcummings@gentoo.org> +metadata.xml,
+  +syck-0.53.ebuild:
+  Dep for new yaml code. Initial ebuild submitted by evanm@frap.net in bug 90577
+
