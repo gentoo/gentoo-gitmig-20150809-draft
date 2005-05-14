@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython-docs/wxpython-docs-2.6.0.0-r1.ebuild,v 1.1 2005/05/13 19:31:46 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython-docs/wxpython-docs-2.6.0.0-r1.ebuild,v 1.2 2005/05/14 05:21:11 pythonhead Exp $
 
 inherit eutils
 
@@ -15,8 +15,8 @@ SLOT="2.6"
 KEYWORDS="~x86 ~sparc ~amd64"
 IUSE=""
 
-S="${WORKDIR}/wxPython-${PVR}"
-DOCDIR="wxPython-${PVR}"
+S="${WORKDIR}/wxPython-${PV}"
+DOCDIR="wxPython-${PV}"
 
 src_unpack() {
 	unpack ${A}
