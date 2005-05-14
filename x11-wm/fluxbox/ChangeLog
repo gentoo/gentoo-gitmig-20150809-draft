@@ -1,6 +1,13 @@
 # ChangeLog for x11-wm/fluxbox
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.151 2005/04/30 10:59:19 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.152 2005/05/14 02:30:26 ciaranm Exp $
+
+*fluxbox-0.9.13 (14 May 2005)
+
+  14 May 2005; Ciaran McCreesh <ciaranm@gentoo.org>
+  +files/0.9.13/fluxbox-0.9.13-our-styles-go-over-here.patch,
+  +fluxbox-0.9.13.ebuild:
+  Version bump.
 
   30 Apr 2005; Bryan Østergaard <kloeri@gentoo.org>
   fluxbox-0.9.12-r1.ebuild:
