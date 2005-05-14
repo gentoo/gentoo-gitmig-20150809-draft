@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/superkaramba
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/superkaramba/ChangeLog,v 1.26 2005/03/25 15:37:33 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/superkaramba/ChangeLog,v 1.27 2005/05/14 14:14:00 greg_g Exp $
+
+*superkaramba-0.36 (14 May 2005)
+
+  14 May 2005; Gregorio Guidi <greg_g@gentoo.org> +superkaramba-0.36.ebuild:
+  New version (#90245). Add support for xmms.
 
   25 Mar 2005; Danny van Dyk <kugelfang@gentoo.org>
   superkaramba-0.34.ebuild:
