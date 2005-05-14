@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/rrdtool
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/ChangeLog,v 1.56 2005/05/10 13:39:40 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/ChangeLog,v 1.57 2005/05/14 22:21:34 vanquirius Exp $
+
+  14 May 2005; Marcelo Goes <vanquirius@gentoo.org> -rrdtool-1.2.0.ebuild,
+  -rrdtool-1.2.1.ebuild, -rrdtool-1.2.2.ebuild:
+  Removing older 1.2.x releases. There were different issues with them, so it is
+  better to get them out of the way.
 
 *rrdtool-1.2.6 (10 May 2005)
 
