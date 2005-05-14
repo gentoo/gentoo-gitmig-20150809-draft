@@ -1,5 +1,15 @@
-MD5 e9175f553d68ebae8a86075331c0effa jcifs-1.1.5.ebuild 1017
-MD5 657fb9ac2b06118affd91224df09eb1e ChangeLog 660
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 7a3c2077a3265934391c4da010213337 jcifs-1.1.5.ebuild 1017
+MD5 72872a1fca5f41c94f83da281d958c6e ChangeLog 660
 MD5 5f01bbf16601baa7a84696af22677e1b metadata.xml 476
 MD5 8f76e601c230b2b96ca413ef3f9feae8 files/digest-jcifs-1.1.5 60
 MD5 b01860bd82de6b504fa59392a812a565 files/build-xml.patch 1272
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFChnPc06ebR+OMO78RAhLJAJ0cXmT6zhF6eXVF7F43x5wDZu1HOwCeKoR/
+mSbh6DPBFfZa2HLspzH9QK4=
+=wzbG
+-----END PGP SIGNATURE-----

@@ -1,7 +1,10 @@
-MD5 e3510215b865bb59a0e285c85b533659 jtds-0.9.1.ebuild 1381
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 cf5f873ff771d3b7af0dbbf865dc6165 jtds-0.9.1.ebuild 1381
 MD5 050b500864d72d1f71af69a787615ccf jtds-1.0.3.ebuild 1412
 MD5 f9918f0559760524d91eaa7cc7ca487d jtds-1.0.2.ebuild 1447
-MD5 860dd4b1e74646e7e868bf0be5cd598d ChangeLog 1035
+MD5 aa964e4e3df211e68f9f497f03de27ef ChangeLog 1035
 MD5 5160ef2dd424a31e8938c7080a66d496 metadata.xml 734
 MD5 f3a1bea2ce8720ca91b3e2d813631ca9 files/buildxml-gentoo.patch 2919
 MD5 e398f91c59395f8848eca6db5330728a files/digest-jtds-0.9.1 64
@@ -9,3 +12,10 @@ MD5 c3136450faa4cd0106afbac594c31902 files/digest-jtds-1.0.2 64
 MD5 646ca291fc054bb6b531e4b08a8af603 files/digest-jtds-1.0.3 64
 MD5 791c11d2de983b6e6a4cf3694cf0106f files/1.0.3-buildxml.patch 1043
 MD5 8e7fbdf02cfe16bde704f6ea7a76f60d files/1.0.2-buildxml.patch 1293
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFChnPw06ebR+OMO78RAkAeAJ9VKcPlZWEQP0aUSrzNMQAvXOrG2QCfUtr1
+zAteHTSO/H5+PeevkS82YpQ=
+=sxUp
+-----END PGP SIGNATURE-----
