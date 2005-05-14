@@ -1,6 +1,5 @@
-diff -ur clockspeed-0.62.orig/INSTALL clockspeed-0.62/INSTALL
---- clockspeed-0.62.orig/INSTALL	1998-10-13 20:37:49.000000000 +0300
-+++ clockspeed-0.62/INSTALL	2003-12-02 09:14:41.000000000 +0200
+--- clockspeed-0.62/INSTALL
++++ clockspeed-0.62/INSTALL
 @@ -4,8 +4,8 @@
  
  Things you have to decide before starting:
@@ -59,9 +58,8 @@ diff -ur clockspeed-0.62.orig/INSTALL clockspeed-0.62/INSTALL
      after a few days.
  
  
-diff -ur clockspeed-0.62.orig/Makefile clockspeed-0.62/Makefile
---- clockspeed-0.62.orig/Makefile	1998-10-13 20:37:49.000000000 +0300
-+++ clockspeed-0.62/Makefile	2003-12-02 09:22:21.000000000 +0200
+--- clockspeed-0.62/Makefile
++++ clockspeed-0.62/Makefile
 @@ -7,8 +7,8 @@
  auto-ccld.sh: \
  conf-cc conf-ld warn-auto.sh
@@ -82,9 +80,8 @@ diff -ur clockspeed-0.62.orig/Makefile clockspeed-0.62/Makefile
  
  auto_home.o: \
  compile auto_home.c
-diff -ur clockspeed-0.62.orig/clockspeed.1 clockspeed-0.62/clockspeed.1
---- clockspeed-0.62.orig/clockspeed.1	1998-10-13 20:37:49.000000000 +0300
-+++ clockspeed-0.62/clockspeed.1	2003-12-02 09:14:41.000000000 +0200
+--- clockspeed-0.62/clockspeed.1
++++ clockspeed-0.62/clockspeed.1
 @@ -12,7 +12,7 @@
  
  .B clockspeed
@@ -110,9 +107,8 @@ diff -ur clockspeed-0.62.orig/clockspeed.1 clockspeed-0.62/clockspeed.1
  when it starts up again.
  
  .B clockspeed
-diff -ur clockspeed-0.62.orig/clockspeed.c clockspeed-0.62/clockspeed.c
---- clockspeed-0.62.orig/clockspeed.c	1998-10-13 20:37:49.000000000 +0300
-+++ clockspeed-0.62/clockspeed.c	2003-12-02 09:14:41.000000000 +0200
+--- clockspeed-0.62/clockspeed.c
++++ clockspeed-0.62/clockspeed.c
 @@ -83,7 +83,7 @@
    if (deriv <= 0) return;
    if (deriv > 200000000) return; /* 5Hz ticks? be serious */
@@ -152,9 +148,8 @@ diff -ur clockspeed-0.62.orig/clockspeed.c clockspeed-0.62/clockspeed.c
  
    now(&first);
  
-diff -ur clockspeed-0.62.orig/clockview.c clockspeed-0.62/clockview.c
---- clockspeed-0.62.orig/clockview.c	1998-10-13 20:37:49.000000000 +0300
-+++ clockspeed-0.62/clockview.c	2003-12-02 09:14:41.000000000 +0200
+--- clockspeed-0.62/clockview.c
++++ clockspeed-0.62/clockview.c
 @@ -1,5 +1,5 @@
  #include <sys/types.h>
 -#include <sys/time.h>
@@ -162,34 +157,16 @@ diff -ur clockspeed-0.62.orig/clockview.c clockspeed-0.62/clockview.c
  #include "substdio.h"
  #include "readwrite.h"
  #include "strerr.h"
-diff -ur clockspeed-0.62.orig/conf-cc clockspeed-0.62/conf-cc
---- clockspeed-0.62.orig/conf-cc	1998-10-13 20:37:49.000000000 +0300
-+++ clockspeed-0.62/conf-cc	2003-12-02 09:14:41.000000000 +0200
-@@ -1,3 +1,3 @@
--gcc -O2
-+gcc @CFLAGS@
- 
- This will be used to compile .c files.
-diff -ur clockspeed-0.62.orig/conf-home clockspeed-0.62/conf-home
---- clockspeed-0.62.orig/conf-home	1998-10-13 20:37:49.000000000 +0300
-+++ clockspeed-0.62/conf-home	2003-12-02 09:14:41.000000000 +0200
+--- clockspeed-0.62/conf-home
++++ clockspeed-0.62/conf-home
 @@ -1,4 +1,4 @@
 -/usr/local/clockspeed
 +/usr
  
  This is the clockspeed home directory. Programs will be installed in
  .../bin.
-diff -ur clockspeed-0.62.orig/conf-ld clockspeed-0.62/conf-ld
---- clockspeed-0.62.orig/conf-ld	1998-10-13 20:37:49.000000000 +0300
-+++ clockspeed-0.62/conf-ld	2003-12-02 09:14:41.000000000 +0200
-@@ -1,3 +1,3 @@
--gcc -s
-+gcc @LDFLAGS@
- 
- This will be used to link .o files into an executable.
-diff -ur clockspeed-0.62.orig/error.h clockspeed-0.62/error.h
---- clockspeed-0.62.orig/error.h	1998-10-13 20:37:49.000000000 +0300
-+++ clockspeed-0.62/error.h	2003-12-02 09:14:41.000000000 +0200
+--- clockspeed-0.62/error.h
++++ clockspeed-0.62/error.h
 @@ -1,7 +1,7 @@
  #ifndef ERROR_H
  #define ERROR_H
@@ -199,9 +176,8 @@ diff -ur clockspeed-0.62.orig/error.h clockspeed-0.62/error.h
  
  extern int error_intr;
  extern int error_nomem;
-diff -ur clockspeed-0.62.orig/hier.c clockspeed-0.62/hier.c
---- clockspeed-0.62.orig/hier.c	1998-10-13 20:37:49.000000000 +0300
-+++ clockspeed-0.62/hier.c	2003-12-02 09:14:41.000000000 +0200
+--- clockspeed-0.62/hier.c
++++ clockspeed-0.62/hier.c
 @@ -2,7 +2,9 @@
  
  void hier()
@@ -213,9 +189,8 @@ diff -ur clockspeed-0.62.orig/hier.c clockspeed-0.62/hier.c
  
    h(auto_home,-1,-1,0755);
  
-diff -ur clockspeed-0.62.orig/leapsecs.3 clockspeed-0.62/leapsecs.3
---- clockspeed-0.62.orig/leapsecs.3	1998-10-13 20:37:49.000000000 +0300
-+++ clockspeed-0.62/leapsecs.3	2003-12-02 09:14:41.000000000 +0200
+--- clockspeed-0.62/leapsecs.3
++++ clockspeed-0.62/leapsecs.3
 @@ -52,10 +52,10 @@
  
  .B leapsecs_read
@@ -229,9 +204,8 @@ diff -ur clockspeed-0.62.orig/leapsecs.3 clockspeed-0.62/leapsecs.3
  does not exist,
  .B leapsecs_read
  treats it as an empty file.
-diff -ur clockspeed-0.62.orig/leapsecs_read.c clockspeed-0.62/leapsecs_read.c
---- clockspeed-0.62.orig/leapsecs_read.c	1998-10-13 20:37:49.000000000 +0300
-+++ clockspeed-0.62/leapsecs_read.c	2003-12-02 09:14:41.000000000 +0200
+--- clockspeed-0.62/leapsecs_read.c
++++ clockspeed-0.62/leapsecs_read.c
 @@ -2,7 +2,6 @@
  #include <sys/stat.h>
  #include <fcntl.h>
