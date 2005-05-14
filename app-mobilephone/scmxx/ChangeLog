@@ -1,6 +1,11 @@
 # ChangeLog for app-mobilephone/scmxx
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/scmxx/ChangeLog,v 1.1 2005/05/14 13:32:54 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/scmxx/ChangeLog,v 1.2 2005/05/14 14:50:25 mrness Exp $
+
+*scmxx-0.7.5 (14 May 2005)
+
+  14 May 2005; Alin Nastac <mrness@gentoo.org> +scmxx-0.7.5.ebuild:
+  Version bump (#86877).
 
   14 May 2005; Alin Nastac <mrness@gentoo.org> +metadata.xml,
   -scmxx-0.6.3.7.ebuild:
