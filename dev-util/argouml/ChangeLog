@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/argouml
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/argouml/ChangeLog,v 1.11 2005/05/06 14:40:23 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/argouml/ChangeLog,v 1.12 2005/05/14 11:43:43 luckyduck Exp $
+
+*argouml-0.18.1 (14 May 2005)
+
+  14 May 2005; Jan Brinkmann <luckyduck@gentoo.org> +argouml-0.18.1.ebuild:
+  new upstream version, fixes #91321
 
   06 May 2005; Sven Wegener <swegener@gentoo.org> argouml-0.16.ebuild,
   argouml-0.16.1.ebuild:
