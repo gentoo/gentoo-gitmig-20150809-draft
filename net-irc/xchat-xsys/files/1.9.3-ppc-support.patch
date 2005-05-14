@@ -1,0 +1,62 @@
+--- xsys2/parse.c.orig	2005-05-14 13:29:35.000000000 +0100
++++ xsys2/parse.c	2005-05-14 13:40:50.000000000 +0100
+@@ -36,6 +36,7 @@
+ 		return 1;
+ 	if(count != NULL) *count = 0;
+ 	
++	#ifdef __i386__
+ 	while(fgets(buffer, 1024, fp) != NULL)
+ 	{
+ 		if(strstr(buffer, "model name") != NULL && model != NULL)
+@@ -76,7 +77,50 @@
+ 				*count = strtoul(buffer, NULL, 0)+1;
+ 		}
+ 	}
+-	
++	#endif
++	#ifdef __powerpc__
++	while(fgets(buffer, 1024, fp) != NULL)
++	{
++		if(strstr(buffer, "cpu") != NULL && model != NULL)
++		{
++			position = strstr(buffer, ":");
++			position += 2;
++			strcpy(model, position);
++			position = strstr(model, "\n");
++			*(position) = '\0';
++		}
++		else if(strstr(buffer, "pmac-generation") != NULL && vendor != NULL)
++		{
++			position = strstr(buffer, ":");
++			position += 2;
++			strcpy(vendor, position);
++			position = strstr(vendor, "\n");
++			*(position) = '\0';
++		}
++		else if(strstr(buffer, "clock") != NULL && freq != NULL)
++		{
++			position = strstr(buffer, ":");
++			position += 2;
++			*freq = strtod(position, NULL);
++		}
++		else if(strstr(buffer, "L2 cache") != NULL && cache != NULL)
++		{
++			position = strstr(buffer, ":");
++			position += 2;
++			strcpy(cache, position);
++			position = strstr(cache, "\n");
++			*(position) = '\0';
++		}
++		else if(strstr(buffer, "processor") != NULL && count != NULL)
++		{
++			position = strstr(buffer, ":");
++			position += 2;
++			if((strtoul(buffer, NULL, 0)+1) > *count)
++				*count = strtoul(buffer, NULL, 0)+1;
++		}
++	}
++	#endif
++
+ 	fclose(fp);
+ 	
+ 	return 0;

@@ -1,0 +1,127 @@
+--- xsys2/parse.c.orig	2005-04-17 21:01:24.000000000 +0100
++++ xsys2/parse.c	2005-04-17 23:05:40.000000000 +0100
+@@ -150,19 +150,91 @@
+ 
+ int xs_parse_video(char *vid_card)
+ {
+-	char *pos = NULL;
+-	FILE *pipe = popen(LSPCI" | grep VGA | cut -d\" \" -f5-", "r");
+-	if(pipe == NULL)
+-		return 1;
+-	while(fgets(vid_card, 1024, pipe) != NULL)
++	char buffer[1024], pcibus[42], vendor[7], device[7], vendorname[128] = "", devicename[128] = "", *position;
++	int busnr = 0, devnr = 0, cardfound = 0;
++
++	while ( busnr <= 20 )
+ 	{
+-		if((pos = strchr(vid_card, '\n')) != NULL)
+-			*pos = '\0';
++		while ( devnr <= 20 ) {
++			snprintf(pcibus, 42, "/sys/bus/pci/devices/0000:%.2d:%.2d.0/class", busnr, devnr);
++			FILE *fp = fopen(pcibus, "r");
++			if(fp != NULL) {
++				if(fgets(buffer, 1024, fp) != NULL)
++					if(strncmp("0x03", buffer, 4) == 0) {
++						cardfound = 1;
++						break;
++					}
++				fclose(fp);
++			}
++			devnr++;
++		}
++		if (cardfound == 1)
++			break;
++		busnr++;
++		devnr = 0;
++        }
++
++	if (cardfound == 0) {
++		strncpy(vid_card, "No AGP card found", 42);
++		return 0;
+ 	}
+-	if(pos == NULL) return 2;
++
++	snprintf(pcibus, 42, "/sys/bus/pci/devices/0000:%.2d:%.2d.0/device", busnr, devnr);
++	FILE *fp = fopen(pcibus, "r");
++	if(fp != NULL) {
++		if(fgets(buffer, 1024, fp) != NULL)
++			if(strstr(buffer, "0x") != NULL) {
++				position = strstr(buffer, "0x");
++				position += 2;
++				strncpy(device, position, 7);
++				position = strstr(device, "\n");
++				*(position) = '\0';
++			}
++			fclose(fp);
++		}
++
++	snprintf(pcibus, 42, "/sys/bus/pci/devices/0000:%.2d:%.2d.0/vendor", busnr, devnr);
++	FILE *fp2 = fopen(pcibus, "r");
++	if(fp2 != NULL) {
++		if(fgets(buffer, 1024, fp) != NULL)
++			if(strstr(buffer, "0x") != NULL) {
++				position = strstr(buffer, "0x");
++				position += 2;
++				strncpy(vendor, position, 7);
++				position = strstr(vendor, "\n");
++				*(position) = '\0';
++			}
++			fclose(fp2);
++		}
+ 	
+-	pclose(pipe);
++	FILE *fp3 = fopen("/usr/share/misc/pci.ids", "r");
++	if(fp3 == NULL) {
++		snprintf(vid_card, 42, "Found AGP card %s:%s", vendor, device);
++		return 0;
++	}
+ 
++	while(fgets(buffer, 1024, fp3) != NULL)	{
++		if (!isspace(buffer[0]) && strstr(buffer, vendor) != NULL) {
++                       	position = strstr(buffer, vendor);
++                       	position += 6;
++                       	strncpy(vendorname, position, 128);
++                       	position = strstr(vendorname, "\n");
++                       	*(position) = '\0';
++			break;
++                }
++	}
++	while(fgets(buffer, 1024, fp3) != NULL) {
++		if(strstr(buffer, device) != NULL) {
++                        position = strstr(buffer, device);
++                        position += 6;
++                        strncpy(devicename, position, 128);
++                        position = strstr(devicename, "\n");
++                        *(position) = '\0';
++			break;
++ 		}
++	}
++	fclose(fp3);
++	snprintf(vid_card, 256, "%s %s", vendorname, devicename);
+ 	return 0;
+ }
+ 
+@@ -389,4 +461,3 @@
+ 	}
+ 	return 0;
+ }
+-
+--- xsys2/Makefile.orig	2005-04-17 21:01:27.000000000 +0100
++++ xsys2/Makefile	2005-04-17 21:01:31.000000000 +0100
+@@ -1,7 +1,3 @@
+-#### SET THIS VALUE TO THE LOCATION OF 'lspci' ####
+-LSPCI = /sbin/lspci
+-
+-
+ #### SHOULD NOT NEED TO EDIT BELOW THIS LINE ####
+ VER_MAJOR = 1
+ VER_MINOR = 9
+@@ -9,7 +5,7 @@
+ CC = gcc
+ CFLAGS += -O2 -Wall -fPIC
+ CFLAGS += -DVER_MINOR=$(VER_MINOR) -DVER_MAJOR=$(VER_MAJOR) -DVER_PATCH=$(VER_PATCH) \
+-          -DVER_STRING=\"$(VER_MAJOR).$(VER_MINOR).$(VER_PATCH)\" -DLSPCI=\"$(LSPCI)\"
++          -DVER_STRING=\"$(VER_MAJOR).$(VER_MINOR).$(VER_PATCH)\"
+ LDFLAGS = $(CFLAGS) -shared
+ LIBRARY = xsys-$(VER_MAJOR).$(VER_MINOR).$(VER_PATCH).so
+ OBJECTS = xsys.o parse.o

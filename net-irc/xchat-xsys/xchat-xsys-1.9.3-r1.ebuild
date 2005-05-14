@@ -1,19 +1,19 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-xsys/xchat-xsys-1.9.1-r1.ebuild,v 1.1 2005/01/16 13:05:01 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-xsys/xchat-xsys-1.9.3-r1.ebuild,v 1.1 2005/05/14 13:13:09 chainsaw Exp $
 
 inherit eutils
 
-MY_P=${P/xchat-/}
+MY_P="${P/xchat-/}"
 DESCRIPTION="Sysinfo plugin for X-Chat."
 SRC_URI="http://mshoup.us/downloads/xsys/${MY_P}.tar.bz2"
 HOMEPAGE="http://mshoup.us/downloads/xsys/README-${PV}"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="x86 ~amd64 ~ppc"
 IUSE="bmp xmms"
-S=${WORKDIR}/${MY_P}
+S=${WORKDIR}/xsys2
 
 DEPEND=">=net-irc/xchat-2.4.0
 	bmp? (media-plugins/bmp-infopipe)
@@ -22,7 +22,8 @@ DEPEND=">=net-irc/xchat-2.4.0
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/${PV}-bmp-support.patch
+	epatch ${FILESDIR}/${PV}-sysfs-instead-of-lspci-2.patch
+	epatch ${FILESDIR}/${PV}-ppc-support.patch
 }
 
 src_compile() {
