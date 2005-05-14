@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3969 2005/05/14 19:52:00 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3970 2005/05/14 23:05:41 swegener Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Sven Wegener <cardoe@gentoo.org> (15 May 2005)
+# irssi moved from cvs to svn, should be quite stable but who knows
+net-irc/irssi-svn
 
 # Doug Goldstein <cardoe@gentoo.org> (14 May 2005)
 # Someone must have deleted this mask...
