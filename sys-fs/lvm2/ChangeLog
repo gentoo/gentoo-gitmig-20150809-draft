@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/lvm2
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.35 2005/05/06 18:19:17 rocket Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.36 2005/05/14 16:01:20 gmsoft Exp $
+
+  14 May 2005; Guy Martin <gmsoft@gentoo.org> lvm2-2.01.09.ebuild:
+  Stable on hppa.
 
   06 May 2005; Eric Edgar <rocket@gentoo.org> lvm2-2.01.09.ebuild:
   Marking stable on x86.  appears to fix bug 89681
