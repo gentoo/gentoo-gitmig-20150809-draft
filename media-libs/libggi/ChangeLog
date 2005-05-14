@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libggi
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libggi/ChangeLog,v 1.23 2005/05/13 17:34:49 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libggi/ChangeLog,v 1.24 2005/05/14 18:26:25 mr_bones_ Exp $
+
+  14 May 2005; Michael Sterrett <mr_bones_@gentoo.org> libggi-2.0.1.ebuild,
+  libggi-2.0.1-r1.ebuild, libggi-2.1.0.ebuild:
+  correct license (bug #92572)
 
   13 May 2005; Rene Nussbaumer <killerfox@gentoo.org> libggi-2.1.0.ebuild:
   Added ~hppa; bug 43612

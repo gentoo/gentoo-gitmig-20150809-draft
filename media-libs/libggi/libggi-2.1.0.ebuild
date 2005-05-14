@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libggi/libggi-2.1.0.ebuild,v 1.8 2005/05/13 17:34:49 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libggi/libggi-2.1.0.ebuild,v 1.9 2005/05/14 18:26:25 mr_bones_ Exp $
 
 inherit eutils libtool
 
@@ -8,9 +8,9 @@ DESCRIPTION="Fast and safe graphics and drivers for about any graphics card to t
 HOMEPAGE="http://www.ggi-project.org/"
 SRC_URI="http://www.ggi-project.org/ftp/ggi/v2.1/${P}.src.tar.bz2"
 
-LICENSE="LGPL-2"
+LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~x86 ~sparc ~ppc ~amd64 ~alpha ~ia64 ~hppa"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~sparc ~x86"
 IUSE="X aalib svga fbcon directfb dga 3dfx debug mmx vis"
 
 DEPEND=">=media-libs/libgii-0.9.0

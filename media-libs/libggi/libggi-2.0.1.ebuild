@@ -1,18 +1,17 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libggi/libggi-2.0.1.ebuild,v 1.17 2005/03/28 04:58:21 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libggi/libggi-2.0.1.ebuild,v 1.18 2005/05/14 18:26:25 mr_bones_ Exp $
 
 inherit eutils
-
-IUSE="X aalib svga directfb"
 
 DESCRIPTION="Fast and safe graphics and drivers for about any graphics card to the Linux kernel (sometimes)"
 SRC_URI="http://www.ggi-project.org/ftp/ggi/v2.0/${P}.tar.bz2"
 HOMEPAGE="http://www.ggi-project.org/"
 
+LICENSE="MIT"
 SLOT="0"
-LICENSE="LGPL-2"
-KEYWORDS="x86 ppc sparc alpha"
+KEYWORDS="alpha ppc sparc x86"
+IUSE="X aalib svga directfb"
 
 DEPEND=">=media-libs/libgii-0.8.1
 	X? ( virtual/x11 )
