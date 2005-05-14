@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-validator/commons-validator-1.1.3.ebuild,v 1.10 2005/04/09 16:03:28 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-validator/commons-validator-1.1.3-r1.ebuild,v 1.1 2005/05/14 16:10:40 luckyduck Exp $
 
 inherit java-pkg
 
@@ -16,7 +16,7 @@ RDEPEND=">=virtual/jre-1.3
 	>=dev-java/commons-digester-1.5
 	>=dev-java/commons-collections-2.1
 	>=dev-java/commons-logging-1.0.3
-	>=dev-java/commons-beanutils-1.6
+	=dev-java/commons-beanutils-1.6*
 	>=dev-java/xerces-2.6.2-r1"
 LICENSE="Apache-1.1"
 SLOT="0"
@@ -33,7 +33,7 @@ src_unpack() {
 	echo "commons-digester.jar=`java-config --classpath=commons-digester`" >> build.properties
 	echo "commons-collections.jar=`java-config --classpath=commons-collections`" >> build.properties
 	echo "commons-logging.jar=`java-config --classpath=commons-logging | sed s/.*://`" >> build.properties
-	echo "commons-beanutils.jar=`java-config --classpath=commons-beanutils | sed s/.*://`" >> build.properties
+	echo "commons-beanutils.jar=`java-config --classpath=commons-beanutils-1.6 | sed s/.*://`" >> build.properties
 	echo "xerces.jar=`java-config --classpath=xerces-2`" >> build.properties
 }
 

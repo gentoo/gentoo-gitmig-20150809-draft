@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-tasks/ant-tasks-1.6.2-r5.ebuild,v 1.12 2005/04/18 17:06:38 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-tasks/ant-tasks-1.6.2-r8.ebuild,v 1.1 2005/05/14 16:10:22 luckyduck Exp $
 
 inherit java-pkg eutils
 
@@ -22,7 +22,7 @@ DEPEND="=dev-java/ant-core-${PV}*
 	!noxalan? ( >=dev-java/xalan-2.5.2 )
 	!nobsh? ( >=dev-java/bsh-1.2-r7 )
 	!noantlr? ( >=dev-java/antlr-2.7.2 )
-	!nobeanutils? ( >=dev-java/commons-beanutils-1.6.1 )
+	!nobeanutils? ( =dev-java/commons-beanutils-1.6* )
 	!nocommonslogging? ( >=dev-java/commons-logging-1.0.3 )
 	!nocommonsnet? ( >=dev-java/commons-net-1.1.0 )
 	!nobcel? ( >=dev-java/bcel-5.1 )
@@ -56,7 +56,7 @@ src_compile() {
 	local p="ant-core,junit"
 	use noantlr || p="${p},antlr"
 	use nobcel || p="${p},bcel"
-	use nobeanutils || p="${p},commons-beanutils"
+	use nobeanutils || p="${p},commons-beanutils-1.6"
 	use nobsh || p="${p},bsh"
 	use nocommonslogging || p="${p},commons-logging"
 	use nocommonsnet || p="${p},commons-net"

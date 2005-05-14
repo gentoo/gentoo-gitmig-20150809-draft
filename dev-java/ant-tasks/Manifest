@@ -1,21 +1,11 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 1dc53a49b786a68ef16b69657cf73409 ant-tasks-1.6.3.ebuild 3815
-MD5 84362fdbc884058b6b6b3339c02c6e41 ant-tasks-1.6.2-r5.ebuild 3765
-MD5 185ae5e90ccd3238e5e52c0a9279c484 ant-tasks-1.6.2-r7.ebuild 3835
-MD5 fd48d78ab0acd088cb10316fd11a8297 ant-tasks-1.6.2-r6.ebuild 3768
-MD5 1b0239320579f40234dc6c26562f2e1c ChangeLog 8631
+MD5 7a597553c8ab58aa9e55c8da7439fe46 ant-tasks-1.6.2-r8.ebuild 3767
+MD5 81ea44b2d3d86b62eb753c70b6f275e6 ant-tasks-1.6.2-r10.ebuild 3837
+MD5 ca6954664129e4f663885a655e890494 ant-tasks-1.6.3-r1.ebuild 3817
+MD5 7a597553c8ab58aa9e55c8da7439fe46 ant-tasks-1.6.2-r9.ebuild 3767
+MD5 ca7764832d346336792cb9d94824a363 ChangeLog 9127
 MD5 4dad079a28768d183022cff420f01281 metadata.xml 220
-MD5 4abd275148cde1e1c88e8ff4097cbcd8 files/digest-ant-tasks-1.6.3 74
-MD5 aac477e88787ed6f0ad5cabe0f6a001a files/digest-ant-tasks-1.6.2-r5 74
-MD5 aac477e88787ed6f0ad5cabe0f6a001a files/digest-ant-tasks-1.6.2-r6 74
-MD5 aac477e88787ed6f0ad5cabe0f6a001a files/digest-ant-tasks-1.6.2-r7 74
+MD5 aac477e88787ed6f0ad5cabe0f6a001a files/digest-ant-tasks-1.6.2-r10 74
+MD5 aac477e88787ed6f0ad5cabe0f6a001a files/digest-ant-tasks-1.6.2-r8 74
+MD5 aac477e88787ed6f0ad5cabe0f6a001a files/digest-ant-tasks-1.6.2-r9 74
+MD5 4abd275148cde1e1c88e8ff4097cbcd8 files/digest-ant-tasks-1.6.3-r1 74
 MD5 8c69a473b88559829069ac80730f2f1b files/1.6.2-scp.patch 877
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCcUrK/rLF9B432nYRAmZ0AKCqu9oQKufIbQhKn0tsjtil3i93LwCfWu1j
-KVqUi2BmEQMd+QjyCb29RAU=
-=SSB5
------END PGP SIGNATURE-----

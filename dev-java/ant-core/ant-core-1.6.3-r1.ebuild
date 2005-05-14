@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-core/ant-core-1.6.3.ebuild,v 1.1 2005/04/28 20:41:25 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-core/ant-core-1.6.3-r1.ebuild,v 1.1 2005/05/14 16:09:55 luckyduck Exp $
 
 inherit java-pkg eutils
 
@@ -67,7 +67,7 @@ src_install() {
 	java-pkg_dojar build/lib/ant.jar
 	java-pkg_dojar build/lib/ant-launcher.jar
 
-	dodoc LICENSE LICENSE.* README WHATSNEW KEYS
+	dodoc README WHATSNEW KEYS
 	use doc && dohtml welcome.html
 	use doc && java-pkg_dohtml -r docs/*
 	use doc && java-pkg_dohtml -r dist/docs/manual/api/*

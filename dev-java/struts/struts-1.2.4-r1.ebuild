@@ -1,39 +1,39 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/struts/struts-1.1.ebuild,v 1.8 2005/03/29 16:36:54 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/struts/struts-1.2.4-r1.ebuild,v 1.1 2005/05/14 16:14:02 luckyduck Exp $
 
 inherit java-pkg
 
 DESCRIPTION="A powerful Model View Controller Framework for JSP/Servlets"
-SRC_URI="mirror://apache/jakarta/struts/source/jakarta-${PN}-${PV}-src.tar.gz"
+SRC_URI="mirror://apache/struts/source/jakarta-${PN}-${PV}-src.tar.gz"
 HOMEPAGE="http://jakarta.apache.org/struts/index.html"
-LICENSE="Apache-1.1"
+LICENSE="Apache-2.0"
 SLOT="0"
 DEPEND=">=virtual/jdk-1.4
-		>=dev-java/ant-1.5.4
-		>=dev-java/commons-beanutils-1.6.1
-		>=dev-java/commons-collections-2.1
-		dev-java/struts-legacy
-		>=dev-java/commons-digester-1.5
-		>=dev-java/commons-fileupload-1.0
-		>=dev-java/commons-lang-1.0
-		>=dev-java/commons-logging-1.0
-		>=dev-java/commons-validator-1.0
-		=dev-java/jakarta-oro-2.0*
-		=dev-java/servletapi-2.3*
-		jikes? ( dev-java/jikes )"
-
+	>=dev-java/ant-1.6.0
+	jikes? ( dev-java/jikes )"
+RDEPEND=">=virtual/jre-1.4
+	=dev-java/commons-beanutils-1.6*
+	>=dev-java/commons-collections-2.1
+	dev-java/struts-legacy
+	>=dev-java/commons-digester-1.5
+	>=dev-java/commons-fileupload-1.0
+	>=dev-java/commons-lang-2.0
+	>=dev-java/commons-logging-1.0.4
+	>=dev-java/commons-validator-1.1.3
+	=dev-java/jakarta-oro-2.0*
+	=dev-java/servletapi-2.3*"
 IUSE="doc jikes"
 KEYWORDS="~x86 ~ppc ~amd64"
 
-S=${WORKDIR}/jakarta-${PN}-${PV}-src
+S=${WORKDIR}/jakarta-${P}-src
 
 src_compile() {
 	local antflags="compile.library"
 	use doc && antflags="${antflags} compile.javadoc"
 	use jikes && antflags="${antflags} -Dbuild.compiler=jikes"
 
-	antflags="${antflags} -Dcommons-beanutils.jar=`java-config -p commons-beanutils`"
+	antflags="${antflags} -Dcommons-beanutils.jar=`java-config -p commons-beanutils-1.6 | sed s/:.*// `"
 	antflags="${antflags} -Dcommons-collections.jar=`java-config -p commons-collections`"
 	antflags="${antflags} -Dstruts-legacy.jar=`java-config -p struts-legacy`"
 	antflags="${antflags} -Dcommons-digester.jar=`java-config -p commons-digester`"
@@ -50,6 +50,11 @@ src_compile() {
 
 src_install() {
 	java-pkg_dojar target/library/struts.jar
-	dodoc README STATUS
+
+	#install the tld files
+	insinto /usr/share/${PN}/lib
+	doins target/library/*.tld
+
+	dodoc README STATUS.txt
 	use doc && java-pkg_dohtml -r target/documentation/
 }

@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/commons-digester
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-digester/ChangeLog,v 1.23 2005/04/30 19:17:28 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-digester/ChangeLog,v 1.24 2005/05/14 16:10:48 luckyduck Exp $
+
+*commons-digester-1.6-r1 (14 May 2005)
+
+  14 May 2005; Jan Brinkmann <luckyduck@gentoo.org>
+  -commons-digester-1.4.ebuild, -commons-digester-1.5.ebuild,
+  -commons-digester-1.6.ebuild, +commons-digester-1.6-r1.ebuild:
+  updated commons-beanutils dependency to reflect new slotting. see #71952
 
   30 Apr 2005; Michael Hanselmann <hansmi@gentoo.org>
   commons-digester-1.6.ebuild:

@@ -1,6 +1,18 @@
 # ChangeLog for dev-java/ant-tasks
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-tasks/ChangeLog,v 1.23 2005/04/28 20:42:26 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-tasks/ChangeLog,v 1.24 2005/05/14 16:10:22 luckyduck Exp $
+
+*ant-tasks-1.6.3-r1 (14 May 2005)
+*ant-tasks-1.6.2-r10 (14 May 2005)
+*ant-tasks-1.6.2-r9 (14 May 2005)
+*ant-tasks-1.6.2-r8 (14 May 2005)
+
+  14 May 2005; Jan Brinkmann <luckyduck@gentoo.org>
+  -ant-tasks-1.6.2-r5.ebuild, -ant-tasks-1.6.2-r6.ebuild,
+  -ant-tasks-1.6.2-r7.ebuild, +ant-tasks-1.6.2-r8.ebuild,
+  +ant-tasks-1.6.2-r9.ebuild, +ant-tasks-1.6.2-r10.ebuild,
+  -ant-tasks-1.6.3.ebuild, +ant-tasks-1.6.3-r1.ebuild:
+  updated commons-beanutils dependency to reflect new slotting. see #71952
 
 *ant-tasks-1.6.3 (28 Apr 2005)
 

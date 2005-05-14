@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/commons-jxpath
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-jxpath/ChangeLog,v 1.8 2005/02/06 01:51:52 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-jxpath/ChangeLog,v 1.9 2005/05/14 16:10:09 luckyduck Exp $
+
+*commons-jxpath-1.1-r1 (14 May 2005)
+
+  14 May 2005; Jan Brinkmann <luckyduck@gentoo.org>
+  -commons-jxpath-1.1.ebuild, +commons-jxpath-1.1-r1.ebuild:
+  updated commons-beanutils dependency to reflect new slotting. see #71952
 
   06 Feb 2005; Jan Brinkmann <luckyduck@gentoo.org> commons-jxpath-1.1.ebuild:
   stable on amd64

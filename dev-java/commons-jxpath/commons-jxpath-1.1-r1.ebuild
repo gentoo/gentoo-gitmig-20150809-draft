@@ -1,34 +1,37 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-jxpath/commons-jxpath-1.1.ebuild,v 1.9 2005/02/06 01:51:52 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-jxpath/commons-jxpath-1.1-r1.ebuild,v 1.1 2005/05/14 16:10:09 luckyduck Exp $
 
 inherit java-pkg
 
-DESCRIPTION=" JXPath applies XPath expressions to graphs of objects of all kinds."
+DESCRIPTION="Applies XPath expressions to graphs of objects of all kinds."
 HOMEPAGE="http://jakarta.apache.org/commons/jxpath/"
 SRC_URI="mirror://apache/jakarta/commons/jxpath/source/${PN}-${PV}-src.tar.gz"
-DEPEND=">=virtual/jdk-1.3
-	=dev-java/servletapi-2.3*
-	~dev-java/jdom-1.0_beta9
-	>=dev-java/ant-1.4
-	junit? ( >=dev-java/junit-3.7 )"
-RDEPEND=">=virtual/jdk-1.3"
+
 LICENSE="Apache-1.1"
 SLOT="0"
 KEYWORDS="x86 amd64"
-IUSE="doc junit"
+IUSE="doc"
+
+DEPEND=">=virtual/jdk-1.3
+	dev-java/ant-core"
+RDEPEND=">=virtual/jdk-1.3
+	=dev-java/commons-beanutils-1.6*
+	=dev-java/servletapi-2.3*
+	~dev-java/jdom-1.0_beta9"
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	echo "jdom.jar=`java-config -p jdom-1.0_beta9`" > build.properties
-	echo "servlet.jar=`java-config -p servletapi-2.3`" >> build.properties
+	echo "jdom.jar=$(java-config -p jdom-1.0_beta9)" > build.properties
+	echo "servlet.jar=$(java-config -p servletapi-2.3)" >> build.properties
+	echo "commons-beanutils.jar=$(java-config -p commons-beanutils-1.6)" \
+		>> build.properties
 }
 
 src_compile() {
 	local antflags="jar"
 	use doc && antflags="${antflags} javadoc"
-	use junit && antflags="${antflags} test"
 	ant ${antflags} || die "compile problem"
 }
 

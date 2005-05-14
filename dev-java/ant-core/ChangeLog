@@ -1,6 +1,14 @@
 # ChangeLog for dev-java/ant-core
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-core/ChangeLog,v 1.21 2005/04/28 20:41:25 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-core/ChangeLog,v 1.22 2005/05/14 16:09:55 luckyduck Exp $
+
+*ant-core-1.6.3-r1 (14 May 2005)
+*ant-core-1.6.2-r3 (14 May 2005)
+
+  14 May 2005; Jan Brinkmann <luckyduck@gentoo.org> files/1.6.2-ant,
+  files/1.6.3-ant, -ant-core-1.6.2-r2.ebuild, +ant-core-1.6.2-r3.ebuild,
+  -ant-core-1.6.3.ebuild, +ant-core-1.6.3-r1.ebuild:
+  updated commons-beanutils dependency to reflect new slotting. see #71952
 
 *ant-core-1.6.3 (28 Apr 2005)
 
