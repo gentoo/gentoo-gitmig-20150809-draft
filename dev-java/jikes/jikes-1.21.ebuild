@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jikes/jikes-1.21.ebuild,v 1.6 2005/03/25 18:52:19 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jikes/jikes-1.21.ebuild,v 1.7 2005/05/14 19:36:53 mholzer Exp $
 
 inherit flag-o-matic
 
@@ -13,7 +13,6 @@ KEYWORDS="x86 sparc ppc amd64 alpha ia64 hppa"
 IUSE=""
 DEPEND="virtual/libc"
 DEPEND=""
-RESTRICT="nomirror"
 
 src_compile() {
 	filter-flags "-fno-rtti"
