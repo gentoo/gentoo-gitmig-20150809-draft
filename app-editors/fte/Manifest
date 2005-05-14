@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 0960b72b6494de01232b0fd9da73de46 fte-20020324-r2.ebuild 1738
 MD5 0209805ce7ac6cc0246b177a05a6d10d fte-20050108-r3.ebuild 2084
 MD5 9e95a238c5e3224f9aaae3ff29d27487 fte-20020324-r1.ebuild 1856
@@ -12,3 +15,10 @@ MD5 23d2b8a8749e3a4a9f9ab911641d50e8 files/digest-fte-20020324-r2 133
 MD5 23d2b8a8749e3a4a9f9ab911641d50e8 files/digest-fte-20020324 133
 MD5 6247d87b3178cdf9fbcb8c9dbca1549a files/fte-new_keyword.patch 340
 MD5 be13218f7abfe31d83940c80adcbc59c files/fte-gcc34 1092
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFChjakI1lqEGTUzyQRAub/AJ9eTJGGIImK2fOf7o+6jfsivT16WACgoANO
+CUkZg4o3Exh4FvsLPIXlhmY=
+=ooMA
+-----END PGP SIGNATURE-----
