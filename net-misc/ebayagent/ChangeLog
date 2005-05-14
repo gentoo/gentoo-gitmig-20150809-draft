@@ -1,10 +1,10 @@
 # ChangeLog for net-misc/ebayagent
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ebayagent/ChangeLog,v 1.1 2005/05/14 17:17:35 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ebayagent/ChangeLog,v 1.2 2005/05/14 17:18:11 mcummings Exp $
 
 *ebayagent-0.9.11 (14 May 2005)
 
   14 May 2005; Michael Cummings <mcummings@gentoo.org> +metadata.xml,
   +ebayagent-0.9.11.ebuild:
-  bug 88118, ebuild submitted by Bertrand Jacquin <beber.gentoo@gmail.com>
+  bug 90948, ebuild submitted by Bertrand Jacquin <beber.gentoo@gmail.com>
 
