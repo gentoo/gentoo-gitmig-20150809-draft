@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/acpid/acpid-1.0.4-r1.ebuild,v 1.2 2005/04/26 10:32:12 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/acpid/acpid-1.0.4-r1.ebuild,v 1.3 2005/05/14 11:23:38 brix Exp $
 
 inherit eutils toolchain-funcs
 
@@ -13,7 +13,8 @@ SLOT="0"
 KEYWORDS="~x86 -ppc ~alpha ~amd64 ~ia64"
 IUSE="doc"
 
-DEPEND="virtual/libc
+DEPEND="sys-apps/sed
+		virtual/libc
 		virtual/linux-sources"
 RDEPEND="virtual/libc"
 
@@ -23,6 +24,9 @@ src_unpack() {
 	cd ${S}
 	# Fix building with gcc4
 	epatch ${FILESDIR}/${P}-gcc4.patch
+
+	# do not treat warnings as errors, bug #90873
+	sed -i -e "s:-Werror::" ${S}/Makefile
 }
 
 src_compile() {

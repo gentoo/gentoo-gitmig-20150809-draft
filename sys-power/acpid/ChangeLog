@@ -1,6 +1,9 @@
 # ChangeLog for sys-power/acpid
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/acpid/ChangeLog,v 1.5 2005/04/26 12:18:08 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/acpid/ChangeLog,v 1.6 2005/05/14 11:23:38 brix Exp $
+
+  14 May 2005; <brix@gentoo.org> acpid-1.0.4-r1.ebuild:
+  Do not treat warnings as errors, bug #90873.
 
   26 Apr 2005; <brix@gentoo.org> metadata.xml:
   Updated metadata.xml
