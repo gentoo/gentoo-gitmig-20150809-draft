@@ -1,6 +1,13 @@
 # ChangeLog for app-text/po4a
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/po4a/ChangeLog,v 1.2 2005/04/16 23:17:43 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/po4a/ChangeLog,v 1.3 2005/05/14 14:09:27 mcummings Exp $
+
+*po4a-0.21 (14 May 2005)
+
+  14 May 2005; Michael Cummings <mcummings@gentoo.org> -po4a-0.19.ebuild,
+  -po4a-0.20.ebuild, +po4a-0.21.ebuild:
+  New version, bug fixes, submitted by Jordi Vilalta <jvprat@wanadoo.es> in
+  bug 84286.
 
 *po4a-0.20 (16 Apr 2005)
 

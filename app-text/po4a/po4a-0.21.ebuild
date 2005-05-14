@@ -1,8 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/po4a/po4a-0.20.ebuild,v 1.1 2005/04/16 23:17:43 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/po4a/po4a-0.21.ebuild,v 1.1 2005/05/14 14:09:27 mcummings Exp $
 
 inherit perl-module
+
+MY_PV=${PV/21/20}
+MY_P="${PN}-${MY_PV}"
+S=${WORKDIR}/${MY_P}
 
 DESCRIPTION="Tools for helping translation of documentation"
 HOMEPAGE="http://${PN}.alioth.debian.org"
@@ -13,7 +17,7 @@ SLOT="0"
 IUSE=""
 KEYWORDS="~x86"
 
-DEPEND=${DEPEND}"
+DEPEND="${DEPEND}
 	dev-perl/SGMLSpm
 	>=sys-devel/gettext-0.13
 	>=dev-perl/module-build-0.25
@@ -22,3 +26,7 @@ DEPEND=${DEPEND}"
 	dev-perl/TermReadKey
 	dev-perl/Text-WrapI18N"
 
+#src_compile() {
+	#perl-module_src_compile
+	#perl ${S}/Build build
+#}
