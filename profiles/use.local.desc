@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1165 2005/05/12 23:19:02 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1166 2005/05/14 03:46:31 nakano Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -122,6 +122,8 @@ dev-db/firebird:inetd - If you want inetd version instead of a superserver (daem
 dev-db/hk_classes:sqlite3 - Enable sqlite3 plugin.
 dev-db/mysql:cluster - Add support for NDB clustering
 dev-db/pgcluster:pg-intdatetime - Enables --enable-integer-datetimes configure option, which changes PG to use 64-bit integers for timestamp storage.
+dev-db/postgis:geos - Add the GEOS library for exact topological tests.
+dev-db/postgis:proj - Add the Proj library for reprojection features.
 dev-db/postgresql:pg-hier - Enables recursive queries like Oracle's 'CONNECT BY' feature.
 dev-db/postgresql:pg-intdatetime - Enables --enable-integer-datetimes configure option, which changes PG to use 64-bit integers for timestamp storage.
 dev-db/postgresql:pg-vacuumdelay - Adds in the vacuum inter-page delay feature.
