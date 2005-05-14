@@ -1,10 +1,10 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 6d1c905fe68333dbdf0bba636f4f082f ChangeLog 3045
+MD5 4c2a3c8e1280188d9d7236e6958b6271 ChangeLog 3135
 MD5 af1bfbb0777267a03e889b08173f2757 metadata.xml 248
 MD5 41d6eaa284c17fef533c07982a6afff0 molden-4.0.ebuild 1832
-MD5 ebeca34d2ed7b7609fc25b9ebad8a345 molden-4.3.ebuild 1853
+MD5 84d92202473a2f2e4276ae06e74b3b9b molden-4.3.ebuild 1859
 MD5 890c58c19b40fc682db3be5e0588f619 molden-3.9.ebuild 1752
 MD5 aef43a63df97086181f3e85d37c17100 molden-4.1.ebuild 1845
 MD5 d06154ddfaab5d99bd967f2ca2b53652 files/digest-molden-3.9 61
@@ -15,7 +15,7 @@ MD5 05e3e6790a565d9173b003c02a09c902 files/digest-molden-4.1 61
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCbJQkKf2g/qXtneoRAhJZAJsHzQ3Unxg44UdOqICyGIaPVmq6FgCdGKPb
-xANeh+MtfwNIWsl9HhSJPV8=
-=TzbV
+iD8DBQFChb0gKf2g/qXtneoRAgZiAKCm1BHB+LlOqdbDYNr+0fbAtico4gCgr4l/
++iRY2ynt4lRiLp+sv4ywGGE=
+=WGVV
 -----END PGP SIGNATURE-----
