@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/tcpdump
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/ChangeLog,v 1.41 2005/05/07 17:13:35 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/ChangeLog,v 1.42 2005/05/14 12:24:56 ka0ttic Exp $
+
+  14 May 2005; Aaron Walker <ka0ttic@gentoo.org>
+  +files/tcpdump-3.8.3-gcc4.patch, tcpdump-3.8.3-r2.ebuild:
+  Added patch to make gcc-4 a happy camper; also updated to use
+  toolchain-funcs.eclass rather than gcc.eclass.
 
   07 May 2005; Bryan Østergaard <kloeri@gentoo.org>
   tcpdump-3.8.3-r2.ebuild:
