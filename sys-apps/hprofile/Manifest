@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 912ede66946c96032efef1aa4619c4b9 hprofile-2.0_beta2.ebuild 1875
-MD5 98727e8f1f3b99bfebd476f39345c8f5 ChangeLog 355
+MD5 cdd96d44a4a6697e521c3026d288a937 ChangeLog 454
+MD5 1679f8a86b4204771e2e7f4ace7a4740 hprofile-2.0_beta2.ebuild 1881
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 16e617a2b23310082c5b1b051f27f94b files/digest-hprofile-2.0_beta2 69
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBaIkuHTu7gpaalycRAqnmAJ4kTbkcEZjKKYH0GcLbnOXZUGr9YgCg5tAs
-pp6Ii+8LXImkQLdP7/tlSgU=
-=lke9
------END PGP SIGNATURE-----

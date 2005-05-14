@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hprofile/hprofile-2.0_beta2.ebuild,v 1.1 2004/10/10 00:57:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hprofile/hprofile-2.0_beta2.ebuild,v 1.2 2005/05/14 08:36:32 blubb Exp $
 
 DESCRIPTION="Utility to manage hardware, network, power or other profiles"
 HOMEPAGE="http://hprofile.sourceforge.net/"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/hprofile/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 IUSE=""
 
 DEPEND=">=app-shells/bash-2.0
