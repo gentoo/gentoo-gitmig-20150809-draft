@@ -1,46 +1,41 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/checkstyle/checkstyle-3.4-r3.ebuild,v 1.1 2005/03/27 21:15:36 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/checkstyle/checkstyle-3.4-r4.ebuild,v 1.1 2005/05/14 16:10:54 luckyduck Exp $
 
 inherit java-pkg
 
 DESCRIPTION="A development tool to help programmers write Java code that adheres to a coding standard."
 HOMEPAGE="http://checkstyle.sourceforge.net"
 SRC_URI="mirror://sourceforge/checkstyle/${PN}-src-${PV}.tar.gz"
+
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~x86 ~sparc ~ppc ~amd64"
+KEYWORDS="x86 ~sparc ppc amd64"
 IUSE="doc jikes"
-RESTRICT="nomirror"
-
-S=${WORKDIR}/${PN}-src-${PV}
+RESTRICT="primaryuri"
 
 DEPEND=">=virtual/jdk-1.4
-		>=dev-java/ant-1.5
+		dev-java/ant-core
 		jikes? ( dev-java/jikes )"
-
 RDEPEND=">=virtual/jre-1.3
 		dev-java/antlr
-		dev-java/commons-beanutils
+		=dev-java/commons-beanutils-1.6*
 		=dev-java/commons-cli-1*
 		dev-java/commons-collections
 		dev-java/commons-logging
 		=dev-java/jakarta-regexp-1.3*"
+S=${WORKDIR}/${PN}-src-${PV}
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}/lib
 	java-pkg_jar-from antlr
-	java-pkg_jar-from commons-beanutils
+	java-pkg_jar-from commons-beanutils-1.6
 	java-pkg_jar-from commons-cli-1
 	java-pkg_jar-from commons-collections
 	java-pkg_jar-from commons-logging
 	java-pkg_jar-from jakarta-regexp-1.3 jakarta-regexp.jar jakarta-regexp-1.3.jar
-	#if use junit; then
-	#	java-pkg_jar-from junit
-	#else
-		rm junit.jar
-	#fi
+	rm junit.jar
 }
 
 src_compile() {
@@ -62,7 +57,7 @@ src_install() {
 
 	echo '#!/bin/bash' > checkstyle
 	echo '' >> checkstyle
-	echo '`java-config -J` -cp `java-config -p checkstyle,antlr,commons-beanutils,commons-cli-1,commons-collections,commons-logging,jakarta-regexp-1.3` com.puppycrawl.tools.checkstyle.Main "$@"' >> checkstyle
+	echo '`java-config -J` -cp `java-config -p checkstyle,antlr,commons-beanutils-1.6,commons-cli-1,commons-collections,commons-logging,jakarta-regexp-1.3` com.puppycrawl.tools.checkstyle.Main "$@"' >> checkstyle
 
 	insinto /usr
 	dobin checkstyle

@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/checkstyle
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/checkstyle/ChangeLog,v 1.12 2005/04/02 19:46:52 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/checkstyle/ChangeLog,v 1.13 2005/05/14 16:10:54 luckyduck Exp $
+
+*checkstyle-3.4-r4 (14 May 2005)
+
+  14 May 2005; Jan Brinkmann <luckyduck@gentoo.org>
+  -checkstyle-3.3-r1.ebuild, -checkstyle-3.4-r3.ebuild,
+  +checkstyle-3.4-r4.ebuild:
+  updated commons-beanutils dependency to reflect new slotting. see #71952
 
   02 Apr 2005; Jan Brinkmann <luckyduck@gentoo.org> checkstyle-3.3-r1.ebuild,
   -checkstyle-3.3.ebuild:
