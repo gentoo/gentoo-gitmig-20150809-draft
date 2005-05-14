@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/cdmp3
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cdmp3/ChangeLog,v 1.6 2004/12/16 10:57:11 corsair Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cdmp3/ChangeLog,v 1.7 2005/05/14 22:01:53 luckyduck Exp $
+
+*cdmp3-0.5.0 (14 May 2005)
+
+  14 May 2005; Jan Brinkmann <luckyduck@gentoo.org> cdmp3-0.4.1.ebuild,
+  +cdmp3-0.5.0.ebuild:
+  new upstream version, 0.4.1 stable on amd64
 
   16 Dec 2004; Markus Rothe <corsair@gentoo.org> cdmp3-0.4.1.ebuild:
   Stable on ppc64
