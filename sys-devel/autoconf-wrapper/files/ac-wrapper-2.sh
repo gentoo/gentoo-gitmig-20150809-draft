@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf-wrapper/files/ac-wrapper-2.sh,v 1.1 2004/12/06 04:29:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf-wrapper/files/ac-wrapper-2.sh,v 1.2 2005/05/14 17:40:25 vapier Exp $
 
 # Based on the ac-wrapper.pl script provided by MandrakeSoft
 # Rewritten in bash by Gregorio Guidi
@@ -51,7 +51,7 @@ if [ "${WANT_AUTOCONF}" != "2.5" ] ; then
 		1.[7-9]) ;;
 		*)
 			if [ -r "configure" ] ; then
-				confversion=$(awk \
+				confversion=$(gawk \
 					'{
 					if (match($0,
 					          "^# Generated (by (GNU )?Autoconf|automatically using autoconf version) ([0-9].[0-9])",

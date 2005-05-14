@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake-wrapper/files/am-wrapper-1.sh,v 1.3 2004/11/15 00:57:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake-wrapper/files/am-wrapper-1.sh,v 1.4 2005/05/14 17:42:00 vapier Exp $
 
 # Based on the am-wrapper.pl script provided by MandrakeSoft
 # Rewritten in bash by Gregorio Guidi
@@ -71,7 +71,7 @@ done
 do_awk() {
 	local file=$1 ; shift
 	local arg=$1 ; shift
-	echo $(awk "{ if (match(\$0, \"$*\", res)) { print res[${arg}]; exit } }" ${file})
+	echo $(gawk "{ if (match(\$0, \"$*\", res)) { print res[${arg}]; exit } }" ${file})
 }
 
 #
