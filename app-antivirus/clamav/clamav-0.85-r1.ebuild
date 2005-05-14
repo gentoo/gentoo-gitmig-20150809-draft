@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/clamav-0.85-r1.ebuild,v 1.1 2005/05/14 21:31:33 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/clamav-0.85-r1.ebuild,v 1.2 2005/05/14 23:02:04 ticho Exp $
 
 inherit eutils flag-o-matic
 
@@ -87,6 +87,10 @@ src_install() {
 }
 
 pkg_postinst() {
+	echo
+	ewarn "As of 0.85-r1, all settings from /etc/conf.d/clamd are ignored, except for"
+	ewarn "START_CLAMD and START_FRESHCLAM. All settings are read from /etc/clamd.conf"
+	ewarn "and /etc/freshclam.conf, so double-check these two files."
 	echo
 	ewarn "Warning: clamd and/or freshclam have not been restarted."
 	ewarn "You should restart them with: /etc/init.d/clamd restart"
