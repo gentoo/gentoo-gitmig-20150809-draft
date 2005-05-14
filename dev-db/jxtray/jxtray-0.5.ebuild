@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/jxtray/jxtray-0.5.ebuild,v 1.5 2005/03/04 14:24:40 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/jxtray/jxtray-0.5.ebuild,v 1.6 2005/05/14 21:57:14 luckyduck Exp $
 
 inherit java-pkg
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://jxtray.sourceforge.net"
 SRC_URI="mirror://sourceforge/jxtray/${PN}-src-${PV}.tgz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="x86 amd64 ~ppc"
 IUSE="doc jikes firebird mssql mysql postgres"
 
 DEPEND=">=virtual/jdk-1.3
@@ -59,10 +59,8 @@ src_unpack() {
 
 src_compile() {
 	local antflags="jar"
-
-	use jikes && antflags="${antflags} -Dbuild.compiler=jikes"
 	use doc && antflags="${antflags} javadoc"
-
+	use jikes && antflags="${antflags} -Dbuild.compiler=jikes"
 	ant ${antflags} || die "Compile failed!"
 }
 
@@ -80,6 +78,6 @@ src_install() {
 	echo "java -cp \$(${cp}) jxtray.Jxtray" >> ${PN}
 	dobin ${PN}
 
-	dodoc CHANGELOG.txt LICENSE.txt README.txt
+	dodoc CHANGELOG.txt README.txt
 	use doc && java-pkg_dohtml -r ${S}/javadoc/*
 }

@@ -1,6 +1,16 @@
-MD5 2d2f6a718be3bc50b0bc934bc244b8d0 jxtray-0.5.ebuild 2330
-MD5 b652a560e515cd6518b485ea5aadefd6 ChangeLog 839
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 93bddd8148e4ad88325eae63bba7df44 jxtray-0.5.ebuild 2319
+MD5 2977d89506ea23357b6e76d6637bf535 ChangeLog 961
 MD5 f5ddd2d4a1069f3b3c4876d2be95eaff metadata.xml 581
 MD5 f22e8babdfdaf992bc35e20ab66ce9f5 files/default.properties 217
 MD5 97bb388f459c454b06a8276c62609259 files/build.xml 1599
 MD5 f84f96f0c025c480d3404ee1ad22e3fc files/digest-jxtray-0.5 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFChnRB06ebR+OMO78RAqGhAKCC1GSuLAlr4oFs19L+ffRTodaG6ACdFoqO
+/PkRP3kfyfEIqLXfYl5AsKA=
+=Na+S
+-----END PGP SIGNATURE-----
