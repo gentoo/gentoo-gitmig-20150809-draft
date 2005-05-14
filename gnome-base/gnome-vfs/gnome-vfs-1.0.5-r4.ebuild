@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-1.0.5-r4.ebuild,v 1.7 2005/04/12 17:00:18 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-1.0.5-r4.ebuild,v 1.8 2005/05/14 06:36:23 halcy0n Exp $
 
 inherit eutils libtool gcc
 
@@ -44,7 +44,8 @@ src_unpack() {
 	epatch ${FILESDIR}/1.0/${P}-fix-segfault.patch
 
 	#apply both patches to compile with gcc-3.4 closing bug #53075
-	if [ "`gcc-major-version`" -ge "3" -a "`gcc-minor-version`" -ge "4" ]
+	if [ "`gcc-major-version`" -ge "3" -a "`gcc-minor-version`" -ge "4" ] \
+		|| [ "`gcc-major-version`" -ge "4" ]
 	then
 		epatch ${FILESDIR}/1.0/${P}-gcc3.4.patch
 	fi
