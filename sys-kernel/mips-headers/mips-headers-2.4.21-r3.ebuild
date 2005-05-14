@@ -1,17 +1,15 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-headers/mips-headers-2.4.21-r3.ebuild,v 1.9 2005/02/06 04:48:42 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-headers/mips-headers-2.4.21-r3.ebuild,v 1.10 2005/05/14 01:05:34 kumba Exp $
 
 ETYPE="headers"
-inherit kernel
+inherit kernel eutils
 IUSE=""
 OKV=${PV/_/-}
 CVSDATE=20030803
 EXTRAVERSION=-mipscvs-${CVSDATE}
 KV="${OKV}${EXTRAVERSION}"
 S=${WORKDIR}/linux-${KV}
-
-inherit eutils
 
 # What's in this kernel?
 

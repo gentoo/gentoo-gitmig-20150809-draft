@@ -1,9 +1,9 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-headers/mips-headers-2.4.23.ebuild,v 1.6 2005/02/27 05:55:41 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-headers/mips-headers-2.4.23.ebuild,v 1.7 2005/05/14 01:05:34 kumba Exp $
 
 ETYPE="headers"
-inherit kernel
+inherit kernel eutils
 
 OKV=${PV/_/-}
 CVSDATE=20031128
