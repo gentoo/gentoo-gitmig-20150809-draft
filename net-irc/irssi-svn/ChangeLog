@@ -1,0 +1,11 @@
+# ChangeLog for net-irc/irssi-svn
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi-svn/ChangeLog,v 1.1 2005/05/14 23:09:36 swegener Exp $
+
+*irssi-svn-0.3 (14 May 2005)
+
+  14 May 2005; Sven Wegener <swegener@gentoo.org> +metadata.xml,
+  +irssi-svn-0.3.ebuild:
+  Initial commit. Based on the ebuild provided by Joseph Yen and Emanuele
+  Giaquinta in bug #89101.
+
