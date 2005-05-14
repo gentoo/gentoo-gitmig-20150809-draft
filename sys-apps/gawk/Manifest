@@ -1,6 +1,6 @@
 MD5 3de9fe59a8735fb88695e5111e50be99 ChangeLog 9239
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 b5d59a259f2a1467a9b864e9aa95bde9 gawk-3.1.4-r4.ebuild 3815
+MD5 cc598629da038a912dc65fb5c5fc5405 gawk-3.1.4-r4.ebuild 3821
 MD5 560c671909467b8f321e5db41ce92383 gawk-3.1.3-r2.ebuild 2783
 MD5 1a6ff83a6dd7c5f300803cae1cabd4ae files/gawk-3.1.2-dec-alpha-compiler.diff 461
 MD5 e01879d30ddf2eb060f2ba2fa745a922 files/digest-gawk-3.1.4-r4 132
@@ -11,5 +11,5 @@ MD5 8a25d43ff539b0c949fc5bbce8488e06 files/gawk-3.1.3-getpgrp_void.patch 1225
 MD5 6778659e2892fddf115cee2c244e60a8 files/gawk-3.1.4-flonum.patch 3341
 MD5 334e1cf92033c20c5e401f5ae5f498cc files/gawk-3.1.4-nextc.patch 716
 MD5 513af85f3e12197f97b42c3fee7c491c files/gawk-3.1.4-uplow.patch 5636
-MD5 63cb8e8ee794fe00894c4af0dfa28255 files/filefuncs/Makefile 989
+MD5 f3561ccd6d2c2893dc5685743786dcb7 files/filefuncs/Makefile 973
 MD5 3159f74841ac19ed6237645e562f60c0 files/filefuncs/filefuncs.c 10992
