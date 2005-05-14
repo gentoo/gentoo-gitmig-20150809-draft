@@ -1,0 +1,52 @@
+diff -uNr linux-2.6.12-rc4-mm1.ORIG/fs/fs-writeback.c linux-2.6.12-rc4-mm1/fs/fs-writeback.c
+--- linux-2.6.12-rc4-mm1.ORIG/fs/fs-writeback.c	2005-05-14 18:31:04.000000000 +0100
++++ linux-2.6.12-rc4-mm1/fs/fs-writeback.c	2005-05-14 18:32:43.000000000 +0100
+@@ -283,6 +283,8 @@
+  * WB_SYNC_HOLD is a hack for sys_sync(): reattach the inode to sb->s_dirty so
+  * that it can be located for waiting on in __writeback_single_inode().
+  *
++ * Called under inode_lock.
++ *
+  * If `bdi' is non-zero then we're being asked to writeback a specific queue.
+  * This function assumes that the blockdev superblock's inodes are backed by
+  * a variety of queues, so all inodes are searched.  For other superblocks,
+@@ -303,8 +305,6 @@
+ {
+ 	const unsigned long start = jiffies;	/* livelock avoidance */
+ 
+-	spin_lock(&inode_lock);
+-
+ 	if (!wbc->for_kupdate || list_empty(&sb->s_io))
+ 		list_splice_init(&sb->s_dirty, &sb->s_io);
+ 
+@@ -384,7 +384,6 @@
+ 		if (wbc->nr_to_write <= 0)
+ 			break;
+ 	}
+-	spin_unlock(&inode_lock);
+ 	return;		/* Leave any unwritten inodes on s_io */
+ }
+ EXPORT_SYMBOL(generic_sync_sb_inodes);
+@@ -437,8 +436,11 @@
+ 			 * be unmounted by the time it is released.
+ 			 */
+ 			if (down_read_trylock(&sb->s_umount)) {
+-				if (sb->s_root)
++				if (sb->s_root) {
++					spin_lock(&inode_lock);
+ 					sync_sb_inodes(sb, wbc);
++					spin_unlock(&inode_lock);
++				}
+ 				up_read(&sb->s_umount);
+ 			}
+ 			spin_lock(&sb_lock);
+@@ -474,7 +476,9 @@
+ 			(inodes_stat.nr_inodes - inodes_stat.nr_unused) +
+ 			nr_dirty + nr_unstable;
+ 	wbc.nr_to_write += wbc.nr_to_write / 2;		/* Bit more for luck */
++	spin_lock(&inode_lock);
+ 	sync_sb_inodes(sb, &wbc);
++	spin_unlock(&inode_lock);
+ }
+ 
+ /*

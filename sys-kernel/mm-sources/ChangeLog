@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/mm-sources
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/ChangeLog,v 1.226 2005/05/05 22:06:43 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/ChangeLog,v 1.227 2005/05/14 17:43:40 chainsaw Exp $
+
+*mm-sources-2.6.12_rc4-r1 (14 May 2005)
+
+  14 May 2005; Tony Vroon <chainsaw@gentoo.org>
+  +files/2.6.12-rc4-mm1-reiser4-breakage.patch,
+  +mm-sources-2.6.12_rc4-r1.ebuild:
+  Version bump, with upstream patch to avoid reiser4 breakage.
 
   05 May 2005; Tony Vroon <chainsaw@gentoo.org> :
   Rebuild horked manifest file.
