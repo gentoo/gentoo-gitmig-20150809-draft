@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/screen-4.0.2-r2.ebuild,v 1.1 2005/05/13 02:46:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/screen-4.0.2-r3.ebuild,v 1.1 2005/05/14 22:08:38 swegener Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -38,6 +38,9 @@ src_unpack() {
 	# Don't use utempter even if it is found on the system
 	epatch "${FILESDIR}"/${PV}-no-utempter.patch
 
+	# Patch for time function on 64bit systems
+	epatch "${FILESDIR}"/${PV}-64bit-time.patch
+
 	# Fix manpage.
 	sed -i \
 		-e "s:/usr/local/etc/screenrc:/etc/screenrc:g" \
@@ -53,7 +56,7 @@ src_unpack() {
 }
 
 src_compile() {
-	addpredict "`tty`"
+	addpredict "$(tty)"
 	addpredict "${SSH_TTY}"
 
 	# check config.h for other settings such as the
@@ -65,10 +68,12 @@ src_compile() {
 	use nethack || append-flags "-DNONETHACK"
 
 	econf \
-		$(use_enable pam) \
 		--with-socket-dir=/var/run/screen \
 		--with-sys-screenrc=/etc/screenrc \
 		--enable-rxvt_osc \
+		--enable-telnet \
+		--enable-colors256 \
+		$(use_enable pam) \
 		|| die "econf failed"
 
 	# Second try to fix bug 12683, this time without changing term.h
@@ -92,7 +97,7 @@ src_install() {
 	insinto /etc
 	doins "${FILESDIR}"/screenrc || die "doins failed"
 
-	newpamd "${FILESDIR}"/screen.pam.system-auth screen || die "newpamd failed"
+	newpamd "${FILESDIR}"/screen.pam screen || die "newpamd failed"
 
 	dodoc \
 		README ChangeLog INSTALL TODO NEWS* patchlevel.h \

@@ -1,6 +1,16 @@
 # ChangeLog for app-misc/screen
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/ChangeLog,v 1.83 2005/05/13 02:46:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/ChangeLog,v 1.84 2005/05/14 22:08:38 swegener Exp $
+
+*screen-4.0.2-r3 (14 May 2005)
+
+  14 May 2005; Sven Wegener <swegener@gentoo.org>
+  +files/4.0.2-64bit-time.patch, +files/screen.pam, -screen-4.0.2-r2.ebuild,
+  +screen-4.0.2-r3.ebuild:
+  Revision bump to include several fixes and feature enhancements. Install the
+  correct pam.d file for bug #92370. Enable the built-in telnet client, bug
+  #82773. Fix time bug for 64bit systems, bug #71207. Also enable the 256
+  colors support, requested via email by Emanuele Giaquinta.
 
 *screen-4.0.2-r1 (13 May 2005)
 
