@@ -1,4 +1,14 @@
-MD5 99df977ee0f1956c161d83c859bdb3b3 sax-2.2.1.ebuild 941
-MD5 fd9fb6df8c34431b0000957edd4cd21a ChangeLog 894
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 4b7186b0a7c384773091225da6df31fd sax-2.2.1.ebuild 946
+MD5 362db0772a419456d00a39b561054b6d ChangeLog 899
 MD5 4dad079a28768d183022cff420f01281 metadata.xml 220
 MD5 0d753db77f10632cdcf7bf14cfec7bec files/digest-sax-2.2.1 55
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFChnLh06ebR+OMO78RAgBAAJ4je4nnnLPTc/l4madWz3R2AsxBcQCcC/oL
+2w3UEo+WxGaFHetGplvq5xo=
+=JILP
+-----END PGP SIGNATURE-----
