@@ -1,6 +1,18 @@
 # ChangeLog for media-video/vlc
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.84 2005/05/09 08:48:41 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.85 2005/05/14 23:36:51 flameeyes Exp $
+
+*vlc-0.8.1-r3 (14 May 2005)
+
+  14 May 2005; Diego Pettenò <flameeyes@gentoo.org>
+  -files/vlc-0.8.1-bool.patch, -files/vlc-0.8.1-matroska-shared.patch,
+  -files/vlc-0.8.1-time.patch, vlc-0.6.2.ebuild, vlc-0.6.2-r1.ebuild,
+  vlc-0.7.2.ebuild, vlc-0.8.1-r1.ebuild, vlc-0.8.1-r2.ebuild,
+  +vlc-0.8.1-r3.ebuild:
+  New revision which now uses wxGTK 2.6 instead of 2.4. Added patch to disable
+  hal support in configure (just for -r3 for now). Moved patches into patchset
+  tarball and removed from files. Converted from gcc to toolchain-funcs
+  eclass.
 
   09 May 2005; Diego Pettenò <flameeyes@gentoo.org> vlc-0.8.1-r1.ebuild,
   vlc-0.8.1-r2.ebuild:

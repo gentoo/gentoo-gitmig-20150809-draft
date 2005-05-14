@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.7.2.ebuild,v 1.12 2005/04/20 13:45:35 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.7.2.ebuild,v 1.13 2005/05/14 23:36:51 flameeyes Exp $
 
 # Missing support for...
 #	tarkin - package not in portage yet - experimental
 #	tremor - package not in portage yet - experimental
 
-inherit libtool gcc eutils
+inherit libtool toolchain-funcs eutils
 
 DESCRIPTION="VLC media player - Video player and streamer"
 HOMEPAGE="http://www.videolan.org/vlc/"

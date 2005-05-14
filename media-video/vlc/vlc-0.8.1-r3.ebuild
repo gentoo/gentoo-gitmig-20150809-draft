@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.1-r2.ebuild,v 1.5 2005/05/14 23:36:51 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.1-r3.ebuild,v 1.1 2005/05/14 23:36:51 flameeyes Exp $
 
 # Missing support for...
 #	tarkin - package not in portage yet - experimental
@@ -48,7 +48,7 @@ RDEPEND="hal? ( =sys-apps/hal-0.4* )
 		libcaca? ( media-libs/libcaca )
 		arts? ( kde-base/arts )
 		alsa? ( virtual/alsa )
-		wxwindows? ( =x11-libs/wxGTK-2.4* )
+		wxwindows? ( =x11-libs/wxGTK-2.6* )
 		ncurses? ( sys-libs/ncurses )
 		xosd? ( x11-libs/xosd )
 		lirc? ( app-misc/lirc )
@@ -76,7 +76,7 @@ DEPEND="${RDEPEND}
 
 pkg_setup() {
 	if use wxwindows; then
-		WX_GTK_VER="2.4"
+		WX_GTK_VER="2.6"
 		if use gtk2; then
 			if use unicode; then
 				need-wxwidgets unicode || die "You need to install wxGTK with unicode support."
@@ -95,7 +95,6 @@ src_unpack() {
 	# We only have glide v3 in portage
 	cd ${S}
 
-	EPATCH_EXCLUDE="01_all_nohal.patch"
 	EPATCH_SUFFIX="patch" epatch "${WORKDIR}/${PV}"
 
 	./bootstrap
@@ -106,7 +105,6 @@ src_unpack() {
 
 	# Fix the default font
 	sed -i -e "s:/usr/share/fonts/truetype/freefont/FreeSerifBold.ttf:/usr/share/fonts/ttf-bitstream-vera/VeraBd.ttf:" modules/misc/freetype.c
-
 }
 
 src_compile () {
@@ -191,6 +189,7 @@ src_compile () {
 		$(use_enable 3dfx glide) \
 		$(use_enable sdl) \
 		$(use_enable ssl gnutls) \
+		$(use_enable hal) \
 		--disable-pth \
 		--disable-portaudio \
 		${myconf} || die "configuration failed"

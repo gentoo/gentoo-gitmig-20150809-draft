@@ -1,17 +1,19 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.1-r1.ebuild,v 1.9 2005/05/09 08:48:41 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.1-r1.ebuild,v 1.10 2005/05/14 23:36:51 flameeyes Exp $
 
 # Missing support for...
 #	tarkin - package not in portage yet - experimental
 #	tremor - package not in portage yet - experimental
 #	ncurses - needs a patch which is applied in -r2, disabled here
 
-inherit libtool gcc eutils wxwidgets
+inherit libtool toolchain-funcs eutils wxwidgets
 
+PATCHLEVEL="1"
 DESCRIPTION="VLC media player - Video player and streamer"
 HOMEPAGE="http://www.videolan.org/vlc/"
-SRC_URI="http://download.videolan.org/pub/videolan/${PN}/${PV}/${P}.tar.bz2"
+SRC_URI="http://download.videolan.org/pub/videolan/${PN}/${PV}/${P}.tar.bz2
+	http://digilander.libero.it/dgp85/gentoo/${PN}-patches-${PATCHLEVEL}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -91,10 +93,8 @@ src_unpack() {
 	# Fix the default font
 	sed -i -e "s:/usr/share/fonts/truetype/freefont/FreeSerifBold.ttf:/usr/share/fonts/ttf-bitstream-vera/VeraBd.ttf:" modules/misc/freetype.c
 
-	cd ${S}
-	epatch ${FILESDIR}/${P}-time.patch
-	cd ${S}/modules/video_output
-	epatch ${FILESDIR}/glide.patch
+	EPATCH_EXCLUDE="01_all_nohal.patch 00_all_bool.patch 00_all_matroska-shared.patch"
+	EPATCH_SUFFIX="patch" epatch "${WORKDIR}/${PV}"
 }
 
 src_compile () {
