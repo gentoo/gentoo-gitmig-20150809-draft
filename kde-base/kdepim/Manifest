@@ -1,9 +1,12 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 53f145bb4ec5a11aad2e6cb113416a2a kdepim-3.2.3.ebuild 819
-MD5 119f41b12554f0c019584be09239f008 kdepim-3.3.2-r1.ebuild 734
-MD5 4e8d73b6d2dd250377d67249c2ac1829 kdepim-3.3.2.ebuild 669
+MD5 2877803bcd1808411419ee469c3740f7 kdepim-3.3.2-r1.ebuild 740
+MD5 1e0eef07c12d5bc541dfd858974691d0 kdepim-3.3.2.ebuild 673
 MD5 75060d9502a81a2f940801d6bbad11ac ChangeLog 18773
 MD5 acc03a4b12bb0433a57e95bd253b9501 metadata.xml 156
-MD5 e183e0a62ab5260e3102a1b16cacf5cb kdepim-3.4.0-r1.ebuild 1028
+MD5 b94c24d965fab7c67e67ba859834c13c kdepim-3.4.0-r1.ebuild 1031
 MD5 318e6b50444a5837fed2a5ea9ecc57e9 files/digest-kdepim-3.2.3 66
 MD5 38f90eca12bd5623fc7f28e814efd1a2 files/digest-kdepim-3.3.2 66
 MD5 1ec4778f0dbac85bc27bc2c2541e5c64 files/kdepim-3.4.0-fix-imap-resource-type.patch 1938
@@ -12,3 +15,10 @@ MD5 38f90eca12bd5623fc7f28e814efd1a2 files/digest-kdepim-3.3.2-r1 66
 MD5 8c0ffea7b75b42449f4acada755ff36a files/digest-kdepim-3.4.0-r1 67
 MD5 f487b0894ac81c4e75d85875ce51d24a files/kdepim-3.4.0-akregator-fix.patch 2505
 MD5 678530a6c8baabd5d9cbe817b5c571f2 files/kdepim-3.2.3-cjk.diff 6957
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFChfEXjiC39V7gKu0RAhtHAJ49mgCmGRj4VhclVkBZIZUF8rnXtwCeNSG1
+wRRSgi/ptZ4ccLS8b2MyAfI=
+=5gAH
+-----END PGP SIGNATURE-----
