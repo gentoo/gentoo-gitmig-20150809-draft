@@ -1,19 +1,19 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 7eb56a22736e11aa2427e4b8fa763bb6 ChangeLog 2198
-MD5 3a25a4e300af94ec3c3b043fd5bac428 mailutils-0.6.ebuild 2623
+MD5 058aea5b0edf680f0b01a4d7988c4d09 mailutils-0.6.ebuild 2629
+MD5 6c6c449bad2cac47977e500bcdb844c9 mailutils-0.5.ebuild 2621
+MD5 5f41971bb0f2df9b1aa619e13f6c3064 ChangeLog 2316
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
-MD5 2dc2cbe4719e086d2dd197a0ca504f51 mailutils-0.5.ebuild 2618
-MD5 67ce1d29fd43d38b57485205ed97cf11 files/digest-mailutils-0.5 67
-MD5 57cb849f954ba9a185a41751d998d0fd files/mailutils-0.5-mh-Makefile.in.patch 536
-MD5 ac9d32bbb54e8d1d2ea52039bea81c29 files/digest-mailutils-0.6 67
 MD5 57cb849f954ba9a185a41751d998d0fd files/mailutils-0.6-mh-Makefile.in.patch 536
 MD5 eb67c156401bde48c7d5a23a0bd960df files/mail.rc 271
+MD5 57cb849f954ba9a185a41751d998d0fd files/mailutils-0.5-mh-Makefile.in.patch 536
+MD5 67ce1d29fd43d38b57485205ed97cf11 files/digest-mailutils-0.5 67
+MD5 ac9d32bbb54e8d1d2ea52039bea81c29 files/digest-mailutils-0.6 67
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCMMl+CHk4+ZoBpvsRAn3QAKC9xV89f2rFHs7jKL2RrMv78/PKggCgiiqT
-pnw1RFuv3Z8LItqutXsbAfY=
-=Ux1L
+iD8DBQFChouDViELBEf1JB0RAsoFAJ9+wnqxE1VM2JO4truElRMt2QaqDQCfTH/G
+otqSUmSLvnFy40Spcu5j9mk=
+=/A44
 -----END PGP SIGNATURE-----
