@@ -1,6 +1,10 @@
 # ChangeLog for app-text/code2html
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/code2html/ChangeLog,v 1.7 2005/04/21 20:15:11 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/code2html/ChangeLog,v 1.8 2005/05/14 01:07:45 wormo Exp $
+
+  13 May 2005; Stephanie Lockwood-Childs <wormo@gentoo.org>
+  code2html-0.9.1.ebuild:
+  mark ~ppc
 
   21 Apr 2005; Simon Stelling <blubb@gentoo.org> code2html-0.9.1.ebuild:
   stable on amd64
