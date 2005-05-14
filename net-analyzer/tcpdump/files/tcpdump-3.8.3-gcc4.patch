@@ -1,3 +1,42 @@
+--- tcpdump-3.8.3/configure.gcc34	2004-03-23 19:59:23.000000000 +0100
++++ tcpdump-3.8.3/configure	2004-03-30 14:56:21.469869618 +0200
+@@ -8917,18 +8917,10 @@
+ int
+ main ()
+ {
+-
+-int
+-return_pcap_debug(void)
+-{
+ 	extern int pcap_debug;
+ 
+ 	return pcap_debug;
+ }
+-
+-  ;
+-  return 0;
+-}
+ _ACEOF
+ rm -f conftest.$ac_objext conftest$ac_exeext
+ if { (eval echo "$as_me:$LINENO: \"$ac_link\"") >&5
+@@ -8976,17 +8968,9 @@
+ int
+ main ()
+ {
+-
+-	int
+-	return_yydebug(void)
+-	{
+ 		extern int yydebug;
+ 
+ 		return yydebug;
+-	}
+-
+-  ;
+-  return 0;
+ }
+ _ACEOF
+ rm -f conftest.$ac_objext conftest$ac_exeext
 diff --exclude='*~' --exclude='.*' -I '$Id:' -urN tcpdump-3.8.3.orig/print-fr.c tcpdump-3.8.3/print-fr.c
 --- tcpdump-3.8.3.orig/print-fr.c	2005-05-14 05:53:15.000000000 -0400
 +++ tcpdump-3.8.3/print-fr.c	2005-05-14 05:58:21.000000000 -0400

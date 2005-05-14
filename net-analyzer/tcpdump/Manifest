@@ -2,17 +2,17 @@
 Hash: SHA1
 
 MD5 8c5b3bdacca3d85a1d84a55f3db230c5 tcpdump-3.8.3-r1.ebuild 1092
-MD5 30b574d0dec57c3447074dc5b2907a08 ChangeLog 5705
+MD5 f3cbf34ae051cf5d9deab1e10c86fd94 ChangeLog 5901
 MD5 1465cdeb961745379a8ae1402b3e51ab metadata.xml 268
-MD5 a991e276117febb6746fec831f40e7bf tcpdump-3.8.3-r2.ebuild 1277
-MD5 7c5de451e6fc2e5d0b34410069973e5b files/tcpdump-3.8.3-gcc4.patch 2571
+MD5 6f2a7e1d8d4f9db950a08a9691879c87 tcpdump-3.8.3-r2.ebuild 1244
+MD5 373e9bba235a67d1de8eb1356151f32c files/tcpdump-3.8.3-gcc4.patch 3162
 MD5 d285bb203f9e48fc23492e4c72d61a94 files/digest-tcpdump-3.8.3-r1 65
 MD5 d285bb203f9e48fc23492e4c72d61a94 files/digest-tcpdump-3.8.3-r2 65
 MD5 4d0df7aa1535098ccef25ba7e86e5e95 files/tcpdump-3.8.3-gentoo.patch 4002
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFChe5pEZCkKN40op4RAh64AKCd7LMUkEkDpCg6L8TXDLTBj0OeUwCgosdW
-JJin25OecBH7KAYmVjBC2m0=
-=f+gm
+iD8DBQFChiXnEZCkKN40op4RAvcQAJ4xyK/qk3B42ihEuCDabJ4CpAinjQCbBCoh
+qmWmOaKWjoeS5VGkpygCx3w=
+=2s0x
 -----END PGP SIGNATURE-----

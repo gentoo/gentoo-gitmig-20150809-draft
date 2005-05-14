@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/tcpdump-3.8.3-r2.ebuild,v 1.8 2005/05/14 12:24:56 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/tcpdump-3.8.3-r2.ebuild,v 1.9 2005/05/14 16:21:40 ka0ttic Exp $
 
 inherit flag-o-matic toolchain-funcs
 
@@ -33,7 +33,6 @@ src_compile() {
 	then
 		filter-flags -funit-at-a-time
 		append-flags -fno-unit-at-a-time #48747
-		append-flags -UHAVE_PCAP_DEBUG
 	fi
 
 	econf $(use_with ssl crypto) $(use_enable ipv6) || die
