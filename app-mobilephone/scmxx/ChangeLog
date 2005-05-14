@@ -1,0 +1,39 @@
+# ChangeLog for app-mobilephone/scmxx
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/scmxx/ChangeLog,v 1.1 2005/05/14 13:32:54 mrness Exp $
+
+  14 May 2005; Alin Nastac <mrness@gentoo.org> +metadata.xml,
+  -scmxx-0.6.3.7.ebuild:
+  Moved from app-misc/scmxx to app-mobilephone/scmxx.
+
+  12 Nov 2004; Simon Stelling <blubb@gentoo.org> scmxx-0.7.4.ebuild:
+  added ~amd64
+
+*scmxx-0.7.4 (17 Oct 2004)
+
+  17 Oct 2004; Lars Weiler <pylon@gentoo.org> +scmxx-0.7.4.ebuild:
+  Version bump as requested in bug #48537.
+
+*scmxx-0.6.4 (06 Sep 2003)
+
+  06 Sep 2003; Hanno Boeck <hanno@gentoo.org> scmxx-0.6.4.ebuild:
+  Version bump.
+
+*scmxx-0.6.3.7 (26 May 2003)
+
+  26 May 2003; Hanno Boeck <hanno@gentoo.org> scmxx-0.6.3.7.ebuild:
+  New version.
+
+*scmxx-0.6.3.5 (05 Jan 2003)
+
+  05 Jan 2003; Arcady Genkin <agenkin@gentoo.org> :
+  New version.
+
+*scmxx-0.6.0 (02 May, 2002)
+
+  05 Jan 2003; Arcady Genkin <agenkin@gentoo.org> :
+  Fixed download location.
+  	
+  02 May 2002; Arcady Genkin <agenkin@thpoon.com> scmxx-0.6.0.ebuild :
+  Initial version of the ebuild, submitted by Oyvind Repvik
+  <oyvind.repvik@siemenssg.com>.

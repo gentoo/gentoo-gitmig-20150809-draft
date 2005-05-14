@@ -1,0 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 afbef8e54603db97c5af137627ad5541 gscmxx-0.4.1-r1.ebuild 709
+MD5 135256445a5e1d60a6caf186eb22e580 ChangeLog 785
+MD5 c35c6d9f49648e8eb52bf68909198daf metadata.xml 302
+MD5 62f7e7930d956c070529d31e45a336c6 files/gscmxx-0.4.1-destdir.diff 725
+MD5 1f985a2bf92e357217a41807927bd4d9 files/digest-gscmxx-0.4.1-r1 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFChf5SjiC39V7gKu0RAsiSAKCF+ED3sivyKBwzEUv2ekyb5puA9gCaArev
+vtx4MvuiW7jSuvCf/sGAZPY=
+=WQlB
+-----END PGP SIGNATURE-----
