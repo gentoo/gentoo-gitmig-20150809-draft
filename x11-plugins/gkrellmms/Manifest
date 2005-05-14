@@ -1,20 +1,20 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
+MD5 e768d9953683a56a034a4d334e08ffd6 ChangeLog 6071
+MD5 de35d8f600d3d75d8075a8d848787013 metadata.xml 223
 MD5 832c9f70b38243ed07208cf01a547dbe gkrellmms-0.5.6.ebuild 673
 MD5 5501ba1300cfb20d4e05256536ec9a66 gkrellmms-0.5.8.ebuild 663
+MD5 7565ef4c40cb53117a3cdd5cd2c50c54 gkrellmms-2.1.21.ebuild 724
 MD5 cd96a4dce8ca72ec64f972fa9d8294f5 gkrellmms-2.1.15.ebuild 697
-MD5 71518ce1689f412adfc61d91c883b1cf ChangeLog 5973
-MD5 de35d8f600d3d75d8075a8d848787013 metadata.xml 223
-MD5 20fb7dada1ddc6ffe3a875c07a95fb5f gkrellmms-2.1.21.ebuild 727
 MD5 cb1a862a255479deb2b1e80dd39fd1ba files/digest-gkrellmms-2.1.15 67
-MD5 28292acdeda41917477cff7da333acf6 files/digest-gkrellmms-2.1.21 67
-MD5 ac569c5ef1a94fe768b2a043f1d5c7c6 files/digest-gkrellmms-0.5.6 66
 MD5 09b80fad84214e723be0b9f8867c4479 files/digest-gkrellmms-0.5.8 66
+MD5 ac569c5ef1a94fe768b2a043f1d5c7c6 files/digest-gkrellmms-0.5.6 66
+MD5 28292acdeda41917477cff7da333acf6 files/digest-gkrellmms-2.1.21 67
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCerhyI1lqEGTUzyQRAv0ZAJ9f3g6g3UltCSWKdEgk5eCNRJdMkgCg24a3
-+7jkg7C+KZPtGK/FuL2xXhA=
-=uyYK
+iD8DBQFChdhVKf2g/qXtneoRArFtAJ9OZhz2rMAKeDmZFnu5IjTjQ37ShQCdGOuc
+ByRDyKBfPfL1Kv6iZDJbTuw=
+=xLjG
 -----END PGP SIGNATURE-----
