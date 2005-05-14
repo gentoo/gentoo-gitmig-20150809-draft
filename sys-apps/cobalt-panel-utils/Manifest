@@ -1,14 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 3ea39e3e63a46bdf2864129430556697 cobalt-panel-utils-1.0.0.ebuild 773
-MD5 ffa5030bf1a1dd00e75e36b6d5e25bd2 ChangeLog 378
+MD5 235747d5f8f48852459318afa0f8bb3b ChangeLog 508
+MD5 23763b65f97411623e6e50d4e8070491 cobalt-panel-utils-1.0.1.ebuild 792
 MD5 1fbf4d326e486116a8f444a1b3bde584 metadata.xml 375
+MD5 3ea39e3e63a46bdf2864129430556697 cobalt-panel-utils-1.0.0.ebuild 773
 MD5 920885e8d359755fd2db48ab4fbaf781 files/digest-cobalt-panel-utils-1.0.0 75
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCdWLUI1lqEGTUzyQRAuRPAJ9iJ1uv2J6kfi5n61DdrwYAT5sZPACfZ3vJ
-RZMoZdnokuQQubO6qHlGI8g=
-=v3M3
------END PGP SIGNATURE-----
+MD5 660e5928b1926a3f6951f8966575a22a files/digest-cobalt-panel-utils-1.0.1 75
