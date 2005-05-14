@@ -1,6 +1,20 @@
 # ChangeLog for app-antivirus/clamav
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/ChangeLog,v 1.65 2005/05/11 21:27:33 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/ChangeLog,v 1.66 2005/05/14 21:31:33 ticho Exp $
+
+*clamav-0.85-r1 (14 May 2005)
+
+  14 May 2005; Andrej Kacian <ticho@gentoo.org> files/clamd.conf,
+  +files/clamd.rc.new, +clamav-0.85-r1.ebuild:
+  Provide useful out-of-the-box default configuration (bugs #66905, reported
+  by Steph L <linux4ibook@free.fr> and #86777, by Eero Volotinen
+  <eero@pronics.com>). Change location of clamd socket, pidfiles and logfiles.
+  (#70960 by Phil Pennock <gentoo@spodhuis.demon.nl>). Fixed initscript not to
+  print error message when freshclam reports database is up-to-date (#58446,
+  by Carsten Milkau <chat.noir@arcor.de>). Only use /etc/conf.d/clamd for
+  START_* settings (fixes #59911, by caspar-gentoo-bugs@cbothmer.org). Fix
+  configure options to use 'id' utility instead of /etc/passwd parsing
+  (#72540, by Gudleik Rasch <gudleik@rastamatra.org>).
 
 *clamav-0.85 (11 May 2005)
 

@@ -1,0 +1,48 @@
+#!/sbin/runscript
+# Copyright 1999-2005 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/files/clamd.rc.new,v 1.1 2005/05/14 21:31:33 ticho Exp $
+
+CLAMD_SOCKET=`grep ^LocalSocket /etc/clamd.conf | cut -d\  -f 2`
+
+depend() {
+	use net
+	provide antivirus
+}
+
+start() {
+	if [ "${START_CLAMD}" = "yes" ]; then
+		if [ -S "${CLAMD_SOCKET:-/tmp/clamd}" ]; then
+			rm -f ${CLAMD_SOCKET:-/tmp/clamd}
+		fi
+		ebegin "Starting clamd"
+		start-stop-daemon --start --quiet \
+			--exec /usr/sbin/clamd
+		eend $? "Failed to start clamd"
+	fi
+	if [ "${START_FRESHCLAM}" = "yes" ]; then
+		ebegin "Starting freshclam"
+		start-stop-daemon --start --quiet \
+			--exec /usr/bin/freshclam
+		retcode=$?
+		if [ ${retcode} = 1 ]; then
+			eend 0
+			einfo "Virus databases are already up to date."
+		else
+			eend ${retcode} "Failed to start freshclam."
+		fi
+	fi
+}
+
+stop() {
+	if [ "${START_CLAMD}" = "yes" ]; then
+		ebegin "Stopping clamd"
+		start-stop-daemon --stop --quiet --name clamd
+		eend $? "Failed to stop clamd"
+	fi
+	if [ "${START_FRESHCLAM}" = "yes" ]; then
+		ebegin "Stopping freshclam"
+		start-stop-daemon --stop --quiet --name freshclam
+		eend $? "Failed to stop freshclam"
+	fi
+}
