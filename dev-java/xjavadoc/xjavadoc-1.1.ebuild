@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xjavadoc/xjavadoc-1.1.ebuild,v 1.3 2005/04/19 04:37:51 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xjavadoc/xjavadoc-1.1.ebuild,v 1.4 2005/05/14 17:31:44 luckyduck Exp $
 
 inherit eutils java-pkg
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/xdoclet/${P}-src.zip
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ppc x86"
 IUSE="jikes source"
 
 DEPEND=">=virtual/jdk-1.4
