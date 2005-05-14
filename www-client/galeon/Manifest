@@ -1,20 +1,20 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 85594ba3310016786e9faf187af9e28d ChangeLog 16187
+MD5 fb15acd09f964e9a971da8d720303c69 ChangeLog 16280
+MD5 4c1c1e710ea77d8d7db9906084c4228d metadata.xml 215
+MD5 39329fc40f23a51b43b3bd2638919dd7 galeon-1.3.20.ebuild 1324
 MD5 a499e17bed3c88e01a4742d9f55b1e26 galeon-1.3.17.ebuild 1589
 MD5 9db0e855090f5501a6983019b8ed6b3f galeon-1.3.18.ebuild 1585
-MD5 b13210ccf16671b825cee94911bb99f6 galeon-1.3.19.ebuild 1584
-MD5 39329fc40f23a51b43b3bd2638919dd7 galeon-1.3.20.ebuild 1324
-MD5 4c1c1e710ea77d8d7db9906084c4228d metadata.xml 215
+MD5 3b26c42561fb9cbd39bf75d19334a105 galeon-1.3.19.ebuild 1583
+MD5 e341b08e0c484831306b28a3429883ff files/digest-galeon-1.3.20 67
+MD5 bb092f2e34cd7f5be1ad94e328760e31 files/digest-galeon-1.3.19 67
 MD5 f688ddbf98228c4b9511250144ebfcf9 files/digest-galeon-1.3.17 67
 MD5 88ccf8b5a77bd6f7aa00c0d3366ffed8 files/digest-galeon-1.3.18 67
-MD5 bb092f2e34cd7f5be1ad94e328760e31 files/digest-galeon-1.3.19 67
-MD5 e341b08e0c484831306b28a3429883ff files/digest-galeon-1.3.20 67
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCe4ViKRy60XGEcJIRAsmaAKChlzoD2doNNRh/nuAM88syVgbVuACggTGM
-VtMvqbHQ0l9KmOMBJAHN6V0=
-=dOuF
+iD8DBQFChbWJKf2g/qXtneoRArM6AJ98+1GZ9okqWl0T8T8GEscbdxQg0wCdHy5C
+ih+qni0ZB1LLkUYpO/MHNa8=
+=3Ngv
 -----END PGP SIGNATURE-----
