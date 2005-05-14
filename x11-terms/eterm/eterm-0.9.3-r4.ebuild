@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/eterm/eterm-0.9.3-r4.ebuild,v 1.1 2005/05/11 00:31:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/eterm/eterm-0.9.3-r4.ebuild,v 1.2 2005/05/14 18:08:28 vapier Exp $
 
 inherit eutils
 
@@ -31,6 +31,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-pixmap-colmod.patch
 	epatch "${FILESDIR}"/${P}-CARD64.patch #76324
 	epatch "${FILESDIR}"/${P}-deadkeys.patch
+	epatch "${FILESDIR}"/${P}-gcc4.patch #92485
 	unpack Eterm-bg-${PV}.tar.gz
 	sed -i 's:Tw/Tw_1\.h:Tw/Tw1.h:' src/libscream.c || die
 }
