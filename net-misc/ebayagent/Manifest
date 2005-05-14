@@ -2,13 +2,13 @@
 Hash: SHA1
 
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 0ee99822b440f51603c8f6ebc6a3e703 ebayagent-0.9.11.ebuild 1867
+MD5 f3d708258febb8f86c8245c11af5ca65 ebayagent-0.9.11.ebuild 1942
 MD5 fcd228a7b88e2c97625a803c078d2794 ChangeLog 419
 MD5 d91da69fc3c98bcf2692e807f7a3f071 files/digest-ebayagent-0.9.11 68
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFChjLntG5z4I8BtQoRAlnFAJ9Y+o+vUH/RELLoLDIsVuVIKzzX8QCfRNxG
-T7w4ZykH9ehjzHOXDNHuGec=
-=YR6z
+iD8DBQFChjPAtG5z4I8BtQoRAvB/AJ4kEudjoWsn52eqFp+CqsqByhMbQACffXgS
+XFedvX8Y+kV1//GmA5WxbOc=
+=/XWb
 -----END PGP SIGNATURE-----
