@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openobex/openobex-1.0.1.ebuild,v 1.15 2005/04/04 03:15:10 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openobex/openobex-1.0.1.ebuild,v 1.16 2005/05/14 13:48:21 gmsoft Exp $
 
 inherit eutils gnuconfig
 
@@ -16,7 +16,7 @@ HOMEPAGE="http://sourceforge.net/projects/openobex"
 
 SLOT="0"
 LICENSE="GPL-2 LGPL-2.1"
-KEYWORDS="x86 ~sparc ppc -amd64 ~ppc64"
+KEYWORDS="x86 ~sparc ppc -amd64 ~ppc64 hppa"
 
 DEPEND=">=dev-libs/glib-1.2"
 

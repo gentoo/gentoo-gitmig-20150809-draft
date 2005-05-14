@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/openobex
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openobex/ChangeLog,v 1.21 2005/04/21 20:04:29 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openobex/ChangeLog,v 1.22 2005/05/14 13:48:21 gmsoft Exp $
+
+  14 May 2005; Guy Martin <gmsoft@gentoo.org> openobex-1.0.1.ebuild:
+  Stable on hppa.
 
   21 Apr 2005; Simon Stelling <blubb@gentoo.org> openobex-1.0.0.ebuild:
   stable on amd64
