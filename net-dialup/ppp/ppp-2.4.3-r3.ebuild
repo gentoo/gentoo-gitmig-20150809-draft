@@ -1,13 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.3-r3.ebuild,v 1.3 2005/05/10 15:12:16 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.3-r3.ebuild,v 1.4 2005/05/14 09:27:56 mrness Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
 DESCRIPTION="Point-to-Point Protocol (PPP)"
 HOMEPAGE="http://www.samba.org/ppp"
 SRC_URI="ftp://ftp.samba.org/pub/ppp/${P}.tar.gz
-	mirror://gentoo/${P}-patches-20050505.tar.gz
+	mirror://gentoo/${P}-patches-20050514.tar.gz
 	dhcp? ( http://www.netservers.co.uk/gpl/ppp-dhcpc.tgz )"
 
 LICENSE="BSD GPL-2"
@@ -66,9 +66,9 @@ src_unpack() {
 		# copy the ppp-dhcp plugin files
 		einfo "Copying ppp-dhcp plugin files..."
 		tar -xzf ${DISTDIR}/ppp-dhcpc.tgz -C ${S}/pppd/plugins/
-		sed -i 's/SUBDIRS := rp-pppoe/SUBDIRS := rp-pppoe dhcp/' ${S}/pppd/plugins/Makefile.linux
-		sed -i "s/-O2/${CFLAGS} -fPIC/" ${S}/pppd/plugins/dhcp/Makefile.linux
-		epatch ${FILESDIR}/ppp-sys_error_to_strerror.patch || die
+		sed -i -e 's/SUBDIRS := rp-pppoe/SUBDIRS := rp-pppoe dhcp/' ${S}/pppd/plugins/Makefile.linux
+		sed -i -e "s/-O2/${CFLAGS} -fPIC/" ${S}/pppd/plugins/dhcp/Makefile.linux
+		epatch ${WORKDIR}/patch/dhcp-sys_error_to_strerror.patch
 	}
 
 	# Set correct libdir
@@ -113,9 +113,9 @@ src_install() {
 
 	insopts -m0644
 	doins etc.ppp/options
-	doins ${FILESDIR}/${PV}/options-pptp
-	doins ${FILESDIR}/${PV}/options-pppoe
-	doins ${FILESDIR}/${PV}/chat-default
+	doins ${FILESDIR}/options-pptp
+	doins ${FILESDIR}/options-pppoe
+	doins ${FILESDIR}/chat-default
 
 	insopts -m0755
 	doins ${FILESDIR}/ip-up
@@ -135,7 +135,7 @@ src_install() {
 	newins ${FILESDIR}/confd.ppp0 net.ppp0
 
 	local PLUGINS_DIR=/usr/$(get_libdir)/pppd/$(awk -F '"' '/VERSION/ {print $2}' pppd/patchlevel.h)
-	#closing " for sintax coloring
+	#closing " for syntax coloring
 	dodir ${PLUGINS_DIR}
 	insinto ${PLUGINS_DIR}
 	insopts -m0755
@@ -156,14 +156,14 @@ src_install() {
 
 	insinto /etc/modules.d
 	insopts -m0644
-	newins ${FILESDIR}/${PV}/modules.ppp ppp
+	newins ${FILESDIR}/modules.ppp ppp
 	if use mppe-mppc; then
 		echo 'alias ppp-compress-18 ppp_mppe_mppc' >> ${D}/etc/modules.d/ppp
 	fi
 
 	dodoc PLUGINS README* SETUP Changes-2.3 FAQ
-	dodoc ${FILESDIR}/${PV}/README.mpls
-	dohtml ${FILESDIR}/${PV}/pppoe.html
+	dodoc ${FILESDIR}/README.mpls
+	dohtml ${FILESDIR}/pppoe.html
 
 	doman pppd/plugins/radius/pppd-radius.8
 	doman pppd/plugins/radius/pppd-radattr.8
@@ -175,7 +175,7 @@ src_install() {
 
 	# Adding misc. specialized scripts to doc dir
 	dodir /usr/share/doc/${PF}/scripts/chatchat
-	insinto	/usr/share/doc/${PF}/scripts/chatchat
+	insinto /usr/share/doc/${PF}/scripts/chatchat
 	doins scripts/chatchat/*
 	insinto /usr/share/doc/${PF}/scripts
 	doins scripts/*

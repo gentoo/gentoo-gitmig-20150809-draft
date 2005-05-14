@@ -1,6 +1,28 @@
 # ChangeLog for net-dialup/ppp
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.108 2005/05/10 15:12:16 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.109 2005/05/14 09:27:56 mrness Exp $
+
+  14 May 2005; Alin Nastac <mrness@gentoo.org> -files/2.4.2/README.mpls,
+  -files/2.4.2/cbcp-dosfix.patch, -files/2.4.2/cflags.patch,
+  -files/2.4.2/chat-default, -files/2.4.2/control_c.patch,
+  -files/2.4.2/killaddr-smarter.patch.gz, -files/2.4.2/modules.ppp,
+  -files/2.4.2/mpls.patch.gz, -files/2.4.2/mppe-mppc-1.0.patch.gz,
+  -files/2.4.2/options-pppoe, -files/2.4.2/options-pptp,
+  -files/2.4.2/pcap.patch, -files/2.4.2/pppoatm-2.diff.gz,
+  -files/2.4.2/pppoatm.diff.gz, -files/2.4.2/pppoe.html,
+  -files/2.4.2/stdopt-mppe-mppc-0.82.patch.gz, -files/2.4.3/README.mpls,
+  -files/2.4.3/chat-default, -files/2.4.3/fixes-from-upstream-cvs.patch,
+  -files/2.4.3/killaddr-smarter.patch, -files/2.4.3/modules.ppp,
+  -files/2.4.3/mpls.patch, -files/2.4.3/options-pppoe,
+  -files/2.4.3/options-pptp, -files/2.4.3/ppp_flags.patch,
+  -files/2.4.3/pppoe.html, +files/README.mpls,
+  -files/gcc3.3-multiline.patch, -files/gcc33-amd64.patch,
+  +files/options-pppoe, +files/options-pptp,
+  -files/ppp-sys_error_to_strerror.patch, -ppp-2.4.1-r14.ebuild,
+  ppp-2.4.2-r10.ebuild, -ppp-2.4.3.ebuild, -ppp-2.4.3-r1.ebuild,
+  -ppp-2.4.3-r2.ebuild, ppp-2.4.3-r3.ebuild:
+  Fix multilib-strict issue (#92111) in 2.4.2. Remove obsolete versions.
+  Reorganize patches and FILESDIR stuff.
 
   10 May 2005; Herbie Hopkins <herbs@gentoo.org> ppp-2.4.3-r3.ebuild:
   Fixed multilib-strict issue, bug #92111

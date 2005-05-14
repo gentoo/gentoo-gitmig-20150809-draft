@@ -1,14 +1,15 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.2-r10.ebuild,v 1.8 2005/02/12 07:52:04 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.2-r10.ebuild,v 1.9 2005/05/14 09:27:56 mrness Exp $
 
 inherit eutils gnuconfig flag-o-matic
 
-DESCRIPTION="Point-to-point protocol - patched for PPPOE"
+DESCRIPTION="Point-to-point protocol (PPP)"
 HOMEPAGE="http://www.samba.org/ppp"
 SRC_URI="ftp://ftp.samba.org/pub/ppp/${P}.tar.gz
-	http://www.polbox.com/h/hs001/ppp-2.4.2-mppe-mppc-1.1.patch.gz
-	http://www.netservers.co.uk/gpl/ppp-dhcpc.tgz"
+	mirror://gentoo/${P}-patches-20050514.tar.gz
+	mppe-mppc? ( http://www.polbox.com/h/hs001/ppp-2.4.2-mppe-mppc-1.1.patch.gz )
+	dhcp? ( http://www.netservers.co.uk/gpl/ppp-dhcpc.tgz )"
 
 LICENSE="BSD GPL-2"
 SLOT="0"
@@ -26,20 +27,20 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 
-	epatch ${FILESDIR}/${PV}/cbcp-dosfix.patch || die "patch failed"
-	epatch ${FILESDIR}/${PV}/mpls.patch.gz || die "patch failed"
-	epatch ${FILESDIR}/${PV}/killaddr-smarter.patch.gz || die "patch failed"
-	epatch ${FILESDIR}/${PV}/cflags.patch || die "patch failed"
-	epatch ${FILESDIR}/${PV}/control_c.patch || die "patch failed"
+	epatch ${WORKDIR}/patch/cbcp-dosfix.patch || die "patch failed"
+	epatch ${WORKDIR}/patch/mpls.patch || die "patch failed"
+	epatch ${WORKDIR}/patch/killaddr-smarter.patch || die "patch failed"
+	epatch ${WORKDIR}/patch/cflags.patch || die "patch failed"
+	epatch ${WORKDIR}/patch/control_c.patch || die "patch failed"
 
 	use mppe-mppc && {
 		einfo "Enabling mppe-mppc support"
-		epatch ${DISTDIR}/ppp-2.4.2-mppe-mppc-1.1.patch.gz || die "patch failed"
+		epatch ${WORKDIR}/ppp-2.4.2-mppe-mppc-1.1.patch || die "patch failed"
 	}
 
 	if use atm; then
 		einfo "Enabling PPPoATM support"
-		epatch ${FILESDIR}/${PV}/pppoatm-2.diff.gz || die "patch failed"
+		epatch ${WORKDIR}/patch/pppoatm-2.patch || die "patch failed"
 		sed -i -e "s/^LIBS =/LIBS = -latm/" pppd/Makefile.linux || die
 	fi
 
@@ -70,12 +71,16 @@ src_unpack() {
 		einfo "Copying ppp-dhcp plugin files..."
 		tar -xzf ${DISTDIR}/ppp-dhcpc.tgz -C ${S}/pppd/plugins/
 		sed -i -e 's/SUBDIRS := rp-pppoe/SUBDIRS := rp-pppoe dhcp/' pppd/plugins/Makefile.linux || die
-		sed -i -e "s/-O2/${CFLAGS}/" pppd/plugins/dhcp/Makefile.linux
-		epatch ${FILESDIR}/ppp-sys_error_to_strerror.patch || die
+		sed -i -e "s/-O2/${CFLAGS} -fPIC/" ${S}/pppd/plugins/dhcp/Makefile.linux
+		epatch ${WORKDIR}/patch/dhcp-sys_error_to_strerror.patch || die
 	}
 
 	#epatch ${FILESDIR}/${PV}/pcap.patch
 	sed -i -e "s:net/bpf.h:pcap-bpf.h:" pppd/sys-linux.c pppd/demand.c pppd/plugins/rp-pppoe/if.c
+
+	# Set correct libdir
+	sed -i -e "s:/lib/pppd:/$(get_libdir)/pppd:" \
+		${S}/pppd/{pathnames.h,pppd.8} || die
 }
 
 src_compile() {
@@ -105,9 +110,9 @@ src_install() {
 
 	insopts -m0644
 	doins etc.ppp/options
-	doins ${FILESDIR}/${PV}/options-pptp
-	doins ${FILESDIR}/${PV}/options-pppoe
-	doins ${FILESDIR}/${PV}/chat-default
+	doins ${FILESDIR}/options-pptp
+	doins ${FILESDIR}/options-pppoe
+	doins ${FILESDIR}/chat-default
 
 	insopts -m0755
 	doins ${FILESDIR}/ip-up
@@ -116,7 +121,7 @@ src_install() {
 	exeinto /etc/init.d/
 	doexe ${FILESDIR}/net.ppp0
 
-	if useq pam; then
+	if use pam; then
 		insinto /etc/pam.d
 		insopts -m0644
 		newins pppd/ppp.pam ppp || die "not found ppp.pam"
@@ -126,32 +131,34 @@ src_install() {
 	insopts -m0600
 	newins ${FILESDIR}/confd.ppp0 net.ppp0
 
-	dolib.so pppd/plugins/minconn.so
-	dolib.so pppd/plugins/passprompt.so
-	dolib.so pppd/plugins/rp-pppoe/rp-pppoe.so
-	dolib.so pppd/plugins/radius/radius.so
-	dolib.so pppd/plugins/radius/radattr.so
-	dolib.so pppd/plugins/radius/radrealms.so
-	if useq atm; then
-		dolib.so pppd/plugins/pppoatm.so || die "pppoatm.so not build"
+	local PLUGINS_DIR=/usr/$(get_libdir)/pppd/$(awk -F '"' '/VERSION/ {print $2}' pppd/patchlevel.h)
+	#closing " for syntax coloring
+	dodir ${PLUGINS_DIR}
+	insinto ${PLUGINS_DIR}
+	insopts -m0755
+	doins pppd/plugins/minconn.so || die "minconn.so not build"
+	doins pppd/plugins/passprompt.so || die "passprompt.so not build"
+	doins pppd/plugins/rp-pppoe/rp-pppoe.so || die "rp-pppoe.so not build"
+	doins pppd/plugins/radius/radius.so || die "radius.so not build"
+	doins pppd/plugins/radius/radattr.so || die "radattr.so not build"
+	doins pppd/plugins/radius/radrealms.so || die "radrealms.so not build"
+	if use atm; then
+		doins pppd/plugins/pppoatm.so || die "pppoatm.so not build"
 	fi
-	if useq dhcp; then
-		dolib.so pppd/plugins/dhcp/dhcpc.so || die "dhcpc.so not build"
+	if use dhcp; then
+		doins pppd/plugins/dhcp/dhcpc.so || die "dhcpc.so not build"
 	fi
-
-	dodir /usr/lib/pppd/$(awk -F '"' '/VERSION/ {print $2}' pppd/patchlevel.h)
-	mv ${D}/usr/lib/*.so ${D}/usr/lib/pppd/$(awk -F '"' '/VERSION/ {print $2}' pppd/patchlevel.h)
 
 	insinto /etc/modules.d
 	insopts -m0644
-	newins ${FILESDIR}/${PV}/modules.ppp ppp
+	newins ${FILESDIR}/modules.ppp ppp
 	if use mppe-mppc; then
 		echo 'alias ppp-compress-18 ppp_mppe_mppc' >> ${D}/etc/modules.d/ppp
 	fi
 
 	dodoc PLUGINS README* SETUP Changes-2.3 FAQ
-	dodoc ${FILESDIR}/${PV}/README.mpls
-	dohtml ${FILESDIR}/${PV}/pppoe.html
+	dodoc ${FILESDIR}/README.mpls
+	dohtml ${FILESDIR}/pppoe.html
 
 	doman pppd/plugins/radius/pppd-radius.8
 	doman pppd/plugins/radius/pppd-radattr.8
