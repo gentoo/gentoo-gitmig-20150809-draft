@@ -1,6 +1,15 @@
 # ChangeLog for app-editors/fte
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/fte/ChangeLog,v 1.27 2005/01/30 19:54:12 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/fte/ChangeLog,v 1.28 2005/05/14 14:22:40 voxus Exp $
+
+*fte-20050108-r3 (14 May 2005)
+
+  14 May 2005; Konstantin Arkhipov <voxus@gentoo.org> ChangeLog,
+  -fte-20050108.ebuild, -fte-20050108-r1.ebuild, -fte-20050108-r2.ebuild,
+  +fte-20050108-r3.ebuild:
+  Taking this one over. Fixed changeLog's formatting and bug #75250.
+  Cleaned out old ebuilds.
+  Fixed metadata.
 
 *fte-20050108-r2 (30 Jan 2005)
 
@@ -68,7 +77,6 @@
 *fte-20020324 (17 May 2002)
 
   10 Feb 2003; Seemant Kulleen <seemant@gentoo.org> *.ebuild :
-
   Removed redundant patches in files/.  Also, inherit eutils to use epatch
   in the two older versions.  And change from cat | sed to just sed.  And
   finally change sed expression delimiters from / to :, closing bug #15006
@@ -83,7 +91,6 @@
   Added ppc to keywords
 
   17 May 2002; M.Thibaut <murphy@gentoo.org> fte-20020324.ebuild :
-  
   New version of FTE released - Resolves bug #2587. Also some changes in 
   the ebuild that should make future releases easier. qfte has been disabled
   because it doesn't compile.
@@ -102,18 +109,19 @@
   sascha-gentoo-bugzilla@silbe.org (Sascha Silbe)
 
 *fte-20010819-r2 (24 Apr 2002)
+
   24 Apr 2002; Spider <spider@gentoo.org> ChangeLog fte-20010819-r2.ebuild : 
+
   Seems my logic was flawed yesterday. this program needs gpm to compile
 at all. Blah
 
-
 *fte-20010819-r1 (23 Apr 2002)
+
   23 Apr 2002; Spider <spider@gentoo.org> ChangeLog fte-20010819-r2.ebuild : 
   Add missing patch in -r1 
   (Wrong name)
   Update with -r2 that adds gpm? ( ) dependency and ncurses dependency
   closes bug #2004
-  
 
   30 Mar 2002; Dan Armak <danarmak@gentoo.org> changelog:
 
