@@ -1,0 +1,24 @@
+diff -Naur geos-2.1.1.orig/source/geom/Makefile.am geos-2.1.1/source/geom/Makefile.am
+--- geos-2.1.1.orig/source/geom/Makefile.am	2004-11-24 01:22:49.000000000 +0900
++++ geos-2.1.1/source/geom/Makefile.am	2005-05-14 21:52:02.000000000 +0900
+@@ -2,7 +2,7 @@
+ top_srcdir=@top_srcdir@
+ GEOS_VERSION=@VERSION@
+ 
+-pkglibdir=$(prefix)/lib
++pkglibdir=$(libdir)
+ pkglib_LTLIBRARIES = libgeos.la
+ 
+ INCLUDES = -I$(top_srcdir)/source/headers -DGEOS_VERSION=""$(GEOS_VERSION)""
+diff -Naur geos-2.1.1.orig/source/geom/Makefile.in geos-2.1.1/source/geom/Makefile.in
+--- geos-2.1.1.orig/source/geom/Makefile.in	2004-12-17 03:01:32.000000000 +0900
++++ geos-2.1.1/source/geom/Makefile.in	2005-05-14 21:52:14.000000000 +0900
+@@ -38,7 +38,7 @@
+ target_triplet = @target@
+ top_srcdir = @top_srcdir@
+ 
+-pkglibdir = $(prefix)/lib
++pkglibdir = $(libdir)
+ ACLOCAL = @ACLOCAL@
+ ALLOCA = @ALLOCA@
+ AMDEP_FALSE = @AMDEP_FALSE@
