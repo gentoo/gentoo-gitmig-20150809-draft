@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/nikto
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nikto/ChangeLog,v 1.12 2005/05/14 13:38:27 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nikto/ChangeLog,v 1.13 2005/05/14 13:44:22 mcummings Exp $
+
+*nikto-1.34-r2 (14 May 2005)
+
+  14 May 2005; Michael Cummings <mcummings@gentoo.org>
+  +nikto-1.34-r2.ebuild:
+  Forgot to get the digest of the man added. Also bumped since the man page is
+  a functional addition.
 
   14 May 2005; Michael Cummings <mcummings@gentoo.org> nikto-1.34-r1.ebuild:
   bug 84048, thanks to Michael Boman <michael.boman@gmail.com> for the
