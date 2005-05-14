@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/fritzcapi/fritzcapi-2.6.32.ebuild,v 1.8 2005/05/10 15:55:41 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/fritzcapi/fritzcapi-2.6.32.ebuild,v 1.9 2005/05/14 17:40:35 genstef Exp $
 
 inherit linux-mod rpm eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.avm.de/"
 
 #All sources in one suse-package
 FRITZCAPI_MODULES=("fcpci" "fcpcmcia" "fcusb" "fcusb2" "fxusb" "fcclassic"
-	"fcpnp" "fxusb_cz" "e2220pc" "e5520pc")
+	"fcpnp" "fxusb_CZ" "e2220pc" "e5520pc")
 FRITZCAPI_TARGETS=("fritz.pci" "fritz.pcmcia" "fritz.usb" "fritz.usb2"
 	"fritz.xusb" "fritz.classic" "fritz.pnp" "fritz.xusb_CZ" "e2220pc" "e5520pc")
 for ((CARD=0; CARD < ${#FRITZCAPI_MODULES[*]}; CARD++)); do
