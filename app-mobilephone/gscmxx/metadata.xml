@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>mobile-phone</herd>
+<maintainer>
+  <email>pylon@gentoo.org</email>
+  <name>Lars Weiler</name>
+  <description>Testing with an S45</description>
+</maintainer>
+</pkgmetadata>
