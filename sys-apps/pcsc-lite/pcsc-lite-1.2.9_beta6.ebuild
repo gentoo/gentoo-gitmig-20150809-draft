@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/pcsc-lite-1.2.9_beta6.ebuild,v 1.3 2005/04/23 07:06:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/pcsc-lite-1.2.9_beta6.ebuild,v 1.4 2005/05/14 18:02:29 vapier Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86 ~ppc64"
 IUSE="static debug"
 
-RDEPEND="!static? ( virtual/libc dev-libs/libusb )"
+RDEPEND="!static? ( dev-libs/libusb )"
 DEPEND="sys-devel/make
 	sys-devel/libtool
 	sys-apps/sed
@@ -32,6 +32,7 @@ S="${WORKDIR}/${MY_P}"
 
 src_compile() {
 	econf \
+		--enable-extendedapdu \
 		--enable-usbdropdir=/usr/lib/readers/usb \
 		--enable-muscledropdir=/usr/share/pcsc/services \
 		$(use_enable debug) \
