@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/extace
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/extace/ChangeLog,v 1.9 2004/12/18 13:26:04 chainsaw Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/extace/ChangeLog,v 1.10 2005/05/14 12:02:04 luckyduck Exp $
+
+  14 May 2005; Jan Brinkmann <luckyduck@gentoo.org> extace-1.8.11.ebuild,
+  extace-1.9.2.ebuild:
+  added missing gtk+-1.2 dependency, fixes #92266
 
 *extace-1.9.2 (18 Dec 2004)
 

@@ -1,6 +1,16 @@
-MD5 34909c39b4461317552b49ac06397dd8 extace-1.8.11.ebuild 592
-MD5 6f2bbcecc4751c9facd70d8b65e3fe25 ChangeLog 1061
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 b72f5750da14a2befe6a1807db7d0220 extace-1.8.11.ebuild 636
+MD5 a36e2b7c3ef75c61e4a96de7defa3115 ChangeLog 1211
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 56d673fe270633c119354bfb4b4647ed extace-1.9.2.ebuild 593
+MD5 efd7c8ab8360412df7c23d3381d9204e extace-1.9.2.ebuild 637
 MD5 d637bf3e0ef939bc46066ee0e1601827 files/digest-extace-1.8.11 65
 MD5 52b9310a8b82c68fcbe7a9bacc401b50 files/digest-extace-1.9.2 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFChejN06ebR+OMO78RAgwbAJ9oEmXLSsuSCLaXM8ikyKaCplW02ACcCdV2
+4L5wdnNSHdE22Gkg5JmYp+8=
+=LSOg
+-----END PGP SIGNATURE-----
