@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/valknut
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/valknut/ChangeLog,v 1.13 2005/05/08 09:53:06 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/valknut/ChangeLog,v 1.14 2005/05/14 08:18:50 corsair Exp $
+
+  14 May 2005; Markus Rothe <corsair@gentoo.org> valknut-0.3.7.ebuild:
+  Added ~ppc64 to KEYWORDS
 
   08 May 2005; Gregorio Guidi <greg_g@gentoo.org> valknut-0.3.7.ebuild:
   Fix usage of kde eclasses.
