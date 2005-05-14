@@ -1,6 +1,9 @@
 # ChangeLog for app-text/c2ps
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/c2ps/ChangeLog,v 1.7 2005/01/01 16:04:44 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/c2ps/ChangeLog,v 1.8 2005/05/14 00:52:00 wormo Exp $
+
+  13 May 2005; Stephanie Lockwood-Childs <wormo@gentoo.org> c2ps-4.0.ebuild:
+  Add ~ppc
 
   28 Jun 2004; Ciaran McCreesh <ciaranm@gentoo.org> c2ps-4.0.ebuild:
   Added ~sparc, ~mips
