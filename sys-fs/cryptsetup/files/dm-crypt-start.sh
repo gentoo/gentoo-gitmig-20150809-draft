@@ -1,13 +1,13 @@
 # /lib/rcscripts/addons/dm-crypt-start.sh
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/files/dm-crypt-start.sh,v 1.2 2005/03/02 15:16:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/files/dm-crypt-start.sh,v 1.3 2005/05/15 00:44:56 vapier Exp $
 
 # Setup mappings for an individual mount/swap
 #
 # Note: This relies on variables localized in the main body below.
 dm-crypt-execute-checkfs() {
-	local dev target
+	local dev target ret
 
 	if [[ -n ${loop_file} ]] ; then
 		dev="/dev/mapper/${target}"
@@ -32,30 +32,34 @@ dm-crypt-execute-checkfs() {
 		return
 	fi
 
+	splash svc_input_begin checkfs
 	ebegin "dm-crypt map ${target}"
 	if [[ -z ${key} ]] ; then
 		/bin/cryptsetup ${options} create ${target} ${source} >/dev/console </dev/console
-		eend $? "failure running cryptsetup"
+		ret=$?
+		eend ${ret} "failure running cryptsetup"
 	else
 		if [[ -x /usr/bin/gpg ]] ; then
-			retval=1
-			while [[ $retval -gt 0 ]] ; do
+			ret=1
+			while [[ ${ret} -gt 0 ]] ; do
 				keystring=$(gpg ${gpg_options} ${key} 2>/dev/null </dev/console)
 				if [[ -z ${keystring} ]] ; then
-					retval=5
+					ret=5
 				else
 					/bin/cryptsetup ${options} create ${target} ${source} << EOF
 ${keystring}
 EOF
-					retval=$?
+					ret=$?
 				fi
 			done
-			eend $retval
+			eend ${ret}
 		else
 			einfo "You have to install app-crypt/gpg first"
 		fi
 	fi
-	if [[ $? != 0 ]] ; then
+	splash svc_input_end checkfs
+
+	if [[ ${ret} != 0 ]] ; then
 		cryptfs_status=1
 	else
 		if [[ -n ${pre_mount} ]] ; then
