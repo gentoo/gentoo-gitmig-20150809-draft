@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libmpeg3
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg3/ChangeLog,v 1.36 2005/05/02 09:14:08 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg3/ChangeLog,v 1.37 2005/05/15 02:16:19 flameeyes Exp $
+
+  15 May 2005; Diego Pettenò <flameeyes@gentoo.org> libmpeg3-1.5.2.ebuild,
+  libmpeg3-1.5.2-r1.ebuild:
+  Moved using toolchain-functs eclass.
 
   02 May 2005; Diego Pettenò <flameeyes@gentoo.org>
   -files/1.5.1-gentoo-mpeg3split.patch, -files/1.5.1-gentoo-p1.patch,

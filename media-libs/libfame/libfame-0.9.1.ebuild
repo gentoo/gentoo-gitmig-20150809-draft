@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libfame/libfame-0.9.1.ebuild,v 1.9 2005/05/10 20:13:18 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libfame/libfame-0.9.1.ebuild,v 1.10 2005/05/15 02:11:51 flameeyes Exp $
 
-inherit flag-o-matic gcc eutils
+inherit flag-o-matic toolchain-funcs eutils
 
 PATCHLEVEL="1"
 DESCRIPTION="MPEG-1 and MPEG-4 video encoding library"

@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmatroska/libmatroska-0.7.1.ebuild,v 1.3 2005/04/24 21:27:38 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmatroska/libmatroska-0.7.1.ebuild,v 1.4 2005/05/15 02:06:53 flameeyes Exp $
 
-inherit flag-o-matic gcc
+inherit flag-o-matic toolchain-funcs
 
 DESCRIPTION="Extensible multimedia container format based on EBML"
 HOMEPAGE="http://www.matroska.org/"

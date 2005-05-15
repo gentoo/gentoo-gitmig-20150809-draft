@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvorbis/libvorbis-1.0.1-r2.ebuild,v 1.15 2005/01/12 03:54:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvorbis/libvorbis-1.0.1-r2.ebuild,v 1.16 2005/05/15 02:18:30 flameeyes Exp $
 
-inherit libtool flag-o-matic gcc
+inherit libtool flag-o-matic toolchain-funcs
 
 DESCRIPTION="the Ogg Vorbis sound file format library"
 HOMEPAGE="http://www.xiph.org/ogg/vorbis/index.html"
