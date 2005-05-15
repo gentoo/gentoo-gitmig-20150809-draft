@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/bison/bison-1.875.ebuild,v 1.28 2005/01/11 01:19:15 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/bison/bison-1.875.ebuild,v 1.29 2005/05/15 22:49:23 vapier Exp $
 
-inherit gcc flag-o-matic eutils gnuconfig
+inherit flag-o-matic eutils gnuconfig toolchain-funcs
 
 DESCRIPTION="A yacc-compatible parser generator"
 HOMEPAGE="http://www.gnu.org/software/bison/bison.html"
@@ -21,7 +21,6 @@ src_unpack() {
 	cd ${S}
 	epatch ${FILESDIR}/${PN}-1.32-extfix.patch
 	epatch ${FILESDIR}/${PN}-1.875-gccerror.patch
-	gnuconfig_update
 }
 
 src_compile() {
