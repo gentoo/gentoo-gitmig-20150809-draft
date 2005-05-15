@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/museseq/museseq-0.7.0-r1.ebuild,v 1.3 2005/01/09 22:19:14 fvdpol Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/museseq/museseq-0.7.0-r1.ebuild,v 1.4 2005/05/15 14:43:25 flameeyes Exp $
 
-inherit kde-functions gcc virtualx eutils
+inherit kde-functions virtualx eutils
 need-qt 3
 
 MY_P=${P/museseq/muse}
@@ -42,7 +42,7 @@ src_compile() {
 	use ladcca		|| myconf="${myconf} --disable-ladcca"
 #	use sdk			&& myconf="${myconf} --enable-vst"
 	use debug		&& myconf="${myconf} --enable-debug"
-#	[ "`gcc-version`" == "3.4" ] && myconf="${myconf} --enable-pch"
+
 	Xeconf ${myconf} || die "configure failed"
 
 	emake || die

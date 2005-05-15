@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 c70ab7a69114ead2128bcd55e03197ff mup-5.0.ebuild 2182
-MD5 e540a03623502ec54a08607a76afe596 mup-4.4.ebuild 2106
-MD5 2a9f2b14eb1d484c80f1114cf9831c06 ChangeLog 1571
+MD5 40e63288102b3fb76597b1a79489702a ChangeLog 1698
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 4fb620ccd84b4eab8d44c5dd123a99ba mup-4.6.ebuild 2131
-MD5 234ec2d99e4c992ccc12fa76de885a0e files/5.0-beaming-bug.patch 928
+MD5 e540a03623502ec54a08607a76afe596 mup-4.4.ebuild 2106
+MD5 67d88a38f3b52922fe1b0706bd388f63 mup-4.6.ebuild 2137
+MD5 cfa766f360e91539d75412b0f6be4244 mup-5.0.ebuild 2188
 MD5 d73a9c5effa0eb340ee9eb4b799e32b8 files/4.6-gcc.patch 272
+MD5 234ec2d99e4c992ccc12fa76de885a0e files/5.0-beaming-bug.patch 928
 MD5 3cdff463ef32c2e7b16982e0db999cfa files/digest-mup-4.4 120
 MD5 54c05300dd4879fbf61504bc145fc1ef files/digest-mup-4.6 120
 MD5 631bd9db6b998acd073dbeae3e9cc0b8 files/digest-mup-5.0 120
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCL00l06ebR+OMO78RAizsAJ4w/JVyxF31j0j5KHMdvNt0VIcqSACeLqt+
-aitjZqq2aq2mbIAz9wDVCCY=
-=Xsoa
------END PGP SIGNATURE-----
