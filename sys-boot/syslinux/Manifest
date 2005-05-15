@@ -1,21 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 53ae1668c8fc16cc1e0093f28b1511a2 syslinux-2.13.ebuild 963
-MD5 fad406869474fc3a7cfde4203eb896fe syslinux-1.76.ebuild 760
-MD5 6c59c810703e076e24006d6fb063c15e syslinux-3.07.ebuild 1041
 MD5 402151bc85d7925c0b447a9dc0226a9e ChangeLog 3655
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 90200c4b3f861abb39c0e6f7c132aad6 files/syslinux-3.07-nossp.patch 9251
+MD5 0e1a94c09aace8ceb8280e62dbeeabc0 syslinux-2.13.ebuild 943
+MD5 6c59c810703e076e24006d6fb063c15e syslinux-3.07.ebuild 1041
+MD5 fad406869474fc3a7cfde4203eb896fe syslinux-1.76.ebuild 760
 MD5 26489361fe682baf353e4b7cef7bba16 files/digest-syslinux-1.76 65
 MD5 d44d8f9a65b91ec75463ccc8dd60cee3 files/digest-syslinux-2.13 66
 MD5 55cac8782710921227939964ce2fc373 files/digest-syslinux-3.07 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
-
-iQCVAwUBQfbcBJ4WFLgrx1GWAQL/ugQAjE0cBGLIh+R/MkUh/be9Njb7LyyLdJAr
-+IWpf24aagzL+XM1PSSelfb3qy4S/nMICXCgKS/Af+YW+ZVlSaCPRIB5RjuO60CQ
-VZPxJzk7sjS0ArShFY48AzYYvOK6U4FVkfJJSUFNM8csrUso7WlvyPEmRUY17tUz
-sbimXCWbzvc=
-=H0xE
------END PGP SIGNATURE-----
+MD5 90200c4b3f861abb39c0e6f7c132aad6 files/syslinux-3.07-nossp.patch 9251
