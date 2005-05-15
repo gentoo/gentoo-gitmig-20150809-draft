@@ -1,6 +1,10 @@
 # ChangeLog for www-client/mozilla-firefox
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.32 2005/05/13 17:57:21 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.33 2005/05/15 01:53:42 halcy0n Exp $
+
+  15 May 2005; Mark Loeser <halcy0n@gentoo.org>
+  +files/mozilla-firefox-1.0.4-gcc4.patch, mozilla-firefox-1.0.4.ebuild:
+  GCC4 compile fix; bug #87800
 
   13 May 2005; Carsten Lohrke <carlo@gentoo.org>
   mozilla-firefox-1.0.4.ebuild:

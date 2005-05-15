@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-1.0.4.ebuild,v 1.10 2005/05/13 17:57:21 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-1.0.4.ebuild,v 1.11 2005/05/15 01:53:42 halcy0n Exp $
 
 inherit makeedit flag-o-matic gcc nsplugins eutils mozconfig mozilla-launcher multilib
 
@@ -67,6 +67,9 @@ src_unpack() {
 	if has_version '>=x11-libs/cairo-0.3.0'; then
 		epatch ${FILESDIR}/svg-cairo-0.3.0-fix.patch
 	fi
+
+	# GCC4 compile fix, bug #87800
+	epatch ${FILESDIR}/${P}-gcc4.patch
 }
 
 src_compile() {
