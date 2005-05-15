@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 ccaf030c3be6dfdf265b4f5c3b424a84 cln-1.1.6.ebuild 1280
-MD5 df1cbf1afb5b36eab7dc4b97f288af9d cln-1.1.5.ebuild 1121
-MD5 91754a893e9edf5d18c7e27ba564fc27 ChangeLog 1493
+MD5 e9966e45a2b20ffeaff2531b0e07341e ChangeLog 1630
+MD5 d23397e90cc0af59c59c5b9e30e366d4 cln-1.1.5.ebuild 1134
+MD5 e199db30cd19acf044f9e90945352dc7 cln-1.1.6.ebuild 1281
 MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
 MD5 f0d1f7859755b5b468024ed4132f3095 files/digest-cln-1.1.5 62
 MD5 e6723419337999b42ae07ddbe7e91aa6 files/digest-cln-1.1.6 63
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFB0ct9I1lqEGTUzyQRAmauAJ97EGHdrcAps2CIKS/H4Imker4ElwCffQAt
-wPZY/Et3fyRxhq+a7vDuaaI=
-=Zf3h
+iD8DBQFCh54e5mJXAu5GbtIRAlWZAJ0WBPxH4wQhHbrfKldud7uYLxJYSQCfbnNM
+LF+UXSOpuaJkZpyTyHAb8g8=
+=PKMP
 -----END PGP SIGNATURE-----
