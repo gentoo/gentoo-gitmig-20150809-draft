@@ -1,8 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xanim/xanim-2.80.1-r4.ebuild,v 1.27 2004/12/17 20:23:06 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xanim/xanim-2.80.1-r4.ebuild,v 1.28 2005/05/15 13:21:31 flameeyes Exp $
 
-inherit flag-o-matic gcc
+inherit flag-o-matic toolchain-funcs
 
 DESCRIPTION="program for playing a wide variety of animation, audio and video formats"
 HOMEPAGE="http://smurfland.cit.buffalo.edu/xanim/home.html"
@@ -88,7 +88,7 @@ src_compile() {
 
 	# Set XA_DLL_PATH even though we statically link the mods, I guess
 	# this provides extensibility
-	make CC="$(gcc-getCC)" OPTIMIZE="${CFLAGS}" \
+	make CC="$(tc-getCC)" OPTIMIZE="${CFLAGS}" \
 		XA_DLL_DEF="-DXA_DLL -DXA_PRINT" XA_DLL_PATH=/usr/lib/xanim/mods \
 		${_XA_EXT:+ \
 			XA_IV32_LIB="mods/${_XA_CVID}" \
