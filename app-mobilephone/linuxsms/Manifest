@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 bffcc5b31c81f017c1654f19bb6e1336 linuxsms-0.77.ebuild 590
+MD5 ad08a8166b15d87cf85a2b18ffecb7cf linuxsms-0.77.ebuild 621
 MD5 04f13487bfae67406b2518413d511ce0 ChangeLog 1133
-MD5 b8134f819cef7e1b81d1ad74886678d7 metadata.xml 289
+MD5 4f0ad530646bf9f95973ec0161c9ef2e metadata.xml 298
 MD5 e78ea98f264ac99405ecf93094d82e77 files/digest-linuxsms-0.77 64
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCh5nFjiC39V7gKu0RAtaDAKDUfz8Y1ZLVKoZhtiSJRMEOkqCzvwCglMv5
-orny78aVJvBo1WHjMOGsvcY=
-=Swbl
+iD8DBQFCh5wCjiC39V7gKu0RAnfgAKDAiAu2pynNWetNGkRWbMj4e9gm0ACfZhKl
+hV8WRvXE+ICuahOpA9ag+Nw=
+=+WOF
 -----END PGP SIGNATURE-----

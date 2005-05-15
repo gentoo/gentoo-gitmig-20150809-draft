@@ -2,5 +2,5 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>mobile-phone</herd>
-	<longdescription>Linuxsms is a cool script in Perl for send SMS to mobile phones	through a SMS gateway.</longdescription>
+	<longdescription>Linuxsms is a cool script in Perl for send SMS messages to mobile phones through a SMS gateway.</longdescription>
 </pkgmetadata>
