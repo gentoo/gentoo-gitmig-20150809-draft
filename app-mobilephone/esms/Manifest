@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 d4a97d12d8adba47c8549b1569464bd5 esms-0.9.5.ebuild 723
+MD5 cc0cf6ea3360bdc2a31568ca26780a5a ChangeLog 1153
+MD5 cbe72e4afbbdbced9daac497fe349ff7 metadata.xml 275
+MD5 711bc5ec1003ccdfe3d926faeab426ba files/digest-esms-0.9.5 61
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCh53pjiC39V7gKu0RAt/LAKDYRK6gOq6uZgKMr2/7AlRAwXagNwCgqj8z
+JNbb6/mAqlCcSnBAtA4eoqk=
+=rJp8
+-----END PGP SIGNATURE-----
