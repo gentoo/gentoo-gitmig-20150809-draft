@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/kimdaba
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/kimdaba/ChangeLog,v 1.9 2005/05/05 17:31:17 centic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/kimdaba/ChangeLog,v 1.10 2005/05/15 19:40:47 centic Exp $
+
+  15 May 2005; Dominik Stadler <centic@gentoo.org> kimdaba-2.1.ebuild:
+  Add fix for translations, see the Bug at
+  http://bugs.kde.org/show_bug.cgi?id=105293
 
 *kimdaba-2.1 (04 May 2005)
 
