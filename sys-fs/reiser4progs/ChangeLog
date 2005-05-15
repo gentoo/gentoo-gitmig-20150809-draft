@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/reiser4progs
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/reiser4progs/ChangeLog,v 1.19 2005/03/12 20:16:13 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/reiser4progs/ChangeLog,v 1.20 2005/05/15 11:45:32 corsair Exp $
+
+  15 May 2005; Markus Rothe <corsair@gentoo.org> reiser4progs-1.0.4.ebuild:
+  Added ~ppc64 to KEYWORDS
 
 *reiser4progs-1.0.4 (12 Mar 2005)
 
