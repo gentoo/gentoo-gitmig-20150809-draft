@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/goggles/goggles-0.7.4-r1.ebuild,v 1.2 2005/05/04 18:05:36 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/goggles/goggles-0.7.4-r1.ebuild,v 1.3 2005/05/15 14:20:02 flameeyes Exp $
 
-inherit eutils gcc
+inherit eutils toolchain-funcs
 
 DESCRIPTION="User-friendly frontend for the Ogle DVD Player"
 HOMEPAGE="http://www.fifthplanet.net/goggles.html"
@@ -24,8 +24,8 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-gentoo.patch
 
 	sed -i \
-		-e "/^export CC=/s:=.*:=\"$(gcc-getCC)\":" \
-		-e "/^export CXX=/s:=.*:=\"$(gcc-getCXX)\":" \
+		-e "/^export CC=/s:=.*:=\"$(tc-getCC)\":" \
+		-e "/^export CXX=/s:=.*:=\"$(tc-getCXX)\":" \
 		-e "/^export CFLAGS=/s:=.*:=\"${CFLAGS}\":" \
 		-e "/^export CXXFLAGS=/s:=.*:=\"${CXXFLAGS}\":" \
 		build/config.linux
