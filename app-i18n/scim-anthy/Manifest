@@ -2,5 +2,7 @@ MD5 6d53e6eff0fd0813a68499f584ebf26f ChangeLog 972
 MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
 MD5 9fee4cd9c844dd1bb33c2676a08dce52 scim-anthy-0.3.1.ebuild 977
 MD5 8ae0fe6e2b135244b6f0d3dd2189c760 scim-anthy-0.3.2.ebuild 978
+MD5 8b28a4b3a4165c419dfdcf101c71f55d scim-anthy-0.4.0.ebuild 978
 MD5 4a27c7a36a07b80be86acd2b8bf92022 files/digest-scim-anthy-0.3.2 68
 MD5 f3fb0c165858cdf04423a69602ad7e2f files/digest-scim-anthy-0.3.1 68
+MD5 b996d35757f33811fc9ab2d63a8b3dfd files/digest-scim-anthy-0.4.0 68

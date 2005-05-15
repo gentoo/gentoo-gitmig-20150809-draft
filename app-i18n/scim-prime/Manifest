@@ -3,6 +3,8 @@ MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
 MD5 e756d784d0dcc4ce9e72df7c95b88242 scim-prime-0.2.0.ebuild 935
 MD5 66808ef5cbfa141af39453688ce2b73b scim-prime-0.2.1.ebuild 936
 MD5 317b5353eafa788b72724a2a343907bd scim-prime-0.2.2.ebuild 936
+MD5 c096e6fc29eccb79cbacf407ae8a5c9e scim-prime-0.2.3.ebuild 936
 MD5 80794a70b0ec4315046a350ceff4b323 files/digest-scim-prime-0.2.2 68
 MD5 2537eae67a02d25a2ced7214b2c5660d files/digest-scim-prime-0.2.0 68
 MD5 eaba02fca1baba460d0ba183cb51df31 files/digest-scim-prime-0.2.1 68
+MD5 7ecfbe26158ddc75c705622303309d45 files/digest-scim-prime-0.2.3 68
