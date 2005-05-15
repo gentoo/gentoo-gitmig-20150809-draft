@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gtk-sharp-component.eclass,v 1.11 2005/05/15 09:18:29 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gtk-sharp-component.eclass,v 1.12 2005/05/15 22:00:31 genstef Exp $
 
 # Author : Peter Johanson <latexer@gentoo.org>
 # Based off of original work in gst-plugins.eclass by <foser@gentoo.org>
@@ -111,20 +111,21 @@ gtk-sharp-component_src_unpack() {
 
 	# Make the components configurable
 	epatch ${WORKDIR}/${MY_P}-configurable.diff
-	aclocal || die
+	aclocal || die "aclocal failed"
 	# See bug #73563, comment #9
-	libtoolize --copy --force || die
-	automake || die
-	autoconf || die
+	libtoolize --copy --force || die "libtoolize failed"
+	automake || die "automake failed"
+
+	# fixes support with pkgconfig-0.17, bug #92503
+	sed -i -e 's/\<PKG_PATH\>/GTK_SHARP_PKG_PATH/g' configure.in
+
+	autoconf || die "autoconf failed"
 
 	# disable building of samples (#16015)
 	sed -i -e "s:sample::" ${S}/Makefile.in || die
 
 	cd ${S}/${GTK_SHARP_COMPONENT_BUILD_DIR}
 	
-	# fixes support with pkgconfig-0.17, bug #92503
-	sed -i -e 's/\<PKG_PATH\>/GTK_SHARP_PKG_PATH/g' configure.in
-
 	gtk-sharp-component_fix_makefiles
 }
 
