@@ -10,7 +10,7 @@
 +	
 +
 +_escape_sequences = [
-+	('[A','up'),('[B','[down'),('[C','right'),('[D','left'),
++	('[A','up'),('[B','down'),('[C','right'),('[D','left'),
 +	('[E','5'),('[F','end'),('[H','home'),
 +
 +	('[1~','home'),('[2~','insert'),('[3~','delete'),('[4~','end'),
