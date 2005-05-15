@@ -1,6 +1,9 @@
 # ChangeLog for media-video/subtitleripper
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/subtitleripper/ChangeLog,v 1.1 2005/04/08 16:16:37 trapni Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/subtitleripper/ChangeLog,v 1.2 2005/05/15 17:26:03 josejx Exp $
+
+  15 May 2005; Joseph Jezak <josejx@gentoo.org> subtitleripper-0.3.4.ebuild:
+  Marked ~ppc for bug #90101.
 
 *subtitleripper-0.3.4 (08 Apr 2005)
 
