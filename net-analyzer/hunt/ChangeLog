@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/hunt
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hunt/ChangeLog,v 1.4 2004/11/08 12:24:40 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hunt/ChangeLog,v 1.5 2005/05/15 16:14:14 voxus Exp $
+
+  15 May 2005; Konstantin Arkhipov <voxus@gentoo.org> hunt-1.5.ebuild:
+  Added ~amd64 keyword wrt bug #92521. Header fixed.
 
   08 Nov 2004; Eldad Zack <eldad@gentoo.org> hunt-1.5.ebuild:
   Homepage update, thanks to Jason Cavett <jason.cavett@gmail.com>, Closes

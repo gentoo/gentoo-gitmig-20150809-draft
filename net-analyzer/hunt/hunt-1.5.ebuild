@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hunt/hunt-1.5.ebuild,v 1.4 2004/11/08 12:24:40 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hunt/hunt-1.5.ebuild,v 1.5 2005/05/15 16:14:14 voxus Exp $
 
 DESCRIPTION="tool for checking well known weaknesses in the TCP/IP protocol"
 HOMEPAGE="http://lin.fsid.cvut.cz/~kra/index.html"
@@ -8,7 +8,7 @@ SRC_URI="http://lin.fsid.cvut.cz/~kra/hunt/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~amd64 x86"
 IUSE=""
 
 DEPEND="virtual/libc"
