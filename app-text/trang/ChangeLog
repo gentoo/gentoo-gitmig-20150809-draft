@@ -1,6 +1,10 @@
 # ChangeLog for app-text/trang
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/trang/ChangeLog,v 1.10 2005/05/03 14:59:31 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/trang/ChangeLog,v 1.11 2005/05/15 01:13:09 luckyduck Exp $
+
+  15 May 2005; Jan Brinkmann <luckyduck@gentoo.org>
+  trang-20030619-r1.ebuild:
+  stable on amd64
 
   03 May 2005; Jan Brinkmann <luckyduck@gentoo.org> -trang-20030619.ebuild,
   trang-20030619-r1.ebuild:
