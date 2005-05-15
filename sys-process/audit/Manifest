@@ -2,27 +2,23 @@
 Hash: SHA1
 
 MD5 7b7ff6f6407bc96c457a91f20a6f0c28 audit-0.7.3.ebuild 1564
-MD5 72f1c8a16118107f7f189d9640c4315a audit-0.7.1.ebuild 1120
-MD5 84124fe920f0d72eac925d160de3bde3 audit-0.7.ebuild 1036
 MD5 b7ae6b273342ab1c9a026a88c13cafa1 audit-0.7.2-r1.ebuild 1571
 MD5 5b827f7378df0f835535406269d5d301 metadata.xml 296
-MD5 5c69b843b1b326d608d2e168d258d351 ChangeLog 1046
-MD5 7ebd55762c36ef60780e1553f2eee200 audit-0.7.2.ebuild 1116
+MD5 d7f28b441bb280edc281341e415b78ff ChangeLog 1242
 MD5 800dc38b7b284025611145ab70338ae7 audit-0.7.4.ebuild 1564
+MD5 f72d5400e4239d7aa72c76c188ecc7c0 audit-0.8.ebuild 1562
 MD5 5c9d503ee28782e29f1c87f4cf9efc3a files/digest-audit-0.7.4 62
-MD5 bf5a8a780a21b8072984968db475969e files/digest-audit-0.7.1 62
+MD5 b6cd1cd6edc78bf88c12015eae5fda21 files/digest-audit-0.8 60
 MD5 7c1f1f14a4750e7d8bbc1de62b3fcf59 files/auditd.initd 708
 MD5 402bf22e8e90b45f8a8349314cd61068 files/auditd.confd-0.7.2-r1 483
 MD5 acc06693c8205b28388a54f7812a5738 files/digest-audit-0.7.2-r1 62
 MD5 d50e111e375e27af12b1c200175cd7b6 files/auditd.initd-0.7.2-r1 709
-MD5 55e18ec35f409c781ee0b974f0006239 files/digest-audit-0.7 60
 MD5 d0c04da868c3fe0dff941187f054ecf6 files/auditd.confd 474
 MD5 362246ef4478da970cb07885a1218e39 files/digest-audit-0.7.3 62
-MD5 acc06693c8205b28388a54f7812a5738 files/digest-audit-0.7.2 62
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCfvkDjUHll2nfF60RAqWbAKCB+msLPql6iF/uq7n4FxDLJKN0AACgg+jp
-sJm2hlzl2R5I4KwzyqqdsHA=
-=KWkX
+iD8DBQFCh2NfjUHll2nfF60RAm4KAJ0avFguOPBMSKi9H3iDUDh3vPpxLQCffoUv
+hj9a2y1d1SetyPm455Xd5Oc=
+=IP82
 -----END PGP SIGNATURE-----
