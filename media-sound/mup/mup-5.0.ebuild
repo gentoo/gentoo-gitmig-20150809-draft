@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mup/mup-5.0.ebuild,v 1.1 2005/03/09 19:17:02 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mup/mup-5.0.ebuild,v 1.2 2005/05/15 14:44:18 flameeyes Exp $
 
-inherit eutils gcc
+inherit eutils toolchain-funcs
 
 DESCRIPTION="Program for printing music scores"
 HOMEPAGE="http://www.arkkra.com/"
@@ -27,12 +27,12 @@ src_compile() {
 	local param
 
 	cd ${S}/mup
-	echo $(gcc-getCC) ${CFLAGS} -o mup *.c -lm
-	$(gcc-getCC) ${CFLAGS} -o mup *.c -lm || die "mup compile failed"
+	echo $(tc-getCC) ${CFLAGS} -o mup *.c -lm
+	$(tc-getCC) ${CFLAGS} -o mup *.c -lm || die "mup compile failed"
 
 	cd ${S}/mkmupfnt
-	echo $(gcc-getCC) ${CFLAGS} -o mkmupfnt *.c
-	$(gcc-getCC) ${CFLAGS} -o mkmupfnt *.c || die "mkmupfnt compile failed"
+	echo $(tc-getCC) ${CFLAGS} -o mkmupfnt *.c
+	$(tc-getCC) ${CFLAGS} -o mkmupfnt *.c || die "mkmupfnt compile failed"
 
 	if [ `use X` ] || [ `use svga` ] ; then
 		cd ${S}/mupdisp
@@ -46,8 +46,8 @@ src_compile() {
 		else
 			param="${param} -DNO_VGA_LIB"
 		fi
-		echo $(gcc-getCC) ${CFLAGS} -o mupdisp *.c -lm ${param}
-		$(gcc-getCC) ${CFLAGS} -o mupdisp *.c -lm ${param} || die "mupdisp compile failed"
+		echo $(tc-getCC) ${CFLAGS} -o mupdisp *.c -lm ${param}
+		$(tc-getCC) ${CFLAGS} -o mupdisp *.c -lm ${param} || die "mupdisp compile failed"
 	fi
 }
 
