@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-  <herd>hardened</herd>
+  <herd>no-herd</herd>
   <maintainer>
     <email>solar@gentoo.org</email>
-    <description>Sole Maintainer</description>
+    <description>Maintainer</description>
   </maintainer>
-  <longdescription>A suite of tools to aid in auditing a hardened systems.</longdescription>
+  <maintainer>
+    <email>vapier@gentoo.org</email>
+    <description>Maintainer</description>
+  </maintainer>
+  <longdescription>A suite of ELF tools to aid auditing systems. Contains various ELF related utils for ELF32, ELF64 binaries useful for displaying PaX and security info on a large groups of binary files.</longdescription>
 </pkgmetadata>
