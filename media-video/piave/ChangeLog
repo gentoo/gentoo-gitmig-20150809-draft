@@ -1,6 +1,10 @@
 # ChangeLog for media-video/piave
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/piave/ChangeLog,v 1.10 2005/03/03 16:02:05 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/piave/ChangeLog,v 1.11 2005/05/15 13:53:12 flameeyes Exp $
+
+  15 May 2005; Diego Pettenò <flameeyes@gentoo.org> piave-0.2.4-r1.ebuild:
+  Cleaned up ebuild to not use gcc eclass. Moved patches in src_unpack. Moved
+  pkgconfig to DEPEND.
 
   03 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org> piave-0.2.4-r1.ebuild:
   added missing dependency and updates libdv dependency. fixed #82661
