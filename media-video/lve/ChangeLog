@@ -1,6 +1,9 @@
 # ChangeLog for media-video/lve
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/lve/ChangeLog,v 1.10 2005/01/28 15:49:13 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/lve/ChangeLog,v 1.11 2005/05/15 14:15:08 flameeyes Exp $
+
+  15 May 2005; Diego Pettenò <flameeyes@gentoo.org> lve-040322.ebuild:
+  Moved using toolchain-funcs
 
   28 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org> lve-040322.ebuild:
   added missing libmpeg2 dependency. fixes #69229

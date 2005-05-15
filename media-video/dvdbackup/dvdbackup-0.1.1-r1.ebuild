@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdbackup/dvdbackup-0.1.1-r1.ebuild,v 1.5 2005/02/28 21:38:14 kito Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdbackup/dvdbackup-0.1.1-r1.ebuild,v 1.6 2005/05/15 14:18:32 flameeyes Exp $
 
-inherit gcc eutils
+inherit toolchain-funcs eutils
 
 DESCRIPTION="Backup content from DVD to hard disk"
 HOMEPAGE="http://dvd-create.sourceforge.net/"
@@ -24,7 +24,7 @@ src_unpack() {
 }
 
 src_compile() {
-	$(gcc-getCC) ${CFLAGS} -I/usr/include/dvdread \
+	$(tc-getCC) ${CFLAGS} -I/usr/include/dvdread \
 		-ldvdread -o dvdbackup src/dvdbackup.c \
 		|| die "compile failed"
 }

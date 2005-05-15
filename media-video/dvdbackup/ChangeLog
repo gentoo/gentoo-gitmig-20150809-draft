@@ -1,6 +1,10 @@
 # ChangeLog for media-video/dvdbackup
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdbackup/ChangeLog,v 1.7 2005/02/28 21:38:14 kito Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdbackup/ChangeLog,v 1.8 2005/05/15 14:18:32 flameeyes Exp $
+
+  15 May 2005; Diego Pettenò <flameeyes@gentoo.org>
+  dvdbackup-0.1.1-r1.ebuild:
+  Moved using toolchain-funcs
 
   28 Feb 2005; Kito <kito@gentoo.org> dvdbackup-0.1.1-r1.ebuild:
   stable on ppc-macos
