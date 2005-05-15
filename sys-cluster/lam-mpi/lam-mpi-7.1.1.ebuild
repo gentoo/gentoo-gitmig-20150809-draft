@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/lam-mpi/lam-mpi-7.1.1.ebuild,v 1.3 2005/05/06 19:55:27 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/lam-mpi/lam-mpi-7.1.1.ebuild,v 1.4 2005/05/15 21:48:13 kugelfang Exp $
 
 inherit fortran
 
@@ -27,6 +27,7 @@ LICENSE="as-is"
 src_unpack() {
 	unpack ${A}
 
+	epatch ${FILESDIR}/${P}-shared-romio.patch
 	cd ${S}/romio/util/
 	sed -i "s|docdir=\"\$datadir/lam/doc\"|docdir=\"${D}/usr/share/doc/${PF}\"|" romioinstall.in
 }

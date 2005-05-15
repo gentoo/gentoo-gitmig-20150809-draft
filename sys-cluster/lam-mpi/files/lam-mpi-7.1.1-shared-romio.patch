@@ -1,0 +1,49 @@
+--- lam-7.1.1/romio/mpi-io/Makefile.in.orig     2005-05-15 23:12:33.317533904 +0200
++++ lam-7.1.1/romio/mpi-io/Makefile.in  2005-05-15 23:15:25.733322720 +0200
+@@ -1,6 +1,9 @@
+ CC          = @CC@
+ AR          = @AR@
+ LIBNAME     = @LIBNAME@
++PICFLAGS    = -fPIC -DPIC
++SOFLAGS     = -shared
++SONAME      = $(basename @LIBNAME@).so
+ RANLIB      = @RANLIB@
+ srcdir      = @srcdir@
+
+@@ -55,10 +58,14 @@
+
+ all: $(LIBNAME)
+
++dir:
++       mkdir -p shared/
++
+ .SUFFIXES: $(SUFFIXES) .p
+
+ .c.o:
+        $(CC) $(CFLAGS) -c $<
++       $(CC) $(CFLAGS) $(PICFLAGS) -c -o shared/$@ $<
+
+ .c.p:
+        @cp $(srcdir)/$*.c _$*.c
+@@ -69,8 +76,10 @@
+        $(AR) $(LIBNAME) $(MPIO_REAL_POBJECTS)
+        @rm -f _*.o
+
+-$(LIBNAME): $(MPIO_OBJECTS)
++$(LIBNAME): dir $(MPIO_OBJECTS)
+        $(AR) $(LIBNAME) $(MPIO_OBJECTS)
++       $(CC) $(SOFLAGS) -o $(SONAME) $(addprefix shared/, $(MPIO_OBJECTS))
+
+ clean:
+        @rm -f *.o
++       @rm -f shared/*.o
+--- lam-7.1.1/romio/util/romioinstall.in.orig	2005-05-11 20:06:51.526529552 +0200
++++ lam-7.1.1/romio/util/romioinstall.in	2005-05-11 20:07:10.845592608 +0200
+@@ -128,6 +128,7 @@
+ # Library files
+ dir="$libdir"
+ append "$ROMIO_TOP_BUILDDIR/lib/liblammpio.a:$dir/liblammpio.a"
++append "$ROMIO_TOP_BUILDDIR/lib/liblammpio.so:$dir/liblammpio.so"
+ 
+ # Man pages
+ dir="$mandir/man3"
