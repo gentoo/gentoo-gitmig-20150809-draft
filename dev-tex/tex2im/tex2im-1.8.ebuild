@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/tex2im/tex2im-1.8.ebuild,v 1.1 2005/05/10 14:43:53 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/tex2im/tex2im-1.8.ebuild,v 1.2 2005/05/15 07:11:03 pclouds Exp $
 
 DESCRIPTION="shell script that renders latex formulae to a wide variety of image
 formats"
@@ -13,7 +13,8 @@ KEYWORDS="~x86"
 IUSE=""
 
 DEPEND=""
-RDEPEND="media-gfx/imagemagick"
+RDEPEND="virtual/tetex
+	media-gfx/imagemagick"
 
 src_install() {
 	exeinto /usr/bin
