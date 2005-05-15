@@ -1,7 +1,17 @@
-MD5 cfee3865766b70dfc848503ae45b0fc1 ChangeLog 2476
-MD5 bd9e210457c22384582e7c1394314d3f metadata.xml 250
-MD5 1a9f909f4f606aad8893d68aa8c350f6 openobex-1.0.0.ebuild 644
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 0422eedba2e0bbc73905b7ed3768ace6 openobex-1.0.1.ebuild 1007
+MD5 1a9f909f4f606aad8893d68aa8c350f6 openobex-1.0.0.ebuild 644
+MD5 cfee3865766b70dfc848503ae45b0fc1 ChangeLog 2476
+MD5 04575f2be24f9d061c624e41b93d0394 metadata.xml 414
+MD5 5d15b9110d8811e635f436f52ee24e48 files/openobex-1.0.1-shared-object.patch 1920
 MD5 165cdde955fa7f445d03005d25665e20 files/digest-openobex-1.0.0 66
 MD5 a577e794f16a7f437408fcbd5861b9ed files/digest-openobex-1.0.1 66
-MD5 5d15b9110d8811e635f436f52ee24e48 files/openobex-1.0.1-shared-object.patch 1920
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCh3hZjiC39V7gKu0RAq8KAJ9P1ffdZSIr/2adnhpXuoTEI3Qo5ACdHl/M
+9pd5qwKiqX0q+XPgeIfP2Ss=
+=5s2E
+-----END PGP SIGNATURE-----
