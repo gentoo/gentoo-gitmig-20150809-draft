@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/pkgconfig
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig/ChangeLog,v 1.22 2005/05/12 23:02:57 leonardop Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig/ChangeLog,v 1.23 2005/05/15 00:46:09 leonardop Exp $
+
+*pkgconfig-0.17.2-r1 (14 May 2005)
+
+  14 May 2005; Leonardo Boshell <leonardop@gentoo.org>
+  pkgconfig-0.17.2-r1.ebuild:
+  Pass --enable-indirect-deps to make it behave as usual, otherwise it
+  breaks things. Resolves bug #92626.
 
 *pkgconfig-0.17.2 (12 May 2005)
 
