@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/irssi-0.8.10_rc5-r1.ebuild,v 1.6 2005/05/14 23:12:18 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/irssi-0.8.10_rc5-r1.ebuild,v 1.7 2005/05/15 02:13:51 swegener Exp $
 
 inherit perl-module eutils
 
@@ -14,7 +14,7 @@ SRC_URI="http://irssi.org/files/${MY_P}.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
-IUSE="nls ipv6 perl ssl socks5"
+IUSE="ipv6 perl ssl socks5"
 
 RDEPEND="!net-irc/irssi-cvs
 	!net-irc/irssi-svn
@@ -24,7 +24,6 @@ RDEPEND="!net-irc/irssi-cvs
 	perl? ( dev-lang/perl )
 	socks5? ( >=net-proxy/dante-1.1.13 )"
 DEPEND="${RDEPEND}
-	nls? ( sys-devel/gettext )
 	>=sys-apps/sed-4"
 
 S=${WORKDIR}/${MY_P}
@@ -56,7 +55,6 @@ src_compile() {
 		--without-servertest \
 		--with-proxy \
 		--with-ncurses \
-		$(use_enable nls) \
 		$(use_with perl) \
 		$(use_enable ipv6) \
 		$(use_with socks5 socks) \

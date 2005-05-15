@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi-cvs/irssi-cvs-0.2.ebuild,v 1.10 2005/05/14 23:10:51 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi-cvs/irssi-cvs-0.2.ebuild,v 1.11 2005/05/15 02:12:21 swegener Exp $
 
 ECVS_SERVER="cvs.irssi.org:/home/cvs"
 ECVS_MODULE="irssi"
@@ -13,7 +13,7 @@ HOMEPAGE="http://irssi.org/"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ppc sparc ~alpha hppa ~mips ~amd64"
-IUSE="nls ipv6 perl ssl"
+IUSE="ipv6 perl ssl"
 
 RDEPEND=">=dev-libs/glib-2.2.1
 	sys-libs/ncurses
@@ -22,7 +22,6 @@ RDEPEND=">=dev-libs/glib-2.2.1
 	!net-irc/irssi-svn"
 DEPEND="${RDEPEND}
 	www-client/lynx
-	nls? ( sys-devel/gettext )
 	>=sys-devel/autoconf-2.58"
 
 S=${WORKDIR}/${ECVS_MODULE}
@@ -37,8 +36,6 @@ src_compile() {
 
 	# Edit these if you like
 	myconf="--with-glib2 --without-servertest --with-proxy --with-ncurses"
-
-	use nls || myconf="${myconf} --disable-nls"
 
 	#perl is auto-detected and must be explicitly disabled
 	use perl || myconf="${myconf} --with-perl=no"
