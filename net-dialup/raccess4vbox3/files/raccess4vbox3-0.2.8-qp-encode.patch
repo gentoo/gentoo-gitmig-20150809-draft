@@ -1,0 +1,31 @@
+diff -Nru raccess4vbox3-0.2.8.orig/bin/vboxmail raccess4vbox3-0.2.8/bin/vboxmail
+--- raccess4vbox3-0.2.8.orig/bin/vboxmail	2005-05-15 14:13:19.000000000 +0300
++++ raccess4vbox3-0.2.8/bin/vboxmail	2005-05-15 14:42:53.088410880 +0300
+@@ -6,6 +6,18 @@
+ USER=$4
+ 
+ BOUND="$$-`date +%s`-vboxmail"
++if which qp-encode &>/dev/null ; then
++	QP_ENCODE="qp-encode"
++elif which mimencode &>/dev/null ; then
++	QP_ENCODE="mimencode -q"
++elif which recode &>/dev/null ; then
++	QP_ENCODE="recode ../qp"
++elif which qprint &>/dev/null ; then
++	QP_ENCODE="qprint -e"
++else
++	echo cannot find a quoted-printable encoder
++	return 1
++fi
+ 
+ /usr/sbin/sendmail -oi -t <<EOT
+ To: $USER
+@@ -33,7 +45,7 @@
+ Content-Disposition: attachment; filename="`basename $FILE`"
+ Content-Transfer-Encoding: quoted-printable
+ 
+-`qp-encode < $FILE`
++`$QP_ENCODE < $FILE`
+ --${BOUND}--
+ 
+ EOT

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/raccess4vbox3/raccess4vbox3-0.2.8-r1.ebuild,v 1.1 2005/05/15 11:18:50 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/raccess4vbox3/raccess4vbox3-0.2.8-r1.ebuild,v 1.2 2005/05/15 11:52:23 mrness Exp $
 
 inherit eutils
 
@@ -13,20 +13,17 @@ LICENSE="GPL-2"
 IUSE=""
 SLOT="0"
 
-DEPEND="|| ( net-mail/qprint net-mail/metamail app-text/recode )
+DEPEND="|| ( net-mail/qprint net-mail/metamail app-text/recode app-emacs/vm )
 	net-dialup/vbox3"
 
-src_compile() {
-	#set the Quoted-Printable transformation (#92530)
-	if has_version net-mail/qprint ; then
-		QP_ENCODE="qprint -e"
-	elif has_version net-mail/metamail ; then
-		QP_ENCODE="mimencode -q"
-	else
-		QP_ENCODE="recode ../qp"
-	fi
-	sed -i -e "s:qp-encode:${QP_ENCODE}:" ${S}/bin/vboxmail
+src_unpack() {
+	unpack ${A}
 
+	cd ${S}
+	epatch ${FILESDIR}/${P}-qp-encode.patch
+}
+
+src_compile() {
 	emake || die "emake failed"
 }
 
