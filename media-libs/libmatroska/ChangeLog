@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/libmatroska
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmatroska/ChangeLog,v 1.53 2005/05/15 02:06:53 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmatroska/ChangeLog,v 1.54 2005/05/15 16:44:03 flameeyes Exp $
+
+  15 May 2005; Diego Pettenò <flameeyes@gentoo.org>
+  libmatroska-0.7.0.ebuild, libmatroska-0.7.1.ebuild,
+  libmatroska-0.7.2.ebuild, libmatroska-0.7.3.ebuild,
+  libmatroska-0.7.3-r1.ebuild, libmatroska-0.7.4.ebuild,
+  libmatroska-0.7.5.ebuild, libmatroska-0.7.6.ebuild:
+  Removed check for gcc version to set input charset and just use test_flag.
 
   15 May 2005; Diego Pettenò <flameeyes@gentoo.org>
   libmatroska-0.7.0.ebuild, libmatroska-0.7.1.ebuild,
