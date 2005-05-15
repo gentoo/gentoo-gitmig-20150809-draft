@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/wakeonlan
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wakeonlan/ChangeLog,v 1.7 2004/10/02 15:40:04 swegener Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wakeonlan/ChangeLog,v 1.8 2005/05/15 01:08:42 luckyduck Exp $
+
+  15 May 2005; Jan Brinkmann <luckyduck@gentoo.org> wakeonlan-0.40.ebuild:
+  stable on amd64
 
   30 Mar 2004; Daniel Ahlberg <aliz@gentoo.org> wakeonlan-0.40.ebuild:
   Adding amd64 keyword. Closing #45591.
