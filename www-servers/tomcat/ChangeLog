@@ -1,6 +1,14 @@
 # ChangeLog for www-servers/tomcat
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.29 2005/05/14 16:13:34 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.30 2005/05/15 15:36:37 luckyduck Exp $
+
+*tomcat-5.0.27-r6 (15 May 2005)
+
+  15 May 2005; Jan Brinkmann <luckyduck@gentoo.org>
+  -tomcat-5.0.27-r5.ebuild, +tomcat-5.0.27-r6.ebuild,
+  tomcat-5.0.28-r3.ebuild:
+  fixed problem with userpriv, see #92663. default shutdown password now gets
+  replaced with a random one, see #92281
 
 *tomcat-5.0.28-r3 (14 May 2005)
 

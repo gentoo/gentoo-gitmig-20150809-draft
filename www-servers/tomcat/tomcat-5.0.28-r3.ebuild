@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.0.28-r3.ebuild,v 1.1 2005/05/14 16:13:34 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.0.28-r3.ebuild,v 1.2 2005/05/15 15:36:37 luckyduck Exp $
 
 inherit eutils java-pkg
 
@@ -131,14 +131,20 @@ src_install() {
 	fi
 
 	# create dir structure
-	dodir /usr/share/${TOMCAT_NAME}
 	diropts -m750
+	dodir /usr/share/${TOMCAT_NAME}
+	chown root:tomcat ${D}/usr/share/${TOMCAT_NAME}
 
 	dodir /var/log/${TOMCAT_NAME}/default
+	chown -R tomcat:tomcat ${D}/var/log/${TOMCAT_NAME}
 	dodir /etc/${TOMCAT_NAME}/default/
+	chown -R tomcat:tomcat ${D}/etc/${TOMCAT_NAME}
 	dodir /var/tmp/${TOMCAT_NAME}/default
+	chown -R tomcat:tomcat ${D}/var/tmp/${TOMCAT_NAME}
 	dodir /var/run/${TOMCAT_NAME}/default
+	chown -R tomcat:tomcat ${D}/var/run/${TOMCAT_NAME}
 	dodir /var/lib/${TOMCAT_NAME}/default
+	chown -R tomcat:tomcat ${D}/var/lib/${TOMCAT_NAME}
 
 	keepdir /var/log/${TOMCAT_NAME}/default
 	keepdir /etc/${TOMCAT_NAME}/default/
@@ -156,7 +162,7 @@ src_install() {
 		conf/Catalina/localhost
 
 	# make the jars available via java-config -p and jar-from, etc
-	base=`pwd`
+	base=$(pwd)
 	libdirs="common/lib server/lib"
 	for dir in ${libdirs}
 	do
@@ -168,12 +174,13 @@ src_install() {
 			if [ ! -L ${jar} ]; then
 				java-pkg_dojar ${jar}
 				rm -f ${jar}
-				ln -s ${DESTTREE}/share/${PN}-${SLOT}/lib/${jar} ${jar}
+				ln -s ${DESTTREE}/share/${TOMCAT_NAME}/lib/${jar} ${jar}
 			fi
 		done
 
 		cd ${base}
 	done
+	chown -R root:tomcat ${D}/usr/share/${TOMCAT_NAME}
 
 	# replace a packed struts.jar
 	cd server/webapps/admin/WEB-INF/lib
@@ -181,15 +188,20 @@ src_install() {
 	java-pkg_jar-from struts struts.jar
 	cd ${base}
 
-	# copy over the directories 
-	cp -ra conf/* ${D}/etc/${TOMCAT_NAME}/default || die "failed to copy conf"
-	cp -ra bin common server shared ${D}/usr/share/${TOMCAT_NAME} || die "failed to copy"
+	# replace the default pw with a random one, see #92281 
+	local randpw=$(echo ${RANDOM}|md5sum|cut -c 1-15)
+	sed -e s:SHUTDOWN:${randpw}: -i conf/{server,server-minimal}.xml
+
+	# copy over the directories	
+	chown -R root:tomcat conf/ bin/ common/ server/ shared/
+	cp -pra conf/* ${D}/etc/${TOMCAT_NAME}/default || die "failed to copy conf"
+	cp -pra bin common server shared ${D}/usr/share/${TOMCAT_NAME} || die "failed to copy"
 
 	# if the useflag is set, copy over the examples
 	dodir /var/lib/${TOMCAT_NAME}/default/webapps
 	if use examples; then
-		cp ../RELEASE-NOTES webapps/ROOT/RELEASE-NOTES.txt
-		cp -r webapps/{tomcat-docs,jsp-examples,servlets-examples,ROOT,webdav} \
+		cp -p ../RELEASE-NOTES webapps/ROOT/RELEASE-NOTES.txt
+		cp -pr webapps/{tomcat-docs,jsp-examples,servlets-examples,ROOT,webdav} \
 			${D}/var/lib/${TOMCAT_NAME}/default/webapps
 	fi
 
@@ -207,28 +219,12 @@ src_install() {
 pkg_preinst() {
 	enewgroup tomcat
 	enewuser tomcat -1 -1 /dev/null tomcat
-
-	chown -R root:tomcat ${D}/usr/share/${TOMCAT_NAME}
-	chown -R tomcat:tomcat ${D}/etc/${TOMCAT_NAME}
-	chown -R tomcat:tomcat ${D}/var/log/${TOMCAT_NAME}
-	chown -R tomcat:tomcat ${D}/var/tmp/${TOMCAT_NAME}
-	chown -R tomcat:tomcat ${D}/var/run/${TOMCAT_NAME}
-	chown -R tomcat:tomcat ${D}/var/lib/${TOMCAT_NAME}
 }
 
 pkg_postinst() {
 	#due to previous ebuild bloopers, make sure everything is correct
 	chown root:root /etc/init.d/${TOMCAT_NAME}
 	chown root:root /etc/conf.d/${TOMCAT_NAME}
-
-	# These directories contain the runtime files and
-	# are therefor owned by tomcat
-	chown -R tomcat:tomcat /etc/${TOMCAT_NAME}
-	chown -R tomcat:tomcat /var/log/${TOMCAT_NAME}
-	chown -R tomcat:tomcat /var/tmp/${TOMCAT_NAME}
-	chown -R tomcat:tomcat /var/run/${TOMCAT_NAME}
-	chown -R tomcat:tomcat /var/lib/${TOMCAT_NAME}
-
 
 	chmod 750 /etc/${TOMCAT_NAME}
 

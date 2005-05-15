@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.0.27-r5.ebuild,v 1.1 2005/04/13 18:22:59 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.0.27-r6.ebuild,v 1.1 2005/05/15 15:36:37 luckyduck Exp $
 
 inherit eutils
 
@@ -49,6 +49,10 @@ src_install() {
 
 	# we don't want DOS related things
 	rm -f bin/*.{bat,exe}
+
+	# replace the default pw with a random one, see #92281 
+	local randpw=$(echo ${RANDOM}|md5sum|cut -c 1-15)
+	sed -e s:SHUTDOWN:${randpw}: -i conf/{server,server-minimal}.xml
 
 	mv conf/* ${D}/etc/${TOMCAT_NAME}
 	mv bin common server shared temp work ${D}${TOMCAT_HOME}
