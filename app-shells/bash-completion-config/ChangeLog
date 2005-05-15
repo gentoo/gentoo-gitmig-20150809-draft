@@ -1,6 +1,13 @@
 # ChangeLog for app-shells/bash-completion-config
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion-config/ChangeLog,v 1.33 2005/04/08 12:30:03 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion-config/ChangeLog,v 1.34 2005/05/15 11:44:19 ka0ttic Exp $
+
+*bash-completion-config-0.8-r2 (15 May 2005)
+
+  15 May 2005; Aaron Walker <ka0ttic@gentoo.org> +files/0.8-fix-all.diff,
+  -bash-completion-config-0.8.ebuild, +bash-completion-config-0.8-r2.ebuild:
+  Revision bump; added patch to fix --list all for bug 92655. Also fixed
+  --list to ignore any files matching *~.
 
   08 Apr 2005; Markus Rothe <corsair@gentoo.org>
   bash-completion-config-0.8-r1.ebuild:

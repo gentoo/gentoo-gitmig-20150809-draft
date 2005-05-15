@@ -1,0 +1,27 @@
+--- tags/release-0.8/bash-completion-config.in	2005-01-04 07:27:01.000000000 -0500
++++ trunk/bash-completion-config.in	2005-05-15 07:33:26.000000000 -0400
+@@ -195,7 +196,7 @@
+ 
+ list()
+ {
+-    local n maxlen=$(($(maxfnlen $BASHCOMP_DIR) + 1 ))
++    local DIRS dir n maxlen=$(($(maxfnlen $BASHCOMP_DIR) + 1 ))
+     local label="| Local  Global |"
+     local llen="${#label}"
+ 
+@@ -203,9 +204,12 @@
+     printf "%-${maxlen}s$label\n"
+     for ((n = 1 ; n <= (maxlen + llen) ; n++)) ; do echo -n '-' ; done
+     echo
+-   
+-    for dir in $(getdirs $INSTALL_DIR $GLOBAL_INSTALL_DIR) ; do
++ 
++    DIRS=$(getdirs $INSTALL_DIR $GLOBAL_INSTALL_DIR)
++    [[ -z "${DIRS}" ]] && DIRS=${BASHCOMP_DIR}
++    for dir in ${DIRS} ; do
+         for bashcomp in $dir/* ; do
++            [[ ${bashcomp} == *~ ]] && continue
+             local bc="${bashcomp##*/}"
+             local i=3 installed=0 
+             local len="${#bc}"
+
