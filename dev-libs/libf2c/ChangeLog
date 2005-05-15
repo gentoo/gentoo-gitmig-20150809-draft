@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libf2c
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libf2c/ChangeLog,v 1.17 2005/05/05 21:22:16 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libf2c/ChangeLog,v 1.18 2005/05/15 20:41:38 kugelfang Exp $
+
+  15 May 2005; Danny van Dyk <kugelfang@gentoo.org>
+  libf2c-20021004-r1.ebuild:
+  Inherits toolchain-funcs now instead of deprecated gcc eclass.
 
   05 May 2005; Danny van Dyk <kugelfang@gentoo.org>
   libf2c-20021004-r1.ebuild, -libf2c-20021004.ebuild:
