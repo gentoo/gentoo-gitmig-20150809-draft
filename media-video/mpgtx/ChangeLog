@@ -1,6 +1,9 @@
 # ChangeLog for media-video/mpgtx
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpgtx/ChangeLog,v 1.10 2005/04/24 02:19:31 kito Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpgtx/ChangeLog,v 1.11 2005/05/15 13:59:26 flameeyes Exp $
+
+  15 May 2005; Diego Pettenò <flameeyes@gentoo.org> mpgtx-1.3.1.ebuild:
+  Moved to toolchain-funcs eclass and removed virtual/libc dep.
 
   23 Apr 2005; Kito <kito@gentoo.org> mpgtx-1.3.1.ebuild:
   DEPEND=virtual/libc instead of glibc. ~ppc-macos keyword, closes Bug 67043
