@@ -1,6 +1,14 @@
 # ChangeLog for app-vim/gentoo-syntax
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/gentoo-syntax/ChangeLog,v 1.51 2005/04/30 09:35:58 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/gentoo-syntax/ChangeLog,v 1.52 2005/05/15 01:54:07 ciaranm Exp $
+
+*gentoo-syntax-20050515 (15 May 2005)
+
+  15 May 2005; Ciaran McCreesh <ciaranm@gentoo.org>
+  +gentoo-syntax-20050515.ebuild:
+  New version. Changes include more make.conf highlighting (bug #92238),
+  smarter ebuild template generation, smarter cat/pkg detection, more error
+  highlighting for ebuilds and initial support for eclectic modules.
 
   30 Apr 2005; Bryan Østergaard <kloeri@gentoo.org>
   gentoo-syntax-20050325.ebuild:
