@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jcalendar/jcalendar-1.2.2.ebuild,v 1.2 2005/01/06 21:29:54 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jcalendar/jcalendar-1.2.2.ebuild,v 1.3 2005/05/15 01:18:14 luckyduck Exp $
 
 inherit eutils java-pkg
 
@@ -9,7 +9,7 @@ SRC_URI="http://www.toedter.com/download/${PN}.zip"
 HOMEPAGE="http://www.toedter.com/en/jcalendar/"
 LICENSE="LGPL-2.1"
 SLOT="1.2"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="x86 amd64 ~ppc"
 IUSE="doc jikes"
 DEPEND=">=virtual/jdk-1.4
 	jikes? ( >=dev-java/jikes-1.21 )
@@ -32,20 +32,14 @@ src_compile() {
 	cd src/
 
 	local antflags="jar"
-	if use doc; then
-		antflags="${antflags} javadocs"
-	fi
-	if use jikes; then
-		antflags="${antflags} -Dbuild.compiler=jikes"
-	fi
+	use doc && antflags="${antflags} javadocs"
+	use jikes && antflags="${antflags} -Dbuild.compiler=jikes"
 	ant ${antflags} || die "failed to build"
 }
 
 src_install() {
 	java-pkg_dojar lib/jcalendar.jar
 
-	dodoc jcalendar-license.txt readme.txt
-	if use doc; then
-		java-pkg_dohtml -r doc/*
-	fi
+	dodoc readme.txt
+	use doc && java-pkg_dohtml -r doc/*
 }
