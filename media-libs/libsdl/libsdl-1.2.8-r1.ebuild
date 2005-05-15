@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.8-r1.ebuild,v 1.10 2005/05/15 00:28:06 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.8-r1.ebuild,v 1.11 2005/05/15 18:22:07 vapier Exp $
 
 inherit flag-o-matic toolchain-funcs eutils gnuconfig
 
@@ -51,10 +51,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${PV}-gcc2.patch #75392
 
 	# This patch breaks compiling >-O0 on gcc4 ; bug #87809
-	if [ "`gcc-major-version`" -lt "4" ]
-	then
-	  epatch "${FILESDIR}"/${P}-gcc2.patch.bz2 #86481
-	fi
+	[ "`gcc-major-version`" -lt "4" ] && epatch "${FILESDIR}"/${P}-gcc2.patch.bz2 #86481
 	epatch "${FILESDIR}"/${PV}-keyrepeat.patch #76448
 	epatch "${FILESDIR}"/${PV}-linux26.patch #74608
 	#epatch "${FILESDIR}"/${PV}-direct-8bit-color.patch #76946
