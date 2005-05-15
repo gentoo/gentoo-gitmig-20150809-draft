@@ -1,6 +1,13 @@
 # ChangeLog for sys-devel/gdb
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/ChangeLog,v 1.76 2005/05/15 19:47:39 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/ChangeLog,v 1.77 2005/05/15 21:55:35 solar Exp $
+
+*gdb-6.2.1-r1 (15 May 2005)
+
+  15 May 2005; <solar@gentoo.org> -gdb-6.0-r1.ebuild, -gdb-6.0.ebuild,
+  -gdb-6.1.1.ebuild, -gdb-6.2.1-r1.ebuild, -gdb-6.2.ebuild, gdb-6.3-r3.ebuild,
+  -gdb-6.3.ebuild:
+  - stable on arm #91654 - cleanup most vuln non stabilized versions of gdb
 
   15 May 2005; <plasmaroo@gentoo.org> gdb-6.3-r3.ebuild:
   Stable on IA64, bug #91654.
