@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/lam-mpi
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/lam-mpi/ChangeLog,v 1.31 2005/05/15 21:48:13 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/lam-mpi/ChangeLog,v 1.32 2005/05/15 21:54:31 kugelfang Exp $
+
+  15 May 2005; Danny van Dyk <kugelfang@gentoo.org> lam-mpi-7.1.1.ebuild:
+  Marked stable on amd64.
 
   15 May 2005; Danny van Dyk <kugelfang@gentoo.org>
   +files/lam-mpi-7.1.1-shared-romio.patch, lam-mpi-7.1.1.ebuild:
