@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/abook
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/abook/ChangeLog,v 1.21 2005/01/01 14:50:17 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/abook/ChangeLog,v 1.22 2005/05/15 10:51:58 ferdy Exp $
+
+  15 May 2005; Fernando J. Pereda <ferdy@gentoo.org> abook-0.5.2-r1.ebuild,
+  abook-0.5.3.ebuild:
+  marked ~alpha
 
   27 Dec 2004; <gongloo@gentoo.org> abook-0.5.3.ebuild:
   Added ~ppc-macos.

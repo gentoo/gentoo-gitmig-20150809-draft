@@ -1,7 +1,17 @@
-MD5 234ec5112980c406217668b78ec4fe24 ChangeLog 2349
-MD5 0a3ac3e98bcc64804491e6b9ea8fcc30 abook-0.5.2-r1.ebuild 814
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 b6c992126d581f4c1012e3f73a46c84f abook-0.5.3.ebuild 789
+MD5 361d3acdeae0930e61ba0790c3035682 abook-0.5.2-r1.ebuild 816
+MD5 c3300e010337567f922a563e59f1da4d ChangeLog 2459
 MD5 25356f2e3484c4ec50ff363f2dad8570 metadata.xml 363
-MD5 a954a8ed5f53ff0b252bff0c3ba32714 abook-0.5.3.ebuild 787
-MD5 9d6404a56098175050b0c50331519bc8 files/abook-0.5.2-filter.diff 939
-MD5 882e53be58a3a05f24a7c29f49e998cb files/digest-abook-0.5.2-r1 63
 MD5 a5475e3fbe94b0d082dff30e637ebd48 files/digest-abook-0.5.3 63
+MD5 882e53be58a3a05f24a7c29f49e998cb files/digest-abook-0.5.2-r1 63
+MD5 9d6404a56098175050b0c50331519bc8 files/abook-0.5.2-filter.diff 939
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFChynjViELBEf1JB0RArTIAJ0ZhgLpblnzzUf1Gs0q6K2auvG1UwCfZyBY
+ZJ5P+8tKdjc94cme4k83/Gk=
+=U/Vs
+-----END PGP SIGNATURE-----
