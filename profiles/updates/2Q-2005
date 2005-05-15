@@ -68,3 +68,5 @@ move net-misc/esms app-mobilephone/esms
 move net-misc/gtkesms app-mobilephone/gtkesms
 move net-misc/sms app-mobilephone/sms
 move net-misc/smssend app-mobilephone/smssend
+move net-misc/gsmlib app-mobilephone/gsmlib
+move net-misc/ksms app-mobilephone/ksms
