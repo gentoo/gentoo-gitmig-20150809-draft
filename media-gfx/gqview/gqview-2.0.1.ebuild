@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gqview/gqview-2.0.0.ebuild,v 1.2 2005/05/15 06:08:45 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gqview/gqview-2.0.1.ebuild,v 1.1 2005/05/15 06:08:45 mr_bones_ Exp $
 
 DESCRIPTION="A GTK-based image browser"
 HOMEPAGE="http://gqview.sourceforge.net/"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/gqview/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 
 DEPEND="virtual/libc
@@ -17,7 +17,7 @@ DEPEND="virtual/libc
 
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
-	# leave README uncompressed because the program reads them
+	# leave README uncompressed because the program reads it
 	dodoc AUTHORS ChangeLog TODO
 	rm -f "${D}/usr/share/doc/${PF}/COPYING"
 }
