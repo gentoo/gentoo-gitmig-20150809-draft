@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/qkc/qkc-1.00.ebuild,v 1.11 2005/01/01 14:37:37 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/qkc/qkc-1.00.ebuild,v 1.12 2005/05/15 18:31:35 usata Exp $
 
-inherit gcc
+inherit toolchain-funcs
 
 MY_P="${PN}c${PV/./}"
 DESCRIPTION="Quick KANJI code Converter"
@@ -14,13 +14,12 @@ SLOT="0"
 KEYWORDS="x86 alpha ppc sparc amd64 ppc64"
 IUSE=""
 
-DEPEND="virtual/libc
-	app-arch/unzip"
+DEPEND="app-arch/unzip"
 
 S=${WORKDIR}
 
 src_compile() {
-	make CC="$(gcc-getCC)" CFLAGS="${CFLAGS}" || die
+	make CC="$(tc-getCC)" CFLAGS="${CFLAGS}" || die
 }
 
 src_install() {
