@@ -1,11 +1,21 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 1481a60b331d0154e8933557b382eb59 python-mode-4.63-r1.ebuild 880
 MD5 0ecb08054b678f7912068f673c5a2a54 python-mode-4.6.ebuild 773
-MD5 8f46c12c85591d9d007c04cfaa65bd91 ChangeLog 1953
 MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
-MD5 711dc65d123ffb27b7f8df92fe8dcf12 python-mode-4.63-r1.ebuild 880
+MD5 917d4cc42204fdbf9d1d6714bc1ea624 ChangeLog 2053
 MD5 9469101daa0ea149e320d0af1f330ff7 python-mode-4.70.ebuild 996
 MD5 7842a604f7fbeda6be9d9b86f6d143bb files/digest-python-mode-4.6 67
-MD5 b16866ae5b915c74ccb69ff8591a4ada files/50python-mode-gentoo.el 334
 MD5 2f5fc2b5c01b7202432d5e420db9d66b files/55python-mode-gentoo.el 505
-MD5 6d29bd6bc2d870795491141dcb821e06 files/setup.py 86
 MD5 45d20c84f1cf40ffa73a3471d5e4ac6f files/digest-python-mode-4.63-r1 71
+MD5 b16866ae5b915c74ccb69ff8591a4ada files/50python-mode-gentoo.el 334
 MD5 0f84fd7d46723117bcf57db5a7f4eed8 files/digest-python-mode-4.70 143
+MD5 6d29bd6bc2d870795491141dcb821e06 files/setup.py 86
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCh+FbmOfEJZHYOKcRAk64AJ0UTBG+i7KVvKa8F+kaYurgWi5GVACfdDj3
+Nqu8No21ZgGVkFG69pgpp/g=
+=a7ni
+-----END PGP SIGNATURE-----
