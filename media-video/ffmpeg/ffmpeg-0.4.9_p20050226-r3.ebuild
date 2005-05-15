@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.4.9_p20050226-r3.ebuild,v 1.9 2005/05/09 02:42:26 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.4.9_p20050226-r3.ebuild,v 1.10 2005/05/15 02:06:46 flameeyes Exp $
 
-inherit eutils flag-o-matic gcc multilib toolchain-funcs
+inherit eutils flag-o-matic multilib toolchain-funcs
 
 DESCRIPTION="Complete solution to record, convert and stream audio and video. Includes libavcodec."
 HOMEPAGE="http://ffmpeg.sourceforge.net/"

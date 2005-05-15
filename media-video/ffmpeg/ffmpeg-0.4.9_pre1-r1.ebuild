@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.4.9_pre1-r1.ebuild,v 1.1 2005/05/04 01:13:37 j4rg0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.4.9_pre1-r1.ebuild,v 1.2 2005/05/15 02:06:46 flameeyes Exp $
 
-inherit eutils flag-o-matic gcc
+inherit eutils flag-o-matic toolchain-funcs
 
 # TODO: --enablea52bin breaks compile
 
