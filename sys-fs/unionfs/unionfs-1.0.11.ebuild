@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/unionfs/unionfs-1.0.11.ebuild,v 1.3 2005/05/09 01:18:26 malc Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/unionfs/unionfs-1.0.11.ebuild,v 1.4 2005/05/15 19:04:24 genstef Exp $
 
 inherit eutils linux-mod
 
@@ -26,16 +26,16 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 
-	use amd64 && epatch ${FILESDIR}/${P}-amd64.patch || die
+	useq amd64 && epatch ${FILESDIR}/${P}-amd64.patch
 
-	if ! use debug; then
+	if ! useq debug; then
 		echo "UNIONFS_DEBUG_CFLAG=" >> ${user_Makefile}
 		EXTRACFLAGS="${EXTRACFLAGS} -DNODEBUG"
 	fi
 
-	#use acl && EXTRACFLAGS="${EXTRACFLAGS} -DUNIONFS_XATTR -DFIST_SETXATTR_CONSTVOID"
+	#useq acl && EXTRACFLAGS="${EXTRACFLAGS} -DUNIONFS_XATTR -DFIST_SETXATTR_CONSTVOID"
 
-	echo "EXTRACFLAGS=${EXTRACFLAGS}" >> ${user_Makefile} || die
+	echo "EXTRACFLAGS=${EXTRACFLAGS}" >> ${user_Makefile}
 }
 
 src_install() {
