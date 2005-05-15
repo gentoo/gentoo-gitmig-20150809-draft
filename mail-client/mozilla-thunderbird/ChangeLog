@@ -1,6 +1,11 @@
 # ChangeLog for mail-client/mozilla-thunderbird
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/ChangeLog,v 1.56 2005/05/12 14:21:12 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/ChangeLog,v 1.57 2005/05/15 01:48:57 halcy0n Exp $
+
+  15 May 2005; Mark Loeser <halcy0n@gentoo.org>
+  +files/mozilla-thunderbird-1.0.2-gcc4.patch,
+  mozilla-thunderbird-1.0.2.ebuild:
+  Added GCC4 patch ; fixes bug #87800
 
   12 May 2005; Aron Griffis <agriffis@gentoo.org>
   -files/ipc-1.0.6-nsPipeChannel.patch, -files/MozillaThunderbird,

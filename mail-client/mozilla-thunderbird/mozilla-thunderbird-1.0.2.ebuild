@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-1.0.2.ebuild,v 1.10 2005/04/15 19:44:24 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-1.0.2.ebuild,v 1.11 2005/05/15 01:48:57 halcy0n Exp $
 
 IUSE="crypt"
 
@@ -45,6 +45,9 @@ src_unpack() {
 	# freetype; this enables freetype-2.1.8+ compat.
 	# https://bugzilla.mozilla.org/show_bug.cgi?id=234035#c65
 	epatch ${FILESDIR}/mozilla-thunderbird-0.9-4ft2.patch
+
+	# GCC 4 compile patch ; bug #87800
+	epatch ${FILESDIR}/${P}-gcc4.patch
 
 	# Unpack the enigmail plugin
 	if use crypt; then
