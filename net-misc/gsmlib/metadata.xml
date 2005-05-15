@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
-<pkgmetadata>
-<herd>pda</herd>
-<maintainer>
-	<email>liquidx@gentoo.org</email>
-	<description>Currently in PDA herd as there is no mobile phone herd</description>
-</maintainer>
-</pkgmetadata>
