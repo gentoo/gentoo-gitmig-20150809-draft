@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/wxGTK
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.81 2005/05/15 12:54:06 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.82 2005/05/15 20:18:44 killerfox Exp $
+
+  15 May 2005; Rene Nussbaumer <killerfox@gentoo.org> wxGTK-2.4.2-r3.ebuild:
+  Stable on hppa
 
   15 May 2005; Bryan Østergaard <kloeri@gentoo.org> wxGTK-2.4.2-r3.ebuild:
   Stable on alpha.
