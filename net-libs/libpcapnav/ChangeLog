@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/libpcapnav
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcapnav/ChangeLog,v 1.1 2005/03/16 11:24:29 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcapnav/ChangeLog,v 1.2 2005/05/15 01:15:49 vanquirius Exp $
+
+*libpcapnav-0.6 (14 May 2005)
+
+  14 May 2005; Marcelo Goes <vanquirius@gentoo.org> +libpcapnav-0.6.ebuild:
+  Version bump.
 
 *libpcapnav-0.5 (16 Mar 2005)
 

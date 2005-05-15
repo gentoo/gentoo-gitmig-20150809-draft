@@ -1,4 +1,6 @@
-MD5 b65e4a2837456a2cc3a15441c6ca8a3a ChangeLog 398
+MD5 c0391d9bee1be775bf77a140f6aff285 libpcapnav-0.6.ebuild 779
 MD5 5dac4994d13e15fa3bfd3a366278fd4f libpcapnav-0.5.ebuild 775
+MD5 7cd66a879cd0007a45174afd1debb128 ChangeLog 525
 MD5 637389da071d8ee0c0292695525bc29f metadata.xml 160
 MD5 f4e907703b4719c71b8edeb57a788e04 files/digest-libpcapnav-0.5 66
+MD5 04d75209cd3f0d5b64395383d6616092 files/digest-libpcapnav-0.6 66
