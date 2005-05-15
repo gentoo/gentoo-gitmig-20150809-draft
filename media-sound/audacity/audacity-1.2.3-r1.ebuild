@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/audacity-1.2.3-r1.ebuild,v 1.1 2005/04/15 17:46:25 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/audacity-1.2.3-r1.ebuild,v 1.2 2005/05/15 20:03:34 flameeyes Exp $
 
 inherit wxwidgets eutils
 
@@ -21,7 +21,7 @@ SLOT="0"
 # Bad x86 assembly: #73248
 KEYWORDS="~amd64 ~ppc ~sparc -x86 ~ppc64"
 
-DEPEND=">=x11-libs/wxGTK-2.4.2-r1
+DEPEND="=x11-libs/wxGTK-2.4*
 	>=app-arch/zip-2.3
 	>=media-libs/id3lib-3.8.0
 	media-libs/libid3tag

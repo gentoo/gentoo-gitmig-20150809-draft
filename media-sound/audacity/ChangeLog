@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/audacity
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/ChangeLog,v 1.33 2005/04/15 17:46:25 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/ChangeLog,v 1.34 2005/05/15 20:03:34 flameeyes Exp $
+
+  15 May 2005; Diego Pettenò <flameeyes@gentoo.org> audacity-1.2.1.ebuild,
+  audacity-1.2.2.ebuild, audacity-1.2.3.ebuild, audacity-1.2.3-r1.ebuild:
+  Fixed dependency ok wxGTK 2.4 slot as per bug #92730.
 
 *audacity-1.2.3-r1 (15 Apr 2005)
 
