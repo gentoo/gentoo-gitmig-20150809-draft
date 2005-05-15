@@ -1,6 +1,9 @@
 # ChangeLog for media-video/kdenlive
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kdenlive/ChangeLog,v 1.9 2005/01/23 21:27:09 centic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kdenlive/ChangeLog,v 1.10 2005/05/15 14:11:46 flameeyes Exp $
+
+  15 May 2005; Diego Pettenò <flameeyes@gentoo.org> kdenlive-0.2.4.ebuild:
+  Removed use of gcc eclass. Patch applied unconditionally as it's sane.
 
   23 Jan 2005; Dominik Stadler <centic@gentoo.org> kdenlive-0.2.4.ebuild:
   Update homepage
