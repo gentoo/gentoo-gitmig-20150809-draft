@@ -1,0 +1,16 @@
+Make sure X paths are set before using
+http://bugs.gentoo.org/79496
+
+--- configure
++++ configure
+@@ -1878,4 +1878,8 @@
+ else
+-  INCS="$INCS -I$x_includes"
+-  LIBS="-L$x_libraries"
++  if test -n "$x_includes" ; then
++    INCS="$INCS -I$x_includes"
++  fi
++  if test -n "$x_libraries" ; then
++    LIBS="-L$x_libraries"
++  fi
+ 

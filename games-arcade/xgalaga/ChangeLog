@@ -1,6 +1,12 @@
 # ChangeLog for games-arcade/xgalaga
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/xgalaga/ChangeLog,v 1.7 2004/12/28 23:00:45 ciaranm Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/xgalaga/ChangeLog,v 1.8 2005/05/15 20:54:55 vapier Exp $
+
+*xgalaga-2.0.34-r6 (15 May 2005)
+
+  15 May 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/xgalaga-2.0.34-xpaths.patch, +xgalaga-2.0.34-r6.ebuild:
+  Update Debian patch and fix X lib/inc issues #79496.
 
   28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
