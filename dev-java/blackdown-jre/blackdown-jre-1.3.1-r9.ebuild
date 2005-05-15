@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/blackdown-jre-1.3.1-r9.ebuild,v 1.19 2005/01/01 18:11:28 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/blackdown-jre-1.3.1-r9.ebuild,v 1.20 2005/05/15 23:26:17 luckyduck Exp $
 
-inherit java gcc
+inherit java toolchain-funcs
 
 S=${WORKDIR}/j2re1.3.1
 DESCRIPTION="Blackdown Java Runtime Environment 1.3.1"
