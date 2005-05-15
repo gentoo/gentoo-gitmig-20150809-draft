@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi-svn/irssi-svn-0.3.ebuild,v 1.1 2005/05/14 23:09:36 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi-svn/irssi-svn-0.3.ebuild,v 1.2 2005/05/15 02:10:22 swegener Exp $
 
 inherit subversion perl-module
 
@@ -22,7 +22,6 @@ RDEPEND=">=dev-libs/glib-2.2.1
 	!net-irc/irssi-cvs"
 DEPEND="${RDEPEND}
 	www-client/lynx
-	nls? ( sys-devel/gettext )
 	>=sys-devel/autoconf-2.58"
 
 src_compile() {
