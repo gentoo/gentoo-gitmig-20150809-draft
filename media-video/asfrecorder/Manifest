@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 4a59756652738226c76ae7eab8d81664 ChangeLog 922
+MD5 6acfb3dc0666b968517397fac8bd1e24 ChangeLog 1042
+MD5 5ba2443efd9fdd4954854cb4848b6760 asfrecorder-1.1.ebuild 890
 MD5 7300a7b361fa9f48e37722c6952bd432 metadata.xml 158
-MD5 89c0f567d489947c183447e5be4f7c38 asfrecorder-1.1.ebuild 895
 MD5 fe471e385d94bb62aff194ad8f541441 files/digest-asfrecorder-1.1 60
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCZMknKf2g/qXtneoRAikOAKDA4Me/oFdE2oQJylBw3UQO5oHUyACfQQK6
-BkZAMD6euVK4OszP5I/Zz1I=
-=H8EK
------END PGP SIGNATURE-----
