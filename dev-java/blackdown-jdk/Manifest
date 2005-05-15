@@ -3,8 +3,8 @@ Hash: SHA1
 
 MD5 92f520d931517e0bf77f02dae191975e blackdown-jdk-1.3.1-r8.ebuild 2316
 MD5 9e172106ce60c10631a505b80145f3fa blackdown-jdk-1.4.1-r1.ebuild 3823
-MD5 06cfe678d1da0477549750ff6472568c blackdown-jdk-1.3.1-r10.ebuild 2166
-MD5 73447b7b500a1d68812ddf107b51d9c4 ChangeLog 13840
+MD5 80c82617bec1e8d2aff156c4c89dfda6 blackdown-jdk-1.3.1-r10.ebuild 2178
+MD5 5c9c5805a2474bae4d6af34847fcf644 ChangeLog 13986
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 46aae63fee5f098f3d0c95522f49bc81 blackdown-jdk-1.4.2.01-r2.ebuild 4456
 MD5 c9852c72bb83b5f0d4b48f1dd3ca4459 files/blackdown-jdk-1.4.2.01 637
@@ -17,7 +17,7 @@ MD5 8009bc4bb09e243860795380d025f0e5 files/digest-blackdown-jdk-1.4.1-r1 167
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFCeLnE06ebR+OMO78RAnDvAJ9YuW9Yi/00WMcet2pPnWPc/kWeCgCffLM3
-2alBKjJUaGQ3XVKbQB1GUfc=
-=k7p+
+iD4DBQFCh8lb06ebR+OMO78RAmHLAJiuQT/2wP4lyvrg65AFQbcTw1hIAJ9FpHFk
+2c45Wm9E9O2OFssDGesZiA==
+=MxgR
 -----END PGP SIGNATURE-----

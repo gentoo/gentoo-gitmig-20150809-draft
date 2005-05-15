@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/blackdown-jdk
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/ChangeLog,v 1.78 2005/05/04 12:01:56 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/ChangeLog,v 1.79 2005/05/15 22:12:33 luckyduck Exp $
+
+  15 May 2005; Jan Brinkmann <luckyduck@gentoo.org>
+  blackdown-jdk-1.3.1-r10.ebuild:
+  use the toolchain-funcs eclass instead of the gcc eclass
 
   04 May 2005; Jan Brinkmann <luckyduck@gentoo.org>
   blackdown-jdk-1.4.1-r1.ebuild, blackdown-jdk-1.4.2.01-r2.ebuild:
