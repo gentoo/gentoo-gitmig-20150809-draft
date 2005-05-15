@@ -64,3 +64,5 @@ move app-pda/bitpim app-mobilephone/bitpim
 move app-pda/x70talk app-mobilephone/x70talk
 move net-wireless/obexftp app-mobilephone/obexftp
 move net-misc/linuxsms app-mobilephone/linuxsms
+move net-misc/esms app-mobilephone/esms
+move net-misc/gtkesms app-mobilephone/gtkesms
