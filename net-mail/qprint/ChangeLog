@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/qprint
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qprint/ChangeLog,v 1.1 2004/11/23 07:28:55 ticho Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qprint/ChangeLog,v 1.2 2005/05/15 09:49:36 mrness Exp $
+
+  15 May 2005; Alin Nastac <mrness@gentoo.org> qprint-1.0.ebuild:
+  Stable on x86.
 
 *qprint-1.0 (23 Nov 2004)
 
