@@ -1,0 +1,47 @@
+diff -Nru gnokii-0.6.6.orig/configure.in gnokii-0.6.6/configure.in
+--- gnokii-0.6.6.orig/configure.in	2005-05-12 06:12:04.000000000 +0300
++++ gnokii-0.6.6/configure.in	2005-05-15 09:24:36.910737760 +0300
+@@ -463,43 +463,6 @@
+    [ win32="no"]
+ )
+ 
+-AC_CHECK_FUNC(grantpt,
+-   [ AC_TRY_RUN([
+-#define  _XOPEN_SOURCE 500
+-
+-#include <stdlib.h>
+-#include <sys/types.h>
+-#include <sys/stat.h>
+-#include <fcntl.h>
+-#include <unistd.h>
+-
+-int main()
+-{
+-	char *name = NULL;
+-        int master, err;
+-
+-        master = open("/dev/ptmx", O_RDWR | O_NOCTTY | O_NONBLOCK);
+-        if (master >= 0) {
+-                err = grantpt(master);
+-                err = err || unlockpt(master);
+-                if (!err) {
+-                        name = ptsname(master);
+-                } else {
+-                        exit(-1);
+-                }
+-        } else {
+-		exit(-1);
+-	}
+-	close(master);
+-	exit(0);
+-}
+-                ],
+-                AC_DEFINE(USE_UNIX98PTYS),
+-                AC_MSG_WARN("No unix98ptys"),
+-		AC_DEFINE(USE_UNIX98PTYS))
+-   ]
+-)
+-
+ AC_TRY_COMPILE( [#define _XOPEN_SOURCE 500
+ 		 #include <sys/types.h>
+ 		 #include <sys/socket.h>],
