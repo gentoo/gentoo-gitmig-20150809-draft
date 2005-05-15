@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/quicktime4linux/quicktime4linux-2.0.4.ebuild,v 1.1 2005/01/23 03:15:07 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/quicktime4linux/quicktime4linux-2.0.4.ebuild,v 1.2 2005/05/15 02:25:10 flameeyes Exp $
 
-inherit flag-o-matic gcc eutils
+inherit flag-o-matic eutils
 
 DESCRIPTION="quicktime library for linux"
 HOMEPAGE="http://heroinewarrior.com/quicktime.php3"
