@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gradm/gradm-2.1.5.200504081812.ebuild,v 1.1 2005/04/12 17:56:11 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gradm/gradm-2.1.5.200504081812.ebuild,v 1.2 2005/05/15 22:40:25 solar Exp $
 
-inherit flag-o-matic gcc eutils
+inherit flag-o-matic toolchain-funcs eutils
 
 myPV=${PV:0:5}-${PV:6}
 
@@ -14,7 +14,7 @@ SRC_URI="http://www.grsecurity.net/gradm-${myPV}.tar.gz"
 #RESTRICT=primaryuri
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~arm ~amd64 ~ppc64 ~ia64 ~mips"
+KEYWORDS="x86 ~ppc ~sparc ~arm ~amd64 ~ppc64 ~ia64 ~mips ~alpha"
 IUSE=""
 RDEPEND=""
 DEPEND="virtual/libc
@@ -37,7 +37,7 @@ src_unpack() {
 
 src_compile() {
 	cd ${S}
-	emake CC="$(gcc-getCC)" || die "compile problem"
+	emake CC="$(tc-getCC)" || die "compile problem"
 	return 0
 }
 
