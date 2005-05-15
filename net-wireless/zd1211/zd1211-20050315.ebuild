@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/zd1211/zd1211-20050315.ebuild,v 1.1 2005/04/22 19:56:50 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/zd1211/zd1211-20050315.ebuild,v 1.2 2005/05/15 19:33:44 josejx Exp $
 
 inherit linux-mod
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/zd1211/sf_${PN}_${PV}_src.tar.gz"
 S=${WORKDIR}/${PN}
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 IUSE=""
 DEPEND="net-wireless/wireless-tools"
 MODULE_NAMES="zd1211(net:)"
