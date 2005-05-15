@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-0.6.12-r1.ebuild,v 1.17 2005/03/09 18:59:01 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-0.6.12-r1.ebuild,v 1.18 2005/05/15 02:10:04 flameeyes Exp $
 
-inherit libtool flag-o-matic eutils gcc
+inherit libtool flag-o-matic eutils toolchain-funcs
 
 MY_P="${P/_pre/.}"
 S=${WORKDIR}/${MY_P}
