@@ -1,4 +1,14 @@
-MD5 04921f390c85d35d15c32b65f60c49f2 ChangeLog 4115
-MD5 4ba606b30f5d590619d4d50ceac69756 bitkeeper-3.2.3.ebuild 2852
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 edc0948c53f4189022f5fd6a352e0efb bitkeeper-3.2.4.ebuild 2803
+MD5 1605a07a5c83c070408644c4c87cc375 ChangeLog 4270
 MD5 42bb15c37e072cf6216b4692514d08c9 metadata.xml 275
-MD5 99af109f8ef7e857de2ca3dadc7a3a21 files/digest-bitkeeper-3.2.3 775
+MD5 de2cb2104ef828f22849abb41ac9e46d files/digest-bitkeeper-3.2.4 698
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCh23Vchej4aZK9/cRAos+AJsGRS5Yi8psGhC9BlDKeAqE9nqc3QCfS6iB
+umCzlhPDGquG43jp8gRGe4M=
+=Yb0i
+-----END PGP SIGNATURE-----
