@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lame/lame-3.96.1.ebuild,v 1.13 2005/04/08 19:40:55 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lame/lame-3.96.1.ebuild,v 1.14 2005/05/15 14:28:45 flameeyes Exp $
 
-inherit flag-o-matic gcc eutils
+inherit flag-o-matic toolchain-funcs eutils
 
 DESCRIPTION="LAME Ain't an MP3 Encoder"
 HOMEPAGE="http://lame.sourceforge.net"
