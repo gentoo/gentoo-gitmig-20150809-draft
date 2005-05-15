@@ -5,5 +5,17 @@
 	<maintainer>
 		<email>ciaranm@gentoo.org</email>
 	</maintainer>
+	<maintainer>
+		<email>ka0ttic@gentoo.org</email>
+	</maintainer>
+	<maintainer>
+		<email>kugelfang@gentoo.org</email>
+	</maintainer>
+	<maintainer>
+		<email>slarti@gentoo.org</email>
+	</maintainer>
+	<maintainer>
+		<email>beu@gentoo.org</email>
+	</maintainer>
 </pkgmetadata>
 
