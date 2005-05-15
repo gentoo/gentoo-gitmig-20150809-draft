@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jtidy/jtidy-0_pre20010801.ebuild,v 1.5 2004/11/03 11:34:15 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jtidy/jtidy-0_pre20010801.ebuild,v 1.6 2005/05/15 01:16:06 luckyduck Exp $
 
 inherit java-pkg
 
@@ -10,18 +10,20 @@ HOMEPAGE="http://jtidy.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${PN}-${MY_PV}-dev.zip"
 LICENSE="Apache-1.1"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~amd64"
-IUSE="doc"
-DEPEND="virtual/jdk
-		app-arch/unzip
-		>=dev-java/ant-1.5.0"
-RDEPEND="virtual/jre"
+KEYWORDS="x86 ppc amd64"
+IUSE="doc jikes"
+DEPEND=">=virtual/jdk-1.4
+	app-arch/unzip
+	dev-java/ant-core
+	jikes? ( dev-java/jikes )"
+RDEPEND=">=virtual/jre-1.4"
 
 S=${WORKDIR}/${PN}-${MY_PV}-dev
 
 src_compile() {
 	local antflags="jar"
 	use doc && antflags="${antflags} javadoc"
+	use jikes && antflags="${antflags} -Dbuild.compiler=jikes"
 	ant ${antflags} || die "compile failed"
 }
 

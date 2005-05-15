@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jtidy
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jtidy/ChangeLog,v 1.5 2004/11/03 11:34:15 axxo Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jtidy/ChangeLog,v 1.6 2005/05/15 01:16:06 luckyduck Exp $
+
+  15 May 2005; Jan Brinkmann <luckyduck@gentoo.org>
+  jtidy-0_pre20010801.ebuild:
+  stable on amd64, ppc and x86. introduced support for the jikes useflag.
 
   03 Nov 2004; Thomas Matthijs <axxo@gentoo.org> jtidy-0_pre20010801.ebuild:
   depend on app-arch/unzip
