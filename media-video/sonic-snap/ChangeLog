@@ -1,0 +1,12 @@
+# ChangeLog for media-video/sonic-snap
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/sonic-snap/ChangeLog,v 1.1 2005/05/15 00:17:51 nerdboy Exp $
+
+*sonic-snap-1.5 (15 May 2005)
+
+  15 May 2005; Steve Arnold <nerdboy@gentoo.org> +metadata.xml,
+  +sonic-snap-1.5.ebuild:
+  New cam ebuild to work with sn9c102 driver. It can conceivably work
+  with any arch with proper USB and and a newer 2.6 kernel, so feel
+  free to try on other arches.
+
