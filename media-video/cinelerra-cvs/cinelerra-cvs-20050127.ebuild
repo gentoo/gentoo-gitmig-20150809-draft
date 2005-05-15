@@ -1,10 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra-cvs/cinelerra-cvs-20050127.ebuild,v 1.1 2005/01/28 10:26:36 zypher Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra-cvs/cinelerra-cvs-20050127.ebuild,v 1.2 2005/05/15 14:42:17 flameeyes Exp $
 
-inherit gcc eutils flag-o-matic
-
-export WANT_GCC_3="yes"
+inherit toolchain-funcs eutils flag-o-matic
 
 #filter-flags "-fPIC -fforce-addr"
 
@@ -31,8 +29,10 @@ DEPEND="!media-video/cinelerra
 	!media-video/cinelerra
 	x86? ( dev-lang/nasm )"
 
-src_unpack() {
-	unpack ${A}
+pkg_setup() {
+	if [[ "$(gcc-major-version)" -lt "3" ]]; then
+		die "You must use gcc 3 or better."
+	fi
 }
 
 src_compile() {
