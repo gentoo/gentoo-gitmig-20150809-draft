@@ -1,6 +1,9 @@
 # ChangeLog for app-pda/p3nfs
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/p3nfs/ChangeLog,v 1.2 2005/05/03 11:17:39 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/p3nfs/ChangeLog,v 1.3 2005/05/15 09:19:10 brix Exp $
+
+  15 May 2005; <brix@gentoo.org> p3nfs-5.16.ebuild:
+  Stable on x86.
 
 *p3nfs-5.17a (03 May 2005)
 
