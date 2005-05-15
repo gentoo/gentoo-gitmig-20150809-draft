@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/bitlbee-0.91.ebuild,v 1.6 2005/02/27 16:13:11 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/bitlbee-0.92-r1.ebuild,v 1.1 2005/05/15 22:17:06 weeve Exp $
 
-inherit eutils gcc
+inherit eutils toolchain-funcs
 
 DESCRIPTION="irc to IM gateway that support multiple IM protocols"
 HOMEPAGE="http://www.bitlbee.org/"
@@ -10,13 +10,15 @@ SRC_URI="http://get.bitlbee.org/src/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc sparc alpha ~ia64 ~amd64"
-IUSE="debug jabber msn oscar yahoo flood ssl"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~ia64 ~amd64"
+IUSE="debug jabber msn oscar yahoo flood gnutls openssl"
 
 DEPEND="virtual/libc
 	>=dev-libs/glib-2.0
-	msn? ( net-libs/gnutls )
-	jabber? ( ssl? ( net-libs/gnutls ) )"
+	msn? ( gnutls? ( net-libs/gnutls )
+		   openssl? ( dev-libs/openssl ) )
+	jabber? ( gnutls? ( net-libs/gnutls )
+			  openssl? ( dev-libs/openssl ) )"
 
 no_flags_die() {
 	eerror ""
@@ -32,6 +34,8 @@ no_flags_die() {
 pkg_setup() {
 	einfo "Note: as of bitlbee-0.82-r1, all protocols are useflags."
 	einfo "      Make sure you've enabled the flags you want."
+	einfo "To use jabber over SSL or MSN Messenger, you will need to enable"
+	einfo "either the gnutls, nss or openssl useflags."
 
 	use jabber || use msn || use oscar || use yahoo || no_flags_die
 }
@@ -41,6 +45,7 @@ src_unpack() {
 
 	# Patch the default xinetd file to add/adjust values to Gentoo defaults
 	cd ${S}/doc && epatch ${FILESDIR}/${PN}-0.80-xinetd.patch
+	cd ${S} && epatch ${FILESDIR}/${PN}-gentoohack.patch
 }
 
 src_compile() {
@@ -51,12 +56,14 @@ src_compile() {
 	use jabber || myconf="${myconf} --jabber=0"
 	use oscar || myconf="${myconf} --oscar=0"
 	use yahoo || myconf="${myconf} --yahoo=0"
+	use gnutls && myconf="${myconf} --ssl=gnutls"
+	use nss && myconf="${myconf} --ssl=nss"
+	use openssl && myconf="${myconf} --ssl=openssl"
 	use flood && myconf="${myconf} --flood=1"
 
-	if ( ( use jabber && use ssl ) || use msn ); then
-		myconf="--ssl=gnutls"
-	else
-		myconf="--ssl=bogus"
+	if ( ( use jabber && use ssl ) || use msn ) && !gnutls && !nss \
+		&& !openssl; then
+		myconf="${myconf} --ssl=bogus"
 	fi
 
 	econf --datadir=/usr/share/bitlbee --etcdir=/etc/bitlbee ${myconf} \
@@ -66,7 +73,7 @@ src_compile() {
 
 	# make bitlbeed forking server
 	cd utils
-	$(gcc-getCC) ${CFLAGS} bitlbeed.c -o bitlbeed || die "bitlbeed failed to compile"
+	$(tc-getCC) ${CFLAGS} bitlbeed.c -o bitlbeed || die "bitlbeed failed to compile"
 }
 
 src_install() {
@@ -102,11 +109,6 @@ src_install() {
 	cp ${S}/utils/* ${D}/usr/share/bitlbee
 	rm ${D}/usr/share/bitlbee/bitlbeed*
 
-	has_version net-irc/irssi && [ -d /usr/share/irssi/scripts ] && \
-		dodir /usr/share/irssi/scripts && \
-		dosym /usr/share/bitlbee/bitlbee_tab_completion.pl \
-			/usr/share/irssi/scripts/bitlbee_tab_completion.pl
-
 }
 
 pkg_postinst() {
@@ -114,4 +116,6 @@ pkg_postinst() {
 	chmod 700 ${ROOT}/var/lib/bitlbee
 	einfo "The utils included in bitlbee (other than bitlbeed) are now"
 	einfo "located in /usr/share/bitlbee"
+	einfo
+	einfo "NOTE: The irssi script is no longer provided by bitlbee."
 }
