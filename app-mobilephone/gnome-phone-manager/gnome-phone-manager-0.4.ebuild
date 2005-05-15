@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnome-phone-manager/gnome-phone-manager-0.4.ebuild,v 1.1 2005/05/14 12:07:02 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnome-phone-manager/gnome-phone-manager-0.4.ebuild,v 1.2 2005/05/15 20:20:16 mrness Exp $
 
 inherit gnome2 eutils
 
@@ -20,7 +20,7 @@ RDEPEND=">=gnome-base/libgnomeui-2
 	>=dev-libs/glib-2
 	=dev-libs/libsigc++-1.2.5
 	>=gnome-base/orbit-2
-	>=net-misc/gsmlib-1.11_pre041028
+	>=app-mobilephone/gsmlib-1.11_pre041028
 	>=net-wireless/bluez-libs-2
 	>=net-wireless/libbtctl-0.4.1
 	>=net-wireless/gnome-bluetooth-0.5.1"
