@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/use.mask,v 1.17 2005/04/24 00:48:55 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/use.mask,v 1.18 2005/05/15 15:30:40 slarti Exp $
 
 # UNKNOWN - SECTION
 
@@ -21,6 +21,8 @@ emboss
 
 # 2005/01/12 - Benjamin Schindler <config@gentoo.org>
 # Optional mono support will never work until we have a stable mono compiler
+# Update: 2005/05/15 - Tom Martin <slarti@gentoo.org>
+# Will work with mono 1.1.6, waiting on that to be stabilised.
 mono
 
 # WON'T BUILD - SECTION
