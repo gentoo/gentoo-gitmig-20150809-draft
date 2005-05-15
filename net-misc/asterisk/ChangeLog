@@ -1,6 +1,15 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.53 2005/05/11 23:27:57 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.54 2005/05/15 21:46:23 stkn Exp $
+
+  15 May 2005; Stefan Knoblich <stkn@gentoo.org>
+  +files/1.0.0/asterisk-1.0.7-initgroups.diff, files/1.0.0/asterisk.confd.sec,
+  files/1.0.0/asterisk.rc6.sec, asterisk-1.0.7-r1.ebuild:
+  Added initgroups support to asterisk instead of using start-stop-daemon's
+  --chguid because that one broke running asterisk with realtime priority (-p).
+  Fixed init script for initgroups. Users will have to use ebuild config after
+  updating asterisk to fix permissions on the filesystem, warning messages have
+  been added.
 
   12 May 2005; Stefan Knoblich <stkn@gentoo.org>
   +files/1.0.0/asterisk-1.0.7-scripts.diff, asterisk-1.0.7-r1.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/files/1.0.0/asterisk.confd.sec,v 1.2 2005/05/11 12:47:06 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/files/1.0.0/asterisk.confd.sec,v 1.3 2005/05/15 21:46:23 stkn Exp $
 
 #
 # see "asterisk -h" for a list of options
@@ -13,6 +13,14 @@ ASTERISK_OPTS=""
 # Examples:
 #    "user:group" 
 #    "user"
-#    "" for root
+#    "" or unset = root:root
 #
 ASTERISK_USER="asterisk:asterisk"
+
+#
+# Nicelevel
+#
+# Set the priority of the asterisk process
+#
+# Range: 20
+#ASTERISK_NICE="-20"
