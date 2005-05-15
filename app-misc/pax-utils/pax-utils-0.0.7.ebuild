@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/pax-utils/pax-utils-0.0.7.ebuild,v 1.1 2005/04/30 12:45:12 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/pax-utils/pax-utils-0.0.7.ebuild,v 1.2 2005/05/15 22:21:54 solar Exp $
 
-inherit flag-o-matic gcc
+inherit flag-o-matic toolchain-funcs
 
 DESCRIPTION="Various ELF related utils for ELF32, ELF64 binaries useful for displaying PaX and security info on a large groups of bins"
 HOMEPAGE="http://www.gentoo.org/proj/en/hardened"
@@ -11,7 +11,7 @@ SRC_URI="mirror://gentoo/pax-utils-${PV}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~mips ~sparc ~hppa ~amd64 ~ia64 ~ppc64"
+KEYWORDS="x86 ~ppc ~mips ~sparc ~hppa ~amd64 ~ia64 ~ppc64"
 IUSE="caps"
 
 DEPEND="virtual/libc
@@ -24,7 +24,7 @@ src_compile() {
 		append-flags -DWANT_SYSCAP
 		append-ldflags -lcap
 	fi
-	emake CFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS}" all || die
+	emake CC="$(tc-getCC)" CFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS}" all || die
 }
 
 src_install() {
