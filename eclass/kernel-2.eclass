@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.124 2005/05/09 17:20:11 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.125 2005/05/15 20:30:04 johnm Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -321,6 +321,10 @@ unpack_fix_docbook() {
 # Compile Functions
 #==============================================================
 compile_headers() {
+	# Since KBUILD_OUTPUT shouldnt be used when compiling headers, lets unset it
+	# if it exists.
+	[[ -n ${KBUILD_OUTPUT} ]] && unset KBUILD_OUTPUT
+
 	# if we couldnt obtain HOSTCFLAGS from the Makefile, 
 	# then set it to something sane
 	local HOSTCFLAGS=$(getfilevar HOSTCFLAGS ${S}/Makefile)
