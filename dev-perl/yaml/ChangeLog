@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/yaml
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/yaml/ChangeLog,v 1.12 2005/05/14 16:53:23 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/yaml/ChangeLog,v 1.13 2005/05/15 14:53:04 killerfox Exp $
+
+  15 May 2005; Rene Nussbaumer <killerfox@gentoo.org> yaml-0.36.ebuild:
+  Stable on hppa
 
 *yaml-0.39 (14 May 2005)
 
