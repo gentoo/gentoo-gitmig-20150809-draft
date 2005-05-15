@@ -1,12 +1,12 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 a1415f72919b18d4a5e6d3fe2efc5eaa ChangeLog 13581
+MD5 3302de64d457883cd25b67942d476f45 ChangeLog 13677
 MD5 4fca175f747a090fd2b7b8ce22fbc06d metadata.xml 162
 MD5 62be82618a657fca19a51e0825e5e4e9 wxGTK-2.4.2-r2.ebuild 4249
 MD5 1bd94be2ff6dbeee96a0aaecce324e20 wxGTK-2.6.0-r1.ebuild 2267
 MD5 b8d2d1196e6c7f31335748286b926533 wxGTK-2.5.3.ebuild 4812
-MD5 0aecd49b4851692b1a071a1aeee833f6 wxGTK-2.4.2-r3.ebuild 4738
+MD5 b73d11d4a4852aaf36bbb4dff454311c wxGTK-2.4.2-r3.ebuild 4737
 MD5 5087298be841a84071ea67830f5d6a2b files/digest-wxGTK-2.4.2-r3 65
 MD5 522f6b3a771ea33a1af7ede9c795ab4c files/wxGTK-2.4.1-wxpython1.patch 1102
 MD5 d3163f84f4f7dbabab06613667542f9b files/digest-wxGTK-2.5.3 65
@@ -20,7 +20,7 @@ MD5 f3bc3ab73cb31c91683e3ed58f8ffabb files/wxGTK-2.4.2-menu.cpp.patch 2253
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFChSvSKf2g/qXtneoRAg8kAKCKNSsCsi6L4aRKGD5inQQgnL/9SgCfZcHl
-g/z9j/3qu7d6XKrZaAmx6jM=
-=vJUk
+iD8DBQFCh0aJKf2g/qXtneoRAg9NAKC+Z69X2tE3Rf3C9BhIQ1Gy5983gQCcCO0C
+Gw/DYzRQiJv/wmQ8QqGj2Bs=
+=duAR
 -----END PGP SIGNATURE-----
