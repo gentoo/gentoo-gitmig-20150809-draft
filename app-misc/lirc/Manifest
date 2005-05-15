@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 3885b2001e3fac7d2578973a978ee5e9 lirc-0.7.0-r1.ebuild 4477
-MD5 a3b9114c6c8197bbd3ceab782613399f lirc-0.7.1.ebuild 4294
-MD5 ce136380ead4a3007642736ed1d4600c ChangeLog 9924
+MD5 57ee6a35c4bfcdac11e34f82a7ac2768 lirc-0.7.0-r1.ebuild 4494
+MD5 2929325adcaf8b901f26dec6b9525f37 lirc-0.7.1.ebuild 4311
+MD5 e36252b558c341748e7657d0dc43c54b ChangeLog 10064
 MD5 40a6e0a06901a627d29f4c528e40c9ad metadata.xml 265
 MD5 8b5ccb169d823795a11450a1c052da55 files/digest-lirc-0.7.0-r1 63
 MD5 d0d865cbe48f328fb4cfb41e22d4407b files/lirc-0.7.0_pre2-i2c.patch.gz 705
@@ -21,7 +21,7 @@ MD5 d874cf5e0b5c21cd211acea456f171d7 files/lirc-0.7.0-configure.in.patch 747
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFChgfcevY57Fted3ERAgPKAJ9sbURogTEshFtUH8Ep6K1wZo/NGQCdFBGR
-50E7BrPhFjo3ATCUsD8VLZo=
-=PMck
+iD8DBQFChwRgevY57Fted3ERAhDuAKCZDgl2QImWybznIkqhOUApbsEliQCfdXIL
+Na9FBekhc6TivVYvIvh4V78=
+=e88L
 -----END PGP SIGNATURE-----

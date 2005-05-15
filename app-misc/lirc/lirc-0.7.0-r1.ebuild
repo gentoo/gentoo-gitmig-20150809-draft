@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.7.0-r1.ebuild,v 1.13 2005/05/14 14:14:27 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.7.0-r1.ebuild,v 1.14 2005/05/15 08:11:27 lanius Exp $
 
 inherit eutils linux-mod flag-o-matic
 
@@ -50,11 +50,11 @@ HOMEPAGE="http://www.lirc.org"
 
 SLOT="0"
 LICENSE="GPL-2"
-IUSE="debug doc streamzap"
+IUSE="debug doc streamzap X"
 KEYWORDS="x86 ppc alpha ia64 amd64 ppc64"
 
 RDEPEND="virtual/libc
-	X11? ( virtual/x11 )"
+	X? ( virtual/x11 )"
 
 DEPEND="virtual/linux-sources
 	sys-devel/autoconf
@@ -111,6 +111,7 @@ src_compile() {
 		--with-syslog=LOG_DAEMON \
 		--enable-sandboxed \
 		`use_enable debug` \
+		`use_with X` \
 		${LIRC_OPTS} || die "./configure failed"
 
 	convert_to_m ${S}/Makefile
