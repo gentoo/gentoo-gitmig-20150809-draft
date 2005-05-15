@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/svk
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/svk/ChangeLog,v 1.5 2005/05/15 06:39:25 pclouds Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/svk/ChangeLog,v 1.6 2005/05/15 19:24:14 josejx Exp $
+
+  15 May 2005; Joseph Jezak <josejx@gentoo.org> svk-1.00.ebuild:
+  Marked ~ppc for bug #92670.
 
 *svk-1.00 (15 May 2005)
 
