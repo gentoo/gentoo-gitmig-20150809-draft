@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 6f38ee37b7a338cc7660b61a54b0b9c8 ChangeLog 930
+MD5 78d4249eefee8a320bbe7d50853d404d xsv-2.7.ebuild 811
+MD5 e4a830ba66ddde837b6882f94a49dcd4 ChangeLog 1018
 MD5 1785b4c5baf9e85c889c911be11fcb38 metadata.xml 621
 MD5 dc2f77bff63d02315d169727be4ff2eb xsv-2.5-r1.ebuild 538
-MD5 bcfb0565eba11a7581907089b33ae9f9 xsv-2.7.ebuild 811
-MD5 f134d7216c196df2014bcb24241dea89 files/digest-xsv-2.5-r1 59
 MD5 76ef7541ab475f65b514eeaf2b2b6633 files/digest-xsv-2.7 59
+MD5 f134d7216c196df2014bcb24241dea89 files/digest-xsv-2.5-r1 59
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCBvBYxtZcznfol0URAo3sAKDg44Yjj7dCak351hfKVZTNOgW7/wCfWwW+
-W6OaJGMB8DLksY9cIZCib0U=
-=kh6q
+iD8DBQFCh7eyKf2g/qXtneoRArJeAJ9nzbUM76wJ2gMZY37nH+7LAjQG5ACePGw6
+NFfO7nirorcZ3Ho48Wsm6z0=
+=GjKQ
 -----END PGP SIGNATURE-----
