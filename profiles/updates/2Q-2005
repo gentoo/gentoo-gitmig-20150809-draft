@@ -60,3 +60,5 @@ move app-misc/vmoconv app-mobilephone/vmoconv
 slotmove =dev-java/commons-beanutils-1.6* 0 1.6
 slotmove =dev-java/commons-beanutils-1.7* 0 1.7
 move app-misc/ringtonetools app-mobilephone/ringtonetools
+move app-pda/bitpim app-mobilephone/bitpim
+move app-pda/x70talk app-mobilephone/x70talk
