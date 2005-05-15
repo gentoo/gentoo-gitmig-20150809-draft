@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/lbdb/lbdb-0.29-r1.ebuild,v 1.3 2005/05/11 13:20:29 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/lbdb/lbdb-0.29-r1.ebuild,v 1.4 2005/05/15 10:56:01 ferdy Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.spinnaker.de/debian/${MY_P}.tar.gz"
 HOMEPAGE="http://www.spinnaker.de/lbdb/"
 DEPEND=">=mail-client/mutt-1.2.5"
 SLOT="0"
-KEYWORDS="x86 ~ppc sparc"
+KEYWORDS="~alpha ~ppc sparc x86"
 LICENSE="GPL-2"
 DEPEND="dev-lang/perl
 	sys-devel/autoconf
