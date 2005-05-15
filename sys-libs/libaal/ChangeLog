@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/libaal
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libaal/ChangeLog,v 1.16 2005/03/12 20:14:04 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libaal/ChangeLog,v 1.17 2005/05/15 11:43:58 corsair Exp $
+
+  15 May 2005; Markus Rothe <corsair@gentoo.org> libaal-1.0.4.ebuild:
+  Added ~ppc64 to KEYWORDS
 
 *libaal-1.0.4 (12 Mar 2005)
 
