@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3971 2005/05/15 12:50:52 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3972 2005/05/15 16:32:01 beu Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Elfyn McBratney <beu@gentoo.org> (15 May 2005)
+# Needs a bit of testing before it goes straight to stable.
+=net-www/webapp-config-1.10-r15
 
 # Diego Pettenò <flameeyes@gentoo.org> (15 May 2005)
 # This version of VLC should compile with wxGTK 2.6 but for some strange
