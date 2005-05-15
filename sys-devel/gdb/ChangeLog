@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gdb
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/ChangeLog,v 1.75 2005/05/09 12:26:23 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/ChangeLog,v 1.76 2005/05/15 19:47:39 plasmaroo Exp $
+
+  15 May 2005; <plasmaroo@gentoo.org> gdb-6.3-r3.ebuild:
+  Stable on IA64, bug #91654.
 
   09 May 2005; <solar@gentoo.org> files/gdb-6.3-gdbinit-stat.patch:
   - Jan Postransky writes via email gdb doesn't read .gdbinit file in current
