@@ -1,8 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gempak/gempak-5.7.2_p2.ebuild,v 1.1 2004/12/29 01:15:45 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gempak/gempak-5.7.2_p2.ebuild,v 1.2 2005/05/15 21:38:10 kugelfang Exp $
 
-inherit gcc eutils
+inherit eutils
 
 # They can't seem to retain a normal naming scheme, so hacks are required.
 # Often the hacks change on every bump.

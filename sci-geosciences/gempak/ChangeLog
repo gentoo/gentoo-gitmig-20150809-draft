@@ -1,6 +1,10 @@
 # ChangeLog for sci-geosciences/gempak
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gempak/ChangeLog,v 1.2 2004/12/29 10:13:17 swegener Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gempak/ChangeLog,v 1.3 2005/05/15 21:38:10 kugelfang Exp $
+
+  15 May 2005; Danny van Dyk <kugelfang@gentoo.org> gempak-5.6m.ebuild,
+  gempak-5.7.2_p2.ebuild, gempak-5.7.4.ebuild:
+  Removed unnecessary 'inherit gcc'.
 
 *gempak-5.6m (28 Dec 2004)
 
