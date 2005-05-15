@@ -1,0 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 d66ee50306dea64ba89dff80e7ee0d9f ChangeLog 1096
+MD5 0b7ac24556163e9422de8a1bf294bc9d ksms-0.1.2.4.ebuild 635
+MD5 0aaa351977f37d9091c513d1cffbc903 metadata.xml 305
+MD5 0a133a035198c2b1b93889e64ae59428 files/ksms-0.1.2.4-empty-store.diff 1146
+MD5 ecc65f8ac26e4ac07e86386738599bdb files/digest-ksms-0.1.2.4 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCh687jiC39V7gKu0RAmgHAJ0dheRAN7Rz1Z31MUbGgIuImoTPNgCg2aGN
+AOLoWVfuGDV4bnZxkhsCCeg=
+=IhS4
+-----END PGP SIGNATURE-----

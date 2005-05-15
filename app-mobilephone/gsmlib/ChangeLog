@@ -1,0 +1,49 @@
+# ChangeLog for app-mobilephone/gsmlib
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gsmlib/ChangeLog,v 1.1 2005/05/15 20:19:12 mrness Exp $
+
+  15 May 2005; Alin Nastac <mrness@gentoo.org>
+  -files/gsmlib-1.10-fd-leak-fix.patch, -files/gsmlib-1.10-include-fix.patch,
+  metadata.xml:
+  Moved from net-misc/gsmlib to app-mobilephone/gsmlib.
+
+*gsmlib-1.11_pre041028 (26 Jan 2005)
+
+  26 Jan 2005; Alastair Tse <liquidx@gentoo.org> -gsmlib-1.10-r1.ebuild,
+  gsmlib-1.11_pre030826.ebuild, +gsmlib-1.11_pre041028.ebuild:
+  version bump. fixed for amd64 with -fPIC. (#59104,#64121)
+
+  23 Jan 2005; Simon Stelling <blubb@gentoo.org>
+  +files/gsmlib-1.11-include-gcc34-fix.patch, gsmlib-1.11_pre030826.ebuild:
+  added Anton Golubtsov's patch to fix bug
+
+  12 Nov 2004; Gustavo Zacarias <gustavoz@gentoo.org>
+  gsmlib-1.11_pre030826.ebuild:
+  Stable on sparc
+
+*gsmlib-1.10-r1 (24 Jul 2004)
+
+  24 Jul 2004; Alastair Tse <liquidx@gentoo.org>
+  +files/gsmlib-1.10-fd-leak-fix.patch, +files/gsmlib-1.10-include-fix.patch,
+  +gsmlib-1.10-r1.ebuild:
+  added new revision of stable version with gcc33 patches plus some mem leak
+  fixes. thanks to Zach Bagnall <yem@y3m.net> (#54993)
+
+  01 Jul 2004; Jon Hood <squinky86@gentoo.org> gsmlib-1.10.ebuild,
+  gsmlib-1.11_pre030826.ebuild:
+  change virtual/glibc to virtual/libc, add IUSE
+
+*gsmlib-1.11_pre030826 (24 Sep 2003)
+
+  24 Sep 2003; Alastair Tse <liquidx@gentoo.org> gsmlib-1.11_pre030826.ebuild,
+  metadata.xml:
+  added metadata.xml. bumped to latest snapshot release due to compile problems
+  with gcc 3.x
+
+*gsmlib-1.10 (14 Dec 2002)
+
+  23 Dec 2002; Christian Birchinger <joker@gentoo.org> :     
+  Removed sparc64 keyword.
+
+  14 Dec 2002; J.ALberto Suarez L. <bass@gentoo.org> :
+  First relase.
