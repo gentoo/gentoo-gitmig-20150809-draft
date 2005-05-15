@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.6-r4.ebuild,v 1.4 2005/03/20 10:48:41 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.6-r4.ebuild,v 1.5 2005/05/15 21:18:46 mcummings Exp $
 
-inherit eutils flag-o-matic gcc multilib
+inherit eutils flag-o-matic toolchain-funcs multilib
 
 # The slot of this binary compat version of libperl.so
 PERLSLOT="1"
@@ -204,7 +204,7 @@ src_configure() {
 		myconf="${myconf} -Ud_longdbl"
 	fi
 
-	if use alpha && "$(gcc-getCC)" == "ccc"
+	if use alpha && "$(tc-getCC)" == "ccc"
 	then
 		ewarn "Perl will not be built with berkdb support, use gcc if you needed it..."
 		myconf="${myconf} -Ui_db -Ui_ndbm"
