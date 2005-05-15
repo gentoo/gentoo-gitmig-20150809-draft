@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/svgalib-1.9.21.ebuild,v 1.9 2005/05/15 00:37:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/svgalib-1.9.21.ebuild,v 1.10 2005/05/15 18:39:46 genstef Exp $
 
 inherit eutils flag-o-matic toolchain-funcs linux-mod
 
@@ -16,9 +16,13 @@ IUSE="build no-helper"
 DEPEND=""
 
 MODULE_NAMES="svgalib_helper(misc:${S}/kernel/svgalib_helper)"
-BUILD_PARAMS="KDIR=${KV_DIR}"
 BUILD_TARGETS="default"
 MODULESD_SVGALIB_HELPER_ADDITIONS="probeall  /dev/svga  svgalib_helper"
+
+pkg_setup() {
+	linux-mod_pkg_setup
+	BUILD_PARAMS="KDIR=${KV_DIR}"
+}
 
 src_unpack() {
 	unpack ${A}

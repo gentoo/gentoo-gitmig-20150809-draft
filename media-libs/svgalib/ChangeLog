@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/svgalib
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/ChangeLog,v 1.59 2005/05/07 09:33:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/ChangeLog,v 1.60 2005/05/15 18:39:46 genstef Exp $
+
+  15 May 2005; Stefan Schweizer <genstef@gentoo.org> svgalib-1.9.21.ebuild:
+  Fix compiling with portage-cvs
 
   07 May 2005; Mike Frysinger <vapier@gentoo.org> svgalib-1.9.21.ebuild:
   Add a local USE flag no-helper to allow people to use svgalib on non-x86
