@@ -1,0 +1,11 @@
+--- configure	2001-10-27 00:44:43.000000000 +0200
++++ configure.new	2002-05-26 01:52:20.000000000 +0200
+@@ -1133,6 +1133,8 @@
+ # Para no buscar en todo el disco duro, solo miro algunos directorios 'standar'
+ 	if test -e /usr/lib/perl5/Gtk.pm; then
+ 		gtkperl_path=/usr/lib/perl5/Gtk.pm
++	elif test -e /usr/lib/perl5/site_perl/5.6.1/i586-linux/Gtk.pm; then
++		gtkperl_path=/usr/lib/perl5/site_perl/5.6.1/i586-linux/Gtk.pm
+ 	elif test -e /usr/lib/5.005/i386-linux/Gtk.pm; then
+ 		gtkperl_path=/usr/lib/5.005/i386-linux/Gtk.pm
+ 	elif test -e /usr/lib/5.6.1/i386-linux/Gtk.pm; then
