@@ -1,10 +1,10 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/rmxmms/rmxmms-0.5.1.ebuild,v 1.10 2004/06/24 23:34:45 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/rmxmms/rmxmms-0.5.1.ebuild,v 1.11 2005/05/15 14:58:45 flameeyes Exp $
 
 IUSE=""
 
-inherit gcc
+inherit toolchain-funcs
 
 S=${WORKDIR}/rmxmms/${P}
 DESCRIPTION="RealAudio plugin for xmms"
@@ -21,7 +21,7 @@ DEPEND="media-sound/xmms
 	media-video/realplayer"
 
 pkg_setup() {
-	if [ "`gcc-major-version`" -eq "3" ]; then
+	if [ "`gcc-major-version`" -ge "3" ]; then
 		ewarn "This plugin will not work when compiled with gcc-3.x"
 		ewarn "Either install and select a gcc-2.95.x compiler with"
 		ewarn  "gcc-config, or give up."
