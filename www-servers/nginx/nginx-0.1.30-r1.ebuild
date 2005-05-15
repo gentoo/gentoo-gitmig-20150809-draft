@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/nginx-0.1.30.ebuild,v 1.1 2005/05/15 12:54:00 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/nginx-0.1.30-r1.ebuild,v 1.1 2005/05/15 15:24:13 voxus Exp $
 
 inherit eutils
 
@@ -16,6 +16,11 @@ IUSE="debug fastcgi threads ssl zlib"
 DEPEND="dev-lang/perl
 	ssl? ( dev-libs/openssl )
 	zlib? ( sys-libs/zlib )"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S} && epatch ${FILESDIR}/${P}-slashless_path.patch
+}
 
 src_compile() {
 	local myconf
