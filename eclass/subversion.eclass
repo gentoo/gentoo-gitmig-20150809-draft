@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/subversion.eclass,v 1.19 2005/05/05 14:55:23 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/subversion.eclass,v 1.20 2005/05/15 08:25:23 hattya Exp $
 
 ## --------------------------------------------------------------------------- #
 # Author: Akinori Hattori <hattya@gentoo.org>
@@ -117,7 +117,7 @@ function subversion_svn_fetch() {
 			;;
 	esac
 
-	if [ ! -d "${ESVN_STORE_IR}" ]; then
+	if [ ! -d "${ESVN_STORE_DIR}" ]; then
 		debug-print "${FUNCNAME}: initial checkout. creating subversion directory"
 
 		addwrite /
