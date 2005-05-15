@@ -1,14 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/irda-utils/irda-utils-0.9.17_pre5.ebuild,v 1.1 2005/02/08 12:41:22 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/irda-utils/irda-utils-0.9.17_pre5.ebuild,v 1.2 2005/05/15 13:51:38 brix Exp $
 
 inherit eutils
 
 MY_P=${PN}-${PV/_/-}
 S=${WORKDIR}/${MY_P/-pre*/}
 
-DESCRIPTION="IrDA utilities, tools for infrared communication"
-
+DESCRIPTION="IrDA utilities for infrared communication"
 HOMEPAGE="http://irda.sourceforge.net"
 SRC_URI="http://www.hpl.hp.com/personal/Jean_Tourrilhes/IrDA/${MY_P}.tar.gz"
 
