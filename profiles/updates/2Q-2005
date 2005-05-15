@@ -66,3 +66,5 @@ move net-wireless/obexftp app-mobilephone/obexftp
 move net-misc/linuxsms app-mobilephone/linuxsms
 move net-misc/esms app-mobilephone/esms
 move net-misc/gtkesms app-mobilephone/gtkesms
+move net-misc/sms app-mobilephone/sms
+move net-misc/smssend app-mobilephone/smssend
