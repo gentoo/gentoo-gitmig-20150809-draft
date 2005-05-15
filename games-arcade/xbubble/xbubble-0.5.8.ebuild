@@ -1,16 +1,16 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/xbubble/xbubble-0.5.8.ebuild,v 1.4 2004/11/22 13:57:26 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/xbubble/xbubble-0.5.8.ebuild,v 1.5 2005/05/15 18:48:18 vapier Exp $
 
 inherit games
 
 DESCRIPTION="a Puzzle Bobble clone similar to Frozen-Bubble"
-HOMEPAGE="http://www.nongnu.org/xbubble"
+HOMEPAGE="http://www.nongnu.org/xbubble/"
 SRC_URI="http://www.ibiblio.org/pub/mirrors/gnu/ftp/savannah/files/xbubble/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc ~amd64"
+KEYWORDS="~amd64 ppc x86"
 IUSE="nls"
 
 DEPEND="virtual/x11
@@ -20,8 +20,11 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	sed -i \
-		-e "/^AM_CFLAGS/d" src/Makefile.in \
-		|| die "sed failed"
+		-e '/^AM_CFLAGS/d' \
+		src/Makefile.in || die "sed cflags"
+	sed -i \
+		-e '/^localedir/s:=.*:=/usr/share/locale:' \
+		configure po/Makefile.in.in || die "sed locale"
 }
 
 src_compile() {
@@ -29,15 +32,11 @@ src_compile() {
 		--disable-dependency-tracking \
 		$(use_enable nls) \
 		|| die
-	emake \
-		localedir="/usr/share/locale" \
-		|| die "emake failed"
+	emake || die "emake failed"
 }
 
 src_install() {
-	make DESTDIR="${D}" \
-		localedir="/usr/share/locale" \
-		install || die "make install failed"
+	make DESTDIR="${D}" install || die "make install failed"
 	dodoc AUTHORS ChangeLog NEWS NetworkProtocol README TODO
 	prepgamesdirs
 }
