@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/jcvs/jcvs-5.4.2.ebuild,v 1.3 2005/02/17 17:55:23 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/jcvs/jcvs-5.4.2.ebuild,v 1.4 2005/05/15 16:18:45 luckyduck Exp $
 
 inherit java-pkg
 
@@ -9,14 +9,10 @@ HOMEPAGE="http://www.jcvs.org/"
 SRC_URI="http://www.jcvs.org/download/jcvs/jcvsii-${PV}.zip"
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~amd64"
+KEYWORDS="x86 ppc amd64"
 IUSE="doc"
 DEPEND=">=virtual/jdk-1.3
-	>=dev-java/ant-core-1.5
-	>=dev-java/sun-jaf-bin-1.0.2
-	>=dev-java/commons-logging-1.0.4
-	>=dev-java/j2ssh-0.2.7
-	>=dev-java/javahelp-bin-2
+	dev-java/ant-core
 	app-arch/unzip
 	jikes? ( dev-java/jikes )"
 RDEPEND=">=virtual/jre-1.3
