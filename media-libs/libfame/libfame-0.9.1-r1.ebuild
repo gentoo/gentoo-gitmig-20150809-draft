@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libfame/libfame-0.9.1-r1.ebuild,v 1.10 2005/05/15 02:11:51 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libfame/libfame-0.9.1-r1.ebuild,v 1.11 2005/05/15 16:19:44 flameeyes Exp $
 
 inherit flag-o-matic toolchain-funcs eutils
 
@@ -20,9 +20,6 @@ DEPEND=""
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-
-	[ "`gcc-major-version`" -ge "3" -a "`gcc-minor-version`" -ge "4" ] || \
-		EPATCH_EXCLUDE="${EPATCH_EXCLUDE} 02_all_mmx-configure.patch 03_all_gcc34.patch"
 
 	EPATCH_SUFFIX="patch" epatch ${WORKDIR}/${PV}
 

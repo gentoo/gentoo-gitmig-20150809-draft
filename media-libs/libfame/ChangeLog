@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libfame
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libfame/ChangeLog,v 1.33 2005/05/15 02:11:51 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libfame/ChangeLog,v 1.34 2005/05/15 16:19:44 flameeyes Exp $
+
+  15 May 2005; Diego Pettenò <flameeyes@gentoo.org> libfame-0.9.1.ebuild,
+  libfame-0.9.1-r1.ebuild:
+  Apply unconditionally the gcc 3.4 patches on 0.9.1-r1. Improved check for
+  gcc >=3.4 on 0.9.1.
 
   15 May 2005; Diego Pettenò <flameeyes@gentoo.org> libfame-0.9.1.ebuild,
   libfame-0.9.1-r1.ebuild:
