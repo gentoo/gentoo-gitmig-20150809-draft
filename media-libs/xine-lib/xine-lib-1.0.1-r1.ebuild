@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.0.1-r1.ebuild,v 1.5 2005/05/15 02:03:46 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.0.1-r1.ebuild,v 1.6 2005/05/15 15:28:55 flameeyes Exp $
 
 inherit eutils flag-o-matic toolchain-funcs libtool
 
@@ -45,6 +45,7 @@ RDEPEND="vorbis? ( media-libs/libvorbis )
 	vcd? ( media-video/vcdimager )
 	ffmpeg? ( >=media-video/ffmpeg-0.4.9_p20050226-r1 )
 	!=media-libs/xine-lib-0.9.13*"
+
 DEPEND="${RDEPEND}
 	v4l? ( sys-kernel/linux-headers )
 	>=sys-devel/automake-1.7
@@ -77,7 +78,6 @@ src_unpack() {
 }
 
 src_compile() {
-
 	#filter dangerous compile CFLAGS
 	strip-flags
 
@@ -86,20 +86,19 @@ src_compile() {
 
 	use x86 && has_pic && append-flags -UHAVE_MMX
 
-	if [ "`gcc-major-version`" -ge "3" -a "`gcc-minor-version`" -ge "4" ]; then
-		append-flags -fno-web #49509
+	if [ "$(gcc-major-version)" -eq "3" -a "$(gcc-minor-version)" -ge "4" ] || \
+	[ "$(gcc-major-version)" -ge "4" ]; then
+		# bugs 49509 and 55202
+		append-flags -fno-web -funit-at-a-time
 		filter-flags -fno-unit-at-a-time #55202
-		append-flags -funit-at-a-time #55202
 	fi
 
 	is-flag -O? || append-flags -O1 #31243
 
 	# fix build errors with sse2 #49482
-	if use x86 ; then
-		if [ `gcc-major-version` -eq 3 ] ; then
-			append-flags -mno-sse2 `test_flag -mno-sse3`
-			filter-mfpmath sse
-		fi
+	if use x86 && [ $(gcc-major-version) -ge 3 ]; then
+		append-flags -mno-sse2 $(test_flag -mno-sse3)
+		filter-mfpmath sse
 	fi
 
 	local myconf
@@ -108,9 +107,6 @@ src_compile() {
 	use win32codecs \
 		&& myconf="${myconf} --with-w32-path=/usr/$(get_libdir)/win32" \
 		|| myconf="${myconf} --disable-asf"
-
-	use sparc \
-		&& myconf="${myconf} --build=${CHOST}"
 
 	# enable/disable appropiate optimizations on sparc
 	[ "${PROFILE_ARCH}" == "sparc64" ] \
@@ -121,11 +117,11 @@ src_compile() {
 	# Fix compilation-errors on PowerPC #45393 & #55460 & #68251
 	if use ppc || use ppc64 ; then
 		append-flags -U__ALTIVEC__
-		myconf="${myconf} `use_enable altivec`"
+		myconf="${myconf} $(use_enable altivec)"
 	fi
 
 	# The default CFLAGS (-O) is the only thing working on hppa.
-	if use hppa && [ "`gcc-version`" != "3.4" ] ; then
+	if use hppa; then
 		unset CFLAGS
 	else
 		append-flags -ffunction-sections

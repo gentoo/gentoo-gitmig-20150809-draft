@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.224 2005/05/15 02:03:46 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.225 2005/05/15 15:28:54 flameeyes Exp $
+
+  15 May 2005; Diego Pettenò <flameeyes@gentoo.org>
+  xine-lib-1.0.1-r1.ebuild:
+  Cleanup of ebuild: using $() syntax for command expansion; better check for
+  gcc 3.4 or better (consider gcc 4).
 
   15 May 2005; Diego Pettenò <flameeyes@gentoo.org>
   xine-lib-1_rc6-r2.ebuild, xine-lib-1_rc8-r1.ebuild,
