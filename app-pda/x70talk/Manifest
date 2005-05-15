@@ -1,7 +1,0 @@
-MD5 8ba14911dd186e2e2034790fe9eb16dd x70talk-0.1.4.ebuild 606
-MD5 0226288fca481e9d6a585215edc12a48 metadata.xml 341
-MD5 b0676adf37976f24d6248246cbeee306 ChangeLog 1020
-MD5 eb17a5b793835f97cd5b47961038f038 x70talk-0.1.4-r1.ebuild 696
-MD5 8b12fd0c382a7b845e45f197c73a537b files/digest-x70talk-0.1.4-r1 64
-MD5 8b12fd0c382a7b845e45f197c73a537b files/digest-x70talk-0.1.4 64
-MD5 a38d52fd46840d397b317cf911326a46 files/x70talk-correct-month.diff 534

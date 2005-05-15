@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
-<pkgmetadata>
-  <maintainer>
-          <email>chrb@gentoo.org</email>
-          <name>Chris Bainbridge</name>
-  </maintainer>
-  <longdescription>Communicate and sync with Panasonic X70 mobile phone</longdescription>
-</pkgmetadata>
