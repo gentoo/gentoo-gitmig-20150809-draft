@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ogre-1.0.1.ebuild,v 1.2 2005/05/04 04:08:32 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ogre-1.0.1.ebuild,v 1.3 2005/05/15 18:17:54 vapier Exp $
 
 inherit eutils libtool
 
@@ -39,6 +39,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-autotools.patch
+	sed -i 's:libtoolize:libtoolize --copy:' bootstrap
 	./bootstrap || die "bootstrap failed"
 }
 
