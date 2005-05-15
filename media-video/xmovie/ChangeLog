@@ -1,6 +1,12 @@
 # ChangeLog for media-video/xmovie
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xmovie/ChangeLog,v 1.11 2004/06/25 00:53:43 agriffis Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/xmovie/ChangeLog,v 1.12 2005/05/15 13:00:49 flameeyes Exp $
+
+  15 May 2005; Diego Pettenò <flameeyes@gentoo.org>
+  -files/xmovie-gcc3-gentoo.patch, -files/xmovie-1.8-gcc3.3.patch,
+  xmovie-1.8-r4.ebuild:
+  Moved using toolchain-funcs. Removed the two patches and uploaded on a site
+  so to avoid having 60KB worth of patches in cvs.
 
 *xmovie-1.9.12 (17 Mar 2004)
 

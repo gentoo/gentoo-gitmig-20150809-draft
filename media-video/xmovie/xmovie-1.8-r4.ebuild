@@ -1,11 +1,13 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xmovie/xmovie-1.8-r4.ebuild,v 1.8 2004/07/14 22:29:11 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xmovie/xmovie-1.8-r4.ebuild,v 1.9 2005/05/15 13:00:49 flameeyes Exp $
 
-inherit gcc eutils
+inherit toolchain-funcs eutils
 
 DESCRIPTION="A Player for MPEG and Quicktime movies"
-SRC_URI="http://heroinewarrior.com/${P}.tar.gz"
+SRC_URI="http://heroinewarrior.com/${P}.tar.gz
+	http://digilander.libero.it/dgp85/gentoo/xmovie-gcc3-gentoo.patch
+	http://digilander.libero.it/dgp85/gentoo/xmovie-1.8-gcc3.3.patch"
 HOMEPAGE="http://heroines.sourceforge.net/"
 
 RDEPEND="virtual/x11
@@ -26,9 +28,9 @@ src_unpack() {
 	if [ `gcc-major-version` = '3' ] ;
 	then
 		# gcc3.2 fix (from bug #7227)
-		epatch ${FILESDIR}/xmovie-gcc3-gentoo.patch
+		epatch ${DISTDIR}/xmovie-gcc3-gentoo.patch
 		# gcc 3.3 fix from bug #32965
-		epatch ${FILESDIR}/xmovie-1.8-gcc3.3.patch
+		epatch ${DISTDIR}/xmovie-1.8-gcc3.3.patch
 	fi
 }
 
