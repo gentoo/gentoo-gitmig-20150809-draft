@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/vflib/vflib-2.25.6-r1.ebuild,v 1.6 2004/10/23 12:28:51 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/vflib/vflib-2.25.6-r1.ebuild,v 1.7 2005/05/16 04:12:19 usata Exp $
 
-inherit gcc eutils
+inherit toolchain-funcs eutils
 
 IUSE=""
 
@@ -35,7 +35,7 @@ src_compile () {
 		--with-freetype-includedir=/usr/include/freetype \
 		--with-freetype-libdir=/usr/lib || die
 
-	emake || die
+	emake CC="$(tc-getCC)" || die
 }
 
 src_install () {

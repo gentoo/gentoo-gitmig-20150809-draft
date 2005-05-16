@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 edfc5cde8a4479a9337fee09c008dd03 vflib-2.25.6-r1.ebuild 1199
 MD5 6dc532b5675205c70d425fb3b885371b ChangeLog 1429
-MD5 340c9486505499dd53935d231a98c91c vflib-2.25.6-r1.ebuild 1170
 MD5 212b6ec56b7acb3a4cc0bb8ddd2f95ef metadata.xml 247
 MD5 e3e4517844abbe9ca880b1c69b3a0579 vflib-3.6.13.ebuild 1382
 MD5 f2223bbd37edae5723444c23273e3e49 files/digest-vflib-2.25.6-r1 65
-MD5 f45ceea0958084403bc069d0526d68a0 files/vflib-2.25.6-r1-gentoo.diff 1807
 MD5 31e5573f72cb3bbdfbfbbbbb0211c55a files/vflib-2.25.6-gcc3.diff 370
+MD5 f45ceea0958084403bc069d0526d68a0 files/vflib-2.25.6-r1-gentoo.diff 1807
 MD5 4dac467141414247e6d16cd492381481 files/digest-vflib-3.6.13 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBek0eVWNWqTUmv+0RAszQAJkBok3KQvM76GHzumMKNQEC+7zBgACgrsHu
-YSnCCmk4u4CQAyLdsgCZsew=
-=CPKu
------END PGP SIGNATURE-----
