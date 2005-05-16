@@ -1,11 +1,9 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/pbzip2/pbzip2-0.8.ebuild,v 1.3 2005/01/01 11:52:37 eradicator Exp $
-
-inherit gcc flag-o-matic
+# $Header: /var/cvsroot/gentoo-x86/app-arch/pbzip2/pbzip2-0.8.ebuild,v 1.4 2005/05/16 12:44:41 wolf31o2 Exp $
 
 DESCRIPTION="A parallel version of BZIP2"
-HOMEPAGE="http://compression.ca/${PN}/"
+HOMEPAGE="http://compression.ca/pbzip2/"
 SRC_URI="http://compression.ca/${PN}/${P}.tar.gz"
 
 LICENSE="PBZIP2"

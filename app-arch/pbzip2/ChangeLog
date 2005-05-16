@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/pbzip2
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/pbzip2/ChangeLog,v 1.4 2005/01/01 11:52:37 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/pbzip2/ChangeLog,v 1.5 2005/05/16 12:44:41 wolf31o2 Exp $
+
+  16 May 2005; Chris Gianelloni <wolf31o2@gentoo.org> pbzip2-0.8.ebuild,
+  pbzip2-0.8.2.ebuild:
+  Removed inherit line for bug #92745.
 
 *pbzip2-0.8.2 (30 Dec 2004)
 
