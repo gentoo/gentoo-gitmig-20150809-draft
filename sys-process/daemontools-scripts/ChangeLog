@@ -1,6 +1,10 @@
 # ChangeLog for sys-process/daemontools-scripts
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/daemontools-scripts/ChangeLog,v 1.4 2005/05/06 18:32:50 kaiowas Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/daemontools-scripts/ChangeLog,v 1.5 2005/05/16 09:43:33 kaiowas Exp $
+
+  16 May 2005; petre rodan <kaiowas@gentoo.org>
+  daemontools-scripts-1.0.1.ebuild:
+  mark stable
 
 *daemontools-scripts-1.0.1 (06 May 2005)
 
