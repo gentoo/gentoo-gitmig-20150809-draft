@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-Benchmark
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Benchmark/ChangeLog,v 1.1 2005/02/12 09:14:10 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Benchmark/ChangeLog,v 1.2 2005/05/16 19:48:01 sebastian Exp $
+
+  16 May 2005; Sebastian Bergmann <sebastian@gentoo.org>
+  PEAR-Benchmark-1.2.2.ebuild:
+  Stable on amd64 and x86.
 
 *PEAR-Benchmark-1.2.2 (12 Feb 2005)
 
