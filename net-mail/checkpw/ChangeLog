@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/checkpw
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/checkpw/ChangeLog,v 1.3 2004/07/01 22:29:22 eradicator Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/checkpw/ChangeLog,v 1.4 2005/05/16 16:25:46 matsuu Exp $
+
+  16 May 2005; MATSUU Takuto <matsuu@gentoo.org> checkpw-1.01.ebuild:
+  Fixed inheriting gcc, Bug 92745.
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> checkpw-1.01.ebuild:
   virtual/glibc -> virtual/libc
