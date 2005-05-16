@@ -1,3 +1,13 @@
-MD5 f2ac4db8d950fcbe73a77eab2f96d318 ChangeLog 1154
-MD5 b48e65156d1e37748c269734dd509a4a cpl-stratego-0.4.ebuild 647
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 0023ec131724406ccdc60441fa35c481 ChangeLog 1253
+MD5 eb433bc8cd7db84c8008c99f4f98989f cpl-stratego-0.4.ebuild 666
 MD5 b13bdea6f3b4dfb5ceab298b42e54f91 files/digest-cpl-stratego-0.4 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFCiRauKRy60XGEcJIRAmVcAJ4xAzItNimox+R/5EuaTczTB9UD4gCdHD1Q
+XwOdXRppUaHAVBPPbbOHJVA=
+=gHRc
+-----END PGP SIGNATURE-----
