@@ -1,16 +1,26 @@
-MD5 717f090bf415e914beaefe0128f4db2c gqview-2.0.1.ebuild 724
-MD5 e70c2edbfc61fdb7ed7bd1a29eb92c6c metadata.xml 339
-MD5 71dbcd0186ab8e1b2d242efd7c116399 gqview-1.5.1.ebuild 909
-MD5 620c5fb5361421f10ac0b6874652ab94 gqview-2.1.0.ebuild 726
-MD5 487fd36a9aadc032b5aace08a0cc9e51 gqview-1.5.3.ebuild 923
-MD5 02ec59bd555a658e815fc38c33e4bca2 ChangeLog 8399
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 5964f7e996a164ce38cf355eb223f360 ChangeLog 8492
 MD5 e4af38822ed7076602a66c123cc2f4bb gqview-1.4.5.ebuild 908
+MD5 620c5fb5361421f10ac0b6874652ab94 gqview-2.1.0.ebuild 726
+MD5 71dbcd0186ab8e1b2d242efd7c116399 gqview-1.5.1.ebuild 909
+MD5 487fd36a9aadc032b5aace08a0cc9e51 gqview-1.5.3.ebuild 923
 MD5 4c4b2e16e4b34c65c6623e6ae54963ad gqview-1.5.4.ebuild 926
-MD5 2b4d00fed6e2dddc7a9a8e2bad949b92 gqview-2.0.0.ebuild 725
-MD5 0744ce64d1da1679ac4096f5833730b7 files/digest-gqview-2.0.0 65
-MD5 176f5bb00858a049524220098d84a0a7 files/digest-gqview-2.0.1 65
-MD5 a8f2921f80df401bbff60c096bfb3de3 files/digest-gqview-1.5.4 65
-MD5 811d1964d96b59b196bf78cade00efcb files/digest-gqview-1.5.3 65
+MD5 e70c2edbfc61fdb7ed7bd1a29eb92c6c metadata.xml 339
+MD5 717f090bf415e914beaefe0128f4db2c gqview-2.0.1.ebuild 724
+MD5 16355aa86ba699c39d0bb8f05343d787 gqview-2.0.0.ebuild 723
 MD5 ac496846e83cd6bedf0b7142f4268f92 files/digest-gqview-2.1.0 65
-MD5 7971e03d074657218357c74b9d8dfc8f files/digest-gqview-1.5.1 65
 MD5 c11642efa01244db76fbaffb5b0aa3c4 files/digest-gqview-1.4.5 65
+MD5 176f5bb00858a049524220098d84a0a7 files/digest-gqview-2.0.1 65
+MD5 7971e03d074657218357c74b9d8dfc8f files/digest-gqview-1.5.1 65
+MD5 811d1964d96b59b196bf78cade00efcb files/digest-gqview-1.5.3 65
+MD5 a8f2921f80df401bbff60c096bfb3de3 files/digest-gqview-1.5.4 65
+MD5 0744ce64d1da1679ac4096f5833730b7 files/digest-gqview-2.0.0 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFCiSLWKRy60XGEcJIRAjPvAKCmX7zybz8GzSl6bx/KMVz131r/BwCfePcX
+Fip8OpZX1m6ez2pRScM0x4Q=
+=cVw3
+-----END PGP SIGNATURE-----
