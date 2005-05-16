@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eclectic/eclectic-0.9.3.ebuild,v 1.1 2005/05/16 20:37:00 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eclectic/eclectic-0.9.3.ebuild,v 1.2 2005/05/16 21:07:35 ciaranm Exp $
 
 inherit bash-completion
 
@@ -15,7 +15,7 @@ IUSE="doc"
 
 RESTRICT="primaryuri"
 
-RDEPEND="app-shells/bash
+RDEPEND=">=app-shells/bash-3
 	doc? ( dev-python/docutils )"
 
 src_compile() {

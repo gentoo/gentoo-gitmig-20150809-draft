@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/eclectic
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eclectic/ChangeLog,v 1.8 2005/05/16 20:37:00 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eclectic/ChangeLog,v 1.9 2005/05/16 21:07:35 ciaranm Exp $
+
+  16 May 2005; Ciaran McCreesh <ciaranm@gentoo.org> eclectic-0.9.3.ebuild:
+  Up the bash dependency to version 3. This is temporary and just for this
+  release.
 
 *eclectic-0.9.3 (16 May 2005)
 
