@@ -1,14 +1,24 @@
-MD5 fd17464a46fc53f9ac53e71c14fe7804 ChangeLog 4798
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 159c94aa7ab2dbf8c4319dcdffd5e783 ChangeLog 4892
 MD5 d0726e166c5fbd28bb19ccf0ee103c8d dasher-3.2.10-r1.ebuild 1380
 MD5 897a53a92e030d0c8a0a8f812d7eb180 dasher-3.2.11.ebuild 1373
+MD5 6f4cbcbfb09b5f06b69cd5ee2fc867bb dasher-3.2.15.ebuild 1523
 MD5 645aac23c66d08fa6064bdb7c95c76ef metadata.xml 420
 MD5 c8cb1b62106dd1b50e4497da00f63c61 dasher-3.2.13.ebuild 1574
-MD5 1142e7f1dd4689cd5ef086ab40971f17 dasher-3.2.15.ebuild 1525
 MD5 7ca12febbfba2b50f70134394363aa33 files/dasher-3.2.10-glade_fix.patch 548
-MD5 497bed8a975cd29705cb0e9b41f45d76 files/dasher-3.2.11-xtst_fix.patch 872
 MD5 c9d895db753a44f74000cd2c73e23781 files/digest-dasher-3.2.10-r1 67
 MD5 9c820381411009613600b092eda0ab25 files/digest-dasher-3.2.11 67
-MD5 ed6f38e71df7cb24f50adad5b1b79fa1 files/digest-dasher-3.2.13 67
+MD5 497bed8a975cd29705cb0e9b41f45d76 files/dasher-3.2.11-xtst_fix.patch 872
 MD5 37b170fe40563034f339c654c6802fb3 files/dasher-3.2.13-buildwindowtree.patch 694
-MD5 5b4b3e17b421919e17bc182404ffa36c files/digest-dasher-3.2.15 67
+MD5 ed6f38e71df7cb24f50adad5b1b79fa1 files/digest-dasher-3.2.13 67
 MD5 29b515c44bcfdd79db45f38f65879994 files/dasher-3.2.15-buildwindowtree.patch 499
+MD5 5b4b3e17b421919e17bc182404ffa36c files/digest-dasher-3.2.15 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFCiQd4KRy60XGEcJIRAlEjAKCVVxHsDZ1x3pNWppZc132t6mvNfgCaAxzC
+l3c0dVheFOVU5xrvoXPFt6A=
+=ZB2h
+-----END PGP SIGNATURE-----

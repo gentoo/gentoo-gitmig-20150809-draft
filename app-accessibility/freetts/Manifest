@@ -1,7 +1,17 @@
-MD5 93d45f41818583924880e4192c3493b5 ChangeLog 1738
-MD5 325628d25ef763c5cbf49379c4de98b9 freetts-1.2.ebuild 1574
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 3bb64698e0bd08acf72466a7a2ce0440 ChangeLog 1832
 MD5 757926dcf0cbf6c7c59718172e81fe72 freetts-1.2_beta.ebuild 1576
 MD5 e206f7cd655afe2644bb78cc9d15bd7f metadata.xml 166
-MD5 f1e87dcb2c28189d1f2b57540311be81 files/digest-freetts-1.2 66
+MD5 f210606ece6e7571013b704dd22cdbb8 freetts-1.2.ebuild 1574
 MD5 0a9f7090bb8c7d63e7ceb96f6d38940b files/digest-freetts-1.2_beta 72
 MD5 7636ad68d9f8c572439c1beda2e3551b files/jsapi-gentoo.diff 10444
+MD5 f1e87dcb2c28189d1f2b57540311be81 files/digest-freetts-1.2 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFCiQV2KRy60XGEcJIRAnBrAJwPVGw6PmFz383YmyFbtKtB77rvuQCeIoiP
+8s2a0TumeGJ2pMjYWBJpbsQ=
+=E043
+-----END PGP SIGNATURE-----
