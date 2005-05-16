@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libprelude/libprelude-0.9.0_rc5-r1.ebuild,v 1.1 2005/05/08 12:11:38 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libprelude/libprelude-0.9.0_rc5-r1.ebuild,v 1.2 2005/05/16 03:10:44 vapier Exp $
 
-inherit versionator perl-module
+inherit versionator perl-module flag-o-matic
 
 MY_P="${PN}-$(replace_version_separator 3 '-')"
 DESCRIPTION="Prelude-IDS Framework Library"
@@ -22,7 +22,16 @@ DEPEND=">=net-libs/gnutls-1.0.17
 
 S="${WORKDIR}/${MY_P}"
 
-pkg_setup() { use perl && perl-module_pkg_setup ; }
+pkg_setup() {
+	use perl && perl-module_pkg_setup
+}
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	grep -qs 'include.*fts.h' prelude-adduser/prelude-adduser.c || die "remove lfs filter"
+	filter-lfs-flags
+}
 
 src_compile() {
 	econf \
