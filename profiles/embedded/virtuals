@@ -50,3 +50,4 @@ virtual/x11			x11-base/xorg-x11
 virtual/xemacs			app-editors/xemacs
 virtual/xft			x11-base/xorg-x11
 virtual/motif          x11-libs/openmotif
+virtual/utempter 		sys-apps/utempter
