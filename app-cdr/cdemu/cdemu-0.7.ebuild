@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdemu/cdemu-0.7.ebuild,v 1.4 2005/04/21 17:52:49 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdemu/cdemu-0.7.ebuild,v 1.5 2005/05/16 02:26:09 vapier Exp $
 
-inherit gcc flag-o-matic python
+inherit flag-o-matic python
 
 DESCRIPTION="mount bin/cue cd images"
 HOMEPAGE="http://cdemu.org/"
