@@ -70,3 +70,4 @@ move net-misc/sms app-mobilephone/sms
 move net-misc/smssend app-mobilephone/smssend
 move net-misc/gsmlib app-mobilephone/gsmlib
 move net-misc/ksms app-mobilephone/ksms
+move media-sound/bemused app-mobilephone/bemused
