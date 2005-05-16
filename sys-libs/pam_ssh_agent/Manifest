@@ -1,6 +1,16 @@
-MD5 7570d13376a683ed271c56943bf35e12 pam_ssh_agent-0.2.ebuild 786
-MD5 4c75319787e663d3884e38cb0988bac2 ChangeLog 613
-MD5 3931cdf8ba548973af23c326efe2de28 pam_ssh_agent-0.1.ebuild 794
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 a6d16332152d73c8568d026bc29b6baa ChangeLog 877
 MD5 a8cd1dda22d8abb57607d6a9120cbdee metadata.xml 306
+MD5 1e5dc0bbe0ea0a7cabf31c4f3a440321 pam_ssh_agent-0.1.ebuild 806
+MD5 4199f38ca4a9632559fe0c513c549a66 pam_ssh_agent-0.2.ebuild 945
 MD5 fc8f4b2dfc03ece3f7da24ed6b8258fa files/digest-pam_ssh_agent-0.1 68
 MD5 d9ee254275c299e8f21bdcb01001bbc1 files/digest-pam_ssh_agent-0.2 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCh/ZWj5H05b2HAEkRAusqAJ9W5eNLiyRlFKe9EWGMTwY7g5InJQCfdQgb
+ji5DdC8Kb/TXLe/vUgBC8jU=
+=9ao+
+-----END PGP SIGNATURE-----
