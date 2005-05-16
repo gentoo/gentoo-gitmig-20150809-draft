@@ -1,23 +1,22 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xml-xmlbeans/xml-xmlbeans-20041217.ebuild,v 1.6 2005/03/16 17:52:20 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xml-xmlbeans/xml-xmlbeans-20041217.ebuild,v 1.7 2005/05/16 00:11:38 luckyduck Exp $
 
 inherit eutils java-pkg
 
 DESCRIPTION="An XML-Java binding tool"
 HOMEPAGE="http://xmlbeans.apache.org/"
 SRC_URI="http://dev.gentoo.org/~karltk/projects/java/distfiles/${P}.tar.bz2"
+
 LICENSE="Apache-2.0"
 SLOT="1"
-KEYWORDS="~x86 ~amd64"
-
+KEYWORDS="x86 amd64 ~ppc"
 IUSE="doc junit source"
 
 DEPEND=">=virtual/jdk-1.4
 	junit? ( >=dev-java/ant-1.6.2 )
 	!junit? ( >=dev-java/ant-core-1.6.2 )
-	source? ( app-arch/zip )
-	${RDEPEND}"
+	source? ( app-arch/zip )"
 RDEPEND=">=virtual/jre-1.4
 	=dev-java/jaxen-1.1_beta2*
 	junit? ( >=dev-java/junit-3.8 )"
@@ -43,9 +42,7 @@ src_unpack() {
 
 src_compile() {
 	local antflags="xbean.jar"
-	if use doc; then
-		antflags="${antflags} docs"
-	fi
+	use doc && antflags="${antflags} docs"
 	if has_version dev-java/ant-tasks; then
 		if use junit; then
 			antflags="${antflags} random.jar drt.jar drt"
@@ -57,11 +54,7 @@ src_compile() {
 src_install() {
 	java-pkg_dojar build/lib/xbean*.jar
 
-	dodoc CHANGES.txt LICENSE.txt NOTICE.txt README.txt
-	if use doc; then
-		java-pkg_dohtml -r build/docs/*
-	fi
-	if use source; then
-		java-pkg_dosrc src/*
-	fi
+	dodoc CHANGES.txt NOTICE.txt README.txt
+	use doc && java-pkg_dohtml -r build/docs/*
+	use source && java-pkg_dosrc src/*
 }
