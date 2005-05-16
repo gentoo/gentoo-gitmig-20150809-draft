@@ -1,17 +1,17 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 578061fd1e7ce69c2b6fb9efc5139be6 x11vnc-0.7.1-r1.ebuild 857
-MD5 2b5be3882d01c28a7db01eb61c189f59 x11vnc-0.7-r1.ebuild 1075
-MD5 39db7999c819a06d29c3e6059d26024a ChangeLog 1675
+MD5 00de3a53bc27e93e8c915d31a201e89e x11vnc-0.7.1-r1.ebuild 866
+MD5 91ca32729faded56a6be07e91db710b6 x11vnc-0.7-r1.ebuild 1085
+MD5 e8cf8a9b8942c43e13651c27458d9078 ChangeLog 1805
 MD5 8845b35c56be21370ef600f1b3eca775 metadata.xml 470
 MD5 0a51724347b7a0fd71c2f0935671b2c8 files/digest-x11vnc-0.7-r1 62
 MD5 ca72243aabb89ee84f091361b114afa5 files/digest-x11vnc-0.7.1-r1 64
 MD5 dfe826f2cf4eaaa2763eabac97151555 files/0.7-autotools.patch 802
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCJi7ZI1lqEGTUzyQRAkCwAKCeYFdQxGxDasmDSky3vR5u5n6G1ACfQv3x
-Q6ZON2Fc/+eDw645N9dgMw4=
-=WoRI
+iD8DBQFCiN/cI1lqEGTUzyQRAkt2AJ9DcG7xVK5Kzz7AU9kjBhVZwdYVZgCfRov8
+ySQ3WD8iJ1xpbZDFpvyiwlg=
+=bsfW
 -----END PGP SIGNATURE-----
