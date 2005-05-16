@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/w3mimgfb/w3mimgfb-0.9.1.ebuild,v 1.7 2005/05/01 18:04:33 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/w3mimgfb/w3mimgfb-0.9.1.ebuild,v 1.8 2005/05/16 04:30:10 usata Exp $
 
-inherit gcc
+inherit toolchain-funcs
 
 DESCRIPTION="Image viewer for w3m under frame buffer environment"
 HOMEPAGE="http://homepage3.nifty.com/slokar/fb/w3mimg.html"
@@ -17,7 +17,7 @@ DEPEND=">=media-libs/stimg-0.1.0
 	virtual/w3m"
 
 src_compile() {
-	emake CC="$(gcc-getCC)" CFLAGS="${CFLAGS}" || die "emake failed"
+	emake CC="$(tc-getCC)" CFLAGS="${CFLAGS}" || die "emake failed"
 }
 
 src_install() {
