@@ -1,8 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmtz/wmtz-0.7.ebuild,v 1.11 2004/11/25 15:22:41 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmtz/wmtz-0.7.ebuild,v 1.12 2005/05/16 07:48:28 s4t4n Exp $
 
-inherit eutils gcc
+inherit eutils toolchain-funcs
 
 IUSE=""
 DESCRIPTION="dockapp that shows the time in multiple timezones."
@@ -19,7 +19,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 
-	#apply both patches to compile with gcc-3.4 closing bug #
+	#apply both patches to compile with gcc-3.4 closing bug #64556
 	if [ "`gcc-major-version`" -ge "3" -a "`gcc-minor-version`" -ge "4" ]
 	then
 		epatch ${FILESDIR}/wmtz-0.7-gcc34.patch
@@ -29,7 +29,7 @@ src_unpack() {
 src_compile() {
 	cd ${S}/wmtz
 	epatch ${FILESDIR}/wmtz.c.patch
-	emake CFLAGS="$CFLAGS"  || die
+	emake FLAGS="$CFLAGS" || die
 }
 
 src_install () {

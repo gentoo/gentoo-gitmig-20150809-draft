@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/wmtz
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmtz/ChangeLog,v 1.10 2004/11/25 15:22:41 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmtz/ChangeLog,v 1.11 2005/05/16 07:48:28 s4t4n Exp $
+
+  16 May 2005; Michele Noberasco <s4t4n@gentoo.org> wmtz-0.7.ebuild:
+  Inherit 'toolchain-funcs' instead of 'gcc', as per bug #92745.
+  Make package honour Gentoo CFLAGS...
 
   25 Nov 2004; Jason Wever <weeve@gentoo.org> wmtz-0.7.ebuild:
   Added ~sparc keyword.
