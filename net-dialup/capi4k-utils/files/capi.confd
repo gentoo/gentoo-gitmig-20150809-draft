@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-utils/files/capi.confd,v 1.3 2005/04/09 14:35:00 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-utils/files/capi.confd,v 1.4 2005/05/16 08:49:33 genstef Exp $
 
 # do you want to use USB hotplug?
 # if disabled, you have to configure your device in /etc/capi.conf
@@ -8,6 +8,9 @@ CAPI_HOTPLUG_USB="yes"
 
 # should via hotplug added cards generate a beep?
 CAPI_HOTPLUG_BEEP="yes"
+
+# should capi-usb handle hotplug-events for mISDN cards?
+CAPI_HOTPLUG_MISDN="yes"
 
 # should CAPIDRV be loaded?
 CAPI_LOAD_CAPIDRV="yes"

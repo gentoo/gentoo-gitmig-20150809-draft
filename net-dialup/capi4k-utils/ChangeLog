@@ -1,6 +1,13 @@
 # ChangeLog for net-dialup/capi4k-utils
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-utils/ChangeLog,v 1.32 2005/04/24 13:31:48 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-utils/ChangeLog,v 1.33 2005/05/16 08:49:33 genstef Exp $
+
+*capi4k-utils-20050509 (16 May 2005)
+
+  16 May 2005; Stefan Schweizer <genstef@gentoo.org> files/capi.conf,
+  files/capi.confd, files/capi.hotplug, files/capi.usermap,
+  +capi4k-utils-20050509.ebuild:
+  Version bump, misdn hotplug added
 
 *capi4k-utils-20050322-r1 (24 Apr 2005)
 

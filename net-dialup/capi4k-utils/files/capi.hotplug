@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-utils/files/capi.hotplug,v 1.5 2005/04/24 13:31:48 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-utils/files/capi.hotplug,v 1.6 2005/05/16 08:49:33 genstef Exp $
 
 . /etc/conf.d/capi
 
@@ -47,66 +47,74 @@ DEVTMP="${DEVICE##/proc/bus/usb/}"
 USBBUS="${DEVTMP%%/*}"
 USBDEV="${DEVTMP##*/}"
 
+# create/check lockfile
 LOCK="/tmp/.capi-usb-${USBBUS}-${USBDEV}"
+/bin/ln 2>/dev/null -sn $$ ${LOCK} || exit 0
+trap "/bin/rm -f ${LOCK}" 0 1 2 3 15
+
+# select driver and firmware
 LOADER=""
 DRIVER=""
 FIRMWARE=""
-
-# select driver and firmware
 case "${VENDID}" in
 	"057c/0c00") # FRITZCARD!USB
-		DRIVER="fcusb"
-		;;
+		DRIVER="fcusb";;
 	"057c/1000") # FRITZCARD!USB v2.0
-		LOADER="avmusb"
-		DRIVER="fcusb2"
-		FIRMWARE="fus2base.frm"
-		;;
+		DRIVER="fcusb2"; LOADER="avmusb"; FIRMWARE="fus2base.frm";;
 	"057c/1900") # FRITZCARD!USB v2.1
-		LOADER="avmusb"
-		DRIVER="fcusb2"
-		FIRMWARE="fus3base.frm"
-		;;
+		DRIVER="fcusb2"; LOADER="avmusb"; FIRMWARE="fus3base.frm";;
 	"057c/2000") # FRITZX!USB
-		DRIVER="fxusb"
-		;;
+		DRIVER="fxusb";;
 	"057c/2200") # BlueFRITZ!USB
-		LOADER="avmusb"
-		DRIVER="bfusb"
-		FIRMWARE="bfubase.frm"
-		;;
+		DRIVER="bfusb"; LOADER="avmusb"; FIRMWARE="bfubase.frm";;
 	"057c/2300") # FRITZDSL!USB
-		LOADER="avmusb"
-		DRIVER="fcdslusb"
-		FIRMWARE="fdsubase.frm"
-		;;
+		DRIVER="fcdslusb"; LOADER="avmusb"; FIRMWARE="fdsubase.frm";;
 	"057c/2800") # FRITZX!USB OEM
-		DRIVER="fxusb_CZ"
-		;;
+		DRIVER="fxusb_CZ";;
 	"057c/3500") # FRITZDSL!USB SL
-		LOADER="avmusb"
-		DRIVER="fcdslslusb"
-		FIRMWARE="fdlubase.frm"
-		;;
+		DRIVER="fcdslslusb"; LOADER="avmusb"; FIRMWARE="fdlubase.frm";;
+	"0959/2bd0") # ISDN USB TA (Cologne Chip HFC-S USB based)
+		DRIVER="hfcsusb";;
+	"0675/1688") # DrayTek miniVigor 128 USB ISDN TA
+		DRIVER="hfcsusb";;
+	"07b0/0007") # Billion tiny USB ISDN TA 128
+		DRIVER="hfcsusb";;
+	"0742/2008") # Stollmann USB TA
+		DRIVER="hfcsusb";;
+	"0742/2009") # Aceex USB ISDN TA
+		DRIVER="hfcsusb";;
+	"0742/200a") # OEM USB ISDN TA
+		DRIVER="hfcsusb";;
+	"08e3/0301") # Olitec USB RNIS
+		DRIVER="hfcsusb";;
+	"07fa/0846") # Bewan Modem RNIS USB
+		DRIVER="hfcsusb";;
+	"07fa/0847") # Djinn Numeris USB
+		DRIVER="hfcsusb";;
+	"07b0/0006") # Twister ISDN TA
+		DRIVER="hfcsusb";;
 	*) # unknown card
 		syslog "unknown USB product: ${VENDID}"
-		exit 1
+		exit 1;;
 esac
+
+if [ "$DRIVER" = "hfcsusb" -a "$CAPI_HOTPLUG_MISDN" != "yes" ]; then
+	syslog "ignore mISDN card: ${DRIVER} (${VENDID})"
+	exit 0
+fi
 
 case "$ACTION" in
 	add)
-		/bin/ln 2>/dev/null -s "$$" "${LOCK}" || exit 0
-	
 		# loading capi
 		if ! ( [ -f /proc/capi/capi20 ] || /sbin/modprobe -sq capi ); then
 			syslog "could not load CAPI!"
-			beep_error; /bin/rm -f "${LOCK}"; exit 1
+			beep_error; exit 1
 		fi
 	
 		# loading driver
 		if ! /sbin/modprobe -sq ${DRIVER}; then
 			syslog "could not load driver ${DRIVER}!"
-			beep_error; /bin/rm -f "${LOCK}"; exit 1
+			beep_error; exit 1
 		fi
 	
 		# loading firmware	
@@ -119,7 +127,7 @@ case "$ACTION" in
 				$LOADER $DRIVER $USBDEV $FIRMWARE
 			else
 				syslog "firmware ${FIRMWARE} not found!"
-				beep_error; /bin/rm -f "${LOCK}"; exit 1
+				beep_error; exit 1
 			fi
 		fi
 
@@ -128,7 +136,7 @@ case "$ACTION" in
 			syslog "could not load CAPIDRV!"
 		fi
 		
-		beep_ok; /bin/rm -f "${LOCK}"
+		beep_ok
 		;;
 
 	remove)
