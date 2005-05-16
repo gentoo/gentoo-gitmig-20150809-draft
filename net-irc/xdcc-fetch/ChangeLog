@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/xdcc-fetch
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xdcc-fetch/ChangeLog,v 1.1 2005/04/07 20:32:25 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xdcc-fetch/ChangeLog,v 1.2 2005/05/16 15:48:07 swegener Exp $
+
+  16 May 2005; Sven Wegener <swegener@gentoo.org> xdcc-fetch-1.409.ebuild:
+  Marked stable on x86.
 
 *xdcc-fetch-1.409 (07 Apr 2005)
 

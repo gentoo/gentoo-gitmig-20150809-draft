@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xdcc-fetch/xdcc-fetch-1.409.ebuild,v 1.1 2005/04/07 20:32:25 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xdcc-fetch/xdcc-fetch-1.409.ebuild,v 1.2 2005/05/16 15:48:07 swegener Exp $
 
 inherit eutils
 
@@ -12,14 +12,14 @@ SRC_URI="mirror://sourceforge/xdccfetch/${MY_PN}-${PV}.tar.gz"
 LICENSE="BSD"
 
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 IUSE=""
 
 DEPEND=">=dev-lang/ruby-1.8
 	>=dev-ruby/fxruby-1.2"
 
-S=${WORKDIR}/${MY_PN}
+S="${WORKDIR}"/${MY_PN}
 
 src_install() {
 	exeinto /usr/share/${PN}
