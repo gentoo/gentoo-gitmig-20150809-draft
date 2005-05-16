@@ -1,0 +1,11 @@
+# ChangeLog for media-libs/blib
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/blib/ChangeLog,v 1.1 2005/05/16 10:37:51 luckyduck Exp $
+
+*blib-1.1.7 (16 May 2005)
+
+  16 May 2005; Jan Brinkmann <luckyduck@gentoo.org> +metadata.xml,
+  +blib-1.1.7.ebuild:
+  Initial import, ebuild contributed by Niels Will <NachtKind@mindpoison.net>.
+  Fixes #61770.
+
