@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Module-Versions-Report
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Module-Versions-Report/ChangeLog,v 1.5 2005/04/29 00:21:40 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Module-Versions-Report/ChangeLog,v 1.6 2005/05/16 19:49:50 gustavoz Exp $
+
+  16 May 2005; Gustavo Zacarias <gustavoz@gentoo.org>
+  Module-Versions-Report-1.02.ebuild:
+  Keyworded ~sparc
 
   29 Apr 2005; Michael Cummings <mcummings@gentoo.org>
   Module-Versions-Report-1.02.ebuild:
