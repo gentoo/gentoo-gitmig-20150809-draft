@@ -1,5 +1,15 @@
-MD5 606750b6acd66e9b261d7afb142f1354 recode-3.6-r1.ebuild 1340
-MD5 93c4f3b2a8de41af59c3e61aaec687ea ChangeLog 3440
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 e99f2eba1b9b7761f9eeb1c5bf856690 recode-3.6-r1.ebuild 1343
+MD5 d68887a84b078ad269b3d7705f720b00 ChangeLog 3443
 MD5 0c131a7201c4670302767f93643876fa metadata.xml 165
 MD5 6d0ba2283055f0ad0f91ff4dfd0acfd9 files/digest-recode-3.6-r1 133
 MD5 2c2585695b7486f34ba9241c144a5b19 files/recode-3.6-ppc-macos.diff 1334
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCiDNGEZCkKN40op4RAs5/AKCAwnVZdZkvHm3vCRDzgZKmdFEn/QCgqSE3
+DWR1/enJFIL9C2L8YMRnMHQ=
+=BW92
+-----END PGP SIGNATURE-----

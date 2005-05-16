@@ -1,7 +1,17 @@
-MD5 a106e6eeabf381aed56c231adb7b368d ChangeLog 1526
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 fe6c4d427e3b1f818f352236bbe9d3ba ChangeLog 1523
 MD5 0c131a7201c4670302767f93643876fa metadata.xml 165
-MD5 a52d49b5d3f0aaa09eaf0f09e54c75aa unix2dos-2.2.ebuild 805
+MD5 94b5aa01118e92d4e0bd4d523f19016e unix2dos-2.2.ebuild 802
 MD5 9b19aa73a3447d0d691bd0e5537f6547 files/digest-unix2dos-2.2 66
 MD5 c723995df715179f101342647856ed6d files/unix2dos-mkstemp.patch 543
 MD5 e7f3673c14b9bbeed71e94730d7ef386 files/unix2dos-2.2-manpage.patch 888
 MD5 fe14e5681bc093d2039290d906023047 files/unix2dos-2.2-segfault.patch 2297
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCiDRXEZCkKN40op4RAm0sAKCntI5zzCwzHVBuW5+oIqWDfCrYYACgmJy8
+zvZgyhNIzcJLWimJT3nfLyg=
+=+Yuk
+-----END PGP SIGNATURE-----
