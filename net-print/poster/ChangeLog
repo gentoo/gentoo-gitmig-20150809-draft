@@ -1,6 +1,9 @@
 # ChangeLog for net-print/poster
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/poster/ChangeLog,v 1.4 2004/06/25 00:41:42 agriffis Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-print/poster/ChangeLog,v 1.5 2005/05/16 09:27:55 lanius Exp $
+
+  16 May 2005; Heinrich Wendel <lanius@gentoo.org> poster-0.1.ebuild:
+  move from gcc to toolchain funcs
 
   15 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> poster-0.1.ebuild:
   don't assign to P (bug #44712); don't unpack things in src_compile; error check

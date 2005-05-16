@@ -1,4 +1,14 @@
-MD5 54e5375d4e90edfa25c2a6eb713a4401 poster-0.1.ebuild 797
-MD5 c3ba3f5eb38b5731743de069fe589827 ChangeLog 617
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 7f78d44f2a1b7c6dee768308e09a6a49 poster-0.1.ebuild 806
+MD5 078699cd1f7768e320dd530ca9d43646 ChangeLog 721
 MD5 26b4b081d538c195dc39bcb2ec8e6f3a metadata.xml 161
 MD5 db5313dd3f594b97b8fe75c0003fea97 files/digest-poster-0.1 54
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCiGfAevY57Fted3ERAnJjAJ9XnKc9ZNk2ndb2t75XUxiXAEBv1gCfamWj
+oHkiyjPp3ay7oAg7Hl9grIU=
+=Yd6H
+-----END PGP SIGNATURE-----

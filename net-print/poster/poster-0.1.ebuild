@@ -1,8 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/poster/poster-0.1.ebuild,v 1.4 2004/06/25 00:41:42 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/poster/poster-0.1.ebuild,v 1.5 2005/05/16 09:27:55 lanius Exp $
 
-inherit gcc
+inherit toolchain-funcs
 
 S="${WORKDIR}/${PN}"
 DESCRIPTION="small utility for making a poster from an EPS file or a one-page PS document"
@@ -21,7 +21,7 @@ src_unpack() {
 }
 
 src_compile(){
-	`gcc-getCC` ${CFLAGS} poster.c -lm -o ${PN} || die "compile failed"
+	`tc-getCC` ${CFLAGS} poster.c -lm -o ${PN} || die "compile failed"
 }
 
 src_install() {
