@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/libgdiplus/libgdiplus-1.1.7.ebuild,v 1.2 2005/05/13 00:00:01 trapni Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/libgdiplus/libgdiplus-1.1.7.ebuild,v 1.3 2005/05/16 20:35:21 latexer Exp $
 
 inherit libtool eutils
 
@@ -20,7 +20,7 @@ DEPEND="sys-devel/libtool
 		sys-devel/automake
 		sys-devel/autoconf
 		virtual/x11
-		>=x11-libs/cairo-0.3.0
+		=x11-libs/cairo-0.3.0*
 		tiff? ( media-libs/tiff )
 		gif? ( media-libs/giflib )
 		jpeg? ( media-libs/jpeg )

@@ -1,6 +1,9 @@
 # ChangeLog for dev-dotnet/libgdiplus
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/libgdiplus/ChangeLog,v 1.30 2005/05/13 00:00:01 trapni Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/libgdiplus/ChangeLog,v 1.31 2005/05/16 20:35:21 latexer Exp $
+
+  16 May 2005; Peter Johanson <latexer@gentoo.org> libgdiplus-1.1.7.ebuild:
+  Fix cairo dep.
 
   12 May 2005; Christian Parpart <trapni@gentoo.org>
   libgdiplus-1.1.7.ebuild:
