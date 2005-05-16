@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/xosd
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xosd/ChangeLog,v 1.44 2005/03/25 11:46:20 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xosd/ChangeLog,v 1.45 2005/05/16 11:11:47 lanius Exp $
+
+  16 May 2005; Heinrich Wendel <lanius@gentoo.org>
+  +files/xosd-2.2.14-bmp-fixes.patch, xosd-2.2.14.ebuild:
+  fix bmp support, thx for the patches to Emil Beinrot <emilbeinroth@gmx.net>
 
 *xosd-2.2.14 (25 Mar 2005)
 

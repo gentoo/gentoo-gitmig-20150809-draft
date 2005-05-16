@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xosd/xosd-2.2.14.ebuild,v 1.2 2005/04/29 00:17:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xosd/xosd-2.2.14.ebuild,v 1.3 2005/05/16 11:11:47 lanius Exp $
 
 inherit eutils
 
@@ -17,7 +17,6 @@ IUSE="xinerama xmms bmp"
 DEPEND="virtual/x11
 	bmp? (
 		media-sound/beep-media-player
-		>=media-libs/gdk-pixbuf-0.22.0
 	)
 	xmms? (
 		media-sound/xmms
@@ -30,15 +29,17 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-m4.patch
 	epatch "${FILESDIR}"/2.2.8-xmms-trackpos.patch
 	epatch "${DISTDIR}"/${PN}_${PV}-1.diff.gz
+	epatch ${FILESDIR}/xosd-2.2.14-bmp-fixes.patch
+	automake
+	autoconf
 }
 
 src_compile() {
-	local myconf=""
-	use xinerama || myconf="${myconf} --disable-xinerama"
-	use xmms || myconf="${myconf} --disable-new-plugin"
-	use bmp || myconf="${myconf} --disable-beep_media_player"
-	econf ${myconf} || die
-	emake || die
+	econf \
+		`use_enable xinerama` \
+		`use_enable xmms new-xmms` \
+		`use_enable bmp  new-bmp` || die "econf failed"
+	emake || die "emake failed"
 }
 
 src_install() {
