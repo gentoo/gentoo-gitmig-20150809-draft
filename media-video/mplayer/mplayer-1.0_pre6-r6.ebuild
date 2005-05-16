@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre6-r6.ebuild,v 1.10 2005/05/10 20:03:32 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre6-r6.ebuild,v 1.11 2005/05/16 22:31:59 lu_zero Exp $
 
 inherit eutils flag-o-matic kernel-mod
 
@@ -495,6 +495,7 @@ src_compile() {
 		--enable-network --enable-ftp \
 		--with-reallibdir=${REALLIBDIR} \
 		--with-x11incdir=/usr/X11R6/include \
+		--disable-external-faad \
 		${myconf} || die
 
 	# we run into problems if -jN > -j1
