@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libesmtp
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libesmtp/ChangeLog,v 1.24 2005/04/08 18:03:37 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libesmtp/ChangeLog,v 1.25 2005/05/16 09:49:35 ticho Exp $
+
+  16 May 2005; Andrej Kacian <ticho@gentoo.org> libesmtp-0.8.12.ebuild,
+  libesmtp-1.0-r1.ebuild, libesmtp-1.0.1.ebuild, libesmtp-1.0.3.ebuild:
+  Inherit toolchain-funcs.eclass instead of gcc.eclass. Bug #92745.
 
   08 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> libesmtp-1.0.3.ebuild:
   Stable on ppc.
