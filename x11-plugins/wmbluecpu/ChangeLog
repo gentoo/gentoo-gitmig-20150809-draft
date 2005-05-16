@@ -1,6 +1,11 @@
 # ChangeLog for x11-plugins/wmbluecpu
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbluecpu/ChangeLog,v 1.6 2004/11/24 05:05:35 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbluecpu/ChangeLog,v 1.7 2005/05/16 10:07:43 s4t4n Exp $
+
+*wmbluecpu-0.6 (16 May 2005)
+
+  16 May 2005; Michele Noberasco <s4t4n@gentoo.org> wmbluecpu-0.6.ebuild:
+  Version bump, Closes bug #92581...
 
   23 Nov 2004; Jason Wever <weeve@gentoo.org> wmbluecpu-0.4.ebuild:
   Added ~sparc keyword.
