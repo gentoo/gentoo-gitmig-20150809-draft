@@ -1,8 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/pcf2bdf/pcf2bdf-1.04.ebuild,v 1.3 2004/07/01 10:49:01 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/pcf2bdf/pcf2bdf-1.04.ebuild,v 1.4 2005/05/16 04:21:14 usata Exp $
 
-inherit gcc
+inherit toolchain-funcs
 
 DESCRIPTION="Converts PCF fonts to BDF fonts"
 HOMEPAGE="http://www.tsg.ne.jp/GANA/S/pcf2bdf/"
@@ -10,7 +10,7 @@ SRC_URI="http://www.tsg.ne.jp/GANA/S/pcf2bdf/${P}.tgz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 IUSE=""
 
@@ -18,7 +18,7 @@ DEPEND="virtual/libc"
 S=${WORKDIR}
 
 src_compile() {
-	emake -f Makefile.gcc CC=$(gcc-getCXX) || die "emake failed"
+	emake -f Makefile.gcc CC="$(tc-getCXX)" CFLAGS="${CXXFLAGS}" || die "emake failed"
 }
 
 src_install() {
