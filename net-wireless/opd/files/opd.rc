@@ -1,0 +1,22 @@
+#!/sbin/runscript
+# Copyright 1999-2005 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+           
+depend() {
+	need bluetooth
+}
+
+start() {
+	ebegin "Starting OBEX Push Daemon"
+	start-stop-daemon --start --quiet --chuid ${OPD_USER} \
+		--exec /usr/bin/opd -- --sdp --path ${OPD_PATH} \
+		--channel ${OPD_CHANNEL} --mode ${OPD_MODE} --metadata \
+		--daemonize
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping OBEX Push Daemon"
+	start-stop-daemon --stop --quiet --name opd
+	eend $?
+}
