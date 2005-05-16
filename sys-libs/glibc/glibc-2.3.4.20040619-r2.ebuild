@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040619-r2.ebuild,v 1.12 2005/05/14 17:58:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040619-r2.ebuild,v 1.13 2005/05/16 22:23:15 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -727,6 +727,11 @@ EOF
 		do_test
 		SANDBOX_ON="${OLD_SANDBOX_ON}"
 	fi
+}
+
+pkg_preinst() {
+	# Shouldnt need to keep this updated
+	[[ -e ${ROOT}/etc/locales.build ]] && rm -f "${D}"/etc/locales.build
 }
 
 pkg_postinst() {

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20041102-r1.ebuild,v 1.9 2005/05/03 05:12:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20041102-r1.ebuild,v 1.10 2005/05/16 22:23:15 vapier Exp $
 
 inherit eutils multilib flag-o-matic toolchain-funcs versionator
 
@@ -1079,11 +1079,14 @@ pkg_preinst() {
 
 	# it appears that /lib/tls is sometimes not removed. See bug
 	# 69258 for more info.
-	if [ -d /${ROOT}/$(get_libdir)/tls ] && use nptlonly ; then
-		addwrite /${ROOT}/$(get_libdir)/
+	if [[ -d ${ROOT}/$(get_libdir)/tls ]] && use nptlonly ; then
+		addwrite "${ROOT}"/$(get_libdir)/
 		ewarn "nptlonly in USE, removing /${ROOT}/$(get_libdir)/tls..."
-		rm -rf /${ROOT}/$(get_libdir)/tls || die
+		rm -r "${ROOT}"/$(get_libdir)/tls || die
 	fi
+
+	# Shouldnt need to keep this updated
+	[[ -e ${ROOT}/etc/locales.build ]] && rm -f "${D}"/etc/locales.build
 }
 
 pkg_postinst() {

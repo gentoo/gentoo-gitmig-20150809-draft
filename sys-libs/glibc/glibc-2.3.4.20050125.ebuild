@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20050125.ebuild,v 1.38 2005/04/29 16:20:01 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20050125.ebuild,v 1.39 2005/05/16 22:23:15 vapier Exp $
 
 KEYWORDS="~amd64 ~mips ~sparc ~x86 -ppc"
 
@@ -228,11 +228,14 @@ toolchain-glibc_pkg_preinst() {
 
 	# it appears that /lib/tls is sometimes not removed. See bug
 	# 69258 for more info.
-	if [ -d /${ROOT}$(alt_libdir)/tls ] && { use nptlonly || use !nptl; }; then
-		addwrite /${ROOT}$(alt_libdir)/
+	if [[ -d ${ROOT}/$(alt_libdir)/tls ]] && { use nptlonly || use !nptl; }; then
+		addwrite "${ROOT}"/$(alt_libdir)/
 		ewarn "nptlonly or -nptl in USE, removing /${ROOT}$(alt_libdir)/tls..."
-		rm -rf /${ROOT}$(alt_libdir)/tls || die
+		rm -r "${ROOT}"/$(alt_libdir)/tls || die
 	fi
+
+	# Shouldnt need to keep this updated
+	[[ -e ${ROOT}/etc/locales.build ]] && rm -f "${D}"/etc/locales.build
 }
 
 toolchain-glibc_src_install() {

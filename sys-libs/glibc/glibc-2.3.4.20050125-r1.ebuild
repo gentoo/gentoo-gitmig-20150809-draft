@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20050125-r1.ebuild,v 1.46 2005/05/16 03:03:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20050125-r1.ebuild,v 1.47 2005/05/16 22:23:15 vapier Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -278,11 +278,14 @@ toolchain-glibc_pkg_preinst() {
 
 	# it appears that /lib/tls is sometimes not removed. See bug
 	# 69258 for more info.
-	if [ -d /${ROOT}$(alt_libdir)/tls ] && ! { want_nptl && want_linuxthreads; }; then
-		addwrite /${ROOT}$(alt_libdir)/
+	if [[ -d ${ROOT}$(alt_libdir)/tls ]] && ! { want_nptl && want_linuxthreads; }; then
+		addwrite "${ROOT}"/$(alt_libdir)/
 		ewarn "nptlonly or -nptl in USE, removing /${ROOT}$(alt_libdir)/tls..."
-		rm -rf /${ROOT}$(alt_libdir)/tls || die
+		rm -r "${ROOT}"/$(alt_libdir)/tls || die
 	fi
+
+	# Shouldnt need to keep this updated
+	[[ -e ${ROOT}/etc/locales.build ]] && rm -f "${D}"/etc/locales.build
 }
 
 toolchain-glibc_src_install() {

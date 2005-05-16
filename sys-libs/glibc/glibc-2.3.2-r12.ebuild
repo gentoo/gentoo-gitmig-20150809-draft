@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.2-r12.ebuild,v 1.10 2005/04/22 23:04:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.2-r12.ebuild,v 1.11 2005/05/16 22:23:15 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -151,10 +151,10 @@ install_locales() {
 setup_locales() {
 	if ! use userlocales ; then
 		einfo "userlocales not enabled, installing -ALL- locales..."
-	elif [ -e /etc/locales.build ]; then
+	elif [[ -e ${ROOT}/etc/locales.build ]] ; then
 		einfo "Installing locales in /etc/locales.build..."
 		echo 'SUPPORTED-LOCALES=\' > SUPPORTED.locales
-		cat /etc/locales.build | grep -v -e ^$ -e ^\# | sed 's/$/\ \\/g' \
+		cat "${ROOT}"/etc/locales.build | grep -v -e ^$ -e ^\# | sed 's/$/\ \\/g' \
 			>> SUPPORTED.locales
 		cat SUPPORTED.locales > ${S}/localedata/SUPPORTED || die
 	elif [ -e ${FILESDIR}/locales.build ]; then
@@ -694,6 +694,11 @@ EOF
 
 	# Some things want this, notably ash.
 	dosym /usr/lib/libbsd-compat.a /usr/lib/libbsd.a
+}
+
+pkg_preinst() {
+	# Shouldnt need to keep this updated
+	[[ -e ${ROOT}/etc/locales.build ]] && rm -f "${D}"/etc/locales.build
 }
 
 pkg_postinst() {

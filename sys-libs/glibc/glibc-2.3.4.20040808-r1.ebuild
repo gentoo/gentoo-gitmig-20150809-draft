@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040808-r1.ebuild,v 1.44 2005/04/22 23:04:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040808-r1.ebuild,v 1.45 2005/05/16 22:23:15 vapier Exp $
 
 inherit eutils multilib flag-o-matic toolchain-funcs versionator
 
@@ -910,6 +910,9 @@ pkg_preinst() {
 	# 2004.3 -> 2005.0 upgrade script.
 	# It can be removed after 2004.3 has been purged from portage.
 	use amd64 && [ "$(get_libdir)" == "lib64" ] && ! has_multilib_profile && fix_lib64_symlinks
+
+	# Shouldnt need to keep this updated
+	[[ -e ${ROOT}/etc/locales.build ]] && rm -f "${D}"/etc/locales.build
 }
 
 pkg_postinst() {
