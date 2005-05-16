@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/exolabtools
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/exolabtools/ChangeLog,v 1.3 2005/03/29 15:40:49 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/exolabtools/ChangeLog,v 1.4 2005/05/16 00:41:53 luckyduck Exp $
+
+  16 May 2005; Jan Brinkmann <luckyduck@gentoo.org>
+  exolabtools-1.0_p20050205.ebuild:
+  stable on amd64 and x86, ~ppc added
 
   29 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org>
   exolabtools-1.0_p20050205.ebuild:
