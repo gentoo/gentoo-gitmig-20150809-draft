@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/slune/slune-1.0.7.ebuild,v 1.1 2005/05/08 00:57:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/slune/slune-1.0.7.ebuild,v 1.2 2005/05/16 22:09:37 mr_bones_ Exp $
 
 inherit distutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://download.gna.org/slune/Slune-${PV}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE=""
 
 DEPEND="virtual/x11
