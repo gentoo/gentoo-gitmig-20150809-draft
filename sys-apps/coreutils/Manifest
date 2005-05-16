@@ -3,7 +3,7 @@ MD5 0a532171a448adf8d523ca631e388f3b coreutils-5.2.1-r2.ebuild 4383
 MD5 a041d2d2ace692ab73aa932cae01debf coreutils-5.2.1-r3.ebuild 4205
 MD5 814ab16ac6cac4e2825942dad9b41e69 coreutils-5.2.1-r4.ebuild 4453
 MD5 7ddbb3bd0c85181c0bc342e7dc41e239 coreutils-5.2.1-r5.ebuild 4619
-MD5 1ec944599c021653cd61bb244d01a2d0 coreutils-5.2.1-r6.ebuild 4462
+MD5 2363cef984f499e4dd5945b23b949c5f coreutils-5.2.1-r6.ebuild 4303
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 c63fee729a210ba400b1fb34bbbe76c5 files/DIR_COLORS 4053
 MD5 a7f49f56e12b6b16a5c347a666fb9b37 files/digest-coreutils-5.2.1-r6 149

@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.2.1-r6.ebuild,v 1.3 2005/04/12 03:53:24 dostrow Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.2.1-r6.ebuild,v 1.4 2005/05/16 22:26:04 vapier Exp $
 
-inherit eutils flag-o-matic
+inherit eutils flag-o-matic toolchain-funcs
 
 PATCH_VER=0.11
 PATCHDIR="${WORKDIR}/patch"
@@ -66,14 +66,7 @@ src_unpack() {
 	# try to re-build the manpages by running `./bin --help`.  
 	# When cross-compiling, we can't do that since 'bin' isn't 
 	# a native binary, so let's just install outdated man-pages.
-	[[ ${CTARGET:-${CHOST}} != ${CHOST} ]] && touch man/*.1
-
-	# Rebuild of manpage seq.1 fails with ppc64 hardened so
-	# We'll install the outdated copy.
-	if use ppc64 && use hardened; then
-	    touch man/seq.1
-	fi
-
+	tc-is-cross-compiler && touch man/*.1
 }
 
 src_compile() {
