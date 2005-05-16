@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a9a4ca05a5661387f5deb046ac747591 buffer-1.19-r2.ebuild 802
 MD5 85e8a3fb5b122d810ad22023e0fcbac9 ChangeLog 1561
+MD5 8c9adb37f66774ab434e168fcda10722 buffer-1.19-r2.ebuild 800
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 1562293b44ef95283c849ae6909ee0a2 files/1.19-deb-gentoo.patch 8422
 MD5 1354a192cd741f1b34515ff718c8de27 files/digest-buffer-1.19-r2 59
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCKu/qI1lqEGTUzyQRAkC2AKCZ1S3/KW/V+kyRtO0UnybLz5BGDACeOjGH
-8yBERkfR6Zwky4jP3k63aAE=
-=If/n
------END PGP SIGNATURE-----
