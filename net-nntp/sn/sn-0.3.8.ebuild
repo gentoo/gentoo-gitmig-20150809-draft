@@ -1,6 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/sn/sn-0.3.8.ebuild,v 1.1 2005/01/17 20:11:50 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/sn/sn-0.3.8.ebuild,v 1.2 2005/05/16 17:08:34 swegener Exp $
+
+inherit toolchain-funcs
 
 DESCRIPTION="Hassle-free Usenet news system for small sites"
 SRC_URI="http://infa.abo.fi/~patrik/sn/files/${P}.tar.bz2"
@@ -21,6 +23,7 @@ src_compile() {
 	echo ${CFLAGS} >>cc-flags
 
 	emake -j1 \
+		CC="$(tc-getCC)" LD="$(tc-getCC)" \
 		SNROOT=/var/spool/news \
 		BINDIR=/usr/sbin \
 		MANDIR=/usr/share/man \
@@ -29,16 +32,12 @@ src_compile() {
 
 src_install() {
 	dodir /var/spool/news /usr/sbin /usr/share/man/man8
-	mknod -m 600 ${D}/var/spool/news/.fifo p
+	mknod -m 600 "${D}"/var/spool/news/.fifo p
 	make install \
-		SNROOT=${D}/var/spool/news \
-		BINDIR=${D}/usr/sbin \
-		MANDIR=${D}/usr/share/man \
+		SNROOT="${D}"/var/spool/news \
+		BINDIR="${D}"/usr/sbin \
+		MANDIR="${D}"/usr/share/man \
 		|| die "make install failed"
-	dodoc CHANGES FAQ INSTALL* INTERNALS README* THANKS TODO
-}
-
-pkg_postinst() {
-	chown news:news /var/spool/news
-	chown news:news /var/spool/news/.fifo
+	dodoc CHANGES FAQ INSTALL* INTERNALS README* THANKS TODO || die "dodoc failed"
+	fowners news:news /var/spool/news{,/.fifo}
 }
