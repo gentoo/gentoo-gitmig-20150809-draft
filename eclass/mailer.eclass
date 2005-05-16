@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mailer.eclass,v 1.7 2005/05/01 21:59:29 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mailer.eclass,v 1.8 2005/05/16 21:01:21 slarti Exp $
 
 #
 # Original Authors: Fernando J. Pereda <ferdy@gentoo.org>
@@ -70,7 +70,7 @@ mailer_set_profile() {
 mailer_wipe_confs() {
 	local x i
 
-	ebegin "Wiping all non-used mailer profiles"
+	ebegin "Wiping all unused mailer profiles"
 		for x in /etc/mail/*.mailer ; do
 			i=${x##*/}
 			i=${i%.mailer}
@@ -83,7 +83,15 @@ mailer_wipe_confs() {
 }
 
 mailer_pkg_postinst() {
-	use mailwrapper && mailer_set_profile
+	if use mailwrapper ; then
+		einfo " "
+		einfo "Use either net-mail/mailer-config or app-admin/eclectic to change"
+		einfo "to this mailer profile:"
+		einfo " "
+		einfo "    mailer-config --set-profile ${P}"
+		einfo "    eclectic mailer set ${P}"
+		einfo " "
+	fi
 }
 
 mailer_pkg_postrm() {
