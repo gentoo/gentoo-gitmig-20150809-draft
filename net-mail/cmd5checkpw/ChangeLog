@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/cmd5checkpw
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cmd5checkpw/ChangeLog,v 1.24 2005/03/15 08:34:16 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cmd5checkpw/ChangeLog,v 1.25 2005/05/16 09:55:15 ticho Exp $
+
+  16 May 2005; Andrej Kacian <ticho@gentoo.org> cmd5checkpw-0.22-r1.ebuild,
+  cmd5checkpw-0.22-r2.ebuild, cmd5checkpw-0.22-r3.ebuild:
+  0.22-r3 stable on x86 and amd64. Inherit toolchain-funcs.eclass instead of
+  gcc.eclass. Bug #92745.
 
 *cmd5checkpw-0.22-r3 (15 Mar 2005)
 
@@ -22,7 +27,7 @@
   cmd5checkpw-0.22-r2.ebuild:
   Stable on sparc wrt #78256
 
-  13 Feb 2005; Bryan Østergaard <kloeri@gentoo.org>
+  13 Feb 2005; Bryan Ăstergaard <kloeri@gentoo.org>
   cmd5checkpw-0.22-r2.ebuild:
   Stable on alpha, bug 78256.
 
@@ -30,7 +35,7 @@
   cmd5checkpw-0.22-r2.ebuild:
   Stable on ppc and hppa.
 
-  13 Feb 2005; Olivier Crête <tester@gentoo.org> cmd5checkpw-0.22-r2.ebuild:
+  13 Feb 2005; Olivier CrĂŞte <tester@gentoo.org> cmd5checkpw-0.22-r2.ebuild:
   Marking stable wrt security bug #78256
 
 *cmd5checkpw-0.22-r2 (13 Feb 2005)

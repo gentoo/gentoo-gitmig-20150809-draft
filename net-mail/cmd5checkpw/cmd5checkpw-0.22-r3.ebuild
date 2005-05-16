@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cmd5checkpw/cmd5checkpw-0.22-r3.ebuild,v 1.1 2005/03/15 08:34:16 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cmd5checkpw/cmd5checkpw-0.22-r3.ebuild,v 1.2 2005/05/16 09:55:15 ticho Exp $
 
-inherit eutils gcc
+inherit eutils toolchain-funcs
 
 DESCRIPTION="A checkpassword compatible authentication program that used CRAM-MD5 authentication mode."
 SRC_URI="http://members.elysium.pl/brush/cmd5checkpw/dist/${P}.tar.gz"
@@ -10,7 +10,7 @@ HOMEPAGE="http://members.elysium.pl/brush/cmd5checkpw/"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~sparc x86"
 IUSE=""
 
 DEPEND="virtual/libc"
@@ -43,8 +43,8 @@ src_compile() {
 		-e "/^LDFLAGS/ a LDFLAGS+='-Wl,-z,now'" \
 		< Makefile.orig > Makefile
 	cd ${S}
-	echo "$(gcc-getCC) ${CFLAGS}" > conf-cc
-	echo "$(gcc-getCC) ${LDFLAGS}" > conf-ld
+	echo "$(tc-getCC) ${CFLAGS}" > conf-cc
+	echo "$(tc-getCC) ${LDFLAGS}" > conf-ld
 	make || die
 }
 
