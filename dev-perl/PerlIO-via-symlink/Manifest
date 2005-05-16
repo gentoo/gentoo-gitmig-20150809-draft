@@ -1,4 +1,14 @@
-MD5 0afe21b731a19bc71284a22cdd120c44 ChangeLog 867
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 f0a572c417c56ae4094166bdec884499 ChangeLog 978
 MD5 1e7dded402e236d45bd25a38c70c995c metadata.xml 223
-MD5 ecafbe05aa5f96e2fd09528f96465c35 PerlIO-via-symlink-0.05.ebuild 529
+MD5 2db341a71e54895b320e3169b9a3750e PerlIO-via-symlink-0.05.ebuild 539
 MD5 4618faf49945e7faa9b3f84f1087ed84 files/digest-PerlIO-via-symlink-0.05 74
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFCiL4gKRy60XGEcJIRAvBiAJ9h13NmoRIJSNMB1K5ZXls6IsgtnwCgq62w
+WLguhNYX4cqP/OfoXhtA/PU=
+=Dtb6
+-----END PGP SIGNATURE-----

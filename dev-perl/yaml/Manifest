@@ -1,8 +1,18 @@
-MD5 65c847ec792dc4a2f719c74959d823cd yaml-0.36.ebuild 665
-MD5 4f75bd672ccd73aef44e583acbd13c61 yaml-0.39.ebuild 667
-MD5 efb95656fad127185c66f46b1beb95bf ChangeLog 1514
-MD5 415d20775b4d37de9438f72c476519a4 yaml-0.35.ebuild 637
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 3a39cd3e0120edb8f4f3840fde0c0213 ChangeLog 1604
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 415d20775b4d37de9438f72c476519a4 yaml-0.35.ebuild 637
+MD5 4a97a9706be49a9a68fb7f4d609a848e yaml-0.36.ebuild 663
+MD5 4f75bd672ccd73aef44e583acbd13c61 yaml-0.39.ebuild 667
 MD5 15f85691d9786b8330a2d12a794f01a8 files/digest-yaml-0.35 60
 MD5 762e5b7a55af9cdaa283ead3d49504ef files/digest-yaml-0.36 60
 MD5 e81d6f91ee6cd06aeb46872bd1d0c911 files/digest-yaml-0.39 60
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFCiL8nKRy60XGEcJIRAoAZAKCQpu4wF0xjLKTsyT7qG+1XiyVtOACgtXdD
+mLUPealAnwrnqqjkkG/uu5o=
+=Le2o
+-----END PGP SIGNATURE-----
