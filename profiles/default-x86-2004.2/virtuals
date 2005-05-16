@@ -64,3 +64,4 @@ virtual/gnustep-back    	gnustep-base/gnustep-back-art
 virtual/pdfviewer		app-text/xpdf
 virtual/psviewer		app-text/gv
 virtual/motif          x11-libs/openmotif
+virtual/utempter 		sys-apps/utempter

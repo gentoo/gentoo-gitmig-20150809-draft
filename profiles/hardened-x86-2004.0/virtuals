@@ -58,3 +58,4 @@ virtual/w3m		www-client/w3m
 virtual/pdfviewer		app-text/xpdf
 virtual/psviewer		app-text/gv
 virtual/motif          x11-libs/openmotif
+virtual/utempter 		sys-apps/utempter
