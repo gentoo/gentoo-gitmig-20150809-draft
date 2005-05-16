@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/gzip-x86/gzip-x86-0.91.ebuild,v 1.2 2005/01/01 11:46:02 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/gzip-x86/gzip-x86-0.91.ebuild,v 1.3 2005/05/16 02:26:51 vapier Exp $
 
-inherit gcc
+inherit toolchain-funcs
 
 MY_P=${PN/-/_}-${PV}
 S=${WORKDIR}/${MY_P}
@@ -12,10 +12,10 @@ SRC_URI="http://www.BitWagon.com/ftp/${MY_P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="-* ~x86 ~amd64"
+KEYWORDS="-* amd64 x86"
 IUSE=""
 
-DEPEND="virtual/libc"
+DEPEND=""
 PROVIDE="virtual/gzip"
 
 src_unpack() {
@@ -27,10 +27,10 @@ src_unpack() {
 
 src_compile() {
 	econf --bindir=/bin || die
-	emake CCAS="$(gcc-getCC)" || die
+	emake CCAS="$(tc-getCC)" || die
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die
 	dodoc AUTHORS ChangeLog NEWS README THANKS TODO
 }

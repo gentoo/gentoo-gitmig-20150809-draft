@@ -1,6 +1,4 @@
 MD5 1570dfd8896ac0f01811176d4c67b7ea ChangeLog 791
-MD5 7e413b7506e277779c1f7cbaf9e9f117 gzip-x86-0.90.ebuild 578
 MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
-MD5 f49eed2a7dcbbb737e438d1affaba02f gzip-x86-0.91.ebuild 782
-MD5 30ea90807bc53110bd9192ea05b16412 files/digest-gzip-x86-0.90 62
+MD5 bb020343b00b246b29ca7379e79f9f5f gzip-x86-0.91.ebuild 777
 MD5 cd470c57b8574a76b4c902c7ff139137 files/digest-gzip-x86-0.91 62
