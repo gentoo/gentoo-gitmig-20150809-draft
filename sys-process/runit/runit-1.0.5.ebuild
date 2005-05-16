@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/runit/runit-1.0.5.ebuild,v 1.1 2005/03/03 16:08:25 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/runit/runit-1.0.5.ebuild,v 1.2 2005/05/16 02:28:25 vapier Exp $
 
-inherit gcc flag-o-matic
+inherit toolchain-funcs flag-o-matic
 
 DESCRIPTION="A UNIX init scheme with service supervision"
 HOMEPAGE="http://smarden.org/runit/"
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
 IUSE="static"
 
-DEPEND="virtual/libc"
+DEPEND=""
 
 S=${WORKDIR}/admin/${P}
 
@@ -25,8 +25,8 @@ src_unpack() {
 	sed -i -e 's:-static: :' src/Makefile
 	use static && append-ldflags -static
 
-	echo "$(gcc-getCC) ${CFLAGS}"  > src/conf-cc
-	echo "$(gcc-getCC) ${LDFLAGS}" > src/conf-ld
+	echo "$(tc-getCC) ${CFLAGS}"  > src/conf-cc
+	echo "$(tc-getCC) ${LDFLAGS}" > src/conf-ld
 }
 
 src_compile() {

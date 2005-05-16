@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a34208554795668166edac85b8292b86 runit-1.0.5.ebuild 1664
 MD5 3a24a6a9823b5e8df9bd70436ab899ba ChangeLog 606
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+MD5 ffb1ffa5c5d33922de9a9a55beb1e1ec runit-1.0.5.ebuild 1661
 MD5 c40ea29a84ae96a8d38976a36c963335 files/1 175
 MD5 3b574bfad17bf4d2d22e025289d2bad7 files/2 551
 MD5 14c3375cd167d9c7b1b89febd8de64e6 files/3 377
-MD5 ca1dc1a0ccab2afbac7a8540c74bd612 files/finish.getty 30
-MD5 0c9a4b2732a7c102b84593eae16b34c7 files/digest-runit-1.0.5 62
 MD5 9f1dcf4c31a2d9df9336b8d1c9b13a83 files/ctrlaltdel 189
+MD5 0c9a4b2732a7c102b84593eae16b34c7 files/digest-runit-1.0.5 62
+MD5 ca1dc1a0ccab2afbac7a8540c74bd612 files/finish.getty 30
 MD5 2d1e9a75a18249dec3a71503c5266d55 files/run.getty 44
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCJ2oSI1lqEGTUzyQRAhDPAJ4ms9r1eVKM1Zm4ToLbPZqhZyTfdgCgmnQk
-g6o8G/GhFxTKtFa7d3AA264=
-=hxol
------END PGP SIGNATURE-----
