@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 1f5f6e1d7866c22421cdccd9015761c4 PEAR-HTML_Template_Flexy-1.2.1.ebuild 494
 MD5 7efcfa400966bae77e59601a1a8fae66 ChangeLog 2155
 MD5 f958dd9a8f69d6a7e9b028c1497fcc1c PEAR-HTML_Template_Flexy-0.6.3.ebuild 478
 MD5 34b376f52ca199fffb4e52b83169574a metadata.xml 156
 MD5 31ed1999f56230ec3a6a0e0f131d4112 files/digest-PEAR-HTML_Template_Flexy-0.6.3 73
 MD5 6e93cc27e51a7ce46059c3ffa138af8b files/digest-PEAR-HTML_Template_Flexy-1.2.1 74
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCiQJ7aGfFFLhbXWkRAqPpAJ0bi1z9iEMyb5eMxxqu9wHaWrEBrACdGK7V
+tgtwZTjT1cHXTcaWac4duO0=
+=fdoU
+-----END PGP SIGNATURE-----
