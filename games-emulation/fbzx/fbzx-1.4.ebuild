@@ -1,8 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/fbzx/fbzx-1.4.ebuild,v 1.5 2004/08/27 02:58:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/fbzx/fbzx-1.4.ebuild,v 1.6 2005/05/16 17:31:34 dholm Exp $
 
-inherit games eutils gcc
+inherit games eutils toolchain-funcs
 
 DESCRIPTION="A Sinclair Spectrum emulator, designed to work at full screen using the FrameBuffer"
 HOMEPAGE="http://www.rastersoft.com/fbzx.html"
@@ -26,7 +26,7 @@ src_unpack() {
 		-e "s|/usr/share/spectrum|${GAMES_DATADIR}/${PN}|g" \
 		emulator.c || die "sed failed"
 	sed -i \
-		-e "s:gcc:$(gcc-getCC):" \
+		-e "s:gcc:$(tc-getCC):" \
 		-e "s:-O2:${CFLAGS}:" \
 		Makefile
 	epatch ${FILESDIR}/${PV}-endian.patch
