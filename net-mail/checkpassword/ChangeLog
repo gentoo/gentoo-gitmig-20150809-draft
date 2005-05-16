@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/checkpassword
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/checkpassword/ChangeLog,v 1.17 2004/07/05 02:29:19 robbat2 Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/checkpassword/ChangeLog,v 1.18 2005/05/16 09:50:49 ticho Exp $
+
+  16 May 2005; Andrej Kacian <ticho@gentoo.org>
+  checkpassword-0.90-r1.ebuild:
+  Inherit toolchain-funcs.eclass instead of gcc.eclass. Bug #92745.
 
   04 Jul 2004; Robin H. Johnson <robbat2@gentoo.org>
   checkpassword-0.90-r1.ebuild:

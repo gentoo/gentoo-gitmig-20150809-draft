@@ -1,8 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/checkpassword/checkpassword-0.90-r1.ebuild,v 1.14 2004/07/05 02:29:19 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/checkpassword/checkpassword-0.90-r1.ebuild,v 1.15 2005/05/16 09:50:49 ticho Exp $
 
-inherit eutils gcc
+inherit eutils toolchain-funcs
 
 DESCRIPTION="A uniform password checking interface for root applications"
 HOMEPAGE="http://cr.yp.to/checkpwd.html"
@@ -23,8 +23,8 @@ src_unpack() {
 	LDFLAGS="${LDFLAGS} -s"
 	use pic && CFLAGS="${CFLAGS} -fPIC"
 	use static && LDFLAGS="${LDFLAGS} -static"
-	echo "$(gcc-getCC) ${CFLAGS}" > conf-cc
-	echo "$(gcc-getCC) ${LDFLAGS}" > conf-ld
+	echo "$(tc-getCC) ${CFLAGS}" > conf-cc
+	echo "$(tc-getCC) ${LDFLAGS}" > conf-ld
 }
 
 src_compile() {
