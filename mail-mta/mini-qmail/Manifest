@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 e9c5a9b46da9c71508938329dd2ff801 ChangeLog 893
 MD5 f122df2231e2b47b96dba6895be1e7e8 metadata.xml 223
-MD5 6ab2aa0f72ecd69af4af8b628bce89c6 mini-qmail-1.05.ebuild 2581
+MD5 ffb7606440669f41c2c60b1421acae97 mini-qmail-1.05.ebuild 2543
 MD5 d9fc73bed819afc98b740f40c274f16c files/1.05-config-mini-help.patch 672
 MD5 38ce537c00a3ca069dbeaee4adb6b990 files/99qmail 84
 MD5 0d6c1596674bf81103e39f12accab64e files/digest-mini-qmail-1.05 134
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBPZ7rHTu7gpaalycRAkrdAJ9PuVjKtvRKII1w3izfC4R90lDJJQCgvrtf
-KwTRvu9xzNIBEt9nCEBLK/4=
-=rH5z
------END PGP SIGNATURE-----
