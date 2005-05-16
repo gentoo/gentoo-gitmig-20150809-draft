@@ -1,0 +1,11 @@
+# ChangeLog for dev-java/jakarta-tomcat-jasper
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jakarta-tomcat-jasper/ChangeLog,v 1.1 2005/05/16 14:30:20 luckyduck Exp $
+
+*jakarta-tomcat-jasper-2 (16 May 2005)
+
+  16 May 2005; Jan Brinkmann <luckyduck@gentoo.org> +metadata.xml,
+  +jakarta-tomcat-jasper-2.ebuild:
+  Initial import, ebuild based on the contribution by Josh Nichols
+  <nichoj@alum.rpi.edu>. Fixes #92458
+

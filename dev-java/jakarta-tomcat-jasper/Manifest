@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 26e5e70a09436d893dbeee056eea047b jakarta-tomcat-jasper-2.ebuild 2440
+MD5 5f0b496f1526f36dbf6772e191d6f5b2 ChangeLog 484
+MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
+MD5 af26ca4772989a2090085a6e24b71628 files/digest-jakarta-tomcat-jasper-2 78
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCiK6U06ebR+OMO78RArEaAJ9zFKUzJIcH2f3rW+lWf8QvjNrd/ACdGho2
+Wf8iqYFhHm3N4vdlqQgG4hs=
+=xaQu
+-----END PGP SIGNATURE-----
