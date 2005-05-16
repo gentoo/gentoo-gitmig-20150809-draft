@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/blackdown-jre-1.4.2.01-r1.ebuild,v 1.1 2005/03/25 22:37:07 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/blackdown-jre-1.4.2.01-r1.ebuild,v 1.2 2005/05/16 00:54:21 luckyduck Exp $
 
 inherit java versionator
 
@@ -24,7 +24,7 @@ IUSE="mozilla"
 DEPEND="virtual/libc
 	>=dev-java/java-config-1.2.11
 	>=sys-apps/sed-4"
-
+RDEPEND="x86? ( sys-libs/lib-compat )"
 PROVIDE="virtual/jre-1.4.2
 	virtual/java-scheme-2"
 

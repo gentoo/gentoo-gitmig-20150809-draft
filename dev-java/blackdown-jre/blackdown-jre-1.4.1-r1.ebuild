@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/blackdown-jre-1.4.1-r1.ebuild,v 1.6 2005/05/15 23:26:17 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/blackdown-jre-1.4.1-r1.ebuild,v 1.7 2005/05/16 00:54:21 luckyduck Exp $
 
 inherit java toolchain-funcs
 
@@ -25,7 +25,8 @@ DEPEND="virtual/libc
 	>=sys-apps/sed-4"
 RDEPEND="${DEPEND}
 	sparc? ( >=sys-devel/gcc-3.2 )
-	amd64? ( >=sys-devel/gcc-3.2 )"
+	amd64? ( >=sys-devel/gcc-3.2 )
+	x86? ( sys-libs/lib-compat )"
 PROVIDE="virtual/jre-1.4.1
 	virtual/java-scheme-2"
 SLOT="0"
