@@ -1,15 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 891b20c8eced85b7ee4c72a7fdc92fcd jclasslib-2.0.ebuild 1116
-MD5 e65589cbc7e9bc7293f84d0785fb774a ChangeLog 757
+MD5 039a0f2562886822a31f5753dffb7e31 jclasslib-3.0.ebuild 1326
+MD5 8aff2aadc56abe45f1e27dbb1a938f25 jclasslib-2.0.ebuild 1250
+MD5 2cf76dddc8037e2891965a2cf4d12c7c ChangeLog 1036
 MD5 4dad079a28768d183022cff420f01281 metadata.xml 220
+MD5 e840661033b69e1883e7ad44b1141e4a files/jclasslib-3.0-buildxml.patch 840
 MD5 be1d000b16835290b454e72c2ba1eacf files/build.xml.patch 857
 MD5 3cfd3f6d617f048986d0291ea854bcac files/digest-jclasslib-2.0 71
+MD5 ac08127cc20110e4cba5c1bcf98d37b4 files/digest-jclasslib-3.0 71
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFCTucV/rLF9B432nYRAnukAJ0V9hWtKnMx0x4Hdktp66iNf8mIUQCffE+L
-oDVCseIBsbgn9TjACDjgSA8=
-=Ah3h
+iD8DBQFCiJZA06ebR+OMO78RAmxHAJ9bUDsFOV6F+i5LY8DU4hqJ2rUpcwCfaH4h
+qGzN3/6KH/zeufWjEfQdbSM=
+=9mIw
 -----END PGP SIGNATURE-----

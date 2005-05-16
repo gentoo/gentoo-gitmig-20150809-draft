@@ -1,6 +1,14 @@
 # ChangeLog for dev-java/jclasslib
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jclasslib/ChangeLog,v 1.4 2004/10/20 09:11:31 absinthe Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jclasslib/ChangeLog,v 1.5 2005/05/16 12:46:34 luckyduck Exp $
+
+*jclasslib-3.0 (16 May 2005)
+
+  16 May 2005; Jan Brinkmann <luckyduck@gentoo.org>
+  +files/jclasslib-3.0-buildxml.patch, jclasslib-2.0.ebuild,
+  +jclasslib-3.0.ebuild:
+  new upstream version. marked 2.0 stable on amd64, ppc and x86. introduced
+  support for the source useflag
 
   20 Oct 2004; Dylan Carlson <absinthe@gentoo.org> jclasslib-2.0.ebuild:
   Keywords ~amd64.
