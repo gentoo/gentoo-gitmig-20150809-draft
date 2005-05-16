@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 602635223f3b2efbdd50dfbe4852e645 bemused-1.73.ebuild 911
+MD5 d36d0b66ae448b8135c7af96285a9cf9 ChangeLog 578
+MD5 9672ea9b2345c8f1d48127a47e7e5de7 metadata.xml 451
+MD5 1f17e8b8c057d4da4a8cb7cd4da00c55 files/digest-bemused-1.73 74
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCiN3SjiC39V7gKu0RAtsIAJ9UAbmymhc8O72EP8BB1FQxJqPp9QCcCO+D
+cSGXgTT5CyUUt5jxHEgBLDQ=
+=V88W
+-----END PGP SIGNATURE-----

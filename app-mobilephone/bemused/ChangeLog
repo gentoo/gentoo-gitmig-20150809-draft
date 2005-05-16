@@ -1,0 +1,15 @@
+# ChangeLog for app-mobilephone/bemused
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/bemused/ChangeLog,v 1.1 2005/05/16 17:51:52 mrness Exp $
+
+  16 May 2005; Alin Nastac <mrness@gentoo.org> metadata.xml,
+  bemused-1.73.ebuild:
+  Moved from media-sound/bemused to app-mobilephone/bemused.
+
+*bemused-1.73 (06 Jan 2005)
+
+  06 Jan 2005; Chris White <chriswhite@gentoo.org> +metadata.xml,
+  +bemused-1.73.ebuild:
+  Initial import into the tree. Fixes bug #40581. Thanks to Dirk-Jan Heijs for
+  the ebuild.
+
