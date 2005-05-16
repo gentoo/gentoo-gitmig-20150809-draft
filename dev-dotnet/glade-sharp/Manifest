@@ -3,7 +3,7 @@ Hash: SHA1
 
 MD5 74ece25e54c7e6f644d0e1c8d1a3d6ae glade-sharp-1.0.8.ebuild 379
 MD5 8e6d0eb2b933e76f411cdcaa5497d87c glade-sharp-1.9.2.ebuild 408
-MD5 8e4b3366cf32a8d9880528f24dd47398 ChangeLog 2529
+MD5 ff1abb45bf4a72c9822f77b90e55806c ChangeLog 2640
 MD5 f61af9ffe92c91e54629f467c6941a62 glade-sharp-1.9.3.1.ebuild 416
 MD5 a60fdfbce7c7cfc52187ff86a7f8bbf8 metadata.xml 222
 MD5 43f1240e0295253688137cc497150ac9 glade-sharp-1.9.3.ebuild 408
@@ -16,7 +16,7 @@ MD5 284fbaa2e02c9f1dca27440457411e0b files/digest-glade-sharp-1.9.3 147
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCiRZyCHk4+ZoBpvsRAunxAJ0Qi4vopQuvv6Z/c+nBBABrlrwb7QCfax4w
-sq2J4HAVxWbSRInDVvjfGM0=
-=IXvK
+iD8DBQFCiRsRCHk4+ZoBpvsRAiDrAJ0S2w8kx1Az0T+UujysDzD3vxh7egCgosUk
+TsdbArlsSiOiSW+whkfPfiw=
+=FM6G
 -----END PGP SIGNATURE-----
