@@ -1,6 +1,13 @@
 # ChangeLog for x11-misc/ttmkfdir
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/ttmkfdir/ChangeLog,v 1.52 2005/02/08 02:46:34 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/ttmkfdir/ChangeLog,v 1.53 2005/05/16 14:46:32 seemant Exp $
+
+*ttmkfdir-3.0.9-r3 (16 May 2005)
+
+  16 May 2005; Seemant Kulleen <seemant@gentoo.org> -ttmkfdir-3.0.9.ebuild,
+  -ttmkfdir-3.0.9-r1.ebuild, +ttmkfdir-3.0.9-r3.ebuild:
+  change installation to /usr from /usr/X11R6. Thanks to TGL
+  <degrenier@easyconnect.fr> in bug #90803
 
   07 Feb 2005; Donnie Berkholz <spyderous@gentoo.org>;
   ttmkfdir-3.0.9-r2.ebuild:
