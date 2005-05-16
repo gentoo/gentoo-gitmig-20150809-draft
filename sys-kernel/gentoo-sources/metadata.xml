@@ -3,12 +3,9 @@
 <pkgmetadata>
 <herd>kernel</herd>
 <maintainer>
-  <email>livewire@gentoo.org</email>
-</maintainer>
-<maintainer>
   <email>plasmaroo@gentoo.org</email>
 </maintainer>
 <maintainer>
-  <email>x86-kernel@gentoo.org</email>
+  <email>dsd@gentoo.org</email>
 </maintainer>
 </pkgmetadata>
