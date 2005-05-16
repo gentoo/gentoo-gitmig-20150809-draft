@@ -1,15 +1,15 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 93d016b3b39709b0b7228fa7f6d0eb21 nntpswitch-0.11.ebuild 2070
-MD5 8cfbefb9b4b290ebd585254151ca9e1b ChangeLog 612
+MD5 4e9170cdf1105583b29a644b36976a10 nntpswitch-0.11.ebuild 2133
+MD5 d9b8bfad63e064a6c7d9d9b05a80444b ChangeLog 718
 MD5 d4764f5c17f5e0b416f7ddf271c77d71 metadata.xml 161
 MD5 43a13b7a5681200f7038c535e4f18243 files/digest-nntpswitch-0.11 66
 MD5 7ac58dcbcfafaa92e5b379c271de68d8 files/nntpswitch.init.d 519
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFB7DHSI1lqEGTUzyQRAkL/AKC3IycQfU8LqbKmQDKLYMgXFlyOmgCgmNV2
-D39XTEcPDahHeC9T4npRIQk=
-=2d1P
+iD8DBQFCiNcsI1lqEGTUzyQRAq27AJ9X7umxAlzeOOZLFW3c7adoQqMglQCfVdlp
+vBEbQAqLlyNbpFHeqf34U6A=
+=yHwe
 -----END PGP SIGNATURE-----

@@ -1,6 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/nntpswitch/nntpswitch-0.11.ebuild,v 1.1 2005/01/17 19:40:02 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/nntpswitch/nntpswitch-0.11.ebuild,v 1.2 2005/05/16 17:23:32 swegener Exp $
+
+inherit toolchain-funcs
 
 DESCRIPTION="Load Balancing NNTP Router"
 HOMEPAGE="http://www.nntpswitch.org/"
@@ -17,21 +19,22 @@ RDEPEND="mysql? ( dev-db/mysql )
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4"
 
-S=${WORKDIR}/${PN}
+S="${WORKDIR}"/${PN}
 
 src_unpack() {
 	unpack ${A}
 
 	sed -i \
+		-e "s/gcc/$(tc-getCC)/" \
 		-e "s/-O3/${CFLAGS}/" \
 		-e "s:lib/nntpswitch:$(get_libdir)/nntpswitch:" \
-		${S}/Makefile
+		"${S}"/Makefile
 	sed -i \
 		-e "s:/usr/local/lib:/usr/$(get_libdir)/nntpswitch:" \
-		${S}/nntpswitch.conf.in
+		"${S}"/nntpswitch.conf.in
 	sed -i \
 		-e "s:/usr/local/etc/nntpswitch/passwd:/etc/nntpswitch/passwd:" \
-		${S}/etc/access.conf
+		"${S}"/etc/access.conf
 }
 
 src_compile() {
@@ -63,7 +66,7 @@ src_install() {
 	dosym /var/lib/nntpswitch/active /etc/nntpswitch/active || die "dosym failed"
 	dosym /var/lib/nntpswitch/newsgroups /etc/nntpswitch/newsgroups || die "dosym failed"
 
-	newinitd ${FILESDIR}/nntpswitch.init.d nntpswitch || die "newinitd failed"
+	newinitd "${FILESDIR}"/nntpswitch.init.d nntpswitch || die "newinitd failed"
 }
 
 pkg_postinst() {
