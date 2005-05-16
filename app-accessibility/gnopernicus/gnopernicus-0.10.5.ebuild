@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnopernicus/gnopernicus-0.10.5.ebuild,v 1.4 2005/05/16 21:41:27 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnopernicus/gnopernicus-0.10.5.ebuild,v 1.5 2005/05/16 22:11:37 leonardop Exp $
 
 inherit gnome2
 
@@ -25,7 +25,7 @@ RDEPEND=">=gnome-base/gconf-2.6.1
 	>=app-accessibility/gnome-mag-0.11.7
 	>=gnome-extra/libgail-gnome-1.0
 	virtual/x11
-	brltty? ( app-accessibility/brltty )"
+	brltty? ( >=app-accessibility/brltty-3.6 )"
 
 DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.29
