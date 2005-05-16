@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/blowfishj
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blowfishj/ChangeLog,v 1.4 2005/04/03 14:01:17 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blowfishj/ChangeLog,v 1.5 2005/05/16 00:30:50 luckyduck Exp $
+
+  16 May 2005; Jan Brinkmann <luckyduck@gentoo.org> blowfishj-2.14.ebuild:
+  stable on amd64, ppc and x86
 
 *blowfishj-2.14 (03 Apr 2005)
 
