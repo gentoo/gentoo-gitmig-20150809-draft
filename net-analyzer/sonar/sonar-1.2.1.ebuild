@@ -1,8 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sonar/sonar-1.2.1.ebuild,v 1.4 2004/07/01 20:21:08 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sonar/sonar-1.2.1.ebuild,v 1.5 2005/05/16 01:20:41 vanquirius Exp $
 
-inherit gcc eutils
+inherit toolchain-funcs eutils
 
 IUSE=""
 DESCRIPTION="network reconnaissance utility"

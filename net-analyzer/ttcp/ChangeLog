@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/ttcp
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ttcp/ChangeLog,v 1.9 2005/02/24 16:48:24 j4rg0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ttcp/ChangeLog,v 1.10 2005/05/16 01:17:06 vanquirius Exp $
+
+  15 May 2005; Marcelo Goes <vanquirius@gentoo.org> ttcp-1.12.ebuild:
+  Use toolchain-funcs.eclass instead of gcc.eclass. See bug 92745.
 
   24 Feb 2005; Lina Pezzella <j4rg0n@gentoo.org> ttcp-1.12.ebuild:
   Stable ppc-macos
