@@ -1,8 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bigeye/bigeye-0.3.ebuild,v 1.6 2004/07/01 17:21:34 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bigeye/bigeye-0.3.ebuild,v 1.7 2005/05/16 00:36:53 vanquirius Exp $
 
-inherit gcc eutils
+inherit toolchain-funcs eutils
 
 DESCRIPTION="Bigeye is a network utility dump and simple honeypot utility"
 HOMEPAGE="http://violating.us/projects/bigeye/"
@@ -23,7 +23,7 @@ src_unpack() {
 
 src_compile() {
 	cd src
-	$(gcc-getCC) ${CFLAGS} bigeye.c emulate.c -o bigeye || die
+	$(tc-getCC) ${CFLAGS} bigeye.c emulate.c -o bigeye || die
 }
 
 src_install() {
