@@ -1,5 +1,5 @@
 MD5 07e6fec164310da3ae2c7252aa9b6501 ChangeLog 1239
-MD5 d7549f29a513289ac24e07c8418c5c30 dbskkd-cdb-1.01-r1.ebuild 1551
+MD5 afb07d03e90d378186a1a023c3948297 dbskkd-cdb-1.01-r1.ebuild 1558
 MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
-MD5 2a496540820260f65f10e029f35e367f files/dbskkd-cdb.xinetd 326
 MD5 c50800da7ba411b73c590e753480c42e files/digest-dbskkd-cdb-1.01-r1 66
+MD5 eb486f833dce14ef4409eec448038a27 files/dbskkd-cdb.xinetd 327
