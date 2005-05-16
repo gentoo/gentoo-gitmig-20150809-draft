@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/pisg/pisg-0.64.ebuild,v 1.3 2005/04/20 21:30:43 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/pisg/pisg-0.64.ebuild,v 1.4 2005/05/16 15:18:48 swegener Exp $
 
 inherit eutils
 
@@ -20,9 +20,9 @@ DEPEND="dev-lang/perl
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
-	epatch ${FILESDIR}/0.56-network-option-fix.patch
+	epatch "${FILESDIR}"/0.56-network-option-fix.patch
 
 	sed -i \
 		-e 's!lang\.txt!/usr/share/pisg/lang.txt!' \
@@ -37,7 +37,7 @@ src_install () {
 	dobin pisg || die "dobin failed"
 
 	insinto "${installvendorlib}"
-	doins -r modules/* || die "doins failed"
+	doins -r modules/. || die "doins failed"
 
 	insinto /usr/share/pisg
 	doins -r gfx layout lang.txt || die "doins failed"
