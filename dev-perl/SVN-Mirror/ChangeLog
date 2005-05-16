@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/SVN-Mirror
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SVN-Mirror/ChangeLog,v 1.9 2005/05/15 19:19:50 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SVN-Mirror/ChangeLog,v 1.10 2005/05/16 12:30:08 luckyduck Exp $
+
+  16 May 2005; Jan Brinkmann <luckyduck@gentoo.org> SVN-Mirror-0.61.ebuild:
+  added ~amd64 to KEYWORDS wrt #92669
 
   15 May 2005; Joseph Jezak <josejx@gentoo.org> SVN-Mirror-0.61.ebuild:
   Marked ~ppc for bug #92669.
