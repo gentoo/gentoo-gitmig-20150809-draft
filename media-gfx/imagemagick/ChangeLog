@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/imagemagick
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/ChangeLog,v 1.147 2005/05/15 23:01:17 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/ChangeLog,v 1.148 2005/05/16 00:45:32 weeve Exp $
+
+  16 May 2005; Jason Wever <weeve@gentoo.org> imagemagick-6.2.2.3.ebuild:
+  Stable on SPARC wrt security bug #90423.
 
   15 May 2005; Jan Brinkmann <luckyduck@gentoo.org>
   imagemagick-6.2.2.3.ebuild:
