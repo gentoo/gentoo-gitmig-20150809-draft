@@ -2,15 +2,15 @@
 Hash: SHA1
 
 MD5 1606f755271869e2b5dae335234e30b3 irssistats-0.62.ebuild 703
-MD5 6886e14f8982cc40d3b544ac2b136d2c irssistats-0.70.ebuild 693
-MD5 c4a7dacf65cbc338a730061044a17aaf ChangeLog 1049
+MD5 d5bb67703033a323cb1c0a5c8ad078dc irssistats-0.70.ebuild 704
+MD5 d3865529a3546dd4143fd520bf15aef7 ChangeLog 1174
 MD5 44c39c6ad372a8e5a5e7ee3311f703a7 metadata.xml 160
 MD5 375b9d27e7a283d6ba2816d0f5239d3f files/digest-irssistats-0.62 66
 MD5 23c040f3a9c452c62190bcef3fa2a219 files/digest-irssistats-0.70 66
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCVYy1I1lqEGTUzyQRAtGgAJ9q3dwxwc8kPjhu7hiY17cCPKXzPQCZAXMW
-jYk068RbkiAVdzgbus2soUE=
-=x9HE
+iD8DBQFCh+pnI1lqEGTUzyQRArmnAJ9eU7EbkjLmnvXHLP3D80Q0/7g1ugCgqb9Y
+4t4p+AwRG/jCLYLRs/40Nrw=
+=KcSn
 -----END PGP SIGNATURE-----

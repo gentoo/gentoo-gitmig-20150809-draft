@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/irssistats
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssistats/ChangeLog,v 1.7 2005/04/07 19:40:14 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssistats/ChangeLog,v 1.8 2005/05/16 00:33:32 swegener Exp $
+
+  16 May 2005; Sven Wegener <swegener@gentoo.org> irssistats-0.70.ebuild:
+  Moved to toolchain-funcs.eclass for bug #92745.
 
 *irssistats-0.70 (07 Apr 2005)
 
