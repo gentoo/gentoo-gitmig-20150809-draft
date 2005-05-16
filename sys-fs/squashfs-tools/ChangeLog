@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/squashfs-tools
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/squashfs-tools/ChangeLog,v 1.19 2005/02/23 15:36:29 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/squashfs-tools/ChangeLog,v 1.20 2005/05/16 17:48:35 wolf31o2 Exp $
+
+  16 May 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  squashfs-tools-2.1_p2-r1.ebuild:
+  Removed src_test and closing bug #85682.
 
 *squashfs-tools-2.1_p2-r1 (23 Feb 2005)
 

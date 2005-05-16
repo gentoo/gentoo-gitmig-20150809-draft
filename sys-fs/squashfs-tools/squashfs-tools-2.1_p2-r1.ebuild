@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/squashfs-tools/squashfs-tools-2.1_p2-r1.ebuild,v 1.1 2005/02/23 15:36:29 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/squashfs-tools/squashfs-tools-2.1_p2-r1.ebuild,v 1.2 2005/05/16 17:48:35 wolf31o2 Exp $
 
 inherit toolchain-funcs
 
@@ -29,41 +29,6 @@ src_unpack() {
 
 src_compile() {
 	emake CC="$(tc-getCC)" || die
-}
-
-src_test() {
-	./mksquashfs *.c *.h ${T}/squashfs \
-		&& einfo "sucessfully created filesystem" \
-		|| die "failed to create filesystem"
-	if ! fgrep -q squashfs ${ROOT}/proc/filesystems ; then
-		modprobe squashfs || ewarn "no squashfs modules - test not completed"
-		touch ${T}/modprobe
-		fgrep -q squashfs ${ROOT}/proc/filesystems || \
-			ewarn "no squashfs failsystem available in this kernel - tests not completed"
-	fi
-
-	if hasq userpriv ${FEATURES};
-	then
-		ewarn "FEATURES userpriv hinders testing. Restricts the ability to mount filesystems."
-		ewarn "Further testing skipped"
-	else
-		if fgrep -q squashfs ${ROOT}/proc/filesystems;
-		then
-			mkdir ${T}/squashfs_dir
-			mount -n -o loop,ro ${T}/squashfs ${T}/squashfs_dir -t squashfs || die  "mount failed"
-
-			diff squashfs_fs.h ${T}/squashfs_dir/squashfs_fs.h && einfo "test suceeded" \
-				|| die "test failed"
-		fi
-		umount ${T}/squashfs_dir
-	fi
-
-	# clean up
-
-	if [ -f ${T}/modprobe ];
-	then
-		rmmod squashfs
-	fi
 }
 
 src_install() {
