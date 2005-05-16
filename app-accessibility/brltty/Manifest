@@ -1,8 +1,18 @@
-MD5 bdc4b7314a34c7e8f88a0fe0ea7903fe ChangeLog 3038
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 2359545361e3bce9bdcfccb542105c51 ChangeLog 3131
 MD5 58b5accb0231db6b8df0ffa12b4b6abc brltty-3.5.ebuild 674
-MD5 5aa38c5f6b15739ecf0eb80bddd4795d brltty-3.6.1.ebuild 801
 MD5 8a4ede081ba342ef06c8c7670327f6dc brltty-3.6.ebuild 798
 MD5 400cd2fad2e2bd56b1920c9cdd5d1420 metadata.xml 259
+MD5 b0c94b7f256b286ef8fe79a8c8520f08 brltty-3.6.1.ebuild 799
 MD5 7d93e814d84d01d5a05daab69875e2f9 files/digest-brltty-3.5 62
 MD5 b1706df140ca8876753283a3a222a3d5 files/digest-brltty-3.6 63
 MD5 af551ceff5cb2d450b638b0116e2898d files/digest-brltty-3.6.1 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFCiR6FKRy60XGEcJIRAtvNAJ4wbDyIw8WtcaEWQcldCOht43JmiACfZeqR
+LKz0k6cSJDulwGLZixJ+eqA=
+=XNjg
+-----END PGP SIGNATURE-----
