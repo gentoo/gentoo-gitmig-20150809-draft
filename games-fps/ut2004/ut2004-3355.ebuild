@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004/ut2004-3355.ebuild,v 1.1 2005/02/23 00:36:17 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004/ut2004-3355.ebuild,v 1.2 2005/05/16 16:09:45 wolf31o2 Exp $
 
 inherit games
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://3dgamers/pub/3dgamers/games/unrealtourn2k4/${MY_P}
 
 LICENSE="ut2003"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="x86 amd64"
 RESTRICT="nostrip nomirror"
 IUSE="opengl dedicated"
 

@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/ut2004
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004/ChangeLog,v 1.22 2005/02/23 00:36:17 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004/ChangeLog,v 1.23 2005/05/16 16:09:45 wolf31o2 Exp $
+
+  16 May 2005; Chris Gianelloni <wolf31o2@gentoo.org> -ut2004-3339.ebuild,
+  ut2004-3355.ebuild:
+  Marking stable on x86/amd64.
 
 *ut2004-3355 (22 Feb 2005)
 
