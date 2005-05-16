@@ -1,4 +1,14 @@
-MD5 8f094d7ead62892b46c28dca3f780622 ChangeLog 2482
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 56379ed1db4973e35225bff30ca80d89 ChangeLog 2583
 MD5 96c5a9a96b7414a4cc00bb34c82d807c metadata.xml 275
-MD5 db82856684e989a34395a8d96e935c55 ne-1.39.ebuild 1024
+MD5 d3a49b5b34f3ea1e7bcb29f1cb20cad2 ne-1.39.ebuild 1073
 MD5 dbdd3b9510c60b4d23469fc0ff2a9861 files/digest-ne-1.39 60
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCiNuaI1lqEGTUzyQRAnnKAKC+kReZ4EeR+L1GiyCkPrRJQ3vM+wCfeZX5
+0xQNT5/Mxc0vRf5SiSudn1w=
+=vn7K
+-----END PGP SIGNATURE-----
