@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ghostscript-7.07.1-r9.ebuild,v 1.1 2005/04/23 14:36:34 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ghostscript-7.07.1-r9.ebuild,v 1.2 2005/05/16 09:46:09 lanius Exp $
 
-inherit flag-o-matic eutils gcc libtool
+inherit flag-o-matic eutils toolchain-funcs libtool
 
 DESCRIPTION="ESP Ghostscript -- an enhanced version of GNU Ghostscript with better printer support"
 HOMEPAGE="http://www.cups.org/ghostscript.php"
