@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.242 2005/05/01 04:33:20 joem Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.243 2005/05/16 22:00:34 vapier Exp $
 
 # keep them sorted (excluding the special arch flags near the end).
 
@@ -246,7 +246,7 @@ pdflib - Adds support for PDF (Portable Document Format)
 perl - Adds support/bindings for the Perl language.
 pfpro - Adds support for Verisign Payflow Pro
 php - Include support for php
-pic - Build Position Independent Code. Needed for prelink or the hardened toolchain
+pic - Build Position Independent Code.  Do not utilize this flag unless you know what you're doing.
 plotutils - Adds plotutils support to gnuplot (library for 2-D vector graphics)
 png - Adds support for libpng (PNG images)
 portaudio - Adds support for the crossplatform portaudio audio API
