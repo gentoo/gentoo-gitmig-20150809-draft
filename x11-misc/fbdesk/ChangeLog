@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/fbdesk
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/fbdesk/ChangeLog,v 1.13 2005/04/01 19:05:10 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/fbdesk/ChangeLog,v 1.14 2005/05/16 06:07:31 ka0ttic Exp $
+
+  16 May 2005; Aaron Walker <ka0ttic@gentoo.org> fbdesk-1.1.5.ebuild,
+  fbdesk-1.2.1.ebuild:
+  Remove gcc.eclass from inherit as it doesnt even use it.
 
   01 Apr 2005; Aron Griffis <agriffis@gentoo.org> fbdesk-1.2.1.ebuild:
   stable on ia64
