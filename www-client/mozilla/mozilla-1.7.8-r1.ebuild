@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla/mozilla-1.7.8-r1.ebuild,v 1.1 2005/05/15 19:47:20 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla/mozilla-1.7.8-r1.ebuild,v 1.2 2005/05/16 19:30:24 azarah Exp $
 
 unset ALLOWED_FLAGS  # stupid extra-functions.sh ... bug 49179
 inherit flag-o-matic gcc eutils nsplugins mozilla-launcher mozconfig makeedit multilib
@@ -84,6 +84,9 @@ src_unpack() {
 
 	# Fix building with gcc4
 	epatch ${FILESDIR}/${PN}-1.7.6-gcc4.patch
+
+	# Fix building on amd64 with gcc4 (patch from Debian)
+	epatch ${FILESDIR}/${P}-amd64.patch
 
 	# Mozilla Bug 292257, https://bugzilla.mozilla.org/show_bug.cgi?id=292257
 	# Mozilla crashes under some rare cases when plugin.default_plugin_disabled
