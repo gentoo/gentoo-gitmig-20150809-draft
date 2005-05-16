@@ -1,6 +1,12 @@
 # ChangeLog for sys-libs/slang
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/slang/ChangeLog,v 1.40 2005/01/03 00:27:27 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/slang/ChangeLog,v 1.41 2005/05/16 14:51:33 lanius Exp $
+
+*slang-1.4.9-r2 (16 May 2005)
+
+  16 May 2005; Heinrich Wendel <lanius@gentoo.org>
+  +files/slang-utf8-fix2.patch, +slang-1.4.9-r2.ebuild:
+  add another utf8 fix from fedora, bug #92735
 
   03 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance

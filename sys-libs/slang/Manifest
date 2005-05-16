@@ -1,10 +1,23 @@
-MD5 b5418d070920d8944a1bc3ed6a217851 ChangeLog 5308
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 0e3377e5ce60380f611f078707979da0 slang-1.4.9-r2.ebuild 1846
+MD5 91a55ea69d65d2d3171b938b80ce3925 ChangeLog 5493
 MD5 bc00f0356947154d3250243bd5ec08f5 metadata.xml 219
 MD5 aa05b5e6a399e3db621b204b914913ea slang-1.4.9-r1.ebuild 1792
 MD5 074ddbf39cb8b9708ca9de2b1fb24366 files/digest-slang-1.4.9-r1 64
+MD5 074ddbf39cb8b9708ca9de2b1fb24366 files/digest-slang-1.4.9-r2 64
 MD5 7ba45dd45645107adc167e543634b8eb files/slang-1.4.9-fsuid.patch 1661
 MD5 7f9b0cb76e754575d54b6ea8f5de59f4 files/slang-1.4.9.patch 1367
 MD5 e2ddc20bfbb1ac10becb53e1707b067c files/slang-debian-utf8.patch 21377
 MD5 3531d8ba2b07b43cf6d758815200bfa9 files/slang-utf8-acs.patch 14366
 MD5 4be647282e8c01060db9d1707098bd1d files/slang-utf8-fix.patch 855
+MD5 1d7e5eab24fec79cc60d8dbdede252e7 files/slang-utf8-fix2.patch 487
 MD5 11daf6d137e1d6ec0e3475e55522cd06 files/slang-1.4.9-autoconf.patch 4143
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCiLQ1evY57Fted3ERAtjjAJ9N+i4G3NTfJSUHabsJdPSZ81ECpgCfc1y8
++JABUgtbKrdMxYhaRqQVhNg=
+=KESU
+-----END PGP SIGNATURE-----
