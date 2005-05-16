@@ -2,15 +2,15 @@
 Hash: SHA1
 
 MD5 1d4dbb2dfdeff2bcff4f830fb3ad4a41 nzbget-0.1.2.ebuild 816
-MD5 280e0590135b69448c583b47a788f819 nzbget-0.2.0.ebuild 817
-MD5 e34d7eec79639284aebd005d907edcb1 ChangeLog 1297
+MD5 eac50d69e3305c8f1acc660dc5f4b4f2 nzbget-0.2.0.ebuild 816
+MD5 17f13cf00a38fda52c2a8fadbcc31912 ChangeLog 1393
 MD5 14594f19e320cd8f1735a5e2e9a00f88 metadata.xml 357
 MD5 1a637353d98b39791d0761ba1e777259 files/digest-nzbget-0.1.2 64
 MD5 a7c5c3790c55545e3636e4f19b579556 files/digest-nzbget-0.2.0 64
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCKu8uI1lqEGTUzyQRArd1AJ9Mn24zj6UeODZU2wUjlXr3LNHzaACdGgyM
-awAwpuk8jSnuUebzOHqvyEo=
-=MHEh
+iD8DBQFCiNXPI1lqEGTUzyQRAoovAKDGO3vbKYALZ6YNe9fyYt3UruBdrQCfegmQ
+xOshK2Vt2K/EhEnIIxcTj9g=
+=TRsZ
 -----END PGP SIGNATURE-----
