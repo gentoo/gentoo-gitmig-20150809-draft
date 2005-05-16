@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/aterm
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/aterm/ChangeLog,v 1.69 2005/05/09 17:39:30 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/aterm/ChangeLog,v 1.70 2005/05/16 23:47:59 weeve Exp $
+
+  16 May 2005; Jason Wever <weeve@gentoo.org> aterm-1.00_beta2.ebuild:
+  Added ~sparc keyword.
 
   09 May 2005; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
   Change maintainers to kloeri + ka0ttic.
