@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.5.20050421.ebuild,v 1.7 2005/05/05 12:28:53 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.5.20050421.ebuild,v 1.8 2005/05/16 03:03:53 vapier Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -544,7 +544,7 @@ toolchain-glibc_pkg_postinst() {
 		ln -s ../usr/share/zoneinfo/Factory ${ROOT}/etc/localtime
 	fi
 
-	if [ -x "${ROOT}/usr/sbin/iconvconfig" ] ; then
+	if ! is_crosscompile && [ -x "${ROOT}/usr/sbin/iconvconfig" ] ; then
 		# Generate fastloading iconv module configuration file.
 		${ROOT}/usr/sbin/iconvconfig --prefix=${ROOT}
 	fi
@@ -555,7 +555,7 @@ toolchain-glibc_pkg_postinst() {
 	fi
 
 	# Reload init ...
-	if [ "${ROOT}" = "/" ] ; then
+	if ! is_crosscompile && [ "${ROOT}" = "/" ] ; then
 		/sbin/init U &> /dev/null
 	fi
 
