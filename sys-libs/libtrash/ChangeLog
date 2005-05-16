@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/libtrash
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libtrash/ChangeLog,v 1.5 2004/09/03 18:24:08 pvdabeel Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libtrash/ChangeLog,v 1.6 2005/05/16 16:21:18 matsuu Exp $
+
+  16 May 2005; MATSUU Takuto <matsuu@gentoo.org> libtrash-2.2.ebuild:
+  Fixed inheriting gcc, Bug 92745.
 
   03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   libtrash-2.2.ebuild:
