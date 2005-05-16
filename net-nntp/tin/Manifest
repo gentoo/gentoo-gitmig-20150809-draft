@@ -1,9 +1,19 @@
-MD5 ddd081b30e584e8f285a8de681dc9640 tin-1.6.0.ebuild 1020
-MD5 73869e31d2d80de813572045ab4d13bd tin-1.6.2.ebuild 1072
-MD5 330388463924cabf21ce2f103cbda5f1 ChangeLog 2329
-MD5 763c816ec927fb2819400606aeb7a509 tin-1.7.7-r1.ebuild 1504
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 baf2bfee07552a9151c0da26c0dccb59 tin-1.7.8.ebuild 1551
+MD5 341b040f8762d99f8d2d072ca1483ef1 tin-1.6.2.ebuild 1262
+MD5 7e4ff360a5bb464a8ea72bdbd4e7f644 ChangeLog 2600
+MD5 d08aab745ac91adf767f94bf45d0cad3 tin-1.7.7-r1.ebuild 1554
 MD5 d4764f5c17f5e0b416f7ddf271c77d71 metadata.xml 161
-MD5 4682cd31a51dcfac4c000ba6e6983198 files/digest-tin-1.7.7-r1 62
-MD5 2475288cb79f81762730eb56c53ba235 files/digest-tin-1.6.0 62
-MD5 d7152552e399cbeb77e775886d1c6506 files/digest-tin-1.6.2 62
+MD5 9ae4b33bb5e292714972ac4dcd608365 files/digest-tin-1.7.7-r1 63
+MD5 2e10c3f516fdd2f5ac106b69790de876 files/digest-tin-1.6.2 63
+MD5 90083163eca5d805ade2af1e00531108 files/digest-tin-1.7.8 63
 MD5 566eff78de0ea8837186afbea406159e files/tin-1.7.7-mbox-mmdf.patch 1238
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCiNH5I1lqEGTUzyQRAkgXAJ0Q7gxtVsWYU9Hf/Uzf4OcCUZYREgCcCI4a
+w4ar0xroUML7nImzIt4bdXE=
+=yFgN
+-----END PGP SIGNATURE-----

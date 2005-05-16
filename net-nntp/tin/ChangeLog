@@ -1,6 +1,13 @@
 # ChangeLog for net-nntp/tin
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/tin/ChangeLog,v 1.5 2005/04/01 16:46:30 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/tin/ChangeLog,v 1.6 2005/05/16 17:01:24 swegener Exp $
+
+*tin-1.7.8 (16 May 2005)
+
+  16 May 2005; Sven Wegener <swegener@gentoo.org> -tin-1.6.0.ebuild,
+  tin-1.6.2.ebuild, tin-1.7.7-r1.ebuild, +tin-1.7.8.ebuild:
+  Version bump. Switched from .tar.gz to .tar.bz2. Use functions from
+  versionator.eclass for SRC_URI generation.
 
   01 Apr 2005; Aron Griffis <agriffis@gentoo.org> tin-1.6.2.ebuild:
   stable on ia64

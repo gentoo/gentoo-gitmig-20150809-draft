@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/tin/tin-1.7.7-r1.ebuild,v 1.1 2005/02/20 23:16:15 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/tin/tin-1.7.7-r1.ebuild,v 1.2 2005/05/16 17:01:24 swegener Exp $
 
-inherit eutils
+inherit eutils versionator
 
 DESCRIPTION="A threaded NNTP and spool based UseNet newsreader"
 HOMEPAGE="http://www.tin.org/"
-SRC_URI="ftp://ftp.tin.org/pub/news/clients/tin/v1.7/${P}.tar.gz"
+SRC_URI="ftp://ftp.tin.org/pub/news/clients/tin/v$(get_version_component_range 1-2)/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -20,13 +20,13 @@ DEPEND="ncurses? ( sys-libs/ncurses )
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/tin-1.7.7-mbox-mmdf.patch
+	cd "${S}"
+	epatch "${FILESDIR}"/tin-1.7.7-mbox-mmdf.patch
 }
 
 src_compile() {
 	local myconf=""
-	[ -f ${ROOT}/etc/NNTP_INEWS_DOMAIN ] \
+	[ -f "${ROOT}"/etc/NNTP_INEWS_DOMAIN ] \
 		&& myconf="${myconf} --with-domain-name=/etc/NNTP_INEWS_DOMAIN"
 
 	econf \
