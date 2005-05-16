@@ -1,0 +1,10 @@
+# ChangeLog for app-mobilephone/kannel
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/kannel/ChangeLog,v 1.1 2005/05/16 22:05:25 mrness Exp $
+
+*kannel-1.4.0 (16 May 2005)
+
+  16 May 2005; Alin Nastac <mrness@gentoo.org> +files/kannel-confd,
+  +files/kannel-initd, +metadata.xml, +kannel-1.4.0.ebuild:
+  Initial import from bug #30749.
+
