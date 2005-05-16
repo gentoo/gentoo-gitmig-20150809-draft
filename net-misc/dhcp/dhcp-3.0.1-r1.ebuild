@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-3.0.1-r1.ebuild,v 1.2 2005/05/16 14:23:14 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-3.0.1-r1.ebuild,v 1.3 2005/05/16 14:24:01 seemant Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
-PATCHVER=1	
+PATCHVER=1
 
 DESCRIPTION="ISC Dynamic Host Configuration Protocol"
 HOMEPAGE="http://www.isc.org/products/DHCP"
@@ -29,7 +29,7 @@ PATCHDIR=${WORKDIR}/patch
 
 src_unpack() {
 	unpack ${A} && cd "${S}"
-	
+
 	EPATCH_SUFFIX="patch" epatch ${PATCHDIR}
 	has noman ${FEATURES} && sed -i 's:nroff:echo:' */Makefile.dist
 }
