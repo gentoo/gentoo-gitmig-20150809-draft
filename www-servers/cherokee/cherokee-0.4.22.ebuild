@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/cherokee-0.4.22.ebuild,v 1.1 2005/05/16 19:09:32 bass Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/cherokee-0.4.22.ebuild,v 1.2 2005/05/16 22:25:25 mr_bones_ Exp $
 
-inherit eutils 
+inherit eutils
 
 DESCRIPTION="An extremely fast and tiny web server."
 SRC_URI="http://www.0x50.org/download/${PV%.*}/${PV}/${P}.tar.gz"
@@ -25,7 +25,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 
-	epatch ${FILESDIR}/cherokee-0.4.21-no-handler_admin.diff  
+	epatch ${FILESDIR}/cherokee-0.4.21-no-handler_admin.diff
 }
 
 src_compile() {
@@ -47,13 +47,13 @@ src_compile() {
 	if ! use static ; then
 		myconf="${myconf} --disable-static"
 	fi
-	
+
 	econf \
 		${myconf} \
 		--with-wwwroot=/var/www/localhost/htdocs \
 		--enable-os-string="Gentoo Linux" \
 		|| die "configure failed"
-	
+
 	emake || die "emake failed"
 }
 
