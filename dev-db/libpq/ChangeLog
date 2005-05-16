@@ -1,6 +1,17 @@
 # ChangeLog for dev-db/libpq
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/libpq/ChangeLog,v 1.4 2005/05/15 04:36:55 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/libpq/ChangeLog,v 1.5 2005/05/16 03:49:32 nakano Exp $
+
+*libpq-8.0.1 (16 May 2005)
+*libpq-7.4.8 (16 May 2005)
+*libpq-7.3.10 (16 May 2005)
+
+  16 May 2005; Masatomo Nakano <nakano@gentoo.org>
+  -files/libpq-3.2-gentoo.patch, -files/libpq-4.0-gentoo.patch,
+  +files/libpq-7.3.10-gentoo.patch, +files/libpq-7.4.8-gentoo.patch,
+  +files/libpq-8.0.1-gentoo.patch, -libpq-3.2.ebuild, -libpq-4.0.ebuild,
+  +libpq-7.3.10.ebuild, +libpq-7.4.8.ebuild, +libpq-8.0.1.ebuild:
+  Changed pacakge name to PostgreSQL version base.
 
 *libpq-8.0.3 (15 May 2005)
 

@@ -1,18 +1,16 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/libpq/libpq-4.0.ebuild,v 1.3 2005/05/09 21:38:07 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/libpq/libpq-8.0.1.ebuild,v 1.1 2005/05/16 03:49:32 nakano Exp $
 
-inherit eutils gnuconfig flag-o-matic multilib toolchain-funcs
+inherit eutils gnuconfig flag-o-matic toolchain-funcs
 
 DESCRIPTION="Libraries of postgresql"
 HOMEPAGE="http://www.postgresql.org/"
-MY_PV=${PV/_/}
-POSTGRESQL_VER="8.0.2"
-MY_P="postgresql"-${POSTGRESQL_VER}
-SRC_URI="mirror://postgresql/source/v${POSTGRESQL_VER}/postgresql-base-${POSTGRESQL_VER}.tar.bz2"
+MY_P="postgresql-${PV}"
+SRC_URI="mirror://postgresql/source/v${PV}/postgresql-base-${PV}.tar.bz2"
 
 LICENSE="POSTGRESQL"
-SLOT="4"
+SLOT="3"
 KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha ~arm ~hppa ~amd64 ~ia64 ~s390 ~ppc64"
 IUSE="ssl nls pam readline zlib kerberos"
 #pg-hier"
@@ -32,6 +30,7 @@ RDEPEND="virtual/libc
 	ssl? ( >=dev-libs/openssl-0.9.6-r1 )
 	kerberos? ( virtual/krb5 )"
 
+MAKEOPTS="${MAKEOPTS} -j1"
 src_unpack() {
 	unpack ${A}
 	epatch ${FILESDIR}/${P}-gentoo.patch
@@ -67,12 +66,12 @@ src_compile() {
 		$myconf || die
 
 	cd ${S}/src/interfaces/libpq
-	make LD="$(tc-getLD) $(get_abi_LDFLAGS)" || die
+	emake LD="$(tc-getLD) $(get_abi_LDFLAGS)" || die
 }
 
 src_install() {
 	cd ${S}/src/interfaces/libpq
-	make DESTDIR=${D} LIBDIR=${D}/usr/lib install || die
+	make DESTDIR=${D} LIBDIR=${D}/usr/$(get_libdir) install || die
 
 	cd ${S}/src/include
 	make DESTDIR=${D} install || die
@@ -80,19 +79,25 @@ src_install() {
 	cd ${S}
 	dodoc README HISTORY COPYRIGHT INSTALL
 
-	dosym /usr/lib/libpq-${SLOT}.a /usr/lib/libpq.a
+	dosym libpq-${SLOT}.a /usr/$(get_libdir)/libpq.a
 
-	ln -s ${D}/usr/include/postgresql/libpq-${SLOT}/*.h ${D}/usr/include/
+	for f in ${D}/usr/include/postgresql/libpq-${SLOT}/*.h
+	do
+		dosym postgresql/libpq-${SLOT}/$(basename $f) /usr/include/
+	done
 
 	dodir /usr/include/libpq
-	ln -s ${D}/usr/include/postgresql/libpq-${SLOT}/libpq/*.h ${D}/usr/include/libpq
+	for f in ${D}/usr/include/postgresql/libpq-${SLOT}/libpq/*.h
+	do
+		dosym ../postgresql/libpq-${SLOT}/$(basename $f) /usr/include/libpq/
+	done
 
 	cd ${D}/usr/include/postgresql/libpq-${SLOT}
-	for f in $(find . -name '*.h' -print) ; do
+	for f in $(find * -name '*.h' -print) ; do
 		destdir=$(dirname $f)
 		if [ ! -d "${D}/usr/include/postgresql/${destdir}" ]; then
-			mkdir -p ${D}/usr/include/postgresql/${destdir}
+			dodir /usr/include/postgresql/${destdir}
 		fi
-		ln -s ${D}/usr/include/postgresql/libpq-${SLOT}/${f} ${D}/usr/include/postgresql/${destdir}/
+		dosym /usr/include/postgresql/libpq-${SLOT}/${f} /usr/include/postgresql/${destdir}/
 	done
 }
