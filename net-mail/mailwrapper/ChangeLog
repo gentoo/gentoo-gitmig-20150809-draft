@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/mailwrapper
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailwrapper/ChangeLog,v 1.24 2005/04/26 11:37:09 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailwrapper/ChangeLog,v 1.25 2005/05/16 09:42:04 ticho Exp $
+
+  16 May 2005; Andrej Kacian <ticho@gentoo.org> mailwrapper-0.1.ebuild,
+  mailwrapper-0.2.1.ebuild, mailwrapper-0.2.1-r1.ebuild:
+  Inherit toolchain-funcs.eclass instead of gcc.eclass. Bug #92745.
 
   26 Apr 2005; Fernando J. Pereda <ferdy@gentoo.org>
   mailwrapper-0.2.1-r1.ebuild:
@@ -43,7 +47,7 @@
   25 Apr 2004; Joshua Kinard <kumba@gentoo.org> mailwrapper-0.1.ebuild:
   Marked stable on mips.
 
-  23 Apr 2004; Bryan Østergaard <kloeri@gentoo.org> mailwrapper-0.1.ebuild:
+  23 Apr 2004; Bryan Ăstergaard <kloeri@gentoo.org> mailwrapper-0.1.ebuild:
   Stable on alpha.
 
   23 Apr 2004; Travis Tilley <lv@gentoo.org> mailwrapper-0.1.ebuild:

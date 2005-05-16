@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailwrapper/mailwrapper-0.2.1-r1.ebuild,v 1.3 2005/04/26 11:37:09 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailwrapper/mailwrapper-0.2.1-r1.ebuild,v 1.4 2005/05/16 09:42:04 ticho Exp $
 
-inherit gcc
+inherit toolchain-funcs
 
 DESCRIPTION="Program to invoke an appropriate MTA based on a config file"
 HOMEPAGE="http://www.gentoo.org/"
