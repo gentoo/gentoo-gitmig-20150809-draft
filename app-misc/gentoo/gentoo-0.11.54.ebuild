@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gentoo/gentoo-0.11.54.ebuild,v 1.6 2005/04/07 12:47:36 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gentoo/gentoo-0.11.54.ebuild,v 1.7 2005/05/16 13:22:25 seemant Exp $
 
 DESCRIPTION="A modern GTK+ based filemanager for any WM"
 HOMEPAGE="http://www.obsession.se/gentoo/"
@@ -13,7 +13,7 @@ IUSE="nls gnome fam"
 
 DEPEND="=x11-libs/gtk+-1.2*"
 RDEPEND="nls? ( sys-devel/gettext )
-	fam? ( app-admin/fam )"
+	fam? ( virtual/fam )"
 
 src_compile() {
 	econf \

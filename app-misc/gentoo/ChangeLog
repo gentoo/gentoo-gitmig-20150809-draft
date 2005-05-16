@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/gentoo
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gentoo/ChangeLog,v 1.52 2005/04/07 12:47:13 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gentoo/ChangeLog,v 1.53 2005/05/16 13:22:25 seemant Exp $
+
+  16 May 2005; Seemant Kulleen <seemant@gentoo.org> gentoo-0.11.54.ebuild:
+  Changed to depend on virtual/fam (gamin or fam) per bug #92480 by Ben Skeggs
+  <darktama@iinet.net.au>
 
   07 Apr 2005; Seemant Kulleen <seemant@gentoo.org> gentoo-0.11.54.ebuild:
   nls is sort of fixed -- the install goes through with nls in use, but I
