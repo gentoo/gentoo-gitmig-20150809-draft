@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/lmbench/lmbench-3.0_alpha3.ebuild,v 1.11 2005/04/21 17:51:32 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/lmbench/lmbench-3.0_alpha3.ebuild,v 1.12 2005/05/16 02:13:18 vanquirius Exp $
 
-inherit gcc
+inherit toolchain-funcs
 
 MY_P=${P/_alpha/-a}
 DESCRIPTION="Suite of simple, portable benchmarks"
@@ -23,7 +23,7 @@ src_compile() {
 		-e 's#^@files =#chdir "/usr/share/lmbench"; @files =#' \
 		-e "s#../../CONFIG#/etc/bc-config#g" ${FILESDIR}/bc_lm.pl > bc_lm.pl
 
-	emake CC=$(gcc-getCC) MAKE=make OS=`scripts/os` build || die
+	emake CC=$(tc-getCC) MAKE=make OS=`scripts/os` build || die
 }
 
 src_install() {
@@ -48,4 +48,7 @@ src_install() {
 	chmod 777 ${D}/usr/share/lmbench/results
 	dodir /usr/share/lmbench/bin
 	chmod 777 ${D}/usr/share/lmbench/bin
+
+	# avoid file collision with sys-apps/util-linux
+	mv ${D}/usr/bin/line ${D}/usr/bin/line.lmbench
 }

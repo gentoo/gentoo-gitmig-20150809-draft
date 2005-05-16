@@ -1,6 +1,10 @@
 # ChangeLog for app-benchmarks/lmbench
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/lmbench/ChangeLog,v 1.10 2005/04/21 17:51:32 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/lmbench/ChangeLog,v 1.11 2005/05/16 02:13:18 vanquirius Exp $
+
+  15 May 2005; Marcelo Goes <vanquirius@gentoo.org> lmbench-3.0_alpha3.ebuild:
+  Use toolchain-funcs.eclass instead of gcc.eclass for bug 92745. Also, avoiding
+  file collision with /usr/bin/line and sys-apps/util-linux.
 
   21 Apr 2005; Simon Stelling <blubb@gentoo.org> lmbench-3.0_alpha3.ebuild:
   stable on amd64
