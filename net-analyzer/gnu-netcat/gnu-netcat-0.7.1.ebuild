@@ -1,8 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gnu-netcat/gnu-netcat-0.7.1.ebuild,v 1.8 2004/11/20 03:41:31 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gnu-netcat/gnu-netcat-0.7.1.ebuild,v 1.9 2005/05/16 00:51:24 vanquirius Exp $
 
-inherit eutils gcc flag-o-matic
+inherit eutils toolchain-funcs flag-o-matic
 
 DESCRIPTION="the GNU network swiss army knife"
 HOMEPAGE="http://netcat.sourceforge.net/"

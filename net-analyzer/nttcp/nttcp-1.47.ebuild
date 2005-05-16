@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nttcp/nttcp-1.47.ebuild,v 1.7 2005/04/01 13:54:04 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nttcp/nttcp-1.47.ebuild,v 1.8 2005/05/16 00:54:19 vanquirius Exp $
 
-inherit gcc
+inherit toolchain-funcs
 
 DESCRIPTION="tool to test TCP and UDP throughput"
 HOMEPAGE="http://www.leo.org/~elmar/nttcp/"
@@ -16,7 +16,7 @@ IUSE=""
 DEPEND="virtual/libc"
 
 src_compile() {
-	emake ARCH= CC="$(gcc-getCC)" OPT="${CFLAGS}" || die "build failed"
+	emake ARCH= CC="$(tc-getCC)" OPT="${CFLAGS}" || die "build failed"
 }
 
 src_install() {
