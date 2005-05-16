@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/br2684ctl/br2684ctl-20040226.ebuild,v 1.3 2005/05/10 11:29:46 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/br2684ctl/br2684ctl-20040226.ebuild,v 1.4 2005/05/16 17:07:12 mrness Exp $
 
-inherit gcc eutils
+inherit eutils toolchain-funcs
 
 DEBIANPKG_TARBALL="${PN}_${PV}.orig.tar.gz"
 DEBIANPKG_PATCH="${PN}_${PV}-1.diff.gz"
@@ -15,7 +15,7 @@ SRC_URI="${DEBIANPKG_BASE}/${DEBIANPKG_TARBALL}
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc"
 IUSE=""
 
 RDEPEND=">=net-dialup/linux-atm-2.4.1"
@@ -31,8 +31,9 @@ src_unpack() {
 }
 
 src_compile() {
-	echo $(gcc-getCC) ${CFLAGS} -latm ${PN}.c -o ${PN}
-	$(gcc-getCC) ${CFLAGS} -latm ${PN}.c -o ${PN} || die "Failed to compile!"
+	local MY_CC=$(tc-getCC)
+	echo ${MY_CC} ${CFLAGS} -latm ${PN}.c -o ${PN}
+	${MY_CC} ${CFLAGS} -latm ${PN}.c -o ${PN} || die "Failed to compile!"
 }
 
 src_install() {
