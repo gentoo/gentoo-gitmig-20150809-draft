@@ -1,6 +1,21 @@
 # ChangeLog for media-gfx/splashutils
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/ChangeLog,v 1.26 2005/04/29 23:09:05 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/ChangeLog,v 1.27 2005/05/16 16:11:36 spock Exp $
+
+*splashutils-1.1.9.6 (16 May 2005)
+
+  16 May 2005; Michał Januszewski <spock@gentoo.org>
+  -splashutils-1.1.9.3.ebuild, -splashutils-1.1.9.4.ebuild,
+  +splashutils-1.1.9.6.ebuild:
+  And another bugfix release, which includes fixes for some remaining issues 
+  spotted in the 1.1.9.x series (bug #90483 comes to mind). The default silent 
+  tty has now been set to tty16 to avoid conflicts with consolefont and 
+  syslog-ng. If you have a 'tty:' setting on your kernel command line, try 
+  removing it in case of any problems. A new utility script, called 
+  splash_manager, is included in this release. The script can be used for 
+  switching, setting, testing and listing themes. It's somewhat experimental
+  at this stage, so please test it. If you are not sure how the kernel command 
+  line should be set, try using 'splash_manager -c switch -t <theme>'.
 
   29 Apr 2005; Michał Januszewski <spock@gentoo.org>
   -splashutils-0.9_rc1.ebuild, -splashutils-1.1.9.1.ebuild,
