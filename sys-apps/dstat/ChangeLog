@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/dstat
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dstat/ChangeLog,v 1.10 2005/04/10 11:24:27 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dstat/ChangeLog,v 1.11 2005/05/16 17:34:45 swegener Exp $
+
+  16 May 2005; Sven Wegener <swegener@gentoo.org> -dstat-0.5.7.ebuild,
+  -dstat-0.5.8.ebuild, -dstat-0.5.9.ebuild, dstat-0.5.10.ebuild:
+  Marked 0.5.10 stable on x86. Removed old ebuilds.
 
 *dstat-0.5.10 (10 Apr 2005)
 
