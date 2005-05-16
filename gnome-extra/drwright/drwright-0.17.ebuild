@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/drwright/drwright-0.17.ebuild,v 1.10 2005/05/09 17:22:13 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/drwright/drwright-0.17.ebuild,v 1.11 2005/05/16 12:26:00 allanonjl Exp $
 
-inherit gnome2 flag-o-matic gcc
+inherit gnome2 flag-o-matic toolchain-funcs
 
 DESCRIPTION="A GNOME2 Applet that forces you to take regular breaks to prevent RSI."
 HOMEPAGE="http://www.imendio.com/projects/drwright/"
