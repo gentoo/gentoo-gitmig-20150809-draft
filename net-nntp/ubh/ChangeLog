@@ -1,6 +1,9 @@
 # ChangeLog for net-nntp/ubh
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/ubh/ChangeLog,v 1.2 2005/01/17 21:55:23 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/ubh/ChangeLog,v 1.3 2005/05/16 16:43:50 swegener Exp $
+
+  16 May 2005; Sven Wegener <swegener@gentoo.org> ubh-2.5.ebuild:
+  Added error checking to src_install.
 
 *ubh-2.5 (17 Jan 2005)
 
