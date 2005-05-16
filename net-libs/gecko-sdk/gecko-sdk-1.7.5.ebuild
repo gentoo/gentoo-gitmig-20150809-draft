@@ -1,27 +1,30 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gecko-sdk/gecko-sdk-1.7.5.ebuild,v 1.5 2005/04/26 10:06:22 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gecko-sdk/gecko-sdk-1.7.5.ebuild,v 1.6 2005/05/16 04:42:27 josejx Exp $
 
 unset ALLOWED_FLAGS  # stupid extra-functions.sh ... bug 49179
-inherit flag-o-matic gcc eutils nsplugins mozilla-launcher mozconfig makeedit multilib
+inherit flag-o-matic toolchain-funcs eutils nsplugins mozilla-launcher mozconfig makeedit multilib
 
 IUSE="java crypt ssl moznomail postgres"
 
-EMVER="0.90.2"
-IPCVER="1.1.2"
+EMVER="0.91.0"
+IPCVER="1.1.3"
+MOZVER="1.7.8"
 
 # handle _rc versions
-MY_PV="1.7.6"
+MY_PV=${MOZVER/_alpha/a} 	# handle alpha
+MY_PV=${MY_PV/_beta/b}	# handle beta
+MY_PV=${MY_PV/_rc/rc}	# handle rc
 
-DESCRIPTION="Gecko Engine SDK"
+DESCRIPTION="Gecko SDK for building applications based on Gecko"
 HOMEPAGE="http://www.mozilla.org"
-SRC_URI="http://ftp.mozilla.org/pub/mozilla.org/mozilla/releases/mozilla${MY_PV}/source/mozilla-source-${MY_PV}.tar.bz2
+SRC_URI="http://ftp.mozilla.org/pub/mozilla.org/mozilla/releases/mozilla${MY_PV}/source/mozilla-${MY_PV}-source.tar.bz2
 	crypt? ( !moznomail? (
 		http://www.mozilla-enigmail.org/downloads/src/ipc-${IPCVER}.tar.gz
 		http://www.mozilla-enigmail.org/downloads/src/enigmail-${EMVER}.tar.gz
 	) )"
 
-KEYWORDS="alpha amd64 hppa ia64 ppc sparc x86"
+KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86"
 SLOT="0"
 LICENSE="MPL-1.1 NPL-1.1"
 
@@ -49,7 +52,7 @@ src_unpack() {
 	unpack ${A} || die "unpack failed"
 	cd ${S} || die "cd failed"
 
-	if [[ $(gcc-major-version) -eq 3 ]]; then
+	if ! [[ $(gcc-major-version) -eq 2 ]]; then
 		# ABI Patch for alpha/xpcom for gcc-3.x
 		if [[ ${ARCH} == alpha ]]; then
 			epatch ${PORTDIR}/www-client/mozilla/files/mozilla-alpha-xpcom-subs-fix.patch
@@ -72,13 +75,21 @@ src_unpack() {
 	# https://bugzilla.mozilla.org/show_bug.cgi?id=234035#c65
 	epatch ${PORTDIR}/www-client/mozilla/files/mozilla-1.7.3-4ft2.patch
 
-	# Patch for newer versions of cairo ( bug #80301) 
+	# Patch to allow compilation on ppc64 - bug #54843
+	use ppc64 && epatch ${PORTDIR}/www-client/mozilla/files/mozilla-1.7.6-ppc64.patch
+
+	# Patch for newer versions of cairo ( bug #80301)
 	if has_version '>=x11-libs/cairo-0.3.0'; then
 		epatch ${PORTDIR}/www-client/mozilla/files/svg-cairo-0.3.0-fix.patch
 	fi
 
 	# Fix building with gcc4
-	epatch ${FILESDIR}/${P}-gcc4.patch
+	epatch ${PORTDIR}/www-client/mozilla/files/mozilla-1.7.6-gcc4.patch
+
+	# Mozilla Bug 292257, https://bugzilla.mozilla.org/show_bug.cgi?id=292257
+	# Mozilla crashes under some rare cases when plugin.default_plugin_disabled
+	# is true. This patch fixes that. Backported by hansmi@gentoo.org.
+	epatch ${PORTDIR}/www-client/mozilla/files/mozilla-${MOZVER}-objectframefix.diff
 
 	# Fix scripts that call for /usr/local/bin/perl #51916
 	ebegin "Patching smime to call perl from /usr/bin"

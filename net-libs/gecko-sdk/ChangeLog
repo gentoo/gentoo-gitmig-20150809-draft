@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/gecko-sdk
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gecko-sdk/ChangeLog,v 1.10 2005/04/26 10:06:22 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gecko-sdk/ChangeLog,v 1.11 2005/05/16 04:42:27 josejx Exp $
+
+  15 May 2005; Joseph Jezak <josejx@gentoo.org> gecko-sdk-1.7.5.ebuild:
+  Replaced gcc.eclass with toolchain-funcs.eclass. Updated internally to
+  mozilla-1.7.8.
 
   26 Apr 2005; Martin Schlemmer <azarah@gentoo.org>
   +files/gecko-sdk-1.7.5-gcc4.patch, gecko-sdk-1.7.5.ebuild:
