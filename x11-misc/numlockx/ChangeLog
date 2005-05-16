@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/numlockx
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/numlockx/ChangeLog,v 1.10 2004/08/27 21:52:07 tgall Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/numlockx/ChangeLog,v 1.11 2005/05/16 14:41:59 seemant Exp $
+
+  16 May 2005; Seemant Kulleen <seemant@gentoo.org> numlockx-1.0.ebuild:
+  use econf, and install into /usr/bin not /usr/X11R6. The second bit fixes
+  bug #90801 by TGL <degrenier@easyconnect.fr>
 
   27 Aug 2004; Tom Gall <tgall@gentoo.org> numlockx-1.0.ebuild:
   stable on ppc64, bug #59380
