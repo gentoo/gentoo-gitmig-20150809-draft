@@ -1,27 +1,26 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/openttd/openttd-0.3.6.ebuild,v 1.2 2005/02/20 13:16:22 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/openttd/openttd-0.4.0.ebuild,v 1.1 2005/05/16 15:09:34 dholm Exp $
 
-inherit games
+inherit eutils games
 
 DESCRIPTION="OpenTTD is a clone of Transport Tycoon Deluxe"
 HOMEPAGE="http://www.openttd.com/"
-SRC_URI="mirror://sourceforge/openttd/${P}.tar.gz
-	http://www.scherer.de/ottd/openttd-0.3.6.tar.gz"
+SRC_URI="mirror://sourceforge/openttd/${P}-src.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ppc ~amd64"
+KEYWORDS="~x86 ~ppc ~amd64"
 IUSE="debug png zlib timidity alsa dedicated"
 
-DEPEND="virtual/libc"
+DEPEND="media-libs/libsdl
+	png? ( media-libs/libpng )
+	zlib? ( sys-libs/zlib )"
 RDEPEND="${DEPEND}
 	!dedicated? (
 		timidity? ( media-sound/timidity++ )
-		!timidity? ( alsa? ( media-sound/pmidi ) )
-		png? ( media-libs/libpng )
-		zlib? ( sys-libs/zlib )
-		media-libs/libsdl )"
+		!timidity? ( alsa? ( media-sound/alsa-utils ) )
+	)"
 
 src_compile() {
 	local myopts="MANUAL_CONFIG=1 UNIX=1 WITH_NETWORK=1 INSTALL=1 RELEASE=${PV} USE_HOMEDIR=1 PERSONAL_DIR=.openttd PREFIX=/usr DATA_DIR=share/games/${PN}"
@@ -32,7 +31,7 @@ src_compile() {
 		use zlib && myopts="${myopts} WITH_ZLIB=1"
 		myopts="${myopts} WITH_SDL=1"
 		if ! use timidity; then
-			use alsa && myopts="${myopts} MIDI=/usr/bin/pmidi"
+			use alsa && myopts="${myopts} MIDI=/usr/bin/aplaymidi"
 		fi
 	fi
 
@@ -43,16 +42,25 @@ src_install() {
 	dogamesbin openttd || die "dogamesbin failed"
 
 	insinto "${GAMES_DATADIR}/${PN}/data"
-	doins data/* || die "doins failed"
+	doins data/* || die "doins failed (data)"
 
 	insinto "${GAMES_DATADIR}/${PN}/lang"
-	doins lang/*.lng || die "doins failed"
+	doins lang/*.lng || die "doins failed (lang)"
 
-	insinto /usr/share/pixmaps
-	newins media/openttd.128.png openttd.png || die "doins failed"
+	insinto "${GAMES_DATADIR}/${PN}/scenario"
+	doins scenario/* || die "doins failed (scenario)"
+
+	insinto "${GAMES_DATADIR}/${PN}/scripts"
+	doins scripts/*.example || die "doins failed (scripts)"
+
+	doicon media/openttd.*.png
 
 	if ! use dedicated; then
-		make_desktop_entry openttd "OpenTTD" openttd.png
+		if use timidity || use alsa; then
+			make_desktop_entry "openttd -m extmidi" "OpenTTD" openttd.64.png
+		else
+			make_desktop_entry openttd "OpenTTD" openttd.64.png
+		fi
 	else
 		exeinto /etc/init.d
 		newexe ${FILESDIR}/openttd.initd openttd
@@ -60,6 +68,7 @@ src_install() {
 
 	dodoc readme.txt changelog.txt docs/Manual.txt docs/console.txt \
 		docs/multiplayer.txt
+	newdoc scripts/readme.txt readme_scripts.txt
 	doman docs/openttd.6
 	prepgamesdirs
 }
@@ -76,6 +85,13 @@ pkg_postinst() {
 	einfo "OR from the DOS version you need: "
 	einfo "  SAMPLE.CAT TRG1.GRF TRGC.GRF TRGH.GRF TRGI.GRF TRGT.GRF"
 	echo
+	einfo "Scenarios are installed to ${GAMES_DATADIR}/${PN}/scenario,"
+	einfo "you will have to symlink them to ~/.openttd/scenario in order"
+	einfo "to use them."
+	einfo "Example:"
+	einfo "  mkdir -p ~/.openttd/scenario"
+	einfo "  ln -s ${GAMES_DATADIR}/${PN}/scenario/* ~/.openttd/scenario/"
+	echo
 	einfo "File names are case sensitive so make sure they are "
 	einfo "correct for whichever version you have."
 	echo
@@ -89,18 +105,27 @@ pkg_postinst() {
 		echo
 		ewarn "Warning: The init script will kill all running openttd"
 		ewarn "processes when run, including any running client sessions!"
+		echo
 	else
-		if use timidity ; then
+		if use timidity || use alsa; then
 			einfo "If you want music, you must copy the gm/ directory"
 			einfo "to ${GAMES_DATADIR}/${PN}/"
+			einfo "You can enable MIDI by running:"
+			einfo "  openttd -m extmidi"
 			echo
-			einfo "You also need soundfonts for timidity, if you don't"
-			einfo "know what that is, do:"
-			echo
-			einfo "emerge media-sound/timidity-eawpatches"
+			if use timidity; then
+				einfo "You also need soundfonts for timidity, if you don't"
+				einfo "know what that is, do:"
+				echo
+				einfo "emerge media-sound/timidity-eawpatches"
+			else
+				einfo "You have emerged with 'aplaymidi' for playing MIDI."
+				einfo "You have to set the environment variable ALSA_OUTPUT_PORTS."
+				einfo "Available ports can be listed by using 'aplaymidi -l'."
+			fi
 		else
-			einfo "timidity not in USE so music will not be played during the game."
+			einfo "timidity and/or alsa not in USE so music will not be played during the game."
 		fi
-	fi
 		echo
+	fi
 }
