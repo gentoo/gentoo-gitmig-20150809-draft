@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/wget
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/ChangeLog,v 1.66 2005/05/16 20:00:21 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/ChangeLog,v 1.67 2005/05/16 20:07:11 spb Exp $
+
+  16 May 2005; Stephen Bennett <spb@gentoo.org> wget-1.9.1-r5.ebuild:
+  Mips stable for #83920
 
   16 May 2005; Rene Nussbaumer <killerfox@gentoo.org> wget-1.9.1-r5.ebuild:
   Stable on hppa; bug #83920
