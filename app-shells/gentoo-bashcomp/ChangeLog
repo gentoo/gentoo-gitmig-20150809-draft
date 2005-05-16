@@ -1,6 +1,12 @@
 # ChangeLog for app-shells/gentoo-bashcomp
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/gentoo-bashcomp/ChangeLog,v 1.6 2005/05/06 13:26:19 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/gentoo-bashcomp/ChangeLog,v 1.7 2005/05/16 06:55:42 ka0ttic Exp $
+
+*gentoo-bashcomp-20050516 (16 May 2005)
+
+  16 May 2005; Aaron Walker <ka0ttic@gentoo.org>
+  +gentoo-bashcomp-20050516.ebuild:
+  Version bump; emerge now completes on virtuals. Also fixes bug 92479.
 
 *gentoo-bashcomp-20050506 (06 May 2005)
 
