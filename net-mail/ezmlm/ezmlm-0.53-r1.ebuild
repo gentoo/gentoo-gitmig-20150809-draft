@@ -1,11 +1,11 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/ezmlm/ezmlm-0.53-r1.ebuild,v 1.6 2004/06/25 03:10:53 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/ezmlm/ezmlm-0.53-r1.ebuild,v 1.7 2005/05/16 10:05:44 ticho Exp $
 
-inherit eutils fixheadtails gcc
+inherit eutils fixheadtails toolchain-funcs
 
 DESCRIPTION="Simple yet powerful mailing list manager for qmail"
-HOMEPAGE="http://cr.yp.to/${PN}.html"
+HOMEPAGE="http://cr.yp.to/ezmlm.html"
 SRC_URI="http://cr.yp.to/software/${P}.tar.gz
 	http://csa-net.dk/djbware/ezmlm-0.53-ia64.patch"
 
@@ -29,8 +29,8 @@ src_unpack() {
 	ht_fix_file Makefile *.do
 	echo "/usr/bin" > conf-bin
 	echo "/usr/share/man" > conf-man
-	echo "$(gcc-getCC) ${CFLAGS}" > conf-cc
-	echo "$(gcc-getCC) ${LDFLAGS}" > conf-ld
+	echo "$(tc-getCC) ${CFLAGS}" > conf-cc
+	echo "$(tc-getCC) ${LDFLAGS}" > conf-ld
 }
 
 src_compile() {

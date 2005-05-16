@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/mailfront
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailfront/ChangeLog,v 1.16 2005/04/28 21:02:25 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailfront/ChangeLog,v 1.17 2005/05/16 10:08:22 ticho Exp $
+
+  16 May 2005; Andrej Kacian <ticho@gentoo.org> mailfront-0.88.ebuild,
+  mailfront-0.92.ebuild:
+  Inherit toolchain-funcs.eclass instead of gcc.eclass. Bug #92745.
 
 *mailfront-0.93 (28 Apr 2005)
 

@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailfront/mailfront-0.92.ebuild,v 1.1 2005/02/13 06:37:26 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailfront/mailfront-0.92.ebuild,v 1.2 2005/05/16 10:08:22 ticho Exp $
 
-inherit fixheadtails gcc
+inherit fixheadtails toolchain-funcs
 
 DESCRIPTION="Mail server network protocol front-ends"
 HOMEPAGE="http://untroubled.org/mailfront/"
@@ -30,8 +30,8 @@ src_compile() {
 	echo "/usr/lib/bglibs/lib" > conf-bglibs
 	echo "/var/qmail/bin" > conf-bin
 	echo "/var/qmail" > conf-qmail
-	echo "$(gcc-getCC) ${CFLAGS}" > conf-cc
-	echo "$(gcc-getCC) -s" > conf-ld
+	echo "$(tc-getCC) ${CFLAGS}" > conf-cc
+	echo "$(tc-getCC) -s" > conf-ld
 	emake || die
 }
 
