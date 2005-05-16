@@ -1,6 +1,15 @@
 # ChangeLog for www-servers/cherokee
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/ChangeLog,v 1.9 2005/05/12 01:14:57 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/ChangeLog,v 1.10 2005/05/16 19:09:32 bass Exp $
+
+*cherokee-0.4.22 (16 May 2005)
+ 16 May 2005; J.Alberto S.L. <bass@gentoo.org> +cherokee-0.4.22.ebuild:
+ Bump Version.
+
+*cherokee-0.4.21-r1 (16 May 2005)
+ 16 May 2005; J.Alberto S.L. <bass@gentoo.org> +cherokee-0.4.21-r1.ebuild:
+ Patch to no build handle-admin (thanks to ka0ttic) and a few USEs added
+ (ssl, gnutls, pic, static & ipv6).
 
 *cherokee-0.4.21 (11 May 2005)
 
@@ -94,7 +103,7 @@
   15 Apr 2004; <bass@gentoo.org> cherokee-0.4.16.ebuild:
   New version.
   Removed the gnome-vfs support, the main cherokee-dev say this:
-   (00:33:56) Alo: quita lo de GNOME-VFS.. que eso sÛlo es un peligro
+   (00:33:56) Alo: quita lo de GNOME-VFS.. que eso s√≥lo es un peligro
                    y no vale para nada en el mundo real :)
   (gnome-vfs is dengerous and don't usefull in the real world)
    (00:45:14) Alo: es un buen ejemplo de como hacer un handler
@@ -144,12 +153,12 @@
 
 *chrokee-4.1 (18 Mar 2003)
 
- 18 Mar 2003; J.Alberto Su·rez L. <bass@gentoo.org> cherokee-4.1.ebuild:
+ 18 Mar 2003; J.Alberto Su√°rez L. <bass@gentoo.org> cherokee-4.1.ebuild:
  Bumped version
 
 *cherokee-4.0.0 (11 Jan 2003)
 
-  10 Jan 2002; J.Alberto Su·rez L. <bass@gentoo.org> cherokee-4.0.0.ebuild:
+  10 Jan 2002; J.Alberto Su√°rez L. <bass@gentoo.org> cherokee-4.0.0.ebuild:
   First relase. Beta5 version. 
 
 *cherokee-0.4.0 (11 Jan 2003)
