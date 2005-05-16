@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/freetts
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/freetts/ChangeLog,v 1.15 2005/05/06 11:11:08 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/freetts/ChangeLog,v 1.16 2005/05/16 20:41:03 gustavoz Exp $
+
+  16 May 2005; Gustavo Zacarias <gustavoz@gentoo.org> freetts-1.2.ebuild:
+  Stable on sparc
 
   06 May 2005; Markus Rothe <corsair@gentoo.org> freetts-1.2.ebuild:
   Added ~ppc64 to KEYWORDS
