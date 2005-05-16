@@ -1,6 +1,9 @@
 # ChangeLog for dev-dotnet/art-sharp
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/art-sharp/ChangeLog,v 1.24 2005/05/16 20:13:46 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/art-sharp/ChangeLog,v 1.25 2005/05/16 20:53:01 slarti Exp $
+
+  16 May 2005; Tom Martin <slarti@gentoo.org> ChangeLog:
+  Broken Manifest. Repoman at category level is bad.
 
   16 May 2005; Tom Martin <slarti@gentoo.org> art-sharp-1.0.8.ebuild,
   art-sharp-1.9.3.1.ebuild:
