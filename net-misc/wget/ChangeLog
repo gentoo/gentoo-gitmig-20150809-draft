@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/wget
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/ChangeLog,v 1.64 2005/05/16 19:52:43 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/ChangeLog,v 1.65 2005/05/16 19:56:24 plasmaroo Exp $
+
+  16 May 2005; <plasmaroo@gentoo.org> wget-1.9.1-r5.ebuild:
+  Stable on IA64; bug #83920.
 
   16 May 2005; Bryan Østergaard <kloeri@gentoo.org> wget-1.9.1-r5.ebuild:
   Stable on alpha.

@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a0a0a49fd392c3a858b70242aa3f7268 wget-1.9.1-r3.ebuild 1561
-MD5 cad705fe2ed8620f0fb84fc00d027046 ChangeLog 10909
+MD5 cd657f1170fa75773a0bb71d36055a96 ChangeLog 11003
 MD5 d8da3021a3e635af9c4511b2a55b5633 metadata.xml 343
-MD5 d26843b4442f1720ee27e2baa11ad422 wget-1.9.1-r5.ebuild 1665
 MD5 997fb4f22c3f10b16a9f61fcf7f02da5 wget-1.9.1-r4.ebuild 1584
+MD5 a0a0a49fd392c3a858b70242aa3f7268 wget-1.9.1-r3.ebuild 1561
+MD5 6893538375720a42d393bdc7d082bf48 wget-1.9.1-r5.ebuild 1667
 MD5 69f37da4a3708c5a2221ad21a5b25d74 files/digest-wget-1.9.1-r5 136
 MD5 00d0d47b0f3c0eb0a56d45ff0ee01e6e files/digest-wget-1.9.1-r4 136
 MD5 94ce8e0557c28ef33d5814ab3dd34980 files/digest-wget-1.9.1-r3 135
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCiPpDKf2g/qXtneoRAm0MAJ4jkllFKICNqkPjS24gpavVeTuCXQCcCIgk
-BhGaCh1yU/JeLx73v7bfXlw=
-=iAw6
------END PGP SIGNATURE-----
