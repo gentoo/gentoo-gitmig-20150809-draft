@@ -1,8 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/csindex/csindex-2.11c.ebuild,v 1.5 2004/07/02 05:02:24 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/csindex/csindex-2.11c.ebuild,v 1.6 2005/05/16 04:28:14 usata Exp $
 
-inherit gcc
+inherit toolchain-funcs
 
 MY_P="${PN}-19980713"
 
@@ -20,7 +20,7 @@ DEPEND="virtual/libc"
 S=${WORKDIR}/${MY_P}
 
 src_compile() {
-	emake CC="$(gcc-getCC)" CFLAGS="${CFLAGS}" || die "make failed"
+	emake CC="$(tc-getCC)" CFLAGS="${CFLAGS}" || die "make failed"
 }
 
 src_install() {
