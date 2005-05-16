@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/unix2dos/unix2dos-2.2.ebuild,v 1.21 2005/01/01 16:40:25 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/unix2dos/unix2dos-2.2.ebuild,v 1.22 2005/05/16 05:48:59 ka0ttic Exp $
 
-inherit gcc eutils
+inherit eutils toolchain-funcs
 
 DESCRIPTION="UNIX to DOS text file format converter"
 HOMEPAGE="I HAVE NO HOME :("
@@ -16,7 +16,7 @@ IUSE=""
 DEPEND=""
 RDEPEND=""
 
-S=${WORKDIR}
+S="${WORKDIR}"
 
 src_unpack() {
 	unpack ${A}
@@ -26,7 +26,7 @@ src_unpack() {
 }
 
 src_compile() {
-	$(gcc-getCC) ${CFLAGS} -o unix2dos unix2dos.c || die
+	$(tc-getCC) ${CFLAGS} -o unix2dos unix2dos.c || die
 }
 
 src_install() {

@@ -1,5 +1,5 @@
-MD5 1af4759da97a0db18cb1c0c8ac66b82f ChangeLog 3316
+MD5 606750b6acd66e9b261d7afb142f1354 recode-3.6-r1.ebuild 1340
+MD5 93c4f3b2a8de41af59c3e61aaec687ea ChangeLog 3440
 MD5 0c131a7201c4670302767f93643876fa metadata.xml 165
-MD5 c41fbaee0049c4b3d2a3185cfa8e2e58 recode-3.6-r1.ebuild 1319
 MD5 6d0ba2283055f0ad0f91ff4dfd0acfd9 files/digest-recode-3.6-r1 133
 MD5 2c2585695b7486f34ba9241c144a5b19 files/recode-3.6-ppc-macos.diff 1334

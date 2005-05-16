@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/recode/recode-3.6-r1.ebuild,v 1.20 2005/02/01 21:46:51 kito Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/recode/recode-3.6-r1.ebuild,v 1.21 2005/05/16 05:44:22 ka0ttic Exp $
 
-inherit flag-o-matic eutils gcc libtool
+inherit flag-o-matic eutils toolchain-funcs libtool
 
 DESCRIPTION="Convert files between various character sets"
 HOMEPAGE="http://www.gnu.org/software/recode/"
@@ -14,8 +14,7 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 mips ppc sparc x86 ppc64 ~ppc-macos"
 IUSE="nls"
 
-DEPEND="virtual/libc
-	nls? ( sys-devel/gettext )"
+DEPEND="nls? ( sys-devel/gettext )"
 
 src_unpack() {
 	unpack ${A}
@@ -32,12 +31,12 @@ src_unpack() {
 
 src_compile() {
 	# gcc-3.2 crashes if we don't remove any -O?
-	[ "$(gcc-version)" == "3.2" ] && [ ${ARCH} == "x86" ] \
-		&& filter-flags -O?
+	[[ ${ARCH} == "x86" && $(gcc-version) == "3.2" ]] && filter-flags -O?
+
 	replace-cpu-flags pentium4 pentium3
 
-	econf $(use_enable nls) || die
-	emake || die
+	econf $(use_enable nls) || die "econf failed"
+	emake || die "emake failed"
 }
 
 src_install() {
