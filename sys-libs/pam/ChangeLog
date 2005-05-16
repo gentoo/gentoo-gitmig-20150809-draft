@@ -1,6 +1,12 @@
 # ChangeLog for sys-libs/pam
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.72 2005/04/28 15:52:12 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.73 2005/05/16 00:50:12 flameeyes Exp $
+
+  16 May 2005; Diego Pettenò <flameeyes@gentoo.org> pam-0.77.ebuild,
+  pam-0.77-r1.ebuild, pam-0.77-r2.ebuild, pam-0.77-r3.ebuild,
+  pam-0.77-r4.ebuild, pam-0.77-r6.ebuild, pam-0.77-r7.ebuild,
+  pam-0.77-r8.ebuild, pam-0.78.ebuild, pam-0.78-r1.ebuild:
+  Converted to use toolchain-funcs instead of gcc eclass.
 
   28 Apr 2005; Martin Schlemmer <azarah@gentoo.org> pam-0.77.ebuild,
   pam-0.77-r1.ebuild, pam-0.77-r2.ebuild, pam-0.77-r3.ebuild,

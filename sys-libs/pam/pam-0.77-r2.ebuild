@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.77-r2.ebuild,v 1.5 2005/04/28 15:52:12 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.77-r2.ebuild,v 1.6 2005/05/16 00:50:12 flameeyes Exp $
 
 PATCH_LEVEL="1.3"
 BDB_VER="4.1.25"
@@ -32,7 +32,7 @@ DEPEND="$RDEPEND
 # link statically to it - <azarah@gentoo.org> (09 Nov 2003).
 
 #inherit needs to be after DEPEND definition to protect RDEPEND
-inherit gcc eutils flag-o-matic gnuconfig
+inherit toolchain-funcs eutils flag-o-matic gnuconfig
 
 # Note that we link to static versions of glib (pam_console.so)
 # and pwdb (pam_pwdb.so) ...
