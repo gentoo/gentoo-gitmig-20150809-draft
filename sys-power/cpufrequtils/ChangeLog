@@ -1,6 +1,13 @@
 # ChangeLog for sys-power/cpufrequtils
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufrequtils/ChangeLog,v 1.6 2005/05/08 08:43:35 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufrequtils/ChangeLog,v 1.7 2005/05/16 12:10:43 brix Exp $
+
+*cpufrequtils-0.3-r1 (16 May 2005)
+
+  16 May 2005; <brix@gentoo.org> +files/cpufrequtils-0.3-conf.d,
+  +files/cpufrequtils-0.3-init.d, +cpufrequtils-0.3-r1.ebuild:
+  Added init script for setting governor at boot time as per bug #92241,
+  thanks to Mark Rosenstand.
 
 *cpufrequtils-0.3 (08 May 2005)
 
