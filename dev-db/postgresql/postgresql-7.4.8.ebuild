@@ -1,28 +1,24 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-8.0.2-r2.ebuild,v 1.4 2005/05/09 21:55:20 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.4.8.ebuild,v 1.1 2005/05/16 06:54:44 nakano Exp $
 
-inherit eutils gnuconfig flag-o-matic multilib toolchain-funcs
+inherit eutils gnuconfig flag-o-matic java-pkg multilib toolchain-funcs
 
 DESCRIPTION="sophisticated Object-Relational DBMS."
 HOMEPAGE="http://www.postgresql.org/"
-P_HIERPG="hier-Pg8.0.1-0.5.4"
-MY_PV=${PV/_/}
-MY_P=${PN}-${MY_PV}
-SRC_URI="mirror://postgresql/source/v${PV}/${PN}-base-${MY_PV}.tar.bz2
-	mirror://postgresql/source/v${PV}/${PN}-opt-${MY_PV}.tar.bz2
-	doc? ( mirror://postgresql/source/v${PV}/${PN}-docs-${MY_PV}.tar.bz2 )"
-#	pg-hier? ( http://gppl.moonbone.ru/${P_HIERPG}.diff.gz )"
+P_HIERPG="hier-Pg7.4-0.5.3"
+SRC_URI="mirror://postgresql/source/v${PV}/${PN}-base-${PV}.tar.bz2
+	mirror://postgresql/source/v${PV}/${PN}-opt-${PV}.tar.bz2
+	doc? ( mirror://postgresql/source/v${PV}/${PN}-docs-${PV}.tar.bz2 )
+	pg-hier? ( ftp://gborg.postgresql.org/pub/hierpg/stable/${P_HIERPG}.tar.gz )"
 
 LICENSE="POSTGRESQL"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha ~arm ~hppa ~amd64 ~ia64 ~s390 ~ppc64"
-IUSE="ssl nls python tcltk perl libg++ pam readline xml2 zlib doc selinux kerberos pg-intdatetime"
-#pg-hier"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
+IUSE="ssl nls java python tcltk perl libg++ pam readline zlib doc pg-hier pg-vacuumdelay pg-intdatetime threads xml2 selinux"
 
-S=${WORKDIR}/${MY_P}
 DEPEND="virtual/libc
-	=dev-db/libpq-4.0
+	=dev-db/libpq-7.4.8
 	sys-devel/autoconf
 	>=sys-libs/ncurses-5.2
 	>=sys-devel/bison-1.875
@@ -31,29 +27,33 @@ DEPEND="virtual/libc
 	tcltk? ( >=dev-lang/tcl-8 >=dev-lang/tk-8.3.3-r1 )
 	perl? ( >=dev-lang/perl-5.6.1-r2 )
 	python? ( >=dev-lang/python-2.2 dev-python/egenix-mx-base )
+	java? ( >=virtual/jdk-1.3 >=dev-java/ant-1.3
+		dev-java/java-config )
 	ssl? ( >=dev-libs/openssl-0.9.6-r1 )
-	xml2? ( dev-libs/libxml2 dev-libs/libxslt dev-util/pkgconfig )
 	nls? ( sys-devel/gettext )
-	kerberos? ( virtual/krb5 )"
+	xml2? ( dev-libs/libxml2 dev-libs/libxslt dev-util/pkgconfig )"
+# java dep workaround for portage bug
+# x86? ( java? ( =dev-java/sun-jdk-1.3* >=dev-java/ant-1.3 ) )
 RDEPEND="virtual/libc
-	=dev-db/libpq-4.0
+	=dev-db/libpq-7.4.8
 	zlib? ( >=sys-libs/zlib-1.1.3 )
 	tcltk? ( >=dev-lang/tcl-8 )
 	perl? ( >=dev-lang/perl-5.6.1-r2 )
 	python? ( >=dev-lang/python-2.2 )
+	java? ( >=virtual/jdk-1.3 )
 	selinux? ( sec-policy/selinux-postgresql )
 	ssl? ( >=dev-libs/openssl-0.9.6-r1 )
-	xml2? ( dev-libs/libxml2 dev-libs/libxslt )
-	kerberos? ( virtual/krb5 )"
+	xml2? ( dev-libs/libxml2 dev-libs/libxslt )"
 
 PG_DIR="/var/lib/postgresql"
+MAX_CONNECTIONS=1024
 
 pkg_setup() {
 	if [ -f ${PG_DIR}/data/PG_VERSION ] ; then
 		PG_MAJOR=`cat ${PG_DIR}/data/PG_VERSION | cut -f1 -d.`
 		PG_MINOR=`cat ${PG_DIR}/data/PG_VERSION | cut -f2 -d.`
-		if [ ${PG_MAJOR} -lt 8 ] || [ ${PG_MAJOR} -eq 8 -a ${PG_MINOR} -lt 0 ] ; then
-			eerror "Postgres ${MY_PV} cannot upgrade your existing databases, you must"
+		if [ ${PG_MAJOR} -lt 7 ] || [ ${PG_MAJOR} -eq 7 -a ${PG_MINOR} -lt 4 ] ; then
+			eerror "Postgres ${PV} cannot upgrade your existing databases, you must"
 			eerror "use pg_dump to export your existing databases to a file, and then"
 			eerror "pg_restore to import them when you have upgraded completely."
 			eerror "You must remove your entire database directory to continue."
@@ -63,38 +63,63 @@ pkg_setup() {
 	fi
 }
 
+check_java_config() {
+	JDKHOME="`java-config --jdk-home`"
+	if [[ -z "${JDKHOME}" || ! -d "${JDKHOME}" ]]; then
+		NOJDKERROR="You need to use java-config to set your JVM to a JDK!"
+		eerror "${NOJDKERROR}"
+		die "${NOJDKERROR}"
+	fi
+}
+
 src_unpack() {
 	unpack ${A} || die
-	cd ${S}
-#	use pg-hier && epatch ${WORKDIR}/${P_HIERPG}.diff
-	epatch ${FILESDIR}/${P}-gentoo-libpq.patch
+	epatch ${FILESDIR}/${P}-gentoo.patch
 
-	# Bug 91231
-	epatch ${FILESDIR}/CAN-2005-1409.patch
-	epatch ${FILESDIR}/CAN-2005-1410.patch
-	use doc && epatch ${FILESDIR}/CAN-2005-1409-doc.patch
+	if use pg-hier; then
+		cd ${S} || die
+		epatch ${WORKDIR}/${P_HIERPG}.diff
+	fi
+
+	if use pg-vacuumdelay; then
+		cd ${S} || die
+		epatch ${FILESDIR}/${P}-vacuum-delay.patch
+	fi
+
+	if [ "${ARCH}" = "hppa" ]
+	then
+		cd ${S}
+		epatch ${FILESDIR}/${P}-hppa-testandset.patch
+	fi
 }
 
 src_compile() {
-	filter-flags -ffast-math -feliminate-dwarf2-dups
+	filter-flags -ffast-math
+
+	if use java; then
+		check_java_config
+	fi
 
 	local myconf
 	use tcltk && myconf="--with-tcl"
 	use python && myconf="$myconf --with-python"
 	use perl && myconf="$myconf --with-perl"
+	use java && myconf="$myconf --with-java"
 	use ssl && myconf="$myconf --with-openssl"
 	use nls && myconf="$myconf --enable-nls"
 	use libg++ && myconf="$myconf --with-CXX"
 	use pam && myconf="$myconf --with-pam"
 	use readline || myconf="$myconf --without-readline"
 	use zlib || myconf="$myconf --without-zlib"
-	use kerberos && myconf="$myconf --with-krb5"
 	use pg-intdatetime && myconf="$myconf --enable-integer-datetimes"
+	use threads && myconf="$myconf --enable-thread-safety"
 
 	# these are the only working CFLAGS I could get on ppc, so locking them
 	# down, anything more aggressive fails (i.e. -mcpu or -Ox)
 	# Gerk - Nov 26, 2002
 	use ppc && CFLAGS="-pipe -fsigned-char"
+	use xml2 && CFLAGS="${CFLAGS} $(pkg-config --cflags libxml-2.0)"
+	use xml2 && LIBS="${LIBS} $(pkg-config --libs libxml-2.0)"
 
 	# Detect mips systems properly
 	gnuconfig_update
@@ -102,18 +127,19 @@ src_compile() {
 	./configure --prefix=/usr \
 		--mandir=/usr/share/man \
 		--host=${CHOST} \
-		--with-docdir=/usr/share/doc/${PF} \
+		--docdir=/usr/share/doc/${PF} \
 		--libdir=/usr/$(get_libdir) \
+		--includedir=/usr/include/postgresql/pgsql \
 		--enable-depend \
 		--with-gnu-ld \
+		--with-maxbackends=${MAX_CONNECTIONS} \
 		$myconf || die
 
 	make LD="$(tc-getLD) $(get_abi_LDFLAGS)" || die
 	cd contrib
 	make LD="$(tc-getLD) $(get_abi_LDFLAGS)" || die
 	if use xml2; then
-		cd xml2
-		make LD="$(tc-getLD) $(get_abi_LDFLAGS)" || die
+		make -C xml LD="$(tc-getLD) $(get_abi_LDFLAGS)" || die
 	fi
 }
 
@@ -127,19 +153,36 @@ src_install() {
 			${S}/src/pl/plperl/GNUmakefile_orig > ${S}/src/pl/plperl/GNUmakefile
 	fi
 
-	make DESTDIR=${D} LIBDIR=${D}/usr/lib install || die
-#	make DESTDIR=${D} install-all-headers || die
+	make DESTDIR=${D} includedir_server=/usr/include/postgresql/server includedir_internal=/usr/include/postgresql/internal LIBDIR=${D}/usr/lib install || die
+	make DESTDIR=${D} includedir_server=/usr/include/postgresql/server includedir_internal=/usr/include/postgresql/internal install-all-headers || die
 	cd ${S}/contrib
 	make DESTDIR=${D} LIBDIR=${D}/usr/lib install || die
 	if use xml2; then
-		cd ${S}/contrib/xml2
-		make DESTDIR=${D} LIBDIR=${D}/usr/lib install || die
+		make -C xml DESTDIR=${D} IBDIR=${D}/usr/lib install || die
 	fi
 	cd ${S}
+	if use pg-hier; then
+		dodoc ${WORKDIR}/README-${P_HIERPG}.html || die
+	fi
 	dodoc README HISTORY COPYRIGHT INSTALL
 	dodoc contrib/adddepend/*
 
 	exeinto /usr/bin
+
+	if use java; then
+		# we need to remove jar file after dojar; otherwise two same jar
+		# file are installed.
+		java-pkg_dojar ${D}/usr/share/postgresql/java/postgresql.jar || die
+		rm ${D}/usr/share/postgresql/java/postgresql.jar
+		java-pkg_dojar ${D}/usr/share/postgresql/java/postgresql-examples.jar || die
+		rm ${D}/usr/share/postgresql/java/postgresql-examples.jar
+	fi
+
+	# backward compatibility
+	for i in ${D}/usr/include/postgresql/pgsql/*
+	do
+		ln -s ${i} ${D}/usr/include/
+	done
 
 	cd ${S}/doc
 	dodoc FAQ* README.* TODO bug.template
@@ -164,20 +207,46 @@ src_install() {
 	insinto /etc/conf.d/
 	newins ${FILESDIR}/postgresql.conf-${PV} postgresql || die
 	newins ${FILESDIR}/pg_autovacuum.conf-${PV} pg_autovacuum || die
-
-	rm ${D}/usr/include/postgres_ext.h
 }
 
 pkg_postinst() {
 	einfo "Make sure the postgres user in /etc/passwd has an account setup with /bin/bash as the shell"
 
-	if [ ! -f ${PG_DIR}/data/PG_VERSION ] ; then
+	if [ -f ${PG_DIR}/data/PG_VERSION ] ; then
+		PG_MAJOR=`cat ${PG_DIR}/data/PG_VERSION | cut -f1 -d.`
+		PG_MINOR=`cat ${PG_DIR}/data/PG_VERSION | cut -f2 -d.`
+		if [ ${PG_MAJOR} -lt 7 ] || [ ${PG_MAJOR} -eq 7 -a ${PG_MINOR} -eq 4 ] ; then
+			ewarn ""
+			ewarn "If you are upgrading from PostgreSQL 7.4 or 7.4.1, it is strongly recommended"
+			ewarn "that you read the release notes concerning changes to the system catalogs."
+			ewarn "You can run 7.4.2 without rerunning initdb, however you may still experience"
+			ewarn "random crashes due to an error in pg_statistic."
+			ewarn ""
+			ewarn "If you prefer not to re-initdb your installation, the release notes contain"
+			ewarn "a procedure for manually correcting the problem."
+			ewarn ""
+		fi
+
+		if use pg-hier; then
+			ewarn ""
+			ewarn "REQUIRED!! After installing patched PostgreSQL by pg-hier"
+			ewarn "it is required to run 'initdb'. Without this Pg will fail "
+			ewarn "with error "
+			ewarn "ERROR: did not find '}' at end of input node. "
+			ewarn ""
+		fi
+	else
 		einfo ""
 		einfo "Execute the following command"
 		einfo "ebuild /var/db/pkg/dev-db/${PF}/${PF}.ebuild config"
 		einfo "to setup the initial database environment."
 		einfo ""
 	fi
+
+	einfo ""
+	einfo "Python modules was removed from PostgreSQL package."
+	einfo "If you need it, please run \"emerge dev-db/pygresql\"."
+	einfo ""
 }
 
 pkg_config() {
@@ -188,16 +257,23 @@ pkg_config() {
 
 	einfo "Initializing the database ..."
 	if [ -f ${PG_DIR}/data/PG_VERSION ] ; then
-		eerror "Postgres ${MY_PV} cannot upgrade your existing databases."
-		eerror "You must remove your entire database directory to continue."
-		eerror "(database directory = ${PG_DIR})."
-		exit 1
+		PG_MAJOR=`cat ${PG_DIR}/data/PG_VERSION | cut -f1 -d.`
+		PG_MINOR=`cat ${PG_DIR}/data/PG_VERSION | cut -f2 -d.`
+		if [ ${PG_MAJOR} -lt 7 ] || [ ${PG_MAJOR} -eq 7 -a ${PG_MINOR} -lt 3 ] ; then
+			eerror "Postgres ${PV} cannot upgrade your existing databases."
+			eerror "You must remove your entire database directory to continue."
+			eerror "(database directory = ${PG_DIR})."
+			exit 1
+		else
+			einfon "A postgres data directory already exists from version "; cat ${PG_DIR}/data/PG_VERSION
+			einfo "Read the documentation to check how to upgrade to version ${PV}."
+		fi
 	else
 		local SEM=`sysctl -n kernel.sem | cut -f-3`
 		local SEMMNI=`sysctl -n kernel.sem | cut -f4`
 		local SEMMNI_MIN=`expr \( ${MAX_CONNECTIONS} + 15 \) / 16`
 		local SHMMAX=`sysctl -n kernel.shmmax`
-		local SHMMAX_MIN=`expr 250000 + 8200 \* 1000 + 14200 \* 100`
+		local SHMMAX_MIN=`expr 250000 + 30600 \* ${MAX_CONNECTIONS}`
 
 		if [ ${SEMMNI} -lt ${SEMMNI_MIN} ]; then
 			eerror "The current value of SEMMNI is too low"
