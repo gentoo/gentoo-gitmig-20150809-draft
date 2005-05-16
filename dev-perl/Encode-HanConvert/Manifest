@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 ab0c33ec0f28e404613aa528266bc589 Encode-HanConvert-0.31.ebuild 531
+MD5 7eb582cc3eccc88f88f6b303dc58d0bc ChangeLog 531
+MD5 03730d887090747e0330bf1be9c21090 Encode-HanConvert-0.31.ebuild 537
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 6161cc3a15633744b49e64aa4e1b3a98 ChangeLog 425
 MD5 9304353dacd2a246e75eda8e61f348cc files/digest-Encode-HanConvert-0.31 74
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFBY7SCtG5z4I8BtQoRAgI3AJ9l8N1AXhxJ3aX7EPVK0XyamyIwOQCfS4iA
-oq8mxd+TnVoyOKKKjTEKwxs=
-=j4A0
+iD8DBQFCiPv8KRy60XGEcJIRAnq9AJ9an0Bc4br5rbho1k36arojBQoDvACgraPG
+pOgw3HTwo3VAK3u8VcFArdE=
+=l4pq
 -----END PGP SIGNATURE-----
