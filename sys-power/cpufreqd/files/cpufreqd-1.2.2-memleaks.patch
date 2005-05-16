@@ -1,0 +1,28 @@
+diff -Nud cpufreqd-1.2.2/main.c nvfreqd/main.c
+--- cpufreqd-1.2.2/main.c	2004-10-25 13:04:27.000000000 +0200
++++ nvfreqd/main.c	2005-05-13 12:12:59.066964000 +0200
+@@ -153,6 +172,7 @@
+   
+   /* free configuration */
+   free_config(configuration);
++  free(configuration);
+   
+   /* TODO: this call to close log shound not sit here... */
+   closelog();
+@@ -423,6 +443,7 @@
+       sleep(configuration->poll_interval);
+   } /* end loop */
+ 
++  free(_system);
+   return 0;
+ }
+ 
+@@ -506,7 +527,7 @@
+  */
+ int set_policy(profile *prof) {
+   FILE *fp;
+-  char *path = (char *)malloc(256);
++  char path[256];
+   
+   if (!prof)
+     return -1;
