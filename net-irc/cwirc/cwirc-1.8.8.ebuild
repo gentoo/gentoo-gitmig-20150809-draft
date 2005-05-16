@@ -1,8 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/cwirc/cwirc-1.8.8.ebuild,v 1.2 2004/09/12 16:19:00 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/cwirc/cwirc-1.8.8.ebuild,v 1.3 2005/05/16 16:37:58 swegener Exp $
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 DESCRIPTION="An X-chat plugin for sending and receiving raw morse code over IRC"
 HOMEPAGE="http://webperso.easyconnect.fr/om.the/web/cwirc/"
@@ -19,19 +19,20 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
-	epatch ${FILESDIR}/cwirc-1.7.1-gentoo.patch
-	sed -i -e 's:$(STRIP):echo:' Makefile
+	epatch "${FILESDIR}"/cwirc-1.7.1-gentoo.patch
+	sed -i -e 's:$(STRIP):true:' Makefile
 }
 
 src_compile() {
-	emake CFLAGS="${CFLAGS} -DLINUX" || die "emake failed"
+	emake CC="$(tc-getCC)" CFLAGS="${CFLAGS} -DLINUX" || die "emake failed"
 }
 
 src_install() {
 	einstall || die "einstall failed"
 
 	dodoc README RELEASE_NOTES Changelog
-	cp -R schematics/ ${D}/usr/share/doc/${PF}/schematics/
+	docinto schematics
+	dodoc schematics/*
 }
