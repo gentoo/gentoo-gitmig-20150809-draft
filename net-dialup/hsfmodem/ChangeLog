@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/hsfmodem
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/hsfmodem/ChangeLog,v 1.10 2005/04/14 21:11:01 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/hsfmodem/ChangeLog,v 1.11 2005/05/16 13:14:05 seemant Exp $
+
+  16 May 2005; Seemant Kulleen <seemant@gentoo.org>
+  hsfmodem-7.18.00.03-r2.ebuild:
+  Spelling fix, thanks to: Jack Challen <davis65536@yahoo.co.uk> in bug #92775
 
   14 Apr 2005; Alin Nastac <mrness@gentoo.org> -hsfmodem-7.18.00.02.ebuild:
   Remove old version

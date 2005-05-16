@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/hsfmodem/hsfmodem-7.18.00.03-r2.ebuild,v 1.1 2005/03/17 11:30:07 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/hsfmodem/hsfmodem-7.18.00.03-r2.ebuild,v 1.2 2005/05/16 13:14:05 seemant Exp $
 
 inherit eutils
 
-DESCRIPTION="Linuxant's modem driver for Connexant HSF chipset"
+DESCRIPTION="Linuxant's modem driver for Conexant HSF chipset"
 HOMEPAGE="http://www.linuxant.com/drivers/hsf/index.php"
 SRC_URI="x86? ( http://www.linuxant.com/drivers/hsf/full/archive/${P}full/${P}full.tar.gz )
 	amd64? ( http://www.linuxant.com/drivers/hsf/full/archive/${P}x86_64full/${P}x86_64full.tar.gz )"
