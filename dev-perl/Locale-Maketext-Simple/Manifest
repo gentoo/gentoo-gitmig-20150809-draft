@@ -1,4 +1,14 @@
-MD5 beee60f2c08b609d09ecff82a3a07872 ChangeLog 697
-MD5 dc449c62ae6572e1850bed85d26d8703 Locale-Maketext-Simple-0.12.ebuild 563
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 f71950d0827f470fefbcbc186b10ec8e ChangeLog 812
+MD5 5e80b7134a3d21a059e1105c59b9a644 Locale-Maketext-Simple-0.12.ebuild 573
 MD5 1e7dded402e236d45bd25a38c70c995c metadata.xml 223
 MD5 e3a9344a43ed71250be5e269353d3cb4 files/digest-Locale-Maketext-Simple-0.12 78
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFCiOwWKRy60XGEcJIRAqR9AJsH6L2hr3IEJh9YK9KbSDtWTEAJewCeNwjE
+munlGxy52Wmt/18VdgviVvU=
+=DY5A
+-----END PGP SIGNATURE-----
