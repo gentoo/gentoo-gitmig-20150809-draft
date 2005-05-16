@@ -1,4 +1,6 @@
 MD5 77f765b16a0e8bc125c439ea28eae45e wmnd-0.4.11.ebuild 756
-MD5 ccd7e896f3f3e3775d2d9556c452e47b ChangeLog 3407
+MD5 4fcaf9564bfaa815bd7d71ae85ecd6ce wmnd-0.4.11-r1.ebuild 882
+MD5 61efe6b211d28fc3d78d5a00f1510f34 ChangeLog 3570
 MD5 35b06c646b51979b2022449f31d7a7ee metadata.xml 448
+MD5 8a1fa932715cb4c1c287aabf20d0d276 files/digest-wmnd-0.4.11-r1 63
 MD5 8a1fa932715cb4c1c287aabf20d0d276 files/digest-wmnd-0.4.11 63
