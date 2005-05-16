@@ -1,6 +1,4 @@
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 3798618d34751d8f2d78cf224e811ad8 ChangeLog 624
 MD5 ca0c9870f2c40388daa6f80ccdc9376f socklog-2.0.2.ebuild 1070
-MD5 2dc658ee63a5da1eb84bc737dd689e9b socklog-1.5.0.ebuild 1072
-MD5 69e8a81d0bbe7656db9096275f0130d4 files/digest-socklog-1.5.0 64
 MD5 544c53015c10fb71c5d9aefb5b4bdc99 files/digest-socklog-2.0.2 64
