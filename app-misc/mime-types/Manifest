@@ -1,6 +1,18 @@
-MD5 cb3f57e339db2aab56c25ec362e60e38 ChangeLog 2621
-MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
-MD5 4b35322240d49da9cc992df816c622d1 mime-types-1.0-r1.ebuild 534
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 5cbb4339714eaa2fd6e5a1e3c8575b8f mime-types-1.0.ebuild 506
-MD5 0d15f9f712d0699eebc5e3309135eb51 files/digest-mime-types-1.0 65
+MD5 4b35322240d49da9cc992df816c622d1 mime-types-1.0-r1.ebuild 534
+MD5 54b8a32cac8aba97eeeaea38e30c1682 mime-types-2.ebuild 531
+MD5 a6abc120e9572b12754bdf7557884127 ChangeLog 2896
+MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
 MD5 70a0a661efdf25f44423fcf623e6a511 files/digest-mime-types-1.0-r1 68
+MD5 215fe0afc74ecf02f4614b6be1122753 files/digest-mime-types-2 63
+MD5 0d15f9f712d0699eebc5e3309135eb51 files/digest-mime-types-1.0 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCiRUYQlM6RnzZP+IRAg+VAJ9krgGYUjQFnZuZ/QVGFEY/3U+ahwCfSHTj
+lSwEE+1KCotn7Nxd2m+2Bts=
+=vAVS
+-----END PGP SIGNATURE-----

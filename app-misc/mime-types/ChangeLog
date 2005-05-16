@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/mime-types
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mime-types/ChangeLog,v 1.23 2005/04/08 12:25:00 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mime-types/ChangeLog,v 1.24 2005/05/16 21:47:58 ticho Exp $
+
+*mime-types-2 (16 May 2005)
+
+  16 May 2005; Andrej Kacian <ticho@gentoo.org> +mime-types-2.ebuild:
+  Changed header comment on mime.types file, as suggested by Nikolas 'Atrus'
+  Coukouma <otto at atrus org>, bug #92638. Also changed versioning scheme,
+  and DESCRIPTION line.
 
   08 Apr 2005; Markus Rothe <corsair@gentoo.org> mime-types-1.0-r1.ebuild:
   Stable on ppc64
