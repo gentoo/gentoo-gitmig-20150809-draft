@@ -1,6 +1,13 @@
 # ChangeLog for app-office/grisbi
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/grisbi/ChangeLog,v 1.14 2005/05/10 11:39:23 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/grisbi/ChangeLog,v 1.15 2005/05/16 12:39:59 seemant Exp $
+
+*grisbi-0.5.6 (16 May 2005)
+
+  16 May 2005; Seemant Kulleen <seemant@gentoo.org>
+  +files/grisbi-0.5.6-latex-unicode.patch, -grisbi-0.5.4-r1.ebuild,
+  -grisbi-0.5.5.ebuild, -grisbi-0.5.5.20050410.ebuild, +grisbi-0.5.6.ebuild:
+  version bump, thanks to: Guillaume Castagnino <guilc@fr.st> in bug #92674
 
   10 May 2005; Seemant Kulleen <seemant@gentoo.org> grisbi-0.5.5.ebuild:
   get the doc.patch business out of SRC_URI, it's breaking things
