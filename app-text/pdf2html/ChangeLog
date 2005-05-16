@@ -1,6 +1,9 @@
 # ChangeLog for app-text/pdf2html
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pdf2html/ChangeLog,v 1.6 2005/01/01 16:29:39 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pdf2html/ChangeLog,v 1.7 2005/05/16 03:36:29 weeve Exp $
+
+  16 May 2005; Jason Wever <weeve@gentoo.org> pdf2html-1.4.ebuild:
+  Added ~sparc keyword.
 
 *pdf2html-1.4 (21 Feb 2004)
 
