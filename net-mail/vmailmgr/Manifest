@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 fc003581d1b4801ba5d4bccc4e9cd1cb vmailmgr-0.96.9-r1.ebuild 1620
-MD5 1c5aff7d791ae1c8be1f1fcdfbc48ba2 ChangeLog 2555
-MD5 8cbcb156ec6104d83fefff26c5e37d78 vmailmgr-0.96.9-r2.ebuild 1645
+MD5 fa3a1de95affffc13599471e23cad33c vmailmgr-0.96.9-r1.ebuild 1632
+MD5 ceeaf22fc933ce069ded9977ac447e70 ChangeLog 2725
+MD5 11b51793c29cb4cafdc40bb13ba3cb00 vmailmgr-0.96.9-r2.ebuild 1654
 MD5 911634f611838bc9b119dfb48b047c35 metadata.xml 250
 MD5 9c31bdc6361d69e632bda1dc65587fb9 files/vmailmgr-0.96.9-gentoo-r1.diff 4249
 MD5 fcb3e0b872a5f1719f7b9aa76eac8eba files/vmailmgr-0.96.9-gcc3.3.patch 3494
@@ -16,7 +16,7 @@ MD5 bf55605617fc5acfdca3a28a796e82a4 files/socket-file 35
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCe4DiI1lqEGTUzyQRAikNAJ9YswAkaMdL9ov4Bctq1DAMcPdJ9gCeJ1ey
-DyxY/qOtwYkVHTH9cd+8HCU=
-=ek73
+iD8DBQFCiG+wQlM6RnzZP+IRAiNcAJ47kSqxxxT53OsjaXHGa/9wTtYQiACgsqC/
+tVGl2ACl1+K0IcGsbj6IIzI=
+=0JmP
 -----END PGP SIGNATURE-----
