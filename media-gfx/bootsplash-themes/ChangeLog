@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/bootsplash-themes
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/bootsplash-themes/ChangeLog,v 1.4 2005/04/10 12:46:51 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/bootsplash-themes/ChangeLog,v 1.5 2005/05/16 16:53:59 spock Exp $
+
+*bootsplash-themes-20040821-r1 (16 May 2005)
+
+  16 May 2005; Michał Januszewski <spock@gentoo.org>
+  +bootsplash-themes-20040821-r1.ebuild:
+  Added experimental support for media-gfx/splashutils.
 
   10 Apr 2005; Simon Stelling <blubb@gentoo.org>
   bootsplash-themes-20040821.ebuild:
