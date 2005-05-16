@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gabber/gabber-0.8.8.ebuild,v 1.19 2005/05/05 23:17:31 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gabber/gabber-0.8.8.ebuild,v 1.20 2005/05/16 01:58:22 tester Exp $
 
-inherit flag-o-matic gcc eutils
+inherit flag-o-matic eutils
 
 DESCRIPTION="The GNOME Jabber Client"
 SRC_URI="mirror://sourceforge/gabber/${P}.tar.gz"

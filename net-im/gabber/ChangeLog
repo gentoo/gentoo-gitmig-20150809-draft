@@ -1,6 +1,9 @@
 # ChangeLog for net-im/gabber
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gabber/ChangeLog,v 1.32 2005/05/05 23:17:31 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gabber/ChangeLog,v 1.33 2005/05/16 01:58:22 tester Exp $
+
+  16 May 2005; Olivier Crête <tester@gentoo.org> gabber-0.8.8.ebuild:
+  Remove unused inherit gcc for bug #92745
 
   05 May 2005; Sven Wegener <swegener@gentoo.org> gabber-0.8.7.12.ebuild,
   gabber-0.8.8.ebuild:
