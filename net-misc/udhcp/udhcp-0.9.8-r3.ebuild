@@ -1,8 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/udhcp/udhcp-0.9.8-r3.ebuild,v 1.11 2004/12/17 03:58:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/udhcp/udhcp-0.9.8-r3.ebuild,v 1.12 2005/05/16 22:32:27 vapier Exp $
 
-inherit eutils gcc
+inherit eutils toolchain-funcs
 
 DESCRIPTION="udhcp Server/Client Package"
 HOMEPAGE="http://udhcp.busybox.net/"
@@ -28,7 +28,7 @@ src_unpack() {
 	#fixes #62714, thanks GurliGebis
 	if [ "`gcc-major-version`" -ge "3" -a "`gcc-minor-version`" -ge "4" ]
 	then
-		epatch ${FILESDIR}/udhcp-gcc-3.4.patch
+		epatch "${FILESDIR}"/udhcp-gcc-3.4.patch
 	fi
 }
 
