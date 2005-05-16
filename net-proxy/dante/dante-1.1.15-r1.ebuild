@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/dante/dante-1.1.15-r1.ebuild,v 1.2 2005/05/10 13:09:58 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/dante/dante-1.1.15-r1.ebuild,v 1.3 2005/05/16 16:58:47 mrness Exp $
 
-inherit gcc fixheadtails eutils
+inherit fixheadtails eutils
 
 MY_PV=${PV/_/-}
 

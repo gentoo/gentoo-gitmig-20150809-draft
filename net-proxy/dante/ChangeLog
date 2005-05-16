@@ -1,6 +1,9 @@
 # ChangeLog for net-proxy/dante
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/dante/ChangeLog,v 1.2 2005/04/23 13:06:18 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/dante/ChangeLog,v 1.3 2005/05/16 16:58:47 mrness Exp $
+
+  16 May 2005; Alin Nastac <mrness@gentoo.org> dante-1.1.15-r1.ebuild:
+  Remove unused inheritance of gcc eclass (#92745).
 
   22 Apr 2005; Alin Nastac <mrness@gentoo.org> :
   Move from net-misc/dante to net-proxy/dante
