@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/dragonflycms
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/dragonflycms/ChangeLog,v 1.1 2005/05/16 14:31:22 sejo Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/dragonflycms/ChangeLog,v 1.2 2005/05/16 14:37:09 sejo Exp $
+
+  16 May 2005; Jochen Maes <sejo@gentoo.org> dragonflycms-9.0.3.0.ebuild:
+  added my devspace for the tarball
 
   16 May 2005; Jochen Maes <sejo@gentoo.org> :
   Initial ebuild
