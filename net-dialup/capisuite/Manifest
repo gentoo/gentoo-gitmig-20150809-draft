@@ -8,3 +8,4 @@ MD5 d0b0dd46c8f863d3849ee1ce118da842 files/capisuite-0.4.5-gentoo.patch 1979
 MD5 b6dc0c2a3cd0d7fb36b716a0e6514186 files/digest-capisuite-0.4.5 68
 MD5 b89c96393c676a2977e9b0b55b553b9f files/capisuite-0.4.5-capiv3.patch 2151
 MD5 f8cc369b2ad959cf9f00457f2729d5da files/digest-capisuite-0.4.5.3 137
+MD5 78748205ff049b27b92175e818a06e0d files/capisuite.initd 1417
