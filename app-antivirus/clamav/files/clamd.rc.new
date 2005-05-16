@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/files/clamd.rc.new,v 1.1 2005/05/14 21:31:33 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/files/clamd.rc.new,v 1.2 2005/05/16 09:23:24 ticho Exp $
 
 CLAMD_SOCKET=`grep ^LocalSocket /etc/clamd.conf | cut -d\  -f 2`
 
@@ -23,7 +23,7 @@ start() {
 	if [ "${START_FRESHCLAM}" = "yes" ]; then
 		ebegin "Starting freshclam"
 		start-stop-daemon --start --quiet \
-			--exec /usr/bin/freshclam
+			--exec /usr/bin/freshclam -- -d
 		retcode=$?
 		if [ ${retcode} = 1 ]; then
 			eend 0
