@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dietlibc/dietlibc-0.28.ebuild,v 1.1 2005/03/09 01:51:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dietlibc/dietlibc-0.28.ebuild,v 1.2 2005/05/16 08:13:49 dragonheart Exp $
 
-inherit eutils flag-o-matic gcc
+inherit eutils flag-o-matic
 
 DESCRIPTION="A minimal libc"
 HOMEPAGE="http://www.fefe.de/dietlibc/"

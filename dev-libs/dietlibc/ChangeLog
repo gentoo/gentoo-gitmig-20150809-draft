@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/dietlibc
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dietlibc/ChangeLog,v 1.43 2005/04/09 17:37:51 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dietlibc/ChangeLog,v 1.44 2005/05/16 08:13:49 dragonheart Exp $
+
+  16 May 2005; Daniel Black <dragonheart@gentoo.org> dietlibc-0.25.ebuild,
+  dietlibc-0.27.ebuild, dietlibc-0.28.ebuild:
+  removed gcc.eclass usage as per bug #92745.
 
   09 Apr 2005; Tom Gall <tgall@gentoo.org>
   dietlibc-0.27.ebuild:
