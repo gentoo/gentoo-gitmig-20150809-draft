@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.4-r4.ebuild,v 1.4 2005/05/15 21:18:46 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.4-r4.ebuild,v 1.5 2005/05/16 16:14:32 mcummings Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -214,7 +214,7 @@ src_configure() {
 		-Darchname="${myarch}" \
 		-Dcccdlflags='-fPIC' \
 		-Dccdlflags='-rdynamic' \
-		-Dcc="${CC:-gcc}" \
+		-Dcc="$(tc-getCC)" \
 		-Dprefix='/usr' \
 		-Dvendorprefix='/usr' \
 		-Dsiteprefix='/usr' \

@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/perl
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.115 2005/05/15 21:18:46 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.116 2005/05/16 16:14:32 mcummings Exp $
+
+  16 May 2005; Michael Cummings <mcummings@gentoo.org> perl-5.8.2-r4.ebuild,
+  perl-5.8.4-r4.ebuild, perl-5.8.5-r5.ebuild, perl-5.8.6-r4.ebuild:
+  Last toolchain-funcs fix
 
   15 May 2005; Michael Cummings <mcummings@gentoo.org> perl-5.8.2-r4.ebuild,
   perl-5.8.4-r4.ebuild, perl-5.8.5-r5.ebuild, perl-5.8.6-r4.ebuild:
