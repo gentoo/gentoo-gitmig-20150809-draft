@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ircservices/ircservices-5.0.51.ebuild,v 1.2 2005/05/16 15:36:11 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ircservices/ircservices-5.0.51.ebuild,v 1.3 2005/05/16 16:04:47 swegener Exp $
 
-inherit eutils fixheadtails flag-o-matic
+inherit eutils fixheadtails flag-o-matic toolchain-funcs
 
 DESCRIPTION="ChanServ, NickServ & MemoServ with support for several IRC daemons"
 HOMEPAGE="http://www.ircservices.za.net/"
@@ -31,6 +31,7 @@ src_compile() {
 	replace-flags "-O[3-9s]" "-O2"
 
 	./configure \
+		-cc "$(tc-getCC)" \
 		-cflags "${CFLAGS}" \
 		-bindest /usr/bin \
 		-datdest /var/lib/ircservices \
