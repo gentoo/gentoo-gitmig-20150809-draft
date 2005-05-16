@@ -1,0 +1,280 @@
+diff --exclude='*~' --exclude='.*' -I '$Id:' -urN etherape-0.9.1.orig/src/capture.c etherape-0.9.1/src/capture.c
+--- etherape-0.9.1.orig/src/capture.c	2005-05-16 03:22:52.000000000 -0400
++++ etherape-0.9.1/src/capture.c	2005-05-16 03:58:51.000000000 -0400
+@@ -96,7 +96,7 @@
+   if (!pref.input_file)
+     {
+       if (!
+-	  ((pcap_t *) pch =
++	  (pch =
+ 	   pcap_open_live (device, MAXSIZE, TRUE, PCAP_TIMEOUT, ebuf)))
+ 	{
+ 	  sprintf (errorbuf,
+@@ -117,7 +117,7 @@
+ 		   pref.input_file, device);
+ 	  return errorbuf;
+ 	}
+-      if (!((pcap_t *) pch = pcap_open_offline (pref.input_file, ebuf)))
++      if (!(pch = pcap_open_offline (pref.input_file, ebuf)))
+ 	{
+ 	  sprintf (errorbuf, _("Error opening %s : %s"), pref.input_file,
+ 		   ebuf);
+diff --exclude='*~' --exclude='.*' -I '$Id:' -urN etherape-0.9.1.orig/src/dns.c etherape-0.9.1/src/dns.c
+--- etherape-0.9.1.orig/src/dns.c	2005-05-16 03:22:52.000000000 -0400
++++ etherape-0.9.1/src/dns.c	2005-05-16 03:58:51.000000000 -0400
+@@ -1273,7 +1273,7 @@
+ 
+   /* packet rcvd, read it */
+   r = recvfrom (resfd, (byte *) resrecvbuf, MaxPacketsize, 0,
+-		(struct sockaddr *) &from, &fromlen);
++		(struct sockaddr *) &from, (socklen_t *)&fromlen);
+   if (r > 0)
+     {
+       /* Check to see if this server is actually one we sent to */
+diff --exclude='*~' --exclude='.*' -I '$Id:' -urN etherape-0.9.1.orig/src/names.c etherape-0.9.1/src/names.c
+--- etherape-0.9.1.orig/src/names.c	2005-05-16 03:22:52.000000000 -0400
++++ etherape-0.9.1/src/names.c	2005-05-16 03:58:51.000000000 -0400
+@@ -124,7 +124,7 @@
+   id_length = 6;
+ 
+   numeric = ether_to_str (id);
+-  solved = get_ether_name (id);
++  solved = (gchar *)get_ether_name (id);
+ 
+   /* get_ether_name will return an ethernet address with
+    * the first three numbers substituted with the manufacter
+@@ -165,7 +165,7 @@
+   id_length = 6;
+ 
+   numeric = ether_to_str (id);
+-  solved = get_ether_name (id);
++  solved = (gchar *)get_ether_name (id);
+ 
+   /* get_ether_name will return an ethernet address with
+    * the first three numbers substituted with the manufacter
+@@ -206,7 +206,7 @@
+   id_length = 6;
+ 
+   numeric = ether_to_str (id);
+-  solved = get_ether_name (id);
++  solved = (gchar *)get_ether_name (id);
+ 
+   /* get_ether_name will return an ethernet address with
+    * the first three numbers substituted with the manufacter
+@@ -377,7 +377,7 @@
+   resolved_name = g_string_new (dns_lookup (pntohl (id_buffer), TRUE));
+   resolved_name = g_string_append_c (resolved_name, ':');
+   resolved_name = g_string_append (resolved_name,
+-				   get_tcp_port (*(guint16 *)
++				   (gchar *)get_tcp_port (*(guint16 *)
+ 						 (id_buffer + 4)));
+ 
+   id = id_buffer;
+@@ -474,9 +474,9 @@
+ 
+   if (mesg_type == SESSION_REQUEST)
+     {
+-      name_len = ethereal_nbns_name (p, offset, offset, name, &name_type);
++      name_len = ethereal_nbns_name ((gchar *)p, offset, offset, name, &name_type);
+       if (dir == OUTBOUND)
+-	ethereal_nbns_name (p, offset + name_len, offset + name_len, name,
++	ethereal_nbns_name ((gchar *)p, offset + name_len, offset + name_len, name,
+ 			    &name_type);
+ 
+ 
+@@ -529,10 +529,10 @@
+   if (mesg_type == 0x10 || mesg_type == 0x11 || mesg_type == 0x12)
+     {
+       offset += 4;
+-      len = ethereal_nbns_name (p, offset, offset, name, &name_type);
++      len = ethereal_nbns_name ((gchar *)p, offset, offset, name, &name_type);
+ 
+       if (dir == INBOUND)
+-	ethereal_nbns_name (p, offset + len, offset + len, name, &name_type);
++	ethereal_nbns_name ((gchar *)p, offset + len, offset + len, name, &name_type);
+       name_found = TRUE;
+ 
+     }
+@@ -540,7 +540,7 @@
+     {
+       if (dir == INBOUND)
+ 	{
+-	  len = ethereal_nbns_name (p, offset, offset, name, &name_type);
++	  len = ethereal_nbns_name ((gchar *)p, offset, offset, name, &name_type);
+ 	  name_found = TRUE;
+ 	}
+     }
+diff --exclude='*~' --exclude='.*' -I '$Id:' -urN etherape-0.9.1.orig/src/resolv.c etherape-0.9.1/src/resolv.c
+--- etherape-0.9.1.orig/src/resolv.c	2005-05-16 03:22:52.000000000 -0400
++++ etherape-0.9.1/src/resolv.c	2005-05-16 03:58:51.000000000 -0400
+@@ -228,11 +228,11 @@
+   if ((servp = getservbyport (htons (port), serv_proto)) == NULL)
+     {
+       /* unknown port */
+-      sprintf (tp->name, "%d", port);
++      sprintf ((char *)tp->name, "%d", port);
+     }
+   else
+     {
+-      strncpy (tp->name, servp->s_name, MAXNAMELEN);
++      strncpy ((char *)tp->name, servp->s_name, MAXNAMELEN);
+       tp->name[MAXNAMELEN - 1] = '\0';
+     }
+ 
+@@ -307,7 +307,7 @@
+ #endif
+       if (hostp != NULL)
+ 	{
+-	  strncpy (tp->name, hostp->h_name, MAXNAMELEN);
++	  strncpy ((char *)tp->name, hostp->h_name, MAXNAMELEN);
+ 	  tp->name[MAXNAMELEN - 1] = '\0';
+ 	  return tp->name;
+ 	}
+@@ -317,7 +317,7 @@
+ 
+   /* unknown host or DNS timeout */
+ 
+-  sprintf (tp->name, "%s", ip_to_str ((guint8 *) & addr));
++  sprintf ((char *)tp->name, "%s", ip_to_str ((guint8 *) & addr));
+ 
+   return (tp->name);
+ 
+@@ -555,7 +555,7 @@
+ 
+   set_ethent (g_ethers_path);
+ 
+-  while ((eth = get_ethent (1)) && strncmp (name, eth->name, MAXNAMELEN) != 0)
++  while ((eth = get_ethent (1)) && strncmp ((char *)name, eth->name, MAXNAMELEN) != 0)
+     ;
+ 
+   if (eth == NULL)
+@@ -565,7 +565,7 @@
+       set_ethent (g_pethers_path);
+ 
+       while ((eth = get_ethent (1))
+-	     && strncmp (name, eth->name, MAXNAMELEN) != 0)
++	     && strncmp ((char *)name, eth->name, MAXNAMELEN) != 0)
+ 	;
+ 
+       end_ethent ();
+@@ -631,7 +631,7 @@
+     }
+ 
+   memcpy (tp->addr, addr, sizeof (tp->addr));
+-  strncpy (tp->name, name, MAXMANUFLEN);
++  strncpy (tp->name, (char *)name, MAXMANUFLEN);
+   tp->name[MAXMANUFLEN - 1] = '\0';
+   tp->next = NULL;
+ 
+@@ -685,7 +685,7 @@
+ 
+   while ((eth = get_ethent (0)))
+     {
+-      add_manuf_name (eth->addr, eth->name);
++      add_manuf_name (eth->addr, (u_char *)eth->name);
+     }
+ 
+   end_ethent ();
+@@ -724,7 +724,7 @@
+     }
+ 
+   memcpy (tp->addr, addr, sizeof (tp->addr));
+-  strncpy (tp->name, name, MAXNAMELEN);
++  strncpy (tp->name, (char *)name, MAXNAMELEN);
+   tp->name[MAXNAMELEN - 1] = '\0';
+   tp->next = NULL;
+ 
+@@ -757,7 +757,7 @@
+ 	{
+ 	  if (memcmp (tp->addr, addr, sizeof (tp->addr)) == 0)
+ 	    {
+-	      return tp->name;
++	      return (u_char *)tp->name;
+ 	    }
+ 	  if (tp->next == NULL)
+ 	    {
+@@ -794,7 +794,7 @@
+       tp->is_name_from_file = TRUE;
+     }
+ 
+-  return (tp->name);
++  return (u_char *)tp->name;
+ 
+ }				/* eth_name_lookup */
+ 
+@@ -812,7 +812,7 @@
+       tp = table[i];
+       while (tp)
+ 	{
+-	  if (strcmp (tp->name, name) == 0)
++	  if (strcmp (tp->name, (char *)name) == 0)
+ 	    return tp->addr;
+ 	  tp = tp->next;
+ 	}
+@@ -1151,7 +1151,7 @@
+ get_hostname (u_int addr)
+ {
+   if (!g_resolving_actif)
+-    return ip_to_str ((guint8 *) & addr);
++    return (u_char *)ip_to_str ((guint8 *) & addr);
+ 
+   return host_name_lookup (addr);
+ }
+@@ -1198,7 +1198,7 @@
+ 	}
+     }
+ 
+-  strncpy (tp->name, name, MAXNAMELEN);
++  strncpy ((char *)tp->name, (char *)name, MAXNAMELEN);
+   tp->name[MAXNAMELEN - 1] = '\0';
+   tp->addr = addr;
+   tp->next = NULL;
+@@ -1227,7 +1227,7 @@
+ 	  cur = &str[0][0];
+ 	}
+       sprintf (cur, "%d", port);
+-      return cur;
++      return (u_char *)cur;
+     }
+ 
+   return serv_name_lookup (port, IPPROTO_UDP);
+@@ -1255,7 +1255,7 @@
+ 	  cur = &str[0][0];
+ 	}
+       sprintf (cur, "%d", port);
+-      return cur;
++      return (u_char *)cur;
+     }
+ 
+   return serv_name_lookup (port, IPPROTO_TCP);
+@@ -1267,7 +1267,7 @@
+ get_ether_name (const u_char * addr)
+ {
+   if (!g_resolving_actif)
+-    return ether_to_str ((guint8 *) addr);
++    return (u_char *)ether_to_str ((guint8 *) addr);
+ 
+   if (!eth_resolution_initialized)
+     {
+@@ -1327,7 +1327,7 @@
+ 	      if (tp->is_name_from_file)
+ 		{
+ 		  /* A name was found, and its origin is an ethers file */
+-		  return tp->name;
++		  return (u_char *)tp->name;
+ 		}
+ 	      else
+ 		{
+@@ -1438,10 +1438,10 @@
+ 	  cur = &str[0][0];
+ 	}
+       sprintf (cur, "%02x:%02x:%02x", addr[0], addr[1], addr[2]);
+-      return cur;
++      return (u_char *)cur;
+     }
+ 
+-  return manufp->name;
++  return (u_char *)manufp->name;
+ 
+ }				/* get_manuf_name */
+ 

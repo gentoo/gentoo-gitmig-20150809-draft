@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/etherape/etherape-0.9.1.ebuild,v 1.9 2005/05/10 19:30:59 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/etherape/etherape-0.9.1.ebuild,v 1.10 2005/05/16 08:06:38 ka0ttic Exp $
 
 inherit eutils
 
@@ -23,6 +23,7 @@ src_unpack() {
 	cd ${S}
 	epatch ${FILESDIR}/${P}-res_mkquery.patch
 	epatch ${FILESDIR}/${P}-fix-mkinstalldirs.diff
+	epatch ${FILESDIR}/${P}-gcc4.diff
 }
 
 src_compile() {
