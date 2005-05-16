@@ -1,6 +1,9 @@
 # ChangeLog for net-news/blam
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/blam/ChangeLog,v 1.22 2005/05/08 23:46:39 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/blam/ChangeLog,v 1.23 2005/05/16 20:18:07 slarti Exp $
+
+  16 May 2005; Tom Martin <slarti@gentoo.org> blam-1.8.0.ebuild:
+  Marked ~amd64.
 
 *blam-1.8.0 (08 May 2005)
 
