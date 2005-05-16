@@ -1,8 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cvm-vmailmgr/cvm-vmailmgr-0.6.ebuild,v 1.5 2004/10/17 11:23:12 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cvm-vmailmgr/cvm-vmailmgr-0.6.ebuild,v 1.6 2005/05/16 09:58:44 ticho Exp $
 
-inherit fixheadtails gcc
+inherit fixheadtails toolchain-funcs
 
 DESCRIPTION="CVM modules for use with vmailmgr"
 HOMEPAGE="http://untroubled.org/cvm-vmailmgr/"
@@ -33,8 +33,8 @@ src_unpack() {
 src_compile() {
 	echo "/usr/lib/bglibs/include" > conf-bgincs
 	echo "/usr/lib/bglibs/lib" > conf-bglibs
-	echo "$(gcc-getCC) ${CFLAGS}" > conf-cc
-	echo "$(gcc-getCC) -s" > conf-ld
+	echo "$(tc-getCC) ${CFLAGS}" > conf-cc
+	echo "$(tc-getCC) -s" > conf-ld
 	make || die
 }
 
