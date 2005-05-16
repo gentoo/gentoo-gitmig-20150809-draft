@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d2fe968695cc381d02a3fa3d306116dd ut2004-bonuspack-ece-1.ebuild 1329
-MD5 d440d8b7f747fc29b143bb42047674d8 ChangeLog 428
+MD5 ad32d4bb920b5f671959c3c808c65428 ut2004-bonuspack-ece-1.ebuild 1256
+MD5 bbe80abecfb7cd956ccc052c100f34ca ChangeLog 547
 MD5 11a7e1491b1ac042ac7216b26b4ad1fb metadata.xml 254
 MD5 491929956cf7b9bec7f7fc6d0631a433 files/digest-ut2004-bonuspack-ece-1 74
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCHEtfI1lqEGTUzyQRAjyPAJ9jO/DQswvIIsKVeP98ZTHgLpkVAQCg3ExM
-aSK5u4rqdqXIGej4rvqw6qs=
-=Y11n
------END PGP SIGNATURE-----
