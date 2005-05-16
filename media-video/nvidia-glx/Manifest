@@ -1,12 +1,12 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 fb7d193d44c1b28ac8583c7a1729a02b ChangeLog 19897
+MD5 9ae7d9d49563ef787da3e9c8cd3bb656 ChangeLog 20009
 MD5 e06e73d71a54036f83abf35efc6322e3 metadata.xml 302
 MD5 9d27c1c2ca4980f0181d3e732280c809 nvidia-glx-1.0.6629-r1.ebuild 5691
 MD5 0c38c3c8cae8346fae17aa67becfa359 nvidia-glx-1.0.6629-r5.ebuild 6568
 MD5 68727cdc36d40821b2763cb280e9608e nvidia-glx-1.0.7174-r4.ebuild 7914
-MD5 0c0214352ae05615bb4327c1734dfc64 nvidia-glx-1.0.6629-r6.ebuild 7460
+MD5 a4e2b911d33d83de8a955a48a3a35edf nvidia-glx-1.0.6629-r6.ebuild 7458
 MD5 349097957580e43d51d2afaedaef6840 nvidia-glx-1.0.6111-r1.ebuild 5619
 MD5 5f3b6627e7c2fc86f6aa828054885efb nvidia-glx-1.0.7167-r2.ebuild 7678
 MD5 b58bf018031a784203bf28b36562bc0f nvidia-glx-1.0.6111-r2.ebuild 7460
@@ -29,7 +29,7 @@ MD5 f6f00d8e915e18f456ad615b4ebd8a21 files/1.0.6629/NVIDIA_glx-1.0.6629-makefile
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCeqxmArHZZzCEUG0RAsQwAJ9a+ASAIo9Hv5f6uWMdEkYFeqrBOgCfbQlU
-qjzpK8qwPZI1MDdqT1qi9DY=
-=D9uv
+iD8DBQFCiE4pArHZZzCEUG0RAvidAJ0Te7nfCcWVyWvbnsMzgm1YHt6P5QCghgdL
+bjFvmrKYjcCMKj2gOxgTxts=
+=qgs2
 -----END PGP SIGNATURE-----

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/nvidia-glx-1.0.6629-r6.ebuild,v 1.1 2005/05/04 21:32:06 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/nvidia-glx-1.0.6629-r6.ebuild,v 1.2 2005/05/16 07:38:57 eradicator Exp $
 
 inherit eutils multilib versionator
 
@@ -18,7 +18,7 @@ SRC_URI="x86? ( ftp://download.nvidia.com/XFree86/Linux-x86/${NV_V}/${X86_NV_PAC
 LICENSE="NVIDIA"
 SLOT="0"
 
-KEYWORDS="-* ~amd64 ~x86"
+KEYWORDS="-* amd64 x86"
 
 RESTRICT="nostrip multilib-pkg-force"
 IUSE=""
