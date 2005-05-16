@@ -1,14 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-systray/xchat-systray-2.4.5-r1.ebuild,v 1.4 2005/01/01 07:52:13 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-systray/xchat-systray-2.4.5-r1.ebuild,v 1.5 2005/05/16 15:59:33 swegener Exp $
 
-inherit flag-o-matic eutils
+inherit flag-o-matic eutils toolchain-funcs
 
 MY_P=${PN}-integration-${PV}
 
 DESCRIPTION="System tray plugin for X-Chat."
 SRC_URI="mirror://sourceforge/xchat2-plugins/${MY_P}-src.tar.gz"
-RESTRICT="nomirror"
 HOMEPAGE="http://blight.altervista.org/"
 
 LICENSE="GPL-2"
@@ -24,18 +23,18 @@ DEPEND="${RDEPEND}
 	sys-devel/gettext
 	>=dev-util/pkgconfig-0.7"
 
-S=${WORKDIR}/${MY_P}
+S="${WORKDIR}"/${MY_P}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
-	epatch ${FILESDIR}/${PV}-segfault-fix.patch
+	epatch "${FILESDIR}"/${PV}-segfault-fix.patch
 }
 
 src_compile() {
 	append-flags -fPIC
-	emake -j1 CFLAGS="${CFLAGS}" || die "Compile failed"
+	emake -j1 CC="$(tc-getCC)" CFLAGS="${CFLAGS}" || die "emake failed"
 }
 
 src_install() {
