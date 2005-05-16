@@ -1,8 +1,8 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 120e39a5e6cf4e4d311ac445c4bf41ee imagemagick-6.2.2.3.ebuild 2583
-MD5 a4bbf3902ee960a26936247233ac57d1 ChangeLog 21839
+MD5 6ddba8488efcce8504bb7c7143f55345 imagemagick-6.2.2.3.ebuild 2582
+MD5 a27247ee9d221c047575b423785aafb7 ChangeLog 21952
 MD5 3dce9cbb137138524f39515905101a35 imagemagick-6.2.2.0.ebuild 2584
 MD5 26d349b9ac3126394eca1640b90c1e66 imagemagick-6.1.8.8.ebuild 2317
 MD5 e1f6c302199a36c1be4ecf1654be9bac metadata.xml 224
@@ -20,7 +20,7 @@ MD5 7f9f2aefd153cd638c79eb85bcc39b00 files/imagemagick-6.1.8.8-fpx.patch 504
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCiKIZKf2g/qXtneoRAlniAJ9GHtvNsWbrAxZUcpjZlAnmNzRsrgCfQU2Z
-Qz0wv4R7Y/4pPxksYBYCEUQ=
-=wCKD
+iD8DBQFCiKhIKf2g/qXtneoRAgRyAJ9Rp+XtgiEoWHjLbqnj1r+GHLHgzgCgkY7J
+MqdApp2cCwe+kI8+OlZD5rU=
+=Z4fW
 -----END PGP SIGNATURE-----
