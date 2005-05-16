@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.51.21-r1.ebuild,v 1.1 2005/05/05 04:36:25 jstubbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.51.22.ebuild,v 1.1 2005/05/16 13:22:27 jstubbs Exp $
 
 inherit toolchain-funcs
 
@@ -27,8 +27,6 @@ python_has_lchown() {
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	patch -p1 < ${FILESDIR}/portage-2.0.51.21-fixes.patch
 }
 
 src_compile() {
@@ -106,6 +104,8 @@ src_install() {
 	dosym ../lib/portage/bin/fixpackages /usr/sbin/fixpackages
 	dosym ../lib/portage/bin/regenworld /usr/sbin/regenworld
 	dosym ../lib/portage/bin/emerge-webrsync /usr/sbin/emerge-webrsync
+
+	doenvd ${FILESDIR}/05portage.envd
 }
 
 pkg_preinst() {
