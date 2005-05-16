@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.1.9.6.ebuild,v 1.1 2005/05/16 16:11:36 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.1.9.6.ebuild,v 1.2 2005/05/16 16:12:48 spock Exp $
 
 MISCSPLASH="miscsplashutils-0.1.3"
 GENTOOSPLASH="splashutils-gentoo-0.1.10"
@@ -23,7 +23,7 @@ SRC_URI="mirror://gentoo/${PN}-lite-${PV}.tar.bz2
 	 http://www.gzip.org/zlib/zlib-${V_ZLIB}.tar.bz2
 	 ftp://ftp.kernel.org/pub/linux/libs/klibc/klibc-${V_KLIBC}.tar.bz2
 	 ftp://ftp.kernel.org/pub/linux/libs/klibc/Stable/klibc-${V_KLIBC}.tar.bz2
-	 ftp://ftp.kernel.org/pub/linux/libs/klibc/Testing/klibc-${V_KLIBC}.tar.bz2"	 
+	 ftp://ftp.kernel.org/pub/linux/libs/klibc/Testing/klibc-${V_KLIBC}.tar.bz2" 
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -86,7 +86,7 @@ src_unpack() {
 	# is being configured. Either that, or we end up with a segfaulting kernel
 	# helper.
 	rm ${S}/libs/zlib-${V_ZLIB}/Makefile
-	
+
 	# Check whether the kernel tree has been patched with fbsplash.
 	if [[ ! -e /usr/src/linux/include/linux/console_splash.h ]]; then
 		ewarn "Your kernel in /usr/src/linux has not been patched with a compatible version"
