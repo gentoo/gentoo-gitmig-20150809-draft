@@ -1,6 +1,10 @@
 # ChangeLog for app-accessibility/gnome-mag
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-mag/ChangeLog,v 1.45 2005/05/13 20:03:12 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-mag/ChangeLog,v 1.46 2005/05/16 20:55:32 gustavoz Exp $
+
+  16 May 2005; Gustavo Zacarias <gustavoz@gentoo.org>
+  gnome-mag-0.12.0.ebuild:
+  Stable on sparc
 
   13 May 2005; Leonardo Boshell <leonardop@gentoo.org> gnome-mag-0.12.0.ebuild:
   Stable on x86.
