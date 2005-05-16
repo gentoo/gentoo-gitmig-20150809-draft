@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-1.0.5-r4.ebuild,v 1.8 2005/05/14 06:36:23 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-1.0.5-r4.ebuild,v 1.9 2005/05/16 12:37:24 allanonjl Exp $
 
-inherit eutils libtool gcc
+inherit eutils libtool toolchain-funcs
 
 DESCRIPTION="GNOME Virtual File System"
 HOMEPAGE="http://www.gnome.org/"
