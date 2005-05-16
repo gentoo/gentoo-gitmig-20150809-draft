@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdeaccessibility
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaccessibility/ChangeLog,v 1.62 2005/05/11 22:06:59 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaccessibility/ChangeLog,v 1.63 2005/05/16 11:08:27 lanius Exp $
+
+  16 May 2005; Heinrich Wendel <lanius@gentoo.org>
+  +files/kdeaccessibility-3.4.0-noarts.patch, kdeaccessibility-3.4.0.ebuild:
+  add gstreamer support, bug #85673
 
   11 May 2005; Aron Griffis <agriffis@gentoo.org>
   kdeaccessibility-3.4.0.ebuild:

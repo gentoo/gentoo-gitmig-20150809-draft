@@ -1,0 +1,96 @@
+--- kttsd/configure.in.in.org	2005-03-17 22:25:56.000000000 +0100
++++ kttsd/configure.in.in	2005-03-17 22:26:25.000000000 +0100
+@@ -2,10 +2,6 @@
+ 
+ ### AM_INIT_AUTOMAKE(kttsd,0.2.0)
+ 
+-if test "x$build_arts" = "xno"; then
+-	DO_NOT_COMPILE="$DO_NOT_COMPILE kttsd"
+-fi
+-
+ AC_ARG_ENABLE(kttsd-gstreamer,
+               AC_HELP_STRING([--enable-kttsd-gstreamer],
+                              [build KTTSD GStreamer audio plugin [default=no]]),
+--- kttsd/plugins/freetts/configure.in.in.org	2005-03-17 22:29:06.000000000 +0100
++++ kttsd/plugins/freetts/configure.in.in	2005-03-17 22:29:13.000000000 +0100
+@@ -13,6 +13,10 @@
+ if test "x$freetts_plugin" = "xno"; then
+   compile_freetts_plugin="no"
+ fi
++if test "x$build_arts" = "xno"; then
++  compile_freetts_plugin="no"
++fi
++
+ 
+ dnl Check for festival executable.
+ dnl Note that Festival Interactive plugin is always built
+--- kttsd/configure.in.in.org	2005-03-17 22:25:56.000000000 +0100
++++ kttsd/configure.in.in	2005-03-17 22:49:26.000000000 +0100
+@@ -126,6 +126,7 @@
+ fi
+ 
+ AM_CONDITIONAL(include_kttsd_gstplayer, [test "x$have_gst" = "xyes" && test "x$gstreamer_plugin" = "xyes"])
++AM_CONDITIONAL(include_kttsd_arts, [test "x$build_arts" = "xyes"])
+ 
+ dnl ================================================================================
+ 
+--- kttsd/players/Makefile.am.orig	2005-03-17 22:55:21.000000000 +0100
++++ kttsd/players/Makefile.am	2005-03-17 22:54:34.000000000 +0100
+@@ -3,8 +3,10 @@
+     gstplayer_DIR = gstplayer
+ endif
+ 
+-SUBDIRS = \
+-    artsplayer \
+-    $(gstplayer_DIR)
++if include_kttsd_arts
++   artsplayer_DIR = artsplayer
++endif
++
++SUBDIRS = $(artsplayer_DIR) $(gstplayer_DIR)
+ 
+ kde_servicetypes_DATA = kttsd_audioplugin.desktop
+--- kttsd/plugins/command/Makefile.am.org	2005-03-17 22:59:24.000000000 +0100
++++ kttsd/plugins/command/Makefile.am	2005-03-17 22:59:58.000000000 +0100
+@@ -16,7 +16,7 @@
+         commandproc.cpp \
+         commandplugin.cpp
+ libkttsd_commandplugin_la_LDFLAGS = $(KDE_PLUGIN) $(all_libraries)
+-libkttsd_commandplugin_la_LIBADD = $(top_builddir)/kttsd/libkttsd/libkttsd.la -lartskde
++libkttsd_commandplugin_la_LIBADD = $(top_builddir)/kttsd/libkttsd/libkttsd.la
+ 
+ services_DATA = kttsd_commandplugin.desktop
+ servicesdir = $(kde_servicesdir)
+--- kttsd/plugins/epos/Makefile.am.org	2005-03-17 22:59:35.000000000 +0100
++++ kttsd/plugins/epos/Makefile.am	2005-03-17 23:00:05.000000000 +0100
+@@ -16,7 +16,7 @@
+         eposproc.cpp \
+         eposplugin.cpp 
+ libkttsd_eposplugin_la_LDFLAGS = $(KDE_PLUGIN) $(all_libraries)
+-libkttsd_eposplugin_la_LIBADD = $(top_builddir)/kttsd/libkttsd/libkttsd.la -lartskde
++libkttsd_eposplugin_la_LIBADD = $(top_builddir)/kttsd/libkttsd/libkttsd.la
+ 
+ services_DATA = kttsd_eposplugin.desktop
+ servicesdir = $(kde_servicesdir)
+--- kttsd/plugins/flite/Makefile.am.org	2005-03-17 22:59:42.000000000 +0100
++++ kttsd/plugins/flite/Makefile.am	2005-03-17 23:00:11.000000000 +0100
+@@ -16,7 +16,7 @@
+         fliteproc.cpp \
+         fliteplugin.cpp 
+ libkttsd_fliteplugin_la_LDFLAGS = $(KDE_PLUGIN) $(all_libraries)
+-libkttsd_fliteplugin_la_LIBADD = $(top_builddir)/kttsd/libkttsd/libkttsd.la -lartskde
++libkttsd_fliteplugin_la_LIBADD = $(top_builddir)/kttsd/libkttsd/libkttsd.la
+ 
+ services_DATA = kttsd_fliteplugin.desktop
+ servicesdir = $(kde_servicesdir)
+--- kttsd/plugins/hadifix/Makefile.am.org	2005-03-17 22:59:50.000000000 +0100
++++ kttsd/plugins/hadifix/Makefile.am	2005-03-17 23:00:20.000000000 +0100
+@@ -17,7 +17,7 @@
+ 	hadifixconfigui.ui \
+ 	voicefileui.ui
+ libkttsd_hadifixplugin_la_LDFLAGS = $(KDE_PLUGIN) $(all_libraries)
+-libkttsd_hadifixplugin_la_LIBADD = $(LIB_KDECORE) $(LIB_KFILE) -lartskde $(top_builddir)/kttsd/libkttsd/libkttsd.la
++libkttsd_hadifixplugin_la_LIBADD = $(LIB_KDECORE) $(LIB_KFILE) $(top_builddir)/kttsd/libkttsd/libkttsd.la
+ 
+ EXTRA_DIST = male.png female.png 
+ 
