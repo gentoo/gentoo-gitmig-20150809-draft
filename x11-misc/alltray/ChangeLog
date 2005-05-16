@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/alltray
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/alltray/ChangeLog,v 1.7 2005/04/19 18:34:09 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/alltray/ChangeLog,v 1.8 2005/05/16 17:51:29 swegener Exp $
+
+  16 May 2005; Sven Wegener <swegener@gentoo.org> -alltray-0.4.0.ebuild,
+  -alltray-0.4.2.ebuild, -alltray-0.4.3.ebuild, alltray-0.5.1.ebuild:
+  Marked stable on x86. Removed old ebuilds.
 
 *alltray-0.5.1 (19 Apr 2005)
 
