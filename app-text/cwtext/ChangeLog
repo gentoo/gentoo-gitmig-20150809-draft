@@ -1,6 +1,10 @@
 # ChangeLog for app-text/cwtext
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/cwtext/ChangeLog,v 1.5 2005/01/01 16:07:49 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/cwtext/ChangeLog,v 1.6 2005/05/16 07:58:44 wormo Exp $
+
+  16 May 2005; Stephanie Lockwood-Childs <wormo@gentoo.org>
+  cwtext-0.94.ebuild:
+  add ~ppc
 
   28 Jun 2004; Ciaran McCreesh <ciaranm@gentoo.org> cwtext-0.94.ebuild:
   Added ~sparc, ~mips
