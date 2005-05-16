@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-3.2.1.2242-r3.ebuild,v 1.4 2005/05/02 19:02:01 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-3.2.1.2242-r3.ebuild,v 1.5 2005/05/16 12:52:45 wolf31o2 Exp $
 
 # Unlike many other binary packages the user doesn't need to agree to a licence
 # to download VM Ware.  The agreeing to a licence is part of the configure step
 # which the user must run manually.
 
-inherit gcc eutils
+inherit toolchain-funcs eutils
 
 S=${WORKDIR}/vmware-distrib
 ANY_ANY="vmware-any-any-update90"
@@ -56,7 +56,7 @@ src_compile() {
 		|| GLIBC_232=1
 
 	if [ ${GLIBC_232} -eq 1 ] ; then
-		$(gcc-getCC) -W -Wall -shared -o vmware-glibc-2.3.2-compat.so \
+		$(tc-getCC) -W -Wall -shared -o vmware-glibc-2.3.2-compat.so \
 			${FILESDIR}/${PV}/vmware-glibc-2.3.2-compat.c \
 			|| die "could not make module"
 	else
