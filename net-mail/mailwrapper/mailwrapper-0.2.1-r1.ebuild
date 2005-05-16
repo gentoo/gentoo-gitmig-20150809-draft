@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailwrapper/mailwrapper-0.2.1-r1.ebuild,v 1.4 2005/05/16 09:42:04 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailwrapper/mailwrapper-0.2.1-r1.ebuild,v 1.5 2005/05/16 09:43:45 ticho Exp $
 
 inherit toolchain-funcs
 
@@ -16,7 +16,7 @@ IUSE=""
 DEPEND=""
 
 src_compile() {
-	$(gcc-getCC) ${CFLAGS} \
+	$(tc-getCC) ${CFLAGS} \
 		-o mailwrapper \
 		mailwrapper.c fparseln.c fgetln.c \
 		|| die "build failed"
