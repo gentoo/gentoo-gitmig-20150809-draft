@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/bootsplash-themes/bootsplash-themes-20040821-r1.ebuild,v 1.1 2005/05/16 16:53:59 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/bootsplash-themes/bootsplash-themes-20040821-r1.ebuild,v 1.2 2005/05/16 16:55:16 spock Exp $
 
 DESCRIPTION="A collection of Bootsplash themes"
 HOMEPAGE="http://www.bootsplash.de/"
@@ -122,7 +122,7 @@ LICENSE="freedist"
 KEYWORDS="~x86 ~ppc ~amd64"
 IUSE=""
 
-RDEPEND="|| ( media-gfx/bootsplash >=media-gfx/splashutils-1.1.9.6 )" 
+RDEPEND="|| ( media-gfx/bootsplash >=media-gfx/splashutils-1.1.9.6 )"
 DEPEND="net-misc/wget ${RDEPEND}"
 S="${WORKDIR}"
 
@@ -164,9 +164,9 @@ src_install() {
 		dodir /etc/bootsplash
 		mypath="/etc/bootsplash"
 	fi
-	
+
 	cd ${S}
-	
+
 	if has_version "media-gfx/splashutils" ; then
 		for i in * ; do
 			einfo "Converting ${i}"
@@ -200,7 +200,7 @@ pkg_postinst() {
 	einfo "might not work properly on your system, some might not support verbose"
 	einfo "or silent mode, or might only support a single resolution."
 	echo ""
-	
+
 	if has_version "media-gfx/splashutils" ; then
 		einfo "The themes have been automatically converted to a format recognized"
 		einfo "by splashutils. Note that the conversion process is purely automatical"
