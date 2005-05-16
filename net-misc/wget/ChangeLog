@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/wget
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/ChangeLog,v 1.60 2005/05/16 19:00:04 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/ChangeLog,v 1.61 2005/05/16 19:11:34 hansmi Exp $
+
+  16 May 2005; Michael Hanselmann <hansmi@gentoo.org> ChangeLog,
+  wget-1.9.1-r5.ebuild:
+  Stable on ppc.
 
 *wget-1.9.1-r5 (16 May 2005)
 
