@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.18-r2.ebuild,v 1.2 2005/05/16 08:57:07 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.18.1.ebuild,v 1.1 2005/05/16 08:57:07 cardoe Exp $
 
 inherit flag-o-matic eutils debug
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.mythtv.org/mc/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
-IUSE="alsa altivec arts debug dvb ieee1394 jack joystick lcd lirc mmx nvidia oggvorbis opengl oss unichrome xv"
+IUSE="alsa altivec arts debug dvb frontendonly ieee1394 jack joystick lcd lirc mmx nvidia oggvorbis opengl oss unichrome xv"
 
 DEPEND=">=media-libs/freetype-2.0
 	>=media-sound/lame-3.93.1
@@ -105,6 +105,13 @@ src_compile() {
 	# depends on bug # 89799
 	# $(use_enable ieee1394 firewire)
 
+	if use frontendonly; then
+		##Backend Removal
+		cd ${S}
+		sed -e "s:CONFIG  += linux backend:CONFIG  += linux:" \
+			-i 'settings.pro' || die "Removal of mythbackend failed"
+	fi
+
 	# let MythTV come up with our CFLAGS. Upstream will support this
 	CFLAGS=""
 	CXXFLAGS=""
@@ -122,16 +129,18 @@ src_install() {
 		test -e "${doc}" && dodoc ${doc}
 	done
 
-	newbin "setup/mythtv-setup" "mythsetup"
+	if ! use frontendonly; then
+		newbin "setup/mythtv-setup" "mythsetup"
 
-	insinto /usr/share/mythtv/database
-	doins database/*
+		insinto /usr/share/mythtv/database
+		doins database/*
 
-	exeinto /usr/share/mythtv
-	doexe "${FILESDIR}/mythfilldatabase.cron"
+		exeinto /usr/share/mythtv
+		doexe "${FILESDIR}/mythfilldatabase.cron"
 
-	newinitd ${FILESDIR}/0.18-mythbackend.rc mythbackend
-	newconfd ${FILESDIR}/0.18-mythbackend.conf mythbackend
+		newinitd ${FILESDIR}/0.18-mythbackend.rc mythbackend
+		newconfd ${FILESDIR}/0.18-mythbackend.conf mythbackend
+	fi
 
 	dodoc keys.txt docs/*.{txt,pdf}
 	dohtml docs/*.html
