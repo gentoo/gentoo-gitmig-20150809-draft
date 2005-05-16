@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/kannel/kannel-1.4.0.ebuild,v 1.1 2005/05/16 22:05:25 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/kannel/kannel-1.4.0.ebuild,v 1.2 2005/05/16 22:24:31 mrness Exp $
 inherit eutils
 
 DESCRIPTION="Powerful SMS and WAP gateway"
@@ -37,7 +37,7 @@ src_unpack() {
 	#by default, use current directory for logging
 	sed -i -e 's:/tmp/::' doc/examples/kannel.conf
 	#correct doc path
-	sed -i -e "s:share/doc/kannel:share/doc/${PF}:" configure configure.in
+	sed -i -e "s:share/doc/kannel:share/doc/${P}:" configure configure.in
 }
 
 src_compile() {
