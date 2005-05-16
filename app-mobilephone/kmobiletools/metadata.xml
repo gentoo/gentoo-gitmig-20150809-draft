@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>mobile-phone</herd>
+<herd>kde</herd>
+<longdescription>
+KMobileTools is a nice KDE application that allows you to control your mobile phone from your GNU/Linux PC.
+It's based on a Motorola C350 and C650, but it's also compatible with other mobile phones like Nokia, Ericsson and Siemens.
+</longdescription>
+</pkgmetadata>
