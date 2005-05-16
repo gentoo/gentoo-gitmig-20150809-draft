@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/mmv
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mmv/ChangeLog,v 1.13 2005/01/01 15:14:56 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mmv/ChangeLog,v 1.14 2005/05/16 05:57:27 ka0ttic Exp $
+
+  16 May 2005; Aaron Walker <ka0ttic@gentoo.org> mmv-1.01b.ebuild:
+  Use toolchain-funcs.eclass instead of gcc.eclass.
 
   18 Dec 2004; Simon Stelling <blubb@gentoo.org> files/mmv-gcc34.patch:
   fix the gcc-3.4-patch to prevent segfaults; bug #74795

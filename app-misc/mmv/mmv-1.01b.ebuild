@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mmv/mmv-1.01b.ebuild,v 1.12 2005/01/01 15:14:56 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mmv/mmv-1.01b.ebuild,v 1.13 2005/05/16 05:57:27 ka0ttic Exp $
 
-inherit eutils gcc toolchain-funcs
+inherit eutils toolchain-funcs
 
 DESCRIPTION="Move/copy/append/link multiple files according to a set of wildcard patterns."
 HOMEPAGE="http://packages.debian.org/unstable/utils/mmv.html"
@@ -14,32 +14,29 @@ SRC_URI="mirror://debian/pool/main/m/mmv/${P/-/_}.orig.tar.gz
 
 LICENSE="freedist"
 SLOT="0"
-
 KEYWORDS="x86 amd64"
 IUSE=""
 
-S=${WORKDIR}/${P}.orig
+S="${WORKDIR}/${P}.orig"
 
 src_unpack() {
 	unpack ${P/-/_}.orig.tar.gz
 	epatch ${DISTDIR}/${P/-/_}-${PATCH_DEB_VER}.diff.gz
 
 	#apply both patches to compile with gcc-3.4 closing bug #62711
-	if [ "`gcc-major-version`" -ge "3" -a "`gcc-minor-version`" -ge "4" ]
+	if [[ $(gcc-major-version) -eq 3 && $(gcc-minor-version) -ge 4 ]] || \
+		[[ $(gcc-major-version) -gt 3 ]]
 	then
-		epatch ${FILESDIR}/mmv-gcc34.patch
+		epatch ${FILESDIR}/${PN}-gcc34.patch
 	fi
-
 }
 
 src_compile() {
 	mmv_CFLAGS=" -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64"
-
 	emake CC="$(tc-getCC)" CFLAGS="${mmv_CFLAGS} ${CFLAGS} " LDFLAGS=" -s " || die
 }
 
 src_install() {
-
 	dobin mmv
 	dosym /usr/bin/mmv /usr/bin/mcp
 	dosym /usr/bin/mmv /usr/bin/mln
