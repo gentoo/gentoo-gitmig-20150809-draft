@@ -1,0 +1,22 @@
+--- collect_diffs.rb.org	2004-12-11 21:38:10.000000000 +0100
++++ collect_diffs.rb	2004-12-11 21:46:35.235302401 +0100
+@@ -100,7 +100,7 @@
+ def collect_antique_style_args(cvs_info)
+   # remove leading slashes that may appear due to the user entering trailing
+   # slashes in their CVSROOT specification
+-  cvs_info.sub!(/^\/+/, "")
++  cvs_info = cvs_info.sub(/^\/+/, "")
+ 
+   unless cvs_info.slice(0, $repository_path.length+1) == "#{$repository_path} "
+     fail "calculated repository path ('#{$repository_path}') doesn't match start of command line arg ('#{cvs_info}')"
+--- cvsspam.rb	9 Dec 2004 23:51:31 -0000	1.61
++++ cvsspam.rb	22 Jan 2005 23:58:44 -0000
+@@ -930,7 +930,7 @@
+ 
+   # start the diff output, using the given lines as the 'preamble' bit
+   def start_output(*lines)
+-    println("<hr /><a name=\"file#{$fileEntries.size+1}\" /><div class=\"file\">")
++    println("<hr /><a name=\"file#{$fileEntries.size}\" /><div class=\"file\">")
+     case $file.type
+       when "A"
+         print("<span class=\"pathname\" id=\"added\">")
