@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtk-sharp/gtk-sharp-1.9.3.1.ebuild,v 1.2 2005/05/15 09:11:05 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtk-sharp/gtk-sharp-1.9.3.1.ebuild,v 1.3 2005/05/16 15:56:17 latexer Exp $
 
 inherit eutils mono
 
@@ -25,20 +25,18 @@ KEYWORDS="~x86 ~ppc ~ppc"
 
 src_unpack() {
 	unpack ${A}
-
-	# disable building of samples (#16015)
 	cd ${S}
+
 	epatch ${WORKDIR}/${P}-configurable.diff
+	sed -i -e 's:\<PKG_PATH\>:GTK_SHARP_PKG_PATH:g' configure.in
+
 	export WANT_AUTOMAKE="1.8"
-
-	#fixes support with pkgconfig-0.17, bug #92503
-	sed -i -e 's/\<PKG_PATH\>/GTK_SHARP_PKG_PATH/g' configure.in
-
 	aclocal || die
 	automake || die
 	autoconf || die
 	libtoolize --copy --force
 
+	# disable building of samples (#16015)
 	sed -i -e "s:sample::" Makefile.in
 }
 

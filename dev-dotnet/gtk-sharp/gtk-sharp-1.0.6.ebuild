@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtk-sharp/gtk-sharp-1.0.6.ebuild,v 1.6 2005/03/21 19:51:43 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtk-sharp/gtk-sharp-1.0.6.ebuild,v 1.7 2005/05/16 15:56:17 latexer Exp $
 
 inherit eutils mono
 
@@ -31,6 +31,7 @@ src_unpack() {
 	cd ${S}
 
 	epatch ${WORKDIR}/${P}-configurable.diff
+	sed -i -e 's:\<PKG_PATH\>:GTK_SHARP_PKG_PATH:g' configure.in
 	aclocal || die
 	# See bug #73563, comment #9
 	libtoolize --copy --force || die
