@@ -1,6 +1,13 @@
 # ChangeLog for media-tv/mythtv
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.55 2005/05/14 17:10:03 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.56 2005/05/16 06:33:35 cardoe Exp $
+
+*mythtv-0.18-r2 (16 May 2005)
+
+  16 May 2005; Doug Goldstein <cardoe@gentoo.org> +mythtv-0.18-r2.ebuild:
+  force the new init script on the masses
+  clean up some bugs... close some more bugs
+  move closer to stable x86
 
   14 May 2005; Doug Goldstein <cardoe@gentoo.org>
   files/0.18-mythbackend.conf, files/0.18-mythbackend.rc:
