@@ -1,6 +1,10 @@
 # ChangeLog for sci-biology/ncbi-tools
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools/ChangeLog,v 1.13 2005/05/13 17:51:36 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools/ChangeLog,v 1.14 2005/05/16 21:22:11 ribosome Exp $
+
+  16 May 2005; Olivier Fisette <ribosome@gentoo.org>
+  ncbi-tools-20050429.ebuild:
+  Fixed CFLAGS not being applied properly (bug #92564).
 
 *ncbi-tools-20050429 (13 May 2005)
 

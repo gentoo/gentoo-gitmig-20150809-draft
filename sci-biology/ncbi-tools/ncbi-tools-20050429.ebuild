@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools/ncbi-tools-20050429.ebuild,v 1.1 2005/05/13 17:51:36 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools/ncbi-tools-20050429.ebuild,v 1.2 2005/05/16 21:22:11 ribosome Exp $
 
 inherit flag-o-matic toolchain-funcs
 
@@ -54,8 +54,8 @@ src_unpack() {
 	cd ${S}/platform
 	# ... on x86...
 	sed -e "s/NCBI_CFLAGS1 = -c/NCBI_CFLAGS1 = -c ${CFLAGS}/" \
-		-e "s/NCBI_LDFLAGS1 = -O3 -mcpu=pentiumpro/NCBI_LDFLAGS1 = ${CFLAGS}/" \
-		-e "s/NCBI_OPTFLAG = -O3 -mcpu=pentiumpro/NCBI_OPTFLAG = ${CFLAGS}/" \
+		-e "s/NCBI_LDFLAGS1 = -O3 -mcpu=pentium4/NCBI_LDFLAGS1 = ${CFLAGS}/" \
+		-e "s/NCBI_OPTFLAG = -O3 -mcpu=pentium4/NCBI_OPTFLAG = ${CFLAGS}/" \
 		-i linux-x86.ncbi.mk || die
 	# ... on alpha...
 	sed -e "s/NCBI_CFLAGS1 = -c/NCBI_CFLAGS1 = -c ${CFLAGS}/" \
