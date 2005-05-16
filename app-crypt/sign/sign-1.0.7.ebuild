@@ -1,6 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/sign/sign-1.0.7.ebuild,v 1.4 2005/01/01 12:39:10 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/sign/sign-1.0.7.ebuild,v 1.5 2005/05/16 17:31:26 swegener Exp $
+
+inherit toolchain-funcs
 
 DESCRIPTION="File signing and signature verification utility"
 HOMEPAGE="http://swapped.cc/sign/"
@@ -13,7 +15,7 @@ IUSE=""
 DEPEND=">=dev-libs/openssl-0.9.6"
 
 src_compile() {
-	emake || die "emake failed"
+	emake CC="$(tc-getCC)" || die "emake failed"
 }
 
 src_install() {
