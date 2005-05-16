@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/misdn/files/misdn.modulesd,v 1.1 2005/04/24 13:37:58 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/misdn/files/misdn.modulesd,v 1.2 2005/05/16 08:53:37 genstef Exp $
 
 # Options for the mISDN card drivers
 #
@@ -69,7 +69,8 @@ remove avmfritz \
 install sedlfax \
 /sbin/modprobe mISDN && \
 /sbin/modprobe faxl3 && \
-/sbin/modprobe --ignore-install sedlfax
+/sbin/modprobe --ignore-install sedlfax && \
+/usr/sbin/avmcapictrl load /lib/firmware/ISAR.BIN
 remove sedlfax \
 /sbin/modprobe -r --ignore-remove sedlfax && \
 /sbin/modprobe -r faxl3 && \
