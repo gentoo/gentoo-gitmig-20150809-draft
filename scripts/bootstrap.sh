@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.73 2005/03/28 01:03:31 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.74 2005/05/16 04:30:39 vapier Exp $
 
 # people who were here:
 # (drobbins, 06 Jun 2003)
@@ -79,7 +79,7 @@ for opt in "$@" ; do
 		--resume|-r)  STRAP_EMERGE_OPTS="${STRAP_EMERGE_OPTS} --usepkg --buildpkg";;
 		--verbose|-v) STRAP_EMERGE_OPTS="${STRAP_EMERGE_OPTS} -v"; V_ECHO=v_echo;;
 		--version)
-			cvsver="$Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.73 2005/03/28 01:03:31 wolf31o2 Exp $"
+			cvsver="$Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.74 2005/05/16 04:30:39 vapier Exp $"
 			cvsver=${cvsver##*,v }
 			einfo "Gentoo ${GENTOO_VERS} bootstrap ${cvsver%%Exp*}"
 			exit 0
@@ -230,7 +230,7 @@ sed 's/[][,]//g; s/ /\n/g; s/\*//g' | while read p; do n=${p##*/}; n=${n%\'};
 n=${n%%-[0-9]*}; echo "my$(tr a-z- A-Z_ <<<$n)=$p; "; done)
 
 # This stuff should never fail but will if not enough is installed.
-[[ -z ${myBASELAYOUT} ]] && myBASELAYOUT="$(portageq best_version / virtual/baselayout)"
+[[ -z ${myBASELAYOUT} ]] && myBASELAYOUT=">=$(portageq best_version / virtual/baselayout)"
 [[ -z ${myPORTAGE}    ]] && myPORTAGE="portage"
 [[ -z ${myBINUTILS}   ]] && myBINUTILS="binutils"
 [[ -z ${myGCC}        ]] && myGCC="gcc"
