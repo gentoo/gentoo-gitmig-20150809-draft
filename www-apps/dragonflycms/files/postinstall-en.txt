@@ -1,0 +1,9 @@
+To complete your installation, you must
+
+1) add a database to mysql that will contain your DragonFly tables
+
+2) install by going to http://localhost/dragonflycms/install.php
+
+Enjoy DragonFly!!!
+
+

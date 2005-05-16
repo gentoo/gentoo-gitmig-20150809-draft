@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd></herd>
+<maintainer>
+<email>sejo@gentoo.org</email>
+<name>Jochen Maes</name>
+</maintainer>
+<longdescription lang="en">
+	DragonFly CMS is an Opensource CMS/portal based on CPG-Nuke.
+</longdescription>
+<longdescription lang="nl">
+	DragonFLy CMS is een Opensource CMS/portaal gebaseerd op CPG-Nuke.
+</longdescription>
+</pkgmetadata>
+
