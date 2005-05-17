@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/powerpc-utils/powerpc-utils-1.1.3-r12.ebuild,v 1.2 2004/12/17 22:13:01 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/powerpc-utils/powerpc-utils-1.1.3-r12.ebuild,v 1.3 2005/05/17 18:13:04 hansmi Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ DESCRIPTION="PowerPC utils; nvsetenv"
 SRC_URI="http://http.us.debian.org/debian/pool/main/p/powerpc-utils/${MY_P}.orig.tar.gz
 	http://http.us.debian.org/debian/pool/main/p/powerpc-utils/${MY_P}-${DEBRV}.diff.gz"
 HOMEPAGE="http://http.us.debian.org/debian/pool/main/p/powerpc-utils/"
-KEYWORDS="~ppc -x86 -amd64 -alpha -hppa -mips -sparc ~ppc64"
+KEYWORDS="-alpha -amd64 -hppa -mips ppc ~ppc64 -sparc -x86"
 IUSE=""
 DEPEND="virtual/libc"
 RDEPEND=""
