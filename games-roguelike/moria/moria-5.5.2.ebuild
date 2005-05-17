@@ -1,8 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/moria/moria-5.5.2.ebuild,v 1.9 2004/11/03 12:28:28 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/moria/moria-5.5.2.ebuild,v 1.10 2005/05/17 06:02:35 mr_bones_ Exp $
 
-inherit eutils gcc games
+inherit eutils toolchain-funcs games
 
 DESCRIPTION="Rogue-like D&D curses game similar to nethack (BUT BETTER)"
 HOMEPAGE="http://remarque.org/~grabiner/moria.html"
@@ -17,17 +17,19 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE=""
 
-DEPEND="virtual/libc
-	>=sys-libs/ncurses-5"
+DEPEND=">=sys-libs/ncurses-5"
 
-S="${WORKDIR}/umoria"
+S=${WORKDIR}/umoria
 
 src_unpack() {
-	unpack ${A}
-	cd ${S}
+	local f
 
-	epatch ${FILESDIR}/${PV}-gentoo-paths.patch
-	epatch ${FILESDIR}/${PV}-glibc.patch
+	unpack ${A}
+	cd "${S}"
+
+	epatch \
+		"${FILESDIR}"/${PV}-gentoo-paths.patch \
+		"${FILESDIR}"/${PV}-glibc.patch
 
 	for f in source/* unix/* ; do
 		ln -s ${f} $(basename ${f})
@@ -38,7 +40,7 @@ src_unpack() {
 		-e "s:GENTOO_DATADIR:${GAMES_DATADIR}/${PN}:" \
 		-e "s:GENTOO_STATEDIR:${GAMES_STATEDIR}:" \
 		config.h \
-			|| die "sed config.h failed"
+		|| die "sed failed"
 	sed -i \
 		-e "/^STATEDIR =/s:=.*:=\$(DESTDIR)${GAMES_STATEDIR}:" \
 		-e "/^BINDIR = /s:=.*:=\$(DESTDIR)${GAMES_BINDIR}:" \
@@ -46,19 +48,18 @@ src_unpack() {
 		-e "/^CFLAGS = /s:=.*:=${CFLAGS}:" \
 		-e "/^OWNER = /s:=.*:=${GAMES_USER}:" \
 		-e "/^GROUP = /s:=.*:=${GAMES_GROUP}:" \
-		-e "/^CC = /s:=.*:=$(gcc-getCC):" \
+		-e "/^CC = /s:=.*:=$(tc-getCC):" \
 		Makefile \
-			|| die "sed Makefile failed"
+		|| die "sed failed"
+	mv doc/moria.6 "${S}" || die "mv failed"
 }
 
 src_install() {
 	dodir "${GAMES_BINDIR}" "${GAMES_DATADIR}/${PN}" "${GAMES_STATEDIR}"
 	make DESTDIR="${D}" install || die "make install failed"
 
-	doman doc/moria.6
-	rm doc/moria.6
-	dodoc README doc/* ${WORKDIR}/${PN}-extras/*
+	doman moria.6
+	dodoc README doc/* "${WORKDIR}"/${PN}-extras/*
 
 	prepgamesdirs
-	fperms g+w ${GAMES_STATEDIR}/moriascores
 }
