@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/dvdrip-0.52.4.ebuild,v 1.1 2005/05/17 08:11:36 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/dvdrip-0.52.4.ebuild,v 1.2 2005/05/17 08:32:58 luckyduck Exp $
 
 inherit perl-module eutils
 
@@ -11,7 +11,7 @@ MY_URL="dist"
 [ "${P/pre}" != "${P}" ] && MY_URL="dist/pre"
 
 S=${WORKDIR}/${MY_P}
-DESCRIPTION="dvd::rip is a graphical frontend for transcode"
+DESCRIPTION="Dvd::rip is a graphical frontend for transcode"
 HOMEPAGE="http://www.exit1.org/dvdrip/"
 SRC_URI="http://www.exit1.org/${PN}/${MY_URL}/${MY_P}.tar.gz"
 
