@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/netbeans
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/ChangeLog,v 1.25 2005/04/21 19:10:41 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/ChangeLog,v 1.26 2005/05/17 16:29:43 compnerd Exp $
+
+*netbeans-4.0 (17 May 2005)
+
+  17 May 2005; Saleem Abdulrasool <compnerd@gentoo.org>
+  +netbeans-4.0.ebuild:
+  Adding Netbeans 4.0 to tree.  Resolves Bug #68734.  Modified ebuild from
+  Betelgeuse.
 
   21 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> netbeans-3.5.1.ebuild:
   Stable on ppc.
