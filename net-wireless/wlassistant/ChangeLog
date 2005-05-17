@@ -1,0 +1,11 @@
+# ChangeLog for net-wireless/wlassistant
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wlassistant/ChangeLog,v 1.1 2005/05/17 10:41:15 genstef Exp $
+
+*wlassistant-0.3.9 (17 May 2005)
+
+  17 May 2005; Stefan Schweizer <genstef@gentoo.org> +metadata.xml,
+  +wlassistant-0.3.9.ebuild:
+  New ebuild thanks to azazello <gentoo@horizon.ath.cx> and gentoo developer
+  roger55 <roger55@gentoo.org> in bug 90187
+
