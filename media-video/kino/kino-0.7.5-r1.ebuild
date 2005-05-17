@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kino/kino-0.7.5-r1.ebuild,v 1.3 2005/04/11 14:11:38 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kino/kino-0.7.5-r1.ebuild,v 1.4 2005/05/17 22:42:38 gustavoz Exp $
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 DESCRIPTION="Kino is a non-linear DV editor for GNU/Linux"
 HOMEPAGE="http://kino.schirmacher.de/"
@@ -34,7 +34,9 @@ DEPEND="x11-libs/gtk+
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	use ppc && epatch ${FILESDIR}/${P}-ppc.diff
+	if [[ $(tc-endian) == "big" ]] ; then
+		epatch ${FILESDIR}/${P}-ppc.diff
+	fi
 }
 
 src_compile() {
