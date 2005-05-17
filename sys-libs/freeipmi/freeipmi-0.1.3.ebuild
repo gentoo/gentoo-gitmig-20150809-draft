@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/freeipmi/freeipmi-0.1.3.ebuild,v 1.3 2005/03/30 00:47:50 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/freeipmi/freeipmi-0.1.3.ebuild,v 1.4 2005/05/17 02:59:47 robbat2 Exp $
 
 inherit flag-o-matic
 
@@ -20,19 +20,20 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
-	sed 's,auth_type_t,output_type_t,' -i.orig ${S}/ipmipower/src/ipmipower_output.c
+	sed 's,auth_type_t,output_type_t,' -i.orig \
+		"${S}/ipmipower/src/ipmipower_output.c"
 }
 
 src_compile() {
 	# this is to make things compile
-	append-flags -DHAVE_VPRINTF=1
+	append-flags "-DHAVE_VPRINTF=1"
 
 	econf || die "econf failed"
 	emake || die "emake failed"
 }
 
 src_install() {
-	emake DESTDIR="${D}" docdir="/usr/share/doc/${PF}" install || die "emake install failed"
+	emake -j1 DESTDIR="${D}" docdir="/usr/share/doc/${PF}" install || die "emake install failed"
 	dodoc AUTHORS COPYING* ChangeLog DISCLAIMER* NEWS README TODO doc/BUGS
 	# this is a redhat-style init script
 	# I still need to write a Gentoo init script later on
