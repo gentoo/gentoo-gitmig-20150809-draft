@@ -1,0 +1,10 @@
+# ChangeLog for net-analyzer/poink
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/poink/ChangeLog,v 1.1 2005/05/17 21:06:05 robbat2 Exp $
+
+*poink-2.03 (17 May 2005)
+
+  17 May 2005; Robin H. Johnson <robbat2@gentoo.org> +metadata.xml,
+  +poink-2.03.ebuild:
+  Initial ebuild, bug #82925, submitted by Maciek Ligenza <maciasl@gmail.com>.
+
