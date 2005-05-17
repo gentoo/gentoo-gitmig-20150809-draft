@@ -10,8 +10,8 @@ http://bugs.gentoo.org/show_bug.cgi?id=89946
  			error("corrupted input -- file name too large");
  		    }
  		}
-+		char *base2 = base_name (base);   /* strip any paths that may exists */
-+		strcpy(base, base2);              /* in the output name */
++		{ char *base2 = base_name (base);   /* strip any paths that may exists */
++		strcpy(base, base2); }              /* in the output name */
                  /* If necessary, adapt the name to local OS conventions: */
                  if (!list) {
                     MAKE_LEGAL_NAME(base);
