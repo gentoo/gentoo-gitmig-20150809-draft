@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 fe11328dfe2d2a9a9b2c9605010f4a12 ChangeLog 506
+MD5 afeb7fafe8a1b57fabff63e5ab7e8fda ChangeLog 608
+MD5 86aa0a22dc92a9efacbb5bd275e8b527 Lingua-Stem-It-0.01.ebuild 494
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 99c191b318f6e363469a02be06900c3b Lingua-Stem-It-0.01.ebuild 496
 MD5 835cd7d492908d15c8d44a5345eed479 files/digest-Lingua-Stem-It-0.01 69
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFB8nCRtG5z4I8BtQoRArnIAKCCDyYqOeY7NqOcGsOP24Z4W7X/BgCcCNIt
-oHhUJHcvaKv8Scu6QbaLQ/Q=
-=VDLf
+iD8DBQFCigk4KRy60XGEcJIRAk8xAJ9hw1JD6XDXkJ+Sxphyx0coX6WW5wCgqdZ4
+nXl5ZbOCxUrhxxF3veoEbwE=
+=8qFn
 -----END PGP SIGNATURE-----
