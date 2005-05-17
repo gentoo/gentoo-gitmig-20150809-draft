@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php5-sapi.eclass,v 1.45 2005/05/06 09:19:20 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php5-sapi.eclass,v 1.46 2005/05/17 18:43:28 robbat2 Exp $
 #
 # eclass/php5-sapi.eclass
 #		Eclass for building different php5 SAPI instances
@@ -181,6 +181,7 @@ php5-sapi_check_awkward_uses() {
 	confutils_use_depend_any "png"  "gd" "gd-external"
 	confutils_use_depend_any "tiff" "gd" "gd-external"
 	confutils_use_depend_any "xpm"  "gd" "gd-external"
+	confutils_use_depend_all "png"  "zlib"
 
 	if useq imap ; then
 		enable_extension_with 	"imap" 			"imap" 		1
@@ -426,7 +427,7 @@ php5-sapi_src_compile() {
 	enable_extension_with		"libedit"		"libedit"		1
 
 	# optimization/setting stuff
-	myconf="${myconf} --enable-versioning"
+	my_conf="${my_conf} --enable-versioning"
 
 	# all done
 
