@@ -1,8 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/powwow/powwow-1.2.5.ebuild,v 1.3 2004/12/21 12:12:04 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/powwow/powwow-1.2.5.ebuild,v 1.4 2005/05/17 18:37:29 wolf31o2 Exp $
 
-inherit gcc eutils games
+inherit toolchain-funcs eutils games
 
 DESCRIPTION="PowWow Console MUD Client"
 HOMEPAGE="http://linuz.sns.it/~max/powwow/"
@@ -25,7 +25,7 @@ src_unpack() {
 
 src_compile() {
 	emake \
-		CC="$(gcc-getCC)" \
+		CC="$(tc-getCC)" \
 		CFLAGS="${CFLAGS} -DUSE_REGEXP -DPOWWOW_DIR=\"\\\"${POWWOWDIR}\\\"\"" \
 		LDFLAGS="-lncurses" \
 		powwow movie \
