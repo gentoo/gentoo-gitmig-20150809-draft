@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/dsniff/dsniff-2.3-r4.ebuild,v 1.1 2005/03/29 22:55:10 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/dsniff/dsniff-2.3-r4.ebuild,v 1.2 2005/05/17 18:14:51 hansmi Exp $
 
 inherit eutils
 
@@ -19,7 +19,7 @@ SRC_URI="http://www.sleepycat.com/update/snapshot/db-${DB_VER}.tar.gz
 # dsniff has it's own small license which is in the docs section
 LICENSE="DSNIFF"
 SLOT="0"
-KEYWORDS="x86 ~alpha ~ppc"
+KEYWORDS="~alpha ppc x86"
 IUSE=""
 
 RDEPEND="virtual/libpcap
