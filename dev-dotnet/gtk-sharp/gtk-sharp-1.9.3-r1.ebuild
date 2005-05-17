@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtk-sharp/gtk-sharp-1.9.3-r1.ebuild,v 1.2 2005/05/16 15:56:17 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtk-sharp/gtk-sharp-1.9.3-r1.ebuild,v 1.3 2005/05/17 13:02:28 latexer Exp $
 
 inherit eutils mono
 
@@ -55,7 +55,7 @@ src_compile() {
 	if use doc && has_version dev-util/monodoc
 	then
 		cd ${S}/doc
-		emake assemble || die "Failed to generate docs"
+		emake -j1 assemble || die "Failed to generate docs"
 	fi
 }
 

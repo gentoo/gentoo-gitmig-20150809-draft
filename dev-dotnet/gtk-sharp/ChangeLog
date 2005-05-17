@@ -1,6 +1,10 @@
 # ChangeLog for dev-dotnet/gtk-sharp
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtk-sharp/ChangeLog,v 1.33 2005/05/16 20:50:45 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtk-sharp/ChangeLog,v 1.34 2005/05/17 13:02:28 latexer Exp $
+
+  17 May 2005; Peter Johanson <latexer@gentoo.org>
+  gtk-sharp-1.9.3-r1.ebuild, gtk-sharp-1.9.3.1.ebuild:
+  Fix doc generation. See bug #91888.
 
   16 May 2005; Tom Martin <slarti@gentoo.org> ChangeLog:
   Broken Manifest. Repoman at category level is bad.
