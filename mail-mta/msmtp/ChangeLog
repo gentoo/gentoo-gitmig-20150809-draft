@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/msmtp
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/msmtp/ChangeLog,v 1.46 2005/05/08 08:56:08 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/msmtp/ChangeLog,v 1.47 2005/05/17 15:29:03 slarti Exp $
+
+  17 May 2005; Tom Martin <slarti@gentoo.org> ChangeLog:
+  Testing repoman for jstubbs.
 
   08 May 2005; Tom Martin <slarti@gentoo.org> -msmtp-1.3.2-r1.ebuild:
   One more version purge.
