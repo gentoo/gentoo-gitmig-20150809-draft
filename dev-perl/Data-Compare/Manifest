@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 335bc6ed369fed42ae9ba9984b52e614 ChangeLog 920
-MD5 509d6b7c0bc2a0e7255826b86303527c Data-Compare-0.11.ebuild 547
-MD5 3ba819e1f48b7d26cd3a7344eb73ee96 Data-Compare-0.13.ebuild 548
+MD5 38dc1b97d2e318fe7b0583a3659a3220 ChangeLog 1020
+MD5 fc1e5294f4b19dc48543f51b540be525 Data-Compare-0.11.ebuild 545
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 3ba819e1f48b7d26cd3a7344eb73ee96 Data-Compare-0.13.ebuild 548
 MD5 3ee56584c929b128d89c17b3198bc40f files/digest-Data-Compare-0.13 68
 MD5 cc6ed28ff21c5c40e257e58c21bb8556 files/digest-Data-Compare-0.11 68
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFCbO+GtG5z4I8BtQoRAliaAJ0SVLO2n/oNM46raINtppmL8vIoJwCgkgVa
-rll48jvko7rZWHfldryuss0=
-=9D5W
+iD8DBQFCihZSKRy60XGEcJIRArWnAKCn2AIbp4UvlxSlJjjLyOgILZRh5gCeO42V
+EG1jfNQas3NpH3z2jbG33oA=
+=hFVF
 -----END PGP SIGNATURE-----

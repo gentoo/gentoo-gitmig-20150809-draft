@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 12d88f10db271db7e5097f666cab497a ChangeLog 1839
+MD5 e173fa56736faa0dc3ed2f5e1ff255a6 ChangeLog 1941
 MD5 1bc4b7893f53860e6397ca479c4d3571 File-Find-Rule-0.26.ebuild 636
-MD5 4f986e280e23d56d8a364f6cb6251a9e File-Find-Rule-0.28.ebuild 687
+MD5 1ffa5ac8e9fac08981fa92c2b5149206 File-Find-Rule-0.28.ebuild 685
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 191d830348669608651e10ca9b1b1194 files/digest-File-Find-Rule-0.26 70
 MD5 bbde6f354a0099b354e28c436dec2370 files/digest-File-Find-Rule-0.28 70
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFCihT3tG5z4I8BtQoRArP2AJ0Ymk/iB+fWyLmAPIvXZnEayQbrjACfaGqJ
-VgfcDGgufFGnIoQC/CQSnXQ=
-=j1Kq
+iD8DBQFCihXrKRy60XGEcJIRAty7AJ94DQGc7sa0AuSFYFFDr6tK+dfutACgh29B
+X4grcODxXaIPtMhALmZUCnc=
+=HBKo
 -----END PGP SIGNATURE-----
