@@ -17,5 +17,9 @@
 		De dev-embedded categorie bevat bibliotheken en hulpmiddelen voor het
 		programmeren in een "embedded" omgeving.
 	</longdescription>
+	<longdescription lang="vi">
+		Nhóm dev-ada chứa các thư viện và tiện ích liên quan
+		đến lập trình nhúng.
+	</longdescription>
 </catmetadata>
 
