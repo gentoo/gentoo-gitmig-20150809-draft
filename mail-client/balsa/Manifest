@@ -2,9 +2,9 @@
 Hash: SHA1
 
 MD5 3d8ea268bc011e284d19acc46e831802 balsa-2.0.15-r2.ebuild 1804
-MD5 d165f6386aac3ffd45fcb894a2be3ca9 balsa-2.2.6.ebuild 1722
+MD5 3f9307f7f2f95feab10f1647ee53773d balsa-2.2.6.ebuild 1726
 MD5 d4f6dbc31e378077014bb877a6be7feb balsa-1.4.3.ebuild 1700
-MD5 39bbdd4c416b3de78490f7ab67e4000f ChangeLog 12171
+MD5 851968c0bee0a4f968877d9f344e7f01 ChangeLog 12272
 MD5 f4713bbf77ae895c7ff6c022a7a2f542 metadata.xml 222
 MD5 6214786af3a3095a1e721302f10228f2 files/gtk+2.4-2.patch 1542
 MD5 7640c6a66bb87af1486164581e95296d files/balsa-1.4.0-gentoo.diff 830
@@ -16,7 +16,7 @@ MD5 aa4090173ee51cb5766ef1b3a6d6f379 files/digest-balsa-2.0.15-r2 66
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCekBuI1lqEGTUzyQRAtMaAJ9cN+eefKl2i6f6TYNRWcTzxSRKiQCfRhjS
-93biJFZrWd2Q1oG9pLhgBjs=
-=b13b
+iD8DBQFCijMeViELBEf1JB0RAqIEAJ4uz5CCy8IlVse/FuinGuOAFI5UpACfYaAS
+vIiWz7F4wu/tWhlKEerCIbA=
+=YyHQ
 -----END PGP SIGNATURE-----
