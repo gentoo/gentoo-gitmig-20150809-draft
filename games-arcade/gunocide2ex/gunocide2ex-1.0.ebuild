@@ -1,8 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/gunocide2ex/gunocide2ex-1.0.ebuild,v 1.8 2004/12/21 14:03:41 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/gunocide2ex/gunocide2ex-1.0.ebuild,v 1.9 2005/05/17 17:38:28 wolf31o2 Exp $
 
-inherit eutils gcc games
+inherit eutils toolchain-funcs games
 
 DESCRIPTION="fast-paced 2D shoot'em'up"
 HOMEPAGE="http://www.polyfrag.com/content/product_gunocide.html"
@@ -40,7 +40,7 @@ src_unpack() {
 }
 
 src_compile() {
-	local cc=$(gcc-getCXX)
+	local cc=$(tc-getCXX)
 
 	cd src
 	for f in *.cpp ; do
