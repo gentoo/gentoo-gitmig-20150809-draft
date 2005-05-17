@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnu-smalltalk/gnu-smalltalk-2.1.10-r1.ebuild,v 1.1 2005/04/09 19:16:28 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnu-smalltalk/gnu-smalltalk-2.1.10-r1.ebuild,v 1.2 2005/05/17 11:36:47 araujo Exp $
 
-inherit elisp-common flag-o-matic eutils gcc
+inherit elisp-common flag-o-matic eutils toolchain-funcs
 
 DESCRIPTION="GNU Smalltalk"
 HOMEPAGE="http://www.gnu.org/software/smalltalk/smalltalk.html"
