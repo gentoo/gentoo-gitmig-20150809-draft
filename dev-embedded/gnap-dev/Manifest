@@ -1,4 +1,6 @@
 MD5 a3a1efa30800f5df29600d14c1ca388c gnap-dev-1.5.1.ebuild 1093
 MD5 64d87385c958f432f53c7a137f683595 ChangeLog 349
 MD5 1efa026a8d6a0dde12242d80980203ba metadata.xml 250
+MD5 a3a1efa30800f5df29600d14c1ca388c gnap-dev-1.6.ebuild 1093
 MD5 b119545e7ec1c86482ef226bcfcc858f files/digest-gnap-dev-1.5.1 158
+MD5 924e6479cf77442ff12a6ccca6a61455 files/digest-gnap-dev-1.6 156
