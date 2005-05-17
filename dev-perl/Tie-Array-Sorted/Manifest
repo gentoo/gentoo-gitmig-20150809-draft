@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 bf6291cd371f90d6c09b7ce26e5697db ChangeLog 660
-MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 7ec141324f98caaa0cd4385b3acfad54 ChangeLog 763
 MD5 7cb0102b0cb566fb8e55cebd4ab15314 Tie-Array-Sorted-1.2.ebuild 484
-MD5 9b7ab8d1a672eac11b6e2bcb3bee1878 Tie-Array-Sorted-1.3.ebuild 481
+MD5 c1f2ea2dbc16e33a9318943b9ee32a2d Tie-Array-Sorted-1.3.ebuild 479
+MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 b7cd867025a37ca11f8e17a17a827684 files/digest-Tie-Array-Sorted-1.2 70
 MD5 159aa2422d0fdbca4d4c872bbad4ce58 files/digest-Tie-Array-Sorted-1.3 70
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFB8mQ6tG5z4I8BtQoRAp7zAKCNzQ+0ZEVwr4xWw0t0NHEZUuLU1gCglMra
-1+Ed7EVCFZs3pF6nNZqlY1w=
-=INei
+iD8DBQFCifkFKRy60XGEcJIRAnFRAKCaZ/HVNBOLdNsWvYZ+Re29M+sWnwCgm1fR
+ThAyinBspfeunOwGQ187vao=
+=Ju1p
 -----END PGP SIGNATURE-----
