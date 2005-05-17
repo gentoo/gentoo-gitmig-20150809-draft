@@ -1,6 +1,10 @@
 # ChangeLog for games-strategy/wesnoth
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/wesnoth/ChangeLog,v 1.48 2005/04/26 03:59:02 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/wesnoth/ChangeLog,v 1.49 2005/05/17 19:03:18 wolf31o2 Exp $
+
+  17 May 2005; Chris Gianelloni <wolf31o2@gentoo.org> wesnoth-0.8.10.ebuild,
+  wesnoth-0.8.11.ebuild, wesnoth-0.9.0.ebuild, wesnoth-0.9.1.ebuild:
+  Cleanup for bug #92745.
 
 *wesnoth-0.9.1 (26 Apr 2005)
 
