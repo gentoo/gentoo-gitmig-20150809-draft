@@ -1,18 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 c831ce8bdc2f873ef4215b1624006027 ChangeLog 1665
-MD5 3eec9f3fe48b51f49dbc1f171a3b026f metadata.xml 157
-MD5 4112ac3398646054e6d75e0d03462af0 rubymail-0.15.ebuild 750
+MD5 de9f87892fef1d21105575a83035c978 rubymail-0.17.ebuild 874
 MD5 8adcd211ab3daf0e44a1722114724e17 rubymail-0.16.ebuild 784
-MD5 1f8c960509dd2bb0cfd50550a2c16c3a rubymail-0.17.ebuild 865
+MD5 18a4140a7f624dbca037c16c12395170 ChangeLog 1753
+MD5 4112ac3398646054e6d75e0d03462af0 rubymail-0.15.ebuild 750
+MD5 3eec9f3fe48b51f49dbc1f171a3b026f metadata.xml 157
 MD5 6a26f746bb36d0f68a574c0b69878991 files/digest-rubymail-0.15 65
 MD5 8d5d7383677398ee812e15d80616b042 files/digest-rubymail-0.16 65
 MD5 1aad13db6a51954d8fb330d694041788 files/digest-rubymail-0.17 65
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCNXl360LfUIagIAkRAlrqAJ9tK+SDPbekESklL0BkslkajVXBBgCeLm+O
-+lkHOv+gumV/nge/j2vlC8g=
-=UM43
+iD8DBQFCikvnBXaUFmZvwyMRAvT0AJ9dVVPNU+bFS9UJOgR2zHZU3JWDgQCgz+LX
+dW09kWjapTPx9YXnBe3XGrM=
+=Yr+6
 -----END PGP SIGNATURE-----
