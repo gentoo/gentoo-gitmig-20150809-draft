@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/thttpd/thttpd-2.25b.ebuild,v 1.1 2005/02/09 16:12:53 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/thttpd/thttpd-2.25b.ebuild,v 1.2 2005/05/17 18:10:17 hansmi Exp $
 
 inherit flag-o-matic
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.acme.com/software/thttpd/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="ppc x86"
 IUSE=""
 
 DEPEND="virtual/libc"
