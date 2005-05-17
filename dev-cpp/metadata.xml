@@ -17,5 +17,9 @@
 		De dev-cpp categorie bevat bibliotheken en hulpmiddelen voor het gebruik
 		van de programmeertaal C++.
 	</longdescription>
+	<longdescription lang="vi">
+		Nhóm dev-ada chứa các thư viện và tiện ích liên quan
+		đến ngôn ngữ lập trình C++.
+	</longdescription>
 </catmetadata>
 
