@@ -1,5 +1,5 @@
-MD5 33e433b7a93c5e694dee3597ce114f2a generator-0.35.ebuild 1724
-MD5 e094609265fa7ee0d54bd906e7bad2d6 ChangeLog 1573
+MD5 e251624da52aa57d6072a6660005376f generator-0.35.ebuild 1738
+MD5 2fbda6e3a1045f2480816bf98b0e4fc7 ChangeLog 1679
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 MD5 693c422146d7001565fb916cbb84faf5 files/digest-generator-0.35 66
 MD5 9ad78ba06412ba4a6b57b93e759e1016 files/netbsd-gcc-3.3.patch 1345

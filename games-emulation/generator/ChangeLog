@@ -1,6 +1,9 @@
 # ChangeLog for games-emulation/generator
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/generator/ChangeLog,v 1.10 2004/07/11 18:48:52 slarti Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/generator/ChangeLog,v 1.11 2005/05/17 17:50:02 wolf31o2 Exp $
+
+  17 May 2005; Chris Gianelloni <wolf31o2@gentoo.org> generator-0.35.ebuild:
+  Cleanup for bug #92745.
 
   11 Jul 2004; Tom Martin <slarti@gentoo.org> generator-0.35.ebuild:
   Marked ~amd64, closing 53460.

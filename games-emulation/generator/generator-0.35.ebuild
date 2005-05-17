@@ -1,8 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/generator/generator-0.35.ebuild,v 1.12 2004/07/11 18:48:52 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/generator/generator-0.35.ebuild,v 1.13 2005/05/17 17:50:02 wolf31o2 Exp $
 
-inherit eutils gcc games
+inherit eutils toolchain-funcs games
 
 DESCRIPTION="Sega Genesis / Mega Drive console emulator"
 HOMEPAGE="http://www.squish.net/generator/"
