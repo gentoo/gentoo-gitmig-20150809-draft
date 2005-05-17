@@ -1,10 +1,20 @@
-MD5 c262b16ce57b560ec463c3b8849d09ea libdc1394-0.9.3.ebuild 828
-MD5 80a916708250b06997d9a0f2bf2b22df libdc1394-1.0.0.ebuild 968
-MD5 49d951f58fe02ae6b1495c69735fe18d libdc1394-0.9.5.ebuild 829
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 c54bbfca196771d3f5526cc2f53d2111 ChangeLog 1628
 MD5 a52995ba74cd3d620ff17405bddb71ee libdc1394-0.9.1.ebuild 844
-MD5 6ee2286140a0c7a1fe6be669cef6cc8d ChangeLog 1529
+MD5 c262b16ce57b560ec463c3b8849d09ea libdc1394-0.9.3.ebuild 828
+MD5 49d951f58fe02ae6b1495c69735fe18d libdc1394-0.9.5.ebuild 829
+MD5 f9d266aa2bafafb1187302edce8fb90f libdc1394-1.0.0.ebuild 967
 MD5 d19a200471d034c12112a8d0f7e6834b files/digest-libdc1394-0.9.1 67
 MD5 08e765d381c723ed5c0fa51541b28fdc files/digest-libdc1394-0.9.3 67
 MD5 25c2c4470ef683e39629c73d42417254 files/digest-libdc1394-0.9.5 67
 MD5 4fc355449f1b06ba0387efc3c70d6249 files/digest-libdc1394-1.0.0 67
 MD5 7c6dee34c19af4ed536bed9fdd0c6795 files/nox11.patch 3699
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFCim5LKRy60XGEcJIRAlTVAJ9z90Q6we6UziF0Yem3lggIS4ej2wCgh47T
+PEwKwDdjWN5mz9OTRbPu/Ls=
+=uGWK
+-----END PGP SIGNATURE-----
