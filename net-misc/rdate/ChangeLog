@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/rdate
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rdate/ChangeLog,v 1.22 2004/12/29 20:03:46 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rdate/ChangeLog,v 1.23 2005/05/17 21:19:07 robbat2 Exp $
+
+*rdate-1.4-r1 (17 May 2005)
+
+  17 May 2005; Robin H. Johnson <robbat2@gentoo.org> +files/rdate-confd,
+  +files/rdate-initd, +rdate-1.4-r1.ebuild:
+  Bug #57845, init scripts for rdate.
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
