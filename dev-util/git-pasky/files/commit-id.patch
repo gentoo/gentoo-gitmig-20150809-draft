@@ -1,8 +1,0 @@
---- commit-id.old	2005-04-22 17:19:30.945237792 +0100
-+++ commit-id	2005-04-22 17:19:10.012420064 +0100
-@@ -5,4 +5,4 @@
- #
- # Takes the appropriate ID, defaults to HEAD.
- 
--gitXnormid.sh -c $1
-+./gitXnormid.sh -c $1
