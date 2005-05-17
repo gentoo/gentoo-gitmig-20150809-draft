@@ -15,5 +15,9 @@
 	<longdescription lang="nl">
 		De app-emac categorie bevat extensies voor Emacs.
 	</longdescription>
+	<longdescription lang="vi">
+		Nhóm app-emacs chứa các gói mở rộng cho trình soạn
+		thảo văn bản Emacs.
+	</longdescription>
 </catmetadata>
 
