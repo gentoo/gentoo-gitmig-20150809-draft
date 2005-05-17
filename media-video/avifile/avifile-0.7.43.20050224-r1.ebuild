@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.7.43.20050224-r1.ebuild,v 1.5 2005/04/26 08:34:14 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.7.43.20050224-r1.ebuild,v 1.6 2005/05/17 22:29:32 gustavoz Exp $
 
 inherit eutils flag-o-matic
 
@@ -16,7 +16,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0.7"
 
-KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~mips ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~mips sparc ~x86"
 IUSE="3dnow X alsa debug divx4linux dmalloc dpms a52 encode esd mad matrox
 mmx vorbis oss qt sblive sdl sse truetype v4l vidix win32codecs xinerama xv xvid
 zlib"
