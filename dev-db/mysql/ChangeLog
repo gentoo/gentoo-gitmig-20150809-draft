@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.199 2005/05/17 17:16:26 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.200 2005/05/17 20:19:42 corsair Exp $
+
+  17 May 2005; Markus Rothe <corsair@gentoo.org> mysql-4.1.12.ebuild:
+  Added ~ppc64 to KEYWORDS
 
   17 May 2005; Robin H. Johnson <robbat2@gentoo.org> mysql-4.0.24-r2.ebuild,
   mysql-4.1.12.ebuild:
