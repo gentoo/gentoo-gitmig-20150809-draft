@@ -1,24 +1,11 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 b2ddd92edbc173c71a7a26502da80535 openmsx-0.4.0.ebuild 1096
 MD5 7f1f3c0172523729641ba9bc11dcbe55 metadata.xml 248
-MD5 43393d2e7b637bac74f04008f6ab9847 ChangeLog 1631
-MD5 b2e7ec1e70e3ad9ab8e9e997d635e378 openmsx-0.5.0.ebuild 1113
-MD5 885178df9088ec67317a00fb0323eb4d openmsx-0.5.1.ebuild 1104
 MD5 21ab36385cf75118ea0d9e5259e1634a openmsx-0.3.4.ebuild 1860
-MD5 b55f13765241896c1c13a29faba65874 files/digest-openmsx-0.4.0 65
+MD5 43393d2e7b637bac74f04008f6ab9847 ChangeLog 1631
+MD5 885178df9088ec67317a00fb0323eb4d openmsx-0.5.1.ebuild 1104
+MD5 b2ddd92edbc173c71a7a26502da80535 openmsx-0.4.0.ebuild 1096
+MD5 7ccfd4ca66e1508cc53df4ef7aa7ffe0 files/digest-openmsx-0.5.1 66
 MD5 c9145ee916ff637d0bb770affed4df4d files/0.5.1-custom.mk.patch 793
 MD5 04f5dc7ba36939e792262356a7558ac1 files/digest-openmsx-0.3.4 66
-MD5 7ccfd4ca66e1508cc53df4ef7aa7ffe0 files/digest-openmsx-0.5.1 66
-MD5 2aa177e70143c6086066c46f58217c69 files/openmsx-0.4.0-symlinking.patch 772
 MD5 7e488066115ef9f2e653d6260cd2499b files/openmsx-0.4.0-custom.mk.patch 377
-MD5 5f206f6c32af63a8f55558da1b088188 files/digest-openmsx-0.5.0 65
-MD5 6932c30d43b5cd8f2f9590a8459c4b53 files/0.5.0-custom.mk.patch 821
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFCOJj1p5vW4rUFj5oRAovTAJ9+UeXtyjeyCWBUimUu3i0ciB3UDACgjUlK
-agmZlSZc1kkSGhe+nN/eYJ8=
-=WJ/e
------END PGP SIGNATURE-----
+MD5 b55f13765241896c1c13a29faba65874 files/digest-openmsx-0.4.0 65
+MD5 2aa177e70143c6086066c46f58217c69 files/openmsx-0.4.0-symlinking.patch 772
