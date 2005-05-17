@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 788df6b8a235a930c86a01dd36c93b8d ChangeLog 789
+MD5 3c6fdaf9a5d1b09bee77f99c55714c68 glade-perl-0.61.ebuild 764
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 c53420d5a0f7c2571fd9dffceb950c1f ChangeLog 688
-MD5 146b96f9d0aac0d14fce3e635fc0e0f6 glade-perl-0.61.ebuild 763
 MD5 2f2b69ed75f2142660f2a6fe1a1e2af9 files/digest-glade-perl-0.61 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFCijCLKRy60XGEcJIRAuCRAJ9fW2pVkKKpaPaWkuncHwVrR4sdrQCgromC
+Ed5YbrgvV9HwSv5Yv2o3YVw=
+=YjcI
+-----END PGP SIGNATURE-----
