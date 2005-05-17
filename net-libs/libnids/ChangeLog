@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libnids
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnids/ChangeLog,v 1.17 2005/03/20 20:15:31 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnids/ChangeLog,v 1.18 2005/05/17 18:14:40 hansmi Exp $
+
+  17 May 2005; Michael Hanselmann <hansmi@gentoo.org> libnids-1.18.ebuild:
+  Stable on ppc.
 
   20 Mar 2005; Marcelo Goes <vanquirius@gentoo.org> libnids-1.18.ebuild:
   install_prefix="${D}" for bug 86024.
