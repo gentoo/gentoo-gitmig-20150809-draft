@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.0.28-r4.ebuild,v 1.1 2005/05/17 19:19:18 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.0.28-r4.ebuild,v 1.2 2005/05/17 20:58:29 luckyduck Exp $
 
 inherit eutils java-pkg
 
@@ -47,8 +47,8 @@ TOMCAT_NAME="${PN}-${SLOT}"
 
 src_unpack() {
 	unpack ${A}
-
 	cd ${S}
+
 	epatch ${FILESDIR}/${PV}/build.xml-01.patch
 	epatch ${FILESDIR}/${PV}/build.xml-02.patch
 	epatch ${FILESDIR}/${PV}/gentoo.diff
@@ -191,8 +191,10 @@ src_install() {
 	sed -e s:SHUTDOWN:${randpw}: -i conf/{server,server-minimal}.xml
 
 	# copy over the directories	
-	cp -pra conf/* ${D}/etc/${TOMCAT_NAME}/default || die "failed to copy conf"
-	cp -pra bin common server shared ${D}/usr/share/${TOMCAT_NAME} || die "failed to copy"
+	chmod -R 750 conf/*
+	chown -R tomcat:tomcat webapps/*
+	cp -R conf/* ${D}/etc/${TOMCAT_NAME}/default || die "failed to copy conf"
+	cp -R bin common server shared ${D}/usr/share/${TOMCAT_NAME} || die "failed to copy"
 
 	# if the useflag is set, copy over the examples
 	dodir /var/lib/${TOMCAT_NAME}/default/webapps
