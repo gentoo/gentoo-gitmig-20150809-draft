@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gcal/gcal-3.01-r2.ebuild,v 1.8 2005/04/21 19:12:27 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gcal/gcal-3.01-r2.ebuild,v 1.9 2005/05/17 11:26:38 ka0ttic Exp $
 
 inherit eutils
 
@@ -22,12 +22,14 @@ src_unpack() {
 }
 
 src_compile() {
-	econf `use_enable nls` `use_enable ncurses` || die
+	econf $(use_enable nls) $(use_enable ncurses) || die
 	emake || die
 }
 
 src_install() {
 	einstall || die
+	rm -f ${D}/usr/share/locale/locale.alias
+
 	dodoc ABOUT-NLS ATTENTION BUGS DISCLAIM HISTORY \
 		INSTALL LIMITATIONS MANIFEST NEWS README SYMBOLS THANKS TODO
 

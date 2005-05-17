@@ -1,9 +1,19 @@
-MD5 d9d8d3c844c4c847bac74bcff0d3907d ChangeLog 2015
-MD5 461a3822386a6a478ab58b90bf2c90f9 gcal-3.01-r1.ebuild 1654
-MD5 a032ab32af7b640097f3f2c46bb60c03 gcal-3.01-r2.ebuild 1751
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 e927dcfcf49fa65b471ef05476e2b1fd gcal-3.01.ebuild 1582
+MD5 2131041d24c40a8ca0bf991df2c28b3e gcal-3.01-r2.ebuild 1798
+MD5 461a3822386a6a478ab58b90bf2c90f9 gcal-3.01-r1.ebuild 1654
+MD5 83f61d7f4e7637d0cc4ba326014cb766 ChangeLog 2145
 MD5 99ce5509db4b50f28a1f6675f8c09b2b metadata.xml 258
 MD5 e1f8151e053aefc6508cc1bbd8a4b127 files/digest-gcal-3.01 62
+MD5 555a7b92fa6c53dbe05c24e66d0a2c73 files/gcal-3.01-mandir.diff 1515
 MD5 e1f8151e053aefc6508cc1bbd8a4b127 files/digest-gcal-3.01-r1 62
 MD5 e1f8151e053aefc6508cc1bbd8a4b127 files/digest-gcal-3.01-r2 62
-MD5 555a7b92fa6c53dbe05c24e66d0a2c73 files/gcal-3.01-mandir.diff 1515
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCidVEEZCkKN40op4RAh3QAJ4r2NXlePwh2XpjJtWmZCtys2074wCgtmhX
+vNXYFkEy5Br6NMF+KERRXXk=
+=rVfo
+-----END PGP SIGNATURE-----
