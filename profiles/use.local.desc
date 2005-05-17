@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1171 2005/05/16 08:53:21 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1172 2005/05/17 17:12:19 robbat2 Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -123,7 +123,10 @@ dev-cpp/sptk:fltk - Enable FLTK support
 dev-db/c-jdbc:examples - Install example source code
 dev-db/firebird:inetd - If you want inetd version instead of a superserver (daemon)
 dev-db/hk_classes:sqlite3 - Enable sqlite3 plugin.
-dev-db/mysql:cluster - Add support for NDB clustering
+dev-db/mysql:cluster - Add support for NDB clustering.
+dev-db/mysql:geometry - Add support for geometry data.
+dev-db/mysql:extraengine - Add support for alternative storage engines.
+dev-db/mysql:utf8 - Use UTF8 encoding instead of LATIN1.
 dev-db/pgcluster:pg-intdatetime - Enables --enable-integer-datetimes configure option, which changes PG to use 64-bit integers for timestamp storage.
 dev-db/postgis:geos - Add the GEOS library for exact topological tests.
 dev-db/postgis:proj - Add the Proj library for reprojection features.
