@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/net-snmp
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.98 2005/04/28 12:32:11 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.99 2005/05/17 14:51:35 ka0ttic Exp $
+
+  17 May 2005; Aaron Walker <ka0ttic@gentoo.org> metadata.xml,
+  net-snmp-5.2.1.ebuild:
+  Add missing lm_sensors conditional for mibs, bug 92513.
 
   28 Apr 2005; Aaron Walker <ka0ttic@gentoo.org> net-snmp-5.2.1.ebuild:
   Only dep on TermReadKey if perl and !minimal. Thanks to solar for pointing

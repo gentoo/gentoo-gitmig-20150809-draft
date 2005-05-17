@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.2.1.ebuild,v 1.14 2005/05/01 08:05:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.2.1.ebuild,v 1.15 2005/05/17 14:51:35 ka0ttic Exp $
 
 inherit eutils fixheadtails perl-module
 
@@ -78,6 +78,7 @@ src_compile() {
 
 	mibs="host ucd-snmp/dlmod"
 	use smux && mibs="${mibs} smux"
+	use lm_sensors && mibs="${mibs} ucd-snmp/lmSensors"
 
 	econf \
 		--with-sys-location="Unknown" \
