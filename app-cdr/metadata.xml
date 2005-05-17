@@ -17,5 +17,9 @@
 		De app-cdr categorie bevat applicaties om CD's en DVD's te branden en om
 		.iso bestanden te bewerken.
 	</longdescription>
+	<longdescription lang="vi">
+		Nhóm app-cdr chứa các phần mềm để ghi CD và DVD, làm
+		việc với các tập tin .iso.
+	</longdescription>
 </catmetadata>
 
