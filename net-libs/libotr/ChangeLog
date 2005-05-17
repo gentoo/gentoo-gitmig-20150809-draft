@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/libotr
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libotr/ChangeLog,v 1.5 2005/03/30 21:56:39 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libotr/ChangeLog,v 1.6 2005/05/17 14:12:09 rizzo Exp $
+
+*libotr-2.0.2 (17 May 2005)
+
+  17 May 2005; Don Seiler <rizzo@gentoo.org> +libotr-2.0.2.ebuild:
+  Version bump
 
   30 Mar 2005; Gustavo Zacarias <gustavoz@gentoo.org> libotr-2.0.1.ebuild:
   Keyworded ~sparc
