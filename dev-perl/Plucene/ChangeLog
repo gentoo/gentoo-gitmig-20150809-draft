@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Plucene
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Plucene/ChangeLog,v 1.4 2005/03/16 16:05:36 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Plucene/ChangeLog,v 1.5 2005/05/17 15:33:55 gustavoz Exp $
+
+  17 May 2005; Gustavo Zacarias <gustavoz@gentoo.org> Plucene-1.19.ebuild:
+  Stable on sparc
 
   16 Mar 2005; Michael Cummings <mcummings@gentoo.org> Plucene-1.19.ebuild:
   style cleanup
