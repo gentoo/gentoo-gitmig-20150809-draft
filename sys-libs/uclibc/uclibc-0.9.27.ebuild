@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.27.ebuild,v 1.15 2005/04/21 15:47:59 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.27.ebuild,v 1.16 2005/05/17 22:13:33 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -40,8 +40,7 @@ KEYWORDS="arm m68k mips ppc sh sparc x86"
 IUSE="alsa build debug hardened ipv6 static" # nls is not supported yet
 RESTRICT="nostrip"
 
-DEPEND="sys-devel/gcc
-	virtual/os-headers"
+DEPEND="virtual/os-headers"
 RDEPEND=""
 [[ ${CTARGET} == ${CHOST} ]] && PROVIDE="virtual/libc"
 
@@ -265,6 +264,9 @@ src_compile() {
 }
 
 src_test() {
+	[[ ${CHOST} != ${CTARGET} ]] && return 0
+	[[ ${CBUILD} != ${CHOST} ]] && return 0
+
 	# This is wrong, but uclibc's tests fail bad when screwing 
 	# around with sandbox, so lets just punt it
 	unset LD_PRELOAD
