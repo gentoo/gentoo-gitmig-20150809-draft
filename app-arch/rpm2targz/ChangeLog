@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/rpm2targz
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm2targz/ChangeLog,v 1.27 2005/01/01 11:57:15 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm2targz/ChangeLog,v 1.28 2005/05/17 10:33:31 liquidx Exp $
+
+  17 May 2005; Alastair Tse <liquidx@gentoo.org> -rpm2targz-8.0.ebuild,
+  -rpm2targz-9.0.ebuild, -rpm2targz-9.0-r1.ebuild, rpm2targz-9.0-r2.ebuild:
+  gcc.eclass -> toolchain-funcs.eclass
 
   05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   rpm2targz-9.0.ebuild:

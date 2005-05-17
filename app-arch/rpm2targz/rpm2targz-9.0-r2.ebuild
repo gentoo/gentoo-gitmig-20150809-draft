@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm2targz/rpm2targz-9.0-r2.ebuild,v 1.10 2005/01/01 11:57:15 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm2targz/rpm2targz-9.0-r2.ebuild,v 1.11 2005/05/17 10:33:31 liquidx Exp $
 
-inherit eutils gcc
+inherit toolchain-funcs eutils
 
 DESCRIPTION="Convert a .rpm file to a .tar.gz archive"
 HOMEPAGE="http://www.slackware.com/config/packages.php"
@@ -36,7 +36,7 @@ src_unpack() {
 }
 
 src_compile() {
-	$(gcc-getCC) ${CFLAGS} -o rpmoffset rpmoffset.c || die
+	$(tc-getCC) ${CFLAGS} -o rpmoffset rpmoffset.c || die
 }
 
 src_install() {
