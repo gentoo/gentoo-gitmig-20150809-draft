@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/geos
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/geos/ChangeLog,v 1.3 2005/05/14 13:02:32 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/geos/ChangeLog,v 1.4 2005/05/17 13:16:13 chriswhite Exp $
+
+  17 May 2005; Chris White <chriswhite@gentoo.org> geos-2.1.1.ebuild:
+  Marked ppc unstable.
 
   14 May 2005; MATSUU Takuto <matsuu@gentoo.org>
   +files/geos-2.1.1-multilib.patch, geos-2.1.1.ebuild:
