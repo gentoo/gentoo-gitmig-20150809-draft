@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbi/fbi-1.31.ebuild,v 1.17 2005/03/23 14:24:18 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbi/fbi-1.31.ebuild,v 1.18 2005/05/17 16:06:24 spock Exp $
 
-inherit gcc
+inherit toolchain-funcs
 
 DESCRIPTION="A image viewer for the Linux framebuffer console."
 HOMEPAGE="http://linux.bytesex.org/fbida/"
@@ -25,7 +25,7 @@ DEPEND="jpeg? ( >=media-libs/jpeg-6b )
 
 src_compile() {
 	export CFLAGS="${CFLAGS}"
-	make CC="$(gcc-getCC)" || die
+	make CC="$(tc-getCC)" || die
 }
 
 src_install() {
