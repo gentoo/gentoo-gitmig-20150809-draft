@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/tf/tf-50_beta7.ebuild,v 1.1 2005/05/17 06:58:53 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/tf/tf-50_beta7.ebuild,v 1.2 2005/05/17 23:05:13 mr_bones_ Exp $
 
 inherit games
 
@@ -35,16 +35,13 @@ src_install() {
 	newman src/tf.1.catman tf.1
 	dodoc CHANGES CREDITS README
 
-	insinto "${GAMES_LIBDIR}/${PN}-lib"
+	insinto "${GAMES_DATADIR}/${PN}-lib"
 	# the application looks for this file here if /changes is called.
 	# see comments on bug #23274
 	doins CHANGES
 	insopts -m0755
 	doins tf-lib/*
 	if use doc ; then
-		cd "${WORKDIR}/${MY_P}-help"
-		# the html expects to find the CHANGES file uncompressed so...
-		gzip -d "${D}/usr/share/doc/${P}/CHANGES.gz"
 		dohtml -r *.html commands topics
 	fi
 	prepgamesdirs
