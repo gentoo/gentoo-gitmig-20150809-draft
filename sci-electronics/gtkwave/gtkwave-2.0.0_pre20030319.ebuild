@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gtkwave/gtkwave-2.0.0_pre20030319.ebuild,v 1.2 2005/01/10 00:09:22 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gtkwave/gtkwave-2.0.0_pre20030319.ebuild,v 1.3 2005/05/17 18:18:07 hansmi Exp $
 
 MY_P=${P/_pre/pre3-}
 DESCRIPTION="A wave viewer for LXT and Verilog VCD/EVCD files"
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.cs.man.ac.uk/pub/amulet/gtkwave/snapshots/${MY_P}.tar.gz"
 IUSE=""
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~sparc ~ppc"
+KEYWORDS="ppc ~sparc x86"
 
 DEPEND="virtual/x11
 	=x11-libs/gtk+-1.2*

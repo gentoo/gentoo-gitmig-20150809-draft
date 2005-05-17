@@ -1,6 +1,9 @@
 # ChangeLog for sci-electronics/gwave
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gwave/ChangeLog,v 1.2 2004/12/27 20:58:37 swegener Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gwave/ChangeLog,v 1.3 2005/05/17 18:19:20 hansmi Exp $
+
+  17 May 2005; Michael Hanselmann <hansmi@gentoo.org> gwave-20031224.ebuild:
+  Stable on ppc.
 
 *gwave-20031224 (27 Dec 2004)
 

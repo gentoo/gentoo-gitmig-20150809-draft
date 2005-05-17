@@ -1,6 +1,10 @@
 # ChangeLog for sci-electronics/ng-spice-rework
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/ng-spice-rework/ChangeLog,v 1.5 2005/03/25 23:41:54 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/ng-spice-rework/ChangeLog,v 1.6 2005/05/17 18:20:43 hansmi Exp $
+
+  17 May 2005; Michael Hanselmann <hansmi@gentoo.org>
+  ng-spice-rework-15.ebuild:
+  Stable on ppc.
 
   25 Mar 2005; <plasmaroo@gentoo.org> -ng-spice-rework-14.ebuild:
   Remove redundant ng-spice-rework-14.

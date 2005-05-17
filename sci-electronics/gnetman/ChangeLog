@@ -1,6 +1,10 @@
 # ChangeLog for sci-electronics/gnetman
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gnetman/ChangeLog,v 1.2 2005/02/17 23:27:51 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gnetman/ChangeLog,v 1.3 2005/05/17 18:21:39 hansmi Exp $
+
+  17 May 2005; Michael Hanselmann <hansmi@gentoo.org>
+  gnetman-0.0.1_pre20041222.ebuild:
+  Stable on ppc.
 
   18 Feb 2005; Michael Hanselmann <hansmi@gentoo.org>
   gnetman-0.0.1_pre20041222.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/ng-spice-rework/ng-spice-rework-15.ebuild,v 1.3 2005/01/15 11:58:01 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/ng-spice-rework/ng-spice-rework-15.ebuild,v 1.4 2005/05/17 18:20:43 hansmi Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://ngspice.sourceforge.net"
 SLOT="0"
 IUSE=""
 LICENSE="BSD GPL-2"
-KEYWORDS="~x86 ~ppc ~amd64"
+KEYWORDS="~amd64 ppc ~x86"
 
 DEPEND=">=sys-libs/glibc-2.1.3"
 
