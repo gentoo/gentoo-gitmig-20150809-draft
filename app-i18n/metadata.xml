@@ -13,5 +13,9 @@
 	<longdescription lang="nl">
 		De app-i18n categorie bevat applicaties om te internationaliseren (vertalen).
 	</longdescription>
+	<longdescription lang="en">
+		Nhóm app-i18n chứa các gói liên quan đến
+		internationalisation (i18n).
+	</longdescription>
 </catmetadata>
 
