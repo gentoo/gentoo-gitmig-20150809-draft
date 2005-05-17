@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-1.0.4.ebuild,v 1.11 2005/05/15 01:53:42 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-1.0.4.ebuild,v 1.12 2005/05/17 05:12:30 compnerd Exp $
 
 inherit makeedit flag-o-matic gcc nsplugins eutils mozconfig mozilla-launcher multilib
 
@@ -152,8 +152,7 @@ src_install() {
 	insinto /usr/$(get_libdir)/pkgconfig
 	for x in *.pc; do
 			if [[ -f ${x} ]]; then
-					sed -i -e
-					"s:/lib/firefox-${MY_PV}:/$(get_libdir)/MozillaFirefox:g" ${x}
+					sed -i -e "s:/lib/firefox-${MY_PV}:/$(get_libdir)/MozillaFirefox:g" ${x}
 					sed -i -e "s:/firefox-${MY_PV}:/MozillaFirefox:g" ${x}
 					doins ${x}
 			fi

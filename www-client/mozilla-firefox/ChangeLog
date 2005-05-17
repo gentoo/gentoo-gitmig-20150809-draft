@@ -1,6 +1,10 @@
 # ChangeLog for www-client/mozilla-firefox
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.33 2005/05/15 01:53:42 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.34 2005/05/17 05:12:30 compnerd Exp $
+
+  17 May 2005; Saleem Abdulrasool <compnerd@gentoo.org>
+  mozilla-firefox-1.0.4.ebuild:
+  Removing newline which causes sed errors during src_install
 
   15 May 2005; Mark Loeser <halcy0n@gentoo.org>
   +files/mozilla-firefox-1.0.4-gcc4.patch, mozilla-firefox-1.0.4.ebuild:
