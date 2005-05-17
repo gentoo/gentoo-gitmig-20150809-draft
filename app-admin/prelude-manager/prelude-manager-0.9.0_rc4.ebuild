@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/prelude-manager/prelude-manager-0.9.0_rc4.ebuild,v 1.1 2005/05/14 17:57:32 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/prelude-manager/prelude-manager-0.9.0_rc4.ebuild,v 1.2 2005/05/17 21:53:10 vanquirius Exp $
 
 inherit flag-o-matic versionator
 
@@ -12,16 +12,16 @@ SRC_URI="http://www.prelude-ids.org/download/releases/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~sparc"
-IUSE="ssl doc mysql postgres debug"
+IUSE="doc debug xml dbx"
 
 RDEPEND="virtual/libc
 	!dev-libs/libprelude-cvs
 	!app-admin/prelude-manager-cvs
 	dev-libs/libprelude
-	ssl? ( dev-libs/openssl )
+	dev-libs/openssl
 	doc? ( dev-util/gtk-doc )
-	mysql? ( dev-db/mysql )
-	postgres? ( dev-db/postgresql )"
+	xml? ( dev-libs/libxml )
+	dbx? ( dev-libs/libpreludedb )"
 
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4"
@@ -31,11 +31,9 @@ S="${WORKDIR}/${MY_P}"
 src_compile() {
 	local myconf
 
-	use ssl && myconf="${myconf} --enable-openssl" || myconf="${myconf} --enable-openssl=no"
 	use doc && myconf="${myconf} --enable-gtk-doc" || myconf="${myconf} --enable-gtk-doc=no"
-	use mysql && myconf="${myconf} --enable-mysql" || myconf="${myconf} --enable-mysql=no"
-	use postgres && myconf="${myconf} --enable-postgresql" || myconf="${myconf} --enable-postgresql=no"
 	use debug && append-flags -O -ggdb
+	use !xml && myconf="${myconf} --disable-xmltest"
 
 	econf ${myconf} || die "econf failed"
 	emake || die "emake failed"
