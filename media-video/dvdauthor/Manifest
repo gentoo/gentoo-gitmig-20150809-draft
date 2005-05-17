@@ -1,11 +1,21 @@
-MD5 fbffc34c68550f496f7f85dc5703ab11 ChangeLog 3299
-MD5 7300a7b361fa9f48e37722c6952bd432 metadata.xml 158
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 f2c65b9b47bcce012d20193de0b05129 ChangeLog 3398
 MD5 f19430c51a300365f3d8005dc22febbd dvdauthor-0.6.10.ebuild 919
-MD5 08f43807a81d02e56b2f66dbe0e33c2e dvdauthor-0.6.11.ebuild 703
-MD5 8a50d588492e032aad69586764b81edf files/dvdauthor-0.6.10-utf8.patch 464
-MD5 7dc0471c612f68f8c3cc66a8064e4263 files/digest-dvdauthor-0.6.10 68
+MD5 7300a7b361fa9f48e37722c6952bd432 metadata.xml 158
+MD5 a7d906646f2455742a05a46f7364bc5f dvdauthor-0.6.11.ebuild 704
 MD5 cf7c72d03d03abd9ecd2ba645d5cecd6 files/0.6.10-gcc34.patch 427
+MD5 7dc0471c612f68f8c3cc66a8064e4263 files/digest-dvdauthor-0.6.10 68
 MD5 cf7c72d03d03abd9ecd2ba645d5cecd6 files/dvdauthor-0.6.10-gcc34.patch 427
 MD5 d121c9be3efefbcbf6b07a1fba9a8afc files/dvdauthor-0.6.10-im6.patch 360
+MD5 8a50d588492e032aad69586764b81edf files/dvdauthor-0.6.10-utf8.patch 464
 MD5 f98a1701d0a682dcbaa5be92cfe177d8 files/dvdauthor-0.6.10-debugsegfault.patch 1274
 MD5 79879b2e10592c662bf26806a513a3cb files/digest-dvdauthor-0.6.11 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFCinENKRy60XGEcJIRAv1pAKCQPGGVUfxA/1lVgrPJiCEZ/ltYqQCgsGjf
+5HLDnLXL7g7SzX2koR4+MYE=
+=bm4v
+-----END PGP SIGNATURE-----
