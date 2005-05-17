@@ -1,6 +1,16 @@
-MD5 70d788ea216f1608dba2379bea0cdccd ChangeLog 906
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 c4bc24d10fdbed13e919953386ccd7e2 ChangeLog 1034
+MD5 2c5196a53f95ae378c146ade01ccfe6f xwrits-2.20.ebuild 724
 MD5 cdb11033a3fa6525334cecf938961c07 metadata.xml 166
-MD5 ba20a5d0d92a4313b249d5838f364752 xwrits-2.21.ebuild 724
-MD5 b90a4209201cfef277e8172c9b7f7268 xwrits-2.20.ebuild 814
-MD5 5866c3912c9fbcc5bdb7e0a5bdb97abc files/digest-xwrits-2.20 63
+MD5 91124ebb5aea45d6d22ff22e23d47e72 xwrits-2.21.ebuild 637
 MD5 c1e7cf4f4f83a21c6734a497574be1a4 files/digest-xwrits-2.21 63
+MD5 5866c3912c9fbcc5bdb7e0a5bdb97abc files/digest-xwrits-2.20 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCihv9I7fK2cqeyXkRApqDAKC1JBukDxkLbFf9i0Dcm7GgnuFpyACfVhzQ
+2Xxb3uSLLzsLgHf+3/1hW8Q=
+=zBxB
+-----END PGP SIGNATURE-----
