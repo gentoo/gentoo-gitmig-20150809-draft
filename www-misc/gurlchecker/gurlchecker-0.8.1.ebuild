@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/gurlchecker/gurlchecker-0.8.1.ebuild,v 1.2 2005/05/13 00:45:48 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/gurlchecker/gurlchecker-0.8.1.ebuild,v 1.3 2005/05/17 23:20:14 leonardop Exp $
 
 inherit gnome2
 
@@ -27,3 +27,10 @@ DEPEND="${RDEPEND}
 DOCS="ABOUT-NLS AUTHORS ChangeLog FAQ NEWS README THANKS TODO"
 
 G2CONF="${G2CONF} $(use_with gnutls)"
+
+src_unpack() {
+	unpack ${A}
+	# The file index.sgml should be distributed with the sources, but
+	# it is not, causing problems. See bug #92784.
+	touch ${S}/doc/html/index.sgml
+}
