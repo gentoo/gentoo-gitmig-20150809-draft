@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 b8baacfd1502e38e60bccd78abb08a58 ChangeLog 6399
+MD5 ed2c112f0667d581529ce31fb59fc184 ChangeLog 6235
 MD5 570c3b91cefa46a71ea570343906ccc3 metadata.xml 247
 MD5 5c397704ff67b621ff79fc18fd846e0b msmtp-1.4.0.ebuild 1577
 MD5 76f50a1c193917903564978a2bfc016a msmtp-1.4.0-r1.ebuild 1452
@@ -11,7 +11,7 @@ MD5 25a1f06b39d5ecd451afeccad46678c6 files/mailer.conf 279
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCihxsCHk4+ZoBpvsRAjB9AJ4xAVcHqyalkIZy5oOqften3HPwFQCfehgm
-SemMQC0SE9GLVwSEzkKpT9I=
-=neW3
+iD4DBQFCihzUCHk4+ZoBpvsRAs56AJ9cyfCQ/32AJ84+tbjJb/UOWQU/1gCYtChi
+pKyiRhhe+mszDPVQfpnciw==
+=FhUh
 -----END PGP SIGNATURE-----
