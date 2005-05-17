@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/cjk-latex/cjk-latex-4.5.2.ebuild,v 1.9 2005/04/01 21:34:31 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/cjk-latex/cjk-latex-4.5.2.ebuild,v 1.10 2005/05/17 10:50:41 liquidx Exp $
 
-inherit latex-package elisp-common gcc
+inherit latex-package elisp-common toolchain-funcs
 
 MY_P="${P/-latex/}"
 
@@ -44,10 +44,10 @@ src_compile() {
 	for d in *conv; do
 		cd $d
 		local f=`echo $d | tr '[:upper:]' '[:lower:]'`
-		$(gcc-getCC) ${CFLAGS} -o $f $f.c || die
+		$(tc-getCC) ${CFLAGS} -o $f $f.c || die
 		if [ $d = CEFconv ] ; then
-			$(gcc-getCC) ${CFLAGS} -o cef5conv cef5conv.c || die
-			$(gcc-getCC) ${CFLAGS} -o cefsconv cefsconv.c || die
+			$(tc-getCC) ${CFLAGS} -o cef5conv cef5conv.c || die
+			$(tc-getCC) ${CFLAGS} -o cefsconv cefsconv.c || die
 		fi
 		cd -
 	done
