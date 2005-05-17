@@ -1,0 +1,22 @@
+--- mysql-4.1.10.orig/libmysql_r/Makefile.in	2005-02-12 21:38:04.000000000 +0100
++++ mysql-4.1.10/libmysql_r/Makefile.in	2005-02-19 01:41:11.000000000 +0100
+@@ -242,7 +242,7 @@
+ LIBDL = @LIBDL@
+ LIBEDIT_LOBJECTS = @LIBEDIT_LOBJECTS@
+ LIBOBJS = @LIBOBJS@
+-LIBS = @LIBS@ @ZLIB_LIBS@ @openssl_libs@
++LIBS = @CLIENT_LIBS@ @ZLIB_LIBS@ @openssl_libs@ @LIBS@
+ LIBTOOL = @LIBTOOL@
+ LIB_EXTRA_CCFLAGS = @LIB_EXTRA_CCFLAGS@
+ LM_CFLAGS = @LM_CFLAGS@
+--- mysql-4.1.10.orig/libmysql_r/Makefile.am	2005-02-12 21:37:33.000000000 +0100
++++ mysql-4.1.10/libmysql_r/Makefile.am	2005-02-19 01:43:49.000000000 +0100
+@@ -22,7 +22,7 @@
+ 
+ target = libmysqlclient_r.la
+ target_defs = -DDONT_USE_RAID -DMYSQL_CLIENT @LIB_EXTRA_CCFLAGS@
+-LIBS = @LIBS@ @ZLIB_LIBS@ @openssl_libs@
++LIBS = @CLIENT_LIBS@ @ZLIB_LIBS@ @openssl_libs@ @LIBS@
+ 
+ INCLUDES = @MT_INCLUDES@ \
+ 	   -I$(top_srcdir)/include $(openssl_includes) @ZLIB_INCLUDES@

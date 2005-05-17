@@ -1,0 +1,22 @@
+--- mysql.orig/mysql-test/t/myisam.test	2005-03-27 16:07:37.000000000 +0200
++++ mysql/mysql-test/t/myisam.test	2005-03-27 16:17:33.000000000 +0200
+@@ -476,7 +476,7 @@
+ #
+ # Test RTREE index
+ #
+---error 1235
++--error 1289
+ CREATE TABLE t1 (`a` int(11) NOT NULL default '0', `b` int(11) NOT NULL default '0', UNIQUE KEY `a` USING RTREE (`a`,`b`)) ENGINE=MyISAM;
+ # INSERT INTO t1 VALUES (1,1),(1,1);
+ # DELETE FROM rt WHERE a<1;
+--- mysql.orig/mysql-test/r/myisam.result	2005-03-27 16:08:20.000000000 +0200
++++ mysql/mysql-test/r/myisam.result	2005-03-27 16:12:18.000000000 +0200
+@@ -499,7 +499,7 @@
+ 1	SIMPLE	t2	index	NULL	PRIMARY	4	NULL	2	Using index; Distinct
+ drop table t1,t2;
+ CREATE TABLE t1 (`a` int(11) NOT NULL default '0', `b` int(11) NOT NULL default '0', UNIQUE KEY `a` USING RTREE (`a`,`b`)) ENGINE=MyISAM;
+-ERROR 42000: This version of MySQL doesn't yet support 'RTREE INDEX'
++ERROR HY000: The 'RTree keys' feature is disabled; you need MySQL built with 'HAVE_RTREE_KEYS' to have it working
+ create table t1 (a int, b varchar(200), c text not null) checksum=1;
+ create table t2 (a int, b varchar(200), c text not null) checksum=0;
+ insert t1 values (1, "aaa", "bbb"), (NULL, "", "ccccc"), (0, NULL, "");

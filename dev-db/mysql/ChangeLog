@@ -1,6 +1,19 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.196 2005/05/06 09:48:14 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.197 2005/05/17 09:08:46 robbat2 Exp $
+
+*mysql-4.1.12 (17 May 2005)
+*mysql-4.0.24-r2 (17 May 2005)
+
+  17 May 2005; Robin H. Johnson <robbat2@gentoo.org>
+  +files/mysql-4.0.24-asm-pic-fixes.patch, +files/mysql-4.0.24-r2.rc6,
+  +files/my.cnf-4.1, +files/mysql-4.1.9-thrssl.patch,
+  +files/mysql-4.1.12-asm-pic-fixes.patch,
+  +files/mysql-test-myisam-geometry.patch, +mysql-4.0.24-r2.ebuild,
+  +mysql-4.1.12.ebuild:
+  Bug #83011, finally a new mysql-4.1, that is suitable for the main tree.
+  Many thanks to Francesco Riosa <BastianBalthazarBux@pnpitalia.it> for his
+  work on this. These are hardmasked for final testing still.
 
   06 May 2005; Sven Wegener <swegener@gentoo.org> mysql-4.1.8.ebuild,
   mysql-4.1.8-r1.ebuild:
