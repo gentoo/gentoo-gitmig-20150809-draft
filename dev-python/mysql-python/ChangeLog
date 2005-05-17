@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/mysql-python
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mysql-python/ChangeLog,v 1.25 2005/05/10 15:29:16 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mysql-python/ChangeLog,v 1.26 2005/05/17 18:25:10 hansmi Exp $
+
+  17 May 2005; Michael Hanselmann <hansmi@gentoo.org>
+  mysql-python-1.2.0.ebuild:
+  Stable on ppc.
 
   10 May 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   mysql-python-1.2.0.ebuild:
