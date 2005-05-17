@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ee6d54e343eb754f04bee50bf3fce318 gob-2.0.9.ebuild 686
-MD5 59a4b59d3692bbdf4f58e4dfe7967d65 gob-2.0.11.ebuild 691
+MD5 f79054141d296a79919400f05870ed47 ChangeLog 3622
 MD5 1b37aafef05ac6672a757a1c136dea46 gob-2.0.6.ebuild 668
+MD5 34373cc9de79bae25508c08ddc9f9caf gob-2.0.9.ebuild 688
 MD5 3c218bdddbbfaae7ee645d367838efc8 gob-1.0.12.ebuild 658
-MD5 bef07cd16290499f2dd7206d0b965cb2 ChangeLog 3531
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 a78e56617e86837c5bd694044ddc070a files/digest-gob-1.0.12 62
-MD5 af1045825b434f2c59e89e0ed157e085 files/digest-gob-2.0.11 63
-MD5 93e52cc23d5d06e818be8e72574304ea files/digest-gob-2.0.6 62
+MD5 59a4b59d3692bbdf4f58e4dfe7967d65 gob-2.0.11.ebuild 691
 MD5 69cc2e2c3652b2d96ff87ce2cf96df55 files/digest-gob-2.0.9 62
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCe0CII1lqEGTUzyQRAnJkAKCYGJEBW6wv7nCy84ad1oYIMODl3gCdEbmj
-6kGU3J6h4Sd5EWVrg/uuiP8=
-=w7kv
------END PGP SIGNATURE-----
+MD5 a78e56617e86837c5bd694044ddc070a files/digest-gob-1.0.12 62
+MD5 93e52cc23d5d06e818be8e72574304ea files/digest-gob-2.0.6 62
+MD5 af1045825b434f2c59e89e0ed157e085 files/digest-gob-2.0.11 63

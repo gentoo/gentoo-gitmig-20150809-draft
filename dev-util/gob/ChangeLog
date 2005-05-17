@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/gob
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gob/ChangeLog,v 1.34 2005/05/06 10:01:28 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gob/ChangeLog,v 1.35 2005/05/17 20:02:18 killerfox Exp $
+
+  17 May 2005; Rene Nussbaumer <killerfox@gentoo.org> gob-2.0.9.ebuild:
+  stable on hppa
 
   06 May 2005; Sven Wegener <swegener@gentoo.org> gob-2.0.6.ebuild:
   Removed * postfix from <, <=, >= and > dependencies.
