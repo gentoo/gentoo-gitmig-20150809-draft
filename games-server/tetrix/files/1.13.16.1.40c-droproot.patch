@@ -163,7 +163,7 @@ Files src.orig/tetrix and src/tetrix differ
  
 +# username/group to switch UID/GID to
 +droproot=1
-+dropuser=games-ded
++dropuser=games
 +dropgroup=games
 +
  # maxchannels [1] - How many channels should be available on server

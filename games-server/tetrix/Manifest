@@ -1,19 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 2724566aba936eecc9af55f116d4f484 tetrix-1.13.16.1.40c-r2.ebuild 1439
-MD5 5df2d1967b43d9e72493cc86035c6cf8 tetrix-1.13.16.1.40c-r1.ebuild 1162
-MD5 6d2b73317a9a0e75fab74775507f09e0 ChangeLog 971
+MD5 146a6601ddb94bbde37fd73778a8d902 tetrix-1.13.16.1.40c-r2.ebuild 1449
+MD5 9e91867dd78ab3538c0fdb932efa91c5 ChangeLog 1156
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 MD5 72a534a4509ce69427ddac26d70f2bf5 files/tetrix.rc 494
-MD5 1c284bd8e5ee48f96a0b2206ab4a59be files/digest-tetrix-1.13.16.1.40c-r1 79
 MD5 1c284bd8e5ee48f96a0b2206ab4a59be files/digest-tetrix-1.13.16.1.40c-r2 79
 MD5 27b5d734fed2236551e85ffce4c47ac5 files/1.13.16.1.40c-paths.patch 2235
-MD5 a0341200b76305698044db11d69148e0 files/1.13.16.1.40c-droproot.patch 5224
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCWu1i06ebR+OMO78RArmFAJsFYqKfmFBClgbOh8/PqFf6zxUqZwCaA3uS
-Ao6pjLbyTpzj2/xneKYLvgU=
-=Cw/+
------END PGP SIGNATURE-----
+MD5 676361e91da2e1fd1abb70e3fb57362d files/1.13.16.1.40c-droproot.patch 5220
