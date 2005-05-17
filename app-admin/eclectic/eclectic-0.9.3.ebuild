@@ -1,11 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eclectic/eclectic-0.9.3.ebuild,v 1.2 2005/05/16 21:07:35 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eclectic/eclectic-0.9.3.ebuild,v 1.3 2005/05/17 16:29:09 ciaranm Exp $
 
 inherit bash-completion
 
 DESCRIPTION="Modular -config replacement utility"
-HOMEPAGE="http://developer.berlios.de/projects/eclectic/"
+HOMEPAGE="http://eclectic.berlios.de/"
 SRC_URI="http://download.berlios.de/eclectic/${P}.tar.bz2"
 
 LICENSE="GPL-2"
