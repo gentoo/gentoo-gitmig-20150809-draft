@@ -1,17 +1,27 @@
-MD5 61ea7e7cf3e385406dde405555ce1c4e ChangeLog 17540
-MD5 7300a7b361fa9f48e37722c6952bd432 metadata.xml 158
-MD5 2fbab31179d6bdf6dafb6aa263fe492f vlc-0.6.2-r1.ebuild 6503
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 48627f165aac98e8c7c73824a3b1172d vlc-0.8.1-r1.ebuild 6953
 MD5 652bc3bbeeeb343edfed07a13e2ecb7a vlc-0.6.2.ebuild 5551
-MD5 c4bb9e3867d1992d598670b74551ebf5 vlc-0.7.2.ebuild 6014
-MD5 5115d5c64711bd9f0f287fdaa3dfecb3 vlc-0.8.1-r1.ebuild 6950
-MD5 58d97b5bbcee3500e6b8880bb6fb4364 vlc-0.8.1-r2.ebuild 7164
 MD5 0d57e2340db158db187d70fa0da5d0f9 vlc-0.8.1-r3.ebuild 7148
-MD5 09c124e45049f615519ded3278a97376 files/0.6.2-mozilla-fix.patch 1261
-MD5 d766f772e3e3be4f8d6cbf4d54bf2700 files/digest-vlc-0.6.2 63
+MD5 2fbab31179d6bdf6dafb6aa263fe492f vlc-0.6.2-r1.ebuild 6503
+MD5 c4bb9e3867d1992d598670b74551ebf5 vlc-0.7.2.ebuild 6014
+MD5 30ee51be21fb0bb07e84bfc0eca31f72 ChangeLog 17642
+MD5 58d97b5bbcee3500e6b8880bb6fb4364 vlc-0.8.1-r2.ebuild 7164
+MD5 7300a7b361fa9f48e37722c6952bd432 metadata.xml 158
 MD5 cc5d4fb953ad7bd0ee3e14076811a1d4 files/digest-vlc-0.6.2-r1 202
-MD5 ed198b2a917f7be36174f7b05dcad8a3 files/digest-vlc-0.7.2 63
 MD5 74246bab222d2b95ef62223ce754e6f6 files/digest-vlc-0.8.1-r1 127
 MD5 74246bab222d2b95ef62223ce754e6f6 files/digest-vlc-0.8.1-r2 127
-MD5 c5c0f3cdd6b2afd05a3090dfc55074e0 files/glide.patch 744
-MD5 0ee383795d543048e4d47eb58f6d36bb files/mpeg2dec-20030612-configure.in-fpic.patch 1065
 MD5 74246bab222d2b95ef62223ce754e6f6 files/digest-vlc-0.8.1-r3 127
+MD5 c5c0f3cdd6b2afd05a3090dfc55074e0 files/glide.patch 744
+MD5 d766f772e3e3be4f8d6cbf4d54bf2700 files/digest-vlc-0.6.2 63
+MD5 ed198b2a917f7be36174f7b05dcad8a3 files/digest-vlc-0.7.2 63
+MD5 0ee383795d543048e4d47eb58f6d36bb files/mpeg2dec-20030612-configure.in-fpic.patch 1065
+MD5 09c124e45049f615519ded3278a97376 files/0.6.2-mozilla-fix.patch 1261
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCik55ViELBEf1JB0RAnkQAJwK1SW5Cu64w8tnu4Gv1BtpnoCTWgCeKW5b
+hfs6m1FVhEdKSRPH12AMqjk=
+=QjOM
+-----END PGP SIGNATURE-----

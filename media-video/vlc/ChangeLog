@@ -1,6 +1,9 @@
 # ChangeLog for media-video/vlc
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.85 2005/05/14 23:36:51 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.86 2005/05/17 20:04:41 ferdy Exp $
+
+  17 May 2005; Fernando J. Pereda <ferdy@gentoo.org> vlc-0.8.1-r1.ebuild:
+  keyworded ~alpha, wrt #90506
 
 *vlc-0.8.1-r3 (14 May 2005)
 
