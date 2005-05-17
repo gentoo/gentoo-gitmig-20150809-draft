@@ -1,6 +1,12 @@
 # ChangeLog for sys-cluster/util-vserver
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/util-vserver/ChangeLog,v 1.18 2005/04/07 14:23:52 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/util-vserver/ChangeLog,v 1.19 2005/05/17 11:24:33 hollow Exp $
+
+*util-vserver-0.30.207 (17 May 2005)
+
+  17 May 2005; Benedikt Boehm <hollow@gentoo.org>
+  +util-vserver-0.30.207.ebuild:
+  Version bump
 
 *util-vserver-0.30.205-r1 (07 Apr 2005)
 
