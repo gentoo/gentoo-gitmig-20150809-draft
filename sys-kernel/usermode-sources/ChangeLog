@@ -1,6 +1,20 @@
 # ChangeLog for sys-kernel/usermode-sources
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/usermode-sources/ChangeLog,v 1.65 2005/04/30 00:37:43 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/usermode-sources/ChangeLog,v 1.66 2005/05/17 12:19:56 dsd Exp $
+
+*usermode-sources-2.6.11-r1 (17 May 2005)
+
+  17 May 2005; Daniel Drake <dsd@gentoo.org>
+  -files/usermode-sources-2.6.CAN-2005-0400.patch,
+  -files/usermode-sources-2.6.CAN-2005-0749.patch,
+  -files/usermode-sources-2.6.CAN-2005-0736.patch,
+  -files/usermode-sources-2.6.CAN-2005-0750.patch,
+  -files/usermode-sources-2.6.74070.patch,
+  -files/usermode-sources-2.6.CAN-2005-0384.patch,
+  -files/usermode-sources-2.6.CAN-2005-0815.patch,
+  -files/usermode-sources-2.6.rose.patch, -usermode-sources-2.6.11.ebuild,
+  +usermode-sources-2.6.11-r1.ebuild:
+  Version bump. 2.6.11.8-bs5 and genpatches 11.12
 
 *usermode-sources-2.6.11 (30 Apr 2005)
 
