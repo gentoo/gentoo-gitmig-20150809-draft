@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.1.12.ebuild,v 1.2 2005/05/17 17:06:49 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.1.12.ebuild,v 1.3 2005/05/17 17:16:26 robbat2 Exp $
 
 inherit eutils gnuconfig flag-o-matic versionator
 
@@ -80,7 +80,7 @@ pkg_setup() {
 		if has_version "<=dev-db/mysql-4.1.4" \
 		&& ! built_with_use dev-db/mysql minimal ; then
 			mysql_upgrade_error
-			#die
+			die
 		fi
 	fi
 	mysql_upgrade_warning
@@ -110,7 +110,7 @@ src_unpack() {
 	# i would really prefer to fix this at the Makefile.am level, but can't
 	# get the software to autoreconf as distributed - too many missing files
 	epatch "${FILESDIR}/${PN}-4.1.9-thrssl.patch"
-	
+
 	# PIC fixes
 	# bug #42968
 	#EPATCH_OPTS="-p1 -d ${S}" \
@@ -440,7 +440,7 @@ pkg_config() {
 		--socket=${ROOT}/var/run/mysqld/mysqld.sock \
 		-hlocalhost \
 		-e "${sql}"
-	
+
 	einfo "Loading \"zoneinfo\" this step may require few seconds"
 
 	${ROOT}/usr/bin/mysql \

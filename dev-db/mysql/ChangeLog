@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.198 2005/05/17 17:06:49 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.199 2005/05/17 17:16:26 robbat2 Exp $
+
+  17 May 2005; Robin H. Johnson <robbat2@gentoo.org> mysql-4.0.24-r2.ebuild,
+  mysql-4.1.12.ebuild:
+  Cleanup a few minor things.
 
   17 May 2005; Robin H. Johnson <robbat2@gentoo.org> mysql-4.1.12.ebuild:
   Add back ~sparc ~ia64 ~ppc as they had marked an earlier 4.1 release as

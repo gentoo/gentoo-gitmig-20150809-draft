@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.0.24-r2.ebuild,v 1.1 2005/05/17 09:08:46 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.0.24-r2.ebuild,v 1.2 2005/05/17 17:16:26 robbat2 Exp $
 
 inherit eutils gnuconfig flag-o-matic versionator
 
@@ -30,7 +30,7 @@ DEPEND="readline? ( >=sys-libs/readline-4.1 )
 		>=sys-apps/texinfo-4.7-r1
 		sys-process/procps
 		>=sys-apps/sed-4"
-RDEPEND="${DEPEND} 
+RDEPEND="${DEPEND}
 		selinux? ( sec-policy/selinux-mysql )"
 # dev-perl/DBD-mysql is needed by some scripts installed by MySQL
 PDEPEND="perl? ( dev-perl/DBD-mysql )"
@@ -212,7 +212,7 @@ src_compile() {
 
 	#the compiler flags are as per their "official" spec ;)
 	#CFLAGS="${CFLAGS/-O?/} -O3" \
-	export CXXFLAGS="${CXXFLAGS} -felide-constructors -fno-exceptions -fno-rtti" 
+	export CXXFLAGS="${CXXFLAGS} -felide-constructors -fno-exceptions -fno-rtti"
 
 	econf \
 		-C \
