@@ -1,28 +1,21 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 4ca73f186d45bd2e661762a92af0c427 ChangeLog 12599
 MD5 509f4ad475e3327a7977fe02afae735a busybox-1.00-r2.ebuild 6194
 MD5 e5ba0d140d82794a58fef4c0e61c0c97 busybox-1.00-r1.ebuild 6089
-MD5 5fdc9849516373f7726ca54004100706 ChangeLog 12301
 MD5 4bf69d151555c144c6942846abc818e6 busybox-1.00-r3.ebuild 6480
 MD5 8ef75eba39772bdd1a8facc7815dbebb metadata.xml 161
-MD5 d9841a0171170d16bb121c696591e7ef files/config-netboot 9853
-MD5 335f1c2b99e52e880f3a490df9be39da files/digest-busybox-1.00-r1 66
+MD5 9e54587b9ff54a3ac6a509dc76076ac5 busybox-1.00-r4.ebuild 6773
 MD5 335f1c2b99e52e880f3a490df9be39da files/digest-busybox-1.00-r2 66
 MD5 335f1c2b99e52e880f3a490df9be39da files/digest-busybox-1.00-r3 66
-MD5 9750d4004e6507d35f9aa67d2785fdd3 files/dodeps 2015
-MD5 4e80b04a6c57cb7341be774b55b7229c files/busybox-cmdedit-sparc.diff 568
-MD5 9167897ed0b558e714a92f7e2d2fe534 files/busybox-1.00-pre3.config 8804
-MD5 8eae5b311553ee77cda4524ab892468c files/busybox-1.00_rc3-amd64.patch 658
+MD5 8eca6aae55dad92090e0136b58a9fcf7 files/digest-busybox-1.00-r4 142
+MD5 b49ad424eda262076752eb3edda952f1 files/busybox-1.00-pre3.config 8883
+MD5 335f1c2b99e52e880f3a490df9be39da files/digest-busybox-1.00-r1 66
+MD5 d9841a0171170d16bb121c696591e7ef files/config-netboot 9853
 MD5 81f4a0289354f964e744acb2f74c1894 files/1.00/bash-tests.patch 1474
-MD5 4972a3b12accd80b77304ff4ff6b6a3a files/1.00/cp-posix-opts.patch 1245
-MD5 85560a8d547bfc101acf98d53dbecd45 files/1.00/more-insmod-arches.patch 1506
 MD5 1587853e73bcbda7157048299fc659fe files/1.00/busybox-read-timeout.patch 1964
 MD5 f16657b6a3bf9602a65dbb5f431afbda files/1.00/readlink-follow.patch 2795
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCg4s0ViELBEf1JB0RAs/nAJ9twOSLLBkQXNe7NsdnDQmM6z6PUACbBPfu
-575XaxO1KwtvHxSwLAwOOq4=
-=Q7V5
------END PGP SIGNATURE-----
+MD5 85560a8d547bfc101acf98d53dbecd45 files/1.00/more-insmod-arches.patch 1506
+MD5 4972a3b12accd80b77304ff4ff6b6a3a files/1.00/cp-posix-opts.patch 1245
+MD5 e4391db361a2ab2985811ec466f08cdc files/1.00/standalone.patch 1007
+MD5 6209b38225ac1d7cc77f84799acbe3ca files/1.00/nice.patch 4571
+MD5 0e50cd0ad938a8c15f1af8b59028c959 files/1.00/printenv.patch 3365
+MD5 593c8f8e26c0a381db171d9be08076c0 files/1.00/sum.patch 6723
