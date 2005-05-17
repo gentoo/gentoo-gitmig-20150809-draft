@@ -17,5 +17,9 @@
 		De app-vim categorie bevat plugins en syntax-bestanden
 		voor de vim text editor.
 	</longdescription>
+	<longdescription lang="vi">
+		Nhóm app-vim chứa các plugin và các gói syntax cho
+		trình soạn thảo văn bản Vim.
+	</longdescription>
 </catmetadata>
 
