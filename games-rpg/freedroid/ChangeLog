@@ -1,6 +1,10 @@
 # ChangeLog for games-rpg/freedroid
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/freedroid/ChangeLog,v 1.6 2004/12/28 23:16:45 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/freedroid/ChangeLog,v 1.7 2005/05/17 18:50:01 wolf31o2 Exp $
+
+  17 May 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  freedroid-1.0.2.ebuild:
+  Cleanup for bug #92745.
 
   28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance

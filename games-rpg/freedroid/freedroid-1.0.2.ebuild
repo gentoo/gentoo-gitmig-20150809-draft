@@ -1,8 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/freedroid/freedroid-1.0.2.ebuild,v 1.7 2004/06/24 23:15:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/freedroid/freedroid-1.0.2.ebuild,v 1.8 2005/05/17 18:50:01 wolf31o2 Exp $
 
-inherit games flag-o-matic gcc
+inherit flag-o-matic toolchain-funcs games
 
 DESCRIPTION="Freedroid - a Paradroid clone"
 HOMEPAGE="http://freedroid.sourceforge.net/"
