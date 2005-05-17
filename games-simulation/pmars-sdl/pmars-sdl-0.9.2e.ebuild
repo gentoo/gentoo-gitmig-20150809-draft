@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/pmars-sdl/pmars-sdl-0.9.2e.ebuild,v 1.8 2005/01/05 07:00:25 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/pmars-sdl/pmars-sdl-0.9.2e.ebuild,v 1.9 2005/05/17 18:54:44 wolf31o2 Exp $
 
-inherit games gcc
+inherit toolchain-funcs games
 
 MY_PN="${PN/-sdl/}"
 MY_PV="${PV/e/-5}"
@@ -61,12 +61,12 @@ src_compile() {
 
 	for x in ${SRC}; do
 		einfo "compiling ${x}"
-		$(gcc-getCC) ${CFLAGS} ${x} -c || die
+		$(tc-getCC) ${CFLAGS} ${x} -c || die
 	done
 
 	echo
 	einfo "linking with LIB: ${LIB}"
-	$(gcc-getCC) *.o ${LIB} -o ${MY_PN} || die
+	$(tc-getCC) *.o ${LIB} -o ${MY_PN} || die
 }
 
 src_install() {
