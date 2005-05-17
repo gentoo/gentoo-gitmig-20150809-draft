@@ -1,6 +1,13 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.381 2005/05/17 16:39:17 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.382 2005/05/17 22:26:07 spyderous Exp $
+
+  17 May 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  -xorg-x11-6.8.0-r5.ebuild:
+  Drop old version. Everyone's been stabled on 6.8.2-r1 since early April.
+  Also, dropping this should allow us to unconditionally use the new /usr
+  prefix for all other apps instead of some sort of x11-prefix.eclass
+  (#90789).
 
   17 May 2005; Stephen P. Becker <geoman@gentoo.org>
   xorg-x11-6.8.99.3.ebuild:
