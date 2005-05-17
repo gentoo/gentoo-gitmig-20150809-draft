@@ -1,6 +1,10 @@
 # ChangeLog for app-vim/greputils
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/greputils/ChangeLog,v 1.6 2005/02/18 19:00:27 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/greputils/ChangeLog,v 1.7 2005/05/17 17:13:57 ka0ttic Exp $
+
+  17 May 2005; Aaron Walker <ka0ttic@gentoo.org> greputils-2.3.ebuild,
+  greputils-2.4.ebuild:
+  Fix deps for bug 92840. 2.3 requires >=genutils-1.13, 2.4 needs >=1.15.
 
   18 Feb 2005; Ciaran McCreesh <ciaranm@gentoo.org> greputils-2.4.ebuild:
   x86 sparc mips stable

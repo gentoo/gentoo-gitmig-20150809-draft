@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/greputils/greputils-2.4.ebuild,v 1.3 2005/02/22 23:19:10 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/greputils/greputils-2.4.ebuild,v 1.4 2005/05/17 17:13:57 ka0ttic Exp $
 
 inherit vim-plugin
 
@@ -14,5 +14,5 @@ VIM_PLUGIN_HELPURI="${HOMEPAGE}"
 
 RDEPEND="
 	${RDEPEND}
-	>=app-vim/genutils-1.7
+	>=app-vim/genutils-1.15
 	>=app-vim/multvals-3.6.1"
