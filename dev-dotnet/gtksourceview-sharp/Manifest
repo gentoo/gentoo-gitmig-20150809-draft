@@ -1,8 +1,18 @@
-MD5 4dbe8076a6619d0d63328603d1236d41 gtksourceview-sharp-0.5-r2.ebuild 1143
-MD5 895ca4e1d6e8aeb2c33c639f06d699d2 gtksourceview-sharp-0.7.ebuild 1089
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 dfd3289341253fedc541907f10fbc616 gtksourceview-sharp-0.5-r1.ebuild 1019
 MD5 5c66958a4d2d76910ffe54083adbd862 ChangeLog 3235
+MD5 e22f098c3862979c5499fd0424b2f4fd gtksourceview-sharp-0.5-r2.ebuild 1149
 MD5 76b314cc7b7b79b298dd4889dff8c9cd metadata.xml 159
-MD5 099781a1b5a2aa2f4543d2e1dc9677d0 files/digest-gtksourceview-sharp-0.5-r1 75
-MD5 099781a1b5a2aa2f4543d2e1dc9677d0 files/digest-gtksourceview-sharp-0.5-r2 75
+MD5 895ca4e1d6e8aeb2c33c639f06d699d2 gtksourceview-sharp-0.7.ebuild 1089
 MD5 c7215af52d4efdeb675091fdc61ee6b0 files/digest-gtksourceview-sharp-0.7 75
+MD5 099781a1b5a2aa2f4543d2e1dc9677d0 files/digest-gtksourceview-sharp-0.5-r2 75
+MD5 099781a1b5a2aa2f4543d2e1dc9677d0 files/digest-gtksourceview-sharp-0.5-r1 75
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCihp0CHk4+ZoBpvsRAniTAKC9sAc3AlFMyn9/2+OrNpFS3XPFlgCdHVwg
+PQRvOEzr8dhgH2oVjyQsBmY=
+=XMCY
+-----END PGP SIGNATURE-----
