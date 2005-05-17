@@ -1,18 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 52a1d9b5b0a90a3df21889f795fac4d3 ChangeLog 940
-MD5 454cfbe6d226a8e07c5bf34a5f0659ba hawknl-1.66.ebuild 1026
 MD5 fe0856994b67cb4efaa61950043601bb hawknl-1.68-r1.ebuild 1425
-MD5 94bde7f8107bc30c8e8962a92980b106 hawknl-1.68.ebuild 1360
+MD5 454cfbe6d226a8e07c5bf34a5f0659ba hawknl-1.66.ebuild 1026
+MD5 3513040a160a61b1f05bbbf767589774 ChangeLog 1040
 MD5 b704821d70b9e7b8956ec537e96cb567 metadata.xml 1049
-MD5 2039445f3163e3eceff4859a9f54d422 files/digest-hawknl-1.66 64
-MD5 a28b47c48b93202babc367b1b9e48527 files/digest-hawknl-1.68 64
 MD5 a28b47c48b93202babc367b1b9e48527 files/digest-hawknl-1.68-r1 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCPoJQArHZZzCEUG0RAoikAJ0fr3EXHKLjosHvOoHeHxBUjYk4lgCeNLyV
-m1y3RF4fYk3LR9xZpUxG5l8=
-=0vVM
------END PGP SIGNATURE-----
+MD5 2039445f3163e3eceff4859a9f54d422 files/digest-hawknl-1.66 64
