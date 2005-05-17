@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/CGI
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/CGI/ChangeLog,v 1.47 2005/05/09 23:51:59 beu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/CGI/ChangeLog,v 1.48 2005/05/17 18:01:24 mcummings Exp $
+
+*CGI-3.10 (17 May 2005)
+
+  17 May 2005; Michael Cummings <mcummings@gentoo.org> +CGI-3.10.ebuild:
+  New version, bug 92948, mod_perl2 fixes
 
 *CGI-3.09 (09 May 2005)
 
