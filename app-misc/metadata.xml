@@ -13,5 +13,9 @@
 		De app-misc categorie bevat applicaties die niet in een specifieke
 		categorie geplaatst konden worden.
 	</longdescription>
+	<longdescription lang="vi">
+		Nhóm app-misc chứa các ứng dụng linh tinh, không thuộc
+		về nhóm nào cả.
+	</longdescription>
 </catmetadata>
 
