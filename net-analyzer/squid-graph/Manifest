@@ -1,4 +1,16 @@
-MD5 53e387f162cfb02101117705f946477b ChangeLog 1681
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 49a5bcc88118606c30f90564941c81fb squid-graph-3.1.ebuild 748
+MD5 315318480b92b770638cea91b4c68ede squid-graph-3.1-r1.ebuild 878
+MD5 0f192ba6c941ca8d305dd30bb80fe7af ChangeLog 1859
 MD5 af4cf8cdef23fd8936b05ade8d37d3b1 metadata.xml 237
 MD5 d3c1af9799d03a6f154df591708a33dd files/digest-squid-graph-3.1 67
+MD5 d3c1af9799d03a6f154df591708a33dd files/digest-squid-graph-3.1-r1 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCieLoEZCkKN40op4RAoZzAJ95pxXoZoDwgPDjedjrsw+8laxQjwCfSa/t
+JiW/TCOYBbEC+H/Z/RGajx8=
+=8Dix
+-----END PGP SIGNATURE-----
