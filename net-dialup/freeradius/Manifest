@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 12224a8e77f747e2f0d8c17533f004ca freeradius-1.0.2-r3.ebuild 3253
-MD5 6b9232a327e596bba17869f2557b5c36 freeradius-1.0.1.ebuild 2799
-MD5 95a47b2087d7293bb941d6e886446a13 freeradius-1.0.2-r2.ebuild 3015
+MD5 3b8d03722330d025d4185bdc56382b23 freeradius-1.0.2-r3.ebuild 3327
+MD5 d075f94b574fba2c813ded7d415ef0b3 freeradius-1.0.1.ebuild 2890
+MD5 9b37bc88688cb942777da79117459988 freeradius-1.0.2-r2.ebuild 3106
 MD5 afa45db62de7f028d0937cef32a1b7e5 ChangeLog 4721
 MD5 1542bf76e28581e9d6bcfdc75e46f33d metadata.xml 252
 MD5 fc6693f3df5a0694610110287a28568a files/radius.conf 129
@@ -17,7 +17,7 @@ MD5 503ac5a922de5a21fde5487e339220f7 files/freeradius-1.0.2-sql-escape.patch 315
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCgRYUjiC39V7gKu0RAmxEAKChfZN7GYA9Er5TemJZ7paU4Ds77wCg44AE
-lLTq7XwXtbnV6xGAzTJKORI=
-=DG7h
+iD8DBQFCij9pjiC39V7gKu0RAr1VAJ4+WHEmUiUydLI576bnNefDhE5+cwCbBBpb
+doljkSx9nksLjW6CGMAUbZM=
+=8K6r
 -----END PGP SIGNATURE-----

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/freeradius-1.0.2-r3.ebuild,v 1.2 2005/05/10 20:13:45 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/freeradius-1.0.2-r3.ebuild,v 1.3 2005/05/17 19:00:34 mrness Exp $
 
 inherit eutils
 
@@ -34,6 +34,8 @@ pkg_setup() {
 		eerror "Either you select ldap USE flag or remove edirectory"
 		die
 	fi
+	enewgroup radiusd
+	enewuser radiusd -1 /bin/false /var/log/radius radiusd
 }
 
 src_unpack() {
@@ -89,11 +91,6 @@ src_compile() {
 	make || die
 }
 
-pkg_preinst() {
-	enewgroup radiusd
-	enewuser radiusd -1 /bin/false /var/log/radius radiusd
-}
-
 src_install() {
 	dodir /etc
 	dodir /var/log
@@ -127,3 +124,7 @@ src_install() {
 	newins ${FILESDIR}/radius.conf radiusd
 }
 
+pkg_preinst() {
+	enewgroup radiusd
+	enewuser radiusd -1 /bin/false /var/log/radius radiusd
+}
