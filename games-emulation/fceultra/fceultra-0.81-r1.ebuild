@@ -1,8 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/fceultra/fceultra-0.81-r1.ebuild,v 1.8 2004/07/14 14:33:23 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/fceultra/fceultra-0.81-r1.ebuild,v 1.9 2005/05/17 18:01:01 wolf31o2 Exp $
 
-inherit gcc
+inherit toolchain-funcs games
 
 MY_P=fceu
 S=${WORKDIR}/${MY_P}
@@ -26,6 +26,7 @@ pkg_setup() {
 		die "cant compile on x86 with gcc-3.2.x"
 	fi
 
+	games_pkg_setup
 	use sdl && return 0
 	use svga && return 0
 
@@ -53,4 +54,5 @@ src_install() {
 	use sdl && dobin fceu-sdl
 	use svga && dobin fceu-svga
 	dodoc Documentation/{*,rel/readme-linux.txt}
+	prepgamesdirs
 }

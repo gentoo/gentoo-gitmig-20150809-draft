@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/fceultra
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/fceultra/ChangeLog,v 1.14 2005/04/10 12:49:57 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/fceultra/ChangeLog,v 1.15 2005/05/17 18:01:01 wolf31o2 Exp $
+
+  17 May 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  fceultra-0.81-r1.ebuild, fceultra-0.97.5.ebuild:
+  Cleanup for bug #92745.
 
   10 Apr 2005; Simon Stelling <blubb@gentoo.org> fceultra-0.98.12.ebuild:
   added ~amd64
