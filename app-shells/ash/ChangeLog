@@ -1,6 +1,10 @@
 # ChangeLog for app-shells/ash
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/ash/ChangeLog,v 1.15 2005/04/24 03:05:56 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/ash/ChangeLog,v 1.16 2005/05/17 11:30:05 ka0ttic Exp $
+
+  17 May 2005; Aaron Walker <ka0ttic@gentoo.org> +files/ash-1.6-gcc4.diff,
+  ash-1.6.ebuild:
+  Added patch so ash will build with gcc-4.
 
   24 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> ash-1.6.ebuild:
   Stable on ppc.
