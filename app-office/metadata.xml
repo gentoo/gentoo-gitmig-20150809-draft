@@ -17,5 +17,9 @@
 		De app-office categorie bevat applicaties voor kantoorwerk, zoals text-
 		verwerkers, spreadsheets, presentatiehulpmiddelen enz.
 	</longdescription>
+	<longdescription lang="vi">
+		Nhóm app-office chứa các ứng dụng 'văn phòng' (soạn
+		thảo văn bản, bảng tính, trình diễn).
+	</longdescription>
 </catmetadata>
 
