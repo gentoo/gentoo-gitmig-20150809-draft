@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/splitvt
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/splitvt/ChangeLog,v 1.14 2005/03/26 00:00:14 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/splitvt/ChangeLog,v 1.15 2005/05/17 11:27:51 ka0ttic Exp $
+
+  17 May 2005; Aaron Walker <ka0ttic@gentoo.org>
+  +files/splitvt-1.6.5-gcc4.diff, splitvt-1.6.5-r1.ebuild:
+  Added patch so splitvt will build with gcc-4.
 
   26 Mar 2005; Michael Hanselmann <hansmi@gentoo.org> splitvt-1.6.5-r1.ebuild:
   Stable on ppc.

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/splitvt/splitvt-1.6.5-r1.ebuild,v 1.4 2005/03/26 00:00:14 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/splitvt/splitvt-1.6.5-r1.ebuild,v 1.5 2005/05/17 11:27:51 ka0ttic Exp $
 
 inherit eutils
 
@@ -23,6 +23,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${WORKDIR}/${MY_P}-${DEB_PL}.diff
+	epatch ${FILESDIR}/${P}-gcc4.diff
 	sed -i "s:/usr/local/bin:${D}/usr/bin:g" config.c
 }
 
