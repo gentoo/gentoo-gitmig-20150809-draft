@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.5.20050421.ebuild,v 1.9 2005/05/16 22:23:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.5.20050421.ebuild,v 1.10 2005/05/17 00:52:41 vapier Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -469,9 +469,9 @@ toolchain-glibc_src_install() {
 		# Install nscd config file
 		insinto /etc
 		doins ${FILESDIR}/nscd.conf
+		doins "${FILESDIR}"/nsswitch.conf
 
-		exeinto /etc/init.d
-		doexe ${FILESDIR}/nscd
+		doinitd "${FILESDIR}"/nscd
 
 		cd ${S}
 		dodoc BUGS ChangeLog* CONFORMANCE FAQ INTERFACE NEWS NOTES PROJECTS README*

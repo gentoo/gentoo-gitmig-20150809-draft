@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040808-r1.ebuild,v 1.45 2005/05/16 22:23:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040808-r1.ebuild,v 1.46 2005/05/17 00:52:41 vapier Exp $
 
 inherit eutils multilib flag-o-matic toolchain-funcs versionator
 
@@ -830,6 +830,7 @@ EOF
 		# Install nscd config file
 		insinto /etc ; doins ${FILESDIR}/nscd.conf
 		exeinto /etc/init.d ; doexe ${FILESDIR}/nscd
+		doins "${FILESDIR}"/nsswitch.conf
 
 		cd ${S}
 		dodoc BUGS ChangeLog* CONFORMANCE FAQ INTERFACE \

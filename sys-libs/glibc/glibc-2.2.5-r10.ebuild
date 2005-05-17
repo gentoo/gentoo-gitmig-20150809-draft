@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2.5-r10.ebuild,v 1.1 2005/02/06 07:45:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2.5-r10.ebuild,v 1.2 2005/05/17 00:52:41 vapier Exp $
 
 inherit flag-o-matic eutils
 
@@ -115,6 +115,7 @@ src_install() {
 		insinto /etc
 		doins "${S}"/nscd/nscd.conf
 		doinitd "${FILESDIR}"/nscd
+		doins "${FILESDIR}"/nsswitch.conf
 
 		dodoc BUGS ChangeLog* CONFORMANCE FAQ INTERFACE \
 			NEWS NOTES PROJECTS README*
