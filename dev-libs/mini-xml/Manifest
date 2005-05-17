@@ -1,4 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 4f1bc7a01dbd78f60bbbde20f819caf8 ChangeLog 805
 MD5 c22db93f2bc10eb60a519d953c11f8d9 metadata.xml 220
-MD5 966e86ba7d9e96d0432cfaa30e34cfbf ChangeLog 691
 MD5 2d69b1199f38ef3ea0f3367fc58db86e mini-xml-2.0.0.ebuild 818
+MD5 008b6fdbf60cbb9a2dad3683a5b74e2b mini-xml-2.2.0.ebuild 815
 MD5 5b6c95aceb1378a60910f022aef1bdec files/digest-mini-xml-2.0.0 60
+MD5 5b6c95aceb1378a60910f022aef1bdec files/digest-mini-xml-2.2.0 60
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCimyo+uC/ViVka/0RAituAJwP1j1k7OaH6+9MAQK2mmWsbQGZkQCgq2EQ
+ZklPJn9zbIB0WB7OJAkda54=
+=ksiX
+-----END PGP SIGNATURE-----
