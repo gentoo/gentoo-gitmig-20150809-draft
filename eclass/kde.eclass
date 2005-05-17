@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.116 2005/05/15 18:22:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.117 2005/05/17 13:45:12 greg_g Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -192,7 +192,7 @@ kde_src_install() {
 				;;
 	    	dodoc)
 				debug-print-section dodoc
-				for doc in AUTHORS ChangeLog* README* COPYING NEWS TODO; do
+				for doc in AUTHORS ChangeLog* README* NEWS TODO; do
 					[ -s "$doc" ] && dodoc $doc
 				done
 				;;
