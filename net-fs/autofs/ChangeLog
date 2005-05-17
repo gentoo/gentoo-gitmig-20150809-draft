@@ -1,6 +1,10 @@
 # ChangeLog for net-fs/autofs
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/ChangeLog,v 1.48 2005/04/17 00:06:47 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/ChangeLog,v 1.49 2005/05/17 06:58:28 wormo Exp $
+
+  17 May 2005; Stephanie Lockwood-Childs <wormo@gentoo.org>
+  autofs-4.1.3-r4.ebuild:
+  marked stable on ppc, closes bug #92808
 
   17 Apr 2005; Aron Griffis <agriffis@gentoo.org> autofs-4.1.3-r4.ebuild:
   Stable on alpha amd64 ia64
