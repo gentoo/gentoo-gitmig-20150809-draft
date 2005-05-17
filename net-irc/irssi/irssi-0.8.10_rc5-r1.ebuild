@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/irssi-0.8.10_rc5-r1.ebuild,v 1.7 2005/05/15 02:13:51 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/irssi-0.8.10_rc5-r1.ebuild,v 1.8 2005/05/17 15:57:52 swegener Exp $
 
 inherit perl-module eutils
 
@@ -40,6 +40,7 @@ src_unpack() {
 
 	epatch ${WORKDIR}/${P}-CVS-20050121.patch
 	epatch ${FILESDIR}/irssi-socks-fix.patch
+	epatch ${FILESDIR}/${P}-gcc4.patch
 }
 
 src_compile() {
