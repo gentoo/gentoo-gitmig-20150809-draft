@@ -1,0 +1,12 @@
+# ChangeLog for dev-ruby/ruby-xlib
+# Copyright 2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-xlib/ChangeLog,v 1.1 2005/05/17 19:46:15 agriffis Exp $
+
+*ruby-xlib-0.6.15 (17 May 2005)
+
+  17 May 2005; Aron Griffis <agriffis@gentoo.org>
+  +files/ruby-xlib-0.6.15-gcc.patch, +metadata.xml,
+  +ruby-xlib-0.6.15.ebuild:
+  New ebuild for ruby xlib bindings, by request of Aaron Brooks and Chris
+  Houser
+
