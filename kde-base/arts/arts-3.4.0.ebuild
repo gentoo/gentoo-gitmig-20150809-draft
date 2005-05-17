@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-3.4.0.ebuild,v 1.7 2005/05/09 04:12:21 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-3.4.0.ebuild,v 1.8 2005/05/17 13:35:29 greg_g Exp $
 
 inherit kde flag-o-matic eutils
 set-qtdir 3
@@ -54,7 +54,6 @@ src_compile() {
 
 src_install() {
 	kde_src_install
-	dodoc ${S}/doc/{NEWS,README,TODO}
 
 	# moved here from kdelibs so that when arts is installed
 	# without kdelibs it's still in the path.
