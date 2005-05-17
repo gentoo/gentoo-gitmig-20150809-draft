@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Chart-Math-Axis/Chart-Math-Axis-0.3.ebuild,v 1.8 2005/04/24 15:36:04 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Chart-Math-Axis/Chart-Math-Axis-0.3.ebuild,v 1.9 2005/05/17 15:58:54 gustavoz Exp $
 
 inherit perl-module
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://search.cpan.orga/~adamk/${P}"
 
 SLOT="0"
 LICENSE="|| ( Artistic GPL-2 )"
-KEYWORDS="x86 amd64 alpha ~hppa ~mips ~ppc ~sparc"
+KEYWORDS="x86 amd64 alpha ~hppa ~mips ~ppc sparc"
 IUSE=""
 
 SRC_TEST="do"
