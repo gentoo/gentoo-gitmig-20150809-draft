@@ -1,6 +1,12 @@
 # ChangeLog for app-arch/pdv
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/pdv/ChangeLog,v 1.7 2005/04/27 00:55:35 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/pdv/ChangeLog,v 1.8 2005/05/17 20:09:16 wormo Exp $
+
+*pdv-1.5.1-r1 (17 May 2005)
+
+  17 May 2005; Stephanie Lockwood-Childs <wormo@gentoo.org>
+  +files/pdv-1.5.1-x-config.patch, pdv-1.5.1-r1.ebuild:
+  fix configure script for X front-end, closes bug #90955
 
   26 Apr 2005; Stephanie Lockwood-Childs <wormo@gentoo.org>
   +files/pdv-1.5.1-early-free.patch, +files/pdv-1.5.1-opt.patch:
