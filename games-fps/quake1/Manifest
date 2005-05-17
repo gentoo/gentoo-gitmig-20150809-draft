@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 aa5d579e53c4d36c6f7949c00f8ffca4 ChangeLog 836
+MD5 c11c79498ca1e5743a5744d9335afda9 quake1-2.40-r1.ebuild 2371
+MD5 5ea42cd683df5c4f48a843986f04a9d4 ChangeLog 942
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 6b724a167adac33e4b2ab8b561bb0cb2 quake1-2.40-r1.ebuild 2373
-MD5 b9e1b8831a33b812643b9d5f3cab8cf2 files/fix-sys_printf.patch 666
-MD5 1234946f709d4f661a2030a3b01fab6b files/digest-quake1-2.40-r1 58
-MD5 6a5b3a494d26b4f1b8d1063f9a0aa6e4 files/makefile-path-fixes.patch 1539
-MD5 6f4c55f7cf280c7c87e1e5a20934b813 files/makefile-sedable.patch 1064
 MD5 976762754aa92b2d6db912e4414ddf3b files/gentoo-paths.patch 1183
+MD5 6f4c55f7cf280c7c87e1e5a20934b813 files/makefile-sedable.patch 1064
+MD5 b9e1b8831a33b812643b9d5f3cab8cf2 files/fix-sys_printf.patch 666
+MD5 6a5b3a494d26b4f1b8d1063f9a0aa6e4 files/makefile-path-fixes.patch 1539
 MD5 b74e563d08363b8b88127fffaefb5944 files/makefile-cflags.patch 709
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFB0P1eroRuSHgZdywRAvdCAJwJqrGuHyjKTvml2JvuPmSR8z2vgACdEMMc
-YqNU8OcnHXn5VyQNLix+BpQ=
-=uQPj
------END PGP SIGNATURE-----
+MD5 1234946f709d4f661a2030a3b01fab6b files/digest-quake1-2.40-r1 58
