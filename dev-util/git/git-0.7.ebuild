@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/git/git-0.7.ebuild,v 1.2 2005/05/07 14:05:57 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/git/git-0.7.ebuild,v 1.3 2005/05/17 22:28:50 r3pek Exp $
 
 DESCRIPTION="GIT - the stupid content tracker"
 HOMEPAGE="http://kernel.org/pub/software/scm/git/"
@@ -13,7 +13,6 @@ IUSE="mozsha1 ppcsha1"
 
 DEPEND="dev-libs/openssl
 		sys-libs/zlib
-		!dev-util/git-pasky
 		!dev-util/cogito"
 
 src_unpack() {
