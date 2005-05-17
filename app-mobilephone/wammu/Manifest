@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 1932ddca8ac90a6316b00e112ad05e45 wammu-0.8.ebuild 975
-MD5 855c0b79825a6af2bc180cadfb5a2740 ChangeLog 754
+MD5 37d7ce0ba5e73c9d5006798adce99d02 ChangeLog 840
 MD5 8e1fd49c29f85eea8da87d6e7de450c6 metadata.xml 165
-MD5 a3b1083e7d73df1e1ac68283527ac6e8 files/digest-wammu-0.8 61
-MD5 8eb36ebf4ee54f9cc40038ba49467ae8 files/wammu.png 3464
+MD5 65a4413ae9a9fa8e112452d963fe5daf wammu-0.8.ebuild 981
 MD5 c37483be90032a3d614bf10bcb3077dd files/wammu.desktop 300
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFChfXVjiC39V7gKu0RAraSAKCrbfGu5LdJIQxzgfNW6eYqERPTuACgpc2h
-0tQPXLqcQEOpqtlVi2zles4=
-=VhdI
------END PGP SIGNATURE-----
+MD5 8eb36ebf4ee54f9cc40038ba49467ae8 files/wammu.png 3464
+MD5 a3b1083e7d73df1e1ac68283527ac6e8 files/digest-wammu-0.8 61

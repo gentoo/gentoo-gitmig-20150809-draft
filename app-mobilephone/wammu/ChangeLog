@@ -1,6 +1,9 @@
 # ChangeLog for app-mobilephone/wammu
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/wammu/ChangeLog,v 1.1 2005/05/14 12:57:39 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/wammu/ChangeLog,v 1.2 2005/05/17 21:27:57 r3pek Exp $
+
+  17 May 2005; Carlos Silva <r3pek@gentoo.org> wammu-0.8.ebuild:
+  Closing bug #92930
 
   14 May 2005; Alin Nastac <mrness@gentoo.org> metadata.xml:
   Moved from net-dialup/wammu to app-mobilephone/wammu.
