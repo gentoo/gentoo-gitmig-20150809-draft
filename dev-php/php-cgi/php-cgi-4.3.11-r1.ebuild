@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php-cgi/php-cgi-4.3.11-r1.ebuild,v 1.2 2005/05/12 13:41:42 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php-cgi/php-cgi-4.3.11-r1.ebuild,v 1.3 2005/05/17 18:40:17 robbat2 Exp $
 
 PHPSAPI="cgi"
 inherit php-sapi eutils
@@ -32,7 +32,7 @@ src_compile() {
 		--enable-fastcgi"
 
 	if use force-cgi-redirect; then
-		my_conf="${my_conf} --enable-force-cgi-redirect"
+		myconf="${myconf} --enable-force-cgi-redirect"
 	fi
 
 	php-sapi_src_compile
