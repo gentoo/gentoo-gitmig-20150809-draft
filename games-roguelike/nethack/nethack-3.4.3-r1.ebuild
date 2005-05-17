@@ -1,8 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/nethack/nethack-3.4.3-r1.ebuild,v 1.5 2004/09/24 10:01:05 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/nethack/nethack-3.4.3-r1.ebuild,v 1.6 2005/05/17 18:43:19 wolf31o2 Exp $
 
-inherit eutils gcc flag-o-matic games
+inherit eutils toolchain-funcs flag-o-matic games
 
 MY_PV=${PV//.}
 DESCRIPTION="The ultimate old-school single player dungeon exploration game"
@@ -76,14 +76,14 @@ src_compile() {
 
 	emake \
 		QTDIR=/usr/qt/${qtver} \
-		CC="$(gcc-getCC)" \
+		CC="$(tc-getCC)" \
 		CFLAGS="${CFLAGS}" \
 		LFLAGS="-L/usr/X11R6/lib" \
 		../util/makedefs \
 		|| die "initial makedefs build failed"
 	emake \
 		QTDIR=/usr/qt/${qtver} \
-		CC="$(gcc-getCC)" \
+		CC="$(tc-getCC)" \
 		CFLAGS="${CFLAGS}" \
 		LFLAGS="-L/usr/X11R6/lib" \
 		|| die "main build failed"
@@ -93,7 +93,7 @@ src_compile() {
 
 src_install() {
 	make \
-		CC="$(gcc-getCC)" \
+		CC="$(tc-getCC)" \
 		CFLAGS="${CFLAGS}" \
 		LFLAGS="-L/usr/X11R6/lib" \
 		GAMEPERM=0755 \
