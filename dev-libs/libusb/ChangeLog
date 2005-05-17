@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libusb
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb/ChangeLog,v 1.31 2005/04/18 08:53:53 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb/ChangeLog,v 1.32 2005/05/17 12:18:45 liquidx Exp $
+
+  17 May 2005; Alastair Tse <liquidx@gentoo.org> libusb-0.1.8.ebuild,
+  libusb-0.1.10a.ebuild:
+  modified elibtoolize calling, --force doesn't work with elibtoolize
 
   18 Apr 2005; Alastair Tse <liquidx@gentoo.org> libusb-0.1.10a.ebuild:
   don't need libtool for runtime dep (#61150)

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb/libusb-0.1.8.ebuild,v 1.20 2005/04/18 08:53:53 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb/libusb-0.1.8.ebuild,v 1.21 2005/05/17 12:18:45 liquidx Exp $
 
 inherit eutils
 
@@ -37,7 +37,7 @@ src_compile() {
 	# keep this otherwise libraries will not have .so extensions
 	use ppc-macos \
 	  && glibtoolize --force \
-	  || libtoolize --force
+	  || elibtoolize --force
 
 	use doc \
 		&& myconf="--enable-build-docs" \
