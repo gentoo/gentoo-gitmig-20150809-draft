@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/nasm
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/nasm/ChangeLog,v 1.34 2005/05/11 20:17:19 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/nasm/ChangeLog,v 1.35 2005/05/17 22:45:23 mr_bones_ Exp $
+
+  17 May 2005; Michael Sterrett <mr_bones_@gentoo.org>
+  -files/0.98.38-overflow.patch, -nasm-0.98.38-r1.ebuild:
+  clean older version
 
   11 May 2005; Marcus D. Hanwell <cryos@gentoo.org> nasm-0.98.39.ebuild:
   Stable on amd64.
