@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/module-rebuild
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/module-rebuild/ChangeLog,v 1.1 2005/05/03 22:53:37 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/module-rebuild/ChangeLog,v 1.2 2005/05/17 21:53:03 johnm Exp $
+
+*module-rebuild-0.2 (17 May 2005)
+
+  17 May 2005; John Mylchreest <johnm@gentoo.org> +files/module-rebuild-0.2,
+  +module-rebuild-0.2.ebuild:
+  adding support for 'populate', and cleaning a few little things up.
 
 *module-rebuild-0.1 (03 May 2005)
 
