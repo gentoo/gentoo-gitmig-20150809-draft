@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.3.5-r1.ebuild,v 1.3 2005/04/11 13:30:42 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.3.5-r1.ebuild,v 1.4 2005/05/17 08:38:56 pclouds Exp $
 
 inherit kde-functions eutils libtool flag-o-matic
 
@@ -105,11 +105,7 @@ src_install() {
 	insinto /usr/share/lyx/bind
 	doins ${DISTDIR}/hebrew.bind
 
-	# gnome menu entry
-	if use gnome; then
-		insinto /usr/share/applications
-		doins ${FILESDIR}/lyx.desktop
-	fi
+	domenu ${FILESDIR}/lyx.desktop
 
 	# install the latex-xft fonts, which should fix
 	# the problems outlined in bug #15629
