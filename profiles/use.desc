@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.243 2005/05/16 22:00:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.244 2005/05/17 22:25:56 greg_g Exp $
 
 # keep them sorted (excluding the special arch flags near the end).
 
@@ -226,7 +226,7 @@ nptl - Enable support for Native POSIX Threads Library, the new threading module
 oci8 - Adds Oracle 8 Support
 odbc - Adds ODBC Support (Open DataBase Connectivity)
 offensive - Enables potentially offensive items in packages
-ofx - Enable support for importing (and exporting) OFX data files into gnucash and grisbi
+ofx - Enable support for importing (and exporting) OFX (Open Financial eXchange) data files
 ogg - Adds support for the Ogg container format (commonly used by Vorbis, Theora and flac)
 oggvorbis - Adds support for the OggVorbis audio encoding - DEPRECATED useflag 
 openal - Adds support for the Open Audio Library
