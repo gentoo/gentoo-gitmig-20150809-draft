@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/mm-sources
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/ChangeLog,v 1.227 2005/05/14 17:43:40 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/ChangeLog,v 1.228 2005/05/17 14:23:40 r3pek Exp $
+
+  17 May 2005; Carlos Silva <r3pek@gentoo.org> mm-sources-2.6.11-r2.ebuild,
+  mm-sources-2.6.11-r3.ebuild, mm-sources-2.6.11-r4.ebuild,
+  mm-sources-2.6.12_rc2-r1.ebuild, mm-sources-2.6.12_rc2-r3.ebuild,
+  mm-sources-2.6.12_rc3-r1.ebuild, mm-sources-2.6.12_rc3-r2.ebuild,
+  mm-sources-2.6.12_rc3-r3.ebuild, mm-sources-2.6.12_rc4-r1.ebuild:
+  Fixing bug #92862 thanks to John Myers
 
 *mm-sources-2.6.12_rc4-r1 (14 May 2005)
 

@@ -1,32 +1,22 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 cac9c1545aeb6c06fd7fbbbb6dc097e3 mm-sources-2.6.11-r4.ebuild 1012
+MD5 a63851f163fa962b814cb27cf3367b31 ChangeLog 40949
 MD5 5e95fced23ea7c26d39274bc200dabd5 metadata.xml 351
-MD5 0d6fbf5fdde211017092b8ae1b39bd21 ChangeLog 40570
-MD5 5b9bbc92fd9dce88ff3369ff203bbf5a mm-sources-2.6.12_rc2-r1.ebuild 1017
-MD5 ddff9dc90892423dec4e6d8e3b34fe2c mm-sources-2.6.11-r3.ebuild 1012
-MD5 8ede9980fafb35fd21413b66a6b9db88 mm-sources-2.6.11-r2.ebuild 1013
-MD5 41156f8a367a3168cc945d2fb292d381 mm-sources-2.6.12_rc2-r3.ebuild 1017
-MD5 97799fe086349f56393f93ec2d78547f mm-sources-2.6.12_rc3-r1.ebuild 1064
-MD5 c16e03354988e1e3c446820b14192322 mm-sources-2.6.12_rc3-r2.ebuild 1016
-MD5 e076b18cfc9d1f466a7464560e978a9a mm-sources-2.6.12_rc3-r3.ebuild 1017
-MD5 cc8f8c52d467b5a246f959bede3ac697 mm-sources-2.6.12_rc4-r1.ebuild 1062
+MD5 91a702b6d2c08f6c8461a624196444fd mm-sources-2.6.11-r2.ebuild 1005
+MD5 6542a95eefc7c33a6d70da1a688a7890 mm-sources-2.6.11-r3.ebuild 1005
+MD5 300c36272355a3fbfa80155b5d980409 mm-sources-2.6.11-r4.ebuild 1005
+MD5 edde6534cacdecd82da16bbb63732411 mm-sources-2.6.12_rc2-r1.ebuild 1009
+MD5 973bb19d8611a671cb5f2ef95fef0f8f mm-sources-2.6.12_rc2-r3.ebuild 1009
+MD5 1578842221dd9d7a7bb57992dcffcebc mm-sources-2.6.12_rc3-r1.ebuild 1057
+MD5 5f05565a33001af132d10b638124761e mm-sources-2.6.12_rc3-r2.ebuild 1009
+MD5 2c5dc41b36e848a618db34beefeddba2 mm-sources-2.6.12_rc3-r3.ebuild 1009
+MD5 bd16a4af0537c7b4d37bc7d0bd20f32e mm-sources-2.6.12_rc4-r1.ebuild 1055
+MD5 577afa6b9756ac464c781ff23727e92a files/2.6.12-rc3-mm1-uniprocessor-fixes.patch 2781
+MD5 ab4feb194a239ec2da27b1515b015101 files/2.6.12-rc4-mm1-reiser4-breakage.patch 1688
+MD5 352b87022e85a81108ad35f34203550b files/digest-mm-sources-2.6.11-r2 127
 MD5 1efcf2745c51b350d3d99d6d0d9f22ec files/digest-mm-sources-2.6.11-r3 127
 MD5 45444c176e9e9224a66be0ff5055d9b7 files/digest-mm-sources-2.6.11-r4 127
-MD5 352b87022e85a81108ad35f34203550b files/digest-mm-sources-2.6.11-r2 127
-MD5 7427d158ef757af85d04be602905d73d files/digest-mm-sources-2.6.12_rc2-r3 197
 MD5 3b78dd930e187cb1fe6d50d4491987d2 files/digest-mm-sources-2.6.12_rc2-r1 197
-MD5 577afa6b9756ac464c781ff23727e92a files/2.6.12-rc3-mm1-uniprocessor-fixes.patch 2781
+MD5 7427d158ef757af85d04be602905d73d files/digest-mm-sources-2.6.12_rc2-r3 197
 MD5 344083e5d144f7ab98f91b682bb9b6fc files/digest-mm-sources-2.6.12_rc3-r1 197
 MD5 67cea821b4ac0f0cebede85e390377f2 files/digest-mm-sources-2.6.12_rc3-r2 197
 MD5 b8382b71b7b17387b168843efc9b469d files/digest-mm-sources-2.6.12_rc3-r3 197
-MD5 ab4feb194a239ec2da27b1515b015101 files/2.6.12-rc4-mm1-reiser4-breakage.patch 1688
 MD5 0bfebafd203f91c4a051b663a6b66f55 files/digest-mm-sources-2.6.12_rc4-r1 197
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFChjk7p5vW4rUFj5oRAsE6AJ4jpW/atd9gfcxRrWh7g3Gjmu/r3ACeJCAu
-Tdcxf5AG6Gel1zYsJkZzcls=
-=5oYs
------END PGP SIGNATURE-----
