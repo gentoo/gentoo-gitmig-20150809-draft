@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/fltk-1.1.4.ebuild,v 1.15 2005/05/17 12:37:05 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/fltk-1.1.4.ebuild,v 1.16 2005/05/17 12:38:21 lanius Exp $
 
 IUSE="opengl debug nptl"
 
@@ -81,4 +81,5 @@ src_install() {
 	dodir /usr/share/doc/${P}/html
 	mv ${D}/usr/share/doc/fltk/* ${D}/usr/share/doc/${PF}/html
 	rmdir ${D}/usr/share/doc/fltk
+	rm -rf ${D}/usr/share/man/cat{1,3}
 }
