@@ -1,22 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 0e9997c34fa61a9e97930272f92c0944 ChangeLog 2493
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+MD5 56d0fcf5e1a5c6f7f284aec7cb30bc27 ChangeLog 2588
 MD5 47ec776de93d7125e3486534fa6c74b5 fakeroot-1.0.7.ebuild 1097
-MD5 8c2f1a80a8ffa182ab53d11cb511528a fakeroot-0.4.4.ebuild 601
-MD5 9f54d70a6d88a99dd8c4cf9c8e82d71d fakeroot-1.1.5.ebuild 579
+MD5 9ce0b947971bccd2d0b570f7f47e2071 fakeroot-1.1.5.ebuild 578
 MD5 27b729d7ff7471af33888cc2d35aac2e fakeroot-0.4.4-r1.ebuild 790
+MD5 8c2f1a80a8ffa182ab53d11cb511528a fakeroot-0.4.4.ebuild 601
+MD5 83191a9ebafc35745d1ee214e40803b6 files/digest-fakeroot-1.0.7 67
 MD5 a192b4e65779c0403da6a1868edc5ac3 files/digest-fakeroot-0.4.4 70
 MD5 c96cefb60bc53da4ca582dae25a479b8 files/fakeroot-gcc3-gentoo.patch 405
+MD5 eb58a21dd11a81680b1499565d074682 files/fakeroot-0.4.4-faked.patch 240
 MD5 4f0d7f1308c49429b78e25f29fe29e20 files/digest-fakeroot-1.1.5 67
 MD5 a192b4e65779c0403da6a1868edc5ac3 files/digest-fakeroot-0.4.4-r1 70
-MD5 eb58a21dd11a81680b1499565d074682 files/fakeroot-0.4.4-faked.patch 240
-MD5 83191a9ebafc35745d1ee214e40803b6 files/digest-fakeroot-1.0.7 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCbnqyKf2g/qXtneoRAmDdAJ9dtHignzUXBlbH9qMhS+dNLTZAcgCeMR2T
-iKWOyhaTa04Zzuqq79s1f94=
-=FOkP
------END PGP SIGNATURE-----
