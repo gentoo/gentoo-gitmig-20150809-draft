@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/libintl-perl
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/libintl-perl/ChangeLog,v 1.7 2005/05/12 17:07:52 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/libintl-perl/ChangeLog,v 1.8 2005/05/17 13:43:57 gustavoz Exp $
+
+  17 May 2005; Gustavo Zacarias <gustavoz@gentoo.org>
+  libintl-perl-1.11.ebuild:
+  Keyworded ~sparc
 
   12 May 2005; Jan Brinkmann <luckyduck@gentoo.org>
   libintl-perl-1.10.ebuild:
