@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql++/mysql++-1.7.26.ebuild,v 1.7 2005/05/17 19:15:01 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql++/mysql++-1.7.34.ebuild,v 1.1 2005/05/17 19:15:01 robbat2 Exp $
 
 inherit eutils gnuconfig
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.tangentsoft.net/mysql++/releases/${P}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="x86 alpha ~hppa ~mips sparc ppc amd64"
+KEYWORDS="~x86 ~alpha ~hppa ~mips ~sparc ~ppc ~amd64"
 IUSE=""
 
 DEPEND=">=dev-db/mysql-4.0
@@ -19,6 +19,7 @@ DEPEND=">=dev-db/mysql-4.0
 
 src_unpack() {
 	unpack ${P}.tar.gz
+	epatch ${FILESDIR}/patch-1.7.34-typo_correction
 }
 
 src_compile() {
@@ -43,7 +44,7 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die
 	# install the docs and HTML pages
 	dodoc README LGPL
 	dodoc doc/*
