@@ -1,6 +1,9 @@
 # ChangeLog for games-emulation/xmame
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmame/ChangeLog,v 1.40 2005/05/12 14:27:55 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmame/ChangeLog,v 1.41 2005/05/17 21:05:52 mr_bones_ Exp $
+
+  17 May 2005; Michael Sterrett <mr_bones_@gentoo.org> xmame-0.96.ebuild:
+  stable for x86
 
   12 May 2005; Michael Sterrett <mr_bones_@gentoo.org> xmame-0.96.ebuild:
   LICENSE change (bug #92336)
