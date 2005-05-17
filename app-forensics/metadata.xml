@@ -17,5 +17,9 @@
 		De app-forensics categorie bevat applicaties voor het detecteren en
 		analyseren van inbreuken op de veiligheid van het systeem.
 	</longdescription>
+	<longdescription lang="vi">
+		Nhóm app-forensics chứa các phần mềm hỗ trợ dò tìm,
+		phân tích các lỗ hổng bảo mật.
+	</longdescription>
 </catmetadata>
 
