@@ -1,10 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cheetah/cheetah-0.9.15.ebuild,v 1.9 2005/04/24 03:09:56 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cheetah/cheetah-0.9.17_rc1.ebuild,v 1.1 2005/05/17 21:09:00 pythonhead Exp $
 
 inherit distutils
 
-MY_P="${P/ch/Ch}"
+MY_P=${P/ch/Ch}
+MY_P=${MY_P/_/}
+
 S=${WORKDIR}/${MY_P}
 DESCRIPTION="Python-powered template engine and code generator."
 HOMEPAGE="http://www.cheetahtemplate.org/"

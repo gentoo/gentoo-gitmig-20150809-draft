@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/cheetah
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cheetah/ChangeLog,v 1.13 2005/05/05 21:22:32 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cheetah/ChangeLog,v 1.14 2005/05/17 21:09:00 pythonhead Exp $
+
+*cheetah-0.9.17_rc1 (17 May 2005)
+
+  17 May 2005; Rob Cakebread <pythonhead@gentoo.org> -cheetah-0.9.15.ebuild,
+  -cheetah-0.9.16_alpha2.ebuild, -cheetah-0.9.16.ebuild,
+  +cheetah-0.9.17_rc1.ebuild:
+  Security bump. Removed vulnerable versions. bug#  92926
 
 *cheetah-0.9.16 (05 May 2005)
 
