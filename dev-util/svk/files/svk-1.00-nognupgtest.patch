@@ -1,0 +1,11 @@
+diff -ur SVK-1.00.old/MANIFEST SVK-1.00/MANIFEST
+--- SVK-1.00.old/MANIFEST	2005-04-30 04:43:30.000000000 +0700
++++ SVK-1.00/MANIFEST	2005-05-17 10:26:18.000000000 +0700
+@@ -162,7 +162,6 @@
+ t/50dav.t
+ t/70symlink.t
+ t/71autovivify.t
+-t/72sign.t
+ t/73i18n.t
+ t/svk-sec.gpg
+ t/svk.gpg

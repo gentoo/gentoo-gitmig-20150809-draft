@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/svk/svk-1.00.ebuild,v 1.2 2005/05/15 19:24:14 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/svk/svk-1.00.ebuild,v 1.3 2005/05/17 04:21:10 pclouds Exp $
 
 inherit eutils perl-module
 
@@ -53,7 +53,7 @@ src_unpack () {
 			einfo 'Try USE="-crypt" emerge -v svk if this happens.'
 			ebeep 3
 	else
-			epatch ${FILESDIR}/svk-0.29-nognupgtest.patch
+			epatch ${FILESDIR}/svk-${PV}-nognupgtest.patch
 			rm ${S}/t/72sign.t
 
 	fi
