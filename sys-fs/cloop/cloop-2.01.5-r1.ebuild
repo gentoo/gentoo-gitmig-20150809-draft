@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cloop/cloop-2.01.5-r1.ebuild,v 1.2 2005/04/27 11:26:02 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cloop/cloop-2.01.5-r1.ebuild,v 1.3 2005/05/17 19:30:17 dsd Exp $
 
 inherit linux-mod eutils versionator
 
@@ -33,16 +33,10 @@ src_unpack() {
 	cd ${S}
 	epatch ${FILESDIR}/cloop.fix-7z-syntax-for-gcc-3.4.patch
 	epatch ${FILESDIR}/cloop.fix-create_compressed_fs-segfault-on-amd64.patch
+	epatch ${FILESDIR}/${P}-netinet-gentoo.patch
 
 	# Debian uses conf.vars, everyone else uses .config
 	sed -i "s:conf.vars:.config:" Makefile
-
-	# Remove erroneous 2.4 include
-	has_version =sys-kernel/linux-headers-2.4.* && \
-		sed -i "s:#include <netinet/in.h>::" \
-		advancecomp-1.9_create_compressed_fs/advfs.cc \
-		create_compressed_fs.c \
-		extract_compressed_fs.c
 }
 
 src_install() {
