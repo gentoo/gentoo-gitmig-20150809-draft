@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 e24fbe2b01316a81c1facd89e7153c12 ChangeLog 1731
 MD5 44c39c6ad372a8e5a5e7ee3311f703a7 metadata.xml 160
 MD5 a8b4e4fc8fec6fcc403a86b59974de2a irssi-cvs-0.2.ebuild 2149
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-irssi-cvs-0.2 0
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD4DBQFCihbxI1lqEGTUzyQRAoAaAJdIbbg/ufxzhrgKyPAnKhOPYx4ZAJ0XS6Yr
+OxfTxoq5AZMgtaDiJiyeoQ==
+=tFtB
+-----END PGP SIGNATURE-----
