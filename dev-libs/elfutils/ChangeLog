@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/elfutils
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/ChangeLog,v 1.53 2005/05/15 14:14:21 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/ChangeLog,v 1.54 2005/05/17 15:05:59 solar Exp $
+
+*elfutils-0.108 (17 May 2005)
+
+  17 May 2005; <solar@gentoo.org> +files/elfutils-0.108-portability.patch,
+  +elfutils-0.108.ebuild:
+  - version bump to 0.108 and added a new patch from Jakub Jelinek to fix misc
+  crashes and the heap overflow on some invalid ELF files
 
   15 May 2005; Bryan Østergaard <kloeri@gentoo.org>
   elfutils-0.94-r2.ebuild:
