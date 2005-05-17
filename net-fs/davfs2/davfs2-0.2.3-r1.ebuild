@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/davfs2/davfs2-0.2.3-r1.ebuild,v 1.2 2005/01/26 15:32:36 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/davfs2/davfs2-0.2.3-r1.ebuild,v 1.3 2005/05/17 18:24:36 genstef Exp $
 
 inherit linux-info eutils
 
@@ -18,7 +18,7 @@ DEPEND="ssl? ( >=dev-libs/openssl-0.9.6 )
 SLOT="0"
 
 CONFIG_CHECK="CODA_FS"
-CODA_FS_ERROR="Coda can be found in filesystems, network filesystems"
+CODA_FS_ERROR="${P} requires kernel support for Coda to be found in filesystems, network filesystems"
 
 src_unpack() {
 	unpack ${A}

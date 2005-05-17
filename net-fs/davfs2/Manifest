@@ -1,5 +1,5 @@
-MD5 958b7feee04fc2d5bfa8d270d7a3d6d1 davfs2-0.2.3-r1.ebuild 1243
-MD5 7ebebf8f5b30994f876d1ea0390da3bf ChangeLog 2299
+MD5 2245111cd0b2ae7877963302c8a78dbe davfs2-0.2.3-r1.ebuild 1275
+MD5 112a2b5aab99b741e2b56e4dfd227904 ChangeLog 2456
 MD5 90d54af17451a3725b7244f94d7ac81a metadata.xml 264
 MD5 f0156f27602800056efdeb249b7ae579 files/digest-davfs2-0.2.3-r1 64
 MD5 834f6651a067dc38dfc2093d0bf641a3 files/davfs2.nokernelsrc.patch 3911
