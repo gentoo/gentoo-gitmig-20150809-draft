@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/race/race-0.5.ebuild,v 1.9 2005/03/14 23:09:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/race/race-0.5.ebuild,v 1.10 2005/05/17 18:55:42 wolf31o2 Exp $
 
-inherit games gcc eutils
+inherit eutils toolchain-funcs games
 
 DESCRIPTION="OpenGL Racing Game"
 HOMEPAGE="http://projectz.org/?id=70"
@@ -31,7 +31,7 @@ src_unpack() {
 }
 
 src_compile() {
-	emake CC="$(gcc-getCC) ${CFLAGS}" || die "emake failed"
+	emake CC="$(tc-getCC) ${CFLAGS}" || die "emake failed"
 }
 
 src_install() {
