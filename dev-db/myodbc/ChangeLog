@@ -1,6 +1,12 @@
 # ChangeLog for dev-db/myodbc
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/myodbc/ChangeLog,v 1.5 2005/01/01 17:36:34 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/myodbc/ChangeLog,v 1.6 2005/05/17 09:17:19 robbat2 Exp $
+
+*myodbc-3.51.11 (17 May 2005)
+
+  17 May 2005; Robin H. Johnson <robbat2@gentoo.org> +metadata.xml,
+  +myodbc-3.51.11.ebuild:
+  Add metadata. New version for mysql-4.1 support.
 
   29 Jun 2004; Aron Griffis <agriffis@gentoo.org> myodbc-3.51.06.ebuild:
   sync IUSE (+debug, +doc, +static)
