@@ -1,0 +1,21 @@
+Fix by Lachlan Pease.
+
+http://bugs.gentoo.org/92921
+
+Index: sbin/rc
+===================================================================
+RCS file: /var/cvsroot/gentoo-src/rc-scripts/sbin/rc,v
+retrieving revision 1.104.2.14
+diff -u -r1.104.2.14 rc
+--- sbin/rc
++++ sbin/rc
+@@ -260,7 +260,8 @@
+ 				else
+ 					mntcmd="ramfs"
+ 				fi
+-				try mount -n -t ${mntcmd} udev /dev -o noexec,nosuid,mode=0755
++				# many video drivers require exec access in /dev #92921
++				try mount -n -t ${mntcmd} udev /dev -o exec,nosuid,mode=0755
+ 			fi
+ 			eend $?
+ 

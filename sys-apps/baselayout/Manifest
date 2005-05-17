@@ -1,4 +1,4 @@
-MD5 c3a5e332412f2343fe289703dee04e9a ChangeLog 54957
+MD5 4a07bee31bab89f9dba86f78441c3a9c ChangeLog 55169
 MD5 078433bcf24328516f915e8f13e7a7f9 baselayout-1.11.11-r1.ebuild 18467
 MD5 dca2cf7245292428f62f1ef4f20dd3d9 baselayout-1.11.11.ebuild 18466
 MD5 3e593bad04336cf49c1e7978ce5c103f baselayout-1.12.0_alpha2.ebuild 18459
@@ -10,7 +10,7 @@ MD5 e02bb32cac91dad28d3c05b731b37b04 metadata.xml 385
 MD5 23c7218ace814473c88d1fe3416e8b3c baselayout-1.11.11-r3.ebuild 18761
 MD5 83173fc495d5b40d07fba4a28156bc76 baselayout-1.11.10-r7.ebuild 17390
 MD5 e0f1e8c15b2f320808de66cbfa2e7c67 baselayout-1.12.0_alpha2-r1.ebuild 18815
-MD5 142c17ec02ac6c8cd758d9c76fc5d7f7 baselayout-1.11.12.ebuild 18387
+MD5 a72ea54cd341e2e29c420169cce69468 baselayout-1.11.12-r1.ebuild 18467
 MD5 50ccc6f432f5e941daec74f31f2d2a53 files/digest-baselayout-1.11.11-r3 70
 MD5 333c983dc00cb352f4725cacc0378fea files/baselayout-1.11.10-bridge.patch 3547
 MD5 f96ffe6b44684809b8ec0e4450093f59 files/baselayout-1.11.10-iwconfig-2.patch 925
@@ -22,10 +22,11 @@ MD5 45a6a081214e662ab8de935ae12a255e files/digest-baselayout-1.12.0_alpha2 69
 MD5 6d37e93641eee6754b93dde3324ae23b files/baselayout-1.11.11-wpa_supplicant.patch 1223
 MD5 d49b2a31706ee1e9508b188672afcf13 files/baselayout-1.12.0-alpha2-netscripts-1.patch 15665
 MD5 50ccc6f432f5e941daec74f31f2d2a53 files/digest-baselayout-1.11.11-r2 70
-MD5 ba767b33145b4614cf9b760516c51895 files/digest-baselayout-1.11.12 70
 MD5 dd7fbce62822fed1595f11078e23aa32 files/baselayout-1.8.6.13-r1-gcc2.patch 443
 MD5 7c0cd50e4ac1dc062f5e6ab578e95659 files/copyright 2099
 MD5 45a6a081214e662ab8de935ae12a255e files/digest-baselayout-1.12.0_alpha2-r1 69
+MD5 ee24c3f2b233c4b4bb286e3fa8c833ed files/baselayout-1.11.12-exec-dev.patch 545
+MD5 ba767b33145b4614cf9b760516c51895 files/digest-baselayout-1.11.12-r1 70
 MD5 844ae054e507637ee440011d729858c8 files/digest-baselayout-1.11.9-r1 69
 MD5 d69d18485e6cfc948d9f39b2b766a406 files/digest-baselayout-1.9.4-r6 134
 MD5 d69d18485e6cfc948d9f39b2b766a406 files/digest-baselayout-1.9.4-r7 134
