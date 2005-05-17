@@ -1,21 +1,11 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 0f06e7a680eb21b2f5cc9485583224d8 mini_httpd-1.17_beta1.ebuild 1979
-MD5 ffe9db3d66ce7e8c0d9c3fd7bdabfaae ChangeLog 1756
 MD5 4a186842848d9c384e2d12785ba426bc metadata.xml 165
-MD5 b46df58209c848cb055c465374b3fc9b mini_httpd-1.19.ebuild 1873
+MD5 f2c2a334c4c9d1a891ff92bfdaab49fc ChangeLog 1852
+MD5 34ae57c02b0bc1d0653183a50cb275f5 mini_httpd-1.19.ebuild 1872
 MD5 4999dd0e1f1fef19fee9d91e030157e7 files/mini_httpd.conf.sample 860
-MD5 4999dd0e1f1fef19fee9d91e030157e7 files/mini_httpd.conf.sample-1.19 860
 MD5 c000548ba0f55ece3df464f3512f7baa files/digest-mini_httpd-1.19 66
+MD5 4999dd0e1f1fef19fee9d91e030157e7 files/mini_httpd.conf.sample-1.19 860
+MD5 d71656642f1a0ea54524b71080fcb866 files/mini_httpd.init 862
+MD5 a1d6cef277be7b652c38ea2087bb319e files/mini_httpd.confd-1.19 1278
 MD5 9685388fae3963caf5d21c334d2bc4bb files/mini_httpd.confd 1131
 MD5 0a7617c2c08ec920ece4d2b412af270c files/digest-mini_httpd-1.17_beta1 71
-MD5 a1d6cef277be7b652c38ea2087bb319e files/mini_httpd.confd-1.19 1278
-MD5 d71656642f1a0ea54524b71080fcb866 files/mini_httpd.init 862
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCE1e/EZCkKN40op4RAkb2AJ4xFGrt7RDAsjHq8q9AzRpU7HXjGwCfUpnY
-JwlZ+s3b5C8hnlqxdwQQwmA=
-=4hQr
------END PGP SIGNATURE-----
