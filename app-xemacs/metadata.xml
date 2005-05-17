@@ -14,5 +14,9 @@
 	<longdescription lang="nl">
 		De app-xemacs categorie bevat uitbreidingen voor de XEmacs text editor.
 	</longdescription>
+	<longdescription lang="vi">
+		Nhóm app-xemacs chứa các phần mở rộng của trình soạn
+		thảo văn bản XEmacs.
+	</longdescription>
 </catmetadata>
 
