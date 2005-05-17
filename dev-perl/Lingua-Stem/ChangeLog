@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Lingua-Stem
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Lingua-Stem/ChangeLog,v 1.2 2005/01/22 15:40:13 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Lingua-Stem/ChangeLog,v 1.3 2005/05/17 15:16:47 gustavoz Exp $
+
+  17 May 2005; Gustavo Zacarias <gustavoz@gentoo.org>
+  Lingua-Stem-0.81.ebuild:
+  Stable on sparc
 
   22 Jan 2005; Michael Cummings <mcummings@gentoo.org>
   Lingua-Stem-0.81.ebuild:
