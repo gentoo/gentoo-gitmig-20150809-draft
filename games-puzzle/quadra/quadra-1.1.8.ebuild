@@ -1,8 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/quadra/quadra-1.1.8.ebuild,v 1.8 2004/11/12 18:36:38 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/quadra/quadra-1.1.8.ebuild,v 1.9 2005/05/17 18:40:04 wolf31o2 Exp $
 
-inherit eutils gcc games
+inherit eutils toolchain-funcs games
 
 DESCRIPTION="A tetris clone with multiplayer support"
 HOMEPAGE="http://quadra.sourceforge.net/"
@@ -22,7 +22,6 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
 	[ $(gcc-major-version) == 3 ] && epatch "${FILESDIR}/${P}-gcc3.patch"
 	epatch "${FILESDIR}/libpng-1.2.5.patch"
 	use amd64 && epatch "${FILESDIR}/${P}-amd64.patch"
@@ -42,8 +41,7 @@ src_compile() {
 
 src_install() {
 	egamesinstall || die
-	dodir /usr/share/pixmaps
-	mv "${D}/${GAMES_DATADIR}/pixmaps/quadra.xpm" "${D}/usr/share/pixmaps"
+	doicon "${D}/${GAMES_DATADIR}/pixmaps/quadra.xpm"
 	rm -rf "${D}/usr/share/games/pixmaps"
 
 	dodoc ChangeLog NEWS README
