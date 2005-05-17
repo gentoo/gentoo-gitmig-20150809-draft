@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 5c0fca9be1d8a700c0031b0742380350 tclreadline-2.1.0.ebuild 619
-MD5 dd330079bdd09946baa726e6c3d39615 ChangeLog 1417
 MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
+MD5 91eb45181423ff7920aa8ee724b3ea29 ChangeLog 1515
+MD5 ec46cd6546c44d88d360abfde58da4f4 tclreadline-2.1.0.ebuild 616
 MD5 5cbb8072ea7afd2e7abd0d33b724cb87 files/digest-tclreadline-2.1.0 69
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCe0BII1lqEGTUzyQRAlXvAJ9rAUfxRNOdwfZDUFh3eQQ4VlOCsgCdHkKW
-WaWuU6bzwhHGmvD0pN5AXMM=
-=g093
------END PGP SIGNATURE-----
