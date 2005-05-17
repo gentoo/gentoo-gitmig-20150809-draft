@@ -1,0 +1,45 @@
+diff --exclude='*~' --exclude='.*' -I '$Id:' -urN sucs-1.0.0.orig/ipc/sema.cpp sucs-1.0.0/ipc/sema.cpp
+--- sucs-1.0.0.orig/ipc/sema.cpp	2005-05-17 01:25:17.000000000 -0400
++++ sucs-1.0.0/ipc/sema.cpp	2005-05-17 01:26:15.000000000 -0400
+@@ -15,6 +15,7 @@
+ #pragma implementation
+ 
+ #include <iostream>
++#include <cerrno>
+ using namespace std;
+ 
+ #include <semaphore.h>
+diff --exclude='*~' --exclude='.*' -I '$Id:' -urN sucs-1.0.0.orig/network/link.cpp sucs-1.0.0/network/link.cpp
+--- sucs-1.0.0.orig/network/link.cpp	2005-05-17 01:25:17.000000000 -0400
++++ sucs-1.0.0/network/link.cpp	2005-05-17 01:40:35.000000000 -0400
+@@ -17,6 +17,7 @@
+ #include <string>
+ //#include <cstring>
+ #include <cassert>
++#include <cerrno>
+ using namespace std;
+ 
+ #include <netinet/in.h>
+diff --exclude='*~' --exclude='.*' -I '$Id:' -urN sucs-1.0.0.orig/signals/signallistener.cpp sucs-1.0.0/signals/signallistener.cpp
+--- sucs-1.0.0.orig/signals/signallistener.cpp	2005-05-17 01:25:17.000000000 -0400
++++ sucs-1.0.0/signals/signallistener.cpp	2005-05-17 01:39:04.000000000 -0400
+@@ -79,7 +79,7 @@
+ 	theHandlers.erase(signal);
+ }
+ 
+-void sucs::actualHandler(int signal)
++void actualHandler(int signal)
+ {
+ //	cerr << "actualHandler: Received signal " << signal << "." << endl << flush;
+ 	SignalListener *l = SignalListener::signalListener();
+diff --exclude='*~' --exclude='.*' -I '$Id:' -urN sucs-1.0.0.orig/thread/thread.cpp sucs-1.0.0/thread/thread.cpp
+--- sucs-1.0.0.orig/thread/thread.cpp	2005-05-17 01:25:17.000000000 -0400
++++ sucs-1.0.0/thread/thread.cpp	2005-05-17 01:30:05.000000000 -0400
+@@ -17,6 +17,7 @@
+ #include <iostream>
+ #include <string>
+ #include <cassert>
++#include <cerrno>
+ using namespace std;
+ 
+ #include <csignal>

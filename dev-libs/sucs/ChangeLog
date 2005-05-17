@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/sucs
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/sucs/ChangeLog,v 1.5 2005/05/06 12:00:13 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/sucs/ChangeLog,v 1.6 2005/05/17 11:29:05 ka0ttic Exp $
+
+  17 May 2005; Aaron Walker <ka0ttic@gentoo.org>
+  +files/sucs-1.0.0-gcc4.diff, sucs-1.0.0.ebuild:
+  Added patch so sucs will build with gcc-4.
 
   06 May 2005; Aaron Walker <ka0ttic@gentoo.org> sucs-1.0.0.ebuild:
   Stable on x86.
