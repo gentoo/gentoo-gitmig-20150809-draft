@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/clamassassin
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/clamassassin/ChangeLog,v 1.17 2005/04/30 18:23:09 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/clamassassin/ChangeLog,v 1.18 2005/05/17 19:25:33 slarti Exp $
+
+  17 May 2005; Tom Martin <slarti@gentoo.org> clamassassin-1.2.2.ebuild:
+  Add missing IUSE.
 
   30 Apr 2005; Tom Martin <slarti@gentoo.org> clamassassin-1.2.2.ebuild:
   Added in support for clamd via a local USE flag.
