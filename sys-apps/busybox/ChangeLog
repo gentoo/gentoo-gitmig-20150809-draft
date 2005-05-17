@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/busybox
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.65 2005/05/12 16:58:02 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.66 2005/05/17 01:02:16 vapier Exp $
+
+*busybox-1.00-r4 (17 May 2005)
+
+  17 May 2005; Mike Frysinger <vapier@gentoo.org> +files/1.00/nice.patch,
+  +files/1.00/printenv.patch, files/busybox-1.00-pre3.config,
+  +files/1.00/standalone.patch, +files/1.00/sum.patch, +busybox-1.00-r4.ebuild:
+  Add more applets and prepare to replace sash.
 
   12 May 2005; Fernando J. Pereda <ferdy@gentoo.org> busybox-1.00-r1.ebuild:
   alpha stable wrt #73241
