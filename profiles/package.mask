@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3978 2005/05/17 09:43:42 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3979 2005/05/17 09:47:18 robbat2 Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -653,11 +653,6 @@ net-ftp/junkie
 # 2.4 is no more supported upstream.
 <sys-kernel/hppa-sources-2.6
 sys-kernel/hppa-dev-sources
-
-# <robbat2@gentoo.org> (23 Dec 2004)
-# The upgrade process to this is non-trivial.
-# Please see the ebuild about it.
-=net-nds/openldap-2.2*
 
 # <trapni@gentoo.org> (18 Dec 2004)
 # Contains a security vulnerability. See #74272.
