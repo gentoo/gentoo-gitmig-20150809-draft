@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/root-portal/root-portal-0.5.0.ebuild,v 1.9 2004/11/07 13:00:01 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/root-portal/root-portal-0.5.0.ebuild,v 1.10 2005/05/17 16:37:13 pyrania Exp $
 
 inherit gnome2 debug
 
@@ -22,7 +22,7 @@ RDEPEND="virtual/x11
 	>=gnome-base/orbit-2
 	>=gnome-base/libgnomeui-2
 	>=gnome-base/gnome-panel-2
-	>=dev-libs/libxml2-2"
+	>=dev-libs/libxml"
 DEPEND="${RDEPEND}
 	app-text/scrollkeeper
 	dev-util/pkgconfig"
