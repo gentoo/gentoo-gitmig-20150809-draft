@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libprelude/libprelude-0.9.0_rc5-r1.ebuild,v 1.2 2005/05/16 03:10:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libprelude/libprelude-0.9.0_rc5-r1.ebuild,v 1.3 2005/05/17 19:15:29 vanquirius Exp $
 
 inherit versionator perl-module flag-o-matic
 
@@ -12,10 +12,9 @@ SRC_URI="http://www.prelude-ids.org/download/releases/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha ~ia64 ~amd64"
-IUSE="perl python pcre"
+IUSE="perl python"
 
-DEPEND=">=net-libs/gnutls-1.0.17
-	pcre? ( dev-libs/libpcre )"
+DEPEND=">=net-libs/gnutls-1.0.17"
 
 #	doc? ( dev-util/gtk-doc )"
 # Doc disabled as per bug 77575
