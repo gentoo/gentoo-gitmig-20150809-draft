@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.0.28-r3.ebuild,v 1.2 2005/05/15 15:36:37 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.0.28-r3.ebuild,v 1.3 2005/05/17 19:16:23 luckyduck Exp $
 
 inherit eutils java-pkg
 
@@ -12,32 +12,32 @@ HOMEPAGE="http://jakarta.apache.org/tomcat"
 KEYWORDS="~x86 ~amd64 -ppc64 ~sparc"
 LICENSE="Apache-2.0"
 DEPEND="sys-apps/sed
-	   >=virtual/jdk-1.4
-	   ${RDEPEND}"
+	>=virtual/jdk-1.4
+	dev-java/ant"
 RDEPEND=">=virtual/jdk-1.4
-	   =dev-java/commons-beanutils-1.7*
-	   >=dev-java/commons-collections-3.1
-	   >=dev-java/commons-daemon-1.0
-	   >=dev-java/commons-dbcp-1.2.1
-	   >=dev-java/commons-digester-1.5
-	   >=dev-java/commons-fileupload-1.0
-	   =dev-java/commons-httpclient-2*
-	   >=dev-java/commons-el-1.0
-	   >=dev-java/commons-launcher-0.9
-	   >=dev-java/commons-logging-1.0.4
-	   >=dev-java/commons-modeler-1.1
-	   >=dev-java/commons-pool-1.2
-	   ~dev-java/jaxen-1.0
-	   >=dev-java/junit-3.8.1
-	   dev-java/jmx
-	   >=dev-java/log4j-1.2.8
-	   =dev-java/jakarta-regexp-1.3*
-	   >=dev-java/saxpath-1.0
-	   ~dev-java/servletapi-2.4
-	   =dev-java/struts-1.1*
-	   dev-java/sun-jaf-bin
-	   >=dev-java/xerces-2.6.2-r1
-		jikes? ( dev-java/jikes )"
+	=dev-java/commons-beanutils-1.7*
+	>=dev-java/commons-collections-3.1
+	>=dev-java/commons-daemon-1.0
+	>=dev-java/commons-dbcp-1.2.1
+	>=dev-java/commons-digester-1.5
+	>=dev-java/commons-fileupload-1.0
+	=dev-java/commons-httpclient-2*
+	>=dev-java/commons-el-1.0
+	>=dev-java/commons-launcher-0.9
+	>=dev-java/commons-logging-1.0.4
+	>=dev-java/commons-modeler-1.1
+	>=dev-java/commons-pool-1.2
+	~dev-java/jaxen-1.0
+	>=dev-java/junit-3.8.1
+	dev-java/jmx
+	>=dev-java/log4j-1.2.8
+	=dev-java/jakarta-regexp-1.3*
+	>=dev-java/saxpath-1.0
+	~dev-java/servletapi-2.4
+	=dev-java/struts-1.1*
+	dev-java/sun-jaf-bin
+	>=dev-java/xerces-2.6.2-r1
+	jikes? ( dev-java/jikes )"
 IUSE="doc examples jikes"
 
 S=${WORKDIR}/jakarta-${P}-src
@@ -131,9 +131,8 @@ src_install() {
 	fi
 
 	# create dir structure
-	diropts -m750
+	diropts -m755
 	dodir /usr/share/${TOMCAT_NAME}
-	chown root:tomcat ${D}/usr/share/${TOMCAT_NAME}
 
 	dodir /var/log/${TOMCAT_NAME}/default
 	chown -R tomcat:tomcat ${D}/var/log/${TOMCAT_NAME}
@@ -180,7 +179,6 @@ src_install() {
 
 		cd ${base}
 	done
-	chown -R root:tomcat ${D}/usr/share/${TOMCAT_NAME}
 
 	# replace a packed struts.jar
 	cd server/webapps/admin/WEB-INF/lib
@@ -193,12 +191,12 @@ src_install() {
 	sed -e s:SHUTDOWN:${randpw}: -i conf/{server,server-minimal}.xml
 
 	# copy over the directories	
-	chown -R root:tomcat conf/ bin/ common/ server/ shared/
 	cp -pra conf/* ${D}/etc/${TOMCAT_NAME}/default || die "failed to copy conf"
 	cp -pra bin common server shared ${D}/usr/share/${TOMCAT_NAME} || die "failed to copy"
 
 	# if the useflag is set, copy over the examples
 	dodir /var/lib/${TOMCAT_NAME}/default/webapps
+	keepdir /var/lib/${TOMCAT_NAME}/default/webapps
 	if use examples; then
 		cp -p ../RELEASE-NOTES webapps/ROOT/RELEASE-NOTES.txt
 		cp -pr webapps/{tomcat-docs,jsp-examples,servlets-examples,ROOT,webdav} \
@@ -226,7 +224,7 @@ pkg_postinst() {
 	chown root:root /etc/init.d/${TOMCAT_NAME}
 	chown root:root /etc/conf.d/${TOMCAT_NAME}
 
-	chmod 750 /etc/${TOMCAT_NAME}
+	chmod -R 750 /etc/${TOMCAT_NAME}
 
 	einfo " "
 	einfo " NOTICE!"
@@ -248,8 +246,6 @@ pkg_postinst() {
 	ewarn " If you are upgrading from older ebuild do NOT use"
 	ewarn " /etc/init.d/tomcat and /etc/conf.d/tomcat you probably"
 	ewarn " want to remove these. "
-	ewarn " A version number has been appended so that tomcat 3, 4 and 5"
-	ewarn " can be installed side by side"
 	einfo " "
 	ewarn " This ebuild implements a new filesystem layout for tomcat"
 	ewarn " please read http://gentoo-wiki.com/Tomcat_Gentoo_ebuild for"
