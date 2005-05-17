@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/prelude-nids/prelude-nids-0.8.6.ebuild,v 1.9 2005/05/01 17:00:04 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/prelude-nids/prelude-nids-0.8.6.ebuild,v 1.10 2005/05/17 19:40:30 vanquirius Exp $
 
 inherit flag-o-matic
 
@@ -16,7 +16,7 @@ IUSE="doc debug"
 DEPEND="virtual/libc
 	!dev-libs/libprelude-cvs
 	!net-analyzer/prelude-nids-cvs
-	dev-libs/libprelude
+	<dev-libs/libprelude-0.9.0_rc1
 	doc? ( dev-util/gtk-doc )"
 
 src_compile() {
