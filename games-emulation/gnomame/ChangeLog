@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/gnomame
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/gnomame/ChangeLog,v 1.7 2004/11/05 04:46:11 josejx Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/gnomame/ChangeLog,v 1.8 2005/05/17 18:12:05 mr_bones_ Exp $
+
+  17 May 2005; Michael Sterrett <mr_bones_@gentoo.org>
+  gnomame-1.00_beta6.ebuild:
+  tidy
 
   05 Nov 2004; Joseph Jezak <josejx@gentoo.org> gnomame-1.00_beta6.ebuild:
   Added ~ppc.
