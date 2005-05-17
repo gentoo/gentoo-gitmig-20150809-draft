@@ -1,0 +1,27 @@
+--- jmcce-1.4RC2/src/jmcce.c	2002-05-17 19:09:14.000000000 +0100
++++ jmcce-1.4RC2/src/jmcce.c	2005-05-17 11:56:53.529200009 +0100
+@@ -33,6 +33,24 @@
+ #include <linux/major.h>
+ #include <linux/keyboard.h>
+ 
++#ifndef MINORBITS
++#define MINORBITS       20
++#endif
++
++#ifndef MINORMASK
++#define MINORMASK       ((1U << MINORBITS) - 1)
++#endif
++
++#ifndef MAJOR
++#define MAJOR(dev)      ((unsigned int) ((dev) >> MINORBITS))
++#endif
++
++#ifndef MINOR
++#define MINOR(dev)      ((unsigned int) ((dev) & MINORMASK))
++#endif
++
++
++
+ #include "jmcce.h"
+ #include "draw.h"
+ #include "hbffont.h"

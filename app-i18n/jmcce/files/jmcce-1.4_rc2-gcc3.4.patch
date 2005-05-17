@@ -1,0 +1,11 @@
+--- jmcce-1.4RC2/util/tit2tui.c	2002-05-15 14:44:30.000000000 +0100
++++ jmcce-1.4RC2/util/tit2tui.c	2005-05-17 11:58:23.788480553 +0100
+@@ -24,7 +24,7 @@
+ #include <stdarg.h>
+ int average( int first, ... );
+ #else                   //* UNIX compatible version          
+-#include <varargs.h>
++#include <stdarg.h>
+ int average( va_list );
+ #endif
+ 

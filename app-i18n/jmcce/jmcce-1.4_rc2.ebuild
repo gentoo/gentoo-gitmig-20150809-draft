@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/jmcce/jmcce-1.4_rc2.ebuild,v 1.9 2005/01/01 14:31:40 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/jmcce/jmcce-1.4_rc2.ebuild,v 1.10 2005/05/17 11:16:36 liquidx Exp $
 
-inherit gcc eutils
+inherit toolchain-funcs eutils
 
 MY_P=${P/_rc/RC}
 S=${WORKDIR}/${MY_P}
@@ -28,9 +28,13 @@ src_unpack() {
 	if [ `gcc-version` = "3.3" ] ; then
 		epatch ${FILESDIR}/${P}-gcc3-gentoo.diff
 	fi
+	epatch ${FILESDIR}/${P}-gcc3.4.patch
+	epatch ${FILESDIR}/${P}-kernel.patch
 }
 
 src_compile() {
+	export WANT_AUTOMAKE=1.4 
+	export WANT_AUTOCONF=2.5
 	sed -i "s:automake:automake-1.4:g" genconf.sh || die "sed"
 	./genconf.sh || die "genconf.sh failed"
 	econf --sysconfdir=/etc/jmcce || die "econf failed"
