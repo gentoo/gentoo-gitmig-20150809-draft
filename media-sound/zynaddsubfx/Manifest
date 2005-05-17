@@ -1,16 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 f622451cdbc5a0e91a3887aec87466fc ChangeLog 3735
+MD5 0766e59e278c9b9355640fcef9d8bbd9 ChangeLog 3884
 MD5 b8e8840d85a9f1bb2aa2f6a7b51b58da metadata.xml 245
+MD5 e91a88f7fe305098901835415243087a zynaddsubfx-2.2.1-r1.ebuild 2006
 MD5 f50c5197d6350225030c0aa076821245 zynaddsubfx-2.2.0.ebuild 2037
 MD5 0960f560e5bc4503d4b052d6206bde8e zynaddsubfx-2.2.1.ebuild 2037
+MD5 b7937486c8ddf39c8bd6bf206b97a663 files/digest-zynaddsubfx-2.2.1-r1 70
 MD5 29b8e0c987fa509a0fc56badd44de8a0 files/digest-zynaddsubfx-2.2.0 70
 MD5 b7937486c8ddf39c8bd6bf206b97a663 files/digest-zynaddsubfx-2.2.1 70
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCeAbz+uC/ViVka/0RAn67AJ9RNrD0lFiXgsM2nAcK6rWxKHqx+wCfbwBF
-nx0nJiK4nb1Nd+wZnD7onIo=
-=1Diw
+iD8DBQFCinAN+uC/ViVka/0RAnaTAKCr9JqDfcpCAO1XPiu6w8KYPgnelwCfZdnr
+PzMPknSPQMv5Hm4Zp4tNXTE=
+=hGq0
 -----END PGP SIGNATURE-----
