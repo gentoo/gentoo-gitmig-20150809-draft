@@ -1,0 +1,14 @@
+--- old/dbd/myMsql.h	2005-03-19 04:23:22.110318632 +0100
++++ Msql-Mysql-modules-1.2219/dbd/myMsql.h	2005-03-19 04:28:42.856557792 +0100
+@@ -117,7 +117,11 @@
+ #define MyGetHostInfo(s) mysql_get_host_info(s)
+ #define MyGetServerInfo(s) mysql_get_server_info(s)
+ #define MyGetProtoInfo(s) mysql_get_proto_info(s)
++#if MYSQL_VERSION_ID>=40103
++#define MyShutdown(s) mysql_shutdown(s, SHUTDOWN_DEFAULT)
++#else
+ #define MyShutdown(s) mysql_shutdown(s)
++#endif
+ #ifdef REFRESH_GRANT
+ #define MyReload(s) mysql_refresh(s, \
+ 				  REFRESH_GRANT|REFRESH_LOG|REFRESH_TABLES)
