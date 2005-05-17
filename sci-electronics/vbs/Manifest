@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 405f641db8cc001f5cab9f08436ef2fd ChangeLog 799
-MD5 0236ab0b58b1adbbf8deaa848b8d97ed vbs-1.4.0.ebuild 865
 MD5 e49bb02132d2cd74ad4e6ee291e102d9 metadata.xml 220
+MD5 d33a1657cc9b482bde11c30bb59344d4 ChangeLog 887
+MD5 d2fc9be13f4c20590cb7a769d99239b6 vbs-1.4.0.ebuild 862
 MD5 22a114171374699f394635225aecca7e files/digest-vbs-1.4.0 61
 MD5 0afd4a3b8f7839b7a339d2a1f1353bc4 files/vbs-gcc-3.4.patch 1658
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFB0Ho0I1lqEGTUzyQRAkN6AJ9CQG5toH6pjiII31my7kKeBhURUQCgpqp3
-O+eJ7J+nIgDFuURfER8ie3M=
-=qRrK
------END PGP SIGNATURE-----
