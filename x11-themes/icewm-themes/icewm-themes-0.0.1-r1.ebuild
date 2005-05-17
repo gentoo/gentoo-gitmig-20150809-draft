@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/icewm-themes/icewm-themes-0.0.1-r1.ebuild,v 1.1 2005/04/06 13:43:02 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/icewm-themes/icewm-themes-0.0.1-r1.ebuild,v 1.2 2005/05/17 21:25:26 luckyduck Exp $
 
 DESCRIPTION="Collection of IceWM themes"
 HOMEPAGE="http://www.icewm.org/
@@ -24,7 +24,7 @@ SLOT="0"
 # greyscaled -> Public Domain
 # 1in1-xp -> freedist
 LICENSE="GPL-2 public-domain freedist"
-KEYWORDS="~x86 ~ppc ~amd64"
+KEYWORDS="~x86 ~ppc amd64"
 
 IUSE=""
 

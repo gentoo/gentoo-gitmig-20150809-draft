@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/icewm-themes
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/icewm-themes/ChangeLog,v 1.6 2005/04/06 13:43:02 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/icewm-themes/ChangeLog,v 1.7 2005/05/17 21:25:26 luckyduck Exp $
+
+  17 May 2005; Jan Brinkmann <luckyduck@gentoo.org>
+  icewm-themes-0.0.1-r1.ebuild:
+  stable on amd64
 
 *icewm-themes-0.0.1-r1 (06 Apr 2005)
 

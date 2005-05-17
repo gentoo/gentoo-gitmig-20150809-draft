@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 9f2aaa9e9e6408b05a19c29348426ee8 icewm-themes-0.0.1.ebuild 1489
+MD5 7ce0e06ed706c42b6ce0c355148db920 icewm-themes-0.0.1-r1.ebuild 1794
+MD5 98d74df15cc584f2e319fde9d012991d ChangeLog 1049
 MD5 e7307c1653035014c1e36a27ca8ccb45 metadata.xml 163
-MD5 812cee42d09ce372a6c39c108f88908e ChangeLog 942
-MD5 5b26adf222419d69760e67aee1b03510 icewm-themes-0.0.1-r1.ebuild 1791
-MD5 d14ff82e938f12b19e43f396d3244390 files/digest-icewm-themes-0.0.1 419
 MD5 d14ff82e938f12b19e43f396d3244390 files/digest-icewm-themes-0.0.1-r1 419
+MD5 d14ff82e938f12b19e43f396d3244390 files/digest-icewm-themes-0.0.1 419
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCimFZ06ebR+OMO78RAuIVAKCGd1SiHtACl8W6jSrKx55Tv1vUCQCeIelM
+mfkuuCrI2SBzW7fyy7xjXoE=
+=CJSS
+-----END PGP SIGNATURE-----
