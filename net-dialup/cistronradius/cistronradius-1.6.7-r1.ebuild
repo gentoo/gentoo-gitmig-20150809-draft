@@ -1,33 +1,35 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/cistronradius/cistronradius-1.6.7.ebuild,v 1.7 2005/05/06 15:04:05 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/cistronradius/cistronradius-1.6.7-r1.ebuild,v 1.1 2005/05/17 19:32:56 mrness Exp $
 
-IUSE=""
-
-S="${WORKDIR}/radiusd-cistron-${PV}/src"
 DESCRIPTION="An authentication and accounting server for terminal servers that speak the RADIUS protocol."
 SRC_URI="ftp://ftp.radius.cistron.nl/pub/radius/radiusd-cistron-${PV}.tar.gz"
 HOMEPAGE="http://www.radius.cistron.nl/"
-KEYWORDS="x86 -*"
+
 LICENSE="GPL-2"
 SLOT="0"
+IUSE=""
+KEYWORDS="x86 -*"
 
 DEPEND="!net-dialup/freeradius
 	!net-dialup/gnuradius
 	virtual/libc
 	>=sys-apps/sed-4"
 
-src_unpack() {
-	unpack ${A} ; cd ${S}
+S="${WORKDIR}/radiusd-cistron-${PV}/src"
 
+src_unpack() {
+	unpack ${A}
+
+	cd ${S}
 	sed -i -e "s:/usr/local:/usr:g" \
-	-e "s:-Wall -g:${CFLAGS}:g" \
-	Makefile || die
+		-e "s:-Wall -g:${CFLAGS}:g" Makefile
+	sed -i -e "s:SHAREDIR/::g" ../raddb/dictionary
 	mv checkrad.pl checkrad
 }
 
 src_compile() {
-	emake || die
+	emake || die "make failed"
 }
 
 src_install() {
