@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gecko-sharp/gecko-sharp-0.7-r1.ebuild,v 1.1 2005/05/07 13:27:54 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gecko-sharp/gecko-sharp-0.7-r1.ebuild,v 1.2 2005/05/17 15:21:20 slarti Exp $
 
 inherit mono eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.go-mono.com/archive/1.1.5/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="2"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ~ppc ~amd64"
 IUSE=""
 
 DEPEND=">=dev-lang/mono-1.0
