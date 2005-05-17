@@ -1,22 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 61bda52eab0d631b51e8e22e03f27546 ChangeLog 9240
-MD5 e922d503cc930d4c086d8610fd15da1e at-spi-1.6.2-r1.ebuild 759
+MD5 720d4ffd8e3bf0a53cd30f5a2d3daef0 ChangeLog 9324
 MD5 e09db9a3ea26d5737e16ccfc69ca1230 at-spi-1.4.2.ebuild 738
-MD5 e1e149761f0e42b5f66bba5e6149e24f at-spi-1.6.3.ebuild 800
-MD5 5253659a4a0e45baa9f1788dcb705895 metadata.xml 172
 MD5 670658920bf752556a8a8b67083c99e8 at-spi-1.6.1.ebuild 733
+MD5 e922d503cc930d4c086d8610fd15da1e at-spi-1.6.2-r1.ebuild 759
+MD5 4696ecaac500052a2e152daa9da24242 at-spi-1.6.3.ebuild 797
 MD5 8378a51593a9bdb84446bee6eea19149 at-spi-1.6.4.ebuild 803
-MD5 365985ef25775753dab336fc7ad8dc04 files/digest-at-spi-1.6.3 65
-MD5 8589472b96bc88cc2156e9f0e06786aa files/digest-at-spi-1.6.1 65
+MD5 5253659a4a0e45baa9f1788dcb705895 metadata.xml 172
 MD5 be2e44c0d8b92adea62569c44d62d4f9 files/digest-at-spi-1.4.2 65
+MD5 8589472b96bc88cc2156e9f0e06786aa files/digest-at-spi-1.6.1 65
 MD5 db394022f62d0eabf7d1b4ee7b8cedcd files/digest-at-spi-1.6.2-r1 65
+MD5 365985ef25775753dab336fc7ad8dc04 files/digest-at-spi-1.6.3 65
 MD5 8746d394d6122dd05e7ee86223621db7 files/digest-at-spi-1.6.4 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFCiP3ZKRy60XGEcJIRAlF5AJ4vUsqISp7FyvTe8EmBfi7EdPtQpwCff7mM
-zLMxkY0QDZYsxAFrt6brxS4=
-=2YA+
------END PGP SIGNATURE-----
