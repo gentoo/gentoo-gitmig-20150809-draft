@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/gnome-pilot/gnome-pilot-0.1.71.ebuild,v 1.6 2005/01/01 15:43:12 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/gnome-pilot/gnome-pilot-0.1.71.ebuild,v 1.7 2005/05/17 17:13:35 liquidx Exp $
 
 
 DESCRIPTION="Gnome Pilot apps"
@@ -29,7 +29,8 @@ src_unpack() {
 	cd ${S}
 	# USB patch from Mandrake.  Allows gnome-pilot to watch /dev/pilot even
 	# when it does not yet exist (because of using devfs).
-	patch -p1 < ${FILESDIR}/gnome-pilot-0.1.70-usb.patch
+	epatch ${FILESDIR}/gnome-pilot-0.1.70-usb.patch
+	#epatch ${FILESDIR}/gnome-pilot-0.1.71-logmacro.patch
 }
 
 src_compile() {

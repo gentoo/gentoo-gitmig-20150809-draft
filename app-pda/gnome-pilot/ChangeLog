@@ -1,6 +1,12 @@
 # ChangeLog for app-pda/gnome-pilot
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/gnome-pilot/ChangeLog,v 1.18 2005/01/01 15:43:12 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/gnome-pilot/ChangeLog,v 1.19 2005/05/17 17:13:35 liquidx Exp $
+
+*gnome-pilot-2.0.13 (17 May 2005)
+
+  17 May 2005; Alastair Tse <liquidx@gentoo.org> gnome-pilot-0.1.71.ebuild,
+  +gnome-pilot-2.0.13.ebuild:
+  version bump
 
   22 Sep 2004; Alastair Tse <liquidx@gentoo.org>
   +files/gnome-pilot-2.0.12-zire31.patch, gnome-pilot-2.0.12.ebuild:
