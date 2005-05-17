@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Find-Rule/File-Find-Rule-0.28.ebuild,v 1.7 2005/03/16 15:56:07 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Find-Rule/File-Find-Rule-0.28.ebuild,v 1.8 2005/05/17 15:56:13 mcummings Exp $
 
 inherit perl-module
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.cpan.org/modules/by-authors/id/R/RC/RCLAMP/${P}.readme"
 
 SLOT="0"
 LICENSE="|| ( Artistic GPL-2 )"
-KEYWORDS="~x86 ~alpha ~hppa ~mips ~ppc ~sparc ~ppc64 ~amd64"
+KEYWORDS="x86 ~alpha ~hppa ~mips ~ppc ~sparc ~ppc64 ~amd64"
 IUSE=""
 
 SRC_TEST="do"
