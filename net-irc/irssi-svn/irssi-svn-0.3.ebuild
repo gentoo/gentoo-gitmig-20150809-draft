@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi-svn/irssi-svn-0.3.ebuild,v 1.2 2005/05/15 02:10:22 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi-svn/irssi-svn-0.3.ebuild,v 1.3 2005/05/17 16:06:51 swegener Exp $
 
 inherit subversion perl-module
 
@@ -18,6 +18,7 @@ IUSE="ipv6 perl ssl"
 RDEPEND=">=dev-libs/glib-2.2.1
 	sys-libs/ncurses
 	perl? ( dev-lang/perl )
+	ssl? ( dev-libs/openssl )
 	!net-irc/irssi
 	!net-irc/irssi-cvs"
 DEPEND="${RDEPEND}
@@ -28,7 +29,6 @@ src_compile() {
 	export WANT_AUTOCONF=2.5
 
 	econf \
-		--with-glib2 \
 		--with-proxy \
 		--with-ncurses \
 		$(use_with perl) \
