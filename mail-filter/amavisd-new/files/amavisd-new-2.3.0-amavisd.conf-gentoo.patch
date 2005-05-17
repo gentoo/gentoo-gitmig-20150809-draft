@@ -83,7 +83,7 @@
  #   (the default value is undef, meaning no quarantine)
  #
 -$QUARANTINEDIR = '/var/virusmails';
-+$QUARANTINEDIR = '$MYHOME/quarantine';
++$QUARANTINEDIR = "$MYHOME/quarantine";
  
  #$quarantine_subdir_levels = 1;  # add level of subdirs to disperse quarantine
  

@@ -5,7 +5,7 @@ MD5 87297b41220ddf4c040cf389daec28a3 amavisd-new-2.3.1.ebuild 4914
 MD5 1a4094b9cdba0a76b97e7efe8b193ca2 amavisd-new-2.2.1-r2.ebuild 5080
 MD5 5c214c88c92ca3d187dac35c86e9a3b6 amavisd-new-2.3.0.ebuild 4928
 MD5 0d78e40f5c429dce29343001eca9444a amavisd-new-2.2.1-r1.ebuild 4813
-MD5 9642cea0f472fbcbf0146f44d15b1edf ChangeLog 9790
+MD5 28b8efddfe937c03049fb1595ae32ee7 ChangeLog 9993
 MD5 7e32edfd72887a57b16ecd73f0f7a1a0 metadata.xml 184
 MD5 13b88011aa82860b7be5c6f44051d162 amavisd-new-2.2.1.ebuild 4802
 MD5 1f1f4cf9c92f92f966361a8ac08aa543 files/amavisd.rc6 305
@@ -16,11 +16,11 @@ MD5 20d1361125dc21db61b44dec3a13dea2 files/digest-amavisd-new-2.3.0 69
 MD5 d7ee87336e865f363c430fc60f105d44 files/digest-amavisd-new-2.3.1 69
 MD5 1ec247b48d1de4fdbc2a57fc9b338681 files/digest-amavisd-new-2.2.1-r1 69
 MD5 1ec247b48d1de4fdbc2a57fc9b338681 files/digest-amavisd-new-2.2.1-r2 69
-MD5 13504b8528cc13c668935ff82a0680f1 files/amavisd-new-2.3.0-amavisd.conf-gentoo.patch 6687
+MD5 a9c49eb16b5fa7dfecd54a436bc07200 files/amavisd-new-2.3.0-amavisd.conf-gentoo.patch 6687
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCgMu0QlM6RnzZP+IRAk4PAJoCpaklQV3nL8CgGa45KQW2wQ+8ogCgjfCH
-XHy8rRuIiEXxlxCAiySc5Is=
-=C4W9
+iD8DBQFCimr1QlM6RnzZP+IRApSxAJ9yB9j3xxM6IQ1HwGkG/BDMTfWm5ACfUcKQ
+9AL/7G0rwo6g90XzL6I05eg=
+=jbxi
 -----END PGP SIGNATURE-----
