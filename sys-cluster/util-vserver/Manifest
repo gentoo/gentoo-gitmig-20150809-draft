@@ -7,7 +7,7 @@ MD5 3d6eec0e3d10c7a6e4a95e448c03a06e util-vserver-0.30.196.ebuild 1268
 MD5 5eb10d9678fd96a1f56d1eb157b3994a util-vserver-0.30.204.ebuild 1285
 MD5 5460093cd5050c0938518baa9a56cb55 util-vserver-0.30.205.ebuild 1284
 MD5 ffa3b0d66e0441fd8868b1c668acf50f util-vserver-0.30.205-r1.ebuild 1762
-MD5 d29670e45219820413838229eab03b48 util-vserver-0.30.207.ebuild 1788
+MD5 79b21ee42f1c59c4dce8c765fc6a860f util-vserver-0.30.207.ebuild 1805
 MD5 8de53dd957127f3ba125f733c1b7389b files/vservers.initd 1792
 MD5 3d9c604f30a2de02a9fc6e99b4b9aefd files/vservers.confd 1738
 MD5 0f34731a7d8119fc5e3f9322bf727521 files/digest-util-vserver-0.30.196 74
@@ -21,7 +21,7 @@ MD5 4096356a4cb49d0ec50eee25c925d24f files/0.30.205/vprocunhide 579
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCidTsmPFBzbX68WERAozxAJ48I0qPheaFfdTl/RdabxYjICg5ZgCcDl/2
-o7mcFGl/50gskrGRErtidnA=
-=AhbN
+iD8DBQFCildumPFBzbX68WERAscdAJ9ZyGWNZTiJcnJM6hs9sLlz7RKMtQCeNuhd
+5x1/xW8jpi6hmPoB+5sTgtQ=
+=uAFv
 -----END PGP SIGNATURE-----
