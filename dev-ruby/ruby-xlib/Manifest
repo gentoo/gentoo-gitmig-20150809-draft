@@ -1,3 +1,15 @@
-MD5 4b28d9873c4acfde3cd5aafc922f55e2 ruby-xlib-0.6.15.ebuild 530
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 4396c62bd8da22f263247e088387a169 ChangeLog 453
+MD5 cd4d803f163d5ed23c4d688fc404424a ruby-xlib-0.6.15.ebuild 544
+MD5 3eec9f3fe48b51f49dbc1f171a3b026f metadata.xml 157
 MD5 c0c8349ab8a42f9be82e6194d48c153f files/digest-ruby-xlib-0.6.15 68
 MD5 af2eecf2be1cd26391958d1920874154 files/ruby-xlib-0.6.15-gcc.patch 296
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCikzEBXaUFmZvwyMRAuTKAJ9hTyJr7Wyuoh4lN8d/HkTenNEiigCgvsCR
+JNrGhXEYWcyXWInpwl6Ls9w=
+=JxQF
+-----END PGP SIGNATURE-----
