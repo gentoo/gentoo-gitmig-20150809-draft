@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libemf
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libemf/ChangeLog,v 1.8 2005/03/26 04:25:26 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libemf/ChangeLog,v 1.9 2005/05/17 07:29:22 phosphan Exp $
+
+  17 May 2005; Patrick Kursawe <phosphan@gentoo.org> libemf-1.0.ebuild:
+  Removing unnecessary "inherit gcc".
 
   26 Mar 2005; Jason Wever <weeve@gentoo.org> libemf-1.0.ebuild:
   Added ~sparc keyword wrt bug #86280.
