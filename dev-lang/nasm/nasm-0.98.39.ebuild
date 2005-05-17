@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/nasm/nasm-0.98.39.ebuild,v 1.5 2005/05/11 20:17:19 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/nasm/nasm-0.98.39.ebuild,v 1.6 2005/05/17 22:55:31 mr_bones_ Exp $
 
 inherit toolchain-funcs
 
@@ -28,7 +28,11 @@ src_unpack() {
 			configure \
 			|| die "sed failed"
 	fi
-
+	#security fix for bug #92991
+	sed -i \
+		-e '/vsprintf/c\    vsnprintf(buffer, sizeof(buffer), format, ap);
+		' output/outieee.c \
+		|| die "sed failed"
 }
 
 src_compile() {
