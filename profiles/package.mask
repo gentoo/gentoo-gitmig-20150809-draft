@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3976 2005/05/16 20:44:07 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3977 2005/05/17 07:05:16 mr_bones_ Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -245,10 +245,6 @@ app-portage/basc
 # Before adding for testing ;)
 =dev-libs/apr-1.1.1
 =dev-libs/apr-util-1.1.2
-
-# <mr_bones_@gentoo.org> (10 Apr 2005)
-# Before adding for testing.
->=net-firewall/firestarter-1.0
 
 # Jeremy Huddleston <eradicator@gentoo.org> (09 Apr 2005)
 # Hangs in setup.sh sometimes...
