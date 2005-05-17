@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/rdesktop
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rdesktop/ChangeLog,v 1.51 2005/05/14 23:18:23 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rdesktop/ChangeLog,v 1.52 2005/05/17 18:26:34 hansmi Exp $
+
+  17 May 2005; Michael Hanselmann <hansmi@gentoo.org>
+  rdesktop-1.4.0-r1.ebuild:
+  Stable on ppc.
 
   14 May 2005; Jason Wever <weeve@gentoo.org> rdesktop-1.4.0-r1.ebuild:
   Stable on SPARC.
