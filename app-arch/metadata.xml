@@ -13,5 +13,9 @@
 		The app-arch categorie bevat applicaties met betrekking tot het
 		archiveren en comprimeren van bestanden.
 	</longdescription>
+	<longdescription lang="vi">
+		Nhóm app-arch chứa những công cụ để lưu trữ, nén và
+		giải nén các tập tin hoặc nhóm các tập tin.
+	</longdescription>
 </catmetadata>
 
