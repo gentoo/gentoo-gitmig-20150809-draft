@@ -23,5 +23,10 @@
   <name>Adam Mondl</name>
   <description>Maintainer 2.6.x</description>
 </maintainer>
+<maintainer>
+	<email>johnm@gentoo.org</email>
+	<name>John Mylchreest</name>
+	<description>Maintainer 2.6.x, Kernel Liason</description>
+</maintainer>
 <longdescription>This kernel source is the security hardened version of the Linux Kernel.</longdescription>
 </pkgmetadata>

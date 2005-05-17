@@ -1,6 +1,14 @@
 # ChangeLog for sys-kernel/hardened-sources
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.54 2005/04/29 12:28:27 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.55 2005/05/17 19:21:33 johnm Exp $
+
+*hardened-sources-2.6.11-r12 (17 May 2005)
+
+  17 May 2005; John Mylchreest <johnm@gentoo.org>
+  -hardened-sources-2.6.10-r3.ebuild, -hardened-sources-2.6.11-r1.ebuild,
+  +hardened-sources-2.6.11-r12.ebuild:
+  Cleanup older sources. Update to 2.6.11.10 - fixes several sec vulns. Also
+  merges in genpatches-base
 
   29 Apr 2005; <solar@gentoo.org> -files/2.4.27-CAN-2004-0394.patch,
   -files/2.4.27-cmdline-race.patch,
