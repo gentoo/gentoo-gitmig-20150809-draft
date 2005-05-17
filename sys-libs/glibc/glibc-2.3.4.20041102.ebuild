@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20041102.ebuild,v 1.52 2005/05/17 00:52:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20041102.ebuild,v 1.53 2005/05/17 22:33:51 vapier Exp $
 
 inherit eutils multilib flag-o-matic toolchain-funcs versionator
 
@@ -69,7 +69,7 @@ RDEPEND="virtual/os-headers
 # until amd64's 2004.3 is purged out of existence
 PDEPEND="amd64? ( multilib? ( app-emulation/emul-linux-x86-glibc ) )"
 
-PROVIDE="virtual/glibc virtual/libc"
+PROVIDE="virtual/libc"
 
 # We need to be able to set alternative headers for
 # compiling for non-native platform

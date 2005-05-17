@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20050125.ebuild,v 1.40 2005/05/17 00:52:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20050125.ebuild,v 1.41 2005/05/17 22:33:51 vapier Exp $
 
 KEYWORDS="~amd64 ~mips ~sparc ~x86 -ppc"
 
@@ -28,7 +28,7 @@ LICENSE="LGPL-2"
 
 IUSE="nls pic build nptl nptlonly erandom hardened debug userlocales nomalloccheck multilib"
 
-PROVIDE="virtual/glibc virtual/libc"
+PROVIDE="virtual/libc"
 
 export CBUILD=${CBUILD:-${CHOST}}
 if [[ ${CBUILD} = ${CHOST} ]] ; then

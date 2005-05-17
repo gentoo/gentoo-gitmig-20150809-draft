@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040619-r2.ebuild,v 1.14 2005/05/17 00:52:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040619-r2.ebuild,v 1.15 2005/05/17 22:33:51 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -61,7 +61,7 @@ DEPEND=">=sys-devel/gcc-3.2.3-r1
 RDEPEND="virtual/os-headers
 	nls? ( sys-devel/gettext )"
 
-PROVIDE="virtual/glibc virtual/libc"
+PROVIDE="virtual/libc"
 
 
 # Theoretical cross-compiler support

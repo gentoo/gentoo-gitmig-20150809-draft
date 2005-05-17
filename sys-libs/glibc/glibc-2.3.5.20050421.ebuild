@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.5.20050421.ebuild,v 1.10 2005/05/17 00:52:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.5.20050421.ebuild,v 1.11 2005/05/17 22:33:51 vapier Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -504,6 +504,7 @@ toolchain-glibc_src_install() {
 	# simple test to make sure our new glibc isnt completely broken.
 	# for now, skip the multilib scenario.  also make sure we don't
 	# test with statically built binaries since they will fail.
+	[[ ${CBUILD} != ${CHOST} ]] && return 0
 	[[ $(get_libdir) != "lib" ]] && return 0
 	for x in date env ls true uname ; do
 		x=$(type -p ${x})
