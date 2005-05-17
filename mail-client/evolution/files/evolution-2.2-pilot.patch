@@ -1,0 +1,18 @@
+--- configure	2005-03-17 18:26:02.000000000 +0000
++++ configure	2005-05-17 17:33:29.821812516 +0100
+@@ -26110,13 +26110,13 @@
+ 
+             echo "$as_me:$LINENO: checking GNOME_PILOT_CFLAGS" >&5
+ echo $ECHO_N "checking GNOME_PILOT_CFLAGS... $ECHO_C" >&6
+-            GNOME_PILOT_CFLAGS=`$PKG_CONFIG --cflags "gnome-pilot-2.0"`
++            GNOME_PILOT_CFLAGS=`$PKG_CONFIG --cflags gnome-pilot-2.0 glib-2.0 gnome-vfs-2.0 libgnome-2.0 ORBit-2.0 gtk+-2.0`
+             echo "$as_me:$LINENO: result: $GNOME_PILOT_CFLAGS" >&5
+ echo "${ECHO_T}$GNOME_PILOT_CFLAGS" >&6
+ 
+             echo "$as_me:$LINENO: checking GNOME_PILOT_LIBS" >&5
+ echo $ECHO_N "checking GNOME_PILOT_LIBS... $ECHO_C" >&6
+-            GNOME_PILOT_LIBS=`$PKG_CONFIG --libs "gnome-pilot-2.0"`
++            GNOME_PILOT_LIBS=`$PKG_CONFIG --libs gnome-pilot-2.0 glib-2.0 gnome-vfs-2.0 libgnome-2.0 ORBit-2.0 gtk+-2.0`
+             echo "$as_me:$LINENO: result: $GNOME_PILOT_LIBS" >&5
+ echo "${ECHO_T}$GNOME_PILOT_LIBS" >&6
+         else

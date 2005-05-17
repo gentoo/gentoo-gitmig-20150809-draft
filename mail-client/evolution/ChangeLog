@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/evolution
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.66 2005/05/11 15:43:17 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.67 2005/05/17 17:12:51 liquidx Exp $
+
+  17 May 2005; Alastair Tse <liquidx@gentoo.org>
+  +files/evolution-2.2-pilot.patch, evolution-2.2.1.1.ebuild:
+  add patch to fix breakage for gnome-pilot
 
   11 May 2005; Guy Martin <gmsoft@gentoo.org> evolution-2.0.4.ebuild:
   Stable on hppa.
