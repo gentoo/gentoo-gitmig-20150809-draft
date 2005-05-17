@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/elfutils
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/ChangeLog,v 1.54 2005/05/17 15:05:59 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/ChangeLog,v 1.55 2005/05/17 17:36:48 solar Exp $
+
+  17 May 2005; <solar@gentoo.org> +files/elfutils-0.108-robustify2.patch,
+  elfutils-0.108.ebuild:
+  - add additional incremental from Jakub which solves remaining regression
+  failure with elfutils that we found. This version or a 0.109 is what arches
+  will want to mark stable in general
 
 *elfutils-0.108 (17 May 2005)
 

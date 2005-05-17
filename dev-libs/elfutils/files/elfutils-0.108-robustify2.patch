@@ -1,0 +1,327 @@
+2005-05-17  Jakub Jelinek  <jakub@redhat.com>
+
+	* elf32_getphdr.c (elfw2(LIBELFBITS,getphdr)): Check if program header
+	table fits into object's bounds.
+	* elf_getshstrndx.c (elf_getshstrndx): Add elf->start_offset to
+	elf->map_address.  Check if first section header fits into object's
+	bounds.
+	* elf32_getshdr.c (elfw2(LIBELFBITS,getshdr)): Fix comment pasto.
+	Check if section header table fits into object's bounds.
+	* elf_begin.c (get_shnum): Fail if maxsize is smaller than ELF headers.
+	Ensure first section header fits into object's bounds.
+	(file_read_elf): Make sure scncnt is small enough to allocate both
+	ElfXX_Shdr and Elf_Scn array.  Make sure section and program header
+	tables fit into object's bounds.  Avoid memory leak on failure.
+
+	* elflint.c (check_hash): Don't check entries beyond end of section.
+	(check_note): Don't crash if gelf_rawchunk fails.
+	(section_name): Return <invalid> if gelf_getshdr returns NULL.
+
+--- elfutils-0.108/libelf/elf32_getphdr.c.jj	2005-02-06 10:14:52.000000000 +0100
++++ elfutils-0.108/libelf/elf32_getphdr.c	2005-05-17 16:53:41.000000000 +0200
+@@ -80,6 +80,16 @@ elfw2(LIBELFBITS,getphdr) (elf)
+ 
+       if (elf->map_address != NULL)
+ 	{
++	  /* First see whether the information in the ELF header is
++	     valid and it does not ask for too much.  */
++	  if (unlikely (ehdr->e_phoff >= elf->maximum_size)
++	      || unlikely (ehdr->e_phoff + size > elf->maximum_size))
++	    {
++	      /* Something is wrong.  */
++	      __libelf_seterrno (ELF_E_INVALID_PHDR);
++	      goto out;
++	    }
++
+ 	  /* All the data is already mapped.  Use it.  */
+ 	  if (ehdr->e_ident[EI_DATA] == MY_ELFDATA
+ 	      && (ALLOW_UNALIGNED
+--- elfutils-0.108/libelf/elf_getshstrndx.c.jj	2004-01-05 21:45:05.000000000 +0100
++++ elfutils-0.108/libelf/elf_getshstrndx.c	2005-05-17 15:42:32.000000000 +0200
+@@ -1,5 +1,5 @@
+ /* Return section index of section header string table.
+-   Copyright (C) 2002 Red Hat, Inc.
++   Copyright (C) 2002, 2005 Red Hat, Inc.
+    Written by Ulrich Drepper <drepper@redhat.com>, 2002.
+ 
+    This program is free software; you can redistribute it and/or modify
+@@ -90,10 +90,25 @@ elf_getshstrndx (elf, dst)
+ 	      if (elf->map_address != NULL
+ 		  && elf->state.elf32.ehdr->e_ident[EI_DATA] == MY_ELFDATA
+ 		  && (ALLOW_UNALIGNED
+-		      || (((size_t) ((char *) elf->map_address + offset))
++		      || (((size_t) ((char *) elf->map_address
++			   + elf->start_offset + offset))
+ 			  & (__alignof__ (Elf32_Shdr) - 1)) == 0))
+-		/* We can directly access the memory.  */
+-		num = ((Elf32_Shdr *) (elf->map_address + offset))->sh_link;
++		{
++		  /* First see whether the information in the ELF header is
++		     valid and it does not ask for too much.  */
++		  if (unlikely (offset + sizeof (Elf32_Shdr)
++				> elf->maximum_size))
++		    {
++		      /* Something is wrong.  */
++		      __libelf_seterrno (ELF_E_INVALID_SECTION_HEADER);
++		      result = -1;
++		      goto out;
++		    }
++
++		  /* We can directly access the memory.  */
++		  num = ((Elf32_Shdr *) (elf->map_address + elf->start_offset
++			 + offset))->sh_link;
++		}
+ 	      else
+ 		{
+ 		  /* We avoid reading in all the section headers.  Just read
+@@ -129,10 +144,25 @@ elf_getshstrndx (elf, dst)
+ 	      if (elf->map_address != NULL
+ 		  && elf->state.elf64.ehdr->e_ident[EI_DATA] == MY_ELFDATA
+ 		  && (ALLOW_UNALIGNED
+-		      || (((size_t) ((char *) elf->map_address + offset))
++		      || (((size_t) ((char *) elf->map_address
++			   + elf->start_offset + offset))
+ 			  & (__alignof__ (Elf64_Shdr) - 1)) == 0))
+-		/* We can directly access the memory.  */
+-		num = ((Elf64_Shdr *) (elf->map_address + offset))->sh_link;
++		{
++		  /* First see whether the information in the ELF header is
++		     valid and it does not ask for too much.  */
++		  if (unlikely (offset + sizeof (Elf64_Shdr)
++				> elf->maximum_size))
++		    {
++		      /* Something is wrong.  */
++		      __libelf_seterrno (ELF_E_INVALID_SECTION_HEADER);
++		      result = -1;
++		      goto out;
++		    }
++
++		  /* We can directly access the memory.  */
++		  num = ((Elf64_Shdr *) (elf->map_address
++			 + elf->start_offset + offset))->sh_link;
++		}
+ 	      else
+ 		{
+ 		  /* We avoid reading in all the section headers.  Just read
+--- elfutils-0.108/libelf/elf32_getshdr.c.jj	2005-05-14 00:32:57.000000000 +0200
++++ elfutils-0.108/libelf/elf32_getshdr.c	2005-05-17 15:27:52.000000000 +0200
+@@ -71,7 +71,7 @@ elfw2(LIBELFBITS,getshdr) (scn)
+ 	goto out;
+       size_t size = shnum * sizeof (ElfW2(LIBELFBITS,Shdr));
+ 
+-      /* Allocate memory for the program headers.  We know the number
++      /* Allocate memory for the section headers.  We know the number
+ 	 of entries from the ELF header.  */
+       ElfW2(LIBELFBITS,Shdr) *shdr = elf->state.ELFW(elf,LIBELFBITS).shdr =
+ 	(ElfW2(LIBELFBITS,Shdr) *) malloc (size);
+@@ -93,6 +93,16 @@ elfw2(LIBELFBITS,getshdr) (scn)
+ 		      && (ehdr->e_shoff
+ 			  & (__alignof__ (ElfW2(LIBELFBITS,Shdr)) - 1)) != 0));
+ 
++	  /* First see whether the information in the ELF header is
++	     valid and it does not ask for too much.  */
++	  if (unlikely (ehdr->e_shoff >= elf->maximum_size)
++	      || unlikely (ehdr->e_shoff + size > elf->maximum_size))
++	    {
++	      /* Something is wrong.  */
++	      __libelf_seterrno (ELF_E_INVALID_SECTION_HEADER);
++	      goto free_and_out;
++	    }
++
+ 	  /* Now copy the data and at the same time convert the byte
+ 	     order.  */
+ 	  if (ALLOW_UNALIGNED
+--- elfutils-0.108/libelf/elf_begin.c.jj	2005-05-17 16:18:51.000000000 +0200
++++ elfutils-0.108/libelf/elf_begin.c	2005-05-17 17:31:37.000000000 +0200
+@@ -77,7 +77,11 @@ get_shnum (void *map_address, unsigned c
+ 	  || (((size_t) ((char *) map_address + offset))
+ 	      & ((is32 ? __alignof__ (Elf32_Ehdr) : __alignof__ (Elf64_Ehdr))
+ 		 - 1)) == 0))
+-    ehdr.p = (char *) map_address + offset;
++    {
++      ehdr.p = (char *) map_address + offset;
++      if (maxsize < (is32 ? sizeof (Elf32_Ehdr) : sizeof (Elf64_Ehdr)))
++	return (size_t) -1l;
++    }
+   else
+     {
+       /* We have to read the data from the file.  */
+@@ -111,7 +115,8 @@ get_shnum (void *map_address, unsigned c
+ 
+       if (unlikely (result == 0) && ehdr.e32->e_shoff != 0)
+ 	{
+-	  if (offset + ehdr.e32->e_shoff + sizeof (Elf32_Shdr) > maxsize)
++	  if (unlikely (ehdr.e32->e_shoff >= maxsize)
++	      || unlikely (ehdr.e32->e_shoff + sizeof (Elf32_Shdr) > maxsize))
+ 	    /* Cannot read the first section header.  */
+ 	    return (size_t) -1l;
+ 
+@@ -147,7 +152,8 @@ get_shnum (void *map_address, unsigned c
+ 
+       if (unlikely (result == 0) && ehdr.e64->e_shoff != 0)
+ 	{
+-	  if (offset + ehdr.e64->e_shoff + sizeof (Elf64_Shdr) > maxsize)
++	  if (unlikely (ehdr.e64->e_shoff >= maxsize)
++	      || unlikely (ehdr.e64->e_shoff + sizeof (Elf64_Shdr) > maxsize))
+ 	    /* Cannot read the first section header.  */
+ 	    return (size_t) -1l;
+ 
+@@ -220,10 +226,19 @@ file_read_elf (int fildes, void *map_add
+ 
+   /* Determine the number of sections.  */
+   scncnt = get_shnum (map_address, e_ident, fildes, offset, maxsize);
+-  if (scncnt == (size_t) -1l || scncnt > SIZE_MAX / sizeof (Elf_Scn))
++  if (scncnt == (size_t) -1l)
+     /* Could not determine the number of sections.  */
+     return NULL;
+ 
++  /* Check for too many sections.  */
++  if (e_ident[EI_CLASS] == ELFCLASS32)
++    {
++      if (scncnt > SIZE_MAX / (sizeof (Elf_Scn) + sizeof (Elf32_Shdr)))
++	return NULL;
++    }
++  else if (scncnt > SIZE_MAX / (sizeof (Elf_Scn) + sizeof (Elf64_Shdr)))
++    return NULL;
++
+   /* We can now allocate the memory.  */
+   elf = allocate_elf (fildes, map_address, offset, maxsize, cmd, parent,
+ 		      ELF_K_ELF, scncnt * sizeof (Elf_Scn));
+@@ -255,15 +270,31 @@ file_read_elf (int fildes, void *map_add
+ 	  /* We can use the mmapped memory.  */
+ 	  elf->state.elf32.ehdr =
+ 	    (Elf32_Ehdr *) ((char *) map_address + offset);
++	  if (unlikely (elf->state.elf32.ehdr->e_shoff >= maxsize)
++	      || unlikely (elf->state.elf32.ehdr->e_shoff
++			   + scncnt * sizeof (Elf32_Shdr) > maxsize))
++	    {
++	    free_and_out:
++	      __libelf_seterrno (ELF_E_INVALID_FILE);
++	      free (elf);
++	      return NULL;
++	    }
+ 	  elf->state.elf32.shdr =
+ 	    (Elf32_Shdr *) ((char *) map_address + offset
+ 			    + elf->state.elf32.ehdr->e_shoff);
+ 	  if (elf->state.elf32.ehdr->e_phnum)
+-	    /* Assign a value only if there really is a program
+-	       header.  Otherwise the value remains NULL.  */
+-	    elf->state.elf32.phdr
+-	      = (Elf32_Phdr *) ((char *) map_address + offset
+-				+ elf->state.elf32.ehdr->e_phoff);
++	    {
++	      /* Assign a value only if there really is a program
++		 header.  Otherwise the value remains NULL.  */
++	      if (unlikely (elf->state.elf32.ehdr->e_phoff >= maxsize)
++		  || unlikely (elf->state.elf32.ehdr->e_phoff
++			       + elf->state.elf32.ehdr->e_phnum
++			       * sizeof (Elf32_Phdr) > maxsize))
++		goto free_and_out;
++	      elf->state.elf32.phdr
++		= (Elf32_Phdr *) ((char *) map_address + offset
++				  + elf->state.elf32.ehdr->e_phoff);
++	    }
+ 
+ 	  for (size_t cnt = 0; cnt < scncnt; ++cnt)
+ 	    {
+@@ -285,8 +316,7 @@ file_read_elf (int fildes, void *map_add
+ 		     sizeof (Elf32_Ehdr), offset) != sizeof (Elf32_Ehdr))
+ 	    {
+ 	      /* We must be able to read the ELF header.  */
+-	      __libelf_seterrno (ELF_E_INVALID_FILE);
+-	      return NULL;
++	      goto free_and_out;
+ 	    }
+ 
+ 	  if (e_ident[EI_DATA] != MY_ELFDATA)
+@@ -340,15 +370,26 @@ file_read_elf (int fildes, void *map_add
+ 	  /* We can use the mmapped memory.  */
+ 	  elf->state.elf64.ehdr =
+ 	    (Elf64_Ehdr *) ((char *) map_address + offset);
++	  if (unlikely (elf->state.elf64.ehdr->e_shoff >= maxsize)
++	      || unlikely (elf->state.elf64.ehdr->e_shoff
++			   + scncnt * sizeof (Elf64_Shdr) > maxsize))
++	    goto free_and_out;
+ 	  elf->state.elf64.shdr =
+ 	    (Elf64_Shdr *) ((char *) map_address + offset
+ 			    + elf->state.elf64.ehdr->e_shoff);
+ 	  if (elf->state.elf64.ehdr->e_phnum)
+-	    /* Assign a value only if there really is a program
+-	       header.  Otherwise the value remains NULL.  */
+-	    elf->state.elf64.phdr
+-	      = (Elf64_Phdr *) ((char *) map_address + offset
+-				+ elf->state.elf64.ehdr->e_phoff);
++	    {
++	      /* Assign a value only if there really is a program
++		 header.  Otherwise the value remains NULL.  */
++	      if (unlikely (elf->state.elf64.ehdr->e_phoff >= maxsize)
++		  || unlikely (elf->state.elf64.ehdr->e_phoff
++			       + elf->state.elf64.ehdr->e_phnum
++			       * sizeof (Elf64_Phdr) > maxsize))
++		goto free_and_out;
++	      elf->state.elf64.phdr
++		= (Elf64_Phdr *) ((char *) map_address + offset
++				  + elf->state.elf64.ehdr->e_phoff);
++	    }
+ 
+ 	  for (size_t cnt = 0; cnt < scncnt; ++cnt)
+ 	    {
+@@ -370,8 +411,7 @@ file_read_elf (int fildes, void *map_add
+ 		     sizeof (Elf64_Ehdr), offset) != sizeof (Elf64_Ehdr))
+ 	    {
+ 	      /* We must be able to read the ELF header.  */
+-	      __libelf_seterrno (ELF_E_INVALID_FILE);
+-	      return NULL;
++	      goto free_and_out;
+ 	    }
+ 
+ 	  if (e_ident[EI_DATA] != MY_ELFDATA)
+--- elfutils-0.108/src/elflint.c.jj	2005-05-14 02:22:24.000000000 +0200
++++ elfutils-0.108/src/elflint.c	2005-05-17 18:02:00.000000000 +0200
+@@ -309,6 +309,8 @@ section_name (Ebl *ebl, int idx)
+     return "<invalid>";
+ 
+   shdr = gelf_getshdr (elf_getscn (ebl->elf, idx), &shdr_mem);
++  if (shdr == NULL)
++    return "<invalid>";
+ 
+   ret = elf_strptr (ebl->elf, shstrndx, shdr->sh_name);
+   if (ret == NULL)
+@@ -1639,19 +1641,26 @@ section [%2d] '%s': hash table section i
+     {
+       size_t symsize = symshdr->sh_size / symshdr->sh_entsize;
+       size_t cnt;
++      Elf32_Word *buf, *end;
+ 
+       if (nchain < symshdr->sh_size / symshdr->sh_entsize)
+ 	ERROR (gettext ("section [%2d] '%s': chain array not large enough\n"),
+ 	       idx, section_name (ebl, idx));
+ 
++      buf = ((Elf32_Word *) data->d_buf) + 2;
++      end = (Elf32_Word *) ((char *) data->d_buf + shdr->sh_size);
+       for (cnt = 2; cnt < 2 + nbucket; ++cnt)
+-	if (((Elf32_Word *) data->d_buf)[cnt] >= symsize)
++	if (buf >= end)
++	  return;
++	else if (*buf++ >= symsize)
+ 	  ERROR (gettext ("\
+ section [%2d] '%s': hash bucket reference %zu out of bounds\n"),
+ 		 idx, section_name (ebl, idx), cnt - 2);
+ 
+       for (; cnt < 2 + nbucket + nchain; ++cnt)
+-	if (((Elf32_Word *) data->d_buf)[cnt] >= symsize)
++	if (buf >= end)
++	  return;
++	else if (*buf++ >= symsize)
+ 	  ERROR (gettext ("\
+ section [%2d] '%s': hash chain reference %zu out of bounds\n"),
+ 		 idx, section_name (ebl, idx), cnt - 2 - nbucket);
+@@ -2311,6 +2320,8 @@ phdr[%d]: no note entries defined for th
+     return;
+ 
+   char *notemem = gelf_rawchunk (ebl->elf, phdr->p_offset, phdr->p_filesz);
++  if (notemem == NULL)
++    return;
+ 
+   /* ELF64 files often use note section entries in the 32-bit format.
+      The p_align field is set to 8 in case the 64-bit format is used.

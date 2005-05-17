@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/elfutils-0.108.ebuild,v 1.1 2005/05/17 15:05:59 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/elfutils-0.108.ebuild,v 1.2 2005/05/17 17:36:48 solar Exp $
 
 inherit eutils
 
@@ -28,8 +28,10 @@ src_unpack() {
 	epatch "${FILESDIR}"/${PN}-0.101-bswap.patch
 	epatch "${FILESDIR}"/${P}-portability.patch
 
-	#the next secyurity patch should not be needed in 0.109
+	#the next 2 patches should not be needed in 0.109
 	epatch ${WORKDIR}/elfutils-0.108.robustify.patch
+	# incremental patch.
+	epatch ${FILESDIR}/elfutils-0.108-robustify2.patch
 
 	# Needed by ${P}-portability.patch
 	autoreconf || die
