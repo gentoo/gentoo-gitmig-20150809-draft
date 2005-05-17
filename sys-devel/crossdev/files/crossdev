@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/files/crossdev,v 1.20 2005/04/18 06:30:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/files/crossdev,v 1.21 2005/05/17 05:19:14 vapier Exp $
 
 if [[ ${ROOT:-/} != "/" ]] ; then
 	echo "Sorry, but crossdev does not support ROOT."
@@ -40,7 +40,7 @@ ${GOOD}Options${NORMAL}:
 
 ${BRACKET}Target (-t)${NORMAL}:
     The target takes the form: ${BRACKET}ARCH-VENDOR-OS-LIBC${NORMAL}
-    Examples:  arm-unknown-linux-gnu  sh4-pc-linux-uclibc  mips-pc-linux-uclibc
+    Examples:  arm-unknown-linux-gnu  sh4-gentoo-linux-uclibc  mips-gentoo-linux-uclibc
 EOF
 	exit ${1:-0}
 }
