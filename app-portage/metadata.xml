@@ -17,5 +17,9 @@
 		De app-portage categorie bevat applicaties die samenwerken met portage of
 		direct met ebuilds te maken hebben.
 	</longdescription>
+	<longdescription lang="vi">
+		Nhóm app-portage chứa các ứng dụng liên quan đến
+		portage.
+	</longdescription>
 </catmetadata>
 
