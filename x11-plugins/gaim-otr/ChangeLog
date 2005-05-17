@@ -1,6 +1,11 @@
 # ChangeLog for x11-plugins/gaim-otr
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gaim-otr/ChangeLog,v 1.8 2005/03/30 21:58:08 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gaim-otr/ChangeLog,v 1.9 2005/05/17 14:12:24 rizzo Exp $
+
+*gaim-otr-2.0.2 (17 May 2005)
+
+  17 May 2005; Don Seiler <rizzo@gentoo.org> +gaim-otr-2.0.2.ebuild:
+  Version bump, closes bug #92440
 
   30 Mar 2005; Gustavo Zacarias <gustavoz@gentoo.org> gaim-otr-2.0.1.ebuild:
   Keyworded ~sparc
