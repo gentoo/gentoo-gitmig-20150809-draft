@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/prboom
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/prboom/ChangeLog,v 1.9 2005/04/26 13:39:21 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/prboom/ChangeLog,v 1.10 2005/05/17 18:26:32 wolf31o2 Exp $
+
+  17 May 2005; Chris Gianelloni <wolf31o2@gentoo.org>
+  prboom-2.2.4-r1.ebuild:
+  Cleanup for bug #92745.
 
   26 Apr 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   prboom-2.2.4-r1.ebuild:

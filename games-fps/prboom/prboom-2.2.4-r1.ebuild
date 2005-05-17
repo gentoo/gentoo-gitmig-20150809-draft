@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/prboom/prboom-2.2.4-r1.ebuild,v 1.3 2005/04/26 13:39:21 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/prboom/prboom-2.2.4-r1.ebuild,v 1.4 2005/05/17 18:26:32 wolf31o2 Exp $
 
-inherit games eutils gcc
+inherit eutils toolchain-funcs games
 
 DESCRIPTION="Port of ID's doom to SDL and OpenGL"
 HOMEPAGE="http://prboom.sourceforge.net/"
@@ -22,10 +22,9 @@ DEPEND="virtual/x11
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
 	epatch ${FILESDIR}/${PV}-gcc34.patch
 	ebegin "Detecting NVidia GL/prboom bug"
-	$(gcc-getCC) ${FILESDIR}/${PV}-nvidia-test.c 2> /dev/null
+	$(tc-getCC) ${FILESDIR}/${PV}-nvidia-test.c 2> /dev/null
 	local ret=$?
 	eend ${ret} "NVidia GL/prboom bug found ;("
 	[ ${ret} -eq 0 ] || epatch ${FILESDIR}/${PV}-nvidia.patch
