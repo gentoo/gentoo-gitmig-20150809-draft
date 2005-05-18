@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/GD-Graph3d
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/GD-Graph3d/ChangeLog,v 1.9 2005/04/25 16:29:55 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/GD-Graph3d/ChangeLog,v 1.10 2005/05/18 08:39:48 corsair Exp $
+
+  18 May 2005; Markus Rothe <corsair@gentoo.org> GD-Graph3d-0.63.ebuild:
+  Stable on ppc64
 
   25 Apr 2005; Michael Cummings <mcummings@gentoo.org> GD-Graph3d-0.63.ebuild:
   cleaning

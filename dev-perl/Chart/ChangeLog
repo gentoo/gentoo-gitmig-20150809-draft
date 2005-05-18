@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Chart
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Chart/ChangeLog,v 1.15 2005/04/24 15:41:11 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Chart/ChangeLog,v 1.16 2005/05/18 08:38:59 corsair Exp $
+
+  18 May 2005; Markus Rothe <corsair@gentoo.org> Chart-2.3.ebuild:
+  Stable on ppc64
 
   24 Apr 2005; Michael Cummings <mcummings@gentoo.org> -Chart-1.0.1.ebuild,
   -Chart-1.0.1-r1.ebuild, Chart-2.3.ebuild:

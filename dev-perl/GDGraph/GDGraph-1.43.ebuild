@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/GDGraph/GDGraph-1.43.ebuild,v 1.9 2005/04/25 16:41:15 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/GDGraph/GDGraph-1.43.ebuild,v 1.10 2005/05/18 08:38:11 corsair Exp $
 
 inherit perl-module
 CATEGORY="dev-perl"
@@ -11,7 +11,7 @@ SRC_URI="mirror://cpan/authors/id/M/MV/MVERB/${P}.tar.gz"
 
 LICENSE="|| ( Artistic GPL-2 )"
 SLOT="0"
-KEYWORDS="x86 ppc ~sparc alpha amd64 ia64 ~ppc64"
+KEYWORDS="x86 ppc ~sparc alpha amd64 ia64 ppc64"
 IUSE=""
 
 DEPEND="dev-perl/GDTextUtil

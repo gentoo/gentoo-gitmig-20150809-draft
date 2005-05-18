@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/GDGraph
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/GDGraph/ChangeLog,v 1.10 2005/04/25 16:41:15 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/GDGraph/ChangeLog,v 1.11 2005/05/18 08:38:11 corsair Exp $
+
+  18 May 2005; Markus Rothe <corsair@gentoo.org> GDGraph-1.43.ebuild:
+  Stable on ppc64
 
   25 Apr 2005; Michael Cummings <mcummings@gentoo.org> GDGraph-1.43.ebuild:
   cleaning

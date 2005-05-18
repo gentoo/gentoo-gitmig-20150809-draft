@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/GDTextUtil/GDTextUtil-0.86.ebuild,v 1.9 2005/04/25 16:42:13 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/GDTextUtil/GDTextUtil-0.86.ebuild,v 1.10 2005/05/18 08:35:25 corsair Exp $
 
 IUSE=""
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.cpan.org/modules/by-module/GD/${P}.readme"
 
 SLOT="0"
 LICENSE="|| ( Artistic GPL-2 )"
-KEYWORDS="x86 amd64 ~sparc alpha ia64 ppc ~ppc64"
+KEYWORDS="x86 amd64 ~sparc alpha ia64 ppc ppc64"
 
 DEPEND="dev-perl/GD"
 
