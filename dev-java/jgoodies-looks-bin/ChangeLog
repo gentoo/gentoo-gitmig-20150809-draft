@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jgoodies-looks-bin
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jgoodies-looks-bin/ChangeLog,v 1.9 2004/11/03 11:30:22 axxo Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jgoodies-looks-bin/ChangeLog,v 1.10 2005/05/18 19:19:04 luckyduck Exp $
+
+  18 May 2005; Jan Brinkmann <luckyduck@gentoo.org>
+  jgoodies-looks-bin-1.2.2.ebuild:
+  stable on amd64, x86 and ppc
 
   03 Nov 2004; Thomas Matthijs <axxo@gentoo.org>
   jgoodies-looks-bin-1.2.1-r2.ebuild, jgoodies-looks-bin-1.2.1.ebuild,
