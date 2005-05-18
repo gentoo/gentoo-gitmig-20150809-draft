@@ -1,6 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pxes/pxes-0.6-r4.ebuild,v 1.12 2005/01/09 11:30:07 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pxes/pxes-0.6-r4.ebuild,v 1.13 2005/05/18 20:08:48 swegener Exp $
+
+inherit perl-module
 
 IUSE="cdr ltsp"
 DESCRIPTION="PXES is a package for building thin clients using multiple types of clients"
@@ -22,8 +24,6 @@ RDEPEND="${DEPEND}
 	cdr? ( app-cdr/cdrtools )"
 
 RESTRICT="nouserpriv"
-
-inherit perl-module
 
 dir=/opt/${P}
 Ddir=${D}/${dir}

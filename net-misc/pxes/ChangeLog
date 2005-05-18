@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/pxes
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pxes/ChangeLog,v 1.24 2005/05/18 15:50:59 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pxes/ChangeLog,v 1.25 2005/05/18 20:08:48 swegener Exp $
+
+  18 May 2005; Sven Wegener <swegener@gentoo.org> pxes-0.6-r4.ebuild,
+  pxes-0.7.ebuild, pxes-0.8.ebuild, pxes-0.9.ebuild, pxes-0.9-r1.ebuild,
+  pxes-1.0.ebuild:
+  Moved inherit to the top to stop eclasses from overwriting the DESCRIPTION.
 
 *pxes-0.9-r1 (18 May 2005)
 
