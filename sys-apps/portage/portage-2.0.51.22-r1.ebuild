@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.51.22.ebuild,v 1.1 2005/05/16 13:22:27 jstubbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.51.22-r1.ebuild,v 1.1 2005/05/18 15:57:12 jstubbs Exp $
 
 inherit toolchain-funcs
 
@@ -27,6 +27,8 @@ python_has_lchown() {
 
 src_unpack() {
 	unpack ${A}
+	cd ${S}
+	patch -p1 < ${FILESDIR}/2.0.51.22-fixes.patch
 }
 
 src_compile() {
