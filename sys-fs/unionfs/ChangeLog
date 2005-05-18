@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/unionfs
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/unionfs/ChangeLog,v 1.11 2005/05/15 19:04:24 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/unionfs/ChangeLog,v 1.12 2005/05/18 10:49:18 satya Exp $
+
+  18 May 2005; Christian Andreetta <satya@gentoo.org>
+  -files/unionfs-1.0.8-vserver.patch,
+  -files/unionfs-1.0.8-vserver-GFP.patch, -unionfs-1.0.5.ebuild,
+  -unionfs-1.0.8.ebuild, -unionfs-1.0.8-r1.ebuild, -unionfs-1.0.8-r2.ebuild,
+  -unionfs-1.0.9.ebuild, -unionfs-1.0.10.ebuild:
+  old ebuilds cleanup
 
   15 May 2005; Stefan Schweizer <genstef@gentoo.org> unionfs-1.0.11.ebuild:
   Change use to useq's and remove useless die's, thanks to Magnus Kessler
