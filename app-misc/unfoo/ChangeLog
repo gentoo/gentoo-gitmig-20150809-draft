@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/unfoo
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/unfoo/ChangeLog,v 1.11 2005/05/10 13:44:07 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/unfoo/ChangeLog,v 1.12 2005/05/18 19:28:03 allanonjl Exp $
+
+  18 May 2005; John N. Laliberte <allanonjl@gentoo.org> unfoo-1.0.4.ebuild,
+  unfoo-1.0.5.ebuild:
+  fix filename in src_install
 
 *unfoo-1.0.5 (10 May 2005)
 

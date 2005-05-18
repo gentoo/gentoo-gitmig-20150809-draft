@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/unfoo/unfoo-1.0.5.ebuild,v 1.1 2005/05/10 13:44:07 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/unfoo/unfoo-1.0.5.ebuild,v 1.2 2005/05/18 19:28:03 allanonjl Exp $
 
 DESCRIPTION="A simple bash driven frontend to simplify decompression of files"
 HOMEPAGE="http://obsoleet.org/code/unfoo"
@@ -20,7 +20,7 @@ src_unpack() {
 }
 
 src_install() {
-	newbin ${P} unfoo
+	newbin ${P}.sh unfoo
 }
 
 pkg_postinst() {
