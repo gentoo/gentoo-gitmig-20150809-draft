@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/openjms-bin
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/openjms-bin/ChangeLog,v 1.17 2005/03/23 13:52:25 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/openjms-bin/ChangeLog,v 1.18 2005/05/18 13:36:04 axxo Exp $
+
+  18 May 2005; Thomas Matthijs <axxo@gentoo.org>
+  openjms-bin-0.7.5-r3.ebuild:
+  add HOMEPAGE
 
   23 Mar 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   openjms-bin-0.7.6.ebuild:
