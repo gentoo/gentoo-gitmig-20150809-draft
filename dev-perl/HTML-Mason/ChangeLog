@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/HTML-Mason
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Mason/ChangeLog,v 1.26 2005/05/14 02:03:42 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Mason/ChangeLog,v 1.27 2005/05/18 17:31:09 mcummings Exp $
+
+  18 May 2005; Michael Cummings <mcummings@gentoo.org> HTML-Mason-1.28.ebuild:
+  Bug 93076 - mason can use *either* dev-perl/CGI ~or~ one of the apache request
+  modules
 
 *HTML-Mason-1.28 (13 May 2005)
 
