@@ -1,4 +1,6 @@
+MD5 1159bfb19bf3656d867c0958878ec86a xfce4-quicklauncher-0.8.ebuild 396
 MD5 ce8efaa09cd4237436dce245eb772e92 xfce4-quicklauncher-0.7.ebuild 396
-MD5 2391e26fbac99633c40cddc0ade0e677 ChangeLog 388
+MD5 98eefaa876c3d56d71384632cee33627 ChangeLog 528
 MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
 MD5 a6249378a63e4fd99835f24255f7f7e4 files/digest-xfce4-quicklauncher-0.7 82
+MD5 b304afce9c4b814069e1b3d1445753e2 files/digest-xfce4-quicklauncher-0.8 83
