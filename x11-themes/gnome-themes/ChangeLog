@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/gnome-themes
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes/ChangeLog,v 1.79 2005/05/11 16:48:16 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes/ChangeLog,v 1.80 2005/05/18 01:54:19 weeve Exp $
+
+  18 May 2005; Jason Wever <weeve@gentoo.org> gnome-themes-2.8.2.ebuild:
+  Stable on SPARC.
 
   11 May 2005; Guy Martin <gmsoft@gentoo.org> gnome-themes-2.8.2.ebuild:
   Stable on hppa.
