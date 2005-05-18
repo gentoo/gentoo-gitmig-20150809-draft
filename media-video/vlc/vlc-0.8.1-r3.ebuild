@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.1-r3.ebuild,v 1.1 2005/05/14 23:36:51 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.8.1-r3.ebuild,v 1.2 2005/05/18 14:39:00 flameeyes Exp $
 
 # Missing support for...
 #	tarkin - package not in portage yet - experimental
@@ -8,7 +8,7 @@
 
 inherit libtool toolchain-funcs eutils wxwidgets
 
-PATCHLEVEL="1"
+PATCHLEVEL="2"
 DESCRIPTION="VLC media player - Video player and streamer"
 HOMEPAGE="http://www.videolan.org/vlc/"
 SRC_URI="http://download.videolan.org/pub/videolan/${PN}/${PV}/${P}.tar.bz2
@@ -137,6 +137,10 @@ src_compile () {
 		myconf="${myconf} --enable-mozilla MOZILLA_CONFIG=/usr/lib/mozilla/mozilla-config"
 	else
 		myconf="${myconf} --disable-mozilla"
+	fi
+
+	if use wxwindows; then
+		myconf="${myconf} --with-wx-config=${WX_CONFIG}"
 	fi
 
 	# Portaudio support needs at least v19

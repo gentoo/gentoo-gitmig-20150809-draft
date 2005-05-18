@@ -1,6 +1,10 @@
 # ChangeLog for media-video/vlc
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.86 2005/05/17 20:04:41 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.87 2005/05/18 14:39:00 flameeyes Exp $
+
+  18 May 2005; Diego Pettenò <flameeyes@gentoo.org> vlc-0.8.1-r3.ebuild:
+  Added new patches to make vlc work with wxGTK 2.6. Need more testing before
+  unmasking.
 
   17 May 2005; Fernando J. Pereda <ferdy@gentoo.org> vlc-0.8.1-r1.ebuild:
   keyworded ~alpha, wrt #90506
