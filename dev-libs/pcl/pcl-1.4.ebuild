@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pcl/pcl-1.4.ebuild,v 1.1 2005/05/17 20:28:26 klieber Exp $ 
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pcl/pcl-1.4.ebuild,v 1.2 2005/05/18 04:24:33 mr_bones_ Exp $
 
 DESCRIPTION="A library to provide low-level coroutines for in-process context switching"
 HOMEPAGE="http://www.xmailserver.org/libpcl.html"
