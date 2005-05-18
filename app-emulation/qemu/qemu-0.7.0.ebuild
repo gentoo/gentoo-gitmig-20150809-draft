@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-0.7.0.ebuild,v 1.6 2005/05/12 09:13:55 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-0.7.0.ebuild,v 1.7 2005/05/18 23:44:49 lu_zero Exp $
 
 inherit eutils flag-o-matic linux-mod toolchain-funcs
 
@@ -139,5 +139,6 @@ pkg_postinst() {
 		einfo "if you want it released under GPL"
 		linux-mod_pkg_postinst
 		einfo "make sure you have the kernel module loaded before running qemu"
+		einfo "and your user is in the qemu group"
 	fi
 }
