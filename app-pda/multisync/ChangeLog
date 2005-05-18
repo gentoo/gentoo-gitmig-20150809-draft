@@ -1,6 +1,12 @@
 # ChangeLog for app-pda/multisync
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/multisync/ChangeLog,v 1.24 2005/05/10 19:12:33 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/multisync/ChangeLog,v 1.25 2005/05/18 12:28:11 genstef Exp $
+
+  18 May 2005; Stefan Schweizer <genstef@gentoo.org>
+  multisync-0.83_pre20050414-r2.ebuild:
+  Fix multisync-kdepim bug thanks to Dan Laba <gentoo@iwegaia.co.uk>, Shawn
+  Kovalchick <bamapookie@gmail.com>, Christoph Kretschmer <ckret@celtx.de> and
+  Stuart Grimshaw <stuart.gentoo@smgsystems.co.uk> in bug 91197
 
 *multisync-0.83_pre20050414-r2 (10 May 2005)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/multisync/multisync-0.83_pre20050414-r2.ebuild,v 1.1 2005/05/10 19:12:33 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/multisync/multisync-0.83_pre20050414-r2.ebuild,v 1.2 2005/05/18 12:28:11 genstef Exp $
 
 inherit versionator kde-functions
 
@@ -73,15 +73,6 @@ run_compile() {
 	make || die "Failed during make!"
 }
 
-pkg_setup() {
-	if use kdepim; then
-		set-qtdir 3
-		set-kdedir 3
-		myInc="-I${KDEDIR}/include ${myInc}"
-	fi
-	use pda && myInc="-I/usr/include/libpisock ${myInc}"
-}
-
 src_compile() {
 	[[ -z ${PLUGINS} ]] && make_plugin_list
 
@@ -91,6 +82,12 @@ src_compile() {
 	done
 
 	cd ${S}
+	if use kdepim; then
+		set-qtdir 3
+		set-kdedir 3
+		myInc="-I${KDEDIR}/include ${myInc}"
+	fi
+	use pda && myInc="-I/usr/include/libpisock ${myInc}"
 	run_compile;
 	for plugin_dir in ${PLUGINS}; do
 		einfo "Building ${plugin_dir}"
