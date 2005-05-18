@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/hsqldb/hsqldb-1.7.3.1.ebuild,v 1.7 2005/05/06 13:50:13 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/hsqldb/hsqldb-1.7.3.1.ebuild,v 1.8 2005/05/18 11:29:28 corsair Exp $
 
 inherit java-pkg eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${PN}_${PV//./_}.zip"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86 amd64 ~ppc64 sparc ppc"
+KEYWORDS="x86 amd64 ppc64 sparc ppc"
 IUSE="doc jikes source"
 
 DEPEND=">=virtual/jdk-1.4
