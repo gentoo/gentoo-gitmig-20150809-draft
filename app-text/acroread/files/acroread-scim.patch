@@ -1,0 +1,18 @@
+This patch was taken from http://bugs.gentoo.org/show_bug.cgi?id=89766#c6
+
+It fixes startup with scim thanks to Clement Siuchung Cheung <sccheung@umich.edu>
+
+--- Acrobat7.0/bin/acroread	2005-05-18 09:05:35.000000000 +0200
++++ Acrobat7.0/bin/acroread	2005-05-18 09:06:29.000000000 +0200
+@@ -255,6 +255,11 @@
+ 	fi
+ fi
+ 
++if [ "$GTK_IM_MODULE" = "scim" ]; then
++	GTK_IM_MODULE=xim
++	export GTK_IM_MODULE
++fi
++
+ if [ "$1" = "-DEBUG" ] ; then
+   if [ $# = 1 ] ; then
+     export ACRO_EXEC_CMD
