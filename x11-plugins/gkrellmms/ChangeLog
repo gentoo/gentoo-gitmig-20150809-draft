@@ -1,6 +1,11 @@
 # ChangeLog for x11-plugins/gkrellmms
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellmms/ChangeLog,v 1.42 2005/05/14 10:51:50 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellmms/ChangeLog,v 1.43 2005/05/18 21:34:47 mholzer Exp $
+
+*gkrellmms-2.1.22 (18 May 2005)
+
+  18 May 2005; Martin Holzer <mholzer@gentoo.org> +gkrellmms-2.1.22.ebuild:
+  Version bumped. Closes 82738. Thx to <andrewdk@sbcglobal.net>
 
   14 May 2005; Bryan Østergaard <kloeri@gentoo.org>
   gkrellmms-2.1.21.ebuild:
