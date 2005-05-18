@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-jaxp/gnu-jaxp-1.0_beta1-r1.ebuild,v 1.9 2005/05/14 20:46:20 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-jaxp/gnu-jaxp-1.0_beta1-r1.ebuild,v 1.10 2005/05/18 11:17:03 corsair Exp $
 
 inherit java-pkg eutils
 
@@ -11,7 +11,7 @@ DEPEND="app-arch/unzip"
 RDEPEND=">=virtual/jdk-1.3"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc amd64 ~ppc64 sparc"
+KEYWORDS="x86 ppc amd64 ppc64 sparc"
 IUSE="doc"
 
 S=${WORKDIR}/${PN/-/}-${PV/_beta1/beta1}

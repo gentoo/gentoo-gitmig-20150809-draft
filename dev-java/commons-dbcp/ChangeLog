@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/commons-dbcp
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-dbcp/ChangeLog,v 1.19 2005/03/13 19:33:46 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-dbcp/ChangeLog,v 1.20 2005/05/18 11:27:24 corsair Exp $
+
+  18 May 2005; Markus Rothe <corsair@gentoo.org> commons-dbcp-1.2.1.ebuild:
+  Stable on ppc64
 
   13 Mar 2005; Markus Rothe <corsair@gentoo.org> commons-dbcp-1.2.1.ebuild:
   Added ~ppc64 to KEYWORDS

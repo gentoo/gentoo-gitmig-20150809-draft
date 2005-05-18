@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-pool/commons-pool-1.2.ebuild,v 1.8 2005/03/13 19:33:09 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-pool/commons-pool-1.2.ebuild,v 1.9 2005/05/18 11:23:53 corsair Exp $
 
 inherit java-pkg
 
@@ -16,7 +16,7 @@ RDEPEND=">=virtual/jre-1.3
 	>=dev-java/commons-collections-2.0"
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="x86 ~ppc sparc amd64 ~ppc64"
+KEYWORDS="x86 ~ppc sparc amd64 ppc64"
 IUSE="jikes junit doc"
 
 S=${WORKDIR}/${PN}-${PV}
