@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.2.6.ebuild,v 1.1 2005/05/10 13:39:40 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.2.6.ebuild,v 1.2 2005/05/18 17:35:51 vanquirius Exp $
 
 inherit perl-module flag-o-matic gnuconfig eutils
 
@@ -30,7 +30,7 @@ src_unpack() {
 	cd ${S}
 	sed -i -e 's:<rrd_\(.*\)>:"../../src/rrd_\1":g' \
 		bindings/tcl/tclrrd.c || die "sed failed"
-	sed -i -e 's:-lrrd_private::' \
+	sed -i -e 's:-lrrd_private:-ltcl -lrrd:' \
 		bindings/tcl/Makefile.* || die "sed failed"
 }
 
