@@ -1,6 +1,14 @@
 # ChangeLog for net-analyzer/net-snmp
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.99 2005/05/17 14:51:35 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.100 2005/05/18 15:30:42 ka0ttic Exp $
+
+*net-snmp-5.2.1-r1 (18 May 2005)
+
+  18 May 2005; Aaron Walker <ka0ttic@gentoo.org>
+  +files/net-snmp-5.2.1-fix-insecure-fixproc.diff,
+  +net-snmp-5.2.1-r1.ebuild:
+  Revision bump; added patch to fix fixproc insecure tmpfile handling, sec bug
+  91792.
 
   17 May 2005; Aaron Walker <ka0ttic@gentoo.org> metadata.xml,
   net-snmp-5.2.1.ebuild:
