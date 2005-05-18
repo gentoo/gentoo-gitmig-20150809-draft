@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jgoodies-looks
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jgoodies-looks/ChangeLog,v 1.9 2005/05/04 18:18:02 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jgoodies-looks/ChangeLog,v 1.10 2005/05/18 19:12:41 luckyduck Exp $
+
+  18 May 2005; Jan Brinkmann <luckyduck@gentoo.org> files/build-1.3.1.xml:
+  jgoodies-looks failed with the doc useflag, thanks to StudiesInWords for
+  pointing me to that issue.
 
   04 May 2005; Jan Brinkmann <luckyduck@gentoo.org>
   jgoodies-looks-1.2.2.ebuild, jgoodies-looks-1.3.1-r1.ebuild:
