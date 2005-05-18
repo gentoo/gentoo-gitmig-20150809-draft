@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra-cvs/cinelerra-cvs-20050506.ebuild,v 1.2 2005/05/15 14:42:17 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra-cvs/cinelerra-cvs-20050506.ebuild,v 1.3 2005/05/18 10:59:44 zypher Exp $
 
 inherit toolchain-funcs eutils flag-o-matic
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~x86 ~amd64 ~ppc"
 IUSE="alsa ffmpeg oss static"
 
 RDEPEND="!media-video/cinelerra
