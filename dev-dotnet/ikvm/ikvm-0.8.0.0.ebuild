@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/ikvm/ikvm-0.8.0.0.ebuild,v 1.5 2005/05/13 01:59:24 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/ikvm/ikvm-0.8.0.0.ebuild,v 1.6 2005/05/18 18:07:07 latexer Exp $
 
 inherit mono
 
@@ -16,7 +16,8 @@ KEYWORDS="x86 ~ppc"
 IUSE=""
 
 RDEPEND=">=dev-lang/mono-1.0"
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND}
+		!dev-dotnet/ikvm-bin"
 
 src_unpack() {
 	unpack ${A}
