@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-pkg.eclass,v 1.22 2005/03/16 16:50:37 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-pkg.eclass,v 1.23 2005/05/18 11:19:33 axxo Exp $
 
 ECLASS=java-pkg
 INHERITED="${INHERITED} ${ECLASS}"
@@ -122,7 +122,6 @@ java-pkg_doso()
 	java-pkg_do_write_
 }
 
-
 java-pkg_dojar()
 {
 	debug-print-function ${FUNCNAME} $*
@@ -194,6 +193,17 @@ java-pkg_dojar()
 	done
 
 	java-pkg_do_write_
+}
+
+java-pkg_newjar() 
+{
+	if [ -z "${T}" ] || [ -z "${2}" ] ; then
+		die "java-pkg_newjar: Nothing defined to do"
+	fi
+
+	rm -rf "${T}/${2}"
+	cp "${1}" "${T}/${2}"
+	java-pkg_dojar "${T}/${2}"
 }
 
 java-pkg_dowar()
