@@ -1,7 +1,17 @@
-MD5 f40a14b762af970fe0bcf1e7ecfa3044 kudzu-knoppix-1.1.36-r1.ebuild 1710
-MD5 ad5cbe9cb01642538abc8e9acbaa77a9 ChangeLog 2334
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 9a4801a45483481a5c7932772452478f kudzu-knoppix-1.1.36-r1.ebuild 1710
+MD5 92d551e87456d440150fa2f43030da5a ChangeLog 2497
 MD5 d86e5b5e47260e5a965eae2afe6d6d40 metadata.xml 159
 MD5 2095589c4ddc3ed3d8972ebcea3d04bf files/kudzu.rc 302
 MD5 0f546a1fe4121a5b22b21ab5eb53819f files/kudzu.conf.d 137
 MD5 5310a8dffb3e81e7c81fccd43d0ce18d files/digest-kudzu-knoppix-1.1.36-r1 74
 MD5 33b7b6fafaa4558014dad67f9d8236b4 files/kudzu-knoppix-1.1.36-nonls-v4.patch 1781
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCi6GmI1lqEGTUzyQRArHwAKC9TbGjQEe9UxGxUt+J0H3tXCWqgwCePGRf
+AaC59B6EfYKDyXHOUxw0f2M=
+=OBvP
+-----END PGP SIGNATURE-----

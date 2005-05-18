@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/kudzu-knoppix
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kudzu-knoppix/ChangeLog,v 1.16 2005/05/12 20:00:42 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kudzu-knoppix/ChangeLog,v 1.17 2005/05/18 20:11:53 swegener Exp $
+
+  18 May 2005; Sven Wegener <swegener@gentoo.org>
+  kudzu-knoppix-1.1.36-r1.ebuild:
+  Moved inherit to the top to stop eclasses from overwriting the DESCRIPTION.
 
   12 May 2005; Chris Gianelloni <wolf31o2@gentoo.org>
   +files/kudzu-knoppix-1.1.36-nonls-v4.patch, +files/kudzu.conf.d,
