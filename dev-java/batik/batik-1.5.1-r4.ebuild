@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/batik/batik-1.5.1-r4.ebuild,v 1.2 2005/03/19 23:48:11 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/batik/batik-1.5.1-r4.ebuild,v 1.3 2005/05/18 18:10:44 luckyduck Exp $
 
 inherit java-pkg
 
@@ -9,14 +9,14 @@ SRC_URI="mirror://apache/xml/batik/${PN}-src-${PV}.zip"
 HOMEPAGE="http://xml.apache.org/batik/"
 IUSE="doc"
 DEPEND=">=virtual/jdk-1.3
-		=dev-java/rhino-1.5*
-		app-arch/unzip
-		>=dev-java/xerces-2.6.2-r1
-		dev-java/ant"
+	=dev-java/rhino-1.5*
+	app-arch/unzip
+	=dev-java/xerces-2.6*
+	dev-java/ant-core"
 RDEPEND=">=virtual/jdk-1.3"
 LICENSE="Apache-1.1"
 SLOT="1.5.1"
-KEYWORDS="~x86 ~sparc ~ppc ~amd64"
+KEYWORDS="x86 ~sparc ppc amd64"
 
 S=${WORKDIR}/xml-batik
 
@@ -53,7 +53,7 @@ src_install () {
 	cd ${S}
 	cp -ra ${P}/lib ${D}${DESTTREE}/share/${PN}-${SLOT}/lib/
 
-	dodoc README LICENSE
+	dodoc README
 	use doc && java-pkg_dohtml -r ${P}/docs/
 
 	echo "#!/bin/sh" > ${PN}${SLOT}
