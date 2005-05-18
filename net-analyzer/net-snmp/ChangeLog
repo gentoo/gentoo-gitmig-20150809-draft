@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/net-snmp
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.103 2005/05/18 17:37:53 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.104 2005/05/18 18:50:34 killerfox Exp $
+
+  18 May 2005; Rene Nussbaumer <killerfox@gentoo.org>
+  net-snmp-5.2.1-r1.ebuild:
+  Stable on hppa; bug #91792
 
   18 May 2005; Jan Brinkmann <luckyduck@gentoo.org>
   net-snmp-5.2.1-r1.ebuild:
