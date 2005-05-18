@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jgoodies-animation/jgoodies-animation-1.1.3.ebuild,v 1.2 2005/03/31 00:17:00 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jgoodies-animation/jgoodies-animation-1.1.3.ebuild,v 1.3 2005/05/18 19:05:17 luckyduck Exp $
 
 inherit java-pkg
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.jgoodies.com/download/libraries/animation-${MY_V}.zip"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86 ~amd64 ~ppc"
 IUSE="doc jikes"
 
 DEPEND=">=virtual/jdk-1.4
@@ -50,6 +50,6 @@ src_compile() {
 src_install() {
 	java-pkg_dojar animation-${PV}.jar
 
-	dodoc LICENSE.txt RELEASE-NOTES.txt
+	dodoc RELEASE-NOTES.txt
 	use doc && java-pkg_dohtml -r build/doc
 }
