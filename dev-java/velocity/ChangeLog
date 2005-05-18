@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/velocity
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/velocity/ChangeLog,v 1.16 2005/04/02 21:51:56 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/velocity/ChangeLog,v 1.17 2005/05/18 12:11:59 axxo Exp $
+
+*velocity-1.4-r2 (18 May 2005)
+
+  18 May 2005; Thomas Matthijs <axxo@gentoo.org> +velocity-1.4-r2.ebuild:
+  fixes 92884, versioned jar, thanks too Josh Nichols <nichoj@alum.rpi.edu>
 
   02 Apr 2005; Jan Brinkmann <luckyduck@gentoo.org> velocity-1.4-r1.ebuild,
   -velocity-1.4.ebuild:
