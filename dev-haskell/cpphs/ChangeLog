@@ -1,0 +1,9 @@
+# ChangeLog for dev-haskell/cpphs
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cpphs/ChangeLog,v 1.1 2005/05/18 10:36:25 dcoutts Exp $
+
+*cpphs-0.9 (18 May 2005)
+
+  18 May 2005; <duncan@gentoo.org> +metadata.xml, +cpphs-0.9.ebuild:
+  Add a new ebuild for cpphs.
+
