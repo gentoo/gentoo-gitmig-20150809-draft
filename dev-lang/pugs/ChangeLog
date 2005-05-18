@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/pugs
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/pugs/ChangeLog,v 1.4 2005/05/11 10:12:30 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/pugs/ChangeLog,v 1.5 2005/05/18 21:21:14 mcummings Exp $
+
+*pugs-6.2.3 (18 May 2005)
+
+  18 May 2005; Michael Cummings <mcummings@gentoo.org> +pugs-6.2.3.ebuild:
+  Bug 92957; version bump
 
   11 May 2005; Michael Cummings <mcummings@gentoo.org> pugs-6.0.11.ebuild:
   Changing dep on ghc to virtual - thanks kosmikus :)
