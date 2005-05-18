@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/busybox
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.66 2005/05/17 01:02:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.67 2005/05/18 19:29:49 solar Exp $
+
+  18 May 2005; <solar@gentoo.org> busybox-1.00-r4.ebuild:
+  - reenable a few useful default applets
 
 *busybox-1.00-r4 (17 May 2005)
 

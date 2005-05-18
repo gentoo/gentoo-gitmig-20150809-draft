@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.00-r4.ebuild,v 1.2 2005/05/17 02:13:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.00-r4.ebuild,v 1.3 2005/05/18 19:29:49 solar Exp $
 
 inherit eutils
 
@@ -116,10 +116,9 @@ src_unpack() {
 	busybox_config_option n SELINUX
 
 	# default a bunch of uncommon options to off
-	for opt in FEATURE_INSTALLER LOCALE_SUPPORT FEATURE_CLEAN_UP TFTP TELNETD \
-	           HTTPD FTPGET FTPPUT IPCALC TFTP UDHCPD HUSH LASH MSH SYSLOGD \
-	           LOGGER INETD DPKG RPM2CPIO RPM FOLD INSTALL LOGNAME OD CRONTAB \
-	           UUDECODE UUENCODE RUN_PARTS LOGIN SULOGIN CROND DC WATCHDOG
+	for opt in LOCALE_SUPPORT TFTP FTP{GET,PUT} IPCALC TFTP HUSH \
+		LASH MSH INETD DPKG RPM2CPIO RPM FOLD LOGNAME OD CRONTAB \
+		UUDECODE UUENCODE RUN_PARTS SULOGIN DC
 	do
 		busybox_config_option n ${opt}
 	done
