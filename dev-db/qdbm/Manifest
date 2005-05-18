@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 4fa7b589c9581b899b24c553200b9394 ChangeLog 2857
+MD5 2f6979773fa3af5ed7b1b4bf125d9fd9 ChangeLog 2944
 MD5 c9f54ac0eadf3d14a44e5dc692f0df73 metadata.xml 230
 MD5 040a5b53949d8731f5ba519634b00dc2 qdbm-1.8.24.ebuild 1206
 MD5 baa34b4deb9f8a225a9751b44b1f2d71 qdbm-1.8.16.ebuild 1165
 MD5 da3f7a934564aae0528dbeec95c99fe1 qdbm-1.8.17.ebuild 1200
-MD5 092e8c256fccfa58f71b7aef272cd04b qdbm-1.8.21.ebuild 1206
+MD5 d6dde24e724d60e3192e83fe91012570 qdbm-1.8.21.ebuild 1204
 MD5 51e813f892cba7feaa2eb90583334ce9 files/digest-qdbm-1.8.24 63
 MD5 5e73e3df7c9ba5df4312934edf80cd9a files/digest-qdbm-1.8.16 63
 MD5 340399145118f869822d6127294a3ebb files/digest-qdbm-1.8.17 63
 MD5 3bdad6c38cab98c137eaf649d708042d files/digest-qdbm-1.8.21 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFCe3vSKRy60XGEcJIRAuEWAJ9TWOMs1Z5Yk8ht5w8RBIgk3BUwwwCaAulF
-SFsAhqUL89hxTedDZVElx0E=
-=YEIg
------END PGP SIGNATURE-----
