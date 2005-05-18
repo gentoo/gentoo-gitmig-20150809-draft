@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.142 2005/05/17 09:57:01 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.143 2005/05/18 11:20:45 dsd Exp $
+
+  18 May 2005; Daniel Drake <dsd@gentoo.org>
+  gentoo-sources-2.6.11-r9.ebuild:
+  Stable on x86 for security stuff
 
   17 May 2005; Daniel Drake <dsd@gentoo.org> ChangeLog, Manifest:
   Update to Linux 2.6.11.9 and 2.6.11.10, and try a speakup fix.
