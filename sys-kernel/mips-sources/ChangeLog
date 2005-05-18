@@ -1,6 +1,16 @@
 # ChangeLog for sys-kernel/mips-sources
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/ChangeLog,v 1.74 2005/05/01 19:27:48 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/ChangeLog,v 1.75 2005/05/18 05:15:09 kumba Exp $
+
+*mips-sources-2.6.12_rc2-r2 (18 May 2005)
+
+  18 May 2005; Joshua Kinard <kumba@gentoo.org>
+  -mips-sources-2.6.10-r2.ebuild, +mips-sources-2.6.10-r3.ebuild,
+  -mips-sources-2.6.12_rc2-r1.ebuild, +mips-sources-2.6.12_rc2-r2.ebuild,
+  +mips-sources-2.6.12_rc3-r1.ebuild, -mips-sources-2.6.12_rc3.ebuild:
+  Patch the 2.6 sources up a little bit. Add in a patch to finally nail that
+  annoying gbefb typo that kills IP32 builds, a couple security patches
+  (CAN-2005-1263/1264/1368), and a new CVS diff for 2.6.12-rc3.
 
 *mips-sources-2.6.12_rc3 (01 May 2005)
 

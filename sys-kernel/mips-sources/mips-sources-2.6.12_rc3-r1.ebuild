@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.6.12_rc3.ebuild,v 1.1 2005/05/01 19:27:48 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.6.12_rc3-r1.ebuild,v 1.1 2005/05/18 05:15:09 kumba Exp $
 
 
 # INCLUDED:
@@ -19,9 +19,9 @@
 
 # Version Data
 OKV=${PV/_/-}
-CVSDATE="20050430"			# Date of diff between kernel.org and lmo CVS
-SECPATCHVER="1.12"			# Tarball version for security patches
-GENPATCHVER="1.10"			# Tarball version for generic patches
+CVSDATE="20050517"			# Date of diff between kernel.org and lmo CVS
+SECPATCHVER="1.13"			# Tarball version for security patches
+GENPATCHVER="1.11"			# Tarball version for generic patches
 EXTRAVERSION="-mipscvs-${CVSDATE}"
 KV="${OKV}${EXTRAVERSION}"
 USERC="yes"				# If set to "yes", then attempt to use an RC kernel
@@ -193,6 +193,7 @@ do_generic_patches() {
 		epatch ${MIPS_PATCHES}/misc-2.6.12-ip32-onion2-gbefb-fixes.patch
 		epatch ${MIPS_PATCHES}/misc-2.6.10-ip32-tweak-makefile.patch
 		epatch ${MIPS_PATCHES}/misc-2.6.11-ip32-mace-is-always-eth0.patch
+		epatch ${MIPS_PATCHES}/misc-2.6.12-ip32-stupid-gbefb-typo.patch
 
 		# Cobalt Patches (Safe for non-Cobalt use)
 		epatch ${MIPS_PATCHES}/misc-2.6.12-cobalt-bits.patch
@@ -229,6 +230,8 @@ do_sekret_patches() {
 do_security_patches() {
 	echo -e ""
 	ebegin ">>> Applying Security Fixes"
+		epatch ${MIPS_SECURITY}/CAN-2005-1263-2.6-elf-core-dump.patch
+		epatch ${MIPS_SECURITY}/CAN-2005-1264-2.6-raw-pktcdvd-local-priv.patch
 		epatch ${MIPS_SECURITY}/security-2.6-nfsacl-remote-nfs.patch
 	eend
 }

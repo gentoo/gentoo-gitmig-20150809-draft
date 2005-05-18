@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.6.10-r2.ebuild,v 1.1 2005/04/24 03:00:45 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.6.10-r3.ebuild,v 1.1 2005/05/18 05:15:09 kumba Exp $
 
 
 # INCLUDED:
@@ -21,8 +21,8 @@
 # Version Data
 OKV=${PV/_/-}
 CVSDATE="20050115"			# Date of diff between kernel.org and lmo CVS
-SECPATCHVER="1.12"			# Tarball version for security patches
-GENPATCHVER="1.8"			# Tarball version for generic patches
+SECPATCHVER="1.13"			# Tarball version for security patches
+GENPATCHVER="1.11"			# Tarball version for generic patches
 EXTRAVERSION="-mipscvs-${CVSDATE}"
 KV="${OKV}${EXTRAVERSION}"
 USERC="no"				# If set to "yes", then it will attempt to use an RC kernel
@@ -178,6 +178,7 @@ do_generic_patches() {
 		epatch ${MIPS_PATCHES}/misc-2.6.10-ip32-tweak-makefile.patch
 		epatch ${MIPS_PATCHES}/misc-2.6.10-ths-mips-tweaks.patch
 		epatch ${MIPS_PATCHES}/misc-2.6.12-pdh-mips-tweaks.patch
+		epatch ${MIPS_PATCHES}/misc-2.6.12-ip32-stupid-gbefb-typo.patch
 
 		# Generic
 		epatch ${MIPS_PATCHES}/misc-2.6-fix-prologue-error.patch
@@ -230,6 +231,9 @@ do_security_patches() {
 		epatch ${MIPS_SECURITY}/CAN-2005-0867-2.6-sysfs_write_file-int-ovrflw.patch
 		epatch ${MIPS_SECURITY}/CAN-2005-0916-2.6-is_hugepage_only_range.patch
 		epatch ${MIPS_SECURITY}/CAN-2005-0937-2.6-futex-deadlock.patch
+		epatch ${MIPS_SECURITY}/CAN-2005-1263-2.6-elf-core-dump.patch
+		epatch ${MIPS_SECURITY}/CAN-2005-1264-2.6-raw-pktcdvd-local-priv.patch
+		epatch ${MIPS_SECURITY}/CAN-2005-1368-2.6-key_user_lookup-dos.patch
 		epatch ${MIPS_SECURITY}/security-2.6.10-lsm-local_priv_elevate_flaw.patch
 		epatch ${MIPS_SECURITY}/security-2.6-local-dos-tmpfs.patch
 		epatch ${MIPS_SECURITY}/security-2.6.10-rose-scsi_tape-vulns.patch
