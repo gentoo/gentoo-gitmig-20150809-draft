@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 0b25c982375091b701905e2dadce5888 AppConfig-1.56-r1.ebuild 653
-MD5 825af251b9dd3a66218340ac7354cd7d AppConfig-1.56-r2.ebuild 1117
-MD5 703deee8002f1a653f033d20022e7116 ChangeLog 2040
+MD5 8e81a75c3640f77323b825d4bf1563bf AppConfig-1.56-r2.ebuild 1114
+MD5 e301e5f33340c4cfaf456523b4a9f715 ChangeLog 2132
+MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 3ff95f843a1d73e04b9d80345b372343 files/AppConfig-1.52-gentoo.diff 2204
-MD5 cd9d4e331a460c62cbefa6c1eac51119 files/digest-AppConfig-1.56-r1 65
-MD5 cd9d4e331a460c62cbefa6c1eac51119 files/digest-AppConfig-1.56-r2 65
 MD5 7d66af0eceb608490f6fbc44a1c8407e files/blocksep.patch 3053
 MD5 66b0a09e217cd60ed3092e9836c749f3 files/blockwhitespace.patch 479
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCa6NTtG5z4I8BtQoRAiJ3AJ9nA3PqSnStoR0fiQPQfaz90IbgJwCfSxHf
-I99pOLNG00rBd08WtMrSchI=
-=ZQqX
------END PGP SIGNATURE-----
+MD5 cd9d4e331a460c62cbefa6c1eac51119 files/digest-AppConfig-1.56-r1 65
+MD5 cd9d4e331a460c62cbefa6c1eac51119 files/digest-AppConfig-1.56-r2 65

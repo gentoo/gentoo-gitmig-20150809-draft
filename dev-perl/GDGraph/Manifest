@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 796983b7223bf163833db0231bc317eb ChangeLog 992
-MD5 890339cedb290bed8a1b4454a6588ffa GDGraph-1.43.ebuild 656
+MD5 e7a9cf15a4fbbb0bea212c37a5f840e9 ChangeLog 1079
+MD5 f31dfb9ba0dc52280f504636451aaadb GDGraph-1.43.ebuild 654
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 f36dfcc25376c885d0778058abe551e6 files/digest-GDGraph-1.43 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCbR2/tG5z4I8BtQoRAmiPAJ4sn0DOSIEk3E1naR3spE3+I+PM9gCffUBX
-Nz1DFm+9qlpCDnWdE8RPDu8=
-=ottc
------END PGP SIGNATURE-----
