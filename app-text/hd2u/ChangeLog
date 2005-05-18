@@ -1,6 +1,9 @@
 # ChangeLog for app-text/hd2u
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/hd2u/ChangeLog,v 1.31 2005/05/07 16:29:50 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/hd2u/ChangeLog,v 1.32 2005/05/18 09:00:29 corsair Exp $
+
+  18 May 2005; Markus Rothe <corsair@gentoo.org> hd2u-1.0.0.ebuild:
+  Stable on ppc64
 
   07 May 2005; Aron Griffis <agriffis@gentoo.org> hd2u-1.0.0.ebuild:
   stable on ia64

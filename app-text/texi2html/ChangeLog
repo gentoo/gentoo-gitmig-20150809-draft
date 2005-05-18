@@ -1,6 +1,9 @@
 # ChangeLog for app-text/texi2html
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texi2html/ChangeLog,v 1.30 2005/04/22 19:28:36 kito Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/texi2html/ChangeLog,v 1.31 2005/05/18 09:01:46 corsair Exp $
+
+  18 May 2005; Markus Rothe <corsair@gentoo.org> texi2html-1.76.ebuild:
+  Stable on ppc64
 
   22 Apr 2005; Kito <kito@gentoo.org> texi2html-1.76.ebuild:
   ~ppc-macos keyword
