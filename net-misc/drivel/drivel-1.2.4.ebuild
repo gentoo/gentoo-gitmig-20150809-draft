@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/drivel/drivel-1.2.4.ebuild,v 1.2 2005/03/26 03:39:19 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/drivel/drivel-1.2.4.ebuild,v 1.3 2005/05/18 22:54:15 weeve Exp $
 
 inherit gnome2
 
@@ -11,7 +11,7 @@ LICENSE="GPL-2"
 
 IUSE="rhythmbox spell"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~ppc ~sparc ~x86"
 
 # note: there's also an optional rhythmbox dependency
 
