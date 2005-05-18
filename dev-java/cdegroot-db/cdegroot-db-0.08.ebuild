@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/cdegroot-db/cdegroot-db-0.08.ebuild,v 1.6 2005/05/06 13:40:30 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/cdegroot-db/cdegroot-db-0.08.ebuild,v 1.7 2005/05/18 11:32:32 corsair Exp $
 
 inherit java-pkg eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.cdegroot.com/software/db/download/com.${P/-/.}.tar.gz"
 
 LICENSE="cdegroot"
 SLOT="1"
-KEYWORDS="amd64 x86 ~ppc64 sparc ppc"
+KEYWORDS="amd64 x86 ppc64 sparc ppc"
 IUSE="doc jikes source"
 
 DEPEND=">=virtual/jdk-1.4

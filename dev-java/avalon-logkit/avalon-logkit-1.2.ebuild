@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/avalon-logkit/avalon-logkit-1.2.ebuild,v 1.17 2005/05/14 18:46:13 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/avalon-logkit/avalon-logkit-1.2.ebuild,v 1.18 2005/05/18 11:37:32 corsair Exp $
 
 inherit java-pkg
 
@@ -27,7 +27,7 @@ RDEPEND=">=virtual/jre-1.3
 
 LICENSE="Apache-1.1"
 SLOT="1.2"
-KEYWORDS="x86 amd64 ~ppc64 ~sparc ppc"
+KEYWORDS="x86 amd64 ppc64 ~sparc ppc"
 IUSE="doc javamail jikes jms"
 
 S=${WORKDIR}/LogKit-${PV}

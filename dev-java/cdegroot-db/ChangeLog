@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/cdegroot-db
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/cdegroot-db/ChangeLog,v 1.5 2005/05/06 13:40:30 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/cdegroot-db/ChangeLog,v 1.6 2005/05/18 11:32:32 corsair Exp $
+
+  18 May 2005; Markus Rothe <corsair@gentoo.org> cdegroot-db-0.08.ebuild:
+  Stable on ppc64
 
   06 May 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   cdegroot-db-0.08.ebuild:
