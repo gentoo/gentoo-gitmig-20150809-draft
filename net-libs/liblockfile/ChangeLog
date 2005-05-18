@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/liblockfile
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/liblockfile/ChangeLog,v 1.15 2005/04/01 15:29:15 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/liblockfile/ChangeLog,v 1.16 2005/05/18 10:56:10 ferdy Exp $
+
+*liblockfile-1.06 (18 May 2005)
+
+  18 May 2005; Fernando J. Pereda <ferdy@gentoo.org> +metadata.xml,
+  -liblockfile-1.03.ebuild, liblockfile-1.03-r2.ebuild,
+  +liblockfile-1.06.ebuild:
+  version bump wrt #66617. remove 1.03. Add missing metadata.
 
   01 Apr 2005; Aron Griffis <agriffis@gentoo.org> liblockfile-1.03-r2.ebuild:
   stable on ia64

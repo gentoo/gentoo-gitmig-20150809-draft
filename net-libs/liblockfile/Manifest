@@ -1,8 +1,19 @@
-MD5 0ebe6ccb94570432c4043992f79bea62 liblockfile-1.03-r2.ebuild 965
-MD5 f4989b5d2d79e75f22b47c72ea5e6a1a liblockfile-1.03.ebuild 675
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 dc840f764336ba14e51a94792fcbc6cd liblockfile-1.06.ebuild 753
+MD5 8c2da03872dc02ca876f62d5a1e11236 liblockfile-1.03-r2.ebuild 955
 MD5 2625c39ec223d488438a88ced19c913f liblockfile-1.03-r1.ebuild 931
-MD5 2a48290a594d5b48d326d87d41f66a6d ChangeLog 2033
+MD5 90469380b2cf730451f3008b97896a8a ChangeLog 2278
+MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
 MD5 eb56831a475db5996c2f12368b641474 files/liblockfile-1.03-gcc33.patch 286
-MD5 53fe311231e84eff7e3f0464085f91bc files/digest-liblockfile-1.03 67
+MD5 5237ea115f3e61f8b3eed57a52002c05 files/digest-liblockfile-1.06 67
 MD5 53fe311231e84eff7e3f0464085f91bc files/digest-liblockfile-1.03-r1 67
 MD5 53fe311231e84eff7e3f0464085f91bc files/digest-liblockfile-1.03-r2 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCix9gViELBEf1JB0RArUTAJ0TGmgsJX1GBs+5IuftHbiV4bulLgCfUl1C
+WG8H4LuuDjucZTf8Cg6/mC4=
+=U8hV
+-----END PGP SIGNATURE-----
