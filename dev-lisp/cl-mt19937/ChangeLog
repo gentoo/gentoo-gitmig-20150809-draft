@@ -1,0 +1,10 @@
+# ChangeLog for dev-lisp/cl-mt19937
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-mt19937/ChangeLog,v 1.1 2005/05/18 23:49:39 mkennedy Exp $
+
+*cl-mt19937-1.1 (18 May 2005)
+
+  18 May 2005; Matthew Kennedy <mkennedy@gentoo.org> +metadata.xml,
+  +cl-mt19937-1.1.ebuild:
+  Initial port. Ebuild contributed by Matthew Kennedy <mkennedy@gentoo.org>
+
