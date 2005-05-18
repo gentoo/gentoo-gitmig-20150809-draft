@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/virtuals,v 1.61 2005/04/28 15:53:40 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/virtuals,v 1.62 2005/05/18 15:50:20 axxo Exp $
 
 # This file describes the packages that by default satisfy a certain virtual
 # That this file exists in the base profile implies that these packages will
@@ -36,6 +36,7 @@ virtual/imap-c-client		net-libs/c-client
 virtual/imapUW				net-mail/uw-imap
 virtual/imapd				net-mail/courier-imap
 virtual/inetd				sys-apps/xinetd
+virtual/j2ee				dev-java/sun-j2ee
 virtual/jabber-server		net-im/jabberd
 virtual/jack				media-sound/jack-audio-connection-kit
 virtual/jdk					dev-java/blackdown-jdk
