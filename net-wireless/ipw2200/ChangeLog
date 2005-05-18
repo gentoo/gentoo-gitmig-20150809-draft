@@ -1,6 +1,12 @@
 # ChangeLog for net-wireless/ipw2200
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw2200/ChangeLog,v 1.32 2005/05/15 09:22:38 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw2200/ChangeLog,v 1.33 2005/05/18 12:05:57 brix Exp $
+
+*ipw2200-1.0.4 (18 May 2005)
+
+  18 May 2005; <brix@gentoo.org> +ipw2200-1.0.4.ebuild:
+  Version bump. This release includes monitor mode and hardware-based crypto
+  support.
 
   15 May 2005; <brix@gentoo.org> -ipw2200-1.0.1.ebuild,
   -ipw2200-1.0.2.ebuild, -ipw2200-1.0.2-r1.ebuild:
