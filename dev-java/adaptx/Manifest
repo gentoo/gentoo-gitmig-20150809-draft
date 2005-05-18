@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a843e6d61369b0850c46ef4fe104290e adaptx-0.9.13_p20041105.ebuild 1358
-MD5 94756e609236a153af35d2669ed1eaec ChangeLog 1044
+MD5 f42f43ea5baf86d8afa76a0cca72c5d9 ChangeLog 1145
+MD5 951ee300f93ebd99b5a797b2492f9768 adaptx-0.9.13_p20041105.ebuild 1356
 MD5 2d1041fb0d459f9ca2614faa69da0e09 metadata.xml 310
 MD5 ca47883984cfaf4d74be2ed06fbd1d2e files/digest-adaptx-0.9.13_p20041105 75
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCbZq7KRy60XGEcJIRAu20AJ4l35JQ6kX0jqEdKgkmdk3IZV8pkwCdHG2e
-rZOegua3fBFBk0iitsP68XU=
-=YOam
------END PGP SIGNATURE-----
