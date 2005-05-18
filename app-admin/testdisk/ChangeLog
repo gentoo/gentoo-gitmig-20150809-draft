@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/testdisk
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/testdisk/ChangeLog,v 1.10 2005/04/30 02:05:43 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/testdisk/ChangeLog,v 1.11 2005/05/18 17:15:08 robbat2 Exp $
+
+  18 May 2005; Robin H. Johnson <robbat2@gentoo.org> testdisk-5.7.ebuild:
+  Bug #93021, ntfsprogs minimum version.
 
 *testdisk-5.7 (30 Apr 2005)
 
