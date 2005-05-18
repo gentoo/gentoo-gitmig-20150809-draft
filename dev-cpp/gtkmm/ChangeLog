@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/gtkmm
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/ChangeLog,v 1.68 2005/05/13 20:28:25 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/ChangeLog,v 1.69 2005/05/18 09:17:50 corsair Exp $
+
+  18 May 2005; Markus Rothe <corsair@gentoo.org> gtkmm-2.4.11.ebuild:
+  Stable on ppc64
 
   13 May 2005; Rene Nussbaumer <killerfox@gentoo.org> gtkmm-2.4.11.ebuild:
   stable on hppa
