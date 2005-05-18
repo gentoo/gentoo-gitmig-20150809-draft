@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/xchat-gnome
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-gnome/ChangeLog,v 1.2 2005/05/15 12:47:34 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-gnome/ChangeLog,v 1.3 2005/05/18 18:25:26 dang Exp $
+
+  18 May 2005; <dang@gentoo.org> xchat-gnome-0.4.ebuild:
+  Add ~amd64
 
   15 May 2005; Sven Wegener <swegener@gentoo.org> xchat-gnome-0.4.ebuild:
   Disabled the gtk and text frontends, if users want them they should use

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-gnome/xchat-gnome-0.4.ebuild,v 1.2 2005/05/15 12:47:34 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-gnome/xchat-gnome-0.4.ebuild,v 1.3 2005/05/18 18:25:26 dang Exp $
 
 DESCRIPTION="GNOME frontend for the popular X-Chat IRC client"
 HOMEPAGE="http://xchat-gnome.navi.cx/"
@@ -8,7 +8,7 @@ SRC_URI="http://flapjack.navi.cx/releases/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 IUSE="perl tcltk python ssl mmx ipv6 nls"
 
 RDEPEND=">=dev-libs/glib-2.0.3
