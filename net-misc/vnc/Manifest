@@ -1,36 +1,26 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 89d50e03df7e6e1b6d789279e9dd4ba4 ChangeLog 6369
-MD5 4ff6200632d78d5688fd3d4135d49959 vnc-4.0-r1.ebuild 2559
-MD5 6f59f15a8b013fa3c8897c311ae596ff vnc-3.3.7.ebuild 1628
+MD5 f915651ee1c8a1d1fd423f770f341578 vnc-4.0.ebuild 2078
 MD5 37236013e0d26d43c6bff35a8a48e8ec metadata.xml 220
-MD5 9f66c7decfb747aef1c43e2df6a85757 vnc-4.0.ebuild 2089
-MD5 80e10f3892c66ccd2442eda86402e9b4 files/vnc-3.3.3r2-getline-fix.patch 1205
-MD5 a30c29b08a93f6fb42177887aa132e18 files/vnc-3.3.3-10-xdm-auth-support.patch 11575
+MD5 50acfca9f6410d79749805411d88f449 vnc-4.0-r1.ebuild 2546
+MD5 6f59f15a8b013fa3c8897c311ae596ff vnc-3.3.7.ebuild 1628
+MD5 17e41377efd7d77ec502768ee4293bb8 ChangeLog 6490
 MD5 bc74b6827faf0e3039de99a4e21cc5bd files/digest-vnc-4.0-r1 270
-MD5 28351e92e98f2a72662d937ce2889d14 files/vnc-3.3.7-gentoo.security.patch 781
 MD5 b801cfcb63f9c7c9299dd4919ba332b9 files/vnc-3.3.7-imake-tmpdir.patch 956
 MD5 69dfbaa72c6b66cba94868885c09fc92 files/vnc-3.3.4-platform-fixes.patch 63005
-MD5 aa54243fe6893130280fe1224204b780 files/digest-vnc-4.0 270
 MD5 7c75fc548aa928b203396bc80a301d6c files/xc.patch-cfbglblt8.patch 1738
+MD5 28351e92e98f2a72662d937ce2889d14 files/vnc-3.3.7-gentoo.security.patch 781
 MD5 34d3a675951dc585f220fe946a5985df files/digest-vnc-3.3.7 70
-MD5 999db9342ac0003537daee1f4193fd92 files/vnc-4.0/vnc-sparc.patch 1244
-MD5 0959d633e7ca36b8995398b1ba1e315c files/vnc-4.0/vnc-cookie.patch 819
-MD5 1e5a138be84b8e2c04c8c35b3e59f2d2 files/vnc-4.0/vnc-xorg-x11-fixes.patch 1216
-MD5 a47315b0d740135ce27a952e00a0438f files/vnc-4.0/vnc-xclients.patch 557
-MD5 ec954c0400a90b9de9d5d59db4c7eefb files/vnc-4.0/vnc-idle.patch 482
-MD5 7237b4f63e22a412ecba796be21e218d files/vnc-4.0/vnc-gcc34.patch 5911
-MD5 43179a2e046f430fea7d2bc617dce6b0 files/vnc-4.0/vnc-xorg.patch 3440
-MD5 33601310b3a1040e1d836d1648e84b41 files/vnc-4.0/imake-tmpdir.patch 1062
-MD5 ff4f3d8258e8e4612c637b86fcc50605 files/vnc-4.0/vnc-fPIC.patch 2401
-MD5 5f386c352a0c2fb8298434174b7f4691 files/vnc-4.0/vnc-def.patch 365
-MD5 6572073121cd6b24eb72ec9df69927e0 files/vnc-4.0/vnc-via.patch 5681
+MD5 a30c29b08a93f6fb42177887aa132e18 files/vnc-3.3.3-10-xdm-auth-support.patch 11575
+MD5 80e10f3892c66ccd2442eda86402e9b4 files/vnc-3.3.3r2-getline-fix.patch 1205
+MD5 aa54243fe6893130280fe1224204b780 files/digest-vnc-4.0 270
 MD5 79e22af66b56cf67fa9e517ad69c8f71 files/vnc-4.0/vnc-restart.patch 698
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCaS3TKf2g/qXtneoRAqYxAJ4l6XsnHEtwJc37T8fPsfEwefFqnQCgpYFo
-rLjKy2y3NIs2i551s/y8T/M=
-=L9JN
------END PGP SIGNATURE-----
+MD5 a47315b0d740135ce27a952e00a0438f files/vnc-4.0/vnc-xclients.patch 557
+MD5 43179a2e046f430fea7d2bc617dce6b0 files/vnc-4.0/vnc-xorg.patch 3440
+MD5 ec954c0400a90b9de9d5d59db4c7eefb files/vnc-4.0/vnc-idle.patch 482
+MD5 1e5a138be84b8e2c04c8c35b3e59f2d2 files/vnc-4.0/vnc-xorg-x11-fixes.patch 1216
+MD5 5f386c352a0c2fb8298434174b7f4691 files/vnc-4.0/vnc-def.patch 365
+MD5 ff4f3d8258e8e4612c637b86fcc50605 files/vnc-4.0/vnc-fPIC.patch 2401
+MD5 7237b4f63e22a412ecba796be21e218d files/vnc-4.0/vnc-gcc34.patch 5911
+MD5 6572073121cd6b24eb72ec9df69927e0 files/vnc-4.0/vnc-via.patch 5681
+MD5 0959d633e7ca36b8995398b1ba1e315c files/vnc-4.0/vnc-cookie.patch 819
+MD5 33601310b3a1040e1d836d1648e84b41 files/vnc-4.0/imake-tmpdir.patch 1062
+MD5 999db9342ac0003537daee1f4193fd92 files/vnc-4.0/vnc-sparc.patch 1244
