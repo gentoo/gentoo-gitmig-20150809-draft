@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/mono
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/ChangeLog,v 1.47 2005/05/17 19:00:55 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/ChangeLog,v 1.48 2005/05/18 16:16:17 latexer Exp $
+
+  18 May 2005; Peter Johanson <latexer@gentoo.org> :
+  Fix the digest, hopefully for real this time.
 
   17 May 2005; Peter Johanson <latexer@gentoo.org> mono-1.1.7.ebuild:
   Fix SRC_URI. See bug #92959.
