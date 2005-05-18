@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-jexl/commons-jexl-1.0.ebuild,v 1.1 2005/03/22 18:58:41 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-jexl/commons-jexl-1.0.ebuild,v 1.2 2005/05/18 20:20:30 luckyduck Exp $
 
 inherit java-pkg eutils
 DESCRIPTION="Expression language engine, can be embedded in applications and frameworks."
@@ -14,7 +14,7 @@ DEPEND="dev-java/ant
 RDEPEND=">=virtual/jdk-1.3"
 LICENSE="Apache-2.0"
 SLOT="1.0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="x86 amd64 ~ppc"
 IUSE="doc jikes junit source"
 
 src_unpack() {
