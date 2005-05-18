@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-j2sdk/sun-j2sdk-1.4.2.ebuild,v 1.14 2004/11/03 19:07:58 cretin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-j2sdk/sun-j2sdk-1.4.2.ebuild,v 1.15 2005/05/18 15:47:16 axxo Exp $
 
 inherit java
 
@@ -39,9 +39,8 @@ DEPEND="${RDEPEND}
 	>=media-libs/alsa-lib-0.9.0_rc5"
 PDEPEND="doc? ( =dev-java/java-sdk-docs-1.4.2* )"
 
-PROVIDE="virtual/jre-1.4.2
-	virtual/jdk-1.4.2
-	virtual/java-scheme-2"
+PROVIDE="virtual/jre
+	virtual/jdk"
 
 RESTRICT="fetch"
 

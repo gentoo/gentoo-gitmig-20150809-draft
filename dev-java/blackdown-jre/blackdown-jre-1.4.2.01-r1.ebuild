@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/blackdown-jre-1.4.2.01-r1.ebuild,v 1.2 2005/05/16 00:54:21 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/blackdown-jre-1.4.2.01-r1.ebuild,v 1.3 2005/05/18 15:41:26 axxo Exp $
 
 inherit java versionator
 
@@ -25,8 +25,7 @@ DEPEND="virtual/libc
 	>=dev-java/java-config-1.2.11
 	>=sys-apps/sed-4"
 RDEPEND="x86? ( sys-libs/lib-compat )"
-PROVIDE="virtual/jre-1.4.2
-	virtual/java-scheme-2"
+PROVIDE="virtual/jre"
 
 S="${WORKDIR}/j2re${JV}"
 # Extract the 'skip' value (offset of tarball) we should pass to tail

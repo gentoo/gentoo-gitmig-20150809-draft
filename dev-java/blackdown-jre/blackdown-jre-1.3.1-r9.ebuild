@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/blackdown-jre-1.3.1-r9.ebuild,v 1.20 2005/05/15 23:26:17 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/blackdown-jre-1.3.1-r9.ebuild,v 1.21 2005/05/18 15:41:26 axxo Exp $
 
 inherit java toolchain-funcs
 
@@ -18,8 +18,7 @@ DEPEND="virtual/libc
 	>=dev-java/java-config-0.2.5
 	>=sys-apps/sed-4
 	>=sys-devel/gcc-3.2"
-PROVIDE="virtual/jre-1.3.1
-	virtual/java-scheme-2"
+PROVIDE="virtual/jre"
 
 src_unpack() {
 	for a in ${A}; do

@@ -1,10 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.4.2.ebuild,v 1.21 2005/04/22 08:31:20 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.4.2.ebuild,v 1.22 2005/05/18 15:45:53 axxo Exp $
 
 inherit java eutils
 
 DESCRIPTION="IBM Java Development Kit ${PV}"
+HOMEPAGE="http://www-106.ibm.com/developerworks/java/jdk/"
 SRC_URI="ppc? ( mirror://gentoo/IBMJava2-SDK-142.ppc.tgz )
 	ppc64? ( mirror://gentoo/IBMJava2-SDK-142.ppc64.tgz )
 	x86? ( mirror://gentoo/IBMJava2-SDK-142.tgz )
@@ -14,9 +15,8 @@ SRC_URI="ppc? ( mirror://gentoo/IBMJava2-SDK-142.ppc.tgz )
 		ppc64? ( mirror://gentoo/IBMJava2-JAVACOMM-142.tgz )
 		amd64? ( mirror://gentoo/IBMJava2-JAVACOMM-AMD64-142.x86_64.tgz )
 		)"
-PROVIDE="virtual/jdk-1.4.2
-	virtual/jre-1.4.2
-	virtual/java-scheme-2"
+PROVIDE="virtual/jdk
+	virtual/jre"
 SLOT="1.4"
 LICENSE="IBM-J1.4"
 KEYWORDS="ppc ~x86 ppc64 amd64"

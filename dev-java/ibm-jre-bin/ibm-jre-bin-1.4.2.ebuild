@@ -1,16 +1,16 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre-bin/ibm-jre-bin-1.4.2.ebuild,v 1.7 2005/05/10 08:20:28 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre-bin/ibm-jre-bin-1.4.2.ebuild,v 1.8 2005/05/18 15:45:12 axxo Exp $
 
 inherit java
 
 S="${WORKDIR}/j2sdk${PV}"
 DESCRIPTION="IBM Java Development Kit ${PV}"
+HOMEPAGE="http://www-106.ibm.com/developerworks/java/jdk/"
 SRC_URI="ppc?(mirror://gentoo/IBMJava2-JRE-142.ppc.tgz)
 	ppc64?(mirror://gentoo/IBMJava2-JRE-142.ppc64.tgz)
 	x86?(mirror://gentoo/IBMJava2-JRE-142.tgz)"
-PROVIDE="virtual/jre-1.4.2
-	virtual/java-scheme-2"
+PROVIDE="virtual/jre"
 IUSE="mozilla"
 SLOT="1.4"
 LICENSE="IBM-J1.4"

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-j2sdk/sun-j2sdk-1.4.1-r1.ebuild,v 1.14 2004/09/29 21:01:53 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-j2sdk/sun-j2sdk-1.4.1-r1.ebuild,v 1.15 2005/05/18 15:47:16 axxo Exp $
 
 # Maintainer: Stefan Jones <cretin@gentoo.org>
 # Author: Stefan Jones <cretin@gentoo.org>
@@ -45,9 +45,8 @@ DEPEND="${RDEPEND}
 	>=virtual/jdk-1.4"
 PDEPEND="doc? ( =dev-java/java-sdk-docs-1.4.1* )"
 
-PROVIDE="virtual/jre-1.4.1
-	virtual/jdk-1.4.1
-	virtual/java-scheme-2"
+PROVIDE="virtual/jre
+	virtual/jdk"
 
 IUSE="nptl doc mozilla"
 

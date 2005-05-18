@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/sun-j2sdk
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-j2sdk/ChangeLog,v 1.35 2005/04/21 22:56:04 cretin Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-j2sdk/ChangeLog,v 1.36 2005/05/18 15:47:16 axxo Exp $
+
+  18 May 2005; Thomas Matthijs <axxo@gentoo.org> sun-j2sdk-1.4.1-r1.ebuild,
+  sun-j2sdk-1.4.2.ebuild, sun-j2sdk-1.5.0.ebuild:
+  remove obsolete java-scheme virtual. remove versions from provide: bug 93028
 
   21 Apr 2005; Stefan Jones <cretin@gentoo.org>
   files/1.5.0/j2sdk-1.5.0-syntax.patch:

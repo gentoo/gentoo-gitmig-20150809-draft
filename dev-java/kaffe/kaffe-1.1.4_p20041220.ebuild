@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/kaffe/kaffe-1.1.4_p20041220.ebuild,v 1.3 2005/04/11 12:48:00 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/kaffe/kaffe-1.1.4_p20041220.ebuild,v 1.4 2005/05/18 15:46:55 axxo Exp $
 
 inherit java flag-o-matic
 
@@ -20,9 +20,8 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE="alsa esd"
 
-PROVIDE="virtual/jdk-1.4
-	virtual/jre-1.4
-	virtual/java-scheme-2"
+PROVIDE="virtual/jdk
+	virtual/jre"
 S=${WORKDIR}/kaffe-${date}
 
 src_compile() {
