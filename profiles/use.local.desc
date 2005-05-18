@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1174 2005/05/17 22:22:04 r3pek Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1175 2005/05/18 22:23:17 mkennedy Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -236,6 +236,9 @@ dev-lisp/gcl:gprof - build a GCL with profiling support
 dev-lisp/sbcl:callbacks - include support for a 3rd party patch to enable callbacks into Lisp
 dev-lisp/sbcl:ldb - include support for the SBCL low level debugger
 dev-lisp/sbcl:nosource - don't include source code for SBCL in the installation
+dev-lisp/cl-ucw:araneida - use the Araneida web-server backend
+dev-lisp/cl-ucw:mod_lisp - use the mod_lisp web-server backend
+dev-lisp/cl-ucw:aserve - use the Portable Allegro Serve web-server backend
 dev-ml/lablgtk:glade - Enable libglade bindings compilation.
 dev-ml/ocamlsdl:noimage - Disable sdl-image support
 dev-ml/ocamlsdl:nomixer - Disable sdl-mixer support
