@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/net-snmp
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.104 2005/05/18 18:50:34 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.105 2005/05/18 21:48:56 weeve Exp $
+
+  18 May 2005; Jason Wever <weeve@gentoo.org> net-snmp-5.2.1-r1.ebuild:
+  Stable on SPARC wrt security bug #91792.
 
   18 May 2005; Rene Nussbaumer <killerfox@gentoo.org>
   net-snmp-5.2.1-r1.ebuild:
