@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/mockobjects
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/mockobjects/ChangeLog,v 1.11 2005/05/04 20:10:39 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/mockobjects/ChangeLog,v 1.12 2005/05/18 12:06:12 axxo Exp $
+
+*mockobjects-0.09-r1 (18 May 2005)
+
+  18 May 2005; Thomas Matthijs <axxo@gentoo.org>
+  +mockobjects-0.09-r1.ebuild:
+  fixes 92888, versioned jar, thanks too Josh Nichols <nichoj@alum.rpi.edu>
 
   04 May 2005; Jan Brinkmann <luckyduck@gentoo.org> mockobjects-0.09.ebuild:
   stable on ppc

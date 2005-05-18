@@ -1,15 +1,17 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
+MD5 a86413ac3e81a0a2cf4776f73090b34b mockobjects-0.09-r1.ebuild 1478
 MD5 e23f2bd5bdbe0c0b707543b961edc9a8 mockobjects-0.09.ebuild 1317
-MD5 1383a1100900393caec0fc4faddf404c ChangeLog 1349
+MD5 cef2fb834f16869409167bc34b06b9c8 ChangeLog 1537
 MD5 36090122a8b5609d65e32b1f47333b61 metadata.xml 1548
 MD5 c83c1a17a4d055ee848accd6747b9094 files/digest-mockobjects-0.09 80
 MD5 02a51d54e27c62cdc252e29f1c3e4579 files/mockobjects-0.09-gentoo.patch 1428
+MD5 c83c1a17a4d055ee848accd6747b9094 files/digest-mockobjects-0.09-r1 80
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCeSxV06ebR+OMO78RAsEKAJ9VeldhcV1ZFrv8pUQfSoyKgyUiAwCfR/q1
-G8zAoOYuFhfV9n1CWxC0y/c=
-=+LN2
+iD8DBQFCiy/K/rLF9B432nYRAlqtAJ4tq9NjBhnuOk9ANNOFgrfLUmdQHACgma2A
+55GxJYmUZKSWAilYz7hlPF4=
+=eKkM
 -----END PGP SIGNATURE-----
