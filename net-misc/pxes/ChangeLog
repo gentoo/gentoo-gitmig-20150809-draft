@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/pxes
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pxes/ChangeLog,v 1.23 2005/05/18 15:43:11 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pxes/ChangeLog,v 1.24 2005/05/18 15:50:59 wolf31o2 Exp $
+
+*pxes-0.9-r1 (18 May 2005)
+
+  18 May 2005; Chris Gianelloni <wolf31o2@gentoo.org> +pxes-0.9-r1.ebuild:
+  Updated ebuild to check for gtk-perl built_with_use gnome and also to
+  symlink mksquashfs. Closing bugs #46732 and #46874.
 
 *pxes-1.0 (18 May 2005)
 
