@@ -1,11 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-2.16-r2.ebuild,v 1.6 2005/01/12 06:30:25 lisa Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-2.16-r2.ebuild,v 1.7 2005/05/18 10:44:10 lisa Exp $
 
 # If you change this in any way please email lisa@gentoo.org and make an
 # entry in the ChangeLog (this means you spanky :P). (2004-04-11) Lisa Seelye
 
-inherit eutils gcc flag-o-matic gnuconfig
+inherit eutils flag-o-matic gnuconfig toolchain-funcs
 
 PATCHLEVEL="2.17"
 

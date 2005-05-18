@@ -1,11 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-2.18.3-r5.ebuild,v 1.1 2005/03/19 14:57:39 lisa Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-2.18.3-r6.ebuild,v 1.1 2005/05/18 10:44:10 lisa Exp $
 
 # If you change this in any way please email lisa@gentoo.org and make an
 # entry in the ChangeLog (this means you spanky :P). (2004-04-11) Lisa Seelye
 
-inherit eutils gcc flag-o-matic gnuconfig
+inherit eutils flag-o-matic gnuconfig toolchain-funcs
 
 PATCHLEVEL="2.18"
 
@@ -15,7 +15,7 @@ SRC_URI="http://distcc.samba.org/ftp/distcc/distcc-${PV}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha ~arm ~hppa ~ia64 ~amd64 ~s390"
+KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha ~arm ~hppa ia64 amd64 ~s390"
 
 IUSE="gnome gtk selinux ipv6"
 
@@ -64,6 +64,7 @@ src_compile() {
 	use gtk && ! use gnome && myconf="${myconf} --with-gtk"
 	use gtk && use gnome && myconf="${myconf} --with-gnome"
 
+	#More legacy stuff?
 	[ `gcc-major-version` -eq 2 ] && filter-lfs-flags
 
 	if use ipv6; then
