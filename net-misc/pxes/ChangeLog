@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/pxes
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pxes/ChangeLog,v 1.22 2005/02/08 22:27:00 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pxes/ChangeLog,v 1.23 2005/05/18 15:43:11 wolf31o2 Exp $
+
+*pxes-1.0 (18 May 2005)
+
+  18 May 2005; Chris Gianelloni <wolf31o2@gentoo.org> +pxes-1.0.ebuild:
+  Initial PXES 1.0 ebuild.
 
   08 Feb 2005; Chris Gianelloni <wolf31o2@gentoo.org> pxes-0.9.ebuild:
   Marking stable on amd64.
