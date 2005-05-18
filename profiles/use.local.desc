@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1175 2005/05/18 22:23:17 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1176 2005/05/18 23:03:25 pythonhead Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -223,6 +223,10 @@ dev-libs/opensc:pcsc-lite - build with pcsc-lite instead of openct
 dev-libs/pwlib:v4l2 - Enable video4linux2 support
 dev-libs/qsa:examples - build the examples that come with qsa
 dev-libs/qsa:ide - enable the qsa ide
+dev-libs/wx-xmingw:debug_gdb - Enable gdb debugging
+dev-libs/wx-xmingw:shared - Enable shared libs
+dev-libs/wx-xmingw:monolithic - Build a monolithic lib
+dev-libs/wx-xmingw:mslu - Enable mslu support
 dev-libs/wxbase:dmalloc - Enable support for the Debug Malloc Library
 dev-lisp/cl-sql:sqlite3 - build support for sqlite3
 dev-lisp/cmucl:nosource - don't include source code for CMUCL in installation
