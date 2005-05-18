@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/jmcce/jmcce-1.4_rc2.ebuild,v 1.10 2005/05/17 11:16:36 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/jmcce/jmcce-1.4_rc2.ebuild,v 1.11 2005/05/18 05:03:27 mr_bones_ Exp $
 
 inherit toolchain-funcs eutils
 
@@ -33,7 +33,7 @@ src_unpack() {
 }
 
 src_compile() {
-	export WANT_AUTOMAKE=1.4 
+	export WANT_AUTOMAKE=1.4
 	export WANT_AUTOCONF=2.5
 	sed -i "s:automake:automake-1.4:g" genconf.sh || die "sed"
 	./genconf.sh || die "genconf.sh failed"

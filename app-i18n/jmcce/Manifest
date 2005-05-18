@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 776df08b10b3d7b6a6b96733153d4e47 ChangeLog 908
-MD5 39c3da05a2807478f18cda0661631ccf jmcce-1.4_rc2.ebuild 1242
 MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
+MD5 30c800c47623cbdf1e5d2e027066b29b jmcce-1.4_rc2.ebuild 1243
+MD5 776df08b10b3d7b6a6b96733153d4e47 ChangeLog 908
+MD5 0aefe68977e4a9cee1bfd895d4bea529 files/jmcce-1.4_rc2-gcc3.4.patch 348
+MD5 2dbee8375c75291111d233488b2e789a files/jmcce-1.4_rc2-kernel.patch 581
 MD5 e77919af8495197697785325e0809b82 files/digest-jmcce-1.4_rc2 65
 MD5 69726c3d942600fbd25f0e519a26dfff files/jmcce-1.4_rc2-gcc3-gentoo.diff 568
-MD5 2dbee8375c75291111d233488b2e789a files/jmcce-1.4_rc2-kernel.patch 581
-MD5 0aefe68977e4a9cee1bfd895d4bea529 files/jmcce-1.4_rc2-gcc3.4.patch 348
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCidK6TM53OX+9xmMRAnQ1AKCpG0fVYfNR9bR+nY9NoqGPFasE9wCdH3cU
-lE/h4xemvOWixhhgdarOwsI=
-=ncls
------END PGP SIGNATURE-----
