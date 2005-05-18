@@ -1,23 +1,23 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 b46f3362dcf17eebc979bc87c2581b49 eclipse-sdk-3.1_pre3.ebuild 16524
 MD5 5f47b5e1d82a19fafb466d830a509d01 eclipse-sdk-3.0.1.ebuild 11886
 MD5 a2d7d204d16c0363da6429bad390431a eclipse-sdk-3.0.0-r3.ebuild 12081
 MD5 d85a11c5e39f6591da5bcdc731b02761 eclipse-sdk-3.1_pre5.ebuild 17446
 MD5 819818fb9914fe0dccf2af4c89d94452 eclipse-sdk-3.0.1-r2.ebuild 14287
+MD5 a54adcd5de4bafa3a201ba0df24337f8 eclipse-sdk-3.1_pre7.ebuild 13621
 MD5 233b7bd25c8c68c658a37232777f4f61 eclipse-sdk-3.1_pre2.ebuild 16365
+MD5 54ee3f2127952f2c146e9fd38ee9fc88 eclipse-sdk-3.1_pre6-r1.ebuild 13592
 MD5 cc4746d44b4bb74e9db76f257f98b8f3 eclipse-sdk-3.1_pre4.ebuild 17450
 MD5 784f7f8fdf82be12bba512c56169050e eclipse-sdk-2.1.3-r5.ebuild 9905
 MD5 b7835429b6a12c387636babaedc3aaa9 eclipse-sdk-3.0.2.ebuild 13831
 MD5 030ee53185dd243ff9adbc829417bd5d eclipse-sdk-3.0.1-r1.ebuild 13995
 MD5 c66d55982a2caf62d0619cae87866542 eclipse-sdk-3.1_pre6.ebuild 13572
 MD5 0b6f44460f5c2164e469e4444060b23f eclipse-sdk-3.1_pre1.ebuild 12137
-MD5 c135d03ee09298bf9411f879d637d929 ChangeLog 17578
+MD5 14c44c0cd58eb8f2bdd815e6f023b82d ChangeLog 18075
 MD5 8de14dda7d318d8fb514fdbcecd4058b metadata.xml 782
 MD5 ab0f6620b4767e065bd533b06245b0fc files/01-distribute_ant_target-2.1.patch 1103
 MD5 69ee2069b0260e40c6fa93315ff759cc files/eclipse-3.1.desktop 226
 MD5 6ac05b530442f845b10b830e624ffe04 files/eclipse-2.desktop 222
+MD5 c2e939c5ac99b36a6fd439fe179139cb files/digest-eclipse-sdk-3.1_pre6-r1 88
 MD5 a8bdecb6304c91da92a3b153e154f544 files/02-konqueror_help_browser-3.0.patch 1560
 MD5 3110e7ec528bc98ef251172c2d7e2956 files/05-mozilla-xpcom.patch 862
 MD5 0e815a2260dbd0153de35c6de26fbd05 files/digest-eclipse-sdk-3.0.0-r3 86
@@ -31,6 +31,7 @@ MD5 faec09f4506f1a9a12ceb725a09709f6 files/digest-eclipse-sdk-3.1_pre3 88
 MD5 18dfd928ae2d0f9bc5058eb604adc895 files/digest-eclipse-sdk-3.1_pre4 88
 MD5 997fca22d81ad543ce32c6e98c86cab6 files/digest-eclipse-sdk-3.1_pre5 89
 MD5 c2e939c5ac99b36a6fd439fe179139cb files/digest-eclipse-sdk-3.1_pre6 88
+MD5 6b2b3baec54d1b720c83cf573a50d5f8 files/digest-eclipse-sdk-3.1_pre7 88
 MD5 ed33fd609db26b85ef9b0c2a82a06b22 files/01-distribute_ant_target-3.0.patch 726
 MD5 21bde556ac55c5e22578cf4998135913 files/digest-eclipse-sdk-2.1.3-r5 176
 MD5 429b757eb766856a6b29094b06402576 files/eclipse-3.desktop 222
@@ -42,10 +43,3 @@ MD5 de999f62aa03505bfd16a01f7e1a28a3 files/eclipse-2 956
 MD5 a158c2a70562122805ec2ffa055a8271 files/eclipse-3 950
 MD5 32be5292ce0af7ff9c1866c1f59e1859 files/eclipse.1 2607
 MD5 e4ee97056b94052240fb360db6ffaef9 files/eclipse-3.1 1438
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCeqhvI1lqEGTUzyQRAl02AJ936BjS+TobAR0voYm2Kvdu6+Ki/gCgmErO
-gEB2iWbgwpiznGJyHoIHGaQ=
-=kIGb
------END PGP SIGNATURE-----
