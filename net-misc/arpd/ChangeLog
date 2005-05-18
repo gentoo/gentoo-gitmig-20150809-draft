@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/arpd
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/arpd/ChangeLog,v 1.8 2005/05/01 17:25:07 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/arpd/ChangeLog,v 1.9 2005/05/18 20:10:55 swegener Exp $
+
+  18 May 2005; Sven Wegener <swegener@gentoo.org> arpd-0.2.ebuild:
+  Moved inherit to the top to stop eclasses from overwriting the DESCRIPTION.
 
   01 May 2005; Michael Hanselmann <hansmi@gentoo.org> arpd-0.2.ebuild:
   Stable on ppc.
