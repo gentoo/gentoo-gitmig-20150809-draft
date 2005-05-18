@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/xvid
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xvid/ChangeLog,v 1.43 2005/05/08 12:09:38 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xvid/ChangeLog,v 1.44 2005/05/18 12:50:40 corsair Exp $
+
+  18 May 2005; Markus Rothe <corsair@gentoo.org> xvid-1.0.3.ebuild:
+  Stable on ppc64
 
 *xvid-1.1.0_beta2-r1 (08 May 2005)
 
@@ -18,11 +21,6 @@
   01 May 2005; Joshua Charles Campbell <warpzero@gentoo.org>
   +xvid-1.1.0_beta2.ebuild:
   New beta version with significant enhancements.
-
-*xvid-1.0.3-r1 (01 May 2005)
-
-  01 May 2005;  <>  xvid-1.0.3-r1.ebuild files/digest-xvid-1.0.3-r1
-  # INSERT ENTRY HERE
 
   19 Apr 2005; Luca Barbato <lu_zero@gentoo.org> xvid-1.0.2.ebuild,
   xvid-1.0.3.ebuild:
