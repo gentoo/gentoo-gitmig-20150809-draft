@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 2c8bd8440016edb17fac00ac2fc8f2fc ChangeLog 11032
-MD5 cfe1b5f88cc51ac6ffc42809178d2a06 metadata.xml 221
-MD5 f73a03ebd6a565755f4ddd19a6756334 nmap-3.80.ebuild 895
-MD5 c19a152e520454f5c784233816f0fee9 nmap-3.81.ebuild 883
 MD5 c0d803dbaeb4352a3a86906515c95cb1 nmap-3.75.ebuild 888
+MD5 2b9d8462514d01300c6c6098847fff39 ChangeLog 11157
+MD5 d3b11ff6cd6bc3bf88249cfeba064318 nmap-3.81.ebuild 883
+MD5 4f5c91d7f2ec23f851ca1deb93a69f56 nmap-3.80.ebuild 898
+MD5 cfe1b5f88cc51ac6ffc42809178d2a06 metadata.xml 221
 MD5 7e325a4f6e38e7e0c351cc0c294ee222 files/digest-nmap-3.80 63
-MD5 a9321c7613a34f902b2bcf53af008bc3 files/digest-nmap-3.81 63
 MD5 e81c708c7cfa2c876d8cbfa622144d39 files/digest-nmap-3.75 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFCilxQKRy60XGEcJIRAsbSAJ9ZGRIiKkHuCw5i5I1YdRnzR7DKlwCgsjyP
-4dxmoS1zy6ZlkKoAZlSJdEk=
-=VQmp
------END PGP SIGNATURE-----
+MD5 a9321c7613a34f902b2bcf53af008bc3 files/digest-nmap-3.81 63
