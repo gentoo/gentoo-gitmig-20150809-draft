@@ -1,6 +1,11 @@
 # ChangeLog for net-wireless/ipw2200-firmware
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw2200-firmware/ChangeLog,v 1.5 2005/03/02 20:52:49 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw2200-firmware/ChangeLog,v 1.6 2005/05/18 12:03:23 brix Exp $
+
+*ipw2200-firmware-2.3 (18 May 2005)
+
+  18 May 2005; <brix@gentoo.org> +ipw2200-firmware-2.3.ebuild:
+  Version bump.
 
   02 Mar 2005; Henrik Brix Andersen <brix@gentoo.org>
   ipw2200-firmware-2.2.ebuild:
