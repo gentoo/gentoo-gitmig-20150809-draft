@@ -2,13 +2,15 @@
 Hash: SHA1
 
 MD5 dd1e6d0e7ea1bd844caa3b7a1368961c jcommon-0.9.7.ebuild 923
-MD5 a3f86fd55cca6df040d8c6b95ea09e1a ChangeLog 1087
+MD5 add052b7622429adc1aa92811eee833e jcommon-0.9.7-r1.ebuild 935
+MD5 2475d9e2894a01863de1bc83cf18ee15 ChangeLog 1267
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 8eaa092f9e56aa5c625aad517d4b9887 files/digest-jcommon-0.9.7 65
+MD5 8eaa092f9e56aa5c625aad517d4b9887 files/digest-jcommon-0.9.7-r1 65
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFChmQK06ebR+OMO78RAnnEAJ4jNqlAKnuMjuPeM22O0Hupj4jJogCgjuOh
-oZgLVOggo+kGglHU4/qhqsw=
-=leRp
+iD8DBQFCiyVS/rLF9B432nYRAsNXAKCwQ44LNlvID69bIg+4uT0SL5fO1ACfZqQS
+cGnXhdJe3p5FZoYt+UjC96s=
+=OdgI
 -----END PGP SIGNATURE-----
