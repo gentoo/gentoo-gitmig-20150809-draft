@@ -1,16 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
+MD5 34126defe89f8ad9a6abd3410cefe7fb ant-contrib-1.0_beta2.ebuild 1211
 MD5 fb6e1cb5c397c8dddad8102414f8a84c ant-contrib-1.0_beta1-r2.ebuild 1170
 MD5 501ed4b9d1a10dd7929cac680478df54 ant-contrib-1.0_beta1-r1.ebuild 1197
-MD5 46514ecca88fc6e763631ce69474d137 ChangeLog 1035
+MD5 4ae94471f92c7fc6fdb81d1003b77af1 ChangeLog 1170
 MD5 4dad079a28768d183022cff420f01281 metadata.xml 220
 MD5 ceb92d92286af34135f5d0bdcb5c67db files/digest-ant-contrib-1.0_beta1-r1 74
 MD5 ceb92d92286af34135f5d0bdcb5c67db files/digest-ant-contrib-1.0_beta1-r2 74
+MD5 f471a8f4c9465649733f1dcc7708669d files/digest-ant-contrib-1.0_beta2 74
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCiymG/rLF9B432nYRAmm/AJ0aNIQgCkwY3rqn1QcKWqcawcfL6gCfThLJ
-ZJUzcNdW5bnlFSRr4vH/FZ4=
-=MPos
+iD8DBQFCiyvz/rLF9B432nYRAocnAKCA6PPIkr3duh/jVC0sWlU7YqxC4gCghB99
+l3Z1GvJ79LEYqrLkhI0JbUw=
+=fxNB
 -----END PGP SIGNATURE-----
