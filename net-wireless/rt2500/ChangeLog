@@ -1,6 +1,14 @@
 # ChangeLog for net-wireless/rt2500
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2500/ChangeLog,v 1.7 2005/03/05 07:22:16 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2500/ChangeLog,v 1.8 2005/05/18 07:30:23 genstef Exp $
+
+*rt2500-1.1.0_beta2-r1 (18 May 2005)
+
+  18 May 2005; Stefan Schweizer <genstef@gentoo.org>
+  +files/rt2500-pci_name.patch, +rt2500-1.1.0_beta2-r1.ebuild:
+  Fix compile problem with newer kernels thanks to Nuno Alexandre
+  <ikaro@fluxbox.org> and Ulrich Plate <plate@gentoo.org> and Henning Ryll
+  <henning.ryll@web.de> in bug 85079
 
   05 Mar 2005; Stefan Schweizer <genstef@gentoo.org>
   rt2500-1.1.0_beta2.ebuild:
