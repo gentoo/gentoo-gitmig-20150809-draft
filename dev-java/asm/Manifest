@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 5f9df50683ad5cb456fb8db00d77b5d6 asm-2.0_alpha.ebuild 1063
 MD5 7b633e0df908d6b6e6053c5d7685d669 asm-1.5.2.ebuild 964
 MD5 187c2ba1d56e2797163d1b3b3fe5e67a asm-1.4.3-r1.ebuild 961
@@ -6,3 +9,10 @@ MD5 b7f9b7d59df453c8c330bff15bf5508b metadata.xml 888
 MD5 cb47be4ec4aec6ac7229dbcb0c09da0a files/digest-asm-2.0_alpha 65
 MD5 bab3b96826160bc8cf16cdce85e62adc files/digest-asm-1.4.3-r1 61
 MD5 7d7bc01bc5c7f583f0ab7ef377b4823b files/digest-asm-1.5.2 61
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCi8is06ebR+OMO78RAmWaAJsFh2zbSMeVb26K+SdiYzTC1YLTIwCfYhO7
+txi8n7qadYYW6sGkeBoP+IE=
+=QMHh
+-----END PGP SIGNATURE-----

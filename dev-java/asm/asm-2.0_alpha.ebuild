@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/asm/asm-2.0_alpha.ebuild,v 1.2 2005/04/30 09:59:10 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/asm/asm-2.0_alpha.ebuild,v 1.3 2005/05/18 22:58:39 luckyduck Exp $
 
 inherit java-pkg
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://asm.objectweb.org"
 SRC_URI="http://download.forge.objectweb.org/${PN}/${P}.tar.gz"
 LICENSE="BSD"
 SLOT="2"
-KEYWORDS="~x86 ~amd64 ~ppc"
+KEYWORDS="x86 amd64 ppc"
 IUSE="doc jikes"
 DEPEND=">=virtual/jdk-1.3
 	jikes? ( >=dev-java/jikes-1.21 )
