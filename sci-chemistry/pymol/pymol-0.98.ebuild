@@ -1,17 +1,17 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/pymol-0.90.ebuild,v 1.2 2005/02/06 13:08:01 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/pymol-0.98.ebuild,v 1.1 2005/05/18 17:56:11 ribosome Exp $
 
-inherit distutils eutils
+inherit distutils eutils multilib
 
 DESCRIPTION="A Python-extensible molecular graphics system."
 HOMEPAGE="http://pymol.sourceforge.net/"
 SRC_URI="mirror://sourceforge/pymol/${PN}-${PV/./_}-src.tgz"
 
 LICENSE="PSF-2.2"
-SLOT="0"
 IUSE=""
-KEYWORDS="x86 ~ppc"
+SLOT="0"
+KEYWORDS="~x86 ~amd64 ~ppc"
 
 DEPEND="dev-lang/python
 	dev-python/pmw
@@ -24,8 +24,6 @@ DEPEND="dev-lang/python
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/setup.py-gentoo.patch
-	epatch ${FILESDIR}/setup2.py-gentoo.patch
 	# Turn off splash screen.  Please do make a project contribution
 	# if you are able though.
 	[[ -n "$WANT_NOSPLASH" ]] && epatch ${FILESDIR}/nosplash-gentoo.patch
@@ -34,7 +32,7 @@ src_unpack() {
 src_install() {
 	distutils_src_install
 	cd ${S}
-	${python} setup2.py
+	PYTHONPATH=$(find ${D}/usr/$(get_libdir) -type d -name site-packages) ${python} setup2.py
 
 	local sedexp="s:${D%/}::g"
 	sed -e ${sedexp} pymol.com > pymol
