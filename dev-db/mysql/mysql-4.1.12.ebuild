@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.1.12.ebuild,v 1.4 2005/05/17 20:19:43 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.1.12.ebuild,v 1.5 2005/05/18 04:46:22 robbat2 Exp $
 
 inherit eutils gnuconfig flag-o-matic versionator
 
@@ -76,15 +76,16 @@ mysql_get_datadir() {
 }
 
 pkg_setup() {
+	mysql_get_datadir
 	if ! useq minimal ; then
 		if has_version "<=dev-db/mysql-4.1.4" \
-		&& ! built_with_use dev-db/mysql minimal ; then
+		&& ! built_with_use dev-db/mysql minimal \
+		&& [ -d "${DATADIR}/mysql" ]; then
 			mysql_upgrade_error
 			die
 		fi
 	fi
 	mysql_upgrade_warning
-	mysql_get_datadir
 }
 
 src_unpack() {
