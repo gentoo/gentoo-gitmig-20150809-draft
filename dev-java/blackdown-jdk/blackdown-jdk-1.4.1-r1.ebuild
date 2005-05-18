@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/blackdown-jdk-1.4.1-r1.ebuild,v 1.8 2005/05/16 00:51:25 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/blackdown-jdk-1.4.1-r1.ebuild,v 1.9 2005/05/18 15:35:22 axxo Exp $
 
 
 inherit java
@@ -29,9 +29,8 @@ DEPEND="virtual/libc
 	emul-linux-x86? ( >=app-emulation/emul-linux-x86-baselibs-1.0 )"
 RDEPEND="x86? ( sys-libs/lib-compat )"
 
-PROVIDE="virtual/jdk-1.4.1
-	virtual/jre-1.4.1
-	virtual/java-scheme-2"
+PROVIDE="virtual/jdk
+	virtual/jre"
 
 # Extract the 'skip' value (offset of tarball) we should pass to tail
 get_offset() {

@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/blackdown-jdk
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/ChangeLog,v 1.80 2005/05/16 00:51:25 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/ChangeLog,v 1.81 2005/05/18 15:35:22 axxo Exp $
+
+  18 May 2005; Thomas Matthijs <axxo@gentoo.org>
+  blackdown-jdk-1.3.1-r8.ebuild, blackdown-jdk-1.3.1-r10.ebuild,
+  blackdown-jdk-1.4.1-r1.ebuild, blackdown-jdk-1.4.2.01-r2.ebuild:
+  remove obsolete java-scheme virtual. remove versions from provide: bug 93028
 
   16 May 2005; Jan Brinkmann <luckyduck@gentoo.org>
   blackdown-jdk-1.3.1-r8.ebuild, blackdown-jdk-1.4.1-r1.ebuild,

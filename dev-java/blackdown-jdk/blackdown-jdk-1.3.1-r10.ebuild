@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/blackdown-jdk-1.3.1-r10.ebuild,v 1.16 2005/05/15 22:12:33 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/blackdown-jdk-1.3.1-r10.ebuild,v 1.17 2005/05/18 15:35:22 axxo Exp $
 
 inherit java toolchain-funcs
 
@@ -17,9 +17,8 @@ IUSE="doc mozilla"
 DEPEND="virtual/libc
 	>=dev-java/java-config-0.2.5
 	doc? ( =dev-java/java-sdk-docs-1.3.1* )"
-PROVIDE="virtual/jdk-1.3.1
-	virtual/jre-1.3.1
-	virtual/java-scheme-2"
+PROVIDE="virtual/jdk
+	virtual/jre"
 
 src_unpack () {
 	if use ppc || use sparc; then
