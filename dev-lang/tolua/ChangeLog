@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/tolua
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tolua/ChangeLog,v 1.4 2004/06/24 22:58:36 agriffis Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tolua/ChangeLog,v 1.5 2005/05/18 11:41:32 twp Exp $
+
+  18 May 2005; Tom Payne <twp@gentoo.org> tolua-5.0.ebuild:
+  Use toolchain-funcs eclass. Bug # 92745.
 
   18 Apr 2004; Jason Wever <weeve@gentoo.org> tolua-5.0.ebuild:
   Added ~sparc keyword.

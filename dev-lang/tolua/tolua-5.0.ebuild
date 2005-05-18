@@ -1,8 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tolua/tolua-5.0.ebuild,v 1.6 2004/06/24 22:58:36 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tolua/tolua-5.0.ebuild,v 1.7 2005/05/18 11:41:32 twp Exp $
 
-inherit gcc
+inherit toolchain-funcs
 
 DESCRIPTION="a tool that simplifies the integration of C/C++ code with Lua"
 HOMEPAGE="http://www.tecgraf.puc-rio.br/~celes/tolua/"
@@ -20,7 +20,7 @@ src_unpack() {
 	cd ${S}
 
 	sed -i \
-		-e "/^CC=/ s/=.*/=$(gcc-getCC)/" \
+		-e "/^CC=/ s/=.*/=$(tc-getCC)/" \
 		-e "/^LUA=/ s:=.*:=/usr:" \
 		-e 's/^\(LIB=.*\)/\1 -ldl/' \
 		-e "s:-O2:${CFLAGS}:" config || \
