@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-ppcre/cl-ppcre-1.2.6.ebuild,v 1.1 2005/04/13 22:09:51 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-ppcre/cl-ppcre-1.2.7.ebuild,v 1.1 2005/05/18 07:25:26 mkennedy Exp $
 
 inherit common-lisp
 
