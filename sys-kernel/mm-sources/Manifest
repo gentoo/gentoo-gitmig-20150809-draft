@@ -1,6 +1,5 @@
 MD5 078e66a5c439d4281c695f31f225b731 ChangeLog 41213
 MD5 5e95fced23ea7c26d39274bc200dabd5 metadata.xml 351
-MD5 300c36272355a3fbfa80155b5d980409 mm-sources-2.6.11-r4.ebuild 1005
 MD5 2c5dc41b36e848a618db34beefeddba2 mm-sources-2.6.12_rc3-r3.ebuild 1009
 MD5 bd16a4af0537c7b4d37bc7d0bd20f32e mm-sources-2.6.12_rc4-r1.ebuild 1055
 MD5 577afa6b9756ac464c781ff23727e92a files/2.6.12-rc3-mm1-uniprocessor-fixes.patch 2781
