@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gconfmm/gconfmm-2.0.2.ebuild,v 1.8 2005/03/13 20:37:42 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gconfmm/gconfmm-2.0.2.ebuild,v 1.9 2005/05/18 12:02:44 corsair Exp $
 
 inherit gnome2
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://gtkmm.sourceforge.net/"
 
 IUSE=""
 LICENSE="LGPL-2.1"
-KEYWORDS="x86 ppc sparc hppa amd64 ~alpha ~ppc64"
+KEYWORDS="x86 ppc sparc hppa amd64 ~alpha ppc64"
 SLOT="2"
 
 RDEPEND=">=gnome-base/gconf-1.2.0

@@ -1,6 +1,10 @@
 # ChangeLog for dev-cpp/libglademm
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libglademm/ChangeLog,v 1.22 2005/04/09 15:29:53 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libglademm/ChangeLog,v 1.23 2005/05/18 12:04:56 corsair Exp $
+
+  18 May 2005; Markus Rothe <corsair@gentoo.org> libglademm-2.2.0.ebuild,
+  libglademm-2.4.1.ebuild:
+  Stable on ppc64
 
   09 Apr 2005; Markus Rothe <corsair@gentoo.org> libglademm-2.4.1.ebuild:
   Added ~ppc64 to KEYWORDS

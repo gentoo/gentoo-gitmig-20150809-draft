@@ -1,6 +1,10 @@
 # ChangeLog for dev-cpp/libgnomeuimm
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libgnomeuimm/ChangeLog,v 1.24 2005/04/09 15:41:46 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libgnomeuimm/ChangeLog,v 1.25 2005/05/18 12:07:22 corsair Exp $
+
+  18 May 2005; Markus Rothe <corsair@gentoo.org> libgnomeuimm-2.0.0.ebuild,
+  libgnomeuimm-2.6.0.ebuild:
+  Stable on ppc64
 
   09 Apr 2005; Markus Rothe <corsair@gentoo.org> libgnomeuimm-2.6.0.ebuild:
   Added ~ppc64 to KEYWORDS
