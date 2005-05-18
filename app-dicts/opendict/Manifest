@@ -1,17 +1,17 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
+MD5 39c7f04b44204601cbcf38f0d761bf73 opendict-0.5.7.ebuild 1521
 MD5 c41909e2f45b077d38c87550da961680 opendict-0.5.4.ebuild 1646
+MD5 9b821446a5bdf76ad97dd6e58dafffe0 ChangeLog 967
 MD5 4fca175f747a090fd2b7b8ce22fbc06d metadata.xml 162
-MD5 819efd08ee1284fb439485acf87fc69e ChangeLog 855
-MD5 ba71f373faa92efa1f81aff1c5b323f3 opendict-0.5.7.ebuild 1524
 MD5 ee4c1ac428684b6ea366b2075a5b705e files/digest-opendict-0.5.4 66
-MD5 0ec83c511505ad8b0e2bbc14afe71046 files/opendict-0.5.7-gentoo-wxversion.patch 256
 MD5 3e348abb954b61c89bd537557412eaf4 files/digest-opendict-0.5.7 67
+MD5 0ec83c511505ad8b0e2bbc14afe71046 files/opendict-0.5.7-gentoo-wxversion.patch 256
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCiuG3HOCQyz1WCXYRAoWwAJ92NeCMzGNzErbDReGXo2qLgbcDsACeIgXh
-K5ahOgztIHYyG3xQgH+xlm8=
-=C3DD
+iD8DBQFCi00jI1lqEGTUzyQRApPSAJ4pA+sgEWb7/LA9riksqqp+T2HLgACfXM2B
+cJClmcwuHBDoJn73R4JXa1c=
+=l9or
 -----END PGP SIGNATURE-----

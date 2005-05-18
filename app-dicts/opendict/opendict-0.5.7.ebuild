@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/opendict/opendict-0.5.7.ebuild,v 1.1 2005/05/18 06:32:57 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/opendict/opendict-0.5.7.ebuild,v 1.2 2005/05/18 14:11:21 swegener Exp $
 
 inherit eutils python
 
@@ -11,7 +11,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc"
 IUSE=""
-DEPEND=">=dev-python/wxpython-2.6*
+DEPEND=">=dev-python/wxpython-2.6
 	sys-devel/gettext"
 S=${WORKDIR}/OpenDict-${PV}
 
