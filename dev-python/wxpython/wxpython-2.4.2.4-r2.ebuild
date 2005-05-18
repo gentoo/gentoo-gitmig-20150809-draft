@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/wxpython-2.4.2.4-r2.ebuild,v 1.1 2005/05/02 18:29:01 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/wxpython-2.4.2.4-r2.ebuild,v 1.2 2005/05/18 15:46:07 pythonhead Exp $
 
 inherit eutils wxwidgets python
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/wxpython/${MY_P}.tar.gz"
 
 LICENSE="wxWinLL-3"
 SLOT="2.4"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~arm ~amd64 ~ia64 ~hppa ~ppc64"
+KEYWORDS="x86 ~ppc ~sparc ~alpha ~arm ~amd64 ~ia64 ~hppa ~ppc64"
 IUSE="gtk gtk2 unicode opengl tiff jpeg png"
 
 RDEPEND=">=dev-lang/python-2.1
