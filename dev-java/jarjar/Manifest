@@ -1,5 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 ff5f9a0267b6f2fb3f684f881e47d1e2 jarjar-0.4_p20050105.ebuild 1091
 MD5 cd17d585685f987d6c72672df6831398 ChangeLog 531
 MD5 123cf9440c1d4ac78f2caba1624765f9 metadata.xml 158
 MD5 5cf7fdf1f1aa15a1acee10e1ee4b5cd5 files/digest-jarjar-0.4_p20050105 72
 MD5 898b954c34be9e78c40ef2bdef781b52 files/asm-2.0_alpha-buildfile.patch 1507
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCi8i/06ebR+OMO78RAoDtAJ41+RH47PyD+X9kHLoqG832bfE53wCfZyb1
+U/uPdaEHuPQ8lcpjdUsyMCU=
+=1mvD
+-----END PGP SIGNATURE-----

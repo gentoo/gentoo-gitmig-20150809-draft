@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jarjar/jarjar-0.4_p20050105.ebuild,v 1.2 2005/01/05 21:03:00 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jarjar/jarjar-0.4_p20050105.ebuild,v 1.3 2005/05/18 22:58:58 luckyduck Exp $
 
 inherit eutils java-pkg
 
@@ -9,7 +9,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 HOMEPAGE="http://jarjar.sourceforge.net"
 LICENSE="GPL-2"
 SLOT="1"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="x86 amd64"
 IUSE="doc jikes"
 DEPEND=">=virtual/jdk-1.3
 	jikes? ( >=dev-java/jikes-1.21 )
@@ -39,7 +39,6 @@ src_compile() {
 src_install() {
 	java-pkg_dojar dist/${PN}.jar
 
-	dodoc COPYING
 	if use doc; then
 		java-pkg_dohtml -r dist/javadoc/*
 	fi

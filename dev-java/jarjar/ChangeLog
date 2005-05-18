@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jarjar
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jarjar/ChangeLog,v 1.1 2005/01/05 20:54:11 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jarjar/ChangeLog,v 1.2 2005/05/18 22:58:58 luckyduck Exp $
+
+  18 May 2005; Jan Brinkmann <luckyduck@gentoo.org>
+  jarjar-0.4_p20050105.ebuild:
+  stable on amd64 and x86
 
 *jarjar-0.4_p20050105 (05 Jan 2005)
 
