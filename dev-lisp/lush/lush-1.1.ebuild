@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation and Matthew Kennedy <mkennedy@gentoo.org>
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/lush/lush-0.99.ebuild,v 1.3 2005/03/03 19:37:35 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/lush/lush-1.1.ebuild,v 1.1 2005/05/18 08:23:03 mkennedy Exp $
 
 DESCRIPTION="Lush is the Lisp User Shell"
 HOMEPAGE="http://lush.sourceforge.net/"
@@ -13,7 +13,7 @@ IUSE="X"
 DEPEND="X? ( virtual/x11 )"
 
 src_compile() {
-	econf --without-bfd `use_with X X` || die "./configure failed"
+	econf `use_with X X` || die "./configure failed"
 	emake -j1 || die
 }
 

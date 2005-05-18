@@ -1,6 +1,12 @@
 # ChangeLog for dev-lisp/lush
 # Copyright 2000-2005 Gentoo Foundation and Matthew Kennedy <mkennedy@gentoo.org>; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/lush/ChangeLog,v 1.5 2005/03/03 19:37:35 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/lush/ChangeLog,v 1.6 2005/05/18 08:23:03 mkennedy Exp $
+
+*lush-1.1 (18 May 2005)
+
+  18 May 2005; Matthew Kennedy <mkennedy@gentoo.org> -lush-0.98.ebuild,
+  -lush-0.99.ebuild, +lush-1.1.ebuild:
+  New upstream version; Removed old ebuilds.
 
 *lush-1.0 (03 Mar 2005)
 
