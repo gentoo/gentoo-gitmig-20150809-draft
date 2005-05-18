@@ -1,6 +1,11 @@
 # ChangeLog for mail-client/mailx
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mailx/ChangeLog,v 1.36 2005/05/08 23:59:50 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mailx/ChangeLog,v 1.37 2005/05/18 11:30:41 ferdy Exp $
+
+  18 May 2005; Fernando J. Pereda <ferdy@gentoo.org>
+  -mailx-8.1.2.20021129-r2.ebuild, -mailx-8.1.2.20021129-r3.ebuild,
+  -mailx-8.1.2.20021129-r4.ebuild, -mailx-8.1.2.20040524.ebuild:
+  wipe old ebuilds
 
   08 May 2005; Aron Griffis <agriffis@gentoo.org>
   mailx-8.1.2.20040524-r1.ebuild:
