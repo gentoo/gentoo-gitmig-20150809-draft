@@ -1,6 +1,16 @@
-MD5 6d0a99619bc013ffe73d4b21bfd4825a pyclamav-0.2.1.ebuild 622
-MD5 20b20b58ebcb96ade4ada52085f968c9 pyclamav-0.1.ebuild 620
-MD5 97f4bfab97d783bf7f9e8705766e96ad ChangeLog 777
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 0496908e20c212e767bf9700a8c8851e ChangeLog 882
 MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
+MD5 6c66e2be1a5a100deac20fb9f28e1828 pyclamav-0.1.ebuild 622
+MD5 dc45c854dda7f854b1fee4b3e1ddd831 pyclamav-0.2.1.ebuild 624
 MD5 db27786d8dbdd667042c5aac7e5dd1a0 files/digest-pyclamav-0.1 62
 MD5 02e3cc7499b0aabc2c0446747a2af320 files/digest-pyclamav-0.2.1 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCi2pxTM53OX+9xmMRAh+kAKCa3NWLXtJ5SqfcKZYzQF03R+06QwCg15Ot
+qPLtlKDzcc+QhCDd8LxyiN4=
+=Jx3I
+-----END PGP SIGNATURE-----
