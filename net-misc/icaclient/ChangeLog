@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/icaclient
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/icaclient/ChangeLog,v 1.19 2005/04/20 20:46:01 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/icaclient/ChangeLog,v 1.20 2005/05/18 02:15:30 weeve Exp $
+
+*icaclient-9.0 (18 May 2005)
+
+  18 May 2005; Jason Wever <weeve@gentoo.org> icaclient-8.0-r3.ebuild,
+  +icaclient-9.0.ebuild:
+  Marked 8.0-r3 stable on x86 and added a version bump (resolves bug #92538).
 
   20 Apr 2005; Herbie Hopkins <herbs@gentoo.org> icaclient-8.0-r3.ebuild:
   Multilib fixes, add ~amd64 keyword - Bug #89057

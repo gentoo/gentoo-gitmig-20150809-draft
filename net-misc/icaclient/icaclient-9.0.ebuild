@@ -1,16 +1,16 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/icaclient/icaclient-8.0-r3.ebuild,v 1.4 2005/05/18 02:15:30 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/icaclient/icaclient-9.0.ebuild,v 1.1 2005/05/18 02:15:30 weeve Exp $
 
 inherit multilib
 
 DESCRIPTION="ICA Client"
-HOMEPAGE="http://www.citrix.com/download/unix-downloads.asp"
-SRC_URI="ICAClient-8.0-1.i386.rpm"
+HOMEPAGE="http://www.citrix.com/site/SS/downloads/details.asp?dID=2755&downloadID=3323"
+SRC_URI="ICAClient-9.0-1.i386.rpm"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="-* ~amd64 x86"
+KEYWORDS="-* ~x86 ~amd64"
 IUSE="gnome"
 RESTRICT="fetch"
 
@@ -31,7 +31,7 @@ pkg_nofetch() {
 }
 
 src_unpack() {
-	# You must download ICAClient-8.0-1.i386.rpm
+	# You must download ICAClient-9.0-1.i386.rpm
 	# from www.citrix.com and put it in ${DISTDIR}
 	rpm2cpio ${DISTDIR}/${A} | cpio -i --make-directories
 }
@@ -66,10 +66,9 @@ src_install() {
 	doins lib/ICAClient/keyboard/*
 	insinto /opt/ICAClient/keystore/cacerts
 	doins lib/ICAClient/keystore/cacerts/*
-	insinto /opt/ICAClient/pkginf
-	doins lib/ICAClient/pkginf/*
 	insinto /opt/ICAClient/util
-	doins lib/ICAClient/util/*
+	doins lib/ICAClient/util/{XCapture,XCapture.ad,echo_cmd,icalicense.sh,integrate.sh,nslaunch,pac.js,pacexec,xcapture}
+	dosym /opt/ICAClient/util/integrate.sh /opt/ICAClient/util/disintegrate.sh
 	exeinto /opt/ICAClient
 	doexe lib/ICAClient/wfcmgr
 	doexe lib/ICAClient/wfcmgr.bin
@@ -79,7 +78,7 @@ src_install() {
 	insinto /usr/$(get_libdir)/nsbrowser/plugins
 	dosym /opt/ICAClient/npica.so /usr/$(get_libdir)/nsbrowser/plugins/npica.so
 
-	if [ use gnome ]; then
+	if [ `use gnome` ]; then
 		insinto /usr/share/applications
 		doins lib/ICAClient/desktop/*.desktop
 	fi
