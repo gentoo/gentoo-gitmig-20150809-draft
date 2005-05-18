@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3985 2005/05/18 15:42:05 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3986 2005/05/18 20:52:16 flameeyes Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -47,11 +47,6 @@
 # Elfyn McBratney <beu@gentoo.org> (15 May 2005)
 # Needs a bit of testing before it goes straight to stable.
 =net-www/webapp-config-1.10-r15
-
-# Diego Pettenò <flameeyes@gentoo.org> (15 May 2005)
-# This version of VLC should compile with wxGTK 2.6 but for some strange
-# reasons still links to 2.4 if present.
-=media-video/vlc-0.8.1-r3
 
 # Sven Wegener <swegener@gentoo.org> (15 May 2005)
 # Masked for preparing the irssi-cvs to irssi-svn move
