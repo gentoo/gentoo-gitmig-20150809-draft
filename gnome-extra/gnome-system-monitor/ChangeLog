@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/gnome-system-monitor
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-system-monitor/ChangeLog,v 1.75 2005/05/11 16:13:54 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-system-monitor/ChangeLog,v 1.76 2005/05/18 01:48:38 weeve Exp $
+
+  18 May 2005; Jason Wever <weeve@gentoo.org>
+  gnome-system-monitor-2.8.3.ebuild:
+  Stable on SPARC.
 
   11 May 2005; Guy Martin <gmsoft@gentoo.org>
   gnome-system-monitor-2.8.3.ebuild:
