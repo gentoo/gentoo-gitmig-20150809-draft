@@ -1,0 +1,11 @@
+# ChangeLog for dev-libs/wx-xmingw
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/wx-xmingw/ChangeLog,v 1.1 2005/05/18 23:04:38 pythonhead Exp $
+
+*wx-xmingw-2.4.2 (18 May 2005)
+
+  18 May 2005; Rob Cakebread <pythonhead@gentoo.org> +metadata.xml,
+  +wx-xmingw-2.4.2.ebuild:
+  Initial commit. Ebuild written by Adrian Smarzewski <adrian@kadu.net>.
+  Thanks Adrian. bug# 46420
+
