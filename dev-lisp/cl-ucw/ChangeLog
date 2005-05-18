@@ -1,0 +1,19 @@
+# ChangeLog for dev-lisp/cl-ucw
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-ucw/ChangeLog,v 1.1 2005/05/18 22:24:27 mkennedy Exp $
+
+*cl-ucw-0.3.9 (18 May 2005)
+
+  18 May 2005; Matthew Kennedy <mkennedy@gentoo.org>
+  +files/0.3.9-gentoo.patch, +files/README.Gentoo, +metadata.xml,
+  +cl-ucw-0.3.9.ebuild:
+  New upstream version; Removed old ebuilds.
+
+*cl-ucw-0.3.7 (22 Mar 2005)
+*cl-ucw-0.3.6 (22 Mar 2005)
+
+  22 Mar 2005; Matthew Kennedy <mkennedy@gentoo.org>
+  +files/0.3.6-tal-paths-gentoo.patch, +files/0.3.7-tal-paths-gentoo.patch,
+  +metadata.xml, +cl-ucw-0.3.6.ebuild, +cl-ucw-0.3.7.ebuild:
+  Initial port.  Ebuild contributed by Matthew Kennedy <mkennedy@gentoo.org>
+

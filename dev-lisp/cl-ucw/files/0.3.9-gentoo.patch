@@ -1,0 +1,24 @@
+diff -ur ucw_0.3.9.orig/bin/start.lisp ucw_0.3.9/bin/start.lisp
+--- ucw_0.3.9.orig/bin/start.lisp	2005-05-09 12:33:49.000000000 -0500
++++ ucw_0.3.9/bin/start.lisp	2005-05-18 15:59:32.000000000 -0500
+@@ -43,18 +43,14 @@
+ 
+ ;;;; 3) Setup teh default TAL root
+ 
+-(setf *ucw-tal-root* (find-tal-root))
++(setf *ucw-tal-root* #p"/var/lib/ucw/wwwroot/")
+ 
+ ;;;; 4) Setup the loggers
+ 
+ ;;;; We put all the log files (ucw.log and ucw.backend.log by default)
+ ;;;; in the directory ucw/logs/
+ 
+-(setup-loggers (make-pathname :name nil :type nil
+-                              :directory (append (pathname-directory *load-truename*)
+-                                                 (list :up "logs"))
+-                              :defaults *load-truename*)
+-               +info+)
++(setup-loggers #p"/var/logs/ucw/" +info+)
+ 
+ ;;;; ** Site Specific initialization/configuration
+ 

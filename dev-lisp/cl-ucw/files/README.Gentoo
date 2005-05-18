@@ -1,0 +1,54 @@
+                                                                 -*-outline-*-
+This file is README.Gentoo, from /usr/share/docs/cl-ucw-*/
+
+* Introduction
+
+UCW requires some configuration before use.  For example, you must choose the
+web-server backend UCW will use (araneida, mod_lisp, aserve, httpd etc.),
+choose the location of the UCW TAL root, adjust loggers, debugging verbosity
+etc.
+
+UCW provides some examples in the form of start.lisp, and utils.lisp.  Both
+of which can be found in /usr/share/docs/cl-ucw-*/.  Use those examples as
+templates for your own configurations.  Your start.lisp and utils.lisp should
+be located in the same directory.
+
+* Gentoo Defaults
+
+Gentoo installs a default TAL root in /var/lib/ucw/wwwroot/
+
+Gentoo installs a default logger path at /var/logs/ucw/
+
+The start.lisp included in the Gentoo distribution of UCW makes use of the
+above paths by default (see the sections 3. TAL root and section 4. Setup
+loggers in start.lisp).  If you wish to change the details of a web-server
+backend, you'll need to change utils.lisp.
+
+You will need to adjust the permissions of /var/logs/ucw/ to suit whatever
+system user ID you intend to run UCW under.  Alternatively you could set the
+path passed to SETUP-LOGGERS to your own choice in logging directory.
+
+* Starting UCW
+
+Once you have adjusted your start.lisp and utils.lisp, start UCW within your
+Lisp REPL like this:
+
+    (asdf:oos 'adsf:load-op :ucw)
+    (load "/path/to/start.lisp")
+
+By default, the admin and examples applications are available at:
+
+    http://127.0.0.1:<port>/ucw/admin/index.ucw
+    http://127.0.0.1:<port>/ucw/examples/index.ucw
+
+Where <port> is 8080 for the "httpd" backend, 3001 for the "mod-lisp" backend
+and 8080 for the "aserve" or "araneida" backends.
+
+* Bugs 
+
+Report bugs to http://bugs.gentoo.org/
+
+* Maintainer
+
+Matthew Kennedy <mkennedy@gentoo.org>
+
