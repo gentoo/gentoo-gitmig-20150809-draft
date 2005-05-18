@@ -1,6 +1,10 @@
 # ChangeLog for net-www/webapp-config
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/webapp-config/ChangeLog,v 1.79 2005/05/16 13:12:56 sejo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/webapp-config/ChangeLog,v 1.80 2005/05/18 15:06:45 beu Exp $
+
+  18 May 2005; Elfyn McBratney <beu@gentoo.org>
+  -webapp-config-1.10-r15.ebuild:
+  Drop -r16.
 
   16 May 2005; Jochen Maes <sejo@gentoo.org> :
   fixed digest
