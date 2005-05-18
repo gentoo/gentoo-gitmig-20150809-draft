@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.2.26.ebuild,v 1.2 2005/04/30 23:39:55 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.2.26.ebuild,v 1.3 2005/05/18 00:12:10 robbat2 Exp $
 
 inherit toolchain-funcs eutils
 
@@ -12,7 +12,7 @@ LICENSE="OPENLDAP"
 SLOT="0"
 IUSE="berkdb crypt debug gdbm ipv6 kerberos odbc perl readline samba sasl slp ssl tcpd"
 #In portage for testing only, hardmasked in package.mask
-KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha ~arm ~amd64 ~s390 ~hppa ~ppc64 ~ia64"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 
 DEPEND=">=sys-libs/ncurses-5.1
 	>=sys-apps/sed-4
