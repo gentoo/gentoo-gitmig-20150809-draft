@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 1b52045b9f925fb39d0c6625413ab6af tsocks-1.8_beta4.ebuild 1214
-MD5 e5a63fa50a74af739b2ba958f8654af0 tsocks-1.8_beta5.ebuild 1301
-MD5 5fb55f02aef9df3e3920548388990401 ChangeLog 1861
+MD5 594ea834843510a3091c4e8e11ccf519 ChangeLog 1953
 MD5 dcd6e2fd781d4984dfd0a5c89343847b metadata.xml 471
+MD5 1b52045b9f925fb39d0c6625413ab6af tsocks-1.8_beta4.ebuild 1214
+MD5 1ca3860d2df8610c63ad7f022c03114c tsocks-1.8_beta5.ebuild 1301
 MD5 1aa2efdb2fe949b6f3323e6b512fbef9 files/digest-tsocks-1.8_beta4 66
 MD5 d90e48e1c5e026d671a6b0bc9aa09574 files/digest-tsocks-1.8_beta5 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCakkdI1lqEGTUzyQRAqORAKCw7rjzPmz54sJ6eZwQO3la/K053QCgmnbH
-pN+qFfK0hbUyg5TnCurYMzc=
-=LNzf
------END PGP SIGNATURE-----
