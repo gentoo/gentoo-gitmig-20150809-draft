@@ -17,5 +17,9 @@
 		De dev-haskell categorie bevat bibliotheken en hulpmiddelen voor het gebruik
 		van de programmeertaal Haskell.
 	</longdescription>
+	<longdescription lang="vi">
+		Nhóm dev-haskell chứa các thư viện và tiện ích liên quan
+		đến ngôn ngữ lập trình Haskell.
+	</longdescription>
 </catmetadata>
 

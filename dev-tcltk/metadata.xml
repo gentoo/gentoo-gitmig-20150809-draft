@@ -15,5 +15,9 @@
 		De dev-tcltk categorie bevat bibliotheken en hulpmiddelen voor het gebruik van de
 		programmeertalen Tcl en Tk.
 	</longdescription>
+	<longdescription lang="vi">
+		Nhóm dev-tcltk chứa các thư viện và tiện ích liên quan
+		đến ngôn ngữ lập trình Tcl/Tk.
+	</longdescription>
 </catmetadata>
 

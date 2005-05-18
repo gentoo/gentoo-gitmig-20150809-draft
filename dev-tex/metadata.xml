@@ -17,5 +17,10 @@
 		De dev-tex categorie bevat bibliotheken en hulpmiddelen voor het werken met
 		TeX en op TeX gebaseerde omgevingen zoals LaTeX.
 	</longdescription>
+	<longdescription lang="vi">
+		Nhóm dev-tex chứa các thư viện và tiện ích liên quan
+		đến ngôn ngữ lập trình TeX và các môi trường dựa trên
+		TeX như LaTeX.
+	</longdescription>
 </catmetadata>
 

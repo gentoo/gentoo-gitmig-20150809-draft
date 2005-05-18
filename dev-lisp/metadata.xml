@@ -17,5 +17,9 @@
 		De dev-lisp categorie bevat bibliotheken en hulpmiddelen voor het gebruik
 		van de programmeertaal Lisp.
 	</longdescription>
+	<longdescription lang="vi">
+		Nhóm dev-lisp chứa các thư viện và tiện ích liên quan
+		đến ngôn ngữ lập trình Lisp.
+	</longdescription>
 </catmetadata>
 
