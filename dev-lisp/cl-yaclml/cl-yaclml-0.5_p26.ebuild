@@ -1,12 +1,16 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-yaclml/cl-yaclml-0.5.2.ebuild,v 1.3 2005/04/17 01:18:13 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-yaclml/cl-yaclml-0.5_p26.ebuild,v 1.1 2005/05/18 20:33:22 mkennedy Exp $
 
 inherit common-lisp
 
+MY_PV=${PV:0:3}
+MY_PATCH_PV=${PV:5}
+
 DESCRIPTION="yaclml is a collection of macros and utilities for generating XML/HTML like markup from lisp code"
 HOMEPAGE="http://common-lisp.net/project/bese/yaclml.html"
-SRC_URI="ftp://ftp.common-lisp.net/pub/project/bese/yaclml_${PV}.tar.gz"
+SRC_URI="mirror://gentoo/yaclml--dev--${MY_PV}--patch-${MY_PATCH_PV}.tar.bz2"
+# SRC_URI="ftp://ftp.common-lisp.net/pub/project/bese/yaclml_${PV}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="x86 ~amd64 ~ppc"
@@ -17,7 +21,8 @@ DEPEND="dev-lisp/cl-iterate
 
 CLPACKAGE="yaclml"
 
-S=${WORKDIR}/yaclml_${PV}
+S=${WORKDIR}/yaclml--dev--${MY_PV}--patch-${MY_PATCH_PV}
+# S=${WORKDIR}/yaclml_${PV}
 
 src_unpack() {
 	unpack ${A}
