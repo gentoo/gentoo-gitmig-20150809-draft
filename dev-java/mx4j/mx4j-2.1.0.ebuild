@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/mx4j/mx4j-2.1.0.ebuild,v 1.2 2005/03/16 17:16:15 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/mx4j/mx4j-2.1.0.ebuild,v 1.3 2005/05/19 13:36:42 luckyduck Exp $
 
 inherit eutils java-pkg
 
@@ -22,7 +22,7 @@ RDEPEND=">=virtual/jre-1.4
 	>=www-servers/resin-3.0.8"
 LICENSE="mx4j"
 SLOT="2.1"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="x86 amd64"
 IUSE="doc examples jikes source"
 
 src_unpack(){
