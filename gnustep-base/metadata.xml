@@ -14,5 +14,8 @@
 	<longdescription lang="nl">
 		De gnustep-base categorie bevat de basispakketten van GNUstep.
 	</longdescription>
+	<longdescription lang="vi">
+		Nhóm gnustep-base chứa các ứng dụng GNUstep cơ bản.
+	</longdescription>
 </catmetadata>
 

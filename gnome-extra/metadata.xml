@@ -14,5 +14,8 @@
 	<longdescription lang="nl">
 		De gnome-extra categorie bevat optionele extra's voor de GNOME desktopomgeving.
 	</longdescription>
+	<longdescription lang="vi">
+		Nhóm gnome-extra chứa các gói GNOME bổ sung, không thuộc về các gói cốt lõi.
+	</longdescription>
 </catmetadata>
 

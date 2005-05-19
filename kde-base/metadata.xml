@@ -13,5 +13,8 @@
 	<longdescription lang="nl">
 		De kde-base categorie bevat de basispakketten van KDE.
 	</longdescription>
+	<longdescription lang="vi">
+		Nhóm kde-base chứa các gói KDE cốt lõi.
+	</longdescription>
 </catmetadata>
 
