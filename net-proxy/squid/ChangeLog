@@ -1,6 +1,15 @@
 # ChangeLog for net-proxy/squid
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.10 2005/05/12 23:16:26 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.11 2005/05/19 19:27:53 mrness Exp $
+
+*squid-2.5.10 (19 May 2005)
+
+  19 May 2005; Alin Nastac <mrness@gentoo.org>
+  -files/squid-2.5.8-gentoo.diff, +files/squid.pam-include,
+  -squid-2.5.8.ebuild, -squid-2.5.8-r1.ebuild, +squid-2.5.10.ebuild:
+  Version bump with fixed openpam/amd64 compatibility (#93191). Add
+  post-install info message about how to make winbind authentication work.
+  Remove obsolete versions.
 
   12 May 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   squid-2.5.10_rc3.ebuild:

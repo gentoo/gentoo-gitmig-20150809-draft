@@ -1,29 +1,29 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-2.5.8-r1.ebuild,v 1.1 2005/04/22 19:15:11 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-2.5.10.ebuild,v 1.1 2005/05/19 19:27:53 mrness Exp $
 
 inherit eutils toolchain-funcs
 
 #lame archive versioning scheme..
 S_PV=${PV%.*}
 S_PL=${PV##*.}
+S_PL=${S_PL/_rc/-RC}
 S_PP=${PN}-${S_PV}.STABLE${S_PL}
-PATCH_VERSION="20050223"
+PATCH_VERSION="20050519"
 
 DESCRIPTION="A caching web proxy, with advanced features"
 HOMEPAGE="http://www.squid-cache.org/"
+SRC_URI="http://www.squid-cache.org/Versions/v2/${S_PV}/${S_PP}.tar.gz
+	mirror://gentoo/${S_PP}-patches-${PATCH_VERSION}.tar.gz"
 
 S=${WORKDIR}/${S_PP}
-SRC_URI="ftp://ftp.squid-cache.org/pub/squid-2/STABLE/${S_PP}.tar.bz2
-	mirror://gentoo/squid-2.5.STABLE8-patches-${PATCH_VERSION}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~mips"
-IUSE="pam ldap ssl sasl snmp debug uclibc selinux underscores logrotate"
+IUSE="pam ldap ssl sasl snmp debug selinux underscores logrotate customlog zero-penalty-hit"
 
-RDEPEND="virtual/libc
-	pam? ( >=sys-libs/pam-0.75 )
+RDEPEND="pam? ( virtual/pam )
 	ldap? ( >=net-nds/openldap-2.1.26 )
 	ssl? ( >=dev-libs/openssl-0.9.6m )
 	sasl? ( >=dev-libs/cyrus-sasl-1.5.27 )
@@ -35,24 +35,22 @@ src_unpack() {
 	unpack ${A} || die "unpack failed"
 	cd ${S} || die "dir ${S} not found"
 
-	#do NOT just remove this patch.  yes, it's here for a reason.
-	#woodchip@gentoo.org (07 Nov 2002)
-	patch -p1 <${FILESDIR}/squid-${PV}-gentoo.diff || die "failed to apply squid-{PV}-gentoo.diff"
-
-	# Do bulk patching from squids bug fix list for stable 6 see #57081
-	EPATCH_SUFFIX="patch" epatch ${WORKDIR}/patch
+	# Do bulk patching from squids bug fix list as well as our patches
+	use customlog || rm ${WORKDIR}/patch/9*customlog*
+	use zero-penalty-hit || rm ${WORKDIR}/patch/9*ToS_Hit*
+	EPATCH_SUFFIX="patch"
+	epatch ${WORKDIR}/patch
 
 	#hmm #10865
-	cd helpers/external_acl/ldap_group
-	cp Makefile.in Makefile.in.orig
-	sed -e 's%^\(LINK =.*\)\(-o.*\)%\1\$(XTRA_LIBS) \2%' \
-		Makefile.in.orig > Makefile.in
+	sed -i -e 's%^\(LINK =.*\)\(-o.*\)%\1\$(XTRA_LIBS) \2%' \
+		helpers/external_acl/ldap_group/Makefile.in
 
-	if ! use debug
-	then
-		cd ${S}
-		mv configure.in configure.in.orig
-		sed -e 's%LDFLAGS="-g"%LDFLAGS=""%' configure.in.orig > configure.in
+	#disable lazy bindings on (some at least) suided basic auth programs
+	sed -i -e 's:_LDFLAGS[ ]*=:_LDFLAGS = -Wl,-z,now:' \
+		helpers/basic_auth/*/Makefile.in
+
+	if ! use debug ; then
+		sed -i -e 's%LDFLAGS="-g"%LDFLAGS=""%' configure.in
 		export WANT_AUTOCONF=2.1
 		autoconf || die "autoconf failed"
 	fi
@@ -60,7 +58,7 @@ src_unpack() {
 
 src_compile() {
 	# Support for uclibc #61175
-	if use uclibc; then
+	if use elibc_uclibc; then
 		local basic_modules="getpwnam,NCSA,SMB,MSNT,multi-domain-NTLM,winbind"
 	else
 		local basic_modules="getpwnam,YP,NCSA,SMB,MSNT,multi-domain-NTLM,winbind"
@@ -87,7 +85,7 @@ src_compile() {
 	fi
 
 	# Support for uclibc #61175
-	if use uclibc; then
+	if use elibc_uclibc; then
 		myconf="${myconf} --enable-storeio='ufs,diskd,aufs,null' "
 		myconf="${myconf} --disable-async-io "
 	else
@@ -106,7 +104,6 @@ src_compile() {
 		--mandir=/usr/share/man \
 		--sysconfdir=/etc/squid \
 		--libexecdir=/usr/lib/squid \
-		\
 		--enable-auth="basic,digest,ntlm" \
 		--enable-removal-policies="lru,heap" \
 		--enable-digest-auth-helpers="password" \
@@ -122,20 +119,19 @@ src_compile() {
 		--enable-truncate \
 		--enable-arp-acl \
 		--with-pthreads \
+		--with-large-files \
 		--enable-htcp \
 		--enable-carp \
 		--enable-poll \
 		--host=${CHOST} ${myconf} || die "bad ./configure"
 		#--enable-icmp
 
-	mv include/autoconf.h include/autoconf.h.orig
-	sed -e "s:^#define SQUID_MAXFD.*:#define SQUID_MAXFD 8192:" \
-		include/autoconf.h.orig > include/autoconf.h
+	sed -i -e "s:^#define SQUID_MAXFD.*:#define SQUID_MAXFD 8192:" \
+		include/autoconf.h
 
 #	if [ "${ARCH}" = "hppa" ]
 #	then
-#		mv include/autoconf.h include/autoconf.h.orig
-#		sed -e "s:^#define HAVE_MALLOPT 1:#undef HAVE_MALLOPT:" \
+#		sed -i -e "s:^#define HAVE_MALLOPT 1:#undef HAVE_MALLOPT:" \
 #			include/autoconf.h.orig > include/autoconf.h
 #	fi
 
@@ -157,8 +153,7 @@ src_install() {
 	chmod 4750 ${D}/usr/lib/squid/pam_auth
 
 	#some clean ups
-	rm -rf ${D}/var
-	mv ${D}/usr/bin/Run* ${D}/usr/lib/squid
+	rm -f ${D}/usr/bin/Run*
 
 	#simply switch this symlink to choose the desired language..
 	dosym /usr/lib/squid/errors/English /etc/squid/errors
@@ -172,28 +167,30 @@ src_install() {
 	doman helpers/basic_auth/LDAP/*.8
 	dodoc helpers/basic_auth/SASL/squid_sasl_auth*
 
-	insinto /etc/pam.d
-	newins ${FILESDIR}/squid.pam squid
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/squid.rc6 squid
-	insinto /etc/conf.d
-	newins ${FILESDIR}/squid.confd squid
-	if useq logrotate; then
+	newpamd "${FILESDIR}/squid.pam-include" squid
+	newinitd "${FILESDIR}/squid.rc6" squid
+	newconfd "${FILESDIR}/squid.confd" squid
+	if use logrotate; then
 		insinto /etc/logrotate.d
 		newins ${FILESDIR}/squid-logrotate squid
 	else
 		exeinto /etc/cron.weekly
 		newexe ${FILESDIR}/squid-r1.cron squid.cron
 	fi
+
+	rm -rf ${D}/var
+	diropts -m0755 -o squid -g squid
+	dodir /var/cache/squid /var/log/squid
 }
 
 pkg_postinst() {
-	# empty dirs..
-	install -m0755 -o squid -g squid -d ${ROOT}/var/cache/squid
-	install -m0755 -o squid -g squid -d ${ROOT}/var/log/squid
-
 	echo
 	ewarn "Squid authentication helpers have been installed suid root"
 	ewarn "This allows shadow based authentication, see bug #52977 for more"
+	echo
+	einfo "To winbind auth work with your squid your should change the"
+	einfo "/var/cache/samba/winbindd_privileged group to the same one you use"
+	einfo "in the cache_effective_group option on your squid.conf:"
+	einfo "    chgrp squid /var/cache/samba/winbindd_privileged"
 	echo
 }
