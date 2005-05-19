@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/dasher/dasher-3.2.15.ebuild,v 1.5 2005/05/16 20:49:38 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/dasher/dasher-3.2.15.ebuild,v 1.6 2005/05/19 10:56:01 gmsoft Exp $
 
 inherit eutils gnome2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.inference.phy.cam.ac.uk/dasher/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc sparc ~amd64 ~alpha ~hppa ~mips ~ppc64 ~ia64"
+KEYWORDS="x86 ~ppc sparc ~amd64 ~alpha hppa ~mips ~ppc64 ~ia64"
 
 IUSE="accessibility gnome"
 
