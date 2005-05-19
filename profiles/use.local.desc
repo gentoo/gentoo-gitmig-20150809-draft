@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1176 2005/05/18 23:03:25 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1177 2005/05/19 04:33:00 marineam Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -830,6 +830,7 @@ sys-fs/lufs:lufsusermount - allow users to mount LUFS filesystems
 sys-fs/lvm2:nolvmstatic - Allow users to build lvm2 dynamically
 sys-fs/quota:rpc - Enable quota interaction via RPC
 sys-fs/unionfs:vserver - Enable vserver kernel patches support
+sys-kernel/ck-sources:ck-server - Tune the kernel for servers
 sys-kernel/development-sources:ultra1 - If you have a SUN Ultra 1 with a HME interface
 sys-kernel/genkernel:bootsplash - Installs bootsplash support if you request it and it is not already available.
 sys-kernel/genkernel:ibm - Install IBM pSeries config as default instead of G5 config.
