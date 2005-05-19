@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/crack-attack/crack-attack-1.1.14.ebuild,v 1.1 2005/05/15 19:42:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/crack-attack/crack-attack-1.1.14.ebuild,v 1.2 2005/05/19 03:28:58 vapier Exp $
 
 inherit eutils flag-o-matic games
 
@@ -14,7 +14,7 @@ KEYWORDS="amd64 arm hppa ia64 ppc sparc x86"
 IUSE="gtk"
 
 DEPEND="virtual/glut
-	gtk? ( >=x11-libs/gtk+-2.4 )"
+	gtk? ( >=x11-libs/gtk+-2.6 )"
 
 src_compile() {
 	egamesconf \
