@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/mod_php
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/ChangeLog,v 1.231 2005/05/12 19:52:04 beu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/ChangeLog,v 1.232 2005/05/19 06:59:05 corsair Exp $
+
+  19 May 2005; Markus Rothe <corsair@gentoo.org> mod_php-5.0.4.ebuild:
+  Added ~ppc64 to KEYWORDS
 
   12 May 2005; Elfyn McBratney <beu@gentoo.org> mod_php-4.3.11-r2.ebuild:
   Drop ~mips keyword until net-www/apache-2.0.54-r5 (plus deps) has been
