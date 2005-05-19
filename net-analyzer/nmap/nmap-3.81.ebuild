@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/nmap-3.81.ebuild,v 1.6 2005/05/18 19:24:31 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/nmap-3.81.ebuild,v 1.7 2005/05/19 00:19:57 tester Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.insecure.org/nmap/dist/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc sparc ~alpha ~arm hppa ~amd64 ppc64 ~s390 ~ia64 ~ppc-macos"
+KEYWORDS="x86 ~ppc sparc ~alpha ~arm hppa amd64 ppc64 ~s390 ~ia64 ~ppc-macos"
 IUSE="gtk ssl"
 
 DEPEND="virtual/libc
