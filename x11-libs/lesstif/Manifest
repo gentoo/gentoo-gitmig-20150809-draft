@@ -2,7 +2,7 @@
 Hash: SHA1
 
 MD5 ae0ce246891f960a8751d3f0b08c14cc lesstif-0.93.94-r4.ebuild 2763
-MD5 f8682d57278e113c7f6574493eb98d17 lesstif-0.94.4.ebuild 2447
+MD5 63ce9a631939afa9e1f42b8c936b4e6e lesstif-0.94.4.ebuild 2702
 MD5 a90a4c4645ecc020a72ad76f78b6e6b6 lesstif-0.94.0-r2.ebuild 2109
 MD5 939d1de0a40a84d05501a5eb765c527b ChangeLog 8669
 MD5 503ccb1138f9c49f0855884d830988a6 metadata.xml 253
@@ -13,7 +13,7 @@ MD5 50f3abd88dd0c45de68a1cec931c4909 files/digest-lesstif-0.94.0-r2 68
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCiLD4evY57Fted3ERAnwSAJ9wAQl6sTY0e8YhXneBpj6r3KZM9gCffYf7
-Jr0FfHzmm0haHsI+fv9Jo8I=
-=uhQg
+iD8DBQFCjJToevY57Fted3ERAqckAJ9OPO/8QmoZERcLQwabfG+7D1WQHgCfQRMM
+BwPEtCAUMo3U0+5fK4wJeYs=
+=i3K6
 -----END PGP SIGNATURE-----

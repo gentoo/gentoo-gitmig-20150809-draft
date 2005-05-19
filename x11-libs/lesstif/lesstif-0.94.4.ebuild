@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/lesstif/lesstif-0.94.4.ebuild,v 1.4 2005/05/16 14:39:53 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/lesstif/lesstif-0.94.4.ebuild,v 1.5 2005/05/19 13:29:56 lanius Exp $
 
 inherit libtool flag-o-matic multilib
 
@@ -42,10 +42,18 @@ src_compile() {
 	  --enable-verbose=no \
 	  --with-x || die "./configure failed"
 
+	# fix linkage against already installed version
+	perl -pi -e 's/^(hardcode_into_libs)=.*/$1=no/' libtool
+
 	emake CFLAGS="${CFLAGS}" || die
 }
 
 src_install() {
+	# fix linkage against already installed version
+	for f in `find . -name \*.la -type f` ; do
+		perl -pi -e 's/^(relink_command=.*)/# $1/' $f
+	done
+
 	make DESTDIR=${D} install || die "make install"
 
 
