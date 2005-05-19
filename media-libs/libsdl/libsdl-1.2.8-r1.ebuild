@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.8-r1.ebuild,v 1.11 2005/05/15 18:22:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.8-r1.ebuild,v 1.12 2005/05/19 03:16:49 vapier Exp $
 
 inherit flag-o-matic toolchain-funcs eutils gnuconfig
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.libsdl.org/release/SDL-${PV}.tar.gz"
 LICENSE="LGPL-2"
 SLOT="0"
 KEYWORDS="~alpha amd64 arm hppa ia64 ~mips ~ppc ~ppc64 ~ppc-macos sparc x86"
-IUSE="oss alsa esd arts nas X dga xv xinerama fbcon directfb ggi svga aalib opengl libcaca noaudio novideo nojoystick"
+IUSE="oss alsa esd arts nas X dga xv xinerama fbcon directfb ggi svga aalib opengl libcaca pic noaudio novideo nojoystick"
 # if you disable audio/video/joystick and something breaks, you pick up the pieces
 
 RDEPEND=">=media-libs/audiofile-0.1.9
@@ -80,6 +80,7 @@ src_compile() {
 	fi
 	if use x86 ; then
 		filter-flags -fforce-addr #87077
+		use pic || myconf="${myconf} $(use_enable x86 nasm)"
 	fi
 	use noaudio && myconf="${myconf} --disable-audio"
 	use novideo \
@@ -122,7 +123,6 @@ src_compile() {
 		$(use_enable esd) \
 		$(use_enable arts) \
 		$(use_enable nas) \
-		$(use_enable x86 nasm) \
 		$(use_enable X video-x11) \
 		$(use_enable dga) \
 		$(use_enable xv video-x11-xv) \
