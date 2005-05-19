@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/elfutils-0.108.ebuild,v 1.4 2005/05/19 17:48:06 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/elfutils-0.108.ebuild,v 1.5 2005/05/19 17:54:54 killerfox Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gentoo/${P}.tar.gz mirror://gentoo/${P}.robustify.patch.bz2"
 
 LICENSE="OpenSoftware"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ppc ppc64 ~s390 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm hppa ~ia64 ~mips ppc ppc64 ~s390 ~sparc ~x86"
 IUSE="nls uclibc"
 
 # This pkg does not actually seem to compile currently in a uClibc
