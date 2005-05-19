@@ -1,6 +1,11 @@
 # ChangeLog for sys-process/audit
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/audit/ChangeLog,v 1.6 2005/05/15 14:55:30 beu Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/audit/ChangeLog,v 1.7 2005/05/19 18:15:39 robbat2 Exp $
+
+*audit-0.8.1 (19 May 2005)
+
+  19 May 2005; Robin H. Johnson <robbat2@gentoo.org> +audit-0.8.1.ebuild:
+  Version bump.
 
 *audit-0.8 (15 May 2005)
 
