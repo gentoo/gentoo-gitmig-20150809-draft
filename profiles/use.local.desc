@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1179 2005/05/19 09:13:29 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1180 2005/05/19 13:00:44 tester Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -503,6 +503,11 @@ media-video/mkvtoolnix:lzo - Enables support for lzo compression
 media-video/motiontrack:libgd - Enables gd library support for debug purposes
 media-video/motiontrack:multiprocess - Enables multi-proccess support (SMP/cluster) for motiontrack programs
 media-video/mpeg4ip:v4l2 - Enable video4linux2 support
+media-video/mpeg4ip:mpeg2 - Support mpeg2 in the player
+media-video/mpeg4ip:lame - Support LAME mp3 encoding in the server/mp4live
+media-video/mpeg4ip:id3 - Support ID3 in the player
+media-video/mpeg4ip:player - Build the player
+media-video/mpeg4ip:mp4live - Build the live streaming/encoding software
 media-video/mplayer:3dnowext - Enables 3dnow extensions in mplayer
 media-video/mplayer:bl - Enables Blinkenlights support in mplayer
 media-video/mplayer:cpudetection - Enables runtime cpudetection
