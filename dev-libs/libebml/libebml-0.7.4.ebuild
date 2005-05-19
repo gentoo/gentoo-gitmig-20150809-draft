@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libebml/libebml-0.7.4.ebuild,v 1.1 2005/04/24 20:23:24 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libebml/libebml-0.7.4.ebuild,v 1.2 2005/05/19 11:11:20 gmsoft Exp $
 
 IUSE=""
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.bunkus.org/videotools/mkvtoolnix/sources/${P}.tar.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~x86 ~sparc ~ppc64 ~alpha ~ppc ~ppc-macos ~amd64"
+KEYWORDS="~x86 ~sparc ~ppc64 ~alpha ~ppc ~ppc-macos ~amd64 ~hppa"
 
 DEPEND="virtual/libc"
 
