@@ -67,6 +67,7 @@ smartcard
 bash-completion
 crypt
 doc
+pam_console
 
 emacs
 xemacs
