@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 c3b52b61561ee62e49161d2dcd916d4d irssi-0.8.10_rc5-r1.ebuild 2029
-MD5 8726c5cb5473fb833b4bd5cf2b8cdc12 irssi-0.8.9-r1.ebuild 2060
-MD5 a01f0f36692accb3eedba59ab9a18507 ChangeLog 9290
+MD5 59a36da0d04366e9d490301ee356e69e irssi-0.8.10_rc5-r1.ebuild 2077
+MD5 15f5aae14f75cd33623a53e73aa5ce5d irssi-0.8.9-r1.ebuild 2103
+MD5 df7af8d5552b4ffbbd262380448d694e ChangeLog 9465
 MD5 66fbf3744370d75438e10d4d8b6a3900 metadata.xml 250
 MD5 f6b8616b8bf8962bd0d491c457733ea5 files/irssi-0.8.10_rc5-gcc4.patch 309
 MD5 d8d32d5f69fd1bccf2928c4bad648cd6 files/digest-irssi-0.8.9-r1 64
 MD5 c3b74cff45778ccaab4b0c05f85139cd files/irssi-socks-fix.patch 551
 MD5 6613882c525a6f1db208af7fe5905336 files/irssi-0.8.9-64bit-exec-fix.patch 499
 MD5 22929c039747f2e05322d53d59dfd3f3 files/digest-irssi-0.8.10_rc5-r1 152
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCihScI1lqEGTUzyQRAvV0AKCxrEFooMu7h63rNWymQ/xRubxxZACZAYiA
-AX2gbk14Kj7+vLQQU0N7xPs=
-=/VwV
------END PGP SIGNATURE-----
