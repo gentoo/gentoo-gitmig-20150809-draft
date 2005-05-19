@@ -1,4 +1,6 @@
-MD5 2fefd3b6aa5b1694c9079c25ab7645d4 ChangeLog 426
+MD5 d0e172fe9d86bfb284275c37fdaf6f4f ChangeLog 538
 MD5 b4fdf681a6df48bbf17e49ca1fae34c8 libstreams-23.ebuild 1058
+MD5 5b07c74f948cbba45ebff500b2cfc3fa libstreams-24.1.ebuild 1062
 MD5 65d0ad2167dd016e2981b7a3df82cc50 metadata.xml 212
 MD5 589cbe62f6794d45d8f383a80db2971d files/digest-libstreams-23 64
+MD5 afd14bf665cba4b8ea473a70c0d3a257 files/digest-libstreams-24.1 66

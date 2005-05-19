@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/libstreams
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstreams/ChangeLog,v 1.2 2005/03/04 05:14:28 kito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstreams/ChangeLog,v 1.3 2005/05/19 20:46:58 kito Exp $
+
+*libstreams-24.1 (19 May 2005)
+
+  19 May 2005; Kito <kito@gentoo.org> +libstreams-24.1.ebuild:
+  version bump.
 
   03 Mar 2005; Kito <kito@gentoo.org> libstreams-23.ebuild:
   stable on ppc-macos
