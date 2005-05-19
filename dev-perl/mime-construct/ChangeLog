@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/mime-construct
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/mime-construct/ChangeLog,v 1.1 2005/05/19 09:26:39 mcummings Exp $
+
+*mime-construct-1.9 (19 May 2005)
+
+  19 May 2005; Michael Cummings <mcummings@gentoo.org> +metadata.xml,
+  +mime-construct-1.9.ebuild:
+  Initial import for johnm, dep for asterisk work
+
