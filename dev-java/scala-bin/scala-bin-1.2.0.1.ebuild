@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/scala-bin/scala-bin-1.2.0.1.ebuild,v 1.4 2004/10/22 10:12:36 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/scala-bin/scala-bin-1.2.0.1.ebuild,v 1.5 2005/05/19 13:51:37 luckyduck Exp $
 
 inherit java-pkg
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://scala.epfl.ch/"
 SRC_URI="http://scala.epfl.ch/downloads/distrib/files/scala-1.2.0.1.tar.bz2"
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="x86 amd64"
 IUSE="doc jikes"
 DEPEND=">=virtual/jdk-1.4"
 RDEPEND=">=virtual/jre-1.4"
@@ -19,11 +19,11 @@ src_compile() {
 
 	jars=/usr/share/${PN}/lib
 
-	sed -e "s§RUNTIME_SOURCES=.*§RUNTIME_SOURCES=\"/usr/share/${PF}/src\";§" \
-		-e "s§RUNTIME_CLASSES=.*§RUNTIME_CLASSES=\"${jars}/scala.jar\";§" \
-		-e "s§TOOLS_CLASSES=.*§TOOLS_CLASSES=\"${jars}/tools.jar\";§" \
-		-e "s§FJBG_CLASSES=.*§FJBG_CLASSES=\"${jars}/fjbg.jar\";§" \
-		-e "s§MSIL_CLASSES=.*§MSIL_CLASSES=\"${jars}/msil.jar\";§" \
+	sed -e "sÂ§RUNTIME_SOURCES=.*Â§RUNTIME_SOURCES=\"/usr/share/${PF}/src\";Â§" \
+		-e "sÂ§RUNTIME_CLASSES=.*Â§RUNTIME_CLASSES=\"${jars}/scala.jar\";Â§" \
+		-e "sÂ§TOOLS_CLASSES=.*Â§TOOLS_CLASSES=\"${jars}/tools.jar\";Â§" \
+		-e "sÂ§FJBG_CLASSES=.*Â§FJBG_CLASSES=\"${jars}/fjbg.jar\";Â§" \
+		-e "sÂ§MSIL_CLASSES=.*Â§MSIL_CLASSES=\"${jars}/msil.jar\";Â§" \
 		< bin/.scala_wrapper \
 		> scala_wrapper
 
@@ -46,7 +46,7 @@ src_install() {
 	java-pkg_dohtml -r doc/api
 	cp -r examples ${D}/usr/share/doc/${PF}
 	dodoc doc/*.pdf
-	dodoc LICENSE README VERSION
+	dodoc README VERSION
 
 	dodir /usr/share/${PF}
 	cp -r src support ${D}/usr/share/${PF}

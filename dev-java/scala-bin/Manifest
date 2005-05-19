@@ -1,4 +1,14 @@
-MD5 45b80ab55c5b36b04c3b92c718bccff9 ChangeLog 831
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 f4ee7388ada3670fa62909dbb858cc62 scala-bin-1.2.0.1.ebuild 1498
+MD5 3575d1416c35efd7745f2318e323cb20 ChangeLog 939
 MD5 0637a933ecb6e8cedfc4ddfcf3491728 metadata.xml 310
-MD5 5e39d9a2a1e1ad2f02b26b20adaaa8fc scala-bin-1.2.0.1.ebuild 1492
 MD5 13da2e88bbcea80d1bb558ce534f6845 files/digest-scala-bin-1.2.0.1 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCjJoB06ebR+OMO78RAu0zAKCXuPWN+VZ59BqTKGmKFPFAcXQ/TgCdEQTN
+caRD9rlCiXt+44MJP+VtdSo=
+=agv6
+-----END PGP SIGNATURE-----
