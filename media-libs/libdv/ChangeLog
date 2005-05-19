@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/libdv
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdv/ChangeLog,v 1.40 2005/05/01 17:25:50 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdv/ChangeLog,v 1.41 2005/05/19 19:25:53 solar Exp $
+
+  19 May 2005; <solar@gentoo.org> libdv-0.104.ebuild:
+  - Enable --disable-asm on x86 when using pic code or the compiled libdv will
+  contain text relocations. This should not really have to depend on when
+  has_pic triggers or not but it's this way for now till such time as x86 more
+  or less does a patch like the x86_64 relocation one. It may not really even
+  matter as libdv use of asm is should only matter with the use of a RT kernel
+  which none of us have at this point in time. Benchmarks need to be done.
 
   01 May 2005; Michael Hanselmann <hansmi@gentoo.org> libdv-0.102.ebuild:
   Stable on ppc.
