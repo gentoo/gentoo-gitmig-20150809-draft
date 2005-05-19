@@ -1,6 +1,10 @@
 # ChangeLog for media-video/motion
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/motion/ChangeLog,v 1.3 2005/04/30 09:29:01 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/motion/ChangeLog,v 1.4 2005/05/19 21:53:24 luckyduck Exp $
+
+  19 May 2005; Jan Brinkmann <luckyduck@gentoo.org> +metadata.xml,
+  motion-3.1.19.ebuild:
+  added ~amd64 to KEYWORDS, fixes #93110
 
   30 Apr 2005; Bryan Østergaard <kloeri@gentoo.org> motion-3.1.19.ebuild:
   ~alpha keyword, bug 89340.
