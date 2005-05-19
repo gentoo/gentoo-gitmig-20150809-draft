@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/raidtools
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/raidtools/ChangeLog,v 1.19 2005/04/07 21:50:06 plasmaroo Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/raidtools/ChangeLog,v 1.20 2005/05/19 22:16:16 vapier Exp $
+
+*raidtools-1.00.3-r5 (19 May 2005)
+
+  19 May 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/raidtools-1.00.3-quiet-raidstart.patch, files/raid-start.sh,
+  +raidtools-1.00.3-r5.ebuild:
+  Dont be so noisy during bootup #93039.
 
   07 Apr 2005; <plasmaroo@gentoo.org>
   files/raidtools-1.00.3-2.6.Headers.patch:

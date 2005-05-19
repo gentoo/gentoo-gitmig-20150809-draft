@@ -1,0 +1,54 @@
+Allow people to run `raidstart -aq` and not have raidtools bitch when 
+it tries to start devices that are already started.  This allows us to 
+simplify raidstarting at boot up.  If the user has all their devices 
+autostart by the kernel, running `raidstart -a` would display a bunch 
+of ugly warnings about the devices already being started.  Now we can 
+just run `raidstart -aq` and let raidtools figure out whether it needs 
+to start any of the devices or not.
+
+Note that this patch isn't exactly "clean", it's a shortcut approach 
+to keep patch size/maintenance down to a minimal.
+
+http://bugs.gentoo.org/93039
+
+vapier@gentoo.org
+
+--- raid_io.c
++++ raid_io.c
+@@ -517,3 +517,3 @@
+ 
+-int check_active (md_cfg_entry_t *p)
++int _check_active (md_cfg_entry_t *p, int quiet)
+ {
+@@ -531,3 +531,4 @@
+ 		if (strstr(line, buffer) && !strstr(line, "inactive")) {
+-			fprintf(stderr, "%s: array is active -- run raidstop first.\n", p->md_name);
++			if (!quiet)
++				fprintf(stderr, "%s: array is active -- run raidstop first.\n", p->md_name);
+ 			fclose(fp);
+--- raid_io.h
++++ raid_io.h
+@@ -22,3 +22,4 @@
+ extern int init_set (md_cfg_entry_t * p);
+-extern int check_active (md_cfg_entry_t *p);
++extern int _check_active (md_cfg_entry_t *p, int quiet);
++#define check_active(p) _check_active(p,0)
+ extern int read_sb (md_cfg_entry_t *p);
+--- raidstart.c
++++ raidstart.c
+@@ -22,2 +22,3 @@
+ #include "raidlib.h"
++#include "raid_io.h"
+ #include "version.h"
+@@ -45,3 +46,5 @@
+     char * configFile = RAID_CONFIG;
++    int quiet = 0;
+     struct poptOption optionsTable[] = {
++	{ "quiet", 'q', 0, &quiet, 0 },
+ 	{ "all", 'a', 0, &all, 0 },
+@@ -229,3 +232,4 @@
+ 	for (p = cfg_head; p; p = p->next)
+-	    exit_status += handleOneConfig(func, p);
++	    if (!_check_active(p, quiet))
++		exit_status += handleOneConfig(func, p);
+     } else {
