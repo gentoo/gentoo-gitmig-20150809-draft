@@ -1,32 +1,32 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 d65af8f8af22e0c92c983995f354cfe5 ChangeLog 22341
 MD5 3dce9cbb137138524f39515905101a35 imagemagick-6.2.2.0.ebuild 2584
-MD5 6ddba8488efcce8504bb7c7143f55345 imagemagick-6.2.2.3.ebuild 2582
 MD5 26d349b9ac3126394eca1640b90c1e66 imagemagick-6.1.8.8.ebuild 2317
-MD5 4a944fd0845cf1ffc4651141bb76fbc5 imagemagick-6.2.0.4.ebuild 2281
-MD5 ba4ddb58c87859514dc6fdb4c45d3a0c imagemagick-6.2.0.6.ebuild 2290
 MD5 e1f6c302199a36c1be4ecf1654be9bac metadata.xml 224
 MD5 c065399950638c0256aab63246c0f238 imagemagick-6.2.1.5.ebuild 2592
+MD5 da8467d39c24f110de0159b60871143d ChangeLog 22462
+MD5 ba4ddb58c87859514dc6fdb4c45d3a0c imagemagick-6.2.0.6.ebuild 2290
+MD5 4a944fd0845cf1ffc4651141bb76fbc5 imagemagick-6.2.0.4.ebuild 2281
+MD5 6ddba8488efcce8504bb7c7143f55345 imagemagick-6.2.2.3.ebuild 2582
 MD5 4c6b5a9b2f6836174c4cd4834f76b67e imagemagick-6.2.1.5-r1.ebuild 2617
 MD5 e217021f88f2b1597d5946f36f4f7ec3 imagemagick-6.2.2.0-r1.ebuild 2609
-MD5 fdaa3bda63f96c4917ee2de534632701 imagemagick-6.2.2.3-r1.ebuild 2610
+MD5 2cff397da070d896f416e020813d10b3 imagemagick-6.2.2.3-r1.ebuild 2606
 MD5 0cd85649e1efbcb3e9631a8cde085b60 files/digest-imagemagick-6.2.2.0 73
-MD5 83dfdae9306c5c8a11423558fe92f6fe files/digest-imagemagick-6.2.2.3 73
-MD5 42fd34630ded62400ed31be1426e3b32 files/digest-imagemagick-6.1.8.8 73
-MD5 b5fd28bb0167a5ab5f5422e7335a5c11 files/digest-imagemagick-6.2.0.4 72
-MD5 3463dd071a5d891ab69d1797c256df76 files/digest-imagemagick-6.2.0.6 72
-MD5 7f9f2aefd153cd638c79eb85bcc39b00 files/imagemagick-6.1.8.8-fpx.patch 504
 MD5 edbc2be86318f2676c55ce64e47ea2f6 files/perlpatch.diff 1598
+MD5 7f9f2aefd153cd638c79eb85bcc39b00 files/imagemagick-6.1.8.8-fpx.patch 504
+MD5 3463dd071a5d891ab69d1797c256df76 files/digest-imagemagick-6.2.0.6 72
+MD5 b5fd28bb0167a5ab5f5422e7335a5c11 files/digest-imagemagick-6.2.0.4 72
+MD5 42fd34630ded62400ed31be1426e3b32 files/digest-imagemagick-6.1.8.8 73
 MD5 ab68adfb9efb0f004017b018e622b96a files/digest-imagemagick-6.2.1.5 73
+MD5 83dfdae9306c5c8a11423558fe92f6fe files/digest-imagemagick-6.2.2.3 73
 MD5 ab68adfb9efb0f004017b018e622b96a files/digest-imagemagick-6.2.1.5-r1 73
 MD5 0cd85649e1efbcb3e9631a8cde085b60 files/digest-imagemagick-6.2.2.0-r1 73
 MD5 83dfdae9306c5c8a11423558fe92f6fe files/digest-imagemagick-6.2.2.3-r1 73
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCi4h3tG5z4I8BtQoRApMjAJ4yXHjXBizd9uMSqc5+LxFr0QM/AACcDylQ
-tH5Q/FZvqYElgU110Zk490o=
-=MPvL
+iD8DBQFCjJFDmOfEJZHYOKcRApTrAJ0fXW6XLNrHlLyczoz5ViZsxd4AHwCg4k+N
+XZ9zjLFlOG66FaxddY6MGTs=
+=XW1K
 -----END PGP SIGNATURE-----
