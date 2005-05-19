@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/genindent
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/genindent/ChangeLog,v 1.9 2005/04/24 12:07:36 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/genindent/ChangeLog,v 1.10 2005/05/19 18:05:32 killerfox Exp $
+
+  19 May 2005; Rene Nussbaumer <killerfox@gentoo.org> genindent-1.0.ebuild:
+  Added ~hppa
 
   24 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> genindent-1.0.ebuild:
   Stable on ppc.
