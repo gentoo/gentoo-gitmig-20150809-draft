@@ -1,0 +1,11 @@
+# ChangeLog for sci-mathematics/ktechlab
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/ktechlab/ChangeLog,v 1.1 2005/05/19 19:43:21 lanius Exp $
+
+*ktechlab-0.1.3 (19 May 2005)
+
+  19 May 2005; Heinrich Wendel <lanius@gentoo.org> +metadata.xml,
+  +ktechlab-0.1.3.ebuild:
+  initial import, thx to Jonas Bähr <jonas.baehr@web.de>, Heath H Holcomb
+  <xcable_hhh@yahoo.com> and Andrew <kennerly@comcast.net>, bug #77416
+
