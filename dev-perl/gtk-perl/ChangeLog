@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/gtk-perl
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk-perl/ChangeLog,v 1.32 2005/04/01 18:07:06 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk-perl/ChangeLog,v 1.33 2005/05/19 14:23:58 mcummings Exp $
+
+*gtk-perl-0.7009-r1 (19 May 2005)
+
+  19 May 2005; Michael Cummings <mcummings@gentoo.org> +files/gendef.patch,
+  +gtk-perl-0.7009-r1.ebuild, gtk-perl-0.7009.ebuild:
+  Bug 91589, thanks to Jorg Walter for the tip that made the patch possible!
+  Tested and gnome support works, and the rest compiles too :)
 
   01 Apr 2005; Simon Stelling <blubb@gentoo.org> gtk-perl-0.7008-r11.ebuild:
   stable on amd64

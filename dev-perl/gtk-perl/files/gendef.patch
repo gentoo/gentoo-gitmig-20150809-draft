@@ -1,0 +1,16 @@
+--- tools/gendefs.pl.orig	2005-05-19 08:46:25.938883792 -0400
++++ tools/gendefs.pl	2005-05-19 08:49:06.048543424 -0400
+@@ -1222,7 +1222,12 @@ foreach (sort keys %flags) {
+ 	}
+ }
+ 
+-
++BEGIN {
++$::inc = `gdk-pixbuf-config --cflags`;
++chomp $::inc;
++$::libs = `gdk-pixbuf-config --libs`;
++chomp $::libs;
++}
+ 
+ print <<"EOT";
+ 
