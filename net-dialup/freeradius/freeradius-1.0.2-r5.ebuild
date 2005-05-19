@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/freeradius-1.0.2-r4.ebuild,v 1.1 2005/05/19 04:54:19 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/freeradius-1.0.2-r5.ebuild,v 1.1 2005/05/19 05:58:48 mrness Exp $
 
 inherit eutils
 

@@ -2,14 +2,12 @@
 Hash: SHA1
 
 MD5 d075f94b574fba2c813ded7d415ef0b3 freeradius-1.0.1.ebuild 2890
-MD5 9b37bc88688cb942777da79117459988 freeradius-1.0.2-r2.ebuild 3106
-MD5 ec265dfc71efb8a8c4da9a90a84845ea freeradius-1.0.2-r4.ebuild 3327
-MD5 53304f8018c3bf70eef42632755452d3 ChangeLog 4949
+MD5 59490cbe9d945d495198da3293abd6bb freeradius-1.0.2-r5.ebuild 3327
+MD5 cda94fee4b01791a5b435d7ae1ea9c55 ChangeLog 5212
 MD5 1542bf76e28581e9d6bcfdc75e46f33d metadata.xml 252
 MD5 fc6693f3df5a0694610110287a28568a files/radius.conf 129
-MD5 50b0d44ee0e5313901606e2749dfdd34 files/radius.init 1006
-MD5 5a26f9881af51aed070957e5fc4ed808 files/digest-freeradius-1.0.2-r2 69
-MD5 5a26f9881af51aed070957e5fc4ed808 files/digest-freeradius-1.0.2-r4 69
+MD5 6d2c203ac5401a8e3c895ab4ee42c788 files/radius.init 1015
+MD5 5a26f9881af51aed070957e5fc4ed808 files/digest-freeradius-1.0.2-r5 69
 MD5 9f0188ba482e825cf2a89584f8caa813 files/digest-freeradius-1.0.1 69
 MD5 3c2119ec1d8d807fe5ed14944747f0f8 files/freeradius-1.0.1-gcc34.patch 715
 MD5 6b0efd384f551fab6b82794e91dbb4d5 files/freeradius-1.0.2-whole-archive-gentoo.patch 1728
@@ -17,7 +15,7 @@ MD5 8aad37163f389564f402f677cd270c3c files/freeradius-1.0.2-sql-escape.patch 285
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCjCVsjiC39V7gKu0RAvslAKCF6YSDy4/AYrXmhS4lRmLJYr10XACeND/t
-+E+/oAZlM/cWb+4/Q7Q/C6I=
-=Ds6t
+iD8DBQFCjCspjiC39V7gKu0RAnLtAKDE8Yt4WCPZC0kQ24UmkDr23ZdBrwCgyB0T
+dio0gfMcwNQCaA8uutZswPg=
+=gxfC
 -----END PGP SIGNATURE-----
