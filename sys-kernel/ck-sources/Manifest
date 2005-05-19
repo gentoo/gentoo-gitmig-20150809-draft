@@ -2,19 +2,19 @@
 Hash: SHA1
 
 MD5 1588b02d14ca45476bd1f079a123b9be ck-sources-2.6.11_p7-r1.ebuild 1043
-MD5 3ab4aed2c0fca77c65b94b44b9656deb ck-sources-2.6.11_p8.ebuild 1060
-MD5 74821c4dfa13d1a3648a71544129fbc5 ChangeLog 22164
+MD5 2c6ad4556dc9b49bbacf9627d5095e2f ck-sources-2.6.11_p8.ebuild 1471
+MD5 9562bf66a1ff3fb8804d8d74d44beac7 ChangeLog 22337
 MD5 7187b8c28501f454a2412c9e4a7fcf53 metadata.xml 421
 MD5 0d9fc5edfa60d65566cee36814f96ca8 files/ck-sources-2.6.11-85795.patch 795
 MD5 fbb974b9faf15a80806c31312a051864 files/digest-ck-sources-2.6.11_p7-r1 131
 MD5 7695b79187fcc27339ab62af1112ec11 files/ck-sources-2.6.11-74070.patch 525
 MD5 38e8ce7cb288b0b9ed6ceb58d4103547 files/ck-sources-2.6.11-lowmem-reserve-oops.patch 2788
 MD5 57c1c7b5c346447bc328430177de81e1 files/ck-sources-2.6.11-87913.patch 7942
-MD5 b5f017065770d0afbfa8879623232891 files/digest-ck-sources-2.6.11_p8 131
+MD5 955b5c4f9067e7eb9da1a040ee2ad8bb files/digest-ck-sources-2.6.11_p8 202
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCh5vTnVkA0cTr1F4RAoELAJ9mppxDzKuI0U+nZ3/JR6tFwGud7gCggCUo
-SBGjaiI+zrC0sKYvHVSV9hY=
-=wbmA
+iD8DBQFCjD/XnVkA0cTr1F4RAqqiAJ9NQXNANW6IVLEiIMhMqnH+YvP3jgCfaMfd
+eSx4WFWqaz49D4kG+Bi/qeY=
+=R5/f
 -----END PGP SIGNATURE-----

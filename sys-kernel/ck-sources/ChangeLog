@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/ck-sources
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ChangeLog,v 1.98 2005/05/15 18:57:58 marineam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ChangeLog,v 1.99 2005/05/19 07:26:58 marineam Exp $
+
+  19 May 2005; Micheal Marineau <marineam@gentoo.org>
+  ck-sources-2.6.11_p8.ebuild:
+  Add a ck-server use flag to pull server patch instead of the normal
+  desktop patch.
 
 *ck-sources-2.6.11_p8 (15 May 2005)
 

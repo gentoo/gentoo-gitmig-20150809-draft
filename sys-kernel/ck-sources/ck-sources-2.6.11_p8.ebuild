@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ck-sources-2.6.11_p8.ebuild,v 1.1 2005/05/15 18:57:58 marineam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ck-sources-2.6.11_p8.ebuild,v 1.2 2005/05/19 07:26:58 marineam Exp $
 
 K_PREPATCHED="yes"
 UNIPATCH_STRICTORDER="yes"
@@ -19,17 +19,31 @@ EXTRAVERSION=-ck${PV/*_p/}${MY_PR}
 KV_FULL=${OKV}${EXTRAVERSION}
 KV_CK=${KV_FULL/-r*/}
 
-CK_PATCH="patch-${KV_CK}.bz2"
+IUSE="ck-server"
+if use ck-server; then
+	CK_PATCH="patch-${KV_CK}-server.bz2"
+else
+	CK_PATCH="patch-${KV_CK}.bz2"
+fi
 UNIPATCH_LIST="
 	${DISTDIR}/${CK_PATCH}
 	${FILESDIR}/${MY_P}-74070.patch
 	${FILESDIR}/${MY_P}-lowmem-reserve-oops.patch
 	${FILESDIR}/${MY_P}-87913.patch
 	${FILESDIR}/${MY_P}-85795.patch"
-IUSE=""
 
 DESCRIPTION="Full sources for the Stock Linux kernel and Con Kolivas's high performance patchset"
 HOMEPAGE="http://members.optusnet.com.au/ckolivas/kernel/"
-SRC_URI="${KERNEL_URI} http://ck.kolivas.org/patches/2.6/${OKV}/${KV_CK}/${CK_PATCH}"
+SRC_URI="${KERNEL_URI} ck-server? ( http://ck.kolivas.org/patches/2.6/${OKV}/${KV_CK}/patch-${KV_CK}-server.bz2 )
+	!ck-server? ( http://ck.kolivas.org/patches/2.6/${OKV}/${KV_CK}/patch-${KV_CK}.bz2 )"
 
 KEYWORDS="~x86 ~amd64"
+
+pkg_postinst() {
+	postinst_sources
+
+	einfo "The ck patchset is tuned for desktop usage."
+	einfo "To better tune the kernel for server applications add"
+	einfo "ck-server to your use flags and reemerge ck-sources"
+}
+
