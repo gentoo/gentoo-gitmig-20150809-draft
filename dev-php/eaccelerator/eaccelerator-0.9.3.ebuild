@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/eaccelerator/eaccelerator-0.9.2a.ebuild,v 1.7 2005/05/19 09:10:56 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/eaccelerator/eaccelerator-0.9.3.ebuild,v 1.1 2005/05/19 09:10:56 sebastian Exp $
 
 PHP_EXT_NAME="eaccelerator"
 PHP_EXT_ZENDEXT="yes"
@@ -10,11 +10,10 @@ inherit php-ext-source
 DESCRIPTION="A PHP Accelerator & Encoder."
 HOMEPAGE="http://www.eaccelerator.net/"
 SRC_URI="mirror://sourceforge/eaccelerator/${P}.tar.gz"
-S=${WORKDIR}/eaccelerator
-IUSE="session"
+IUSE="inode session"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 amd64 sparc"
+KEYWORDS="~x86 ~amd64 ~sparc"
 
 DEPEND="$DEPEND
 		!dev-php/ioncube_loaders
@@ -40,6 +39,10 @@ src_compile() {
 		myconf="${myconf} --without-eaccelerator-sessions"
 	fi
 
+	if use !inode; then
+		myconf="${myconf} --without-eaccelerator-use-inode"
+	fi
+
 	php-ext-source_src_compile
 }
 
@@ -62,12 +65,12 @@ src_install() {
 	doins encoder.php eaccelerator.php eaccelerator_password.php
 	dodoc AUTHORS ChangeLog COPYING NEWS README README.eLoader
 
-	php-ext-base_addtoinifiles "eaccelerator.shm_size" '"16"'
+	php-ext-base_addtoinifiles "eaccelerator.shm_size" '"64"'
 	php-ext-base_addtoinifiles "eaccelerator.cache_dir" "\"${EACCELERATOR_CACHEDIR}\""
 	php-ext-base_addtoinifiles "eaccelerator.enable" '"1"'
 	php-ext-base_addtoinifiles "eaccelerator.optimizer" '"1"'
-	php-ext-base_addtoinifiles "eaccelerator.check_mtime" '"1"'
 	php-ext-base_addtoinifiles "eaccelerator.debug" '"0"'
+	php-ext-base_addtoinifiles "eaccelerator.check_mtime" '"1"'
 	php-ext-base_addtoinifiles "eaccelerator.filter" '""'
 	php-ext-base_addtoinifiles "eaccelerator.shm_max" '"0"'
 	php-ext-base_addtoinifiles "eaccelerator.shm_ttl" '"0"'
@@ -75,6 +78,11 @@ src_install() {
 	php-ext-base_addtoinifiles "eaccelerator.shm_only" '"0"'
 	php-ext-base_addtoinifiles "eaccelerator.compress" '"1"'
 	php-ext-base_addtoinifiles "eaccelerator.compress_level" '"9"'
+	php-ext-base_addtoinifiles "eaccelerator.keys" '"shm_and_disk"'
+	php-ext-base_addtoinifiles "eaccelerator.sessions" '"shm_and_disk"'
+	php-ext-base_addtoinifiles "eaccelerator.content" '"shm_and_disk"'
+	php-ext-base_addtoinifiles "eaccelerator.admin.name" '"yourusername"'
+	php-ext-base_addtoinifiles "eaccelerator.admin.password" '"yourpassword"'
 }
 
 pkg_postinst () {
