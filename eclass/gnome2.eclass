@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.45 2004/09/14 12:10:22 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.46 2005/05/19 16:39:50 foser Exp $
 #
 # Authors:
 # Bruce A. Locke <blocke@shivan.org>
@@ -23,7 +23,7 @@ DEPEND="${DEPEND} >=sys-apps/sed-4"
 
 gnome2_src_configure() {
 
-	elibtoolize ${ELTCONF}
+	[ -n "${ELTCONF}" ] && elibtoolize ${ELTCONF}
 
 	# doc keyword for gtk-doc
 	use doc \
