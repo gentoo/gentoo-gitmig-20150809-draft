@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/irssi-0.8.9-r1.ebuild,v 1.9 2005/05/15 02:13:51 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/irssi-0.8.9-r1.ebuild,v 1.10 2005/05/19 20:52:43 swegener Exp $
 
 inherit perl-module eutils
 
@@ -28,13 +28,13 @@ src_unpack() {
 
 	# Ugly hack to work around compression of the html files.
 	# Remove this if prepalldocs is changed to avoid gzipping html files.
-	cd ${S} && \
+	cd "${S}" && \
 	sed -i \
 		-e 's/[^ 	]\+\.html//g' docs/Makefile.in || \
 			die "sed doc/Makefile.in failed"
 
-	epatch ${FILESDIR}/${P}-64bit-exec-fix.patch
-	epatch ${FILESDIR}/irssi-socks-fix.patch
+	epatch "${FILESDIR}"/${P}-64bit-exec-fix.patch
+	epatch "${FILESDIR}"/irssi-socks-fix.patch
 }
 
 src_compile() {
@@ -59,19 +59,21 @@ src_compile() {
 src_install() {
 	if use perl
 	then
-		for dir in ${S}/src/perl/{common,irc,textui,ui}
+		for dir in "${S}"/src/perl/{common,irc,textui,ui}
 		do
-			cd ${dir}
+			cd "${dir}"
 			perl-module_src_prep
 		done
-		cd ${S}
+		cd "${S}"
 	fi
 
 	make \
-		DESTDIR=${D} \
+		DESTDIR="${D}" \
 		docdir=/usr/share/doc/${PF} \
-		gnulocaledir=${D}/usr/share/locale \
+		gnulocaledir="${D}"/usr/share/locale \
 		install || die "make install failed"
+
+	use perl && fixlocalpod
 
 	prepalldocs
 	dodoc AUTHORS ChangeLog README TODO NEWS || die "dodoc failed"

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi-svn/irssi-svn-0.3.ebuild,v 1.3 2005/05/17 16:06:51 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi-svn/irssi-svn-0.3.ebuild,v 1.4 2005/05/19 20:54:48 swegener Exp $
 
 inherit subversion perl-module
 
@@ -54,6 +54,8 @@ src_install() {
 		docdir=/usr/share/doc/${PF} \
 		gnulocaledir="${D}"/usr/share/locale \
 		install || die "make install failed"
+
+	use perl && fixlocalpod
 
 	prepalldocs
 	dodoc AUTHORS ChangeLog README TODO NEWS

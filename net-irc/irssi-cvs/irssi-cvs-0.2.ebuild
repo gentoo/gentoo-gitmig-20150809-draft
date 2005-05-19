@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi-cvs/irssi-cvs-0.2.ebuild,v 1.12 2005/05/17 16:07:52 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi-cvs/irssi-cvs-0.2.ebuild,v 1.13 2005/05/19 20:53:55 swegener Exp $
 
 ECVS_SERVER="cvs.irssi.org:/home/cvs"
 ECVS_MODULE="irssi"
@@ -79,6 +79,8 @@ src_install() {
 		gnulocaledir=${D}/usr/share/locale \
 		${myflags} \
 		install || die
+
+	use perl && fixlocalpod
 
 	prepalldocs
 	dodoc AUTHORS ChangeLog README TODO NEWS

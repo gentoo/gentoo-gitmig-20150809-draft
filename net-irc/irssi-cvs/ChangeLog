@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/irssi-cvs
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi-cvs/ChangeLog,v 1.13 2005/05/17 16:07:52 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi-cvs/ChangeLog,v 1.14 2005/05/19 20:53:55 swegener Exp $
+
+  19 May 2005; Sven Wegener <swegener@gentoo.org> irssi-cvs-0.2.ebuild:
+  Added a call to fixlocalpod to fix the collision-protect bug #68367.
 
   17 May 2005; Sven Wegener <swegener@gentoo.org> irssi-cvs-0.2.ebuild:
   Added missing openssl dependency. Thanks to Emanuele Giaquinta.

@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/irssi-svn
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi-svn/ChangeLog,v 1.3 2005/05/17 16:06:51 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi-svn/ChangeLog,v 1.4 2005/05/19 20:54:48 swegener Exp $
+
+  19 May 2005; Sven Wegener <swegener@gentoo.org> irssi-svn-0.3.ebuild:
+  Added a call to fixlocalpod to fix the collision-protect bug #68367.
 
   17 May 2005; Sven Wegener <swegener@gentoo.org> irssi-svn-0.3.ebuild:
   Removed unneeded --with-glib2 and added missing openssl dependency. Thanks
