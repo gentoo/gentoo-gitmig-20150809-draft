@@ -1,6 +1,9 @@
 # ChangeLog for dev-dotnet/ikvm-bin
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/ikvm-bin/ChangeLog,v 1.1 2005/05/18 18:05:36 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/ikvm-bin/ChangeLog,v 1.2 2005/05/19 22:24:53 latexer Exp $
+
+  19 May 2005; Peter Johanson <latexer@gentoo.org> ikvm-bin-0.14.ebuild:
+  Fix the SRC_URI.
 
 *ikvm-bin-0.14 (18 May 2005)
 
