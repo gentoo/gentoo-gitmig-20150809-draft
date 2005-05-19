@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/mips-sources
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/ChangeLog,v 1.75 2005/05/18 05:15:09 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/ChangeLog,v 1.76 2005/05/19 05:23:25 kumba Exp $
+
+  19 May 2005; Joshua Kinard <kumba@gentoo.org> mips-sources-2.6.10-r3.ebuild,
+  mips-sources-2.6.12_rc2-r2.ebuild, mips-sources-2.6.12_rc3-r1.ebuild:
+  For 2.6 ebuilds, provide virtual/alsa.
 
 *mips-sources-2.6.12_rc2-r2 (18 May 2005)
 
