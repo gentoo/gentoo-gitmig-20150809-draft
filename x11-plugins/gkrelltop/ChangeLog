@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/gkrelltop
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrelltop/ChangeLog,v 1.10 2005/04/27 17:29:06 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrelltop/ChangeLog,v 1.11 2005/05/19 13:20:14 mholzer Exp $
+
+  19 May 2005; Martin Holzer <mholzer@gentoo.org> gkrelltop-2.2.4.ebuild:
+  x86 stable
 
   27 Apr 2005; Herbie Hopkins <herbs@gentoo.org> gkrelltop-2.2.4.ebuild:
   multilib fixes.

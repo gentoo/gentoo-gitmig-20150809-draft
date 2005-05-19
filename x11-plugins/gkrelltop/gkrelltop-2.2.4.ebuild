@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrelltop/gkrelltop-2.2.4.ebuild,v 1.6 2005/04/27 17:29:06 herbs Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrelltop/gkrelltop-2.2.4.ebuild,v 1.7 2005/05/19 13:20:14 mholzer Exp $
 
 inherit multilib
 
@@ -10,11 +10,11 @@ HOMEPAGE="http://psychology.rutgers.edu/~zaimi/software.html"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~sparc ~alpha ppc amd64"
+KEYWORDS="x86 ~sparc ~alpha ppc amd64"
 
 IUSE=""
 
-DEPEND="=app-admin/gkrellm-2*"
+DEPEND=">=app-admin/gkrellm-2"
 
 src_compile() {
 	# Unfortunately, the supplied Makefile won't work properly on

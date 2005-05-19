@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 a4d4fd2553657a78370b15d3db3eff2c gkrelltop-2.2.2.ebuild 1071
-MD5 cafded5eea504fb8e9ba892ba253e4e7 gkrelltop-2.2.ebuild 1061
-MD5 5561c52f06c54c3a7e2ce3f65fa5259c gkrelltop-2.2.4.ebuild 1107
-MD5 cb8a61347726fe9d2a224c1ef9b7805f gkrelltop-2.2.3.ebuild 1077
-MD5 94c51bdf924f8b99507b00b260e5f344 ChangeLog 1679
+MD5 546bd61822555a2e40b9cc41e8a5613a gkrelltop-2.2.4.ebuild 1108
 MD5 de35d8f600d3d75d8075a8d848787013 metadata.xml 223
+MD5 b9ad1fe705cec6f3f9ec2c6ee42235fa ChangeLog 1769
+MD5 cafded5eea504fb8e9ba892ba253e4e7 gkrelltop-2.2.ebuild 1061
+MD5 cb8a61347726fe9d2a224c1ef9b7805f gkrelltop-2.2.3.ebuild 1077
+MD5 bc19088e1d88db5e98e5f821f27f94f3 files/digest-gkrelltop-2.2 61
 MD5 2d223204a4a90a4db9ea4d162e7206f6 files/digest-gkrelltop-2.2.2 63
 MD5 79bb0e901dd86075b88bf0a1c7ea5536 files/digest-gkrelltop-2.2.3 63
 MD5 e35bfead92b9e281508c53dc68da0966 files/digest-gkrelltop-2.2.4 63
-MD5 bc19088e1d88db5e98e5f821f27f94f3 files/digest-gkrelltop-2.2 61
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCb8v+2G5bA0cA/ScRAg9nAKCGOn/lr2YsbkwBe4Hxj0txt81bSwCfeyQC
-vjCotJngEviE6GXvdtmX9/0=
-=0uKA
------END PGP SIGNATURE-----
