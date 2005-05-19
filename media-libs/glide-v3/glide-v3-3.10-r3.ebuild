@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/glide-v3/glide-v3-3.10-r3.ebuild,v 1.15 2005/03/19 23:07:56 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/glide-v3/glide-v3-3.10-r3.ebuild,v 1.16 2005/05/19 03:52:51 battousai Exp $
 
 # NOTE:  Do NOT build this with optimizations, as it will make this package
 #        unstable!!!!
@@ -24,7 +24,6 @@ DEPEND=">=sys-devel/automake-1.4
 	>=sys-devel/m4-1.4
 	>=sys-apps/sed-4
 	>=dev-lang/perl-5.005"
-PROVIDE="virtual/glide"
 
 src_unpack() {
 	unpack ${A}
