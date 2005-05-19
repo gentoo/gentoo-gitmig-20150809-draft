@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/toolbar/toolbar-0.4.ebuild,v 1.5 2005/03/29 08:51:08 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/toolbar/toolbar-0.4.ebuild,v 1.6 2005/05/19 21:26:14 luckyduck Exp $
 
 inherit java-pkg
 
@@ -10,7 +10,7 @@ SRC_URI="http://toolbar.tigris.org/files/documents/869/10303/ToolBar-${PV}-src.z
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="x86 amd64"
 IUSE="jikes source"
 
 DEPEND=">=virtual/jdk-1.4

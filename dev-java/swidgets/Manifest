@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 5b2776590359e8929a89cf31930014b6 swidgets-0.1.ebuild 1341
-MD5 96ecab29d415fc64b1a267e3b9dcefaa ChangeLog 822
+MD5 3f2b86d4431dd0d57a9da1251b3f2413 swidgets-0.1.ebuild 1339
+MD5 1a128a3a40822fc1e0388c305e3ee688 ChangeLog 922
 MD5 0a7e021f886fb1b2e57c3ceb9eb8f9e7 metadata.xml 308
 MD5 6e9c0080dd39c94875a6760c005c7e91 files/build.xml 476
 MD5 ebf611eb608892b79e1513826eca2ed8 files/digest-swidgets-0.1 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCSRgH06ebR+OMO78RAp3SAJ9PSR+Xp4tCYmbeOxeod3ZLwY5xYwCdFO19
-spmVbSnx1NyMrWXNy40EAD4=
-=W6O7
------END PGP SIGNATURE-----

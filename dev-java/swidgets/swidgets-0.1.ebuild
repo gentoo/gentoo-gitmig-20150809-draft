@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/swidgets/swidgets-0.1.ebuild,v 1.5 2005/03/29 08:55:21 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swidgets/swidgets-0.1.ebuild,v 1.6 2005/05/19 21:27:47 luckyduck Exp $
 
 inherit java-pkg
 
@@ -10,7 +10,7 @@ SRC_URI="http://swidgets.tigris.org/files/documents/1472/18566/swidgets-${PV}-sr
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="x86 amd64"
 IUSE="jikes source"
 
 DEPEND="${RDEPEND}
