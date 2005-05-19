@@ -1,6 +1,9 @@
 # ChangeLog for dev-dotnet/pnet
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/pnet/ChangeLog,v 1.24 2005/03/11 03:16:25 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/pnet/ChangeLog,v 1.25 2005/05/19 10:54:09 gmsoft Exp $
+
+  19 May 2005; Guy Martin <gmsoft@gentoo.org> pnet-0.6.12.ebuild:
+  Stable on hppa.
 
   10 Mar 2005; Peter Johanson <latexer@gentoo.org> pnet-0.6.10.ebuild,
   pnet-0.6.12.ebuild:
