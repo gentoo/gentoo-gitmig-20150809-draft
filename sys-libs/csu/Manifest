@@ -1,4 +1,6 @@
-MD5 d61bfafbaa956307e33a87d563be5c70 ChangeLog 308
+MD5 7a108a7607cacf7f72759e512162a356 ChangeLog 420
 MD5 ae361f55c8b2cb0a361d4169b2272b09 csu-46.ebuild 655
+MD5 a009a44b222eeb4ee429e8275859d89d csu-57.ebuild 655
 MD5 e526e84277cb8eb1bcf73840117ff45a metadata.xml 220
 MD5 0ef879ca4c02ec64054ce84a4e45c872 files/digest-csu-46 57
+MD5 032d5ceef77264cdf63d0f952ececa4b files/digest-csu-57 57
