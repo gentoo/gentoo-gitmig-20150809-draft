@@ -5,5 +5,5 @@ MD5 b5c4a05529e0e0d804cb96af6e9cab9c mdadm-1.9.0-r1.ebuild 1222
 MD5 29424204ff8bad1b89969061398f354e files/digest-mdadm-1.11.0 64
 MD5 77fed3360e9b6bdfd0721b77c495b750 files/mdadm.rc 849
 MD5 c0f39d9acef8dee3159359691bf76b94 files/mdadm-1.9.0-dont-make-man.patch 260
-MD5 34f05acc9de3f2c1fba4198b82bfbb9e files/raid-start.sh 1389
+MD5 1d4e1a38ab9d9bd8e60e1e6c87637240 files/raid-start.sh 1390
 MD5 94803322fcea6ec0f31f730af32df156 files/digest-mdadm-1.9.0-r1 59

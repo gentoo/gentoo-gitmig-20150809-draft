@@ -1,7 +1,7 @@
 # /lib/rcscripts/addons/raid-start.sh:  Setup raid volumes at boot
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mdadm/files/raid-start.sh,v 1.2 2005/05/19 03:14:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mdadm/files/raid-start.sh,v 1.3 2005/05/19 22:15:51 vapier Exp $
 
 [[ -f /proc/mdstat ]] || exit 0
 
@@ -25,7 +25,7 @@ if [[ -x /sbin/raidstart && -f /etc/raidtab ]] ; then
 	if [[ -n ${devs} ]] ; then
 		create_devs ${devs}
 		ebegin "Starting up RAID devices (raidtools)"
-		output=$(raidstart -a 2>&1)
+		output=$(raidstart -aq 2>&1)
 		ret=$?
 		[[ ${ret} -ne 0 ]] && echo "${output}"
 		eend ${ret}
