@@ -1,0 +1,11 @@
+# ChangeLog for media-sound/ezstream
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ezstream/ChangeLog,v 1.1 2005/05/19 17:25:21 luckyduck Exp $
+
+*ezstream-0.2.0 (19 May 2005)
+
+  19 May 2005; Jan Brinkmann <luckyduck@gentoo.org> +metadata.xml,
+  +ezstream-0.2.0.ebuild:
+  Initial import, ebuild based on the contributions by Peter Ton
+  <peterton@hotpop.com> and Cliff Rowley. Fixes #83647
+
