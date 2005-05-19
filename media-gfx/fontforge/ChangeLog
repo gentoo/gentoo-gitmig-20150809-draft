@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/fontforge
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fontforge/ChangeLog,v 1.13 2005/03/25 21:16:26 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fontforge/ChangeLog,v 1.14 2005/05/19 21:08:08 usata Exp $
+
+*fontforge-20050502 (19 May 2005)
+
+  19 May 2005; Mamoru KOMACHI <usata@gentoo.org> -fontforge-20040930.ebuild,
+  fontforge-20050310.ebuild, +fontforge-20050502.ebuild:
+  Version bumped. Added back ~ia64 I accidentally dropped from 20050310.
 
   26 Mar 2005; Chris White <chriswhite@gentoo.org>
   fontforge-20041231.ebuild:
