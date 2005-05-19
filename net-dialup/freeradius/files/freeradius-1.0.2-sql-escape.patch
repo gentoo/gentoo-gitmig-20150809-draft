@@ -1,7 +1,29 @@
-diff -Nru freeradius-1.0.2.orig/src/modules/rlm_sql/rlm_sql.c freeradius-1.0.2/src/modules/rlm_sql/rlm_sql.c
---- freeradius-1.0.2.orig/src/modules/rlm_sql/rlm_sql.c	2004-09-30 17:54:22.000000000 +0300
-+++ freeradius-1.0.2/src/modules/rlm_sql/rlm_sql.c	2005-05-07 18:54:43.314085504 +0300
-@@ -158,6 +158,7 @@
+===================================================================
+RCS file: /web/pages/us.freeradius.org/cvs/radiusd/src/modules/rlm_sql/rlm_sql.c,v
+retrieving revision 1.131.2.1
+retrieving revision 1.131.2.3
+diff -u -p -r1.131.2.1 -r1.131.2.3
+--- radiusd/src/modules/rlm_sql/rlm_sql.c	2004/09/30 14:54:22	1.131.2.1
++++ radiusd/src/modules/rlm_sql/rlm_sql.c	2005/05/18 13:22:18	1.131.2.3
+@@ -2,7 +2,7 @@
+  * rlm_sql.c		SQL Module
+  * 		Main SQL module file. Most ICRADIUS code is located in sql.c
+  *
+- * Version:	$Id: freeradius-1.0.2-sql-escape.patch,v 1.2 2005/05/19 04:54:19 mrness Exp $
++ * Version:	$Id: freeradius-1.0.2-sql-escape.patch,v 1.2 2005/05/19 04:54:19 mrness Exp $
+  *
+  *   This program is free software; you can redistribute it and/or modify
+  *   it under the terms of the GNU General Public License as published by
+@@ -24,7 +24,7 @@
+  */
+ 
+ static const char rcsid[] =
+-	"$Id: freeradius-1.0.2-sql-escape.patch,v 1.2 2005/05/19 04:54:19 mrness Exp $";
++	"$Id: freeradius-1.0.2-sql-escape.patch,v 1.2 2005/05/19 04:54:19 mrness Exp $";
+ 
+ #include "autoconf.h"
+ 
+@@ -158,6 +158,7 @@ static int rlm_sql_init(void) {
   */
  static int sql_set_user(SQL_INST *inst, REQUEST *request, char *sqlusername, const char *username);
  static int generate_sql_clients(SQL_INST *inst);
@@ -9,7 +31,7 @@ diff -Nru freeradius-1.0.2.orig/src/modules/rlm_sql/rlm_sql.c freeradius-1.0.2/s
  
  /*
   *	sql xlat function. Right now only SELECTs are supported. Only
-@@ -184,7 +185,7 @@
+@@ -184,7 +185,7 @@ static int sql_xlat(void *instance, REQU
  	/*
  	 * Do an xlat on the provided string (nice recursive operation).
  	 */
@@ -18,7 +40,7 @@ diff -Nru freeradius-1.0.2.orig/src/modules/rlm_sql/rlm_sql.c freeradius-1.0.2/s
  		radlog(L_ERR, "rlm_sql (%s): xlat failed.",
  		       inst->config->xlat_name);
  		return 0;
-@@ -409,18 +410,18 @@
+@@ -409,18 +410,18 @@ static int sql_escape_func(char *out, in
  
  	while (in[0]) {
  		/*
@@ -35,7 +57,7 @@ diff -Nru freeradius-1.0.2.orig/src/modules/rlm_sql/rlm_sql.c freeradius-1.0.2/s
  		if ((in[0] < 32) ||
  		    strchr(allowed_chars, *in) == NULL) {
 +			/*
-+			 *  Less than 3 bytes left.
++			 *	Only 3 or less bytes available.
 +			 */
 +			if (outlen <= 3) {
 +				break;
@@ -44,30 +66,23 @@ diff -Nru freeradius-1.0.2.orig/src/modules/rlm_sql/rlm_sql.c freeradius-1.0.2/s
  			snprintf(out, outlen, "=%02X", (unsigned char) in[0]);
  			in++;
  			out += 3;
-@@ -430,6 +431,13 @@
+@@ -430,7 +431,14 @@ static int sql_escape_func(char *out, in
  		}
  
  		/*
-+		 *  Only one byte left.
+-		 *	Else it's a nice character.
++		 *	Only one byte left.
 +		 */
 +		if (outlen <= 1) {
 +			break;
 +		}
 +
 +		/*
- 		 *	Else it's a nice character.
++		 *	Allowed character.
  		 */
  		*out = *in;
-@@ -459,7 +467,7 @@
- 	if (username != NULL) {
- 		strNcpy(tmpuser, username, MAX_STRING_LEN);
- 	} else if (strlen(inst->config->query_user)) {
--		radius_xlat(tmpuser, sizeof(tmpuser), inst->config->query_user, request, NULL);
-+		radius_xlat(tmpuser, sizeof(tmpuser), inst->config->query_user, request, sql_escape_func);
- 	} else {
- 		return 0;
- 	}
-@@ -517,7 +525,7 @@
+ 		out++;
+@@ -517,7 +525,7 @@ static int sql_groupcmp(void *instance, 
  	 */
  	if (sql_set_user(inst, req, sqlusername, 0) < 0)
  		return 1;
@@ -76,7 +91,7 @@ diff -Nru freeradius-1.0.2.orig/src/modules/rlm_sql/rlm_sql.c freeradius-1.0.2/s
  		radlog(L_ERR, "rlm_sql (%s): xlat failed.",
  		       inst->config->xlat_name);
  		/* Remove the username we (maybe) added above */
-@@ -1149,7 +1157,7 @@
+@@ -1149,7 +1157,7 @@ static int rlm_sql_checksimul(void *inst
  	if(sql_set_user(inst, request, sqlusername, 0) <0)
  		return RLM_MODULE_FAIL;
  
@@ -85,7 +100,7 @@ diff -Nru freeradius-1.0.2.orig/src/modules/rlm_sql/rlm_sql.c freeradius-1.0.2/s
  
  	/* initialize the sql socket */
  	sqlsocket = sql_get_socket(inst);
-@@ -1193,7 +1201,7 @@
+@@ -1193,7 +1201,7 @@ static int rlm_sql_checksimul(void *inst
  		return RLM_MODULE_OK;
  	}
  
