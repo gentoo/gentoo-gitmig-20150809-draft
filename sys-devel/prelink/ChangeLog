@@ -1,6 +1,12 @@
 # ChangeLog for sys-devel/prelink
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/prelink/ChangeLog,v 1.40 2005/03/13 13:46:04 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/prelink/ChangeLog,v 1.41 2005/05/19 22:51:14 azarah Exp $
+
+*prelink-20050314 (19 May 2005)
+
+  19 May 2005; Martin Schlemmer <azarah@gentoo.org>
+  +files/prelink-20050314-amd64-gcc4.patch, +prelink-20050314.ebuild:
+  Update version.  Fix building on amd64 with gcc4.
 
 *prelink-20050207 (13 Mar 2005)
 
