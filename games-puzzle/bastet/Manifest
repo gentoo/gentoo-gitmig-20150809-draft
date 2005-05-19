@@ -1,4 +1,14 @@
-MD5 f876ff2d343b9b6da61d5f16cbd41727 ChangeLog 690
-MD5 714a6d06518e26b42eeba1dbb92ffedd bastet-0.41.ebuild 1052
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 89b9310160fe3d88b25d443672c42ce1 ChangeLog 775
+MD5 08fec13972703aeea80854d73bdcca2d bastet-0.41.ebuild 1051
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 MD5 8693dd589c6c495627bb6d1aa2b9d36e files/digest-bastet-0.41 59
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCjJW460LfUIagIAkRAgI6AJ40hpHsqR9bUrxaVkdSgJJXGxvrMgCfW4ws
+TG6dQMN7gZbYliSjSHxSUHQ=
+=kSlL
+-----END PGP SIGNATURE-----
