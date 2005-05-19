@@ -3,26 +3,6 @@ RCS file: /web/pages/us.freeradius.org/cvs/radiusd/src/modules/rlm_sql/rlm_sql.c
 retrieving revision 1.131.2.1
 retrieving revision 1.131.2.3
 diff -u -p -r1.131.2.1 -r1.131.2.3
---- radiusd/src/modules/rlm_sql/rlm_sql.c	2004/09/30 14:54:22	1.131.2.1
-+++ radiusd/src/modules/rlm_sql/rlm_sql.c	2005/05/18 13:22:18	1.131.2.3
-@@ -2,7 +2,7 @@
-  * rlm_sql.c		SQL Module
-  * 		Main SQL module file. Most ICRADIUS code is located in sql.c
-  *
-- * Version:	$Id: freeradius-1.0.2-sql-escape.patch,v 1.2 2005/05/19 04:54:19 mrness Exp $
-+ * Version:	$Id: freeradius-1.0.2-sql-escape.patch,v 1.2 2005/05/19 04:54:19 mrness Exp $
-  *
-  *   This program is free software; you can redistribute it and/or modify
-  *   it under the terms of the GNU General Public License as published by
-@@ -24,7 +24,7 @@
-  */
- 
- static const char rcsid[] =
--	"$Id: freeradius-1.0.2-sql-escape.patch,v 1.2 2005/05/19 04:54:19 mrness Exp $";
-+	"$Id: freeradius-1.0.2-sql-escape.patch,v 1.2 2005/05/19 04:54:19 mrness Exp $";
- 
- #include "autoconf.h"
- 
 @@ -158,6 +158,7 @@ static int rlm_sql_init(void) {
   */
  static int sql_set_user(SQL_INST *inst, REQUEST *request, char *sqlusername, const char *username);

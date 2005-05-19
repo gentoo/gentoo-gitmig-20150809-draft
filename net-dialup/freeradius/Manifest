@@ -13,11 +13,11 @@ MD5 5a26f9881af51aed070957e5fc4ed808 files/digest-freeradius-1.0.2-r4 69
 MD5 9f0188ba482e825cf2a89584f8caa813 files/digest-freeradius-1.0.1 69
 MD5 3c2119ec1d8d807fe5ed14944747f0f8 files/freeradius-1.0.1-gcc34.patch 715
 MD5 6b0efd384f551fab6b82794e91dbb4d5 files/freeradius-1.0.2-whole-archive-gentoo.patch 1728
-MD5 994b0489242b9c3bacf054bffb53ef0a files/freeradius-1.0.2-sql-escape.patch 3927
+MD5 a2e7a99e5806049e6958b653814849c1 files/freeradius-1.0.2-sql-escape.patch 3087
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCjBwMjiC39V7gKu0RAqzHAKCgYC0gtdZAyjoBrc3K5bpirzrHowCffwQ5
-ZcBt39vTBhOkEnCgvd7sqJc=
-=7dpy
+iD8DBQFCjCNPjiC39V7gKu0RAsvHAJ91Emkvbavu9lkOrns10rWcStAorACdHw/F
+eFB29UYeNPN/GA68nj1+A3s=
+=GoZC
 -----END PGP SIGNATURE-----
