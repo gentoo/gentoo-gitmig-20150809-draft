@@ -1,9 +1,7 @@
-===================================================================
-RCS file: /web/pages/us.freeradius.org/cvs/radiusd/src/modules/rlm_sql/rlm_sql.c,v
-retrieving revision 1.131.2.1
-retrieving revision 1.131.2.3
-diff -u -p -r1.131.2.1 -r1.131.2.3
-@@ -158,6 +158,7 @@ static int rlm_sql_init(void) {
+diff -Nru freeradius-1.0.2.orig/src/modules/rlm_sql/rlm_sql.c freeradius-1.0.2/src/modules/rlm_sql/rlm_sql.c
+--- freeradius-1.0.2.orig/src/modules/rlm_sql/rlm_sql.c	2004-09-30 17:54:22.000000000 +0300
++++ freeradius-1.0.2/src/modules/rlm_sql/rlm_sql.c	2005-05-19 08:32:00.830722112 +0300
+@@ -158,6 +158,7 @@
   */
  static int sql_set_user(SQL_INST *inst, REQUEST *request, char *sqlusername, const char *username);
  static int generate_sql_clients(SQL_INST *inst);
@@ -11,7 +9,7 @@ diff -u -p -r1.131.2.1 -r1.131.2.3
  
  /*
   *	sql xlat function. Right now only SELECTs are supported. Only
-@@ -184,7 +185,7 @@ static int sql_xlat(void *instance, REQU
+@@ -184,7 +185,7 @@
  	/*
  	 * Do an xlat on the provided string (nice recursive operation).
  	 */
@@ -20,7 +18,7 @@ diff -u -p -r1.131.2.1 -r1.131.2.3
  		radlog(L_ERR, "rlm_sql (%s): xlat failed.",
  		       inst->config->xlat_name);
  		return 0;
-@@ -409,18 +410,18 @@ static int sql_escape_func(char *out, in
+@@ -409,18 +410,18 @@
  
  	while (in[0]) {
  		/*
@@ -46,7 +44,7 @@ diff -u -p -r1.131.2.1 -r1.131.2.3
  			snprintf(out, outlen, "=%02X", (unsigned char) in[0]);
  			in++;
  			out += 3;
-@@ -430,7 +431,14 @@ static int sql_escape_func(char *out, in
+@@ -430,7 +431,14 @@
  		}
  
  		/*
@@ -62,7 +60,7 @@ diff -u -p -r1.131.2.1 -r1.131.2.3
  		 */
  		*out = *in;
  		out++;
-@@ -517,7 +525,7 @@ static int sql_groupcmp(void *instance, 
+@@ -517,7 +525,7 @@
  	 */
  	if (sql_set_user(inst, req, sqlusername, 0) < 0)
  		return 1;
@@ -71,7 +69,7 @@ diff -u -p -r1.131.2.1 -r1.131.2.3
  		radlog(L_ERR, "rlm_sql (%s): xlat failed.",
  		       inst->config->xlat_name);
  		/* Remove the username we (maybe) added above */
-@@ -1149,7 +1157,7 @@ static int rlm_sql_checksimul(void *inst
+@@ -1149,7 +1157,7 @@
  	if(sql_set_user(inst, request, sqlusername, 0) <0)
  		return RLM_MODULE_FAIL;
  
@@ -80,7 +78,7 @@ diff -u -p -r1.131.2.1 -r1.131.2.3
  
  	/* initialize the sql socket */
  	sqlsocket = sql_get_socket(inst);
-@@ -1193,7 +1201,7 @@ static int rlm_sql_checksimul(void *inst
+@@ -1193,7 +1201,7 @@
  		return RLM_MODULE_OK;
  	}
  
