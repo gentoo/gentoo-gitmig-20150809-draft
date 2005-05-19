@@ -1,0 +1,21 @@
+--- fpicker/source/unx/kde/kdefilepicker.cxx	2005-05-09 15:16:26.005903927 +0200
++++ fpicker/source/unx/kde/kdefilepicker.cxx	2005-05-09 15:16:13.962981172 +0200
+@@ -714,4 +714,18 @@ void FileFilterComboHack::setCurrentFilt
+ {
+     setCurrentText( filter );
+     filterChanged();
++
++    // Workaround for 'Filter name (*.blah)' vs. 'Filter name'
++    if ( currentText() != text( currentItem() ) )
++    {
++        int nItem = 0;
++        for ( ; nItem < count() && !text( nItem ).startsWith( filter ); ++nItem );
++
++        if ( nItem < count() )
++            setCurrentItem( nItem );
++        else
++            setCurrentItem( 0 );
++
++        filterChanged();
++    }
+ }

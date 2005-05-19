@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.3.11.ebuild,v 1.1 2005/05/09 06:13:57 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.3.11.ebuild,v 1.2 2005/05/19 16:34:01 suka Exp $
 
 # Notes:
 #
@@ -303,6 +303,11 @@ src_unpack() {
 	#Finally apply the patches
 	einfo "Applying Ximian OO.org Patches"
 	${PATCHDIR}/patches/apply.pl ${PATCHDIR}/patches/${PATCHLEVEL} ${S} -f --distro=${DISTRO} || die "Ximian patches failed"
+
+	#Fix for kde file picker problems
+	if use kde; then
+		epatch ${FILESDIR}/${OO_VER}/fpicker-kde-filter-name.diff
+	fi
 
 	#Fix for hardened
 	if use hardened; then
