@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3992 2005/05/19 16:59:00 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3993 2005/05/19 19:07:26 hansmi Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -999,10 +999,6 @@ net-misc/zebra
 # <hattya@gentoo.org> (05 May 2005)
 # development branch.
 =mail-client/sylpheed-1.9*
-
-# <robbat2@gentoo.org> (30 Nov 2003)
-# Need external testing
-=mail-mta/qmail-1.03-r14
 
 # <robbat2@gentoo.org> (29 Nov 2003)
 # Need external testing
