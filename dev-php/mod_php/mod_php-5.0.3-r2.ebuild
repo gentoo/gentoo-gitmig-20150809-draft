@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-5.0.3-r2.ebuild,v 1.2 2005/05/03 02:03:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-5.0.3-r2.ebuild,v 1.3 2005/05/19 20:23:05 robbat2 Exp $
 
 IUSE="${IUSE} apache2"
 
@@ -14,7 +14,7 @@ else
 fi
 
 KEYWORDS="~x86 ~amd64"
-PROVIDE="virtual/httpd-php-${PV}"
+PROVIDE="virtual/httpd-php"
 
 SLOT="${APACHE_VERSION}"
 

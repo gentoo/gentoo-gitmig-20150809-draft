@@ -1,6 +1,15 @@
 # ChangeLog for dev-php/mod_php
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/ChangeLog,v 1.232 2005/05/19 06:59:05 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/ChangeLog,v 1.233 2005/05/19 20:23:05 robbat2 Exp $
+
+  19 May 2005; Robin H. Johnson <robbat2@gentoo.org>
+  mod_php-4.3.9_rc1.ebuild, mod_php-4.3.9.ebuild, mod_php-4.3.10.ebuild,
+  mod_php-4.3.10-r1.ebuild, mod_php-4.3.11.ebuild, mod_php-4.3.11-r1.ebuild,
+  mod_php-4.3.11-r2.ebuild, mod_php-5.0.0.ebuild, mod_php-5.0.0-r1.ebuild,
+  mod_php-5.0.1.ebuild, mod_php-5.0.2.ebuild, mod_php-5.0.2-r1.ebuild,
+  mod_php-5.0.3.ebuild, mod_php-5.0.3-r1.ebuild, mod_php-5.0.3-r2.ebuild,
+  mod_php-5.0.4.ebuild:
+  Bug #93028, clean up PROVIDE instances.
 
   19 May 2005; Markus Rothe <corsair@gentoo.org> mod_php-5.0.4.ebuild:
   Added ~ppc64 to KEYWORDS

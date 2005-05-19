@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php-cgi/php-cgi-5.0.3-r1.ebuild,v 1.2 2005/05/12 13:41:42 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php-cgi/php-cgi-5.0.3-r1.ebuild,v 1.3 2005/05/19 20:25:58 robbat2 Exp $
 
 PHPSAPI="cgi"
 MY_P="php-${PV}"
@@ -17,7 +17,7 @@ DEPEND_PHP=">=${PHP_PROVIDER_PKG}-5.0.3"
 DEPEND="${DEPEND} ${DEPEND_PHP}"
 RDEPEND="${RDEPEND} ${DEPEND_PHP}"
 
-PROVIDE="virtual/php-${PV} virtual/httpd-php-${PV}"
+PROVIDE="virtual/php virtual/httpd-php"
 
 src_unpack() {
 	php5-sapi_src_unpack

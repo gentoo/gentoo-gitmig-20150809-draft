@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.3.11.ebuild,v 1.13 2005/05/12 19:21:20 beu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.3.11.ebuild,v 1.14 2005/05/19 20:23:05 robbat2 Exp $
 
 IUSE="${IUSE} apache2"
 
@@ -61,7 +61,7 @@ RDEPEND="${RDEPEND} ${DEPEND_EXTRA}"
 IUSE="${IUSE} debug"
 # for this revision only
 PDEPEND=">=${PHP_PROVIDER_PKG}-4.3.11"
-PROVIDE="${PROVIDE} virtual/httpd-php-${PV}"
+PROVIDE="${PROVIDE} virtual/httpd-php"
 
 # Add a 'return 0' as we DON'T want the return code checked
 pkg_setup() {

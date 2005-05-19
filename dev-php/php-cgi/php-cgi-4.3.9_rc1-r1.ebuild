@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php-cgi/php-cgi-4.3.9_rc1-r1.ebuild,v 1.3 2005/01/09 21:02:39 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php-cgi/php-cgi-4.3.9_rc1-r1.ebuild,v 1.4 2005/05/19 20:25:58 robbat2 Exp $
 
 PHPSAPI="cgi"
 SRC_URI_BASE="http://downloads.php.net/ilia/" # for RC only
@@ -12,7 +12,7 @@ KEYWORDS="~x86 ~sparc ~alpha ~hppa ~ppc ~ia64"
 
 # for this revision only
 PDEPEND=">=${PHP_PROVIDER_PKG}-4.3.8"
-PROVIDE="${PROVIDE} virtual/httpd-php-${PV}"
+PROVIDE="${PROVIDE} virtual/httpd-php"
 
 src_compile() {
 	# CLI needed to build stuff

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php/php-5.0.3.ebuild,v 1.4 2005/02/11 23:01:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php/php-5.0.3.ebuild,v 1.5 2005/05/19 20:21:05 robbat2 Exp $
 
 PHPSAPI="cli"
 MY_P="${PN}-${PV}"
@@ -11,7 +11,7 @@ LICENSE="PHP"
 KEYWORDS="~arm ~hppa ~ia64 ~ppc ~x86 ~ppc64 ~sparc ~amd64"
 DEPEND="$DEPEND"
 RDEPEND="$RDEPEND"
-PROVIDE="virtual/php-${PV}"
+PROVIDE="virtual/php"
 SLOT="0"
 
 # PHP_INSTALLTARGETS="${PHP_INSTALLTARGETS} install-cli"
