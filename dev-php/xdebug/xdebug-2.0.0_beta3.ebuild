@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/xdebug/xdebug-2.0.0_beta2.ebuild,v 1.5 2005/04/30 10:16:36 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/xdebug/xdebug-2.0.0_beta3.ebuild,v 1.1 2005/05/19 15:39:05 sebastian Exp $
 
 PHP_EXT_ZENDEXT="yes"
 PHP_EXT_PECL_PKG="xdebug"
@@ -14,8 +14,8 @@ IUSE="libedit"
 DESCRIPTION="A PHP Debugging and Profiling extension."
 HOMEPAGE="http://xdebug.org/"
 MY_P="${P/_/}"
-SRC_URI="http://xdebug.org/files/${MY_P}.tgz"
 S="${WORKDIR}/${MY_P}"
+SRC_URI="http://pecl.php.net/get/${MY_P}.tgz"
 SLOT="0"
 LICENSE="Xdebug"
 KEYWORDS="~x86 ~sparc ~ppc"
