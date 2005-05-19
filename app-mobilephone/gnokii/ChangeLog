@@ -1,6 +1,9 @@
 # ChangeLog for app-mobilephone/gnokii
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnokii/ChangeLog,v 1.2 2005/05/15 07:03:35 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnokii/ChangeLog,v 1.3 2005/05/19 10:49:28 gmsoft Exp $
+
+  19 May 2005; Guy Martin <gmsoft@gentoo.org> gnokii-0.6.4.ebuild:
+  Stable on hppa.
 
 *gnokii-0.6.6 (15 May 2005)
 
