@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/x11-drm-20050502.ebuild,v 1.1 2005/05/03 18:10:57 battousai Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/x11-drm-20050502.ebuild,v 1.2 2005/05/19 04:38:14 battousai Exp $
 
 inherit eutils x11 linux-mod
 
@@ -28,8 +28,6 @@ KEYWORDS="~x86 ~alpha ~ia64 ~ppc ~amd64"
 DEPEND="virtual/x11
 	virtual/linux-sources
 	>=sys-apps/portage-2.0.49-r13"
-
-PROVIDE="virtual/drm"
 
 pkg_setup() {
 	get_version
