@@ -1,22 +1,22 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 82e52af86bec7f41807051a7b269594e dhcp-3.0.2.ebuild 4089
+MD5 0af6b58f1a4a9bd943883b82a6a5d81c ChangeLog 8912
+MD5 bd21971aa06e29ef60562a5f47cc4c8e dhcp-3.0.1-r1.ebuild 4081
 MD5 e36c72f5d4a7d39537a384029342f411 dhcp-3.0.1.ebuild 4053
-MD5 1770fd685f2f9858d5f7fcc3f7e78173 dhcp-3.0.1-r1.ebuild 4083
-MD5 d1f05ba675c0784e12df8f99e9a66ccc ChangeLog 8818
+MD5 82e52af86bec7f41807051a7b269594e dhcp-3.0.2.ebuild 4089
 MD5 9384ae7ba3e9f56b8027ea92f607042d metadata.xml 215
+MD5 b060506f226297b90435f270b7345496 files/digest-dhcp-3.0.2 128
 MD5 5cde0a8fdf363490c4212726dfd06a38 files/dhcp.conf 769
-MD5 323228061719fcac86be97a1a25d23b6 files/digest-dhcp-3.0.1-r1 128
+MD5 81b9256728a5daab31f0513ab55e8354 files/dhcp.rc6 1092
+MD5 6c69efa2b41915ec59e53bb065ac3d0c files/dhcrelay.conf 502
 MD5 8a19dd005c33231e02c03659f0c658df files/dhcrelay.rc6 626
 MD5 323228061719fcac86be97a1a25d23b6 files/digest-dhcp-3.0.1 128
-MD5 b060506f226297b90435f270b7345496 files/digest-dhcp-3.0.2 128
-MD5 6c69efa2b41915ec59e53bb065ac3d0c files/dhcrelay.conf 502
-MD5 81b9256728a5daab31f0513ab55e8354 files/dhcp.rc6 1092
+MD5 323228061719fcac86be97a1a25d23b6 files/digest-dhcp-3.0.1-r1 128
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFCiiWL06ebR+OMO78RAkPcAJ9KP8xYCctfWCZPg8MbctX25IBXZgCfZ+jr
-V57y+NTGY399DXkS4Q3ByuQ=
-=rH0s
+iD8DBQFCjM+ZKRy60XGEcJIRAuDrAKCFEDqHX7oVYFz0jsvujn/zKfhbHQCgjwVK
+JZowcXM97aPV0JAJlP+xWCk=
+=cDZV
 -----END PGP SIGNATURE-----
