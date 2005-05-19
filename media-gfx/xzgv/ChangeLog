@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/xzgv
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xzgv/ChangeLog,v 1.14 2005/05/19 07:54:03 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xzgv/ChangeLog,v 1.15 2005/05/19 17:25:29 killerfox Exp $
+
+  19 May 2005; Rene Nussbaumer <killerfox@gentoo.org> xzgv-0.8-r1.ebuild:
+  Add ~hppa; bug #93132
 
   19 May 2005; Markus Rothe <corsair@gentoo.org> xzgv-0.8-r1.ebuild:
   Added ~ppc64 to KEYWORDS; bug #93132
