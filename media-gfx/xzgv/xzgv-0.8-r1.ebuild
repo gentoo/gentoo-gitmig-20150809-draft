@@ -1,16 +1,16 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xzgv/xzgv-0.8-r1.ebuild,v 1.3 2005/01/16 13:44:51 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xzgv/xzgv-0.8-r1.ebuild,v 1.4 2005/05/19 04:05:23 tester Exp $
 
 inherit eutils
 
 DESCRIPTION="An X image viewer."
-SRC_URI="http://xzgv.browser.org/${P}.tar.gz"
-HOMEPAGE="http://xzgv.browser.org/"
+SRC_URI="ftp://ftp.ibiblio.org/pub/Linux/apps/graphics/viewers/X/${P}.tar.gz"
+HOMEPAGE="http://rus.members.beeb.net/xzgv.html"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~sparc ~ppc ~amd64"
+KEYWORDS="x86 ~sparc ~ppc amd64"
 IUSE=""
 
 DEPEND="virtual/x11
