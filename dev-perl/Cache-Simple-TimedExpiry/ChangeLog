@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/Cache-Simple-TimedExpiry
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Cache-Simple-TimedExpiry/ChangeLog,v 1.1 2005/05/19 10:20:06 mcummings Exp $
+
+*Cache-Simple-TimedExpiry-0.23 (19 May 2005)
+
+  19 May 2005; Michael Cummings <mcummings@gentoo.org> +metadata.xml,
+  +Cache-Simple-TimedExpiry-0.23.ebuild:
+  bug 93160, dep for new RT
+
