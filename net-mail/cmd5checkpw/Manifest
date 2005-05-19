@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 341ffb2eed6e13f6ca50a88a02941fa4 cmd5checkpw-0.22-r3.ebuild 1568
 MD5 b65c92614ce11b79c20c4ce803b75fee cmd5checkpw-0.22-r2.ebuild 1518
-MD5 e7ebb22564d43e23df2f585337c676c2 ChangeLog 3180
 MD5 9df8118aec8e5b80a5bbf88591a716fd cmd5checkpw-0.22-r1.ebuild 1408
+MD5 75d7a5a61a5e33064d60eec3953b0347 ChangeLog 3286
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
-MD5 a3bc1c985b3e114b9e1a4b9a8b7810da files/poppasswd 84
-MD5 970ef1c2abdda72f534516f43e89f20a files/euid.diff 931
-MD5 ad1486139852e253c71bccd1c53083ba files/digest-cmd5checkpw-0.22-r1 67
+MD5 26265c20b514e100750864677c3e6d97 cmd5checkpw-0.22-r3.ebuild 1571
 MD5 ad1486139852e253c71bccd1c53083ba files/digest-cmd5checkpw-0.22-r2 67
+MD5 970ef1c2abdda72f534516f43e89f20a files/euid.diff 931
+MD5 a3bc1c985b3e114b9e1a4b9a8b7810da files/poppasswd 84
+MD5 ad1486139852e253c71bccd1c53083ba files/digest-cmd5checkpw-0.22-r1 67
 MD5 ad1486139852e253c71bccd1c53083ba files/digest-cmd5checkpw-0.22-r3 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCiG4WQlM6RnzZP+IRAtFsAKCkrY6FtIq6s6qHC1w9/R6MNTR4qgCeIqFN
-R0pgG0bt6c9engvNKVDhR7M=
-=tqLO
------END PGP SIGNATURE-----
