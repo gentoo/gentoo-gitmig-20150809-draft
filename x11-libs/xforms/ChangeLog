@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/xforms
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xforms/ChangeLog,v 1.22 2005/03/27 06:07:11 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xforms/ChangeLog,v 1.23 2005/05/19 01:23:18 mr_bones_ Exp $
+
+  19 May 2005; Michael Sterrett <mr_bones_@gentoo.org> xforms-1.0.ebuild,
+  xforms-1.0-r1.ebuild, xforms-1.0.90.ebuild:
+  remove invalid PROVIDE
 
 *xforms-1.0-r1 (27 Mar 2005)
 

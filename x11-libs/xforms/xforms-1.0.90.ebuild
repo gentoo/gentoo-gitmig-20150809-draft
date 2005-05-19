@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xforms/xforms-1.0.90.ebuild,v 1.6 2004/09/24 00:23:14 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xforms/xforms-1.0.90.ebuild,v 1.7 2005/05/19 01:23:18 mr_bones_ Exp $
 
 DESCRIPTION="A graphical user interface toolkit for X"
 HOMEPAGE="http://www.nongnu.org/xforms/"
@@ -12,8 +12,6 @@ KEYWORDS="x86 ppc sparc amd64"
 IUSE=""
 
 DEPEND="virtual/x11"
-
-PROVIDE="virtual/xforms"
 
 src_compile() {
 	econf || die
