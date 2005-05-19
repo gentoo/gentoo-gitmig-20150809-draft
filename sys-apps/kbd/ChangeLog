@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/kbd
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kbd/ChangeLog,v 1.35 2005/01/02 23:25:09 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kbd/ChangeLog,v 1.36 2005/05/19 14:30:38 azarah Exp $
+
+*kbd-1.12-r5 (19 May 2005)
+
+  19 May 2005; Martin Schlemmer <azarah@gentoo.org>
+  +files/kbd-1.12-Meta_utf8.patch, +files/kbd-1.12-alias.patch,
+  +files/kbd-1.12-setfont-man.patch, +kbd-1.12-r5.ebuild:
+  Add patches from fedora.
 
   02 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
