@@ -1,8 +1,18 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 38c7342cb828918a1340e4ef3cf07baa astyle-1.15.3.ebuild 808
+MD5 be086b451afbdb782bd7c049a5856f89 astyle-1.15.3-r1.ebuild 826
+MD5 5b34efc71ee365d6c49b59a18cdceb21 ChangeLog 1324
 MD5 46d5b0bbc90863b3fc66de0db2d0b5a9 metadata.xml 1776
-MD5 72fbe3baf41f569f81d0c203a6ff6340 ChangeLog 1252
-MD5 fc46a848aad8693f691e4c5ae66e1a53 astyle-1.15.3-r1.ebuild 821
-MD5 bd899893389cf752795753436a7d20e3 files/digest-astyle-1.15.3 61
+MD5 bd899893389cf752795753436a7d20e3 files/digest-astyle-1.15.3-r1 61
 MD5 083d76ed7b9d08e716ece984cebfa865 files/astyle-gcc34.patch 322
 MD5 5a7c535b00e6fd40175e7a2fd44d1722 files/cmd-line-fix.diff 5830
-MD5 bd899893389cf752795753436a7d20e3 files/digest-astyle-1.15.3-r1 61
+MD5 bd899893389cf752795753436a7d20e3 files/digest-astyle-1.15.3 61
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCjNJ0omPajV0RnrERAipZAJ0Z/kbjnC9FKBvJYU/4nCbvxHRQYgCfXJN1
+C3DKKBSYjJ/e5zUCxN8k2Q4=
+=NlY6
+-----END PGP SIGNATURE-----
