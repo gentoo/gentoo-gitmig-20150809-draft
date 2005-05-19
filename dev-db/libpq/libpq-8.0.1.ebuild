@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/libpq/libpq-8.0.1.ebuild,v 1.1 2005/05/16 03:49:32 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/libpq/libpq-8.0.1.ebuild,v 1.2 2005/05/19 15:09:13 matsuu Exp $
 
 inherit eutils gnuconfig flag-o-matic toolchain-funcs
 
@@ -89,7 +89,7 @@ src_install() {
 	dodir /usr/include/libpq
 	for f in ${D}/usr/include/postgresql/libpq-${SLOT}/libpq/*.h
 	do
-		dosym ../postgresql/libpq-${SLOT}/$(basename $f) /usr/include/libpq/
+		dosym ../postgresql/libpq-${SLOT}/libpq/$(basename $f) /usr/include/libpq/
 	done
 
 	cd ${D}/usr/include/postgresql/libpq-${SLOT}
