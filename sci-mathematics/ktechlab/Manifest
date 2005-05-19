@@ -1,4 +1,14 @@
-MD5 2c85b3e9047f012cb176b97be5248e2d ktechlab-0.1.3.ebuild 467
-MD5 746ac3dcbe6d022f4d4936373cf07aab ChangeLog 395
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 d69a7cd060cccd382702de9d5b865650 ktechlab-0.1.3.ebuild 582
+MD5 0e5a2cd7dc93e40658dfcddc90bca46a ChangeLog 491
 MD5 503ccb1138f9c49f0855884d830988a6 metadata.xml 253
 MD5 68b92d3c2b4c05993fe9bea01d6b5cf0 files/digest-ktechlab-0.1.3 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCjPY7evY57Fted3ERAkFfAJ9LG2k+usIIX1sRCG0qlgwksj4/awCgvbA2
+L3EzcuqDBQNWc+TJ1H0+REA=
+=l0QS
+-----END PGP SIGNATURE-----
