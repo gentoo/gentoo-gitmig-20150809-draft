@@ -1,6 +1,11 @@
 # ChangeLog for dev-dotnet/vte-sharp
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/vte-sharp/ChangeLog,v 1.17 2005/05/13 01:14:00 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/vte-sharp/ChangeLog,v 1.18 2005/05/19 17:03:08 latexer Exp $
+
+*vte-sharp-2.5.5 (18 May 2005)
+
+  18 May 2005; Peter Johanson <latexer@gentoo.org> +vte-sharp-2.5.5.ebuild:
+  Bump.
 
   13 May 2005; Peter Johanson <latexer@gentoo.org> -vte-sharp-1.0.4.ebuild:
   Clean up a bit.

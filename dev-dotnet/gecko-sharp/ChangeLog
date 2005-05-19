@@ -1,6 +1,11 @@
 # ChangeLog for dev-dotnet/gecko-sharp
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gecko-sharp/ChangeLog,v 1.28 2005/05/17 15:21:20 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gecko-sharp/ChangeLog,v 1.29 2005/05/19 17:04:23 latexer Exp $
+
+*gecko-sharp-0.10 (18 May 2005)
+
+  18 May 2005; Peter Johanson <latexer@gentoo.org> +gecko-sharp-0.10.ebuild:
+  Bump.
 
   17 May 2005; Tom Martin <slarti@gentoo.org> gecko-sharp-0.7-r1.ebuild:
   Fix broken Manifest, and also add a missing ChangeLog entry. Keyword ~amd64

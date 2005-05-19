@@ -1,6 +1,12 @@
 # ChangeLog for dev-dotnet/glade-sharp
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/glade-sharp/ChangeLog,v 1.27 2005/05/16 21:11:55 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/glade-sharp/ChangeLog,v 1.28 2005/05/19 17:01:48 latexer Exp $
+
+*glade-sharp-2.5.5 (18 May 2005)
+
+  18 May 2005; Peter Johanson <latexer@gentoo.org>
+  +glade-sharp-2.5.5.ebuild:
+  Bump.
 
   16 May 2005; Tom Martin <slarti@gentoo.org> ChangeLog:
   Broken Manifest. Repoman at category level is bad.

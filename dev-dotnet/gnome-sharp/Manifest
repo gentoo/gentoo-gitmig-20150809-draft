@@ -1,22 +1,14 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 c3747ef48a568f01a66ec23f8009fa36 ChangeLog 2533
-MD5 c27cdb8c06003f29239135d27d20e3c3 gnome-sharp-1.9.3.1.ebuild 619
-MD5 df91f13d3cf64dd73712ab3da8597299 gnome-sharp-1.0.6.ebuild 537
-MD5 b99cc27b4308b1779317b8ccf87e3998 gnome-sharp-1.9.2.ebuild 612
-MD5 a60fdfbce7c7cfc52187ff86a7f8bbf8 metadata.xml 222
-MD5 0fc14efd5e4e12ad2588fd271c9d1b55 gnome-sharp-1.9.3.ebuild 611
 MD5 9e59c5296aef847970b162adfaa892fe gnome-sharp-1.0.8.ebuild 551
-MD5 284fbaa2e02c9f1dca27440457411e0b files/digest-gnome-sharp-1.9.3 147
-MD5 3af46f2e9fbd6a7f642bc1ef502d50ca files/digest-gnome-sharp-1.0.8 147
-MD5 fe4e7ed3578050079793d30322ad8a6c files/digest-gnome-sharp-1.9.3.1 151
-MD5 d1dddb54802e684259aedfd27a11af15 files/digest-gnome-sharp-1.9.2 147
+MD5 b99cc27b4308b1779317b8ccf87e3998 gnome-sharp-2.5.5.ebuild 612
+MD5 b99cc27b4308b1779317b8ccf87e3998 gnome-sharp-1.9.2.ebuild 612
+MD5 e6f05e8daf8b2c191f71799ed9a7d2c9 ChangeLog 2656
+MD5 a60fdfbce7c7cfc52187ff86a7f8bbf8 metadata.xml 222
+MD5 df91f13d3cf64dd73712ab3da8597299 gnome-sharp-1.0.6.ebuild 537
+MD5 0fc14efd5e4e12ad2588fd271c9d1b55 gnome-sharp-1.9.3.ebuild 611
+MD5 c27cdb8c06003f29239135d27d20e3c3 gnome-sharp-1.9.3.1.ebuild 619
+MD5 d3c03463afacd40a934397a076f9bf9b files/digest-gnome-sharp-2.5.5 147
 MD5 ff5a2a47c3e1d785fc179c922857e409 files/digest-gnome-sharp-1.0.6 147
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCiRZZCHk4+ZoBpvsRAk+GAKCBXV+r4879tEAeUkfettpZ1fHVOQCgmCOM
-Nl5pOD1KIx+igAqmNvdtres=
-=7o37
------END PGP SIGNATURE-----
+MD5 3af46f2e9fbd6a7f642bc1ef502d50ca files/digest-gnome-sharp-1.0.8 147
+MD5 d1dddb54802e684259aedfd27a11af15 files/digest-gnome-sharp-1.9.2 147
+MD5 284fbaa2e02c9f1dca27440457411e0b files/digest-gnome-sharp-1.9.3 147
+MD5 fe4e7ed3578050079793d30322ad8a6c files/digest-gnome-sharp-1.9.3.1 151

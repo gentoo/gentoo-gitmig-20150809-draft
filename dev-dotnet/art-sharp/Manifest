@@ -1,22 +1,14 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 6fab38c0a64642cdae80b9e78d6a2c8c ChangeLog 2461
+MD5 d112d0c127eb56a4e65e4520703599d0 art-sharp-1.0.6.ebuild 384
+MD5 9e99d4b87a39843a48be0ae6e7e6c324 art-sharp-1.0.8.ebuild 383
+MD5 d10d0949f9c696fb742e06397ef802e5 ChangeLog 2578
+MD5 948034685918d26cbcef94ad436a68e6 art-sharp-2.5.5.ebuild 414
+MD5 a60fdfbce7c7cfc52187ff86a7f8bbf8 metadata.xml 222
+MD5 7414841c696818247065c9649fc1a035 art-sharp-1.9.2.ebuild 412
 MD5 283200bb7b17ce3d3d8a9ff97a127983 art-sharp-1.9.3.ebuild 412
 MD5 0c1aa501cc524a0729f910a1b342f1f3 art-sharp-1.9.3.1.ebuild 420
-MD5 d112d0c127eb56a4e65e4520703599d0 art-sharp-1.0.6.ebuild 384
-MD5 7414841c696818247065c9649fc1a035 art-sharp-1.9.2.ebuild 412
-MD5 a60fdfbce7c7cfc52187ff86a7f8bbf8 metadata.xml 222
-MD5 9e99d4b87a39843a48be0ae6e7e6c324 art-sharp-1.0.8.ebuild 383
-MD5 284fbaa2e02c9f1dca27440457411e0b files/digest-art-sharp-1.9.3 147
-MD5 fe4e7ed3578050079793d30322ad8a6c files/digest-art-sharp-1.9.3.1 151
+MD5 d3c03463afacd40a934397a076f9bf9b files/digest-art-sharp-2.5.5 147
 MD5 ff5a2a47c3e1d785fc179c922857e409 files/digest-art-sharp-1.0.6 147
 MD5 3af46f2e9fbd6a7f642bc1ef502d50ca files/digest-art-sharp-1.0.8 147
 MD5 d1dddb54802e684259aedfd27a11af15 files/digest-art-sharp-1.9.2 147
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCiRa0CHk4+ZoBpvsRAu5kAJ0bEnQCMI2huMrh/h/5TKjKdHCVDQCeKjAU
-cKI0ZTSpavEB0HvdUDDZjpA=
-=Y5cS
------END PGP SIGNATURE-----
+MD5 284fbaa2e02c9f1dca27440457411e0b files/digest-art-sharp-1.9.3 147
+MD5 fe4e7ed3578050079793d30322ad8a6c files/digest-art-sharp-1.9.3.1 151
