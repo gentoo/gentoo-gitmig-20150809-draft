@@ -1,22 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 587355cf505511f1a787a3c673865b19 ChangeLog 6066
+MD5 debfde31fd38bf709b06faa429221658 ChangeLog 6147
 MD5 95c6970e93593832e83f6356b66cfc37 gok-0.10.2.ebuild 996
-MD5 e0ed42b3f411c43980ab406ffa047a75 gok-1.0.5.ebuild 1003
-MD5 1206727843a679bb9454c3b77d35e410 gok-1.0.3.ebuild 999
-MD5 d213a9003c11bcd3849f289e4806deff metadata.xml 472
 MD5 ec6407adffdd51daa147c060df6cc814 gok-0.11.16.ebuild 983
 MD5 4fbe737d12dac557cd469a4819144661 gok-0.11.17.ebuild 986
-MD5 ddcd710b5ca6e8bf715e69dd6d2b615b files/digest-gok-0.11.16 65
+MD5 f468fc70c19655652e382b0fb42dc114 gok-1.0.3.ebuild 996
+MD5 e0ed42b3f411c43980ab406ffa047a75 gok-1.0.5.ebuild 1003
+MD5 d213a9003c11bcd3849f289e4806deff metadata.xml 472
 MD5 3c8578ed2f4f158e41f17b3c8e3ec7a8 files/digest-gok-0.10.2 64
+MD5 ddcd710b5ca6e8bf715e69dd6d2b615b files/digest-gok-0.11.16 65
+MD5 42517b8968a7bce2914a9217ae23ddf5 files/digest-gok-0.11.17 65
 MD5 72380f82d696b5e907ef0e3520b28d2d files/digest-gok-1.0.5 63
 MD5 4f6c470a2283ad29619d1accb58e4f3d files/digest-gok-1.0.3 63
-MD5 42517b8968a7bce2914a9217ae23ddf5 files/digest-gok-0.11.17 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFCiQbYKRy60XGEcJIRAvuXAJ4gy3DU+XJdUXQ+iLnw3tqe5Xu8EACgpntt
-4cQ6ALxg/unBIpBr2cLL5nM=
-=ZGW7
------END PGP SIGNATURE-----
