@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/multiimonc/multiimonc-0.3.6.ebuild,v 1.1 2005/04/25 19:48:38 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/multiimonc/multiimonc-0.3.6.ebuild,v 1.2 2005/05/19 20:49:32 hansmi Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.hansmi.ch/software/multiimonc"
 
 S="${WORKDIR}/MultiImonC-${PV}"
 
-KEYWORDS="~x86 ~ppc ~amd64 ~sparc"
+KEYWORDS="amd64 ~hppa ppc sparc x86"
 SLOT="0"
 LICENSE="GPL-2"
 IUSE=""
