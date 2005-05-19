@@ -1,6 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/sbd/sbd-1.36.ebuild,v 1.2 2004/11/06 13:38:23 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/sbd/sbd-1.36.ebuild,v 1.3 2005/05/19 20:25:30 swegener Exp $
+
+inherit toolchain-funcs
 
 DESCRIPTION="Netcat-clone, designed to be portable and offer strong encryption"
 HOMEPAGE="http://tigerteam.se/dl/sbd/"
@@ -14,6 +16,7 @@ DEPEND=""
 
 src_compile() {
 	emake \
+		CC="$(tc-getCC)" \
 		CFLAGS="${CFLAGS}" \
 		UNIX_CFLAGS="" \
 		UNIX_LDFLAGS="" \
