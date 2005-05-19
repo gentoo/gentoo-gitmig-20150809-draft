@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/IPC-Signal
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IPC-Signal/ChangeLog,v 1.1 2005/05/19 09:18:25 mcummings Exp $
+
+*IPC-Signal-1.00 (19 May 2005)
+
+  19 May 2005; Michael Cummings <mcummings@gentoo.org> +metadata.xml,
+  +IPC-Signal-1.00.ebuild:
+  Initial import, requested by johnm for asterisk
+
