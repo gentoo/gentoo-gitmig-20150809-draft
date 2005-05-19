@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/elfutils
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/ChangeLog,v 1.58 2005/05/19 17:54:54 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/ChangeLog,v 1.59 2005/05/19 17:57:40 luckyduck Exp $
+
+  19 May 2005; Jan Brinkmann <luckyduck@gentoo.org> elfutils-0.108.ebuild:
+  stable on amd64 wrt #91817
 
   19 May 2005; Rene Nussbaumer <killerfox@gentoo.org> elfutils-0.108.ebuild:
   stable on hppa; bug #91817
