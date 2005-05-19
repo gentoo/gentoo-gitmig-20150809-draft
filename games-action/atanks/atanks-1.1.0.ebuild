@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/atanks/atanks-1.1.0.ebuild,v 1.10 2005/05/17 17:41:26 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/atanks/atanks-1.1.0.ebuild,v 1.11 2005/05/19 16:05:17 mr_bones_ Exp $
 
-inherit eutils games
+inherit eutils toolchain-funcs games
 
 DESCRIPTION="Worms and Scorched Earth-like game"
 HOMEPAGE="http://atanks.sourceforge.net/"
@@ -10,19 +10,23 @@ SRC_URI="mirror://sourceforge/atanks/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc"
+KEYWORDS="ppc x86"
 IUSE=""
 
 DEPEND="virtual/x11
 	>=media-libs/allegro-4.0.3
 	>=media-libs/allegttf-2.0"
 
-S="${WORKDIR}/${PN}"
+S=${WORKDIR}/${PN}
 
 src_unpack() {
 	unpack ${A}
+	cd "${S}"
 	#apply both patches to compile with gcc-3.4.0 closing bug #49457
-	epatch "${FILESDIR}/atanks-gcc34.patch"
+	if [ "$(gcc-major-version)" -ge "3" -a "$(gcc-minor-version)" -ge "4" ]
+	then
+		epatch "${FILESDIR}/atanks-gcc34.patch"
+	fi
 	epatch "${FILESDIR}/${PV}-gentoo.patch"
 
 	DATA_DIR="${GAMES_DATADIR}/${PN}"
