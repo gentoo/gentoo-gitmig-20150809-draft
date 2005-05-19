@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/procps/procps-3.2.5-r1.ebuild,v 1.1 2005/03/03 16:53:14 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/procps/procps-3.2.5-r1.ebuild,v 1.2 2005/05/19 22:17:29 vapier Exp $
 
 inherit flag-o-matic eutils toolchain-funcs
 
@@ -10,14 +10,14 @@ SRC_URI="http://procps.sf.net/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+KEYWORDS="~alpha amd64 arm hppa ia64 m68k ~mips ~ppc ~ppc64 s390 sh ~sparc x86"
 IUSE="n32"
 
 RDEPEND=">=sys-libs/ncurses-5.2-r2"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	# Fix terminal breakage when sorting first column in top #80296
 	epatch "${FILESDIR}"/${PV}-top-sort.patch
@@ -35,17 +35,17 @@ src_unpack() {
 	use ppc && sed -i -e 's:-m64::g' Makefile
 
 	# mips patches
-	if use mips; then
+	if use mips ; then
 		# mips 2.4.23 headers (and 2.6.x) don't allow PAGE_SIZE to be defined in
 		# userspace anymore, so this patch instructs procps to get the
 		# value from sysconf().
-		epatch ${FILESDIR}/${PN}-mips-define-pagesize.patch
+		epatch "${FILESDIR}"/${PN}-mips-define-pagesize.patch
 
 		# n32 isn't completly reliable of an ABI on mips64 at the current
 		# time.  Eventually, it will be, but for now, we need to make sure
 		# procps doesn't try to force it on us.
-		if ! use n32; then
-			epatch ${FILESDIR}/${PN}-mips-n32_isnt_usable_on_mips64_yet.patch
+		if ! use n32 ; then
+			epatch "${FILESDIR}"/${PN}-mips-n32_isnt_usable_on_mips64_yet.patch
 		fi
 	fi
 }

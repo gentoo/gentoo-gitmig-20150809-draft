@@ -1,28 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 b4c0071255f4d33e7d87742f10426d4c procps-3.2.4-r3.ebuild 2364
-MD5 de36ba695b3d4de6ac4ff35df181b872 procps-3.2.3-r1.ebuild 1494
-MD5 814bb8cdaee78c5e87244c92220f85c4 procps-3.2.5.ebuild 1856
-MD5 b634dee52a3696de89de82a4eb20098c procps-3.2.4-r2.ebuild 1961
 MD5 da5128fcb5b1db097f851715436b818e ChangeLog 17241
-MD5 b59fa99641f04e3a5c692a8cfa7facb5 procps-3.2.5-r1.ebuild 2264
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 5fdac6b265f6ff3866056fb2d97d2a0c files/procps-mips-n32_isnt_usable_on_mips64_yet.patch 431
-MD5 7ba1d9bd2f1c46766282250643ab9ebd files/procps-mips-define-pagesize.patch 1028
-MD5 eb892816cc3a56418f4157eb67e18fa6 files/3.2.5-top-sort.patch 1384
-MD5 7e94d86add2921b1262479b92f51da27 files/3.2.4-linux26-slab.patch 521
+MD5 de36ba695b3d4de6ac4ff35df181b872 procps-3.2.3-r1.ebuild 1494
+MD5 b634dee52a3696de89de82a4eb20098c procps-3.2.4-r2.ebuild 1961
+MD5 b4c0071255f4d33e7d87742f10426d4c procps-3.2.4-r3.ebuild 2364
+MD5 eeb035af4fb473a42b7b7ee924159e99 procps-3.2.5-r1.ebuild 2269
+MD5 814bb8cdaee78c5e87244c92220f85c4 procps-3.2.5.ebuild 1856
 MD5 5557c7fb6275f031e3770c70993baf69 files/3.2.4-64bit-display.patch 1566
-MD5 f4e5ac4b1eaf4acdbf0dc9573cdf5438 files/digest-procps-3.2.5 64
+MD5 7e94d86add2921b1262479b92f51da27 files/3.2.4-linux26-slab.patch 521
+MD5 eb892816cc3a56418f4157eb67e18fa6 files/3.2.5-top-sort.patch 1384
 MD5 7455bab26f4331ffc66d62113bc973db files/digest-procps-3.2.3-r1 64
 MD5 a26e86ab1efcb58809f0f46aa735ef07 files/digest-procps-3.2.4-r2 64
 MD5 a26e86ab1efcb58809f0f46aa735ef07 files/digest-procps-3.2.4-r3 64
+MD5 f4e5ac4b1eaf4acdbf0dc9573cdf5438 files/digest-procps-3.2.5 64
 MD5 f4e5ac4b1eaf4acdbf0dc9573cdf5438 files/digest-procps-3.2.5-r1 64
-MD5 191c6f4fbc82aa4aab187014367e8015 files/procps-3.2.5-proc-mount.patch 270
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCJ2nxI1lqEGTUzyQRAriOAJ9cL3YCVuHGaNGYU4Nztx7w7UcsRQCgw0p7
-SRgPO/P8NM4ZLOJzJVfdNtw=
-=/1u1
------END PGP SIGNATURE-----
+MD5 f9e1b99ab8000432b594c2a22c7d6ca4 files/procps-3.2.5-proc-mount.patch 588
+MD5 7ba1d9bd2f1c46766282250643ab9ebd files/procps-mips-define-pagesize.patch 1028
+MD5 5fdac6b265f6ff3866056fb2d97d2a0c files/procps-mips-n32_isnt_usable_on_mips64_yet.patch 431
