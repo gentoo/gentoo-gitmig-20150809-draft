@@ -1,10 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/DirectFB-0.9.22.ebuild,v 1.3 2005/04/15 03:57:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/DirectFB-0.9.22.ebuild,v 1.4 2005/05/19 03:42:09 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
 IUSE_VIDEO_CARDS="ati128 cle266 cyber5k i810 mach64 matrox neomagic nsc nvidia radeon savage sis315 tdfx unichrome"
+IUSE_INPUT_DRIVERS="dbox2remote elo-input h3600_ts joystick keyboard dreamboxremote linuxinput lirc mutouch ps2mouse serialmouse sonypijofdial wm97xx"
 
 DESCRIPTION="Thin library on top of the Linux framebuffer devices"
 HOMEPAGE="http://www.directfb.org/"
@@ -29,6 +30,11 @@ pkg_setup() {
 		ewarn "via the VIDEO_CARDS variable what video card you use."
 		einfo "DirectFB supports: ${IUSE_VIDEO_CARDS} all none"
 	fi
+	if [[ -z ${INPUT_DRIVERS} ]] ; then
+		ewarn "All input drivers will be built since you did not specify"
+		ewarn "via the INPUT_DRIVERS variable which input drivers to use."
+		einfo "DirectFB supports: ${IUSE_INPUT_DRIVERS} all none"
+	fi
 }
 
 src_unpack() {
@@ -51,13 +57,19 @@ src_unpack() {
 }
 
 src_compile() {
-	local vidcards card
+	local vidcards card input inputdrivers
 	for card in ${VIDEO_CARDS} ; do
 		has ${card} ${IUSE_VIDEO_CARDS} && vidcards="${vidcards},${card}"
 	done
 	[[ -z ${vidcards} ]] \
 		&& vidcards="all" \
-		|| vidcards="${vidcards:1}"
+		|| vidcards=${vidcards:1}
+	for input in ${INPUT_DRIVERS} ; do
+		has ${input} ${IUSE_INPUT_DRIVERS} && inputdrivers="${inputdrivers},${input}"
+	done
+	[[ -z ${inputdrivers} ]] \
+		&& inputdrivers="all" \
+		|| inputdrivers=${inputdrivers:1}
 
 	local sdlconf="--disable-sdl"
 	if use sdl ; then
@@ -86,6 +98,7 @@ src_compile() {
 		$(use_enable sysfs) \
 		${sdlconf} \
 		--with-gfxdrivers="${vidcards}" \
+		--with-inputdrivers="${inputdrivers}" \
 		|| die
 	emake || die
 }
@@ -105,4 +118,10 @@ pkg_postinst() {
 	ewarn "breaks DirectFB related applications."
 	ewarn "Please run \"revdep-rebuild\" which can be"
 	ewarn "found by emerging the package 'gentoolkit'."
+	ewarn
+	ewarn "If you have an ALPS touchpad, then you might"
+	ewarn "get your mouse unexpectedly set in absolute"
+	ewarn "mode in all DirectFB applications."
+	ewarn "This can be fixed by removing linuxinput from"
+	ewarn "INPUT_DRIVERS."
 }

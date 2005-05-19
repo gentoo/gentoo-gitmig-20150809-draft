@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/DirectFB
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/ChangeLog,v 1.46 2005/03/02 01:07:00 vapier Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/ChangeLog,v 1.47 2005/05/19 03:42:09 vapier Exp $
+
+  19 May 2005; Mike Frysinger <vapier@gentoo.org> DirectFB-0.9.22.ebuild:
+  Add support for INPUT_DRIVERS.  Patch by Lachlan Pease #93046.
 
 *DirectFB-0.9.22 (01 Mar 2005)
 

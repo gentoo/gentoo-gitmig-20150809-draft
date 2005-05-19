@@ -1,5 +1,5 @@
-MD5 d8de09f6d99b8c99fb599279526f8a28 ChangeLog 7158
+MD5 bbce380761c9a71d4d9f234f6c65d8b0 ChangeLog 7298
 MD5 b798773c0060701f402cec4cddc05f5d metadata.xml 754
-MD5 e9517baccc8555e6db5327590fe1cbd5 DirectFB-0.9.22.ebuild 3169
+MD5 5e128e85ee51ac63ceab00a5dfc06e49 DirectFB-0.9.22.ebuild 4066
 MD5 2a322a95caff6a561082846ca8f0d700 files/digest-DirectFB-0.9.22 68
 MD5 51cf3c6f205c566235b00a488947f835 files/0.9.21-simd-amd64.patch 6156
