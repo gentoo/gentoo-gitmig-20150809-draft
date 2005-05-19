@@ -1,0 +1,11 @@
+# ChangeLog for dev-libs/wxactivex
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/wxactivex/ChangeLog,v 1.1 2005/05/19 01:42:36 pythonhead Exp $
+
+*wxactivex-1.0 (19 May 2005)
+
+  19 May 2005; Rob Cakebread <pythonhead@gentoo.org>
+  +files/wxactivex-1.0-gentoo.patch, +metadata.xml, +wxactivex-1.0.ebuild:
+  Initial commit. Thank you Adrian Smarzewski <adrian@kadu.net> for the
+  ebuild. bug# 46942
+

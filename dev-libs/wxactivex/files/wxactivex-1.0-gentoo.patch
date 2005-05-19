@@ -1,0 +1,428 @@
+--- makefile.org	2003-02-26 14:23:42.000000000 +0100
++++ makefile	2004-04-01 20:30:19.969840816 +0200
+@@ -1,15 +1,16 @@
+-CC = gcc
++CC = g++
+ 
+-PROGRAM = wxIE
+-
+-CFLAGS = -I/m/snowball/icicle/gswd/devenv/include -D__WXMOTIF__
+-LFLAGS = -L/m/snowball/icicle/devenv/lib
++PROGRAM = wxIE.exe
++LIBRARY = wxactivex.a
++prefix = /usr
+ 
+ # implementation
+ 
+ .SUFFIXES:      .o .cpp
+ 
+-SOURCES:sh= /bin/ls *.cpp
++APP_SOURCES = wxIEApp.cpp wxIEFrm.cpp wxActiveXFrame.cpp
++LIB_SOURCES = wxactivex.cpp IEHtmlWin.cpp
+ 
+-OBJECTS = $(SOURCES:.cpp=.o)
++APP_OBJECTS = $(APP_SOURCES:.cpp=.o)
++LIB_OBJECTS = $(LIB_SOURCES:.cpp=.o)
+ 
+@@ -18,6 +18,18 @@
+ 
+-$(PROGRAM): $(OBJECTS)
+-	$(CC) -o $(PROGRAM) $(OBJECTS) $(LFLAGS) `wx-config --libs`
++$(PROGRAM): $(LIBRARY) $(APP_OBJECTS)
++	$(CC) -o $(PROGRAM) $(APP_OBJECTS) $(LIBRARY) `wx-config --libs`
++	strip $(PROGRAM)
++
++$(LIBRARY): $(LIB_OBJECTS)
++	ar rs $(LIBRARY) $(LIB_OBJECTS)
++
++install:
++	mkdir -p $(prefix)/include/wxactivex
++	mkdir -p $(prefix)/lib
++	mkdir -p $(prefix)/bin
++	cp wxactivex.h IEHtmlWin.h $(prefix)/include/wxactivex
++	cp wxactivex.a $(prefix)/lib
++	cp wxIE.exe $(prefix)/bin
+ 
+ clean:
+ 	rm -f *.o $(PROGRAM)
+--- wxactive.cpp.org	2004-01-09 12:03:02.000000000 +0100
++++ wxactivex.cpp	2004-04-01 20:01:20.288312608 +0200
+@@ -52,7 +52,9 @@
+   code and/or adjust the licensing conditions notice accordingly.
+ */
+ 
+-#include "wxActiveX.h"
++#include "wxactivex.h"
++#include <stdexcept>
++#include <servprov.h>
+ #include <wx/strconv.h>
+ #include <wx/event.h>
+ #include <wx/string.h>
+@@ -1030,7 +1030,7 @@
+ 
+     wxString err = "wxActiveXEvent::operator[] invalid name <" + name + ">";
+     err += "\r\nValid Names = :\r\n";
+-    for (i = 0; i < m_params.GetCount(); i++)
++    for (int i = 0; i < m_params.GetCount(); i++)
+     {
+         err += m_params[i].GetName();
+         err += "\r\n";
+--- wxactivex.cpp.org	2004-01-09 12:03:02.000000000 +0100
++++ wxactivex.cpp	2004-04-01 21:57:52.027406704 +0200
+@@ -1279,7 +1279,7 @@
+ const wxActiveX::PropX& wxActiveX::GetPropDesc(int idx) const
+ {
+     if (idx < 0 || idx >= GetPropCount())
+-        throw exception("Property index out of bounds");
++        throw runtime_error("Property index out of bounds");
+ 
+     return m_props[idx];
+ };
+@@ -1291,7 +1291,7 @@
+     {
+         wxString s;
+         s << "property <" << name << "> not found";
+-        throw exception(s.mb_str());
++        throw runtime_error(s.mb_str());
+     };
+ 
+     return GetPropDesc(it->second);
+@@ -1300,7 +1300,7 @@
+ const wxActiveX::FuncX& wxActiveX::GetMethodDesc(int idx) const
+ {
+     if (idx < 0 || idx >= GetMethodCount())
+-        throw exception("Method index out of bounds");
++        throw runtime_error("Method index out of bounds");
+ 
+ 
+     return m_methods[idx];
+@@ -1314,7 +1314,7 @@
+     {
+         wxString s;
+         s << "method <" << name << "> not found";
+-        throw exception(s.mb_str());
++        throw runtime_error(s.mb_str());
+     };
+ 
+     return GetMethodDesc(it->second);
+@@ -1345,7 +1345,7 @@
+     {
+         wxString s;
+         s << "property <" << name << "> is readonly";
+-        throw exception(s.mb_str());
++        throw runtime_error(s.mb_str());
+     };
+ 
+     VARIANT v = {prop.arg.vt};
+@@ -1382,7 +1382,7 @@
+     {
+         wxString s;
+         s << "property <" << name << "> is writeonly";
+-        throw exception(s.mb_str());
++        throw runtime_error(s.mb_str());
+     };
+ 
+     return GetPropAsVariant(prop.memid);
+@@ -1393,7 +1393,7 @@
+     VARIANT v = GetPropAsVariant(name);
+     HRESULT hr = VariantChangeType(&v, &v, 0, VT_BSTR);
+     if (! SUCCEEDED(hr))
+-        throw exception("Unable to convert variant");
++        throw runtime_error("Unable to convert variant");
+ 
+     wxVariant wv;
+     MSWVariantToVariant(v, wv);
+@@ -1408,7 +1408,7 @@
+     VARIANT v = GetPropAsVariant(name);
+     HRESULT hr = VariantChangeType(&v, &v, 0, VT_BSTR);
+     if (! SUCCEEDED(hr))
+-        throw exception("Unable to convert variant");
++        throw runtime_error("Unable to convert variant");
+ 
+     wxString s = v.bstrVal;
+     VariantClear(&v);
+@@ -1421,7 +1421,7 @@
+     VARIANT v = GetPropAsVariant(name);
+     HRESULT hr = VariantChangeType(&v, &v, 0, VT_I1);
+     if (! SUCCEEDED(hr))
+-        throw exception("Unable to convert variant");
++        throw runtime_error("Unable to convert variant");
+ 
+     return v.cVal;
+ };
+@@ -1431,7 +1431,7 @@
+     VARIANT v = GetPropAsVariant(name);
+     HRESULT hr = VariantChangeType(&v, &v, 0, VT_I4);
+     if (! SUCCEEDED(hr))
+-        throw exception("Unable to convert variant");
++        throw runtime_error("Unable to convert variant");
+ 
+     return v.iVal;
+ };
+@@ -1441,7 +1441,7 @@
+     VARIANT v = GetPropAsVariant(name);
+     HRESULT hr = VariantChangeType(&v, &v, 0, VT_BOOL);
+     if (! SUCCEEDED(hr))
+-        throw exception("Unable to convert variant");
++        throw runtime_error("Unable to convert variant");
+ 
+     return v.boolVal != 0;
+ };
+@@ -1451,7 +1451,7 @@
+     VARIANT v = GetPropAsVariant(name);
+     HRESULT hr = VariantChangeType(&v, &v, 0, VT_R8);
+     if (! SUCCEEDED(hr))
+-        throw exception("Unable to convert variant");
++        throw runtime_error("Unable to convert variant");
+ 
+     return v.dblVal;
+ };
+@@ -1462,7 +1462,7 @@
+     VARIANT v = GetPropAsVariant(name);
+ 
+ 	if (! VariantToWxDateTime(v, dt))
+-        throw exception("Unable to convert variant to wxDateTime");
++        throw runtime_error("Unable to convert variant to wxDateTime");
+ 
+     return dt;
+ };
+@@ -1472,7 +1472,7 @@
+     VARIANT v = GetPropAsVariant(name);
+     HRESULT hr = VariantChangeType(&v, &v, 0, VT_BYREF);
+     if (! SUCCEEDED(hr))
+-        throw exception("Unable to convert variant");
++        throw runtime_error("Unable to convert variant");
+ 
+     return v.byref;
+ };
+@@ -1530,7 +1530,7 @@
+             vargs[nargs - i - 1].vt = func.params[i].vt;
+ 
+         // put data
+-        for (i = 0; i < nargs; i++)
++        for (int i = 0; i < nargs; i++)
+             VariantToMSWVariant(args[i], vargs[nargs - i - 1]);
+     };
+ 
+--- wxactivex.h.org	2004-01-09 12:02:34.000000000 +0100
++++ wxactivex.h	2004-04-01 22:48:58.104292168 +0200
+@@ -62,10 +62,10 @@
+ #pragma warning( disable : 4786)
+ 
+ 
+-#include <wx/setup.h>
+ #include <wx/wx.h>
+ #include <wx/variant.h>
+ #include <wx/datetime.h>
++#include <ole2.h>
+ #include <oleidl.h>
+ #include <exdisp.h>
+ #include <docobj.h>
+--- IEHtmlWin.cpp.org	2004-01-09 12:03:04.000000000 +0100
++++ IEHtmlWin.cpp	2004-04-01 20:56:47.844447184 +0200
+@@ -63,7 +63,7 @@
+ #include <exdispid.h>
+ #include <exdisp.h>
+ #include <olectl.h>
+-#include <Mshtml.h>
++#include <mshtml.h>
+ #include <sstream>
+ using namespace std;
+ 
+@@ -171,7 +171,7 @@
+ 	{
+ 		if (prepend.size() > 0)
+ 		{
+-			int n = min(prepend.size(), cb);
++			int n = (prepend.size() < cb ? prepend.size() : cb);
+ 			prepend.copy((char *) pv, n);
+ 			prepend = prepend.substr(n);
+ 			if (pcbRead)
+@@ -513,4 +513,4 @@
+     SysFreeString(text);
+ 
+     return s;	
+-};
+\ Brak znaku nowej linii na koñcu pliku
++};
+--- IEHtmlWin.h.org	2004-04-01 22:51:16.476256432 +0200
++++ IEHtmlWin.h	2004-04-01 22:51:26.894672592 +0200
+@@ -61,8 +61,8 @@
+ #pragma warning( disable : 4786)
+ 
+ 
+-#include <wx/setup.h>
+ #include <wx/wx.h>
++#include <ole2.h>
+ #include <exdisp.h>
+ #include <iostream>
+ using namespace std;
+--- wxIEApp.h.org	2004-04-01 22:55:43.302692648 +0200
++++ wxIEApp.h	2004-04-01 22:56:02.312802672 +0200
+@@ -52,6 +52,8 @@
+   code and/or adjust the licensing conditions notice accordingly.
+ */
+ 
++#include <wx/wx.h>
++
+ // Define a new application type, each program should derive a class from wxApp
+ class wxIEApp : public wxApp
+ {
+--- wxActiveXFrame.cpp.org	2004-04-02 00:31:15.466271328 +0200
++++ wxActiveXFrame.cpp	2004-04-02 00:34:06.219312920 +0200
+@@ -114,7 +114,7 @@
+     {
+         const wxActiveX::FuncX& func = X->GetEventDesc(i);
+         const wxEventType& ev = RegisterActiveXEvent((DISPID) func.memid);
+-        Connect(101, ev, (wxObjectEventFunction) OnActiveXEvent);
++        Connect(101, ev, (wxObjectEventFunction) &wxActiveXFrame::OnActiveXEvent);
+     };
+ }
+ 
+@@ -273,7 +273,7 @@
+         os << 
+             (const wxChar *) event.ParamType(p) << wxT(" ") << 
+             (const wxChar *) event.ParamName(p) << wxT(" = ") <<
+-            (const wxChar *) (wxString) event[p];
++            (const wxChar *) event[p].GetString();
+         if (p < event.ParamCount() - 1)
+             os << wxT(", ");
+     };
+--- wxActiveXFrame.h.org	2004-04-02 00:35:19.378191080 +0200
++++ wxActiveXFrame.h	2004-04-02 00:35:25.217303400 +0200
+@@ -74,4 +74,4 @@
+ };
+ 
+ 
+-#endif
+\ Brak znaku nowej linii na koñcu pliku
++#endif
+--- wxIEFrm.cpp.org	2004-01-09 12:02:54.000000000 +0100
++++ wxIEFrm.cpp	2004-04-02 01:15:31.564483024 +0200
+@@ -84,19 +84,19 @@
+ // IDs for the controls and the menu commands
+ enum
+ {
+-    // menu items
+-    FILE_QUIT = 1,
+-	FILE_OPEN,
+-	FILE_BROWSE,
+-    FILE_HTML_EDITMODE,
+-	FILE_TEST_HTML,
+-	FILE_TEST_SELECT,
+-	FILE_TEST_HTMLSELECT,
+-	FILE_TEST_GETTEXT,
+-	FILE_TEST_HTMLGETTEXT,
+-    FILE_TEST_HOME,
+-    FILE_TEST_ACTIVEX,
+-    FILE_ABOUT,
++	// menu items
++	ID_FILE_QUIT = 1,
++	ID_FILE_OPEN,
++	ID_FILE_BROWSE,
++	ID_FILE_HTML_EDITMODE,
++	ID_FILE_TEST_HTML,
++	ID_FILE_TEST_SELECT,
++	ID_FILE_TEST_HTMLSELECT,
++	ID_FILE_TEST_GETTEXT,
++	ID_FILE_TEST_HTMLGETTEXT,
++	ID_FILE_TEST_HOME,
++	ID_FILE_TEST_ACTIVEX,
++	ID_FILE_ABOUT,
+ 
+ 	// controls
+ 	ID_MSHTML = 501,
+@@ -111,27 +111,27 @@
+ // handlers) which process them. It can be also done at run-time, but for the
+ // simple menu events like this the static method is much simpler.
+ BEGIN_EVENT_TABLE(wxIEFrame, wxFrame)
+-    EVT_SIZE(wxIEFrame::OnSize)
+-    EVT_MENU(FILE_QUIT,		wxIEFrame::OnQuit)
+-	EVT_MENU(FILE_BROWSE,		wxIEFrame::OnBrowse)
+-	EVT_MENU(FILE_OPEN,			wxIEFrame::OnOpen)
+-    EVT_MENU(FILE_HTML_EDITMODE, wxIEFrame::OnEditMode)
+-    EVT_UPDATE_UI(FILE_HTML_EDITMODE, wxIEFrame::OnEditModeUI)
+-    EVT_MENU(FILE_TEST_HTML,	wxIEFrame::OnTestHTML)
+-    EVT_MENU(FILE_TEST_SELECT,  wxIEFrame::OnTestSelect)
+-    EVT_MENU(FILE_TEST_HTMLSELECT,  wxIEFrame::OnTestHTMLSelect)
+-    EVT_MENU(FILE_TEST_GETTEXT,  wxIEFrame::OnTestGetText)
+-    EVT_MENU(FILE_TEST_HTMLGETTEXT,  wxIEFrame::OnTestHTMLGetText)
+-    EVT_MENU(FILE_TEST_HOME, wxIEFrame::OnTestHome)
+-    EVT_MENU(FILE_TEST_ACTIVEX, wxIEFrame::OnTestActiveX)
+-    EVT_MENU(FILE_ABOUT,		wxIEFrame::OnAbout)
+-
+-    // ActiveX Events
+-    EVT_ACTIVEX_DISPID(ID_MSHTML, DISPID_STATUSTEXTCHANGE,  OnMSHTMLStatusTextChangeX)
+-    EVT_ACTIVEX(ID_MSHTML, "BeforeNavigate2",   OnMSHTMLBeforeNavigate2X)
+-	EVT_ACTIVEX(ID_MSHTML, "TitleChange",       OnMSHTMLTitleChangeX)
+-	EVT_ACTIVEX(ID_MSHTML, "NewWindow2",        OnMSHTMLNewWindow2X)
+-	EVT_ACTIVEX(ID_MSHTML, "ProgressChange",    OnMSHTMLProgressChangeX)
++	EVT_SIZE(wxIEFrame::OnSize)
++	EVT_MENU(ID_FILE_QUIT, wxIEFrame::OnQuit)
++	EVT_MENU(ID_FILE_BROWSE, wxIEFrame::OnBrowse)
++	EVT_MENU(ID_FILE_OPEN, wxIEFrame::OnOpen)
++	EVT_MENU(ID_FILE_HTML_EDITMODE, wxIEFrame::OnEditMode)
++	EVT_UPDATE_UI(ID_FILE_HTML_EDITMODE, wxIEFrame::OnEditModeUI)
++	EVT_MENU(ID_FILE_TEST_HTML, wxIEFrame::OnTestHTML)
++	EVT_MENU(ID_FILE_TEST_SELECT, wxIEFrame::OnTestSelect)
++	EVT_MENU(ID_FILE_TEST_HTMLSELECT, wxIEFrame::OnTestHTMLSelect)
++	EVT_MENU(ID_FILE_TEST_GETTEXT, wxIEFrame::OnTestGetText)
++	EVT_MENU(ID_FILE_TEST_HTMLGETTEXT, wxIEFrame::OnTestHTMLGetText)
++	EVT_MENU(ID_FILE_TEST_HOME, wxIEFrame::OnTestHome)
++	EVT_MENU(ID_FILE_TEST_ACTIVEX, wxIEFrame::OnTestActiveX)
++	EVT_MENU(ID_FILE_ABOUT,	wxIEFrame::OnAbout)
++
++	// ActiveX Events
++	EVT_ACTIVEX_DISPID(ID_MSHTML, DISPID_STATUSTEXTCHANGE, wxIEFrame::OnMSHTMLStatusTextChangeX)
++	EVT_ACTIVEX(ID_MSHTML, "BeforeNavigate2", wxIEFrame::OnMSHTMLBeforeNavigate2X)
++	EVT_ACTIVEX(ID_MSHTML, "TitleChange", wxIEFrame::OnMSHTMLTitleChangeX)
++	EVT_ACTIVEX(ID_MSHTML, "NewWindow2", wxIEFrame::OnMSHTMLNewWindow2X)
++	EVT_ACTIVEX(ID_MSHTML, "ProgressChange", wxIEFrame::OnMSHTMLProgressChangeX)
+ END_EVENT_TABLE()
+ 
+ // ----------------------------------------------------------------------------
+@@ -143,30 +143,31 @@
+        : wxFrame((wxFrame *)NULL, -1, title, pos, size)
+ {
+     // set the frame icon
+-    SetIcon(wxICON(wxIE));
++	// problems with resources, commenting by now
++	// SetIcon(wxICON(wxIE));
+ 
+     // create a menu bar
+     wxMenu *menuFile = new wxMenu("", wxMENU_TEAROFF);
+ 
+     // the "About" item should be in the help menu
+     wxMenu *helpMenu = new wxMenu;
+-    helpMenu->Append(FILE_ABOUT, "&About...\tCtrl-A", "Show about dialog");
++	helpMenu->Append(ID_FILE_ABOUT, "&About...\tCtrl-A", "Show about dialog");
+ 
+-	menuFile->Append(FILE_TEST_HTML, "Test HTML", "Demonstrates LoadString()");
+-	menuFile->Append(FILE_OPEN, "Open HTML File", "Demonstrates LoadStream(istream *)");
+-	menuFile->Append(FILE_BROWSE, "Browse Web Page", "Demonstrates LoadUrl(url)");
+-	menuFile->Append(FILE_HTML_EDITMODE, "Edit Mode", "Demonstrates editing html", true);
++	menuFile->Append(ID_FILE_TEST_HTML, "Test HTML", "Demonstrates LoadString()");
++	menuFile->Append(ID_FILE_OPEN, "Open HTML File", "Demonstrates LoadStream(istream *)");
++	menuFile->Append(ID_FILE_BROWSE, "Browse Web Page", "Demonstrates LoadUrl(url)");
++	menuFile->Append(ID_FILE_HTML_EDITMODE, "Edit Mode", "Demonstrates editing html", true);
+ 	menuFile->AppendSeparator();
+-	menuFile->Append(FILE_TEST_SELECT, "Get Selected Text", "Demonstrates GetStringSelection(false)");
+-	menuFile->Append(FILE_TEST_HTMLSELECT, "Get HTML Selected Text", "Demonstrates GetStringSelection(true)");
++	menuFile->Append(ID_FILE_TEST_SELECT, "Get Selected Text", "Demonstrates GetStringSelection(false)");
++	menuFile->Append(ID_FILE_TEST_HTMLSELECT, "Get HTML Selected Text", "Demonstrates GetStringSelection(true)");
+ 	menuFile->AppendSeparator();
+-	menuFile->Append(FILE_TEST_GETTEXT, "Get Text", "Demonstrates GetText(false)");
+-	menuFile->Append(FILE_TEST_HTMLGETTEXT, "Get HTML Text", "Demonstrates GetText(true)");
+-	menuFile->Append(FILE_TEST_HOME, "Open Home Page", "Demonstrates GoHome()");
++	menuFile->Append(ID_FILE_TEST_GETTEXT, "Get Text", "Demonstrates GetText(false)");
++	menuFile->Append(ID_FILE_TEST_HTMLGETTEXT, "Get HTML Text", "Demonstrates GetText(true)");
++	menuFile->Append(ID_FILE_TEST_HOME, "Open Home Page", "Demonstrates GoHome()");
+ 	menuFile->AppendSeparator();
+-	menuFile->Append(FILE_TEST_ACTIVEX, "Display a ActiveX control", "Demonstrates the Generic ActiveX Container");
++	menuFile->Append(ID_FILE_TEST_ACTIVEX, "Display a ActiveX control", "Demonstrates the Generic ActiveX Container");
+ 	menuFile->AppendSeparator();
+-    menuFile->Append(FILE_QUIT, "E&xit\tAlt-X", "Quit this program");
++	menuFile->Append(ID_FILE_QUIT, "E&xit\tAlt-X", "Quit this program");
+ 
+     // now append the freshly created menu to the menu bar...
+     wxMenuBar *menuBar = new wxMenuBar();

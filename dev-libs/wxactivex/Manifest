@@ -1,0 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 632c9c19c821046688c64a9c13080d54 wxactivex-1.0.ebuild 1118
+MD5 34a3c9a403196f569f63f0f608007f6e metadata.xml 163
+MD5 e345864b66127879d319fc393ac9d94f ChangeLog 465
+MD5 ed9cec161dd234cf4ba3205dd83fc601 files/digest-wxactivex-1.0 61
+MD5 d2cc92a8ac1a98f012e8b48b2269ca5c files/wxactivex-1.0-gentoo.patch 15131
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCi+9AHOCQyz1WCXYRApiQAJ9ryRH6UCCJCBx3J57tNEUoNiwn7wCfdtFH
+AxO58bg+QDr58lW/563MvNg=
+=XREZ
+-----END PGP SIGNATURE-----
