@@ -1,6 +1,14 @@
 # ChangeLog for app-shells/bash-completion
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/ChangeLog,v 1.118 2005/05/06 13:05:59 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/ChangeLog,v 1.119 2005/05/19 13:04:52 ka0ttic Exp $
+
+*bash-completion-20050121-r9 (19 May 2005)
+
+  19 May 2005; Aaron Walker <ka0ttic@gentoo.org>
+  files/20050121/02_all_cvs.diff, -bash-completion-20050121-r8.ebuild,
+  +bash-completion-20050121-r9.ebuild:
+  Revision bump; updated _cvs patch so that 'cvs add' completion ignores files
+  matching *~.
 
 *bash-completion-20050121-r8 (06 May 2005)
 
