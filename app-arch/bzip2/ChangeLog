@@ -1,6 +1,12 @@
 # ChangeLog for app-arch/bzip2
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/bzip2/ChangeLog,v 1.24 2005/05/14 17:36:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/bzip2/ChangeLog,v 1.25 2005/05/19 22:15:15 vapier Exp $
+
+*bzip2-1.0.3-r3 (19 May 2005)
+
+  19 May 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/bzip2-1.0.2-chmod.patch, +bzip2-1.0.3-r3.ebuild:
+  Add patch from Redhat to fix CAN-2005-0953.
 
 *bzip2-1.0.3-r2 (14 May 2005)
 
