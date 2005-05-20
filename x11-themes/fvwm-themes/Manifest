@@ -1,7 +1,17 @@
-MD5 7556f2b8197fbfe0227512f536224c92 ChangeLog 1029
-MD5 ec562f87a5a8ae1da43ad6c81d9b1bb7 fvwm-themes-0.6.2.ebuild 1107
-MD5 2bbd44ce1f5d6c1874a9e33d123485f4 fvwm-themes-0.7.0.ebuild 1119
-MD5 c3edb7a019e0e522dd05ba85af0f7e7d files/digest-fvwm-themes-0.6.2 70
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 fe2c4cb8d985d9f72a66ea022ec56466 fvwm-themes-0.6.2.ebuild 1108
+MD5 a58f3865a1ece0f8cbaf99e1ac9c9c3b fvwm-themes-0.7.0.ebuild 1122
+MD5 0f8b22b3edf9f74c9ebd2789a074de8f ChangeLog 1132
 MD5 fe26baf3e5e1b12866fe888f9b54cbc7 files/fvwm-themes-0.6.2-gentoo.patch 903
+MD5 c3edb7a019e0e522dd05ba85af0f7e7d files/digest-fvwm-themes-0.6.2 70
 MD5 bb635670857b6057a6a65ce5d2778a2a files/digest-fvwm-themes-0.7.0 70
 MD5 fe26baf3e5e1b12866fe888f9b54cbc7 files/fvwm-themes-0.7.0-gentoo.patch 903
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCjjnu06ebR+OMO78RAmDHAKCDF/dxeBc7G+TZZ4O4ntIkSAGwgwCcDO2B
+LzrzLbZXp39oMDuMiTSsC2k=
+=7G/w
+-----END PGP SIGNATURE-----
