@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/dvacm4
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvacm4/ChangeLog,v 1.9 2004/07/02 04:37:21 eradicator Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvacm4/ChangeLog,v 1.10 2005/05/20 12:41:34 ka0ttic Exp $
+
+*dvacm4-0.3.5-r1 (20 May 2005)
+
+  20 May 2005; Aaron Walker <ka0ttic@gentoo.org>
+  +files/dvacm4-0.3.5-fix-underquoted-m4.diff, +dvacm4-0.3.5-r1.ebuild:
+  Revision bump; added patch to fix underquoted m4 defs. Also install standard
+  docs.
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> dvacm4-0.3.5.ebuild:
   virtual/glibc -> virtual/libc
