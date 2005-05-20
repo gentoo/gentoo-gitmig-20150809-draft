@@ -1,4 +1,14 @@
-MD5 9013d6232196ce109dcdf8df4a952597 ChangeLog 512
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 31f28ef7513dcfcea99047d23f6e9c2d ChangeLog 709
 MD5 420df847a3db1c4969aff20243f656dd metadata.xml 165
-MD5 bbd101d13508a26de27f2409fbb8bd20 picasm-1.12b.ebuild 755
-MD5 bd464a395ef450ffa7f38667b4759d62 files/digest-picasm-1.12b 61
+MD5 f8de0ce5aa3d62e67eee977e30540eb8 picasm-1.12c.ebuild 829
+MD5 0487a156bb5d4f9c6ea4485752b95d7b files/digest-picasm-1.12c 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCjnd5mdTrptrqvGERAsHmAJ4wXwYi89NxyAzjAxmOH+d5V+uZSgCfQ+rN
+Fmxn0PjqHmgcVzedE2ZZmPY=
+=9zgj
+-----END PGP SIGNATURE-----
