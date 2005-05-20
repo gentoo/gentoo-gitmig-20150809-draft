@@ -1,19 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 5fd0fb969fe181169f3bacc8ea0238ec dvutil-0.13.13.ebuild 874
 MD5 36f32cf88135aa428b40685b955c8c3a dvutil-0.13.15.ebuild 748
-MD5 5cc601addede571a591fb39d7cb334bf dvutil-0.13.15-r1.ebuild 926
-MD5 efeadee290709d109369a4ab81d1755c ChangeLog 2860
+MD5 2c2eb43555a380b2c05d4eeedd277076 ChangeLog 3106
 MD5 f8d10f350e91f30316ea4e1bd1e76470 metadata.xml 254
+MD5 6ff89e398e2f94f517a945a5b4962a69 dvutil-0.13.15-r2.ebuild 995
 MD5 c811d8de8b8fdf0d0524c1e57e637129 files/digest-dvutil-0.13.13 66
 MD5 b9c081ae2386a2b75bf1b5835364233b files/digest-dvutil-0.13.15 66
-MD5 b9c081ae2386a2b75bf1b5835364233b files/digest-dvutil-0.13.15-r1 66
+MD5 b9c081ae2386a2b75bf1b5835364233b files/digest-dvutil-0.13.15-r2 66
 MD5 75609f1d5318b7d0a9e375ddbca118b3 files/0.13.13-gentoo-doc_distdir.patch 455
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCfNveEZCkKN40op4RAudFAJ4zdBLDytF/yOw/wscJQhQDz8LIDQCeP9fg
-RGgCz7O+iuR/rf2G2pZHkz8=
-=POkL
------END PGP SIGNATURE-----
+MD5 fe20149f0cdfcf848443da51c71bb4f0 files/dvutil-0.13.15-fix-underquoted-m4.diff 599
