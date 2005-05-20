@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 4e68bddb0f6588346283dd53d69f6d1f idesk-0.5.6.ebuild 1157
-MD5 90398865beecbce132a87e79870e04ca ChangeLog 3278
+MD5 a2ffe1fc4dccc7dfb847f75f348616f3 ChangeLog 3383
 MD5 cdb11033a3fa6525334cecf938961c07 metadata.xml 166
+MD5 1b1297c4fba1f1095b115a0faae24617 idesk-0.5.6.ebuild 1168
 MD5 8b29339fdf933c6dfac6f605f3b306e4 files/idesk-0.3.5-clickbox-and-singleclick.patch 6762
-MD5 5e31e5eb7d0cfc2bc90454a7f4354605 files/digest-idesk-0.5.6 62
-MD5 d6f779298131bfbc97f59b71dea6e5ce files/ideskrc05.5 7091
-MD5 936075c618affeca8533c3ecab323871 files/idesk.1 2485
-MD5 681d0e14514c589e16568398b9eeecd0 files/idesk05.1 4844
 MD5 7391b893cc28213bef73f7f929155698 files/ideskrc.5 2329
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCjiFUViELBEf1JB0RAlY1AJ9Mp/LWFMrsJZbWDX9dHPSBMurERwCfQ7cO
-VbnPvM99aA/WW2Y/QqlyWOo=
-=7vBD
------END PGP SIGNATURE-----
+MD5 936075c618affeca8533c3ecab323871 files/idesk.1 2485
+MD5 5e31e5eb7d0cfc2bc90454a7f4354605 files/digest-idesk-0.5.6 62
+MD5 681d0e14514c589e16568398b9eeecd0 files/idesk05.1 4844
+MD5 d6f779298131bfbc97f59b71dea6e5ce files/ideskrc05.5 7091
