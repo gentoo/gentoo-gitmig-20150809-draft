@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gpdf/gpdf-2.10.0.ebuild,v 1.2 2005/05/06 10:21:23 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gpdf/gpdf-2.10.0.ebuild,v 1.3 2005/05/20 16:03:44 azarah Exp $
 
 inherit gnome2 eutils
 
@@ -38,9 +38,11 @@ src_unpack() {
 	unpack ${A}
 
 	cd ${S}
-	# fix sec vuln (#69662)
+	# Fix sec vuln (#69662)
 	epatch ${FILESDIR}/${PN}-xpdf_goo_sizet.patch
-	# disable the tests, see bug #73882
+	# Fix building on amd64 with gcc4
+	epatch ${FILESDIR}/${P}-amd64-gcc4.patch
+	# Disable the tests, see bug #73882
 	sed -i -e "s:test-files::" Makefile.in
 }
 

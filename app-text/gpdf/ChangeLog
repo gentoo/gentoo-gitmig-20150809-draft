@@ -1,6 +1,10 @@
 # ChangeLog for app-text/gpdf
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gpdf/ChangeLog,v 1.84 2005/05/18 02:04:15 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gpdf/ChangeLog,v 1.85 2005/05/20 16:03:44 azarah Exp $
+
+  20 May 2005; Martin Schlemmer <azarah@gentoo.org>
+  +files/gpdf-2.10.0-amd64-gcc4.patch, gpdf-2.10.0.ebuild:
+  Fix building on amd64 with gcc4.
 
   18 May 2005; Jason Wever <weeve@gentoo.org> gpdf-2.8.3.ebuild:
   Stable on SPARC.

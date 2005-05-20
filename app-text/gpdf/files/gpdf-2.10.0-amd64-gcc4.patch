@@ -1,0 +1,11 @@
+--- gpdf-2.10.0/xpdf/gpdf-control.cc	2005-05-20 15:03:29.000000000 +0200
++++ gpdf-2.10.0.az/xpdf/gpdf-control.cc	2005-05-20 15:06:39.000000000 +0200
+@@ -213,7 +213,7 @@
+ 	g_return_if_fail (GPDF_IS_NON_NULL_CONTROL (control));
+ 	priv = control->priv;
+ 
+-	if ((to_id = (unsigned int)
++	if ((to_id = (unsigned long)
+ 	     g_object_get_data (G_OBJECT (control),
+ 				"status-timeout-id")) != 0) {
+ 		g_object_set_data (G_OBJECT (control),
