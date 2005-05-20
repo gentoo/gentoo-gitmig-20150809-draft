@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gwget/gwget-0.94.ebuild,v 1.1 2005/04/23 11:49:11 allanonjl Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gwget/gwget-0.94.ebuild,v 1.2 2005/05/20 19:04:32 allanonjl Exp $
 
 inherit eutils gnome2 libtool
 
@@ -36,7 +36,7 @@ USE_DESTDIR="1"
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	elibtoolize
+	libtoolize --copy --force
 	# Fix the Epiphany extension installation directory:
 	epatch ${FILESDIR}/gwget-0.94-epiphany-path-fix.patch
 }
