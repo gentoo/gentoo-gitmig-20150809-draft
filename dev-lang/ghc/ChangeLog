@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/ghc
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.60 2005/05/11 21:53:11 kosmikus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.61 2005/05/20 15:04:18 dcoutts Exp $
+
+  20 May 2005; <duncan@gentoo.org> ghc-6.2.2.ebuild:
+  Add ~sparc to KEYWORDS and disable GHCi support on sparc since it does not
+  work reliably.
 
   11 May 2005; Andres Loeh <kosmikus@gentoo.org> ghc-6.4.ebuild:
   Removing ~ppc64 from ghc-6.4 again (hopefully temporarily), see comment #24

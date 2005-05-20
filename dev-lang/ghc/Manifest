@@ -4,9 +4,9 @@ Hash: SHA1
 MD5 2852eaf66fdd3a9ae5fcf1082bb014b3 ghc-6.2.1-r1.ebuild 5794
 MD5 ea84406fb33d27987c0f7d51ece23975 ghc-6.2.ebuild 5007
 MD5 6b0575f665b30bd942f60a152f52dca8 ghc-6.0.1.ebuild 4709
-MD5 6a2a8ce6899d74a7efc2c63ef4436ed7 ghc-6.2.2.ebuild 5473
+MD5 de3ccf803d12ea856d0699656c83910d ghc-6.2.2.ebuild 5500
 MD5 234fd5f2f5fd43bf232991c126106be4 ghc-6.4.ebuild 6093
-MD5 fde23296fddaee9b6de73957852c3afc ChangeLog 11330
+MD5 dc3fbd0dd8b83c728645c8669f38e35a ChangeLog 11477
 MD5 a769ecfcd1cdd2d40986627df7dfb249 metadata.xml 224
 MD5 80f9ac24762d1342df58d731a756956d ghc-6.2-r1.ebuild 5190
 MD5 558c6b9e9b0e15185b69cdfe241dad9a files/ghc-updater 8775
@@ -27,7 +27,7 @@ MD5 9c15b50bf0b73b7d70a06fd47510a3ef files/ghc-6.0.1.haddock.patch 380
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCgn86OKSBj1ObwosRAmTRAJ47w+YsnfxqKGwqshUwG5rHn3MEjQCfSjXw
-z67O2/Tg6yynK7yp2Nwmepg=
-=4E+d
+iD8DBQFCjfzukyZuKN4EQ6YRAjxEAJ0VF3Fn9eGKUAgNffLRsF5ksj95HgCfc05F
+ZkUV4F44OJ7Gda67Fgr+1mQ=
+=hQWG
 -----END PGP SIGNATURE-----
