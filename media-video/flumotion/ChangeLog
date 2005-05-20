@@ -1,6 +1,12 @@
 # ChangeLog for media-video/flumotion
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/flumotion/ChangeLog,v 1.4 2005/05/10 15:25:28 zaheerm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/flumotion/ChangeLog,v 1.5 2005/05/20 14:03:54 zaheerm Exp $
+
+*flumotion-0.1.8 (20 May 2005)
+
+  20 May 2005; Zaheer Abbas Merali <zaheerm@gentoo.org>
+  +files/flumotion-init-0.1.8, +flumotion-0.1.8.ebuild:
+  New version
 
   10 May 2005; Zaheer Abbas Merali <zaheerm@gentoo.org>
   flumotion-0.1.6.ebuild:
