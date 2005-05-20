@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pam-login/pam-login-3.17.ebuild,v 1.2 2005/02/25 15:07:02 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pam-login/pam-login-3.17.ebuild,v 1.3 2005/05/20 13:07:18 flameeyes Exp $
 
-inherit gnuconfig eutils
+inherit gnuconfig eutils pam
 
 # Do we want to backup an old login.defs, and forcefully
 # install a new version?
