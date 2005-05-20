@@ -1,6 +1,10 @@
 # ChangeLog for app-text/info2html
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/info2html/ChangeLog,v 1.10 2005/05/16 15:33:08 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/info2html/ChangeLog,v 1.11 2005/05/20 09:43:00 hansmi Exp $
+
+  20 May 2005; Michael Hanselmann <hansmi@gentoo.org>
+  info2html-1.4-r1.ebuild:
+  Stable on hppa.
 
   16 May 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   info2html-1.4-r1.ebuild:

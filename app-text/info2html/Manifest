@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 52a43405b7a5502c76e21d8aa38bab02 ChangeLog 1275
-MD5 98979dcc8f89c84051f9957afd8d481a info2html-1.4.ebuild 947
+MD5 eafa1ecfc60df568a5b4f1b26bf2341e info2html-1.4-r1.ebuild 992
 MD5 d992d28bec4a3bfd72b441145091a58e metadata.xml 244
-MD5 792116321e88e2c18170a85544ec378e info2html-1.4-r1.ebuild 995
+MD5 3b67e938732bb20e8ed1747d6fb461b1 ChangeLog 1373
+MD5 98979dcc8f89c84051f9957afd8d481a info2html-1.4.ebuild 947
 MD5 4b9f64ddf8e7ef3c725fc1f785c69456 files/digest-info2html-1.4 60
+MD5 cc6a82ee8361bbdc4e94d4f39feb5896 files/info2html-xss.patch 1730
 MD5 495fd408850958212ae70b35f3b8129b files/info2html-gentoo.patch 1767
 MD5 4b9f64ddf8e7ef3c725fc1f785c69456 files/digest-info2html-1.4-r1 60
-MD5 cc6a82ee8361bbdc4e94d4f39feb5896 files/info2html-xss.patch 1730
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFCiL1FKRy60XGEcJIRAivPAJ0Qdp88jTT/ndWsHgNo1oaqdmIi8wCfU2jb
-1r4nsyRhZhvv2v9Cgrlt/BI=
-=LBMl
------END PGP SIGNATURE-----
