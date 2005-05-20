@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/eel
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/eel/ChangeLog,v 1.99 2005/05/06 10:29:58 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/eel/ChangeLog,v 1.100 2005/05/20 14:49:30 foser Exp $
+
+  20 May 2005; foser <foser@gentoo.org> eel-2.10.{0,1}.ebuild :
+  Fix gtk+ dep (#92013)
 
   06 May 2005; Markus Rothe <corsair@gentoo.org> eel-2.10.0.ebuild,
   eel-2.10.1.ebuild:
