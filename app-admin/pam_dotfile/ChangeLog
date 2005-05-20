@@ -1,6 +1,14 @@
 # ChangeLog for app-admin/pam_dotfile
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/pam_dotfile/ChangeLog,v 1.8 2005/03/15 14:29:35 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/pam_dotfile/ChangeLog,v 1.9 2005/05/20 14:36:03 flameeyes Exp $
+
+*pam_dotfile-0.7-r1 (20 May 2005)
+
+  20 May 2005; Diego Pettenò <flameeyes@gentoo.org>
+  +pam_dotfile-0.7-r1.ebuild:
+  New revision, with patches to work on OpenPAM (Gentoo/FreeBSD) and to
+  compile cleanly on Linux. Also fixed setXid lazy bindings. Depends on
+  virtual/pam, and is get_libdir friendly.
 
   15 Mar 2005; Seemant Kulleen <seemant@gentoo.org> pam_dotfile-0.7.ebuild:
   Dependency update: net-www/lynx -> www-client/lynx.
