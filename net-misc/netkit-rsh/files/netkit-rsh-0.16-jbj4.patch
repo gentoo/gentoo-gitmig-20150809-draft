@@ -1,0 +1,14 @@
+--- netkit-rsh-0.16/rshd/Makefile.jbj4	Fri Jan 28 12:17:42 2000
++++ netkit-rsh-0.16/rshd/Makefile	Fri Jan 28 12:17:56 2000
+@@ -6,9 +6,8 @@
+ OBJS = rshd.o
+ 
+ ifeq ($(USE_PAM),1)
+-# ?
+-CFLAGS += # -DUSE_PAM
+-LIBS += -ldl # -lpam -lpam_misc
++CFLAGS += -DUSE_PAM
++LIBS += -ldl -lpam -lpam_misc
+ endif
+ 
+ rshd: $(OBJS)

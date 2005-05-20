@@ -1,0 +1,22 @@
+--- netkit-rsh-0.17/rcp/rcp.c.checkdir	2005-01-28 16:20:38.280031064 +0100
++++ netkit-rsh-0.17/rcp/rcp.c	2005-01-28 16:25:56.479657368 +0100
+@@ -716,6 +716,10 @@
+ 			size = size * 10 + (*cp++ - '0');
+ 		if (*cp++ != ' ')
+ 			SCREWUP("size not delimited");
++		if ((strchr(cp, '/') != NULL) || (strcmp(cp, "..") == 0)) {
++			error("rcp: unexpected filename: %s", cp);
++			exit(1);
++		}
+ 		if (targisdir) {
+ 			static char *namebuf;
+ 			static int cursize;
+@@ -734,6 +738,8 @@
+ 			np = targ;
+ 		exists = stat(np, &stb) == 0;
+ 		if (buf[0] == 'D') {
++			if (!iamrecursive)
++				SCREWUP("received directory without -r");
+ 			if (exists) {
+ 				if ((stb.st_mode&S_IFMT) != S_IFDIR) {
+ 					errno = ENOTDIR;

@@ -1,0 +1,10 @@
+--- netkit-rsh-0.16/rlogin/rlogin.c.rsh	Fri Mar  3 08:59:37 2000
++++ netkit-rsh-0.16/rlogin/rlogin.c	Fri Mar  3 08:59:45 2000
+@@ -194,6 +194,7 @@
+ 		p = argv[0];
+ 
+ 	if (strcmp(p, "rlogin"))
++	if (strcmp(p, "rsh"))
+ 		host = p;
+ 
+ 	/* handle "rlogin host flags" */

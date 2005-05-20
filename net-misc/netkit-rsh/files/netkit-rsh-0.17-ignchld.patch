@@ -1,0 +1,22 @@
+--- netkit-rsh-0.17/rlogind/rlogind.c.ignchld	2004-12-06 13:31:23.263630216 +0100
++++ netkit-rsh-0.17/rlogind/rlogind.c	2004-12-06 13:31:43.382571672 +0100
+@@ -440,7 +440,7 @@
+     ioctl(master, TIOCPKT, &on);
+     signal(SIGCHLD, cleanup);
+     protocol(netfd, master);
+-    signal(SIGCHLD, SIG_IGN);
++    signal(SIGCHLD, SIG_DFL);
+     cleanup(0);
+ }
+ 
+--- netkit-rsh-0.17/rlogin/rlogin.c.ignchld	2004-12-06 13:30:37.110646536 +0100
++++ netkit-rsh-0.17/rlogin/rlogin.c	2004-12-06 13:31:00.224132752 +0100
+@@ -523,7 +523,7 @@
+ stop(char cmdc)
+ {
+ 	mode(0);
+-	signal(SIGCHLD, SIG_IGN);
++	signal(SIGCHLD, SIG_DFL);
+ 	kill(cmdc == defsusp ? 0 : getpid(), SIGTSTP);
+ 	signal(SIGCHLD, catch_child);
+ 	mode(1);

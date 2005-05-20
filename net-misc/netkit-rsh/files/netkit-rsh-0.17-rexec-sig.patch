@@ -1,0 +1,17 @@
+--- netkit-rsh-0.17/rexec/rexec.c.rexec-sig	2004-11-17 16:51:37.000000000 +0100
++++ netkit-rsh-0.17/rexec/rexec.c	2004-11-17 17:17:12.844628352 +0100
+@@ -434,10 +434,10 @@
+     break;
+   default:
+     if ( sigaction(sig, NULL, &action) < 0 )
+-    {
+-      perror(progname);
+-      exit(1);
+-    }
++	    /* in the signal(7) you can found "...except SIGKILL and SIGSTOP",
++	     * but we detect problems with more signals...
++	     */
++	    return;
+     if ( action.sa_handler != SIG_IGN )
+     {
+       action.sa_handler = handler;

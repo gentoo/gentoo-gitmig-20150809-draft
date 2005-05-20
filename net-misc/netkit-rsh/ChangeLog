@@ -1,6 +1,28 @@
 # ChangeLog for net-misc/netkit-rsh
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-rsh/ChangeLog,v 1.17 2004/12/08 20:09:05 hansmi Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-rsh/ChangeLog,v 1.18 2005/05/20 03:04:31 vapier Exp $
+
+*netkit-rsh-0.17-r6 (20 May 2005)
+
+  20 May 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/netkit-rsh-0.10-stdarg.patch, +files/netkit-rsh-0.16-jbj.patch,
+  +files/netkit-rsh-0.16-jbj4.patch, +files/netkit-rsh-0.16-nokrb.patch,
+  +files/netkit-rsh-0.16-prompt.patch,
+  +files/netkit-rsh-0.16-rlogin=rsh.patch,
+  +files/netkit-rsh-0.17-chdir.patch, +files/netkit-rsh-0.17-checkdir.patch,
+  +files/netkit-rsh-0.17-errno.patch, +files/netkit-rsh-0.17-ignchld.patch,
+  +files/netkit-rsh-0.17-lfs.patch, +files/netkit-rsh-0.17-nohost.patch,
+  +files/netkit-rsh-0.17-nohostcheck.patch,
+  +files/netkit-rsh-0.17-pam-nologin.patch,
+  +files/netkit-rsh-0.17-pam-sess.patch,
+  +files/netkit-rsh-0.17-pre20000412-jbj5.patch,
+  +files/netkit-rsh-0.17-rexec.patch,
+  +files/netkit-rsh-0.17-rexec-netrc.patch,
+  +files/netkit-rsh-0.17-rexec-sig.patch,
+  +files/netkit-rsh-0.17-sectty.patch, +files/netkit-rsh-0.17-strip.patch,
+  +files/netkit-rsh-0.17-userandhost.patch, +files/redhat.spec,
+  +netkit-rsh-0.17-r6.ebuild:
+  Import patches from Redhat to resolve #93215.
 
   08 Dec 2004; Michael Hanselmann <hansmi@gentoo.org>
   netkit-rsh-0.17-r5.ebuild:

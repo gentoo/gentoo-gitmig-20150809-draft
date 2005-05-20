@@ -1,0 +1,33 @@
+--- netkit-rsh-0.16/rcp/Makefile.jbj	Tue Dec 21 16:32:51 1999
++++ netkit-rsh-0.16/rcp/Makefile	Tue Dec 21 16:33:16 1999
+@@ -7,7 +7,7 @@
+ 	$(CC) $(LDFLAGS) $^ $(LIBS) -o $@
+ 
+ install: rcp
+-	install -s -o root -m$(SUIDMODE) rcp $(INSTALLROOT)$(BINDIR)
++	install -s rcp $(INSTALLROOT)$(BINDIR)
+ 	install -m$(MANMODE) rcp.1 $(INSTALLROOT)$(MANDIR)/man1
+ 
+ clean:
+--- netkit-rsh-0.16/rlogin/Makefile.jbj	Tue Dec 21 16:33:57 1999
++++ netkit-rsh-0.16/rlogin/Makefile	Tue Dec 21 16:34:08 1999
+@@ -10,7 +10,7 @@
+ 	$(CC) $(LDFLAGS) $^ $(LIBS) -o $@
+ 
+ install: $(PROG)
+-	install -s -o root -m$(SUIDMODE) $(PROG) $(INSTALLROOT)$(BINDIR)
++	install -s $(PROG) $(INSTALLROOT)$(BINDIR)
+ 	install -m $(MANMODE) $(PROG).1 $(INSTALLROOT)$(MANDIR)/man1
+ 
+ clean:
+--- netkit-rsh-0.16/rsh/Makefile.jbj	Tue Dec 21 16:33:28 1999
++++ netkit-rsh-0.16/rsh/Makefile	Tue Dec 21 16:33:44 1999
+@@ -9,7 +9,7 @@
+ 	$(CC) $(LDFLAGS) $^ $(LIBS) -o $@
+ 
+ install: rsh
+-	install -s -o root -m$(SUIDMODE) rsh $(INSTALLROOT)$(BINDIR)
++	install -s rsh $(INSTALLROOT)$(BINDIR)
+ 	install -m$(MANMODE) rsh.1 $(INSTALLROOT)$(MANDIR)/man1
+ 
+ clean:
