@@ -5,5 +5,5 @@ MD5 d41101bdf9cd680f4fe41b7193c0f053 cryptsetup-0.1-r1.ebuild 1287
 MD5 959c303c3bfeab6c12e28ae4e16400b3 files/digest-cryptsetup-0.1 67
 MD5 0f3b17ce04a644eefd9272f05dd78d01 files/cryptfs.confd 1138
 MD5 959c303c3bfeab6c12e28ae4e16400b3 files/digest-cryptsetup-0.1-r1 67
-MD5 5ac4e850a96f594041c85ebb05a1b4a9 files/dm-crypt-start.sh 3937
+MD5 9c063c64ead85a012d4cd3a719c5fbb7 files/dm-crypt-start.sh 3936
 MD5 8619b3f74d4d362bab9f430b63243a74 files/dm-crypt-stop.sh 1290

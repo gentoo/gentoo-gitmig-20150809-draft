@@ -1,7 +1,7 @@
 # /lib/rcscripts/addons/dm-crypt-start.sh
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/files/dm-crypt-start.sh,v 1.3 2005/05/15 00:44:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/files/dm-crypt-start.sh,v 1.4 2005/05/20 04:03:12 vapier Exp $
 
 # Setup mappings for an individual mount/swap
 #
@@ -27,7 +27,7 @@ dm-crypt-execute-checkfs() {
 		return
 	fi
 
-	if /bin/cryptsetup status ${target} | egrep -q '\<active:'; then
+	if /bin/cryptsetup status ${target} | egrep -q '\<active:' ; then
 		einfo "dm-crypt mapping ${target} is already configured"
 		return
 	fi
@@ -46,9 +46,7 @@ dm-crypt-execute-checkfs() {
 				if [[ -z ${keystring} ]] ; then
 					ret=5
 				else
-					/bin/cryptsetup ${options} create ${target} ${source} << EOF
-${keystring}
-EOF
+					echo ${keystring} | /bin/cryptsetup ${options} create ${target} ${source}
 					ret=$?
 				fi
 			done
@@ -83,7 +81,7 @@ dm-crypt-execute-localmount() {
 		return
 	fi
 
-	if ! /bin/cryptsetup status ${target} | egrep -q '\<active:'; then
+	if ! /bin/cryptsetup status ${target} | egrep -q '\<active:' ; then
 		ewarn "Skipping unmapped target ${target}"
 		cryptfs_status=1
 		return
@@ -108,7 +106,7 @@ local gpg_options key loop_file mount mountline options pre_mount post_mount sou
 if [[ -f /etc/conf.d/cryptfs ]] && [[ -x /bin/cryptsetup ]] ; then
 	ebegin "Setting up dm-crypt mappings"
 
-	while read mountline; do
+	while read mountline ; do
 		# skip comments and blank lines
 		[[ ${mountline}\# == \#* ]] && continue
 
