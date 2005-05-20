@@ -1,6 +1,12 @@
 # ChangeLog for net-irc/xchat-xsys
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-xsys/ChangeLog,v 1.12 2005/05/20 20:38:40 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-xsys/ChangeLog,v 1.13 2005/05/20 22:44:43 chainsaw Exp $
+
+*xchat-xsys-2.0.0-r1 (20 May 2005)
+
+  20 May 2005; Tony Vroon <chainsaw@gentoo.org> -xchat-xsys-2.0.0.ebuild,
+  +xchat-xsys-2.0.0-r1.ebuild:
+  Honour user CFLAGS, get pci.ids path right.
 
 *xchat-xsys-2.0.0 (20 May 2005)
 
