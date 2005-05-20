@@ -1,5 +1,5 @@
 # /lib/rcscripts/addons/lvm2-stop.sh
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/files/lvm2-stop.sh,v 1.2 2005/02/23 03:35:18 rocket Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/files/lvm2-stop.sh,v 1.3 2005/05/20 04:30:02 vapier Exp $
 
 # Stop LVM2
 
@@ -16,8 +16,8 @@ then
 	# functionality as described in this forum thread
 	#https://www.redhat.com/archives/linux-lvm/2001-May/msg00523.html
 
-	LOGICAL_VOLUMES=`lvdisplay |grep "LV Name"|awk '{print $3}'|sort|xargs echo`
-	VOLUME_GROUPS=`vgdisplay |grep "VG Name"|awk '{print $3}'|sort|xargs echo`
+	LOGICAL_VOLUMES=`lvdisplay |grep "LV Name"|awk '{print $3}'|sort`
+	VOLUME_GROUPS=`vgdisplay |grep "VG Name"|awk '{print $3}'|sort`
 	for x in ${LOGICAL_VOLUMES}
 	do
 		LV_IS_ACTIVE=`lvdisplay ${x}|grep "# open"|awk '{print $3}'`
@@ -31,7 +31,7 @@ then
 
 	for x in ${VOLUME_GROUPS}
 	do
-		VG_HAS_ACTIVE_LV=`vgdisplay ${x}|grep "Open LV"|awk '{print $3}'|xargs echo`
+		VG_HAS_ACTIVE_LV=`vgdisplay ${x}|grep "Open LV"|awk '{print $3}'`
 		if [ "${VG_HAS_ACTIVE_LV}" = 0 ]
 		then
 			ebegin "  Shutting Down volume group: ${x} "
