@@ -8,5 +8,5 @@ MD5 a60628a7ac701c252155b3f5d32004c4 files/digest-device-mapper-1.00.21 70
 MD5 5f73ee137a6bfb893f1ec3a691dbf614 files/digest-device-mapper-1.01.00 70
 MD5 3722791187466d3005f5b7f129c3ed7a files/digest-device-mapper-1.00.17-r1 70
 MD5 b5dd92354fb75caa4956a92d5aa2e0ea files/digest-device-mapper-1.00.19-r2 70
-MD5 4da8149fc2d10e2e95f680184c3a08d8 files/dm-start.sh 1941
+MD5 ab82e97df1e8ce801b65daa33c8cbfb0 files/dm-start.sh 1935
 MD5 aaf96e8a4fd3711078f75fe3fac2072b files/dmtab 426

@@ -1,15 +1,15 @@
 # /lib/rcscripts/addons/dm-start.sh:  Setup DM volumes at boot
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/device-mapper/files/dm-start.sh,v 1.1 2005/03/01 22:45:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/device-mapper/files/dm-start.sh,v 1.2 2005/05/20 03:54:02 vapier Exp $
 
 # char **get_new_dm_volumes(void)
 #
-#   Return dmsetup commands to setup volumes 
+#   Return dmsetup commands to setup volumes
 get_new_dm_volumes() {
 	local volume params
-	
+
 	# Filter comments and blank lines
 	grep -v -e '^[[:space:]]*\(#\|$\)' /etc/dmtab | \
-	while read volume params; do
+	while read volume params ; do
 		# If it exists, skip it
 		dmvolume_exists "${volume%:}" && continue
 		# Assemble the command to run to create volume
@@ -26,14 +26,15 @@ dmvolume_exists() {
 	local x line volume=$1
 
 	[[ -z ${volume} ]] && return 1
-	
-	while read line; do
-		for x in ${line}; do
+
+	/sbin/dmsetup ls 2>/dev/null | \
+	while read line ; do
+		for x in ${line} ; do
 			[[ ${x} == "${volume}" ]] && return 0
 			# We only want to check the volume name
 			break
 		done
-	done <<<"$(/sbin/dmsetup ls 2>/dev/null)"
+	done
 
 	return 1
 }
@@ -43,9 +44,9 @@ dmvolume_exists() {
 #   Return true if the volume exists in DM table, but is empty/non-valid
 is_empty_dm_volume() {
 	local table volume=$1
-	
+
 	table=$(/sbin/dmsetup table 2>/dev/null | grep -e "^${volume}:")
-	
+
 	# dmsetup seems to print an space after the colon for the moment
 	[[ -n ${table} && -z ${table/${volume}:*} ]] && return 0
 
@@ -54,17 +55,18 @@ is_empty_dm_volume() {
 
 local x volume
 
-if [[ -x /sbin/dmsetup && -c /dev/mapper/control && -f /etc/dmtab ]]; then
+if [[ -x /sbin/dmsetup && -c /dev/mapper/control && -f /etc/dmtab ]] ; then
 	[[ -n $(get_new_dm_volumes) ]] && \
 		einfo " Setting up device-mapper volumes:"
 
-	while read x; do
+	get_new_dm_volumes | \
+	while read x ; do
 		[[ -n ${x} ]] || continue
 
 		volume="${x##* }"
 
 		ebegin "  Creating volume: ${volume}"
-		if ! eval ${x} &>/dev/null; then
+		if ! eval ${x} &>/dev/null ; then
 			eend 1 "  Error creating volume: ${volume}"
 			# dmsetup still adds an empty volume in some cases,
 			#  so lets remove it
@@ -73,7 +75,7 @@ if [[ -x /sbin/dmsetup && -c /dev/mapper/control && -f /etc/dmtab ]]; then
 		else
 			eend 0
 		fi
-	done <<< "$(get_new_dm_volumes)"
+	done
 fi
 
 
