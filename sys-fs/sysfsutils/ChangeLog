@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/sysfsutils
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/sysfsutils/ChangeLog,v 1.16 2005/04/01 17:23:45 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/sysfsutils/ChangeLog,v 1.17 2005/05/20 12:53:28 brix Exp $
+
+*sysfsutils-1.2.0-r1 (20 May 2005)
+
+  20 May 2005; <brix@gentoo.org>
+  +files/sysfsutils-1.2.0-write-attribute.patch,
+  +sysfsutils-1.2.0-r1.ebuild:
+  Added write_attribute() patch fixing bug #84228.
 
   01 Apr 2005; Aron Griffis <agriffis@gentoo.org> sysfsutils-1.2.0.ebuild:
   stable on ia64
