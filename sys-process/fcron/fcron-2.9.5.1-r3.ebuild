@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/fcron/fcron-2.9.5.1-r3.ebuild,v 1.2 2005/03/16 10:51:29 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/fcron/fcron-2.9.5.1-r3.ebuild,v 1.3 2005/05/20 13:10:17 flameeyes Exp $
 
-inherit cron
+inherit cron pam
 
 DESCRIPTION="A command scheduler with extended capabilities over cron and anacron"
 HOMEPAGE="http://fcron.free.fr/"
