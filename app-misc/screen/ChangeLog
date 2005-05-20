@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/screen
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/ChangeLog,v 1.84 2005/05/14 22:08:38 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/ChangeLog,v 1.85 2005/05/20 13:18:27 swegener Exp $
+
+  20 May 2005; Sven Wegener <swegener@gentoo.org> -files/screen.pam,
+  screen-4.0.2-r1.ebuild, screen-4.0.2-r3.ebuild:
+  Changed to use pam.eclass and pamd_mimic_system.
 
 *screen-4.0.2-r3 (14 May 2005)
 

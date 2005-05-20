@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/screen-4.0.2-r3.ebuild,v 1.1 2005/05/14 22:08:38 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/screen-4.0.2-r3.ebuild,v 1.2 2005/05/20 13:18:27 swegener Exp $
 
-inherit eutils flag-o-matic toolchain-funcs
+inherit eutils flag-o-matic toolchain-funcs pam
 
 DESCRIPTION="Screen is a full-screen window manager that multiplexes a physical terminal between several processes"
 HOMEPAGE="http://www.gnu.org/software/screen/"
@@ -97,7 +97,7 @@ src_install() {
 	insinto /etc
 	doins "${FILESDIR}"/screenrc || die "doins failed"
 
-	newpamd "${FILESDIR}"/screen.pam screen || die "newpamd failed"
+	pamd_mimic_system screen auth || die "pamd_mimic_system failed"
 
 	dodoc \
 		README ChangeLog INSTALL TODO NEWS* patchlevel.h \

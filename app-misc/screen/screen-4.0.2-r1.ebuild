@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/screen-4.0.2-r1.ebuild,v 1.2 2005/01/01 15:22:58 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/screen-4.0.2-r1.ebuild,v 1.3 2005/05/20 13:18:27 swegener Exp $
 
-inherit eutils flag-o-matic
+inherit eutils flag-o-matic pam
 
 DESCRIPTION="Screen is a full-screen window manager that multiplexes a physical terminal between several processes"
 HOMEPAGE="http://www.gnu.org/software/screen/"
@@ -20,21 +20,22 @@ DEPEND="${RDEPEND}
 	>=sys-devel/autoconf-2.58"
 
 src_unpack() {
-	unpack ${A} && cd ${S} || die
+	unpack ${A}
+	cd "${S}"
 
 	# Bug 34599: integer overflow in 4.0.1  
 	# (Nov 29 2003 -solar)
-	epatch ${FILESDIR}/screen-4.0.1-int-overflow-fix.patch
+	epatch "${FILESDIR}"/screen-4.0.1-int-overflow-fix.patch
 
 	# Bug 31070: configure problem which affects alpha  
 	# (13 Jan 2004 agriffis)
-	epatch ${FILESDIR}/screen-4.0.1-vsprintf.patch
+	epatch "${FILESDIR}"/screen-4.0.1-vsprintf.patch
 
 	# uclibc doesnt have sys/stropts.h
-	use uclibc && epatch ${FILESDIR}/${PV}-no-pty.patch
+	use uclibc && epatch "${FILESDIR}"/${PV}-no-pty.patch
 
 	# Don't use utempter even if it is found on the system
-	epatch ${FILESDIR}/${PV}-no-utempter.patch
+	epatch "${FILESDIR}"/${PV}-no-utempter.patch
 
 	# Fix manpage.
 	sed -i \
@@ -51,7 +52,7 @@ src_unpack() {
 }
 
 src_compile() {
-	addpredict "`tty`"
+	addpredict "$(tty)"
 	addpredict "${SSH_TTY}"
 
 	# check config.h for other settings such as the
@@ -88,12 +89,9 @@ src_install() {
 	insinto /usr/share/screen/utf8encodings
 	doins utf8encodings/?? || die "doins failed"
 	insinto /etc
-	doins ${FILESDIR}/screenrc || die "doins failed"
+	doins "${FILESDIR}"/screenrc || die "doins failed"
 
-	use pam && {
-		insinto /etc/pam.d
-		newins ${FILESDIR}/screen.pam.system-auth screen || die "newins failed"
-	}
+	newpamd "${FILESDIR}"/screen.pam.system-auth screen || die "newpamd failed"
 
 	dodoc \
 		README ChangeLog INSTALL TODO NEWS* patchlevel.h \
@@ -105,7 +103,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	chmod 0775 ${ROOT}/var/run/screen
+	chmod 0775 "${ROOT}"/var/run/screen
 
 	einfo "Some dangerous key bindings have been removed or changed to more safe values."
 	einfo "For more info, please check /etc/screenrc"
