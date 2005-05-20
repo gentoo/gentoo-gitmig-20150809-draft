@@ -1,4 +1,14 @@
-MD5 ed8f20178e60951218039387d64600b7 prefuse-20050114_alpha.ebuild 1165
-MD5 07d20e08324edb5e0371b81e5b26d20e ChangeLog 384
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 635dd50b35948adb651ed7426cc9f962 prefuse-20050114_alpha.ebuild 1143
+MD5 8736af33be51f43cebfde236b2a992bd ChangeLog 496
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
-MD5 a1264a5266c67b5aaa819c5a4d576151 files/digest-prefuse-20050114_alpha 72
+MD5 0cabc79dccb4e7a66504aa751ca0c9ae files/digest-prefuse-20050114_alpha 71
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCjjS406ebR+OMO78RAqt9AJ9Z7TQs7Bs2fJAdtnitx+AUnNxD3wCfcg5i
+tvA3DB0FlhE1wYeth4Dyum4=
+=Omiu
+-----END PGP SIGNATURE-----

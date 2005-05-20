@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/prefuse/prefuse-20050114_alpha.ebuild,v 1.1 2005/01/21 21:07:11 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/prefuse/prefuse-20050114_alpha.ebuild,v 1.2 2005/05/20 19:03:57 luckyduck Exp $
 
 inherit java-pkg
 
@@ -9,7 +9,7 @@ SRC_URI="mirror://sourceforge/prefuse/${PN}-alpha-${PV/_alpha/}.zip"
 HOMEPAGE="http://prefuse.sourceforge.net/"
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="x86 amd64"
 IUSE="doc jikes"
 DEPEND=">=virtual/jdk-1.4
 	jikes? ( >=dev-java/jikes-1.21 )
@@ -39,7 +39,7 @@ src_compile() {
 src_install() {
 	java-pkg_dojar build/*.jar
 
-	dodoc license-prefuse.txt readme.txt
+	dodoc readme.txt
 	if use doc; then
 		java-pkg_dohtml -r doc/api
 	fi
