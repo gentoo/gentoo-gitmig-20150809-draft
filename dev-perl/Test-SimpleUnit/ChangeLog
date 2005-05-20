@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Test-SimpleUnit
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-SimpleUnit/ChangeLog,v 1.3 2005/04/29 14:27:11 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-SimpleUnit/ChangeLog,v 1.4 2005/05/20 21:47:10 mcummings Exp $
+
+  20 May 2005; Michael Cummings <mcummings@gentoo.org>
+  Test-SimpleUnit-1.21.ebuild:
+  Keywording ~sparc
 
   29 Apr 2005; Michael Cummings <mcummings@gentoo.org>
   Test-SimpleUnit-1.21.ebuild:
