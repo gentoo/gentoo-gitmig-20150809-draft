@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cdparanoia/cdparanoia-3.9.8-r2.ebuild,v 1.7 2005/05/09 13:19:57 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cdparanoia/cdparanoia-3.9.8-r2.ebuild,v 1.8 2005/05/20 19:57:56 killerfox Exp $
 
 IUSE=""
 
@@ -15,7 +15,7 @@ SRC_URI="http://www.xiph.org/paranoia/download/${MY_P}.src.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ~hppa ia64 ~mips ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 hppa ia64 ~mips ppc ppc64 sparc x86"
 
 DEPEND="virtual/libc"
 
