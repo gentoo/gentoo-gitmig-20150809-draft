@@ -1,16 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 409509e5312a334bb459709268d2e524 xchat-xsys-1.9.3-r1.ebuild 1005
-MD5 1d36481bcbdeaed6e0951842fdf0147b ChangeLog 2433
 MD5 42cef2da59c81f792584c3f9048a1930 metadata.xml 250
+MD5 1151e200d4b1ddfd8e83f5a9e1f7daa0 ChangeLog 2587
+MD5 409509e5312a334bb459709268d2e524 xchat-xsys-1.9.3-r1.ebuild 1005
+MD5 d5ef4f317066000fabcb1b34299f0881 xchat-xsys-2.0.0.ebuild 855
+MD5 d741c852e1ee3fcc0d4fbc5ba8025234 files/digest-xchat-xsys-2.0.0 62
 MD5 6a0d14cce311c0075599544fd3a107c1 files/digest-xchat-xsys-1.9.3-r1 62
-MD5 c0f1338214a6804b08666fa5c5a05bce files/1.9.3-sysfs-instead-of-lspci-2.patch 3712
 MD5 43e7dc494b9615bbc75b6444664d8ffd files/1.9.3-ppc-support.patch 1528
+MD5 c0f1338214a6804b08666fa5c5a05bce files/1.9.3-sysfs-instead-of-lspci-2.patch 3712
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFCiMJvI1lqEGTUzyQRAsUtAJ9JJIsPfRrfxHNjk1HQQflQcguNoQCeLhrw
-N92hBVFiGxhzZ9jiqjKX/j4=
-=UrSV
+iD8DBQFCjkrTp5vW4rUFj5oRAt+uAJwL8Hz4PSRSrDBKF/p0FHJyPQARDgCfdR3e
+TDQNbtM6+/5riiP6AfnfmY8=
+=ZqVP
 -----END PGP SIGNATURE-----
