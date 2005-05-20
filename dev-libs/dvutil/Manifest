@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 5fd0fb969fe181169f3bacc8ea0238ec dvutil-0.13.13.ebuild 874
 MD5 36f32cf88135aa428b40685b955c8c3a dvutil-0.13.15.ebuild 748
 MD5 7b61baa2ba99a684ed837d763b3279f1 ChangeLog 3106
@@ -8,3 +11,10 @@ MD5 b9c081ae2386a2b75bf1b5835364233b files/digest-dvutil-0.13.15 66
 MD5 b9c081ae2386a2b75bf1b5835364233b files/digest-dvutil-0.13.15-r2 66
 MD5 75609f1d5318b7d0a9e375ddbca118b3 files/0.13.13-gentoo-doc_distdir.patch 455
 MD5 fe20149f0cdfcf848443da51c71bb4f0 files/dvutil-0.13.15-fix-underquoted-m4.diff 599
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCjd8iEZCkKN40op4RAjDrAJ9Eul5bTYEGkHXJLY36IviQ3ZzMoQCglb3Q
+NVPg3tTQr8fpQUvgReL2wHU=
+=WVIt
+-----END PGP SIGNATURE-----

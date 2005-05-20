@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 f0f510f85e5d6af82db97f7b77d7c910 dvxml-0.1.4.ebuild 645
 MD5 2dde116e552fd6add522ce515d9ca21f ChangeLog 1269
 MD5 d4c8b46f106b5227d676a585a0f84063 metadata.xml 255
@@ -5,3 +8,10 @@ MD5 bc335c154a37f58dd2a92e079515e8d3 dvxml-0.1.4-r2.ebuild 903
 MD5 f9b2c635e2f9b2e91ec2fcf57fee9b70 files/dvxml-0.1.4-fix-underquoted-m4.diff 660
 MD5 5de30c94b365805af6e1acca7587cc8c files/digest-dvxml-0.1.4 63
 MD5 5de30c94b365805af6e1acca7587cc8c files/digest-dvxml-0.1.4-r2 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCjd9ZEZCkKN40op4RAoTpAJ9mrJfTE4V9ZyE9kL2310EGleCQDACgm1an
+j26xnf1OppkbtWx7TqHvslk=
+=s0ii
+-----END PGP SIGNATURE-----
