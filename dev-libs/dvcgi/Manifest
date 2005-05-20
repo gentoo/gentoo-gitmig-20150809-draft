@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 e193ffaceb14bc5ec22f6ece4409d96e dvcgi-0.5.13-r1.ebuild 1028
 MD5 bdf863f25a0f7f4094eb77e746b99ba0 dvcgi-0.5.13.ebuild 958
 MD5 c85ce74dce768b74e0ade32543632cb1 dvcgi-0.5.8.ebuild 595
@@ -9,3 +12,10 @@ MD5 6bbbb6863a650f35404249af00135699 files/digest-dvcgi-0.5.13-r1 64
 MD5 666d0940ec049dbbb35c7beabc1f225b files/digest-dvcgi-0.5.10 64
 MD5 6bbbb6863a650f35404249af00135699 files/digest-dvcgi-0.5.13 64
 MD5 50db820e94b28f2d6cae4cc3bbd56d85 files/digest-dvcgi-0.5.8 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCjduuEZCkKN40op4RAigBAJ0V3sDlSIpbzVmAn7usvHwRMIHB6wCcDeBt
+fpBDfgTn42tLfS/jDTA3POA=
+=xFUO
+-----END PGP SIGNATURE-----
