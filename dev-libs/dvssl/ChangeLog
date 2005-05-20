@@ -1,6 +1,15 @@
 # ChangeLog for dev-libs/dvssl
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvssl/ChangeLog,v 1.9 2005/05/13 01:35:40 pvdabeel Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvssl/ChangeLog,v 1.10 2005/05/20 12:51:09 ka0ttic Exp $
+
+*dvssl-0.5.4-r2 (20 May 2005)
+
+  20 May 2005; Aaron Walker <ka0ttic@gentoo.org>
+  +files/dvssl-0.5.4-fix-underquoted-m4.diff, +metadata.xml,
+  +dvssl-0.5.4-r2.ebuild:
+  Revision bump; added patch to fix underquoted m4 degs. Also, only install
+  API html/man pages if USE=doc and even then at least install them in the
+  correct location. Also added metadata.xml.
 
 *dvssl-0.5.4-r1 (13 May 2005) 
   13 May 2005; Pieter Van den Abeele <pvdabeel@gentoo.org> dvssl-0.5.4-r1.ebuild,
