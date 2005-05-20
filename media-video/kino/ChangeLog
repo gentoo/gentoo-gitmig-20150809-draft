@@ -1,6 +1,15 @@
 # ChangeLog for media-video/kino
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kino/ChangeLog,v 1.31 2005/05/18 00:49:48 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kino/ChangeLog,v 1.32 2005/05/20 14:53:55 luckyduck Exp $
+
+*kino-0.7.6 (20 May 2005)
+
+  20 May 2005; Jan Brinkmann <luckyduck@gentoo.org>
+  -files/kino-0.7.1-64bit-clean.patch, -files/kino_gcc33_fix,
+  -files/kino_gcc34_fix, -kino-0.6.4.ebuild, -kino-0.7.1.ebuild,
+  -kino-0.7.4.ebuild, -kino-0.7.5.ebuild, kino-0.7.5-r1.ebuild,
+  +kino-0.7.6.ebuild:
+  new upstream version, some cleanup. 0.7.5-r1 stable on x86
 
   18 May 2005; Gustavo Zacarias <gustavoz@gentoo.org> kino-0.7.5-r1.ebuild:
   Stable on sparc wrt #87464

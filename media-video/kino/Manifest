@@ -1,26 +1,17 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 fec39e38854624a45025b76620d41ca4 ChangeLog 3797
-MD5 999c095f11407c2592cbf831365236a1 kino-0.6.4.ebuild 1177
-MD5 c13035952df55a94d77e93a65a53defa kino-0.7.1.ebuild 1154
-MD5 0c5acf3afcfd6b0a881d3dd85a37f20b kino-0.7.4.ebuild 1044
-MD5 0c8c8381824cd91949e309f4c78ad6eb kino-0.7.5.ebuild 1043
+MD5 94d6f5306cfe3f5894b93240d6bd4767 kino-0.7.5-r1.ebuild 1310
+MD5 5b402c7aa84b16c287c8fb84b8ece1a0 ChangeLog 4152
 MD5 9ef4af14dad87b03fde8e43f19e08d26 metadata.xml 225
-MD5 319f27d02aae08a6b49b7c826f2504a2 kino-0.7.5-r1.ebuild 1308
-MD5 6f060bac87a882af3e8b288aa9992cad files/digest-kino-0.6.4 62
-MD5 ce19651a229f27c1ca127df75dab851a files/digest-kino-0.7.1 62
-MD5 f0b7458b9be709096013e4190d1486a7 files/digest-kino-0.7.4 62
-MD5 30181ed68c1351c7b6eea135e5ee7ad3 files/digest-kino-0.7.5 63
-MD5 0eb9cc74af12c7b8fb6f597dfca76df4 files/kino-0.7.1-64bit-clean.patch 720
-MD5 b2f31fc5dee7c9c3bb0896e17d940d75 files/kino_gcc33_fix 1384
-MD5 05974c1dff66f3b5c33eb7fc34393373 files/kino_gcc34_fix 428
+MD5 82f4520bdd62a2d9847a926ff8ef95f2 kino-0.7.6.ebuild 1190
 MD5 30181ed68c1351c7b6eea135e5ee7ad3 files/digest-kino-0.7.5-r1 63
+MD5 2c7645b5cf0d9f0f221fb87ca44b46fe files/digest-kino-0.7.6 63
 MD5 3de7378299c687b8b3b8dec40d4f553c files/kino-0.7.5-ppc.diff 8058
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFCipEzKRy60XGEcJIRAiBLAJ9V5fxNxCPHxCovpN29djfQrAwrvQCgg85a
-kPDZSD4hUmy7jNKo3b3fY3k=
-=/1sQ
+iD8DBQFCjfos06ebR+OMO78RAs1TAJ9uG1TirDB/umn+qApVmwEXZby4xQCfUR/C
+LIxj1y6c4VHTd3G6uFGs/AM=
+=U/N6
 -----END PGP SIGNATURE-----
