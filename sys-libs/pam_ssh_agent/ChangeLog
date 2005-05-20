@@ -1,6 +1,12 @@
 # ChangeLog for sys-libs/pam_ssh_agent
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam_ssh_agent/ChangeLog,v 1.5 2005/05/16 01:24:27 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam_ssh_agent/ChangeLog,v 1.6 2005/05/20 12:12:10 flameeyes Exp $
+
+*pam_ssh_agent-0.2-r1 (20 May 2005)
+
+  20 May 2005; Diego Pettenò <flameeyes@gentoo.org>
+  +files/pam_ssh_agent-0.2-openpam.patch, +pam_ssh_agent-0.2-r1.ebuild:
+  Added support for OpenPAM using the new pam eclass.
 
   16 May 2005; Diego Pettenò <flameeyes@gentoo.org>
   pam_ssh_agent-0.1.ebuild, pam_ssh_agent-0.2.ebuild:
