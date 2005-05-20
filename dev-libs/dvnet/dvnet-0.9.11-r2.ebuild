@@ -1,6 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvnet/dvnet-0.9.11-r1.ebuild,v 1.1 2005/05/13 11:42:11 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvnet/dvnet-0.9.11-r2.ebuild,v 1.1 2005/05/20 12:49:03 ka0ttic Exp $
+
+inherit eutils
 
 DESCRIPTION="dvnet provides an interface wrapping sockets into streams"
 HOMEPAGE="http://tinf2.vub.ac.be/~dvermeir/software/dv/dvnet/html/"
@@ -16,6 +18,8 @@ DEPEND="dev-libs/dvutil"
 src_unpack() {
 	unpack ${A}
 	cd ${S}
+
+	epatch ${FILESDIR}/${P}-fix-underquoted-m4.diff
 
 	sed -i 's/^\(SUBDIRS =.*\)doc\(.*\)$/\1\2/' Makefile.in || \
 		die "sed Makefile.in failed"

@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/dvnet
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvnet/ChangeLog,v 1.10 2005/05/13 11:42:11 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvnet/ChangeLog,v 1.11 2005/05/20 12:49:03 ka0ttic Exp $
+
+*dvnet-0.9.11-r2 (20 May 2005)
+
+  20 May 2005; Aaron Walker <ka0ttic@gentoo.org>
+  +files/dvnet-0.9.11-fix-underquoted-m4.diff, -dvnet-0.9.11-r1.ebuild,
+  +dvnet-0.9.11-r2.ebuild:
+  Revision bump; added patch to fix underquoted m4 defs.
 
 *dvnet-0.9.11-r1 (13 May 2005)
 

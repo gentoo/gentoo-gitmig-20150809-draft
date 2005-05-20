@@ -1,0 +1,11 @@
+diff --exclude='*~' --exclude='.*' -I '$Id:' -urN dvnet-0.9.11.orig/m4/dvnet.m4.in dvnet-0.9.11/m4/dvnet.m4.in
+--- dvnet-0.9.11.orig/m4/dvnet.m4.in	2005-05-20 04:18:56.000000000 -0400
++++ dvnet-0.9.11/m4/dvnet.m4.in	2005-05-20 04:19:08.000000000 -0400
+@@ -1,6 +1,6 @@
+ dnl @PACKAGE@-@VERSION@ autoconf macros
+ 
+-AC_DEFUN(DV_REQUIRE_DVNET,
++AC_DEFUN([DV_REQUIRE_DVNET],
+ [
+ DV_REQUIRE_LTLIB([dvnet/serversocket.h],[Dv::Net::ServerSocket ss;],dvnet,
+   [${prefix}/lib /usr/local/lib /usr/lib ${ac_default_prefix}/lib ],

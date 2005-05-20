@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 fce2b1530c5b5cc6b6da89eddbb22d1f dvnet-0.9.4.ebuild 719
 MD5 49abd5fc36f4aac870d1d0286c2e3471 dvnet-0.9.8.ebuild 600
 MD5 3ea9413deaefbbb0081c024ad6c91c4c dvnet-0.9.11.ebuild 657
@@ -9,3 +12,10 @@ MD5 3f41612d3dcc01f5b4b4ce73f5af1129 files/digest-dvnet-0.9.8 63
 MD5 dcdc6963e7b00c022c8ad8dc2041ceaa files/digest-dvnet-0.9.11-r2 64
 MD5 65c860f38c4defc307d3655bcbcf5d10 files/dvnet-0.9.11-fix-underquoted-m4.diff 518
 MD5 dcdc6963e7b00c022c8ad8dc2041ceaa files/digest-dvnet-0.9.11 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCjd0XEZCkKN40op4RAoP3AKC6v7XaHWPM5fiyPmnTP8QxjsHKXQCeKKQb
+dyjjj06QtbLLL85gBWASFUg=
+=fG3O
+-----END PGP SIGNATURE-----
