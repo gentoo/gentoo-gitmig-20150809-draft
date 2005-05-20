@@ -1,0 +1,270 @@
+diff -Naru a/arch/mips64/kernel/linux32.c b/arch/mips64/kernel/linux32.c
+--- a/arch/mips64/kernel/linux32.c	2005-04-15 13:46:27 -07:00
++++ b/arch/mips64/kernel/linux32.c	2005-04-15 13:46:27 -07:00
+@@ -1088,11 +1088,9 @@
+ 		i--;
+ 	}
+ 
+-	inode = file->f_dentry->d_inode;
+ 	/* VERIFY_WRITE actually means a read, as we write to user space */
+-	retval = locks_verify_area((type == VERIFY_WRITE
+-				    ? FLOCK_VERIFY_READ : FLOCK_VERIFY_WRITE),
+-				   inode, file, file->f_pos, tot_len);
++	retval = rw_verify_area((type == VERIFY_WRITE ? READ : WRITE),
++				   file, &file->f_pos, tot_len);
+ 	if (retval) {
+ 		if (iov != iovstack)
+ 			kfree(iov);
+diff -Naru a/arch/parisc/kernel/sys_parisc32.c b/arch/parisc/kernel/sys_parisc32.c
+--- a/arch/parisc/kernel/sys_parisc32.c	2005-04-15 13:46:27 -07:00
++++ b/arch/parisc/kernel/sys_parisc32.c	2005-04-15 13:46:27 -07:00
+@@ -1671,11 +1671,9 @@
+ 		i--;
+ 	}
+ 
+-	inode = file->f_dentry->d_inode;
+ 	/* VERIFY_WRITE actually means a read, as we write to user space */
+-	retval = locks_verify_area((type == VERIFY_WRITE
+-				    ? FLOCK_VERIFY_READ : FLOCK_VERIFY_WRITE),
+-				   inode, file, file->f_pos, tot_len);
++	retval = rw_verify_area((type == VERIFY_WRITE ? READ : WRITE),
++				   file, &file->f_pos, tot_len);
+ 	if (retval) {
+ 		if (iov != iovstack)
+ 			kfree(iov);
+diff -Naru a/arch/ppc64/kernel/sys_ppc32.c b/arch/ppc64/kernel/sys_ppc32.c
+--- a/arch/ppc64/kernel/sys_ppc32.c	2005-04-15 13:46:27 -07:00
++++ b/arch/ppc64/kernel/sys_ppc32.c	2005-04-15 13:46:27 -07:00
+@@ -183,11 +183,9 @@
+ 		i--;
+ 	}
+ 
+-	inode = file->f_dentry->d_inode;
+ 	/* VERIFY_WRITE actually means a read, as we write to user space */
+-	retval = locks_verify_area((type == VERIFY_WRITE
+-				    ? FLOCK_VERIFY_READ : FLOCK_VERIFY_WRITE),
+-				   inode, file, file->f_pos, tot_len);
++	retval = rw_verify_area((type == VERIFY_WRITE ? READ : WRITE),
++				   file, &file->f_pos, tot_len);
+ 	if (retval) {
+ 		if (iov != iovstack)
+ 			kfree(iov);
+diff -Naru a/arch/s390x/kernel/linux32.c b/arch/s390x/kernel/linux32.c
+--- a/arch/s390x/kernel/linux32.c	2005-04-15 13:46:27 -07:00
++++ b/arch/s390x/kernel/linux32.c	2005-04-15 13:46:27 -07:00
+@@ -1108,7 +1108,6 @@
+ 	unsigned long tot_len;
+ 	struct iovec iovstack[UIO_FASTIOV];
+ 	struct iovec *iov=iovstack, *ivp;
+-	struct inode *inode;
+ 	long retval, i;
+ 	io_fn_t fn;
+ 	iov_fn_t fnv;
+@@ -1145,11 +1144,9 @@
+ 		i--;
+ 	}
+ 
+-	inode = file->f_dentry->d_inode;
+ 	/* VERIFY_WRITE actually means a read, as we write to user space */
+-	retval = locks_verify_area((type == VERIFY_WRITE
+-				    ? FLOCK_VERIFY_READ : FLOCK_VERIFY_WRITE),
+-				   inode, file, file->f_pos, tot_len);
++	retval = rw_verify_area((type == VERIFY_WRITE ? READ : WRITE),
++				   file, &file->f_pos, tot_len);
+ 	if (retval)
+ 		goto out;
+ 
+diff -Naru a/arch/sparc64/kernel/sys_sparc32.c b/arch/sparc64/kernel/sys_sparc32.c
+--- a/arch/sparc64/kernel/sys_sparc32.c	2005-04-15 13:46:27 -07:00
++++ b/arch/sparc64/kernel/sys_sparc32.c	2005-04-15 13:46:27 -07:00
+@@ -1093,7 +1093,6 @@
+ 	__kernel_ssize_t32 tot_len;
+ 	struct iovec iovstack[UIO_FASTIOV];
+ 	struct iovec *iov=iovstack, *ivp;
+-	struct inode *inode;
+ 	long retval, i;
+ 	io_fn_t fn;
+ 	iov_fn_t fnv;
+@@ -1140,11 +1139,9 @@
+ 		i--;
+ 	}
+ 
+-	inode = file->f_dentry->d_inode;
+ 	/* VERIFY_WRITE actually means a read, as we write to user space */
+-	retval = locks_verify_area((type == VERIFY_WRITE
+-				    ? FLOCK_VERIFY_READ : FLOCK_VERIFY_WRITE),
+-				   inode, file, file->f_pos, tot_len);
++	retval = rw_verify_area((type == VERIFY_WRITE ? READ : WRITE),
++				   file, &file->f_pos, tot_len);
+ 	if (retval)
+ 		goto out;
+ 
+diff -Naru a/fs/file_table.c b/fs/file_table.c
+--- a/fs/file_table.c	2005-04-15 13:46:27 -07:00
++++ b/fs/file_table.c	2005-04-15 13:46:27 -07:00
+@@ -46,6 +46,7 @@
+ 		f->f_version = ++event;
+ 		f->f_uid = current->fsuid;
+ 		f->f_gid = current->fsgid;
++		f->f_maxcount = INT_MAX;
+ 		list_add(&f->f_list, &anon_list);
+ 		file_list_unlock();
+ 		return f;
+@@ -92,6 +92,8 @@
+ 	filp->f_uid    = current->fsuid;
+ 	filp->f_gid    = current->fsgid;
+ 	filp->f_op     = dentry->d_inode->i_fop;
++	filp->f_maxcount = INT_MAX;
++
+ 	if (filp->f_op->open)
+ 		return filp->f_op->open(dentry->d_inode, filp);
+ 	else
+diff -Naru a/fs/read_write.c b/fs/read_write.c
+--- a/fs/read_write.c	2005-04-15 13:46:27 -07:00
++++ b/fs/read_write.c	2005-04-15 13:46:27 -07:00
+@@ -40,6 +40,28 @@
+ 	return -EISDIR;
+ }
+ 
++int rw_verify_area(int read_write, struct file *file, loff_t *ppos, size_t count)
++{
++	struct inode *inode;
++	loff_t pos;
++
++	if (unlikely(count > file->f_maxcount))
++		goto Einval;
++
++	pos = *ppos;
++
++	if (unlikely((pos < 0) || (loff_t) (pos + count) < 0))
++		goto Einval;
++
++	inode = file->f_dentry->d_inode;
++	if (inode->i_flock && MANDATORY_LOCK(inode))
++		return locks_mandatory_area(read_write == READ ? FLOCK_VERIFY_READ : FLOCK_VERIFY_WRITE, inode, file, *ppos, count);
++	return 0;
++
++Einval:
++	return -EINVAL;
++}
++
+ loff_t generic_file_llseek(struct file *file, loff_t offset, int origin)
+ {
+ 	long long retval;
+@@ -168,8 +190,8 @@
+ 	file = fget(fd);
+ 	if (file) {
+ 		if (file->f_mode & FMODE_READ) {
+-			ret = locks_verify_area(FLOCK_VERIFY_READ, file->f_dentry->d_inode,
+-						file, file->f_pos, count);
++			ret = rw_verify_area(READ, file, &file->f_pos, count);
++
+ 			if (!ret) {
+ 				ssize_t (*read)(struct file *, char *, size_t, loff_t *);
+ 				ret = -EINVAL;
+@@ -193,9 +215,7 @@
+ 	file = fget(fd);
+ 	if (file) {
+ 		if (file->f_mode & FMODE_WRITE) {
+-			struct inode *inode = file->f_dentry->d_inode;
+-			ret = locks_verify_area(FLOCK_VERIFY_WRITE, inode, file,
+-				file->f_pos, count);
++			ret = rw_verify_area(WRITE, file, &file->f_pos, count);
+ 			if (!ret) {
+ 				ssize_t (*write)(struct file *, const char *, size_t, loff_t *);
+ 				ret = -EINVAL;
+@@ -224,7 +244,6 @@
+ 	ssize_t ret, i;
+ 	io_fn_t fn;
+ 	iov_fn_t fnv;
+-	struct inode *inode;
+ 
+ 	/*
+ 	 * First get the "struct iovec" from user memory and
+@@ -275,12 +294,11 @@
+ 			goto out;
+ 	}
+ 
+-	inode = file->f_dentry->d_inode;
+ 	/* VERIFY_WRITE actually means a read, as we write to user space */
+-	ret = locks_verify_area((type == VERIFY_WRITE
+-				 ? FLOCK_VERIFY_READ : FLOCK_VERIFY_WRITE),
+-				inode, file, file->f_pos, tot_len);
+-	if (ret) goto out;
++	ret = rw_verify_area((type == VERIFY_WRITE ? READ : WRITE),
++				file, &file->f_pos, tot_len);
++	if (ret) 
++		goto out;
+ 
+ 	fnv = (type == VERIFY_WRITE ? file->f_op->readv : file->f_op->writev);
+ 	if (fnv) {
+@@ -383,8 +401,8 @@
+ 		goto bad_file;
+ 	if (!(file->f_mode & FMODE_READ))
+ 		goto out;
+-	ret = locks_verify_area(FLOCK_VERIFY_READ, file->f_dentry->d_inode,
+-				file, pos, count);
++	ret = rw_verify_area(READ, file, &pos, count);
++
+ 	if (ret)
+ 		goto out;
+ 	ret = -EINVAL;
+@@ -414,8 +432,8 @@
+ 		goto bad_file;
+ 	if (!(file->f_mode & FMODE_WRITE))
+ 		goto out;
+-	ret = locks_verify_area(FLOCK_VERIFY_WRITE, file->f_dentry->d_inode,
+-				file, pos, count);
++	ret = rw_verify_area(WRITE, file, &pos, count);
++
+ 	if (ret)
+ 		goto out;
+ 	ret = -EINVAL;
+diff -Naru a/include/linux/fs.h b/include/linux/fs.h
+--- a/include/linux/fs.h	2005-04-15 13:46:27 -07:00
++++ b/include/linux/fs.h	2005-04-15 13:46:27 -07:00
+@@ -576,6 +576,7 @@
+ 	unsigned int		f_uid, f_gid;
+ 	int			f_error;
+ 
++	size_t			f_maxcount;
+ 	unsigned long		f_version;
+ 
+ 	/* needed for tty driver, and maybe others */
+@@ -1056,14 +1057,7 @@
+ 	return 0;
+ }
+ 
+-static inline int locks_verify_area(int read_write, struct inode *inode,
+-				    struct file *filp, loff_t offset,
+-				    size_t count)
+-{
+-	if (inode->i_flock && MANDATORY_LOCK(inode))
+-		return locks_mandatory_area(read_write, inode, filp, offset, count);
+-	return 0;
+-}
++extern int rw_verify_area(int, struct file *, loff_t *, size_t);
+ 
+ static inline int locks_verify_truncate(struct inode *inode,
+ 				    struct file *filp,
+diff -Naru a/mm/filemap.c b/mm/filemap.c
+--- a/mm/filemap.c	2005-04-15 13:46:27 -07:00
++++ b/mm/filemap.c	2005-04-15 13:46:27 -07:00
+@@ -1870,7 +1870,7 @@
+ 		goto fput_in;
+ 	if (!in_inode->i_mapping->a_ops->readpage)
+ 		goto fput_in;
+-	retval = locks_verify_area(FLOCK_VERIFY_READ, in_inode, in_file, in_file->f_pos, count);
++	retval = rw_verify_area(READ, in_file, &in_file->f_pos, count);
+ 	if (retval)
+ 		goto fput_in;
+ 
+@@ -1887,7 +1887,7 @@
+ 	if (!out_file->f_op || !out_file->f_op->write)
+ 		goto fput_out;
+ 	out_inode = out_file->f_dentry->d_inode;
+-	retval = locks_verify_area(FLOCK_VERIFY_WRITE, out_inode, out_file, out_file->f_pos, count);
++	retval = rw_verify_area(WRITE, out_file, &out_file->f_pos, count);
+ 	if (retval)
+ 		goto fput_out;
+ 
