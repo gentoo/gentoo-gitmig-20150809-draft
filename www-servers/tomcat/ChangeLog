@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/tomcat
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.33 2005/05/17 20:58:29 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.34 2005/05/20 14:50:45 luckyduck Exp $
+
+  20 May 2005; Jan Brinkmann <luckyduck@gentoo.org> tomcat-5.0.28-r4.ebuild:
+  fixed problems with first time installation, see #93322
 
   17 May 2005; Jan Brinkmann <luckyduck@gentoo.org> tomcat-5.0.28-r4.ebuild:
   further fixes & cleanups / improvements, thanks axxo :-)

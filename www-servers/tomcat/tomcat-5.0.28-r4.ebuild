@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.0.28-r4.ebuild,v 1.2 2005/05/17 20:58:29 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.0.28-r4.ebuild,v 1.3 2005/05/20 14:50:45 luckyduck Exp $
 
 inherit eutils java-pkg
 
@@ -87,6 +87,7 @@ src_unpack() {
 src_compile(){
 	local antflags="-Dbase.path=${T}"
 	use jikes && antflags="${antflags} -Dbuild.compiler=jikes"
+
 	antflags="${antflags} -Dactivation.jar=$(java-config -p sun-jaf-bin)"
 	antflags="${antflags} -Dcommons-collections.jar=$(java-config -p commons-collections)"
 	antflags="${antflags} -Dcommons-daemon.jar=$(java-config -p commons-daemon)"
@@ -111,13 +112,16 @@ src_compile(){
 	antflags="${antflags} -Dsaxpath.jar=$(java-pkg_getjar saxpath saxpath.jar)"
 	antflags="${antflags} -DxercesImpl.jar=$(java-pkg_getjar xerces-2 xercesImpl.jar)"
 	antflags="${antflags} -Dxml-apis.jar=$(java-pkg_getjar xerces-2 xml-apis.jar)"
-
 	antflags="${antflags} -Dstruts.home=/usr/share/struts"
 
 	ant ${antflags} || die "compile failed"
 
 }
 src_install() {
+	# new user for tomcat
+	enewgroup tomcat
+	enewuser tomcat -1 -1 /dev/null tomcat
+
 	cd ${S}/jakarta-tomcat-5/build
 
 	# init.d, env.d, conf.d
@@ -213,12 +217,6 @@ src_install() {
 
 	use doc && dodoc ${S}/jakarta-tomcat-5/{LICENSE,RELEASE-NOTES,RUNNING.txt}
 	fperms 640 /etc/${TOMCAT_NAME}/default/tomcat-users.xml
-}
-
-
-pkg_preinst() {
-	enewgroup tomcat
-	enewuser tomcat -1 -1 /dev/null tomcat
 }
 
 pkg_postinst() {
