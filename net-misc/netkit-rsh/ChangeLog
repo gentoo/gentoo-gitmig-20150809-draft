@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/netkit-rsh
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-rsh/ChangeLog,v 1.21 2005/05/20 18:48:59 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-rsh/ChangeLog,v 1.22 2005/05/20 19:35:38 gustavoz Exp $
+
+  20 May 2005; Gustavo Zacarias <gustavoz@gentoo.org>
+  netkit-rsh-0.17-r6.ebuild:
+  Stable on sparc wrt #93215
 
   20 May 2005; Bryan Østergaard <kloeri@gentoo.org>
   netkit-rsh-0.17-r6.ebuild:
