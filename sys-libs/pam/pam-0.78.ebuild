@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.78.ebuild,v 1.7 2005/05/16 00:50:12 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.78.ebuild,v 1.8 2005/05/20 12:24:54 flameeyes Exp $
 
 FORCE_SYSTEMAUTH_UPDATE="no"
 
@@ -51,7 +51,7 @@ DEPEND="${RDEPEND}
 PROVIDE="virtual/pam"
 
 #inherit needs to be after DEPEND definition to protect RDEPEND
-inherit toolchain-funcs eutils flag-o-matic gnuconfig
+inherit toolchain-funcs eutils flag-o-matic gnuconfig pam
 
 apply_pam_patches() {
 	local x=

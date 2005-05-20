@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 81e2170feddca8dac7457537800e7655 ChangeLog 12047
+MD5 b5f0cc031bc4cbf6a50031858c5640e5 ChangeLog 12229
 MD5 1d05f0436f1c273d7862099f309afe4d metadata.xml 156
 MD5 2fb7b5e7eae12c620daac22b93a73b7f pam-0.77-r1.ebuild 7495
 MD5 3b1d1f6ef3ed651ef694116e48ec5d39 pam-0.77-r2.ebuild 7779
@@ -11,9 +11,9 @@ MD5 a5bdbfb18f5442be1aa2d2d8e0a7a69b pam-0.77-r6.ebuild 7859
 MD5 e4f82982ec9668ad5823168bb8e6d6a4 pam-0.77-r7.ebuild 8063
 MD5 ee7bd485a751811e9aae3c840aaf6823 pam-0.77-r8.ebuild 8227
 MD5 0e96e99d5510c23f8c3db9464f89ee9e pam-0.77.ebuild 7444
-MD5 447d8469e2497e26f6b862f109481b8a pam-0.78-r1.ebuild 9925
-MD5 23ab6c6d0b7b08db5d0ca6d88d3da5b5 pam-0.78-r2.ebuild 10985
-MD5 778f77009ccd4e92659ce25a84cd451e pam-0.78.ebuild 9578
+MD5 ebc6be96115a224297749e4213604aa4 pam-0.78-r1.ebuild 9929
+MD5 7f11fa3106e1f34a2a44baa8370ecfcc pam-0.78-r2.ebuild 10992
+MD5 a8329b970b47906e068e01d931eacf9c pam-0.78.ebuild 9582
 MD5 c3f9e8ddddd908bd83aa6859d279dd7d files/README.pam_console 2096
 MD5 028c285db4076f549774c258d0eddcfc files/digest-pam-0.77 201
 MD5 028c285db4076f549774c258d0eddcfc files/digest-pam-0.77-r1 201
@@ -36,7 +36,7 @@ MD5 1baa646400c4a596290e9d4b9e1c09b2 files/pam.d/system-auth 491
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCh+5Uj5H05b2HAEkRAiaeAJ9o/n7M+XLEZA6q+Mt98HPOzbRq8QCfdA2z
-e2HPYHNuF0vzI3ftJ9QNe/4=
-=MHS5
+iD8DBQFCjdZEj5H05b2HAEkRAiPKAJ9I2tmNgSzkMqolL/QCARNcVQqyBQCfauFp
+uadfLcK8eYxigpZ9N5LeazQ=
+=M/5z
 -----END PGP SIGNATURE-----
