@@ -1,6 +1,6 @@
 MD5 056de77ebfb1a8dd44fdc1dd9e415435 ChangeLog 5473
 MD5 ed81470e0a1698d713b04ecb69d5a9e0 metadata.xml 449
-MD5 7fd6e2497efb929cea7335d706c04fe5 frozen-bubble-1.0.0-r5.ebuild 2794
+MD5 9270c771d017773c05f10c650e98dd46 frozen-bubble-1.0.0-r5.ebuild 2807
 MD5 5c883c8dd838b13190b3115a7649333d files/frozen-bubble-1.0.0-sdl-perl-2.patch 3919
 MD5 9a77f057ee51c039f467c20fa822159d files/digest-frozen-bubble-1.0.0-r5 228
 MD5 c30d59b06b6112e4d3ca9ba2117c3202 files/1.0.0-no-chainreaction.patch 357
