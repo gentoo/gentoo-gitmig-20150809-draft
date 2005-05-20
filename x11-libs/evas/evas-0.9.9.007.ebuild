@@ -1,8 +1,7 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/evas/evas-0.9.9.007.ebuild,v 1.1 2005/05/20 03:20:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/evas/evas-0.9.9.007.ebuild,v 1.2 2005/05/20 23:05:08 vapier Exp $
 
-EHACKAUTOGEN="yes"
 inherit enlightenment flag-o-matic
 
 DESCRIPTION="hardware-accelerated canvas API"
@@ -29,13 +28,14 @@ src_compile() {
 	#  --enable-scale-sample           enable sampling scaler code
 	#  --enable-scale-smooth           enable sampling scaler code
 	#  --enable-scale-trilinear        enable tri-linear scaler code
+	[[ ${PV} != "0.9.9.007" ]] && die "add back in cairo check"
+#			$(use_enable cairo cairo-x11)
 	export MY_ECONF="
 		$(use_enable mmx cpu-mmx) \
 		$(use_enable sse cpu-mmx) \
 		$(use_enable sse cpu-sse) \
 		$(use_enable X software-x11) \
 		$(use_enable opengl gl-x11) \
-		$(use_enable cairo cairo-x11) \
 		$(use_enable directfb) \
 		$(use_enable fbcon fb) \
 		--enable-image-loader-eet \
