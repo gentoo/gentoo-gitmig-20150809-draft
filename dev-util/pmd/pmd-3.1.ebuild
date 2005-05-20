@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pmd/pmd-3.1.ebuild,v 1.1 2005/05/20 18:48:34 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pmd/pmd-3.1.ebuild,v 1.2 2005/05/20 18:49:28 luckyduck Exp $
 
 inherit java-pkg eutils
 
@@ -25,7 +25,7 @@ RDEPEND=">=virtual/jre-1.3
 
 src_unpack() {
 	unpack ${A}
-	
+
 	cd ${S}
 	epatch ${FILESDIR}/${P}-gentoo.patch
 
