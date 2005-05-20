@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/commonbox-styles-extra
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/commonbox-styles-extra/ChangeLog,v 1.10 2004/08/04 19:24:08 slarti Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/commonbox-styles-extra/ChangeLog,v 1.11 2005/05/20 18:27:08 killerfox Exp $
+
+  20 May 2005; Rene Nussbaumer <killerfox@gentoo.org>
+  commonbox-styles-extra-0.2-r1.ebuild:
+  Added ~hppa; bug #93346
 
   04 Aug 2004; Tom Martin <slarti@gentoo.org>
   commonbox-styles-extra-0.2-r1.ebuild:
