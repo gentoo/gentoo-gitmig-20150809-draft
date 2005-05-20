@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.171 2005/05/13 00:30:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.172 2005/05/20 02:09:19 vapier Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -1649,7 +1649,7 @@ dopamd() {
 
 	use pam || return 0
 
-	insinto /etc/pam.d
+	INSDESTTREE=/etc/pam.d \
 	doins "$@" || die "failed to install $@"
 }
 # newpamd <old name> <new name>
@@ -1660,7 +1660,7 @@ newpamd() {
 
 	use pam || return 0
 
-	insinto /etc/pam.d
+	INSDESTTREE=/etc/pam.d \
 	newins "$1" "$2" || die "failed to install $1 as $2"
 }
 
