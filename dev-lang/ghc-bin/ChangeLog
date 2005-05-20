@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/ghc-bin
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc-bin/ChangeLog,v 1.24 2005/05/09 15:47:39 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc-bin/ChangeLog,v 1.25 2005/05/20 13:40:00 dcoutts Exp $
+
+*ghc-bin-6.2.2-r1 (20 May 2005)
+
+  20 May 2005; <duncan@gentoo.org> +ghc-bin-6.2.2-r1.ebuild:
+  Add a new ghc-bin-6.2.2-r1 ebuild based on the ghc-bin-6.4 "portage tbz2
+  style" Initially this only covers ~sparc but we'll extend it later to the
+  other arches.
 
   09 May 2005; Markus Rothe <corsair@gentoo.org> ghc-bin-6.4.ebuild:
   Created binary and added ~ppc64 to KEYWORDS - bug #68930
