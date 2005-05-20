@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.145 2005/05/11 11:11:37 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.146 2005/05/20 21:45:30 vapier Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -919,6 +919,7 @@ gcc-compiler-configure() {
 		;;
 		# Enable sjlj exceptions for backward compatibility on hppa
 		hppa)
+			[[ ${PV:0:1} == "3" ]] && \
 			confgcc="${confgcc} --enable-sjlj-exceptions"
 		;;
 	esac
