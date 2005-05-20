@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/mtd
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtd/ChangeLog,v 1.7 2005/01/23 22:30:41 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtd/ChangeLog,v 1.8 2005/05/20 02:47:42 solar Exp $
+
+*mtd-20050519 (19 May 2005)
+
+  19 May 2005; <solar@gentoo.org> -mtd-20040808.ebuild, +mtd-20050519.ebuild:
+  - new snapshot
 
   23 Jan 2005; <solar@gentoo.org> mtd-20040825.ebuild:
   - stable on x86

@@ -1,13 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtd/mtd-20040808.ebuild,v 1.3 2005/01/23 22:30:41 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtd/mtd-20050519.ebuild,v 1.1 2005/05/20 02:47:42 solar Exp $
 
 DESCRIPTION="JFFS2 is a log-structured file system designed for use on flash devices in embedded systems."
 HOMEPAGE="http://sources.redhat.com/jffs2/"
 SRC_URI="ftp://ftp.uk.linux.org/pub/people/dwmw2/mtd/cvs/${PN}-snapshot-${PV}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~mips ~arm ~amd64"
+KEYWORDS="~x86 ~mips ~arm ~amd64 ~ppc"
 IUSE=""
 
 S=${WORKDIR}/${PN}
@@ -17,7 +17,7 @@ DEPEND="sys-libs/zlib
 
 src_unpack() {
 	unpack ${A}
-	sed -i -e s:'-O2 -Wall':"${CFLAGS}":g ${S}/util/Makefile || die
+	sed -i -e s:'-O2 -Wall':"${CFLAGS}":g -e s:^MANDIR=.*:MANDIR=/usr/share/man: ${S}/util/Makefile || die
 }
 
 src_compile() {
