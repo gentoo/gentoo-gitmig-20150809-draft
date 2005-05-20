@@ -1,6 +1,14 @@
 # ChangeLog for dev-util/pmd
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pmd/ChangeLog,v 1.8 2005/04/24 13:05:03 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pmd/ChangeLog,v 1.9 2005/05/20 18:48:34 luckyduck Exp $
+
+*pmd-3.1 (20 May 2005)
+
+  20 May 2005; Jan Brinkmann <luckyduck@gentoo.org>
+  +files/pmd-3.1-gentoo.patch, +pmd-3.1.ebuild:
+  new upstream version, introduced support for the source useflag and added a
+  patch for the wrapper script and other classpath related things. fixes
+  #93236.
 
   24 Apr 2005; Michael Hanselmann <hansmi@gentoo.org> pmd-1.5.ebuild:
   Stable on ppc.

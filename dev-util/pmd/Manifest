@@ -1,6 +1,19 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 ff3832eeb8d89e251ebb82fde189a4f7 pmd-3.1.ebuild 1440
 MD5 fb4e8eacc7f8bfd93fd2e9a94077c14e pmd-1.5-r1.ebuild 1118
+MD5 7faad7f167c57f6ac51df35d38fc2e56 ChangeLog 1415
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
-MD5 0f6c84bc87c38ded214cc73ae916b399 ChangeLog 1126
 MD5 180fc1ad8305231c56b27428c96d4565 pmd-1.5.ebuild 817
 MD5 f4fd6e2650f6d50125b3e546a7c0a54b files/digest-pmd-1.5 61
+MD5 9cd4c2c64ebddf354fb7475e86887505 files/digest-pmd-3.1 61
 MD5 f4fd6e2650f6d50125b3e546a7c0a54b files/digest-pmd-1.5-r1 61
+MD5 a4e38ad08909deab5987c12fe5e59d8d files/pmd-3.1-gentoo.patch 3808
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCjjEh06ebR+OMO78RAtJtAJoDmKofruyK/B0MyWB3X7YwdJFSrQCfdz27
+fN6qYhhUnN9wNIJUCp41W4g=
+=4lFe
+-----END PGP SIGNATURE-----
