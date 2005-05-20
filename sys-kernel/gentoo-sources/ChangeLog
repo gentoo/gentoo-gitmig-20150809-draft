@@ -1,6 +1,24 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.143 2005/05/18 11:20:45 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.144 2005/05/20 19:32:51 plasmaroo Exp $
+
+  20 May 2005; <plasmaroo@gentoo.org> -gentoo-sources-2.4.25-r17.ebuild,
+  -files/gentoo-sources-2.4.AF_UNIX.patch,
+  -files/gentoo-sources-2.4.CAN-2004-0109.patch,
+  -files/gentoo-sources-2.4.CAN-2004-0133.patch,
+  -files/gentoo-sources-2.4.CAN-2004-0177.patch,
+  -files/gentoo-sources-2.4.CAN-2004-0178.patch,
+  -files/gentoo-sources-2.4.CAN-2004-0181.patch,
+  -files/gentoo-sources-2.4.CAN-2004-0394.patch,
+  -files/gentoo-sources-2.4.CAN-2004-0427.patch,
+  -files/gentoo-sources-2.4.CAN-2004-0495.patch,
+  -files/gentoo-sources-2.4.CAN-2004-0535.patch,
+  -files/gentoo-sources-2.4.CAN-2004-0685.patch,
+  -files/gentoo-sources-2.4.FPULockup-53804.patch,
+  -files/gentoo-sources-2.4.XDRWrapFix.patch,
+  -files/gentoo-sources-2.4.binfmt_elf.patch,
+  -files/gentoo-sources-2.4.smbfs.patch:
+  Remove 2.4.25.
 
   18 May 2005; Daniel Drake <dsd@gentoo.org>
   gentoo-sources-2.6.11-r9.ebuild:
