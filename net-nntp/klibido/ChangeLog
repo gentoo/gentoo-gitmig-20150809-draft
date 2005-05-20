@@ -1,6 +1,14 @@
 # ChangeLog for net-nntp/klibido
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/klibido/ChangeLog,v 1.10 2005/05/13 13:29:04 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/klibido/ChangeLog,v 1.11 2005/05/20 05:22:18 swegener Exp $
+
+*klibido-0.2.3-r1 (20 May 2005)
+
+  20 May 2005; Sven Wegener <swegener@gentoo.org>
+  +files/0.2.3-availablegroups.patch, -klibido-0.2.3.ebuild,
+  +klibido-0.2.3-r1.ebuild:
+  Revision bump to pull in a patch from upstream developers that fixes bug
+  #93265.
 
 *klibido-0.2.2.2 (19 Mar 2005)
 

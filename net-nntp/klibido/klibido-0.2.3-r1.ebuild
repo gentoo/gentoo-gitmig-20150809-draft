@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/klibido/klibido-0.2.3.ebuild,v 1.1 2005/05/13 13:29:04 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/klibido/klibido-0.2.3-r1.ebuild,v 1.1 2005/05/20 05:22:18 swegener Exp $
 
 inherit kde versionator
 
@@ -18,13 +18,19 @@ DEPEND="dev-libs/uulib
 
 need-kde 3
 
+src_unpack() {
+	kde_src_unpack
+	cd "${S}"
+	epatch "${FILESDIR}"/${PV}-availablegroups.patch
+}
+
 src_compile() {
 	local libdbver="$(best_version sys-libs/db)"
 	libdbver="${libdbver/sys-libs\/db-/}"
 	libdbver="$(get_version_component_range 1-2 ${libdbver})"
 
 	myconf="${myconf}
-		--datadir=${D}/usr/share
+		--datadir='${D}'/usr/share
 		--with-extra-includes=/usr/include/db${libdbver}/
 		$(use_enable debug)
 	"
