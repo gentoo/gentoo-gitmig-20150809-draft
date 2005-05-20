@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/tgif/tgif-4.1.44.ebuild,v 1.1 2005/05/20 00:54:34 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/tgif/tgif-4.1.44.ebuild,v 1.2 2005/05/20 05:08:06 swegener Exp $
 
 MY_P="${PN}-QPL-${PV}"
 DESCRIPTION="Tgif is an Xlib base 2-D drawing facility under X11."
@@ -9,7 +9,7 @@ SRC_URI="ftp://bourbon.usc.edu/pub/tgif/${MY_P}.tar.gz"
 
 S="${WORKDIR}/${MY_P}"
 
-LICENSE="QPL-1"
+LICENSE="QPL-1.0"
 SLOT="0"
 KEYWORDS="~x86 ~ppc"
 

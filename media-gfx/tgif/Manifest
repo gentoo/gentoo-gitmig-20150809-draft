@@ -1,3 +1,5 @@
-MD5 4e16b4ebecb9b1e565cb4a7e634d7a12 ChangeLog 371
+MD5 e76b63ff65c4f28a947aa48a357ea61c tgif-4.1.44.ebuild 902
 MD5 90d71a4740edbc10d1d7a488b2512b17 tgif-4.1.43.ebuild 867
+MD5 ec85510351135ba026449e3473354d5b ChangeLog 488
 MD5 fabdf6f7de1d2dbdbb62cd9b9e9c9a11 files/digest-tgif-4.1.43 64
+MD5 147fae33f70687bc11a61826e30abe65 files/digest-tgif-4.1.44 68
