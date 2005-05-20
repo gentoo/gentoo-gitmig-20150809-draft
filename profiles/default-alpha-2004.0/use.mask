@@ -87,3 +87,6 @@ emul-linux-x86
 
 # Mask intel fortran compiler
 ifc
+
+# Mask vpopmail until net-mail/vpopmail goes out of package.mask
+vpopmail
