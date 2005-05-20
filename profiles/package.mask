@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3995 2005/05/20 02:28:50 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3996 2005/05/20 02:51:30 cardoe Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -81,6 +81,7 @@ gnome-extra/gnome-network
 =media-plugins/mythphone-0.18.1
 =media-plugins/mythvideo-0.18.1
 =media-plugins/mythweather-0.18.1
+=www-apps/mythweb-0.18.1
 
 # Elfyn McBratney <beu@gentoo.org> (15 May 2005)
 # Needs a bit of testing before it goes straight to stable.
