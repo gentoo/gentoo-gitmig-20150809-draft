@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 e6b51bf3fbce6b1a3ba1414e35662673 ChangeLog 5881
 MD5 74cee8ff4bbcb32c4a3612064c2948fa gtk-perl-0.7008-r10.ebuild 1128
 MD5 07483c55c61611ee18114cc68c7d73c9 gtk-perl-0.7008-r11.ebuild 1217
@@ -12,3 +15,10 @@ MD5 2209262d20c326af265b7e1f59f69579 files/digest-gtk-perl-0.7009 67
 MD5 2209262d20c326af265b7e1f59f69579 files/digest-gtk-perl-0.7009-r1 67
 MD5 40eadf71d264897f806c6ae4e84abfe9 files/gendef.patch 324
 MD5 b5f56ac7a91d56a578d02fab47146a79 files/gtk-perl-0.7008-gdkpixbuf-detect-fix.patch 747
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCjlxstG5z4I8BtQoRAsP1AJ9z6oPQH/DxEGMksoCgZG1Qagv92wCeNBlN
+rUSi2eC2QdFoY4ZqDF78Rx4=
+=4Hg6
+-----END PGP SIGNATURE-----
