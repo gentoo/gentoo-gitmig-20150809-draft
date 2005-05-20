@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 3144be6404fcd21bebf07bc76d65821c ChangeLog 4297
 MD5 f62db0df6ee8ee1d4fe7b9c3d74432a7 metadata.xml 222
 MD5 e640b94d35c2228661c6efd1e11da45c mythgallery-0.16.ebuild 686
@@ -10,3 +13,10 @@ MD5 95241fda0f7454c8bd6d0f664471ec6b files/digest-mythgallery-0.17 68
 MD5 95241fda0f7454c8bd6d0f664471ec6b files/digest-mythgallery-0.17-r1 68
 MD5 e994e3c11d65c5762c760d5bb22021da files/digest-mythgallery-0.18 70
 MD5 8739e9d1295223762426254acdc96551 files/digest-mythgallery-0.18.1 72
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCjah6BtvusYtCZMsRAuPMAJ9gkHjf/Eh8JZIuRnQZtcxkUJeqrgCgg640
+wF7UhkjfcRczvsSwnlzl3c8=
+=zCIl
+-----END PGP SIGNATURE-----

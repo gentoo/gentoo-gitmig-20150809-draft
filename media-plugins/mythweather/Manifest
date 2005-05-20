@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 693cf8014354746be5a69397fba93051 ChangeLog 3727
 MD5 f62db0df6ee8ee1d4fe7b9c3d74432a7 metadata.xml 222
 MD5 c2b08b63ffd5c2cf43d7c2c6b1908dde mythweather-0.16.ebuild 557
@@ -8,3 +11,10 @@ MD5 282988e8e7273758479d38c84587cab5 files/digest-mythweather-0.16 69
 MD5 fcbfd7a18d082191b4f69e5afaa2f17f files/digest-mythweather-0.17 69
 MD5 e994e3c11d65c5762c760d5bb22021da files/digest-mythweather-0.18 70
 MD5 8739e9d1295223762426254acdc96551 files/digest-mythweather-0.18.1 72
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCjandBtvusYtCZMsRAgKUAJ9Rh1ZqRkJgPAVU2CE91KfPd/O5fgCcDYej
+f6GtQ2ff6j8yCEnl/JsLk8s=
+=AVr6
+-----END PGP SIGNATURE-----
