@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-4.0_p1.ebuild,v 1.5 2005/05/02 21:54:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-4.0_p1.ebuild,v 1.6 2005/05/20 13:02:08 flameeyes Exp $
 
-inherit eutils flag-o-matic ccc
+inherit eutils flag-o-matic ccc pam
 
 # Make it more portable between straight releases
 # and _p? releases.

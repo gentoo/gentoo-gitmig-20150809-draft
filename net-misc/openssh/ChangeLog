@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/openssh
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.118 2005/04/29 19:36:35 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.119 2005/05/20 13:02:08 flameeyes Exp $
+
+  20 May 2005; Diego Pettenò <flameeyes@gentoo.org>
+  openssh-3.9_p1-r2.ebuild, openssh-4.0_p1.ebuild, openssh-4.0_p1-r1.ebuild:
+  Inherit pam eclass for newpamd.
 
 *openssh-4.0_p1-r1 (29 Apr 2005)
 
