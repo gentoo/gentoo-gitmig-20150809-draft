@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/drpython/drpython-3.10.13.ebuild,v 1.1 2005/05/04 02:22:37 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/drpython/drpython-3.10.13.ebuild,v 1.2 2005/05/20 02:41:19 pythonhead Exp $
 
 inherit eutils distutils
 
@@ -11,8 +11,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
-RDEPEND="virtual/python
-	>=dev-python/wxpython-2.5.3.1"
+RDEPEND=">=dev-python/wxpython-2.6"
 DEPEND="app-arch/unzip"
 
 src_unpack() {
@@ -22,9 +21,23 @@ src_unpack() {
 }
 
 src_install() {
-	distutils_src_install
 	distutils_python_version
-	echo -e "#!/bin/sh\n\npython /usr/lib/python${PYVER}/site-packages/drpython/drpython.py \$@" > drpython
+
+	local destdir="/usr/lib/python${PYVER}/site-packages/${PN}/"
+	dodir  ${destdir}/bitmaps/{16,24}
+	cp -R bitmaps ${D}/${destdir} || die "Failed to cp bitmaps"
+
+	distutils_src_install
+
+	#Windows-only setup script:
+	rm ${D}/usr/bin/postinst.py
+
+	echo -e "#!/bin/sh\n\npython ${destdir}/drpython.py \$@" > drpython
 	dobin drpython
+}
+
+pkg_postinst() {
+	einfo "See the DrPython homepage for 20+ available plugins:"
+	einfo "http://sourceforge.net/project/showfiles.php?group_id=83074"
 }
 
