@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.18.1.ebuild,v 1.1 2005/05/16 08:57:07 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.18.1.ebuild,v 1.2 2005/05/20 17:10:32 cardoe Exp $
 
 inherit flag-o-matic eutils debug
 
@@ -100,7 +100,7 @@ src_compile() {
 	fi
 
 	hasq distcc ${FEATURES} || myconf="${myconf} --disable-distcc"
-	hasq ccache ${FEATURES} || myconf="${myconf} --distable-ccache"
+	hasq ccache ${FEATURES} || myconf="${myconf} --disable-ccache"
 
 	# depends on bug # 89799
 	# $(use_enable ieee1394 firewire)
