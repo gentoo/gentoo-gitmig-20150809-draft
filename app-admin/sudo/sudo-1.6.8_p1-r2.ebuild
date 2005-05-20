@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.6.8_p1-r2.ebuild,v 1.5 2005/04/20 01:50:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.6.8_p1-r2.ebuild,v 1.6 2005/05/20 12:37:53 flameeyes Exp $
 
-inherit eutils
+inherit eutils pam
 
 #
 # TODO: Fix support for krb4 and krb5

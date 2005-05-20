@@ -1,17 +1,21 @@
-MD5 b712889b8c73592d6d6b816674afc543 ChangeLog 4667
-MD5 be6b5a1d716ff9c5e94f8caa0c41a819 sudo-1.6.6.ebuild 804
-MD5 2ce290a2f2bf9da410049f01fe21b5d0 sudo-1.6.7_p5-r1.ebuild 1319
-MD5 378d08cc79465313cd2d19fb8ff6be4b sudo-1.6.7_p5-r2.ebuild 1431
-MD5 eed7ffa150de84b75b4f057ab16b7018 sudo-1.6.7_p5.ebuild 901
-MD5 d1eaf2b6933a411ea5ad61eae6e37f17 sudo-1.6.8_p1-r1.ebuild 1385
-MD5 8b2247b8a7b39d8ab3a92192d7ada212 sudo-1.6.8_p1-r2.ebuild 1505
-MD5 c34116a0ad0ff20144cceeed08df7819 sudo-1.6.8_p1.ebuild 1008
-MD5 23b2b46384863419d6a5bcd80d82e5ff sudo-1.6.8_p2.ebuild 1461
-MD5 76ca27b8810155a0c1fb4b263af812f0 sudo-1.6.7_p5-r3.ebuild 1448
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 0da59e98ed62c8ed087705ed76d3c212 ChangeLog 4980
+MD5 6ef36794000d315b6771461e5e605952 sudo-1.6.6.ebuild 804
+MD5 2f145ffda82bd23cf6412fd3db3d041d sudo-1.6.7_p5-r1.ebuild 1326
+MD5 1830dd653b9b5b92fa5cc86823e06d65 sudo-1.6.7_p5-r2.ebuild 1438
+MD5 3caf601661b996de760001c5ec276596 sudo-1.6.7_p5-r3.ebuild 1452
+MD5 f534927c7324a2161eb766e4360e9858 sudo-1.6.7_p5.ebuild 901
+MD5 921c9330fc7c927056c25ca33877ea49 sudo-1.6.8_p1-r1.ebuild 1392
+MD5 d4b757bf84c48678558dbabc443fcfc6 sudo-1.6.8_p1-r2.ebuild 1512
+MD5 f73599202e738a765394adc784b5a912 sudo-1.6.8_p1.ebuild 1015
+MD5 de5d176033f5bdd6c8c49f95417c52cc sudo-1.6.8_p2.ebuild 1468
 MD5 d3a1edd41e6a44e7dae35d250aea266e files/digest-sudo-1.6.6 62
 MD5 ea5d9d51e647a2dbd410d952019ff19b files/digest-sudo-1.6.7_p5 64
 MD5 ea5d9d51e647a2dbd410d952019ff19b files/digest-sudo-1.6.7_p5-r1 64
 MD5 ea5d9d51e647a2dbd410d952019ff19b files/digest-sudo-1.6.7_p5-r2 64
+MD5 ea5d9d51e647a2dbd410d952019ff19b files/digest-sudo-1.6.7_p5-r3 64
 MD5 703a1c523c89153f9bf6f11be6b65778 files/digest-sudo-1.6.8_p1 64
 MD5 703a1c523c89153f9bf6f11be6b65778 files/digest-sudo-1.6.8_p1-r1 64
 MD5 703a1c523c89153f9bf6f11be6b65778 files/digest-sudo-1.6.8_p1-r2 64
@@ -21,6 +25,12 @@ MD5 b906eb71f7564707384cfa9fc80c1b5f files/sudo-1.6.7_p5-strip-bash-functions.di
 MD5 46618a1b8f9dd4b3d35476c1e63217b0 files/sudo-1.6.8_p1-suid_fix.patch 434
 MD5 0b50aabedf9bb326893b5f1c333e46b2 files/sudo-skeychallengeargs.diff 567
 MD5 4362800877ccb8e27de5437707d8a954 files/sudo-strip-bash-functions.diff 1335
-MD5 74f9541ba3dfec492975db7223bdf386 files/sudoers 1311
 MD5 774b75e759fe13c7334c523b1db8ab2e files/sudo_include 67
-MD5 ea5d9d51e647a2dbd410d952019ff19b files/digest-sudo-1.6.7_p5-r3 64
+MD5 74f9541ba3dfec492975db7223bdf386 files/sudoers 1311
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCjdlRj5H05b2HAEkRAjMMAKCM653Jut1iuPdbKXYt6YFfLM5ZKgCeIeOV
+Gupq8LxzyrAkpKvsVfwPF8g=
+=UEFv
+-----END PGP SIGNATURE-----

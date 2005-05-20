@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.6.6.ebuild,v 1.20 2005/04/20 01:50:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.6.6.ebuild,v 1.21 2005/05/20 12:37:53 flameeyes Exp $
 
-inherit eutils
+inherit pam
 
 DESCRIPTION="Allows certain users/groups to run commands as root"
 SRC_URI="ftp://ftp.sudo.ws/pub/sudo/OLD/${P}.tar.gz"
