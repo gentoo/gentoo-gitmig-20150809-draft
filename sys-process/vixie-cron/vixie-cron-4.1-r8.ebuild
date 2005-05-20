@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/vixie-cron/vixie-cron-4.1-r8.ebuild,v 1.1 2005/05/14 16:58:07 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/vixie-cron/vixie-cron-4.1-r8.ebuild,v 1.2 2005/05/20 13:18:27 flameeyes Exp $
 
-inherit cron toolchain-funcs debug
+inherit cron toolchain-funcs debug pam
 
 # no useful homepage, bug #65898
 HOMEPAGE="ftp://ftp.isc.org/isc/cron/"
