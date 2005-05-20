@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 47d58ceda3d008efefed56b72e92e939 dvthread-0.4.7-r1.ebuild 667
 MD5 fa5ea15e402e10d9ca9ce22041fd4c1b dvthread-0.4.4.ebuild 686
 MD5 7594875be687010d6c7993cb32b17802 dvthread-0.4.7-r2.ebuild 976
@@ -10,3 +13,10 @@ MD5 0100eb4b5b9ee8ac729a91249f1b2c38 files/digest-dvthread-0.4.4 66
 MD5 82b1906ac74ced204768ddfe7e8ef9e6 files/gentoo-0.4.4.patch 397
 MD5 1036571cc334c77e6a509266a62c61fa files/digest-dvthread-0.4.6a 67
 MD5 215740d574e28bb8cb7d7b9cfe1bce3f files/dvthread-0.4.7-fix-underquoted-m4.diff 440
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCjd4rEZCkKN40op4RApNfAJ4rI+l2PzDo5n7qKCF05qi5JnakygCgmYPH
+ryp97xIXck/De1N8zUckCyk=
+=/ULX
+-----END PGP SIGNATURE-----

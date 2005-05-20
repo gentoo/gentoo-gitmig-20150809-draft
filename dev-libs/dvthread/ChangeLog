@@ -1,7 +1,15 @@
 # ChangeLog for dev-libs/dvthread
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvthread/ChangeLog,v 1.8 2005/05/13 01:32:15 pvdabeel Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvthread/ChangeLog,v 1.9 2005/05/20 12:53:39 ka0ttic Exp $
 
+*dvthread-0.4.7-r2 (20 May 2005)
+
+  20 May 2005; Aaron Walker <ka0ttic@gentoo.org>
+  +files/dvthread-0.4.7-fix-underquoted-m4.diff, +metadata.xml,
+  +dvthread-0.4.7-r2.ebuild:
+  Revision bump; added patch to fix underquoted m4 defs. Also, only install
+  API html/man pages if USE=doc and even then at least install them in the
+  correct location. Added metadata.xml.
 
 *dvthread-0.4.7-r1 (13 May 2005)
   13 May 2005; Pieter Van den Abeele <pvdabeel@gentoo.org>:+dvthread-0.4.7-r1.ebuild:
