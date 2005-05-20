@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 40cd11cbe9e2a2153fe072576628d791 ChangeLog 1473
+MD5 31098bcf3c1253de28558ae374d214c0 ChangeLog 1579
 MD5 98979dcc8f89c84051f9957afd8d481a info2html-1.4.ebuild 947
 MD5 d992d28bec4a3bfd72b441145091a58e metadata.xml 244
-MD5 9b90fbd21dea330658d1721f13255cfa info2html-1.4-r1.ebuild 991
-MD5 495fd408850958212ae70b35f3b8129b files/info2html-gentoo.patch 1767
+MD5 9293d5fd1d3733b63e98932b84ce3f8e info2html-1.4-r1.ebuild 989
 MD5 4b9f64ddf8e7ef3c725fc1f785c69456 files/digest-info2html-1.4 60
-MD5 cc6a82ee8361bbdc4e94d4f39feb5896 files/info2html-xss.patch 1730
+MD5 495fd408850958212ae70b35f3b8129b files/info2html-gentoo.patch 1767
 MD5 4b9f64ddf8e7ef3c725fc1f785c69456 files/digest-info2html-1.4-r1 60
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCjjMYKf2g/qXtneoRAll5AJ4r7/tzgMsM48tjU8or3DU1JaCDCACcDfSL
-vyUNTXTAkfOF/UI02sEzsl0=
-=EF2T
------END PGP SIGNATURE-----
+MD5 cc6a82ee8361bbdc4e94d4f39feb5896 files/info2html-xss.patch 1730

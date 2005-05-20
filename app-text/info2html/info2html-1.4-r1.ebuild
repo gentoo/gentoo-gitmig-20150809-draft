@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/info2html/info2html-1.4-r1.ebuild,v 1.4 2005/05/20 18:57:01 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/info2html/info2html-1.4-r1.ebuild,v 1.5 2005/05/20 21:47:00 blubb Exp $
 
 inherit eutils webapp-apache
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/info2html/${P}.tgz"
 LICENSE="freedist"
 SLOT="0"
 IUSE=""
-KEYWORDS="alpha ~amd64 hppa sparc x86"
+KEYWORDS="alpha amd64 hppa sparc x86"
 
 DEPEND="dev-lang/perl"
 
